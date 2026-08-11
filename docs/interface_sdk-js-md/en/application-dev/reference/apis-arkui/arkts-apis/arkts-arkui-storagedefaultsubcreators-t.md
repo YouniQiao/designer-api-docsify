@@ -4,7 +4,7 @@
 export declare type StorageDefaultSubCreators = Map<Class, StorageDefaultCreator<object>>
 ```
 
-保存对象类型及其默认构造器的Map。
+Map that contains Class and its default creator.The key is the Class type.The value is function that returns the default creator.
 
 **Since:** 26.0.0
 

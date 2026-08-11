@@ -12,7 +12,7 @@ import { certificateManager } from 'kits/@kit.DeviceCertificateKit';
 function setCertificateStatus(certUri: string, certType: CertType, enabled: boolean) : Promise<void>
 ```
 
-设置CA证书的状态，当前仅支持设置用户CA证书状态，仅证书管理应用调用。使用Promise异步回调。
+Sets the status of a CA certificate. Currently, only the status of a user's CA certificate can be set. This API is called only by the certificate management application. This API uses a promise to return the result.
 
 **Since:** 26.0.0
 
@@ -32,25 +32,25 @@ function setCertificateStatus(certUri: string, certType: CertType, enabled: bool
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| certUri | string | Yes | 表示证书的唯一标识符。当前仅支持用户CA证书。 |
-| certType | [CertType](../../apis-network-kit/arkts-apis/arkts-network-http-certtype-e.md) | Yes | 表示证书类型。当前仅支持设置用户CA证书（CA_CERT_USER）的状态。 |
-| enabled | boolean | Yes | 表示证书状态是否启用。true：已启用，false：已禁用。 |
+| certUri | string | Yes | Unique identifier of the certificate. Currently, only user CA certificates are supported. |
+| certType | [CertType](../../apis-network-kit/arkts-apis/arkts-network-http-certtype-e.md) | Yes | Certificate type. Currently, only the status of user CA certificates ( **CA_CERT_USER**) can be set. |
+| enabled | boolean | Yes | Whether the certificate is enabled. **true**: enabled; **false**: disabled. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise对象，无返回结果。 |
+| Promise&lt;void&gt; | Promise that returns no value. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter verification failed. &lt;br&gt;Possible causes: the URI is null or the URI format is wrong, &lt;br&gt; the certType's value is invalid or not supported. |
-| 201 | Permission verification failed. &lt;br&gt;The application does not have the permission required to call the API. |
-| 17500002 | The certificate does not exist. |
-| 202 | Permission verification failed. A non-system application calls a system API. |
-| 17500001 | Internal error. Possible causes: 1. IPC communication failed; &lt;br&gt;2. Memory operation error; 3. File operation error. Please try again. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter verification failed. &lt;br&gt;Possible causes: the URI is null or the URI format is wrong, &lt;br&gt; the certType's value is invalid or not supported. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed. &lt;br&gt;The application does not have the permission required to call the API. |
+| [17500002](../errorcode-certManager.md#17500002-certificate-not-exist) | The certificate does not exist. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
+| [17500001](../errorcode-certManager.md#17500001-internal-error) | Internal error. Possible causes: 1. IPC communication failed; &lt;br&gt;2. Memory operation error; 3. File operation error. Please try again. |
 
 ## Examples
 
@@ -63,11 +63,10 @@ try {
   /* Set the user CA certificate status to enabled. */
   certificateManager.setCertificateStatus(certUri, certificateManager.CertType.CA_CERT_USER, true).then(() => {
     console.info('Succeeded in setting certificate status.');
-  }).catch((error: Error) => {
-    let err = error as BusinessError;
+  }).catch((err: BusinessError) => {
     console.error(`Failed to set certificate status. Code: ${err.code}, message: ${err.message}`);
   })
-} catch (error) {
+} catch (error: BusinessError) {
   console.error(`Failed to set certificate status. Code: ${error.code}, message: ${error.message}`);
 }
 ```

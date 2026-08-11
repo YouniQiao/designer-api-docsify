@@ -14,12 +14,6 @@ dialogSession模块用于支持系统应用弹框功能。
 
 **系统接口：** 此接口为系统接口。
 
-## 导入模块
-
-```TypeScript
-import { dialogSession } from 'kits/@kit.AbilityKit';
-```
-
 ## 汇总
 
 <!--Del-->

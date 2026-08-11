@@ -32,5 +32,5 @@ Defines Web Component.
 
 | 类型 | 说明 |
 | --- | --- |
-| [WebAttribute](arkts-arkweb-web-webattribute-i.md) |  |
+| [WebAttribute](../arkts-components/arkts-arkweb-web-attribute.md) |  |
 

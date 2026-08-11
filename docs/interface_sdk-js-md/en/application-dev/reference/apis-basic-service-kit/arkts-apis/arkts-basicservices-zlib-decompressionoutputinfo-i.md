@@ -1,6 +1,6 @@
 # DecompressionOutputInfo
 
-解压缩返回信息。
+Uncompress2 return value information.
 
 **Since:** 12
 
@@ -22,7 +22,7 @@ import { zlib } from 'kits/@kit.BasicServicesKit';
 destLength: long
 ```
 
-目标缓冲区的总长度。
+Total length of the destination buffer.
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：long
 
@@ -42,7 +42,7 @@ destLength: long
 sourceLength: long
 ```
 
-源缓冲区的长度。
+Length of the source buffer.
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：long
 
@@ -62,7 +62,7 @@ sourceLength: long
 status: ReturnStatus
 ```
 
-参考[ReturnStatus枚举定义](arkts-basicservices-zlib-returnstatus-e.md)。
+For details, see [ReturnStatus](arkts-basicservices-zlib-returnstatus-e.md).
 
 **Type:** [ReturnStatus](arkts-basicservices-zlib-returnstatus-e.md)
 

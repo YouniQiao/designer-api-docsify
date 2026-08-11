@@ -1,6 +1,6 @@
 # HiTraceFlag
 
-跟踪标志组合类型枚举。用于控制分布式跟踪的行为模式，例如在需要跟踪异步调用的业务流程中使用INCLUDE_ASYNC标志，在不需要详细分支信息的简单业务流程中使用DONOT_CREATE_SPAN标志，在需要调试埋点信息的场景中使用TP_INFO标志。
+Enumerates trace flag types.
 
 **Since:** 8
 
@@ -16,7 +16,7 @@
 DEFAULT = 0
 ```
 
-默认标志。
+Default flag.
 
 **Since:** 8
 
@@ -32,9 +32,9 @@ DEFAULT = 0
 INCLUDE_ASYNC = 1
 ```
 
-异步调用标志。
+Asynchronous call flag.
 
-设置该标志，同时跟踪同步和异步调用；默认只跟踪同步调用。
+When this flag is set, both synchronous and asynchronous calls are traced. By default, only synchronous calls are traced.
 
 **Since:** 8
 
@@ -50,9 +50,9 @@ INCLUDE_ASYNC = 1
 DONOT_CREATE_SPAN = 1 << 1
 ```
 
-无分支标志。
+No span flag.
 
-设置该标志，不创建分支信息；默认创建分支信息。
+When this flag is set, no span information is created. By default, span information is created.
 
 **Since:** 8
 
@@ -68,9 +68,10 @@ DONOT_CREATE_SPAN = 1 << 1
 TP_INFO = 1 << 2
 ```
 
-埋点标志。
+Trace point flag.
 
-设置该标志后，调用[tracepoint()](arkts-performanceanalysis-hitracechain-tracepoint-f.md#tracepoint)接口时会打印埋点信息hilog；默认不打印埋点信息hilog日志。
+When this flag is set in the debugging scenario, the HiLog logs of the trace point are printed upon calling the  
+**[tracepoint()](arkts-performanceanalysis-hitracechain-tracepoint-f.md#tracepoint)** API. By default, the HiLog logs are not printed.
 
 **Since:** 8
 
@@ -86,9 +87,9 @@ TP_INFO = 1 << 2
 NO_BE_INFO = 1 << 3
 ```
 
-无开始结束信息标志。
+No begin and end flag.
 
-调试场景下设置该标志，调用开始跟踪接口[begin()](arkts-performanceanalysis-hitracechain-begin-f.md#begin)和结束跟踪接口[end()](arkts-performanceanalysis-hitracechain-end-f.md#end)时，分别会打印开始、结束跟踪信息hilo日志；默认不打印开始、结束跟踪信息hilog日志。
+When this flag is set in the debugging scenario, the HiLog logs about the begin and end of tracing are printed when the [begin()](arkts-performanceanalysis-hitracechain-begin-f.md#begin) and [end()](arkts-performanceanalysis-hitracechain-end-f.md#end) APIs are called. By default, the HiLog logs about the begin and end of tracing are not printed.
 
 **Since:** 8
 
@@ -104,9 +105,10 @@ NO_BE_INFO = 1 << 3
 DISABLE_LOG = 1 << 4
 ```
 
-日志关联标志。
+Log association flag.
 
-设置该标志，不会在hilog日志中附加HiTraceId信息；默认会在hilog日志中附加HiTraceId信息。
+When this flag is set, the **HiTraceId** information is not added to the HiLog logs. By default, the  
+**HiTraceId** information is added to the HiLog logs.
 
 **Since:** 8
 
@@ -122,7 +124,7 @@ DISABLE_LOG = 1 << 4
 FAILURE_TRIGGER = 1 << 5
 ```
 
-故障触发标志。预置标志，暂未启用。
+Failure trigger flag. This is a reserved flag.
 
 **Since:** 8
 
@@ -138,10 +140,11 @@ FAILURE_TRIGGER = 1 << 5
 D2D_TP_INFO = 1 << 6
 ```
 
-设备间埋点标志，为TP_INFO的子集，用于调试场景。
+Device-to-device trace point flag. It is a subset of **TP_INFO** and is used in debugging scenarios.
 
-已设置TP_INFO时，D2D_TP_INFO不生效；未设置TP_INFO时，D2D_TP_INFO生效，调用信息埋点接口  
-[tracepoint()](arkts-performanceanalysis-hitracechain-tracepoint-f.md#tracepoint)仅在mode参数为DEVICE时打印埋点信息hilog日志。
+When the **TP_INFO** flag is set, the **D2D_TP_INFO** flag does not take effect.
+
+When **TP_INFO** is not set and **D2D_TP_INFO** is set, the HiLog logs of the trace point are printed only when the mode parameter is set to **DEVICE** upon calling [tracepoint()](arkts-performanceanalysis-hitracechain-tracepoint-f.md#tracepoint).
 
 **Since:** 8
 

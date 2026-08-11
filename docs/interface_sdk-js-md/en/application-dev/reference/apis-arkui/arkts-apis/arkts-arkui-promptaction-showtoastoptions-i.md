@@ -1,6 +1,6 @@
 # ShowToastOptions
 
-Toast的选项。
+Show toast options.
 
 **Since:** 23
 
@@ -22,17 +22,7 @@ import { LevelMode, ImmersiveMode, LevelOrder } from 'kits/@kit.ArkUI';
 alignment?: Alignment
 ```
 
-对齐方式。
-
-默认值：undefined，当未设置alignment且存在导航条或软键盘时，Toast会自动根据导航条或软键盘位置进行调整，可参考bottom的说明。
-
-**说明：**
-
-不同alignment下，Toast位置对齐效果，如下图所示。
-
-![zh-cn_image_0001](../../../reference/apis-arkui/figures/toast_alignment.PNG)
-
-Toast的文本显示默认自左向右，不支持其他对齐方式。
+Defines the toast alignment of the screen.
 
 **Type:** [Alignment](arkts-arkui-alignment-e.md)
 
@@ -52,13 +42,7 @@ Toast的文本显示默认自左向右，不支持其他对齐方式。
 backgroundBlurStyle?: BlurStyle
 ```
 
-Toast的背板模糊材质。
-
-默认值：BlurStyle.COMPONENT_ULTRA_THICK
-
-**说明：**
-
-设置为BlurStyle.NONE即可关闭背景虚化。当设置了backgroundBlurStyle为非NONE值时，则不要设置backgroundColor，否则颜色显示将不符合预期效果。
+Background blur Style of toast.
 
 **Type:** [BlurStyle](../arkts-components/arkts-arkui-blurstyle-e.md)
 
@@ -78,13 +62,7 @@ Toast的背板模糊材质。
 backgroundColor?: ResourceColor
 ```
 
-Toast的背板颜色。
-
-默认值：Color.Transparent
-
-**说明：**
-
-backgroundColor会与模糊属性backgroundBlurStyle叠加产生效果，如果不符合预期，可将backgroundBlurStyle设置为BlurStyle.NONE，即可取消模糊。
+Background color of toast.
 
 **Type:** [ResourceColor](arkts-arkui-resourcecolor-t.md)
 
@@ -104,15 +82,7 @@ backgroundColor会与模糊属性backgroundBlurStyle叠加产生效果，如果�
 bottom?: string | double
 ```
 
-设置Toast底部边框距离导航条的高度，软键盘拉起时，如果bottom值过小，Toast要被软键盘遮挡时，会自动避让至距离软键盘80vp处。
-
-默认值：80vp
-
-**说明：**
-
-当底部没有导航条时，bottom为设置弹窗底部边框距离窗口底部的高度。
-
-设置对齐方式alignment后，bottom不生效。
+The distance between toast dialog box and the bottom of screen.
 
 **Type:** string \| double
 
@@ -132,13 +102,7 @@ bottom?: string | double
 duration?: int
 ```
 
-设置Toast弹出的持续时间。
-
-默认值：1500ms
-
-取值范围：[1500, 10000]
-
-若小于1500ms则取默认值，若大于10000ms则取上限值10000ms。
+Duration of toast dialog box. The default value is 1500.The recommended value ranges from 1500ms to 10000ms.NOTE: A value less than 1500 is automatically changed to 1500. The maximum value is 10000ms.
 
 **Type:** int
 
@@ -158,9 +122,7 @@ duration?: int
 enableHoverMode?: boolean
 ```
 
-是否响应悬停态，值为true时，响应悬停态。
-
-默认值：false，默认不响应。
+Define whether to respond to the hover mode.
 
 **Type:** boolean
 
@@ -182,9 +144,7 @@ enableHoverMode?: boolean
 hoverModeArea?: HoverModeAreaType
 ```
 
-响应悬停态时，弹窗的显示区域。
-
-默认值：HoverModeAreaType.BOTTOM_SCREEN，默认显示在下半屏。
+Defines the toast's display area in hover mode.
 
 **Type:** [HoverModeAreaType](../arkts-components/arkts-arkui-hovermodeareatype-e.md)
 
@@ -206,11 +166,7 @@ hoverModeArea?: HoverModeAreaType
 message: string | Resource
 ```
 
-显示的文本信息。
-
-**说明：**
-
-默认字体为'Harmony Sans'，不支持设置其他字体。
+Text to display.
 
 **Type:** string \| Resource
 
@@ -230,13 +186,7 @@ message: string | Resource
 offset?: Offset
 ```
 
-在对齐方式上的偏移。
-
-默认值：{ dx: 0, dy: 0 }，默认没有偏移。
-
-**说明：**
-
-仅支持设置px类型的数值。如需设置其他类型的数值，应将其他类型转换为px类型后传入。例如，若需设置vp，应将其转换为px后传入。
+Defines the toast offset.
 
 **Type:** [Offset](arkts-arkui-componentutils-offset-i.md)
 
@@ -256,9 +206,7 @@ offset?: Offset
 shadow?: ShadowOptions | ShadowStyle
 ```
 
-Toast的背板阴影。
-
-默认值：ShadowStyle.OUTER_DEFAULT_MD
+Shadow of toast.
 
 **Type:** [ShadowOptions](../arkts-components/arkts-arkui-shadowoptions-i.md) \| ShadowStyle
 
@@ -278,9 +226,7 @@ Toast的背板阴影。
 showMode?: ToastShowMode
 ```
 
-设置Toast层级。
-
-默认值：ToastShowMode.DEFAULT，默认显示在应用内。
+Determine the show mode of the toast.
 
 **Type:** [ToastShowMode](arkts-arkui-promptaction-toastshowmode-e.md)
 
@@ -322,9 +268,7 @@ Set system-styled materials for toast. Different materials have different effect
 textColor?: ResourceColor
 ```
 
-Toast的文本颜色。
-
-默认值：Color.Black
+Text color of toast.
 
 **Type:** [ResourceColor](arkts-arkui-resourcecolor-t.md)
 

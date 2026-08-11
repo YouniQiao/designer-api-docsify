@@ -12,7 +12,7 @@ import { inputConsumer } from 'kits/@kit.InputKit';
 function off(type: 'key', keyOptions: KeyOptions, callback?: Callback<KeyOptions>): void
 ```
 
-取消订阅系统快捷键。使用callback异步回调。
+Disables listening for system hotkey change events. This API uses an asynchronous callback to return the result.
 
 **Since:** 8
 
@@ -28,16 +28,16 @@ function off(type: 'key', keyOptions: KeyOptions, callback?: Callback<KeyOptions
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'key' | Yes | 事件类型，当前仅支持 'key'。 |
-| keyOptions | [KeyOptions](../../apis-test-kit/arkts-apis/arkts-test-uitest-keyoptions-i.md) | Yes | 组合键选项。从API版本26.0.0起keyOptions中新增参数 [KeyCommandTriggerType](arkts-input-inputconsumer-keycommandtriggertype-e-sys.md)，本接口无需关注此参数。 |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;KeyOptions&gt; | No | 需要取消订阅的回调函数。若不填，则取消当前应用组合键选项已订阅的所有回调函数。 |
+| type | 'key' | Yes | Event type. Currently, only **key** is supported. |
+| keyOptions | [KeyOptions](../../apis-test-kit/arkts-apis/arkts-test-uitest-keyoptions-i.md) | Yes | Combination key options. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;KeyOptions&gt; | No | Callback to unregister. If this parameter is not specified, listening will be disabled for all callbacks registered by the current application. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; 3. Parameter verification failed. |
-| 202 | Permission denied, non-system app called system api.<br>**Applicable version:** 12 and later |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; 3. Parameter verification failed. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission denied, non-system app called system api.<br>**Applicable version:** 12 and later |
 
 ## Examples
 

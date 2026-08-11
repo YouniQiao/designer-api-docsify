@@ -1,6 +1,6 @@
 # ScannerSyncDevice
 
-定义扫描仪同步设备的接口。
+Defines the device to be synced from the scanner.
 
 **Since:** 20
 
@@ -22,7 +22,7 @@ import { scan } from 'kits/@kit.BasicServicesKit';
 discoveryMode: ScannerDiscoveryMode
 ```
 
-发现模式。
+Discovery mode.
 
 **Type:** [ScannerDiscoveryMode](arkts-basicservices-scan-scannerdiscoverymode-e.md)
 
@@ -40,7 +40,7 @@ discoveryMode: ScannerDiscoveryMode
 oldScannerId?: string
 ```
 
-旧的扫描仪ID，仅在syncMode为"update"时有效。
+Old scanner ID, which is valid only when **syncMode** is set to **update**.
 
 **Type:** string
 
@@ -58,7 +58,7 @@ oldScannerId?: string
 scannerId: string
 ```
 
-扫描仪ID。
+Scanner ID.
 
 **Type:** string
 
@@ -76,7 +76,7 @@ scannerId: string
 syncMode: ScannerSyncMode
 ```
 
-同步模式。
+Sync mode.
 
 **Type:** [ScannerSyncMode](arkts-basicservices-scan-scannersyncmode-e.md)
 
@@ -94,7 +94,7 @@ syncMode: ScannerSyncMode
 uniqueId: string
 ```
 
-唯一ID。
+Unique ID.
 
 **Type:** string
 

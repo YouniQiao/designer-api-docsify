@@ -1,6 +1,6 @@
 # GridRowOptions
 
-设置栅格行布局容器的布局选项。
+Defines the options of grid-row component.
 
 **Since:** 23
 
@@ -16,7 +16,7 @@
 breakpoints?: BreakPoints
 ```
 
-设置断点值的断点数组以及基于应用窗口或容器尺寸的相应参照。
+grid-row layout breakpoints.
 
 **Type:** [BreakPoints](arkts-arkui-gridrow-breakpoints-i.md)
 
@@ -36,7 +36,7 @@ breakpoints?: BreakPoints
 columns?: int | GridRowColumnOption
 ```
 
-设置布局列数。
+Sets the total number of columns in the current layout.
 
 **Type:** int \| GridRowColumnOption
 
@@ -56,7 +56,7 @@ columns?: int | GridRowColumnOption
 direction?: GridRowDirection
 ```
 
-栅格布局排列方向。
+grid-row layout direction.
 
 **Type:** [GridRowDirection](arkts-arkui-gridrow-gridrowdirection-e.md)
 
@@ -76,7 +76,7 @@ direction?: GridRowDirection
 gutter?: Length | GutterOption
 ```
 
-栅格布局间距。
+layout spacing between sub-components
 
 **Type:** [Length](arkts-arkui-length-t.md) \| GutterOption
 

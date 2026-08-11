@@ -1,11 +1,5 @@
 # @ohos.accessibility.GesturePath
 
-## 导入模块
-
-```TypeScript
-import { GesturePath } from 'kits/@kit.AccessibilityKit';
-```
-
 ## 汇总
 
 ### 类

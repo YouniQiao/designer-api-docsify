@@ -4,8 +4,6 @@
 
 AVMuxer模块提供用于音视频封装功能的函数。
 
-**系统能力：** SystemCapability.Multimedia.Media.Muxer
-
 **起始版本：** 10
 ## 文件汇总
 

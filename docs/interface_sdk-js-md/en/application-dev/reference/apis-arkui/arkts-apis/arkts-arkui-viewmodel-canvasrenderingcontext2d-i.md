@@ -206,7 +206,7 @@ Creates an ImageData object.
 
 | Type | Description |
 | --- | --- |
-| [ImageData](arkts-arkui-imagedata-c.md) | Returns the newly created FunctionCallable object. |
+| [ImageData](../arkts-components/arkts-arkui-imagedata-c.md) | Returns the newly created FunctionCallable object. |
 
 ## createImageData
 
@@ -230,13 +230,13 @@ Creates an ImageData object.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| imageData | [ImageData](arkts-arkui-imagedata-c.md) | Yes | ImageData object with the same width and height copied from the original ImageData object. |
+| imageData | [ImageData](../arkts-components/arkts-arkui-imagedata-c.md) | Yes | ImageData object with the same width and height copied from the original ImageData object. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [ImageData](arkts-arkui-imagedata-c.md) | Returns the newly created FunctionCallable object. |
+| [ImageData](../arkts-components/arkts-arkui-imagedata-c.md) | Returns the newly created FunctionCallable object. |
 
 ## createLinearGradient
 
@@ -269,7 +269,7 @@ Creates a linear gradient color.
 
 | Type | Description |
 | --- | --- |
-| [CanvasGradient](arkts-arkui-canvasgradient-c.md) | LinearGradient object. |
+| [CanvasGradient](../arkts-components/arkts-arkui-canvasgradient-c.md) | LinearGradient object. |
 
 ## createPath2D
 
@@ -395,7 +395,7 @@ Creates a radial gradient color.
 
 | Type | Description |
 | --- | --- |
-| [CanvasGradient](arkts-arkui-canvasgradient-c.md) | RadialGradient object. |
+| [CanvasGradient](../arkts-components/arkts-arkui-canvasgradient-c.md) | RadialGradient object. |
 
 ## drawImage
 
@@ -679,7 +679,7 @@ ImageData object created with pixels in the specified area on the canvas.
 
 | Type | Description |
 | --- | --- |
-| [ImageData](arkts-arkui-imagedata-c.md) | ImageData object that contains pixels in the specified area on the canvas. |
+| [ImageData](../arkts-components/arkts-arkui-imagedata-c.md) | ImageData object that contains pixels in the specified area on the canvas. |
 
 ## getLineDash
 
@@ -840,7 +840,7 @@ Puts the ImageData onto a rectangular area on the canvas.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| imageData | [ImageData](arkts-arkui-imagedata-c.md) | Yes | ImageData object with pixels to put onto the canvas. |
+| imageData | [ImageData](../arkts-components/arkts-arkui-imagedata-c.md) | Yes | ImageData object with pixels to put onto the canvas. |
 | dx | number | Yes | X-axis offset of the rectangle area on the canvas. |
 | dy | number | Yes | Y-axis offset of the rectangle area on the canvas. |
 
@@ -874,7 +874,7 @@ Puts the ImageData onto a rectangular area on the canvas.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| imageData | [ImageData](arkts-arkui-imagedata-c.md) | Yes | ImageData object with pixels to put onto the canvas. |
+| imageData | [ImageData](../arkts-components/arkts-arkui-imagedata-c.md) | Yes | ImageData object with pixels to put onto the canvas. |
 | dx | number | Yes | X-axis offset of the rectangle area on the canvas. |
 | dy | number | Yes | Y-axis offset of the rectangle area on the canvas. |
 | dirtyX | number | Yes | X-axis offset of the upper left corner of the rectangle area relative to that of the source image. |
@@ -1198,7 +1198,7 @@ Draws the Bitmap to the current canvas.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| bitmap | [ImageBitmap](arkts-arkui-imagebitmap-c.md) | Yes |  |
+| bitmap | [ImageBitmap](../arkts-components/arkts-arkui-imagebitmap-c.md) | Yes |  |
 
 ## transform
 

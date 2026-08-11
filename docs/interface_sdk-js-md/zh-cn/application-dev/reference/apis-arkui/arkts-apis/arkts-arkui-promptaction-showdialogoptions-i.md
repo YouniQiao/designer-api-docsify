@@ -10,12 +10,6 @@
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
-## 导入模块
-
-```TypeScript
-import { LevelMode, ImmersiveMode, LevelOrder } from 'kits/@kit.ArkUI';
-```
-
 ## alignment
 
 ```TypeScript
@@ -223,7 +217,7 @@ immersiveMode?: ImmersiveMode
 - 默认值：ImmersiveMode.DEFAULT   
 - 当且仅当levelMode属性设置为LevelMode.EMBEDDED时生效。
 
-**类型：** [ImmersiveMode](arkts-arkui-promptaction-immersivemode-e.md)
+**类型：** [ImmersiveMode](arkts-arkui-immersivemode-t.md)
 
 **默认值：** ImmersiveMode.DEFAULT
 
@@ -401,7 +395,7 @@ offset?: Offset
 
 默认值：{ dx: 0 , dy: 0 }
 
-**类型：** [Offset](arkts-arkui-componentutils-offset-i.md)
+**类型：** [Offset](arkts-arkui-units-offset-i.md)
 
 **起始版本：** 23
 

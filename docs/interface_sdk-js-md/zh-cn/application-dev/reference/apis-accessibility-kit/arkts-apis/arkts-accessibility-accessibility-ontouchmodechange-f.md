@@ -1,11 +1,5 @@
 # onTouchModeChange
 
-## 导入模块
-
-```TypeScript
-import { accessibility } from 'kits/@kit.AccessibilityKit';
-```
-
 ## onTouchModeChange
 
 ```TypeScript
@@ -31,4 +25,28 @@ Register the observe of the touch mode changed.
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;string&gt; | 是 | callback Asynchronous callback interface. |
+
+## 示例
+
+```TypeScript
+import { accessibility } from '@kit.AccessibilityKit';
+
+@Entry
+@Component
+struct Index {
+  callback: (mode: string) => void = this.eventCallback;
+  eventCallback(mode: string): void {
+    console.info(`current touch mode: ${JSON.stringify(mode)}`);
+  }
+
+  aboutToAppear(): void {
+    accessibility.onTouchModeChange(this.callback);
+  }
+
+  build() {
+    Column() {
+    }
+  }
+}
+```
 

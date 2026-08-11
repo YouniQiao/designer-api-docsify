@@ -1,6 +1,6 @@
 # DatePickerMode
 
-设置日期展示模式。
+Defines the mode of the date picker.
 
 **Since:** 23
 
@@ -16,7 +16,7 @@
 DATE = 0
 ```
 
-显示年、月、日三列。
+The date displays three columns: year, month, and day.
 
 **Since:** 23
 
@@ -34,7 +34,7 @@ DATE = 0
 YEAR_AND_MONTH = 1
 ```
 
-显示年、月二列。
+The date displays two columns: year and month.
 
 **Since:** 23
 
@@ -52,9 +52,7 @@ YEAR_AND_MONTH = 1
 MONTH_AND_DAY = 2
 ```
 
-显示月、日二列。
-
-在此模式下，年份始终保持不变。
+Defines a mode that displays the date in months and days of the month.In this mode, if the month changes from December to January,the year does not increment by one; if the month changes from January to December,the year does not decrement by one. The year remains fixed at the currently set value.
 
 **Since:** 23
 

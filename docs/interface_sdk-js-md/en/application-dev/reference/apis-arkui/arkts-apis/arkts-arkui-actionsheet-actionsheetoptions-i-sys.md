@@ -1,6 +1,6 @@
 # ActionSheetOptions
 
-列表选择弹窗的样式。
+The options of ActionSheet.
 
 **Since:** 23
 

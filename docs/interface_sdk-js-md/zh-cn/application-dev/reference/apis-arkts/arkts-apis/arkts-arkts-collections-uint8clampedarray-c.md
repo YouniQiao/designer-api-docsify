@@ -17,12 +17,6 @@
 
 **系统能力：** SystemCapability.Utils.Lang
 
-## 导入模块
-
-```TypeScript
-import { collections } from 'kits/@kit.ArkTS';
-```
-
 ## [Symbol.iterator]
 
 ```TypeScript
@@ -45,13 +39,13 @@ import { collections } from 'kits/@kit.ArkTS';
 
 | 类型 | 说明 |
 | --- | --- |
-| [IterableIterator](arkts-arkts-iterator-iterableiterator-i.md)&lt;number&gt; | 返回一个迭代器对象，迭代出数字。 |
+| IterableIterator&lt;number&gt; | 返回一个迭代器对象，迭代出数字。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 10200011 | The Symbol.iterator method cannot be bound. |
+| [10200011](../errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) | The Symbol.iterator method cannot be bound. |
 
 ## at
 
@@ -87,8 +81,8 @@ at(index: number): number | undefined
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 10200011 | The at method cannot be bound. |
-| 10200201 | Concurrent modification error. |
+| [10200011](../errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) | The at method cannot be bound. |
+| [10200201](../errorcode-utils.md#10200201-concurrent修改错误) | Concurrent modification error. |
 
 ## constructor
 
@@ -112,7 +106,7 @@ constructor()
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 10200012 | The Uint8ClampedArray's constructor cannot be directly invoked. |
+| [10200012](../errorcode-utils.md#10200012-构造函数调用异常) | The Uint8ClampedArray's constructor cannot be directly invoked. |
 
 ## constructor
 
@@ -120,7 +114,7 @@ constructor()
 constructor(length: number)
 ```
 
-构造函数，用于创建一个指定长度的ArkTS Uint8ClampedArray对象。
+构造函数，用于创建一个指定长度的ArkTS Uint8ClampedArray对象，所有元素初始值为0。
 
 **起始版本：** 12
 
@@ -136,13 +130,13 @@ constructor(length: number)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| length | number | 是 | 用于指定ArkTS Uint8ClampedArray的长度。 |
+| length | number | 是 | 用于指定ArkTS Uint8ClampedArray的长度。取值范围为非负整数。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 10200012 | The Uint8ClampedArray's constructor cannot be directly invoked. |
+| [10200012](../errorcode-utils.md#10200012-构造函数调用异常) | The Uint8ClampedArray's constructor cannot be directly invoked. |
 
 ## constructor
 
@@ -150,7 +144,7 @@ constructor(length: number)
 constructor(elements: Iterable<number>)
 ```
 
-构造函数，以Iterable创建一个ArkTS Uint8ClampedArray对象。
+构造函数，以Iterable创建一个ArkTS Uint8ClampedArray对象，且ArkTS Uint8ClampedArray中的各元素都会经过钳位处理。
 
 **起始版本：** 12
 
@@ -172,7 +166,7 @@ constructor(elements: Iterable<number>)
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 10200012 | The Uint8ClampedArray's constructor cannot be directly invoked. |
+| [10200012](../errorcode-utils.md#10200012-构造函数调用异常) | The Uint8ClampedArray's constructor cannot be directly invoked. |
 
 ## constructor
 
@@ -180,7 +174,7 @@ constructor(elements: Iterable<number>)
 constructor(array: ArrayLike<number> | ArrayBuffer)
 ```
 
-构造函数，以ArrayLike或ArkTS ArrayBuffer创建一个ArkTS Uint8ClampedArray对象。
+构造函数，以ArrayLike或ArkTS ArrayBuffer创建一个ArkTS Uint8ClampedArray对象，且ArkTS Uint8ClampedArray中的各元素都会经过钳位处理。
 
 **起始版本：** 12
 
@@ -196,13 +190,13 @@ constructor(array: ArrayLike<number> | ArrayBuffer)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| array | [ArrayLike](arkts-arkts-arraylike-i.md)&lt;number&gt; \| ArrayBuffer | 是 | 用于构造ArkTS Uint8ClampedArray的对象。当参数类型是ArrayBuffer时buffer所占的字节数须是4的整数倍。 |
+| array | ArrayLike&lt;number&gt; \| ArrayBuffer | 是 | 用于构造ArkTS Uint8ClampedArray的对象。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 10200012 | The Uint8ClampedArray's constructor cannot be directly invoked. |
+| [10200012](../errorcode-utils.md#10200012-构造函数调用异常) | The Uint8ClampedArray's constructor cannot be directly invoked. |
 
 ## constructor
 
@@ -210,7 +204,7 @@ constructor(array: ArrayLike<number> | ArrayBuffer)
 constructor(buffer: ArrayBuffer, byteOffset?: number, length?: number)
 ```
 
-构造函数，以ArrayBuffer创建一个ArkTS Uint8ClampedArray对象。
+构造函数，以ArrayBuffer创建一个ArkTS Uint8ClampedArray对象，且ArkTS Uint8ClampedArray和ArrayBuffer共享内存。
 
 **起始版本：** 12
 
@@ -226,15 +220,15 @@ constructor(buffer: ArrayBuffer, byteOffset?: number, length?: number)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| buffer | ArrayBuffer | 是 | 用于构造ArkTS Uint8ClampedArray的ArrayBuffer对象。buffer所占的字节数须是4的整数倍。 |
+| buffer | ArrayBuffer | 是 | 用于构造ArkTS Uint8ClampedArray的ArrayBuffer对象。 |
 | byteOffset | number | 否 | 指定buffer的字节偏移，从0开始，默认为0。 |
-| length | number | 否 | 指定ArkTS Uint8ClampedArray的长度，默认为0。 |
+| length | number | 否 | 指定ArkTS Uint8ClampedArray的长度，默认为0。byteOffset和length的总和不能超过buffer.byteLength。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 10200012 | The Uint8ClampedArray's constructor cannot be directly invoked. |
+| [10200012](../errorcode-utils.md#10200012-构造函数调用异常) | The Uint8ClampedArray's constructor cannot be directly invoked. |
 
 ## copyWithin
 
@@ -242,7 +236,7 @@ constructor(buffer: ArrayBuffer, byteOffset?: number, length?: number)
 copyWithin(target: number, start: number, end?: number): Uint8ClampedArray
 ```
 
-从ArkTS Uint8ClampedArray指定范围内的元素依次拷贝到目标位置。
+从ArkTS Uint8ClampedArray指定范围内的元素依次拷贝到自身buffer内目标位置，覆盖目标范围内原有数据。
 
 **起始版本：** 12
 
@@ -258,7 +252,7 @@ copyWithin(target: number, start: number, end?: number): Uint8ClampedArray
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| target | number | 是 | 目标起始位置的下标，如果`target < 0`，则会从`target + array.length`位置开始。 |
+| target | number | 是 | 目标起始位置的下标，如果`target < 0`，则会从`target + Uint8ClampedArray.length`位置开始。 |
 | start | number | 是 | 源起始位置下标，如果`start < 0`，则会从`start + Uint8ClampedArray.length`位置开始。 |
 | end | number | 否 | 源终止位置下标（不包含end位置的元素），如果`end < 0`，则会从`end + Uint8ClampedArray.length`位置终止。默认为ArkTS Uint8ClampedArray的长度。 |
 
@@ -266,14 +260,14 @@ copyWithin(target: number, start: number, end?: number): Uint8ClampedArray
 
 | 类型 | 说明 |
 | --- | --- |
-| [Uint8ClampedArray](arkts-arkts-typeduarrays-uint8clampedarray-c.md) | 修改后的Uint8ClampedArray。 |
+| [Uint8ClampedArray](arkts-arkts-collections-uint8clampedarray-c.md) | 修改后的Uint8ClampedArray。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 10200011 | The copyWithin method cannot be bound. |
-| 10200201 | Concurrent modification error. |
+| [10200011](../errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) | The copyWithin method cannot be bound. |
+| [10200201](../errorcode-utils.md#10200201-concurrent修改错误) | Concurrent modification error. |
 
 ## entries
 
@@ -281,7 +275,7 @@ copyWithin(target: number, start: number, end?: number): Uint8ClampedArray
 entries(): IterableIterator<[number, number]>
 ```
 
-返回一个新的迭代器对象，该对象包含ArkTS Uint8ClampedArray中每个元素的键值对。
+返回一个新的迭代器对象，该对象包含ArkTS Uint8ClampedArray中每个元素的键值对。迭代器遍历期间不能使用会改变ArkTS Uint8ClampedArray数组内容的方法。
 
 **起始版本：** 12
 
@@ -297,14 +291,14 @@ entries(): IterableIterator<[number, number]>
 
 | 类型 | 说明 |
 | --- | --- |
-| [IterableIterator](arkts-arkts-iterator-iterableiterator-i.md)&lt;[number, number]&gt; | 新的迭代器对象。 |
+| IterableIterator&lt;[number, number]&gt; | 新的迭代器对象。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 10200011 | The entries method cannot be bound. |
-| 10200201 | Concurrent modification error. |
+| [10200011](../errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) | The entries method cannot be bound. |
+| [10200201](../errorcode-utils.md#10200201-concurrent修改错误) | Concurrent modification error. |
 
 ## every
 
@@ -328,7 +322,7 @@ every(predicate: TypedArrayPredicateFn<number, Uint8ClampedArray>): boolean
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| predicate | [TypedArrayPredicateFn](arkts-arkts-collections-typedarraypredicatefn-t.md)&lt;number, Uint8ClampedArray&gt; | 是 | 用于测试的断言函数。 |
+| predicate | [TypedArrayPredicateFn](arkts-arkts-collections-typedarraypredicatefn-t.md)&lt;number, [Uint8ClampedArray](arkts-arkts-collections-uint8clampedarray-c.md)&gt; | 是 | 用于测试的断言函数。 |
 
 **返回值：**
 
@@ -340,8 +334,8 @@ every(predicate: TypedArrayPredicateFn<number, Uint8ClampedArray>): boolean
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 10200011 | The every method cannot be bound. |
-| 10200201 | Concurrent modification error. |
+| [10200011](../errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) | The every method cannot be bound. |
+| [10200201](../errorcode-utils.md#10200201-concurrent修改错误) | Concurrent modification error. |
 
 ## fill
 
@@ -373,14 +367,14 @@ fill(value: number, start?: number, end?: number): Uint8ClampedArray
 
 | 类型 | 说明 |
 | --- | --- |
-| [Uint8ClampedArray](arkts-arkts-typeduarrays-uint8clampedarray-c.md) | 填充后的ArkTS Uint8ClampedArray。 |
+| [Uint8ClampedArray](arkts-arkts-collections-uint8clampedarray-c.md) | 填充后的ArkTS Uint8ClampedArray。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 10200011 | The fill method cannot be bound. |
-| 10200201 | Concurrent modification error. |
+| [10200011](../errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) | The fill method cannot be bound. |
+| [10200201](../errorcode-utils.md#10200201-concurrent修改错误) | Concurrent modification error. |
 
 ## filter
 
@@ -404,20 +398,20 @@ filter(predicate: TypedArrayPredicateFn<number, Uint8ClampedArray>): Uint8Clampe
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| predicate | [TypedArrayPredicateFn](arkts-arkts-collections-typedarraypredicatefn-t.md)&lt;number, Uint8ClampedArray&gt; | 是 | 用于元素过滤的断言函数。 |
+| predicate | [TypedArrayPredicateFn](arkts-arkts-collections-typedarraypredicatefn-t.md)&lt;number, [Uint8ClampedArray](arkts-arkts-collections-uint8clampedarray-c.md)&gt; | 是 | 用于元素过滤的断言函数。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| [Uint8ClampedArray](arkts-arkts-typeduarrays-uint8clampedarray-c.md) | 过滤后的ArkTS Uint8ClampedArray。 |
+| [Uint8ClampedArray](arkts-arkts-collections-uint8clampedarray-c.md) | 过滤后的ArkTS Uint8ClampedArray。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 10200011 | The filter method cannot be bound. |
-| 10200201 | Concurrent modification error. |
+| [10200011](../errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) | The filter method cannot be bound. |
+| [10200201](../errorcode-utils.md#10200201-concurrent修改错误) | Concurrent modification error. |
 
 ## find
 
@@ -441,7 +435,7 @@ find(predicate: TypedArrayPredicateFn<number, Uint8ClampedArray>): number | unde
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| predicate | [TypedArrayPredicateFn](arkts-arkts-collections-typedarraypredicatefn-t.md)&lt;number, Uint8ClampedArray&gt; | 是 | 用于元素查找的断言函数。 |
+| predicate | [TypedArrayPredicateFn](arkts-arkts-collections-typedarraypredicatefn-t.md)&lt;number, [Uint8ClampedArray](arkts-arkts-collections-uint8clampedarray-c.md)&gt; | 是 | 用于元素查找的断言函数。 |
 
 **返回值：**
 
@@ -453,8 +447,8 @@ find(predicate: TypedArrayPredicateFn<number, Uint8ClampedArray>): number | unde
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 10200011 | The find method cannot be bound. |
-| 10200201 | Concurrent modification error. |
+| [10200011](../errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) | The find method cannot be bound. |
+| [10200201](../errorcode-utils.md#10200201-concurrent修改错误) | Concurrent modification error. |
 
 ## findIndex
 
@@ -478,7 +472,7 @@ findIndex(predicate: TypedArrayPredicateFn<number, Uint8ClampedArray>): number
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| predicate | [TypedArrayPredicateFn](arkts-arkts-collections-typedarraypredicatefn-t.md)&lt;number, Uint8ClampedArray&gt; | 是 | 用于元素查找的断言函数。 |
+| predicate | [TypedArrayPredicateFn](arkts-arkts-collections-typedarraypredicatefn-t.md)&lt;number, [Uint8ClampedArray](arkts-arkts-collections-uint8clampedarray-c.md)&gt; | 是 | 用于元素查找的断言函数。 |
 
 **返回值：**
 
@@ -490,8 +484,8 @@ findIndex(predicate: TypedArrayPredicateFn<number, Uint8ClampedArray>): number
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 10200011 | The findIndex method cannot be bound. |
-| 10200201 | Concurrent modification error. |
+| [10200011](../errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) | The findIndex method cannot be bound. |
+| [10200201](../errorcode-utils.md#10200201-concurrent修改错误) | Concurrent modification error. |
 
 ## forEach
 
@@ -515,14 +509,14 @@ forEach(callbackFn: TypedArrayForEachCallback<number, Uint8ClampedArray>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callbackFn | [TypedArrayForEachCallback](arkts-arkts-collections-typedarrayforeachcallback-t.md)&lt;number, Uint8ClampedArray&gt; | 是 | 用于对每个元素执行的回调函数。 |
+| callbackFn | [TypedArrayForEachCallback](arkts-arkts-collections-typedarrayforeachcallback-t.md)&lt;number, [Uint8ClampedArray](arkts-arkts-collections-uint8clampedarray-c.md)&gt; | 是 | 用于对每个元素执行的回调函数。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 10200011 | The forEach method cannot be bound. |
-| 10200201 | Concurrent modification error. |
+| [10200011](../errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) | The forEach method cannot be bound. |
+| [10200201](../errorcode-utils.md#10200201-concurrent修改错误) | Concurrent modification error. |
 
 ## from
 
@@ -530,7 +524,7 @@ forEach(callbackFn: TypedArrayForEachCallback<number, Uint8ClampedArray>): void
 static from(arrayLike: ArrayLike<number>): Uint8ClampedArray
 ```
 
-从一个ArrayLike或者可迭代对象中创建一个ArkTS Uint8ClampedArray对象。
+从一个ArrayLike中创建一个ArkTS Uint8ClampedArray对象。
 
 **起始版本：** 12
 
@@ -546,13 +540,13 @@ static from(arrayLike: ArrayLike<number>): Uint8ClampedArray
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| arrayLike | [ArrayLike](arkts-arkts-arraylike-i.md)&lt;number&gt; | 是 | 用于构造ArkTS Uint8ClampedArray的ArrayLike对象。 |
+| arrayLike | ArrayLike&lt;number&gt; | 是 | 用于构造ArkTS Uint8ClampedArray的ArrayLike对象。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| [Uint8ClampedArray](arkts-arkts-typeduarrays-uint8clampedarray-c.md) | 新创建的ArkTS Uint8ClampedArray对象。 |
+| [Uint8ClampedArray](arkts-arkts-collections-uint8clampedarray-c.md) | 新创建的ArkTS Uint8ClampedArray对象。 |
 
 ## from
 
@@ -576,14 +570,14 @@ static from<T>(arrayLike: ArrayLike<T>, mapFn: TypedArrayFromMapFn<T, number>): 
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| arrayLike | [ArrayLike](arkts-arkts-arraylike-i.md)&lt;T&gt; | 是 | 用于构造ArrayLike对象。 |
+| arrayLike | ArrayLike&lt;T&gt; | 是 | 用于构造ArrayLike对象。 |
 | mapFn | [TypedArrayFromMapFn](arkts-arkts-collections-typedarrayfrommapfn-t.md)&lt;T, number&gt; | 是 | 映射函数。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| [Uint8ClampedArray](arkts-arkts-typeduarrays-uint8clampedarray-c.md) | 新创建的ArkTS Uint8ClampedArray对象。 |
+| [Uint8ClampedArray](arkts-arkts-collections-uint8clampedarray-c.md) | 新创建的ArkTS Uint8ClampedArray对象。 |
 
 ## from
 
@@ -614,7 +608,7 @@ static from(arrayLike: Iterable<number>, mapFn?: TypedArrayFromMapFn<number, num
 
 | 类型 | 说明 |
 | --- | --- |
-| [Uint8ClampedArray](arkts-arkts-typeduarrays-uint8clampedarray-c.md) | 新创建的ArkTS Uint8ClampedArray对象。 |
+| [Uint8ClampedArray](arkts-arkts-collections-uint8clampedarray-c.md) | 新创建的ArkTS Uint8ClampedArray对象。 |
 
 ## includes
 
@@ -651,8 +645,8 @@ includes(searchElement: number, fromIndex?: number): boolean
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 10200011 | The includes method cannot be bound. |
-| 10200201 | Concurrent modification error. |
+| [10200011](../errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) | The includes method cannot be bound. |
+| [10200201](../errorcode-utils.md#10200201-concurrent修改错误) | Concurrent modification error. |
 
 ## indexOf
 
@@ -677,7 +671,7 @@ indexOf(searchElement: number, fromIndex?: number): number
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | searchElement | number | 是 | 待索引的值。 |
-| fromIndex | number | 否 | 搜索的起始下标。默认值为0。如果下标大于等于ArkTS Uint8ClampedArray的长度，则返回-1。如果提供的下标值是负数，则被当做距离数组尾部的偏移，从前到后搜索。 |
+| fromIndex | number | 否 | 从前到后搜索的起始下标。默认值为0。如果提供的下标值是负数，则被当做距离数组尾部的偏移。如果fromIndex的值导致搜索区间和数组范围没有重叠，则返回-1。 |
 
 **返回值：**
 
@@ -689,8 +683,8 @@ indexOf(searchElement: number, fromIndex?: number): number
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 10200011 | The indexOf method cannot be bound. |
-| 10200201 | Concurrent modification error. |
+| [10200011](../errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) | The indexOf method cannot be bound. |
+| [10200201](../errorcode-utils.md#10200201-concurrent修改错误) | Concurrent modification error. |
 
 ## join
 
@@ -726,8 +720,8 @@ join(separator?: string): string
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 10200011 | The join method cannot be bound. |
-| 10200201 | Concurrent modification error. |
+| [10200011](../errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) | The join method cannot be bound. |
+| [10200201](../errorcode-utils.md#10200201-concurrent修改错误) | Concurrent modification error. |
 
 ## keys
 
@@ -735,7 +729,7 @@ join(separator?: string): string
 keys(): IterableIterator<number>
 ```
 
-返回一个新的迭代器对象，该对象包含ArkTS Uint8ClampedArray中每个元素的键（下标）。
+返回一个新的迭代器对象，该对象包含ArkTS Uint8ClampedArray中每个元素的键（下标）。迭代器遍历期间不能使用会改变ArkTS Uint8ClampedArray数组内容的方法。
 
 **起始版本：** 12
 
@@ -751,14 +745,14 @@ keys(): IterableIterator<number>
 
 | 类型 | 说明 |
 | --- | --- |
-| [IterableIterator](arkts-arkts-iterator-iterableiterator-i.md)&lt;number&gt; | 新的迭代器对象。 |
+| IterableIterator&lt;number&gt; | 新的迭代器对象。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 10200011 | The keys method cannot be bound. |
-| 10200201 | Concurrent modification error. |
+| [10200011](../errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) | The keys method cannot be bound. |
+| [10200201](../errorcode-utils.md#10200201-concurrent修改错误) | Concurrent modification error. |
 
 ## lastIndexOf
 
@@ -783,7 +777,7 @@ lastIndexOf(searchElement: number, fromIndex?: number): number
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | searchElement | number | 是 | 待索引的值。 |
-| fromIndex | number | 否 | 搜索的起始下标。默认值为0。如果下标大于等于ArkTS Uint8ClampedArray的长度，则返回-1。如果提供的下标值是负数，则被当做距离数组尾部的偏移，从后到前搜索。 |
+| fromIndex | number | 否 | 从后到前搜索的起始下标。默认值为ArkTS Uint8ClampedArray的长度减1。如果提供的下标值是负数，则被当做距离数组尾部的偏移。 如果fromIndex的值导致搜索区间和数组范围没有重叠，则返回-1。 |
 
 **返回值：**
 
@@ -795,8 +789,8 @@ lastIndexOf(searchElement: number, fromIndex?: number): number
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 10200011 | The lastIndexOf method cannot be bound. |
-| 10200201 | Concurrent modification error. |
+| [10200011](../errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) | The lastIndexOf method cannot be bound. |
+| [10200201](../errorcode-utils.md#10200201-concurrent修改错误) | Concurrent modification error. |
 
 ## map
 
@@ -820,20 +814,20 @@ map(callbackFn: TypedArrayMapCallback<number, Uint8ClampedArray>): Uint8ClampedA
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callbackFn | [TypedArrayMapCallback](arkts-arkts-collections-typedarraymapcallback-t.md)&lt;number, Uint8ClampedArray&gt; | 是 | 回调函数，接收至多三个参数。 map方法对数组中的每个元素调用一次callbackfn函数。 |
+| callbackFn | [TypedArrayMapCallback](arkts-arkts-collections-typedarraymapcallback-t.md)&lt;number, [Uint8ClampedArray](arkts-arkts-collections-uint8clampedarray-c.md)&gt; | 是 | 回调函数，接收至多三个参数。 map方法对数组中的每个元素调用一次callbackfn函数。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| [Uint8ClampedArray](arkts-arkts-typeduarrays-uint8clampedarray-c.md) | 新ArkTS Uint8ClampedArray对象。 |
+| [Uint8ClampedArray](arkts-arkts-collections-uint8clampedarray-c.md) | 新ArkTS Uint8ClampedArray对象。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 10200011 | The map method cannot be bound. |
-| 10200201 | Concurrent modification error. |
+| [10200011](../errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) | The map method cannot be bound. |
+| [10200201](../errorcode-utils.md#10200201-concurrent修改错误) | Concurrent modification error. |
 
 ## of
 
@@ -863,7 +857,7 @@ static of(...items: number[]): Uint8ClampedArray
 
 | 类型 | 说明 |
 | --- | --- |
-| [Uint8ClampedArray](arkts-arkts-typeduarrays-uint8clampedarray-c.md) | 新的ArkTS Uint8ClampedArray实例。可能的错误原因：1.必填参数未指定； &lt;br&gt;2.参数类型不正确；3.参数校验失败。 |
+| [Uint8ClampedArray](arkts-arkts-collections-uint8clampedarray-c.md) | 新的ArkTS Uint8ClampedArray实例。可能的错误原因：1.必填参数未指定； &lt;br&gt;2.参数类型不正确；3.参数校验失败。 |
 
 ## reduce
 
@@ -887,7 +881,7 @@ reduce(callbackFn: TypedArrayReduceCallback<number, number, Uint8ClampedArray>):
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callbackFn | [TypedArrayReduceCallback](arkts-arkts-collections-typedarrayreducecallback-t.md)&lt;number, number, Uint8ClampedArray&gt; | 是 | 归约函数，接收至多四个参数。 reduce方法对数组中的每个元素调用一次callbackfn函数。 |
+| callbackFn | [TypedArrayReduceCallback](arkts-arkts-collections-typedarrayreducecallback-t.md)&lt;number, number, [Uint8ClampedArray](arkts-arkts-collections-uint8clampedarray-c.md)&gt; | 是 | 归约函数，接收至多四个参数。 reduce方法对数组中的每个元素调用一次callbackfn函数。 |
 
 **返回值：**
 
@@ -899,8 +893,8 @@ reduce(callbackFn: TypedArrayReduceCallback<number, number, Uint8ClampedArray>):
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 10200011 | The reduce method cannot be bound. |
-| 10200201 | Concurrent modification error. |
+| [10200011](../errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) | The reduce method cannot be bound. |
+| [10200201](../errorcode-utils.md#10200201-concurrent修改错误) | Concurrent modification error. |
 
 ## reduce
 
@@ -924,7 +918,7 @@ reduce<U = number>(callbackFn: TypedArrayReduceCallback<U, number, Uint8ClampedA
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callbackFn | [TypedArrayReduceCallback](arkts-arkts-collections-typedarrayreducecallback-t.md)&lt;U, number, Uint8ClampedArray&gt; | 是 | 归约函数，接收至多四个参数。 reduce方法对数组中的每个元素调用一次callbackfn函数。 |
+| callbackFn | [TypedArrayReduceCallback](arkts-arkts-collections-typedarrayreducecallback-t.md)&lt;U, number, [Uint8ClampedArray](arkts-arkts-collections-uint8clampedarray-c.md)&gt; | 是 | 归约函数，接收至多四个参数。 reduce方法对数组中的每个元素调用一次callbackfn函数。 |
 | initialValue | U | 是 | 如果指定了initialValue，则将其作为开始累加的初始值。 首次调用callbackfn函数时会将该值作为参数传入，而不是使用数组元素值。 |
 
 **返回值：**
@@ -937,8 +931,8 @@ reduce<U = number>(callbackFn: TypedArrayReduceCallback<U, number, Uint8ClampedA
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 10200011 | The reduce method cannot be bound. |
-| 10200201 | Concurrent modification error. |
+| [10200011](../errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) | The reduce method cannot be bound. |
+| [10200201](../errorcode-utils.md#10200201-concurrent修改错误) | Concurrent modification error. |
 
 ## reduceRight
 
@@ -962,7 +956,7 @@ reduceRight<U = number>(callbackFn: TypedArrayReduceCallback<U, number, Uint8Cla
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callbackFn | [TypedArrayReduceCallback](arkts-arkts-collections-typedarrayreducecallback-t.md)&lt;U, number, Uint8ClampedArray&gt; | 是 | 对Uint8ClampedArray中的每个元素调用的函数。 |
+| callbackFn | [TypedArrayReduceCallback](arkts-arkts-collections-typedarrayreducecallback-t.md)&lt;U, number, [Uint8ClampedArray](arkts-arkts-collections-uint8clampedarray-c.md)&gt; | 是 | 对Uint8ClampedArray中的每个元素调用的函数。 |
 | initialValue | U | 是 | 作为回调函数首次调用的第一个参数的值。 &lt;br&gt;如果未提供初始值，则使用Uint8ClampedArray的最后一个元素， &lt;br&gt;并且回调函数将从倒数第二个元素开始调用。 |
 
 **返回值：**
@@ -975,8 +969,8 @@ reduceRight<U = number>(callbackFn: TypedArrayReduceCallback<U, number, Uint8Cla
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 10200011 | The reduceRight method cannot be bound. |
-| 10200201 | Concurrent modification error. |
+| [10200011](../errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) | The reduceRight method cannot be bound. |
+| [10200201](../errorcode-utils.md#10200201-concurrent修改错误) | Concurrent modification error. |
 
 ## reduceRight
 
@@ -1000,7 +994,7 @@ reduceRight(callbackFn: TypedArrayReduceCallback<number, number, Uint8ClampedArr
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callbackFn | [TypedArrayReduceCallback](arkts-arkts-collections-typedarrayreducecallback-t.md)&lt;number, number, Uint8ClampedArray&gt; | 是 | 对Uint8ClampedArray中的每个元素调用的函数。 |
+| callbackFn | [TypedArrayReduceCallback](arkts-arkts-collections-typedarrayreducecallback-t.md)&lt;number, number, [Uint8ClampedArray](arkts-arkts-collections-uint8clampedarray-c.md)&gt; | 是 | 对Uint8ClampedArray中的每个元素调用的函数。 |
 
 **返回值：**
 
@@ -1012,8 +1006,8 @@ reduceRight(callbackFn: TypedArrayReduceCallback<number, number, Uint8ClampedArr
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 10200011 | The reduceRight method cannot be bound. |
-| 10200201 | Concurrent modification error. |
+| [10200011](../errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) | The reduceRight method cannot be bound. |
+| [10200201](../errorcode-utils.md#10200201-concurrent修改错误) | Concurrent modification error. |
 
 ## reverse
 
@@ -1021,7 +1015,7 @@ reduceRight(callbackFn: TypedArrayReduceCallback<number, number, Uint8ClampedArr
 reverse(): Uint8ClampedArray
 ```
 
-反转ArkTS Uint8ClampedArray。
+反转ArkTS Uint8ClampedArray中元素的顺序，并返回反转后的ArkTS Uint8ClampedArray对象。
 
 **起始版本：** 12
 
@@ -1037,14 +1031,14 @@ reverse(): Uint8ClampedArray
 
 | 类型 | 说明 |
 | --- | --- |
-| [Uint8ClampedArray](arkts-arkts-typeduarrays-uint8clampedarray-c.md) | 反转后的ArkTS Uint8ClampedArray对象。 |
+| [Uint8ClampedArray](arkts-arkts-collections-uint8clampedarray-c.md) | 反转后的ArkTS Uint8ClampedArray对象。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 10200011 | The reverse method cannot be bound. |
-| 10200201 | Concurrent modification error. |
+| [10200011](../errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) | The reverse method cannot be bound. |
+| [10200201](../errorcode-utils.md#10200201-concurrent修改错误) | Concurrent modification error. |
 
 ## set
 
@@ -1068,15 +1062,15 @@ set(array: ArrayLike<number>, offset?: number): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| array | [ArrayLike](arkts-arkts-arraylike-i.md)&lt;number&gt; | 是 | 用于设置的ArrayLike对象。 |
+| array | ArrayLike&lt;number&gt; | 是 | 用于设置的ArrayLike对象。 |
 | offset | number | 否 | 写入的起始位置。默认为0。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 10200011 | The set method cannot be bound. |
-| 10200201 | Concurrent modification error. |
+| [10200011](../errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) | The set method cannot be bound. |
+| [10200201](../errorcode-utils.md#10200201-concurrent修改错误) | Concurrent modification error. |
 
 ## slice
 
@@ -1107,14 +1101,14 @@ slice(start?: number, end?: number): Uint8ClampedArray
 
 | 类型 | 说明 |
 | --- | --- |
-| [Uint8ClampedArray](arkts-arkts-typeduarrays-uint8clampedarray-c.md) | 新的ArkTS Uint8ClampedArray对象。 |
+| [Uint8ClampedArray](arkts-arkts-collections-uint8clampedarray-c.md) | 新的ArkTS Uint8ClampedArray对象。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 10200011 | The slice method cannot be bound. |
-| 10200201 | Concurrent modification error. |
+| [10200011](../errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) | The slice method cannot be bound. |
+| [10200201](../errorcode-utils.md#10200201-concurrent修改错误) | Concurrent modification error. |
 
 ## some
 
@@ -1138,7 +1132,7 @@ some(predicate: TypedArrayPredicateFn<number, Uint8ClampedArray>): boolean
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| predicate | [TypedArrayPredicateFn](arkts-arkts-collections-typedarraypredicatefn-t.md)&lt;number, Uint8ClampedArray&gt; | 是 | 用于测试的断言函数。 |
+| predicate | [TypedArrayPredicateFn](arkts-arkts-collections-typedarraypredicatefn-t.md)&lt;number, [Uint8ClampedArray](arkts-arkts-collections-uint8clampedarray-c.md)&gt; | 是 | 用于测试的断言函数。 |
 
 **返回值：**
 
@@ -1150,8 +1144,8 @@ some(predicate: TypedArrayPredicateFn<number, Uint8ClampedArray>): boolean
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 10200011 | The some method cannot be bound. |
-| 10200201 | Concurrent modification error. |
+| [10200011](../errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) | The some method cannot be bound. |
+| [10200201](../errorcode-utils.md#10200201-concurrent修改错误) | Concurrent modification error. |
 
 ## sort
 
@@ -1181,14 +1175,14 @@ sort(compareFn?: TypedArrayCompareFn<number>): Uint8ClampedArray
 
 | 类型 | 说明 |
 | --- | --- |
-| [Uint8ClampedArray](arkts-arkts-typeduarrays-uint8clampedarray-c.md) | 排序后的ArkTS Uint8ClampedArray对象。 |
+| [Uint8ClampedArray](arkts-arkts-collections-uint8clampedarray-c.md) | 排序后的ArkTS Uint8ClampedArray对象。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 10200011 | The sort method cannot be bound. |
-| 10200201 | Concurrent modification error. |
+| [10200011](../errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) | The sort method cannot be bound. |
+| [10200201](../errorcode-utils.md#10200201-concurrent修改错误) | Concurrent modification error. |
 
 ## subarray
 
@@ -1219,14 +1213,14 @@ subarray(begin?: number, end?: number): Uint8ClampedArray
 
 | 类型 | 说明 |
 | --- | --- |
-| [Uint8ClampedArray](arkts-arkts-typeduarrays-uint8clampedarray-c.md) | 新的ArkTS Uint8ClampedArray对象。 |
+| [Uint8ClampedArray](arkts-arkts-collections-uint8clampedarray-c.md) | 新的ArkTS Uint8ClampedArray对象。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 10200011 | The subarray method cannot be bound. |
-| 10200201 | Concurrent modification error. |
+| [10200011](../errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) | The subarray method cannot be bound. |
+| [10200201](../errorcode-utils.md#10200201-concurrent修改错误) | Concurrent modification error. |
 
 ## toLocaleString
 
@@ -1256,8 +1250,8 @@ toLocaleString(): string
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 10200011 | The toLocaleString method cannot be bound. |
-| 10200201 | Concurrent modification error. |
+| [10200011](../errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) | The toLocaleString method cannot be bound. |
+| [10200201](../errorcode-utils.md#10200201-concurrent修改错误) | Concurrent modification error. |
 
 ## toString
 
@@ -1287,8 +1281,8 @@ toString(): string
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 10200011 | The toString method cannot be bound. |
-| 10200201 | Concurrent modification error. |
+| [10200011](../errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) | The toString method cannot be bound. |
+| [10200201](../errorcode-utils.md#10200201-concurrent修改错误) | Concurrent modification error. |
 
 ## values
 
@@ -1296,7 +1290,7 @@ toString(): string
 values(): IterableIterator<number>
 ```
 
-返回一个新的迭代器对象，该对象包含ArkTS Uint8ClampedArray中每个元素的值。
+返回一个新的迭代器对象，该对象包含ArkTS Uint8ClampedArray中每个元素的值。迭代器遍历期间不能使用会改变ArkTS Uint8ClampedArray数组内容的方法。
 
 **起始版本：** 12
 
@@ -1312,14 +1306,14 @@ values(): IterableIterator<number>
 
 | 类型 | 说明 |
 | --- | --- |
-| [IterableIterator](arkts-arkts-iterator-iterableiterator-i.md)&lt;number&gt; | 新的迭代器对象。 |
+| IterableIterator&lt;number&gt; | 新的迭代器对象。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 10200011 | The values method cannot be bound. |
-| 10200201 | Concurrent modification error. |
+| [10200011](../errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) | The values method cannot be bound. |
+| [10200201](../errorcode-utils.md#10200201-concurrent修改错误) | Concurrent modification error. |
 
 ## BYTES_PER_ELEMENT
 
@@ -1327,7 +1321,7 @@ values(): IterableIterator<number>
 static readonly BYTES_PER_ELEMENT: number
 ```
 
-ArkTS Uint8ClampedArray中每个元素所占用的字节数。
+ArkTS Uint8ClampedArray中每个元素所占的字节数。
 
 **类型：** number
 

@@ -1,6 +1,6 @@
 # DepthVector3 (System API)
 
-深度空间中的三维向量。
+3D vector in depth space.
 
 **Since:** 26.0.0
 
@@ -18,7 +18,7 @@
 x: double
 ```
 
-X分量。
+X component.
 
 **Type:** double
 
@@ -42,7 +42,7 @@ X分量。
 y: double
 ```
 
-Y分量。
+Y component.
 
 **Type:** double
 
@@ -66,7 +66,7 @@ Y分量。
 z: double
 ```
 
-Z分量。
+Z component.
 
 **Type:** double
 

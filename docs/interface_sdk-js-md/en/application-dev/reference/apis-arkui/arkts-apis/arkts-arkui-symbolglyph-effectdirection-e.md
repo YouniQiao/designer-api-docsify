@@ -1,6 +1,6 @@
 # EffectDirection
 
-动效方向。
+The direction type of symbol effect
 
 **Since:** 23
 
@@ -16,7 +16,7 @@
 DOWN = 0
 ```
 
-缩小动画。
+The scale down animation of symbol
 
 **Since:** 23
 
@@ -34,7 +34,7 @@ DOWN = 0
 UP = 1
 ```
 
-放大动画。
+The scale up animation of symbol
 
 **Since:** 23
 

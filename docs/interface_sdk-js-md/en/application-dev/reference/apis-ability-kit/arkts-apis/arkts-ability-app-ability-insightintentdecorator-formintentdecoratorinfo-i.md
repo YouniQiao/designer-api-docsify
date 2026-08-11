@@ -1,7 +1,7 @@
 # FormIntentDecoratorInfo
 
-FormIntentDecoratorInfo继承自[IntentDecoratorInfo](arkts-ability-app-ability-insightintentdecorator-intentdecoratorinfo-i.md)，用于描述  
-[@InsightIntentForm](../../../reference/apis-ability-kit/js-apis-app-ability-InsightIntentDecorator.md#insightintentform)装饰器支持的参数。
+Inherits from [IntentDecoratorInfo](arkts-ability-app-ability-insightintentdecorator-intentdecoratorinfo-i.md) and is used to describe the parameters supported by the  
+[@InsightIntentForm](../../../reference/apis-ability-kit/js-apis-app-ability-InsightIntentDecorator.md#insightintentform) decorator.
 
 **Inheritance/Implementation:** FormIntentDecoratorInfo extends [IntentDecoratorInfo](arkts-ability-app-ability-insightintentdecorator-intentdecoratorinfo-i.md)
 
@@ -25,7 +25,7 @@ import { InsightIntentFunction, InsightIntentForm, InsightIntentLink, InsightInt
 formName: string
 ```
 
-表示FormExtensionAbility绑定的卡片名称。
+Name of the widget bound to the FormExtensionAbility.
 
 **Type:** string
 

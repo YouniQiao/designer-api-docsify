@@ -4,7 +4,7 @@
 type NotifySnapshotCallback = (deviceId: string, mission: int) => void
 ```
 
-快照更改时的回调函数。
+Callback function on snapshot changed.
 
 **Since:** 9
 

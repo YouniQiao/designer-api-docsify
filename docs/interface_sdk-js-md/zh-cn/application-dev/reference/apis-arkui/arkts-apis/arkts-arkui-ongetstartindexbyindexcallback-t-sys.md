@@ -30,5 +30,5 @@ export type OnGetStartIndexByIndexCallback = (targetIndex: int) => StartLineInfo
 
 | 类型 | 说明 |
 | --- | --- |
-| [StartLineInfo](arkts-arkui-grid-startlineinfo-i-sys.md) | - |
+| [StartLineInfo](../arkts-components/arkts-arkui-startlineinfo-i-sys.md) | - |
 

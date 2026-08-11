@@ -1,12 +1,13 @@
 # Path
 
-Path是Drawing模块提供的复合几何路径类，由直线、圆弧、圆锥曲线、二阶贝塞尔、三阶贝塞尔等基本图元组成，支持路径的构造、变换、布尔运算、SVG路径解析与转换、测量与片段截取等能力。未设置填充类型时，默认填充类型为WINDING，可通过[setFillType](arkts-arkgraphics2d-drawing-path-c.md#setfilltype)修改。
+A compound geometric path consisting of line segments, arcs, quadratic Bezier curves, and cubic Bezier curves.
 
-> **说明：**
+> **NOTE：**
 > 
-> - 本模块使用屏幕物理像素单位px。
+> - This module uses the physical pixel unit, px.
 > 
-> - 本模块为单线程模型策略，需要调用方自行管理线程安全和上下文状态的切换。
+> - The module operates under a single-threaded model. The caller needs to manage thread safety and context state
+> transitions.
 
 **Since:** 11
 
@@ -34,7 +35,9 @@ ArkTS-Sta:
 addArc(rect: common2D.Rect, startAngle: double, sweepAngle: double): void
 ```
 
-向路径添加一段圆弧。与[arcTo](arkts-arkgraphics2d-drawing-path-c.md#arcto)相比，addArc不会自动添加从路径最后点到弧线起点的连接线段，且通过common2D.Rect对象指定矩形边界。若需要自动连接弧线起点，请使用arcTo；若仅需添加独立弧线，可使用addArc。
+Adds an arc to this path.When **startAngle** and **sweepAngle** meet the following conditions, an oval instead of an arc is added:
+
+1. The result of **startAngle** modulo 90 is close to 0.2. The value of **sweepAngle** is not in the range of (-360, 360).In other cases, this API adds an arc by applying the result of **sweepAngle** modulo 360 to the path.
 
 **Since:** 12
 
@@ -48,15 +51,15 @@ addArc(rect: common2D.Rect, startAngle: double, sweepAngle: double): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| rect | common2D.Rect | Yes | 包含弧的椭圆的矩形边界。 |
-| startAngle | ArkTS-Dyn: number  <br>ArkTS-Sta：double | Yes | 弧的起始角度，单位为度，0°为x轴正方向，该参数为浮点数。当对90取余接近于0且sweepAngle不在(-360, 360)区间内时，将添加整个椭圆而非圆弧。 |
-| sweepAngle | ArkTS-Dyn: number  <br>ArkTS-Sta：double | Yes | 扫描角度，单位为度。正数表示顺时针方向，负数表示逆时针方向。当参数不在(-360, 360)区间内且startAngle对90取余接近于0时，将添加整个椭圆而非圆 弧；其余情况下实际扫描角度为该入参对360取余的结果。该参数为浮点数。 |
+| rect | common2D.Rect | Yes | Rectangular boundary that encapsulates the oval including the arc. |
+| startAngle | ArkTS-Dyn: number  <br>ArkTS-Sta：double | Yes | Start angle of the arc, in degrees. The value 0 indicates the positive direction of the X axis. The value is a floating point number. |
+| sweepAngle | ArkTS-Dyn: number  <br>ArkTS-Sta：double | Yes | Angle to sweep, in degrees. A positive value indicates a clockwise sweep, and a negative value indicates a counterclockwise sweep. The value is a floating point number. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types. |
 
 ## addCircle
 
@@ -70,7 +73,7 @@ ArkTS-Sta:
 addCircle(x: double, y: double, radius: double, pathDirection?: PathDirection): void
 ```
 
-按指定方向，向路径添加圆形，圆的起点位于(x + radius, y)。
+Adds a circle to this path in the specified direction. The start point of the circle is (x + radius, y).
 
 **Since:** 12
 
@@ -84,16 +87,16 @@ addCircle(x: double, y: double, radius: double, pathDirection?: PathDirection): 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| x | ArkTS-Dyn: number  <br>ArkTS-Sta：double | Yes | 表示圆心的x轴坐标，该参数为浮点数。单位为物理像素px。 |
-| y | ArkTS-Dyn: number  <br>ArkTS-Sta：double | Yes | 表示圆心的y轴坐标，该参数为浮点数。单位为物理像素px。 |
-| radius | ArkTS-Dyn: number  <br>ArkTS-Sta：double | Yes | 表示圆形的半径，取值范围>0，该参数为浮点数，小于等于0时不会有任何效果。单位为物理像素px。 |
-| pathDirection | [PathDirection](arkts-arkgraphics2d-drawing-pathdirection-e.md) | No | 表示路径方向。不传入时默认为顺时针方向。 |
+| x | ArkTS-Dyn: number  <br>ArkTS-Sta：double | Yes | X coordinate of the center of the circle. The value is a floating point number. |
+| y | ArkTS-Dyn: number  <br>ArkTS-Sta：double | Yes | Y coordinate of the center of the circle. The value is a floating point number. |
+| radius | ArkTS-Dyn: number  <br>ArkTS-Sta：double | Yes | Radius of the circle. The value is a floating point number. If the value is less than or equal to 0, there is no effect. |
+| pathDirection | [PathDirection](arkts-arkgraphics2d-drawing-pathdirection-e.md) | No | Direction of the path. The default direction is clockwise. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; 3. Parameter verification failed. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; 3. Parameter verification failed. |
 
 ## addOval
 
@@ -107,7 +110,7 @@ ArkTS-Sta:
 addOval(rect: common2D.Rect, start: int, pathDirection?: PathDirection): void
 ```
 
-按指定方向，将矩形的内切椭圆添加到路径中。
+Adds the inscribed ellipse of a rectangle to this path in the specified direction.
 
 **Since:** 12
 
@@ -121,15 +124,15 @@ addOval(rect: common2D.Rect, start: int, pathDirection?: PathDirection): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| rect | common2D.Rect | Yes | 椭圆的矩形边界。 |
-| start | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | 表示椭圆初始点的索引，取值范围为不小于0的整数，0、1、2、3分别对应椭圆的上端点、右端点、下端点、左端点，大于等于4时会对4取余。 |
-| pathDirection | [PathDirection](arkts-arkgraphics2d-drawing-pathdirection-e.md) | No | 表示路径方向。不传入时默认为顺时针方向。 |
+| rect | common2D.Rect | Yes | Rectangular boundary of the oval. |
+| start | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | Start point of the oval, where 0, 1, 2, and 3 correspond to the upper, right, lower, and left points, respectively. The value is an integer greater than or equal to 0. If the value is greater than or equal to 4, the remainder of 4 is used. |
+| pathDirection | [PathDirection](arkts-arkgraphics2d-drawing-pathdirection-e.md) | No | Direction of the path. The default direction is clockwise. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; 3. Parameter verification failed. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; 3. Parameter verification failed. |
 
 ## addPath
 
@@ -137,7 +140,7 @@ addOval(rect: common2D.Rect, start: int, pathDirection?: PathDirection): void
 addPath(path: Path, matrix?: Matrix | null): void
 ```
 
-对源路径进行矩阵变换后，将其添加到当前路径中。
+Transforms the points in a path by a matrix and stores the resulting path in the current **Path** object.
 
 **Since:** 12
 
@@ -151,14 +154,14 @@ addPath(path: Path, matrix?: Matrix | null): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| path | [Path](arkts-arkgraphics2d-drawing-path-c.md) | Yes | 要添加到当前路径的源路径对象，经过矩阵变换后将被追加到当前路径中。 |
-| matrix | [Matrix](arkts-arkgraphics2d-drawing-matrix-c.md) \| null | No | 表示矩阵对象，用于对源路径进行变换（如旋转、缩放、平移等）。当需要对源路径进行 几何变换后再添加到当前路径时传入此参数；当仅需原样添加源路径时可不传入，不传入时默认为单位矩阵（即不进行任何变换）。 |
+| path | [Path](arkts-arkgraphics2d-drawing-path-c.md) | Yes | Source **Path** object. |
+| matrix | [Matrix](arkts-arkgraphics2d-drawing-matrix-c.md) \| null | No | Matrix** object. The default value is an identity matrix. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types. |
 
 ## addPolygon
 
@@ -166,7 +169,7 @@ addPath(path: Path, matrix?: Matrix | null): void
 addPolygon(points: Array<common2D.Point>, close: boolean): void
 ```
 
-通过坐标点列表添加多条连续的线段。
+Adds a polygon to this path.
 
 **Since:** 12
 
@@ -180,14 +183,14 @@ addPolygon(points: Array<common2D.Point>, close: boolean): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| points | Array&lt;common2D.Point&gt; | Yes | 多边形各顶点的坐标点数组，按数组顺序依次连接各点形成连续线段。 |
-| close | boolean | Yes | 表示是否将路径闭合，即是否添加路径起始点到终点的连线。true表示将路径闭合，false表示不将路径闭合。 |
+| points | Array&lt;common2D.Point&gt; | Yes | Array that holds the vertex coordinates of the polygon. |
+| close | boolean | Yes | Whether to close the path, that is, whether to add a line segment from the start point to the end point of the path. The value **true** means to close the path, and **false** means the opposite. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types. |
 
 ## addRect
 
@@ -195,7 +198,7 @@ addPolygon(points: Array<common2D.Point>, close: boolean): void
 addRect(rect: common2D.Rect, pathDirection?: PathDirection): void
 ```
 
-按指定方向，将矩形添加到路径中，添加的路径的起始点为矩形左上角。
+Adds a rectangle to a path in the specified direction. The start point is the upper left corner of the rectangle.
 
 **Since:** 12
 
@@ -209,14 +212,14 @@ addRect(rect: common2D.Rect, pathDirection?: PathDirection): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| rect | common2D.Rect | Yes | 向路径中添加的矩形轮廓，rect参数需为有效的common2D.Rect对象，left需小于right、top需小于bottom。 |
-| pathDirection | [PathDirection](arkts-arkgraphics2d-drawing-pathdirection-e.md) | No | 表示路径方向。不传入时默认为顺时针方向。 |
+| rect | common2D.Rect | Yes | Rectangle. |
+| pathDirection | [PathDirection](arkts-arkgraphics2d-drawing-pathdirection-e.md) | No | Direction of the path. The default direction is clockwise. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; 3. Parameter verification failed. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; 3. Parameter verification failed. |
 
 ## addRoundRect
 
@@ -224,7 +227,7 @@ addRect(rect: common2D.Rect, pathDirection?: PathDirection): void
 addRoundRect(roundRect: RoundRect, pathDirection?: PathDirection): void
 ```
 
-按指定方向，向路径添加圆角矩形轮廓。路径添加方向为顺时针时，起始点位于圆角矩形左下方圆角与左边界的交点；路径添加方向为逆时针时，起始点位于圆角矩形左上方圆角与左边界的交点。
+Adds a rounded rectangle to a path in the specified direction. When the path direction is clockwise, the start point is at the intersection of the rounded rectangle's left boundary and its lower left corner. When the path direction is counterclockwise, the start point is at the intersection point between the left boundary and the upper left corner.
 
 **Since:** 12
 
@@ -238,14 +241,14 @@ addRoundRect(roundRect: RoundRect, pathDirection?: PathDirection): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| roundRect | [RoundRect](arkts-arkgraphics2d-drawing-roundrect-c.md) | Yes | 向路径中添加的圆角矩形对象，需为有效的RoundRect对象。 |
-| pathDirection | [PathDirection](arkts-arkgraphics2d-drawing-pathdirection-e.md) | No | 表示路径方向。不传入时默认为顺时针方向。 |
+| roundRect | [RoundRect](arkts-arkgraphics2d-drawing-roundrect-c.md) | Yes | Rounded rectangle. |
+| pathDirection | [PathDirection](arkts-arkgraphics2d-drawing-pathdirection-e.md) | No | Direction of the path. The default direction is clockwise. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; 3. Parameter verification failed. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; 3. Parameter verification failed. |
 
 ## approximate
 
@@ -253,15 +256,18 @@ addRoundRect(roundRect: RoundRect, pathDirection?: PathDirection): void
 approximate(acceptableError: number): Array<number>
 ```
 
-将当前路径转化为由连续直线段构成的近似路径。
+Converts the existing path into an approximate path consisting of consecutive line segments.
 
-> **说明：**
+> **NOTE：**
 > 
-> - 当acceptableError为0时，曲线路径被极度细分，会严重影响性能和内存消耗，不建议设置误差值为0。
+> - Avoid setting **acceptableError** to **0** as it heavily divides the curve path, significantly impacting
+> performance and memory usage.
 > 
-> - 当acceptableError远大于路径尺寸时，路径会极度简化，仅保留路径的起止点等少量关键点，可能会丢失原有形状。
+> - Setting a high **acceptableError** simplifies the path greatly by keeping only essential points, potentially
+> distorting the original shape.
 > 
-> - 对于椭圆等曲线，当acceptableError过大时，拟合结果通常只包含椭圆的分段贝塞尔曲线的起止点，椭圆形会被极度简化为多边形。
+> - When you set a high **acceptableError** for curves such as ellipses, the fitting process often simplifies
+> them to polygons by keeping just the start and end points of their Bezier curve segments.
 
 **Since:** 20
 
@@ -275,19 +281,19 @@ approximate(acceptableError: number): Array<number>
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| acceptableError | number | Yes | 表示路径上每条线段的可接受误差，取值范围≥0，该参数为浮点数，小于0时报错。单位为物理像素px。 |
+| acceptableError | number | Yes | Acceptable error of each line segment on a path. The value is a floating point number. If the value is less than 0, an error is reported. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Array&lt;number&gt; | 返回包含近似路径的点的数组，至少包含两个点。每个点由三个值组成： &lt;br&gt;1. 该点所在的位置距离路径起点的长度比例值，范围为[0.0, 1.0]。 &lt;br&gt;2. 点的x坐标。 &lt;br&gt;3. 点的y坐标。 |
+| Array&lt;number&gt; | An array of points in the approximate path, which contains at least two points. Each point consists of three values: &lt;br&gt;1. Length ratio of the point to the start point of the path. The value range is [0.0, 1.0]. &lt;br&gt;2. X coordinate of a point. &lt;br&gt;3. Y coordinate of a point. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 25900001 | Parameter error. Possible causes: Incorrect parameter range. |
+| [25900001](../errorcode-drawing.md#25900001-abnormal-parameter-value) | Parameter error. Possible causes: Incorrect parameter range. |
 
 ## approximate
 
@@ -295,15 +301,7 @@ approximate(acceptableError: number): Array<number>
 approximate(acceptableError: double): Array<double> | undefined
 ```
 
-将当前路径转化为由连续直线段构成的近似路径。
-
-> **说明：**
-> 
-> - 当acceptableError为0时，曲线路径被极度细分，会严重影响性能和内存消耗，不建议设置误差值为0。
-> 
-> - 当acceptableError远大于路径尺寸时，路径会极度简化，仅保留路径的起止点等少量关键点，可能会丢失原有形状。
-> 
-> - 对于椭圆等曲线，当acceptableError过大时，拟合结果通常只包含椭圆的分段贝塞尔曲线的起止点，椭圆形会被极度简化为多边形。
+Approximates the path with a series of line segments.
 
 **Since:** 24
 
@@ -317,19 +315,19 @@ approximate(acceptableError: double): Array<double> | undefined
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| acceptableError | double | Yes | 表示路径上每条线段的可接受误差，取值范围≥0，该参数为浮点数，小于0时报错。单位为物理像素px。 |
+| acceptableError | double | Yes | Indicates the acceptable error for a line on the path. Should be no less than 0. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Array&lt;double&gt; | 返回包含近似路径的点的数组，至少包含两个点。每个点由三个值组成： &lt;br&gt;1. 该点所在的位置距离路径起点的长度比例值，范围为[0.0, 1.0]。 &lt;br&gt;2. 点的x坐标。 &lt;br&gt;3. 点的y坐标。 |
+| Array&lt;double&gt; | Returns with the array containing point components. &lt;br&gt;There are three components for each point: &lt;br&gt;1. Fraction along the length of the path that the point resides [0.0, 1.0]. &lt;br&gt;2. The x coordinate of the point. &lt;br&gt;3. The y coordinate of the point. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 25900001 | Parameter error. Possible causes: Incorrect parameter range. |
+| [25900001](../errorcode-drawing.md#25900001-abnormal-parameter-value) | Parameter error. Possible causes: Incorrect parameter range. |
 
 ## arcTo
 
@@ -343,7 +341,7 @@ ArkTS-Sta:
 arcTo(x1: double, y1: double, x2: double, y2: double, startDeg: double, sweepDeg: double): void
 ```
 
-给路径添加一段弧线。绘制弧线的方式为角度弧：首先指定一个矩形边界，取其内切椭圆；然后指定起始角度和扫描度数；最后从起始角度扫描截取椭圆周长的一部分，即为绘制的弧线。另外会默认添加一条从路径最后点位置（若路径没有内容则默认值为 (0, 0)）到弧线起始点位置的线段。若不需要自动添加连接线段，请使用[addArc](arkts-arkgraphics2d-drawing-path-c.md#addarc)。
+Draws an arc to this path using angle arc mode. This mode first defines a rectangle and takes its inscribed ellipse. Then, it specifies a start angle and a sweep angle. The arc is the portion of the ellipse's circumference defined by the start angle and the sweep angle. By default, a line segment from the last point of the path to the start point of the arc is also added.
 
 **Since:** 11
 
@@ -359,18 +357,18 @@ arcTo(x1: double, y1: double, x2: double, y2: double, startDeg: double, sweepDeg
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| x1 | ArkTS-Dyn: number  <br>ArkTS-Sta：double | Yes | 矩形左上角的x坐标，该参数为浮点数。单位为物理像素px。 |
-| y1 | ArkTS-Dyn: number  <br>ArkTS-Sta：double | Yes | 矩形左上角的y坐标，该参数为浮点数。单位为物理像素px。 |
-| x2 | ArkTS-Dyn: number  <br>ArkTS-Sta：double | Yes | 矩形右下角的x坐标，该参数为浮点数。单位为物理像素px。 |
-| y2 | ArkTS-Dyn: number  <br>ArkTS-Sta：double | Yes | 矩形右下角的y坐标，该参数为浮点数。单位为物理像素px。 |
-| startDeg | ArkTS-Dyn: number  <br>ArkTS-Sta：double | Yes | 起始的角度。角度的起始方向（0°）为x轴正方向。单位为度。 |
-| sweepDeg | ArkTS-Dyn: number  <br>ArkTS-Sta：double | Yes | 扫描的度数，为正数时顺时针扫描，为负数时逆时针扫描。实际扫描的度数为该入参对360取模的结果。 单位为度。 |
+| x1 | ArkTS-Dyn: number  <br>ArkTS-Sta：double | Yes | X coordinate of the upper left corner of the rectangle. The value is a floating point number. |
+| y1 | ArkTS-Dyn: number  <br>ArkTS-Sta：double | Yes | Y coordinate of the upper left corner of the rectangle. The value is a floating point number. |
+| x2 | ArkTS-Dyn: number  <br>ArkTS-Sta：double | Yes | X coordinate of the lower right corner of the rectangle. The value is a floating point number. |
+| y2 | ArkTS-Dyn: number  <br>ArkTS-Sta：double | Yes | Y coordinate of the lower right corner of the rectangle. The value is a floating point number. |
+| startDeg | ArkTS-Dyn: number  <br>ArkTS-Sta：double | Yes | Start angle. The start direction (0��) of the angle is the positive direction of the X axis. |
+| sweepDeg | ArkTS-Dyn: number  <br>ArkTS-Sta：double | Yes | Angle to sweep, in degrees. A positive value indicates a clockwise sweep, and a negative value indicates a counterclockwise sweep. The actual swipe degree is the modulo operation result of the input parameter by 360. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types. |
 
 ## buildFromSvgString
 
@@ -378,7 +376,7 @@ arcTo(x1: double, y1: double, x2: double, y2: double, startDeg: double, sweepDeg
 buildFromSvgString(str: string): boolean
 ```
 
-解析SVG字符串表示的路径。支持标准SVG路径数据命令（如M、L、C、Q、A、Z及其相对坐标形式等），解析失败时返回false。
+Parses the path represented by an SVG string.
 
 **Since:** 12
 
@@ -392,19 +390,19 @@ buildFromSvgString(str: string): boolean
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| str | string | Yes | SVG路径数据格式的字符串，用于描述绘制路径。支持M/m、L/l、H/h、V/v、C/c、S/s、Q/q、T/t、A/a、Z/z 等SVG路径命令，具体语法请参考SVG路径数据规范。传入不符合SVG路径格式的字符串时，解析失败，接口返回false。 |
+| str | string | Yes | String in SVG format, which is used to describe the path. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| boolean | 返回是否成功解析SVG字符串的结果。true表示解析成功，false表示解析失败。 |
+| boolean | Result of the parsing operation. The value **true** means that the operation is successful, and **false** means the opposite. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. Possible causes: Mandatory parameters are left unspecified. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: Mandatory parameters are left unspecified. |
 
 ## close
 
@@ -412,7 +410,7 @@ buildFromSvgString(str: string): boolean
 close(): void
 ```
 
-闭合路径，会添加一条从路径最后点位置到起始点位置的线段。
+Closes this path by adding a line segment from the start point to the last point of the path.
 
 **Since:** 11
 
@@ -434,7 +432,7 @@ ArkTS-Sta:
 conicTo(ctrlX: double, ctrlY: double, endX: double, endY: double, weight: double): void
 ```
 
-在当前路径上添加一条路径最后点位置（若路径没有内容则默认为 (0, 0)）到目标点位置的圆锥曲线，其控制点为 (ctrlX, ctrlY)，目标点为 (endX, endY)。与[quadTo](arkts-arkgraphics2d-drawing-path-c.md#quadto)相比，conicTo通过权重参数可更灵活地控制曲线形状：权重为1时效果与quadTo相同，权重不为1时可精确表示圆弧、椭圆弧等圆锥曲线段。仅需标准二次贝塞尔曲线时推荐使用quadTo，需要精确表示圆弧或灵活控制曲线形状时推荐使用conicTo。
+Draws a conic curve from the last point of this path to the target point. If the path is empty, the start point (0, 0) is used.
 
 **Since:** 12
 
@@ -450,17 +448,17 @@ conicTo(ctrlX: double, ctrlY: double, endX: double, endY: double, weight: double
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| ctrlX | ArkTS-Dyn: number  <br>ArkTS-Sta：double | Yes | 控制点的x坐标，该参数为浮点数。单位为物理像素px。 |
-| ctrlY | ArkTS-Dyn: number  <br>ArkTS-Sta：double | Yes | 控制点的y坐标，该参数为浮点数。单位为物理像素px。 |
-| endX | ArkTS-Dyn: number  <br>ArkTS-Sta：double | Yes | 目标点的x坐标，该参数为浮点数。单位为物理像素px。 |
-| endY | ArkTS-Dyn: number  <br>ArkTS-Sta：double | Yes | 目标点的y坐标，该参数为浮点数。单位为物理像素px。 |
-| weight | ArkTS-Dyn: number  <br>ArkTS-Sta：double | Yes | 表示曲线权重，决定了曲线的形状。值越大，曲线越接近控制点。 小于等于0时，效果与[lineTo](arkts-arkgraphics2d-drawing-path-c.md#lineto)相同； 值为1时，效果与[quadTo](arkts-arkgraphics2d-drawing-path-c.md#quadto)相同。该参数为浮点数。 |
+| ctrlX | ArkTS-Dyn: number  <br>ArkTS-Sta：double | Yes | X coordinate of the control point. The value is a floating point number. |
+| ctrlY | ArkTS-Dyn: number  <br>ArkTS-Sta：double | Yes | Y coordinate of the control point. The value is a floating point number. |
+| endX | ArkTS-Dyn: number  <br>ArkTS-Sta：double | Yes | X coordinate of the target point. The value is a floating point number. |
+| endY | ArkTS-Dyn: number  <br>ArkTS-Sta：double | Yes | Y coordinate of the target point. The value is a floating point number. |
+| weight | ArkTS-Dyn: number  <br>ArkTS-Sta：double | Yes | Weight of the curve, which determines its shape. The larger the value, the closer of the curve to the control point. If the value is less than or equal to 0, this API has the same effect as [lineTo](arkts-arkgraphics2d-drawing-path-c.md#lineto). If the value is 1, it has the same effect as [quadTo](arkts-arkgraphics2d-drawing-path-c.md#quadto). The value is a floating point number. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types. |
 
 ## constructor
 
@@ -468,7 +466,7 @@ conicTo(ctrlX: double, ctrlY: double, endX: double, endY: double, weight: double
 constructor()
 ```
 
-构造一个路径。
+Constructs a path.
 
 **Since:** 12
 
@@ -486,7 +484,7 @@ constructor()
 constructor(path: Path)
 ```
 
-构造一个已有路径的副本。
+Constructs a copy of an existing path.
 
 **Since:** 12
 
@@ -502,7 +500,7 @@ constructor(path: Path)
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| path | [Path](arkts-arkgraphics2d-drawing-path-c.md) | Yes | 待复制的路径对象。 |
+| path | [Path](arkts-arkgraphics2d-drawing-path-c.md) | Yes | Path to copy. |
 
 ## contains
 
@@ -516,7 +514,8 @@ ArkTS-Sta:
 contains(x: double, y: double): boolean
 ```
 
-判断指定坐标点是否被路径包含，判定规则参考[PathFillType](arkts-arkgraphics2d-drawing-pathfilltype-e.md)。
+Checks whether a coordinate point is included in this path. For details, see  
+[PathFillType](arkts-arkgraphics2d-drawing-pathfilltype-e.md).
 
 **Since:** 12
 
@@ -530,20 +529,20 @@ contains(x: double, y: double): boolean
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| x | ArkTS-Dyn: number  <br>ArkTS-Sta：double | Yes | x轴上坐标点，该参数为浮点数。单位为物理像素px。 |
-| y | ArkTS-Dyn: number  <br>ArkTS-Sta：double | Yes | y轴上坐标点，该参数为浮点数。单位为物理像素px。 |
+| x | ArkTS-Dyn: number  <br>ArkTS-Sta：double | Yes | X coordinate. The value is a floating point number. |
+| y | ArkTS-Dyn: number  <br>ArkTS-Sta：double | Yes | Y coordinate. The value is a floating point number. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| boolean | 返回指定坐标点是否在路径内。true表示点在路径内，false表示点不在路径内。 |
+| boolean | Check result. The value **true** means that the coordinate point is included in the path, and **false** means the opposite. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types. |
 
 ## convertToSvgString
 
@@ -551,7 +550,7 @@ contains(x: double, y: double): boolean
 convertToSvgString(): string
 ```
 
-将路径转换为SVG字符串。输出的字符串遵循SVG路径数据规范映射。
+Converts path to an SVG string.
 
 **Since:** 26.0.0
 
@@ -567,7 +566,7 @@ convertToSvgString(): string
 
 | Type | Description |
 | --- | --- |
-| string | 转换后的SVG字符串，以SVG路径格式描述当前路径的几何形状。 |
+| string | The SVG string of the path. |
 
 ## cubicTo
 
@@ -581,7 +580,7 @@ ArkTS-Sta:
 cubicTo(ctrlX1: double, ctrlY1: double, ctrlX2: double, ctrlY2: double, endX: double, endY: double): void
 ```
 
-添加一条从路径最后点位置（若路径没有内容则默认为 (0, 0)）到目标点位置的三阶贝塞尔曲线。
+Draws a cubic Bezier curve from the last point of this path to the target point. If the path is empty, the start point (0, 0) is used.
 
 **Since:** 11
 
@@ -597,18 +596,18 @@ cubicTo(ctrlX1: double, ctrlY1: double, ctrlX2: double, ctrlY2: double, endX: do
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| ctrlX1 | ArkTS-Dyn: number  <br>ArkTS-Sta：double | Yes | 第一个控制点的x坐标，该参数为浮点数。单位为物理像素px。 |
-| ctrlY1 | ArkTS-Dyn: number  <br>ArkTS-Sta：double | Yes | 第一个控制点的y坐标，该参数为浮点数。单位为物理像素px。 |
-| ctrlX2 | ArkTS-Dyn: number  <br>ArkTS-Sta：double | Yes | 第二个控制点的x坐标，该参数为浮点数。单位为物理像素px。 |
-| ctrlY2 | ArkTS-Dyn: number  <br>ArkTS-Sta：double | Yes | 第二个控制点的y坐标，该参数为浮点数。单位为物理像素px。 |
-| endX | ArkTS-Dyn: number  <br>ArkTS-Sta：double | Yes | 目标点的x坐标，该参数为浮点数。单位为物理像素px。 |
-| endY | ArkTS-Dyn: number  <br>ArkTS-Sta：double | Yes | 目标点的y坐标，该参数为浮点数。单位为物理像素px。 |
+| ctrlX1 | ArkTS-Dyn: number  <br>ArkTS-Sta：double | Yes | X coordinate of the first control point. The value is a floating point number. |
+| ctrlY1 | ArkTS-Dyn: number  <br>ArkTS-Sta：double | Yes | Y coordinate of the first control point. The value is a floating point number. |
+| ctrlX2 | ArkTS-Dyn: number  <br>ArkTS-Sta：double | Yes | X coordinate of the second control point. The value is a floating point number. |
+| ctrlY2 | ArkTS-Dyn: number  <br>ArkTS-Sta：double | Yes | Y coordinate of the second control point. The value is a floating point number. |
+| endX | ArkTS-Dyn: number  <br>ArkTS-Sta：double | Yes | X coordinate of the target point. The value is a floating point number. |
+| endY | ArkTS-Dyn: number  <br>ArkTS-Sta：double | Yes | Y coordinate of the target point. The value is a floating point number. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types. |
 
 ## getBounds
 
@@ -616,7 +615,7 @@ cubicTo(ctrlX1: double, ctrlY1: double, ctrlX2: double, ctrlY2: double, endX: do
 getBounds(): common2D.Rect
 ```
 
-获取包含路径的最小矩形边界。
+Obtains the minimum bounding rectangle that encloses this path.
 
 **Since:** 12
 
@@ -630,7 +629,7 @@ getBounds(): common2D.Rect
 
 | Type | Description |
 | --- | --- |
-| common2D.Rect | 包含路径的最小矩形区域。 |
+| common2D.Rect | Minimum bounding rectangle. |
 
 ## getBounds
 
@@ -638,7 +637,7 @@ getBounds(): common2D.Rect
 getBounds(): common2D.Rect | undefined
 ```
 
-获取包含路径的最小矩形边界。
+Obtains the minimum bounding rectangle that encloses this path.
 
 **Since:** 23
 
@@ -652,7 +651,7 @@ getBounds(): common2D.Rect | undefined
 
 | Type | Description |
 | --- | --- |
-| common2D.Rect | 包含路径的最小矩形区域。创建失败时返回undefined。 |
+| common2D.Rect | Rect object. |
 
 ## getConicWeightData
 
@@ -666,17 +665,7 @@ ArkTS-Sta:
 getConicWeightData(): Array<double>
 ```
 
-获取路径的圆锥曲线权重数据。
-
-在路径（path）图元中，圆锥曲线数据采用有理贝塞尔曲线（Rational Bézier Curve）形式表示，其中每个控制点附带一个权重值（weight）。权重属于曲线定义的几何参数。
-
-主要作用如下：
-
-形状调控：权重值越大，曲线越靠近对应控制点；权重为1时退化为标准贝塞尔曲线；权重为0时该控制点不起作用。
-
-精确表示圆锥曲线：通过组合权重与二次贝塞尔曲线，可以精确表示圆弧、椭圆弧、抛物线等圆锥曲线段，无需使用分段逼近或专用椭圆弧指令。
-
-数据组织：权重通常以数组形式与点数据并列，按顺序对应每个控制点，与相应的指令verb（如[conicTo](arkts-arkgraphics2d-drawing-path-c.md#conicto)）配合使用。
+Gets path conic weight data.
 
 **Since:** 26.0.0
 
@@ -692,7 +681,7 @@ getConicWeightData(): Array<double>
 
 | Type | Description |
 | --- | --- |
-| ArkTS-Dyn: Array&lt;number&gt;  <br>ArkTS-Sta：Array&lt;double&gt; | 类型为浮点数，取值范围≥0。取值为0.0时，该控制点完全无效，曲线不经过此点，曲线实际由其余控制点定义。取值为1.0时，该控制点对应的曲线变为标准贝塞尔曲线，此时权重不产生 额外形变效果。取值大于1时，权重值越大，曲线越靠近该控制点；小于1.0但大于0.0时，曲线则相对远离该控制点。 |
+| ArkTS-Dyn: Array&lt;number&gt;  <br>ArkTS-Sta：Array&lt;double&gt; | path conic weight array. |
 
 ## getFillType
 
@@ -700,7 +689,7 @@ getConicWeightData(): Array<double>
 getFillType(): PathFillType
 ```
 
-获取路径的填充类型。
+Obtains the fill type of a path.
 
 **Since:** 20
 
@@ -714,7 +703,7 @@ getFillType(): PathFillType
 
 | Type | Description |
 | --- | --- |
-| [PathFillType](arkts-arkgraphics2d-drawing-pathfilltype-e.md) | 路径的填充类型，决定路径内部区域的定义方式。 |
+| [PathFillType](arkts-arkgraphics2d-drawing-pathfilltype-e.md) | Fill type of a path. |
 
 ## getFillType
 
@@ -722,7 +711,7 @@ getFillType(): PathFillType
 getFillType(): PathFillType | undefined
 ```
 
-获取路径的填充类型。
+Gets fill type, the rule used to fill path.
 
 **Since:** 24
 
@@ -736,7 +725,7 @@ getFillType(): PathFillType | undefined
 
 | Type | Description |
 | --- | --- |
-| [PathFillType](arkts-arkgraphics2d-drawing-pathfilltype-e.md) | 路径的填充类型，决定路径内部区域的定义方式。 |
+| [PathFillType](arkts-arkgraphics2d-drawing-pathfilltype-e.md) | Returns the pathFillType. |
 
 ## getLastPoint
 
@@ -744,7 +733,7 @@ getFillType(): PathFillType | undefined
 getLastPoint(): common2D.Point
 ```
 
-获取路径最后点位置的坐标。
+Gets the last point of the path.
 
 **Since:** 26.0.0
 
@@ -760,7 +749,7 @@ getLastPoint(): common2D.Point
 
 | Type | Description |
 | --- | --- |
-| common2D.Point | 路径最后点位置坐标。如果路径为空，则返回undefined。 |
+| common2D.Point | Returns the last point of the path. |
 
 ## getLastPoint
 
@@ -768,7 +757,7 @@ getLastPoint(): common2D.Point
 getLastPoint(): common2D.Point | undefined
 ```
 
-获取路径最后点位置的坐标。
+Gets the last point of the path.
 
 **Since:** 26.0.0
 
@@ -784,7 +773,7 @@ getLastPoint(): common2D.Point | undefined
 
 | Type | Description |
 | --- | --- |
-| common2D.Point | 路径最后点位置坐标。如果路径为空，则返回undefined。 |
+| common2D.Point | Returns the last point of the path, or undefined if the path is empty. |
 
 ## getLength
 
@@ -798,7 +787,7 @@ ArkTS-Sta:
 getLength(forceClosed: boolean): double
 ```
 
-获取路径长度。
+Obtains the path length.
 
 **Since:** 12
 
@@ -812,13 +801,13 @@ getLength(forceClosed: boolean): double
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| forceClosed | boolean | Yes | 表示是否按照闭合路径测量，true表示测量时路径会被强制视为已闭合，false表示会根据路径的实际闭合状态测量。 |
+| forceClosed | boolean | Yes | Whether the path is measured as a closed path. The value **true** means that the path is considered closed during measurement, and **false** means that the path is measured based on the actual closed status. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| ArkTS-Dyn: number  <br>ArkTS-Sta：double | 路径长度。单位为物理像素px。 |
+| ArkTS-Dyn: number  <br>ArkTS-Sta：double | Path length. |
 
 ## getMatrix
 
@@ -832,7 +821,7 @@ ArkTS-Sta:
 getMatrix(forceClosed: boolean, distance: double, matrix: Matrix, flags: PathMeasureMatrixFlags): boolean
 ```
 
-在路径上距离起始点distance处，获取一个变换矩阵，用于表示该点的坐标和朝向。
+Obtains a transformation matrix at a specific position along the path, which represents the coordinates and orientation of that point.
 
 **Since:** 12
 
@@ -846,22 +835,22 @@ getMatrix(forceClosed: boolean, distance: double, matrix: Matrix, flags: PathMea
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| forceClosed | boolean | Yes | 表示是否按照闭合路径测量，true表示测量时路径会被强制视为已闭合，false表示会根据路径的实际闭合状态测量。 |
-| distance | ArkTS-Dyn: number  <br>ArkTS-Sta：double | Yes | 表示与路径起始点的距离，小于0时会被视作0，大于路径长度时会被视作路径长度。该参数为浮点数。 单位为物理像素px。 |
-| matrix | [Matrix](arkts-arkgraphics2d-drawing-matrix-c.md) | Yes | 用于存储获取到的变换矩阵的矩阵对象，该矩阵表示路径上指定距离处的坐标位置和朝向信息。 |
-| flags | [PathMeasureMatrixFlags](arkts-arkgraphics2d-drawing-pathmeasurematrixflags-e.md) | Yes | 矩阵信息维度枚举，用于指定获取的矩阵包含哪些维度信息。 |
+| forceClosed | boolean | Yes | Whether the path is measured as a closed path. The value **true** means that the path is considered closed during measurement, and **false** means that the path is measured based on the actual closed status. |
+| distance | ArkTS-Dyn: number  <br>ArkTS-Sta：double | Yes | Distance from the start point. If a negative number is passed in, the value **0** is used. If a value greater than the path length is passed in, the path length is used. The value is a floating point number. |
+| matrix | [Matrix](arkts-arkgraphics2d-drawing-matrix-c.md) | Yes | Matrix** object used to store the matrix obtained. |
+| flags | [PathMeasureMatrixFlags](arkts-arkgraphics2d-drawing-pathmeasurematrixflags-e.md) | Yes | Type of the matrix information obtained. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| boolean | 返回是否成功获取变换矩阵的结果。true表示成功，false表示失败。 |
+| boolean | Whether the transformation matrix is obtained. The value **true** indicates that the operation is successful, and **false** indicates the opposite. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. Possible causes: Mandatory parameters are left unspecified. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: Mandatory parameters are left unspecified. |
 
 ## getPathIterator
 
@@ -869,7 +858,7 @@ getMatrix(forceClosed: boolean, distance: double, matrix: Matrix, flags: PathMea
 getPathIterator(): PathIterator
 ```
 
-返回该路径的操作迭代器。
+Obtains the operation iterator of this path.
 
 **Since:** 18
 
@@ -883,7 +872,7 @@ getPathIterator(): PathIterator
 
 | Type | Description |
 | --- | --- |
-| [PathIterator](arkts-arkgraphics2d-drawing-pathiterator-c.md) | 路径的迭代器对象，用于遍历路径中的绘图指令和点数据，可通过迭代器逐条获取路径的verb指令及对应的坐标点。 |
+| [PathIterator](arkts-arkgraphics2d-drawing-pathiterator-c.md) | Iterator** object of the path. |
 
 ## getPathIterator
 
@@ -891,7 +880,7 @@ getPathIterator(): PathIterator
 getPathIterator(): PathIterator | undefined
 ```
 
-返回该路径的操作迭代器。
+Obtains the operation iterator of this path.
 
 **Since:** 23
 
@@ -905,7 +894,7 @@ getPathIterator(): PathIterator | undefined
 
 | Type | Description |
 | --- | --- |
-| [PathIterator](arkts-arkgraphics2d-drawing-pathiterator-c.md) | 路径的迭代器对象，用于遍历路径中的绘图指令和点数据，可通过迭代器逐条获取路径的verb指令及对应的坐标点。创建失败时返回undefined。 |
+| [PathIterator](arkts-arkgraphics2d-drawing-pathiterator-c.md) | Indicates the pointer to an pathIterator object. |
 
 ## getPointData
 
@@ -913,17 +902,7 @@ getPathIterator(): PathIterator | undefined
 getPointData(): Array<common2D.Point>
 ```
 
-获取路径的点数据。
-
-在路径（path）图元中，点数据以数值序列的形式存在，与verb指令一一对应，用来精确指定绘图操作的几何坐标位置。
-
-点数据的主要类型包括：
-
-终点坐标：与[moveTo](arkts-arkgraphics2d-drawing-path-c.md#moveto)、[lineTo](arkts-arkgraphics2d-drawing-path-c.md#lineto)等指令配合，定义线段或移动的目标位置。
-
-控制点坐标：与曲线指令配合，用于定义贝塞尔曲线的形状（如三次曲线需要两个控制点和一个终点）。
-
-闭合点：通常不单独提供坐标，由[close](arkts-arkgraphics2d-drawing-path-c.md#close)指令隐式使用路径起点。
+Gets path point data.
 
 **Since:** 26.0.0
 
@@ -939,7 +918,7 @@ getPointData(): Array<common2D.Point>
 
 | Type | Description |
 | --- | --- |
-| Array&lt;common2D.Point&gt; | 返回路径的点数据数组，每个元素为common2D.Point对象，其x、y坐标为浮点数。 理论取值范围为全体实数，但实际受限于渲染坐标系的有效范围（如-2^31到2^31-1或屏幕可见区域）；超出范围可能导致图形不可见或裁剪。 |
+| Array&lt;common2D.Point&gt; | path points array. |
 
 ## getPositionAndTangent
 
@@ -953,7 +932,7 @@ ArkTS-Sta:
 getPositionAndTangent(forceClosed: boolean, distance: double, position: common2D.Point, tangent: common2D.Point): boolean
 ```
 
-获取路径起始点指定距离处的坐标点和切线值。
+Obtains the coordinates and tangent at a distance from the start point of this path.
 
 **Since:** 12
 
@@ -967,22 +946,22 @@ getPositionAndTangent(forceClosed: boolean, distance: double, position: common2D
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| forceClosed | boolean | Yes | 表示是否按照闭合路径测量，true表示测量时路径会被强制视为已闭合，false表示会根据路径的实际闭合状态测量。 |
-| distance | ArkTS-Dyn: number  <br>ArkTS-Sta：double | Yes | 表示与路径起始点的距离，小于0时会被视作0，大于路径长度时会被视作路径长度。 该参数为浮点数。单位为物理像素px。 |
-| position | common2D.Point | Yes | 存储获取到的距离路径起始点distance处的点的坐标。 |
-| tangent | common2D.Point | Yes | 存储获取到的距离路径起始点distance处的点的切线值，tangent.x表示该点切线的余弦值，tangent.y表示该点切线的正弦值。 |
+| forceClosed | boolean | Yes | Whether the path is measured as a closed path. The value **true** means that the path is considered closed during measurement, and **false** means that the path is measured based on the actual closed status. |
+| distance | ArkTS-Dyn: number  <br>ArkTS-Sta：double | Yes | Distance from the start point. If a negative number is passed in, the value **0** is used. If a value greater than the path length is passed in, the path length is used. The value is a floating point number. |
+| position | common2D.Point | Yes | Coordinates obtained. |
+| tangent | common2D.Point | Yes | Tangent obtained, where **tangent.x** and **tangent.y** represent the cosine and sine of the tangent of the point, respectively. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| boolean | 表示是否成功获取距离路径起始点distance处的点的坐标和切线值的结果。 true表示获取成功，false表示获取失败，position和tangent不会被改变。 |
+| boolean | Check result. The value **true** means that they are obtained, and **false** means the opposite. The values of **position** and **tangent** are not changed. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types. |
 
 ## getSegment
 
@@ -996,7 +975,7 @@ ArkTS-Sta:
 getSegment(forceClosed: boolean, start: double, stop: double, startWithMoveTo: boolean, dst: Path): boolean
 ```
 
-截取路径的片段并追加到目标路径上。
+Extracts a segment of a path and appends it to a destination path.
 
 **Since:** 18
 
@@ -1010,17 +989,17 @@ getSegment(forceClosed: boolean, start: double, stop: double, startWithMoveTo: b
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| forceClosed | boolean | Yes | 表示是否按照闭合路径测量，true表示测量时路径会被强制视为已闭合，false表示会根据路径的实际闭合状态测量。 |
-| start | ArkTS-Dyn: number  <br>ArkTS-Sta：double | Yes | 表示与路径起始点的距离，距离路径起始点start距离的位置即为截取路径片段的起始点， 小于0时会被视作0，大于等于stop时会截取失败。该参数为浮点数。单位为物理像素px。 |
-| stop | ArkTS-Dyn: number  <br>ArkTS-Sta：double | Yes | 表示与路径起始点的距离，距离路径起始点stop距离的位置即为截取路径片段的终点， 小于等于start时会截取失败，大于路径长度时会被视作路径长度。该参数为浮点数。单位为物理像素px。 |
-| startWithMoveTo | boolean | Yes | 表示是否在目标路径执行[moveTo](arkts-arkgraphics2d-drawing-path-c.md#moveto) 移动到截取路径片段的起始点位置。true表示执行moveTo；false表示不执行moveTo。 |
-| dst | [Path](arkts-arkgraphics2d-drawing-path-c.md) | Yes | 目标路径，截取成功时会将得到的路径片段追加到目标路径上，截取失败时不做改变。 |
+| forceClosed | boolean | Yes | Whether the path is measured as a closed path. The value **true** means that the path is considered closed during measurement, and **false** means that the path is measured based on the actual closed status. |
+| start | ArkTS-Dyn: number  <br>ArkTS-Sta：double | Yes | Distance from the start point of the path to the start point of the segment. If it is less than 0, it defaults to 0. If it is greater than or equal to **stop**, the extraction fails. The value is a floating point number. |
+| stop | ArkTS-Dyn: number  <br>ArkTS-Sta：double | Yes | Distance from the start point of the path to the end point of the segment. If it is less than or equal to **start**, the extraction fails. If it is greater than the path length, it defaults to the path length. The value is a floating point number. |
+| startWithMoveTo | boolean | Yes | Whether to execute [moveTo](arkts-arkgraphics2d-drawing-path-c.md#moveto) in the destination path to move to its start point. The value **true** means to move to the start point, and **false** means the opposite. |
+| dst | [Path](arkts-arkgraphics2d-drawing-path-c.md) | Yes | Destination path. If the extraction succeeds, the segment is appended to the path. If the extraction fails, nothing changes. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| boolean | 表示是否成功截取路径片段。true表示截取成功，false表示截取失败。 |
+| boolean | Extraction result. The value **true** means that the extraction is successful, and **false** means the opposite. |
 
 ## getVerbData
 
@@ -1028,17 +1007,7 @@ getSegment(forceClosed: boolean, start: double, stop: double, startWithMoveTo: b
 getVerbData(): Array<PathIteratorVerb>
 ```
 
-获取路径的指令数据。
-
-在路径（path）图元中，指令数据verb用于描述路径构造过程中的基本绘图动作。
-
-指令数据以枚举的形式存在，每个取值对应一种几何操作类型，例如：
-
-[moveTo](arkts-arkgraphics2d-drawing-path-c.md#moveto)：将当前绘图点移至指定坐标，不产生线段。
-
-[lineTo](arkts-arkgraphics2d-drawing-path-c.md#lineto)：从当前点向指定点绘制直线段。
-
-[close](arkts-arkgraphics2d-drawing-path-c.md#close)：将当前点与路径起点相连，形成封闭区域。
+Gets path verb data.
 
 **Since:** 26.0.0
 
@@ -1054,7 +1023,7 @@ getVerbData(): Array<PathIteratorVerb>
 
 | Type | Description |
 | --- | --- |
-| Array&lt;PathIteratorVerb&gt; | 返回路径的指令数据数组，每个数组元素对应为路径中的基本绘图动作类型，与点数据一一对应。 |
+| Array&lt;PathIteratorVerb&gt; | path verbs array. |
 
 ## interpolate
 
@@ -1068,7 +1037,7 @@ ArkTS-Sta:
 interpolate(other: Path, weight: double, interpolatedPath: Path): boolean
 ```
 
-根据给定的权重，在当前路径和另一条路径之间进行插值，并将结果存储在目标路径对象中。两条路径点数相同即可插值成功，目标路径按照当前路径的指令结构进行创建。
+Interpolates between the existing path and another path based on the given weight and stores the result in the target path object. Interpolation is achievable if the two paths have the same number of points. The target path is created based on the structure of the existing path.
 
 **Since:** 20
 
@@ -1082,21 +1051,21 @@ interpolate(other: Path, weight: double, interpolatedPath: Path): boolean
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| other | [Path](arkts-arkgraphics2d-drawing-path-c.md) | Yes | 表示另一条路径对象。 |
-| weight | ArkTS-Dyn: number  <br>ArkTS-Sta：double | Yes | 表示插值权重，取值范围为[0.0, 1.0]。该参数为浮点数。 |
-| interpolatedPath | [Path](arkts-arkgraphics2d-drawing-path-c.md) | Yes | 表示用于存储插值结果的目标路径对象。 |
+| other | [Path](arkts-arkgraphics2d-drawing-path-c.md) | Yes | Another path object. |
+| weight | ArkTS-Dyn: number  <br>ArkTS-Sta：double | Yes | Interpolation weight, which must be within the range of [0.0, 1.0]. The value is a floating point number. |
+| interpolatedPath | [Path](arkts-arkgraphics2d-drawing-path-c.md) | Yes | Target path object used to store the interpolation result. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| boolean | 返回插值操作是否成功的结果。true表示插值成功，false表示插值失败。 |
+| boolean | Whether interpolation is successful. **true** means yes; **false** otherwise. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 25900001 | Parameter error. Possible causes: Incorrect parameter range. |
+| [25900001](../errorcode-drawing.md#25900001-abnormal-parameter-value) | Parameter error. Possible causes: Incorrect parameter range. |
 
 ## isClosed
 
@@ -1104,7 +1073,7 @@ interpolate(other: Path, weight: double, interpolatedPath: Path): boolean
 isClosed(): boolean
 ```
 
-获取路径是否闭合。
+Checks whether a path is closed.
 
 **Since:** 12
 
@@ -1118,7 +1087,7 @@ isClosed(): boolean
 
 | Type | Description |
 | --- | --- |
-| boolean | 表示当前路径是否闭合，true表示闭合，false表示不闭合。 |
+| boolean | Check result. The value **true** means that the path is closed, and **false** means the opposite. |
 
 ## isEmpty
 
@@ -1126,7 +1095,7 @@ isClosed(): boolean
 isEmpty(): boolean
 ```
 
-判断路径是否为空。
+Checks whether a path is empty.
 
 **Since:** 20
 
@@ -1140,7 +1109,7 @@ isEmpty(): boolean
 
 | Type | Description |
 | --- | --- |
-| boolean | 路径是否为空。true表示当前路径为空，false表示路径不为空。 |
+| boolean | Whether a path is empty. **true** means yes; **false** otherwise. |
 
 ## isEqual
 
@@ -1148,7 +1117,7 @@ isEmpty(): boolean
 isEqual(path: Path): boolean
 ```
 
-判断当前路径与另一条路径是否相等。
+Checks if two paths are equal.
 
 **Since:** 26.0.0
 
@@ -1164,13 +1133,13 @@ isEqual(path: Path): boolean
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| path | [Path](arkts-arkgraphics2d-drawing-path-c.md) | Yes | 另一条路径对象。 |
+| path | [Path](arkts-arkgraphics2d-drawing-path-c.md) | Yes | Another Path object to compare. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| boolean | 返回当前路径与另一条路径是否相等的结果。true表示路径相等，false表示路径不相等。 |
+| boolean | Returns true if the two paths are equal, otherwise returns false. |
 
 ## isInterpolate
 
@@ -1178,7 +1147,7 @@ isEqual(path: Path): boolean
 isInterpolate(other: Path): boolean
 ```
 
-判断当前路径与另一条路径在结构和操作顺序上是否完全一致，以确定两条路径是否兼容插值。若路径中包含圆锥曲线（Conic）操作，则对应操作的权重值也必须一致，才能视为兼容插值。
+Checks whether the existing path and another path are compatible for interpolation in terms of structure and operation sequence. If the paths contain conic operations, the weight values of the operations must be the same.
 
 **Since:** 20
 
@@ -1192,13 +1161,13 @@ isInterpolate(other: Path): boolean
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| other | [Path](arkts-arkgraphics2d-drawing-path-c.md) | Yes | 表示另一条路径对象。 |
+| other | [Path](arkts-arkgraphics2d-drawing-path-c.md) | Yes | Another path object. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| boolean | 返回当前路径与另一条路径是否兼容插值的结果。true表示兼容插值，false表示不兼容插值。 |
+| boolean | Whether the existing path and another path are compatible for interpolation. **true** means yes; **false** otherwise. |
 
 ## isInverseFillType
 
@@ -1206,7 +1175,8 @@ isInterpolate(other: Path): boolean
 isInverseFillType(): boolean
 ```
 
-检查当前路径填充类型是否是反向填充类型。例如填充类型WINDING、EVEN_ODD不是反向类型，INVERSE_WINDING、INVERSE_EVEN_ODD是反向类型。
+Checks whether the current path fill type is the inverse fill type. For example, the fill types **Winding** and  
+**EvenOdd** are not inverse types, while **InverseWinding** and **InverseEvenOdd** are inverse types.
 
 **Since:** 23
 
@@ -1220,7 +1190,7 @@ isInverseFillType(): boolean
 
 | Type | Description |
 | --- | --- |
-| boolean | 检查当前路径填充类型是否是反向填充类型。true表示是反向填充类型，false表示不是反向填充类型。 |
+| boolean | Whether the current path fill type is the inverse fill type. **true** means yes; **false** otherwise. |
 
 ## isRect
 
@@ -1228,7 +1198,7 @@ isInverseFillType(): boolean
 isRect(rect: common2D.Rect | null): boolean
 ```
 
-判断路径是否构成矩形。
+Checks whether a path forms a rectangle.
 
 **Since:** 20
 
@@ -1242,13 +1212,13 @@ isRect(rect: common2D.Rect | null): boolean
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| rect | common2D.Rect \| null | Yes | 矩形对象，作为出参使用，路径构成矩形时，会被改写为路径表示的矩形，否则不会改变。可以为null，表示无需获取路径表示的矩形。 |
+| rect | common2D.Rect \| null | Yes | Rectangle object, which is used as an output parameter. If the path forms a rectangle, the rectangle object is overwritten with the rectangle represented by the path. Otherwise, the rectangle object remains unchanged. The value can be **null**, indicating that the rectangle represented by the path does not need to be obtained. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| boolean | 返回路径是否构成矩形。true表示路径构成矩形，false表示路径不构成矩形。 |
+| boolean | Whether a path forms a rectangle. **true** means yes; **false** otherwise. |
 
 ## lineTo
 
@@ -1262,7 +1232,7 @@ ArkTS-Sta:
 lineTo(x: double, y: double): void
 ```
 
-添加一条从路径最后点位置（若路径没有内容则默认为 (0, 0)）到目标点位置的线段。
+Draws a line segment from the last point of this path to the target point. If the path is empty, the start point(0, 0) is used.
 
 **Since:** 11
 
@@ -1278,14 +1248,14 @@ lineTo(x: double, y: double): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| x | ArkTS-Dyn: number  <br>ArkTS-Sta：double | Yes | 目标点的x轴坐标，该参数为浮点数。单位为物理像素px。 |
-| y | ArkTS-Dyn: number  <br>ArkTS-Sta：double | Yes | 目标点的y轴坐标，该参数为浮点数。单位为物理像素px。 |
+| x | ArkTS-Dyn: number  <br>ArkTS-Sta：double | Yes | X coordinate of the target point. The value is a floating point number. |
+| y | ArkTS-Dyn: number  <br>ArkTS-Sta：double | Yes | Y coordinate of the target point. The value is a floating point number. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types. |
 
 ## moveTo
 
@@ -1299,7 +1269,7 @@ ArkTS-Sta:
 moveTo(x: double, y: double): void
 ```
 
-设置自定义路径的起始点位置。与[rMoveTo](arkts-arkgraphics2d-drawing-path-c.md#rmoveto)使用相对坐标不同，moveTo使用绝对坐标设置起始点。当路径起点固定时，推荐使用moveTo；当路径需要基于当前位置动态构建时，推荐使用[rMoveTo](arkts-arkgraphics2d-drawing-path-c.md#rmoveto)。
+Sets the start point of this path.
 
 **Since:** 11
 
@@ -1315,14 +1285,14 @@ moveTo(x: double, y: double): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| x | ArkTS-Dyn: number  <br>ArkTS-Sta：double | Yes | 起始点的x轴坐标，该参数为浮点数。单位为物理像素px。 |
-| y | ArkTS-Dyn: number  <br>ArkTS-Sta：double | Yes | 起始点的y轴坐标，该参数为浮点数。单位为物理像素px。 |
+| x | ArkTS-Dyn: number  <br>ArkTS-Sta：double | Yes | X coordinate of the start point. The value is a floating point number. |
+| y | ArkTS-Dyn: number  <br>ArkTS-Sta：double | Yes | Y coordinate of the start point. The value is a floating point number. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types. |
 
 ## offset
 
@@ -1330,7 +1300,8 @@ moveTo(x: double, y: double): void
 offset(dx: number, dy: number): Path
 ```
 
-将路径沿x轴方向偏移dx距离、沿y轴方向偏移dy距离，并保存在返回的路径对象中。
+Offsets this path by specified distances along the X axis and Y axis and stores the resulting path in the  
+**Path** object returned.
 
 **Since:** 12
 
@@ -1344,20 +1315,20 @@ offset(dx: number, dy: number): Path
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| dx | number | Yes | x轴方向偏移量，正数往x轴正方向偏移，负数往x轴负方向偏移，该参数为浮点数。单位为物理像素px。 |
-| dy | number | Yes | y轴方向偏移量，正数往y轴正方向偏移，负数往y轴负方向偏移，该参数为浮点数。单位为物理像素px。 |
+| dx | number | Yes | X offset. A positive number indicates an offset towards the positive direction of the X axis, and a negative number indicates an offset towards the negative direction of the X axis. The value is a floating point number. |
+| dy | number | Yes | Y offset. A positive number indicates an offset towards the positive direction of the Y axis, and a negative number indicates an offset towards the negative direction of the Y axis. The value is a floating point number. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [Path](arkts-arkgraphics2d-drawing-path-c.md) | 返回当前路径偏移(dx,dy)后生成的新路径对象。 |
+| [Path](arkts-arkgraphics2d-drawing-path-c.md) | New path generated. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types. |
 
 ## offset
 
@@ -1392,7 +1363,7 @@ Offsets this path by specified distances along the X axis and Y axis and stores 
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types. |
 
 ## op
 
@@ -1400,7 +1371,7 @@ Offsets this path by specified distances along the X axis and Y axis and stores 
 op(path: Path, pathOp: PathOp): boolean
 ```
 
-将当前路径与path按照指定的路径操作类型进行合并，并将合并结果保存在当前路径中。
+Combines this path with the passed-in path based on the specified operation mode.
 
 **Since:** 12
 
@@ -1414,20 +1385,20 @@ op(path: Path, pathOp: PathOp): boolean
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| path | [Path](arkts-arkgraphics2d-drawing-path-c.md) | Yes | 路径对象，用于与当前路径合并。 |
-| pathOp | [PathOp](arkts-arkgraphics2d-drawing-pathop-e.md) | Yes | 路径操作类型枚举，用于指定两条路径的布尔运算方式。 |
+| path | [Path](arkts-arkgraphics2d-drawing-path-c.md) | Yes | Path object, which will be combined with the current path. |
+| pathOp | [PathOp](arkts-arkgraphics2d-drawing-pathop-e.md) | Yes | Defines an enum for the operation modes available for a path. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| boolean | 返回路径合并是否成功的结果。true表示合并成功，false表示合并失败。 |
+| boolean | Result of the path combination result. The value **true** means that the path combination is successful, and **false** means the opposite. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; 3. Parameter verification failed. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; 3. Parameter verification failed. |
 
 ## quadTo
 
@@ -1441,7 +1412,7 @@ ArkTS-Sta:
 quadTo(ctrlX: double, ctrlY: double, endX: double, endY: double): void
 ```
 
-添加从路径最后点位置（若路径没有内容则默认值为 (0, 0)）到目标点位置的二阶贝塞尔曲线。
+Draws a quadratic Bezier curve from the last point of this path to the target point. If the path is empty, the start point (0, 0) is used.
 
 **Since:** 11
 
@@ -1457,16 +1428,16 @@ quadTo(ctrlX: double, ctrlY: double, endX: double, endY: double): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| ctrlX | ArkTS-Dyn: number  <br>ArkTS-Sta：double | Yes | 控制点的x坐标，该参数为浮点数。单位为物理像素px。 |
-| ctrlY | ArkTS-Dyn: number  <br>ArkTS-Sta：double | Yes | 控制点的y坐标，该参数为浮点数。单位为物理像素px。 |
-| endX | ArkTS-Dyn: number  <br>ArkTS-Sta：double | Yes | 目标点的x坐标，该参数为浮点数。单位为物理像素px。 |
-| endY | ArkTS-Dyn: number  <br>ArkTS-Sta：double | Yes | 目标点的y坐标，该参数为浮点数。单位为物理像素px。 |
+| ctrlX | ArkTS-Dyn: number  <br>ArkTS-Sta：double | Yes | X coordinate of the control point. The value is a floating point number. |
+| ctrlY | ArkTS-Dyn: number  <br>ArkTS-Sta：double | Yes | Y coordinate of the control point. The value is a floating point number. |
+| endX | ArkTS-Dyn: number  <br>ArkTS-Sta：double | Yes | X coordinate of the target point. The value is a floating point number. |
+| endY | ArkTS-Dyn: number  <br>ArkTS-Sta：double | Yes | Y coordinate of the target point. The value is a floating point number. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types. |
 
 ## rConicTo
 
@@ -1480,7 +1451,7 @@ ArkTS-Sta:
 rConicTo(ctrlX: double, ctrlY: double, endX: double, endY: double, weight: double): void
 ```
 
-使用相对位置添加一条从路径最后点位置（若路径没有内容则默认为 (0, 0)）到目标点位置的圆锥曲线。与[conicTo](arkts-arkgraphics2d-drawing-path-c.md#conicto)使用绝对坐标不同，rConicTo使用相对于当前路径最后点位置的偏移量在当前路径上添加圆锥曲线。当路径需要基于当前位置动态构建时，推荐使用相对坐标方法；当路径目标点固定时，推荐使用绝对坐标方法。
+Draws a conic curve from the last point of this path to a point relative to the last point. If the path is empty,the start point (0, 0) is used.
 
 **Since:** 12
 
@@ -1496,17 +1467,17 @@ rConicTo(ctrlX: double, ctrlY: double, endX: double, endY: double, weight: doubl
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| ctrlX | ArkTS-Dyn: number  <br>ArkTS-Sta：double | Yes | 控制点相对于路径最后点位置的x轴偏移量， 正数往x轴正方向偏移，负数往x轴负方向偏移，该参数为浮点数。单位为物理像素px。 |
-| ctrlY | ArkTS-Dyn: number  <br>ArkTS-Sta：double | Yes | 控制点相对于路径最后点位置的y轴偏移量， 正数往y轴正方向偏移，负数往y轴负方向偏移，该参数为浮点数。单位为物理像素px。 |
-| endX | ArkTS-Dyn: number  <br>ArkTS-Sta：double | Yes | 目标点相对于路径最后点位置的x轴偏移量， 正数往x轴正方向偏移，负数往x轴负方向偏移，该参数为浮点数。单位为物理像素px。 |
-| endY | ArkTS-Dyn: number  <br>ArkTS-Sta：double | Yes | 目标点相对于路径最后点位置的y轴偏移量， 正数往y轴正方向偏移，负数往y轴负方向偏移，该参数为浮点数。单位为物理像素px。 |
-| weight | ArkTS-Dyn: number  <br>ArkTS-Sta：double | Yes | 表示曲线权重，决定了曲线的形状，越大越接近控制点。 若小于等于0则等同于使用[rLineTo](arkts-arkgraphics2d-drawing-path-c.md#rlineto)添加一条到结束点的线段， 若为1则等同于[rQuadTo](arkts-arkgraphics2d-drawing-path-c.md#rquadto)，该参数为浮点数。 |
+| ctrlX | ArkTS-Dyn: number  <br>ArkTS-Sta：double | Yes | X offset of the control point relative to the last point. A positive number indicates a rightward shift from the last point, and a negative number indicates a leftward shift from the last point. The value is a floating point number. |
+| ctrlY | ArkTS-Dyn: number  <br>ArkTS-Sta：double | Yes | Y offset of the control point relative to the last point. A positive number indicates an upward shift from the last point, and a negative number indicates a downward shift from the last point. The value is a floating point number. |
+| endX | ArkTS-Dyn: number  <br>ArkTS-Sta：double | Yes | X offset of the target point relative to the last point. A positive number indicates a rightward shift from the last point, and a negative number indicates a leftward shift from the last point. The value is a floating point number. |
+| endY | ArkTS-Dyn: number  <br>ArkTS-Sta：double | Yes | Y offset of the target point relative to the last point. A positive number indicates an upward shift from the last point, and a negative number indicates a downward shift from the last point. The value is a floating point number. |
+| weight | ArkTS-Dyn: number  <br>ArkTS-Sta：double | Yes | Weight of the curve, which determines its shape. The larger the value, the closer of the curve to the control point. If the value is less than or equal to 0, this API is equivalent to [rLineTo](arkts-arkgraphics2d-drawing-path-c.md#rlineto), that is, adding a line segment from the last point of the path to the target point. If the value is 1, this API is equivalent to [rQuadTo](arkts-arkgraphics2d-drawing-path-c.md#rquadto). The value is a floating point number. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types. |
 
 ## rCubicTo
 
@@ -1520,7 +1491,7 @@ ArkTS-Sta:
 rCubicTo(ctrlX1: double, ctrlY1: double, ctrlX2: double, ctrlY2: double, endX: double, endY: double): void
 ```
 
-使用相对位置添加一条从路径最后点位置（若路径没有内容则默认为 (0, 0)）到目标点位置的三阶贝塞尔曲线。与[cubicTo](arkts-arkgraphics2d-drawing-path-c.md#cubicto)使用绝对坐标不同，rCubicTo使用相对于当前路径最后点位置的偏移量在当前路径上添加三阶贝塞尔曲线。当路径需要基于当前位置动态构建时，推荐使用相对坐标方法；当路径目标点固定时，推荐使用绝对坐标方法。
+Draws a cubic Bezier curve from the last point of this path to a point relative to the last point. If the path is empty, the start point (0, 0) is used.
 
 **Since:** 12
 
@@ -1536,18 +1507,18 @@ rCubicTo(ctrlX1: double, ctrlY1: double, ctrlX2: double, ctrlY2: double, endX: d
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| ctrlX1 | ArkTS-Dyn: number  <br>ArkTS-Sta：double | Yes | 第一个控制点相对于路径最后点位置的x轴偏移量， 正数往x轴正方向偏移，负数往x轴负方向偏移，该参数为浮点数。单位为物理像素px。 |
-| ctrlY1 | ArkTS-Dyn: number  <br>ArkTS-Sta：double | Yes | 第一个控制点相对于路径最后点位置的y轴偏移量， 正数往y轴正方向偏移，负数往y轴负方向偏移，该参数为浮点数。单位为物理像素px。 |
-| ctrlX2 | ArkTS-Dyn: number  <br>ArkTS-Sta：double | Yes | 第二个控制点相对于路径最后点位置的x轴偏移量， 正数往x轴正方向偏移，负数往x轴负方向偏移，该参数为浮点数。单位为物理像素px。 |
-| ctrlY2 | ArkTS-Dyn: number  <br>ArkTS-Sta：double | Yes | 第二个控制点相对于路径最后点位置的y轴偏移量， 正数往y轴正方向偏移，负数往y轴负方向偏移，该参数为浮点数。单位为物理像素px。 |
-| endX | ArkTS-Dyn: number  <br>ArkTS-Sta：double | Yes | 目标点相对于路径最后点位置的x轴偏移量， 正数往x轴正方向偏移，负数往x轴负方向偏移，该参数为浮点数。单位为物理像素px。 |
-| endY | ArkTS-Dyn: number  <br>ArkTS-Sta：double | Yes | 目标点相对于路径最后点位置的y轴偏移量， 正数往y轴正方向偏移，负数往y轴负方向偏移，该参数为浮点数。单位为物理像素px。 |
+| ctrlX1 | ArkTS-Dyn: number  <br>ArkTS-Sta：double | Yes | X offset of the first control point relative to the last point. A positive number indicates a rightward shift from the last point, and a negative number indicates a leftward shift from the last point. The value is a floating point number. |
+| ctrlY1 | ArkTS-Dyn: number  <br>ArkTS-Sta：double | Yes | Y offset of the first control point relative to the last point. A positive number indicates an upward shift from the last point, and a negative number indicates a downward shift from the last point. The value is a floating point number. |
+| ctrlX2 | ArkTS-Dyn: number  <br>ArkTS-Sta：double | Yes | X offset of the second control point relative to the last point. A positive number indicates a rightward shift from the last point, and a negative number indicates a leftward shift from the last point. The value is a floating point number. |
+| ctrlY2 | ArkTS-Dyn: number  <br>ArkTS-Sta：double | Yes | Y offset of the second control point relative to the last point. A positive number indicates an upward shift from the last point, and a negative number indicates a downward shift from the last point. The value is a floating point number. |
+| endX | ArkTS-Dyn: number  <br>ArkTS-Sta：double | Yes | X offset of the target point relative to the last point. A positive number indicates a rightward shift from the last point, and a negative number indicates a leftward shift from the last point. The value is a floating point number. |
+| endY | ArkTS-Dyn: number  <br>ArkTS-Sta：double | Yes | Y offset of the target point relative to the last point. A positive number indicates an upward shift from the last point, and a negative number indicates a downward shift from the last point. The value is a floating point number. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types. |
 
 ## rLineTo
 
@@ -1561,7 +1532,7 @@ ArkTS-Sta:
 rLineTo(dx: double, dy: double): void
 ```
 
-使用相对位置添加一条从路径最后点位置（若路径没有内容则默认为 (0, 0)）到目标点位置的线段。与[lineTo](arkts-arkgraphics2d-drawing-path-c.md#lineto)使用绝对坐标不同，rLineTo使用相对于当前路径最后点位置的偏移量来指定目标点。当路径需要基于当前位置动态构建时，推荐使用相对坐标方法；当目标点位置固定时，推荐使用绝对坐标方法。
+Draws a line segment from the last point of this path to a point relative to the last point. If the path is empty, the start point (0, 0) is used.
 
 **Since:** 12
 
@@ -1577,14 +1548,14 @@ rLineTo(dx: double, dy: double): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| dx | ArkTS-Dyn: number  <br>ArkTS-Sta：double | Yes | 目标点相对于当前路径最后点位置的x轴偏移量， 正数往x轴正方向偏移，负数往x轴负方向偏移，该参数为浮点数。单位为物理像素px。 |
-| dy | ArkTS-Dyn: number  <br>ArkTS-Sta：double | Yes | 目标点相对于当前路径最后点位置的y轴偏移量， 正数往y轴正方向偏移，负数往y轴负方向偏移，该参数为浮点数。单位为物理像素px。 |
+| dx | ArkTS-Dyn: number  <br>ArkTS-Sta：double | Yes | X offset of the target point relative to the last point. A positive number indicates a rightward shift from the last point, and a negative number indicates a leftward shift from the last point. The value is a floating point number. |
+| dy | ArkTS-Dyn: number  <br>ArkTS-Sta：double | Yes | Y offset of the target point relative to the last point. A positive number indicates an upward shift from the last point, and a negative number indicates a downward shift from the last point. The value is a floating point number. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types. |
 
 ## rMoveTo
 
@@ -1598,7 +1569,7 @@ ArkTS-Sta:
 rMoveTo(dx: double, dy: double): void
 ```
 
-设置一个相对于当前路径最后点位置（若路径没有内容则默认为 (0, 0)）的路径起始点位置。与[moveTo](arkts-arkgraphics2d-drawing-path-c.md#moveto)使用绝对坐标不同，rMoveTo使用相对于当前路径最后点位置的偏移量。当路径需要基于当前位置动态构建时，推荐使用相对坐标方法（如rMoveTo、rLineTo等）；当路径起点固定时，推荐使用绝对坐标方法。
+Sets the start position relative to the last point of this path. If the path is empty, the start point (0, 0) is used.
 
 **Since:** 12
 
@@ -1614,14 +1585,14 @@ rMoveTo(dx: double, dy: double): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| dx | ArkTS-Dyn: number  <br>ArkTS-Sta：double | Yes | 路径新起始点相对于当前路径最后点位置的x轴偏移量， 正数往x轴正方向偏移，负数往x轴负方向偏移，该参数为浮点数。单位为物理像素px。 |
-| dy | ArkTS-Dyn: number  <br>ArkTS-Sta：double | Yes | 路径新起始点相对于当前路径最后点位置的y轴偏移量， 正数往y轴正方向偏移，负数往y轴负方向偏移，该参数为浮点数。单位为物理像素px。 |
+| dx | ArkTS-Dyn: number  <br>ArkTS-Sta：double | Yes | X offset of the start point relative to the last point. A positive number indicates a rightward shift from the last point, and a negative number indicates a leftward shift from the last point. The value is a floating point number. |
+| dy | ArkTS-Dyn: number  <br>ArkTS-Sta：double | Yes | Y offset of the start point relative to the last point. A positive number indicates an upward shift from the last point, and a negative number indicates a downward shift from the last point. The value is a floating point number. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types. |
 
 ## rQuadTo
 
@@ -1635,7 +1606,7 @@ ArkTS-Sta:
 rQuadTo(dx1: double, dy1: double, dx2: double, dy2: double): void
 ```
 
-使用相对位置添加一条从路径最后点位置（若路径没有内容则默认为 (0, 0)）到目标点位置的二阶贝塞尔曲线。与[quadTo](arkts-arkgraphics2d-drawing-path-c.md#quadto)使用绝对坐标不同，rQuadTo使用相对于当前路径最后点位置的偏移量在当前路径上添加二阶贝塞尔曲线。当路径需要基于当前位置动态构建时，推荐使用相对坐标方法；当路径目标点固定时，推荐使用绝对坐标方法。
+Draws a quadratic Bezier curve from the last point of this path to a point relative to the last point. If the path is empty, the start point (0, 0) is used.
 
 **Since:** 12
 
@@ -1651,16 +1622,16 @@ rQuadTo(dx1: double, dy1: double, dx2: double, dy2: double): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| dx1 | ArkTS-Dyn: number  <br>ArkTS-Sta：double | Yes | 控制点相对于路径最后点位置的x轴偏移量，正数往x轴正方向偏移，负数往x轴负方向偏移，该参数为浮点数。 单位为物理像素px。 |
-| dy1 | ArkTS-Dyn: number  <br>ArkTS-Sta：double | Yes | 控制点相对于路径最后点位置的y轴偏移量，正数往y轴正方向偏移，负数往y轴负方向偏移，该参数为浮点数。 单位为物理像素px。 |
-| dx2 | ArkTS-Dyn: number  <br>ArkTS-Sta：double | Yes | 目标点相对于路径最后点位置的x轴偏移量，正数往x轴正方向偏移，负数往x轴负方向偏移，该参数为浮点数。 单位为物理像素px。 |
-| dy2 | ArkTS-Dyn: number  <br>ArkTS-Sta：double | Yes | 目标点相对于路径最后点位置的y轴偏移量，正数往y轴正方向偏移，负数往y轴负方向偏移，该参数为浮点数。 单位为物理像素px。 |
+| dx1 | ArkTS-Dyn: number  <br>ArkTS-Sta：double | Yes | X offset of the control point relative to the last point. A positive number indicates a rightward shift from the last point, and a negative number indicates a leftward shift from the last point. The value is a floating point number. |
+| dy1 | ArkTS-Dyn: number  <br>ArkTS-Sta：double | Yes | Y offset of the control point relative to the last point. A positive number indicates an upward shift from the last point, and a negative number indicates a downward shift from the last point. The value is a floating point number. |
+| dx2 | ArkTS-Dyn: number  <br>ArkTS-Sta：double | Yes | X offset of the target point relative to the last point. A positive number indicates a rightward shift from the last point, and a negative number indicates a leftward shift from the last point. The value is a floating point number. |
+| dy2 | ArkTS-Dyn: number  <br>ArkTS-Sta：double | Yes | Y offset of the target point relative to the last point. A positive number indicates an upward shift from the last point, and a negative number indicates a downward shift from the last point. The value is a floating point number. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types. |
 
 ## reset
 
@@ -1668,7 +1639,7 @@ rQuadTo(dx1: double, dy1: double, dx2: double, dy2: double): void
 reset(): void
 ```
 
-重置自定义路径数据。
+Resets the path data.
 
 **Since:** 11
 
@@ -1684,7 +1655,7 @@ reset(): void
 rewind(): void
 ```
 
-将路径内添加的各类点/线清空，但是保留内存空间。
+Rewinds a path by clearing all its points and lines but reserves the memory space.
 
 **Since:** 20
 
@@ -1700,7 +1671,7 @@ rewind(): void
 set(src: Path): void
 ```
 
-使用指定路径替换当前路径的内容，使当前路径与指定路径完全一致。
+Updates the existing path with another path.
 
 **Since:** 20
 
@@ -1716,7 +1687,7 @@ set(src: Path): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| src | [Path](arkts-arkgraphics2d-drawing-path-c.md) | Yes | 用于替换当前路径内容的源路径对象。 |
+| src | [Path](arkts-arkgraphics2d-drawing-path-c.md) | Yes | Path for the update. |
 
 ## setFillType
 
@@ -1724,7 +1695,7 @@ set(src: Path): void
 setFillType(pathFillType: PathFillType): void
 ```
 
-设置路径的填充类型，决定路径内部区域的定义方式。
+Sets the fill type of this path. The fill type determines how "inside" of the path is drawn. For example, when the fill type **Winding** is used, "inside" of the path is determined by a non-zero sum of signed edge crossings.When **EvenOdd** is used, "inside" of the path is determined by an odd number of edge crossings.
 
 **Since:** 12
 
@@ -1738,13 +1709,13 @@ setFillType(pathFillType: PathFillType): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| pathFillType | [PathFillType](arkts-arkgraphics2d-drawing-pathfilltype-e.md) | Yes | 表示路径填充类型，决定路径内部区域的定义方式。 |
+| pathFillType | [PathFillType](arkts-arkgraphics2d-drawing-pathfilltype-e.md) | Yes | Fill type of the path. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; 3. Parameter verification failed. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; 3. Parameter verification failed. |
 
 ## setLastPoint
 
@@ -1758,7 +1729,7 @@ ArkTS-Sta:
 setLastPoint(x: double, y: double): void
 ```
 
-修改路径最后点位置。
+Sets the last point of a path.
 
 **Since:** 20
 
@@ -1772,8 +1743,8 @@ setLastPoint(x: double, y: double): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| x | ArkTS-Dyn: number  <br>ArkTS-Sta：double | Yes | 指定点的x轴坐标，该参数为浮点数。 0表示坐标原点，负数表示位于坐标原点左侧，正数表示位于坐标原点右侧。单位为物理像素px。 |
-| y | ArkTS-Dyn: number  <br>ArkTS-Sta：double | Yes | 指定点的y轴坐标，该参数为浮点数。 0表示坐标原点，负数表示位于坐标原点上侧，正数表示位于坐标原点下侧。单位为物理像素px。 |
+| x | ArkTS-Dyn: number  <br>ArkTS-Sta：double | Yes | X coordinate of a point. The value is a floating point number. **0** indicates the coordinate origin. A positive value places the point to the right of the coordinate origin, while a negative value places the point to the left. |
+| y | ArkTS-Dyn: number  <br>ArkTS-Sta：double | Yes | Y coordinate of a point. The value is a floating point number. **0** indicates the coordinate origin. A positive value places the point below the coordinate origin, while a negative value places the point above the coordinate origin. |
 
 ## toggleInverseFillType
 
@@ -1781,7 +1752,7 @@ setLastPoint(x: double, y: double): void
 toggleInverseFillType(): void
 ```
 
-切换路径的填充类型为反向类型。例如，使用WINDING填充类型时，经过取反后填充类型为INVERSE_WINDING，而使用EVEN_ODD填充类型时，经过取反后填充类型为INVERSE_EVEN_ODD，反之亦然。
+Toggles the fill type of the path to the inverse type. For example, if the **Winding** fill type is used, the fill type after inversion is **InverseWinding**. If the **EvenOdd** fill type is used, the fill type after inversion is **InverseEvenOdd**. The same applies to the other two types.
 
 **Since:** 23
 
@@ -1797,7 +1768,7 @@ toggleInverseFillType(): void
 transform(matrix: Matrix): void
 ```
 
-对路径进行矩阵变换。
+Transforms the points in a path by matrix.
 
 **Since:** 12
 
@@ -1811,11 +1782,11 @@ transform(matrix: Matrix): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| matrix | [Matrix](arkts-arkgraphics2d-drawing-matrix-c.md) | Yes | 表示对路径进行矩阵变换所使用的矩阵对象，该矩阵定义了变换的具体参数 （如缩放比例、旋转角度、平移距离等），路径中的所有点将按照该矩阵进行变换。 |
+| matrix | [Matrix](arkts-arkgraphics2d-drawing-matrix-c.md) | Yes | Matrix** object. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types. |
 

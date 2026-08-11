@@ -12,7 +12,7 @@ import { inputDevice } from 'kits/@kit.InputKit';
 function getDeviceInfo(deviceId: int, callback: AsyncCallback<InputDeviceData>): void
 ```
 
-获取指定输入设备的信息，使用callback异步回调。
+Obtains information about the specified input device. This API uses an asynchronous callback to return the result.
 
 **Since:** 9
 
@@ -26,14 +26,14 @@ function getDeviceInfo(deviceId: int, callback: AsyncCallback<InputDeviceData>):
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| deviceId | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | 输入设备的唯一标识，同一个物理设备反复插拔或重启，设备ID可能会发生变化。 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;InputDeviceData&gt; | Yes | 回调函数。当获取成功，err为undefined，data为输入设备信息（包括输入设备ID、名称、支持的输入能力等）；否则为 错误对象。 |
+| deviceId | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | Unique ID of the input device. If a physical device is repeatedly reinstalled or restarted, its ID may change. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;InputDeviceData&gt; | Yes | Callback function. If the retrieval is successful, **err** is **undefined**, and **data** is the input device information (including the device ID, name, supported input capabilities). Otherwise, **err** is an error object. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; 3. Parameter verification failed. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; 3. Parameter verification failed. |
 
 ## Examples
 
@@ -50,16 +50,15 @@ struct Index {
         .onClick(() => {
           // Obtain the name of the device whose ID is 1.
           try {
-            // Obtaining Input Device Information
             inputDevice.getDeviceInfo(1, (error: BusinessError, deviceData: inputDevice.InputDeviceData) => {
               if (error) {
-                console.error(`Failed to get device info, Code: ${(error as BusinessError).code}, message: ${(error as BusinessError).message}.`);
+                console.error(`Failed to get device info, error: ${JSON.stringify(error, [`code`, `message`])}`);
                 return;
               }
-              console.info(`Succeeded in getting device info: ${JSON.stringify(deviceData)}.`);
+              console.info(`Device info: ${JSON.stringify(deviceData)}`);
             });
           } catch (error) {
-            console.error(`Failed to get device info, Code: ${(error as BusinessError).code}, message: ${(error as BusinessError).message}.`);
+            console.error(`Failed to get device info, error: ${JSON.stringify(error, [`code`, `message`])}`);
           }
         })
     }
@@ -74,7 +73,7 @@ struct Index {
 function getDeviceInfo(deviceId: int): Promise<InputDeviceData>
 ```
 
-获取指定id的输入设备信息，使用Promise异步回调。
+Obtains the information about the input device with the specified ID. This API uses a promise to return the result.
 
 **Since:** 9
 
@@ -88,19 +87,19 @@ function getDeviceInfo(deviceId: int): Promise<InputDeviceData>
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| deviceId | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | 输入设备的唯一标识，同一个物理设备反复插拔或重启，设备ID可能会发生变化。 |
+| deviceId | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | Unique ID of the input device. If a physical device is repeatedly reinstalled or restarted, its ID may change. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;InputDeviceData&gt; | Promise对象，返回输入设备信息，包括输入设备ID、名称、支持的输入能力、物理地址、版本信息及产品信息等。 |
+| Promise&lt;InputDeviceData&gt; | Promise used to return information about the input device, including device ID, name, supported source, physical address, version information, and product information. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; 3. Parameter verification failed. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; 3. Parameter verification failed. |
 
 ## Examples
 
@@ -117,14 +116,13 @@ struct Index {
         .onClick(() => {
           // Obtain the name of the device whose ID is 1.
           try {
-            // Obtaining Input Device Information
             inputDevice.getDeviceInfo(1).then((deviceData: inputDevice.InputDeviceData) => {
-              console.info(`Succeeded in getting device info: ${JSON.stringify(deviceData)}.`);
+              console.info(`Device info: ${JSON.stringify(deviceData)}`);
             }).catch((error: BusinessError) => {
-              console.error(`Failed to get device info, Code: ${(error as BusinessError).code}, message: ${(error as BusinessError).message}.`);
+              console.error(`Get device info failed, error: ${JSON.stringify(error, [`code`, `message`])}`);
             });
           } catch (error) {
-            console.error(`Failed to get device info, Code: ${(error as BusinessError).code}, message: ${(error as BusinessError).message}.`);
+            console.error(`Failed to get device info, error: ${JSON.stringify(error, [`code`, `message`])}`);
           }
         })
     }

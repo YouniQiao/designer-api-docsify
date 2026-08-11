@@ -1,6 +1,6 @@
 # PhysicalOrientation（系统接口）
 
-Enum for physical orientation detected by the sensor.
+传感器检测到的物理方向枚举。
 
 **起始版本：** 26.0.0
 
@@ -18,7 +18,7 @@ Enum for physical orientation detected by the sensor.
 UPRIGHT = 0
 ```
 
-Indicates upright.
+表示竖直放置。
 
 **起始版本：** 26.0.0
 
@@ -38,7 +38,7 @@ Indicates upright.
 LEFT = 1
 ```
 
-Indicates left.
+表示向左旋转。
 
 **起始版本：** 26.0.0
 
@@ -58,7 +58,7 @@ Indicates left.
 INVERTED = 2
 ```
 
-Indicates the physical orientation is inverted.
+表示倒置。
 
 **起始版本：** 26.0.0
 
@@ -78,7 +78,7 @@ Indicates the physical orientation is inverted.
 RIGHT = 3
 ```
 
-Indicates right.
+表示向右旋转。
 
 **起始版本：** 26.0.0
 
@@ -98,7 +98,7 @@ Indicates right.
 FACE_UP = 4
 ```
 
-Indicates face up.
+表示屏幕朝上。
 
 **起始版本：** 26.0.0
 
@@ -118,7 +118,7 @@ Indicates face up.
 FACE_DOWN = 5
 ```
 
-Indicates face down.
+表示屏幕朝下。
 
 **起始版本：** 26.0.0
 

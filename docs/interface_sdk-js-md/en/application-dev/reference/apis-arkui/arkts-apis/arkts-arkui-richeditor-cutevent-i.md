@@ -1,6 +1,6 @@
 # CutEvent
 
-定义用户剪切事件。
+the callback of cut event.
 
 **Since:** 23
 
@@ -16,7 +16,7 @@
 preventDefault(): void
 ```
 
-阻止系统默认剪切事件。
+Prevent system cut event.
 
 **Since:** 23
 

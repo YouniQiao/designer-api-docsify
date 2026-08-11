@@ -12,7 +12,7 @@ import { print } from 'kits/@kit.BasicServicesKit';
 function queryAllPrinterPpds(): Promise<PpdInfo[]>
 ```
 
-查询所有打印机ppd。
+Query all printer ppds.
 
 **Since:** 24
 
@@ -38,6 +38,6 @@ function queryAllPrinterPpds(): Promise<PpdInfo[]>
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 201 | the application does not have permission to call this function. |
-| 202 | not system application. |
+| [201](../../errorcode-universal.md#201-permission-denied) | the application does not have permission to call this function. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | not system application. |
 

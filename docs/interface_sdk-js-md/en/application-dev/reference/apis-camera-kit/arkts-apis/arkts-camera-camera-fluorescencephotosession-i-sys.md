@@ -49,7 +49,7 @@ Unsubscribes from error events.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 202 | Not System Application. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not System Application. |
 
 ## off('focusStateChange')
 
@@ -80,7 +80,7 @@ Unsubscribes from focus state change event callback.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 202 | Not System Application. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not System Application. |
 
 ## offError
 
@@ -110,7 +110,7 @@ Unsubscribes from error events.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 202 | Not System Application. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not System Application. |
 
 ## offFocusStateChange
 
@@ -140,7 +140,7 @@ Unsubscribes from focus state change event callback.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 202 | Not System Application. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not System Application. |
 
 ## on('error')
 
@@ -171,7 +171,7 @@ Subscribes to error events.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 202 | Not System Application. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not System Application. |
 
 ## on('focusStateChange')
 
@@ -202,7 +202,7 @@ Subscribes focus state change event callback.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 202 | Not System Application. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not System Application. |
 
 ## onError
 
@@ -232,7 +232,7 @@ Subscribes to error events.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 202 | Not System Application. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not System Application. |
 
 ## onFocusStateChange
 
@@ -262,5 +262,5 @@ Subscribes focus state change event callback.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 202 | Not System Application. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not System Application. |
 

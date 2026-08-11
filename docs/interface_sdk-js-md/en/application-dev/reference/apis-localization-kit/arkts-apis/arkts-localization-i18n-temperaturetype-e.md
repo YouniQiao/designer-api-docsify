@@ -1,6 +1,6 @@
 # TemperatureType
 
-温度单位的枚举。
+Enumerates temperature units.
 
 **Since:** 23
 
@@ -16,7 +16,7 @@
 CELSIUS = 1
 ```
 
-摄氏度。
+Celsius.
 
 **Since:** 23
 
@@ -34,7 +34,7 @@ CELSIUS = 1
 FAHRENHEIT = 2
 ```
 
-华氏度。
+Fahrenheit.
 
 **Since:** 23
 
@@ -52,7 +52,7 @@ FAHRENHEIT = 2
 KELVIN = 3
 ```
 
-开尔文。
+Kelvin.
 
 **Since:** 23
 

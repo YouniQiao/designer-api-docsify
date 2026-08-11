@@ -1,6 +1,7 @@
 # HdrGainmapMetadata
 
-Gainmap使用的元数据值，[HdrMetadataKey](arkts-image-image-hdrmetadatakey-e.md)中HDR_GAINMAP_METADATA关键字对应的值，参考ISO 21496-1。
+Describes the metadata keys used by a gain map, that is, the values available for **HDR_GAINMAP_METADATA** in   
+[HdrMetadataKey](arkts-image-image-hdrmetadatakey-e.md). For details, see ISO 21496-1.
 
 **Since:** 12
 

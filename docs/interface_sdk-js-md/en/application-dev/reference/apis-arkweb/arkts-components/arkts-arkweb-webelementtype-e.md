@@ -1,6 +1,6 @@
 # WebElementType
 
-网页元素信息。
+Enumerates the web element types.
 
 **Since:** 13
 
@@ -16,7 +16,7 @@
 IMAGE = 1
 ```
 
-网页元素为图像类型。
+Image.
 
 **Since:** 13
 
@@ -32,7 +32,7 @@ IMAGE = 1
 LINK = 2
 ```
 
-网页元素为超链接类型。
+Hyperlink.
 
 **Since:** 20
 
@@ -48,7 +48,7 @@ LINK = 2
 TEXT = 3
 ```
 
-网页元素为文本或可编辑区域类型。
+Text or editable area.
 
 **Since:** 21
 

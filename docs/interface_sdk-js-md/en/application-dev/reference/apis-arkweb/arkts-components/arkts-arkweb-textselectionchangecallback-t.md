@@ -4,7 +4,7 @@
 type TextSelectionChangeCallback = (selectionText: string) => void
 ```
 
-文本选择内容发生变化后，通过回调返回选中的文本。
+Defines a callback triggered when the text selection changes.
 
 **Since:** 23
 
@@ -18,5 +18,5 @@ type TextSelectionChangeCallback = (selectionText: string) => void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| selectionText | string | Yes | 所选文本。 |
+| selectionText | string | Yes | Selected text. |
 

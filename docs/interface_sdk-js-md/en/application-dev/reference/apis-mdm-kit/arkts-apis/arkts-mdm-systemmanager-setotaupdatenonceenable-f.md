@@ -12,11 +12,12 @@ import { systemManager } from 'kits/@kit.MDMKit';
 function setOtaUpdateNonceEnable(admin: Want, isEnable: boolean): void
 ```
 
-设置OTA更新时Nonce的启用状态（默认为启用状态）。启用后，系统将在OTA更新过程中校验Nonce的有效性，从而防止重放攻击，提升系统安全性。
+Sets whether to enable nonce for OTA update (nonce is enabled by default). When nonce is enabled, the system verifies the validity of the nonce during the OTA update process to prevent replay attacks and enhance system security.
 
-> **说明：**
+> **NOTE：**
 > 
-> 为保障系统安全，若非内网升级等特殊业务需求，不建议禁用Nonce校验。
+> To ensure system security, it is not advised to disable nonce verification unless required by specific use cases
+> such as intranet updates.
 
 **Since:** 26.0.0
 
@@ -34,37 +35,16 @@ function setOtaUpdateNonceEnable(admin: Want, isEnable: boolean): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| admin | [Want](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-want-want-c.md) | Yes | 企业设备管理扩展组件。Want中必须包含企业设备管理扩展能力的abilityName和所在应用的bundleName。 |
-| isEnable | boolean | Yes | true表示启用OTA更新Nonce，false表示禁用OTA更新Nonce。 |
+| admin | [Want](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-want-want-c.md) | Yes | EnterpriseAdminExtensionAbility. **Want** must contain the ability name of the EnterpriseAdminExtensionAbility and the bundle name of the application. |
+| isEnable | boolean | Yes | The value **true** means to enable nonce for OTA update, and the value **false** means to disable nonce for OTA update. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 801 | Capability not supported. Failed to call the API due to limited device capabilities. |
-| 201 | Permission verification failed. The application does not have the permission required to call the API. |
-| 9200016 | Service timeout. |
-| 9200001 | The application is not an administrator application of the device. |
-| 9200002 | The administrator application does not have permission to manage the device. |
-
-## Examples
-
-```TypeScript
-import { systemManager } from '@kit.MDMKit';
-import { Want } from '@kit.AbilityKit';
-
-let wantTemp: Want = {
-  // Replace with actual values.
-  bundleName: 'com.example.myapplication',
-  abilityName: 'EnterpriseAdminAbility'
-};
-// Replace with actual values.
-let isEnable: boolean = true;
-try {
-  systemManager.setOtaUpdateNonceEnable(wantTemp, isEnable);
-  console.info('Succeeded in setting OTA update Nonce enable.');
-} catch (err) {
-  console.error(`Failed to set OTA update Nonce enable. Code is ${err.code}, message is ${err.message}`);
-}
-```
+| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. Failed to call the API due to limited device capabilities. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed. The application does not have the permission required to call the API. |
+| [9200016](../errorcode-enterpriseDeviceManager.md#9200016-service-timeout) | Service timeout. |
+| [9200001](../errorcode-enterpriseDeviceManager.md#9200001-deviceadmin-not-enabled) | The application is not an administrator application of the device. |
+| [9200002](../errorcode-enterpriseDeviceManager.md#9200002-permission-denied) | The administrator application does not have permission to manage the device. |
 

@@ -1,11 +1,5 @@
 # subscribe（系统接口）
 
-## 导入模块
-
-```TypeScript
-import { userStatus } from 'kits/@kit.MultimodalAwarenessKit';
-```
-
 ## subscribe
 
 ```TypeScript
@@ -13,7 +7,7 @@ function subscribe(featureId: UserStatusFeature, callback: Callback<UserStatusDa
     deviceInfo?: DeviceInfo[]): int
 ```
 
-Subscribes to user status monitoring.
+订阅用户状态监测。
 
 **起始版本：** 26.0.0
 
@@ -31,22 +25,22 @@ Subscribes to user status monitoring.
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| featureId | [UserStatusFeature](arkts-multimodalawareness-userstatus-userstatusfeature-e-sys.md) | 是 | Indicates the feature to be subscribed to. |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;UserStatusData&gt; | 是 | Callback used to return user status data. |
-| deviceInfo | [DeviceInfo](../../apis-avsession-kit/arkts-apis/arkts-avsession-avsession-deviceinfo-i-sys.md)[] | 否 | List of devices to enable user status monitoring. |
+| featureId | [UserStatusFeature](arkts-multimodalawareness-userstatus-userstatusfeature-e-sys.md) | 是 | 表示要订阅的特性。 |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;UserStatusData&gt; | 是 | 回调函数，返回用户状态数据。 |
+| deviceInfo | [DeviceInfo](../../apis-avsession-kit/arkts-apis/arkts-avsession-avsession-deviceinfo-i-sys.md)[] | 否 | 启用用户状态监测的设备列表。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| ArkTS-Dyn: number  <br>ArkTS-Sta：int | Returns the registered callback ID. |
+| ArkTS-Dyn: number  <br>ArkTS-Sta：int | 返回已注册的回调ID。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 801 | Capability not supported. Failed to call the API due to limited &lt;br&gt; device capabilities. |
-| 33900001 | Service exception. Possible causes: &lt;br&gt;1. System error, such as null pointer and container-related exception. &lt;br&gt;2. Node-API invocation exception, such as a invalid Node-API status. |
-| 33900002 | Subscription failed. Possible causes: &lt;br&gt;1. Callback registration failed. &lt;br&gt;2. Failed to bind the native object to the JS wrapper. &lt;br&gt;3. Node-API invocation exception, such as invalid Node-API status. &lt;br&gt;4. IPC request exception. |
-| 202 | Permission verification failed. A non-system application calls a system API. |
+| [801](../../errorcode-universal.md#801-该设备不支持此api) | Capability not supported. Failed to call the API due to limited &lt;br&gt; device capabilities. |
+| [33900001](../../apis-multimodalawareness-kit/errorcode-userStatus.md#33900001-服务异常) | Service exception. Possible causes: &lt;br&gt;1. System error, such as null pointer and container-related exception. &lt;br&gt;2. Node-API invocation exception, such as a invalid Node-API status. |
+| [33900002](../../apis-multimodalawareness-kit/errorcode-userStatus.md#33900002-订阅失败) | Subscription failed. Possible causes: &lt;br&gt;1. Callback registration failed. &lt;br&gt;2. Failed to bind the native object to the JS wrapper. &lt;br&gt;3. Node-API invocation exception, such as invalid Node-API status. &lt;br&gt;4. IPC request exception. |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed. A non-system application calls a system API. |
 

@@ -1,11 +1,5 @@
 # getDisplayByIdSync
 
-## 导入模块
-
-```TypeScript
-import { display } from 'kits/@kit.ArkUI';
-```
-
 ## getDisplayByIdSync
 
 ```TypeScript
@@ -40,10 +34,12 @@ function getDisplayByIdSync(displayId: long): Display
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. 3. Parameter verification failed. |
-| 1400003 | This display manager service works abnormally. Possible causes: Display is null, display id corresponding display does not exist. |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. 3. Parameter verification failed. |
+| [1400003](../errorcode-display.md#1400003-系统服务工作异常) | This display manager service works abnormally. Possible causes: Display is null, display id corresponding display does not exist. |
 
 ## 示例
+
+ArkTS-Dyn示例：
 
 ```TypeScript
 let displayClass: display.Display | null = null;
@@ -54,6 +50,23 @@ try {
   displayClass = display.getDisplayByIdSync(displayId);
 } catch (exception) {
   console.error(`Failed to get display. Code: ${exception.code}, message: ${exception.message}`);
+}
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+import { display } from '@kit.ArkUI';
+
+let displayClass: display.Display | null = null;
+
+try {
+  // 可以通过WindowProperties的displayId属性获取到准确的displayId作为入参
+  let displayId = 0; 
+  let displayClass = display.getDisplayByIdSync(displayId);
+} catch (exception) {
+  let error = exception as BusinessError;
+  console.error(`Failed to get display. Code: ${error.code}, message: ${error.message}`);
 }
 ```
 

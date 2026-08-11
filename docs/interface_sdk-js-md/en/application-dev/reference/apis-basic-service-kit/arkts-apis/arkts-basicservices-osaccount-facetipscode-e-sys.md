@@ -1,6 +1,6 @@
 # FaceTipsCode (System API)
 
-表示人脸验证过程中提示的枚举。
+Enumerates the tip codes for facial authentication.
 
 **Since:** 8
 
@@ -18,7 +18,7 @@
 FACE_AUTH_TIP_TOO_BRIGHT = 1
 ```
 
-表示由于高照明，获得的面部图像太亮。
+The obtained face image is too bright.
 
 **Since:** 8
 
@@ -36,7 +36,7 @@ FACE_AUTH_TIP_TOO_BRIGHT = 1
 FACE_AUTH_TIP_TOO_DARK = 2
 ```
 
-表示由于照明度低，获得的面部图像太暗。
+The obtained face image is too dark.
 
 **Since:** 8
 
@@ -54,7 +54,7 @@ FACE_AUTH_TIP_TOO_DARK = 2
 FACE_AUTH_TIP_TOO_CLOSE = 3
 ```
 
-表示面部离设备太近。
+The face is too close to the device.
 
 **Since:** 8
 
@@ -72,7 +72,7 @@ FACE_AUTH_TIP_TOO_CLOSE = 3
 FACE_AUTH_TIP_TOO_FAR = 4
 ```
 
-表示面部离设备太远。
+The face is too far away from the device.
 
 **Since:** 8
 
@@ -90,7 +90,7 @@ FACE_AUTH_TIP_TOO_FAR = 4
 FACE_AUTH_TIP_TOO_HIGH = 5
 ```
 
-表示设备太高，仅捕捉面部上部。
+Only the upper part of the face is captured because the device is angled too high.
 
 **Since:** 8
 
@@ -108,7 +108,7 @@ FACE_AUTH_TIP_TOO_HIGH = 5
 FACE_AUTH_TIP_TOO_LOW = 6
 ```
 
-表示设备太低，仅捕捉面部下部。
+Only the lower part of the face is captured because the device is angled too low.
 
 **Since:** 8
 
@@ -126,7 +126,7 @@ FACE_AUTH_TIP_TOO_LOW = 6
 FACE_AUTH_TIP_TOO_RIGHT = 7
 ```
 
-表示设备向右偏移，并且仅捕捉面部的右侧部分。
+Only the right part of the face is captured because the device is angled too much to the right.
 
 **Since:** 8
 
@@ -144,7 +144,7 @@ FACE_AUTH_TIP_TOO_RIGHT = 7
 FACE_AUTH_TIP_TOO_LEFT = 8
 ```
 
-表示设备向左偏移，并且仅捕捉面部的左侧部分。
+Only the left part of the face is captured because the device is angled too much to the left.
 
 **Since:** 8
 
@@ -162,7 +162,7 @@ FACE_AUTH_TIP_TOO_LEFT = 8
 FACE_AUTH_TIP_TOO_MUCH_MOTION = 9
 ```
 
-表示面部信息收集过程中面部移动过快。
+The face moves too fast during facial information collection.
 
 **Since:** 8
 
@@ -180,7 +180,7 @@ FACE_AUTH_TIP_TOO_MUCH_MOTION = 9
 FACE_AUTH_TIP_POOR_GAZE = 10
 ```
 
-表示面部未朝向设备。
+The face is not facing the device.
 
 **Since:** 8
 
@@ -198,7 +198,7 @@ FACE_AUTH_TIP_POOR_GAZE = 10
 FACE_AUTH_TIP_NOT_DETECTED = 11
 ```
 
-表示未检测到人脸。
+No face is detected.
 
 **Since:** 8
 

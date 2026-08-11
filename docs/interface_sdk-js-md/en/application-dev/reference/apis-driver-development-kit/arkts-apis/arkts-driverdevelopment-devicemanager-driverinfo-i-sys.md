@@ -1,6 +1,6 @@
 # DriverInfo (System API)
 
-驱动详细信息。
+Defines detailed information about a driver.
 
 **Since:** 12
 
@@ -24,7 +24,7 @@ import { deviceManager } from 'kits/@kit.DriverDevelopmentKit';
 busType: BusType
 ```
 
-总线类型。
+Bus type.
 
 **Type:** [BusType](arkts-driverdevelopment-devicemanager-bustype-e.md)
 
@@ -44,7 +44,7 @@ busType: BusType
 description: string
 ```
 
-驱动描述。
+Driver description.
 
 **Type:** string
 
@@ -64,7 +64,7 @@ description: string
 driverName: string
 ```
 
-驱动名称。
+Driver name.
 
 **Type:** string
 
@@ -84,7 +84,7 @@ driverName: string
 driverSize: string
 ```
 
-驱动大小(单位为Byte)。
+Driver size, in bytes.
 
 **Type:** string
 
@@ -104,7 +104,7 @@ driverSize: string
 driverUid: string
 ```
 
-驱动Uid。
+Driver UID.
 
 **Type:** string
 
@@ -124,7 +124,7 @@ driverUid: string
 driverVersion: string
 ```
 
-驱动版本。
+Driver version.
 
 **Type:** string
 

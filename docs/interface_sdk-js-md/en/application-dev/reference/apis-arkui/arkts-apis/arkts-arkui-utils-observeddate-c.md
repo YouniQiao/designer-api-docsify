@@ -1,7 +1,6 @@
 # ObservedDate
 
-继承自Date，为可观察API操作的Date对象。详见  
-[ObservedArray/ObservedMap/ObservedSet/ObservedDate：具有观察能力的Built-in类型](../../../ui/state-management-static/arkts-static-new-observed-built-in-types.md)。
+Observable Date base class.
 
 **Inheritance/Implementation:** ObservedDate extends [Date](../../apis-arkts/arkts-apis/arkts-arkts-date-c.md/arkts-arkts-date-c.md)
 
@@ -19,7 +18,7 @@
 public constructor()
 ```
 
-无参构造函数。
+No arg constructor for observable date.
 
 **Since:** 26.0.0
 
@@ -37,7 +36,7 @@ public constructor()
 public constructor(value: long | string | Date)
 ```
 
-使用指定初始值创建ObservedDate实例。
+Constructor for observable date.
 
 **Since:** 26.0.0
 
@@ -53,5 +52,5 @@ public constructor(value: long | string | Date)
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | long \| string \| Date | Yes | 初始时间值。 |
+| value | long \| string \| Date | Yes | initial value. |
 

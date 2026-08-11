@@ -4,7 +4,7 @@
 export type ContinueCallback = _ContinueCallback
 ```
 
-注册用于通知迁移结果的回调。
+ContinueCallback registered for notify continue result.
 
 **Since:** 10
 

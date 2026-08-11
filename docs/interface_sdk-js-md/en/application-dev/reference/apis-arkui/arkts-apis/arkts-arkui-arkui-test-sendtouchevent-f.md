@@ -6,9 +6,7 @@
 export declare function sendTouchEvent(event: TouchObject): boolean
 ```
 
-发送触摸事件。
-
-此接口仅用于对应用的测试。由于耗时长，不建议使用。
+Send a mock touch event to the current application. This interface is only suitable for simple interaction testing within your own application and should not be used in real environment.
 
 **Since:** 23
 
@@ -24,11 +22,11 @@ export declare function sendTouchEvent(event: TouchObject): boolean
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| event | [TouchObject](../arkts-components/arkts-arkui-touchobject-i.md) | Yes | 触摸事件，event参数见[TouchObject](arkts-arkui-common-touchobject-i.md)的介绍。 |
+| event | [TouchObject](../arkts-components/arkts-arkui-touchobject-i.md) | Yes | TouchObject to be sent. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| boolean | 事件发送失败时返回false，其余情况返回true。 |
+| boolean |  |
 

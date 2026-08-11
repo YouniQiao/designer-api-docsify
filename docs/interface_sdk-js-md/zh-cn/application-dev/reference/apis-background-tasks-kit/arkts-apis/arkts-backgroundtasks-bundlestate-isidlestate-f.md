@@ -1,11 +1,5 @@
 # isIdleState
 
-## 导入模块
-
-```TypeScript
-import { bundleState } from 'kits/@kit.BackgroundTasksKit';
-```
-
 ## isIdleState
 
 ```TypeScript

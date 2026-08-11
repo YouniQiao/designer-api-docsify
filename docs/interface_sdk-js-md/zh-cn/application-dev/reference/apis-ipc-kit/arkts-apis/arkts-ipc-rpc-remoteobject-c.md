@@ -12,12 +12,6 @@
 
 **系统能力：** SystemCapability.Communication.IPC.Core
 
-## 导入模块
-
-```TypeScript
-import { rpc } from 'kits/@kit.IPCKit';
-```
-
 ## attachLocalInterface
 
 ```TypeScript
@@ -137,6 +131,8 @@ getCallingPid(): int
 
 ## 示例
 
+ArkTS-Dyn示例：
+
 ```TypeScript
 import { rpc } from '@kit.IPCKit';
 import { hilog } from '@kit.PerformanceAnalysisKit';
@@ -145,15 +141,44 @@ class TestRemoteObject extends rpc.RemoteObject {
   constructor(descriptor: string) {
     super(descriptor);
   }
+
   onRemoteMessageRequest(code: number, data: rpc.MessageSequence, reply: rpc.MessageSequence,
     option: rpc.MessageOption): boolean | Promise<boolean> {
     // 根据业务实际逻辑，进行相应处理
     return true;
   }
 }
+
 try {
   let testRemoteObject = new TestRemoteObject("testObject");
   hilog.info(0x0000, 'testTag', 'RpcServer: getCallingPid: ' + testRemoteObject.getCallingPid());
+} catch (error) {
+  hilog.error(0x0000, 'testTag', 'error: ' + error);
+}
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+import rpc from '@ohos.rpc';
+import hilog from 'ohos.hilog';
+import { BusinessError } from '@ohos.base';
+
+class TestRemoteObject extends rpc.RemoteObject {
+  constructor(descriptor: string) {
+    super(descriptor);
+  }
+
+  onRemoteMessageRequest(code: int, data: rpc.MessageSequence, reply: rpc.MessageSequence,
+    option: rpc.MessageOption): boolean | Promise<boolean> {
+    // 根据业务实际逻辑，进行相应处理
+    return true;
+  }
+}
+
+try {
+  let testRemoteObject = new TestRemoteObject("testObject");
+  hilog.info(0x0000, 'testTag', 'RpcServer: getCallingUid: ' + testRemoteObject.getCallingUid());
 } catch (error) {
   hilog.error(0x0000, 'testTag', 'error: ' + error);
 }
@@ -189,6 +214,8 @@ getCallingUid(): int
 
 ## 示例
 
+ArkTS-Dyn示例：
+
 ```TypeScript
 import { rpc } from '@kit.IPCKit';
 import { hilog } from '@kit.PerformanceAnalysisKit';
@@ -197,6 +224,7 @@ class TestRemoteObject extends rpc.RemoteObject {
   constructor(descriptor: string) {
     super(descriptor);
   }
+
   onRemoteMessageRequest(code: number, data: rpc.MessageSequence, reply: rpc.MessageSequence,
     option: rpc.MessageOption): boolean | Promise<boolean> {
     // 根据业务实际逻辑，进行相应处理
@@ -206,6 +234,32 @@ class TestRemoteObject extends rpc.RemoteObject {
 try {
   let testRemoteObject = new TestRemoteObject("testObject");
   hilog.info(0x0000, 'testTag', 'RpcServer: getCallingUid: ' + testRemoteObject.getCallingUid());
+} catch (error) {
+  hilog.error(0x0000, 'testTag', 'error: ' + error);
+}
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+import rpc from '@ohos.rpc';
+import hilog from 'ohos.hilog';
+import { BusinessError } from '@ohos.base';
+
+class TestRemoteObject extends rpc.RemoteObject {
+  constructor(descriptor: string) {
+    super(descriptor);
+  }
+
+  onRemoteMessageRequest(code: int, data: rpc.MessageSequence, reply: rpc.MessageSequence,
+    option: rpc.MessageOption): boolean | Promise<boolean> {
+    // 根据业务实际逻辑，进行相应处理
+    return true;
+  }
+}
+try {
+  let testRemoteObject = new TestRemoteObject("testObject");
+  hilog.info(0x0000, 'testTag', 'RpcServer: getCallingPid: ' + testRemoteObject.getCallingPid());
 } catch (error) {
   hilog.error(0x0000, 'testTag', 'error: ' + error);
 }
@@ -237,7 +291,7 @@ getDescriptor(): string
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 1900008 | The proxy or remote object is invalid. |
+| [1900008](../errorcode-rpc.md#1900008-非法的ipc对象) | The proxy or remote object is invalid. |
 
 ## 示例
 
@@ -351,7 +405,7 @@ getLocalInterface(descriptor: string): IRemoteBroker
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1.The number of parameters is incorrect; 2.The parameter type does not match; 3.The string length is greater than or equal to 40960; 4.The number of bytes copied to the buffer is different from the length of the obtained string. |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1.The number of parameters is incorrect; 2.The parameter type does not match; 3.The string length is greater than or equal to 40960; 4.The number of bytes copied to the buffer is different from the length of the obtained string. |
 
 ## 示例
 
@@ -364,12 +418,14 @@ class TestRemoteObject extends rpc.RemoteObject {
   constructor(descriptor: string) {
     super(descriptor);
   }
+
   onRemoteMessageRequest(code: number, data: rpc.MessageSequence, reply: rpc.MessageSequence,
     option: rpc.MessageOption): boolean | Promise<boolean> {
     // 根据业务实际逻辑，进行相应处理
     return true;
   }
 }
+
 try {
   let testRemoteObject = new TestRemoteObject("testObject");
   testRemoteObject.getLocalInterface("testObject");
@@ -407,7 +463,7 @@ modifyLocalInterface(localInterface: IRemoteBroker, descriptor: string): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1.The number of parameters is incorrect; 2.The parameter type does not match; 3.The string length is greater than or equal to 40960; 4.The number of bytes copied to the buffer is different from the length of the obtained string. |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1.The number of parameters is incorrect; 2.The parameter type does not match; 3.The string length is greater than or equal to 40960; 4.The number of bytes copied to the buffer is different from the length of the obtained string. |
 
 ## 示例
 
@@ -499,6 +555,8 @@ sendMessageRequest请求的响应处理函数，服务端在该函数里同步�
 
 ## 示例
 
+ArkTS-Dyn示例：
+
 ```TypeScript
 // 重写onRemoteMessageRequest方法同步处理请求
 import { rpc } from '@kit.IPCKit';
@@ -521,6 +579,34 @@ class TestRemoteObject extends rpc.RemoteObject {
   }
 }
 ```
+
+ArkTS-Sta示例：
+
+```TypeScript
+// 重写onRemoteMessageRequest方法同步处理请求
+import rpc from '@ohos.rpc';
+import hilog from 'ohos.hilog';
+import { BusinessError } from '@ohos.base';
+
+class TestRemoteObject extends rpc.RemoteObject {
+  constructor(descriptor: string) {
+    super(descriptor);
+  }
+
+  onRemoteMessageRequest(code: int, data: rpc.MessageSequence, reply: rpc.MessageSequence,
+    option: rpc.MessageOption): boolean | Promise<boolean> {
+    if (code === 1) {
+      hilog.info(0x0000, 'testTag', 'RpcServer: sync onRemoteMessageRequest is called');
+      return true;
+    } else {
+      hilog.error(0x0000, 'testTag', 'RpcServer: unknown code: ' + code);
+      return false;
+    }
+  }
+}
+```
+
+ArkTS-Dyn示例：
 
 ```TypeScript
 // 重写onRemoteMessageRequest方法异步处理请求
@@ -548,6 +634,38 @@ class TestRemoteObject extends rpc.RemoteObject {
 }
 ```
 
+ArkTS-Sta示例：
+
+```TypeScript
+// 重写onRemoteMessageRequest方法异步处理请求
+import rpc from '@ohos.rpc';
+import hilog from 'ohos.hilog';
+import { BusinessError } from '@ohos.base';
+
+class TestRemoteObject extends rpc.RemoteObject {
+  constructor(descriptor: string) {
+    super(descriptor);
+  }
+
+  onRemoteMessageRequest(code: int, data: rpc.MessageSequence, reply: rpc.MessageSequence,
+    option: rpc.MessageOption): Promise<boolean> {
+    if (code === 1) {
+      hilog.info(0x0000, 'testTag', 'RpcServer: async onRemoteMessageRequest is called');
+    } else {
+      hilog.error(0x0000, 'testTag', 'RpcServer: unknown code: ' + code);
+      return new Promise<boolean>((resolve) => {
+        resolve(false);
+      });
+    }
+    return new Promise<boolean>((resolve) => {
+      resolve(true);
+    });
+  }
+}
+```
+
+ArkTS-Dyn示例：
+
 ```TypeScript
 // 同时重写onRemoteMessageRequest和onRemoteRequest方法同步处理请求
 import { rpc } from '@kit.IPCKit';
@@ -559,15 +677,15 @@ class TestRemoteObject extends rpc.RemoteObject {
   }
 
   onRemoteRequest(code: number, data: rpc.MessageParcel, reply: rpc.MessageParcel, option: rpc.MessageOption): boolean {
-     if (code === 1) {
-        hilog.info(0x0000, 'testTag', 'RpcServer: sync onRemoteMessageRequest is called');
-        return true;
-     } else {
-        hilog.error(0x0000, 'testTag', 'RpcServer: unknown code: ' + code);
-        return false;
-     }
+    if (code === 1) {
+      hilog.info(0x0000, 'testTag', 'RpcServer: sync onRemoteMessageRequest is called');
+      return true;
+    } else {
+      hilog.error(0x0000, 'testTag', 'RpcServer: unknown code: ' + code);
+      return false;
+    }
   }
-    // 同时调用仅会执行onRemoteMessageRequest
+  // 同时调用仅会执行onRemoteMessageRequest
   onRemoteMessageRequest(code: number, data: rpc.MessageSequence, reply: rpc.MessageSequence,
     option: rpc.MessageOption): boolean | Promise<boolean> {
     if (code === 1) {
@@ -639,6 +757,8 @@ sendMessageRequest请求的响应处理函数，服务端在该函数里同步�
 
 ## 示例
 
+ArkTS-Dyn示例：
+
 ```TypeScript
 // 重写onRemoteMessageRequest方法同步处理请求
 import { rpc } from '@kit.IPCKit';
@@ -662,6 +782,35 @@ class TestRemoteObject extends rpc.RemoteObject {
   }
 }
 ```
+
+ArkTS-Sta示例：
+
+```TypeScript
+// 重写onRemoteMessageRequest方法同步处理请求
+import rpc from '@ohos.rpc';
+import hilog from 'ohos.hilog';
+import { BusinessError } from '@ohos.base';
+
+class TestRemoteObject extends rpc.RemoteObject {
+  constructor(descriptor: string) {
+    super(descriptor);
+  }
+
+  onRemoteMessageRequest(code: int, data: rpc.MessageSequence, reply: rpc.MessageSequence,
+    option: rpc.MessageOption, callingInfo: rpc.CallingInfo): boolean {
+    if (code === 1) {
+      hilog.info(0x0000, 'testTag', 'RpcServer: sync onRemoteMessageRequest is called');
+      let pid = callingInfo.callerPid;
+      return true;
+    } else {
+      hilog.error(0x0000, 'testTag', 'RpcServer: unknown code: ' + code);
+      return false;
+    }
+  }
+}
+```
+
+ArkTS-Dyn示例：
 
 ```TypeScript
 // 重写onRemoteMessageRequest方法异步处理请求
@@ -690,6 +839,8 @@ class TestRemoteObject extends rpc.RemoteObject {
 }
 ```
 
+ArkTS-Dyn示例：
+
 ```TypeScript
 // 同时重写onRemoteMessageRequest和onRemoteRequest方法同步处理请求
 import { rpc } from '@kit.IPCKit';
@@ -709,11 +860,12 @@ class TestRemoteObject extends rpc.RemoteObject {
         return false;
      }
   }
-    // 同时调用仅会执行onRemoteMessageRequest
+  // 同时调用仅会执行onRemoteMessageRequest
+  // 动态语言中不支持重写onRemoteMessageRequest，此处只提供带有CallingInfo的示例
   onRemoteMessageRequest(code: number, data: rpc.MessageSequence, reply: rpc.MessageSequence,
-    option: rpc.MessageOption, callingInfo?: rpc.CallingInfo): boolean | Promise<boolean> {
+    option: rpc.MessageOption, callingInfo?: rpc.CallingInfo): boolean {
     if (code === 1) {
-      hilog.info(0x0000, 'testTag', 'RpcServer: async onRemoteMessageRequest is called');
+      hilog.info(0x0000, 'testTag', 'RpcServer: sync onRemoteMessageRequest is called');
       let pid = callingInfo?.callerPid;
     } else {
       hilog.error(0x0000, 'testTag', 'RpcServer: unknown code: ' + code);
@@ -721,6 +873,46 @@ class TestRemoteObject extends rpc.RemoteObject {
     }
     return true;
   }
+}
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+// 同时重写带有CallingInfo和不带CallingInfo的onRemoteMessageRequest方法及onRemoteRequest方法同步处理请求
+import rpc from '@ohos.rpc';
+import hilog from 'ohos.hilog';
+import { BusinessError } from '@ohos.base';
+
+class TestRemoteObject extends rpc.RemoteObject {
+  constructor(descriptor: string) {
+    super(descriptor);
+  }
+
+  onRemoteMessageRequest(code: int, data: rpc.MessageSequence, reply: rpc.MessageSequence,
+    option: rpc.MessageOption): boolean {
+     if (code === 1) {
+        hilog.info(0x0000, 'testTag', 'RpcServer: sync onRemoteMessageRequest is called');
+        return true;
+     } else {
+        hilog.error(0x0000, 'testTag', 'RpcServer: unknown code: ' + code);
+        return false;
+     }
+  }
+
+  // 同时调用仅会执行该onRemoteMessageRequest
+  onRemoteMessageRequest(code: int, data: rpc.MessageSequence, reply: rpc.MessageSequence,
+    option: rpc.MessageOption, callingInfo: rpc.CallingInfo): boolean {
+    if (code === 1) {
+      hilog.info(0x0000, 'testTag', 'RpcServer: sync onRemoteMessageRequest is called');
+      let pid = callingInfo.callerPid;
+    } else {
+      hilog.error(0x0000, 'testTag', 'RpcServer: unknown code: ' + code);
+      return false;
+    }
+    return true;
+  }
+  // ArkTS-Sta无onRemoteRequest方法
 }
 ```
 
@@ -823,12 +1015,14 @@ class TestRemoteObject extends rpc.RemoteObject {
   constructor(descriptor: string) {
     super(descriptor);
   }
+
   onRemoteMessageRequest(code: number, data: rpc.MessageSequence, reply: rpc.MessageSequence,
     option: rpc.MessageOption): boolean | Promise<boolean> {
     // 根据业务实际逻辑，进行相应处理
     return true;
   }
 }
+
 try {
   let testRemoteObject = new TestRemoteObject("testObject");
   testRemoteObject.queryLocalInterface("testObject");
@@ -888,9 +1082,11 @@ sendMessageRequest(
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1.The number of parameters is incorrect; 2.The parameter type does not match; 3.Failed to obtain the passed object instance. |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1.The number of parameters is incorrect; 2.The parameter type does not match; 3.Failed to obtain the passed object instance. |
 
 ## 示例
+
+ArkTS-Dyn示例：
 
 ```TypeScript
 import { rpc } from '@kit.IPCKit';
@@ -901,6 +1097,53 @@ class TestRemoteObject extends rpc.RemoteObject {
     super(descriptor);
   }
   onRemoteMessageRequest(code: number, data: rpc.MessageSequence, reply: rpc.MessageSequence,
+    option: rpc.MessageOption): boolean | Promise<boolean> {
+    // 根据业务实际逻辑，进行相应处理
+    return true;
+  }
+}
+try {
+  let testRemoteObject = new TestRemoteObject("testObject");
+  let option = new rpc.MessageOption();
+  let data = rpc.MessageSequence.create();
+  let reply = rpc.MessageSequence.create();
+  data.writeInt(1);
+  data.writeString("hello");
+  testRemoteObject.sendMessageRequest(1, data, reply, option)
+    .then((result: rpc.RequestResult) => {
+      if (result.errCode === 0) {
+        hilog.info(0x0000, 'testTag', 'sendMessageRequest got result');
+        let num = result.reply.readInt();
+        let msg = result.reply.readString();
+        hilog.info(0x0000, 'testTag', 'reply num: ' + num);
+        hilog.info(0x0000, 'testTag', 'reply msg: ' + msg);
+      } else {
+        hilog.error(0x0000, 'testTag', 'sendMessageRequest failed, errCode: ' + result.errCode);
+      }
+    }).catch((e: Error) => {
+      hilog.error(0x0000, 'testTag', 'sendMessageRequest failed, error: ' + JSON.stringify(e));
+    }).finally (() => {
+      hilog.info(0x0000, 'testTag', 'sendMessageRequest ends, reclaim parcel');
+      data.reclaim();
+      reply.reclaim();
+    });
+} catch (error) {
+  hilog.error(0x0000, 'testTag', 'sendMessageRequest failed, error: ' + error);
+}
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+import rpc from '@ohos.rpc';
+import hilog from 'ohos.hilog';
+import { BusinessError } from '@ohos.base';
+
+class TestRemoteObject extends rpc.RemoteObject {
+  constructor(descriptor: string) {
+    super(descriptor);
+  }
+  onRemoteMessageRequest(code: int, data: rpc.MessageSequence, reply: rpc.MessageSequence,
     option: rpc.MessageOption): boolean | Promise<boolean> {
     // 根据业务实际逻辑，进行相应处理
     return true;
@@ -984,7 +1227,7 @@ sendMessageRequest(
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1.The number of parameters is incorrect; 2.The parameter type does not match; 3.Failed to obtain the passed object instance. |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1.The number of parameters is incorrect; 2.The parameter type does not match; 3.Failed to obtain the passed object instance. |
 
 ## sendRequest
 

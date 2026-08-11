@@ -1,6 +1,6 @@
 # SelectionContainerInterface
 
-创建一个SelectionContainer组件。
+Provides a SelectionContainer component interface.
 
 **Since:** 26.0.0
 
@@ -22,7 +22,7 @@ import { SelectionContainerInstance, SelectionContainer, OnMenuItemClickWithText
 (value?: SelectionContainerOptions): SelectionContainerAttribute
 ```
 
-定义SelectionContainer的构造函数。
+Defines the constructor of SelectionContainer.
 
 **Since:** 26.0.0
 
@@ -40,7 +40,7 @@ import { SelectionContainerInstance, SelectionContainer, OnMenuItemClickWithText
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | [SelectionContainerOptions](arkts-arkui-arkui-components-selectioncontainer-selectioncontaineroptions-i.md) | No | 组件的初始化选项。 |
+| value | [SelectionContainerOptions](arkts-arkui-arkui-components-selectioncontainer-selectioncontaineroptions-i.md) | No | Initialization options of the component. |
 
 **Return value:**
 

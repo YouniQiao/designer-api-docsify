@@ -40,16 +40,21 @@ Get a MediaKeySystem's UUID.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | The parameter check failed.Possibly because: &lt;br&gt;1.Mandatory parameters are left unspecified. 2.Parameter verification failed. |
-| 24700201 | Fatal service error, for example, service died. |
-| 24700101 | All unknown errors. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | The parameter check failed.Possibly because: &lt;br&gt;1.Mandatory parameters are left unspecified. 2.Parameter verification failed. |
+| [24700201](../errorcode-drm.md#24700201-service-exception) | Fatal service error, for example, service died. |
+| [24700101](../errorcode-drm.md#24700101-unknown-error) | All unknown errors. |
 
 ## Examples
 
 ```TypeScript
 import { drm } from '@kit.DrmKit';
-
-let uuid: string = drm.getMediaKeySystemUuid('com.clearplay.drm');
-console.info("getMediaKeySystemUuid: ", uuid);
+import { BusinessError } from '@kit.BasicServicesKit';
+try {
+  let uuid: string = drm.getMediaKeySystemUuid("com.clearplay.drm");
+  console.info("getMediaKeySystemUuid: ", uuid);
+} catch (err) {
+  let error = err as BusinessError;
+  console.error(`getMediaKeySystemUuid ERROR: ${error}`);  
+}
 ```
 

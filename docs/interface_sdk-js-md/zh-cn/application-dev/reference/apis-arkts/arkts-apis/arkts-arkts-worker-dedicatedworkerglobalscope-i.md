@@ -16,12 +16,6 @@ Worker线程自身的运行环境，与宿主线程环境隔离。
 
 **系统能力：** SystemCapability.Utils.Lang
 
-## 导入模块
-
-```TypeScript
-import { MessageEvents, PostMessageOptions, MessageEvent, Priority, WorkerEventTarget, ThreadWorkerPriority, ThreadWorkerGlobalScope, DedicatedWorkerGlobalScope, ErrorEvent, Event, EventListener, WorkerOptions, EventTarget, WorkerEventListener } from 'kits/@kit.ArkTS';
-```
-
 ## close
 
 ```TypeScript
@@ -68,7 +62,7 @@ parentPort.onmessage = (): void => {
 onmessage?: (this: DedicatedWorkerGlobalScope, ev: MessageEvent) => void
 ```
 
-onmessage属性用于指定当Worker线程收到来自其宿主线程通过postMessage接口发送的消息时被调用的事件处理程序，该事件处理程序在Worker线程中执行。
+回调函数，表示Worker线程收到来自其宿主线程通过postMessage接口发送的消息时被调用的事件处理程序，处理程序在Worker线程中执行。其中this指调用者对象本身DedicatedWorkerGlobalScope，ev类型为MessageEvent，表示收到的Worker消息数据。默认值为undefined。
 
 **起始版本：** 7
 
@@ -95,7 +89,7 @@ onmessage属性用于指定当Worker线程收到来自其宿主线程通过postM
 onmessageerror?: (this: DedicatedWorkerGlobalScope, ev: MessageEvent) => void
 ```
 
-onmessage属性用于指定当Worker线程收到一条无法被反序列化的消息时被调用的事件处理程序，该事件处理程序在Worker线程中执行。
+回调函数，表示当Worker对象接收到一条无法被反序列化的消息时被调用的事件处理程序，处理程序在Worker线程中执行。其中this指调用者对象本身DedicatedWorkerGlobalScope，ev类型为MessageEvent，表示收到的Worker消息数据。默认值为undefined。
 
 **起始版本：** 7
 

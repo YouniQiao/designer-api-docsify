@@ -1,6 +1,6 @@
 # Context
 
-Context是Stage模型的上下文基类，主要用于访问特定应用程序的资源，以及执行应用级操作的回调。
+Context is the context base class of the stage model. It is used to access application-specific resources and perform callbacks for application-level operations.../../../
 
 **Inheritance/Implementation:** Context extends [BaseContext](arkts-ability-basecontext-c.md)
 
@@ -18,12 +18,17 @@ Context是Stage模型的上下文基类，主要用于访问特定应用程序�
 createBundleContext(bundleName: string): Context
 ```
 
-根据Bundle名称创建安装包的上下文。
+Creates the context based on the bundle name.
 
-> **说明：**
+> **NOTE：**
 > 
-> - stage模型多module的情况下可能发生资源id冲突的情况，建议使用
-> [application.createModuleContext](arkts-ability-application-createmodulecontext-f.md#createmodulecontext)替代。
+> If there are multiple modules in the stage model, resource ID conflicts may occur. You are advised to use
+> [application.createModuleContext](arkts-ability-application-createmodulecontext-f.md#createmodulecontext)
+> instead.
+> 
+> This API has been supported since API version 9 and deprecated since API version 12. You are advised to use
+> [application.createBundleContext](arkts-ability-application-createbundlecontext-f-sys.md#createbundlecontext)
+> instead.
 
 **Since:** 9
 
@@ -47,21 +52,21 @@ createBundleContext(bundleName: string): Context
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| bundleName | string | Yes | Bundle名称。 |
+| bundleName | string | Yes | Bundle name. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [Context](../../apis-mind-spore-lite-kit/arkts-apis/arkts-mindsporelite-mindsporelite-context-i.md) | 安装包的上下文。 |
+| [Context](../../apis-mind-spore-lite-kit/arkts-apis/arkts-mindsporelite-mindsporelite-context-i.md) | Context created. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. |
-| 201 | Permission denied. |
-| 202 | Permission denied, non-system app called system api. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission denied, non-system app called system api. |
 
 ## createModuleContext
 
@@ -69,7 +74,13 @@ createBundleContext(bundleName: string): Context
 createModuleContext(bundleName: string, moduleName: string): Context
 ```
 
-根据Bundle名称和模块名称创建上下文。
+Creates the context based on the bundle name and module name.
+
+> **NOTE：**
+> 
+> This API has been supported since API version 9 and deprecated since API version 12. You are advised to use
+> [application.createModuleContext](arkts-ability-application-createmodulecontext-f.md#createmodulecontext)
+> instead.
 
 **Since:** 9
 
@@ -91,20 +102,20 @@ createModuleContext(bundleName: string, moduleName: string): Context
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| bundleName | string | Yes | Bundle名称。 |
-| moduleName | string | Yes | 模块名。 |
+| bundleName | string | Yes | Bundle name. |
+| moduleName | string | Yes | Module name. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [Context](../../apis-mind-spore-lite-kit/arkts-apis/arkts-mindsporelite-mindsporelite-context-i.md) | 模块的上下文。 |
+| [Context](../../apis-mind-spore-lite-kit/arkts-apis/arkts-mindsporelite-mindsporelite-context-i.md) | Context created. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. |
 
 ## createModuleResourceManager
 
@@ -112,7 +123,7 @@ createModuleContext(bundleName: string, moduleName: string): Context
 createModuleResourceManager(bundleName: string, moduleName: string): resmgr.ResourceManager
 ```
 
-为指定Module创建资源管理对象。
+Creates a resource management object for a module.
 
 **Since:** 11
 
@@ -132,8 +143,8 @@ createModuleResourceManager(bundleName: string, moduleName: string): resmgr.Reso
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| bundleName | string | Yes | Bundle名称。 |
-| moduleName | string | Yes | 模块名。 |
+| bundleName | string | Yes | Bundle name. |
+| moduleName | string | Yes | Module name. |
 
 **Return value:**
 
@@ -145,9 +156,9 @@ createModuleResourceManager(bundleName: string, moduleName: string): resmgr.Reso
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. |
-| 201 | Permission denied. |
-| 202 | Permission denied, non-system app called system api. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission denied, non-system app called system api. |
 
 ## createSystemHspModuleResourceManager
 
@@ -155,8 +166,8 @@ createModuleResourceManager(bundleName: string, moduleName: string): resmgr.Reso
 createSystemHspModuleResourceManager(bundleName: string, moduleName: string): resmgr.ResourceManager
 ```
 
-该接口用于OEM厂商预置的[系统级HSP](../../../quick-start/application-package-glossary.md#系统级hsp)创建自己的  
-[ResourceManager](arkts-ability-context-c.md#resourcemanager)。
+Creates a  
+[resource manager](../../apis-localization-kit/arkts-apis/arkts-localization-resourcemanager-getresourcemanager-f.md/arkts-localization-resourcemanager-getresourcemanager-f.md#getresourcemanager)for an OEM-preset [system-level HSP](../../../quick-start/application-package-glossary.md#system-level-hsp).
 
 **Since:** 12
 
@@ -174,8 +185,8 @@ createSystemHspModuleResourceManager(bundleName: string, moduleName: string): re
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| bundleName | string | Yes | Bundle名称。 |
-| moduleName | string | Yes | 模块名。 |
+| bundleName | string | Yes | Bundle name. |
+| moduleName | string | Yes | Module name. |
 
 **Return value:**
 
@@ -187,6 +198,6 @@ createSystemHspModuleResourceManager(bundleName: string, moduleName: string): re
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. |
-| 16400001 | The input bundleName is not a system HSP. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. |
+| [16400001](../errorcode-ability.md#16400001-target-application-type-is-not-a-system-hsp) | The input bundleName is not a system HSP. |
 

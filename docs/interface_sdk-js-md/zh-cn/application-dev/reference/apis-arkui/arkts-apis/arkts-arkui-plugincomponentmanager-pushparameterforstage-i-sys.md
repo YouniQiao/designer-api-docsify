@@ -12,12 +12,6 @@
 
 **系统接口：** 此接口为系统接口。
 
-## 导入模块
-
-```TypeScript
-import { PluginComponentTemplate } from 'kits/@kit.ArkUI';
-```
-
 ## data
 
 ```TypeScript

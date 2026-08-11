@@ -1,6 +1,6 @@
 # Response
 
-传感器数据的时间戳与精度信息基类，所有传感器Response类型均继承于此。
+Describes the timestamp of the sensor data.
 
 **Since:** 8
 
@@ -22,7 +22,7 @@ import { sensor } from 'kits/@kit.SensorServiceKit';
 accuracy: SensorAccuracy
 ```
 
-传感器数据上报的精度挡位值，表示当前上报数据的可信程度。
+Accuracy of the sensor data.
 
 **Type:** [SensorAccuracy](arkts-sensorservice-sensor-sensoraccuracy-e.md)
 
@@ -42,7 +42,7 @@ accuracy: SensorAccuracy
 timestamp: long
 ```
 
-传感器数据上报的时间戳。从设备开机开始计时到上报数据的时间，单位：ns（纳秒）。
+Timestamp when the sensor reports data. Time from device startup to data reporting, in nanoseconds.
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：long
 

@@ -1,8 +1,8 @@
 # FloatingBallController
 
-闪控球控制器实例，用于启动、更新、停止闪控球以及注册回调等操作。
+Implements a floating ball controller instance, which is used to start, update, and stop floating balls, and register callbacks.
 
-下列API示例中都需先使用[floatingBall.create()](arkts-arkui-floatingball-create-f.md#create)方法获取到闪控球控制器实例（即floatingBallController），再通过此实例调用对应方法。
+Before calling any of the following APIs, you must use [floatingBall.create()](arkts-arkui-floatingball-create-f.md#create) to create a floating ball controller instance.
 
 **Since:** 20
 
@@ -24,7 +24,7 @@ import { floatingBall } from 'kits/@kit.ArkUI';
 getFloatingBallWindowInfo(): Promise<FloatingBallWindowInfo>
 ```
 
-获得闪控球窗口信息，使用Promise异步回调。
+Obtains the floating ball window information. This API uses a promise to return the result.
 
 **Since:** 20
 
@@ -38,25 +38,24 @@ getFloatingBallWindowInfo(): Promise<FloatingBallWindowInfo>
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;FloatingBallWindowInfo&gt; | Promise对象，返回闪控球窗口信息。 |
+| Promise&lt;FloatingBallWindowInfo&gt; | Promise used to return the floating ball window information. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 1300003 | This window manager service works abnormally. Possible cause: Internal IPC error. |
-| 1300002 | This window state is abnormal. Possible cause: Internal error, the window type is not a floating ball. |
-| 1300023 | Floating ball internal error. Possible cause: System error, such as a null pointer, insufficient memory. |
-| 1300004 | Unauthorized operation. Possible cause: The process ID calling the API does not match the process ID of the session that created the floating ball. |
-| 1300025 | The floating ball state does not support this operation. Possible cause: The floating ball is not started. |
-| 1300024 | The floating ball window state is abnormal. Possible causes: &lt;br&gt;1. The floating ball controller has been destroyed. &lt;br&gt;2. The floating ball window is not created or has been destroyed. |
+| [1300003](../errorcode-window.md#1300003-abnormal-window-manager-service) | This window manager service works abnormally. Possible cause: Internal IPC error. |
+| [1300002](../errorcode-window.md#1300002-abnormal-window-state) | This window state is abnormal. Possible cause: Internal error, the window type is not a floating ball. |
+| [1300023](../errorcode-window.md#1300023-internal-error-of-the-floating-ball) | Floating ball internal error. Possible cause: System error, such as a null pointer, insufficient memory. |
+| [1300004](../errorcode-window.md#1300004-unauthorized-operation) | Unauthorized operation. Possible cause: The process ID calling the API does not match the process ID of the session that created the floating ball. |
+| [1300025](../errorcode-window.md#1300025-unsupported-operation-in-the-current-floating-ball-state) | The floating ball state does not support this operation. Possible cause: The floating ball is not started. |
+| [1300024](../errorcode-window.md#1300024-abnormal-floating-ball-window-state) | The floating ball window state is abnormal. Possible causes: &lt;br&gt;1. The floating ball controller has been destroyed. &lt;br&gt;2. The floating ball window is not created or has been destroyed. |
 
 ## Examples
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
 
-// Obtain the window information of the floating ball.
 floatingBallController.getFloatingBallWindowInfo().then((data: floatingBall.FloatingBallWindowInfo) => {
   console.info('Succeeded in getting floating ball window info. Info: ' + JSON.stringify(data));
 }).catch((err: BusinessError) => {
@@ -70,7 +69,7 @@ floatingBallController.getFloatingBallWindowInfo().then((data: floatingBall.Floa
 off(type: 'stateChange', callback?: Callback<FloatingBallState>): void
 ```
 
-取消闪控球生命周期状态变化的监听事件。
+Unregisters the listener for lifecycle state changes of the floating ball.
 
 **Since:** 20
 
@@ -84,28 +83,26 @@ off(type: 'stateChange', callback?: Callback<FloatingBallState>): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'stateChange' | Yes | 监听事件，固定为'stateChange'，即闪控球生命周期状态变化事件。 |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;FloatingBallState&gt; | No | 回调函数。返回当前的闪控球生命周期状态。若传入参数，则停止该监听。若未传入参数，则停止所有闪控球生命周期状态变化的监听。 |
+| type | 'stateChange' | Yes | Event type. The event **'stateChange'** is triggered when the floating ball lifecycle state changes. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;FloatingBallState&gt; | No | Callback used to return the floating ball lifecycle state. If a value is passed in, the corresponding subscription is canceled. If no value is passed in, all subscriptions to the specified event are canceled. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 1300019 | Wrong parameters for operating the floating ball. Possible causes: &lt;br&gt;1.Mandatory parameters are left unspecified. &lt;br&gt;2.Callback is null or not callable. |
-| 1300023 | Floating ball internal error. Possible cause: System error, such as a null pointer, insufficient memory. |
-| 1300024 | The floating ball window state is abnormal. Possible cause: The floating ball controller has been destroyed. |
+| [1300019](../errorcode-window.md#1300019-floating-ball-parameter-verification-error) | Wrong parameters for operating the floating ball. Possible causes: &lt;br&gt;1.Mandatory parameters are left unspecified. &lt;br&gt;2.Callback is null or not callable. |
+| [1300023](../errorcode-window.md#1300023-internal-error-of-the-floating-ball) | Floating ball internal error. Possible cause: System error, such as a null pointer, insufficient memory. |
+| [1300024](../errorcode-window.md#1300024-abnormal-floating-ball-window-state) | The floating ball window state is abnormal. Possible cause: The floating ball controller has been destroyed. |
 
 ## Examples
 
 ```TypeScript
-// Define the callback function for status changes (the callback function must be the same as that registered).
 let onStateChange = (state: floatingBall.FloatingBallState) => {
   console.info('Floating ball stateChange: ' + state);
 };
 try {
-  // Unregister the callback for listening to floating ball state changes.
   floatingBallController.off('stateChange', onStateChange);
-} catch (e) {
+} catch(e) {
   console.error(`Failed to off stateChange floating ball. Cause:${e.code}, message:${e.message}`);
 }
 ```
@@ -116,7 +113,7 @@ try {
 off(type: 'click', callback?: Callback<void>): void
 ```
 
-取消闪控球点击的监听事件。
+Unregisters the listener for click events of the floating ball.
 
 **Since:** 20
 
@@ -130,28 +127,26 @@ off(type: 'click', callback?: Callback<void>): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'click' | Yes | 监听事件，固定为'click'，即闪控球点击事件。 |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;void&gt; | No | 回调函数。当点击闪控球事件发生时的回调。该回调函数不返回任何参数。若传入参数，则关闭特定的监听。若未传入参数，则关闭所有闪控球点击的监听。 |
+| type | 'click' | Yes | Event type. The event **'click'** is triggered when the floating ball is tapped. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;void&gt; | No | Callback invoked when the floating ball is tapped. It does not return any parameter. If a value is passed in, the corresponding subscription is canceled. If no value is passed in, all subscriptions to the specified event are canceled. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 1300019 | Wrong parameters for operating the floating ball. Possible causes: &lt;br&gt;1.Mandatory parameters are left unspecified. &lt;br&gt;2.Callback is null or not callable. |
-| 1300023 | Floating ball internal error. Possible cause: System error, such as a null pointer, insufficient memory. |
-| 1300024 | The floating ball window state is abnormal. Possible cause: The floating ball controller has been destroyed. |
+| [1300019](../errorcode-window.md#1300019-floating-ball-parameter-verification-error) | Wrong parameters for operating the floating ball. Possible causes: &lt;br&gt;1.Mandatory parameters are left unspecified. &lt;br&gt;2.Callback is null or not callable. |
+| [1300023](../errorcode-window.md#1300023-internal-error-of-the-floating-ball) | Floating ball internal error. Possible cause: System error, such as a null pointer, insufficient memory. |
+| [1300024](../errorcode-window.md#1300024-abnormal-floating-ball-window-state) | The floating ball window state is abnormal. Possible cause: The floating ball controller has been destroyed. |
 
 ## Examples
 
 ```TypeScript
-// Define the callback function for the click event (the callback function must be the same as that registered).
 let onClick = () => {
   console.info('Floating ball onClick');
 };
 try {
-  // Unregister the callback for listening to click events of the floating ball.
   floatingBallController.off('click', onClick);
-} catch (e) {
+} catch(e) {
   console.error(`Failed to off click floating ball. Cause:${e.code}, message:${e.message}`);
 }
 ```
@@ -182,9 +177,9 @@ Unregister floating ball click event listener.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 1300019 | Wrong parameters for operating the floating ball. Possible causes: &lt;br&gt;1.Mandatory parameters are left unspecified. &lt;br&gt;2.Callback is null or not callable. |
-| 1300023 | Floating ball internal error. Possible cause: System error, such as a null pointer, insufficient memory. |
-| 1300024 | The floating ball window state is abnormal. Possible cause: The floating ball controller has been destroyed. |
+| [1300019](../errorcode-window.md#1300019-floating-ball-parameter-verification-error) | Wrong parameters for operating the floating ball. Possible causes: &lt;br&gt;1.Mandatory parameters are left unspecified. &lt;br&gt;2.Callback is null or not callable. |
+| [1300023](../errorcode-window.md#1300023-internal-error-of-the-floating-ball) | Floating ball internal error. Possible cause: System error, such as a null pointer, insufficient memory. |
+| [1300024](../errorcode-window.md#1300024-abnormal-floating-ball-window-state) | The floating ball window state is abnormal. Possible cause: The floating ball controller has been destroyed. |
 
 ## offDestroy
 
@@ -192,7 +187,7 @@ Unregister floating ball click event listener.
 offDestroy(callback?: Callback<string>): void
 ```
 
-取消闪控球销毁事件的监听。
+Unregister floating ball destroy event listener.
 
 **Since:** 26.0.0
 
@@ -208,36 +203,15 @@ offDestroy(callback?: Callback<string>): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;string&gt; | No | 回调函数。若传入参数，则取消该监听；若未传入参数，则取消所有闪控球销毁事件的监听。 |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;string&gt; | No | Indicates the callback function. If not provided, all callbacks for the given event type will be removed. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 1300019 | Wrong parameters for operating the floating ball. Possible cause: Callback is null or not callable. |
-| 1300023 | Floating ball internal error. Possible cause: System error, such as a null pointer, insufficient memory. |
-| 1300024 | The floating ball window state is abnormal. Possible cause: The floating ball controller has been destroyed. |
-
-## Examples
-
-```TypeScript
-// Define the callback function for the destruction event (the callback function must be the same as that registered).
-let onDestroy = (reason: string) => {
-  console.info('Floating ball has destroyed, reason: ' + reason);
-};
-try {
-  // Unregister the callback for listening to floating ball destruction events.
-  floatingBallController?.offDestroy(onDestroy);
-} catch (e) {
-  console.error(`Failed to offDestroy floating ball. Cause:${e.code}, message:${e.message}`);
-}
-// Unregister all callbacks.
-try {
-  floatingBallController?.offDestroy();
-} catch (e) {
-  console.error(`Failed to offDestroy all listeners. Cause:${e.code}, message:${e.message}`);
-}
-```
+| [1300019](../errorcode-window.md#1300019-floating-ball-parameter-verification-error) | Wrong parameters for operating the floating ball. Possible cause: Callback is null or not callable. |
+| [1300023](../errorcode-window.md#1300023-internal-error-of-the-floating-ball) | Floating ball internal error. Possible cause: System error, such as a null pointer, insufficient memory. |
+| [1300024](../errorcode-window.md#1300024-abnormal-floating-ball-window-state) | The floating ball window state is abnormal. Possible cause: The floating ball controller has been destroyed. |
 
 ## offStateChange
 
@@ -265,9 +239,9 @@ Unregister floating ball stateChange event listener.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 1300019 | Wrong parameters for operating the floating ball. Possible causes: &lt;br&gt;1.Mandatory parameters are left unspecified. &lt;br&gt;2.Callback is null or not callable. |
-| 1300023 | Floating ball internal error. Possible cause: System error, such as a null pointer, insufficient memory. |
-| 1300024 | The floating ball window state is abnormal. Possible cause: The floating ball controller has been destroyed. |
+| [1300019](../errorcode-window.md#1300019-floating-ball-parameter-verification-error) | Wrong parameters for operating the floating ball. Possible causes: &lt;br&gt;1.Mandatory parameters are left unspecified. &lt;br&gt;2.Callback is null or not callable. |
+| [1300023](../errorcode-window.md#1300023-internal-error-of-the-floating-ball) | Floating ball internal error. Possible cause: System error, such as a null pointer, insufficient memory. |
+| [1300024](../errorcode-window.md#1300024-abnormal-floating-ball-window-state) | The floating ball window state is abnormal. Possible cause: The floating ball controller has been destroyed. |
 
 ## on('stateChange')
 
@@ -275,7 +249,7 @@ Unregister floating ball stateChange event listener.
 on(type: 'stateChange', callback: Callback<FloatingBallState>): void
 ```
 
-注册闪控球生命周期状态变化的监听事件。不再使用时，取消监听以避免内存泄漏。
+Registers a listener for lifecycle state changes of the floating ball. To prevent memory leaks, remember to unregister the listener when it is no longer needed.
 
 **Since:** 20
 
@@ -289,29 +263,27 @@ on(type: 'stateChange', callback: Callback<FloatingBallState>): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'stateChange' | Yes | 监听事件，固定为'stateChange'，即闪控球生命周期状态变化事件。 |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;FloatingBallState&gt; | Yes | 回调函数。返回当前的闪控球生命周期状态。 |
+| type | 'stateChange' | Yes | Event type. The event **'stateChange'** is triggered when the floating ball lifecycle state changes. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;FloatingBallState&gt; | Yes | Callback used to return the floating ball lifecycle state. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 1300019 | Wrong parameters for operating the floating ball. Possible causes: &lt;br&gt;1.Mandatory parameters are left unspecified. &lt;br&gt;2.Callback is null or not callable. |
-| 1300023 | Floating ball internal error. Possible cause: System error, such as a null pointer, insufficient memory. |
-| 1300022 | Repeated floating ball operation. |
-| 1300024 | The floating ball window state is abnormal. Possible cause: The floating ball controller has been destroyed. |
+| [1300019](../errorcode-window.md#1300019-floating-ball-parameter-verification-error) | Wrong parameters for operating the floating ball. Possible causes: &lt;br&gt;1.Mandatory parameters are left unspecified. &lt;br&gt;2.Callback is null or not callable. |
+| [1300023](../errorcode-window.md#1300023-internal-error-of-the-floating-ball) | Floating ball internal error. Possible cause: System error, such as a null pointer, insufficient memory. |
+| [1300022](../errorcode-window.md#1300022-repeated-floating-ball-operation) | Repeated floating ball operation. |
+| [1300024](../errorcode-window.md#1300024-abnormal-floating-ball-window-state) | The floating ball window state is abnormal. Possible cause: The floating ball controller has been destroyed. |
 
 ## Examples
 
 ```TypeScript
-// Define the callback function for status changes.
 let onStateChange = (state: floatingBall.FloatingBallState) => {
   console.info('Floating ball stateChange: ' + state);
 };
 try {
-  // Register the callback for listening to floating ball state changes.
   floatingBallController.on('stateChange', onStateChange);
-} catch (e) {
+} catch(e) {
   console.error(`Failed to on stateChange floating ball. Cause:${e.code}, message:${e.message}`);
 }
 ```
@@ -322,7 +294,7 @@ try {
 on(type: 'click', callback: Callback<void>): void
 ```
 
-注册闪控球的点击监听事件，不使用时，取消监听以避免内存泄漏。
+Registers a listener for click events of the floating ball. To prevent memory leaks, remember to unregister the listener when it is no longer needed.
 
 **Since:** 20
 
@@ -336,29 +308,27 @@ on(type: 'click', callback: Callback<void>): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'click' | Yes | 监听事件，固定为'click'，即闪控球点击事件。 |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;void&gt; | Yes | 回调函数。当点击闪控球事件发生时的回调。该回调函数不返回任何参数。 |
+| type | 'click' | Yes | Event type. The event **'click'** is triggered when the floating ball is tapped. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;void&gt; | Yes | Callback invoked when the floating ball is tapped. It does not return any parameter. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 1300019 | Wrong parameters for operating the floating ball. Possible causes: &lt;br&gt;1.Mandatory parameters are left unspecified. &lt;br&gt;2.Callback is null or not callable. |
-| 1300023 | Floating ball internal error. Possible cause: System error, such as a null pointer, insufficient memory. |
-| 1300022 | Repeated floating ball operation. |
-| 1300024 | The floating ball window state is abnormal. Possible cause: The floating ball controller has been destroyed. |
+| [1300019](../errorcode-window.md#1300019-floating-ball-parameter-verification-error) | Wrong parameters for operating the floating ball. Possible causes: &lt;br&gt;1.Mandatory parameters are left unspecified. &lt;br&gt;2.Callback is null or not callable. |
+| [1300023](../errorcode-window.md#1300023-internal-error-of-the-floating-ball) | Floating ball internal error. Possible cause: System error, such as a null pointer, insufficient memory. |
+| [1300022](../errorcode-window.md#1300022-repeated-floating-ball-operation) | Repeated floating ball operation. |
+| [1300024](../errorcode-window.md#1300024-abnormal-floating-ball-window-state) | The floating ball window state is abnormal. Possible cause: The floating ball controller has been destroyed. |
 
 ## Examples
 
 ```TypeScript
-// Define the click event callback function.
 let onClick = () => {
   console.info('Floating ball onClick');
 };
 try {
-  // Register the callback for listening to click events of the floating ball.
   floatingBallController.on('click', onClick);
-} catch (e) {
+} catch(e) {
   console.error(`Failed to on click floating ball. Cause:${e.code}, message:${e.message}`);
 }
 ```
@@ -389,10 +359,10 @@ Register floating ball click event listener.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 1300019 | Wrong parameters for operating the floating ball. Possible causes: &lt;br&gt;1.Mandatory parameters are left unspecified. &lt;br&gt;2.Callback is null or not callable. |
-| 1300023 | Floating ball internal error. Possible cause: System error, such as a null pointer, insufficient memory. |
-| 1300022 | Repeated floating ball operation. |
-| 1300024 | The floating ball window state is abnormal. Possible cause: The floating ball controller has been destroyed. |
+| [1300019](../errorcode-window.md#1300019-floating-ball-parameter-verification-error) | Wrong parameters for operating the floating ball. Possible causes: &lt;br&gt;1.Mandatory parameters are left unspecified. &lt;br&gt;2.Callback is null or not callable. |
+| [1300023](../errorcode-window.md#1300023-internal-error-of-the-floating-ball) | Floating ball internal error. Possible cause: System error, such as a null pointer, insufficient memory. |
+| [1300022](../errorcode-window.md#1300022-repeated-floating-ball-operation) | Repeated floating ball operation. |
+| [1300024](../errorcode-window.md#1300024-abnormal-floating-ball-window-state) | The floating ball window state is abnormal. Possible cause: The floating ball controller has been destroyed. |
 
 ## onDestroy
 
@@ -400,7 +370,7 @@ Register floating ball click event listener.
 onDestroy(callback: Callback<string>): void
 ```
 
-注册闪控球销毁事件的监听。当闪控球销毁时，回调函数会接收到销毁原因的字符串。不再使用时，调用[offDestroy](#offdestroy)接口取消监听以避免内存泄漏。
+Register floating ball destroy event listener.
 
 **Since:** 26.0.0
 
@@ -416,31 +386,16 @@ onDestroy(callback: Callback<string>): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;string&gt; | Yes | 回调函数。返回闪控球停止的原因。停止原因包括： &lt;br&gt;- "APP_STOP"：应用主动停止。 &lt;br&gt;- "DUMPSTER_STOP"：拖动到垃圾桶触发停止。 &lt;br&gt;- "LONG_PRESS_SINGLE_STOP"：长按单个闪控球触发停止。 &lt;br&gt;- "LONG_PRESS_ALL_STOP"：长按全部闪控球触发停止。 &lt;br&gt;- "MAIN_WINDOW_DESTROY_STOP"：context关联的主窗口被销毁后触发停止。 &lt;br&gt;- "SQUEEZE"：超出设备闪控球数量上限，被其他闪控球挤占停止。 &lt;br&gt;- "FLOAT_VIEW_STOP"：与标准悬浮窗绑定后，绑定状态下跟随标准悬浮窗停止。 &lt;br&gt;- "STOP_IN_SIDEBAR"：在侧边栏中被停止。 |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;string&gt; | Yes | Used to handle {'destroy'} command. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 1300019 | Wrong parameters for operating the floating ball. Possible cause: Callback is null or not callable. |
-| 1300023 | Floating ball internal error. Possible cause: System error, such as a null pointer, insufficient memory. |
-| 1300022 | Repeated floating ball operation. |
-| 1300024 | The floating ball window state is abnormal. Possible cause: The floating ball controller has been destroyed. |
-
-## Examples
-
-```TypeScript
-// Define the callback function for the destruction event.
-let onDestroy = (reason: string) => {
-  console.info('Floating ball has destroyed, reason: ' + reason);
-};
-try {
-  // Register the callback for listening to floating ball destruction events.
-  floatingBallController?.onDestroy(onDestroy);
-} catch (e) {
-  console.error(`Failed to onDestroy floating ball. Cause:${e.code}, message:${e.message}`);
-}
-```
+| [1300019](../errorcode-window.md#1300019-floating-ball-parameter-verification-error) | Wrong parameters for operating the floating ball. Possible cause: Callback is null or not callable. |
+| [1300023](../errorcode-window.md#1300023-internal-error-of-the-floating-ball) | Floating ball internal error. Possible cause: System error, such as a null pointer, insufficient memory. |
+| [1300022](../errorcode-window.md#1300022-repeated-floating-ball-operation) | Repeated floating ball operation. |
+| [1300024](../errorcode-window.md#1300024-abnormal-floating-ball-window-state) | The floating ball window state is abnormal. Possible cause: The floating ball controller has been destroyed. |
 
 ## onStateChange
 
@@ -468,10 +423,10 @@ Register floating ball stateChange event listener.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 1300019 | Wrong parameters for operating the floating ball. Possible causes: &lt;br&gt;1.Mandatory parameters are left unspecified. &lt;br&gt;2.Callback is null or not callable. |
-| 1300023 | Floating ball internal error. Possible cause: System error, such as a null pointer, insufficient memory. |
-| 1300022 | Repeated floating ball operation. |
-| 1300024 | The floating ball window state is abnormal. Possible cause: The floating ball controller has been destroyed. |
+| [1300019](../errorcode-window.md#1300019-floating-ball-parameter-verification-error) | Wrong parameters for operating the floating ball. Possible causes: &lt;br&gt;1.Mandatory parameters are left unspecified. &lt;br&gt;2.Callback is null or not callable. |
+| [1300023](../errorcode-window.md#1300023-internal-error-of-the-floating-ball) | Floating ball internal error. Possible cause: System error, such as a null pointer, insufficient memory. |
+| [1300022](../errorcode-window.md#1300022-repeated-floating-ball-operation) | Repeated floating ball operation. |
+| [1300024](../errorcode-window.md#1300024-abnormal-floating-ball-window-state) | The floating ball window state is abnormal. Possible cause: The floating ball controller has been destroyed. |
 
 ## restoreMainWindow
 
@@ -479,7 +434,8 @@ Register floating ball stateChange event listener.
 restoreMainWindow(want: Want): Promise<void>
 ```
 
-恢复应用主窗口并加载指定页面。使用Promise异步回调。仅支持在点击闪控球后调用；若应用拥有`ohos.permission.AUTO_RESTORE_MAIN_WINDOW`权限，可以无需点击直接调用该接口。
+Restores the main window of the application and loads the specified page. This API uses a promise to return the result. This API can be called only after the floating ball is tapped. If the application has the  
+**ohos.permission.AUTO_RESTORE_MAIN_WINDOW** permission, this API can be called directly without tapping the floating ball.
 
 **Since:** 20
 
@@ -495,27 +451,27 @@ restoreMainWindow(want: Want): Promise<void>
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| want | [Want](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-want-want-c.md) | Yes | 加载指定页面的Want。 |
+| want | [Want](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-want-want-c.md) | Yes | Want used for loading the specified page. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | 无返回结果的Promise对象。 |
+| Promise&lt;void&gt; | Promise that returns no value. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 1300003 | This window manager service works abnormally. Possible cause: Internal IPC error. |
-| 1300019 | Wrong parameters for operating the floating ball. Possible cause: Want parameter is null or invalid. |
-| 1300002 | This window state is abnormal. Possible cause: Internal error, the window type is not a floating ball. |
-| 1300023 | Floating ball internal error. Possible cause: System error, such as a null pointer, insufficient memory. |
-| 1300004 | Unauthorized operation. Possible cause: The process ID calling the API does not match the process ID of the session that created the floating ball. |
-| 201 | Permission verification failed, usually returned by VerifyAccessToken. |
-| 1300026 | Failed to restore the main window. Possible causes: 1. Invalid parameter. The provided bundleName does not match the caller's application bundleName. 2. The application lacks the ohos.permission.AUTO_RESTORE_MAIN_WINDOW permission, and no user interaction (click) on the floating ball has occurred. |
-| 1300025 | The floating ball state does not support this operation. Possible cause: The floating ball is not started. |
-| 1300024 | The floating ball window state is abnormal. Possible causes: &lt;br&gt;1.The floating ball controller has been destroyed. &lt;br&gt;2.The floating ball window is not created or has been destroyed. |
+| [1300003](../errorcode-window.md#1300003-abnormal-window-manager-service) | This window manager service works abnormally. Possible cause: Internal IPC error. |
+| [1300019](../errorcode-window.md#1300019-floating-ball-parameter-verification-error) | Wrong parameters for operating the floating ball. Possible cause: Want parameter is null or invalid. |
+| [1300002](../errorcode-window.md#1300002-abnormal-window-state) | This window state is abnormal. Possible cause: Internal error, the window type is not a floating ball. |
+| [1300023](../errorcode-window.md#1300023-internal-error-of-the-floating-ball) | Floating ball internal error. Possible cause: System error, such as a null pointer, insufficient memory. |
+| [1300004](../errorcode-window.md#1300004-unauthorized-operation) | Unauthorized operation. Possible cause: The process ID calling the API does not match the process ID of the session that created the floating ball. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed, usually returned by VerifyAccessToken. |
+| [1300026](../errorcode-window.md#1300026-failure-in-launch-an-application-window-via-a-floating-ball) | Failed to restore the main window. Possible causes: 1. Invalid parameter. The provided bundleName does not match the caller's application bundleName. 2. The application lacks the ohos.permission.AUTO_RESTORE_MAIN_WINDOW permission, and no user interaction (click) on the floating ball has occurred. |
+| [1300025](../errorcode-window.md#1300025-unsupported-operation-in-the-current-floating-ball-state) | The floating ball state does not support this operation. Possible cause: The floating ball is not started. |
+| [1300024](../errorcode-window.md#1300024-abnormal-floating-ball-window-state) | The floating ball window state is abnormal. Possible causes: &lt;br&gt;1.The floating ball controller has been destroyed. &lt;br&gt;2.The floating ball window is not created or has been destroyed. |
 
 ## Examples
 
@@ -523,20 +479,18 @@ restoreMainWindow(want: Want): Promise<void>
 import { BusinessError } from '@kit.BasicServicesKit';
 import { Want } from '@kit.AbilityKit';
 
-// Set the Want parameter of the main window to be restored.
 let want: Want = {
   bundleName: 'xxx.xxx.xxx',
   abilityName: 'EntryAbility'
 };
 try {
-  // Restore the main window of the application and load the specified page.
   floatingBallController.restoreMainWindow(want).then(() => {
     console.info('Succeeded in restoring floating ball main window.');
   }).catch((err: BusinessError) => {
     console.error(`Failed to restore floating ball main window. Cause code: ${err.code}, message: ${err.message}`);
   });
-} catch (e) {
-  console.error(`Failed to restore floating ball main window. Cause:${e.code}, message:${e.message}`);
+} catch(e) {
+  console.error(`Failed to create floating ball controller. Cause:${e.code}, message:${e.message}`);
 }
 ```
 
@@ -546,12 +500,16 @@ try {
 setFloatingBallVisibilityInApp(isVisible: boolean): Promise<void>
 ```
 
-设置闪控球在应用内是否可见。使用Promise异步回调。
+Sets whether the floating ball is visible in the application. This API uses a promise to return the result.
 
-- 当应用处于多任务界面时（[生命周期状态](../../../windowmanager/window-overview.md#生命周期状态)为PAUSED），闪控球不可见。  
-- 默认情况（即未调用此接口设置时）和调用此接口传入true时：除多任务界面外，闪控球均可见。  
-- 调用此接口传入false时：当应用处于前台（[生命周期状态](../../../windowmanager/window-overview.md#生命周期状态)为SHOWN或者RESUMED）时，闪控球不可见；当应用处于  
- 后台（[生命周期状态](../../../windowmanager/window-overview.md#生命周期状态)为HIDDEN）时，闪控球可见。
+- When the application is on the recent tasks screen (the  
+[lifecycle state](../../../windowmanager/window-overview.md#lifecycle-states) is **PAUSED**), the floating ball is invisible.  
+- By default (when this API is not called) or when this API is called with the value **true** passed in, the  
+floating ball is visible except on the recent tasks screen.  
+- When this API is called with the value **false** passed in, the floating ball is invisible when the application  
+is in the foreground (the [lifecycle state](../../../windowmanager/window-overview.md#lifecycle-states) is  
+**SHOWN** or **RESUMED**) and is visible when the application is in the background (the  
+[lifecycle state](../../../windowmanager/window-overview.md#lifecycle-states) is **HIDDEN**).
 
 **Since:** 24
 
@@ -567,34 +525,21 @@ setFloatingBallVisibilityInApp(isVisible: boolean): Promise<void>
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| isVisible | boolean | Yes | true表示闪控球在应用内可见；false表示闪控球在应用内不可见。 |
+| isVisible | boolean | Yes | true** indicates that the floating ball is visible in the application, and **false** indicates the opposite. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise对象，无返回结果。 |
+| Promise&lt;void&gt; | Promise that returns no value. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 1300003 | This window manager service works abnormally. Possible cause: Internal IPC error. |
-| 1300023 | Floating ball internal error. Possible cause: The floating ball controller is null. |
-| 1300024 | The floating ball window state is abnormal. Possible causes: The floating ball window has not been created or has been destroyed. |
-
-## Examples
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-// Set the floating ball to be invisible in the application.
-floatingBallController?.setFloatingBallVisibilityInApp(false).then(() => {
-  console.info('Succeeded in setting floating ball visibility.');
-}).catch((err: BusinessError) => {
-  console.error(`Failed to set floating ball visibility. Cause code: ${err.code}, message: ${err.message}`);
-});
-```
+| [1300003](../errorcode-window.md#1300003-abnormal-window-manager-service) | This window manager service works abnormally. Possible cause: Internal IPC error. |
+| [1300023](../errorcode-window.md#1300023-internal-error-of-the-floating-ball) | Floating ball internal error. Possible cause: The floating ball controller is null. |
+| [1300024](../errorcode-window.md#1300024-abnormal-floating-ball-window-state) | The floating ball window state is abnormal. Possible causes: The floating ball window has not been created or has been destroyed. |
 
 ## startFloatingBall
 
@@ -602,7 +547,7 @@ floatingBallController?.setFloatingBallVisibilityInApp(false).then(() => {
 startFloatingBall(params: FloatingBallParams): Promise<void>
 ```
 
-启动闪控球，使用Promise异步回调。
+Starts the floating ball. This API uses a promise to return the result.
 
 **Since:** 20
 
@@ -618,47 +563,45 @@ startFloatingBall(params: FloatingBallParams): Promise<void>
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| params | [FloatingBallParams](arkts-arkui-floatingball-floatingballparams-i.md) | Yes | 启动闪控球的参数。 |
+| params | [FloatingBallParams](arkts-arkui-floatingball-floatingballparams-i.md) | Yes | Parameters for starting the floating ball. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | 无返回结果的Promise对象。 |
+| Promise&lt;void&gt; | Promise that returns no value. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 1300019 | Wrong parameters for operating the floating ball. Possible causes: &lt;br&gt;1. FloatingBallParams parameter is null. &lt;br&gt;2. Parameter is invalid, such as invalid icon object, template type, or title (empty or exceeds 64 bytes). |
-| 1300034 | This operation conflicts with other floating windows. Possible cause: App has already started float view.<br>**Applicable version:** 26.0.0 and later |
-| 1300023 | Floating ball internal error. Possible causes: &lt;br&gt;1.The floating ball controller has been destroyed. &lt;br&gt;2.Internal error, failed to show the floating ball window. Such as insufficient resources or abnormal window service. |
-| 1300022 | Repeated floating ball operation. |
-| 1300021 | Failed to start multiple floating ball windows. |
-| 1300020 | Failed to create the floating ball window. Possible cause: The main window is not shown. |
-| 201 | Permission verification failed, usually returned by VerifyAccessToken. |
-| 1300025 | The floating ball state does not support this operation. Possible cause: The floating ball state is stopping. |
-| 1300024 | The floating ball window state is abnormal. Possible cause: The floating ball window is not created or has been destroyed. |
+| [1300019](../errorcode-window.md#1300019-floating-ball-parameter-verification-error) | Wrong parameters for operating the floating ball. Possible causes: &lt;br&gt;1. FloatingBallParams parameter is null. &lt;br&gt;2. Parameter is invalid, such as invalid icon object, template type, or title (empty or exceeds 64 bytes). |
+| [1300034](../errorcode-window.md#1300034-operation-of-the-float-view-conflicts-with-those-of-other-floating-windows) | This operation conflicts with other floating windows. Possible cause: App has already started float view.<br>**Applicable version:** 26.0.0 and later |
+| [1300023](../errorcode-window.md#1300023-internal-error-of-the-floating-ball) | Floating ball internal error. Possible causes: &lt;br&gt;1.The floating ball controller has been destroyed. &lt;br&gt;2.Internal error, failed to show the floating ball window. Such as insufficient resources or abnormal window service. |
+| [1300022](../errorcode-window.md#1300022-repeated-floating-ball-operation) | Repeated floating ball operation. |
+| [1300021](../errorcode-window.md#1300021-failure-in-starting-multiple-floating-balls) | Failed to start multiple floating ball windows. |
+| [1300020](../errorcode-window.md#1300020-failure-in-creating-a-floating-ball-window) | Failed to create the floating ball window. Possible cause: The main window is not shown. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed, usually returned by VerifyAccessToken. |
+| [1300025](../errorcode-window.md#1300025-unsupported-operation-in-the-current-floating-ball-state) | The floating ball state does not support this operation. Possible cause: The floating ball state is stopping. |
+| [1300024](../errorcode-window.md#1300024-abnormal-floating-ball-window-state) | The floating ball window state is abnormal. Possible cause: The floating ball window is not created or has been destroyed. |
 
 ## Examples
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
 
-// Set the parameters for starting the floating ball.
 let startParams: floatingBall.FloatingBallParams = {
   template: floatingBall.FloatingBallTemplate.EMPHATIC,
   title: 'title',
   content: 'content'
 };
 try {
-  // Start the floating ball.
   floatingBallController.startFloatingBall(startParams).then(() => {
     console.info('Succeeded in starting floating ball.');
   }).catch((err: BusinessError) => {
     console.error(`Failed to start floating ball. Cause:${err.code}, message:${err.message}`);
   });
-} catch (e) {
+} catch(e) {
   console.error(`Failed to start floating ball. Cause:${e.code}, message:${e.message}`);
 }
 ```
@@ -669,7 +612,7 @@ try {
 stopFloatingBall(): Promise<void>
 ```
 
-停止闪控球，使用Promise异步回调。
+Stops the floating ball. This API uses a promise to return the result.
 
 **Since:** 20
 
@@ -683,22 +626,21 @@ stopFloatingBall(): Promise<void>
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | 无返回结果的Promise对象。 |
+| Promise&lt;void&gt; | Promise that returns no value. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 1300023 | Floating ball internal error. Possible cause: System error, such as a null pointer, insufficient memory. |
-| 1300022 | Repeated floating ball operation. |
-| 1300024 | The floating ball window state is abnormal. Possible cause: The floating ball window is not created or has been destroyed. |
+| [1300023](../errorcode-window.md#1300023-internal-error-of-the-floating-ball) | Floating ball internal error. Possible cause: System error, such as a null pointer, insufficient memory. |
+| [1300022](../errorcode-window.md#1300022-repeated-floating-ball-operation) | Repeated floating ball operation. |
+| [1300024](../errorcode-window.md#1300024-abnormal-floating-ball-window-state) | The floating ball window state is abnormal. Possible cause: The floating ball window is not created or has been destroyed. |
 
 ## Examples
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
 
-// Stop the floating ball.
 floatingBallController.stopFloatingBall().then(() => {
   console.info('Succeeded in stopping floating ball.');
 }).catch((err: BusinessError) => {
@@ -712,7 +654,7 @@ floatingBallController.stopFloatingBall().then(() => {
 updateFloatingBall(params: FloatingBallParams): Promise<void>
 ```
 
-更新闪控球，使用Promise异步回调。
+Updates the floating ball. This API uses a promise to return the result.
 
 **Since:** 20
 
@@ -726,47 +668,45 @@ updateFloatingBall(params: FloatingBallParams): Promise<void>
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| params | [FloatingBallParams](arkts-arkui-floatingball-floatingballparams-i.md) | Yes | 更新闪控球的参数。 |
+| params | [FloatingBallParams](arkts-arkui-floatingball-floatingballparams-i.md) | Yes | Parameters for updating the floating ball. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | 无返回结果的Promise对象。 |
+| Promise&lt;void&gt; | Promise that returns no value. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 1300003 | This window manager service works abnormally. Possible cause: Internal IPC error. |
-| 1300019 | Wrong parameters for operating the floating ball. Possible causes: &lt;br&gt;1.FloatingBallParams parameter is null. &lt;br&gt;2.Parameter is invalid, such as invalid icon object, template type, or title (empty or exceeds 64 bytes). |
-| 1300002 | This window state is abnormal. Possible cause: Internal error, the window type is not a floating ball. |
-| 1300023 | Floating ball internal error. Possible cause: System error, such as a null pointer, insufficient memory. |
-| 1300004 | Unauthorized operation. Possible cause: The process ID calling the API does not match the process ID of the session that created the floating ball. |
-| 1300027 | When updating the floating ball, the template type cannot be changed. |
-| 1300025 | The floating ball state does not support this operation. Possible cause: The floating ball is not started. |
-| 1300024 | The floating ball window state is abnormal. Possible cause: The floating ball window is not created or has been destroyed. |
-| 1300028 | Updating static template-based floating balls is not supported. |
+| [1300003](../errorcode-window.md#1300003-abnormal-window-manager-service) | This window manager service works abnormally. Possible cause: Internal IPC error. |
+| [1300019](../errorcode-window.md#1300019-floating-ball-parameter-verification-error) | Wrong parameters for operating the floating ball. Possible causes: &lt;br&gt;1.FloatingBallParams parameter is null. &lt;br&gt;2.Parameter is invalid, such as invalid icon object, template type, or title (empty or exceeds 64 bytes). |
+| [1300002](../errorcode-window.md#1300002-abnormal-window-state) | This window state is abnormal. Possible cause: Internal error, the window type is not a floating ball. |
+| [1300023](../errorcode-window.md#1300023-internal-error-of-the-floating-ball) | Floating ball internal error. Possible cause: System error, such as a null pointer, insufficient memory. |
+| [1300004](../errorcode-window.md#1300004-unauthorized-operation) | Unauthorized operation. Possible cause: The process ID calling the API does not match the process ID of the session that created the floating ball. |
+| [1300027](../errorcode-window.md#1300027-cannot-change-template-type-when-updating-the-floating-ball) | When updating the floating ball, the template type cannot be changed. |
+| [1300025](../errorcode-window.md#1300025-unsupported-operation-in-the-current-floating-ball-state) | The floating ball state does not support this operation. Possible cause: The floating ball is not started. |
+| [1300024](../errorcode-window.md#1300024-abnormal-floating-ball-window-state) | The floating ball window state is abnormal. Possible cause: The floating ball window is not created or has been destroyed. |
+| [1300028](../errorcode-window.md#1300028-floating-ball-based-on-a-static-template-cannot-be-updated) | Updating static template-based floating balls is not supported. |
 
 ## Examples
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
 
-// Set the parameters for updating the floating ball.
 let updateParams: floatingBall.FloatingBallParams = {
   template: floatingBall.FloatingBallTemplate.EMPHATIC,
   title: 'title2',
   content: 'content2'
 };
 try {
-  // Update the floating ball.
   floatingBallController.updateFloatingBall(updateParams).then(() => {
     console.info('Succeeded in updating floating ball.');
   }).catch((err: BusinessError) => {
     console.error(`Failed to update floating ball. Cause:${err.code}, message:${err.message}`);
   });
-} catch (e) {
+} catch(e) {
   console.error(`Failed to update floating ball. Cause:${e.code}, message:${e.message}`);
 }
 ```

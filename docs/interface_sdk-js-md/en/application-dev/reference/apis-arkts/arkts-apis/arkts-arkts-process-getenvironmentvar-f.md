@@ -12,7 +12,7 @@ import { process } from 'kits/@kit.ArkTS';
 function getEnvironmentVar(name: string): string
 ```
 
-获取环境变量名对应的值。如果环境变量不存在，返回undefined。
+Obtains the value of an environment variable.
 
 **Since:** 8
 
@@ -30,13 +30,13 @@ function getEnvironmentVar(name: string): string
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| name | string | Yes | 环境变量名。 |
+| name | string | Yes | Environment variable name. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| string | 返回环境变量名对应的值。 |
+| string | Value of the environment variable. |
 
 ## Examples
 

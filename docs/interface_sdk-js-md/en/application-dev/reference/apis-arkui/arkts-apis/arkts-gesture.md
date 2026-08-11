@@ -1,6 +1,6 @@
 # gesture
 
-定义手势竞争结果。
+Enumerates gesture competition results.
 
 ## Summary
 
@@ -8,76 +8,76 @@
 
 | Name | Description |
 | --- | --- |
-| [GestureControl](arkts-arkui-gesturecontrol-n.md) | 定义手势竞争结果。 |
+| [GestureControl](arkts-arkui-gesturecontrol-n.md) | Enumerates gesture competition results. |
 
 ### Classes
 
 | Name | Description |
 | --- | --- |
-| [EventTargetInfo](arkts-arkui-eventtargetinfo-c.md) | 手势识别器对应组件的信息。 |
-| [GestureGroupHandler](arkts-arkui-gesturegrouphandler-c.md) | 手势组处理器对象类型。 |
-| [GestureHandler](arkts-arkui-gesturehandler-c.md) | 手势处理器的基础类型。 |
-| [GestureRecognizer](arkts-arkui-gesturerecognizer-c.md) | 手势识别器对象。 |
-| [LongPressGestureHandler](arkts-arkui-longpressgesturehandler-c.md) | 长按手势处理器对象类型。 |
-| [LongPressRecognizer](arkts-arkui-longpressrecognizer-c.md) | 长按手势识别器对象，继承于[GestureRecognizer](arkts-arkui-gesturerecognizer-c.md)。 |
-| [PanGestureHandler](arkts-arkui-pangesturehandler-c.md) | 滑动手势处理器对象类型。 |
-| [PanGestureOptions](arkts-arkui-pangestureoptions-c.md) | 定义PanGesture配置参数选项。 |
-| [PanRecognizer](arkts-arkui-panrecognizer-c.md) | 手势识别器对象。 |
-| [PinchGestureHandler](arkts-arkui-pinchgesturehandler-c.md) | 捏合手势处理器对象类型。 |
-| [PinchRecognizer](arkts-arkui-pinchrecognizer-c.md) | 捏合手势识别器对象，继承于[GestureRecognizer](arkts-arkui-gesturerecognizer-c.md)。 |
-| [RotationGestureHandler](arkts-arkui-rotationgesturehandler-c.md) | 旋转手势处理器对象类型。 |
-| [RotationRecognizer](arkts-arkui-rotationrecognizer-c.md) | 旋转手势识别器对象，继承于[GestureRecognizer](arkts-arkui-gesturerecognizer-c.md)。 |
-| [ScrollableTargetInfo](arkts-arkui-scrollabletargetinfo-c.md) | 手势识别器对应的滚动类容器组件的信息，继承于[EventTargetInfo](arkts-arkui-eventtargetinfo-c.md)。 |
-| [SwipeGestureHandler](arkts-arkui-swipegesturehandler-c.md) | 快滑手势处理器对象类型。 |
-| [SwipeRecognizer](arkts-arkui-swiperecognizer-c.md) | 快滑手势识别器对象，继承于[GestureRecognizer](arkts-arkui-gesturerecognizer-c.md)。 |
-| [TapGestureHandler](arkts-arkui-tapgesturehandler-c.md) | 点击手势处理器对象类型。 |
-| [TapRecognizer](arkts-arkui-taprecognizer-c.md) | 点击手势识别器对象，继承自[GestureRecognizer](arkts-arkui-gesturerecognizer-c.md)。 |
-| [TouchRecognizer](arkts-arkui-touchrecognizer-c.md) | 触摸识别器对象。 |
+| [EventTargetInfo](arkts-arkui-eventtargetinfo-c.md) | Provides the information about the component corresponding to the gesture recognizer. |
+| [GestureGroupHandler](arkts-arkui-gesturegrouphandler-c.md) | Defines a gesture group handler object. |
+| [GestureHandler](arkts-arkui-gesturehandler-c.md) | Represents the base type for gesture handlers. |
+| [GestureRecognizer](arkts-arkui-gesturerecognizer-c.md) | Gesture recognizer object. |
+| [LongPressGestureHandler](arkts-arkui-longpressgesturehandler-c.md) | Defines a long press gesture handler object. |
+| [LongPressRecognizer](arkts-arkui-longpressrecognizer-c.md) | Implements a long press gesture recognizer. Inherits from [GestureRecognizer](arkts-arkui-gesturerecognizer-c.md). |
+| [PanGestureHandler](arkts-arkui-pangesturehandler-c.md) | Defines a pan gesture handler object. |
+| [PanGestureOptions](arkts-arkui-pangestureoptions-c.md) | Defines the PanGesture options. |
+| [PanRecognizer](arkts-arkui-panrecognizer-c.md) | Gesture recognizer object. |
+| [PinchGestureHandler](arkts-arkui-pinchgesturehandler-c.md) | Defines a type of gesture handler object for pinch gestures. |
+| [PinchRecognizer](arkts-arkui-pinchrecognizer-c.md) | Implements a pinch gesture recognizer. Inherits from [GestureRecognizer](arkts-arkui-gesturerecognizer-c.md). |
+| [RotationGestureHandler](arkts-arkui-rotationgesturehandler-c.md) | Defines a rotation gesture handler object. |
+| [RotationRecognizer](arkts-arkui-rotationrecognizer-c.md) | Implements a rotation gesture recognizer. Inherits from [GestureRecognizer](arkts-arkui-gesturerecognizer-c.md). |
+| [ScrollableTargetInfo](arkts-arkui-scrollabletargetinfo-c.md) | Provides the information about the scrollable container component corresponding to the gesture recognizer. It inherits from [EventTargetInfo](arkts-arkui-eventtargetinfo-c.md). |
+| [SwipeGestureHandler](arkts-arkui-swipegesturehandler-c.md) | Defines a swipe gesture handler object. |
+| [SwipeRecognizer](arkts-arkui-swiperecognizer-c.md) | Implements a swipe gesture recognizer. Inherits from [GestureRecognizer](arkts-arkui-gesturerecognizer-c.md). |
+| [TapGestureHandler](arkts-arkui-tapgesturehandler-c.md) | Defines a type of gesture handler object for tap gestures. |
+| [TapRecognizer](arkts-arkui-taprecognizer-c.md) | Implements a tap gesture recognizer object. Inherits from [GestureRecognizer](arkts-arkui-gesturerecognizer-c.md). |
+| [TouchRecognizer](arkts-arkui-touchrecognizer-c.md) | Represents a touch gesture recognizer. |
 
 ### Interfaces
 
 | Name | Description |
 | --- | --- |
-| [BaseGestureEvent](arkts-arkui-basegestureevent-i.md) | 基础手势事件类型。继承自[BaseEvent](arkts-arkui-common-baseevent-i.md)。 |
-| [BaseHandlerOptions](arkts-arkui-basehandleroptions-i.md) | 基础手势处理器配置参数。 |
-| [EventLocationInfo](arkts-arkui-eventlocationinfo-i.md) | 用于点击手势获取点击位置坐标。 |
-| [FingerInfo](arkts-arkui-fingerinfo-i.md) | 手指信息类型。 |
-| [GestureEvent](arkts-arkui-gestureevent-i.md) | 定义手势的事件信息。继承自[BaseEvent](arkts-arkui-common-baseevent-i.md)。 |
-| [GestureGroupGestureHandlerOptions](arkts-arkui-gesturegroupgesturehandleroptions-i.md) | 手势组处理器配置参数。 |
-| [GestureGroupInterface](arkts-arkui-gesturegroupinterface-i.md) | 手势识别组合，即两种及以上手势组合为复合手势，支持顺序识别、并发识别和互斥识别。 |
-| [GestureInfo](arkts-arkui-gestureinfo-i.md) | 手势信息类型。 |
-| [GestureInterface](arkts-arkui-gestureinterface-i.md) | 定义Gesture接口。 |
-| [LongPressGestureEvent](arkts-arkui-longpressgestureevent-i.md) | 继承自[BaseGestureEvent](arkts-arkui-basegestureevent-i.md)。可将该对象作为[onGestureJudgeBegin](arkts-arkui-common-commonmethod-i.md#ongesturejudgebegin)的event参数来传递。 |
-| [LongPressGestureHandlerOptions](arkts-arkui-longpressgesturehandleroptions-i.md) | 长按手势处理器配置参数。继承自[BaseHandlerOptions](arkts-arkui-basehandleroptions-i.md)。 |
-| [LongPressGestureInterface](arkts-arkui-longpressgestureinterface-i.md) | 用于触发长按手势事件，触发长按手势的最少手指数为1，默认最短长按时间为500毫秒。可配置duration参数控制最短长按时长。 |
-| [PanGestureEvent](arkts-arkui-pangestureevent-i.md) | 继承自[BaseGestureEvent](arkts-arkui-basegestureevent-i.md)。可将该对象作为[onGestureJudgeBegin](arkts-arkui-common-commonmethod-i.md#ongesturejudgebegin)的event参数来传递。 |
-| [PanGestureHandlerOptions](arkts-arkui-pangesturehandleroptions-i.md) | 滑动手势处理器配置参数。继承自[BaseHandlerOptions](arkts-arkui-basehandleroptions-i.md)。 |
-| [PanGestureInterface](arkts-arkui-pangestureinterface-i.md) | 滑动手势事件，当滑动的最小距离达到设定的最小值时触发滑动手势事件。 |
-| [PinchGestureEvent](arkts-arkui-pinchgestureevent-i.md) | 继承自[BaseGestureEvent](arkts-arkui-basegestureevent-i.md)。可将该对象作为[onGestureJudgeBegin](arkts-arkui-common-commonmethod-i.md#ongesturejudgebegin)的event参数来传递。 |
-| [PinchGestureHandlerOptions](arkts-arkui-pinchgesturehandleroptions-i.md) | 捏合手势处理器配置参数。继承自[BaseHandlerOptions](arkts-arkui-basehandleroptions-i.md)。 |
-| [PinchGestureInterface](arkts-arkui-pinchgestureinterface-i.md) | 用于触发捏合手势，最少需要2指，最多5指，最小识别距离为5vp。在支持鼠标和键盘输入的设备上，通过“Ctrl+鼠标滚轮”也可以触发捏合手势。 |
-| [RotationGestureEvent](arkts-arkui-rotationgestureevent-i.md) | 继承自[BaseGestureEvent](arkts-arkui-basegestureevent-i.md)。可将该对象作为[onGestureJudgeBegin](arkts-arkui-common-commonmethod-i.md#ongesturejudgebegin)的event参数来传递。 |
-| [RotationGestureHandlerOptions](arkts-arkui-rotationgesturehandleroptions-i.md) | 旋转手势处理器配置参数。继承自[BaseHandlerOptions](arkts-arkui-basehandleroptions-i.md)。 |
-| [RotationGestureInterface](arkts-arkui-rotationgestureinterface-i.md) | 用于触发旋转手势，最少需要2指，最多5指，最小改变度数为1度。该手势不支持通过触控板双指旋转操作触发。 |
-| [SwipeGestureEvent](arkts-arkui-swipegestureevent-i.md) | 继承自[BaseGestureEvent](arkts-arkui-basegestureevent-i.md)。可将该对象作为[onGestureJudgeBegin](arkts-arkui-common-commonmethod-i.md#ongesturejudgebegin)的event参数来传递。 |
-| [SwipeGestureHandlerOptions](arkts-arkui-swipegesturehandleroptions-i.md) | 快滑手势处理器配置参数。继承自[BaseHandlerOptions](arkts-arkui-basehandleroptions-i.md)。 |
-| [SwipeGestureInterface](arkts-arkui-swipegestureinterface-i.md) | 用于触发快滑手势，滑动速度需大于速度阈值，默认最小速度为100vp/s。 |
-| [TapGestureEvent](arkts-arkui-tapgestureevent-i.md) | 继承自[BaseGestureEvent](arkts-arkui-basegestureevent-i.md)。可将该对象作为[onGestureJudgeBegin](arkts-arkui-common-commonmethod-i.md#ongesturejudgebegin)的event参数来传递。 |
-| [TapGestureHandlerOptions](arkts-arkui-tapgesturehandleroptions-i.md) | 点击手势处理器配置参数。继承自[BaseHandlerOptions](arkts-arkui-basehandleroptions-i.md)。 |
-| [TapGestureInterface](arkts-arkui-tapgestureinterface-i.md) | 支持单击、双击和多次点击事件的识别。 |
-| [TapGestureParameters](arkts-arkui-tapgestureparameters-i.md) | 点击手势参数。继承自[BaseHandlerOptions](arkts-arkui-basehandleroptions-i.md)。  @since版本号高于内层元素版本号的情况，但这不影响接口的使用。 |
+| [BaseGestureEvent](arkts-arkui-basegestureevent-i.md) | Defines the basic gesture event type. Inherits from [BaseEvent](arkts-arkui-common-baseevent-i.md). |
+| [BaseHandlerOptions](arkts-arkui-basehandleroptions-i.md) | Provides the parameters of the basic gesture handler. |
+| [EventLocationInfo](arkts-arkui-eventlocationinfo-i.md) | Provides coordinate information for tap gestures. |
+| [FingerInfo](arkts-arkui-fingerinfo-i.md) | Defines the finger information type. |
+| [GestureEvent](arkts-arkui-gestureevent-i.md) | Defines the gesture event information. Inherits from [BaseEvent](arkts-arkui-common-baseevent-i.md). |
+| [GestureGroupGestureHandlerOptions](arkts-arkui-gesturegroupgesturehandleroptions-i.md) | Provides the parameters of the gesture group handler. |
+| [GestureGroupInterface](arkts-arkui-gesturegroupinterface-i.md) | Combined gestures integrate two or more gestures into a compound gesture, supporting sequential recognition, parallel recognition, and exclusive recognition. |
+| [GestureInfo](arkts-arkui-gestureinfo-i.md) | Defines the gesture information type. |
+| [GestureInterface](arkts-arkui-gestureinterface-i.md) | Defines the gesture API. |
+| [LongPressGestureEvent](arkts-arkui-longpressgestureevent-i.md) | Inherits from [BaseGestureEvent](arkts-arkui-basegestureevent-i.md). This object can be passed as the **event** parameter of  [onGestureJudgeBegin](arkts-arkui-common-commonmethod-i.md#ongesturejudgebegin). |
+| [LongPressGestureHandlerOptions](arkts-arkui-longpressgesturehandleroptions-i.md) | Provides the parameters of the long press gesture handler. Inherits from  [BaseHandlerOptions](arkts-arkui-basehandleroptions-i.md). |
+| [LongPressGestureInterface](arkts-arkui-longpressgestureinterface-i.md) | **LongPressGesture** is used to trigger a long press gesture. This gesture requires one or more fingers to be held down for a specified duration, which is 500 ms by default and can be adjusted using the **duration** parameter.  > **NOTE：** >  > Since API version 18, on some devices, the system's two-finger long press gesture may take precedence, causing > the application's two-finger long press gesture to be ineffective. |
+| [PanGestureEvent](arkts-arkui-pangestureevent-i.md) | Inherits from [BaseGestureEvent](arkts-arkui-basegestureevent-i.md). This object can be passed as the **event** parameter of  [onGestureJudgeBegin](arkts-arkui-common-commonmethod-i.md#ongesturejudgebegin). |
+| [PanGestureHandlerOptions](arkts-arkui-pangesturehandleroptions-i.md) | Provides the parameters of the pan gesture handler. Inherits from [BaseHandlerOptions](arkts-arkui-basehandleroptions-i.md). |
+| [PanGestureInterface](arkts-arkui-pangestureinterface-i.md) | PanGesture is used to trigger a pan gesture when the movement distance of a finger on the screen reaches the minimum value. |
+| [PinchGestureEvent](arkts-arkui-pinchgestureevent-i.md) | Inherits from [BaseGestureEvent](arkts-arkui-basegestureevent-i.md). This object can be passed as the **event** parameter of  [onGestureJudgeBegin](arkts-arkui-common-commonmethod-i.md#ongesturejudgebegin). |
+| [PinchGestureHandlerOptions](arkts-arkui-pinchgesturehandleroptions-i.md) | Provides the parameters of the pinch gesture handler. Inherits from [BaseHandlerOptions](arkts-arkui-basehandleroptions-i.md). |
+| [PinchGestureInterface](arkts-arkui-pinchgestureinterface-i.md) | **PinchGesture** is used to trigger a pinch gesture, which requires two to five fingers with a minimum 5 vp distance between the fingers.  > **NOTE：** >  > To trigger the pinch gesture again after successful recognition, all fingers must be lifted and then make > contact again to satisfy the recognition criteria. |
+| [RotationGestureEvent](arkts-arkui-rotationgestureevent-i.md) | Inherits from [BaseGestureEvent](arkts-arkui-basegestureevent-i.md). This object can be passed as the **event** parameter of  [onGestureJudgeBegin](arkts-arkui-common-commonmethod-i.md#ongesturejudgebegin). |
+| [RotationGestureHandlerOptions](arkts-arkui-rotationgesturehandleroptions-i.md) | Provides the parameters of the rotation gesture handler. Inherits from  [BaseHandlerOptions](arkts-arkui-basehandleroptions-i.md). |
+| [RotationGestureInterface](arkts-arkui-rotationgestureinterface-i.md) | **RotationGesture** is used to trigger a rotation gesture, which recognizes rotational movements using two to five fingers, with a minimum angular change of 1 degree. This gesture cannot be triggered using a two-finger rotation operation on a trackpad. |
+| [SwipeGestureEvent](arkts-arkui-swipegestureevent-i.md) | Inherits from [BaseGestureEvent](arkts-arkui-basegestureevent-i.md). This object can be passed as the **event** parameter of  [onGestureJudgeBegin](arkts-arkui-common-commonmethod-i.md#ongesturejudgebegin). |
+| [SwipeGestureHandlerOptions](arkts-arkui-swipegesturehandleroptions-i.md) | Provides the parameters of the swipe gesture handler. Inherits from [BaseHandlerOptions](arkts-arkui-basehandleroptions-i.md). |
+| [SwipeGestureInterface](arkts-arkui-swipegestureinterface-i.md) | **SwipeGesture** is used to trigger a swipe gesture. This gesture is successfully recognized when the swipe speed exceeds the specified threshold, which is 100 vp/s by default. |
+| [TapGestureEvent](arkts-arkui-tapgestureevent-i.md) | Inherits from [BaseGestureEvent](arkts-arkui-basegestureevent-i.md). This object can be passed as the **event** parameter of  [onGestureJudgeBegin](arkts-arkui-common-commonmethod-i.md#ongesturejudgebegin). |
+| [TapGestureHandlerOptions](arkts-arkui-tapgesturehandleroptions-i.md) | Provides the parameters of the tap gesture handler. Inherits from [BaseHandlerOptions](arkts-arkui-basehandleroptions-i.md). |
+| [TapGestureInterface](arkts-arkui-tapgestureinterface-i.md) | TapGesture is used to trigger a tap gesture with one, two, or more taps.  > **NOTE：** >  > When both double-tap and single-tap gestures are bound to a component with the double-tap gesture bound first, the > single-tap gesture will have a 300 ms delay. |
+| [TapGestureParameters](arkts-arkui-tapgestureparameters-i.md) | Defines tap gesture parameters. Inherits from [BaseHandlerOptions](arkts-arkui-basehandleroptions-i.md).  > **NOTE：** >  > To standardize anonymous object definitions, the element definitions here have been revised in API version 12. > While historical version information is preserved for anonymous objects, there may be cases where the outer element > 's @since version number is higher than inner elements'. This does not affect interface usability. |
 
 ### Enums
 
 | Name | Description |
 | --- | --- |
-| [GestureJudgeResult](arkts-arkui-gesturejudgeresult-e.md) | 定义手势竞争结果。 |
-| [GestureMask](arkts-arkui-gesturemask-e.md) | 定义是否屏蔽子组件手势。 |
-| [GestureMode](arkts-arkui-gesturemode-e.md) | 定义手势组的识别模式。 |
-| [GesturePriority](arkts-arkui-gesturepriority-e.md) | 绑定手势的优先级。 |
-| [GestureRecognizerState](arkts-arkui-gesturerecognizerstate-e.md) | 定义手势识别器状态。 |
-| [PanDirection](arkts-arkui-pandirection-e.md) | 与SwipeDirection不同，PanDirection没有角度限制。 |
-| [SwipeDirection](arkts-arkui-swipedirection-e.md) | 定义滑动手势的触发方向。 |
+| [GestureJudgeResult](arkts-arkui-gesturejudgeresult-e.md) | Enumerates gesture competition results. |
+| [GestureMask](arkts-arkui-gesturemask-e.md) | Enumerates masking modes of child component gestures. |
+| [GestureMode](arkts-arkui-gesturemode-e.md) | Defines the recognition mode of a gesture group. |
+| [GesturePriority](arkts-arkui-gesturepriority-e.md) | Enumerates gesture priority levels. |
+| [GestureRecognizerState](arkts-arkui-gesturerecognizerstate-e.md) | Enumerates the gesture recognizer states. |
+| [PanDirection](arkts-arkui-pandirection-e.md) | Enumerates the pan directions. Unlike **SwipeDirection**, **PanDirection** has no angular restrictions. |
+| [SwipeDirection](arkts-arkui-swipedirection-e.md) | Enumerates the directions in which the swipe gesture can be recognized. |
 
 ### Types
 

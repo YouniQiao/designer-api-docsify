@@ -1,6 +1,6 @@
 # TextDeleteDirection
 
-定义删除文本方向。
+Defines the direction for deleting text.
 
 **Since:** 12
 
@@ -16,7 +16,7 @@
 BACKWARD = 0
 ```
 
-向后删除。
+Backward delete.
 
 **Since:** 12
 
@@ -36,7 +36,7 @@ BACKWARD = 0
 FORWARD = 1
 ```
 
-向前删除。
+Forward delete.
 
 **Since:** 12
 

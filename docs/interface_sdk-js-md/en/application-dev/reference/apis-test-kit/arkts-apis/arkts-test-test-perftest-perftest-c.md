@@ -1,6 +1,6 @@
 # PerfTest
 
-PerfTest类为白盒性能测试框架的总入口，提供测试任务创建、测试代码段执行和数据采集、测量结果获取等能力。通过{@link create}创建实例。
+Represents the general entry of the white-box performance test framework.It provides capabilities such as test task creation, test code segment execution, data collection, and measurement result obtaining.
 
 **Since:** 20
 
@@ -22,7 +22,7 @@ import { PerfTestStrategy, PerfMetric, PerfTest, PerfMeasureResult } from 'kits/
 static create(strategy: PerfTestStrategy): PerfTest
 ```
 
-静态方法，构造一个PerfTest对象，并返回该对象。
+Creates a {@link PerfTest} object and returns the object created. This API is a static API.
 
 **Since:** 20
 
@@ -38,22 +38,22 @@ static create(strategy: PerfTestStrategy): PerfTest
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| strategy | [PerfTestStrategy](arkts-test-test-perftest-perfteststrategy-i.md) | Yes | 性能测试执行策略。 |
+| strategy | [PerfTestStrategy](arkts-test-test-perftest-perfteststrategy-i.md) | Yes | Performance test strategy. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [PerfTest](arkts-test-test-perftest-perftest-c.md) | 返回构造的PerfTest对象，可用于执行测试任务、采集性能数据和获取测量结果。 |
+| [PerfTest](arkts-test-test-perftest-perftest-c.md) | { |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 32400007 | The API does not support concurrent calls. @static |
-| 32400002 | Internal error. Possible causes: 1. IPC connection failed. 2. The object does not exist. |
-| 32400003 | Parameter verification failed. |
-| 32400001 | Initialization failed. |
+| [32400007](../errorcode-perftest.md#32400007-api-does-not-support-concurrent-calls) | The API does not support concurrent calls. @static |
+| [32400002](../errorcode-perftest.md#32400002-internal-error) | Internal error. Possible causes: 1. IPC connection failed. 2. The object does not exist. |
+| [32400003](../errorcode-perftest.md#32400003-parameter-verification-failed) | Parameter verification failed. |
+| [32400001](../errorcode-perftest.md#32400001-initialization-failed) | Initialization failed. |
 
 ## Examples
 
@@ -68,17 +68,17 @@ async function demo() {
       num++;
     }
     finish(true); // Call the finish callback to notify that the code segment is executed successfully and as expected.
-  };
+  }
   let resetCode = async (finish: Callback<boolean>) => { // Define the code segment for resetting the environment after the test ends.
     num = 0;
     finish(true);
-  };
+  }
   let perfTestStrategy: PerfTestStrategy = {
     metrics: metrics,
     actionCode: actionCode,
     resetCode: resetCode,
     timeout: 30000,
-    iterations: 10
+    iterations: 10,
   };
   let perfTest: PerfTest = PerfTest.create(perfTestStrategy); // Construct a PerfTest object and create a test task.
 }
@@ -90,7 +90,7 @@ async function demo() {
 destroy(): void
 ```
 
-销毁PerfTest对象。
+Destroys the **PerfTest** object to release the resources occupied by the object. This method is used together with {@link create} and is called after the **PerfTest** object is used. If this method is not called, resources may fail to be released. The **PerfTest** object should not be used after this API is called.
 
 **Since:** 20
 
@@ -106,8 +106,8 @@ destroy(): void
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 32400007 | The API does not support concurrent calls. |
-| 32400002 | Internal error. Possible causes: 1. IPC connection failed. 2. The object does not exist. |
+| [32400007](../errorcode-perftest.md#32400007-api-does-not-support-concurrent-calls) | The API does not support concurrent calls. |
+| [32400002](../errorcode-perftest.md#32400002-internal-error) | Internal error. Possible causes: 1. IPC connection failed. 2. The object does not exist. |
 
 ## Examples
 
@@ -121,13 +121,13 @@ async function demo() {
     for (let index = 0; index < 10000; index++) {
       num++;
     }
-    finish(true); // Call the finish callback to notify that the code segment is executed successfully and as expected.
-  };
+    finish(true);
+  }
   let perfTestStrategy: PerfTestStrategy = {
     metrics: metrics,
     actionCode: actionCode
   };
-  let perfTest: PerfTest = PerfTest.create(perfTestStrategy); // Construct a PerfTest object and create a test task.
+  let perfTest: PerfTest = PerfTest.create(perfTestStrategy);
   await perfTest.run();
   perfTest.destroy(); // Destroy the PerfTest object.
 }
@@ -139,7 +139,7 @@ async function demo() {
 getMeasureResult(metric: PerfMetric): PerfMeasureResult
 ```
 
-获取指定性能指标的测量数据。需要在run()执行完成后调用，否则无法获取到有效的测量数据。
+Obtains the measurement data of a specified performance metric. This method must be called after {@link run} is executed. Otherwise, valid measurement data cannot be obtained.
 
 **Since:** 20
 
@@ -155,22 +155,22 @@ getMeasureResult(metric: PerfMetric): PerfMeasureResult
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| metric | [PerfMetric](arkts-test-test-perftest-perfmetric-e.md) | Yes | 性能指标。 |
+| metric | [PerfMetric](arkts-test-test-perftest-perfmetric-e.md) | Yes | Performance metric to query. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [PerfMeasureResult](arkts-test-test-perftest-perfmeasureresult-i.md) | 性能指标对应测量结果数据。 |
+| [PerfMeasureResult](arkts-test-test-perftest-perfmeasureresult-i.md) | Measurement result of the specified performance metric, including the measurement data value and statistical values (maximum value, minimum value, and average value) of each round. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 32400006 | Failed to obtain the measurement result. |
-| 32400007 | The API does not support concurrent calls. |
-| 32400002 | Internal error. Possible causes: 1. IPC connection failed. 2. The object does not exist. |
-| 32400003 | Parameter verification failed. |
+| [32400006](../errorcode-perftest.md#32400006-failed-to-obtain-performance-data) | Failed to obtain the measurement result. |
+| [32400007](../errorcode-perftest.md#32400007-api-does-not-support-concurrent-calls) | The API does not support concurrent calls. |
+| [32400002](../errorcode-perftest.md#32400002-internal-error) | Internal error. Possible causes: 1. IPC connection failed. 2. The object does not exist. |
+| [32400003](../errorcode-perftest.md#32400003-parameter-verification-failed) | Parameter verification failed. |
 
 ## Examples
 
@@ -184,13 +184,13 @@ async function demo() {
     for (let index = 0; index < 10000; index++) {
       num++;
     }
-    finish(true); // Call the finish callback to notify that the code segment is executed successfully and as expected.
-  };
+    finish(true);
+  }
   let perfTestStrategy: PerfTestStrategy = {
     metrics: metrics,
     actionCode: actionCode
   };
-  let perfTest: PerfTest = PerfTest.create(perfTestStrategy); // Construct a PerfTest object and create a test task.
+  let perfTest: PerfTest = PerfTest.create(perfTestStrategy);
   await perfTest.run();
   let res = perfTest.getMeasureResult(PerfMetric.DURATION); // Obtain the measurement data of a specified performance metric.
 }
@@ -202,7 +202,8 @@ async function demo() {
 run(): Promise<void>
 ```
 
-运行性能测试，迭代执行测试代码段并采集性能数据，使用Promise回调。
+Runs a performance test, iteratively executes test code segments based on the configured times, and collects performance data. This API uses a promise to return the result. In each iteration, the framework executes  
+**actionCode** and **resetCode** (if configured) in sequence and collects performance data during the execution of **actionCode**. After the execution is complete, you can call {@link getMeasureResult} to obtain the collected measurement result data.
 
 **Since:** 20
 
@@ -218,16 +219,16 @@ run(): Promise<void>
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise对象。无返回结果的Promise对象。 |
+| Promise&lt;void&gt; |  |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 32400007 | The API does not support concurrent calls. |
-| 32400004 | Failed to execute the callback. Possible causes: 1. An exception is thrown in the callback. 2. Callback execution timed out. |
-| 32400005 | Failed to collect metric data. |
-| 32400002 | Internal error. Possible causes: 1. IPC connection failed. 2. The object does not exist. |
+| [32400007](../errorcode-perftest.md#32400007-api-does-not-support-concurrent-calls) | The API does not support concurrent calls. |
+| [32400004](../errorcode-perftest.md#32400004-failed-to-execute-the-callback) | Failed to execute the callback. Possible causes: 1. An exception is thrown in the callback. 2. Callback execution timed out. |
+| [32400005](../errorcode-perftest.md#32400005-failed-to-collect-performance-data) | Failed to collect metric data. |
+| [32400002](../errorcode-perftest.md#32400002-internal-error) | Internal error. Possible causes: 1. IPC connection failed. 2. The object does not exist. |
 
 ## Examples
 
@@ -241,13 +242,13 @@ async function demo() {
     for (let index = 0; index < 10000; index++) {
       num++;
     }
-    finish(true); // Call the finish callback to notify that the code segment is executed successfully and as expected.
-  };
+    finish(true);
+  }
   let perfTestStrategy: PerfTestStrategy = {
     metrics: metrics,
     actionCode: actionCode
   };
-  let perfTest: PerfTest = PerfTest.create(perfTestStrategy); // Construct a PerfTest object and create a test task.
+  let perfTest: PerfTest = PerfTest.create(perfTestStrategy);
   await perfTest.run(); // Run the performance test.
 }
 ```

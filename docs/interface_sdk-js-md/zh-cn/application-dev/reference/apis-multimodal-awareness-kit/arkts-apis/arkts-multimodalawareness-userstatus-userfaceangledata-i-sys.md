@@ -1,6 +1,6 @@
 # UserFaceAngleData（系统接口）
 
-Defines user face angle data.
+用户面部角度数据。
 
 **继承/实现关系：** UserFaceAngleData extends [UserStatusData](arkts-multimodalawareness-userstatus-userstatusdata-i-sys.md)
 
@@ -14,19 +14,13 @@ Defines user face angle data.
 
 **系统接口：** 此接口为系统接口。
 
-## 导入模块
-
-```TypeScript
-import { userStatus } from 'kits/@kit.MultimodalAwarenessKit';
-```
-
 ## hpeNetworkId
 
 ```TypeScript
 hpeNetworkId: string
 ```
 
-Network ID of device that user head is facing.The maximum length is 128.
+用户头部朝向的设备网络ID。最大长度为128。
 
 **类型：** string
 

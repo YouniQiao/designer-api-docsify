@@ -1,6 +1,6 @@
 # ScreenType (System API)
 
-屏幕类型枚举
+Enumerates the types of screens.
 
 **Since:** 26.0.0
 
@@ -18,7 +18,7 @@
 BUILT_IN = 0
 ```
 
-物理集成到设备中的内置屏幕
+The built-in, on-board screen that is physically integrated into the device.
 
 **Since:** 26.0.0
 
@@ -38,7 +38,7 @@ BUILT_IN = 0
 EXTERNAL = 1
 ```
 
-通过有线接口连接的外部物理显示屏
+An external physical display connected via a wired interface.
 
 **Since:** 26.0.0
 
@@ -58,7 +58,7 @@ EXTERNAL = 1
 VIRTUAL = 2
 ```
 
-由软件创建的虚拟显示屏，通常用于投屏、屏幕录制或多屏协作
+An virtual display created by software, typically used for screen casting,screen recording, or multi-screen collaboration.
 
 **Since:** 26.0.0
 

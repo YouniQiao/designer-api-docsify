@@ -1,9 +1,6 @@
 # ToneAttrs
 
-管理铃声属性。在调用ToneAttrs&lt;sup&gt;12+&lt;/sup&gt;的接口前，需要先通过  
-[createCustomizedToneAttrs](arkts-audio-systemsoundmanager-createcustomizedtoneattrs-f.md#createcustomizedtoneattrs)或  
-[getDefaultRingtoneAttrs](arkts-audio-systemsoundmanager-systemsoundmanager-i.md#getdefaultringtoneattrs)、  
-[getRingtoneAttrList](arkts-audio-systemsoundmanager-systemsoundmanager-i.md#getringtoneattrlist)等方法获取实例。
+Tone attributes.
 
 **Since:** 12
 
@@ -31,7 +28,7 @@ ArkTS-Sta:
 getCategory(): int
 ```
 
-获取铃声类别。
+Gets tone category.
 
 **Since:** 12
 
@@ -45,13 +42,13 @@ getCategory(): int
 
 | Type | Description |
 | --- | --- |
-| ArkTS-Dyn: number  <br>ArkTS-Sta：int | 铃声类别，取值参考[铃声类别的常量](#常量)。 |
+| ArkTS-Dyn: number  <br>ArkTS-Sta：int | Tone category. This value can be one of { |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 202 | Caller is not a system application. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Caller is not a system application. |
 
 ## Examples
 
@@ -65,7 +62,7 @@ toneAttrs.getCategory();
 getCustomizedType(): ToneCustomizedType
 ```
 
-获取铃声自定义类型。
+Gets customized type of tone.
 
 **Since:** 12
 
@@ -79,13 +76,13 @@ getCustomizedType(): ToneCustomizedType
 
 | Type | Description |
 | --- | --- |
-| [ToneCustomizedType](arkts-audio-systemsoundmanager-tonecustomizedtype-e.md) | 定制铃音类型。 |
+| [ToneCustomizedType](arkts-audio-systemsoundmanager-tonecustomizedtype-e.md) | Customized type of tone. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 202 | Caller is not a system application. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Caller is not a system application. |
 
 ## Examples
 
@@ -99,7 +96,7 @@ toneAttrs.getCustomizedType();
 getFileName(): string
 ```
 
-获取铃声文件名。
+Gets file name of tone.
 
 **Since:** 12
 
@@ -113,13 +110,13 @@ getFileName(): string
 
 | Type | Description |
 | --- | --- |
-| string | 文件名。 |
+| string | file name. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 202 | Caller is not a system application. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Caller is not a system application. |
 
 ## Examples
 
@@ -130,16 +127,16 @@ toneAttrs.getFileName();
 ## getMediaType
 
 ```TypeScript
-getMediaType():MediaType
+getMediaType(): MediaType
 ```
 
-获取铃声类型。
+Gets media type. This function returns {@link MediaType#AUDIO} if the media type has not been changed by {@link setMediaType}.
 
 **Since:** 20
 
 **ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
 
-<!--Device-ToneAttrs-getMediaType():MediaType--><!--Device-ToneAttrs-getMediaType():MediaType-End-->
+<!--Device-ToneAttrs-getMediaType(): MediaType--><!--Device-ToneAttrs-getMediaType(): MediaType-End-->
 
 **System capability:** SystemCapability.Multimedia.SystemSound.Core
 
@@ -147,13 +144,13 @@ getMediaType():MediaType
 
 | Type | Description |
 | --- | --- |
-| [MediaType](../../apis-arkweb/arkts-apis/arkts-arkweb-webview-mediatype-e.md) | 媒体类型，如果应用未调用过setMediaType设置mediatype，则此函数返回的默认值为AUDIO。 |
+| [MediaType](../../apis-arkweb/arkts-apis/arkts-arkweb-webview-mediatype-e.md) | Media type. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 202 | Caller is not a system application. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Caller is not a system application. |
 
 ## Examples
 
@@ -167,7 +164,7 @@ toneAttrs.getMediaType();
 getTitle(): string
 ```
 
-获取铃声标题。
+Gets title of tone.
 
 **Since:** 12
 
@@ -181,13 +178,13 @@ getTitle(): string
 
 | Type | Description |
 | --- | --- |
-| string | 标题。 |
+| string | title. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 202 | Caller is not a system application. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Caller is not a system application. |
 
 ## Examples
 
@@ -201,7 +198,7 @@ toneAttrs.getTitle();
 getUri(): string
 ```
 
-获取铃声资源路径。
+Gets uri of tone.
 
 **Since:** 12
 
@@ -215,13 +212,13 @@ getUri(): string
 
 | Type | Description |
 | --- | --- |
-| string | uri（如：'/data/storage/el2/base/RingTone/alarms/test.ogg'）。 |
+| string | uri. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 202 | Caller is not a system application. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Caller is not a system application. |
 
 ## Examples
 
@@ -241,7 +238,7 @@ ArkTS-Sta:
 setCategory(category: int): void
 ```
 
-设置铃声类别。
+Sets tone category.
 
 **Since:** 12
 
@@ -255,14 +252,14 @@ setCategory(category: int): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| category | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | 铃声类别，取值参考[铃声类别的常量](#常量)。 |
+| category | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | tone category. This parameter can be one of {@link TONE_CATEGORY_RINGTONE}, {@link TONE_CATEGORY_TEXT_MESSAGE}, {@link TONE_CATEGORY_NOTIFICATION}, {@link TONE_CATEGORY_ALARM}. In addition, this parameter can be result of OR logical operator of these constants. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
-| 202 | Caller is not a system application. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Caller is not a system application. |
 
 ## Examples
 
@@ -278,7 +275,7 @@ toneAttrs.setCategory(categoryValue);
 setFileName(name: string): void
 ```
 
-设置铃声文件名。
+Sets file name of tone.
 
 **Since:** 12
 
@@ -292,14 +289,14 @@ setFileName(name: string): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| name | string | Yes | 铃声的文件名。 |
+| name | string | Yes | file name. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
-| 202 | Caller is not a system application. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Caller is not a system application. |
 
 ## Examples
 
@@ -312,16 +309,16 @@ toneAttrs.setFileName(fileName);
 ## setMediaType
 
 ```TypeScript
-setMediaType(type:MediaType):void
+setMediaType(type: MediaType): void
 ```
 
-设置铃声类型。
+Sets media type.
 
 **Since:** 20
 
 **ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
 
-<!--Device-ToneAttrs-setMediaType(type:MediaType):void--><!--Device-ToneAttrs-setMediaType(type:MediaType):void-End-->
+<!--Device-ToneAttrs-setMediaType(type: MediaType): void--><!--Device-ToneAttrs-setMediaType(type: MediaType): void-End-->
 
 **System capability:** SystemCapability.Multimedia.SystemSound.Core
 
@@ -329,13 +326,13 @@ setMediaType(type:MediaType):void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | [MediaType](../../apis-arkweb/arkts-apis/arkts-arkweb-webview-mediatype-e.md) | Yes | 媒体类型。 |
+| type | [MediaType](../../apis-arkweb/arkts-apis/arkts-arkweb-webview-mediatype-e.md) | Yes | Target media type. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 202 | Caller is not a system application. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Caller is not a system application. |
 
 ## Examples
 
@@ -351,7 +348,7 @@ toneAttrs.setMediaType(type);
 setTitle(title: string): void
 ```
 
-设置铃声标题。
+Sets title of tone.
 
 **Since:** 12
 
@@ -365,14 +362,14 @@ setTitle(title: string): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| title | string | Yes | 铃声的标题。 |
+| title | string | Yes | Title of tone. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
-| 202 | Caller is not a system application. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Caller is not a system application. |
 
 ## Examples
 

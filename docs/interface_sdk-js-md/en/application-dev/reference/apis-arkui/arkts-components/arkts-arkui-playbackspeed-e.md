@@ -1,6 +1,6 @@
 # PlaybackSpeed
 
-视频播放倍速选项。
+Enumerates video playback speed options.
 
 **Since:** 8
 
@@ -16,7 +16,7 @@
 Speed_Forward_0_75_X
 ```
 
-0.75倍速播放。
+0.75x playback speed.
 
 **Since:** 8
 
@@ -34,7 +34,7 @@ Speed_Forward_0_75_X
 Speed_Forward_1_00_X
 ```
 
-1倍速播放。
+1x playback speed.
 
 **Since:** 8
 
@@ -52,7 +52,7 @@ Speed_Forward_1_00_X
 Speed_Forward_1_25_X
 ```
 
-1.25倍速播放。
+1.25x playback speed.
 
 **Since:** 8
 
@@ -70,7 +70,7 @@ Speed_Forward_1_25_X
 Speed_Forward_1_75_X
 ```
 
-1.75倍速播放。
+1.75x playback speed.
 
 **Since:** 8
 
@@ -88,7 +88,7 @@ Speed_Forward_1_75_X
 Speed_Forward_2_00_X
 ```
 
-2倍速播放。
+2x playback speed.
 
 **Since:** 8
 
@@ -106,7 +106,7 @@ Speed_Forward_2_00_X
 SPEED_FORWARD_0_50_X = 5
 ```
 
-0.5倍速播放。
+0.5x playback speed.
 
 **Since:** 22
 
@@ -126,7 +126,7 @@ SPEED_FORWARD_0_50_X = 5
 SPEED_FORWARD_1_50_X = 6
 ```
 
-1.5倍速播放。
+1.5x playback speed.
 
 **Since:** 22
 
@@ -146,7 +146,7 @@ SPEED_FORWARD_1_50_X = 6
 SPEED_FORWARD_3_00_X = 7
 ```
 
-3倍速播放。
+3x playback speed.
 
 **Since:** 22
 
@@ -166,7 +166,7 @@ SPEED_FORWARD_3_00_X = 7
 SPEED_FORWARD_0_25_X = 8
 ```
 
-0.25倍速播放。
+0.25x playback speed.
 
 **Since:** 22
 
@@ -186,7 +186,7 @@ SPEED_FORWARD_0_25_X = 8
 SPEED_FORWARD_0_125_X = 9
 ```
 
-0.125倍速播放。
+0.125x playback speed.
 
 **Since:** 22
 

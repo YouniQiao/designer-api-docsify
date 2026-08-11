@@ -36,5 +36,5 @@ Check whether the GNSS fence service is supported.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 3301000 | The location service is unavailable. |
+| [3301000](../errorcode-geoLocationManager.md#3301000-location-service-unavailable) | The location service is unavailable. |
 

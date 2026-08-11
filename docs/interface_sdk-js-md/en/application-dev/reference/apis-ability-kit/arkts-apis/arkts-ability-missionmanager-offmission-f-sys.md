@@ -12,7 +12,7 @@ import { missionManager } from 'kits/@kit.AbilityKit';
 function offMission(listenerId: long, callback: AsyncCallback<void>): void
 ```
 
-解注册任务状态监听器。使用callback异步回调。
+Unregister the missionListener to ams.
 
 **Since:** 23
 
@@ -30,16 +30,16 @@ function offMission(listenerId: long, callback: AsyncCallback<void>): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| listenerId | long | Yes | 系统任务状态监器法的index值，和监听器一一对应，由on方法返回。 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | 执行结果回调函数。 |
+| listenerId | long | Yes | Indicates the listener id to be unregistered. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | The callback of off. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 201 | Permission denied. |
-| 202 | Not system application. |
-| 16300002 | The specified mission listener does not exist. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system application. |
+| [16300002](../errorcode-ability.md#16300002-nonexistent-mission-listener) | The specified mission listener does not exist. |
 
 
 ## offMission
@@ -48,7 +48,7 @@ function offMission(listenerId: long, callback: AsyncCallback<void>): void
 function offMission(listenerId: long): Promise<void>
 ```
 
-解注册任务状态监听。使用Promise异步回调。
+Unregister the missionListener to ams.
 
 **Since:** 23
 
@@ -66,19 +66,19 @@ function offMission(listenerId: long): Promise<void>
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| listenerId | long | Yes | 系统任务状态监听器的index值，和监听器一一对应，由on方法返回。 |
+| listenerId | long | Yes | Indicates the listener id to be unregistered. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise对象，无返回结果。 |
+| Promise&lt;void&gt; | The promise returned by the function. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 201 | Permission denied. |
-| 202 | Not system application. |
-| 16300002 | The specified mission listener does not exist. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system application. |
+| [16300002](../errorcode-ability.md#16300002-nonexistent-mission-listener) | The specified mission listener does not exist. |
 

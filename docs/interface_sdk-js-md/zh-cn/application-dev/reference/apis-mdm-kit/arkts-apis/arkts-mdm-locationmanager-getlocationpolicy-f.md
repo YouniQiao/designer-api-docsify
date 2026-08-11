@@ -1,11 +1,5 @@
 # getLocationPolicy
 
-## 导入模块
-
-```TypeScript
-import { locationManager } from 'kits/@kit.MDMKit';
-```
-
 ## getLocationPolicy
 
 ```TypeScript
@@ -42,30 +36,10 @@ function getLocationPolicy(admin: Want): LocationPolicy
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
-| 201 | Permission verification failed. The application does not have the permission required to call the API. |
-| 9200001 | The application is not an administrator application of the device. |
-| 9200002 | The administrator application does not have permission to manage the device. |
-
-## 示例
-
-```TypeScript
-import { locationManager } from '@kit.MDMKit';
-import { Want } from '@kit.AbilityKit';
-
-let wantTemp: Want = {
-  // 需根据实际情况进行替换
-  bundleName: 'com.example.myapplication',
-  abilityName: 'EnterpriseAdminAbility'
-};
-
-try {
-  let result: locationManager.LocationPolicy = locationManager.getLocationPolicy(wantTemp);
-  console.info(`Succeeded in getting location policy. policy: ${result}`);
-} catch(err) {
-  console.error(`Failed to get location policy. Code: ${err.code}, message: ${err.message}`);
-}
-```
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| [201](../../errorcode-universal.md#201-权限校验失败) | Permission verification failed. The application does not have the permission required to call the API. |
+| [9200001](../errorcode-enterpriseDeviceManager.md#9200001-应用没有激活成设备管理器) | The application is not an administrator application of the device. |
+| [9200002](../errorcode-enterpriseDeviceManager.md#9200002-设备管理器权限不够) | The administrator application does not have permission to manage the device. |
 
 
 ## getLocationPolicy
@@ -104,19 +78,25 @@ function getLocationPolicy(admin: Want | null): LocationPolicy
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
-| 201 | Permission verification failed. The application does not have the permission required to call the API. |
-| 9200001 | The application is not an administrator application of the device. |
-| 9200002 | The administrator application does not have permission to manage the device. |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| [201](../../errorcode-universal.md#201-权限校验失败) | Permission verification failed. The application does not have the permission required to call the API. |
+| [9200001](../errorcode-enterpriseDeviceManager.md#9200001-应用没有激活成设备管理器) | The application is not an administrator application of the device. |
+| [9200002](../errorcode-enterpriseDeviceManager.md#9200002-设备管理器权限不够) | The administrator application does not have permission to manage the device. |
 
 ## 示例
 
 ```TypeScript
 import { locationManager } from '@kit.MDMKit';
+import { Want } from '@kit.AbilityKit';
+
+let wantTemp: Want = {
+  // 需根据实际情况进行替换
+  bundleName: 'com.example.myapplication',
+  abilityName: 'EnterpriseAdminAbility'
+};
 
 try {
-  // 参数需根据实际情况进行替换
-  let result: locationManager.LocationPolicy = locationManager.getLocationPolicy(null);
+  let result: locationManager.LocationPolicy = locationManager.getLocationPolicy(wantTemp);
   console.info(`Succeeded in getting location policy. policy: ${result}`);
 } catch(err) {
   console.error(`Failed to get location policy. Code: ${err.code}, message: ${err.message}`);

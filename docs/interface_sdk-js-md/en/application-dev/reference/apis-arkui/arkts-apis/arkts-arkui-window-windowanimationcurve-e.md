@@ -1,6 +1,6 @@
 # WindowAnimationCurve
 
-窗口动画曲线类型。
+Enumerates the types of window animation curves.
 
 **Since:** 20
 
@@ -16,11 +16,13 @@
 LINEAR = 0
 ```
 
-表示动画从头到尾的速度都是相同的。
+The animation speed is constant from start to finish.
 
-使用该曲线类型时[WindowAnimationConfig](arkts-arkui-window-windowanimationconfig-i.md)中duration必填。
+When this curve type is used, **duration** in  
+[WindowAnimationConfig](arkts-arkui-window-windowanimationconfig-i.md) is mandatory.
 
-使用该曲线类型时[WindowAnimationConfig](arkts-arkui-window-windowanimationconfig-i.md)中param选填，且不生效。
+When this curve type is used, **param** in  
+[WindowAnimationConfig](arkts-arkui-window-windowanimationconfig-i.md) is optional and does not take effect.
 
 **Since:** 20
 
@@ -38,12 +40,13 @@ LINEAR = 0
 INTERPOLATION_SPRING = 1
 ```
 
-表示插值器弹簧曲线，一条从0到1的动画曲线，实际动画值根据曲线进行插值计算。动画时间由曲线参数决定，不受  
-[WindowAnimationConfig](arkts-arkui-window-windowanimationconfig-i.md)中的duration参数控制。
+Interpolator spring curve, an animation curve from 0 to 1, where the actual animation values are interpolated based on the curve. The animation duration is subject to the curve parameters, rather than the **duration**parameter in [WindowAnimationConfig](arkts-arkui-window-windowanimationconfig-i.md).
 
-使用该曲线类型时[WindowAnimationConfig](arkts-arkui-window-windowanimationconfig-i.md)中duration选填，且不生效。
+When this curve type is used, **duration** in  
+[WindowAnimationConfig](arkts-arkui-window-windowanimationconfig-i.md) is optional and does not take effect.
 
-使用该曲线类型时[WindowAnimationConfig](arkts-arkui-window-windowanimationconfig-i.md)中param必填。
+When this curve type is used, **param** in  
+[WindowAnimationConfig](arkts-arkui-window-windowanimationconfig-i.md) is mandatory.
 
 **Since:** 20
 
@@ -61,9 +64,10 @@ INTERPOLATION_SPRING = 1
 CUBIC_BEZIER = 2
 ```
 
-表示贝塞尔曲线。
+Cubic Bézier curve.
 
-使用该曲线类型时[WindowAnimationConfig](arkts-arkui-window-windowanimationconfig-i.md)中的param和duration为必填项。
+When this curve type is used, **param** and **duration** in  
+[WindowAnimationConfig](arkts-arkui-window-windowanimationconfig-i.md) are mandatory.
 
 **Since:** 20
 

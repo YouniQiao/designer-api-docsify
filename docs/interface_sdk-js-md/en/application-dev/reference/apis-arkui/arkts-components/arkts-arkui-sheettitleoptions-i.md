@@ -1,6 +1,6 @@
 # SheetTitleOptions
 
-半模态面板的标题。
+Component sheet title options
 
 **Since:** 11
 
@@ -16,7 +16,7 @@
 subtitle?: ResourceStr
 ```
 
-半模态面板的副标题。
+Defines subtitle text
 
 **Type:** [ResourceStr](../arkts-apis/arkts-arkui-resourcestr-t.md)
 
@@ -38,7 +38,7 @@ subtitle?: ResourceStr
 title: ResourceStr
 ```
 
-半模态面板的主标题。
+Defines title text
 
 **Type:** [ResourceStr](../arkts-apis/arkts-arkui-resourcestr-t.md)
 

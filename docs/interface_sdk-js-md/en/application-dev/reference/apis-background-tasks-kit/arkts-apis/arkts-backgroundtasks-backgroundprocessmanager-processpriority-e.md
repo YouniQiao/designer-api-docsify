@@ -1,6 +1,6 @@
 # ProcessPriority
 
-子进程压制档位。
+Specifies the child process priority.
 
 **Since:** 17
 
@@ -16,7 +16,7 @@
 PROCESS_BACKGROUND = 1
 ```
 
-该档位相较PROCESS_INACTIVE压制效果更显著，获取到的CPU资源更少。推荐执行处于后台的图文页面等用户无感知业务的后台子进程时设置该档位。
+Compared with **PROCESS_INACTIVE**, **PROCESS_LOWER** has a more significant suppression effect and obtains fewer CPU resources. You are advised to set this priority when executing background child processes that cannot be perceived by users, such as background image-text pages.
 
 **Since:** 17
 
@@ -32,7 +32,7 @@ PROCESS_BACKGROUND = 1
 PROCESS_INACTIVE = 2
 ```
 
-推荐正在执行播放音频、导航等用户可感知业务的后台子进程时设置该档位。
+You are advised to set this priority when executing background child processes that can be perceived by users, such as audio playback and navigation.
 
 **Since:** 17
 

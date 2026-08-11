@@ -12,7 +12,7 @@ import { jsLeakWatcher } from 'kits/@kit.PerformanceAnalysisKit';
 function enable(isEnable: boolean): void
 ```
 
-ʹ��ArkTS����й©��⣬Ĭ�Ϲرա���������ռ�й©��Ϣ�������������ܿ�����
+Enables the detection for JS object leaks. This function is disabled by default.
 
 **Since:** 12
 
@@ -26,7 +26,7 @@ function enable(isEnable: boolean): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| isEnable | boolean | Yes | �Ƿ�ʹ��jsLeakWatcher��true��ʹ��jsLeakWatcher��false����ʹ��jsLeakWatcher�� |
+| isEnable | boolean | Yes | Whether to enable **jsLeakWatcher**. **true**: yes; **false**: no. |
 
 ## Examples
 

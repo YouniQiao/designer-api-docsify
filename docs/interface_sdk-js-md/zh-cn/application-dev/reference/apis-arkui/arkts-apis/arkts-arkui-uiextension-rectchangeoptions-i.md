@@ -10,12 +10,6 @@
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
-## 导入模块
-
-```TypeScript
-import { uiExtension } from 'kits/@kit.ArkUI';
-```
-
 ## reason
 
 ```TypeScript
@@ -24,7 +18,7 @@ reason: RectChangeReason
 
 组件矩形变化的原因。
 
-**类型：** [RectChangeReason](arkts-arkui-uiextension-rectchangereason-e.md)
+**类型：** [RectChangeReason](arkts-arkui-window-rectchangereason-e.md)
 
 **起始版本：** 14
 

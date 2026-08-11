@@ -1,6 +1,6 @@
 # DialogResult
 
-对话的响应结果。
+Response result for dialog.
 
 **Since:** 26.1.0
 
@@ -22,7 +22,7 @@ import { DialogButtonOrientation, DialogState, DialogResult, DialogBaseControlle
 dialogId: int
 ```
 
-对话框的ID。取值限定为整数。
+Id of the dialog.The value should be an integer.
 
 **Type:** int
 

@@ -61,7 +61,7 @@ type: ParticleUpdater
 
 **原子化服务API（仅ArkTS-Dyn）：** 从API version 11开始，该接口支持在原子化服务中使用。
 
-**类型：** [ParticleUpdater](arkts-arkui-particle-particleupdater-e.md)
+**类型：** [ParticleUpdater](../arkts-components/arkts-arkui-particleupdater-e.md)
 
 **起始版本：** 23
 

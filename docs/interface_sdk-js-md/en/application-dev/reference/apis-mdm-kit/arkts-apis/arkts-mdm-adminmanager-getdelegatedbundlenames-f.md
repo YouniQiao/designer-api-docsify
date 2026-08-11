@@ -12,7 +12,7 @@ import { adminManager } from 'kits/@kit.MDMKit';
 function getDelegatedBundleNames(admin: Want, policy: string): Array<string>
 ```
 
-查询可以访问某个委托策略的被委托应用，输出被委托应用列表。
+Queries the delegated applications that can access a delegation policy and output the list of delegated applications.
 
 **Since:** 14
 
@@ -30,23 +30,23 @@ function getDelegatedBundleNames(admin: Want, policy: string): Array<string>
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| admin | [Want](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-want-want-c.md) | Yes | 企业设备管理扩展组件。Want中必须包含企业设备管理扩展能力的abilityName和所在应用的bundleName。 |
-| policy | string | Yes | 委托策略。 |
+| admin | [Want](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-want-want-c.md) | Yes | EnterpriseAdminExtensionAbility. **Want** must contain the ability name of the EnterpriseAdminExtensionAbility and the bundle name of the application. |
+| policy | string | Yes | Delegation policy. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Array&lt;string&gt; | 被委托应用列表。 |
+| Array&lt;string&gt; | List of delegated applications. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
-| 201 | Permission verification failed. The application does not have the permission required to call the API. |
-| 9200001 | The application is not an administrator application of the device. |
-| 9200002 | The administrator application does not have permission to manage the device. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed. The application does not have the permission required to call the API. |
+| [9200001](../errorcode-enterpriseDeviceManager.md#9200001-deviceadmin-not-enabled) | The application is not an administrator application of the device. |
+| [9200002](../errorcode-enterpriseDeviceManager.md#9200002-permission-denied) | The administrator application does not have permission to manage the device. |
 
 ## Examples
 

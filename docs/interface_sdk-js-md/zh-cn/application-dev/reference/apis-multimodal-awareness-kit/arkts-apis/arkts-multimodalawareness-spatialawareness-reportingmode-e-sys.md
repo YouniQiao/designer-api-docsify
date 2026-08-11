@@ -1,6 +1,6 @@
 # ReportingMode（系统接口）
 
-Enum for distance measurement result reporting modes.
+测距接口执行完成后结果的上报模式。
 
 **起始版本：** 23
 
@@ -18,7 +18,7 @@ Enum for distance measurement result reporting modes.
 REPORT_MODE_PERIODIC_REPORTING = 0
 ```
 
-indicates periodic reporting
+表示周期性上报。
 
 **起始版本：** 23
 
@@ -38,7 +38,7 @@ indicates periodic reporting
 REPORT_MODE_TRIGGERED_REPORTING = 1
 ```
 
-indicates triggered reporting
+表示触发式上报。
 
 **起始版本：** 23
 

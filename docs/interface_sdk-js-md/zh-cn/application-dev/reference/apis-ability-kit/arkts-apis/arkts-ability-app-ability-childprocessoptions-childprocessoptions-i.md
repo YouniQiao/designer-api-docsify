@@ -10,12 +10,6 @@
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 
-## 导入模块
-
-```TypeScript
-import { ChildProcessOptions } from 'kits/@kit.AbilityKit';
-```
-
 ## isolationMode
 
 ```TypeScript

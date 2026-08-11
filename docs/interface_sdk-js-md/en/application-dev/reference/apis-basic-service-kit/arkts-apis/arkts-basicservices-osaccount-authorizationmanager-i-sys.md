@@ -1,6 +1,6 @@
 # AuthorizationManager (System API)
 
-系统账号授权管理类，用于管理系统账号授权。
+Defines the OS account authorization manager class.
 
 **Since:** 24
 
@@ -24,7 +24,7 @@ import { osAccount } from 'kits/@kit.BasicServicesKit';
 acquireAuthorization(privilege: string, options?: AcquireAuthorizationOptions): Promise<AcquireAuthorizationResult>
 ```
 
-为当前进程获取授权。
+Acquires an authorization for a process.
 
 **Since:** 24
 
@@ -44,23 +44,23 @@ acquireAuthorization(privilege: string, options?: AcquireAuthorizationOptions): 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| privilege | string | Yes | 目标权限，详见 [配置文件](https://gitcode.com/openharmony/account_os_account/blob/master/services/accountmgr/authorization_manager/config/privileges.json) 。 |
-| options | [AcquireAuthorizationOptions](arkts-basicservices-osaccount-acquireauthorizationoptions-i-sys.md) | No | 获取授权的选项，默认为空。 |
+| privilege | string | Yes | Target permission. For details, see [configuration file](https://gitcode.com/openharmony/account_os_account/blob/master/services/accountmgr/authorization_manager/config/privileges.json). |
+| options | [AcquireAuthorizationOptions](arkts-basicservices-osaccount-acquireauthorizationoptions-i-sys.md) | No | Authorization options. This parameter is left empty by default. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;AcquireAuthorizationResult&gt; | Promise对象，返回获取授权的结果。 |
+| Promise&lt;AcquireAuthorizationResult&gt; | Promise used to return the authorization result. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 201 | Permission denied. |
-| 12300002 | Invalid privilege or options. |
-| 202 | Not system application. |
-| 12300001 | The system service works abnormally. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
+| [12300002](../../apis-basic-services-kit/errorcode-account.md#12300002-invalid-parameter) | Invalid privilege or options. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system application. |
+| [12300001](../../apis-basic-services-kit/errorcode-account.md#12300001-system-service-abnormal) | The system service works abnormally. |
 
 ## Examples
 
@@ -92,7 +92,7 @@ try {
 hasAuthorization(privilege: string): Promise<boolean>
 ```
 
-检查当前进程是否已获得指定特权的授权。
+Checks whether the current process has specified authorization.
 
 **Since:** 24
 
@@ -110,21 +110,21 @@ hasAuthorization(privilege: string): Promise<boolean>
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| privilege | string | Yes | 目标权限，详见 [配置文件](https://gitcode.com/openharmony/account_os_account/blob/master/services/accountmgr/authorization_manager/config/privileges.json) 。 |
+| privilege | string | Yes | Target permission. For details, see [configuration file](https://gitcode.com/openharmony/account_os_account/blob/master/services/accountmgr/authorization_manager/config/privileges.json). |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;boolean&gt; | Promise对象，返回true表示已获得指定特权的授权；返回false表示未获得指定特权的授权。 |
+| Promise&lt;boolean&gt; | Promise used to return the result. The value **true** indicates that the current process has specified authorization, and **false** indicates the opposite. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 12300002 | Invalid privilege. |
-| 202 | Not system application. |
-| 12300001 | The system service works abnormally. |
+| [12300002](../../apis-basic-services-kit/errorcode-account.md#12300002-invalid-parameter) | Invalid privilege. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system application. |
+| [12300001](../../apis-basic-services-kit/errorcode-account.md#12300001-system-service-abnormal) | The system service works abnormally. |
 
 ## Examples
 
@@ -153,7 +153,7 @@ try {
 releaseAuthorization(privilege: string): Promise<void>
 ```
 
-为当前进程撤销指定特权的授权。
+Releases the specified authorization for the current process.
 
 **Since:** 24
 
@@ -171,21 +171,21 @@ releaseAuthorization(privilege: string): Promise<void>
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| privilege | string | Yes | 目标权限，详见 [配置文件](https://gitcode.com/openharmony/account_os_account/blob/master/services/accountmgr/authorization_manager/config/privileges.json) 。 |
+| privilege | string | Yes | Target permission. For details, see [configuration file](https://gitcode.com/openharmony/account_os_account/blob/master/services/accountmgr/authorization_manager/config/privileges.json). |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise对象，无返回结果。 |
+| Promise&lt;void&gt; | Promise that returns no value. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 12300002 | Invalid privilege. |
-| 202 | Not system application. |
-| 12300001 | The system service works abnormally. |
+| [12300002](../../apis-basic-services-kit/errorcode-account.md#12300002-invalid-parameter) | Invalid privilege. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system application. |
+| [12300001](../../apis-basic-services-kit/errorcode-account.md#12300001-system-service-abnormal) | The system service works abnormally. |
 
 ## Examples
 

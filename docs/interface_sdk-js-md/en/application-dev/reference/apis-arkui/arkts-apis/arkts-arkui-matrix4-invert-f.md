@@ -12,9 +12,7 @@ import { matrix4 } from 'kits/@kit.ArkUI';
 function invert(): Matrix4Transit
 ```
 
-Matrix的逆函数，可以返回一个当前矩阵对象的逆矩阵，即效果正好相反。
-
-> **说明：**
+Inverts this matrix object.
 
 **Since:** 7
 
@@ -22,7 +20,7 @@ Matrix的逆函数，可以返回一个当前矩阵对象的逆矩阵，即效�
 
 **Deprecated since:** 10
 
-**Substitutes:** [matrix4.Matrix4Transit.invert](arkts-arkui-matrix4-matrix4transit-i.md#invert)
+**Substitutes:** [Matrix4Transit.invert](arkts-arkui-matrix4-matrix4transit-i.md#invert)
 
 <!--Device-matrix4-function invert(): Matrix4Transit--><!--Device-matrix4-function invert(): Matrix4Transit-End-->
 
@@ -32,5 +30,5 @@ Matrix的逆函数，可以返回一个当前矩阵对象的逆矩阵，即效�
 
 | Type | Description |
 | --- | --- |
-| [Matrix4Transit](arkts-arkui-matrix4-matrix4transit-i.md) | 当前矩阵的逆矩阵对象。 |
+| [Matrix4Transit](arkts-arkui-matrix4-matrix4transit-i.md) | Inverse matrix object of the current matrix. |
 

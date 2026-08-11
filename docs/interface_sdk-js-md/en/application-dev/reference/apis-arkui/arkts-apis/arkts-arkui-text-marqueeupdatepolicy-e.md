@@ -1,6 +1,6 @@
 # MarqueeUpdatePolicy
 
-跑马灯组件属性更新后，跑马灯的滚动策略。
+Marquee scrolling policy after text update.
 
 **Since:** 23
 
@@ -16,7 +16,7 @@
 DEFAULT = 0
 ```
 
-跑马灯组件属性更新后，从开始位置，运行跑马灯效果。
+Reset scroll position and restart scroll.
 
 **Since:** 23
 
@@ -34,7 +34,7 @@ DEFAULT = 0
 PRESERVE_POSITION = 1
 ```
 
-跑马灯组件属性更新后，保持当前位置，运行跑马灯效果。
+Preserve scroll position, just change to new text.
 
 **Since:** 23
 

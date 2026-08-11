@@ -1,11 +1,5 @@
 # isConcurrent
 
-## 导入模块
-
-```TypeScript
-import { taskpool } from 'kits/@kit.ArkTS';
-```
-
 ## isConcurrent
 
 ```TypeScript

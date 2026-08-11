@@ -1,6 +1,6 @@
 # OnMessageEvent
 
-定义页面返回或销毁时触发该回调。
+Represents the callback invoked when the page is navigated back or destroyed.
 
 **Since:** 12
 
@@ -22,7 +22,7 @@ import { AtomicServiceWeb, OnMessageEvent, OnPageEndEvent, OnHttpErrorReceiveEve
 data: object[]
 ```
 
-消息列表。
+The message data list.
 
 **Type:** object[]
 

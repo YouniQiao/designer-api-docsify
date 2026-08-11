@@ -4,7 +4,7 @@
 declare type SpringLoadingContext = import('../api/@ohos.arkui.dragController').default.SpringLoadingContext
 ```
 
-定义回调上下文信息的类，用于在悬停检测回调中传递给应用程序，使其能访问拖拽状态。
+Defines callback context information, which is passed to the application in the hover detection callback to allow the application to access the drag status.
 
 **Since:** 20
 

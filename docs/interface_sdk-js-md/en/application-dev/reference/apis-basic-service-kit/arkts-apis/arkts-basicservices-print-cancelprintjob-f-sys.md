@@ -12,7 +12,7 @@ import { print } from 'kits/@kit.BasicServicesKit';
 function cancelPrintJob(jobId: string, callback: AsyncCallback<void>): void
 ```
 
-取消已发送到打印机的打印任务，使用callback异步回调。
+Cancels the specified print job, which is on the print queue of the printer. This API uses an asynchronous callback to return the result.
 
 **Since:** 10
 
@@ -30,16 +30,16 @@ function cancelPrintJob(jobId: string, callback: AsyncCallback<void>): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| jobId | string | Yes | 打印任务ID。 |
-| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | 异步取消已发送到打印机的打印任务之后的回调。 |
+| jobId | string | Yes | Print job ID. |
+| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
-| 201 | the application does not have permission to call this function. |
-| 202 | not system application |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
+| [201](../../errorcode-universal.md#201-permission-denied) | the application does not have permission to call this function. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | not system application |
 
 ## Examples
 
@@ -64,7 +64,7 @@ print.cancelPrintJob(jobId, (err: BusinessError) => {
 function cancelPrintJob(jobId: string): Promise<void>
 ```
 
-取消已发送到打印机的打印任务，使用Promise异步回调。
+Cancels the specified print job, which is on the print queue of the printer. This API uses a promise to return the result.
 
 **Since:** 10
 
@@ -82,21 +82,21 @@ function cancelPrintJob(jobId: string): Promise<void>
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| jobId | string | Yes | 打印任务ID。 |
+| jobId | string | Yes | Print job ID. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise对象，无返回结果。 |
+| Promise&lt;void&gt; | Promise that returns no value. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
-| 201 | the application does not have permission to call this function. |
-| 202 | not system application |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
+| [201](../../errorcode-universal.md#201-permission-denied) | the application does not have permission to call this function. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | not system application |
 
 ## Examples
 

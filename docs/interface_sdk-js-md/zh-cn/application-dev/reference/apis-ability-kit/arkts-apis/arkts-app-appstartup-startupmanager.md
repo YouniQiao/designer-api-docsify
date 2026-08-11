@@ -16,12 +16,6 @@
 
 **系统能力：** SystemCapability.Ability.AppStartup
 
-## 导入模块
-
-```TypeScript
-import { startupManager } from 'kits/@kit.AbilityKit';
-```
-
 ## 汇总
 
 ### 函数

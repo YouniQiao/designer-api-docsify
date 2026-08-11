@@ -1,11 +1,5 @@
 # createAVPlayer
 
-## 导入模块
-
-```TypeScript
-import { media } from 'kits/@kit.MediaKit';
-```
-
 ## createAVPlayer
 
 ```TypeScript
@@ -42,7 +36,7 @@ function createAVPlayer(callback: AsyncCallback<AVPlayer>): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 5400101 | No memory. Return by callback. |
+| [5400101](../errorcode-media.md#5400101-内存分配失败) | No memory. Return by callback. |
 
 ## 示例
 
@@ -89,7 +83,7 @@ The actual number of instances that can be created may be different.It depends o
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 5400101 | No memory. Return by callback. |
+| [5400101](../errorcode-media.md#5400101-内存分配失败) | No memory. Return by callback. |
 
 
 ## createAVPlayer
@@ -128,7 +122,7 @@ function createAVPlayer(): Promise<AVPlayer>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 5400101 | No memory. Return by promise. |
+| [5400101](../errorcode-media.md#5400101-内存分配失败) | No memory. Return by promise. |
 
 ## 示例
 
@@ -177,5 +171,5 @@ The actual number of instances that can be created may be different. It depends 
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 5400101 | No memory. Return by promise. |
+| [5400101](../errorcode-media.md#5400101-内存分配失败) | No memory. Return by promise. |
 

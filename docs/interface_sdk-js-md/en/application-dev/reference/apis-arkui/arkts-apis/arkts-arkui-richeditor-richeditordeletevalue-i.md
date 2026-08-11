@@ -1,6 +1,6 @@
 # RichEditorDeleteValue
 
-删除操作和被删除内容的信息。
+Provides an interface for deleting value from text.
 
 **Since:** 23
 
@@ -16,7 +16,7 @@
 direction: RichEditorDeleteDirection
 ```
 
-删除操作的方向。
+The deleted direction.
 
 **Type:** [RichEditorDeleteDirection](../arkts-components/arkts-arkui-richeditordeletedirection-e.md)
 
@@ -36,7 +36,7 @@ direction: RichEditorDeleteDirection
 length: int
 ```
 
-删除内容长度。
+The deleted text length.
 
 **Type:** int
 
@@ -56,7 +56,7 @@ length: int
 offset: int
 ```
 
-删除内容的偏移位置。
+The offset of deleting.
 
 **Type:** int
 
@@ -76,7 +76,7 @@ offset: int
 richEditorDeleteSpans: Array<RichEditorTextSpanResult | RichEditorImageSpanResult>
 ```
 
-删除的文本或图片Span的信息。
+The deleted span object.
 
 **Type:** Array&lt;RichEditorTextSpanResult \| RichEditorImageSpanResult&gt;
 

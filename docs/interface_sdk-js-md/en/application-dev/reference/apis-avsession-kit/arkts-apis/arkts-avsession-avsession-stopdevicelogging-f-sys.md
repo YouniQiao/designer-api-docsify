@@ -12,7 +12,7 @@ import { avSession } from 'kits/@kit.AVSessionKit';
 function stopDeviceLogging(): Promise<void>
 ```
 
-停止当前设备日志写入。结果通过Promise异步回调方式返回。
+Stop the current device written even the discovery is ongoing.
 
 **Since:** 13
 
@@ -28,21 +28,25 @@ function stopDeviceLogging(): Promise<void>
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise对象。当停止当前设备日志写入，无返回结果，否则返回错误对象。 |
+| Promise&lt;void&gt; | Promise for the result |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 6600101 | Session service exception. |
-| 6600102 | The session does not exist. |
-| 202 | Not System App. |
+| [6600101](../errorcode-avsession.md#6600101-session-service-exception) | Session service exception. |
+| [6600102](../errorcode-avsession.md#6600102-session-does-not-exist) | The session does not exist. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not System App. |
 
 ## Examples
 
 ```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
 avSession.stopDeviceLogging().then(() => {
-  console.info('Succeeded in stopping casting.');
+  console.info('stopCasting successfully');
+}).catch((err: BusinessError) => {
+  console.error(`stopCasting BusinessError: code: ${err.code}, message: ${err.message}`);
 });
 ```
 

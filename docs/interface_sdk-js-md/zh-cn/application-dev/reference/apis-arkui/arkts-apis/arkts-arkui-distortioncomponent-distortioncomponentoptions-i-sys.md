@@ -20,7 +20,7 @@ distortion?: DistortionParam
 
 空间扭曲形变参数。通过指定四个角的位置关系和四条边的桶形变程度产生空间扭曲效果。
 
-**类型：** [DistortionParam](arkts-arkui-distortioncomponent-distortionparam-i-sys.md)
+**类型：** [DistortionParam](../arkts-components/arkts-arkui-distortionparam-i-sys.md)
 
 **起始版本：** 26.0.0
 

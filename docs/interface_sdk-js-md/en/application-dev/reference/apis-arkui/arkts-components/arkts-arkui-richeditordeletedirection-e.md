@@ -1,6 +1,6 @@
 # RichEditorDeleteDirection
 
-删除方向。
+Deletion direction.
 
 **Since:** 10
 
@@ -16,7 +16,7 @@
 BACKWARD
 ```
 
-向后删除。
+Backward.
 
 **Since:** 10
 
@@ -36,7 +36,7 @@ BACKWARD
 FORWARD
 ```
 
-向前删除。
+Forward.
 
 **Since:** 10
 

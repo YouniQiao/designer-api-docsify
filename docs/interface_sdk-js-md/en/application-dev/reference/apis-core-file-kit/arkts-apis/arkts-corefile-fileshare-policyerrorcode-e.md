@@ -1,6 +1,6 @@
 # PolicyErrorCode
 
-枚举授予或激活权限策略失败的URI对应的错误码。
+Enumerates the error code of the permission policy for the URI operation.
 
 **Since:** 11
 
@@ -16,7 +16,7 @@
 PERSISTENCE_FORBIDDEN = 1
 ```
 
-URI禁止被持久化。
+Indicates that the policy is not allowed to be persisted.
 
 **Since:** 11
 
@@ -32,7 +32,7 @@ URI禁止被持久化。
 INVALID_MODE = 2
 ```
 
-无效的模式。
+Indicates that the mode of this policy is invalid.
 
 **Since:** 11
 
@@ -48,7 +48,7 @@ INVALID_MODE = 2
 INVALID_PATH = 3
 ```
 
-无效的路径。
+Indicates that the path of this policy is invalid.
 
 **Since:** 11
 
@@ -64,7 +64,7 @@ INVALID_PATH = 3
 PERMISSION_NOT_PERSISTED = 4
 ```
 
-权限没有被持久化。
+Indicates that the permission is not persistent.
 
 **Since:** 12
 

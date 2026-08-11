@@ -12,7 +12,7 @@ import { display } from 'kits/@kit.ArkUI';
 function setFoldStatusLocked(locked: boolean): void
 ```
 
-设置可折叠设备当前折叠状态的锁定状态。
+Sets whether to lock the current fold status of the foldable device.
 
 **Since:** 11
 
@@ -28,15 +28,15 @@ function setFoldStatusLocked(locked: boolean): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| locked | boolean | Yes | 可折叠设备的折叠状态是否锁定。true表示锁定，false表示不锁定。 |
+| locked | boolean | Yes | Whether to lock the current fold status of the foldable device. **true** to lock, **false** otherwise. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt;2. Incorrect parameter types. |
-| 1400003 | This display manager service works abnormally. |
-| 202 | Permission verification failed. A non-system application calls a system API. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt;2. Incorrect parameter types. |
+| [1400003](../errorcode-display.md#1400003-abnormal-display-manager-service) | This display manager service works abnormally. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
 
 ## Examples
 
@@ -45,10 +45,9 @@ import { display } from '@kit.ArkUI';
 
 try {
   let locked: boolean = false;
-  // Set the fold status to not locked.
   display.setFoldStatusLocked(locked);
 } catch (exception) {
-  console.error(`Failed to change the fold status locked mode. Code: ${exception.code}, message: ${exception.message}`);
+  console.error(`Failed to change the fold status locked mode. Code: ${exception.code} , message : ${exception.message}`);
 }
 ```
 

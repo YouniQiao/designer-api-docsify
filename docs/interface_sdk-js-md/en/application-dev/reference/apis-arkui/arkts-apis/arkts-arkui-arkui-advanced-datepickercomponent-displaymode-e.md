@@ -1,6 +1,6 @@
 # DisplayMode
 
-DisplayMode枚举用于定义选择器的显示模式。
+DisplayMode enum defines the display mode of the picker.
 
 **Since:** 26.0.0
 
@@ -16,7 +16,7 @@ DisplayMode枚举用于定义选择器的显示模式。
 DATE = 0
 ```
 
-仅显示日期。
+Displays only the date.
 
 **Since:** 26.0.0
 
@@ -34,7 +34,7 @@ DATE = 0
 TIME = 1
 ```
 
-仅显示时间。
+Displays only the time.
 
 **Since:** 26.0.0
 
@@ -52,7 +52,7 @@ TIME = 1
 DATE_TIME = 2
 ```
 
-同时显示日期和时间。
+Displays both date and time.
 
 **Since:** 26.0.0
 

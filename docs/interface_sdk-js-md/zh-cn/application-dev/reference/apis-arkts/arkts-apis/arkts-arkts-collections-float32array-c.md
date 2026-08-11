@@ -17,19 +17,13 @@
 
 **系统能力：** SystemCapability.Utils.Lang
 
-## 导入模块
-
-```TypeScript
-import { collections } from 'kits/@kit.ArkTS';
-```
-
 ## [Symbol.iterator]
 
 ```TypeScript
 [Symbol.iterator](): IterableIterator<number>
 ```
 
-返回一个迭代器，迭代器的每一项都是一个 JavaScript 对象，并返回该对象。
+返回包含ArkTS Float32Array中每个元素的迭代器。
 
 **起始版本：** 12
 
@@ -45,13 +39,13 @@ import { collections } from 'kits/@kit.ArkTS';
 
 | 类型 | 说明 |
 | --- | --- |
-| [IterableIterator](arkts-arkts-iterator-iterableiterator-i.md)&lt;number&gt; | 迭代器对象。 |
+| IterableIterator&lt;number&gt; | 迭代器对象。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 10200011 | The Symbol.iterator method cannot be bound. |
+| [10200011](../errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) | The Symbol.iterator method cannot be bound. |
 
 ## at
 
@@ -87,8 +81,8 @@ at(index: number): number | undefined
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 10200011 | The at method cannot be bound. |
-| 10200201 | Concurrent modification error. |
+| [10200011](../errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) | The at method cannot be bound. |
+| [10200201](../errorcode-utils.md#10200201-concurrent修改错误) | Concurrent modification error. |
 
 ## constructor
 
@@ -112,7 +106,7 @@ constructor()
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 10200012 | The Float32Array's constructor cannot be directly invoked. |
+| [10200012](../errorcode-utils.md#10200012-构造函数调用异常) | The Float32Array's constructor cannot be directly invoked. |
 
 ## constructor
 
@@ -136,13 +130,13 @@ constructor(length: number)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| length | number | 是 | 用于指定ArkTS Float32Array的长度。 |
+| length | number | 是 | 用于指定ArkTS Float32Array的长度，取值需为非负整数。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 10200012 | The Float32Array's constructor cannot be directly invoked. |
+| [10200012](../errorcode-utils.md#10200012-构造函数调用异常) | The Float32Array's constructor cannot be directly invoked. |
 
 ## constructor
 
@@ -172,7 +166,7 @@ constructor(elements: Iterable<number>)
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 10200012 | The Float32Array's constructor cannot be directly invoked. |
+| [10200012](../errorcode-utils.md#10200012-构造函数调用异常) | The Float32Array's constructor cannot be directly invoked. |
 
 ## constructor
 
@@ -196,13 +190,13 @@ constructor(array: ArrayLike<number> | ArrayBuffer)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| array | [ArrayLike](arkts-arkts-arraylike-i.md)&lt;number&gt; \| ArrayBuffer | 是 | 用于构造ArkTS Float32Array的对象。当参数类型是ArrayBuffer时buffer所占的字节数须是4的整数倍。 |
+| array | ArrayLike&lt;number&gt; \| ArrayBuffer | 是 | 用于构造ArkTS Float32Array的对象。 当参数类型是ArrayBuffer时buffer所占的字节数需是4的整数倍。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 10200012 | The Float32Array's constructor cannot be directly invoked. |
+| [10200012](../errorcode-utils.md#10200012-构造函数调用异常) | The Float32Array's constructor cannot be directly invoked. |
 
 ## constructor
 
@@ -210,7 +204,7 @@ constructor(array: ArrayLike<number> | ArrayBuffer)
 constructor(buffer: ArrayBuffer, byteOffset?: number, length?: number)
 ```
 
-构造函数，以ArrayBuffer创建一个ArkTS Float32Array对象。
+构造函数，以ArkTS ArrayBuffer创建一个ArkTS Float32Array对象。
 
 **起始版本：** 12
 
@@ -226,7 +220,7 @@ constructor(buffer: ArrayBuffer, byteOffset?: number, length?: number)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| buffer | ArrayBuffer | 是 | 用于构造ArkTS Float32Array的ArrayBuffer对象。buffer所占的字节数须是4的整数倍。 |
+| buffer | ArrayBuffer | 是 | 用于构造ArkTS Float32Array的ArrayBuffer对象。buffer所占的字节数需是4的整数倍。 |
 | byteOffset | number | 否 | 指定buffer的字节偏移，从0开始，默认为**0**。 |
 | length | number | 否 | 指定ArkTS Float32Array的长度，默认为**0**。 |
 
@@ -234,7 +228,7 @@ constructor(buffer: ArrayBuffer, byteOffset?: number, length?: number)
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 10200012 | The Float32Array's constructor cannot be directly invoked. |
+| [10200012](../errorcode-utils.md#10200012-构造函数调用异常) | The Float32Array's constructor cannot be directly invoked. |
 
 ## copyWithin
 
@@ -259,8 +253,8 @@ copyWithin(target: number, start: number, end?: number): Float32Array
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | target | number | 是 | 目标起始位置的下标，如果`target < 0`，则会从`target + array.length`位置开始。 |
-| start | number | 是 | 源起始位置下标，如果`start < 0`，则会从`start + Float32Array.length`位置开始。 |
-| end | number | 否 | 源终止位置下标（不包含end位置的元素），如果`end < 0`，则会从`end + Float32Array.length`位置终止。默认为ArkTS Float32Array的长度。 |
+| start | number | 是 | 源起始位置索引，如果`start < 0`，则会从`start + Float32Array.length`位置开始。 |
+| end | number | 否 | 源终止位置索引（不包含end位置的元素），如果`end < 0`，则会从`end + Float32Array.length`位置终止。默认为ArkTS Float32Array的长度。 |
 
 **返回值：**
 
@@ -272,8 +266,8 @@ copyWithin(target: number, start: number, end?: number): Float32Array
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 10200011 | The copyWithin method cannot be bound. |
-| 10200201 | Concurrent modification error. |
+| [10200011](../errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) | The copyWithin method cannot be bound. |
+| [10200201](../errorcode-utils.md#10200201-concurrent修改错误) | Concurrent modification error. |
 
 ## entries
 
@@ -297,14 +291,14 @@ entries(): IterableIterator<[number, number]>
 
 | 类型 | 说明 |
 | --- | --- |
-| [IterableIterator](arkts-arkts-iterator-iterableiterator-i.md)&lt;[number, number]&gt; | 迭代器对象。 |
+| IterableIterator&lt;[number, number]&gt; | 迭代器对象。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 10200011 | The entries method cannot be bound. |
-| 10200201 | Concurrent modification error. |
+| [10200011](../errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) | The entries method cannot be bound. |
+| [10200201](../errorcode-utils.md#10200201-concurrent修改错误) | Concurrent modification error. |
 
 ## every
 
@@ -340,8 +334,8 @@ every(predicate: TypedArrayPredicateFn<number, Float32Array>): boolean
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 10200011 | The every method cannot be bound. |
-| 10200201 | Concurrent modification error. |
+| [10200011](../errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) | The every method cannot be bound. |
+| [10200201](../errorcode-utils.md#10200201-concurrent修改错误) | Concurrent modification error. |
 
 ## fill
 
@@ -379,8 +373,8 @@ fill(value: number, start?: number, end?: number): Float32Array
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 10200011 | The fill method cannot be bound. |
-| 10200201 | Concurrent modification error. |
+| [10200011](../errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) | The fill method cannot be bound. |
+| [10200201](../errorcode-utils.md#10200201-concurrent修改错误) | Concurrent modification error. |
 
 ## filter
 
@@ -416,8 +410,8 @@ filter(predicate: TypedArrayPredicateFn<number, Float32Array>): Float32Array
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 10200011 | The filter method cannot be bound. |
-| 10200201 | Concurrent modification error. |
+| [10200011](../errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) | The filter method cannot be bound. |
+| [10200201](../errorcode-utils.md#10200201-concurrent修改错误) | Concurrent modification error. |
 
 ## find
 
@@ -453,8 +447,8 @@ find(predicate: TypedArrayPredicateFn<number, Float32Array>): number | undefined
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 10200011 | The find method cannot be bound. |
-| 10200201 | Concurrent modification error. |
+| [10200011](../errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) | The find method cannot be bound. |
+| [10200201](../errorcode-utils.md#10200201-concurrent修改错误) | Concurrent modification error. |
 
 ## findIndex
 
@@ -490,8 +484,8 @@ findIndex(predicate: TypedArrayPredicateFn<number, Float32Array>): number
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 10200011 | The findIndex method cannot be bound. |
-| 10200201 | Concurrent modification error. |
+| [10200011](../errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) | The findIndex method cannot be bound. |
+| [10200201](../errorcode-utils.md#10200201-concurrent修改错误) | Concurrent modification error. |
 
 ## forEach
 
@@ -521,8 +515,8 @@ forEach(callbackFn: TypedArrayForEachCallback<number, Float32Array>): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 10200011 | The forEach method cannot be bound. |
-| 10200201 | Concurrent modification error. |
+| [10200011](../errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) | The forEach method cannot be bound. |
+| [10200201](../errorcode-utils.md#10200201-concurrent修改错误) | Concurrent modification error. |
 
 ## from
 
@@ -530,7 +524,7 @@ forEach(callbackFn: TypedArrayForEachCallback<number, Float32Array>): void
 static from(arrayLike: ArrayLike<number>): Float32Array
 ```
 
-从一个ArrayLike或者可迭代对象中创建一个ArkTS Float32Array对象。
+从一个ArrayLike中创建一个ArkTS Float32Array对象。
 
 **起始版本：** 12
 
@@ -546,7 +540,7 @@ static from(arrayLike: ArrayLike<number>): Float32Array
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| arrayLike | [ArrayLike](arkts-arkts-arraylike-i.md)&lt;number&gt; | 是 | 用于构造ArkTS Float32Array的ArrayLike对象。 |
+| arrayLike | ArrayLike&lt;number&gt; | 是 | 用于构造ArkTS Float32Array的ArrayLike对象。 |
 
 **返回值：**
 
@@ -576,7 +570,7 @@ static from<T>(arrayLike: ArrayLike<T>, mapFn: TypedArrayFromMapFn<T, number>): 
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| arrayLike | [ArrayLike](arkts-arkts-arraylike-i.md)&lt;T&gt; | 是 | 用于构造ArrayLike对象。 |
+| arrayLike | ArrayLike&lt;T&gt; | 是 | 用于构造ArrayLike对象。 |
 | mapFn | [TypedArrayFromMapFn](arkts-arkts-collections-typedarrayfrommapfn-t.md)&lt;T, number&gt; | 是 | 映射函数。 |
 
 **返回值：**
@@ -651,8 +645,8 @@ includes(searchElement: number, fromIndex?: number): boolean
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 10200011 | The includes method cannot be bound. |
-| 10200201 | Concurrent modification error. |
+| [10200011](../errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) | The includes method cannot be bound. |
+| [10200201](../errorcode-utils.md#10200201-concurrent修改错误) | Concurrent modification error. |
 
 ## indexOf
 
@@ -689,8 +683,8 @@ indexOf(searchElement: number, fromIndex?: number): number
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 10200011 | The indexOf method cannot be bound. |
-| 10200201 | Concurrent modification error. |
+| [10200011](../errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) | The indexOf method cannot be bound. |
+| [10200201](../errorcode-utils.md#10200201-concurrent修改错误) | Concurrent modification error. |
 
 ## join
 
@@ -726,8 +720,8 @@ join(separator?: string): string
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 10200011 | The join method cannot be bound. |
-| 10200201 | Concurrent modification error. |
+| [10200011](../errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) | The join method cannot be bound. |
+| [10200201](../errorcode-utils.md#10200201-concurrent修改错误) | Concurrent modification error. |
 
 ## keys
 
@@ -751,14 +745,14 @@ keys(): IterableIterator<number>
 
 | 类型 | 说明 |
 | --- | --- |
-| [IterableIterator](arkts-arkts-iterator-iterableiterator-i.md)&lt;number&gt; | 迭代器对象。 |
+| IterableIterator&lt;number&gt; | 迭代器对象。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 10200011 | The keys method cannot be bound. |
-| 10200201 | Concurrent modification error. |
+| [10200011](../errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) | The keys method cannot be bound. |
+| [10200201](../errorcode-utils.md#10200201-concurrent修改错误) | Concurrent modification error. |
 
 ## lastIndexOf
 
@@ -795,8 +789,8 @@ lastIndexOf(searchElement: number, fromIndex?: number): number
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 10200011 | The lastIndexOf method cannot be bound. |
-| 10200201 | Concurrent modification error. |
+| [10200011](../errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) | The lastIndexOf method cannot be bound. |
+| [10200201](../errorcode-utils.md#10200201-concurrent修改错误) | Concurrent modification error. |
 
 ## map
 
@@ -832,8 +826,8 @@ map(callbackFn: TypedArrayMapCallback<number, Float32Array>): Float32Array
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 10200011 | The map method cannot be bound. |
-| 10200201 | Concurrent modification error. |
+| [10200011](../errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) | The map method cannot be bound. |
+| [10200201](../errorcode-utils.md#10200201-concurrent修改错误) | Concurrent modification error. |
 
 ## of
 
@@ -841,7 +835,7 @@ map(callbackFn: TypedArrayMapCallback<number, Float32Array>): Float32Array
 static of(...items: number[]): Float32Array
 ```
 
-通过可变数量的参数创建一个新的ArkTS Float32Array对象，参数个数可以是0个、1个或者多个。
+通过可变数量的参数创建一个新的ArkTS Float32Array对象。
 
 **起始版本：** 18
 
@@ -899,8 +893,8 @@ reduce(callbackFn: TypedArrayReduceCallback<number, number, Float32Array>): numb
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 10200011 | The reduce method cannot be bound. |
-| 10200201 | Concurrent modification error. |
+| [10200011](../errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) | The reduce method cannot be bound. |
+| [10200201](../errorcode-utils.md#10200201-concurrent修改错误) | Concurrent modification error. |
 
 ## reduce
 
@@ -937,8 +931,8 @@ reduce<U = number>(callbackFn: TypedArrayReduceCallback<U, number, Float32Array>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 10200011 | The reduce method cannot be bound. |
-| 10200201 | Concurrent modification error. |
+| [10200011](../errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) | The reduce method cannot be bound. |
+| [10200201](../errorcode-utils.md#10200201-concurrent修改错误) | Concurrent modification error. |
 
 ## reduceRight
 
@@ -946,7 +940,7 @@ reduce<U = number>(callbackFn: TypedArrayReduceCallback<U, number, Float32Array>
 reduceRight<U = number>(callbackFn: TypedArrayReduceCallback<U, number, Float32Array>, initialValue: U): U
 ```
 
-反向遍历ArkTS Float32Array，对ArkTS Float32Array中的每个元素执行归约函数，且接收一个初始值作为归约函数首次调用的参数，并返回最终的归约结果。
+反向遍历ArkTS Float32Array，对每个元素执行归约函数，且接收一个初始值作为归约函数首次调用的参数，并返回最终的归约结果。
 
 **起始版本：** 18
 
@@ -975,8 +969,8 @@ reduceRight<U = number>(callbackFn: TypedArrayReduceCallback<U, number, Float32A
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 10200011 | The reduceRight method cannot be bound. |
-| 10200201 | Concurrent modification error. |
+| [10200011](../errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) | The reduceRight method cannot be bound. |
+| [10200201](../errorcode-utils.md#10200201-concurrent修改错误) | Concurrent modification error. |
 
 ## reduceRight
 
@@ -984,7 +978,7 @@ reduceRight<U = number>(callbackFn: TypedArrayReduceCallback<U, number, Float32A
 reduceRight(callbackFn: TypedArrayReduceCallback<number, number, Float32Array>): number
 ```
 
-反向遍历ArkTS Float32Array，对ArkTS Float32Array中的每个元素执行归约函数，并返回最终的归约结果。
+反向遍历ArkTS Float32Array，对每个元素执行归约函数，并返回最终的归约结果。
 
 **起始版本：** 18
 
@@ -1012,8 +1006,8 @@ reduceRight(callbackFn: TypedArrayReduceCallback<number, number, Float32Array>):
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 10200011 | The reduceRight method cannot be bound. |
-| 10200201 | Concurrent modification error. |
+| [10200011](../errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) | The reduceRight method cannot be bound. |
+| [10200201](../errorcode-utils.md#10200201-concurrent修改错误) | Concurrent modification error. |
 
 ## reverse
 
@@ -1021,7 +1015,7 @@ reduceRight(callbackFn: TypedArrayReduceCallback<number, number, Float32Array>):
 reverse(): Float32Array
 ```
 
-反转ArkTS Float32Array。
+反转ArkTS Float32Array中元素的顺序。
 
 **起始版本：** 12
 
@@ -1043,8 +1037,8 @@ reverse(): Float32Array
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 10200011 | The reverse method cannot be bound. |
-| 10200201 | Concurrent modification error. |
+| [10200011](../errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) | The reverse method cannot be bound. |
+| [10200201](../errorcode-utils.md#10200201-concurrent修改错误) | Concurrent modification error. |
 
 ## set
 
@@ -1068,15 +1062,15 @@ set(array: ArrayLike<number>, offset?: number): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| array | [ArrayLike](arkts-arkts-arraylike-i.md)&lt;number&gt; | 是 | 用于设置的ArrayLike对象。 |
+| array | ArrayLike&lt;number&gt; | 是 | 用于设置的ArrayLike对象。 |
 | offset | number | 否 | 写入的起始位置。默认为0。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 10200011 | The set method cannot be bound. |
-| 10200201 | Concurrent modification error. |
+| [10200011](../errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) | The set method cannot be bound. |
+| [10200201](../errorcode-utils.md#10200201-concurrent修改错误) | Concurrent modification error. |
 
 ## slice
 
@@ -1084,7 +1078,7 @@ set(array: ArrayLike<number>, offset?: number): void
 slice(start?: number, end?: number): Float32Array
 ```
 
-返回一个新的ArkTS Float32Array对象，其包含原ArkTS Float32Array指定范围的内容。
+返回一个新的ArkTS Float32Array对象，其包含原ArkTS Float32Array指定范围的内容。与subarray不同，slice返回的对象不会影响原数组。
 
 **起始版本：** 12
 
@@ -1113,8 +1107,8 @@ slice(start?: number, end?: number): Float32Array
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 10200011 | The slice method cannot be bound. |
-| 10200201 | Concurrent modification error. |
+| [10200011](../errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) | The slice method cannot be bound. |
+| [10200201](../errorcode-utils.md#10200201-concurrent修改错误) | Concurrent modification error. |
 
 ## some
 
@@ -1122,7 +1116,7 @@ slice(start?: number, end?: number): Float32Array
 some(predicate: TypedArrayPredicateFn<number, Float32Array>): boolean
 ```
 
-测试ArkTS Float32Array中的是否存在元素满足指定条件。
+测试ArkTS Float32Array中是否存在元素满足指定条件。
 
 **起始版本：** 12
 
@@ -1150,8 +1144,8 @@ some(predicate: TypedArrayPredicateFn<number, Float32Array>): boolean
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 10200011 | The some method cannot be bound. |
-| 10200201 | Concurrent modification error. |
+| [10200011](../errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) | The some method cannot be bound. |
+| [10200201](../errorcode-utils.md#10200201-concurrent修改错误) | Concurrent modification error. |
 
 ## sort
 
@@ -1159,7 +1153,7 @@ some(predicate: TypedArrayPredicateFn<number, Float32Array>): boolean
 sort(compareFn?: TypedArrayCompareFn<number>): Float32Array
 ```
 
-对ArkTS Float32Array进行排序，并返回排序后的ArkTS Float32Array对象。
+对ArkTS Float32Array进行原地排序，并返回排序后的ArkTS Float32Array对象。
 
 **起始版本：** 12
 
@@ -1187,8 +1181,8 @@ sort(compareFn?: TypedArrayCompareFn<number>): Float32Array
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 10200011 | The sort method cannot be bound. |
-| 10200201 | Concurrent modification error. |
+| [10200011](../errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) | The sort method cannot be bound. |
+| [10200201](../errorcode-utils.md#10200201-concurrent修改错误) | Concurrent modification error. |
 
 ## subarray
 
@@ -1196,7 +1190,7 @@ sort(compareFn?: TypedArrayCompareFn<number>): Float32Array
 subarray(begin?: number, end?: number): Float32Array
 ```
 
-从指定的位置截取数组，返回一个新的、基于相同ArkTS ArrayBuffer的ArkTS Float32Array对象。
+从指定的位置截取数组，返回一个基于相同ArkTS ArrayBuffer的新ArkTS Float32Array对象。由于返回的对象与原始对象共享同一个ArrayBuffer，修改其中一个会影响另一个。
 
 **起始版本：** 12
 
@@ -1225,8 +1219,8 @@ subarray(begin?: number, end?: number): Float32Array
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 10200011 | The subarray method cannot be bound. |
-| 10200201 | Concurrent modification error. |
+| [10200011](../errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) | The subarray method cannot be bound. |
+| [10200201](../errorcode-utils.md#10200201-concurrent修改错误) | Concurrent modification error. |
 
 ## toLocaleString
 
@@ -1256,8 +1250,8 @@ toLocaleString(): string
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 10200011 | The toLocaleString method cannot be bound. |
-| 10200201 | Concurrent modification error. |
+| [10200011](../errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) | The toLocaleString method cannot be bound. |
+| [10200201](../errorcode-utils.md#10200201-concurrent修改错误) | Concurrent modification error. |
 
 ## toString
 
@@ -1265,7 +1259,7 @@ toLocaleString(): string
 toString(): string
 ```
 
-ArkTS Float32Array转换为字符串。
+将ArkTS Float32Array转换为字符串，各元素以逗号分隔拼接。
 
 **起始版本：** 18
 
@@ -1287,8 +1281,8 @@ ArkTS Float32Array转换为字符串。
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 10200011 | The toString method cannot be bound. |
-| 10200201 | Concurrent modification error. |
+| [10200011](../errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) | The toString method cannot be bound. |
+| [10200201](../errorcode-utils.md#10200201-concurrent修改错误) | Concurrent modification error. |
 
 ## values
 
@@ -1312,14 +1306,14 @@ values(): IterableIterator<number>
 
 | 类型 | 说明 |
 | --- | --- |
-| [IterableIterator](arkts-arkts-iterator-iterableiterator-i.md)&lt;number&gt; | 迭代器对象。 |
+| IterableIterator&lt;number&gt; | 迭代器对象。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 10200011 | The values method cannot be bound. |
-| 10200201 | Concurrent modification error. |
+| [10200011](../errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) | The values method cannot be bound. |
+| [10200201](../errorcode-utils.md#10200201-concurrent修改错误) | Concurrent modification error. |
 
 ## BYTES_PER_ELEMENT
 
@@ -1327,7 +1321,7 @@ values(): IterableIterator<number>
 static readonly BYTES_PER_ELEMENT: number
 ```
 
-ArkTS Float32Array中每个元素所占用的字节数。
+ArkTS Float32Array中每个元素所占的字节数。
 
 **类型：** number
 
@@ -1347,7 +1341,7 @@ ArkTS Float32Array中每个元素所占用的字节数。
 [index: number]: number
 ```
 
-返回Float32Array指定索引位置的元素。
+返回ArkTS Float32Array指定索引位置的元素。
 
 **类型：** number
 
@@ -1387,7 +1381,7 @@ ArkTS Float32Array底层使用的buffer。
 readonly byteLength: number
 ```
 
-ArkTS Float32Array的所占的字节数。
+ArkTS Float32Array所占的字节数。
 
 **类型：** number
 
@@ -1407,7 +1401,7 @@ ArkTS Float32Array的所占的字节数。
 readonly byteOffset: number
 ```
 
-ArkTS Float32Array距离其ArrayBuffer起始位置的偏移。
+ArkTS Float32Array距离其ArrayBuffer起始位置的字节偏移。
 
 **类型：** number
 

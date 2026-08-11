@@ -1,6 +1,6 @@
 # PhysicalAperture
 
-物理光圈对象。
+Describes the physical aperture object.
 
 **Since:** 24
 
@@ -22,7 +22,7 @@ import { camera } from 'kits/@kit.CameraKit';
 apertures: Array<double>
 ```
 
-支持的物理光圈值。
+Supported physical aperture.
 
 **Type:** ArkTS-Dyn: Array&lt;number&gt;  <br>ArkTS-Sta：Array&lt;double&gt;
 
@@ -42,7 +42,7 @@ apertures: Array<double>
 zoomRange: ZoomRange
 ```
 
-特定物理光圈的变焦范围。
+Zoom range of a given physical aperture.
 
 **Type:** [ZoomRange](arkts-camera-camera-zoomrange-i.md)
 

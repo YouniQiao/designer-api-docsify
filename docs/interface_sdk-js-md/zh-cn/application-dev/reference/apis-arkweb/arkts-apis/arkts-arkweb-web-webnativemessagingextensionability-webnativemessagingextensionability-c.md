@@ -12,12 +12,6 @@
 
 **系统能力：** SystemCapability.Web.Webview.Core
 
-## 导入模块
-
-```TypeScript
-import { ConnectionInfo } from 'kits/@kit.ArkWeb';
-```
-
 ## onConnectNative
 
 ```TypeScript

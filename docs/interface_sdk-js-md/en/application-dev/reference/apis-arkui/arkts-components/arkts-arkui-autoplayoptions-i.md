@@ -1,6 +1,6 @@
 # AutoPlayOptions
 
-自动播放属性。
+Defines the properties for controlling the automatic playback behavior.
 
 **Since:** 18
 
@@ -16,11 +16,11 @@
 stopWhenTouched: boolean
 ```
 
-在按下事件中配置子组件是否立即停止播放。
+Whether the automatic playback stops immediately when the component is touched.
 
-设置为true时，停止播放。设置为false时，自动播放不中断。
+The value **true** means that the automatic playback stops immediately when the component is touched, and **false**means the opposite.
 
-默认值：true
+Default value: **true**.
 
 **Type:** boolean
 

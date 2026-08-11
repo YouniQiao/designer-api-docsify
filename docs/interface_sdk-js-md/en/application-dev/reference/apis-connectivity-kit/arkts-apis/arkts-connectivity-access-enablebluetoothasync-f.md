@@ -36,10 +36,10 @@ Asynchronous interface for enables Bluetooth on a device.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 801 | Capability not supported. |
+| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. |
 | 2900013 | The user does not respond. |
 | 2900014 | User refuse the action. |
-| 201 | Permission denied. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
 | 2900001 | Service stopped. |
 | 2900099 | Operation failed. |
 

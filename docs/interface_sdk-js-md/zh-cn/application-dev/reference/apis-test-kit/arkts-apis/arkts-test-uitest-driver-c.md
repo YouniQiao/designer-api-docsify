@@ -10,12 +10,6 @@ Driver类为uitest测试框架的总入口，提供控件匹配/查找，按键�
 
 **系统能力：** SystemCapability.Test.UiTest
 
-## 导入模块
-
-```TypeScript
-import { ResizeDirection, WindowMode, PenMode, PenKeyOperation, Driver, MatchPattern, UiDirection, TouchOptions, ComponentEventType, PointerMatrix, WindowChangeType, Component, ON, PenKey, Rect, InputTextMode, UIEventObserver, WindowFilter, WindowChangeOptions, UiWindow, TouchPadSwipeOptions, Point, KeyOptions, DisplayRotation, UIElementInfo, PenKeyOperationOptions, ComponentEventOptions, MouseButton, On } from 'kits/@kit.TestKit';
-```
-
 ## assertComponentExist
 
 ```TypeScript
@@ -50,9 +44,9 @@ assertComponentExist(on: On): Promise<void>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 17000003 | Assertion failed. |
-| 401 | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
-| 17000002 | The API does not support concurrent calls. |
+| [17000003](../errorcode-uitest.md#17000003-断言失败) | Assertion failed. |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| [17000002](../errorcode-uitest.md#17000002-接口不支持并发调用) | The API does not support concurrent calls. |
 
 ## 示例
 
@@ -107,8 +101,8 @@ click(x: int, y: int): Promise<void>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
-| 17000002 | The API does not support concurrent calls. |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| [17000002](../errorcode-uitest.md#17000002-接口不支持并发调用) | The API does not support concurrent calls. |
 
 ## 示例
 
@@ -117,9 +111,7 @@ click(x: int, y: int): Promise<void>
 import { Driver } from '@kit.TestKit';
 
 async function demo() {
-  // 创建Driver对象。
   let driver: Driver = Driver.create();
-  // 在坐标(100,100)处执行点击操作。
   await driver.click(100, 100);
 }
 ```
@@ -146,7 +138,7 @@ clickAt(point: Point): Promise<void>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| point | [Point](../../apis-camera-kit/arkts-apis/arkts-camera-camera-point-i.md) | 是 | 以Point对象的形式传入目标点信息。 |
+| point | [Point](arkts-test-uitest-point-i.md) | 是 | 以Point对象的形式传入目标点信息。 |
 
 **返回值：**
 
@@ -158,8 +150,8 @@ clickAt(point: Point): Promise<void>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 17000002 | The API does not support concurrent calls. |
-| 17000007 | Parameter verification failed. |
+| [17000002](../errorcode-uitest.md#17000002-接口不支持并发调用) | The API does not support concurrent calls. |
+| [17000007](../errorcode-uitest.md#17000007-参数不合法) | Parameter verification failed. |
 
 ## 示例
 
@@ -195,7 +187,7 @@ clickAtWithOptions(point: Point, options?: TouchOptions): Promise<void>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| point | [Point](../../apis-camera-kit/arkts-apis/arkts-camera-camera-point-i.md) | 是 | 手指接触屏幕的坐标点。 |
+| point | [Point](arkts-test-uitest-point-i.md) | 是 | 手指接触屏幕的坐标点。 |
 | options | [TouchOptions](arkts-test-uitest-touchoptions-i.md) | 否 | 单击操作的选项。 只有''属性适用于此方法。 设置其他属性将导致BusinessError 17000007。 &lt;br&gt;默认值：参考TouchOptions的默认值。 |
 
 **返回值：**
@@ -208,8 +200,8 @@ clickAtWithOptions(point: Point, options?: TouchOptions): Promise<void>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 17000002 | The API does not support concurrent calls. |
-| 17000007 | Parameter verification failed. |
+| [17000002](../errorcode-uitest.md#17000002-接口不支持并发调用) | The API does not support concurrent calls. |
+| [17000007](../errorcode-uitest.md#17000007-参数不合法) | Parameter verification failed. |
 
 ## 示例
 
@@ -255,7 +247,7 @@ static create(): Driver
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 17000001 | Initialization failed. |
+| [17000001](../errorcode-uitest.md#17000001-初始化失败) | Initialization failed. |
 
 ## 示例
 
@@ -296,7 +288,7 @@ createUIEventObserver(): UIEventObserver
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 17000002 | The API does not support concurrent calls. |
+| [17000002](../errorcode-uitest.md#17000002-接口不支持并发调用) | The API does not support concurrent calls. |
 
 ## 示例
 
@@ -351,9 +343,9 @@ crownRotate(d: int, speed?: int): Promise<void>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 801 | Capability not supported. Failed to call the API due to limited device capabilities. |
-| 17000002 | The API does not support concurrent calls. |
-| 17000007 | Parameter verification failed. |
+| [801](../../errorcode-universal.md#801-该设备不支持此api) | Capability not supported. Failed to call the API due to limited device capabilities. |
+| [17000002](../errorcode-uitest.md#17000002-接口不支持并发调用) | The API does not support concurrent calls. |
+| [17000007](../errorcode-uitest.md#17000007-参数不合法) | Parameter verification failed. |
 
 ## 示例
 
@@ -410,8 +402,8 @@ delayMs(duration: int): Promise<void>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
-| 17000002 | The API does not support concurrent calls. |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| [17000002](../errorcode-uitest.md#17000002-接口不支持并发调用) | The API does not support concurrent calls. |
 
 ## 示例
 
@@ -466,8 +458,8 @@ doubleClick(x: int, y: int): Promise<void>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
-| 17000002 | The API does not support concurrent calls. |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| [17000002](../errorcode-uitest.md#17000002-接口不支持并发调用) | The API does not support concurrent calls. |
 
 ## 示例
 
@@ -503,7 +495,7 @@ doubleClickAt(point: Point): Promise<void>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| point | [Point](../../apis-camera-kit/arkts-apis/arkts-camera-camera-point-i.md) | 是 | 以Point对象的形式传入目标点信息。 |
+| point | [Point](arkts-test-uitest-point-i.md) | 是 | 以Point对象的形式传入目标点信息。 |
 
 **返回值：**
 
@@ -515,8 +507,8 @@ doubleClickAt(point: Point): Promise<void>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 17000002 | The API does not support concurrent calls. |
-| 17000007 | Parameter verification failed. |
+| [17000002](../errorcode-uitest.md#17000002-接口不支持并发调用) | The API does not support concurrent calls. |
+| [17000007](../errorcode-uitest.md#17000007-参数不合法) | Parameter verification failed. |
 
 ## 示例
 
@@ -574,8 +566,8 @@ drag(startx: int, starty: int, endx: int, endy: int, speed?: int): Promise<void>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
-| 17000002 | The API does not support concurrent calls. |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| [17000002](../errorcode-uitest.md#17000002-接口不支持并发调用) | The API does not support concurrent calls. |
 
 ## 示例
 
@@ -617,8 +609,8 @@ dragBetween(from: Point, to: Point, speed?: int, duration?: int): Promise<void>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| from | [Point](../../apis-camera-kit/arkts-apis/arkts-camera-camera-point-i.md) | 是 | 以Point对象的形式传入起始点的坐标信息和所属屏幕ID。 |
-| to | [Point](../../apis-camera-kit/arkts-apis/arkts-camera-camera-point-i.md) | 是 | 以Point对象的形式传入终止点的坐标信息和所属屏幕ID。  **说明：** 应与起始点属于同一个屏幕，否则将抛出17000007异常。 |
+| from | [Point](arkts-test-uitest-point-i.md) | 是 | 以Point对象的形式传入起始点的坐标信息和所属屏幕ID。 |
+| to | [Point](arkts-test-uitest-point-i.md) | 是 | 以Point对象的形式传入终止点的坐标信息和所属屏幕ID。  **说明：** 应与起始点属于同一个屏幕，否则将抛出17000007异常。 |
 | speed | ArkTS-Dyn: number  <br>ArkTS-Sta：int | 否 | 滑动速率，取值范围为200-40000的整数，默认值为600，单位：px/s。为不在范围内的非负数或为null/undefined时设为默认值600。为负数时抛出17000007错 误码。 |
 | duration | ArkTS-Dyn: number  <br>ArkTS-Sta：int | 否 | 拖拽前长按持续的时间，取值范围为大于等于1500的整数，默认值为1500，单位：ms。取值小于1500时抛出17000007错误码，为null或undefined时使用默认值。 |
 
@@ -632,8 +624,8 @@ dragBetween(from: Point, to: Point, speed?: int, duration?: int): Promise<void>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 17000002 | The API does not support concurrent calls. |
-| 17000007 | Parameter verification failed. |
+| [17000002](../errorcode-uitest.md#17000002-接口不支持并发调用) | The API does not support concurrent calls. |
+| [17000007](../errorcode-uitest.md#17000007-参数不合法) | Parameter verification failed. |
 
 ## 示例
 
@@ -669,8 +661,8 @@ dragBetweenWithOptions(from: Point, to: Point, options?: TouchOptions): Promise<
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| from | [Point](../../apis-camera-kit/arkts-apis/arkts-camera-camera-point-i.md) | 是 | 手指接触屏幕的坐标点。 |
-| to | [Point](../../apis-camera-kit/arkts-apis/arkts-camera-camera-point-i.md) | 是 | 手指离开屏幕的坐标点。 |
+| from | [Point](arkts-test-uitest-point-i.md) | 是 | 手指接触屏幕的坐标点。 |
+| to | [Point](arkts-test-uitest-point-i.md) | 是 | 手指离开屏幕的坐标点。 |
 | options | [TouchOptions](arkts-test-uitest-touchoptions-i.md) | 否 | 拖动操作的选项。 只有“压力”、“速度”和“持续时间”属性适用于此方法。 设置其他属性将导致BusinessError 17000007。 &lt;br&gt;默认值：参考TouchOptions的默认值。 |
 
 **返回值：**
@@ -683,8 +675,8 @@ dragBetweenWithOptions(from: Point, to: Point, options?: TouchOptions): Promise<
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 17000002 | The API does not support concurrent calls. |
-| 17000007 | Parameter verification failed. |
+| [17000002](../errorcode-uitest.md#17000002-接口不支持并发调用) | The API does not support concurrent calls. |
+| [17000007](../errorcode-uitest.md#17000007-参数不合法) | Parameter verification failed. |
 
 ## 示例
 
@@ -745,8 +737,8 @@ Get the current layout information and save as file with json format.
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 17000002 | The API does not support concurrent calls. |
-| 17000007 | Parameter verification failed. |
+| [17000002](../errorcode-uitest.md#17000002-接口不支持并发调用) | The API does not support concurrent calls. |
+| [17000007](../errorcode-uitest.md#17000007-参数不合法) | Parameter verification failed. |
 
 ## 示例
 
@@ -795,8 +787,8 @@ findComponent(on: On): Promise<Component>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
-| 17000002 | The API does not support concurrent calls. |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| [17000002](../errorcode-uitest.md#17000002-接口不支持并发调用) | The API does not support concurrent calls. |
 
 ## 示例
 
@@ -805,9 +797,7 @@ findComponent(on: On): Promise<Component>
 import { Component, Driver, ON } from '@kit.TestKit';
 
 async function demo() {
-  // 创建Driver对象。
   let driver: Driver = Driver.create();
-  // 查找text为'next page'的控件。
   let button: Component = await driver.findComponent(ON.text('next page'));
 }
 ```
@@ -844,8 +834,20 @@ Find the first matched {@link Component} on current UI.
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
-| 17000002 | The API does not support concurrent calls. |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| [17000002](../errorcode-uitest.md#17000002-接口不支持并发调用) | The API does not support concurrent calls. |
+
+## 示例
+
+```TypeScript
+// xxx.test.ets
+import { Component, Driver, ON } from '@kit.TestKit';
+
+async function demo() {
+  let driver: Driver = Driver.create();
+  let button: Component | null = await driver.findComponent(ON.text('next page'));
+}
+```
 
 ## findComponents
 
@@ -881,8 +883,8 @@ findComponents(on: On): Promise<Array<Component>>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
-| 17000002 | The API does not support concurrent calls. |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| [17000002](../errorcode-uitest.md#17000002-接口不支持并发调用) | The API does not support concurrent calls. |
 
 ## 示例
 
@@ -891,10 +893,8 @@ findComponents(on: On): Promise<Array<Component>>
 import { Component, Driver, ON } from '@kit.TestKit';
 
 async function demo() {
-  // 创建Driver对象。
   let driver: Driver = Driver.create();
-  // 查找所有text为'next page'的控件。
-  let buttonList: Array<Component> = await driver.findComponents(ON.text('next page'));
+  let buttonList: Array<Component> | null = await driver.findComponents(ON.text('next page'));
 }
 ```
 
@@ -930,8 +930,20 @@ Find all the matched {@link Component}s on current UI.
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
-| 17000002 | The API does not support concurrent calls. |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| [17000002](../errorcode-uitest.md#17000002-接口不支持并发调用) | The API does not support concurrent calls. |
+
+## 示例
+
+```TypeScript
+// xxx.test.ets
+import { Component, Driver, ON } from '@kit.TestKit';
+
+async function demo() {
+  let driver: Driver = Driver.create();
+  let buttonList: Array<Component> | null = await driver.findComponents(ON.text('next page'));
+}
+```
 
 ## findWindow
 
@@ -967,8 +979,8 @@ findWindow(filter: WindowFilter): Promise<UiWindow>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
-| 17000002 | The API does not support concurrent calls. |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| [17000002](../errorcode-uitest.md#17000002-接口不支持并发调用) | The API does not support concurrent calls. |
 
 ## 示例
 
@@ -978,7 +990,7 @@ import { Driver, UiWindow } from '@kit.TestKit';
 
 async function demo() {
   let driver: Driver = Driver.create();
-  let window: UiWindow = await driver.findWindow({ active: true });
+  let window: UiWindow | null = await driver.findWindow({ active: true });
 }
 ```
 
@@ -1014,8 +1026,20 @@ Find the first matched {@link UiWindow} window.
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
-| 17000002 | The API does not support concurrent calls. |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| [17000002](../errorcode-uitest.md#17000002-接口不支持并发调用) | The API does not support concurrent calls. |
+
+## 示例
+
+```TypeScript
+// xxx.test.ets
+import { Driver, UiWindow } from '@kit.TestKit';
+
+async function demo() {
+  let driver: Driver = Driver.create();
+  let window: UiWindow | null = await driver.findWindow({ active: true });
+}
+```
 
 ## fling
 
@@ -1045,8 +1069,8 @@ fling(from: Point, to: Point, stepLen: int, speed: int): Promise<void>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| from | [Point](../../apis-camera-kit/arkts-apis/arkts-camera-camera-point-i.md) | 是 | 手指接触屏幕的起始点坐标。 |
-| to | [Point](../../apis-camera-kit/arkts-apis/arkts-camera-camera-point-i.md) | 是 | 手指离开屏幕时的坐标点。 |
+| from | [Point](arkts-test-uitest-point-i.md) | 是 | 手指接触屏幕的起始点坐标。 |
+| to | [Point](arkts-test-uitest-point-i.md) | 是 | 手指离开屏幕时的坐标点。 |
 | stepLen | ArkTS-Dyn: number  <br>ArkTS-Sta：int | 是 | 间隔距离，取值大于等于0的整数，单位：px。 |
 | speed | ArkTS-Dyn: number  <br>ArkTS-Sta：int | 是 | 滑动速率，取值范围为200-40000的整数，默认值为600，单位：px/s。为不在范围内的非负数时设为默认值600。为负数时抛出401错误码。 |
 
@@ -1060,8 +1084,8 @@ fling(from: Point, to: Point, stepLen: int, speed: int): Promise<void>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
-| 17000002 | The API does not support concurrent calls. |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| [17000002](../errorcode-uitest.md#17000002-接口不支持并发调用) | The API does not support concurrent calls. |
 
 ## 示例
 
@@ -1116,8 +1140,8 @@ fling(direction: UiDirection, speed: int): Promise<void>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
-| 17000002 | The API does not support concurrent calls. |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| [17000002](../errorcode-uitest.md#17000002-接口不支持并发调用) | The API does not support concurrent calls. |
 
 ## 示例
 
@@ -1173,8 +1197,8 @@ fling(direction: UiDirection, speed: int, displayId: int): Promise<void>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
-| 17000002 | The API does not support concurrent calls. |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| [17000002](../errorcode-uitest.md#17000002-接口不支持并发调用) | The API does not support concurrent calls. |
 
 ## 示例
 
@@ -1216,7 +1240,7 @@ getDisplayDensity(): Promise<Point>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 17000002 | The API does not support concurrent calls. |
+| [17000002](../errorcode-uitest.md#17000002-接口不支持并发调用) | The API does not support concurrent calls. |
 
 ## 示例
 
@@ -1270,8 +1294,8 @@ getDisplayDensity(displayId: int): Promise<Point>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 17000002 | The API does not support concurrent calls. |
-| 17000007 | Parameter verification failed. |
+| [17000002](../errorcode-uitest.md#17000002-接口不支持并发调用) | The API does not support concurrent calls. |
+| [17000007](../errorcode-uitest.md#17000007-参数不合法) | Parameter verification failed. |
 
 ## 示例
 
@@ -1313,7 +1337,7 @@ getDisplayRotation(): Promise<DisplayRotation>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 17000002 | The API does not support concurrent calls. |
+| [17000002](../errorcode-uitest.md#17000002-接口不支持并发调用) | The API does not support concurrent calls. |
 
 ## 示例
 
@@ -1367,8 +1391,8 @@ getDisplayRotation(displayId: int): Promise<DisplayRotation>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 17000002 | The API does not support concurrent calls. |
-| 17000007 | Parameter verification failed. |
+| [17000002](../errorcode-uitest.md#17000002-接口不支持并发调用) | The API does not support concurrent calls. |
+| [17000007](../errorcode-uitest.md#17000007-参数不合法) | Parameter verification failed. |
 
 ## 示例
 
@@ -1410,7 +1434,7 @@ getDisplaySize(): Promise<Point>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 17000002 | The API does not support concurrent calls. |
+| [17000002](../errorcode-uitest.md#17000002-接口不支持并发调用) | The API does not support concurrent calls. |
 
 ## 示例
 
@@ -1464,8 +1488,8 @@ getDisplaySize(displayId: int): Promise<Point>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 17000002 | The API does not support concurrent calls. |
-| 17000007 | Parameter verification failed. |
+| [17000002](../errorcode-uitest.md#17000002-接口不支持并发调用) | The API does not support concurrent calls. |
+| [17000007](../errorcode-uitest.md#17000007-参数不合法) | Parameter verification failed. |
 
 ## 示例
 
@@ -1524,9 +1548,9 @@ injectKnucklePointerAction(pointers: PointerMatrix, speed?: int): Promise<void>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 17000002 | The API does not support concurrent calls. |
-| 17000007 | Parameter verification failed. |
-| 17000005 | This operation is not supported. |
+| [17000002](../errorcode-uitest.md#17000002-接口不支持并发调用) | The API does not support concurrent calls. |
+| [17000007](../errorcode-uitest.md#17000007-参数不合法) | Parameter verification failed. |
+| [17000005](../errorcode-uitest.md#17000005-操作不支持) | This operation is not supported. |
 
 ## 示例
 
@@ -1589,8 +1613,8 @@ injectMultiPointerAction(pointers: PointerMatrix, speed?: int): Promise<boolean>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
-| 17000002 | The API does not support concurrent calls. |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| [17000002](../errorcode-uitest.md#17000002-接口不支持并发调用) | The API does not support concurrent calls. |
 
 ## 示例
 
@@ -1662,8 +1686,8 @@ injectPenPointerAction(pointers: PointerMatrix, speed?: int, pressure?: double):
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
-| 17000002 | The API does not support concurrent calls. |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| [17000002](../errorcode-uitest.md#17000002-接口不支持并发调用) | The API does not support concurrent calls. |
 
 ## 示例
 
@@ -1706,7 +1730,7 @@ inputText(p: Point, text: string): Promise<void>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| p | [Point](../../apis-camera-kit/arkts-apis/arkts-camera-camera-point-i.md) | 是 | 输入文本的坐标点。 |
+| p | [Point](arkts-test-uitest-point-i.md) | 是 | 输入文本的坐标点。 |
 | text | string | 是 | 输入的文本信息，当前支持英文、中文和特殊字符。 |
 
 **返回值：**
@@ -1719,8 +1743,8 @@ inputText(p: Point, text: string): Promise<void>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
-| 17000002 | The API does not support concurrent calls. |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| [17000002](../errorcode-uitest.md#17000002-接口不支持并发调用) | The API does not support concurrent calls. |
 
 ## 示例
 
@@ -1729,14 +1753,12 @@ inputText(p: Point, text: string): Promise<void>
 import { Component, Driver, ON } from '@kit.TestKit';
 
 async function demo() {
-  // 创建Driver对象。
   let driver: Driver = Driver.create();
-  // 查找TextInput类型的目标控件。
-  let text: Component = await driver.findComponent(ON.type('TextInput'));
-  // 获取控件中心点坐标。
-  let point = await text.getBoundsCenter();
-  // 在坐标点处输入文本'123'。
-  await driver.inputText(point, '123');
+  let text: Component | null = await driver.findComponent(ON.type('TextInput'));
+  if (text) {
+    let point = await text.getBoundsCenter();
+    await driver.inputText(point, '123');
+  }
 }
 ```
 
@@ -1762,7 +1784,7 @@ inputText(p: Point, text: string, mode: InputTextMode): Promise<void>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| p | [Point](../../apis-camera-kit/arkts-apis/arkts-camera-camera-point-i.md) | 是 | 输入文本的坐标点。 |
+| p | [Point](arkts-test-uitest-point-i.md) | 是 | 输入文本的坐标点。 |
 | text | string | 是 | 输入的文本信息，当前支持英文、中文和特殊字符。 |
 | mode | [InputTextMode](arkts-test-uitest-inputtextmode-i.md) | 是 | 输入文本的方式，取值请参考[InputTextMode](arkts-test-uitest-inputtextmode-i.md)。  **说明：**  InputTextMode.addition取值为true时，将光标移动至文本末尾后输入指定文本。取值为false时，将在坐标点位置输入指定文本。 |
 
@@ -1776,9 +1798,9 @@ inputText(p: Point, text: string, mode: InputTextMode): Promise<void>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
-| 801 | Capability not supported. function can not work correctly due to limited device capabilities. |
-| 17000002 | The API does not support concurrent calls. |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| [801](../../errorcode-universal.md#801-该设备不支持此api) | Capability not supported. function can not work correctly due to limited device capabilities. |
+| [17000002](../errorcode-uitest.md#17000002-接口不支持并发调用) | The API does not support concurrent calls. |
 
 ## 示例
 
@@ -1788,17 +1810,20 @@ import { Component, Driver, ON } from '@kit.TestKit';
 
 async function demo() {
   let driver: Driver = Driver.create();
-  let text: Component = await driver.findComponent(ON.type('TextInput'));
-  let point = await text.getBoundsCenter();
-  await driver.inputText(point, '123', { paste: true, addition: false });
+  let text: Component | null = await driver.findComponent(ON.type('TextInput'));
+  if (text) {
+    let point = await text.getBoundsCenter();
+    await driver.inputText(point, '123', { paste: true, addition: false });
+  }
 }
 
-async function demoChinese() {
+async function demo_Chinese() {
   let driver: Driver = Driver.create();
-  let text: Component = await driver.findComponent(ON.type('TextInput'));
-  let point = await text.getBoundsCenter();
-  await driver.inputText(point, '中文&', { paste: false, addition: true });
-  // 以复制粘贴方式输入中文、特殊符号，指定文本追加到指定坐标所在文本段的末尾。
+  let text: Component | null = await driver.findComponent(ON.type('TextInput'));
+  if (text) {
+    let point = await text.getBoundsCenter();
+    await driver.inputText(point, '中文&', { paste: false, addition: true });
+  }
 }
 ```
 
@@ -1831,8 +1856,8 @@ isComponentPresentWhenDrag(on: On, from: Point, to: Point, speed?: int, duration
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | on | [On](arkts-test-uitest-on-c.md) | 是 | 目标控件的属性要求。 |
-| from | [Point](../../apis-camera-kit/arkts-apis/arkts-camera-camera-point-i.md) | 是 | 以Point对象的形式传入起始点的坐标信息和所属屏幕ID。 |
-| to | [Point](../../apis-camera-kit/arkts-apis/arkts-camera-camera-point-i.md) | 是 | 以Point对象的形式传入终止点的坐标信息和所属屏幕ID。  **说明：** 应与起始点属于同一个屏幕，否则将抛出17000007异常。 |
+| from | [Point](arkts-test-uitest-point-i.md) | 是 | 以Point对象的形式传入起始点的坐标信息和所属屏幕ID。 |
+| to | [Point](arkts-test-uitest-point-i.md) | 是 | 以Point对象的形式传入终止点的坐标信息和所属屏幕ID。  **说明：** 应与起始点属于同一个屏幕，否则将抛出17000007异常。 |
 | speed | ArkTS-Dyn: number  <br>ArkTS-Sta：int | 否 | 滑动速率，取值范围为200-40000的整数，默认值为600，单位：px/s。为不在范围内的非负数或为null/undefined时设为默认值600。为负数时抛出17000007错 误码。 |
 | duration | ArkTS-Dyn: number  <br>ArkTS-Sta：int | 否 | 拖拽前长按持续的时间，取值范围为大于等于1500的整数，默认值为1500，单位：ms。取值小于1500时抛出17000007错误码，为null或undefined时使用默认值。 |
 
@@ -1846,8 +1871,8 @@ isComponentPresentWhenDrag(on: On, from: Point, to: Point, speed?: int, duration
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 17000002 | The API does not support concurrent calls. |
-| 17000007 | Parameter verification failed. |
+| [17000002](../errorcode-uitest.md#17000002-接口不支持并发调用) | The API does not support concurrent calls. |
+| [17000007](../errorcode-uitest.md#17000007-参数不合法) | Parameter verification failed. |
 
 ## 示例
 
@@ -1890,7 +1915,7 @@ isComponentPresentWhenLongClick(on: On, point: Point, duration?: int): Promise<b
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | on | [On](arkts-test-uitest-on-c.md) | 是 | 目标控件的属性要求。 |
-| point | [Point](../../apis-camera-kit/arkts-apis/arkts-camera-camera-point-i.md) | 是 | 长按的坐标点。 |
+| point | [Point](arkts-test-uitest-point-i.md) | 是 | 长按的坐标点。 |
 | duration | ArkTS-Dyn: number  <br>ArkTS-Sta：int | 否 | 长按持续的时间，取值范围为大于等于1500的整数，默认值为1500，单位：ms。取值小于1500时抛出17000007错误码，为null或undefined时使用默认值。 |
 
 **返回值：**
@@ -1903,8 +1928,8 @@ isComponentPresentWhenLongClick(on: On, point: Point, duration?: int): Promise<b
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 17000002 | The API does not support concurrent calls. |
-| 17000007 | Parameter verification failed. |
+| [17000002](../errorcode-uitest.md#17000002-接口不支持并发调用) | The API does not support concurrent calls. |
+| [17000007](../errorcode-uitest.md#17000007-参数不合法) | Parameter verification failed. |
 
 ## 示例
 
@@ -1947,8 +1972,8 @@ isComponentPresentWhenSwipe(on: On, from: Point, to: Point, speed?: int): Promis
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | on | [On](arkts-test-uitest-on-c.md) | 是 | 目标控件的属性要求。 |
-| from | [Point](../../apis-camera-kit/arkts-apis/arkts-camera-camera-point-i.md) | 是 | 以Point对象的形式传入起始点的坐标信息和所属屏幕ID。 |
-| to | [Point](../../apis-camera-kit/arkts-apis/arkts-camera-camera-point-i.md) | 是 | 以Point对象的形式传入终止点的坐标信息和所属屏幕ID。  **说明：** 应与起始点属于同一个屏幕，否则将抛出17000007异常。 |
+| from | [Point](arkts-test-uitest-point-i.md) | 是 | 以Point对象的形式传入起始点的坐标信息和所属屏幕ID。 |
+| to | [Point](arkts-test-uitest-point-i.md) | 是 | 以Point对象的形式传入终止点的坐标信息和所属屏幕ID。  **说明：** 应与起始点属于同一个屏幕，否则将抛出17000007异常。 |
 | speed | ArkTS-Dyn: number  <br>ArkTS-Sta：int | 否 | 滑动速率，取值范围为200-40000的整数，默认值为600，单位：px/s。为不在范围内的非负数或为null/undefined时设为默认值600。为负数时抛出17000007错 误码。 |
 
 **返回值：**
@@ -1961,8 +1986,8 @@ isComponentPresentWhenSwipe(on: On, from: Point, to: Point, speed?: int): Promis
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 17000002 | The API does not support concurrent calls. |
-| 17000007 | Parameter verification failed. |
+| [17000002](../errorcode-uitest.md#17000002-接口不支持并发调用) | The API does not support concurrent calls. |
+| [17000007](../errorcode-uitest.md#17000007-参数不合法) | Parameter verification failed. |
 
 ## 示例
 
@@ -2021,9 +2046,9 @@ knuckleKnock(pointers: Array<Point>, times: int): Promise<void>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 17000002 | The API does not support concurrent calls. |
-| 17000007 | Parameter verification failed. |
-| 17000005 | This operation is not supported. |
+| [17000002](../errorcode-uitest.md#17000002-接口不支持并发调用) | The API does not support concurrent calls. |
+| [17000007](../errorcode-uitest.md#17000007-参数不合法) | Parameter verification failed. |
+| [17000005](../errorcode-uitest.md#17000005-操作不支持) | This operation is not supported. |
 
 ## 示例
 
@@ -2080,8 +2105,8 @@ longClick(x: int, y: int): Promise<void>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
-| 17000002 | The API does not support concurrent calls. |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| [17000002](../errorcode-uitest.md#17000002-接口不支持并发调用) | The API does not support concurrent calls. |
 
 ## 示例
 
@@ -2123,7 +2148,7 @@ longClickAt(point: Point, duration?: int): Promise<void>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| point | [Point](../../apis-camera-kit/arkts-apis/arkts-camera-camera-point-i.md) | 是 | 以Point对象的形式传入目标点信息。 |
+| point | [Point](arkts-test-uitest-point-i.md) | 是 | 以Point对象的形式传入目标点信息。 |
 | duration | ArkTS-Dyn: number  <br>ArkTS-Sta：int | 否 | 长按持续的时间，取值范围为大于等于1500的整数，默认值为1500，单位：ms。取值小于1500时抛出17000007错误码，为null或undefined时使用默认值。 |
 
 **返回值：**
@@ -2136,20 +2161,8 @@ longClickAt(point: Point, duration?: int): Promise<void>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 17000002 | The API does not support concurrent calls. |
-| 17000007 | Parameter verification failed. |
-
-## 示例
-
-```TypeScript
-// xxx.test.ets
-import { Driver } from '@kit.TestKit';
-
-async function demo() {
-  let driver: Driver = Driver.create();
-  await driver.longClickAt({ x: 100, y: 100, displayId: 0 }, 1500);
-}
-```
+| [17000002](../errorcode-uitest.md#17000002-接口不支持并发调用) | The API does not support concurrent calls. |
+| [17000007](../errorcode-uitest.md#17000007-参数不合法) | Parameter verification failed. |
 
 ## longClickAtWithOptions
 
@@ -2173,7 +2186,7 @@ longClickAtWithOptions(point: Point, options?: TouchOptions): Promise<void>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| point | [Point](../../apis-camera-kit/arkts-apis/arkts-camera-camera-point-i.md) | 是 | 手指接触屏幕的坐标点。 |
+| point | [Point](arkts-test-uitest-point-i.md) | 是 | 手指接触屏幕的坐标点。 |
 | options | [TouchOptions](arkts-test-uitest-touchoptions-i.md) | 否 | 用于长单击操作的选项。 只有“持续时间”和“压力”属性适用于此方法。 设置其他属性将导致BusinessError 17000007。 &lt;br&gt;默认值：参考TouchOptions的默认值。 |
 
 **返回值：**
@@ -2186,8 +2199,8 @@ longClickAtWithOptions(point: Point, options?: TouchOptions): Promise<void>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 17000002 | The API does not support concurrent calls. |
-| 17000007 | Parameter verification failed. |
+| [17000002](../errorcode-uitest.md#17000002-接口不支持并发调用) | The API does not support concurrent calls. |
+| [17000007](../errorcode-uitest.md#17000007-参数不合法) | Parameter verification failed. |
 
 ## 示例
 
@@ -2234,7 +2247,7 @@ mouseClick(p: Point, btnId: MouseButton, key1?: int, key2?: int): Promise<void>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| p | [Point](../../apis-camera-kit/arkts-apis/arkts-camera-camera-point-i.md) | 是 | 鼠标点击的坐标。 |
+| p | [Point](arkts-test-uitest-point-i.md) | 是 | 鼠标点击的坐标。 |
 | btnId | [MouseButton](../../apis-arkui/arkts-apis/arkts-arkui-enums-mousebutton-e.md) | 是 | 按下的鼠标按钮。 |
 | key1 | ArkTS-Dyn: number  <br>ArkTS-Sta：int | 否 | 指定的第一个key值，取值大于等于0的整数，取值范围：[KeyCode键码值](../../apis-input-kit/arkts-apis/arkts-input-multimodalinput-keycode-keycode-e.md/arkts-input-multimodalinput-keycode-keycode-e.md)，默认值为0。<br>**起始版本：** 11 |
 | key2 | ArkTS-Dyn: number  <br>ArkTS-Sta：int | 否 | 指定的第二个key值，取值大于等于0的整数，取值范围：[KeyCode键码值](../../apis-input-kit/arkts-apis/arkts-input-multimodalinput-keycode-keycode-e.md/arkts-input-multimodalinput-keycode-keycode-e.md)，默认值为0。<br>**起始版本：** 11 |
@@ -2249,8 +2262,8 @@ mouseClick(p: Point, btnId: MouseButton, key1?: int, key2?: int): Promise<void>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
-| 17000002 | The API does not support concurrent calls. |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| [17000002](../errorcode-uitest.md#17000002-接口不支持并发调用) | The API does not support concurrent calls. |
 
 ## 示例
 
@@ -2292,7 +2305,7 @@ mouseDoubleClick(p: Point, btnId: MouseButton, key1?: int, key2?: int): Promise<
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| p | [Point](../../apis-camera-kit/arkts-apis/arkts-camera-camera-point-i.md) | 是 | 鼠标双击的坐标。 |
+| p | [Point](arkts-test-uitest-point-i.md) | 是 | 鼠标双击的坐标。 |
 | btnId | [MouseButton](../../apis-arkui/arkts-apis/arkts-arkui-enums-mousebutton-e.md) | 是 | 按下的鼠标按钮。 |
 | key1 | ArkTS-Dyn: number  <br>ArkTS-Sta：int | 否 | 指定的第一个key值，取值大于等于0的整数，取值范围：[KeyCode键码值](../../apis-input-kit/arkts-apis/arkts-input-multimodalinput-keycode-keycode-e.md/arkts-input-multimodalinput-keycode-keycode-e.md)，默认值0。 |
 | key2 | ArkTS-Dyn: number  <br>ArkTS-Sta：int | 否 | 指定的第二个key值，取值大于等于0的整数，取值范围：[KeyCode键码值](../../apis-input-kit/arkts-apis/arkts-input-multimodalinput-keycode-keycode-e.md/arkts-input-multimodalinput-keycode-keycode-e.md)，默认值0。 |
@@ -2307,8 +2320,8 @@ mouseDoubleClick(p: Point, btnId: MouseButton, key1?: int, key2?: int): Promise<
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
-| 17000002 | The API does not support concurrent calls. |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| [17000002](../errorcode-uitest.md#17000002-接口不支持并发调用) | The API does not support concurrent calls. |
 
 ## 示例
 
@@ -2344,8 +2357,8 @@ mouseDrag(from: Point, to: Point, speed?: number): Promise<void>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| from | [Point](../../apis-camera-kit/arkts-apis/arkts-camera-camera-point-i.md) | 是 | 起始点坐标。 |
-| to | [Point](../../apis-camera-kit/arkts-apis/arkts-camera-camera-point-i.md) | 是 | 终点坐标。 |
+| from | [Point](arkts-test-uitest-point-i.md) | 是 | 起始点坐标。 |
+| to | [Point](arkts-test-uitest-point-i.md) | 是 | 终点坐标。 |
 | speed | number | 否 | 滑动速率，取值范围为200-40000的整数，默认值为600，单位：px/s。为不在范围内的非负数或为null/undefined时设为默认值600。为负数时抛出401错误码 。 |
 
 **返回值：**
@@ -2358,8 +2371,8 @@ mouseDrag(from: Point, to: Point, speed?: number): Promise<void>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
-| 17000002 | The API does not support concurrent calls. |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| [17000002](../errorcode-uitest.md#17000002-接口不支持并发调用) | The API does not support concurrent calls. |
 
 ## 示例
 
@@ -2401,8 +2414,8 @@ mouseDrag(from: Point, to: Point, speed?: int, duration?: int): Promise<void>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| from | [Point](../../apis-camera-kit/arkts-apis/arkts-camera-camera-point-i.md) | 是 | 起始点坐标。 |
-| to | [Point](../../apis-camera-kit/arkts-apis/arkts-camera-camera-point-i.md) | 是 | 终点坐标。 |
+| from | [Point](arkts-test-uitest-point-i.md) | 是 | 起始点坐标。 |
+| to | [Point](arkts-test-uitest-point-i.md) | 是 | 终点坐标。 |
 | speed | ArkTS-Dyn: number  <br>ArkTS-Sta：int | 否 | 滑动速率，取值范围为200-40000的整数，默认值为600，单位：px/s。为不在范围内的非负数或为null/undefined时设为默认值600。为负数时抛出401错误码。 |
 | duration | ArkTS-Dyn: number  <br>ArkTS-Sta：int | 否 | 拖拽前长按持续的时间，取值范围为大于等于1500的整数，默认值为1500，单位：ms。取值小于1500时抛出401错误码，为null或undefined时使用默认值。 |
 
@@ -2416,8 +2429,8 @@ mouseDrag(from: Point, to: Point, speed?: int, duration?: int): Promise<void>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
-| 17000002 | The API does not support concurrent calls. |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| [17000002](../errorcode-uitest.md#17000002-接口不支持并发调用) | The API does not support concurrent calls. |
 
 ## 示例
 
@@ -2453,8 +2466,8 @@ mouseDragWithOptions(from: Point, to: Point, touchOptions?: TouchOptions, keyOpt
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| from | [Point](../../apis-camera-kit/arkts-apis/arkts-camera-camera-point-i.md) | 是 | 起点。 |
-| to | [Point](../../apis-camera-kit/arkts-apis/arkts-camera-camera-point-i.md) | 是 | 终点。 |
+| from | [Point](arkts-test-uitest-point-i.md) | 是 | 起点。 |
+| to | [Point](arkts-test-uitest-point-i.md) | 是 | 终点。 |
 | touchOptions | [TouchOptions](arkts-test-uitest-touchoptions-i.md) | 否 | 速度和持续时间设置的触摸选项。 在此方法中，只有“速度”和“持续时间”属性有效。 设置其他属性会导致BusinessError 17000007。 &lt;br&gt;默认值：参考TouchOptions的默认值。 |
 | keyOptions | [KeyOptions](arkts-test-uitest-keyoptions-i.md) | 否 | 拖动期间要按的键代码的键选项。 &lt;br&gt;默认值：参考keyOptions的默认值。 |
 
@@ -2468,8 +2481,8 @@ mouseDragWithOptions(from: Point, to: Point, touchOptions?: TouchOptions, keyOpt
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 17000002 | The API does not support concurrent calls. |
-| 17000007 | Parameter verification failed. |
+| [17000002](../errorcode-uitest.md#17000002-接口不支持并发调用) | The API does not support concurrent calls. |
+| [17000007](../errorcode-uitest.md#17000007-参数不合法) | Parameter verification failed. |
 
 ## 示例
 
@@ -2514,7 +2527,7 @@ mouseLongClick(p: Point, btnId: MouseButton, key1?: number, key2?: number): Prom
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| p | [Point](../../apis-camera-kit/arkts-apis/arkts-camera-camera-point-i.md) | 是 | 鼠标长按的坐标。 |
+| p | [Point](arkts-test-uitest-point-i.md) | 是 | 鼠标长按的坐标。 |
 | btnId | [MouseButton](../../apis-arkui/arkts-apis/arkts-arkui-enums-mousebutton-e.md) | 是 | 按下的鼠标按钮。 |
 | key1 | number | 否 | 指定的第一个key值，取值大于等于0的整数，取值范围：[KeyCode键码值](../../apis-input-kit/arkts-apis/arkts-input-multimodalinput-keycode-keycode-e.md/arkts-input-multimodalinput-keycode-keycode-e.md)，默认值 为0。 |
 | key2 | number | 否 | 指定的第二个key值，取值大于等于0的整数，取值范围：[KeyCode键码值](../../apis-input-kit/arkts-apis/arkts-input-multimodalinput-keycode-keycode-e.md/arkts-input-multimodalinput-keycode-keycode-e.md)，默认值 为0。 |
@@ -2529,8 +2542,8 @@ mouseLongClick(p: Point, btnId: MouseButton, key1?: number, key2?: number): Prom
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
-| 17000002 | The API does not support concurrent calls. |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| [17000002](../errorcode-uitest.md#17000002-接口不支持并发调用) | The API does not support concurrent calls. |
 
 ## 示例
 
@@ -2540,7 +2553,6 @@ import { Driver, MouseButton } from '@kit.TestKit';
 
 async function demo() {
   let driver: Driver = Driver.create();
-  // 键码值为2072时，按下Ctrl并进行鼠标长按动作。
   await driver.mouseLongClick({ x: 248, y: 194 }, MouseButton.MOUSE_BUTTON_LEFT, 2072);
 }
 ```
@@ -2573,7 +2585,7 @@ mouseLongClick(p: Point, btnId: MouseButton, key1?: int, key2?: int, duration?: 
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| p | [Point](../../apis-camera-kit/arkts-apis/arkts-camera-camera-point-i.md) | 是 | 鼠标长按的坐标。 |
+| p | [Point](arkts-test-uitest-point-i.md) | 是 | 鼠标长按的坐标。 |
 | btnId | [MouseButton](../../apis-arkui/arkts-apis/arkts-arkui-enums-mousebutton-e.md) | 是 | 按下的鼠标按钮。 |
 | key1 | ArkTS-Dyn: number  <br>ArkTS-Sta：int | 否 | 指定的第一个key值，取值大于等于0的整数，取值范围：[KeyCode键码值](../../apis-input-kit/arkts-apis/arkts-input-multimodalinput-keycode-keycode-e.md/arkts-input-multimodalinput-keycode-keycode-e.md)，默认值为0。 |
 | key2 | ArkTS-Dyn: number  <br>ArkTS-Sta：int | 否 | 指定的第二个key值，取值大于等于0的整数，取值范围：[KeyCode键码值](../../apis-input-kit/arkts-apis/arkts-input-multimodalinput-keycode-keycode-e.md/arkts-input-multimodalinput-keycode-keycode-e.md)，默认值为0。 |
@@ -2589,8 +2601,8 @@ mouseLongClick(p: Point, btnId: MouseButton, key1?: int, key2?: int, duration?: 
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
-| 17000002 | The API does not support concurrent calls. |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| [17000002](../errorcode-uitest.md#17000002-接口不支持并发调用) | The API does not support concurrent calls. |
 
 ## 示例
 
@@ -2600,7 +2612,6 @@ import { Driver, MouseButton } from '@kit.TestKit';
 
 async function demo() {
   let driver: Driver = Driver.create();
-  // 键码值为2072时，按下Ctrl并进行鼠标长按动作，长按时长2000ms。
   await driver.mouseLongClick({ x: 248, y: 194 }, MouseButton.MOUSE_BUTTON_LEFT, 2072, 0, 2000);
 }
 ```
@@ -2627,7 +2638,7 @@ mouseMoveTo(p: Point): Promise<void>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| p | [Point](../../apis-camera-kit/arkts-apis/arkts-camera-camera-point-i.md) | 是 | 目标点的坐标。 |
+| p | [Point](arkts-test-uitest-point-i.md) | 是 | 目标点的坐标。 |
 
 **返回值：**
 
@@ -2639,8 +2650,8 @@ mouseMoveTo(p: Point): Promise<void>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
-| 17000002 | The API does not support concurrent calls. |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| [17000002](../errorcode-uitest.md#17000002-接口不支持并发调用) | The API does not support concurrent calls. |
 
 ## 示例
 
@@ -2682,8 +2693,8 @@ mouseMoveWithTrack(from: Point, to: Point, speed?: int): Promise<void>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| from | [Point](../../apis-camera-kit/arkts-apis/arkts-camera-camera-point-i.md) | 是 | 起始点坐标。 |
-| to | [Point](../../apis-camera-kit/arkts-apis/arkts-camera-camera-point-i.md) | 是 | 终点坐标。 |
+| from | [Point](arkts-test-uitest-point-i.md) | 是 | 起始点坐标。 |
+| to | [Point](arkts-test-uitest-point-i.md) | 是 | 终点坐标。 |
 | speed | ArkTS-Dyn: number  <br>ArkTS-Sta：int | 否 | 滑动速率，取值范围为200-40000的整数，默认值为600，单位：px/s。为不在范围内的非负数或为null/undefined时设为默认值600。为负数时抛出401错误码。 |
 
 **返回值：**
@@ -2696,8 +2707,8 @@ mouseMoveWithTrack(from: Point, to: Point, speed?: int): Promise<void>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
-| 17000002 | The API does not support concurrent calls. |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| [17000002](../errorcode-uitest.md#17000002-接口不支持并发调用) | The API does not support concurrent calls. |
 
 ## 示例
 
@@ -2733,7 +2744,7 @@ mouseScroll(p: Point, down: boolean, d: number, key1?: number, key2?: number): P
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| p | [Point](../../apis-camera-kit/arkts-apis/arkts-camera-camera-point-i.md) | 是 | 鼠标点击的坐标。 |
+| p | [Point](arkts-test-uitest-point-i.md) | 是 | 鼠标点击的坐标。 |
 | down | boolean | 是 | 滚轮滑动方向是否向下。true表示向下滑动。false表示向上滚动。 |
 | d | number | 是 | 鼠标滚轮滚动的格数，取值大于等于0的整数，每格对应目标点位移120px。 |
 | key1 | number | 否 | 指定的第一个key值，取值大于等于0的整数，取值范围：[KeyCode键码值](../../apis-input-kit/arkts-apis/arkts-input-multimodalinput-keycode-keycode-e.md/arkts-input-multimodalinput-keycode-keycode-e.md)，默认值 为0。<br>**起始版本：** 11 |
@@ -2749,8 +2760,8 @@ mouseScroll(p: Point, down: boolean, d: number, key1?: number, key2?: number): P
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
-| 17000002 | The API does not support concurrent calls. |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| [17000002](../errorcode-uitest.md#17000002-接口不支持并发调用) | The API does not support concurrent calls. |
 
 ## 示例
 
@@ -2792,7 +2803,7 @@ mouseScroll(p: Point, down: boolean, d: int, key1?: int, key2?: int, speed?: int
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| p | [Point](../../apis-camera-kit/arkts-apis/arkts-camera-camera-point-i.md) | 是 | 鼠标点击的坐标。 |
+| p | [Point](arkts-test-uitest-point-i.md) | 是 | 鼠标点击的坐标。 |
 | down | boolean | 是 | 滚轮滑动方向是否向下。true表示向下滑动。false表示向上滚动。 |
 | d | ArkTS-Dyn: number  <br>ArkTS-Sta：int | 是 | 鼠标滚轮滚动的格数，取值大于等于0的整数，每格对应目标点位移120px。 |
 | key1 | ArkTS-Dyn: number  <br>ArkTS-Sta：int | 否 | 指定的第一个key值，取值大于等于0的整数，取值范围：[KeyCode键码值](../../apis-input-kit/arkts-apis/arkts-input-multimodalinput-keycode-keycode-e.md/arkts-input-multimodalinput-keycode-keycode-e.md)，默认值为0。 |
@@ -2809,8 +2820,8 @@ mouseScroll(p: Point, down: boolean, d: int, key1?: int, key2?: int, speed?: int
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
-| 17000002 | The API does not support concurrent calls. |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| [17000002](../errorcode-uitest.md#17000002-接口不支持并发调用) | The API does not support concurrent calls. |
 
 ## 示例
 
@@ -2846,7 +2857,7 @@ penClick(point: Point): Promise<void>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| point | [Point](../../apis-camera-kit/arkts-apis/arkts-camera-camera-point-i.md) | 是 | 点击的坐标点。 |
+| point | [Point](arkts-test-uitest-point-i.md) | 是 | 点击的坐标点。 |
 
 **返回值：**
 
@@ -2858,8 +2869,8 @@ penClick(point: Point): Promise<void>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
-| 17000002 | The API does not support concurrent calls. |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| [17000002](../errorcode-uitest.md#17000002-接口不支持并发调用) | The API does not support concurrent calls. |
 
 ## 示例
 
@@ -2895,7 +2906,7 @@ penDoubleClick(point: Point): Promise<void>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| point | [Point](../../apis-camera-kit/arkts-apis/arkts-camera-camera-point-i.md) | 是 | 双击的坐标点。 |
+| point | [Point](arkts-test-uitest-point-i.md) | 是 | 双击的坐标点。 |
 
 **返回值：**
 
@@ -2907,8 +2918,8 @@ penDoubleClick(point: Point): Promise<void>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
-| 17000002 | The API does not support concurrent calls. |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| [17000002](../errorcode-uitest.md#17000002-接口不支持并发调用) | The API does not support concurrent calls. |
 
 ## 示例
 
@@ -2950,7 +2961,7 @@ penLongClick(point: Point, pressure?: double): Promise<void>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| point | [Point](../../apis-camera-kit/arkts-apis/arkts-camera-camera-point-i.md) | 是 | 长按的坐标点。 |
+| point | [Point](arkts-test-uitest-point-i.md) | 是 | 长按的坐标点。 |
 | pressure | ArkTS-Dyn: number  <br>ArkTS-Sta：double | 否 | 手写笔滑动操作的压力，默认为1.0，取值范围为0.0到1.0。 |
 
 **返回值：**
@@ -2963,8 +2974,8 @@ penLongClick(point: Point, pressure?: double): Promise<void>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
-| 17000002 | The API does not support concurrent calls. |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| [17000002](../errorcode-uitest.md#17000002-接口不支持并发调用) | The API does not support concurrent calls. |
 
 ## 示例
 
@@ -3006,8 +3017,8 @@ penSwipe(startPoint: Point, endPoint: Point, speed?: int, pressure?: double): Pr
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| startPoint | [Point](../../apis-camera-kit/arkts-apis/arkts-camera-camera-point-i.md) | 是 | 起始位置的坐标点。 |
-| endPoint | [Point](../../apis-camera-kit/arkts-apis/arkts-camera-camera-point-i.md) | 是 | 结束位置的坐标点。 |
+| startPoint | [Point](arkts-test-uitest-point-i.md) | 是 | 起始位置的坐标点。 |
+| endPoint | [Point](arkts-test-uitest-point-i.md) | 是 | 结束位置的坐标点。 |
 | speed | ArkTS-Dyn: number  <br>ArkTS-Sta：int | 否 | 滑动速率，取值范围为200-40000的整数，默认值为600，单位：px/s。为不在范围内的非负数或为null/undefined时设为默认值600。为负数时抛出401错误码。 |
 | pressure | ArkTS-Dyn: number  <br>ArkTS-Sta：double | 否 | 手写笔滑动操作的压力，默认为1.0，取值范围为0.0到1.0。 |
 
@@ -3021,8 +3032,8 @@ penSwipe(startPoint: Point, endPoint: Point, speed?: int, pressure?: double): Pr
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
-| 17000002 | The API does not support concurrent calls. |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| [17000002](../errorcode-uitest.md#17000002-接口不支持并发调用) | The API does not support concurrent calls. |
 
 ## 示例
 
@@ -3064,7 +3075,7 @@ pressBack(): Promise<void>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 17000002 | The API does not support concurrent calls. |
+| [17000002](../errorcode-uitest.md#17000002-接口不支持并发调用) | The API does not support concurrent calls. |
 
 ## 示例
 
@@ -3118,8 +3129,8 @@ pressBack(displayId: int): Promise<void>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 17000002 | The API does not support concurrent calls. |
-| 17000007 | Parameter verification failed. |
+| [17000002](../errorcode-uitest.md#17000002-接口不支持并发调用) | The API does not support concurrent calls. |
+| [17000007](../errorcode-uitest.md#17000007-参数不合法) | Parameter verification failed. |
 
 ## 示例
 
@@ -3161,7 +3172,7 @@ pressHome(): Promise<void>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 17000002 | The API does not support concurrent calls. |
+| [17000002](../errorcode-uitest.md#17000002-接口不支持并发调用) | The API does not support concurrent calls. |
 
 ## 示例
 
@@ -3215,8 +3226,8 @@ pressHome(displayId: int): Promise<void>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 17000002 | The API does not support concurrent calls. |
-| 17000007 | Parameter verification failed. |
+| [17000002](../errorcode-uitest.md#17000002-接口不支持并发调用) | The API does not support concurrent calls. |
+| [17000007](../errorcode-uitest.md#17000007-参数不合法) | Parameter verification failed. |
 
 ## 示例
 
@@ -3264,8 +3275,8 @@ screenCap(savePath: string): Promise<boolean>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
-| 17000002 | The API does not support concurrent calls. |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| [17000002](../errorcode-uitest.md#17000002-接口不支持并发调用) | The API does not support concurrent calls. |
 
 ## 示例
 
@@ -3320,8 +3331,8 @@ screenCap(savePath: string, displayId: int): Promise<boolean>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
-| 17000002 | The API does not support concurrent calls. |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| [17000002](../errorcode-uitest.md#17000002-接口不支持并发调用) | The API does not support concurrent calls. |
 
 ## 示例
 
@@ -3358,7 +3369,7 @@ screenCapture(savePath: string, rect?: Rect): Promise<boolean>
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | savePath | string | 是 | 文件保存路径。路径需为当前应用的[沙箱路径](../../../file-management/app-sandbox-directory.md)。 |
-| rect | [Rect](../../apis-form-kit/arkts-apis/arkts-form-forminfo-rect-i.md) | 否 | 截图区域，默认为全屏。<br>**起始版本：** 11 |
+| rect | [Rect](arkts-test-uitest-rect-i.md) | 否 | 截图区域，默认为全屏。<br>**起始版本：** 11 |
 
 **返回值：**
 
@@ -3370,8 +3381,8 @@ screenCapture(savePath: string, rect?: Rect): Promise<boolean>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
-| 17000002 | The API does not support concurrent calls. |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| [17000002](../errorcode-uitest.md#17000002-接口不支持并发调用) | The API does not support concurrent calls. |
 
 ## 示例
 
@@ -3424,8 +3435,8 @@ setDisplayRotation(rotation: DisplayRotation): Promise<void>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
-| 17000002 | The API does not support concurrent calls. |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| [17000002](../errorcode-uitest.md#17000002-接口不支持并发调用) | The API does not support concurrent calls. |
 
 ## 示例
 
@@ -3473,8 +3484,8 @@ setDisplayRotationEnabled(enabled: boolean): Promise<void>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
-| 17000002 | The API does not support concurrent calls. |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| [17000002](../errorcode-uitest.md#17000002-接口不支持并发调用) | The API does not support concurrent calls. |
 
 ## 示例
 
@@ -3532,8 +3543,8 @@ swipe(startx: int, starty: int, endx: int, endy: int, speed?: int): Promise<void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
-| 17000002 | The API does not support concurrent calls. |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| [17000002](../errorcode-uitest.md#17000002-接口不支持并发调用) | The API does not support concurrent calls. |
 
 ## 示例
 
@@ -3542,9 +3553,7 @@ swipe(startx: int, starty: int, endx: int, endy: int, speed?: int): Promise<void
 import { Driver } from '@kit.TestKit';
 
 async function demo() {
-  // 创建Driver对象。
   let driver: Driver = Driver.create();
-  // 从坐标(100,100)滑动到坐标(200,200)，滑动速率为600px/s。
   await driver.swipe(100, 100, 200, 200, 600);
 }
 ```
@@ -3577,8 +3586,8 @@ swipeBetween(from: Point, to: Point, speed?: int): Promise<void>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| from | [Point](../../apis-camera-kit/arkts-apis/arkts-camera-camera-point-i.md) | 是 | 以Point对象的形式传入起始点的坐标信息和所属屏幕ID。 |
-| to | [Point](../../apis-camera-kit/arkts-apis/arkts-camera-camera-point-i.md) | 是 | 以Point对象的形式传入终止点的坐标信息和所属屏幕ID。  **说明：** 应与起始点属于同一个屏幕，否则将抛出17000007异常。 |
+| from | [Point](arkts-test-uitest-point-i.md) | 是 | 以Point对象的形式传入起始点的坐标信息和所属屏幕ID。 |
+| to | [Point](arkts-test-uitest-point-i.md) | 是 | 以Point对象的形式传入终止点的坐标信息和所属屏幕ID。  **说明：** 应与起始点属于同一个屏幕，否则将抛出17000007异常。 |
 | speed | ArkTS-Dyn: number  <br>ArkTS-Sta：int | 否 | 滑动速率，取值范围为200-40000的整数，默认值为600，单位：px/s。为不在范围内的非负数或为null/undefined时设为默认值600。为负数时抛出17000007错 误码。 |
 
 **返回值：**
@@ -3591,8 +3600,8 @@ swipeBetween(from: Point, to: Point, speed?: int): Promise<void>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 17000002 | The API does not support concurrent calls. |
-| 17000007 | Parameter verification failed. |
+| [17000002](../errorcode-uitest.md#17000002-接口不支持并发调用) | The API does not support concurrent calls. |
+| [17000007](../errorcode-uitest.md#17000007-参数不合法) | Parameter verification failed. |
 
 ## 示例
 
@@ -3628,8 +3637,8 @@ swipeBetweenWithOptions(from: Point, to: Point, options?: TouchOptions): Promise
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| from | [Point](../../apis-camera-kit/arkts-apis/arkts-camera-camera-point-i.md) | 是 | 手指接触屏幕的坐标点。 |
-| to | [Point](../../apis-camera-kit/arkts-apis/arkts-camera-camera-point-i.md) | 是 | 手指离开屏幕的坐标点。 |
+| from | [Point](arkts-test-uitest-point-i.md) | 是 | 手指接触屏幕的坐标点。 |
+| to | [Point](arkts-test-uitest-point-i.md) | 是 | 手指离开屏幕的坐标点。 |
 | options | [TouchOptions](arkts-test-uitest-touchoptions-i.md) | 否 | 滑动操作的选项。 只有“速度”和“压力”属性适用于此方法。 设置其他属性将导致BusinessError 17000007。 &lt;br&gt;默认值：参考TouchOptions的默认值。 |
 
 **返回值：**
@@ -3642,8 +3651,8 @@ swipeBetweenWithOptions(from: Point, to: Point, options?: TouchOptions): Promise
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 17000002 | The API does not support concurrent calls. |
-| 17000007 | Parameter verification failed. |
+| [17000002](../errorcode-uitest.md#17000002-接口不支持并发调用) | The API does not support concurrent calls. |
+| [17000007](../errorcode-uitest.md#17000007-参数不合法) | Parameter verification failed. |
 
 ## 示例
 
@@ -3704,9 +3713,9 @@ touchPadMultiFingerSwipe(fingers: int, direction: UiDirection, options?: TouchPa
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
-| 17000002 | The API does not support concurrent calls. |
-| 17000005 | This operation is not supported. |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| [17000002](../errorcode-uitest.md#17000002-接口不支持并发调用) | The API does not support concurrent calls. |
+| [17000005](../errorcode-uitest.md#17000005-操作不支持) | This operation is not supported. |
 
 ## 示例
 
@@ -3748,7 +3757,7 @@ touchPadTwoFingersScroll(point: Point, direction: UiDirection, d: int, speed?: i
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| point | [Point](../../apis-camera-kit/arkts-apis/arkts-camera-camera-point-i.md) | 是 | 触摸板双指滚动时鼠标光标的位置。 |
+| point | [Point](arkts-test-uitest-point-i.md) | 是 | 触摸板双指滚动时鼠标光标的位置。 |
 | direction | [UiDirection](arkts-test-uitest-uidirection-e.md) | 是 | 触摸板双指滚动的方向。 |
 | d | ArkTS-Dyn: number  <br>ArkTS-Sta：int | 是 | 触摸板双指滚动的格数，取值为大于等于0的整数，每格对应目标点位移120px。 |
 | speed | ArkTS-Dyn: number  <br>ArkTS-Sta：int | 否 | 触摸板双指滚动的速度，范围：1-500的整数，单位：格/秒。为不在范围内的非负数或为null/undefined时设为默认值20。为负数时抛出17000007错误码。 |
@@ -3763,9 +3772,9 @@ touchPadTwoFingersScroll(point: Point, direction: UiDirection, d: int, speed?: i
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 17000002 | The API does not support concurrent calls. |
-| 17000007 | Parameter verification failed. |
-| 17000005 | This operation is not supported. |
+| [17000002](../errorcode-uitest.md#17000002-接口不支持并发调用) | The API does not support concurrent calls. |
+| [17000007](../errorcode-uitest.md#17000007-参数不合法) | Parameter verification failed. |
+| [17000005](../errorcode-uitest.md#17000005-操作不支持) | This operation is not supported. |
 
 ## 示例
 
@@ -3815,8 +3824,8 @@ triggerCombineKeys(key0: number, key1: number, key2?: number): Promise<void>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
-| 17000002 | The API does not support concurrent calls. |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| [17000002](../errorcode-uitest.md#17000002-接口不支持并发调用) | The API does not support concurrent calls. |
 
 ## 示例
 
@@ -3874,8 +3883,8 @@ triggerCombineKeys(key0: int, key1: int, key2?: int, displayId?: int): Promise<v
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
-| 17000002 | The API does not support concurrent calls. |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| [17000002](../errorcode-uitest.md#17000002-接口不支持并发调用) | The API does not support concurrent calls. |
 
 ## 示例
 
@@ -3929,8 +3938,8 @@ triggerKey(keyCode: int): Promise<void>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
-| 17000002 | The API does not support concurrent calls. |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| [17000002](../errorcode-uitest.md#17000002-接口不支持并发调用) | The API does not support concurrent calls. |
 
 ## 示例
 
@@ -3986,8 +3995,8 @@ triggerKey(keyCode: int, displayId: int): Promise<void>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
-| 17000002 | The API does not support concurrent calls. |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| [17000002](../errorcode-uitest.md#17000002-接口不支持并发调用) | The API does not support concurrent calls. |
 
 ## 示例
 
@@ -4045,9 +4054,9 @@ HANDWRITING key with CLICK or DOUBLE_CLICK operation, SMART key with CLICK opera
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 17000002 | The API does not support concurrent calls. |
-| 17000007 | Parameter verification failed. Unsupported key, mode, and operation combination. |
-| 17000005 | This operation is not supported. |
+| [17000002](../errorcode-uitest.md#17000002-接口不支持并发调用) | The API does not support concurrent calls. |
+| [17000007](../errorcode-uitest.md#17000007-参数不合法) | Parameter verification failed. Unsupported key, mode, and operation combination. |
+| [17000005](../errorcode-uitest.md#17000005-操作不支持) | This operation is not supported. |
 
 ## 示例
 
@@ -4101,8 +4110,8 @@ waitForComponent(on: On, time: number): Promise<Component>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
-| 17000002 | The API does not support concurrent calls. |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| [17000002](../errorcode-uitest.md#17000002-接口不支持并发调用) | The API does not support concurrent calls. |
 
 ## 示例
 
@@ -4112,7 +4121,7 @@ import { Component, Driver, ON } from '@kit.TestKit';
 
 async function demo() {
   let driver: Driver = Driver.create();
-  let button: Component = await driver.waitForComponent(ON.text('next page'), 500);
+  let button: Component | null = await driver.waitForComponent(ON.text('next page'), 500);
 }
 ```
 
@@ -4149,8 +4158,20 @@ Find the first matched {@link Component} on current UI during the time given.
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
-| 17000002 | The API does not support concurrent calls. |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| [17000002](../errorcode-uitest.md#17000002-接口不支持并发调用) | The API does not support concurrent calls. |
+
+## 示例
+
+```TypeScript
+// xxx.test.ets
+import { Component, Driver, ON } from '@kit.TestKit';
+
+async function demo() {
+  let driver: Driver = Driver.create();
+  let button: Component | null = await driver.waitForComponent(ON.text('next page'), 500);
+}
+```
 
 ## waitForIdle
 
@@ -4193,8 +4214,8 @@ waitForIdle(idleTime: int, timeout: int): Promise<boolean>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
-| 17000002 | The API does not support concurrent calls. |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| [17000002](../errorcode-uitest.md#17000002-接口不支持并发调用) | The API does not support concurrent calls. |
 
 ## 示例
 
@@ -4236,7 +4257,7 @@ wakeUpDisplay(): Promise<void>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 17000002 | The API does not support concurrent calls. |
+| [17000002](../errorcode-uitest.md#17000002-接口不支持并发调用) | The API does not support concurrent calls. |
 
 ## 示例
 

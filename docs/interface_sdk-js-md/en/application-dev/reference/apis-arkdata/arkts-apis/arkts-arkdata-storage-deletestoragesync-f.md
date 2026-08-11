@@ -6,7 +6,7 @@
 function deleteStorageSync(path: string): void
 ```
 
-从内存中移除指定文件对应的Storage单实例，并删除指定文件及其备份文件、损坏文件。删除指定文件时，应用不允许再使用该实例进行数据操作，否则会出现数据一致性问题。
+Deletes the singleton **Storage** instance of a file from the memory, and deletes the specified file, its backup file, and damaged files. After the specified files are deleted, the **Storage** instance cannot be used for data operations. Otherwise, data inconsistency will occur.
 
 **Since:** 6
 
@@ -22,5 +22,5 @@ function deleteStorageSync(path: string): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| path | string | Yes | 应用程序内部数据存储路径。 |
+| path | string | Yes | Path of the target file. |
 

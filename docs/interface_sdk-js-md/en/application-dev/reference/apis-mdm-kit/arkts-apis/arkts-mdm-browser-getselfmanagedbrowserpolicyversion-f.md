@@ -12,7 +12,7 @@ import { browser } from 'kits/@kit.MDMKit';
 function getSelfManagedBrowserPolicyVersion(): string
 ```
 
-获取当前设备浏览器策略版本。
+Obtains the browser policy version of the current device.
 
 **Since:** 15
 
@@ -28,7 +28,7 @@ function getSelfManagedBrowserPolicyVersion(): string
 
 | Type | Description |
 | --- | --- |
-| string | 浏览器策略版本。 |
+| string | Browser policy version. |
 
 ## Examples
 

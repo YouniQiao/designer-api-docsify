@@ -12,7 +12,7 @@ import { buffer } from 'kits/@kit.ArkTS';
 function concat(list: Buffer[] | Uint8Array[], totalLength?: int): Buffer
 ```
 
-将数组中的内容复制（默认复制全部内容，或复制指定字节长度）到新的Buffer对象中并返回。
+Concatenates an array of **Buffer** objects of the specified length into a new object.
 
 **Since:** 9
 
@@ -28,20 +28,20 @@ function concat(list: Buffer[] | Uint8Array[], totalLength?: int): Buffer
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| list | Buffer[] \| Uint8Array[] | Yes | Buffer或Uint8Array实例数组，用于拼接合并创建新的Buffer对象。 |
-| totalLength | ArkTS-Dyn: number  <br>ArkTS-Sta：int | No | 需要复制的总字节长度，默认值为0。 |
+| list | Buffer[] \| Uint8Array[] | Yes | Array of objects to concatenate. |
+| totalLength | ArkTS-Dyn: number  <br>ArkTS-Sta：int | No | Total length of bytes to be copied. The default value is **0**. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [Buffer](arkts-arkts-buffer-buffer-c.md) | 返回新的Buffer对象。 |
+| [Buffer](arkts-arkts-buffer-buffer-c.md) | Buffer** object created. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 10200001 | The value of "length" is out of range. It must be >= 0 and <= uint32 max. Received value is: [length] |
+| [10200001](../errorcode-utils.md#10200001-value-out-of-range) | The value of "length" is out of range. It must be >= 0 and <= uint32 max. Received value is: [length] |
 
 ## Examples
 

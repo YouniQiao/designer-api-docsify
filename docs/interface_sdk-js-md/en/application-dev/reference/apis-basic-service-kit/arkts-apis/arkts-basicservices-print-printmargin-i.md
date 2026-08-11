@@ -1,6 +1,6 @@
 # PrintMargin
 
-定义打印页边距的接口。
+Defines the page margins for printing.
 
 **Since:** 24
 
@@ -22,7 +22,7 @@ import { print } from 'kits/@kit.BasicServicesKit';
 bottom?: int
 ```
 
-表示页面下边距。默认值为0。单位：毫米。
+Bottom margin of the page, in millimeters. The default value is **0**.
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
@@ -40,7 +40,7 @@ bottom?: int
 left?: int
 ```
 
-表示页面左边距。默认值为0。单位：毫米。
+Left margin of the page, in millimeters. The default value is **0**.
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
@@ -58,7 +58,7 @@ left?: int
 right?: int
 ```
 
-表示页面右边距。默认值为0。单位：毫米。
+Right margin of the page, in millimeters. The default value is **0**.
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
@@ -76,7 +76,7 @@ right?: int
 top?: int
 ```
 
-表示页面上边距。默认值为0。单位：毫米。
+Top margin of the page, in millimeters. The default value is **0**.
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 

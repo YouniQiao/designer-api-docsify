@@ -1,12 +1,10 @@
 # PluginComponent properties/events
 
-定义插件组件的属性方法。
+The width and height of the component must be explicitly set to non-zero valid values.
 
-组件的宽高必须显式设置为非零有效值。
+[Gesture events](../../apis-ability-kit/arkts-apis/arkts-app-ability-common.md/arkts-app-ability-common.md) can be distributed to and processed inside the provider page.
 
-[手势事件](../../apis-ability-kit/arkts-apis/arkts-app-ability-common.md/arkts-app-ability-common.md)可以分发到提供方页面内部进行处理。
-
-除[通用事件](../../apis-ability-kit/arkts-apis/arkts-app-ability-common.md/arkts-app-ability-common.md)外，还支持以下事件。
+In addition to the [universal events](../../apis-ability-kit/arkts-apis/arkts-app-ability-common.md/arkts-app-ability-common.md), the following events are supported.
 
 **Inheritance/Implementation:** PluginComponentAttribute extends [CommonMethod<PluginComponentAttribute>](CommonMethod<PluginComponentAttribute>)
 

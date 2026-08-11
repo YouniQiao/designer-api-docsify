@@ -39,24 +39,17 @@ Creates a PixelMap object from surface id.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. 3.Parameter verification failed. |
-| 62980178 | Failed to create the PixelMap. |
-| 62980105 | Failed to get the data. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. 3.Parameter verification failed. |
+| [62980178](../errorcode-image.md#62980178-failure-in-creating-a-pixelmap) | Failed to create the PixelMap. |
+| [62980105](../errorcode-image.md#62980105-failure-in-obtaining-image-data) | Failed to get the data. |
 
 ## Examples
 
 ```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-function createPixelMapFromSurfaceSync(surfaceId: string) {
+async function Demo(surfaceId: string) {
   let region: image.Region = { x: 0, y: 0, size: { height: 100, width: 100 } };
-  try {
-    let pixelMap: image.PixelMap = image.createPixelMapFromSurfaceSync(surfaceId, region);
-    console.info('Succeeded in creating the PixelMap from Surface.');
-  } catch (e) {
-    const err = e as BusinessError;
-    console.error(`Failed to create the PixelMap from Surface. Code: ${err.code}, message: ${err.message}`);
-  }
+  let pixelMap: image.PixelMap = image.createPixelMapFromSurfaceSync(surfaceId, region);
+  return pixelMap;
 }
 ```
 
@@ -93,23 +86,16 @@ Creates a PixelMap object from surface id.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. 3.Parameter verification failed. |
-| 62980178 | Failed to create the PixelMap. |
-| 62980105 | Failed to get the data. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. 3.Parameter verification failed. |
+| [62980178](../errorcode-image.md#62980178-failure-in-creating-a-pixelmap) | Failed to create the PixelMap. |
+| [62980105](../errorcode-image.md#62980105-failure-in-obtaining-image-data) | Failed to get the data. |
 
 ## Examples
 
 ```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-function createPixelMapFromSurfaceSync(surfaceId: string) {
-  try {
-    let pixelMap: image.PixelMap = image.createPixelMapFromSurfaceSync(surfaceId);
-    console.info('Succeeded in creating the PixelMap from Surface.');
-  } catch (e) {
-    const err = e as BusinessError;
-    console.error(`Failed to create the PixelMap from Surface. Code: ${err.code}, message: ${err.message}`);
-  }
+async function CreatePixelMapFromSurfaceSync(surfaceId: string) {
+  let pixelMap : image.PixelMap = image.createPixelMapFromSurfaceSync(surfaceId);
+  return pixelMap;
 }
 ```
 

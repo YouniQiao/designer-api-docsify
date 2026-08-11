@@ -1,11 +1,5 @@
 # offSensorStatusChange
 
-## 导入模块
-
-```TypeScript
-import { sensor } from 'kits/@kit.SensorServiceKit';
-```
-
 ## offSensorStatusChange
 
 ```TypeScript
@@ -32,5 +26,37 @@ Stop listening on device status changes.
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 14500101 | Service exception. Possible causes: 1. Sensor hdf service exception; &lt;br&gt; 2. Sensor service ipc exception;3. Sensor data channel exception. |
+| [14500101](../errorcode-sensor.md#14500101-传感器服务异常) | Service exception. Possible causes: 1. Sensor hdf service exception; &lt;br&gt; 2. Sensor service ipc exception;3. Sensor data channel exception. |
+
+## 示例
+
+```TypeScript
+import { sensor } from '@kit.SensorServiceKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+// 使用try catch对可能出现的异常进行捕获
+try {
+  const statusChangeCallback = (data: sensor.SensorStatusEvent) => {
+    console.info('sensorStatusChange : ' + JSON.stringify(data));
+  }
+  const statusChangeCallback2 = (data: sensor.SensorStatusEvent) => {
+    console.info('sensorStatusChange2 : ' + JSON.stringify(data));
+  }
+  // 注册两个设备上线消息监听回调
+  sensor.onSensorStatusChange(statusChangeCallback);
+  sensor.onSensorStatusChange(statusChangeCallback2);
+
+  // 3秒后注销第一个监听
+  setTimeout(() => {
+    sensor.offSensorStatusChange(statusChangeCallback);
+  }, 3000);
+  // 5秒后注销所有监听
+  setTimeout(() => {
+    sensor.offSensorStatusChange();
+  }, 5000);
+} catch (error) {
+  let e: BusinessError = error as BusinessError;
+  console.error(`Failed to invoke on. Code: ${e.code}, message: ${e.message}`);
+}
+```
 

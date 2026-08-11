@@ -34,7 +34,7 @@ constructor(value: ImageAttachmentInterface)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | [ImageAttachmentInterface](arkts-arkui-imageattachmentinterface-i.md) | 是 | 图片设置项。 |
+| value | [ImageAttachmentInterface](arkts-arkui-styledstring-imageattachmentinterface-i.md) | 是 | 图片设置项。 |
 
 ## constructor
 
@@ -92,7 +92,7 @@ readonly layoutStyle?: ImageAttachmentLayoutStyle
 
 获取属性字符串的图片布局。
 
-**类型：** [ImageAttachmentLayoutStyle](arkts-arkui-imageattachmentlayoutstyle-i.md)
+**类型：** [ImageAttachmentLayoutStyle](arkts-arkui-styledstring-imageattachmentlayoutstyle-i.md)
 
 **起始版本：** 12
 
@@ -212,7 +212,7 @@ readonly value: PixelMap
 
 获取属性字符串的图片数据源。
 
-**类型：** [PixelMap](../../apis-image-kit/arkts-apis/arkts-image-image-pixelmap-i.md)
+**类型：** [PixelMap](arkts-arkui-pixelmap-t.md)
 
 **起始版本：** 12
 

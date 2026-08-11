@@ -13,12 +13,6 @@
 
 **系统能力：** SystemCapability.Multimedia.SystemSound.Core
 
-## 导入模块
-
-```TypeScript
-import { systemSoundManager } from 'kits/@kit.AudioKit';
-```
-
 ## getCategory
 
 ArkTS-Dyn:
@@ -51,7 +45,7 @@ getCategory(): int
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 202 | Caller is not a system application. |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Caller is not a system application. |
 
 ## 示例
 
@@ -85,7 +79,7 @@ getCustomizedType(): ToneCustomizedType
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 202 | Caller is not a system application. |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Caller is not a system application. |
 
 ## 示例
 
@@ -119,7 +113,7 @@ getFileName(): string
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 202 | Caller is not a system application. |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Caller is not a system application. |
 
 ## 示例
 
@@ -147,13 +141,13 @@ getMediaType():MediaType
 
 | 类型 | 说明 |
 | --- | --- |
-| [MediaType](../../apis-arkweb/arkts-apis/arkts-arkweb-webview-mediatype-e.md) | 媒体类型，如果应用未调用过setMediaType设置mediatype，则此函数返回的默认值为AUDIO。 |
+| [MediaType](../../apis-media-kit/arkts-apis/arkts-media-multimedia-media-mediatype-e.md) | 媒体类型，如果应用未调用过setMediaType设置mediatype，则此函数返回的默认值为AUDIO。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 202 | Caller is not a system application. |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Caller is not a system application. |
 
 ## 示例
 
@@ -187,7 +181,7 @@ getTitle(): string
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 202 | Caller is not a system application. |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Caller is not a system application. |
 
 ## 示例
 
@@ -221,7 +215,7 @@ getUri(): string
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 202 | Caller is not a system application. |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Caller is not a system application. |
 
 ## 示例
 
@@ -261,8 +255,8 @@ setCategory(category: int): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
-| 202 | Caller is not a system application. |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Caller is not a system application. |
 
 ## 示例
 
@@ -298,8 +292,8 @@ setFileName(name: string): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
-| 202 | Caller is not a system application. |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Caller is not a system application. |
 
 ## 示例
 
@@ -329,13 +323,13 @@ setMediaType(type:MediaType):void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| type | [MediaType](../../apis-arkweb/arkts-apis/arkts-arkweb-webview-mediatype-e.md) | 是 | 媒体类型。 |
+| type | [MediaType](../../apis-media-kit/arkts-apis/arkts-media-multimedia-media-mediatype-e.md) | 是 | 媒体类型。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 202 | Caller is not a system application. |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Caller is not a system application. |
 
 ## 示例
 
@@ -371,8 +365,8 @@ setTitle(title: string): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
-| 202 | Caller is not a system application. |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Caller is not a system application. |
 
 ## 示例
 

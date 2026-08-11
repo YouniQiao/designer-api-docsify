@@ -12,7 +12,8 @@ import { applicationManager } from 'kits/@kit.MDMKit';
 function queryBundleStatsInfos(admin: Want, startTime: number, endTime: number, accountId: number): Array<BundleStatsInfo>
 ```
 
-查询指定用户账户在给定时间段内，各应用在前台运行的累计时长统计信息。查询的最小粒度是天，调用时需要传入起始时间（startTime）、结束时间（endTime）以及目标用户账户ID（accountId）。请求参数startTime和endTime为毫秒级时间戳，支持调用方传入自定义值，startTime默认取当天的00:00:00.000，endTime默认取当天的24:00:00.000（即次日零点）。请求参数接口返回BundleStatsInfo数组，每个元素包含一个应用的包名，其分身索引值及其对应时间段内的前台使用时长（毫秒级时间戳）。若startTime为0，则表示从设备首次开机的时间开始查询。若起始时间晚于结束时间，接口将返回错误码9200012。
+Queries the accumulated foreground runtime statistics of applications under a specified user account within a given time period. The minimum query granularity is one day. The API requires the start time (**startTime**), end time (  
+**endTime**), and target user account ID (**accountId**) to be passed in. **startTime** and **endTime** are millisecond-level timestamps. The caller can pass custom values. The default value of **startTime** is 00:00:00.000of the current day, and the default of **endTime** is 24:00:00.000 of the current day (that is, 00:00:00 of the following day). The API returns an array of **BundleStatsInfo**, where each element contains the bundle name of an application, its clone index, and the foreground usage duration (in milliseconds) within the specified time period.If **startTime** is set to **0**, the query starts from the device's first boot time. If **startTime** is later than **endTime**, the API returns error code 9200012.
 
 **Since:** 26.0.0
 
@@ -30,76 +31,23 @@ function queryBundleStatsInfos(admin: Want, startTime: number, endTime: number, 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| admin | [Want](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-want-want-c.md) | Yes | 企业设备管理扩展组件。Want中必须包含企业设备管理扩展能力的abilityName和所在应用的bundleName。 |
-| startTime | number | Yes | 查询起始时间，单位：毫秒（时间戳）。 &lt;br&gt;取值范围：[0, +∞)。 |
-| endTime | number | Yes | 查询结束时间，单位：毫秒（时间戳）。 &lt;br&gt;取值范围：[0, +∞)。 |
-| accountId | number | Yes | 用户ID，取值范围：大于等于0的整数。 &lt;br&gt; accountId可以通过@ohos.account.osAccount中的 [getOsAccountLocalId](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-osaccount-accountmanager-i.md/arkts-basicservices-osaccount-accountmanager-i.md#getosaccountlocalid)等接口来获取。 |
+| admin | [Want](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-want-want-c.md) | Yes | EnterpriseAdminExtensionAbility. **Want** must contain the ability name of the EnterpriseAdminExtensionAbility and the bundle name of the application. |
+| startTime | number | Yes | Query start time, in milliseconds (timestamp). &lt;br&gt;Value range: [0, +∞). |
+| endTime | number | Yes | Query end time, in milliseconds (timestamp). &lt;br&gt;Value range: [0, +∞). |
+| accountId | number | Yes | Account ID. The value is an integer greater than or equal to 0. &lt;br&gt; You can call [getOsAccountLocalId](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-osaccount-accountmanager-i.md/arkts-basicservices-osaccount-accountmanager-i.md#getosaccountlocalid) of @ ohos.account.osAccount to obtain the ID. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Array&lt;BundleStatsInfo&gt; | 返回应用包统计信息的数组。 |
+| Array&lt;BundleStatsInfo&gt; | Array of application bundle statistics. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 9200012 | Parameter verification failed. |
-| 201 | Permission verification failed. The application does not have the permission required to call the API. |
-| 9200001 | The application is not an administrator application of the device. |
-| 9200002 | The administrator application does not have permission to manage the device. |
-
-## Examples
-
-```TypeScript
-import { applicationManager } from '@kit.MDMKit';
-import { Want } from '@kit.AbilityKit';
-
-let wantTemp: Want = {
-  // Replace it as required.
-  bundleName: 'com.example.myapplication',
-  abilityName: 'EnterpriseAdminAbility'
-};
-
-try {
-  // Query data from 2026/4/15 00:00:00.000 to 2026/4/16 23:59:59.999. (The month starts from 0.)
-  let startTime: number = new Date(2026, 3, 15, 0, 0, 0, 0).getTime();
-  let endTime: number = new Date(2026, 3, 16, 23, 59, 59, 999).getTime();
-  let accountId: number = 100;
-  let result: Array<applicationManager.BundleStatsInfo> = applicationManager.queryBundleStatsInfos(wantTemp, startTime, endTime, accountId);
-  console.info(`Succeeded in querying bundle stats infos, result : ${JSON.stringify(result)}`);
-} catch(err) {
-  console.error(`Failed to query bundle stats infos. Code: ${err.code}, message: ${err.message}`);
-}
-```
-
-```TypeScript
-import { applicationManager } from '@kit.MDMKit';
-import { Want } from '@kit.AbilityKit';
-
-let wantTemp: Want = {
-  // Replace it as required.
-  bundleName: 'com.example.myapplication',
-  abilityName: 'EnterpriseAdminAbility'
-};
-
-try {
-  // Query data of the last month.
-  // Obtain the current date.
-  let currentDate: Date = new Date();
-  // Calculate the first day of the last month. (The month starts from 0. Therefore, subtract 1 from the current month.)
-  let lastMonthFirstDay: Date = new Date(currentDate.getFullYear(), currentDate.getMonth() - 1, 1, 0, 0, 0, 0);
-  // Calculate the last day of the last month. (The 0th day of the next month is the last day of the current month.)
-  let lastMonthLastDay: Date = new Date(currentDate.getFullYear(), currentDate.getMonth(), 0, 23, 59, 59, 999);
-  
-  let startTime: number = lastMonthFirstDay.getTime();
-  let endTime: number = lastMonthLastDay.getTime();
-  let accountId: number = 100;
-  let result: Array<applicationManager.BundleStatsInfo> = applicationManager.queryBundleStatsInfos(wantTemp, startTime, endTime, accountId);
-  console.info(`Succeeded in querying bundle stats infos, result : ${JSON.stringify(result)}`);
-} catch(err) {
-  console.error(`Failed to query bundle stats infos. Code: ${err.code}, message: ${err.message}`);
-}
-```
+| [9200012](../errorcode-enterpriseDeviceManager.md#9200012-parameter-verification-failed) | Parameter verification failed. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed. The application does not have the permission required to call the API. |
+| [9200001](../errorcode-enterpriseDeviceManager.md#9200001-deviceadmin-not-enabled) | The application is not an administrator application of the device. |
+| [9200002](../errorcode-enterpriseDeviceManager.md#9200002-permission-denied) | The administrator application does not have permission to manage the device. |
 

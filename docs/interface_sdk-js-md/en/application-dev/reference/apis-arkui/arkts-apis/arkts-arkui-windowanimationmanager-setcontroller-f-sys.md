@@ -12,9 +12,7 @@ import { windowAnimationManager } from 'kits/@kit.ArkUI';
 function setController(controller: WindowAnimationController): void
 ```
 
-设置窗口动画控制器。窗口动画控制器的说明请参考[WindowAnimationController](arkts-arkui-windowanimationmanager-windowanimationcontroller-i-sys.md)。
-
-在使用windowAnimationManager的其他接口前，需要预先调用本接口设置窗口动画控制器。
+Set the window animation controller.
 
 **Since:** 9
 
@@ -30,7 +28,7 @@ function setController(controller: WindowAnimationController): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| controller | [WindowAnimationController](arkts-arkui-windowanimationmanager-windowanimationcontroller-i-sys.md) | Yes | 窗口动画的控制器。 |
+| controller | [WindowAnimationController](arkts-arkui-windowanimationmanager-windowanimationcontroller-i-sys.md) | Yes | Window animation controller. |
 
 ## Examples
 
@@ -39,7 +37,7 @@ let controller: windowAnimationManager.WindowAnimationController = {
     onStartAppFromLauncher(startingWindowTarget: windowAnimationManager.WindowAnimationTarget, finishCallback: windowAnimationManager.WindowAnimationFinishedCallback): void {
         console.info('onStartAppFromLauncher, the startingWindowTarget is: ' + startingWindowTarget);
         finishCallback.onAnimationFinish();
-    },
+      },
     onStartAppFromRecent(startingWindowTarget: windowAnimationManager.WindowAnimationTarget, finishCallback: windowAnimationManager.WindowAnimationFinishedCallback): void {
         console.info('onStartAppFromRecent, the startingWindowTarget is: ' + startingWindowTarget);
         finishCallback.onAnimationFinish();

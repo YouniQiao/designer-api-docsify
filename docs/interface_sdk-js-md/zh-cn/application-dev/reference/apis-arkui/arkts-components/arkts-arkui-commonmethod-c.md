@@ -822,7 +822,7 @@ alignRules(value: AlignRuleOption): T
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | [AlignRuleOption](../arkts-apis/arkts-arkui-common-alignruleoption-i.md) | 是 | 指定设置在相对布局组件中子组件的对齐规则。 |
+| value | [AlignRuleOption](arkts-arkui-alignruleoption-i.md) | 是 | 指定设置在相对布局组件中子组件的对齐规则。 |
 
 **返回值：**
 
@@ -1093,7 +1093,7 @@ backdropBlur(value: number, options?: BlurOptions): T
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | value | number | 是 | 为当前组件添加背景模糊效果，入参为模糊半径，模糊半径越大越模糊，为0时不模糊。&lt;br/&gt;取值范围：[0, +∞)&lt;br/&gt;默认值：0 |
-| options | [BlurOptions](arkts-arkui-bluroptions-i.md) | 否 | 灰阶模糊参数。对图像中的黑白色进行色阶调整，使其趋于灰色更为柔和美观，对图像中的彩色调整没有效果。&lt;br/&gt;默认值：grayscale: [0,0]<br>**起始版本：** 11 |
+| options | [BlurOptions](../arkts-apis/arkts-arkui-common-bluroptions-i.md) | 否 | 灰阶模糊参数。对图像中的黑白色进行色阶调整，使其趋于灰色更为柔和美观，对图像中的彩色调整没有效果。&lt;br/&gt;默认值：grayscale: [0,0]<br>**起始版本：** 11 |
 
 **返回值：**
 
@@ -1128,7 +1128,7 @@ backdropBlur(radius: Optional<number>, options?: BlurOptions): T
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | radius | [Optional](../arkts-apis/arkts-arkui-optional-t.md)&lt;number&gt; | 是 | 为当前组件添加背景模糊效果，入参为模糊半径，模糊半径越大越模糊，为0时不模糊。当radius的值为undefined时，恢复为默认无模糊的背景。&lt;br/&gt;取 值范围：[0, +∞)&lt;br/&gt;默认值：0&lt;br/&gt; |
-| options | [BlurOptions](arkts-arkui-bluroptions-i.md) | 否 | 灰阶模糊参数。对图像中的黑白色进行色阶调整，使其趋于灰色更为柔和美观，对图像中的彩色调整没有效果。&lt;br/&gt;默认值：grayscale: [0,0] |
+| options | [BlurOptions](../arkts-apis/arkts-arkui-common-bluroptions-i.md) | 否 | 灰阶模糊参数。对图像中的黑白色进行色阶调整，使其趋于灰色更为柔和美观，对图像中的彩色调整没有效果。&lt;br/&gt;默认值：grayscale: [0,0] |
 
 **返回值：**
 
@@ -1164,7 +1164,7 @@ backdropBlur(radius: Optional<number>, options?: BlurOptions, sysOptions?: Syste
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | radius | [Optional](../arkts-apis/arkts-arkui-optional-t.md)&lt;number&gt; | 是 | 为当前组件添加背景模糊效果，入参为模糊半径，模糊半径越大越模糊，为0时不模糊。&lt;br/&gt;当radius的值为undefined时，恢复为默认无模糊的背景。&lt; br/&gt;取值范围：[0, +∞)&lt;br/&gt;默认值：0 |
-| options | [BlurOptions](arkts-arkui-bluroptions-i.md) | 否 | 灰阶模糊参数。对图像中的黑白色进行色阶调整，使其趋于灰色更为柔和美观，对图像中的彩色调整没有效果。&lt;br/&gt;默认值：grayscale: [0,0] |
+| options | [BlurOptions](../arkts-apis/arkts-arkui-common-bluroptions-i.md) | 否 | 灰阶模糊参数。对图像中的黑白色进行色阶调整，使其趋于灰色更为柔和美观，对图像中的彩色调整没有效果。&lt;br/&gt;默认值：grayscale: [0,0] |
 | sysOptions | [SystemAdaptiveOptions](arkts-arkui-systemadaptiveoptions-i.md) | 否 | 系统自适应调节参数。&lt;br/&gt;默认值：{ disableSystemAdaptation: false } |
 
 **返回值：**
@@ -1503,7 +1503,7 @@ backgroundEffect(options: BackgroundEffectOptions): T
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| options | [BackgroundEffectOptions](arkts-arkui-backgroundeffectoptions-i.md) | 是 | 设置组件背景属性包括：背景模糊半径、亮度、饱和度和颜色等参数。 |
+| options | [BackgroundEffectOptions](../arkts-apis/arkts-arkui-common-backgroundeffectoptions-i.md) | 是 | 设置组件背景属性包括：背景模糊半径、亮度、饱和度和颜色等参数。 |
 
 **返回值：**
 
@@ -1880,7 +1880,7 @@ Binds a context menu to this component, which is displayed when the user long-pr
 | --- | --- | --- | --- |
 | content | [CustomBuilder](arkts-arkui-custombuilder-t.md) | 是 | Indicates the content of context menu. |
 | responseType | [ResponseType](../arkts-apis/arkts-arkui-responsetype-e.md) | 是 | Indicates response type of context menu, Long pressing with a mouse device is not supported. |
-| options | [ContextMenuOptions](arkts-arkui-contextmenuoptions-i.md) | 否 | Indicates the options of context menu. |
+| options | [ContextMenuOptions](../arkts-apis/arkts-arkui-common-contextmenuoptions-i.md) | 否 | Indicates the options of context menu. |
 
 **返回值：**
 
@@ -1914,7 +1914,7 @@ ContextMenu control
 | --- | --- | --- | --- |
 | isShown | boolean | 是 | true means display content, false means hide content. |
 | content | [CustomBuilder](arkts-arkui-custombuilder-t.md) | 是 | Indicates the content of context menu. |
-| options | [ContextMenuOptions](arkts-arkui-contextmenuoptions-i.md) | 否 | Indicates the options of context menu. |
+| options | [ContextMenuOptions](../arkts-apis/arkts-arkui-common-contextmenuoptions-i.md) | 否 | Indicates the options of context menu. |
 
 **返回值：**
 
@@ -1948,7 +1948,7 @@ bindContextMenuByIsShow(isShow: boolean, content: CustomBuilder | Array<MenuElem
 | --- | --- | --- | --- |
 | isShow | boolean | 是 | true表示显示内容，false表示隐藏内容，默认为false。 &lt;p&gt;&lt;strong&gt;注意&lt;/strong&gt;： &lt;br&gt;只有在构建了相关页面后，菜单才能正常显示。如果设置了该参数在构建完成之前设置为true，显示问题，如错位、扭曲或无法弹出上，可能会发生。不支持长按拖动。 &lt;/p&gt;. |
 | content | [CustomBuilder](arkts-arkui-custombuilder-t.md) \| Array&lt;MenuElement&gt; | 是 | 上下文菜单的内容。 |
-| options | [ContextMenuOptions](arkts-arkui-contextmenuoptions-i.md) | 否 | 上下文菜单选项。 |
+| options | [ContextMenuOptions](../arkts-apis/arkts-arkui-common-contextmenuoptions-i.md) | 否 | 上下文菜单选项。 |
 
 **返回值：**
 
@@ -1983,7 +1983,7 @@ bindContextMenuByResponseType(content: CustomBuilder | Array<MenuElement>, respo
 | --- | --- | --- | --- |
 | content | [CustomBuilder](arkts-arkui-custombuilder-t.md) \| Array&lt;MenuElement&gt; | 是 | 上下文菜单的内容。 |
 | responseType | [ResponseType](../arkts-apis/arkts-arkui-responsetype-e.md) | 是 | 上下文菜单响应类型。用鼠标设备长按 不支持。 |
-| options | [ContextMenuOptions](arkts-arkui-contextmenuoptions-i.md) | 否 | 上下文菜单选项。 |
+| options | [ContextMenuOptions](../arkts-apis/arkts-arkui-common-contextmenuoptions-i.md) | 否 | 上下文菜单选项。 |
 
 **返回值：**
 
@@ -2016,7 +2016,7 @@ bindContextMenuWithResponse(content: CustomBuilderT<ResponseType> | undefined, o
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | content | [CustomBuilderT](arkts-arkui-custombuildert-t.md)&lt;[ResponseType](../arkts-apis/arkts-arkui-responsetype-e.md)&gt; \| undefined | 是 | 表示上下文菜单的内容。传入undefined表示解绑。 |
-| options | [ContextMenuOptions](arkts-arkui-contextmenuoptions-i.md) | 否 | 表示上下文菜单的选项。 |
+| options | [ContextMenuOptions](../arkts-apis/arkts-arkui-common-contextmenuoptions-i.md) | 否 | 表示上下文菜单的选项。 |
 
 **返回值：**
 
@@ -2050,7 +2050,7 @@ bindContextMenuWithResponse(content: CustomBuilderT<ResponseType> | Array<MenuEl
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | content | [CustomBuilderT](arkts-arkui-custombuildert-t.md)&lt;[ResponseType](../arkts-apis/arkts-arkui-responsetype-e.md)&gt; \| Array&lt;MenuElement&gt; \| undefined | 是 | 上下文菜单的内容。Undefined表示解除绑定。 |
-| options | [ContextMenuOptions](arkts-arkui-contextmenuoptions-i.md) | 否 | 上下文菜单选项。 |
+| options | [ContextMenuOptions](../arkts-apis/arkts-arkui-common-contextmenuoptions-i.md) | 否 | 上下文菜单选项。 |
 
 **返回值：**
 
@@ -2249,7 +2249,7 @@ blendMode(value: BlendMode, type?: BlendApplyType): T
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | [BlendMode](../arkts-apis/arkts-arkui-common-blendmode-e.md) | 是 | 混合模式。&lt;br/&gt;默认值：BlendMode.NONE&lt;br/&gt;**说明：**&lt;br/&gt;混合模式设置为BlendMode.NONE时，blend效果实际为默认的 BlendMode.SRC_OVER，且BlendApplyType不生效。 |
+| value | [BlendMode](arkts-arkui-blendmode-e.md) | 是 | 混合模式。&lt;br/&gt;默认值：BlendMode.NONE&lt;br/&gt;**说明：**&lt;br/&gt;混合模式设置为BlendMode.NONE时，blend效果实际为默认的 BlendMode.SRC_OVER，且BlendApplyType不生效。 |
 | type | [BlendApplyType](arkts-arkui-blendapplytype-e.md) | 否 | blendMode实现方式是否离屏。&lt;br/&gt;默认值：BlendApplyType.FAST&lt;br/&gt;**说明：**&lt;br/&gt;1. 设置 BlendApplyType.FAST时，不离屏。&lt;br/&gt;2. 设置BlendApplyType.OFFSCREEN时，会创建当前组件大小的离屏画布，再将当前组件（含子组件）的内容绘制到离屏画布上，再用指定的混合模式与下 方画布已有内容进行混合。使用该实现方式时，将导致 [linearGradientBlur&lt;sup&gt;12+&lt;/sup&gt;](arkts-arkui-commonmethod-c.md#lineargradientblur) 、[backgroundEffect](arkts-arkui-commonmethod-c.md#backgroundeffect)、 [brightness](arkts-arkui-commonmethod-c.md#brightness)、 [blur](arkts-arkui-commonmethod-c.md#blur)等需要截屏的接口无法截取到正确的画面。 |
 
 **返回值：**
@@ -2317,7 +2317,7 @@ blur(value: number, options?: BlurOptions): T
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | value | number | 是 | 当前组件添加内容模糊效果，入参为模糊半径，模糊半径越大越模糊，为0时不模糊。 |
-| options | [BlurOptions](arkts-arkui-bluroptions-i.md) | 否 | 灰阶模糊参数。对图像中的黑白色进行色阶调整，使其趋于灰色更为柔和美观，对图像中的彩色调整没有效果。&lt;br/&gt;默认值：grayscale: [0,0]<br>**起始版本：** 11 |
+| options | [BlurOptions](../arkts-apis/arkts-arkui-common-bluroptions-i.md) | 否 | 灰阶模糊参数。对图像中的黑白色进行色阶调整，使其趋于灰色更为柔和美观，对图像中的彩色调整没有效果。&lt;br/&gt;默认值：grayscale: [0,0]<br>**起始版本：** 11 |
 
 **返回值：**
 
@@ -2350,7 +2350,7 @@ blur(blurRadius: Optional<number>, options?: BlurOptions): T
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | blurRadius | [Optional](../arkts-apis/arkts-arkui-optional-t.md)&lt;number&gt; | 是 | 当前组件添加内容模糊效果，入参为模糊半径，模糊半径越大越模糊，为0时不模糊。&lt;br/&gt;当blurRadius的值为undefined时，维持之前取 值。 |
-| options | [BlurOptions](arkts-arkui-bluroptions-i.md) | 否 | 灰阶模糊参数。对图像中的黑白色进行色阶调整，使其趋于灰色更为柔和美观，对图像中的彩色调整没有效果。&lt;br/&gt;默认值：grayscale: [0,0] |
+| options | [BlurOptions](../arkts-apis/arkts-arkui-common-bluroptions-i.md) | 否 | 灰阶模糊参数。对图像中的黑白色进行色阶调整，使其趋于灰色更为柔和美观，对图像中的彩色调整没有效果。&lt;br/&gt;默认值：grayscale: [0,0] |
 
 **返回值：**
 
@@ -2383,7 +2383,7 @@ blur(blurRadius: Optional<number>, options?: BlurOptions, sysOptions?: SystemAda
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | blurRadius | [Optional](../arkts-apis/arkts-arkui-optional-t.md)&lt;number&gt; | 是 | 当前组件添加内容模糊效果，入参为模糊半径，模糊半径越大越模糊，为0时不模糊。&lt;br/&gt;当blurRadius的值为undefined时，维持之前取 值。 |
-| options | [BlurOptions](arkts-arkui-bluroptions-i.md) | 否 | 灰阶模糊参数。对图像中的黑白色进行色阶调整，使其趋于灰色更为柔和美观，对图像中的彩色调整没有效果。&lt;br/&gt;默认值：grayscale: [0,0] |
+| options | [BlurOptions](../arkts-apis/arkts-arkui-common-bluroptions-i.md) | 否 | 灰阶模糊参数。对图像中的黑白色进行色阶调整，使其趋于灰色更为柔和美观，对图像中的彩色调整没有效果。&lt;br/&gt;默认值：grayscale: [0,0] |
 | sysOptions | [SystemAdaptiveOptions](arkts-arkui-systemadaptiveoptions-i.md) | 否 | 系统自适应调节参数。&lt;br/&gt;默认值：{ disableSystemAdaptation: false } |
 
 **返回值：**
@@ -3477,7 +3477,7 @@ dragPreviewOptions(value: DragPreviewOptions, options?: DragInteractionOptions):
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | value | [DragPreviewOptions](arkts-arkui-dragpreviewoptions-i.md) | 是 | 设置拖拽过程中预览图处理模式及数量角标的显示。 |
-| options | [DragInteractionOptions](arkts-arkui-draginteractionoptions-i.md) | 否 | 设置拖拽过程中预览图浮起的交互模式。&lt;br/&gt;默认值：空<br>**起始版本：** 12 |
+| options | [DragInteractionOptions](../arkts-apis/arkts-arkui-common-draginteractionoptions-i.md) | 否 | 设置拖拽过程中预览图浮起的交互模式。&lt;br/&gt;默认值：空<br>**起始版本：** 12 |
 
 **返回值：**
 
@@ -5818,7 +5818,7 @@ onAccessibilityActionIntercept(callback: AccessibilityActionInterceptCallback): 
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [AccessibilityActionInterceptCallback](arkts-arkui-accessibilityactioninterceptcallback-t.md) | 是 | 可访问性操作拦截回调函数 |
+| callback | [AccessibilityActionInterceptCallback](../arkts-apis/arkts-arkui-accessibilityactioninterceptcallback-t.md) | 是 | 可访问性操作拦截回调函数 |
 
 **返回值：**
 
@@ -5884,7 +5884,7 @@ Trigger a accessibility hover event.
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [AccessibilityCallback](../arkts-apis/arkts-arkui-accessibilitycallback-t.md) | 是 | A callback instance used when the component is touched after accessibility mode is enabled. |
+| callback | [AccessibilityCallback](arkts-arkui-accessibilitycallback-t.md) | 是 | A callback instance used when the component is touched after accessibility mode is enabled. |
 
 **返回值：**
 
@@ -6778,7 +6778,7 @@ onGestureRecognizerJudgeBegin(callback: GestureRecognizerJudgeBeginCallback): T
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [GestureRecognizerJudgeBeginCallback](../arkts-apis/arkts-arkui-gesturerecognizerjudgebegincallback-t.md) | 是 | 自定义手势识别器判定回调。当绑定到该组件的手势即将成功时，会触发用户定义的回调来获取结果。 |
+| callback | [GestureRecognizerJudgeBeginCallback](arkts-arkui-gesturerecognizerjudgebegincallback-t.md) | 是 | 自定义手势识别器判定回调。当绑定到该组件的手势即将成功时，会触发用户定义的回调来获取结果。 |
 
 **返回值：**
 
@@ -6815,7 +6815,7 @@ onGestureRecognizerJudgeBegin(callback: GestureRecognizerJudgeBeginCallback, exp
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [GestureRecognizerJudgeBeginCallback](../arkts-apis/arkts-arkui-gesturerecognizerjudgebegincallback-t.md) | 是 | 自定义手势识别器判定回调，当绑定到该组件的手势即将成功时，会触发用户定义的回调来获取结果。 |
+| callback | [GestureRecognizerJudgeBeginCallback](arkts-arkui-gesturerecognizerjudgebegincallback-t.md) | 是 | 自定义手势识别器判定回调，当绑定到该组件的手势即将成功时，会触发用户定义的回调来获取结果。 |
 | exposeInnerGesture | boolean | 是 | 暴露内部手势标识。&lt;br/&gt;默认值：false&lt;br/&gt;**说明：** &lt;br/&gt;如果是组合组件，此参数设置true，回调中的current参数则会包含组合组件内部的手势识别器。&lt;br&gt; 当前仅支持[Tabs](../arkts-apis/arkts-arkui-tabs-tabs-f.md/arkts-arkui-tabs-tabs-f.md#tabs)，其他组件请不要设置此参数。&lt;br/&gt;设置为false时，功能与原接口[onGestureRecognizerJudgeBegin](arkts-arkui-commonmethod-c.md#ongesturerecognizerjudgebegin) 相同。 |
 
 **返回值：**
@@ -7257,7 +7257,7 @@ onTouchTestDone(callback: TouchTestDoneCallback): T
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [TouchTestDoneCallback](../arkts-apis/arkts-arkui-touchtestdonecallback-t.md) | 是 | 回调函数，用于指定手势识别器是否参与后续处理。在 [触摸测试](../../../ui/arkts-interaction-basic-principles.md#触摸测试)结束后，开始识别用户手势之前，会触发该回调来动态指定手势识别器是否参与后续处理。 |
+| callback | [TouchTestDoneCallback](arkts-arkui-touchtestdonecallback-t.md) | 是 | 回调函数，用于指定手势识别器是否参与后续处理。在 [触摸测试](../../../ui/arkts-interaction-basic-principles.md#触摸测试)结束后，开始识别用户手势之前，会触发该回调来动态指定手势识别器是否参与后续处理。 |
 
 **返回值：**
 
@@ -8995,7 +8995,7 @@ smartGestureShortcut(options?: SmartGestureShortcutOptions): T
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| options | [SmartGestureShortcutOptions](../arkts-apis/arkts-arkui-common-smartgestureshortcutoptions-i.md) | 否 | 组件智慧手势响应配置。 SmartGestureShortcutOptions中enabled用于配置组件是否响应智慧手势。 selectable用于设置组件被智慧手势操作选中后是否展示并保留选中态。 action用于设置智慧手势响应优先级，当前仅支持GestureShortcut.PRIMARY，会使组件在智慧手势的滑动，点击等操作中作为首选响应目标。 建议显式传入，避免因缺省配置导致预期不一致，缺省配置处理参考[SmartGestureShortcutOptions](arkts-arkui-smartgestureshortcutoptions-i.md)。 |
+| options | [SmartGestureShortcutOptions](arkts-arkui-smartgestureshortcutoptions-i.md) | 否 | 组件智慧手势响应配置。 SmartGestureShortcutOptions中enabled用于配置组件是否响应智慧手势。 selectable用于设置组件被智慧手势操作选中后是否展示并保留选中态。 action用于设置智慧手势响应优先级，当前仅支持GestureShortcut.PRIMARY，会使组件在智慧手势的滑动，点击等操作中作为首选响应目标。 建议显式传入，避免因缺省配置导致预期不一致，缺省配置处理参考[SmartGestureShortcutOptions](arkts-arkui-smartgestureshortcutoptions-i.md)。 |
 
 **返回值：**
 
@@ -9504,7 +9504,7 @@ transition(effect: TransitionEffect, onFinish: Optional<TransitionFinishCallback
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| effect | [TransitionEffect](../arkts-apis/arkts-arkui-common-transitioneffect-c.md) | 是 | 设置组件插入显示和删除隐藏的过渡效果。 |
+| effect | [TransitionEffect](arkts-arkui-transitioneffect-c.md) | 是 | 设置组件插入显示和删除隐藏的过渡效果。 |
 | onFinish | [Optional](../arkts-apis/arkts-arkui-optional-t.md)&lt;TransitionFinishCallback&gt; | 是 | 转场动画结束回调。 |
 
 **返回值：**
@@ -9773,7 +9773,7 @@ Sets the number of occupied columns and offset columns for a specific device wid
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | {     xs?: number \| { span: number; offset: number };     sm?: number \| { span: number; offset: number };     md?: number \| { span: number; offset: number };     lg?: number \| { span: number; offset: number };   } | 是 |  |
+| value | {     xs?: number \| { span: number; offset: number };     sm?: number \| { span: number; offset: number };     md?: number \| { span: number; offset: number };     lg?: number \| { span: number; offset: number };   } | 是 |  |
 
 **返回值：**
 

@@ -1,6 +1,6 @@
 # FailedFileInfo
 
-云文件批量缓存失败列表及失败原因。
+Represents a list of files that fail to be downloaded from the Drive Kit and failure causes.
 
 **Since:** 20
 
@@ -22,7 +22,7 @@ import { cloudSync } from 'kits/@kit.CoreFileKit';
 error: DownloadErrorType
 ```
 
-文件下载失败错误类型。
+Error type of the file download failure.
 
 **Type:** [DownloadErrorType](arkts-corefile-cloudsync-downloaderrortype-e.md)
 
@@ -40,7 +40,7 @@ error: DownloadErrorType
 uri: string
 ```
 
-下载失败文件URI。
+URI of the file that fails to be downloaded.
 
 **Type:** string
 

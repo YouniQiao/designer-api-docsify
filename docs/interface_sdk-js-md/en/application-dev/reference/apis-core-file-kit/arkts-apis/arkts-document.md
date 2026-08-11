@@ -14,9 +14,9 @@ document
 
 | Name | Description |
 | --- | --- |
-| [choose](arkts-corefile-document-choose-f.md#choose) | 通过文件管理器选择文件，异步返回文件URI，使用promise形式返回结果。 |
-| [choose](arkts-corefile-document-choose-f.md#choose-1) | 通过文件管理器选择文件，异步返回文件URI，使用callback形式返回结果。 |
-| [choose](arkts-corefile-document-choose-f.md#choose-2) | 通过文件管理器选择文件，异步返回文件URI，使用callback形式返回结果。 |
-| [show](arkts-corefile-document-show-f.md#show) | 异步打开URI对应的文件，使用promise形式返回结果。 |
-| [show](arkts-corefile-document-show-f.md#show-1) | 异步打开URI对应的文件，使用callback形式返回结果。 |
+| [choose](arkts-corefile-document-choose-f.md#choose) | Chooses files of the specified types. This API uses a promise to return the result. |
+| [choose](arkts-corefile-document-choose-f.md#choose-1) | Chooses a file. This API uses an asynchronous callback to return the result. |
+| [choose](arkts-corefile-document-choose-f.md#choose-2) | Chooses files of the specified types. This API uses an asynchronous callback to return the result. |
+| [show](arkts-corefile-document-show-f.md#show) | Opens a file. This API uses a promise to return the result. |
+| [show](arkts-corefile-document-show-f.md#show-1) | Opens a file. This API uses an asynchronous callback to return the result. |
 

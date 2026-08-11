@@ -16,7 +16,7 @@
 complete?: () => void
 ```
 
-接口调用结束的回调函数。
+Called when the execution is completed.
 
 **Since:** 3
 
@@ -36,7 +36,7 @@ complete?: () => void
 fail?: (data: string, code: number) => void
 ```
 
-接口调用失败的回调函数，data为错误信息，code为错误码。
+Called when the stored content fails to be read.
 
 **Since:** 3
 
@@ -63,7 +63,7 @@ fail?: (data: string, code: number) => void
 success?: (data: any) => void
 ```
 
-接口调用成功的回调函数，data为返回key对应的value。
+Called when the stored content is read successfully.
 
 **Since:** 3
 
@@ -89,7 +89,7 @@ success?: (data: any) => void
 default?: string
 ```
 
-key不存在则返回的默认值。
+Default value returned when the key does not exist.If this parameter is not specified, an empty string is returned.
 
 **Type:** string
 
@@ -111,7 +111,7 @@ key不存在则返回的默认值。
 key: string
 ```
 
-内容索引。
+Content index.the value contains a maximum of 32 characters and cannot contain special characters such as \/"*+,:;&lt;=&gt;?[]|\x7F.
 
 **Type:** string
 

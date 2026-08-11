@@ -10,12 +10,6 @@
 
 **系统能力：** SystemCapability.Multimedia.Image.ImagePacker
 
-## 导入模块
-
-```TypeScript
-import { image } from 'kits/@kit.ImageKit';
-```
-
 ## level
 
 ```TypeScript

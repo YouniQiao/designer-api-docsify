@@ -1,6 +1,6 @@
 # PhotoSaveOptions
 
-图片或视频的保存选项。
+Defines the options for saving images or videos.
 
 **Since:** 9
 
@@ -26,7 +26,7 @@ import { picker } from 'kits/@kit.CoreFileKit';
 newFileNames?: Array<string>
 ```
 
-拉起photoPicker进行保存图片或视频资源的文件名。若无此参数，则默认需要用户自行输入。
+File name of the image or video to save. If this parameter is not specified, the user needs to enter the file name.
 
 **Type:** Array&lt;string&gt;
 

@@ -1,6 +1,6 @@
 # @ohos.application.missionManager
 
-missionManager模块提供系统任务管理能力，包括对系统任务执行锁定、解锁、清理、切换到前台等操作。
+The missionManager module provides APIs to lock, unlock, and clear missions, and switch a mission to the foreground.
 
 **Since:** 8
 
@@ -25,25 +25,25 @@ missionManager模块提供系统任务管理能力，包括对系统任务执行
 
 | Name | Description |
 | --- | --- |
-| [clearAllMissions](arkts-ability-missionmanager-clearallmissions-depr-f-sys.md#clearallmissions) | 清理所有未锁定的任务。使用callback异步回调。 |
-| [clearAllMissions](arkts-ability-missionmanager-clearallmissions-depr-f-sys.md#clearallmissions-1) | 清理所有未锁定的任务。使用Promise异步回调。 |
-| [clearMission](arkts-ability-missionmanager-clearmission-depr-f-sys.md#clearmission) | 清理指定任务id的任务，无论该任务是否被锁定。使用callback异步回调。 |
-| [clearMission](arkts-ability-missionmanager-clearmission-depr-f-sys.md#clearmission-1) | 清理指定任务id的任务，无论该任务是否被锁定。使用Promise异步回调。 |
-| [getMissionInfo](arkts-ability-missionmanager-getmissioninfo-depr-f-sys.md#getmissioninfo) | 获取单个任务信息。使用callback异步回调。 |
-| [getMissionInfo](arkts-ability-missionmanager-getmissioninfo-depr-f-sys.md#getmissioninfo-1) | 获取单个任务信息。使用Promise异步回调。 |
-| [getMissionInfos](arkts-ability-missionmanager-getmissioninfos-depr-f-sys.md#getmissioninfos) | 获取所有任务信息。使用callback异步回调。 |
-| [getMissionInfos](arkts-ability-missionmanager-getmissioninfos-depr-f-sys.md#getmissioninfos-1) | 获取所有任务信息。使用Promise异步回调。 |
-| [getMissionSnapShot](arkts-ability-missionmanager-getmissionsnapshot-depr-f-sys.md#getmissionsnapshot) | 获取任务快照。使用callback异步回调。 |
-| [getMissionSnapShot](arkts-ability-missionmanager-getmissionsnapshot-depr-f-sys.md#getmissionsnapshot-1) | 获取任务快照。使用Promise异步回调。 |
-| [lockMission](arkts-ability-missionmanager-lockmission-depr-f-sys.md#lockmission) | 锁定指定任务id的任务。使用callback异步回调。 |
-| [lockMission](arkts-ability-missionmanager-lockmission-depr-f-sys.md#lockmission-1) | 锁定指定任务id的任务。使用Promise异步回调。 |
-| [moveMissionToFront](arkts-ability-missionmanager-movemissiontofront-depr-f-sys.md#movemissiontofront) | 把指定任务id的任务切到前台。使用callback异步回调。 |
-| [moveMissionToFront](arkts-ability-missionmanager-movemissiontofront-depr-f-sys.md#movemissiontofront-1) | 把指定任务id的任务切到前台，同时指定任务切换到前台时的启动参数，例如窗口模式、设备ID等。使用callback异步回调。 |
-| [moveMissionToFront](arkts-ability-missionmanager-movemissiontofront-depr-f-sys.md#movemissiontofront-2) | 把指定任务id的任务切到前台，同时指定任务切换到前台时的启动参数，例如窗口模式、设备ID等。使用Promise异步回调。 |
-| [registerMissionListener](arkts-ability-missionmanager-registermissionlistener-depr-f-sys.md#registermissionlistener) | 注册系统任务状态监听器。 |
-| [unlockMission](arkts-ability-missionmanager-unlockmission-depr-f-sys.md#unlockmission) | 解锁指定任务id的任务。使用callback异步回调。 |
-| [unlockMission](arkts-ability-missionmanager-unlockmission-depr-f-sys.md#unlockmission-1) | 解锁指定任务id的任务。使用Promise异步回调。 |
-| [unregisterMissionListener](arkts-ability-missionmanager-unregistermissionlistener-depr-f-sys.md#unregistermissionlistener) | 解注册任务状态监听器。使用callback异步回调。 |
-| [unregisterMissionListener](arkts-ability-missionmanager-unregistermissionlistener-depr-f-sys.md#unregistermissionlistener-1) | 解注册任务状态监听器。使用Promise异步回调。 |
+| [clearAllMissions](arkts-ability-missionmanager-clearallmissions-depr-f-sys.md#clearallmissions) | Clears all unlocked missions. This API uses an asynchronous callback to return the result. |
+| [clearAllMissions](arkts-ability-missionmanager-clearallmissions-depr-f-sys.md#clearallmissions-1) | Clears all unlocked missions. This API uses a promise to return the result. |
+| [clearMission](arkts-ability-missionmanager-clearmission-depr-f-sys.md#clearmission) | Clears a given mission, regardless of whether it is locked. This API uses an asynchronous callback to return the result. |
+| [clearMission](arkts-ability-missionmanager-clearmission-depr-f-sys.md#clearmission-1) | Clears a given mission, regardless of whether it is locked. This API uses a promise to return the result. |
+| [getMissionInfo](arkts-ability-missionmanager-getmissioninfo-depr-f-sys.md#getmissioninfo) | Obtains the information about a given mission. This API uses an asynchronous callback to return the result. |
+| [getMissionInfo](arkts-ability-missionmanager-getmissioninfo-depr-f-sys.md#getmissioninfo-1) | Obtains the information about a given mission. This API uses a promise to return the result. |
+| [getMissionInfos](arkts-ability-missionmanager-getmissioninfos-depr-f-sys.md#getmissioninfos) | Obtains information about all missions. This API uses an asynchronous callback to return the result. |
+| [getMissionInfos](arkts-ability-missionmanager-getmissioninfos-depr-f-sys.md#getmissioninfos-1) | Obtains information about all missions. This API uses a promise to return the result. |
+| [getMissionSnapShot](arkts-ability-missionmanager-getmissionsnapshot-depr-f-sys.md#getmissionsnapshot) | Obtains the snapshot of a given mission. This API uses an asynchronous callback to return the result. |
+| [getMissionSnapShot](arkts-ability-missionmanager-getmissionsnapshot-depr-f-sys.md#getmissionsnapshot-1) | Obtains the snapshot of a given mission. This API uses a promise to return the result. |
+| [lockMission](arkts-ability-missionmanager-lockmission-depr-f-sys.md#lockmission) | Locks a given mission. This API uses an asynchronous callback to return the result. |
+| [lockMission](arkts-ability-missionmanager-lockmission-depr-f-sys.md#lockmission-1) | Locks a given mission. This API uses a promise to return the result. |
+| [moveMissionToFront](arkts-ability-missionmanager-movemissiontofront-depr-f-sys.md#movemissiontofront) | Switches a given mission to the foreground. This API uses an asynchronous callback to return the result. |
+| [moveMissionToFront](arkts-ability-missionmanager-movemissiontofront-depr-f-sys.md#movemissiontofront-1) | Switches a given mission to the foreground, with the startup parameters for the switching specified. This API uses an asynchronous callback to return the result. |
+| [moveMissionToFront](arkts-ability-missionmanager-movemissiontofront-depr-f-sys.md#movemissiontofront-2) | Switches a given mission to the foreground, with the startup parameters for the switching specified. This API uses a promise to return the result. |
+| [registerMissionListener](arkts-ability-missionmanager-registermissionlistener-depr-f-sys.md#registermissionlistener) | Registers a listener to observe the mission status. |
+| [unlockMission](arkts-ability-missionmanager-unlockmission-depr-f-sys.md#unlockmission) | Unlocks a given mission. This API uses an asynchronous callback to return the result. |
+| [unlockMission](arkts-ability-missionmanager-unlockmission-depr-f-sys.md#unlockmission-1) | Unlocks a given mission. This API uses a promise to return the result. |
+| [unregisterMissionListener](arkts-ability-missionmanager-unregistermissionlistener-depr-f-sys.md#unregistermissionlistener) | Unregisters a mission status listener. This API uses an asynchronous callback to return the result. |
+| [unregisterMissionListener](arkts-ability-missionmanager-unregistermissionlistener-depr-f-sys.md#unregistermissionlistener-1) | Unregisters a mission status listener. This API uses a promise to return the result. |
 <!--DelEnd-->
 

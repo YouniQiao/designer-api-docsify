@@ -1,14 +1,14 @@
 # DataPanel
 
-数据面板组件，用于将多个数据占比情况使用占比图进行展示，支持环形和线性两种展示类型，可自定义颜色、阴影、底板等视觉效果，适用于存储容量、任务进度、资源占比等数据可视化场景，帮助用户直观了解数据分布情况。
+The **DataPanel** component is used to display proportions in a chart.
 
-> **说明：**
+> **NOTE**
 >
-> - 该组件从API版本26.0.0开始支持[WithTheme]{@link ./with_theme}。
+> - This component supports [WithTheme]{@link ./with_theme} since API version 26.0.0
 
-## 子组件
+## Child Components
 
-无
+Not supported
 
 ## DataPanel
 
@@ -16,7 +16,7 @@
 DataPanel(options: DataPanelOptions)
 ```
 
-创建数据面板组件。
+Creates a data panel component.
 
 **Since:** 7
 
@@ -34,7 +34,7 @@ DataPanel(options: DataPanelOptions)
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| options | [DataPanelOptions](arkts-arkui-datapaneloptions-i.md) | Yes | 数据面板配置选项，用于设置数据面板的数据值列表、最大值和数据面板类型。 |
+| options | [DataPanelOptions](arkts-arkui-datapaneloptions-i.md) | Yes | Parameters of the data panel. |
 
 ## Summary
 

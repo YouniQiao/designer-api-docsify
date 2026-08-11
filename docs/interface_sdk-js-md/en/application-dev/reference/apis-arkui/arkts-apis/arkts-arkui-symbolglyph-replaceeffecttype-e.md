@@ -1,6 +1,6 @@
 # ReplaceEffectType
 
-Symbol的替换效果类型。
+The replace effect type of symbol.
 
 **Since:** 23
 
@@ -16,7 +16,7 @@ Symbol的替换效果类型。
 SEQUENTIAL = 0
 ```
 
-顺序替换动效，当前符号完全消失后新符号淡入。
+The default replace effect of symbol, the current symbol fully disappears before the new symbol fades in.
 
 **Since:** 23
 
@@ -34,7 +34,7 @@ SEQUENTIAL = 0
 CROSS_FADE = 1
 ```
 
-交叉淡入淡出动效，当前符号淡出的同时新符号淡入。
+The current symbol fades out while the new symbol fades in at the same time,producing a smoother and faster transition.
 
 **Since:** 23
 
@@ -52,7 +52,7 @@ CROSS_FADE = 1
 SLASH_OVERLAY = 2
 ```
 
-斜线覆盖替换动效，用带有斜线的符号替换当前符号，通常用于表示禁用或非活跃状态。如果不存在对应的斜线符号变体，则不播放动画直接替换。
+Replaces the current symbol with a symbol that includes a diagonal slash overlay,typically used to indicate a disabled or inactive state.If a corresponding slashed symbol variant is not available, the symbol is replaced without animation.
 
 **Since:** 23
 

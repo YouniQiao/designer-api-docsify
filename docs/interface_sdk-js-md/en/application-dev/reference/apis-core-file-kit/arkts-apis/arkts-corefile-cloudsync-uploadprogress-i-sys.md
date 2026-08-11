@@ -1,6 +1,6 @@
 # UploadProgress (System API)
 
-文件上传进度信息。
+The UploadProgress data structure.
 
 **Since:** 26.0.0
 
@@ -24,7 +24,7 @@ import { cloudSync } from 'kits/@kit.CoreFileKit';
 error: ErrorType
 ```
 
-上传的错误类型。
+The error type of upload.
 
 **Type:** [ErrorType](../../apis-media-kit/arkts-apis/arkts-media-soundpool-errortype-e.md)
 
@@ -46,7 +46,7 @@ error: ErrorType
 processed: long
 ```
 
-已上传数据大小，取值范围[0, 9223372036854775807]，单位：Byte。
+The processed data size for current file.&lt;br&gt;Unit:Byte.
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：long
 
@@ -68,7 +68,7 @@ processed: long
 size: long
 ```
 
-当前文件总大小，取值范围[0, 9223372036854775807]，单位：Byte。
+The size of current file.&lt;br&gt;Unit:Byte.
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：long
 
@@ -90,7 +90,7 @@ size: long
 state: UploadState
 ```
 
-文件上传状态。
+The current upload state.
 
 **Type:** [UploadState](arkts-corefile-cloudsync-uploadstate-e-sys.md)
 
@@ -112,7 +112,7 @@ state: UploadState
 uri: string
 ```
 
-当前文件的URI。
+The uri of current file.
 
 **Type:** string
 

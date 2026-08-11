@@ -1,6 +1,6 @@
 # MediaQueryResult
 
-用于执行媒体查询操作。
+Defines the Result of mediaquery.
 
 **Since:** 23
 
@@ -22,7 +22,7 @@ import { mediaquery } from 'kits/@kit.ArkUI';
 readonly matches: boolean
 ```
 
-是否符合匹配条件。true表示满足查询条件，false表示不满足查询条件。此属性为只读属性。
+Whether the match condition is met.This parameter is read-only.
 
 **Type:** boolean
 
@@ -42,7 +42,7 @@ readonly matches: boolean
 readonly media: string
 ```
 
-媒体事件的匹配条件。此属性为只读属性。
+Matching condition of a media event.This parameter is read-only.
 
 **Type:** string
 

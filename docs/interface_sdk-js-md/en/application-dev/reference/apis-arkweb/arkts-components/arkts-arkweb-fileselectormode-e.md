@@ -1,6 +1,6 @@
 # FileSelectorMode
 
-文件选择器的模式。
+Enumerates the modes of the file selector.
 
 **Since:** 9
 
@@ -16,7 +16,7 @@
 FileOpenMode = 0
 ```
 
-打开上传单个文件。
+Open and upload a file.
 
 **Since:** 9
 
@@ -34,7 +34,7 @@ FileOpenMode = 0
 FileOpenMultipleMode = 1
 ```
 
-打开上传多个文件。
+Open and upload multiple files.
 
 **Since:** 9
 
@@ -52,7 +52,7 @@ FileOpenMultipleMode = 1
 FileOpenFolderMode = 2
 ```
 
-打开上传文件夹模式。
+Open and upload a folder.
 
 **Since:** 9
 
@@ -70,7 +70,7 @@ FileOpenFolderMode = 2
 FileSaveMode = 3
 ```
 
-文件保存模式。
+Save a file.
 
 **Since:** 9
 

@@ -1,6 +1,6 @@
 # console
 
-提供一个简单的调试控制台，类似于浏览器提供的JavaScript控制台机制。
+Defines the console info.
 
 **Since:** 7
 
@@ -16,7 +16,7 @@
 static assert(value?: Object, ...arguments: Object[]): void
 ```
 
-断言打印。
+Prints assertion information.
 
 **Since:** 10
 
@@ -32,14 +32,14 @@ static assert(value?: Object, ...arguments: Object[]): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | Object | No | 语句结果值。若value为假（false）或者省略，则输出以"Assertion failed"开头。 如果value为真值（true），则无打印。 |
-| arguments | Object[] | Yes | value为假（false）的后续错误消息打印。省略则不打印。 |
+| value | Object | No | Result value. If value is false or left blank, the output starting with "Assertion failed" is printed. If value is true, no information is printed. |
+| arguments | Object[] | Yes | Other information to be printed when value is false. If this parameter is left blank, other information is not printed. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | The parameter check failed. Possible causes: &lt;br&gt; 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameters types. &lt;br&gt; 3. Parameter verification failed. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | The parameter check failed. Possible causes: &lt;br&gt; 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameters types. &lt;br&gt; 3. Parameter verification failed. |
 
 ## count
 
@@ -47,7 +47,7 @@ static assert(value?: Object, ...arguments: Object[]): void
 static count(label?: string): void
 ```
 
-维护一个内部计数器，调用时，打印此标签名以及对应的计数次数。
+Maintains an internal counter. When this counter is invoked,its label name and the corresponding call count are printed.
 
 **Since:** 10
 
@@ -63,13 +63,13 @@ static count(label?: string): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| label | string | No | 计数器标签名。默认值为'default'。 |
+| label | string | No | Counter label name. The default value is default. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | The parameter check failed. Possible causes: &lt;br&gt; 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameters types. &lt;br&gt; 3. Parameter verification failed. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | The parameter check failed. Possible causes: &lt;br&gt; 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameters types. &lt;br&gt; 3. Parameter verification failed. |
 
 ## countReset
 
@@ -77,7 +77,7 @@ static count(label?: string): void
 static countReset(label?: string): void
 ```
 
-清除指定标签名的计数。
+Resets a counter based on the specified label name.
 
 **Since:** 10
 
@@ -93,13 +93,13 @@ static countReset(label?: string): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| label | string | No | 计数器标签名。默认值为'default'。 |
+| label | string | No | Counter label name. The default value is default. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | The parameter check failed. Possible causes: &lt;br&gt; 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameters types. &lt;br&gt; 3. Parameter verification failed. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | The parameter check failed. Possible causes: &lt;br&gt; 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameters types. &lt;br&gt; 3. Parameter verification failed. |
 
 ## debug
 
@@ -107,7 +107,7 @@ static countReset(label?: string): void
 static debug(message: string, ...arguments: any[]): void
 ```
 
-以格式化输出方式打印调试信息。
+Prints debugging information in formatted output mode.
 
 **Since:** 7
 
@@ -125,8 +125,8 @@ static debug(message: string, ...arguments: any[]): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| message | string | Yes | 要打印的文本信息。 |
-| arguments | any[] | Yes | 其余要打印的信息或message的替换值。 |
+| message | string | Yes | Text to print. |
+| arguments | any[] | Yes | Arguments in the message or other information to be printed. |
 
 ## dir
 
@@ -134,7 +134,7 @@ static debug(message: string, ...arguments: any[]): void
 static dir(dir?: Object): void
 ```
 
-打印对象内容。
+Prints content of the specified object.
 
 **Since:** 10
 
@@ -150,7 +150,7 @@ static dir(dir?: Object): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| dir | Object | No | 需要打印内容的对象。省略则无任何打印。 |
+| dir | Object | No | Object whose content needs to be printed. If this parameter is left blank, no information is printed. |
 
 ## dirxml
 
@@ -158,7 +158,7 @@ static dir(dir?: Object): void
 static dirxml(...arguments: Object[]): void
 ```
 
-此方法通过内部调用console.log()实现。此方法不会产生任何XML格式。使用方法与console.log()一致。
+Displays an interactive tree of the descendant elements of the specified XML element.This API is implemented by calling console.log() internally.It does not produce any XML elements. The usage method is the same as that of console.log().
 
 **Since:** 10
 
@@ -174,7 +174,7 @@ static dirxml(...arguments: Object[]): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| arguments | Object[] | Yes | 要打印的信息。省略则无任何打印。 |
+| arguments | Object[] | Yes | Information to be printed. |
 
 ## error
 
@@ -182,7 +182,7 @@ static dirxml(...arguments: Object[]): void
 static error(message: string, ...arguments: any[]): void
 ```
 
-以格式化输出方式打印错误信息。
+Prints error information in formatted output mode.
 
 **Since:** 7
 
@@ -200,8 +200,8 @@ static error(message: string, ...arguments: any[]): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| message | string | Yes | 要打印的错误信息。 |
-| arguments | any[] | Yes | 其余要打印的信息或message的替换值。 |
+| message | string | Yes | Error information to be printed. |
+| arguments | any[] | Yes | Arguments in the message or other information to be printed. |
 
 ## group
 
@@ -209,7 +209,7 @@ static error(message: string, ...arguments: any[]): void
 static group(...arguments: Object[]): void
 ```
 
-默认将后续行的缩进增加两个空格。如果提供需要打印的信息，则首先打印信息，没有额外的缩进。
+Increases the indentation of subsequent lines by two spaces.If the information to be printed is provided, the information is printed without extra indentation.
 
 **Since:** 10
 
@@ -225,7 +225,7 @@ static group(...arguments: Object[]): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| arguments | Object[] | Yes | 要打印的信息。省略则仅打印两个空格。 |
+| arguments | Object[] | Yes | Information to be printed. |
 
 ## groupCollapsed
 
@@ -233,7 +233,7 @@ static group(...arguments: Object[]): void
 static groupCollapsed(...arguments: Object[]): void
 ```
 
-使用与功能同console.group()一致。
+Creates a new inline group in collapsed mode.The usage and function of this API are the same as those of console.group().
 
 **Since:** 10
 
@@ -249,7 +249,7 @@ static groupCollapsed(...arguments: Object[]): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| arguments | Object[] | Yes | 要打印的信息。省略则仅打印两个空格。 |
+| arguments | Object[] | Yes | Information to be printed. |
 
 ## groupEnd
 
@@ -257,7 +257,7 @@ static groupCollapsed(...arguments: Object[]): void
 static groupEnd(): void
 ```
 
-将后续行的缩进减少两个空格。
+Reduces the indentation of subsequent lines by two spaces.
 
 **Since:** 10
 
@@ -275,7 +275,7 @@ static groupEnd(): void
 static info(message: string, ...arguments: any[]): void
 ```
 
-以格式化输出方式打印日志信息（console.log()的别名）。
+Prints log information in formatted output mode. This API is the alias of console.log ().
 
 **Since:** 7
 
@@ -293,8 +293,8 @@ static info(message: string, ...arguments: any[]): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| message | string | Yes | 要打印的文本信息。 |
-| arguments | any[] | Yes | 其余要打印的信息或message的替换值。 |
+| message | string | Yes | Text to print. |
+| arguments | any[] | Yes | Arguments in the message or other information to be printed. |
 
 ## log
 
@@ -302,7 +302,7 @@ static info(message: string, ...arguments: any[]): void
 static log(message: string, ...arguments: any[]): void
 ```
 
-以格式化输出方式打印日志信息。
+Prints log information in formatted output mode.
 
 **Since:** 7
 
@@ -320,8 +320,8 @@ static log(message: string, ...arguments: any[]): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| message | string | Yes | 要打印的文本信息。 |
-| arguments | any[] | Yes | 其余要打印的信息或message的替换值。 |
+| message | string | Yes | Text to print. |
+| arguments | any[] | Yes | Arguments in the message or other information to be printed. |
 
 ## table
 
@@ -329,7 +329,7 @@ static log(message: string, ...arguments: any[]): void
 static table(tableData?: Object): void
 ```
 
-以表格形式打印数据。
+Prints data in a table.
 
 **Since:** 10
 
@@ -345,7 +345,7 @@ static table(tableData?: Object): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| tableData | Object | No | 要打印为表格形式的对象。省略则无任何打印。 |
+| tableData | Object | No | Data to be printed in a table. If this parameter is left blank, no information is printed. |
 
 ## time
 
@@ -353,7 +353,7 @@ static table(tableData?: Object): void
 static time(label?: string): void
 ```
 
-启动可用于计算操作持续时间的计时器。可使用console.timeEnd()关闭计时器并打印经过的时间（单位：ms）。
+Starts a timer to track the duration of an operation.You can use console.timeEnd() to close the timer and print the elapsed time (in ms).
 
 **Since:** 10
 
@@ -369,13 +369,13 @@ static time(label?: string): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| label | string | No | 计时器标识。默认值为'default'。 |
+| label | string | No | Timer label. The default value is default. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | The parameter check failed. Possible causes: &lt;br&gt; 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameters types. &lt;br&gt; 3. Parameter verification failed. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | The parameter check failed. Possible causes: &lt;br&gt; 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameters types. &lt;br&gt; 3. Parameter verification failed. |
 
 ## timeEnd
 
@@ -383,7 +383,7 @@ static time(label?: string): void
 static timeEnd(label?: string): void
 ```
 
-停止之前通过调用console.time()启动的计时器并打印经过的时间（单位：ms）。
+Stops the timer started by calling console.time() and prints the elapsed time (in ms).
 
 **Since:** 10
 
@@ -399,13 +399,13 @@ static timeEnd(label?: string): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| label | string | No | 计时器标识。默认值为'default'。 |
+| label | string | No | Timer label. The default value is default. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | The parameter check failed. Possible causes: &lt;br&gt; 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameters types. &lt;br&gt; 3. Parameter verification failed. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | The parameter check failed. Possible causes: &lt;br&gt; 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameters types. &lt;br&gt; 3. Parameter verification failed. |
 
 ## timeLog
 
@@ -413,7 +413,7 @@ static timeEnd(label?: string): void
 static timeLog(label?: string, ...arguments: Object[]): void
 ```
 
-对于先前通过调用console.time()启动的计时器，打印经过时间和其他data参数。
+Prints the elapsed time and other data parameters for the timer started by console.time().
 
 **Since:** 10
 
@@ -429,14 +429,14 @@ static timeLog(label?: string, ...arguments: Object[]): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| label | string | No | 计时器标识。默认值为'default'。 |
-| arguments | Object[] | Yes | 需要打印的其他日志。 |
+| label | string | No | Timer label. The default value is default. |
+| arguments | Object[] | Yes | Logs to be printed. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | The parameter check failed. Possible causes: &lt;br&gt; 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameters types. &lt;br&gt; 3. Parameter verification failed. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | The parameter check failed. Possible causes: &lt;br&gt; 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameters types. &lt;br&gt; 3. Parameter verification failed. |
 
 ## trace
 
@@ -444,7 +444,7 @@ static timeLog(label?: string, ...arguments: Object[]): void
 static trace(...arguments: Object[]): void
 ```
 
-打印当前堆栈。
+Creates a stack trace.
 
 **Since:** 10
 
@@ -460,7 +460,7 @@ static trace(...arguments: Object[]): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| arguments | Object[] | Yes | 需要打印的其他日志。省略则仅打印堆栈信息。 |
+| arguments | Object[] | Yes | Logs to be printed. If this parameter is left blank, only stack information is printed. |
 
 ## traceHybridStack
 
@@ -468,7 +468,7 @@ static trace(...arguments: Object[]): void
 static traceHybridStack(): void
 ```
 
-在主线程或worker线程中打印当前线程混合堆栈信息。
+Prints information about the current hybrid stack of the calling thread in the main thread or worker thread.
 
 **Since:** 12
 
@@ -486,7 +486,7 @@ static traceHybridStack(): void
 static warn(message: string, ...arguments: any[]): void
 ```
 
-以格式化输出方式打印警告信息。
+Prints warning information in formatted output mode.
 
 **Since:** 7
 
@@ -504,6 +504,6 @@ static warn(message: string, ...arguments: any[]): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| message | string | Yes | 要打印的警告信息。 |
-| arguments | any[] | Yes | 其余要打印的信息或message的替换值。 |
+| message | string | Yes | Warning information to be printed. |
+| arguments | any[] | Yes | Arguments in the message or other information to be printed. |
 

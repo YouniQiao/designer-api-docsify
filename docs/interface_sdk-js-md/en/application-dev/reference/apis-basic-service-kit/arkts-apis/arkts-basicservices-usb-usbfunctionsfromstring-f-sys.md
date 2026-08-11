@@ -12,7 +12,7 @@ import { usb } from 'kits/@kit.BasicServicesKit';
 function usbFunctionsFromString(funcs: string): number
 ```
 
-在设备模式下，将字符串形式的USB功能列表转化为数字掩码。
+Converts the USB function list in the string format to a numeric mask in Device mode.
 
 **Since:** 9
 
@@ -32,13 +32,13 @@ function usbFunctionsFromString(funcs: string): number
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| funcs | string | Yes | 字符串形式的功能列表。 |
+| funcs | string | Yes | Function list in string format. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| number | 转化后的功能列表对应的数字掩码。 |
+| number | Function list in numeric mask format after conversion. |
 
 ## Examples
 

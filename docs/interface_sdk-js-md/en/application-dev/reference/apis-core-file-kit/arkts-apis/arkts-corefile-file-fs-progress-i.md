@@ -1,6 +1,6 @@
 # Progress
 
-拷贝进度回调数据
+Defines the copy progress information.
 
 **Since:** 11
 
@@ -22,7 +22,7 @@ import { Options, ReaderIteratorResult, Watcher, ReadTextOptions, WatchEventList
 readonly processedSize: number
 ```
 
-已拷贝的数据大小，单位为Byte。
+Size of the copied data, in bytes.
 
 **Type:** number
 
@@ -40,7 +40,7 @@ readonly processedSize: number
 readonly totalSize: number
 ```
 
-待拷贝的数据总大小，单位为Byte。
+Total size of the data to be copied, in bytes.
 
 **Type:** number
 

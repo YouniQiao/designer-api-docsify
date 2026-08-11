@@ -5,7 +5,7 @@ export declare type PersistenceErrorCallback = (key: string, reason: string, mes
     oldValue?: string) => void
 ```
 
-持久化失败时返回错误原因的回调。
+Function that returns the reason type when an error occurs.
 
 **Since:** 26.0.0
 
@@ -21,8 +21,8 @@ export declare type PersistenceErrorCallback = (key: string, reason: string, mes
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| key | string | Yes | 出错的键值。 |
-| reason | string | Yes | 出错的原因类型。 |
-| message | string | Yes | 出错的更多消息。 |
-| oldValue | string | No | 反序列化失败时返回原始序列化数据。 |
+| key | string | Yes | persisted key when an error occurs |
+| reason | string | Yes | reason type when an error occurs, possible values are 'quota', 'serialization', 'unknown' |
+| message | string | Yes | Additional message when an error occurs. |
+| oldValue | string | No | value in storage that cannot be deserialized. |
 

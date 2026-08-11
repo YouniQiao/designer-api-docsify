@@ -1,6 +1,6 @@
 # ArcDirection
 
-弧形方向。
+Declare the direction of arc indicator.
 
 **Since:** 26.0.0
 
@@ -16,7 +16,7 @@
 THREE_CLOCK_DIRECTION = 0
 ```
 
-3点钟方向。
+3 o'clock direction.
 
 **Since:** 26.0.0
 
@@ -34,7 +34,7 @@ THREE_CLOCK_DIRECTION = 0
 SIX_CLOCK_DIRECTION = 1
 ```
 
-6点钟方向。
+6 o'clock direction.
 
 **Since:** 26.0.0
 
@@ -52,7 +52,7 @@ SIX_CLOCK_DIRECTION = 1
 NINE_CLOCK_DIRECTION = 2
 ```
 
-9点钟方向。
+9 o'clock direction.
 
 **Since:** 26.0.0
 

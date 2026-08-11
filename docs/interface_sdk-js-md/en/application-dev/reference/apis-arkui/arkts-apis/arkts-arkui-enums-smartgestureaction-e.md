@@ -1,6 +1,6 @@
 # SmartGestureAction
 
-智慧手势操作类型枚举。
+Define the actions for smart gesture shortcut.
 
 **Since:** 26.0.0
 
@@ -16,7 +16,7 @@
 NONE = 0
 ```
 
-无动作。
+No action.
 
 **Since:** 26.0.0
 
@@ -34,7 +34,7 @@ NONE = 0
 PAGE_FORWARD = 1
 ```
 
-向前翻页。包括向下和向右。
+Page forward action.
 
 **Since:** 26.0.0
 
@@ -52,7 +52,7 @@ PAGE_FORWARD = 1
 SCROLL_FORWARD = 2
 ```
 
-向前滚动。包括向下和向右。
+Scroll forward action.
 
 **Since:** 26.0.0
 
@@ -70,7 +70,7 @@ SCROLL_FORWARD = 2
 SELECT = 3
 ```
 
-选中组件。
+Select action.
 
 **Since:** 26.0.0
 
@@ -88,7 +88,7 @@ SELECT = 3
 CLICK = 4
 ```
 
-点击组件。
+Click action.
 
 **Since:** 26.0.0
 
@@ -106,7 +106,7 @@ CLICK = 4
 BACK_PRESS = 5
 ```
 
-返回。
+Back press action.
 
 **Since:** 26.0.0
 

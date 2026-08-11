@@ -1,6 +1,6 @@
 # DisturbanceFieldOptions
 
-设置粒子扰动场参数。
+Defines particle disturbance Field params.
 
 **Since:** 23
 
@@ -16,9 +16,7 @@
 feather?: int
 ```
 
-羽化值，表示场从中心点到场边缘的衰减程度，取值范围0到100的整数，如果0则表示场是一个刚体，所有范围内的粒子都被排斥在外。羽化值越大场的缓和程度越大，场范围内出现越多靠近中心点的粒子。
-
-默认值为0。
+Attenuation degree of the field from the center point to the field boundary.ranging from 0 to 100 integers. If 0, it indicates that the field is a rigid body,and all particles within the range will be excluded.a larger feather value indicates a greater degree of relaxation in the field,and more particles near the center point will appear in the field strength range. The default value is 0.
 
 **Type:** int
 
@@ -40,9 +38,7 @@ feather?: int
 noiseAmplitude?: double
 ```
 
-噪声振幅，噪声的波动的范围，振幅越大噪音之间差异越大。取值大于等于0。
-
-默认值1。
+NoiseAmplitude fluctuation range of noise, value,
 
 **Type:** double
 
@@ -64,9 +60,7 @@ noiseAmplitude?: double
 noiseFrequency?: double
 ```
 
-噪声频率，频率越大噪声越细腻，取值大于等于0。
-
-默认值1。
+Noise frequency with a value greater or equal 0.
 
 **Type:** double
 
@@ -88,9 +82,7 @@ noiseFrequency?: double
 noiseScale?: double
 ```
 
-噪声尺度，用于控制噪声图案的整体大小，取值大于等于0。
-
-默认值1。
+Scaling parameter is used to control the overall size of noise, with a value greater or equal 0.
 
 **Type:** double
 
@@ -112,11 +104,7 @@ noiseScale?: double
 position?: PositionT<double>
 ```
 
-场的位置。
-
-默认值{x:0，y:0}。
-
-x、y的取值范围：(-∞, +∞)。
+Disturbance filed position width value x, y.
 
 **Type:** [PositionT](arkts-arkui-positiont-t.md)&lt;double&gt;
 
@@ -138,9 +126,7 @@ x、y的取值范围：(-∞, +∞)。
 shape?: DisturbanceFieldShape
 ```
 
-场的形状。
-
-默认为DisturbanceFieldShape.RECT。
+Disturbance filed shape.
 
 **Type:** [DisturbanceFieldShape](../arkts-components/arkts-arkui-disturbancefieldshape-e.md)
 
@@ -162,11 +148,7 @@ shape?: DisturbanceFieldShape
 size?: SizeT<double>
 ```
 
-场的大小。
-
-默认值 {width:0，height:0}。
-
-width和height的取值范围：[0, +∞)。
+Disturbance filed size width value width, height.
 
 **Type:** [SizeT](arkts-arkui-graphics-sizet-i.md)&lt;double&gt;
 
@@ -188,9 +170,7 @@ width和height的取值范围：[0, +∞)。
 strength?: double
 ```
 
-场强，表示场从中心向外的排斥力的强度，默认值0。正数表示排斥力方向朝外，负数表示吸引力，方向朝内。
-
-取值范围：(-∞, +∞)。
+Strength of the repulsive force from the center outward,with positive numbers indicating outward repulsion and negative numbers indicating inward attraction.
 
 **Type:** double
 

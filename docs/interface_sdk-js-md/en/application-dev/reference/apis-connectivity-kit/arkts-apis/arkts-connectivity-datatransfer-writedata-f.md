@@ -12,7 +12,7 @@ import { dataTransfer } from 'kits/@kit.ConnectivityKit';
 function writeData(params: DataParams): Promise<void>
 ```
 
-根据地址和UUID写入数据。
+Writes data by address and UUID.
 
 **Since:** 26.0.0
 
@@ -30,23 +30,23 @@ function writeData(params: DataParams): Promise<void>
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| params | [DataParams](arkts-connectivity-datatransfer-dataparams-i.md) | Yes | 发送数据的参数 |
+| params | [DataParams](arkts-connectivity-datatransfer-dataparams-i.md) | Yes | Indicates the send data params. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | 返回promise对象。 |
+| Promise&lt;void&gt; | Returns the promise object. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 801 | Capability not supported because the chip does not support it. |
+| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported because the chip does not support it. |
 | 36100023 | Write data congestion. |
 | 36100003 | NearLink disabled. |
 | 36100099 | Operation failed. |
-| 201 | Permission denied. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
 | 36100044 | NearLink standard UUID not allowed. |
 | 36100043 | Invalid UUID. |
 | 36100041 | Invalid address. |

@@ -1,0 +1,53 @@
+# isSupportEffectSync
+
+## isSupportEffectSync
+
+```TypeScript
+function isSupportEffectSync(effectId: string): boolean
+```
+
+查询当前设备是否支持预设的振动效果。此接口为同步接口，会阻塞主线程直到查询完成，容易影响UI交互，需谨慎使用。当开发者需要在触发预置振动前立即确认当前设备是否支持指定的振动效果时使用此接口。适用于对实时性要求高且查询逻辑简单的场景。返回boolean结果：返回true表示设备支持该effectId，可用于  
+[startVibration](arkts-sensorservice-vibrator-startvibration-f.md#startvibration)；返回false表示不支持，使用该effectId触发振动可能效果不佳或无法振动。与异步版本  
+[vibrator.isSupportEffect](arkts-sensorservice-vibrator-issupporteffect-f.md#issupporteffect)相比，本接口为同步接口，直接返回结果无需回调，但会阻塞主线程。建议在非UI线程中使用，或在UI线程中优先使用异步版本以避免影响交互响应。
+
+**起始版本：** 12
+
+<!--Device-vibrator-function isSupportEffectSync(effectId: string): boolean--><!--Device-vibrator-function isSupportEffectSync(effectId: string): boolean-End-->
+
+**系统能力：** SystemCapability.Sensors.MiscDevice
+
+**参数：**
+
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| effectId | string | 是 |
+
+**返回值：**
+
+| 类型 |
+| --- |
+| boolean |
+
+**错误码：**
+
+| 错误码ID |
+| --- |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
+| [14600101](../errorcode-vibrator.md#14600101-操作设备失败) |
+
+## 示例
+
+```TypeScript
+import { vibrator } from '@kit.SensorServiceKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+// 使用try catch对可能出现的异常进行捕获
+try {
+  // 查询是否支持预设'haptic.notice.success'
+  let ret = vibrator.isSupportEffectSync('haptic.notice.success');
+  console.info(`The query result is ${ret}`);
+} catch (error) {
+  let e: BusinessError = error as BusinessError;
+  console.error(`An unexpected error occurred. Code: ${e.code}, message: ${e.message}`);
+}
+```

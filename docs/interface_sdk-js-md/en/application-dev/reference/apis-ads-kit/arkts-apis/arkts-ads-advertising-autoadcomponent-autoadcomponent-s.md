@@ -1,6 +1,6 @@
 # AutoAdComponent
 
-本模块提供展示轮播广告的能力。
+The AutoAdComponent module provides the capability of displaying carousel ads.
 
 **Since:** 11
 
@@ -24,7 +24,7 @@ import { AutoAdComponent } from 'kits/@kit.AdsKit';
 build(): void
 ```
 
-用于创建AutoAdComponent对象的构造函数。
+A constructor used to create an **AutoAdComponent** object.
 
 **Since:** 11
 
@@ -42,7 +42,7 @@ build(): void
 adOptions: advertising.AdOptions
 ```
 
-广告配置参数。
+Ad configuration options.
 
 **Type:** advertising.AdOptions
 
@@ -62,7 +62,7 @@ adOptions: advertising.AdOptions
 adParam: advertising.AdRequestParams
 ```
 
-广告请求参数。
+Ad request parameters.
 
 **Type:** advertising.AdRequestParams
 
@@ -82,7 +82,7 @@ adParam: advertising.AdRequestParams
 displayOptions: advertising.AdDisplayOptions
 ```
 
-广告展示参数。
+Ad display parameters.
 
 **Type:** advertising.AdDisplayOptions
 
@@ -102,7 +102,7 @@ displayOptions: advertising.AdDisplayOptions
 interactionListener: advertising.AdInteractionListener
 ```
 
-广告状态变化回调。
+Ad status change callback.
 
 **Type:** advertising.AdInteractionListener
 

@@ -1,6 +1,8 @@
 # ValueType
 
-数据类型枚举。
+Indicates the {@code ValueType}.
+
+&lt;p&gt;{@code ValueType} is obtained based on the value.
 
 **Since:** 9
 
@@ -16,7 +18,7 @@
 STRING = 0
 ```
 
-表示值类型为字符串。
+Indicates that the value type is string.
 
 **Since:** 9
 
@@ -34,7 +36,7 @@ STRING = 0
 INTEGER = 1
 ```
 
-表示值类型为整数。
+Indicates that the value type is int.
 
 **Since:** 9
 
@@ -50,7 +52,7 @@ INTEGER = 1
 FLOAT = 2
 ```
 
-表示值类型为浮点数。
+Indicates that the value type is float.
 
 **Since:** 9
 
@@ -66,7 +68,7 @@ FLOAT = 2
 BYTE_ARRAY = 3
 ```
 
-表示值类型为字节数组。
+Indicates that the value type is byte array.
 
 **Since:** 9
 
@@ -84,7 +86,7 @@ BYTE_ARRAY = 3
 BOOLEAN = 4
 ```
 
-表示值类型为布尔值。
+Indicates that the value type is boolean.
 
 **Since:** 9
 
@@ -102,7 +104,7 @@ BOOLEAN = 4
 DOUBLE = 5
 ```
 
-表示值类型为双浮点数。
+Indicates that the value type is double.
 
 **Since:** 9
 
@@ -120,7 +122,7 @@ DOUBLE = 5
 LONG = 6
 ```
 
-表示值类型为长整数。
+Indicates that the value type is long.
 
 **Since:** 23
 

@@ -1,6 +1,6 @@
 # DeviceState (System API)
 
-投播设备的连接状态。
+Device state used to describe states including discovery, authentication and other scenes.
 
 **Since:** 20
 
@@ -24,7 +24,7 @@ import { avSession } from 'kits/@kit.AVSessionKit';
 readonly deviceId: string
 ```
 
-投播设备ID。
+Unique device descriptor.
 
 **Type:** string
 
@@ -44,7 +44,7 @@ readonly deviceId: string
 readonly deviceState: int
 ```
 
-投播设备连接状态码。
+Device connection state.
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
@@ -64,7 +64,7 @@ readonly deviceState: int
 readonly radarErrorCode: int
 ```
 
-系统雷达错误码。
+System radar error code returned by cast+services.
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
@@ -84,7 +84,7 @@ readonly radarErrorCode: int
 readonly reasonCode: int
 ```
 
-投播设备连接错误码。
+Reason for connection failure, for example, user cancellation and timeout.
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 

@@ -1,6 +1,6 @@
 # ListItemAlign
 
-设置子组件在List交叉轴方向的对齐方式。
+Declare list item alignment status
 
 **Since:** 23
 

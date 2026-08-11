@@ -27,7 +27,7 @@ Defines EffectComponent Component
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| options | [EffectComponentOptions](arkts-arkui-effectcomponent-effectcomponentoptions-i-sys.md) | 否 | The options to create an EffectComponent. |
+| options | [EffectComponentOptions](../arkts-components/arkts-arkui-effectcomponentoptions-i-sys.md) | 否 | The options to create an EffectComponent. |
 | content_ | [CustomBuilder](../arkts-components/arkts-arkui-custombuilder-t.md) | 否 | Subcomponents of EffectComponent |
 
 **返回值：**

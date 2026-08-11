@@ -20,5 +20,5 @@ Web组件进入全屏时触发的回调。
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| event | [FullScreenEnterEvent](../arkts-apis/arkts-arkweb-web-fullscreenenterevent-i.md) | 是 | Web组件进入全屏的回调事件详情。 |
+| event | [FullScreenEnterEvent](arkts-arkweb-fullscreenenterevent-i.md) | 是 | Web组件进入全屏的回调事件详情。 |
 

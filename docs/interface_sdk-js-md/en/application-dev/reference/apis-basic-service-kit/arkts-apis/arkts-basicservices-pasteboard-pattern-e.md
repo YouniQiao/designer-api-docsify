@@ -1,6 +1,6 @@
 # Pattern
 
-剪贴板支持检测的模式类型。
+Describes the patterns supported by the pasteboard.
 
 **Since:** 13
 
@@ -16,7 +16,7 @@
 URL = 0
 ```
 
-URL类型。
+URL.
 
 **Since:** 13
 
@@ -32,7 +32,7 @@ URL类型。
 NUMBER = 1
 ```
 
-数字类型。
+Number.
 
 **Since:** 13
 
@@ -48,7 +48,7 @@ NUMBER = 1
 EMAIL_ADDRESS = 2
 ```
 
-邮箱地址类型。
+Email address.
 
 **Since:** 13
 
@@ -64,7 +64,7 @@ EMAIL_ADDRESS = 2
 HTTP_URL = 3
 ```
 
-HTTP web链接类型。模型约束：此接口仅可在Stage模型下使用。
+HTTP URL.This API can be used only in the stage model.
 
 **Since:** 24
 
@@ -82,7 +82,7 @@ HTTP web链接类型。模型约束：此接口仅可在Stage模型下使用。
 FLIGHT_NUMBER = 4
 ```
 
-航班号类型。模型约束：此接口仅可在Stage模型下使用。
+Flight number.This API can be used only in the stage model.
 
 **Since:** 24
 

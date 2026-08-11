@@ -6,7 +6,7 @@
 function getFreeBytes(path: string, callback: AsyncCallback<number>): void
 ```
 
-异步方法获取指定文件系统空闲字节数，使用callback形式返回结果。
+Obtains the free size of the specified file system, in bytes. This API uses an asynchronous callback to return the result.
 
 **Since:** 8
 
@@ -24,8 +24,8 @@ function getFreeBytes(path: string, callback: AsyncCallback<number>): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| path | string | Yes | 需要查询的文件系统的文件路径 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;number&gt; | Yes | 异步获取空闲字节数之后的回调 |
+| path | string | Yes | Path of the file system. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;number&gt; | Yes | Callback used to return the free size obtained, in bytes. |
 
 ## Examples
 
@@ -50,7 +50,7 @@ statfs.getFreeBytes(path, (err: BusinessError, freeBytes:Number) => {
 function getFreeBytes(path: string): Promise<number>
 ```
 
-异步方法获取指定文件系统空闲字节数，以Promise形式返回结果。
+Obtains the free size of the specified file system, in bytes. This API uses a promise to return the result.
 
 **Since:** 8
 
@@ -68,13 +68,13 @@ function getFreeBytes(path: string): Promise<number>
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| path | string | Yes | 需要查询的文件系统的文件路径 |
+| path | string | Yes | Path of the file system. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;number&gt; | 返回空闲字节数 |
+| Promise&lt;number&gt; | Promise used to return the free size obtained, in bytes. |
 
 ## Examples
 

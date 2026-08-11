@@ -12,7 +12,7 @@ import { batteryInfo } from 'kits/@kit.BasicServicesKit';
 function remainingEnergy(): int
 ```
 
-获取当前设备电池的剩余容量，单位毫安时。
+Remaining battery capacity of the device, in unit of mAh. This is a system API.
 
 **Since:** 23
 
@@ -28,5 +28,5 @@ function remainingEnergy(): int
 
 | Type | Description |
 | --- | --- |
-| int | 返回当前设备电池的剩余容量，单位毫安时。 |
+| int | Returns the remaining battery capacity of the device, in mAh. |
 

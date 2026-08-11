@@ -1,6 +1,6 @@
 # EventType
 
-日程类型枚举。
+Enumerates event types.
 
 **Since:** 10
 
@@ -16,7 +16,7 @@
 NORMAL = 0
 ```
 
-普通日程，例如会议，闹钟等日常提醒的日程。
+Normal event, such as conference or an alarm clock.
 
 **Since:** 10
 
@@ -34,7 +34,7 @@ NORMAL = 0
 IMPORTANT = 1
 ```
 
-重要日程，例如结婚纪念日等具有重要意义的日期，不推荐三方开发者使用，重要日程类型不支持一键服务跳转功能及无法自定义提醒时间。
+Important event, such as wedding anniversary, are not recommended for third-party developers. Important events do not support one-click service redirection and custom reminder time.
 
 **Since:** 10
 

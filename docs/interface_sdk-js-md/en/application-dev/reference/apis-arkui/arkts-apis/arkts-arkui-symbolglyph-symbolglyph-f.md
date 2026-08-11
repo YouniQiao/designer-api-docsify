@@ -8,7 +8,7 @@ export declare function SymbolGlyph(
 ): SymbolGlyphAttribute
 ```
 
-定义SymbolGlyph组件。
+Defines SymbolGlyph Component.
 
 **Since:** 23
 
@@ -41,7 +41,7 @@ export declare function SymbolGlyph(
 ): SymbolGlyphAttribute
 ```
 
-定义SymbolGlyph组件。
+Defines SymbolGlyph Component.
 
 **Since:** 26.1.0
 
@@ -59,7 +59,7 @@ export declare function SymbolGlyph(
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| style | [CustomBuilderT](../arkts-components/arkts-arkui-custombuildert-t.md)&lt;SymbolGlyphAttribute&gt; | Yes | SymbolGlyph选项实例。 |
+| style | [CustomBuilderT](../arkts-components/arkts-arkui-custombuildert-t.md)&lt;SymbolGlyphAttribute&gt; | Yes | SymbolGlyph attribute instance |
 
 **Return value:**
 

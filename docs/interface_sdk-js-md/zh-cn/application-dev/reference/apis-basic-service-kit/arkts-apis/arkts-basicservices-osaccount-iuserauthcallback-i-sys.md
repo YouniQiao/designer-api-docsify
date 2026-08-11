@@ -12,12 +12,6 @@
 
 **系统接口：** 此接口为系统接口。
 
-## 导入模块
-
-```TypeScript
-import { osAccount } from 'kits/@kit.BasicServicesKit';
-```
-
 ## onAcquireInfo
 
 ArkTS-Dyn:
@@ -52,6 +46,8 @@ onAcquireInfo?: (module: int, acquire: int, extraInfo: Uint8Array) => void
 
 ## 示例
 
+ArkTS-Dyn示例：
+
 ```TypeScript
 let authCallback: osAccount.IUserAuthCallback = {
   onResult: (result: number, extraInfo: osAccount.AuthResult) => {
@@ -59,6 +55,22 @@ let authCallback: osAccount.IUserAuthCallback = {
     console.info('auth extraInfo = ' + JSON.stringify(extraInfo));
   },
   onAcquireInfo: (module: number, acquire: number, extraInfo: Uint8Array) => {
+    console.info('auth module = ' + module);
+    console.info('auth acquire = ' + acquire);
+    console.info('auth extraInfo = ' + JSON.stringify(extraInfo));
+  }
+};
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+let authCallback: osAccount.IUserAuthCallback = {
+  onResult: (result: int, extraInfo: osAccount.AuthResult) => {
+    console.info('auth result = ' + result)
+    console.info('auth extraInfo = ' + JSON.stringify(extraInfo));
+  },
+  onAcquireInfo: (module: int, acquire: int, extraInfo: Uint8Array) => {
     console.info('auth module = ' + module);
     console.info('auth acquire = ' + acquire);
     console.info('auth extraInfo = ' + JSON.stringify(extraInfo));
@@ -99,9 +111,22 @@ onResult: (result: int, extraInfo: AuthResult) => void
 
 ## 示例
 
+ArkTS-Dyn示例：
+
 ```TypeScript
 let authCallback: osAccount.IUserAuthCallback = {
   onResult: (result: number, extraInfo: osAccount.AuthResult) => {
+    console.info('auth result = ' + result);
+    console.info('auth extraInfo = ' + JSON.stringify(extraInfo));
+  }
+};
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+let authCallback: osAccount.IUserAuthCallback = {
+  onResult: (result: int, extraInfo: osAccount.AuthResult) => {
     console.info('auth result = ' + result);
     console.info('auth extraInfo = ' + JSON.stringify(extraInfo));
   }

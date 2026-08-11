@@ -1,6 +1,6 @@
 # CrownAction
 
-旋转表冠动作。
+Enumerates the crown actions.
 
 **Since:** 18
 
@@ -16,7 +16,7 @@
 BEGIN = 0
 ```
 
-表冠开始转动。
+Rotation crown behavior begins.
 
 **Since:** 18
 
@@ -38,7 +38,7 @@ BEGIN = 0
 UPDATE = 1
 ```
 
-表冠转动中。
+Rotation crown behavior update.
 
 **Since:** 18
 
@@ -58,7 +58,7 @@ UPDATE = 1
 END = 2
 ```
 
-表冠停止转动。
+The rotation crown behavior ends.
 
 **Since:** 18
 

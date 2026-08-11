@@ -12,7 +12,7 @@ import { batteryInfo } from 'kits/@kit.BasicServicesKit';
 function batterySOC(): int
 ```
 
-表示当前设备剩余电池电量百分比，取值范围是[0，100]。
+Battery state of charge (SoC) of the device, in unit of percentage, which ranges from 0 to 100.
 
 **Since:** 23
 
@@ -26,5 +26,5 @@ function batterySOC(): int
 
 | Type | Description |
 | --- | --- |
-| int | 返回当前设备剩余电池电量百分比，取值范围是[0，100]。 |
+| int | Returns the battery state of charge (SoC) of the device in unit of percentage, which ranges from 0 to 100. |
 

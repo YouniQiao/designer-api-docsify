@@ -1,6 +1,6 @@
 # SubscribeDeviceOrientationOptions
 
-用于设置设备方向传感器订阅的参数，包括回调频率和回调函数。
+Defines the type of data to return for a subscription to data changes of the device orientation sensor.
 
 **Since:** 6
 
@@ -26,7 +26,7 @@ import { OnBodyStateResponse, subscribeAccelerometerOptions, ProximityResponse, 
 fail?: (data: string, code: number) => void
 ```
 
-接口调用失败的回调函数。回调参数为(data: string, code: number)，其中data为错误信息，code为错误码。不填写时，接口调用失败无回调通知。
+Callback invoked when an API call fails.
 
 **Since:** 6
 
@@ -55,7 +55,7 @@ fail?: (data: string, code: number) => void
 success: (data: DeviceOrientationResponse) => void
 ```
 
-感应到设备方向传感器数据变化后的回调函数，回调参数为DeviceOrientationResponse对象。
+Callback invoked when the device orientation sensor data changes.
 
 **Since:** 6
 
@@ -83,17 +83,13 @@ success: (data: DeviceOrientationResponse) => void
 interval: string
 ```
 
-频率参数，设备方向传感器的回调函数执行频率。
+Interval at which the callback is invoked to return the device orientation sensor data.
 
-默认值：'normal'。
+The default value is **normal**. The options are as follows:
 
-可选值：
-
--'game'：极高的回调频率，20ms/次，适用于游戏场景。
-
--'ui'：较高的回调频率，60ms/次，适用于UI更新场景。
-
--'normal'：普通的回调频率，200ms/次，适用于低功耗场景。
+- **game**: called at an interval of 20 ms, which is applicable to gaming scenarios.  
+- **ui**: called at an interval of 60 ms, which is applicable to UI updating scenarios.  
+- **normal**: called at an interval of 200 ms, which is applicable to power-saving scenarios.
 
 **Type:** string
 

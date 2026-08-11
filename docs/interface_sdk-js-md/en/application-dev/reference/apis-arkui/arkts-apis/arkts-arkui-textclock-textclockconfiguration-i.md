@@ -1,6 +1,6 @@
 # TextClockConfiguration
 
-开发者需要自定义class实现ContentModifier接口。
+TextClockConfiguration used by text clock content modifier
 
 **Inheritance/Implementation:** TextClockConfiguration extends [CommonConfiguration<TextClockConfiguration>](CommonConfiguration<TextClockConfiguration>)
 
@@ -18,13 +18,7 @@
 started: boolean
 ```
 
-指示文本时钟是否启动。
-
-true：表示启动文本时钟。
-
-false：表示关闭文本时钟。
-
-默认值：true
+TextClock is started or not.
 
 **Type:** boolean
 
@@ -44,7 +38,7 @@ false：表示关闭文本时钟。
 timeValue: long
 ```
 
-当前文本时钟时区的UTC秒数。
+The time of the TextClock.
 
 **Type:** long
 
@@ -64,9 +58,7 @@ timeValue: long
 timeZoneOffset: double
 ```
 
-当前文本时钟时区偏移量。
-
-取值范围为[-14, 12]，表示东十二区到西十二区，其中负值表示东时区，正值表示西时区，比如东八区为-8。设置值为该取值范围内的浮点数时会进行取整，舍弃小数部分。
+Specifies the current time zone.The valid value is an integer ranging from - 14 to 12,Where a negative value indicates the eastern time zone, for example, -8.
 
 **Type:** double
 

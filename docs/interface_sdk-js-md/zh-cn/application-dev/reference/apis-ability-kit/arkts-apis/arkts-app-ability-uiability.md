@@ -8,12 +8,6 @@ UIAbility是包含UI界面的应用组件，继承自[Ability](arkts-ability-app
  > 各类Ability的继承关系详见[继承关系说明](../../../reference/apis-ability-kit/js-apis-app-ability-ability.md#ability的继承关系说明)。
 
 
-## 导入模块
-
-```TypeScript
-import { Callee, Caller, OnReleaseCallback, OnRemoteStateChangeCallback, CalleeCallback } from 'kits/@kit.AbilityKit';
-```
-
 ## 汇总
 
 ### 类

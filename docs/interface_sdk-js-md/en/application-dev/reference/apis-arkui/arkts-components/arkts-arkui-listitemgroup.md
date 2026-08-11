@@ -1,50 +1,77 @@
 # ListItemGroup
 
-该组件用来展示列表项分组，支持自定义分组头部和尾部区域、卡片样式、分割线、懒加载与预加载等能力，适用于需要对列表项进行逻辑分组展示的场景。宽度默认充满[List]{@link ./list}组件，必须配合List组件来使用。
+The **ListItemGroup** component is used to display list item groups. It must be used with the [List]{@link list}
+component. Unless specified otherwise, it spans the entire width of the **List** component.
 
-ListItemGroup的懒加载是指组件按需加载可见区域内的子组件。相比全量加载，使用懒加载可以提升应用启动速度，减少内存消耗。ListItemGroup和
-[ForEach](docroot://ui/rendering-control/arkts-rendering-control-foreach.md)、
-[LazyForEach](docroot://ui/rendering-control/arkts-rendering-control-lazyforeach.md)、
-[Repeat](docroot://ui/rendering-control/arkts-new-rendering-control-repeat.md)结合，懒加载能力存在差异：
+Lazy loading of **ListItemGroup** loads the child components in the visible area as required. Compared with full
+loading, lazy loading can improve the application startup speed and reduce the memory usage. The lazy loading
+capabilities vary when the **ListItemGroup** component is used together with
+[ForEach](docroot://ui/rendering-control/arkts-rendering-control-foreach.md),
+[LazyForEach](docroot://ui/rendering-control/arkts-rendering-control-lazyforeach.md), or
+[Repeat](docroot://ui/rendering-control/arkts-new-rendering-control-repeat.md).
 
-- 当ListItemGroup和ForEach结合，会一次性创建所有的子组件，在需要的时候布局和渲染屏幕范围内的节点。当用户滑动时，滑出屏幕范围的节点不会下树销毁，滑入屏幕范围的节点会布局和渲染。
-- 当ListItemGroup和LazyForEach结合，会一次性创建、布局、渲染屏幕范围的节点。当用户滑动时，滑出屏幕范围的节点会下树销毁，滑入屏幕范围的节点会创建、布局、渲染。
-- 当ListItemGroup和带[virtualScroll]{@link RepeatAttribute#virtualScroll}的Repeat结合，它的懒加载行为和LazyForEach一致。当ListItemGroup和
-不带virtualScroll的Repeat结合，它的懒加载行为和ForEach一致。
+- When **ListItemGroup** is used together with **ForEach**, all child nodes are created at a time. The nodes within
+the screen range are laid out and rendered when needed. When a user swipes, the nodes that are out of the screen
+range are not removed from the tree, and the nodes that are within the screen range are laid out and rendered.
+- When **ListItemGroup** is used together with **LazyForEach**, all nodes within the screen range are created, laid
+out, and rendered at a time. When a user swipes, the nodes that are out of the screen range are removed from the
+tree, and the nodes that are within the screen range are created, laid out, and rendered.
+- When the **ListItemGroup** component is used together with **Repeat** with
+[virtualScroll]{@link RepeatAttribute#virtualScroll}, the lazy loading behavior is the same as that of
+**LazyForEach**. When the **ListItemGroup** component is used together with **Repeat** without **virtualScroll**, the
+lazy loading behavior is the same as that of **ForEach**.
 
-ListItemGroup的预加载是指除了加载显示区域内的子组件外，还支持空闲时隙提前加载部分显示区域外的子组件。使用预加载可以减少滚动丢帧，提升流畅性。预加载需要结合懒加载才会生效。ListItemGroup和
-[ForEach](docroot://ui/rendering-control/arkts-rendering-control-foreach.md)、
-[LazyForEach](docroot://ui/rendering-control/arkts-rendering-control-lazyforeach.md)、
-[Repeat](docroot://ui/rendering-control/arkts-new-rendering-control-repeat.md)结合，预加载能力存在差异：
+Preloading in **ListItemGroup** refers to loading not only the visible child components within the display area but
+also some invisible child components outside the display area during idle time. Preloading can reduce frame loss
+during scrolling and improve smoothness. Preloading takes effect only when lazy loading is used. The preloading
+capabilities vary when the **ListItemGroup** component is used together with
+[ForEach](docroot://ui/rendering-control/arkts-rendering-control-foreach.md),
+[LazyForEach](docroot://ui/rendering-control/arkts-rendering-control-lazyforeach.md), or
+[Repeat](docroot://ui/rendering-control/arkts-new-rendering-control-repeat.md).
 
-- 当ListItemGroup和ForEach结合，如果设置了[cachedCount]{@link ListAttribute#cachedCount(value: number)}，除了会布局显示区域内子组件外，还会在空闲时隙根
-据List组件的cachedCount属性预布局显示区域外cachedCount范围内的子组件。
-- 当ListItemGroup和LazyForEach结合，如果设置了[cachedCount]{@link ListAttribute#cachedCount(value: number)}，除了会创建和布局显示区域内子组件外，还
-会在空闲时隙根据List组件的cachedCount属性预创建和预布局显示区域外cachedCount范围内的子组件。
-- 当ListItemGroup和带[virtualScroll]{@link RepeatAttribute#virtualScroll}的Repeat结合，它的预加载行为和LazyForEach一致。当ListItemGroup和
-不带virtualScroll的Repeat结合，它的预加载行为和ForEach一致。
+- When the **ListItemGroup** component is used together with **ForEach** and
+[cachedCount]{@link ListAttribute#cachedCount(value: number)} is set, in addition to laying out child components
+within the display area, child components within the range of **cachedCount** outside the display area are pre-laid
+out during idle time based on the **cachedCount** attribute of the **List** component.
+- When the **ListItemGroup** component is used together with **LazyForEach** and
+[cachedCount]{@link ListAttribute#cachedCount(value: number)} is set, in addition to creating and laying out child
+components within the display area, child components within the range of **cachedCount** outside the display area are
+created and pre-laid out during idle time based on the **cachedCount** attribute of the **List** component.
+- When the **ListItemGroup** component is used together with **Repeat** with
+[virtualScroll]{@link RepeatAttribute#virtualScroll}, the preloading behavior is the same as that of **LazyForEach**.
+When the **ListItemGroup** component is used together with **Repeat** without **virtualScroll**, the preloading
+behavior is the same as that of **ForEach**.
 
-> **说明：**
+> **NOTE**
+
+> - This component can be used only as a child of [List]{@link list}.
 >
-> - 该组件的父组件只能是[List]{@link ./list}。
+> - The **ListItemGroup** component does not support the universal attribute
+> [aspectRatio]{@link CommonMethod#aspectRatio}.
 >
-> - ListItemGroup组件不支持设置[通用属性aspectRatio]{@link CommonMethod#aspectRatio}。
+> - If the parent **List** component of **ListItemGroup** has its [listDirection]{@link ListAttribute#listDirection}
+> attribute set to **Axis.Vertical**, setting the
+> [universal attribute height]{@link CommonMethod#height(value: Length)} has no effect. In this case, the height of
+> the **ListItemGroup** component is fixed at the sum of the component's header height, footer height, and total
+> height of the list items.
 >
-> - 当ListItemGroup的父组件List的[listDirection]{@link ListAttribute#listDirection}属性为Axis.Vertical时，设置
-> [通用属性height]{@link CommonMethod#height(value: Length)}不生效。ListItemGroup的高度为header高度、footer高度和所有ListItem布局后总高度之和。
+> - If the parent **List** component of **ListItemGroup** has its **listDirection** attribute set to
+> **Axis.Horizontal**, setting the [universal attribute width]{@link CommonMethod#width(value: Length)} has no
+> effect. In this case, the width of the **ListItemGroup** component is fixed at the sum of the component's header
+> width, footer width, and total width of the list items.
 >
-> - 当父组件List的listDirection属性为Axis.Horizontal时，设置[通用属性width]{@link CommonMethod#width(value: Length)}不生效。ListItemGroup
-> 的宽度为header宽度、footer宽度和所有ListItem布局后总宽度之和。
+> - The list items in the **ListItemGroup** component cannot be edited or dragged. This means that their
+> [editable]{@link ListItemAttribute#editable} attribute does not take effect.
 >
-> - ListItemGroup使用direction属性设置布局方向不生效，ListItemGroup组件布局方向跟随父容器List组件的布局方向。
+> - The **ListItemGroup** ignores the **direction** attribute for setting the layout direction; instead, it adopts
+> the layout direction of its parent **List** component.
 
-## 子组件
+## Child Components
 
-包含[ListItem]{@link ./list_item}子组件。支持通过渲染控制类型（  
-[if/else](docroot://ui/rendering-control/arkts-rendering-control-ifelse.md)、  
-[ForEach](docroot://ui/rendering-control/arkts-rendering-control-foreach.md)、  
-[LazyForEach](docroot://ui/rendering-control/arkts-rendering-control-lazyforeach.md)和  
-[Repeat](docroot://ui/rendering-control/arkts-new-rendering-control-repeat.md)）动态生成子组件，更推荐使用LazyForEach或Repeat以优化性能。
+Contains the [ListItem]{@link list_item} child component. Child components can be dynamically generated using rendering control types [if/else](docroot://ui/rendering-control/arkts-rendering-control-ifelse.md),  
+[ForEach](docroot://ui/rendering-control/arkts-rendering-control-foreach.md),  
+[LazyForEach](docroot://ui/rendering-control/arkts-rendering-control-lazyforeach.md), and  
+[Repeat](docroot://ui/rendering-control/arkts-new-rendering-control-repeat.md). **LazyForEach** or **Repeat** is recommended to optimize performance.
 
 ## ListItemGroup
 
@@ -52,7 +79,7 @@ ListItemGroup的预加载是指除了加载显示区域内的子组件外，还�
 ListItemGroup(options?: ListItemGroupOptions)
 ```
 
-创建ListItemGroup组件。该组件的父组件只能是List组件。
+Creates a **ListItemGroup** component.
 
 **Since:** 9
 
@@ -68,7 +95,7 @@ ListItemGroup(options?: ListItemGroupOptions)
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| options | [ListItemGroupOptions](../arkts-apis/arkts-arkui-listitemgroup-listitemgroupoptions-i.md) | No | ListItemGroup组件参数，用于配置header、footer、间距和样式等。不传入时使用默认配置（无header、footer，间距为 0，无卡片样式）。 |
+| options | [ListItemGroupOptions](../arkts-apis/arkts-arkui-listitemgroup-listitemgroupoptions-i.md) | No | Parameters of the list item group. |
 
 ## Summary
 

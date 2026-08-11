@@ -1,6 +1,6 @@
 # AuthResult
 
-表示认证结果的对象。
+Represents the authentication result object.
 
 **Since:** 8
 
@@ -26,7 +26,7 @@ import { userAuth } from 'kits/@kit.UserAuthenticationKit';
 freezingTime?: number
 ```
 
-认证操作的冻结时间。单位为毫秒。
+Time for which the authentication operation is frozen. The unit is milliseconds.
 
 **Type:** number
 
@@ -48,7 +48,7 @@ freezingTime?: number
 remainTimes?: number
 ```
 
-剩余的认证操作次数。
+Number of remaining authentication operations.
 
 **Type:** number
 
@@ -70,7 +70,7 @@ remainTimes?: number
 token?: Uint8Array
 ```
 
-认证通过的令牌信息。
+Authentication token information.
 
 **Type:** Uint8Array
 

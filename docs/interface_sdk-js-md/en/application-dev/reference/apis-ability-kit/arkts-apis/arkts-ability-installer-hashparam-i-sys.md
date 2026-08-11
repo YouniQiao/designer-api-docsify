@@ -1,6 +1,6 @@
 # HashParam (System API)
 
-应用程序安装卸载哈希参数信息。
+Defines the hash parameters for bundle installation and uninstall.
 
 **Since:** 9
 
@@ -24,7 +24,7 @@ import { installer } from 'kits/@kit.AbilityKit';
 hashValue: string
 ```
 
-哈希值。
+Hash value.
 
 **Type:** string
 
@@ -44,7 +44,7 @@ hashValue: string
 moduleName: string
 ```
 
-应用程序模块名称。
+Module name of the bundle.
 
 **Type:** string
 

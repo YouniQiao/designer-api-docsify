@@ -1,6 +1,6 @@
 # DeviceFlag
 
-表示音频设备类型的枚举。
+Enumerates the audio device flags.
 
 **Since:** 7
 
@@ -16,7 +16,7 @@
 OUTPUT_DEVICES_FLAG = 1
 ```
 
-输出设备。
+Output devices.
 
 **Since:** 7
 
@@ -32,7 +32,7 @@ OUTPUT_DEVICES_FLAG = 1
 INPUT_DEVICES_FLAG = 2
 ```
 
-输入设备。
+Input devices.
 
 **Since:** 7
 
@@ -48,7 +48,7 @@ INPUT_DEVICES_FLAG = 2
 ALL_DEVICES_FLAG = 3
 ```
 
-所有设备。
+All devices.
 
 **Since:** 7
 

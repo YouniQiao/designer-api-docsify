@@ -1,6 +1,6 @@
 # FingerprintTips
 
-表示指纹认证过程中提示码的枚举。
+Enumerates the tip codes used during the fingerprint authentication process.
 
 **Since:** 8
 
@@ -18,7 +18,7 @@
 FINGERPRINT_AUTH_TIP_GOOD = 0
 ```
 
-获取的指纹图像良好。
+The obtained fingerprint image is in good condition.
 
 **Since:** 8
 
@@ -36,7 +36,7 @@ FINGERPRINT_AUTH_TIP_GOOD = 0
 FINGERPRINT_AUTH_TIP_DIRTY = 1
 ```
 
-由于传感器上可疑或检测到的污垢，指纹图像噪音过大。
+Large fingerprint image noise is detected due to suspicious or detected dirt on the sensor.
 
 **Since:** 8
 
@@ -54,7 +54,7 @@ FINGERPRINT_AUTH_TIP_DIRTY = 1
 FINGERPRINT_AUTH_TIP_INSUFFICIENT = 2
 ```
 
-由于检测到的情况，指纹图像噪声太大，无法处理。
+The noise of the fingerprint image is too large to be processed.
 
 **Since:** 8
 
@@ -72,7 +72,7 @@ FINGERPRINT_AUTH_TIP_INSUFFICIENT = 2
 FINGERPRINT_AUTH_TIP_PARTIAL = 3
 ```
 
-仅检测到部分指纹图像。
+Incomplete fingerprint image is detected.
 
 **Since:** 8
 
@@ -90,7 +90,7 @@ FINGERPRINT_AUTH_TIP_PARTIAL = 3
 FINGERPRINT_AUTH_TIP_TOO_FAST = 4
 ```
 
-快速移动，指纹图像不完整。
+The fingerprint image is incomplete due to fast movement.
 
 **Since:** 8
 
@@ -108,7 +108,7 @@ FINGERPRINT_AUTH_TIP_TOO_FAST = 4
 FINGERPRINT_AUTH_TIP_TOO_SLOW = 5
 ```
 
-缺少运动，指纹图像无法读取。
+Failed to obtain the fingerprint image because the finger seldom moves.
 
 **Since:** 8
 

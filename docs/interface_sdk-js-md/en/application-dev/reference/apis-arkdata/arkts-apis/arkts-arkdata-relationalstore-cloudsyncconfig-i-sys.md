@@ -1,6 +1,6 @@
 # CloudSyncConfig
 
-云同步配置信息。
+Cloud sync configuration.
 
 **Since:** 26.0.0
 
@@ -22,7 +22,7 @@ import { relationalStore } from 'kits/@kit.ArkData';
 downloadOnly?: boolean
 ```
 
-是否仅下行云端数据到本地。true表示仅下行云端数据到本地，false表示先下行云端数据到本地，再上行本地数据到云侧的同步流程。默认值为false。
+Indicates whether the sync operation should be download‑only.
 
 **Type:** boolean
 

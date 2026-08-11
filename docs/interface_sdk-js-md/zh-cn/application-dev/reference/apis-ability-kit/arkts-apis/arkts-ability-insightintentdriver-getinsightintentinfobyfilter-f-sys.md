@@ -1,11 +1,5 @@
 # getInsightIntentInfoByFilter（系统接口）
 
-## 导入模块
-
-```TypeScript
-import { insightIntentDriver } from 'kits/@kit.AbilityKit';
-```
-
 ## getInsightIntentInfoByFilter
 
 ```TypeScript
@@ -44,10 +38,10 @@ Obtains the intent information on the current device based on the given intent f
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 16000006 | Cross-user operations are not allowed. |
-| 16000050 | Internal error. Possible causes: 1. Connect to system service failed; 2.Send restart message to system service failed; 3.System service failed to communicate with dependency module. |
-| 201 | Permission denied. |
-| 202 | Not system application. |
+| [16000006](../errorcode-ability.md#16000006-不允许跨用户操作) | Cross-user operations are not allowed. |
+| [16000050](../errorcode-ability.md#16000050-内部错误) | Internal error. Possible causes: 1. Connect to system service failed; 2.Send restart message to system service failed; 3.System service failed to communicate with dependency module. |
+| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not system application. |
 
 ## 示例
 
@@ -68,9 +62,10 @@ function getInfoByFilter() {
   try {
     insightIntentDriver.getInsightIntentInfoByFilter(filter).then((data) => {
       hilog.info(0x0000, 'testTag', 'getInsightIntentInfoByFilter return %{public}s', JSON.stringify(data));
-    }).catch((err: BusinessError) => {
-      hilog.error(0x0000, 'testTag', 'getInsightIntentInfoByFilter errCode: %{public}d', err.code);
-      hilog.error(0x0000, 'testTag', 'getInsightIntentInfoByFilter errMessage: %{public}s', err.message);
+    }).catch((error: Error) => {
+      let err = error as BusinessError;
+      hilog.info(0x0000, 'testTag', 'getInsightIntentInfoByFilter errCode: %{public}d', err.code);
+      hilog.info(0x0000, 'testTag', 'getInsightIntentInfoByFilter errMessage: %{public}s', err.message);
     });
   } catch (error) {
     hilog.error(0x0000, 'testTag', 'getInsightIntentInfoByFilter error caught %{public}s', JSON.stringify(error));

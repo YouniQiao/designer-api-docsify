@@ -1,6 +1,6 @@
 # SubscribeLightOptions
 
-用于设置环境光传感器订阅的参数，包括回调函数。
+Defines the type of data to return for a subscription to data changes of the ambient light sensor.
 
 **Since:** 3
 
@@ -26,7 +26,7 @@ import { OnBodyStateResponse, subscribeAccelerometerOptions, ProximityResponse, 
 fail?: (data: string, code: number) => void
 ```
 
-接口调用失败的回调函数。回调参数为(data: string, code: number)，其中data为错误信息，code为错误码。不填写时，接口调用失败无回调通知。
+Callback invoked when an API call fails.
 
 **Since:** 3
 
@@ -55,7 +55,7 @@ fail?: (data: string, code: number) => void
 success: (data: LightResponse) => void
 ```
 
-光线感应数据改变后的回调函数，回调参数为LightResponse对象。
+Callback invoked when the ambient light sensor data changes.
 
 **Since:** 3
 

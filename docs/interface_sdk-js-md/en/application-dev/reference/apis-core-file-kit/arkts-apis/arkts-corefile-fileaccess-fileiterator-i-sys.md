@@ -1,6 +1,6 @@
 # FileIterator (System API)
 
-表示文件夹的迭代器对象。
+Provides the **FileIterator** object.
 
 **Since:** 9
 
@@ -26,7 +26,7 @@ import { fileAccess } from 'kits/@kit.CoreFileKit';
 next(): { value: FileInfo, done: boolean }
 ```
 
-可以通过next同步方法获取下一级文件(夹)信息。
+Obtains information about the next-level files or directories.
 
 **Since:** 9
 

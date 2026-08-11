@@ -1,8 +1,9 @@
 # PiPController
 
-画中画控制器实例。用于启动、停止画中画以及更新回调注册等。
+Implements a PiP controller that starts, stops, or updates a PiP window and registers callbacks.
 
-下列API示例中都需先使用[PiPWindow.create()](arkts-arkui-pipwindow-create-f.md#create)方法获取到PiPController实例，再通过此实例调用对应方法。
+Before calling any of the following APIs, you must use  
+[PiPWindow.create()](arkts-arkui-pipwindow-create-f.md#create) to create a PiPController instance.
 
 **Since:** 11
 
@@ -24,7 +25,7 @@ import { PiPWindow } from 'kits/@kit.ArkUI';
 getPiPSettingSwitch(): Promise<boolean>
 ```
 
-获取设置中自动启动画中画开关的状态，使用Promise异步回调。
+Obtains the status of the auto-start PiP switch in Settings. This API uses a promise to return the result.
 
 **Since:** 20
 
@@ -40,31 +41,29 @@ getPiPSettingSwitch(): Promise<boolean>
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;boolean&gt; | Promise对象，返回当前自动启动画中画开关状态，true表示开启，false表示关闭。 |
+| Promise&lt;boolean&gt; | Promise used to return the auto-start PiP switch status. **true** if enabled, **false** otherwise. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 801 | Capability not supported. Failed to call the API due to limited device capabilities. |
-| 1300014 | PiP internal error. Possible cause: The PiP controller has been destroyed. |
+| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. Failed to call the API due to limited device capabilities. |
+| [1300014](../errorcode-window.md#1300014-pip-internal-error) | PiP internal error. Possible cause: The PiP controller has been destroyed. |
 
 ## Examples
 
 ```TypeScript
 let pipSwitchStatus: boolean | undefined = undefined;
 try {
-  // Obtain the status of the switch for automatically starting the PiP window.
   let promise : Promise<boolean> = this.pipController.getPiPSettingSwitch();
   promise.then((data) => {
-    // Save the obtained switch status.
     pipSwitchStatus = data;
     console.info('Succeeded in getting pip switch status. switchStatus: ' + JSON.stringify(data));
   }).catch((err: BusinessError) => {
-    console.error(`Failed to get pip switch status. Code: ${err.code}, message: ${err.message}`);
+    console.error(`Failed to get pip switch status. Cause code: ${err.code}, message: ${err.message}`);
   });
 } catch (exception) {
-  console.error(`Failed to get pip switch status. Code: ${exception.code}, message: ${exception.message}`);
+  console.error(`Failed to get pip switch status. Cause code: ${exception.code}, message: ${exception.message}`);
 }
 ```
 
@@ -74,7 +73,7 @@ try {
 getPiPWindowInfo(): Promise<PiPWindowInfo>
 ```
 
-获取画中画窗口信息，使用Promise异步回调。
+Obtains the PIP window information. This API uses a promise to return the result.
 
 **Since:** 15
 
@@ -90,33 +89,14 @@ getPiPWindowInfo(): Promise<PiPWindowInfo>
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;PiPWindowInfo&gt; | Promise对象，返回当前画中画窗口信息。 |
+| Promise&lt;PiPWindowInfo&gt; | Promise used to return the information about the current PIP window. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 801 | Capability not supported. Failed to call the API due to limited device capabilities. |
-| 1300014 | PiP internal error. Possible causes: &lt;br&gt;1.The PiP controller has been destroyed. &lt;br&gt;2.The PiP window is not created or has been destroyed. |
-
-## Examples
-
-```TypeScript
-let pipWindowInfo: PiPWindow.PiPWindowInfo | undefined = undefined;
-try {
-  // Obtain the PiP window information.
-  let promise : Promise<PiPWindow.PiPWindowInfo> = this.pipController.getPiPWindowInfo();
-  promise.then((data) => {
-    // Save the obtained PiP window information.
-    pipWindowInfo = data;
-    console.info('Success in get pip window info. Info: ' + JSON.stringify(data));
-  }).catch((err: BusinessError) => {
-    console.error(`Failed to get pip window info. Code: ${err.code}, message: ${err.message}`);
-  });
-} catch (exception) {
-  console.error(`Failed to get pip window info. Code: ${exception.code}, message: ${exception.message}`);
-}
-```
+| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. Failed to call the API due to limited device capabilities. |
+| [1300014](../errorcode-window.md#1300014-pip-internal-error) | PiP internal error. Possible causes: &lt;br&gt;1.The PiP controller has been destroyed. &lt;br&gt;2.The PiP window is not created or has been destroyed. |
 
 ## isPiPActive
 
@@ -124,7 +104,7 @@ try {
 isPiPActive(): Promise<boolean>
 ```
 
-获取画中画的隐藏状态。使用Promise异步回调。
+Check whether the PiP window is active. This API uses a promise to return the result.
 
 **Since:** 23
 
@@ -140,30 +120,28 @@ isPiPActive(): Promise<boolean>
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;boolean&gt; | Promise对象，返回当前画中画的隐藏状态。true表示前台可见，false表示前台不可见（收入侧边栏）。画中画生命周期不为 [STARTED]{ |
+| Promise&lt;boolean&gt; | Promise used to return the PiP window status. **true** is returned if the PiP window is visible, and **false** is returned if the PiP window is invisible (hidden in the sidebar). If this API is called when the PiP lifecycle is not [STARTED]{ |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 1300014 | PiP internal error. Possible causes: &lt;br&gt;1.The PiP controller has been destroyed. &lt;br&gt;2.The PiP window is not created or has been destroyed. |
+| [1300014](../errorcode-window.md#1300014-pip-internal-error) | PiP internal error. Possible causes: &lt;br&gt;1.The PiP controller has been destroyed. &lt;br&gt;2.The PiP window is not created or has been destroyed. |
 
 ## Examples
 
 ```TypeScript
 let pipActiveStatus: boolean | undefined = undefined;
 try {
-  // Check whether the PiP window is active.
   let promise : Promise<boolean> | undefined = this.pipController?.isPiPActive();
   promise?.then((data) => {
-    // Save the obtained active status of the PiP window.
     pipActiveStatus = data;
     console.info('Succeeded in getting pip active status. activeStatus: ' + JSON.stringify(data));
   }).catch((err: BusinessError) => {
-    console.error(`Failed to get pip active status. Code: ${err.code}, message: ${err.message}`);
+    console.error(`Failed to get pip active status. Cause code: ${err.code}, message: ${err.message}`);
   });
 } catch (exception) {
-  console.error(`Failed to get pip active status. Code: ${exception.code}, message: ${exception.message}`);
+  console.error(`Failed to get pip active status. Cause code: ${exception.code}, message: ${exception.message}`);
 }
 ```
 
@@ -173,7 +151,7 @@ try {
 off(type: 'stateChange'): void
 ```
 
-关闭画中画生命周期状态变化的监听。
+Unsubscribes from PiP state events.
 
 **Since:** 11
 
@@ -189,12 +167,11 @@ off(type: 'stateChange'): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'stateChange' | Yes | 事件类型，固定为'stateChange'，即画中画生命周期状态变化事件。 |
+| type | 'stateChange' | Yes | Event type. The value is fixed at **'stateChange'**, indicating that the PiP state changes. |
 
 ## Examples
 
 ```TypeScript
-// Unsubscribe from PiP state events.
 this.pipController.off('stateChange');
 ```
 
@@ -204,8 +181,8 @@ this.pipController.off('stateChange');
 off(type: 'controlPanelActionEvent'): void
 ```
 
-关闭画中画控制面板控件动作事件的监听。推荐使用  
-[off('controlEvent')](PiPWindow.PiPController.off(type: 'controlEvent', callback?: Callback&lt;ControlEventParam&gt;))来关闭画中画控制面板控件动作事件的监听。
+Unsubscribes from PiP action events. The  
+**[off('controlEvent')](PiPWindow.PiPController.off(type: 'controlEvent', callback?: Callback&lt;ControlEventParam&gt;))**API is preferred.
 
 **Since:** 11
 
@@ -221,12 +198,11 @@ off(type: 'controlPanelActionEvent'): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'controlPanelActionEvent' | Yes | 事件类型，固定为'controlPanelActionEvent'，即画中画控制面板控件动作事件。 |
+| type | 'controlPanelActionEvent' | Yes | Event type. The value is fixed at **'controlPanelActionEvent'**, indicating the action event of the PiP controller. |
 
 ## Examples
 
 ```TypeScript
-// Unsubscribe from PiP controller action events.
 this.pipController.off('controlPanelActionEvent');
 ```
 
@@ -236,7 +212,7 @@ this.pipController.off('controlPanelActionEvent');
 off(type: 'controlEvent', callback?: Callback<ControlEventParam>): void
 ```
 
-关闭画中画控制面板控件动作事件的监听。
+Unsubscribes from PiP action events.
 
 **Since:** 12
 
@@ -252,8 +228,8 @@ off(type: 'controlEvent', callback?: Callback<ControlEventParam>): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'controlEvent' | Yes | 事件类型，固定为'controlEvent'，即画中画控制面板控件动作事件。 |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;ControlEventParam&gt; | No | 描述画中画控制面板控件动作事件回调。如果未传入参数，解除type为'controlEvent'的所有回调。 |
+| type | 'controlEvent' | Yes | Event type. The value is fixed at **'controlEvent'**, indicating the action event of the PiP controller. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;ControlEventParam&gt; | No | Describes the action event callback of the PiP controller. If no value is passed in, all subscriptions to the specified event are canceled. |
 
 ## Examples
 
@@ -261,7 +237,6 @@ off(type: 'controlEvent', callback?: Callback<ControlEventParam>): void
 let callbackFunc = (event: PiPWindow.ControlEventParam) => {
   console.info(`receive control event: ${event.controlType}, ${event.status}`);
 }
-// Unsubscribe from PiP controller action events.
 this.pipController.off('controlEvent', callbackFunc);
 ```
 
@@ -271,7 +246,7 @@ this.pipController.off('controlEvent', callbackFunc);
 off(type: 'pipWindowSizeChange', callback?: Callback<PiPWindowSize>): void
 ```
 
-关闭画中画窗口尺寸变化事件的监听。
+Unsubscribes from the PiP window size change event.
 
 **Since:** 15
 
@@ -287,14 +262,15 @@ off(type: 'pipWindowSizeChange', callback?: Callback<PiPWindowSize>): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'pipWindowSizeChange' | Yes | 事件类型，固定为'pipWindowSizeChange'，即画中画窗口尺寸变化事件。 |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;PiPWindowSize&gt; | No | 回调函数。返回当前画中画窗口的尺寸。如果传入参数，则关闭该监听。如果未传入参数，解除type为'pipWindowSizeChange '的所有回调。 |
+| type | 'pipWindowSizeChange' | Yes | Event type. The value is fixed at **'pipWindowSizeChange'**, indicating that the PiP window size changes. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;PiPWindowSize&gt; | No | Callback used to return the size of the current PiP window. If a value is passed in, the corresponding subscription is canceled. If no value is passed in, all subscriptions to the specified event are canceled. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 801 | Capability not supported. Failed to call the API due to limited device capabilities. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: &lt;br&gt;1. Mandatory parameters are left unspecified. &lt;br&gt;2. Incorrect parameter types. &lt;br&gt;3. Parameter verification failed. |
+| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. Failed to call the API due to limited device capabilities. |
 
 ## Examples
 
@@ -306,7 +282,7 @@ try {
   // Enable listening through the on API.
   this.pipController.on('pipWindowSizeChange', callback);
 } catch (exception) {
-  console.error(`Failed to enable the listener for pip window size changes. Code: ${exception.code}, message: ${exception.message}`);
+  console.error(`Failed to enable the listener for pip window size changes. Cause code: ${exception.code}, message: ${exception.message}`);
 }
 
 try {
@@ -315,7 +291,7 @@ try {
   // Unregister all the callbacks that have been registered through on().
   this.pipController.off('pipWindowSizeChange');
 } catch (exception) {
-  console.error(`Failed to disable the listener for pip window size changes. Code: ${exception.code}, message: ${exception.message}`);
+  console.error(`Failed to disable the listener for pip window size changes. Cause code: ${exception.code}, message: ${exception.message}`);
 }
 ```
 
@@ -325,7 +301,7 @@ try {
 off(type: 'activeStatusChange', callback?: Callback<boolean>): void
 ```
 
-关闭画中画窗口隐藏状态变化事件的监听。
+Unsubscribes from PiP window active status change events.
 
 **Since:** 22
 
@@ -341,8 +317,8 @@ off(type: 'activeStatusChange', callback?: Callback<boolean>): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'activeStatusChange' | Yes | 事件类型，固定为'activeStatusChange'，即画中画隐藏状态变化事件。 |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;boolean&gt; | No | 返回当前画中画的隐藏状态。true表示前台可见，false表示前台不可见（收入侧边栏）。如果未传入参数，解除type为' activeStatusChange'的所有回调。 |
+| type | 'activeStatusChange' | Yes | Event type. The value is fixed at **'activeStatusChange'**, indicating that the PiP window active status changes. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;boolean&gt; | No | PiP window active status. **true** is returned if the PiP window is visible, and **false** is returned if the PiP window is invisible (hidden in the sidebar). If no value is passed in, all subscriptions to the specified event are canceled. |
 
 ## Examples
 
@@ -350,7 +326,6 @@ off(type: 'activeStatusChange', callback?: Callback<boolean>): void
 let callback = (activeStatus: boolean) => {
   console.info(`pip window is visible: ${activeStatus}`);
 }
-// Unsubscribe from PiP window active status change events.
 this.pipController.off('activeStatusChange', callback);
 ```
 
@@ -360,7 +335,7 @@ this.pipController.off('activeStatusChange', callback);
 offActiveStatusChange(callback?: Callback<boolean>): void
 ```
 
-关闭画中画窗口隐藏状态变化事件的监听。
+Unregister picture-in-picture active status change listener
 
 **Since:** 26.0.0
 
@@ -374,14 +349,14 @@ offActiveStatusChange(callback?: Callback<boolean>): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;boolean&gt; | No | 返回当前画中画的隐藏状态。true表示前台可见，false表示前台不可见（收入侧边栏）。 如果未传入参数，解除画中画窗口隐藏状态变化事件的所有回调。 |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;boolean&gt; | No | Used to handle {'activeStatusChange'} command. If not provided, all callbacks for the given event type will be removed. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 801 | Capability not supported. function offActiveStatusChange(callback) can not work correctly due to limited device capabilities. |
-| 1300014 | PiP internal error. |
+| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. function offActiveStatusChange(callback) can not work correctly due to limited device capabilities. |
+| [1300014](../errorcode-window.md#1300014-pip-internal-error) | PiP internal error. |
 
 ## offControlEvent
 
@@ -389,7 +364,7 @@ offActiveStatusChange(callback?: Callback<boolean>): void
 offControlEvent(callback?: Callback<ControlEventParam>): void
 ```
 
-关闭画中画控制面板控件动作事件的监听。
+Unregister picture-in-picture control event listener
 
 **Since:** 26.0.0
 
@@ -403,7 +378,7 @@ offControlEvent(callback?: Callback<ControlEventParam>): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;ControlEventParam&gt; | No | 描述画中画控制面板控件动作事件回调。如果未传入参数，解除画中画控制面板控件动作事件的所有回调。 |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;ControlEventParam&gt; | No | Used to handle {'controlEvent'} command. If not provided, all callbacks for the given event type will be removed. |
 
 ## offControlPanelActionEvent
 
@@ -411,7 +386,7 @@ offControlEvent(callback?: Callback<ControlEventParam>): void
 offControlPanelActionEvent(): void
 ```
 
-关闭画中画控制面板控件动作事件的监听。推荐使用[offControlEvent](#offcontrolevent)来关闭画中画控制面板控件动作事件的监听。
+Unregister picture-in-picture lifecycle event listener
 
 **Since:** 26.0.0
 
@@ -427,7 +402,7 @@ offControlPanelActionEvent(): void
 offPipWindowSizeChange(callback?: Callback<PiPWindowSize>): void
 ```
 
-关闭画中画窗口尺寸变化事件的监听。
+Unregister picture-in-picture window size change event listener
 
 **Since:** 26.0.0
 
@@ -441,13 +416,13 @@ offPipWindowSizeChange(callback?: Callback<PiPWindowSize>): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;PiPWindowSize&gt; | No | 回调函数。返回当前画中画窗口的尺寸。 如果传入参数，则关闭该监听。如果未传入参数，解除窗口尺寸变化事件的所有回调。 |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;PiPWindowSize&gt; | No | Callback used to return the picture-in-picture window size. If not provided, all callbacks for the given event type will be removed. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 801 | Capability not supported. Failed to call the API due to limited device capabilities. |
+| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. Failed to call the API due to limited device capabilities. |
 
 ## offStateChange
 
@@ -455,7 +430,7 @@ offPipWindowSizeChange(callback?: Callback<PiPWindowSize>): void
 offStateChange(): void
 ```
 
-关闭画中画生命周期状态变化的监听。
+Unregister picture-in-picture lifecycle state change listener.
 
 **Since:** 26.0.0
 
@@ -471,7 +446,7 @@ offStateChange(): void
 on(type: 'stateChange', callback: (state: PiPState, reason: string) => void): void
 ```
 
-开启画中画生命周期状态变化的监听，建议在不需要使用时关闭监听，否则可能存在内存泄漏。
+Subscribes to PiP state events. To avoid potential memory leaks, you are advised to stop listening when it is no longer needed.
 
 **Since:** 11
 
@@ -487,13 +462,12 @@ on(type: 'stateChange', callback: (state: PiPState, reason: string) => void): vo
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'stateChange' | Yes | 事件类型，固定为'stateChange'，即画中画生命周期状态变化事件。 |
-| callback | (state: PiPState, reason: string) =&gt; void | Yes | 回调生命周期状态变化事件以及原因。&lt;br/&gt;state：[PiPState](arkts-arkui-pipwindow-pipstate-e.md)，表示当前画中画生命周期状态。 &lt;br/&gt;reason：string，表示当前生命周期的切换原因。 &lt;br/&gt;在&lt;!--RP1--&gt;OpenHarmony 6.1&lt;!--RP1End--&gt;之前，reason始终为“0”，无需关注。 &lt;br/&gt;从&lt;!--RP1--&gt;OpenHarmony 6.1&lt;!--RP1End--&gt;开始，reason为当前生命周期的切换原因： &lt;br/&gt;"requestStart"：应用调用startPip接口； &lt;br/&gt;"autoStart"：应用退后台触发画中画自动启动； &lt;br/&gt;"requestDelete"：应用调用stopPip接口； &lt;br/&gt;"panelActionDelete"：用户点击画中画窗口的关闭按钮； &lt;br/&gt;"dragDelete"：用户将画中画窗口拖入垃圾桶； &lt;br/&gt;"panelActionRestore"：用户点击画中画窗口的还原按钮（无还原按钮时可点击画中画窗口）触发还原； &lt;br/&gt;"other"：其他原因，如新的画中画窗口拉起导致当前窗口被关闭、应用主窗口被关闭等场景。 |
+| type | 'stateChange' | Yes | Event type. The value is fixed at **'stateChange'**, indicating that the PiP state changes. |
+| callback | (state: PiPState, reason: string) =&gt; void | Yes | Callback used to return the result, which includes the following information:&lt;br&gt;- **state**: [PiPState](arkts-arkui-pipwindow-pipstate-e.md), indicating the new PiP state. &lt;br&gt;- **reason**: a string indicating the reason for the state change. &lt;br&gt;Before &lt;!--RP1--&gt;OpenHarmony 6.1&lt;!--RP1End--&gt;, the value of **reason** is always **0**, which can be ignored.&lt;br&gt;Since &lt;!--RP1--&gt;OpenHarmony 6.1&lt;!--RP1End--&gt;, **reason** indicates the reason for switching the current lifecycle. The options are as follows: &lt;br&gt;**"requestStart"**: An application calls the **startPip** API. &lt;br&gt;**"autoStart"**: The application is automatically started in PiP mode when it is switched to the background. &lt;br&gt;**"requestDelete"**: The application calls the **stopPip** API. &lt;br&gt;**"panelActionDelete"**: The user taps the close button in the PiP window. &lt;br&gt;**"dragDelete"**: The user drags the PiP window to delete. &lt;br&gt;**"panelActionRestore"**: The user taps the restore button in the PiP window (or taps the PiP window if there is no restore button) to restore the PiP window. &lt;br&gt;**"other"**: Other reasons, such as the current window or application's main window being closed due to the startup of a new PiP window. |
 
 ## Examples
 
 ```TypeScript
-// Subscribe to PiP state events.
 this.pipController.on('stateChange', (state: PiPWindow.PiPState, reason: string) => {
   let curState: string = '';
   switch (state) {
@@ -528,8 +502,8 @@ this.pipController.on('stateChange', (state: PiPWindow.PiPState, reason: string)
 on(type: 'controlPanelActionEvent', callback: ControlPanelActionEventCallback): void
 ```
 
-开启画中画控制面板控件动作事件的监听，建议在不需要使用时关闭监听，否则可能存在内存泄漏。推荐使用  
-[on('controlEvent')](PiPWindow.PiPController.on(type: 'controlEvent', callback: Callback&lt;ControlEventParam&gt;))来开启画中画控制面板控件动作事件的监听。
+Subscribes to PiP action events. To avoid potential memory leaks, you are advised to stop listening when it is no longer needed. The  
+[on('controlEvent')](PiPWindow.PiPController.on(type: 'controlEvent', callback: Callback&lt;ControlEventParam&gt;))API is preferred.
 
 **Since:** 11
 
@@ -545,13 +519,12 @@ on(type: 'controlPanelActionEvent', callback: ControlPanelActionEventCallback): 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'controlPanelActionEvent' | Yes | 事件类型，固定为'controlPanelActionEvent'，即画中画控制面板控件动作事件。 |
-| callback | [ControlPanelActionEventCallback](arkts-arkui-pipwindow-controlpanelactioneventcallback-t.md) | Yes | 描述画中画控制面板控件动作事件回调。<br>**Since:** 12 |
+| type | 'controlPanelActionEvent' | Yes | Event type. The value is fixed at **'controlPanelActionEvent'**, indicating the action event of the PiP controller. |
+| callback | [ControlPanelActionEventCallback](arkts-arkui-pipwindow-controlpanelactioneventcallback-t.md) | Yes | Action event callback of the PiP controller.<br>**Since:** 12 |
 
 ## Examples
 
 ```TypeScript
-// Subscribe to PiP controller action events.
 this.pipController.on('controlPanelActionEvent', (event: PiPWindow.PiPActionEventType, status?: number) => {
   switch (event) {
     case 'playbackStateChanged':
@@ -586,7 +559,7 @@ this.pipController.on('controlPanelActionEvent', (event: PiPWindow.PiPActionEven
 on(type: 'controlEvent', callback: Callback<ControlEventParam>): void
 ```
 
-开启画中画控制面板控件动作事件的监听，建议在不需要使用时关闭监听，否则可能存在内存泄漏。
+Subscribes to PiP action events. To avoid potential memory leaks, you are advised to stop listening when it is no longer needed.
 
 **Since:** 12
 
@@ -602,13 +575,12 @@ on(type: 'controlEvent', callback: Callback<ControlEventParam>): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'controlEvent' | Yes | 事件类型，固定为'controlEvent'，即画中画控制面板控件动作事件。 |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;ControlEventParam&gt; | Yes | 描述画中画控制面板控件动作事件回调。 |
+| type | 'controlEvent' | Yes | Event type. The value is fixed at **'controlEvent'**, indicating the action event of the PiP controller. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;ControlEventParam&gt; | Yes | Action event callback of the PiP controller. |
 
 ## Examples
 
 ```TypeScript
-// Subscribe to PiP controller action events.
 this.pipController.on('controlEvent', (control) => {
   switch (control.controlType) {
     case PiPWindow.PiPControlType.VIDEO_PLAY_PAUSE:
@@ -643,7 +615,7 @@ this.pipController.on('controlEvent', (control) => {
 on(type: 'pipWindowSizeChange', callback: Callback<PiPWindowSize>): void
 ```
 
-开启画中画窗口尺寸变化事件的监听，建议在不需要使用时关闭监听，否则可能存在内存泄漏。
+Subscribes to PiP window size change events. To avoid potential memory leaks, you are advised to stop listening when it is no longer needed.
 
 **Since:** 15
 
@@ -659,26 +631,26 @@ on(type: 'pipWindowSizeChange', callback: Callback<PiPWindowSize>): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'pipWindowSizeChange' | Yes | 事件类型，固定为'pipWindowSizeChange'，即画中画窗口尺寸变化事件。 |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;PiPWindowSize&gt; | Yes | 回调函数。返回当前画中画窗口的尺寸。 |
+| type | 'pipWindowSizeChange' | Yes | Event type. The value is fixed at **'pipWindowSizeChange'**, indicating that the PiP window size changes. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;PiPWindowSize&gt; | Yes | Callback used to return the size of the current PiP window. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 801 | Capability not supported. Failed to call the API due to limited device capabilities. |
-| 1300014 | PiP internal error. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: Callback is already registered. |
+| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. Failed to call the API due to limited device capabilities. |
+| [1300014](../errorcode-window.md#1300014-pip-internal-error) | PiP internal error. Possible cause: The PiP controller has been destroyed. |
 
 ## Examples
 
 ```TypeScript
 try {
-  // Subscribe to PiP window size change events.
   this.pipController.on('pipWindowSizeChange', (size: PiPWindow.PiPWindowSize) => {
     console.info('Succeeded in enabling the listener for pip window size changes. size: ' + JSON.stringify(size));
   });
 } catch (exception) {
-  console.error(`Failed to enable the listener for pip window size changes. Code: ${exception.code}, message: ${exception.message}`);
+  console.error(`Failed to enable the listener for pip window size changes. Cause code: ${exception.code}, message: ${exception.message}`);
 }
 ```
 
@@ -688,7 +660,7 @@ try {
 on(type: 'activeStatusChange', callback: Callback<boolean>): void
 ```
 
-开启画中画窗口隐藏状态变化事件的监听，建议在不需要使用时关闭监听，否则可能存在内存泄漏。
+Subscribes to PiP window active status change events. To avoid potential memory leaks, you are advised to stop listening when it is no longer needed.
 
 **Since:** 22
 
@@ -704,8 +676,8 @@ on(type: 'activeStatusChange', callback: Callback<boolean>): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'activeStatusChange' | Yes | 事件类型，固定为'activeStatusChange'，即画中画隐藏状态变化事件。 |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;boolean&gt; | Yes | 返回当前画中画的隐藏状态。true表示前台可见，false表示前台不可见（收入侧边栏）。 |
+| type | 'activeStatusChange' | Yes | Event type. The value is fixed at **'activeStatusChange'**, indicating that the PiP window active status changes. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;boolean&gt; | Yes | PiP window active status. **true** is returned if the PiP window is visible, and **false** is returned if the PiP window is invisible (hidden in the sidebar). |
 
 ## Examples
 
@@ -713,7 +685,6 @@ on(type: 'activeStatusChange', callback: Callback<boolean>): void
 let callback = (activeStatus: boolean) => {
   console.info(`pip window is visible: ${activeStatus}`);
 }
-// Subscribe to PiP window active status change events.
 this.pipController.on('activeStatusChange', callback);
 ```
 
@@ -723,7 +694,7 @@ this.pipController.on('activeStatusChange', callback);
 onActiveStatusChange(callback: Callback<boolean>): void
 ```
 
-开启画中画窗口隐藏状态变化事件的监听，建议在不需要使用时关闭监听，否则可能存在内存泄漏。
+Register picture-in-picture active status change listener.
 
 **Since:** 26.0.0
 
@@ -737,14 +708,14 @@ onActiveStatusChange(callback: Callback<boolean>): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;boolean&gt; | Yes | 返回当前画中画的隐藏状态。true表示前台可见，false表示前台不可见（收入侧边栏）。 &lt;br&gt;画中画显示状态变化回调函数 |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;boolean&gt; | Yes | Used to handle {'activeStatusChange'} command. True indicates that the pip is onscreen, and vice verse. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 801 | Capability not supported. function onActiveStatusChange(callback) can not work correctly due to limited device capabilities. |
-| 1300014 | PiP internal error. Possible cause: The PiP controller has been destroyed. |
+| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. function onActiveStatusChange(callback) can not work correctly due to limited device capabilities. |
+| [1300014](../errorcode-window.md#1300014-pip-internal-error) | PiP internal error. |
 
 ## onControlEvent
 
@@ -752,7 +723,7 @@ onActiveStatusChange(callback: Callback<boolean>): void
 onControlEvent(callback: Callback<ControlEventParam>): void
 ```
 
-开启画中画控制面板控件动作事件的监听，建议在不需要使用时关闭监听，否则可能存在内存泄漏。
+Register picture-in-picture control event listener.
 
 **Since:** 26.0.0
 
@@ -766,7 +737,7 @@ onControlEvent(callback: Callback<ControlEventParam>): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;ControlEventParam&gt; | Yes | 描述画中画控制面板控件动作事件回调。 |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;ControlEventParam&gt; | Yes | Used to handle {'controlEvent'} command. |
 
 ## onControlPanelActionEvent
 
@@ -774,7 +745,7 @@ onControlEvent(callback: Callback<ControlEventParam>): void
 onControlPanelActionEvent(callback: ControlPanelActionEventCallback): void
 ```
 
-开启画中画控制面板控件动作事件的监听，建议在不需要使用时关闭监听，否则可能存在内存泄漏。推荐使用[onControlEvent](#oncontrolevent)来开启画中画控制面板控件动作事件的监听。
+Register picture-in-picture control panel action event listener.
 
 **Since:** 26.0.0
 
@@ -796,7 +767,7 @@ onControlPanelActionEvent(callback: ControlPanelActionEventCallback): void
 onPipWindowSizeChange(callback: Callback<PiPWindowSize>): void
 ```
 
-开启画中画窗口尺寸变化事件的监听，建议在不需要使用时关闭监听，否则可能存在内存泄漏。
+Register picture-in-picture window size change event listener
 
 **Since:** 26.0.0
 
@@ -810,14 +781,14 @@ onPipWindowSizeChange(callback: Callback<PiPWindowSize>): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;PiPWindowSize&gt; | Yes | 回调函数。返回当前画中画窗口的尺寸。 |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;PiPWindowSize&gt; | Yes | Callback used to return the picture-in-picture window size. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 801 | Capability not supported. Failed to call the API due to limited device capabilities. |
-| 1300014 | PiP internal error. Possible cause: The PiP controller has been destroyed. |
+| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. Failed to call the API due to limited device capabilities. |
+| [1300014](../errorcode-window.md#1300014-pip-internal-error) | PiP internal error. Possible cause: &lt;br&gt;The PiP controller has been destroyed. |
 
 ## onStateChange
 
@@ -825,7 +796,7 @@ onPipWindowSizeChange(callback: Callback<PiPWindowSize>): void
 onStateChange(callback: StateChangeCallback): void
 ```
 
-开启画中画生命周期状态变化的监听，建议在不需要使用时关闭监听，否则可能存在内存泄漏。
+Register picture-in-picture control state change listener.
 
 **Since:** 26.0.0
 
@@ -839,7 +810,7 @@ onStateChange(callback: StateChangeCallback): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [StateChangeCallback](arkts-arkui-pipwindow-statechangecallback-t.md) | Yes | 描述画中画生命周期状态变化回调。 |
+| callback | [StateChangeCallback](arkts-arkui-pipwindow-statechangecallback-t.md) | Yes | Used to handle {'stateChange'} command |
 
 ## setAutoStartEnabled
 
@@ -847,9 +818,10 @@ onStateChange(callback: StateChangeCallback): void
 setAutoStartEnabled(enable: boolean): void
 ```
 
-设置是否在返回桌面时自动启动画中画，默认不自动拉起。
+Sets whether to automatically start the PiP window when the application's main window which can start the PiP window transitions to the background. By default, the PiP window is not automatically started.
 
-在使用XComponent方案实现画中画功能并结合Navigation进行路由管理时，首次调用setAutoStartEnabled(true)方法，系统会缓存当前应用传入的NavigationId的栈顶信息。
+If the XComponent approach is used to implement PiP and the **Navigation** component is used for route management, the system caches the top stack information with the specified navigation ID upon the first call of  
+**setAutoStartEnabled(true)**.
 
 **Since:** 11
 
@@ -865,13 +837,13 @@ setAutoStartEnabled(enable: boolean): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| enable | boolean | Yes | 如返回桌面时需自动启动画中画，则该参数配置为true，否则为false。若设置-系统-智慧多窗-自动启动画中画开关为关闭状态，就算该参数配置为true，应用返回桌面时也不 会自动启动画中画窗口。 |
+| enable | boolean | Yes | If the PiP window needs to be automatically started when the application's main window transitions to the background, set this parameter to **true**. Otherwise, set this parameter to **false**. If the PiP feature under **Settings** > **System** > **Multi-window** is disabled, the PiP window will not be automatically started when the application's main window transitions to the background even if this parameter is set to **true**. |
 
 ## Examples
 
 ```TypeScript
 let enable: boolean = true;
-this.pipController.setAutoStartEnabled(enable); // Set whether to automatically start the PiP window when the application's main window transitions to the background.
+this.pipController.setAutoStartEnabled(enable);
 ```
 
 ## setPiPControlEnabled
@@ -880,7 +852,7 @@ this.pipController.setAutoStartEnabled(enable); // Set whether to automatically 
 setPiPControlEnabled(controlType: PiPControlType, enabled: boolean): void
 ```
 
-更新控制面板控件使能状态。
+Sets the enabled status for a component displayed on the PiP controller.
 
 **Since:** 12
 
@@ -896,15 +868,21 @@ setPiPControlEnabled(controlType: PiPControlType, enabled: boolean): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| controlType | [PiPControlType](arkts-arkui-pipwindow-pipcontroltype-e.md) | Yes | 表示画中画控制面板控件类型。 |
-| enabled | boolean | Yes | 表示画中画控制面板控件使能状态。true表示控件为可使用状态，false则为禁用状态。 |
+| controlType | [PiPControlType](arkts-arkui-pipwindow-pipcontroltype-e.md) | Yes | Type of the component displayed on the PiP controller. |
+| enabled | boolean | Yes | Enabled status of the component displayed on the PiP controller. **true** if enabled , **false** otherwise. |
+
+**Error codes:**
+
+| Error Code ID | Error Message |
+| --- | --- |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: The PiPController is not created or destroyed. |
 
 ## Examples
 
 ```TypeScript
 let controlType: PiPWindow.PiPControlType = PiPWindow.PiPControlType.VIDEO_PLAY_PAUSE; // Play/Pause component displayed on the video playback control panel.
 let enabled: boolean = false; // The Play/Pause component displayed on the video playback control panel is in the disabled state.
-this.pipController.setPiPControlEnabled(controlType, enabled); // Set the enabled status of the PiP controller.
+this.pipController.setPiPControlEnabled(controlType, enabled);
 ```
 
 ## startPiP
@@ -913,7 +891,7 @@ this.pipController.setPiPControlEnabled(controlType, enabled); // Set the enable
 startPiP(): Promise<void>
 ```
 
-启动画中画，使用Promise异步回调。
+Starts a PiP window. This API uses a promise to return the result.
 
 **Since:** 11
 
@@ -929,23 +907,23 @@ startPiP(): Promise<void>
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | 无返回结果的Promise对象。 |
+| Promise&lt;void&gt; | Promise that returns no value. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 1300034 | This operation conflicts with other floating windows. Possible cause: App has already started float view.<br>**Applicable version:** 26.0.0 and later |
-| 1300015 | Repeated PiP operation. |
-| 1300014 | PiP internal error. Possible cause: Internal error, failed to show the PiP window. such as insufficient resources or abnormal window service. |
-| 1300013 | Failed to create the PiP window. Possible causes: &lt;br&gt;1.PiP configuration parameters are invalid, such as pipOption or context is null. &lt;br&gt;2.The XComponentController or main window is null. &lt;br&gt;3.The main window is not shown (non-auto-start scenario). &lt;br&gt;4.Navigation component operation failed. |
-| 1300012 | The PiP window state is abnormal. Possible causes: &lt;br&gt;1.The PiP controller has been destroyed. &lt;br&gt;2.The PiP window is not created or has been destroyed. |
+| [1300034](../errorcode-window.md#1300034-operation-of-the-float-view-conflicts-with-those-of-other-floating-windows) | This operation conflicts with other floating windows. Possible cause: App has already started float view.<br>**Applicable version:** 26.0.0 and later |
+| [1300015](../errorcode-window.md#1300015-repeated-pip-operations) | Repeated PiP operation. |
+| [1300014](../errorcode-window.md#1300014-pip-internal-error) | PiP internal error. Possible cause: Internal error, failed to show the PiP window. such as insufficient resources or abnormal window service. |
+| [1300013](../errorcode-window.md#1300013-failure-in-creating-a-pip-window) | Failed to create the PiP window. Possible causes: &lt;br&gt;1.PiP configuration parameters are invalid, such as pipOption or context is null. &lt;br&gt;2.The XComponentController or main window is null. &lt;br&gt;3.The main window is not shown (non-auto-start scenario). &lt;br&gt;4.Navigation component operation failed. |
+| [1300012](../errorcode-window.md#1300012-abnormal-pip-window-status) | The PiP window state is abnormal. Possible causes: &lt;br&gt;1.The PiP controller has been destroyed. &lt;br&gt;2.The PiP window is not created or has been destroyed. |
 
 ## Examples
 
 ```TypeScript
 // You can call pipController according to the pipController definition.
-let promise : Promise<void> = this.pipController.startPiP(); // Start the PiP window.
+let promise : Promise<void> = this.pipController.startPiP();
 promise.then(() => {
   console.info(`Succeeded in starting pip.`);
 }).catch((err: BusinessError) => {
@@ -959,7 +937,7 @@ promise.then(() => {
 stopPiP(): Promise<void>
 ```
 
-停止画中画，使用Promise异步回调。
+Stops a PiP window. This API uses a promise to return the result.
 
 **Since:** 11
 
@@ -975,20 +953,20 @@ stopPiP(): Promise<void>
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | 无返回结果的Promise对象。 |
+| Promise&lt;void&gt; | Promise that returns no value. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 1300011 | Failed to destroy the PiP window. Possible cause: Internal error, the window type is not a PiP window. |
-| 1300015 | Repeated PiP operation. |
-| 1300012 | The PiP window state is abnormal. Possible cause: The PiP window is not created or has been destroyed. |
+| [1300011](../errorcode-window.md#1300011-failure-in-destroying-a-pip-window) | Failed to destroy the PiP window. Possible cause: Internal error, the window type is not a PiP window. |
+| [1300015](../errorcode-window.md#1300015-repeated-pip-operations) | Repeated PiP operation. |
+| [1300012](../errorcode-window.md#1300012-abnormal-pip-window-status) | The PiP window state is abnormal. Possible cause: The PiP window is not created or has been destroyed. |
 
 ## Examples
 
 ```TypeScript
-let promise : Promise<void> = this.pipController.stopPiP(); // Stop the PiP window.
+let promise : Promise<void> = this.pipController.stopPiP();
 promise.then(() => {
   console.info(`Succeeded in stopping pip.`);
 }).catch((err: BusinessError) => {
@@ -1002,7 +980,7 @@ promise.then(() => {
 updateContentNode(contentNode: typeNode.XComponent): Promise<void>
 ```
 
-更新画中画节点内容，使用Promise异步回调。
+Updates the PiP node content. This API uses a promise to return the result.
 
 **Since:** 18
 
@@ -1018,33 +996,34 @@ updateContentNode(contentNode: typeNode.XComponent): Promise<void>
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| contentNode | typeNode.XComponent | Yes | 用于渲染画中画窗口中的内容。该参数不能为空。 |
+| contentNode | typeNode.XComponent | Yes | Content to be rendered in the PiP window. The parameter value cannot be empty. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | 无返回结果的Promise对象。 |
+| Promise&lt;void&gt; | Promise that returns no value. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 801 | Capability not supported. Failed to call the API due to limited device capabilities. |
-| 1300014 | PiP internal error. Possible cause: The PiP controller has been destroyed. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: &lt;br&gt;1. Mandatory parameters are left unspecified. &lt;br&gt;2. Incorrect parameter types. &lt;br&gt;3. Parameter verification failed. |
+| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. Failed to call the API due to limited device capabilities. |
+| [1300014](../errorcode-window.md#1300014-pip-internal-error) | PiP internal error. Possible cause: The PiP controller has been destroyed. |
 
 ## Examples
 
 ```TypeScript
 import { typeNode, UIContext } from '@kit.ArkUI';
 
-let context: UIContext = this.getUIContext(); // Obtain UIContext using this.getUIContext().
+let context: UIContext | undefined = undefined; // You can pass UIContext or use this.getUIContext() in the layout to assign a valid value to context.
 
 try {
-  let contentNode = typeNode.createNode(context, "XComponent"); // Create an XComponent node to render the PiP window content.
-  this.pipController.updateContentNode(contentNode); // Update the PiP node content.
+  let contentNode = typeNode.createNode(context, "XComponent");
+  this.pipController.updateContentNode(contentNode);
 } catch (exception) {
-  console.error(`Failed to update content node. Code: ${exception.code}, message: ${exception.message}`);
+  console.error(`Failed to update content node. Cause: ${exception.code}, message: ${exception.message}`);
 }
 ```
 
@@ -1060,7 +1039,7 @@ ArkTS-Sta:
 updateContentSize(width: int, height: int): void
 ```
 
-当媒体源切换时，向画中画控制器更新媒体源尺寸信息。
+Updates the media content size when the media content changes.
 
 **Since:** 11
 
@@ -1076,15 +1055,21 @@ updateContentSize(width: int, height: int): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| width | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | 表示媒体内容宽度，必须为大于0的整数，单位为px。用于更新画中画窗口比例。 |
-| height | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | 表示媒体内容高度，必须为大于0的整数，单位为px。用于更新画中画窗口比例。 |
+| width | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | Width of the media content, in px. The value must be an integer greater than 0. It is used to update the aspect ratio of the PiP window. |
+| height | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | Height of the media content, in px. The value must be an integer greater than 0. It is used to update the aspect ratio of the PiP window. |
+
+**Error codes:**
+
+| Error Code ID | Error Message |
+| --- | --- |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: The PiPController is not created or destroyed. |
 
 ## Examples
 
 ```TypeScript
 let width: number = 540; // The content width changes to 540 px.
 let height: number = 960; // The content height changes to 960 px.
-this.pipController.updateContentSize(width, height); // Update the size of the PiP window content.
+this.pipController.updateContentSize(width, height);
 ```
 
 ## updatePiPControlStatus
@@ -1093,7 +1078,7 @@ this.pipController.updateContentSize(width, height); // Update the size of the P
 updatePiPControlStatus(controlType: PiPControlType, status: PiPControlStatus): void
 ```
 
-更新画中画控制面板控件功能状态。
+Updates the PiP controller status.
 
 **Since:** 12
 
@@ -1109,14 +1094,20 @@ updatePiPControlStatus(controlType: PiPControlType, status: PiPControlStatus): v
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| controlType | [PiPControlType](arkts-arkui-pipwindow-pipcontroltype-e.md) | Yes | 表示画中画控制面板控件类型。目前仅支持VIDEO_PLAY_PAUSE、MICROPHONE_SWITCH、CAMERA_SWITCH和 MUTE_SWITCH这几种控件类型，传入其他控件类型不生效也不报错。 |
-| status | [PiPControlStatus](arkts-arkui-pipwindow-pipcontrolstatus-e.md) | Yes | 表示画中画控制面板控件状态。 |
+| controlType | [PiPControlType](arkts-arkui-pipwindow-pipcontroltype-e.md) | Yes | Type of the component displayed on the PiP controller. Currently, only the **VIDEO_PLAY_PAUSE**, **MICROPHONE_SWITCH**, **CAMERA_SWITCH**, and **MUTE_SWITCH** component types are supported. If other component types are passed, they do not take effect and no error is reported. |
+| status | [PiPControlStatus](arkts-arkui-pipwindow-pipcontrolstatus-e.md) | Yes | Status of the component displayed on the PiP controller. |
+
+**Error codes:**
+
+| Error Code ID | Error Message |
+| --- | --- |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: The PiPController is not created or destroyed. |
 
 ## Examples
 
 ```TypeScript
 let controlType: PiPWindow.PiPControlType = PiPWindow.PiPControlType.VIDEO_PLAY_PAUSE; // Play/Pause component displayed on the video playback control panel.
 let status: PiPWindow.PiPControlStatus = PiPWindow.PiPControlStatus.PLAY; // The Play/Pause component displayed on the video playback control panel is in the playing state.
-this.pipController.updatePiPControlStatus(controlType, status); // Update the PiP controller status.
+this.pipController.updatePiPControlStatus(controlType, status);
 ```
 

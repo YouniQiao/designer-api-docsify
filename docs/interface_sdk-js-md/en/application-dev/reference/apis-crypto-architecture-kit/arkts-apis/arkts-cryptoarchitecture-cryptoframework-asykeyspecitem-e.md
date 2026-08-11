@@ -1,6 +1,6 @@
 # AsyKeySpecItem
 
-表示密钥参数的枚举。
+Enumerates the asymmetric key parameters.
 
 **Since:** 10
 
@@ -18,7 +18,7 @@
 DSA_P_BN = 101
 ```
 
-DSA算法的素模数p。
+Prime modulus **p** in the DSA algorithm.
 
 **Since:** 10
 
@@ -38,7 +38,7 @@ DSA算法的素模数p。
 DSA_Q_BN = 102
 ```
 
-DSA算法中密钥参数q（p-1的素因子）。
+Parameter **q**, prime factor of (p - 1) in the DSA algorithm.
 
 **Since:** 10
 
@@ -58,7 +58,7 @@ DSA算法中密钥参数q（p-1的素因子）。
 DSA_G_BN = 103
 ```
 
-DSA算法的参数g。
+Parameter **g** in the DSA algorithm.
 
 **Since:** 10
 
@@ -78,7 +78,7 @@ DSA算法的参数g。
 DSA_SK_BN = 104
 ```
 
-DSA算法的私钥sk。
+Private key **sk** in the DSA algorithm.
 
 **Since:** 10
 
@@ -98,7 +98,7 @@ DSA算法的私钥sk。
 DSA_PK_BN = 105
 ```
 
-DSA算法的公钥pk。
+Public key **pk** in the DSA algorithm.
 
 **Since:** 10
 
@@ -118,7 +118,7 @@ DSA算法的公钥pk。
 ECC_FP_P_BN = 201
 ```
 
-ECC算法中表示椭圆曲线Fp域的素数p。
+Prime number **p** in the **Fp** field of the elliptic curve in the ECC algorithm.
 
 **Since:** 10
 
@@ -138,7 +138,7 @@ ECC算法中表示椭圆曲线Fp域的素数p。
 ECC_A_BN = 202
 ```
 
-ECC算法中椭圆曲线的第一个系数a。
+First coefficient **a** of the elliptic curve in the ECC algorithm.
 
 **Since:** 10
 
@@ -158,7 +158,7 @@ ECC算法中椭圆曲线的第一个系数a。
 ECC_B_BN = 203
 ```
 
-ECC算法中椭圆曲线的第二个系数b。
+Second coefficient **b** of the elliptic curve in the ECC algorithm.
 
 **Since:** 10
 
@@ -178,7 +178,7 @@ ECC算法中椭圆曲线的第二个系数b。
 ECC_G_X_BN = 204
 ```
 
-ECC算法中基点g的x坐标。
+X coordinate of the base point **g** in the ECC algorithm.
 
 **Since:** 10
 
@@ -198,7 +198,7 @@ ECC算法中基点g的x坐标。
 ECC_G_Y_BN = 205
 ```
 
-ECC算法中基点g的y坐标。
+Y coordinate of the base point **g** in the ECC algorithm.
 
 **Since:** 10
 
@@ -218,7 +218,7 @@ ECC算法中基点g的y坐标。
 ECC_N_BN = 206
 ```
 
-ECC算法中基点g的阶n。
+Order **n** of the base point **g** in the ECC algorithm.
 
 **Since:** 10
 
@@ -238,7 +238,7 @@ ECC算法中基点g的阶n。
 ECC_H_NUM = 207
 ```
 
-ECC算法中的余因子h。
+Cofactor **h** in the ECC algorithm.
 
 **Since:** 10
 
@@ -258,7 +258,7 @@ ECC算法中的余因子h。
 ECC_SK_BN = 208
 ```
 
-ECC算法中的私钥sk。
+Private key **sk** in the ECC algorithm.
 
 **Since:** 10
 
@@ -278,7 +278,7 @@ ECC算法中的私钥sk。
 ECC_PK_X_BN = 209
 ```
 
-ECC算法中，公钥pk（椭圆曲线上的一个点）的x坐标。
+X coordinate of the public key **pk** (a point on the elliptic curve) in the ECC algorithm.
 
 **Since:** 10
 
@@ -298,7 +298,7 @@ ECC算法中，公钥pk（椭圆曲线上的一个点）的x坐标。
 ECC_PK_Y_BN = 210
 ```
 
-ECC算法中，公钥pk（椭圆曲线上的一个点）的y坐标。
+Y coordinate of the public key **pk** (a point on the elliptic curve) in the ECC algorithm.
 
 **Since:** 10
 
@@ -318,7 +318,7 @@ ECC算法中，公钥pk（椭圆曲线上的一个点）的y坐标。
 ECC_FIELD_TYPE_STR = 211
 ```
 
-ECC算法中，椭圆曲线的域类型（当前只支持Fp域）。
+Elliptic curve field type in the ECC algorithm. Currently, only the **Fp** field is supported.
 
 **Since:** 10
 
@@ -338,7 +338,9 @@ ECC算法中，椭圆曲线的域类型（当前只支持Fp域）。
 ECC_FIELD_SIZE_NUM = 212
 ```
 
-ECC算法中域的大小，单位为bits（注：对于Fp域，域的大小为素数p的bits长度）。
+Size of the field in the ECC algorithm, in bits.
+
+Note: The size of the **Fp** field is the length of the prime **p**, in bits.
 
 **Since:** 10
 
@@ -358,7 +360,7 @@ ECC算法中域的大小，单位为bits（注：对于Fp域，域的大小为�
 ECC_CURVE_NAME_STR = 213
 ```
 
-ECC算法中的SECG（Standards for Efficient Cryptography Group）曲线名称。
+Standards for Efficient Cryptography Group (SECG) curve name in the ECC algorithm.
 
 **Since:** 10
 
@@ -378,7 +380,7 @@ ECC算法中的SECG（Standards for Efficient Cryptography Group）曲线名称�
 RSA_N_BN = 301
 ```
 
-RSA算法中的模数n。
+Modulus **n** in the RSA algorithm.
 
 **Since:** 10
 
@@ -398,7 +400,7 @@ RSA算法中的模数n。
 RSA_SK_BN = 302
 ```
 
-RSA算法中的私钥sk（即私钥指数d）。
+Private key **sk** (private key exponent **d**) in the RSA algorithm.
 
 **Since:** 10
 
@@ -418,7 +420,7 @@ RSA算法中的私钥sk（即私钥指数d）。
 RSA_PK_BN = 303
 ```
 
-RSA算法中的公钥pk（即公钥指数e）。
+Public key **pk** (public key exponent **e**) in the RSA algorithm.
 
 **Since:** 10
 
@@ -438,7 +440,7 @@ RSA算法中的公钥pk（即公钥指数e）。
 DH_P_BN = 401
 ```
 
-DH算法中的素数p。
+Prime **p** in the DH algorithm.
 
 **Since:** 11
 
@@ -458,7 +460,7 @@ DH算法中的素数p。
 DH_G_BN = 402
 ```
 
-DH算法中的参数g。
+Parameter **g** in the DH algorithm.
 
 **Since:** 11
 
@@ -478,7 +480,7 @@ DH算法中的参数g。
 DH_L_NUM = 403
 ```
 
-DH算法中私钥长度，单位为bits。
+Length of the private key in the DH algorithm, in bits.
 
 **Since:** 11
 
@@ -498,7 +500,7 @@ DH算法中私钥长度，单位为bits。
 DH_SK_BN = 404
 ```
 
-DH算法中的私钥sk。
+Private key **sk** in the DH algorithm.
 
 **Since:** 11
 
@@ -518,7 +520,7 @@ DH算法中的私钥sk。
 DH_PK_BN = 405
 ```
 
-DH算法中的公钥pk。
+Public key **pk** in the DH algorithm.
 
 **Since:** 11
 
@@ -538,7 +540,7 @@ DH算法中的公钥pk。
 ED25519_SK_BN = 501
 ```
 
-Ed25519算法中的私钥sk。
+Private key **sk** in the Ed25519 algorithm.
 
 **Since:** 11
 
@@ -558,7 +560,7 @@ Ed25519算法中的私钥sk。
 ED25519_PK_BN = 502
 ```
 
-Ed25519算法中的公钥pk。
+Public key **pk** in the Ed25519 algorithm.
 
 **Since:** 11
 
@@ -578,7 +580,7 @@ Ed25519算法中的公钥pk。
 X25519_SK_BN = 601
 ```
 
-X25519算法中的私钥sk。
+Private key **sk** in the X25519 algorithm.
 
 **Since:** 11
 
@@ -598,7 +600,7 @@ X25519算法中的私钥sk。
 X25519_PK_BN = 602
 ```
 
-X25519算法中的公钥pk。
+Public key **pk** in the X25519 algorithm.
 
 **Since:** 11
 

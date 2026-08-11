@@ -1,11 +1,5 @@
 # onContinueStateChange（系统接口）
 
-## 导入模块
-
-```TypeScript
-import { distributedMissionManager } from 'kits/@kit.AbilityKit';
-```
-
 ## onContinueStateChange
 
 ```TypeScript
@@ -38,6 +32,6 @@ Register continuable info listener to ams.
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; 3. Parameter verification failed. |
-| 201 | Permission denied. |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; 3. Parameter verification failed. |
+| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
 

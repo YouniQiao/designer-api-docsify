@@ -1,6 +1,6 @@
 # CameraParameters
 
-相机创建参数. 可用于定义相机创建的额外选项.
+Describes the camera parameters, which are used to define additional configuration options for camera initialization.
 
 **Since:** 21
 
@@ -16,7 +16,7 @@
 msaa?: boolean
 ```
 
-选择是否启用MSAA.
+Whether Multisample Anti-Aliasing (MSAA) is enabled for the camera. true if enabled, false otherwise.The default value is false.
 
 **Type:** boolean
 
@@ -36,11 +36,11 @@ msaa?: boolean
 renderingPipeline?: RenderingPipelineType
 ```
 
-选择初始渲染管线类型.
+Initial rendering pipeline type.The default value is FORWARD_LIGHTWEIGHT.
 
 **Type:** [RenderingPipelineType](arkts-arkgraphics3d-scenetypes-renderingpipelinetype-e.md)
 
-**Default:** RenderingPipelineType.FORWARD_LIGHTWEIGHT 前向轻量级渲染管线
+**Default:** RenderingPipelineType.FORWARD_LIGHTWEIGHT
 
 **Since:** 21
 

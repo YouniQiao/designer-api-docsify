@@ -1,6 +1,6 @@
 # DrawableDescriptorLoadedResult
 
-传入的图片资源或地址的加载结果。
+The result of loading image.
 
 **Since:** 23
 
@@ -22,9 +22,7 @@ import { DrawableDescriptor, AnimatedDrawableDescriptor, AnimationStopMode, Anim
 imageHeight: int
 ```
 
-图片的高度。
-
-单位：px
+The height of the image, in px.
 
 **Type:** int
 
@@ -44,9 +42,7 @@ imageHeight: int
 imageWidth: int
 ```
 
-图片的宽度。
-
-单位：px
+The width of the image, in px.
 
 **Type:** int
 

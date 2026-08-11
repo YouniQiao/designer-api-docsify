@@ -1,6 +1,6 @@
 # CliPermissionsResult (System API)
 
-表示CLI权限查询结果。
+Represents the CLI permission query result.
 
 **Since:** 26.0.0
 
@@ -24,7 +24,7 @@ import { Context, Permissions, PermissionRequestResult } from 'kits/@kit.Ability
 permList: Array<CliCommandPermissionResult>
 ```
 
-CLI权限信息的列表。
+List of CLI permission information.
 
 **Type:** Array&lt;CliCommandPermissionResult&gt;
 

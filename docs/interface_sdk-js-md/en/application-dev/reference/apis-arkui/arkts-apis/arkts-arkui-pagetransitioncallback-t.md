@@ -4,7 +4,7 @@
 export type PageTransitionCallback = (type: RouteType, progress: double) => void
 ```
 
-页面转场事件回调。
+Callback used to report page trasition events.
 
 **Since:** 23
 

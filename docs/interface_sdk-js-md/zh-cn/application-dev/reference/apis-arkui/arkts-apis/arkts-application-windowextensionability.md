@@ -11,12 +11,6 @@ WindowExtensionAbility基于ExtensionAbility。WindowExtensionAbility中展示�
  > - 本模块接口仅可在Stage模型下使用。
 
 
-## 导入模块
-
-```TypeScript
-import { WindowExtensionContext } from 'kits/@kit.ArkUI';
-```
-
 ## 汇总
 
 <!--Del-->

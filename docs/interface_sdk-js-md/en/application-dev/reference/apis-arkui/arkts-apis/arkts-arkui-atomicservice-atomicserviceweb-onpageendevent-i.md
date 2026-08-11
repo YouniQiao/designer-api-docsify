@@ -1,6 +1,6 @@
 # OnPageEndEvent
 
-定义网页加载结束时触发该回调。
+Represents the callback invoked when the web page loading ends.
 
 **Since:** 12
 
@@ -22,7 +22,7 @@ import { AtomicServiceWeb, OnMessageEvent, OnPageEndEvent, OnHttpErrorReceiveEve
 url: string
 ```
 
-页面的URL地址。
+The url of page.
 
 **Type:** string
 

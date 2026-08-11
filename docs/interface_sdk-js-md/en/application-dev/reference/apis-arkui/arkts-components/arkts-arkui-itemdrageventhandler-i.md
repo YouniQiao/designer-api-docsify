@@ -1,6 +1,6 @@
 # ItemDragEventHandler
 
-定义拖拽事件
+Define item drag event handler.
 
 **Since:** 20
 
@@ -16,7 +16,7 @@
 onMoveThrough?: OnMoveHandler
 ```
 
-当项目通过其他项目移动时，会触发此回调。
+This callback is triggered when an item is moved through other items.
 
 **Since:** 20
 
@@ -36,7 +36,7 @@ onMoveThrough?: OnMoveHandler
 onDragStart?: Callback<number>
 ```
 
-当项目被拖动时，会触发此回调。
+This callback is triggered when the item is dragged.
 
 **Type:** [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;number&gt;
 
@@ -58,7 +58,7 @@ onDragStart?: Callback<number>
 onDrop?: Callback<number>
 ```
 
-当项目被释放时，会触发此回调。
+This callback is triggered when the item is dropped.
 
 **Type:** [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;number&gt;
 
@@ -80,7 +80,7 @@ onDrop?: Callback<number>
 onLongPress?: Callback<number>
 ```
 
-当项目被长按时触发此回调。
+This callback is triggered when the item is long pressed.
 
 **Type:** [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;number&gt;
 

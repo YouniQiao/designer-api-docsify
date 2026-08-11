@@ -1,6 +1,6 @@
 # SubTabBarIndicatorStyle
 
-下划线风格对象。
+Provide an interface for the style of an SubTabBar indicator including color, height, width, border radius and margin top
 
 **Since:** 23
 
@@ -16,13 +16,7 @@
 borderRadius?: Length
 ```
 
-下划线的圆角半径（不支持百分比设置）。
-
-默认值：0.0
-
-单位：vp
-
-取值范围：[0, +∞)。
+Define the border radius of the indicator
 
 **Type:** [Length](arkts-arkui-length-t.md)
 
@@ -44,9 +38,7 @@ borderRadius?: Length
 color?: ResourceColor
 ```
 
-下划线的颜色和背板颜色。
-
-默认值：#FF007DFF
+Define the color of the indicator
 
 **Type:** [ResourceColor](arkts-arkui-resourcecolor-t.md)
 
@@ -66,13 +58,7 @@ color?: ResourceColor
 height?: Length
 ```
 
-下划线的高度（不支持百分比设置）。
-
-默认值：2.0
-
-单位：vp
-
-取值范围：(0, +∞)。
+Define the height of the indicator
 
 **Type:** [Length](arkts-arkui-length-t.md)
 
@@ -92,13 +78,7 @@ height?: Length
 marginTop?: Length
 ```
 
-下划线与文字的间距（不支持百分比设置）。
-
-默认值：8.0
-
-单位：vp
-
-取值范围：[0, +∞)。
+Define the margin top of the indicator
 
 **Type:** [Length](arkts-arkui-length-t.md)
 
@@ -120,17 +100,7 @@ marginTop?: Length
 width?: Length
 ```
 
-下划线的宽度（不支持百分比设置）。
-
-默认值：0.0
-
-单位：vp
-
-取值范围：(0, +∞)。 
-
-**说明：**
-
-宽度设置为0时，按页签文本宽度显示。
+Define the width of the indicator.If it is 0, the width will be equal to the width of the content
 
 **Type:** [Length](arkts-arkui-length-t.md)
 

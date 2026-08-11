@@ -1,13 +1,16 @@
 # EventResult
 
-通知Web组件同层事件消费结果，支持的事件：[触摸事件的类型](../../apis-arkui/arkts-apis/arkts-arkui-enums-touchtype-e.md/arkts-arkui-enums-touchtype-e.md)和[鼠标事件的类型](../../apis-arkui/arkts-apis/arkts-arkui-enums-mouseaction-e.md/arkts-arkui-enums-mouseaction-e.md)，鼠标仅支持  
-[左中右按键](../../apis-test-kit/arkts-apis/arkts-test-uitest-mousebutton-e.md/arkts-test-uitest-mousebutton-e.md)。
+Represents the event consumption result sent to the **Web** component. For details about the supported events, see  
+[TouchType](../../apis-arkui/arkts-apis/arkts-arkui-enums-touchtype-e.md/arkts-arkui-enums-touchtype-e.md), [MouseAction](../../apis-arkui/arkts-apis/arkts-arkui-enums-mouseaction-e.md/arkts-arkui-enums-mouseaction-e.md), and left, middle, and right buttons in  
+[MouseButton](../../apis-test-kit/arkts-apis/arkts-test-uitest-mousebutton-e.md/arkts-test-uitest-mousebutton-e.md).
 
-如果应用不消费该事件，则应设置消费结果为false，事件将会被Web组件消费；反之如果应用消费了该事件，则应将消费结果设置为true，Web组件将不消费该事件。若应用设置消费结果不符合以上使用规格，将产生与开发者预期不匹配的现象。
+If the application does not consume the event, set the consumption result to **false**, and the event will be consumed by the **Web** component. If the application consumes the event, set the consumption result to **true**, and the **Web** component will not consume the event. If the consumption result is not set according to the preceding specifications, exceptions may occur.
 
-触摸事件示例代码参考[onNativeEmbedGestureEvent事件](web:WebAttribute.onNativeEmbedGestureEvent)。
+For details about the sample code of the touch event, see  
+[onNativeEmbedGestureEvent](web:WebAttribute.onNativeEmbedGestureEvent).
 
-鼠标事件示例代码参考[onNativeEmbedMouseEvent事件](web:WebAttribute.onNativeEmbedMouseEvent)。
+For details about the sample code of the mouse event, see  
+[onNativeEmbedMouseEvent](web:WebAttribute.onNativeEmbedMouseEvent).
 
 **Since:** 12
 
@@ -23,7 +26,7 @@
 constructor()
 ```
 
-EventResult的构造函数。
+Constructs a **EventResult** object.
 
 **Since:** 12
 
@@ -41,7 +44,7 @@ EventResult的构造函数。
 setGestureEventResult(result: boolean): void
 ```
 
-设置手势事件消费结果。
+Sets the gesture event consumption result.
 
 **Since:** 12
 
@@ -57,7 +60,7 @@ setGestureEventResult(result: boolean): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| result | boolean | Yes | 是否消费该手势事件。&lt;br&gt;true表示消费该手势事件，false表示不消费该手势事件。&lt;br&gt;传入null或undefined时为true。 |
+| result | boolean | Yes | Whether to consume the gesture event.&lt;br&gt;The value **true** means to consume the gesture event, and **false** means the opposite.&lt;br&gt;If **null** or **undefined** is passed in, the value is **true**. |
 
 ## setGestureEventResult
 
@@ -65,7 +68,7 @@ setGestureEventResult(result: boolean): void
 setGestureEventResult(result: boolean, stopPropagation: boolean): void
 ```
 
-设置手势事件消费结果。
+Sets the gesture event consumption result.
 
 **Since:** 14
 
@@ -79,8 +82,8 @@ setGestureEventResult(result: boolean, stopPropagation: boolean): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| result | boolean | Yes | 是否消费该手势事件。&lt;br&gt;true表示消费该手势事件，false表示不消费该手势事件。&lt;br&gt;传入null或undefined时为true。 |
-| stopPropagation | boolean | Yes | 是否阻止冒泡，在result为true时生效。&lt;br&gt;true表示阻止冒泡，false表示不阻止冒泡。&lt;br&gt;传入null或undefined时为true。 |
+| result | boolean | Yes | Whether to consume the gesture event.&lt;br&gt;The value **true** means to consume the gesture event, and **false** means the opposite.&lt;br&gt;If **null** or **undefined** is passed in, the value is **true**. |
+| stopPropagation | boolean | Yes | Whether to stop propagation. This parameter is valid only when **result** is set to **true**.&lt;br&gt;The value **true** means to stop propagation, and **false** means the opposite.&lt;br&gt;If **null** or **undefined** is passed in, the value is **true**. |
 
 ## setMouseEventResult
 
@@ -88,7 +91,7 @@ setGestureEventResult(result: boolean, stopPropagation: boolean): void
 setMouseEventResult(result: boolean, stopPropagation?: boolean): void
 ```
 
-设置鼠标事件消费结果。
+Sets the mouse event consumption result.
 
 **Since:** 20
 
@@ -102,6 +105,6 @@ setMouseEventResult(result: boolean, stopPropagation?: boolean): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| result | boolean | Yes | 是否消费该鼠标事件。&lt;br&gt;true表示消费该鼠标事件，false表示不消费该鼠标事件。&lt;br&gt;传入null或undefined时为true。 |
-| stopPropagation | boolean | No | 是否阻止冒泡，在result为true时生效。&lt;br&gt;true表示阻止冒泡，false表示不阻止冒泡。&lt;br&gt;传入null或undefined时为 true。&lt;br&gt;默认值：true。 |
+| result | boolean | Yes | Whether to consume the mouse event.&lt;br&gt;The value **true** means to consume the mouse event, and **false** means the opposite.&lt;br&gt;If **null** or **undefined** is passed in, the value is **true**. |
+| stopPropagation | boolean | No | Whether to stop propagation. This parameter is valid only when **result** is set to **true**.&lt;br&gt;The value **true** means to stop propagation, and **false** means the opposite.&lt;br&gt;If **null** or **undefined** is passed in, the value is **true**. |
 

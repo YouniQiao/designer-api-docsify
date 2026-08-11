@@ -1,6 +1,6 @@
 # ThreeFingersSwipe
 
-三指滑动手势事件。
+Defines a three-finger swipe gesture event.
 
 **Since:** 10
 
@@ -22,7 +22,7 @@ import { SwipeInward, FourFingersSwipe, Pinch, ActionType, Rotate, ThreeFingersT
 type: ActionType
 ```
 
-手势事件类型。如：手势开始、手势更新、手势结束等。
+Gesture event type, for example, gesture start, gesture update, or gesture end.
 
 **Type:** [ActionType](../../apis-avsession-kit/arkts-apis/arkts-avsession-avmusictemplate-actiontype-t.md)
 
@@ -40,7 +40,7 @@ type: ActionType
 x: int
 ```
 
-坐标x，单位为像素（px）。
+X coordinate, in px.
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
@@ -58,7 +58,7 @@ x: int
 y: int
 ```
 
-坐标y，单位为像素（px）。
+Y coordinate, in px.
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 

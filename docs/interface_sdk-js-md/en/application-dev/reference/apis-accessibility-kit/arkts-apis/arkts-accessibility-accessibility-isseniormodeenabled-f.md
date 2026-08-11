@@ -12,7 +12,7 @@ import { accessibility } from 'kits/@kit.AccessibilityKit';
 function isSeniorModeEnabled(): Promise<boolean>
 ```
 
-判断关怀模式是否开启。使用Promise异步回调。
+Checks whether the senior mode is enabled. This API uses a promise to return the result.
 
 **Since:** 26.0.0
 
@@ -28,35 +28,11 @@ function isSeniorModeEnabled(): Promise<boolean>
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;boolean&gt; | Promise对象。返回true表示关怀模式已开启；返回false表示关怀模式已关闭。 |
+| Promise&lt;boolean&gt; | Promise used to return the result. The value **true** indicates that the senior mode is enabled, and the value **false** indicates that the senior mode is disabled. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 9300000 | System abnormality. |
-
-## Examples
-
-```TypeScript
-import { accessibility } from '@kit.AccessibilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-@Entry
-@Component
-struct Index {
-  aboutToAppear(): void {
-    accessibility.isSeniorModeEnabled().then((data: boolean) => {
-      console.info(`success data:isSeniorModeEnabled : ${JSON.stringify(data)}`);
-    }).catch((err: BusinessError) => {
-      console.error(`failed to call isSeniorModeEnabled, Code is ${err.code}, message is ${err.message}`);
-    });
-  }
-
-  build() {
-    Column() {
-    }
-  }
-}
-```
+| [9300000](../errorcode-accessibility.md#9300000-accessibility-system-service-abnormal) | System abnormality. |
 

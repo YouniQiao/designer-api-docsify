@@ -1,6 +1,6 @@
 # TreeListenerV2
 
-树视图组件的监听器，可以将此对象绑定至树视图组件，然后通过它监听树视图的节点的变化，同一个树视图监听器不可以控制多个树视图组件。
+Declare class TreeListenerV2
 
 **Since:** 26.0.0
 
@@ -22,7 +22,7 @@ import { TreeListenerManagerV2, NodeParamV2, CallbackParamV2, TreeControllerV2, 
 offNodeAdd(callback?: OnChangedCallback): void
 ```
 
-取消节点添加事件监听。使用callback回调。
+Destroy node add callback event.
 
 **Since:** 26.0.0
 
@@ -46,7 +46,7 @@ offNodeAdd(callback?: OnChangedCallback): void
 offNodeClick(callback?: OnChangedCallback): void
 ```
 
-取消节点点击事件监听。使用callback回调。
+Destroy node click callback event.
 
 **Since:** 26.0.0
 
@@ -70,7 +70,7 @@ offNodeClick(callback?: OnChangedCallback): void
 offNodeDelete(callback?: OnChangedCallback): void
 ```
 
-取消节点删除事件监听。使用callback回调。
+Destroy node delete callback event.
 
 **Since:** 26.0.0
 
@@ -94,7 +94,7 @@ offNodeDelete(callback?: OnChangedCallback): void
 offNodeModify(callback?: OnChangedCallback): void
 ```
 
-取消节点修改事件监听。使用callback回调。
+Destroy node modify callback event.
 
 **Since:** 26.0.0
 
@@ -118,7 +118,7 @@ offNodeModify(callback?: OnChangedCallback): void
 offNodeMove(callback?: OnChangedCallback): void
 ```
 
-取消节点移动事件监听。使用callback回调。
+Destroy node move callback event.
 
 **Since:** 26.0.0
 
@@ -142,7 +142,7 @@ offNodeMove(callback?: OnChangedCallback): void
 onNodeAdd(callback: OnChangedCallback): void
 ```
 
-注册节点添加事件监听，持续监听节点添加事件。使用callback回调。
+Node add event registration and processing.The event will not be destroyed after being processed.
 
 **Since:** 26.0.0
 
@@ -166,7 +166,7 @@ onNodeAdd(callback: OnChangedCallback): void
 onNodeClick(callback: OnChangedCallback): void
 ```
 
-注册节点点击事件监听，持续监听节点点击事件。使用callback回调。
+Node click event registration and processing.The event will not be destroyed after being processed.
 
 **Since:** 26.0.0
 
@@ -190,7 +190,7 @@ onNodeClick(callback: OnChangedCallback): void
 onNodeDelete(callback: OnChangedCallback): void
 ```
 
-注册节点删除事件监听，持续监听节点删除事件。使用callback回调。
+Node delete event registration and processing.The event will not be destroyed after being processed.
 
 **Since:** 26.0.0
 
@@ -214,7 +214,7 @@ onNodeDelete(callback: OnChangedCallback): void
 onNodeModify(callback: OnChangedCallback): void
 ```
 
-注册节点修改事件监听，持续监听节点修改事件。使用callback回调。
+Node modify event registration and processing.The event will not be destroyed after being processed.
 
 **Since:** 26.0.0
 
@@ -238,7 +238,7 @@ onNodeModify(callback: OnChangedCallback): void
 onNodeMove(callback: OnChangedCallback): void
 ```
 
-注册节点移动事件监听，持续监听节点移动事件。节点移动通过拖拽操作触发。使用callback回调。
+Node move event registration and processing.The event will not be destroyed after being processed.
 
 **Since:** 26.0.0
 
@@ -262,7 +262,7 @@ onNodeMove(callback: OnChangedCallback): void
 onceNodeAdd(callback: OnChangedCallback): void
 ```
 
-注册节点添加事件监听，监听一次后自动销毁。使用callback回调。
+Node add event registration and processing.After the event is processed once, it will be destroyed.
 
 **Since:** 26.0.0
 
@@ -286,7 +286,7 @@ onceNodeAdd(callback: OnChangedCallback): void
 onceNodeClick(callback: OnChangedCallback): void
 ```
 
-注册节点点击事件监听，监听一次后自动销毁。使用callback回调。
+Node click event registration and processing.After the event is processed once, it will be destroyed.
 
 **Since:** 26.0.0
 
@@ -310,7 +310,7 @@ onceNodeClick(callback: OnChangedCallback): void
 onceNodeDelete(callback: OnChangedCallback): void
 ```
 
-注册节点删除事件监听，监听一次后自动销毁。使用callback回调。
+Node delete event registration and processing.After the event is processed once, it will be destroyed.
 
 **Since:** 26.0.0
 
@@ -334,7 +334,7 @@ onceNodeDelete(callback: OnChangedCallback): void
 onceNodeModify(callback: OnChangedCallback): void
 ```
 
-注册节点修改事件监听，监听一次后自动销毁。使用callback回调。
+Node modify event registration and processing.After the event is processed once, it will be destroyed.
 
 **Since:** 26.0.0
 
@@ -358,7 +358,7 @@ onceNodeModify(callback: OnChangedCallback): void
 onceNodeMove(callback: OnChangedCallback): void
 ```
 
-注册节点移动事件监听，监听一次后自动销毁。使用callback回调。
+Node move event registration and processing.After the event is processed once, it will be destroyed.
 
 **Since:** 26.0.0
 

@@ -1,6 +1,6 @@
 # PluginComponentTemplate
 
-插件组件模板参数。
+Plugin component template property.
 
 **Since:** 23
 
@@ -22,7 +22,7 @@ import { PluginComponentTemplate } from 'kits/@kit.ArkUI';
 ability: string
 ```
 
-提供方Ability的bundleName。
+Defines the ability.
 
 **Type:** string
 
@@ -42,7 +42,7 @@ ability: string
 source: string
 ```
 
-组件模板名。
+Defines the source.
 
 **Type:** string
 

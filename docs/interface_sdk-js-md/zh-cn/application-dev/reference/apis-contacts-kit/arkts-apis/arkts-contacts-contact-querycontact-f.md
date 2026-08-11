@@ -1,11 +1,5 @@
 # queryContact
 
-## 导入模块
-
-```TypeScript
-import { contact } from 'kits/@kit.ContactsKit';
-```
-
 ## queryContact
 
 ```TypeScript
@@ -82,8 +76,8 @@ function queryContact(context: Context, key: string, callback: AsyncCallback<Con
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 401 | Parameter error. Possible causes: Mandatory parameters are left unspecified. |
-| 201 | Permission denied. |
+| [401](../errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: Mandatory parameters are left unspecified. |
+| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
 
 ## 示例
 
@@ -188,8 +182,8 @@ function queryContact(context: Context, key: string, holder: Holder, callback: A
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 401 | Parameter error. Possible causes: Mandatory parameters are left unspecified. |
-| 201 | Permission denied. |
+| [401](../errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: Mandatory parameters are left unspecified. |
+| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
 
 ## 示例
 
@@ -296,8 +290,8 @@ function queryContact(context: Context, key: string, attrs: ContactAttributes, c
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 401 | Parameter error. Possible causes: Mandatory parameters are left unspecified. |
-| 201 | Permission denied. |
+| [401](../errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: Mandatory parameters are left unspecified. |
+| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
 
 ## 示例
 
@@ -408,8 +402,8 @@ function queryContact(context: Context, key: string, holder: Holder, attrs: Cont
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 401 | Parameter error. Possible causes: Mandatory parameters are left unspecified. |
-| 201 | Permission denied. |
+| [401](../errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: Mandatory parameters are left unspecified. |
+| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
 
 ## 示例
 
@@ -530,8 +524,8 @@ function queryContact(context: Context, key: string, holder?: Holder, attrs?: Co
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 401 | Parameter error. Possible causes: Mandatory parameters are left unspecified. |
-| 201 | Permission denied. |
+| [401](../errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: Mandatory parameters are left unspecified. |
+| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
 
 ## 示例
 

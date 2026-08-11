@@ -1,11 +1,5 @@
 # unregisterTask
 
-## 导入模块
-
-```TypeScript
-import { backgroundLoader } from 'kits/@kit.BackgroundTasksKit';
-```
-
 ## unregisterTask
 
 ```TypeScript
@@ -36,7 +30,7 @@ function unregisterTask(taskInfo: TaskInfo): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 9700004 | Check on taskInfo failed. |
-| 9700003 | System service operation failed. |
-| 201 | Permission denied. |
+| [9700004](../../apis-backgroundtasks-kit/errorcode-workScheduler.md#9700004-workinfo校验失败) | Check on taskInfo failed. |
+| [9700003](../../apis-backgroundtasks-kit/errorcode-workScheduler.md#9700003-系统服务失败) | System service operation failed. |
+| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
 

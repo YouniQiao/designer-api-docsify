@@ -1,6 +1,6 @@
 # ConstraintSourceType (System API)
 
-表示约束来源类型的枚举。
+Enumerates the constraint sources.
 
 **Since:** 9
 
@@ -18,7 +18,7 @@
 CONSTRAINT_NOT_EXIST = 0
 ```
 
-约束不存在。
+The constraint does not exist.
 
 **Since:** 9
 
@@ -36,7 +36,7 @@ CONSTRAINT_NOT_EXIST = 0
 CONSTRAINT_TYPE_BASE = 1
 ```
 
-约束源自系统设置。
+Constraint from system settings.
 
 **Since:** 9
 
@@ -54,7 +54,7 @@ CONSTRAINT_TYPE_BASE = 1
 CONSTRAINT_TYPE_DEVICE_OWNER = 2
 ```
 
-约束源自设备所有者设置。
+Constraint from the device owners' settings.
 
 **Since:** 9
 
@@ -72,7 +72,7 @@ CONSTRAINT_TYPE_DEVICE_OWNER = 2
 CONSTRAINT_TYPE_PROFILE_OWNER = 3
 ```
 
-约束源自资料所有者设置。
+Constraint from the profile owners' settings.
 
 **Since:** 9
 

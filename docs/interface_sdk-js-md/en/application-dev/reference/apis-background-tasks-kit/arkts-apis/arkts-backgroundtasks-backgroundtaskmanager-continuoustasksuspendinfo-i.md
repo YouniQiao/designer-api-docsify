@@ -1,6 +1,6 @@
 # ContinuousTaskSuspendInfo
 
-长时任务暂停信息。
+Describes the information about a suspended continuous task.
 
 **Since:** 20
 
@@ -22,7 +22,7 @@ import { backgroundTaskManager } from 'kits/@kit.BackgroundTasksKit';
 continuousTaskId: int
 ```
 
-被暂停的长时任务 Id。
+ID of the suspended continuous task.
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
@@ -40,7 +40,7 @@ continuousTaskId: int
 suspendMessage?: SuspendMessage
 ```
 
-长时任务暂停信息。
+Describes the information about a suspended continuous task.
 
 **Type:** [SuspendMessage](arkts-backgroundtasks-backgroundtaskmanager-suspendmessage-i.md)
 
@@ -60,7 +60,7 @@ suspendMessage?: SuspendMessage
 suspendReason: ContinuousTaskSuspendReason
 ```
 
-长时任务暂停原因。
+Reason why the continuous task is suspended.
 
 **Type:** [ContinuousTaskSuspendReason](arkts-backgroundtasks-backgroundtaskmanager-continuoustasksuspendreason-e.md)
 
@@ -78,7 +78,7 @@ suspendReason: ContinuousTaskSuspendReason
 suspendState: boolean
 ```
 
-长时任务状态，false表示激活，true表示暂停。
+Continuous task state. The value **false** indicates that the task is activated, and the value **true** indicates that the task is suspended.
 
 **Type:** boolean
 

@@ -12,7 +12,7 @@ import { usbManager } from 'kits/@kit.BasicServicesKit';
 function getFunctionsFromString(funcs: string): int
 ```
 
-在设备模式下，将字符串形式的USB功能列表转化为数字掩码。
+Converts the USB function list in the string format to a numeric mask in Device mode.
 
 **Since:** 12
 
@@ -30,20 +30,20 @@ function getFunctionsFromString(funcs: string): int
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| funcs | string | Yes | 字符串形式的功能列表。 |
+| funcs | string | Yes | Function list in string format. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| ArkTS-Dyn: number  <br>ArkTS-Sta：int | 转化后的功能列表对应的数字掩码。 |
+| ArkTS-Dyn: number  <br>ArkTS-Sta：int | Function list in numeric mask format after conversion. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. Possible causes:  &lt;br&gt;1.Mandatory parameters are left unspecified.  &lt;br&gt;2.Incorrect parameter types. |
-| 801 | Capability not supported.<br>**Applicable version:** 18 and later |
-| 201 | Permission verification failed. The application does not have the permission required to call the API. .<br>**Applicable version:** 18 and later |
-| 202 | Permission denied. Normal application do not have permission to use system api. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes:  &lt;br&gt;1.Mandatory parameters are left unspecified.  &lt;br&gt;2.Incorrect parameter types. |
+| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported.<br>**Applicable version:** 18 and later |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed. The application does not have the permission required to call the API. .<br>**Applicable version:** 18 and later |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission denied. Normal application do not have permission to use system api. |
 

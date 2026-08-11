@@ -1,6 +1,6 @@
 # FocusMoveResult (System API)
 
-查询无障碍节点返回值类型。
+Queries the return value type of the target accessibility nodes.
 
 **Since:** 23
 
@@ -18,7 +18,7 @@
 result: FocusMoveResultCode
 ```
 
-查询无障碍节点返回结果类型。
+Type of the return value.
 
 **Type:** [FocusMoveResultCode](arkts-accessibility-accessibility-focusmoveresultcode-e-sys.md)
 
@@ -38,7 +38,7 @@ result: FocusMoveResultCode
 target: Array<AccessibilityElement>
 ```
 
-查询返回的无障碍节点。
+Target accessibility nodes.
 
 **Type:** Array&lt;AccessibilityElement&gt;
 

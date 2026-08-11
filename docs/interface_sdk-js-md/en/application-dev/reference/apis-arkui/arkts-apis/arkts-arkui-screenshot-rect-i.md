@@ -1,6 +1,6 @@
 # Rect
 
-表示截取图像的区域。
+Describes the region of the screen to capture.
 
 **Since:** 12
 
@@ -22,7 +22,7 @@ import { screenshot } from 'kits/@kit.ArkUI';
 height: long
 ```
 
-表示截取图像区域的高度，单位为px，该参数应为整数。
+Height of the screen region to capture, in px. The value must be a positive integer.
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：long
 
@@ -42,7 +42,7 @@ height: long
 left: long
 ```
 
-表示截取图像区域的左边界，单位为px，该参数应为整数。
+Left boundary of the screen region to capture, in px. The value must be a non-negative integer.
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：long
 
@@ -62,7 +62,7 @@ left: long
 top: long
 ```
 
-表示截取图像区域的上边界，单位为px，该参数应为整数。
+Top boundary of the screen region to capture, in px. The value must be a non-negative integer.
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：long
 
@@ -82,7 +82,7 @@ top: long
 width: long
 ```
 
-表示截取图像区域的宽度，单位为px，该参数应为整数。
+Width of the screen region to capture, in px. The value must be a positive integer.
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：long
 

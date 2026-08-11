@@ -1,11 +1,5 @@
 # setAppResourceLimit
 
-## 导入模块
-
-```TypeScript
-import { hidebug } from 'kits/@kit.PerformanceAnalysisKit';
-```
-
 ## setAppResourceLimit
 
 ```TypeScript
@@ -40,8 +34,8 @@ function setAppResourceLimit(type: string, value: int, enableDebugLog: boolean):
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 401 | Invalid argument, Possible causes: 1.The limit parameter is too small 2.The parameter is not in the specified type 3.The parameter type error or parameter order error |
-| 11400104 | Set limit failed due to remote exception |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Invalid argument, Possible causes: 1.The limit parameter is too small 2.The parameter is not in the specified type 3.The parameter type error or parameter order error |
+| [11400104](../errorcode-hiviewdfx-hidebug-cpuusage.md#11400104-cpuusage统计异常) | Set limit failed due to remote exception |
 
 ## 示例
 

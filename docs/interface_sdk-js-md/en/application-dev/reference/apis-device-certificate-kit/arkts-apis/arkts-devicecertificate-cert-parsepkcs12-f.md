@@ -12,7 +12,7 @@ import { cert } from 'kits/@kit.DeviceCertificateKit';
 function parsePkcs12(data: Uint8Array, config: Pkcs12ParsingConfig): Pkcs12Data
 ```
 
-解析P12。
+Parses P12.
 
 **Since:** 18
 
@@ -28,24 +28,24 @@ function parsePkcs12(data: Uint8Array, config: Pkcs12ParsingConfig): Pkcs12Data
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| data | Uint8Array | Yes | DER格式的P12文件原始数据。 |
-| config | [Pkcs12ParsingConfig](arkts-devicecertificate-cert-pkcs12parsingconfig-i.md) | Yes | P12文件的解析配置。 |
+| data | Uint8Array | Yes | Raw data of P12 file, in DER format. |
+| config | [Pkcs12ParsingConfig](arkts-devicecertificate-cert-pkcs12parsingconfig-i.md) | Yes | Configuration for parsing the P12. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [Pkcs12Data](arkts-devicecertificate-cert-pkcs12data-i.md) | 表示解析后的P12数据。 |
+| [Pkcs12Data](arkts-devicecertificate-cert-pkcs12data-i.md) | Indicates the parsed P12 data. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 19020002 | 运行时外部错误。可能的原因： &lt;br&gt;1. 内存拷贝失败； &lt;br&gt;2. 系统内部出现空指针； &lt;br&gt;3. 获取Native对象失败或参数转换失败。 |
-| 401 | 参数错误。可能的原因： &lt;br&gt;1. 必填参数未指定； &lt;br&gt;2. 参数类型不正确； &lt;br&gt;3. 参数校验失败。 |
-| 19020001 | 内存错误。 |
-| 19030001 | 调用三方算法库API出错。 |
-| 19030008 | 私钥密码错误。 |
+| [19020002](../errorcode-cert.md#19020002-runtime-error) | Runtime error. Possible causes: &lt;br&gt;1. Memory copy failed; &lt;br&gt;2. A null pointer occurs inside the system; &lt;br&gt;3. Failed to obtain the native object or convert parameters. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Invalid parameters. Possible causes: &lt;br&gt;1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; &lt;br&gt;3. Parameter verification failed. |
+| [19020001](../errorcode-cert.md#19020001-memory-error) | Memory malloc failed. |
+| [19030001](../errorcode-cert.md#19030001-crypto-operation-error) | Crypto operation error. |
+| [19030008](../errorcode-cert.md#19030008-incorrect-private-key-password) | Maybe wrong password. |
 
 ## Examples
 
@@ -231,7 +231,7 @@ function doTestParsePkcs12() {
 function parsePkcs12(data: Uint8Array, password: string): Promise<Pkcs12Data>
 ```
 
-解析P12。使用Promise方式返回结果。
+Parses P12. This API uses a promise to return the result.
 
 **Since:** 21
 
@@ -247,24 +247,24 @@ function parsePkcs12(data: Uint8Array, password: string): Promise<Pkcs12Data>
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| data | Uint8Array | Yes | DER格式的P12文件原始数据。 |
-| password | string | Yes | 密码。 |
+| data | Uint8Array | Yes | Raw data of P12 file, in DER format. |
+| password | string | Yes | Password. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;Pkcs12Data&gt; | Promise对象，返回解析后的P12数据。返回的Pkcs12Data中的私钥采用PEM编码。 |
+| Promise&lt;Pkcs12Data&gt; | Promise used to return the parsed P12 data. The private key in the returned **Pkcs12Data** is encoded in PEM format. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 19020002 | 运行时外部错误。可能的原因： &lt;br&gt;1. 内存拷贝失败； &lt;br&gt;2. 系统内部出现空指针； &lt;br&gt;3. 获取Native对象失败或参数转换失败。 |
-| 19020003 | 参数检查失败。可能的原因： &lt;br&gt;1. 数据长度为零或过大； &lt;br&gt;2. 密码长度过大。 |
-| 19020001 | 内存错误。 |
-| 19030001 | 调用三方算法库API出错。 |
-| 19030008 | 私钥密码错误。 |
+| [19020002](../errorcode-cert.md#19020002-runtime-error) | Runtime error. Possible causes: &lt;br&gt;1. Memory copy failed; &lt;br&gt;2. A null pointer occurs inside the system; &lt;br&gt;3. Failed to obtain the native object or convert parameters. |
+| [19020003](../errorcode-cert.md#19020003-parameter-check-failure) | Parameter check failed. Possible causes: &lt;br&gt;1. The length of the data is zero or too large; &lt;br&gt;2. The length of the password is too large. |
+| [19020001](../errorcode-cert.md#19020001-memory-error) | Memory malloc failed. |
+| [19030001](../errorcode-cert.md#19030001-crypto-operation-error) | Crypto operation error. |
+| [19030008](../errorcode-cert.md#19030008-incorrect-private-key-password) | Maybe wrong password. |
 
 ## Examples
 

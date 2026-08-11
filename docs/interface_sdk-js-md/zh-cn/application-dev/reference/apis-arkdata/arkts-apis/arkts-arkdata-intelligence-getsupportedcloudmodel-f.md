@@ -1,11 +1,5 @@
 # getSupportedCloudModel
 
-## 导入模块
-
-```TypeScript
-import { intelligence } from 'kits/@kit.ArkData';
-```
-
 ## getSupportedCloudModel
 
 ```TypeScript
@@ -33,8 +27,6 @@ function getSupportedCloudModel(): Promise<Array<CloudModelInfo>>
 ## 示例
 
 ```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
 intelligence.getSupportedCloudModel()
   .then((info: Array<intelligence.CloudModelInfo>) => {
     console.info("Succeeded in getting CloudModelInfo");

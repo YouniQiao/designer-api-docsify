@@ -1,6 +1,6 @@
 # ParticleEmitterShape
 
-粒子发射器形状。
+Enumerates the emitter shapes of a particle.
 
 **Since:** 10
 
@@ -16,7 +16,7 @@
 RECTANGLE = 'rectangle'
 ```
 
-粒子发射器为矩形。
+Rectangle.
 
 **Since:** 10
 
@@ -36,7 +36,7 @@ RECTANGLE = 'rectangle'
 CIRCLE = 'circle'
 ```
 
-粒子发射器为圆形。
+Circle.
 
 **Since:** 10
 
@@ -56,7 +56,7 @@ CIRCLE = 'circle'
 ELLIPSE = 'ellipse'
 ```
 
-粒子发射器为椭圆形。
+Ellipse.
 
 **Since:** 10
 
@@ -76,7 +76,7 @@ ELLIPSE = 'ellipse'
 ANNULUS = 'annulus'
 ```
 
-粒子发射器为环形。
+Annulus.
 
 **Since:** 20
 

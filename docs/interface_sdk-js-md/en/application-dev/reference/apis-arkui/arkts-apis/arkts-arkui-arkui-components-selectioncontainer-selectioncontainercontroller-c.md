@@ -1,6 +1,6 @@
 # SelectionContainerController
 
-SelectionContainer组件的控制器。
+Defines the controller of the SelectionContainer component.
 
 **Since:** 26.0.0
 
@@ -22,7 +22,7 @@ import { SelectionContainerInstance, SelectionContainer, OnMenuItemClickWithText
 clearTextSelection(): void
 ```
 
-清除SelectionContainer当前的文本选中状态；若选择菜单正在显示，会同时关闭选择菜单。
+Clears the current text selection of the SelectionContainer,and closes the selection menu if it is currently shown.
 
 **Since:** 26.0.0
 
@@ -42,7 +42,7 @@ clearTextSelection(): void
 closeSelectionMenu(): void
 ```
 
-关闭SelectionContainer的自定义或默认选择菜单。
+Closes the custom or default selection menu of the SelectionContainer.
 
 **Since:** 26.0.0
 

@@ -1,17 +1,6 @@
 # ComposeTitleBarV2
 
-ComposeTitleBarV2组件是一种标题栏，支持设置标题、头像（可选）和副标题（可选），可用于一级页面、二级及其以上界面配置返回键。
-
-该组件基于[状态管理（V2）](../../../ui/state-management/arkts-state-management-overview.md#状态管理v2)实现，相较于  
-[状态管理（V1）](../../../ui/state-management/arkts-state-management-overview.md#状态管理v1)，状态管理（V2）增强了对数据对象的深度观察与管理能力，不再局限于组件层级。借助状态管理（V2），开发者可以通过该组件更灵活地控制普通标题栏的数据和状态，实现更高效的用户界面刷新。
-
-> **说明：**
-> 
-> - 该组件仅可在Stage模型下使用。
-> 
-> - 如果ComposeTitleBarV2设置[通用属性](../../apis-arkui/arkts-components/arkts-arkui-common-attribute.md)和
-> [通用事件](../../apis-arkui/arkts-components/arkts-arkui-common-attribute.md)，编译工具链会额外生成节点__Common__，并将通用属性或通用事件挂载在__Common__上，而不是直接应用到
-> ComposeTitleBarV2本身。这可能导致开发者设置的通用属性或通用事件不生效或不符合预期，因此，不建议ComposeTitleBarV2设置通用属性和通用事件。
+Declaration of the composable title bar. Composable title bar represents a common title bar that contains a title,subtitle (optional), and profile picture (optional). It can come with a Back button for switching between pages of different levels.
 
 **Since:** 26.0.0
 
@@ -35,7 +24,7 @@ import { ComposeTitleBarV2MenuItemParams, ComposeTitleBarV2, ComposeTitleBarV2Me
 build(): void
 ```
 
-构建组件的方法。
+The method to build component.
 
 **Since:** 26.0.0
 
@@ -55,7 +44,7 @@ build(): void
 item?: ComposeTitleBarV2MenuItem
 ```
 
-用于左侧头像的单个菜单项。
+A single menu item for the profile picture on the left.
 
 **Type:** [ComposeTitleBarV2MenuItem](arkts-arkui-arkui-advanced-composetitlebarv2-composetitlebarv2menuitem-c.md)
 
@@ -77,7 +66,7 @@ item?: ComposeTitleBarV2MenuItem
 menuItems?: Array<ComposeTitleBarV2MenuItem>
 ```
 
-右侧菜单项列表。
+Menu items on the right side.
 
 **Type:** Array&lt;ComposeTitleBarV2MenuItem&gt;
 
@@ -99,7 +88,7 @@ menuItems?: Array<ComposeTitleBarV2MenuItem>
 subtitle?: ResourceStr
 ```
 
-副标题。
+Sub-title of this title bar.
 
 **Type:** [ResourceStr](arkts-arkui-resourcestr-t.md)
 
@@ -121,7 +110,7 @@ subtitle?: ResourceStr
 title: ResourceStr
 ```
 
-标题。
+Title of this title bar.
 
 **Type:** [ResourceStr](arkts-arkui-resourcestr-t.md)
 

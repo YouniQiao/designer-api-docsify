@@ -312,5 +312,5 @@ roundRect(x: number, y: number, w: number, h: number, radii?: number | Array<num
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 103701 | 参数错误。可能的原因： &lt;br&gt; 1. 参数radii数组的元素个数为0或超过4个。 &lt;br&gt; 2. 参数radii中包含负数。 |
+| [103701](../errorcode-canvas.md#103701-参数错误) | 参数错误。可能的原因： &lt;br&gt; 1. 参数radii数组的元素个数为0或超过4个。 &lt;br&gt; 2. 参数radii中包含负数。 |
 

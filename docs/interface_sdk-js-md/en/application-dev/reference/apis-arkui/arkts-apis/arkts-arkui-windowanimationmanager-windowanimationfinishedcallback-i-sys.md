@@ -1,6 +1,6 @@
 # WindowAnimationFinishedCallback (System API)
 
-动画完成后的回调。
+Window animation finished callback.
 
 **Since:** 9
 
@@ -24,7 +24,7 @@ import { windowAnimationManager } from 'kits/@kit.ArkUI';
 onAnimationFinish(): void
 ```
 
-结束本次动画。
+The function of window animation finished callback.
 
 **Since:** 9
 

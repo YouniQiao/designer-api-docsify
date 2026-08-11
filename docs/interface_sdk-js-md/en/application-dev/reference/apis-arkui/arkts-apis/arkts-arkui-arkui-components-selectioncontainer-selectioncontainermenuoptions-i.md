@@ -1,6 +1,6 @@
 # SelectionContainerMenuOptions
 
-配置选择菜单中的选项。
+Defines selection menu options for SelectionContainer.
 
 **Since:** 26.0.0
 
@@ -22,7 +22,7 @@ import { SelectionContainerInstance, SelectionContainer, OnMenuItemClickWithText
 onAppear?: Callback<string>
 ```
 
-选择菜单出现时触发。回调参数为按Text组件视觉顺序拼接后的选中文本，拼接方式由textJoinStyle配置决定。默认值为空，不触发该回调。
+Called when the selection menu appears.The callback parameter is the selected text concatenated in the visual order of Text components.
 
 **Type:** [Callback](../arkts-components/arkts-arkui-callback-i.md)&lt;string&gt;
 
@@ -42,7 +42,7 @@ onAppear?: Callback<string>
 onDisappear?: Callback<void>
 ```
 
-选择菜单消失时触发。默认值为空，不触发该回调。
+Called when the selection menu disappears.
 
 **Type:** [Callback](../arkts-components/arkts-arkui-callback-i.md)&lt;void&gt;
 
@@ -62,7 +62,7 @@ onDisappear?: Callback<void>
 onMenuHide?: Callback<string>
 ```
 
-选择菜单隐藏时触发。回调参数为按Text组件视觉顺序拼接后的选中文本，拼接方式由textJoinStyle配置决定。默认值为空，不触发该回调。
+Called when the selection menu is hidden.The callback parameter is the selected text concatenated in the visual order of Text components.
 
 **Type:** [Callback](../arkts-components/arkts-arkui-callback-i.md)&lt;string&gt;
 
@@ -82,7 +82,7 @@ onMenuHide?: Callback<string>
 onMenuShow?: Callback<string>
 ```
 
-选择菜单显示时触发。回调参数为按Text组件视觉顺序拼接后的选中文本，拼接方式由textJoinStyle配置决定。默认值为空，不触发该回调。
+Called when the selection menu is displayed.The callback parameter is the selected text concatenated in the visual order of Text components.
 
 **Type:** [Callback](../arkts-components/arkts-arkui-callback-i.md)&lt;string&gt;
 

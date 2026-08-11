@@ -1,6 +1,6 @@
 # EventType
 
-事件类型枚举。
+Enumerates event types.
 
 **Since:** 9
 
@@ -16,7 +16,7 @@
 FAULT = 1
 ```
 
-故障类型事件。
+Fault event.
 
 **Since:** 9
 
@@ -34,7 +34,7 @@ FAULT = 1
 STATISTIC = 2
 ```
 
-统计类型事件。
+Statistic event.
 
 **Since:** 9
 
@@ -52,7 +52,7 @@ STATISTIC = 2
 SECURITY = 3
 ```
 
-安全类型事件。
+Security event.
 
 **Since:** 9
 
@@ -70,7 +70,7 @@ SECURITY = 3
 BEHAVIOR = 4
 ```
 
-行为类型事件。
+Behavior event.
 
 **Since:** 9
 

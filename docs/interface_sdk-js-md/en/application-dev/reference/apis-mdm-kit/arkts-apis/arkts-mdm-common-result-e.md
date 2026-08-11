@@ -1,6 +1,6 @@
 # Result
 
-应用安装结果码。
+Enumerates application installation results.
 
 **Since:** 22
 
@@ -16,7 +16,7 @@
 SUCCESS = 0
 ```
 
-应用安装成功。
+The application is installed successfully.
 
 **Since:** 22
 
@@ -34,7 +34,7 @@ SUCCESS = 0
 FAIL = -1
 ```
 
-应用安装失败。
+The application fails to be installed.
 
 **Since:** 22
 

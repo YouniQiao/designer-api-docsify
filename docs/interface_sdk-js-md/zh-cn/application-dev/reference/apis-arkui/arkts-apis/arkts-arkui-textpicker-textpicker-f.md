@@ -30,5 +30,5 @@ export declare function TextPicker(
 
 | 类型 | 说明 |
 | --- | --- |
-| [TextPickerAttribute](arkts-arkui-textpicker-textpickerattribute-i.md) | The attribute of the TextPicker. |
+| [TextPickerAttribute](../arkts-components/arkts-arkui-textpicker-attribute.md) | The attribute of the TextPicker. |
 

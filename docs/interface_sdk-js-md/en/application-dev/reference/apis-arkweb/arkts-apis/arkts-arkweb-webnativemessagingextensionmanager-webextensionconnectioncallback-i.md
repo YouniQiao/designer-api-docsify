@@ -1,6 +1,6 @@
 # WebExtensionConnectionCallback
 
-作为连接网络原生消息扩展时的输入参数，它用于接收连接期间的状态变化。
+As an input parameter when connecting a web native messaging extension, it is used to receive state changes during the connection.
 
 **Since:** 23
 
@@ -22,7 +22,7 @@ import { webNativeMessagingExtensionManager } from 'kits/@kit.ArkWeb';
 onConnect(connection: ConnectionNativeInfo): void
 ```
 
-建立连接时的回调函数。
+Called when a connection is set up.
 
 **Since:** 23
 
@@ -38,7 +38,7 @@ onConnect(connection: ConnectionNativeInfo): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| connection | [ConnectionNativeInfo](arkts-arkweb-webnativemessagingextensionmanager-connectionnativeinfo-i.md) | Yes | 连接信息，包含连接ID、扩展应用包名、浏览器扩展源URL和扩展进程ID等信息。 |
+| connection | [ConnectionNativeInfo](arkts-arkweb-webnativemessagingextensionmanager-connectionnativeinfo-i.md) | Yes | The remote connection info |
 
 ## onDisconnect
 
@@ -46,7 +46,7 @@ onConnect(connection: ConnectionNativeInfo): void
 onDisconnect(connection: ConnectionNativeInfo): void
 ```
 
-断开连接时的回调函数。
+Called when a connection is interrupted.
 
 **Since:** 23
 
@@ -62,7 +62,7 @@ onDisconnect(connection: ConnectionNativeInfo): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| connection | [ConnectionNativeInfo](arkts-arkweb-webnativemessagingextensionmanager-connectionnativeinfo-i.md) | Yes | 连接信息，包含连接ID、扩展应用包名、浏览器扩展源URL和扩展进程ID等信息。 |
+| connection | [ConnectionNativeInfo](arkts-arkweb-webnativemessagingextensionmanager-connectionnativeinfo-i.md) | Yes | The remote connection info |
 
 ## onFailed
 
@@ -70,7 +70,7 @@ onDisconnect(connection: ConnectionNativeInfo): void
 onFailed(code: NmErrorCode, errMsg: string): void
 ```
 
-连接失败时的回调函数。
+Called when the connection fails.
 
 **Since:** 23
 
@@ -86,6 +86,6 @@ onFailed(code: NmErrorCode, errMsg: string): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| code | [NmErrorCode](arkts-arkweb-webnativemessagingextensionmanager-nmerrorcode-e.md) | Yes | 错误码。 |
-| errMsg | string | Yes | 错误码对应信息。 |
+| code | [NmErrorCode](arkts-arkweb-webnativemessagingextensionmanager-nmerrorcode-e.md) | Yes | The error code of the failure. |
+| errMsg | string | Yes | The error message of the failure. |
 

@@ -14,12 +14,6 @@
 
 **系统能力：** SystemCapability.MiscServices.Time
 
-## 导入模块
-
-```TypeScript
-import { systemTime } from 'kits/@kit.BasicServicesKit';
-```
-
 ## 汇总
 
 ### 函数

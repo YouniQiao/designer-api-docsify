@@ -1,6 +1,6 @@
 # Corners
 
-用于设置四个角的圆角属性。
+Defines the Corner property.
 
 **Since:** 23
 
@@ -16,7 +16,7 @@
 bottomLeft: T
 ```
 
-左下边框的圆角属性。
+BottomLeft property.
 
 **Type:** T
 
@@ -36,7 +36,7 @@ bottomLeft: T
 bottomRight: T
 ```
 
-右下边框的圆角属性。
+BottomRight property.
 
 **Type:** T
 
@@ -56,7 +56,7 @@ bottomRight: T
 topLeft: T
 ```
 
-左上边框的圆角属性。
+TopLeft property.
 
 **Type:** T
 
@@ -76,7 +76,7 @@ topLeft: T
 topRight: T
 ```
 
-右上边框的圆角属性。
+TopRight property.
 
 **Type:** T
 

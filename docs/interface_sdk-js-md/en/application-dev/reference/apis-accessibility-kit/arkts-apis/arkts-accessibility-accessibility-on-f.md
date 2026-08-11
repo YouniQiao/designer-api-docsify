@@ -12,16 +12,17 @@ import { accessibility } from 'kits/@kit.AccessibilityKit';
 function on(type: 'accessibilityStateChange', callback: Callback<boolean>): void
 ```
 
-监听辅助应用启用状态变化事件，使用callback异步回调。如需获取系统内辅助应用信息，推荐使用  
-[accessibility.getAccessibilityExtensionListSync](arkts-accessibility-accessibility-getaccessibilityextensionlistsync-f.md#getaccessibilityextensionlistsync)。
+Subscribes to the state changes of the accessibility application. This API uses an asynchronous callback to return the result. To obtain information about accessibility applications in the system, use   
+[accessibility.getAccessibilityExtensionListSync](arkts-accessibility-accessibility-getaccessibilityextensionlistsync-f.md#getaccessibilityextensionlistsync).
 
-> **说明：**
+> **NOTE：**
 > 
-> - 注册监听的callback参数应使用具名函数而非匿名函数，否则每次调用时会创建一个新的底层对象，引起内存泄漏问题。
+> - The callback parameter for registering a listener must use a named function instead of an anonymous function.
+> Otherwise, a new underlying object is created each time the function is called, causing memory leakage.
 > 
-> - 调用此方法后，务必在对象生命周期结束前使用
+> - After calling this method, you must use
 > [accessibility.off('accessibilityStateChange')](accessibility.off(type: 'accessibilityStateChange', callback?: Callback&lt;boolean&gt;))
-> 取消监听，否则可能会导致崩溃。
+> to cancel the listener before the object's lifecycle ends. Otherwise, a crash may occur.
 
 **Since:** 7
 
@@ -39,14 +40,14 @@ function on(type: 'accessibilityStateChange', callback: Callback<boolean>): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'accessibilityStateChange' | Yes | 监听的事件名，固定为‘accessibilityStateChange’，即辅助应用启用状态变化事件。 |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;boolean&gt; | Yes | 回调函数，在辅助应用启用状态变化时将状态通过此函数进行通知。此状态为全局辅助应用启用状态。返回true表示已启用辅助应用，返回false表示已禁用辅助 应用。 |
+| type | 'accessibilityStateChange' | Yes | Event type, which is set to **'accessibilityStateChange'** in this API. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;boolean&gt; | Yes | Callback invoked when the enabled status of accessibility application changes. The returned result indicates the global enabled status of the accessibility application. The value **true** indicates that the accessibility application is enabled, and **false** indicates that the accessibility application is disabled. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
 
 ## Examples
 
@@ -68,16 +69,17 @@ accessibility.on('accessibilityStateChange', (data: boolean) => {
 function on(type: 'touchGuideStateChange', callback: Callback<boolean>): void
 ```
 
-监听触摸浏览功能启用状态变化事件，使用callback异步回调。如需获取系统内辅助应用信息，推荐使用  
-[accessibility.getAccessibilityExtensionListSync](arkts-accessibility-accessibility-getaccessibilityextensionlistsync-f.md#getaccessibilityextensionlistsync)。
+Subscribes to the state changes in touch guide mode. This API uses an asynchronous callback to return the result. To obtain information about accessibility applications in the system, use   
+[accessibility.getAccessibilityExtensionListSync](arkts-accessibility-accessibility-getaccessibilityextensionlistsync-f.md#getaccessibilityextensionlistsync).
 
-> **说明：**
+> **NOTE：**
 > 
-> - 注册监听的callback参数应使用具名函数而非匿名函数，否则每次调用时会创建一个新的底层对象，引起内存泄漏问题。
+> - The callback parameter for registering a listener must use a named function instead of an anonymous function.
+> Otherwise, a new underlying object is created each time the function is called, causing memory leakage.
 > 
-> - 调用此方法后，务必在对象生命周期结束前使用
+> - After calling this method, you must use
 > [accessibility.off('touchGuideStateChange')](accessibility.off(type: 'touchGuideStateChange', callback?: Callback&lt;boolean&gt;))
-> 取消监听，否则可能会导致崩溃。
+> to cancel the listener before the object's lifecycle ends. Otherwise, a crash may occur.
 
 **Since:** 7
 
@@ -95,14 +97,14 @@ function on(type: 'touchGuideStateChange', callback: Callback<boolean>): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'touchGuideStateChange' | Yes | 监听的事件名，固定为‘touchGuideStateChange’，即触摸浏览启用状态变化事件。 |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;boolean&gt; | Yes | 回调函数，在触摸浏览启用状态变化时将状态通过此函数进行通知。返回true表示触摸浏览功能已开启，返回false表示触摸浏览功能已关闭。 |
+| type | 'touchGuideStateChange' | Yes | Event type, which is set to **'touchGuideStateChange'** in this API. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;boolean&gt; | Yes | Callback invoked when the enabling state of touch guide mode changes. The value **true** indicates that the touch guide mode is enabled, and the value **false** indicates that the touch guide mode is disabled. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
 
 ## Examples
 
@@ -124,15 +126,16 @@ accessibility.on('touchGuideStateChange', (data: boolean) => {
 function on(type: 'screenReaderStateChange', callback: Callback<boolean>): void
 ```
 
-监听屏幕朗读功能启用状态变化事件，使用callback异步回调。
+Subscribes to the state changes of the screen reader. This API uses an asynchronous callback to return the result.
 
-> **说明：**
+> **NOTE：**
 > 
-> - 注册监听的callback参数应使用具名函数而非匿名函数，否则每次调用时会创建一个新的底层对象，引起内存泄漏问题。
+> - The callback parameter for registering a listener must use a named function instead of an anonymous function.
+> Otherwise, a new underlying object is created each time the function is called, causing memory leakage.
 > 
-> - 调用此方法后，务必在对象生命周期结束前使用
+> - After calling this method, you must use
 > [accessibility.off('screenReaderStateChange')](accessibility.off(type: 'screenReaderStateChange', callback?: Callback&lt;boolean&gt;))
-> 取消监听，否则可能会导致崩溃。
+> to cancel the listener before the object's lifecycle ends. Otherwise, a crash may occur.
 
 **Since:** 18
 
@@ -150,14 +153,14 @@ function on(type: 'screenReaderStateChange', callback: Callback<boolean>): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'screenReaderStateChange' | Yes | 监听的事件名，固定为‘screenReaderStateChange’，即屏幕朗读启用状态变化事件。 |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;boolean&gt; | Yes | 回调函数，在屏幕朗读启用状态变化时将状态通过此函数进行通知。返回true表示屏幕朗读功能已开启，返回false表示屏幕朗读功能已关闭。 |
+| type | 'screenReaderStateChange' | Yes | Event type, which is set to **'screenReaderStateChange'** in this API. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;boolean&gt; | Yes | Callback invoked when the enabling state of screen reader changes. The value **true** indicates that the screen reader is enabled, and the value **false** indicates that the screen reader is disabled. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
 
 ## Examples
 
@@ -176,15 +179,16 @@ accessibility.on('screenReaderStateChange', (data: boolean) => {
 function on(type: 'touchModeChange', callback: Callback<string>): void
 ```
 
-监听触摸浏览功能下的单击/双击操作模式变化事件，使用callback异步回调。
+Subscribes to the single- or double-touch event changes in touch guide mode. This API uses an asynchronous callback to return the result.
 
-> **说明：**
+> **NOTE：**
 > 
-> - 注册监听的callback参数应使用具名函数而非匿名函数，否则每次调用时会创建一个新的底层对象，引起内存泄漏问题。
+> - The callback parameter for registering a listener must use a named function instead of an anonymous function.
+> Otherwise, a new underlying object is created each time the function is called, causing memory leakage.
 > 
-> - 调用此方法后，务必在对象生命周期结束前使用
+> - After calling this method, you must use
 > [accessibility.off('touchModeChange')](accessibility.off(type: 'touchModeChange', callback?: Callback&lt;string&gt;))
-> 取消监听，否则可能会导致崩溃。
+> to cancel the listener before the object's lifecycle ends. Otherwise, a crash may occur.
 
 **Since:** 20
 
@@ -202,14 +206,14 @@ function on(type: 'touchModeChange', callback: Callback<string>): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'touchModeChange' | Yes | 监听的事件名，固定为‘touchModeChange’，即触摸浏览功能下的单击/双击操作模式变化事件。 |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;string&gt; | Yes | 回调函数，在触摸浏览功能下的单击/双击操作模式变化时将状态通过此函数进行通知。 |
+| type | 'touchModeChange' | Yes | Event type, which is set to **'touchModeChange'** in this API. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;string&gt; | Yes | Callback to be invoked when the single- or double-touch event changes. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. 3.Parameter verification failed. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. 3.Parameter verification failed. |
 
 ## Examples
 

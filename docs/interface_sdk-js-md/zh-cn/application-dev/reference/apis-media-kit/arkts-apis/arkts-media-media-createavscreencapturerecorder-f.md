@@ -1,11 +1,5 @@
 # createAVScreenCaptureRecorder
 
-## 导入模块
-
-```TypeScript
-import { media } from 'kits/@kit.MediaKit';
-```
-
 ## createAVScreenCaptureRecorder
 
 ```TypeScript
@@ -32,7 +26,7 @@ function createAVScreenCaptureRecorder(): Promise<AVScreenCaptureRecorder>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 5400101 | No memory. Return by promise. |
+| [5400101](../errorcode-media.md#5400101-内存分配失败) | No memory. Return by promise. |
 
 ## 示例
 
@@ -79,5 +73,5 @@ Creates an **AVScreenCaptureRecorder** instance. This API uses a promise to retu
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 5400101 | No memory. Return by promise. |
+| [5400101](../errorcode-media.md#5400101-内存分配失败) | No memory. Return by promise. |
 

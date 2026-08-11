@@ -1,6 +1,6 @@
 # EncryptionAlgo
 
-数据库的加密方式枚举。请使用枚举名称而非枚举值。
+Enumerates the encryption algorithms for the database. Use the enum name rather than the enum value.
 
 **Since:** 14
 
@@ -16,7 +16,7 @@
 AES_256_GCM = 0
 ```
 
-数据库使用AES_256_GCM加密。
+AES_256_GCM: Database is encrypted using AES_256_GCM.
 
 **Since:** 14
 
@@ -32,7 +32,7 @@ AES_256_GCM = 0
 AES_256_CBC = 1
 ```
 
-数据库使用AES_256_CBC加密。
+AES_256_CBC: Database is encrypted using AES_256_CBC.
 
 **Since:** 14
 
@@ -48,7 +48,7 @@ AES_256_CBC = 1
 PLAIN_TEXT = 2
 ```
 
-数据库不进行加密。
+PLAIN_TEXT: Database is unencrypted.
 
 **Since:** 22
 

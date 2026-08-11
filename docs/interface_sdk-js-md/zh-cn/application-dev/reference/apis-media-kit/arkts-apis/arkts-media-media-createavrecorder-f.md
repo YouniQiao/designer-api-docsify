@@ -1,11 +1,5 @@
 # createAVRecorder
 
-## 导入模块
-
-```TypeScript
-import { media } from 'kits/@kit.MediaKit';
-```
-
 ## createAVRecorder
 
 ```TypeScript
@@ -36,7 +30,7 @@ function createAVRecorder(callback: AsyncCallback<AVRecorder>): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 5400101 | No memory. Return by callback. |
+| [5400101](../errorcode-media.md#5400101-内存分配失败) | No memory. Return by callback. |
 
 ## 示例
 
@@ -81,7 +75,7 @@ function createAVRecorder(callback: AsyncCallback<AVRecorder | undefined>): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 5400101 | No memory. Return by callback. |
+| [5400101](../errorcode-media.md#5400101-内存分配失败) | No memory. Return by callback. |
 
 
 ## createAVRecorder
@@ -116,7 +110,7 @@ function createAVRecorder(): Promise<AVRecorder>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 5400101 | No memory. Return by promise. |
+| [5400101](../errorcode-media.md#5400101-内存分配失败) | No memory. Return by promise. |
 
 ## 示例
 
@@ -162,5 +156,5 @@ function createAVRecorder(): Promise<AVRecorder | undefined>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 5400101 | No memory. Return by promise. |
+| [5400101](../errorcode-media.md#5400101-内存分配失败) | No memory. Return by promise. |
 

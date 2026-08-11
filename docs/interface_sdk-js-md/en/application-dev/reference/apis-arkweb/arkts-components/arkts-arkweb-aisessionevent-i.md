@@ -1,6 +1,6 @@
 # AISessionEvent
 
-自定义AI会话配置对象，用于定义AI会话的生命周期回调。
+Custom AI session model integration for Web components.Users can define custom AI session behaviors via this interface.
 
 **Since:** 26.0.0
 
@@ -16,7 +16,7 @@
 onCreateAISession: OnCreateAISession
 ```
 
-AI会话创建时触发的回调函数。返回`true`跳过系统默认行为，返回`false`继续执行系统默认逻辑。
+Triggered when an AI session is created.Allows custom model initialization and result handling.Return `true` to bypass the default system behavior;return `false` to proceed with the default logic.
 
 **Since:** 26.0.0
 
@@ -34,7 +34,7 @@ AI会话创建时触发的回调函数。返回`true`跳过系统默认行为，
 onDestroyAISession: OnDestroyAISession
 ```
 
-AI会话销毁时触发的回调函数，用于清理与自定义AI模型关联的资源。
+Triggered when an AI session is destroyed.Used for cleaning up resources associated with custom AI models.
 
 **Since:** 26.0.0
 
@@ -52,7 +52,7 @@ AI会话销毁时触发的回调函数，用于清理与自定义AI模型关联�
 onExecuteAIAction: OnExecuteAIAction
 ```
 
-AI会话执行操作时触发的回调函数。
+Triggered when executing an AI session action.Enables custom implementation of AI model execution.
 
 **Since:** 26.0.0
 
@@ -70,7 +70,7 @@ AI会话执行操作时触发的回调函数。
 aiSessionType: AISessionType
 ```
 
-AI会话类型。
+The type of AI session.
 
 **Type:** [AISessionType](../arkts-apis/arkts-arkweb-web-aisessiontype-e.md)
 

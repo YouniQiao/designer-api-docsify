@@ -23,6 +23,6 @@ An object representing the relative time format in parts that can be used for cu
 
 | Type | Description |
 | --- | --- |
-| {               type: "literal"               value: string           } |  |
-| {               type: Exclude&lt;NumberFormatPartTypes, "literal"&gt;               value: string               unit: RelativeTimeFormatUnitSingular           } |  |
+| {               type: "literal"               value: string           } |  |
+| {               type: Exclude&lt;NumberFormatPartTypes, "literal"&gt;               value: string               unit: RelativeTimeFormatUnitSingular           } |  |
 

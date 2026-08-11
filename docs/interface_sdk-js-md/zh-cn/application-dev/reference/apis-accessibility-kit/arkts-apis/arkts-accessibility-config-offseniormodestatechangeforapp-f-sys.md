@@ -1,11 +1,5 @@
 # offSeniorModeStateChangeForApp（系统接口）
 
-## 导入模块
-
-```TypeScript
-import { config } from 'kits/@kit.AccessibilityKit';
-```
-
 ## offSeniorModeStateChangeForApp
 
 ```TypeScript
@@ -38,8 +32,8 @@ Unregister the observer for application's senior mode state changes.
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 201 | Permission verification failed. &lt;br&gt;The application does not have the permission required to call the API. |
-| 202 | Permission verification failed. &lt;br&gt;A non-system application calls a system API. |
+| [201](../../errorcode-universal.md#201-权限校验失败) | Permission verification failed. &lt;br&gt;The application does not have the permission required to call the API. |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed. &lt;br&gt;A non-system application calls a system API. |
 
 ## 示例
 

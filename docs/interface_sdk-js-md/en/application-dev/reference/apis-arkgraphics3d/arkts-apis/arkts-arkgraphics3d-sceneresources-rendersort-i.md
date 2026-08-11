@@ -1,6 +1,6 @@
 # RenderSort
 
-渲染排序层。在渲染槽中，层可以定义排序层顺序。可用值为0-63（0最先，63最后）。默认id值为32。典型用法：1. 将渲染排序层设置为对使用深度测试但未写入深度的对象进行渲染。2. 始终首先渲染角色和/或相机对象以剔除大部分视图。3. 对平面层进行排序。
+Describes the order in which materials are rendered, controlling the sequence of drawing in the rendering pipeline.
 
 **Since:** 20
 
@@ -16,11 +16,11 @@
 renderSortLayer?: int
 ```
 
-用于在渲染槽中对子网格进行排序的排序层.有效值为0-63.
+Rendering layer ID. A smaller value indicates an earlier rendering order.The value range is [0, 63]. The default layer ID is 32.
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
-**Default:** 32 默认渲染排序层id。
+**Default:** 32 Default render sort layer id.
 
 **Since:** 20
 
@@ -36,11 +36,11 @@ renderSortLayer?: int
 renderSortLayerOrder?: int
 ```
 
-排序层内描述精细顺序的排序层顺序.有效值为0-255.
+Rendering order of different objects within the same rendering layer. A smaller value indicates an earlier rendering order.The value range is [0, 255]. The default value is 0.
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
-**Default:** 0 默认渲染排序层顺序。
+**Default:** 0 Default render sort layer order.
 
 **Since:** 20
 

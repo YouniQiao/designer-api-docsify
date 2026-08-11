@@ -1,6 +1,6 @@
 # InsertValue
 
-定义插入的文本值信息。
+Defines the inserted text value info.
 
 **Since:** 12
 
@@ -16,7 +16,7 @@
 insertOffset: number
 ```
 
-插入的值的位置索引，从0开始。
+Position of the inserted text.
 
 **Type:** number
 
@@ -38,7 +38,7 @@ insertOffset: number
 insertValue: string
 ```
 
-插入的值。
+Content of the inserted text.
 
 **Type:** string
 

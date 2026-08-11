@@ -1,6 +1,6 @@
 # RichEditorTextSpan
 
-文本Span信息。
+Provides the text span information.
 
 **Since:** 10
 
@@ -16,7 +16,7 @@
 spanPosition: RichEditorSpanPosition
 ```
 
-Span位置。
+Span position.
 
 **Type:** [RichEditorSpanPosition](arkts-arkui-richeditorspanposition-i.md)
 
@@ -38,7 +38,7 @@ Span位置。
 textStyle?: RichEditorTextStyle
 ```
 
-文本Span样式信息。
+Text span style.
 
 **Type:** [RichEditorTextStyle](arkts-arkui-richeditortextstyle-i.md)
 
@@ -60,7 +60,7 @@ textStyle?: RichEditorTextStyle
 value: string
 ```
 
-文本Span内容。
+Text span content.
 
 **Type:** string
 

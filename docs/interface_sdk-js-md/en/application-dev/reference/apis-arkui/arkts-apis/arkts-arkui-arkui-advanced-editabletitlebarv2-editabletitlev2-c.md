@@ -1,6 +1,6 @@
 # EditableTitleV2
 
-标题配置类。
+Declaration of the title configuration.
 
 **Since:** 26.0.0
 
@@ -24,7 +24,7 @@ import { EditableSaveButtonV2, EditableTitleBarStyleV2Options, EditableTitleBarS
 constructor(options?: EditableTitleV2Options)
 ```
 
-EditableTitleV2的构造函数。
+Constructor of EditableTitleV2.
 
 **Since:** 26.0.0
 
@@ -40,7 +40,7 @@ EditableTitleV2的构造函数。
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| options | [EditableTitleV2Options](arkts-arkui-arkui-advanced-editabletitlebarv2-editabletitlev2options-i.md) | No | 标题配置选项。 |
+| options | [EditableTitleV2Options](arkts-arkui-arkui-advanced-editabletitlebarv2-editabletitlev2options-i.md) | No | The options of the title |
 
 ## mainTitle
 
@@ -48,9 +48,7 @@ EditableTitleV2的构造函数。
 public mainTitle: ResourceStr
 ```
 
-主标题内容。
-
-默认值：''，表示标题内容为空。
+Main title content.
 
 **Type:** [ResourceStr](arkts-arkui-resourcestr-t.md)
 
@@ -72,7 +70,7 @@ public mainTitle: ResourceStr
 public subTitle?: ResourceStr
 ```
 
-副标题内容。需要在标题下方显示补充说明信息时传入此参数。
+Subtitle content.
 
 **Type:** [ResourceStr](arkts-arkui-resourcestr-t.md)
 

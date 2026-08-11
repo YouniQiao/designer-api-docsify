@@ -1,6 +1,6 @@
 # RequestKeyboardReason
 
-请求键盘输入的原因。
+requestKeyboardReason of input click
 
 **Since:** 15
 
@@ -16,9 +16,7 @@
 NONE = 0
 ```
 
-表示没有特定的原因触发键盘请求。
-
-**使用场景：**默认值，不指定特定触发原因时使用。
+The request keyboard reason is NONE.
 
 **Since:** 15
 
@@ -34,9 +32,7 @@ NONE = 0
 MOUSE = 1
 ```
 
-表示键盘请求是由鼠标操作触发的。
-
-**使用场景：**用户通过鼠标点击编辑框触发键盘弹出时使用。
+The request keyboard reason is MOUSE.
 
 **Since:** 15
 
@@ -52,9 +48,7 @@ MOUSE = 1
 TOUCH = 2
 ```
 
-表示键盘请求是由触摸操作触发的。
-
-**使用场景：**用户通过触摸点击编辑框触发键盘弹出时使用。
+The request keyboard reason is TOUCH.
 
 **Since:** 15
 
@@ -70,9 +64,7 @@ TOUCH = 2
 OTHER = 20
 ```
 
-表示键盘请求是由其他原因触发的。
-
-**使用场景：**键盘弹出的触发原因不属于鼠标和触摸时使用。
+The request keyboard reason is OTHER.
 
 **Since:** 15
 

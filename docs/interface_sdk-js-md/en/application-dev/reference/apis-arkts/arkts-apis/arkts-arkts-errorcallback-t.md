@@ -4,7 +4,7 @@
 type ErrorCallback = (err: ErrorEvent) => void
 ```
 
-表示异常回调类型。
+The event handler to be called when an exception occurs during worker execution.
 
 **Since:** 18
 
@@ -20,5 +20,5 @@ type ErrorCallback = (err: ErrorEvent) => void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| err | [ErrorEvent](arkts-arkts-worker-errorevent-i.md) | Yes | 错误事件类， 表示Worker执行过程中出现的异常信息。 |
+| err | [ErrorEvent](arkts-arkts-worker-errorevent-i.md) | Yes | Error event class, which provides detailed information about the exception occurred during Worker execution. |
 

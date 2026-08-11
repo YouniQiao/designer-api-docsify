@@ -12,7 +12,7 @@ import { linkEnhance } from 'kits/@kit.DistributedServiceKit';
 function createServer(name: string): Server
 ```
 
-在服务端设备上，应用创建服务。通过start()开启后，该设备可作为服务端被其他设备连接。
+Creates a **Server** object. After **start()** is called, the device can be connected to other devices as a server.
 
 **Since:** 20
 
@@ -30,22 +30,22 @@ function createServer(name: string): Server
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| name | string | Yes | 自定义的非空字符串，标识应用的服务名，最大长度255字节。 |
+| name | string | Yes | Server** object name. The value is a string of up to 255 bytes. It cannot be empty. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [Server](../../apis-connectivity-kit/arkts-apis/arkts-connectivity-ssap-server-i.md) | 创建成功的服务对象。 |
+| [Server](../../apis-connectivity-kit/arkts-apis/arkts-connectivity-ssap-server-i.md) | Server** object created. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 32390206 | Invalid parameter. |
-| 801 | Capability not supported because the linkEnhance function has been trimmed.<br>**Applicable version:** 26.0.0 and later |
-| 32390203 | Duplicate server name. |
-| 201 | Permission denied. |
+| [32390206](../../apis-distributedservice-kit/errorcode-link-enhance.md#32390206-invalid-parameter) | Invalid parameter. |
+| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported because the linkEnhance function has been trimmed.<br>**Applicable version:** 26.0.0 and later |
+| [32390203](../../apis-distributedservice-kit/errorcode-link-enhance.md#32390203-duplicate-service-name) | Duplicate server name. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
 
 ## Examples
 

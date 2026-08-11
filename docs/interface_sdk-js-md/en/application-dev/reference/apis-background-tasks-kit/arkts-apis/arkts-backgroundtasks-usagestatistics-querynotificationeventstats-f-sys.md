@@ -16,7 +16,7 @@ function queryNotificationEventStats(
   ): void
 ```
 
-通过指定起始和结束时间，查询所有应用的通知次数，使用Callback异步回调。
+Queries app notification number within a specified period identified by the start and end time.
 
 **Since:** 9
 
@@ -34,30 +34,29 @@ function queryNotificationEventStats(
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| begin | ArkTS-Dyn: number  <br>ArkTS-Sta：long | Yes | 起始时间，单位：ms。 |
-| end | ArkTS-Dyn: number  <br>ArkTS-Sta：long | Yes | 结束时间，单位：ms。 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;DeviceEventStats&gt;&gt; | Yes | 回调函数。 当查询成功，err为undefined，data为指定起始和结束时间段内，所有应用的通知次数；否则为错误对象。 |
+| begin | ArkTS-Dyn: number  <br>ArkTS-Sta：long | Yes | Indicates the start time of the query period, in milliseconds. &lt;br&gt; Unit:ms |
+| end | ArkTS-Dyn: number  <br>ArkTS-Sta：long | Yes | Indicates the end time of the query period, in milliseconds. &lt;br&gt; Unit:ms |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;DeviceEventStats&gt;&gt; | Yes | Callback used to return the result. If the query is successful, **err** is **undefined**, and data is the {@link DeviceEventStats} object Array containing the event states data. Otherwise, **err** is an error object. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. Possible cause: 1. Mandatory parameters are left unspecified; &lt;br&gt; 2. Incorrect parameters types; 3. Parameter verification failed. |
-| 801 | Capability not supported. |
-| 201 | Permission denied. |
-| 10000001 | Memory operation failed. |
-| 202 | Not System App. |
-| 10000002 | Failed to write data into parcel. Possible reasons: 1. Invalid parameters; &lt;br&gt; 2. Failed to apply for memory. |
-| 10000003 | Failed to get system ability manager. |
-| 10000004 | Failed to access the device usage service. |
-| 10000006 | Failed to get the application information. |
-| 10000007 | Failed to get the system time. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible cause: 1. Mandatory parameters are left unspecified; &lt;br&gt; 2. Incorrect parameters types; 3. Parameter verification failed. |
+| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
+| [10000001](../../apis-backgroundtasks-kit/errorcode-DeviceUsageStatistics.md#10000001-memory-operation-failure) | Memory operation failed. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not System App. |
+| [10000002](../../apis-backgroundtasks-kit/errorcode-DeviceUsageStatistics.md#10000002-ipc-parcel-write-failure) | Failed to write data into parcel. Possible reasons: 1. Invalid parameters; &lt;br&gt; 2. Failed to apply for memory. |
+| [10000003](../../apis-backgroundtasks-kit/errorcode-DeviceUsageStatistics.md#10000003-system-service-operation-failure) | Failed to get system ability manager. |
+| [10000004](../../apis-backgroundtasks-kit/errorcode-DeviceUsageStatistics.md#10000004-ipc-failure) | Failed to access the device usage service. |
+| [10000006](../../apis-backgroundtasks-kit/errorcode-DeviceUsageStatistics.md#10000006-failed-to-obtain-application-information) | Failed to get the application information. |
+| [10000007](../../apis-backgroundtasks-kit/errorcode-DeviceUsageStatistics.md#10000007-time-operation-failure) | Failed to get the system time. |
 
 ## Examples
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
-import { usageStatistics } from '@kit.BackgroundTasksKit';
 
 usageStatistics.queryNotificationEventStats(0, 20000000000000, (err: BusinessError, res: Array<usageStatistics.DeviceEventStats>) => {
   if(err) {
@@ -76,7 +75,7 @@ usageStatistics.queryNotificationEventStats(0, 20000000000000, (err: BusinessErr
 function queryNotificationEventStats(begin: long, end: long): Promise<Array<DeviceEventStats>>
 ```
 
-通过指定起始和结束时间，查询所有应用的通知次数，使用Promise异步回调。
+Queries app notification number within a specified period identified by the start and end time.
 
 **Since:** 9
 
@@ -94,35 +93,34 @@ function queryNotificationEventStats(begin: long, end: long): Promise<Array<Devi
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| begin | ArkTS-Dyn: number  <br>ArkTS-Sta：long | Yes | 起始时间，单位：ms。 |
-| end | ArkTS-Dyn: number  <br>ArkTS-Sta：long | Yes | 结束时间，单位：ms。 |
+| begin | ArkTS-Dyn: number  <br>ArkTS-Sta：long | Yes | Indicates the start time of the query period, in milliseconds. &lt;br&gt; Unit:ms |
+| end | ArkTS-Dyn: number  <br>ArkTS-Sta：long | Yes | Indicates the end time of the query period, in milliseconds. &lt;br&gt; Unit:ms |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;Array&lt;DeviceEventStats&gt;&gt; | Promise对象。返回指定起始和结束时间段内，所有应用的通知次数。 |
+| Promise&lt;Array&lt;DeviceEventStats&gt;&gt; | the promise returned by queryNotificationEventStats. the { |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. Possible cause: 1. Mandatory parameters are left unspecified; &lt;br&gt; 2. Incorrect parameters types; 3. Parameter verification failed. |
-| 801 | Capability not supported. |
-| 201 | Permission denied. |
-| 10000001 | Memory operation failed. |
-| 202 | Not System App. |
-| 10000002 | Failed to write data into parcel. Possible reasons: 1. Invalid parameters; &lt;br&gt; 2. Failed to apply for memory. |
-| 10000003 | Failed to get system ability manager. |
-| 10000004 | Failed to access the device usage service. |
-| 10000006 | Failed to get the application information. |
-| 10000007 | Failed to get the system time. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible cause: 1. Mandatory parameters are left unspecified; &lt;br&gt; 2. Incorrect parameters types; 3. Parameter verification failed. |
+| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
+| [10000001](../../apis-backgroundtasks-kit/errorcode-DeviceUsageStatistics.md#10000001-memory-operation-failure) | Memory operation failed. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not System App. |
+| [10000002](../../apis-backgroundtasks-kit/errorcode-DeviceUsageStatistics.md#10000002-ipc-parcel-write-failure) | Failed to write data into parcel. Possible reasons: 1. Invalid parameters; &lt;br&gt; 2. Failed to apply for memory. |
+| [10000003](../../apis-backgroundtasks-kit/errorcode-DeviceUsageStatistics.md#10000003-system-service-operation-failure) | Failed to get system ability manager. |
+| [10000004](../../apis-backgroundtasks-kit/errorcode-DeviceUsageStatistics.md#10000004-ipc-failure) | Failed to access the device usage service. |
+| [10000006](../../apis-backgroundtasks-kit/errorcode-DeviceUsageStatistics.md#10000006-failed-to-obtain-application-information) | Failed to get the application information. |
+| [10000007](../../apis-backgroundtasks-kit/errorcode-DeviceUsageStatistics.md#10000007-time-operation-failure) | Failed to get the system time. |
 
 ## Examples
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
-import { usageStatistics } from '@kit.BackgroundTasksKit';
 
 usageStatistics.queryNotificationEventStats(0, 20000000000000).then((res: Array<usageStatistics.DeviceEventStats>) => {
   console.info('BUNDLE_ACTIVE queryNotificationEventStats promise success.');

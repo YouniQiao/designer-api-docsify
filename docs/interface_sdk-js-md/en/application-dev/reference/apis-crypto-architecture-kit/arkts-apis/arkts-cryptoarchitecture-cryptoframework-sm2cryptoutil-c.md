@@ -1,6 +1,6 @@
 # SM2CryptoUtil
 
-用于SM2密码学运算的工具类。
+Provides APIs for SM2 cryptographic operations.
 
 **Since:** 12
 
@@ -22,7 +22,7 @@ import { cryptoFramework } from 'kits/@kit.CryptoArchitectureKit';
 static genCipherTextBySpec(spec: SM2CipherTextSpec, mode?: string): DataBlob
 ```
 
-根据指定的SM2密文参数，生成符合国密标准的ASN.1格式SM2密文。
+Generates SM2 ciphertext in ASN.1 format.
 
 **Since:** 12
 
@@ -38,22 +38,22 @@ static genCipherTextBySpec(spec: SM2CipherTextSpec, mode?: string): DataBlob
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| spec | [SM2CipherTextSpec](arkts-cryptoarchitecture-cryptoframework-sm2ciphertextspec-i.md) | Yes | 指定的SM2密文参数。 |
-| mode | string | No | 可选的密文转换模式，可用于指定密文参数的拼接顺序，当前仅支持默认值"C1C3C2"。为空或空字符串时使用 默认值。 |
+| spec | [SM2CipherTextSpec](arkts-cryptoarchitecture-cryptoframework-sm2ciphertextspec-i.md) | Yes | SM2 ciphertext parameters. |
+| mode | string | No | Order of the SM2 parameters in the ciphertext. Currently, only C1C3C2 is supported. If this parameter is left empty or is an empty string, the default value is used. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [DataBlob](arkts-cryptoarchitecture-cryptoframework-datablob-i.md) | 返回符合国密标准的ASN.1格式的SM2密文。 |
+| [DataBlob](arkts-cryptoarchitecture-cryptoframework-datablob-i.md) | SM2 ciphertext in ASN.1 format. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | 非法入参。可能的原因： &lt;br&gt;1. 必填参数未指定； &lt;br&gt;2. 参数类型不正确； &lt;br&gt;3. 参数验证失败。 |
-| 17630001 | 密码操作错误。 |
-| 17620001 | 内存操作失败。 |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Invalid parameters. Possible causes: &lt;br&gt;1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; &lt;br&gt;3. Parameter verification failed. |
+| [17630001](../errorcode-crypto-framework.md#17630001-cryptographic-operation-error) | Crypto operation error. |
+| [17620001](../errorcode-crypto-framework.md#17620001-memory-operation-failed) | Memory operation failed. |
 
 ## getCipherTextSpec
 
@@ -61,7 +61,7 @@ static genCipherTextBySpec(spec: SM2CipherTextSpec, mode?: string): DataBlob
 static getCipherTextSpec(cipherText: DataBlob, mode?: string): SM2CipherTextSpec
 ```
 
-从符合国密标准的ASN.1格式的SM2密文中，获取具体的SM2密文参数。
+Obtains SM2 ciphertext parameters from the SM2 ciphertext in ASN.1 format.
 
 **Since:** 12
 
@@ -77,20 +77,20 @@ static getCipherTextSpec(cipherText: DataBlob, mode?: string): SM2CipherTextSpec
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| cipherText | [DataBlob](arkts-cryptoarchitecture-cryptoframework-datablob-i.md) | Yes | 符合国密标准的ASN.1格式的SM2密文。 |
-| mode | string | No | 可选的密文转换模式，可用于指定密文参数的拼接顺序，当前仅支持默认值"C1C3C2"。为空或空字符串时使用 默认值。 |
+| cipherText | [DataBlob](arkts-cryptoarchitecture-cryptoframework-datablob-i.md) | Yes | SM2 ciphertext in ASN.1 format. |
+| mode | string | No | Order of the SM2 parameters in the ciphertext. Currently, only C1C3C2 is supported. If this parameter is left empty or is an empty string, the default value is used. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [SM2CipherTextSpec](arkts-cryptoarchitecture-cryptoframework-sm2ciphertextspec-i.md) | 返回SM2密文参数。 |
+| [SM2CipherTextSpec](arkts-cryptoarchitecture-cryptoframework-sm2ciphertextspec-i.md) | SM2 ciphertext parameters obtained. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | 非法入参。可能的原因： &lt;br&gt;1. 必填参数未指定； &lt;br&gt;2. 参数类型不正确； &lt;br&gt;3. 参数验证失败。 |
-| 17630001 | 密码操作错误。 |
-| 17620001 | 内存操作失败。 |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Invalid parameters. Possible causes: &lt;br&gt;1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; &lt;br&gt;3. Parameter verification failed. |
+| [17630001](../errorcode-crypto-framework.md#17630001-cryptographic-operation-error) | Crypto operation error. |
+| [17620001](../errorcode-crypto-framework.md#17620001-memory-operation-failed) | Memory operation failed. |
 

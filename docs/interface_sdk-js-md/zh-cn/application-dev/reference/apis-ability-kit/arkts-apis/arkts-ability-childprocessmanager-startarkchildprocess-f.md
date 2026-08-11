@@ -1,11 +1,5 @@
 # startArkChildProcess
 
-## 导入模块
-
-```TypeScript
-import { childProcessManager } from 'kits/@kit.AbilityKit';
-```
-
 ## startArkChildProcess
 
 ```TypeScript
@@ -49,15 +43,15 @@ function startArkChildProcess(srcEntry: string, args: ChildProcessArgs, options?
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types; 3.Parameter verification failed. |
-| 801 | Capability not supported. |
-| 16000050 | Internal error. |
-| 16000061 | Operation not supported. |
-| 16000062 | The number of child processes exceeds the upper limit.<br>**适用版本：** 13+ |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types; 3.Parameter verification failed. |
+| [801](../../errorcode-universal.md#801-该设备不支持此api) | Capability not supported. |
+| [16000050](../errorcode-ability.md#16000050-内部错误) | Internal error. |
+| [16000061](../errorcode-ability.md#16000061-不支持的操作) | Operation not supported. |
+| [16000062](../errorcode-ability.md#16000062-子进程数量超出上限) | The number of child processes exceeds the upper limit.<br>**适用版本：** 13+ |
 
 ## 示例
 
-子进程部分：
+ArkTS-Dyn示例：
 
 ```TypeScript
 // 在module1模块的src/main/ets/process下创建DemoProcess.ets子进程类:
@@ -65,8 +59,7 @@ function startArkChildProcess(srcEntry: string, args: ChildProcessArgs, options?
 import { ChildProcess, ChildProcessArgs } from '@kit.AbilityKit';
 
 export default class DemoProcess extends ChildProcess {
-
-  onStart(args?: ChildProcessArgs) {
+  onStart(args?: ChildProcessArgs): void {
     let entryParams = args?.entryParams;
     let fd = args?.fds?.key1;
     // ..
@@ -74,11 +67,26 @@ export default class DemoProcess extends ChildProcess {
 }
 ```
 
-主进程部分，示例中的context的获取方式请参见[获取UIAbility的上下文信息](../../application-models/uiability-usage.md#获取uiability的上下文信息)：
+ArkTS-Sta示例：
+
+```TypeScript
+'use static'
+// 在module1模块的src/main/ets/process下创建StaticDemoProcess.ets子进程类:
+// module1/src/main/ets/process/StaticDemoProcess.ets
+import { ChildProcess, ChildProcessArgs } from '@kit.AbilityKit';
+
+export default class StaticDemoProcess extends ChildProcess {
+  onStart(args?: ChildProcessArgs): void {
+    console.info('StaticDemoProcess OnStart() called');
+  }
+}
+```
+
+ArkTS-Dyn示例：
 
 ```TypeScript
 // 使用childProcessManager.startArkChildProcess方法启动子进程:
-// module1/src/main/ets/tool/Tool.ets
+// module1/src/main/ets/pages/Index.ets
 import { common, ChildProcessArgs, ChildProcessOptions, childProcessManager } from '@kit.AbilityKit';
 import { fileIo } from '@kit.CoreFileKit';
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -90,39 +98,129 @@ struct Index {
   build() {
     Row() {
       Column() {
-        Text('Click')
+        Button('拉起ArkTS-Dyn类型子进程')
           .fontSize(30)
           .fontWeight(FontWeight.Bold)
           .onClick(() => {
             try {
               DemoProcess.toString(); // 这里要调用下DemoProcess类的任意方法，防止没有引用到而被构建工具优化掉
               let context = this.getUIContext().getHostContext() as common.UIAbilityContext;
-              let path = context.filesDir + "/test.txt";
+              let path = context.filesDir + '/test.txt';
               let file = fileIo.openSync(path, fileIo.OpenMode.READ_ONLY | fileIo.OpenMode.CREATE);
               let args: ChildProcessArgs = {
-                entryParams: "testParam",
+                entryParams: 'testParam',
                 fds: {
-                  "key1": file.fd
+                  'key1': file.fd
                 }
               };
               let options: ChildProcessOptions = {
                 isolationMode: false
               };
-              childProcessManager.startArkChildProcess("module1/ets/process/DemoProcess.ets", args, options)
+              childProcessManager.startArkChildProcess('module1/ets/process/DemoProcess.ets', args, options)
                 .then((pid) => {
-                  console.info(`startArkChildProcess success, pid: ${pid}`);
+                  console.info(`startChildProcess success, pid: ${pid}`);
                 })
                 .catch((err: BusinessError) => {
-                  console.error(`startArkChildProcess business error, errorCode: ${err.code}, errorMsg:${err.message}`);
+                  console.error(`startChildProcess business error, errorCode: ${err.code}, errorMsg:${err.message}`);
                 })
             } catch (err: BusinessError) {
-              console.error(`startArkChildProcess error, errorCode: ${err.code}, errorMsg:${err.message}`);
+              console.error(`startChildProcess error, errorCode: ${err.code}, errorMsg:${err.message}`);
             }
           });
+
+        Button('拉起ArkTS-Sta类型子进程')
+        .onClick(() => {
+           try {
+              let context = this.getUIContext().getHostContext() as common.UIAbilityContext;
+              let path = context.filesDir + '/test.txt';
+              let file = fileIo.openSync(path, fileIo.OpenMode.READ_ONLY | fileIo.OpenMode.CREATE);
+              let args: ChildProcessArgs = {
+                entryParams: 'testParam',
+                fds: {
+                  'key1': file.fd
+                }
+              };
+              let options: ChildProcessOptions = {
+                isolationMode: false
+              };
+              childProcessManager.startArkChildProcess('module1/src/main/ets/process/StaticDemoProcess', args, options)
+                .then((pid) => {
+                  console.info(`startChildProcess success, pid: ${pid}`);
+                })
+                .catch((err: BusinessError) => {
+                  console.error(`startChildProcess business error, errorCode: ${err.code}, errorMsg:${err.message}`);
+                })
+            } catch (err: BusinessError) {
+              console.error(`startChildProcess error, errorCode: ${err.code}, errorMsg:${err.message}`);
+            }
+        })
       }
       .width('100%')
     }
     .height('100%')
+  }
+}
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+'use static'
+// 使用childProcessManager.startArkChildProcess方法启动子进程:
+// module1/src/main/ets/pages/Index.ets
+import { Entry, Text, Column, Component, Button } from '@ohos.arkui.component';
+import { ChildProcessArgs, ChildProcessOptions, childProcessManager } from '@kit.AbilityKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+import DemoProcess from '../process/DemoProcess';
+
+@Entry
+@Component
+struct Index {
+  build() {
+    Column() {
+      Button('拉起ArkTS-Dyn类型子进程')
+        .onClick(() => {
+          try {
+            let args: ChildProcessArgs = {
+              entryParams: 'testParam',
+            };
+            let options: ChildProcessOptions = {
+              isolationMode: false
+            };
+            childProcessManager.startArkChildProcess('module1/ets/process/DemoProcess.ets', args, options)
+              .then((pid) => {
+                console.info(`startChildProcess success, pid: ${pid}`);
+              })
+              .catch((err: BusinessError) => {
+                console.error(`startChildProcess business error, errorCode: ${(err as BusinessError).code}, errorMsg:${(err as BusinessError).message}`);
+              })
+          } catch (err: BusinessError) {
+            console.error(`startChildProcess error, errorCode: ${(err as BusinessError).code}, errorMsg:${(err as BusinessError).message}`);
+          }
+        });
+
+      Button('拉起ArkTS-Sta类型子进程')
+      .onClick(() => {
+         try {
+            let args: ChildProcessArgs = {
+              entryParams: 'testParam',
+            };
+            let options: ChildProcessOptions = {
+              isolationMode: false
+            };
+            childProcessManager.startArkChildProcess('module1/src/main/ets/process/StaticDemoProcess', args, options)
+              .then((pid) => {
+                console.info(`startChildProcess success, pid: ${pid}`);
+              })
+              .catch((err: BusinessError) => {
+                console.error(`startChildProcess business error, errorCode: ${(err as BusinessError).code}, errorMsg:${(err as BusinessError).message}`);
+              })
+          } catch (err: BusinessError) {
+            console.error(`startChildProcess error, errorCode: ${(err as BusinessError).code}, errorMsg:${(err as BusinessError).message}`);
+          }
+      })
+    }
+    .width('100%')
   }
 }
 ```

@@ -12,8 +12,8 @@ import { asset } from 'kits/@kit.AssetStoreKit';
 function preQueryAsUser(userId: number, query: AssetMap): Promise<Uint8Array>
 ```
 
-在指定用户空间中查询的预处理，用于需要用户认证的关键资产。在用户认证成功后，应当随后调用[asset.queryAsUser](arkts-assetstore-asset-queryasuser-f-sys.md#queryasuser)和  
-[asset.postQueryAsUser](arkts-assetstore-asset-postqueryasuser-f-sys.md#postqueryasuser)接口。使用Promise异步回调。
+Performs preprocessing for the asset query in the specified user space. This API is used when user authentication is required for the access to an asset. After the user authentication is successful, call  
+[asset.queryAsUser](arkts-assetstore-asset-queryasuser-f-sys.md#queryasuser) and [asset.postQueryAsUser](arkts-assetstore-asset-postqueryasuser-f-sys.md#postqueryasuser). This API uses a promise to return the result.
 
 **Since:** 12
 
@@ -31,35 +31,35 @@ function preQueryAsUser(userId: number, query: AssetMap): Promise<Uint8Array>
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| userId | number | Yes | 用户ID。取值范围大于等于100。 |
-| query | [AssetMap](arkts-assetstore-asset-assetmap-t.md) | Yes | 关键资产的查询条件，如别名、访问控制属性、自定义数据等。 |
+| userId | number | Yes | the user identifier to pre-query one or more Assets. The value must be greater than or equal to 100. |
+| query | [AssetMap](arkts-assetstore-asset-assetmap-t.md) | Yes | Conditions for querying the asset, such as the asset aliases, access control attributes, and custom data. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;Uint8Array&gt; | Promise对象，返回挑战值。 &lt;br&gt;**说明：** 挑战值用于后续用户认证。 |
+| Promise&lt;Uint8Array&gt; | Promise used to return a challenge value. &lt;br&gt;**NOTE：**: The challenge value is used for subsequent user authentication. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 24000012 | Calling the OS Account service failed. |
-| 24000013 | Calling the Access Token service failed. |
-| 24000010 | IPC failed. |
-| 24000011 | Calling the Bundle Manager service failed. |
-| 24000008 | The database operation failed. |
-| 24000009 | The cryptography operation failed. |
-| 24000006 | Insufficient memory. |
-| 201 | The caller doesn't have the permission. |
-| 24000007 | The asset is corrupted. |
-| 202 | Non-system applications use system APIs. |
-| 24000005 | The screen lock status does not match. |
-| 24000002 | The asset is not found. |
-| 24000001 | The ASSET service is unavailable. |
-| 401 | Parameter error. Possible causes: 1. Incorrect parameter types. 2. Parameter verification failed. |
-| 24000016 | The cache exceeds the limit. |
-| 24000017 | The capability is not supported. |
+| [24000012](../errorcode-asset.md#24000012-account-system-service-abnormal) | Calling the OS Account service failed. |
+| [24000013](../errorcode-asset.md#24000013-access-token-service-abnormal) | Calling the Access Token service failed. |
+| [24000010](../errorcode-asset.md#24000010-ipc-failed) | IPC failed. |
+| [24000011](../errorcode-asset.md#24000011-bundle-manager-service-abnormal) | Calling the Bundle Manager service failed. |
+| [24000008](../errorcode-asset.md#24000008-database-operation-failed) | The database operation failed. |
+| [24000009](../errorcode-asset.md#24000009-cryptographic-operation-failed) | The cryptography operation failed. |
+| [24000006](../errorcode-asset.md#24000006-insufficient-memory) | Insufficient memory. |
+| [201](../../errorcode-universal.md#201-permission-denied) | The caller doesn't have the permission. |
+| [24000007](../errorcode-asset.md#24000007-asset-corrupted) | The asset is corrupted. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Non-system applications use system APIs. |
+| [24000005](../errorcode-asset.md#24000005-incorrect-screen-lock-status) | The screen lock status does not match. |
+| [24000002](../errorcode-asset.md#24000002-asset-not-found) | The asset is not found. |
+| [24000001](../errorcode-asset.md#24000001-asset-store-service-unavailable) | The ASSET service is unavailable. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Incorrect parameter types. 2. Parameter verification failed. |
+| [24000016](../errorcode-asset.md#24000016-cached-assets-reaches-the-limit) | The cache exceeds the limit. |
+| [24000017](../errorcode-asset.md#24000017-function-not-supported) | The capability is not supported. |
 
 ## Examples
 

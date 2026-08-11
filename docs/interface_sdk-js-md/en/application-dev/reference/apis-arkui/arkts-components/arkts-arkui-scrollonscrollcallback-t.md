@@ -4,7 +4,9 @@
 declare type ScrollOnScrollCallback = (xOffset: number, yOffset: number, scrollState: ScrollState) => void
 ```
 
-Scroll滚动时触发的回调。
+Represents the callback triggered when the &lt;em&gt;Scroll&lt;/em&gt; component scrolls.
+
+&lt;p&gt;&lt;strong&gt;NOTE&lt;/strong&gt;&lt;br&gt;If the &lt;em&gt;onScrollFrameBegin&lt;/em&gt; event and &lt;em&gt;scrollBy&lt;/em&gt; method are used to implement nested scrolling,set the &lt;em&gt;edgeEffect&lt;/em&gt; attribute of the scrollable child component to &lt;em&gt;None&lt;/em&gt;. For example,if a &lt;em&gt;List&lt;/em&gt; is nested in the &lt;em&gt;Scroll&lt;/em&gt; component, &lt;em&gt;edgeEffect&lt;/em&gt; of the &lt;em&gt;List&lt;/em&gt; must be set to &lt;em&gt;EdgeEffect.None&lt;/em&gt;.&lt;/p&gt;
 
 **Since:** 12
 
@@ -22,7 +24,7 @@ Scroll滚动时触发的回调。
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| xOffset | number | Yes | 相对于上一帧水平方向的偏移量，Scroll中的内容向左滚动时偏移量为正，向右滚动时偏移量为负。<br/>单位vp。 |
-| yOffset | number | Yes | 相对于上一帧竖直方向的偏移量，Scroll中的内容向上滚动时偏移量为正，向下滚动时偏移量为负。<br/>单位vp。 |
-| scrollState | [ScrollState](arkts-arkui-scrollstate-e.md) | Yes | 当前滚动状态。Idle表示空闲状态，Scroll表示滚动状态，Fling表示惯性滚动状态。 |
+| xOffset | number | Yes | Horizontal offset per frame during scrolling. A positive offset indicates scrolling to the left, and a negative offset indicates scrolling to the right. <br>Unit: vp |
+| yOffset | number | Yes | Vertical offset per frame during scrolling. A positive offset indicates scrolling upward, and a negative offset indicates scrolling downward. <br>Unit: vp |
+| scrollState | [ScrollState](arkts-arkui-scrollstate-e.md) | Yes | Current scrolling state. |
 

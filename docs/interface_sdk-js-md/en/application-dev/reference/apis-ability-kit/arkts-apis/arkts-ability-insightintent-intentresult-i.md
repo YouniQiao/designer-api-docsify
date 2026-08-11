@@ -1,6 +1,7 @@
 # IntentResult
 
-意图执行的返回结果，支持[泛型类型](../../../quick-start/introduction-to-arkts.md#泛型类和接口)。
+Defines the return result of intent execution. The  
+[generic type](../../../quick-start/introduction-to-arkts.md#generic-class-and-interface) is supported.
 
 **Since:** 20
 
@@ -22,7 +23,7 @@ import { insightIntent } from 'kits/@kit.AbilityKit';
 code: int
 ```
 
-意图执行返回的错误码，由开发者定义。
+Error code returned by the intent execution, defined by the developer.
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
@@ -44,7 +45,7 @@ code: int
 result?: T
 ```
 
-意图执行返回的结果，通常会包含需要返回给系统入口的数据。
+Result data returned by the intent execution, typically containing information to be passed back to the system entry point.
 
 **Type:** T
 

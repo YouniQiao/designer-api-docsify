@@ -1,6 +1,6 @@
 # ICustomEnvDecoratedVariable
 
-定义CustomEnv装饰变量接口。
+Define CustomEnv decoration variable interface.
 
 **Inheritance/Implementation:** ICustomEnvDecoratedVariable extends [IDecoratedImmutableVariable<T>](IDecoratedImmutableVariable<T>), [IDecoratedV2Variable<T>](IDecoratedV2Variable<T>)
 

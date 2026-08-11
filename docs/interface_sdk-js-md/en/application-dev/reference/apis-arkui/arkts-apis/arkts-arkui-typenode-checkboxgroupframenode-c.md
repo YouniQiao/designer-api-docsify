@@ -1,6 +1,6 @@
 # CheckboxGroupFrameNode
 
-定义CheckboxGroup类型的FrameNode。
+Define the CheckboxGroup type of FrameNode.
 
 **Inheritance/Implementation:** CheckboxGroupFrameNode extends [TypedFrameNode<CheckboxGroupAttribute>](TypedFrameNode<CheckboxGroupAttribute>)
 
@@ -18,7 +18,7 @@
 abstract initialize(options?: CheckboxGroupOptions): CheckboxGroupAttribute
 ```
 
-初始化CheckboxGroup类型的FrameNode。
+Initialize CheckboxGroup FrameNode.
 
 **Since:** 23
 

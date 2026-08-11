@@ -1,6 +1,6 @@
 # UserStatusFeature（系统接口）
 
-Enumerates user status detection features.
+用户状态检测特性枚举。
 
 **起始版本：** 26.0.0
 
@@ -18,7 +18,7 @@ Enumerates user status detection features.
 GESTURES_RECOGNITION = 5
 ```
 
-Gesture recognition feature (100ms reporting interval).
+手势识别特性（100ms上报间隔）。
 
 **起始版本：** 26.0.0
 
@@ -38,7 +38,7 @@ Gesture recognition feature (100ms reporting interval).
 ANTI_MISTOUCH = 6
 ```
 
-Anti-mistouch detection feature.
+防误触检测特性。
 
 **起始版本：** 26.0.0
 
@@ -58,7 +58,7 @@ Anti-mistouch detection feature.
 QUICK_GESTURES_RECOGNITION = 7
 ```
 
-Quick gesture recognition feature (20ms reporting interval).
+快捷手势识别特性（20ms上报间隔）。
 
 **起始版本：** 26.0.0
 
@@ -78,7 +78,7 @@ Quick gesture recognition feature (20ms reporting interval).
 FACE_RELATIVE_POSITION_RECOGNITION = 8
 ```
 
-Face relative position recognition feature (100ms reporting interval).
+面部相对位置识别特性（100ms上报间隔）。
 
 **起始版本：** 26.0.0
 
@@ -98,7 +98,7 @@ Face relative position recognition feature (100ms reporting interval).
 QUICK_FACE_RELATIVE_POSITION_RECOGNITION = 9
 ```
 
-Quick face relative position recognition feature (20ms reporting interval).
+快捷面部相对位置识别特性（20ms上报间隔）。
 
 **起始版本：** 26.0.0
 
@@ -118,7 +118,7 @@ Quick face relative position recognition feature (20ms reporting interval).
 HAND_GAZE_COORDINATION = 11
 ```
 
-Hand-eye coordination (attention) recognition feature.
+手眼协同（注意力）识别特性。
 
 **起始版本：** 26.0.0
 
@@ -138,7 +138,7 @@ Hand-eye coordination (attention) recognition feature.
 USER_BLOWING_STATUS = 12
 ```
 
-User blowing status detection feature.
+用户吹气状态检测特性。
 
 **起始版本：** 26.0.0
 
@@ -158,7 +158,7 @@ User blowing status detection feature.
 USER_MOOD = 13
 ```
 
-User mood detection feature.
+用户情绪检测特性。
 
 **起始版本：** 26.0.0
 
@@ -178,7 +178,7 @@ User mood detection feature.
 COMFORT_REMINDER = 15
 ```
 
-Comfort reminder detection feature.
+舒适提醒检测特性。
 
 **起始版本：** 26.0.0
 
@@ -198,7 +198,7 @@ Comfort reminder detection feature.
 ENV_SOUND = 17
 ```
 
-Environmental sound detection feature.
+环境声音检测特性。
 
 **起始版本：** 26.0.0
 
@@ -218,7 +218,7 @@ Environmental sound detection feature.
 EXT_SCREEN_ANTI_MISTOUCH = 19
 ```
 
-External screen anti-mistouch detection feature.
+外屏防误触检测特性。
 
 **起始版本：** 26.0.0
 

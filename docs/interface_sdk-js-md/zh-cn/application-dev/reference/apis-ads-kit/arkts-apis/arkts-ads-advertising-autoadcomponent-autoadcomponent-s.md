@@ -12,12 +12,6 @@
 
 **系统能力：** SystemCapability.Advertising.Ads
 
-## 导入模块
-
-```TypeScript
-import { AutoAdComponent } from 'kits/@kit.AdsKit';
-```
-
 ## build
 
 ```TypeScript

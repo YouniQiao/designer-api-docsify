@@ -12,7 +12,7 @@ import { display } from 'kits/@kit.ArkUI';
 function removeVirtualScreenBlocklist(windowIds: Array<int>): Promise<void>
 ```
 
-将窗口从禁止投屏显示的名单中移除，被移除的窗口可以在投屏时显示。仅对应用主窗或系统窗口生效。使用Promise异步回调。
+Removes windows from the list of windows that are not allowed to be displayed during casting. This API takes effect only for the main window of an application or system windows. This API uses a promise to return the result.
 
 **Since:** 18
 
@@ -28,22 +28,22 @@ function removeVirtualScreenBlocklist(windowIds: Array<int>): Promise<void>
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| windowIds | ArkTS-Dyn: Array&lt;number&gt;  <br>ArkTS-Sta：Array&lt;int&gt; | Yes | 窗口id列表，传入子窗窗口id时不生效。窗口id为大于0的整数。推荐使用 [getWindowProperties()](../../../reference/apis-arkui/arkts-apis-window-Window.md#getwindowproperties9)方法获取窗口 id属性。 |
+| windowIds | ArkTS-Dyn: Array&lt;number&gt;  <br>ArkTS-Sta：Array&lt;int&gt; | Yes | List of window IDs. If a child window ID is passed in, it will not take effect. The window ID is an integer greater than 0. You are advised to call [getWindowProperties()](@ohos.window:window.getwindowproperties) to obtain the window ID. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | 无返回结果的Promise对象。 |
+| Promise&lt;void&gt; | Promise that returns no value. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. 3. Parameter verification failed. |
-| 801 | Capability not supported. Function removeVirtualScreenBlocklist can not work correctly due to limited device capabilities. |
-| 1400003 | This display manager service works abnormally. |
-| 202 | Permission verification failed. A non-system application calls a system API. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. 3. Parameter verification failed. |
+| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. Function removeVirtualScreenBlocklist can not work correctly due to limited device capabilities. |
+| [1400003](../errorcode-display.md#1400003-abnormal-display-manager-service) | This display manager service works abnormally. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
 
 ## Examples
 
@@ -55,24 +55,22 @@ export default class EntryAbility extends UIAbility {
   // ...
   onWindowStageCreate(windowStage: window.WindowStage) {
     // ...
-    let windowId = windowStage.getMainWindowSync().getWindowProperties().id; // Obtain the window IDs.
+    let windowId = windowStage.getMainWindowSync().getWindowProperties().id;
     let windowIds = [windowId];
 
-    // Add windows to the list of windows that are not allowed to be displayed during casting.
     let promise = display.addVirtualScreenBlocklist(windowIds);
     promise.then(() => {
       console.info('Succeeded in adding virtual screen blocklist.');
     }).catch((err: BusinessError) => {
-      console.error(`Failed to add virtual screen blocklist. Code: ${err.code}, message: ${err.message}`);
-    });
+      console.error(`Failed to add virtual screen blocklist. Code: ${err.code} , message : ${err.message}`);
+    })
 
-    // Remove windows from the list of windows that are not allowed to be displayed during casting.
     promise = display.removeVirtualScreenBlocklist(windowIds);
     promise.then(() => {
       console.info('Succeeded in removing virtual screen blocklist.');
     }).catch((err: BusinessError) => {
-      console.error(`Failed to remove virtual screen blocklist. Code: ${err.code}, message: ${err.message}`);
-    });
+      console.error(`Failed to remove virtual screen blocklist. Code: ${err.code} , message: ${err.message}`);
+    })
   }
 }
 ```

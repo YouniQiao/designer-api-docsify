@@ -1,6 +1,6 @@
 # RectType
 
-窗口矩形区域坐标系类型。
+Enumerates the types of window rectangle coordinate systems.
 
 **Since:** 19
 
@@ -16,7 +16,7 @@
 RELATIVE_TO_SCREEN  = 0
 ```
 
-窗口矩形区域相对于屏幕坐标系。
+The window rectangle is relative to the screen coordinate system.
 
 **Since:** 19
 
@@ -34,7 +34,7 @@ RELATIVE_TO_SCREEN  = 0
 RELATIVE_TO_PARENT_WINDOW = 1
 ```
 
-窗口矩形区域相对于父窗口坐标系。
+The window rectangle is relative to the parent window coordinate system.
 
 **Since:** 19
 

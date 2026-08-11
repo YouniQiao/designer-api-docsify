@@ -18,12 +18,6 @@
 
 **系统接口：** 此接口为系统接口。
 
-## 导入模块
-
-```TypeScript
-import { StaticSubscriberExtensionAbility } from 'kits/@kit.BasicServicesKit';
-```
-
 ## onReceiveEvent
 
 ```TypeScript
@@ -58,7 +52,7 @@ import { commonEventManager } from '@kit.BasicServicesKit';
 class MyStaticSubscriberExtensionAbility extends StaticSubscriberExtensionAbility {
   onReceiveEvent(event: commonEventManager.CommonEventData) {
     console.info(`onReceiveEvent, event: ${JSON.stringify(event)}`);
-  }
+    }
 }
 ```
 

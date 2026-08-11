@@ -1,11 +1,5 @@
 # isApplicationRunning（系统接口）
 
-## 导入模块
-
-```TypeScript
-import { appManager } from 'kits/@kit.AbilityKit';
-```
-
 ## isApplicationRunning
 
 ```TypeScript
@@ -42,10 +36,10 @@ function isApplicationRunning(bundleName: string): Promise<boolean>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
-| 16000050 | Internal error. |
-| 201 | Permission denied. |
-| 202 | Not system application. |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| [16000050](../errorcode-ability.md#16000050-内部错误) | Internal error. |
+| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not system application. |
 
 ## 示例
 
@@ -53,12 +47,13 @@ function isApplicationRunning(bundleName: string): Promise<boolean>
 import { appManager } from '@kit.AbilityKit';
 import { BusinessError } from '@kit.BasicServicesKit';
 
-let bundleName = 'com.example.myapplication';
+let bundleName = "com.example.myapplication";
 
 appManager.isApplicationRunning(bundleName).then((data) => {
-  console.info(`The application running is: ${JSON.stringify(data)}`);
-}).catch((error: BusinessError) => {
-  console.error(`error: ${JSON.stringify(error)}`);
+  console.info(`The application running is: ${data}`);
+}).catch((e: Error) => {
+  let error = e as BusinessError;
+  console.error(`error: ${error.code} ${error.message}`);
 });
 ```
 
@@ -94,10 +89,10 @@ function isApplicationRunning(bundleName: string, callback: AsyncCallback<boolea
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
-| 16000050 | Internal error. |
-| 201 | Permission denied. |
-| 202 | Not system application. |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| [16000050](../errorcode-ability.md#16000050-内部错误) | Internal error. |
+| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not system application. |
 
 ## 示例
 

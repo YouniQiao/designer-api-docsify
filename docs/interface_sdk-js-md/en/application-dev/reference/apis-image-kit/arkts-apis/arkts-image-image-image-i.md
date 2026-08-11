@@ -1,17 +1,13 @@
 # Image
 
-Image类，供ImageReceiver和ImageCreator使用，用于传输图片对象，其实际内容由生产者决定。如相机预览流提供的Image对象存储了YUV数据、相机拍照提供的Image对象存储了JPEG文件。
+The **Image** class is used to obtain image content.
 
-调用[readNextImage](arkts-image-image-imagereceiver-i.md#readnextimage)和  
-[readLatestImage](arkts-image-image-imagereceiver-i.md#readlatestimage)接口时会返回Image实例。
+An Image instance is returned when   
+[readNextImage](arkts-image-image-imagereceiver-i.md#readnextimage) and  
+[readLatestImage](arkts-image-image-imagereceiver-i.md#readlatestimage)are called.
 
-Image的属性仅支持在创建时初始化，后续无法再修改，且其属性不对图片内容产生实际影响，请以图片生产者写入的属性为准，即以向[ImageReceiver](arkts-image-image-imagereceiver-i.md)发送图片数据的发送方实际写入的内容为准。
-
-由于图片占用内存较大，所以当Image实例使用完成后，应主动调用[release](arkts-image-image-image-i.md#release)方法及时释放内存。释放时应确保该实例的所有异步方法均执行完成，且后续不再使用该实例。
-
-> **说明：**
-> 
-> - 本Interface首批接口从API version 9开始支持。
+Image properties are initialized only during image creation and cannot be changed later. These properties do not affect the actual image content. You should always rely on the properties written by the image producer, that is, the content actually sent to the [ImageReceiver](arkts-image-image-imagereceiver-i.md) by the data source.Images occupy a large amount of memory. When you finish using an Image instance, call   
+[release](arkts-image-image-image-i.md#release) to free the memory promptly. Before releasing the instance, ensure that all asynchronous operations associated with the instance have finished and the instance is no longer needed.
 
 **Since:** 9
 
@@ -33,11 +29,12 @@ import { image } from 'kits/@kit.ImageKit';
 getBufferData(): ImageBufferData | null
 ```
 
-从图像中获取ImageBufferData。
+Obtains ImageBufferData from an image.
 
-> **注意：**
+> **NOTE：**
 > 
-> ImageBufferData中的byteBuffer是对内部缓存的浅拷贝，当Image的生命周期结束时，便不能对byteBuffer做任何操作，否则会导致未定义行为。
+> **byteBuffer** in **ImageBufferData** is a shallow copy of the internal buffer. When the lifecycle of an image
+> ends, do not perform any operations on **byteBuffer**, as this may lead to undefined behavior.
 
 **Since:** 23
 
@@ -53,7 +50,7 @@ getBufferData(): ImageBufferData | null
 
 | Type | Description |
 | --- | --- |
-| [ImageBufferData](arkts-image-image-imagebufferdata-i.md) | 获取封装图像数据缓冲区的结构体，获取不到时返回空值。 |
+| [ImageBufferData](arkts-image-image-imagebufferdata-i.md) | Struct that encapsulates the image data buffer. If no struct is obtained, **null** is returned. |
 
 ## getComponent
 
@@ -61,7 +58,7 @@ getBufferData(): ImageBufferData | null
 getComponent(componentType: ComponentType, callback: AsyncCallback<Component>): void
 ```
 
-根据图像的组件类型从图像中获取组件缓存。使用callback异步回调。
+Obtains the component buffer from the Image instance based on the color component type. This API uses an asynchronous callback to return the result.
 
 **Since:** 9
 
@@ -75,8 +72,8 @@ getComponent(componentType: ComponentType, callback: AsyncCallback<Component>): 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| componentType | [ComponentType](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-update-componenttype-e-sys.md) | Yes | 图像的组件类型（目前仅支持ComponentType:JPEG，实际返回格式由生产者决定，如相机）。 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Component&gt; | Yes | 回调函数，当返回组件缓冲区成功，err为undefined，data为获取到的组件缓冲区；否则为错误对象。 |
+| componentType | [ComponentType](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-update-componenttype-e-sys.md) | Yes | Component type. (Currently, only **ComponentType:JPEG** is supported. The actual format is determined by the producer, for example, camera.) |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Component&gt; | Yes | Callback used to return the result. If the operation is successful , **err** is **undefined** and **data** is the component buffer obtained; otherwise, **err** is an error object. |
 
 ## getComponent
 
@@ -84,7 +81,7 @@ getComponent(componentType: ComponentType, callback: AsyncCallback<Component>): 
 getComponent(componentType: ComponentType): Promise<Component>
 ```
 
-根据图像的组件类型从图像中获取组件缓存。使用Promise异步回调。
+Obtains the component buffer from the Image instance based on the color component type. This API uses a promise to return the result.
 
 **Since:** 9
 
@@ -98,13 +95,13 @@ getComponent(componentType: ComponentType): Promise<Component>
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| componentType | [ComponentType](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-update-componenttype-e-sys.md) | Yes | 图像的组件类型（目前仅支持ComponentType:JPEG，实际返回格式由生产者决定，如相机）。 |
+| componentType | [ComponentType](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-update-componenttype-e-sys.md) | Yes | Component type. (Currently, only **ComponentType:JPEG** is supported. The actual format is determined by the producer, for example, camera.) |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;Component&gt; | Promise对象，返回组件缓冲区。 |
+| Promise&lt;Component&gt; | Promise used to return the component buffer. |
 
 ## getMetadata
 
@@ -112,7 +109,7 @@ getComponent(componentType: ComponentType): Promise<Component>
 getMetadata(key: HdrMetadataKey): HdrMetadataValue | null
 ```
 
-根据HDR元数据的类型从图像中获取HDR元数据。
+Obtains the HDR metadata from an image based on the HDR metadata type.
 
 **Since:** 23
 
@@ -128,20 +125,20 @@ getMetadata(key: HdrMetadataKey): HdrMetadataValue | null
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| key | [HdrMetadataKey](arkts-image-image-hdrmetadatakey-e.md) | Yes | HDR元数据的关键字，可用于查询对应值。 |
+| key | [HdrMetadataKey](arkts-image-image-hdrmetadatakey-e.md) | Yes | HDR metadata key. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [HdrMetadataValue](arkts-image-image-hdrmetadatavalue-t.md) | 返回关键字对应的HDR元数据的值。如果图像没有HDR元数据，返回空值。 |
+| [HdrMetadataValue](arkts-image-image-hdrmetadatavalue-t.md) | Value of the HDR metadata key. If the image does not have HDR metadata, **null** is returned. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 7600206 | Invalid parameter. |
-| 7600302 | Memory copy failed. |
+| [7600206](../errorcode-image.md#7600206-invalid-parameter) | Invalid parameter. |
+| [7600302](../errorcode-image.md#7600302-memory-copy-failure) | Memory copy failed. |
 
 ## release
 
@@ -149,13 +146,13 @@ getMetadata(key: HdrMetadataKey): HdrMetadataValue | null
 release(callback: AsyncCallback<void>): void
 ```
 
-释放当前图像。使用callback异步回调。
+Releases this Image instance. This API uses an asynchronous callback to return the result.
 
-在接收另一个图像前必须先释放对应资源。
+The corresponding resources must be released before another image arrives.
 
-由于图片占用内存较大，所以当Image实例使用完成后，应主动调用该方法，及时释放内存。
+Images occupy a large amount of memory. When you finish using an Image instance, call this API to free the memory promptly.
 
-释放时应确保该实例的所有异步方法均执行完成，且后续不再使用该实例。
+Before releasing the instance, ensure that all asynchronous operations associated with the instance have finished and the instance is no longer needed.
 
 **Since:** 9
 
@@ -169,7 +166,7 @@ release(callback: AsyncCallback<void>): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | 回调函数，当图像释放成功，err为undefined，否则为错误对象。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined**; otherwise, **err** is an error object. |
 
 ## release
 
@@ -177,13 +174,13 @@ release(callback: AsyncCallback<void>): void
 release(): Promise<void>
 ```
 
-释放当前图像。使用Promise异步回调。
+Releases this Image instance. This API uses a promise to return the result.
 
-在接收另一个图像前必须先释放对应资源。
+The corresponding resources must be released before another image arrives.
 
-由于图片占用内存较大，所以当Image实例使用完成后，应主动调用该方法，及时释放内存。
+Images occupy a large amount of memory. When you finish using an Image instance, call this API to free the memory promptly.
 
-释放时应确保该实例的所有异步方法均执行完成，且后续不再使用该实例。
+Before releasing the instance, ensure that all asynchronous operations associated with the instance have finished and the instance is no longer needed.
 
 **Since:** 9
 
@@ -197,7 +194,7 @@ release(): Promise<void>
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise对象，无返回结果。 |
+| Promise&lt;void&gt; | Promise that returns no value. |
 
 ## clipRect
 
@@ -205,7 +202,7 @@ release(): Promise<void>
 clipRect: Region
 ```
 
-要裁剪的图像区域。恒等于整个图像，不支持修改。
+Image area to be cropped.
 
 **Type:** [Region](../../apis-arkgraphics2d/arkts-apis/arkts-arkgraphics2d-drawing-region-c.md)
 
@@ -223,7 +220,7 @@ clipRect: Region
 readonly colorSpace: colorSpaceManager.ColorSpace
 ```
 
-图像色彩空间，色域枚举类型。
+Color space of the image.
 
 **Type:** colorSpaceManager.ColorSpace
 
@@ -243,8 +240,8 @@ readonly colorSpace: colorSpaceManager.ColorSpace
 readonly format: int
 ```
 
-图像格式，参考  
-[OH_NativeBuffer_Format](../../../reference/apis-arkgraphics2d/capi-buffer-common-h.md#oh_nativebuffer_format)。
+Image format. For details, see   
+[OH_NativeBuffer_Format](../../../reference/apis-arkgraphics2d/c-apis/capi-buffer-common-h.md#oh_nativebuffer_format).
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
@@ -262,18 +259,17 @@ readonly format: int
 readonly size: Size
 ```
 
-图像大小。
+Image size.
 
-如果Image对象所存储的是相机预览流数据（YUV图像数据），那么获取到的size中的宽和高分别对应YUV图像的宽和高。
+If the Image object stores camera preview stream data (YUV image data), the width and height in **size**reflect the dimensions of the YUV image.
 
-如果Image对象所存储的是相机拍照流数据（JPEG图像数据），由于已是编码后的文件，size中的宽等于JPEG文件大小，高等于1。
+If the Image object stores camera capture stream data (JPEG image data), given that it is an encoded file,the width in **size** is the size of the JPEG file, while the height is set to **1**.
 
-Image对象所存储的数据是预览流还是拍照流，取决于应用将receiver中的surfaceId通过  
-[createPreviewOutput](../../apis-camera-kit/arkts-apis/arkts-camera-camera-cameramanager-i.md/arkts-camera-camera-cameramanager-i.md#createpreviewoutput)接口还是  
-[createPhotoOutput](../../apis-camera-kit/arkts-apis/arkts-camera-camera-cameramanager-i.md/arkts-camera-camera-cameramanager-i.md#createphotooutput)接口传给相机。
+The type of data stored in the Image object depends on whether the application passes the surface ID in the receiver to a previewOutput or captureOutput object of the camera.
 
-相机预览与拍照最佳实践请参考[双路预览(ArkTS)](../../../media/camera/camera-dual-channel-preview.md)与  
-[拍照实践(ArkTS)](../../../media/camera/camera-shooting-case.md)。
+For details about the best practices of camera preview and photo capture, see  
+[Dual-Channel Preview (ArkTS)](../../../media/camera/camera-dual-channel-preview.md) and  
+[Photo Capture Sample (ArkTS)](../../../media/camera/camera-shooting-case.md).
 
 **Type:** [Size](../../apis-arkui/arkts-apis/arkts-arkui-window-size-i.md)
 
@@ -291,8 +287,8 @@ Image对象所存储的数据是预览流还是拍照流，取决于应用将rec
 readonly timestamp: long
 ```
 
-图像时间戳。时间戳以纳秒为单位，通常是单调递增的。时间戳的具体含义和基准取决于图像的生产者，在相机预览/拍照场景，生产者就是相机。来自不同生产者的图像的时间戳可能有不同的含义和基准，因此可能无法进行比较。如果要获取某张照片的生成时间，可以通过  
-[getImageProperty](arkts-image-image-imagesource-i.md#getimageproperty)接口读取EXIF时间戳信息。
+Image timestamp. Timestamps, measured in nanoseconds, are usually monotonically increasing. The specific meaning and baseline of these timestamps are determined by the image producer, which is the camera in the camera preview and photo scenarios. As a result, images from different producers may carry timestamps with distinct meanings and baselines, making direct comparison between them infeasible. To obtain the generation time of a photo, you can use   
+[getImageProperty](arkts-image-image-imagesource-i.md#getimageproperty)to read the related Exif information.
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：long
 

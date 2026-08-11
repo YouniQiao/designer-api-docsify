@@ -1,6 +1,6 @@
 # AudioHapticType
 
-枚举，音振类型。
+Enumerates the audio haptic types.
 
 **Since:** 11
 
@@ -16,7 +16,7 @@
 AUDIO_HAPTIC_TYPE_AUDIO = 0
 ```
 
-音频。
+Audio.
 
 **Since:** 11
 
@@ -32,7 +32,7 @@ AUDIO_HAPTIC_TYPE_AUDIO = 0
 AUDIO_HAPTIC_TYPE_HAPTIC = 1
 ```
 
-振动。
+Haptic.
 
 **Since:** 11
 

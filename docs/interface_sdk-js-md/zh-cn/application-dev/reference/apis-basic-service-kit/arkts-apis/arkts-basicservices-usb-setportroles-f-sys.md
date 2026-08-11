@@ -1,11 +1,5 @@
 # setPortRoles（系统接口）
 
-## 导入模块
-
-```TypeScript
-import { usb } from 'kits/@kit.BasicServicesKit';
-```
-
 ## setPortRoles
 
 ```TypeScript
@@ -33,7 +27,7 @@ function setPortRoles(portId: number, powerRole: PowerRoleType, dataRole: DataRo
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | portId | number | 是 | 端口号。 |
-| powerRole | [PowerRoleType](arkts-basicservices-usb-powerroletype-e-sys.md) | 是 | 充电的角色。 |
+| powerRole | [PowerRoleType](arkts-basicservices-usbmanager-powerroletype-e-sys.md) | 是 | 充电的角色。 |
 | dataRole | [DataRoleType](arkts-basicservices-usbmanager-dataroletype-e-sys.md) | 是 | 数据传输的角色。 |
 
 **返回值：**

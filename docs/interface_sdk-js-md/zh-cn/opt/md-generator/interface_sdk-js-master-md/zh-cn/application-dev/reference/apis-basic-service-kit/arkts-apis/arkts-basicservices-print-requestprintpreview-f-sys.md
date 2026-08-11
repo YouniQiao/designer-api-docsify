@@ -1,0 +1,131 @@
+# requestPrintPreview（系统接口）
+
+## requestPrintPreview
+
+```TypeScript
+function requestPrintPreview(jobInfo: PrintJob, callback: Callback<number>): void
+```
+
+请求预览打印数据，使用callback回调。
+
+**起始版本：** 10
+
+**需要权限：** ohos.permission.MANAGE_PRINT_JOB
+
+<!--Device-print-function requestPrintPreview(jobInfo: PrintJob, callback: Callback<int>): void--><!--Device-print-function requestPrintPreview(jobInfo: PrintJob, callback: Callback<int>): void-End-->
+
+**系统能力：** SystemCapability.Print.PrintFramework
+
+**系统接口：** 此接口为系统接口。
+
+**参数：**
+
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| jobInfo | [PrintJob](arkts-basicservices-print-printjob-i.md) | 是 |
+| callback | [Callback](arkts-basicservices-base-callback-i.md)&lt;number&gt; | 是 |
+
+**错误码：**
+
+| 错误码ID |
+| --- |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
+| [201](../../errorcode-universal.md#201-权限校验失败) |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
+
+## 示例
+
+```TypeScript
+import { print } from '@kit.BasicServicesKit';
+
+let jobInfo : print.PrintJob = {
+    fdList : [44, 45], // fdList中的fd可通过fs.open等文件操作获取文件描述符
+    jobId : 'jobId_12',
+    printerId : 'printerId_32',
+    jobState : print.PrintJobState.PRINT_JOB_COMPLETED,
+    jobSubstate : print.PrintJobSubState.PRINT_JOB_COMPLETED_SUCCESS,
+    copyNumber : 1,
+    pageRange : {},
+    isSequential : false,
+    pageSize : {id : '', name : '', width : 10, height : 20},
+    isLandscape : false,
+    colorMode : print.PrintColorMode.COLOR_MODE_COLOR,
+    duplexMode : print.PrintDuplexMode.DUPLEX_MODE_NONE,
+    margin : undefined,
+    preview : undefined,
+    options : undefined
+};
+print.requestPrintPreview(jobInfo, (num : number) => {
+    console.info('requestPrintPreview success, num : ' + JSON.stringify(num));
+
+});
+```
+
+
+## requestPrintPreview
+
+```TypeScript
+function requestPrintPreview(jobInfo: PrintJob): Promise<number>
+```
+
+请求预览打印数据，使用Promise异步回调。
+
+**起始版本：** 10
+
+**需要权限：** ohos.permission.MANAGE_PRINT_JOB
+
+<!--Device-print-function requestPrintPreview(jobInfo: PrintJob): Promise<int>--><!--Device-print-function requestPrintPreview(jobInfo: PrintJob): Promise<int>-End-->
+
+**系统能力：** SystemCapability.Print.PrintFramework
+
+**系统接口：** 此接口为系统接口。
+
+**参数：**
+
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| jobInfo | [PrintJob](arkts-basicservices-print-printjob-i.md) | 是 |
+
+**返回值：**
+
+| 类型 |
+| --- |
+| Promise&lt;number&gt; |
+
+**错误码：**
+
+| 错误码ID |
+| --- |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
+| [201](../../errorcode-universal.md#201-权限校验失败) |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
+
+## 示例
+
+```TypeScript
+import { print } from '@kit.BasicServicesKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let jobInfo : print.PrintJob = {
+    fdList : [44, 45], // fdList中的fd可通过fs.open等文件操作获取文件描述符
+    jobId : 'jobId_12',
+    printerId : 'printerId_32',
+    jobState : print.PrintJobState.PRINT_JOB_COMPLETED,
+    jobSubstate : print.PrintJobSubState.PRINT_JOB_COMPLETED_SUCCESS,
+    copyNumber : 1,
+    pageRange : {},
+    isSequential : false,
+    pageSize : {id : '', name : '', width : 10, height : 20},
+    isLandscape : false,
+    colorMode : print.PrintColorMode.COLOR_MODE_COLOR,
+    duplexMode : print.PrintDuplexMode.DUPLEX_MODE_NONE,
+    margin : undefined,
+    preview : undefined,
+    options : undefined
+};
+print.requestPrintPreview(jobInfo).then((num: number) => {
+    console.info('requestPrintPreview success, num : ' + JSON.stringify(num));
+}).catch((error: BusinessError) => {
+    console.error(`Failed to request print preview. Code: ${error.code}, message: ${error.message}`);
+});
+```

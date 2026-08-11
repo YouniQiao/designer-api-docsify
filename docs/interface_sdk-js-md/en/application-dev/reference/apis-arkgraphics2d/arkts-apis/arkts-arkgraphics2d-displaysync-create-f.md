@@ -12,7 +12,7 @@ import { displaySync } from 'kits/@kit.ArkGraphics2D';
 function create(): DisplaySync
 ```
 
-创建DisplaySync对象，通过此对象设置UI自绘制内容帧率。
+Creates a **DisplaySync** object, through which you can set the frame rate of the custom UI content.
 
 **Since:** 11
 
@@ -26,7 +26,7 @@ function create(): DisplaySync
 
 | Type | Description |
 | --- | --- |
-| [DisplaySync](arkts-arkgraphics2d-displaysync-displaysync-i.md) | 返回DisplaySync对象实例，用于设置帧率范围、注册帧回调函数以及控制回调的启动和停止。 |
+| [DisplaySync](arkts-arkgraphics2d-displaysync-displaysync-i.md) | DisplaySync** object created. |
 
 ## Examples
 

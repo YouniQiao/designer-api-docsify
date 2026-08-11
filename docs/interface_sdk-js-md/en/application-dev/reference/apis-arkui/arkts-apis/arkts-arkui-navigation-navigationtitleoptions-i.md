@@ -1,6 +1,6 @@
 # NavigationTitleOptions
 
-标题栏选项。
+Indicates the options of Navigation's Titlebar.
 
 **Since:** 23
 
@@ -16,7 +16,7 @@
 backgroundBlurStyle?: BlurStyle
 ```
 
-标题栏背景模糊样式，不设置时关闭背景模糊效果。
+Background blur style.
 
 **Type:** [BlurStyle](../arkts-components/arkts-arkui-blurstyle-e.md)
 
@@ -36,8 +36,7 @@ backgroundBlurStyle?: BlurStyle
 backgroundBlurStyleOptions?: BackgroundBlurStyleOptions
 ```
 
-标题栏背景模糊选项。  
-**说明：**只在设置了backgroundBlurStyle时生效。不建议与backgroundEffect同时使用。
+Background blur style options.
 
 **Type:** [BackgroundBlurStyleOptions](../arkts-components/arkts-arkui-backgroundblurstyleoptions-i.md)
 
@@ -57,7 +56,7 @@ backgroundBlurStyleOptions?: BackgroundBlurStyleOptions
 backgroundColor?: ResourceColor
 ```
 
-标题栏背景颜色，不设置时为系统默认颜色。
+Background color.
 
 **Type:** [ResourceColor](arkts-arkui-resourcecolor-t.md)
 
@@ -77,8 +76,7 @@ backgroundColor?: ResourceColor
 backgroundEffect?: BackgroundEffectOptions
 ```
 
-设置标题栏背景属性包括：模糊半径，亮度，饱和度，颜色等。  
-**说明：**不建议与backgroundBlurStyleOptions同时使用。
+Background effect options.
 
 **Type:** [BackgroundEffectOptions](../arkts-components/arkts-arkui-backgroundeffectoptions-i.md)
 
@@ -98,7 +96,7 @@ backgroundEffect?: BackgroundEffectOptions
 barStyle?: BarStyle
 ```
 
-设置标题栏布局方式。默认值： BarStyle.STANDARD。
+Set title bar style.Default value: BarStyle.STANDARD.
 
 **Type:** [BarStyle](../arkts-components/arkts-arkui-barstyle-e.md)
 
@@ -120,7 +118,7 @@ barStyle?: BarStyle
 enableHoverMode?: boolean
 ```
 
-是否响应悬停态。使用规则：1. 需满足Navigation为全屏大小；2. 标题栏显示模式为[Free](../arkts-components/arkts-arkui-navigationtitlemode-e.md/arkts-arkui-navigationtitlemode-e.md)时或者标题栏布局方式为[STANDARD](../arkts-components/arkts-arkui-barstyle-e.md/arkts-arkui-barstyle-e.md)时，此接口设置无效。true：响应悬停态；false：不响应悬停态。默认值： false。
+Defines whether to respond to the hover mode.Default value: false.
 
 **Type:** boolean
 
@@ -142,7 +140,7 @@ enableHoverMode?: boolean
 mainTitleModifier?: TextModifier
 ```
 
-主标题属性修改器。1. 通过Modifier设置的属性会覆盖系统默认的属性（如果Modifier设置了fontSize，maxFontSize，minFontSize任一属性，则系统设置的大小相关属性不生效，以开发者的设置为准）；2. 不设该属性或者设置了异常值，则恢复系统默认设置；3. [Free](../arkts-components/arkts-arkui-navigationtitlemode-e.md/arkts-arkui-navigationtitlemode-e.md)模式下设置字体大小时，原有滑动改变标题大小的效果失效。
+Text modifier for main title.
 
 **Type:** TextModifier
 
@@ -162,7 +160,7 @@ mainTitleModifier?: TextModifier
 paddingEnd?: LengthMetrics
 ```
 
-标题栏结束端内间距。仅支持以下任一场景：1. 使用非自定义菜单，即[菜单value](NavigationAttribute.menus)为Array&lt;NavigationMenuItem&gt;；2. 没有右上角菜单，且使用非自定义标题，即[标题value](NavigationAttribute.title)类型为ResourceStr或NavigationCommonTitle。默认值： LengthMetrics.resource(`\$r('sys.float.margin_right')`)。
+Set title bar end padding.Default value: LengthMetrics.resource(`\$r('sys.float.margin_right')`).
 
 **Type:** [LengthMetrics](arkts-arkui-graphics-lengthmetrics-c.md)
 
@@ -184,7 +182,7 @@ paddingEnd?: LengthMetrics
 paddingStart?: LengthMetrics
 ```
 
-标题栏起始端内间距。仅支持以下任一场景：1. 显示返回图标，即[hideBackButton](NavigationAttribute.hideBackButton)为false；2. 使用非自定义标题，即[标题value](NavigationAttribute.title)类型为ResourceStr或NavigationCommonTitle。默认值： LengthMetrics.resource(\$r('sys.float.margin_left'))。
+Set title bar start padding.Default value: LengthMetrics.resource(\$r('sys.float.margin_left')).
 
 **Type:** [LengthMetrics](arkts-arkui-graphics-lengthmetrics-c.md)
 
@@ -206,7 +204,7 @@ paddingStart?: LengthMetrics
 scrollEffectOptions?: ScrollEffectOptions
 ```
 
-标题栏滑动模糊效果选项。
+Title scroll blur style.
 
 **Type:** [ScrollEffectOptions](../arkts-components/arkts-arkui-scrolleffectoptions-i.md)
 
@@ -226,7 +224,7 @@ scrollEffectOptions?: ScrollEffectOptions
 subTitleModifier?: TextModifier
 ```
 
-子标题属性修改器。1. 通过Modifier设置的属性会覆盖系统默认的属性（如果Modifier设置了fontSize，maxFontSize，minFontSize任一属性，则系统设置的大小相关属性不生效，以开发者的设置为准）；2. 不设该属性或者设置了异常值，则恢复系统默认设置。
+Text modifier for sub title.
 
 **Type:** TextModifier
 
@@ -237,6 +235,26 @@ subTitleModifier?: TextModifier
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-NavigationTitleOptions-subTitleModifier?: TextModifier--><!--Device-NavigationTitleOptions-subTitleModifier?: TextModifier-End-->
+
+**System capability:** SystemCapability.ArkUI.ArkUI.Full
+
+## systemMaterial
+
+```TypeScript
+systemMaterial?: uiMaterial.Material
+```
+
+Set system-styled materials for the TitleBar. Different materials have different effects, which can influence the backgroundColor, border, shadow, and other visual attributes of the titleBar.Device Behavior Differences:The effect of the same material may vary across different devices depending on their computing power.
+
+**Type:** uiMaterial.Material
+
+**Since:** 26.0.0
+
+**ArkTS mode:** ArkTS-Sta only, since version 26.0.0.
+
+**Model restriction:** This API can be used only in the stage model.
+
+<!--Device-NavigationTitleOptions-systemMaterial?: uiMaterial.Material--><!--Device-NavigationTitleOptions-systemMaterial?: uiMaterial.Material-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 

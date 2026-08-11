@@ -10,12 +10,6 @@
 
 **系统能力：** SystemCapability.Security.Cert
 
-## 导入模块
-
-```TypeScript
-import { cert } from 'kits/@kit.DeviceCertificateKit';
-```
-
 ## authorityKeyIdentifier
 
 ```TypeScript
@@ -226,7 +220,7 @@ publicKey?: DataBlob
 
 指定证书公钥，DER编码格式。
 
-**类型：** [DataBlob](../../apis-crypto-architecture-kit/arkts-apis/arkts-cryptoarchitecture-cryptoframework-datablob-i.md)
+**类型：** [DataBlob](arkts-devicecertificate-cert-datablob-i.md)
 
 **起始版本：** 11
 
@@ -366,7 +360,7 @@ x509Cert?: X509Cert
 
 指定具体的证书对象。
 
-**类型：** [X509Cert](../../apis-network-kit/arkts-apis/arkts-network-http-x509cert-t.md)
+**类型：** [X509Cert](arkts-devicecertificate-cert-x509cert-i.md)
 
 **起始版本：** 11
 

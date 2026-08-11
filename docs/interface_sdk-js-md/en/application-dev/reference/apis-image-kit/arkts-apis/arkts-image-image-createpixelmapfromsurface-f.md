@@ -39,21 +39,21 @@ Creates a PixelMap object from surface id.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 62980115 | If the image parameter invalid. |
-| 62980178 | Failed to create the PixelMap. |
-| 62980105 | Failed to get the data. |
+| [62980115](../errorcode-image.md#62980115-invalid-image-parameter) | If the image parameter invalid. |
+| [62980178](../errorcode-image.md#62980178-failure-in-creating-a-pixelmap) | Failed to create the PixelMap. |
+| [62980105](../errorcode-image.md#62980105-failure-in-obtaining-image-data) | Failed to get the data. |
 
 ## Examples
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
 
-function createPixelMapFromSurface(surfaceId: string) {
+async function CreatePixelMapFromSurface(surfaceId: string) {
   let region: image.Region = { x: 0, y: 0, size: { height: 100, width: 100 } };
-  image.createPixelMapFromSurface(surfaceId, region).then((pixelMap: image.PixelMap) => {
-    console.info('Succeeded in creating the PixelMap from Surface.');
-  }).catch((err: BusinessError) => {
-    console.error(`Failed to create the PixelMap from Surface. Code: ${err.code}, message: ${err.message}`);
+  image.createPixelMapFromSurface(surfaceId, region).then(() => {
+    console.info('Succeeded in creating pixelmap from Surface');
+  }).catch((error: BusinessError) => {
+    console.error(`Failed to create pixelmap. code is ${error.code}, message is ${error.message}`);
   });
 }
 ```
@@ -91,20 +91,20 @@ Creates a PixelMap object from surface id.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. 3.Parameter verification failed. |
-| 62980178 | Failed to create the PixelMap. |
-| 62980105 | Failed to get the data. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. 3.Parameter verification failed. |
+| [62980178](../errorcode-image.md#62980178-failure-in-creating-a-pixelmap) | Failed to create the PixelMap. |
+| [62980105](../errorcode-image.md#62980105-failure-in-obtaining-image-data) | Failed to get the data. |
 
 ## Examples
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
 
-function createPixelMapFromSurface(surfaceId: string) {
-  image.createPixelMapFromSurface(surfaceId).then((pixelMap: image.PixelMap) => {
-    console.info('Succeeded in creating the PixelMap from Surface.');
-  }).catch((err: BusinessError) => {
-    console.error(`Failed to create the PixelMap from Surface. Code: ${err.code}, message: ${err.message}`);
+async function CreatePixelMapFromSurface(surfaceId: string) {
+  image.createPixelMapFromSurface(surfaceId).then(() => {
+    console.info('Succeeded in creating pixelmap from Surface');
+  }).catch((error: BusinessError) => {
+    console.error(`Failed to create pixelmap. code is ${error.code}, message is ${error.message}`);
   });
 }
 ```

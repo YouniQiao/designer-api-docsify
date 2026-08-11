@@ -1,6 +1,6 @@
 # OnPageBeginEvent
 
-定义网页加载开始时触发的函数。
+Defines the triggered function at the begin of web page loading.
 
 **Since:** 12
 
@@ -16,7 +16,7 @@
 url: string
 ```
 
-页面的URL地址。
+The url of page.
 
 **Type:** string
 

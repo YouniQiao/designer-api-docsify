@@ -16,7 +16,7 @@ The proxy of SwiperContentAnimatedTransition.
 finishTransition(): void
 ```
 
-通知Swiper组件，此页面的自定义动画已结束。
+Notifies Swiper page the custom content transition animation is complete.
 
 **Since:** 23
 
@@ -34,7 +34,7 @@ finishTransition(): void
 index: int
 ```
 
-视窗内页面的索引。取值范围为全体整数。
+The index value of the swiper content.The value range is all integers.
 
 **Type:** int
 
@@ -54,7 +54,7 @@ index: int
 mainAxisLength: double
 ```
 
-index对应页面在主轴方向上的长度。单位：vp
+the swiper main axis length for calculating position.
 
 **Type:** double
 
@@ -74,7 +74,7 @@ index对应页面在主轴方向上的长度。单位：vp
 position: double
 ```
 
-index页面相对于Swiper主轴起始位置（selectedIndex对应页面的起始位置）的移动比例。
+the moving ratio of the swiper content from the start position of the swiper main axis.
 
 **Type:** double
 
@@ -94,7 +94,7 @@ index页面相对于Swiper主轴起始位置（selectedIndex对应页面的起�
 selectedIndex: int
 ```
 
-当前选中页面的索引。取值范围为全体整数。
+the index value of the swiper content selected before animation start.The value range is all integers.
 
 **Type:** int
 

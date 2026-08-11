@@ -1,8 +1,6 @@
 # Region
 
-表示区域信息。
-
-继承自[lang.ISendable](../../../arkts-utils/arkts-sendable.md#isendable)。
+Describes the region information.It inherits from [lang.ISendable](../../../arkts-utils/arkts-sendable.md#isendable).
 
 **Inheritance/Implementation:** Region extends [lang.ISendable](../../apis-arkts/arkts-apis/arkts-arkts-lang-isendable-i.md/arkts-arkts-lang-isendable-i.md)
 
@@ -26,7 +24,7 @@ import { sendableImage } from 'kits/@kit.ImageKit';
 size: Size
 ```
 
-区域大小。
+Region size.
 
 **Type:** [Size](../../apis-arkui/arkts-apis/arkts-arkui-window-size-i.md)
 
@@ -48,7 +46,7 @@ size: Size
 x: number
 ```
 
-区域横坐标。单位：像素。
+X coordinate, in px.
 
 **Type:** number
 
@@ -70,7 +68,7 @@ x: number
 y: number
 ```
 
-区域纵坐标。单位：像素。
+Y coordinate, in px.
 
 **Type:** number
 

@@ -5,7 +5,7 @@ type TypedArrayReduceCallback<AccType, ElementType, ArrayType> =
     (previousValue: AccType, currentValue: ElementType, currentIndex: number, array: ArrayType) => AccType
 ```
 
-ArkTS TypedArray归约函数类型。
+Describes the reduce function of the ArkTS typed array.
 
 **Since:** 12
 
@@ -21,14 +21,14 @@ ArkTS TypedArray归约函数类型。
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| previousValue | AccType | Yes | 当前遍历所累积的值。 |
-| currentValue | ElementType | Yes | 当前遍历的ArkTS TypedArray元素。 |
-| currentIndex | number | Yes | 当前遍历的ArkTS TypedArray元素索引，从0开始。 |
-| array | ArrayType | Yes | 当前遍历的ArkTS TypedArray实例。 |
+| previousValue | AccType | Yes | Accumulated value of the current traversal. |
+| currentValue | ElementType | Yes | Element that is being traversed in the ArkTS typed array. |
+| currentIndex | number | Yes | Index of the element. |
+| array | ArrayType | Yes | ArkTS typed array that is being traversed. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| AccType | 归约函数的结果。该结果会作为下一次调用TypedArrayReduceCallback时的previousValue参数。 |
+| AccType | The result of the reduction. |
 

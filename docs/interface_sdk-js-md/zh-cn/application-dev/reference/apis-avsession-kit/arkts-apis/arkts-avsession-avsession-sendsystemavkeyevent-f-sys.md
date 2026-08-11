@@ -1,11 +1,5 @@
 # sendSystemAVKeyEvent（系统接口）
 
-## 导入模块
-
-```TypeScript
-import { avSession } from 'kits/@kit.AVSessionKit';
-```
-
 ## sendSystemAVKeyEvent
 
 ```TypeScript
@@ -37,11 +31,11 @@ function sendSystemAVKeyEvent(event: KeyEvent, callback: AsyncCallback<void>): v
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 401 | parameter check failed. 1.Mandatory parameters are left unspecified. 2.Parameter verification failed. |
-| 6600101 | Session service exception. |
-| 201 | permission denied |
-| 202 | Not System App. |
-| 6600105 | Invalid session command. |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | parameter check failed. 1.Mandatory parameters are left unspecified. 2.Parameter verification failed. |
+| [6600101](../errorcode-avsession.md#6600101-会话服务端异常) | Session service exception. |
+| [201](../../errorcode-universal.md#201-权限校验失败) | permission denied |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not System App. |
+| [6600105](../errorcode-avsession.md#6600105-无效会话命令) | Invalid session command. |
 
 ## 示例
 
@@ -93,11 +87,11 @@ function sendSystemAVKeyEvent(event: KeyEvent): Promise<void>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 401 | parameter check failed. 1.Mandatory parameters are left unspecified. 2.Parameter verification failed. |
-| 6600101 | Session service exception. |
-| 201 | permission denied |
-| 202 | Not System App. |
-| 6600105 | Invalid session command. |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | parameter check failed. 1.Mandatory parameters are left unspecified. 2.Parameter verification failed. |
+| [6600101](../errorcode-avsession.md#6600101-会话服务端异常) | Session service exception. |
+| [201](../../errorcode-universal.md#201-权限校验失败) | permission denied |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not System App. |
+| [6600105](../errorcode-avsession.md#6600105-无效会话命令) | Invalid session command. |
 
 ## 示例
 

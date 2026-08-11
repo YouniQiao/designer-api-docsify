@@ -7,8 +7,8 @@
 
 | Name | Description |
 | --- | --- |
-| [NotificationSubscribeInfo](arkts-notification-notificationsubscribeinfo-notificationsubscribeinfo-i-sys.md) | 通知发布者的信息。 |
-| [PictureOptions](arkts-notification-notificationsubscribeinfo-pictureoptions-i-sys.md) | 实况通知图片配置项。 |
-| [VoiceContentOptions](arkts-notification-notificationsubscribeinfo-voicecontentoptions-i-sys.md) | 通知语音播报配置项。 |
+| [NotificationSubscribeInfo](arkts-notification-notificationsubscribeinfo-notificationsubscribeinfo-i-sys.md) | The **NotificationSubscribeInfo** module provides APIs for defining the information about the publisher for notification subscription. |
+| [PictureOptions](arkts-notification-notificationsubscribeinfo-pictureoptions-i-sys.md) | Describes the image options of the live notification. |
+| [VoiceContentOptions](arkts-notification-notificationsubscribeinfo-voicecontentoptions-i-sys.md) | Describes the configuration options for notification voice broadcast. |
 <!--DelEnd-->
 

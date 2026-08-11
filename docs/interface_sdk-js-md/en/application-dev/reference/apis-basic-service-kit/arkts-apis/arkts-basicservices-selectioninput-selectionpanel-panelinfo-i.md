@@ -1,6 +1,7 @@
 # PanelInfo
 
-划词面板属性信息，包含面板类型、位置和宽高。开发者通过panelType指定面板类型（菜单面板或主面板），通过x、y设定面板左上角坐标，通过width、height设定面板尺寸，各项属性共同定义面板的呈现形态。
+Defines attributes of the word selection panel, including its type, position, and size. You can specify the panel type (menu panel or main panel) using **panelType**, set the coordinates of the upper left corner of the panel using   
+**x** and **y**, and set the panel size using **width** and **height**. These attributes collectively define the display form of the panel.
 
 **Since:** 24
 
@@ -22,7 +23,7 @@ import { PanelInfo, PanelType } from 'kits/@kit.BasicServicesKit';
 height: int
 ```
 
-划词面板高度，单位为px。取值范围(0, +∞)，传入0或负数时面板无法正常创建。
+Height of the word selection panel, in px. The value range is (0, +∞). If **0** or a negative value is passed, the panel cannot be created.
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
@@ -42,7 +43,7 @@ height: int
 panelType: PanelType
 ```
 
-划词面板类型枚举，有两种面板可供选择，详见[PanelType](arkts-basicservices-selectioninput-selectionpanel-paneltype-e.md)。
+Word selection panel types, which include two options. For details, see [PanelType](arkts-basicservices-selectioninput-selectionpanel-paneltype-e.md).
 
 **Type:** [PanelType](arkts-basicservices-selectioninput-selectionpanel-paneltype-e.md)
 
@@ -64,7 +65,7 @@ panelType: PanelType
 width: int
 ```
 
-划词面板宽度，单位为px。取值范围(0, +∞)，传入0或负数时面板无法正常创建。
+Width of the word selection panel, in px. The value range is (0, +∞). If **0** or a negative value is passed, the panel cannot be created.
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
@@ -84,7 +85,8 @@ width: int
 x: int
 ```
 
-划词面板左上角的x轴坐标，单位为px。以主屏幕左上角为原点，x轴正方向向右。取值范围[0, +∞)，传入负数时面板无法正常创建。
+X-coordinate of the upper left corner of the word selection panel, in px. The upper left corner of the main screen is the origin, and the positive direction of the X axis is rightward. The value range is   
+[0, +∞). If a negative value is passed, the panel cannot be created.
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
@@ -104,7 +106,8 @@ x: int
 y: int
 ```
 
-划词面板左上角的y轴坐标，单位为px。以主屏幕左上角为原点，y轴正方向向下。取值范围[0, +∞)，传入负数时面板无法正常创建。
+Y-coordinate of the upper left corner of the word selection panel, in px. The upper left corner of the main screen is the origin, and the positive direction of the Y axis is downward. The value range is   
+[0, +∞). If a negative value is passed, the panel cannot be created.
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 

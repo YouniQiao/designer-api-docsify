@@ -1,6 +1,6 @@
 # InputType
 
-单行文本输入框类型。
+Declare the type of input box
 
 **Since:** 23
 
@@ -16,7 +16,7 @@
 SCREEN_LOCK_PASSWORD = 9
 ```
 
-锁屏应用密码输入模式。支持输入数字、字母、下划线、空格、特殊字符。密码显示小眼睛图标并且默认会将文字变成圆点，特定设备上输入文字直接显示为圆点。密码输入模式不支持下划线样式。
+Screen Lock Password entry mode.
 
 **Since:** 23
 

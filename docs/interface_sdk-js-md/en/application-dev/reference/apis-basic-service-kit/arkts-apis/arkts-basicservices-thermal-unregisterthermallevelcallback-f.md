@@ -12,7 +12,7 @@ import { thermal } from 'kits/@kit.BasicServicesKit';
 function unregisterThermalLevelCallback(callback?: Callback<void>): void
 ```
 
-取消订阅热档位变化时的回调提醒。使用callback异步回调。
+Unregisters from the thermal level changes. This API uses an asynchronous callback to return the result.
 
 **Since:** 9
 
@@ -26,13 +26,13 @@ function unregisterThermalLevelCallback(callback?: Callback<void>): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](arkts-basicservices-base-callback-i.md)&lt;void&gt; | No | 可选参数，回调函数，无返回值。 |
+| callback | [Callback](arkts-basicservices-base-callback-i.md)&lt;void&gt; | No | (Optional) Callback that returns no value. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1. Incorrect parameter types; |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Incorrect parameter types; |
 
 ## Examples
 

@@ -1,6 +1,6 @@
 # HiRetrievalConfig
 
-应用灰度活动配置。
+HiRetrieval functionality config.
 
 **Since:** 26.0.0
 
@@ -22,7 +22,7 @@ import { hiRetrieval } from 'kits/@kit.PerformanceAnalysisKit';
 deviceModel: string
 ```
 
-设备型号参数，用于标识具体设备型号（具体值由开发者根据业务需求定义）。参数值由开发者自定义，无格式和字符类型限制，最长支持128个字符，超出部分将被截断。这些参数将作为算法输入，影响灰度圈选策略。
+Custom device model set by developers. No restrictions on format or character types,maximum length is 128 characters and excess characters will be truncated.
 
 **Type:** string
 
@@ -42,7 +42,7 @@ deviceModel: string
 deviceType: string
 ```
 
-设备类型参数，用于标识设备分类特征（具体值由开发者根据业务需求定义）。参数值由开发者自定义，无格式和字符类型限制，最长支持128个字符，超出部分将被截断。这些参数将作为算法输入，影响灰度圈选策略。
+Custom device type set by developers. No restrictions on format or character types,maximum length is 128 characters and excess characters will be truncated.
 
 **Type:** string
 
@@ -62,7 +62,7 @@ deviceType: string
 userType: string
 ```
 
-用户类型参数，用于标识用户群体特征，如'newUser'、'vipUser'等。参数值由开发者自定义，无格式和字符类型限制，最长支持128个字符，超出部分将被截断。这些参数将作为算法输入，影响灰度圈选策略。
+Custom user type set by developers. No restrictions on format or character types,maximum length is 128 characters and excess characters will be truncated.
 
 **Type:** string
 

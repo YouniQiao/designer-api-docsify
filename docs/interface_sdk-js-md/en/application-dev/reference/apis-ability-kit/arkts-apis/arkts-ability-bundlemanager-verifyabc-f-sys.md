@@ -12,7 +12,7 @@ import { bundleManager } from 'kits/@kit.AbilityKit';
 function verifyAbc(abcPaths: Array<string>, deleteOriginalFiles: boolean, callback: AsyncCallback<void>): void
 ```
 
-根据给定的abcPaths和deleteOriginalFiles校验.abc文件。使用callback异步回调。
+Verifies an .abc file. This API uses an asynchronous callback to return the result.
 
 **Since:** 11
 
@@ -30,18 +30,18 @@ function verifyAbc(abcPaths: Array<string>, deleteOriginalFiles: boolean, callba
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| abcPaths | Array&lt;string&gt; | Yes | .abc文件路径。 |
-| deleteOriginalFiles | boolean | Yes | 是否删除.abc文件，true删除，false不删除。 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md/arkts-basicservices-base-asynccallback-i.md)，当获取成功时，err为undefined；否则为错 误对象。 |
+| abcPaths | Array&lt;string&gt; | Yes | Path of the .abc file. |
+| deleteOriginalFiles | boolean | Yes | Whether to delete the .abc file. **true** to delete, **false** otherwise. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md/arkts-basicservices-base-asynccallback-i.md) used to return the result. If the operation is successful, **err** is **null**. Otherwise, **err** is an error object. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types. |
-| 17700201 | Failed to verify the abc file. |
-| 201 | Permission denied. |
-| 202 | Permission denied, non-system app called system api.<br>**Applicable version:** 12 and later |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types. |
+| [17700201](../errorcode-bundle.md#17700201-abc-file-verification-failure) | Failed to verify the abc file. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission denied, non-system app called system api.<br>**Applicable version:** 12 and later |
 
 ## Examples
 
@@ -73,7 +73,7 @@ try {
 function verifyAbc(abcPaths: Array<string>, deleteOriginalFiles: boolean): Promise<void>
 ```
 
-根据给定的abcPaths和deleteOriginalFiles校验.abc文件。使用Promise异步回调。
+Verifies an .abc file. This API uses a promise to return the result.
 
 **Since:** 11
 
@@ -91,23 +91,23 @@ function verifyAbc(abcPaths: Array<string>, deleteOriginalFiles: boolean): Promi
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| abcPaths | Array&lt;string&gt; | Yes | .abc文件路径。 |
-| deleteOriginalFiles | boolean | Yes | 是否删除.abc文件，true删除，false不删除。 |
+| abcPaths | Array&lt;string&gt; | Yes | Path of the .abc file. |
+| deleteOriginalFiles | boolean | Yes | Whether to delete the .abc file. **true** to delete, **false** otherwise. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise对象，无返回结果。 |
+| Promise&lt;void&gt; | Promise that returns no value. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types. |
-| 17700201 | Failed to verify the abc file. |
-| 201 | Permission denied. |
-| 202 | Permission denied, non-system app called system api.<br>**Applicable version:** 12 and later |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types. |
+| [17700201](../errorcode-bundle.md#17700201-abc-file-verification-failure) | Failed to verify the abc file. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission denied, non-system app called system api.<br>**Applicable version:** 12 and later |
 
 ## Examples
 

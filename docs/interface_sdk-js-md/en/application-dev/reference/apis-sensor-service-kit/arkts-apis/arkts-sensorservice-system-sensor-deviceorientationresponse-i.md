@@ -1,6 +1,6 @@
 # DeviceOrientationResponse
 
-设备方向传感器数据变化后的回调函数的响应对象，包含设备方向的三个旋转角度数据。
+Defines a **DeviceOrientationResponse** object.
 
 **Since:** 6
 
@@ -26,7 +26,7 @@ import { OnBodyStateResponse, subscribeAccelerometerOptions, ProximityResponse, 
 alpha: number
 ```
 
-当设备坐标X/Y和地球X/Y重合时，绕着Z轴转动的夹角。单位：度（°）。取值范围：[0, 360)。
+Rotation angle around the Z axis when the X/Y axis of the device coincides with the X/Y axis of the earth.
 
 **Type:** number
 
@@ -50,7 +50,7 @@ alpha: number
 beta: number
 ```
 
-当设备坐标Y/Z和地球Y/Z重合时，绕着X轴转动的夹角。单位：度（°）。取值范围：[-180, 180)。
+Rotation angle around the X axis when the Y/Z axis of the device coincides with the Y/Z axis of the earth.
 
 **Type:** number
 
@@ -74,7 +74,7 @@ beta: number
 gamma: number
 ```
 
-当设备X/Z和地球X/Z重合时，绕着Y轴转动的夹角。单位：度（°）。取值范围：[-90, 90)。
+Rotation angle around the Y axis when the X/Z axis of the device coincides with the X/Z axis of the earth.
 
 **Type:** number
 

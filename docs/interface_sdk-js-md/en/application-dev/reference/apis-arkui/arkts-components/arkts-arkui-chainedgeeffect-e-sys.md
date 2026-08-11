@@ -1,6 +1,6 @@
 # ChainEdgeEffect (System API)
 
-设置链式动效的边缘效果，用于决定列表滚动到边缘后继续拖动时列表项间距的变化方式。
+Declare edge effect of chain animation.
 
 **Since:** 10
 
@@ -18,9 +18,7 @@
 DEFAULT
 ```
 
-默认效果，列表滚动到边缘以后继续拖动，拖拽方向上的列表项间距缩小，
-
-拖拽反方向上的列表项间距扩大，适用于需要方向性拉伸、回弹反馈的场景。
+Default edge effect. Compress the space in the drag direction and stretch the space in the opposite drag direction.
 
 **Since:** 10
 
@@ -40,7 +38,7 @@ DEFAULT
 STRETCH
 ```
 
-列表滚动到边缘以后继续拖动，所有列表项间距扩大，适用于需要所有列表项同步拉伸反馈的场景。
+Stretch all space.
 
 **Since:** 10
 

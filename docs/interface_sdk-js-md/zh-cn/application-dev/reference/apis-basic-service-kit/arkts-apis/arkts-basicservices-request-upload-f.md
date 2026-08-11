@@ -1,11 +1,5 @@
 # upload
 
-## 导入模块
-
-```TypeScript
-import { request } from 'kits/@kit.BasicServicesKit';
-```
-
 ## upload
 
 ```TypeScript
@@ -41,7 +35,7 @@ function upload(config: UploadConfig, callback: AsyncCallback<UploadTask>): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 201 | The permissions check fails. |
+| [201](../../errorcode-universal.md#201-权限校验失败) | The permissions check fails. |
 
 ## 示例
 
@@ -104,7 +98,7 @@ function upload(config: UploadConfig): Promise<UploadTask>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 201 | The permissions check fails. |
+| [201](../../errorcode-universal.md#201-权限校验失败) | The permissions check fails. |
 
 ## 示例
 

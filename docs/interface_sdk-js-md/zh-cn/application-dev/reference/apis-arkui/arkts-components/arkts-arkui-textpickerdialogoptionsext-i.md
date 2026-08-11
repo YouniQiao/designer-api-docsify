@@ -296,7 +296,7 @@ backgroundEffect?: BackgroundEffectOptions
 > 未设置时不生效，此时弹窗背景模糊效果由backgroundBlurStyle决定；设置后将覆盖backgroundBlurStyle的效果。从API版本26.0.0开始，
 > 设置systemMaterial后backgroundEffect与backgroundBlurStyle均不生效。
 
-**类型：** [BackgroundEffectOptions](arkts-arkui-backgroundeffectoptions-i.md)
+**类型：** [BackgroundEffectOptions](../arkts-apis/arkts-arkui-common-backgroundeffectoptions-i.md)
 
 **起始版本：** 20
 
@@ -613,7 +613,7 @@ offset?: Offset
 
 默认值：{ dx: 0 , dy: 0 }
 
-**类型：** [Offset](../arkts-apis/arkts-arkui-componentutils-offset-i.md)
+**类型：** [Offset](../arkts-apis/arkts-arkui-units-offset-i.md)
 
 **起始版本：** 20
 

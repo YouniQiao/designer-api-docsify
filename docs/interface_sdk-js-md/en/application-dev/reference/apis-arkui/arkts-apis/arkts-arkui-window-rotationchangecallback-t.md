@@ -4,10 +4,9 @@
 type RotationChangeCallback<T, U> = (info: T) => U
 ```
 
-旋转事件通知通用回调函数。
+Describes a generic callback function for rotation event notifications.
 
-开发者在使用时，回调函数参数类型为[RotationChangeInfo](arkts-arkui-window-rotationchangeinfo-i.md)，返回值类型为  
-[RotationChangeResult](arkts-arkui-window-rotationchangeresult-i.md) \| void。
+In this callback function, the parameter type is [RotationChangeInfo](arkts-arkui-window-rotationchangeinfo-i.md), and the return value type is [RotationChangeResult](arkts-arkui-window-rotationchangeresult-i.md) \| void.
 
 **Since:** 19
 
@@ -23,11 +22,11 @@ type RotationChangeCallback<T, U> = (info: T) => U
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| info | T | Yes | 回调函数调用时系统传入[RotationChangeInfo](arkts-arkui-window-rotationchangeinfo-i.md)类型的参数。 |
+| info | T | Yes | Parameter of type [RotationChangeInfo](arkts-arkui-window-rotationchangeinfo-i.md) passed by the system when the callback function is called. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| U | 回调函数需要返回[RotationChangeResult]{ |
+| U | Value of type [RotationChangeResult]{ |
 

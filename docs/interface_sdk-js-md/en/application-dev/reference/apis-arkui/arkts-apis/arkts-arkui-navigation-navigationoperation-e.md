@@ -1,6 +1,6 @@
 # NavigationOperation
 
-页面跳转类型。
+Defines the operation of current navigation transition.
 
 **Since:** 23
 
@@ -16,7 +16,7 @@
 PUSH = 1
 ```
 
-本次转场为页面进场。
+Push operation of navigation transition.
 
 **Since:** 23
 
@@ -34,7 +34,7 @@ PUSH = 1
 POP = 2
 ```
 
-本次转场为页面退场。
+Pop operation of navigation transition.
 
 **Since:** 23
 
@@ -52,7 +52,7 @@ POP = 2
 REPLACE = 3
 ```
 
-本次转场为页面替换。
+Replace operation of navigation transition.
 
 **Since:** 23
 

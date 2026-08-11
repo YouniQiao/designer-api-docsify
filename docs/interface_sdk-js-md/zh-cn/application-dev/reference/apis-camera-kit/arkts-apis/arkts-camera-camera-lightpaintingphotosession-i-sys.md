@@ -15,12 +15,6 @@ LightPaintingPhotoSession extends Session, Flash, Focus, Zoom, ColorEffect Imple
 
 **系统接口：** 此接口为系统接口。
 
-## 导入模块
-
-```TypeScript
-import { camera } from 'kits/@kit.CameraKit';
-```
-
 ## getLightPaintingType
 
 ```TypeScript
@@ -49,8 +43,8 @@ Obtains the type of light painting shutter mode in use.
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 7400103 | Session not config. |
-| 202 | Not System Application. |
+| [7400103](../errorcode-camera.md#7400103-会话未配置) | Session not config. |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not System Application. |
 
 ## 示例
 
@@ -89,8 +83,8 @@ Obtains the supported types of light painting shutter mode.
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 7400103 | Session not config. |
-| 202 | Not System Application. |
+| [7400103](../errorcode-camera.md#7400103-会话未配置) | Session not config. |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not System Application. |
 
 ## 示例
 
@@ -130,7 +124,7 @@ Unsubscribes from HighResolutionPhotoSession error events.
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 202 | Not System Application. |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not System Application. |
 
 ## 示例
 
@@ -169,7 +163,7 @@ Unsubscribes from focus state change events.
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 202 | Not System Application. |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not System Application. |
 
 ## 示例
 
@@ -208,7 +202,7 @@ Unsubscribes from smooth zoom state change events.
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 202 | Not System Application. |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not System Application. |
 
 ## 示例
 
@@ -246,7 +240,7 @@ Unsubscribes from error events.
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 202 | Not System Application. |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not System Application. |
 
 ## offFocusStateChange
 
@@ -276,7 +270,7 @@ Unsubscribes from focus state change event callback.
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 202 | Not System Application. |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not System Application. |
 
 ## offSmoothZoomInfoAvailable
 
@@ -306,7 +300,7 @@ Unsubscribes from zoom info event callback.
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 202 | Not System Application. |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not System Application. |
 
 ## on('error')
 
@@ -337,7 +331,7 @@ Subscribes to HighResolutionPhotoSession error events. This API uses an asynchro
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 202 | Not System Application. |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not System Application. |
 
 ## 示例
 
@@ -382,7 +376,7 @@ Subscribes to focus state change events. This API uses an asynchronous callback 
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 202 | Not System Application. |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not System Application. |
 
 ## 示例
 
@@ -431,7 +425,7 @@ Subscribes to smooth zoom state change events. This API uses an asynchronous cal
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 202 | Not System Application. |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not System Application. |
 
 ## 示例
 
@@ -479,7 +473,7 @@ Subscribes to error events.
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 202 | Not System Application. |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not System Application. |
 
 ## onFocusStateChange
 
@@ -509,7 +503,7 @@ Subscribes focus state change event callback.
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 202 | Not System Application. |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not System Application. |
 
 ## onSmoothZoomInfoAvailable
 
@@ -539,7 +533,7 @@ Subscribes zoom info event callback.
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 202 | Not System Application. |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not System Application. |
 
 ## setLightPaintingType
 
@@ -569,9 +563,9 @@ Sets the type of light painting shutter mode.
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 7400101 | Parameter missing or parameter type incorrect. |
-| 7400103 | Session not config. |
-| 202 | Not System Application. |
+| [7400101](../errorcode-camera.md#7400101-无效入参) | Parameter missing or parameter type incorrect. |
+| [7400103](../errorcode-camera.md#7400103-会话未配置) | Session not config. |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not System Application. |
 
 ## 示例
 

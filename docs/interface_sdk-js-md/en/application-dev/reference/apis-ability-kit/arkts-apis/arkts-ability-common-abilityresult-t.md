@@ -4,7 +4,7 @@
 export type AbilityResult = _AbilityResult
 ```
 
-定义Ability被拉起并退出后返回的结果码和数据。
+Defines the result code and data returned when a started ability is terminated.
 
 **Since:** 9
 

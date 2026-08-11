@@ -1,6 +1,6 @@
 # NavDestinationSwitchInfo
 
-Navigation组件页面切换的信息。
+NavDestination switch info
 
 **Since:** 23
 
@@ -22,7 +22,7 @@ import { uiObserver } from 'kits/@kit.ArkUI';
 context: UIAbilityContext | UIContext
 ```
 
-触发页面切换的Navigation对应的上下文信息。
+The context of the navigation operation.
 
 **Type:** [UIAbilityContext](../../apis-ability-kit/arkts-apis/arkts-ability-uiabilitycontext-c.md) \| UIContext
 

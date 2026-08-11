@@ -12,12 +12,6 @@
 
 **系统接口：** 此接口为系统接口。
 
-## 导入模块
-
-```TypeScript
-import { osAccount } from 'kits/@kit.BasicServicesKit';
-```
-
 ## businessParams
 
 ```TypeScript
@@ -26,7 +20,7 @@ businessParams: Record<string, Object>
 
 业务参数，由业务方根据请求协议自定义。
 
-**类型：** [Record](../../apis-default/arkts-apis/arkts-record-t.md)&lt;string, Object&gt;
+**类型：** Record&lt;string, Object&gt;
 
 **起始版本：** 10
 

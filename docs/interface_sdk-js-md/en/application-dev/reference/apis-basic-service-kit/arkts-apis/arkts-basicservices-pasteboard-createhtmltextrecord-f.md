@@ -12,7 +12,7 @@ import { pasteboard } from 'kits/@kit.BasicServicesKit';
 function createHtmlTextRecord(htmlText: string): PasteDataRecord
 ```
 
-创建一条HTML内容的条目。
+Creates a **PasteDataRecord** object of the HTML text type.
 
 **Since:** 7
 
@@ -30,13 +30,13 @@ function createHtmlTextRecord(htmlText: string): PasteDataRecord
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| htmlText | string | Yes | HTML内容，需符合标准HTML格式。 |
+| htmlText | string | Yes | HTML content. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [PasteDataRecord](arkts-basicservices-pasteboard-pastedatarecord-i.md) | 一条新建的HTML内容条目。 |
+| [PasteDataRecord](arkts-basicservices-pasteboard-pastedatarecord-i.md) | PasteDataRecord** object of the HTML text type. |
 
 ## Examples
 

@@ -1,20 +1,6 @@
 # NavPathStack
 
-Navigation导航控制器，以栈的数据结构管理Navigation中所有的子页面，并提供栈操作的方法用于控制Navigation中子页面的切换。
-
-从API version 12开始，NavPathStack允许被继承，派生类对象可以替代基类NavPathStack对象使用。使用示例参见  
-[示例10](../../../reference/apis-arkui/arkui-ts/ts-basic-components-navigation copy.md#示例10定义导航控制器派生类)。
-
-> **说明：**
-> 
-> 1.连续调用多个导航控制器操作方法时，中间过程会被忽略，显示最终的栈操作结果。
-
-> 例如：在Page1页面先pop再push一个Page1，系统会认为操作前和操作后的结果一致而不进行任何操作，如果需要强行push一个Page1实例，可以设置
-> [NavigationOption](../arkts-components/arkts-arkui-navigationoptions-i.md/arkts-arkui-navigationoptions-i.md)中的launchMode属性值为LaunchMode.NEW_INSTANCE模式。
-> 
-> 2.不建议开发者通过监听页面生命周期的方式管理自己的导航控制器。
-> 
-> 3.在应用处于后台状态下，调用NavPathStack的栈操作方法，会在应用再次回到前台状态时触发刷新。
+Indicates the information of NavDestinations. Providers methods for controlling destination page in the stack
 
 **Since:** 23
 
@@ -30,7 +16,7 @@ Navigation导航控制器，以栈的数据结构管理Navigation中所有的子
 clear(animated?: boolean): void
 ```
 
-清除栈中所有页面。
+Clears the stack.
 
 **Since:** 23
 
@@ -46,7 +32,7 @@ clear(animated?: boolean): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| animated | boolean | No | 是否支持转场动画。&lt;br/&gt;true：支持转场动画；false：不支持转场动画。&lt;br/&gt;默认值：true |
+| animated | boolean | No | Indicates whether the transition is animated. |
 
 ## constructor
 
@@ -54,7 +40,7 @@ clear(animated?: boolean): void
 constructor()
 ```
 
-创建NavPathStack对象。
+Creates an instance of NavPathStack.
 
 **Since:** 23
 
@@ -72,7 +58,7 @@ constructor()
 disableAnimation(value: boolean): void
 ```
 
-关闭（true）或打开（false）当前Navigation中所有转场动画。
+disable or enable all transition animation in this navigation stack.
 
 **Since:** 23
 
@@ -88,7 +74,7 @@ disableAnimation(value: boolean): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | boolean | Yes | 是否关闭转场动画，&lt;br/&gt;默认值：false&lt;br/&gt;true：关闭转场动画。&lt;br/&gt;false：不关闭转场动画。 |
+| value | boolean | Yes | Indicates whether the transition is animated. |
 
 ## getAllPathName
 
@@ -96,7 +82,7 @@ disableAnimation(value: boolean): void
 getAllPathName(): Array<string>
 ```
 
-获取栈中所有NavDestination页面的名称。
+Obtains all the NavDestination name in the stack.
 
 **Since:** 23
 
@@ -112,7 +98,7 @@ getAllPathName(): Array<string>
 
 | Type | Description |
 | --- | --- |
-| Array&lt;string&gt; | 返回栈中所有NavDestination页面的名称。 |
+| Array&lt;string&gt; | Returns all the NavDestination name in the stack; |
 
 ## getIndexByName
 
@@ -120,7 +106,7 @@ getAllPathName(): Array<string>
 getIndexByName(name: string): Array<int>
 ```
 
-获取全部名为name的NavDestination页面的位置索引。
+Obtains the index of the specified NavDestination.
 
 **Since:** 23
 
@@ -136,13 +122,13 @@ getIndexByName(name: string): Array<int>
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| name | string | Yes | NavDestination页面名称。 |
+| name | string | Yes | Indicates the name of the NavDestination. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Array&lt;int&gt; | 返回全部名为name的NavDestination页面的位置索引。 当路由栈中不存在此name，返回空数组。索引取值范围为[0, 路由栈大小-1] |
+| Array&lt;int&gt; | Returns the index of all the NavDestinations. |
 
 ## getParamByIndex
 
@@ -150,7 +136,7 @@ getIndexByName(name: string): Array<int>
 getParamByIndex(index: int): Object | null | undefined
 ```
 
-获取index指定的NavDestination页面的参数信息。
+Obtains the param of the specified NavDestination.
 
 **Since:** 23
 
@@ -166,7 +152,7 @@ getParamByIndex(index: int): Object | null | undefined
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| index | int | Yes | NavDestination页面的位置索引。 索引值从0开始。 |
+| index | int | Yes | Indicates the index of the NavDestination. |
 
 **Return value:**
 
@@ -180,7 +166,7 @@ getParamByIndex(index: int): Object | null | undefined
 getParamByName(name: string): Array<Object | null | undefined>
 ```
 
-获取所有名为name的NavDestination页面的参数信息，按页面索引从小到大排序。
+Obtains the param of the specified NavDestination.
 
 **Since:** 23
 
@@ -196,7 +182,7 @@ getParamByName(name: string): Array<Object | null | undefined>
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| name | string | Yes | NavDestination页面名称。 |
+| name | string | Yes | Indicates the name of the NavDestination. |
 
 **Return value:**
 
@@ -210,9 +196,7 @@ getParamByName(name: string): Array<Object | null | undefined>
 getParent(): NavPathStack | null
 ```
 
-获取父NavPathStack。
-
-当出现Navigation嵌套Navigation的情况时（可以是直接嵌套，也可以是间接嵌套），内部Navigation的NavPathStack能够获取到外层Navigation的NavPathStack。
+Obtains the parent of the current stack.
 
 **Since:** 23
 
@@ -236,7 +220,7 @@ getParent(): NavPathStack | null
 getPathStack(): Array<NavPathInfo>
 ```
 
-获取当前路由栈中的路由页面信息数组。
+Get the NavPathInfo array.
 
 **Since:** 23
 
@@ -252,7 +236,7 @@ getPathStack(): Array<NavPathInfo>
 
 | Type | Description |
 | --- | --- |
-| Array&lt;NavPathInfo&gt; | 当前路由栈中的路由页面信息数组。 |
+| Array&lt;NavPathInfo&gt; | The NavPathInfo array. |
 
 ## moveIndexToTop
 
@@ -260,7 +244,7 @@ getPathStack(): Array<NavPathInfo>
 moveIndexToTop(index: int, animated?: boolean): void
 ```
 
-将index指定的NavDestination页面移到栈顶。
+Moves the specified NavDestination to stack top.
 
 **Since:** 23
 
@@ -276,8 +260,8 @@ moveIndexToTop(index: int, animated?: boolean): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| index | int | Yes | NavDestination页面的位置索引。索引值从0开始。 |
-| animated | boolean | No | 是否支持转场动画。&lt;br/&gt;true：支持转场动画；false：不支持转场动画。&lt;br/&gt;默认值：true |
+| index | int | Yes | Indicates the index of the NavDestination to be moved to the top. |
+| animated | boolean | No | Indicates whether the transition is animated. |
 
 ## moveToTop
 
@@ -285,7 +269,7 @@ moveIndexToTop(index: int, animated?: boolean): void
 moveToTop(name: string, animated?: boolean): int
 ```
 
-将由栈底开始第一个名为name的NavDestination页面移到栈顶。
+Moves the specified NavDestination to stack top.
 
 **Since:** 23
 
@@ -301,14 +285,14 @@ moveToTop(name: string, animated?: boolean): int
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| name | string | Yes | NavDestination页面名称。 |
-| animated | boolean | No | 是否支持转场动画。&lt;br/&gt;true：支持转场动画；false：不支持转场动画。&lt;br/&gt;默认值：true |
+| name | string | Yes | Indicates the name of the NavDestination to be moved to the top. |
+| animated | boolean | No | Indicates whether the transition is animated. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| int | 如果栈中存在名为name的NavDestination页面，则返回由栈底开始第一个名为name的NavDestination页面的当前索引，否则返回-1。 |
+| int | Returns the index of the NavDestination if it exists in the stack, otherwise returns -1; |
 
 ## pop
 
@@ -316,27 +300,7 @@ moveToTop(name: string, animated?: boolean): int
 pop(animated?: boolean): NavPathInfo | undefined
 ```
 
-弹出路由栈栈顶元素。
-
-> **说明：**
-> 
-> 连续调用多个导航控制器方法时，中间被pop的页面会被缓存，后续push同名页面时会优先复用该页面，不会走新的页面创建流程。
-
-> 例如：
-
-> pathStack: NavPathStack = new NavPathStack()
-
-> // 初始页面栈为：[A]
-
-> pathStack.pop()
-
-> pathStack.pushPath(A)
-
-> pathStack.pushPath(B)
-
-> // 操作后页面栈为：[A B]
-
-> 此时A页面会被复用，不会走新的创建流程。
+Pops the top NavDestination out of the stack.
 
 **Since:** 23
 
@@ -352,7 +316,7 @@ pop(animated?: boolean): NavPathInfo | undefined
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| animated | boolean | No | 是否支持转场动画。&lt;br/&gt;true：支持转场动画；false：不支持转场动画。&lt;br/&gt; &lt;br&gt;默认值： true。 |
+| animated | boolean | No | Indicates whether the transition is animated &lt;br&gt;Default value: true. |
 
 **Return value:**
 
@@ -366,27 +330,7 @@ pop(animated?: boolean): NavPathInfo | undefined
 pop(result: Object, animated?: boolean): NavPathInfo | undefined
 ```
 
-弹出路由栈栈顶元素，并触发onPop回调传入页面处理结果。
-
-> **说明：**
-> 
-> 连续调用多个导航控制器方法时，中间被pop的页面会被缓存，后续push同名页面时会优先复用该页面，不会走新的页面创建流程。
-
-> 例如：
-
-> pathStack: NavPathStack = new NavPathStack()
-
-> // 初始页面栈为：[A]
-
-> pathStack.pop()
-
-> pathStack.pushPath(A)
-
-> pathStack.pushPath(B)
-
-> // 操作后页面栈为：[A B]
-
-> 此时A页面会被复用，不会走新的创建流程。
+Pops the top NavDestination out of the stack.
 
 **Since:** 23
 
@@ -402,8 +346,8 @@ pop(result: Object, animated?: boolean): NavPathInfo | undefined
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| result | Object | Yes | 页面自定义处理结果。不支持boolean类型。 |
-| animated | boolean | No | 是否支持转场动画。&lt;br/&gt;true：支持转场动画；false：不支持转场动画。&lt;br/&gt; &lt;br&gt;默认值： true。 |
+| result | Object | Yes | The result of the NavDestination. |
+| animated | boolean | No | Indicates whether the transition is animated &lt;br&gt;Default value: true. |
 
 **Return value:**
 
@@ -417,7 +361,7 @@ pop(result: Object, animated?: boolean): NavPathInfo | undefined
 popToIndex(index: int, animated?: boolean): void
 ```
 
-回退路由栈到index指定的NavDestination页面。
+Pops the specified NavDestination out of the stack.
 
 **Since:** 23
 
@@ -433,8 +377,8 @@ popToIndex(index: int, animated?: boolean): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| index | int | Yes | NavDestination页面的位置索引。索引值从0开始。 |
-| animated | boolean | No | 是否支持转场动画。&lt;br/&gt;true：支持转场动画；false：不支持转场动画。&lt;br/&gt;默认值：true |
+| index | int | Yes | Indicates the index of the NavDestination to be popped. |
+| animated | boolean | No | Indicates whether the transition is animated. |
 
 ## popToIndex
 
@@ -442,7 +386,7 @@ popToIndex(index: int, animated?: boolean): void
 popToIndex(index: int, result: Object, animated?: boolean): void
 ```
 
-回退路由栈到index指定的NavDestination页面，并触发onPop回调传入页面处理结果。
+Pops the specified NavDestination out of the stack.
 
 **Since:** 23
 
@@ -458,9 +402,9 @@ popToIndex(index: int, result: Object, animated?: boolean): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| index | int | Yes | NavDestination页面的位置索引。索引值从0开始。 |
-| result | Object | Yes | 页面自定义处理结果。不支持boolean类型。 |
-| animated | boolean | No | 是否支持转场动画。&lt;br/&gt;true：支持转场动画；false：不支持转场动画。&lt;br/&gt;默认值：true |
+| index | int | Yes | Indicates the index of the NavDestination to be popped. |
+| result | Object | Yes | The result of the NavDestination. |
+| animated | boolean | No | Indicates whether the transition is animated. |
 
 ## popToName
 
@@ -468,7 +412,7 @@ popToIndex(index: int, result: Object, animated?: boolean): void
 popToName(name: string, animated?: boolean): int
 ```
 
-回退路由栈到由栈底开始第一个名为name的NavDestination页面。
+Pops the specified NavDestination out of the stack.
 
 **Since:** 23
 
@@ -484,14 +428,14 @@ popToName(name: string, animated?: boolean): int
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| name | string | Yes | NavDestination页面名称。 |
-| animated | boolean | No | 是否支持转场动画。&lt;br/&gt;true：支持转场动画；false：不支持转场动画。&lt;br/&gt;默认值：true |
+| name | string | Yes | Indicates the name of the NavDestination to be popped. |
+| animated | boolean | No | Indicates whether the transition is animated. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| int | 如果栈中存在名为name的NavDestination页面，则返回由栈底开始第一个名为name的NavDestination页面的索引，否则返回-1。 |
+| int | Returns the index of the NavDestination if it exists in the stack, otherwise returns -1; |
 
 ## popToName
 
@@ -499,7 +443,7 @@ popToName(name: string, animated?: boolean): int
 popToName(name: string, result: Object, animated?: boolean): int
 ```
 
-回退路由栈到由栈底开始第一个名为name的NavDestination页面，并触发onPop回调传入页面处理结果。
+Pops the specified NavDestination out of the stack.
 
 **Since:** 23
 
@@ -515,15 +459,15 @@ popToName(name: string, result: Object, animated?: boolean): int
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| name | string | Yes | NavDestination页面名称。 |
-| result | Object | Yes | 页面自定义处理结果。不支持boolean类型。 |
-| animated | boolean | No | 是否支持转场动画。&lt;br/&gt;true：支持转场动画；false：不支持转场动画。&lt;br/&gt;默认值：true |
+| name | string | Yes | Indicates the name of the NavDestination to be popped. |
+| result | Object | Yes | The result of the NavDestination. |
+| animated | boolean | No | Indicates whether the transition is animated. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| int | 如果栈中存在名为name的NavDestination页面，则返回由栈底开始第一个名为name的NavDestination页面的索引，否则返回-1。 |
+| int | Returns the index of the NavDestination if it exists in the stack, otherwise returns -1; |
 
 ## pushDestination
 
@@ -531,12 +475,7 @@ popToName(name: string, result: Object, animated?: boolean): int
 pushDestination(info: NavPathInfo, animated?: boolean): Promise<void>
 ```
 
-将info指定的NavDestination页面信息入栈，使用Promise异步回调返回接口调用结果。
-
-> **说明：**
-> 
-> 不建议在[aboutToAppear](../../../reference/apis-arkui/arkui-ts/ts-custom-component-lifecycle.md#abouttoappear)中使用栈
-> 操作，此时的页面还未构建完成，会导致白屏或跳转失败等问题。
+Pushes the NavDestination into the stack.
 
 **Since:** 23
 
@@ -552,23 +491,23 @@ pushDestination(info: NavPathInfo, animated?: boolean): Promise<void>
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| info | [NavPathInfo](../arkts-components/arkts-arkui-navpathinfo-c.md) | Yes | NavDestination页面的信息。 |
-| animated | boolean | No | 是否支持转场动画。&lt;br/&gt;true：支持转场动画；false：不支持转场动画。&lt;br/&gt;默认值：true |
+| info | [NavPathInfo](../arkts-components/arkts-arkui-navpathinfo-c.md) | Yes | Indicates the NavDestination to be pushed. |
+| animated | boolean | No | Indicates whether the transition is animated. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | 异步返回结果。 |
+| Promise&lt;void&gt; | The promise returned by the function. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 100001 | Internal error. |
-| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameters types. 3. Parameter verification failed. |
-| 100005 | Builder function not registered. |
-| 100006 | NavDestination not found. |
+| [100001](../errorcode-internal.md#100001-internal-error) | Internal error. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameters types. 3. Parameter verification failed. |
+| [100005](../errorcode-router.md#100005-builder-function-not-registered-during-navigation) | Builder function not registered. |
+| [100006](../errorcode-router.md#100006-navdestination-not-found) | NavDestination not found. |
 
 ## pushDestination
 
@@ -576,12 +515,7 @@ pushDestination(info: NavPathInfo, animated?: boolean): Promise<void>
 pushDestination(info: NavPathInfo, options?: NavigationOptions): Promise<void>
 ```
 
-将info指定的NavDestination页面信息入栈，使用Promise异步回调返回接口调用结果，具体根据options中指定不同的[LaunchMode](../arkts-components/arkts-arkui-launchmode-e.md/arkts-arkui-launchmode-e.md)，来实现不同的行为。
-
-> **说明：**
-> 
-> 不建议在[aboutToAppear](../../../reference/apis-arkui/arkui-ts/ts-custom-component-lifecycle.md#abouttoappear)中使用栈
-> 操作，此时的页面还未构建完成，会导致白屏或跳转失败等问题。
+Pushes the NavDestination into the stack.
 
 **Since:** 23
 
@@ -597,23 +531,23 @@ pushDestination(info: NavPathInfo, options?: NavigationOptions): Promise<void>
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| info | [NavPathInfo](../arkts-components/arkts-arkui-navpathinfo-c.md) | Yes | NavDestination页面的信息。 |
-| options | [NavigationOptions](arkts-arkui-navigation-navigationoptions-i.md) | No | 路由栈操作选项。 |
+| info | [NavPathInfo](../arkts-components/arkts-arkui-navpathinfo-c.md) | Yes | Indicates the NavDestination to be pushed. |
+| options | [NavigationOptions](arkts-arkui-navigation-navigationoptions-i.md) | No | Indicates options of stack operation. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | 异常返回结果。 |
+| Promise&lt;void&gt; | The promise returned by the function. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 100001 | Internal error. |
-| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameters types. 3. Parameter verification failed. |
-| 100005 | Builder function not registered. |
-| 100006 | NavDestination not found. |
+| [100001](../errorcode-internal.md#100001-internal-error) | Internal error. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameters types. 3. Parameter verification failed. |
+| [100005](../errorcode-router.md#100005-builder-function-not-registered-during-navigation) | Builder function not registered. |
+| [100006](../errorcode-router.md#100006-navdestination-not-found) | NavDestination not found. |
 
 ## pushDestinationByName
 
@@ -621,12 +555,7 @@ pushDestination(info: NavPathInfo, options?: NavigationOptions): Promise<void>
 pushDestinationByName(name: string, param: Object, animated?: boolean): Promise<void>
 ```
 
-将name指定的NavDestination页面信息入栈，传递的数据为param，使用Promise异步回调返回接口调用结果。
-
-> **说明：**
-> 
-> 不建议在[aboutToAppear](../../../reference/apis-arkui/arkui-ts/ts-custom-component-lifecycle.md#abouttoappear)中使用栈
-> 操作，此时的页面还未构建完成，会导致白屏或跳转失败等问题。
+Pushes the specified NavDestination into the stack.
 
 **Since:** 23
 
@@ -642,24 +571,24 @@ pushDestinationByName(name: string, param: Object, animated?: boolean): Promise<
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| name | string | Yes | NavDestination页面名称。 |
-| param | Object | Yes | 开发者设置的NavDestination页面详细参数。 |
-| animated | boolean | No | 是否支持转场动画。&lt;br/&gt;true：支持转场动画；false：不支持转场动画。&lt;br/&gt;默认值：true |
+| name | string | Yes | Indicates the name of the NavDestination to be pushed. |
+| param | Object | Yes | Indicates the detailed parameter of the NavDestination to be pushed. |
+| animated | boolean | No | Indicates whether the transition is animated. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | 异常返回结果。 |
+| Promise&lt;void&gt; | The promise returned by the function. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 100001 | Internal error. |
-| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameters types. 3. Parameter verification failed. |
-| 100005 | Builder function not registered. |
-| 100006 | NavDestination not found. |
+| [100001](../errorcode-internal.md#100001-internal-error) | Internal error. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameters types. 3. Parameter verification failed. |
+| [100005](../errorcode-router.md#100005-builder-function-not-registered-during-navigation) | Builder function not registered. |
+| [100006](../errorcode-router.md#100006-navdestination-not-found) | NavDestination not found. |
 
 ## pushDestinationByName
 
@@ -667,12 +596,7 @@ pushDestinationByName(name: string, param: Object, animated?: boolean): Promise<
 pushDestinationByName(name: string, param: Object, onPop: Callback<PopInfo>, animated?: boolean): Promise<void>
 ```
 
-将name指定的NavDestination页面信息入栈，传递的数据为param，并且添加用于页面出栈时处理返回结果的onPop回调，使用Promise异步回调返回接口调用结果。
-
-> **说明：**
-> 
-> 不建议在[aboutToAppear](../../../reference/apis-arkui/arkui-ts/ts-custom-component-lifecycle.md#abouttoappear)中使用栈
-> 操作，此时的页面还未构建完成，会导致白屏或跳转失败等问题。
+Pushes the specified NavDestination into the stack.
 
 **Since:** 23
 
@@ -688,25 +612,25 @@ pushDestinationByName(name: string, param: Object, onPop: Callback<PopInfo>, ani
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| name | string | Yes | NavDestination页面名称。 |
-| param | Object | Yes | 开发者设置的NavDestination页面详细参数。 |
-| onPop | [Callback](../arkts-components/arkts-arkui-callback-i.md)&lt;PopInfo&gt; | Yes | Callback回调，用于页面出栈时处理返回结果。仅 [pop](../arkts-components/arkts-arkui-navpathstack-c.md/arkts-arkui-navpathstack-c.md#pop)、 [popToName](../arkts-components/arkts-arkui-navpathstack-c.md/arkts-arkui-navpathstack-c.md#poptoname)、 [popToIndex](../arkts-components/arkts-arkui-navpathstack-c.md/arkts-arkui-navpathstack-c.md#poptoindex)中设置result参数后触发。 |
-| animated | boolean | No | 是否支持转场动画。&lt;br/&gt;true：支持转场动画；false：不支持转场动画。&lt;br/&gt;默认值：true |
+| name | string | Yes | Indicates the name of the NavDestination to be pushed. |
+| param | Object | Yes | Indicates the detailed parameter of the NavDestination to be pushed. |
+| onPop | [Callback](../arkts-components/arkts-arkui-callback-i.md)&lt;PopInfo&gt; | Yes | The callback when next page returns. |
+| animated | boolean | No | Indicates whether the transition is animated. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | 异常返回结果。 |
+| Promise&lt;void&gt; | The promise returned by the function. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 100001 | Internal error. |
-| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameters types. 3. Parameter verification failed. |
-| 100005 | Builder function not registered. |
-| 100006 | NavDestination not found. |
+| [100001](../errorcode-internal.md#100001-internal-error) | Internal error. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameters types. 3. Parameter verification failed. |
+| [100005](../errorcode-router.md#100005-builder-function-not-registered-during-navigation) | Builder function not registered. |
+| [100006](../errorcode-router.md#100006-navdestination-not-found) | NavDestination not found. |
 
 ## pushPath
 
@@ -714,7 +638,7 @@ pushDestinationByName(name: string, param: Object, onPop: Callback<PopInfo>, ani
 pushPath(info: NavPathInfo, animated?: boolean): void
 ```
 
-将info指定的NavDestination页面信息入栈。
+Pushes the NavDestination into the stack.
 
 **Since:** 23
 
@@ -730,8 +654,8 @@ pushPath(info: NavPathInfo, animated?: boolean): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| info | [NavPathInfo](../arkts-components/arkts-arkui-navpathinfo-c.md) | Yes | NavDestination页面的信息。 |
-| animated | boolean | No | 是否支持转场动画。&lt;br/&gt;true：支持转场动画；false：不支持转场动画。&lt;br/&gt;传入参数非法时，按true处理。 |
+| info | [NavPathInfo](../arkts-components/arkts-arkui-navpathinfo-c.md) | Yes | Indicates the NavDestination to be pushed. |
+| animated | boolean | No | Indicates whether the transition is animated. |
 
 ## pushPath
 
@@ -739,7 +663,7 @@ pushPath(info: NavPathInfo, animated?: boolean): void
 pushPath(info: NavPathInfo, options?: NavigationOptions): void
 ```
 
-将info指定的NavDestination页面信息入栈，具体根据options中指定不同的[LaunchMode](../arkts-components/arkts-arkui-launchmode-e.md/arkts-arkui-launchmode-e.md)，来实现不同的行为。
+Pushes the NavDestination into the stack.
 
 **Since:** 23
 
@@ -755,8 +679,8 @@ pushPath(info: NavPathInfo, options?: NavigationOptions): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| info | [NavPathInfo](../arkts-components/arkts-arkui-navpathinfo-c.md) | Yes | NavDestination页面的信息。 |
-| options | [NavigationOptions](arkts-arkui-navigation-navigationoptions-i.md) | No | 路由栈操作选项。 |
+| info | [NavPathInfo](../arkts-components/arkts-arkui-navpathinfo-c.md) | Yes | Indicates the NavDestination to be pushed. |
+| options | [NavigationOptions](arkts-arkui-navigation-navigationoptions-i.md) | No | Indicates options of stack operation. |
 
 ## pushPathByName
 
@@ -764,7 +688,7 @@ pushPath(info: NavPathInfo, options?: NavigationOptions): void
 pushPathByName(name: string, param: Object | null | undefined, animated?: boolean): void
 ```
 
-将name指定的NavDestination页面信息入栈，传递的数据为param。
+Pushes the specified NavDestination into the stack.
 
 **Since:** 23
 
@@ -780,9 +704,9 @@ pushPathByName(name: string, param: Object | null | undefined, animated?: boolea
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| name | string | Yes | NavDestination页面名称。 |
-| param | Object \| null \| undefined | Yes | 开发者设置的NavDestination页面详细参数，unknown可以是用户自定义的类型。&lt;br/&gt;取值为undefined时，页面信 息无效。 |
-| animated | boolean | No | 是否支持转场动画。&lt;br/&gt;true：支持转场动画；false：不支持转场动画。&lt;br/&gt;默认值：true |
+| name | string | Yes | Indicates the name of the NavDestination to be pushed. |
+| param | Object \| null \| undefined | Yes | Indicates the detailed parameter of the NavDestination to be pushed. |
+| animated | boolean | No | Indicates whether the transition is animated. |
 
 ## pushPathByName
 
@@ -790,7 +714,7 @@ pushPathByName(name: string, param: Object | null | undefined, animated?: boolea
 pushPathByName(name: string, param: Object, onPop: Callback<PopInfo>, animated?: boolean): void
 ```
 
-将name指定的NavDestination页面信息入栈，传递的数据为param，添加onPop回调接收入栈页面出栈时的返回结果，并进行处理。
+Pushes the specified NavDestination into the stack.
 
 **Since:** 23
 
@@ -806,10 +730,10 @@ pushPathByName(name: string, param: Object, onPop: Callback<PopInfo>, animated?:
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| name | string | Yes | NavDestination页面名称。 |
-| param | Object | Yes | 开发者设置的NavDestination页面详细参数。 |
-| onPop | [Callback](../arkts-components/arkts-arkui-callback-i.md)&lt;PopInfo&gt; | Yes | Callback回调，用于页面出栈时触发该回调处理返回结果。仅 [pop](../arkts-components/arkts-arkui-navpathstack-c.md/arkts-arkui-navpathstack-c.md#pop)、 [popToName](../arkts-components/arkts-arkui-navpathstack-c.md/arkts-arkui-navpathstack-c.md#poptoname)、 [popToIndex](../arkts-components/arkts-arkui-navpathstack-c.md/arkts-arkui-navpathstack-c.md#poptoindex)中设置result参数后触发。 |
-| animated | boolean | No | 是否支持转场动画。&lt;br/&gt;true：支持转场动画；false：不支持转场动画。&lt;br/&gt;默认值：true |
+| name | string | Yes | Indicates the name of the NavDestination to be pushed. |
+| param | Object | Yes | Indicates the detailed parameter of the NavDestination to be pushed. |
+| onPop | [Callback](../arkts-components/arkts-arkui-callback-i.md)&lt;PopInfo&gt; | Yes | The callback when next page returns. |
+| animated | boolean | No | Indicates whether the transition is animated. |
 
 ## removeByIndexes
 
@@ -817,7 +741,7 @@ pushPathByName(name: string, param: Object, onPop: Callback<PopInfo>, animated?:
 removeByIndexes(indexes: Array<int>): int
 ```
 
-将路由栈内索引值在indexes中的NavDestination页面删除。
+Remove the specified NavDestinations by indexes.
 
 **Since:** 23
 
@@ -833,13 +757,13 @@ removeByIndexes(indexes: Array<int>): int
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| indexes | Array&lt;int&gt; | Yes | 待删除NavDestination页面的索引值数组。索引值从0开始。 |
+| indexes | Array&lt;int&gt; | Yes | Indicates the indexes of the NavDestinations to be removed. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| int | 返回删除的NavDestination页面数量。 |
+| int | Returns the number of removed pages. Invalid indexes will be ignored. |
 
 ## removeByName
 
@@ -847,7 +771,7 @@ removeByIndexes(indexes: Array<int>): int
 removeByName(name: string): int
 ```
 
-将路由栈内指定name的NavDestination页面删除。
+Remove the specified NavDestination by name.
 
 **Since:** 23
 
@@ -863,13 +787,13 @@ removeByName(name: string): int
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| name | string | Yes | 删除的NavDestination页面的名字。 |
+| name | string | Yes | Indicates the name of the NavDestination to be removed. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| int | 返回删除的NavDestination页面数量。 |
+| int | Returns the number of removed NavDestinations. |
 
 ## removeByNavDestinationId
 
@@ -877,9 +801,7 @@ removeByName(name: string): int
 removeByNavDestinationId(navDestinationId: string): boolean
 ```
 
-将路由栈内指定navDestinationId的NavDestination页面删除。navDestinationId可以在NavDestination的  
-[onReady](../../../reference/apis-arkui/arkui-ts/ts-basic-components-navdestination.md#onready11)回调中获取，也可以在  
-[NavDestinationInfo](arkts-arkui-uiobserver-navdestinationinfo-i.md)中获取。
+Remove the specified NavDestination by its navDestinationId.
 
 **Since:** 23
 
@@ -895,13 +817,13 @@ removeByNavDestinationId(navDestinationId: string): boolean
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| navDestinationId | string | Yes | 删除的NavDestination页面的唯一标识符navDestinationId。 |
+| navDestinationId | string | Yes | Indicates the navDestinationId of the NavDestination to be removed. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| boolean | 返回是否成功删除该页面，&lt;br/&gt;true：删除成功。&lt;br/&gt;false：删除失败。 |
+| boolean | Returns true if remove successfully, otherwise returns false. |
 
 ## replaceDestination
 
@@ -909,7 +831,7 @@ removeByNavDestinationId(navDestinationId: string): boolean
 replaceDestination(info: NavPathInfo, options?: NavigationOptions): Promise<void>
 ```
 
-替换路由栈操作。使用Promise异步回调返回接口调用结果，具体根据options中指定不同的[LaunchMode](../arkts-components/arkts-arkui-launchmode-e.md/arkts-arkui-launchmode-e.md)，来实现不同的行为。
+Replace the NavDestination into the stack.
 
 **Since:** 23
 
@@ -925,23 +847,23 @@ replaceDestination(info: NavPathInfo, options?: NavigationOptions): Promise<void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| info | [NavPathInfo](../arkts-components/arkts-arkui-navpathinfo-c.md) | Yes | NavDestination页面的信息。 |
-| options | [NavigationOptions](arkts-arkui-navigation-navigationoptions-i.md) | No | 路由栈操作选项。 |
+| info | [NavPathInfo](../arkts-components/arkts-arkui-navpathinfo-c.md) | Yes | Indicates the NavDestination to replace in stack. |
+| options | [NavigationOptions](arkts-arkui-navigation-navigationoptions-i.md) | No | Indicates options of stack operation. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | 异常返回结果。 |
+| Promise&lt;void&gt; | The promise returned by the function. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 100001 | Internal error. |
-| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameters types. 3. Parameter verification failed. |
-| 100005 | Builder function not registered. |
-| 100006 | NavDestination not found. |
+| [100001](../errorcode-internal.md#100001-internal-error) | Internal error. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameters types. 3. Parameter verification failed. |
+| [100005](../errorcode-router.md#100005-builder-function-not-registered-during-navigation) | Builder function not registered. |
+| [100006](../errorcode-router.md#100006-navdestination-not-found) | NavDestination not found. |
 
 ## replacePath
 
@@ -949,7 +871,7 @@ replaceDestination(info: NavPathInfo, options?: NavigationOptions): Promise<void
 replacePath(info: NavPathInfo, animated?: boolean): void
 ```
 
-将当前路由栈栈顶退出，将info指定的NavDestination页面信息入栈。
+Replace the current NavDestination with the specific one.The current NavDestination will be destroyed.
 
 **Since:** 23
 
@@ -965,8 +887,8 @@ replacePath(info: NavPathInfo, animated?: boolean): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| info | [NavPathInfo](../arkts-components/arkts-arkui-navpathinfo-c.md) | Yes | 新栈顶页面参数信息。 |
-| animated | boolean | No | 是否支持转场动画。&lt;br/&gt;true：支持转场动画；false：不支持转场动画。&lt;br/&gt;默认值：true |
+| info | [NavPathInfo](../arkts-components/arkts-arkui-navpathinfo-c.md) | Yes | Indicates the new NavDestination in top of the stack. |
+| animated | boolean | No | Indicates whether the transition is animated. |
 
 ## replacePath
 
@@ -974,7 +896,7 @@ replacePath(info: NavPathInfo, animated?: boolean): void
 replacePath(info: NavPathInfo, options?: NavigationOptions): void
 ```
 
-替换路由栈操作，具体根据options中指定不同的[LaunchMode](../arkts-components/arkts-arkui-launchmode-e.md/arkts-arkui-launchmode-e.md)，来实现不同的行为。
+Replace the current NavDestination with the specific one.The current NavDestination will be destroyed.
 
 **Since:** 23
 
@@ -990,8 +912,8 @@ replacePath(info: NavPathInfo, options?: NavigationOptions): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| info | [NavPathInfo](../arkts-components/arkts-arkui-navpathinfo-c.md) | Yes | 新栈顶页面参数信息。 |
-| options | [NavigationOptions](arkts-arkui-navigation-navigationoptions-i.md) | No | 路由栈操作选项。 |
+| info | [NavPathInfo](../arkts-components/arkts-arkui-navpathinfo-c.md) | Yes | Indicates the new NavDestination in top of the stack. |
+| options | [NavigationOptions](arkts-arkui-navigation-navigationoptions-i.md) | No | Indicates options of stack operation. |
 
 ## replacePathByName
 
@@ -999,7 +921,7 @@ replacePath(info: NavPathInfo, options?: NavigationOptions): void
 replacePathByName(name: string, param: Object, animated?: boolean): void
 ```
 
-将当前路由栈栈顶退出，将name指定的页面入栈。
+Replace the current NavDestination with the specific one.The current NavDestination will be destroyed.
 
 **Since:** 23
 
@@ -1015,9 +937,9 @@ replacePathByName(name: string, param: Object, animated?: boolean): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| name | string | Yes | NavDestination页面名称。 |
-| param | Object | Yes | 开发者设置的NavDestination页面详细参数。 |
-| animated | boolean | No | 是否支持转场动画。&lt;br/&gt;true：支持转场动画；false：不支持转场动画。&lt;br/&gt;默认值：true |
+| name | string | Yes | Indicates name of the new NavDestination in top of stack. |
+| param | Object | Yes | Indicates the detailed parameter of the new NavDestination in top of the stack. |
+| animated | boolean | No | Indicates whether the transition is animated. |
 
 ## setInterception
 
@@ -1025,7 +947,7 @@ replacePathByName(name: string, param: Object, animated?: boolean): void
 setInterception(interception: NavigationInterception): void
 ```
 
-设置Navigation页面跳转拦截回调。
+set navigation transition interception.It will be called in navPathStack changes or navigation mode changes.
 
 **Since:** 23
 
@@ -1041,7 +963,7 @@ setInterception(interception: NavigationInterception): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| interception | [NavigationInterception](arkts-arkui-navigation-navigationinterception-i.md) | Yes | 设置Navigation跳转拦截对象。 |
+| interception | [NavigationInterception](arkts-arkui-navigation-navigationinterception-i.md) | Yes | the instance to intercept in navigation changes. |
 
 ## setPathStack
 
@@ -1049,7 +971,7 @@ setInterception(interception: NavigationInterception): void
 setPathStack(pathStack: Array<NavPathInfo>, animated?: boolean): void
 ```
 
-将当前路由栈中的路由页面信息数组更新为指定内容，并实现路由转场。
+Set the NavPathInfo array.
 
 **Since:** 23
 
@@ -1065,8 +987,8 @@ setPathStack(pathStack: Array<NavPathInfo>, animated?: boolean): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| pathStack | Array&lt;NavPathInfo&gt; | Yes | 设置当前路由栈中的路由页面信息数组。&lt;br/&gt;**说明：**&lt;br/&gt;数组长度无限制。 |
-| animated | boolean | No | 是否开启转场动画。&lt;br/&gt;true：开启转场动画；false：不开启转场动画。&lt;br /&gt; 默认值：true |
+| pathStack | Array&lt;NavPathInfo&gt; | Yes | The NavPathInfo array. |
+| animated | boolean | No | Indicate whether the operation has animation. |
 
 ## size
 
@@ -1074,7 +996,7 @@ setPathStack(pathStack: Array<NavPathInfo>, animated?: boolean): void
 size(): int
 ```
 
-获取栈大小。
+Obtains the size of the stack.
 
 **Since:** 23
 
@@ -1090,5 +1012,5 @@ size(): int
 
 | Type | Description |
 | --- | --- |
-| int | 返回栈大小。&lt;br/&gt;取值范围：[0, +∞) |
+| int | Returns the size of the stack. |
 

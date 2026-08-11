@@ -1,6 +1,6 @@
 # AudioLoopbackStatus
 
-表示返听状态的枚举。
+Enumerates the audio loopback statuses.
 
 **Since:** 20
 
@@ -16,7 +16,7 @@
 UNAVAILABLE_DEVICE = -2
 ```
 
-表示返听由于输入\输出设备而不可用（如出声设备变更）。
+Loopback is unavailable due to issues with the input or output device (for example, changes in the audio output device).
 
 **Since:** 20
 
@@ -32,7 +32,7 @@ UNAVAILABLE_DEVICE = -2
 UNAVAILABLE_SCENE = -1
 ```
 
-表示返听由于音频场景而不可用（如音频焦点、低时延管控）。
+Loopback is unavailable due to restrictions in the audio scene (for example, audio focus or low-latency management).
 
 **Since:** 20
 
@@ -48,7 +48,7 @@ UNAVAILABLE_SCENE = -1
 AVAILABLE_IDLE = 0
 ```
 
-表示返听可用。
+Loopback is available but currently idle.
 
 **Since:** 20
 
@@ -64,7 +64,7 @@ AVAILABLE_IDLE = 0
 AVAILABLE_RUNNING = 1
 ```
 
-表示返听运行中。
+Loopback is actively running.
 
 **Since:** 20
 

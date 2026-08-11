@@ -1,11 +1,5 @@
 # stopVibrationSync
 
-## 导入模块
-
-```TypeScript
-import { vibrator } from 'kits/@kit.SensorServiceKit';
-```
-
 ## stopVibrationSync
 
 ```TypeScript
@@ -31,8 +25,8 @@ function stopVibrationSync(): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 201 | Permission denied. |
-| 14600101 | Device operation failed. |
+| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
+| [14600101](../errorcode-vibrator.md#14600101-操作设备失败) | Device operation failed. |
 
 ## 示例
 

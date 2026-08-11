@@ -1,6 +1,6 @@
 # BlankScreenDetectionConfig
 
-定义白屏检测的策略配置选项。
+Defines the configuration options of the blank screen detection policy.
 
 **Since:** 22
 
@@ -16,11 +16,11 @@
 contentfulNodesCountThreshold?: number
 ```
 
-在使用到检测有内容的节点检测策略时，才会生效。
+Threshold for number of detected contentful nodes. This parameter takes effect only when the contentful node detection policy is used.
 
-可以设置0-\${检测策略最大节点}，如果小于等于阈值则会触发近似白屏。
+The value ranges from 0 to the maximum number of nodes in the detection policy. If the value is less than or equal to the threshold, the near-blank screen is triggered.
 
-默认值：0。
+Default value: **0**.
 
 **Type:** number
 
@@ -38,13 +38,13 @@ contentfulNodesCountThreshold?: number
 detectionMethods?: BlankScreenDetectionMethod[]
 ```
 
-使用检测策略的方法，是一个数组。
+Methods of the detection policy. The value is an array.
 
-注：
+**NOTE：**
 
-1.重复值会忽略。
+1. Duplicate values are ignored.
 
-默认值：[BlankScreenDetectionMethod.DETECTION_CONTENTFUL_NODES_SEVENTEEN]。
+Default value: **[BlankScreenDetectionMethod.DETECTION_CONTENTFUL_NODES_SEVENTEEN]**.
 
 **Type:** [BlankScreenDetectionMethod](arkts-arkweb-blankscreendetectionmethod-e.md)[]
 
@@ -62,17 +62,7 @@ detectionMethods?: BlankScreenDetectionMethod[]
 detectionTiming?: number[]
 ```
 
-用以设置需要在加载后多少秒的时机来检测是否白屏。
-
-单位：秒。
-
-注：
-
-1.重复值会忽略。
-
-2.需大于0，小于0的值会被忽略。
-
-默认值：[1.0,3.0,5.0]。
+The settings of the timing when web try to detect current page is blank or not.The timing is the duration after web navigation.&lt;br&gt;Length range:[0,+∞).Default value:[1.0,3.0,5.0].&lt;br&gt;1. Duplicate values are ignored.2. The value must be greater than 0. If the value is less than 0, the value is ignored.Unit: second.
 
 **Type:** number[]
 
@@ -90,7 +80,7 @@ detectionTiming?: number[]
 enable: boolean
 ```
 
-是否使能白屏策略功能。
+Whether to enable the blank screen policy.
 
 **Type:** boolean
 

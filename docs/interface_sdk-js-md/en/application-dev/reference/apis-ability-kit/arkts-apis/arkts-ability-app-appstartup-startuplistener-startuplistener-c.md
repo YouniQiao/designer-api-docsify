@@ -1,6 +1,6 @@
 # StartupListener
 
-本模块提供[应用启动框架](../../../application-models/app-startup.md)任务监听器的定义。
+The module defines the task listener used in [App Startup](../../../application-models/app-startup.md).
 
 **Since:** 12
 
@@ -22,7 +22,7 @@ import { StartupListener } from 'kits/@kit.AbilityKit';
 onCompleted?(error: BusinessError<void>): void
 ```
 
-在所有启动任务完成时调用。
+Called when all startup tasks complete.
 
 **Since:** 12
 
@@ -38,7 +38,7 @@ onCompleted?(error: BusinessError<void>): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| error | [BusinessError](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-businesserror-i.md)&lt;void&gt; | Yes | 错误信息。 |
+| error | [BusinessError](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-businesserror-i.md)&lt;void&gt; | Yes | Indicates the error during execution. |
 
 ## Examples
 
@@ -77,7 +77,7 @@ export default class MyStartupConfigEntry extends StartupConfigEntry {
 onCompleted?: OnCompletedFn
 ```
 
-所有启动任务完成时的回调函数。
+Called when all startup tasks complete.
 
 **Since:** 23
 

@@ -12,9 +12,7 @@ import { matrix4 } from 'kits/@kit.ArkUI';
 function transformPoint(options: [number, number]): [number, number]
 ```
 
-Matrix的坐标点转换函数，可以将当前的变换效果作用到一个坐标点上。
-
-> **说明：**
+Applies the current transformation effect to a coordinate point.
 
 **Since:** 7
 
@@ -22,7 +20,7 @@ Matrix的坐标点转换函数，可以将当前的变换效果作用到一个�
 
 **Deprecated since:** 10
 
-**Substitutes:** [matrix4.Matrix4Transit.transformPoint](arkts-arkui-matrix4-matrix4transit-i.md#transformpoint)
+**Substitutes:** [Matrix4Transit.transformPoint](arkts-arkui-matrix4-matrix4transit-i.md#transformpoint)
 
 <!--Device-matrix4-function transformPoint(options: [number, number]): [number, number]--><!--Device-matrix4-function transformPoint(options: [number, number]): [number, number]-End-->
 
@@ -32,11 +30,11 @@ Matrix的坐标点转换函数，可以将当前的变换效果作用到一个�
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| options | [number, number] | Yes | 需要转换的坐标点。 |
+| options | [number, number] | Yes | Point to be transformed. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [number, number] | 返回矩阵变换后的Point对象。 |
+| [number, number] | Point object after matrix transformation |
 

@@ -1,6 +1,6 @@
 # CryptoMode
 
-枚举加密和解密的密码操作模式。
+Enumerates cipher operation modes for encryption and decryption.
 
 **Since:** 9
 
@@ -18,7 +18,7 @@
 ENCRYPT_MODE = 0
 ```
 
-表示进行加密操作。
+Encryption.
 
 **Since:** 9
 
@@ -38,7 +38,7 @@ ENCRYPT_MODE = 0
 DECRYPT_MODE = 1
 ```
 
-表示进行解密操作。
+Decryption.
 
 **Since:** 9
 

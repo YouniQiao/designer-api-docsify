@@ -1,8 +1,8 @@
 # Mode
 
-定义模式选项。
+Defines mode options.
 
-当应用的前台任务切换到后台一段时间后会显示运行失败或暂停，而后台任务不受此操作影响。
+After foreground tasks of an application are switched to the background for a period of time, background tasks are not affected but foreground tasks will fail or pause.
 
 **Since:** 10
 
@@ -18,7 +18,7 @@
 BACKGROUND
 ```
 
-表示后台任务。
+Background task.
 
 **Since:** 10
 
@@ -36,7 +36,7 @@ BACKGROUND
 FOREGROUND
 ```
 
-表示前台任务。
+Foreground task.
 
 **Since:** 10
 

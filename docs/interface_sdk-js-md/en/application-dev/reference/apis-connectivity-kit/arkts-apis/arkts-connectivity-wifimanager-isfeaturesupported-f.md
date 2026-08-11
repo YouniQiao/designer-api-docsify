@@ -40,10 +40,10 @@ Check whether the device supports a specified feature.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Invalid parameters. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. |
-| 801 | Capability not supported. |
-| 201 | Permission denied. |
-| 2401000 | Operation failed. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Invalid parameters. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. |
+| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
+| [2401000](../errorcode-wifi.md#2401000-sta-internal-error) | Operation failed. |
 
 ## Examples
 

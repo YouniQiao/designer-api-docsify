@@ -1,6 +1,6 @@
 # BackgroundLuminanceSamplingConfigs (System API)
 
-背景取色参数配置。
+Sets the background luminance sampling parameters.
 
 **Since:** 23
 
@@ -24,9 +24,7 @@ import { OverlayManager, FrameCallback, ResolvedUIContext, NodeRenderStateChange
 brightThreshold?: number
 ```
 
-浅色亮度阈值：[0, 255]内的整数，设置的深色亮度阈值应小于浅色亮度阈值。
-
-默认值：220
+Light color brightness threshold. The value must be an integer in the range of [0, 255]. The dark color brightness threshold must be less than the light color brightness threshold.
 
 **Type:** number
 
@@ -50,9 +48,7 @@ brightThreshold?: number
 darkThreshold?: number
 ```
 
-深色亮度阈值：[0, 255]内的整数，设置的深色亮度阈值应小于浅色亮度阈值。
-
-默认值：150
+Dark color brightness threshold. The value must be an integer in the range of [0, 255]. The dark color brightness threshold must be less than the light color brightness threshold.
 
 **Type:** number
 
@@ -76,9 +72,9 @@ darkThreshold?: number
 region?: Edges<LengthMetrics>
 ```
 
-相对组件的取色区域偏移，以组件自身的左上点为基准进行偏移计算。
+Sample area offset relative to the component, calculated from the component's upper left corner as the reference point.
 
-默认使用组件自身区域
+The component's own area is used by default.
 
 **Type:** [Edges](arkts-arkui-edges-i.md)&lt;[LengthMetrics](arkts-arkui-lengthmetrics-t.md)&gt;
 
@@ -100,9 +96,7 @@ region?: Edges<LengthMetrics>
 samplingInterval?: number
 ```
 
-取色间隔，单位为毫秒，最小值180ms。
-
-默认值：500
+Color sampling interval, in milliseconds. The minimum value is 180 ms.
 
 **Type:** number
 

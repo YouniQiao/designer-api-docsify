@@ -12,7 +12,7 @@ import { usb } from 'kits/@kit.BasicServicesKit';
 function getPorts(): Array<USBPort>
 ```
 
-获取所有物理USB端口描述信息。
+Obtains the list of all physical USB ports.
 
 **Since:** 9
 
@@ -32,7 +32,7 @@ function getPorts(): Array<USBPort>
 
 | Type | Description |
 | --- | --- |
-| Array&lt;USBPort&gt; | USB端口描述信息列表。 |
+| Array&lt;USBPort&gt; | List of physical USB ports. |
 
 ## Examples
 

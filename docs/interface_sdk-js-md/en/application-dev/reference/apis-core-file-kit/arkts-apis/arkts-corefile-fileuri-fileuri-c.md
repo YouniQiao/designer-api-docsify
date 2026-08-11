@@ -1,6 +1,6 @@
 # FileUri
 
-FileUri表示文件的URI，继承自uri.URI。
+FileUri represents the uri of the file.
 
 **Inheritance/Implementation:** FileUri extends [uri.URI](../../apis-arkts/arkts-apis/arkts-arkts-uri-uri-c.md/arkts-arkts-uri-uri-c.md)
 
@@ -24,7 +24,7 @@ import { fileUri } from 'kits/@kit.CoreFileKit';
 constructor(uriOrPath: string)
 ```
 
-FileUri的构造函数，用于创建FileUri实例。
+Constructor for obtaining the instance of the FileUri class.
 
 **Since:** 15
 
@@ -40,7 +40,7 @@ FileUri的构造函数，用于创建FileUri实例。
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| uriOrPath | string | Yes | URI或路径。 |
+| uriOrPath | string | Yes | Uri or Path. |
 
 **Error codes:**
 
@@ -66,7 +66,7 @@ console.info("The name of FileUri is " + fileUriObject.name);
 getFullDirectoryUri(): string
 ```
 
-获取当前文件URI所在路径的完整目录URI。URI指向目录时直接返回原URI。
+Get the full directory uri where the file URI is located
 
 **Since:** 15
 
@@ -82,7 +82,7 @@ getFullDirectoryUri(): string
 
 | Type | Description |
 | --- | --- |
-| string | 返回文件所在路径的目录URI；URI指向目录时返回当前URI。 |
+| string | Return the directory uri |
 
 **Error codes:**
 
@@ -112,7 +112,7 @@ try {
 isRemoteUri(): boolean
 ```
 
-判断当前URI是否为包含远端标识networkid的远端URI。
+Check whether the incoming URI is a remote URI
 
 **Since:** 15
 
@@ -128,7 +128,7 @@ isRemoteUri(): boolean
 
 | Type | Description |
 | --- | --- |
-| boolean | 返回true表示远端URI，返回false表示本地URI。 |
+| boolean | Return true or false |
 
 **Error codes:**
 
@@ -156,7 +156,7 @@ function isRemoteUriExample() {
 toString(): string
 ```
 
-将当前URI转换为序列化字符串。
+Converts this URI into an encoded string.
 
 **Since:** 23
 
@@ -172,7 +172,7 @@ toString(): string
 
 | Type | Description |
 | --- | --- |
-| string | 返回字符串类型的URI。 |
+| string | URI in a serialized string. |
 
 ## Examples
 
@@ -188,7 +188,7 @@ console.info("The uri of FileUri is " + fileUriObject.toString());
 get name(): string
 ```
 
-通过传入的URI获取文件名称。如果文件名中存在百分号编码字符，将解码后拼接在原处。
+Obtains the file name of uri.
 
 **Type:** string
 

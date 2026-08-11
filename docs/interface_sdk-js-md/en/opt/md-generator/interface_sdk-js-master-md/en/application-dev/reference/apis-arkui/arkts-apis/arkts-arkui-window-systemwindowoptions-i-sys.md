@@ -1,0 +1,37 @@
+# SystemWindowOptions (System API)
+
+Describes the parameters for creating a system window.
+
+**Since:** 14
+
+<!--Device-window-interface SystemWindowOptions--><!--Device-window-interface SystemWindowOptions-End-->
+
+**System capability:** SystemCapability.Window.SessionManager
+
+**System API:** This is a system API.
+
+## Modules to Import
+
+```TypeScript
+import { window } from 'kits/@kit.ArkUI';
+```
+
+## windowType
+
+```TypeScript
+windowType: WindowType
+```
+
+Window type. There is no default value. If null is passed in, the window fails to be created. **TYPE_DIALOG** is not supported.
+
+**Type:** [WindowType](../../apis-accessibility-kit/arkts-apis/arkts-accessibility-windowtype-t.md)
+
+**Since:** 14
+
+**Model restriction:** This API can be used only in the stage model.
+
+<!--Device-SystemWindowOptions-windowType: WindowType--><!--Device-SystemWindowOptions-windowType: WindowType-End-->
+
+**System capability:** SystemCapability.Window.SessionManager
+
+**System API:** This is a system API.

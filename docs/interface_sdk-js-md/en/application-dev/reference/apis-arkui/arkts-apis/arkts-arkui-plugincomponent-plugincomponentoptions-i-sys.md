@@ -1,6 +1,6 @@
 # PluginComponentOptions (System API)
 
-定义用于构造插件组件的选项。AnonyMous Object Rectification
+Define options used to construct a plugin component.AnonyMous Object Rectification
 
 **Since:** 23
 
@@ -18,7 +18,7 @@
 data: RecordData
 ```
 
-传给插件组件提供方使用的数据，类型不限（支持对象、字符串等）。具体数据格式由使用方与提供方协商定义。AnonyMous Object Rectification
+Plugin component data.AnonyMous Object Rectification
 
 **Type:** [RecordData](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-recorddata-t.md)
 
@@ -40,7 +40,7 @@ data: RecordData
 template: PluginComponentTemplate
 ```
 
-组件模板，用于跟提供方定义的组件绑定。AnonyMous Object Rectification
+Plugin component template.AnonyMous Object Rectification
 
 **Type:** [PluginComponentTemplate](arkts-arkui-plugincomponent-plugincomponenttemplate-i.md)
 

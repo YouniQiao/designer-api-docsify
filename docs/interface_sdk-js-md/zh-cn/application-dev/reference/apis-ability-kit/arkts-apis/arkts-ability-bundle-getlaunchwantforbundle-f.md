@@ -1,11 +1,5 @@
 # getLaunchWantForBundle
 
-## 导入模块
-
-```TypeScript
-import { bundle } from 'kits/@kit.AbilityKit';
-```
-
 ## getLaunchWantForBundle
 
 ```TypeScript

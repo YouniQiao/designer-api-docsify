@@ -12,7 +12,9 @@ import { uiAppearance } from 'kits/@kit.ArkUI';
 function setFontScale(fontScale: number): Promise<void>
 ```
 
-设置系统字体大小。
+Sets the system font scale.
+
+**Permission required**: ohos.permission.UPDATE_CONFIGURATION
 
 **Since:** 12
 
@@ -40,10 +42,10 @@ function setFontScale(fontScale: number): Promise<void>
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. Possible causes: &lt;br&gt; 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameters types. &lt;br&gt; 3. Parameter verification failed. |
-| 500001 | Internal error. |
-| 201 | Permission denied. |
-| 202 | Permission verification failed. A non-system application calls a system API. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: &lt;br&gt; 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameters types. &lt;br&gt; 3. Parameter verification failed. |
+| [500001](../errorcode-uiappearance.md#500001-internal-error) | Internal error. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
 
 ## Examples
 
@@ -51,17 +53,17 @@ function setFontScale(fontScale: number): Promise<void>
 import { uiAppearance } from '@kit.ArkUI';
 import { BusinessError } from '@kit.BasicServicesKit';
 
-let fontScale = 1.5;
+let fontScale = 10;
 
 try {
-  uiAppearance.setFontScale(fontScale).then(() => {
-    console.info('Set fontScale successfully.');
-  }).catch((error: BusinessError) => {
-    console.error(`Set fontScale failed. Code: ${error.code}, message: ${error.message}`);
-  });
+    uiAppearance.setFontScale(fontScale).then(() => {
+      console.info('Set fontScale successfully.');
+    }).catch((error:Error) => {
+      console.error('Set fontScale failed, ' + error.message);
+    });
 } catch (error) {
-  let err = error as BusinessError;
-  console.error(`Set fontScale failed. Code: ${err.code}, message: ${err.message}`);
+    let message = (error as BusinessError).message;
+    console.error('Set fontScale failed, ' + message);
 }
 ```
 

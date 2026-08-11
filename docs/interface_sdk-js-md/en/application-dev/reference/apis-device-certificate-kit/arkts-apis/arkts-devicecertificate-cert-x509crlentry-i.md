@@ -1,6 +1,6 @@
 # X509CRLEntry
 
-证书吊销条目。
+Provides APIs for operating on a revoked certificate entry in a CRL.
 
 **Since:** 11
 
@@ -22,11 +22,11 @@ import { cert } from 'kits/@kit.DeviceCertificateKit';
 getCertIssuer(): DataBlob
 ```
 
-表示获取被吊销证书的颁发者名称。
+Obtains the issuer name of the revoked certificate.
 
-> **说明：**
+> **NOTE：**
 > 
-> 获取到的被吊销证书的颁发者名称数据带字符串结束符。
+> The obtained issuer name of this revoked certificate contains a string terminator.
 
 **Since:** 11
 
@@ -42,16 +42,16 @@ getCertIssuer(): DataBlob
 
 | Type | Description |
 | --- | --- |
-| [DataBlob](../../apis-crypto-architecture-kit/arkts-apis/arkts-cryptoarchitecture-cryptoframework-datablob-i.md) | 表示被吊销证书的颁发者名称。 |
+| [DataBlob](../../apis-crypto-architecture-kit/arkts-apis/arkts-cryptoarchitecture-cryptoframework-datablob-i.md) | Issuer name of the revoked certificate obtained. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 19020002 | 运行时外部错误。可能的原因： &lt;br&gt;1. 内存拷贝失败； &lt;br&gt;2. 系统内部出现空指针； &lt;br&gt;3. 获取Native对象失败或参数转换失败。 |
-| 801 | 不支持该操作。 |
-| 19020001 | 内存错误。 |
-| 19030001 | 调用三方算法库API出错。 |
+| [19020002](../errorcode-cert.md#19020002-runtime-error) | Runtime error. Possible causes: &lt;br&gt;1. Memory copy failed; &lt;br&gt;2. A null pointer occurs inside the system; &lt;br&gt;3. Failed to obtain the native object or convert parameters. |
+| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | This operation is not supported. |
+| [19020001](../errorcode-cert.md#19020001-memory-error) | Memory malloc failed. |
+| [19030001](../errorcode-cert.md#19030001-crypto-operation-error) | Crypto operation error. |
 
 ## getCertIssuer
 
@@ -59,7 +59,7 @@ getCertIssuer(): DataBlob
 getCertIssuer(encodingType: EncodingType): string
 ```
 
-根据编码类型获取被吊销证书的颁发者名称。
+Obtains the issuer name of the revoked certificate based on the encoding type.
 
 **Since:** 20
 
@@ -75,23 +75,23 @@ getCertIssuer(encodingType: EncodingType): string
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| encodingType | [EncodingType](arkts-devicecertificate-cert-encodingtype-e.md) | Yes | 表示编码类型。 |
+| encodingType | [EncodingType](arkts-devicecertificate-cert-encodingtype-e.md) | Yes | Encoding type. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| string | 表示被吊销证书的颁发者名称，使用逗号分隔相对可分辨名称。 |
+| string | Issuer name of the revoked certificate, separated by commas (,). |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 19020002 | 运行时外部错误。可能的原因： &lt;br&gt;1. 内存拷贝失败； &lt;br&gt;2. 系统内部出现空指针； &lt;br&gt;3. 获取Native对象失败或参数转换失败。 |
-| 801 | 不支持该操作。 |
-| 19020003 | 参数检查失败。可能的原因： &lt;br&gt;1. encodingType的值不在EncodingType枚举范围内。 |
-| 19020001 | 内存错误。 |
-| 19030001 | 调用三方算法库API出错。 |
+| [19020002](../errorcode-cert.md#19020002-runtime-error) | Runtime error. Possible causes: &lt;br&gt;1. Memory copy failed; &lt;br&gt;2. A null pointer occurs inside the system; &lt;br&gt;3. Failed to obtain the native object or convert parameters. |
+| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | This operation is not supported. |
+| [19020003](../errorcode-cert.md#19020003-parameter-check-failure) | Parameter check failed. Possible causes: &lt;br&gt;1. The value of encodingType is not in the EncodingType enumeration range. |
+| [19020001](../errorcode-cert.md#19020001-memory-error) | Memory malloc failed. |
+| [19030001](../errorcode-cert.md#19030001-crypto-operation-error) | Crypto operation error. |
 
 ## getCertIssuerX500DistinguishedName
 
@@ -99,7 +99,7 @@ getCertIssuer(encodingType: EncodingType): string
 getCertIssuerX500DistinguishedName(): X500DistinguishedName
 ```
 
-获取被吊销证书的颁发者的X.500可分辨名称对象。
+Obtains the distinguished name (DN) of the issuer of the revoked certificate.
 
 **Since:** 12
 
@@ -115,15 +115,15 @@ getCertIssuerX500DistinguishedName(): X500DistinguishedName
 
 | Type | Description |
 | --- | --- |
-| [X500DistinguishedName](arkts-devicecertificate-cert-x500distinguishedname-i.md) | X.500可分辨名称对象。 |
+| [X500DistinguishedName](arkts-devicecertificate-cert-x500distinguishedname-i.md) | DN object obtained. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 19020002 | 运行时外部错误。可能的原因： &lt;br&gt;1. 内存拷贝失败； &lt;br&gt;2. 系统内部出现空指针； &lt;br&gt;3. 获取Native对象失败或参数转换失败。 |
-| 19020001 | 内存错误。 |
-| 19030001 | 调用三方算法库API出错。 |
+| [19020002](../errorcode-cert.md#19020002-runtime-error) | Runtime error. Possible causes: &lt;br&gt;1. Memory copy failed; &lt;br&gt;2. A null pointer occurs inside the system; &lt;br&gt;3. Failed to obtain the native object or convert parameters. |
+| [19020001](../errorcode-cert.md#19020001-memory-error) | Memory malloc failed. |
+| [19030001](../errorcode-cert.md#19030001-crypto-operation-error) | Crypto operation error. |
 
 ## getEncoded
 
@@ -131,7 +131,7 @@ getCertIssuerX500DistinguishedName(): X500DistinguishedName
 getEncoded(callback: AsyncCallback<EncodingBlob>): void
 ```
 
-表示获取证书吊销条目的序列化数据。使用Callback异步回调。
+Obtains the serialized data of this revoked certificate entry. This API uses an asynchronous callback to return the result.
 
 **Since:** 11
 
@@ -147,16 +147,16 @@ getEncoded(callback: AsyncCallback<EncodingBlob>): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;EncodingBlob&gt; | Yes | 回调函数。当获取证书吊销条目序列化数据成功时，err为undefined， data为获取到的证书吊销条目序列化数据；否则为错误对象。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;EncodingBlob&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined**, and **data** is the serialized data of the revoked certificate entry obtained. Otherwise, **err** is an error object. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 19020002 | 运行时外部错误。可能的原因： &lt;br&gt;1. 内存拷贝失败； &lt;br&gt;2. 系统内部出现空指针； &lt;br&gt;3. 获取Native对象失败或参数转换失败。 |
-| 401 | 参数错误。可能的原因： &lt;br&gt;1. 必填参数未指定； &lt;br&gt;2. 参数类型不正确； |
-| 19020001 | 内存错误。 |
-| 19030001 | 调用三方算法库API出错。 |
+| [19020002](../errorcode-cert.md#19020002-runtime-error) | Runtime error. Possible causes: &lt;br&gt;1. Memory copy failed; &lt;br&gt;2. A null pointer occurs inside the system; &lt;br&gt;3. Failed to obtain the native object or convert parameters. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Invalid parameters. Possible causes: &lt;br&gt;1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; |
+| [19020001](../errorcode-cert.md#19020001-memory-error) | Memory malloc failed. |
+| [19030001](../errorcode-cert.md#19030001-crypto-operation-error) | Crypto operation error. |
 
 ## getEncoded
 
@@ -164,7 +164,7 @@ getEncoded(callback: AsyncCallback<EncodingBlob>): void
 getEncoded(): Promise<EncodingBlob>
 ```
 
-表示获取证书吊销条目的序列化数据。使用Promise方式返回结果。
+Obtains the serialized data of this revoked certificate entry. This API uses a promise to return the result.
 
 **Since:** 11
 
@@ -180,16 +180,16 @@ getEncoded(): Promise<EncodingBlob>
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;EncodingBlob&gt; | Promise对象，返回证书吊销条目的序列化数据。 |
+| Promise&lt;EncodingBlob&gt; | Promise used to return the serialized data of the revoked certificate entry obtained. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 19020002 | 运行时外部错误。可能的原因： &lt;br&gt;1. 内存拷贝失败； &lt;br&gt;2. 系统内部出现空指针； &lt;br&gt;3. 获取Native对象失败或参数转换失败。 |
-| 401 | 参数错误。可能的原因： &lt;br&gt;1. 必填参数未指定； &lt;br&gt;2. 参数类型不正确； |
-| 19020001 | 内存错误。 |
-| 19030001 | 调用三方算法库API出错。 |
+| [19020002](../errorcode-cert.md#19020002-runtime-error) | Runtime error. Possible causes: &lt;br&gt;1. Memory copy failed; &lt;br&gt;2. A null pointer occurs inside the system; &lt;br&gt;3. Failed to obtain the native object or convert parameters. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Invalid parameters. Possible causes: &lt;br&gt;1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; |
+| [19020001](../errorcode-cert.md#19020001-memory-error) | Memory malloc failed. |
+| [19030001](../errorcode-cert.md#19030001-crypto-operation-error) | Crypto operation error. |
 
 ## getExtensions
 
@@ -197,7 +197,7 @@ getEncoded(): Promise<EncodingBlob>
 getExtensions(): DataBlob
 ```
 
-表示获取DER格式的CRL条目的扩展数据。
+Obtains the CRL entry extensions in DER format.
 
 **Since:** 11
 
@@ -213,15 +213,15 @@ getExtensions(): DataBlob
 
 | Type | Description |
 | --- | --- |
-| [DataBlob](../../apis-crypto-architecture-kit/arkts-apis/arkts-cryptoarchitecture-cryptoframework-datablob-i.md) | 表示CRL条目的扩展数据。 |
+| [DataBlob](../../apis-crypto-architecture-kit/arkts-apis/arkts-cryptoarchitecture-cryptoframework-datablob-i.md) | X.509 CRL entry extensions obtained. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 19020002 | 运行时外部错误。可能的原因： &lt;br&gt;1. 内存拷贝失败； &lt;br&gt;2. 系统内部出现空指针； &lt;br&gt;3. 获取Native对象失败或参数转换失败。 |
-| 19020001 | 内存错误。 |
-| 19030001 | 调用三方算法库API出错。 |
+| [19020002](../errorcode-cert.md#19020002-runtime-error) | Runtime error. Possible causes: &lt;br&gt;1. Memory copy failed; &lt;br&gt;2. A null pointer occurs inside the system; &lt;br&gt;3. Failed to obtain the native object or convert parameters. |
+| [19020001](../errorcode-cert.md#19020001-memory-error) | Memory malloc failed. |
+| [19030001](../errorcode-cert.md#19030001-crypto-operation-error) | Crypto operation error. |
 
 ## getExtensionsObject
 
@@ -229,7 +229,7 @@ getExtensions(): DataBlob
 getExtensionsObject(): CertExtension
 ```
 
-获取CRL条目的扩展对象。
+Obtains the CRL entry extension object.
 
 **Since:** 12
 
@@ -245,15 +245,15 @@ getExtensionsObject(): CertExtension
 
 | Type | Description |
 | --- | --- |
-| [CertExtension](arkts-devicecertificate-cert-certextension-i.md) | CRL条目的扩展对象。 |
+| [CertExtension](arkts-devicecertificate-cert-certextension-i.md) | CRL entry extensions. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 19020002 | 运行时外部错误。可能的原因： &lt;br&gt;1. 内存拷贝失败； &lt;br&gt;2. 系统内部出现空指针； &lt;br&gt;3. 获取Native对象失败或参数转换失败。 |
-| 19020001 | 内存错误。 |
-| 19030001 | 调用三方算法库API出错。 |
+| [19020002](../errorcode-cert.md#19020002-runtime-error) | Runtime error. Possible causes: &lt;br&gt;1. Memory copy failed; &lt;br&gt;2. A null pointer occurs inside the system; &lt;br&gt;3. Failed to obtain the native object or convert parameters. |
+| [19020001](../errorcode-cert.md#19020001-memory-error) | Memory malloc failed. |
+| [19030001](../errorcode-cert.md#19030001-crypto-operation-error) | Crypto operation error. |
 
 ## getRevocationDate
 
@@ -261,7 +261,7 @@ getExtensionsObject(): CertExtension
 getRevocationDate(): string
 ```
 
-表示获取证书被吊销的日期。
+Obtains the certificate's revocation date.
 
 **Since:** 11
 
@@ -277,15 +277,15 @@ getRevocationDate(): string
 
 | Type | Description |
 | --- | --- |
-| string | 表示证书被吊销的日期。 |
+| string | The certificate revocation date obtained. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 19020002 | 运行时外部错误。可能的原因： &lt;br&gt;1. 内存拷贝失败； &lt;br&gt;2. 系统内部出现空指针； &lt;br&gt;3. 获取Native对象失败或参数转换失败。 |
-| 19020001 | 内存错误。 |
-| 19030001 | 调用三方算法库API出错。 |
+| [19020002](../errorcode-cert.md#19020002-runtime-error) | Runtime error. Possible causes: &lt;br&gt;1. Memory copy failed; &lt;br&gt;2. A null pointer occurs inside the system; &lt;br&gt;3. Failed to obtain the native object or convert parameters. |
+| [19020001](../errorcode-cert.md#19020001-memory-error) | Memory malloc failed. |
+| [19030001](../errorcode-cert.md#19030001-crypto-operation-error) | Crypto operation error. |
 
 ## getSerialNumber
 
@@ -293,7 +293,7 @@ getRevocationDate(): string
 getSerialNumber(): bigint
 ```
 
-表示获取被吊销的证书的序列号。
+Obtains the serial number of this revoked certificate.
 
 **Since:** 11
 
@@ -309,15 +309,15 @@ getSerialNumber(): bigint
 
 | Type | Description |
 | --- | --- |
-| bigint | 表示证书吊销条目的序列号。 |
+| bigint | Serial number of the revoked certificate obtained. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 19020002 | 运行时外部错误。可能的原因： &lt;br&gt;1. 内存拷贝失败； &lt;br&gt;2. 系统内部出现空指针； &lt;br&gt;3. 获取Native对象失败或参数转换失败。 |
-| 19020001 | 内存错误。 |
-| 19030001 | 调用三方算法库API出错。 |
+| [19020002](../errorcode-cert.md#19020002-runtime-error) | Runtime error. Possible causes: &lt;br&gt;1. Memory copy failed; &lt;br&gt;2. A null pointer occurs inside the system; &lt;br&gt;3. Failed to obtain the native object or convert parameters. |
+| [19020001](../errorcode-cert.md#19020001-memory-error) | Memory malloc failed. |
+| [19030001](../errorcode-cert.md#19030001-crypto-operation-error) | Crypto operation error. |
 
 ## hasExtensions
 
@@ -325,7 +325,7 @@ getSerialNumber(): bigint
 hasExtensions(): boolean
 ```
 
-表示判断CRL条目是否有扩展。
+Checks whether this CRL entry has extensions.
 
 **Since:** 11
 
@@ -341,15 +341,15 @@ hasExtensions(): boolean
 
 | Type | Description |
 | --- | --- |
-| boolean | 返回true则表示CRL条目有扩展，返回false则表示无扩展。 |
+| boolean | Returns **true** if the CRL entry has an extension; returns **false** otherwise. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 19020002 | 运行时外部错误。可能的原因： &lt;br&gt;1. 内存拷贝失败； &lt;br&gt;2. 系统内部出现空指针； &lt;br&gt;3. 获取Native对象失败或参数转换失败。 |
-| 19020001 | 内存错误。 |
-| 19030001 | 调用三方算法库API出错。 |
+| [19020002](../errorcode-cert.md#19020002-runtime-error) | Runtime error. Possible causes: &lt;br&gt;1. Memory copy failed; &lt;br&gt;2. A null pointer occurs inside the system; &lt;br&gt;3. Failed to obtain the native object or convert parameters. |
+| [19020001](../errorcode-cert.md#19020001-memory-error) | Memory malloc failed. |
+| [19030001](../errorcode-cert.md#19030001-crypto-operation-error) | Crypto operation error. |
 
 ## hashCode
 
@@ -357,7 +357,7 @@ hasExtensions(): boolean
 hashCode(): Uint8Array
 ```
 
-获取DER格式数据的哈希值。
+Obtains the hash value of the data in DER format.
 
 **Since:** 12
 
@@ -373,15 +373,15 @@ hashCode(): Uint8Array
 
 | Type | Description |
 | --- | --- |
-| Uint8Array | DER格式数据的哈希值。 |
+| Uint8Array | Hash value obtained. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 19020002 | 运行时外部错误。可能的原因： &lt;br&gt;1. 内存拷贝失败； &lt;br&gt;2. 系统内部出现空指针； &lt;br&gt;3. 获取Native对象失败或参数转换失败。 |
-| 19020001 | 内存错误。 |
-| 19030001 | 调用三方算法库API出错。 |
+| [19020002](../errorcode-cert.md#19020002-runtime-error) | Runtime error. Possible causes: &lt;br&gt;1. Memory copy failed; &lt;br&gt;2. A null pointer occurs inside the system; &lt;br&gt;3. Failed to obtain the native object or convert parameters. |
+| [19020001](../errorcode-cert.md#19020001-memory-error) | Memory malloc failed. |
+| [19030001](../errorcode-cert.md#19030001-crypto-operation-error) | Crypto operation error. |
 
 ## toString
 
@@ -389,7 +389,7 @@ hashCode(): Uint8Array
 toString(): string
 ```
 
-获取对象的字符串类型数据。
+Converts the object data into a string.
 
 **Since:** 12
 
@@ -405,13 +405,13 @@ toString(): string
 
 | Type | Description |
 | --- | --- |
-| string | 对象的字符串类型数据。 |
+| string | String obtained. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 19020002 | 运行时外部错误。可能的原因： &lt;br&gt;1. 内存拷贝失败； &lt;br&gt;2. 系统内部出现空指针； &lt;br&gt;3. 获取Native对象失败或参数转换失败。 |
-| 19020001 | 内存错误。 |
-| 19030001 | 调用三方算法库API出错。 |
+| [19020002](../errorcode-cert.md#19020002-runtime-error) | Runtime error. Possible causes: &lt;br&gt;1. Memory copy failed; &lt;br&gt;2. A null pointer occurs inside the system; &lt;br&gt;3. Failed to obtain the native object or convert parameters. |
+| [19020001](../errorcode-cert.md#19020001-memory-error) | Memory malloc failed. |
+| [19030001](../errorcode-cert.md#19030001-crypto-operation-error) | Crypto operation error. |
 

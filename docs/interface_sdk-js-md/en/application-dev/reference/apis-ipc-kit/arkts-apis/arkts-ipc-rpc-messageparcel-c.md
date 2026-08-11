@@ -1,6 +1,7 @@
 # MessageParcel
 
-在RPC过程中，发送方可以使用MessageParcel提供的写方法，将待发送的数据以特定格式写入该对象。接收方可以使用MessageParcel提供的读方法从该对象中读取特定格式的数据。数据格式包括：基础类型及数组、IPC对象、接口描述符和自定义序列化对象。
+Provides APIs for reading and writing data in specific format. During RPC, the sender can use the **write()** method provided by **MessageParcel** to write data in specific format to a **MessageParcel** object. The  receiver can use the **read()** method provided by **MessageParcel** to read data in specific format from a  
+ **MessageParcel** object. The data formats include basic data types and arrays, IPC objects, interface tokens, and custom sequenceable objects.
 
 **Since:** 7
 
@@ -26,7 +27,7 @@ import { rpc } from 'kits/@kit.IPCKit';
 static closeFileDescriptor(fd: number): void
 ```
 
-静态方法，关闭给定的文件描述符。
+Closes a file descriptor. This API is a static method.
 
 **Since:** 8
 
@@ -44,7 +45,7 @@ static closeFileDescriptor(fd: number): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| fd | number | Yes | 要关闭的文件描述符。 |
+| fd | number | Yes | File descriptor to close. |
 
 ## Examples
 
@@ -68,7 +69,7 @@ try {
 containFileDescriptors(): boolean
 ```
 
-检查此MessageParcel对象是否包含文件描述符。
+Checks whether this **MessageParcel** object contains file descriptors.
 
 **Since:** 8
 
@@ -86,7 +87,7 @@ containFileDescriptors(): boolean
 
 | Type | Description |
 | --- | --- |
-| boolean | true：包含文件描述符，false：未包含文件描述符。 |
+| boolean | Returns **true** if the **MessageParcel** object contains file descriptors; returns **false** otherwise. |
 
 ## Examples
 
@@ -114,7 +115,7 @@ try {
 static create(): MessageParcel
 ```
 
-静态方法，创建MessageParcel对象。
+Creates a **MessageParcel** object. This method is a static method.
 
 **Since:** 7
 
@@ -132,7 +133,7 @@ static create(): MessageParcel
 
 | Type | Description |
 | --- | --- |
-| [MessageParcel](arkts-ipc-rpc-messageparcel-c.md) | 返回创建的MessageParcel对象，用于在IPC过程中封装请求和响应数据。 |
+| [MessageParcel](arkts-ipc-rpc-messageparcel-c.md) | MessageParcel** object created. |
 
 ## Examples
 
@@ -157,7 +158,7 @@ try {
 static dupFileDescriptor(fd: number): number
 ```
 
-静态方法，复制给定的文件描述符。
+Duplicates a file descriptor. This API is a static method.
 
 **Since:** 8
 
@@ -175,13 +176,13 @@ static dupFileDescriptor(fd: number): number
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| fd | number | Yes | 表示已存在的文件描述符。 |
+| fd | number | Yes | File descriptor to duplicate. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| number | 返回新的文件描述符。 |
+| number | New file descriptor. |
 
 ## Examples
 
@@ -205,7 +206,7 @@ try {
 getCapacity(): number
 ```
 
-获取当前MessageParcel的容量。
+Obtains the capacity of this **MessageParcel** object.
 
 **Since:** 7
 
@@ -223,7 +224,7 @@ getCapacity(): number
 
 | Type | Description |
 | --- | --- |
-| number | 获取的MessageParcel的容量大小。以字节为单位。 |
+| number | MessageParcel** capacity obtained, in bytes. |
 
 ## Examples
 
@@ -246,7 +247,7 @@ try {
 getRawDataCapacity(): number
 ```
 
-获取MessageParcel可以容纳的最大原始数据量。
+Obtains the maximum amount of raw data that can be held by this **MessageParcel** object.
 
 **Since:** 8
 
@@ -264,7 +265,7 @@ getRawDataCapacity(): number
 
 | Type | Description |
 | --- | --- |
-| number | 返回MessageParcel可以容纳的最大原始数据量，即128MB。 |
+| number | Maximum amount of raw data that **MessageParcel** can hold, that is, 128 MB. |
 
 ## Examples
 
@@ -287,7 +288,7 @@ try {
 getReadPosition(): number
 ```
 
-获取MessageParcel的读位置。
+Obtains the read position of this **MessageParcel** object.
 
 **Since:** 7
 
@@ -305,7 +306,7 @@ getReadPosition(): number
 
 | Type | Description |
 | --- | --- |
-| number | 返回MessageParcel实例中的当前读取位置。 |
+| number | Current read position of the **MessageParcel** object. |
 
 ## Examples
 
@@ -328,7 +329,7 @@ try {
 getReadableBytes(): number
 ```
 
-获取MessageParcel的可读字节空间。
+Obtains the readable capacity of this **MessageParcel** object.
 
 **Since:** 7
 
@@ -346,7 +347,7 @@ getReadableBytes(): number
 
 | Type | Description |
 | --- | --- |
-| number | 获取到的MessageParcel的可读字节空间。以字节为单位。 |
+| number | MessageParcel** object readable capacity, in bytes. |
 
 ## Examples
 
@@ -370,7 +371,7 @@ try {
 getSize(): number
 ```
 
-获取当前MessageParcel的数据大小。
+Obtains the data size of this **MessageParcel** object.
 
 **Since:** 7
 
@@ -388,7 +389,7 @@ getSize(): number
 
 | Type | Description |
 | --- | --- |
-| number | 获取的MessageParcel的数据大小。以字节为单位。 |
+| number | Size of the **MessageParcel** object obtained, in bytes. |
 
 ## Examples
 
@@ -412,7 +413,7 @@ try {
 getWritableBytes(): number
 ```
 
-获取MessageParcel的可写字节空间。
+Obtains the writable capacity of this **MessageParcel** object.
 
 **Since:** 7
 
@@ -430,7 +431,7 @@ getWritableBytes(): number
 
 | Type | Description |
 | --- | --- |
-| number | 获取到的MessageParcel的可写字节空间。以字节为单位。 |
+| number | MessageParcel** writable capacity obtained, in bytes. |
 
 ## Examples
 
@@ -454,7 +455,7 @@ try {
 getWritePosition(): number
 ```
 
-获取MessageParcel的写位置。
+Obtains the write position of this **MessageParcel** object.
 
 **Since:** 7
 
@@ -472,7 +473,7 @@ getWritePosition(): number
 
 | Type | Description |
 | --- | --- |
-| number | 返回MessageParcel实例中的当前写入位置。 |
+| number | Current write position of the **MessageParcel** object. |
 
 ## Examples
 
@@ -496,7 +497,7 @@ try {
 readAshmem(): Ashmem
 ```
 
-从MessageParcel读取匿名共享对象。
+Reads the anonymous shared object from this **MessageParcel** object.
 
 **Since:** 8
 
@@ -514,7 +515,7 @@ readAshmem(): Ashmem
 
 | Type | Description |
 | --- | --- |
-| [Ashmem](arkts-ipc-rpc-ashmem-c.md) | 返回匿名共享对象。 |
+| [Ashmem](arkts-ipc-rpc-ashmem-c.md) | Anonymous share object obtained. |
 
 ## Examples
 
@@ -540,7 +541,7 @@ try {
 readBoolean(): boolean
 ```
 
-从MessageParcel实例中读取布尔值。
+Reads the Boolean value from this **MessageParcel** object.
 
 **Since:** 7
 
@@ -558,7 +559,7 @@ readBoolean(): boolean
 
 | Type | Description |
 | --- | --- |
-| boolean | 返回读取到的布尔值。 |
+| boolean | Boolean value read. |
 
 ## Examples
 
@@ -583,7 +584,7 @@ try {
 readBooleanArray(dataIn: boolean[]): void
 ```
 
-从MessageParcel实例中读取布尔数组，并将其写入到创建的空数组中。
+Reads the Boolean array from this **MessageParcel** object and writes it to the created empty array.
 
 **Since:** 7
 
@@ -601,7 +602,7 @@ readBooleanArray(dataIn: boolean[]): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| dataIn | boolean[] | Yes | 要读取的布尔数组。 |
+| dataIn | boolean[] | Yes | Boolean array to read. |
 
 ## Examples
 
@@ -627,7 +628,7 @@ try {
 readBooleanArray(): boolean[]
 ```
 
-从MessageParcel实例中读取布尔数组。
+Reads the Boolean array from this **MessageParcel** object.
 
 **Since:** 7
 
@@ -645,7 +646,7 @@ readBooleanArray(): boolean[]
 
 | Type | Description |
 | --- | --- |
-| boolean[] | 返回布尔数组。 |
+| boolean[] | Boolean array read. |
 
 ## Examples
 
@@ -670,7 +671,7 @@ try {
 readByte(): number
 ```
 
-从MessageParcel实例中读取字节值。
+Reads the byte value from this **MessageParcel** object.
 
 **Since:** 7
 
@@ -688,7 +689,7 @@ readByte(): number
 
 | Type | Description |
 | --- | --- |
-| number | 返回字节值。 |
+| number | Byte value read. |
 
 ## Examples
 
@@ -713,7 +714,7 @@ try {
 readByteArray(dataIn: number[]): void
 ```
 
-从MessageParcel实例中读取字节数组，并将其写入到创建的空数组中。
+Reads the byte array from this **MessageParcel** object and writes it to the created empty array.
 
 **Since:** 7
 
@@ -731,7 +732,7 @@ readByteArray(dataIn: number[]): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| dataIn | number[] | Yes | 要读取的字节数组。 |
+| dataIn | number[] | Yes | Byte array to read. |
 
 ## Examples
 
@@ -757,7 +758,7 @@ try {
 readByteArray(): number[]
 ```
 
-从MessageParcel实例中读取字节数组。
+Reads the byte array from this **MessageParcel** object.
 
 **Since:** 7
 
@@ -775,7 +776,7 @@ readByteArray(): number[]
 
 | Type | Description |
 | --- | --- |
-| number[] | 返回字节数组。 |
+| number[] | Byte array read. |
 
 ## Examples
 
@@ -801,7 +802,7 @@ try {
 readChar(): number
 ```
 
-从MessageParcel实例中读取单个字符值。
+Reads the single character value from this **MessageParcel** object.
 
 **Since:** 7
 
@@ -819,7 +820,7 @@ readChar(): number
 
 | Type | Description |
 | --- | --- |
-| number | 返回单个字符值。 |
+| number | Char** value read. |
 
 ## Examples
 
@@ -844,7 +845,7 @@ try {
 readCharArray(dataIn: number[]): void
 ```
 
-从MessageParcel实例中读取单个字符数组，并将其写入到创建的空数组中。
+Reads the character array from this **MessageParcel** object and writes it to the created empty array.
 
 **Since:** 7
 
@@ -862,7 +863,7 @@ readCharArray(dataIn: number[]): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| dataIn | number[] | Yes | 要读取的单个字符数组。 |
+| dataIn | number[] | Yes | Character array to read. |
 
 ## Examples
 
@@ -888,7 +889,7 @@ try {
 readCharArray(): number[]
 ```
 
-从MessageParcel实例中读取单个字符数组。
+Reads the single character array from this **MessageParcel** object.
 
 **Since:** 7
 
@@ -906,7 +907,7 @@ readCharArray(): number[]
 
 | Type | Description |
 | --- | --- |
-| number[] | 返回单个字符数组。 |
+| number[] | Character array read. |
 
 ## Examples
 
@@ -931,7 +932,7 @@ try {
 readDouble(): number
 ```
 
-从MessageParcel实例中读取双精度浮点值。
+Reads the double value from this **MessageParcel** object.
 
 **Since:** 7
 
@@ -949,7 +950,7 @@ readDouble(): number
 
 | Type | Description |
 | --- | --- |
-| number | 返回双精度浮点值。 |
+| number | Double value read. |
 
 ## Examples
 
@@ -974,7 +975,7 @@ try {
 readDoubleArray(dataIn: number[]): void
 ```
 
-从MessageParcel实例中读取双精度浮点数组，并将其写入到创建的空数组中。
+Reads the double array from this **MessageParcel** object and writes it to the created empty array.
 
 **Since:** 7
 
@@ -992,7 +993,7 @@ readDoubleArray(dataIn: number[]): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| dataIn | number[] | Yes | 要读取的双精度浮点数组。 |
+| dataIn | number[] | Yes | Double array to read. |
 
 ## Examples
 
@@ -1018,7 +1019,7 @@ try {
 readDoubleArray(): number[]
 ```
 
-从MessageParcel实例中读取双精度浮点数组。
+Reads the double array from this **MessageParcel** object.
 
 **Since:** 7
 
@@ -1036,7 +1037,7 @@ readDoubleArray(): number[]
 
 | Type | Description |
 | --- | --- |
-| number[] | 返回双精度浮点数组。 |
+| number[] | Double array read. |
 
 ## Examples
 
@@ -1061,7 +1062,7 @@ try {
 readException(): void
 ```
 
-从MessageParcel中读取异常。
+Reads the exception information from this **MessageParcel** object.
 
 **Since:** 8
 
@@ -1157,7 +1158,7 @@ try {
 readFileDescriptor(): number
 ```
 
-从MessageParcel中读取文件描述符。
+Reads the file descriptor from this **MessageParcel** object.
 
 **Since:** 8
 
@@ -1175,7 +1176,7 @@ readFileDescriptor(): number
 
 | Type | Description |
 | --- | --- |
-| number | 返回文件描述符。 |
+| number | File descriptor read. |
 
 ## Examples
 
@@ -1202,7 +1203,7 @@ try {
 readFloat(): number
 ```
 
-从MessageParcel实例中读取双精度浮点值。
+Reads the double value from this **MessageParcel** object.
 
 **Since:** 7
 
@@ -1220,7 +1221,7 @@ readFloat(): number
 
 | Type | Description |
 | --- | --- |
-| number | 返回双精度浮点值。 |
+| number | Double value read. |
 
 ## Examples
 
@@ -1245,7 +1246,7 @@ try {
 readFloatArray(dataIn: number[]): void
 ```
 
-从MessageParcel实例中读取双精度浮点数组，并将其写入到创建的空数组中。
+Reads the double array from this **MessageParcel** object and writes it to the created empty array.
 
 **Since:** 7
 
@@ -1263,7 +1264,7 @@ readFloatArray(dataIn: number[]): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| dataIn | number[] | Yes | 要读取的双精度浮点数组。由于系统内部对float类型的数据是按照double处理的，使用时对于数组所占的总字节数应按照double类型来计算。 |
+| dataIn | number[] | Yes | Double array to read. The system processes float data as that of the double type. Therefore, the total number of bytes occupied by a float array must be calculated as the double type. |
 
 ## Examples
 
@@ -1289,7 +1290,7 @@ try {
 readFloatArray(): number[]
 ```
 
-从MessageParcel实例中读取双精度浮点数组。
+Reads the double array from this **MessageParcel** object.
 
 **Since:** 7
 
@@ -1307,7 +1308,7 @@ readFloatArray(): number[]
 
 | Type | Description |
 | --- | --- |
-| number[] | 返回双精度浮点数组。 |
+| number[] | Double array read. |
 
 ## Examples
 
@@ -1332,7 +1333,7 @@ try {
 readInt(): number
 ```
 
-从MessageParcel实例中读取整数值。
+Reads the integer from this **MessageParcel** object.
 
 **Since:** 7
 
@@ -1350,7 +1351,7 @@ readInt(): number
 
 | Type | Description |
 | --- | --- |
-| number | 返回整数值。 |
+| number | Integer read. |
 
 ## Examples
 
@@ -1375,7 +1376,7 @@ try {
 readIntArray(dataIn: number[]): void
 ```
 
-从MessageParcel实例中读取整数数组，并将其写入到创建的空数组中。
+Reads the integer array from this **MessageParcel** object and writes it to the created empty array.
 
 **Since:** 7
 
@@ -1393,7 +1394,7 @@ readIntArray(dataIn: number[]): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| dataIn | number[] | Yes | 要读取的整数数组。 |
+| dataIn | number[] | Yes | Integer array to read. |
 
 ## Examples
 
@@ -1419,7 +1420,7 @@ try {
 readIntArray(): number[]
 ```
 
-从MessageParcel实例中读取整数数组。
+Reads the integer array from this **MessageParcel** object.
 
 **Since:** 7
 
@@ -1437,7 +1438,7 @@ readIntArray(): number[]
 
 | Type | Description |
 | --- | --- |
-| number[] | 返回整数数组。 |
+| number[] | Integer array read. |
 
 ## Examples
 
@@ -1462,7 +1463,7 @@ try {
 readInterfaceToken(): string
 ```
 
-从MessageParcel中读取接口描述符，接口描述符按写入MessageParcel的顺序读取，本地对象可使用该信息检验本次通信。
+Reads the interface token from this **MessageParcel** object. The interface token is read in the sequence in  which it is written to the **MessageParcel** object. The local object can use it to verify the communication.
 
 **Since:** 7
 
@@ -1480,7 +1481,7 @@ readInterfaceToken(): string
 
 | Type | Description |
 | --- | --- |
-| string | 返回读取到的接口描述符。 |
+| string | Interface token obtained. |
 
 ## Examples
 
@@ -1504,7 +1505,7 @@ try {
 readLong(): number
 ```
 
-从MessageParcel实例中读取长整数值。
+Reads the long int value from this **MessageParcel** object.
 
 **Since:** 7
 
@@ -1522,7 +1523,7 @@ readLong(): number
 
 | Type | Description |
 | --- | --- |
-| number | 返回长整数值。 |
+| number | Long integer read. |
 
 ## Examples
 
@@ -1547,7 +1548,7 @@ try {
 readLongArray(dataIn: number[]): void
 ```
 
-从MessageParcel实例中读取长整数数组，并将其写入到创建的空数组中。
+Reads the long array from this **MessageParcel** object and writes it to the created empty array.
 
 **Since:** 7
 
@@ -1565,7 +1566,7 @@ readLongArray(dataIn: number[]): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| dataIn | number[] | Yes | 要读取的长整数数组。 |
+| dataIn | number[] | Yes | Long array to read. |
 
 ## Examples
 
@@ -1591,7 +1592,7 @@ try {
 readLongArray(): number[]
 ```
 
-从MessageParcel实例中读取长整数数组。
+Reads the long array from this **MessageParcel** object.
 
 **Since:** 7
 
@@ -1609,7 +1610,7 @@ readLongArray(): number[]
 
 | Type | Description |
 | --- | --- |
-| number[] | 返回长整数数组。 |
+| number[] | Long array read. |
 
 ## Examples
 
@@ -1634,7 +1635,7 @@ try {
 readRawData(size: number): number[]
 ```
 
-从MessageParcel读取原始数据。
+Reads raw data from this **MessageParcel** object.
 
 **Since:** 8
 
@@ -1652,13 +1653,13 @@ readRawData(size: number): number[]
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| size | number | Yes | 要读取的原始数据的大小，以字节为单位。 |
+| size | number | Yes | Size of the raw data to read. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| number[] | 返回原始数据（以字节为单位）。 |
+| number[] | Raw data obtained, in bytes. |
 
 ## Examples
 
@@ -1684,7 +1685,8 @@ try {
 readRemoteObject(): IRemoteObject
 ```
 
-从MessageParcel读取远程对象。此方法用于反序列化MessageParcel对象以生成IRemoteObject。远程对象按写入MessageParcel的顺序读取。
+Reads the remote object from this **MessageParcel** object. You can use this method to deserialize the  
+ **MessageParcel** object to generate an **IRemoteObject**. The remote objects are read in the order in which  they are written to this **MessageParcel** object.
 
 **Since:** 7
 
@@ -1702,7 +1704,7 @@ readRemoteObject(): IRemoteObject
 
 | Type | Description |
 | --- | --- |
-| [IRemoteObject](arkts-ipc-rpc-iremoteobject-c.md) | 读取到的远程对象，用于IPC/RPC通信。 |
+| [IRemoteObject](arkts-ipc-rpc-iremoteobject-c.md) | Remote object obtained. |
 
 ## Examples
 
@@ -1738,7 +1740,7 @@ try {
 readRemoteObjectArray(objects: IRemoteObject[]): void
 ```
 
-从MessageParcel读取IRemoteObject对象数组，并将其写入到创建的空数组中。
+Reads the **IRemoteObject** array from this **MessageParcel** object and writes it to the created empty array.
 
 **Since:** 8
 
@@ -1756,7 +1758,7 @@ readRemoteObjectArray(objects: IRemoteObject[]): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| objects | [IRemoteObject](arkts-ipc-rpc-iremoteobject-c.md)[] | Yes | 从MessageParcel读取的IRemoteObject对象数组。 |
+| objects | [IRemoteObject](arkts-ipc-rpc-iremoteobject-c.md)[] | Yes | IRemoteObject** array to read. |
 
 ## Examples
 
@@ -1794,7 +1796,7 @@ try {
 readRemoteObjectArray(): IRemoteObject[]
 ```
 
-从MessageParcel读取IRemoteObject对象数组。
+Reads the **IRemoteObject** array from this **MessageParcel** object.
 
 **Since:** 8
 
@@ -1812,7 +1814,7 @@ readRemoteObjectArray(): IRemoteObject[]
 
 | Type | Description |
 | --- | --- |
-| [IRemoteObject](arkts-ipc-rpc-iremoteobject-c.md)[] | 返回IRemoteObject对象数组。 |
+| [IRemoteObject](arkts-ipc-rpc-iremoteobject-c.md)[] | IRemoteObject** object array obtained. |
 
 ## Examples
 
@@ -1850,7 +1852,7 @@ try {
 readSequenceable(dataIn: Sequenceable): boolean
 ```
 
-从MessageParcel实例中读取成员变量到指定的对象（dataIn）。
+Reads member variables from this **MessageParcel** object.
 
 **Since:** 7
 
@@ -1868,13 +1870,13 @@ readSequenceable(dataIn: Sequenceable): boolean
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| dataIn | [Sequenceable](arkts-ipc-rpc-sequenceable-i.md) | Yes | 需要从MessageParcel读取成员变量的对象。 |
+| dataIn | [Sequenceable](arkts-ipc-rpc-sequenceable-i.md) | Yes | Object that reads member variables from the **MessageParcel** object. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| boolean | true：反序列化成功，false：反序列化失败。 |
+| boolean | Returns **true** if the operation is successful; returns **false** otherwise. |
 
 ## Examples
 
@@ -1920,7 +1922,7 @@ try {
 readSequenceableArray(sequenceableArray: Sequenceable[]): void
 ```
 
-从MessageParcel实例中读取可序列化对象数组。
+Reads the **Sequenceable** array from this **MessageParcel** object.
 
 **Since:** 8
 
@@ -1938,7 +1940,7 @@ readSequenceableArray(sequenceableArray: Sequenceable[]): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| sequenceableArray | [Sequenceable](arkts-ipc-rpc-sequenceable-i.md)[] | Yes | 要读取的可序列化对象数组。 |
+| sequenceableArray | [Sequenceable](arkts-ipc-rpc-sequenceable-i.md)[] | Yes | Sequenceable** array to read. |
 
 ## Examples
 
@@ -1986,7 +1988,7 @@ try {
 readShort(): number
 ```
 
-从MessageParcel实例中读取短整数值。
+Reads the short integer from this **MessageParcel** object.
 
 **Since:** 7
 
@@ -2004,7 +2006,7 @@ readShort(): number
 
 | Type | Description |
 | --- | --- |
-| number | 返回短整数值。 |
+| number | Short integer read. |
 
 ## Examples
 
@@ -2029,7 +2031,7 @@ try {
 readShortArray(dataIn: number[]): void
 ```
 
-从MessageParcel实例中读取短整数数组，并将其写入到创建的空数组中。
+Reads the short array from this **MessageParcel** object and writes it to the created empty array.
 
 **Since:** 7
 
@@ -2047,7 +2049,7 @@ readShortArray(dataIn: number[]): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| dataIn | number[] | Yes | 要读取的短整数数组。 |
+| dataIn | number[] | Yes | Short array to read. |
 
 ## Examples
 
@@ -2073,7 +2075,7 @@ try {
 readShortArray(): number[]
 ```
 
-从MessageParcel实例中读取短整数数组。
+Reads the short array from this **MessageParcel** object.
 
 **Since:** 7
 
@@ -2091,7 +2093,7 @@ readShortArray(): number[]
 
 | Type | Description |
 | --- | --- |
-| number[] | 返回短整数数组。 |
+| number[] | Short array read. |
 
 ## Examples
 
@@ -2116,7 +2118,7 @@ try {
 readString(): string
 ```
 
-从MessageParcel实例中读取字符串值。
+Reads the string from this **MessageParcel** object.
 
 **Since:** 7
 
@@ -2134,7 +2136,7 @@ readString(): string
 
 | Type | Description |
 | --- | --- |
-| string | 返回字符串值。 |
+| string | String read. |
 
 ## Examples
 
@@ -2159,7 +2161,7 @@ try {
 readStringArray(dataIn: string[]): void
 ```
 
-从MessageParcel实例中读取字符串数组，并将其写入到创建的空数组中。
+Reads the string array from this **MessageParcel** object and writes it to the created empty array.
 
 **Since:** 7
 
@@ -2177,7 +2179,7 @@ readStringArray(dataIn: string[]): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| dataIn | string[] | Yes | 要读取的字符串数组。 |
+| dataIn | string[] | Yes | String array to read. |
 
 ## Examples
 
@@ -2203,7 +2205,7 @@ try {
 readStringArray(): string[]
 ```
 
-从MessageParcel实例中读取字符串数组。
+Reads the string array from this **MessageParcel** object.
 
 **Since:** 7
 
@@ -2221,7 +2223,7 @@ readStringArray(): string[]
 
 | Type | Description |
 | --- | --- |
-| string[] | 返回字符串数组。 |
+| string[] | String array read. |
 
 ## Examples
 
@@ -2246,7 +2248,7 @@ try {
 reclaim(): void
 ```
 
-释放不再使用的MessageParcel对象。
+Reclaims the **MessageParcel** object that is no longer used.
 
 **Since:** 7
 
@@ -2280,7 +2282,7 @@ try {
 rewindRead(pos: number): boolean
 ```
 
-重新偏移读取位置到指定的位置。
+Moves the read pointer to the specified position.
 
 **Since:** 7
 
@@ -2298,13 +2300,13 @@ rewindRead(pos: number): boolean
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| pos | number | Yes | 开始读取数据的目标位置。 |
+| pos | number | Yes | Position from which data is to read. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| boolean | true：读取位置发生更改，false：读取位置未发生更改。 |
+| boolean | Returns **true** if the read position changes; returns **false** otherwise. |
 
 ## Examples
 
@@ -2332,7 +2334,7 @@ try {
 rewindWrite(pos: number): boolean
 ```
 
-重新偏移写位置到指定的位置。
+Moves the write pointer to the specified position.
 
 **Since:** 7
 
@@ -2350,13 +2352,13 @@ rewindWrite(pos: number): boolean
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| pos | number | Yes | 开始写入数据的目标位置。 |
+| pos | number | Yes | Position from which data is to write. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| boolean | true：写入位置发生更改，false：写入位置未发生更改。 |
+| boolean | Returns **true** if the write position changes; returns **false** otherwise. |
 
 ## Examples
 
@@ -2382,7 +2384,7 @@ try {
 setCapacity(size: number): boolean
 ```
 
-设置MessageParcel实例的存储容量。
+Sets the storage capacity of this **MessageParcel** object.
 
 **Since:** 7
 
@@ -2400,13 +2402,13 @@ setCapacity(size: number): boolean
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| size | number | Yes | MessageParcel实例的存储容量。以字节为单位。 |
+| size | number | Yes | Storage capacity to set, in bytes. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| boolean | true：设置成功，false：设置失败。 |
+| boolean | Returns **true** if the operation is successful; returns **false** otherwise. |
 
 ## Examples
 
@@ -2429,7 +2431,7 @@ try {
 setSize(size: number): boolean
 ```
 
-设置MessageParcel实例中包含的数据大小。
+Sets the size of data contained in this **MessageParcel** object.
 
 **Since:** 7
 
@@ -2447,13 +2449,13 @@ setSize(size: number): boolean
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| size | number | Yes | MessageParcel实例的数据大小。以字节为单位。 |
+| size | number | Yes | Data size to set, in bytes. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| boolean | true：设置成功，false：设置失败。 |
+| boolean | Returns **true** if the operation is successful; returns **false** otherwise. |
 
 ## Examples
 
@@ -2476,7 +2478,7 @@ try {
 writeAshmem(ashmem: Ashmem): boolean
 ```
 
-将指定的匿名共享对象写入此MessageParcel。
+Writes an anonymous shared object to this **MessageParcel** object.
 
 **Since:** 8
 
@@ -2494,13 +2496,13 @@ writeAshmem(ashmem: Ashmem): boolean
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| ashmem | [Ashmem](arkts-ipc-rpc-ashmem-c.md) | Yes | 要写入MessageParcel的匿名共享对象。 |
+| ashmem | [Ashmem](arkts-ipc-rpc-ashmem-c.md) | Yes | Anonymous shared object to write. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| boolean | true：写入成功，false：写入失败。 |
+| boolean | Returns **true** if the data is written successfully; returns **false** otherwise. |
 
 ## Examples
 
@@ -2524,7 +2526,7 @@ try {
 writeBoolean(val: boolean): boolean
 ```
 
-将布尔值写入MessageParcel实例。
+Writes a Boolean value to this **MessageParcel** object.
 
 **Since:** 7
 
@@ -2542,13 +2544,13 @@ writeBoolean(val: boolean): boolean
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| val | boolean | Yes | 要写入的布尔值。 |
+| val | boolean | Yes | Boolean value to write. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| boolean | true：写入成功，false：写入失败。 |
+| boolean | Returns **true** if the data is written successfully; returns **false** otherwise. |
 
 ## Examples
 
@@ -2571,7 +2573,7 @@ try {
 writeBooleanArray(booleanArray: boolean[]): boolean
 ```
 
-将布尔数组写入MessageParcel实例。
+Writes a Boolean array to this **MessageParcel** object.
 
 **Since:** 7
 
@@ -2589,13 +2591,13 @@ writeBooleanArray(booleanArray: boolean[]): boolean
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| booleanArray | boolean[] | Yes | 要写入的布尔数组。 |
+| booleanArray | boolean[] | Yes | Boolean array to write. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| boolean | true：写入成功，false：写入失败。 |
+| boolean | Returns **true** if the data is written successfully; returns **false** otherwise. |
 
 ## Examples
 
@@ -2618,7 +2620,7 @@ try {
 writeByte(val: number): boolean
 ```
 
-将字节值写入MessageParcel实例。
+Writes a Byte value to this **MessageParcel** object.
 
 **Since:** 7
 
@@ -2636,13 +2638,13 @@ writeByte(val: number): boolean
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| val | number | Yes | 要写入的字节值。 |
+| val | number | Yes | Byte value to write. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| boolean | true：写入成功，false：写入失败。 |
+| boolean | Returns **true** if the data is written successfully; returns **false** otherwise. |
 
 ## Examples
 
@@ -2665,7 +2667,7 @@ try {
 writeByteArray(byteArray: number[]): boolean
 ```
 
-将字节数组写入MessageParcel实例。
+Writes a byte array to this **MessageParcel** object.
 
 **Since:** 7
 
@@ -2683,13 +2685,13 @@ writeByteArray(byteArray: number[]): boolean
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| byteArray | number[] | Yes | 要写入的字节数组。 |
+| byteArray | number[] | Yes | Byte array to write. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| boolean | true：写入成功，false：写入失败。 |
+| boolean | Returns **true** if the data is written successfully; returns **false** otherwise. |
 
 ## Examples
 
@@ -2713,7 +2715,7 @@ try {
 writeChar(val: number): boolean
 ```
 
-将单个字符值写入MessageParcel实例。
+Writes a single character value to this **MessageParcel** object.
 
 **Since:** 7
 
@@ -2731,13 +2733,13 @@ writeChar(val: number): boolean
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| val | number | Yes | 要写入的单个字符值。取值范围：[0, 65535]，对应Unicode字符编码范围。超出此范围可能导致字符编码异常。 |
+| val | number | Yes | Char** value to write. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| boolean | true：写入成功，false：写入失败。 |
+| boolean | Returns **true** if the data is written successfully; returns **false** otherwise. |
 
 ## Examples
 
@@ -2760,7 +2762,7 @@ try {
 writeCharArray(charArray: number[]): boolean
 ```
 
-将单个字符数组写入MessageParcel实例。
+Writes a single character array to this **MessageParcel** object.
 
 **Since:** 7
 
@@ -2778,13 +2780,13 @@ writeCharArray(charArray: number[]): boolean
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| charArray | number[] | Yes | 要写入的单个字符数组。 |
+| charArray | number[] | Yes | Character array to write. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| boolean | true：写入成功，false：写入失败。 |
+| boolean | Returns **true** if the data is written successfully; returns **false** otherwise. |
 
 ## Examples
 
@@ -2807,7 +2809,7 @@ try {
 writeDouble(val: number): boolean
 ```
 
-将双精度浮点值写入MessageParcel实例。
+Writes a double value to this **MessageParcel** object.
 
 **Since:** 7
 
@@ -2825,13 +2827,13 @@ writeDouble(val: number): boolean
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| val | number | Yes | 要写入的双精度浮点值。 |
+| val | number | Yes | Double value to write. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| boolean | true：写入成功，false：写入失败。 |
+| boolean | Returns **true** if the data is written successfully; returns **false** otherwise. |
 
 ## Examples
 
@@ -2854,7 +2856,7 @@ try {
 writeDoubleArray(doubleArray: number[]): boolean
 ```
 
-将双精度浮点数组写入MessageParcel实例。
+Writes a double array to this **MessageParcel** object.
 
 **Since:** 7
 
@@ -2872,13 +2874,13 @@ writeDoubleArray(doubleArray: number[]): boolean
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| doubleArray | number[] | Yes | 要写入的双精度浮点数组。 |
+| doubleArray | number[] | Yes | Double array to write. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| boolean | true：写入成功，false：写入失败。 |
+| boolean | Returns **true** if the data is written successfully; returns **false** otherwise. |
 
 ## Examples
 
@@ -2901,7 +2903,7 @@ try {
 writeFileDescriptor(fd: number): boolean
 ```
 
-写入文件描述符到MessageParcel。
+Writes a file descriptor to this **MessageParcel** object.
 
 **Since:** 8
 
@@ -2919,13 +2921,13 @@ writeFileDescriptor(fd: number): boolean
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| fd | number | Yes | 文件描述符。 |
+| fd | number | Yes | File descriptor to write. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| boolean | true：操作成功，false：操作失败。 |
+| boolean | Returns **true** if the operation is successful; returns **false** otherwise. |
 
 ## Examples
 
@@ -2951,7 +2953,7 @@ try {
 writeFloat(val: number): boolean
 ```
 
-将双精度浮点值写入MessageParcel实例。
+Writes a double value to this **MessageParcel** object.
 
 **Since:** 7
 
@@ -2969,13 +2971,13 @@ writeFloat(val: number): boolean
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| val | number | Yes | 要写入的双精度浮点值。 |
+| val | number | Yes | Double value to write. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| boolean | true：写入成功，false：写入失败。 |
+| boolean | Returns **true** if the data is written successfully; returns **false** otherwise. |
 
 ## Examples
 
@@ -2998,7 +3000,7 @@ try {
 writeFloatArray(floatArray: number[]): boolean
 ```
 
-将双精度浮点数组写入MessageParcel实例。
+Writes a double array to this **MessageParcel** object.
 
 **Since:** 7
 
@@ -3016,13 +3018,13 @@ writeFloatArray(floatArray: number[]): boolean
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| floatArray | number[] | Yes | 要写入的双精度浮点数组。由于系统内部对float类型的数据是按照double处理的，使用时对于数组所占的总字节数应按照double类型来计算。 |
+| floatArray | number[] | Yes | Double array to write. The system processes float data as that of the double type. Therefore, the total number of bytes occupied by a float array must be calculated as the double type. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| boolean | true：写入成功，false：写入失败。 |
+| boolean | Returns **true** if the data is written successfully; returns **false** otherwise. |
 
 ## Examples
 
@@ -3045,7 +3047,7 @@ try {
 writeInt(val: number): boolean
 ```
 
-将整数值写入MessageParcel实例。
+Writes an int value to this **MessageParcel** object.
 
 **Since:** 7
 
@@ -3063,13 +3065,13 @@ writeInt(val: number): boolean
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| val | number | Yes | 要写入的整数值。 |
+| val | number | Yes | Integer to write. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| boolean | true：写入成功，false：写入失败。 |
+| boolean | Returns **true** if the data is written successfully; returns **false** otherwise. |
 
 ## Examples
 
@@ -3092,7 +3094,7 @@ try {
 writeIntArray(intArray: number[]): boolean
 ```
 
-将整数数组写入MessageParcel实例。
+Writes an integer array to this **MessageParcel** object.
 
 **Since:** 7
 
@@ -3110,13 +3112,13 @@ writeIntArray(intArray: number[]): boolean
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| intArray | number[] | Yes | 要写入的整数数组。 |
+| intArray | number[] | Yes | Integer array to write. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| boolean | true：写入成功，false：写入失败。 |
+| boolean | Returns **true** if the data is written successfully; returns **false** otherwise. |
 
 ## Examples
 
@@ -3139,7 +3141,7 @@ try {
 writeInterfaceToken(token: string): boolean
 ```
 
-将接口描述符写入MessageParcel对象，远端对象可使用该信息校验本次通信。
+Writes an interface token to this **MessageParcel** object. The remote object can use this interface token to  verify the communication.
 
 **Since:** 7
 
@@ -3157,13 +3159,13 @@ writeInterfaceToken(token: string): boolean
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| token | string | Yes | 字符串类型描述符，其长度应小于40960。 |
+| token | string | Yes | Interface token to write. The length of the string must be less than 40960. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| boolean | true：操作成功，false：操作失败。 |
+| boolean | Returns **true** if the operation is successful; returns **false** otherwise. |
 
 ## Examples
 
@@ -3186,7 +3188,7 @@ try {
 writeLong(val: number): boolean
 ```
 
-将长整数值写入MessageParcel实例。
+Writes a long int value to this **MessageParcel** object.
 
 **Since:** 7
 
@@ -3204,13 +3206,13 @@ writeLong(val: number): boolean
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| val | number | Yes | 要写入的长整数值。 |
+| val | number | Yes | Long int value to write. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| boolean | true：写入成功，false：写入失败。 |
+| boolean | Returns **true** if the data is written successfully; returns **false** otherwise. |
 
 ## Examples
 
@@ -3233,7 +3235,7 @@ try {
 writeLongArray(longArray: number[]): boolean
 ```
 
-将长整数数组写入MessageParcel实例。
+Writes a long array to this **MessageParcel** object.
 
 **Since:** 7
 
@@ -3251,13 +3253,13 @@ writeLongArray(longArray: number[]): boolean
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| longArray | number[] | Yes | 要写入的长整数数组。 |
+| longArray | number[] | Yes | Long array to write. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| boolean | true：写入成功，false：写入失败。 |
+| boolean | Returns **true** if the data is written successfully; returns **false** otherwise. |
 
 ## Examples
 
@@ -3280,7 +3282,7 @@ try {
 writeNoException(): void
 ```
 
-向MessageParcel写入“指示未发生异常”的信息。
+Writes information to this **MessageParcel** object indicating that no exception occurred.
 
 **Since:** 8
 
@@ -3329,7 +3331,7 @@ onRemoteRequest(code: number, data: rpc.MessageParcel, reply: rpc.MessageParcel,
 writeRawData(rawData: number[], size: number): boolean
 ```
 
-将原始数据写入MessageParcel对象。
+Writes raw data to this **MessageParcel** object.
 
 **Since:** 8
 
@@ -3347,14 +3349,14 @@ writeRawData(rawData: number[], size: number): boolean
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| rawData | number[] | Yes | 要写入的原始数据，大小不能超过128MB。 |
-| size | number | Yes | 发送的原始数据大小，以字节为单位。 |
+| rawData | number[] | Yes | Raw data to write. The size cannot exceed 128 MB. |
+| size | number | Yes | Size of the raw data, in bytes. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| boolean | true：写入成功，false：写入失败。 |
+| boolean | Returns **true** if the data is written successfully; returns **false** otherwise. |
 
 ## Examples
 
@@ -3378,7 +3380,7 @@ try {
 writeRemoteObject(object: IRemoteObject): boolean
 ```
 
-序列化远程对象并将其写入MessageParcel对象。
+Serializes a remote object and writes it to this **MessageParcel** object.
 
 **Since:** 7
 
@@ -3396,13 +3398,13 @@ writeRemoteObject(object: IRemoteObject): boolean
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| object | [IRemoteObject](arkts-ipc-rpc-iremoteobject-c.md) | Yes | 要序列化并写入MessageParcel的远程对象。 |
+| object | [IRemoteObject](arkts-ipc-rpc-iremoteobject-c.md) | Yes | Remote object to serialize and write to the **MessageParcel** object. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| boolean | true：操作成功，false：操作失败。 |
+| boolean | Returns **true** if the operation is successful; returns **false** otherwise. |
 
 ## Examples
 
@@ -3435,7 +3437,7 @@ try {
 writeRemoteObjectArray(objectArray: IRemoteObject[]): boolean
 ```
 
-将IRemoteObject对象数组写入MessageParcel。
+Writes an **IRemoteObject** array to this **MessageParcel** object.
 
 **Since:** 8
 
@@ -3453,13 +3455,13 @@ writeRemoteObjectArray(objectArray: IRemoteObject[]): boolean
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| objectArray | [IRemoteObject](arkts-ipc-rpc-iremoteobject-c.md)[] | Yes | 要写入MessageParcel的IRemoteObject对象数组。 |
+| objectArray | [IRemoteObject](arkts-ipc-rpc-iremoteobject-c.md)[] | Yes | IRemoteObject** array to write. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| boolean | true：写入成功，false：写入失败。 |
+| boolean | Returns **true** if the data is written successfully; returns **false** otherwise. |
 
 ## Examples
 
@@ -3494,7 +3496,7 @@ try {
 writeSequenceable(val: Sequenceable): boolean
 ```
 
-将自定义序列化对象写入MessageParcel实例。
+Writes a **Sequenceable** object to this **MessageParcel** object.
 
 **Since:** 7
 
@@ -3512,13 +3514,13 @@ writeSequenceable(val: Sequenceable): boolean
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| val | [Sequenceable](arkts-ipc-rpc-sequenceable-i.md) | Yes | 要写入的可序列对象。建议实现marshalling和unmarshalling方法时确保数据完整性，序列化与反序列化的数据结构应保持一致。 |
+| val | [Sequenceable](arkts-ipc-rpc-sequenceable-i.md) | Yes | Sequenceable** object to write. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| boolean | true：写入成功，false：写入失败。 |
+| boolean | Returns **true** if the data is written successfully; returns **false** otherwise. |
 
 ## Examples
 
@@ -3561,7 +3563,7 @@ try {
 writeSequenceableArray(sequenceableArray: Sequenceable[]): boolean
 ```
 
-将可序列化对象数组写入MessageParcel实例。
+Writes a **Sequenceable** array to this **MessageParcel** object.
 
 **Since:** 7
 
@@ -3579,13 +3581,13 @@ writeSequenceableArray(sequenceableArray: Sequenceable[]): boolean
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| sequenceableArray | [Sequenceable](arkts-ipc-rpc-sequenceable-i.md)[] | Yes | 要写入的可序列化对象数组。 |
+| sequenceableArray | [Sequenceable](arkts-ipc-rpc-sequenceable-i.md)[] | Yes | Sequenceable** array to write. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| boolean | true：写入成功，false：写入失败。 |
+| boolean | Returns **true** if the data is written successfully; returns **false** otherwise. |
 
 ## Examples
 
@@ -3631,7 +3633,7 @@ try {
 writeShort(val: number): boolean
 ```
 
-将短整数值写入MessageParcel实例。
+Writes a short int value to this **MessageParcel** object.
 
 **Since:** 7
 
@@ -3649,13 +3651,13 @@ writeShort(val: number): boolean
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| val | number | Yes | 要写入的短整数值。 |
+| val | number | Yes | Short integer to write. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| boolean | true：写入成功，false：写入失败。 |
+| boolean | Returns **true** if the data is written successfully; returns **false** otherwise. |
 
 ## Examples
 
@@ -3678,7 +3680,7 @@ try {
 writeShortArray(shortArray: number[]): boolean
 ```
 
-将短整数数组写入MessageParcel实例。
+Writes a short array to this **MessageParcel** object.
 
 **Since:** 7
 
@@ -3696,13 +3698,13 @@ writeShortArray(shortArray: number[]): boolean
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| shortArray | number[] | Yes | 要写入的短整数数组。 |
+| shortArray | number[] | Yes | Short array to write. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| boolean | true：写入成功，false：写入失败。 |
+| boolean | Returns **true** if the data is written successfully; returns **false** otherwise. |
 
 ## Examples
 
@@ -3725,7 +3727,7 @@ try {
 writeString(val: string): boolean
 ```
 
-将字符串值写入MessageParcel实例。
+Writes a string to this **MessageParcel** object.
 
 **Since:** 7
 
@@ -3743,13 +3745,13 @@ writeString(val: string): boolean
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| val | string | Yes | 要写入的字符串值，其长度应小于40960。 |
+| val | string | Yes | String to write. The length of the string must be less than 40960. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| boolean | true：写入成功，false：写入失败。 |
+| boolean | Returns **true** if the data is written successfully; returns **false** otherwise. |
 
 ## Examples
 
@@ -3772,7 +3774,7 @@ try {
 writeStringArray(stringArray: string[]): boolean
 ```
 
-将字符串数组写入MessageParcel实例。
+Writes a string array to this **MessageParcel** object.
 
 **Since:** 7
 
@@ -3790,13 +3792,13 @@ writeStringArray(stringArray: string[]): boolean
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| stringArray | string[] | Yes | 要写入的字符串数组，数组单个元素的长度应小于40960。 |
+| stringArray | string[] | Yes | String array to write. The length of a single element in the array must be less than 40960. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| boolean | true：写入成功，false：写入失败。 |
+| boolean | Returns **true** if the data is written successfully; returns **false** otherwise. |
 
 ## Examples
 

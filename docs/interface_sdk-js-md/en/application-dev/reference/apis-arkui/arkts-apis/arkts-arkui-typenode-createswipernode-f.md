@@ -6,7 +6,7 @@
 export function createSwiperNode(context: UIContext, options?: FrameNodeOptions): Swiper
 ```
 
-创建 Swiper 类型的 FrameNode
+Create a FrameNode of Swiper type.On API 26.0.0 and above, It can also create a FrameNode of Swiper type with options.
 
 **Since:** 23
 
@@ -22,12 +22,12 @@ export function createSwiperNode(context: UIContext, options?: FrameNodeOptions)
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| context | [UIContext](arkts-arkui-arkui-uicontext-uicontext-c.md) | Yes | 用于创建 FrameNode 的 UI 上下文 |
-| options | [FrameNodeOptions](arkts-arkui-framenode-framenodeoptions-i.md) | No | Options for configuring FrameNode creation.<br>**Since:** 24 |
+| context | [UIContext](arkts-arkui-arkui-uicontext-uicontext-c.md) | Yes | uiContext used to create the FrameNode. |
+| options | [FrameNodeOptions](arkts-arkui-framenode-framenodeoptions-i.md) | No | Options for configuring FrameNode creation.<br>**Since:** 26.0.0 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [Swiper](arkts-arkui-typenode-swiper-t.md) | 返回 Swiper 类型的 FrameNode |
+| [Swiper](arkts-arkui-typenode-swiper-t.md) | Return Swiper type FrameNode. |
 

@@ -6,7 +6,7 @@
 const DATA_CHANGE_EVENT_ID = 'cloud_data_change'
 ```
 
-表示云数据变更。
+ID of the event, which indicates the change of the data in the cloud.
 
 **Since:** 11
 

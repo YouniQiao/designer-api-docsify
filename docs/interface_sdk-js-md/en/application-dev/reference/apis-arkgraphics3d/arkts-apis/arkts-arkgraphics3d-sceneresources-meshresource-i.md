@@ -1,6 +1,6 @@
 # MeshResource
 
-几何节点的网络数据描述资源
+The mesh data description resource for the geometry node
 
 **Inheritance/Implementation:** MeshResource extends [SceneResource](arkts-arkgraphics3d-sceneresources-sceneresource-i.md)
 

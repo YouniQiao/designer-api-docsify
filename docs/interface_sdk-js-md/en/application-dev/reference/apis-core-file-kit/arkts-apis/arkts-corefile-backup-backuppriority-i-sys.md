@@ -1,6 +1,6 @@
 # BackupPriority (System API)
 
-控制备份和恢复的优先级顺序。
+Control backup and restore priority sequence
 
 **Since:** 12
 
@@ -24,7 +24,7 @@ import { backup } from 'kits/@kit.CoreFileKit';
 priority?: int
 ```
 
-应用的优先级，数值越大优先级越高。
+Indicates the priority of a bundle.
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 

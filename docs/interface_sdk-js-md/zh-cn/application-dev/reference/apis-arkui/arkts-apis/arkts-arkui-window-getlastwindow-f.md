@@ -1,11 +1,5 @@
 # getLastWindow
 
-## 导入模块
-
-```TypeScript
-import { window } from 'kits/@kit.ArkUI';
-```
-
 ## getLastWindow
 
 ```TypeScript
@@ -37,11 +31,13 @@ function getLastWindow(ctx: BaseContext, callback: AsyncCallback<Window>): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 401 | Parameter error. Possible cause: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types. |
-| 1300002 | This window state is abnormal. Possible cause: 1. Top window or main window is null or destroyed; 2. This window context is abnormal. |
-| 1300006 | This window context is abnormal. |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible cause: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types. |
+| [1300002](../errorcode-window.md#1300002-窗口状态异常) | This window state is abnormal. Possible cause: 1. Top window or main window is null or destroyed; 2. This window context is abnormal. |
+| [1300006](../errorcode-window.md#1300006-窗口上下文异常) | This window context is abnormal. |
 
 ## 示例
+
+ArkTS-Dyn示例：
 
 ```TypeScript
 import { UIAbility } from '@kit.AbilityKit';
@@ -86,6 +82,48 @@ export default class EntryAbility extends UIAbility {
 }
 ```
 
+ArkTS-Sta示例：
+
+```TypeScript
+import { window } from '@kit.ArkUI';
+import { UIAbility } from '@kit.AbilityKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+import common from '@ohos.app.ability.common';
+import { LocalStorage } from '@ohos.arkui.stateManagement'
+
+export default class EntryAbility extends UIAbility {
+  // ...
+  onWindowStageCreate(windowStage: window.WindowStage): void {
+    console.info('onWindowStageCreate');
+    windowStage.loadContent('pages/Index', (err) => {
+        if (err?.code) {
+          console.error(`Failed to load content for main window. Cause code: ${err?.code}, message: ${err?.message}`);
+        }
+      // 创建子窗
+      windowStage.createSubWindow('testSubWindow').then((subWindow: window.Window) => {
+        let storage: LocalStorage = new LocalStorage();
+        subWindow.loadContent('pages/Index', storage, (err: BusinessError): void => {
+          subWindow.showWindow().then(() => {
+            try{
+              window.getLastWindow(this.context as common.UIAbilityContext, (err: BusinessError<void>|null, topWindow: window.Window|undefined) => {
+                if (err?.code) {
+                  console.error(`Failed to obtain the top window. Cause code: ${err?.code}, message: ${err?.message}`);
+                } else {
+                  console.info(`Succeeded in obtaining the top window. Window id: ${topWindow?.getWindowProperties().id}`);
+                }
+              });
+            }catch(exception){
+              let err = exception as BusinessError;
+              console.error(`Failed to obtain the top window. Cause code: ${err.code}, message: ${err.message}`);
+            }
+          });
+        });
+      });
+    });
+  }
+}
+```
+
 
 ## getLastWindow
 
@@ -123,11 +161,13 @@ function getLastWindow(ctx: BaseContext): Promise<Window>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 401 | Parameter error. Possible cause: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types. |
-| 1300002 | This window state is abnormal. Possible cause: 1. Top window or main window is null or destroyed; 2. This window context is abnormal. |
-| 1300006 | This window context is abnormal. |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible cause: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types. |
+| [1300002](../errorcode-window.md#1300002-窗口状态异常) | This window state is abnormal. Possible cause: 1. Top window or main window is null or destroyed; 2. This window context is abnormal. |
+| [1300006](../errorcode-window.md#1300006-窗口上下文异常) | This window context is abnormal. |
 
 ## 示例
+
+ArkTS-Dyn示例：
 
 ```TypeScript
 // EntryAbility.ets
@@ -167,6 +207,48 @@ export default class EntryAbility extends UIAbility {
     });
   }
   // ...
+}
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+import { window } from '@kit.ArkUI';
+import { UIAbility } from '@kit.AbilityKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+import common from '@ohos.app.ability.common';
+import { LocalStorage } from '@ohos.arkui.stateManagement'
+
+export default class EntryAbility extends UIAbility {
+  // ...
+  onWindowStageCreate(windowStage: window.WindowStage): void {
+    console.info('onWindowStageCreate');
+    windowStage.loadContent('pages/Index', (err) => {
+        if (err?.code) {
+          console.error(`Failed to load content for main window. Cause code: ${err?.code}, message: ${err?.message}`);
+        }
+      // 创建子窗
+      windowStage.createSubWindow('testSubWindow').then((subWindow: window.Window) => {
+        let storage: LocalStorage = new LocalStorage();
+        subWindow.loadContent('pages/Index', storage, (err: BusinessError): void => {
+          subWindow.showWindow().then(() => {
+            try {
+              window.getLastWindow(this.context as common.UIAbilityContext ).then((topWindow :window.Window | undefined ) => {
+                let windowClass = topWindow;
+                console.info(`Succeeded in obtaining the top window. Window id: ${topWindow?.getWindowProperties().id}`);
+              }).catch((Err: Error) => {
+                let err = Err as BusinessError;
+                console.error(`Failed to obtain the top window. Cause code: ${err?.code}, message: ${err?.message}`);
+              });
+            } catch (exception) {
+              let err = exception as BusinessError;
+              console.error(`Failed to obtain the top window. Cause code: ${err.code}, message: ${err.message}`);
+            }
+          });
+        });
+      });
+    });
+  }
 }
 ```
 

@@ -12,7 +12,7 @@ import { dataUriUtils } from 'kits/@kit.AbilityKit';
 function getId(uri: string): double
 ```
 
-获取指定uri路径末尾的ID。
+Obtains the ID attached to the end of a given URI.
 
 **Since:** 9
 
@@ -26,19 +26,19 @@ function getId(uri: string): double
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| uri | string | Yes | 表示uri对象。 |
+| uri | string | Yes | Target URI object. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| ArkTS-Dyn: number  <br>ArkTS-Sta：double | 返回uri路径末尾的ID。 |
+| ArkTS-Dyn: number  <br>ArkTS-Sta：double | ID obtained. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
 
 ## Examples
 

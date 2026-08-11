@@ -1,6 +1,6 @@
 # DLPFeatureInfo (System API)
 
-DLP特性开关的状态信息。
+Sets the DLP status.
 
 **Since:** 26.0.0
 
@@ -24,7 +24,7 @@ import { dlpSetDlpFeature } from 'kits/@kit.DataProtectionKit';
 dlpFeatureStatus: DlpFeatureStatus
 ```
 
-DLP特性开关的状态，包含NOT_ENABLED_FEATURE和ENABLED_FEATURE。
+DLP status, which can be set to **NOT_ENABLED_FEATURE** or **ENABLED_FEATURE**.
 
 **Type:** [DlpFeatureStatus](arkts-dataprotection-dlpsetdlpfeature-dlpfeaturestatus-e-sys.md)
 

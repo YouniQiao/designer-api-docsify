@@ -40,7 +40,7 @@ Checks whether the Cleartext traffic for a specified hostname is permitted.To in
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 201 | Permission denied. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
 
 ## Examples
 

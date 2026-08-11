@@ -1,6 +1,6 @@
 # OperationMode
 
-枚举授予或激活权限的URI访问模式。
+Enumerates the uri operate mode types.
 
 **Since:** 11
 
@@ -16,7 +16,7 @@
 READ_MODE = 0b1
 ```
 
-读权限。
+Indicates read permissions.
 
 **Since:** 11
 
@@ -32,7 +32,7 @@ READ_MODE = 0b1
 WRITE_MODE = 0b10
 ```
 
-写权限。
+Indicates write permissions.
 
 **Since:** 11
 
@@ -48,7 +48,7 @@ WRITE_MODE = 0b10
 CREATE_MODE = 0b100
 ```
 
-创建权限。
+Indicates creating permissions.
 
 **Since:** 20
 
@@ -64,7 +64,7 @@ CREATE_MODE = 0b100
 DELETE_MODE = 0b1000
 ```
 
-删除权限。
+Indicates deleting permissions.
 
 **Since:** 20
 
@@ -80,7 +80,7 @@ DELETE_MODE = 0b1000
 RENAME_MODE = 0b10000
 ```
 
-重命名权限。
+Indicates renaming permissions.
 
 **Since:** 20
 

@@ -16,7 +16,7 @@ Defining Consumer annotation Consumer is used to access the provided state varia
 alias: string = ""
 ```
 
-用于设置别名，默认值为属性名。
+The alias name.
 
 **Type:** string
 

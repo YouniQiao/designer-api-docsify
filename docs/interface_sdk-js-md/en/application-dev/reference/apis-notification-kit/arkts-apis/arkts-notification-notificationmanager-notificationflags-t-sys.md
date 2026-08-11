@@ -4,7 +4,7 @@
 export type NotificationFlags = _NotificationFlags
 ```
 
-描述通知标志位。
+Defines the notification flags.
 
 **Since:** 9
 

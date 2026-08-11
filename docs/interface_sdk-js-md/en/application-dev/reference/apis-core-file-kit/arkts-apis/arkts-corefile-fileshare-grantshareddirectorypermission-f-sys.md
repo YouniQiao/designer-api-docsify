@@ -12,7 +12,7 @@ import { fileShare } from 'kits/@kit.CoreFileKit';
 function grantSharedDirectoryPermission(): Promise<void>
 ```
 
-授予应用捐献目录的临时访问权限。使用Promise异步回调。
+Provides a permission grant for application-shared directories
 
 **Since:** 26.0.0
 
@@ -32,33 +32,14 @@ function grantSharedDirectoryPermission(): Promise<void>
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise对象，无返回结果。 |
+| Promise&lt;void&gt; | the promise returned by the function. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 801 | Capability not supported. |
+| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. |
 | 13900001 | Operation not permitted. |
-| 201 | Permission verification failed, usually the result returned by VerifyAccessToken. |
-| 202 | The caller is not a system application. |
-
-## Examples
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-import { fileShare } from '@kit.CoreFileKit';
-
-async function grantSharedDirectoryPermission() {
-  try {
-    fileShare.grantSharedDirectoryPermission().then(() => {
-      console.info('grantSharedDirectoryPermission success');
-    }).catch((err: BusinessError) => {
-      console.error(`grantSharedDirectoryPermission err: ${JSON.stringify(err)}`);
-    });
-  } catch (error) {
-    console.error(`grantSharedDirectoryPermission error, Code: ${error.code}, message: ${error.message}`);
-  }
-}
-```
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed, usually the result returned by VerifyAccessToken. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | The caller is not a system application. |
 

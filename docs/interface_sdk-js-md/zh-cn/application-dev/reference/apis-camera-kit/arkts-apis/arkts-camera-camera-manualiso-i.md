@@ -12,12 +12,6 @@ ManualIso object.
 
 **系统能力：** SystemCapability.Multimedia.Camera.Core
 
-## 导入模块
-
-```TypeScript
-import { camera } from 'kits/@kit.CameraKit';
-```
-
 ## getIso
 
 ArkTS-Dyn:
@@ -52,9 +46,9 @@ Gets current ISO.
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 7400102 | Operation not allowed, the inputDevice or the session is abnormal.<br>**适用版本：** 24+ |
-| 7400103 | Session not config. |
-| 202 | Not System Application.<br>**适用版本：** 12 - 23 |
+| [7400102](../errorcode-camera.md#7400102-非法操作) | Operation not allowed, the inputDevice or the session is abnormal.<br>**适用版本：** 24+ |
+| [7400103](../errorcode-camera.md#7400103-会话未配置) | Session not config. |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not System Application.<br>**适用版本：** 12 - 23 |
 
 ## setIso
 
@@ -90,8 +84,8 @@ Sets ISO sensitivity value, within the range of getSupportedIsoRange. This contr
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 7400101 | Parameter missing or parameter type incorrect.<br>**适用版本：** 12 - 23 |
-| 7400102 | Operation not allowed, the inputDevice or the session is abnormal.<br>**适用版本：** 24+ |
-| 7400103 | Session not config. |
-| 202 | Not System Application.<br>**适用版本：** 12 - 23 |
+| [7400101](../errorcode-camera.md#7400101-无效入参) | Parameter missing or parameter type incorrect.<br>**适用版本：** 12 - 23 |
+| [7400102](../errorcode-camera.md#7400102-非法操作) | Operation not allowed, the inputDevice or the session is abnormal.<br>**适用版本：** 24+ |
+| [7400103](../errorcode-camera.md#7400103-会话未配置) | Session not config. |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not System Application.<br>**适用版本：** 12 - 23 |
 

@@ -1,6 +1,6 @@
 # MetadataObject
 
-相机元能力信息，[CameraInput](arkts-camera-camera-camerainput-i.md)相机信息中的数据来源，通过metadataOutput.on('metadataObjectsAvailable')接口获取。
+Describes the camera metadata, which is the data source of [CameraInput](arkts-camera-camera-camerainput-i.md). The metadata is obtained through **metadataOutput.on('metadataObjectsAvailable')**.
 
 **Since:** 10
 
@@ -22,7 +22,7 @@ import { camera } from 'kits/@kit.CameraKit';
 readonly boundingBox: Rect
 ```
 
-metadata 区域框。
+Metadata rectangle.
 
 **Type:** [Rect](../../apis-form-kit/arkts-apis/arkts-form-forminfo-rect-i.md)
 
@@ -42,7 +42,7 @@ metadata 区域框。
 readonly isLockFocusTracked?: boolean
 ```
 
-是否已锁定焦点跟踪。true表示已锁定，false表示未锁定。
+Whether the focus is locked and being tracked currently.
 
 **Type:** boolean
 
@@ -64,7 +64,7 @@ readonly isLockFocusTracked?: boolean
 readonly timestamp: int
 ```
 
-当前时间戳。单位为纳秒（ns）。
+Timestamp, in ns.
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
@@ -84,7 +84,7 @@ readonly timestamp: int
 readonly type: MetadataObjectType
 ```
 
-metadata 类型。
+Metadata object type.
 
 **Type:** [MetadataObjectType](arkts-camera-camera-metadataobjecttype-e.md)
 

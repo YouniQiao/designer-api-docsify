@@ -12,12 +12,12 @@ import { GetStatusOptions, BatteryResponse } from 'kits/@kit.BasicServicesKit';
 
 | Name | Description |
 | --- | --- |
-| [Battery](arkts-basicservices-system-battery-battery-c.md) | 该模块提供充电状态及剩余电量的查询功能。 |
+| [Battery](arkts-basicservices-system-battery-battery-c.md) | The module allows you to query the charging status and remaining power of a device. |
 
 ### Interfaces
 
 | Name | Description |
 | --- | --- |
-| [BatteryResponse](arkts-basicservices-system-battery-batteryresponse-i.md) | 包含充电状态及剩余电量的对象。 |
-| [GetStatusOptions](arkts-basicservices-system-battery-getstatusoptions-i.md) | 包含接口调用结果的对象。 |
+| [BatteryResponse](arkts-basicservices-system-battery-batteryresponse-i.md) | Defines a response that returns the charging status and remaining power of the device. |
+| [GetStatusOptions](arkts-basicservices-system-battery-getstatusoptions-i.md) | Object that contains the API calling result. |
 

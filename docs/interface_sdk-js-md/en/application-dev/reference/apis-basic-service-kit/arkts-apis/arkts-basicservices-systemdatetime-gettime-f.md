@@ -12,7 +12,7 @@ import { systemDateTime } from 'kits/@kit.BasicServicesKit';
 function getTime(isNanoseconds?: boolean): long
 ```
 
-使用同步方式获取自Unix纪元以来到当前系统时间所经过的时间。
+Obtains the time elapsed since the Unix epoch. This API returns the result synchronously.
 
 **Since:** 10
 
@@ -32,7 +32,7 @@ function getTime(isNanoseconds?: boolean): long
 
 | Type | Description |
 | --- | --- |
-| ArkTS-Dyn: number  <br>ArkTS-Sta：long | 自Unix纪元以来到当前系统时间所经过的时间。 |
+| ArkTS-Dyn: number  <br>ArkTS-Sta：long | Time elapsed since the Unix epoch. |
 
 ## Examples
 

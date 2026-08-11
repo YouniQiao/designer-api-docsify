@@ -1,6 +1,6 @@
 # BarPosition
 
-Tabs页签位置枚举。
+Enumerates the positions of the **Tabs** component.
 
 **Since:** 7
 
@@ -16,7 +16,7 @@ Tabs页签位置枚举。
 Start
 ```
 
-vertical属性设置为true时，页签位于容器左侧；vertical属性设置为false时，页签位于容器顶部。
+If the **vertical** attribute is set to **true**, the tab is on the left of the container. If the **vertical**attribute is set to **false**, the tab is on the top of the container.
 
 **Since:** 7
 
@@ -34,7 +34,7 @@ vertical属性设置为true时，页签位于容器左侧；vertical属性设置
 End
 ```
 
-vertical属性设置为true时，页签位于容器右侧；vertical属性设置为false时，页签位于容器底部。
+If the **vertical** attribute is set to **true**, the tab is on the right of the container. If the **vertical**attribute is set to **false**, the tab is at the bottom of the container.
 
 **Since:** 7
 

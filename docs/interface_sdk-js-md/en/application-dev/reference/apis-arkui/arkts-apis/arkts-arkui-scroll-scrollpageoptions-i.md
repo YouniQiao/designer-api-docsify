@@ -1,6 +1,6 @@
 # ScrollPageOptions
 
-翻页模式的参数选项。
+Provides parameters for page scrolling behavior.
 
 **Since:** 23
 
@@ -16,7 +16,7 @@
 animation?: boolean
 ```
 
-是否开启翻页动画效果。true有动画，false无动画。
+Whether to enable the page-turning animation.The value true means to enable the page-turning animation,and false means the opposite.
 
 **Type:** boolean
 
@@ -38,7 +38,7 @@ animation?: boolean
 next: boolean
 ```
 
-是否向下翻页。true表示向下翻页，false表示向上翻页。
+Whether to turn to the next page.The value true means to scroll to the next page,and false means to scroll to the previous page.
 
 **Type:** boolean
 

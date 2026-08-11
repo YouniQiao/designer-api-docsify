@@ -10,12 +10,6 @@
 
 **系统能力：** SystemCapability.MiscServices.InputMethodFramework
 
-## 导入模块
-
-```TypeScript
-import { inputMethodEngine } from 'kits/@kit.IMEKit';
-```
-
 ## onMessage
 
 ```TypeScript
@@ -109,7 +103,7 @@ inputMethodEngine.getInputMethodAbility()
           console.info(`recv message, msgId is ${msgId}, msgParam is ${JSON.stringify(msgParam)}`);
         }
       }
-      client.recvMessage(messageHandler);
+      inputClient.recvMessage(messageHandler);
     });
 ```
 

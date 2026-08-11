@@ -1,7 +1,8 @@
 # InsightIntentType (System API)
 
-表示通过意图装饰器定义的意图类型，可通过[getAllInsightIntentInfo](arkts-ability-insightintentdriver-getallinsightintentinfo-f-sys.md#getallinsightintentinfo)等方法返回的  
-[LinkIntentInfo](arkts-ability-insightintentdriver-linkintentinfo-i-sys.md)获取。
+Enumerates the intent types defined by the intent decorator. You can obtain the intent type from  
+[LinkIntentInfo](arkts-ability-insightintentdriver-linkintentinfo-i-sys.md) returned by calling APIs such as  
+[getAllInsightIntentInfo](arkts-ability-insightintentdriver-getallinsightintentinfo-f-sys.md#getallinsightintentinfo).
 
 **Since:** 20
 
@@ -19,7 +20,8 @@
 LINK = '@InsightIntentLink'
 ```
 
-[@InsightIntentLink](../../../reference/apis-ability-kit/js-apis-app-ability-InsightIntentDecorator.md#insightintentlink)类型装饰器。
+A decorator of the  
+[@InsightIntentLink](../../../reference/apis-ability-kit/js-apis-app-ability-InsightIntentDecorator.md#insightintentlink) type.
 
 **Since:** 20
 
@@ -39,7 +41,8 @@ LINK = '@InsightIntentLink'
 PAGE = '@InsightIntentPage'
 ```
 
-[@InsightIntentPage](../../../reference/apis-ability-kit/js-apis-app-ability-InsightIntentDecorator.md#insightintentpage)类型装饰器。
+A decorator of the  
+[@InsightIntentPage](../../../reference/apis-ability-kit/js-apis-app-ability-InsightIntentDecorator.md#insightintentpage) type.
 
 **Since:** 20
 
@@ -59,7 +62,8 @@ PAGE = '@InsightIntentPage'
 ENTRY = '@InsightIntentEntry'
 ```
 
-[@InsightIntentEntry](../../../reference/apis-ability-kit/js-apis-app-ability-InsightIntentDecorator.md#insightintententry)类型装饰器。
+A decorator of the  
+[@InsightIntentEntry](../../../reference/apis-ability-kit/js-apis-app-ability-InsightIntentDecorator.md#insightintententry) type.
 
 **Since:** 20
 
@@ -79,7 +83,8 @@ ENTRY = '@InsightIntentEntry'
 FUNCTION = '@InsightIntentFunctionMethod'
 ```
 
-[@InsightIntentFunctionMethod](../../../reference/apis-ability-kit/js-apis-app-ability-InsightIntentDecorator.md#insightintentfunctionmethod)类型装饰器。
+A decorator of the  
+[@InsightIntentFunctionMethod](../../../reference/apis-ability-kit/js-apis-app-ability-InsightIntentDecorator.md#insightintentfunctionmethod) type.
 
 **Since:** 20
 
@@ -99,7 +104,8 @@ FUNCTION = '@InsightIntentFunctionMethod'
 FORM = '@InsightIntentForm'
 ```
 
-[@InsightIntentForm](../../../reference/apis-ability-kit/js-apis-app-ability-InsightIntentDecorator.md#insightintentform)类型装饰器。
+A decorator of the  
+[@InsightIntentForm](../../../reference/apis-ability-kit/js-apis-app-ability-InsightIntentDecorator.md#insightintentform) type.
 
 **Since:** 20
 

@@ -1,13 +1,9 @@
 # AvoidAreaType
 
-窗口内容的避让区域的类型枚举。
+Enumerates the types of areas to avoid for window content.
 
-窗口内容做[沉浸式布局](../../../windowmanager/window-terminology.md#沉浸式布局)适配时，需要按照AvoidAreaType对应的  
-[AvoidArea](arkts-arkui-window-avoidarea-i.md)做窗口内容避让。
-
-&lt;!--RP13--&gt;
-
-&lt;!--RP13End--&gt;
+When adapting window content for an  
+[immersive layout](../../../windowmanager/window-terminology.md#immersive-layout), you should adjust the content based on the corresponding [AvoidArea](arkts-arkui-window-avoidarea-i.md) specified by **AvoidAreaType**.
 
 **Since:** 7
 
@@ -23,7 +19,7 @@
 TYPE_SYSTEM = 0
 ```
 
-表示系统默认区域。&lt;!--RP11--&gt;包含状态栏和三键导航栏区域。&lt;!--RP11End--&gt;
+Default area of the system. &lt;!--RP11--&gt;It contains the status bar and three-button navigation bar.&lt;!--RP11End--&gt;
 
 **Since:** 7
 
@@ -41,7 +37,7 @@ TYPE_SYSTEM = 0
 TYPE_CUTOUT = 1
 ```
 
-表示挖孔区域。
+Cutout area.
 
 **Since:** 7
 
@@ -59,7 +55,7 @@ TYPE_CUTOUT = 1
 TYPE_SYSTEM_GESTURE = 2
 ```
 
-表示侧边返回手势区域。当前所有设备均无此类型避让区域。
+Side return gesture area. Currently, no devices support this type of avoid area.
 
 **Since:** 9
 
@@ -77,7 +73,7 @@ TYPE_SYSTEM_GESTURE = 2
 TYPE_KEYBOARD = 3
 ```
 
-表示固定态软键盘区域。
+Fixed soft keyboard area.
 
 **Since:** 9
 
@@ -95,7 +91,7 @@ TYPE_KEYBOARD = 3
 TYPE_NAVIGATION_INDICATOR = 4
 ```
 
-表示底部导航区域。当三键导航显示时，底部导航避让区域始终存在。&lt;!--Del--&gt;OpenHarmony各设备不支持此能力。&lt;!--DelEnd--&gt;
+Bottom navigation bar. &lt;!--RP12--&gt;OpenHarmony devices do not support this capability.&lt;!--RP12End--&gt;
 
 **Since:** 11
 
@@ -113,7 +109,7 @@ TYPE_NAVIGATION_INDICATOR = 4
 TYPE_FLOAT_NAVIGATION = 5
 ```
 
-表示三键导航区域。&lt;!--RP12--&gt;OpenHarmony各设备不支持此能力。&lt;!--RP12End--&gt;
+Area for float navigation
 
 **Since:** 26.0.0
 

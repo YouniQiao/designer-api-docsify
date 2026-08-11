@@ -6,12 +6,6 @@ system.request部件主要给应用提供上传下载文件的基础能力。
  > - 从API Version 9开始所有接口不再维护，推荐使用新接口[@ohos.request](arkts-basicservices-request-n.md)。
 
 
-## 导入模块
-
-```TypeScript
-import { UploadResponse, RequestData, DownloadRequestOptions, DownloadResponse, RequestFile, OnDownloadCompleteOptions, OnDownloadCompleteResponse, UploadRequestOptions } from 'kits/@kit.BasicServicesKit';
-```
-
 ## 汇总
 
 ### 类

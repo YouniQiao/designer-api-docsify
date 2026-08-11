@@ -12,7 +12,7 @@ import { display } from 'kits/@kit.ArkUI';
 function removeVirtualScreenSurface(screenId: long, surfaceId: string): Promise<void>
 ```
 
-删除虚拟屏的surface。
+Remove surface for the virtual screen.
 
 **Since:** 26.0.0
 
@@ -30,60 +30,22 @@ function removeVirtualScreenSurface(screenId: long, surfaceId: string): Promise<
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| screenId | ArkTS-Dyn: number  <br>ArkTS-Sta：long | Yes | 虚拟屏幕的屏幕ID。 |
-| surfaceId | string | Yes | 代表虚拟屏幕绑定的surfaceId，由用户指定某一实际存在的surface对应的surfaceId， 该参数最大长度为4096个字节，超出最大长度时则取前4096个字节。 |
+| screenId | ArkTS-Dyn: number  <br>ArkTS-Sta：long | Yes | Indicates the screen id of the virtual screen. |
+| surfaceId | string | Yes | ID of the surface bound to the virtual screen. You can use the [getXComponentSurfaceId](arkts-arkui-xcomponent-xcomponentcontroller-c.md#getxcomponentsurfaceid) method to obtain the ID of the surface corresponding to an existing surface. The maximum length for this parameter is 4096 bytes. If it goes beyond that, only the first 4096 bytes are used. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | 无返回结果的Promise对象。 |
+| Promise&lt;void&gt; | Promise that returns no value. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 801 | Capability not supported. Function removeVirtualScreenSurface can not work correctly due to limited device capabilities. |
-| 1400004 | Parameter error. Possible cause: 1. Invalid parameter range. |
-| 1400001 | Invalid display or screen. |
-| 1400003 | This display manager service works abnormally. |
-| 202 | Permission verification failed. A non-system application calls a system API. |
-
-## Examples
-
-```TypeScript
-// Index.ets
-import { BusinessError } from '@kit.BasicServicesKit';
-
-@Entry
-@Component
-struct Index {
-  xComponentController: XComponentController = new XComponentController();
-
-  removeVirtualScreenSurface = () => {
-    let screenId: number = 1;
-    let surfaceId = this.xComponentController.getXComponentSurfaceId();
-    display.removeVirtualScreenSurface(screenId, surfaceId).then(() => {
-      console.info('Succeeded in removing surface for the virtual screen.');
-    }).catch((err: BusinessError) => {
-      console.error(`Failed to remove surface for the virtual screen. Code:${err.code}, message is ${err.message}`);
-    });
-  }
-  build() {
-    RelativeContainer() {
-      XComponent({
-        type: XComponentType.SURFACE,
-        controller: this.xComponentController
-      })
-      Button('removeSurface')
-        .onClick((event: ClickEvent) => {
-          this.removeVirtualScreenSurface();
-      }).width('100%')
-      .height(20)
-    }
-    .width('100%')
-    .height('100%')
-  }
-}
-```
+| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. Function removeVirtualScreenSurface can not work correctly due to limited device capabilities. |
+| [1400004](../errorcode-display.md#1400004-parameter-error) | Parameter error. Possible cause: 1. Invalid parameter range. |
+| [1400001](../errorcode-display.md#1400001-invalid-display-or-screen) | Invalid display or screen. |
+| [1400003](../errorcode-display.md#1400003-abnormal-display-manager-service) | This display manager service works abnormally. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
 

@@ -12,7 +12,7 @@ import { configPolicy } from 'kits/@kit.BasicServicesKit';
 function getCfgDirListSync(): Array<string>
 ```
 
-获取配置层级目录列表，按优先级从低到高。
+Obtains a list of configuration level directories, in ascending order of priority.
 
 **Since:** 11
 
@@ -28,5 +28,5 @@ function getCfgDirListSync(): Array<string>
 
 | Type | Description |
 | --- | --- |
-| Array&lt;string&gt; | 返回配置层级目录列表。 |
+| Array&lt;string&gt; | Obtains the list of configuration level directories. This API returns the result synchronously. |
 

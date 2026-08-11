@@ -12,9 +12,9 @@ import { inputMethodEngine } from 'kits/@kit.IMEKit';
 function getKeyboardDelegate(): KeyboardDelegate
 ```
 
-获取客户端编辑事件监听代理实例[KeyboardDelegate](arkts-ime-inputmethodengine-keyboarddelegate-i.md)（键盘代理对象）。
+Obtains a [KeyboardDelegate](arkts-ime-inputmethodengine-keyboarddelegate-i.md) instance for the input method.
 
-输入法应用获取该实例后，可订阅物理键盘按键事件、选中文本变化事件等。
+The input method can use the obtained instance to subscribe to a physical keyboard event, text selection change event, and more.
 
 **Since:** 9
 
@@ -28,7 +28,7 @@ function getKeyboardDelegate(): KeyboardDelegate
 
 | Type | Description |
 | --- | --- |
-| [KeyboardDelegate](arkts-ime-inputmethodengine-keyboarddelegate-i.md) | 客户端编辑事件监听代理。 |
+| [KeyboardDelegate](arkts-ime-inputmethodengine-keyboarddelegate-i.md) | KeyboardDelegate** instance. |
 
 ## Examples
 
@@ -43,7 +43,7 @@ let KeyboardDelegate: inputMethodEngine.KeyboardDelegate = inputMethodEngine.get
 function getKeyboardDelegate(): KeyboardDelegate | null
 ```
 
-获取客户端编辑事件监听代理实例[KeyboardDelegate](arkts-ime-inputmethodengine-keyboarddelegate-i.md)（键盘代理对象）。输入法应用获取该实例后，可订阅物理键盘按键事件、选中文本变化事件等。
+Get KeyboardDelegate object to subscribe key event or events about editor.
 
 **Since:** 23
 
@@ -57,5 +57,5 @@ function getKeyboardDelegate(): KeyboardDelegate | null
 
 | Type | Description |
 | --- | --- |
-| [KeyboardDelegate](arkts-ime-inputmethodengine-keyboarddelegate-i.md) | 客户端编辑事件监听代理。 |
+| [KeyboardDelegate](arkts-ime-inputmethodengine-keyboarddelegate-i.md) | the object of KeyboardDelegate. |
 

@@ -12,7 +12,7 @@ import { accessibility } from 'kits/@kit.AccessibilityKit';
 function isOpenTouchGuideSync(): boolean
 ```
 
-是否开启了触摸浏览模式。
+Checks whether touch guide mode is enabled.
 
 **Since:** 10
 
@@ -30,7 +30,7 @@ function isOpenTouchGuideSync(): boolean
 
 | Type | Description |
 | --- | --- |
-| boolean | 表示是否开启了触摸浏览模式。true表示开启了触摸浏览，false表示未开启触摸浏览。 |
+| boolean | Whether touch guide mode is enabled. Returns **true** if touch guide mode is enabled; returns **false** otherwise. |
 
 ## Examples
 

@@ -1,6 +1,6 @@
 # PickerIndicatorType
 
-设置选中项指示器的类型。
+PickerIndicatorType
 
 **Since:** 23
 
@@ -16,7 +16,7 @@
 BACKGROUND = 0
 ```
 
-通过给选中项添加背景，标识选中项。
+Background marks the selected item.
 
 **Since:** 23
 
@@ -34,7 +34,7 @@ BACKGROUND = 0
 DIVIDER = 1
 ```
 
-通过在选中项的上下边缘添加分割线，标识选中项。
+Divider marks the selected item.
 
 **Since:** 23
 

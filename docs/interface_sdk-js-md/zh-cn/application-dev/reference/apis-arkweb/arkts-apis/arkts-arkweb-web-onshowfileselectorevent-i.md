@@ -18,7 +18,7 @@ fileSelector: FileSelectorParam
 
 Encompassed message information as parameters to fileSelector.
 
-**类型：** [FileSelectorParam](../arkts-components/arkts-arkweb-fileselectorparam-c.md)
+**类型：** [FileSelectorParam](arkts-arkweb-web-fileselectorparam-c.md)
 
 **起始版本：** 23
 
@@ -36,7 +36,7 @@ result: FileSelectorResult
 
 Defines the file selector result.
 
-**类型：** [FileSelectorResult](arkts-arkweb-web-fileselectorresult-c.md)
+**类型：** [FileSelectorResult](../arkts-components/arkts-arkweb-fileselectorresult-c.md)
 
 **起始版本：** 23
 

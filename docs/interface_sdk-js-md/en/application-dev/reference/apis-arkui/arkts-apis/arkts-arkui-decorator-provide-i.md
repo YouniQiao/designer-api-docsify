@@ -16,7 +16,7 @@ Defining Provide annotation Provide is used for two-way data synchronization wit
 alias: string = ""
 ```
 
-用于设置别名，默认值为属性名。
+The alias name.
 
 **Type:** string
 
@@ -36,7 +36,7 @@ alias: string = ""
 allowOverride: boolean = false
 ```
 
-用于设置是否允许重载，默认值为false即不允许。
+allowOverride is used to override an existing @Provide decorated variable.
 
 **Type:** boolean
 

@@ -10,12 +10,6 @@
 
 **系统能力：** SystemCapability.Print.PrintFramework
 
-## 导入模块
-
-```TypeScript
-import { print } from 'kits/@kit.BasicServicesKit';
-```
-
 ## onJobStateChanged
 
 ```TypeScript
@@ -45,30 +39,30 @@ onJobStateChanged(jobId: string, state: PrintDocumentAdapterState): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
-| 201 | the application does not have permission to call this function. |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
+| [201](../../errorcode-universal.md#201-权限校验失败) | the application does not have permission to call this function. |
 
 ## 示例
 
 ```TypeScript
 import { print } from '@kit.BasicServicesKit';
-import { BusinessError } from '@kit.BasicServicesKit';
+import { BusinessError } from '@ohos.base';
 
 class MyPrintDocumentAdapter implements print.PrintDocumentAdapter {
     onStartLayoutWrite(jobId: string, oldAttrs: print.PrintAttributes, newAttrs: print.PrintAttributes, fd: number,
         writeResultCallback: (jobId: string, writeResult: print.PrintFileCreationState) => void) {
         writeResultCallback(jobId, print.PrintFileCreationState.PRINT_FILE_CREATED);
-    }
+    };
     onJobStateChanged(jobId: string, state: print.PrintDocumentAdapterState) {
-        if (state === print.PrintDocumentAdapterState.PREVIEW_DESTROY) {
+        if (state == print.PrintDocumentAdapterState.PREVIEW_DESTROY) {
             console.info('PREVIEW_DESTROY');
-        } else if (state === print.PrintDocumentAdapterState.PRINT_TASK_SUCCEED) {
+        } else if (state == print.PrintDocumentAdapterState.PRINT_TASK_SUCCEED) {
             console.info('PRINT_TASK_SUCCEED');
-        } else if (state === print.PrintDocumentAdapterState.PRINT_TASK_FAIL) {
+        } else if (state == print.PrintDocumentAdapterState.PRINT_TASK_FAIL) {
             console.info('PRINT_TASK_FAIL');
-        } else if (state === print.PrintDocumentAdapterState.PRINT_TASK_CANCEL) {
+        } else if (state == print.PrintDocumentAdapterState.PRINT_TASK_CANCEL) {
             console.info('PRINT_TASK_CANCEL');
-        } else if (state === print.PrintDocumentAdapterState.PRINT_TASK_BLOCK) {
+        } else if (state == print.PrintDocumentAdapterState.PRINT_TASK_BLOCK) {
             console.info('PRINT_TASK_BLOCK');
         }
     }
@@ -115,29 +109,59 @@ onStartLayoutWrite(jobId: string, oldAttrs: PrintAttributes, newAttrs: PrintAttr
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
-| 201 | the application does not have permission to call this function. |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
+| [201](../../errorcode-universal.md#201-权限校验失败) | the application does not have permission to call this function. |
 
 ## 示例
 
+ArkTS-Dyn示例:
+
 ```TypeScript
 import { print } from '@kit.BasicServicesKit';
+import { BusinessError } from '@ohos.base';
 
 class MyPrintDocumentAdapter implements print.PrintDocumentAdapter {
     onStartLayoutWrite(jobId: string, oldAttrs: print.PrintAttributes, newAttrs: print.PrintAttributes, fd: number,
         writeResultCallback: (jobId: string, writeResult: print.PrintFileCreationState) => void) {
         writeResultCallback(jobId, print.PrintFileCreationState.PRINT_FILE_CREATED);
-    }
+    };
     onJobStateChanged(jobId: string, state: print.PrintDocumentAdapterState) {
-        if (state === print.PrintDocumentAdapterState.PREVIEW_DESTROY) {
+        if (state == print.PrintDocumentAdapterState.PREVIEW_DESTROY) {
             console.info('PREVIEW_DESTROY');
-        } else if (state === print.PrintDocumentAdapterState.PRINT_TASK_SUCCEED) {
+        } else if (state == print.PrintDocumentAdapterState.PRINT_TASK_SUCCEED) {
             console.info('PRINT_TASK_SUCCEED');
-        } else if (state === print.PrintDocumentAdapterState.PRINT_TASK_FAIL) {
+        } else if (state == print.PrintDocumentAdapterState.PRINT_TASK_FAIL) {
             console.info('PRINT_TASK_FAIL');
-        } else if (state === print.PrintDocumentAdapterState.PRINT_TASK_CANCEL) {
+        } else if (state == print.PrintDocumentAdapterState.PRINT_TASK_CANCEL) {
             console.info('PRINT_TASK_CANCEL');
-        } else if (state === print.PrintDocumentAdapterState.PRINT_TASK_BLOCK) {
+        } else if (state == print.PrintDocumentAdapterState.PRINT_TASK_BLOCK) {
+            console.info('PRINT_TASK_BLOCK');
+        }
+    }
+}
+```
+
+ArkTS-Sta示例:
+
+```TypeScript
+import { print } from '@kit.BasicServicesKit';
+import { BusinessError } from '@ohos.base';
+
+class MyPrintDocumentAdapter implements print.PrintDocumentAdapter {
+    onStartLayoutWrite(jobId: string, oldAttrs: print.PrintAttributes, newAttrs: print.PrintAttributes, fd: int,
+        writeResultCallback: (jobId: string, writeResult: print.PrintFileCreationState) => void) {
+        writeResultCallback(jobId, print.PrintFileCreationState.PRINT_FILE_CREATED);
+    };
+    onJobStateChanged(jobId: string, state: print.PrintDocumentAdapterState) {
+        if (state == print.PrintDocumentAdapterState.PREVIEW_DESTROY) {
+            console.info('PREVIEW_DESTROY');
+        } else if (state == print.PrintDocumentAdapterState.PRINT_TASK_SUCCEED) {
+            console.info('PRINT_TASK_SUCCEED');
+        } else if (state == print.PrintDocumentAdapterState.PRINT_TASK_FAIL) {
+            console.info('PRINT_TASK_FAIL');
+        } else if (state == print.PrintDocumentAdapterState.PRINT_TASK_CANCEL) {
+            console.info('PRINT_TASK_CANCEL');
+        } else if (state == print.PrintDocumentAdapterState.PRINT_TASK_BLOCK) {
             console.info('PRINT_TASK_BLOCK');
         }
     }

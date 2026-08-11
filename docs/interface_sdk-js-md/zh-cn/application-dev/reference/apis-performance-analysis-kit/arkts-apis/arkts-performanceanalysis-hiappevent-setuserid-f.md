@@ -1,11 +1,5 @@
 # setUserId
 
-## 导入模块
-
-```TypeScript
-import { hiAppEvent } from 'kits/@kit.PerformanceAnalysisKit';
-```
-
 ## setUserId
 
 ```TypeScript
@@ -35,9 +29,11 @@ function setUserId(name: string, value: string): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types. |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types. |
 
 ## 示例
+
+ArkTS-Dyn示例：
 
 ```TypeScript
 import { hilog } from '@kit.PerformanceAnalysisKit';
@@ -46,6 +42,19 @@ try {
   hiAppEvent.setUserId('key', 'value');
 } catch (error) {
   hilog.error(0x0000, 'hiAppEvent', `failed to setUserId event, code=${error.code}`);
+}
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+import { hilog } from '@kit.PerformanceAnalysisKit';
+import { BusinessError } from '@ohos.base';
+
+try {
+  hiAppEvent.setUserId('key', 'value');
+} catch (err: BusinessError) {
+  hilog.error(0x0000, 'hiAppEvent', `failed to setUserId event, code=${err.code}`);
 }
 ```
 

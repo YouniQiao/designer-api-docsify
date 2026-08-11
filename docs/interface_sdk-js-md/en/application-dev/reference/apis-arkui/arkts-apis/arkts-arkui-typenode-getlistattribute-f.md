@@ -6,7 +6,7 @@
 export function getListAttribute(node: FrameNode): ListAttribute | undefined
 ```
 
-获取属性实例用于设置属性
+Get the attribute instance of FrameNode to set attributes.
 
 **Since:** 26.0.0
 
@@ -22,7 +22,7 @@ export function getListAttribute(node: FrameNode): ListAttribute | undefined
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| node | [FrameNode](arkts-arkui-framenode-c.md) | Yes | 目标FrameNode |
+| node | [FrameNode](arkts-arkui-framenode-c.md) | Yes | the target FrameNode. |
 
 **Return value:**
 

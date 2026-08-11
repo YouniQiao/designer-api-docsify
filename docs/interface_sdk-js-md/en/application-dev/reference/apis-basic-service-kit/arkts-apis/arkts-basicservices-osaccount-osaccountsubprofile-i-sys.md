@@ -1,6 +1,6 @@
 # OsAccountSubProfile (System API)
 
-系统账号子Profile的定义
+Definition of an OS account sub-profile.
 
 **Since:** 26.0.0
 
@@ -18,13 +18,35 @@
 import { osAccount } from 'kits/@kit.BasicServicesKit';
 ```
 
+## createTime
+
+```TypeScript
+createTime: long
+```
+
+Time when the sub-profile was created.Unit: milliseconds.
+
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：long
+
+**Since:** 26.0.0
+
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
+
+**Model restriction:** This API can be used only in the stage model.
+
+<!--Device-OsAccountSubProfile-createTime: long--><!--Device-OsAccountSubProfile-createTime: long-End-->
+
+**System capability:** SystemCapability.Account.OsAccount
+
+**System API:** This is a system API.
+
 ## distributedInfo
 
 ```TypeScript
 distributedInfo?: distributedAccount.DistributedInfo
 ```
 
-系统账号子profile绑定的分布式账号信息。
+Distributed account information bound to the OS account sub-profile.
 
 **Type:** distributedAccount.DistributedInfo
 
@@ -46,7 +68,7 @@ distributedInfo?: distributedAccount.DistributedInfo
 id: int
 ```
 
-系统账号子profile的标识符。取值范围为全体整数。
+Identifier of the OS account sub-profile.
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
@@ -68,7 +90,7 @@ id: int
 index: int
 ```
 
-系统账号子profile的位置索引，取值范围：0~子profile个数减1。该索引在每个系统账号下唯一，由系统在创建子Profile时自动分配。取值范围为全体整数。
+Position index of the OS account sub-profile, ranging from 0 to the number of sub-profiles minus 1.This index is unique within each OS account and is automatically assigned by the system when the sub-profile is created.
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
@@ -90,7 +112,7 @@ index: int
 osAccountLocalId: int
 ```
 
-子profile所属系统账号的本地标识符。取值范围为全体整数。
+Local ID of the OS account to which the sub-profile belongs.
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 

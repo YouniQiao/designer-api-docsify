@@ -4,7 +4,7 @@
 declare type MenuCallback = (start: number, end: number) => void
 ```
 
-自定义选择菜单显示或隐藏时触发的回调事件。
+Represents the callback invoked when the custom context menu on selection is shown or hidden.
 
 **Since:** 15
 
@@ -22,6 +22,6 @@ declare type MenuCallback = (start: number, end: number) => void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| start | number | Yes | 选中内容的起始位置。 |
-| end | number | Yes | 选中内容的终止位置。 |
+| start | number | Yes | Start position of the selected content. |
+| end | number | Yes | End position of the selected content. |
 

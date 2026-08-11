@@ -4,7 +4,7 @@
 type Image = string
 ```
 
-表示图片的URI地址，为string类型。
+The type of the image can be its URI.
 
 **Since:** 15
 

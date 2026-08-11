@@ -12,7 +12,7 @@ import { shortcutManager } from 'kits/@kit.AbilityKit';
 function setShortcutVisibleForSelf(id: string, visible: boolean): Promise<void>
 ```
 
-设置当前应用指定的快捷方式是否显示。使用Promise异步回调。
+Sets whether to display the specified shortcut for the current application. This API uses a promise to return the result.
 
 **Since:** 20
 
@@ -26,20 +26,20 @@ function setShortcutVisibleForSelf(id: string, visible: boolean): Promise<void>
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| id | string | Yes | 快捷方式的ID，通过[module.json5配置文件](../../../quick-start/module-configuration-file.md)中的shortcuts标 签下的shortcutId字段获取，取值为长度不超过63字节的字符串。 |
-| visible | boolean | Yes | 快捷方式是否显示。true：快捷方式显示；false：快捷方式不显示。 |
+| id | string | Yes | Shortcut ID, which is the value of the **shortcutId** field under the **shortcuts** tag in the [module.json5](../../../quick-start/module-configuration-file.md) file. The value is a string of up to 63 bytes. |
+| visible | boolean | Yes | Whether to display the shortcut. **true** to display, **false** otherwise. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise对象，无返回结果。 |
+| Promise&lt;void&gt; | Promise that returns no value. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 17700070 | The specified shortcut id is not exist. |
+| [17700070](../errorcode-bundle.md#17700070-invalid-shortcut-id) | The specified shortcut id is not exist. |
 
 ## Examples
 

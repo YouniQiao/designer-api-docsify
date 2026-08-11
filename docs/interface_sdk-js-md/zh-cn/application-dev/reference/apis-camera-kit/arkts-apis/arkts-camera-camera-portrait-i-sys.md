@@ -14,12 +14,6 @@ Portrait: inherits from [PortraitQuery](arkts-camera-camera-portraitquery-i-sys.
 
 **系统接口：** 此接口为系统接口。
 
-## 导入模块
-
-```TypeScript
-import { camera } from 'kits/@kit.CameraKit';
-```
-
 ## getPortraitEffect
 
 ```TypeScript
@@ -48,8 +42,8 @@ Obtains the portrait effect in use.
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 7400103 | Session not config. |
-| 202 | Not System Application.<br>**适用版本：** 11+ |
+| [7400103](../errorcode-camera.md#7400103-会话未配置) | Session not config. |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not System Application.<br>**适用版本：** 11+ |
 
 ## 示例
 
@@ -89,8 +83,8 @@ Sets a portrait effect. Before the setting, use
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 7400103 | Session not config. |
-| 202 | Not System Application.<br>**适用版本：** 11+ |
+| [7400103](../errorcode-camera.md#7400103-会话未配置) | Session not config. |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not System Application.<br>**适用版本：** 11+ |
 
 ## 示例
 

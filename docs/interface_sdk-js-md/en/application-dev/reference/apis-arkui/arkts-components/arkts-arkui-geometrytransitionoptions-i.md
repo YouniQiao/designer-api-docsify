@@ -1,5 +1,7 @@
 # GeometryTransitionOptions
 
+Defines the options of geometry transition.
+
 **Since:** 11
 
 **ArkTS mode:** ArkTS-Dyn only, since version 11.
@@ -14,9 +16,10 @@
 follow?: boolean
 ```
 
-仅用于if范式下标记始终在组件树上的组件是否跟随做共享动画。true代表跟随做共享动画，false代表不跟随做共享动画。
+Whether to apply the animation to components that are always in the component tree. It is effective only in the   
+**if** syntax. The value **true** means to apply the animation to components that are always in the component tree,and **false** means the opposite.
 
-默认值：false
+Default value: **false**
 
 **Type:** boolean
 

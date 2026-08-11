@@ -1,8 +1,6 @@
 # RichEditorUpdateTextSpanStyleOptions
 
-文本样式选项。
-
-继承自[RichEditorSpanStyleOptions](arkts-arkui-richeditor-richeditorspanstyleoptions-i.md)。
+Defines text span style option of RichEditor.
 
 **Inheritance/Implementation:** RichEditorUpdateTextSpanStyleOptions extends [RichEditorSpanStyleOptions](arkts-arkui-richeditor-richeditorspanstyleoptions-i.md)
 
@@ -20,7 +18,7 @@
 textStyle: RichEditorTextStyle
 ```
 
-文本Span样式信息。
+text style.
 
 **Type:** [RichEditorTextStyle](../arkts-components/arkts-arkui-richeditortextstyle-i.md)
 
@@ -40,9 +38,7 @@ textStyle: RichEditorTextStyle
 urlStyle?: RichEditorUrlStyle
 ```
 
-url信息。
-
-默认值：undefined
+RichEditor url style.
 
 **Type:** [RichEditorUrlStyle](../arkts-components/arkts-arkui-richeditorurlstyle-i.md)
 

@@ -1,6 +1,6 @@
 # PanRecognizer
 
-滑动手势识别器对象，继承于[GestureRecognizer](arkts-arkui-gesturerecognizer-c.md)。
+Defines the gesture recognizer.
 
 **Inheritance/Implementation:** PanRecognizer extends [GestureRecognizer](arkts-arkui-gesturerecognizer-c.md)
 
@@ -18,7 +18,7 @@
 getDirection(): PanDirection
 ```
 
-返回当前滑动手势识别器的识别方向。
+Returns the pan recognizer's direction attribute.
 
 **Since:** 26.0.0
 
@@ -34,7 +34,7 @@ getDirection(): PanDirection
 
 | Type | Description |
 | --- | --- |
-| [PanDirection](arkts-arkui-gesture-pandirection-e.md) | 当前滑动手势识别器的识别方向。 |
+| [PanDirection](arkts-arkui-gesture-pandirection-e.md) | Pan recognizer direction |
 
 ## getDistance
 
@@ -42,7 +42,7 @@ getDirection(): PanDirection
 getDistance(): double
 ```
 
-返回当前滑动手势识别器触发的最小滑动距离。
+Returns the pan recognizer's distance.The unit is vp.
 
 **Since:** 26.0.0
 
@@ -58,7 +58,7 @@ getDistance(): double
 
 | Type | Description |
 | --- | --- |
-| double | 当前滑动手势识别器触发的最小滑动距离。单位：vp |
+| double | the distance of the pan recognizer. |
 
 ## getDistanceMap
 
@@ -66,12 +66,7 @@ getDistance(): double
 getDistanceMap(): Map<SourceTool, double>
 ```
 
-返回滑动手势识别器在不同输入源的情况下触发的最小滑动距离。
-
-> **说明：**
-> 
-> 仅支持对通过Pan手势初始化配置修改的设备类型进行阈值查询。对于默认滑动阈值，可通过查询
-> [SourceTool](arkts-arkui-common-sourcetool-e.md).Unknown类型获取。其他未主动设置的类型则无法获取。
+Returns the pan recognizer's distance map.The unit is vp.
 
 **Since:** 26.0.0
 
@@ -87,7 +82,7 @@ getDistanceMap(): Map<SourceTool, double>
 
 | Type | Description |
 | --- | --- |
-| Map&lt;[SourceTool](../arkts-components/arkts-arkui-sourcetool-e.md), double&gt; | 不同输入源的滑动手势识别器触发的最小滑动距离。滑动距离的单位：vp |
+| Map&lt;[SourceTool](../arkts-components/arkts-arkui-sourcetool-e.md), double&gt; | the distance map of the pan recognizer. |
 
 ## getPanGestureOptions
 
@@ -95,7 +90,7 @@ getDistanceMap(): Map<SourceTool, double>
 getPanGestureOptions(): PanGestureOptions
 ```
 
-返回当前滑动手势识别器的属性。
+Returns the the pan gesture options of the recognizer.
 
 **Since:** 23
 
@@ -111,5 +106,5 @@ getPanGestureOptions(): PanGestureOptions
 
 | Type | Description |
 | --- | --- |
-| [PanGestureOptions](arkts-arkui-pangestureoptions-c.md) | 当前滑动手势识别器的属性。 |
+| [PanGestureOptions](arkts-arkui-pangestureoptions-c.md) | Pan gesture options |
 

@@ -6,7 +6,7 @@
 declare function open(path: string, flags?: number, mode?: number): Promise<number>
 ```
 
-打开文件，使用Promise异步回调。
+Opens a file. This API uses a promise to return the result.
 
 **Since:** 7
 
@@ -24,15 +24,15 @@ declare function open(path: string, flags?: number, mode?: number): Promise<numb
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| path | string | Yes | 待打开文件的应用沙箱路径。 |
-| flags | number | No | 打开文件的选项，必须指定如下选项中的一个，默认以只读方式打开：&lt;br/&gt;-?0o0：只读打开。&lt;br/&gt;-?0o1：只写打开。&lt;br/&gt;-?0o2：读写打开。&lt;br/&gt;同时，也可 给定如下选项，以按位或的方式追加，默认不给定任何额外选项：&lt;br/&gt;-?0o100：若文件不存在，则创建文件。使用该选项时必须指定第三个参数?mode。&lt;br/&gt;-?0o200：如果追加了0o100选项，且文件已经存在，则出错 。&lt;br/&gt;-?0o1000：如果文件存在且文件具有写权限，则将其长度裁剪为零。&lt;br/&gt;-?0o2000：以追加方式打开，后续写将追加到文件末尾。&lt;br/&gt;-?0o4000：如果path指向FIFO、块特殊文件或字符特殊文件 ，则本次打开及后续?IO?进行非阻塞操作。&lt;br/&gt;-?0o200000：如果path不指向目录，则出错。&lt;br/&gt;-?0o400000：如果path指向符号链接，则出错。&lt;br/&gt;-?0o4010000：以同步IO的方式打开 文件。 |
-| mode | number | No | 若创建文件，则指定文件的权限，可给定如下权限，以按位或的方式追加权限，默认给定0o660。&lt;br/&gt;-?0o660：所有者具有读、写权限，所有用户组具有读、写权限。&lt;br/&gt;-?0 o700：所有者具有读、写及可执行权限。&lt;br/&gt;-?0o400：所有者具有读权限。&lt;br/&gt;-?0o200：所有者具有写权限。&lt;br/&gt;-?0o100：所有者具有可执行权限。&lt;br/&gt;-?0o070：所有用户组具有读、写及可 执行权限。&lt;br/&gt;-?0o040：所有用户组具有读权限。&lt;br/&gt;-?0o020：所有用户组具有写权限。&lt;br/&gt;-?0o010：所有用户组具有可执行权限。&lt;br/&gt;-?0o007：其余用户具有读、写及可执行权限。&lt;br/&gt; -?0o004：其余用户具有读权限。&lt;br/&gt;-?0o002：其余用户具有写权限。&lt;br/&gt;-?0o001：其余用户具有可执行权限。 |
+| path | string | Yes | Application sandbox path of the file. |
+| flags | number | No | Option for opening the file. You must specify one of the following options. By default, the file is opened in read-only mode.&lt;br&gt;- **0o0**: Open the file in read-only mode.&lt;br&gt;- **0o1**: Open the file in write-only mode.&lt;br&gt;- **0o2**: Open the file in read/write mode.&lt;br&gt;In addition, you can specify the following options, separated using a bitwise OR operator (\|). By default, no additional option is specified.&lt;br&gt;- **0o100** : If the file does not exist, create it. If you use this option, you must also specify **mode**.&lt;br&gt;- **0o200**: If **0o100** is added and the file already exists, throw an exception.&lt;br&gt;- **0o1000**: If the file exists and is opened in write mode, truncate the file length to 0.&lt;br&gt;- **0o2000**: Open the file in append mode. New data will be appended to the file (added to the end of the file).&lt;br&gt;- **0o4000**: If **path** points to a named pipe (also known as a FIFO), block special file, or character special file, perform non-blocking operations on the open file and in subsequent I/Os.&lt;br&gt;- **0o200000**: If **path** does not point to a directory, throw an exception.&lt;br&gt;- **0o400000**: If **path** points to a symbolic link, throw an exception.&lt;br&gt;- **0o4010000**: Open the file in synchronous I/O mode. |
+| mode | number | No | Permissions on the file. You can specify multiple permissions, separated using a bitwise OR operator (\|). The default value is **0o660**.&lt;br&gt;- **0o660**: The owner and user group have the read and write permissions.&lt;br&gt;- **0o700**: The owner has the read, write, and execute permissions.&lt;br&gt;- **0o400**: The owner has the read permission.&lt;br&gt;- **0o200**: The owner has the write permission.&lt;br&gt;- **0o100**: The owner has the execute permission.&lt;br&gt;- **0o070**: The user group has the read, write, and execute permissions.&lt;br&gt;- **0o040**: The user group has the read permission.&lt;br&gt;- **0o020**: The user group has the write permission.&lt;br&gt;- **0o010**: The user group has the execute permission.&lt;br&gt;- **0o007**: Other users have the read, write, and execute permissions.&lt;br&gt;- **0o004**: Other users have the read permission.&lt;br&gt;- **0o002**: Other users have the write permission.&lt;br&gt;- **0o001**: Other users have the execute permission. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;number&gt; | Promise对象。返回打开文件的文件描述符。 |
+| Promise&lt;number&gt; | Promise that returns the file descriptor of the file opened. |
 
 
 ## open
@@ -41,7 +41,7 @@ declare function open(path: string, flags?: number, mode?: number): Promise<numb
 declare function open(path: string, callback: AsyncCallback<number>): void
 ```
 
-打开文件，使用callback异步回调。
+Opens a file. This API uses an asynchronous callback to return the result.
 
 **Since:** 7
 
@@ -59,8 +59,8 @@ declare function open(path: string, callback: AsyncCallback<number>): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| path | string | Yes | 待打开文件的应用沙箱路径。 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;number&gt; | Yes | 异步打开文件之后的回调，返回打开文件的文件描述符。 |
+| path | string | Yes | Application sandbox path of the file. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;number&gt; | Yes | Callback invoked when the file is opened asynchronously, which is used to return the file descriptor. |
 
 
 ## open
@@ -69,7 +69,7 @@ declare function open(path: string, callback: AsyncCallback<number>): void
 declare function open(path: string, flags: number, callback: AsyncCallback<number>): void
 ```
 
-打开文件，使用callback异步回调。
+Opens a file. This API uses an asynchronous callback to return the result.
 
 **Since:** 7
 
@@ -87,9 +87,9 @@ declare function open(path: string, flags: number, callback: AsyncCallback<numbe
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| path | string | Yes | 待打开文件的应用沙箱路径。 |
-| flags | number | Yes | 打开文件的选项，必须指定如下选项中的一个，默认以只读方式打开：&lt;br/&gt;-?0o0：只读打开。&lt;br/&gt;-?0o1：只写打开。&lt;br/&gt;-?0o2：读写打开。&lt;br/&gt;同时，也可 给定如下选项，以按位或的方式追加，默认不给定任何额外选项：&lt;br/&gt;-?0o100：若文件不存在，则创建文件。使用该选项时必须指定第三个参数?mode。&lt;br/&gt;-?0o200：如果追加了0o100选项，且文件已经存在，则出错 。&lt;br/&gt;-?0o1000：如果文件存在且文件具有写权限，则将其长度裁剪为零。&lt;br/&gt;-?0o2000：以追加方式打开，后续写将追加到文件末尾。&lt;br/&gt;-?0o4000：如果path指向FIFO、块特殊文件或字符特殊文件 ，则本次打开及后续?IO?进行非阻塞操作。&lt;br/&gt;-?0o200000：如果path不指向目录，则出错。&lt;br/&gt;-?0o400000：如果path指向符号链接，则出错。&lt;br/&gt;-?0o4010000：以同步IO的方式打开 文件。 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;number&gt; | Yes | 异步打开文件之后的回调，返回打开文件的文件描述符。 |
+| path | string | Yes | Application sandbox path of the file. |
+| flags | number | Yes | Option for opening the file. You must specify one of the following options. By default, the file is opened in read-only mode.&lt;br&gt;- **0o0**: Open the file in read-only mode.&lt;br&gt;- **0o1**: Open the file in write-only mode.&lt;br&gt;- **0o2**: Open the file in read/write mode.&lt;br&gt;In addition, you can specify the following options, separated using a bitwise OR operator (\|). By default, no additional option is specified.&lt;br&gt;- **0o100** : If the file does not exist, create it. If you use this option, you must also specify **mode**.&lt;br&gt;- **0o200**: If **0o100** is added and the file already exists, throw an exception.&lt;br&gt;- **0o1000**: If the file exists and is opened in write mode, truncate the file length to 0.&lt;br&gt;- **0o2000**: Open the file in append mode. New data will be appended to the file (added to the end of the file).&lt;br&gt;- **0o4000**: If **path** points to a named pipe (also known as a FIFO), block special file, or character special file, perform non-blocking operations on the open file and in subsequent I/Os.&lt;br&gt;- **0o200000**: If **path** does not point to a directory, throw an exception.&lt;br&gt;- **0o400000**: If **path** points to a symbolic link, throw an exception.&lt;br&gt;- **0o4010000**: Open the file in synchronous I/O mode. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;number&gt; | Yes | Callback invoked when the file is opened asynchronously, which is used to return the file descriptor. |
 
 
 ## open
@@ -98,7 +98,7 @@ declare function open(path: string, flags: number, callback: AsyncCallback<numbe
 declare function open(path: string, flags: number, mode: number, callback: AsyncCallback<number>): void
 ```
 
-打开文件，使用callback异步回调。
+Opens a file. This API uses an asynchronous callback to return the result.
 
 **Since:** 7
 
@@ -116,8 +116,8 @@ declare function open(path: string, flags: number, mode: number, callback: Async
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| path | string | Yes | 待打开文件的应用沙箱路径。 |
-| flags | number | Yes | 打开文件的选项，必须指定如下选项中的一个，默认以只读方式打开：&lt;br/&gt;-?0o0：只读打开。&lt;br/&gt;-?0o1：只写打开。&lt;br/&gt;-?0o2：读写打开。&lt;br/&gt;同时，也可 给定如下选项，以按位或的方式追加，默认不给定任何额外选项：&lt;br/&gt;-?0o100：若文件不存在，则创建文件。使用该选项时必须指定第三个参数?mode。&lt;br/&gt;-?0o200：如果追加了0o100选项，且文件已经存在，则出错 。&lt;br/&gt;-?0o1000：如果文件存在且文件具有写权限，则将其长度裁剪为零。&lt;br/&gt;-?0o2000：以追加方式打开，后续写将追加到文件末尾。&lt;br/&gt;-?0o4000：如果path指向FIFO、块特殊文件或字符特殊文件 ，则本次打开及后续?IO?进行非阻塞操作。&lt;br/&gt;-?0o200000：如果path不指向目录，则出错。&lt;br/&gt;-?0o400000：如果path指向符号链接，则出错。&lt;br/&gt;-?0o4010000：以同步IO的方式打开 文件。 |
-| mode | number | Yes | 若创建文件，则指定文件的权限，可给定如下权限，以按位或的方式追加权限，默认给定0o660。&lt;br/&gt;-?0o660：所有者具有读、写权限，所有用户组具有读、写权限。&lt;br/&gt;-?0 o700：所有者具有读、写及可执行权限。&lt;br/&gt;-?0o400：所有者具有读权限。&lt;br/&gt;-?0o200：所有者具有写权限。&lt;br/&gt;-?0o100：所有者具有可执行权限。&lt;br/&gt;-?0o070：所有用户组具有读、写及可 执行权限。&lt;br/&gt;-?0o040：所有用户组具有读权限。&lt;br/&gt;-?0o020：所有用户组具有写权限。&lt;br/&gt;-?0o010：所有用户组具有可执行权限。&lt;br/&gt;-?0o007：其余用户具有读、写及可执行权限。&lt;br/&gt; -?0o004：其余用户具有读权限。&lt;br/&gt;-?0o002：其余用户具有写权限。&lt;br/&gt;-?0o001：其余用户具有可执行权限。 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;number&gt; | Yes | 异步打开文件之后的回调，返回打开文件的文件描述符。 |
+| path | string | Yes | Application sandbox path of the file. |
+| flags | number | Yes | Option for opening the file. You must specify one of the following options. By default, the file is opened in read-only mode.&lt;br&gt;- **0o0**: Open the file in read-only mode.&lt;br&gt;- **0o1**: Open the file in write-only mode.&lt;br&gt;- **0o2**: Open the file in read/write mode.&lt;br&gt;In addition, you can specify the following options, separated using a bitwise OR operator (\|). By default, no additional option is specified.&lt;br&gt;- **0o100** : If the file does not exist, create it. If you use this option, you must also specify **mode**.&lt;br&gt;- **0o200**: If **0o100** is added and the file already exists, throw an exception.&lt;br&gt;- **0o1000**: If the file exists and is opened in write mode, truncate the file length to 0.&lt;br&gt;- **0o2000**: Open the file in append mode. New data will be appended to the file (added to the end of the file).&lt;br&gt;- **0o4000**: If **path** points to a named pipe (also known as a FIFO), block special file, or character special file, perform non-blocking operations on the open file and in subsequent I/Os.&lt;br&gt;- **0o200000**: If **path** does not point to a directory, throw an exception.&lt;br&gt;- **0o400000**: If **path** points to a symbolic link, throw an exception.&lt;br&gt;- **0o4010000**: Open the file in synchronous I/O mode. |
+| mode | number | Yes | Permissions on the file. You can specify multiple permissions, separated using a bitwise OR operator (\|). The default value is **0o660**.&lt;br&gt;- **0o660**: The owner and user group have the read and write permissions.&lt;br&gt;- **0o700**: The owner has the read, write, and execute permissions.&lt;br&gt;- **0o400**: The owner has the read permission.&lt;br&gt;- **0o200**: The owner has the write permission.&lt;br&gt;- **0o100**: The owner has the execute permission.&lt;br&gt;- **0o070**: The user group has the read, write, and execute permissions.&lt;br&gt;- **0o040**: The user group has the read permission.&lt;br&gt;- **0o020**: The user group has the write permission.&lt;br&gt;- **0o010**: The user group has the execute permission.&lt;br&gt;- **0o007**: Other users have the read, write, and execute permissions.&lt;br&gt;- **0o004**: Other users have the read permission.&lt;br&gt;- **0o002**: Other users have the write permission.&lt;br&gt;- **0o001**: Other users have the execute permission. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;number&gt; | Yes | Callback invoked when the file is opened asynchronously, which is used to return the file descriptor. |
 

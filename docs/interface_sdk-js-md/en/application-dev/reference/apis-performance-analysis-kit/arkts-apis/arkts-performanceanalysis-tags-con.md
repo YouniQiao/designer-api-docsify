@@ -6,7 +6,7 @@
 const ABILITY_MANAGER: long
 ```
 
-����������ǩ��hitrace�����й��߶�ӦtagName:ability��
+Capability management. The corresponding HiTrace command is **tagName:ability**.
 
 **Since:** 12
 
@@ -22,7 +22,7 @@ const ABILITY_MANAGER: long
 const ARK: long
 ```
 
-JSVM�������ǩ��hitrace�����й��߶�ӦtagName:ark��
+JSVM VM. The corresponding HiTrace command is **tagName:ark**.
 
 **Since:** 12
 
@@ -38,7 +38,7 @@ JSVM�������ǩ��hitrace�����й��߶�ӦtagName:ar
 const ARKUI: long
 ```
 
-ArkUI������ܱ�ǩ��hitrace�����й��߶�ӦtagName:ace��
+ArkUI development framework. The corresponding HiTrace command is **tagName:ace**.
 
 **Since:** 12
 
@@ -54,7 +54,7 @@ ArkUI������ܱ�ǩ��hitrace�����й��߶�ӦtagName
 const AUDIO: long
 ```
 
-��Ƶģ���ǩ��hitrace�����й��߶�ӦtagName:zaudio��
+Audio module. The corresponding HiTrace command is **tagName:zaudio**.
 
 **Since:** 12
 
@@ -70,7 +70,7 @@ const AUDIO: long
 const BLUETOOTH: long
 ```
 
-������ǩ��hitrace�����й��߶�ӦtagName:bluetooth��
+Bluetooth. The corresponding HiTrace command is **tagName:bluetooth**.
 
 **Since:** 12
 
@@ -86,7 +86,7 @@ const BLUETOOTH: long
 const CAMERA: long
 ```
 
-���ģ���ǩ��hitrace�����й��߶�ӦtagName:zcamera��
+Camera module. The corresponding HiTrace command is **tagName:zcamera**.
 
 **Since:** 12
 
@@ -102,7 +102,7 @@ const CAMERA: long
 const COMMON_LIBRARY: long
 ```
 
-��������ϵͳ��ǩ��hitrace�����й��߶�ӦtagName:commonlibrary��
+Common library subsystem. The corresponding HiTrace command is **tagName:commonlibrary**.
 
 **Since:** 12
 
@@ -118,7 +118,7 @@ const COMMON_LIBRARY: long
 const DISTRIBUTED_AUDIO: long
 ```
 
-�ֲ�ʽ��Ƶ��ǩ��hitrace�����й��߶�ӦtagName:daudio��
+Distributed audio. The corresponding HiTrace command is **tagName:daudio**.
 
 **Since:** 12
 
@@ -134,7 +134,7 @@ const DISTRIBUTED_AUDIO: long
 const DISTRIBUTED_CAMERA: long
 ```
 
-�ֲ�ʽ�����ǩ��hitrace�����й��߶�ӦtagName:dcamera��
+Distributed camera. The corresponding HiTrace command is **tagName:dcamera**.
 
 **Since:** 12
 
@@ -150,7 +150,7 @@ const DISTRIBUTED_CAMERA: long
 const DISTRIBUTED_DATA: long
 ```
 
-�ֲ�ʽ���ݹ���ģ���ǩ��hitrace�����й��߶�ӦtagName:distributeddatamgr��
+Distributed data management. The corresponding HiTrace command is **tagName:distributeddatamgr**.
 
 **Since:** 12
 
@@ -166,7 +166,7 @@ const DISTRIBUTED_DATA: long
 const DISTRIBUTED_HARDWARE_DEVICE_MANAGER: long
 ```
 
-�ֲ�ʽӲ���豸������ǩ��hitrace�����й��߶�ӦtagName:devicemanager��
+Distributed hardware device management. The corresponding HiTrace command is **tagName:devicemanager**.
 
 **Since:** 12
 
@@ -182,7 +182,7 @@ const DISTRIBUTED_HARDWARE_DEVICE_MANAGER: long
 const DISTRIBUTED_HARDWARE_FRAMEWORK: long
 ```
 
-�ֲ�ʽӲ����ܱ�ǩ��hitrace�����й��߶�ӦtagName:dhfwk��
+Distributed hardware framework. The corresponding HiTrace command is **tagName:dhfwk**.
 
 **Since:** 12
 
@@ -198,7 +198,7 @@ const DISTRIBUTED_HARDWARE_FRAMEWORK: long
 const DISTRIBUTED_INPUT: long
 ```
 
-�ֲ�ʽ�����ǩ��hitrace�����й��߶�ӦtagName:dinput��
+Distributed input. The corresponding HiTrace command is **tagName:dinput**.
 
 **Since:** 12
 
@@ -214,7 +214,7 @@ const DISTRIBUTED_INPUT: long
 const DISTRIBUTED_SCHEDULER: long
 ```
 
-�ֲ�ʽ��������ǩ��hitrace�����й��߶�ӦtagName:dsched��
+Distributed scheduler. The corresponding HiTrace command is **tagName:dsched**.
 
 **Since:** 12
 
@@ -230,7 +230,7 @@ const DISTRIBUTED_SCHEDULER: long
 const DISTRIBUTED_SCREEN: long
 ```
 
-�ֲ�ʽ��Ļ��ǩ��hitrace�����й��߶�ӦtagName:dscreen��
+Distributed screen. The corresponding HiTrace command is **tagName:dscreen**.
 
 **Since:** 12
 
@@ -246,7 +246,7 @@ const DISTRIBUTED_SCREEN: long
 const FFRT: long
 ```
 
-FFRT�����ǩ��hitrace�����й��߶�ӦtagName:ffrt��
+FFRT task. The corresponding HiTrace command is **tagName:ffrt**.
 
 **Since:** 12
 
@@ -262,7 +262,7 @@ FFRT�����ǩ��hitrace�����й��߶�ӦtagName:ffrt��
 const FILE_MANAGEMENT: long
 ```
 
-�ļ�����ϵͳ��ǩ��hitrace�����й��߶�ӦtagName:filemanagement��
+File management system. The corresponding HiTrace command is **tagName:filemanagement**.
 
 **Since:** 12
 
@@ -278,7 +278,7 @@ const FILE_MANAGEMENT: long
 const GLOBAL_RESOURCE_MANAGER: long
 ```
 
-ȫ����Դ������ǩ��hitrace�����й��߶�ӦtagName:gresource��
+Global resource management. The corresponding HiTrace command is **tagName:gresource**.
 
 **Since:** 12
 
@@ -294,7 +294,7 @@ const GLOBAL_RESOURCE_MANAGER: long
 const GRAPHICS: long
 ```
 
-ͼ��ģ���ǩ��hitrace�����й��߶�ӦtagName:graphic��
+Graphics module. The corresponding HiTrace command is **tagName:graphic**.
 
 **Since:** 12
 
@@ -310,7 +310,7 @@ const GRAPHICS: long
 const HDF: long
 ```
 
-HDF��ϵͳ��ǩ��hitrace�����й��߶�ӦtagName:hdf��
+HDF subsystem. The corresponding HiTrace command is **tagName:hdf**.
 
 **Since:** 12
 
@@ -326,7 +326,7 @@ HDF��ϵͳ��ǩ��hitrace�����й��߶�ӦtagName:hdf��
 const IMAGE: long
 ```
 
-ͼƬģ���ǩ��hitrace�����й��߶�ӦtagName:zimage��
+Image module. The corresponding HiTrace command is **tagName:zimage**.
 
 **Since:** 12
 
@@ -342,7 +342,7 @@ const IMAGE: long
 const MEDIA: long
 ```
 
-ý��ģ���ǩ��hitrace�����й��߶�ӦtagName:zmedia��
+Media module. The corresponding HiTrace command is **tagName:zmedia**.
 
 **Since:** 12
 
@@ -358,7 +358,7 @@ const MEDIA: long
 const MISC: long
 ```
 
-MISCģ���ǩ��hitrace�����й��߶�ӦtagName:misc��
+MISC module. The corresponding HiTrace command is **tagName:misc**.
 
 **Since:** 12
 
@@ -374,7 +374,7 @@ MISCģ���ǩ��hitrace�����й��߶�ӦtagName:misc��
 const MULTIMODAL_INPUT: long
 ```
 
-��ģ̬����ģ���ǩ��hitrace�����й��߶�ӦtagName:multimodalinput��
+Multi-modal input module. The corresponding HiTrace command is **tagName:multimodalinput**.
 
 **Since:** 12
 
@@ -390,7 +390,7 @@ const MULTIMODAL_INPUT: long
 const NET: long
 ```
 
-�����ǩ��hitrace�����й��߶�ӦtagName:net��
+Network. The corresponding HiTrace command is **tagName:net**.
 
 **Since:** 12
 
@@ -406,7 +406,7 @@ const NET: long
 const NOTIFICATION: long
 ```
 
-֪ͨģ���ǩ��hitrace�����й��߶�ӦtagName:notification��
+Notification module. The corresponding HiTrace command is **tagName:notification**.
 
 **Since:** 12
 
@@ -422,7 +422,7 @@ const NOTIFICATION: long
 const NWEB: long
 ```
 
-Nweb��ǩ��hitrace�����й��߶�ӦtagName:nweb��
+Nweb. The corresponding HiTrace command is **tagName:nweb**.
 
 **Since:** 12
 
@@ -438,7 +438,7 @@ Nweb��ǩ��hitrace�����й��߶�ӦtagName:nweb��
 const OHOS: long
 ```
 
-OHOSͨ�ñ�ǩ��hitrace�����й��߶�ӦtagName:ohos��
+OHOS. The corresponding HiTrace command is **tagName:ohos**.
 
 **Since:** 12
 
@@ -454,7 +454,7 @@ OHOSͨ�ñ�ǩ��hitrace�����й��߶�ӦtagName:ohos��
 const POWER_MANAGER: long
 ```
 
-��Դ������ǩ��hitrace�����й��߶�ӦtagName:power��
+Power management. The corresponding HiTrace command is **tagName:power**.
 
 **Since:** 12
 
@@ -470,7 +470,7 @@ const POWER_MANAGER: long
 const RPC: long
 ```
 
-RPC��ǩ��hitrace�����й��߶�ӦtagName:rpc��
+RPC. The corresponding HiTrace command is **tagName:rpc**.
 
 **Since:** 12
 
@@ -486,7 +486,7 @@ RPC��ǩ��hitrace�����й��߶�ӦtagName:rpc��
 const SAMGR: long
 ```
 
-ϵͳ����������ǩ��hitrace�����й��߶�ӦtagName:samgr��
+System capability management. The corresponding HiTrace command is **tagName:samgr**.
 
 **Since:** 12
 
@@ -502,7 +502,7 @@ const SAMGR: long
 const WINDOW_MANAGER: long
 ```
 
-���ڹ�����ǩ��hitrace�����й��߶�ӦtagName:window��
+Window management. The corresponding HiTrace command is **tagName:window**.
 
 **Since:** 12
 

@@ -1,6 +1,6 @@
 # ListBackPressBehavior
 
-定义List组件的系统返回键行为。
+Defines the back press behavior for List component.
 
 **Since:** 26.0.0
 
@@ -16,7 +16,7 @@
 closeSwipeAction?: boolean
 ```
 
-系统返回键生效时，是否收起已展开的ListItem的划出组件。
+Whether to close the swipe menu when back key is pressed.
 
 **Type:** boolean
 

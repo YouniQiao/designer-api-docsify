@@ -1,11 +1,5 @@
 # createStream（系统接口）
 
-## 导入模块
-
-```TypeScript
-import { abilityConnectionManager } from 'kits/@kit.DistributedServiceKit';
-```
-
 ## createStream
 
 ```TypeScript
@@ -43,11 +37,11 @@ Creating a Stream.
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. |
-| 32300004 | Color space not supported. |
-| 202 | Not system App. |
-| 32300001 | Only one stream can be created for the current session. |
-| 32300003 | Bitrate not supported. |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. |
+| [32300004](../../apis-distributedservice-kit/errorcode-device-manager.md#32300004-色彩空间不支持) | Color space not supported. |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not system App. |
+| [32300001](../../apis-distributedservice-kit/errorcode-device-manager.md#32300001-重复创建传输流) | Only one stream can be created for the current session. |
+| [32300003](../../apis-distributedservice-kit/errorcode-device-manager.md#32300003-比特率不支持) | Bitrate not supported. |
 
 ## 示例
 
@@ -58,7 +52,7 @@ import { hilog } from '@kit.PerformanceAnalysisKit';
 hilog.info(0x0000, 'testTag', 'startStream');
 let sessionId = 100;
 // 创建传输流，配置名称为'receive'，角色为SOURCE（发送流）
-abilityConnectionManager.createStream(sessionId, {name: 'receive', role: 0}).then(async (streamId) => {
+abilityConnectionManager.createStream(sessionId ,{name: 'receive', role: 0}).then(async (streamId) => {
   // 配置Surface参数
   let surfaceParam: abilityConnectionManager.SurfaceParam = {
     width: 640,

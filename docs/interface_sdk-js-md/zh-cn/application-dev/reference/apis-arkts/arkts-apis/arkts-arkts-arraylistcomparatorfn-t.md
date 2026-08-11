@@ -29,5 +29,5 @@ ArrayList中sort方法的比较器类型。
 
 | 类型 | 说明 |
 | --- | --- |
-| ArkTS-Dyn: number  <br>ArkTS-Sta：double | number类型。 |
+| ArkTS-Dyn: number  <br>ArkTS-Sta：double | 通过回调函数返回的值，ArrayList根据该比较规则维护元素的顺序。返回负数表示firstValue小于secondValue（firstValue排在secondValue之前）， 返回0表示两者相等，返回正数表示firstValue大于secondValue（firstValue排在secondValue之后）。 |
 

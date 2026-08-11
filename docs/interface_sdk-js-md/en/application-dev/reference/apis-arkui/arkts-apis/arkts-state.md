@@ -7,7 +7,7 @@
 | Name | Description |
 | --- | --- |
 | [IncrementalScope](arkts-arkui-state-incrementalscope-i.md) | Define the IncrementalScope interface to manage state management. |
-| [ReadableState](arkts-arkui-state-readablestate-i.md) | Define the ReadableState interface to observed date changes. |
+| [ReadableState](arkts-arkui-state-readablestate-i.md) | Define the ReadableState interface to observed data changes. |
 | [StateContext](arkts-arkui-state-statecontext-i.md) | Context of a state, keeping track of changes in the given scope. |
 
 ### Types

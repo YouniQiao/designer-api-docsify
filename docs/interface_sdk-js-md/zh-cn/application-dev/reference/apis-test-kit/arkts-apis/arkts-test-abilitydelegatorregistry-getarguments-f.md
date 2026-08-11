@@ -1,11 +1,5 @@
 # getArguments
 
-## 导入模块
-
-```TypeScript
-import { abilityDelegatorRegistry } from 'kits/@kit.TestKit';
-```
-
 ## getArguments
 
 ```TypeScript
@@ -28,7 +22,7 @@ function getArguments(): AbilityDelegatorArgs
 
 | 类型 | 说明 |
 | --- | --- |
-| [AbilityDelegatorArgs](../../apis-ability-kit/arkts-apis/arkts-ability-abilitydelegatorargs-abilitydelegatorargs-i.md) | [AbilityDelegatorArgs]{ |
+| [AbilityDelegatorArgs](arkts-test-abilitydelegatorregistry-abilitydelegatorargs-t.md) | [AbilityDelegatorArgs]{ |
 
 ## 示例
 

@@ -46,5 +46,5 @@ Set WebviewController object.
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| controller | [WebviewController](arkts-arkweb-webview-webviewcontroller-c.md) | 是 |  |
+| controller | [WebviewController](../arkts-components/arkts-arkweb-webviewcontroller-t.md) | 是 |  |
 

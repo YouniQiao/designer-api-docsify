@@ -10,12 +10,6 @@ UIContext类
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
-## 导入模块
-
-```TypeScript
-import { OverlayManager, FrameCallback, ResolvedUIContext, NodeRenderStateChangeCallback, MediaQuery, OverlayManagerOptions, TextMenuController, UIObserver, Font, KeyboardAvoidMode, MarqueeDynamicSyncScene, PromptAction, NodeRenderState, UIContext, TextSelectionClearPolicy, SwiperDynamicSyncScene, Router, MarqueeDynamicSyncSceneType, DialogPresenter, Magnifier, ContextMenuController, UIInspector, CursorController, SwiperDynamicSyncSceneType, AtomicServiceBar, PageInfo, TargetInfo, ComponentUtils, DragController, MeasureUtils, NodeIdentity } from 'kits/@kit.ArkUI';
-```
-
 ## clearResourceCache
 
 ```TypeScript
@@ -67,7 +61,7 @@ Sets the component freezing flag based on the component id to prevent the UI com
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 202 | The caller is not a system application. |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | The caller is not a system application. |
 
 ## freezeUINode
 
@@ -100,7 +94,7 @@ freezeUINode(uniqueId: int, isFrozen: boolean): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 202 | The caller is not a system application. |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | The caller is not a system application. |
 
 ## recycleInvisibleImageMemory
 

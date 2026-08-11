@@ -1,6 +1,6 @@
 # DynamicIconInfo (System API)
 
-应用的动态图标信息。
+Obtains dynamic icon information about a bundle
 
 **Since:** 20
 
@@ -18,7 +18,7 @@
 readonly appIndex: int
 ```
 
-标识当前动态图标所属的应用分身索引信息。
+Indicates the index of the bundle.
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
@@ -38,7 +38,7 @@ readonly appIndex: int
 readonly bundleName: string
 ```
 
-标识当前动态图标所属的应用包名信息。
+Indicates the name of the bundle.
 
 **Type:** string
 
@@ -58,7 +58,7 @@ readonly bundleName: string
 readonly moduleName: string
 ```
 
-标识当前动态图标所属的应用模块名称信息。
+Indicates the name of the dynamic icon.
 
 **Type:** string
 
@@ -78,7 +78,7 @@ readonly moduleName: string
 readonly userId: int
 ```
 
-标识当前动态图标所属的用户信息。
+Indicates the user id of the bundle.
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 

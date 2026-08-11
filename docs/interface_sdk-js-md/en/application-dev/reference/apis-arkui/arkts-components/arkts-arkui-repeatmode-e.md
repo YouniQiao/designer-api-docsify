@@ -1,6 +1,6 @@
 # RepeatMode
 
-用于设置被切割的图片在边框上的重复方式。
+Defines the Border Image Repeat Mode.
 
 **Since:** 11
 
@@ -13,10 +13,10 @@
 ## Repeat
 
 ```TypeScript
-Repeat = 0
+Repeat
 ```
 
-被切割的图片会重复铺平在图片边框上，超出部分会被剪裁。
+The source image's slices are tiled. Tiles beyond the border box will be clipped.
 
 **Since:** 11
 
@@ -26,17 +26,17 @@ Repeat = 0
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 11.
 
-<!--Device-RepeatMode-Repeat = 0--><!--Device-RepeatMode-Repeat = 0-End-->
+<!--Device-RepeatMode-Repeat--><!--Device-RepeatMode-Repeat-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## Stretch
 
 ```TypeScript
-Stretch = 1
+Stretch
 ```
 
-被切割的图片会以拉伸填充的方式铺满图片边框。
+The source image's slices are stretched to fill the border box.
 
 **Since:** 11
 
@@ -46,17 +46,17 @@ Stretch = 1
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 11.
 
-<!--Device-RepeatMode-Stretch = 1--><!--Device-RepeatMode-Stretch = 1-End-->
+<!--Device-RepeatMode-Stretch--><!--Device-RepeatMode-Stretch-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## Round
 
 ```TypeScript
-Round = 2
+Round
 ```
 
-被切割的图片会以整数次平铺在图片边框上，无法以整数次平铺时会压缩图片。
+The source image's slices are tiled to fill the border box. Tiles may be compressed when needed.
 
 **Since:** 11
 
@@ -66,17 +66,17 @@ Round = 2
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 11.
 
-<!--Device-RepeatMode-Round = 2--><!--Device-RepeatMode-Round = 2-End-->
+<!--Device-RepeatMode-Round--><!--Device-RepeatMode-Round-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## Space
 
 ```TypeScript
-Space = 3
+Space
 ```
 
-被切割的图片会以整数次平铺在图片边框上，无法以整数次平铺时会以空白填充。
+The source image's slices are tiled to fill the border box. Extra space will be distributed in between tiles.
 
 **Since:** 11
 
@@ -86,7 +86,7 @@ Space = 3
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 11.
 
-<!--Device-RepeatMode-Space = 3--><!--Device-RepeatMode-Space = 3-End-->
+<!--Device-RepeatMode-Space--><!--Device-RepeatMode-Space-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 

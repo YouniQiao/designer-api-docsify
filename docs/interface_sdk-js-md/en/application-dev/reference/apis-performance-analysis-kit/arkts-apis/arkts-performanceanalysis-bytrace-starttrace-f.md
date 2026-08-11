@@ -6,9 +6,14 @@
 function startTrace(name: string, taskId: number, expectedTime?: number): void
 ```
 
-标记一个时间片跟踪任务的开始。
+Marks the start of a timeslice trace task.
 
-如果有多个相同name的任务需要追踪或者对同一个任务要追踪多次，并且这些跟踪任务会同时被执行，则每次调用startTrace的taskId必须不一致。如果具有相同name的跟踪任务是串行执行的，则taskId可以相同。在下面bytrace.finishTrace的示例中会举例说明。
+> **NOTE：**
+> 
+> If multiple trace tasks with the same name need to be performed at the same time or a trace task needs to be
+> performed multiple times concurrently, different task IDs must be specified in **startTrace**. If the trace tasks
+> with the same name are not performed at the same time, the same task ID can be used. For details, see the
+> bytrace.finishTrace example.
 
 **Since:** 7
 
@@ -26,9 +31,9 @@ function startTrace(name: string, taskId: number, expectedTime?: number): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| name | string | Yes | 时间片跟踪任务名称。 |
-| taskId | number | Yes | 时间片跟踪任务id。 |
-| expectedTime | number | No | 期望的耗时时间（单位：ms）。设置该值后，系统会在实际执行时间超过期望值时产生性能警告。可选，默认为空 表示不产生警告。 |
+| name | string | Yes | Name of a timeslice trace task. |
+| taskId | number | Yes | ID of a timeslice trace task. |
+| expectedTime | number | No | Expected duration of the trace, in ms. This parameter is optional and is left blank by default. |
 
 ## Examples
 

@@ -1,11 +1,5 @@
 # queryBundleActiveStates（系统接口）
 
-## 导入模块
-
-```TypeScript
-import { bundleState } from 'kits/@kit.BackgroundTasksKit';
-```
-
 ## queryBundleActiveStates
 
 ```TypeScript

@@ -184,7 +184,7 @@ default switchStyle(value: SwitchStyle | undefined): this
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | [SwitchStyle](../arkts-components/arkts-arkui-switchstyle-i.md) \| undefined | 是 | Switch样式风格。取值为undefined时，按各属性的默认值处理。 |
+| value | [SwitchStyle](arkts-arkui-toggle-switchstyle-i.md) \| undefined | 是 | Switch样式风格。取值为undefined时，按各属性的默认值处理。 |
 
 **返回值：**
 

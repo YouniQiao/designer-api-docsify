@@ -12,12 +12,6 @@
 
 **系统能力：** SystemCapability.MultimodalInput.Input.Core
 
-## 导入模块
-
-```TypeScript
-import { SourceType, ToolType, TouchEvent, FixedMode, KeyAction, Touch } from 'kits/@kit.InputKit';
-```
-
 ## action
 
 ```TypeScript

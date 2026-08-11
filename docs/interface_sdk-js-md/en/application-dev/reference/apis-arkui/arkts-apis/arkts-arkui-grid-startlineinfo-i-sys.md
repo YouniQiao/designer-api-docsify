@@ -1,10 +1,6 @@
 # StartLineInfo (System API)
 
-用于记录Grid页面内起始行的位置信息。
-
-**系统接口：** 此接口为系统接口。
-
-**模型约束：** 此接口仅可在Stage模型下使用。
+Define start line info used in GridLayoutOptions.
 
 **Since:** 23
 
@@ -22,7 +18,7 @@
 startIndex: int
 ```
 
-目标索引或目标偏移量所在行的起始索引。取值限定为整数。
+Define the start index of the row where the target index or offset is located.The value should be an integer.
 
 **Type:** int
 
@@ -44,7 +40,7 @@ startIndex: int
 startLine: int
 ```
 
-startIndex对应的GridItem所在的起始行，一般为Grid视窗内的起始行，对于跨多行的GridItem需要找到该节点的起始行，可能在视窗外。取值限定为整数。
+Define the start row of the item with startIndex.The value should be an integer.
 
 **Type:** int
 
@@ -66,7 +62,7 @@ startIndex对应的GridItem所在的起始行，一般为Grid视窗内的起始�
 startOffset: double
 ```
 
-startIndex对应的GridItem的顶部与Grid顶部之间的偏移量。单位：vp。
+Define the offset between the top of the item with startIndex and the top of the grid.
 
 **Type:** double
 
@@ -88,7 +84,7 @@ startIndex对应的GridItem的顶部与Grid顶部之间的偏移量。单位：v
 totalOffset: double
 ```
 
-总滚动偏移量，即Grid中第一个GridItem的顶部与Grid顶部之间的偏移量。单位：vp。
+Define the offset between the top of the first item and the top of the grid.
 
 **Type:** double
 

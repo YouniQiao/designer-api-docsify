@@ -1,6 +1,6 @@
 # TextDecorationType
 
-装饰线类型枚举。
+Enumerates the text decoration types.
 
 **Since:** 12
 
@@ -16,7 +16,7 @@
 NONE = 0
 ```
 
-无装饰线。
+No decoration is used.
 
 **Since:** 12
 
@@ -34,7 +34,7 @@ NONE = 0
 UNDERLINE = 1
 ```
 
-下划线。
+An underline is used for decoration.
 
 **Since:** 12
 
@@ -52,7 +52,7 @@ UNDERLINE = 1
 OVERLINE = 2
 ```
 
-上划线。
+An overline is used for decoration.
 
 **Since:** 12
 
@@ -70,7 +70,7 @@ OVERLINE = 2
 LINE_THROUGH = 4
 ```
 
-删除线。
+A strikethrough is used for decoration.
 
 **Since:** 12
 

@@ -1,6 +1,6 @@
 # TextClockController
 
-TextClock容器组件的控制器，可以将该控制器绑定到TextClock组件，通过它控制文本时钟的启动与停止。一个TextClock组件仅支持绑定一个控制器。
+Provides a way to control the textclock status.
 
 **Since:** 23
 
@@ -16,7 +16,7 @@ TextClock容器组件的控制器，可以将该控制器绑定到TextClock组�
 constructor()
 ```
 
-TextClockController的构造函数。
+constructor.
 
 **Since:** 23
 
@@ -34,7 +34,7 @@ TextClockController的构造函数。
 start(): void
 ```
 
-启动文本时钟。
+Provides a start event for textclock.
 
 **Since:** 23
 
@@ -52,7 +52,7 @@ start(): void
 stop(): void
 ```
 
-停止文本时钟。
+Provides a stop event for textclock.
 
 **Since:** 23
 

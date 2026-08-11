@@ -12,7 +12,7 @@ import { inputMethodSystemPanelManager } from 'kits/@kit.IMEKit';
 function onSystemPrivateCommand(callback: Callback<Record<string, CommandDataType>>): void
 ```
 
-订阅输入法应用发送私有数据命令的事件。
+Subscribe to the event when the input method application sends private data commands.
 
 **Since:** 26.0.0
 
@@ -30,11 +30,11 @@ function onSystemPrivateCommand(callback: Callback<Record<string, CommandDataTyp
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;Record&lt;string, CommandDataType&gt;&gt; | Yes | 当输入法应用发送私有数据命令时触发的回调。 |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;Record&lt;string, CommandDataType&gt;&gt; | Yes | callback triggered when an input method application sends a private data command. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 202 | not system application. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | not system application. |
 

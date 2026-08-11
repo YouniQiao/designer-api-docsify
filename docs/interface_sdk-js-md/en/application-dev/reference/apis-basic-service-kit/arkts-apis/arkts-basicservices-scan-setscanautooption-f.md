@@ -12,7 +12,7 @@ import { scan } from 'kits/@kit.BasicServicesKit';
 function setScanAutoOption(scannerId: string, optionIndex: int): Promise<void>
 ```
 
-设置扫描选项为自动模式。使用Promise异步回调。
+Sets the scan option to auto mode. This API uses a promise to return the result.
 
 **Since:** 20
 
@@ -28,20 +28,20 @@ function setScanAutoOption(scannerId: string, optionIndex: int): Promise<void>
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| scannerId | string | Yes | 扫描仪的ID。 |
-| optionIndex | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | 要设置为自动的选项的索引。 |
+| scannerId | string | Yes | Scanner ID. |
+| optionIndex | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | Index of the option to be set to auto mode. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise对象，无返回结果。 |
+| Promise&lt;void&gt; | Promise that returns no value. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 201 | Permission denied. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
 
 ## Examples
 

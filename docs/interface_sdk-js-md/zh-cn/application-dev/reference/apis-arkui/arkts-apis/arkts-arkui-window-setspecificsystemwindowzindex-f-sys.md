@@ -1,11 +1,5 @@
 # setSpecificSystemWindowZIndex（系统接口）
 
-## 导入模块
-
-```TypeScript
-import { window } from 'kits/@kit.ArkUI';
-```
-
 ## setSpecificSystemWindowZIndex
 
 ```TypeScript
@@ -45,12 +39,14 @@ function setSpecificSystemWindowZIndex(windowType: WindowType, zIndex: int): Pro
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 1300003 | This window manager service works abnormally. |
-| 801 | Capability not supported. Failed to call the API due to limited device capabilities. |
-| 1300004 | Unauthorized operation. Possible cause: Invalid window type. |
-| 202 | Permission verification failed, non-system application uses system API. |
+| [1300003](../errorcode-window.md#1300003-系统服务工作异常) | This window manager service works abnormally. |
+| [801](../../errorcode-universal.md#801-该设备不支持此api) | Capability not supported. Failed to call the API due to limited device capabilities. |
+| [1300004](../errorcode-window.md#1300004-无权限操作) | Unauthorized operation. Possible cause: Invalid window type. |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed, non-system application uses system API. |
 
 ## 示例
+
+ArkTS-Dyn示例：
 
 ```TypeScript
 import { window } from '@kit.ArkUI';
@@ -63,6 +59,23 @@ try {
   });
 } catch (exception) {
   console.error(`Failed to set zIndex. Cause code: ${exception.code}, message: ${exception.message}`);
+}
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+import { window } from '@kit.ArkUI';
+import { BusinessError } from '@kit.BasicServicesKit';
+try {
+  window.setSpecificSystemWindowZIndex(window.WindowType.TYPE_SCREENSHOT, 200).then(() => {
+    console.info('Succeeded in setting zIndex');
+  }).catch((err) => {
+    console.error(`Failed to set zIndex. Cause code: ${err.code}, message: ${err.message}`);
+  });
+} catch (exception) {
+  let err = exception as BusinessError;
+  console.error(`Failed to set zIndex. Cause code: ${err.code}, message: ${err.message}`);
 }
 ```
 

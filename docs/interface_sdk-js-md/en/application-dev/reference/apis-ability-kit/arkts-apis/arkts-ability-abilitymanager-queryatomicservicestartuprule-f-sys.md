@@ -12,7 +12,8 @@ import { abilityManager } from 'kits/@kit.AbilityKit';
 function queryAtomicServiceStartupRule(context: Context, appId: string): Promise<AtomicServiceStartupRule>
 ```
 
-查询嵌入式拉起[EmbeddableUIAbility](arkts-ability-app-ability-embeddableuiability-embeddableuiability-c.md)的规则。使用Promise异步回调。该接口仅在Phone和Tablet设备中可正常调用，在其他设备中返回801错误码。
+Obtains the rule for launching an  
+[EmbeddableUIAbility](arkts-ability-app-ability-embeddableuiability-embeddableuiability-c.md) in embedded mode. This API uses a promise to return the result.This API can be properly called only on phones and tablets. On other devices, it returns the error code 801.
 
 **Since:** 18
 
@@ -30,22 +31,22 @@ function queryAtomicServiceStartupRule(context: Context, appId: string): Promise
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| context | [Context](arkts-ability-context-c-sys.md) | Yes | 嵌入式拉起EmbeddableUIAbility的调用方Context。&lt;br&gt;**说明：**目前仅支持 [UIAbilityContext](arkts-ability-uiabilitycontext-c.md)。 |
-| appId | string | Yes | 应用的唯一标识，由云端统一分配。 |
+| context | [Context](arkts-ability-context-c-sys.md) | Yes | Context of the caller.&lt;br&gt;Note: Currently, only [UIAbilityContext](arkts-ability-uiabilitycontext-c.md) is supported. |
+| appId | string | Yes | Unique ID of the application, which is allocated by the cloud. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;AtomicServiceStartupRule&gt; | Promise对象。返回嵌入式拉起原子化服务的规则。 |
+| Promise&lt;AtomicServiceStartupRule&gt; | Promise used to return the rule for launching the embedded atomic service. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
-| 801 | Capability not supported. |
-| 16000050 | Internal error. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. |
+| [16000050](../errorcode-ability.md#16000050-internal-error) | Internal error. |
 
 ## Examples
 

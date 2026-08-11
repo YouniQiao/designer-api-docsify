@@ -12,12 +12,13 @@ import { usbManager } from 'kits/@kit.BasicServicesKit';
 function getDevices(): Array<Readonly<USBDevice>>
 ```
 
-获取接入主设备的USB设备列表。
+Obtains the list of USB devices connected to the host.
 
-> **说明：**
+> **NOTE：**
 > 
-> 三方应用没有权限获取serial字段读取设备序列号，需要通过
-> [usbManager.requestRight](arkts-basicservices-usbmanager-requestright-f.md#requestright)申请权限后，自行发起控制传输获取。
+> Third-party applications are not allowed to obtain the device serial number from the **serial** field unless they
+> request permission using [usbManager.requestRight](arkts-basicservices-usbmanager-requestright-f.md#requestright)
+> and then initiate a control transfer to obtain it.
 
 **Since:** 9
 
@@ -31,13 +32,13 @@ function getDevices(): Array<Readonly<USBDevice>>
 
 | Type | Description |
 | --- | --- |
-| Array&lt;Readonly&lt;USBDevice&gt;&gt; | 设备信息列表。 |
+| Array&lt;Readonly&lt;USBDevice&gt;&gt; | USB device list. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 801 | Capability not supported.<br>**Applicable version:** 18 and later |
+| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported.<br>**Applicable version:** 18 and later |
 
 ## Examples
 

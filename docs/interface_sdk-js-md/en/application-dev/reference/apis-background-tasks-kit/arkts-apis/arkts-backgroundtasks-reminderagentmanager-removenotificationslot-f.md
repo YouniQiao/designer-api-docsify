@@ -12,7 +12,7 @@ import { reminderAgentManager } from 'kits/@kit.BackgroundTasksKit';
 function removeNotificationSlot(slotType: notification.SlotType, callback: AsyncCallback<void>): void
 ```
 
-删除指定的通知渠道类型，使用callback异步回调。
+Removes a specified notification slot. This API uses an asynchronous callback to return the result.
 
 **Since:** 9
 
@@ -26,14 +26,14 @@ function removeNotificationSlot(slotType: notification.SlotType, callback: Async
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| slotType | notification.SlotType | Yes | 通知渠道类型。 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | 回调函数。 当删除成功，err为undefined；否则为错误对象。 |
+| slotType | notification.SlotType | Yes | Type of the notification slot. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. If the notification slot is removed, **err** is **undefined**. Otherwise, **err** is an error object. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | If the input parameter is not valid parameter. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | If the input parameter is not valid parameter. |
 
 ## Examples
 
@@ -59,7 +59,7 @@ reminderAgentManager.removeNotificationSlot(notificationManager.SlotType.CONTENT
 function removeNotificationSlot(slotType: notification.SlotType): Promise<void>
 ```
 
-删除指定的通知渠道类型，使用Promise异步回调。
+Removes a specified notification slot. This API uses a promise to return the result.
 
 **Since:** 9
 
@@ -73,19 +73,19 @@ function removeNotificationSlot(slotType: notification.SlotType): Promise<void>
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| slotType | notification.SlotType | Yes | 通知渠道类型。 |
+| slotType | notification.SlotType | Yes | Type of the notification slot. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | 无返回结果的Promise对象。 |
+| Promise&lt;void&gt; | Promise that returns no value. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | If the input parameter is not valid parameter. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | If the input parameter is not valid parameter. |
 
 ## Examples
 

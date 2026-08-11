@@ -1,6 +1,6 @@
 # HuksChallengePosition
 
-表示challenge类型为用户自定义类型时，生成的challenge有效长度仅为8字节连续的数据，且仅支持4种位置。
+Enumerates the positions of the 8-byte valid value in a custom challenge generated.
 
 **Since:** 9
 
@@ -16,7 +16,7 @@
 HUKS_CHALLENGE_POS_0 = 0
 ```
 
-表示0~7字节为当前密钥的有效challenge。
+Bytes 0 to 7.
 
 **Since:** 9
 
@@ -34,7 +34,7 @@ HUKS_CHALLENGE_POS_0 = 0
 HUKS_CHALLENGE_POS_1 = 1
 ```
 
-表示8~15字节为当前密钥的有效challenge。
+Bytes 8 to 15.
 
 **Since:** 9
 
@@ -52,7 +52,7 @@ HUKS_CHALLENGE_POS_1 = 1
 HUKS_CHALLENGE_POS_2 = 2
 ```
 
-表示16~23字节为当前密钥的有效challenge。
+Bytes 16 to 23.
 
 **Since:** 9
 
@@ -70,7 +70,7 @@ HUKS_CHALLENGE_POS_2 = 2
 HUKS_CHALLENGE_POS_3 = 3
 ```
 
-表示24~31字节为当前密钥的有效challenge。
+Bytes 24 to 31.
 
 **Since:** 9
 

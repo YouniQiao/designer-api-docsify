@@ -1,6 +1,6 @@
 # EnabledPriorityNotificationCallbackData (System API)
 
-通知优先级总开关状态。
+Returns the notification priority master switch state.
 
 **Since:** 23
 
@@ -18,9 +18,9 @@
 readonly enable: boolean
 ```
 
-所有通知的优先使能状态。  
-- true：允许设置为优先通知。  
-- false：禁止设置为优先通知。
+Whether the priority notification is enabled.  
+- **true**: The priority notification is enabled.  
+- **false**: The priority notification is disabled.
 
 **Type:** boolean
 

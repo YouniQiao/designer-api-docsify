@@ -12,7 +12,7 @@ import { bundleManager } from 'kits/@kit.AbilityKit';
 function setAbilityFileTypesForSelf(moduleName: string, abilityName: string, fileTypes: Array<string>): void
 ```
 
-设置当前应用支持打开的文件类型。
+Sets the file types that can be opened by the current application.
 
 **Since:** 22
 
@@ -30,19 +30,19 @@ function setAbilityFileTypesForSelf(moduleName: string, abilityName: string, fil
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| moduleName | string | Yes | 表示模块的名称。 |
-| abilityName | string | Yes | 表示UIAbility组件的名称。 |
-| fileTypes | Array&lt;string&gt; | Yes | 表示文件类型。fileTypes数组长度不能超过1024，每个元素不能超过512个字符，元素取值为 [UniformDataType](../../apis-arkdata/arkts-apis/arkts-arkdata-uniformtypedescriptor-uniformdatatype-e.md/arkts-arkdata-uniformtypedescriptor-uniformdatatype-e.md)中的值，元素不能为空、通配符、 general.object。 |
+| moduleName | string | Yes | Module name. |
+| abilityName | string | Yes | Name of the UIAbility component. |
+| fileTypes | Array&lt;string&gt; | Yes | Array of file types. The array must contain no more than 1024 elements, and each element must not exceed 512 characters. Valid values must be from [UniformDataType](../../apis-arkdata/arkts-apis/arkts-arkdata-uniformtypedescriptor-uniformdatatype-e.md/arkts-arkdata-uniformtypedescriptor-uniformdatatype-e.md). Empty values, wildcard characters, and **general.object** are not allowed. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 17700351 | Invalid fileTypes. Possible causes: 1. The array length exceeds 1024; 2. The array contains an empty item; 3. An item exceeds 512 characters; 4. The array contains wildcard or general.object. |
-| 201 | Permission denied. |
-| 202 | Permission denied, non-system app called system api. |
-| 17700002 | The specified moduleName is not found. |
-| 17700003 | The specified abilityName is not found. |
+| [17700351](../errorcode-bundle.md#17700351-invalid-file-type) | Invalid fileTypes. Possible causes: 1. The array length exceeds 1024; 2. The array contains an empty item; 3. An item exceeds 512 characters; 4. The array contains wildcard or general.object. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission denied, non-system app called system api. |
+| [17700002](../errorcode-bundle.md#17700002-module-name-does-not-exist) | The specified moduleName is not found. |
+| [17700003](../errorcode-bundle.md#17700003-ability-name-does-not-exist) | The specified abilityName is not found. |
 
 ## Examples
 

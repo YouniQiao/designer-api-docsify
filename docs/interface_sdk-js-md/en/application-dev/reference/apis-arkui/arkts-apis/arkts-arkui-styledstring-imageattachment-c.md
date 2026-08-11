@@ -1,6 +1,6 @@
 # ImageAttachment
 
-图片对象说明。
+Defines ImageAttachment.
 
 **Since:** 23
 
@@ -16,7 +16,7 @@
 constructor(value: AttachmentType | undefined)
 ```
 
-图片对象的构造函数。
+constructor supported by AttachmentType.
 
 **Since:** 23
 
@@ -32,7 +32,7 @@ constructor(value: AttachmentType | undefined)
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | [AttachmentType](arkts-arkui-attachmenttype-t.md) \| undefined | Yes | PixelMap类型或 [ResourceStr](../../../reference/apis-arkui/arkui-ts/ts-types.md#resourcestr)类型图片设置项。 |
+| value | [AttachmentType](arkts-arkui-attachmenttype-t.md) \| undefined | Yes | image attachment object. |
 
 ## colorFilter
 
@@ -40,7 +40,7 @@ constructor(value: AttachmentType | undefined)
 readonly colorFilter?: ColorFilterType
 ```
 
-获取属性字符串的图片颜色滤镜效果。
+Get the imageAttachment colorFilter of the StyledString.
 
 **Type:** [ColorFilterType](arkts-arkui-colorfiltertype-t.md)
 
@@ -60,7 +60,7 @@ readonly colorFilter?: ColorFilterType
 readonly layoutStyle?: ImageAttachmentLayoutStyle
 ```
 
-获取属性字符串的图片布局。
+Get the imageAttachmentLayoutStyle of the StyledString.
 
 **Type:** [ImageAttachmentLayoutStyle](arkts-arkui-imageattachmentlayoutstyle-i.md)
 
@@ -80,7 +80,7 @@ readonly layoutStyle?: ImageAttachmentLayoutStyle
 readonly objectFit?: ImageFit
 ```
 
-获取属性字符串的图片缩放类型。
+Get the imageFit of the StyledString.
 
 **Type:** [ImageFit](arkts-arkui-imagefit-e.md)
 
@@ -100,7 +100,7 @@ readonly objectFit?: ImageFit
 readonly resourceValue?: string
 ```
 
-获取属性字符串的图片资源路径。
+Get the resource value of the ImageAttachment.
 
 **Type:** string
 
@@ -120,9 +120,7 @@ readonly resourceValue?: string
 readonly size?: SizeOptions
 ```
 
-获取属性字符串的图片尺寸。
-
-返回number类型值的单位为`px`。
+Get the imageSize of the StyledString.
 
 **Type:** [SizeOptions](arkts-arkui-sizeoptions-i.md)
 
@@ -142,11 +140,7 @@ readonly size?: SizeOptions
 readonly sizeInVp?: SizeOptions
 ```
 
-获取属性字符串的图片尺寸。
-
-返回number类型值的单位为`vp`。
-
-当ImageAttachment尺寸设置为负数值或undefined时，返回为undefined。
+Get the imageSize of the StyledString in vp unit.
 
 **Type:** [SizeOptions](arkts-arkui-sizeoptions-i.md)
 
@@ -166,11 +160,7 @@ readonly sizeInVp?: SizeOptions
 readonly supportSvg2?: boolean
 ```
 
-获取属性字符串是否开启[SVG标签解析能力增强功能](../../../reference/apis-arkui/arkui-ts/ts-image-svg2-capabilities.md)。
-
-true：支持SVG解析新能力；false：保持原有SVG解析能力。
-
-默认值：false
+Gets the svg support state.
 
 **Type:** boolean
 
@@ -190,7 +180,7 @@ true：支持SVG解析新能力；false：保持原有SVG解析能力。
 readonly value: PixelMap
 ```
 
-获取属性字符串的图片数据源。
+Get the image content of the StyledString.
 
 **Type:** [PixelMap](../arkts-components/arkts-arkui-pixelmap-t.md)
 
@@ -210,7 +200,7 @@ readonly value: PixelMap
 readonly verticalAlign?: ImageSpanAlignment
 ```
 
-获取属性字符串的图片对齐方式。
+Get the ImageSpanAlignment of the StyledString.
 
 **Type:** [ImageSpanAlignment](arkts-arkui-imagespanalignment-e.md)
 

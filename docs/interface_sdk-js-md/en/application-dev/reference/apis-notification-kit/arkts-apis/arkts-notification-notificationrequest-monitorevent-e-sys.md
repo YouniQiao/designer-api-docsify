@@ -1,6 +1,6 @@
 # MonitorEvent (System API)
 
-表示地理围栏的监控事件类型的枚举。
+Enumerates the event types of monitoring a geofence.
 
 **Since:** 23
 
@@ -18,7 +18,7 @@
 MONITOR_TYPE_ENTRY = 1
 ```
 
-进入地理围栏。
+Entering a geofence.
 
 **Since:** 23
 
@@ -36,7 +36,7 @@ MONITOR_TYPE_ENTRY = 1
 MONITOR_TYPE_LEAVE = 2
 ```
 
-退出地理围栏。
+Exiting a geofence.
 
 **Since:** 23
 

@@ -1,10 +1,12 @@
 # EllipseOptions
 
-用于描述Ellipse组件绘制属性。
+Describes the options of the ellipse.
 
-> **说明：**
+> **NOTE：**
 > 
-> 为规范匿名对象的定义，API 18版本修改了此处的元素定义。其中，保留了历史匿名对象的起始版本信息，会出现外层元素@since版本号高于内层元素版本号的情况，但这不影响接口的使用。
+> To standardize anonymous object definitions, the element definitions here have been revised in API version 18.
+> While historical version information is preserved for anonymous objects, there may be cases where the outer
+> element's @since version number is higher than inner elements'. This does not affect interface usability.
 
 **Since:** 18
 
@@ -20,15 +22,7 @@
 height?: Length
 ```
 
-高度，取值范围≥0。
-
-默认值：0
-
-默认单位：vp
-
-异常值undefined、null、NaN和Infinity按照默认值处理。
-
-从API version 20开始，支持Resource类型。
+Height.Unit: vp, The value must be greater than or equal to 0. The **undefined**, **null**, **NaN**, and **Infinity**values are invalid and treated as the default value.The Resource type is supported since API version 20. Default value: **0**.
 
 **Type:** [Length](../arkts-apis/arkts-arkui-length-t.md)
 
@@ -50,15 +44,8 @@ height?: Length
 width?: Length
 ```
 
-宽度，取值范围≥0。
-
-默认值：0
-
-默认单位：vp
-
-异常值undefined、null、NaN和Infinity按照默认值处理。
-
-从API version 20开始，支持Resource类型。
+Width.Unit: vp, The value must be greater than or equal to 0. The **undefined**, **null**, **NaN**, and  
+**Infinity** values are invalid and treated as the default value.The Resource type is supported since API version 20. Default value: **0**.
 
 **Type:** [Length](../arkts-apis/arkts-arkui-length-t.md)
 

@@ -1,6 +1,6 @@
 # ThreadCpuUsage
 
-�̵߳�CPUʹ�������
+Describes the CPU usage of a thread.
 
 **Since:** 12
 
@@ -22,7 +22,7 @@ import { hidebug } from 'kits/@kit.PerformanceAnalysisKit';
 cpuUsage: double
 ```
 
-�߳�CPUʹ���ʡ�
+CPU usage of the thread.
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：double
 
@@ -40,7 +40,7 @@ cpuUsage: double
 threadId: long
 ```
 
-�̺߳š�
+Thread ID.
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：long
 

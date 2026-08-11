@@ -1,6 +1,6 @@
 # VoiceButtonOptions (System API)
 
-语音按钮选项。
+Sets the voice button options.
 
 **Since:** 23
 
@@ -18,11 +18,11 @@
 enabled?: boolean
 ```
 
-输入框启用或禁用语音按钮。
+Whether to enable or disable the voice button for the input box.
 
-true表示启用语音按钮，false表示禁用语音按钮。
+**true**: The voice button is enabled. **false**: The voice button is disabled.
 
-默认值：false
+Default value: **false**
 
 **Type:** boolean
 

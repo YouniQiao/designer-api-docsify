@@ -36,12 +36,6 @@ Panel是输入法面板对象，提供面板页面加载、显示/隐藏、尺�
 
 **系统能力：** SystemCapability.MiscServices.InputMethodFramework
 
-## 导入模块
-
-```TypeScript
-import { inputMethodEngine } from 'kits/@kit.IMEKit';
-```
-
 ## off('sizeUpdate')
 
 ```TypeScript
@@ -73,7 +67,7 @@ off(type: 'sizeUpdate', callback?: SizeUpdateCallback): void
 import { window } from '@kit.ArkUI';
 
 // 取消监听面板大小变化
-panel.off('sizeUpdate', (windowSize: window.Size, _keyboardArea: inputMethodEngine.KeyboardArea) => {
+panel.off('sizeUpdate', (windowSize: window.Size, keyboardArea: inputMethodEngine.KeyboardArea) => {
   // 打印面板宽度、高度信息
   console.info(`panel size changed, width: ${windowSize.width}, height: ${windowSize.height}`);
 });
@@ -104,6 +98,16 @@ offSizeUpdate(callback?: SizeUpdateCallback): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | callback | [SizeUpdateCallback](arkts-ime-inputmethodengine-sizeupdatecallback-t-sys.md) | 否 | 回调函数。 可选参数，需取消的目标回调函数：传入指定回调函数实例时，仅取消该回调的订阅；不传入时，取消所有sizeUpdate事件的订阅。 |
+
+## 示例
+
+```TypeScript
+import { window } from '@kit.ArkUI';
+
+panel.offSizeUpdate((windowSize: window.Size, keyboardArea: inputMethodEngine.KeyboardArea) => {
+  console.info(`panel size changed, width: ${windowSize.width}, height: ${windowSize.height}`);
+});
+```
 
 ## on('sizeUpdate')
 
@@ -169,6 +173,16 @@ onSizeUpdate(callback: SizeUpdateCallback): void
 | --- | --- | --- | --- |
 | callback | [SizeUpdateCallback](arkts-ime-inputmethodengine-sizeupdatecallback-t-sys.md) | 是 | 面板尺寸更新时触发的回调函数，入参为面板尺寸信息对象。 |
 
+## 示例
+
+```TypeScript
+import { window } from '@kit.ArkUI';
+
+panel.onSizeUpdate((windowSize: window.Size, keyboardArea: inputMethodEngine.KeyboardArea) => {
+  console.info(`panel size changed, windowSize: ${windowSize}, keyboardArea: ${keyboardArea}`);
+});
+```
+
 ## setShadow
 
 ArkTS-Dyn:
@@ -206,14 +220,7 @@ setShadow(radius: double, color: string, offsetX: double, offsetY: double): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 12800017 | invalid panel type or panel flag. Possible causes: Panel's flag is FLG_FIXED. |
-| 202 | not system application. |
-| 12800013 | window manager service error. |
-
-## 示例
-
-```TypeScript
-// 设置输入法窗口阴影效果，半径20px，颜色黑色，X/Y轴偏移量均为20px
-panel.setShadow(20, '#000000', 20, 20);
-```
+| [12800017](../errorcode-inputmethod-framework.md#12800017-无效的面板类型或面板状态) | invalid panel type or panel flag. Possible causes: Panel's flag is FLG_FIXED. |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | not system application. |
+| [12800013](../errorcode-inputmethod-framework.md#12800013-窗口管理服务错误) | window manager service error. |
 

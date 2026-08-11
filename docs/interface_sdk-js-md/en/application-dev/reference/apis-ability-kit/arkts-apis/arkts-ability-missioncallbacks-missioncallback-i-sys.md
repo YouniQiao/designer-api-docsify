@@ -1,6 +1,6 @@
 # MissionCallback (System API)
 
-任务回调已注册
+MissionCallback registered by app.
 
 **Since:** 9
 
@@ -18,7 +18,7 @@
 notifyMissionsChanged: NotifyMissionsChangedCallback
 ```
 
-任务变更时由系统调用。
+Called by system when mission changed.
 
 **Since:** 9
 
@@ -62,7 +62,7 @@ Called by system when network disconnect.
 notifySnapshot: NotifySnapshotCallback
 ```
 
-快照发生更改时，系统会调用此函数。
+Called by system when snapshot changed.
 
 **Since:** 9
 

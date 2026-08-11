@@ -1,6 +1,7 @@
 # SaveButton properties/events
 
-不支持通用属性，除了继承[安全控件通用属性](./security_component)，还支持以下属性。不支持通用事件，仅支持以下事件。
+Universal attributes are not supported. This component supports the attributes listed below, as well as  
+[universal attributes of security components](./security_component). Only the following events are supported.
 
 **Inheritance/Implementation:** SaveButtonAttribute extends [SecurityComponentMethod<SaveButtonAttribute>](SecurityComponentMethod<SaveButtonAttribute>)
 
@@ -18,7 +19,7 @@
 iconBorderRadius(radius: Dimension | BorderRadiuses)
 ```
 
-设置保存控件图标的边框圆角半径。
+Sets the corner radius of the **SaveButton** component.
 
 **Since:** 20
 
@@ -38,7 +39,7 @@ iconBorderRadius(radius: Dimension | BorderRadiuses)
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| radius | [Dimension](../arkts-apis/arkts-arkui-dimension-t.md) \| BorderRadiuses | Yes | 保存控件图标的圆角半径，支持设置四个圆角。 &lt;br&gt;默认值：四个圆角均为0vp。支持像素单位（vp、px等），取值范围≥0。传入负值时自动修正为0。&lt;br/&gt;若应用不具备ohos.permission.CUSTOMIZE_SAVE_BUTTON权限，则图标的圆角半径 设置不生效。 |
+| radius | [Dimension](../arkts-apis/arkts-arkui-dimension-t.md) \| BorderRadiuses | Yes | Corner radius of the **SaveButton** component. You can set the radius for each of the four corners individually. &lt;br&gt;The default value is 0 vp for all four corners. Units such as vp and px are supported, and valid values are greater than or equal to 0. Negative values are automatically clamped to **0**. &lt;br&gt;If the app does not have the **ohos.permission.CUSTOMIZE_SAVE_BUTTON** permission, the corner radius setting of the icon does not take effect. |
 
 ## iconSize
 
@@ -46,7 +47,7 @@ iconBorderRadius(radius: Dimension | BorderRadiuses)
 iconSize(size: Dimension | SizeOptions)
 ```
 
-设置保存控件的图标尺寸。
+Sets the icon size of the **SaveButton** component.
 
 **Since:** 20
 
@@ -64,7 +65,7 @@ iconSize(size: Dimension | SizeOptions)
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| size | [Dimension](../arkts-apis/arkts-arkui-dimension-t.md) \| SizeOptions | Yes | 图标尺寸，支持像素单位（vp、px等）。 &lt;br&gt;不支持设置百分比字符串。若设置Dimension类型入参的百分比字符串，则图标尺寸显示为默认值； 若设置SizeOptions类型入参的width或height属性为百分比字符串，则图标尺寸显示为0vp。&lt;br/&gt;对于保存控件提供的系统图标：&lt;br/&gt;- 使用Dimension类型入参时，宽 、高相等，均为设定值。&lt;br/&gt;- 使用SizeOptions类型入参时，若宽、高设定值不一致，则宽、高相等取两者较小值；若仅设定其中一个值，则取该值作为宽、高值。系统提供图标采用此规则是为保证图标的正方形显示和视觉一致 性。&lt;br/&gt;对于自定义图标：&lt;br/&gt;- 使用Dimension类型入参时，宽、高相等，均为设定值。&lt;br/&gt;- 使用SizeOptions类型入参时，建议同时设定宽和高，此时按照指定宽、高生效；若仅设定其中一个值，则宽 高均显示为该设定值。自定义图标允许灵活设定尺寸以适应不同图片比例。&lt;br/&gt;- 当设定的宽高与自定义图标的宽高比例不一致时，图片按[ImageFit.Cover](../arkts-apis/arkts-arkui-enums-imagefit-e.md/arkts-arkui-enums-imagefit-e.md)的方式填充显示区域。 |
+| size | [Dimension](../arkts-apis/arkts-arkui-dimension-t.md) \| SizeOptions | Yes | Icon size. Pixel units such as vp and px are supported. &lt;br&gt;The default width and height are 16 vp.&lt;br&gt;Percentage strings are not supported. If a percentage string is passed as a Dimension parameter, the icon will be displayed with the default size. If either the **width** or **height** property of a SizeOptions type parameter is set to a percentage string, the icon will be displayed with a size of 0 vp. &lt;br&gt;For the system icons provided by the **SaveButton** component: &lt;br&gt;- Dimension type: Width and height are both set to the specified value. &lt;br&gt;- SizeOptions type: If width and height are different, the smaller value is used for both. If only one value is specified, it applies to both dimensions. This rule ensures square display and consistent visual appearance of system icons. &lt;br&gt;For custom icons: &lt;br&gt;- Dimension type: Width and height are both set to the specified value. &lt;br&gt;- SizeOptions type: It is recommended that you set both width and height explicitly; if only one value is set, it applies to both dimensions. Custom icons support flexible sizing to adapt to different image aspect ratios. &lt;br&gt;- If the specified size's aspect ratio does not match the custom icon's original ratio, the icon displays in [ImageFit.Cover](../arkts-apis/arkts-arkui-enums-imagefit-e.md/arkts-arkui-enums-imagefit-e.md) mode. |
 
 ## onClick
 
@@ -72,7 +73,8 @@ iconSize(size: Dimension | SizeOptions)
 onClick(event: SaveButtonCallback)
 ```
 
-点击保存控件触发该回调。用户首次点击保存控件时会展示授权弹窗，点击允许后授权成功，应用会获取访问媒体库接口的临时授权（授权持续时间见[SaveButton](../../../reference/apis-arkui/arkui-ts/ts-security-components-savebutton.md#savebutton-1)构造函数说明）；点击拒绝或关闭弹窗则授权失败。
+Triggered when the **SaveButton** component is clicked. When a user clicks the save button for the first time, an authorization dialog box is displayed. If the user allows authorization, the app obtains temporary access to media library APIs. For details about the authorization duration, see the description of the  
+[SaveButton](../../../reference/apis-arkui/arkui-ts/ts-security-components-savebutton.md#savebutton-1)constructor. Authorization fails if the user declines authorization or closes the dialog box.
 
 **Since:** 10
 
@@ -90,7 +92,7 @@ onClick(event: SaveButtonCallback)
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| event | [SaveButtonCallback](../arkts-apis/arkts-arkui-savebuttoncallback-t.md) | Yes | 点击事件的回调对象，包含点击事件信息、授权结果和错误信息。 &lt;br&gt;从APIversion 18开始，统一使用SaveButtonCallback，可额外获取error信息。<br>**Since:** 18 |
+| event | [SaveButtonCallback](../arkts-apis/arkts-arkui-savebuttoncallback-t.md) | Yes | Callback object for the click event, which carries click details, authorization result and error information. &lt;br&gt;Starting from API version 18, **SaveButtonCallback** is adopted uniformly, which additionally provides error information.<br>**Since:** 18 |
 
 ## setIcon
 
@@ -98,7 +100,7 @@ onClick(event: SaveButtonCallback)
 setIcon(icon: Resource)
 ```
 
-设置保存控件的图标。
+Sets the icon of the **SaveButton** component.
 
 **Since:** 20
 
@@ -118,7 +120,7 @@ setIcon(icon: Resource)
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| icon | [Resource](../../apis-localization-kit/arkts-apis/arkts-localization-resource-resource-i.md) | Yes | 自定义图标资源信息，仅支持Resource类型的数据源。 &lt;br&gt;可支持的图片格式：png、jpg、jpeg、bmp、svg、webp、gif和heif等，支持的图片格式范围见[Image](../../apis-image-kit/arkts-apis/arkts-multimedia-image.md/arkts-multimedia-image.md)。当资源为非图片资源或不支持的格式时，图标显示为空白。&lt;br/&gt;从API版本26.0.0开始，支持Symbol格式的Resource类型的数据源。&lt;br/&gt;若应用不具备ohos.permission.CUS TOMIZE_SAVE_BUTTON权限，则自定义图标设置不生效，保存控件保持默认样式。 |
+| icon | [Resource](../../apis-localization-kit/arkts-apis/arkts-localization-resource-resource-i.md) | Yes | Custom icon resource information. Only data sources of the Resource type are supported. &lt;br&gt;Images in the following formats are supported: PNG, JPG, JPEG, BMP, SVG, WebP, GIF, and HEIF. For details about the supported image formats, see [Image](../../apis-image-kit/arkts-apis/arkts-multimedia-image.md/arkts-multimedia-image.md). If the resource is not an image resource or the format is not supported, the icon is displayed as blank. &lt;br&gt;Since API version 26.0.0, data sources of the Resource type in Symbol format are supported. &lt;br&gt;If the app does not have the **ohos.permission.CUSTOMIZE_SAVE_BUTTON** permission, the custom icon does not take effect and the save button uses the default style. |
 
 ## setText
 
@@ -126,7 +128,7 @@ setIcon(icon: Resource)
 setText(text: string | Resource)
 ```
 
-设置保存控件的文本。
+Sets the text of the **SaveButton** component.
 
 **Since:** 20
 
@@ -146,7 +148,7 @@ setText(text: string | Resource)
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| text | string \| Resource | Yes | 自定义文本信息。适用于需要使用与业务强相关的文本替代系统预置描述的场景。传入字符串时直接使用文本内容；传入Resource时，可配合资源管理实现多语言文本。 &lt;br&gt;若应用不具备ohos.permission.CUSTOMIZE_SAVE_BUTTON权限，则该设置不生效，保存控件保持默认样式。 |
+| text | string \| Resource | Yes | Custom text, used to replace the default system text for business-specific scenarios. When a string is passed, the text content is directly used. When a Resource is passed, multi- language adaptation is implemented via resource management. &lt;br&gt;If the app does not have the **ohos.permission.CUSTOMIZE_SAVE_BUTTON** permission, this setting does not take effect and the save button uses the default style. |
 
 ## stateEffect
 
@@ -154,7 +156,7 @@ setText(text: string | Resource)
 stateEffect(enabled: boolean)
 ```
 
-设置保存控件的按压效果。
+Sets the press effect of the **SaveButton** component.
 
 **Since:** 20
 
@@ -174,7 +176,7 @@ stateEffect(enabled: boolean)
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| enabled | boolean | Yes | true表示保存控件按压时显示按压效果，false表示保存控件按压时不显示按压效果。 &lt;br&gt;默认值：true。&lt;br/&gt;若应用不具备ohos.permission.CUSTOMIZE_SAVE_BUTTON权限，按压效果设置不生效。 |
+| enabled | boolean | Yes | Whether to enable the press effect. **true** to enable, **false** otherwise. &lt;br&gt;Default value: **false**.&lt;br&gt;If the app does not have the **ohos.permission.CUSTOMIZE_SAVE_BUTTON** permission, the press effect setting does not take effect. |
 
 ## symbolFontWeight
 
@@ -182,10 +184,11 @@ stateEffect(enabled: boolean)
 symbolFontWeight(fontWeight: number | FontWeight | string | Resource)
 ```
 
-设置保存控件Symbol图标粗细。
+Sets the font weight of the symbol icon for the save button.
 
-- 调用本方法前，需先调用[setIcon](SaveButtonAttribute#setIcon)设置Symbol格式的图标资源（如\$r('sys.symbol.xxx')），本方法才会生效。  
-- 若未设置Symbol图标，该方法设置的粗细不会生效。
+- Before calling this method, you need to call [setIcon](SaveButtonAttribute#setIcon) to configure a symbol-  
+style icon resource (i.e., **\$r('sys.symbol.*xxx*')**).  
+- If no symbol icon is configured, the font weight setting will not apply.
 
 **Since:** 26.0.0
 
@@ -205,7 +208,7 @@ symbolFontWeight(fontWeight: number | FontWeight | string | Resource)
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| fontWeight | number \| FontWeight \| string \| Resource | Yes | 设置保存控件Symbol图标粗细。 &lt;br&gt;支持number类型：取值范围为[100, 900]，取值间隔为100，数值越大字体越粗。&lt;br/&gt;支持string类型：可传入number类型的数字字符串（如"400"），或[FontWeight](../arkts-apis/arkts-arkui-enums-fontweight-e.md/arkts-arkui-enums-fontweight-e.md)的枚举值的小写字符串（如"normal"）。&lt;br/&gt;默认值：FontWeight.Normal（对应数值400）。&lt;br/&gt;若应用不具备ohos.permission.CUSTOMIZE_SAVE_ BUTTON权限，则该设置不生效。 |
+| fontWeight | number \| FontWeight \| string \| Resource | Yes | Symbol icon font weight of the save button. &lt;br&gt;For the number type: The value range is [100, 900] with an increment of 100. Larger values result in bolder font weight. &lt;br&gt;For the string type: The value can be a numeric string of the number type (for example, **"400"**) or a lowercase string of the enumerated value of [FontWeight](../arkts-apis/arkts-arkui-enums-fontweight-e.md/arkts-arkui-enums-fontweight-e.md) (for example, **"normal"**). &lt;br&gt;Default value: **FontWeight.Normal** (the corresponding value is **400**) &lt;br&gt;If the app does not have the **ohos.permission.CUSTOMIZE_SAVE_BUTTON** permission, the setting does not take effect. |
 
 ## symbolIconColor
 
@@ -213,11 +216,13 @@ symbolFontWeight(fontWeight: number | FontWeight | string | Resource)
 symbolIconColor(color: Array<ResourceColor>)
 ```
 
-设置保存控件Symbol图标颜色。
+Sets the color of the symbol icon for the save button.
 
-- 调用本方法前，需先调用[setIcon](SaveButtonAttribute#setIcon)设置Symbol格式的图标资源（如\$r('sys.symbol.xxx')），本方法才会生效。  
-- 若未设置Symbol图标，该方法设置的颜色不会生效。  
-- 建议与[symbolRenderingStrategy](SaveButtonAttribute#symbolRenderingStrategy)配合使用，以实现不同的渲染效果。
+- Before calling this method, you need to call [setIcon](SaveButtonAttribute#setIcon) to configure a symbol-  
+style icon resource (i.e., **\$r('sys.symbol.xxx')**).  
+- If no symbol icon is set, the color set via this method does not take effect.  
+- It is recommended that you use this API together with  
+[symbolRenderingStrategy](SaveButtonAttribute#symbolRenderingStrategy) to achieve different rendering effects.
 
 **Since:** 26.0.0
 
@@ -237,7 +242,7 @@ symbolIconColor(color: Array<ResourceColor>)
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| color | Array&lt;ResourceColor&gt; | Yes | 设置保存控件Symbol图标颜色。适用于Symbol图标需要与业务视觉风格保持一致的场景。 &lt;br&gt;默认值：随[symbolRenderingStrategy](SaveButtonAttribute#symbolRenderingStrategy)不同而变化。 &lt;br&gt;若应用不具备ohos.permission.CUSTOMIZE_SAVE_BUTTON权限，则该设置不生效。 |
+| color | Array&lt;ResourceColor&gt; | Yes | Symbol icon color of the save button. This parameter applies to scenarios where the symbol icon needs to be consistent with the service visual style. &lt;br&gt;Default value: varies depending on [symbolRenderingStrategy](SaveButtonAttribute#symbolRenderingStrategy). &lt;br&gt;If the app does not have the **ohos.permission.CUSTOMIZE_SAVE_BUTTON** permission, the setting does not take effect. |
 
 ## symbolRenderingStrategy
 
@@ -245,11 +250,13 @@ symbolIconColor(color: Array<ResourceColor>)
 symbolRenderingStrategy(strategy: SymbolRenderingStrategy)
 ```
 
-设置保存控件Symbol图标渲染策略。
+Sets the rendering strategy for the symbol icon of the save button.
 
-- 调用本方法前，需先调用[setIcon](SaveButtonAttribute#setIcon)设置Symbol格式的图标资源（如\$r('sys.symbol.xxx')），本方法才会生效。  
-- 若未设置Symbol图标，该方法设置的渲染策略不会生效。  
-- 与[symbolIconColor](SaveButtonAttribute#symbolIconColor)配合使用时，渲染策略会影响颜色数组的作用方式。
+- Before calling this method, you need to call [setIcon](SaveButtonAttribute#setIcon) to configure a symbol-  
+style icon resource (i.e., **\$r('sys.symbol.*xxx*')**).  
+- The configured rendering strategy will not apply if no symbol icon is set.  
+- When this parameter is used together with [symbolIconColor](SaveButtonAttribute#symbolIconColor), the  
+rendering strategy determines how the color array is applied.
 
 **Since:** 26.0.0
 
@@ -269,7 +276,7 @@ symbolRenderingStrategy(strategy: SymbolRenderingStrategy)
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| strategy | [SymbolRenderingStrategy](arkts-arkui-symbolrenderingstrategy-e.md) | Yes | 保存控件Symbol图标渲染策略，用于控制Symbol图标的渲染方式。 &lt;br&gt;默认值：SymbolRenderingStrategy.SINGLE。 &lt;br&gt;若应用不具备ohos.permission.CUSTOMIZE_SAVE_BUTTON权限，则该设置不生效。 |
+| strategy | [SymbolRenderingStrategy](arkts-arkui-symbolrenderingstrategy-e.md) | Yes | Rendering strategy for the symbol icon of the save button, which defines how the symbol icon is rendered. &lt;br&gt;Default value: SymbolRenderingStrategy.SINGLE. &lt;br&gt;If the app does not have the **ohos.permission.CUSTOMIZE_SAVE_BUTTON** permission, the setting does not take effect. |
 
 ## userCancelEvent
 
@@ -277,7 +284,7 @@ symbolRenderingStrategy(strategy: SymbolRenderingStrategy)
 userCancelEvent(enabled: boolean)
 ```
 
-设置接收保存控件的用户取消授权事件。适用于需要区分用户主动取消授权和授权失败的场景，以便进行不同的业务处理，例如记录用户行为、提供重试提示等。
+Sets the user authorization cancellation event for the **SaveButton** component. This API can be used to distinguish between user cancellation and authorization failures for differentiated service logic, such as logging user behaviors or prompting users to retry.
 
 **Since:** 21
 
@@ -295,5 +302,5 @@ userCancelEvent(enabled: boolean)
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| enabled | boolean | Yes | 表示是否接收保存控件的用户取消授权事件。 &lt;br&gt;true表示当用户在授权弹窗中主动取消时，会通过回调将结果区分为CANCELED_BY_USER；false表示不单独区分此类场景。&lt;br/&gt;当业务需要区分“用户取消”和“系统错误/授 权失败”时，建议开启该参数。 |
+| enabled | boolean | Yes | Whether to receive the user authorization cancellation event of the save button. &lt;br&gt;Default value: **false**.&lt;br&gt;The value **true** indicates that when a user manually cancels authorization in the authorization dialog box, the callback returns the result **CANCELED_BY_USER**. The value **false** indicates that user cancellation is not distinguished from other scenarios. &lt;br/&gt;You are advised to enable this parameter if your service needs to distinguish between user cancellation and system errors/authorization failures. |
 

@@ -1,18 +1,12 @@
 # queryCapabilities（系统接口）
 
-## 导入模块
-
-```TypeScript
-import { userStatus } from 'kits/@kit.MultimodalAwarenessKit';
-```
-
 ## queryCapabilities
 
 ```TypeScript
 function queryCapabilities(capabilities: UserStatusAtomicCap[]): UserStatusAtomicCap[]
 ```
 
-Queries device-supported atomic capabilities.
+查询设备支持的原子能力。
 
 **起始版本：** 26.0.0
 
@@ -30,18 +24,18 @@ Queries device-supported atomic capabilities.
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| capabilities | [UserStatusAtomicCap](arkts-multimodalawareness-userstatus-userstatusatomiccap-e-sys.md)[] | 是 | List of atomic capabilities to query. |
+| capabilities | [UserStatusAtomicCap](arkts-multimodalawareness-userstatus-userstatusatomiccap-e-sys.md)[] | 是 | 要查询的原子能力列表。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| [UserStatusAtomicCap](arkts-multimodalawareness-userstatus-userstatusatomiccap-e-sys.md)[] | Returns the list of device-supported atomic capabilities. |
+| [UserStatusAtomicCap](arkts-multimodalawareness-userstatus-userstatusatomiccap-e-sys.md)[] | 返回设备支持的原子能力列表。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 33900001 | Service exception. Possible causes: &lt;br&gt;1. System error, such as a null pointer and container-related exception. &lt;br&gt;2. Node-API invocation exception, such as invalid Node-API status. |
-| 202 | Permission verification failed. A non-system application calls a system API. |
+| [33900001](../../apis-multimodalawareness-kit/errorcode-userStatus.md#33900001-服务异常) | Service exception. Possible causes: &lt;br&gt;1. System error, such as a null pointer and container-related exception. &lt;br&gt;2. Node-API invocation exception, such as invalid Node-API status. |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed. A non-system application calls a system API. |
 

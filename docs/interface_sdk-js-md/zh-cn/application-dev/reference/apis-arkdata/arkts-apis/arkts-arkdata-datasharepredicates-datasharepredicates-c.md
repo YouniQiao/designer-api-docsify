@@ -10,12 +10,6 @@
 
 **系统能力：** SystemCapability.DistributedDataManager.DataShare.Core
 
-## 导入模块
-
-```TypeScript
-import { dataSharePredicates } from 'kits/@kit.ArkData';
-```
-
 ## and
 
 ```TypeScript
@@ -636,6 +630,13 @@ Configure {@code DataSharePredicates} to match the specified field whose data ty
 | --- | --- |
 | [DataSharePredicates](arkts-arkdata-datasharepredicates-datasharepredicates-c.md) | Returns DataSharePredicates that matches the specified field. |
 
+## 示例
+
+```TypeScript
+let predicates = new dataSharePredicates.DataSharePredicates();
+predicates.inValues("AGE", [18, 20]);
+```
+
 ## indexedBy
 
 ```TypeScript
@@ -1072,6 +1073,13 @@ Configure {@code DataSharePredicates} to match the specified field whose data ty
 | 类型 | 说明 |
 | --- | --- |
 | [DataSharePredicates](arkts-arkdata-datasharepredicates-datasharepredicates-c.md) | Returns DataSharePredicates that matches the specified field. |
+
+## 示例
+
+```TypeScript
+let predicates = new dataSharePredicates.DataSharePredicates();
+predicates.notInValues("NAME", ["Lisa", "Rose"]);
+```
 
 ## or
 

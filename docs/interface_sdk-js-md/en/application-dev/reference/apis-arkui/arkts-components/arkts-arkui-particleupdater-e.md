@@ -1,6 +1,6 @@
 # ParticleUpdater
 
-粒子变化类型。
+Enumerates the updater types of a particle.
 
 **Since:** 10
 
@@ -16,7 +16,7 @@
 NONE = 'none'
 ```
 
-无变化
+No change.
 
 **Since:** 10
 
@@ -36,7 +36,7 @@ NONE = 'none'
 RANDOM = 'random'
 ```
 
-随机变化
+Random change.
 
 **Since:** 10
 
@@ -56,7 +56,7 @@ RANDOM = 'random'
 CURVE = 'curve'
 ```
 
-动画曲线变化
+Change with the animation curve.
 
 **Since:** 10
 

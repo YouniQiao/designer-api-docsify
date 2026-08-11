@@ -1,6 +1,6 @@
 # RunningMode
 
-设备管理的运行模式。
+Represents the running mode of a device administrator application.
 
 **Since:** 19
 
@@ -16,7 +16,7 @@
 DEFAULT = 0
 ```
 
-默认用户运行模式，表示应用在首次开机后的用户下运行。
+Default user running mode, indicating that the application runs under the default user (user after the first device powered-on).
 
 **Since:** 19
 
@@ -32,7 +32,7 @@ DEFAULT = 0
 MULTI_USER = 1
 ```
 
-多用户运行模式，表示应用能够在多个用户下同时运行。
+Multi-user running mode, indicating that the application runs under multiple users at the same time.
 
 **Since:** 19
 

@@ -1,11 +1,5 @@
 # off（系统接口）
 
-## 导入模块
-
-```TypeScript
-import { print } from 'kits/@kit.BasicServicesKit';
-```
-
 ## off('printerStateChange')
 
 ```TypeScript
@@ -37,9 +31,9 @@ function off(type: 'printerStateChange', callback?: Callback<boolean>): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
-| 201 | the application does not have permission to call this function. |
-| 202 | not system application |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
+| [201](../../errorcode-universal.md#201-权限校验失败) | the application does not have permission to call this function. |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | not system application |
 
 ## 示例
 
@@ -48,7 +42,7 @@ import { print } from '@kit.BasicServicesKit';
 
 print.off('printerStateChange', (data: boolean) => {
     console.info('off printerStateChange data : ' + JSON.stringify(data));
-});
+})
 ```
 
 
@@ -83,9 +77,9 @@ function off(type: 'jobStateChange', callback?: Callback<boolean>): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
-| 201 | the application does not have permission to call this function. |
-| 202 | not system application |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
+| [201](../../errorcode-universal.md#201-权限校验失败) | the application does not have permission to call this function. |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | not system application |
 
 ## 示例
 
@@ -94,7 +88,7 @@ import { print } from '@kit.BasicServicesKit';
 
 print.off('jobStateChange', (data: boolean) => {
     console.info('offJobStateChanged data : ' + JSON.stringify(data));
-});
+})
 ```
 
 
@@ -129,9 +123,9 @@ function off(type: 'extInfoChange', callback?: Callback<boolean>): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
-| 201 | the application does not have permission to call this function. |
-| 202 | not system application |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
+| [201](../../errorcode-universal.md#201-权限校验失败) | the application does not have permission to call this function. |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | not system application |
 
 ## 示例
 
@@ -140,6 +134,6 @@ import { print } from '@kit.BasicServicesKit';
 
 print.off('extInfoChange', (data: boolean) => {
     console.info('offExtInfoChange data : ' + JSON.stringify(data));
-});
+})
 ```
 

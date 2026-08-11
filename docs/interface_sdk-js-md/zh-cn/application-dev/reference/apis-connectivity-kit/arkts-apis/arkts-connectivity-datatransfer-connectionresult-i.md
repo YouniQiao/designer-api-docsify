@@ -10,12 +10,6 @@
 
 **系统能力：** SystemCapability.Communication.NearLink.Base
 
-## 导入模块
-
-```TypeScript
-import { dataTransfer } from 'kits/@kit.ConnectivityKit';
-```
-
 ## address
 
 ```TypeScript
@@ -64,7 +58,7 @@ state: ConnectionState
 
 连接状态。
 
-**类型：** [ConnectionState](arkts-connectivity-ssap-connectionstate-t.md)
+**类型：** [ConnectionState](arkts-connectivity-remotedevice-connectionstate-t.md)
 
 **起始版本：** 26.0.0
 

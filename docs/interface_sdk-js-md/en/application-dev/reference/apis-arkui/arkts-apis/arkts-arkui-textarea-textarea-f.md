@@ -8,7 +8,7 @@ export declare function TextArea(
 ): TextAreaAttribute
 ```
 
-定义多行输入框组件。
+Defines TextArea Component.
 
 **Since:** 23
 
@@ -41,7 +41,7 @@ export declare function TextArea(
 ): TextAreaAttribute
 ```
 
-定义TextArea组件。
+Defines TextArea Component.
 
 **Since:** 26.1.0
 
@@ -59,7 +59,7 @@ export declare function TextArea(
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| style | [CustomBuilderT](../arkts-components/arkts-arkui-custombuildert-t.md)&lt;TextAreaAttribute&gt; | Yes | TextArea属性实例。 |
+| style | [CustomBuilderT](../arkts-components/arkts-arkui-custombuildert-t.md)&lt;TextAreaAttribute&gt; | Yes | TextArea attribute instance |
 
 **Return value:**
 

@@ -12,9 +12,7 @@ import { matrix4 } from 'kits/@kit.ArkUI';
 function copy(): Matrix4Transit
 ```
 
-Matrix的拷贝函数，可以拷贝一份当前的矩阵对象。
-
-> **说明：**
+Copies this matrix object.
 
 **Since:** 7
 
@@ -22,7 +20,7 @@ Matrix的拷贝函数，可以拷贝一份当前的矩阵对象。
 
 **Deprecated since:** 10
 
-**Substitutes:** [matrix4.Matrix4Transit.copy](arkts-arkui-matrix4-matrix4transit-i.md#copy)
+**Substitutes:** [Matrix4Transit.copy](arkts-arkui-matrix4-matrix4transit-i.md#copy)
 
 <!--Device-matrix4-function copy(): Matrix4Transit--><!--Device-matrix4-function copy(): Matrix4Transit-End-->
 
@@ -32,5 +30,5 @@ Matrix的拷贝函数，可以拷贝一份当前的矩阵对象。
 
 | Type | Description |
 | --- | --- |
-| [Matrix4Transit](arkts-arkui-matrix4-matrix4transit-i.md) | 当前矩阵的拷贝对象。 |
+| [Matrix4Transit](arkts-arkui-matrix4-matrix4transit-i.md) | Copy object of the current matrix. |
 

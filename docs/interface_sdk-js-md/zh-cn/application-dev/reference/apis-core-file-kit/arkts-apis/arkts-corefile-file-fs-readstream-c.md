@@ -12,12 +12,6 @@
 
 **系统能力：** SystemCapability.FileManagement.File.FileIO
 
-## 导入模块
-
-```TypeScript
-import { Options, ReaderIteratorResult, Watcher, ReadTextOptions, WatchEventListener, TaskSignal, WriteOptions, ListFileExtOptions, DfsListeners, Filter, ReadOptions, ListFileOptions, WatchEvent, FileFilter, ConflictFiles } from 'kits/@kit.CoreFileKit';
-```
-
 ## close
 
 ```TypeScript
@@ -103,7 +97,7 @@ seek(offset: number, whence?: WhenceType): number
 | 错误码ID | 错误信息 |
 | --- | --- |
 | 13900020 | Invalid argument |
-| 401 | Parameter error |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error |
 | 13900026 | Illegal seek |
 | 13900042 | Unknown error |
 

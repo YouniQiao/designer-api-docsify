@@ -1,6 +1,6 @@
 # ContentItemV2
 
-列表左侧显示的图标、图标大小以及中间元素文字内容。
+Declare ContentItemV2
 
 **Since:** 26.0.0
 
@@ -24,7 +24,7 @@ import { OperateCheckV2Options, ComposeListItemV2, IconTypeV2, OperateIconV2, Op
 constructor(options?: ContentItemV2Options)
 ```
 
-ContentItemV2的构造函数。
+The constructor of ContentItemV2.
 
 **Since:** 26.0.0
 
@@ -40,7 +40,7 @@ ContentItemV2的构造函数。
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| options | [ContentItemV2Options](arkts-arkui-arkui-advanced-composelistitemv2-contentitemv2options-i.md) | No | ContentItemV2的可选项 |
+| options | [ContentItemV2Options](arkts-arkui-arkui-advanced-composelistitemv2-contentitemv2options-i.md) | No | The options of ContentItemV2 |
 
 ## description
 
@@ -48,7 +48,7 @@ ContentItemV2的构造函数。
 public description?: ResourceStr
 ```
 
-设置描述内容。
+Sets the description.
 
 **Type:** [ResourceStr](arkts-arkui-resourcestr-t.md)
 
@@ -68,7 +68,7 @@ public description?: ResourceStr
 public icon?: ResourceStr
 ```
 
-设置图标
+Sets the icon.
 
 **Type:** [ResourceStr](arkts-arkui-resourcestr-t.md)
 
@@ -88,7 +88,7 @@ public icon?: ResourceStr
 public iconStyle?: IconTypeV2
 ```
 
-图标样式。
+The type of icon.
 
 **Type:** [IconTypeV2](arkts-arkui-arkui-advanced-composelistitemv2-icontypev2-e.md)
 
@@ -108,7 +108,7 @@ public iconStyle?: IconTypeV2
 public primaryText?: ResourceStr
 ```
 
-设置标题内容。
+Sets the primaryText.
 
 **Type:** [ResourceStr](arkts-arkui-resourcestr-t.md)
 
@@ -128,7 +128,7 @@ public primaryText?: ResourceStr
 public secondaryText?: ResourceStr
 ```
 
-设置副标题内容。
+Sets the secondaryText.
 
 **Type:** [ResourceStr](arkts-arkui-resourcestr-t.md)
 
@@ -148,7 +148,7 @@ public secondaryText?: ResourceStr
 public symbolStyle?: SymbolGlyphModifier
 ```
 
-设置Symbol图标。
+Sets the symbol.
 
 **Type:** [SymbolGlyphModifier](../arkts-components/arkts-arkui-symbolglyphmodifier-t.md)
 

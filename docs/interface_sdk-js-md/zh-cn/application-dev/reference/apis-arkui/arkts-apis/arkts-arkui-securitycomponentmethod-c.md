@@ -210,7 +210,7 @@ alignRules(alignRule: AlignRuleOption): T
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| alignRule | [AlignRuleOption](arkts-arkui-common-alignruleoption-i.md) | 是 | 对齐规则配置对象，包含top、bottom、left、right、center等锚点对齐配置， 用于指定安全控件在[RelativeContainer](./relative_container)中的对齐位置和方式。 |
+| alignRule | [AlignRuleOption](../arkts-components/arkts-arkui-alignruleoption-i.md) | 是 | 对齐规则配置对象，包含top、bottom、left、right、center等锚点对齐配置， 用于指定安全控件在[RelativeContainer](./relative_container)中的对齐位置和方式。 |
 
 **返回值：**
 
@@ -406,7 +406,7 @@ borderStyle(value: BorderStyle): T
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | [BorderStyle](arkts-arkui-enums-borderstyle-e.md) | 是 | 安全控件边框的样式。 &lt;br&gt;默认不设置边框样式。 |
+| value | [BorderStyle](arkts-arkui-borderstyle-e.md) | 是 | 安全控件边框的样式。 &lt;br&gt;默认不设置边框样式。 |
 
 **返回值：**
 
@@ -503,7 +503,7 @@ constraintSize(value: ConstraintSizeOptions): T
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | [ConstraintSizeOptions](arkts-arkui-constraintsizeoptions-i.md) | 是 | 约束尺寸，组件布局时进行尺寸范围限制。 &lt;br&gt;未显式指定单位时，单位为vp。&lt;br&gt;constraintSize的优先级高于width和height。 &lt;br&gt;使用自适应字号相关属性时，安全控件文本未完全显示将导致点击不授权。constraintSize的设置会影响文本 是否能完整显示。&lt;br&gt;取值结果参考[constraintSize取值对width/height影响](arkts-arkui-securitycomponentmethod-c.md#constraintsize)。 &lt;br&gt;默认值：&lt;br&gt;{&lt;br&gt;minWidth: 0,&lt;br&gt;maxWidth: Infinity,&lt;br&gt;minHeight: 0,&lt;br&gt;maxHeight: Infinity&lt;br&gt;}。 |
+| value | [ConstraintSizeOptions](arkts-arkui-units-constraintsizeoptions-i.md) | 是 | 约束尺寸，组件布局时进行尺寸范围限制。 &lt;br&gt;未显式指定单位时，单位为vp。&lt;br&gt;constraintSize的优先级高于width和height。 &lt;br&gt;使用自适应字号相关属性时，安全控件文本未完全显示将导致点击不授权。constraintSize的设置会影响文本 是否能完整显示。&lt;br&gt;取值结果参考[constraintSize取值对width/height影响](arkts-arkui-securitycomponentmethod-c.md#constraintsize)。 &lt;br&gt;默认值：&lt;br&gt;{&lt;br&gt;minWidth: 0,&lt;br&gt;maxWidth: Infinity,&lt;br&gt;minHeight: 0,&lt;br&gt;maxHeight: Infinity&lt;br&gt;}。 |
 
 **返回值：**
 
@@ -729,7 +729,7 @@ fontStyle(value: FontStyle): T
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | [FontStyle](../../apis-arkgraphics2d/arkts-apis/arkts-arkgraphics2d-text-fontstyle-e.md) | 是 | 安全控件上文字的样式。 &lt;br&gt;默认值：FontStyle.Normal。 |
+| value | [FontStyle](arkts-arkui-enums-fontstyle-e.md) | 是 | 安全控件上文字的样式。 &lt;br&gt;默认值：FontStyle.Normal。 |
 
 **返回值：**
 
@@ -839,7 +839,7 @@ heightAdaptivePolicy(policy: TextHeightAdaptivePolicy): T
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| policy | [TextHeightAdaptivePolicy](arkts-arkui-enums-textheightadaptivepolicy-e.md) | 是 | 文本自适应高度的方式。 &lt;br&gt;默认值：TextHeightAdaptivePolicy.MAX_LINES_FIRST。 |
+| policy | [TextHeightAdaptivePolicy](arkts-arkui-textheightadaptivepolicy-e.md) | 是 | 文本自适应高度的方式。 &lt;br&gt;默认值：TextHeightAdaptivePolicy.MAX_LINES_FIRST。 |
 
 **返回值：**
 

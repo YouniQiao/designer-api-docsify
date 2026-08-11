@@ -12,7 +12,7 @@ import { hiRetrieval } from 'kits/@kit.PerformanceAnalysisKit';
 function getCurrentConfig(): HiRetrievalConfig
 ```
 
-获取当前应用灰度活动配置。
+Query the current HiRetrieval config.
 
 **Since:** 26.0.0
 
@@ -28,5 +28,5 @@ function getCurrentConfig(): HiRetrievalConfig
 
 | Type | Description |
 | --- | --- |
-| [HiRetrievalConfig](arkts-performanceanalysis-hiretrieval-hiretrievalconfig-i.md) | 当前应用灰度活动配置，包含用户类型、设备类型、设备型号等参数，用于标识和圈选设备参与应用灰度活动。 |
+| [HiRetrievalConfig](arkts-performanceanalysis-hiretrieval-hiretrievalconfig-i.md) | Returns the current HiRetrieval config, an empty HiRetrievalConfig will be returned if the result of invoking isParticipant function is false. |
 

@@ -1,6 +1,6 @@
 # AccessibilityRoleType
 
-定义组件的屏幕朗读功能角色类型。
+Enumerates the component role types used by screen readers.
 
 **Since:** 18
 
@@ -16,7 +16,7 @@
 ACTION_SHEET = 0
 ```
 
-列表弹窗。
+Action sheet.
 
 **Since:** 18
 
@@ -38,7 +38,7 @@ ACTION_SHEET = 0
 ALERT_DIALOG = 1
 ```
 
-显示警告弹窗组件。
+Alert dialog box.
 
 **Since:** 18
 
@@ -60,7 +60,7 @@ ALERT_DIALOG = 1
 INDEXER_COMPONENT = 2
 ```
 
-索引器组件。
+Indexer component.
 
 **Since:** 18
 
@@ -82,7 +82,7 @@ INDEXER_COMPONENT = 2
 BADGE_COMPONENT = 3
 ```
 
-信息标记组件。
+Badge component.
 
 **Since:** 18
 
@@ -104,7 +104,7 @@ BADGE_COMPONENT = 3
 BLANK = 4
 ```
 
-空白填充组件。
+Blank placeholder component.
 
 **Since:** 18
 
@@ -126,7 +126,7 @@ BLANK = 4
 BUTTON = 5
 ```
 
-按钮。
+Button.
 
 **Since:** 18
 
@@ -148,7 +148,7 @@ BUTTON = 5
 BACK_BUTTON = 6
 ```
 
-大图页返回按钮。
+Back button on a large image page.
 
 **Since:** 18
 
@@ -170,7 +170,7 @@ BACK_BUTTON = 6
 SHEET_DRAG_BAR = 7
 ```
 
-滑动条。
+Drag bar for sheets.
 
 **Since:** 18
 
@@ -192,7 +192,7 @@ SHEET_DRAG_BAR = 7
 CALENDAR_PICKER = 8
 ```
 
-日历选择器组件。
+Calendar picker.
 
 **Since:** 18
 
@@ -214,7 +214,7 @@ CALENDAR_PICKER = 8
 CALENDAR = 9
 ```
 
-日历。
+Calendar.
 
 **Since:** 18
 
@@ -236,7 +236,7 @@ CALENDAR = 9
 CANVAS = 10
 ```
 
-提供画布组件。
+Canvas component.
 
 **Since:** 18
 
@@ -258,7 +258,7 @@ CANVAS = 10
 CANVAS_GRADIENT = 11
 ```
 
-渐变对象。
+Gradient object.
 
 **Since:** 18
 
@@ -280,7 +280,7 @@ CANVAS_GRADIENT = 11
 CANVAS_PATTERN = 12
 ```
 
-通过指定图像和重复方式创建图片填充的模板。
+Pattern for image filling based on a specified source image and repetition mode.
 
 **Since:** 18
 
@@ -302,7 +302,7 @@ CANVAS_PATTERN = 12
 CHECKBOX = 13
 ```
 
-提供多选框组件。
+Check box component.
 
 **Since:** 18
 
@@ -324,7 +324,7 @@ CHECKBOX = 13
 CHECKBOX_GROUP = 14
 ```
 
-多选框群组。
+Check box group.
 
 **Since:** 18
 
@@ -346,7 +346,7 @@ CHECKBOX_GROUP = 14
 CIRCLE = 15
 ```
 
-用于绘制圆形的组件。
+Component for drawing circles.
 
 **Since:** 18
 
@@ -368,7 +368,7 @@ CIRCLE = 15
 COLUMN_SPLIT = 16
 ```
 
-将子组件纵向布局，并在每个子组件之间插入一根横向的分割线。
+Vertical layout of child components with horizontal dividers.
 
 **Since:** 18
 
@@ -390,7 +390,7 @@ COLUMN_SPLIT = 16
 COLUMN = 17
 ```
 
-沿垂直方向布局的容器。
+Container that lays out child components vertically.
 
 **Since:** 18
 
@@ -412,7 +412,7 @@ COLUMN = 17
 CANVAS_RENDERING_CONTEXT_2D = 18
 ```
 
-用于在画布组件上绘制矩形、文本、图片等。
+2D drawing object, which can be used to draw rectangles, images, and texts on a canvas component.
 
 **Since:** 18
 
@@ -434,7 +434,7 @@ CANVAS_RENDERING_CONTEXT_2D = 18
 CHART = 19
 ```
 
-图表组件。
+Chart component.
 
 **Since:** 18
 
@@ -456,7 +456,7 @@ CHART = 19
 COUNTER = 20
 ```
 
-计数器组件。
+Counter component.
 
 **Since:** 18
 
@@ -478,7 +478,7 @@ COUNTER = 20
 CONTAINER_MODAL = 21
 ```
 
-模态容器。
+Modal container.
 
 **Since:** 18
 
@@ -500,7 +500,7 @@ CONTAINER_MODAL = 21
 DATA_PANEL = 22
 ```
 
-数据面板组件。
+Data panel component.
 
 **Since:** 18
 
@@ -522,7 +522,7 @@ DATA_PANEL = 22
 DATE_PICKER = 23
 ```
 
-选择日期的滑动选择器组件。
+Date picker.
 
 **Since:** 18
 
@@ -544,7 +544,7 @@ DATE_PICKER = 23
 DIALOG = 24
 ```
 
-弹出框。
+Dialog box.
 
 **Since:** 18
 
@@ -566,7 +566,7 @@ DIALOG = 24
 DIVIDER = 25
 ```
 
-提供分隔器组件。
+Divider component.
 
 **Since:** 18
 
@@ -588,7 +588,7 @@ DIVIDER = 25
 DRAG_BAR = 26
 ```
 
-拖拽条。
+Drag bar.
 
 **Since:** 18
 
@@ -610,7 +610,7 @@ DRAG_BAR = 26
 EFFECT_COMPONENT = 27
 ```
 
-特效合并容器组件。
+Container component for special effects.
 
 **Since:** 18
 
@@ -632,7 +632,7 @@ EFFECT_COMPONENT = 27
 ELLIPSE = 28
 ```
 
-椭圆绘制组件。
+Ellipse drawing component.
 
 **Since:** 18
 
@@ -654,7 +654,7 @@ ELLIPSE = 28
 FLEX = 29
 ```
 
-以弹性方式布局子组件的容器组件。
+Container that allows for flexible layout of child components.
 
 **Since:** 18
 
@@ -676,7 +676,7 @@ FLEX = 29
 FLOW_ITEM = 30
 ```
 
-瀑布流组件的子组件。
+Child component of a waterfall layout container.
 
 **Since:** 18
 
@@ -698,7 +698,7 @@ FLOW_ITEM = 30
 FORM_COMPONENT = 31
 ```
 
-提供卡片组件。
+Widget component.
 
 **Since:** 18
 
@@ -720,7 +720,7 @@ FORM_COMPONENT = 31
 FORM_LINK = 32
 ```
 
-静态卡片交互组件。
+Static widget interaction component.
 
 **Since:** 18
 
@@ -742,7 +742,7 @@ FORM_LINK = 32
 GAUGE = 33
 ```
 
-数据量规图表组件。
+Gauge component.
 
 **Since:** 18
 
@@ -764,7 +764,7 @@ GAUGE = 33
 GRID = 34
 ```
 
-网格容器。
+Grid container.
 
 **Since:** 18
 
@@ -786,7 +786,7 @@ GRID = 34
 GRID_COL = 35
 ```
 
-栅格子组件。
+Grid column component.
 
 **Since:** 18
 
@@ -808,7 +808,7 @@ GRID_COL = 35
 GRID_CONTAINER = 36
 ```
 
-纵向排布栅格布局容器。
+Grid container that lays out child components vertically.
 
 **Since:** 18
 
@@ -830,7 +830,7 @@ GRID_CONTAINER = 36
 GRID_ITEM = 37
 ```
 
-网格容器中单项内容容器。
+Single-item container within a grid container.
 
 **Since:** 18
 
@@ -852,7 +852,7 @@ GRID_ITEM = 37
 GRID_ROW = 38
 ```
 
-栅格容器组件。
+Grid row component.
 
 **Since:** 18
 
@@ -874,7 +874,7 @@ GRID_ROW = 38
 HYPERLINK = 39
 ```
 
-超链接组件。
+Hyperlink component.
 
 **Since:** 18
 
@@ -896,7 +896,7 @@ HYPERLINK = 39
 IMAGE = 40
 ```
 
-图片组件。
+Image component.
 
 **Since:** 18
 
@@ -918,7 +918,7 @@ IMAGE = 40
 IMAGE_ANIMATOR = 41
 ```
 
-提供帧动画组件。
+Frame animation component.
 
 **Since:** 18
 
@@ -940,7 +940,7 @@ IMAGE_ANIMATOR = 41
 IMAGE_BITMAP = 42
 ```
 
-存储canvas渲染的像素数据。
+Pixel data for canvas rendering.
 
 **Since:** 18
 
@@ -962,7 +962,7 @@ IMAGE_BITMAP = 42
 IMAGE_DATA = 43
 ```
 
-存储canvas渲染的像素数据。
+Pixel data for canvas rendering.
 
 **Since:** 18
 
@@ -984,7 +984,7 @@ IMAGE_DATA = 43
 IMAGE_SPAN = 44
 ```
 
-用于显示行内图片。
+Component used to display inline images.
 
 **Since:** 18
 
@@ -1006,7 +1006,7 @@ IMAGE_SPAN = 44
 LABEL = 45
 ```
 
-标签。
+Label.
 
 **Since:** 18
 
@@ -1028,7 +1028,7 @@ LABEL = 45
 LINE = 46
 ```
 
-线型。
+Line.
 
 **Since:** 18
 
@@ -1050,7 +1050,7 @@ LINE = 46
 LIST = 47
 ```
 
-列表。
+List.
 
 **Since:** 18
 
@@ -1072,7 +1072,7 @@ LIST = 47
 LIST_ITEM = 48
 ```
 
-用来展示列表具体item。
+Specific item in a list.
 
 **Since:** 18
 
@@ -1094,7 +1094,7 @@ LIST_ITEM = 48
 LIST_ITEM_GROUP = 49
 ```
 
-用来展示列表item分组。
+List item group.
 
 **Since:** 18
 
@@ -1116,7 +1116,7 @@ LIST_ITEM_GROUP = 49
 LOADING_PROGRESS = 50
 ```
 
-用于显示加载动效的组件。
+Component for display loading animations.
 
 **Since:** 18
 
@@ -1138,7 +1138,7 @@ LOADING_PROGRESS = 50
 MARQUEE = 51
 ```
 
-跑马灯组件。
+Marquee component.
 
 **Since:** 18
 
@@ -1160,7 +1160,7 @@ MARQUEE = 51
 MATRIX2D = 52
 ```
 
-矩阵对象。
+2D matrix object.
 
 **Since:** 18
 
@@ -1182,7 +1182,7 @@ MATRIX2D = 52
 MENU = 53
 ```
 
-菜单。
+Menu.
 
 **Since:** 18
 
@@ -1204,7 +1204,7 @@ MENU = 53
 MENU_ITEM = 54
 ```
 
-菜单项。
+Menu item.
 
 **Since:** 18
 
@@ -1226,7 +1226,7 @@ MENU_ITEM = 54
 MENU_ITEM_GROUP = 55
 ```
 
-菜单项分组。
+Menu item group.
 
 **Since:** 18
 
@@ -1248,7 +1248,7 @@ MENU_ITEM_GROUP = 55
 NAV_DESTINATION = 56
 ```
 
-显示Navigation的内容区。
+Content area of the **Navigation** component.
 
 **Since:** 18
 
@@ -1292,7 +1292,7 @@ navrouter component type
 NAVIGATION = 58
 ```
 
-路由导航的根视图容器。
+Root view container for navigation routing.
 
 **Since:** 18
 
@@ -1314,7 +1314,7 @@ NAVIGATION = 58
 NAVIGATION_BAR = 59
 ```
 
-导航栏。
+Navigation bar.
 
 **Since:** 18
 
@@ -1336,7 +1336,7 @@ NAVIGATION_BAR = 59
 NAVIGATION_MENU = 60
 ```
 
-导航菜单。
+Navigation menu.
 
 **Since:** 18
 
@@ -1358,7 +1358,7 @@ NAVIGATION_MENU = 60
 NAVIGATOR = 61
 ```
 
-路由容器组件。
+Navigation container component.
 
 **Since:** 18
 
@@ -1380,7 +1380,7 @@ NAVIGATOR = 61
 OFFSCREEN_CANVAS = 62
 ```
 
-用于自定义绘制图形。
+Canvas for custom drawing of graphics.
 
 **Since:** 18
 
@@ -1402,7 +1402,7 @@ OFFSCREEN_CANVAS = 62
 OFFSCREEN_CANVAS_RENDERING_CONTEXT2D = 63
 ```
 
-2D绘制对象，用于在画布组件上绘制矩形、文本、图片等。
+2D drawing object, which can be used to draw rectangles, images, and texts on a canvas component.
 
 **Since:** 18
 
@@ -1446,7 +1446,7 @@ option component type
 PANEL = 65
 ```
 
-可滑动面板。
+Slidable panel.
 
 **Since:** 18
 
@@ -1490,7 +1490,7 @@ paper page component type
 PATH = 67
 ```
 
-路径绘制组件。
+Path drawing component.
 
 **Since:** 18
 
@@ -1512,7 +1512,7 @@ PATH = 67
 PATH2D = 68
 ```
 
-路径对象。
+Path object.
 
 **Since:** 18
 
@@ -1534,7 +1534,7 @@ PATH2D = 68
 PATTERN_LOCK = 69
 ```
 
-图案密码锁组件。
+Pattern lock component.
 
 **Since:** 18
 
@@ -1556,7 +1556,7 @@ PATTERN_LOCK = 69
 PICKER = 70
 ```
 
-选择器。
+Picker.
 
 **Since:** 18
 
@@ -1578,7 +1578,7 @@ PICKER = 70
 PICKER_VIEW = 71
 ```
 
-选择器视图。
+Picker view.
 
 **Since:** 18
 
@@ -1600,7 +1600,7 @@ PICKER_VIEW = 71
 PLUGIN_COMPONENT = 72
 ```
 
-新增插件组件。
+Plugin component.
 
 **Since:** 18
 
@@ -1622,7 +1622,7 @@ PLUGIN_COMPONENT = 72
 POLYGON = 73
 ```
 
-多边形绘制组件。
+Component used to draw a polygon.
 
 **Since:** 18
 
@@ -1644,7 +1644,7 @@ POLYGON = 73
 POLYLINE = 74
 ```
 
-折线绘制组件。
+Component used to draw a polyline.
 
 **Since:** 18
 
@@ -1666,7 +1666,7 @@ POLYLINE = 74
 POPUP = 75
 ```
 
-显示特定样式气泡。
+Popup with a specific style.
 
 **Since:** 18
 
@@ -1710,7 +1710,7 @@ progress component type
 QRCODE = 77
 ```
 
-二维码。
+QR code.
 
 **Since:** 18
 
@@ -1732,7 +1732,7 @@ QRCODE = 77
 RADIO = 78
 ```
 
-单选框。
+Radio button.
 
 **Since:** 18
 
@@ -1754,7 +1754,7 @@ RADIO = 78
 RATING = 79
 ```
 
-提供在给定范围内选择评分的组件。
+Component for selecting a rating within a given range.
 
 **Since:** 18
 
@@ -1776,7 +1776,7 @@ RATING = 79
 RECT = 80
 ```
 
-矩形绘制组件。
+Component used to draw a rectangle.
 
 **Since:** 18
 
@@ -1798,7 +1798,7 @@ RECT = 80
 REFRESH = 81
 ```
 
-下拉刷新容器组件。
+Pull-to-refresh container component.
 
 **Since:** 18
 
@@ -1820,7 +1820,7 @@ REFRESH = 81
 RELATIVE_CONTAINER = 82
 ```
 
-相对布局组件。
+Relative layout component.
 
 **Since:** 18
 
@@ -1842,7 +1842,7 @@ RELATIVE_CONTAINER = 82
 REMOTE_WINDOW = 83
 ```
 
-远程控制窗口组件。
+Remote control window component.
 
 **Since:** 18
 
@@ -1864,7 +1864,7 @@ REMOTE_WINDOW = 83
 RICH_EDITOR = 84
 ```
 
-支持图文混排和文本交互式编辑的组件。
+Component that supports rich text editing and interactive text editing.
 
 **Since:** 18
 
@@ -1886,7 +1886,7 @@ RICH_EDITOR = 84
 RICH_TEXT = 85
 ```
 
-富文本组件。
+Rich text component.
 
 **Since:** 18
 
@@ -1908,7 +1908,7 @@ RICH_TEXT = 85
 ROLE_PAGER = 86
 ```
 
-分页。
+Pagination component.
 
 **Since:** 18
 
@@ -1930,7 +1930,7 @@ ROLE_PAGER = 86
 ROW = 87
 ```
 
-沿水平方向布局容器。
+Container that lays out child components horizontally.
 
 **Since:** 18
 
@@ -1952,7 +1952,7 @@ ROW = 87
 ROW_SPLIT = 88
 ```
 
-将子组件横向布局，并在每个子组件之间插入一根纵向的分割线。
+Horizontal layout of child components with vertical dividers.
 
 **Since:** 18
 
@@ -1974,7 +1974,7 @@ ROW_SPLIT = 88
 SCROLL = 89
 ```
 
-可滚动的容器组件。
+Scrollable container component.
 
 **Since:** 18
 
@@ -1996,7 +1996,7 @@ SCROLL = 89
 SCROLL_BAR = 90
 ```
 
-滚动条。
+Scrollbar.
 
 **Since:** 18
 
@@ -2018,7 +2018,7 @@ SCROLL_BAR = 90
 SEARCH = 91
 ```
 
-搜索框组件。
+Search box component.
 
 **Since:** 18
 
@@ -2040,7 +2040,7 @@ SEARCH = 91
 SEARCH_FIELD = 92
 ```
 
-搜索框。
+Search box.
 
 **Since:** 18
 
@@ -2062,7 +2062,7 @@ SEARCH_FIELD = 92
 SELECT = 93
 ```
 
-下拉选择菜单组件。
+Drop-down list component.
 
 **Since:** 18
 
@@ -2084,7 +2084,7 @@ SELECT = 93
 SHAPE = 94
 ```
 
-绘制组件的父组件。
+Parent component of the drawing components.
 
 **Since:** 18
 
@@ -2106,7 +2106,7 @@ SHAPE = 94
 SIDEBAR_CONTAINER = 95
 ```
 
-提供侧边栏可以显示和隐藏的侧边栏容器。
+Sidebar container that can show and hide the sidebar.
 
 **Since:** 18
 
@@ -2150,7 +2150,7 @@ slider component type
 SPAN = 97
 ```
 
-用于显示行内文本的组件。
+Component used to display inline text.
 
 **Since:** 18
 
@@ -2172,7 +2172,7 @@ SPAN = 97
 STACK = 98
 ```
 
-堆叠容器。
+Stack container.
 
 **Since:** 18
 
@@ -2194,7 +2194,7 @@ STACK = 98
 STEPPER = 99
 ```
 
-步骤导航器组件。
+Stepper component.
 
 **Since:** 18
 
@@ -2216,7 +2216,7 @@ STEPPER = 99
 STEPPER_ITEM = 100
 ```
 
-用作Stepper组件的页面子组件。
+Page child component of the stepper component.
 
 **Since:** 18
 
@@ -2238,7 +2238,7 @@ STEPPER_ITEM = 100
 SWIPER = 101
 ```
 
-滑块视图容器。
+Swiper view container.
 
 **Since:** 18
 
@@ -2260,7 +2260,7 @@ SWIPER = 101
 SWIPER_INDICATOR = 102
 ```
 
-定义 Swiper 组件的导航指示器。
+Navigation indicator for the **Swiper** component.
 
 **Since:** 18
 
@@ -2282,7 +2282,7 @@ SWIPER_INDICATOR = 102
 SWITCH = 103
 ```
 
-开关。
+Switch.
 
 **Since:** 18
 
@@ -2304,7 +2304,7 @@ SWITCH = 103
 SYMBOL_GLYPH = 104
 ```
 
-显示图标小符号的组件。
+Component for displaying a symbol glyph.
 
 **Since:** 18
 
@@ -2326,7 +2326,7 @@ SYMBOL_GLYPH = 104
 TAB_CONTENT = 105
 ```
 
-仅在Tabs中使用，对应一个切换页签的内容视图。
+Content view for a tab in the **Tabs** component.
 
 **Since:** 18
 
@@ -2348,7 +2348,7 @@ TAB_CONTENT = 105
 TAB_BAR = 106
 ```
 
-页签栏。
+Tab bar.
 
 **Since:** 18
 
@@ -2370,7 +2370,7 @@ TAB_BAR = 106
 TABS = 107
 ```
 
-通过页签进行内容视图切换的容器组件。
+Container that allows users to switch between content views through tabs.
 
 **Since:** 18
 
@@ -2392,7 +2392,7 @@ TABS = 107
 TEXT = 108
 ```
 
-文本。
+Text.
 
 **Since:** 18
 
@@ -2414,7 +2414,7 @@ TEXT = 108
 TEXT_CLOCK = 109
 ```
 
-文本时钟组件。
+Text clock component.
 
 **Since:** 18
 
@@ -2458,7 +2458,7 @@ text entry component type
 TEXT_INPUT = 111
 ```
 
-输入框组件。
+Text box component.
 
 **Since:** 18
 
@@ -2480,7 +2480,7 @@ TEXT_INPUT = 111
 TEXT_PICKER = 112
 ```
 
-文本类滑动选择器组件。
+Text picker.
 
 **Since:** 18
 
@@ -2502,7 +2502,7 @@ TEXT_PICKER = 112
 TEXT_TIMER = 113
 ```
 
-通过文本显示计时信息并控制其计时器状态的组件。
+Component that displays timing information and is controlled in text format.
 
 **Since:** 18
 
@@ -2524,7 +2524,7 @@ TEXT_TIMER = 113
 TEXT_AREA = 114
 ```
 
-输入区域组件。
+Text area component.
 
 **Since:** 18
 
@@ -2546,7 +2546,7 @@ TEXT_AREA = 114
 TEXT_FIELD = 115
 ```
 
-文本框。
+Text box.
 
 **Since:** 18
 
@@ -2568,7 +2568,7 @@ TEXT_FIELD = 115
 TIME_PICKER = 116
 ```
 
-时间选择组件。
+Time picker.
 
 **Since:** 18
 
@@ -2590,7 +2590,7 @@ TIME_PICKER = 116
 TITLE_BAR = 117
 ```
 
-标题栏。
+Title bar.
 
 **Since:** 18
 
@@ -2634,7 +2634,7 @@ toggler component type
 UI_EXTENSION_COMPONENT = 119
 ```
 
-用户界面扩展组件。
+UI extension component.
 
 **Since:** 18
 
@@ -2656,7 +2656,7 @@ UI_EXTENSION_COMPONENT = 119
 VIDEO = 120
 ```
 
-用于播放视频文件并控制其播放状态的组件。
+Component for playing video files and controlling playback.
 
 **Since:** 18
 
@@ -2678,7 +2678,7 @@ VIDEO = 120
 WATER_FLOW = 121
 ```
 
-瀑布流容器。
+Waterfall layout container.
 
 **Since:** 18
 
@@ -2700,7 +2700,7 @@ WATER_FLOW = 121
 WEB = 122
 ```
 
-加载网页组件。
+Component for loading web pages.
 
 **Since:** 18
 
@@ -2722,7 +2722,7 @@ WEB = 122
 XCOMPONENT = 123
 ```
 
-自定义渲染。
+Custom rendering component.
 
 **Since:** 18
 
@@ -2744,7 +2744,7 @@ XCOMPONENT = 123
 ROLE_NONE = 124
 ```
 
-NULL。
+Null.
 
 **Since:** 18
 

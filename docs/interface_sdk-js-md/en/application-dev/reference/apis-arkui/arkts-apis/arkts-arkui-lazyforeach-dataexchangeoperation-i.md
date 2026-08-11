@@ -1,6 +1,6 @@
 # DataExchangeOperation
 
-交换单个数据。
+Defines exchange operation.
 
 **Since:** 23
 
@@ -16,7 +16,7 @@
 index: ExchangeIndex
 ```
 
-交换位置。取值范围是[0, 数据源长度-1]。
+Index of exchange data.
 
 **Type:** [ExchangeIndex](../arkts-components/arkts-arkui-exchangeindex-i.md)
 
@@ -36,7 +36,7 @@ index: ExchangeIndex
 key?: ExchangeKey
 ```
 
-分配新的键值，默认使用原键值。
+Key of exchange data.
 
 **Type:** [ExchangeKey](../arkts-components/arkts-arkui-exchangekey-i.md)
 
@@ -56,7 +56,7 @@ key?: ExchangeKey
 type: DataOperationType
 ```
 
-数据交换类型。
+How to operate exchange data.
 
 **Type:** [DataOperationType](arkts-arkui-lazyforeach-dataoperationtype-e.md)
 

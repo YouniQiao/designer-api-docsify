@@ -1,6 +1,6 @@
 # RichEditorGesture
 
-用户手势事件。
+Defines the richEditor Gestures.
 
 **Since:** 23
 
@@ -16,7 +16,7 @@
 onDoubleClick?: Callback<GestureEvent>
 ```
 
-双击完成时触发手势事件。
+Trigger a gesture event when a double click event is complete.
 
 **Type:** [Callback](../arkts-components/arkts-arkui-callback-i.md)&lt;[GestureEvent](arkts-arkui-gestureevent-i.md)&gt;
 

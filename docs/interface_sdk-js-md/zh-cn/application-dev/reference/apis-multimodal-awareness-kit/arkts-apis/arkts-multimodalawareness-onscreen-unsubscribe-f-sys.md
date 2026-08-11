@@ -1,18 +1,12 @@
 # unsubscribe（系统接口）
 
-## 导入模块
-
-```TypeScript
-import { onScreen } from 'kits/@kit.MultimodalAwarenessKit';
-```
-
 ## unsubscribe
 
 ```TypeScript
 function unsubscribe(capability: OnscreenAwarenessCap, callback?: Callback<OnscreenAwarenessInfo[]>): void
 ```
 
-Disables proactive awareness on screen content and unsubscribes from a screen awareness result.
+关闭屏幕内容主动感知，并取消订阅屏幕感知结果。
 
 **起始版本：** 23
 
@@ -34,17 +28,17 @@ Disables proactive awareness on screen content and unsubscribes from a screen aw
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| capability | [OnscreenAwarenessCap](arkts-multimodalawareness-onscreen-onscreenawarenesscap-i-sys.md) | 是 | Onscreen awareness capability list. |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;OnscreenAwarenessInfo[]&gt; | 否 | Callback to unregister. The returned onscreen &lt;br&gt; awareness information list **OnscreenAwarenessInfo[]** contains a maximum of two awareness &lt;br&gt; information items. |
+| capability | [OnscreenAwarenessCap](arkts-multimodalawareness-onscreen-onscreenawarenesscap-i-sys.md) | 是 | 屏上感知能力列表。 |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;OnscreenAwarenessInfo[]&gt; | 否 | 需取消的回调函数。省略则移除该感知能力的所有回调。返回的感知信息列表 OnscreenAwarenessInfo [] 最多同时返回2个感知信息项。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 801 | Capability not supported. Function can not work correctly due to limited &lt;br&gt; device capabilities. |
-| 34000001 | Service exception. |
-| 201 | Permission denied. An attempt was made to get page content forbidden by &lt;br&gt; permission: ohos.permission.GET_SCREEN_CONTENT or ohos.permission.ONSCREEN_AWARENESS. |
-| 202 | Permission check failed. A non-system application uses the system API. |
+| [801](../../errorcode-universal.md#801-该设备不支持此api) | Capability not supported. Function can not work correctly due to limited &lt;br&gt; device capabilities. |
+| [34000001](../../apis-multimodalawareness-kit/errorcode-onScreen.md#34000001-服务异常) | Service exception. |
+| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. An attempt was made to get page content forbidden by &lt;br&gt; permission: ohos.permission.GET_SCREEN_CONTENT or ohos.permission.ONSCREEN_AWARENESS. |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission check failed. A non-system application uses the system API. |
 
 ## 示例
 

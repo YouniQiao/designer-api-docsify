@@ -1,10 +1,10 @@
 # NotificationSystemLiveViewContent
 
-描述系统实况窗通知内容，用于在实况窗中展示实时状态信息。不支持三方应用直接创建该类型通知，可以由系统代理创建系统实况窗类型通知后，三方应用发布同ID的通知来更新指定内容。继承自[NotificationBasicContent](arkts-notification-notificationcontent-notificationbasiccontent-i.md)。
+Describes the system live view notification content, which is used to display real-time status information in the live view. Third-party applications are not supported to directly create this notification type. After the system proxy creates a system live view notification, a third-party application can publish a notification with the same ID to update the specified content. This API is inherited from NotificationBasicContent.
 
-> **说明：**
+> **NOTE：**
 > 
-> 实际显示效果依赖于设备能力和通知中心UI样式。
+> The actual display effect depends on the device capabilities and the notification center UI style.
 
 **Inheritance/Implementation:** NotificationSystemLiveViewContent extends [NotificationBasicContent](arkts-notification-notificationcontent-notificationbasiccontent-i.md)
 
@@ -22,7 +22,7 @@
 button?: NotificationButton
 ```
 
-实况通知的按钮。默认为空。
+Button of the notification. This parameter is left empty by default.
 
 **Type:** [NotificationButton](arkts-notification-notificationcontent-notificationbutton-i.md)
 
@@ -40,7 +40,7 @@ button?: NotificationButton
 capsule?: NotificationCapsule
 ```
 
-实况通知的胶囊。默认为空。
+Capsule of the notification. This parameter is left empty by default.
 
 **Type:** [NotificationCapsule](arkts-notification-notificationcontent-notificationcapsule-i.md)
 
@@ -58,7 +58,7 @@ capsule?: NotificationCapsule
 progress?: NotificationProgress
 ```
 
-实况内容的进度。默认为空。
+Progress of the notification. This parameter is left empty by default.
 
 **Type:** [NotificationProgress](arkts-notification-notificationmanager-notificationprogress-t.md)
 
@@ -76,7 +76,7 @@ progress?: NotificationProgress
 time?: NotificationTime
 ```
 
-实况通知的时间。默认为空。
+Time of the notification. This parameter is left empty by default.
 
 **Type:** [NotificationTime](arkts-notification-notificationcontent-notificationtime-i.md)
 
@@ -94,7 +94,7 @@ time?: NotificationTime
 typeCode: int
 ```
 
-类型标识符，标记调用方业务类型，用于区分不同实况窗业务场景。
+Type identifier for marking the caller's service type, which is used to distinguish different live view service scenarios.
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 

@@ -1,11 +1,5 @@
 # enableCloud（系统接口）
 
-## 导入模块
-
-```TypeScript
-import { cloudSyncManager } from 'kits/@kit.CoreFileKit';
-```
-
 ## enableCloud
 
 ```TypeScript
@@ -31,7 +25,7 @@ function enableCloud(accountId: string, switches: Record<string, boolean>): Prom
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | accountId | string | 是 | 账号Id。 |
-| switches | [Record](../../apis-default/arkts-apis/arkts-record-t.md)&lt;string, boolean&gt; | 是 | 应用的端云协同特性使能开关，string类型为应用包名，boolean类型为开关状态。true为打开；false为关闭。 |
+| switches | Record&lt;string, boolean&gt; | 是 | 应用的端云协同特性使能开关，string类型为应用包名，boolean类型为开关状态。true为打开；false为关闭。 |
 
 **返回值：**
 
@@ -43,11 +37,13 @@ function enableCloud(accountId: string, switches: Record<string, boolean>): Prom
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 401 | The input parameter is invalid.Possible causes:1.Mandatory parameters are left unspecified; &lt;br&gt;2.Incorrect parameter types. |
-| 201 | Permission verification failed. |
-| 202 | The caller is not a system application. |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | The input parameter is invalid.Possible causes:1.Mandatory parameters are left unspecified; &lt;br&gt;2.Incorrect parameter types. |
+| [201](../../errorcode-universal.md#201-权限校验失败) | Permission verification failed. |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | The caller is not a system application. |
 
 ## 示例
+
+ArkTS-Dyn示例：
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -61,6 +57,23 @@ cloudSyncManager.enableCloud(accountId, switches).then(() => {
   console.info("enableCloud successfully.");
 }).catch((err: BusinessError) => {
   console.error(`enableCloud failed with error message: ${err.message}, error code: ${err.code}`);
+});
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let accountId: string = "testAccount";
+let switches: Record<string, boolean> = {
+  'com.example.bundleName1': true,
+  'com.example.bundleName2': false
+}
+cloudSyncManager.enableCloud(accountId, switches).then<void>((): void => {
+  console.error("enableCloud successfully");
+}).catch((err: BusinessError<void>): void => {
+  console.info("enableCloud failed with error message: " + err.message + ", error code: " + err.code);
 });
 ```
 
@@ -94,18 +107,20 @@ function enableCloud(
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | accountId | string | 是 | 账号Id。 |
-| switches | [Record](../../apis-default/arkts-apis/arkts-record-t.md)&lt;string, boolean&gt; | 是 | 应用的端云协同特性使能开关，string类型为应用包名，boolean类型为开关状态。true为打开；false为关闭。 |
+| switches | Record&lt;string, boolean&gt; | 是 | 应用的端云协同特性使能开关，string类型为应用包名，boolean类型为开关状态。true为打开；false为关闭。 |
 | callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数。异步使能端云协同能力之后。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 401 | The input parameter is invalid.Possible causes:1.Mandatory parameters are left unspecified; &lt;br&gt;2.Incorrect parameter types. |
-| 201 | Permission verification failed. |
-| 202 | The caller is not a system application. |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | The input parameter is invalid.Possible causes:1.Mandatory parameters are left unspecified; &lt;br&gt;2.Incorrect parameter types. |
+| [201](../../errorcode-universal.md#201-权限校验失败) | Permission verification failed. |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | The caller is not a system application. |
 
 ## 示例
+
+ArkTS-Dyn示例：
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -118,6 +133,25 @@ let switches: Record<string, boolean> = {
 cloudSyncManager.enableCloud(accountId, switches, (err: BusinessError) => {
   if (err) {
     console.error(`enableCloud failed with error message: ${err.message}, error code: ${err.code}`);
+  } else {
+    console.info("enableCloud successfully");
+  }
+});
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let accountId: string = "testAccount";
+let switches: Record<string, boolean> = {
+  'com.example.bundleName1': true,
+  'com.example.bundleName2': false
+}
+cloudSyncManager.enableCloud(accountId, switches, (err: BusinessError<void> | null): void => {
+  if (err && err.code) {
+    console.error("enableCloud failed with error message: " + err.message + ", error code: " + err.code);
   } else {
     console.info("enableCloud successfully");
   }

@@ -1,6 +1,6 @@
 # IGlobalReusePoolVariable
 
-全局复用池句柄。
+Global reuse pool handle.
 
 **Since:** 26.0.0
 

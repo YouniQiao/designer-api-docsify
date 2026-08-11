@@ -14,12 +14,6 @@ AtomicFile是一个用于对文件进行原子读写操作的类。
 
 **系统能力：** SystemCapability.FileManagement.File.FileIO
 
-## 导入模块
-
-```TypeScript
-import { Options, ReaderIteratorResult, Watcher, ReadTextOptions, WatchEventListener, TaskSignal, WriteOptions, ListFileExtOptions, DfsListeners, Filter, ReadOptions, ListFileOptions, WatchEvent, FileFilter, ConflictFiles } from 'kits/@kit.CoreFileKit';
-```
-
 ## constructor
 
 ```TypeScript
@@ -46,7 +40,7 @@ constructor(path: string)
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 401 | Parameter error. Possible causes:1.Mandatory parameters are left unspecified; &lt;br&gt;2.Incorrect parameter types. |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes:1.Mandatory parameters are left unspecified; &lt;br&gt;2.Incorrect parameter types. |
 
 ## delete
 
@@ -76,6 +70,8 @@ delete(): void
 
 ## 示例
 
+ArkTS-Dyn示例：
+
 ```TypeScript
 import { common } from '@kit.AbilityKit';
 import { util } from '@kit.ArkTS';
@@ -98,6 +94,31 @@ try {
     },1000);
   })
 } catch (err) {
+  console.error(`Failed to AtomicFile. Code: ${err.code}, message: ${err.message}`);
+}
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+import { common } from '@kit.AbilityKit';
+import { util } from '@kit.ArkTS';
+
+try {
+  let file = new fileIo.AtomicFile(`${pathDir}/read.txt`);
+  let writeStream = file.startWrite();
+  writeStream.write("hello, world", "utf-8", ()=> {
+    file.finishWrite();
+    setTimeout(()=>{
+      let data = file.readFully();
+      let decoder = util.TextDecoder.create('utf-8');
+      let str = decoder.decodeToString(new Uint8Array(data));
+      file.delete();
+      console.info(`Succeeded in delete atomicfile.`);
+    },1000);
+  })
+} catch (error: Error) {
+  let err: BusinessError = error as BusinessError;
   console.error(`Failed to AtomicFile. Code: ${err.code}, message: ${err.message}`);
 }
 ```
@@ -126,6 +147,8 @@ failWrite(): void
 
 ## 示例
 
+ArkTS-Dyn示例：
+
 ```TypeScript
 import { common } from '@kit.AbilityKit';
 
@@ -140,6 +163,24 @@ try {
     console.info(`Succeeded in writing atomicFile.`);
   })
 } catch (err) {
+  file.failWrite();
+  console.error(`Failed to AtomicFile. Code: ${err.code}, message: ${err.message}`);
+}
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+import { common } from '@kit.AbilityKit';
+
+let file = new fileIo.AtomicFile(`${pathDir}/write.txt`);
+try {
+  let writeStream = file.startWrite();
+  writeStream.write("hello, world", "utf-8", ()=> {
+    console.info(`Succeeded in writing atomicFile.`);
+  })
+} catch (error: Error) {
+  let err: BusinessError = error as BusinessError;
   file.failWrite();
   console.error(`Failed to AtomicFile. Code: ${err.code}, message: ${err.message}`);
 }
@@ -169,6 +210,8 @@ finishWrite(): void
 
 ## 示例
 
+ArkTS-Dyn示例：
+
 ```TypeScript
 import { common } from '@kit.AbilityKit';
 
@@ -183,6 +226,23 @@ try {
     file.finishWrite();
   })
 } catch (err) {
+  console.error(`Failed to AtomicFile. Code: ${err.code}, message: ${err.message}`);
+}
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+import { common } from '@kit.AbilityKit';
+
+try {
+  let file = new fileIo.AtomicFile(`${pathDir}/write.txt`);
+  let writeStream = file.startWrite();
+  writeStream.write("hello, world", "utf-8", ()=> {
+    file.finishWrite();
+  })
+} catch (error: Error) {
+  let err: BusinessError = error as BusinessError;
   console.error(`Failed to AtomicFile. Code: ${err.code}, message: ${err.message}`);
 }
 ```
@@ -222,6 +282,8 @@ getBaseFile(): File
 
 ## 示例
 
+ArkTS-Dyn示例：
+
 ```TypeScript
 import { common } from '@kit.AbilityKit';
 
@@ -239,6 +301,25 @@ try {
   })
 } catch (err) {
   console.error(`Failed to get baseFile. Code: ${err.code}, message: ${err.message}`);
+}
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+import { common } from '@kit.AbilityKit';
+
+try {
+  let atomicFile = new fileIo.AtomicFile(`${pathDir}/write.txt`);
+  let writeStream = atomicFile.startWrite();
+  writeStream.write("hello, world", "utf-8", ()=> {
+    atomicFile.finishWrite();
+    let file = atomicFile.getBaseFile();
+    console.info(`Succeeded in getting base file. fd: ${file.fd}, path: ${file.path}, name:${file.name}`);
+  })
+} catch (error: Error) {
+  let err: BusinessError = error as BusinessError;
+  console.error(`Failed to get base file. Code: ${err.code}, message: ${err.message}`);
 }
 ```
 
@@ -275,6 +356,8 @@ openRead(): ReadStream
 
 ## 示例
 
+ArkTS-Dyn示例：
+
 ```TypeScript
 import { common } from '@kit.AbilityKit';
 
@@ -300,6 +383,34 @@ try {
     },1000);
   })
 } catch (err) {
+  console.error(`Failed to AtomicFile. Code: ${err.code}, message: ${err.message}`);
+}
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+import { common } from '@kit.AbilityKit';
+
+try {
+let file = new fileIo.AtomicFile(`${pathDir}/read.txt`);
+let writeStream = file.startWrite();
+writeStream.write("hello, world", "utf-8", ()=> {
+  file.finishWrite();
+  setTimeout(()=>{
+    let readStream = file.openRead();
+    readStream.on('readable', () => {
+      const data = readStream.read();
+      if (!data) {
+        console.error(`Failed to read atomicfile, data is null.`);
+        return;
+      }
+      console.info(`Succeeded in reading atomicfile, data is: ${data}`);
+    });
+  },1000);
+})
+} catch (error: Error) {
+  let err: BusinessError = error as BusinessError;
   console.error(`Failed to AtomicFile. Code: ${err.code}, message: ${err.message}`);
 }
 ```
@@ -335,6 +446,8 @@ readFully(): ArrayBuffer
 
 ## 示例
 
+ArkTS-Dyn示例：
+
 ```TypeScript
 import { common } from '@kit.AbilityKit';
 import { util, buffer } from '@kit.ArkTS';
@@ -356,6 +469,30 @@ try {
     },1000);
   })
 } catch (err) {
+  console.error(`Failed to AtomicFile. Code: ${err.code}, message: ${err.message}`);
+}
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+import { common } from '@kit.AbilityKit';
+import { util, buffer } from '@kit.ArkTS';
+
+try {
+  let file = new fileIo.AtomicFile(`${pathDir}/read.txt`);
+  let writeStream = file.startWrite();
+  writeStream.write("hello, world", "utf-8", ()=> {
+    file.finishWrite();
+    setTimeout(()=>{
+      let data = file.readFully();
+      let decoder = util.TextDecoder.create('utf-8');
+      let str = decoder.decodeToString(new Uint8Array(data));
+      console.info(`Succeeded in reading atomicfile fully, str is: ${str}`);
+    },1000);
+  })
+} catch (error: Error) {
+  let err: BusinessError = error as BusinessError;
   console.error(`Failed to AtomicFile. Code: ${err.code}, message: ${err.message}`);
 }
 ```
@@ -398,8 +535,11 @@ startWrite(): WriteStream
 
 ## 示例
 
+ArkTS-Dyn示例：
+
 ```TypeScript
 import { common } from '@kit.AbilityKit';
+import { fileIo as fs} from '@kit.CoreFileKit';
 
 // 请在组件内获取context，确保this.getUIContext().getHostContext()返回结果为UIAbilityContext
 let context = this.getUIContext().getHostContext() as common.UIAbilityContext;
@@ -413,6 +553,24 @@ try {
     console.info(`Succeeded in writing atomicfile finished.`);
   })
 } catch (err) {
+  console.error(`Failed to AtomicFile. Code: ${err.code}, message: ${err.message}`);
+}
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+import { common } from '@kit.AbilityKit';
+
+try {
+  let file = new fileIo.AtomicFile(`${pathDir}/write.txt`);
+  let writeStream = file.startWrite();
+  writeStream.write("hello, world", "utf-8", ()=> {
+    file.finishWrite();
+    console.info(`Succeeded in writing atomicfile finished.`);
+  })
+} catch (error: Error) {
+  let err: BusinessError = error as BusinessError;
   console.error(`Failed to AtomicFile. Code: ${err.code}, message: ${err.message}`);
 }
 ```

@@ -12,12 +12,6 @@
 
 **系统能力：** SystemCapability.Utils.Lang
 
-## 导入模块
-
-```TypeScript
-import { stream } from 'kits/@kit.ArkTS';
-```
-
 ## constructor
 
 ```TypeScript
@@ -68,6 +62,8 @@ doFlush(callback: Function): void
 
 ## 示例
 
+ArkTS-Dyn示例：
+
 ```TypeScript
 class TestTransform extends stream.Transform {
   constructor() {
@@ -88,6 +84,30 @@ transformStream.end("my test");
 transformStream.on("data", (data) => {
   console.info("data is", data.data); // data is test
 });
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+class TestTransform extends stream.Transform {
+  constructor() {
+    super();
+  }
+
+  doTransform(chunk: string, encoding: string, callback: Function) {
+    callback.unsafeCall();
+  }
+
+  doFlush(callback: Function) {
+    callback.unsafeCall("test");
+  }
+}
+
+let transformStream = new TestTransform();
+transformStream.on("data", (data: Object) => {
+  console.info("StreamTest data is", data); // 期望结果: data is test
+});
+transformStream.end("my test");
 ```
 
 ## doTransform
@@ -112,11 +132,13 @@ doTransform(chunk: string, encoding: string, callback: Function): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| chunk | string | 是 | 待写入的数据。 |
-| encoding | string | 是 | 编码格式。目前支持**'utf8'**、**'gb18030'**、**'gbk'**和**'gb2312'**。 |
+| chunk | string | 是 | 需要写入的数据。 |
+| encoding | string | 是 | 字符编码类型。当前版本支持'utf8'、'gb18030'、'gbk'以及'gb2312'。 |
 | callback | Function | 是 | 回调函数。 |
 
 ## 示例
+
+ArkTS-Dyn示例：
 
 ```TypeScript
 class TestTransform extends stream.Transform {
@@ -129,6 +151,26 @@ class TestTransform extends stream.Transform {
     console.info("Transform test doTransform", stringChunk); // Transform test doTransform HELLO
     this.push(stringChunk);
     callback();
+  }
+}
+
+let transformStream = new TestTransform();
+transformStream.write("hello");
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+class TestTransform extends stream.Transform {
+  constructor() {
+    super();
+  }
+
+  doTransform(chunk: string, encoding: string, callback: Function) {
+    let stringChunk = chunk.toString().toUpperCase();
+    console.info("Transform test doTransform", stringChunk); // 期望结果: Transform test doTransform HELLO
+    this.push(stringChunk);
+    callback.unsafeCall();
   }
 }
 

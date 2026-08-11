@@ -1,6 +1,6 @@
 # RequestFullWindowOptions
 
-定义RequestFullWindow接口的选项。
+Defines the option of RequestFullWindow interface.
 
 **Since:** 3
 
@@ -22,7 +22,7 @@ import { AppResponse, ScreenOnVisibleOptions, RequestFullWindowOptions } from 'k
 duration: number
 ```
 
-定义动画选项的持续时间，单位为毫秒。
+Defines the number of animation options.
 
 **Type:** number
 

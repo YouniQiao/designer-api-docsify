@@ -1,6 +1,6 @@
 # IncrementalBackupData (System API)
 
-一次增量备份对象，包含最后一次增量备份时间和增量清单。
+Corresponds to an incremental application, including its last incremental time and incremental list.
 
 **Inheritance/Implementation:** IncrementalBackupData extends [IncrementalBackupTime](arkts-corefile-backup-incrementalbackuptime-i-sys.md), [FileManifestData](arkts-corefile-backup-filemanifestdata-i-sys.md), [BackupParams](arkts-corefile-backup-backupparams-i-sys.md), [BackupPriority](arkts-corefile-backup-backuppriority-i-sys.md)
 

@@ -2,9 +2,9 @@
 
 Defines the onWindowNew callback, related to {@link onWindowNew} method.
 
-**Since:** 11
+**Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn only, since version 11.
+**ArkTS mode:** ArkTS-Dyn only, since version 9.
 
 <!--Device-unnamed-declare class ControllerHandler--><!--Device-unnamed-declare class ControllerHandler-End-->
 
@@ -16,11 +16,11 @@ Defines the onWindowNew callback, related to {@link onWindowNew} method.
 constructor()
 ```
 
-Constructor.
+Constructs a **ControllerHandler** API.
 
-**Since:** 11
+**Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn only, since version 11.
+**ArkTS mode:** ArkTS-Dyn only, since version 9.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -34,11 +34,11 @@ Constructor.
 setWebController(controller: WebviewController): void
 ```
 
-Set WebController object.
+Sets a **WebviewController** object. If opening a new window is not needed, set the parameter to **null**.
 
-**Since:** 11
+**Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn only, since version 11.
+**ArkTS mode:** ArkTS-Dyn only, since version 9.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 

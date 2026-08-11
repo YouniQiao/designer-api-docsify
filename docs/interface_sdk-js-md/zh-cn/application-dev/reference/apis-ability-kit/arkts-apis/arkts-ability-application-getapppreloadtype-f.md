@@ -1,11 +1,5 @@
 # getAppPreloadType
 
-## 导入模块
-
-```TypeScript
-import { application } from 'kits/@kit.AbilityKit';
-```
-
 ## getAppPreloadType
 
 ```TypeScript

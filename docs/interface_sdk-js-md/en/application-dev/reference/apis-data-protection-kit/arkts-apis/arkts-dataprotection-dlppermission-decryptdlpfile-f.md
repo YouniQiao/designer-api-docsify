@@ -12,13 +12,14 @@ import { dlpPermission } from 'kits/@kit.DataProtectionKit';
 function decryptDlpFile(dlpFd: number, plaintextFd: number): Promise<void>
 ```
 
-将DLP文件解密生成明文文件，仅支持企业账号调用。使用Promise异步回调。
+Decrypts a DLP file to generate a plaintext file. This API can be called only by enterprise accounts. This API uses a promise to return the result.
 
-该接口用于将DLP加密文件解密为明文文件，适用于拥有者权限用户导出或迁移文件。
+This API decrypts DLP files into plaintext files, which is applicable to exporting or migrating files by users with owner permissions.
 
-> **说明：**
+> **NOTE：**
 > 
-> 该接口仅支持企业账号调用，需要企业自行搭建企业账号服务器配套使用。由企业服务器管控账号是否有权限解密DLP文件。
+> This API can be called only by enterprise accounts. Enterprises need to set up their own enterprise account
+> servers. The enterprise server determines whether an account is authorized to decrypt DLP files.
 
 **Since:** 21
 
@@ -34,54 +35,57 @@ function decryptDlpFile(dlpFd: number, plaintextFd: number): Promise<void>
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| dlpFd | number | Yes | 待解密DLP文件的fd。取值范围为[0, 2&lt;sup&gt;31&lt;/sup&gt;-1]。当fd小于0时，打印错误日志，函数停止运行；当fd大于2&lt;sup&gt;31&lt;/sup&gt;-1时，fd的 值被截断。 |
-| plaintextFd | number | Yes | 目标解密文件的fd。取值范围为[0, 2&lt;sup&gt;31&lt;/sup&gt;-1]。当fd小于0时，打印错误日志，函数停止运行；当fd大于2&lt;sup&gt;31&lt;/sup&gt;-1时 ，fd的值被截断。 |
+| dlpFd | number | Yes | FD of the DLP file to be decrypted. The value range is [0, 2&lt;sup&gt;31&lt;/sup&gt;-1]. If the value of **fd** is less than 0, n error log is generated, and the function stops running. If the value of **fd** is greater than 2&lt;sup&gt;31&lt;/sup&gt;-1, the excess part will be truncated. |
+| plaintextFd | number | Yes | FD of the decrypted file. The value range is [0, 2&lt;sup&gt;31&lt;/sup&gt;-1]. If the value of **fd** is less than 0, an error log is generated, and the function stops running. If the value of **fd** is greater than 2&lt;sup&gt;31&lt;/sup&gt;, the excess part will be truncated. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise对象，无返回结果。 |
+| Promise&lt;void&gt; | Promise that returns no value. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 19100003 | Credential task time out. |
-| 19100002 | Credential service busy due to too many tasks or duplicate tasks. |
-| 19100001 | Invalid parameter value. |
-| 19100005 | Credential authentication server error. |
-| 19100004 | Credential service error. |
-| 19100011 | The system ability works abnormally. |
-| 201 | Permission denied. |
-| 202 | Non-system applications use system APIs.<br>**Applicable version:** 20 and later |
-| 19100009 | Failed to operate the DLP file. |
-| 19100008 | The file is not a DLP file. |
-| 19100013 | The user does not have the permission. |
+| [19100003](../errorcode-dlp.md#19100003-encryptiondecryption-timeout) | Credential task time out. |
+| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported because car not support DLP feature.<br>**Applicable version:** 26.1.0 and later |
+| [19100002](../errorcode-dlp.md#19100002-encryption-and-decryption-error) | Credential service busy due to too many tasks or duplicate tasks. |
+| [19100001](../errorcode-dlp.md#19100001-invalid-parameter) | Invalid parameter value. |
+| [19100005](../errorcode-dlp.md#19100005-credential-authentication-server-error) | Credential authentication server error. |
+| [19100004](../errorcode-dlp.md#19100004-credential-service-error) | Credential service error. |
+| [19100011](../errorcode-dlp.md#19100011-system-service-abnormal) | The system ability works abnormally. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Non-system applications use system APIs.<br>**Applicable version:** 20 and later |
+| [19100009](../errorcode-dlp.md#19100009-failed-to-operate-the-dlp-file) | Failed to operate the DLP file. |
+| [19100008](../errorcode-dlp.md#19100008-nondlp-file) | The file is not a DLP file. |
+| [19100013](../errorcode-dlp.md#19100013-user-access-denied) | The user does not have the permission. |
 
 ## Examples
 
 ```TypeScript
 import { dlpPermission } from '@kit.DataProtectionKit';
 import { fileIo } from '@kit.CoreFileKit';
+import { BusinessError } from '@kit.BasicServicesKit';
 
-let plaintextFd: number | undefined = undefined;
-let dlpFd: number | undefined = undefined;
-let plainFilePath: string = "file://docs/storage/Users/currentUser/Documents/test.txt";
-let dlpFilePath: string = "file://docs/storage/Users/currentUser/Documents/test.txt.dlp";
-plaintextFd = fileIo.openSync(plainFilePath, fileIo.OpenMode.READ_WRITE | fileIo.OpenMode.CREATE).fd; // Open the target plaintext file.
-dlpFd = fileIo.openSync(dlpFilePath, fileIo.OpenMode.READ_ONLY).fd; // Open the DLP file to be decrypted.
-dlpPermission.decryptDlpFile(dlpFd, plaintextFd).then((res) => {
-  console.info('Successfully decrypt DLP file.');
-}).catch((error: BusinessError)=> {
-  console.error(JSON.stringify(error));
-}).finally(()=>{
-  if (dlpFd) {
-    fileIo.closeSync(dlpFd);
+async function ExampleFunction(plainFilePath: string, dlpFilePath: string) {
+  let plaintextFd: number | undefined = undefined;
+  let dlpFd: number | undefined = undefined;
+  try {
+    plaintextFd = fileIo.openSync(plainFilePath, fileIo.OpenMode.READ_WRITE | fileIo.OpenMode.CREATE).fd;
+    dlpFd = fileIo.openSync(dlpFilePath, fileIo.OpenMode.READ_ONLY).fd;
+    await dlpPermission.decryptDlpFile(dlpFd, plaintextFd);
+    console.info('Successfully decrypt DLP file.');
+  } catch(err) {
+    console.error('error', (err as BusinessError).code, (err as BusinessError).message);
+  } finally {
+    if (dlpFd) {
+      fileIo.closeSync(dlpFd);
+    }
+    if (plaintextFd) {
+      fileIo.closeSync(plaintextFd);
+    }
   }
-  if (plaintextFd) {
-    fileIo.closeSync(plaintextFd);
-  }
-});
+}
 ```
 

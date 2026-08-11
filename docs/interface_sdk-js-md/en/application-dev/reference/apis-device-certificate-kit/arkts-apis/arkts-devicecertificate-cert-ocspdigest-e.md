@@ -1,6 +1,6 @@
 # OcspDigest
 
-表示OCSP摘要算法的枚举。
+Enumerates the OCSP digest algorithm.
 
 **Since:** 26.0.0
 
@@ -16,7 +16,7 @@
 SHA1 = 0
 ```
 
-SHA1摘要算法。
+SHA1 digest algorithm.
 
 **Since:** 26.0.0
 
@@ -36,7 +36,7 @@ SHA1摘要算法。
 SHA224 = 1
 ```
 
-SHA224摘要算法。
+SHA224 digest algorithm.
 
 **Since:** 26.0.0
 
@@ -56,7 +56,7 @@ SHA224摘要算法。
 SHA256 = 2
 ```
 
-SHA256摘要算法。
+SHA256 digest algorithm.
 
 **Since:** 26.0.0
 
@@ -76,7 +76,7 @@ SHA256摘要算法。
 SHA384 = 3
 ```
 
-SHA384摘要算法。
+SHA384 digest algorithm.
 
 **Since:** 26.0.0
 
@@ -96,7 +96,7 @@ SHA384摘要算法。
 SHA512 = 4
 ```
 
-SHA512摘要算法。
+SHA512 digest algorithm.
 
 **Since:** 26.0.0
 

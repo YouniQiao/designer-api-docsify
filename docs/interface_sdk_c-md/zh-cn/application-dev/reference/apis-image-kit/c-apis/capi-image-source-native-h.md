@@ -18,12 +18,12 @@
 
 | 名称 | typedef关键字 | 描述 |
 | -- | -- | -- |
-| [OH_ImageSourceNative](capi-image-nativemodule-oh-imagesourcenative.md) | - | OH_ImageSourceNative是native层封装的ImageSource结构体，用于创建图片数据。OH_ImageSourceNative结构体不可直接操作，而是采用函数调用方式创建、释放结构体以及操作具体字段。<br>有多种方式创建OH_ImageSourceNative，具体如下：<br>使用[OH_ImageSourceNative_Release](capi-image-source-native-h.md#oh_imagesourcenative_release)函数释放OH_ImageSourceNative对象。<br>使用约束：使用OH_ImageSourceNative对象前，必须先通过上述接口创建对象；使用完成后，应调用[OH_ImageSourceNative_Release](capi-image-source-native-h.md#oh_imagesourcenative_release)释放对象。通过[OH_ImageSourceNative_CreateFromDataWithUserBuffer](capi-image-source-native-h.md#oh_imagesourcenative_createfromdatawithuserbuffer)创建对象时，在OH_ImageSourceNative对象生命周期内，调用方传入的数据缓存必须保持有效，不能被释放、复用或修改为其他图片数据。<br>资源管理：通过OH_ImageSourceNative解码或获取到的{@link OH_PixelmapNative}、[OH_PictureNative](capi-image-nativemodule-oh-picturenative.md)、[OH_ImageRawData](capi-image-nativemodule-oh-imagerawdata.md)对象由调用方分别管理。释放OH_ImageSourceNative对象不会自动释放这些对象，需要调用对应接口释放或销毁。<br>OH_ImageSourceNative结构体内容和操作方式如下： |
-| [OH_ImageSource_Info](capi-image-nativemodule-oh-imagesource-info.md) | - | OH_ImageSource_Info是native层封装的ImageSource信息结构体，OH_ImageSource_Info结构体不可直接操作，而是采用函数调用方式创建、释放结构体以及操作具体字段。<br>使用[OH_ImageSourceInfo_Create](capi-image-source-native-h.md#oh_imagesourceinfo_create)函数创建OH_ImageSource_Info对象。<br>使用[OH_ImageSourceNative_GetImageInfo](capi-image-source-native-h.md#oh_imagesourcenative_getimageinfo)函数将OH_ImageSourceNative中的图像信息写入创建好的OH_ImageSource_Info对象。<br>使用[OH_ImageSourceInfo_Release](capi-image-source-native-h.md#oh_imagesourceinfo_release)函数释放OH_ImageSource_Info对象。<br>使用约束：OH_ImageSource_Info对象通常配合[OH_ImageSourceNative_GetImageInfo](capi-image-source-native-h.md#oh_imagesourcenative_getimageinfo)使用，用于承载指定序号图片的宽、高、动态范围和MIME类型等信息。使用前需通过[OH_ImageSourceInfo_Create](capi-image-source-native-h.md#oh_imagesourceinfo_create)创建对象；使用完成后，应调用[OH_ImageSourceInfo_Release](capi-image-source-native-h.md#oh_imagesourceinfo_release)释放对象。<br>OH_ImageSource_Info结构体内容和操作方式如下： |
-| [OH_DecodingOptionsForPicture](capi-image-nativemodule-oh-decodingoptionsforpicture.md) | - | Picture解码参数结构体。<br>使用[OH_DecodingOptionsForPicture_Create](capi-image-source-native-h.md#oh_decodingoptionsforpicture_create)函数创建OH_DecodingOptionsForPicture对象。<br>使用[OH_DecodingOptionsForPicture_Release](capi-image-source-native-h.md#oh_decodingoptionsforpicture_release)函数释放OH_DecodingOptionsForPicture对象。<br>资源管理：释放OH_ImageSourceNative或解码生成的OH_PictureNative对象，不会自动释放OH_DecodingOptionsForPicture对象。OH_DecodingOptionsForPicture释放后，不应继续传入Picture解码接口或调用其字段获取和设置接口。<br>OH_DecodingOptionsForPicture结构体内容和操作方式如下： |
-| [OH_DecodingOptions](capi-image-nativemodule-oh-decodingoptions.md) | - | OH_DecodingOptions是native层封装的解码选项参数结构体，用于设置解码选项参数，在创建Pixelmap时作为入参传入，详细信息见[OH_ImageSourceNative_CreatePixelmap](capi-image-source-native-h.md#oh_imagesourcenative_createpixelmap)。<br>OH_DecodingOptions结构体不可直接操作，而是采用函数调用方式创建、释放结构体以及操作具体字段。<br>使用[OH_DecodingOptions_Create](capi-image-source-native-h.md#oh_decodingoptions_create)函数创建OH_DecodingOptions对象。<br>使用[OH_DecodingOptions_Release](capi-image-source-native-h.md#oh_decodingoptions_release)函数释放OH_DecodingOptions对象。<br>使用约束：OH_DecodingOptions用于配置PixelMap解码参数，通常作为[OH_ImageSourceNative_CreatePixelmap](capi-image-source-native-h.md#oh_imagesourcenative_createpixelmap)、[OH_ImageSourceNative_CreatePixelmapUsingAllocator](capi-image-source-native-h.md#oh_imagesourcenative_createpixelmapusingallocator)或[OH_ImageSourceNative_CreatePixelmapList](capi-image-source-native-h.md#oh_imagesourcenative_createpixelmaplist)的入参。使用前需通过[OH_DecodingOptions_Create](capi-image-source-native-h.md#oh_decodingoptions_create)创建对象；使用完成后，应调用[OH_DecodingOptions_Release](capi-image-source-native-h.md#oh_decodingoptions_release)释放对象。<br>资源管理：释放OH_ImageSourceNative或解码生成的OH_PixelmapNative对象，不会自动释放OH_DecodingOptions对象。OH_DecodingOptions释放后，不应继续传入解码接口或调用其字段获取和设置接口。<br>OH_DecodingOptions结构体内容和操作方式如下： |
-| [OH_ImageRawData](capi-image-nativemodule-oh-imagerawdata.md) | - | OH_ImageRawData用于承载图像中的原始数据。<br>使用[OH_ImageSourceNative_CreateImageRawData](capi-image-source-native-h.md#oh_imagesourcenative_createimagerawdata)函数从OH_ImageSourceNative对象中创建OH_ImageRawData对象。<br>使用[OH_ImageSourceNative_DestroyImageRawData](capi-image-source-native-h.md#oh_imagesourcenative_destroyimagerawdata)函数销毁OH_ImageRawData对象。<br>资源管理：OH_ImageRawData使用完成后，应调用[OH_ImageSourceNative_DestroyImageRawData](capi-image-source-native-h.md#oh_imagesourcenative_destroyimagerawdata)销毁。释放OH_ImageSourceNative对象不会自动销毁OH_ImageRawData对象，二者生命周期相互独立。通过[OH_ImageSourceNative_GetBufferFromRawData](capi-image-source-native-h.md#oh_imagesourcenative_getbufferfromrawdata)获取到的data指向OH_ImageRawData对象内部缓冲区，调用方不应对data调用free()。OH_ImageRawData对象销毁后，该data地址失效。如需在OH_ImageRawData对象销毁后继续使用数据，应在销毁前自行拷贝。<br>OH_ImageRawData结构体内容和操作方式如下：<br>\| 字段类型 \| 字段名称 \| 字段描述 \| 字段获取函数 \|\| -- \| -- \| -- \| -- \|\| uint8_t\| data
-\| 原始数据缓冲区首地址。 \| [OH_ImageSourceNative_GetBufferFromRawData](capi-image-source-native-h.md#oh_imagesourcenative_getbufferfromrawdata) \|\| size_t \| length \| 原始数据缓冲区长度。 \|[OH_ImageSourceNative_GetBufferFromRawData](capi-image-source-native-h.md#oh_imagesourcenative_getbufferfromrawdata) \|\| uint8_t \| bitsPerPixel \| 缓冲区数据中每个像素实际占用的位数。 \|[OH_ImageSourceNative_GetBitsPerPixelFromRawData](capi-image-source-native-h.md#oh_imagesourcenative_getbitsperpixelfromrawdata) \| |
+| [OH_ImageSourceNative](capi-image-nativemodule-oh-imagesourcenative.md) | - | OH_ImageSourceNative是native层封装的ImageSource结构体，用于创建图片数据。OH_ImageSourceNative结构体不可直接操作，而是采用函数调用方式创建、释放结构体以及操作具体字段。<br>有多种方式创建OH_ImageSourceNative，具体如下：<br>使用{@link OH_ImageSourceNative_Release}函数释放OH_ImageSourceNative对象。<br>使用约束：使用OH_ImageSourceNative对象前，必须先通过上述接口创建对象；使用完成后，应调用{@link OH_ImageSourceNative_Release}释放对象。通过{@link OH_ImageSourceNative_CreateFromDataWithUserBuffer}创建对象时，在OH_ImageSourceNative对象生命周期内，调用方传入的数据缓存必须保持有效，不能被释放、复用或修改为其他图片数据。<br>资源管理：通过OH_ImageSourceNative解码或获取到的{@link OH_PixelmapNative}、{@link OH_PictureNative}、{@link OH_ImageRawData}对象由调用方分别管理。释放OH_ImageSourceNative对象不会自动释放这些对象，需要调用对应接口释放或销毁。<br>OH_ImageSourceNative结构体内容和操作方式如下： |
+| [OH_ImageSource_Info](capi-image-nativemodule-oh-imagesource-info.md) | - | OH_ImageSource_Info是native层封装的ImageSource信息结构体，OH_ImageSource_Info结构体不可直接操作，而是采用函数调用方式创建、释放结构体以及操作具体字段。<br>使用{@link OH_ImageSourceInfo_Create}函数创建OH_ImageSource_Info对象。<br>使用{@link OH_ImageSourceNative_GetImageInfo}函数将OH_ImageSourceNative中的图像信息写入创建好的OH_ImageSource_Info对象。<br>使用{@link OH_ImageSourceInfo_Release}函数释放OH_ImageSource_Info对象。<br>使用约束：OH_ImageSource_Info对象通常配合{@link OH_ImageSourceNative_GetImageInfo}使用，用于承载指定序号图片的宽、高、动态范围和MIME类型等信息。使用前需通过{@link OH_ImageSourceInfo_Create}创建对象；使用完成后，应调用{@link OH_ImageSourceInfo_Release}释放对象。<br>OH_ImageSource_Info结构体内容和操作方式如下： |
+| [OH_DecodingOptionsForPicture](capi-image-nativemodule-oh-decodingoptionsforpicture.md) | - | Picture解码参数结构体。<br>使用{@link OH_DecodingOptionsForPicture_Create}函数创建OH_DecodingOptionsForPicture对象。<br>使用{@link OH_DecodingOptionsForPicture_Release}函数释放OH_DecodingOptionsForPicture对象。<br>资源管理：释放OH_ImageSourceNative或解码生成的OH_PictureNative对象，不会自动释放OH_DecodingOptionsForPicture对象。OH_DecodingOptionsForPicture释放后，不应继续传入Picture解码接口或调用其字段获取和设置接口。<br>OH_DecodingOptionsForPicture结构体内容和操作方式如下： |
+| [OH_DecodingOptions](capi-image-nativemodule-oh-decodingoptions.md) | - | OH_DecodingOptions是native层封装的解码选项参数结构体，用于设置解码选项参数，在创建Pixelmap时作为入参传入，详细信息见{@link OH_ImageSourceNative_CreatePixelmap}。<br>OH_DecodingOptions结构体不可直接操作，而是采用函数调用方式创建、释放结构体以及操作具体字段。<br>使用{@link OH_DecodingOptions_Create}函数创建OH_DecodingOptions对象。<br>使用{@link OH_DecodingOptions_Release}函数释放OH_DecodingOptions对象。<br>使用约束：OH_DecodingOptions用于配置PixelMap解码参数，通常作为{@link OH_ImageSourceNative_CreatePixelmap}、{@link OH_ImageSourceNative_CreatePixelmapUsingAllocator}或{@link OH_ImageSourceNative_CreatePixelmapList}的入参。使用前需通过{@link OH_DecodingOptions_Create}创建对象；使用完成后，应调用{@link OH_DecodingOptions_Release}释放对象。<br>资源管理：释放OH_ImageSourceNative或解码生成的OH_PixelmapNative对象，不会自动释放OH_DecodingOptions对象。OH_DecodingOptions释放后，不应继续传入解码接口或调用其字段获取和设置接口。<br>OH_DecodingOptions结构体内容和操作方式如下： |
+| [OH_ImageRawData](capi-image-nativemodule-oh-imagerawdata.md) | - | OH_ImageRawData用于承载图像中的原始数据。<br>使用{@link OH_ImageSourceNative_CreateImageRawData}函数从OH_ImageSourceNative对象中创建OH_ImageRawData对象。<br>使用{@link OH_ImageSourceNative_DestroyImageRawData}函数销毁OH_ImageRawData对象。<br>资源管理：OH_ImageRawData使用完成后，应调用{@link OH_ImageSourceNative_DestroyImageRawData}销毁。释放OH_ImageSourceNative对象不会自动销毁OH_ImageRawData对象，二者生命周期相互独立。通过{@link OH_ImageSourceNative_GetBufferFromRawData}获取到的data指向OH_ImageRawData对象内部缓冲区，调用方不应对data调用free()。OH_ImageRawData对象销毁后，该data地址失效。如需在OH_ImageRawData对象销毁后继续使用数据，应在销毁前自行拷贝。<br>OH_ImageRawData结构体内容和操作方式如下：<br>\| 字段类型 \| 字段名称 \| 字段描述 \| 字段获取函数 \|\| -- \| -- \| -- \| -- \|\| uint8_t\| data
+\| 原始数据缓冲区首地址。 \| {@link OH_ImageSourceNative_GetBufferFromRawData} \|\| size_t \| length \| 原始数据缓冲区长度。 \|{@link OH_ImageSourceNative_GetBufferFromRawData} \|\| uint8_t \| bitsPerPixel \| 缓冲区数据中每个像素实际占用的位数。 \|{@link OH_ImageSourceNative_GetBitsPerPixelFromRawData} \| |
 
 ### 枚举
 
@@ -31,7 +31,7 @@
 | -- | -- | -- |
 | [IMAGE_DYNAMIC_RANGE](#image_dynamic_range) | IMAGE_DYNAMIC_RANGE | 解码指定期望动态范围。 |
 | [IMAGE_ALLOCATOR_TYPE](#image_allocator_type) | IMAGE_ALLOCATOR_TYPE | 用于分配PixelMap内存的分配器类型。 |
-| [Image_CropAndScaleStrategy](#image_cropandscalestrategy) | Image_CropAndScaleStrategy | 在同时指定desiredSize和desiredRegion时执行裁剪和缩放的策略。<br>如果在配置解码选项[OH_DecodingOptions](capi-image-nativemodule-oh-decodingoptions.md)时，未填入参数Image_CropAndScaleStrategy，并且同时设置了desiredRegion和desiredSize，由于系统对于不同图片格式采用的解码算法不同，最终解码效果将略有差异。<br>例如原始图片大小200x200，传入desiredSize:{width: 150, height: 150}，desiredRegion:{x: 0, y: 0, width: 100, height: 100}，即预期解码原图左上角1/4区域，最终将pixelMap大小缩放至150x150返回。<br>对于jpeg、webp图片（部分dng图片解码时会优先解码图片中的jpeg预览图，在此场景下也会被视为jpeg图片格式）会先进行下采样，例如按照7/8下采样，再基于175x175的图片大小进行区域裁剪，因此最终的区域内容稍大于原图的左上角1/4区域。<br>对于svg图片，由于是矢量图，可以任意缩放不损失清晰度，在解码时会根据desiredSize与原图Size的比例选择缩放比例，在基于缩放后的图片大小进行区域裁剪，因此最终返回的解码区域会有所差异。<br>针对该场景，建议在解码选项同时设置了desiredRegion与desiredSize时，参数Image_CropAndScaleStrategy应传入CROP_FIRST参数保证效果一致。 |
+| [Image_CropAndScaleStrategy](#image_cropandscalestrategy) | Image_CropAndScaleStrategy | 在同时指定desiredSize和desiredRegion时执行裁剪和缩放的策略。<br>如果在配置解码选项[OH_DecodingOptions](capi-image-nativemodule-oh-decodingoptions.md)时，未填入参数Image_CropAndScaleStrategy，并且同时设置了desiredRegion和desiredSize，由于系统对于不同图片格式采用的解码算法不同，最终解码效果将略有差异。<br>例如原始图片大小200x200，传入desiredSize:{width: 150, height: 150}，desiredRegion:{x: 0, y: 0, width: 100, height: 100}，即预期解码原图左上角1/4区域，最终将pixelMap大小缩放至150x150返回。<br>对于jpeg、webp图片（部分dng图片解码时会优先解码图片中的jpeg预览图，在此场景下也会被视为jpeg图片格式）会先进行下采样，例如按照7/8下采样，再基于175x175的图片大小进行区域裁剪，因此最终的区域内容稍大于原图的左上角1/4区域。<br>对于svg图片，由于是矢量图，可以任意缩放不损失清晰度，在解码时会根据desiredSize与原图Size的比例选择缩放比例，再基于缩放后的图片大小进行区域裁剪，因此最终返回的解码区域会有所差异。<br>针对该场景，建议在解码选项同时设置了desiredRegion与desiredSize时，参数Image_CropAndScaleStrategy应传入CROP_FIRST参数保证效果一致。 |
 
 ### 函数
 
@@ -157,7 +157,7 @@ enum Image_CropAndScaleStrategy
 
 **描述**
 
-在同时指定desiredSize和desiredRegion时执行裁剪和缩放的策略。<br>如果在配置解码选项[OH_DecodingOptions](capi-image-nativemodule-oh-decodingoptions.md)时，未填入参数Image_CropAndScaleStrategy，并且同时设置了desiredRegion和desiredSize，由于系统对于不同图片格式采用的解码算法不同，最终解码效果将略有差异。<br>例如原始图片大小200x200，传入desiredSize:{width: 150, height: 150}，desiredRegion:{x: 0, y: 0, width: 100, height: 100}，即预期解码原图左上角1/4区域，最终将pixelMap大小缩放至150x150返回。<br>对于jpeg、webp图片（部分dng图片解码时会优先解码图片中的jpeg预览图，在此场景下也会被视为jpeg图片格式）会先进行下采样，例如按照7/8下采样，再基于175x175的图片大小进行区域裁剪，因此最终的区域内容稍大于原图的左上角1/4区域。<br>对于svg图片，由于是矢量图，可以任意缩放不损失清晰度，在解码时会根据desiredSize与原图Size的比例选择缩放比例，在基于缩放后的图片大小进行区域裁剪，因此最终返回的解码区域会有所差异。<br>针对该场景，建议在解码选项同时设置了desiredRegion与desiredSize时，参数Image_CropAndScaleStrategy应传入CROP_FIRST参数保证效果一致。
+在同时指定desiredSize和desiredRegion时执行裁剪和缩放的策略。<br>如果在配置解码选项[OH_DecodingOptions](capi-image-nativemodule-oh-decodingoptions.md)时，未填入参数Image_CropAndScaleStrategy，并且同时设置了desiredRegion和desiredSize，由于系统对于不同图片格式采用的解码算法不同，最终解码效果将略有差异。<br>例如原始图片大小200x200，传入desiredSize:{width: 150, height: 150}，desiredRegion:{x: 0, y: 0, width: 100, height: 100}，即预期解码原图左上角1/4区域，最终将pixelMap大小缩放至150x150返回。<br>对于jpeg、webp图片（部分dng图片解码时会优先解码图片中的jpeg预览图，在此场景下也会被视为jpeg图片格式）会先进行下采样，例如按照7/8下采样，再基于175x175的图片大小进行区域裁剪，因此最终的区域内容稍大于原图的左上角1/4区域。<br>对于svg图片，由于是矢量图，可以任意缩放不损失清晰度，在解码时会根据desiredSize与原图Size的比例选择缩放比例，再基于缩放后的图片大小进行区域裁剪，因此最终返回的解码区域会有所差异。<br>针对该场景，建议在解码选项同时设置了desiredRegion与desiredSize时，参数Image_CropAndScaleStrategy应传入CROP_FIRST参数保证效果一致。
 
 **起始版本：** 18
 
@@ -934,7 +934,7 @@ Image_ErrorCode OH_ImageSourceNative_CreateFromRawFile(RawFileDescriptor *rawFil
 
 | 参数项 | 描述 |
 | -- | -- |
-| RawFileDescriptor *rawFile | 指示raw文件的文件描述符。 |
+| [RawFileDescriptor](../LocalizationKit/capi-rawfile-rawfiledescriptor.md) *rawFile | 指示raw文件的文件描述符。 |
 | [OH_ImageSourceNative](capi-image-nativemodule-oh-imagesourcenative.md) **res | 指向c++本地层创建的OH_ImageSourceNative对象的指针。 |
 
 **返回：**
@@ -1651,7 +1651,7 @@ Image_ErrorCode OH_ImageSourceNative_GetImagePropertyString(OH_ImageSourceNative
 | -- | -- |
 | [OH_ImageSourceNative](capi-image-nativemodule-oh-imagesourcenative.md) *source | 被查询属性的ImageSource。 |
 | [Image_String](capi-image-nativemodule-image-string.md) *key | 被查询的属性。 |
-| char *value | 被查询属性的查询结果。输出参数。调用者需要管理内存应用程序并释放。 |
+| char *value | 被查询属性的查询结果。输出参数。调用者需要管理内存并释放。 |
 | size_t size | 字符串长度。 |
 
 **返回：**
@@ -1678,7 +1678,7 @@ Image_ErrorCode OH_ImageSourceNative_GetImagePropertyIntArray(OH_ImageSourceNati
 | -- | -- |
 | [OH_ImageSourceNative](capi-image-nativemodule-oh-imagesourcenative.md) *source | 被查询属性的ImageSource。 |
 | [Image_String](capi-image-nativemodule-image-string.md) *key | 被查询的属性。 |
-| int32_t *value | 被查询属性的查询结果。输出参数。调用者需要管理内存应用程序并释放。 |
+| int32_t *value | 被查询属性的查询结果。输出参数。调用者需要管理内存并释放。 |
 | size_t size | 字符串长度。 |
 
 **返回：**
@@ -1705,7 +1705,7 @@ Image_ErrorCode OH_ImageSourceNative_GetImagePropertyDoubleArray(OH_ImageSourceN
 | -- | -- |
 | [OH_ImageSourceNative](capi-image-nativemodule-oh-imagesourcenative.md) *source | 被查询属性的ImageSource。 |
 | [Image_String](capi-image-nativemodule-image-string.md) *key | 被查询的属性。 |
-| double *value | 被查询属性的查询结果。输出参数。调用者需要管理内存应用程序并释放。 |
+| double *value | 被查询属性的查询结果。输出参数。调用者需要管理内存并释放。 |
 | size_t size | 数组长度。 |
 
 **返回：**
@@ -1732,7 +1732,7 @@ Image_ErrorCode OH_ImageSourceNative_GetImagePropertyBlob(OH_ImageSourceNative *
 | -- | -- |
 | [OH_ImageSourceNative](capi-image-nativemodule-oh-imagesourcenative.md) *source | 被查询属性的ImageSource。 |
 | [Image_String](capi-image-nativemodule-image-string.md) *key | 被查询的属性。 |
-| void *value | 被查询属性的查询结果。输出参数。调用者需要管理内存应用程序并释放。 |
+| void *value | 被查询属性的查询结果。输出参数。调用者需要管理内存并释放。 |
 | size_t size | 数组长度。 |
 
 **返回：**

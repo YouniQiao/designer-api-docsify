@@ -1,11 +1,5 @@
 # createAuxiliaryPicture
 
-## 导入模块
-
-```TypeScript
-import { image } from 'kits/@kit.ImageKit';
-```
-
 ## createAuxiliaryPicture
 
 ```TypeScript
@@ -42,9 +36,11 @@ function createAuxiliaryPicture(buffer: ArrayBuffer, size: Size, type: Auxiliary
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 401 | Parameter error.Possible causes: 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types; 3.Parameter verification failed. |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error.Possible causes: 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types; 3.Parameter verification failed. |
 
 ## 示例
+
+ArkTS-Dyn示例:
 
 ```TypeScript
 async function CreateAuxiliaryPicture(context: Context) {
@@ -63,6 +59,35 @@ async function CreateAuxiliaryPicture(context: Context) {
     console.info(funcName, `CreateAuxiliaryPicture succeeded this.Aux_picture.type ${type}`);
   } else {
     console.error(funcName, 'CreateAuxiliaryPicture failed');
+  }
+}
+```
+
+ArkTS-Sta示例:
+
+```TypeScript
+import { common } from '@kit.AbilityKit';
+import { resourceManager } from '@kit.LocalizationKit';
+
+function CreateAuxiliaryPictureFunc(context: common.UIAbilityContext): image.AuxiliaryPicture | undefined {
+  const resourceMgr = context.resourceManager;
+  // 此处'hdr_image.jpg'仅作示例，请开发者自行替换支持hdr的图片，否则auxiliaryPicture会创建失败导致后续无法正常执行。
+  const rawFile = await resourceMgr.getRawFileContent("hdr_image.jpg");
+  let auxBuffer: ArrayBuffer = rawFile.buffer as ArrayBuffer;
+  let auxSize: image.Size = {
+    height: 180,
+    width: 240
+  };
+  let auxType: image.AuxiliaryPictureType = image.AuxiliaryPictureType.GAINMAP;
+  try {
+    let auxPicture: image.AuxiliaryPicture = image.createAuxiliaryPicture(auxBuffer, auxSize, auxType);
+    if (auxPicture != undefined) {
+      console.info(0x00000, 'CreateAuxiliaryPictureFunc', 'createAuxiliaryPicture success!');
+    }
+    return auxPicture;
+  } catch (err) {
+    console.error(0x00000, 'CreateAuxiliaryPictureFunc', 'CreateAuxiliaryPictureFunc failed: ' + err);
+    return undefined;
   }
 }
 ```

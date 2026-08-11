@@ -4,7 +4,7 @@
 declare type OnTabsGestureSwipeCallback = (index: number, extraInfo: TabsAnimationEvent) => void
 ```
 
-在页面跟手滑动过程中，逐帧触发的回调。
+Defines the callback triggered on a frame-by-frame basis during a swipe-based page turn.
 
 **Since:** 18
 
@@ -22,6 +22,6 @@ declare type OnTabsGestureSwipeCallback = (index: number, extraInfo: TabsAnimati
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| index | number | Yes | 当前显示元素的索引，索引从0开始。 <br/>取值范围：[0, 页签总数-1] |
-| extraInfo | [TabsAnimationEvent](../arkts-apis/arkts-arkui-tabs-tabsanimationevent-i.md) | Yes | 动画相关信息，只返回主轴方向上当前显示元素相对于Tabs起始位置的位移。 |
+| index | number | Yes | Index of the currently displayed element. The index is zero-based.<br>Value range: [0, Index value — 1] |
+| extraInfo | [TabsAnimationEvent](../arkts-apis/arkts-arkui-tabs-tabsanimationevent-i.md) | Yes | Extra information of the animation, which is the offset of the currently displayed element relative to the start position of the **Tabs** along the main axis. |
 

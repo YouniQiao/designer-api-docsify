@@ -12,7 +12,7 @@ import { dataAbility } from 'kits/@kit.ArkData';
 function createRdbPredicates(name: string, dataAbilityPredicates: DataAbilityPredicates): rdb.RdbPredicates
 ```
 
-通过表名和DataAbility谓词对象创建Rdb谓词对象。
+Creates an **RdbPredicates** object with a table name and **DataAbilityPredicates** object.
 
 **Since:** 7
 
@@ -26,14 +26,14 @@ function createRdbPredicates(name: string, dataAbilityPredicates: DataAbilityPre
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| name | string | Yes | 数据库表中的表名，不能为空字符串。 |
-| dataAbilityPredicates | [DataAbilityPredicates](arkts-arkdata-dataability-dataabilitypredicates-c.md) | Yes | DataAbility谓词。 |
+| name | string | Yes | Name of a database table. |
+| dataAbilityPredicates | [DataAbilityPredicates](arkts-arkdata-dataability-dataabilitypredicates-c.md) | Yes | DataAbilityPredicates** object. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| rdb.RdbPredicates | 返回RdbPredicates对象。 |
+| rdb.RdbPredicates | RdbPredicates** object created. |
 
 ## Examples
 

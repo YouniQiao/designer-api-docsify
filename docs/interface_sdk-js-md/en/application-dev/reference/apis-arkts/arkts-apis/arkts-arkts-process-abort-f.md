@@ -12,7 +12,7 @@ import { process } from 'kits/@kit.ArkTS';
 function abort(): void
 ```
 
-该方法会导致进程立即退出并生成一个核心文件，谨慎使用。
+Aborts a process and generates a core file. This method will cause a process to exit immediately. Exercise caution when using this method.
 
 **Since:** 7
 

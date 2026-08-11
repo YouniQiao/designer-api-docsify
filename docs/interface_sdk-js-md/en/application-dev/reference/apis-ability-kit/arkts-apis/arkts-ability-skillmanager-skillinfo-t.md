@@ -4,7 +4,7 @@
 export type SkillInfo = _SkillInfo
 ```
 
-技能配置信息，用于定义AI代理的技能能力。
+Provides information about a skill, including skill name, type, and associated metadata.
 
 **Since:** 26.0.0
 

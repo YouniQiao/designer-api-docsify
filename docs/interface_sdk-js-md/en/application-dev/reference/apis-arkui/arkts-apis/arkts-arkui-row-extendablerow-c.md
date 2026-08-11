@@ -16,7 +16,7 @@ Defines the Extendable Row.
 
 ```TypeScript
 static $_instantiate<T extends ExtendableRow>(
-        factory: ConstructorT<T>,
+        factory: ConstructorT<T>, 
         options?: RowOptions | RowOptionsV2,
         content_?: CustomBuilder
     ): T
@@ -30,7 +30,7 @@ Constructor of Extendable Row.
 
 **Model restriction:** This API can be used only in the stage model.
 
-<!--Device-ExtendableRow-static $_instantiate<T extends ExtendableRow>(        factory: ConstructorT<T>,        options?: RowOptions | RowOptionsV2,        content_?: CustomBuilder    ): T--><!--Device-ExtendableRow-static $_instantiate<T extends ExtendableRow>(        factory: ConstructorT<T>,        options?: RowOptions | RowOptionsV2,        content_?: CustomBuilder    ): T-End-->
+<!--Device-ExtendableRow-static $_instantiate<T extends ExtendableRow>(        factory: ConstructorT<T>,         options?: RowOptions | RowOptionsV2,        content_?: CustomBuilder    ): T--><!--Device-ExtendableRow-static $_instantiate<T extends ExtendableRow>(        factory: ConstructorT<T>,         options?: RowOptions | RowOptionsV2,        content_?: CustomBuilder    ): T-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -52,8 +52,8 @@ Constructor of Extendable Row.
 
 ```TypeScript
 static _instantiateImpl<T extends ExtendableRow>(
-        styles: CustomBuilderT<T>,
-        factory: ConstructorT<T>,
+        styles: CustomBuilderT<T>, 
+        factory: ConstructorT<T>, 
         content_?: CustomBuilder
     ): void
 ```
@@ -68,7 +68,7 @@ Entry of Extendable Row.
 
 **Model restriction:** This API can be used only in the stage model.
 
-<!--Device-ExtendableRow-static _instantiateImpl<T extends ExtendableRow>(        styles: CustomBuilderT<T>,        factory: ConstructorT<T>,        content_?: CustomBuilder    ): void--><!--Device-ExtendableRow-static _instantiateImpl<T extends ExtendableRow>(        styles: CustomBuilderT<T>,        factory: ConstructorT<T>,        content_?: CustomBuilder    ): void-End-->
+<!--Device-ExtendableRow-static _instantiateImpl<T extends ExtendableRow>(        styles: CustomBuilderT<T>,         factory: ConstructorT<T>,         content_?: CustomBuilder    ): void--><!--Device-ExtendableRow-static _instantiateImpl<T extends ExtendableRow>(        styles: CustomBuilderT<T>,         factory: ConstructorT<T>,         content_?: CustomBuilder    ): void-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 

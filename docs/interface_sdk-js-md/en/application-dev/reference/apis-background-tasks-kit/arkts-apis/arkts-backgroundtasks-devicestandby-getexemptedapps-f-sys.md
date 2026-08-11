@@ -12,7 +12,7 @@ import { deviceStandby } from 'kits/@kit.BackgroundTasksKit';
 function getExemptedApps(resourceTypes: int, callback: AsyncCallback<Array<ExemptedAppInfo>>): void
 ```
 
-获取进入待机模式的应用名单，使用Callback异步回调。
+Returns the information about the specified exempted application.
 
 **Since:** 10
 
@@ -30,21 +30,21 @@ function getExemptedApps(resourceTypes: int, callback: AsyncCallback<Array<Exemp
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| resourceTypes | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | 资源类型，类型具体说明请参考[ResourceType](arkts-backgroundtasks-devicestandby-resourcetype-e-sys.md)。 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;ExemptedAppInfo&gt;&gt; | Yes | 豁免应用信息。 |
+| resourceTypes | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | the combination of {@link ResourceType} values. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;ExemptedAppInfo&gt;&gt; | Yes | the callback of getExemptedApps. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. 3. Parameter verification failed. |
-| 9800004 | Failed to get device standby service. Possible cause: A necessary system service is not ready. |
-| 9800001 | Memory operation failed. |
-| 9800003 | Failed to complete inner transaction. |
-| 9800002 | Failed to write data into parcel. Possible reasons: 1. Invalid parameters. |
-| 201 | Permission denied. |
-| 202 | Not System App. |
-| 18700001 | Caller information verification failed. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. 3. Parameter verification failed. |
+| [9800004](../../apis-backgroundtasks-kit/errorcode-backgroundTaskMgr.md#9800004-system-service-failure) | Failed to get device standby service. Possible cause: A necessary system service is not ready. |
+| [9800001](../../apis-backgroundtasks-kit/errorcode-backgroundTaskMgr.md#9800001-memory-operation-failure) | Memory operation failed. |
+| [9800003](../../apis-backgroundtasks-kit/errorcode-backgroundTaskMgr.md#9800003-ipc-failure) | Failed to complete inner transaction. |
+| [9800002](../../apis-backgroundtasks-kit/errorcode-backgroundTaskMgr.md#9800002-parcel-operation-failure) | Failed to write data into parcel. Possible reasons: 1. Invalid parameters. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not System App. |
+| [18700001](../../apis-backgroundtasks-kit/errorcode-backgroundTaskMgr.md#18700001-caller-information-verification-failure-for-an-energy-resource-request) | Caller information verification failed. |
 
 ## Examples
 
@@ -72,7 +72,7 @@ deviceStandby.getExemptedApps(resourceTypes, (err: BusinessError, res: Array<dev
 function getExemptedApps(resourceTypes: int): Promise<Array<ExemptedAppInfo>>
 ```
 
-获取进入待机模式的应用名单，使用Promise异步回调。
+Returns the information about the specified exempted application.
 
 **Since:** 10
 
@@ -90,26 +90,26 @@ function getExemptedApps(resourceTypes: int): Promise<Array<ExemptedAppInfo>>
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| resourceTypes | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | 资源类型，类型具体说明请参考[ResourceType](arkts-backgroundtasks-devicestandby-resourcetype-e-sys.md)。 |
+| resourceTypes | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | the combination of {@link ResourceType} values. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;Array&lt;ExemptedAppInfo&gt;&gt; | 豁免应用信息。 |
+| Promise&lt;Array&lt;ExemptedAppInfo&gt;&gt; | the promise returned by getExemptedApps. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. 3. Parameter verification failed. |
-| 9800004 | Failed to get device standby service. Possible cause: A necessary system service is not ready. |
-| 9800001 | Memory operation failed. |
-| 9800003 | Failed to complete inner transaction. |
-| 9800002 | Failed to write data into parcel. Possible reasons: 1. Invalid parameters. |
-| 201 | Permission denied. |
-| 202 | Not System App. |
-| 18700001 | Caller information verification failed. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. 3. Parameter verification failed. |
+| [9800004](../../apis-backgroundtasks-kit/errorcode-backgroundTaskMgr.md#9800004-system-service-failure) | Failed to get device standby service. Possible cause: A necessary system service is not ready. |
+| [9800001](../../apis-backgroundtasks-kit/errorcode-backgroundTaskMgr.md#9800001-memory-operation-failure) | Memory operation failed. |
+| [9800003](../../apis-backgroundtasks-kit/errorcode-backgroundTaskMgr.md#9800003-ipc-failure) | Failed to complete inner transaction. |
+| [9800002](../../apis-backgroundtasks-kit/errorcode-backgroundTaskMgr.md#9800002-parcel-operation-failure) | Failed to write data into parcel. Possible reasons: 1. Invalid parameters. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not System App. |
+| [18700001](../../apis-backgroundtasks-kit/errorcode-backgroundTaskMgr.md#18700001-caller-information-verification-failure-for-an-energy-resource-request) | Caller information verification failed. |
 
 ## Examples
 

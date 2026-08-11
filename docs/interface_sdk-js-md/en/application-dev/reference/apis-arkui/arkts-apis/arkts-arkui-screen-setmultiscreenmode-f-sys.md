@@ -13,7 +13,7 @@ function setMultiScreenMode(primaryScreenId: long, secondaryScreenId: long,
     secondaryScreenMode: MultiScreenMode): Promise<void>
 ```
 
-设置扩展屏幕的显示模式（镜像/扩展），使用Promise异步回调。primaryScreenId和secondaryScreenId均为0时，仅在扩展屏显示。
+Sets the display mode (mirror or extend) of the secondary screen. This API uses a promise to return the result. If both **primaryScreenId** and **secondaryScreenId** are set to **0**, the content is displayed only on the secondary screen.
 
 **Since:** 13
 
@@ -29,38 +29,36 @@ function setMultiScreenMode(primaryScreenId: long, secondaryScreenId: long,
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| primaryScreenId | ArkTS-Dyn: number  <br>ArkTS-Sta：long | Yes | 主屏的id，该参数应为非负整数。如果输入的数字包含小数部分，向下取整。 |
-| secondaryScreenId | ArkTS-Dyn: number  <br>ArkTS-Sta：long | Yes | 扩展屏幕的id，该参数应为非负整数。如果输入的数字包含小数部分，向下取整。 |
-| secondaryScreenMode | [MultiScreenMode](arkts-arkui-screen-multiscreenmode-e-sys.md) | Yes | 扩展屏幕的显示模式。 |
+| primaryScreenId | ArkTS-Dyn: number  <br>ArkTS-Sta：long | Yes | ID of the primary screen. The value must be a non-negative integer. Floating- point numbers are rounded down. |
+| secondaryScreenId | ArkTS-Dyn: number  <br>ArkTS-Sta：long | Yes | ID of the secondary screen. The value must be a non-negative integer. Floating- point numbers are rounded down. |
+| secondaryScreenMode | [MultiScreenMode](arkts-arkui-screen-multiscreenmode-e-sys.md) | Yes | Display mode of the secondary screen. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | 无返回结果的Promise对象。 |
+| Promise&lt;void&gt; | Promise that returns no value. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. |
-| 1400003 | This display manager service works abnormally. |
-| 202 | Permission verification failed, non-system application uses system API. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. |
+| [1400003](../errorcode-display.md#1400003-abnormal-display-manager-service) | This display manager service works abnormally. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed, non-system application uses system API. |
 
 ## Examples
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
 
-// Obtain the screen ID using getAllScreens().
-let primaryScreenId: number = 0; // Primary screen ID.
-let secondaryScreenId: number = 12; // Secondary screen ID.
+let primaryScreenId: number = 0;
+let secondaryScreenId: number = 12;
 let screenMode: screen.MultiScreenMode = screen.MultiScreenMode.SCREEN_MIRROR;
-// Set the display mode of the secondary screen to mirror mode.
 screen.setMultiScreenMode(primaryScreenId, secondaryScreenId, screenMode).then(() => {
   console.info('Succeeded in setting multi screen mode. Data: ');
 }).catch((err: BusinessError) => {
-  console.error(`Failed to set multi screen mode. Code: ${err.code}, message: ${err.message}`);
+  console.error(`Failed to set multi screen mode. Code:${err.code}, message is ${err.message}`);
 });
 ```
 

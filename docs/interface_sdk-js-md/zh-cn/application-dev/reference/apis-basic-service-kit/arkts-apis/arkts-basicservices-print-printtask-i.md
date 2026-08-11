@@ -10,12 +10,6 @@
 
 **系统能力：** SystemCapability.Print.PrintFramework
 
-## 导入模块
-
-```TypeScript
-import { print } from 'kits/@kit.BasicServicesKit';
-```
-
 ## off('block')
 
 ```TypeScript
@@ -45,14 +39,14 @@ off(type: 'block', callback?: Callback<void>): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
-| 201 | the application does not have permission to call this function. |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
+| [201](../../errorcode-universal.md#201-权限校验失败) | the application does not have permission to call this function. |
 
 ## 示例
 
 ```TypeScript
 import { print } from '@kit.BasicServicesKit';
-import { BusinessError } from '@kit.BasicServicesKit';
+import { BusinessError } from '@ohos.base';
 import { fileUri } from '@kit.CoreFileKit';
 
 @Entry
@@ -70,7 +64,7 @@ struct Index {
                         })
                         // ...
                     }).catch((error: BusinessError) => {
-                        console.error(`Failed to print. Code: ${error.code}, message: ${error.message}`);
+                        console.error('print err ' + JSON.stringify(error));
                     })
                 })
             }
@@ -112,14 +106,14 @@ off(type: 'succeed', callback?: Callback<void>): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
-| 201 | the application does not have permission to call this function. |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
+| [201](../../errorcode-universal.md#201-权限校验失败) | the application does not have permission to call this function. |
 
 ## 示例
 
 ```TypeScript
 import { print } from '@kit.BasicServicesKit';
-import { BusinessError } from '@kit.BasicServicesKit';
+import { BusinessError } from '@ohos.base';
 import { fileUri } from '@kit.CoreFileKit';
 
 @Entry
@@ -137,7 +131,7 @@ struct Index {
                         })
                         // ...
                     }).catch((error: BusinessError) => {
-                        console.error(`Failed to print. Code: ${error.code}, message: ${error.message}`);
+                        console.error('print err ' + JSON.stringify(error));
                     })
                 })
             }
@@ -179,14 +173,14 @@ off(type: 'fail', callback?: Callback<void>): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
-| 201 | the application does not have permission to call this function. |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
+| [201](../../errorcode-universal.md#201-权限校验失败) | the application does not have permission to call this function. |
 
 ## 示例
 
 ```TypeScript
 import { print } from '@kit.BasicServicesKit';
-import { BusinessError } from '@kit.BasicServicesKit';
+import { BusinessError } from '@ohos.base';
 import { fileUri } from '@kit.CoreFileKit';
 
 @Entry
@@ -204,7 +198,7 @@ struct Index {
                         })
                         // ...
                     }).catch((error: BusinessError) => {
-                        console.error(`Failed to print. Code: ${error.code}, message: ${error.message}`);
+                        console.error('print err ' + JSON.stringify(error));
                     })
                 })
             }
@@ -246,14 +240,14 @@ off(type: 'cancel', callback?: Callback<void>): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
-| 201 | the application does not have permission to call this function. |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
+| [201](../../errorcode-universal.md#201-权限校验失败) | the application does not have permission to call this function. |
 
 ## 示例
 
 ```TypeScript
 import { print } from '@kit.BasicServicesKit';
-import { BusinessError } from '@kit.BasicServicesKit';
+import { BusinessError } from '@ohos.base';
 import { fileUri } from '@kit.CoreFileKit';
 
 @Entry
@@ -271,7 +265,7 @@ struct Index {
                         })
                         // ...
                     }).catch((error: BusinessError) => {
-                        console.error(`Failed to print. Code: ${error.code}, message: ${error.message}`);
+                        console.error('print err ' + JSON.stringify(error));
                     })
                 })
             }
@@ -312,8 +306,28 @@ Unregister event callback when the current print task is in process.
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
-| 201 | the application does not have permission to call this function. |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
+| [201](../../errorcode-universal.md#201-权限校验失败) | the application does not have permission to call this function. |
+
+## 示例
+
+```TypeScript
+import { print } from '@kit.BasicServicesKit';
+import { BusinessError } from '@ohos.base';
+import { fileUri } from '@kit.CoreFileKit';
+
+let filePath = '/data/storage/el2/base/haps/entry/files/test.pdf';
+try {
+    print.print([fileUri.getUriFromPath(filePath)]).then((printTask: print.PrintTask) => {
+        printTask.offBlock(() => {
+            console.info('unregister state block');
+        })
+        // ...
+    });
+} catch (error: BusinessError) {
+    console.error('print err ' + JSON.stringify(error));
+}
+```
 
 ## offCancel
 
@@ -343,8 +357,28 @@ Unregister event callback when the current print task is in process.
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
-| 201 | the application does not have permission to call this function. |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
+| [201](../../errorcode-universal.md#201-权限校验失败) | the application does not have permission to call this function. |
+
+## 示例
+
+```TypeScript
+import { print } from '@kit.BasicServicesKit';
+import { BusinessError } from '@ohos.base';
+import { fileUri } from '@kit.CoreFileKit';
+
+let filePath = '/data/storage/el2/base/haps/entry/files/test.pdf';
+try {
+    print.print([fileUri.getUriFromPath(filePath)]).then((printTask: print.PrintTask) => {
+        printTask.offCancel(() => {
+            console.info('unregister state cancel');
+        })
+        // ...
+    });
+} catch (error: BusinessError) {
+    console.error('print err ' + JSON.stringify(error));
+}
+```
 
 ## offFail
 
@@ -374,8 +408,28 @@ Unregister event callback when the current print task is in process.
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
-| 201 | the application does not have permission to call this function. |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
+| [201](../../errorcode-universal.md#201-权限校验失败) | the application does not have permission to call this function. |
+
+## 示例
+
+```TypeScript
+import { print } from '@kit.BasicServicesKit';
+import { BusinessError } from '@ohos.base';
+import { fileUri } from '@kit.CoreFileKit';
+
+let filePath = '/data/storage/el2/base/haps/entry/files/test.pdf';
+try {
+    print.print([fileUri.getUriFromPath(filePath)]).then((printTask: print.PrintTask) => {
+        printTask.offFail(() => {
+            console.info('unregister state fail');
+        })
+        // ...
+    });
+} catch (error: BusinessError) {
+    console.error('print err ' + JSON.stringify(error));
+}
+```
 
 ## offSucceed
 
@@ -405,8 +459,28 @@ Unregister event callback when the current print task is in process.
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
-| 201 | the application does not have permission to call this function. |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
+| [201](../../errorcode-universal.md#201-权限校验失败) | the application does not have permission to call this function. |
+
+## 示例
+
+```TypeScript
+import { print } from '@kit.BasicServicesKit';
+import { BusinessError } from '@ohos.base';
+import { fileUri } from '@kit.CoreFileKit';
+
+let filePath = '/data/storage/el2/base/haps/entry/files/test.pdf';
+try {
+    print.print([fileUri.getUriFromPath(filePath)]).then((printTask: print.PrintTask) => {
+        printTask.offSucceed(() => {
+            console.info('unregister state succeed');
+        })
+        // ...
+    });
+} catch (error: BusinessError) {
+    console.error('print err ' + JSON.stringify(error));
+}
+```
 
 ## on('block')
 
@@ -437,14 +511,14 @@ on(type: 'block', callback: Callback<void>): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
-| 201 | the application does not have permission to call this function. |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
+| [201](../../errorcode-universal.md#201-权限校验失败) | the application does not have permission to call this function. |
 
 ## 示例
 
 ```TypeScript
 import { print } from '@kit.BasicServicesKit';
-import { BusinessError } from '@kit.BasicServicesKit';
+import { BusinessError } from '@ohos.base';
 import { fileUri } from '@kit.CoreFileKit';
 
 @Entry
@@ -462,7 +536,7 @@ struct Index {
                         })
                         // ...
                     }).catch((error: BusinessError) => {
-                        console.error(`Failed to print. Code: ${error.code}, message: ${error.message}`);
+                        console.error('print err ' + JSON.stringify(error));
                     })
                 })
             }
@@ -504,14 +578,14 @@ on(type: 'succeed', callback: Callback<void>): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
-| 201 | the application does not have permission to call this function. |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
+| [201](../../errorcode-universal.md#201-权限校验失败) | the application does not have permission to call this function. |
 
 ## 示例
 
 ```TypeScript
 import { print } from '@kit.BasicServicesKit';
-import { BusinessError } from '@kit.BasicServicesKit';
+import { BusinessError } from '@ohos.base';
 import { fileUri } from '@kit.CoreFileKit';
 
 @Entry
@@ -529,7 +603,7 @@ struct Index {
                         })
                         // ...
                     }).catch((error: BusinessError) => {
-                        console.error(`Failed to print. Code: ${error.code}, message: ${error.message}`);
+                        console.error('print err ' + JSON.stringify(error));
                     })
                 })
             }
@@ -571,14 +645,14 @@ on(type: 'fail', callback: Callback<void>): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
-| 201 | the application does not have permission to call this function. |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
+| [201](../../errorcode-universal.md#201-权限校验失败) | the application does not have permission to call this function. |
 
 ## 示例
 
 ```TypeScript
 import { print } from '@kit.BasicServicesKit';
-import { BusinessError } from '@kit.BasicServicesKit';
+import { BusinessError } from '@ohos.base';
 import { fileUri } from '@kit.CoreFileKit';
 
 @Entry
@@ -596,7 +670,7 @@ struct Index {
                         })
                         // ...
                     }).catch((error: BusinessError) => {
-                        console.error(`Failed to print. Code: ${error.code}, message: ${error.message}`);
+                        console.error('print err ' + JSON.stringify(error));
                     })
                 })
             }
@@ -638,14 +712,14 @@ on(type: 'cancel', callback: Callback<void>): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
-| 201 | the application does not have permission to call this function. |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
+| [201](../../errorcode-universal.md#201-权限校验失败) | the application does not have permission to call this function. |
 
 ## 示例
 
 ```TypeScript
 import { print } from '@kit.BasicServicesKit';
-import { BusinessError } from '@kit.BasicServicesKit';
+import { BusinessError } from '@ohos.base';
 import { fileUri } from '@kit.CoreFileKit';
 
 @Entry
@@ -663,7 +737,7 @@ struct Index {
                         })
                         // ...
                     }).catch((error: BusinessError) => {
-                        console.error(`Failed to print. Code: ${error.code}, message: ${error.message}`);
+                        console.error('print err ' + JSON.stringify(error));
                     })
                 })
             }
@@ -704,8 +778,28 @@ Register event callback when the current print task is in process.
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
-| 201 | the application does not have permission to call this function. |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
+| [201](../../errorcode-universal.md#201-权限校验失败) | the application does not have permission to call this function. |
+
+## 示例
+
+```TypeScript
+import { print } from '@kit.BasicServicesKit';
+import { BusinessError } from '@ohos.base';
+import { fileUri } from '@kit.CoreFileKit';
+
+let filePath = '/data/storage/el2/base/haps/entry/files/test.pdf';
+try {
+    print.print([fileUri.getUriFromPath(filePath)]).then((printTask: print.PrintTask) => {
+        printTask.onBlock(() => {
+            console.info('print state is block');
+        })
+        // ...
+    });
+} catch (error: BusinessError) {
+    console.error('print err ' + JSON.stringify(error));
+}
+```
 
 ## onCancel
 
@@ -735,8 +829,28 @@ Register event callback when the current print task is in process.
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
-| 201 | the application does not have permission to call this function. |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
+| [201](../../errorcode-universal.md#201-权限校验失败) | the application does not have permission to call this function. |
+
+## 示例
+
+```TypeScript
+import { print } from '@kit.BasicServicesKit';
+import { BusinessError } from '@ohos.base';
+import { fileUri } from '@kit.CoreFileKit';
+
+let filePath = '/data/storage/el2/base/haps/entry/files/test.pdf';
+try {
+    print.print([fileUri.getUriFromPath(filePath)]).then((printTask: print.PrintTask) => {
+        printTask.onCancel(() => {
+            console.info('print state is cancel');
+        })
+        // ...
+    });
+} catch (error: BusinessError) {
+    console.error('print err ' + JSON.stringify(error));
+}
+```
 
 ## onFail
 
@@ -766,8 +880,28 @@ Register event callback when the current print task is in process.
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
-| 201 | the application does not have permission to call this function. |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
+| [201](../../errorcode-universal.md#201-权限校验失败) | the application does not have permission to call this function. |
+
+## 示例
+
+```TypeScript
+import { print } from '@kit.BasicServicesKit';
+import { BusinessError } from '@ohos.base';
+import { fileUri } from '@kit.CoreFileKit';
+
+let filePath = '/data/storage/el2/base/haps/entry/files/test.pdf';
+try {
+    print.print([fileUri.getUriFromPath(filePath)]).then((printTask: print.PrintTask) => {
+        printTask.onFail(() => {
+            console.info('print state is fail');
+        })
+        // ...
+    });
+} catch (error: BusinessError) {
+    console.error('print err ' + JSON.stringify(error));
+}
+```
 
 ## onSucceed
 
@@ -797,6 +931,26 @@ Register event callback when the current print task is in process.
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
-| 201 | the application does not have permission to call this function. |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
+| [201](../../errorcode-universal.md#201-权限校验失败) | the application does not have permission to call this function. |
+
+## 示例
+
+```TypeScript
+import { print } from '@kit.BasicServicesKit';
+import { BusinessError } from '@ohos.base';
+import { fileUri } from '@kit.CoreFileKit';
+
+let filePath = '/data/storage/el2/base/haps/entry/files/test.pdf';
+try {
+    print.print([fileUri.getUriFromPath(filePath)]).then((printTask: print.PrintTask) => {
+        printTask.onSucceed(() => {
+            console.info('print state is succeed');
+        })
+        // ...
+    });
+} catch (error: BusinessError) {
+    console.error('print err ' + JSON.stringify(error));
+}
+```
 

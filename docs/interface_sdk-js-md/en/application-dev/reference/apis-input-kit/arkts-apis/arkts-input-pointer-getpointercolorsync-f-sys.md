@@ -12,7 +12,7 @@ import { pointer } from 'kits/@kit.InputKit';
 function getPointerColorSync(): int
 ```
 
-获取鼠标光标颜色，使用同步方式返回结果。
+Obtains the pointer color. This API returns the result synchronously.
 
 **Since:** 10
 
@@ -28,13 +28,13 @@ function getPointerColorSync(): int
 
 | Type | Description |
 | --- | --- |
-| ArkTS-Dyn: number  <br>ArkTS-Sta：int | 鼠标光标颜色。 |
+| ArkTS-Dyn: number  <br>ArkTS-Sta：int | Pointer color. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 202 | SystemAPI permission error. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | SystemAPI permission error. |
 
 ## Examples
 
@@ -50,9 +50,9 @@ struct Index {
         .onClick(() => {
           try {
             let pointerColor = pointer.getPointerColorSync();
-            console.info(`Succeeded in getting pointer color sync, pointerColor: ${JSON.stringify(pointerColor)}.`);
+            console.info(`getPointerColorSync success, pointerColor: ${JSON.stringify(pointerColor)}`);
           } catch (error) {
-            console.error(`Failed to get pointer color sync, Code: ${(error as BusinessError).code}, message: ${(error as BusinessError).message}.`);
+            console.error(`getPointerColorSync failed, error: ${JSON.stringify(error, [`code`, `message`])}`);
           }
         })
     }

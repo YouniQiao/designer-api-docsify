@@ -1,6 +1,6 @@
 # RatingFrameNode
 
-定义Rating类型的FrameNode。
+Define the Rating type of FrameNode.
 
 **Inheritance/Implementation:** RatingFrameNode extends [TypedFrameNode<RatingAttribute>](TypedFrameNode<RatingAttribute>)
 
@@ -18,7 +18,7 @@
 abstract initialize(options?: RatingOptions): RatingAttribute
 ```
 
-初始化Rating类型的FrameNode。
+Initialize Rating FrameNode.
 
 **Since:** 23
 

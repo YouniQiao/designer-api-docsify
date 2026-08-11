@@ -1,11 +1,5 @@
 # isFloatViewEnabled
 
-## 导入模块
-
-```TypeScript
-import { floatView } from 'kits/@kit.ArkUI';
-```
-
 ## isFloatViewEnabled
 
 ```TypeScript
@@ -33,7 +27,6 @@ function isFloatViewEnabled(): boolean
 ## 示例
 
 ```TypeScript
-// 判断当前设备是否支持闪控窗功能
 let enable: boolean = floatView.isFloatViewEnabled();
 console.info('Float view enabled is: ' + enable);
 ```

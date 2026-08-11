@@ -15,12 +15,6 @@ AutoFillExtensionAbility模块支持账号、密码、地址等多种数据类�
 
 **系统接口：** 此接口为系统接口。
 
-## 导入模块
-
-```TypeScript
-import { AutoFillExtensionAbility } from 'kits/@kit.AbilityKit';
-```
-
 ## onBackground
 
 ```TypeScript
@@ -146,6 +140,22 @@ onDestroy(): Promise<void> | undefined
 | --- | --- |
 | Promise&lt;void&gt; | the promise returned by the function. |
 
+## 示例
+
+ArkTS-Sta示例：
+
+```TypeScript
+'use static'
+import { AutoFillExtensionAbility } from '@kit.AbilityKit';
+import { hilog } from '@kit.PerformanceAnalysisKit';
+
+class MyAutoFillExtensionAbility extends AutoFillExtensionAbility {
+  onDestroy(): Promise<void> {
+    hilog.info(0x0000, 'testTag', '%{public}s', 'onDestroy');
+  }
+}
+```
+
 ## onFillRequest
 
 ```TypeScript
@@ -176,6 +186,8 @@ onFillRequest(session: UIExtensionContentSession, request: FillRequest, callback
 
 ## 示例
 
+ArkTS-Dyn示例：
+
 ```TypeScript
 import { AutoFillExtensionAbility, UIExtensionContentSession, autoFillManager, common } from '@kit.AbilityKit';
 import { hilog } from '@kit.PerformanceAnalysisKit';
@@ -201,6 +213,43 @@ class MyAutoFillExtensionAbility extends AutoFillExtensionAbility {
       let storage_fill = new LocalStorage(localStorageData);
       if (session) {
         // 加载自动保存页面
+        session.loadContent('pages/SelectorList', storage_fill);
+      } else {
+        hilog.error(0x0000, 'testTag', '%{public}s', 'session is null');
+      }
+    } catch (err) {
+      hilog.error(0x0000, 'testTag', '%{public}s', 'failed to load content');
+    }
+  }
+}
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+'use static'
+import { AutoFillExtensionAbility, UIExtensionContentSession, autoFillManager, common } from '@kit.AbilityKit';
+import { LocalStorage } from '@kit.ArkUI';
+import { hilog } from '@kit.PerformanceAnalysisKit';
+
+class MyAutoFillExtensionAbility extends AutoFillExtensionAbility {
+  onFillRequest(session: UIExtensionContentSession,
+    request: autoFillManager.FillRequest,
+    callback: autoFillManager.FillRequestCallback) {
+    hilog.info(0x0000, 'testTag', '%{public}s', 'autofill onFillRequest');
+    hilog.info(0x0000, 'testTag', 'fill requestCallback: %{public}s', JSON.stringify(callback));
+    hilog.info(0x0000, 'testTag', 'get request viewData: ', JSON.stringify(request.viewData));
+    try {
+      let localStorageData: Record<string, UIExtensionContentSession | string | autoFillManager.FillRequestCallback |
+      autoFillManager.ViewData | common.AutoFillExtensionContext> = {
+        'session': session,
+        'message': 'AutoFill Page',
+        'fillCallback': callback,
+        'viewData': request.viewData,
+        'context': this.context
+      };
+      let storage_fill = new LocalStorage(localStorageData);
+      if (session) {
         session.loadContent('pages/SelectorList', storage_fill);
       } else {
         hilog.error(0x0000, 'testTag', '%{public}s', 'session is null');
@@ -275,6 +324,8 @@ onSaveRequest(session: UIExtensionContentSession, request: SaveRequest, callback
 
 ## 示例
 
+ArkTS-Dyn示例：
+
 ```TypeScript
 import { AutoFillExtensionAbility, UIExtensionContentSession, autoFillManager, common } from '@kit.AbilityKit';
 import { hilog } from '@kit.PerformanceAnalysisKit';
@@ -298,6 +349,41 @@ class MyAutoFillExtensionAbility extends AutoFillExtensionAbility {
       let storage_save = new LocalStorage(localStorageData);
       if (session) {
         // 加载自动保存页面
+        session.loadContent('pages/SavePage', storage_save);
+      } else {
+        hilog.error(0x0000, 'testTag', '%{public}s', 'session is null');
+      }
+    } catch (err) {
+      hilog.error(0x0000, 'testTag', '%{public}s', 'failed to load content');
+    }
+  }
+}
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+'use static'
+import { AutoFillExtensionAbility, UIExtensionContentSession, autoFillManager, common } from '@kit.AbilityKit';
+import { LocalStorage } from '@kit.ArkUI';
+import { hilog } from '@kit.PerformanceAnalysisKit';
+
+class MyAutoFillExtensionAbility extends AutoFillExtensionAbility {
+  onSaveRequest(session: UIExtensionContentSession,
+    request: autoFillManager.SaveRequest,
+    callback: autoFillManager.SaveRequestCallback) {
+    hilog.info(0x0000, 'testTag', '%{public}s', 'onSaveRequest');
+    try {
+      let localStorageData: Record<string, UIExtensionContentSession | string | autoFillManager.SaveRequestCallback |
+      autoFillManager.ViewData | common.AutoFillExtensionContext> = {
+        'session': session,
+        'message': 'AutoFill Page',
+        'fillCallback': callback,
+        'viewData': request.viewData,
+        'context': this.context,
+      };
+      let storage_save = new LocalStorage(localStorageData);
+      if (session) {
         session.loadContent('pages/SavePage', storage_save);
       } else {
         hilog.error(0x0000, 'testTag', '%{public}s', 'session is null');

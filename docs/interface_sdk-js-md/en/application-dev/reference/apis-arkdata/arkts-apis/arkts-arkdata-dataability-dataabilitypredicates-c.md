@@ -1,6 +1,6 @@
 # DataAbilityPredicates
 
-提供用于实现不同查询方法的谓词。
+Provides APIs for creating diverse query conditions.
 
 **Since:** 7
 
@@ -22,7 +22,7 @@ import { dataAbility } from 'kits/@kit.ArkData';
 and(): DataAbilityPredicates
 ```
 
-将和条件添加到谓词中。
+Creates a **DataAbilityPredicates** object to add the AND condition.
 
 **Since:** 7
 
@@ -36,7 +36,7 @@ and(): DataAbilityPredicates
 
 | Type | Description |
 | --- | --- |
-| [DataAbilityPredicates](arkts-arkdata-dataability-dataabilitypredicates-c.md) | 返回带有和条件的DataAbility谓词。 |
+| [DataAbilityPredicates](arkts-arkdata-dataability-dataabilitypredicates-c.md) | DataAbilityPredicates** object with the AND condition. |
 
 ## Examples
 
@@ -52,7 +52,7 @@ dataAbilityPredicates.equalTo("NAME", "Lisa")
 beginWrap(): DataAbilityPredicates
 ```
 
-在谓词中添加左括号。此方法类似于SQL语句的“(”，需要与[endWrap](arkts-arkdata-dataability-dataabilitypredicates-c.md#endwrap)一起使用。
+Creates a **DataAbilityPredicates** object to add a left parenthesis. This API is similar to "(" in an SQL statement and must be used with **endWrap**.
 
 **Since:** 7
 
@@ -66,7 +66,7 @@ beginWrap(): DataAbilityPredicates
 
 | Type | Description |
 | --- | --- |
-| [DataAbilityPredicates](arkts-arkdata-dataability-dataabilitypredicates-c.md) | 返回带有左括号的DataAbility谓词。 |
+| [DataAbilityPredicates](arkts-arkdata-dataability-dataabilitypredicates-c.md) | DataAbilityPredicates** object with a left parenthesis. |
 
 ## Examples
 
@@ -85,9 +85,9 @@ dataAbilityPredicates.equalTo("NAME", "lisi")
 beginsWith(field: string, value: string): DataAbilityPredicates
 ```
 
-配置谓词以匹配数据类型为string且值以指定字符串开头的字段。
+Creates a **DataAbilityPredicates** object to search for the records in the specified column that begin with the given value.
 
-此方法类似于SQL语句的“value%”。
+This API is similar to the percent sign (%) in SQL statements.
 
 **Since:** 7
 
@@ -101,14 +101,14 @@ beginsWith(field: string, value: string): DataAbilityPredicates
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| field | string | Yes | 数据库表中的列名，不能为空字符串。 |
-| value | string | Yes | 指示要与谓词匹配的值。 |
+| field | string | Yes | Column name in the table. |
+| value | string | Yes | Value to match. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [DataAbilityPredicates](arkts-arkdata-dataability-dataabilitypredicates-c.md) | 返回与指定字段匹配的谓词。 |
+| [DataAbilityPredicates](arkts-arkdata-dataability-dataabilitypredicates-c.md) | DataAbilityPredicates** object created. |
 
 ## Examples
 
@@ -122,7 +122,7 @@ dataAbilityPredicates.beginsWith("NAME", "os")
 between(field: string, low: ValueType, high: ValueType): DataAbilityPredicates
 ```
 
-配置谓词以匹配数据类型为ValueType且value在指定范围内的指定字段。
+Creates a **DataAbilityPredicates** object to search for the records in the specified column that are within the given range.
 
 **Since:** 7
 
@@ -136,15 +136,15 @@ between(field: string, low: ValueType, high: ValueType): DataAbilityPredicates
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| field | string | Yes | 数据库表中的列名，不能为空字符串。 |
-| low | [ValueType](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-pasteboard-valuetype-t.md) | Yes | 指示与谓词匹配的最小值。 |
-| high | [ValueType](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-pasteboard-valuetype-t.md) | Yes | 指示与谓词匹配的最大值。 |
+| field | string | Yes | Column name in the table. |
+| low | [ValueType](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-pasteboard-valuetype-t.md) | Yes | Minimum value to match. |
+| high | [ValueType](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-pasteboard-valuetype-t.md) | Yes | Maximum value to match. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [DataAbilityPredicates](arkts-arkdata-dataability-dataabilitypredicates-c.md) | 返回与指定字段匹配的谓词。 |
+| [DataAbilityPredicates](arkts-arkdata-dataability-dataabilitypredicates-c.md) | DataAbilityPredicates** object created. |
 
 ## Examples
 
@@ -158,7 +158,7 @@ dataAbilityPredicates.between("AGE", 10, 50)
 contains(field: string, value: string): DataAbilityPredicates
 ```
 
-配置谓词以匹配数据类型为string且value包含指定值的字段。
+Creates a **DataAbilityPredicates** object to search for the records in the specified column that contain the given value.
 
 **Since:** 7
 
@@ -172,14 +172,14 @@ contains(field: string, value: string): DataAbilityPredicates
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| field | string | Yes | 数据库表中的列名，不能为空字符串。 |
-| value | string | Yes | 指示要与谓词匹配的值。 |
+| field | string | Yes | Column name in the table. |
+| value | string | Yes | Value to match. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [DataAbilityPredicates](arkts-arkdata-dataability-dataabilitypredicates-c.md) | 返回与指定字段匹配的谓词。 |
+| [DataAbilityPredicates](arkts-arkdata-dataability-dataabilitypredicates-c.md) | DataAbilityPredicates** object created. |
 
 ## Examples
 
@@ -193,7 +193,7 @@ dataAbilityPredicates.contains("NAME", "os")
 distinct(): DataAbilityPredicates
 ```
 
-配置谓词以过滤重复记录并仅保留其中一个。
+Creates a **DataAbilityPredicates** object to filter out duplicate records.
 
 **Since:** 7
 
@@ -207,7 +207,7 @@ distinct(): DataAbilityPredicates
 
 | Type | Description |
 | --- | --- |
-| [DataAbilityPredicates](arkts-arkdata-dataability-dataabilitypredicates-c.md) | 返回可用于过滤重复记录的谓词。 |
+| [DataAbilityPredicates](arkts-arkdata-dataability-dataabilitypredicates-c.md) | DataAbilityPredicates** object created. |
 
 ## Examples
 
@@ -221,7 +221,7 @@ dataAbilityPredicates.equalTo("NAME", "Rose").distinct()
 endWrap(): DataAbilityPredicates
 ```
 
-在谓词中添加右括号。此方法类似于SQL语句的“)”，需要和[beginWrap](arkts-arkdata-dataability-dataabilitypredicates-c.md#beginwrap)一起使用。
+Creates a **DataAbilityPredicates** object to add a right parenthesis. This API is similar to ")" in an SQL statement and must be used with **beginWrap**.
 
 **Since:** 7
 
@@ -235,7 +235,7 @@ endWrap(): DataAbilityPredicates
 
 | Type | Description |
 | --- | --- |
-| [DataAbilityPredicates](arkts-arkdata-dataability-dataabilitypredicates-c.md) | 返回带有右括号的DataAbility谓词。 |
+| [DataAbilityPredicates](arkts-arkdata-dataability-dataabilitypredicates-c.md) | DataAbilityPredicates** object with a right parenthesis. |
 
 ## Examples
 
@@ -254,9 +254,9 @@ dataAbilityPredicates.equalTo("NAME", "lisi")
 endsWith(field: string, value: string): DataAbilityPredicates
 ```
 
-配置谓词以匹配数据类型为string且值以指定字符串结尾的字段。
+Creates a **DataAbilityPredicates** object to search for the records in the specified column that end with the given value.
 
-此方法类似于SQL语句的“%value”。
+This API is similar to the percent sign (%) in SQL statements.
 
 **Since:** 7
 
@@ -270,14 +270,14 @@ endsWith(field: string, value: string): DataAbilityPredicates
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| field | string | Yes | 数据库表中的列名，不能为空字符串。 |
-| value | string | Yes | 指示要与谓词匹配的值。 |
+| field | string | Yes | Column name in the table. |
+| value | string | Yes | Value to match. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [DataAbilityPredicates](arkts-arkdata-dataability-dataabilitypredicates-c.md) | 返回与指定字段匹配的谓词。 |
+| [DataAbilityPredicates](arkts-arkdata-dataability-dataabilitypredicates-c.md) | DataAbilityPredicates** object created. |
 
 ## Examples
 
@@ -291,9 +291,9 @@ dataAbilityPredicates.endsWith("NAME", "se")
 equalTo(field: string, value: ValueType): DataAbilityPredicates
 ```
 
-配置谓词以匹配数据，数据的指定字段数据类型为ValueType且值等于指定值。
+Creates a **DataAbilityPredicates** object to search for the records in the specified column that are equal to the given value.
 
-此方法类似于SQL语句的“=”。
+This API is similar to the SQL equal to (=) operator.
 
 **Since:** 7
 
@@ -307,14 +307,14 @@ equalTo(field: string, value: ValueType): DataAbilityPredicates
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| field | string | Yes | 数据库表中的列名，不能为空字符串。 |
-| value | [ValueType](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-pasteboard-valuetype-t.md) | Yes | 指示要与谓词匹配的值。 |
+| field | string | Yes | Column name in the table. |
+| value | [ValueType](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-pasteboard-valuetype-t.md) | Yes | Value to match. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [DataAbilityPredicates](arkts-arkdata-dataability-dataabilitypredicates-c.md) | 返回与指定字段匹配的谓词。 |
+| [DataAbilityPredicates](arkts-arkdata-dataability-dataabilitypredicates-c.md) | DataAbilityPredicates** object created. |
 
 ## Examples
 
@@ -328,7 +328,7 @@ dataAbilityPredicates.equalTo("NAME", "lisi")
 glob(field: string, value: string): DataAbilityPredicates
 ```
 
-配置谓词以匹配数据类型为string的指定字段。与like方法不同，该方法的输入参数区分大小写。
+Creates a **DataAbilityPredicates** object to search for the records in the specified column that match the given string. Different from **like**, the input parameters of this API are case-sensitive.
 
 **Since:** 7
 
@@ -342,14 +342,14 @@ glob(field: string, value: string): DataAbilityPredicates
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| field | string | Yes | 数据库表中的列名，不能为空字符串。 |
-| value | string | Yes | 指示要与谓词匹配的值。 |
+| field | string | Yes | Column name in the table. |
+| value | string | Yes | Value to match. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [DataAbilityPredicates](arkts-arkdata-dataability-dataabilitypredicates-c.md) | 返回与指定字段匹配的谓词。 |
+| [DataAbilityPredicates](arkts-arkdata-dataability-dataabilitypredicates-c.md) | DataAbilityPredicates** object created. |
 
 ## Examples
 
@@ -369,7 +369,7 @@ dataAbilityPredicates.glob("NAME", "lisa")
 greaterThan(field: string, value: ValueType): DataAbilityPredicates
 ```
 
-配置谓词以匹配数据类型为ValueType且值大于指定值的字段。
+Creates a **DataAbilityPredicates** object to search for the records in the specified column that are greater than the given value.
 
 **Since:** 7
 
@@ -383,14 +383,14 @@ greaterThan(field: string, value: ValueType): DataAbilityPredicates
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| field | string | Yes | 数据库表中的列名，不能为空字符串。 |
-| value | [ValueType](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-pasteboard-valuetype-t.md) | Yes | 指示要与谓词匹配的值。 |
+| field | string | Yes | Column name in the table. |
+| value | [ValueType](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-pasteboard-valuetype-t.md) | Yes | Value to match. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [DataAbilityPredicates](arkts-arkdata-dataability-dataabilitypredicates-c.md) | 返回与指定字段匹配的谓词。 |
+| [DataAbilityPredicates](arkts-arkdata-dataability-dataabilitypredicates-c.md) | DataAbilityPredicates** object created. |
 
 ## Examples
 
@@ -404,7 +404,7 @@ dataAbilityPredicates.greaterThan("AGE", 18)
 greaterThanOrEqualTo(field: string, value: ValueType): DataAbilityPredicates
 ```
 
-配置谓词以匹配数据类型为ValueType且value大于或等于指定值的字段。
+Creates a **DataAbilityPredicates** object to search for the records in the specified column that are greater than or equal to the given value.
 
 **Since:** 7
 
@@ -418,14 +418,14 @@ greaterThanOrEqualTo(field: string, value: ValueType): DataAbilityPredicates
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| field | string | Yes | 数据库表中的列名，不能为空字符串。 |
-| value | [ValueType](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-pasteboard-valuetype-t.md) | Yes | 指示要与谓词匹配的值。 |
+| field | string | Yes | Column name in the table. |
+| value | [ValueType](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-pasteboard-valuetype-t.md) | Yes | Value to match. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [DataAbilityPredicates](arkts-arkdata-dataability-dataabilitypredicates-c.md) | 返回与指定字段匹配的谓词。 |
+| [DataAbilityPredicates](arkts-arkdata-dataability-dataabilitypredicates-c.md) | DataAbilityPredicates** object created. |
 
 ## Examples
 
@@ -439,7 +439,7 @@ dataAbilityPredicates.greaterThanOrEqualTo("AGE", 18)
 groupBy(fields: Array<string>): DataAbilityPredicates
 ```
 
-配置谓词按指定列分组查询结果。
+Creates a **DataAbilityPredicates** object to group the query results based on the specified columns.
 
 **Since:** 7
 
@@ -453,13 +453,13 @@ groupBy(fields: Array<string>): DataAbilityPredicates
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| fields | Array&lt;string&gt; | Yes | 指定分组依赖的列名。 |
+| fields | Array&lt;string&gt; | Yes | Names of columns to group. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [DataAbilityPredicates](arkts-arkdata-dataability-dataabilitypredicates-c.md) | 返回分组查询列的谓词。 |
+| [DataAbilityPredicates](arkts-arkdata-dataability-dataabilitypredicates-c.md) | DataAbilityPredicates** object created. |
 
 ## Examples
 
@@ -473,7 +473,7 @@ dataAbilityPredicates.groupBy(["AGE", "NAME"])
 in(field: string, value: Array<ValueType>): DataAbilityPredicates
 ```
 
-配置谓词以匹配数据类型为ValueType数组且值在给定范围内的指定字段。
+Creates a **DataAbilityPredicates** object to search for the records in the specified column that are in the given range.
 
 **Since:** 7
 
@@ -487,14 +487,14 @@ in(field: string, value: Array<ValueType>): DataAbilityPredicates
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| field | string | Yes | 数据库表中的列名，不能为空字符串。 |
-| value | Array&lt;ValueType&gt; | Yes | 以ValueType类型数组形式指定的要匹配的值。 |
+| field | string | Yes | Column name in the table. |
+| value | Array&lt;ValueType&gt; | Yes | Array of **ValueType**s to match. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [DataAbilityPredicates](arkts-arkdata-dataability-dataabilitypredicates-c.md) | 返回与指定字段匹配的谓词。 |
+| [DataAbilityPredicates](arkts-arkdata-dataability-dataabilitypredicates-c.md) | DataAbilityPredicates** object created. |
 
 ## Examples
 
@@ -508,7 +508,7 @@ dataAbilityPredicates.in("AGE", [18, 20])
 indexedBy(field: string): DataAbilityPredicates
 ```
 
-配置谓词以指定索引列。在使用此方法之前，您需要创建一个索引列。
+Creates a **DataAbilityPredicates** object to specify the index column. Before calling this API, you need to create an index column.
 
 **Since:** 7
 
@@ -522,13 +522,13 @@ indexedBy(field: string): DataAbilityPredicates
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| field | string | Yes | 创建的索引列名称。 |
+| field | string | Yes | Name of the index. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [DataAbilityPredicates](arkts-arkdata-dataability-dataabilitypredicates-c.md) | 返回具有指定索引列的谓词。 |
+| [DataAbilityPredicates](arkts-arkdata-dataability-dataabilitypredicates-c.md) | DataAbilityPredicates** object created. |
 
 ## Examples
 
@@ -581,7 +581,8 @@ export default class EntryAbility extends UIAbility {
 isNotNull(field: string): DataAbilityPredicates
 ```
 
-配置谓词以匹配值不为null的指定字段。
+Creates a **DataAbilityPredicates** object to search for the records in the specified column that are not  
+**null**.
 
 **Since:** 7
 
@@ -595,13 +596,13 @@ isNotNull(field: string): DataAbilityPredicates
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| field | string | Yes | 数据库表中的列名，不能为空字符串。 |
+| field | string | Yes | Column name in the table. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [DataAbilityPredicates](arkts-arkdata-dataability-dataabilitypredicates-c.md) | 返回与指定字段匹配的谓词。 |
+| [DataAbilityPredicates](arkts-arkdata-dataability-dataabilitypredicates-c.md) | DataAbilityPredicates** object created. |
 
 ## Examples
 
@@ -615,7 +616,7 @@ dataAbilityPredicates.isNotNull("NAME")
 isNull(field: string): DataAbilityPredicates
 ```
 
-配置谓词以匹配值为null的字段。
+Creates a **DataAbilityPredicates** object to search for the records in the specified column that are **null**.
 
 **Since:** 7
 
@@ -629,13 +630,13 @@ isNull(field: string): DataAbilityPredicates
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| field | string | Yes | 数据库表中的列名，不能为空字符串。 |
+| field | string | Yes | Column name in the table. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [DataAbilityPredicates](arkts-arkdata-dataability-dataabilitypredicates-c.md) | 返回与指定字段匹配的谓词。 |
+| [DataAbilityPredicates](arkts-arkdata-dataability-dataabilitypredicates-c.md) | DataAbilityPredicates** object created. |
 
 ## Examples
 
@@ -649,7 +650,7 @@ dataAbilityPredicates.isNull("NAME")
 lessThan(field: string, value: ValueType): DataAbilityPredicates
 ```
 
-配置谓词以匹配数据类型为ValueType且value小于指定值的字段。
+Creates a **DataAbilityPredicates** object to search for the records in the specified column that are less than the given value.
 
 **Since:** 7
 
@@ -663,14 +664,14 @@ lessThan(field: string, value: ValueType): DataAbilityPredicates
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| field | string | Yes | 数据库表中的列名，不能为空字符串。 |
-| value | [ValueType](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-pasteboard-valuetype-t.md) | Yes | 指示要与谓词匹配的值。 |
+| field | string | Yes | Column name in the table. |
+| value | [ValueType](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-pasteboard-valuetype-t.md) | Yes | Value to match. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [DataAbilityPredicates](arkts-arkdata-dataability-dataabilitypredicates-c.md) | 返回与指定字段匹配的谓词。 |
+| [DataAbilityPredicates](arkts-arkdata-dataability-dataabilitypredicates-c.md) | DataAbilityPredicates** object created. |
 
 ## Examples
 
@@ -684,7 +685,7 @@ dataAbilityPredicates.lessThan("AGE", 20)
 lessThanOrEqualTo(field: string, value: ValueType): DataAbilityPredicates
 ```
 
-配置谓词以匹配数据类型为ValueType且value小于或等于指定值的字段。
+Creates a **DataAbilityPredicates** object to search for the records in the specified column that are less than or equal to the given value.
 
 **Since:** 7
 
@@ -698,14 +699,14 @@ lessThanOrEqualTo(field: string, value: ValueType): DataAbilityPredicates
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| field | string | Yes | 数据库表中的列名，不能为空字符串。 |
-| value | [ValueType](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-pasteboard-valuetype-t.md) | Yes | 指示要与谓词匹配的值。 |
+| field | string | Yes | Column name in the table. |
+| value | [ValueType](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-pasteboard-valuetype-t.md) | Yes | Value to match. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [DataAbilityPredicates](arkts-arkdata-dataability-dataabilitypredicates-c.md) | 返回与指定字段匹配的谓词。 |
+| [DataAbilityPredicates](arkts-arkdata-dataability-dataabilitypredicates-c.md) | DataAbilityPredicates** object created. |
 
 ## Examples
 
@@ -719,9 +720,9 @@ dataAbilityPredicates.lessThanOrEqualTo("AGE", 20)
 like(field: string, value: string): DataAbilityPredicates
 ```
 
-配置谓词以匹配数据类型为string且值类似于指定字符串的字段。
+Creates a **DataAbilityPredicates** object to search for the records in the specified column that are similar to the given value.
 
-此方法类似于SQL语句“like”。
+This API is similar to the SQL **like** statement.
 
 **Since:** 7
 
@@ -735,14 +736,14 @@ like(field: string, value: string): DataAbilityPredicates
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| field | string | Yes | 数据库表中的列名，不能为空字符串。 |
-| value | string | Yes | 指示要与谓词匹配的值。 |
+| field | string | Yes | Column name in the table. |
+| value | string | Yes | Value to match. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [DataAbilityPredicates](arkts-arkdata-dataability-dataabilitypredicates-c.md) | 返回与指定字段匹配的谓词。 |
+| [DataAbilityPredicates](arkts-arkdata-dataability-dataabilitypredicates-c.md) | DataAbilityPredicates** object created. |
 
 ## Examples
 
@@ -756,7 +757,7 @@ dataAbilityPredicates.like("NAME", "%os%")
 limitAs(value: number): DataAbilityPredicates
 ```
 
-设置谓词的最大数据记录数量。
+Creates a **DataAbilityPredicates** object to limit the number of records.
 
 **Since:** 7
 
@@ -770,13 +771,13 @@ limitAs(value: number): DataAbilityPredicates
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | number | Yes | 最大数据记录数，取值为正整数。传入值小于等于0时，不会限制记录数量。 |
+| value | number | Yes | Maximum number of records. The value should be a positive integer. If a value less than or equal to **0** is specified, the number of records is not limited. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [DataAbilityPredicates](arkts-arkdata-dataability-dataabilitypredicates-c.md) | 返回可用于设置最大数据记录数的谓词。 |
+| [DataAbilityPredicates](arkts-arkdata-dataability-dataabilitypredicates-c.md) | DataAbilityPredicates** object created. |
 
 ## Examples
 
@@ -790,7 +791,7 @@ dataAbilityPredicates.equalTo("NAME", "Rose").limitAs(3)
 notBetween(field: string, low: ValueType, high: ValueType): DataAbilityPredicates
 ```
 
-配置谓词以匹配数据类型为ValueType且value超出给定范围的指定字段。
+Creates a **DataAbilityPredicates** object to search for the records in the specified column that are out of the given range.
 
 **Since:** 7
 
@@ -804,15 +805,15 @@ notBetween(field: string, low: ValueType, high: ValueType): DataAbilityPredicate
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| field | string | Yes | 数据库表中的列名，不能为空字符串。 |
-| low | [ValueType](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-pasteboard-valuetype-t.md) | Yes | 指示与谓词匹配的最小值。 |
-| high | [ValueType](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-pasteboard-valuetype-t.md) | Yes | 指示与谓词匹配的最大值。 |
+| field | string | Yes | Column name in the table. |
+| low | [ValueType](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-pasteboard-valuetype-t.md) | Yes | Minimum value to match. |
+| high | [ValueType](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-pasteboard-valuetype-t.md) | Yes | Maximum value to match. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [DataAbilityPredicates](arkts-arkdata-dataability-dataabilitypredicates-c.md) | 返回与指定字段匹配的谓词。 |
+| [DataAbilityPredicates](arkts-arkdata-dataability-dataabilitypredicates-c.md) | DataAbilityPredicates** object created. |
 
 ## Examples
 
@@ -826,9 +827,9 @@ dataAbilityPredicates.notBetween("AGE", 10, 50)
 notEqualTo(field: string, value: ValueType): DataAbilityPredicates
 ```
 
-配置谓词以匹配数据，数据的指定字段数据类型为ValueType且不等于指定值。
+Creates a **DataAbilityPredicates** object to search for the records in the specified column that are not equal to the given value.
 
-此方法类似于SQL语句的“!=”。
+This API is similar to the SQL not equal (!=) operator.
 
 **Since:** 7
 
@@ -842,14 +843,14 @@ notEqualTo(field: string, value: ValueType): DataAbilityPredicates
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| field | string | Yes | 数据库表中的列名，不能为空字符串。 |
-| value | [ValueType](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-pasteboard-valuetype-t.md) | Yes | 指示要与谓词匹配的值。 |
+| field | string | Yes | Column name in the table. |
+| value | [ValueType](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-pasteboard-valuetype-t.md) | Yes | Value to match. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [DataAbilityPredicates](arkts-arkdata-dataability-dataabilitypredicates-c.md) | 返回与指定字段匹配的谓词。 |
+| [DataAbilityPredicates](arkts-arkdata-dataability-dataabilitypredicates-c.md) | DataAbilityPredicates** object created. |
 
 ## Examples
 
@@ -863,7 +864,7 @@ dataAbilityPredicates.notEqualTo("NAME", "lisi")
 notIn(field: string, value: Array<ValueType>): DataAbilityPredicates
 ```
 
-配置谓词以匹配数据类型为ValueType数组且值不在给定范围内的指定字段。
+Creates a **DataAbilityPredicates** object to search for the records in the specified column that are out of the given range.
 
 **Since:** 7
 
@@ -877,14 +878,14 @@ notIn(field: string, value: Array<ValueType>): DataAbilityPredicates
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| field | string | Yes | 数据库表中的列名，不能为空字符串。 |
-| value | Array&lt;ValueType&gt; | Yes | 以ValueType类型数组形式指定的要匹配的值。 |
+| field | string | Yes | Column name in the table. |
+| value | Array&lt;ValueType&gt; | Yes | Array of **ValueType**s to match. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [DataAbilityPredicates](arkts-arkdata-dataability-dataabilitypredicates-c.md) | 返回与指定字段匹配的谓词。 |
+| [DataAbilityPredicates](arkts-arkdata-dataability-dataabilitypredicates-c.md) | DataAbilityPredicates** object created. |
 
 ## Examples
 
@@ -898,8 +899,7 @@ dataAbilityPredicates.notIn("NAME", ["Lisa", "Rose"])
 offsetAs(rowOffset: number): DataAbilityPredicates
 ```
 
-设置谓词查询结果的起始位置。需要同步调用[limitAs](arkts-arkdata-dataability-dataabilitypredicates-c.md#limitas)接口指定查询数量，否则无查询结果。查询指定偏移位置后的所有行时，  
-[limitAs](arkts-arkdata-dataability-dataabilitypredicates-c.md#limitas)接口需传入参数-1。
+Creates a **DataAbilityPredicates** object to set the start position of the query result. This API must be used together with **limitAs**. Otherwise, no result will be returned. To query all rows after the specified offset,pass in **-1** in **limitAs**.
 
 **Since:** 7
 
@@ -913,13 +913,13 @@ offsetAs(rowOffset: number): DataAbilityPredicates
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| rowOffset | number | Yes | 返回结果的起始位置，取值为正整数。传入值小于等于0时，查询结果将从第一个元素位置返回。 |
+| rowOffset | number | Yes | Start position. The value should be a positive integer. If a value less than or equal to **0** is specified, the query result is returned from the first element. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [DataAbilityPredicates](arkts-arkdata-dataability-dataabilitypredicates-c.md) | 返回具有指定返回结果起始位置的谓词。 |
+| [DataAbilityPredicates](arkts-arkdata-dataability-dataabilitypredicates-c.md) | DataAbilityPredicates** object created. |
 
 ## Examples
 
@@ -934,9 +934,9 @@ dataAbilityPredicates.equalTo("NAME", "Rose").offsetAs(3).limitAs(3)
 or(): DataAbilityPredicates
 ```
 
-将或条件添加到谓词中。
+Creates a **DataAbilityPredicates** object to add the OR condition.
 
-此方法类似于SQL语句“or”。
+This API is similar to the SQL **or** operator.
 
 **Since:** 7
 
@@ -950,7 +950,7 @@ or(): DataAbilityPredicates
 
 | Type | Description |
 | --- | --- |
-| [DataAbilityPredicates](arkts-arkdata-dataability-dataabilitypredicates-c.md) | 返回带有或条件的DataAbility谓词。 |
+| [DataAbilityPredicates](arkts-arkdata-dataability-dataabilitypredicates-c.md) | DataAbilityPredicates** object with the OR condition. |
 
 ## Examples
 
@@ -966,7 +966,7 @@ dataAbilityPredicates.equalTo("NAME", "Lisa")
 orderByAsc(field: string): DataAbilityPredicates
 ```
 
-配置谓词以匹配其值按升序排序的列。当有多个orderByAsc使用时，最先使用的具有最高优先级。
+Creates a **DataAbilityPredicates** object to sort the records in the specified column in ascending order. When there are multiple **orderByAsc**s, the first **orderByAsc** used has the highest priority.
 
 **Since:** 7
 
@@ -980,13 +980,13 @@ orderByAsc(field: string): DataAbilityPredicates
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| field | string | Yes | 数据库表中的列名，不能为空字符串。 |
+| field | string | Yes | Column name in the table. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [DataAbilityPredicates](arkts-arkdata-dataability-dataabilitypredicates-c.md) | 返回与指定字段匹配的谓词。 |
+| [DataAbilityPredicates](arkts-arkdata-dataability-dataabilitypredicates-c.md) | DataAbilityPredicates** object created. |
 
 ## Examples
 
@@ -1001,7 +1001,7 @@ dataAbilityPredicates.orderByAsc("NAME").orderByAsc("AGE").orderByAsc("SALARY")
 orderByDesc(field: string): DataAbilityPredicates
 ```
 
-配置谓词以匹配其值按降序排序的列。当有多个orderByDesc使用时，最先使用的具有最高优先级。
+Creates a **DataAbilityPredicates** object to sort the records in the specified column in descending order. When there are multiple **orderByDesc**s, the first **orderByDesc** used has the highest priority.
 
 **Since:** 7
 
@@ -1015,13 +1015,13 @@ orderByDesc(field: string): DataAbilityPredicates
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| field | string | Yes | 数据库表中的列名，不能为空字符串。 |
+| field | string | Yes | Column name in the table. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [DataAbilityPredicates](arkts-arkdata-dataability-dataabilitypredicates-c.md) | 返回与指定字段匹配的谓词。 |
+| [DataAbilityPredicates](arkts-arkdata-dataability-dataabilitypredicates-c.md) | DataAbilityPredicates** object created. |
 
 ## Examples
 

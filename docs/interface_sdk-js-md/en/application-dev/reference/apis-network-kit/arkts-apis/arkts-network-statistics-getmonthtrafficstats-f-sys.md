@@ -44,8 +44,8 @@ Get this month traffic data of the cellular network.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 2100001 | Invalid parameter value. |
-| 2100002 | Failed to connect to the service. |
-| 201 | Permission denied. |
-| 202 | Nonsystem applications use system APIs. |
+| [2100001](../errorcode-net-connection.md#2100001-invalid-parameter-value) | Invalid parameter value. |
+| [2100002](../errorcode-net-connection.md#2100002-service-connection-failure) | Failed to connect to the service. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Nonsystem applications use system APIs. |
 

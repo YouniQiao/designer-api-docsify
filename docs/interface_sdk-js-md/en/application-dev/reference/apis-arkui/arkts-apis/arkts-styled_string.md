@@ -6,72 +6,72 @@
 
 | Name | Description |
 | --- | --- |
-| [BackgroundColorStyle](arkts-arkui-backgroundcolorstyle-c.md) | 文本背景颜色对象说明。 |
-| [BaselineOffsetStyle](arkts-arkui-baselineoffsetstyle-c.md) | 文本基线偏移量对象说明。适用于需要微调文本垂直位置的场景，例如化学公式、数学表达式中的上下标文本与正常文本的对齐调整。 |
-| [CustomSpan](arkts-arkui-customspan-c.md) | 自定义绘制Span，仅提供基类，具体实现由开发者定义。适用于需要在文本流中嵌入自定义绘制内容的场景，例如在文本中绘制自定义图标、进度条、特殊装饰效果等。  自定义绘制Span拖拽显示的缩略图为空白。 |
-| [DecorationStyle](arkts-arkui-decorationstyle-c.md) | 文本装饰线样式对象说明。 |
-| [GestureStyle](arkts-arkui-gesturestyle-c.md) | 事件手势对象说明。 |
-| [ImageAttachment](arkts-arkui-imageattachment-c.md) | 图片对象说明。 |
-| [LeadingMarginSpan](arkts-arkui-leadingmarginspan-c.md) | 文本段落的自定义缩进，仅提供基类，具体实现由开发者定义。适用于需要在段落首行或各行开头绘制自定义标记、图标等内容的场景，例如列表项前的自定义符号、段落首行装饰图案等。 |
-| [LetterSpacingStyle](arkts-arkui-letterspacingstyle-c.md) | 文本字符间距对象说明。适用于需要调整字符间距的场景，例如标题文字加宽间距以增强视觉效果、密集文本缩小间距以节省空间等。 |
-| [LineHeightStyle](arkts-arkui-lineheightstyle-c.md) | 文本行高对象说明。 |
-| [LineSpacingStyle](arkts-arkui-linespacingstyle-c.md) | 文本行间距对象说明。适用于需要调整段落内各行间距的场景，例如提升文本阅读舒适度、调整文档排版密度等。 |
-| [MutableStyledString](arkts-arkui-mutablestyledstring-c.md) | 继承于[StyledString](arkts-arkui-styledstring-c.md)类。  > **以下接口异常入参处理统一说明：** >  > 当start和length越界或者必填传入undefined时，会抛出异常； >  > 当styledKey和styledValue传入异常值或者两者对应关系不匹配时，会抛出异常。 |
-| [ParagraphStyle](arkts-arkui-paragraphstyle-c.md) | 文本段落样式对象说明。  除首个段落外，后续段落按'\n'划分。  每个段落的段落样式按首个占位设置的段落样式生效，未设置时，段落按被绑定组件的段落样式生效。  在API版本26.0.0之前，如果属性字符串段落内首个占位为[CustomSpan](arkts-arkui-customspan-c.md)或[ImageAttachment](arkts-arkui-imageattachment-c.md)时，设置在该段落上的段落样式不生效。从API版本26.0.0开始，设置段落样式生效。 |
-| [StyledString](arkts-arkui-styledstring-c.md) | 属性字符串。 |
-| [TextShadowStyle](arkts-arkui-textshadowstyle-c.md) | 文本阴影对象说明。 |
-| [TextStyle](arkts-arkui-textstyle-c.md) | 文本字体样式对象说明。 |
-| [UrlStyle](arkts-arkui-urlstyle-c.md) | 超链接对象说明。  默认颜色、字号、字重分别是'#ff0a59f7'、'16fp'、'FontWeight.Regular'，若属性字符串设置TextStyle，则TextStyle优先级更高。 |
-| [UserDataSpan](arkts-arkui-userdataspan-c.md) | 支持存储自定义扩展信息，用于存储和获取用户数据，仅提供基类，具体实现由开发者定义。  扩展信息不影响实际显示效果。 |
+| [BackgroundColorStyle](arkts-arkui-backgroundcolorstyle-c.md) | Describes the text background color style. |
+| [BaselineOffsetStyle](arkts-arkui-baselineoffsetstyle-c.md) | Describes the text baseline offset style. |
+| [CustomSpan](arkts-arkui-customspan-c.md) | Describes the custom span. Only the base class is provided. You need to define the specific implementation.  The drag preview of a custom span is blank. |
+| [DecorationStyle](arkts-arkui-decorationstyle-c.md) | Describes the text decorative line style. |
+| [GestureStyle](arkts-arkui-gesturestyle-c.md) | Describes the event gesture style. |
+| [ImageAttachment](arkts-arkui-imageattachment-c.md) | Describes the image attachment. |
+| [LeadingMarginSpan](arkts-arkui-leadingmarginspan-c.md) | Defines custom indentation for text paragraphs. Only a base class is provided; the specific implementation is left to developers. |
+| [LetterSpacingStyle](arkts-arkui-letterspacingstyle-c.md) | Describes the letter spacing style. |
+| [LineHeightStyle](arkts-arkui-lineheightstyle-c.md) | Describes the text line height style. |
+| [LineSpacingStyle](arkts-arkui-linespacingstyle-c.md) | Describes the text line spacing style. |
+| [MutableStyledString](arkts-arkui-mutablestyledstring-c.md) | Inherits from the [StyledString](arkts-arkui-styledstring-c.md) class.  > **An exception is thrown in the following cases:** >  > If the values of **start** and **length** are out of the acceptable range or if any mandatory parameter is passed > as **undefined**, an exception is thrown. >  > **styledKey** or **styledValue** is set to an invalid value or they do not match. |
+| [ParagraphStyle](arkts-arkui-paragraphstyle-c.md) | Describes the text paragraph style.  Except the first paragraph, all paragraphs are formed using the escape character '\n'.  The style of a paragraph is the one (if any) set for the first element or the paragraph style of the bound component.  Before API version 26.0.0, if the first placeholder in a paragraph of the styled string is a  [CustomSpan](arkts-arkui-customspan-c.md) or [ImageAttachment](arkts-arkui-imageattachment-c.md), the paragraph style set for that paragraph does not take effect. From API version 26.0.0, the paragraph style takes effect. |
+| [StyledString](arkts-arkui-styledstring-c.md) | StyledString |
+| [TextShadowStyle](arkts-arkui-textshadowstyle-c.md) | Describes the text shadow style. |
+| [TextStyle](arkts-arkui-textstyle-c.md) | Describes the text style. |
+| [UrlStyle](arkts-arkui-urlstyle-c.md) | Describes the hyperlink style.  The default color, font size, and font weight are **'#ff0a59f7'**, **'16fp'**, and **'FontWeight.Regular'**,respectively. If the styled string has **TextStyle** set, the **TextStyle** settings take precedence. |
+| [UserDataSpan](arkts-arkui-userdataspan-c.md) | Implements a **UserDataSpan** object for storing and obtaining user data. Only the base class is provided. You need to define the specific implementation.  The extended user data does not affect the display effect. |
 
 <!--Del-->
 ### Classes（系统接口）
 
 | Name | Description |
 | --- | --- |
-| [StyledString](arkts-arkui-styledstring-c-sys.md) | 属性字符串。 |
+| [StyledString](arkts-arkui-styledstring-c-sys.md) | StyledString |
 <!--DelEnd-->
 
 ### Interfaces
 
 | Name | Description |
 | --- | --- |
-| [CustomSpanDrawInfo](arkts-arkui-customspandrawinfo-i.md) | 定义自定义绘制Span的绘制信息接口。 |
-| [CustomSpanMeasureInfo](arkts-arkui-customspanmeasureinfo-i.md) | 定义自定义绘制Span的测量信息接口。 |
-| [CustomSpanMetrics](arkts-arkui-customspanmetrics-i.md) | 定义自定义绘制Span的尺寸信息接口。 |
-| [DecorationOptions](arkts-arkui-decorationoptions-i.md) | 文本装饰线样式的额外配置选项对象说明。 |
-| [DecorationStyleInterface](arkts-arkui-decorationstyleinterface-i.md) | 文本装饰线样式接口对象说明。 |
-| [GestureStyleInterface](arkts-arkui-gesturestyleinterface-i.md) | 定义事件手势接口。 |
-| [ImageAttachmentInterface](arkts-arkui-imageattachmentinterface-i.md) | 定义图片设置项接口。 |
-| [ImageAttachmentLayoutStyle](arkts-arkui-imageattachmentlayoutstyle-i.md) | 定义图片布局样式。 |
-| [LeadingMarginSpanDrawInfo](arkts-arkui-leadingmarginspandrawinfo-i.md) | 自定义绘制信息。 |
-| [ParagraphStyleInterface](arkts-arkui-paragraphstyleinterface-i.md) | 文本段落样式。 |
-| [ResourceImageAttachmentOptions](arkts-arkui-resourceimageattachmentoptions-i.md) | ResourceStr类型图片设置项。 |
-| [SpanStyle](arkts-arkui-spanstyle-i.md) | 属性字符串样式。 |
-| [StyleOptions](arkts-arkui-styleoptions-i.md) | 属性字符串样式。 |
-| [TextStyleInterface](arkts-arkui-textstyleinterface-i.md) | 文本字体样式。 |
+| [CustomSpanDrawInfo](arkts-arkui-customspandrawinfo-i.md) | Defines the CustomSpanDrawInfo interface. |
+| [CustomSpanMeasureInfo](arkts-arkui-customspanmeasureinfo-i.md) | Defines the CustomSpanMeasureInfo interface. |
+| [CustomSpanMetrics](arkts-arkui-customspanmetrics-i.md) | Defines the CustomSpanMetrics interface. |
+| [DecorationOptions](arkts-arkui-decorationoptions-i.md) | Provides additional configuration options for the text decoration line style. |
+| [DecorationStyleInterface](arkts-arkui-decorationstyleinterface-i.md) | Describes the API object for text decoration line styles.  > **NOTE：** >  > When the bottom contour of a character intersects with the decoration, underline avoidance is triggered, commonly > affecting characters like "g", "j", "y", "q", and "p." >  > If the decoration color is set to **Color.Transparent**, it inherits the text color of the first character in each > line. If the decoration color is set to **"#00FFFFFF"**, the line becomes fully transparent. |
+| [GestureStyleInterface](arkts-arkui-gesturestyleinterface-i.md) | Defines the Gesture Events. |
+| [ImageAttachmentInterface](arkts-arkui-imageattachmentinterface-i.md) | Defines the ImageAttachmentInterface. |
+| [ImageAttachmentLayoutStyle](arkts-arkui-imageattachmentlayoutstyle-i.md) | Defines the ImageAttachment Layout Style. |
+| [LeadingMarginSpanDrawInfo](arkts-arkui-leadingmarginspandrawinfo-i.md) | Provides the custom drawing information. |
+| [ParagraphStyleInterface](arkts-arkui-paragraphstyleinterface-i.md) | ParagraphStyleInterface |
+| [ResourceImageAttachmentOptions](arkts-arkui-resourceimageattachmentoptions-i.md) | Defines the settings for images of the ResourceStr type. |
+| [SpanStyle](arkts-arkui-spanstyle-i.md) | Describes the span style. |
+| [StyleOptions](arkts-arkui-styleoptions-i.md) | Describes the style options. |
+| [TextStyleInterface](arkts-arkui-textstyleinterface-i.md) | TextStyleInterface |
 
 ### Enums
 
 | Name | Description |
 | --- | --- |
-| [StyledStringKey](arkts-arkui-styledstringkey-e.md) | 范围属性字符串样式。 |
+| [StyledStringKey](arkts-arkui-styledstringkey-e.md) | Sets the style for a range styled string. |
 
 ### Types
 
 | Name | Description |
 | --- | --- |
-| [AttachmentType](arkts-arkui-attachmenttype-t.md) | 图片设置项类型，用于设置属性字符串PixelMap类型或[ResourceStr](arkts-arkui-resourcestr-t.md)类型图片。 |
-| [ColorFilterType](arkts-arkui-colorfiltertype-t.md) | 图片颜色滤镜设置项类型。 |
-| [StyledStringValue](arkts-arkui-styledstringvalue-t.md) | 样式对象类型，用于设置属性字符串的样式。 |
+| [AttachmentType](arkts-arkui-attachmenttype-t.md) | Defines the image attachment type, which is used to set images of PixelMap or [ResourceStr](arkts-arkui-resourcestr-t.md) type for styled strings. |
+| [ColorFilterType](arkts-arkui-colorfiltertype-t.md) | Defines the type for image color filter settings. |
+| [StyledStringValue](arkts-arkui-styledstringvalue-t.md) | Defines the style for a styled string. |
 
 <!--Del-->
 ### Types（系统接口）
 
 | Name | Description |
 | --- | --- |
-| [StyledStringMarshallCallback](arkts-arkui-styledstringmarshallcallback-t-sys.md) | 属性字符串[StyledStringMarshallingValue](arkts-arkui-styledstringmarshallingvalue-t-sys.md)序列化回调类型。 |
-| [StyledStringMarshallingValue](arkts-arkui-styledstringmarshallingvalue-t-sys.md) | 属性字符串自定义序列化对象类型，需要开发者定义序列化和反序列化的方式。 |
-| [StyledStringUnmarshallCallback](arkts-arkui-styledstringunmarshallcallback-t-sys.md) | 属性字符串反序列化ArrayBuffer得到[StyledStringMarshallingValue](arkts-arkui-styledstringmarshallingvalue-t-sys.md)回调类型。 |
+| [StyledStringMarshallCallback](arkts-arkui-styledstringmarshallcallback-t-sys.md) | Defines a callback for marshalling [StyledStringMarshallingValue](arkts-arkui-styledstringmarshallingvalue-t-sys.md). |
+| [StyledStringMarshallingValue](arkts-arkui-styledstringmarshallingvalue-t-sys.md) | Defines a custom marshalling object for styled strings, which you need to define marshalling and unmarshalling methods. |
+| [StyledStringUnmarshallCallback](arkts-arkui-styledstringunmarshallcallback-t-sys.md) | Defines a callback for unmarshalling an ArrayBuffer to obtain  [StyledStringMarshallingValue](arkts-arkui-styledstringmarshallingvalue-t-sys.md). |
 <!--DelEnd-->
 

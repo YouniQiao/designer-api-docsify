@@ -1,6 +1,6 @@
 # ApplicationEvent
 
-打印应用事件的枚举。
+Enumerates print application events.
 
 **Since:** 14
 
@@ -16,7 +16,7 @@
 APPLICATION_CREATED = 0
 ```
 
-表示打印应用被拉起的事件。
+Starts the print application.
 
 **Since:** 14
 
@@ -32,7 +32,7 @@ APPLICATION_CREATED = 0
 APPLICATION_CLOSED_FOR_STARTED = 1
 ```
 
-表示由于点击打印而关闭打印应用的事件。
+Closes the print application by clicking **Start**.
 
 **Since:** 14
 
@@ -48,7 +48,7 @@ APPLICATION_CLOSED_FOR_STARTED = 1
 APPLICATION_CLOSED_FOR_CANCELED = 2
 ```
 
-表示由于点击取消而关闭打印应用的事件。
+Closes the print application by clicking **Cancel**.
 
 **Since:** 14
 

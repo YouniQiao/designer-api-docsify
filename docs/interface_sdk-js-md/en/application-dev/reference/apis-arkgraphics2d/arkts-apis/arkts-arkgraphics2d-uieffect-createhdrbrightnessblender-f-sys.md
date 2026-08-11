@@ -12,7 +12,7 @@ import { uiEffect } from 'kits/@kit.ArkGraphics2D';
 function createHdrBrightnessBlender(param: BrightnessBlenderParam): HdrBrightnessBlender
 ```
 
-创建HdrBrightnessBlender实例用于给组件添加支持HDR的提亮效果。
+Creates an HdrBrightnessBlender instance for adding an HDR-enabled brightness effect to a component.
 
 **Since:** 20
 
@@ -28,33 +28,32 @@ function createHdrBrightnessBlender(param: BrightnessBlenderParam): HdrBrightnes
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| param | [BrightnessBlenderParam](arkts-arkgraphics2d-graphics-uieffect-brightnessblenderparam-i-sys.md) | Yes | 实现提亮效果的参数，包含灰度调整系数、饱和度、混合比例等配置项，用于配置提亮效果。 |
+| param | [BrightnessBlenderParam](arkts-arkgraphics2d-graphics-uieffect-brightnessblenderparam-i-sys.md) | Yes | The brightness blender parameters, including grayscale adjustment coefficients, saturation, blending ratio, and other configuration items, used to configure the brightness effect. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [HdrBrightnessBlender](arkts-arkgraphics2d-uieffect-hdrbrightnessblender-i.md) | 返回具有提亮效果的混合器（支持HDR）。 |
+| [HdrBrightnessBlender](arkts-arkgraphics2d-uieffect-hdrbrightnessblender-i.md) | Returns the HDR-enabled brightness blender. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 202 | 权限校验失败，非系统应用调用系统接口。 |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
 
 ## Examples
 
 ```TypeScript
-import { uiEffect } from '@kit.ArkGraphics2D'
+import { uiEffect } from "@kit.ArkGraphics2D"
 
-// Create a BrightnessBlender instance that supports HDR.
 let blender : uiEffect.HdrBrightnessBlender =
   uiEffect.createHdrBrightnessBlender({cubicRate:1.0, quadraticRate:1.0, linearRate:1.0, degree:1.0, saturation:1.0,
     positiveCoefficient:[2.3, 4.5, 2.0], negativeCoefficient:[0.5, 2.0, 0.5], fraction:0.0})
 
 @Entry
 @Component
-struct Example {
+struct example {
   build() {
     RelativeContainer() {
       Image($r("app.media.screenshot"))

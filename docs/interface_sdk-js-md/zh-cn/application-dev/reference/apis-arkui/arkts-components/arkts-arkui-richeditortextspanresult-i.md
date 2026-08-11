@@ -130,7 +130,7 @@ textStyle: RichEditorTextStyleResult
 
 文本Span样式信息。
 
-**类型：** [RichEditorTextStyleResult](../arkts-apis/arkts-arkui-richeditor-richeditortextstyleresult-i.md)
+**类型：** [RichEditorTextStyleResult](arkts-arkui-richeditortextstyleresult-i.md)
 
 **起始版本：** 10
 
@@ -156,7 +156,7 @@ url信息。
 
 当需要为文本设置超链接样式时传入此参数。
 
-**类型：** [RichEditorUrlStyle](arkts-arkui-richeditorurlstyle-i.md)
+**类型：** [RichEditorUrlStyle](../arkts-apis/arkts-arkui-richeditor-richeditorurlstyle-i.md)
 
 **起始版本：** 19
 

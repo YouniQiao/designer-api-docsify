@@ -12,7 +12,7 @@ import { certificateManager } from 'kits/@kit.DeviceCertificateKit';
 function getUserTrustedCertificate(certUri: string): Promise<CMResult>
 ```
 
-表示获取用户根CA证书的详细信息。使用Promise异步回调。
+Obtains the detailed information about a user root CA certificate. This API uses a promise to return the result.
 
 **Since:** 12
 
@@ -28,22 +28,22 @@ function getUserTrustedCertificate(certUri: string): Promise<CMResult>
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| certUri | string | Yes | 表示用户根CA证书的唯一标识符，长度限制256字节以内。 |
+| certUri | string | Yes | Unique identifier of a user's root CA certificate. The value contains up to 256 bytes. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;CMResult&gt; | Promise对象，返回获取用户根CA证书详细信息的结果，返回值为[CMResult]{ |
+| Promise&lt;CMResult&gt; | Promise used to return the operation result, that is, **certInfo** in the [CMResult]{ |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; 3. Parameter verification failed. |
-| 201 | Permission verification failed. The application does not have the permission required to call the API. |
-| 17500002 | The certificate does not exist. |
-| 17500001 | Internal error. Possible causes: 1. IPC communication failed; &lt;br&gt;2. Memory operation error; 3. File operation error. Please try again. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; 3. Parameter verification failed. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed. The application does not have the permission required to call the API. |
+| [17500002](../errorcode-certManager.md#17500002-certificate-not-exist) | The certificate does not exist. |
+| [17500001](../errorcode-certManager.md#17500001-internal-error) | Internal error. Possible causes: 1. IPC communication failed; &lt;br&gt;2. Memory operation error; 3. File operation error. Please try again. |
 
 ## Examples
 
@@ -60,8 +60,7 @@ try {
       let cert = cmResult.certInfo;
       console.info('Succeeded in getting user trusted certificate.');
     }
-  }).catch((error: Error) => {
-    let err = error as BusinessError;
+  }).catch((err: BusinessError) => {
     console.error(`Failed to get user trusted certificate. Code: ${err.code}, message: ${err.message}`);
   })
 } catch (error) {

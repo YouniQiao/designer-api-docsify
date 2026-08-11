@@ -12,7 +12,7 @@ import { notificationManager } from 'kits/@kit.NotificationKit';
 function isPriorityEnabled(): Promise<boolean>
 ```
 
-获取通知优先级总开关状态。
+Checks whether the priority notification is enabled.
 
 **Since:** 23
 
@@ -30,16 +30,16 @@ function isPriorityEnabled(): Promise<boolean>
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;boolean&gt; | Promise对象，返回包含通知优先级总开关使能状态的Promise对象。 &lt;br&gt; - true：允许设置为优先通知。 &lt;br&gt; - false：禁止设置为优先通知。 |
+| Promise&lt;boolean&gt; | Promise used to return the result. &lt;br&gt; - **true**: The priority notification is enabled. &lt;br&gt; - **false**: The priority notification is disabled. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 201 | Permission denied. |
-| 1600001 | Internal error. |
-| 202 | Not system application to call the interface. |
-| 1600003 | Failed to connect to the service. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
+| [1600001](../errorcode-notification.md#1600001-internal-error) | Internal error. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system application to call the interface. |
+| [1600003](../errorcode-notification.md#1600003-failed-to-connect-to-the-notification-service) | Failed to connect to the service. |
 
 ## Examples
 

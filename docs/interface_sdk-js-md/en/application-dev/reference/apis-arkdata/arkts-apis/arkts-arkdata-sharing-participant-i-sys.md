@@ -1,6 +1,6 @@
 # Participant (System API)
 
-端云共享的参与者。
+Represents information about a participant of device-cloud sharing.
 
 **Since:** 11
 
@@ -24,7 +24,7 @@ import { cloudData } from 'kits/@kit.ArkData';
 attachInfo?: string
 ```
 
-附加信息，用于扩展额外的参与者信息。如用于参与者身份校验的校验码等，默认为空字符串。
+Additional information, such as the verification code used for participant identity verification.The default value is an empty string.
 
 **Type:** string
 
@@ -44,7 +44,7 @@ attachInfo?: string
 identity: string
 ```
 
-参与者的ID。
+ID of the participant.
 
 **Type:** string
 
@@ -64,7 +64,7 @@ identity: string
 privilege?: Privilege
 ```
 
-指定的共享数据权限。默认为Privilege的默认值。
+Permissions on the shared data. The Privilege defaults are used by default.
 
 **Type:** [Privilege](arkts-arkdata-sharing-privilege-i-sys.md)
 
@@ -84,7 +84,7 @@ privilege?: Privilege
 role?: Role
 ```
 
-参与者的角色，为邀请者或被邀请者。默认为undefined。
+Role of the participant, inviter or invitee. The default value is undefined.
 
 **Type:** [Role](../../apis-ability-kit/arkts-apis/arkts-ability-abilitytoolaccessctrl-role-e-sys.md)
 
@@ -104,7 +104,7 @@ role?: Role
 state?: State
 ```
 
-共享的状态。默认为undefined。
+State of the device-cloud sharing. The default value is undefined.
 
 **Type:** [State](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-agent-state-e.md)
 

@@ -1,6 +1,6 @@
 # PictureShadeDegree (System API)
 
-图片颜色深浅度的枚举。
+Enumerates the shade degrees of image colors.
 
 **Since:** 22
 
@@ -18,7 +18,7 @@
 UNKNOWN_SHADE_DEGREE_PICTURE = 0
 ```
 
-默认值，图片颜色深浅度未知。
+Default value. The shade degree of the image color is unknown.
 
 **Since:** 22
 
@@ -36,7 +36,7 @@ UNKNOWN_SHADE_DEGREE_PICTURE = 0
 EXTREMELY_LIGHT_PICTURE = 1
 ```
 
-图片颜色深浅度为极浅。
+The shade degree of the image color is extremely light.
 
 **Since:** 22
 
@@ -54,7 +54,7 @@ EXTREMELY_LIGHT_PICTURE = 1
 VERY_LIGHT_PICTURE = 2
 ```
 
-图片颜色深浅度为较浅。
+The shade degree of the image color is very light.
 
 **Since:** 22
 
@@ -72,7 +72,7 @@ VERY_LIGHT_PICTURE = 2
 LIGHT_PICTURE = 3
 ```
 
-图片颜色深浅度为略浅。
+The shade degree of the image color is light.
 
 **Since:** 22
 
@@ -90,7 +90,7 @@ LIGHT_PICTURE = 3
 MODERATE_SHADE_PICTURE = 4
 ```
 
-图片颜色深浅度为一般。
+The shade degree of the image color is moderate.
 
 **Since:** 22
 
@@ -108,7 +108,7 @@ MODERATE_SHADE_PICTURE = 4
 DARK_PICTURE = 5
 ```
 
-图片颜色深浅度为较深。
+The shade degree of the image color is dark.
 
 **Since:** 22
 
@@ -126,7 +126,7 @@ DARK_PICTURE = 5
 EXTREMELY_DARK_PICTURE = 6
 ```
 
-图片颜色深浅度为极深。
+The shade degree of the image color is extremely dark.
 
 **Since:** 22
 

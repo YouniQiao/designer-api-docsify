@@ -1,6 +1,6 @@
 # ExecuteMode
 
-意图执行模式。表示系统入口触发意图执行时传递的执行模式，每个意图支持的执行模式在意图开发时定义。
+Enumerates the intent execution modes. It specifies the mode of execution passed when the intent is triggered by a system entry point. The supported execution modes for each intent are defined during intent development.
 
 **Since:** 11
 
@@ -16,7 +16,7 @@
 UI_ABILITY_FOREGROUND = 0
 ```
 
-将UIAbility在前台显示。
+Display a UIAbility in the foreground.
 
 **Since:** 11
 
@@ -36,7 +36,7 @@ UI_ABILITY_FOREGROUND = 0
 UI_ABILITY_BACKGROUND = 1
 ```
 
-将UIAbility在后台拉起。
+Start a UIAbility in the background.
 
 **Since:** 11
 
@@ -56,7 +56,7 @@ UI_ABILITY_BACKGROUND = 1
 UI_EXTENSION_ABILITY = 2
 ```
 
-拉起UIExtensionAbility。
+Start a UIExtensionAbility.
 
 **Since:** 11
 

@@ -1,6 +1,6 @@
 # WantAgentFlags
 
-表示WantAgent行为控制标志，用于配置WantAgent的创建和触发行为。
+Enumerates flags for using a WantAgent.
 
 **Since:** 7
 
@@ -20,7 +20,7 @@
 ONE_TIME_FLAG = 0
 ```
 
-WantAgent仅能使用一次。
+Indicates that the WantAgent can be used only once.This flag is valid only when OperationType is set to START_ABILITY, START_SERVICE, or SEND_COMMON_EVENT.
 
 **Since:** 7
 
@@ -42,7 +42,7 @@ WantAgent仅能使用一次。
 NO_BUILD_FLAG
 ```
 
-如果描述WantAgent对象不存在，则不创建它，直接返回null。
+Indicates that null is returned if the WantAgent does not exist.This flag is valid only when OperationType is set to START_ABILITY, START_SERVICE, or SEND_COMMON_EVENT.
 
 **Since:** 7
 
@@ -64,7 +64,7 @@ NO_BUILD_FLAG
 CANCEL_PRESENT_FLAG
 ```
 
-在生成一个新的WantAgent对象前取消已存在的一个WantAgent对象。
+Indicates that the existing WantAgent should be canceled before a new object is generated.This flag is valid only when OperationType is set to START_ABILITY, START_SERVICE, or SEND_COMMON_EVENT.
 
 **Since:** 7
 
@@ -86,7 +86,7 @@ CANCEL_PRESENT_FLAG
 UPDATE_PRESENT_FLAG
 ```
 
-使用新的WantAgent的额外数据替换已存在的WantAgent中的额外数据。
+Indicates that the system only replaces the extra data of the existing WantAgent with that of the new object.This flag is valid only when OperationType is set to START_ABILITY, START_SERVICE, or SEND_COMMON_EVENT.
 
 **Since:** 7
 
@@ -108,7 +108,7 @@ UPDATE_PRESENT_FLAG
 CONSTANT_FLAG
 ```
 
-WantAgent是不可变的。
+Indicates that the created WantAgent should be immutable.
 
 **Since:** 7
 
@@ -130,7 +130,7 @@ WantAgent是不可变的。
 REPLACE_ELEMENT
 ```
 
-当前Want中的element属性可被WantAgent.trigger()中Want的element属性取代。
+Indicates that the current value of element can be replaced when the WantAgent is triggered.
 
 **Since:** 7
 
@@ -152,7 +152,7 @@ REPLACE_ELEMENT
 REPLACE_ACTION
 ```
 
-当前Want中的action属性可被WantAgent.trigger()中Want的action属性取代。
+Indicates that the current value of action can be replaced when the WantAgent is triggered.
 
 **Since:** 7
 
@@ -174,7 +174,7 @@ REPLACE_ACTION
 REPLACE_URI
 ```
 
-当前Want中的uri属性可被WantAgent.trigger()中Want的uri属性取代。
+Indicates that the current value of uri can be replaced when the WantAgent is triggered.
 
 **Since:** 7
 
@@ -196,7 +196,7 @@ REPLACE_URI
 REPLACE_ENTITIES
 ```
 
-当前Want中的entities属性可被WantAgent.trigger()中Want的entities属性取代。
+Indicates that the current value of entities can be replaced when the WantAgent is triggered.
 
 **Since:** 7
 
@@ -218,7 +218,7 @@ REPLACE_ENTITIES
 REPLACE_BUNDLE
 ```
 
-当前Want中的bundleName属性可被WantAgent.trigger()中Want的bundleName属性取代。
+Indicates that the current value of packageName can be replaced when the WantAgent is triggered.
 
 **Since:** 7
 

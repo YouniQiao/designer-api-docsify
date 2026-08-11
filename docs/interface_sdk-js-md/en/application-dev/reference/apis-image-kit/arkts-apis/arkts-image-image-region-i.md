@@ -1,6 +1,6 @@
 # Region
 
-表示区域信息。
+Describes the region information.
 
 **Since:** 8
 
@@ -22,7 +22,7 @@ import { image } from 'kits/@kit.ImageKit';
 size: Size
 ```
 
-区域大小。
+Region size.
 
 **Type:** [Size](../../apis-arkui/arkts-apis/arkts-arkui-window-size-i.md)
 
@@ -44,7 +44,7 @@ size: Size
 x: int
 ```
 
-区域左上角横坐标。单位：像素（px）。
+X coordinate of the top-left corner of the region, in px.
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
@@ -66,7 +66,7 @@ x: int
 y: int
 ```
 
-区域左上角纵坐标。单位：像素（px）。
+Y coordinate of the top-left corner of the region, in px.
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 

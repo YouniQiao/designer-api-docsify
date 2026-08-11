@@ -4,7 +4,7 @@
 type ISendable = lang.ISendable
 ```
 
-为与当前模块的接口规范保持一致，定义了ISendable类型别名。
+The ISendable type alias is defined to align with the API specifications of the current module.
 
 **Since:** 12
 

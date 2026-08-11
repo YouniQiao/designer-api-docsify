@@ -1,6 +1,6 @@
 # LifeCycle
 
-自定义组件和自定义对话框的生命周期接口。
+Defining interface of LifeCycle for custom component and custom dialog
 
 **Since:** 23
 
@@ -76,7 +76,9 @@ Customize the build process of the custom component.
 default onDidBuild(): void
 ```
 
-onDidBuild函数在执行自定义组件的build()函数之后执行，开发者可以在这个阶段进行埋点数据上报等不影响实际UI的功能。不建议在onDidBuild函数中更改状态变量、使用animateTo等功能，这可能会导致不稳定的UI表现。
+The callback method after the custom component is built.
+
+Triggered when the custom component has been built.
 
 **Since:** 23
 

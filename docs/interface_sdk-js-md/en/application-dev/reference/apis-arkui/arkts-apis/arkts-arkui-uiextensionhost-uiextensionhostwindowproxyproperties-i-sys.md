@@ -1,6 +1,6 @@
 # UIExtensionHostWindowProxyProperties (System API)
 
-用于表示宿主应用窗口和UIExtensionComponent组件的信息。
+Defines information about the host application window and **UIExtensionComponent**.
 
 **Since:** 11
 
@@ -24,7 +24,7 @@ import { uiExtensionHost } from 'kits/@kit.ArkUI';
 uiExtensionHostWindowProxyRect: window.Rect
 ```
 
-UIExtensionComponent的位置和宽高。
+Position, width, and height of the **UIExtensionComponent**.
 
 **Type:** window.Rect
 

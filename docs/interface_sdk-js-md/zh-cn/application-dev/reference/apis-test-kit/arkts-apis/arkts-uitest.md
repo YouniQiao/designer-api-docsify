@@ -19,12 +19,6 @@ UiTest提供UI自动化测试能力，供开发者在测试场景使用，主要
  > - 本模块接口不支持并发调用。
 
 
-## 导入模块
-
-```TypeScript
-import { ResizeDirection, WindowMode, PenMode, PenKeyOperation, Driver, MatchPattern, UiDirection, TouchOptions, ComponentEventType, PointerMatrix, WindowChangeType, Component, ON, PenKey, Rect, InputTextMode, UIEventObserver, WindowFilter, WindowChangeOptions, UiWindow, TouchPadSwipeOptions, Point, KeyOptions, DisplayRotation, UIElementInfo, PenKeyOperationOptions, ComponentEventOptions, MouseButton, On } from 'kits/@kit.TestKit';
-```
-
 ## 汇总
 
 ### 命名空间

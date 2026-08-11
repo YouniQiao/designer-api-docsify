@@ -16,7 +16,7 @@ Enumerates the types of documents selected.
 FILE = 0
 ```
 
-文件类型（默认类型）。
+File (default).
 
 **Since:** 11
 
@@ -34,7 +34,7 @@ FILE = 0
 FOLDER = 1
 ```
 
-文件夹类型。
+Folder.
 
 **Since:** 11
 
@@ -52,7 +52,7 @@ FOLDER = 1
 MIXED = 2
 ```
 
-文件和文件夹混合类型。
+Mixed type of files and folders.
 
 **Since:** 11
 

@@ -1,6 +1,6 @@
 # LocalizedBarrierStyle
 
-barrier参数，用于定义一条支持镜像模式的barrier的id、方向和生成时所依赖的组件，子组件可通过barrier的id引用屏障作为锚点进行对齐定位。
+Defines the ID, direction, and referenced components of a barrier.
 
 **Since:** 12
 
@@ -16,7 +16,7 @@ barrier参数，用于定义一条支持镜像模式的barrier的id、方向和�
 id : string
 ```
 
-barrier的id，用于标识屏障，子组件可通过此id引用该屏障作为锚点。必须是唯一的并且不可与容器内组件重名。
+ID of the barrier, which must be unique and cannot be the same as the name of any component in the container.
 
 **Type:** string
 
@@ -38,13 +38,9 @@ barrier的id，用于标识屏障，子组件可通过此id引用该屏障作为
 localizedDirection : LocalizedBarrierDirection
 ```
 
-指定barrier的方向。
+Direction of the barrier.
 
-水平屏障线（TOP/BOTTOM）仅能作为组件垂直方向锚点（top或bottom），用于水平方向锚点时位置视为0。垂直屏障线（START/END，支持LTR/RTL镜像）仅能作为组件水平方向锚点（start或end），用于垂直方向锚点时位置视为0。
-
-默认值：LocalizedBarrierDirection.START
-
-非法值：按默认值处理。
+Vertical-direction barriers (including **TOP** and **BOTTOM**) can only serve as the horizontal anchor of a component. If they are used as a vertical anchor, the anchor value will be **0**. Horizontal-direction barriers (including **START** and **END**) can only serve as the vertical anchor of a component. If they are used as a horizontal anchor, the anchor value will be **0**.
 
 **Type:** [LocalizedBarrierDirection](arkts-arkui-localizedbarrierdirection-e.md)
 
@@ -66,7 +62,7 @@ localizedDirection : LocalizedBarrierDirection
 referencedId : Array<string>
 ```
 
-指定生成barrier所依赖的组件。将需要作为屏障基准的组件id放入数组，至少包含一个有效组件ID，不存在的ID会被忽略。支持镜像模式的屏障根据LTR/RTL模式下的实际位置计算屏障位置。
+Referenced components of the barrier.
 
 **Type:** Array&lt;string&gt;
 

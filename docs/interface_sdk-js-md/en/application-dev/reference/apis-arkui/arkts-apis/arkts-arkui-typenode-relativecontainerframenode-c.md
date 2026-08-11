@@ -1,6 +1,6 @@
 # RelativeContainerFrameNode
 
-定义RelativeContainer类型的FrameNode。
+Define the RelativeContainer type of FrameNode.
 
 **Inheritance/Implementation:** RelativeContainerFrameNode extends [TypedFrameNode<RelativeContainerAttribute>](TypedFrameNode<RelativeContainerAttribute>)
 
@@ -18,7 +18,7 @@
 abstract initialize(): RelativeContainerAttribute
 ```
 
-初始化RelativeContainer类型的FrameNode。
+Initialize RelativeContainer FrameNode.
 
 **Since:** 23
 

@@ -1,11 +1,5 @@
 # killProcessWithAccount（系统接口）
 
-## 导入模块
-
-```TypeScript
-import { appManager } from 'kits/@kit.AbilityKit';
-```
-
 ## killProcessWithAccount
 
 ```TypeScript
@@ -49,10 +43,10 @@ function killProcessWithAccount(bundleName: string, accountId: int): Promise<voi
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
-| 16000050 | Internal error. |
-| 201 | Permission denied. |
-| 202 | Not system application. |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| [16000050](../errorcode-ability.md#16000050-内部错误) | Internal error. |
+| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not system application. |
 
 ## 示例
 
@@ -66,8 +60,9 @@ let accountId = 0;
 try {
   appManager.killProcessWithAccount(bundleName, accountId).then(() => {
     console.info('killProcessWithAccount success');
-  }).catch((err: BusinessError) => {
-    console.error(`killProcessWithAccount fail, err: ${JSON.stringify(err)}`);
+  }).catch((e: Error) => {
+    let err = e as BusinessError;
+    console.error(`killProcessWithAccount fail, err: ${err.code}, ${err.message}`);
   });
 } catch (paramError) {
   let code = (paramError as BusinessError).code;
@@ -121,10 +116,10 @@ function killProcessWithAccount(bundleName: string, accountId: int, clearPageSta
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 401 | If the input parameter is not valid parameter. |
-| 16000050 | Internal error. |
-| 201 | Permission denied. |
-| 202 | Not system application. |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | If the input parameter is not valid parameter. |
+| [16000050](../errorcode-ability.md#16000050-内部错误) | Internal error. |
+| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not system application. |
 
 ## 示例
 
@@ -140,8 +135,9 @@ let appIndex = 1;
 try {
   appManager.killProcessWithAccount(bundleName, accountId, isClearPageStack, appIndex).then(() => {
     console.info('killProcessWithAccount success');
-  }).catch((err: BusinessError) => {
-    console.error(`killProcessWithAccount fail, err: ${JSON.stringify(err)}`);
+  }).catch((e: Error) => {
+    let err = e as BusinessError;
+    console.error(`killProcessWithAccount fail, err: ${err.code}, ${err.message}`);
   });
 } catch (paramError) {
   let code = (paramError as BusinessError).code;
@@ -189,10 +185,10 @@ function killProcessWithAccount(bundleName: string, accountId: int, callback: As
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
-| 16000050 | Internal error. |
-| 201 | Permission denied. |
-| 202 | Not system application. |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| [16000050](../errorcode-ability.md#16000050-内部错误) | Internal error. |
+| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not system application. |
 
 ## 示例
 
@@ -203,7 +199,7 @@ import { BusinessError } from '@kit.BasicServicesKit';
 let bundleName = 'bundleName';
 let accountId = 0;
 
-function killProcessWithAccountCallback(err: BusinessError) {
+function killProcessWithAccountCallback(err: BusinessError | null) {
   if (err) {
     console.error(`killProcessWithAccountCallback fail, err: ${JSON.stringify(err)}`);
   } else {

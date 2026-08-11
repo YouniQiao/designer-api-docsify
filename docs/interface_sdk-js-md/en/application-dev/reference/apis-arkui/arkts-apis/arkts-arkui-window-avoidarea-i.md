@@ -1,15 +1,15 @@
 # AvoidArea
 
-窗口内容的避让区域。
+Describes the area to avoid for window content.
 
-窗口内容做[沉浸式布局](../../../windowmanager/window-terminology.md#沉浸式布局)适配时，需要按照  
-[AvoidAreaType](arkts-arkui-window-avoidareatype-e.md)对应的AvoidArea做窗口内容避让。
+When adapting window content for an  
+[immersive layout](../../../windowmanager/window-terminology.md#immersive-layout), you should adjust the content based on the corresponding **AvoidArea** specified by [AvoidAreaType](arkts-arkui-window-avoidareatype-e.md).
 
-在避让区域内，应用窗口内容被遮挡且无法响应用户点击事件。
+In the avoid area, the application window content is obscured and does not respond to user click events.
 
-> **说明：**
+> **NOTE：**
 > 
-> 示意图展示了leftRect、topRect、rightRect、bottomRect的含义。
+> The figure below shows the meanings of **leftRect**, **topRect**, **rightRect**, and **bottomRect**.
 > 
 > ![avoidArea](../../../reference/apis-arkui/figures/avoidArea.png)
 
@@ -33,7 +33,7 @@ import { window } from 'kits/@kit.ArkUI';
 bottomRect: Rect
 ```
 
-中心位于窗口的两条对角线的底部的矩形区。
+Rectangle centered at the bottom of the window's two diagonals.
 
 **Type:** [Rect](../../apis-form-kit/arkts-apis/arkts-form-forminfo-rect-i.md)
 
@@ -53,7 +53,7 @@ bottomRect: Rect
 leftRect: Rect
 ```
 
-中心位于窗口的两条对角线的左侧的矩形区。
+Rectangle centered to the left of the window's two diagonals.
 
 **Type:** [Rect](../../apis-form-kit/arkts-apis/arkts-form-forminfo-rect-i.md)
 
@@ -73,7 +73,7 @@ leftRect: Rect
 rightRect: Rect
 ```
 
-中心位于窗口的两条对角线的右侧的矩形区。
+Rectangle centered to the right of the window's two diagonals.
 
 **Type:** [Rect](../../apis-form-kit/arkts-apis/arkts-form-forminfo-rect-i.md)
 
@@ -93,7 +93,7 @@ rightRect: Rect
 topRect: Rect
 ```
 
-中心位于窗口的两条对角线的顶部的矩形区。
+Rectangle centered at the top of the window's two diagonals.
 
 **Type:** [Rect](../../apis-form-kit/arkts-apis/arkts-form-forminfo-rect-i.md)
 
@@ -113,7 +113,7 @@ topRect: Rect
 visible: boolean
 ```
 
-无实际意义，暂不支持使用。
+Whether the avoid area is visible. **true** if visible, **false** otherwise.
 
 **Type:** boolean
 

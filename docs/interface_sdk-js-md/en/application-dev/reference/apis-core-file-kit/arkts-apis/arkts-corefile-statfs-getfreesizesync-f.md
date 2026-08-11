@@ -12,7 +12,7 @@ import { statfs } from 'kits/@kit.CoreFileKit';
 function getFreeSizeSync(path: string): long
 ```
 
-以同步方法获取指定文件系统空闲字节数。
+Obtains the free size of the specified file system, in bytes. This API returns the result synchronously.
 
 **Since:** 10
 
@@ -26,13 +26,13 @@ function getFreeSizeSync(path: string): long
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| path | string | Yes | 需要查询的文件系统的文件路径。 |
+| path | string | Yes | File path of the file system. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| ArkTS-Dyn: number  <br>ArkTS-Sta：long | 返回空闲字节数。 |
+| ArkTS-Dyn: number  <br>ArkTS-Sta：long | Free size obtained, in bytes. |
 
 **Error codes:**
 

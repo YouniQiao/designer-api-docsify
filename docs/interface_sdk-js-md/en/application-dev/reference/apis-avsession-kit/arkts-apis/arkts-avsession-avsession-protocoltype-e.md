@@ -1,6 +1,6 @@
 # ProtocolType
 
-远端设备支持的协议类型的枚举。
+Define different protocol capability
 
 **Since:** 11
 
@@ -16,7 +16,7 @@
 TYPE_LOCAL = 0
 ```
 
-本地设备，包括设备本身的内置扬声器或音频插孔、A2DP 设备。
+The default cast type "local", media can be routed on the same device,including internal speakers or audio jack on the device itself, A2DP devices.
 
 **Since:** 11
 
@@ -34,7 +34,7 @@ TYPE_LOCAL = 0
 TYPE_CAST_PLUS_STREAM = 2
 ```
 
-Cast+的Stream模式。表示媒体正在其他设备上展示。
+The Cast+ Stream indicating the media is presenting on a different device the application need get an AVCastController to control remote playback.
 
 **Since:** 11
 
@@ -52,7 +52,7 @@ Cast+的Stream模式。表示媒体正在其他设备上展示。
 TYPE_DLNA = 4
 ```
 
-DLNA协议。表示媒体正在其他设备上展示。
+The DLNA type indicates the device supports DLNA protocol,the application needs to get an AVCastController to control remote playback.
 
 **Since:** 12
 
@@ -70,7 +70,7 @@ DLNA协议。表示媒体正在其他设备上展示。
 TYPE_CAST_PLUS_AUDIO = 8
 ```
 
-PCM模式。表示媒体正在其他设备上展示。
+This type indicates the device supports audio casting with high definition to get a better sound quality.
 
 **Since:** 20
 

@@ -6,7 +6,7 @@
 declare function mkdtempSync(prefix: string): string
 ```
 
-以同步的方法创建临时目录。
+Creates a temporary directory. This API returns the result synchronously.
 
 **Since:** 7
 
@@ -24,11 +24,11 @@ declare function mkdtempSync(prefix: string): string
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| prefix | string | Yes | 用随机产生的字符串替换以“XXXXXX”结尾目录路径。 |
+| prefix | string | Yes | String to be replaced with six randomly generated characters to create a unique temporary directory. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| string | 产生的唯一目录路径。 |
+| string | Unique directory generated. |
 

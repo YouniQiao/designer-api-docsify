@@ -12,12 +12,6 @@
 
 **系统能力：** SystemCapability.Multimedia.Camera.Core
 
-## 导入模块
-
-```TypeScript
-import { camera } from 'kits/@kit.CameraKit';
-```
-
 ## addDeferredSurface
 
 ```TypeScript
@@ -46,8 +40,8 @@ addDeferredSurface(surfaceId: string): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 7400101 | Parameter missing or parameter type incorrect. |
-| 202 | Permission verification failed. A non-system application calls a system API.<br>**适用版本：** 13 - 23 |
+| [7400101](../errorcode-camera.md#7400101-无效入参) | Parameter missing or parameter type incorrect. |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed. A non-system application calls a system API.<br>**适用版本：** 13 - 23 |
 
 ## enableBandwidthCompression
 
@@ -84,9 +78,9 @@ enableBandwidthCompression(enabled: boolean): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 7400102 | Operation not allowed. |
-| 7400103 | Session not config. |
-| 7400201 | Camera service fatal error. |
+| [7400102](../errorcode-camera.md#7400102-非法操作) | Operation not allowed. |
+| [7400103](../errorcode-camera.md#7400103-会话未配置) | Session not config. |
+| [7400201](../errorcode-camera.md#7400201-相机服务异常) | Camera service fatal error. |
 
 ## getActiveFrameRate
 
@@ -142,7 +136,7 @@ getActiveProfile(): Profile
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 7400201 | Camera service fatal error. |
+| [7400201](../errorcode-camera.md#7400201-相机服务异常) | Camera service fatal error. |
 
 ## getPreviewRotation
 
@@ -191,8 +185,8 @@ getPreviewRotation(displayRotation?: int): ImageRotation
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 7400101 | Parameter missing or parameter type incorrect.<br>**适用版本：** 12 - 22 |
-| 7400201 | Camera service fatal error. |
+| [7400101](../errorcode-camera.md#7400101-无效入参) | Parameter missing or parameter type incorrect.<br>**适用版本：** 12 - 22 |
+| [7400201](../errorcode-camera.md#7400201-相机服务异常) | Camera service fatal error. |
 
 ## getSupportedFrameRates
 
@@ -607,8 +601,8 @@ setFrameRate(minFps: int, maxFps: int): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 7400101 | Parameter missing or parameter type incorrect. |
-| 7400110 | Unresolved conflicts with current configurations. |
+| [7400101](../errorcode-camera.md#7400101-无效入参) | Parameter missing or parameter type incorrect. |
+| [7400110](../errorcode-camera.md#7400110-与当前配置存在冲突) | Unresolved conflicts with current configurations. |
 
 ## setLogViewAssistEnable
 
@@ -646,9 +640,9 @@ LOG视频下，使能辅助监看之前，可先使用方法[isLogViewAssistSupp
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 801 | Capability not supported. |
-| 7400103 | Session not config. |
-| 7400201 | Camera service fatal error. |
+| [801](../../errorcode-universal.md#801-该设备不支持此api) | Capability not supported. |
+| [7400103](../errorcode-camera.md#7400103-会话未配置) | Session not config. |
+| [7400201](../errorcode-camera.md#7400201-相机服务异常) | Camera service fatal error. |
 
 ## setPreviewRotation
 
@@ -679,8 +673,8 @@ setPreviewRotation(previewRotation: ImageRotation, isDisplayLocked?: boolean): v
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 7400101 | Parameter missing or parameter type incorrect. |
-| 7400201 | Camera service fatal error. |
+| [7400101](../errorcode-camera.md#7400101-无效入参) | Parameter missing or parameter type incorrect. |
+| [7400201](../errorcode-camera.md#7400201-相机服务异常) | Camera service fatal error. |
 
 ## start
 
@@ -716,7 +710,7 @@ start(callback: AsyncCallback<void>): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 7400103 | Session not config. |
+| [7400103](../errorcode-camera.md#7400103-会话未配置) | Session not config. |
 
 ## start
 
@@ -752,7 +746,7 @@ start(): Promise<void>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 7400103 | Session not config. |
+| [7400103](../errorcode-camera.md#7400103-会话未配置) | Session not config. |
 
 ## stop
 

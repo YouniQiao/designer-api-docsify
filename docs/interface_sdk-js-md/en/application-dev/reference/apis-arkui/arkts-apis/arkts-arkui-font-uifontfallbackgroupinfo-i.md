@@ -20,7 +20,7 @@ import { font } from 'kits/@kit.ArkUI';
 fallback: Array<UIFontFallbackInfo>
 ```
 
-表示以下列表为该字体集的备用字体，如果fontSetName为""，表示可以作为所有字体集的备用字体。
+Fallback font list related.
 
 **Type:** Array&lt;UIFontFallbackInfo&gt;
 
@@ -40,7 +40,7 @@ fallback: Array<UIFontFallbackInfo>
 fontSetName: string
 ```
 
-备用字体集所对应的字体集名称。
+Indicates which font set uses following list for fallback font if the font set name is "", it means that the following list can be fallback font for all font sets.
 
 **Type:** string
 

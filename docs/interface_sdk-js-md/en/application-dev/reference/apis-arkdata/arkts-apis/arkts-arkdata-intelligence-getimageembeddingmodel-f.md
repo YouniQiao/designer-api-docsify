@@ -12,7 +12,7 @@ import { intelligence } from 'kits/@kit.ArkData';
 function getImageEmbeddingModel(config: ModelConfig): Promise<ImageEmbedding>
 ```
 
-获取图像嵌入模型。使用Promise异步回调。
+Obtains an image embedding model.
 
 **Since:** 15
 
@@ -26,21 +26,21 @@ function getImageEmbeddingModel(config: ModelConfig): Promise<ImageEmbedding>
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| config | [ModelConfig](arkts-arkdata-intelligence-modelconfig-i.md) | Yes | 嵌入模型的配置信息。 |
+| config | [ModelConfig](arkts-arkdata-intelligence-modelconfig-i.md) | Yes | The configuration of the embedding model. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;ImageEmbedding&gt; | Promise对象，返回图像嵌入模型，用于图像向量化。 |
+| Promise&lt;ImageEmbedding&gt; | The promise returned by the function. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types. |
-| 801 | Capability not supported. |
-| 31300000 | Inner error. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types. |
+| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. |
+| [31300000](../errorcode-intelligence.md#31300000-internal-error) | Inner error. |
 
 ## Examples
 

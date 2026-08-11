@@ -1,6 +1,6 @@
 # Event
 
-日程对象，包含日程标题、开始时间、结束时间等信息。
+Describes an **Event** object, including the event title, start time, and end time.
 
 **Since:** 10
 
@@ -22,7 +22,7 @@ import { calendarManager } from 'kits/@kit.CalendarKit';
 attendee?: Attendee[]
 ```
 
-会议日程参与者。不填时，默认为null。
+Attendees in a meeting. If this parameter is not set, the default null value is used.
 
 **Type:** [Attendee](arkts-calendar-calendarmanager-attendee-i.md)[]
 
@@ -42,7 +42,7 @@ attendee?: Attendee[]
 description?: string
 ```
 
-日程描述。长度建议为[0,5000]字符，不填时，默认为空字符串。
+Event description, with a maximum of 5,000 characters. If this parameter is not specified, the default value is an empty string.
 
 **Type:** string
 
@@ -62,7 +62,7 @@ description?: string
 endTime: number
 ```
 
-日程结束时间，需要13位时间戳。全天日程时，该字段转换为传入日期24:00对应的时间戳。 *
+End time of an event. The value is a 13-digit timestamp. For an all-day event, this field is converted to timestamp corresponding to 00:00 of the specified date. When [getEvents()](calendarManager.Calendar.getEvents(eventFilter?: EventFilter, eventKey?: (keyof Event)[]): Promise&lt;Event[]&gt;) is called to query events, this field is queried by default.
 
 **Type:** number
 
@@ -82,9 +82,10 @@ endTime: number
 id?: number
 ```
 
-日程id。当调用[addEvent()](arkts-calendar-calendarmanager-calendar-i.md#addevent)、  
-[addEvents()](arkts-calendar-calendarmanager-calendar-i.md#addevents)创建日程时，不填写此参数；当调用[deleteEvent()](arkts-calendar-calendarmanager-calendar-i.md#deleteevent)、  
-[deleteEvents()](arkts-calendar-calendarmanager-calendar-i.md#deleteevents)删除日程时，日程id数组，日程id需为整数，传入其他非法入参会报错。
+Event ID. This parameter does not need to be set in   
+[addEvent()](arkts-calendar-calendarmanager-calendar-i.md#addevent) or   
+[addEvents()](arkts-calendar-calendarmanager-calendar-i.md#addevents).This is an auto-increment field of the database, which has no default value.When [deleteEvent()](arkts-calendar-calendarmanager-calendar-i.md#deleteevent) or   
+[deleteEvents()](arkts-calendar-calendarmanager-calendar-i.md#deleteevents) is called to delete an event, the value must be an integer. If an invalid value is passed, an error will be reported. When [getEvents()](calendarManager.Calendar.getEvents(eventFilter?: EventFilter, eventKey?: (keyof Event)[]): Promise&lt;Event[]&gt;) is called to query events, this field is queried by default.
 
 **Type:** number
 
@@ -104,7 +105,7 @@ id?: number
 identifier?: string
 ```
 
-写入方可指定日程唯一标识。长度建议为[0,5000]字符，不填时，默认为null。
+Unique ID of an event, with a maximum of 5,000 characters. If this parameter is not specified, the default value is null.
 
 **Type:** string
 
@@ -124,8 +125,9 @@ identifier?: string
 instanceEndTime?: number
 ```
 
-日程实例结束时间，需要13位时间戳。当调用[addEvent()](arkts-calendar-calendarmanager-calendar-i.md#addevent)、  
-[addEvents()](arkts-calendar-calendarmanager-calendar-i.md#addevents)创建日程时，不填写此参数。
+End time of an event instance, which must be a 13-digit timestamp. The default value is undefined. This parameter is not required when  
+[addEvent()](arkts-calendar-calendarmanager-calendar-i.md#addevent)or [addEvents()](arkts-calendar-calendarmanager-calendar-i.md#addevents) is called to create an event or  
+[getEvents()](calendarManager.Calendar.getEvents(eventFilter?: EventFilter, eventKey?: (keyof Event)[]): Promise&lt;Event[]&gt;)is called to query an event.
 
 **Type:** number
 
@@ -145,8 +147,9 @@ instanceEndTime?: number
 instanceStartTime?: number
 ```
 
-日程实例开始时间，需要13位时间戳。当调用[addEvent()](arkts-calendar-calendarmanager-calendar-i.md#addevent)、  
-[addEvents()](arkts-calendar-calendarmanager-calendar-i.md#addevents)创建日程时，不填写此参数。
+Start time of an event instance, which must be a 13-digit timestamp. The default value is undefined. This parameter is not required when  
+[addEvent()](arkts-calendar-calendarmanager-calendar-i.md#addevent)or [addEvents()](arkts-calendar-calendarmanager-calendar-i.md#addevents) is called to create an event or  
+[getEvents()](calendarManager.Calendar.getEvents(eventFilter?: EventFilter, eventKey?: (keyof Event)[]): Promise&lt;Event[]&gt;)is called to query an event.
 
 **Type:** number
 
@@ -166,7 +169,7 @@ instanceStartTime?: number
 isAllDay?: boolean
 ```
 
-是否为全天日程。当取值为true时，说明为全天日程；当取值为false时，说明不是全天日程，默认为非全天日程。
+Whether the event is an all-day event. The value **true** means that the event is an all-day event, and **false**means the opposite. The default value is **false**.
 
 **Type:** boolean
 
@@ -186,7 +189,7 @@ isAllDay?: boolean
 isLunar?: boolean
 ```
 
-是否为农历日程。当取值为true时，说明为农历日程；当取值为false时，说明不是农历日程，默认为非农历日程。
+Unique ID of an event, with a maximum of 5,000 characters. If this parameter is not specified, the default value is null.
 
 **Type:** boolean
 
@@ -206,7 +209,7 @@ isLunar?: boolean
 location?: Location
 ```
 
-日程地点。不填时，默认为undefined。
+Event location. If this parameter is not set, the default null value is used.
 
 **Type:** [Location](../../apis-location-kit/arkts-apis/arkts-location-geolocationmanager-location-i.md)
 
@@ -226,7 +229,7 @@ location?: Location
 recurrenceRule?: RecurrenceRule
 ```
 
-日程重复规则，设置了此字段的日程为重复日程。不填时，默认为非重复日程。
+Recurrence rule of an event. The event is a recurring event if this parameter is set; otherwise, the event is a non-recurring event.
 
 **Type:** [RecurrenceRule](arkts-calendar-calendarmanager-recurrencerule-i.md)
 
@@ -246,7 +249,7 @@ recurrenceRule?: RecurrenceRule
 reminderTime?: number[]
 ```
 
-日程提醒时间，单位为分钟。填写x分钟，即距开始时间提前x分钟提醒，不填时，默认为不提醒。为负值时表示延期多长时间提醒。全天日程时此字段表示上午9:00前x分钟提醒，可取负值，负值表示上午9:00后多长时间提醒。
+Reminder time of the event, in minutes. For example, if the value is 5, the reminder occurs 5 minutes before the event starts. If this parameter is not set, no reminder is set. A negative value indicates the delay time for sending a notification. For an all-day event, this parameter specifies the time offset in minutes before 9 a.m. on the event date. A negative value indicates the number of minutes after 9 a.m.
 
 **Type:** number[]
 
@@ -266,7 +269,7 @@ reminderTime?: number[]
 service?: EventService
 ```
 
-&lt;!--RP1--&gt;日程服务。不填时，默认没有一键服务。暂不支持此功能。&lt;!--RP1End--&gt;
+&lt;!--RP1--&gt;Event service. If this parameter is not set, no one-click service is available. This function is not supported currently.&lt;!--RP1End--&gt;
 
 **Type:** [EventService](arkts-calendar-calendarmanager-eventservice-i.md)
 
@@ -286,7 +289,7 @@ service?: EventService
 startTime: number
 ```
 
-日程开始时间，需要13位时间戳。全天日程时，该字段转换为传入日期00:00对应的时间戳。
+Start time of an event. The value is a 13-digit timestamp. For an all-day event, this field is converted to timestamp corresponding to 00:00 of the specified date. When [getEvents()](calendarManager.Calendar.getEvents(eventFilter?: EventFilter, eventKey?: (keyof Event)[]): Promise&lt;Event[]&gt;) is called to query events, this field is queried by default.
 
 **Type:** number
 
@@ -306,8 +309,8 @@ startTime: number
 timeZone?: string
 ```
 
-日程时区。日程时区。长度建议为[0,5000]字符，不填或异常值时，默认为当前所在时区，当需要创建与当前不一样的时区时，可填入对应的时区。可通过  
-[systemDateTime.getTimezone()](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-systemdatetime-gettimezone-f.md/arkts-basicservices-systemdatetime-gettimezone-f.md#gettimezone)获取当前系统时区。
+Time zone of the event, with a maximum of 5,000 characters. If this parameter is not specified or set to an invalid value, the current time zone is used by default. If a different time zone is required, enter the corresponding time zone. You can call   
+[systemDateTime.getTimezone()](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-systemdatetime-gettimezone-f.md/arkts-basicservices-systemdatetime-gettimezone-f.md#gettimezone)to obtain the current system time zone.
 
 **Type:** string
 
@@ -327,7 +330,7 @@ timeZone?: string
 title?: string
 ```
 
-日程标题。长度建议为[0,5000]字符，不填时，默认为空字符串。
+Event title, with a maximum of 5,000 characters. If this parameter is not specified, the default value is an empty string.
 
 **Type:** string
 
@@ -347,7 +350,7 @@ title?: string
 type: EventType
 ```
 
-日程类型。
+Event type.When [getEvents()](calendarManager.Calendar.getEvents(eventFilter?: EventFilter, eventKey?: (keyof Event)[]): Promise&lt;Event[]&gt;) is called to query events, this field is queried by default.
 
 **Type:** [EventType](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-screenlock-eventtype-t-sys.md)
 

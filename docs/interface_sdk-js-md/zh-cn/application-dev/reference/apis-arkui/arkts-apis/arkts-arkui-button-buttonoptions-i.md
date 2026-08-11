@@ -58,7 +58,7 @@ controlSize?: ControlSize
 
 **原子化服务API（仅ArkTS-Dyn）：** 从API version 12开始，该接口支持在原子化服务中使用。
 
-**类型：** [ControlSize](arkts-arkui-button-controlsize-e.md)
+**类型：** [ControlSize](../arkts-components/arkts-arkui-controlsize-e.md)
 
 **默认值：** ControlSize.NORMAL
 

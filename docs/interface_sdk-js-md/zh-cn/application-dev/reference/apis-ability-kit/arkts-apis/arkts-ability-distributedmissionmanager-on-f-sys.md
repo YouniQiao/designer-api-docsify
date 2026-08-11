@@ -1,11 +1,5 @@
 # on（系统接口）
 
-## 导入模块
-
-```TypeScript
-import { distributedMissionManager } from 'kits/@kit.AbilityKit';
-```
-
 ## on('continueStateChange')
 
 ```TypeScript
@@ -39,21 +33,38 @@ function on(type: 'continueStateChange', callback: Callback<ContinueCallbackInfo
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; 3. Parameter verification failed. |
-| 201 | Permission denied. |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; 3. Parameter verification failed. |
+| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
 
 ## 示例
+
+ArkTS-Dyn示例：
 
 ```TypeScript
 import { distributedMissionManager } from '@kit.AbilityKit';
 
-  try {
+try {
+  // 注册任务流转状态变化事件监听
+  distributedMissionManager.on('continueStateChange', (data) => {
+    console.info("continueStateChange on:" + JSON.stringify(data));
+  });
+} catch (error) {
+  console.error(`continueStateChange failed. Code: ${error.code}, message: ${error.message}`);
+}
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+import distributedMissionManager from '@ohos.distributedMissionManager';
+
+try {
     // 注册任务流转状态变化事件监听
-    distributedMissionManager.on('continueStateChange', (data) => {
-      console.info("continueStateChange on:" + JSON.stringify(data));
+    distributedMissionManager.onContinueStateChange((data) => {
+        console.info("continueStateChange on:" + JSON.stringify(data));
     });
-  } catch (error) {
+} catch (error) {
     console.error(`continueStateChange failed. Code: ${error.code}, message: ${error.message}`);
-  }
+}
 ```
 

@@ -4,7 +4,7 @@
 export type StackForEachCb<T> = (value: T, index: int, stack: Stack<T>) => void
 ```
 
-Stack的回调函数类型。
+The type of Stack callback function.
 
 **Since:** 23
 
@@ -22,7 +22,7 @@ Stack的回调函数类型。
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | T | Yes | 当前遍历到的元素。 |
-| index | int | Yes | 当前遍历到的下标值。 该值为整数。 |
-| stack | [Stack](../../apis-arkui/arkts-apis/arkts-arkui-typenode-stack-t.md)&lt;T&gt; | Yes | 当前正在遍历的Stack实例。 |
+| value | T | Yes | The value of current element |
+| index | int | Yes | The key of current element The value should be an integer. |
+| stack | [Stack](../../apis-arkui/arkts-apis/arkts-arkui-typenode-stack-t.md)&lt;T&gt; | Yes | The Stack instance being traversed |
 

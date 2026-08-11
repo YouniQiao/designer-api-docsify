@@ -16,9 +16,7 @@ Set Swiper column count adaptation.
 minSize: VP
 ```
 
-设置元素显示最小宽度。
-
-默认值：0
+Set minSize size.
 
 **Type:** [VP](arkts-arkui-vp-t.md)
 

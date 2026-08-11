@@ -1,11 +1,5 @@
 # setProcessPriority
 
-## 导入模块
-
-```TypeScript
-import { backgroundProcessManager } from 'kits/@kit.BackgroundTasksKit';
-```
-
 ## setProcessPriority
 
 ```TypeScript
@@ -39,7 +33,7 @@ function setProcessPriority(pid: int, priority: ProcessPriority): Promise<void>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 401 | Parameter error. Possible causes: priority is out of range. |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: priority is out of range. |
 
 ## 示例
 

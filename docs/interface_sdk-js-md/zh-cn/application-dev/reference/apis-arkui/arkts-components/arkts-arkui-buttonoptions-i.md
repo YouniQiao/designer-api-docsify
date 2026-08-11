@@ -54,7 +54,7 @@ controlSize?: ControlSize
 
 默认值：ControlSize.NORMAL
 
-**类型：** [ControlSize](../arkts-apis/arkts-arkui-button-controlsize-e.md)
+**类型：** [ControlSize](arkts-arkui-controlsize-e.md)
 
 **默认值：** ControlSize.NORMAL
 

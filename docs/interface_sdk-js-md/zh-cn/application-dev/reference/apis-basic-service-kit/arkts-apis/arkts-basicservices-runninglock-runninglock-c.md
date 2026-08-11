@@ -10,12 +10,6 @@
 
 **系统能力：** SystemCapability.PowerManager.PowerManager.Core
 
-## 导入模块
-
-```TypeScript
-import { runningLock } from 'kits/@kit.BasicServicesKit';
-```
-
 ## hold
 
 ArkTS-Dyn:
@@ -50,37 +44,33 @@ hold(timeout: int): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1. Incorrect parameter types; |
-| 201 | If the permission is denied. |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1. Incorrect parameter types; |
+| [201](../../errorcode-universal.md#201-权限校验失败) | If the permission is denied. |
 
 ## 示例
 
 ```TypeScript
 // RunningLockTest.ets
 class RunningLockTest {
-    public static recordLock: runningLock.RunningLock;
+    public static recordLock: runningLock.RunningLock | undefined;
 
     public static holdRunningLock(): void {
         if (RunningLockTest.recordLock) {
-            try {
-                RunningLockTest.recordLock.hold(500);
-                console.info('hold running lock success');
-            } catch(err) {
-                console.error(`Failed to hold running lock. Code: ${err.code}, message: ${err.message}`);
-            }
+            RunningLockTest.recordLock!.hold(500);
+            console.info('hold running lock success');
         } else {
-            runningLock.create('running_lock_test', runningLock.RunningLockType.PROXIMITY_SCREEN_CONTROL, (err: BusinessError, lock: runningLock.RunningLock) => {
-                if (err) {
-                    console.error(`Failed to create running lock. Code: ${err.code}, message: ${err.message}`);
-                } else {
+            runningLock.create('running_lock_test', runningLock.RunningLockType.PROXIMITY_SCREEN_CONTROL, (err: Error | null, lock: runningLock.RunningLock | undefined) => {
+                if (!err) {
                     console.info('create running lock: ' + lock);
-                    RunningLockTest.recordLock = lock;
+                    RunningLockTest.recordLock = lock!;
                     try {
-                        lock.hold(500);
+                        lock!.hold(500);
                         console.info('hold running lock success');
                     } catch(err) {
-                        console.error(`Failed to hold running lock. Code: ${err.code}, message: ${err.message}`);
+                        console.error('hold running lock failed, err: ' + err);
                     }
+                } else {
+                    console.error('create running lock failed, err: ' + err);
                 }
             });
         }
@@ -115,21 +105,21 @@ isHolding(): boolean
 ```TypeScript
 // RunningLockTest.ets
 class RunningLockTest {
-    public static recordLock: runningLock.RunningLock;
+    public static recordLock: runningLock.RunningLock | undefined;
 
     public static isHoldingRunningLock(): void {
         if (RunningLockTest.recordLock) {
-            let isHolding = RunningLockTest.recordLock.isHolding();
+            let isHolding = RunningLockTest.recordLock!.isHolding();
             console.info('check running lock holding status: ' + isHolding);
         } else {
-            runningLock.create('running_lock_test', runningLock.RunningLockType.PROXIMITY_SCREEN_CONTROL, (err: BusinessError, lock: runningLock.RunningLock) => {
-                if (err) {
-                    console.error(`Failed to create running lock. Code: ${err.code}, message: ${err.message}`);
-                } else {
+            runningLock.create('running_lock_test', runningLock.RunningLockType.PROXIMITY_SCREEN_CONTROL, (err: Error | null, lock: runningLock.RunningLock | undefined) => {
+                if (!err) {
                     console.info('create running lock: ' + lock);
-                    RunningLockTest.recordLock = lock;
-                    let isHolding = lock.isHolding();
+                    RunningLockTest.recordLock = lock!;
+                    let isHolding = lock!.isHolding();
                     console.info('check running lock holding status: ' + isHolding);
+                } else {
+                    console.error('create running lock failed, err: ' + err);
                 }
             });
         }
@@ -171,8 +161,8 @@ runningLock.createRunningLock('running_lock_test', runningLock.RunningLockType.B
     let isUsed = lock.isUsed();
     console.info('check running lock used status: ' + isUsed);
 })
-.catch((err: BusinessError) => {
-    console.error(`Failed to check running lock used status. Code: ${err.code}, message: ${err.message}`);
+.catch((err: Error) => {
+    console.error('check running lock used status failed, err: ' + err);
 });
 ```
 
@@ -212,8 +202,8 @@ runningLock.createRunningLock('running_lock_test', runningLock.RunningLockType.B
     lock.lock(500);
     console.info('create running lock and lock success');
 })
-.catch((err: BusinessError) => {
-    console.error(`Failed to create running lock. Code: ${err.code}, message: ${err.message}`);
+.catch((err: Error) => {
+    console.error('create running lock failed, err: ' + err);
 });
 ```
 
@@ -239,36 +229,34 @@ unhold(): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 201 | If the permission is denied. |
+| [201](../../errorcode-universal.md#201-权限校验失败) | If the permission is denied. |
 
 ## 示例
 
 ```TypeScript
 // RunningLockTest.ets
 class RunningLockTest {
-    public static recordLock: runningLock.RunningLock;
+    public static recordLock: runningLock.RunningLock | undefined;
 
     public static unholdRunningLock(): void {
         if (RunningLockTest.recordLock) {
-            try {
-                RunningLockTest.recordLock.unhold();
-                console.info('unhold running lock success');
-            } catch(err) {
-                console.error(`Failed to unhold running lock. Code: ${err.code}, message: ${err.message}`);
-            }
+            RunningLockTest.recordLock!.unhold();
+            console.info('unhold running lock success');
         } else {
-            runningLock.create('running_lock_test', runningLock.RunningLockType.PROXIMITY_SCREEN_CONTROL, (err: BusinessError, lock: runningLock.RunningLock) => {
-                if (err) {
-                    console.error(`Failed to create running lock. Code: ${err.code}, message: ${err.message}`);
-                } else {
+            runningLock.create('running_lock_test', runningLock.RunningLockType.PROXIMITY_SCREEN_CONTROL, (err: Error | null, lock: runningLock.RunningLock | undefined) => {
+                if (!err) {
                     console.info('create running lock: ' + lock);
-                    RunningLockTest.recordLock = lock;
+                    RunningLockTest.recordLock = lock!;
                     try {
-                        lock.unhold();
+                        lock!.hold(500);
+                        // Finish other tasks before unhold lock.
+                        lock!.unhold();
                         console.info('unhold running lock success');
                     } catch(err) {
-                        console.error(`Failed to unhold running lock. Code: ${err.code}, message: ${err.message}`);
+                        console.error('unhold running lock failed, err: ' + err);
                     }
+                } else {
+                    console.error('create running lock failed, err: ' + err);
                 }
             });
         }
@@ -306,8 +294,8 @@ runningLock.createRunningLock('running_lock_test', runningLock.RunningLockType.B
     lock.unlock();
     console.info('create running lock and unlock success');
 })
-.catch((err: BusinessError) => {
-    console.error(`Failed to create running lock. Code: ${err.code}, message: ${err.message}`);
+.catch((err: Error) => {
+    console.error('create running lock failed, err: ' + err);
 });
 ```
 

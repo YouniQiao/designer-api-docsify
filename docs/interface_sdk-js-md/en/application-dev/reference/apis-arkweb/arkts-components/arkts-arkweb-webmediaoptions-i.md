@@ -1,10 +1,10 @@
 # WebMediaOptions
 
-Defines the Media Options.
+Describes the web media options.
 
-**Since:** 12
+**Since:** 10
 
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
+**ArkTS mode:** ArkTS-Dyn only, since version 10.
 
 <!--Device-unnamed-declare interface WebMediaOptions--><!--Device-unnamed-declare interface WebMediaOptions-End-->
 
@@ -16,13 +16,18 @@ Defines the Media Options.
 audioExclusive?: boolean
 ```
 
-Whether the audio of each web is exclusive.
+Whether the audio of multiple **Web** instances in an application is exclusive.
+
+The value **true** indicates that the audio of multiple **Web** instances in an application is exclusive, and  
+**false** indicates the opposite.
+
+The default value is **true**.
 
 **Type:** boolean
 
-**Since:** 11
+**Since:** 10
 
-**ArkTS mode:** ArkTS-Dyn only, since version 11.
+**ArkTS mode:** ArkTS-Dyn only, since version 10.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -36,7 +41,8 @@ Whether the audio of each web is exclusive.
 audioSessionType?: AudioSessionType
 ```
 
-音频会话的类型
+Web audio type in the application. The default value is  
+[STREAM_USAGE_MUSIC](../../apis-audio-kit/arkts-apis/arkts-audio-audio-streamusage-e.md/arkts-audio-audio-streamusage-e.md). This parameter changes the mapping between the component audio type and the system audio type, which affects the ArkWeb audio focus policy.
 
 **Type:** [AudioSessionType](../arkts-apis/arkts-arkweb-web-audiosessiontype-e.md)
 
@@ -54,13 +60,19 @@ audioSessionType?: AudioSessionType
 resumeInterval?: number
 ```
 
-The time interval for audio playback to resume.
+Validity period for automatically resuming a web audio paused by another application, in seconds. The value range is [-2147483648, 2147483647]. If **resumeInterval** is set to **0**, the playback is not automatically resumed. If  
+**resumeInterval** is set to a value greater than 0, the playback is resumed in the specified period. If  
+**resumeInterval** is set to a value less than 0, the playback is resumed in an unlimited period. Due to the approximate value, the validity period may have a deviation of less than 1 second.
+
+**NOTE：**
+
+After an HLS video is interrupted, the video playback is automatically resumed when the video is returned to the foreground.
 
 **Type:** number
 
-**Since:** 11
+**Since:** 10
 
-**ArkTS mode:** ArkTS-Dyn only, since version 11.
+**ArkTS mode:** ArkTS-Dyn only, since version 10.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 

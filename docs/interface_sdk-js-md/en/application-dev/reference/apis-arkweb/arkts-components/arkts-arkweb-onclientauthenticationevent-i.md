@@ -1,6 +1,6 @@
 # OnClientAuthenticationEvent
 
-定义当需要用户提供SSL客户端证书时触发回调。
+Defines the triggered callback when needs ssl client certificate from the user.
 
 **Since:** 12
 
@@ -16,7 +16,7 @@
 handler : ClientAuthenticationHandler
 ```
 
-通知Web组件用户操作行为。
+Notifies the user of the operation behavior of the web component.
 
 **Type:** [ClientAuthenticationHandler](arkts-arkweb-clientauthenticationhandler-c.md)
 
@@ -36,7 +36,7 @@ handler : ClientAuthenticationHandler
 host : string
 ```
 
-请求证书服务器的主机名。
+The hostname of the requesting certificate server.
 
 **Type:** string
 
@@ -56,7 +56,7 @@ host : string
 issuers : Array<string>
 ```
 
-与私钥匹配的证书可接受颁发者。
+Certificates that match the private key are acceptable to the issuer.
 
 **Type:** Array&lt;string&gt;
 
@@ -76,7 +76,7 @@ issuers : Array<string>
 keyTypes : Array<string>
 ```
 
-可接受的非对称密钥类型。
+Acceptable asymmetric key types.
 
 **Type:** Array&lt;string&gt;
 
@@ -96,7 +96,7 @@ keyTypes : Array<string>
 port : number
 ```
 
-请求证书服务器的端口号。
+The port number of the request certificate server.
 
 **Type:** number
 

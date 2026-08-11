@@ -1,6 +1,6 @@
 # FloatingBallConfiguration
 
-创建闪控球控制器时需要提供的参数配置。
+Describes the parameters for creating a floating ball controller.
 
 **Since:** 20
 
@@ -22,7 +22,7 @@ import { floatingBall } from 'kits/@kit.ArkUI';
 context: BaseContext
 ```
 
-表示上下文环境。
+Context environment.
 
 **Type:** [BaseContext](../../apis-ability-kit/arkts-apis/arkts-ability-basecontext-c.md)
 

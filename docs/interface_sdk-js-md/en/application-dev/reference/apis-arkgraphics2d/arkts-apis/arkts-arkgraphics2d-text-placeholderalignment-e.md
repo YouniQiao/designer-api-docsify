@@ -1,12 +1,13 @@
 # PlaceholderAlignment
 
-占位符相对于周围文本的纵向对齐方式。
+Enumerates the vertical alignment modes of a placeholder relative to the surrounding text.
 
 ![PlaceholderAlignment.png](../../../reference/apis-arkgraphics2d/figures/PlaceholderAlignment.png)
 
-> **说明：**
+> **NOTE：**
 > 
-> 示意图展示了后三种对齐方式，前三种对齐方式在文本基线对齐方式上类似，比较位置是文本基线，即绿色线条部分。
+> The figure shows the last three alignment modes. The first three alignment modes are similar in text baseline
+> alignment, with the comparison reference being the text baseline, indicated by the green line.
 > 
 > ![Baseline.png](../../../reference/apis-arkgraphics2d/figures/Baseline.png)
 
@@ -24,7 +25,7 @@
 OFFSET_AT_BASELINE = 0
 ```
 
-基线与文本基线对齐。
+Aligns the baseline of the placeholder to the baseline of the text.
 
 **Since:** 12
 
@@ -42,7 +43,7 @@ OFFSET_AT_BASELINE = 0
 ABOVE_BASELINE = 1
 ```
 
-底部与文本基线对齐。
+Aligns the bottom edge of the placeholder to the baseline of the text.
 
 **Since:** 12
 
@@ -60,7 +61,7 @@ ABOVE_BASELINE = 1
 BELOW_BASELINE = 2
 ```
 
-顶部与文本基线对齐。
+Aligns the top edge of the placeholder to the baseline of the text.
 
 **Since:** 12
 
@@ -78,7 +79,7 @@ BELOW_BASELINE = 2
 TOP_OF_ROW_BOX = 3
 ```
 
-顶部与文本顶部对齐。
+Aligns the top edge of the placeholder to the top edge of the text.
 
 **Since:** 12
 
@@ -96,7 +97,7 @@ TOP_OF_ROW_BOX = 3
 BOTTOM_OF_ROW_BOX = 4
 ```
 
-底部与文本底部对齐。
+Aligns the bottom edge of the placeholder to the bottom edge of the text.
 
 **Since:** 12
 
@@ -114,7 +115,7 @@ BOTTOM_OF_ROW_BOX = 4
 CENTER_OF_ROW_BOX = 5
 ```
 
-文本居中对齐。
+Center-aligned.
 
 **Since:** 12
 
@@ -132,7 +133,7 @@ CENTER_OF_ROW_BOX = 5
 FOLLOW_PARAGRAPH = 6
 ```
 
-跟随文本排版对齐。
+Aligns with the text baseline.
 
 **Since:** 20
 

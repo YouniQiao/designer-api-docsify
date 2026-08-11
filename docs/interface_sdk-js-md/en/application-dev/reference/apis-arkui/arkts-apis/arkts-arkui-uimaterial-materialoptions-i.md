@@ -1,6 +1,6 @@
 # MaterialOptions
 
-系统材质选项。
+Define the interface containing various material parameters.
 
 **Since:** 23
 
@@ -22,9 +22,7 @@ import { uiMaterial } from 'kits/@kit.ArkUI';
 type?: MaterialType
 ```
 
-材质类型。
-
-默认值：MaterialType.NONE
+The type of the material.
 
 **Type:** [MaterialType](arkts-arkui-uimaterial-materialtype-e.md)
 

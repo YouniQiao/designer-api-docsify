@@ -14,12 +14,6 @@ Beauty extends [BeautyQuery](arkts-camera-camera-beautyquery-i-sys.md)Provides A
 
 **系统接口：** 此接口为系统接口。
 
-## 导入模块
-
-```TypeScript
-import { camera } from 'kits/@kit.CameraKit';
-```
-
 ## getBeauty
 
 ArkTS-Dyn:
@@ -60,8 +54,8 @@ Obtains the level of the beauty type in use.
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 7400103 | Session not config. |
-| 202 | Not System Application. |
+| [7400103](../errorcode-camera.md#7400103-会话未配置) | Session not config. |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not System Application. |
 
 ## 示例
 
@@ -119,8 +113,8 @@ Sets a beauty type and its level. Beauty mode is turned off only when all the
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 7400103 | Session not config. |
-| 202 | Not System Application. |
+| [7400103](../errorcode-camera.md#7400103-会话未配置) | Session not config. |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not System Application. |
 
 ## 示例
 
@@ -166,7 +160,7 @@ Sets a portrait theme type for a camera device.
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 7400101 | Parameter missing or parameter type incorrect. |
-| 7400103 | Session not config, only throw in session usage. |
-| 202 | Not System Application. |
+| [7400101](../errorcode-camera.md#7400101-无效入参) | Parameter missing or parameter type incorrect. |
+| [7400103](../errorcode-camera.md#7400103-会话未配置) | Session not config, only throw in session usage. |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not System Application. |
 

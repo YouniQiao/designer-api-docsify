@@ -206,7 +206,7 @@ backgroundEffect?: BackgroundEffectOptions
 
 Defines the popup's background effect with options
 
-**类型：** [BackgroundEffectOptions](../arkts-components/arkts-arkui-backgroundeffectoptions-i.md)
+**类型：** [BackgroundEffectOptions](arkts-arkui-common-backgroundeffectoptions-i.md)
 
 **起始版本：** 26.0.0
 
@@ -722,7 +722,7 @@ transition?: TransitionEffect
 
 Defines the transition effect of popup opening and closing
 
-**类型：** [TransitionEffect](arkts-arkui-common-transitioneffect-c.md)
+**类型：** [TransitionEffect](../arkts-components/arkts-arkui-transitioneffect-c.md)
 
 **起始版本：** 23
 

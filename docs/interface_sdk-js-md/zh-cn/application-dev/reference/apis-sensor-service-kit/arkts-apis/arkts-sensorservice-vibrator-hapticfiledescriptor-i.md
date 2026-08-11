@@ -14,12 +14,6 @@
 
 **系统能力：** SystemCapability.Sensors.MiscDevice
 
-## 导入模块
-
-```TypeScript
-import { vibrator } from 'kits/@kit.SensorServiceKit';
-```
-
 ## fd
 
 ```TypeScript

@@ -4,7 +4,7 @@
 export type WindowExtensionContext = _WindowExtensionContext
 ```
 
-WindowExtension上下文信息。
+The context of window extension. It allows access to windowExtension-specific resources.
 
 **Since:** 9
 

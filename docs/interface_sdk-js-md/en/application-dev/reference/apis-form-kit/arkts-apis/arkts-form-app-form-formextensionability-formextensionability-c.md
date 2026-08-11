@@ -59,7 +59,7 @@ export default class MyFormExtensionAbility extends FormExtensionAbility {
     console.info(`FormExtensionAbility onAcquireFormState, want: ${want}`);
     return formInfo.FormState.UNKNOWN;
   }
-}
+};
 ```
 
 ## onAcquireFormState
@@ -125,13 +125,13 @@ import { Want } from '@kit.AbilityKit';
 export default class MyFormExtensionAbility extends FormExtensionAbility {
   onAddForm(want: Want) {
     console.info(`FormExtensionAbility onAddForm, want: ${want.abilityName}`);
-    let temperatureData: Record<string, string> = {
-      'temperature': '11°C',
+    let dataObj1: Record<string, string> = {
+      'temperature': '11c',
       'time': '11:00'
     };
 
-    let formBindingDataObj: formBindingData.FormBindingData = formBindingData.createFormBindingData(temperatureData);
-    return formBindingDataObj;
+    let obj1: formBindingData.FormBindingData = formBindingData.createFormBindingData(dataObj1);
+    return obj1;
   }
 }
 ```
@@ -172,7 +172,7 @@ export default class MyFormExtensionAbility extends FormExtensionAbility {
     // Called to notify the widget provider that a temporary widget has been converted to a normal one. You need to perform operations as required.
     console.info(`FormExtensionAbility onCastToNormalForm, formId: ${formId}`);
   }
-}
+};
 ```
 
 ## onChangeFormVisibility
@@ -222,23 +222,23 @@ export default class MyFormExtensionAbility extends FormExtensionAbility {
   onChangeFormVisibility(newStatus: Record<string, number>) {
     console.info(`FormExtensionAbility onChangeFormVisibility, newStatus: ${newStatus}`);
     let param: Record<string, string> = {
-      'temperature': '22°C',
+      'temperature': '22c',
       'time': '22:00'
     }
-    let formBindingDataObj: formBindingData.FormBindingData = formBindingData.createFormBindingData(param);
+    let obj2: formBindingData.FormBindingData = formBindingData.createFormBindingData(param);
 
     let keys: string[] = getObjKeys(newStatus);
 
     for (let i: number = 0; i < keys.length; i++) {
       console.info(`FormExtensionAbility onChangeFormVisibility, key: ${keys[i]}, value= ${newStatus[keys[i]]}`);
-      formProvider.updateForm(keys[i], formBindingDataObj).then(() => {
+      formProvider.updateForm(keys[i], obj2).then(() => {
         console.info('FormExtensionAbility context updateForm');
-      }).catch ((error: BusinessError) => {
-        console.error(`Operation updateForm failed, code: ${error.code}, message: ${error.message}`);
+      }).catch((error: BusinessError) => {
+        console.error(`Operation updateForm failed. , code: ${(error as BusinessError).code}, message: ${(error as BusinessError).message})`);
       });
     }
   }
-}
+};
 ```
 
 ## onConfigurationUpdate
@@ -280,7 +280,7 @@ export default class MyFormExtensionAbility extends FormExtensionAbility {
     // If no operation is performed within 10 seconds after a FormExtensionAbility instance is created, the instance will be deleted.
     console.info(`onConfigurationUpdate, config: ${newConfig?.language}`);
   }
-}
+};
 ```
 
 ## onFormEvent
@@ -319,7 +319,7 @@ export default class MyFormExtensionAbility extends FormExtensionAbility {
   onFormEvent(formId: string, message: string) {
     console.info(`FormExtensionAbility onFormEvent, formId: ${formId}, message: ${message}`);
   }
-}
+};
 ```
 
 ## onFormLocationChanged
@@ -363,7 +363,7 @@ export default class EntryFormAbility extends FormExtensionAbility {
     return formBindingData.createFormBindingData(formData);
   }
   onFormLocationChanged(formId: string, newFormLocation: formInfo.FormLocation) {
-    console.info('EntryFormAbility onFormLocationChanged current location: ' + newFormLocation);
+    console.info("EntryFormAbility onFormLocationChanged current location: " + newFormLocation);
   }
 }
 ```
@@ -403,7 +403,7 @@ export default class MyFormExtensionAbility extends FormExtensionAbility {
   onRemoveForm(formId: string) {
     console.info(`FormExtensionAbility onRemoveForm, formId: ${formId}`);
   }
-}
+};
 ```
 
 ## onSizeChanged
@@ -547,7 +547,7 @@ export default class MyFormExtensionAbility extends FormExtensionAbility {
       console.error(`FormExtensionAbility context updateForm failed, code: ${(error as BusinessError).code}, message: ${(error as BusinessError).message}`);
     });
   }
-}
+};
 ```
 
 ## context

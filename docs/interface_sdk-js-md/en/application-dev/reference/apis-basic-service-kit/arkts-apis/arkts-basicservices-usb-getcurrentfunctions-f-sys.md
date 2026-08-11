@@ -12,7 +12,7 @@ import { usb } from 'kits/@kit.BasicServicesKit';
 function getCurrentFunctions(): FunctionType
 ```
 
-在设备模式下，获取当前的USB功能列表的数字组合掩码。
+Obtains the numeric mask combination for the USB function list in Device mode.
 
 **Since:** 9
 
@@ -32,7 +32,7 @@ function getCurrentFunctions(): FunctionType
 
 | Type | Description |
 | --- | --- |
-| [FunctionType](arkts-basicservices-usb-functiontype-e-sys.md) | 当前的USB功能列表的数字组合掩码。 |
+| [FunctionType](arkts-basicservices-usb-functiontype-e-sys.md) | Numeric mask combination for the USB function list. |
 
 ## Examples
 

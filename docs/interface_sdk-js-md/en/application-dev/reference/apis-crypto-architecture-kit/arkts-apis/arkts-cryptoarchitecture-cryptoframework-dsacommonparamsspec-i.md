@@ -1,8 +1,9 @@
 # DSACommonParamsSpec
 
-密钥参数[AsyKeySpec](arkts-cryptoarchitecture-cryptoframework-asykeyspec-i.md)的子类，用于指定DSA算法中公私钥包含的公共参数，随机生成公/私钥。
+Defines a child class of [AsyKeySpec](arkts-cryptoarchitecture-cryptoframework-asykeyspec-i.md) used to specify the common parameters of the public and private keys in the DSA algorithm. It can be used to randomly generate a public or private key.
 
-&lt;br&gt;在使用密钥参数生成密钥时，将其传入[createAsyKeyGeneratorBySpec()](arkts-cryptoarchitecture-cryptoframework-createasykeygeneratorbyspec-f.md#createasykeygeneratorbyspec)方法创建密钥生成器。
+&lt;br&gt;To generate a key based on key parameters, pass it to  
+[createAsyKeyGeneratorBySpec()](arkts-cryptoarchitecture-cryptoframework-createasykeygeneratorbyspec-f.md#createasykeygeneratorbyspec) to create a key generator.
 
 **Inheritance/Implementation:** DSACommonParamsSpec extends [AsyKeySpec](arkts-cryptoarchitecture-cryptoframework-asykeyspec-i.md)
 
@@ -28,7 +29,7 @@ import { cryptoFramework } from 'kits/@kit.CryptoArchitectureKit';
 g: bigint
 ```
 
-DSA算法的参数g。
+Parameter **g** in the DSA algorithm.
 
 **Type:** bigint
 
@@ -50,7 +51,7 @@ DSA算法的参数g。
 p: bigint
 ```
 
-DSA算法的素模数p。
+Prime modulus **p** in the DSA algorithm.
 
 **Type:** bigint
 
@@ -72,7 +73,7 @@ DSA算法的素模数p。
 q: bigint
 ```
 
-DSA算法中密钥参数q（p-1的素因子）。
+Parameter **q**, prime factor of (p - 1) in the DSA algorithm.
 
 **Type:** bigint
 

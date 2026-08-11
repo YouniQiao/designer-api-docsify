@@ -1,6 +1,6 @@
 # TextTimerFrameNode
 
-定义TextTimer类型的FrameNode。
+Define the TextTimer type of FrameNode.
 
 **Inheritance/Implementation:** TextTimerFrameNode extends [TypedFrameNode<TextTimerAttribute>](TypedFrameNode<TextTimerAttribute>)
 
@@ -18,7 +18,7 @@
 abstract initialize(options?: TextTimerOptions): TextTimerAttribute
 ```
 
-初始化TextTimer类型的FrameNode。
+Initialize TextTimer FrameNode.
 
 **Since:** 23
 

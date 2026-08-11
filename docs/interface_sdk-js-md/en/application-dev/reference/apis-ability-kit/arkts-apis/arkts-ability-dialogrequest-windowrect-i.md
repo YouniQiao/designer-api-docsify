@@ -1,6 +1,6 @@
 # WindowRect
 
-表示模态弹框的属性。
+Defines the location attributes of a modal dialog box.
 
 **Since:** 10
 
@@ -22,7 +22,7 @@ import { dialogRequest } from 'kits/@kit.AbilityKit';
 height: int
 ```
 
-弹框的高度，单位为px。
+Height of the dialog box, in px.
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
@@ -42,7 +42,7 @@ height: int
 left: int
 ```
 
-弹框边框的左上角的X坐标。
+X-coordinate of the upper left corner of the dialog box.
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
@@ -62,7 +62,7 @@ left: int
 top: int
 ```
 
-弹框边框的左上角的Y坐标。
+Y-coordinate of the upper left corner of the dialog box.
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
@@ -82,7 +82,7 @@ top: int
 width: int
 ```
 
-弹框的宽度，单位为px。
+Width of the dialog box, in px.
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 

@@ -1,6 +1,6 @@
 # LunarSwitchStyle
 
-农历开关样式。
+Defines the style of the lunar calendar switch in the DatePickerDialog component.
 
 **Since:** 23
 
@@ -16,9 +16,7 @@
 selectedColor?: ResourceColor
 ```
 
-开关开启时的背景颜色。
-
-默认值：\$r('sys.color.ohos_id_color_text_primary_actived')
+Background color of the switch when it is on.
 
 **Type:** [ResourceColor](arkts-arkui-resourcecolor-t.md)
 
@@ -40,9 +38,7 @@ selectedColor?: ResourceColor
 strokeColor?: ResourceColor
 ```
 
-开关内部图标颜色。
-
-默认值：Color.White
+Color of the icon inside the switch.
 
 **Type:** [ResourceColor](arkts-arkui-resourcecolor-t.md)
 
@@ -64,9 +60,7 @@ strokeColor?: ResourceColor
 unselectedColor?: ResourceColor
 ```
 
-开关关闭时的边框颜色。
-
-默认值：\$r('sys.color.ohos_id_color_switch_outline_off')
+Border color of the switch when it is off.
 
 **Type:** [ResourceColor](arkts-arkui-resourcecolor-t.md)
 

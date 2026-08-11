@@ -6,7 +6,7 @@
 function getSlotsByBundle(bundle: BundleOption, callback: AsyncCallback<Array<NotificationSlot>>): void
 ```
 
-获取指定应用的所有通知通道（Callback形式）。
+Obtains the notification slots of a specified application.This API uses an asynchronous callback to return the result.
 
 **Since:** 7
 
@@ -28,8 +28,8 @@ function getSlotsByBundle(bundle: BundleOption, callback: AsyncCallback<Array<No
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| bundle | [BundleOption](arkts-notification-notificationextensionsubscription-bundleoption-t.md) | Yes | 指定应用的包信息。 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;[NotificationSlot](arkts-notification-notificationslot-notificationslot-i-sys.md)&gt;&gt; | Yes | 获取通知通道回调函数。 |
+| bundle | [BundleOption](arkts-notification-notificationextensionsubscription-bundleoption-t.md) | Yes | Bundle information of the application. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;[NotificationSlot](arkts-notification-notificationslot-notificationslot-i-sys.md)&gt;&gt; | Yes | Callback used to return the result. |
 
 
 ## getSlotsByBundle
@@ -38,7 +38,7 @@ function getSlotsByBundle(bundle: BundleOption, callback: AsyncCallback<Array<No
 function getSlotsByBundle(bundle: BundleOption): Promise<Array<NotificationSlot>>
 ```
 
-获取指定应用的所有通知通道（Promise形式）。
+Obtains the notification slots of a specified application. This API uses a promise to return the result.
 
 **Since:** 7
 
@@ -60,11 +60,11 @@ function getSlotsByBundle(bundle: BundleOption): Promise<Array<NotificationSlot>
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| bundle | [BundleOption](arkts-notification-notificationextensionsubscription-bundleoption-t.md) | Yes | 指定应用的包信息。 |
+| bundle | [BundleOption](arkts-notification-notificationextensionsubscription-bundleoption-t.md) | Yes | Bundle information of the application. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;Array&lt;[NotificationSlot](arkts-notification-notificationslot-notificationslot-i-sys.md)&gt;&gt; | 以Promise形式返回获取指定应用的通知通道。 |
+| Promise&lt;Array&lt;[NotificationSlot](arkts-notification-notificationslot-notificationslot-i-sys.md)&gt;&gt; | Promise used to return the result. |
 

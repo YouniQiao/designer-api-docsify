@@ -1,11 +1,5 @@
 # createVirtualScreen（系统接口）
 
-## 导入模块
-
-```TypeScript
-import { screen } from 'kits/@kit.ArkUI';
-```
-
 ## createVirtualScreen
 
 ```TypeScript
@@ -37,12 +31,14 @@ function createVirtualScreen(options:VirtualScreenOption, callback: AsyncCallbac
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt;2. Incorrect parameter types. |
-| 1400001 | Invalid display or screen. |
-| 201 | Permission verification failed. The application does not have the permission required to call the API. |
-| 202 | Permission verification failed. A non-system application calls a system API. |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt;2. Incorrect parameter types. |
+| [1400001](../errorcode-display.md#1400001-无效的显示设备) | Invalid display or screen. |
+| [201](../../errorcode-universal.md#201-权限校验失败) | Permission verification failed. The application does not have the permission required to call the API. |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed. A non-system application calls a system API. |
 
 ## 示例
+
+ArkTS-Dyn示例：
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -73,6 +69,26 @@ screen.createVirtualScreen(option, (err: BusinessError, data: screen.Screen) => 
     return;
   }
   screenClass = data;
+  console.info(`Succeeded in creating the virtual screen. Data: ${JSON.stringify(data)}`);
+});
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+let option : screen.VirtualScreenOption = { 
+  name: 'screen01',
+  width: 1080,
+  height: 2340,
+  density: 2,
+  surfaceId: ''
+};
+screen.createVirtualScreen(option, (err: BusinessError | null, data) => {
+  const errCode = err?.code;
+  if (errCode) {
+    console.error(`Failed to create the virtual screen. Code: ${err?.code}, message: ${err?.message}`);
+    return;
+  }
   console.info(`Succeeded in creating the virtual screen. Data: ${JSON.stringify(data)}`);
 });
 ```
@@ -114,12 +130,14 @@ function createVirtualScreen(options:VirtualScreenOption): Promise<Screen>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. |
-| 1400001 | Invalid display or screen. |
-| 201 | Permission verification failed. The application does not have the permission required to call the API. |
-| 202 | Permission verification failed. A non-system application calls a system API. |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. |
+| [1400001](../errorcode-display.md#1400001-无效的显示设备) | Invalid display or screen. |
+| [201](../../errorcode-universal.md#201-权限校验失败) | Permission verification failed. The application does not have the permission required to call the API. |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed. A non-system application calls a system API. |
 
 ## 示例
+
+ArkTS-Dyn示例：
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -149,6 +167,26 @@ screen.createVirtualScreen(option).then((data: screen.Screen) => {
   console.info(`Succeeded in creating the virtual screen. Data: ${JSON.stringify(data)}`);
 }).catch((err: BusinessError) => {
   console.error(`Failed to create the virtual screen. Code: ${err.code}, message: ${err.message}`);
+});
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+let screenClass: screen.Screen | null = null;
+
+let option : screen.VirtualScreenOption = { 
+  name: 'screen01',
+  width: 1080,
+  height: 2340,
+  density: 2,
+  surfaceId: ''
+};
+screen.createVirtualScreen(option).then((data: screen.Screen) => {
+  screenClass = data;
+  console.info(`Succeeded in creating the virtual screen. Data: ${JSON.stringify(data)}`);
+}).catch((err: Error) => {
+  console.error(`Failed to create the virtual screen. Code: ${err?.code}, message: ${err?.message}`);
 });
 ```
 

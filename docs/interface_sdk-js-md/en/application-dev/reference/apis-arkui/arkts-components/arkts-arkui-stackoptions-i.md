@@ -1,10 +1,11 @@
 # StackOptions
 
-设置堆叠容器的子组件对齐方式。
-
-> **说明：**
+> **NOTE：**
 > 
-> 为规范匿名对象的定义，API 18版本修改了此处的元素定义。其中，保留了历史匿名对象的起始版本信息，会出现外层元素@since版本号高于内层元素版本号的情况，但这不影响接口的使用。
+> To standardize anonymous object definitions, the element definitions here have been revised in API version 18. The
+> initial version information of the historical anonymous objects has been retained, which may result in the outer
+> element's @since version number being later than the inner element's version number. However, this does not affect
+> the use of the API.
 
 **Since:** 18
 
@@ -20,13 +21,7 @@
 alignContent?: Alignment
 ```
 
-设置子组件在容器内的对齐方式。该属性与接口的构造入参同时设置时，以属性设置的值为准。
-
-默认值：Alignment.Center 
-
-非法值：按默认值处理。
-
-**说明：** 该参数与[align](../arkts-apis/arkts-arkui-common-commonmethod-i.md/arkts-arkui-common-commonmethod-i.md#align)同时设置时，后设置的属性值会覆盖先设置的属性值。
+Alignment of child components in the container.Default value: Alignment.Center.&lt;br&gt;Invalid values are treated as the default value.
 
 **Type:** [Alignment](../arkts-apis/arkts-arkui-alignment-e.md)
 

@@ -1,11 +1,5 @@
 # setInputDeviceEnabled（系统接口）
 
-## 导入模块
-
-```TypeScript
-import { inputDevice } from 'kits/@kit.InputKit';
-```
-
 ## setInputDeviceEnabled
 
 ```TypeScript
@@ -43,12 +37,14 @@ function setInputDeviceEnabled(deviceId: int, enabled: boolean): Promise<void>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 401 | Input parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
-| 201 | Permission verification failed. The application does not have the permission required to call the API |
-| 202 | Permission verification failed. A non-system application calls a system API. |
-| 3900001 | The specified device does not exist. |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Input parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| [201](../../errorcode-universal.md#201-权限校验失败) | Permission verification failed. The application does not have the permission required to call the API |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed. A non-system application calls a system API. |
+| [3900001](../errorcode-inputdevice.md#3900001-指定的设备不存在) | The specified device does not exist. |
 
 ## 示例
+
+ArkTS-Dyn示例：
 
 ```TypeScript
 import { inputDevice } from '@kit.InputKit';
@@ -70,6 +66,35 @@ struct Index {
             })
           } catch (error) {
             console.error(`Failed to set device enabled, Code: ${(error as BusinessError).code}, message: ${(error as BusinessError).message}.`);
+          }
+        })
+    }
+  }
+}
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+import { Entry, Text, RelativeContainer, Component } from '@kit.ArkUI';
+import { inputDevice } from '@kit.InputKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+@Entry
+@Component
+struct Index {
+  build() {
+    RelativeContainer() {
+      Text()
+        .onClick(() => {
+          try {
+            inputDevice.setInputDeviceEnabled(0, true).then(() => {
+              console.info(`Succeeded in setting input device enabled.`);
+            }).catch((error) => {
+              console.error(`Failed to set device enable, Code: ${(error as BusinessError).code}, message: ${(error as BusinessError).message}.`);
+            })
+          } catch (error) {
+            console.error(`Failed to set device enable, Code: ${(error as BusinessError).code}, message: ${(error as BusinessError).message}.`);
           }
         })
     }

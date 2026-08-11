@@ -1,18 +1,12 @@
 # offRotateChange（系统接口）
 
-## 导入模块
-
-```TypeScript
-import { motion } from 'kits/@kit.MultimodalAwarenessKit';
-```
-
 ## offRotateChange
 
 ```TypeScript
 function offRotateChange(callback?: Callback<RotateEvent>): void
 ```
 
-Unsubscribe to rotate sensor event.
+取消订阅旋转传感器事件。
 
 **起始版本：** 26.0.0
 
@@ -30,12 +24,12 @@ Unsubscribe to rotate sensor event.
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-arkui/arkts-components/arkts-arkui-callback-i.md)&lt;RotateEvent&gt; | 否 | Callback used for rotate event unsubscription. &lt;br&gt; If this parameter is not specified, all callbacks of the rotate event are unsubscribed from. |
+| callback | [Callback](../../apis-arkui/arkts-components/arkts-arkui-callback-i.md)&lt;RotateEvent&gt; | 否 | 要注销的回调函数。若不填，则取消该旋转事件的所有回调。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 31500001 | Service exception. Possible causes: 1. A system error, such as null pointer, &lt;br&gt; container-related exception; 2. N-API invocation exception, invalid N-API status. |
-| 202 | Permission verification failed. A non-system application calls a system API. |
+| [31500001](../../apis-multimodalawareness-kit/errorcode-motion.md#31500001-服务异常) | Service exception. Possible causes: 1. A system error, such as null pointer, &lt;br&gt; container-related exception; 2. N-API invocation exception, invalid N-API status. |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed. A non-system application calls a system API. |
 

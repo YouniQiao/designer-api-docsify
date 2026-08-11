@@ -36,6 +36,6 @@ Enables listening for screen hopping status change events.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 201 | Permission denied. |
-| 202 | Permission verification failed. A non-system application calls a system API. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
 

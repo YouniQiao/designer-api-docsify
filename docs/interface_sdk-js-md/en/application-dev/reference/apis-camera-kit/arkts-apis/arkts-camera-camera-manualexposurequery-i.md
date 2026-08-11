@@ -52,8 +52,8 @@ Get exposure bias step.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 7400102 | Operation not allowed, session or inputdevice maybe abnormal. |
-| 7400103 | Session not config. |
+| [7400102](../errorcode-camera.md#7400102-invalid-operation) | Operation not allowed, session or inputdevice maybe abnormal. |
+| [7400103](../errorcode-camera.md#7400103-session-not-configured) | Session not config. |
 
 ## getSupportedExposureDurationRange
 
@@ -89,8 +89,8 @@ Gets the supported manual exposure duration range, units: microseconds.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 7400102 | Operation not allowed, session or inputdevice maybe abnormal. |
-| 7400103 | Session not config, only throw in session usage. |
+| [7400102](../errorcode-camera.md#7400102-invalid-operation) | Operation not allowed, session or inputdevice maybe abnormal. |
+| [7400103](../errorcode-camera.md#7400103-session-not-configured) | Session not config, only throw in session usage. |
 
 ## getSupportedExposureRange
 
@@ -124,9 +124,9 @@ Obtains the supported manual exposure durations.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 7400101 | Parameter missing or parameter type incorrect.<br>**Applicable version:** 12 and later |
-| 7400103 | Session not config, only throw in session usage. |
-| 202 | Not System Application. |
+| [7400101](../errorcode-camera.md#7400101-invalid-parameter) | Parameter missing or parameter type incorrect.<br>**Applicable version:** 12 and later |
+| [7400103](../errorcode-camera.md#7400103-session-not-configured) | Session not config, only throw in session usage. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not System Application. |
 
 ## Examples
 

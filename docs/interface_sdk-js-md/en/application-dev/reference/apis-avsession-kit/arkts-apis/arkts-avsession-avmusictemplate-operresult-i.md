@@ -1,6 +1,6 @@
 # OperResult
 
-操作结果的定义。
+The definition of the operate result.
 
 **Since:** 23
 
@@ -22,7 +22,7 @@ import { avMusicTemplate } from 'kits/@kit.AVSessionKit';
 errorCode: int
 ```
 
-错误码。
+error code.
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
@@ -42,7 +42,7 @@ errorCode: int
 errorMsg?: string
 ```
 
-错误信息。
+error message.
 
 **Type:** string
 

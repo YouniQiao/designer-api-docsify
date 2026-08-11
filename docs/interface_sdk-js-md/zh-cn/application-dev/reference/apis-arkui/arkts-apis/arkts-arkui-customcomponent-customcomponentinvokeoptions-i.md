@@ -16,7 +16,7 @@ sClass?: Class
 
 CustomComponent Class object. Used to generate default reuse key.
 
-**类型：** [Class](../../apis-arkts/arkts-apis/arkts-arkts-class-c.md)
+**类型：** Class
 
 **ArkTS模式：** 仅支持ArkTS-Sta
 

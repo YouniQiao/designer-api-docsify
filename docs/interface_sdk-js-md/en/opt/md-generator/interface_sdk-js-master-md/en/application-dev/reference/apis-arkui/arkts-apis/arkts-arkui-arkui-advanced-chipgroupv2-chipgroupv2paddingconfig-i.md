@@ -1,0 +1,55 @@
+# ChipGroupV2PaddingConfig
+
+Defines ChipGroupV2 padding config.
+
+**Since:** 26.0.0
+
+<!--Device-unnamed-export interface ChipGroupV2PaddingConfig--><!--Device-unnamed-export interface ChipGroupV2PaddingConfig-End-->
+
+**System capability:** SystemCapability.ArkUI.ArkUI.Full
+
+## Modules to Import
+
+```TypeScript
+import { ChipGroupV2ItemConfig, ChipGroupV2ItemStyleConfig, ChipGroupV2SpaceConfig, ChipGroupV2IconGroupSuffix, ChipGroupV2Items, ChipGroupV2Padding, ChipGroupV2Item, ChipGroupV2ItemStyle, ChipGroupV2, ChipGroupV2PaddingConfig, ChipGroupV2IconItemConfig, ChipGroupV2SymbolItemConfig, ChipGroupV2Space } from 'kits/@kit.ArkUI';
+```
+
+## bottom
+
+```TypeScript
+bottom: Length
+```
+
+Bottom of chip group padding.
+
+**Type:** [Length](arkts-arkui-length-t.md)
+
+**Since:** 26.0.0
+
+**Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API:** This API can be used in atomic services since API version 26.0.0.
+
+<!--Device-ChipGroupV2PaddingConfig-bottom: Length--><!--Device-ChipGroupV2PaddingConfig-bottom: Length-End-->
+
+**System capability:** SystemCapability.ArkUI.ArkUI.Full
+
+## top
+
+```TypeScript
+top: Length
+```
+
+Top of chip group padding.
+
+**Type:** [Length](arkts-arkui-length-t.md)
+
+**Since:** 26.0.0
+
+**Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API:** This API can be used in atomic services since API version 26.0.0.
+
+<!--Device-ChipGroupV2PaddingConfig-top: Length--><!--Device-ChipGroupV2PaddingConfig-top: Length-End-->
+
+**System capability:** SystemCapability.ArkUI.ArkUI.Full

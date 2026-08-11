@@ -1,5 +1,7 @@
 # Require
 
+Defining Require annotation Require is a decorator for declaring that parameters – regular variables.
+
 **Since:** 23
 
 **ArkTS mode:** ArkTS-Sta only, since version 23.

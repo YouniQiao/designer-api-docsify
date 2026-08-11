@@ -12,7 +12,7 @@ import { storageStatistics } from 'kits/@kit.CoreFileKit';
 function getAllExtBundleStats(userId: int): Promise<Array<ExtBundleStats>>
 ```
 
-获取指定用户下所有系统应用或系统服务的空间占用详情。使用Promise异步回调。
+Obtains the space usage of all system applications or system services of a specified user. This API uses a promise to return the result.
 
 **Since:** 23
 
@@ -32,13 +32,13 @@ function getAllExtBundleStats(userId: int): Promise<Array<ExtBundleStats>>
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| userId | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | 用户id。 |
+| userId | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | User ID. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;Array&lt;ExtBundleStats&gt;&gt; | Promise对象，返回指定用户下所有系统应用或系统服务的空间占用详情。 |
+| Promise&lt;Array&lt;ExtBundleStats&gt;&gt; | Promise used to return the space usage of all system applications or system services of a specified user. |
 
 **Error codes:**
 
@@ -46,8 +46,8 @@ function getAllExtBundleStats(userId: int): Promise<Array<ExtBundleStats>>
 | --- | --- |
 | 13600013 | Failed to query all business space usage. |
 | 13600010 | The input parameter is invalid. |
-| 201 | Permission verification failed. |
-| 202 | The caller is not a system application. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | The caller is not a system application. |
 | 13600001 | IPC error. |
 
 ## Examples

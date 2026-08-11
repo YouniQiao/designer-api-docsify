@@ -1,0 +1,39 @@
+# createChecksum
+
+## Modules to Import
+
+```TypeScript
+import { zlib } from 'kits/@kit.BasicServicesKit';
+```
+
+## createChecksum
+
+```TypeScript
+function createChecksum(): Promise<Checksum>
+```
+
+Creates this checksum object. This API uses a promise to return the result.
+
+**Since:** 12
+
+**Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-zlib-function createChecksum(): Promise<Checksum>--><!--Device-zlib-function createChecksum(): Promise<Checksum>-End-->
+
+**System capability:** SystemCapability.BundleManager.Zlib
+
+**Return value:**
+
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| Promise&lt;Checksum&gt; |
+
+## Examples
+
+```TypeScript
+import { zlib } from '@kit.BasicServicesKit';
+
+zlib.createChecksum().then((data) => {
+  console.info('createChecksum success');
+})
+```

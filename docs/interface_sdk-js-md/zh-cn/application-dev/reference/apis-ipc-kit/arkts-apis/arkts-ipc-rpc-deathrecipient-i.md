@@ -10,12 +10,6 @@
 
 **系统能力：** SystemCapability.Communication.IPC.Core
 
-## 导入模块
-
-```TypeScript
-import { rpc } from 'kits/@kit.IPCKit';
-```
-
 ## onRemoteDied
 
 ```TypeScript
@@ -51,7 +45,7 @@ class MyDeathRecipient implements rpc.DeathRecipient {
 onRemoteDied: OnRemoteDiedFunc
 ```
 
-Called to perform subsequent operations when a death notification of the remote object is received.
+接收到远程对象的死亡通知时执行后续操作。
 
 **起始版本：** 23
 

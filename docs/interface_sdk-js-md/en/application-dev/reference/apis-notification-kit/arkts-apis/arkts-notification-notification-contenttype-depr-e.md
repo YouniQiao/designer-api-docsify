@@ -1,6 +1,6 @@
 # ContentType
 
-通知内容类型。
+Enumerates the notification content types.
 
 **Since:** 7
 
@@ -8,7 +8,7 @@
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.notificationManager/notificationManager#ContentType
+**Substitutes:** ohos.notificationManager/notificationManager.SlotType#ContentType
 
 <!--Device-notification-export enum ContentType--><!--Device-notification-export enum ContentType-End-->
 
@@ -20,7 +20,7 @@
 NOTIFICATION_CONTENT_BASIC_TEXT
 ```
 
-普通类型通知。
+Normal text notification.
 
 **Since:** 7
 
@@ -40,7 +40,7 @@ NOTIFICATION_CONTENT_BASIC_TEXT
 NOTIFICATION_CONTENT_LONG_TEXT
 ```
 
-长文本类型通知。
+Long text notification.
 
 **Since:** 7
 
@@ -60,7 +60,7 @@ NOTIFICATION_CONTENT_LONG_TEXT
 NOTIFICATION_CONTENT_PICTURE
 ```
 
-图片类型通知。
+Picture-attached notification.
 
 **Since:** 7
 
@@ -80,7 +80,7 @@ NOTIFICATION_CONTENT_PICTURE
 NOTIFICATION_CONTENT_CONVERSATION
 ```
 
-社交类型通知。
+Conversation notification.
 
 **Since:** 7
 
@@ -100,7 +100,7 @@ NOTIFICATION_CONTENT_CONVERSATION
 NOTIFICATION_CONTENT_MULTILINE
 ```
 
-多行文本类型通知。
+Multi-line text notification.
 
 **Since:** 7
 

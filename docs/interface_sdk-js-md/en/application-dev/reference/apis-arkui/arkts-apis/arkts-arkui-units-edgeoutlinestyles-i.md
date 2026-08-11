@@ -1,6 +1,6 @@
 # EdgeOutlineStyles
 
-引入该对象时，至少传入一个参数。
+Defines the outline style property.
 
 **Since:** 23
 
@@ -16,7 +16,7 @@
 bottom?: OutlineStyle
 ```
 
-下侧外描边样式。
+bottom property.
 
 **Type:** [OutlineStyle](../arkts-components/arkts-arkui-outlinestyle-e.md)
 
@@ -36,7 +36,7 @@ bottom?: OutlineStyle
 left?: OutlineStyle
 ```
 
-左侧外描边样式。
+left property.
 
 **Type:** [OutlineStyle](../arkts-components/arkts-arkui-outlinestyle-e.md)
 
@@ -56,7 +56,7 @@ left?: OutlineStyle
 right?: OutlineStyle
 ```
 
-右侧外描边样式。
+right property.
 
 **Type:** [OutlineStyle](../arkts-components/arkts-arkui-outlinestyle-e.md)
 
@@ -76,7 +76,7 @@ right?: OutlineStyle
 top?: OutlineStyle
 ```
 
-上侧外描边样式。
+top property.
 
 **Type:** [OutlineStyle](../arkts-components/arkts-arkui-outlinestyle-e.md)
 

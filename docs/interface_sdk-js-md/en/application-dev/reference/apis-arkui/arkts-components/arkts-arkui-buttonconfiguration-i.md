@@ -1,6 +1,7 @@
 # ButtonConfiguration
 
-开发者需要自定义class实现ContentModifier接口。继承自[CommonConfiguration](../arkts-apis/arkts-arkui-common-commonconfiguration-i.md/arkts-arkui-common-commonconfiguration-i.md)。
+You need a custom class to implement the **ContentModifier** API. Inherits from   
+[CommonConfiguration](../arkts-apis/arkts-arkui-common-commonconfiguration-i.md/arkts-arkui-common-commonconfiguration-i.md).
 
 **Inheritance/Implementation:** ButtonConfiguration extends [CommonConfiguration<ButtonConfiguration>](CommonConfiguration<ButtonConfiguration>)
 
@@ -18,7 +19,7 @@
 triggerClick: ButtonTriggerClickCallback
 ```
 
-点击事件回调，用于处理使用builder新构建出来组件的点击操作。
+Click event of the new component constructed using the builder.
 
 **Since:** 12
 
@@ -38,9 +39,9 @@ triggerClick: ButtonTriggerClickCallback
 label: string
 ```
 
-Button的文本标签，用于标识按钮的功能。
+Text label of the button.
 
-**说明：**当文本字符的长度超过按钮本身的宽度时，文本将会被截断。
+Note: If the text is longer than the width of the button, it is truncated.
 
 **Type:** string
 
@@ -62,15 +63,15 @@ Button的文本标签，用于标识按钮的功能。
 pressed: boolean
 ```
 
-指示是否按下Button。
+Whether the button is pressed.
 
-true：按下；false：未按下。
+**true**: pressed; **false**: not pressed.
 
-默认值：false 
+Default value: **false**
 
-**说明：**
+**NOTE：**
 
-此按压属性生效区域大小为原本Button组件的大小，而非build出来的新组件大小。
+This setting applies to the original button size, not to any new component constructed using the builder.
 
 **Type:** boolean
 

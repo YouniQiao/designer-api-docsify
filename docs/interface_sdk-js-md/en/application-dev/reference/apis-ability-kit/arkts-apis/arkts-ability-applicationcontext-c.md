@@ -1,10 +1,10 @@
 # ApplicationContext
 
-ApplicationContext作为应用上下文，继承自[Context](arkts-ability-context-t.md)，提供了应用生命周期监听、进程管理、应用环境设置等应用级别的管控能力。
+ApplicationContext inherits from [Context](arkts-ability-context-t.md) and provides application-level management capabilities, such as application lifecycle listening, process management, and application environment setting.
 
-> **说明：**
+> **NOTE：**
 > 
-> 本模块接口仅可在Stage模型下使用。
+> The APIs of this module can be used only in the stage model.
 
 **Inheritance/Implementation:** ApplicationContext extends [Context](arkts-ability-context-t.md)
 
@@ -22,14 +22,17 @@ ApplicationContext作为应用上下文，继承自[Context](arkts-ability-conte
 clearUpApplicationData(): Promise<void>
 ```
 
-清理当前应用的应用文件路径下的所有数据，同时撤销应用向用户申请的权限。使用Promise异步回调。仅支持主线程调用。
+Clears up all data in the application file path and revokes the permissions that the application has requested from users. This API uses a promise to return the result. It can be called only on the main thread.
 
-> **说明：**
+> **NOTE：**
 > 
-> 应用文件路径详见[应用文件目录信息](../../../file-management/app-sandbox-directory.md#应用文件目录与应用文件路径)。图中仅标识了el1~el2目录下的应用文件路径，其他文件
-> 加密类型目录下的应用文件路径可以参考el1。
+> For details about the application file path, see
+> [Application File Directory and Application File Path](../../../file-management/app-sandbox-directory.md#application-file-directory-and-application-file-path)
+> . The figure shows only the application file paths in the EL1 and EL2 directories. For the application file paths
+> in other directories, refer to EL1.
 > 
-> 该接口会停止应用进程，应用进程停止后，后续的所有回调都不会再触发。
+> This API stops the application process. After the application process is stopped, all subsequent callbacks will
+> not be triggered.
 
 **Since:** 11
 
@@ -45,14 +48,14 @@ clearUpApplicationData(): Promise<void>
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise对象，无返回结果。 |
+| Promise&lt;void&gt; | Promise that returns no value. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 16000050 | Internal error. |
-| 16000011 | The context does not exist. |
+| [16000050](../errorcode-ability.md#16000050-internal-error) | Internal error. |
+| [16000011](../errorcode-ability.md#16000011-context-does-not-exist) | The context does not exist. |
 
 ## clearUpApplicationData
 
@@ -60,14 +63,17 @@ clearUpApplicationData(): Promise<void>
 clearUpApplicationData(callback: AsyncCallback<void>): void
 ```
 
-清理当前应用的应用文件路径下的所有数据，同时撤销应用向用户申请的权限。使用callback异步回调。仅支持主线程调用。
+Clears up all data in the application file path and revokes the permissions that the application has requested from users. This API uses an asynchronous callback to return the result. It can be called only on the main thread.
 
-> **说明：**
+> **NOTE：**
 > 
-> 应用文件路径详见[应用文件目录信息](../../../file-management/app-sandbox-directory.md#应用文件目录与应用文件路径)。图中仅标识了el1~el2目录下的应用文件路径，其他文件
-> 加密类型目录下的应用文件路径可以参考el1。
+> For details about the application file path, see
+> [Application File Directory and Application File Path](../../../file-management/app-sandbox-directory.md#application-file-directory-and-application-file-path)
+> . The figure shows only the application file paths in the EL1 and EL2 directories. For the application file paths
+> in other directories, refer to EL1.
 > 
-> 该接口会停止应用进程，应用进程停止后，后续的所有回调都不会再触发。
+> This API stops the application process. After the application process is stopped, all subsequent callbacks will
+> not be triggered.
 
 **Since:** 11
 
@@ -83,15 +89,81 @@ clearUpApplicationData(callback: AsyncCallback<void>): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback used to return the result. If the application data is cleared up, &lt;code&gt;error&lt;/code&gt; is &lt;code&gt;undefined&lt;/code&gt;; otherwise, &lt;code&gt;error&lt;/code&gt; is an error object. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. If the application data is cleared up, &lt;code&gt;error&lt;/code&gt; is &lt;code&gt;undefined&lt;/code&gt;; otherwise, &lt;code&gt;error&lt;/code&gt; is an error object. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. |
-| 16000050 | Internal error. |
-| 16000011 | The context does not exist. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. |
+| [16000050](../errorcode-ability.md#16000050-internal-error) | Internal error. |
+| [16000011](../errorcode-ability.md#16000011-context-does-not-exist) | The context does not exist. |
+
+## disableDelayedProcessExit
+
+```TypeScript
+disableDelayedProcessExit(): Promise<void>
+```
+
+Disables delayed process exit for the current process.
+
+&lt;p&gt;&lt;b&gt;NOTE&lt;/b&gt;:&lt;br&gt;This API can be called only by the main thread.&lt;br&gt;Calling this API cancels the effect of {@link enableDelayedProcessExit}.&lt;/p&gt;
+
+**Since:** 26.0.0
+
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
+
+**Model restriction:** This API can be used only in the stage model.
+
+<!--Device-ApplicationContext-disableDelayedProcessExit(): Promise<void>--><!--Device-ApplicationContext-disableDelayedProcessExit(): Promise<void>-End-->
+
+**System capability:** SystemCapability.Ability.AbilityRuntime.Core
+
+**Return value:**
+
+| Type | Description |
+| --- | --- |
+| Promise&lt;void&gt; | The promise returned by the function. |
+
+**Error codes:**
+
+| Error Code ID | Error Message |
+| --- | --- |
+| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. |
+| 16000150 | The current process has no UIAbility, and this API cannot be called. |
+| [16000050](../errorcode-ability.md#16000050-internal-error) | Internal error. Possible causes: Fail to connect system service. |
+
+## enableDelayedProcessExit
+
+```TypeScript
+enableDelayedProcessExit(): Promise<void>
+```
+
+Enable delayed exit for the current process.&lt;p&gt;**NOTE：**:&lt;br&gt;It can be called only by the main thread.&lt;br&gt;Under normal circumstances, the process exits after the last UIAbility within the application process has exited. After calling this interface, the process will delay its exit for 10 seconds after the last UIAbility exits. If a new Ability is started within the 10 seconds in the current process, the process no longer exits.&lt;/p&gt;
+
+**Since:** 26.0.0
+
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
+
+**Model restriction:** This API can be used only in the stage model.
+
+<!--Device-ApplicationContext-enableDelayedProcessExit(): Promise<void>--><!--Device-ApplicationContext-enableDelayedProcessExit(): Promise<void>-End-->
+
+**System capability:** SystemCapability.Ability.AbilityRuntime.Core
+
+**Return value:**
+
+| Type | Description |
+| --- | --- |
+| Promise&lt;void&gt; | The promise returned by the function. |
+
+**Error codes:**
+
+| Error Code ID | Error Message |
+| --- | --- |
+| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. |
+| 16000150 | The current process has no UIAbility, and this API cannot be called. |
+| [16000050](../errorcode-ability.md#16000050-internal-error) | Internal error. Possible causes: Fail to connect system service. |
 
 ## getAllRunningInstanceKeys
 
@@ -99,7 +171,7 @@ clearUpApplicationData(callback: AsyncCallback<void>): void
 getAllRunningInstanceKeys(): Promise<Array<string>>
 ```
 
-获取应用的所有多实例的唯一实例标识。使用Promise异步回调。仅支持主线程调用。
+Obtains the unique instance IDs of all multi-instances of this application. This API uses a promise to return the result. It can be called only on the main thread.
 
 **Since:** 14
 
@@ -115,15 +187,15 @@ getAllRunningInstanceKeys(): Promise<Array<string>>
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;Array&lt;string&gt;&gt; | Promise对象，返回应用的所有多实例的唯一实例标识。 |
+| Promise&lt;Array&lt;string&gt;&gt; | Promise used to return the unique instance IDs of all multi-instances of the application. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 16000050 | Internal error. |
-| 16000078 | The multi-instance is not supported. |
-| 16000011 | The context does not exist. |
+| [16000050](../errorcode-ability.md#16000050-internal-error) | Internal error. |
+| [16000078](../errorcode-ability.md#16000078-multiinstance-mode-is-not-supported) | The multi-instance is not supported. |
+| [16000011](../errorcode-ability.md#16000011-context-does-not-exist) | The context does not exist. |
 
 ## getAllWindowStages
 
@@ -131,9 +203,9 @@ getAllRunningInstanceKeys(): Promise<Array<string>>
 getAllWindowStages(): Promise<Array<window.WindowStage>>
 ```
 
-获取应用当前进程内的所有WindowStage对象。使用Promise异步回调。仅支持主线程调用。
+Obtains all WindowStage objects in the current application process. This API uses a promise to return the result.It can be called only on the main thread.
 
-该接口主要用于包含多个UIAbility的应用进行多窗口管理，例如管理多个WindowStage的状态、同一应用的多个窗口间的状态或数据同步等。
+This API is used to manage multiple windows in an application that contains several UIAbility components, for example, managing the states of different WindowStage objects, or synchronizing state or data between multiple windows within the same application.
 
 **Since:** 23
 
@@ -165,7 +237,7 @@ ArkTS-Sta:
 getCurrentAppCloneIndex(): int
 ```
 
-获取当前应用的分身索引。
+Obtains the index of the current application clone.
 
 **Since:** 12
 
@@ -183,14 +255,14 @@ getCurrentAppCloneIndex(): int
 
 | Type | Description |
 | --- | --- |
-| ArkTS-Dyn: number  <br>ArkTS-Sta：int | 当前应用的分身索引。 |
+| ArkTS-Dyn: number  <br>ArkTS-Sta：int | Index of the current application clone. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 16000071 | The MultiAppMode is not {@link App_CLONE}. |
-| 16000011 | The context does not exist. |
+| [16000071](../errorcode-ability.md#16000071-application-clone-is-not-supported) | The MultiAppMode is not {@link App_CLONE}. |
+| [16000011](../errorcode-ability.md#16000011-context-does-not-exist) | The context does not exist. |
 
 ## getCurrentInstanceKey
 
@@ -198,7 +270,9 @@ getCurrentAppCloneIndex(): int
 getCurrentInstanceKey(): string
 ```
 
-获取当前应用多实例的唯一实例标识。仅支持主线程调用。
+Obtains the unique instance ID of this application. This API can be called only on the main thread.
+
+This API can be properly called only on 2-in-1 devices. If it is called on other device types, error code 16000078is returned.
 
 **Since:** 14
 
@@ -214,14 +288,14 @@ getCurrentInstanceKey(): string
 
 | Type | Description |
 | --- | --- |
-| string | 返回当前应用多实例的唯一实例标识。 |
+| string | Unique instance ID of the application. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 16000078 | The multi-instance is not supported. |
-| 16000011 | The context does not exist. |
+| [16000078](../errorcode-ability.md#16000078-multiinstance-mode-is-not-supported) | The multi-instance is not supported. |
+| [16000011](../errorcode-ability.md#16000011-context-does-not-exist) | The context does not exist. |
 
 ## getRunningProcessInformation
 
@@ -229,7 +303,7 @@ getCurrentInstanceKey(): string
 getRunningProcessInformation(): Promise<Array<ProcessInformation>>
 ```
 
-获取运行中的进程信息。使用Promise异步回调。
+Obtains the information about running processes. This API uses a promise to return the result.
 
 **Since:** 9
 
@@ -247,15 +321,15 @@ getRunningProcessInformation(): Promise<Array<ProcessInformation>>
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;Array&lt;ProcessInformation&gt;&gt; | Promise对象，返回接口运行结果及有关运行进程的信息，可进行错误处理或其他自定义处理。 |
+| Promise&lt;Array&lt;[ProcessInformation](arkts-ability-processinformation-i.md)&gt;&gt; | Promise used to return the API call result and the process running information. You can perform error handling or custom processing in this callback. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. |
-| 16000050 | Internal error. |
-| 16000011 | The context does not exist. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. |
+| [16000050](../errorcode-ability.md#16000050-internal-error) | Internal error. |
+| [16000011](../errorcode-ability.md#16000011-context-does-not-exist) | The context does not exist. |
 
 ## getRunningProcessInformation
 
@@ -263,7 +337,7 @@ getRunningProcessInformation(): Promise<Array<ProcessInformation>>
 getRunningProcessInformation(callback: AsyncCallback<Array<ProcessInformation>>): void
 ```
 
-获取运行中的进程信息。使用callback异步回调。
+Obtains the information about running processes. This API uses an asynchronous callback to return the result.
 
 **Since:** 9
 
@@ -281,15 +355,55 @@ getRunningProcessInformation(callback: AsyncCallback<Array<ProcessInformation>>)
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;Array&lt;ProcessInformation&gt;&gt; | Yes | 回调函数，返回有关运行进程的信息。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;[ProcessInformation](arkts-ability-processinformation-i.md)&gt;&gt; | Yes | Callback used to return the information about the running processes. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. |
-| 16000050 | Internal error. |
-| 16000011 | The context does not exist. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. |
+| [16000050](../errorcode-ability.md#16000050-internal-error) | Internal error. |
+| [16000011](../errorcode-ability.md#16000011-context-does-not-exist) | The context does not exist. |
+
+## getUIAbilityByInstanceId
+
+```TypeScript
+getUIAbilityByInstanceId(instanceId: string): UIAbility
+```
+
+Get the UIAbility instance by the instance Id.
+
+&lt;p&gt;**NOTE：**:&lt;br&gt;It can be called only by the main thread.&lt;/p&gt;
+
+**Since:** 26.0.0
+
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
+
+**Model restriction:** This API can be used only in the stage model.
+
+<!--Device-ApplicationContext-getUIAbilityByInstanceId(instanceId: string): UIAbility--><!--Device-ApplicationContext-getUIAbilityByInstanceId(instanceId: string): UIAbility-End-->
+
+**System capability:** SystemCapability.Ability.AbilityRuntime.Core
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| instanceId | string | Yes | The instanceId of the UIAbility. |
+
+**Return value:**
+
+| Type | Description |
+| --- | --- |
+| [UIAbility](arkts-ability-app-ability-uiability-uiability-c.md) | The UIAbility instance. |
+
+**Error codes:**
+
+| Error Code ID | Error Message |
+| --- | --- |
+| [16000050](../errorcode-ability.md#16000050-internal-error) | Internal error. System service failed to communicate with dependency module. |
+| [16000003](../errorcode-ability.md#16000003-id-does-not-exist) | The id does not exist. |
+| [16000011](../errorcode-ability.md#16000011-context-does-not-exist) | The context does not exist. |
 
 ## killAllProcesses
 
@@ -297,11 +411,12 @@ getRunningProcessInformation(callback: AsyncCallback<Array<ProcessInformation>>)
 killAllProcesses(): Promise<void>
 ```
 
-终止应用的所有进程，进程退出时不会正常执行完整的应用生命周期流程。使用Promise异步回调。仅支持主线程调用。
+Kills all processes of this application. The application will not execute the normal lifecycle when exiting. This API uses a promise to return the result. It can be called only on the main thread.
 
-> **说明：**
+> **NOTE：**
 > 
-> 该接口用于应用异常场景中强制退出应用。如需正常退出应用，可以使用[terminateSelf()](arkts-ability-uiabilitycontext-c.md#terminateself)接口。
+> This API is used to forcibly exit an application in abnormal scenarios. To exit an application properly, call
+> [terminateSelf()](arkts-ability-uiabilitycontext-c.md#terminateself).
 
 **Since:** 9
 
@@ -319,14 +434,14 @@ killAllProcesses(): Promise<void>
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise对象，无返回结果。 |
+| Promise&lt;void&gt; | Promise that returns no value. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. |
-| 16000011 | The context does not exist. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. |
+| [16000011](../errorcode-ability.md#16000011-context-does-not-exist) | The context does not exist. |
 
 ## killAllProcesses
 
@@ -334,11 +449,12 @@ killAllProcesses(): Promise<void>
 killAllProcesses(clearPageStack: boolean): Promise<void>
 ```
 
-终止应用的所有进程，进程退出时不会正常执行完整的应用生命周期流程。使用Promise异步回调。仅支持主线程调用。
+Kills all processes of this application. The application will not execute the normal lifecycle when exiting. This API uses a promise to return the result. It can be called only on the main thread.
 
-> **说明：**
+> **NOTE：**
 > 
-> 该接口用于应用异常场景中强制退出应用。如需正常退出应用，可以使用[terminateSelf()](arkts-ability-uiabilitycontext-c.md#terminateself)接口。
+> This API is used to forcibly exit an application in abnormal scenarios. To exit an application properly, call
+> [terminateSelf()](arkts-ability-uiabilitycontext-c.md#terminateself).
 
 **Since:** 14
 
@@ -356,20 +472,20 @@ killAllProcesses(clearPageStack: boolean): Promise<void>
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| clearPageStack | boolean | Yes | 表示是否清除页面堆栈。true表示清除，false表示不清除。 |
+| clearPageStack | boolean | Yes | Whether to clear the page stack. **true** to clear, **false** otherwise. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise对象，无返回结果。 |
+| Promise&lt;void&gt; | Promise that returns no value. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | If the input parameter is not valid parameter. |
-| 16000011 | The context does not exist. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | If the input parameter is not valid parameter. |
+| [16000011](../errorcode-ability.md#16000011-context-does-not-exist) | The context does not exist. |
 
 ## killAllProcesses
 
@@ -377,11 +493,12 @@ killAllProcesses(clearPageStack: boolean): Promise<void>
 killAllProcesses(callback: AsyncCallback<void>): void
 ```
 
-终止应用的所有进程，进程退出时不会正常执行完整的应用生命周期流程。使用callback异步回调。仅支持主线程调用。
+Kills all processes of this application. The application will not execute the normal lifecycle when exiting. This API uses an asynchronous callback to return the result. It can be called only on the main thread.
 
-> **说明：**
+> **NOTE：**
 > 
-> 该接口用于应用异常场景中强制退出应用。如需正常退出应用，可以使用[terminateSelf()](arkts-ability-uiabilitycontext-c.md#terminateself)接口。
+> This API is used to forcibly exit an application in abnormal scenarios. To exit an application properly, call
+> [terminateSelf()](arkts-ability-uiabilitycontext-c.md#terminateself).
 
 **Since:** 9
 
@@ -399,14 +516,14 @@ killAllProcesses(callback: AsyncCallback<void>): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | 回调函数。当终止应用所在的进程成功，err为undefined，否则为错误对象。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. If all the processes are killed, **err** is **undefined**. Otherwise, **err** is an error object. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. |
-| 16000011 | The context does not exist. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. |
+| [16000011](../errorcode-ability.md#16000011-context-does-not-exist) | The context does not exist. |
 
 ## off('abilityLifecycle')
 
@@ -414,7 +531,7 @@ killAllProcesses(callback: AsyncCallback<void>): void
 off(type: 'abilityLifecycle', callbackId: number, callback: AsyncCallback<void>): void
 ```
 
-取消监听应用内UIAbility的生命周期。使用callback异步回调。仅支持主线程调用。
+Unregisters a listener for the lifecycle of a UIAbility within the application. This API uses an asynchronous callback to return the result. It can be called only on the main thread.
 
 **Since:** 9
 
@@ -432,15 +549,15 @@ off(type: 'abilityLifecycle', callbackId: number, callback: AsyncCallback<void>)
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'abilityLifecycle' | Yes | 此类型表示应用内UIAbility的生命周期，固定为'abilityLifecycle'。 |
-| callbackId | number | Yes | 通过 [ApplicationContext.on('abilityLifecycle')](ApplicationContext#on(type: 'abilityLifecycle', callback: AbilityLifecycleCallback)) 接口注册监听应用内UIAbility的生命周期时返回的ID。 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | 回调方法。当取消监听应用内生命周期成功，err为undefined，否则为错误对象。 |
+| type | 'abilityLifecycle' | Yes | Lifecycle of the UIAbility within the application. The value is fixed at **'abilityLifecycle'**. |
+| callbackId | number | Yes | ID returned when the [ApplicationContext.on('abilityLifecycle')](ApplicationContext#on(type: 'abilityLifecycle', callback: AbilityLifecycleCallback)) API is called to register a listener for the lifecycle of a UIAbility within the application. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. If the deregistration is successful, **err** is **undefined**. Otherwise, **err** is an error object. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. |
 
 ## off('abilityLifecycle')
 
@@ -448,7 +565,7 @@ off(type: 'abilityLifecycle', callbackId: number, callback: AsyncCallback<void>)
 off(type: 'abilityLifecycle', callbackId: number): Promise<void>
 ```
 
-取消监听应用内UIAbility的生命周期。使用Promise异步回调。仅支持主线程调用。
+Unregisters a listener for the lifecycle of a UIAbility within the application. This API uses a promise to return the result. It can be called only on the main thread.
 
 **Since:** 9
 
@@ -466,20 +583,20 @@ off(type: 'abilityLifecycle', callbackId: number): Promise<void>
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'abilityLifecycle' | Yes | 此类型表示应用内UIAbility的生命周期，固定为'abilityLifecycle'。 |
-| callbackId | number | Yes | 通过 [ApplicationContext.on('abilityLifecycle')](ApplicationContext#on(type: 'abilityLifecycle', callback: AbilityLifecycleCallback)) 接口注册监听应用内UIAbility的生命周期时返回的ID。 |
+| type | 'abilityLifecycle' | Yes | Lifecycle of the UIAbility within the application. The value is fixed at **'abilityLifecycle'**. |
+| callbackId | number | Yes | ID returned when the [ApplicationContext.on('abilityLifecycle')](ApplicationContext#on(type: 'abilityLifecycle', callback: AbilityLifecycleCallback)) API is called to register a listener for the lifecycle of a UIAbility within the application. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise对象，无返回结果。 |
+| Promise&lt;void&gt; | Promise that returns no value. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. |
 
 ## off('environment')
 
@@ -487,7 +604,7 @@ off(type: 'abilityLifecycle', callbackId: number): Promise<void>
 off(type: 'environment', callbackId: number, callback: AsyncCallback<void>): void
 ```
 
-取消对系统环境变化的监听。使用callback异步回调。仅支持主线程调用。
+Unregisters the listener for system environment changes. This API uses an asynchronous callback to return the result. It can be called only on the main thread.
 
 **Since:** 9
 
@@ -505,15 +622,15 @@ off(type: 'environment', callbackId: number, callback: AsyncCallback<void>): voi
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'environment' | Yes | 此类型表示系统环境变化，如系统深浅色发生变化，固定为'environment'。 |
-| callbackId | number | Yes | 通过 [ApplicationContext.on('environment')](ApplicationContext#on(type: 'environment', callback: EnvironmentCallback)) 接口注册监听系统环境变化时返回的ID。 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | 回调方法。当取消对系统环境变化的监听成功，err为undefined，否则为错误对象。 |
+| type | 'environment' | Yes | System environment change, for example, system dark/light color mode change. The value is fixed at **'environment'**. |
+| callbackId | number | Yes | ID returned when the [ApplicationContext.on('environment')](ApplicationContext#on(type: 'environment', callback: EnvironmentCallback)) API is called to register a listener for system environment changes. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. If the deregistration is successful, **err** is **undefined**. Otherwise, **err** is an error object. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified. 2 .Incorrect parameter types. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified. 2 .Incorrect parameter types. |
 
 ## off('environment')
 
@@ -521,7 +638,7 @@ off(type: 'environment', callbackId: number, callback: AsyncCallback<void>): voi
 off(type: 'environment', callbackId: number): Promise<void>
 ```
 
-取消对系统环境变化的监听。使用Promise异步回调。仅支持主线程调用。
+Unregisters the listener for system environment changes. This API uses a promise to return the result. It can be called only on the main thread.
 
 **Since:** 9
 
@@ -539,20 +656,20 @@ off(type: 'environment', callbackId: number): Promise<void>
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'environment' | Yes | 此类型表示系统环境变化，如系统深浅色发生变化，固定为'environment'。 |
-| callbackId | number | Yes | 通过 [ApplicationContext.on('environment')](ApplicationContext#on(type: 'environment', callback: EnvironmentCallback)) 接口注册监听系统环境变化时返回的ID。 |
+| type | 'environment' | Yes | System environment change, for example, system dark/light color mode change. The value is fixed at **'environment'**. |
+| callbackId | number | Yes | ID returned when the [ApplicationContext.on('environment')](ApplicationContext#on(type: 'environment', callback: EnvironmentCallback)) API is called to register a listener for system environment changes. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise对象，无返回结果。 |
+| Promise&lt;void&gt; | Promise that returns no value. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified. 2 .Incorrect parameter types. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified. 2 .Incorrect parameter types. |
 
 ## off('applicationStateChange')
 
@@ -560,7 +677,7 @@ off(type: 'environment', callbackId: number): Promise<void>
 off(type: 'applicationStateChange', callback?: ApplicationStateChangeCallback): void
 ```
 
-取消对当前应用进程状态变化的监听。使用callback异步回调。仅支持主线程调用。
+Unregisters the listener for application process state changes. This API uses an asynchronous callback to return the result. It can be called only on the main thread.
 
 **Since:** 10
 
@@ -578,14 +695,14 @@ off(type: 'applicationStateChange', callback?: ApplicationStateChangeCallback): 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'applicationStateChange' | Yes | 此类型表示当前应用进程状态变化，固定为'applicationStateChange'。 |
-| callback | [ApplicationStateChangeCallback](arkts-ability-app-ability-applicationstatechangecallback-applicationstatechangecallback-c.md) | No | 回调函数。取值可以为使用 [ApplicationContext.on('applicationStateChange')](ApplicationContext#on(type: 'applicationStateChange', callback: ApplicationStateChangeCallback)) 方法定义的callback回调，也可以为空。&lt;br/&gt;-?如果传入已定义的回调，则取消该监听。 &lt;br/&gt;-?如果未传入参数，则取消所有已注册的该类型事件的监听。 |
+| type | 'applicationStateChange' | Yes | Application process state change. The value is fixed at **'applicationStateChange'**. |
+| callback | [ApplicationStateChangeCallback](arkts-ability-app-ability-applicationstatechangecallback-applicationstatechangecallback-c.md) | No | Callback used to return the result. The value can be a callback defined by [ApplicationContext.on('applicationStateChange')](ApplicationContext#on(type: 'applicationStateChange', callback: ApplicationStateChangeCallback)) or empty.&lt;br&gt;- If a defined callback is passed in, the listener for that callback is unregistered.&lt;br&gt;- If no value is passed in, all the listeners for the corresponding event are unregistered. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. |
 
 ## offAbilityLifecycle
 
@@ -593,7 +710,7 @@ off(type: 'applicationStateChange', callback?: ApplicationStateChangeCallback): 
 offAbilityLifecycle(callbackId: int, callback: AsyncCallback<void>): void
 ```
 
-取消监听应用内UIAbility的生命周期。使用callback异步回调。仅支持主线程调用。
+Unregisters the listener that monitors the ability lifecycle of the application.This API uses an asynchronous callback to return the result.It can be called only by the main thread.
 
 **Since:** 23
 
@@ -609,8 +726,8 @@ offAbilityLifecycle(callbackId: int, callback: AsyncCallback<void>): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callbackId | int | Yes | 通过 [ApplicationContext.on('abilityLifecycle')](ApplicationContext#on(type: 'abilityLifecycle', callback: AbilityLifecycleCallback)) 接口注册监听应用内UIAbility的生命周期时返回的ID。 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | 回调方法。当取消监听应用内生命周期成功，err为undefined，否则为错误对象。 |
+| callbackId | int | Yes | ID of the listener to unregister. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | ID returned when the [ApplicationContext.on('abilityLifecycle')](ApplicationContext#on(type: 'abilityLifecycle', callback: AbilityLifecycleCallback)) API is called to register a listener for the lifecycle of a UIAbility within the application. |
 
 ## offAbilityLifecycle
 
@@ -618,7 +735,9 @@ offAbilityLifecycle(callbackId: int, callback: AsyncCallback<void>): void
 offAbilityLifecycle(callbackId: int): Promise<void>
 ```
 
-取消监听应用内UIAbility的生命周期。使用Promise异步回调。仅支持主线程调用。
+Unregisters the listener that monitors the ability lifecycle of the application.This API uses a promise to return the result.
+
+&lt;p&gt;**NOTE：**:&lt;br&gt;It can be called only by the main thread.&lt;/p&gt;
 
 **Since:** 23
 
@@ -634,13 +753,13 @@ offAbilityLifecycle(callbackId: int): Promise<void>
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callbackId | int | Yes | 通过 [ApplicationContext.on('abilityLifecycle')](ApplicationContext#on(type: 'abilityLifecycle', callback: AbilityLifecycleCallback)) 接口注册监听应用内UIAbility的生命周期时返回的ID。 |
+| callbackId | int | Yes | Indicates the number code of the callback. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | 无返回结果的Promise对象。 |
+| Promise&lt;void&gt; | ThePromise returned by the function. |
 
 ## offApplicationStateChange
 
@@ -648,7 +767,7 @@ offAbilityLifecycle(callbackId: int): Promise<void>
 offApplicationStateChange(callback?: ApplicationStateChangeCallback): void
 ```
 
-取消对应用前后台状态变化的监听。使用callback异步回调。仅支持主线程调用。
+Unregister applicationStateChange callback.
 
 **Since:** 23
 
@@ -664,7 +783,7 @@ offApplicationStateChange(callback?: ApplicationStateChangeCallback): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [ApplicationStateChangeCallback](arkts-ability-app-ability-applicationstatechangecallback-applicationstatechangecallback-c.md) | No | 回调函数。取值可以为使用 [ApplicationContext.onApplicationStateChange](ApplicationContext.onApplicationStateChange)方法定义的callback回 调，也可以为空。 - 如果传入已定义的回调，则取消该监听。 - 如果未传入参数，则取消当前应用对所有前后台切换事件的监听。 |
+| callback | [ApplicationStateChangeCallback](arkts-ability-app-ability-applicationstatechangecallback-applicationstatechangecallback-c.md) | No | The applicationStateChange callback. |
 
 ## offEnvironment
 
@@ -672,7 +791,7 @@ offApplicationStateChange(callback?: ApplicationStateChangeCallback): void
 offEnvironment(callbackId: int, callback: AsyncCallback<void>): void
 ```
 
-取消对系统环境变化的监听。使用callback异步回调。仅支持主线程调用。
+Unregister environment callback.
 
 **Since:** 23
 
@@ -688,8 +807,8 @@ offEnvironment(callbackId: int, callback: AsyncCallback<void>): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callbackId | int | Yes | 通过[ApplicationContext.onEnvironment](arkts-ability-applicationcontext-c.md#onenvironment)接口注册监听系统环 境变化时返回的ID。 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | 回调方法。当取消对系统环境变化的监听成功，err为undefined，否则为错误对象。 |
+| callbackId | int | Yes | Indicates the number code of the callback. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | The callback of unregisterEnvironmentCallback. |
 
 ## offEnvironment
 
@@ -697,7 +816,7 @@ offEnvironment(callbackId: int, callback: AsyncCallback<void>): void
 offEnvironment(callbackId: int): Promise<void>
 ```
 
-取消对系统环境变化的监听。使用Promise异步回调。仅支持主线程调用。
+Unregister environment callback.
 
 **Since:** 23
 
@@ -713,13 +832,13 @@ offEnvironment(callbackId: int): Promise<void>
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callbackId | int | Yes | 通过[ApplicationContext.onEnvironment](arkts-ability-applicationcontext-c.md#onenvironment)接口注册监听系统环境 变化时返回的ID。 |
+| callbackId | int | Yes | Indicates the number code of the callback. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | 无返回结果的Promise对象。 |
+| Promise&lt;void&gt; | The promise returned by the function. |
 
 ## offInteropAbilityLifecycle
 
@@ -727,7 +846,9 @@ offEnvironment(callbackId: int): Promise<void>
 offInteropAbilityLifecycle(callback?: InteropAbilityLifecycleCallback): void
 ```
 
-取消应用内不同ArkTS环境下UIAbility生命周期的监听。仅支持主线程调用。
+Unregisters the listener that monitors the ability lifecycle of the application for interoperability.
+
+&lt;p&gt;**NOTE：**:&lt;br&gt;It can be called only by the main thread.&lt;/p&gt;
 
 **Since:** 23
 
@@ -743,7 +864,7 @@ offInteropAbilityLifecycle(callback?: InteropAbilityLifecycleCallback): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [InteropAbilityLifecycleCallback](arkts-ability-app-ability-interopabilitylifecyclecallback-interopabilitylifecyclecallback-i.md) | No | 不同ArkTS环境下UIAbility生命周期变化时触发的回调方法。 |
+| callback | [InteropAbilityLifecycleCallback](arkts-ability-app-ability-interopabilitylifecyclecallback-interopabilitylifecyclecallback-i.md) | No | Callback used to be unregistered. |
 
 ## offSystemConfigurationUpdated
 
@@ -751,7 +872,7 @@ offInteropAbilityLifecycle(callback?: InteropAbilityLifecycleCallback): void
 offSystemConfigurationUpdated(callback?: systemConfiguration.UpdatedCallback): void
 ```
 
-取消监听系统环境[Configuration](arkts-ability-app-ability-configuration-configuration-i.md)的变化。仅支持主线程调用。
+unregisters a listener for system configuration updated.
 
 &lt;p&gt;**NOTE：**:&lt;br&gt;It can be called only by the main thread.&lt;/p&gt;
 
@@ -771,7 +892,7 @@ offSystemConfigurationUpdated(callback?: systemConfiguration.UpdatedCallback): v
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | systemConfiguration.UpdatedCallback | No | 回调函数。取值可以为使用 [ApplicationContext.onSystemConfigurationUpdated](../../../reference/apis-ability-kit/js-apis-inner-application-applicationContext.md#applicationcontextonsystemconfigurationupdated24) 方法注册的callback回调，也可以为空。&lt;br/&gt;-&nbsp;如果传入已定义的回调，则取消该监听。 &lt;br/&gt;-&nbsp;如果未传入参数，则取消所有已注册的监听。 |
+| callback | systemConfiguration.UpdatedCallback | No | The system configuration updated callback. If a defined callback is passed in, the listener for that callback is unregistered. If no value is passed in, all the listeners for the corresponding event are unregistered. |
 
 ## on('abilityLifecycle')
 
@@ -779,7 +900,7 @@ offSystemConfigurationUpdated(callback?: systemConfiguration.UpdatedCallback): v
 on(type: 'abilityLifecycle', callback: AbilityLifecycleCallback): number
 ```
 
-注册监听应用内UIAbility的生命周期。使用callback异步回调。仅支持主线程调用。
+Registers a listener for the lifecycle of a UIAbility within the application. This API uses an asynchronous callback to return the result. It can be called only on the main thread.
 
 **Since:** 9
 
@@ -797,20 +918,20 @@ on(type: 'abilityLifecycle', callback: AbilityLifecycleCallback): number
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'abilityLifecycle' | Yes | 此类型表示应用内UIAbility的生命周期，固定为'abilityLifecycle'。 |
-| callback | [AbilityLifecycleCallback](arkts-ability-app-ability-abilitylifecyclecallback-abilitylifecyclecallback-c.md) | Yes | UIAbility生命周期变化时触发的回调方法。 |
+| type | 'abilityLifecycle' | Yes | Lifecycle of the UIAbility within the application. The value is fixed at **'abilityLifecycle'**. |
+| callback | [AbilityLifecycleCallback](arkts-ability-app-ability-abilitylifecyclecallback-abilitylifecyclecallback-c.md) | Yes | Callback triggered when the UIAbility lifecycle changes. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| number | 返回此次注册的callbackID，该ID用于在 [ApplicationContext.off('abilityLifecycle')]{ |
+| number | ID of the callback registered. This ID is used to unregister the corresponding callback in [ApplicationContext.off('abilityLifecycle')]{ |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. |
 
 ## on('environment')
 
@@ -818,19 +939,24 @@ on(type: 'abilityLifecycle', callback: AbilityLifecycleCallback): number
 on(type: 'environment', callback: EnvironmentCallback): number
 ```
 
-注册对系统环境变化的监听。使用callback异步回调。仅支持主线程调用。
+Registers a listener for system environment changes. This API uses an asynchronous callback to return the result.It can be called only on the main thread.
 
-> **说明：**
+> **NOTE：**
 > 
-> - 使用[onConfigurationUpdate](arkts-ability-app-ability-ability-ability-c.md#onconfigurationupdate)也可以实现对系统环境变量的监听。相较
-> 于Ability的[onConfigurationUpdate](arkts-ability-app-ability-ability-ability-c.md#onconfigurationupdate)接口，当前接口的使用场景更
-> 加灵活，不仅可以在应用组件中使用，还可以在页面中使用，但是支持订阅的环境变量与Ability的
-> [onConfigurationUpdate](arkts-ability-app-ability-ability-ability-c.md#onconfigurationupdate)接口存在差异，如不支持订阅direction
-> 、screenDensity、displayId，详见[Configuration](arkts-ability-app-ability-configuration-configuration-i.md)中各个环境变量的说明。
+> - You can also use [onConfigurationUpdate](arkts-ability-app-ability-ability-ability-c.md#onconfigurationupdate) to
+> listen for system environment changes. Unlike
+> [onConfigurationUpdate](arkts-ability-app-ability-ability-ability-c.md#onconfigurationupdate) of **Ability**, this
+> API offers greater flexibility. It can be used both within application components and pages. However, the
+> environment variables that can be subscribed to are different from those of
+> [onConfigurationUpdate](arkts-ability-app-ability-ability-ability-c.md#onconfigurationupdate). For example, this
+> API cannot be used to subscribe to direction, screen density, and display ID changes. For details, see the
+> description of each environment variable in
+> [Configuration](arkts-ability-app-ability-configuration-configuration-i.md).
 > 
-> - 当前接口在实际触发时存在一定限制。例如如果开发者通过[setLanguage](arkts-ability-applicationcontext-c.md#setlanguage)接口设置应用的语言，即便系统语
-> 言发生变化，系统也不再触发当前接口的[callback](arkts-app-ability-environmentcallback.md)回调。详见
-> [使用场景](../../../application-models/subscribe-system-environment-variable-changes.md#使用场景)。
+> - There are certain restrictions when this API is triggered. For example, if you set the application language by
+> calling [setLanguage](arkts-ability-applicationcontext-c.md#setlanguage), the system does not trigger the
+> callback for the current API even if the system language changes. For details, see
+> [When to Use](../../../application-models/subscribe-system-environment-variable-changes.md#when-to-use).
 
 **Since:** 9
 
@@ -848,20 +974,20 @@ on(type: 'environment', callback: EnvironmentCallback): number
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'environment' | Yes | 此类型表示系统环境变化，如系统深浅色发生变化，固定为'environment'。 |
-| callback | [EnvironmentCallback](arkts-ability-app-ability-environmentcallback-environmentcallback-i.md) | Yes | 系统环境变化时触发的回调方法。 |
+| type | 'environment' | Yes | System environment change, for example, system dark/light color mode change. The value is fixed at **'environment'**. |
+| callback | [EnvironmentCallback](arkts-ability-app-ability-environmentcallback-environmentcallback-c.md) | Yes | Callback triggered when the system environment changes. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| number | 返回此次注册的callbackID，该ID用于在 [ApplicationContext.off('environment')]{ |
+| number | ID of the callback registered. This ID is used to unregister the corresponding callback in [ApplicationContext.off('environment')]{ |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified. 2 .Incorrect parameter types. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified. 2 .Incorrect parameter types. |
 
 ## on('applicationStateChange')
 
@@ -869,7 +995,7 @@ on(type: 'environment', callback: EnvironmentCallback): number
 on(type: 'applicationStateChange', callback: ApplicationStateChangeCallback): void
 ```
 
-注册对当前应用进程状态变化的监听。使用callback异步回调。仅支持主线程调用。
+Registers a listener for application process state changes. This API uses an asynchronous callback to return the result. It can be called only on the main thread.
 
 **Since:** 10
 
@@ -887,14 +1013,14 @@ on(type: 'applicationStateChange', callback: ApplicationStateChangeCallback): vo
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'applicationStateChange' | Yes | 此类型表示当前应用进程状态变化，固定为'applicationStateChange'。 |
-| callback | [ApplicationStateChangeCallback](arkts-ability-app-ability-applicationstatechangecallback-applicationstatechangecallback-c.md) | Yes | 当前应用进程状态切换时触发的回调方法。 |
+| type | 'applicationStateChange' | Yes | Application process state change. The value is fixed at **'applicationStateChange'**. |
+| callback | [ApplicationStateChangeCallback](arkts-ability-app-ability-applicationstatechangecallback-applicationstatechangecallback-c.md) | Yes | Callback triggered when the application process state is changed. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. |
 
 ## onAbilityLifecycle
 
@@ -902,7 +1028,7 @@ on(type: 'applicationStateChange', callback: ApplicationStateChangeCallback): vo
 onAbilityLifecycle(callback: AbilityLifecycleCallback): int
 ```
 
-注册监听应用内UIAbility的生命周期。使用callback异步回调。仅支持主线程调用。
+Registers a listener to monitor the ability lifecycle of the application.This API uses an asynchronous callback to return the result.It can be called only by the main thread.
 
 **Since:** 23
 
@@ -918,13 +1044,13 @@ onAbilityLifecycle(callback: AbilityLifecycleCallback): int
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AbilityLifecycleCallback](arkts-ability-app-ability-abilitylifecyclecallback-abilitylifecyclecallback-c.md) | Yes | UIAbility生命周期变化时触发的回调方法。 |
+| callback | [AbilityLifecycleCallback](arkts-ability-app-ability-abilitylifecyclecallback-abilitylifecyclecallback-c.md) | Yes | Callback triggered when the UIAbility lifecycle changes. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| int | 返回此次注册的callbackID（每次注册该ID会自增+1，当超过监听上限数量2^63-1时，返回-1），该ID用于在ApplicationContext.offAbilityLifecycle方法中取消注册对应的callback。 |
+| int | Returns the number code of the callback. |
 
 ## onApplicationStateChange
 
@@ -932,7 +1058,7 @@ onAbilityLifecycle(callback: AbilityLifecycleCallback): int
 onApplicationStateChange(callback: ApplicationStateChangeCallback): void
 ```
 
-注册对当前应用前后台状态变化的监听。使用callback异步回调。仅支持主线程调用。
+Register applicationStateChange callback.
 
 **Since:** 23
 
@@ -948,7 +1074,7 @@ onApplicationStateChange(callback: ApplicationStateChangeCallback): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [ApplicationStateChangeCallback](arkts-ability-app-ability-applicationstatechangecallback-applicationstatechangecallback-c.md) | Yes | 应用前后台切换时触发的回调方法。 |
+| callback | [ApplicationStateChangeCallback](arkts-ability-app-ability-applicationstatechangecallback-applicationstatechangecallback-c.md) | Yes | The applicationStateChange callback. |
 
 ## onEnvironment
 
@@ -956,7 +1082,7 @@ onApplicationStateChange(callback: ApplicationStateChangeCallback): void
 onEnvironment(callback: EnvironmentCallback): int
 ```
 
-注册对系统环境变化的监听。使用callback异步回调。仅支持主线程调用。
+Register environment callback.
 
 **Since:** 23
 
@@ -972,13 +1098,13 @@ onEnvironment(callback: EnvironmentCallback): int
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [EnvironmentCallback](arkts-ability-app-ability-environmentcallback-environmentcallback-i.md) | Yes | 系统环境变化时触发的回调方法。 |
+| callback | [EnvironmentCallback](arkts-ability-app-ability-environmentcallback-environmentcallback-c.md) | Yes | The environment callback. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| int | 返回此次注册的callbackID（每次注册该ID会自增+1，当超过监听上限数量2^63-1时，返回-1），该ID用于在 [ApplicationContext.offEnvironment]{ |
+| int | Returns the number code of the callback. |
 
 ## onInteropAbilityLifecycle
 
@@ -986,7 +1112,9 @@ onEnvironment(callback: EnvironmentCallback): int
 onInteropAbilityLifecycle(callback: InteropAbilityLifecycleCallback): void
 ```
 
-注册监听应用内不同ArkTS环境下的UIAbility生命周期。仅支持主线程调用。
+Registers a listener to monitor the ability lifecycle of the application for interoperability.
+
+&lt;p&gt;**NOTE：**:&lt;br&gt;It can be called only by the main thread.&lt;/p&gt;
 
 **Since:** 23
 
@@ -1002,7 +1130,7 @@ onInteropAbilityLifecycle(callback: InteropAbilityLifecycleCallback): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [InteropAbilityLifecycleCallback](arkts-ability-app-ability-interopabilitylifecyclecallback-interopabilitylifecyclecallback-i.md) | Yes | 不同ArkTS环境下UIAbility生命周期变化时触发的回调方法。 |
+| callback | [InteropAbilityLifecycleCallback](arkts-ability-app-ability-interopabilitylifecyclecallback-interopabilitylifecyclecallback-i.md) | Yes | Callback used to be registered as the listener. |
 
 ## onSystemConfigurationUpdated
 
@@ -1010,11 +1138,9 @@ onInteropAbilityLifecycle(callback: InteropAbilityLifecycleCallback): void
 onSystemConfigurationUpdated(callback: systemConfiguration.UpdatedCallback): void
 ```
 
-注册监听系统环境[Configuration](arkts-ability-app-ability-configuration-configuration-i.md)的变化。使用callback异步回调。仅支持主线程调用。
+Registers a listener for system configuration updated.
 
-> **说明：**
-> 
-> 应用自定义的设置不影响回调函数的触发。例如：应用自定义设置了深浅色模式，当系统深浅色模式变化后，注册的回调函数依然会触发。
+&lt;p&gt;**NOTE：**:&lt;br&gt;It can be called only by the main thread.&lt;/p&gt;
 
 **Since:** 24
 
@@ -1032,7 +1158,7 @@ onSystemConfigurationUpdated(callback: systemConfiguration.UpdatedCallback): voi
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | systemConfiguration.UpdatedCallback | Yes | 系统环境变化时触发的回调方法。 |
+| callback | systemConfiguration.UpdatedCallback | Yes | The system configuration updated callback. |
 
 ## restartApp
 
@@ -1040,18 +1166,21 @@ onSystemConfigurationUpdated(callback: systemConfiguration.UpdatedCallback): voi
 restartApp(want: Want): void
 ```
 
-应用重启并拉起自身指定UIAbility。仅支持主线程调用，且待重启的应用需要处于获焦状态。
+Restarts the application and starts the specified UIAbility. This API can be called only by the main thread, and the application to restart must be active.
 
-> **说明：**
+> **NOTE：**
 > 
-> 通过该接口重启应用时，不会触发应用中Ability的onDestroy生命周期回调。
+> When this API is called to restart the application, the **onDestroy** lifecycle callback of the ability in the
+> application is not triggered.
 > 
-> 在原子化服务调用本接口成功后的3秒内，再次调用本接口、
+> If an atomic service calls this API,
 > [restartSelfAtomicService()](arkts-ability-abilitymanager-restartselfatomicservice-f.md#restartselfatomicservice)
-> 或[UIAbilityContext.restartApp()](arkts-ability-uiabilitycontext-c.md#restartapp)接口中的任一接口，系统将返回错误码16000064。
+> , or [UIAbilityContext.restartApp()](arkts-ability-uiabilitycontext-c.md#restartapp) within 3 seconds after a
+> successful call to this API, the system returns error code 16000064.
 > 
-> 在应用调用本接口成功后的3秒内，若再次调用本接口或[UIAbilityContext.restartApp()](arkts-ability-uiabilitycontext-c.md#restartapp)接口中的任
-> 一接口，系统将返回错误码16000064。
+> If an application calls this API or
+> [UIAbilityContext.restartApp()](arkts-ability-uiabilitycontext-c.md#restartapp) within 3 seconds after a
+> successful call to this API, the system returns error code 16000064.
 
 **Since:** 12
 
@@ -1075,11 +1204,11 @@ restartApp(want: Want): void
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. |
-| 16000053 | The ability is not on the top of the UI. |
-| 16000064 | Restart too frequently. Try again at least 3s later. |
-| 16000050 | Internal error. |
-| 16000063 | The target to restart does not belong to the current application or is not a UIAbility. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. |
+| [16000053](../errorcode-ability.md#16000053-ability-is-not-on-top-of-ui) | The ability is not on the top of the UI. |
+| [16000064](../errorcode-ability.md#16000064-frequent-application-restart) | Restart too frequently. Try again at least 3s later. |
+| [16000050](../errorcode-ability.md#16000050-internal-error) | Internal error. |
+| [16000063](../errorcode-ability.md#16000063-invalid-ability-during-application-restart) | The target to restart does not belong to the current application or is not a UIAbility. |
 
 ## setColorMode
 
@@ -1087,13 +1216,14 @@ restartApp(want: Want): void
 setColorMode(colorMode: ConfigurationConstant.ColorMode): void
 ```
 
-设置应用的深浅色模式。仅支持主线程调用。
+Sets the dark/light color mode for the application. This API can be called only on the main thread.
 
-> **说明：**
+> **NOTE：**
 > 
-> 调用该接口前，需要确保窗口已完成创建、且UIAbility对应的页面已完成加载，即在
-> [onWindowStageCreate()](arkts-ability-app-ability-uiability-uiability-c.md#onwindowstagecreate)生命周期中通过
-> [loadContent](../../../reference/apis-arkui/arkts-apis-window-WindowStage.md#loadcontent9)方法加载页面之后调用。
+> Before calling this API, ensure that the window has been created and the page corresponding to the UIAbility has
+> been loaded (using the
+> [loadContent](../../../reference/apis-arkui/arkts-apis-window-WindowStage.md#loadcontent9) API in the
+> [onWindowStageCreate()](arkts-ability-app-ability-uiability-uiability-c.md#onwindowstagecreate) lifecycle).
 
 **Since:** 11
 
@@ -1111,14 +1241,14 @@ setColorMode(colorMode: ConfigurationConstant.ColorMode): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| colorMode | ConfigurationConstant.ColorMode | Yes | 深浅色模式，包括：深色模式、浅色模式、未设置颜色模式（默认）。 |
+| colorMode | ConfigurationConstant.ColorMode | Yes | Dark/light color mode, which can be dark mode, light mode, or follow-system mode (default). |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. |
-| 16000011 | The context does not exist. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. |
+| [16000011](../errorcode-ability.md#16000011-context-does-not-exist) | The context does not exist. |
 
 ## setFont
 
@@ -1126,13 +1256,14 @@ setColorMode(colorMode: ConfigurationConstant.ColorMode): void
 setFont(font: string): void
 ```
 
-设置应用的字体类型。仅支持主线程调用。
+Sets the font for this application. This API can be called only on the main thread.
 
-> **说明：**
+> **NOTE：**
 > 
-> 调用该接口前，需要确保窗口已完成创建、且UIAbility对应的页面已完成加载，即在
-> [onWindowStageCreate()](arkts-ability-app-ability-uiability-uiability-c.md#onwindowstagecreate)生命周期中通过
-> [loadContent](../../../reference/apis-arkui/arkts-apis-window-WindowStage.md#loadcontent9)方法加载页面之后调用。
+> Before calling this API, ensure that the window has been created and the page corresponding to the UIAbility has
+> been loaded (using the
+> [loadContent](../../../reference/apis-arkui/arkts-apis-window-WindowStage.md#loadcontent9) API in the
+> [onWindowStageCreate()](arkts-ability-app-ability-uiability-uiability-c.md#onwindowstagecreate) lifecycle).
 
 **Since:** 12
 
@@ -1148,14 +1279,14 @@ setFont(font: string): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| font | string | Yes | 设置字体类型，字体可以通过 [UIContext.registerFont](../../../reference/apis-arkui/arkts-apis-uicontext-font.md#registerfont)方法进行注册使用。 |
+| font | string | Yes | Font, which can be registered by calling [UIContext.registerFont](../../../reference/apis-arkui/arkts-apis-uicontext-font.md#registerfont). |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 16000050 | Internal error. |
-| 16000011 | The context does not exist. |
+| [16000050](../errorcode-ability.md#16000050-internal-error) | Internal error. |
+| [16000011](../errorcode-ability.md#16000011-context-does-not-exist) | The context does not exist. |
 
 ## setFontSizeScale
 
@@ -1169,7 +1300,7 @@ ArkTS-Sta:
 setFontSizeScale(fontSizeScale: double): void
 ```
 
-设置应用字体大小缩放比例。仅支持主线程调用。
+Sets the scale ratio for the font size of this application. This API can be called only on the main thread.
 
 **Since:** 13
 
@@ -1187,7 +1318,7 @@ setFontSizeScale(fontSizeScale: double): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| fontSizeScale | ArkTS-Dyn: number  <br>ArkTS-Sta：double | Yes | 表示字体缩放比例，取值为非负数。当应用字体 [跟随系统](../../../quick-start/app-configuration-file.md#configuration标签)且该字段取值超过 [fontSizeMaxScale](../../../quick-start/app-configuration-file.md#configuration标签)取值时，实际生效值为 [fontSizeMaxScale](../../../quick-start/app-configuration-file.md#configuration标签)取值。 |
+| fontSizeScale | ArkTS-Dyn: number  <br>ArkTS-Sta：double | Yes | Font scale ratio. The value is a non-negative number. When the application's [fontSizeScale](../../../quick-start/app-configuration-file.md#configuration) is set to **followSystem** and the value set here exceeds the value of [fontSizeMaxScale](../../../quick-start/app-configuration-file.md#configuration), the value of [fontSizeMaxScale](../../../quick-start/app-configuration-file.md#configuration) takes effect. |
 
 ## setLanguage
 
@@ -1195,13 +1326,14 @@ setFontSizeScale(fontSizeScale: double): void
 setLanguage(language: string): void
 ```
 
-设置应用的语言。仅支持主线程调用。
+Sets the language for the application. This API can be called only on the main thread.
 
-> **说明：**
+> **NOTE：**
 > 
-> 调用该接口前，需要确保窗口已完成创建、且UIAbility对应的页面已完成加载，即在
-> [onWindowStageCreate()](arkts-ability-app-ability-uiability-uiability-c.md#onwindowstagecreate)生命周期中通过
-> [loadContent](../../../reference/apis-arkui/arkts-apis-window-WindowStage.md#loadcontent9)方法加载页面之后调用。
+> Before calling this API, ensure that the window has been created and the page corresponding to the UIAbility has
+> been loaded (using the
+> [loadContent](../../../reference/apis-arkui/arkts-apis-window-WindowStage.md#loadcontent9) API in the
+> [onWindowStageCreate()](arkts-ability-app-ability-uiability-uiability-c.md#onwindowstagecreate) lifecycle).
 
 **Since:** 11
 
@@ -1219,13 +1351,13 @@ setLanguage(language: string): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| language | string | Yes | 设置语言，当前支持的语言列表可以通过 [getSystemLanguages()](../../apis-localization-kit/arkts-apis/arkts-localization-i18n-system-c.md/arkts-localization-i18n-system-c.md#getsystemlanguages)获取。 |
+| language | string | Yes | Target language. The list of supported languages can be obtained by calling [getSystemLanguages()](../../apis-localization-kit/arkts-apis/arkts-localization-i18n-system-c.md/arkts-localization-i18n-system-c.md#getsystemlanguages). |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 16000011 | The context does not exist. |
+| [16000011](../errorcode-ability.md#16000011-context-does-not-exist) | The context does not exist. |
 
 ## setSupportedProcessCache
 
@@ -1233,18 +1365,24 @@ setLanguage(language: string): void
 setSupportedProcessCache(isSupported : boolean): void
 ```
 
-设置当前应用进程是否支持进程资源的缓存，便于应用再次启动时复用缓存的进程资源。仅支持主线程调用。
+Sets whether the current application's process supports resource caching, so that the cached process resources can be reused when the application is started again. This API can be called only on the main thread.
 
-该接口仅对单个进程实例生效，不同进程实例互不影响。应用进程实例销毁后，已设置的状态不保留，需要重新设置。
+This setting applies only to the current process instance and does not affect others. If the application process instance is terminated, the previously set state will not be preserved and must be reset.
 
-> **说明：**
+This API can be properly called only on phones and 2-in-1 devices. If it is called on other device types, error code 801 is returned.
+
+> **NOTE：**
 > 
-> - 该接口仅表示应用自身是否为缓存后快速启动做好了准备，还需综合其他条件来判断最终是否为应用启用快速启动。
+> - This API only sets the application to be ready for quick startup after caching. It does not mean that quick
+> startup will be triggered. Other conditions must be considered to determine whether to trigger quick startup.
 > 
-> - 为了确保该接口在进程退出前生效，调用时机应尽量提前。建议在[AbilityStage](arkts-ability-app-ability-abilitystage-abilitystage-c.md)的`onCreate()
-> `中调用该接口。
+> - To ensure that this API is effective before the process exits, it should be called as soon as possible. You are
+> advised to call this API within the **onCreate()** callback of the
+> [AbilityStage](arkts-ability-app-ability-abilitystage-abilitystage-c.md).
 > 
-> - 在同一进程多次调用该接口时，会以最后一次调用的结果为准。当存在多个AbilityStage时，为了确保结果符合预期，需要在各个AbilityStage中分别调用该接口并配置相同的取值。
+> - If this API is called multiple times within the same process, the outcome of the final call is used. In cases
+> where there are multiple AbilityStage instances, to achieve the desired result, this API must be called and
+> configured with the same value in each AbilityStage.
 
 **Since:** 12
 
@@ -1266,8 +1404,55 @@ setSupportedProcessCache(isSupported : boolean): void
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. |
-| 801 | Capability not supported. |
-| 16000050 | Internal error. |
-| 16000011 | The context does not exist. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. |
+| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. |
+| [16000050](../errorcode-ability.md#16000050-internal-error) | Internal error. |
+| [16000011](../errorcode-ability.md#16000011-context-does-not-exist) | The context does not exist. |
+
+## startSelfUIAbility
+
+```TypeScript
+startSelfUIAbility(want: Want): Promise<void>
+```
+
+Starts a UIAbility of the current application during the delayed-exit window.
+
+**Since:** 26.0.0
+
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
+
+**Model restriction:** This API can be used only in the stage model.
+
+<!--Device-ApplicationContext-startSelfUIAbility(want: Want): Promise<void>--><!--Device-ApplicationContext-startSelfUIAbility(want: Want): Promise<void>-End-->
+
+**System capability:** SystemCapability.Ability.AbilityRuntime.Core
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| want | [Want](arkts-ability-app-ability-want-want-c.md) | Yes | Indicates the UIAbility to start. |
+
+**Return value:**
+
+| Type | Description |
+| --- | --- |
+| Promise&lt;void&gt; | The promise returned by the function. |
+
+**Error codes:**
+
+| Error Code ID | Error Message |
+| --- | --- |
+| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. |
+| [16000001](../errorcode-ability.md#16000001-ability-name-does-not-exist) | The specified ability does not exist. |
+| 16000161 | Delayed process exit is not pending in the current process, and this API cannot be called. |
+| [16000050](../errorcode-ability.md#16000050-internal-error) | Internal error. Possible causes: Fail to connect system service. |
+| [16000130](../errorcode-ability.md#16000130-uiability-does-not-belong-to-the-caller) | The UIAbility does not belong to the caller. |
+| 16000162 | The current process still has another UIAbility, and this API cannot be called. |
+| [16000124](../errorcode-ability.md#16000124-starting-a-distributed-uiability-is-not-supported) | Starting a remote UIAbility is not supported. |
+| [16000125](../errorcode-ability.md#16000125-starting-a-plugin-is-not-supported) | Starting a plugin UIAbility is not supported. |
+| [16000008](../errorcode-ability.md#16000008-crowdtesting-application-expires) | The crowdtesting application expires. |
+| [16000009](../errorcode-ability.md#16000009-ability-start-or-stop-failure-in-wukong-mode) | An ability cannot be started or stopped in Wukong mode. |
+| [16000122](../errorcode-ability.md#16000122-target-component-is-intercepted-by-the-system-control-module) | The target component is blocked by the system module and does not support startup. |
+| [16000123](../errorcode-ability.md#16000123-implicit-startup-is-not-supported) | Implicit startup is not supported. |
 

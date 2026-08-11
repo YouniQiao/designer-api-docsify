@@ -6,7 +6,7 @@
 function unlockMission(missionId: number, callback: AsyncCallback<void>): void
 ```
 
-解锁指定任务id的任务。使用callback异步回调。
+Unlocks a given mission. This API uses an asynchronous callback to return the result.
 
 **Since:** 8
 
@@ -28,8 +28,8 @@ function unlockMission(missionId: number, callback: AsyncCallback<void>): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| missionId | number | Yes | 任务ID。 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | 回调函数，当解锁指定任务id的任务成功，err为undefined，否则为错误对象。 |
+| missionId | number | Yes | Mission ID. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. If the mission is unlocked, **err** is **undefined**. Otherwise, **err** is an error object. |
 
 ## Examples
 
@@ -57,7 +57,7 @@ try {
 function unlockMission(missionId: number): Promise<void>
 ```
 
-解锁指定任务id的任务。使用Promise异步回调。
+Unlocks a given mission. This API uses a promise to return the result.
 
 **Since:** 8
 
@@ -79,13 +79,13 @@ function unlockMission(missionId: number): Promise<void>
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| missionId | number | Yes | 任务ID。 |
+| missionId | number | Yes | Mission ID. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise对象。无返回结果的Promise对象。 |
+| Promise&lt;void&gt; | Promise that returns no value. |
 
 ## Examples
 

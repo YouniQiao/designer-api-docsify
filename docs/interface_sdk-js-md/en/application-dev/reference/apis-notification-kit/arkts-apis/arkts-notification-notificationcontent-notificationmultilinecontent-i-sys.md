@@ -1,17 +1,19 @@
 # NotificationMultiLineContent
 
-描述多行文本通知。继承自[NotificationBasicContent](arkts-notification-notificationcontent-notificationbasiccontent-i.md)。
+Describes the multi-line text notification. This API is inherited from NotificationBasicContent.
 
-> **说明：**
+> **NOTE：**
 > 
-> - 当该类型通知与其他通知形成组通知时，该通知类型的展示效果默认为折叠态，
-> 显示的标题与正文为该类型继承的NotificationBasicContent中的`title`与`text`。
-> 当该类型通知单独展示，没有与其他通知形成组通知时，该通知类型的展示效果
-> 默认为展开态，显示的标题为展开时的标题`longTitle`，多行文本内容`lines`作为正文多行显示。
+> - When this notification type forms a group notification with other notifications, its display effect defaults
+> to the collapsed state, and the displayed title and body are the **title** and **text** inherited from
+> NotificationBasicContent. When this notification type is displayed alone and does not form a group notification
+> with other notifications, its display effect defaults to the expanded state, where the displayed title is the
+> expanded title **longTitle**, and the multi-line text content **lines** is displayed as the body.
 > 
-> - 用户点击成组展示的通知，查看各个通知详情时，该通知的展示效果变化为展开态。
+> - When a user taps a group notification to view the notification details, the display effect of this
+> notification changes to the expanded state.
 > 
-> - 实际显示效果依赖于设备能力和通知中心UI样式。
+> - The actual display effect depends on the device capabilities and the notification center UI style.
 
 **Inheritance/Implementation:** NotificationMultiLineContent extends [NotificationBasicContent](arkts-notification-notificationcontent-notificationbasiccontent-i.md)
 
@@ -29,8 +31,7 @@
 lineWantAgents?: Array<WantAgent>
 ```
 
-点击多行文本中某一行文本消息触发的wantAgent。不同行的文本分别对应于不同的wantAgent。该字段配置的行数不能大于  
-[lines](arkts-notification-notificationcontent-notificationmultilinecontent-i.md)字段配置的行数。默认为空。
+**wantAgent**s triggered when a line of text in the multi-line text is tapped. The text in different lines corresponds to different **wantAgent**s. The maximum number of lines configured for this field is equal to the value of lines. This parameter is left empty by default.
 
 **Type:** Array&lt;[WantAgent](../../apis-ability-kit/arkts-apis/arkts-ability-wantagent-t.md)&gt;
 

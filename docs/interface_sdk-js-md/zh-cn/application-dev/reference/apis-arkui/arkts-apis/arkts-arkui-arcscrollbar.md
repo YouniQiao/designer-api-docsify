@@ -1,11 +1,5 @@
 # @ohos.arkui.ArcScrollBar
 
-## 导入模块
-
-```TypeScript
-import { ArcScrollBarAttribute, ArcScrollBar } from 'kits/@kit.ArkUI';
-```
-
 ## 汇总
 
 ### 接口

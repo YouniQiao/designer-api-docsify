@@ -16,7 +16,7 @@ Defines the Extendable Stack.
 
 ```TypeScript
 static $_instantiate<T extends ExtendableStack>(
-        factory: ConstructorT<T>,
+        factory: ConstructorT<T>, 
         options?: StackOptions,
         content_?: CustomBuilder
     ): T
@@ -30,7 +30,7 @@ Constructor of Extendable Stack.
 
 **Model restriction:** This API can be used only in the stage model.
 
-<!--Device-ExtendableStack-static $_instantiate<T extends ExtendableStack>(        factory: ConstructorT<T>,        options?: StackOptions,        content_?: CustomBuilder    ): T--><!--Device-ExtendableStack-static $_instantiate<T extends ExtendableStack>(        factory: ConstructorT<T>,        options?: StackOptions,        content_?: CustomBuilder    ): T-End-->
+<!--Device-ExtendableStack-static $_instantiate<T extends ExtendableStack>(        factory: ConstructorT<T>,         options?: StackOptions,        content_?: CustomBuilder    ): T--><!--Device-ExtendableStack-static $_instantiate<T extends ExtendableStack>(        factory: ConstructorT<T>,         options?: StackOptions,        content_?: CustomBuilder    ): T-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -52,8 +52,8 @@ Constructor of Extendable Stack.
 
 ```TypeScript
 static _instantiateImpl<T extends ExtendableStack>(
-        styles: CustomBuilderT<T>,
-        factory: ConstructorT<T>,
+        styles: CustomBuilderT<T>, 
+        factory: ConstructorT<T>, 
         content_?: CustomBuilder
     ): void
 ```
@@ -68,7 +68,7 @@ Entry of Extendable Stack.
 
 **Model restriction:** This API can be used only in the stage model.
 
-<!--Device-ExtendableStack-static _instantiateImpl<T extends ExtendableStack>(        styles: CustomBuilderT<T>,        factory: ConstructorT<T>,        content_?: CustomBuilder    ): void--><!--Device-ExtendableStack-static _instantiateImpl<T extends ExtendableStack>(        styles: CustomBuilderT<T>,        factory: ConstructorT<T>,        content_?: CustomBuilder    ): void-End-->
+<!--Device-ExtendableStack-static _instantiateImpl<T extends ExtendableStack>(        styles: CustomBuilderT<T>,         factory: ConstructorT<T>,         content_?: CustomBuilder    ): void--><!--Device-ExtendableStack-static _instantiateImpl<T extends ExtendableStack>(        styles: CustomBuilderT<T>,         factory: ConstructorT<T>,         content_?: CustomBuilder    ): void-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 

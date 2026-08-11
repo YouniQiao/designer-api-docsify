@@ -1,7 +1,7 @@
 # IntentEntityDecoratorInfo
 
-用于描述  
-[@InsightIntentEntity](../../../reference/apis-ability-kit/js-apis-app-ability-InsightIntentDecorator.md#insightintententity)装饰器支持的参数。
+Describes the parameters supported by the  
+[@InsightIntentEntity](../../../reference/apis-ability-kit/js-apis-app-ability-InsightIntentDecorator.md#insightintententity) decorator.
 
 **Since:** 20
 
@@ -23,7 +23,7 @@ import { InsightIntentFunction, InsightIntentForm, InsightIntentLink, InsightInt
 entityCategory: string
 ```
 
-表示意图实体类别。可以基于意图实体类别对意图实体进行归类
+Category of the intent entity. Intents can be classified based on intent entity categories.
 
 **Type:** string
 
@@ -45,7 +45,7 @@ entityCategory: string
 parameters?: Record<string, Object>
 ```
 
-表示意图实体的数据格式声明。用于定义意图实体的数据格式。
+Data format of the intent entity.
 
 **Type:** [Record](../../apis-default/arkts-apis/arkts-record-t.md)&lt;string, Object&gt;
 
@@ -67,7 +67,7 @@ parameters?: Record<string, Object>
 supportedQueryProperties?: string[]
 ```
 
-支持的查询属性。
+Supported query properties.
 
 **Type:** string[]
 

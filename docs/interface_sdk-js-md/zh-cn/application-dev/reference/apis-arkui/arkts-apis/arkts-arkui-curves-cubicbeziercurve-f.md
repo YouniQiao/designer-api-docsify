@@ -1,11 +1,5 @@
 # cubicBezierCurve
 
-## 导入模块
-
-```TypeScript
-import { curves } from 'kits/@kit.ArkUI';
-```
-
 ## cubicBezierCurve
 
 ```TypeScript
@@ -37,5 +31,5 @@ export function cubicBezierCurve(x1: double, y1: double, x2: double, y2: double)
 
 | 类型 | 说明 |
 | --- | --- |
-| [ICurve](arkts-arkui-curves-icurve-i.md) | 曲线的插值对象。 |
+| [ICurve](arkts-arkui-icurve-t.md) | 曲线的插值对象。 |
 

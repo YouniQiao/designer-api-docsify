@@ -34,9 +34,9 @@ Connects to a tag. Must be called before data is read from or written to the tag
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 801 | Capability not supported. |
-| 3100201 | The tag running state is abnormal in the service. |
-| 201 | Permission denied. |
+| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. |
+| [3100201](../errorcode-nfc.md#3100201-tag-readwrite-error) | The tag running state is abnormal in the service. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
 
 ## connectTag
 
@@ -130,9 +130,9 @@ Obtains the maximum length of data that can be sent to a tag.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 801 | Capability not supported. |
-| 3100201 | The tag running state is abnormal in the service. |
-| 201 | Permission denied. |
+| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. |
+| [3100201](../errorcode-nfc.md#3100201-tag-readwrite-error) | The tag running state is abnormal in the service. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
 
 ## getSendDataTimeout
 
@@ -226,9 +226,9 @@ Obtains the timeout duration (ms) for sending data to a tag.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 801 | Capability not supported. |
-| 3100201 | The tag running state is abnormal in the service. |
-| 201 | Permission denied. |
+| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. |
+| [3100201](../errorcode-nfc.md#3100201-tag-readwrite-error) | The tag running state is abnormal in the service. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
 
 ## isConnected
 
@@ -258,7 +258,7 @@ Checks whether a connection has been set up with a tag.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 801 | Capability not supported. |
+| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. |
 
 ## isTagConnected
 
@@ -332,9 +332,9 @@ Resets a connection with a tag and restores the default timeout duration for wri
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 801 | Capability not supported. |
-| 3100201 | The tag running state is abnormal in the service. |
-| 201 | Permission denied. |
+| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. |
+| [3100201](../errorcode-nfc.md#3100201-tag-readwrite-error) | The tag running state is abnormal in the service. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
 
 ## sendData
 
@@ -469,10 +469,10 @@ Sets the timeout duration (ms) for sending data to a tag.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | The parameter check failed. Possible causes: &lt;br&gt; 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameters types. &lt;br&gt; 3. Parameter verification failed. |
-| 801 | Capability not supported. |
-| 3100201 | The tag running state is abnormal in the service. |
-| 201 | Permission denied. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | The parameter check failed. Possible causes: &lt;br&gt; 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameters types. &lt;br&gt; 3. Parameter verification failed. |
+| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. |
+| [3100201](../errorcode-nfc.md#3100201-tag-readwrite-error) | The tag running state is abnormal in the service. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
 
 ## transmit
 
@@ -516,11 +516,11 @@ Writes data to a tag.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | The parameter check failed. Possible causes: &lt;br&gt; 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameters types. &lt;br&gt; 3. Parameter verification failed. |
-| 801 | Capability not supported. |
-| 3100204 | The tag I/O operation failed. |
-| 3100201 | The tag running state is abnormal in the service. |
-| 201 | Permission denied. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | The parameter check failed. Possible causes: &lt;br&gt; 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameters types. &lt;br&gt; 3. Parameter verification failed. |
+| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. |
+| [3100204](../errorcode-nfc.md#3100204-nfc-chip-io-exception) | The tag I/O operation failed. |
+| [3100201](../errorcode-nfc.md#3100201-tag-readwrite-error) | The tag running state is abnormal in the service. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
 
 ## transmit
 
@@ -559,9 +559,9 @@ Writes data to a tag.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | The parameter check failed. Possible causes: &lt;br&gt; 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameters types. &lt;br&gt; 3. Parameter verification failed. |
-| 801 | Capability not supported. |
-| 3100204 | The tag I/O operation failed. |
-| 3100201 | The tag running state is abnormal in the service. |
-| 201 | Permission denied. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | The parameter check failed. Possible causes: &lt;br&gt; 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameters types. &lt;br&gt; 3. Parameter verification failed. |
+| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. |
+| [3100204](../errorcode-nfc.md#3100204-nfc-chip-io-exception) | The tag I/O operation failed. |
+| [3100201](../errorcode-nfc.md#3100201-tag-readwrite-error) | The tag running state is abnormal in the service. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
 

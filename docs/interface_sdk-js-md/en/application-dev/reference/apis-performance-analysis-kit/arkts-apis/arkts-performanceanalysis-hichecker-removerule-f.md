@@ -12,11 +12,7 @@ import { hichecker } from 'kits/@kit.PerformanceAnalysisKit';
 function removeRule(rule: bigint): void
 ```
 
-> **˵����**
-> 
-> ��API version 8��ʼ֧�֣���API version 9��ʼ����������ʹ��[hichecker.removeCheckRule](arkts-performanceanalysis-hichecker-removecheckrule-f.md#removecheckrule)�����
-
-ɾ��һ�����������ɾ���Ĺ��������������Ч��
+Removes one or more rules. The removed rules will become ineffective.
 
 **Since:** 8
 
@@ -34,7 +30,7 @@ function removeRule(rule: bigint): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| rule | bigint | Yes | ��Ҫɾ���Ĺ��� |
+| rule | bigint | Yes | Rule to be removed. |
 
 ## Examples
 

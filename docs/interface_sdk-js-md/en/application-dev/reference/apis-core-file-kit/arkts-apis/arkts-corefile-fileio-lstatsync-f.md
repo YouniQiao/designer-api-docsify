@@ -6,7 +6,7 @@
 declare function lstatSync(path: string): Stat
 ```
 
-以同步方法获取链接信息。
+Obtains information about a symbolic link that is used to refer to a file or directory. This API returns the result synchronously.
 
 **Since:** 7
 
@@ -24,11 +24,11 @@ declare function lstatSync(path: string): Stat
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| path | string | Yes | 目标文件的应用沙箱路径。 |
+| path | string | Yes | Application sandbox path of the target file. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [Stat](arkts-corefile-fileio-stat-i.md) | 表示文件的具体信息。 |
+| [Stat](arkts-corefile-fileio-stat-i.md) | File information obtained. |
 

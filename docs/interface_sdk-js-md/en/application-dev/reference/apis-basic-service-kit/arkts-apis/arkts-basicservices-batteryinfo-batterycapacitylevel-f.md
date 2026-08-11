@@ -12,7 +12,7 @@ import { batteryInfo } from 'kits/@kit.BasicServicesKit';
 function batteryCapacityLevel(): BatteryCapacityLevel
 ```
 
-表示当前设备电池电量的等级。
+Battery level of the device.
 
 **Since:** 23
 
@@ -26,5 +26,5 @@ function batteryCapacityLevel(): BatteryCapacityLevel
 
 | Type | Description |
 | --- | --- |
-| [BatteryCapacityLevel](arkts-basicservices-batteryinfo-batterycapacitylevel-e.md) | 返回当前设备电池电量的等级。 |
+| [BatteryCapacityLevel](arkts-basicservices-batteryinfo-batterycapacitylevel-e.md) | Returns the battery capacity level of the device. |
 

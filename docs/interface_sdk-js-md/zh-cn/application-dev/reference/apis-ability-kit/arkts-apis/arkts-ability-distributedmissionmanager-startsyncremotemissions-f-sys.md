@@ -1,11 +1,5 @@
 # startSyncRemoteMissions（系统接口）
 
-## 导入模块
-
-```TypeScript
-import { distributedMissionManager } from 'kits/@kit.AbilityKit';
-```
-
 ## startSyncRemoteMissions
 
 ```TypeScript
@@ -39,10 +33,12 @@ function startSyncRemoteMissions(parameter: MissionParameter, callback: AsyncCal
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; 3. Parameter verification failed. |
-| 201 | Permission denied. |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; 3. Parameter verification failed. |
+| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
 
 ## 示例
+
+ArkTS-Dyn示例：
 
 ```TypeScript
 import { distributedMissionManager } from '@kit.AbilityKit';
@@ -57,6 +53,32 @@ try {
       tag: 0
     },
     (error: BusinessError) => {
+      if (error) {
+        console.error(`startSyncRemoteMissions failed. Code: ${error.code}, message: ${error.message}`);
+        return;
+      }
+      console.info('startSyncRemoteMissions finished');}
+  )
+} catch (error) {
+  console.error(`startSyncRemoteMissions failed. Code: ${error.code}, message: ${error.message}`);
+}
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+import distributedMissionManager from '@ohos.distributedMissionManager';
+import { BusinessError } from '@ohos.base';
+let parm:distributedMissionManager.MissionParameter = {
+  deviceId: "",
+  fixConflict: false,
+  tag: 0
+}
+try {
+  // 开始同步远端设备的任务列表
+  distributedMissionManager.startSyncRemoteMissions(
+    parm,
+    (error: BusinessError|null,data:string[]|undefined) => {
       if (error) {
         console.error(`startSyncRemoteMissions failed. Code: ${error.code}, message: ${error.message}`);
         return;
@@ -107,15 +129,16 @@ function startSyncRemoteMissions(parameter: MissionParameter): Promise<void>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; 3. Parameter verification failed. |
-| 201 | Permission denied. |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; 3. Parameter verification failed. |
+| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
 
 ## 示例
+
+ArkTS-Dyn示例：
 
 ```TypeScript
 import { distributedMissionManager } from '@kit.AbilityKit';
 import { BusinessError } from '@kit.BasicServicesKit';
-
 try {
   distributedMissionManager.startSyncRemoteMissions(
     {
@@ -128,6 +151,27 @@ try {
     }).catch((error: BusinessError) => {
     console.error(`startSyncRemoteMissions failed. Code: ${error.code}, message: ${error.message}`);
   });
+} catch (error) {
+  console.error(`startSyncRemoteMissions failed. Code: ${error.code}, message: ${error.message}`);
+}
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+import distributedMissionManager from '@ohos.distributedMissionManager';
+import { BusinessError } from '@ohos.base';
+let parm:distributedMissionManager.MissionParameter = {
+  deviceId: "",
+  fixConflict: false,
+  tag: 0
+}
+try {
+  distributedMissionManager.startSyncRemoteMissions(parm).then(() => {
+    console.info('startSyncRemoteMissions finished successfully');
+  }).catch((error) => {
+    console.error(`startSyncRemoteMissions failed. Code: ${error.code}, message: ${error.message}`);
+  })
 } catch (error) {
   console.error(`startSyncRemoteMissions failed. Code: ${error.code}, message: ${error.message}`);
 }

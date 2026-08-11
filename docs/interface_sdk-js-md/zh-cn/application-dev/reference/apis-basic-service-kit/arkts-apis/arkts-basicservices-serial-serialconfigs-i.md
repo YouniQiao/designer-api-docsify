@@ -10,12 +10,6 @@
 
 **系统能力：** SystemCapability.BusManager.Serial
 
-## 导入模块
-
-```TypeScript
-import { serial } from 'kits/@kit.BasicServicesKit';
-```
-
 ## baudRate
 
 ```TypeScript
@@ -114,7 +108,7 @@ stopBits?: StopBits
 
 &lt;br&gt;默认值:ONE。
 
-**类型：** [StopBits](arkts-basicservices-serial-stopbits-e.md)
+**类型：** [StopBits](arkts-basicservices-serialmanager-stopbits-e.md)
 
 **默认值：** ONE
 

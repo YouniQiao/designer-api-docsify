@@ -1,6 +1,6 @@
 # MouseEventData
 
-鼠标注入描述信息。
+Defines the mouse event data.
 
 **Since:** 11
 
@@ -22,7 +22,7 @@ import { inputEventClient } from 'kits/@kit.InputKit';
 mouseEvent: MouseEvent
 ```
 
-鼠标事件。
+Mouse event.
 
 **Type:** [MouseEvent](arkts-input-multimodalinput-mouseevent-mouseevent-i.md)
 
@@ -40,7 +40,8 @@ mouseEvent: MouseEvent
 useGlobalCoordinate? : boolean
 ```
 
-是否使用全局坐标来计算注入的鼠标事件。默认值为false，取值为false表示使用以指定屏幕左上角为原点的相对坐标系的坐标来计算注入的鼠标事件。取值为true表示使用以主屏左上角为原点的全局坐标系的坐标来计算注入的鼠标事件。
+Whether to use global coordinates to calculate the injected mouse event. The default value is **false**. If this parameter is set to **false**, the coordinates of the relative coordinate system with the upper left corner of the specified screen as the origin are used to calculate the injected mouse event. If this parameter is set to  
+**true**, the coordinates of the global coordinate system with the upper left corner of the primary screen as the origin are used to calculate the injected mouse event.
 
 **Type:** boolean
 

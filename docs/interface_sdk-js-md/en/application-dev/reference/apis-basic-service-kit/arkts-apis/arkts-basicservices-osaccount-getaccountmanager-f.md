@@ -12,7 +12,7 @@ import { osAccount } from 'kits/@kit.BasicServicesKit';
 function getAccountManager(): AccountManager
 ```
 
-获取系统账号管理对象。
+Obtains an **AccountManager** instance.
 
 **Since:** 7
 
@@ -26,7 +26,7 @@ function getAccountManager(): AccountManager
 
 | Type | Description |
 | --- | --- |
-| [AccountManager](arkts-basicservices-osaccount-accountmanager-i.md) | 系统账号管理对象。 |
+| [AccountManager](arkts-basicservices-osaccount-accountmanager-i.md) | AccountManager** instance obtained. |
 
 ## Examples
 

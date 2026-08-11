@@ -6,34 +6,36 @@
 
 | Name | Description |
 | --- | --- |
-| [NavDestination](arkts-arkui-navdestination-navdestination-f.md#navdestination) | 定义NavDestination组件 |
+| [NavDestination](arkts-arkui-navdestination-navdestination-f.md#navdestination) | Defines NavDestination Component |
 
 ### Interfaces
 
 | Name | Description |
 | --- | --- |
-| [NavDestinationAttribute](arkts-arkui-navdestination-navdestinationattribute-i.md) | 支持[通用属性](../../apis-arkui/arkts-components/arkts-arkui-common-attribute.md)。 |
-| [NavDestinationCommonTitle](arkts-arkui-navdestination-navdestinationcommontitle-i.md) | NavDestination通用标题。 |
-| [NavDestinationContext](arkts-arkui-navdestination-navdestinationcontext-i.md) | NavDestination上下文信息。 |
-| [NavDestinationCustomTitle](arkts-arkui-navdestination-navdestinationcustomtitle-i.md) | NavDestination自定义标题。 |
-| [NavDestinationModuleInfo](arkts-arkui-navdestination-navdestinationmoduleinfo-i.md) | NavDestination的模块信息 |
-| [NavDestinationTransition](arkts-arkui-navdestination-navdestinationtransition-i.md) | NavDestination自定义动画接口。 |
-| [NestedScrollInfo](arkts-arkui-navdestination-nestedscrollinfo-i.md) | 嵌套可滚动容器组件信息 |
-| [RouteMapConfig](arkts-arkui-navdestination-routemapconfig-i.md) | 路由配置信息。 |
+| [NavDestinationAttribute](arkts-arkui-navdestination-navdestinationattribute-i.md) | The attribute function of NavDestination |
+| [NavDestinationCommonTitle](arkts-arkui-navdestination-navdestinationcommontitle-i.md) | Defines the navigation destination common title. |
+| [NavDestinationContext](arkts-arkui-navdestination-navdestinationcontext-i.md) | Indicates the context of NavDestination. |
+| [NavDestinationCustomTitle](arkts-arkui-navdestination-navdestinationcustomtitle-i.md) | Defines the navigation destination custom title. |
+| [NavDestinationModuleInfo](arkts-arkui-navdestination-navdestinationmoduleinfo-i.md) | The module info of NavDestination |
+| [NavDestinationTransition](arkts-arkui-navdestination-navdestinationtransition-i.md) | NavDestination animation protocol. |
+| [NestedScrollInfo](arkts-arkui-navdestination-nestedscrollinfo-i.md) | Indicates the nested scrollable container components. |
+| [RouteMapConfig](arkts-arkui-navdestination-routemapconfig-i.md) | Indicates configuration info of destination. |
 
 ### Enums
 
 | Name | Description |
 | --- | --- |
-| [NavDestinationActiveReason](arkts-arkui-navdestination-navdestinationactivereason-e.md) | NavDestination激活态或者非激活态变化的原因。 |
-| [NavDestinationMode](arkts-arkui-navdestination-navdestinationmode-e.md) | NavDestination类型。 |
-| [NavigationSystemTransitionType](arkts-arkui-navdestination-navigationsystemtransitiontype-e.md) | 系统转场动画类型。 |
-| [VisibilityChangeReason](arkts-arkui-navdestination-visibilitychangereason-e.md) | NavDestination可见性发生变化的原因。 |
+| [NavDestinationActiveReason](arkts-arkui-navdestination-navdestinationactivereason-e.md) | Reason of navDestination be active or inactive. |
+| [NavDestinationMode](arkts-arkui-navdestination-navdestinationmode-e.md) | NavDestination mode. |
+| [NavigationSystemTransitionType](arkts-arkui-navdestination-navigationsystemtransitiontype-e.md) | Types of system Transition. |
+| [VisibilityChangeReason](arkts-arkui-navdestination-visibilitychangereason-e.md) | The reason of navDestination be shown or hidden. |
 
 ### Types
 
 | Name | Description |
 | --- | --- |
-| [NavDestinationTransitionDelegate](arkts-arkui-navdestinationtransitiondelegate-t.md) | NavDestination自定义转场动画的代理函数。 |
-| [Orientation](arkts-arkui-orientation-t.md) | Orientation实例对象。 |
+| [NavDestinationTransitionDelegate](arkts-arkui-navdestinationtransitiondelegate-t.md) | Delegate function for NavDestination custom animation. |
+| [Orientation](arkts-arkui-orientation-t.md) | Import the Orientation type from @ohos.window. |
+| [RestoreStateCallback](arkts-arkui-restorestatecallback-t.md) | Custom page state restore callback. |
+| [SaveStateCallback](arkts-arkui-savestatecallback-t.md) | Custom page state save callback. |
 

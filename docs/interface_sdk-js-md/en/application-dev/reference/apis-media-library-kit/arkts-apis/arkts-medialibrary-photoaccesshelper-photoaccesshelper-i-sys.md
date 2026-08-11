@@ -51,10 +51,10 @@ Start medialibrary database backup and wait for returning with backup informatio
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 23800201 | Unsupported operation type, this api only works on beta device. |
-| 23800301 | Internal system error. You are advised to retry and check the logs. Possible causes: &lt;br&gt;1. The database is corrupted. &lt;br&gt;2. The file system is abnormal. &lt;br&gt;3. The IPC request timed out. |
-| 202 | Called by non-system application |
-| 23800151 | The scenario parameter verification fails. Possible causes: &lt;br&gt;1. The betaIssueId parameter is invalid, such as null, undefined or empty string. &lt;br&gt;2. The betaScenario parameter is invalid, such as null, undefined or empty string. &lt;br&gt;3. The same betaIssueId task is processing. |
+| [23800201](../errorcode-medialibrary.md#23800201-unsupported-operation-type) | Unsupported operation type, this api only works on beta device. |
+| [23800301](../errorcode-medialibrary.md#23800301-system-internal-error) | Internal system error. You are advised to retry and check the logs. Possible causes: &lt;br&gt;1. The database is corrupted. &lt;br&gt;2. The file system is abnormal. &lt;br&gt;3. The IPC request timed out. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Called by non-system application |
+| [23800151](../errorcode-medialibrary.md#23800151-failed-to-verify-scene-parameters) | The scenario parameter verification fails. Possible causes: &lt;br&gt;1. The betaIssueId parameter is invalid, such as null, undefined or empty string. &lt;br&gt;2. The betaScenario parameter is invalid, such as null, undefined or empty string. &lt;br&gt;3. The same betaIssueId task is processing. |
 
 ## batchGetPhotoAssetParams
 
@@ -92,9 +92,9 @@ Obtains the values of specified properties for an array of
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 23800104 | The provided member must be a property name of PhotoKey. |
-| 202 | Called by non-system application |
-| 23800151 | The scenario parameter verification fails. &lt;br&gt;Possible causes: The attribute to be queried does not exist in assets. |
+| [23800104](../errorcode-medialibrary.md#23800104-input-parameter-verification-failure) | The provided member must be a property name of PhotoKey. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Called by non-system application |
+| [23800151](../errorcode-medialibrary.md#23800151-failed-to-verify-scene-parameters) | The scenario parameter verification fails. &lt;br&gt;Possible causes: The attribute to be queried does not exist in assets. |
 
 ## Examples
 
@@ -186,24 +186,9 @@ Whether deep storage space optimization can be performed.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 23800301 | Internal system error. It is recommended to retry and check the logs. Possible causes: &lt;br&gt;1. Database corrupted; &lt;br&gt;2. The file system is abnormal; &lt;br&gt;3. The IPC request timed out. |
-| 201 | Permission denied. |
-| 202 | Called by non-system application. |
-
-## Examples
-
-For details about how to create a phAccessHelper instance, see the example provided in [photoAccessHelper.getPhotoAccessHelper](arkts-apis-photoAccessHelper-f.md#photoaccesshelpergetphotoaccesshelper).
-
-```TypeScript
-async function example(phAccessHelper: photoAccessHelper.PhotoAccessHelper) {
-  try {
-    let canPerform: boolean = await phAccessHelper.canPerformDeepOptimizeSpace();
-    console.info(`canPerformDeepOptimizeSpace result: ${canPerform}`);
-  } catch (err) {
-    console.error(`canPerformDeepOptimizeSpace failed with error: ${err.code}, ${err.message}`);
-  }
-}
-```
+| [23800301](../errorcode-medialibrary.md#23800301-system-internal-error) | Internal system error. It is recommended to retry and check the logs. Possible causes: &lt;br&gt;1. Database corrupted; &lt;br&gt;2. The file system is abnormal; &lt;br&gt;3. The IPC request timed out. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Called by non-system application. |
 
 ## cancelAnalysisTool
 
@@ -243,10 +228,10 @@ Cancels the execution of an intelligent analysis tool.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 23800301 | Internal system error. Possible causes: &lt;br&gt;1. IPC timeout; &lt;br&gt;2. System exception. |
-| 201 | Permission denied |
-| 202 | Called by non-system application |
-| 23800151 | The scenario parameter verification fails. Possible causes: &lt;br&gt;1. Invalid task id. &lt;br&gt;2. The length of **param** in **ToolCancelConfig** exceeds 16KB. |
+| [23800301](../errorcode-medialibrary.md#23800301-system-internal-error) | Internal system error. Possible causes: &lt;br&gt;1. IPC timeout; &lt;br&gt;2. System exception. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Called by non-system application |
+| [23800151](../errorcode-medialibrary.md#23800151-failed-to-verify-scene-parameters) | The scenario parameter verification fails. Possible causes: &lt;br&gt;1. Invalid task id. &lt;br&gt;2. The length of **param** in **ToolCancelConfig** exceeds 16KB. |
 
 ## cancelPhotoUriPermission
 
@@ -293,8 +278,8 @@ Cancels the permission for accessing a URI from an application. This API uses a 
 | Error Code ID | Error Message |
 | --- | --- |
 | 13900020 | Invalid argument. Possible causes: &lt;br&gt;1. Incorrect uri format; &lt;br&gt;2. The value of photoPermissionType or hideSensitiveType is out of range. |
-| 201 | Permission denied |
-| 202 | Called by non-system application |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Called by non-system application |
 | 14000011 | Internal system error |
 
 ## Examples
@@ -358,28 +343,10 @@ clone assets of filemanager to Album.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 23800301 | Internal system error. It is recommended to retry and check the logs. &lt;br&gt;Possible causes: 1. Database corrupted; 2. The file system is abnormal; 3. The IPC request timed out. |
-| 201 | Permission denied |
-| 202 | Called by non-system application. |
-| 23800151 | The scenario parameter verification fails. Possible causes: &lt;br&gt;1. Asset to be cloned has been deleted or hidden; &lt;br&gt;2. Asset to be cloned is cloud pictures, which can not be cloned; &lt;br&gt;3. The Target Album does not exist. &lt;br&gt;4. Insufficient system space. &lt;br&gt;5. Automatic renaming is not supported. |
-
-## Examples
-
-For details about how to create a phAccessHelper instance, see the example provided in [photoAccessHelper.getPhotoAccessHelper](arkts-apis-photoAccessHelper-f.md#photoaccesshelpergetphotoaccesshelper).
-
-```TypeScript
-async function example(phAccessHelper: photoAccessHelper.PhotoAccessHelper) {
-  try {
-    let assets: Array<string> = ['/Docs/Download/test.jpg'];
-    let albumFetchResult: photoAccessHelper.FetchResult<photoAccessHelper.Album> = await phAccessHelper.getAlbums(photoAccessHelper.AlbumType.USER, photoAccessHelper.AlbumSubtype.USER_GENERIC);
-    let target: photoAccessHelper.Album = await albumFetchResult.getFirstObject();
-    let clonedUris: Array<string> = await phAccessHelper.cloneAssetsByPath(assets, target);
-    console.info(`cloneAssetsByPath success, count: ${clonedUris.length}`);
-  } catch (err) {
-    console.error(`cloneAssetsByPath failed with error: ${err.code}, ${err.message}`);
-  }
-}
-```
+| [23800301](../errorcode-medialibrary.md#23800301-system-internal-error) | Internal system error. It is recommended to retry and check the logs. &lt;br&gt;Possible causes: 1. Database corrupted; 2. The file system is abnormal; 3. The IPC request timed out. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Called by non-system application. |
+| [23800151](../errorcode-medialibrary.md#23800151-failed-to-verify-scene-parameters) | The scenario parameter verification fails. Possible causes: &lt;br&gt;1. Asset to be cloned has been deleted or hidden; &lt;br&gt;2. Asset to be cloned is cloud pictures, which can not be cloned; &lt;br&gt;3. The Target Album does not exist. &lt;br&gt;4. Insufficient system space. &lt;br&gt;5. Automatic renaming is not supported. |
 
 ## cloneToAlbum
 
@@ -421,39 +388,10 @@ clone assets to Album.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 23800301 | Internal system error. It is recommended to retry and check the logs. &lt;br&gt;Possible causes: 1. Database corrupted; 2. The file system is abnormal; 3. The IPC request timed out. |
-| 201 | Permission denied |
-| 202 | Called by non-system application. |
-| 23800151 | The scenario parameter verification fails. Possible causes: &lt;br&gt;1. Asset to be cloned has been deleted or hidden; &lt;br&gt;2. Asset to be cloned is cloud pictures, which can not be cloned; &lt;br&gt;3. The Target Album does not exist. &lt;br&gt;4. Insufficient system space. &lt;br&gt;5. Automatic renaming is not supported. |
-
-## Examples
-
-For details about how to create a phAccessHelper instance, see the example provided in [photoAccessHelper.getPhotoAccessHelper](arkts-apis-photoAccessHelper-f.md#photoaccesshelpergetphotoaccesshelper).
-
-```TypeScript
-import { dataSharePredicates } from '@kit.ArkData';
-
-async function example(phAccessHelper: photoAccessHelper.PhotoAccessHelper) {
-  try {
-    let predicates: dataSharePredicates.DataSharePredicates = new dataSharePredicates.DataSharePredicates();
-    let fetchOption: photoAccessHelper.FetchOptions = {
-      fetchColumns: [],
-      predicates: predicates
-    };
-    let assetFetchResult: photoAccessHelper.FetchResult<photoAccessHelper.PhotoAsset> = await phAccessHelper.getAssets(fetchOption);
-    let assets: Array<photoAccessHelper.PhotoAsset> = await assetFetchResult.getAllObjects();
-    let albumFetchResult: photoAccessHelper.FetchResult<photoAccessHelper.Album> = await phAccessHelper.getAlbums(photoAccessHelper.AlbumType.USER, photoAccessHelper.AlbumSubtype.USER_GENERIC);
-    let target: photoAccessHelper.Album = await albumFetchResult.getFirstObject();
-    let options: photoAccessHelper.BatchOperationOptions = {
-      mode: 0
-    };
-    let clonedAssets: Array<photoAccessHelper.PhotoAsset> = await phAccessHelper.cloneToAlbum(assets, target, options);
-    console.info(`cloneToAlbum success, count: ${clonedAssets.length}`);
-  } catch (err) {
-    console.error(`cloneToAlbum failed with error: ${err.code}, ${err.message}`);
-  }
-}
-```
+| [23800301](../errorcode-medialibrary.md#23800301-system-internal-error) | Internal system error. It is recommended to retry and check the logs. &lt;br&gt;Possible causes: 1. Database corrupted; 2. The file system is abnormal; 3. The IPC request timed out. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Called by non-system application. |
+| [23800151](../errorcode-medialibrary.md#23800151-failed-to-verify-scene-parameters) | The scenario parameter verification fails. Possible causes: &lt;br&gt;1. Asset to be cloned has been deleted or hidden; &lt;br&gt;2. Asset to be cloned is cloud pictures, which can not be cloned; &lt;br&gt;3. The Target Album does not exist. &lt;br&gt;4. Insufficient system space. &lt;br&gt;5. Automatic renaming is not supported. |
 
 ## cloneToDir
 
@@ -495,36 +433,10 @@ clone assets of medialibrary sandbox to directory of filemanager.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 23800301 | Internal system error. It is recommended to retry and check the logs. &lt;br&gt;Possible causes: 1. Database corrupted; 2. The file system is abnormal; 3. The IPC request timed out. |
-| 201 | Permission denied |
-| 202 | Called by non-system application. |
-| 23800151 | The scenario parameter verification fails. Possible causes: &lt;br&gt;1. Asset to be cloned has been deleted or hidden; &lt;br&gt;2. Asset to be cloned is cloud pictures, which can not be cloned; &lt;br&gt;3. The Target Album does not exist. &lt;br&gt;4. Insufficient system space. &lt;br&gt;5. Automatic renaming is not supported. |
-
-## Examples
-
-For details about how to create a phAccessHelper instance, see the example provided in [photoAccessHelper.getPhotoAccessHelper](arkts-apis-photoAccessHelper-f.md#photoaccesshelpergetphotoaccesshelper).
-
-```TypeScript
-import { dataSharePredicates } from '@kit.ArkData';
-
-async function example(phAccessHelper: photoAccessHelper.PhotoAccessHelper) {
-  try {
-    let predicates: dataSharePredicates.DataSharePredicates = new dataSharePredicates.DataSharePredicates();
-    let fetchOption: photoAccessHelper.FetchOptions = {
-      fetchColumns: [],
-      predicates: predicates
-    };
-    let assetFetchResult: photoAccessHelper.FetchResult<photoAccessHelper.PhotoAsset> = await phAccessHelper.getAssets(fetchOption);
-    let assets: Array<photoAccessHelper.PhotoAsset> = await assetFetchResult.getAllObjects();
-    let assetUris: Array<string> = assets.map((item) => item.uri);
-    let target: string = '/Docs/Download';
-    let clonedPaths: Array<string> = await phAccessHelper.cloneToDir(assetUris, target);
-    console.info(`cloneToDir success, count: ${clonedPaths.length}`);
-  } catch (err) {
-    console.error(`cloneToDir failed with error: ${err.code}, ${err.message}`);
-  }
-}
-```
+| [23800301](../errorcode-medialibrary.md#23800301-system-internal-error) | Internal system error. It is recommended to retry and check the logs. &lt;br&gt;Possible causes: 1. Database corrupted; 2. The file system is abnormal; 3. The IPC request timed out. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Called by non-system application. |
+| [23800151](../errorcode-medialibrary.md#23800151-failed-to-verify-scene-parameters) | The scenario parameter verification fails. Possible causes: &lt;br&gt;1. Asset to be cloned has been deleted or hidden; &lt;br&gt;2. Asset to be cloned is cloud pictures, which can not be cloned; &lt;br&gt;3. The Target Album does not exist. &lt;br&gt;4. Insufficient system space. &lt;br&gt;5. Automatic renaming is not supported. |
 
 ## convertAssetToCompatibleAsset
 
@@ -562,8 +474,8 @@ Convert Asset Attributes to Compatibility Attributes
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 202 | Called by non-system application |
-| 23800151 | The scenario parameter verification fails. Possible causes: &lt;br&gt;1. Invalid Array&lt;PhotoAsset&gt;. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Called by non-system application |
+| [23800151](../errorcode-medialibrary.md#23800151-failed-to-verify-scene-parameters) | The scenario parameter verification fails. Possible causes: &lt;br&gt;1. Invalid Array&lt;PhotoAsset&gt;. |
 
 ## convertToAsset
 
@@ -603,26 +515,10 @@ Convert to PhotoAsset from path of filemanagerr.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 23800301 | Internalsystem error. It is recommended to retry and check the logs. &lt;br&gt;Possible causes: 1. Database corrupted; 2.The file system is abnormal; 3. The IPC request timed out. |
-| 201 | Permission denied |
-| 202 | Called by non-system application. |
-| 23800151 | The scenario parameter verification fails. Possible causes: &lt;br&gt;1. Converted an image after filtering into an asset object; &lt;br&gt;2.File to be converted is not exist; &lt;br&gt;3. Only images in the public directory of filemanager can be converted. |
-
-## Examples
-
-For details about how to create a phAccessHelper instance, see the example provided in [photoAccessHelper.getPhotoAccessHelper](arkts-apis-photoAccessHelper-f.md#photoaccesshelpergetphotoaccesshelper).
-
-```TypeScript
-async function example(phAccessHelper: photoAccessHelper.PhotoAccessHelper) {
-  try {
-    let path: string = '/Docs/Download/test.jpg';
-    let photoAsset: photoAccessHelper.PhotoAsset = await phAccessHelper.convertToAsset(path);
-    console.info(`convertToAsset success, asset uri: ${photoAsset.uri}`);
-  } catch (err) {
-    console.error(`convertToAsset failed with error: ${err.code}, ${err.message}`);
-  }
-}
-```
+| [23800301](../errorcode-medialibrary.md#23800301-system-internal-error) | Internalsystem error. It is recommended to retry and check the logs. &lt;br&gt;Possible causes: 1. Database corrupted; 2.The file system is abnormal; 3. The IPC request timed out. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Called by non-system application. |
+| [23800151](../errorcode-medialibrary.md#23800151-failed-to-verify-scene-parameters) | The scenario parameter verification fails. Possible causes: &lt;br&gt;1. Converted an image after filtering into an asset object; &lt;br&gt;2.File to be converted is not exist; &lt;br&gt;3. Only images in the public directory of filemanager can be converted. |
 
 ## createAlbum
 
@@ -669,9 +565,9 @@ The album name must meet the following requirements:
 | Error Code ID | Error Message |
 | --- | --- |
 | 13900020 | Invalid argument |
-| 401 | Parameter error. Possible causes: &lt;br&gt;1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; &lt;br&gt;3. Parameter verification failed. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: &lt;br&gt;1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; &lt;br&gt;3. Parameter verification failed. |
 | 13900012 | Permission denied |
-| 202 | Called by non-system application. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Called by non-system application. |
 | 13900015 | The file name already exists. |
 | 14000011 | System inner fail |
 
@@ -743,9 +639,9 @@ The album name must meet the following requirements:
 | Error Code ID | Error Message |
 | --- | --- |
 | 13900020 | Invalid argument |
-| 401 | Parameter error. Possible causes: &lt;br&gt;1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; &lt;br&gt;3. Parameter verification failed. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: &lt;br&gt;1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; &lt;br&gt;3. Parameter verification failed. |
 | 13900012 | Permission denied |
-| 202 | Called by non-system application. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Called by non-system application. |
 | 13900015 | The file name already exists. |
 | 14000011 | System inner fail |
 
@@ -809,10 +705,10 @@ For API versions 10 to 17, the following characters are considered invalid: . ..
 | Error Code ID | Error Message |
 | --- | --- |
 | 13900020 | Invalid argument |
-| 401 | Parameter error. Possible causes: &lt;br&gt;1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; &lt;br&gt;3. Parameter verification failed. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: &lt;br&gt;1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; &lt;br&gt;3. Parameter verification failed. |
 | 14000001 | Invalid display name |
 | 13900012 | Permission denied |
-| 202 | Called by non-system application. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Called by non-system application. |
 | 14000011 | System inner fail |
 
 ## Examples
@@ -881,10 +777,10 @@ For API versions 10 to 17, the following characters are considered invalid: . ..
 | Error Code ID | Error Message |
 | --- | --- |
 | 13900020 | Invalid argument |
-| 401 | Parameter error. Possible causes: &lt;br&gt;1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; &lt;br&gt;3. Parameter verification failed. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: &lt;br&gt;1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; &lt;br&gt;3. Parameter verification failed. |
 | 14000001 | Invalid display name |
 | 13900012 | Permission denied |
-| 202 | Called by non-system application. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Called by non-system application. |
 | 14000011 | System inner fail |
 
 ## Examples
@@ -953,10 +849,10 @@ For API versions 10 to 17, the following characters are considered invalid: . ..
 | Error Code ID | Error Message |
 | --- | --- |
 | 13900020 | Invalid argument |
-| 401 | Parameter error. Possible causes: &lt;br&gt;1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; &lt;br&gt;3. Parameter verification failed. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: &lt;br&gt;1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; &lt;br&gt;3. Parameter verification failed. |
 | 14000001 | Invalid display name |
 | 13900012 | Permission denied |
-| 202 | Called by non-system application. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Called by non-system application. |
 | 14000011 | System inner fail |
 
 ## Examples
@@ -1023,10 +919,10 @@ For API versions 10 to 17, the following characters are considered invalid: . ..
 | Error Code ID | Error Message |
 | --- | --- |
 | 13900020 | Invalid argument |
-| 401 | Parameter error. Possible causes: &lt;br&gt;1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; &lt;br&gt;3. Parameter verification failed. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: &lt;br&gt;1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; &lt;br&gt;3. Parameter verification failed. |
 | 14000001 | Invalid display name |
 | 13900012 | Permission denied |
-| 202 | Called by non-system application. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Called by non-system application. |
 | 14000011 | System inner fail |
 
 ## Examples
@@ -1097,8 +993,8 @@ Creates media assets for an application with the specified token ID. The returne
 | Error Code ID | Error Message |
 | --- | --- |
 | 13900020 | Invalid argument. Possible causes: &lt;br&gt;1. The photoCreationConfigs is empty; &lt;br&gt;2. Incorrect photoCreationConfigs format. |
-| 201 | Permission denied |
-| 202 | Called by non-system application |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Called by non-system application |
 | 14000011 | Internal system error |
 
 ## Examples
@@ -1169,9 +1065,9 @@ Creates assets for the current application or other applications in the specifie
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. Possible causes: &lt;br&gt;1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; &lt;br&gt;3. Parameter verification failed. |
-| 201 | Permission denied |
-| 202 | Called by non-system application |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: &lt;br&gt;1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; &lt;br&gt;3. Parameter verification failed. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Called by non-system application |
 | 14000011 | Internal system error |
 
 ## Examples
@@ -1268,9 +1164,9 @@ Creates assets with a temporary permission. This API uses a promise to return th
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. Possible causes: &lt;br&gt;1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; &lt;br&gt;3. Parameter verification failed. |
-| 201 | Permission denied |
-| 202 | Called by non-system application |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: &lt;br&gt;1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; &lt;br&gt;3. Parameter verification failed. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Called by non-system application |
 | 14000011 | Internal system error |
 
 ## Examples
@@ -1347,42 +1243,10 @@ Batch create assets,which also support to choose whether specifying an album and
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 23800301 | Internal system error. It is recommended to retry and check the logs. Possible causes: &lt;br&gt;1. Database corrupted; &lt;br&gt;2. The file system is abnormal; &lt;br&gt;3. The IPC request timed out. |
-| 201 | Permission denied |
-| 202 | Called by non-system application. |
-| 23800151 | Scenario-specific parameters are incorrect. Possible causes are as follows: &lt;br&gt;1. The input parameter creationSettings is null or undefined. &lt;br&gt;2. The array length of creationSettings is bigger than 500. |
-
-## Examples
-
-For details about how to create a phAccessHelper instance, see the example provided in [photoAccessHelper.getPhotoAccessHelper](arkts-apis-photoAccessHelper-f.md#photoaccesshelpergetphotoaccesshelper).
-
-```TypeScript
-async function example(phAccessHelper: photoAccessHelper.PhotoAccessHelper) {
-  try {
-    // Construct creation parameters.
-    let creationSettings: Array<photoAccessHelper.CreationSetting> = [
-      {
-        title: 'test',
-        fileNameExtension: 'jpg',
-        photoType: photoAccessHelper.PhotoType.IMAGE
-      }
-    ];
-    // Do not generate a thumbnail in real time when an asset is created.
-    let isRealTimeThumb: boolean = false;
-    // Specify the album URI.
-    let albumUri: string = 'file://media/PhotoAlbum/10';
-    // Call the API to create an asset.
-    let result: Array<string> = await phAccessHelper.createAssetsWithAlbum(
-      creationSettings,
-      isRealTimeThumb,
-      albumUri
-    );
-    console.info('Succeeded in creating assets with album, uri is ' + result);
-  } catch (err) {
-    console.error(`createAssetsWithAlbum failed with error: ${err.code}, ${err.message}`);
-  }
-}
-```
+| [23800301](../errorcode-medialibrary.md#23800301-system-internal-error) | Internal system error. It is recommended to retry and check the logs. Possible causes: &lt;br&gt;1. Database corrupted; &lt;br&gt;2. The file system is abnormal; &lt;br&gt;3. The IPC request timed out. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Called by non-system application. |
+| [23800151](../errorcode-medialibrary.md#23800151-failed-to-verify-scene-parameters) | Scenario-specific parameters are incorrect. Possible causes are as follows: &lt;br&gt;1. The input parameter creationSettings is null or undefined. &lt;br&gt;2. The array length of creationSettings is bigger than 500. |
 
 ## deleteAlbums
 
@@ -1420,9 +1284,9 @@ Deletes user albums. This API uses an asynchronous callback to return the result
 | Error Code ID | Error Message |
 | --- | --- |
 | 13900020 | Invalid argument |
-| 401 | Parameter error. Possible causes: &lt;br&gt;1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; &lt;br&gt;3. Parameter verification failed. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: &lt;br&gt;1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; &lt;br&gt;3. Parameter verification failed. |
 | 13900012 | Permission denied |
-| 202 | Called by non-system application. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Called by non-system application. |
 | 14000011 | System inner fail |
 
 ## Examples
@@ -1495,9 +1359,9 @@ Deletes user albums. This API uses a promise to return the result.
 | Error Code ID | Error Message |
 | --- | --- |
 | 13900020 | Invalid argument |
-| 401 | Parameter error. Possible causes: &lt;br&gt;1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; &lt;br&gt;3. Parameter verification failed. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: &lt;br&gt;1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; &lt;br&gt;3. Parameter verification failed. |
 | 13900012 | Permission denied |
-| 202 | Called by non-system application. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Called by non-system application. |
 | 14000011 | System inner fail |
 
 ## Examples
@@ -1564,10 +1428,10 @@ Deletes media assets. The deleted assets are moved to the trash. This API uses a
 | Error Code ID | Error Message |
 | --- | --- |
 | 13900020 | Invalid argument |
-| 401 | Parameter error. Possible causes: &lt;br&gt;1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; &lt;br&gt;3. Parameter verification failed. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: &lt;br&gt;1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; &lt;br&gt;3. Parameter verification failed. |
 | 14000002 | The uri format is incorrect or does not exist. |
 | 13900012 | Permission denied |
-| 202 | Called by non-system application. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Called by non-system application. |
 | 14000011 | System inner fail |
 
 ## Examples
@@ -1645,10 +1509,10 @@ Deletes media assets. The deleted assets are moved to the trash. This API uses a
 | Error Code ID | Error Message |
 | --- | --- |
 | 13900020 | Invalid argument |
-| 401 | Parameter error. Possible causes: &lt;br&gt;1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; &lt;br&gt;3. Parameter verification failed. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: &lt;br&gt;1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; &lt;br&gt;3. Parameter verification failed. |
 | 14000002 | The uri format is incorrect or does not exist. |
 | 13900012 | Permission denied |
-| 202 | Called by non-system application. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Called by non-system application. |
 | 14000011 | System inner fail |
 
 ## Examples
@@ -1724,30 +1588,10 @@ Get the corresponding albumId of a bundleName.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 23800301 | Internal system error. You are advised to retry and check the logs. Possible causes: &lt;br&gt;1. The database is corrupted. &lt;br&gt;2. The file system is abnormal. &lt;br&gt;3. The IPC request timed out. |
-| 201 | Permission denied |
-| 202 | Called by non-system application |
-| 23800151 | The bundleName is invalid, such as null, undefined and empty. |
-
-## Examples
-
-For details about how to create a phAccessHelper instance, see the example provided in [photoAccessHelper.getPhotoAccessHelper](arkts-apis-photoAccessHelper-f.md#photoaccesshelpergetphotoaccesshelper).
-
-```TypeScript
-async function example(phAccessHelper: photoAccessHelper.PhotoAccessHelper) {
-  console.info('getAlbumIdByBundleName');
-
-  try {
-      let albumId: number = await phAccessHelper.getAlbumIdByBundleName('test.bundleName');
-      console.info('requestFile:: albumId: ', albumId);
-
-      console.info('getAlbumIdByBundleName completed.');
-      console.info(`albumId : ${albumId}`);
-    } catch (err) {
-      console.error(`getAlbumIdByBundleName failed: ${err.code}, ${err.message}`);
-    }
-}
-```
+| [23800301](../errorcode-medialibrary.md#23800301-system-internal-error) | Internal system error. You are advised to retry and check the logs. Possible causes: &lt;br&gt;1. The database is corrupted. &lt;br&gt;2. The file system is abnormal. &lt;br&gt;3. The IPC request timed out. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Called by non-system application |
+| [23800151](../errorcode-medialibrary.md#23800151-failed-to-verify-scene-parameters) | The bundleName is invalid, such as null, undefined and empty. |
 
 ## getAlbumsByIds
 
@@ -1791,9 +1635,9 @@ Obtains album information by album IDs. This API uses a promise to return the re
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. Possible causes: &lt;br&gt;1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; &lt;br&gt;3. Parameter verification failed. |
-| 201 | Permission denied |
-| 202 | Called by non-system application |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: &lt;br&gt;1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; &lt;br&gt;3. Parameter verification failed. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Called by non-system application |
 | 14000011 | System inner fail |
 
 ## Examples
@@ -1853,24 +1697,9 @@ Obtains the asset compatibility capability based on the bundle name. When an app
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 23800301 | Internal system error. It is recommended to retry and check the logs. Possible causes: &lt;br&gt;1. Database corrupted; &lt;br&gt;2. The file system is abnormal; &lt;br&gt;3. The IPC request timed out. |
-| 202 | Called by non-system application. |
-| 23800151 | The bundleName is invalid, such as null, undefined and empty. |
-
-## Examples
-
-For details about how to create a phAccessHelper instance, see the example provided in [photoAccessHelper.getPhotoAccessHelper](arkts-apis-photoAccessHelper-f.md#photoaccesshelpergetphotoaccesshelper).
-
-```TypeScript
-async function example(phAccessHelper: photoAccessHelper.PhotoAccessHelper) {
-  try {
-    let bundleName = "com.test.example";
-    let capability : photoAccessHelper.AssetCompatibleCapability = await phAccessHelper.getAssetCompatibleCapability(bundleName);
-  } catch (error) {
-    console.error('failed to getAssetCompatibleCapability err', error);
-  }
-}
-```
+| [23800301](../errorcode-medialibrary.md#23800301-system-internal-error) | Internal system error. It is recommended to retry and check the logs. Possible causes: &lt;br&gt;1. Database corrupted; &lt;br&gt;2. The file system is abnormal; &lt;br&gt;3. The IPC request timed out. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Called by non-system application. |
+| [23800151](../errorcode-medialibrary.md#23800151-failed-to-verify-scene-parameters) | The bundleName is invalid, such as null, undefined and empty. |
 
 ## getAssetCompatibleUris
 
@@ -1916,36 +1745,9 @@ Obtain the URI list to be transcoded based on bundleName, photoAsset list, and c
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 23800301 | Internal system error. It is recommended to retry and check the logs. Possible causes: &lt;br&gt;1. Database corrupted; &lt;br&gt;2. The file system is abnormal; &lt;br&gt;3. The IPC request timed out. |
-| 202 | Called by non-system application. |
-| 23800151 | The scenario parameter verification fails. Possible causes: &lt;br&gt;1. The bundleName is invalid; &lt;br&gt;2. The compatibleFlag is invalid; |
-
-## Examples
-
-For details about how to create a phAccessHelper instance, see the example provided in [photoAccessHelper.getPhotoAccessHelper](arkts-apis-photoAccessHelper-f.md#photoaccesshelpergetphotoaccesshelper).
-
-```TypeScript
-import { dataSharePredicates } from '@kit.ArkData';
-
-async function example(phAccessHelper: photoAccessHelper.PhotoAccessHelper) {
-  try {
-    let bundleName: string = 'com.example.helloWorld';
-    let predicates: dataSharePredicates.DataSharePredicates = new dataSharePredicates.DataSharePredicates();
-    let fetchOptions: photoAccessHelper.FetchOptions = {
-      fetchColumns: [photoAccessHelper.PhotoKeys.URI, photoAccessHelper.PhotoKeys.WIDTH, photoAccessHelper.PhotoKeys.HEIGHT],
-      predicates: predicates
-    };
-    let fetchResult: photoAccessHelper.FetchResult<photoAccessHelper.PhotoAsset> = await phAccessHelper.getAssets(fetchOptions);
-    let assets: Array<photoAccessHelper.PhotoAsset> = await fetchResult.getAllObjects();
-    // compatibleFlag: Bit 0 indicates the full image, and bit 1 indicates the HEIF image.
-    let compatibleFlag: number = 0;
-    let uris: Array<string> = await phAccessHelper.getAssetCompatibleUris(bundleName, assets, compatibleFlag);
-    console.info(`getAssetCompatibleUris success, uri count: ${uris.length}`);
-  } catch (err) {
-    console.error(`getAssetCompatibleUris failed with error: ${err.code}, ${err.message}`);
-  }
-}
-```
+| [23800301](../errorcode-medialibrary.md#23800301-system-internal-error) | Internal system error. It is recommended to retry and check the logs. Possible causes: &lt;br&gt;1. Database corrupted; &lt;br&gt;2. The file system is abnormal; &lt;br&gt;3. The IPC request timed out. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Called by non-system application. |
+| [23800151](../errorcode-medialibrary.md#23800151-failed-to-verify-scene-parameters) | The scenario parameter verification fails. Possible causes: &lt;br&gt;1. The bundleName is invalid; &lt;br&gt;2. The compatibleFlag is invalid; |
 
 ## getClonedAlbumUris
 
@@ -1985,10 +1787,10 @@ To control the size of the database table space, the system automatically delete
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 23800301 | Internal system error. It is recommended to retry and check the logs. Possible causes: &lt;br&gt;1. Database corrupted; &lt;br&gt;2. The file system is abnormal; &lt;br&gt;3. The IPC request timed out. |
-| 201 | Permission denied. |
-| 202 | Called by non-system application. |
-| 23800151 | The scenario parameter verification fails. Possible causes: The size of input parameter exceeds 100 or is 0. |
+| [23800301](../errorcode-medialibrary.md#23800301-system-internal-error) | Internal system error. It is recommended to retry and check the logs. Possible causes: &lt;br&gt;1. Database corrupted; &lt;br&gt;2. The file system is abnormal; &lt;br&gt;3. The IPC request timed out. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Called by non-system application. |
+| [23800151](../errorcode-medialibrary.md#23800151-failed-to-verify-scene-parameters) | The scenario parameter verification fails. Possible causes: The size of input parameter exceeds 100 or is 0. |
 
 ## Examples
 
@@ -2050,10 +1852,10 @@ To control the size of the database table space, the system automatically delete
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 23800301 | Internal system error. It is recommended to retry and check the logs. Possible causes: &lt;br&gt;1. Database corrupted; &lt;br&gt;2. The file system is abnormal; &lt;br&gt;3. The IPC request timed out. |
-| 201 | Permission denied. |
-| 202 | Called by non-system application. |
-| 23800151 | The scenario parameter verification fails. Possible causes: The size of input parameter exceeds 100 or is 0. |
+| [23800301](../errorcode-medialibrary.md#23800301-system-internal-error) | Internal system error. It is recommended to retry and check the logs. Possible causes: &lt;br&gt;1. Database corrupted; &lt;br&gt;2. The file system is abnormal; &lt;br&gt;3. The IPC request timed out. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Called by non-system application. |
+| [23800151](../errorcode-medialibrary.md#23800151-failed-to-verify-scene-parameters) | The scenario parameter verification fails. Possible causes: The size of input parameter exceeds 100 or is 0. |
 
 ## Examples
 
@@ -2113,9 +1915,9 @@ Obtains the asset analysis progress. This API uses a promise to return the resul
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. Possible causes: &lt;br&gt;1. Incorrect parameter types; &lt;br&gt;2. Parameter verification failed. |
-| 201 | Permission denied |
-| 202 | Called by non-system application |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: &lt;br&gt;1. Incorrect parameter types; &lt;br&gt;2. Parameter verification failed. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Called by non-system application |
 | 14000011 | Internal system error |
 
 ## Examples
@@ -2176,27 +1978,9 @@ This API is time-consuming. Before using this API, you are advised to call [canP
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 23800301 | Internal system error. It is recommended to retry and check the logs. Possible causes: &lt;br&gt;1. Database corrupted; &lt;br&gt;2. The file system is abnormal; &lt;br&gt;3. The IPC request timed out. |
-| 201 | Permission denied. |
-| 202 | Called by non-system application. |
-
-## Examples
-
-For details about how to create a phAccessHelper instance, see the example provided in [photoAccessHelper.getPhotoAccessHelper](arkts-apis-photoAccessHelper-f.md#photoaccesshelpergetphotoaccesshelper).
-
-```TypeScript
-async function example(phAccessHelper: photoAccessHelper.PhotoAccessHelper) {
-  try {
-    let canPerform: boolean = await phAccessHelper.canPerformDeepOptimizeSpace();
-    if (canPerform) {
-      let size: number = await phAccessHelper.getDeepOptimizeSpace();
-      console.info(`getDeepOptimizeSpace result: ${size}`);
-    }
-  } catch (err) {
-    console.error(`getDeepOptimizeSpace failed with error: ${err.code}, ${err.message}`);
-  }
-}
-```
+| [23800301](../errorcode-medialibrary.md#23800301-system-internal-error) | Internal system error. It is recommended to retry and check the logs. Possible causes: &lt;br&gt;1. Database corrupted; &lt;br&gt;2. The file system is abnormal; &lt;br&gt;3. The IPC request timed out. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Called by non-system application. |
 
 ## getHiddenAlbums
 
@@ -2230,9 +2014,9 @@ Obtains hidden albums based on the specified display mode and retrieval options.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. Possible causes: &lt;br&gt;1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; &lt;br&gt;3. Parameter verification failed. |
-| 201 | Permission verification failed, usually the result returned by VerifyAccessToken. |
-| 202 | Permission verification failed, application which is not a system application uses system API. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: &lt;br&gt;1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; &lt;br&gt;3. Parameter verification failed. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed, usually the result returned by VerifyAccessToken. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed, application which is not a system application uses system API. |
 | 14000011 | System inner fail. |
 
 ## Examples
@@ -2304,9 +2088,9 @@ Obtains hidden albums based on the specified display mode. This API uses an asyn
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. Possible causes: &lt;br&gt;1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; &lt;br&gt;3. Parameter verification failed. |
-| 201 | Permission verification failed, usually the result returned by VerifyAccessToken. |
-| 202 | Permission verification failed, application which is not a system application uses system API. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: &lt;br&gt;1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; &lt;br&gt;3. Parameter verification failed. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed, usually the result returned by VerifyAccessToken. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed, application which is not a system application uses system API. |
 | 14000011 | System inner fail. |
 
 ## Examples
@@ -2408,9 +2192,9 @@ Obtains hidden albums based on the specified display mode and retrieval options.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. Possible causes: &lt;br&gt;1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; &lt;br&gt;3. Parameter verification failed. |
-| 201 | Permission verification failed, usually the result returned by VerifyAccessToken. |
-| 202 | Permission verification failed, application which is not a system application uses system API. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: &lt;br&gt;1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; &lt;br&gt;3. Parameter verification failed. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed, usually the result returned by VerifyAccessToken. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed, application which is not a system application uses system API. |
 | 14000011 | System inner fail. |
 
 ## Examples
@@ -2499,8 +2283,8 @@ Obtains the index construction progress. This API uses a promise to return the r
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 201 | Permission denied |
-| 202 | Called by non-system application |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Called by non-system application |
 | 14000011 | Internal system error |
 
 ## Examples
@@ -2573,10 +2357,10 @@ Obtains the sorting order for system, user, and source albums. This API uses a p
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 23800301 | Internal system error. It is recommended to retry and check the logs. Possible causes: &lt;br&gt;1. Database corrupted; &lt;br&gt;2. The file system is abnormal; &lt;br&gt;3. The IPC request timed out. |
-| 201 | Permission denied. |
-| 202 | Called by non-system application. |
-| 23800151 | The scenario parameter verification fails. Possible causes: The input parameter is not within the valid range. |
+| [23800301](../errorcode-medialibrary.md#23800301-system-internal-error) | Internal system error. It is recommended to retry and check the logs. Possible causes: &lt;br&gt;1. Database corrupted; &lt;br&gt;2. The file system is abnormal; &lt;br&gt;3. The IPC request timed out. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Called by non-system application. |
+| [23800151](../errorcode-medialibrary.md#23800151-failed-to-verify-scene-parameters) | The scenario parameter verification fails. Possible causes: The input parameter is not within the valid range. |
 
 ## Examples
 
@@ -2646,9 +2430,9 @@ Before the operation, ensure that the albums to obtain exist.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 23800301 | Internal system error. It is recommended to retry and check the logs. &lt;br&gt;Possible causes: &lt;br&gt;1. Database corrupted; &lt;br&gt;2. The file system is abnormal; &lt;br&gt;3. The IPC request timed out. |
-| 201 | Permission denied |
-| 202 | Called by non-system application |
+| [23800301](../errorcode-medialibrary.md#23800301-system-internal-error) | Internal system error. It is recommended to retry and check the logs. &lt;br&gt;Possible causes: &lt;br&gt;1. Database corrupted; &lt;br&gt;2. The file system is abnormal; &lt;br&gt;3. The IPC request timed out. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Called by non-system application |
 
 ## Examples
 
@@ -2715,9 +2499,9 @@ Converts the **ValuesBucket** record to a **PhotoAsset** object.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 23800301 | Internal system error. It is recommended to retry and check the logs. &lt;br&gt;Possible causes: &lt;br&gt;1. Database corrupted; &lt;br&gt;2. The file system is abnormal; &lt;br&gt;3. The IPC request timed out. |
-| 202 | Called by non-system application. |
-| 23800151 | The scenario parameter verification fails. Possible causes: &lt;br&gt;1. Invalid value type in ValuesBucket; &lt;br&gt;2. Missing required column in ValuesBucket; &lt;br&gt;3. Array size exceeds 500. |
+| [23800301](../errorcode-medialibrary.md#23800301-system-internal-error) | Internal system error. It is recommended to retry and check the logs. &lt;br&gt;Possible causes: &lt;br&gt;1. Database corrupted; &lt;br&gt;2. The file system is abnormal; &lt;br&gt;3. The IPC request timed out. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Called by non-system application. |
+| [23800151](../errorcode-medialibrary.md#23800151-failed-to-verify-scene-parameters) | The scenario parameter verification fails. Possible causes: &lt;br&gt;1. Invalid value type in ValuesBucket; &lt;br&gt;2. Missing required column in ValuesBucket; &lt;br&gt;3. Array size exceeds 500. |
 
 ## Examples
 
@@ -2786,9 +2570,9 @@ Obtains the index of an image or video in an album. This API uses an asynchronou
 | Error Code ID | Error Message |
 | --- | --- |
 | 13900020 | Invalid argument |
-| 401 | Parameter error. Possible causes: &lt;br&gt;1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; &lt;br&gt;3. Parameter verification failed. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: &lt;br&gt;1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; &lt;br&gt;3. Parameter verification failed. |
 | 13900012 | Permission denied |
-| 202 | Called by non-system application. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Called by non-system application. |
 | 14000011 | System inner fail |
 
 ## Examples
@@ -2878,9 +2662,9 @@ Obtains the index of an image or video in an album. This API uses a promise to r
 | Error Code ID | Error Message |
 | --- | --- |
 | 13900020 | Invalid argument |
-| 401 | Parameter error. Possible causes: &lt;br&gt;1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; &lt;br&gt;3. Parameter verification failed. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: &lt;br&gt;1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; &lt;br&gt;3. Parameter verification failed. |
 | 13900012 | Permission denied |
-| 202 | Called by non-system application. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Called by non-system application. |
 | 14000011 | System inner fail |
 
 ## Examples
@@ -2959,34 +2743,9 @@ Obtains the preferred compatible mode configured by the application based on bun
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 23800301 | Internal system error. It is recommended to retry and check the logs. Possible causes: &lt;br&gt;1. Database corrupted; &lt;br&gt;2. The file system is abnormal; &lt;br&gt;3. The IPC request timed out. |
-| 202 | Called by non-system application. |
-| 23800151 | The bundleName is invalid, such as null, undefined and empty. |
-
-## Examples
-
-For details about how to create a phAccessHelper instance, see the example provided in [photoAccessHelper.getPhotoAccessHelper](arkts-apis-photoAccessHelper-f.md#photoaccesshelpergetphotoaccesshelper).
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-async function getPreferredCompatibleMode(
-  phAccessHelper: photoAccessHelper.PhotoAccessHelper,
-  bundleName: string
-): Promise<photoAccessHelper.PreferredCompatibleMode> {
-  console.info('getPreferredCompatibleModeDemo');
-  let mode: photoAccessHelper.PreferredCompatibleMode = photoAccessHelper.PreferredCompatibleMode.DEFAULT;
-  await phAccessHelper.getPreferredCompatibleMode(bundleName)
-    .then((result: photoAccessHelper.PreferredCompatibleMode) => {
-      mode = result;
-      console.info('getPreferredCompatibleMode successfully');
-    })
-    .catch((err: BusinessError) => {
-      console.error(`The getPreferredCompatibleMode call failed. error: ${err.code}, ${err.message}`);
-    });
-  return mode;
-}
-```
+| [23800301](../errorcode-medialibrary.md#23800301-system-internal-error) | Internal system error. It is recommended to retry and check the logs. Possible causes: &lt;br&gt;1. Database corrupted; &lt;br&gt;2. The file system is abnormal; &lt;br&gt;3. The IPC request timed out. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Called by non-system application. |
+| [23800151](../errorcode-medialibrary.md#23800151-failed-to-verify-scene-parameters) | The bundleName is invalid, such as null, undefined and empty. |
 
 ## getSharedPhotoAssets
 
@@ -3024,9 +2783,9 @@ Obtains the shared photo assets.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. Possible causes: &lt;br&gt;1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; &lt;br&gt;3. Parameter verification failed. |
-| 201 | Permission denied |
-| 202 | Called by non-system application |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: &lt;br&gt;1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; &lt;br&gt;3. Parameter verification failed. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Called by non-system application |
 | 14000011 | Internal system error |
 
 ## Examples
@@ -3109,8 +2868,8 @@ Grants an application the permission to access a URI. This API uses a promise to
 | Error Code ID | Error Message |
 | --- | --- |
 | 13900020 | Invalid argument. Possible causes: &lt;br&gt;1. Incorrect uri format; &lt;br&gt;2. The value of photoPermissionType or hideSensitiveType is out of range. |
-| 201 | Permission denied |
-| 202 | Called by non-system application |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Called by non-system application |
 | 14000011 | Internal system error |
 
 ## Examples
@@ -3191,8 +2950,8 @@ Grants an application the permission to access multiple URIs. This API uses a pr
 | Error Code ID | Error Message |
 | --- | --- |
 | 13900020 | Invalid argument. Possible causes: &lt;br&gt;1. Incorrect uri format; &lt;br&gt;2. The value of photoPermissionType or hideSensitiveType is out of range. |
-| 201 | Permission denied |
-| 202 | Called by non-system application |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Called by non-system application |
 | 14000011 | Internal system error |
 
 ## Examples
@@ -3259,10 +3018,10 @@ Triggers the execution of an analysis tool. This API uses an asynchronous callba
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 23800301 | Internal system error. Possible causes: &lt;br&gt;1. IPC timeout; &lt;br&gt;2. System exception. |
-| 201 | Permission denied |
-| 202 | Called by non-system application |
-| 23800151 | The scenario parameter verification fails. Possible causes: &lt;br&gt;1. Unsupported tool type; &lt;br&gt;2. The length of **param** in **ToolInvokeConfig** exceeds 16KB. |
+| [23800301](../errorcode-medialibrary.md#23800301-system-internal-error) | Internal system error. Possible causes: &lt;br&gt;1. IPC timeout; &lt;br&gt;2. System exception. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Called by non-system application |
+| [23800151](../errorcode-medialibrary.md#23800151-failed-to-verify-scene-parameters) | The scenario parameter verification fails. Possible causes: &lt;br&gt;1. Unsupported tool type; &lt;br&gt;2. The length of **param** in **ToolInvokeConfig** exceeds 16KB. |
 
 ## isCompatibleDuplicateSupported
 
@@ -3300,9 +3059,9 @@ Checks whether a temporary JPEG copy should be created for an application. This 
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 23800301 | Internal system error. It is recommended to retry and check the logs. &lt;br&gt;Possible causes: &lt;br&gt;1. The IPC request timed out. &lt;br&gt;2. system running error |
-| 201 | Permission denied |
-| 202 | Called by non-system application |
+| [23800301](../errorcode-medialibrary.md#23800301-system-internal-error) | Internal system error. It is recommended to retry and check the logs. &lt;br&gt;Possible causes: &lt;br&gt;1. The IPC request timed out. &lt;br&gt;2. system running error |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Called by non-system application |
 
 ## Examples
 
@@ -3358,10 +3117,10 @@ Checks whether the specified media data is ready.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 23800301 | Internal system error. It is recommended to retry and check the logs. Possible causes: &lt;br&gt;1. Database corrupted; &lt;br&gt;2. The file system is abnormal; &lt;br&gt;3. The IPC request timed out. |
-| 201 | Permission denied |
-| 202 | Called by non-system application. |
-| 23800151 | The scenario parameter verification fails, unsupported media data type. |
+| [23800301](../errorcode-medialibrary.md#23800301-system-internal-error) | Internal system error. It is recommended to retry and check the logs. Possible causes: &lt;br&gt;1. Database corrupted; &lt;br&gt;2. The file system is abnormal; &lt;br&gt;3. The IPC request timed out. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Called by non-system application. |
+| [23800151](../errorcode-medialibrary.md#23800151-failed-to-verify-scene-parameters) | The scenario parameter verification fails, unsupported media data type. |
 
 ## Examples
 
@@ -3426,37 +3185,10 @@ modify the default cover order of album.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 23800301 | Internal system error. It is recommended to retry and check the logs. &lt;br&gt;Possible causes: 1. Database corrupted; 2. The file system is abnormal; 3. The IPC request timed out. |
-| 201 | Permission denied |
-| 202 | Called by non-system application. |
-| 23800151 | The scenario parameter verification fails. Possible causes: &lt;br&gt;1. Only the system album can be set without lpath. Otherwise, the setting is not supported; &lt;br&gt;2. The orderKey and orderSubKey are not in the specified range; &lt;br&gt;3. The order type must be either descending or ascending. |
-
-## Examples
-
-For details about how to create a phAccessHelper instance, see the example provided in [photoAccessHelper.getPhotoAccessHelper](arkts-apis-photoAccessHelper-f.md#photoaccesshelpergetphotoaccesshelper).
-
-```TypeScript
-async function modifyAlbumDefaultCoverOrder(phAccessHelper: photoAccessHelper.PhotoAccessHelper) {
-  try {
-    let coverOrderInfos: Array<photoAccessHelper.DefaultCoverOrderInfo> = [];
-    let coverOrderInfo: photoAccessHelper.DefaultCoverOrderInfo = {
-      albumType: photoAccessHelper.AlbumType.USER,
-      albumSubtype: photoAccessHelper.AlbumSubtype.USER_GENERIC,
-      lpath: "/Pictures/Users/1",
-      orderKey: photoAccessHelper.PhotoKeys.DATE_ADDED,
-      orderSubKey: photoAccessHelper.PhotoKeys.DISPLAY_NAME,
-      orderType: 1,
-    }
-    coverOrderInfos.push(coverOrderInfo);
-    let disableModification: boolean = false;
-    let isAsyncRefreshAlbum: boolean = false;
-    await phAccessHelper.modifyAlbumDefaultCoverOrder(coverOrderInfos, disableModification, isAsyncRefreshAlbum);
-    console.info(`Succeeded in modifying default cover order of user album 1`);
-  } catch (err) {
-    console.error(`modifyAlbumDefaultCoverOrder failed with error: ${err.code}, ${err.message}`);
-  }
-}
-```
+| [23800301](../errorcode-medialibrary.md#23800301-system-internal-error) | Internal system error. It is recommended to retry and check the logs. &lt;br&gt;Possible causes: 1. Database corrupted; 2. The file system is abnormal; 3. The IPC request timed out. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Called by non-system application. |
+| [23800151](../errorcode-medialibrary.md#23800151-failed-to-verify-scene-parameters) | The scenario parameter verification fails. Possible causes: &lt;br&gt;1. Only the system album can be set without lpath. Otherwise, the setting is not supported; &lt;br&gt;2. The orderKey and orderSubKey are not in the specified range; &lt;br&gt;3. The order type must be either descending or ascending. |
 
 ## modifyHiddenAlbumDefaultCoverOrder
 
@@ -3500,36 +3232,10 @@ modify the default cover order of hidden album.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 23800301 | Internal system error. It is recommended to retry and check the logs. &lt;br&gt;Possible causes: 1. Database corrupted; 2. The file system is abnormal; 3. The IPC request timed out. |
-| 201 | Permission denied |
-| 202 | Called by non-system application. |
-| 23800151 | The scenario parameter verification fails. Possible causes: &lt;br&gt;1. Only the system album can be set without lpath. Otherwise, the setting is not supported; &lt;br&gt;2. The orderKey and orderSubKey are not in the specified range; &lt;br&gt;3. The order type must be either descending or ascending. |
-
-## Examples
-
-For details about how to create a phAccessHelper instance, see the example provided in [photoAccessHelper.getPhotoAccessHelper](arkts-apis-photoAccessHelper-f.md#photoaccesshelpergetphotoaccesshelper).
-
-```TypeScript
-async function modifyHiddenAlbumDefaultCoverOrder(phAccessHelper: photoAccessHelper.PhotoAccessHelper) {
-  try {
-    let coverOrderInfos: Array<photoAccessHelper.DefaultCoverOrderInfo> = [];
-    let coverOrderInfo: photoAccessHelper.DefaultCoverOrderInfo = {
-      albumType: photoAccessHelper.AlbumType.SYSTEM,
-      albumSubtype: photoAccessHelper.AlbumSubtype.HIDDEN,
-      orderKey: photoAccessHelper.PhotoKeys.DATE_ADDED,
-      orderSubKey: photoAccessHelper.PhotoKeys.DISPLAY_NAME,
-      orderType: 1,
-    }
-    coverOrderInfos.push(coverOrderInfo);
-    let disableModification: boolean = false;
-    let isAsyncRefreshAlbum: boolean = false;
-    await phAccessHelper.modifyHiddenAlbumDefaultCoverOrder(coverOrderInfos, disableModification, isAsyncRefreshAlbum);
-    console.info(`Succeeded in modifying default cover order of hidden album`);
-  } catch (err) {
-    console.error(`modifyHiddenAlbumDefaultCoverOrder failed with error: ${err.code}, ${err.message}`);
-  }
-}
-```
+| [23800301](../errorcode-medialibrary.md#23800301-system-internal-error) | Internal system error. It is recommended to retry and check the logs. &lt;br&gt;Possible causes: 1. Database corrupted; 2. The file system is abnormal; 3. The IPC request timed out. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Called by non-system application. |
+| [23800151](../errorcode-medialibrary.md#23800151-failed-to-verify-scene-parameters) | The scenario parameter verification fails. Possible causes: &lt;br&gt;1. Only the system album can be set without lpath. Otherwise, the setting is not supported; &lt;br&gt;2. The orderKey and orderSubKey are not in the specified range; &lt;br&gt;3. The order type must be either descending or ascending. |
 
 ## moveAssetsByPath
 
@@ -3571,28 +3277,10 @@ move assets of filemanager to Album.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 23800301 | Internal system error. It is recommended to retry and check the logs. &lt;br&gt;Possible causes: 1. Database corrupted; 2. The file system is abnormal; 3. The IPC request timed out. |
-| 201 | Permission denied |
-| 202 | Called by non-system application. |
-| 23800151 | The scenario parameter verification fails. Possible causes: &lt;br&gt;1. Moving to the target Album is not supported; &lt;br&gt;2. Assets to be Moved does not exist; &lt;br&gt;3. Automatic renaming is not supported. |
-
-## Examples
-
-For details about how to create a phAccessHelper instance, see the example provided in [photoAccessHelper.getPhotoAccessHelper](arkts-apis-photoAccessHelper-f.md#photoaccesshelpergetphotoaccesshelper).
-
-```TypeScript
-async function example(phAccessHelper: photoAccessHelper.PhotoAccessHelper) {
-  try {
-    let assets: Array<string> = ["/Docs/Download/test.jpg"];
-    let albumFetchResult: photoAccessHelper.FetchResult<photoAccessHelper.Album> = await phAccessHelper.getAlbums(photoAccessHelper.AlbumType.USER, photoAccessHelper.AlbumSubtype.USER_GENERIC);
-    let target: photoAccessHelper.Album = await albumFetchResult.getFirstObject();
-    let moveUris: Array<string> = await phAccessHelper.moveAssetsByPath(assets, target);
-    console.info(`moveAssetsByPath success, count: ${moveUris.length}`);
-  } catch (err) {
-    console.error(`moveAssetsByPath failed with error: ${err.code}, ${err.message}`);
-  }
-}
-```
+| [23800301](../errorcode-medialibrary.md#23800301-system-internal-error) | Internal system error. It is recommended to retry and check the logs. &lt;br&gt;Possible causes: 1. Database corrupted; 2. The file system is abnormal; 3. The IPC request timed out. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Called by non-system application. |
+| [23800151](../errorcode-medialibrary.md#23800151-failed-to-verify-scene-parameters) | The scenario parameter verification fails. Possible causes: &lt;br&gt;1. Moving to the target Album is not supported; &lt;br&gt;2. Assets to be Moved does not exist; &lt;br&gt;3. Automatic renaming is not supported. |
 
 ## moveAssetsToDir
 
@@ -3634,36 +3322,10 @@ move assets of medialibrary sandbox to directory of filemanager.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 23800301 | Internal system error. It is recommended to retry and check the logs. &lt;br&gt;Possible causes: 1. Database corrupted; 2. The file system is abnormal; 3. The IPC request timed out. |
-| 201 | Permission denied |
-| 202 | Called by non-system application. |
-| 23800151 | The scenario parameter verification fails. Possible causes: &lt;br&gt;1. Moving to the target directory is not supported; &lt;br&gt;2. Assets to be Moved does not exist; &lt;br&gt;3. Automatic renaming is not supported. |
-
-## Examples
-
-For details about how to create a phAccessHelper instance, see the example provided in [photoAccessHelper.getPhotoAccessHelper](arkts-apis-photoAccessHelper-f.md#photoaccesshelpergetphotoaccesshelper).
-
-```TypeScript
-import { dataSharePredicates } from '@kit.ArkData';
-
-async function example(phAccessHelper: photoAccessHelper.PhotoAccessHelper) {
-  try {
-    let predicates: dataSharePredicates.DataSharePredicates = new dataSharePredicates.DataSharePredicates();
-    let fetchOption: photoAccessHelper.FetchOptions = {
-      fetchColumns: [],
-      predicates: predicates
-    };
-    let assetFetchResult: photoAccessHelper.FetchResult<photoAccessHelper.PhotoAsset> = await phAccessHelper.getAssets(fetchOption);
-    let assets: Array<photoAccessHelper.PhotoAsset> = await assetFetchResult.getAllObjects();
-    let assetUris: Array<string> = assets.map((item) => item.uri);
-    let target: string = "/Docs/Download/";
-    let movePaths: Array<string> = await phAccessHelper.moveAssetsToDir(assetUris, target);
-    console.info(`moveAssetsToDir success, count: ${movePaths.length}`);
-  } catch (err) {
-    console.error(`moveAssetsToDir failed with error: ${err.code}, ${err.message}`);
-  }
-}
-```
+| [23800301](../errorcode-medialibrary.md#23800301-system-internal-error) | Internal system error. It is recommended to retry and check the logs. &lt;br&gt;Possible causes: 1. Database corrupted; 2. The file system is abnormal; 3. The IPC request timed out. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Called by non-system application. |
+| [23800151](../errorcode-medialibrary.md#23800151-failed-to-verify-scene-parameters) | The scenario parameter verification fails. Possible causes: &lt;br&gt;1. Moving to the target directory is not supported; &lt;br&gt;2. Assets to be Moved does not exist; &lt;br&gt;3. Automatic renaming is not supported. |
 
 ## off('hiddenPhotoChange')
 
@@ -3696,10 +3358,10 @@ Unregisters a listener for the **'hiddenPhotoChange'** event to stop monitoring 
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 23800301 | Internal system error. You are advised to retry and check the logs. Possible causes: &lt;br&gt;1. The database is corrupted. &lt;br&gt;2. The file system is abnormal. &lt;br&gt;3. The IPC request timed out. |
-| 201 | Permission denied |
-| 202 | Called by non-system application. |
-| 23800151 | The scenario parameter verification fails. Possible causes: &lt;br&gt;1. The type is not fixed at 'hiddenPhotoChange'; &lt;br&gt;2. The same callback is registered repeatedly. |
+| [23800301](../errorcode-medialibrary.md#23800301-system-internal-error) | Internal system error. You are advised to retry and check the logs. Possible causes: &lt;br&gt;1. The database is corrupted. &lt;br&gt;2. The file system is abnormal. &lt;br&gt;3. The IPC request timed out. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Called by non-system application. |
+| [23800151](../errorcode-medialibrary.md#23800151-failed-to-verify-scene-parameters) | The scenario parameter verification fails. Possible causes: &lt;br&gt;1. The type is not fixed at 'hiddenPhotoChange'; &lt;br&gt;2. The same callback is registered repeatedly. |
 
 ## Examples
 
@@ -3765,10 +3427,10 @@ Unregisters a listener for the **'trashedPhotoChange'** event to stop monitoring
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 23800301 | Internal system error. You are advised to retry and check the logs. Possible causes: &lt;br&gt;1. The database is corrupted. &lt;br&gt;2. The file system is abnormal. &lt;br&gt;3. The IPC request timed out. |
-| 201 | Permission denied |
-| 202 | Called by non-system application. |
-| 23800151 | The scenario parameter verification fails. Possible causes: &lt;br&gt;1. The type is not fixed at 'trashedPhotoChange'; &lt;br&gt;2. The same callback is registered repeatedly. |
+| [23800301](../errorcode-medialibrary.md#23800301-system-internal-error) | Internal system error. You are advised to retry and check the logs. Possible causes: &lt;br&gt;1. The database is corrupted. &lt;br&gt;2. The file system is abnormal. &lt;br&gt;3. The IPC request timed out. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Called by non-system application. |
+| [23800151](../errorcode-medialibrary.md#23800151-failed-to-verify-scene-parameters) | The scenario parameter verification fails. Possible causes: &lt;br&gt;1. The type is not fixed at 'trashedPhotoChange'; &lt;br&gt;2. The same callback is registered repeatedly. |
 
 ## Examples
 
@@ -3834,10 +3496,10 @@ Unregisters a listener for the **'hiddenAlbumChange'** event to stop monitoring 
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 23800301 | Internal system error. You are advised to retry and check the logs. Possible causes: &lt;br&gt;1. The database is corrupted. &lt;br&gt;2. The file system is abnormal. &lt;br&gt;3. The IPC request timed out. |
-| 201 | Permission denied |
-| 202 | Called by non-system application. |
-| 23800151 | The scenario parameter verification fails. Possible causes: &lt;br&gt;1. The type is not fixed at 'hiddenAlbumChange'; &lt;br&gt;2. The same callback is unregistered repeatedly. |
+| [23800301](../errorcode-medialibrary.md#23800301-system-internal-error) | Internal system error. You are advised to retry and check the logs. Possible causes: &lt;br&gt;1. The database is corrupted. &lt;br&gt;2. The file system is abnormal. &lt;br&gt;3. The IPC request timed out. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Called by non-system application. |
+| [23800151](../errorcode-medialibrary.md#23800151-failed-to-verify-scene-parameters) | The scenario parameter verification fails. Possible causes: &lt;br&gt;1. The type is not fixed at 'hiddenAlbumChange'; &lt;br&gt;2. The same callback is unregistered repeatedly. |
 
 ## Examples
 
@@ -3903,10 +3565,10 @@ Unregisters a listener for the **'trashedAlbumChange'** event to stop monitoring
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 23800301 | Internal system error. You are advised to retry and check the logs. Possible causes: &lt;br&gt;1. The database is corrupted. &lt;br&gt;2. The file system is abnormal. &lt;br&gt;3. The IPC request timed out. |
-| 201 | Permission denied |
-| 202 | Called by non-system application. |
-| 23800151 | The scenario parameter verification fails. Possible causes: &lt;br&gt;1. The type is not fixed at 'trashedAlbumChange'; &lt;br&gt;2. The same callback is unregistered repeatedly. |
+| [23800301](../errorcode-medialibrary.md#23800301-system-internal-error) | Internal system error. You are advised to retry and check the logs. Possible causes: &lt;br&gt;1. The database is corrupted. &lt;br&gt;2. The file system is abnormal. &lt;br&gt;3. The IPC request timed out. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Called by non-system application. |
+| [23800151](../errorcode-medialibrary.md#23800151-failed-to-verify-scene-parameters) | The scenario parameter verification fails. Possible causes: &lt;br&gt;1. The type is not fixed at 'trashedAlbumChange'; &lt;br&gt;2. The same callback is unregistered repeatedly. |
 
 ## Examples
 
@@ -3974,10 +3636,10 @@ Cancels the listener for the smart analysis album. If multiple listeners are reg
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 23800301 | Internal system error. You are advised to retry and check the logs. Possible causes: &lt;br&gt;1. The database is corrupted. &lt;br&gt;2. The file system is abnormal. &lt;br&gt;3. The IPC request timed out. |
-| 201 | Permission denied |
-| 202 | Called by non-system application. |
-| 23800151 | The scenario parameter verification fails. Possible causes: The same callback is unregistered repeatedly. |
+| [23800301](../errorcode-medialibrary.md#23800301-system-internal-error) | Internal system error. You are advised to retry and check the logs. Possible causes: &lt;br&gt;1. The database is corrupted. &lt;br&gt;2. The file system is abnormal. &lt;br&gt;3. The IPC request timed out. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Called by non-system application. |
+| [23800151](../errorcode-medialibrary.md#23800151-failed-to-verify-scene-parameters) | The scenario parameter verification fails. Possible causes: The same callback is unregistered repeatedly. |
 
 ## Examples
 
@@ -4044,10 +3706,10 @@ Cancels the listening for the media asset changes related to the smart analysis 
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 23800301 | Internal system error. You are advised to retry and check the logs. Possible causes: &lt;br&gt;1. The database is corrupted. &lt;br&gt;2. The file system is abnormal. &lt;br&gt;3. The IPC request timed out. |
-| 201 | Permission denied |
-| 202 | Called by non-system application. |
-| 23800151 | The scenario parameter verification fails. Possible causes: The same callback is unregistered repeatedly. |
+| [23800301](../errorcode-medialibrary.md#23800301-system-internal-error) | Internal system error. You are advised to retry and check the logs. Possible causes: &lt;br&gt;1. The database is corrupted. &lt;br&gt;2. The file system is abnormal. &lt;br&gt;3. The IPC request timed out. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Called by non-system application. |
+| [23800151](../errorcode-medialibrary.md#23800151-failed-to-verify-scene-parameters) | The scenario parameter verification fails. Possible causes: The same callback is unregistered repeatedly. |
 
 ## Examples
 
@@ -4112,10 +3774,10 @@ Unsubscribes from changes of hidden photos and videos.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 23800301 | Internal system error. You are advised to retry and check the logs. Possible causes: &lt;br&gt;1. The database is corrupted. &lt;br&gt;2. The file system is abnormal. &lt;br&gt;3. The IPC request timed out. |
-| 201 | Permission denied |
-| 202 | Called by non-system application. |
-| 23800151 | The scenario parameter verification fails. Possible causes: The same callback is unregistered repeatedly. |
+| [23800301](../errorcode-medialibrary.md#23800301-system-internal-error) | Internal system error. You are advised to retry and check the logs. Possible causes: &lt;br&gt;1. The database is corrupted. &lt;br&gt;2. The file system is abnormal. &lt;br&gt;3. The IPC request timed out. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Called by non-system application. |
+| [23800151](../errorcode-medialibrary.md#23800151-failed-to-verify-scene-parameters) | The scenario parameter verification fails. Possible causes: The same callback is unregistered repeatedly. |
 
 ## offTrashedAlbumChange
 
@@ -4147,10 +3809,10 @@ Unsubscribes from changes in the trashed album.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 23800301 | Internal system error. You are advised to retry and check the logs. Possible causes: &lt;br&gt;1. The database is corrupted. &lt;br&gt;2. The file system is abnormal. &lt;br&gt;3. The IPC request timed out. |
-| 201 | Permission denied |
-| 202 | Called by non-system application. |
-| 23800151 | The scenario parameter verification fails. Possible causes: The same callback is unregistered repeatedly. |
+| [23800301](../errorcode-medialibrary.md#23800301-system-internal-error) | Internal system error. You are advised to retry and check the logs. Possible causes: &lt;br&gt;1. The database is corrupted. &lt;br&gt;2. The file system is abnormal. &lt;br&gt;3. The IPC request timed out. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Called by non-system application. |
+| [23800151](../errorcode-medialibrary.md#23800151-failed-to-verify-scene-parameters) | The scenario parameter verification fails. Possible causes: The same callback is unregistered repeatedly. |
 
 ## offTrashedPhotoChange
 
@@ -4182,10 +3844,10 @@ Unsubscribes from changes of trashed photos and videos.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 23800301 | Internal system error. You are advised to retry and check the logs. Possible causes: &lt;br&gt;1. The database is corrupted. &lt;br&gt;2. The file system is abnormal. &lt;br&gt;3. The IPC request timed out. |
-| 201 | Permission denied |
-| 202 | Called by non-system application. |
-| 23800151 | The scenario parameter verification fails. Possible causes: The same callback is unregistered repeatedly. |
+| [23800301](../errorcode-medialibrary.md#23800301-system-internal-error) | Internal system error. You are advised to retry and check the logs. Possible causes: &lt;br&gt;1. The database is corrupted. &lt;br&gt;2. The file system is abnormal. &lt;br&gt;3. The IPC request timed out. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Called by non-system application. |
+| [23800151](../errorcode-medialibrary.md#23800151-failed-to-verify-scene-parameters) | The scenario parameter verification fails. Possible causes: The same callback is unregistered repeatedly. |
 
 ## offhiddenAlbumChange
 
@@ -4217,10 +3879,10 @@ Unsubscribes from changes of hidden albums.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 23800301 | Internal system error. You are advised to retry and check the logs. Possible causes: &lt;br&gt;1. The database is corrupted. &lt;br&gt;2. The file system is abnormal. &lt;br&gt;3. The IPC request timed out. |
-| 201 | Permission denied |
-| 202 | Called by non-system application. |
-| 23800151 | The scenario parameter verification fails. Possible causes: The same callback is unregistered repeatedly. |
+| [23800301](../errorcode-medialibrary.md#23800301-system-internal-error) | Internal system error. You are advised to retry and check the logs. Possible causes: &lt;br&gt;1. The database is corrupted. &lt;br&gt;2. The file system is abnormal. &lt;br&gt;3. The IPC request timed out. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Called by non-system application. |
+| [23800151](../errorcode-medialibrary.md#23800151-failed-to-verify-scene-parameters) | The scenario parameter verification fails. Possible causes: The same callback is unregistered repeatedly. |
 
 ## on('hiddenPhotoChange')
 
@@ -4253,10 +3915,10 @@ Registers a listener for the **'hiddenPhotoChange'** event to monitor hidden med
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 23800301 | Internal system error. You are advised to retry and check the logs. Possible causes: &lt;br&gt;1. The database is corrupted. &lt;br&gt;2. The file system is abnormal. &lt;br&gt;3. The IPC request timed out. |
-| 201 | Permission denied |
-| 202 | Called by non-system application. |
-| 23800151 | The scenario parameter verification fails. Possible causes: 1. The type is not fixed at 'hiddenPhotoChange'; 2. The same callback is registered repeatedly. |
+| [23800301](../errorcode-medialibrary.md#23800301-system-internal-error) | Internal system error. You are advised to retry and check the logs. Possible causes: &lt;br&gt;1. The database is corrupted. &lt;br&gt;2. The file system is abnormal. &lt;br&gt;3. The IPC request timed out. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Called by non-system application. |
+| [23800151](../errorcode-medialibrary.md#23800151-failed-to-verify-scene-parameters) | The scenario parameter verification fails. Possible causes: 1. The type is not fixed at 'hiddenPhotoChange'; 2. The same callback is registered repeatedly. |
 
 ## Examples
 
@@ -4319,10 +3981,10 @@ Registers a listener for the **'trashedPhotoChange'** event to monitor media ass
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 23800301 | Internal system error. You are advised to retry and check the logs. Possible causes: &lt;br&gt;1. The database is corrupted. &lt;br&gt;2. The file system is abnormal. &lt;br&gt;3. The IPC request timed out. |
-| 201 | Permission denied |
-| 202 | Called by non-system application. |
-| 23800151 | The scenario parameter verification fails. Possible causes: &lt;br&gt;1. The type is not fixed at 'trashedPhotoChange'; &lt;br&gt;2. The same callback is registered repeatedly. |
+| [23800301](../errorcode-medialibrary.md#23800301-system-internal-error) | Internal system error. You are advised to retry and check the logs. Possible causes: &lt;br&gt;1. The database is corrupted. &lt;br&gt;2. The file system is abnormal. &lt;br&gt;3. The IPC request timed out. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Called by non-system application. |
+| [23800151](../errorcode-medialibrary.md#23800151-failed-to-verify-scene-parameters) | The scenario parameter verification fails. Possible causes: &lt;br&gt;1. The type is not fixed at 'trashedPhotoChange'; &lt;br&gt;2. The same callback is registered repeatedly. |
 
 ## Examples
 
@@ -4385,10 +4047,10 @@ Registers a listener for the **'hiddenAlbumChange'** event to monitor hidden alb
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 23800301 | Internal system error. You are advised to retry and check the logs. Possible causes: &lt;br&gt;1. The database is corrupted. &lt;br&gt;2. The file system is abnormal. &lt;br&gt;3. The IPC request timed out. |
-| 201 | Permission denied |
-| 202 | Called by non-system application. |
-| 23800151 | The scenario parameter verification fails. Possible causes: &lt;br&gt;1. The type is not fixed at 'hiddenAlbumChange'; &lt;br&gt;2. The same callback is registered repeatedly. |
+| [23800301](../errorcode-medialibrary.md#23800301-system-internal-error) | Internal system error. You are advised to retry and check the logs. Possible causes: &lt;br&gt;1. The database is corrupted. &lt;br&gt;2. The file system is abnormal. &lt;br&gt;3. The IPC request timed out. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Called by non-system application. |
+| [23800151](../errorcode-medialibrary.md#23800151-failed-to-verify-scene-parameters) | The scenario parameter verification fails. Possible causes: &lt;br&gt;1. The type is not fixed at 'hiddenAlbumChange'; &lt;br&gt;2. The same callback is registered repeatedly. |
 
 ## Examples
 
@@ -4451,10 +4113,10 @@ Registers a listener for the **'trashedAlbumChange'** event to monitor album cha
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 23800301 | Internal system error. You are advised to retry and check the logs. Possible causes: &lt;br&gt;1. The database is corrupted. &lt;br&gt;2. The file system is abnormal. &lt;br&gt;3. The IPC request timed out. |
-| 201 | Permission denied |
-| 202 | Called by non-system application. |
-| 23800151 | The scenario parameter verification fails. Possible causes: &lt;br&gt;1. The type is not fixed at 'trashedAlbumChange'; &lt;br&gt;2. The same callback is registered repeatedly. |
+| [23800301](../errorcode-medialibrary.md#23800301-system-internal-error) | Internal system error. You are advised to retry and check the logs. Possible causes: &lt;br&gt;1. The database is corrupted. &lt;br&gt;2. The file system is abnormal. &lt;br&gt;3. The IPC request timed out. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Called by non-system application. |
+| [23800151](../errorcode-medialibrary.md#23800151-failed-to-verify-scene-parameters) | The scenario parameter verification fails. Possible causes: &lt;br&gt;1. The type is not fixed at 'trashedAlbumChange'; &lt;br&gt;2. The same callback is registered repeatedly. |
 
 ## Examples
 
@@ -4518,10 +4180,10 @@ Listens for the smart analysis album and returns the album change result using a
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 23800301 | Internal system error. You are advised to retry and check the logs. Possible causes: &lt;br&gt;1. The database is corrupted. &lt;br&gt;2. The file system is abnormal. &lt;br&gt;3. The IPC request timed out. |
-| 201 | Permission denied |
-| 202 | Called by non-system application. |
-| 23800151 | The scenario parameter verification fails. Possible causes: The same callback is registered repeatedly. |
+| [23800301](../errorcode-medialibrary.md#23800301-system-internal-error) | Internal system error. You are advised to retry and check the logs. Possible causes: &lt;br&gt;1. The database is corrupted. &lt;br&gt;2. The file system is abnormal. &lt;br&gt;3. The IPC request timed out. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Called by non-system application. |
+| [23800151](../errorcode-medialibrary.md#23800151-failed-to-verify-scene-parameters) | The scenario parameter verification fails. Possible causes: The same callback is registered repeatedly. |
 
 ## Examples
 
@@ -4585,10 +4247,10 @@ Listens for the changes of media assets associated with the smart analysis album
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 23800301 | Internal system error. You are advised to retry and check the logs. Possible causes: &lt;br&gt;1. The database is corrupted. &lt;br&gt;2. The file system is abnormal. &lt;br&gt;3. The IPC request timed out. |
-| 201 | Permission denied |
-| 202 | Called by non-system application. |
-| 23800151 | The scenario parameter verification fails. Possible causes: The same callback is registered repeatedly. |
+| [23800301](../errorcode-medialibrary.md#23800301-system-internal-error) | Internal system error. You are advised to retry and check the logs. Possible causes: &lt;br&gt;1. The database is corrupted. &lt;br&gt;2. The file system is abnormal. &lt;br&gt;3. The IPC request timed out. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Called by non-system application. |
+| [23800151](../errorcode-medialibrary.md#23800151-failed-to-verify-scene-parameters) | The scenario parameter verification fails. Possible causes: The same callback is registered repeatedly. |
 
 ## Examples
 
@@ -4650,10 +4312,10 @@ Subscribes to changes of hidden albums.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 23800301 | Internal system error. You are advised to retry and check the logs. Possible causes: &lt;br&gt;1. The database is corrupted. &lt;br&gt;2. The file system is abnormal. &lt;br&gt;3. The IPC request timed out. |
-| 201 | Permission denied |
-| 202 | Called by non-system application. |
-| 23800151 | The scenario parameter verification fails. Possible causes: The same callback is registered repeatedly. |
+| [23800301](../errorcode-medialibrary.md#23800301-system-internal-error) | Internal system error. You are advised to retry and check the logs. Possible causes: &lt;br&gt;1. The database is corrupted. &lt;br&gt;2. The file system is abnormal. &lt;br&gt;3. The IPC request timed out. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Called by non-system application. |
+| [23800151](../errorcode-medialibrary.md#23800151-failed-to-verify-scene-parameters) | The scenario parameter verification fails. Possible causes: The same callback is registered repeatedly. |
 
 ## onHiddenPhotoChange
 
@@ -4685,10 +4347,10 @@ Subscribes to changes of hidden photos and videos.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 23800301 | Internal system error. You are advised to retry and check the logs. Possible causes: &lt;br&gt;1. The database is corrupted. &lt;br&gt;2. The file system is abnormal. &lt;br&gt;3. The IPC request timed out. |
-| 201 | Permission denied |
-| 202 | Called by non-system application. |
-| 23800151 | The scenario parameter verification fails. Possible causes: The same callback is registered repeatedly. |
+| [23800301](../errorcode-medialibrary.md#23800301-system-internal-error) | Internal system error. You are advised to retry and check the logs. Possible causes: &lt;br&gt;1. The database is corrupted. &lt;br&gt;2. The file system is abnormal. &lt;br&gt;3. The IPC request timed out. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Called by non-system application. |
+| [23800151](../errorcode-medialibrary.md#23800151-failed-to-verify-scene-parameters) | The scenario parameter verification fails. Possible causes: The same callback is registered repeatedly. |
 
 ## onTrashedAlbumChange
 
@@ -4720,10 +4382,10 @@ Subscribes to changes of the trashed album.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 23800301 | Internal system error. You are advised to retry and check the logs. Possible causes: &lt;br&gt;1. The database is corrupted. &lt;br&gt;2. The file system is abnormal. &lt;br&gt;3. The IPC request timed out. |
-| 201 | Permission denied |
-| 202 | Called by non-system application. |
-| 23800151 | The scenario parameter verification fails. Possible causes: The same callback is registered repeatedly. |
+| [23800301](../errorcode-medialibrary.md#23800301-system-internal-error) | Internal system error. You are advised to retry and check the logs. Possible causes: &lt;br&gt;1. The database is corrupted. &lt;br&gt;2. The file system is abnormal. &lt;br&gt;3. The IPC request timed out. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Called by non-system application. |
+| [23800151](../errorcode-medialibrary.md#23800151-failed-to-verify-scene-parameters) | The scenario parameter verification fails. Possible causes: The same callback is registered repeatedly. |
 
 ## onTrashedPhotoChange
 
@@ -4755,10 +4417,10 @@ Subscribes to changes of trashed photos and videos.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 23800301 | Internal system error. You are advised to retry and check the logs. Possible causes: &lt;br&gt;1. The database is corrupted. &lt;br&gt;2. The file system is abnormal. &lt;br&gt;3. The IPC request timed out. |
-| 201 | Permission denied |
-| 202 | Called by non-system application. |
-| 23800151 | The scenario parameter verification fails. Possible causes: The same callback is registered repeatedly. |
+| [23800301](../errorcode-medialibrary.md#23800301-system-internal-error) | Internal system error. You are advised to retry and check the logs. Possible causes: &lt;br&gt;1. The database is corrupted. &lt;br&gt;2. The file system is abnormal. &lt;br&gt;3. The IPC request timed out. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Called by non-system application. |
+| [23800151](../errorcode-medialibrary.md#23800151-failed-to-verify-scene-parameters) | The scenario parameter verification fails. Possible causes: The same callback is registered repeatedly. |
 
 ## query
 
@@ -4796,10 +4458,10 @@ Queries data in the database using the specified SQL statement. This API does no
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 23800301 | Internal system error. You are advised to retry and check the logs. &lt;br&gt;Possible causes: &lt;br&gt;1. The database is corrupted. &lt;br&gt;2. The file system is abnormal. &lt;br&gt;3. The IPC request timed out. |
-| 201 | Permission denied |
-| 202 | Called by non-system application |
-| 23800151 | The scenario parameter verification fails. &lt;br&gt;Possible causes: The SQL statement is abnormal. |
+| [23800301](../errorcode-medialibrary.md#23800301-system-internal-error) | Internal system error. You are advised to retry and check the logs. &lt;br&gt;Possible causes: &lt;br&gt;1. The database is corrupted. &lt;br&gt;2. The file system is abnormal. &lt;br&gt;3. The IPC request timed out. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Called by non-system application |
+| [23800151](../errorcode-medialibrary.md#23800151-failed-to-verify-scene-parameters) | The scenario parameter verification fails. &lt;br&gt;Possible causes: The SQL statement is abnormal. |
 
 ## Examples
 
@@ -4865,10 +4527,10 @@ Release medialibrary database backup resources incluses closing backup database 
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 23800201 | Unsupported operation type, this api only works on beta device. |
-| 23800301 | Internal system error. You are advised to retry and check the logs. Possible causes: &lt;br&gt;1. The database is corrupted. &lt;br&gt;2. The file system is abnormal. &lt;br&gt;3. The IPC request timed out. |
-| 202 | Called by non-system application |
-| 23800151 | The scenario parameter verification fails. Possible causes: &lt;br&gt;1. The betaIssueId parameter is invalid, such as null, undefined or empty string. &lt;br&gt;2. The daFd parameter is invalid, such as out of range 0~1023. |
+| [23800201](../errorcode-medialibrary.md#23800201-unsupported-operation-type) | Unsupported operation type, this api only works on beta device. |
+| [23800301](../errorcode-medialibrary.md#23800301-system-internal-error) | Internal system error. You are advised to retry and check the logs. Possible causes: &lt;br&gt;1. The database is corrupted. &lt;br&gt;2. The file system is abnormal. &lt;br&gt;3. The IPC request timed out. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Called by non-system application |
+| [23800151](../errorcode-medialibrary.md#23800151-failed-to-verify-scene-parameters) | The scenario parameter verification fails. Possible causes: &lt;br&gt;1. The betaIssueId parameter is invalid, such as null, undefined or empty string. &lt;br&gt;2. The daFd parameter is invalid, such as out of range 0~1023. |
 
 ## removeFormInfo
 
@@ -4901,9 +4563,9 @@ Removes the Gallery widget information bound to a single image from the database
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. Possible causes: &lt;br&gt;1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; &lt;br&gt;3. Parameter verification failed. |
-| 201 | Permission verification failed, usually the result returned by VerifyAccessToken. |
-| 202 | Permission verification failed, application which is not a system application uses system API. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: &lt;br&gt;1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; &lt;br&gt;3. Parameter verification failed. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed, usually the result returned by VerifyAccessToken. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed, application which is not a system application uses system API. |
 | 14000011 | System inner fail. |
 
 ## Examples
@@ -4967,9 +4629,9 @@ Removes the Gallery widget information bound to a single image from the database
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. Possible causes: &lt;br&gt;1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; &lt;br&gt;3. Parameter verification failed. |
-| 201 | Permission verification failed, usually the result returned by VerifyAccessToken. |
-| 202 | Permission verification failed, application which is not a system application uses system API. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: &lt;br&gt;1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; &lt;br&gt;3. Parameter verification failed. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed, usually the result returned by VerifyAccessToken. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed, application which is not a system application uses system API. |
 | 14000011 | System inner fail. |
 
 ## Examples
@@ -5031,9 +4693,9 @@ Removes the Gallery widget information bound to a group of images from the datab
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. Possible causes: &lt;br&gt;1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; &lt;br&gt;3. Parameter verification failed. |
-| 201 | Permission verification failed, usually the result returned by VerifyAccessToken. |
-| 202 | Permission verification failed, application which is not a system application uses system API. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: &lt;br&gt;1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; &lt;br&gt;3. Parameter verification failed. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed, usually the result returned by VerifyAccessToken. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed, application which is not a system application uses system API. |
 | 14000011 | System inner fail. |
 
 ## Examples
@@ -5087,9 +4749,9 @@ Saves the Gallery widget information bound to a single image to the database. Th
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. Possible causes: &lt;br&gt;1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; &lt;br&gt;3. Parameter verification failed. |
-| 201 | Permission verification failed, usually the result returned by VerifyAccessToken. |
-| 202 | Permission verification failed, application which is not a system application uses system API. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: &lt;br&gt;1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; &lt;br&gt;3. Parameter verification failed. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed, usually the result returned by VerifyAccessToken. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed, application which is not a system application uses system API. |
 | 14000011 | System inner fail. |
 
 ## Examples
@@ -5162,9 +4824,9 @@ Saves the Gallery widget information bound to a single image to the database. Th
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. Possible causes: &lt;br&gt;1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; &lt;br&gt;3. Parameter verification failed. |
-| 201 | Permission verification failed, usually the result returned by VerifyAccessToken. |
-| 202 | Permission verification failed, application which is not a system application uses system API. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: &lt;br&gt;1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; &lt;br&gt;3. Parameter verification failed. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed, usually the result returned by VerifyAccessToken. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed, application which is not a system application uses system API. |
 | 14000011 | System inner fail. |
 
 ## Examples
@@ -5235,9 +4897,9 @@ Saves the Gallery widget information bound to a group of images to the database.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. Possible causes: &lt;br&gt;1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; &lt;br&gt;3. Parameter verification failed. |
-| 201 | Permission verification failed, usually the result returned by VerifyAccessToken. |
-| 202 | Permission verification failed, application which is not a system application uses system API. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: &lt;br&gt;1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; &lt;br&gt;3. Parameter verification failed. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed, usually the result returned by VerifyAccessToken. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed, application which is not a system application uses system API. |
 | 14000011 | System inner fail. |
 
 ## Examples
@@ -5317,27 +4979,9 @@ Sets the asset compatibility capability based on the bundle name. You can obtain
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 23800301 | Internal system error. It is recommended to retry and check the logs. Possible causes: &lt;br&gt;1. Database corrupted; &lt;br&gt;2. The file system is abnormal; &lt;br&gt;3. The IPC request timed out. |
-| 202 | Called by non-system application. |
-| 23800151 | The bundleName or capability is invalid. |
-
-## Examples
-
-For details about how to create a phAccessHelper instance, see the example provided in [photoAccessHelper.getPhotoAccessHelper](arkts-apis-photoAccessHelper-f.md#photoaccesshelpergetphotoaccesshelper).
-
-```TypeScript
-async function example(phAccessHelper: photoAccessHelper.PhotoAccessHelper) {
-  try {
-    let bundleName = "com.test.example";
-    let capability : photoAccessHelper.AssetCompatibleCapability = {
-        supportedHighResolution : true,
-    };
-    await phAccessHelper.setAssetCompatibleCapability(bundleName, capability);
-  } catch (error) {
-    console.error('failed to setAssetCompatibleCapability err', error);
-  }
-}
-```
+| [23800301](../errorcode-medialibrary.md#23800301-system-internal-error) | Internal system error. It is recommended to retry and check the logs. Possible causes: &lt;br&gt;1. Database corrupted; &lt;br&gt;2. The file system is abnormal; &lt;br&gt;3. The IPC request timed out. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Called by non-system application. |
+| [23800151](../errorcode-medialibrary.md#23800151-failed-to-verify-scene-parameters) | The bundleName or capability is invalid. |
 
 ## setPhotoAlbumOrder
 
@@ -5382,10 +5026,10 @@ Sets the sorting order for system, user, and source albums. This API uses a prom
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 23800301 | Internal system error. It is recommended to retry and check the logs. &lt;br&gt;Possible causes: &lt;br&gt;1. Database corrupted; &lt;br&gt;2. The file system is abnormal; &lt;br&gt;3. The IPC request timed out. |
-| 201 | Permission denied. |
-| 202 | Called by non-system application. |
-| 23800151 | The scenario parameter verification fails. &lt;br&gt;Possible causes: 1.The input parameter is not within the valid range. |
+| [23800301](../errorcode-medialibrary.md#23800301-system-internal-error) | Internal system error. It is recommended to retry and check the logs. &lt;br&gt;Possible causes: &lt;br&gt;1. Database corrupted; &lt;br&gt;2. The file system is abnormal; &lt;br&gt;3. The IPC request timed out. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Called by non-system application. |
+| [23800151](../errorcode-medialibrary.md#23800151-failed-to-verify-scene-parameters) | The scenario parameter verification fails. &lt;br&gt;Possible causes: 1.The input parameter is not within the valid range. |
 
 ## Examples
 
@@ -5459,32 +5103,9 @@ Configure the preferred compatible mode configured by the application based on b
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 23800301 | Internal system error. It is recommended to retry and check the logs. Possible causes: &lt;br&gt;1. Database corrupted; &lt;br&gt;2. The file system is abnormal; &lt;br&gt;3. The IPC request timed out. |
-| 202 | Called by non-system application. |
-| 23800151 | The bundleName is invalid, such as null, undefined and empty. |
-
-## Examples
-
-For details about how to create a phAccessHelper instance, see the example provided in [photoAccessHelper.getPhotoAccessHelper](arkts-apis-photoAccessHelper-f.md#photoaccesshelpergetphotoaccesshelper).
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-async function setPreferredCompatibleMode(
-  phAccessHelper: photoAccessHelper.PhotoAccessHelper,
-  bundleName: string,
-  preferredCompatibleMode: photoAccessHelper.PreferredCompatibleMode
-): Promise<void> {
-  console.info('setPreferredCompatibleModeDemo');
-  phAccessHelper.setPreferredCompatibleMode(bundleName, preferredCompatibleMode)
-    .then(() => {
-      console.info('setPreferredCompatibleMode successfully');
-    })
-    .catch((err: BusinessError) => {
-      console.error(`The setPreferredCompatibleMode call failed. error: ${err.code}, ${err.message}`);
-    });
-}
-```
+| [23800301](../errorcode-medialibrary.md#23800301-system-internal-error) | Internal system error. It is recommended to retry and check the logs. Possible causes: &lt;br&gt;1. Database corrupted; &lt;br&gt;2. The file system is abnormal; &lt;br&gt;3. The IPC request timed out. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Called by non-system application. |
+| [23800151](../errorcode-medialibrary.md#23800151-failed-to-verify-scene-parameters) | The bundleName is invalid, such as null, undefined and empty. |
 
 ## startAssetAnalysis
 
@@ -5529,9 +5150,9 @@ Starts asset analysis.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. Possible causes: &lt;br&gt;1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; &lt;br&gt;3. Parameter verification failed. |
-| 201 | Permission denied |
-| 202 | Called by non-system application |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: &lt;br&gt;1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; &lt;br&gt;3. Parameter verification failed. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Called by non-system application |
 
 ## Examples
 
@@ -5598,36 +5219,10 @@ Starts asynchronous asset analysis. This API uses an asynchronous callback to re
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 23800301 | Internal system error. It is recommended to retry and check the logs. &lt;br&gt;Possible causes: &lt;br&gt;1. Database corrupted; &lt;br&gt;2. The file system is abnormal; &lt;br&gt;3. The IPC request timed out. |
-| 201 | Permission denied. |
-| 202 | Called by non-system application. |
-| 23800151 | The scenario parameter verification fails. Possible causes: &lt;br&gt;1. Unsupported or invalid types of config; &lt;br&gt;2. The types or uris array size of config exceed max value. |
-
-## Examples
-
-For details about how to create a phAccessHelper instance, see the example provided in [photoAccessHelper.getPhotoAccessHelper](arkts-apis-photoAccessHelper-f.md#photoaccesshelpergetphotoaccesshelper).
-
-```TypeScript
-let callback = (result: photoAccessHelper.AnalysisResult) => {
-  console.info('startAssetAnalysisAsync callback result: ' + JSON.stringify(result));
-};
-
-async function example(phAccessHelper: photoAccessHelper.PhotoAccessHelper) {
-  console.info('startAssetAnalysisAsyncDemo');
-  let config: photoAccessHelper.AnalysisConfig = {
-    types: [photoAccessHelper.AnalysisType.ANALYSIS_SEARCH_INDEX],
-    uris: ['file://media/Photo/14/IMG_1729066473_013/IMG_20241016_122253.jpg'],
-    extraInfos: '{"trigger":"manual"}'
-  };
-
-  try {
-    let taskId = await phAccessHelper.startAssetAnalysisAsync(config, callback);
-    console.info('startAssetAnalysisAsync success, taskId=' + taskId);
-  } catch (err) {
-    console.error(`startAssetAnalysisAsync failed with error: ${err.code}, ${err.message}`);
-  }
-}
-```
+| [23800301](../errorcode-medialibrary.md#23800301-system-internal-error) | Internal system error. It is recommended to retry and check the logs. &lt;br&gt;Possible causes: &lt;br&gt;1. Database corrupted; &lt;br&gt;2. The file system is abnormal; &lt;br&gt;3. The IPC request timed out. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Called by non-system application. |
+| [23800151](../errorcode-medialibrary.md#23800151-failed-to-verify-scene-parameters) | The scenario parameter verification fails. Possible causes: &lt;br&gt;1. Unsupported or invalid types of config; &lt;br&gt;2. The types or uris array size of config exceed max value. |
 
 ## startDeepOptimizeSpace
 
@@ -5669,27 +5264,10 @@ Before using this API, you are advised to call [canPerformDeepOptimizeSpace()](p
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 23800201 | Unsupported operation type, Possible causes: &lt;br&gt;1. Restarted repeatedly; &lt;br&gt;2. system is busy. Please try again later; |
-| 23800301 | Internal system error. It is recommended to retry and check the logs. Possible causes: &lt;br&gt;1. Database corrupted; &lt;br&gt;2. The file system is abnormal; &lt;br&gt;3. The IPC request timed out. |
-| 201 | Permission denied. |
-| 202 | Called by non-system application. |
-
-## Examples
-
-For details about how to create a phAccessHelper instance, see the example provided in [photoAccessHelper.getPhotoAccessHelper](arkts-apis-photoAccessHelper-f.md#photoaccesshelpergetphotoaccesshelper).
-
-```TypeScript
-async function example(phAccessHelper: photoAccessHelper.PhotoAccessHelper) {
-  try {
-    await phAccessHelper.startDeepOptimizeSpace((progress: photoAccessHelper.DeepOptimizeSpaceProgress) => {
-      console.info(`startDeepOptimizeSpace progress: state=${progress.state}, progress=${progress.progress}`);
-    });
-    console.info('startDeepOptimizeSpace successfully');
-  } catch (err) {
-    console.error(`startDeepOptimizeSpace failed with error: ${err.code}, ${err.message}`);
-  }
-}
-```
+| [23800201](../errorcode-medialibrary.md#23800201-unsupported-operation-type) | Unsupported operation type, Possible causes: &lt;br&gt;1. Restarted repeatedly; &lt;br&gt;2. system is busy. Please try again later; |
+| [23800301](../errorcode-medialibrary.md#23800301-system-internal-error) | Internal system error. It is recommended to retry and check the logs. Possible causes: &lt;br&gt;1. Database corrupted; &lt;br&gt;2. The file system is abnormal; &lt;br&gt;3. The IPC request timed out. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Called by non-system application. |
 
 ## startThumbnailCreationTask
 
@@ -5734,9 +5312,9 @@ Generates a thumbnail based on the specified rule.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. Possible causes: &lt;br&gt;1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; &lt;br&gt;3. Parameter verification failed. |
-| 201 | Permission denied |
-| 202 | Called by non-system application |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: &lt;br&gt;1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; &lt;br&gt;3. Parameter verification failed. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Called by non-system application |
 | 14000011 | Internal system error |
 
 ## Examples
@@ -5808,10 +5386,10 @@ Generates a thumbnail based on the specified rule. This API uses an asynchronous
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 23800301 | Internal system error. It is recommended to retry and check the logs. Possible causes: &lt;br&gt;1. Database corrupted; &lt;br&gt;2. The file system is abnormal; &lt;br&gt;3. The IPC request timed out. |
-| 201 | Permission denied |
-| 202 | Called by non-system application |
-| 23800151 | The scenario parameter verification fails. Possible causes: The predicates invalid. |
+| [23800301](../errorcode-medialibrary.md#23800301-system-internal-error) | Internal system error. It is recommended to retry and check the logs. Possible causes: &lt;br&gt;1. Database corrupted; &lt;br&gt;2. The file system is abnormal; &lt;br&gt;3. The IPC request timed out. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Called by non-system application |
+| [23800151](../errorcode-medialibrary.md#23800151-failed-to-verify-scene-parameters) | The scenario parameter verification fails. Possible causes: The predicates invalid. |
 
 ## Examples
 
@@ -5875,31 +5453,10 @@ Stops asset analysis.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 23800301 | Internal system error. It is recommended to retry and check the logs. &lt;br&gt;Possible causes: &lt;br&gt;1. Database corrupted; &lt;br&gt;2. The file system is abnormal; &lt;br&gt;3. The IPC request timed out. |
-| 201 | Permission denied. |
-| 202 | Called by non-system application. |
-| 23800151 | The scenario parameter verification fails. Possible causes: &lt;br&gt;1. Unsupported or invalid AnalysisType of config; &lt;br&gt;2. The types or uris array size of config exceed max value. |
-
-## Examples
-
-For details about how to create a phAccessHelper instance, see the example provided in [photoAccessHelper.getPhotoAccessHelper](arkts-apis-photoAccessHelper-f.md#photoaccesshelpergetphotoaccesshelper).
-
-```TypeScript
-async function example(phAccessHelper: photoAccessHelper.PhotoAccessHelper) {
-  console.info('stopAssetAnalysisDemo');
-  let config: photoAccessHelper.AnalysisConfig = {
-    types: [photoAccessHelper.AnalysisType.ANALYSIS_SEARCH_INDEX],
-    uris: ['file://media/Photo/14/IMG_1729066473_013/IMG_20241016_122253.jpg']
-  };
-
-  try {
-    phAccessHelper.stopAssetAnalysis(config);
-    console.info('stopAssetAnalysis success');
-  } catch (err) {
-    console.error(`stopAssetAnalysis failed with error: ${err.code}, ${err.message}`);
-  }
-}
-```
+| [23800301](../errorcode-medialibrary.md#23800301-system-internal-error) | Internal system error. It is recommended to retry and check the logs. &lt;br&gt;Possible causes: &lt;br&gt;1. Database corrupted; &lt;br&gt;2. The file system is abnormal; &lt;br&gt;3. The IPC request timed out. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Called by non-system application. |
+| [23800151](../errorcode-medialibrary.md#23800151-failed-to-verify-scene-parameters) | The scenario parameter verification fails. Possible causes: &lt;br&gt;1. Unsupported or invalid AnalysisType of config; &lt;br&gt;2. The types or uris array size of config exceed max value. |
 
 ## stopDeepOptimizeSpace
 
@@ -5933,24 +5490,9 @@ Stop deep optimize storage space.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 23800301 | Internal system error. It is recommended to retry and check the logs. Possible causes: &lt;br&gt;1. Database corrupted; &lt;br&gt;2. The file system is abnormal; &lt;br&gt;3. The IPC request timed out. |
-| 201 | Permission denied. |
-| 202 | Called by non-system application. |
-
-## Examples
-
-For details about how to create a phAccessHelper instance, see the example provided in [photoAccessHelper.getPhotoAccessHelper](arkts-apis-photoAccessHelper-f.md#photoaccesshelpergetphotoaccesshelper).
-
-```TypeScript
-async function example(phAccessHelper: photoAccessHelper.PhotoAccessHelper) {
-  try {
-    await phAccessHelper.stopDeepOptimizeSpace();
-    console.info('stopDeepOptimizeSpace successfully');
-  } catch (err) {
-    console.error(`stopDeepOptimizeSpace failed with error: ${err.code}, ${err.message}`);
-  }
-}
-```
+| [23800301](../errorcode-medialibrary.md#23800301-system-internal-error) | Internal system error. It is recommended to retry and check the logs. Possible causes: &lt;br&gt;1. Database corrupted; &lt;br&gt;2. The file system is abnormal; &lt;br&gt;3. The IPC request timed out. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Called by non-system application. |
 
 ## stopThumbnailCreationTask
 
@@ -5988,9 +5530,9 @@ Stops generating a thumbnail.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. Possible causes: &lt;br&gt;1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; &lt;br&gt;3. Parameter verification failed. |
-| 201 | Permission denied |
-| 202 | Called by non-system application |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: &lt;br&gt;1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; &lt;br&gt;3. Parameter verification failed. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Called by non-system application |
 | 14000011 | Internal system error |
 
 ## Examples
@@ -6045,9 +5587,9 @@ Updates the information about a Gallery widget and saves the information to the 
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. Possible causes: &lt;br&gt;1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; &lt;br&gt;3. Parameter verification failed. |
-| 201 | Permission verification failed, usually the result returned by VerifyAccessToken. |
-| 202 | Permission verification failed, application which is not a system application uses system API. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: &lt;br&gt;1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; &lt;br&gt;3. Parameter verification failed. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed, usually the result returned by VerifyAccessToken. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed, application which is not a system application uses system API. |
 | 14000011 | System inner fail. |
 
 ## Examples

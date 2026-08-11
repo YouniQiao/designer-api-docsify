@@ -1,6 +1,6 @@
 # ToggleFrameNode
 
-定义Toggle类型的FrameNode。
+Define the Toggle type of FrameNode.
 
 **Inheritance/Implementation:** ToggleFrameNode extends [TypedFrameNode<ToggleAttribute>](TypedFrameNode<ToggleAttribute>)
 
@@ -18,7 +18,7 @@
 abstract initialize(value: ToggleOptions): ToggleAttribute
 ```
 
-初始化Toggle类型的FrameNode。
+Initialize Toggle FrameNode.
 
 **Since:** 23
 

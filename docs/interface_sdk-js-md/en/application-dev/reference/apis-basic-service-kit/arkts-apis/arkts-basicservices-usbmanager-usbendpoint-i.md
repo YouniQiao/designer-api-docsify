@@ -1,12 +1,13 @@
 # USBEndpoint
 
-通过USB发送和接收数据的端口。通过[USBInterface](arkts-basicservices-usbmanager-usbinterface-i.md)获取。
+Represents the USB endpoint from which data is sent or received. You can obtain the USB endpoint through  
+[USBInterface](arkts-basicservices-usbmanager-usbinterface-i.md).
 
-> **说明：**
+> **NOTE：**
 > 
-> 主机控制器按照Endpoint类型调度。
+> The host controller schedules the endpoint based on the endpoint type.
 > 
-> 协议层打包时依赖type决定传输特性。
+> The transmission characteristics are determined by the type during protocol layer packaging.
 
 **Since:** 9
 
@@ -28,7 +29,7 @@ import { usbManager } from 'kits/@kit.BasicServicesKit';
 address: int
 ```
 
-端点地址。
+Endpoint address.
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
@@ -46,7 +47,7 @@ address: int
 attributes: int
 ```
 
-端点属性。
+Endpoint attributes.
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
@@ -64,7 +65,7 @@ attributes: int
 direction: USBRequestDirection
 ```
 
-端点的方向。
+Endpoint direction.
 
 **Type:** [USBRequestDirection](arkts-basicservices-usb-usbrequestdirection-e.md)
 
@@ -82,7 +83,7 @@ direction: USBRequestDirection
 endpointAddr: int
 ```
 
-Endpoint address
+Endpoint address.
 
 **Type:** int
 
@@ -100,7 +101,7 @@ Endpoint address
 interfaceId: int
 ```
 
-端点所属的接口的唯一标识。
+Unique ID of the interface to which the endpoint belongs.
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
@@ -118,7 +119,7 @@ interfaceId: int
 interval: int
 ```
 
-端点间隔。（单位：毫秒）
+Endpoint interval.Unit: milliseconds.
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
@@ -136,7 +137,7 @@ interval: int
 maxPacketSize: int
 ```
 
-端点最大数据包大小。（单位：字节）
+Maximum size of data packets on the endpoint.Unit: bytes.
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
@@ -154,7 +155,7 @@ maxPacketSize: int
 number: number
 ```
 
-端点号。
+Endpoint number.
 
 **Type:** number
 
@@ -172,7 +173,7 @@ number: number
 type: int
 ```
 
-端点类型。取值见[UsbEndpointTransferType](arkts-basicservices-usbmanager-usbendpointtransfertype-e.md)
+Endpoint type. For details, see [UsbEndpointTransferType](arkts-basicservices-usbmanager-usbendpointtransfertype-e.md).
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 

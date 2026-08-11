@@ -14,12 +14,6 @@ COMPATIBLE：选择为COMPATIBLE模式时，数据库在检查Value格式时较�
 
 **系统能力：** SystemCapability.DistributedDataManager.KVStore.DistributedKVStore
 
-## 导入模块
-
-```TypeScript
-import { distributedKVStore } from 'kits/@kit.ArkData';
-```
-
 ## constructor
 
 ```TypeScript
@@ -40,6 +34,8 @@ constructor()
 
 ## 示例
 
+ArkTS-Dyn示例：
+
 ```TypeScript
 let child1 = new distributedKVStore.FieldNode('id');
 child1.type = distributedKVStore.ValueType.INTEGER;
@@ -49,6 +45,26 @@ let child2 = new distributedKVStore.FieldNode('name');
 child2.type = distributedKVStore.ValueType.STRING;
 child2.nullable = false;
 child2.default = 'zhangsan';
+
+let schema = new distributedKVStore.Schema();
+schema.root.appendChild(child1);
+schema.root.appendChild(child2);
+schema.indexes = ['$.id', '$.name'];
+schema.mode = 1;
+schema.skip = 0;
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+let child1 = new distributedKVStore.FieldNode('id');
+child1.type = distributedKVStore.ValueType.LONG;
+child1.nullable = false;
+child1.defaultValue = '1';
+let child2 = new distributedKVStore.FieldNode('name');
+child2.type = distributedKVStore.ValueType.STRING;
+child2.nullable = false;
+child2.defaultValue = 'zhangsan';
 
 let schema = new distributedKVStore.Schema();
 schema.root.appendChild(child1);
@@ -106,7 +122,7 @@ set root(root: FieldNode)
 
 设置Value中所有字段的定义。
 
-**类型：** [FieldNode](arkts-arkdata-distributedkvstore-fieldnode-c.md)
+**类型：** [FieldNode](arkts-arkdata-distributeddata-fieldnode-c.md)
 
 **起始版本：** 9
 

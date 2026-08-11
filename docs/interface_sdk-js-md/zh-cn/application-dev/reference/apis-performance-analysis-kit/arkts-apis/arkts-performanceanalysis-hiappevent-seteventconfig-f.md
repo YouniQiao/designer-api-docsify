@@ -1,11 +1,5 @@
 # setEventConfig
 
-## 导入模块
-
-```TypeScript
-import { hiAppEvent } from 'kits/@kit.PerformanceAnalysisKit';
-```
-
 ## setEventConfig
 
 ```TypeScript
@@ -40,7 +34,7 @@ function setEventConfig(name: string, config: Record<string, ParamType>): Promis
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | name | string | 是 | 事件名称。 |
-| config | [Record](../../apis-default/arkts-apis/arkts-record-t.md)&lt;string, ParamType&gt; | 是 | 事件自定义参数对象。参数名和参数值规格定义如下： &lt;br&gt;- 参数名为string类型，要求非空，且参数名长度需在1024个字符以内。 &lt;br&gt;- 参数值为ParamType类型，参数值长度需在1024个字符以内。 |
+| config | Record&lt;string, ParamType&gt; | 是 | 事件自定义参数对象。参数名和参数值规格定义如下： &lt;br&gt;- 参数名为string类型，要求非空，且参数名长度需在1024个字符以内。 &lt;br&gt;- 参数值为ParamType类型，参数值长度需在1024个字符以内。 |
 
 **返回值：**
 
@@ -52,11 +46,11 @@ function setEventConfig(name: string, config: Record<string, ParamType>): Promis
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; 3.Parameter verification failed. |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; 3.Parameter verification failed. |
 
 ## 示例
 
-以下示例用于模拟配置MAIN_THREAD_JANK事件的采集堆栈自定义参数：
+ArkTS-Dyn示例：
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -73,6 +67,27 @@ hiAppEvent.setEventConfig(hiAppEvent.event.MAIN_THREAD_JANK, params).then(() => 
   hilog.info(0x0000, 'hiAppEvent', `Successfully set sampling stack parameters.`);
 }).catch((err: BusinessError) => {
   hilog.error(0x0000, 'hiAppEvent', `Failed to set sample stack value. Code: ${err.code}, message: ${err.message}`);
+});
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+import { hilog } from '@kit.PerformanceAnalysisKit';
+import { BusinessError } from '@ohos.base';
+
+let params: Record<string, hiAppEvent.ParamType> = {
+  "log_type": "1",
+  "sample_interval": "100",
+  "ignore_startup_time": "11",
+  "sample_count": "21",
+  "report_times_per_app": "3"
+};
+hiAppEvent.setEventConfig(hiAppEvent.event.MAIN_THREAD_JANK, params).then(() => {
+  hilog.info(0x0000, 'hiAppEvent', `Successfully set sampling stack parameters.`);
+}).catch((err: Error) => {
+  const bErr = err as BusinessError;
+  hilog.error(0x0000, 'hiAppEvent', `Failed to set sample stack value. Code: ${bErr.code}, message: ${bErr.message}`);
 });
 ```
 

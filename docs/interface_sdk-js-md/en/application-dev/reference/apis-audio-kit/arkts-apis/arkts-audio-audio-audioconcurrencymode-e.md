@@ -1,6 +1,6 @@
 # AudioConcurrencyMode
 
-表示音频并发模式的枚举。
+Enumerates the audio concurrency modes.
 
 **Since:** 12
 
@@ -16,7 +16,7 @@
 CONCURRENCY_DEFAULT = 0
 ```
 
-默认使用系统策略。
+Uses the system strategy by default.
 
 **Since:** 12
 
@@ -34,7 +34,7 @@ CONCURRENCY_DEFAULT = 0
 CONCURRENCY_MIX_WITH_OTHERS = 1
 ```
 
-和其他音频并发，即混音。
+Concurrent with other audio streams, that is, audio mixing.
 
 **Since:** 12
 
@@ -52,7 +52,7 @@ CONCURRENCY_MIX_WITH_OTHERS = 1
 CONCURRENCY_DUCK_OTHERS = 2
 ```
 
-压低其他音频的音量。
+Ducks other audio streams.
 
 **Since:** 12
 
@@ -70,7 +70,7 @@ CONCURRENCY_DUCK_OTHERS = 2
 CONCURRENCY_PAUSE_OTHERS = 3
 ```
 
-暂停其他音频。
+Pauses other audio streams.
 
 **Since:** 12
 

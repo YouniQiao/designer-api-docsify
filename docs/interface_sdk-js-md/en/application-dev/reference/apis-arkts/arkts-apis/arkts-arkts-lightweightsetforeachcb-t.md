@@ -4,7 +4,7 @@
 export type LightWeightSetForEachCb<T> = (value: T, key: T, set: LightWeightSet<T>) => void
 ```
 
-LightWeightSet的回调函数类型。
+The type of LightWeightSet callback function.
 
 **Since:** 23
 
@@ -20,7 +20,7 @@ LightWeightSet的回调函数类型。
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | T | Yes | 当前元素的值。 |
-| key | T | Yes | 当前元素的键（与value相同）。 |
-| set | [LightWeightSet](arkts-arkts-util-lightweightset-lightweightset-c.md)&lt;T&gt; | Yes | 当前正在遍历的LightWeightSet实例。 |
+| value | T | Yes | The value of current element |
+| key | T | Yes | The key of current element(same as value) |
+| set | [LightWeightSet](arkts-arkts-util-lightweightset-lightweightset-c.md)&lt;T&gt; | Yes | The LightWeightSet instance being traversed |
 

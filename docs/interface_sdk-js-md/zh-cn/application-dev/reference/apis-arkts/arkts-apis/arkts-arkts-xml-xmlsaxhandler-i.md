@@ -10,12 +10,6 @@ XmlSAXHandler定义了SAX解析xml文本时的回调方法。开发者需要实�
 
 **系统能力：** SystemCapability.Utils.Lang
 
-## 导入模块
-
-```TypeScript
-import { xml } from 'kits/@kit.ArkTS';
-```
-
 ## characters
 
 ```TypeScript
@@ -44,6 +38,8 @@ characters(content: string): void
 
 ## 示例
 
+ArkTS-Dyn示例：
+
 ```TypeScript
 import { xml, stream } from '@kit.ArkTS';
 
@@ -53,6 +49,76 @@ class TestReadable extends stream.Readable {
   }
 
   doRead(size: number) {
+  }
+}
+
+const saxHandler: xml.XmlSAXHandler = {
+  startDocument() {
+    console.info("startDocument");
+  },
+  endDocument() {
+    console.info("endDocument");
+  },
+  startElement(elementName: string, namespaceURI: string | undefined, qName: string | undefined,
+    attributes: Map<string, string>) {
+    console.info("startElement elementName:", elementName);
+    console.info("startElement namespaceURI:", namespaceURI);
+    console.info("startElement qName:", qName);
+    if (attributes) {
+      attributes.forEach((value, key) => {
+        console.info("startElement attribute:", key, "=", value);
+      });
+    }
+  },
+  endElement(elementName: string, namespaceURI: string | undefined, qName: string | undefined) {
+    console.info("endElement elementName:", elementName);
+  },
+  characters(content: string) {
+    console.info("characters:", content);
+  }
+};
+
+let readableStream = new TestReadable();
+let saxParser = new xml.XmlSAXParser(readableStream);
+saxParser.parse(saxHandler);
+
+let testData = '<?xml version="1.0" encoding="UTF-8"?>\n' +
+  '<root xmlns:ns1="http://example.com/ns1">\n' +
+  '  <ns1:child ns1:attr1="value1" attr2="value2">Text content</ns1:child>\n' +
+  '</root>';
+
+readableStream.push(testData);
+readableStream.push(null);
+// 输出示例：
+// startDocument
+// startElement elementName: root
+// startElement namespaceURI: undefined
+// startElement qName: undefined
+// characters: 
+// 
+// startElement elementName: child
+// startElement namespaceURI: http://example.com/ns1
+// startElement qName: ns1:child
+// startElement attribute: attr2 = value2
+// startElement attribute: ns1:attr1 = value1
+// characters: Text content
+// endElement elementName: child
+// characters: 
+// endElement elementName: root
+// endDocument
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+import { xml, stream } from '@kit.ArkTS';
+
+class TestReadable extends stream.Readable {
+  constructor() {
+    super();
+  }
+
+  doRead(size: int) {
   }
 }
 
@@ -142,7 +208,7 @@ endDocument(): void
 endElement(elementName: string, namespaceURI: string | undefined, qName: string | undefined): void
 ```
 
-当解析器在XML文本中元素结束解析触发的回调函数。该回调函数需要开发者自行实现。具体使用示例可见[characters&lt;sup&gt;24+&lt;/sup&gt;](arkts-arkts-xml-xmlsaxhandler-i.md#characters)。
+当解析器遇到XML元素的结束标签时触发的回调函数。该回调函数需要开发者自行实现。具体使用示例可见[characters&lt;sup&gt;24+&lt;/sup&gt;](arkts-arkts-xml-xmlsaxhandler-i.md#characters)。
 
 **起始版本：** 24
 
@@ -161,8 +227,8 @@ endElement(elementName: string, namespaceURI: string | undefined, qName: string 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | elementName | string | 是 | 解析器回传的元素名称（不包含命名空间前缀）。例如，对于`&lt;ns2:child&gt;`，elementName为"child"。 |
-| namespaceURI | string \| undefined | 是 | 解析器回传的命名空间URI。例如，对于`xmlns:ns2="http://example.com/ns2"`，namespaceURI 为`"http://example.com/ns2"`。如果元素没有命名空间则为undefined。 |
-| qName | string \| undefined | 是 | 解析器回传的元素限定名（包含命名空间前缀）。例如，对于`&lt;ns2:child&gt;`，qName为"ns2:child"。如果元素没有命名空间则qName 为undefined。 |
+| namespaceURI | string \| undefined | 是 | 解析器回传的命名空间URI。例如，对于`xmlns:ns2="http://example.com/ns2"`， namespaceURI为`"http://example.com/ns2"`。如果元素没有命名空间则为undefined。 |
+| qName | string \| undefined | 是 | 解析器回传的元素限定名（包含命名空间前缀）。例如，对于`&lt;ns2:child&gt;`，qName为"ns2:child"。 如果元素没有命名空间则qName为undefined。 |
 
 ## startDocument
 
@@ -190,7 +256,7 @@ startDocument(): void
 startElement(elementName: string, namespaceURI: string | undefined, qName: string | undefined, attributes: Map<string,string>): void
 ```
 
-当解析器在XML文本中元素开始解析时触发的回调函数。该回调函数需要开发者自行实现。具体使用示例可见[characters&lt;sup&gt;24+&lt;/sup&gt;](arkts-arkts-xml-xmlsaxhandler-i.md#characters)。
+当解析器遇到XML元素的开始标签时触发的回调函数。该回调函数需要开发者自行实现。具体使用示例可见[characters&lt;sup&gt;24+&lt;/sup&gt;](arkts-arkts-xml-xmlsaxhandler-i.md#characters)。
 
 **起始版本：** 24
 
@@ -209,7 +275,7 @@ startElement(elementName: string, namespaceURI: string | undefined, qName: strin
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | elementName | string | 是 | 解析器回传的元素名称（不包含命名空间前缀）。例如，对于`&lt;ns2:child&gt;`，elementName为"child"。 |
-| namespaceURI | string \| undefined | 是 | 解析器回传的命名空间URI。例如，对于`xmlns:ns2="http://example.com/ns2"`，namespaceURI 为`"http://example.com/ns2"`。如果元素没有命名空间则为undefined。 |
-| qName | string \| undefined | 是 | 解析器回传的元素限定名（包含命名空间前缀）。例如，对于`&lt;ns2:child&gt;`，qName为"ns2:child"。如果元素没有命名空间则qName 为undefined。 |
+| namespaceURI | string \| undefined | 是 | 解析器回传的命名空间URI。例如，对于`xmlns:ns2="http://example.com/ns2"`， namespaceURI为`"http://example.com/ns2"`。如果元素没有命名空间则为undefined。 |
+| qName | string \| undefined | 是 | 解析器回传的元素限定名（包含命名空间前缀）。例如，对于`&lt;ns2:child&gt;`，qName为"ns2:child"。 如果元素没有命名空间则qName为undefined。 |
 | attributes | Map&lt;string, string&gt; | 是 | 解析器回传的元素的属性映射表，键为属性名（可能包含命名空间前缀，如"ns2:attrA"），值为属性值。 |
 

@@ -6,13 +6,13 @@ typedef struct ArkUI_IntSize {...} ArkUI_IntSize
 
 ## 概述
 
-Describes the width and height of a component.
+定义组件宽高。
 
 **起始版本：** 12
 
 **相关模块：** [ArkUI_NativeModule](capi-arkui-nativemodule.md)
 
-**所在头文件：** [native_type.h](capi-native-type-h.md)
+**所在头文件：** [common_type.h](capi-common-type-h.md)
 
 ## 汇总
 
@@ -20,7 +20,7 @@ Describes the width and height of a component.
 
 | 名称 | 描述 |
 | -- | -- |
-| int32_t width | Width, in px. |
-| int32_t height | Height, in px. |
+| int32_t width |  |
+| int32_t height |  |
 
 

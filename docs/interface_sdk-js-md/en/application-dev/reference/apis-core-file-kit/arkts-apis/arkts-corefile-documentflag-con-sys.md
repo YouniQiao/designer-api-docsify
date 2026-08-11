@@ -6,7 +6,7 @@
 const REPRESENTS_DIR = 0b10
 ```
 
-代表目录。
+Directory.
 
 **Since:** 9
 
@@ -28,7 +28,7 @@ const REPRESENTS_DIR = 0b10
 const REPRESENTS_FILE = 0b1
 ```
 
-代表文件。
+File.
 
 **Since:** 9
 
@@ -50,7 +50,7 @@ const REPRESENTS_FILE = 0b1
 const SUPPORTS_READ = 0b100
 ```
 
-此设备支持读。
+The device supports read.
 
 **Since:** 9
 
@@ -72,7 +72,7 @@ const SUPPORTS_READ = 0b100
 const SUPPORTS_WRITE = 0b1000
 ```
 
-此设备支持写。
+The device supports write.
 
 **Since:** 9
 

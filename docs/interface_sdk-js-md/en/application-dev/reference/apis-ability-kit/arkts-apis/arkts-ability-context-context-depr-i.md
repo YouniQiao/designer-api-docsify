@@ -1,6 +1,6 @@
 # Context
 
-Context模块提供了Ability或Application的上下文的基础能力，包括允许访问特定于应用程序的资源、请求和验证权限等。
+The context of an ability or an application. It allows access to application-specific resources, request and verification permissions.Can only be obtained through the ability.
 
 **Inheritance/Implementation:** Context extends [BaseContext](arkts-ability-basecontext-c.md)
 
@@ -18,7 +18,7 @@ Context模块提供了Ability或Application的上下文的基础能力，包括�
 getAbilityInfo(callback: AsyncCallback<AbilityInfo>): void
 ```
 
-检查此能力的配置是否正在更改。使用callback异步回调。
+Checks the detailed information of this ability.
 
 **Since:** 7
 
@@ -34,7 +34,7 @@ getAbilityInfo(callback: AsyncCallback<AbilityInfo>): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[AbilityInfo](arkts-ability-abilityinfo-abilityinfo-depr-i.md)&gt; | Yes | 回调函数，返回true表示该Ability的配置正在更改，否则返回false。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[AbilityInfo](arkts-ability-abilityinfo-abilityinfo-depr-i.md)&gt; | Yes | Return the detailed information of the current belonging Ability. |
 
 ## getAbilityInfo
 
@@ -42,7 +42,7 @@ getAbilityInfo(callback: AsyncCallback<AbilityInfo>): void
 getAbilityInfo(): Promise<AbilityInfo>
 ```
 
-查询当前归属Ability详细信息。使用Promise异步回调。
+Checks the detailed information of this ability.
 
 **Since:** 7
 
@@ -58,7 +58,7 @@ getAbilityInfo(): Promise<AbilityInfo>
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;[AbilityInfo](arkts-ability-abilityinfo-abilityinfo-depr-i.md)&gt; | Promise对象，返回当前归属Ability详细信息。 |
+| Promise&lt;[AbilityInfo](arkts-ability-abilityinfo-abilityinfo-depr-i.md)&gt; | Return the detailed information of the current belonging Ability. |
 
 ## getAppType
 
@@ -66,7 +66,7 @@ getAbilityInfo(): Promise<AbilityInfo>
 getAppType(callback: AsyncCallback<string>): void
 ```
 
-获取此应用的类型。使用callback异步回调。
+Obtains the application type.
 
 **Since:** 7
 
@@ -82,7 +82,7 @@ getAppType(callback: AsyncCallback<string>): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;string&gt; | Yes | 回调函数，返回此应用程序的类型。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;string&gt; | Yes | Returns the type of the current application. |
 
 ## getAppType
 
@@ -90,7 +90,7 @@ getAppType(callback: AsyncCallback<string>): void
 getAppType(): Promise<string>
 ```
 
-获取此应用的类型。使用Promise异步回调。
+Obtains the application type.
 
 **Since:** 7
 
@@ -106,7 +106,7 @@ getAppType(): Promise<string>
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;string&gt; | Promise对象，返回此应用的类型。 |
+| Promise&lt;string&gt; | Returns the type of this app. |
 
 ## getAppVersionInfo
 
@@ -114,7 +114,7 @@ getAppType(): Promise<string>
 getAppVersionInfo(callback: AsyncCallback<AppVersionInfo>): void
 ```
 
-获取应用的版本信息。使用callback异步回调。
+Obtains the application version information.
 
 **Since:** 7
 
@@ -130,7 +130,7 @@ getAppVersionInfo(callback: AsyncCallback<AppVersionInfo>): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[AppVersionInfo](arkts-ability-appversioninfo-appversioninfo-depr-i.md)&gt; | Yes | 回调函数，返回应用版本信息。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[AppVersionInfo](arkts-ability-appversioninfo-appversioninfo-depr-i.md)&gt; | Yes | Return application version information. |
 
 ## getAppVersionInfo
 
@@ -138,7 +138,7 @@ getAppVersionInfo(callback: AsyncCallback<AppVersionInfo>): void
 getAppVersionInfo(): Promise<AppVersionInfo>
 ```
 
-获取应用的版本信息。使用Promise异步回调。
+Obtains the application version information.
 
 **Since:** 7
 
@@ -154,7 +154,7 @@ getAppVersionInfo(): Promise<AppVersionInfo>
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;[AppVersionInfo](arkts-ability-appversioninfo-appversioninfo-depr-i.md)&gt; | Promise对象，返回应用版本信息。 |
+| Promise&lt;[AppVersionInfo](arkts-ability-appversioninfo-appversioninfo-depr-i.md)&gt; | Return application version information. |
 
 ## getApplicationContext
 
@@ -162,7 +162,7 @@ getAppVersionInfo(): Promise<AppVersionInfo>
 getApplicationContext(): Context
 ```
 
-获取应用上下文信息。
+Obtains the context of this application.
 
 **Since:** 7
 
@@ -178,7 +178,7 @@ getApplicationContext(): Context
 
 | Type | Description |
 | --- | --- |
-| [Context](../../apis-mind-spore-lite-kit/arkts-apis/arkts-mindsporelite-mindsporelite-context-i.md) | 返回应用上下文信息。 |
+| [Context](../../apis-mind-spore-lite-kit/arkts-apis/arkts-mindsporelite-mindsporelite-context-i.md) | Return application context information. |
 
 ## getApplicationInfo
 
@@ -186,7 +186,7 @@ getApplicationContext(): Context
 getApplicationInfo(callback: AsyncCallback<ApplicationInfo>): void
 ```
 
-获取有关当前应用程序的信息。使用callback异步回调。
+Obtains information about the current application.
 
 **Since:** 7
 
@@ -202,7 +202,7 @@ getApplicationInfo(callback: AsyncCallback<ApplicationInfo>): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[ApplicationInfo](arkts-ability-applicationinfo-applicationinfo-depr-i.md)&gt; | Yes | 回调函数，返回当前应用程序的信息。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[ApplicationInfo](arkts-ability-applicationinfo-applicationinfo-depr-i.md)&gt; | Yes | Returns information about the current application. |
 
 ## getApplicationInfo
 
@@ -210,7 +210,7 @@ getApplicationInfo(callback: AsyncCallback<ApplicationInfo>): void
 getApplicationInfo(): Promise<ApplicationInfo>
 ```
 
-获取有关当前应用程序的信息。使用Promise异步回调。
+Obtains information about the current application.
 
 **Since:** 7
 
@@ -226,7 +226,7 @@ getApplicationInfo(): Promise<ApplicationInfo>
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;[ApplicationInfo](arkts-ability-applicationinfo-applicationinfo-depr-i.md)&gt; | Promise对象，返回当前应用程序的信息。 |
+| Promise&lt;[ApplicationInfo](arkts-ability-applicationinfo-applicationinfo-depr-i.md)&gt; | Information about the current application. |
 
 ## getBundleName
 
@@ -234,7 +234,7 @@ getApplicationInfo(): Promise<ApplicationInfo>
 getBundleName(callback: AsyncCallback<string>): void
 ```
 
-获取当前ability的Bundle名称。使用callback异步回调。
+Obtains the bundle name of the current ability.
 
 **Since:** 7
 
@@ -250,7 +250,7 @@ getBundleName(callback: AsyncCallback<string>): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;string&gt; | Yes | 回调函数，返回当前ability的Bundle名称。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;string&gt; | Yes | Returns the Bundle name of the current capability. |
 
 ## getBundleName
 
@@ -258,7 +258,7 @@ getBundleName(callback: AsyncCallback<string>): void
 getBundleName(): Promise<string>
 ```
 
-获取当前ability的Bundle名称。使用Promise异步回调。
+Obtains the bundle name of the current ability.
 
 **Since:** 7
 
@@ -274,7 +274,7 @@ getBundleName(): Promise<string>
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;string&gt; | Promise对象，返回当前ability的Bundle名称。 |
+| Promise&lt;string&gt; | The Bundle name of the current capability. |
 
 ## getCacheDir
 
@@ -282,7 +282,7 @@ getBundleName(): Promise<string>
 getCacheDir(callback: AsyncCallback<string>): void
 ```
 
-获取该应用程序的内部存储目录。使用callback异步回调。
+Obtains the cache directory of this application on the internal storage.
 
 **Since:** 6
 
@@ -298,7 +298,7 @@ getCacheDir(callback: AsyncCallback<string>): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;string&gt; | Yes | 回调函数，返回该应用程序的内部存储目录。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;string&gt; | Yes | Returns the internal storage directory of the application. |
 
 ## getCacheDir
 
@@ -306,7 +306,7 @@ getCacheDir(callback: AsyncCallback<string>): void
 getCacheDir(): Promise<string>
 ```
 
-获取该应用程序的内部存储目录。使用Promise异步回调。
+Obtains the cache directory of this application on the internal storage.
 
 **Since:** 6
 
@@ -322,7 +322,7 @@ getCacheDir(): Promise<string>
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;string&gt; | Promise对象，返回该应用程序的内部存储目录。 |
+| Promise&lt;string&gt; | Returns the internal storage directory of the application. |
 
 ## getCallingBundle
 
@@ -330,7 +330,7 @@ getCacheDir(): Promise<string>
 getCallingBundle(callback: AsyncCallback<string>): void
 ```
 
-获取ability调用方的Bundle名称。使用callback异步回调。
+Obtains the bundle name of the ability that called the current ability.
 
 **Since:** 7
 
@@ -346,7 +346,7 @@ getCallingBundle(callback: AsyncCallback<string>): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;string&gt; | Yes | 回调函数，返回ability调用方的Bundle名称。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;string&gt; | Yes | Returns the Bundle name of the ability caller. |
 
 ## getCallingBundle
 
@@ -354,7 +354,7 @@ getCallingBundle(callback: AsyncCallback<string>): void
 getCallingBundle(): Promise<string>
 ```
 
-获取ability调用方的Bundle名称。使用Promise异步回调。
+Obtains the bundle name of the ability that called the current ability.
 
 **Since:** 7
 
@@ -370,7 +370,7 @@ getCallingBundle(): Promise<string>
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;string&gt; | Promise对象，返回ability调用方的Bundle名称。 |
+| Promise&lt;string&gt; | Returns the Bundle name of the ability caller. |
 
 ## getDisplayOrientation
 
@@ -378,7 +378,7 @@ getCallingBundle(): Promise<string>
 getDisplayOrientation(callback: AsyncCallback<bundle.DisplayOrientation>): void
 ```
 
-获取当前ability的显示方向。使用callback异步回调。
+Obtains the current display orientation of this ability.
 
 **Since:** 7
 
@@ -394,7 +394,7 @@ getDisplayOrientation(callback: AsyncCallback<bundle.DisplayOrientation>): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;bundle.DisplayOrientation&gt; | Yes | 回调函数，返回屏幕显示方向。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;bundle.DisplayOrientation&gt; | Yes | Indicates the realistic direction of the screen. |
 
 ## getDisplayOrientation
 
@@ -402,7 +402,7 @@ getDisplayOrientation(callback: AsyncCallback<bundle.DisplayOrientation>): void
 getDisplayOrientation(): Promise<bundle.DisplayOrientation>
 ```
 
-获取此能力的当前显示方向。使用Promise异步回调。
+Obtains the current display orientation of this ability.
 
 **Since:** 7
 
@@ -426,7 +426,7 @@ getDisplayOrientation(): Promise<bundle.DisplayOrientation>
 getElementName(callback: AsyncCallback<ElementName>): void
 ```
 
-获取当前ability的ohos.bundleManager.ElementName对象。使用callback异步回调。此方法仅适用于页面功能。
+Obtains the ohos.bundle.ElementName object of the current ability.This method is available only to Page abilities.
 
 **Since:** 7
 
@@ -442,7 +442,7 @@ getElementName(callback: AsyncCallback<ElementName>): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[ElementName](arkts-ability-elementname-elementname-depr-i.md)&gt; | Yes | 回调函数，返回当前ability的ohos.bundleManager.ElementName对象。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[ElementName](arkts-ability-elementname-elementname-depr-i.md)&gt; | Yes | Returns the ohos.bundle.ElementName of the current capability. |
 
 ## getElementName
 
@@ -450,7 +450,7 @@ getElementName(callback: AsyncCallback<ElementName>): void
 getElementName(): Promise<ElementName>
 ```
 
-获取当前能力的ohos.bundleManager.ElementName对象。使用Promise异步回调。此方法仅适用于页面功能。
+Obtains the ohos.bundle.ElementName object of the current ability.This method is available only to Page abilities.
 
 **Since:** 7
 
@@ -466,7 +466,7 @@ getElementName(): Promise<ElementName>
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;[ElementName](arkts-ability-elementname-elementname-depr-i.md)&gt; | Promise对象，返回当前ability的ohos.bundleManager.ElementName对象。 |
+| Promise&lt;[ElementName](arkts-ability-elementname-elementname-depr-i.md)&gt; | The ohos.bundle.ElementName object of the current capability. |
 
 ## getExternalCacheDir
 
@@ -474,7 +474,7 @@ getElementName(): Promise<ElementName>
 getExternalCacheDir(callback: AsyncCallback<string>): void
 ```
 
-获取应用程序的外部缓存目录。使用callback异步回调。
+Obtains the absolute path to the application-specific cache directory
 
 **Since:** 6
 
@@ -492,7 +492,7 @@ getExternalCacheDir(callback: AsyncCallback<string>): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;string&gt; | Yes | 回调函数，返回应用程序的缓存目录的绝对路径。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;string&gt; | Yes | Returns the absolute path of the application's cache directory. |
 
 ## getExternalCacheDir
 
@@ -500,7 +500,7 @@ getExternalCacheDir(callback: AsyncCallback<string>): void
 getExternalCacheDir(): Promise<string>
 ```
 
-获取应用程序的外部缓存目录。使用Promise异步回调。
+Obtains the absolute path to the application-specific cache directory
 
 **Since:** 6
 
@@ -518,7 +518,7 @@ getExternalCacheDir(): Promise<string>
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;string&gt; | Promise对象，返回应用程序的缓存目录的绝对路径。 |
+| Promise&lt;string&gt; | Return the cache directory of the application. |
 
 ## getFilesDir
 
@@ -526,7 +526,7 @@ getExternalCacheDir(): Promise<string>
 getFilesDir(callback: AsyncCallback<string>): void
 ```
 
-获取内部存储器上此应用程序的文件目录。使用callback异步回调。
+Obtains the file directory of this application on the internal storage.
 
 **Since:** 6
 
@@ -542,7 +542,7 @@ getFilesDir(callback: AsyncCallback<string>): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;string&gt; | Yes | 回调函数，返回内部存储器上此应用程序的文件目录。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;string&gt; | Yes | Return the file directory of this application on internal storage. |
 
 ## getFilesDir
 
@@ -550,7 +550,7 @@ getFilesDir(callback: AsyncCallback<string>): void
 getFilesDir(): Promise<string>
 ```
 
-获取内部存储器上此应用程序的文件目录。使用Promise异步回调。
+Obtains the file directory of this application on the internal storage.
 
 **Since:** 6
 
@@ -566,7 +566,7 @@ getFilesDir(): Promise<string>
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;string&gt; | Promise对象，返回内部存储器上此应用程序的文件目录。 |
+| Promise&lt;string&gt; | Return the file directory of this application on internal storage. |
 
 ## getHapModuleInfo
 
@@ -574,7 +574,7 @@ getFilesDir(): Promise<string>
 getHapModuleInfo(callback: AsyncCallback<HapModuleInfo>): void
 ```
 
-获取应用的ModuleInfo对象。使用callback异步回调。
+Obtains the ModuleInfo object for this application.
 
 **Since:** 7
 
@@ -590,7 +590,7 @@ getHapModuleInfo(callback: AsyncCallback<HapModuleInfo>): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[HapModuleInfo](arkts-ability-hapmoduleinfo-hapmoduleinfo-depr-i.md)&gt; | Yes | 回调函数，返回应用的ModuleInfo对象。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[HapModuleInfo](arkts-ability-hapmoduleinfo-hapmoduleinfo-depr-i.md)&gt; | Yes | Returns the ModuleInfo object of the application. |
 
 ## getHapModuleInfo
 
@@ -598,7 +598,7 @@ getHapModuleInfo(callback: AsyncCallback<HapModuleInfo>): void
 getHapModuleInfo(): Promise<HapModuleInfo>
 ```
 
-获取应用的ModuleInfo对象。使用Promise异步回调。
+Obtains the ModuleInfo object for this application.
 
 **Since:** 7
 
@@ -614,7 +614,7 @@ getHapModuleInfo(): Promise<HapModuleInfo>
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;[HapModuleInfo](arkts-ability-hapmoduleinfo-hapmoduleinfo-depr-i.md)&gt; | Promise对象，返回应用的ModuleInfo对象。 |
+| Promise&lt;[HapModuleInfo](arkts-ability-hapmoduleinfo-hapmoduleinfo-depr-i.md)&gt; | Return to the ModuleInfo of the application and enjoy it. |
 
 ## getOrCreateDistributedDir
 
@@ -622,7 +622,7 @@ getHapModuleInfo(): Promise<HapModuleInfo>
 getOrCreateDistributedDir(): Promise<string>
 ```
 
-获取Ability或应用的分布式文件路径。使用callback异步回调。如果分布式文件路径不存在，系统将创建一个路径并返回创建的路径。
+Obtains the distributed file path for storing ability or application data files.If the distributed file path does not exist, the system will create a path and return the created path.
 
 **Since:** 7
 
@@ -638,7 +638,7 @@ getOrCreateDistributedDir(): Promise<string>
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;string&gt; | 回调函数，返回Ability或应用的分布式文件路径。若路径不存在，系统将创建一个路径并返回创建的路径。 |
+| Promise&lt;string&gt; | Returns the distributed file path of the Ability or application. If it is the first call, a directory will be created. |
 
 ## getOrCreateDistributedDir
 
@@ -646,7 +646,7 @@ getOrCreateDistributedDir(): Promise<string>
 getOrCreateDistributedDir(callback: AsyncCallback<string>): void
 ```
 
-获取Ability或应用的分布式文件路径。使用Promise异步回调。如果分布式文件路径不存在，系统将创建一个路径并返回创建的路径。
+Obtains the distributed file path for storing ability or application data files.If the distributed file path does not exist, the system will create a path and return the created path.
 
 **Since:** 7
 
@@ -662,7 +662,7 @@ getOrCreateDistributedDir(callback: AsyncCallback<string>): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;string&gt; | Yes | Promise对象，返回Ability或应用的分布式文件路径。若为首次调用，则将创建建目录。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;string&gt; | Yes | Returns the distributed file path of Ability or application. If the path does not exist,the system will create a path and return the created path. |
 
 ## getOrCreateLocalDir
 
@@ -670,7 +670,7 @@ getOrCreateDistributedDir(callback: AsyncCallback<string>): void
 getOrCreateLocalDir(): Promise<string>
 ```
 
-获取应用程序的本地根目录。使用Promise异步回调。如果是第一次调用，将创建目录。
+Get the local root dir of an app. If it is the first call, the dir will be created.If in the context of the ability, return the root dir of the ability; if in the context of the application, return the root dir of the application.
 
 **Since:** 7
 
@@ -686,7 +686,7 @@ getOrCreateLocalDir(): Promise<string>
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;string&gt; | Promise对象，返回应用程序的本地根目录。 |
+| Promise&lt;string&gt; | the root dir |
 
 ## getOrCreateLocalDir
 
@@ -694,7 +694,7 @@ getOrCreateLocalDir(): Promise<string>
 getOrCreateLocalDir(callback: AsyncCallback<string>): void
 ```
 
-获取应用程序的本地根目录。使用callback异步回调。如果是第一次调用，将创建目录。
+Get the local root dir of an app. If it is the first call, the dir will be created.If in the context of the ability, return the root dir of the ability; if in the context of the application, return the root dir of the application.
 
 **Since:** 7
 
@@ -710,7 +710,7 @@ getOrCreateLocalDir(callback: AsyncCallback<string>): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;string&gt; | Yes | 回调函数，返回应用程序的本地根目录。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;string&gt; | Yes | Returns the local root directory of the application. |
 
 ## getProcessInfo
 
@@ -718,7 +718,7 @@ getOrCreateLocalDir(callback: AsyncCallback<string>): void
 getProcessInfo(callback: AsyncCallback<ProcessInfo>): void
 ```
 
-获取有关当前进程的信息，包括进程ID和名称。使用callback异步回调。
+Obtains information about the current process, including the process ID and name.
 
 **Since:** 7
 
@@ -734,7 +734,7 @@ getProcessInfo(callback: AsyncCallback<ProcessInfo>): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[ProcessInfo](arkts-ability-processinfo-processinfo-depr-i.md)&gt; | Yes | 回调函数，返回当前进程的信息。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[ProcessInfo](arkts-ability-processinfo-processinfo-depr-i.md)&gt; | Yes | Return current process information. |
 
 ## getProcessInfo
 
@@ -742,7 +742,7 @@ getProcessInfo(callback: AsyncCallback<ProcessInfo>): void
 getProcessInfo(): Promise<ProcessInfo>
 ```
 
-获取有关当前进程的信息，包括进程id和名称。使用Promise异步回调。
+Obtains information about the current process, including the process ID and name.
 
 **Since:** 7
 
@@ -758,7 +758,7 @@ getProcessInfo(): Promise<ProcessInfo>
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;[ProcessInfo](arkts-ability-processinfo-processinfo-depr-i.md)&gt; | Promise对象，返回当前进程的信息。 |
+| Promise&lt;[ProcessInfo](arkts-ability-processinfo-processinfo-depr-i.md)&gt; | Information about the current process. |
 
 ## getProcessName
 
@@ -766,7 +766,7 @@ getProcessInfo(): Promise<ProcessInfo>
 getProcessName(callback: AsyncCallback<string>): void
 ```
 
-获取当前进程的名称。使用callback异步回调。
+Obtains the name of the current process.
 
 **Since:** 7
 
@@ -782,7 +782,7 @@ getProcessName(callback: AsyncCallback<string>): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;string&gt; | Yes | 回调函数，返回当前进程的名称。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;string&gt; | Yes | Return current process name. |
 
 ## getProcessName
 
@@ -790,7 +790,7 @@ getProcessName(callback: AsyncCallback<string>): void
 getProcessName(): Promise<string>
 ```
 
-获取当前进程的名称。使用Promise异步回调。
+Obtains the name of the current process.
 
 **Since:** 7
 
@@ -806,7 +806,7 @@ getProcessName(): Promise<string>
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;string&gt; | Promise对象，返回当前进程的名称。 |
+| Promise&lt;string&gt; | Returns the name of the current process. |
 
 ## isUpdatingConfigurations
 
@@ -814,7 +814,7 @@ getProcessName(): Promise<string>
 isUpdatingConfigurations(callback: AsyncCallback<boolean>): void
 ```
 
-检查此能力的配置是否正在更改。使用callback异步回调。
+Checks whether the configuration of this ability is changing.
 
 **Since:** 7
 
@@ -830,7 +830,7 @@ isUpdatingConfigurations(callback: AsyncCallback<boolean>): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;boolean&gt; | Yes | 回调函数，返回true表示该Ability的配置正在更改，否则返回false。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;boolean&gt; | Yes | True if the configuration of the capability is being changed, otherwise false. |
 
 ## isUpdatingConfigurations
 
@@ -838,7 +838,7 @@ isUpdatingConfigurations(callback: AsyncCallback<boolean>): void
 isUpdatingConfigurations(): Promise<boolean>
 ```
 
-检查此能力的配置是否正在更改。使用Promise异步回调。
+Checks whether the configuration of this ability is changing.
 
 **Since:** 7
 
@@ -854,7 +854,7 @@ isUpdatingConfigurations(): Promise<boolean>
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;boolean&gt; | Promise对象，返回true表示该Ability的配置正在更改，否则返回false。 |
+| Promise&lt;boolean&gt; | true if the configuration of this ability is changing and false otherwise. |
 
 ## printDrawnCompleted
 
@@ -862,7 +862,7 @@ isUpdatingConfigurations(): Promise<boolean>
 printDrawnCompleted(callback: AsyncCallback<void>): void
 ```
 
-通知系统绘制此页面功能所需的时间。使用callback异步回调。
+Inform the system of the time required for drawing this Page ability.
 
 **Since:** 7
 
@@ -878,7 +878,7 @@ printDrawnCompleted(callback: AsyncCallback<void>): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | 回调函数。当通知系统绘制此页面功能所需的时间成功，err为undefined，否则为错误对象。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Represents the specified callback method. |
 
 ## printDrawnCompleted
 
@@ -886,7 +886,7 @@ printDrawnCompleted(callback: AsyncCallback<void>): void
 printDrawnCompleted(): Promise<void>
 ```
 
-通知系统绘制此页面功能所需的时间。使用Promise异步回调。
+Inform the system of the time required for drawing this Page ability.
 
 **Since:** 7
 
@@ -902,7 +902,7 @@ printDrawnCompleted(): Promise<void>
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise对象。无返回结果的Promise对象 |
+| Promise&lt;void&gt; | The promise form returns the result. |
 
 ## requestPermissionsFromUser
 
@@ -914,7 +914,7 @@ requestPermissionsFromUser(
   ): void
 ```
 
-从系统请求某些权限。使用callback异步回调。
+Requests certain permissions from the system.
 
 **Since:** 7
 
@@ -930,9 +930,9 @@ requestPermissionsFromUser(
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| permissions | Array&lt;string&gt; | Yes | 指示要请求的权限列表。此参数不能为null。 |
-| requestCode | number | Yes | 指示要传递给[PermissionRequestResult](arkts-ability-context-permissionrequestresult-depr-i.md)的请求代码。 |
-| resultCallback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;PermissionRequestResult&gt; | Yes | 回调函数，返回授权结果信息。 |
+| permissions | Array&lt;string&gt; | Yes | Indicates the list of permissions to be requested.parameter cannot be null. |
+| requestCode | number | Yes | Indicates the request code to be passed to the PermissionRequestResult |
+| resultCallback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;PermissionRequestResult&gt; | Yes | Return authorization result information. |
 
 ## requestPermissionsFromUser
 
@@ -940,7 +940,7 @@ requestPermissionsFromUser(
 requestPermissionsFromUser(permissions: Array<string>, requestCode: number): Promise<PermissionRequestResult>
 ```
 
-从系统请求某些权限。使用Promise异步回调。
+Requests certain permissions from the system.
 
 **Since:** 7
 
@@ -956,14 +956,14 @@ requestPermissionsFromUser(permissions: Array<string>, requestCode: number): Pro
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| permissions | Array&lt;string&gt; | Yes | 指示要请求的权限列表。此参数不能为null。 |
-| requestCode | number | Yes | 指示要传递给[PermissionRequestResult](arkts-ability-context-permissionrequestresult-depr-i.md)的请求代码。 |
+| permissions | Array&lt;string&gt; | Yes | Indicates the list of permissions to be requested.Parameter cannot be null. |
+| requestCode | number | Yes | Indicates the request code to be passed to the PermissionRequestResult |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;PermissionRequestResult&gt; | Promise对象，返回授权结果信息。 |
+| Promise&lt;PermissionRequestResult&gt; | Indicates the request code to be passed to PermissionRequestResult. |
 
 ## setDisplayOrientation
 
@@ -971,7 +971,7 @@ requestPermissionsFromUser(permissions: Array<string>, requestCode: number): Pro
 setDisplayOrientation(orientation: bundle.DisplayOrientation, callback: AsyncCallback<void>): void
 ```
 
-设置当前Ability的显示方向。使用callback异步回调。
+Sets the display orientation of the current ability.
 
 **Since:** 7
 
@@ -987,8 +987,8 @@ setDisplayOrientation(orientation: bundle.DisplayOrientation, callback: AsyncCal
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| orientation | bundle.DisplayOrientation | Yes | 指示当前能力的新方向。 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | 回调函数。当设置当前Ability的显示方向成功，err为undefined，否则为错误对象。 |
+| orientation | bundle.DisplayOrientation | Yes | Indicates the new orientation for the current ability. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Indicates the realistic direction of the screen. |
 
 ## setDisplayOrientation
 
@@ -996,7 +996,7 @@ setDisplayOrientation(orientation: bundle.DisplayOrientation, callback: AsyncCal
 setDisplayOrientation(orientation: bundle.DisplayOrientation): Promise<void>
 ```
 
-设置当前Ability的显示方向。使用Promise异步回调。
+Sets the display orientation of the current ability.
 
 **Since:** 7
 
@@ -1012,13 +1012,13 @@ setDisplayOrientation(orientation: bundle.DisplayOrientation): Promise<void>
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| orientation | bundle.DisplayOrientation | Yes | 表示屏幕显示方向。 |
+| orientation | bundle.DisplayOrientation | Yes | Indicates the new orientation for the current ability. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise对象。无返回结果的Promise对象。 |
+| Promise&lt;void&gt; | the promise returned by the function. |
 
 ## setShowOnLockScreen
 
@@ -1026,7 +1026,7 @@ setDisplayOrientation(orientation: bundle.DisplayOrientation): Promise<void>
 setShowOnLockScreen(show: boolean, callback: AsyncCallback<void>): void
 ```
 
-设置每当显示锁屏时是否在锁屏顶部显示此功能，使该功能保持激活状态。使用callback异步回调。
+Sets whether to show this ability on top of the lock screen whenever the lock screen is displayed, keeping the ability in the ACTIVE state.The interface can only take effect in API8 and below versions.
 
 **Since:** 7
 
@@ -1046,8 +1046,8 @@ setShowOnLockScreen(show: boolean, callback: AsyncCallback<void>): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| show | boolean | Yes | 指定是否在锁屏顶部显示此功能。值true表示在锁屏上显示，值false表示不显示。 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | 回调函数。当设置每当显示锁屏时是否在锁屏顶部显示此功能并使该功能保持激活状态的操作成功，err为undefined，否则为错误对象。 |
+| show | boolean | Yes | Specifies whether to show this ability on top of the lock screen. The value true means to show it on the lock screen, and the value false means not. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Returns the callback result. |
 
 ## setShowOnLockScreen
 
@@ -1055,7 +1055,7 @@ setShowOnLockScreen(show: boolean, callback: AsyncCallback<void>): void
 setShowOnLockScreen(show: boolean): Promise<void>
 ```
 
-设置每当显示锁屏时是否在锁屏顶部显示此功能，使该功能保持激活状态。使用Promise异步回调。
+Sets whether to show this ability on top of the lock screen whenever the lock screen is displayed, keeping the ability in the ACTIVE state.The interface can only take effect in API8 and below versions.
 
 **Since:** 7
 
@@ -1075,13 +1075,13 @@ setShowOnLockScreen(show: boolean): Promise<void>
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| show | boolean | Yes | 指定是否在锁屏顶部显示此功能。值true表示在锁屏上显示，值false表示不显示。 |
+| show | boolean | Yes | Specifies whether to show this ability on top of the lock screen. The value true means to show it on the lock screen, and the value false means not. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise对象。无返回结果的Promise对象。 |
+| Promise&lt;void&gt; | the promise returned by the function. |
 
 ## setWakeUpScreen
 
@@ -1089,7 +1089,7 @@ setShowOnLockScreen(show: boolean): Promise<void>
 setWakeUpScreen(wakeUp: boolean, callback: AsyncCallback<void>): void
 ```
 
-设置恢复此功能时是否唤醒屏幕。使用callback异步回调。
+Sets whether to wake up the screen when this ability is restored.
 
 **Since:** 7
 
@@ -1109,8 +1109,8 @@ setWakeUpScreen(wakeUp: boolean, callback: AsyncCallback<void>): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| wakeUp | boolean | Yes | 指定是否唤醒屏幕。值true表示唤醒它，值false表示不唤醒它。 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | 回调函数。当设置恢复此功能时是否唤醒屏幕成功，err为undefined，否则为错误对象。 |
+| wakeUp | boolean | Yes | Specifies whether to wake up the screen. The value true means to wake it up, and the value false means not. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Returns the callback result. |
 
 ## setWakeUpScreen
 
@@ -1118,7 +1118,7 @@ setWakeUpScreen(wakeUp: boolean, callback: AsyncCallback<void>): void
 setWakeUpScreen(wakeUp: boolean): Promise<void>
 ```
 
-设置恢复此功能时是否唤醒屏幕。使用Promise异步回调。
+Sets whether to wake up the screen when this ability is restored.
 
 **Since:** 7
 
@@ -1138,13 +1138,13 @@ setWakeUpScreen(wakeUp: boolean): Promise<void>
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| wakeUp | boolean | Yes | 指定是否唤醒屏幕。值true表示唤醒它，值false表示不唤醒它。 |
+| wakeUp | boolean | Yes | Specifies whether to wake up the screen. The value true means to wake it up, and the value false means not. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise对象。无返回结果的Promise对象。 |
+| Promise&lt;void&gt; | the promise returned by the function. |
 
 ## verifyPermission
 
@@ -1152,7 +1152,7 @@ setWakeUpScreen(wakeUp: boolean): Promise<void>
 verifyPermission(permission: string, options?: PermissionOptions): Promise<number>
 ```
 
-验证系统中运行的特定pid和uid是否具有指定的权限。使用Promise异步回调。
+Verify whether the specified permission is allowed for a particular pid and uid running in the system.Pid and uid are optional. If you do not pass in pid and uid,it will check your own permission.
 
 **Since:** 7
 
@@ -1168,14 +1168,14 @@ verifyPermission(permission: string, options?: PermissionOptions): Promise<numbe
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| permission | string | Yes | 指定权限的名称。 |
-| options | [PermissionOptions](arkts-ability-context-permissionoptions-depr-i.md) | No | 权限选项。 |
+| permission | string | Yes | The name of the specified permission. |
+| options | [PermissionOptions](arkts-ability-context-permissionoptions-depr-i.md) | No | Permission Options. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;number&gt; | Promise对象，如果pid和uid具有权限，则使用0进行异步回调；否则使用-1回调。 |
+| Promise&lt;number&gt; | asynchronous callback with { |
 
 ## verifyPermission
 
@@ -1183,7 +1183,7 @@ verifyPermission(permission: string, options?: PermissionOptions): Promise<numbe
 verifyPermission(permission: string, options: PermissionOptions, callback: AsyncCallback<number>): void
 ```
 
-验证系统中运行的特定pid和uid是否允许指定的权限。使用callback异步回调。
+Verify whether the specified permission is allowed for a particular pid and uid running in the system.Pid and uid are optional. If you do not pass in pid and uid,it will check your own permission.
 
 **Since:** 7
 
@@ -1199,9 +1199,9 @@ verifyPermission(permission: string, options: PermissionOptions, callback: Async
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| permission | string | Yes | 指定权限的名称。 |
-| options | [PermissionOptions](arkts-ability-context-permissionoptions-depr-i.md) | Yes | 权限选项。 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;number&gt; | Yes | 回调函数，返回权限验证结果，0有权限，-1无权限。 |
+| permission | string | Yes | The name of the specified permission |
+| options | [PermissionOptions](arkts-ability-context-permissionoptions-depr-i.md) | Yes | Permission Options |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;number&gt; | Yes | Return permission verification result, 0 has permission, -1 has no permission. |
 
 ## verifyPermission
 
@@ -1209,7 +1209,7 @@ verifyPermission(permission: string, options: PermissionOptions, callback: Async
 verifyPermission(permission: string, callback: AsyncCallback<number>): void
 ```
 
-验证系统中运行的当前pid和uid是否具有指定的权限。使用callback异步回调。
+Verify whether the specified permission is allowed for a particular pid and uid running in the system.Pid and uid are optional. If you do not pass in pid and uid,it will check your own permission.
 
 **Since:** 7
 
@@ -1225,6 +1225,6 @@ verifyPermission(permission: string, callback: AsyncCallback<number>): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| permission | string | Yes | 指定权限的名称。 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;number&gt; | Yes | 回调函数，返回权限验证结果，0有权限，-1无权限。 |
+| permission | string | Yes | The name of the specified permission |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;number&gt; | Yes | Return permission verification result, 0 has permission, -1 has no permission. |
 

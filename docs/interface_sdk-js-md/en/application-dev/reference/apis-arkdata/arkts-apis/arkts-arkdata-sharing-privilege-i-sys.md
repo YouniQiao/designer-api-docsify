@@ -1,6 +1,6 @@
 # Privilege (System API)
 
-指定的端云共享数据的权限。
+Defines the privilege (permissions) on the shared data.
 
 **Since:** 11
 
@@ -24,7 +24,7 @@ import { cloudData } from 'kits/@kit.ArkData';
 creatable?: boolean
 ```
 
-被共享者是否可创建新的共享数据。true表示可创建，false表示不可创建，默认不可创建。
+Whether the participant can create data to share. The value true means the participant can create data; the value false means the opposite. The default value is false.
 
 **Type:** boolean
 
@@ -44,7 +44,7 @@ creatable?: boolean
 deletable?: boolean
 ```
 
-被共享者是否可删除共享的数据。true表示可删除，false表示不可删除，默认不可删除。
+Whether the participant can delete the shared data. The value true means the participant can delete the data; the value false means the opposite. The default value is false.
 
 **Type:** boolean
 
@@ -64,7 +64,7 @@ deletable?: boolean
 readable?: boolean
 ```
 
-被共享者是否可读取共享的数据。true表示可读取，false表示不可读取，默认不可读取
+Whether the participant can read the shared data. The value true means the participant can read the data;the value false means the opposite. The default value is false.
 
 **Type:** boolean
 
@@ -84,7 +84,7 @@ readable?: boolean
 shareable?: boolean
 ```
 
-被共享者是否可将共享的数据再次共享给其他参与者。true表示可再次共享，false表示不可再次共享，默认不可再次共享。
+Whether the participant can share the data to others. The value true means the participant can share the data; the value false means the opposite. The default value is false.
 
 **Type:** boolean
 
@@ -104,7 +104,7 @@ shareable?: boolean
 writable?: boolean
 ```
 
-被共享者是否可修改共享的数据。true表示可修改，false表示不可修改，默认不可修改。
+Whether the participant can modify the shared data. The value true means the participant can modify the data; the value false means the opposite. The default value is false.
 
 **Type:** boolean
 

@@ -38,7 +38,7 @@ Asynchronous interface for reading data from the socket.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 801 | Capability not supported. |
+| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. |
 | 2901054 | IO error. |
 | 2900099 | Operation failed. |
 

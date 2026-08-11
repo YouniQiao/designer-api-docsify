@@ -1,6 +1,6 @@
 # NavDestinationMode
 
-NavDestination类型。
+NavDestination mode.
 
 **Since:** 23
 
@@ -16,7 +16,7 @@ NavDestination类型。
 STANDARD = 0
 ```
 
-标准模式的NavDestination。
+Standard mode is default mode of NavDestination.
 
 **Since:** 23
 
@@ -34,9 +34,7 @@ STANDARD = 0
 DIALOG = 1
 ```
 
-默认透明，进出路由栈不影响下层NavDestination的可见性（onShown、onHidden等生命周期），只会触发onActive、onInactive这两个生命周期。
-
-API version 13之前，默认无系统转场动画。从API version 13开始，支持系统转场动画。
+Dialog mode is transparent by default and does not affect the life cycle of other NavDestination.
 
 **Since:** 23
 

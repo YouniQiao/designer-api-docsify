@@ -1,6 +1,6 @@
 # Range
 
-描述左闭右开区间。
+Describes a left-closed and right-open interval.
 
 **Since:** 12
 
@@ -22,7 +22,7 @@ import { text } from 'kits/@kit.ArkGraphics2D';
 end: int
 ```
 
-区间右侧端点索引，整数。
+Index of the rightmost point of the interval. The value is an integer.
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
@@ -42,7 +42,7 @@ end: int
 start: int
 ```
 
-区间左侧端点索引，整数。
+Index of the leftmost point of the interval. The value is an integer.
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 

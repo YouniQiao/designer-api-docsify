@@ -1,6 +1,6 @@
 # FontVariationInstance
 
-字体可变实例信息，存放预设的可变字体样式信息。
+Font variable instance information, which stores preset variable font style information.
 
 **Since:** 24
 
@@ -22,7 +22,7 @@ import { text } from 'kits/@kit.ArkGraphics2D';
 coordinates: Array<FontVariation>
 ```
 
-可变字体属性数组。
+Array of font variations.
 
 **Type:** Array&lt;FontVariation&gt;
 
@@ -42,7 +42,7 @@ coordinates: Array<FontVariation>
 localName: string
 ```
 
-字体可变实例的本地化名称，可以为空。
+Localized name of the font variable instance, which can be empty.
 
 **Type:** string
 
@@ -62,7 +62,7 @@ localName: string
 name: string
 ```
 
-字体可变实例的英文名称。
+English name of the font variable instance.
 
 **Type:** string
 

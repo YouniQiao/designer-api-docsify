@@ -1,6 +1,6 @@
 # Mat4x4
 
-定义Mat4x4（4x4矩阵）
+A camera matrix, which is a mathematical tool for transforming 3D world coordinates into 2D image coordinates.
 
 **Since:** 23
 
@@ -16,7 +16,7 @@
 w: Vec4
 ```
 
-矩阵的第四列
+The fourth column of the matrix, represented as a four-dimensional vector.
 
 **Type:** [Vec4](arkts-arkgraphics3d-scenetypes-vec4-i.md)
 
@@ -34,7 +34,7 @@ w: Vec4
 x: Vec4
 ```
 
-矩阵的第一列
+The first column of the matrix, represented as a four-dimensional vector.
 
 **Type:** [Vec4](arkts-arkgraphics3d-scenetypes-vec4-i.md)
 
@@ -52,7 +52,7 @@ x: Vec4
 y: Vec4
 ```
 
-矩阵的第二列
+The second column of the matrix, represented as a four-dimensional vector.
 
 **Type:** [Vec4](arkts-arkgraphics3d-scenetypes-vec4-i.md)
 
@@ -70,7 +70,7 @@ y: Vec4
 z: Vec4
 ```
 
-矩阵的第三列
+The third column of the matrix, represented as a four-dimensional vector.
 
 **Type:** [Vec4](arkts-arkgraphics3d-scenetypes-vec4-i.md)
 

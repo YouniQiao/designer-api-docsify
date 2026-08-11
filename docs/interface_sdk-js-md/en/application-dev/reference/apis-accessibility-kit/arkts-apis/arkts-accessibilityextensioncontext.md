@@ -1,7 +1,9 @@
 # AccessibilityExtensionContext(Provides accessibility extension context)
 
-AccessibilityExtensionContext是AccessibilityExtensionAbility上下文环境，继承自ExtensionContext。
- 辅助功能扩展上下文模块提供辅助功能扩展的上下文环境的能力，包括允许配置辅助应用关注信息类型、查询节点信息、手势注入等。
+The **AccessibilityExtensionContext** module, inherited from **ExtensionContext**, provides context for
+ **AccessibilityExtensionAbility**.
+ You can use the APIs of this module to configure the concerned information, obtain root information, and inject
+ gestures.
 
 
 ## Summary
@@ -10,51 +12,53 @@ AccessibilityExtensionContext是AccessibilityExtensionAbility上下文环境，�
 
 | Name | Description |
 | --- | --- |
-| [AccessibilityExtensionContext](arkts-accessibility-accessibilityextensioncontext-c.md) | 辅助功能扩展的上下文环境，用来配置辅助应用关注信息类型、查询节点信息、手势注入等。 |
+| [AccessibilityExtensionContext](arkts-accessibility-accessibilityextensioncontext-c.md) | The accessibility extension context. Used to configure, query information, and inject gestures. |
 
 <!--Del-->
 ### Classes（系统接口）
 
 | Name | Description |
 | --- | --- |
-| [AccessibilityExtensionContext](arkts-accessibility-accessibilityextensioncontext-c-sys.md) | 辅助功能扩展的上下文环境，用来配置辅助应用关注信息类型、查询节点信息、手势注入等。 |
-| [Parameter](arkts-accessibility-accessibilityextensioncontext-parameter-c-sys.md) | 无障碍节点元素执行特定操作时，为操作提供具体设置的参数值。详见[AccessibilityAction](../../apis-arkui/arkts-apis/arkts-arkui-common-accessibilityaction-e.md/arkts-arkui-common-accessibilityaction-e.md)（无障碍节点元素可执行的操作）。 |
+| [AccessibilityExtensionContext](arkts-accessibility-accessibilityextensioncontext-c-sys.md) | The accessibility extension context. Used to configure, query information, and inject gestures. |
+| [Parameter](arkts-accessibility-accessibilityextensioncontext-parameter-c-sys.md) | Sets the parameter for a specific operation when the accessibility node element executes this operation. For details,see [AccessibilityAction](../../apis-arkui/arkts-apis/arkts-arkui-common-accessibilityaction-e.md/arkts-arkui-common-accessibilityaction-e.md) (executable actions for accessibility node elements). |
 <!--DelEnd-->
 
 ### Interfaces
 
 | Name | Description |
 | --- | --- |
-| [AccessibilityElement](arkts-accessibility-accessibilityextensioncontext-accessibilityelement-i.md) | 无障碍节点元素。在调用 **AccessibilityElement** 的 API 之前，应该调用  [AccessibilityExtensionContext.getAccessibilityFocusedElement()](arkts-accessibility-accessibilityextensioncontext-c-sys.md#getaccessibilityfocusedelement)或 [AccessibilityExtensionContext.getRootInActiveWindow()](arkts-accessibility-accessibilityextensioncontext-c-sys.md#getrootinactivewindow) 来获取一个 **AccessibilityElement** 实例。 |
-| [ElementAttributeValues](arkts-accessibility-accessibilityextensioncontext-elementattributevalues-i.md) | 节点元素具备的属性名称及属性值类型信息。 |
-| [Rect](arkts-accessibility-accessibilityextensioncontext-rect-i.md) | 表示矩形区域。 |
+| [AccessibilityElement](arkts-accessibility-accessibilityextensioncontext-accessibilityelement-i.md) | Defines the **AccessibilityElement**. Before calling APIs of **AccessibilityElement**, you must call  [AccessibilityExtensionContext.getFocusElement()](arkts-accessibility-accessibilityextensioncontext-c.md#getfocuselement)or  [AccessibilityExtensionContext.getWindowRootElement()](arkts-accessibility-accessibilityextensioncontext-c.md#getwindowrootelement)to obtain an **AccessibilityElement** instance. |
+| [ElementAttributeValues](arkts-accessibility-accessibilityextensioncontext-elementattributevalues-i.md) | Provides attribute names and value types of a node element. |
+| [Rect](arkts-accessibility-accessibilityextensioncontext-rect-i.md) | Defines a rectangle. |
 
 <!--Del-->
 ### Interfaces（系统接口）
 
 | Name | Description |
 | --- | --- |
-| [AccessibilityElement](arkts-accessibility-accessibilityextensioncontext-accessibilityelement-i-sys.md) | 无障碍节点元素。在调用 **AccessibilityElement** 的 API 之前，应该调用  [AccessibilityExtensionContext.getAccessibilityFocusedElement()](arkts-accessibility-accessibilityextensioncontext-c-sys.md#getaccessibilityfocusedelement)或 [AccessibilityExtensionContext.getRootInActiveWindow()](arkts-accessibility-accessibilityextensioncontext-c-sys.md#getrootinactivewindow) 来获取一个 **AccessibilityElement** 实例。 |
-| [AccessibilityGrid](arkts-accessibility-accessibilityextensioncontext-accessibilitygrid-i-sys.md) | 辅助功能网格信息。详见[AccessibilityElement](arkts-accessibility-accessibilityextensioncontext-accessibilityelement-i.md)中的属性currentItem。 |
-| [AccessibilitySpan](arkts-accessibility-accessibilityextensioncontext-accessibilityspan-i-sys.md) | 辅助功能超链接文本信息。详见[AccessibilityElement](arkts-accessibility-accessibilityextensioncontext-accessibilityelement-i.md)中的属性spans。 |
-| [ElementAttributeValues](arkts-accessibility-accessibilityextensioncontext-elementattributevalues-i-sys.md) | 节点元素具备的属性名称及属性值类型信息。 |
-| [FocusMoveResult](arkts-accessibility-accessibilityextensioncontext-focusmoveresult-i-sys.md) | 查询无障碍节点返回值类型。 |
+| [AccessibilityElement](arkts-accessibility-accessibilityextensioncontext-accessibilityelement-i-sys.md) | Defines the **AccessibilityElement**. Before calling APIs of **AccessibilityElement**, you must call  [AccessibilityExtensionContext.getFocusElement()](arkts-accessibility-accessibilityextensioncontext-c.md#getfocuselement)or  [AccessibilityExtensionContext.getWindowRootElement()](arkts-accessibility-accessibilityextensioncontext-c.md#getwindowrootelement)to obtain an **AccessibilityElement** instance. |
+| [AccessibilityGrid](arkts-accessibility-accessibilityextensioncontext-accessibilitygrid-i-sys.md) | Defines accessibility grid information. For details, see the currentItem attribute in  [AccessibilityElement](arkts-accessibility-accessibilityextensioncontext-accessibilityelement-i.md). |
+| [AccessibilitySpan](arkts-accessibility-accessibilityextensioncontext-accessibilityspan-i-sys.md) | Defines the information about the hyperlink wrapped by the span tag. For details, see the spans attribute in  [AccessibilityElement](arkts-accessibility-accessibilityextensioncontext-accessibilityelement-i.md). |
+| [AccessibilityVirtualNode](arkts-accessibility-accessibilityextensioncontext-accessibilityvirtualnode-i-sys.md) | Defines the **AccessibilityVirtualNode**. |
+| [ElementAttributeValues](arkts-accessibility-accessibilityextensioncontext-elementattributevalues-i-sys.md) | Provides attribute names and value types of a node element. |
+| [FocusMoveResult](arkts-accessibility-accessibilityextensioncontext-focusmoveresult-i-sys.md) | Queries the return value type of the target accessibility nodes. |
+| [TouchPosition](arkts-accessibility-accessibilityextensioncontext-touchposition-i-sys.md) | Indicates touch position of accessibility virtual node. |
 <!--DelEnd-->
 
 ### Types
 
 | Name | Description |
 | --- | --- |
-| [FocusDirection](arkts-accessibility-focusdirection-t.md) | 表示查询下一焦点元素的方向。 |
-| [FocusType](arkts-accessibility-focustype-t.md) | 表示查询焦点元素的类型。 |
-| [WindowType](arkts-accessibility-windowtype-t.md) | 表示窗口的类型。 |
+| [FocusDirection](arkts-accessibility-focusdirection-t.md) | Enumerates the focus directions. |
+| [FocusType](arkts-accessibility-focustype-t.md) | Enumerates the focus types. |
+| [WindowType](arkts-accessibility-windowtype-t.md) | Enumerates the window types. |
 
 <!--Del-->
 ### Types（系统接口）
 
 | Name | Description |
 | --- | --- |
-| [FocusCondition](arkts-accessibility-focuscondition-t-sys.md) | 表示查询可聚焦节点方式。 |
-| [FocusRule](arkts-accessibility-focusrule-t-sys.md) | 表示查找可聚焦节点时，如何判断起始节点及其子节点的聚焦能力。 |
+| [FocusCondition](arkts-accessibility-focuscondition-t-sys.md) | Defines a condition for querying the focusable node. |
+| [FocusRule](arkts-accessibility-focusrule-t-sys.md) | Defines a focus rule for determining the start node and its descendants when searching for a focusable node. |
 <!--DelEnd-->
 

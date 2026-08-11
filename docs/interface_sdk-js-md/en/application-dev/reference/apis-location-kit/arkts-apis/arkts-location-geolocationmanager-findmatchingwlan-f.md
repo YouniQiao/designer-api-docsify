@@ -47,8 +47,8 @@ Check whether the WLAN scan results match the WLAN BSSID list,return information
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 801 | Capability not supported. Failed to call \\${geoLocationManager.findMatchingWlan} due to limited device capabilities. |
-| 201 | Permission verification failed. The application does not have the permission required to call the API. |
-| 3301800 | Failed to start WLAN scanning. |
-| 3301100 | The location switch is off. |
+| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. Failed to call \\${geoLocationManager.findMatchingWlan} due to limited device capabilities. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed. The application does not have the permission required to call the API. |
+| [3301800](../errorcode-geoLocationManager.md#3301800-failed-to-start-wifi-or-bluetooth-scanning) | Failed to start WLAN scanning. |
+| [3301100](../errorcode-geoLocationManager.md#3301100-positioning-failed-because-the-location-switch-is-turned-off) | The location switch is off. |
 

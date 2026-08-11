@@ -4,7 +4,7 @@
 type CloudAssets = Array<CloudAsset>
 ```
 
-表示CloudAsset类型的数组。
+Represents an array of CloudAsset.
 
 **Since:** 11
 

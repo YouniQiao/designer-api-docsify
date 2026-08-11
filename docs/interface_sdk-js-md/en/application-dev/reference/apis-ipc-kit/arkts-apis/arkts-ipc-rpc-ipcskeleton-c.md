@@ -1,6 +1,6 @@
 # IPCSkeleton
 
-用于获取IPC上下文信息，包括获取UID和PID、获取本端和对端设备ID、检查接口调用是否在同一设备上。
+Obtains IPC context, including the UID and PID, local and remote device IDs, and whether the method is invoked on  the same device.
 
 **Since:** 7
 
@@ -22,7 +22,7 @@ import { rpc } from 'kits/@kit.IPCKit';
 static flushCmdBuffer(object: IRemoteObject): void
 ```
 
-静态方法，将所有挂起的命令从指定的RemoteProxy刷新到相应的RemoteObject。建议在任何时间执行敏感操作之前调用此方法。
+Flushes all suspended commands from the specified **RemoteProxy** to the corresponding **RemoteObject**. This API  is a static method. You are advised to call this API before performing any sensitive operation.
 
 **Since:** 9
 
@@ -36,13 +36,13 @@ static flushCmdBuffer(object: IRemoteObject): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| object | [IRemoteObject](arkts-ipc-rpc-iremoteobject-c.md) | Yes | 指定的RemoteProxy。 |
+| object | [IRemoteObject](arkts-ipc-rpc-iremoteobject-c.md) | Yes | RemoteProxy** specified. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1.The number of parameters is incorrect; 2.The parameter type does not match. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.The number of parameters is incorrect; 2.The parameter type does not match. |
 
 ## Examples
 
@@ -77,7 +77,7 @@ try {
 static flushCommands(object: IRemoteObject): number
 ```
 
-静态方法，将所有挂起的命令从指定的RemoteProxy刷新到相应的RemoteObject。建议在任何时间执行敏感操作之前调用此方法。
+Flushes all suspended commands from the specified **RemoteProxy** to the corresponding **RemoteObject**. This API  is a static method. You are advised to call this API before performing any sensitive operation.
 
 **Since:** 7
 
@@ -95,13 +95,13 @@ static flushCommands(object: IRemoteObject): number
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| object | [IRemoteObject](arkts-ipc-rpc-iremoteobject-c.md) | Yes | 指定的RemoteProxy。 |
+| object | [IRemoteObject](arkts-ipc-rpc-iremoteobject-c.md) | Yes | RemoteProxy** specified. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| number | 如果操作成功，返回0；如果输入对象为空或RemoteObject，或者操作失败，返回错误代码。 |
+| number | Returns **0** if the operation is successful; returns an error code if the input object is null or a **RemoteObject**, or if the operation fails. |
 
 ## Examples
 
@@ -136,7 +136,7 @@ try {
 static getCallingDeviceID(): string
 ```
 
-静态方法，获取调用者进程所在的设备ID。
+Obtains the ID of the device hosting the caller's process. This API is a static method.
 
 **Since:** 7
 
@@ -150,7 +150,7 @@ static getCallingDeviceID(): string
 
 | Type | Description |
 | --- | --- |
-| string | 返回调用者进程所在的设备ID。 |
+| string | Device ID obtained. |
 
 ## Examples
 
@@ -184,8 +184,7 @@ ArkTS-Sta:
 static getCallingPid(): int
 ```
 
-静态方法，获取调用者的PID。此方法由[RemoteObject](arkts-ipc-rpc-remoteobject-c.md)对象在IPC上下文环境（  
-[onRemoteMessageRequest](arkts-ipc-rpc-remoteobject-c.md#onremotemessagerequest)）中使用，否则直接返回。
+Obtains the PID of the caller. This API is a static method, which is invoked by the **RemoteObject** object in  the **onRemoteRequest** method. If this method is not invoked in the IPC context (**onRemoteRequest**), the  PID of the process will be returned.
 
 **Since:** 7
 
@@ -199,7 +198,7 @@ static getCallingPid(): int
 
 | Type | Description |
 | --- | --- |
-| ArkTS-Dyn: number  <br>ArkTS-Sta：int | 返回调用者的PID。 |
+| ArkTS-Dyn: number  <br>ArkTS-Sta：int | PID of the caller. |
 
 ## Examples
 
@@ -233,7 +232,7 @@ ArkTS-Sta:
 static getCallingTokenId(): long
 ```
 
-静态方法，获取调用者的TokenId，用于被调用方对调用方的身份校验。
+Obtains the caller's token ID, which is used to verify the caller identity.
 
 **Since:** 8
 
@@ -247,7 +246,7 @@ static getCallingTokenId(): long
 
 | Type | Description |
 | --- | --- |
-| ArkTS-Dyn: number  <br>ArkTS-Sta：long | 返回调用者的TokenId。 |
+| ArkTS-Dyn: number  <br>ArkTS-Sta：long | Token ID of the caller obtained. |
 
 ## Examples
 
@@ -281,8 +280,7 @@ ArkTS-Sta:
 static getCallingUid(): int
 ```
 
-静态方法，获取调用者的UID。此方法由[RemoteObject](arkts-ipc-rpc-remoteobject-c.md)对象在IPC上下文环境（  
-[onRemoteMessageRequest](arkts-ipc-rpc-remoteobject-c.md#onremotemessagerequest)）中使用，否则直接返回。
+Obtains the UID of the caller. This API is a static method, which is invoked by the **RemoteObject** object in  the **onRemoteRequest** method. If this method is not invoked in the IPC context (**onRemoteRequest**), the  UID of the process will be returned.
 
 **Since:** 7
 
@@ -296,7 +294,7 @@ static getCallingUid(): int
 
 | Type | Description |
 | --- | --- |
-| ArkTS-Dyn: number  <br>ArkTS-Sta：int | 返回调用者的UID。 |
+| ArkTS-Dyn: number  <br>ArkTS-Sta：int | UID of the caller. |
 
 ## Examples
 
@@ -324,7 +322,7 @@ class Stub extends rpc.RemoteObject {
 static getContextObject(): IRemoteObject
 ```
 
-静态方法，获取系统服务管理器（SAMGR）对象。
+Obtains the system capability manager. This API is a static method.
 
 **Since:** 7
 
@@ -338,7 +336,7 @@ static getContextObject(): IRemoteObject
 
 | Type | Description |
 | --- | --- |
-| [IRemoteObject](arkts-ipc-rpc-iremoteobject-c.md) | 返回系统能力管理者。 |
+| [IRemoteObject](arkts-ipc-rpc-iremoteobject-c.md) | System capability manager obtained. |
 
 ## Examples
 
@@ -360,7 +358,7 @@ try {
 static getLocalDeviceID(): string
 ```
 
-静态方法，获取本端设备ID。
+Obtains the local device ID. This API is a static method.
 
 **Since:** 7
 
@@ -374,7 +372,7 @@ static getLocalDeviceID(): string
 
 | Type | Description |
 | --- | --- |
-| string | 返回本地设备的ID。 |
+| string | Local device ID obtained. |
 
 ## Examples
 
@@ -402,7 +400,7 @@ class Stub extends rpc.RemoteObject {
 static isLocalCalling(): boolean
 ```
 
-静态方法，检查当前通信对端是否是本设备的进程。
+Checks whether the peer process is a process of the local device. This API is a static method.
 
 **Since:** 7
 
@@ -416,7 +414,7 @@ static isLocalCalling(): boolean
 
 | Type | Description |
 | --- | --- |
-| boolean | true：调用在同一台设备，false：调用未在同一台设备。 |
+| boolean | Returns **true** if the local and peer processes are on the same device; returns **false** otherwise. |
 
 ## Examples
 
@@ -444,7 +442,7 @@ class Stub extends rpc.RemoteObject {
 static resetCallingIdentity(): string
 ```
 
-静态方法，将远程用户的UID和PID替换为本地用户的UID和PID。它可以用于身份验证等场景。
+Resets the UID and PID of the remote user to those of the local user. This API is a static method and is used in  scenarios such as identity authentication.
 
 **Since:** 7
 
@@ -458,7 +456,7 @@ static resetCallingIdentity(): string
 
 | Type | Description |
 | --- | --- |
-| string | 返回包含远程用户的UID和PID的字符串。 |
+| string | String containing the UID and PID of the remote user. |
 
 ## Examples
 
@@ -486,8 +484,8 @@ class Stub extends rpc.RemoteObject {
 static restoreCallingIdentity(identity: string): void
 ```
 
-静态方法，将UID和PID恢复为远程用户的UID和PID。它通常在使用resetCallingIdentity后调用，需要resetCallingIdentity返回的远程用户的UID和PID。该接口仅支持在IPC上下文（  
-[onRemoteMessageRequest](arkts-ipc-rpc-remoteobject-c.md#onremotemessagerequest)）中使用，否则直接返回。
+Restores the UID and PID of the remote user. This API is a static method. It is usually called after  
+ **resetCallingIdentity**, and the UID and PID of the remote user returned by **resetCallingIdentity** are  required.
 
 **Since:** 9
 
@@ -501,13 +499,13 @@ static restoreCallingIdentity(identity: string): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| identity | string | Yes | 标识表示包含远程用户UID和PID的字符串，其长度应小于40960。由resetCallingIdentity返回。 |
+| identity | string | Yes | A string containing the UID and PID of the remote user. The length of the string must be less than 40960. are returned by **resetCallingIdentity**. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1.The number of parameters is incorrect; 2.The parameter type does not match; 3.The string length is greater than or equal to 40960; 4.The number of bytes copied to the buffer is different from the length of the obtained string. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.The number of parameters is incorrect; 2.The parameter type does not match; 3.The string length is greater than or equal to 40960; 4.The number of bytes copied to the buffer is different from the length of the obtained string. |
 
 ## Examples
 
@@ -536,7 +534,8 @@ class Stub extends rpc.RemoteObject {
 static setCallingIdentity(identity: string): boolean
 ```
 
-静态方法，将UID和PID恢复为远程用户的UID和PID。它通常在使用resetCallingIdentity后调用，需要resetCallingIdentity返回的远程用户的UID和PID。
+Sets the UID and PID of the remote user. This API is a static method. It is usually called after  
+ **resetCallingIdentity**, and the UID and PID of the remote user returned by **resetCallingIdentity** are  required.
 
 **Since:** 7
 
@@ -554,13 +553,13 @@ static setCallingIdentity(identity: string): boolean
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| identity | string | Yes | 标识表示包含远程用户UID和PID的字符串。由resetCallingIdentity返回。 |
+| identity | string | Yes | String containing the remote user's UID and PID, which are returned by **resetCallingIdentity**. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| boolean | true：设置成功，false：设置失败。 |
+| boolean | Returns **true** if the operation is successful; returns **false** otherwise. |
 
 ## Examples
 

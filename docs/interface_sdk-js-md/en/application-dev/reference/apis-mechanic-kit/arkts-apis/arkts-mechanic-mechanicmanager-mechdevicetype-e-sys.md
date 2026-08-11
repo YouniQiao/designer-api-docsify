@@ -16,7 +16,7 @@ Enumerates the mechanical device types.
 DESKTOP_GIMBAL_DEVICE = 1
 ```
 
-桌面云台
+Desktop gimbal device.
 
 **Since:** 26.0.0
 
@@ -34,7 +34,7 @@ DESKTOP_GIMBAL_DEVICE = 1
 WHEELED_BASE_DEVICE = 2
 ```
 
-轮式底座
+Wheeled?mounted base device.
 
 **Since:** 26.0.0
 

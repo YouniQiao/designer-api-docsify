@@ -1,22 +1,32 @@
 # @ohos.UiTest
 
-UiTest提供UI自动化测试能力，供开发者在测试场景使用，主要支持控件查找与操作、坐标点击/滑动、按键注入、截图、窗口管理、多指操作、鼠标/手写笔/触摸板操作等能力。
- 该模块提供以下功能：
- - [On<sup>9+</sup>](arkts-test-uitest-on-c.md)：提供控件特征描述能力，用于控件筛选匹配查找。
- - [Component<sup>9+</sup>](arkts-test-uitest-component-c.md)：代表UI界面上的指定控件，提供控件属性获取，控件点击，滑动查找，文本注入等能力。
- - [Driver<sup>9+</sup>](arkts-test-uitest-driver-c.md)：入口类，提供控件匹配/查找，按键注入，坐标点击/滑动，截图等能力。
- - [UiWindow<sup>9+</sup>](arkts-test-uitest-uiwindow-c.md)：代表UI界面上的窗口对象，提供窗口属性获取，窗口拖动、调整窗口大小等能力。
- - [By<sup></sup>](arkts-test-uitest-by-c.md)：提供控件特征描述能力，用于控件筛选匹配查找。从API version 8开始支持，从API version 9开始废弃，建议使用
- [On<sup>9+</sup>](arkts-test-uitest-on-c.md)替代。
- - [UiComponent<sup></sup>](arkts-test-uitest-uicomponent-c.md)：代表UI界面上的指定控件，提供控件属性获取，控件点击，滑动查找，文本注入等能力。从API version 8开始支持，从API version
- 9开始废弃，建议使用[Component<sup>9+</sup>](arkts-test-uitest-component-c.md)替代。
- - [UiDriver<sup></sup>](arkts-test-uitest-uidriver-c.md)：入口类，提供控件匹配/查找，按键注入，坐标点击/滑动，截图等能力。从API version 8开始支持，从API version 9开始废弃，建议使用
- [Driver<sup>9+</sup>](arkts-test-uitest-driver-c.md)替代。
- > **说明：**
+The **UiTest** module provides UI automation test capabilities, such as component search and operation, coordinate
+ clicking/sliding, key injections, screenshot, window management, multi-finger operations, and mouse/stylus/touchpad
+ operations.
+ This module provides the following functions:
+ - [On<sup>9+</sup>](arkts-test-uitest-on-c.md): provides UI component feature description APIs for component filtering and matching.
+ - [Component<sup>9+</sup>](arkts-test-uitest-component-c.md): represents a component on the UI and provides APIs for obtaining
+ component attributes, clicking a component, scrolling to search for a component, and text injection.
+ - [Driver<sup>9+</sup>](arkts-test-uitest-driver-c.md): works as the entry class and provides APIs for features such as component
+ matching/search, key injection, coordinate clicking/sliding, and screenshot.
+ - [UiWindow<sup>9+</sup>](arkts-test-uitest-uiwindow-c.md): represents a window object on the UI and provides APIs for obtaining window attributes,
+ dragging windows, and adjusting window sizes.
+ - [By<sup>(deprecated)</sup>](arkts-test-uitest-by-c.md): provides UI component feature description APIs for component filtering and
+ matching. This API is supported since API version 8 and deprecated since API version 9.
+ You are advised to use {@link On} instead.
+ - [UiComponent<sup>(deprecated)</sup>](arkts-test-uitest-uicomponent-c.md): represents a component on the UI and provides APIs for
+ obtaining component attributes, clicking a component, scrolling to search for a component, and text injection.
+ This API is supported since API version 8 and deprecated since API version 9.
+ You are advised to use [Component<sup>9+</sup>](arkts-test-uitest-component-c.md) instead.
+ - [UiDriver<sup>(deprecated)</sup>](arkts-test-uitest-uidriver-c.md): works as the entry class and provides APIs for features such as
+ component matching/search, key injection, coordinate clicking/sliding, and screenshot.
+ This API is supported since API version 8 and deprecated since API version 9.
+ You are advised to use [Driver<sup>9+</sup>](arkts-test-uitest-driver-c.md) instead.
+ > **NOTE**
  >
- > - 本模块接口在<!--RP1-->[自动化测试脚本](../../../application-test/uitest-guidelines.md)<!--RP1End-->中使用。
+ > - The APIs of this module can be used only in <!--RP1-->[UITest](../../../application-test/uitest-guidelines.md)<!--RP1End-->.
  >
- > - 本模块接口不支持并发调用。
+ > - The APIs of this module do not support concurrent calls.
 
 
 ## Modules to Import
@@ -31,51 +41,51 @@ import { ResizeDirection, WindowMode, PenMode, PenKeyOperation, Driver, MatchPat
 
 | Name | Description |
 | --- | --- |
-| [ON](arkts-test-on-n.md) | 用于便捷构造{@link On}对象的静态构造器，使用示例：ON.text('txt').enabled(true)。 |
+| [ON](arkts-test-on-n.md) | The static builder for building {@link On}object conveniently,usage example:ON.text('txt').enabled(true). |
 
 ### Classes
 
 | Name | Description |
 | --- | --- |
-| [By](arkts-test-uitest-by-c.md) | UiTest框架通过By类提供了丰富的控件特征描述API，用于进行控件筛选来匹配/查找出目标控件。  By提供的API能力具有以下几个特点：  1、支持单属性匹配和多属性组合匹配，例如同时指定目标控件text和id。  2、控件属性支持多种匹配模式。  3、支持控件绝对定位，相对定位，可通过[By.isBefore&lt;sup&gt;(deprecated)&lt;/sup&gt;](arkts-test-uitest-by-c.md#isbefore)和  [By.isAfter&lt;sup&gt;(deprecated)&lt;/sup&gt;](arkts-test-uitest-by-c.md#isafter)等API限定邻近控件特征进行辅助定位。  By类提供的所有API均为同步接口，建议使用者通过静态构造器BY来链式创建By对象。 |
-| [Component](arkts-test-uitest-component-c.md) | UiTest框架在API9中，Component类代表了UI界面上的一个控件，提供控件属性获取，控件点击，滑动查找，文本注入等API。该类对象可通过{@link Driver#findComponent}、{@link Driver#findComponents}、{@link Driver#waitForComponent}等接口获取。该类提供的所有方法都使用Promise方式作为异步方法，需使用await调用。 |
-| [Driver](arkts-test-uitest-driver-c.md) | Driver类为uitest测试框架的总入口，提供控件匹配/查找，按键注入，坐标点击/滑动，截图等能力。通过{@link create}创建实例。该类提供的方法除Driver.create()和Driver.createUIEventObserver()以外的所有方法都使用Promise方式作为异步方法，需使用await方式调用。 |
-| [On](arkts-test-uitest-on-c.md) | UiTest框架从API version 9开始，通过On类提供了丰富的控件特征描述API，用于进行控件筛选来匹配/查找出目标控件。  On提供的API能力具有以下几个特点：  1、支持单属性匹配和多属性组合匹配，例如同时指定目标控件text和id。  2、控件属性支持多种匹配模式。  3、支持控件绝对定位，相对定位，可通过[ON.isBefore](arkts-test-uitest-on-c.md#isbefore)和[ON.isAfter](arkts-test-uitest-on-c.md#isafter)等API限定邻近控件特征进行辅助定位。  On类提供的所有API均为同步接口，建议使用者通过静态构造器ON来链式创建On对象。 |
-| [PointerMatrix](arkts-test-uitest-pointermatrix-c.md) | 存储多指操作中每根手指每一步动作的坐标点及其行为的二维数组。 |
-| [UiComponent](arkts-test-uitest-uicomponent-c.md) | UiTest中，UiComponent类代表了UI界面上的一个控件，提供控件属性获取，控件点击，滑动查找，文本注入等API。该类提供的所有方法都使用Promise方式作为异步方法，需使用await调用。 |
-| [UiDriver](arkts-test-uitest-uidriver-c.md) | UiDriver类为uitest测试框架的总入口，提供控件匹配/查找，按键注入，坐标点击/滑动，截图等API。该类提供的方法除UiDriver.create()以外的所有方法都使用Promise方式作为异步方法，需使用await调用。 |
-| [UiWindow](arkts-test-uitest-uiwindow-c.md) | UiWindow代表了UI界面上的一个窗口，提供窗口属性获取，窗口拖动、调整窗口大小等能力。该类对象可通过{@link Driver#findWindow}接口获取。该类提供的所有方法都使用Promise方式作为异步方法，需使用await方式调用。 |
+| [By](arkts-test-uitest-by-c.md) | The UiTest framework provides a wide range of UI component feature description APIs in the **By** class to filter and match components.  The APIs provided by the **By** class exhibit the following features:  1. Allow one or more attributes as the match conditions. For example, you can specify both the **text** and **id** attributes to find the target component.2. Provide multiple match patterns for component attributes.3. Support absolute positioning and relative positioning for components. APIs such as [By.isBefore&lt;sup&gt;(deprecated)&lt;/sup&gt;](arkts-test-uitest-by-c.md#isbefore) and [By.isAfter&lt;sup&gt;(deprecated)&lt;/sup&gt;](arkts-test-uitest-by-c.md#isafter) can be used to specify the features of adjacent components to assist positioning.  All APIs provided in the **By** class are synchronous. You are advised to use the static constructor **BY** to create a **By** object in chain mode. |
+| [Component](arkts-test-uitest-component-c.md) | Represents a component on the UI and provides APIs for obtaining component attributes, clicking a component,scrolling to search for a component, and text injection.All APIs provided in this class use a promise to return the result and must be invoked using **await**. |
+| [Driver](arkts-test-uitest-driver-c.md) | The **Driver** class is the main entrance of the UiTest framework. This class provides APIs for features such as component matching/search, key injection, coordinate clicking/sliding, and screenshot.All APIs provided by this class, except **Driver.create()** and **Driver.createUIEventObserver()**, use an asynchronous method (promise) to return the result and must be invoked using **await**. |
+| [On](arkts-test-uitest-on-c.md) | Since API version 9, the UiTest framework provides a wide range of UI component feature description APIs in the  **On** class to filter and match components.  The APIs provided by the **On** class exhibit the following features:  1. Allow one or more attributes as the match conditions. For example, you can specify both the **text** and **id** attributes to find the target component.2. Provide multiple match patterns for component attributes.3. Support absolute positioning and relative positioning for components. APIs such as [ON.isBefore](arkts-test-uitest-on-c.md#isbefore) and [ON.isAfter](arkts-test-uitest-on-c.md#isafter) can be used to specify the features of adjacent components to assist positioning.  All APIs provided in the **On** class are synchronous. You are advised to use the static constructor **ON** to create an **On** object in chain mode. |
+| [PointerMatrix](arkts-test-uitest-pointermatrix-c.md) | Implements a **PointerMatrix** object that stores coordinates and behaviors of each action of each finger in a multi-touch operation. After creating an object using {@link create}, use {@link setPoint} to set the coordinates of each finger at each step. Then pass the coordinates to {@link injectMultiPointerAction} to perform a multi-finger operation. |
+| [UiComponent](arkts-test-uitest-uicomponent-c.md) | In **UiTest**, the **UiComponent** class represents a component on the UI and provides APIs for obtaining component attributes, clicking a component, scrolling to search for a component, and text injection.All APIs provided in this class use a promise to return the result and must be invoked using **await**. |
+| [UiDriver](arkts-test-uitest-uidriver-c.md) | The **UiDriver** class is the main entry to the UiTest framework. It provides APIs for features such as component matching/search, key injection, coordinate clicking/sliding, and screenshot.All APIs provided by this class, except **UiDriver.create()**, use a promise to return the result and must be invoked using **await**. |
+| [UiWindow](arkts-test-uitest-uiwindow-c.md) | The **UiWindow** class represents a window on the UI and provides APIs for obtaining window attributes, dragging a window, and adjusting the window size.All APIs provided in this class use a promise to return the result and must be invoked using **await**. |
 
 ### Interfaces
 
 | Name | Description |
 | --- | --- |
-| [ComponentEventOptions](arkts-test-uitest-componenteventoptions-i.md) | 控件操作事件监听的扩展配置，用于指定监听过程配置及事件筛选条件。 |
-| [InputTextMode](arkts-test-uitest-inputtextmode-i.md) | 输入文本的方式。 |
-| [KeyOptions](arkts-test-uitest-keyoptions-i.md) | 表示按键操作的选项。 |
-| [PenKeyOperationOptions](arkts-test-uitest-penkeyoperationoptions-i.md) | 笔按键操作选项。 |
-| [Point](arkts-test-uitest-point-i.md) | 坐标点信息。 |
-| [Rect](arkts-test-uitest-rect-i.md) | 控件的边框信息。 |
-| [TouchOptions](arkts-test-uitest-touchoptions-i.md) | 触摸操作的通用选项。 |
-| [TouchPadSwipeOptions](arkts-test-uitest-touchpadswipeoptions-i.md) | 触摸板多指滑动手势选项相关信息。 |
-| [UIElementInfo](arkts-test-uitest-uielementinfo-i.md) | UI事件的相关信息。 |
-| [UIEventObserver](arkts-test-uitest-uieventobserver-i.md) | UI事件监听器。 |
-| [WindowChangeOptions](arkts-test-uitest-windowchangeoptions-i.md) | 窗口变化事件监听的扩展配置，用于指定监听过程配置及事件筛选条件。 |
-| [WindowFilter](arkts-test-uitest-windowfilter-i.md) | 窗口的标志属性信息。 |
+| [ComponentEventOptions](arkts-test-uitest-componenteventoptions-i.md) | Describes the extended configuration of component operation event listening,which is used to specify the listening process configuration and event filtering conditions. |
+| [InputTextMode](arkts-test-uitest-inputtextmode-i.md) | Describes the text input mode. |
+| [KeyOptions](arkts-test-uitest-keyoptions-i.md) | Represents the options for key operations. |
+| [PenKeyOperationOptions](arkts-test-uitest-penkeyoperationoptions-i.md) | Pen key operation options. |
+| [Point](arkts-test-uitest-point-i.md) | Represents the point on the device screen. |
+| [Rect](arkts-test-uitest-rect-i.md) | Represents the rectangle area on the device screen. |
+| [TouchOptions](arkts-test-uitest-touchoptions-i.md) | Common options for touch operations. |
+| [TouchPadSwipeOptions](arkts-test-uitest-touchpadswipeoptions-i.md) | Describes information about the touchpad swipe gesture option. |
+| [UIElementInfo](arkts-test-uitest-uielementinfo-i.md) | Provides information about the UI event. |
+| [UIEventObserver](arkts-test-uitest-uieventobserver-i.md) | Defines a UI event listener, which is used to listen for various events on the UI, including the display of the  **Toast** and **Dialog** components, window change event, and component operation event. An instance can be created using {@link Driver#createUIEventObserver}. |
+| [WindowChangeOptions](arkts-test-uitest-windowchangeoptions-i.md) | Describes the extended configuration of window change event listening,which is used to specify the listening process configuration and event filtering conditions. |
+| [WindowFilter](arkts-test-uitest-windowfilter-i.md) | Provides the flag attributes of this window. |
 
 ### Enums
 
 | Name | Description |
 | --- | --- |
-| [ComponentEventType](arkts-test-uitest-componenteventtype-e.md) | 支持监听的控件操作事件类型。 |
-| [DisplayRotation](arkts-test-uitest-displayrotation-e.md) | 设备显示器的显示方向。 |
-| [MatchPattern](arkts-test-uitest-matchpattern-e.md) | 控件属性支持的匹配模式。 |
-| [MouseButton](arkts-test-uitest-mousebutton-e.md) | 模拟注入的鼠标按钮。 |
-| [PenKey](arkts-test-uitest-penkey-e.md) | 笔按键类型枚举。 |
-| [PenKeyOperation](arkts-test-uitest-penkeyoperation-e.md) | 笔按键操作类型枚举。 |
-| [PenMode](arkts-test-uitest-penmode-e.md) | 笔模式枚举。 |
-| [ResizeDirection](arkts-test-uitest-resizedirection-e.md) | 窗口调整大小的方向。 |
-| [UiDirection](arkts-test-uitest-uidirection-e.md) | 进行抛滑等UI操作时的方向。 |
-| [WindowChangeType](arkts-test-uitest-windowchangetype-e.md) | 支持监听的窗口变化事件类型。 |
-| [WindowMode](arkts-test-uitest-windowmode-e.md) | 窗口的窗口模式。 |
+| [ComponentEventType](arkts-test-uitest-componenteventtype-e.md) | Enumerates the component operation event types that can be listened for. |
+| [DisplayRotation](arkts-test-uitest-displayrotation-e.md) | Describes the display rotation of the device. |
+| [MatchPattern](arkts-test-uitest-matchpattern-e.md) | Enumerates the match patterns supported for component attributes. |
+| [MouseButton](arkts-test-uitest-mousebutton-e.md) | Describes the injected simulated mouse button. |
+| [PenKey](arkts-test-uitest-penkey-e.md) | Pen key type enum. |
+| [PenKeyOperation](arkts-test-uitest-penkeyoperation-e.md) | Pen key operation type enum. |
+| [PenMode](arkts-test-uitest-penmode-e.md) | Pen mode enum. |
+| [ResizeDirection](arkts-test-uitest-resizedirection-e.md) | Enumerates the directions in which a window can be resized. |
+| [UiDirection](arkts-test-uitest-uidirection-e.md) | Describes the direction of a UI operation such as fling. |
+| [WindowChangeType](arkts-test-uitest-windowchangetype-e.md) | Enumerates the window change event types that can be listened for. |
+| [WindowMode](arkts-test-uitest-windowmode-e.md) | Enumerates the window modes. |
 

@@ -1,6 +1,6 @@
 # ScrollAnimationOptions
 
-自定义滚动动效的参数选项。
+Provides parameters for customizing scroll animations.
 
 **Since:** 23
 
@@ -16,7 +16,7 @@
 canOverScroll?: boolean
 ```
 
-设置滚动动画滚动到边界后，是否转换成越界回弹动画。&lt;p&gt;&lt;strong&gt;说明&lt;/strong&gt;。&lt;br&gt;仅在设置为true，且组件的edgeEffect设置为EdgeEffect.Spring时，使用动画滚动到边界会转换为越界回弹动画，设置为false时，滚动到边界会直接停止动画，不会转换为越界回弹动画。&lt;/p&gt;
+Whether to enable overscroll.&lt;p&gt;&lt;strong&gt;NOTE&lt;/strong&gt;.&lt;br&gt; Scrolling can exceed the boundary and initiate a bounce animation when this parameter is set to &lt;em&gt;true&lt;/em&gt;,and the component's &lt;em&gt;edgeEffect&lt;/em&gt; attribute is set to EdgeEffect.Spring.&lt;/p&gt;
 
 **Type:** boolean
 
@@ -38,7 +38,7 @@ canOverScroll?: boolean
 curve?: Curve | ICurve
 ```
 
-设置滚动曲线。
+Scrolling curve.
 
 **Type:** [Curve](arkts-arkui-curve-e.md) \| ICurve
 
@@ -60,7 +60,7 @@ curve?: Curve | ICurve
 duration?: int
 ```
 
-设置滚动时长。&lt;p&gt;&lt;strong&gt;说明&lt;/strong&gt;。取值限定为整数。&lt;br&gt;设置为小于0的值时，按默认值显示。&lt;/p&gt;
+Scrolling duration.&lt;p&gt;&lt;strong&gt;NOTE&lt;/strong&gt;.The value should be an integer.&lt;br&gt;A value less than 0 evaluates to the default value.&lt;/p&gt;
 
 **Type:** int
 

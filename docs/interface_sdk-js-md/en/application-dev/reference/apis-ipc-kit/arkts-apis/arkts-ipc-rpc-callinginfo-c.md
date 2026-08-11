@@ -1,6 +1,6 @@
 # CallingInfo
 
-IPC上下文信息，包括PID和UID、本端和对端设备ID、检查接口调用是否在同一设备上。
+Defines the IPC context, including the PID and UID, local and remote device IDs, and whether the API is invoked on  the same device.
 
 **Since:** 23
 
@@ -22,7 +22,7 @@ import { rpc } from 'kits/@kit.IPCKit';
 readonly callerPid: number
 ```
 
-调用者的PID，仅IPC场景有效。
+PID of the caller.callerPid is valid only when the {@link isLocalCalling} is true. Otherwise callerPid is invalid
 
 **Type:** number
 
@@ -42,7 +42,7 @@ readonly callerPid: number
 readonly callerTokenId: number
 ```
 
-调用者的TokenId，仅IPC场景有效。
+Token ID of the caller.callerTokenId is valid only when the {@link isLocalCalling} is true. Otherwise callerTokenId is invalid.
 
 **Type:** number
 
@@ -62,7 +62,7 @@ readonly callerTokenId: number
 readonly callerUid: number
 ```
 
-调用者的UID，仅IPC场景有效。
+UID of the caller.callerUid is valid only when the {@link isLocalCalling} is true. Otherwise callerUid is invalid.
 
 **Type:** number
 
@@ -82,7 +82,7 @@ readonly callerUid: number
 readonly isLocalCalling: boolean
 ```
 
-当前通信对端是否为本设备进程。true：调用在同一台设备（IPC场景），false：调用未在同一台设备（RPC场景）。
+Whether the peer end of the current communication is a process on the local device. Returns **true** if the local  and peer processes are on the same device; returns **false** otherwise.
 
 **Type:** boolean
 
@@ -102,7 +102,7 @@ readonly isLocalCalling: boolean
 readonly localDeviceId: string
 ```
 
-本端设备的设备ID，仅RPC场景有效。
+Local device ID. This parameter is valid only in RPC scenarios.localDeviceId is valid only when the {@link isLocalCalling} is false. Otherwise localDeviceId is invalid.
 
 **Type:** string
 
@@ -122,7 +122,7 @@ readonly localDeviceId: string
 readonly remoteDeviceId: string
 ```
 
-对端设备的设备ID，仅RPC场景有效。
+Remote device ID. This parameter is valid only in RPC scenarios.remoteDeviceId is valid only when the {@link isLocalCalling} is false. Otherwise remoteDeviceId is invalid.
 
 **Type:** string
 

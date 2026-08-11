@@ -1,6 +1,6 @@
 # CaptureEndInfo
 
-拍照停止信息。
+Describes the capture end information.
 
 **Since:** 10
 
@@ -22,7 +22,7 @@ import { camera } from 'kits/@kit.CameraKit';
 captureId: int
 ```
 
-拍照的ID。
+ID of this capture action.
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
@@ -42,7 +42,7 @@ captureId: int
 frameCount: int
 ```
 
-帧数。
+Number of frames captured.
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 

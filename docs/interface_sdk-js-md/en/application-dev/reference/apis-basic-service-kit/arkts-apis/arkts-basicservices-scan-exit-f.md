@@ -12,7 +12,7 @@ import { scan } from 'kits/@kit.BasicServicesKit';
 function exit(): Promise<void>
 ```
 
-退出扫描服务。使用Promise异步回调。
+Exits the scan service. This API uses a promise to return the result.
 
 **Since:** 20
 
@@ -28,13 +28,13 @@ function exit(): Promise<void>
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise对象，无返回结果。 |
+| Promise&lt;void&gt; | Promise that returns no value. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 201 | Permission denied. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
 
 ## Examples
 

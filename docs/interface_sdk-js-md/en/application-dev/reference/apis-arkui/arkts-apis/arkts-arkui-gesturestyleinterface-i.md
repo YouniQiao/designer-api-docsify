@@ -1,6 +1,6 @@
 # GestureStyleInterface
 
-定义事件手势接口。
+Defines the Gesture Events.
 
 **Since:** 12
 
@@ -16,7 +16,7 @@
 onClick?: Callback<ClickEvent>
 ```
 
-设置点击事件。
+Callback for click events.
 
 **Type:** [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;ClickEvent&gt;
 
@@ -38,7 +38,7 @@ onClick?: Callback<ClickEvent>
 onLongPress?: Callback<GestureEvent>
 ```
 
-设置长按事件。
+Callback for long press events.
 
 **Type:** [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;GestureEvent&gt;
 
@@ -60,7 +60,7 @@ onLongPress?: Callback<GestureEvent>
 onTouch?: Callback<TouchEvent>
 ```
 
-设置触摸事件。
+Callback for touch events.
 
 **Type:** [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;TouchEvent&gt;
 

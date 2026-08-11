@@ -124,7 +124,7 @@ URL entry mode.
 ONE_TIME_CODE = 14
 ```
 
-一次性验证码
+One time code mode.
 
 **Since:** 24
 

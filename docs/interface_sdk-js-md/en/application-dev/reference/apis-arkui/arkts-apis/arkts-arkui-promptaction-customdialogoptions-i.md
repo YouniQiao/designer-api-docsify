@@ -1,6 +1,6 @@
 # CustomDialogOptions
 
-自定义弹窗的内容，继承自[BaseDialogOptions](../../../reference/apis-arkui/js-apis-promptAction copy.md#basedialogoptions11)。
+Dialog's custom content options
 
 **Inheritance/Implementation:** CustomDialogOptions extends [BaseDialogOptions](arkts-arkui-promptaction-basedialogoptions-i.md)
 
@@ -24,7 +24,7 @@ import { LevelMode, ImmersiveMode, LevelOrder } from 'kits/@kit.ArkUI';
 backgroundBlurStyle?: BlurStyle
 ```
 
-弹窗背板模糊材质。&lt;br/&gt;默认值：从API版本26.0.0开始，为BlurStyle.NONE，API版本26.0.0之前，为BlurStyle.COMPONENT_ULTRA_THICK。&lt;br/&gt;**说明：** &lt;br/&gt;设置为BlurStyle.NONE即可关闭背景虚化。当设置了backgroundBlurStyle为非NONE值时，则不要设置backgroundColor，否则颜色显示将不符合预期效果。
+Defines the customDialog's background blur Style
 
 **Type:** [BlurStyle](../arkts-components/arkts-arkui-blurstyle-e.md)
 
@@ -46,7 +46,7 @@ backgroundBlurStyle?: BlurStyle
 backgroundColor?: ResourceColor
 ```
 
-设置弹窗背板颜色。&lt;br/&gt;默认值：Color.Transparent&lt;br/&gt;**说明：** &lt;br/&gt;当设置了backgroundColor为非透明色时，backgroundBlurStyle需要设置为BlurStyle.NONE，否则颜色显示将不符合预期效果。
+Defines the custom dialog's background color.
 
 **Type:** [ResourceColor](arkts-arkui-resourcecolor-t.md)
 
@@ -66,7 +66,7 @@ backgroundColor?: ResourceColor
 borderColor?: ResourceColor | EdgeColors
 ```
 
-设置弹窗背板的边框颜色。&lt;br/&gt;默认值：Color.Black&lt;br/&gt; 如果使用borderColor属性，需要和borderWidth属性一起使用。
+Defines the custom dialog's border color.
 
 **Type:** [ResourceColor](arkts-arkui-resourcecolor-t.md) \| EdgeColors
 
@@ -86,7 +86,7 @@ borderColor?: ResourceColor | EdgeColors
 borderStyle?: BorderStyle | EdgeStyles
 ```
 
-设置弹窗背板的边框样式。&lt;br/&gt;默认值：BorderStyle.Solid&lt;br/&gt; 如果使用borderStyle属性，需要和borderWidth属性一起使用。
+Defines the custom dialog's border style.
 
 **Type:** [BorderStyle](arkts-arkui-borderstyle-e.md) \| EdgeStyles
 
@@ -106,7 +106,7 @@ borderStyle?: BorderStyle | EdgeStyles
 borderWidth?: Dimension | EdgeWidths
 ```
 
-设置弹窗背板的边框宽度。&lt;br /&gt;可分别设置4个边框宽度。&lt;br /&gt;默认值：0 &lt;br /&gt;单位：vp &lt;br /&gt; 百分比参数方式：以父元素弹窗宽的百分比来设置弹窗的边框宽度。&lt;br /&gt;当弹窗左边框和右边框大于弹窗宽度，弹窗上边框和下边框大于弹窗高度，显示可能不符合预期。
+Defines the custom dialog's border width.
 
 **Type:** [Dimension](arkts-arkui-dimension-t.md) \| EdgeWidths
 
@@ -126,7 +126,7 @@ borderWidth?: Dimension | EdgeWidths
 builder: CustomBuilder
 ```
 
-设置自定义弹窗的内容。&lt;br/&gt;**说明：** &lt;br/&gt;builder需要赋值为箭头函数，格式如下：() => { this.XXX() }，其中XXX是内部builder名。&lt;br/&gt;全局builder需要在组件内部创建，并在内部builder中调用。&lt;br/&gt;builder根节点宽高百分比相对弹窗容器大小。&lt;br/&gt;builder非根节点宽高百分比相对父节点大小。
+Allow developer custom dialog's content.
 
 **Type:** [CustomBuilder](../arkts-components/arkts-arkui-custombuilder-t.md)
 
@@ -146,7 +146,7 @@ builder: CustomBuilder
 cornerRadius?: Dimension | BorderRadiuses
 ```
 
-设置背板的圆角半径。&lt;br /&gt;可分别设置4个圆角的半径。&lt;br /&gt;默认值：{ topLeft: '32vp', topRight: '32vp', bottomLeft: '32vp', bottomRight: '32vp' }&lt;br /&gt; 圆角大小受组件尺寸限制，最大值为组件宽或高的一半，若值为负，则按照默认值处理。 &lt;br /&gt; 百分比参数方式：以父元素弹窗宽和高的百分比来设置弹窗的圆角。
+Defines the custom dialog's corner radius.
 
 **Type:** [Dimension](arkts-arkui-dimension-t.md) \| BorderRadiuses
 
@@ -166,7 +166,7 @@ cornerRadius?: Dimension | BorderRadiuses
 height?: Dimension
 ```
 
-设置弹窗背板的高度。&lt;br /&gt;**说明：**&lt;br /&gt;- 弹窗高度默认最大值：0.9 *（窗口高度 - 安全区域）。&lt;br /&gt;- 百分比参数方式：弹窗参考高度为（窗口高度 - 安全区域），在此基础上调小或调大。
+Defines the custom dialog's height.
 
 **Type:** [Dimension](arkts-arkui-dimension-t.md)
 
@@ -186,7 +186,7 @@ height?: Dimension
 shadow?: ShadowOptions | ShadowStyle
 ```
 
-设置弹窗背板的阴影。&lt;br /&gt;当设备为2in1时，默认场景下获焦阴影值为ShadowStyle.OUTER_FLOATING_MD，失焦为ShadowStyle.OUTER_FLOATING_SM。其他设备默认无阴影。
+Defines the custom dialog's shadow.
 
 **Type:** [ShadowOptions](../arkts-components/arkts-arkui-shadowoptions-i.md) \| ShadowStyle
 
@@ -206,7 +206,7 @@ shadow?: ShadowOptions | ShadowStyle
 width?: Dimension
 ```
 
-设置弹窗背板的宽度。&lt;br /&gt;**说明：**&lt;br&gt;- 弹窗宽度默认最大值：400vp &lt;br /&gt;- 百分比参数方式：弹窗参考宽度基于所在窗口的宽度的基础上调整。
+Defines the custom dialog's width.
 
 **Type:** [Dimension](arkts-arkui-dimension-t.md)
 

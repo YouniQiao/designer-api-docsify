@@ -1,6 +1,6 @@
 # VerticalAlignParam
 
-定义相对容器的垂直对齐规则。
+Defines the vertical align rule of relative container.
 
 **Since:** 23
 

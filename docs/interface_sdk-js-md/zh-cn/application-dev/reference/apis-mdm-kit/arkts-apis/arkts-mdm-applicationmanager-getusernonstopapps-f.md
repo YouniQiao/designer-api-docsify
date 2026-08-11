@@ -1,11 +1,5 @@
 # getUserNonStopApps
 
-## 导入模块
-
-```TypeScript
-import { applicationManager } from 'kits/@kit.MDMKit';
-```
-
 ## getUserNonStopApps
 
 ```TypeScript
@@ -42,29 +36,9 @@ function getUserNonStopApps(admin: Want): Array<common.ApplicationInstance>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 201 | Permission verification failed. The application does not have the permission required to call the API. |
-| 9200001 | The application is not an administrator application of the device. |
-| 9200002 | The administrator application does not have permission to manage the device. |
-
-## 示例
-
-```TypeScript
-import { applicationManager, common } from '@kit.MDMKit';
-import { Want } from '@kit.AbilityKit';
-
-let wantTemp: Want = {
-  // 需根据实际情况进行替换
-  bundleName: 'com.example.myapplication',
-  abilityName: 'EnterpriseAdminAbility'
-};
-
-try {
-  let result: Array<common.ApplicationInstance> = applicationManager.getUserNonStopApps(wantTemp);
-  console.info(`Succeeded in getting UserNonStop applications, result : ${JSON.stringify(result)}`);
-} catch(err) {
-  console.error(`Failed to get UserNonStop applications. Code: ${err.code}, message: ${err.message}`);
-}
-```
+| [201](../../errorcode-universal.md#201-权限校验失败) | Permission verification failed. The application does not have the permission required to call the API. |
+| [9200001](../errorcode-enterpriseDeviceManager.md#9200001-应用没有激活成设备管理器) | The application is not an administrator application of the device. |
+| [9200002](../errorcode-enterpriseDeviceManager.md#9200002-设备管理器权限不够) | The administrator application does not have permission to manage the device. |
 
 
 ## getUserNonStopApps
@@ -103,18 +77,24 @@ function getUserNonStopApps(admin: Want | null): Array<common.ApplicationInstanc
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 201 | Permission verification failed. The application does not have the permission required to call the API. |
-| 9200001 | The application is not an administrator application of the device. |
-| 9200002 | The administrator application does not have permission to manage the device. |
+| [201](../../errorcode-universal.md#201-权限校验失败) | Permission verification failed. The application does not have the permission required to call the API. |
+| [9200001](../errorcode-enterpriseDeviceManager.md#9200001-应用没有激活成设备管理器) | The application is not an administrator application of the device. |
+| [9200002](../errorcode-enterpriseDeviceManager.md#9200002-设备管理器权限不够) | The administrator application does not have permission to manage the device. |
 
 ## 示例
 
 ```TypeScript
 import { applicationManager, common } from '@kit.MDMKit';
+import { Want } from '@kit.AbilityKit';
+
+let wantTemp: Want = {
+  // 需根据实际情况进行替换
+  bundleName: 'com.example.myapplication',
+  abilityName: 'EnterpriseAdminAbility'
+};
 
 try {
-  // 参数需根据实际情况进行替换
-  let result: Array<common.ApplicationInstance> = applicationManager.getUserNonStopApps(null);
+  let result: Array<common.ApplicationInstance> = applicationManager.getUserNonStopApps(wantTemp);
   console.info(`Succeeded in getting UserNonStop applications, result : ${JSON.stringify(result)}`);
 } catch(err) {
   console.error(`Failed to get UserNonStop applications. Code: ${err.code}, message: ${err.message}`);

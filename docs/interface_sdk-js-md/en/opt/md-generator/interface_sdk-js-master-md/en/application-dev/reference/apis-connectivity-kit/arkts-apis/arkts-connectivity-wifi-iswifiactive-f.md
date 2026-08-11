@@ -1,0 +1,46 @@
+# isWifiActive
+
+## Modules to Import
+
+```TypeScript
+import { wifi } from 'kits/@kit.ConnectivityKit';
+```
+
+## isWifiActive
+
+```TypeScript
+function isWifiActive(): boolean
+```
+
+Queries the Wi-Fi status
+
+**Since:** 6
+
+**Deprecated since:** 9
+
+**Substitutes:** ohos.wifiManager/wifiManager.isWifiActive
+
+**Required permissions:** ohos.permission.GET_WIFI_INFO
+
+<!--Device-wifi-function isWifiActive(): boolean--><!--Device-wifi-function isWifiActive(): boolean-End-->
+
+**System capability:** SystemCapability.Communication.WiFi.STA
+
+**Return value:**
+
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| boolean |
+
+## Examples
+
+```TypeScript
+import wifi from '@ohos.wifi';
+
+try {
+  let isWifiActive = wifi.isWifiActive();
+  console.info("isWifiActive:" + isWifiActive);
+}catch(error){
+  console.error("failed:" + JSON.stringify(error));
+}
+```

@@ -1,6 +1,6 @@
 # BaselineOffsetStyle
 
-文本基线偏移量对象说明。
+Defines BaselineOffsetStyle.
 
 **Since:** 23
 
@@ -16,7 +16,7 @@
 constructor(value: LengthMetrics)
 ```
 
-文本基线偏移的构造函数。
+constructor.
 
 **Since:** 23
 
@@ -32,7 +32,7 @@ constructor(value: LengthMetrics)
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | [LengthMetrics](arkts-arkui-lengthmetrics-t.md) | Yes | 文本基线偏移量设置项。如果LengthMetrics的unit值是PERCENT，该设置不生效。 |
+| value | [LengthMetrics](arkts-arkui-lengthmetrics-t.md) | Yes | baseline offset value. |
 
 ## baselineOffset
 
@@ -40,9 +40,7 @@ constructor(value: LengthMetrics)
 readonly baselineOffset: double
 ```
 
-获取属性字符串的文本基线偏移量。
-
-单位：[vp](../../../reference/apis-arkui/arkui-ts/ts-pixel-units.md#基本像素单位)
+Get the baselineOffset value of the StyledString.The unit is vp.
 
 **Type:** double
 

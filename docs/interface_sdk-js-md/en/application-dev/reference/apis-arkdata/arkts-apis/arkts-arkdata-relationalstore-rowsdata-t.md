@@ -4,7 +4,7 @@
 type RowsData = Array<RowData>
 ```
 
-用于表示数据库表中的多行数据。
+Indicates multiple rows of data with an array.
 
 **Since:** 23
 

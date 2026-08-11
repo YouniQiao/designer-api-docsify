@@ -1,6 +1,6 @@
 # PluginModuleInfo
 
-插件的模块信息。
+Defines the module information of a plugin.
 
 **Since:** 26.0.0
 
@@ -16,7 +16,7 @@
 readonly description: string
 ```
 
-插件模块的描述信息。
+Description of the module.
 
 **Type:** string
 
@@ -34,7 +34,7 @@ readonly description: string
 readonly descriptionId: long
 ```
 
-插件模块描述的资源id值。
+Resource ID of the module description.
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：long
 
@@ -52,7 +52,7 @@ readonly descriptionId: long
 readonly moduleName: string
 ```
 
-插件模块的名称。
+Module name of the plugin.
 
 **Type:** string
 

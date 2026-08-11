@@ -1,6 +1,6 @@
 # PrintDirectionMode
 
-打印纸张方向的枚举。
+Enumerates the print direction modes.
 
 **Since:** 11
 
@@ -16,7 +16,7 @@
 DIRECTION_MODE_AUTO = 0
 ```
 
-表示自动选择纸张方向。
+Automatic.
 
 **Since:** 11
 
@@ -32,7 +32,7 @@ DIRECTION_MODE_AUTO = 0
 DIRECTION_MODE_PORTRAIT = 1
 ```
 
-表示纵向打印。
+Portrait mode.
 
 **Since:** 11
 
@@ -48,7 +48,7 @@ DIRECTION_MODE_PORTRAIT = 1
 DIRECTION_MODE_LANDSCAPE = 2
 ```
 
-表示横向打印。
+Landscape mode.
 
 **Since:** 11
 

@@ -178,7 +178,7 @@ getApplicationContext(): Context
 
 | 类型 | 说明 |
 | --- | --- |
-| [Context](../../apis-mind-spore-lite-kit/arkts-apis/arkts-mindsporelite-mindsporelite-context-i.md) | 返回应用上下文信息。 |
+| [Context](../../apis-arkui/arkts-components/arkts-arkui-context-t.md) | 返回应用上下文信息。 |
 
 ## getApplicationInfo
 

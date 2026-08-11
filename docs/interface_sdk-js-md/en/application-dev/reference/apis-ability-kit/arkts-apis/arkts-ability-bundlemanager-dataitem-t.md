@@ -4,7 +4,7 @@
 export type DataItem = _HapModuleInfo.DataItem
 ```
 
-模块配置的路由表中的自定义数据。
+Defines the user-defined data in the routing table configuration of the module.
 
 **Since:** 12
 

@@ -12,7 +12,7 @@ import { buffer } from 'kits/@kit.ArkTS';
 function isBuffer(obj: Object): boolean
 ```
 
-判断`obj`是否为Buffer。
+Checks whether the specified object is a **Buffer** object.
 
 **Since:** 9
 
@@ -28,13 +28,13 @@ function isBuffer(obj: Object): boolean
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| obj | Object | Yes | 要判断是否为Buffer的对象。 |
+| obj | Object | Yes | Object to check. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| boolean | 如果obj是Buffer，则返回true，否则返回false。 |
+| boolean | Check result. The value **true** is returned if the object is a **Buffer** object; otherwise, **false** is returned. |
 
 ## Examples
 

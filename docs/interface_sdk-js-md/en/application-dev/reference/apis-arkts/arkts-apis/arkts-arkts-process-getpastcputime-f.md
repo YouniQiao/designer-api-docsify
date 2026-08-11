@@ -12,7 +12,7 @@ import { process } from 'kits/@kit.ArkTS';
 function getPastCpuTime(): number
 ```
 
-获取进程启动到当前时间的 CPU 时间（以毫秒为单位）。
+Obtains the CPU time (in milliseconds) from the time the process starts to the current time.
 
 **Since:** 8
 
@@ -28,7 +28,7 @@ function getPastCpuTime(): number
 
 | Type | Description |
 | --- | --- |
-| number | 返回经过的 CPU 时间。单位：毫秒。 |
+| number | CPU time obtained, in milliseconds. |
 
 ## Examples
 

@@ -1,6 +1,6 @@
 # QualityPrioritization
 
-枚举，录像质量优先级。
+Enumerates the priority levels for video recording quality.
 
 **Since:** 14
 
@@ -16,7 +16,7 @@
 HIGH_QUALITY = 0
 ```
 
-高录像质量。
+Prioritizes high-quality video recording.
 
 **Since:** 14
 
@@ -34,7 +34,7 @@ HIGH_QUALITY = 0
 POWER_BALANCE = 1
 ```
 
-功耗平衡的录像质量。
+Prioritizes video recording quality while balancing power consumption.
 
 **Since:** 14
 

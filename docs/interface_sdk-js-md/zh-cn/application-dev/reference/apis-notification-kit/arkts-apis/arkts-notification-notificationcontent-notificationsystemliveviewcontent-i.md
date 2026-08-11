@@ -24,7 +24,7 @@ button?: NotificationButton
 
 实况通知的按钮。默认为空。
 
-**类型：** [NotificationButton](arkts-notification-notificationcontent-notificationbutton-i.md)
+**类型：** [NotificationButton](arkts-notification-notificationmanager-notificationbutton-t.md)
 
 **起始版本：** 11
 

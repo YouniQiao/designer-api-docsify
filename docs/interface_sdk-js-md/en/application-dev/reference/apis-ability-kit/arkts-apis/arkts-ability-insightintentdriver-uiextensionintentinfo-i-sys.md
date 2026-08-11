@@ -1,6 +1,7 @@
 # UIExtensionIntentInfo (System API)
 
-用于描述[使用配置文件开发的意图](../../../application-models/insight-intent-config-development.md)所绑定的UIExtensionAbility组件信息。
+Describes the information of the UIExtensionAbility bound to the  
+[intent developed using a configuration file](../../../application-models/insight-intent-config-development.md).
 
 **Since:** 23
 
@@ -24,7 +25,7 @@ import { insightIntentDriver } from 'kits/@kit.AbilityKit';
 readonly abilityName: string
 ```
 
-意图绑定的UIAbility组件名称。
+Name of the UIAbility bound to the intent.
 
 **Type:** string
 

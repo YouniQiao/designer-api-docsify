@@ -6,7 +6,7 @@
 function unsubscribe(subscriber: NotificationSubscriber, callback: AsyncCallback<void>): void
 ```
 
-取消订阅（callbcak形式）。
+Unsubscribes from a notification. This API uses an asynchronous callback to return the result.
 
 **Since:** 7
 
@@ -28,8 +28,8 @@ function unsubscribe(subscriber: NotificationSubscriber, callback: AsyncCallback
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| subscriber | [NotificationSubscriber](arkts-notification-notificationsubscriber-notificationsubscriber-i-sys.md) | Yes | 通知订阅对象。 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | 取消订阅动作回调函数。 |
+| subscriber | [NotificationSubscriber](arkts-notification-notificationsubscriber-notificationsubscriber-i-sys.md) | Yes | Notification subscriber. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. |
 
 
 ## unsubscribe
@@ -38,7 +38,7 @@ function unsubscribe(subscriber: NotificationSubscriber, callback: AsyncCallback
 function unsubscribe(subscriber: NotificationSubscriber): Promise<void>
 ```
 
-取消订阅（Promise形式）。
+Unsubscribes from a notification. This API uses a promise to return the result.
 
 **Since:** 7
 
@@ -60,11 +60,11 @@ function unsubscribe(subscriber: NotificationSubscriber): Promise<void>
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| subscriber | [NotificationSubscriber](arkts-notification-notificationsubscriber-notificationsubscriber-i-sys.md) | Yes | 通知订阅对象。 |
+| subscriber | [NotificationSubscriber](arkts-notification-notificationsubscriber-notificationsubscriber-i-sys.md) | Yes | Notification subscriber. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | 无返回结果的Promise对象。 |
+| Promise&lt;void&gt; | Promise that returns no value. |
 

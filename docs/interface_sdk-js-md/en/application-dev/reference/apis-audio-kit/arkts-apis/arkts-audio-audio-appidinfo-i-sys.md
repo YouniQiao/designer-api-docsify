@@ -1,6 +1,6 @@
 # AppIdInfo (System API)
 
-描述app id信息。
+Describes app ID information.
 
 **Since:** 26.0.0
 
@@ -24,7 +24,7 @@ import { audio } from 'kits/@kit.AudioKit';
 appFullTokenId: long
 ```
 
-应用完整令牌ID。
+App full token ID.
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：long
 
@@ -46,7 +46,7 @@ appFullTokenId: long
 appPid: int
 ```
 
-应用pid。
+App PID.
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
@@ -68,7 +68,7 @@ appPid: int
 appTokenId: int
 ```
 
-应用令牌ID。
+App token ID.
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
@@ -90,7 +90,7 @@ appTokenId: int
 appUid: int
 ```
 
-应用uid。
+App UID.
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 

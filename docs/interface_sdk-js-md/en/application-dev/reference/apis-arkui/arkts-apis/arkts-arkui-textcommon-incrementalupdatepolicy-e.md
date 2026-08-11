@@ -1,6 +1,6 @@
 # IncrementalUpdatePolicy
 
-文本渲染的增量更新策略。
+Defines incremental update policies for text rendering.
 
 **Since:** 26.0.0
 
@@ -16,7 +16,7 @@
 NONE = 0
 ```
 
-不启用增量更新，采用全量布局渲染。
+Disable incremental updates. Full layout rendering is used.
 
 **Since:** 26.0.0
 
@@ -34,7 +34,7 @@ NONE = 0
 PARAGRAPH_CACHE = 1
 ```
 
-启用增量更新，使用段落级缓存。该策略生效的前提是文本绑定的属性字符串对象保持不变，若属性字符串对象发生变化则无法命中缓存。
+Enable incremental updates with paragraph-level cache.
 
 **Since:** 26.0.0
 

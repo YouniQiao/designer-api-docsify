@@ -1,6 +1,6 @@
 # VisibilityChangeReason
 
-NavDestination可见性发生变化的原因。
+The reason of navDestination be shown or hidden.
 
 **Since:** 23
 
@@ -16,7 +16,7 @@ NavDestination可见性发生变化的原因。
 TRANSITION = 0
 ```
 
-通过页面路由改变可见性生命周期
+The visibility lifecycle changes through page navigation.
 
 **Since:** 23
 
@@ -34,7 +34,7 @@ TRANSITION = 0
 CONTENT_COVER = 1
 ```
 
-通过绑定覆盖页面改变可见性生命周期
+The visibility lifecycle changes through bindContentCover.
 
 **Since:** 23
 
@@ -52,7 +52,7 @@ CONTENT_COVER = 1
 APP_STATE = 2
 ```
 
-通过应用切换前后台状态变化改变可见性生命周期
+The visibility lifecycle changes through the states of application (foreground or background).
 
 **Since:** 23
 

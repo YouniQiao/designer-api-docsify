@@ -1,11 +1,5 @@
 # getInsightIntentInfoByBundleName（系统接口）
 
-## 导入模块
-
-```TypeScript
-import { insightIntentDriver } from 'kits/@kit.AbilityKit';
-```
-
 ## getInsightIntentInfoByBundleName
 
 ```TypeScript
@@ -45,7 +39,7 @@ function getInsightIntentInfoByBundleName(bundleName: string, intentFlags: int):
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 16000050 | Internal error. Possible causes: 1. Failed to connect to the system service; 2. The system service fails to communicate with the dependency module. |
-| 201 | Permission denied. |
-| 202 | Not system application. |
+| [16000050](../errorcode-ability.md#16000050-内部错误) | Internal error. Possible causes: 1. Failed to connect to the system service; 2. The system service fails to communicate with the dependency module. |
+| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not system application. |
 

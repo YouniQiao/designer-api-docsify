@@ -12,7 +12,7 @@ import { adminManager } from 'kits/@kit.MDMKit';
 function startAdminProvision(admin: Want, type: AdminType, context: common.Context, parameters: Record<string, string>): void
 ```
 
-设备管理应用拉起BYOD管理员激活页面进行激活。
+Enables the device administrator application to open a page for the BYOD administrator to perform activation.
 
 **Since:** 15
 
@@ -30,17 +30,17 @@ function startAdminProvision(admin: Want, type: AdminType, context: common.Conte
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| admin | [Want](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-want-want-c.md) | Yes | 企业设备管理扩展组件。Want中必须包含企业设备管理扩展能力的abilityName和所在应用的bundleName。 |
-| type | [AdminType](arkts-mdm-adminmanager-admintype-e.md) | Yes | 激活的设备管理应用类型，仅支持ADMIN_TYPE_BYOD类型。 |
-| context | common.Context | Yes | 管理应用的上下文信息。 |
-| parameters | [Record](../../apis-default/arkts-apis/arkts-record-t.md)&lt;string, string&gt; | Yes | 自定义参数信息，其中Key值必须包含："activateId"，可以包含"customizedInfo"、" localDeactivationPolicy"。&lt;br/&gt;- activateId：项目激活ID。&lt;br/&gt;- customizedInfo：企业自定义信息。&lt;br/&gt;- localDeactivationPolicy： 从API version 22开始支持，本地延迟取消激活时间（单位：小时）。 |
+| admin | [Want](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-want-want-c.md) | Yes | EnterpriseAdminExtensionAbility. **Want** must contain the ability name of the EnterpriseAdminExtensionAbility and the bundle name of the application. |
+| type | [AdminType](arkts-mdm-adminmanager-admintype-e.md) | Yes | Type of the activated device administrator application. Only the **ADMIN_TYPE_BYOD** type is supported. |
+| context | common.Context | Yes | Context information of the administrator application. |
+| parameters | [Record](../../apis-default/arkts-apis/arkts-record-t.md)&lt;string, string&gt; | Yes | Custom parameters. The key value must contain **activateId** and may optionally include **customizedInfo** and **localDeactivationPolicy**. &lt;br&gt;- **activateId**: project activation ID. &lt;br&gt;- **customizedInfo**: enterprise-defined information. &lt;br&gt;- **localDeactivationPolicy**: local deactivation delay (unit: hour). This parameter is supported since API version 22. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
-| 201 | Permission verification failed. The application does not have the permission required to call the API. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed. The application does not have the permission required to call the API. |
 
 ## Examples
 

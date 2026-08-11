@@ -4,7 +4,7 @@
 type BatchInsertFn = (uri: string, valueBuckets: Array<ValuesBucket>, callback: AsyncCallback<int>) => void
 ```
 
-批量插入操作的属性类型。
+Callback function called when inserting multiple data records into the database.
 
 **Since:** 23
 

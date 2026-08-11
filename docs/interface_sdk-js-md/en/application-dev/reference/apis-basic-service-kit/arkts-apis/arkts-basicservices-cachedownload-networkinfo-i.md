@@ -1,6 +1,6 @@
 # NetworkInfo
 
-预下载的网络信息。
+Describes the pre-downloaded network information.
 
 **Since:** 20
 
@@ -22,7 +22,7 @@ import { cacheDownload } from 'kits/@kit.BasicServicesKit';
 readonly dnsServers: string[]
 ```
 
-下载资源时使用的dns服务器列表。
+DNS servers used for downloading resources.
 
 **Type:** string[]
 
@@ -40,7 +40,7 @@ readonly dnsServers: string[]
 readonly ip?: string
 ```
 
-下载资源时url的ip地址。当dns解析失败时，ip为undefined。
+IP address of the URL used for downloading resources. When the DNS resolution fails, the IP address is undefined.
 
 **Type:** string
 

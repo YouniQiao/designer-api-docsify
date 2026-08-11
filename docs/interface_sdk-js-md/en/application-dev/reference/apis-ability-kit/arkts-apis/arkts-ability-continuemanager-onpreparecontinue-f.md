@@ -12,7 +12,7 @@ import { continueManager } from 'kits/@kit.AbilityKit';
 function onPrepareContinue(context: Context, callback: AsyncCallback<ContinueResultInfo>): void
 ```
 
-prepareContinue 事件，当在 continueType 中配置了“ContinueQuickStart”功能时，即可获取
+Register prepareContinue event, when the ability is configured with 'ContinueQuickStart' in the continueType, then can get the result of LaunchReason.PREPARE_CONTINUATION.
 
 **Since:** 23
 
@@ -35,5 +35,5 @@ prepareContinue 事件，当在 continueType 中配置了“ContinueQuickStart�
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 16300501 | the system ability work abnormally. |
+| [16300501](../errorcode-DistributedSchedule.md#16300501-the-system-ability-works-abnormally) | the system ability work abnormally. |
 

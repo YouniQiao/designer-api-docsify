@@ -12,7 +12,7 @@ import { camera } from 'kits/@kit.CameraKit';
 function getCameraManager(context: Context): CameraManager
 ```
 
-获取相机管理器实例，同步返回结果。
+Obtains a CameraManager instance. This API returns the result synchronously.
 
 **Since:** 10
 
@@ -28,20 +28,20 @@ function getCameraManager(context: Context): CameraManager
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| context | [Context](../../apis-arkui/arkts-components/arkts-arkui-context-t.md) | Yes | 应用上下文。 |
+| context | [Context](../../apis-arkui/arkts-components/arkts-arkui-context-t.md) | Yes | Application context. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [CameraManager](arkts-camera-camera-cameramanager-i.md) | 相机管理器。 |
+| [CameraManager](arkts-camera-camera-cameramanager-i.md) | CameraManager instance obtained. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 7400101 | Parameter missing or parameter type incorrect. |
-| 7400201 | Camera service fatal error. |
+| [7400101](../errorcode-camera.md#7400101-invalid-parameter) | Parameter missing or parameter type incorrect. |
+| [7400201](../errorcode-camera.md#7400201-camera-service-error) | Camera service fatal error. |
 
 ## Examples
 

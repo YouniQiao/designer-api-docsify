@@ -1,6 +1,6 @@
 # ReaderIteratorResult
 
-文件读取迭代器返回结果，支持ReaderIterator接口使用。
+Represents the information obtained by the **ReaderIterator** object.
 
 **Since:** 23
 
@@ -22,7 +22,7 @@ import { Options, ReaderIteratorResult, Watcher, ReadTextOptions, WatchEventList
 done: boolean
 ```
 
-迭代器是否已完成迭代。true：已完成迭代；false：未完成迭代。
+Whether the iteration is complete. The value **true** means the iteration is complete; the value **false** means the opposite.
 
 **Type:** boolean
 
@@ -40,7 +40,7 @@ done: boolean
 value: string
 ```
 
-逐行读取的文件文本内容。
+File text content read line by line.
 
 **Type:** string
 

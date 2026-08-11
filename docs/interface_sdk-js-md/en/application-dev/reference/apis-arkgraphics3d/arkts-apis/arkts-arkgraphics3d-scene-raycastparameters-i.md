@@ -1,6 +1,6 @@
 # RaycastParameters
 
-如何执行射线检测.
+How a raycast should be performed.
 
 **Since:** 20
 
@@ -16,7 +16,7 @@
 rootNode?: Node
 ```
 
-如果定义，则仅搜索该节点层级下的节点如果未定义，则搜索场景中的所有节点
+If defined, search only the nodes in the hierarchy under this node If undefined, search all the nodes in the scene
 
 **Type:** [Node](arkts-arkgraphics3d-scenenodes-node-i.md)
 

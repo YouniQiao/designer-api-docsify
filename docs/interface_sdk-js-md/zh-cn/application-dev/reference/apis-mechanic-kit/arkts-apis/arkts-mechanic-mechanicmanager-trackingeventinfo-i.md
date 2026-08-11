@@ -10,12 +10,6 @@ Tracking event callback info.
 
 **系统能力：** SystemCapability.Mechanic.Core
 
-## 导入模块
-
-```TypeScript
-import { mechanicManager } from 'kits/@kit.MechanicKit';
-```
-
 ## event
 
 ```TypeScript

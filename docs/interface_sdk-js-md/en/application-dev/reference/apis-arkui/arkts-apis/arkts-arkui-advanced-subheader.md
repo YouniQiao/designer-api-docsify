@@ -1,12 +1,12 @@
 # @ohos.arkui.advanced.SubHeader
 
-###### 子组件
- 无
- > **说明：**
+###### Child Components
+ Not supported
+ > **NOTE**
  >
- > 不支持设置文本类型的子组件。
- ###### 事件
- 不支持[通用事件](../../apis-arkui/arkts-components/arkts-arkui-common-attribute.md)。
+ > Text-related settings are not supported.
+ ###### Events
+ The [universal events](../../apis-arkui/arkts-components/arkts-arkui-common-attribute.md) are not supported.
 
 
 ## Modules to Import

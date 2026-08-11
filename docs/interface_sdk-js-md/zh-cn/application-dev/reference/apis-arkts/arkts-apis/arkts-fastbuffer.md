@@ -14,12 +14,6 @@ FastBuffer通过from构造时，仅支持FastBuffer、Uint8Array、string、Arra
 
 **系统能力：** SystemCapability.Utils.Lang
 
-## 导入模块
-
-```TypeScript
-import { fastbuffer } from 'kits/@kit.ArkTS';
-```
-
 ## 汇总
 
 ### 函数
@@ -38,7 +32,7 @@ import { fastbuffer } from 'kits/@kit.ArkTS';
 | [from](arkts-arkts-fastbuffer-from-f.md#from-3) | 根据指定编码格式的字符串，创建新的FastBuffer对象。 |
 | [isBuffer](arkts-arkts-fastbuffer-isbuffer-f.md#isbuffer) | 判断`obj`是否为FastBuffer。 |
 | [isEncoding](arkts-arkts-fastbuffer-isencoding-f.md#isencoding) | 判断`encoding`是否为支持的编码格式。 |
-| [transcode](arkts-arkts-fastbuffer-transcode-f.md#transcode) | 将FastBuffer或Uint8Array对象从fromEnc编码转换为toEnc编码。 |
+| [transcode](arkts-arkts-fastbuffer-transcode-f.md#transcode) | 将FastBuffer或Uint8Array对象从fromEnc编码转换为toEnc编码。适用于需要在不同编码格式之间转换数据的场景。例如，将UTF-8编码的数据转换为Latin1编码，以便在仅支持ASCII的系统中处理。 |
 
 ### 类
 

@@ -1,6 +1,6 @@
 # PasswordAlgs
 
-处理口令数据使用的加密算法。
+Enumerates the encryption algorithms used to process password data.
 
 **Since:** 26.0.0
 
@@ -16,7 +16,7 @@
 SCRYPT_HKDF_AES = 0
 ```
 
-SCRYPT-HKDF-AES组合加密算法。
+SCRYPT-HKDF-AES combined encryption algorithm.
 
 **Since:** 26.0.0
 
@@ -34,7 +34,7 @@ SCRYPT-HKDF-AES组合加密算法。
 SCRYPT_HKDF_SM4 = 1
 ```
 
-SCRYPT-HKDF-SM4组合加密算法。
+SCRYPT-HKDF-SM4 combined encryption algorithm.
 
 **Since:** 26.0.0
 

@@ -1,6 +1,6 @@
 # UICommonEvent
 
-用于设置基础事件回调。方法入参为undefined的时候，重置对应的事件回调。
+Implements a common event callback. Passing **undefined** as the input parameter resets the corresponding event callback.
 
 **Since:** 12
 
@@ -16,7 +16,7 @@
 setOnAppear(callback: Callback<void> | undefined): void
 ```
 
-设置[onAppear](arkts-arkui-commonmethod-c.md#onappear)挂载显示事件的回调。
+Sets the callback for the [onAppear](arkts-arkui-commonmethod-c.md#onappear) event.
 
 **Since:** 12
 
@@ -34,7 +34,7 @@ setOnAppear(callback: Callback<void> | undefined): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;void&gt; \| undefined | Yes | 挂载显示事件的回调函数。 |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;void&gt; \| undefined | Yes | Callback invoked when the component appears. |
 
 ## setOnBlur
 
@@ -42,7 +42,7 @@ setOnAppear(callback: Callback<void> | undefined): void
 setOnBlur(callback: Callback<void> | undefined): void
 ```
 
-设置[onBlur](arkts-arkui-commonmethod-c.md#onblur)失焦事件的回调。
+Sets the callback for the [onBlur](arkts-arkui-commonmethod-c.md#onblur) event.
 
 **Since:** 12
 
@@ -60,7 +60,7 @@ setOnBlur(callback: Callback<void> | undefined): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;void&gt; \| undefined | Yes | 失焦事件的回调。 |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;void&gt; \| undefined | Yes | Callback for the blur event. |
 
 ## setOnClick
 
@@ -68,7 +68,7 @@ setOnBlur(callback: Callback<void> | undefined): void
 setOnClick(callback: Callback<ClickEvent> | undefined): void
 ```
 
-设置[点击事件](arkts-arkui-commonmethod-c.md#onclick)的回调。
+Set the callback for the [click event](arkts-arkui-commonmethod-c.md#onclick).
 
 **Since:** 12
 
@@ -86,7 +86,7 @@ setOnClick(callback: Callback<ClickEvent> | undefined): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;ClickEvent&gt; \| undefined | Yes | 点击事件的回调函数。 |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;ClickEvent&gt; \| undefined | Yes | Callback for the click event. |
 
 ## setOnDisappear
 
@@ -94,7 +94,7 @@ setOnClick(callback: Callback<ClickEvent> | undefined): void
 setOnDisappear(callback: Callback<void> | undefined): void
 ```
 
-设置[onDisAppear](arkts-arkui-commonmethod-c.md#ondisappear)卸载消失事件的回调。
+Sets the callback for the [onDisAppear](arkts-arkui-commonmethod-c.md#ondisappear) event.
 
 **Since:** 12
 
@@ -112,7 +112,7 @@ setOnDisappear(callback: Callback<void> | undefined): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;void&gt; \| undefined | Yes | 卸载消失事件的回调。 |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;void&gt; \| undefined | Yes | Callback invoked when the component disappears. |
 
 ## setOnFocus
 
@@ -120,7 +120,7 @@ setOnDisappear(callback: Callback<void> | undefined): void
 setOnFocus(callback: Callback<void> | undefined): void
 ```
 
-设置[onFocus](arkts-arkui-commonmethod-c.md#onfocus)获焦事件的回调。
+Sets the callback for the [onFocus](arkts-arkui-commonmethod-c.md#onfocus) event.
 
 **Since:** 12
 
@@ -138,7 +138,7 @@ setOnFocus(callback: Callback<void> | undefined): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;void&gt; \| undefined | Yes | 获焦事件的回调。 |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;void&gt; \| undefined | Yes | Callback for the focus event. |
 
 ## setOnHover
 
@@ -146,7 +146,7 @@ setOnFocus(callback: Callback<void> | undefined): void
 setOnHover(callback: HoverCallback | undefined): void
 ```
 
-设置[onHover](arkts-arkui-commonmethod-c.md#onhover)悬浮事件的回调。
+Sets the callback for the [onHover](arkts-arkui-commonmethod-c.md#onhover) event.
 
 **Since:** 12
 
@@ -164,7 +164,7 @@ setOnHover(callback: HoverCallback | undefined): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [HoverCallback](../arkts-apis/arkts-arkui-hovercallback-t.md) \| undefined | Yes | 悬浮事件的回调函数。 |
+| callback | [HoverCallback](../arkts-apis/arkts-arkui-hovercallback-t.md) \| undefined | Yes | Callback for the hover event. |
 
 ## setOnKeyEvent
 
@@ -172,7 +172,7 @@ setOnHover(callback: HoverCallback | undefined): void
 setOnKeyEvent(callback: Callback<KeyEvent> | undefined): void
 ```
 
-设置[按键事件](../../apis-ability-kit/arkts-apis/arkts-app-ability-common.md/arkts-app-ability-common.md)的回调。
+Sets the callback for the [key event](../../apis-ability-kit/arkts-apis/arkts-app-ability-common.md/arkts-app-ability-common.md).
 
 **Since:** 12
 
@@ -190,7 +190,7 @@ setOnKeyEvent(callback: Callback<KeyEvent> | undefined): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;KeyEvent&gt; \| undefined | Yes | 按键事件的回调函数。 |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;KeyEvent&gt; \| undefined | Yes | Callback for the key event. |
 
 ## setOnMouse
 
@@ -198,7 +198,7 @@ setOnKeyEvent(callback: Callback<KeyEvent> | undefined): void
 setOnMouse(callback: Callback<MouseEvent> | undefined): void
 ```
 
-设置[onMouse](arkts-arkui-commonmethod-c.md#onmouse)鼠标事件的回调。
+Sets the callback for the [onMouse](arkts-arkui-commonmethod-c.md#onmouse) event.
 
 **Since:** 12
 
@@ -216,7 +216,7 @@ setOnMouse(callback: Callback<MouseEvent> | undefined): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;MouseEvent&gt; \| undefined | Yes | 鼠标事件的回调函数。 |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;MouseEvent&gt; \| undefined | Yes | Callback for the mouse event. |
 
 ## setOnSizeChange
 
@@ -224,7 +224,7 @@ setOnMouse(callback: Callback<MouseEvent> | undefined): void
 setOnSizeChange(callback: SizeChangeCallback | undefined): void
 ```
 
-设置[onSizeChange](arkts-arkui-commonmethod-c.md#onsizechange)组件区域变化事件的回调。
+Sets the callback for the [onSizeChange](arkts-arkui-commonmethod-c.md#onsizechange) event, which is triggered when the component's size changes.
 
 **Since:** 12
 
@@ -242,7 +242,7 @@ setOnSizeChange(callback: SizeChangeCallback | undefined): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [SizeChangeCallback](arkts-arkui-sizechangecallback-t.md) \| undefined | Yes | 组件区域变化事件的回调函数。 |
+| callback | [SizeChangeCallback](arkts-arkui-sizechangecallback-t.md) \| undefined | Yes | Callback invoked when the component's size changes. |
 
 ## setOnTouch
 
@@ -250,7 +250,7 @@ setOnSizeChange(callback: SizeChangeCallback | undefined): void
 setOnTouch(callback: Callback<TouchEvent> | undefined): void
 ```
 
-设置[触摸事件](arkts-arkui-commonmethod-c.md#ontouch)的回调。
+Sets the callback for the [touch event](arkts-arkui-commonmethod-c.md#ontouch).
 
 **Since:** 12
 
@@ -268,7 +268,7 @@ setOnTouch(callback: Callback<TouchEvent> | undefined): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;TouchEvent&gt; \| undefined | Yes | 触摸事件的回调函数。 |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;TouchEvent&gt; \| undefined | Yes | Callback for the touch event. |
 
 ## setOnVisibleAreaApproximateChange
 
@@ -276,8 +276,8 @@ setOnTouch(callback: Callback<TouchEvent> | undefined): void
 setOnVisibleAreaApproximateChange(options: VisibleAreaEventOptions, event: VisibleAreaChangeCallback | undefined): void
 ```
 
-设置限制回调间隔的  
-[onVisibleAreaChange](arkts-arkui-commonmethod-c.md#onvisibleareachange)可见区域变化事件的回调。
+Sets the callback for the  
+[onVisibleAreaChange](arkts-arkui-commonmethod-c.md#onvisibleareachange)visible area change event.
 
 **Since:** 12
 
@@ -295,6 +295,6 @@ setOnVisibleAreaApproximateChange(options: VisibleAreaEventOptions, event: Visib
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| options | [VisibleAreaEventOptions](../arkts-apis/arkts-arkui-common-visibleareaeventoptions-i.md) | Yes | 可见区域变化相关的参数。 |
-| event | [VisibleAreaChangeCallback](../arkts-apis/arkts-arkui-visibleareachangecallback-t.md) \| undefined | Yes | 可见区域变化事件的回调函数。当组件可见面积与自身面积的比值接近options中设置的阈值时触发该回调。 |
+| options | [VisibleAreaEventOptions](../arkts-apis/arkts-arkui-common-visibleareaeventoptions-i.md) | Yes | Configuration options for visible area change detection. |
+| event | [VisibleAreaChangeCallback](../arkts-apis/arkts-arkui-visibleareachangecallback-t.md) \| undefined | Yes | Callback invoked when the ratio of the component's visible area to its total area crosses the threshold specified in **options**. |
 

@@ -12,6 +12,6 @@
 
 | Name | Description |
 | --- | --- |
-| [RowOptions](arkts-arkui-row-rowoptions-i.md) | 设置Row组件的子组件间距属性。 |
-| [RowOptionsV2](arkts-arkui-row-rowoptionsv2-i.md) | 设置Row组件的子组件间距属性。间距类型SpaceType支持number、string或Resource类型。 |
+| [RowOptions](arkts-arkui-row-rowoptions-i.md) | Define options used to construct a row. |
+| [RowOptionsV2](arkts-arkui-row-rowoptionsv2-i.md) | Define options used to construct a row. |
 

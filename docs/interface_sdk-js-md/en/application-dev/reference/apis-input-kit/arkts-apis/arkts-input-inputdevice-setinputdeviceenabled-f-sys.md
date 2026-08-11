@@ -12,7 +12,7 @@ import { inputDevice } from 'kits/@kit.InputKit';
 function setInputDeviceEnabled(deviceId: int, enabled: boolean): Promise<void>
 ```
 
-设置输入设备的开关状态。以触摸屏为例：关闭时，点击触摸屏设备不响应；开启时，可正常操作触摸屏。使用Promise异步回调。
+Sets the input switch status of an input device. Take the touchscreen as an example. If the input switch is off,the touchscreen does not respond when being touched. If the input switch is on, the touchscreen wakes up when being touched. This API uses a promise to return the result.
 
 **Since:** 18
 
@@ -30,23 +30,23 @@ function setInputDeviceEnabled(deviceId: int, enabled: boolean): Promise<void>
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| deviceId | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | 输入设备的唯一标识，同一个物理设备反复插拔或重启，设备ID可能会发生变化。 |
-| enabled | boolean | Yes | 输入设备的开关状态，取值为true表示开启输入设备，取值为false表示关闭输入设备。 |
+| deviceId | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | Unique ID of the input device. If a physical device is repeatedly reinstalled or restarted, its ID may change. |
+| enabled | boolean | Yes | Switch status of the input device. The value **true** indicates that the input device is enabled, and the value **false** indicates the opposite. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise对象，无返回结果。 |
+| Promise&lt;void&gt; | Promise that returns no value. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Input parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
-| 201 | Permission verification failed. The application does not have the permission required to call the API |
-| 202 | Permission verification failed. A non-system application calls a system API. |
-| 3900001 | The specified device does not exist. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Input parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed. The application does not have the permission required to call the API |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
+| [3900001](../errorcode-inputdevice.md#3900001-device-not-exist) | The specified device does not exist. |
 
 ## Examples
 
@@ -62,14 +62,13 @@ struct Index {
       Text()
         .onClick(() => {
           try {
-            // Set the device ID to 0
             inputDevice.setInputDeviceEnabled(0, true).then(() => {
-              console.info(`Succeeded in setting input device enabled.`);
+              console.info(`Set input device enable success`);
             }).catch((error: BusinessError) => {
-              console.error(`Failed to set device enabled, Code: ${(error as BusinessError).code}, message: ${(error as BusinessError).message}.`);
+              console.error(`Set device enable failed, error: ${JSON.stringify(error, [`code`, `message`])}`);
             })
           } catch (error) {
-            console.error(`Failed to set device enabled, Code: ${(error as BusinessError).code}, message: ${(error as BusinessError).message}.`);
+            console.error(`Set input device enable error`);
           }
         })
     }

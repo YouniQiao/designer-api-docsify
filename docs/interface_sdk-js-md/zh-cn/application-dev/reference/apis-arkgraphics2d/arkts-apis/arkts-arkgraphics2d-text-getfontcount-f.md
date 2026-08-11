@@ -1,11 +1,5 @@
 # getFontCount
 
-## 导入模块
-
-```TypeScript
-import { text } from 'kits/@kit.ArkGraphics2D';
-```
-
 ## getFontCount
 
 ```TypeScript
@@ -42,6 +36,8 @@ function getFontCount(path: string | Resource) : int
 
 ## 示例
 
+ArkTS-Dyn示例：
+
 ```TypeScript
 import { text } from '@kit.ArkGraphics2D'
 
@@ -50,6 +46,29 @@ import { text } from '@kit.ArkGraphics2D'
 struct GetFontCountTest {
   build() {
     Column({ space: 10 }) {
+      Button("get fontCount")
+        .onClick(() => {
+          let fontCount = text.getFontCount("file:///system/fonts/NotoSansCJK-Regular.ttc")
+          console.info("file count: " + fontCount)
+        })
+    }.width("100%")
+    .height("100%")
+    .justifyContent(FlexAlign.Center)
+  }
+}
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+import { Entry, Component, Column, Button, FlexAlign } from '@ohos.arkui.component'
+import { text } from '@kit.ArkGraphics2D'
+
+@Entry
+@Component
+struct GetFontCountTest {
+  build() {
+    Column() {
       Button("get fontCount")
         .onClick(() => {
           let fontCount = text.getFontCount("file:///system/fonts/NotoSansCJK-Regular.ttc")

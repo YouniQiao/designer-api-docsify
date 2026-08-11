@@ -1,6 +1,6 @@
 # PreloadMode (System API)
 
-表示预加载应用进程模式的枚举。
+Enumerates the modes used for preloading an application process.
 
 **Since:** 12
 
@@ -15,7 +15,7 @@
 ## PRESS_DOWN
 
 ```TypeScript
-PRESS_DOWN = 0
+PRESS_DOWN
 ```
 
 The application process is preloaded when the application icon is pressed.
@@ -26,7 +26,7 @@ The application process is preloaded when the application icon is pressed.
 
 **Model restriction:** This API can be used only in the stage model.
 
-<!--Device-PreloadMode-PRESS_DOWN = 0--><!--Device-PreloadMode-PRESS_DOWN = 0-End-->
+<!--Device-PreloadMode-PRESS_DOWN--><!--Device-PreloadMode-PRESS_DOWN-End-->
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
 

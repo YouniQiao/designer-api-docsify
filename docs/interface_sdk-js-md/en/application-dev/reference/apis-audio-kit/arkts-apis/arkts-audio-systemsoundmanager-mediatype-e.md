@@ -1,6 +1,6 @@
 # MediaType
 
-枚举，媒体类型。
+Enum for media type.
 
 **Since:** 20
 
@@ -16,7 +16,7 @@
 AUDIO = 0
 ```
 
-音频类型。
+Media type for audio.
 
 **Since:** 20
 
@@ -32,7 +32,7 @@ AUDIO = 0
 VIDEO = 1
 ```
 
-视频类型。
+Media type for vide.
 
 **Since:** 20
 

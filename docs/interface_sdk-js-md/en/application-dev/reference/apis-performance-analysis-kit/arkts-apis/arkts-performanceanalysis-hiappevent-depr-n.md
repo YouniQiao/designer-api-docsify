@@ -1,10 +1,11 @@
 # hiAppEvent
 
-本模块提供了应用事件打点能力，包括对打点数据的落盘，以及对打点功能的管理配置。
+The **hiAppEvent** module provides the application event logging functions, such as writing application events to the event file and managing the event logging configuration.
 
-> **说明：**
+> **NOTE：**
 > 
-> - 本模块接口从API version 9开始废弃，建议使用新接口[@ohos.hiviewdfx.hiAppEvent](arkts-performanceanalysis-hiappevent-depr-n.md)替代。
+> - The APIs provided by this module are deprecated since API version 9. You are advised to use
+> [@ohos.hiviewdfx.hiAppEvent](arkts-performanceanalysis-hiappevent-depr-n.md).
 
 **Since:** 7
 
@@ -24,26 +25,26 @@
 
 | Name | Description |
 | --- | --- |
-| [Event](arkts-performanceanalysis-hiappevent-event-depr-n.md) | 此接口提供了所有预定义事件的事件名称常量。  \| 名称 \| 类型 \| 可读 \| 可写 \| 说明 \|  \| ------------------------- \| ------ \| ---- \| ---- \| -------------------- \|  \| USER_LOGIN \| string \| 是 \| 否 \| 用户登录事件。 \|  \| USER_LOGOUT \| string \| 是 \| 否 \| 用户登出事件。 \|  \| DISTRIBUTED_SERVICE_START \| string \| 是 \| 否 \| 分布式服务启动事件。 \| |
-| [Param](arkts-performanceanalysis-hiappevent-param-depr-n.md) | 此接口提供了所有预定义参数的参数名称常量。  \| 名称 \| 类型 \| 可读 \| 可写 \| 说明 \|  \| ------------------------------- \| ------ \| ---- \| ---- \| ------------------ \|  \| USER_ID \| string \| 是 \| 否 \| 用户自定义ID。 \|  \| DISTRIBUTED_SERVICE_NAME \| string \| 是 \| 否 \| 分布式服务名称。 \|  \| DISTRIBUTED_SERVICE_INSTANCE_ID \| string \| 是 \| 否 \| 分布式服务实例ID。 \| |
+| [Event](arkts-performanceanalysis-hiappevent-event-depr-n.md) | Provides constants that define the names of all predefined events.  \| Name \| Type \| Readable\| Writable\| Description \|  \| ------------------------- \| ------ \| ---- \| ---- \| -------------------- \|  \| USER_LOGIN \| string \| Yes \| No \| User login event. \|  \| USER_LOGOUT \| string \| Yes \| No \| User logout event. \|  \| DISTRIBUTED_SERVICE_START \| string \| Yes \| No \| Distributed service startup event.\| |
+| [Param](arkts-performanceanalysis-hiappevent-param-depr-n.md) | Provides constants that define the names of all predefined event parameters.  \| Name \| Type \| Readable\| Writable\| Description \|  \| ------------------------------- \| ------ \| ---- \| ---- \| ------------------ \|  \| USER_ID \| string \| Yes \| No \| Custom user ID. \|  \| DISTRIBUTED_SERVICE_NAME \| string \| Yes \| No \| Distributed service name. \|  \| DISTRIBUTED_SERVICE_INSTANCE_ID \| string \| Yes \| No \| Distributed service instance ID.\| |
 
 ### Functions
 
 | Name | Description |
 | --- | --- |
-| [write](arkts-performanceanalysis-hiappevent-write-depr-f.md#write) | 应用事件打点方法，将事件写入到当天的事件文件中，使用Promise方式作为异步回调。 |
-| [write](arkts-performanceanalysis-hiappevent-write-depr-f.md#write-1) | 应用事件打点方法，将事件写入到当天的事件文件中，使用callback方式作为异步回调。 |
-| [configure](arkts-performanceanalysis-hiappevent-configure-depr-f.md#configure) | 应用事件打点配置方法，可用于配置打点开关、文件目录存储限额大小等功能。 |
+| [write](arkts-performanceanalysis-hiappevent-write-depr-f.md#write) | Writes event information to the event file of the current day. This API uses a promise to return the result. |
+| [write](arkts-performanceanalysis-hiappevent-write-depr-f.md#write-1) | Writes event information to the event file of the current day. This API uses an asynchronous callback to return the result. |
+| [configure](arkts-performanceanalysis-hiappevent-configure-depr-f.md#configure) | Configures the application event logging function, such as setting the event logging switch and maximum size of the directory that stores the event logging files. |
 
 ### Interfaces
 
 | Name | Description |
 | --- | --- |
-| [ConfigOption](arkts-performanceanalysis-hiappevent-configoption-depr-i.md) | 此接口提供了应用打点的配置选项。 |
+| [ConfigOption](arkts-performanceanalysis-hiappevent-configoption-depr-i.md) | Provides the configuration items for application event logging. |
 
 ### Enums
 
 | Name | Description |
 | --- | --- |
-| [EventType](arkts-performanceanalysis-hiappevent-eventtype-depr-e.md) | 事件类型枚举。 |
+| [EventType](arkts-performanceanalysis-hiappevent-eventtype-depr-e.md) | Enumerates the event types. |
 

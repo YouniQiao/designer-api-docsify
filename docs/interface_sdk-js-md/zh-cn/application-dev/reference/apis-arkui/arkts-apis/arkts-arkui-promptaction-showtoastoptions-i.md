@@ -10,12 +10,6 @@ Toast的选项。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
-## 导入模块
-
-```TypeScript
-import { LevelMode, ImmersiveMode, LevelOrder } from 'kits/@kit.ArkUI';
-```
-
 ## alignment
 
 ```TypeScript
@@ -238,7 +232,7 @@ offset?: Offset
 
 仅支持设置px类型的数值。如需设置其他类型的数值，应将其他类型转换为px类型后传入。例如，若需设置vp，应将其转换为px后传入。
 
-**类型：** [Offset](arkts-arkui-componentutils-offset-i.md)
+**类型：** [Offset](arkts-arkui-units-offset-i.md)
 
 **起始版本：** 23
 

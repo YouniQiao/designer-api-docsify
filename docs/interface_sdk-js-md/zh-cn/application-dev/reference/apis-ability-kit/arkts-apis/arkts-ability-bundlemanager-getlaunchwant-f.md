@@ -1,11 +1,5 @@
 # getLaunchWant
 
-## 导入模块
-
-```TypeScript
-import { bundleManager } from 'kits/@kit.AbilityKit';
-```
-
 ## getLaunchWant
 
 ```TypeScript
@@ -34,7 +28,7 @@ function getLaunchWant(): Want
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 17700072 | The launch want is not found. |
+| [17700072](../errorcode-bundle.md#17700072-launch-want不存在) | The launch want is not found. |
 
 ## 示例
 

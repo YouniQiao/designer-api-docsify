@@ -1,6 +1,6 @@
 # NotificationBasicContent
 
-描述普通文本通知，用于展示标题和正文内容，是其他通知类型的基础内容结构。其他通知类型（如长文本、多行文本、图片、实况窗）均继承本接口，在此基础上扩展各自特有字段。
+Describes the basic text notification, which is used to display the title and body content. It serves as the basic content structure for other notification types. Other notification types (such as long text, multi-line text, picture, and live view) inherit this API and extend their own specific fields on this basis.
 
 **Since:** 7
 
@@ -16,7 +16,7 @@
 additionalText?: string
 ```
 
-通知附加内容，是对通知内容的补充，不在通知中心中显示。默认为空。大小不超过3072字节，超出部分会被截断。
+Additional notification content, which supplements the notification content and is not displayed in the notification center. It defaults to empty. The size does not exceed 3072 bytes, and the excess part will be truncated.
 
 **Type:** string
 
@@ -34,8 +34,7 @@ additionalText?: string
 lockscreenPicture?: image.PixelMap
 ```
 
-通知在锁屏界面显示的图片，默认为空。当前仅支持实况窗类型通知。图标像素的总字节数不超过192KB（图标像素的总字节数通过  
-[getPixelBytesNumber](../../apis-image-kit/arkts-apis/arkts-image-image-pixelmap-i.md/arkts-image-image-pixelmap-i.md#getpixelbytesnumber)获取），建议图标像素长宽为128*128。实际显示效果依赖于设备能力和通知中心UI样式。
+Picture displayed on the lock screen. This parameter is left empty by default. Currently, only the live view notification is supported. The total number of the icon pixel bytes cannot exceed 192 KB (which is obtained through getPixelBytesNumber). The recommended icon size is 128 x 128 pixels. The display effect depends on the device capability and notification center UI style.
 
 **Type:** image.PixelMap
 
@@ -53,7 +52,7 @@ lockscreenPicture?: image.PixelMap
 text: string
 ```
 
-通知正文内容，显示在标题下方。不可为空字符串，大小不超过3072字节，超出部分会被截断。
+Notification body content, displayed below the title. It cannot be an empty string. The size does not exceed3072 bytes, and the excess part will be truncated.
 
 **Type:** string
 
@@ -71,7 +70,7 @@ text: string
 title: string
 ```
 
-通知标题，显示在通知顶部。不可为空字符串，大小不超过1024字节，超出部分会被截断。
+Notification title, displayed at the top of the notification. It cannot be an empty string. The size does not exceed 1024 bytes, and the excess part will be truncated.
 
 **Type:** string
 

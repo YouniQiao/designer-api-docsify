@@ -1,6 +1,7 @@
 # Caller
 
-调用方Caller UIAbility通过[startAbilityByCall](arkts-ability-uiabilitycontext-c.md#startabilitybycall)接口拉起目标Callee UIAbility，目标UIAbility启动成功后，返回一个Caller对象给调用方进行通信。
+A Caller UIAbility can use the   
+[startAbilityByCall](arkts-ability-uiabilitycontext-c.md#startabilitybycall) API to start the target Callee UIAbility. After the target UIAbility is started successfully, a Caller object is returned to the caller for communication.
 
 **Since:** 9
 
@@ -22,7 +23,7 @@ import { Callee, Caller, OnReleaseCallback, OnRemoteStateChangeCallback, CalleeC
 call(method: string, data: rpc.Parcelable): Promise<void>
 ```
 
-Caller UIAbility向Callee UIAbility发送双方约定好的序列化的数据。使用Promise异步回调。
+Used by a Caller UIAbility to send serialized data, as agreed upon by both parties, to the Callee UIAbility. This API uses a promise to return the result.
 
 **Since:** 9
 
@@ -38,23 +39,23 @@ Caller UIAbility向Callee UIAbility发送双方约定好的序列化的数据。
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| method | string | Yes | 由Caller和Callee双方约定好的方法名，Callee方通过该字段区分消息类型。 |
-| data | rpc.Parcelable | Yes | 由Caller向Callee发送的消息内容，消息内容是序列化的数据。 |
+| method | string | Yes | Method name agreed upon by the Caller UIAbility and Callee UIAbility, used by the Callee UIAbility to identify the type of message. |
+| data | rpc.Parcelable | Yes | Message content sent from the Caller UIAbility to the Callee UIAbility, which is in serialized form. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise对象。无返回结果的Promise对象。 |
+| Promise&lt;void&gt; | Promise that returns no value. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types. |
-| 16200002 | The callee does not exist. |
-| 16200001 | The caller has been released. |
-| 16000050 | Internal error. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types. |
+| [16200002](../errorcode-ability.md#16200002-invalid-callee) | The callee does not exist. |
+| [16200001](../errorcode-ability.md#16200001-caller-released) | The caller has been released. |
+| [16000050](../errorcode-ability.md#16000050-internal-error) | Internal error. |
 
 ## Examples
 
@@ -120,7 +121,7 @@ export default class MainUIAbility extends UIAbility {
 callWithResult(method: string, data: rpc.Parcelable): Promise<rpc.MessageSequence>
 ```
 
-Caller UIAbility向Callee UIAbility发送消息，Callee UIAbility处理完成后返回结果。使用Promise异步回调。
+Used by a Caller UIAbility to send serialized data to a Callee UIAbility and return the result after the Callee UIAbility processes the message. This API uses a promise to return the result.
 
 **Since:** 9
 
@@ -136,23 +137,23 @@ Caller UIAbility向Callee UIAbility发送消息，Callee UIAbility处理完成�
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| method | string | Yes | 由Caller和Callee双方约定好的方法名，Callee方通过该字段区分消息类型。 |
-| data | rpc.Parcelable | Yes | 由Caller向Callee发送的消息内容，消息内容是序列化的数据。 |
+| method | string | Yes | Method name agreed upon by the Caller UIAbility and Callee UIAbility, used by the Callee UIAbility to identify the type of message. |
+| data | rpc.Parcelable | Yes | Message content sent from the Caller UIAbility to the Callee UIAbility, which is in serialized form. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;rpc.MessageSequence&gt; | Promise对象，返回Callee UIAbility的应答数据。 |
+| Promise&lt;rpc.MessageSequence&gt; | Promise used to return the response data from the Callee UIAbility. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types. |
-| 16200002 | The callee does not exist. |
-| 16200001 | The caller has been released. |
-| 16000050 | Internal error. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types. |
+| [16200002](../errorcode-ability.md#16200002-invalid-callee) | The callee does not exist. |
+| [16200001](../errorcode-ability.md#16200001-caller-released) | The caller has been released. |
+| [16000050](../errorcode-ability.md#16000050-internal-error) | Internal error. |
 
 ## Examples
 
@@ -221,7 +222,7 @@ export default class MainUIAbility extends UIAbility {
 off(type: 'release', callback: OnReleaseCallback): void
 ```
 
-取消注册Callee UIAbility断开通知的监听，与[on('release')](Caller.on)是反向操作，当前暂未支持。
+Unregisters the listener for disconnection notifications from the Callee UIAbility. This is the reverse operation of [on('release')](Caller.on). It is currently not supported.
 
 **Since:** 9
 
@@ -237,14 +238,14 @@ off(type: 'release', callback: OnReleaseCallback): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'release' | Yes | 监听releaseCall事件，固定为'release'。 |
-| callback | [OnReleaseCallback](arkts-ability-app-ability-uiability-onreleasecallback-i.md) | Yes | 回调函数，返回off回调结果。 |
+| type | 'release' | Yes | Event type. The value is fixed at **'release'**. |
+| callback | [OnReleaseCallback](arkts-ability-app-ability-uiability-onreleasecallback-i.md) | Yes | Callback used to return the result. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
 
 ## Examples
 
@@ -283,7 +284,7 @@ export default class MainUIAbility extends UIAbility {
 off(type: 'release'): void
 ```
 
-取消注册Callee UIAbility断开通知的监听，与[Caller.on('release')](Caller.on)是反向操作，当前暂未支持。
+Unregisters the listener for disconnection notifications from the Callee UIAbility. This is the reverse operation of [Caller.on('release')](Caller.on). It is currently not supported.
 
 **Since:** 9
 
@@ -299,13 +300,13 @@ off(type: 'release'): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'release' | Yes | 监听releaseCall事件，固定为'release'。 |
+| type | 'release' | Yes | Event type. The value is fixed at **'release'**. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
 
 ## Examples
 
@@ -346,7 +347,7 @@ export default class MainUIAbility extends UIAbility {
 offRelease(callback: OnReleaseCallback): void
 ```
 
-取消注册Callee UIAbility断开的通知，与[Caller.onRelease](Caller.onRelease)是反向操作。
+Unregisters the listener for disconnection notifications from the Callee UIAbility. This is the reverse operation of [Caller.onRelease](Caller.onRelease).
 
 **Since:** 23
 
@@ -362,7 +363,7 @@ offRelease(callback: OnReleaseCallback): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [OnReleaseCallback](arkts-ability-app-ability-uiability-onreleasecallback-i.md) | Yes | 回调函数，返回off回调结果。 |
+| callback | [OnReleaseCallback](arkts-ability-app-ability-uiability-onreleasecallback-i.md) | Yes | Callback used to return the result. |
 
 ## offRelease
 
@@ -370,7 +371,7 @@ offRelease(callback: OnReleaseCallback): void
 offRelease(): void
 ```
 
-取消注册Callee UIAbility断开的通知，与[Caller.onRelease](Caller.onRelease)是反向操作。
+Unregisters the listener for disconnection notifications from the Callee UIAbility. This is the reverse operation of [Caller.onRelease](Caller.onRelease).
 
 **Since:** 23
 
@@ -388,7 +389,7 @@ offRelease(): void
 on(type: 'release', callback: OnReleaseCallback): void
 ```
 
-Caller UIAbility可使用该接口注册与Callee UIAbility连接断开通知的监听。
+Used by the Caller UIAbility to register a listener for disconnection notifications from the Callee UIAbility.
 
 **Since:** 9
 
@@ -404,15 +405,15 @@ Caller UIAbility可使用该接口注册与Callee UIAbility连接断开通知的
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'release' | Yes | 监听releaseCall事件，固定为'release'。 |
-| callback | [OnReleaseCallback](arkts-ability-app-ability-uiability-onreleasecallback-i.md) | Yes | 回调函数，返回on回调结果。 |
+| type | 'release' | Yes | Event type. The value is fixed at **'release'**. |
+| callback | [OnReleaseCallback](arkts-ability-app-ability-uiability-onreleasecallback-i.md) | Yes | Callback used to return the result. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
-| 16200001 | The caller has been released. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| [16200001](../errorcode-ability.md#16200001-caller-released) | The caller has been released. |
 
 ## Examples
 
@@ -450,7 +451,7 @@ export default class MainUIAbility extends UIAbility {
 onRelease(callback: OnReleaseCallback): void
 ```
 
-Caller UIAbility可使用该接口注册与Callee UIAbility连接断开通知的监听。
+Used by the Caller UIAbility to register a listener for disconnection notifications from the Callee UIAbility.
 
 **Since:** 9
 
@@ -466,14 +467,14 @@ Caller UIAbility可使用该接口注册与Callee UIAbility连接断开通知的
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [OnReleaseCallback](arkts-ability-app-ability-uiability-onreleasecallback-i.md) | Yes | 回调函数，返回onRelease回调结果。 |
+| callback | [OnReleaseCallback](arkts-ability-app-ability-uiability-onreleasecallback-i.md) | Yes | Callback used to return the result. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types. |
-| 16200001 | The caller has been released. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types. |
+| [16200001](../errorcode-ability.md#16200001-caller-released) | The caller has been released. |
 
 ## Examples
 
@@ -510,7 +511,7 @@ export default class MainUIAbility extends UIAbility {
 onRemoteStateChange(callback: OnRemoteStateChangeCallback): void
 ```
 
-注册协同场景下跨设备组件状态变化监听通知。使用callback异步回调。
+Called when the remote UIAbility state changes in the collaboration scenario. This API uses an asynchronous callback to return the result.
 
 **Since:** 10
 
@@ -526,14 +527,14 @@ onRemoteStateChange(callback: OnRemoteStateChangeCallback): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [OnRemoteStateChangeCallback](arkts-ability-app-ability-uiability-onremotestatechangecallback-i.md) | Yes | 回调函数，返回onRemoteStateChange回调结果。 |
+| callback | [OnRemoteStateChangeCallback](arkts-ability-app-ability-uiability-onremotestatechangecallback-i.md) | Yes | Callback used to return the result. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types. |
-| 16200001 | The caller has been released. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types. |
+| [16200001](../errorcode-ability.md#16200001-caller-released) | The caller has been released. |
 
 ## Examples
 
@@ -571,7 +572,7 @@ export default class MainAbility extends UIAbility {
 release(): void
 ```
 
-Caller主动释放与Callee UIAbility的连接。调用该接口后，Caller不能再使用call或callWithResult向Callee方发送消息。
+Used by a Caller UIAbility to proactively release the connection with the Callee UIAbility. After this API is called, the Caller UIAbility can no longer use **call** or **callWithResult** to send messages to the Callee UIAbility.
 
 **Since:** 9
 
@@ -587,8 +588,8 @@ Caller主动释放与Callee UIAbility的连接。调用该接口后，Caller不�
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 16200002 | The callee does not exist. |
-| 16200001 | The caller has been released. |
+| [16200002](../errorcode-ability.md#16200002-invalid-callee) | The callee does not exist. |
+| [16200001](../errorcode-ability.md#16200001-caller-released) | The caller has been released. |
 
 ## Examples
 

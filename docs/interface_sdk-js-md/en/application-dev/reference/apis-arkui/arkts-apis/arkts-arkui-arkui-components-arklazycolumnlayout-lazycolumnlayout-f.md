@@ -14,7 +14,7 @@ export declare function LazyColumnLayout(
 ): LazyColumnLayoutAttribute
 ```
 
-定义LazyColumnLayout组件。
+Defines LazyColumnLayout Component.
 
 **Since:** 26.0.0
 
@@ -30,13 +30,13 @@ export declare function LazyColumnLayout(
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| content_ | [CustomBuilder](../arkts-components/arkts-arkui-custombuilder-t.md) | No |  |
+| content_ | [CustomBuilder](../arkts-components/arkts-arkui-custombuilder-t.md) | No | content |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [LazyColumnLayoutAttribute](arkts-arkui-arkui-components-arklazycolumnlayout-lazycolumnlayoutattribute-i.md) | 懒加载列布局的属性 |
+| [LazyColumnLayoutAttribute](arkts-arkui-arkui-components-arklazycolumnlayout-lazycolumnlayoutattribute-i.md) | The attribute of the LazyColumnLayout. |
 
 
 ## LazyColumnLayout
@@ -48,11 +48,11 @@ export declare function LazyColumnLayout(
 ): LazyColumnLayoutAttribute
 ```
 
-定义LazyColumnLayout组件。
+Defines LazyColumnLayout Component.
 
-**Since:** 26.0.0
+**Since:** 26.1.0
 
-**ArkTS mode:** ArkTS-Sta only, since version 26.0.0.
+**ArkTS mode:** ArkTS-Sta only, since version 26.1.0.
 
 **Decorator:** @Builder
 
@@ -67,11 +67,11 @@ export declare function LazyColumnLayout(
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | style_ | [CustomBuilderT](../arkts-components/arkts-arkui-custombuildert-t.md)&lt;LazyColumnLayoutAttribute&gt; | Yes | The style to create a LazyColumnLayout. |
-| content_ | [CustomBuilder](../arkts-components/arkts-arkui-custombuilder-t.md) | No |  |
+| content_ | [CustomBuilder](../arkts-components/arkts-arkui-custombuilder-t.md) | No | content |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [LazyColumnLayoutAttribute](arkts-arkui-arkui-components-arklazycolumnlayout-lazycolumnlayoutattribute-i.md) | LazyColumnLayout的属性。 |
+| [LazyColumnLayoutAttribute](arkts-arkui-arkui-components-arklazycolumnlayout-lazycolumnlayoutattribute-i.md) | The attribute of the LazyColumnLayout. |
 

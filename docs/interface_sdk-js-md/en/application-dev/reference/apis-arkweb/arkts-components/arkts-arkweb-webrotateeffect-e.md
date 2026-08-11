@@ -1,6 +1,6 @@
 # WebRotateEffect
 
-组件旋转时，宽高动画过程中组件内容如何填充以适应新尺寸的方式。
+Enumerates the modes in which the component's content is rendered to fit the new size during its width and height animation process when the component is rotated.
 
 **Since:** 22
 
@@ -16,7 +16,7 @@
 TOPLEFT_EFFECT = 0
 ```
 
-默认值，组件旋转时，保持动画终态的内容大小，并且内容始终与组件保持左上角对齐。
+The component's content stays at the final size and always aligned with the upper left corner of the component. This value is used by default.
 
 **Since:** 22
 
@@ -32,7 +32,7 @@ TOPLEFT_EFFECT = 0
 RESIZE_COVER_EFFECT = 1
 ```
 
-组件旋转时，保持动画终态内容的宽高比进行缩小或放大，使内容两边都大于或等于组件两边，且与组件保持中心对齐，显示内容的中间部分。
+While maintaining its aspect ratio in the final state, the component's content is scaled to cover the component's entire content box. It is always aligned with the center of the component, so that its middle part is displayed.
 
 **Since:** 22
 

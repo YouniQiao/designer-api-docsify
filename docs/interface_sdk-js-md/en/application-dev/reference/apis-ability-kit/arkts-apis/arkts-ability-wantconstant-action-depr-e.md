@@ -1,6 +1,6 @@
 # Action
 
-want操作的常数。用于表示要执行的通用操作。
+Enumerates the action constants of the Want object. **action** specifies the operation to execute.
 
 **Since:** 6
 
@@ -18,7 +18,7 @@ want操作的常数。用于表示要执行的通用操作。
 ACTION_HOME = 'ohos.want.action.home'
 ```
 
-指示返回原点的操作。
+Action of returning to the home page.
 
 **Since:** 6
 
@@ -36,7 +36,7 @@ ACTION_HOME = 'ohos.want.action.home'
 ACTION_DIAL = 'ohos.want.action.dial'
 ```
 
-指示启动显示小键盘的页面功能的操作。
+Action of launching the numeric keypad.
 
 **Since:** 6
 
@@ -54,7 +54,7 @@ ACTION_DIAL = 'ohos.want.action.dial'
 ACTION_SEARCH = 'ohos.want.action.search'
 ```
 
-指示启动页面搜索功能的操作。
+Action of launching the search function.
 
 **Since:** 6
 
@@ -72,7 +72,7 @@ ACTION_SEARCH = 'ohos.want.action.search'
 ACTION_WIRELESS_SETTINGS = 'ohos.settings.wireless'
 ```
 
-指示启动提供无线网络设置的页面功能的操作，例如，Wi-Fi选项。
+Action of launching the UI that provides wireless network settings, for example, Wi-Fi options.
 
 **Since:** 6
 
@@ -90,7 +90,7 @@ ACTION_WIRELESS_SETTINGS = 'ohos.settings.wireless'
 ACTION_MANAGE_APPLICATIONS_SETTINGS = 'ohos.settings.manage.applications'
 ```
 
-指示启动管理已安装应用程序的页面功能的操作。
+Action of launching the UI for managing installed applications.
 
 **Since:** 6
 
@@ -108,7 +108,7 @@ ACTION_MANAGE_APPLICATIONS_SETTINGS = 'ohos.settings.manage.applications'
 ACTION_APPLICATION_DETAILS_SETTINGS = 'ohos.settings.application.details'
 ```
 
-指示启动显示指定应用程序详细信息的页面功能的操作。
+Action of launching the UI that displays the details of an application.
 
 **Since:** 6
 
@@ -126,7 +126,7 @@ ACTION_APPLICATION_DETAILS_SETTINGS = 'ohos.settings.application.details'
 ACTION_SET_ALARM = 'ohos.want.action.setAlarm'
 ```
 
-指示启动页面功能以设置闹钟的操作。
+Action of launching the UI for setting the alarm clock.
 
 **Since:** 6
 
@@ -144,7 +144,7 @@ ACTION_SET_ALARM = 'ohos.want.action.setAlarm'
 ACTION_SHOW_ALARMS = 'ohos.want.action.showAlarms'
 ```
 
-指示启动显示所有警报的页面功能的操作。
+Action of launching the UI that displays all alarms.
 
 **Since:** 6
 
@@ -162,7 +162,7 @@ ACTION_SHOW_ALARMS = 'ohos.want.action.showAlarms'
 ACTION_SNOOZE_ALARM = 'ohos.want.action.snoozeAlarm'
 ```
 
-指示启动用于使闹钟睡眠的页面功能的操作。
+Action of launching the UI for snoozing an alarm.
 
 **Since:** 6
 
@@ -180,7 +180,7 @@ ACTION_SNOOZE_ALARM = 'ohos.want.action.snoozeAlarm'
 ACTION_DISMISS_ALARM = 'ohos.want.action.dismissAlarm'
 ```
 
-指示启动删除闹钟的页面功能的操作。
+Action of launching the UI for deleting an alarm.
 
 **Since:** 6
 
@@ -198,7 +198,7 @@ ACTION_DISMISS_ALARM = 'ohos.want.action.dismissAlarm'
 ACTION_DISMISS_TIMER = 'ohos.want.action.dismissTimer'
 ```
 
-指示启动页面功能以关闭计时器的操作。
+Action of launching the UI for dismissing a timer.
 
 **Since:** 6
 
@@ -216,7 +216,7 @@ ACTION_DISMISS_TIMER = 'ohos.want.action.dismissTimer'
 ACTION_SEND_SMS = 'ohos.want.action.sendSms'
 ```
 
-指示启动发送sms的页面功能的操作。
+Action of launching the UI for sending an SMS message.
 
 **Since:** 6
 
@@ -234,7 +234,7 @@ ACTION_SEND_SMS = 'ohos.want.action.sendSms'
 ACTION_CHOOSE = 'ohos.want.action.choose'
 ```
 
-指示启动页面功能以打开联系人或图片的操作。
+Action of launching the UI for opening a contact or picture.
 
 **Since:** 6
 
@@ -252,7 +252,7 @@ ACTION_CHOOSE = 'ohos.want.action.choose'
 ACTION_IMAGE_CAPTURE = 'ohos.want.action.imageCapture'
 ```
 
-指示启动页面拍照功能的操作。
+Action of launching the UI for photographing.
 
 **Since:** 8
 
@@ -270,7 +270,7 @@ ACTION_IMAGE_CAPTURE = 'ohos.want.action.imageCapture'
 ACTION_VIDEO_CAPTURE = 'ohos.want.action.videoCapture'
 ```
 
-指示启动页面功能以拍摄视频的操作。
+Action of launching the UI for shooting a video.
 
 **Since:** 8
 
@@ -288,7 +288,7 @@ ACTION_VIDEO_CAPTURE = 'ohos.want.action.videoCapture'
 ACTION_SELECT = 'ohos.want.action.select'
 ```
 
-指示显示应用程序选择对话框的操作。
+Action of launching the UI for application selection.
 
 **Since:** 6
 
@@ -306,7 +306,7 @@ ACTION_SELECT = 'ohos.want.action.select'
 ACTION_SEND_DATA = 'ohos.want.action.sendData'
 ```
 
-指示发送单个数据记录的操作。
+Action of launching the UI for sending a single data record.
 
 **Since:** 6
 
@@ -324,7 +324,7 @@ ACTION_SEND_DATA = 'ohos.want.action.sendData'
 ACTION_SEND_MULTIPLE_DATA = 'ohos.want.action.sendMultipleData'
 ```
 
-指示发送多个数据记录的操作。
+Action of launching the UI for sending multiple data records.
 
 **Since:** 6
 
@@ -342,7 +342,7 @@ ACTION_SEND_MULTIPLE_DATA = 'ohos.want.action.sendMultipleData'
 ACTION_SCAN_MEDIA_FILE = 'ohos.want.action.scanMediaFile'
 ```
 
-指示请求媒体扫描仪扫描文件并将文件添加到媒体库的操作。
+Action of requesting a media scanner to scan a file and add the file to the media library.
 
 **Since:** 6
 
@@ -360,7 +360,7 @@ ACTION_SCAN_MEDIA_FILE = 'ohos.want.action.scanMediaFile'
 ACTION_VIEW_DATA = 'ohos.want.action.viewData'
 ```
 
-指示查看数据的操作。
+Action of viewing data.
 
 **Since:** 6
 
@@ -378,7 +378,7 @@ ACTION_VIEW_DATA = 'ohos.want.action.viewData'
 ACTION_EDIT_DATA = 'ohos.want.action.editData'
 ```
 
-指示编辑数据的操作。
+Action of editing data.
 
 **Since:** 6
 
@@ -396,7 +396,7 @@ ACTION_EDIT_DATA = 'ohos.want.action.editData'
 INTENT_PARAMS_INTENT = 'ability.want.params.INTENT'
 ```
 
-指示用行为选择器来展示选择的操作。
+Action of displaying selection options with an action selector.
 
 **Since:** 6
 
@@ -414,7 +414,7 @@ INTENT_PARAMS_INTENT = 'ability.want.params.INTENT'
 INTENT_PARAMS_TITLE = 'ability.want.params.TITLE'
 ```
 
-指示与行为选择器一起使用时的字符序列对话框标题。
+Title of the character sequence dialog box used with the action selector.
 
 **Since:** 6
 
@@ -432,7 +432,7 @@ INTENT_PARAMS_TITLE = 'ability.want.params.TITLE'
 ACTION_FILE_SELECT = 'ohos.action.fileSelect'
 ```
 
-指示选择文件的操作。
+Action of selecting a file.
 
 **Since:** 7
 
@@ -450,7 +450,7 @@ ACTION_FILE_SELECT = 'ohos.action.fileSelect'
 PARAMS_STREAM = 'ability.params.stream'
 ```
 
-指示发送数据时与目标关联的数据流的URI。对应的value必须是string类型的数组。
+URI of the data stream associated with the target when the data is sent. The value must be an array of the string  type.
 
 **Since:** 7
 
@@ -468,7 +468,7 @@ PARAMS_STREAM = 'ability.params.stream'
 ACTION_APP_ACCOUNT_OAUTH = 'ohos.account.appAccount.action.oauth'
 ```
 
-指示提供oauth服务的操作。
+Action of providing the OAuth service.
 
 **Since:** 8
 

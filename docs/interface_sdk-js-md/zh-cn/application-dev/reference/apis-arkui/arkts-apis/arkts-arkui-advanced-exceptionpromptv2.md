@@ -1,11 +1,5 @@
 # @ohos.arkui.advanced.ExceptionPromptV2
 
-## 导入模块
-
-```TypeScript
-import { MarginTypeV2, PromptOptionsV2, ExceptionPromptV2, PromptOptionsV2Config } from 'kits/@kit.ArkUI';
-```
-
 ## 汇总
 
 ### 类

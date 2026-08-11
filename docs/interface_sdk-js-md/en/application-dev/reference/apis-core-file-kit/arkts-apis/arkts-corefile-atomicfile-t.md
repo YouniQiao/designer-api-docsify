@@ -4,7 +4,7 @@
 type AtomicFile = fileIo.AtomicFile
 ```
 
-AtomicFile类。
+AtomicFile
 
 **Since:** 23
 

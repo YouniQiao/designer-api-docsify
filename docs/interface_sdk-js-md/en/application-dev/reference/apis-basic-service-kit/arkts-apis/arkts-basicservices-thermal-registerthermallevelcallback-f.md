@@ -12,7 +12,7 @@ import { thermal } from 'kits/@kit.BasicServicesKit';
 function registerThermalLevelCallback(callback: Callback<ThermalLevel>): void
 ```
 
-订阅热档位变化时的回调提醒。使用callback异步回调。
+Registers a callback to be invoked when the thermal level changes. This API uses an asynchronous callback to return the result.
 
 **Since:** 9
 
@@ -26,13 +26,13 @@ function registerThermalLevelCallback(callback: Callback<ThermalLevel>): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](arkts-basicservices-base-callback-i.md)&lt;ThermalLevel&gt; | Yes | 回调函数，返回变化后的热档位；该参数是一个函数类型。 |
+| callback | [Callback](arkts-basicservices-base-callback-i.md)&lt;ThermalLevel&gt; | Yes | Callback used to return thermal level. This parameter is of the function type. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1. Incorrect parameter types; |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Incorrect parameter types; |
 
 ## Examples
 

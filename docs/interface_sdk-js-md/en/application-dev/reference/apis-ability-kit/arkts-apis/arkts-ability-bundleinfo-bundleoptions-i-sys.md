@@ -1,6 +1,6 @@
 # BundleOptions (System API)
 
-应用包选项，用于设置或查询应用相关信息。
+The bundle options of bundle manager
 
 **Since:** 20
 
@@ -18,8 +18,7 @@
 abilityName?: string
 ```
 
-Ability名称。默认值为空字符串。  
-**模型约束：** 此接口仅可在Stage模型下使用。
+Indicates ability name
 
 **Type:** string
 
@@ -41,7 +40,7 @@ Ability名称。默认值为空字符串。
 appIndex?: int
 ```
 
-应用分身ID。默认为0，表示主应用。
+Indicates the app index.
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
@@ -61,8 +60,7 @@ appIndex?: int
 bundleName?: string
 ```
 
-应用包名。默认值为空字符串。  
-**模型约束：** 此接口仅可在Stage模型下使用。
+Indicates bundle name
 
 **Type:** string
 
@@ -84,8 +82,7 @@ bundleName?: string
 moduleName?: string
 ```
 
-Ability所属的模块名称。默认值为空字符串。  
-**模型约束：** 此接口仅可在Stage模型下使用。
+Indicates module name
 
 **Type:** string
 
@@ -107,7 +104,7 @@ Ability所属的模块名称。默认值为空字符串。
 userId?: int
 ```
 
-用户ID。默认为当前调用方所在的用户。
+Indicates the user id.
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 

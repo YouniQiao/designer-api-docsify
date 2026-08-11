@@ -1,6 +1,6 @@
 # GridRowSizeOption
 
-栅格在不同宽度设备类型下的gutter大小配置。
+Describes the gutter sizes for different device width types.
 
 **Since:** 9
 
@@ -16,13 +16,7 @@
 lg?: Length
 ```
 
-在大宽度类型设备上，栅格子组件的间距。取值范围：大于等于0的数值或字符串。
-
-默认值：0vp
-
-单位：vp
-
-非法值：按默认值处理。
+Gutter size for large device width.Unit: vp. Default value: **0vp**.
 
 **Type:** [Length](../arkts-apis/arkts-arkui-length-t.md)
 
@@ -44,13 +38,7 @@ lg?: Length
 md?: Length
 ```
 
-在中等宽度类型设备上，栅格子组件的间距。取值范围：大于等于0的数值或字符串。
-
-默认值：0vp
-
-单位：vp
-
-非法值：按默认值处理。
+Gutter size for medium device width.Unit: vp. Default value: **0vp**.
 
 **Type:** [Length](../arkts-apis/arkts-arkui-length-t.md)
 
@@ -72,13 +60,7 @@ md?: Length
 sm?: Length
 ```
 
-在小宽度类型设备上，栅格子组件的间距。取值范围：大于等于0的数值或字符串。
-
-默认值：0vp
-
-单位：vp
-
-非法值：按默认值处理。
+Gutter size for small device width.Unit: vp. Default value: **0vp**.
 
 **Type:** [Length](../arkts-apis/arkts-arkui-length-t.md)
 
@@ -100,13 +82,7 @@ sm?: Length
 xl?: Length
 ```
 
-在特大宽度类型设备上，栅格子组件的间距。取值范围：大于等于0的数值或字符串。
-
-默认值：0vp
-
-单位：vp
-
-非法值：按默认值处理。
+Gutter size for extra large device width.Unit: vp. Default value: **0vp**.
 
 **Type:** [Length](../arkts-apis/arkts-arkui-length-t.md)
 
@@ -128,13 +104,7 @@ xl?: Length
 xs?: Length
 ```
 
-在最小宽度类型设备上，栅格子组件的间距。取值范围：大于等于0的数值或字符串。
-
-默认值：0vp
-
-单位：vp
-
-非法值：按默认值处理。
+Gutter size for minimum device width.Unit: vp. Default value: **0vp**.
 
 **Type:** [Length](../arkts-apis/arkts-arkui-length-t.md)
 
@@ -156,13 +126,7 @@ xs?: Length
 xxl?: Length
 ```
 
-在超大宽度类型设备上，栅格子组件的间距。取值范围：大于等于0的数值或字符串。
-
-默认值：0vp
-
-单位：vp
-
-非法值：按默认值处理。
+Gutter size for extra extra large device width.Unit: vp. Default value: **0vp**.
 
 **Type:** [Length](../arkts-apis/arkts-arkui-length-t.md)
 

@@ -1,11 +1,5 @@
 # offScreenReaderStateChange
 
-## 导入模块
-
-```TypeScript
-import { accessibility } from 'kits/@kit.AccessibilityKit';
-```
-
 ## offScreenReaderStateChange
 
 ```TypeScript
@@ -31,4 +25,32 @@ Unregister the observe of the screen reader state changed.
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;boolean&gt; | 否 | callback Asynchronous callback interface. |
+
+## 示例
+
+```TypeScript
+import { accessibility } from '@kit.AccessibilityKit';
+
+@Entry
+@Component
+struct Index {
+  callback: (data: boolean) => void = this.eventCallback;
+  eventCallback(data: boolean): void {
+    console.info(`screen reader state change, result: ${JSON.stringify(data)}`);
+  }
+
+  aboutToAppear(): void {
+    accessibility.onScreenReaderStateChange(this.callback);
+  }
+
+  aboutToDisappear(): void {
+    accessibility.offScreenReaderStateChange(this.callback);
+  }
+
+  build() {
+    Column() {
+    }
+  }
+}
+```
 

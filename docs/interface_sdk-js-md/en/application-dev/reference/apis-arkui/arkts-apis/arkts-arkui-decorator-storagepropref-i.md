@@ -16,7 +16,7 @@ Defining StoragePropRef annotation StoragePropRef is an annotation which is muta
 property: string
 ```
 
-用于标识AppStorage的属性。
+The give property in AppStorage.
 
 **Type:** string
 

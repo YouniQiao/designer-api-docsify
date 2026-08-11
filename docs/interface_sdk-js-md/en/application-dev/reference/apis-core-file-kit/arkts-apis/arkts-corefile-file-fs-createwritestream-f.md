@@ -12,7 +12,7 @@ import { Options, ReaderIteratorResult, Watcher, ReadTextOptions, WatchEventList
 declare function createWriteStream(path: string, options?: WriteStreamOptions): WriteStream
 ```
 
-以同步方法打开文件可写流。
+Creates a writeable stream. This API returns the result synchronously.
 
 **Since:** 12
 
@@ -26,14 +26,14 @@ declare function createWriteStream(path: string, options?: WriteStreamOptions): 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| path | string | Yes | 文件路径。 |
-| options | [WriteStreamOptions](arkts-corefile-file-fs-writestreamoptions-i.md) | No | 支持如下选项：&lt;br/&gt;- start，number类型，表示期望写入文件的位置，单位为Byte。可选，默认从当前位置开始写。&lt;br/&gt;- mode， number 类型，创建文件可写流的[选项](../../../reference/apis-core-file-kit/js-apis-file-fs.md#openmode)，可选，默认以只写方式创建。 |
+| path | string | Yes | Path of the file. |
+| options | [WriteStreamOptions](arkts-corefile-file-fs-writestreamoptions-i.md) | No | The options are as follows:&lt;br&gt;- **start** (number): start position to write the data, in bytes. This parameter is optional. By default, data is written from the current position.&lt;br&gt;- **mode** (number): [mode](../../../reference/apis-core-file-kit/js-apis-file-fs.md#openmode) for creating the writeable stream. This parameter is optional. The default value is the write-only mode. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [WriteStream](arkts-corefile-fileio-writestream-c.md) | 文件可写流。 |
+| [WriteStream](arkts-corefile-fileio-writestream-c.md) | WriteStream** instance obtained. |
 
 **Error codes:**
 
@@ -48,7 +48,7 @@ declare function createWriteStream(path: string, options?: WriteStreamOptions): 
 | 13900025 | No space left on device |
 | 13900027 | Read-only file system |
 | 13900004 | Interrupted system call |
-| 401 | Parameter error |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error |
 | 13900038 | Value too large for defined data type |
 | 13900001 | Operation not permitted |
 | 13900002 | No such file or directory |

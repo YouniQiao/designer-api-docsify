@@ -35,7 +35,7 @@ default attributeModifier(
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| modifier | [AttributeModifier](../arkts-components/arkts-arkui-attributemodifier-i.md)&lt;[CheckboxAttribute](arkts-arkui-checkbox-checkboxattribute-i.md)&gt; \| AttributeModifier&lt;CommonMethod&gt; \| undefined | 是 | 多选框的属性修改 器。当modifier的值为undefined时，不使用属性修改器。 |
+| modifier | [AttributeModifier](../arkts-components/arkts-arkui-attributemodifier-i.md)&lt;CheckboxAttribute&gt; \| AttributeModifier&lt;CommonMethod&gt; \| undefined | 是 | 多选框的属性修改 器。当modifier的值为undefined时，不使用属性修改器。 |
 
 **返回值：**
 

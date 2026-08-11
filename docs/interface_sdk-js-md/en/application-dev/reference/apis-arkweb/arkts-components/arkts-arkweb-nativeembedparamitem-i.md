@@ -1,6 +1,6 @@
 # NativeEmbedParamItem
 
-提供同层渲染object标签内嵌param元素的详细信息。
+Provides details about the **param** element embedded in the same-layer rendering tag **object**.
 
 **Since:** 21
 
@@ -16,7 +16,7 @@
 id: string
 ```
 
-param元素的id信息。
+ID of the **param** element.
 
 **Type:** string
 
@@ -34,7 +34,7 @@ param元素的id信息。
 name?: string
 ```
 
-param元素的参数名称。
+Name of the **param** element.
 
 **Type:** string
 
@@ -52,7 +52,7 @@ param元素的参数名称。
 status: NativeEmbedParamStatus
 ```
 
-param元素的状态变化类型。
+Status change type of the **param** element.
 
 **Type:** [NativeEmbedParamStatus](../arkts-apis/arkts-arkweb-web-nativeembedparamstatus-e.md)
 
@@ -70,7 +70,7 @@ param元素的状态变化类型。
 value?: string
 ```
 
-param元素的参数值。
+Value of the **param** element.
 
 **Type:** string
 

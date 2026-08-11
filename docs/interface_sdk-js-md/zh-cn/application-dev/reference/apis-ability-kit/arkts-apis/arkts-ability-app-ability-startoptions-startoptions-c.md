@@ -11,12 +11,6 @@ StartOptions可以作为启动UIAbility接口（例如
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 
-## 导入模块
-
-```TypeScript
-import { StartOptions } from 'kits/@kit.AbilityKit';
-```
-
 ## completionHandler
 
 ```TypeScript

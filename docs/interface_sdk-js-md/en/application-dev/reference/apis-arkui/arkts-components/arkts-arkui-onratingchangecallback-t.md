@@ -4,7 +4,7 @@
 declare type OnRatingChangeCallback = (rating: number) => void
 ```
 
-当评分条的评分变化时触发该回调。
+Defines the callback triggered when the rating value changes.
 
 **Since:** 18
 
@@ -22,5 +22,5 @@ declare type OnRatingChangeCallback = (rating: number) => void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| rating | number | Yes | 评分条的评分值。取值范围为[0, stars]。 |
+| rating | number | Yes | Rating value. |
 

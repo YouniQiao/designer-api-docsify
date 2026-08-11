@@ -10,12 +10,6 @@
 
 **系统能力：** SystemCapability.DistributedSched.AppCollaboration
 
-## 导入模块
-
-```TypeScript
-import { abilityConnectionManager } from 'kits/@kit.DistributedServiceKit';
-```
-
 ## needSendData
 
 ```TypeScript
@@ -44,7 +38,7 @@ parameters?: Record<string, string>
 
 配置连接所需的额外信息。
 
-**类型：** [Record](../../apis-default/arkts-apis/arkts-record-t.md)&lt;string, string&gt;
+**类型：** Record&lt;string, string&gt;
 
 **起始版本：** 18
 

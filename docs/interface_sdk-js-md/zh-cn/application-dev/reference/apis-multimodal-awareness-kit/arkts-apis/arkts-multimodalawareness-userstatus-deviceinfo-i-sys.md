@@ -1,6 +1,6 @@
 # DeviceInfo（系统接口）
 
-Defines device information.
+设备信息。
 
 **起始版本：** 26.0.0
 
@@ -12,19 +12,13 @@ Defines device information.
 
 **系统接口：** 此接口为系统接口。
 
-## 导入模块
-
-```TypeScript
-import { userStatus } from 'kits/@kit.MultimodalAwarenessKit';
-```
-
 ## deviceId
 
 ```TypeScript
 deviceId: string
 ```
 
-Device ID.
+设备ID。
 
 **类型：** string
 
@@ -46,7 +40,7 @@ Device ID.
 deviceName: string
 ```
 
-Device name.
+设备名称。
 
 **类型：** string
 
@@ -68,9 +62,9 @@ Device name.
 deviceType: DeviceType
 ```
 
-Device type.
+设备类型。
 
-**类型：** [DeviceType](../../apis-avsession-kit/arkts-apis/arkts-avsession-avsession-devicetype-e.md)
+**类型：** [DeviceType](../../apis-localization-kit/arkts-apis/arkts-localization-resourcemanager-devicetype-e.md)
 
 **起始版本：** 26.0.0
 
@@ -90,7 +84,7 @@ Device type.
 networkId: string
 ```
 
-Device network ID.
+设备网络ID。
 
 **类型：** string
 

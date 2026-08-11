@@ -12,7 +12,7 @@ import { notificationManager } from 'kits/@kit.NotificationKit';
 function getDistributedDeviceList(): Promise<Array<string>>
 ```
 
-查询支持跨设备协同通知的设备类型。使用Promise异步回调。
+Obtains the device types that enable cross-device notification. This API uses a promise to return the result.
 
 **Since:** 20
 
@@ -30,14 +30,14 @@ function getDistributedDeviceList(): Promise<Array<string>>
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;Array&lt;string&gt;&gt; | 返回支持跨设备协同通知的设备列表。Promise对象。 |
+| Promise&lt;Array&lt;string&gt;&gt; | Promise used to return the result. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 201 | Permission denied. |
-| 202 | Not system application to call the interface. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system application to call the interface. |
 
 ## Examples
 

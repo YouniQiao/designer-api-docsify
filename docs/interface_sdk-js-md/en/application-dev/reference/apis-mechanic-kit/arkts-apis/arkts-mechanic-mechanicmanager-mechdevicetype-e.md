@@ -16,7 +16,7 @@ Enumerates the mechanical device types.
 GIMBAL_DEVICE = 0
 ```
 
-云台设备类型
+Gimbal device.
 
 **Since:** 20
 

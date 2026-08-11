@@ -1,6 +1,6 @@
 # AVControlCommand
 
-会话接受的命令的对象描述。
+The definition of command to be sent to the session
 
 **Since:** 10
 
@@ -22,7 +22,7 @@ import { avSession } from 'kits/@kit.AVSessionKit';
 command: AVControlCommandType
 ```
 
-命令（不同命令对应不同参数）。
+The command value {@link AVControlCommandType}
 
 **Type:** [AVControlCommandType](arkts-avsession-avsession-avcontrolcommandtype-t.md)
 
@@ -42,7 +42,7 @@ command: AVControlCommandType
 commandInfo?: CommandInfo
 ```
 
-命令信息。
+The command value {@link CommandInfo}
 
 **Type:** [CommandInfo](arkts-avsession-avsession-commandinfo-i.md)
 
@@ -60,7 +60,7 @@ commandInfo?: CommandInfo
 parameter?: LoopMode | string | double
 ```
 
-命令对应的参数。
+parameter of the command. Whether this command requires parameters, see {@link AVSessionCommand}seek command requires a number parameter setSpeed command requires a number parameter setLoopMode command requires a {@link LoopMode} parameter.toggleFavorite command requires assetId {@link AVMetadata.assetId} parameter other commands need no parameter
 
 **Type:** ArkTS-Dyn: [LoopMode](arkts-avsession-avsession-loopmode-e.md) \| string \| number  <br>ArkTS-Sta：[LoopMode](arkts-avsession-avsession-loopmode-e.md) \| string \| double
 

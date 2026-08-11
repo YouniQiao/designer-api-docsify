@@ -1,6 +1,6 @@
 # AppPreloadType
 
-表示应用当前进程的预加载类型枚举。
+Enumerates the preloading types of the current application process.
 
 **Since:** 22
 
@@ -16,7 +16,7 @@
 UNSPECIFIED = 0
 ```
 
-未发生预加载或预加载数据已被清除。
+No preloading has taken place, or the preloaded data has been cleared.
 
 **Since:** 22
 
@@ -34,7 +34,7 @@ UNSPECIFIED = 0
 TYPE_CREATE_PROCESS = 1
 ```
 
-进程最终预加载到进程创建完成阶段。
+Preloads the process up to the point of process creation completion.
 
 **Since:** 22
 
@@ -52,7 +52,7 @@ TYPE_CREATE_PROCESS = 1
 TYPE_CREATE_ABILITY_STAGE = 2
 ```
 
-进程最终预加载到[AbilityStage](arkts-ability-app-ability-abilitystage-abilitystage-c.md)创建完成阶段。
+Preloads the process up to the point of [AbilityStage](arkts-ability-app-ability-abilitystage-abilitystage-c.md)creation completion.
 
 **Since:** 22
 
@@ -70,7 +70,7 @@ TYPE_CREATE_ABILITY_STAGE = 2
 TYPE_CREATE_WINDOW_STAGE = 3
 ```
 
-进程最终预加载到[WindowStage](../../apis-arkui/arkts-apis/arkts-window.md/arkts-window.md)创建完成阶段。
+Preloads the process up to the point of [WindowStage](../../apis-arkui/arkts-apis/arkts-window.md/arkts-window.md) creation completion.
 
 **Since:** 22
 
@@ -88,7 +88,7 @@ TYPE_CREATE_WINDOW_STAGE = 3
 TYPE_CREATE_BACKGROUND_ABILITY = 4
 ```
 
-进程最终预加载到[onBackground](arkts-ability-app-ability-uiability-uiability-c.md#onbackground)执行完成阶段。
+Preloads the process up to the point of [onBackground](arkts-ability-app-ability-uiability-uiability-c.md#onbackground)execution completion.
 
 **Since:** 23
 

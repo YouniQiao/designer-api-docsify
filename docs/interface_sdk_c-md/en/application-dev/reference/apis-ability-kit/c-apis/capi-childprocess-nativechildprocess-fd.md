@@ -6,7 +6,7 @@ typedef struct NativeChildProcess_Fd {...} NativeChildProcess_Fd
 
 ## Overview
 
-The info of the file descriptors passed to child process.
+The struct describes the information about the file descriptor passed to the child process.
 
 **Since**: 13
 
@@ -20,8 +20,8 @@ The info of the file descriptors passed to child process.
 
 | Name | Description |
 | -- | -- |
-| char* fdName | the key of the file descriptor. |
-| int32_t fd | the value of the file descriptor. |
-| struct [NativeChildProcess_Fd*](capi-childprocess-nativechildprocess-fd.md) next | the next pointer of the linked list. |
+| char* fdName |  |
+| int32_t fd |  |
+| struct [NativeChildProcess_Fd*](capi-childprocess-nativechildprocess-fd.md) next |  |
 
 

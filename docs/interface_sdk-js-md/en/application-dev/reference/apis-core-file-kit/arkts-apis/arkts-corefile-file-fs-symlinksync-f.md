@@ -12,11 +12,11 @@ import { Options, ReaderIteratorResult, Watcher, ReadTextOptions, WatchEventList
 declare function symlinkSync(target: string, srcPath: string): void
 ```
 
-以同步的方法基于文件路径创建符号链接。
+Creates a symbolic link based on the file path. This API returns the result synchronously.
 
-> **说明：**
+> **NOTE：**
 > 
-> 从API version 11开始，不支持三方应用使用。
+> Since API version 11, this API cannot be used by third-party applications.
 
 **Since:** 9
 
@@ -30,8 +30,8 @@ declare function symlinkSync(target: string, srcPath: string): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| target | string | Yes | 要链接的目标文件的应用沙箱路径。 |
-| srcPath | string | Yes | 符号链接文件的应用沙箱路径。 |
+| target | string | Yes | Application sandbox path of the target file. |
+| srcPath | string | Yes | Application sandbox path of the symbolic link. |
 
 **Error codes:**
 

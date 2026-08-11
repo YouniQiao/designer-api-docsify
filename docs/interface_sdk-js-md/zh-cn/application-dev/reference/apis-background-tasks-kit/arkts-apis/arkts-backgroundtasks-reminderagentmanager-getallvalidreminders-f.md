@@ -1,11 +1,5 @@
 # getAllValidReminders
 
-## 导入模块
-
-```TypeScript
-import { reminderAgentManager } from 'kits/@kit.BackgroundTasksKit';
-```
-
 ## getAllValidReminders
 
 ```TypeScript
@@ -32,38 +26,32 @@ function getAllValidReminders(): Promise<Array<ReminderInfo>>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 201 | Permission denied. |
+| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
 
 ## 示例
+
+ArkTS-Dyn示例：
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
 import { reminderAgentManager } from '@kit.BackgroundTasksKit';
 
 reminderAgentManager.getAllValidReminders().then((reminders: Array<reminderAgentManager.ReminderInfo>) => {
-  console.info("promise, getAllValidReminders length = " + reminders.length);
-  for (let i = 0; i < reminders.length; i++) {
-    console.info("getAllValidReminders, reminderId = " + reminders[i].reminderId);
-    console.info("getAllValidReminders, reminderType = " + reminders[i].reminderReq.reminderType);
-    const actionButton = reminders[i].reminderReq.actionButton || [];
-    for (let j = 0; j < actionButton.length; j++) {
-      console.info("getAllValidReminders, actionButton.title = " + actionButton[j]?.title);
-      console.info("getAllValidReminders, actionButton.type = " + actionButton[j]?.type);
-    }
-    console.info("getAllValidReminders, wantAgent.pkgName = " + reminders[i].reminderReq.wantAgent?.pkgName);
-    console.info("getAllValidReminders, wantAgent.abilityName = " + reminders[i].reminderReq.wantAgent?.abilityName);
-    console.info("getAllValidReminders, ringDuration = " + reminders[i].reminderReq.ringDuration);
-    console.info("getAllValidReminders, snoozeTimes = " + reminders[i].reminderReq.snoozeTimes);
-    console.info("getAllValidReminders, timeInterval = " + reminders[i].reminderReq.timeInterval);
-    console.info("getAllValidReminders, title = " + reminders[i].reminderReq.title);
-    console.info("getAllValidReminders, content = " + reminders[i].reminderReq.content);
-    console.info("getAllValidReminders, expiredContent = " + reminders[i].reminderReq.expiredContent);
-    console.info("getAllValidReminders, snoozeContent = " + reminders[i].reminderReq.snoozeContent);
-    console.info("getAllValidReminders, notificationId = " + reminders[i].reminderReq.notificationId);
-    console.info("getAllValidReminders, slotType = " + reminders[i].reminderReq.slotType);
-  }
+  console.info(`Succeeded in getting reminder, info is ${JSON.stringify(reminders)}.`);
 }).catch((err: BusinessError) => {
   console.error("promise err code:" + err.code + " message:" + err.message);
+});
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+import { reminderAgentManager } from '@kit.BackgroundTasksKit';
+
+reminderAgentManager.getAllValidReminders().then((reminders: Array<reminderAgentManager.ReminderInfo>) => {
+  console.info(`Succeeded in getting reminder, info is ${JSON.stringify(reminders)}.`);
+}).catch((err): void => {
+  console.error(`Failed to get reminder. Code is ${err.code}, message is ${err.message}`);
 });
 ```
 

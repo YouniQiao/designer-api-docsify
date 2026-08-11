@@ -1,6 +1,6 @@
 # RichEditorOptions
 
-RichEditor初始化参数。
+Defines the options for initializing the **RichEditor** component.
 
 **Since:** 10
 
@@ -16,7 +16,7 @@ RichEditor初始化参数。
 controller: RichEditorController
 ```
 
-富文本控制器。
+Controller for the **RichEditor** component.
 
 **Type:** [RichEditorController](../arkts-apis/arkts-arkui-richeditor-richeditorcontroller-c.md)
 

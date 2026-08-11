@@ -12,7 +12,7 @@ import { process } from 'kits/@kit.ArkTS';
 function getThreadPriority(v: number): number
 ```
 
-根据指定的 tid 获取线程优先级，优先级顺序取决于当前操作系统。
+Obtains the thread priority based on the specified TID.
 
 **Since:** 8
 
@@ -30,13 +30,13 @@ function getThreadPriority(v: number): number
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| v | number | Yes | 指定的线程 tid。 |
+| v | number | Yes | TID. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| number | 返回线程的优先级。优先级顺序取决于当前操作系统。 |
+| number | Priority of the thread. The priority depends on the operating system. |
 
 ## Examples
 

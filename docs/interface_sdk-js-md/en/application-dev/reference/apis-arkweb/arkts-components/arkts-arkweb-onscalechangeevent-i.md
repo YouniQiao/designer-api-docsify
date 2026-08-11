@@ -1,6 +1,6 @@
 # OnScaleChangeEvent
 
-定义当前页面显示比例的变化时触发。
+Represents the callback invoked when the display scale of this page changes.
 
 **Since:** 12
 
@@ -16,7 +16,7 @@
 newScale: number
 ```
 
-变化后的显示比例百分比。
+Display scale of the page after the change.
 
 **Type:** number
 
@@ -36,7 +36,7 @@ newScale: number
 oldScale: number
 ```
 
-变化前的显示比例百分比。
+Display scale of the page before the change.
 
 **Type:** number
 

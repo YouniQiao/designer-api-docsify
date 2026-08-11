@@ -38,8 +38,8 @@ Check whether the global ethernet switch is enabled.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 2200003 | Internal error. |
-| 2200002 | Operation failed. Cannot connect to service. |
-| 201 | Permission denied. |
-| 202 | Non-system applications use system APIs. |
+| [2200003](../errorcode-net-sharing.md#2200003-system-internal-error) | Internal error. |
+| [2200002](../errorcode-net-sharing.md#2200002-service-connection-failure) | Operation failed. Cannot connect to service. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Non-system applications use system APIs. |
 

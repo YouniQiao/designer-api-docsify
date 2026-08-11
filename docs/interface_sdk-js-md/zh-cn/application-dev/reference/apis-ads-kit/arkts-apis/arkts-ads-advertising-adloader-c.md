@@ -10,12 +10,6 @@
 
 **系统能力：** SystemCapability.Advertising.Ads
 
-## 导入模块
-
-```TypeScript
-import { advertising } from 'kits/@kit.AdsKit';
-```
-
 ## constructor
 
 ```TypeScript
@@ -84,10 +78,10 @@ loadAd(adParam: AdRequestParams, adOptions: AdOptions, listener: AdLoadListener)
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 401 | Invalid input parameter. Possible causes: 1. Mandatory parameters are left unspecified.2. Incorrect parameter types. 3.Parameter verification failed |
-| 801 | Device not supported.<br>**适用版本：** 12+ |
-| 21800001 | System internal error. |
-| 21800003 | Failed to load the ad request. |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Invalid input parameter. Possible causes: 1. Mandatory parameters are left unspecified.2. Incorrect parameter types. 3.Parameter verification failed |
+| [801](../../errorcode-universal.md#801-该设备不支持此api) | Device not supported.<br>**适用版本：** 12+ |
+| [21800001](../errorcode-ads.md#21800001-系统内部错误) | System internal error. |
+| [21800003](../errorcode-ads.md#21800003-广告请求加载失败) | Failed to load the ad request. |
 
 ## 示例
 
@@ -150,10 +144,10 @@ loadAdWithMultiSlots(adParams: AdRequestParams[], adOptions: AdOptions, listener
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 401 | Invalid input parameter. Possible causes: 1. Mandatory parameters are left unspecified.2. Incorrect parameter types. 3.Parameter verification failed |
-| 801 | Device not supported.<br>**适用版本：** 12+ |
-| 21800001 | System internal error. |
-| 21800003 | Failed to load the ad request. |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Invalid input parameter. Possible causes: 1. Mandatory parameters are left unspecified.2. Incorrect parameter types. 3.Parameter verification failed |
+| [801](../../errorcode-universal.md#801-该设备不支持此api) | Device not supported.<br>**适用版本：** 12+ |
+| [21800001](../errorcode-ads.md#21800001-系统内部错误) | System internal error. |
+| [21800003](../errorcode-ads.md#21800003-广告请求加载失败) | Failed to load the ad request. |
 
 ## 示例
 

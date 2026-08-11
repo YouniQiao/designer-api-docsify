@@ -20,9 +20,7 @@ import { font } from 'kits/@kit.ArkUI';
 to: int
 ```
 
-字体在应用中显示的weight值。
-
-可返回的值有100、400、700、900。
+Font weight displayed in the app
 
 **Type:** int
 
@@ -42,9 +40,7 @@ to: int
 weight: double
 ```
 
-字体原本的weight值。
-
-可返回的值有50、80、100、200。
+Original weight of the font
 
 **Type:** double
 

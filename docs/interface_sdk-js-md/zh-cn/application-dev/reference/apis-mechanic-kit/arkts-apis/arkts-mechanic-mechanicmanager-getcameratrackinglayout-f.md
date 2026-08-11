@@ -1,11 +1,5 @@
 # getCameraTrackingLayout
 
-## 导入模块
-
-```TypeScript
-import { mechanicManager } from 'kits/@kit.MechanicKit';
-```
-
 ## getCameraTrackingLayout
 
 ```TypeScript
@@ -32,8 +26,8 @@ function getCameraTrackingLayout(): CameraTrackingLayout
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 33300001 | Service exception. |
-| 33300002 | Device not connected. |
+| [33300001](../errorcode-mechanic.md#33300001-系统错误) | Service exception. |
+| [33300002](../errorcode-mechanic.md#33300002-设备未连接) | Device not connected. |
 
 ## 示例
 

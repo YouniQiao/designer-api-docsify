@@ -1,6 +1,6 @@
 # DownloadError
 
-预下载错误回调的返回信息。
+Describes the error message returned when a pre-download error occurs.
 
 **Since:** 23
 
@@ -22,7 +22,7 @@ import { cacheDownload } from 'kits/@kit.BasicServicesKit';
 readonly errorCode: ErrorCode
 ```
 
-预下载错误回调返回的特定错误类型。
+Specific error type returned by the pre-download error callback.
 
 **Type:** [ErrorCode](arkts-basicservices-cachedownload-errorcode-e.md)
 
@@ -40,8 +40,8 @@ readonly errorCode: ErrorCode
 readonly message: string
 ```
 
-返回[通用错误码](../../../reference/errorcode-universal.md)或  
-[HTTP错误码](../../../reference/apis-network-kit/errorcode-net-http.md)。
+Error message. A [universal error code](../../../reference/errorcode-universal.md) or  
+[HTTP error code](../../../reference/apis-network-kit/errorcode-net-http.md) is returned.
 
 **Type:** string
 

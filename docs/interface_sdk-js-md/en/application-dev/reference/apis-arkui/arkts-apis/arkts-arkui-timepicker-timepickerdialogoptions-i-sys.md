@@ -1,8 +1,6 @@
 # TimePickerDialogOptions
 
-时间选择器弹窗选项。
-
-继承自[TimePickerOptions](arkts-arkui-timepicker-timepickeroptions-i.md)。
+Defines the TimePickerDialogOptions for Data Picker Dialog.
 
 **Inheritance/Implementation:** TimePickerDialogOptions extends [TimePickerOptions](arkts-arkui-timepicker-timepickeroptions-i.md)
 
@@ -20,7 +18,7 @@
 distortionMode?: DistortionMode
 ```
 
-设置对话框的形变动画模式。
+Sets the distortion animation Mode of the dialog.
 
 **Type:** [DistortionMode](../arkts-components/arkts-arkui-distortionmode-e-sys.md)
 
@@ -44,7 +42,7 @@ distortionMode?: DistortionMode
 edgeLightMode?: EdgeLightMode
 ```
 
-设置对话框的边缘光动画模式。
+Sets the edgeLight animation Mode of the dialog.
 
 **Type:** [EdgeLightMode](../arkts-components/arkts-arkui-edgelightmode-e-sys.md)
 

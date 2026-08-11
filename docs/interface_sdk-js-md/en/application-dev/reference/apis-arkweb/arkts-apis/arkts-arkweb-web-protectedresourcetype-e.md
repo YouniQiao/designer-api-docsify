@@ -64,9 +64,7 @@ The audio capture resource, such as microphone.
 SENSOR = 'TYPE_SENSOR'
 ```
 
-传感器资源，例如加速度传感器。
-
-23
+The sensor resource, such as accelerometer.
 
 **Since:** 23
 

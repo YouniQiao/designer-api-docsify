@@ -1,6 +1,6 @@
 # TouchTestStrategy
 
-事件派发策略。
+Event dispatch strategy.
 
 **Since:** 11
 
@@ -16,7 +16,7 @@
 DEFAULT = 0
 ```
 
-自定义分发不产生影响，系统按当前节点命中状态分发事件。
+Custom dispatch has no effect; the system dispatches events based on the hit status of the current node.
 
 **Since:** 11
 
@@ -38,7 +38,7 @@ DEFAULT = 0
 FORWARD_COMPETITION = 1
 ```
 
-应用指定分发事件到某个子节点，其他兄弟节点是否分发事件交由系统决定。
+The event is dispatched to a specified child node, and the system determines whether to dispatch events to other sibling nodes.
 
 **Since:** 11
 
@@ -60,7 +60,7 @@ FORWARD_COMPETITION = 1
 FORWARD = 2
 ```
 
-应用指定分发事件到某个子节点，系统不再分发事件到其他兄弟节点。
+The event is dispatched to a specified child node, and the system will not dispatch events to other sibling nodes.
 
 **Since:** 11
 

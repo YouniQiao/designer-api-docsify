@@ -10,12 +10,6 @@ Options用于指定在压缩或解压Zip文件时的选项。
 
 **系统能力：** SystemCapability.BundleManager.Zlib
 
-## 导入模块
-
-```TypeScript
-import { zlib } from 'kits/@kit.BasicServicesKit';
-```
-
 ## level
 
 ```TypeScript

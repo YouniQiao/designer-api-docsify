@@ -62,7 +62,7 @@ readonly layoutStyle?: ImageAttachmentLayoutStyle
 
 获取属性字符串的图片布局。
 
-**类型：** [ImageAttachmentLayoutStyle](arkts-arkui-imageattachmentlayoutstyle-i.md)
+**类型：** [ImageAttachmentLayoutStyle](arkts-arkui-styledstring-imageattachmentlayoutstyle-i.md)
 
 **起始版本：** 23
 

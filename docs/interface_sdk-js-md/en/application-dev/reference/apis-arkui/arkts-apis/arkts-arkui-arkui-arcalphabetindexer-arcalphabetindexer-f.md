@@ -14,9 +14,7 @@ export declare function ArcAlphabetIndexer(
 ): ArcAlphabetIndexerAttribute
 ```
 
-创建弧形索引条实例，传入弧形索引条配置项参数。
-
-无
+Defines ArcAlphabetIndexer Component.
 
 **Since:** 26.0.0
 
@@ -32,13 +30,13 @@ export declare function ArcAlphabetIndexer(
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| info | [ArcAlphabetIndexerInitInfo](arkts-arkui-arkui-arcalphabetindexer-arcalphabetindexerinitinfo-i.md) | Yes | 定义弧形字母索引条的初始化参数。 |
+| info | [ArcAlphabetIndexerInitInfo](arkts-arkui-arkui-arcalphabetindexer-arcalphabetindexerinitinfo-i.md) | Yes | The initialization parameters of the arc alphabet index bar |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [ArcAlphabetIndexerAttribute](arkts-arkui-arkui-arcalphabetindexer-arcalphabetindexerattribute-c.md) | ArcAlphabetIndexer实例对象。 |
+| [ArcAlphabetIndexerAttribute](arkts-arkui-arkui-arcalphabetindexer-arcalphabetindexerattribute-c.md) | The attribute of the ArcAlphabetIndexer. |
 
 
 ## ArcAlphabetIndexer
@@ -49,11 +47,11 @@ export declare function ArcAlphabetIndexer(
 ): ArcAlphabetIndexerAttribute
 ```
 
-创建弧形索引条实例，传入弧形索引条配置项参数。
+Defines ArcAlphabetIndexer Component.
 
-**Since:** 26.0.0
+**Since:** 26.1.0
 
-**ArkTS mode:** ArkTS-Sta only, since version 26.0.0.
+**ArkTS mode:** ArkTS-Sta only, since version 26.1.0.
 
 **Decorator:** @Builder
 
@@ -67,7 +65,7 @@ export declare function ArcAlphabetIndexer(
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| style_ | [CustomBuilderT](../arkts-components/arkts-arkui-custombuildert-t.md)&lt;ArcAlphabetIndexerAttribute&gt; | Yes | arcAlphabetIndexer属性实例。 |
+| style_ | [CustomBuilderT](../arkts-components/arkts-arkui-custombuildert-t.md)&lt;ArcAlphabetIndexerAttribute&gt; | Yes | arcAlphabetIndexer attribute instance |
 
 **Return value:**
 

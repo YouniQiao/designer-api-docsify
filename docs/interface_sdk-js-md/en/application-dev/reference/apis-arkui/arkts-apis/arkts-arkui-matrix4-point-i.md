@@ -1,6 +1,6 @@
 # Point
 
-坐标点的数据结构。
+Set poly to poly point.
 
 **Since:** 23
 
@@ -22,9 +22,7 @@ import { matrix4 } from 'kits/@kit.ArkUI';
 x: double
 ```
 
-x轴坐标。
-
-取值范围：(-∞, +∞)
+Point x.
 
 **Type:** double
 
@@ -44,9 +42,7 @@ x轴坐标。
 y: double
 ```
 
-y轴坐标。
-
-取值范围：(-∞, +∞)
+Point y.
 
 **Type:** double
 

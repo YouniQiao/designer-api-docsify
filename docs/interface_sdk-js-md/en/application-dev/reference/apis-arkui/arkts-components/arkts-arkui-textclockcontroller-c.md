@@ -1,10 +1,10 @@
 # TextClockController
 
-TextClock容器组件的控制器，可以将该控制器绑定到TextClock组件，通过它控制文本时钟的启动与停止。一个TextClock组件仅支持绑定一个控制器。
+Implements the controller of the **TextClock** component. You can bind the controller to the component to control its start and stop. A **TextClock** component can be bound to only one controller.
 
-## 导入对象
+## Objects to Import
 
-```ts controller: TextClockController = new TextClockController();```
+```ts controller: TextClockController = new TextClockController()```
 
 **Since:** 8
 
@@ -20,7 +20,7 @@ TextClock容器组件的控制器，可以将该控制器绑定到TextClock组�
 constructor()
 ```
 
-TextClockController的构造函数。
+A constructor used to create a **TextClockController** instance.
 
 **Since:** 8
 
@@ -40,7 +40,7 @@ TextClockController的构造函数。
 start()
 ```
 
-启动文本时钟。使用前需先将TextClockController绑定到TextClock组件。
+Starts the **&lt;TextClock\&gt;** component.
 
 **Since:** 8
 
@@ -60,7 +60,7 @@ start()
 stop()
 ```
 
-停止文本时钟。使用前需先将TextClockController绑定到TextClock组件。
+Stops the **&lt;TextClock\&gt;** component.
 
 **Since:** 8
 

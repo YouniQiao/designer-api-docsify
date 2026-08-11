@@ -34,7 +34,7 @@ Add a blendMode effect to the current component.Cannot be used together with the
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| effect | [BlendMode](arkts-arkui-common-blendmode-e.md) \| Blender \| undefined | 是 | When the effect type is BlendMode type, define Different hybrid modes. |
+| effect | [BlendMode](../arkts-components/arkts-arkui-blendmode-e.md) \| Blender \| undefined | 是 | When the effect type is BlendMode type, define Different hybrid modes. |
 | type | [BlendApplyType](../arkts-components/arkts-arkui-blendapplytype-e-sys.md) | 否 | Different blend apply type Default value: BlendApplyType.FAST. |
 
 **返回值：**
@@ -69,7 +69,7 @@ Sets the edge light effect for the component.
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| params | [EdgeLightParams](arkts-arkui-common-edgelightparams-i-sys.md) \| undefined | 是 | Edge light effect parameters. Defines the position, length, intensity, color, and thickness of the light effect. If params is undefined, the edge light effect is removed. |
+| params | [EdgeLightParams](../arkts-components/arkts-arkui-edgelightparams-i-sys.md) \| undefined | 是 | Edge light effect parameters. Defines the position, length, intensity, color, and thickness of the light effect. If params is undefined, the edge light effect is removed. |
 
 **返回值：**
 

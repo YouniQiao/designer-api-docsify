@@ -1,6 +1,6 @@
 # UserIdentityManager (System API)
 
-获取用户身份管理类。
+Provides APIs for user IDM.
 
 **Since:** 8
 
@@ -24,7 +24,7 @@ import { osAccount } from 'kits/@kit.BasicServicesKit';
 addCredential(credentialInfo: CredentialInfo, callback: IIdmCallback): void
 ```
 
-添加凭据，添加用户凭据信息，传入凭据添加方法和凭据信息（凭据类型，子类，如果添加用户的非密码凭据，则传入密码身份验证令牌），并获取结果/获取信息。
+Adds credential information, including the credential type, subtype, and token (if a non-PIN credential is added).
 
 **Since:** 8
 
@@ -42,8 +42,8 @@ addCredential(credentialInfo: CredentialInfo, callback: IIdmCallback): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| credentialInfo | [CredentialInfo](arkts-basicservices-osaccount-credentialinfo-i-sys.md) | Yes | 指示凭据信息。 |
-| callback | [IIdmCallback](arkts-basicservices-osaccount-iidmcallback-i-sys.md) | Yes | 回调对象，返回添加凭据的结果。 |
+| credentialInfo | [CredentialInfo](arkts-basicservices-osaccount-credentialinfo-i-sys.md) | Yes | Credential information to add. |
+| callback | [IIdmCallback](arkts-basicservices-osaccount-iidmcallback-i-sys.md) | Yes | Callback used to return the result. |
 
 **Error codes:**
 
@@ -51,19 +51,19 @@ addCredential(credentialInfo: CredentialInfo, callback: IIdmCallback): void
 | --- | --- |
 | 12300091 | Cross-device communication failed.<br>**Applicable version:** 23 and later |
 | 12300090 | Cross-device capability not supported.<br>**Applicable version:** 23 and later |
-| 12300115 | The number of credentials reaches the upper limit. |
-| 201 | Permission denied. |
-| 202 | Not system application. |
+| [12300115](../../apis-basic-services-kit/errorcode-account.md#12300115-user-authentication-passwords-reached-the-limit) | The number of credentials reaches the upper limit. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system application. |
 | 12300020 | Device hardware abnormal.<br>**Applicable version:** 23 and later |
-| 12300116 | Credential complexity verification failed.<br>**Applicable version:** 12 and later |
-| 12300106 | The authentication type is not supported. |
-| 12300008 | Restricted account.<br>**Applicable version:** 12 and later |
-| 12300111 | The operation timeout. |
-| 12300109 | The authentication, enrollment, or update operation is canceled. |
-| 12300003 | Account not found.<br>**Applicable version:** 12 and later |
-| 12300002 | Invalid credentialInfo, i.e. authType or authSubType. |
-| 12300001 | The system service works abnormally. |
-| 12300101 | The token is invalid. |
+| [12300116](../../apis-basic-services-kit/errorcode-account.md#12300116-failed-to-verify-the-credential-complexity) | Credential complexity verification failed.<br>**Applicable version:** 12 and later |
+| [12300106](../../apis-basic-services-kit/errorcode-account.md#12300106-authentication-type-not-supported) | The authentication type is not supported. |
+| [12300008](../../apis-basic-services-kit/errorcode-account.md#12300008-restricted-account) | Restricted account.<br>**Applicable version:** 12 and later |
+| [12300111](../../apis-basic-services-kit/errorcode-account.md#12300111-authentication-timed-out) | The operation timeout. |
+| [12300109](../../apis-basic-services-kit/errorcode-account.md#12300109-authentication-credential-enrollment-or-update-canceled) | The authentication, enrollment, or update operation is canceled. |
+| [12300003](../../apis-basic-services-kit/errorcode-account.md#12300003-account-not-found) | Account not found.<br>**Applicable version:** 12 and later |
+| [12300002](../../apis-basic-services-kit/errorcode-account.md#12300002-invalid-parameter) | Invalid credentialInfo, i.e. authType or authSubType. |
+| [12300001](../../apis-basic-services-kit/errorcode-account.md#12300001-system-service-abnormal) | The system service works abnormally. |
+| [12300101](../../apis-basic-services-kit/errorcode-account.md#12300101-incorrect-credential) | The token is invalid. |
 
 ## Examples
 
@@ -105,7 +105,7 @@ userIDM.openSession((err: BusinessError, challenge: Uint8Array) => {
 cancel(challenge: Uint8Array): void
 ```
 
-根据挑战值取消条目。
+Cancels an entry based on the challenge value.
 
 **Since:** 8
 
@@ -123,17 +123,17 @@ cancel(challenge: Uint8Array): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| challenge | Uint8Array | Yes | 挑战值。 |
+| challenge | Uint8Array | Yes | Challenge value. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameter types. |
-| 201 | Permission denied. |
-| 12300002 | Invalid challenge. |
-| 202 | Not system application. |
-| 12300001 | The system service works abnormally. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameter types. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
+| [12300002](../../apis-basic-services-kit/errorcode-account.md#12300002-invalid-parameter) | Invalid challenge. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system application. |
+| [12300001](../../apis-basic-services-kit/errorcode-account.md#12300001-system-service-abnormal) | The system service works abnormally. |
 
 ## Examples
 
@@ -162,7 +162,7 @@ ArkTS-Sta:
 closeSession(accountId?: int): void
 ```
 
-关闭会话，结束IDM操作。
+Closes this session to terminate IDM.
 
 **Since:** 8
 
@@ -180,18 +180,18 @@ closeSession(accountId?: int): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| accountId | ArkTS-Dyn: number  <br>ArkTS-Sta：int | No | 系统账号标识，默认为空。 |
+| accountId | ArkTS-Dyn: number  <br>ArkTS-Sta：int | No | OS account ID, which is left blank by default. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. Possible causes: Incorrect parameter types.<br>**Applicable version:** 12 and later |
-| 12300008 | Restricted account.<br>**Applicable version:** 12 and later |
-| 12300003 | Account not found.<br>**Applicable version:** 12 and later |
-| 201 | Permission denied. |
-| 202 | Not system application. |
-| 12300001 | The system service works abnormally.<br>**Applicable version:** 12 and later |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: Incorrect parameter types.<br>**Applicable version:** 12 and later |
+| [12300008](../../apis-basic-services-kit/errorcode-account.md#12300008-restricted-account) | Restricted account.<br>**Applicable version:** 12 and later |
+| [12300003](../../apis-basic-services-kit/errorcode-account.md#12300003-account-not-found) | Account not found.<br>**Applicable version:** 12 and later |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system application. |
+| [12300001](../../apis-basic-services-kit/errorcode-account.md#12300001-system-service-abnormal) | The system service works abnormally.<br>**Applicable version:** 12 and later |
 
 ## Examples
 
@@ -207,7 +207,7 @@ userIDM.closeSession(accountId);
 constructor()
 ```
 
-用户身份管理类的默认构造函数。
+A **constructor()** used to create an instance for user IDM.
 
 **Since:** 8
 
@@ -223,7 +223,7 @@ constructor()
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 202 | Not system application. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system application. |
 
 ## Examples
 
@@ -237,7 +237,7 @@ let userIDM = new osAccount.UserIdentityManager();
 delCred(credentialId: Uint8Array, token: Uint8Array, callback: IIdmCallback): void
 ```
 
-删除用户凭据信息。
+Deletes user credential information.
 
 **Since:** 8
 
@@ -255,21 +255,21 @@ delCred(credentialId: Uint8Array, token: Uint8Array, callback: IIdmCallback): vo
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| credentialId | Uint8Array | Yes | 凭证索引。 |
-| token | Uint8Array | Yes | 身份验证令牌。 |
-| callback | [IIdmCallback](arkts-basicservices-osaccount-iidmcallback-i-sys.md) | Yes | 回调对象，返回删除凭据的结果。 |
+| credentialId | Uint8Array | Yes | Credential ID. |
+| token | Uint8Array | Yes | Authentication token. |
+| callback | [IIdmCallback](arkts-basicservices-osaccount-iidmcallback-i-sys.md) | Yes | Callback used to return the result. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameter types. |
-| 201 | Permission denied. |
-| 12300002 | Invalid credentialId. |
-| 202 | Not system application. |
-| 12300001 | The system service works abnormally. |
-| 12300102 | The credential does not exist. |
-| 12300101 | The token is invalid. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameter types. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
+| [12300002](../../apis-basic-services-kit/errorcode-account.md#12300002-invalid-parameter) | Invalid credentialId. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system application. |
+| [12300001](../../apis-basic-services-kit/errorcode-account.md#12300001-system-service-abnormal) | The system service works abnormally. |
+| [12300102](../../apis-basic-services-kit/errorcode-account.md#12300102-credential-not-found) | The credential does not exist. |
+| [12300101](../../apis-basic-services-kit/errorcode-account.md#12300101-incorrect-credential) | The token is invalid. |
 
 ## Examples
 
@@ -298,7 +298,7 @@ try {
 delUser(token: Uint8Array, callback: IIdmCallback): void
 ```
 
-删除具有身份验证令牌的用户。使用callback异步回调。
+Deletes a user with an authentication token. This API uses an asynchronous callback to return the result.
 
 **Since:** 8
 
@@ -316,18 +316,18 @@ delUser(token: Uint8Array, callback: IIdmCallback): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| token | Uint8Array | Yes | 身份验证令牌。 |
-| callback | [IIdmCallback](arkts-basicservices-osaccount-iidmcallback-i-sys.md) | Yes | 回调对象，返回删除用户的结果。 |
+| token | Uint8Array | Yes | Authentication token. |
+| callback | [IIdmCallback](arkts-basicservices-osaccount-iidmcallback-i-sys.md) | Yes | Callback used to return the result. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameter types. |
-| 201 | Permission denied. |
-| 202 | Not system application. |
-| 12300001 | The system service works abnormally. |
-| 12300101 | The token is invalid. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameter types. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system application. |
+| [12300001](../../apis-basic-services-kit/errorcode-account.md#12300001-system-service-abnormal) | The system service works abnormally. |
+| [12300101](../../apis-basic-services-kit/errorcode-account.md#12300101-incorrect-credential) | The token is invalid. |
 
 ## Examples
 
@@ -355,7 +355,7 @@ try {
 getAuthInfo(callback: AsyncCallback<Array<EnrolledCredInfo>>): void
 ```
 
-获取认证信息。使用callback异步回调。
+Obtains authentication information. This API uses an asynchronous callback to return the result.
 
 **Since:** 8
 
@@ -373,15 +373,15 @@ getAuthInfo(callback: AsyncCallback<Array<EnrolledCredInfo>>): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;EnrolledCredInfo&gt;&gt; | Yes | 回调函数。如果成功，err为null，data为当前用户的所有已注册凭据信息；否则为错误对象。 |
+| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;EnrolledCredInfo&gt;&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **null** and **data** is information about all registered credentials of the user. Otherwise, **err** is an error object. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 201 | Permission denied. |
-| 202 | Not system application. |
-| 12300001 | The system service works abnormally. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system application. |
+| [12300001](../../apis-basic-services-kit/errorcode-account.md#12300001-system-service-abnormal) | The system service works abnormally. |
 | 12300020 | Device hardware abnormal.<br>**Applicable version:** 23 and later |
 
 ## Examples
@@ -410,7 +410,7 @@ try {
 getAuthInfo(authType: AuthType, callback: AsyncCallback<Array<EnrolledCredInfo>>): void
 ```
 
-获取指定类型的认证信息。使用callback异步回调。
+Obtains authentication information of the specified type. This API uses an asynchronous callback to return the result.
 
 **Since:** 8
 
@@ -428,17 +428,17 @@ getAuthInfo(authType: AuthType, callback: AsyncCallback<Array<EnrolledCredInfo>>
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| authType | [AuthType](arkts-basicservices-osaccount-authtype-e-sys.md) | Yes | 认证类型。 |
-| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;EnrolledCredInfo&gt;&gt; | Yes | 回调函数，如果获取成功，err为null，data为当前用户指定类型的所有已注册凭据信息；否则为错误对象。 |
+| authType | [AuthType](arkts-basicservices-osaccount-authtype-e-sys.md) | Yes | Authentication credential type. |
+| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;EnrolledCredInfo&gt;&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **null** and **data** is the information about all enrolled credentials of the specified type. Otherwise, **err** is an error object. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 201 | Permission denied. |
-| 12300002 | Invalid authType. |
-| 202 | Not system application. |
-| 12300001 | The system service works abnormally. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
+| [12300002](../../apis-basic-services-kit/errorcode-account.md#12300002-invalid-parameter) | Invalid authType. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system application. |
+| [12300001](../../apis-basic-services-kit/errorcode-account.md#12300001-system-service-abnormal) | The system service works abnormally. |
 | 12300020 | Device hardware abnormal.<br>**Applicable version:** 23 and later |
 
 ## Examples
@@ -468,7 +468,7 @@ try {
 getAuthInfo(authType: AuthType): Promise<Array<EnrolledCredInfo>>
 ```
 
-获取认证信息。使用Promise异步回调。
+Obtains authentication information. This API uses a promise to return the result.
 
 **Since:** 8
 
@@ -486,22 +486,22 @@ getAuthInfo(authType: AuthType): Promise<Array<EnrolledCredInfo>>
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| authType | [AuthType](arkts-basicservices-osaccount-authtype-e-sys.md) | Yes | 认证类型，表示查询所有认证类型的信息。 |
+| authType | [AuthType](arkts-basicservices-osaccount-authtype-e-sys.md) | Yes | Authentication type, which indicates that information about all authentication types is obtained. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;Array&lt;EnrolledCredInfo&gt;&gt; | Promise对象，返回当前用户指定类型的所有已注册凭据信息。 |
+| Promise&lt;Array&lt;EnrolledCredInfo&gt;&gt; | Promise used to return the information about all the enrolled credentials of the specified type. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 201 | Permission denied. |
-| 12300002 | Invalid authType. |
-| 202 | Not system application. |
-| 12300001 | The system service works abnormally. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
+| [12300002](../../apis-basic-services-kit/errorcode-account.md#12300002-invalid-parameter) | Invalid authType. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system application. |
+| [12300001](../../apis-basic-services-kit/errorcode-account.md#12300001-system-service-abnormal) | The system service works abnormally. |
 | 12300020 | Device hardware abnormal.<br>**Applicable version:** 23 and later |
 
 ## Examples
@@ -528,7 +528,7 @@ try {
 getAuthInfo(options?: GetAuthInfoOptions): Promise<Array<EnrolledCredInfo>>
 ```
 
-依据提供的可选参数，获取认证信息。使用Promise异步回调。
+Obtains authentication information. This API uses a promise to return the result.
 
 **Since:** 12
 
@@ -546,23 +546,23 @@ getAuthInfo(options?: GetAuthInfoOptions): Promise<Array<EnrolledCredInfo>>
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| options | [GetAuthInfoOptions](arkts-basicservices-osaccount-getauthinfooptions-i-sys.md) | No | 获取认证信息的可选参数集合。默认为空，表示查询当前用户所有已注册凭据信息。 |
+| options | [GetAuthInfoOptions](arkts-basicservices-osaccount-getauthinfooptions-i-sys.md) | No | Optional parameters for obtaining authentication information. This parameter is left empty by default, indicating that all enrolled credential information of the current user is obtained. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;Array&lt;EnrolledCredInfo&gt;&gt; | Promise对象，返回当前用户指定类型的所有已注册凭据信息。 |
+| Promise&lt;Array&lt;EnrolledCredInfo&gt;&gt; | Promise used to return the information about all the enrolled credentials of the specified type. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 12300003 | Account not found. |
-| 201 | Permission denied. |
-| 12300002 | Invalid options. |
-| 202 | Not system application. |
-| 12300001 | The system service works abnormally. |
+| [12300003](../../apis-basic-services-kit/errorcode-account.md#12300003-account-not-found) | Account not found. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
+| [12300002](../../apis-basic-services-kit/errorcode-account.md#12300002-invalid-parameter) | Invalid options. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system application. |
+| [12300001](../../apis-basic-services-kit/errorcode-account.md#12300001-system-service-abnormal) | The system service works abnormally. |
 | 12300020 | Device hardware abnormal.<br>**Applicable version:** 23 and later |
 
 ## Examples
@@ -599,7 +599,7 @@ ArkTS-Sta:
 getEnrolledId(authType: AuthType, accountId?: int): Promise<Uint8Array>
 ```
 
-基于凭据类型，以及可选的账号标识，获取已注册的凭据ID。使用Promise异步回调。
+Obtains the ID of the enrolled credential based on the credential type and account ID (optional). This API uses a  promise to return the result.
 
 **Since:** 12
 
@@ -617,26 +617,26 @@ getEnrolledId(authType: AuthType, accountId?: int): Promise<Uint8Array>
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| authType | [AuthType](arkts-basicservices-osaccount-authtype-e-sys.md) | Yes | 认证凭据类型 |
-| accountId | ArkTS-Dyn: number  <br>ArkTS-Sta：int | No | 系统账号标识，默认为空。 |
+| authType | [AuthType](arkts-basicservices-osaccount-authtype-e-sys.md) | Yes | Credential type. |
+| accountId | ArkTS-Dyn: number  <br>ArkTS-Sta：int | No | OS account ID, which is left blank by default. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;Uint8Array&gt; | Promise对象，返回已注册的凭据ID。 |
+| Promise&lt;Uint8Array&gt; | Promise used to return the credential ID obtained. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 12300106 | The authentication type is not supported. |
-| 12300003 | Account not found. |
-| 201 | Permission denied. |
-| 12300002 | Invalid authType. |
-| 202 | Not system application. |
-| 12300001 | The system service works abnormally. |
-| 12300102 | The credential does not exist. |
+| [12300106](../../apis-basic-services-kit/errorcode-account.md#12300106-authentication-type-not-supported) | The authentication type is not supported. |
+| [12300003](../../apis-basic-services-kit/errorcode-account.md#12300003-account-not-found) | Account not found. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
+| [12300002](../../apis-basic-services-kit/errorcode-account.md#12300002-invalid-parameter) | Invalid authType. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system application. |
+| [12300001](../../apis-basic-services-kit/errorcode-account.md#12300001-system-service-abnormal) | The system service works abnormally. |
+| [12300102](../../apis-basic-services-kit/errorcode-account.md#12300102-credential-not-found) | The credential does not exist. |
 | 12300020 | Device hardware abnormal.<br>**Applicable version:** 23 and later |
 
 ## Examples
@@ -665,7 +665,7 @@ try {
 offCredentialChanged(callback?: Callback<CredentialChangeInfo>): void
 ```
 
-取消与指定回调关联的订阅记录，若未指定回调，则取消所有订阅记录。
+Unsubscribes from credential change events. If no callback is not specified, this API unsubscribes from all subscription records.
 
 **Since:** 23
 
@@ -683,15 +683,15 @@ offCredentialChanged(callback?: Callback<CredentialChangeInfo>): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](arkts-basicservices-base-callback-i.md)&lt;CredentialChangeInfo&gt; | No | 表示用于接收凭据变更事件的回调函数。默认为undefined，表示清除所有订阅记录；非undefined时，表示清除与该回调函数关 联的订阅记录。 |
+| callback | [Callback](arkts-basicservices-base-callback-i.md)&lt;CredentialChangeInfo&gt; | No | Callback used to listen for the credential change events. The default value is **undefined**, indicating that all subscription records are unregistered. If the value is not undefined, only the subscription records related to the specified callback are unregistered. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 201 | Permission denied. |
-| 202 | Not system application. |
-| 12300001 | The system service works abnormally. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system application. |
+| [12300001](../../apis-basic-services-kit/errorcode-account.md#12300001-system-service-abnormal) | The system service works abnormally. |
 
 ## Examples
 
@@ -733,7 +733,7 @@ try {
 onCredentialChanged(credentialTypes: AuthType[], callback: Callback<CredentialChangeInfo>): void
 ```
 
-订阅一种或多种类型的凭据变更事件，通过回调函数获取凭据变更信息。
+Subscribes to one or more credential change events. This API uses a callback to return the credential change information.
 
 **Since:** 23
 
@@ -751,18 +751,18 @@ onCredentialChanged(credentialTypes: AuthType[], callback: Callback<CredentialCh
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| credentialTypes | [AuthType](arkts-basicservices-osaccount-authtype-e-sys.md)[] | Yes | 表示订阅的凭据类型集合。 |
-| callback | [Callback](arkts-basicservices-base-callback-i.md)&lt;CredentialChangeInfo&gt; | Yes | 表示用于接收凭据变更事件的回调函数。 |
+| credentialTypes | [AuthType](arkts-basicservices-osaccount-authtype-e-sys.md)[] | Yes | Credential types subscribed. |
+| callback | [Callback](arkts-basicservices-base-callback-i.md)&lt;CredentialChangeInfo&gt; | Yes | Callback used to listen for the credential change events. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 12300106 | One or more credential types are not supported. |
-| 201 | Permission denied. |
-| 12300002 | One or more credential types are invalid. |
-| 202 | Not system application. |
-| 12300001 | The system service works abnormally. |
+| [12300106](../../apis-basic-services-kit/errorcode-account.md#12300106-authentication-type-not-supported) | One or more credential types are not supported. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
+| [12300002](../../apis-basic-services-kit/errorcode-account.md#12300002-invalid-parameter) | One or more credential types are invalid. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system application. |
+| [12300001](../../apis-basic-services-kit/errorcode-account.md#12300001-system-service-abnormal) | The system service works abnormally. |
 
 ## Examples
 
@@ -796,7 +796,7 @@ try {
 openSession(callback: AsyncCallback<Uint8Array>): void
 ```
 
-打开会话，获取挑战值。使用callback异步回调。
+Opens a session to obtain the challenge value. This API uses an asynchronous callback to return the result.
 
 **Since:** 8
 
@@ -814,16 +814,16 @@ openSession(callback: AsyncCallback<Uint8Array>): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;Uint8Array&gt; | Yes | 回调函数。如果打开会话成功，err为null，data为挑战值；否则为错误对象。 |
+| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;Uint8Array&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **null** and **data** is the challenge value obtained. Otherwise, **err** is an error object. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameter types. |
-| 201 | Permission denied. |
-| 202 | Not system application. |
-| 12300001 | The system service works abnormally. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameter types. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system application. |
+| [12300001](../../apis-basic-services-kit/errorcode-account.md#12300001-system-service-abnormal) | The system service works abnormally. |
 
 ## Examples
 
@@ -857,7 +857,7 @@ ArkTS-Sta:
 openSession(accountId?: int): Promise<Uint8Array>
 ```
 
-打开会话，获取挑战值（用于判断后续的身份认证场景是否处于该会话下，防止重放攻击）。使用Promise异步回调。
+Opens a session. This API returns a challenge value, which can be used to determine whether the subsequent identity authentication is in this session. This can prevent replay attacks. This API uses a promise to return the result.
 
 **Since:** 8
 
@@ -875,23 +875,23 @@ openSession(accountId?: int): Promise<Uint8Array>
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| accountId | ArkTS-Dyn: number  <br>ArkTS-Sta：int | No | 系统账号标识，默认为空。 |
+| accountId | ArkTS-Dyn: number  <br>ArkTS-Sta：int | No | OS account ID, which is left blank by default. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;Uint8Array&gt; | Promise对象，返回挑战值。 |
+| Promise&lt;Uint8Array&gt; | Promise used to return the challenge value obtained. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 12300008 | Restricted account.<br>**Applicable version:** 12 and later |
-| 12300003 | Account not found.<br>**Applicable version:** 12 and later |
-| 201 | Permission denied. |
-| 202 | Not system application. |
-| 12300001 | The system service works abnormally. |
+| [12300008](../../apis-basic-services-kit/errorcode-account.md#12300008-restricted-account) | Restricted account.<br>**Applicable version:** 12 and later |
+| [12300003](../../apis-basic-services-kit/errorcode-account.md#12300003-account-not-found) | Account not found.<br>**Applicable version:** 12 and later |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system application. |
+| [12300001](../../apis-basic-services-kit/errorcode-account.md#12300001-system-service-abnormal) | The system service works abnormally. |
 
 ## Examples
 
@@ -918,7 +918,7 @@ try {
 updateCredential(credentialInfo: CredentialInfo, callback: IIdmCallback): void
 ```
 
-更新凭据。使用callback异步回调。
+Updates credential information. This API uses an asynchronous callback to return the result.
 
 **Since:** 8
 
@@ -936,24 +936,24 @@ updateCredential(credentialInfo: CredentialInfo, callback: IIdmCallback): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| credentialInfo | [CredentialInfo](arkts-basicservices-osaccount-credentialinfo-i-sys.md) | Yes | 指示凭据信息。 |
-| callback | [IIdmCallback](arkts-basicservices-osaccount-iidmcallback-i-sys.md) | Yes | 回调对象，返回更新凭据的结果。 |
+| credentialInfo | [CredentialInfo](arkts-basicservices-osaccount-credentialinfo-i-sys.md) | Yes | Credential information to add. |
+| callback | [IIdmCallback](arkts-basicservices-osaccount-iidmcallback-i-sys.md) | Yes | Callback used to return the result. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 12300106 | The authentication type is not supported. |
-| 12300111 | The operation time out. |
-| 12300109 | The authentication, enrollment, or update operation is canceled. |
-| 12300003 | Account not found.<br>**Applicable version:** 12 and later |
-| 201 | Permission denied. |
-| 12300002 | Invalid credentialInfo, i.e. authType or authSubType. |
-| 202 | Not system application. |
-| 12300001 | The system service works abnormally. |
-| 12300102 | The credential does not exist. |
-| 12300101 | The token is invalid. |
-| 12300116 | Credential complexity verification failed.<br>**Applicable version:** 12 and later |
+| [12300106](../../apis-basic-services-kit/errorcode-account.md#12300106-authentication-type-not-supported) | The authentication type is not supported. |
+| [12300111](../../apis-basic-services-kit/errorcode-account.md#12300111-authentication-timed-out) | The operation time out. |
+| [12300109](../../apis-basic-services-kit/errorcode-account.md#12300109-authentication-credential-enrollment-or-update-canceled) | The authentication, enrollment, or update operation is canceled. |
+| [12300003](../../apis-basic-services-kit/errorcode-account.md#12300003-account-not-found) | Account not found.<br>**Applicable version:** 12 and later |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
+| [12300002](../../apis-basic-services-kit/errorcode-account.md#12300002-invalid-parameter) | Invalid credentialInfo, i.e. authType or authSubType. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system application. |
+| [12300001](../../apis-basic-services-kit/errorcode-account.md#12300001-system-service-abnormal) | The system service works abnormally. |
+| [12300102](../../apis-basic-services-kit/errorcode-account.md#12300102-credential-not-found) | The credential does not exist. |
+| [12300101](../../apis-basic-services-kit/errorcode-account.md#12300101-incorrect-credential) | The token is invalid. |
+| [12300116](../../apis-basic-services-kit/errorcode-account.md#12300116-failed-to-verify-the-credential-complexity) | Credential complexity verification failed.<br>**Applicable version:** 12 and later |
 
 ## Examples
 

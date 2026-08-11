@@ -39,7 +39,7 @@ static $_instantiate<T extends ExtendableGrid>(
 | --- | --- | --- | --- |
 | factory | [ConstructorT](arkts-arkui-constructort-t.md)&lt;T&gt; | 是 |  |
 | scroller | [Scroller](../arkts-components/arkts-arkui-scroller-c.md) | 否 |  |
-| layoutOptions | [GridLayoutOptions](arkts-arkui-grid-gridlayoutoptions-i.md) | 否 |  |
+| layoutOptions | [GridLayoutOptions](../arkts-components/arkts-arkui-gridlayoutoptions-i.md) | 否 |  |
 | content_ | [CustomBuilder](../arkts-components/arkts-arkui-custombuilder-t.md) | 否 |  |
 
 **返回值：**
@@ -104,7 +104,7 @@ public setGridOptions(
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | scroller | [Scroller](../arkts-components/arkts-arkui-scroller-c.md) | 否 |  |
-| layoutOptions | [GridLayoutOptions](arkts-arkui-grid-gridlayoutoptions-i.md) | 否 |  |
+| layoutOptions | [GridLayoutOptions](../arkts-components/arkts-arkui-gridlayoutoptions-i.md) | 否 |  |
 
 **返回值：**
 

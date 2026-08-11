@@ -103,7 +103,7 @@ addBuilderSpan(value: CustomBuilder, options?: RichEditorBuilderSpanOptions): nu
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | [CustomBuilder](arkts-arkui-custombuilder-t.md) | 是 | 自定义布局内容，用于在RichEditor中创建BuilderSpan占位组件。 |
+| value | [CustomBuilder](../arkts-apis/arkts-arkui-custombuilder-t.md) | 是 | 自定义布局内容，用于在RichEditor中创建BuilderSpan占位组件。 |
 | options | [RichEditorBuilderSpanOptions](../arkts-apis/arkts-arkui-richeditor-richeditorbuilderspanoptions-i.md) | 否 | builder选项。当需要设置builder的偏移位置或无障碍属性时传入此参数；省略时，builder添加到所有内容末尾。 |
 
 **返回值：**
@@ -138,7 +138,7 @@ addImageSpan(value: PixelMap | ResourceStr, options?: RichEditorImageSpanOptions
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | [PixelMap](../../apis-image-kit/arkts-apis/arkts-image-image-pixelmap-i.md) \| ResourceStr | 是 | 图片内容。 |
+| value | [PixelMap](../arkts-apis/arkts-arkui-pixelmap-t.md) \| ResourceStr | 是 | 图片内容。 |
 | options | [RichEditorImageSpanOptions](../arkts-apis/arkts-arkui-richeditor-richeditorimagespanoptions-i.md) | 否 | 图片选项。 &lt;br&gt;当需要设置图片样式、偏移位置或段落样式时传入此参数；不传入时，图片将使用默认样式插入到内容末尾。 |
 
 **返回值：**
@@ -239,7 +239,7 @@ deleteSpans(value?: RichEditorRange): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | [RichEditorRange](arkts-arkui-richeditorrange-i.md) | 否 | 删除范围。省略时，删除所有文本和图片。 |
+| value | [RichEditorRange](../arkts-apis/arkts-arkui-richeditor-richeditorrange-i.md) | 否 | 删除范围。省略时，删除所有文本和图片。 |
 
 ## fromStyledString
 
@@ -265,7 +265,7 @@ fromStyledString(value: StyledString): Array<RichEditorSpan>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | [StyledString](../arkts-apis/arkts-arkui-styledstring-c.md) | 是 | 转换前的属性字符串。 |
+| value | [StyledString](../arkts-apis/arkts-arkui-styledstring-styledstring-c.md) | 是 | 转换前的属性字符串。 |
 
 **返回值：**
 
@@ -277,7 +277,7 @@ fromStyledString(value: StyledString): Array<RichEditorSpan>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 401 | The parameter check failed. |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | The parameter check failed. |
 
 ## getParagraphs
 
@@ -303,7 +303,7 @@ getParagraphs(value?: RichEditorRange): Array<RichEditorParagraphResult>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | [RichEditorRange](arkts-arkui-richeditorrange-i.md) | 否 | 需要获取段落的范围。 &lt;br&gt;省略时，获取所有段落信息。 |
+| value | [RichEditorRange](../arkts-apis/arkts-arkui-richeditor-richeditorrange-i.md) | 否 | 需要获取段落的范围。 &lt;br&gt;省略时，获取所有段落信息。 |
 
 **返回值：**
 
@@ -335,7 +335,7 @@ getSelection(): RichEditorSelection
 
 | 类型 | 说明 |
 | --- | --- |
-| [RichEditorSelection](arkts-arkui-richeditorselection-i.md) | 选中区域起始/结束位置及选中文本和图片的详细信息。 &lt;br&gt;当controller未绑定组件或绑定controller的组件被释放时，返回undefined。 |
+| [RichEditorSelection](../arkts-apis/arkts-arkui-richeditor-richeditorselection-i.md) | 选中区域起始/结束位置及选中文本和图片的详细信息。 &lt;br&gt;当controller未绑定组件或绑定controller的组件被释放时，返回undefined。 |
 
 ## getSpans
 
@@ -361,7 +361,7 @@ getSpans(value?: RichEditorRange): Array<RichEditorImageSpanResult | RichEditorT
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | [RichEditorRange](arkts-arkui-richeditorrange-i.md) | 否 | 需要获取span的范围。 &lt;br&gt;省略时，获取所有span信息。 |
+| value | [RichEditorRange](../arkts-apis/arkts-arkui-richeditor-richeditorrange-i.md) | 否 | 需要获取span的范围。 &lt;br&gt;省略时，获取所有span信息。 |
 
 **返回值：**
 
@@ -393,19 +393,19 @@ toStyledString(value: RichEditorRange): StyledString
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | [RichEditorRange](arkts-arkui-richeditorrange-i.md) | 是 | 需要获取的范围。 |
+| value | [RichEditorRange](../arkts-apis/arkts-arkui-richeditor-richeditorrange-i.md) | 是 | 需要获取的范围。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| [StyledString](../arkts-apis/arkts-arkui-styledstring-c.md) | 组件指定范围内容转换后的属性字符串，可用于跨组件传递富文本内容或进行样式编辑操作。 &lt;br&gt;当controller未绑定组件或绑定controller的组件被释放时，返回undefined。 |
+| [StyledString](../arkts-apis/arkts-arkui-styledstring-styledstring-c.md) | 组件指定范围内容转换后的属性字符串，可用于跨组件传递富文本内容或进行样式编辑操作。 &lt;br&gt;当controller未绑定组件或绑定controller的组件被释放时，返回undefined。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 401 | The parameter check failed. |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | The parameter check failed. |
 
 ## updateParagraphStyle
 
@@ -431,7 +431,7 @@ updateParagraphStyle(value: RichEditorParagraphStyleOptions): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | [RichEditorParagraphStyleOptions](../arkts-apis/arkts-arkui-richeditor-richeditorparagraphstyleoptions-i.md) | 是 | 段落的样式选项信息。 |
+| value | [RichEditorParagraphStyleOptions](arkts-arkui-richeditorparagraphstyleoptions-i.md) | 是 | 段落的样式选项信息。 |
 
 ## updateSpanStyle
 

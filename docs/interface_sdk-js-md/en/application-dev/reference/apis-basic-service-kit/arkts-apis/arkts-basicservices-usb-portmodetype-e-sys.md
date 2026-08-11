@@ -1,6 +1,6 @@
 # PortModeType (System API)
 
-USB端口模式类型。
+Enumerates USB port mode types.
 
 **Since:** 9
 
@@ -22,7 +22,7 @@ USB端口模式类型。
 NONE = 0
 ```
 
-无。
+None
 
 **Since:** 9
 
@@ -44,7 +44,7 @@ NONE = 0
 UFP = 1
 ```
 
-数据上行，需要外部供电。
+Upstream facing port, which functions as the sink of power supply.
 
 **Since:** 9
 
@@ -66,7 +66,7 @@ UFP = 1
 DFP = 2
 ```
 
-数据下行，对外提供电源。
+Downstream facing port, which functions as the source of power supply.
 
 **Since:** 9
 
@@ -88,7 +88,7 @@ DFP = 2
 DRP = 3
 ```
 
-既可以做DFP(Host)，也可以做UFP(Device)，当前不支持。
+Dynamic reconfiguration port (DRP), which can function as the DFP (host) or UFP (device). It is not supported currently.
 
 **Since:** 9
 
@@ -110,7 +110,7 @@ DRP = 3
 NUM_MODES = 4
 ```
 
-当前不支持。
+Not supported currently.
 
 **Since:** 9
 

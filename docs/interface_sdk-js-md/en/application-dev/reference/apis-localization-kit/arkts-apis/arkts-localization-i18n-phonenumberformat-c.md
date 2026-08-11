@@ -1,6 +1,6 @@
 # PhoneNumberFormat
 
-提供电话号码相关的能力，包括电话号码有效性判断、格式化和归属地获取。
+Provides the API for formatting phone number strings
 
 **Since:** 23
 
@@ -22,7 +22,7 @@ import { i18n } from 'kits/@kit.LocalizationKit';
 constructor(country: string, options?: PhoneNumberFormatOptions)
 ```
 
-创建电话号码格式化对象。
+Creates a PhoneNumberFormat object.
 
 **Since:** 23
 
@@ -38,8 +38,8 @@ constructor(country: string, options?: PhoneNumberFormatOptions)
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| country | string | Yes | 表示电话号码所属的国家地区代码，要求是 [合法的国家地区码](../../../internationalization/i18n-locale-culture.md#实现原理)。 |
-| options | [PhoneNumberFormatOptions](arkts-localization-i18n-phonenumberformatoptions-i.md) | No | 电话号码格式化时设置的配置项。默认值：NATIONAL。 |
+| country | string | Yes | Country/region to which the phone number to be formatted belongs. |
+| options | [PhoneNumberFormatOptions](arkts-localization-i18n-phonenumberformatoptions-i.md) | No | Options for PhoneNumberFormat object initialization. The default value is "NATIONAL". |
 
 ## format
 
@@ -47,11 +47,7 @@ constructor(country: string, options?: PhoneNumberFormatOptions)
 format(phoneNumber: string): string
 ```
 
-对电话号码进行格式化。
-
-> **说明：**
-> 
-> 从API version 12开始，支持对拨号中的电话号码进行格式化。
+Formats a phone number.
 
 **Since:** 23
 
@@ -67,13 +63,13 @@ format(phoneNumber: string): string
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| phoneNumber | string | Yes | 待格式化的电话号码。 |
+| phoneNumber | string | Yes | Phone number to be formatted. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| string | 格式化后的电话号码。 |
+| string | Formatted phone number. |
 
 ## getLocationName
 
@@ -81,11 +77,7 @@ format(phoneNumber: string): string
 getLocationName(phoneNumber: string, locale: string): string
 ```
 
-获取电话号码归属地。
-
-> **说明：**
-> 
-> 从API version 23开始，支持对拨号中的电话号码实时获取归属地。
+Obtains the home location of a phone number.
 
 **Since:** 23
 
@@ -101,14 +93,14 @@ getLocationName(phoneNumber: string, locale: string): string
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| phoneNumber | string | Yes | 电话号码。获取其他地区电话号码的归属地时，需要在电话号码前加00+国际区号。 |
-| locale | string | Yes | [表示区域ID的字符串](../../../internationalization/i18n-locale-culture.md#实现原理)，由语言、脚本、国家地区组 成。 |
+| phoneNumber | string | Yes | Phone number. To obtain the home location of a number in other countries/regions, you need to prefix the number with 00 and the country code. |
+| locale | string | Yes | System locale, which consists of the language, script, and country/region. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| string | 电话号码归属地。无效号码时返回空字符串。 |
+| string | Home location of the phone number. If the number is invalid, an empty string is returned. |
 
 ## isValidNumber
 
@@ -116,7 +108,7 @@ getLocationName(phoneNumber: string, locale: string): string
 isValidNumber(phoneNumber: string): boolean
 ```
 
-判断电话号码是否为当前电话号码格式化对象中国家的有效号码。
+Checks whether the phone number is valid for the country/region in the PhoneNumberFormat object.
 
 **Since:** 23
 
@@ -132,11 +124,11 @@ isValidNumber(phoneNumber: string): boolean
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| phoneNumber | string | Yes | 待判断的电话号码。 |
+| phoneNumber | string | Yes | Phone number to be checked. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| boolean | true表示电话号码有效，false表示电话号码无效。 |
+| boolean | Whether the phone number is valid. The value "true" indicates that the phone number is valid, and the value "false" indicates the opposite. |
 

@@ -1,9 +1,9 @@
 # HuksExceptionErrCode
 
-表示错误码的枚举以及对应的错误信息，错误码表示错误类型，错误信息展示错误详情。
+Enumerates error codes and error details.
 
-关于错误码的具体信息，可在[通用错误码](../../../reference/errorcode-universal.md)和  
-[HUKS错误码](../../../reference/apis-universal-keystore-kit/errorcode-huks.md)中查看。
+For details about the error codes, see [Universal Error Codes](../../../reference/errorcode-universal.md) and  
+[HUKS Error Codes](../../../reference/apis-universal-keystore-kit/errorcode-huks.md).
 
 **Since:** 9
 
@@ -19,7 +19,7 @@
 HUKS_ERR_CODE_PERMISSION_FAIL = 201
 ```
 
-权限错误导致失败。
+Permission verification failed.
 
 **Since:** 9
 
@@ -37,7 +37,7 @@ HUKS_ERR_CODE_PERMISSION_FAIL = 201
 HUKS_ERR_CODE_NOT_SYSTEM_APP = 202
 ```
 
-非系统应用不可以调用系统API。
+The caller is not a system application and cannot call the system API.
 
 **Since:** 12
 
@@ -53,7 +53,7 @@ HUKS_ERR_CODE_NOT_SYSTEM_APP = 202
 HUKS_ERR_CODE_ILLEGAL_ARGUMENT = 401
 ```
 
-参数错误导致失败。可能原因：1. 必选参数未指定。2. 参数类型不正确。3. 参数校验失败。
+Invalid parameters are detected. Possible causes: 1. Mandatory parameters are left unspecified.2. Incorrect parameter types.3. Parameter verification failed.
 
 **Since:** 9
 
@@ -71,7 +71,7 @@ HUKS_ERR_CODE_ILLEGAL_ARGUMENT = 401
 HUKS_ERR_CODE_NOT_SUPPORTED_API = 801
 ```
 
-不支持的API。
+The API is not supported.
 
 **Since:** 9
 
@@ -89,7 +89,7 @@ HUKS_ERR_CODE_NOT_SUPPORTED_API = 801
 HUKS_ERR_CODE_FEATURE_NOT_SUPPORTED = 12000001
 ```
 
-不支持的功能/特性。
+The feature is not supported.
 
 **Since:** 9
 
@@ -107,7 +107,7 @@ HUKS_ERR_CODE_FEATURE_NOT_SUPPORTED = 12000001
 HUKS_ERR_CODE_MISSING_CRYPTO_ALG_ARGUMENT = 12000002
 ```
 
-缺少密钥算法参数。
+Key algorithm parameters are missing.
 
 **Since:** 9
 
@@ -125,7 +125,7 @@ HUKS_ERR_CODE_MISSING_CRYPTO_ALG_ARGUMENT = 12000002
 HUKS_ERR_CODE_INVALID_CRYPTO_ALG_ARGUMENT = 12000003
 ```
 
-无效密钥算法参数。
+Invalid key algorithm parameters are detected.
 
 **Since:** 9
 
@@ -143,7 +143,7 @@ HUKS_ERR_CODE_INVALID_CRYPTO_ALG_ARGUMENT = 12000003
 HUKS_ERR_CODE_FILE_OPERATION_FAIL = 12000004
 ```
 
-文件操作失败。
+The file operation failed.
 
 **Since:** 9
 
@@ -161,7 +161,7 @@ HUKS_ERR_CODE_FILE_OPERATION_FAIL = 12000004
 HUKS_ERR_CODE_COMMUNICATION_FAIL = 12000005
 ```
 
-通信失败。
+The communication failed.
 
 **Since:** 9
 
@@ -179,7 +179,7 @@ HUKS_ERR_CODE_COMMUNICATION_FAIL = 12000005
 HUKS_ERR_CODE_CRYPTO_FAIL = 12000006
 ```
 
-算法库操作失败。
+Failed to operate the algorithm library.
 
 **Since:** 9
 
@@ -197,7 +197,7 @@ HUKS_ERR_CODE_CRYPTO_FAIL = 12000006
 HUKS_ERR_CODE_KEY_AUTH_PERMANENTLY_INVALIDATED = 12000007
 ```
 
-密钥访问失败-密钥访问失效。
+Failed to access the key because the key has expired.
 
 **Since:** 9
 
@@ -215,7 +215,7 @@ HUKS_ERR_CODE_KEY_AUTH_PERMANENTLY_INVALIDATED = 12000007
 HUKS_ERR_CODE_KEY_AUTH_VERIFY_FAILED = 12000008
 ```
 
-密钥访问失败-密钥认证失败。
+Failed to access the key because the authentication has failed.
 
 **Since:** 9
 
@@ -233,7 +233,7 @@ HUKS_ERR_CODE_KEY_AUTH_VERIFY_FAILED = 12000008
 HUKS_ERR_CODE_KEY_AUTH_TIME_OUT = 12000009
 ```
 
-密钥访问失败-密钥访问超时。
+Key access timed out.
 
 **Since:** 9
 
@@ -251,7 +251,7 @@ HUKS_ERR_CODE_KEY_AUTH_TIME_OUT = 12000009
 HUKS_ERR_CODE_SESSION_LIMIT = 12000010
 ```
 
-密钥操作会话数已达上限。
+The number of key operation sessions has reached the limit.
 
 **Since:** 9
 
@@ -269,7 +269,7 @@ HUKS_ERR_CODE_SESSION_LIMIT = 12000010
 HUKS_ERR_CODE_ITEM_NOT_EXIST = 12000011
 ```
 
-目标对象不存在。
+The target object does not exist.
 
 **Since:** 9
 
@@ -287,7 +287,7 @@ HUKS_ERR_CODE_ITEM_NOT_EXIST = 12000011
 HUKS_ERR_CODE_EXTERNAL_ERROR = 12000012
 ```
 
-外部错误。
+An external error occurs.
 
 **Since:** 9
 
@@ -305,7 +305,7 @@ HUKS_ERR_CODE_EXTERNAL_ERROR = 12000012
 HUKS_ERR_CODE_CREDENTIAL_NOT_EXIST = 12000013
 ```
 
-缺失所需凭据。
+The credential does not exist.
 
 **Since:** 9
 
@@ -323,7 +323,7 @@ HUKS_ERR_CODE_CREDENTIAL_NOT_EXIST = 12000013
 HUKS_ERR_CODE_INSUFFICIENT_MEMORY = 12000014
 ```
 
-内存不足。
+The memory is insufficient.
 
 **Since:** 9
 
@@ -341,7 +341,7 @@ HUKS_ERR_CODE_INSUFFICIENT_MEMORY = 12000014
 HUKS_ERR_CODE_CALL_SERVICE_FAILED = 12000015
 ```
 
-调用其他系统服务失败。
+Failed to call other system services.
 
 **Since:** 9
 
@@ -359,7 +359,7 @@ HUKS_ERR_CODE_CALL_SERVICE_FAILED = 12000015
 HUKS_ERR_CODE_DEVICE_PASSWORD_UNSET = 12000016
 ```
 
-需要锁屏密码但未设置。
+The required lock screen password is not set.
 
 **Since:** 11
 
@@ -377,7 +377,7 @@ HUKS_ERR_CODE_DEVICE_PASSWORD_UNSET = 12000016
 HUKS_ERR_CODE_KEY_ALREADY_EXIST = 12000017
 ```
 
-同名密钥已存在。
+A key with the same name already exists.
 
 **Since:** 20
 
@@ -395,7 +395,7 @@ HUKS_ERR_CODE_KEY_ALREADY_EXIST = 12000017
 HUKS_ERR_CODE_INVALID_ARGUMENT = 12000018
 ```
 
-输入参数非法。
+The argument is invalid.
 
 **Since:** 20
 
@@ -413,7 +413,7 @@ HUKS_ERR_CODE_INVALID_ARGUMENT = 12000018
 HUKS_ERR_CODE_ITEM_EXISTS = 12000019
 ```
 
-同名provider已注册。
+A provider with the same name has been registered.
 
 **Since:** 22
 
@@ -431,7 +431,7 @@ HUKS_ERR_CODE_ITEM_EXISTS = 12000019
 HUKS_ERR_CODE_EXTERNAL_MODULE = 12000020
 ```
 
-依赖的外部模块返回错误。
+The external module on which this API depends returns an error.
 
 **Since:** 22
 
@@ -449,7 +449,7 @@ HUKS_ERR_CODE_EXTERNAL_MODULE = 12000020
 HUKS_ERR_CODE_PIN_LOCKED = 12000021
 ```
 
-Ukey PIN码被锁。
+The UKey PIN is locked.
 
 **Since:** 22
 
@@ -467,7 +467,7 @@ Ukey PIN码被锁。
 HUKS_ERR_CODE_PIN_INCORRECT = 12000022
 ```
 
-Ukey PIN码错误。
+The UKey PIN is incorrect.
 
 **Since:** 22
 
@@ -485,7 +485,7 @@ Ukey PIN码错误。
 HUKS_ERR_CODE_PIN_NO_AUTH = 12000023
 ```
 
-Ukey PIN码未认证。
+The UKey PIN is not authenticated.
 
 **Since:** 22
 
@@ -503,7 +503,7 @@ Ukey PIN码未认证。
 HUKS_ERR_CODE_BUSY = 12000024
 ```
 
-设备或资源繁忙。
+The device or resource is busy.
 
 **Since:** 22
 
@@ -521,7 +521,7 @@ HUKS_ERR_CODE_BUSY = 12000024
 HUKS_ERR_CODE_EXCEED_LIMIT = 12000025
 ```
 
-资源超过限制。
+The resource limit is exceeded.
 
 **Since:** 22
 
@@ -539,7 +539,7 @@ HUKS_ERR_CODE_EXCEED_LIMIT = 12000025
 HUKS_ERR_CODE_SE_FAULT = 12000026
 ```
 
-安全元件故障。
+The secure element is faulty.
 
 **Since:** 26.0.0
 
@@ -557,7 +557,7 @@ HUKS_ERR_CODE_SE_FAULT = 12000026
 HUKS_ERR_CODE_NETWORK_UNAVAILABLE = 12000027
 ```
 
-网络不可用。
+The network is unavailable.
 
 **Since:** 26.0.0
 

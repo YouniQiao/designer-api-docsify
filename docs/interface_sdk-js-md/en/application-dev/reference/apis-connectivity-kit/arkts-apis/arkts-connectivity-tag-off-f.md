@@ -38,11 +38,11 @@ Disable foreground reader mode settings explicitly.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | The parameter check failed. Possible causes: &lt;br&gt; 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameters types. &lt;br&gt; 3. Parameter verification failed. |
-| 801 | Capability not supported. |
-| 3100203 | The off() API can be called only when the on() has been called. |
-| 3100201 | The tag running state is abnormal in the service. |
-| 201 | Permission denied. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | The parameter check failed. Possible causes: &lt;br&gt; 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameters types. &lt;br&gt; 3. Parameter verification failed. |
+| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. |
+| [3100203](../errorcode-nfc.md#3100203-incorrect-api-call-sequence) | The off() API can be called only when the on() has been called. |
+| [3100201](../errorcode-nfc.md#3100201-tag-readwrite-error) | The tag running state is abnormal in the service. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
 
 
 ## off('readerModeWithInterval')
@@ -77,10 +77,10 @@ Disable foreground reader mode settings explicitly.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 801 | Capability not supported. |
-| 3100203 | The off() API can be called only when the on() has been called. |
-| 3100201 | The tag running state is abnormal in the service. |
-| 201 | Permission denied. |
+| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. |
+| [3100203](../errorcode-nfc.md#3100203-incorrect-api-call-sequence) | The off() API can be called only when the on() has been called. |
+| [3100201](../errorcode-nfc.md#3100201-tag-readwrite-error) | The tag running state is abnormal in the service. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
 
 ## Examples
 
@@ -93,12 +93,13 @@ let discTech : number[] = [tag.NFC_A, tag.NFC_B]; // Specify the technology requ
 let elementName : bundleManager.ElementName;
 let interval : number = 200;
 
-function readerModeCb(tagInfo: tag.TagInfo) {
-    if (tagInfo == null) {
-      console.error('readerModeWithInterval tagInfo is invalid');
-      return;
+function readerModeCb(err : BusinessError, tagInfo : tag.TagInfo) {
+    if (!err) {
+        console.info("offCallback: tag found tagInfo = ", JSON.stringify(tagInfo));
+    } else {
+        console.error("offCallback err: " + err.message);
+        return;
     }
-    console.info("readerModeWithInterval: tag found tagInfo = ", JSON.stringify(tagInfo));
   // Other operations on taginfo
 }
 

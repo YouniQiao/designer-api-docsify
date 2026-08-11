@@ -1,6 +1,6 @@
 # SubscribeInfo (System API)
 
-订阅信息
+Represents the subscription information.
 
 **Since:** 11
 
@@ -24,7 +24,7 @@ import { cloudExtension } from 'kits/@kit.ArkData';
 expirationTime: long
 ```
 
-订阅过期时间（ms）。
+Subscription expiration time, in ms.
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：long
 
@@ -44,7 +44,7 @@ expirationTime: long
 subscribe: Record<string, Array<SubscribeId>>
 ```
 
-订阅信息。
+Subscription information.
 
 **Type:** [Record](../../apis-default/arkts-apis/arkts-record-t.md)&lt;string, Array&lt;SubscribeId&gt;&gt;
 

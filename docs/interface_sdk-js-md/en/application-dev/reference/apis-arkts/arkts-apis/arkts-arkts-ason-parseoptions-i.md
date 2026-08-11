@@ -1,6 +1,6 @@
 # ParseOptions
 
-解析的选项，可定义处理BigInt的模式和解析结果的返回类型。
+Parse's options
 
 **Since:** 12
 
@@ -22,7 +22,7 @@ import { ArkTSUtils } from 'kits/@kit.ArkTS';
 bigIntMode: BigIntMode
 ```
 
-定义处理BigInt的模式。
+Enum defining modes for handling bigint.
 
 **Type:** [BigIntMode](arkts-arkts-ason-bigintmode-e.md)
 
@@ -42,7 +42,7 @@ bigIntMode: BigIntMode
 parseReturnType: ParseReturnType
 ```
 
-定义解析结果的返回类型。
+The return types for parsing.
 
 **Type:** [ParseReturnType](arkts-arkts-ason-parsereturntype-e.md)
 

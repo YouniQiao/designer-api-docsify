@@ -1,6 +1,6 @@
 # ManagedEvent
 
-可订阅的系统管理事件。
+Enumerates the system management events that can be subscribed to.
 
 **Since:** 12
 
@@ -16,7 +16,7 @@
 MANAGED_EVENT_BUNDLE_ADDED = 0
 ```
 
-应用安装事件。
+An application is installed.
 
 **Since:** 12
 
@@ -32,7 +32,7 @@ MANAGED_EVENT_BUNDLE_ADDED = 0
 MANAGED_EVENT_BUNDLE_REMOVED = 1
 ```
 
-应用卸载事件。
+An application is uninstalled.
 
 **Since:** 12
 
@@ -48,7 +48,7 @@ MANAGED_EVENT_BUNDLE_REMOVED = 1
 MANAGED_EVENT_APP_START = 2
 ```
 
-应用启动事件。
+An application is started.
 
 **Since:** 12
 
@@ -64,7 +64,7 @@ MANAGED_EVENT_APP_START = 2
 MANAGED_EVENT_APP_STOP = 3
 ```
 
-应用停止事件。
+An application is stopped.
 
 **Since:** 12
 
@@ -80,7 +80,7 @@ MANAGED_EVENT_APP_STOP = 3
 MANAGED_EVENT_SYSTEM_UPDATE = 4
 ```
 
-系统更新事件。
+The system is updated.
 
 **Since:** 12
 
@@ -96,7 +96,7 @@ MANAGED_EVENT_SYSTEM_UPDATE = 4
 MANAGED_EVENT_ACCOUNT_ADDED = 5
 ```
 
-账号新增事件。
+An account is created.
 
 **Since:** 18
 
@@ -112,7 +112,7 @@ MANAGED_EVENT_ACCOUNT_ADDED = 5
 MANAGED_EVENT_ACCOUNT_SWITCHED = 6
 ```
 
-账号切换事件。
+An account is switched.
 
 **Since:** 18
 
@@ -128,7 +128,7 @@ MANAGED_EVENT_ACCOUNT_SWITCHED = 6
 MANAGED_EVENT_ACCOUNT_REMOVED = 7
 ```
 
-账号删除事件。
+An account is removed.
 
 **Since:** 18
 
@@ -144,7 +144,7 @@ MANAGED_EVENT_ACCOUNT_REMOVED = 7
 MANAGED_EVENT_STARTUP_GUIDE_COMPLETED = 8
 ```
 
-开机向导完成事件。
+The startup wizard is complete.
 
 **Since:** 24
 
@@ -162,7 +162,7 @@ MANAGED_EVENT_STARTUP_GUIDE_COMPLETED = 8
 MANAGED_EVENT_BOOT_COMPLETED = 9
 ```
 
-设备启动完成事件。
+Device startup is complete.
 
 **Since:** 24
 
@@ -180,9 +180,7 @@ MANAGED_EVENT_BOOT_COMPLETED = 9
 MANAGED_EVENT_BUNDLE_UPDATED = 10
 ```
 
-应用更新事件。
-
-**起始版本**：26.0.0
+Application update event.
 
 **Since:** 26.0.0
 
@@ -200,9 +198,7 @@ MANAGED_EVENT_BUNDLE_UPDATED = 10
 MANAGED_EVENT_POLICIES_CHANGED = 11
 ```
 
-策略变更事件。仅支持超级设备管理应用订阅该事件，其他类型设备管理应用订阅该事件时返回9200002错误码。
-
-**起始版本**：26.0.0
+Policy change event. Only super device administrator applications can subscribe to this event. If other types of device administrator applications attempt to subscribe, error code 9200002 is returned.
 
 **Since:** 26.0.0
 

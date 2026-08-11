@@ -1,6 +1,6 @@
 # ImAddress
 
-联系人的即时消息地址。
+Enumerates IM addresses.
 
 **Since:** 7
 
@@ -22,7 +22,7 @@ import { contact } from 'kits/@kit.ContactsKit';
 static readonly CUSTOM_LABEL: -1
 ```
 
-自定义邮箱类型，默认值为0。
+Custom instant message type, the default value is **-1**.
 
 **Type:** -1
 
@@ -42,7 +42,7 @@ static readonly CUSTOM_LABEL: -1
 static readonly IM_AIM: 0
 ```
 
-AIM即时消息类型，默认值为0。
+AIM, the default value is **0**.
 
 **Type:** 0
 
@@ -62,7 +62,7 @@ AIM即时消息类型，默认值为0。
 static readonly IM_ICQ: 6
 ```
 
-ICQ即时消息类型，默认值为6。
+ICQ, the default value is **6**.
 
 **Type:** 6
 
@@ -82,7 +82,7 @@ ICQ即时消息类型，默认值为6。
 static readonly IM_JABBER: 7
 ```
 
-JABBER即时消息类型，默认值为7。
+JABBER, the default value is **7**.
 
 **Type:** 7
 
@@ -102,7 +102,7 @@ JABBER即时消息类型，默认值为7。
 static readonly IM_MSN: 1
 ```
 
-MSN即时消息类型，默认值为1。
+MSN, the default value is **1**.
 
 **Type:** 1
 
@@ -122,7 +122,7 @@ MSN即时消息类型，默认值为1。
 static readonly IM_QQ: 4
 ```
 
-QQ即时消息类型，默认值为4。
+QQ, the default value is **4**.
 
 **Type:** 4
 
@@ -142,7 +142,7 @@ QQ即时消息类型，默认值为4。
 static readonly IM_SKYPE: 3
 ```
 
-SKYPE即时消息类型，默认值为3。
+Skype, the default value is **3**.
 
 **Type:** 3
 
@@ -162,7 +162,7 @@ SKYPE即时消息类型，默认值为3。
 static readonly IM_YAHOO: 2
 ```
 
-YAHOO即时消息类型，默认值为2。
+Yahoo, the default value is **2**.
 
 **Type:** 2
 
@@ -182,7 +182,7 @@ YAHOO即时消息类型，默认值为2。
 static readonly INVALID_LABEL_ID: -2
 ```
 
-无效邮箱类型，默认值为-1。
+Invalid instant message type, the default value is **-2**.
 
 **Type:** -2
 
@@ -202,7 +202,7 @@ static readonly INVALID_LABEL_ID: -2
 imAddress: string
 ```
 
-即时消息地址。
+IM address.
 
 **Type:** string
 
@@ -222,7 +222,7 @@ imAddress: string
 labelId?: number
 ```
 
-邮箱的类型。
+Instant message type.
 
 **Type:** number
 
@@ -242,7 +242,7 @@ labelId?: number
 labelName?: string
 ```
 
-邮箱的类型名称。
+Name of the instant message type.
 
 **Type:** string
 

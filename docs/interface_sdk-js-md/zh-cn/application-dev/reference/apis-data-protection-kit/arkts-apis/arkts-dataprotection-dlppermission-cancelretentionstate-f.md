@@ -1,11 +1,5 @@
 # cancelRetentionState
 
-## 导入模块
-
-```TypeScript
-import { dlpPermission } from 'kits/@kit.DataProtectionKit';
-```
-
 ## cancelRetentionState
 
 ```TypeScript
@@ -40,9 +34,9 @@ function cancelRetentionState(docUris: Array<string>): Promise<void>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. |
-| 19100001 | Invalid parameter value. |
-| 19100011 | The system ability works abnormally. |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. |
+| [19100001](../errorcode-dlp.md#19100001-入参错误) | Invalid parameter value. |
+| [19100011](../errorcode-dlp.md#19100011-系统服务工作异常) | The system ability works abnormally. |
 
 ## 示例
 
@@ -87,9 +81,9 @@ function cancelRetentionState(docUris: Array<string>, callback: AsyncCallback<vo
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. |
-| 19100001 | Invalid parameter value. |
-| 19100011 | The system ability works abnormally. |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. |
+| [19100001](../errorcode-dlp.md#19100001-入参错误) | Invalid parameter value. |
+| [19100011](../errorcode-dlp.md#19100011-系统服务工作异常) | The system ability works abnormally. |
 
 ## 示例
 

@@ -1,6 +1,6 @@
 # LazyLayoutDirection
 
-定义懒加载布局的方向。
+Defines the direction of lazy layout.
 
 **Since:** 26.0.0
 
@@ -16,7 +16,7 @@
 FORWARD = 0
 ```
 
-向前的方向。
+Forward direction.
 
 **Since:** 26.0.0
 
@@ -34,7 +34,7 @@ FORWARD = 0
 BACKWARD = 1
 ```
 
-向后的方向。
+Backward direction.
 
 **Since:** 26.0.0
 

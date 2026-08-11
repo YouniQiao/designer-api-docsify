@@ -1,6 +1,6 @@
 # RequestResult
 
-发送请求的响应结果。
+Defines the response to the request.
 
 **Since:** 9
 
@@ -22,7 +22,7 @@ import { rpc } from 'kits/@kit.IPCKit';
 code: int
 ```
 
-消息代码。
+Message code.
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
@@ -40,7 +40,7 @@ code: int
 data: MessageSequence
 ```
 
-发送给对端进程的MessageSequence对象。
+**MessageSequence** object sent to the remote process.
 
 **Type:** [MessageSequence](arkts-ipc-rpc-messagesequence-c.md)
 
@@ -58,7 +58,7 @@ data: MessageSequence
 errCode: int
 ```
 
-错误码。
+Error code.
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
@@ -76,7 +76,7 @@ errCode: int
 reply: MessageSequence
 ```
 
-对端进程返回的MessageSequence对象。
+**MessageSequence** object returned by the remote process.
 
 **Type:** [MessageSequence](arkts-ipc-rpc-messagesequence-c.md)
 

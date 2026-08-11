@@ -1,11 +1,5 @@
 # @ohos.arkui.ArcAlphabetIndexer
 
-## 导入模块
-
-```TypeScript
-import { ArcAlphabetIndexerAttribute, ArcAlphabetIndexer } from 'kits/@kit.ArkUI';
-```
-
 ## 汇总
 
 ### 函数

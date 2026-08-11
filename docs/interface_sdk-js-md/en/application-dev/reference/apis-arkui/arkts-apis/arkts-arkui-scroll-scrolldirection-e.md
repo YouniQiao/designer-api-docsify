@@ -1,6 +1,6 @@
 # ScrollDirection
 
-滚动方向枚举。
+Enumerates the scrolling directions.
 
 **Since:** 23
 
@@ -70,7 +70,7 @@ Scrolling is disabled.
 FREE = 4
 ```
 
-自由滚动。
+Free scrolling is supported.
 
 **Since:** 26.0.0
 

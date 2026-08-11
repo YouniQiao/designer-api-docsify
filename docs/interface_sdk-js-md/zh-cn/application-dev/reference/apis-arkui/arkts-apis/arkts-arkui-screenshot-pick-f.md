@@ -1,11 +1,5 @@
 # pick
 
-## 导入模块
-
-```TypeScript
-import { screenshot } from 'kits/@kit.ArkUI';
-```
-
 ## pick
 
 ```TypeScript
@@ -34,10 +28,12 @@ function pick(): Promise<PickInfo>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 801 | Capability not supported on this device. |
-| 1400003 | This display manager service works abnormally. |
+| [801](../../errorcode-universal.md#801-该设备不支持此api) | Capability not supported on this device. |
+| [1400003](../errorcode-display.md#1400003-系统服务工作异常) | This display manager service works abnormally. |
 
 ## 示例
+
+ArkTS-Dyn示例：
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -55,5 +51,25 @@ try {
 } catch (exception) {
   console.error(`Failed to pick. Code: ${exception.code}, message: ${exception.message}`);
 }
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+try {
+  let promise = screenshot.pick();
+  promise.then((pickInfo: screenshot.PickInfo) => {
+    console.info(`pick Pixel bytes number: ${pickInfo.pixelMap.getPixelBytesNumber()}`);
+    console.info(`pick Rect: ${pickInfo.pickRect}`);
+    pickInfo.pixelMap.release(); // PixelMap使用完后及时释放内存
+  }).catch((err: Error) => {
+    console.error(`Failed to pick. Code: ${err?.code}, message: ${err?.message}`);
+  });
+} catch (exception) {
+  let error = exception as BusinessError;
+  console.error(`Failed to pick Code: ${error.code}, message: ${error.message}`);
+};
 ```
 

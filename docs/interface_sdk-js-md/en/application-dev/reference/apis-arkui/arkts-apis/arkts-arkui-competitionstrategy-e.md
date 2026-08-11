@@ -1,6 +1,6 @@
 # CompetitionStrategy
 
-定义分发的事件是否为竞争手势，竞争场景手势原始节点和目标节点只有一个节点会响应手势，非竞争场景可以同时响应。
+Defines whether the dispatched event is a competitive gesture. In the competitive scenario, only one of the original node and target node of the gesture responds. In the non‑competitive scenario, both nodes can respond simultaneously.
 
 **Since:** 24
 
@@ -16,7 +16,7 @@
 DEFAULT = 0
 ```
 
-表示分发的事件为非竞争手势。
+Indicates that the dispatched event is a non‑competitive gesture.
 
 **Since:** 24
 
@@ -36,7 +36,7 @@ DEFAULT = 0
 COMPETITION = 1
 ```
 
-表示分发的事件为竞争手势。
+Indicates that the dispatched event is a competitive gesture.
 
 **Since:** 24
 

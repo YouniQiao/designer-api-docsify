@@ -12,7 +12,7 @@ import { inputConsumer } from 'kits/@kit.InputKit';
 function on(type: 'hotkeyChange', hotkeyOptions: HotkeyOptions, callback: Callback<HotkeyOptions>): void
 ```
 
-订阅应用快捷键。获取满足条件的组合按键输入事件，使用callback异步回调。
+Subscribes to application shortcut key change events. This API obtains combination key input events that meet the specified conditions, and uses an asynchronous callback to return the result.
 
 **Since:** 14
 
@@ -26,18 +26,18 @@ function on(type: 'hotkeyChange', hotkeyOptions: HotkeyOptions, callback: Callba
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'hotkeyChange' | Yes | 事件类型，固定取值为'hotkeyChange'。 |
-| hotkeyOptions | [HotkeyOptions](arkts-input-inputconsumer-hotkeyoptions-i.md) | Yes | 快捷键选项。 |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;HotkeyOptions&gt; | Yes | 回调函数，返回满足条件的组合按键输入事件。 |
+| type | 'hotkeyChange' | Yes | Event type. This parameter has a fixed value of **hotkeyChange**. |
+| hotkeyOptions | [HotkeyOptions](arkts-input-inputconsumer-hotkeyoptions-i.md) | Yes | Shortcut key options. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;HotkeyOptions&gt; | Yes | Callback used to return the combination key input events that meet the conditions. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; 3. Parameter verification failed. |
-| 801 | Capability not supported. |
-| 4200002 | The hotkey has been used by the system. |
-| 4200003 | The hotkey has been subscribed to by another. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; 3. Parameter verification failed. |
+| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. |
+| [4200002](../errorcode-inputconsumer.md#4200002-shortcut-key-already-registered-by-a-system-application) | The hotkey has been used by the system. |
+| [4200003](../errorcode-inputconsumer.md#4200003-shortcut-key-already-registered-by-another-application) | The hotkey has been subscribed to by another. |
 
 ## Examples
 
@@ -59,13 +59,12 @@ struct Index {
             isRepeat: true
           };
           let hotkeyCallback = (hotkeyOptions: inputConsumer.HotkeyOptions) => {
-            console.info(`Succeeded in consuming hotkey, hotkeyOptions: ${JSON.stringify(hotkeyOptions)}.`);
+            console.info(`hotkeyOptions: ${JSON.stringify(hotkeyOptions)}`);
           }
           try {
-            // Subscribe to shortcut key change events.
             inputConsumer.on("hotkeyChange", hotkeyOptions, hotkeyCallback);
           } catch (error) {
-            console.error(`Failed to Subscribe hot key, Code: ${(error as BusinessError).code}, message: ${(error as BusinessError).message}.`);
+            console.error(`Subscribe failed, error: ${JSON.stringify(error, [`code`, `message`])}`);
           }
         })
     }
@@ -80,10 +79,10 @@ struct Index {
 function on(type: 'keyPressed', options: KeyPressedConfig, callback: Callback<KeyEvent>): void
 ```
 
-订阅按键按下事件。若当前应用窗口为前台焦点窗口，用户按下指定按键，会触发回调。使用callback异步回调。
+Subscribes to key press events. If the current application is in the foreground focus window, a callback is triggered when the specified key is pressed. This API uses an asynchronous callback to return the result.
 
-订阅成功后，该按键事件的系统默认行为将被屏蔽，即不会再触发系统级的响应，如音量调节。要恢复系统响应，请使用  
-[off](inputConsumer.off(type: 'keyPressed', callback?: Callback&lt;KeyEvent&gt;))方法取消订阅。
+If the API call is successful, the system's default response to the key event will be intercepted; that is, system-level actions, such as volume adjustment, will no longer be triggered. To restore the system response, call  
+[off](inputConsumer.off(type: 'keyPressed', callback?: Callback&lt;KeyEvent&gt;)) to disable listening for the key event.
 
 **Since:** 16
 
@@ -97,16 +96,16 @@ function on(type: 'keyPressed', options: KeyPressedConfig, callback: Callback<Ke
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'keyPressed' | Yes | 事件类型，固定取值为'keyPressed'。 |
-| options | [KeyPressedConfig](arkts-input-inputconsumer-keypressedconfig-i.md) | Yes | 按键事件消费设置。 |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[KeyEvent](arkts-input-multimodalinput-keyevent-keyevent-i.md)&gt; | Yes | 回调函数，返回按键事件。订阅不同的按键事件需要使用不同的callback，否则订阅不生效。 |
+| type | 'keyPressed' | Yes | Event type. This parameter has a fixed value of **keyPressed**. |
+| options | [KeyPressedConfig](arkts-input-inputconsumer-keypressedconfig-i.md) | Yes | Sets the key event consumption configuration. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[KeyEvent](arkts-input-multimodalinput-keyevent-keyevent-i.md)&gt; | Yes | Callback used to return key press events. Ensure that different callbacks are used for different key events. Otherwise, the subscription does not take effect. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; 3. Parameter verification failed. |
-| 801 | Capability not supported. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; 3. Parameter verification failed. |
+| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. |
 
 ## Examples
 
@@ -126,12 +125,11 @@ struct Index {
               action: 1,
               isRepeat: false,
             }
-            // Subscribe to key press events.
             inputConsumer.on('keyPressed', options, (event: KeyEvent) => {
-              console.info(`Succeeded in subscribing ${JSON.stringify(event)}.`);
+              console.info(`Subscribe success ${JSON.stringify(event)}`);
             });
           } catch (error) {
-            console.error(`Failed to subscribe , Code: ${(error as BusinessError).code}, message: ${(error as BusinessError).message}.`);
+            console.error(`Subscribe execute failed, error: ${JSON.stringify(error, [`code`, `message`])}`);
           }
         })
     }

@@ -1,6 +1,6 @@
 # SharingCode (System API)
 
-端云共享错误码。
+Enumerates the error codes for device-cloud sharing.
 
 **Since:** 11
 
@@ -18,7 +18,7 @@
 SUCCESS = 0
 ```
 
-成功。请使用枚举名称而非枚举值。
+Operation successful. Use the enum name rather than the enum value.
 
 **Since:** 11
 
@@ -36,7 +36,7 @@ SUCCESS = 0
 REPEATED_REQUEST = 1
 ```
 
-重复邀请，表示当前参与者已被邀请。请使用枚举名称而非枚举值。
+Repeated invitation, which means the participant has been invited. Use the enum name rather than the enum value.
 
 **Since:** 11
 
@@ -54,7 +54,7 @@ REPEATED_REQUEST = 1
 NOT_INVITER = 2
 ```
 
-非端云共享的邀请者，表示当前参与者不是端云共享的邀请者。请使用枚举名称而非枚举值。
+The participant is not the inviter of this share. Use the enum name rather than the enum value.
 
 **Since:** 11
 
@@ -72,7 +72,7 @@ NOT_INVITER = 2
 NOT_INVITER_OR_INVITEE = 3
 ```
 
-非法参与者，表示当前参与者既不是共享的邀请者，也不是共享的被邀请者。请使用枚举名称而非枚举值。
+Invalid participant, which means the participant is neither the inviter nor the invitee. Use the enum name rather than the enum value.
 
 **Since:** 11
 
@@ -90,7 +90,7 @@ NOT_INVITER_OR_INVITEE = 3
 OVER_QUOTA = 4
 ```
 
-端云共享次数达到上限，表示当前账号可共享的次数达到上限。请使用枚举名称而非枚举值。
+The number of device-cloud sharing times has reached the limit for the current account. Use the enum name rather than the enum value.
 
 **Since:** 11
 
@@ -108,7 +108,7 @@ OVER_QUOTA = 4
 TOO_MANY_PARTICIPANTS = 5
 ```
 
-端云共享参与者数量达到上限。请使用枚举名称而非枚举值。
+The number of device-cloud sharing participants has reached the limit. Use the enum name rather than the enum value.
 
 **Since:** 11
 
@@ -126,7 +126,7 @@ TOO_MANY_PARTICIPANTS = 5
 INVALID_ARGS = 6
 ```
 
-无效的参数。请使用枚举名称而非枚举值。
+Invalid parameter. Use the enum name rather than the enum value.
 
 **Since:** 11
 
@@ -144,7 +144,7 @@ INVALID_ARGS = 6
 NETWORK_ERROR = 7
 ```
 
-网络错误。请使用枚举名称而非枚举值。
+Network error. Use the enum name rather than the enum value.
 
 **Since:** 11
 
@@ -162,7 +162,7 @@ NETWORK_ERROR = 7
 CLOUD_DISABLED = 8
 ```
 
-云开关未打开。请使用枚举名称而非枚举值。
+Cloud is disabled. Use the enum name rather than the enum value.
 
 **Since:** 11
 
@@ -180,7 +180,7 @@ CLOUD_DISABLED = 8
 SERVER_ERROR = 9
 ```
 
-服务端发生错误。请使用枚举名称而非枚举值。
+Server error. Use the enum name rather than the enum value.
 
 **Since:** 11
 
@@ -198,7 +198,7 @@ SERVER_ERROR = 9
 INNER_ERROR = 10
 ```
 
-系统发生内部错误。请使用枚举名称而非枚举值。
+System internal error. Use the enum name rather than the enum value.
 
 **Since:** 11
 
@@ -216,7 +216,7 @@ INNER_ERROR = 10
 INVALID_INVITATION = 11
 ```
 
-无效的邀请，表示当前邀请已失效或不存在。请使用枚举名称而非枚举值。
+Invalid invitation, which means the current invitation has expired or does not exist. Use the enum name rather than the enum value.
 
 **Since:** 11
 
@@ -234,7 +234,7 @@ INVALID_INVITATION = 11
 RATE_LIMIT = 12
 ```
 
-速率限制，表示单次同步的数据量达到上限。请使用枚举名称而非枚举值。
+The amount of data to be synced at a time has reached the limit. Use the enum name rather than the enum value.
 
 **Since:** 11
 
@@ -252,7 +252,7 @@ RATE_LIMIT = 12
 CUSTOM_ERROR = 1000
 ```
 
-定制错误，小于该枚举值的错误码用于定义系统内部的标准错误码，大于该枚举值的错误码用于使用者自定义错误码。请使用枚举名称而非枚举值。
+Customized error. Error codes smaller than **1000** are used to define internal error codes, and error codes greater than **1000** are used to customize error codes. Use the enum name rather than the enum value.
 
 **Since:** 11
 

@@ -14,12 +14,6 @@
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Lite
 
-## 导入模块
-
-```TypeScript
-import { BackRouterOptions, DisableAlertBeforeBackPageOptions, RouterOptions, RouterState, EnableAlertBeforeBackPageOptions } from 'kits/@kit.ArkUI';
-```
-
 ## back
 
 ```TypeScript
@@ -194,7 +188,7 @@ static getState(): RouterState
 
 | 类型 | 说明 |
 | --- | --- |
-| [RouterState](arkts-arkui-router-routerstate-i.md) | 详细请参见RouterState。 |
+| [RouterState](arkts-arkui-system-router-routerstate-i.md) | 详细请参见RouterState。 |
 
 ## push
 

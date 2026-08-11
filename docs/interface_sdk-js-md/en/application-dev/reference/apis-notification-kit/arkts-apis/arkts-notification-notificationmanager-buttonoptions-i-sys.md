@@ -1,6 +1,6 @@
 # ButtonOptions (System API)
 
-描述触发按钮信息。
+Provides the button information of the notification.
 
 **Since:** 11
 
@@ -24,7 +24,7 @@ import { notificationManager } from 'kits/@kit.NotificationKit';
 buttonName: string
 ```
 
-按钮名称。
+Button name.
 
 **Type:** string
 

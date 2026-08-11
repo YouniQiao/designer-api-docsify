@@ -1,11 +1,5 @@
 # onDeviceOffline（系统接口）
 
-## 导入模块
-
-```TypeScript
-import { avSession } from 'kits/@kit.AVSessionKit';
-```
-
 ## onDeviceOffline
 
 ```TypeScript
@@ -34,5 +28,15 @@ Register device offline callback
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 202 | Not System App. |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not System App. |
+
+## 示例
+
+```TypeScript
+let castDeviceId: string;
+avSession.onDeviceOffline((deviceId: string) => {
+  castDeviceId = deviceId;
+  console.info(`onDeviceOffline  : ${deviceId} `);
+});
+```
 

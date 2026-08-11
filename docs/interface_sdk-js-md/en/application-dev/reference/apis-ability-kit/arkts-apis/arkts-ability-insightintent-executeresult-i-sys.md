@@ -1,6 +1,6 @@
 # ExecuteResult
 
-意图执行的返回结果。
+Enumerates the return results of intent execution.
 
 **Since:** 11
 
@@ -22,7 +22,7 @@ import { insightIntent } from 'kits/@kit.AbilityKit';
 interactionInfo?: InteractionInfo
 ```
 
-意图执行完成后返回的交互信息。
+Interaction information returned after the intent execution completes.
 
 **Type:** [InteractionInfo](arkts-ability-insightintent-interactioninfo-i-sys.md)
 

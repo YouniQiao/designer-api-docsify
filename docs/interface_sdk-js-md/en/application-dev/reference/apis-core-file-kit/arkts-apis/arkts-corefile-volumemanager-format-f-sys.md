@@ -12,7 +12,7 @@ import { volumeManager } from 'kits/@kit.CoreFileKit';
 function format(volumeId: string, fsType: string, callback: AsyncCallback<void>): void
 ```
 
-对指定卷设备进行格式化，使用callback异步回调。当前仅支持vfat和exfat两种文件系统类型的格式化，只有处于卸载状态的卷设备可以进行格式化，格式化后卷设备的uuid、挂载路径和卷设备描述均会发生变化。
+Formats a volume. This API uses an asynchronous callback to return the result. Currently, only the virtual file allocation table (VFAT), ext4 and exFAT file systems are supported. Only unmounted volumes can be formatted. After a volume is formatted, the UUID, mounting path, and description of the volume will change.
 
 **Since:** 9
 
@@ -30,18 +30,18 @@ function format(volumeId: string, fsType: string, callback: AsyncCallback<void>)
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| volumeId | string | Yes | 卷设备id。 |
-| fsType | string | Yes | 文件系统类型(vfat或者exfat)。 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | 对指定卷设备格式化后的回调。 |
+| volumeId | string | Yes | Volume ID. |
+| fsType | string | Yes | File system type, which can be VFAT or exFAT. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback that returns no value. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | The input parameter is invalid.Possible causes: 1.Mandatory parameters are left unspecified; &lt;br&gt;2.Incorrect parameter types. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | The input parameter is invalid.Possible causes: 1.Mandatory parameters are left unspecified; &lt;br&gt;2.Incorrect parameter types. |
 | 13600008 | No such object. |
-| 201 | Permission verification failed. |
-| 202 | The caller is not a system application. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | The caller is not a system application. |
 | 13600005 | Incorrect volume state. |
 | 13600002 | Not supported filesystem. |
 | 13600001 | IPC error. |
@@ -54,7 +54,7 @@ function format(volumeId: string, fsType: string, callback: AsyncCallback<void>)
 function format(volumeId: string, fsType: string): Promise<void>
 ```
 
-对指定卷设备进行格式化，使用Promise异步回调。当前仅支持vfat和exfat两种文件系统类型的格式化，只有处于卸载状态的卷设备可以进行格式化，格式化后卷设备的uuid、挂载路径和卷设备描述均会发生变化。
+Formats a volume. This API uses a promise to return the result. Currently, only the virtual file allocation table (VFAT), ext4 and exFAT file systems are supported. Only unmounted volumes can be formatted. After a volume is formatted, the UUID, mounting path, and description of the volume will change.
 
 **Since:** 9
 
@@ -72,23 +72,23 @@ function format(volumeId: string, fsType: string): Promise<void>
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| volumeId | string | Yes | 卷设备id。 |
-| fsType | string | Yes | 文件系统类型（vfat或者exfat）。 |
+| volumeId | string | Yes | Volume ID. |
+| fsType | string | Yes | File system type, which can be VFAT or exFAT. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | 无返回结果的Promise对象。 |
+| Promise&lt;void&gt; | Promise that returns no value. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | The input parameter is invalid.Possible causes: 1.Mandatory parameters are left unspecified; &lt;br&gt;2.Incorrect parameter types. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | The input parameter is invalid.Possible causes: 1.Mandatory parameters are left unspecified; &lt;br&gt;2.Incorrect parameter types. |
 | 13600008 | No such object. |
-| 201 | Permission verification failed. |
-| 202 | The caller is not a system application. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | The caller is not a system application. |
 | 13600005 | Incorrect volume state. |
 | 13600002 | Not supported filesystem. |
 | 13600001 | IPC error. |

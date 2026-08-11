@@ -1,6 +1,6 @@
 # CurrentVersionInfo (System API)
 
-当前版本信息。
+Represents information about the current version.
 
 **Since:** 9
 
@@ -24,7 +24,7 @@ import { update } from 'kits/@kit.BasicServicesKit';
 deviceName: string
 ```
 
-设备名。
+Device name.
 
 **Type:** string
 
@@ -44,7 +44,7 @@ deviceName: string
 osVersion: string
 ```
 
-系统版本号。
+System version number.
 
 **Type:** string
 
@@ -64,7 +64,7 @@ osVersion: string
 versionComponents: Array<VersionComponent>
 ```
 
-版本组件。
+Version components.
 
 **Type:** Array&lt;VersionComponent&gt;
 

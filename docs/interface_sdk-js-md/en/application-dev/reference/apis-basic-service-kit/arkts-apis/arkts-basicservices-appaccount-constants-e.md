@@ -1,6 +1,6 @@
 # Constants
 
-表示常量的枚举。
+Enumerates the constants.
 
 **Since:** 8
 
@@ -16,9 +16,10 @@
 ACTION_ADD_ACCOUNT_IMPLICITLY = 'addAccountImplicitly'
 ```
 
-表示操作，隐式添加账号。
+Operation of adding an account implicitly.
 
-**说明：**从API version 8开始支持，从API version 9开始废弃，建议使用ACTION_CREATE_ACCOUNT_IMPLICITLY替代。
+Note: This API is supported since API version 8 and deprecated since API version 9. Use  
+**ACTION_CREATE_ACCOUNT_IMPLICITLY** instead.
 
 **Since:** 8
 
@@ -38,9 +39,9 @@ ACTION_ADD_ACCOUNT_IMPLICITLY = 'addAccountImplicitly'
 ACTION_AUTHENTICATE = 'authenticate'
 ```
 
-表示操作，鉴权。
+Authentication operation.
 
-**说明：**从API version 8开始支持，从API version 9开始废弃，建议使用ACTION_AUTH替代。
+Note: This API is supported since API version 8 and deprecated since API version 9. Use **ACTION_AUTH** instead.
 
 **Since:** 8
 
@@ -60,7 +61,7 @@ ACTION_AUTHENTICATE = 'authenticate'
 ACTION_CREATE_ACCOUNT_IMPLICITLY = "createAccountImplicitly"
 ```
 
-表示操作，隐式创建账号。
+Operation of creating an account implicitly.
 
 **Since:** 9
 
@@ -76,7 +77,7 @@ ACTION_CREATE_ACCOUNT_IMPLICITLY = "createAccountImplicitly"
 ACTION_AUTH = "auth"
 ```
 
-表示操作，鉴权。
+Authentication operation.
 
 **Since:** 9
 
@@ -92,7 +93,7 @@ ACTION_AUTH = "auth"
 ACTION_VERIFY_CREDENTIAL = "verifyCredential"
 ```
 
-表示操作，验证凭据。
+Operation of verifying credentials.
 
 **Since:** 9
 
@@ -108,7 +109,7 @@ ACTION_VERIFY_CREDENTIAL = "verifyCredential"
 ACTION_SET_AUTHENTICATOR_PROPERTIES = "setAuthenticatorProperties"
 ```
 
-表示操作，设置认证器属性。
+Operation of setting authenticator properties.
 
 **Since:** 9
 
@@ -124,7 +125,7 @@ ACTION_SET_AUTHENTICATOR_PROPERTIES = "setAuthenticatorProperties"
 KEY_NAME = "name"
 ```
 
-表示键名，应用账号的名称。
+Name of the application account.
 
 **Since:** 8
 
@@ -140,7 +141,7 @@ KEY_NAME = "name"
 KEY_OWNER = "owner"
 ```
 
-表示键名，应用账号所有者的包名。最大长度为1024个字符。
+Bundle name of the application account owner.
 
 **Since:** 8
 
@@ -156,7 +157,7 @@ KEY_OWNER = "owner"
 KEY_TOKEN = "token"
 ```
 
-表示键名，令牌。
+Token.
 
 **Since:** 8
 
@@ -172,7 +173,7 @@ KEY_TOKEN = "token"
 KEY_ACTION = "action"
 ```
 
-表示键名，操作。
+Operation.
 
 **Since:** 8
 
@@ -188,7 +189,7 @@ KEY_ACTION = "action"
 KEY_AUTH_TYPE = "authType"
 ```
 
-表示键名，鉴权类型。
+Authentication type.
 
 **Since:** 8
 
@@ -204,7 +205,7 @@ KEY_AUTH_TYPE = "authType"
 KEY_SESSION_ID = "sessionId"
 ```
 
-表示键名，会话标识。
+Session ID.
 
 **Since:** 8
 
@@ -220,7 +221,7 @@ KEY_SESSION_ID = "sessionId"
 KEY_CALLER_PID = "callerPid"
 ```
 
-表示键名，调用方PID。
+PID of the caller.
 
 **Since:** 8
 
@@ -236,7 +237,7 @@ KEY_CALLER_PID = "callerPid"
 KEY_CALLER_UID = "callerUid"
 ```
 
-表示键名，调用方UID。
+UID of the caller.
 
 **Since:** 8
 
@@ -252,7 +253,7 @@ KEY_CALLER_UID = "callerUid"
 KEY_CALLER_BUNDLE_NAME = "callerBundleName"
 ```
 
-表示键名，调用方包名。
+Bundle name of the caller.
 
 **Since:** 8
 
@@ -268,7 +269,7 @@ KEY_CALLER_BUNDLE_NAME = "callerBundleName"
 KEY_REQUIRED_LABELS = "requiredLabels"
 ```
 
-表示键名，必需的标签。
+Required labels.
 
 **Since:** 9
 
@@ -284,7 +285,7 @@ KEY_REQUIRED_LABELS = "requiredLabels"
 KEY_BOOLEAN_RESULT = "booleanResult"
 ```
 
-表示键名，布尔返回值。
+Return value of the Boolean type.
 
 **Since:** 9
 

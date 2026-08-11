@@ -1,6 +1,6 @@
 # BackgroundEffectOptions
 
-背景效果参数。
+Defines the options of BackgroundEffect
 
 **Since:** 11
 
@@ -16,7 +16,7 @@
 adaptiveColor?: AdaptiveColor
 ```
 
-背景模糊效果使用的取色模式，默认为DEFAULT。使用AVERAGE时color必须带有透明度，取色模式才生效。
+Adaptive color mode used for the background blur effect. Default value: **DEFAULT** . When set to **AVERAGE**, the adaptive color mode takes effect only when the color has transparency.
 
 **Type:** [AdaptiveColor](../arkts-apis/arkts-arkui-common-adaptivecolor-e.md)
 
@@ -40,7 +40,7 @@ adaptiveColor?: AdaptiveColor
 blurOptions?: BlurOptions
 ```
 
-灰阶模糊参数，默认为[0,0]。
+Grayscale blur.
 
 **Type:** [BlurOptions](arkts-arkui-bluroptions-i.md)
 
@@ -64,7 +64,7 @@ blurOptions?: BlurOptions
 brightness?: number
 ```
 
-亮度，取值范围：[0, +∞)，默认为1。推荐取值范围：[0, 2]。
+Brightness.&lt;br&gt;Value range: [0, +∞).&lt;br&gt;Default value: **1** Recommended value range: [0, 2].
 
 **Type:** number
 
@@ -88,7 +88,7 @@ brightness?: number
 color?: ResourceColor
 ```
 
-颜色，默认透明色。
+Color.
 
 **Type:** [ResourceColor](../arkts-apis/arkts-arkui-resourcecolor-t.md)
 
@@ -112,7 +112,8 @@ color?: ResourceColor
 inactiveColor?: ResourceColor
 ```
 
-模糊不生效时使用的背景色。该参数需配合policy参数使用。当policy使模糊失效时，控件模糊效果会被移除，如果设置了inactiveColor会使用inactiveColor作为控件背景色。
+Background color when the blur effect does not take effect. This parameter must be used together with the   
+**policy** parameter. When **policy** is set to a value that disables the blur effect, the blur effect on the components is removed. If **inactiveColor** is specified, it is applied as the component background color.
 
 **Type:** [ResourceColor](../arkts-apis/arkts-arkui-resourcecolor-t.md)
 
@@ -136,9 +137,7 @@ inactiveColor?: ResourceColor
 policy?: BlurStyleActivePolicy
 ```
 
-模糊激活策略。
-
-默认值：BlurStyleActivePolicy.ALWAYS_ACTIVE
+Blur activation policy.
 
 **Type:** [BlurStyleActivePolicy](arkts-arkui-blurstyleactivepolicy-e.md)
 
@@ -162,7 +161,7 @@ policy?: BlurStyleActivePolicy
 radius: number
 ```
 
-模糊半径，取值范围：[0, +∞)，默认为0。
+Blur radius.Value range: [0, +∞).Default value: **0**.
 
 **Type:** number
 
@@ -184,7 +183,7 @@ radius: number
 saturation?: number
 ```
 
-饱和度，取值范围：[0, +∞)，默认为1。推荐取值范围：[0, 50]。
+Saturation.Value range: [0, +∞).Recommended value range: [0, 50].
 
 **Type:** number
 

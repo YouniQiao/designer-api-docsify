@@ -12,7 +12,7 @@ import { deviceManager } from 'kits/@kit.DriverDevelopmentKit';
 function queryDeviceInfo(deviceId?: long): Array<Readonly<DeviceInfo>>
 ```
 
-查询扩展外设详细信息列表。如果没有设备接入，那么将会返回一个空的列表。
+Obtains the list of detailed information about peripherals. If the device has no peripheral device connected, an empty list is returned.
 
 **Since:** 12
 
@@ -30,22 +30,22 @@ function queryDeviceInfo(deviceId?: long): Array<Readonly<DeviceInfo>>
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| deviceId | ArkTS-Dyn: number  <br>ArkTS-Sta：long | No | 设备ID，通过[queryDevices](arkts-driverdevelopment-devicemanager-querydevices-f.md#querydevices)获得。 如果不传入设备ID，则默认获取所有的设备信息；如果没有外接设备，且没有传入设备ID则会返回空数组。 |
+| deviceId | ArkTS-Dyn: number  <br>ArkTS-Sta：long | No | Device ID, which is obtained through [queryDevices](arkts-driverdevelopment-devicemanager-querydevices-f.md#querydevices). If no device ID is passed, all device information is obtained by default. If no external device is connected and no device ID is passed, an empty array is returned. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Array&lt;Readonly&lt;DeviceInfo&gt;&gt; | 扩展外设详细信息列表。 |
+| Array&lt;Readonly&lt;DeviceInfo&gt;&gt; | List of detailed information about peripherals. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 26300001 | ExternalDeviceManager service exception. |
-| 401 | Parameter error. Possible causes: 1.Incorrect parameter types. |
-| 201 | The permission check failed. |
-| 202 | Permission denied. A non-system application cannot call a system API. |
+| [26300001](../../apis-driverdevelopment-kit/errorcode-deviceManager.md#26300001-externaldevicemanager-service-exception) | ExternalDeviceManager service exception. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.Incorrect parameter types. |
+| [201](../../errorcode-universal.md#201-permission-denied) | The permission check failed. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission denied. A non-system application cannot call a system API. |
 
 ## Examples
 

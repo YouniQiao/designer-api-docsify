@@ -10,12 +10,6 @@
 
 **系统能力：** SystemCapability.Multimedia.AVSession.AVMusicTemplate
 
-## 导入模块
-
-```TypeScript
-import { avMusicTemplate } from 'kits/@kit.AVSessionKit';
-```
-
 ## desc
 
 ```TypeScript
@@ -144,7 +138,7 @@ playState: PlaybackState
 
 媒体资源的播放状态。
 
-**类型：** [PlaybackState](arkts-avsession-avsession-playbackstate-e.md)
+**类型：** [PlaybackState](arkts-avsession-avmusictemplate-playbackstate-e.md)
 
 **起始版本：** 23
 

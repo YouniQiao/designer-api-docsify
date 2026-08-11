@@ -1,6 +1,6 @@
 # PrintOrientationMode
 
-打印方向的枚举。
+Enumerates the print directions.
 
 **Since:** 14
 
@@ -16,7 +16,7 @@
 ORIENTATION_MODE_PORTRAIT = 0
 ```
 
-表示纵向打印。
+Portrait mode.
 
 **Since:** 14
 
@@ -32,7 +32,7 @@ ORIENTATION_MODE_PORTRAIT = 0
 ORIENTATION_MODE_LANDSCAPE= 1
 ```
 
-表示横向打印。
+Landscape mode.
 
 **Since:** 14
 
@@ -48,7 +48,7 @@ ORIENTATION_MODE_LANDSCAPE= 1
 ORIENTATION_MODE_REVERSE_LANDSCAPE = 2
 ```
 
-表示横向翻转打印。
+Reverse landscape mode.
 
 **Since:** 14
 
@@ -64,7 +64,7 @@ ORIENTATION_MODE_REVERSE_LANDSCAPE = 2
 ORIENTATION_MODE_REVERSE_PORTRAIT = 3
 ```
 
-表示纵向翻转打印。
+Reverse portrait mode.
 
 **Since:** 14
 
@@ -80,7 +80,7 @@ ORIENTATION_MODE_REVERSE_PORTRAIT = 3
 ORIENTATION_MODE_NONE = 4
 ```
 
-表示自适应方向打印。
+Adaptive mode.
 
 **Since:** 14
 

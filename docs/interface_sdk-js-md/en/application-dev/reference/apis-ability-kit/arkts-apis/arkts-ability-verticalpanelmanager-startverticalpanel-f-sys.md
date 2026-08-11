@@ -50,9 +50,9 @@ Starts the vertical domain picker with panel config.If the target ability is vis
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 16000135 | The main window of this ability of this context does not exits. |
-| 16000050 | Failed to connect to the system service or system server handle failed. |
-| 202 | The application is not a system application. |
+| [16000135](../errorcode-ability.md#16000135-uiability-main-window-does-not-exist) | The main window of this ability of this context does not exits. |
+| [16000050](../errorcode-ability.md#16000050-internal-error) | Failed to connect to the system service or system server handle failed. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | The application is not a system application. |
 
 ## Examples
 
@@ -178,7 +178,7 @@ Starts the vertical domain picker with panel config.If the target ability is vis
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 16000135 | The main window of this ability of this context does not exits. |
-| 16000050 | Failed to connect to the system service or system server handle failed. |
-| 202 | The application is not a system application. |
+| [16000135](../errorcode-ability.md#16000135-uiability-main-window-does-not-exist) | The main window of this ability of this context does not exits. |
+| [16000050](../errorcode-ability.md#16000050-internal-error) | Failed to connect to the system service or system server handle failed. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | The application is not a system application. |
 

@@ -4,7 +4,7 @@
 declare type OnAlphabetIndexerPopupSelectCallback = (index: number) => void
 ```
 
-提示弹窗二级索引项被选中时触发的事件。
+Represents the callback invoked when a secondary index item in the pop-up window is selected.
 
 **Since:** 18
 

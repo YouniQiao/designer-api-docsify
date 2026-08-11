@@ -12,7 +12,7 @@ import { certificateManager } from 'kits/@kit.DeviceCertificateKit';
 function uninstallSystemAppCertificate(keyUri: string) : Promise<void>
 ```
 
-卸载系统应用的凭据，仅证书管理应用调用。使用Promise异步回调。
+Uninstalls the credential of the system application. This API is called only by the certificate management application. This API uses a promise to return the result.
 
 **Since:** 26.0.0
 
@@ -32,23 +32,23 @@ function uninstallSystemAppCertificate(keyUri: string) : Promise<void>
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| keyUri | string | Yes | 表示系统应用凭据的唯一标识符。 |
+| keyUri | string | Yes | Unique identifier of a system application credential. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise对象，无返回结果。 |
+| Promise&lt;void&gt; | Promise that returns no value. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter verification failed. &lt;br&gt; Possible causes: the URI is null or the URI format is wrong. |
-| 201 | Permission verification failed. &lt;br&gt; The application does not have the permission required to call the API. |
-| 17500002 | Indicates that the certificate does not exist. |
-| 202 | Permission verification failed. A non-system application calls a system API. |
-| 17500001 | Internal error. Possible causes: 1. IPC communication failed; &lt;br&gt;2. Memory operation error; 3. File operation error. Please try again. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter verification failed. &lt;br&gt; Possible causes: the URI is null or the URI format is wrong. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed. &lt;br&gt; The application does not have the permission required to call the API. |
+| [17500002](../errorcode-certManager.md#17500002-certificate-not-exist) | Indicates that the certificate does not exist. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
+| [17500001](../errorcode-certManager.md#17500001-internal-error) | Internal error. Possible causes: 1. IPC communication failed; &lt;br&gt;2. Memory operation error; 3. File operation error. Please try again. |
 
 ## Examples
 
@@ -58,14 +58,13 @@ import { BusinessError } from '@kit.BasicServicesKit';
 
 let keyUri: string = 'test'; /* Unique identifier of the system application credential. */
 try {
-  certificateManager.uninstallSystemAppCertificate(keyUri).then(() => {
-    console.info('Succeeded in uninstalling system app certificate.');
-  }).catch((error: Error) => {
-    let err = error as BusinessError;
-    console.error(`Failed to uninstall system app certificate. Code: ${err.code}, message: ${err.message}`);
-  })
-} catch (error) {
-  console.error(`Failed to uninstall system app certificate. Code: ${error.code}, message: ${error.message}`);
+    certificateManager.uninstallSystemAppCertificate(keyUri).then(() => {
+        console.info('Succeeded in uninstalling system app certificate.');
+    }).catch((err: BusinessError) => {
+        console.error(`Failed to uninstall system app certificate. Code: ${err.code}, message: ${err.message}`);
+    })
+} catch (error: BusinessError) {
+    console.error(`Failed to uninstall system app certificate. Code: ${error.code}, message: ${error.message}`);
 }
 ```
 

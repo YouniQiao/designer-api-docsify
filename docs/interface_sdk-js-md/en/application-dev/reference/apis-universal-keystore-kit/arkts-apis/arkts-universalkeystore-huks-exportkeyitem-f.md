@@ -12,11 +12,12 @@ import { huks } from 'kits/@kit.UniversalKeystoreKit';
 function exportKeyItem(keyAlias: string, options: HuksOptions, callback: AsyncCallback<HuksReturnResult>): void
 ```
 
-导出密钥。使用callback异步回调。
+Exports a key. This API uses an asynchronous callback to return the result.
 
-> **说明：**
+> **NOTE：**
 > 
-> 导出[HuksKeySecurityLevel](arkts-universalkeystore-huks-hukskeysecuritylevel-e.md)中定义的SE安全级别公钥需要ohos.permission.ACCESS_SE_KEY权限。
+> Exporting SE security level public keys defined in [HuksKeySecurityLevel](arkts-universalkeystore-huks-hukskeysecuritylevel-e.md)
+> requires the ohos.permission.ACCESS_SE_KEY permission.
 
 **Since:** 9
 
@@ -34,30 +35,30 @@ function exportKeyItem(keyAlias: string, options: HuksOptions, callback: AsyncCa
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| keyAlias | string | Yes | 密钥别名，应与所用密钥生成时使用的别名相同。 |
-| options | [HuksOptions](arkts-universalkeystore-huks-huksoptions-i.md) | Yes | 用于导出密钥时指定密钥的属性，如使用[HuksAuthStorageLevel](arkts-universalkeystore-huks-huksauthstoragelevel-e.md)指定需导出密钥的安 全级别，&lt;br&gt;可传空，当API version ≥ 12时，传空默认为CE，当API version ＜ 12时，传空默认为DE。 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;HuksReturnResult&gt; | Yes | 回调函数。当导出密钥成功时，err为undefined，data为获取到的HuksReturnResult；否则为错误对象 。HuksReturnResult中的outData返回从HUKS中导出的公钥。 |
+| keyAlias | string | Yes | Key alias, which must be the same as the alias used when the key was generated. |
+| options | [HuksOptions](arkts-universalkeystore-huks-huksoptions-i.md) | Yes | Property of the key to be exported. If [HuksAuthStorageLevel](arkts-universalkeystore-huks-huksauthstoragelevel-e.md) is used to specify the security level of the key to be exported,&lt;br&gt;this parameter can be left empty. If the API version is 12 or later, the default value **CE** is passed in. If the API version is earlier than 12, the default value **DE** is passed in. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;HuksReturnResult&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined**, and **data** is the obtained **HuksReturnResult**. Otherwise, **err** is an error object. **outData** in **HuksReturnResult** returns the public key exported from HUKS. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 801 | api is not supported |
-| 12000020 | the provider operation failed<br>**Applicable version:** 26.0.0 and later |
-| 12000018 | the group id specified by the access group tag is invalid<br>**Applicable version:** 23 and later |
-| 201 | The application permissions are insufficient, possibly because the ohos.permission.ACCESS_SE_KEY permission is missing.<br>**Applicable version:** 26.0.0 and later |
-| 12000026 | the secure element is not available<br>**Applicable version:** 26.0.0 and later |
-| 12000024 | the provider or UKey is busy<br>**Applicable version:** 26.0.0 and later |
-| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. 3. Parameter verification failed. |
-| 12000006 | error occurred in crypto engine |
-| 12000005 | IPC communication failed |
-| 12000004 | operating file failed |
-| 12000003 | algorithm param is invalid<br>**Applicable version:** 9 - 11 |
-| 12000002 | algorithm param is missing<br>**Applicable version:** 9 - 11 |
-| 12000001 | algorithm mode is not supported |
-| 12000014 | memory is insufficient |
-| 12000012 | Device environment or input parameter abnormal |
-| 12000011 | queried entity does not exist |
+| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | api is not supported |
+| [12000020](../errorcode-huks.md#12000020-dependent-module-error) | the provider operation failed<br>**Applicable version:** 26.0.0 and later |
+| [12000018](../errorcode-huks.md#12000018-invalid-input-parameter) | the group id specified by the access group tag is invalid<br>**Applicable version:** 23 and later |
+| [201](../../errorcode-universal.md#201-permission-denied) | The application permissions are insufficient, possibly because the ohos.permission.ACCESS_SE_KEY permission is missing.<br>**Applicable version:** 26.0.0 and later |
+| [12000026](../errorcode-huks.md#12000026-secure-element-fault) | the secure element is not available<br>**Applicable version:** 26.0.0 and later |
+| [12000024](../errorcode-huks.md#12000024-device-or-resource-busy) | the provider or UKey is busy<br>**Applicable version:** 26.0.0 and later |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. 3. Parameter verification failed. |
+| [12000006](../errorcode-huks.md#12000006-algorithm-library-operation-failed) | error occurred in crypto engine |
+| [12000005](../errorcode-huks.md#12000005-ipc-error) | IPC communication failed |
+| [12000004](../errorcode-huks.md#12000004-file-error) | operating file failed |
+| [12000003](../errorcode-huks.md#12000003-invalid-key-algorithm-parameter) | algorithm param is invalid<br>**Applicable version:** 9 - 11 |
+| [12000002](../errorcode-huks.md#12000002-missing-key-algorithm-parameter) | algorithm param is missing<br>**Applicable version:** 9 - 11 |
+| [12000001](../errorcode-huks.md#12000001-feature-not-supported) | algorithm mode is not supported |
+| [12000014](../errorcode-huks.md#12000014-insufficient-memory) | memory is insufficient |
+| [12000012](../errorcode-huks.md#12000012-external-error) | Device environment or input parameter abnormal |
+| [12000011](../errorcode-huks.md#12000011-the-entity-does-not-exist) | queried entity does not exist |
 
 ## Examples
 
@@ -86,11 +87,12 @@ huks.exportKeyItem(keyAlias, emptyOptions, (error, data) => {
 function exportKeyItem(keyAlias: string, options: HuksOptions): Promise<HuksReturnResult>
 ```
 
-导出密钥。使用Promise异步回调。
+Exports a key. This API uses a promise to return the result.
 
-> **说明：**
+> **NOTE：**
 > 
-> 导出[HuksKeySecurityLevel](arkts-universalkeystore-huks-hukskeysecuritylevel-e.md)中定义的SE安全级别公钥需要ohos.permission.ACCESS_SE_KEY权限。
+> Exporting SE security level public keys defined in [HuksKeySecurityLevel](arkts-universalkeystore-huks-hukskeysecuritylevel-e.md)
+> requires the ohos.permission.ACCESS_SE_KEY permission.
 
 **Since:** 9
 
@@ -106,35 +108,35 @@ function exportKeyItem(keyAlias: string, options: HuksOptions): Promise<HuksRetu
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| keyAlias | string | Yes | 密钥别名，应与所用密钥生成时使用的别名相同。 |
-| options | [HuksOptions](arkts-universalkeystore-huks-huksoptions-i.md) | Yes | 空对象（此处传空即可）。 |
+| keyAlias | string | Yes | Key alias, which must be the same as the alias used when the key was generated. |
+| options | [HuksOptions](arkts-universalkeystore-huks-huksoptions-i.md) | Yes | Empty object (leave this parameter empty). |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;HuksReturnResult&gt; | Promise对象，返回调用接口的结果。当调用成功时，HuksReturnResult的outData成员为从密钥中导出的公钥。 |
+| Promise&lt;HuksReturnResult&gt; | Promise that returns the operation result. If the operation is successful, **outData** in **HuksReturnResult** is the exported public key. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 801 | api is not supported |
-| 12000020 | the provider operation failed<br>**Applicable version:** 26.0.0 and later |
-| 12000018 | the group id specified by the access group tag is invalid<br>**Applicable version:** 23 and later |
-| 201 | The application permissions are insufficient, possibly because the ohos.permission.ACCESS_SE_KEY permission is missing.<br>**Applicable version:** 26.0.0 and later |
-| 12000026 | the secure element is not available<br>**Applicable version:** 26.0.0 and later |
-| 12000024 | the provider or UKey is busy<br>**Applicable version:** 26.0.0 and later |
-| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. 3. Parameter verification failed. |
-| 12000006 | error occurred in crypto engine |
-| 12000005 | IPC communication failed |
-| 12000004 | operating file failed |
-| 12000003 | algorithm param is invalid<br>**Applicable version:** 9 - 11 |
-| 12000002 | algorithm param is missing<br>**Applicable version:** 9 - 11 |
-| 12000001 | algorithm mode is not supported |
-| 12000014 | memory is insufficient |
-| 12000012 | Device environment or input parameter abnormal |
-| 12000011 | queried entity does not exist |
+| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | api is not supported |
+| [12000020](../errorcode-huks.md#12000020-dependent-module-error) | the provider operation failed<br>**Applicable version:** 26.0.0 and later |
+| [12000018](../errorcode-huks.md#12000018-invalid-input-parameter) | the group id specified by the access group tag is invalid<br>**Applicable version:** 23 and later |
+| [201](../../errorcode-universal.md#201-permission-denied) | The application permissions are insufficient, possibly because the ohos.permission.ACCESS_SE_KEY permission is missing.<br>**Applicable version:** 26.0.0 and later |
+| [12000026](../errorcode-huks.md#12000026-secure-element-fault) | the secure element is not available<br>**Applicable version:** 26.0.0 and later |
+| [12000024](../errorcode-huks.md#12000024-device-or-resource-busy) | the provider or UKey is busy<br>**Applicable version:** 26.0.0 and later |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. 3. Parameter verification failed. |
+| [12000006](../errorcode-huks.md#12000006-algorithm-library-operation-failed) | error occurred in crypto engine |
+| [12000005](../errorcode-huks.md#12000005-ipc-error) | IPC communication failed |
+| [12000004](../errorcode-huks.md#12000004-file-error) | operating file failed |
+| [12000003](../errorcode-huks.md#12000003-invalid-key-algorithm-parameter) | algorithm param is invalid<br>**Applicable version:** 9 - 11 |
+| [12000002](../errorcode-huks.md#12000002-missing-key-algorithm-parameter) | algorithm param is missing<br>**Applicable version:** 9 - 11 |
+| [12000001](../errorcode-huks.md#12000001-feature-not-supported) | algorithm mode is not supported |
+| [12000014](../errorcode-huks.md#12000014-insufficient-memory) | memory is insufficient |
+| [12000012](../errorcode-huks.md#12000012-external-error) | Device environment or input parameter abnormal |
+| [12000011](../errorcode-huks.md#12000011-the-entity-does-not-exist) | queried entity does not exist |
 
 ## Examples
 

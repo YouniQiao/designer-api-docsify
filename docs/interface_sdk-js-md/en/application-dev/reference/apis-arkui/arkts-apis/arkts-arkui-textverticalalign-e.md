@@ -1,6 +1,6 @@
 # TextVerticalAlign
 
-文本垂直对齐的方式。默认值BASELINE，沿基线对齐。
+Defines the vertical alignment mode of text. The default value is **BASELINE** (aligning along the baseline).
 
 **Since:** 20
 
@@ -16,7 +16,7 @@
 BASELINE = 0
 ```
 
-对齐文本基线。
+Aligns text along the baseline.
 
 **Since:** 20
 
@@ -36,7 +36,7 @@ BASELINE = 0
 BOTTOM = 1
 ```
 
-对齐文本底部。
+Aligns text to the bottom.
 
 **Since:** 20
 
@@ -56,7 +56,7 @@ BOTTOM = 1
 CENTER = 2
 ```
 
-垂直居中对齐。
+Aligns text vertically to the center.
 
 **Since:** 20
 
@@ -76,7 +76,7 @@ CENTER = 2
 TOP = 3
 ```
 
-对齐文本顶部。
+Aligns text to the top.
 
 **Since:** 20
 

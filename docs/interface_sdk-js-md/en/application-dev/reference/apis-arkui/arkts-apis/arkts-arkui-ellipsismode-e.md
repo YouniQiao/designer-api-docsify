@@ -1,6 +1,6 @@
 # EllipsisMode
 
-Enum of ellipsisMode
+The position of ellipsis.
 
 **Since:** 11
 
@@ -16,7 +16,7 @@ Enum of ellipsisMode
 START = 0
 ```
 
-The ellipsis is in the head.
+An ellipsis is used at the start of the line of text. This applies to single-line text scenarios.
 
 **Since:** 11
 
@@ -36,7 +36,7 @@ The ellipsis is in the head.
 CENTER = 1
 ```
 
-The ellipsis is in the middle.
+An ellipsis is used at the center of the line of text. This applies to single-line text scenarios.
 
 **Since:** 11
 
@@ -56,7 +56,7 @@ The ellipsis is in the middle.
 END = 2
 ```
 
-The ellipsis is at the end.
+An ellipsis is used at the end of the line of text. This applies to single-line and multi-line text scenarios.
 
 **Since:** 11
 
@@ -76,7 +76,7 @@ The ellipsis is at the end.
 MULTILINE_START = 3
 ```
 
-省略号在头部。对多行和单行有效。
+An ellipsis is used at the start of the line of text. This applies to single-line and multi-line text scenarios.
 
 **Since:** 24
 
@@ -96,7 +96,7 @@ MULTILINE_START = 3
 MULTILINE_CENTER = 4
 ```
 
-省略号在中间。对多行和单行有效。
+An ellipsis is used at the center of the line of text. This applies to single-line and multi-line text scenarios.
 
 **Since:** 24
 

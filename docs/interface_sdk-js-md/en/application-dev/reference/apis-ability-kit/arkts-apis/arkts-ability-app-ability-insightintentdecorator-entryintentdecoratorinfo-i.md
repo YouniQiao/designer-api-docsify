@@ -1,7 +1,7 @@
 # EntryIntentDecoratorInfo
 
-EntryIntentDecoratorInfo继承自[IntentDecoratorInfo](arkts-ability-app-ability-insightintentdecorator-intentdecoratorinfo-i.md)，用于描述  
-[@InsightIntentEntry](../../../reference/apis-ability-kit/js-apis-app-ability-InsightIntentDecorator.md#insightintententry)装饰器支持的参数。
+Inherits from [IntentDecoratorInfo](arkts-ability-app-ability-insightintentdecorator-intentdecoratorinfo-i.md) and is used to describe the parameters supported by the  
+[@InsightIntentEntry](../../../reference/apis-ability-kit/js-apis-app-ability-InsightIntentDecorator.md#insightintententry) decorator.
 
 **Inheritance/Implementation:** EntryIntentDecoratorInfo extends [IntentDecoratorInfo](arkts-ability-app-ability-insightintentdecorator-intentdecoratorinfo-i.md)
 
@@ -25,7 +25,7 @@ import { InsightIntentFunction, InsightIntentForm, InsightIntentLink, InsightInt
 abilityName: string
 ```
 
-表示与意图绑定的Ability名称。
+Name of the ability bound to the intent.
 
 **Type:** string
 
@@ -44,10 +44,10 @@ abilityName: string
 ## executeMode
 
 ```TypeScript
-executeMode?: insightIntent.ExecuteMode[]
+executeMode: insightIntent.ExecuteMode[]
 ```
 
-The execute mode of the intent.For UIAbility, the parameter can be set to insightIntent.ExecuteMode.UI_ABILITY_FOREGROUND or insightIntent.ExecuteMode.UI_ABILITY_UI_ABILITY_BACKGROUND or both of them.
+Execution mode of the intent call, that is, execution mode supported when the bound ability is started.
 
 **Type:** insightIntent.ExecuteMode[]
 
@@ -59,7 +59,7 @@ The execute mode of the intent.For UIAbility, the parameter can be set to insigh
 
 **Atomic service API:** This API can be used in atomic services since API version 20.
 
-<!--Device-EntryIntentDecoratorInfo-executeMode?: insightIntent.ExecuteMode[]--><!--Device-EntryIntentDecoratorInfo-executeMode?: insightIntent.ExecuteMode[]-End-->
+<!--Device-EntryIntentDecoratorInfo-executeMode: insightIntent.ExecuteMode[]--><!--Device-EntryIntentDecoratorInfo-executeMode: insightIntent.ExecuteMode[]-End-->
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
 

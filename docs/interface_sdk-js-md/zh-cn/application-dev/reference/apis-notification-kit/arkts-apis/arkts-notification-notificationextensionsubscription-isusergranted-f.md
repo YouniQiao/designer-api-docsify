@@ -34,11 +34,13 @@ function isUserGranted(): Promise<boolean>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 201 | Permission denied or current device not supported. |
-| 1600001 | Internal error. |
-| 1600003 | Failed to connect to the service. |
+| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied or current device not supported. |
+| [1600001](../errorcode-notification.md#1600001-内部错误) | Internal error. |
+| [1600003](../errorcode-notification.md#1600003-连接通知服务失败) | Failed to connect to the service. |
 
 ## 示例
+
+ArkTS-Dyn示例：
 
 ```TypeScript
 notificationExtensionSubscription.isUserGranted().then((isOpen: boolean) => {
@@ -48,6 +50,21 @@ notificationExtensionSubscription.isUserGranted().then((isOpen: boolean) => {
     console.info('isUserGranted false');
   }
 }).catch((err: BusinessError) => {
+  console.error(`isUserGranted fail, code is ${err.code}, message is ${err.message}`);
+});
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+notificationExtensionSubscription.isUserGranted().then((isOpen: boolean) => {
+  if (isOpen) {
+    console.info('isUserGranted true');
+  } else {
+    console.info('isUserGranted false');
+  }
+}).catch((error: Error) => {
+  let err = error as BusinessError
   console.error(`isUserGranted fail, code is ${err.code}, message is ${err.message}`);
 });
 ```

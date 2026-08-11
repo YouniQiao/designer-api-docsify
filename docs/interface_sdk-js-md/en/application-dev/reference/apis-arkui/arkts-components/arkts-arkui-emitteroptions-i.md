@@ -1,6 +1,6 @@
 # EmitterOptions
 
-粒子发射器的配置。
+Particle emitter configuration.
 
 **Since:** 10
 
@@ -16,7 +16,7 @@
 annulusRegion?: ParticleAnnulusRegion
 ```
 
-环形发射器参数。需要发射器形状为环形（即shape参数为ParticleEmitterShape.ANNULUS）时才生效，且对于环形发射器，形状信息必须通过annulusRegion参数指定，position和size不生效。
+Annulus emitter parameters. This parameter takes effect only when the emitter shape is annulus (that is, the shape parameter is ParticleEmitterShape.ANNULUS). For an annulus emitter, the shape information must be specified by the annulusRegion parameter, and the position and size parameters do not take effect.
 
 **Type:** [ParticleAnnulusRegion](arkts-arkui-particleannulusregion-i.md)
 
@@ -40,7 +40,11 @@ annulusRegion?: ParticleAnnulusRegion
 emitRate?: number
 ```
 
-发射器发射速率（即每秒发射粒子数）。 默认值：5，小于0时取默认值5。emitRate值超过5000时会极大影响性能，建议设置参数小于5000。
+Emit rate (that is, the number of particles emitted per second).
+
+Default value: **5**. If the value specified is less than 0, the default value is used.
+
+The **emitRate** value can significantly impact performance when it exceeds 5000; you are advised to set it to be less than 5000.
 
 **Type:** number
 
@@ -64,23 +68,23 @@ emitRate?: number
 particle: EmitterParticleOptions<PARTICLE>
 ```
 
-粒子配置。
+Particle configuration.
 
--type表示粒子类型，可以选择图片或者是点。
+- **type**: particle type, which can be **IMAGE** or **POINT**.  
+- **config**: configuration of the particle type.  
+- The value type of **config** is subject to the value of **type**.
 
--config表示对应类型的配置。
+1. If the type is ParticleType.POINT, the config type is [PointParticleParameters](arkts-arkui-pointparticleparameters-i.md).2. If the type is ParticleType.IMAGE, the config type is [ImageParticleParameters](arkts-arkui-imageparticleparameters-i.md).
 
--config类型和type值有关联：
+- **count**: number of particles. The value is greater than or equal to -1. The value **-1** indicates that the   
+number of particles is infinite.  
+- **lifetime**: lifetime of a single particle. The default value is **1000** (that is, 1000 ms, 1s). The value is   
+greater than or equal to -1. The value **-1** indicates that the lifetime of the particle is infinite. If the value specified is less than **-1**, the default value is used.
 
-1. 如果type为ParticleType.POINT，则config类型为[PointParticleParameters](arkts-arkui-pointparticleparameters-i.md) 。2. 如果type为ParticleType.IMAGE，则config类型为[ImageParticleParameters](arkts-arkui-imageparticleparameters-i.md) 。
+Note: If you do not want the animation to keep playing, you are advised not to set the lifetime to –1, which may greatly affect the performance.
 
--count表示发射的粒子总数，count取值>=-1，当count为-1表示粒子总数无限大。
-
--lifetime表示单个粒子的生命周期，默认值1000（即1000ms，1s），lifetime>=-1，当lifetime为-1表示粒子生命周期无限大。当lifetime<-1，取默认值。
-
-**说明：**如果不需要动画一直播放，建议不要将生命周期设置为-1，可能对性能造成较大影响。
-
-lifetimeRange表示粒子生命周期取值范围，设置lifetimeRange后粒子的生命周期为[lifetime-lifetimeRange, lifetime+lifetimeRange]中间的一个随机整数。lifetimeRange默认值为0，取值范围为[0, +∞）。设置为负值时取默认值。
+The **lifeTimeRange** parameter indicates the range of the particle lifetime. After this parameter is set, the lifetime of a particle is a random integer within the range of   
+[lifetime – lifeTimeRange, lifetime + lifeTimeRange]. The default value of lifeTimeRange is 0. The value ranges from 0 to positive infinity. If it is set to a negative value, the default value is used.
 
 **Type:** [EmitterParticleOptions](arkts-arkui-emitterparticleoptions-i.md)&lt;PARTICLE&gt;
 
@@ -102,9 +106,9 @@ lifetimeRange表示粒子生命周期取值范围，设置lifetimeRange后粒子
 position?: ParticleTuple<Dimension, Dimension>
 ```
 
-发射器位置（距离组件左上角的位置。第一个参数为x方向上的相对偏移，第二个参数为y轴方向相对偏移。） 
+Emitter position (distance from the upper left corner of the component). The first parameter indicates the relative offset along the x-axis, and the second parameter indicates the relative offset along the y-axis.
 
-默认值：`[0.0, 0.0]`
+Default value: **[0.0, 0.0]**
 
 **Type:** [ParticleTuple](../arkts-apis/arkts-arkui-particletuple-t.md)&lt;[Dimension](../arkts-apis/arkts-arkui-dimension-t.md), [Dimension](../arkts-apis/arkts-arkui-dimension-t.md)&gt;
 
@@ -128,9 +132,9 @@ position?: ParticleTuple<Dimension, Dimension>
 shape?: ParticleEmitterShape
 ```
 
-发射器形状。
+Shape of emitter.
 
-默认值：ParticleEmitterShape.RECTANGLE
+Default value: ParticleEmitterShape.RECTANGLE
 
 **Type:** [ParticleEmitterShape](arkts-arkui-particleemittershape-e.md)
 
@@ -154,9 +158,9 @@ shape?: ParticleEmitterShape
 size?: ParticleTuple<Dimension, Dimension>
 ```
 
-发射窗口的大小。第一个参数为发射器宽，第二个参数为发射器高。
+Size of the emit window. The first parameter indicates the emitter width, and the second parameter indicates the emitter height.
 
-默认值：`['100%','100%']`(即发射窗口占满Particle组件)
+Default value: **['100%','100%']** (that is, the emission window occupies the entire Particle component.)
 
 **Type:** [ParticleTuple](../arkts-apis/arkts-arkui-particletuple-t.md)&lt;[Dimension](../arkts-apis/arkts-arkui-dimension-t.md), [Dimension](../arkts-apis/arkts-arkui-dimension-t.md)&gt;
 

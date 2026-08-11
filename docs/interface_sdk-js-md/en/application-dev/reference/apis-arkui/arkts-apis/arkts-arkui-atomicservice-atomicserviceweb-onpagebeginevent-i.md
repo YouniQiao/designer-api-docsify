@@ -1,6 +1,6 @@
 # OnPageBeginEvent
 
-定义网页加载开始时触发该回调。
+Represents the callback invoked when the web page loading begins.
 
 **Since:** 12
 
@@ -22,7 +22,7 @@ import { AtomicServiceWeb, OnMessageEvent, OnPageEndEvent, OnHttpErrorReceiveEve
 url: string
 ```
 
-页面的URL地址。
+The url of page.
 
 **Type:** string
 

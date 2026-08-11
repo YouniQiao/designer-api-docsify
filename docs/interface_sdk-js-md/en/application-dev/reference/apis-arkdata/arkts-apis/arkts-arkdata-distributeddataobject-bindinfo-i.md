@@ -1,6 +1,6 @@
 # BindInfo
 
-数据库的绑定信息。当前版本只支持关系型数据库的绑定。
+Represents the information about the joint asset in the RDB store to bind. Currently, only the RDB stores are supported.
 
 **Since:** 11
 
@@ -22,7 +22,7 @@ import { distributedDataObject } from 'kits/@kit.ArkData';
 assetName: string
 ```
 
-待绑定资产在所属的数据库中的资产名。
+Name of the target asset in the RDB store.
 
 **Type:** string
 
@@ -40,7 +40,7 @@ assetName: string
 field: string
 ```
 
-待绑定资产在所属的数据库中的列名。
+Column in which the target asset is located in the RDB store.
 
 **Type:** string
 
@@ -58,7 +58,7 @@ field: string
 primaryKey: commonType.ValuesBucket
 ```
 
-待绑定资产在所属的数据库中的主键。
+Primary key of the target asset in the RDB store.
 
 **Type:** commonType.ValuesBucket
 
@@ -76,7 +76,7 @@ primaryKey: commonType.ValuesBucket
 storeName: string
 ```
 
-待绑定资产在所属的数据库中的库名。
+RDB store to which the target asset (asset to bind) belongs.
 
 **Type:** string
 
@@ -94,7 +94,7 @@ storeName: string
 tableName: string
 ```
 
-待绑定资产在所属的数据库中的表名。
+Table to which the target asset is located in the RDB store.
 
 **Type:** string
 

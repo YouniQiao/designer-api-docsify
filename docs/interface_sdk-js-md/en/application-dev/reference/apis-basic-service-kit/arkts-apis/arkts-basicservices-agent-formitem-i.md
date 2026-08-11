@@ -1,6 +1,6 @@
 # FormItem
 
-任务的表单项信息。
+Describes the form item of a task.
 
 **Since:** 10
 
@@ -22,7 +22,7 @@ import { request } from 'kits/@kit.BasicServicesKit';
 name: string
 ```
 
-表单参数名。
+Form parameter name.
 
 **Type:** string
 
@@ -42,7 +42,7 @@ name: string
 value: string | FileSpec | Array<FileSpec>
 ```
 
-表单参数值。
+Form parameter value.
 
 **Type:** string \| FileSpec \| Array&lt;FileSpec&gt;
 

@@ -1,11 +1,5 @@
 # getUriFromPath
 
-## 导入模块
-
-```TypeScript
-import { fileUri } from 'kits/@kit.CoreFileKit';
-```
-
 ## getUriFromPath
 
 ```TypeScript
@@ -40,7 +34,7 @@ function getUriFromPath(path: string): string
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 401 | The input parameter is invalidPossible causes:1.Mandatory parameters are left unspecified; &lt;br&gt;2.Incorrect parameter types. |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | The input parameter is invalidPossible causes:1.Mandatory parameters are left unspecified; &lt;br&gt;2.Incorrect parameter types. |
 
 ## 示例
 

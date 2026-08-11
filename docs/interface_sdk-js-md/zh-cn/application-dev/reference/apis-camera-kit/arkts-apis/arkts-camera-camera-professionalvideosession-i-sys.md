@@ -15,12 +15,6 @@ ProfessionalVideoSession extends Session, AutoExposure, ManualExposure, Focus, M
 
 **系统接口：** 此接口为系统接口。
 
-## 导入模块
-
-```TypeScript
-import { camera } from 'kits/@kit.CameraKit';
-```
-
 ## off('error')
 
 ```TypeScript
@@ -50,7 +44,7 @@ Unsubscribes from HighResolutionPhotoSession error events.
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 202 | Not System Application. |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not System Application. |
 
 ## 示例
 
@@ -89,7 +83,7 @@ Unsubscribes from focus state change events.
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 202 | Not System Application. |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not System Application. |
 
 ## 示例
 
@@ -128,7 +122,7 @@ Unsubscribes from smooth zoom state change events.
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 202 | Not System Application. |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not System Application. |
 
 ## 示例
 
@@ -167,7 +161,7 @@ Unsubscribes from automatic ISO change events.
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 202 | Not System Application. |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not System Application. |
 
 ## 示例
 
@@ -206,7 +200,7 @@ Unsubscribes from exposure information change events.
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 202 | Not System Application. |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not System Application. |
 
 ## 示例
 
@@ -245,7 +239,7 @@ Unsubscribes from aperture change events.
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 202 | Not System Application. |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not System Application. |
 
 ## 示例
 
@@ -284,7 +278,7 @@ Unsubscribes from illumination change events.
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 202 | Not System Application. |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not System Application. |
 
 ## 示例
 
@@ -322,7 +316,7 @@ Unsubscribes from aperture info event callback.
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 202 | Not System Application. |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not System Application. |
 
 ## offError
 
@@ -352,7 +346,7 @@ Unsubscribes from error events.
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 202 | Not System Application. |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not System Application. |
 
 ## offExposureInfoChange
 
@@ -382,7 +376,7 @@ Unsubscribes from exposure info event callback.
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 202 | Not System Application. |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not System Application. |
 
 ## offFocusStateChange
 
@@ -412,7 +406,7 @@ Unsubscribes from focus state change event callback.
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 202 | Not System Application. |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not System Application. |
 
 ## offIsoInfoChange
 
@@ -442,7 +436,7 @@ Unsubscribes from ISO info event callback.
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 202 | Not System Application. |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not System Application. |
 
 ## offLuminationInfoChange
 
@@ -472,7 +466,7 @@ Unsubscribes from lumination info event callback.
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 202 | Not System Application. |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not System Application. |
 
 ## offSmoothZoomInfoAvailable
 
@@ -502,7 +496,7 @@ Unsubscribes from zoom info event callback.
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 202 | Not System Application. |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not System Application. |
 
 ## on('error')
 
@@ -533,7 +527,7 @@ Subscribes to HighResolutionPhotoSession error events. This API uses an asynchro
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 202 | Not System Application. |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not System Application. |
 
 ## 示例
 
@@ -578,7 +572,7 @@ Subscribes to focus state change events. This API uses an asynchronous callback 
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 202 | Not System Application. |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not System Application. |
 
 ## 示例
 
@@ -627,7 +621,7 @@ Subscribes to smooth zoom state change events. This API uses an asynchronous cal
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 202 | Not System Application. |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not System Application. |
 
 ## 示例
 
@@ -676,7 +670,7 @@ Subscribes to automatic ISO change events to obtain real-time ISO information. T
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 202 | Not System Application. |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not System Application. |
 
 ## 示例
 
@@ -725,7 +719,7 @@ Subscribes to exposure information change events to obtain the exposure informat
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 202 | Not System Application. |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not System Application. |
 
 ## 示例
 
@@ -774,7 +768,7 @@ Subscribes to aperture change events to obtain the real-time aperture informatio
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 202 | Not System Application. |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not System Application. |
 
 ## 示例
 
@@ -823,7 +817,7 @@ Subscribes to illumination change events to obtain real-time illumination inform
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 202 | Not System Application. |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not System Application. |
 
 ## 示例
 
@@ -871,7 +865,7 @@ Subscribes aperture info event callback.
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 202 | Not System Application. |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not System Application. |
 
 ## onError
 
@@ -901,7 +895,7 @@ Subscribes to error events.
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 202 | Not System Application. |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not System Application. |
 
 ## onExposureInfoChange
 
@@ -931,7 +925,7 @@ Subscribes exposure info event callback.
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 202 | Not System Application. |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not System Application. |
 
 ## onFocusStateChange
 
@@ -961,7 +955,7 @@ Subscribes focus state change event callback.
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 202 | Not System Application. |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not System Application. |
 
 ## onIsoInfoChange
 
@@ -991,7 +985,7 @@ Subscribes ISO info event callback.
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 202 | Not System Application. |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not System Application. |
 
 ## onLuminationInfoChange
 
@@ -1021,7 +1015,7 @@ Subscribes lumination info event callback.
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 202 | Not System Application. |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not System Application. |
 
 ## onSmoothZoomInfoAvailable
 
@@ -1051,5 +1045,5 @@ Subscribes zoom info event callback.
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 202 | Not System Application. |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not System Application. |
 

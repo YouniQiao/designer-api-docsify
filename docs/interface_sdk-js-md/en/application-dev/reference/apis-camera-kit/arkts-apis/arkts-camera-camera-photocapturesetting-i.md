@@ -1,6 +1,6 @@
 # PhotoCaptureSetting
 
-拍摄照片的设置。
+Describes the settings for taking an image.
 
 **Since:** 10
 
@@ -22,9 +22,7 @@ import { camera } from 'kits/@kit.CameraKit';
 compressionQuality?: int
 ```
 
-图片压缩质量值，取值范围为(1, 100)。
-
-当compressionQuality未下发时，默认按quality生效；若quality与compressionQuality同时下发则按compressionQuality下发生效；若quality与compressionQuality均未下发则图片质量默认是高等。
+Photo image compression quality.
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
@@ -46,7 +44,7 @@ compressionQuality?: int
 location?: Location
 ```
 
-图片地理位置信息（默认以设备硬件信息为准）。
+Geolocation information of the image (depending on the device hardware information by default).
 
 **Type:** [Location](../../apis-location-kit/arkts-apis/arkts-location-geolocationmanager-location-i.md)
 
@@ -66,7 +64,9 @@ location?: Location
 mirror?: boolean
 ```
 
-镜像使能开关（默认关）。使用之前需要使用[isMirrorSupported](arkts-camera-camera-photooutput-i.md#ismirrorsupported)进行判断是否支持。true表示使能，false表示不使能。
+Whether mirror photography is enabled (disabled by default). Before using this enumerated value, call   
+[isMirrorSupported](arkts-camera-camera-photooutput-i.md#ismirrorsupported) to check whether mirror photography is supported.  
+**true** if enabled, **false** otherwise.
 
 **Type:** boolean
 
@@ -86,9 +86,7 @@ mirror?: boolean
 quality?: QualityLevel
 ```
 
-图片质量。
-
-当quality未下发时，默认按compressionQuality下发生效；若quality与compressionQuality同时下发则按compressionQuality下发生效；若quality与compressionQuality均未下发则图片质量默认是高等。
+Image quality (high by default).
 
 **Type:** [QualityLevel](../../apis-image-kit/arkts-apis/arkts-image-videoprocessingengine-qualitylevel-e.md)
 
@@ -108,7 +106,7 @@ quality?: QualityLevel
 rotation?: ImageRotation
 ```
 
-图片旋转角度（默认0度，顺时针旋转）。
+Rotation angle of the image. The default value is **0**, indicating clockwise rotation.
 
 **Type:** [ImageRotation](arkts-camera-camera-imagerotation-e.md)
 

@@ -4,7 +4,7 @@
 declare type Material = import('../api/@ohos.arkui.uiMaterial').default.Material
 ```
 
-导入用于Navigation组件的材质类型。
+Import the Material type for Navigation.
 
 **Since:** 26.0.0
 

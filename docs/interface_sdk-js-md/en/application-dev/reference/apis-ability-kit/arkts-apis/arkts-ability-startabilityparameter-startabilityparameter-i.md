@@ -1,7 +1,7 @@
 # StartAbilityParameter
 
-定义启动Ability参数，可以作为入参，调用  
-[startAbility](arkts-ability-featureability-startability-f.md#startability)启动指定的Ability。
+The module defines the parameters for starting an ability. The parameters can be used as input parameters in  
+[startAbility](arkts-ability-featureability-startability-f.md#startability)to start the specified ability.
 
 **Since:** 6
 
@@ -17,7 +17,7 @@
 abilityStartSetting?: { [key: string]: any }
 ```
 
-启动Ability的特殊属性，当开发者启动Ability时，该属性可以作为调用中的输入参数传递。
+Indicates the special start setting used in starting ability.
 
 **Type:** { [key: string]: any }
 
@@ -37,7 +37,7 @@ abilityStartSetting?: { [key: string]: any }
 abilityStartSettings?: Record<string, Object>
 ```
 
-启动Ability的特殊属性，当开发者启动Ability时，该属性可以作为调用中的输入参数传递。推荐使用该属性替代abilityStartSetting，设置该属性后，abilityStartSetting不再生效。
+Indicates the special start setting used in starting ability.The ability of this property is same as abilityStartSetting. If both are set, this property will be used.
 
 **Type:** [Record](../../apis-default/arkts-apis/arkts-record-t.md)&lt;string, Object&gt;
 
@@ -57,7 +57,7 @@ abilityStartSettings?: Record<string, Object>
 want: Want
 ```
 
-启动Ability的want信息。
+Indicates the Want containing information about the target ability to start.
 
 **Type:** [Want](arkts-ability-app-ability-want-want-c.md)
 

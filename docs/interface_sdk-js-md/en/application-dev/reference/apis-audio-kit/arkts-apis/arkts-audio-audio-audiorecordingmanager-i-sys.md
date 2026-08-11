@@ -1,6 +1,6 @@
 # AudioRecordingManager
 
-提供录像策略管理，包括协同录音和录制控制能力。
+Provides recording strategy management, including collaborative recording and recording control capabilities.
 
 **Since:** 26.0.0
 
@@ -22,7 +22,7 @@ import { audio } from 'kits/@kit.AudioKit';
 offSystemRecordControllerEnabledChange(callback?: Callback<SystemRecordControllerChangeInfo>): void
 ```
 
-取消订阅系统录像控制器面板启用状态更改事件。
+Unsubscribes from the system recording controller panel enabled state change event.
 
 **Since:** 26.0.0
 
@@ -40,15 +40,15 @@ offSystemRecordControllerEnabledChange(callback?: Callback<SystemRecordControlle
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;SystemRecordControllerChangeInfo&gt; | No | 订阅中使用的回调 取消订阅功能。如果不使用此参数，则当前订阅的所有回调 之前的流程将被取消订阅 |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;SystemRecordControllerChangeInfo&gt; | No | The Callback used in subscription function for unsubscribing. If not using this parameter, all callbacks subscribed in current process before will be unsubscribed. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 6800101 | Parameter verification failed. |
-| 202 | Caller is not a system application. |
-| 6800301 | Audio service error occurs like service died. |
+| [6800101](../errorcode-audio.md#6800101-invalid-parameter) | Parameter verification failed. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Caller is not a system application. |
+| [6800301](../errorcode-audio.md#6800301-system-error) | Audio service error occurs like service died. |
 
 ## onSystemRecordControllerEnabledChange
 
@@ -56,7 +56,7 @@ offSystemRecordControllerEnabledChange(callback?: Callback<SystemRecordControlle
 onSystemRecordControllerEnabledChange(callback: Callback<SystemRecordControllerChangeInfo>): void
 ```
 
-订阅系统录像控制器面板使能状态变化事件。
+Subscribes to the system recording controller panel enabled state change event.
 
 **Since:** 26.0.0
 
@@ -74,14 +74,14 @@ onSystemRecordControllerEnabledChange(callback: Callback<SystemRecordControllerC
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;SystemRecordControllerChangeInfo&gt; | Yes | 用于监听的回调 系统记录控制器面板启用状态更改事件 |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;SystemRecordControllerChangeInfo&gt; | Yes | Callback used to listen whether the system recording controller panel enabled state change event. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 6800102 | Memory allocation failed. |
-| 6800101 | Parameter verification failed. |
-| 202 | Caller is not a system application. |
-| 6800301 | Audio service error occurs like service died. |
+| [6800102](../errorcode-audio.md#6800102-memory-allocation-failure) | Memory allocation failed. |
+| [6800101](../errorcode-audio.md#6800101-invalid-parameter) | Parameter verification failed. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Caller is not a system application. |
+| [6800301](../errorcode-audio.md#6800301-system-error) | Audio service error occurs like service died. |
 

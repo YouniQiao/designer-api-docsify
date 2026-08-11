@@ -12,7 +12,7 @@ import { abilityConnectionManager } from 'kits/@kit.DistributedServiceKit';
 function destroyAbilityConnectionSession(sessionId: int): void
 ```
 
-销毁应用间的协同会话。
+Destroys a collaboration session between applications.
 
 **Since:** 18
 
@@ -28,7 +28,7 @@ function destroyAbilityConnectionSession(sessionId: int): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| sessionId | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | 待销毁的协同会话ID。&lt;br /&gt;取值范围是大于100的整数。 |
+| sessionId | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | Collaboration session ID. |
 
 ## Examples
 

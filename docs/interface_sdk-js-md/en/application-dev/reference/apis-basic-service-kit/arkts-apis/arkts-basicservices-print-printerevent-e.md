@@ -1,6 +1,6 @@
 # PrinterEvent
 
-打印机相关事件的枚举。
+Enumerates printer-related events.
 
 **Since:** 18
 
@@ -16,7 +16,7 @@
 PRINTER_EVENT_ADDED = 0
 ```
 
-表示打印机添加事件。
+Printer added.
 
 **Since:** 18
 
@@ -32,7 +32,7 @@ PRINTER_EVENT_ADDED = 0
 PRINTER_EVENT_DELETED = 1
 ```
 
-表示打印机删除事件。
+Printer deleted.
 
 **Since:** 18
 
@@ -48,7 +48,7 @@ PRINTER_EVENT_DELETED = 1
 PRINTER_EVENT_STATE_CHANGED = 2
 ```
 
-表示打印机状态变化事件。
+Printer state changed.
 
 **Since:** 18
 
@@ -64,7 +64,7 @@ PRINTER_EVENT_STATE_CHANGED = 2
 PRINTER_EVENT_INFO_CHANGED = 3
 ```
 
-表示打印机信息变化事件。
+Printer information changed.
 
 **Since:** 18
 
@@ -80,7 +80,7 @@ PRINTER_EVENT_INFO_CHANGED = 3
 PRINTER_EVENT_PREFERENCE_CHANGED = 4
 ```
 
-表示打印机首选项变化事件。
+Printer preferences changed.
 
 **Since:** 18
 
@@ -96,7 +96,7 @@ PRINTER_EVENT_PREFERENCE_CHANGED = 4
 PRINTER_EVENT_LAST_USED_PRINTER_CHANGED = 5
 ```
 
-表示上次使用的打印机的变化事件。
+The last used printer changed.
 
 **Since:** 18
 

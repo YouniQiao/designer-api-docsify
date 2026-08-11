@@ -1,10 +1,11 @@
 # UsedScene
 
-> **说明：**
+> **NOTE：**
 > 
-> 从API version 7开始支持，从API version 9开始废弃，建议使用[UsedScene](arkts-ability-bundleinfo-usedscene-depr-i.md)替代。
+> This API has been supported since API version 7 and deprecated since API version 9. You are advised to use
+> [UsedScene](arkts-ability-bundleinfo-usedscene-depr-i.md) instead.
 
-描述权限使用的场景和时机。
+Describes the application scenario and timing for using the permission.
 
 **Since:** 7
 
@@ -24,7 +25,7 @@
 abilities: Array<string>
 ```
 
-使用到该权限的Ability集合。
+Abilities that use the permission.
 
 **Type:** Array&lt;string&gt;
 
@@ -48,7 +49,7 @@ abilities: Array<string>
 when: string
 ```
 
-使用该权限的时机。
+Time when the permission is used.
 
 **Type:** string
 

@@ -1,6 +1,7 @@
 # StatusMonitor (System API)
 
-状态监听器对象。用于监听或获取模板状态、持续认证状态、可添加设备状态等信息。通过[getStatusMonitor](arkts-userauthentication-companiondeviceauth-getstatusmonitor-f-sys.md#getstatusmonitor)获取此对象。
+Status monitor object. It is used to listen for or obtain information such as the template status, continuous authentication status, and available device status. This object can be obtained by calling  
+[getStatusMonitor](arkts-userauthentication-companiondeviceauth-getstatusmonitor-f-sys.md#getstatusmonitor).
 
 **Since:** 23
 
@@ -24,11 +25,7 @@ import { companionDeviceAuth } from 'kits/@kit.UserAuthenticationKit';
 getTemplateStatus(): Promise<TemplateStatus[]>
 ```
 
-获取伴随设备模板状态。用于查询当前用户下所有已注册的伴随设备认证模板的状态信息，包括模板有效性、支持的业务范围、关联设备状态等。使用Promise异步回调。
-
-数据来源：返回系统服务（UserIAM）维护的模板状态内存快照，非实时跨设备查询。
-
-与onTemplateChange的区别：getTemplateStatus用于一次性获取当前模板状态快照，适合主动查询；onTemplateChange用于持续订阅模板状态变化，适合实时响应。仅需获取一次状态时使用getTemplateStatus，需要持续监听变化时使用onTemplateChange。
+Obtains the status of the companion device template. This API is used to query the status of all registered companion device authentication templates of the current user, including the template validity, supported services, and associated device status. This API uses a promise to return the result.
 
 **Since:** 23
 
@@ -48,13 +45,13 @@ getTemplateStatus(): Promise<TemplateStatus[]>
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;TemplateStatus[]&gt; | Promise对象，成功时返回当前用户下全部模板的状态列表，每个模板状态包含模板ID、有效性、设备信息等；失败时抛出相应错误码。 |
+| Promise&lt;TemplateStatus[]&gt; | Promise used to return the status list of all templates of the current user. The status of each template contains the template ID, validity, and device information. If the operation fails, an error code is returned. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 32600001 | The system service is not working properly. Please try again later. |
+| [32600001](../errorcode-useriam.md#32600001-system-service-not-working-properly) | The system service is not working properly. Please try again later. |
 
 ## Examples
 
@@ -78,7 +75,7 @@ statusMonitor.getTemplateStatus()
 offAvailableDeviceChange(callback?: AvailableDeviceStatusCallback): void
 ```
 
-取消订阅可添加的伴随设备状态变化。callback参数用于指定要取消的回调函数，不传入则取消全部已注册的回调。
+Unsubscribes from the events for status changes of companion devices that can be added. This API uses an asynchronous callback to return the result.
 
 **Since:** 23
 
@@ -98,13 +95,13 @@ offAvailableDeviceChange(callback?: AvailableDeviceStatusCallback): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AvailableDeviceStatusCallback](arkts-userauthentication-companiondeviceauth-availabledevicestatuscallback-t-sys.md) | No | 此前通过onAvailableDeviceChange注册的回调函数。指定该参数时，仅取消指定的这一个回调；省略该参数 时，取消全部已注册的回调。 |
+| callback | [AvailableDeviceStatusCallback](arkts-userauthentication-companiondeviceauth-availabledevicestatuscallback-t-sys.md) | No | Callback to unregister. If this parameter is not specified, all callbacks corresponding to the event type are unsubscribed. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 32600001 | The system service is not working properly. Please try again later. |
+| [32600001](../errorcode-useriam.md#32600001-system-service-not-working-properly) | The system service is not working properly. Please try again later. |
 
 ## Examples
 
@@ -131,7 +128,7 @@ try {
 offContinuousAuthChange(callback?: ContinuousAuthStatusCallback): void
 ```
 
-取消订阅伴随设备的持续认证状态变化事件。取消后，应用将不再接收持续认证状态变化通知。callback参数用于指定要取消的回调函数，不传入则取消全部已注册的回调。
+Unsubscribes from the continuous authentication status change event of the companion device. After the unsubscription, the application will no longer receive notifications of continuous authentication status changes.This API uses an asynchronous callback to return the result.
 
 **Since:** 23
 
@@ -151,19 +148,18 @@ offContinuousAuthChange(callback?: ContinuousAuthStatusCallback): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [ContinuousAuthStatusCallback](arkts-userauthentication-companiondeviceauth-continuousauthstatuscallback-t-sys.md) | No | 此前通过onContinuousAuthChange注册的回调函数。指定该参数时，仅取消指定的这一个回调；省略该参数时， 取消全部已注册的回调。 |
+| callback | [ContinuousAuthStatusCallback](arkts-userauthentication-companiondeviceauth-continuousauthstatuscallback-t-sys.md) | No | Callback to unregister. If this parameter is passed, only the specified callback is unregistered. If this parameter is not passed, all callbacks registered with **onContinuousAuthChange** are unregistered. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 32600001 | The system service is not working properly. Please try again later. |
+| [32600001](../errorcode-useriam.md#32600001-system-service-not-working-properly) | The system service is not working properly. Please try again later. |
 
 ## Examples
 
 ```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-import { userAuth } from '@kit.UserAuthenticationKit';
+import { osAccount, BusinessError } from '@kit.BasicServicesKit';
 
 const localUserId = 100;
 try {
@@ -171,7 +167,7 @@ try {
   const continuousAuthParam: companionDeviceAuth.ContinuousAuthParam = {
     templateId: new Uint8Array([])
   };
-  const handler = (isAuthPassed: boolean, authTrustLevel?: userAuth.AuthTrustLevel): void => {
+  const handler = (isAuthPassed: boolean, authTrustLevel?: osAccount.AuthTrustLevel): void => {
     console.info('continuous auth changed');
     console.info(`isAuthPassed: ${isAuthPassed}`);
     if (authTrustLevel !== undefined) {
@@ -193,7 +189,7 @@ try {
 offTemplateChange(callback?: TemplateStatusCallback): void
 ```
 
-取消订阅模板的状态变化。
+Unsubscribes from template status change events. This API uses an asynchronous callback to return the result.
 
 **Since:** 23
 
@@ -213,13 +209,13 @@ offTemplateChange(callback?: TemplateStatusCallback): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [TemplateStatusCallback](arkts-userauthentication-companiondeviceauth-templatestatuscallback-t-sys.md) | No | 回调函数，指定该参数时，仅取消指定的这一个回调；省略该参数时，取消全部已注册的回调。 |
+| callback | [TemplateStatusCallback](arkts-userauthentication-companiondeviceauth-templatestatuscallback-t-sys.md) | No | Callback to unregister. If this parameter is not specified, all callbacks corresponding to the event type are unsubscribed. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 32600001 | The system service is not working properly. Please try again later. |
+| [32600001](../errorcode-useriam.md#32600001-system-service-not-working-properly) | The system service is not working properly. Please try again later. |
 
 ## Examples
 
@@ -246,9 +242,7 @@ try {
 onAvailableDeviceChange(callback: AvailableDeviceStatusCallback): void
 ```
 
-订阅可添加的伴随设备状态变化。使用callback异步回调。
-
-触发机制：当可添加的伴随设备列表发生变化（如新设备上线、设备离线、设备绑定关系变化等）时触发回调。订阅时立即推送一次当前列表。
+Subscribes to the events for status changes of companion devices that can be added. This API uses an asynchronous callback to return the result.
 
 **Since:** 23
 
@@ -268,13 +262,13 @@ onAvailableDeviceChange(callback: AvailableDeviceStatusCallback): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AvailableDeviceStatusCallback](arkts-userauthentication-companiondeviceauth-availabledevicestatuscallback-t-sys.md) | Yes | 处理可用设备状态变化的回调函数。当可添加设备列表变化（如新设备上线、设备离线等）时触发，回调参数为设备状态列表。 |
+| callback | [AvailableDeviceStatusCallback](arkts-userauthentication-companiondeviceauth-availabledevicestatuscallback-t-sys.md) | Yes | Callback used to return the available device status. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 32600001 | The system service is not working properly. Please try again later. |
+| [32600001](../errorcode-useriam.md#32600001-system-service-not-working-properly) | The system service is not working properly. Please try again later. |
 
 ## Examples
 
@@ -300,9 +294,7 @@ try {
 onContinuousAuthChange(param: ContinuousAuthParam, callback: ContinuousAuthStatusCallback): void
 ```
 
-订阅伴随设备的持续认证状态。使用callback异步回调。
-
-持续认证：持续认证状态指伴随设备是否持有有效认证令牌。当令牌签发（认证通过）、令牌超时、关联设备离线或令牌被吊销时状态发生变化并触发回调。authTrustLevel为当前有效令牌中的最高认证可信等级。仅当认证可信等级变化时通知；订阅时立即推送一次当前状态。
+Subscribes to the events for continuous authentication status of companion devices. This API uses an asynchronous callback to return the result.
 
 **Since:** 23
 
@@ -322,21 +314,20 @@ onContinuousAuthChange(param: ContinuousAuthParam, callback: ContinuousAuthStatu
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| param | [ContinuousAuthParam](arkts-userauthentication-companiondeviceauth-continuousauthparam-i-sys.md) | Yes | 用于指定订阅参数，可通过templateId字段指定目标模板。 |
-| callback | [ContinuousAuthStatusCallback](arkts-userauthentication-companiondeviceauth-continuousauthstatuscallback-t-sys.md) | Yes | 回调函数。当持续认证状态变化时触发，回调参数为认证结果（isAuthPassed）和认证可信等级（ authTrustLevel）。 |
+| param | [ContinuousAuthParam](arkts-userauthentication-companiondeviceauth-continuousauthparam-i-sys.md) | Yes | Device for which the events are subscribed to. |
+| callback | [ContinuousAuthStatusCallback](arkts-userauthentication-companiondeviceauth-continuousauthstatuscallback-t-sys.md) | Yes | Called when the continuous authentication status of the device changes. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 32600001 | The system service is not working properly. Please try again later. |
-| 32600002 | The template is not found. |
+| [32600001](../errorcode-useriam.md#32600001-system-service-not-working-properly) | The system service is not working properly. Please try again later. |
+| [32600002](../errorcode-useriam.md#32600002-template-not-found) | The template is not found. |
 
 ## Examples
 
 ```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-import { userAuth } from '@kit.UserAuthenticationKit';
+import { osAccount, BusinessError } from '@kit.BasicServicesKit';
 
 const localUserId = 100;
 try {
@@ -344,7 +335,7 @@ try {
   const continuousAuthParam: companionDeviceAuth.ContinuousAuthParam = {
     templateId: new Uint8Array([])
   };
-  const handler = (isAuthPassed: boolean, authTrustLevel?: userAuth.AuthTrustLevel): void => {
+  const handler = (isAuthPassed: boolean, authTrustLevel?: osAccount.AuthTrustLevel): void => {
     console.info('continuous auth changed');
     console.info(`isAuthPassed: ${isAuthPassed}`);
     if (authTrustLevel !== undefined) {
@@ -365,9 +356,7 @@ try {
 onTemplateChange(callback: TemplateStatusCallback): void
 ```
 
-订阅模板的状态变化。使用callback异步回调。
-
-触发时机：模板状态变化时触发，包括启用业务ID变更、有效性变更、关联设备上下线/状态变更、模板加入或移除IDM等。订阅时立即推送一次当前状态快照；状态未变化时不重复通知。
+Subscribes to template status change events. This API uses an asynchronous callback to return the result.
 
 **Since:** 23
 
@@ -387,13 +376,13 @@ onTemplateChange(callback: TemplateStatusCallback): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [TemplateStatusCallback](arkts-userauthentication-companiondeviceauth-templatestatuscallback-t-sys.md) | Yes | 回调函数。当模板状态发生变化（如添加、删除、有效性变更等）时触发，回调参数为模板状态列表。 |
+| callback | [TemplateStatusCallback](arkts-userauthentication-companiondeviceauth-templatestatuscallback-t-sys.md) | Yes | Callback used to receive the template status. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 32600001 | The system service is not working properly. Please try again later. |
+| [32600001](../errorcode-useriam.md#32600001-system-service-not-working-properly) | The system service is not working properly. Please try again later. |
 
 ## Examples
 

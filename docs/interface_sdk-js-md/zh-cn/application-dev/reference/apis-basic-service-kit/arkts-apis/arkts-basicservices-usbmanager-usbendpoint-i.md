@@ -16,12 +16,6 @@
 
 **系统能力：** SystemCapability.USB.USBManager
 
-## 导入模块
-
-```TypeScript
-import { usbManager } from 'kits/@kit.BasicServicesKit';
-```
-
 ## address
 
 ```TypeScript

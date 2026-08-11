@@ -6,21 +6,21 @@
 
 | Name | Description |
 | --- | --- |
-| [RepeatItem](arkts-arkui-repeatitem-i.md) | 数据项类型。 |
-| [TemplateOptions](arkts-arkui-templateoptions-i.md) | 当cachedCount值被设置为当前template在容器组件显示区域的最大节点数量时，Repeat会做到最大程度的复用。当容器组件显示区域内没有当前template的节点时，缓存池不会释放，同时应用内存增大。开发者需要根据应用对内存占用和组件复用效率的需求自行调整，推荐cachedCount值设置为容器组件显示区域内节点个数。需要注意，不建议设置cachedCount小于2，这会导致在快速滑动场景下频繁创建新的节点，从而造成性能劣化。 |
-| [VirtualScrollOptions](arkts-arkui-virtualscrolloptions-i.md) | 配置懒加载模式下期望加载的数据项总数、复用能力、数据精准懒加载能力。从API版本26.0.0开始，支持配置内存优化策略。 |
+| [RepeatItem](arkts-arkui-repeatitem-i.md) | Construct a new type for each item. |
+| [TemplateOptions](arkts-arkui-templateoptions-i.md) | When **cachedCount** is set to the maximum number of nodes in the display area of the container component for the current template, **Repeat** achieves maximum reuse efficiency. If there are no nodes of the current template in the container component's display area, the cache list is not released, which increases application memory usage. You are advised to set **cachedCount** to the number of nodes within the container component's display area and adjust the value according to the actual situation. Yet, setting **cachedCount** to less than 2 is not recommended, as this may lead to the frequent node creation during rapid scrolling and result in performance degradation.  > **NOTE：** >  > The **.cachedCount()** attribute of the scrollable container component and the **cachedCount** parameter of the > **.template()** method of **Repeat** are used to balance performance and memory, but their meanings are different. >  > - **.cachedCount()** of the scrollable container component: size of the preloading area outside the display area of > the container component. The child component nodes in this area are located in the component tree. The scrollable > container component renders nodes in these preloading areas, improving the list scrolling performance. >  > - cachedCount in .template(): size of the cache pool for each template in the **Repeat** component. When rendering > a new child component, **Repeat** checks whether there are available nodes in the cache pool for the corresponding > template. If yes, the nodes are reused. If no, new nodes are created. |
+| [VirtualScrollOptions](arkts-arkui-virtualscrolloptions-i.md) | Configures the expected total number of data items to be loaded in lazy loading mode, the reuse capability, and the precise data lazy loading capability. |
 
 ### Enums
 
 | Name | Description |
 | --- | --- |
-| [RepeatMemOptStrategy](arkts-arkui-repeatmemoptstrategy-e.md) | Repeat内存优化策略枚举。 |
+| [RepeatMemOptStrategy](arkts-arkui-repeatmemoptstrategy-e.md) | Defines a type for memory optimization strategy. |
 
 ### Types
 
 | Name | Description |
 | --- | --- |
-| [RepeatArray](arkts-arkui-repeatarray-t.md) | Repeat数据源参数联合类型。 |
+| [RepeatArray](arkts-arkui-repeatarray-t.md) | Defines a union type for **Repeat** data source parameters. |
 | [RepeatInterface](arkts-arkui-repeatinterface-t.md) | Indicates the type of Repeat. |
-| [TemplateTypedFunc](arkts-arkui-templatetypedfunc-t.md) |  |
+| [TemplateTypedFunc](arkts-arkui-templatetypedfunc-t.md) | Function that returns typed string to render one template. |
 

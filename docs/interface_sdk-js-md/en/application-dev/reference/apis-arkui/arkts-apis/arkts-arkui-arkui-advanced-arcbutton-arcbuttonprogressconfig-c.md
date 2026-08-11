@@ -1,6 +1,6 @@
 # ArcButtonProgressConfig
 
-ArcButton内进度条的参数配置。
+The class used for configuring ArcButton to support progress bar display.
 
 **Since:** 23
 
@@ -24,7 +24,7 @@ import { ArcButtonPosition, ArcButton, ArcButtonStatus, ArcButtonStyleMode, ArcB
 constructor(value: double, total?: double, color?: ResourceColor)
 ```
 
-进度条参数配置的构造函数。
+Constructor of the ArcButtonProgressConfig.
 
 **Since:** 23
 
@@ -40,9 +40,9 @@ constructor(value: double, total?: double, color?: ResourceColor)
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | double | Yes | 设置进度条的进度值。&lt;br/&gt;取值范围：[0, total]，当设置小于0的值时，按0处理；当设置大于total的值时，按total处理。 |
-| total | double | No | 设置进度条的总进度值。&lt;br/&gt;默认值：100&lt;br/&gt;取值范围：[0, 2147483647] |
-| color | [ResourceColor](arkts-arkui-resourcecolor-t.md) | No | 设置进度条的前景颜色。 |
+| value | double | Yes | sets the value of progress. &lt;br&gt;Value range:[0, total] &lt;br&gt;When setting a value less than 0, it is set to 0; when setting a value greater than total, it is set to total. |
+| total | double | No | sets the total of progress. |
+| color | [ResourceColor](arkts-arkui-resourcecolor-t.md) | No | sets the foreground color of progress. |
 
 ## color
 
@@ -50,10 +50,7 @@ constructor(value: double, total?: double, color?: ResourceColor)
 public color?: ResourceColor
 ```
 
-进度条前景色。如果组件设置了[ArcButtonOptions](arkts-arkui-arkui-advanced-arcbutton-arcbuttonoptions-c.md)的背景色（backgroundColor），进度条前景色默认值取组件背景色。进度条前景色不受按钮样式（  
-[ArcButtonStyleMode](arkts-arkui-arkui-advanced-arcbutton-arcbuttonstylemode-e.md)）设置影响。进度条背景色仅依赖进度条前景色设置，取进度条前景色的25%透明度。 
-
-默认值："#1F71FF"，显示为蓝色。
+Sets the foreground color of Progress.
 
 **Type:** [ResourceColor](arkts-arkui-resourcecolor-t.md)
 
@@ -73,11 +70,9 @@ public color?: ResourceColor
 public total?: double
 ```
 
-进度的最大值。
+Sets the total of Progress.
 
-默认值：100
-
-取值范围：[0, 2147483647]，设置0或超出取值范围取默认值为100。
+Range value: [0, 2147483647].
 
 **Type:** double
 
@@ -99,11 +94,9 @@ public total?: double
 public value: double
 ```
 
-进度条当前值。设置小于0的数值时置为0，设置大于total的数值时置为total。
+Sets the value of Progress.
 
-默认值：0
-
-取值范围：[0, total]
+Range value: [0, total].
 
 **Type:** double
 

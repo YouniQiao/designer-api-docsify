@@ -1,8 +1,6 @@
 # @ohos.app.ability.continueManager
 
-continueManager提供了应用跨端迁移的管理能力，如获取应用跨端迁移过程中快速拉起目标应用的结果。
-
-> 本模块接口仅可在Stage模型下使用。
+The continueManager module provides capabilities for managing cross-device application migration. For example, it allows you to obtain the result of quickly launching the target application during the cross-device migration process.
 
 **Since:** 18
 
@@ -26,20 +24,20 @@ import { continueManager } from 'kits/@kit.AbilityKit';
 
 | Name | Description |
 | --- | --- |
-| [off](arkts-ability-continuemanager-off-f.md#off) | 在应用快速拉起时，注销回调函数，不再获取快速拉起结果。使用callback异步回调。 |
+| [off](arkts-ability-continuemanager-off-f.md#off) | Unregisters the callback used to obtain the quick start result when an application is launched quickly. This API uses an asynchronous callback to return the result. |
 | [offPrepareContinue](arkts-ability-continuemanager-offpreparecontinue-f.md#offpreparecontinue) | Unregister prepareContinue event. |
-| [on](arkts-ability-continuemanager-on-f.md#on) | 在应用快速拉起时，注册回调函数以获取快速拉起结果。使用callback异步回调。 |
-| [onPrepareContinue](arkts-ability-continuemanager-onpreparecontinue-f.md#onpreparecontinue) | prepareContinue 事件，当在 continueType 中配置了“ContinueQuickStart”功能时，即可获取 |
+| [on](arkts-ability-continuemanager-on-f.md#on) | Registers a callback to obtain the quick start result when an application is launched quickly. This API uses an asynchronous callback to return the result. |
+| [onPrepareContinue](arkts-ability-continuemanager-onpreparecontinue-f.md#onpreparecontinue) | Register prepareContinue event, when the ability is configured with 'ContinueQuickStart' in the continueType, then can get the result of LaunchReason.PREPARE_CONTINUATION. |
 
 ### Interfaces
 
 | Name | Description |
 | --- | --- |
-| [ContinueResultInfo](arkts-ability-continuemanager-continueresultinfo-i.md) | 注册或注销回调函数返回的快速拉起的结果。 |
+| [ContinueResultInfo](arkts-ability-continuemanager-continueresultinfo-i.md) | Describes the quick start result returned by the callback. |
 
 ### Enums
 
 | Name | Description |
 | --- | --- |
-| [ContinueStateCode](arkts-ability-continuemanager-continuestatecode-e.md) | 快速拉起的结果状态码的枚举值。 |
+| [ContinueStateCode](arkts-ability-continuemanager-continuestatecode-e.md) | Enumerates the status codes of the quick start result. |
 

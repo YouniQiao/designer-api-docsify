@@ -1,6 +1,6 @@
 # NotificationFlagStatus
 
-描述通知标志状态。
+Enumerates the notification flag states.
 
 **Since:** 11
 
@@ -16,7 +16,7 @@
 TYPE_NONE = 0
 ```
 
-未设置标志时的默认值，与TYPE_OPEN效果相同。
+Default flag when no flag is set. It has the same effect as **TYPE_OPEN**.
 
 **Since:** 11
 
@@ -32,7 +32,7 @@ TYPE_NONE = 0
 TYPE_OPEN = 1
 ```
 
-通知标志打开。
+The notification flag is opened.
 
 **Since:** 11
 
@@ -48,7 +48,7 @@ TYPE_OPEN = 1
 TYPE_CLOSE = 2
 ```
 
-通知标志关闭。
+The notification flag is closed.
 
 **Since:** 11
 

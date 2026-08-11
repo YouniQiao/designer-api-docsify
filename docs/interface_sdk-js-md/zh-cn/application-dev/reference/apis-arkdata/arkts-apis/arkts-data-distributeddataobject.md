@@ -10,12 +10,6 @@
 
 **系统能力：** SystemCapability.DistributedDataManager.DataObject.DistributedObject
 
-## 导入模块
-
-```TypeScript
-import { distributedDataObject } from 'kits/@kit.ArkData';
-```
-
 ## 汇总
 
 ### 函数

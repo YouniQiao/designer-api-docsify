@@ -1,6 +1,6 @@
 # CompatibleComponentInfo
 
-在ArkTS-Dyn中创建的自定义组件对象的信息。
+Defines the info of compatible custom component.
 
 **Since:** 23
 
@@ -16,7 +16,7 @@
 component: ESValue
 ```
 
-在ArkTS-Dyn中创建的自定义组件对象。
+the compatible custom component
 
 **Type:** ESValue
 
@@ -36,7 +36,7 @@ component: ESValue
 name: string
 ```
 
-在ArkTS-Dyn中创建的自定义组件对象的名称。
+the name of compatible custom component
 
 **Type:** string
 

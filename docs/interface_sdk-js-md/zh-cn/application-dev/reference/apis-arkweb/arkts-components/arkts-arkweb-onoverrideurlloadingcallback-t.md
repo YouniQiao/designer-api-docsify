@@ -20,7 +20,7 @@ The callback of onOverrideUrlLoading.Should not call WebviewController.loadUrl w
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| webResourceRequest | [WebResourceRequest](../arkts-apis/arkts-arkweb-web-webresourcerequest-c.md) | 是 | callback information of onOverrideUrlLoading. |
+| webResourceRequest | [WebResourceRequest](arkts-arkweb-webresourcerequest-c.md) | 是 | callback information of onOverrideUrlLoading. |
 
 **返回值：**
 

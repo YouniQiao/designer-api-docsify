@@ -12,7 +12,7 @@ import { inputMethod } from 'kits/@kit.IMEKit';
 function offAttachmentDidFail(callback?: Callback<AttachFailureReason>): void
 ```
 
-取消订阅绑定失败事件。使用callback异步回调。
+Unsubscribe the attachment failure event.
 
 **Since:** 22
 
@@ -26,7 +26,7 @@ function offAttachmentDidFail(callback?: Callback<AttachFailureReason>): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;AttachFailureReason&gt; | No | 取消订阅的回调函数，需要与订阅接口传入的保持一致。参数不填写时，取消订阅该事件的所有回调函数。 |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;AttachFailureReason&gt; | No | the callback is invoked only when the attachment triggered by the registrant's process fails. When subscriber unsubscribes all callback, this parameter can be left blank. |
 
 ## Examples
 

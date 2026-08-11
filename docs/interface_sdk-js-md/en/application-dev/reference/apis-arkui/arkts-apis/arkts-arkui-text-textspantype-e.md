@@ -1,18 +1,8 @@
 # TextSpanType
 
-[Span](../../../reference/apis-arkui/arkui-ts/ts-basic-components-span.md)类型信息。
+Defines span type.
 
-> **说明：**
-> 
-> 菜单类型的匹配顺序如下。例如，用户长按文本时，根据以下规则查找：
-> 
-> 1. 查找是否注册了TextSpanType.TEXT、TextResponseType.LONG_PRESS菜单
-> 
-> 2. 查找是否注册了TextSpanType.TEXT、TextResponseType.DEFAULT菜单
-> 
-> 3. 查找是否注册了TextSpanType.DEFAULT、TextResponseType.LONG_PRESS菜单
-> 
-> 4. 查找是否注册了TextSpanType.DEFAULT、TextResponseType.DEFAULT菜单
+&lt;p&gt;&lt;strong&gt;NOTE&lt;/strong&gt;:&lt;br&gt;The order for menu type matching is as follows.&lt;br&gt;When the user interacts with text, the system follows this order to decides which type of menu to display.&lt;ol&gt;&lt;li&gt;Check whether a menu is registered for TextSpanType.TEXT and TextResponseType.LONG_PRESS.&lt;/li&gt;&lt;li&gt;Check whether a menu is registered for TextSpanType.TEXT and TextResponseType.DEFAULT.&lt;/li&gt;&lt;li&gt;Check whether a menu is registered for TextSpanType.DEFAULT and TextResponseType.LONG_PRESS.&lt;/li&gt;&lt;li&gt;Check whether a menu is registered for TextSpanType.DEFAULT and TextResponseType.DEFAULT.&lt;/li&gt;&lt;/ol&gt;&lt;/p&gt;
 
 **Since:** 23
 
@@ -28,9 +18,7 @@
 TEXT = 0
 ```
 
-Span为文字类型。
-
-**原子化服务API（仅ArkTS-Dyn）：** 从API version 12开始，该接口支持在原子化服务中使用。
+Only contains text.
 
 **Since:** 23
 
@@ -48,9 +36,7 @@ Span为文字类型。
 IMAGE = 1
 ```
 
-Span为图像类型。
-
-**原子化服务API（仅ArkTS-Dyn）：** 从API version 12开始，该接口支持在原子化服务中使用。
+Only contains image.
 
 **Since:** 23
 
@@ -68,9 +54,7 @@ Span为图像类型。
 MIXED = 2
 ```
 
-Span为图文混合类型。
-
-**原子化服务API（仅ArkTS-Dyn）：** 从API version 12开始，该接口支持在原子化服务中使用。
+Contains both text and image.
 
 **Since:** 23
 
@@ -88,9 +72,7 @@ Span为图文混合类型。
 DEFAULT = 3
 ```
 
-注册此类型菜单但未注册TEXT、IMAGE、MIXED菜单时，文字类型、图片类型、图文混合类型都会触发并显示此类型对应的菜单。
-
-**原子化服务API（仅ArkTS-Dyn）：** 从API version 15开始，该接口支持在原子化服务中使用。
+When no other types are explicitly specified, this type will be matched.When this type is registered but TEXT, IMAGE, or MIXED types are not registered,this type will be triggered and displayed for those registered types.
 
 **Since:** 23
 

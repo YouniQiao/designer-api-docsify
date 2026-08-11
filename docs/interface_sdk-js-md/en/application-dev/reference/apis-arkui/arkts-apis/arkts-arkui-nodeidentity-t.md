@@ -4,7 +4,7 @@
 export declare type NodeIdentity = string | int
 ```
 
-定义可用于标识节点的类型，string类型时为inspector id，number类型时为系统分配的唯一id。set through .id attribute, and for the int type, it's the unique ID got from the FrameNode by getUniqueID method.
+Defines the type can be used for identiting the node, for the string type, it's the inspector id set through .id attribute, and for the int type, it's the unique ID got from the FrameNode by getUniqueID method.
 
 **Since:** 26.0.0
 

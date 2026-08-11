@@ -12,7 +12,7 @@ import { certificateManager } from 'kits/@kit.DeviceCertificateKit';
 function getAllPublicCertificates() : Promise<CMResult>
 ```
 
-获取所有用户的公共凭据，仅证书管理应用调用。使用Promise异步回调。
+Obtains the public credentials of all users. This API is called only by the certificate management application.This API uses a promise to return the result.
 
 **Since:** 26.0.0
 
@@ -32,15 +32,15 @@ function getAllPublicCertificates() : Promise<CMResult>
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;CMResult&gt; | Promise对象，返回获取所有用户公共凭据的结果，返回值为 [CMResult]{ |
+| Promise&lt;CMResult&gt; | Promise used to return the operation result, that is, **credentialDetailList** in the [CMResult]{ |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 201 | Permission verification failed. &lt;br&gt; The application does not have the permission required to call the API. |
-| 202 | Permission verification failed. A non-system application calls a system API. |
-| 17500001 | Internal error. Possible causes: 1. IPC communication failed; &lt;br&gt;2. Memory operation error; 3. File operation error. Please try again. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed. &lt;br&gt; The application does not have the permission required to call the API. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
+| [17500001](../errorcode-certManager.md#17500001-internal-error) | Internal error. Possible causes: 1. IPC communication failed; &lt;br&gt;2. Memory operation error; 3. File operation error. Please try again. |
 
 ## Examples
 
@@ -49,21 +49,20 @@ import { certificateManager } from '@kit.DeviceCertificateKit';
 import { BusinessError } from '@kit.BasicServicesKit';
 
 try {
-  certificateManager.getAllPublicCertificates().then((cmResult: certificateManager.CMResult) => {
-    if (cmResult === undefined) { // If the number of public credentials is 0, return undefined in cmResult.
-      console.info('The count of public certificates is 0.');
-    } else if (cmResult.credentialDetailList == undefined) {
-      console.info('The result of getting all public certificates is undefined.');
-    } else {
-      let list: Array<certificateManager.Credential> = cmResult.credentialDetailList;
-      console.info('Succeeded in getting all public certificates.');
-    }
-  }).catch((error: Error) => {
-    let err = error as BusinessError;
-    console.error(`Failed to get all public certificates. Code: ${err.code}, message: ${err.message}`);
-  })
-} catch (error) {
-  console.error(`Failed to get all public certificates. Code: ${error.code}, message: ${error.message}`);
+    certificateManager.getAllPublicCertificates().then((cmResult: certificateManager.CMResult) => {
+        if (cmResult === undefined) { // If the number of public credentials is 0, return undefined in cmResult.
+            console.info('The count of public certificates is 0.');
+        } else if (cmResult.credentialDetailList == undefined) {
+            console.info('The result of getting all public certificates is undefined.');
+        } else {
+            let list: Array<certificateManager.Credential> = cmResult.credentialDetailList;
+            console.info('Succeeded in getting all public certificates.');
+        }
+    }).catch((err: BusinessError) => {
+        console.error(`Failed to get all public certificates. Code: ${err.code}, message: ${err.message}`);
+    })
+} catch (error: BusinessError) {
+    console.error(`Failed to get all public certificates. Code: ${error.code}, message: ${error.message}`);
 }
 ```
 

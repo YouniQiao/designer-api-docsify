@@ -12,7 +12,7 @@ import { networkManager } from 'kits/@kit.MDMKit';
 function setEthernetConfig(admin: Want, networkInterface: string, config: InterfaceConfig): void
 ```
 
-设置特定以太网网络接口的IP地址。适用于企业网络管理场景，例如配置设备静态IP地址、统一管理企业网络设备IP分配、设置网络参数，帮助企业集中管理网络配置，确保设备网络参数符合企业网络管理策略。
+Sets the IP address of a specific Ethernet interface. This API is suitable for enterprise network management scenarios, such as configuring static IP addresses for devices, centrally managing IP address allocation for enterprise network devices, and setting network parameters. It helps enterprises centrally manage network configurations and ensures that device network parameters comply with enterprise network management policies.
 
 **Since:** 23
 
@@ -30,19 +30,19 @@ function setEthernetConfig(admin: Want, networkInterface: string, config: Interf
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| admin | [Want](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-want-want-c.md) | Yes | 企业设备管理扩展组件。Want中必须包含企业设备管理扩展能力的abilityName和所在应用的bundleName。 |
-| networkInterface | string | Yes | 要设置的网络接口名。 |
-| config | [InterfaceConfig](arkts-mdm-networkmanager-interfaceconfig-i.md) | Yes | 要设置的网络接口配置信息。 |
+| admin | [Want](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-want-want-c.md) | Yes | EnterpriseAdminExtensionAbility. **Want** must contain the ability name of the EnterpriseAdminExtensionAbility and the bundle name of the application. |
+| networkInterface | string | Yes | Network interface name to set. |
+| config | [InterfaceConfig](arkts-mdm-networkmanager-interfaceconfig-i.md) | Yes | Network interface configuration to set. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 9200012 | Parameter verification failed. |
-| 201 | Permission verification failed. The application does not have the permission required to call the API. |
-| 9200001 | The application is not an administrator application of the device. |
-| 9200002 | The administrator application does not have permission to manage the device. |
-| 9201010 | Ethernet configuration failed. Ethernet device not connected. |
+| [9200012](../errorcode-enterpriseDeviceManager.md#9200012-parameter-verification-failed) | Parameter verification failed. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed. The application does not have the permission required to call the API. |
+| [9200001](../errorcode-enterpriseDeviceManager.md#9200001-deviceadmin-not-enabled) | The application is not an administrator application of the device. |
+| [9200002](../errorcode-enterpriseDeviceManager.md#9200002-permission-denied) | The administrator application does not have permission to manage the device. |
+| [9201010](../errorcode-enterpriseDeviceManager.md#9201010-failed-to-configure-the-ethernet-network-interface) | Ethernet configuration failed. Ethernet device not connected. |
 
 ## Examples
 

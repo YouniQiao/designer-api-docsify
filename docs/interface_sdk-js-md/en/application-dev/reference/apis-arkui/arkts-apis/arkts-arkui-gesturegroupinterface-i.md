@@ -1,6 +1,6 @@
 # GestureGroupInterface
 
-手势识别组合，即两种及以上手势组合为复合手势，支持顺序识别、并发识别和互斥识别。
+Combined gestures integrate two or more gestures into a compound gesture, supporting sequential recognition, parallel recognition, and exclusive recognition.
 
 **Since:** 7
 
@@ -16,7 +16,7 @@
 (mode: GestureMode, ...gesture: GestureType[]): GestureGroupInterface
 ```
 
-设置组合手势事件。
+Return to Obtain GestureGroup.
 
 **Since:** 7
 
@@ -47,7 +47,7 @@
 onCancel(event: () => void): GestureGroupInterface
 ```
 
-手势识别成功，接收到触摸取消事件，触发回调。
+Triggered when a tap cancellation event is received after a gesture is recognized.
 
 **Since:** 7
 
@@ -63,7 +63,7 @@ onCancel(event: () => void): GestureGroupInterface
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| event | () =&gt; void | Yes | 手势事件回调函数。 |
+| event | () =&gt; void | Yes | Callback for the gesture event. |
 
 **Return value:**
 

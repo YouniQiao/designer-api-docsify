@@ -10,12 +10,6 @@
 
 **系统能力：** SystemCapability.Security.DataLossPrevention
 
-## 导入模块
-
-```TypeScript
-import { identifySensitiveContent } from 'kits/@kit.DataProtectionKit';
-```
-
 ## keywords
 
 ```TypeScript

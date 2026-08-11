@@ -1,11 +1,5 @@
 # getAppNativeMemInfoAsync
 
-## 导入模块
-
-```TypeScript
-import { hidebug } from 'kits/@kit.PerformanceAnalysisKit';
-```
-
 ## getAppNativeMemInfoAsync
 
 ```TypeScript

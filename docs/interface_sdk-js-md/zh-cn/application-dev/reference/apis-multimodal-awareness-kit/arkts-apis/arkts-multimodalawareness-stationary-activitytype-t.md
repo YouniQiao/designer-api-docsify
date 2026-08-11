@@ -4,7 +4,7 @@
 type ActivityType = 'still' | 'relativeStill'
 ```
 
-Enumerates the device status types.
+设备状态类型。
 
 **起始版本：** 9
 
@@ -16,6 +16,6 @@ Enumerates the device status types.
 
 | 类型 | 说明 |
 | --- | --- |
-| 'still' | Absolutely still. |
-| 'relativeStill' | Relatively still. |
+| 'still' | 绝对静止。 |
+| 'relativeStill' | 相对静止。 |
 

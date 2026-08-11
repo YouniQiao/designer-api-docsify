@@ -12,7 +12,7 @@
 | [Environment](arkts-arkgraphics3d-sceneresources-environment-i.md) | 环境资源. |
 | [Image](arkts-arkgraphics3d-sceneresources-image-i.md) | 图像资源. |
 | [ImageStream](arkts-arkgraphics3d-sceneresources-imagestream-i.md) | 图像流资源. |
-| [Material](arkts-arkgraphics3d-sceneresources-material-i.md) | 材质资源. |
+| [Material](arkts-arkgraphics3d-sceneresources-material-i.md) | 材质类型，继承自[SceneResource](arkts-arkgraphics3d-sceneresources-sceneresource-i.md)。 |
 | [MaterialProperty](arkts-arkgraphics3d-sceneresources-materialproperty-i.md) | 材质属性接口. |
 | [Mesh](arkts-arkgraphics3d-sceneresources-mesh-i.md) | 网格节点拥有的网格实例 |
 | [MeshResource](arkts-arkgraphics3d-sceneresources-meshresource-i.md) | 几何节点的网络数据描述资源 |

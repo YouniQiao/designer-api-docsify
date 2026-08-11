@@ -1,5 +1,7 @@
 # ObjectLink
 
+Defining ObjectLink annotation ObjectLink is used to observe property changes in nested class objects.
+
 **Since:** 23
 
 **ArkTS mode:** ArkTS-Sta only, since version 23.

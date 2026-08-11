@@ -1,6 +1,6 @@
 # PageSwitchActionProposal
 
-类PageSwitchActionProposal。默认的页面切换方向为前进。
+Class PageSwitchActionProposal. The default page switch direction is forward.
 
 **Inheritance/Implementation:** PageSwitchActionProposal extends [TargetedGestureProposal](arkts-arkui-arkui-uicontext-targetedgestureproposal-c.md)
 
@@ -24,7 +24,7 @@ import { OverlayManager, FrameCallback, ResolvedUIContext, NodeRenderStateChange
 constructor(node: FrameNode, pageCount: int)
 ```
 
-PageSwitchActionProposal构造函数。
+PageSwitchActionProposal constructor.
 
 **Since:** 26.0.0
 
@@ -40,8 +40,8 @@ PageSwitchActionProposal构造函数。
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| node | [FrameNode](arkts-arkui-framenode-t.md) | Yes | 响应页面切换动作的节点。 |
-| pageCount | int | Yes | 要切换的页数。 取值限定为整数。 |
+| node | [FrameNode](../arkts-components/arkts-arkui-framenode-t.md) | Yes | The node responding to page switch action. |
+| pageCount | int | Yes | The number of pages to navigate. The value should be an integer. |
 
 ## pageCount
 
@@ -49,7 +49,7 @@ PageSwitchActionProposal构造函数。
 pageCount: int
 ```
 
-手势操作的页数参数。指定要导航的页数。取值限定为整数。
+Page count parameter for gesture operations. Specifies the number of pages to navigate.The value should be an integer.
 
 **Type:** int
 

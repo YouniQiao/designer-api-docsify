@@ -1,11 +1,5 @@
 # totalEnergy（系统接口）
 
-## 导入模块
-
-```TypeScript
-import { batteryInfo } from 'kits/@kit.BasicServicesKit';
-```
-
 ## totalEnergy
 
 ```TypeScript
@@ -29,4 +23,12 @@ function totalEnergy(): int
 | 类型 | 说明 |
 | --- | --- |
 | int | 返回当前设备电池的总容量，单位毫安时。 |
+
+## 示例
+
+```TypeScript
+// ArkTS-Sta示例
+let result = batteryInfo.totalEnergy();
+console.info("The result is: " + result);
+```
 

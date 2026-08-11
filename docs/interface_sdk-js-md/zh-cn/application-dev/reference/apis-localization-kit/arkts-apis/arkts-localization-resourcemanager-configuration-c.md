@@ -10,12 +10,6 @@
 
 **系统能力：** SystemCapability.Global.ResourceManager
 
-## 导入模块
-
-```TypeScript
-import { resourceManager } from 'kits/@kit.LocalizationKit';
-```
-
 ## colorMode
 
 ```TypeScript
@@ -24,7 +18,7 @@ colorMode: ColorMode
 
 颜色模式。
 
-**类型：** [ColorMode](../../apis-arkui/arkts-apis/arkts-arkui-storageproperty-colormode-e.md)
+**类型：** [ColorMode](arkts-localization-resourcemanager-colormode-e.md)
 
 **起始版本：** 12
 
@@ -44,7 +38,7 @@ deviceType: DeviceType
 
 设备类型。
 
-**类型：** [DeviceType](../../apis-avsession-kit/arkts-apis/arkts-avsession-avsession-devicetype-e.md)
+**类型：** [DeviceType](arkts-localization-resourcemanager-devicetype-e.md)
 
 **起始版本：** 12
 
@@ -64,7 +58,7 @@ direction: Direction
 
 屏幕方向。
 
-**类型：** [Direction](../../apis-mdm-kit/arkts-apis/arkts-mdm-networkmanager-direction-e.md)
+**类型：** [Direction](../../apis-ime-kit/arkts-apis/arkts-ime-inputmethod-direction-e.md)
 
 **起始版本：** 6
 

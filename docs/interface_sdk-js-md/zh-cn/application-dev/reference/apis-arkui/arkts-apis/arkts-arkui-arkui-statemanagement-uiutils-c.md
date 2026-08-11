@@ -10,12 +10,6 @@ UIUtils状态管理相关的工具方法，包括获取代理对象的原始对�
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
-## 导入模块
-
-```TypeScript
-import { Binding, ComponentReuse, CustomComponentLifecycleState, ComponentInactive, PersistenceV2, ComponentDisappear, MutableBinding, CustomComponentLifecycleObserver, AppStorageV2, Type, ConnectOptionsCollections, CollectionType, CustomComponentContext, IReusePool, ConnectOptions, UIUtils, ComponentActive, CustomComponentLifecycle, ComponentInit, ComponentAppear, ComponentBuilt, ComponentRecycle, IReusableInfo } from 'kits/@kit.ArkUI';
-```
-
 ## addMonitor
 
 ```TypeScript
@@ -50,9 +44,9 @@ static addMonitor(target: object, path: string | string[], monitorCallback: Moni
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 130001 | The path is invalid. |
-| 130000 | The target is not a custom component instance or V2 class instance. |
-| 130002 | monitorCallback is not a function or an anonymous function. |
+| [130001](../errorcode-stateManagement.md#130001-addmonitorclearmonitor非法路径) | The path is invalid. |
+| [130000](../errorcode-stateManagement.md#130000-addmonitorclearmonitor非法目标对象) | The target is not a custom component instance or V2 class instance. |
+| [130002](../errorcode-stateManagement.md#130002-addmonitorclearmonitor非法回调方法) | monitorCallback is not a function or an anonymous function. |
 
 ## applySync
 
@@ -92,7 +86,7 @@ static applySync<T>(task: TaskCallback): T
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 140001 | The function is not allowed to be called in @Computed |
+| [140001](../errorcode-stateManagement.md#140001-applysyncflushupdatesflushuiupdates非法调用) | The function is not allowed to be called in @Computed |
 
 ## 示例
 
@@ -316,9 +310,9 @@ static clearMonitor(target: object, path: string | string[], monitorCallback?: M
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 130001 | The path is invalid. |
-| 130000 | The target is not a custom component instance or V2 class instance. |
-| 130002 | monitorCallback is not a function or an anonymous function. |
+| [130001](../errorcode-stateManagement.md#130001-addmonitorclearmonitor非法路径) | The path is invalid. |
+| [130000](../errorcode-stateManagement.md#130000-addmonitorclearmonitor非法目标对象) | The target is not a custom component instance or V2 class instance. |
+| [130002](../errorcode-stateManagement.md#130002-addmonitorclearmonitor非法回调方法) | monitorCallback is not a function or an anonymous function. |
 
 ## enableV2Compatibility
 
@@ -418,8 +412,8 @@ static flushUIUpdates(): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 140002 | The function is not allowed to be called in @Monitor |
-| 140001 | The function is not allowed to be called in @Computed |
+| [140002](../errorcode-stateManagement.md#140002-flushupdatesflushuiupdates非法调用) | The function is not allowed to be called in @Monitor |
+| [140001](../errorcode-stateManagement.md#140001-applysyncflushupdatesflushuiupdates非法调用) | The function is not allowed to be called in @Computed |
 
 ## 示例
 
@@ -492,8 +486,8 @@ static flushUpdates(): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 140002 | The function is not allowed to be called in @Monitor |
-| 140001 | The function is not allowed to be called in @Computed |
+| [140002](../errorcode-stateManagement.md#140002-flushupdatesflushuiupdates非法调用) | The function is not allowed to be called in @Monitor |
+| [140001](../errorcode-stateManagement.md#140001-applysyncflushupdatesflushuiupdates非法调用) | The function is not allowed to be called in @Computed |
 
 ## 示例
 
@@ -571,7 +565,7 @@ static getCustomComponentContext<T extends BaseCustomComponent>(customComponent:
 
 | 类型 | 说明 |
 | --- | --- |
-| [CustomComponentContext](arkts-arkui-utils-customcomponentcontext-i.md) | 给定组件实例的上下文对象。 |
+| [CustomComponentContext](arkts-arkui-arkui-statemanagement-customcomponentcontext-i.md) | 给定组件实例的上下文对象。 |
 
 ## 示例
 
@@ -663,7 +657,7 @@ getLifecycle用于获取[自定义组件的生命周期](arkts-arkui-statemanage
 
 | 类型 | 说明 |
 | --- | --- |
-| [CustomComponentLifecycle](arkts-arkui-customcomponent-customcomponentlifecycle-i.md) | 自定义组件的生命周期实例。 |
+| [CustomComponentLifecycle](arkts-arkui-arkui-statemanagement-customcomponentlifecycle-i.md) | 自定义组件的生命周期实例。 |
 
 ## 示例
 
@@ -857,7 +851,7 @@ static makeBinding<T>(getter: GetterCallback<T>, setter: SetterCallback<T>): Mut
 ## 示例
 
 ```TypeScript
-import { MutableBinding, UIUtils } from '@kit.ArkUI';
+import { Binding, MutableBinding, UIUtils } from '@kit.ArkUI';
 
 @Builder
 function CustomButton(num1: MutableBinding<number>) {
@@ -955,7 +949,7 @@ struct Index {
         .onClick(() => {
           this.observedClass.name = 'Jane'; // 刷新
         })
-      Text(`nonObservedClass: ${this.nonObservedClass.name}`)
+      Text(`observedClass: ${this.nonObservedClass.name}`)
         .onClick(() => {
           this.nonObservedClass.name = 'Jane'; // 不刷新
         })

@@ -1,8 +1,6 @@
 # ToneHapticsAttrs
 
-系统铃音的振动属性。在调用ToneHapticsAttrs&lt;sup&gt;14+&lt;/sup&gt;的接口前，需要先通过  
-[getToneHapticsList](arkts-audio-systemsoundmanager-systemsoundmanager-i.md#gettonehapticslist)或  
-[getHapticsAttrsSyncedWithTone](arkts-audio-systemsoundmanager-systemsoundmanager-i.md#gethapticsattrssyncedwithtone)方法获取实例。
+Haptics attributes in tone scenario.
 
 **Since:** 14
 
@@ -24,7 +22,7 @@ import { systemSoundManager } from 'kits/@kit.AudioKit';
 getFileName(): string
 ```
 
-获取振动文件名。
+Get file name of haptics.
 
 **Since:** 14
 
@@ -38,13 +36,13 @@ getFileName(): string
 
 | Type | Description |
 | --- | --- |
-| string | 文件名。 |
+| string | Haptics title. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 202 | Caller is not a system application. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Caller is not a system application. |
 
 ## Examples
 
@@ -58,7 +56,7 @@ toneHapticsAttrs.getFileName();
 getGentleFileName(): string | null
 ```
 
-获取柔和振动文件名。
+Get file name of gentle haptics.
 
 **Since:** 22
 
@@ -72,13 +70,13 @@ getGentleFileName(): string | null
 
 | Type | Description |
 | --- | --- |
-| string | 柔和振动文件名，振动文件为Json格式。如果不存在柔和振动，则振动文件名为空。 |
+| string | Haptics file name or null if not gentle haptics not exist. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 202 | Caller is not a system application. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Caller is not a system application. |
 
 ## Examples
 
@@ -92,7 +90,7 @@ toneHapticsAttrs.getGentleFileName();
 getGentleTitle(): string | null
 ```
 
-获取柔和振动标题。
+Get title of gentle haptics.
 
 **Since:** 22
 
@@ -106,13 +104,13 @@ getGentleTitle(): string | null
 
 | Type | Description |
 | --- | --- |
-| string | 柔和振动的标题。如果不存在柔和振动，则振动标题为空。 |
+| string | Haptics title or null if not gentle haptics not exist. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 202 | Caller is not a system application. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Caller is not a system application. |
 
 ## Examples
 
@@ -126,7 +124,7 @@ toneHapticsAttrs.getGentleTitle();
 getGentleUri(): string | null
 ```
 
-获取柔和振动资源路径。
+Get gentle haptics URI.
 
 **Since:** 22
 
@@ -140,13 +138,13 @@ getGentleUri(): string | null
 
 | Type | Description |
 | --- | --- |
-| string | 柔和振动的uri（如：'/data/storage/el2/base/haptics/synchronized/alarms/test.json'）。 如果不存在柔和振动， 则uri为空。 柔和振动是指马达振动强度较标准较弱。 |
+| string | Haptics URI or null if not gentle haptics not exist. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 202 | Caller is not a system application. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Caller is not a system application. |
 
 ## Examples
 
@@ -160,7 +158,7 @@ toneHapticsAttrs.getGentleUri();
 getTitle(): string
 ```
 
-获取振动标题。
+Get title of haptics.
 
 **Since:** 14
 
@@ -174,13 +172,13 @@ getTitle(): string
 
 | Type | Description |
 | --- | --- |
-| string | 标题。 |
+| string | Haptics title. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 202 | Caller is not a system application. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Caller is not a system application. |
 
 ## Examples
 
@@ -194,7 +192,7 @@ toneHapticsAttrs.getTitle();
 getUri(): string
 ```
 
-获取振动资源路径。
+Get haptics uri.
 
 **Since:** 14
 
@@ -208,13 +206,13 @@ getUri(): string
 
 | Type | Description |
 | --- | --- |
-| string | uri（如：'/data/storage/el2/base/haptics/synchronized/alarms/test.json'）。 |
+| string | Haptics uri. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 202 | Caller is not a system application. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Caller is not a system application. |
 
 ## Examples
 

@@ -4,7 +4,7 @@
 export type CornerRadius = Corners<Vector2>
 ```
 
-设置四个角的圆角x轴与y轴的半轴长。
+Defines the Corner radius.
 
 **Since:** 23
 

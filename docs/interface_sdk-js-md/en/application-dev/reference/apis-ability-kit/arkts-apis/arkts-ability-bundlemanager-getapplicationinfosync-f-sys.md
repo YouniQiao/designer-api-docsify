@@ -12,9 +12,9 @@ import { bundleManager } from 'kits/@kit.AbilityKit';
 function getApplicationInfoSync(bundleName: string, applicationFlags: int, userId: int) : ApplicationInfo
 ```
 
-以同步方法根据给定的bundleName、applicationFlags和userId获取ApplicationInfo。
+Obtains the application information based on the given bundle name, application flags, and user ID. This API returns the result synchronously.
 
-获取调用方自身的信息时不需要权限。
+No permission is required for obtaining the caller's own information.
 
 **Since:** 9
 
@@ -32,26 +32,26 @@ function getApplicationInfoSync(bundleName: string, applicationFlags: int, userI
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| bundleName | string | Yes | 表示应用程序的bundleName。 |
-| applicationFlags | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | 表示用于指定将返回的ApplicationInfo对象中包含的信息，具体取值及不同含义参考 [ApplicationFlag](arkts-ability-bundlemanager-applicationflag-e-sys.md)。 |
-| userId | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | 表示用户ID，可以通过 [getOsAccountLocalId](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-osaccount-accountmanager-i.md/arkts-basicservices-osaccount-accountmanager-i.md#getosaccountlocalid) 获取。 |
+| bundleName | string | Yes | Bundle name. |
+| applicationFlags | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | Type of the application information to obtain. |
+| userId | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | User ID, which can be obtained by calling [getOsAccountLocalId](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-osaccount-accountmanager-i.md/arkts-basicservices-osaccount-accountmanager-i.md#getosaccountlocalid) . |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [ApplicationInfo](arkts-ability-bundlemanager-applicationinfo-t.md) | 返回ApplicationInfo对象。 |
+| [ApplicationInfo](arkts-ability-bundlemanager-applicationinfo-t.md) | Application information obtained. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types. |
-| 17700026 | The specified bundle is disabled. |
-| 201 | Permission denied. |
-| 202 | Permission denied, non-system app called system api. |
-| 17700004 | The specified user ID is not found. |
-| 17700001 | The specified bundleName is not found. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types. |
+| [17700026](../errorcode-bundle.md#17700026-bundle-disabled) | The specified bundle is disabled. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission denied, non-system app called system api. |
+| [17700004](../errorcode-bundle.md#17700004-user-id-does-not-exist) | The specified user ID is not found. |
+| [17700001](../errorcode-bundle.md#17700001-bundle-name-does-not-exist) | The specified bundleName is not found. |
 
 ## Examples
 
@@ -80,9 +80,9 @@ try {
 function getApplicationInfoSync(bundleName: string, applicationFlags: int) : ApplicationInfo
 ```
 
-以同步方法根据给定的bundleName、applicationFlags获取ApplicationInfo。
+Obtains the application information based on the given bundle name and application flags. This API returns the result synchronously.
 
-获取调用方自身的信息时不需要权限。
+No permission is required for obtaining the caller's own information.
 
 **Since:** 9
 
@@ -100,24 +100,24 @@ function getApplicationInfoSync(bundleName: string, applicationFlags: int) : App
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| bundleName | string | Yes | 表示应用程序的bundleName。 |
-| applicationFlags | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | 表示用于指定将返回的ApplicationInfo对象中包含的信息，具体取值及不同含义参考 [ApplicationFlag](arkts-ability-bundlemanager-applicationflag-e-sys.md)。 |
+| bundleName | string | Yes | Bundle name. |
+| applicationFlags | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | Type of the application information to obtain. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [ApplicationInfo](arkts-ability-bundlemanager-applicationinfo-t.md) | 返回ApplicationInfo对象。 |
+| [ApplicationInfo](arkts-ability-bundlemanager-applicationinfo-t.md) | Application information obtained. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types. |
-| 17700026 | The specified bundle is disabled. |
-| 201 | Permission denied. |
-| 202 | Permission denied, non-system app called system api. |
-| 17700001 | The specified bundleName is not found. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types. |
+| [17700026](../errorcode-bundle.md#17700026-bundle-disabled) | The specified bundle is disabled. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission denied, non-system app called system api. |
+| [17700001](../errorcode-bundle.md#17700001-bundle-name-does-not-exist) | The specified bundleName is not found. |
 
 ## Examples
 

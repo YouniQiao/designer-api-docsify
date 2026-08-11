@@ -1,13 +1,14 @@
 # innerBundleManager
 
-本模块提供launcher应用使用的接口。
+The module provides APIs for the Home Screen application.
 
-> **说明：**
+> **NOTE：**
 > 
-> 本模块从API version 9开始不再支持。建议使用[launcherBundleManager](arkts-bundle-launcherbundlemanager.md)
-> 及[bundleMonitor](arkts-bundle-bundlemonitor.md)替代。
+> This module is deprecated since API version 9. You are advised to use
+> [launcherBundleManager](arkts-bundle-launcherbundlemanager.md) and
+> [bundleMonitor](arkts-bundle-bundlemonitor.md) instead.
 > 
-> 本模块为系统接口。
+> The APIs provided by this module are system APIs.
 
 **Since:** 8
 
@@ -36,15 +37,15 @@ import { BundleStatusCallback } from 'kits/@kit.AbilityKit';
 
 | Name | Description |
 | --- | --- |
-| [getLauncherAbilityInfos](arkts-ability-innerbundlemanager-getlauncherabilityinfos-f-sys.md#getlauncherabilityinfos) | 根据给定的Bundle名称获取LauncherAbilityInfos，使用callback异步回调。 |
-| [getLauncherAbilityInfos](arkts-ability-innerbundlemanager-getlauncherabilityinfos-f-sys.md#getlauncherabilityinfos-1) | 根据给定的Bundle名称获取LauncherAbilityInfos，使用Promise异步回调。 |
-| [on](arkts-ability-innerbundlemanager-on-f-sys.md#on) | 注册Callback。 |
-| [on](arkts-ability-innerbundlemanager-on-f-sys.md#on-1) | 注册Callback。 |
-| [off](arkts-ability-innerbundlemanager-off-f-sys.md#off) | 取消注册Callback。 |
-| [off](arkts-ability-innerbundlemanager-off-f-sys.md#off-1) | 取消注册Callback。 |
-| [getAllLauncherAbilityInfos](arkts-ability-innerbundlemanager-getalllauncherabilityinfos-f-sys.md#getalllauncherabilityinfos) | 获取所有的LauncherAbilityInfos，使用callback异步回调。 |
-| [getAllLauncherAbilityInfos](arkts-ability-innerbundlemanager-getalllauncherabilityinfos-f-sys.md#getalllauncherabilityinfos-1) | 获取LauncherAbilityInfos，使用Promise异步回调。 |
-| [getShortcutInfos](arkts-ability-innerbundlemanager-getshortcutinfos-f-sys.md#getshortcutinfos) | 根据给定的Bundle名称获取快捷方式信息，使用callback异步回调。 |
-| [getShortcutInfos](arkts-ability-innerbundlemanager-getshortcutinfos-f-sys.md#getshortcutinfos-1) | 根据给定的Bundle名称获取快捷方式信息，使用Promise异步回调。 |
+| [getLauncherAbilityInfos](arkts-ability-innerbundlemanager-getlauncherabilityinfos-f-sys.md#getlauncherabilityinfos) | Obtains an array of the launcher ability information based on a given bundle name. This API uses an asynchronous callback to return the result.  > **NOTE：** >  > This API has been supported since API version 8 and deprecated since API version 9. You are advised to use > [getLauncherAbilityInfo](arkts-ability-launcherbundlemanager-getlauncherabilityinfo-f-sys.md#getlauncherabilityinfo) > instead. |
+| [getLauncherAbilityInfos](arkts-ability-innerbundlemanager-getlauncherabilityinfos-f-sys.md#getlauncherabilityinfos-1) | Obtains an array of the launcher ability information based on a given bundle name. This API uses a promise to return the result.  > **NOTE：** >  > This API has been supported since API version 8 and deprecated since API version 9. You are advised to use > [getLauncherAbilityInfo](arkts-ability-launcherbundlemanager-getlauncherabilityinfo-f-sys.md#getlauncherabilityinfo) > instead. |
+| [on](arkts-ability-innerbundlemanager-on-f-sys.md#on) | Registers a callback to receive bundle status changes. This API uses an asynchronous callback to return the result.  > **NOTE：** >  > This API has been supported since API version 8 and deprecated since API version 9. You are advised to use > [on](@ohos.bundle.bundleMonitor:bundleMonitor.on(type: BundleChangedEvent, callback: Callback&lt;BundleChangedInfo&gt;)) > instead. |
+| [on](arkts-ability-innerbundlemanager-on-f-sys.md#on-1) | Registers a callback to receive bundle status changes. This API uses an asynchronous callback to return the result.  > **NOTE：** >  > This API has been supported since API version 8 and deprecated since API version 9. You are advised to use > [on](@ohos.bundle.bundleMonitor:bundleMonitor.on(type: BundleChangedEvent, callback: Callback&lt;BundleChangedInfo&gt;)) > instead. |
+| [off](arkts-ability-innerbundlemanager-off-f-sys.md#off) | Unregisters the callback that receives bundle status changes. This API uses an asynchronous callback to return the result.  > **NOTE：** >  > This API has been supported since API version 8 and deprecated since API version 9. You are advised to use > [off](@ohos.bundle.bundleMonitor:bundleMonitor.off(type: BundleChangedEvent, callback?: Callback&lt;BundleChangedInfo&gt;)) > instead. |
+| [off](arkts-ability-innerbundlemanager-off-f-sys.md#off-1) | Unregisters the callback that receives bundle status changes. This API uses an asynchronous callback to return the result.  > **NOTE：** >  > This API has been supported since API version 8 and deprecated since API version 9. You are advised to use > [off](@ohos.bundle.bundleMonitor:bundleMonitor.off(type: BundleChangedEvent, callback?: Callback&lt;BundleChangedInfo&gt;)) > instead. |
+| [getAllLauncherAbilityInfos](arkts-ability-innerbundlemanager-getalllauncherabilityinfos-f-sys.md#getalllauncherabilityinfos) | Obtains the information about all launcher abilities. This API uses an asynchronous callback to return the result.  > **NOTE：** >  > This API has been supported since API version 8 and deprecated since API version 9. You are advised to use > [getAllLauncherAbilityInfo](arkts-ability-launcherbundlemanager-getalllauncherabilityinfo-f-sys.md#getalllauncherabilityinfo) > instead. |
+| [getAllLauncherAbilityInfos](arkts-ability-innerbundlemanager-getalllauncherabilityinfos-f-sys.md#getalllauncherabilityinfos-1) | Obtains the information about all launcher abilities. This API uses a promise to return the result.  > **NOTE：** >  > This API has been supported since API version 8 and deprecated since API version 9. You are advised to use > [getAllLauncherAbilityInfo](arkts-ability-launcherbundlemanager-getalllauncherabilityinfo-f-sys.md#getalllauncherabilityinfo) > instead. |
+| [getShortcutInfos](arkts-ability-innerbundlemanager-getshortcutinfos-f-sys.md#getshortcutinfos) | Obtains an array of the shortcut information based on a given bundle name. This API uses an asynchronous callback to return the result.  > **NOTE：** >  > This API has been supported since API version 8 and deprecated since API version 9. You are advised to use > [getShortcutInfo](arkts-ability-launcherbundlemanager-getshortcutinfo-f-sys.md#getshortcutinfo) > instead. |
+| [getShortcutInfos](arkts-ability-innerbundlemanager-getshortcutinfos-f-sys.md#getshortcutinfos-1) | Obtains an array of the shortcut information based on a given bundle name. This API uses a promise to return the result.  > **NOTE：** >  > This API has been supported since API version 8 and deprecated since API version 9. You are advised to use > [getShortcutInfo](arkts-ability-launcherbundlemanager-getshortcutinfo-f-sys.md#getshortcutinfo) > instead. |
 <!--DelEnd-->
 

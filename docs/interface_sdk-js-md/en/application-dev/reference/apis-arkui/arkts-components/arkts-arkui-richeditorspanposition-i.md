@@ -1,6 +1,6 @@
 # RichEditorSpanPosition
 
-Span位置信息。
+Provides the span position information.
 
 **Since:** 10
 
@@ -16,7 +16,7 @@ Span位置信息。
 spanIndex: number
 ```
 
-Span索引值。
+Span index.
 
 **Type:** number
 
@@ -38,7 +38,7 @@ Span索引值。
 spanRange: [number, number]
 ```
 
-Span内容在RichEditor内的起始和结束位置。
+Start and end positions of the span content in the **RichEditor** component.
 
 **Type:** [number, number]
 

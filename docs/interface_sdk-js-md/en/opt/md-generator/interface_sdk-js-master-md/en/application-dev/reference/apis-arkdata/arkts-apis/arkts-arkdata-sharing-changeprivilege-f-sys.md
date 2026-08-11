@@ -1,0 +1,140 @@
+# changePrivilege (System API)
+
+## Modules to Import
+
+```TypeScript
+import { cloudData } from 'kits/@kit.ArkData';
+```
+
+## changePrivilege
+
+```TypeScript
+function changePrivilege(
+      sharingResource: string,
+      participants: Array<Participant>,
+      callback: AsyncCallback<Result<Array<Result<Participant>>>>
+    ): void
+```
+
+Changes the privilege on the shared data.This API uses an asynchronous callback to return the result.
+
+**Since:** 11
+
+<!--Device-sharing-function changePrivilege(      sharingResource: string,      participants: Array<Participant>,      callback: AsyncCallback<Result<Array<Result<Participant>>>>    ): void--><!--Device-sharing-function changePrivilege(      sharingResource: string,      participants: Array<Participant>,      callback: AsyncCallback<Result<Array<Result<Participant>>>>    ): void-End-->
+
+**System capability:** SystemCapability.DistributedDataManager.CloudSync.Client
+
+**System API:** This is a system API.
+
+**Parameters:**
+
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| sharingResource | string | Yes |
+| participants | Array&lt;Participant&gt; | Yes |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Result&lt;Array&lt;Result&lt;Participant&gt;&gt;&gt;&gt; | Yes |
+
+**Error codes:**
+
+| Error Code ID |
+| --- |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+
+## Examples
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let participants = new Array<cloudData.sharing.Participant>();
+participants.push({
+  identity: '000000000',
+  role: cloudData.sharing.Role.ROLE_INVITER,
+  state: cloudData.sharing.State.STATE_UNKNOWN,
+  privilege: {
+    writable: true,
+    readable: true,
+    creatable: false,
+    deletable: false,
+    shareable: false
+  },
+  attachInfo: ''
+})
+
+cloudData.sharing.changePrivilege('sharing_resource_test', participants, ((err: BusinessError, result) => {
+  if (err) {
+    console.error(`change privilege failed, code is ${err.code},message is ${err.message}`);
+    return;
+  }
+  console.info(`change privilege succeeded, result: ${result}`);
+}))
+```
+
+
+## changePrivilege
+
+```TypeScript
+function changePrivilege(
+      sharingResource: string,
+      participants: Array<Participant>
+    ): Promise<Result<Array<Result<Participant>>>>
+```
+
+Changes the privilege on the shared data.This API uses a promise to return the result.
+
+**Since:** 11
+
+<!--Device-sharing-function changePrivilege(      sharingResource: string,      participants: Array<Participant>    ): Promise<Result<Array<Result<Participant>>>>--><!--Device-sharing-function changePrivilege(      sharingResource: string,      participants: Array<Participant>    ): Promise<Result<Array<Result<Participant>>>>-End-->
+
+**System capability:** SystemCapability.DistributedDataManager.CloudSync.Client
+
+**System API:** This is a system API.
+
+**Parameters:**
+
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| sharingResource | string | Yes |
+| participants | Array&lt;Participant&gt; | Yes |
+
+**Return value:**
+
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| Promise&lt;Result&lt;Array&lt;Result&lt;Participant&gt;&gt;&gt;&gt; |
+
+**Error codes:**
+
+| Error Code ID |
+| --- |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+
+## Examples
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let participants = new Array<cloudData.sharing.Participant>();
+participants.push({
+  identity: '000000000',
+  role: cloudData.sharing.Role.ROLE_INVITER,
+  state: cloudData.sharing.State.STATE_UNKNOWN,
+  privilege: {
+    writable: true,
+    readable: true,
+    creatable: false,
+    deletable: false,
+    shareable: false
+  },
+  attachInfo: ''
+})
+
+cloudData.sharing.changePrivilege('sharing_resource_test', participants).then((result) => {
+  console.info(`change privilege succeeded, result: ${result}`);
+}).catch((err: BusinessError) => {
+  console.error(`change privilege failed, code is ${err.code},message is ${err.message}`);
+})
+```

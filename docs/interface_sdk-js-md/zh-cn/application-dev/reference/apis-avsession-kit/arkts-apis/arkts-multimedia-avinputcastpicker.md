@@ -3,12 +3,6 @@
 录音设备选择组件
 
 
-## 导入模块
-
-```TypeScript
-import { AVInputCastPicker } from 'kits/@kit.AVSessionKit';
-```
-
 ## 汇总
 
 ### 结构体

@@ -1,6 +1,6 @@
 # BundleOption
 
-描述BundleOption信息，即应用的包信息。
+Describes the **BundleOption** information, that is, the bundle information of an application.
 
 **Since:** 9
 
@@ -16,7 +16,7 @@
 bundle: string
 ```
 
-应用的包名。
+Bundle name of the application.
 
 **Type:** string
 
@@ -34,7 +34,7 @@ bundle: string
 uid?: int
 ```
 
-应用的UID。从[ApplicationInfo](../../apis-ability-kit/arkts-apis/arkts-ability-applicationinfo-i.md/arkts-ability-applicationinfo-i.md)获取，默认为0。应用分身场景下，此参数为必填项。
+UID of the application, which is obtained from ApplicationInfo. The default value is **0**. This parameter is mandatory in application clone scenarios.
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 

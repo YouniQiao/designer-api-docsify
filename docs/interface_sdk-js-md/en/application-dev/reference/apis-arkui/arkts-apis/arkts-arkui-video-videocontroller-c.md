@@ -1,6 +1,6 @@
 # VideoController
 
-一个VideoController对象可以控制一个或多个Video。
+Defines the video controller.
 
 **Since:** 23
 
@@ -16,7 +16,7 @@
 constructor()
 ```
 
-VideoController的构造函数。
+constructor.
 
 **Since:** 23
 
@@ -34,7 +34,7 @@ VideoController的构造函数。
 exitFullscreen(): void
 ```
 
-退出全屏播放。
+Provides a method to exit full screen playback.
 
 **Since:** 23
 
@@ -52,7 +52,7 @@ exitFullscreen(): void
 pause(): void
 ```
 
-暂停播放，显示当前帧，再次播放时从当前位置继续播放。
+Provides a pause event for playback.
 
 **Since:** 23
 
@@ -70,7 +70,7 @@ pause(): void
 requestFullscreen(value: boolean): void
 ```
 
-请求全屏播放。
+Provides a full screen playback method.
 
 **Since:** 23
 
@@ -86,7 +86,7 @@ requestFullscreen(value: boolean): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | boolean | Yes | 是否全屏（填充满应用窗口）播放。 true：请求全屏播放；false：不请求全屏播放。 默认值：false |
+| value | boolean | Yes |  |
 
 ## reset
 
@@ -94,7 +94,7 @@ requestFullscreen(value: boolean): void
 reset(): void
 ```
 
-Video组件重置AVPlayer。显示当前帧，再次播放时从头开始播放。
+Provide the reset method of video playback.
 
 **Since:** 23
 
@@ -112,7 +112,7 @@ Video组件重置AVPlayer。显示当前帧，再次播放时从头开始播放�
 setCurrentTime(value: double, seekMode?: SeekMode): void
 ```
 
-指定视频播放的进度位置，并指定跳转模式。
+Provide the progress method of video playback with SeekMode.
 
 **Since:** 23
 
@@ -128,8 +128,8 @@ setCurrentTime(value: double, seekMode?: SeekMode): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | double | Yes | 视频播放进度位置，单位：秒。 |
-| seekMode | [SeekMode](../arkts-components/arkts-arkui-seekmode-e.md) | No | 跳转模式。 |
+| value | double | Yes |  |
+| seekMode | [SeekMode](../../apis-media-kit/arkts-apis/arkts-media-media-seekmode-e.md) | No |  |
 
 ## start
 
@@ -137,7 +137,7 @@ setCurrentTime(value: double, seekMode?: SeekMode): void
 start(): void
 ```
 
-开始播放。
+Provides events to play.
 
 **Since:** 23
 
@@ -155,7 +155,7 @@ start(): void
 stop(): void
 ```
 
-停止播放，显示当前帧，再次播放时从头开始播放。
+Provides an event to stop playback.
 
 **Since:** 23
 

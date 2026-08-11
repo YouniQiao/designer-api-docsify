@@ -1,6 +1,6 @@
 # ParseOptions
 
-解析的选项，可定义处理BigInt的模式。
+Describes the parsing options, which can define the mode for processing BigInt.
 
 **Since:** 12
 
@@ -22,7 +22,7 @@ import { JSON } from 'kits/@kit.ArkTS';
 bigIntMode: BigIntMode
 ```
 
-定义处理BigInt的模式。
+Mode for processing BigInt.
 
 **Type:** [BigIntMode](arkts-arkts-ason-bigintmode-e.md)
 

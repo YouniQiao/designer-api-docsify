@@ -77,13 +77,13 @@ Obtains a {@link TonePlayer} instance. This method uses an asynchronous callback
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | options | [AudioRendererInfo](arkts-audio-audio-audiorendererinfo-i.md) | Yes | Tone playing attribute. |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;TonePlayer \| null&gt; | Yes | Callback used to return the tonePlayer instance, or null when an error happens. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;TonePlayer \| null&gt; | Yes | Callback used to return the tonePlayer instance， null when an error happens. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 202 | Not system App. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system App. |
 
 
 ## createTonePlayer
@@ -166,5 +166,5 @@ Obtains a {@link TonePlayer} instance. This method uses a promise to return the 
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 202 | Not system App. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system App. |
 

@@ -12,7 +12,7 @@ import { sensor } from 'kits/@kit.SensorServiceKit';
 function getSingleSensor(type: SensorId, callback: AsyncCallback<Sensor>): void
 ```
 
-获取指定传感器类型的属性信息，使用Callback异步方式返回结果。
+Obtains information about the sensor of a specific type. This API uses an asynchronous callback to return the result.
 
 **Since:** 9
 
@@ -26,16 +26,16 @@ function getSingleSensor(type: SensorId, callback: AsyncCallback<Sensor>): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | [SensorId](arkts-sensorservice-sensor-sensorid-e.md) | Yes | 指定传感器类型。 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Sensor&gt; | Yes | 回调函数，异步返回指定传感器的属性信息。 |
+| type | [SensorId](arkts-sensorservice-sensor-sensorid-e.md) | Yes | Sensor type. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Sensor&gt; | Yes | Callback used to return the sensor information. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt; 2. Incorrect parameter types; 3. Parameter verification failed. |
-| 14500101 | Service exception. Possible causes: 1. Sensor hdf service exception; &lt;br&gt; 2. Sensor service ipc exception;3. Sensor data channel exception. |
-| 14500102 | The sensor is not supported by the device.<br>**Applicable version:** 12 and later |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| [14500101](../errorcode-sensor.md#14500101-service-exception) | Service exception. Possible causes: 1. Sensor hdf service exception; &lt;br&gt; 2. Sensor service ipc exception;3. Sensor data channel exception. |
+| [14500102](../errorcode-sensor.md#14500102-sensor-not-supported-by-the-device) | The sensor is not supported by the device.<br>**Applicable version:** 12 and later |
 
 ## Examples
 
@@ -73,7 +73,7 @@ try {
 function getSingleSensor(type: SensorId): Promise<Sensor>
 ```
 
-获取指定类型的传感器信息，使用Promise异步方式返回结果。
+Obtains information about the sensor of a specific type. This API uses a promise to return the result.
 
 **Since:** 9
 
@@ -87,21 +87,21 @@ function getSingleSensor(type: SensorId): Promise<Sensor>
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | [SensorId](arkts-sensorservice-sensor-sensorid-e.md) | Yes | 传感器类型。 |
+| type | [SensorId](arkts-sensorservice-sensor-sensorid-e.md) | Yes | Sensor type. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;Sensor&gt; | 使用异步方式返回传感器信息。 |
+| Promise&lt;Sensor&gt; | Promise used to return the sensor information. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt; 2. Incorrect parameter types; 3. Parameter verification failed. |
-| 14500101 | Service exception. Possible causes: 1. Sensor hdf service exception; &lt;br&gt; 2. Sensor service ipc exception;3. Sensor data channel exception. |
-| 14500102 | The sensor is not supported by the device.<br>**Applicable version:** 12 and later |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| [14500101](../errorcode-sensor.md#14500101-service-exception) | Service exception. Possible causes: 1. Sensor hdf service exception; &lt;br&gt; 2. Sensor service ipc exception;3. Sensor data channel exception. |
+| [14500102](../errorcode-sensor.md#14500102-sensor-not-supported-by-the-device) | The sensor is not supported by the device.<br>**Applicable version:** 12 and later |
 
 ## Examples
 

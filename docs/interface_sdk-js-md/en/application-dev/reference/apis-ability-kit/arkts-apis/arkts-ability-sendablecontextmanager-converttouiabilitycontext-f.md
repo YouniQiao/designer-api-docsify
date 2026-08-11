@@ -12,7 +12,7 @@ import { sendableContextManager } from 'kits/@kit.AbilityKit';
 function convertToUIAbilityContext(sendableContext: SendableContext): common.UIAbilityContext
 ```
 
-将SendableContext对象转换为UIAbilityContext。
+Converts a SendableContext object to a UIAbilityContext object.
 
 **Since:** 12
 
@@ -42,7 +42,7 @@ function convertToUIAbilityContext(sendableContext: SendableContext): common.UIA
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | If the input parameter invalid. Possible causes: 1.Incorrect parameter types; 2.Parameter verification failed. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | If the input parameter invalid. Possible causes: 1.Incorrect parameter types; 2.Parameter verification failed. |
 
 ## Examples
 

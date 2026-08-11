@@ -1,11 +1,5 @@
 # killProcessesByBundleName
 
-## 导入模块
-
-```TypeScript
-import { appManager } from 'kits/@kit.AbilityKit';
-```
-
 ## killProcessesByBundleName
 
 ```TypeScript
@@ -42,9 +36,9 @@ function killProcessesByBundleName(bundleName: string, clearPageStack: boolean, 
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 401 | If the input parameter is not valid parameter. |
-| 16000050 | Internal error. |
-| 201 | Permission denied. |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | If the input parameter is not valid parameter. |
+| [16000050](../errorcode-ability.md#16000050-内部错误) | Internal error. |
+| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
 
 ## 示例
 
@@ -59,8 +53,10 @@ let appIndex = 1;
 try {
   appManager.killProcessesByBundleName(bundleName, isClearPageStack, appIndex).then((data) => {
     console.info('killProcessesByBundleName success.');
-  }).catch((err: BusinessError) => {
-    console.error(`killProcessesByBundleName fail, code: ${err.code}, msg:${err.message}`);
+  }).catch((error: Error) => {
+    let code = (error as BusinessError).code;
+    let message = (error as BusinessError).message;
+    console.error(`killProcessesByBundleName fail, code: ${code}, msg:${message}`);
   });
 } catch (paramError) {
   let code = (paramError as BusinessError).code;

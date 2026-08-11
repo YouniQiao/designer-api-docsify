@@ -14,12 +14,6 @@ AVSessionController控制器可查看会话ID，并可完成对会话发送命�
 
 **系统能力：** SystemCapability.Multimedia.AVSession.Core
 
-## 导入模块
-
-```TypeScript
-import { avSession } from 'kits/@kit.AVSessionKit';
-```
-
 ## destroy
 
 ```TypeScript
@@ -46,8 +40,8 @@ destroy(callback: AsyncCallback<void>): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 6600101 | Session service exception. |
-| 6600103 | The session controller does not exist. |
+| [6600101](../errorcode-avsession.md#6600101-会话服务端异常) | Session service exception. |
+| [6600103](../errorcode-avsession.md#6600103-会话控制器不存在) | The session controller does not exist. |
 
 ## destroy
 
@@ -77,8 +71,8 @@ destroy(): Promise<void>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 6600101 | Session service exception. |
-| 6600103 | The session controller does not exist. |
+| [6600101](../errorcode-avsession.md#6600101-会话服务端异常) | Session service exception. |
+| [6600103](../errorcode-avsession.md#6600103-会话控制器不存在) | The session controller does not exist. |
 
 ## getAVCallState
 
@@ -106,9 +100,9 @@ getAVCallState(callback: AsyncCallback<AVCallState>): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 6600101 | Session service exception. |
-| 6600102 | The session does not exist. |
-| 6600103 | The session controller does not exist. |
+| [6600101](../errorcode-avsession.md#6600101-会话服务端异常) | Session service exception. |
+| [6600102](../errorcode-avsession.md#6600102-会话不存在) | The session does not exist. |
+| [6600103](../errorcode-avsession.md#6600103-会话控制器不存在) | The session controller does not exist. |
 
 ## getAVCallState
 
@@ -136,9 +130,9 @@ getAVCallState(): Promise<AVCallState>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 6600101 | Session service exception. |
-| 6600102 | The session does not exist. |
-| 6600103 | The session controller does not exist. |
+| [6600101](../errorcode-avsession.md#6600101-会话服务端异常) | Session service exception. |
+| [6600102](../errorcode-avsession.md#6600102-会话不存在) | The session does not exist. |
+| [6600103](../errorcode-avsession.md#6600103-会话控制器不存在) | The session controller does not exist. |
 
 ## getAVMetadata
 
@@ -166,9 +160,9 @@ getAVMetadata(callback: AsyncCallback<AVMetadata>): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 6600101 | Session service exception. |
-| 6600102 | The session does not exist. |
-| 6600103 | The session controller does not exist. |
+| [6600101](../errorcode-avsession.md#6600101-会话服务端异常) | Session service exception. |
+| [6600102](../errorcode-avsession.md#6600102-会话不存在) | The session does not exist. |
+| [6600103](../errorcode-avsession.md#6600103-会话控制器不存在) | The session controller does not exist. |
 
 ## getAVMetadata
 
@@ -198,9 +192,9 @@ getAVMetadata(): Promise<AVMetadata>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 6600101 | Session service exception. |
-| 6600102 | The session does not exist. |
-| 6600103 | The session controller does not exist. |
+| [6600101](../errorcode-avsession.md#6600101-会话服务端异常) | Session service exception. |
+| [6600102](../errorcode-avsession.md#6600102-会话不存在) | The session does not exist. |
+| [6600103](../errorcode-avsession.md#6600103-会话控制器不存在) | The session controller does not exist. |
 
 ## getAVMetadataSync
 
@@ -230,9 +224,9 @@ getAVMetadataSync(): AVMetadata
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 6600101 | Session service exception. |
-| 6600102 | The session does not exist. |
-| 6600103 | The session controller does not exist. |
+| [6600101](../errorcode-avsession.md#6600101-会话服务端异常) | Session service exception. |
+| [6600102](../errorcode-avsession.md#6600102-会话不存在) | The session does not exist. |
+| [6600103](../errorcode-avsession.md#6600103-会话控制器不存在) | The session controller does not exist. |
 
 ## getAVPlaybackState
 
@@ -260,9 +254,9 @@ getAVPlaybackState(callback: AsyncCallback<AVPlaybackState>): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 6600101 | Session service exception. |
-| 6600102 | The session does not exist. |
-| 6600103 | The session controller does not exist. |
+| [6600101](../errorcode-avsession.md#6600101-会话服务端异常) | Session service exception. |
+| [6600102](../errorcode-avsession.md#6600102-会话不存在) | The session does not exist. |
+| [6600103](../errorcode-avsession.md#6600103-会话控制器不存在) | The session controller does not exist. |
 
 ## getAVPlaybackState
 
@@ -292,9 +286,9 @@ getAVPlaybackState(): Promise<AVPlaybackState>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 6600101 | Session service exception. |
-| 6600102 | The session does not exist. |
-| 6600103 | The session controller does not exist. |
+| [6600101](../errorcode-avsession.md#6600101-会话服务端异常) | Session service exception. |
+| [6600102](../errorcode-avsession.md#6600102-会话不存在) | The session does not exist. |
+| [6600103](../errorcode-avsession.md#6600103-会话控制器不存在) | The session controller does not exist. |
 
 ## getAVPlaybackStateSync
 
@@ -324,9 +318,9 @@ getAVPlaybackStateSync(): AVPlaybackState
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 6600101 | Session service exception. |
-| 6600102 | The session does not exist. |
-| 6600103 | The session controller does not exist. |
+| [6600101](../errorcode-avsession.md#6600101-会话服务端异常) | Session service exception. |
+| [6600102](../errorcode-avsession.md#6600102-会话不存在) | The session does not exist. |
+| [6600103](../errorcode-avsession.md#6600103-会话控制器不存在) | The session controller does not exist. |
 
 ## getAVQueueItems
 
@@ -354,9 +348,9 @@ getAVQueueItems(callback: AsyncCallback<Array<AVQueueItem>>): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 6600101 | Session service exception. |
-| 6600102 | The session does not exist. |
-| 6600103 | The session controller does not exist. |
+| [6600101](../errorcode-avsession.md#6600101-会话服务端异常) | Session service exception. |
+| [6600102](../errorcode-avsession.md#6600102-会话不存在) | The session does not exist. |
+| [6600103](../errorcode-avsession.md#6600103-会话控制器不存在) | The session controller does not exist. |
 
 ## getAVQueueItems
 
@@ -386,9 +380,9 @@ getAVQueueItems(): Promise<Array<AVQueueItem>>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 6600101 | Session service exception. |
-| 6600102 | The session does not exist. |
-| 6600103 | The session controller does not exist. |
+| [6600101](../errorcode-avsession.md#6600101-会话服务端异常) | Session service exception. |
+| [6600102](../errorcode-avsession.md#6600102-会话不存在) | The session does not exist. |
+| [6600103](../errorcode-avsession.md#6600103-会话控制器不存在) | The session controller does not exist. |
 
 ## getAVQueueItemsSync
 
@@ -418,9 +412,9 @@ getAVQueueItemsSync(): Array<AVQueueItem>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 6600101 | Session service exception. |
-| 6600102 | The session does not exist. |
-| 6600103 | The session controller does not exist. |
+| [6600101](../errorcode-avsession.md#6600101-会话服务端异常) | Session service exception. |
+| [6600102](../errorcode-avsession.md#6600102-会话不存在) | The session does not exist. |
+| [6600103](../errorcode-avsession.md#6600103-会话控制器不存在) | The session controller does not exist. |
 
 ## getAVQueueTitle
 
@@ -448,9 +442,9 @@ getAVQueueTitle(callback: AsyncCallback<string>): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 6600101 | Session service exception. |
-| 6600102 | The session does not exist. |
-| 6600103 | The session controller does not exist. |
+| [6600101](../errorcode-avsession.md#6600101-会话服务端异常) | Session service exception. |
+| [6600102](../errorcode-avsession.md#6600102-会话不存在) | The session does not exist. |
+| [6600103](../errorcode-avsession.md#6600103-会话控制器不存在) | The session controller does not exist. |
 
 ## getAVQueueTitle
 
@@ -480,9 +474,9 @@ getAVQueueTitle(): Promise<string>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 6600101 | Session service exception. |
-| 6600102 | The session does not exist. |
-| 6600103 | The session controller does not exist. |
+| [6600101](../errorcode-avsession.md#6600101-会话服务端异常) | Session service exception. |
+| [6600102](../errorcode-avsession.md#6600102-会话不存在) | The session does not exist. |
+| [6600103](../errorcode-avsession.md#6600103-会话控制器不存在) | The session controller does not exist. |
 
 ## getAVQueueTitleSync
 
@@ -512,9 +506,9 @@ getAVQueueTitleSync(): string
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 6600101 | Session service exception. |
-| 6600102 | The session does not exist. |
-| 6600103 | The session controller does not exist. |
+| [6600101](../errorcode-avsession.md#6600101-会话服务端异常) | Session service exception. |
+| [6600102](../errorcode-avsession.md#6600102-会话不存在) | The session does not exist. |
+| [6600103](../errorcode-avsession.md#6600103-会话控制器不存在) | The session controller does not exist. |
 
 ## getCallMetadata
 
@@ -542,9 +536,9 @@ getCallMetadata(callback: AsyncCallback<CallMetadata>): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 6600101 | Session service exception. |
-| 6600102 | The session does not exist. |
-| 6600103 | The session controller does not exist. |
+| [6600101](../errorcode-avsession.md#6600101-会话服务端异常) | Session service exception. |
+| [6600102](../errorcode-avsession.md#6600102-会话不存在) | The session does not exist. |
+| [6600103](../errorcode-avsession.md#6600103-会话控制器不存在) | The session controller does not exist. |
 
 ## getCallMetadata
 
@@ -572,9 +566,9 @@ getCallMetadata(): Promise<CallMetadata>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 6600101 | Session service exception. |
-| 6600102 | The session does not exist. |
-| 6600103 | The session controller does not exist. |
+| [6600101](../errorcode-avsession.md#6600101-会话服务端异常) | Session service exception. |
+| [6600102](../errorcode-avsession.md#6600102-会话不存在) | The session does not exist. |
+| [6600103](../errorcode-avsession.md#6600103-会话控制器不存在) | The session controller does not exist. |
 
 ## getDesktopLyricState
 
@@ -604,11 +598,11 @@ getDesktopLyricState(): Promise<DesktopLyricState>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 6600101 | Session service exception. |
-| 6600102 | The session does not exist. |
-| 6600103 | The session controller does not exist. |
-| 6600110 | The desktop lyrics feature of this application is not enabled. |
-| 6600111 | The desktop lyrics feature is not supported. |
+| [6600101](../errorcode-avsession.md#6600101-会话服务端异常) | Session service exception. |
+| [6600102](../errorcode-avsession.md#6600102-会话不存在) | The session does not exist. |
+| [6600103](../errorcode-avsession.md#6600103-会话控制器不存在) | The session controller does not exist. |
+| [6600110](../errorcode-avsession.md#6600110-应用程序的桌面歌词功能未开启) | The desktop lyrics feature of this application is not enabled. |
+| [6600111](../errorcode-avsession.md#6600111-当前设备不支持桌面歌词功能) | The desktop lyrics feature is not supported. |
 
 ## getExtras
 
@@ -636,12 +630,12 @@ getExtras(callback: AsyncCallback<{[key: string]: Object}>): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 401 | parameter check failed. 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. 3.Parameter verification failed. |
-| 6600101 | Session service exception. |
-| 6600102 | The session does not exist. |
-| 6600103 | The session controller does not exist. |
-| 6600105 | Invalid session command. |
-| 6600107 | Too many commands or events. |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | parameter check failed. 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. 3.Parameter verification failed. |
+| [6600101](../errorcode-avsession.md#6600101-会话服务端异常) | Session service exception. |
+| [6600102](../errorcode-avsession.md#6600102-会话不存在) | The session does not exist. |
+| [6600103](../errorcode-avsession.md#6600103-会话控制器不存在) | The session controller does not exist. |
+| [6600105](../errorcode-avsession.md#6600105-无效会话命令) | Invalid session command. |
+| [6600107](../errorcode-avsession.md#6600107-命令消息过载) | Too many commands or events. |
 
 ## getExtras
 
@@ -669,11 +663,11 @@ Get custom media packets provided by the corresponding session
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 6600101 | Session service exception. |
-| 6600102 | The session does not exist. |
-| 6600103 | The session controller does not exist. |
-| 6600105 | Invalid session command. |
-| 6600107 | Too many commands or events. |
+| [6600101](../errorcode-avsession.md#6600101-会话服务端异常) | Session service exception. |
+| [6600102](../errorcode-avsession.md#6600102-会话不存在) | The session does not exist. |
+| [6600103](../errorcode-avsession.md#6600103-会话控制器不存在) | The session controller does not exist. |
+| [6600105](../errorcode-avsession.md#6600105-无效会话命令) | Invalid session command. |
+| [6600107](../errorcode-avsession.md#6600107-命令消息过载) | Too many commands or events. |
 
 ## getExtras
 
@@ -703,12 +697,12 @@ getExtras(): Promise<{[key: string]: Object}>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 401 | parameter check failed. 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. 3.Parameter verification failed. |
-| 6600101 | Session service exception. |
-| 6600102 | The session does not exist. |
-| 6600103 | The session controller does not exist. |
-| 6600105 | Invalid session command. |
-| 6600107 | Too many commands or events. |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | parameter check failed. 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. 3.Parameter verification failed. |
+| [6600101](../errorcode-avsession.md#6600101-会话服务端异常) | Session service exception. |
+| [6600102](../errorcode-avsession.md#6600102-会话不存在) | The session does not exist. |
+| [6600103](../errorcode-avsession.md#6600103-会话控制器不存在) | The session controller does not exist. |
+| [6600105](../errorcode-avsession.md#6600105-无效会话命令) | Invalid session command. |
+| [6600107](../errorcode-avsession.md#6600107-命令消息过载) | Too many commands or events. |
 
 ## getExtras
 
@@ -738,11 +732,11 @@ Get custom media packets provided by the corresponding session
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 6600101 | Session service exception. |
-| 6600102 | The session does not exist. |
-| 6600103 | The session controller does not exist. |
-| 6600105 | Invalid session command. |
-| 6600107 | Too many commands or events. |
+| [6600101](../errorcode-avsession.md#6600101-会话服务端异常) | Session service exception. |
+| [6600102](../errorcode-avsession.md#6600102-会话不存在) | The session does not exist. |
+| [6600103](../errorcode-avsession.md#6600103-会话控制器不存在) | The session controller does not exist. |
+| [6600105](../errorcode-avsession.md#6600105-无效会话命令) | Invalid session command. |
+| [6600107](../errorcode-avsession.md#6600107-命令消息过载) | Too many commands or events. |
 
 ## getExtrasWithEvent
 
@@ -776,10 +770,10 @@ getExtrasWithEvent(extraEvent: string): Promise<ExtraInfo>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 6600101 | Session service exception. |
-| 6600102 | The session does not exist. |
-| 6600103 | The session controller does not exist. |
-| 6600105 | Invalid session command. |
+| [6600101](../errorcode-avsession.md#6600101-会话服务端异常) | Session service exception. |
+| [6600102](../errorcode-avsession.md#6600102-会话不存在) | The session does not exist. |
+| [6600103](../errorcode-avsession.md#6600103-会话控制器不存在) | The session controller does not exist. |
+| [6600105](../errorcode-avsession.md#6600105-无效会话命令) | Invalid session command. |
 
 ## getLaunchAbility
 
@@ -807,9 +801,9 @@ getLaunchAbility(callback: AsyncCallback<WantAgent>): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 6600101 | Session service exception. |
-| 6600102 | The session does not exist. |
-| 6600103 | The session controller does not exist. |
+| [6600101](../errorcode-avsession.md#6600101-会话服务端异常) | Session service exception. |
+| [6600102](../errorcode-avsession.md#6600102-会话不存在) | The session does not exist. |
+| [6600103](../errorcode-avsession.md#6600103-会话控制器不存在) | The session controller does not exist. |
 
 ## getLaunchAbility
 
@@ -839,9 +833,9 @@ getLaunchAbility(): Promise<WantAgent>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 6600101 | Session service exception. |
-| 6600102 | The session does not exist. |
-| 6600103 | The session controller does not exist. |
+| [6600101](../errorcode-avsession.md#6600101-会话服务端异常) | Session service exception. |
+| [6600102](../errorcode-avsession.md#6600102-会话不存在) | The session does not exist. |
+| [6600103](../errorcode-avsession.md#6600103-会话控制器不存在) | The session controller does not exist. |
 
 ## getMediaCenterControlType
 
@@ -873,8 +867,8 @@ getMediaCenterControlType(): Promise<Array<AVMediaCenterControlType>>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 6600101 | Session service exception. |
-| 6600103 | The session controller does not exist. |
+| [6600101](../errorcode-avsession.md#6600101-会话服务端异常) | Session service exception. |
+| [6600103](../errorcode-avsession.md#6600103-会话控制器不存在) | The session controller does not exist. |
 
 ## getOutputDevice
 
@@ -964,8 +958,8 @@ getOutputDeviceSync(): OutputDeviceInfo
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 6600101 | Session service exception. |
-| 6600103 | The session controller does not exist. |
+| [6600101](../errorcode-avsession.md#6600101-会话服务端异常) | Session service exception. |
+| [6600103](../errorcode-avsession.md#6600103-会话控制器不存在) | The session controller does not exist. |
 
 ## getRealPlaybackPositionSync
 
@@ -1001,8 +995,8 @@ getRealPlaybackPositionSync(): long
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 6600101 | Session service exception. |
-| 6600103 | The session controller does not exist. |
+| [6600101](../errorcode-avsession.md#6600101-会话服务端异常) | Session service exception. |
+| [6600103](../errorcode-avsession.md#6600103-会话控制器不存在) | The session controller does not exist. |
 
 ## getSupportedLoopModes
 
@@ -1036,8 +1030,8 @@ getSupportedLoopModes(): Promise<Array<LoopMode>>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 6600101 | Session service exception |
-| 6600103 | The session controller does not exist. |
+| [6600101](../errorcode-avsession.md#6600101-会话服务端异常) | Session service exception |
+| [6600103](../errorcode-avsession.md#6600103-会话控制器不存在) | The session controller does not exist. |
 
 ## getSupportedPlaySpeeds
 
@@ -1077,8 +1071,8 @@ getSupportedPlaySpeeds(): Promise<Array<double>>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 6600101 | Session service exception |
-| 6600103 | The session controller does not exist. |
+| [6600101](../errorcode-avsession.md#6600101-会话服务端异常) | Session service exception |
+| [6600103](../errorcode-avsession.md#6600103-会话控制器不存在) | The session controller does not exist. |
 
 ## getValidCommands
 
@@ -1106,9 +1100,9 @@ getValidCommands(callback: AsyncCallback<Array<AVControlCommandType>>): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 6600101 | Session service exception. |
-| 6600102 | The session does not exist. |
-| 6600103 | The session controller does not exist. |
+| [6600101](../errorcode-avsession.md#6600101-会话服务端异常) | Session service exception. |
+| [6600102](../errorcode-avsession.md#6600102-会话不存在) | The session does not exist. |
+| [6600103](../errorcode-avsession.md#6600103-会话控制器不存在) | The session controller does not exist. |
 
 ## getValidCommands
 
@@ -1138,9 +1132,9 @@ getValidCommands(): Promise<Array<AVControlCommandType>>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 6600101 | Session service exception. |
-| 6600102 | The session does not exist. |
-| 6600103 | The session controller does not exist. |
+| [6600101](../errorcode-avsession.md#6600101-会话服务端异常) | Session service exception. |
+| [6600102](../errorcode-avsession.md#6600102-会话不存在) | The session does not exist. |
+| [6600103](../errorcode-avsession.md#6600103-会话控制器不存在) | The session controller does not exist. |
 
 ## getValidCommandsSync
 
@@ -1170,9 +1164,9 @@ getValidCommandsSync(): Array<AVControlCommandType>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 6600101 | Session service exception. |
-| 6600102 | The session does not exist. |
-| 6600103 | The session controller does not exist. |
+| [6600101](../errorcode-avsession.md#6600101-会话服务端异常) | Session service exception. |
+| [6600102](../errorcode-avsession.md#6600102-会话不存在) | The session does not exist. |
+| [6600103](../errorcode-avsession.md#6600103-会话控制器不存在) | The session controller does not exist. |
 
 ## isActive
 
@@ -1200,9 +1194,9 @@ isActive(callback: AsyncCallback<boolean>): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 6600101 | Session service exception. |
-| 6600102 | The session does not exist. |
-| 6600103 | The session controller does not exist. |
+| [6600101](../errorcode-avsession.md#6600101-会话服务端异常) | Session service exception. |
+| [6600102](../errorcode-avsession.md#6600102-会话不存在) | The session does not exist. |
+| [6600103](../errorcode-avsession.md#6600103-会话控制器不存在) | The session controller does not exist. |
 
 ## isActive
 
@@ -1232,9 +1226,9 @@ isActive(): Promise<boolean>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 6600101 | Session service exception. |
-| 6600102 | The session does not exist. |
-| 6600103 | The session controller does not exist. |
+| [6600101](../errorcode-avsession.md#6600101-会话服务端异常) | Session service exception. |
+| [6600102](../errorcode-avsession.md#6600102-会话不存在) | The session does not exist. |
+| [6600103](../errorcode-avsession.md#6600103-会话控制器不存在) | The session controller does not exist. |
 
 ## isActiveSync
 
@@ -1264,9 +1258,9 @@ isActiveSync(): boolean
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 6600101 | Session service exception. |
-| 6600102 | The session does not exist. |
-| 6600103 | The session controller does not exist. |
+| [6600101](../errorcode-avsession.md#6600101-会话服务端异常) | Session service exception. |
+| [6600102](../errorcode-avsession.md#6600102-会话不存在) | The session does not exist. |
+| [6600103](../errorcode-avsession.md#6600103-会话控制器不存在) | The session controller does not exist. |
 
 ## isDesktopLyricEnabled
 
@@ -1296,10 +1290,10 @@ isDesktopLyricEnabled(): Promise<boolean>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 6600101 | Session service exception. |
-| 6600102 | The session does not exist. |
-| 6600103 | The session controller does not exist. |
-| 6600111 | The desktop lyrics feature is not supported. |
+| [6600101](../errorcode-avsession.md#6600101-会话服务端异常) | Session service exception. |
+| [6600102](../errorcode-avsession.md#6600102-会话不存在) | The session does not exist. |
+| [6600103](../errorcode-avsession.md#6600103-会话控制器不存在) | The session controller does not exist. |
+| [6600111](../errorcode-avsession.md#6600111-当前设备不支持桌面歌词功能) | The desktop lyrics feature is not supported. |
 
 ## isDesktopLyricVisible
 
@@ -1329,11 +1323,11 @@ isDesktopLyricVisible(): Promise<boolean>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 6600101 | Session service exception. |
-| 6600102 | The session does not exist. |
-| 6600103 | The session controller does not exist. |
-| 6600110 | The desktop lyrics feature of this application is not enabled. |
-| 6600111 | The desktop lyrics feature is not supported. |
+| [6600101](../errorcode-avsession.md#6600101-会话服务端异常) | Session service exception. |
+| [6600102](../errorcode-avsession.md#6600102-会话不存在) | The session does not exist. |
+| [6600103](../errorcode-avsession.md#6600103-会话控制器不存在) | The session controller does not exist. |
+| [6600110](../errorcode-avsession.md#6600110-应用程序的桌面歌词功能未开启) | The desktop lyrics feature of this application is not enabled. |
+| [6600111](../errorcode-avsession.md#6600111-当前设备不支持桌面歌词功能) | The desktop lyrics feature is not supported. |
 
 ## off('metadataChange')
 
@@ -1364,9 +1358,9 @@ off(type: 'metadataChange', callback?: (data: AVMetadata) => void)
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 401 | parameter check failed. 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. |
-| 6600101 | Session service exception. |
-| 6600103 | The session controller does not exist. |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | parameter check failed. 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. |
+| [6600101](../errorcode-avsession.md#6600101-会话服务端异常) | Session service exception. |
+| [6600103](../errorcode-avsession.md#6600103-会话控制器不存在) | The session controller does not exist. |
 
 ## off('playbackStateChange')
 
@@ -1397,9 +1391,9 @@ off(type: 'playbackStateChange', callback?: (state: AVPlaybackState) => void)
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 401 | parameter check failed. 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. |
-| 6600101 | Session service exception. |
-| 6600103 | The session controller does not exist. |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | parameter check failed. 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. |
+| [6600101](../errorcode-avsession.md#6600101-会话服务端异常) | Session service exception. |
+| [6600103](../errorcode-avsession.md#6600103-会话控制器不存在) | The session controller does not exist. |
 
 ## off('callMetadataChange')
 
@@ -1430,9 +1424,9 @@ off(type: 'callMetadataChange', callback?: Callback<CallMetadata>): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 401 | parameter check failed. 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. |
-| 6600101 | Session service exception. |
-| 6600103 | The session controller does not exist. |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | parameter check failed. 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. |
+| [6600101](../errorcode-avsession.md#6600101-会话服务端异常) | Session service exception. |
+| [6600103](../errorcode-avsession.md#6600103-会话控制器不存在) | The session controller does not exist. |
 
 ## off('callStateChange')
 
@@ -1463,9 +1457,9 @@ off(type: 'callStateChange', callback?: Callback<AVCallState>): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 401 | parameter check failed. 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. |
-| 6600101 | Session service exception. |
-| 6600103 | The session controller does not exist. |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | parameter check failed. 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. |
+| [6600101](../errorcode-avsession.md#6600101-会话服务端异常) | Session service exception. |
+| [6600103](../errorcode-avsession.md#6600103-会话控制器不存在) | The session controller does not exist. |
 
 ## off('sessionDestroy')
 
@@ -1496,9 +1490,9 @@ off(type: 'sessionDestroy', callback?: () => void)
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 401 | parameter check failed. 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. |
-| 6600101 | Session service exception. |
-| 6600103 | The session controller does not exist. |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | parameter check failed. 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. |
+| [6600101](../errorcode-avsession.md#6600101-会话服务端异常) | Session service exception. |
+| [6600103](../errorcode-avsession.md#6600103-会话控制器不存在) | The session controller does not exist. |
 
 ## off('activeStateChange')
 
@@ -1529,9 +1523,9 @@ off(type: 'activeStateChange', callback?: (isActive: boolean) => void)
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 401 | parameter check failed. 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. |
-| 6600101 | Session service exception. |
-| 6600103 | The session controller does not exist. |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | parameter check failed. 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. |
+| [6600101](../errorcode-avsession.md#6600101-会话服务端异常) | Session service exception. |
+| [6600103](../errorcode-avsession.md#6600103-会话控制器不存在) | The session controller does not exist. |
 
 ## off('validCommandChange')
 
@@ -1562,9 +1556,9 @@ off(type: 'validCommandChange', callback?: (commands: Array<AVControlCommandType
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 401 | parameter check failed. 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. |
-| 6600101 | Session service exception. |
-| 6600103 | The session controller does not exist. |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | parameter check failed. 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. |
+| [6600101](../errorcode-avsession.md#6600101-会话服务端异常) | Session service exception. |
+| [6600103](../errorcode-avsession.md#6600103-会话控制器不存在) | The session controller does not exist. |
 
 ## off('outputDeviceChange')
 
@@ -1595,9 +1589,9 @@ off(type: 'outputDeviceChange', callback?: (state: ConnectionState, device: Outp
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 401 | parameter check failed. 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. |
-| 6600101 | Session service exception |
-| 6600103 | The session controller does not exist |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | parameter check failed. 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. |
+| [6600101](../errorcode-avsession.md#6600101-会话服务端异常) | Session service exception |
+| [6600103](../errorcode-avsession.md#6600103-会话控制器不存在) | The session controller does not exist |
 
 ## off('sessionEvent')
 
@@ -1628,9 +1622,9 @@ off(type: 'sessionEvent', callback?: (sessionEvent: string, args: {[key: string]
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 401 | parameter check failed. 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. |
-| 6600101 | Session service exception. |
-| 6600103 | The session controller does not exist. |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | parameter check failed. 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. |
+| [6600101](../errorcode-avsession.md#6600101-会话服务端异常) | Session service exception. |
+| [6600103](../errorcode-avsession.md#6600103-会话控制器不存在) | The session controller does not exist. |
 
 ## off('queueItemsChange')
 
@@ -1661,9 +1655,9 @@ off(type: 'queueItemsChange', callback?: (items: Array<AVQueueItem>) => void): v
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 401 | parameter check failed. 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. |
-| 6600101 | Session service exception. |
-| 6600103 | The session controller does not exist. |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | parameter check failed. 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. |
+| [6600101](../errorcode-avsession.md#6600101-会话服务端异常) | Session service exception. |
+| [6600103](../errorcode-avsession.md#6600103-会话控制器不存在) | The session controller does not exist. |
 
 ## off('queueTitleChange')
 
@@ -1694,9 +1688,9 @@ off(type: 'queueTitleChange', callback?: (title: string) => void): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 401 | parameter check failed. 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. |
-| 6600101 | Session service exception. |
-| 6600103 | The session controller does not exist. |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | parameter check failed. 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. |
+| [6600101](../errorcode-avsession.md#6600101-会话服务端异常) | Session service exception. |
+| [6600103](../errorcode-avsession.md#6600103-会话控制器不存在) | The session controller does not exist. |
 
 ## off('extrasChange')
 
@@ -1727,9 +1721,9 @@ off(type: 'extrasChange', callback?: (extras: {[key: string]: Object}) => void):
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 401 | parameter check failed. 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. |
-| 6600101 | Session service exception. |
-| 6600103 | The session controller does not exist. |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | parameter check failed. 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. |
+| [6600101](../errorcode-avsession.md#6600101-会话服务端异常) | Session service exception. |
+| [6600103](../errorcode-avsession.md#6600103-会话控制器不存在) | The session controller does not exist. |
 
 ## off('customDataChange')
 
@@ -1760,8 +1754,8 @@ off(type: 'customDataChange', callback?: Callback<Record<string, Object>>): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 6600101 | Session service exception |
-| 6600103 | The session controller does not exist. |
+| [6600101](../errorcode-avsession.md#6600101-会话服务端异常) | Session service exception |
+| [6600103](../errorcode-avsession.md#6600103-会话控制器不存在) | The session controller does not exist. |
 
 ## offActiveStateChange
 
@@ -1789,8 +1783,8 @@ Unregister the active state of this session changed callback
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 6600101 | Session service exception. |
-| 6600103 | The session controller does not exist. |
+| [6600101](../errorcode-avsession.md#6600101-会话服务端异常) | Session service exception. |
+| [6600103](../errorcode-avsession.md#6600103-会话控制器不存在) | The session controller does not exist. |
 
 ## offCallMetadataChange
 
@@ -1818,8 +1812,8 @@ Unregister call metadata changed callback
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 6600101 | Session service exception. |
-| 6600103 | The session controller does not exist. |
+| [6600101](../errorcode-avsession.md#6600101-会话服务端异常) | Session service exception. |
+| [6600103](../errorcode-avsession.md#6600103-会话控制器不存在) | The session controller does not exist. |
 
 ## offCallStateChange
 
@@ -1847,8 +1841,8 @@ Unregister playback state changed callback
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 6600101 | Session service exception. |
-| 6600103 | The session controller does not exist. |
+| [6600101](../errorcode-avsession.md#6600101-会话服务端异常) | Session service exception. |
+| [6600103](../errorcode-avsession.md#6600103-会话控制器不存在) | The session controller does not exist. |
 
 ## offCustomDataChange
 
@@ -1876,8 +1870,8 @@ Unregister listener for custom data.
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 6600101 | Session service exception |
-| 6600103 | The session controller does not exist. |
+| [6600101](../errorcode-avsession.md#6600101-会话服务端异常) | Session service exception |
+| [6600103](../errorcode-avsession.md#6600103-会话控制器不存在) | The session controller does not exist. |
 
 ## offDesktopLyricEnabled
 
@@ -1907,8 +1901,8 @@ offDesktopLyricEnabled(callback?: Callback<boolean>): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 6600101 | Session service exception. |
-| 6600103 | The session controller does not exist. |
+| [6600101](../errorcode-avsession.md#6600101-会话服务端异常) | Session service exception. |
+| [6600103](../errorcode-avsession.md#6600103-会话控制器不存在) | The session controller does not exist. |
 
 ## offDesktopLyricStateChanged
 
@@ -1938,8 +1932,8 @@ offDesktopLyricStateChanged(callback?: Callback<DesktopLyricState>): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 6600101 | Session service exception. |
-| 6600103 | The session controller does not exist. |
+| [6600101](../errorcode-avsession.md#6600101-会话服务端异常) | Session service exception. |
+| [6600103](../errorcode-avsession.md#6600103-会话控制器不存在) | The session controller does not exist. |
 
 ## offDesktopLyricVisibilityChanged
 
@@ -1969,8 +1963,8 @@ offDesktopLyricVisibilityChanged(callback?: Callback<boolean>): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 6600101 | Session service exception. |
-| 6600103 | The session controller does not exist. |
+| [6600101](../errorcode-avsession.md#6600101-会话服务端异常) | Session service exception. |
+| [6600103](../errorcode-avsession.md#6600103-会话控制器不存在) | The session controller does not exist. |
 
 ## offExtrasChange
 
@@ -1998,8 +1992,8 @@ Unregister the custom media packets change callback
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 6600101 | Session service exception. |
-| 6600103 | The session controller does not exist. |
+| [6600101](../errorcode-avsession.md#6600101-会话服务端异常) | Session service exception. |
+| [6600103](../errorcode-avsession.md#6600103-会话控制器不存在) | The session controller does not exist. |
 
 ## offMediaCenterControlTypeChanged
 
@@ -2031,8 +2025,8 @@ offMediaCenterControlTypeChanged(callback?: Callback<Array<AVMediaCenterControlT
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 6600101 | Session service exception. |
-| 6600103 | The session controller does not exist. |
+| [6600101](../errorcode-avsession.md#6600101-会话服务端异常) | Session service exception. |
+| [6600103](../errorcode-avsession.md#6600103-会话控制器不存在) | The session controller does not exist. |
 
 ## offMetadataChange
 
@@ -2060,8 +2054,8 @@ Unregister metadata changed callback
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 6600101 | Session service exception. |
-| 6600103 | The session controller does not exist. |
+| [6600101](../errorcode-avsession.md#6600101-会话服务端异常) | Session service exception. |
+| [6600103](../errorcode-avsession.md#6600103-会话控制器不存在) | The session controller does not exist. |
 
 ## offOutputDeviceChange
 
@@ -2089,8 +2083,8 @@ Unregister session output device change callback
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 6600101 | Session service exception |
-| 6600103 | The session controller does not exist |
+| [6600101](../errorcode-avsession.md#6600101-会话服务端异常) | Session service exception |
+| [6600103](../errorcode-avsession.md#6600103-会话控制器不存在) | The session controller does not exist |
 
 ## offPlaybackStateChange
 
@@ -2118,8 +2112,8 @@ Unregister playback state changed callback
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 6600101 | Session service exception. |
-| 6600103 | The session controller does not exist. |
+| [6600101](../errorcode-avsession.md#6600101-会话服务端异常) | Session service exception. |
+| [6600103](../errorcode-avsession.md#6600103-会话控制器不存在) | The session controller does not exist. |
 
 ## offQueueItemsChange
 
@@ -2149,8 +2143,8 @@ Unregister session playlist change callback
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 6600101 | Session service exception. |
-| 6600103 | The session controller does not exist. |
+| [6600101](../errorcode-avsession.md#6600101-会话服务端异常) | Session service exception. |
+| [6600103](../errorcode-avsession.md#6600103-会话控制器不存在) | The session controller does not exist. |
 
 ## offQueueTitleChange
 
@@ -2178,8 +2172,8 @@ Unregister the name of session playlist change callback
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 6600101 | Session service exception. |
-| 6600103 | The session controller does not exist. |
+| [6600101](../errorcode-avsession.md#6600101-会话服务端异常) | Session service exception. |
+| [6600103](../errorcode-avsession.md#6600103-会话控制器不存在) | The session controller does not exist. |
 
 ## offSessionDestroy
 
@@ -2207,8 +2201,8 @@ Unregister current session destroyed callback
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 6600101 | Session service exception. |
-| 6600103 | The session controller does not exist. |
+| [6600101](../errorcode-avsession.md#6600101-会话服务端异常) | Session service exception. |
+| [6600103](../errorcode-avsession.md#6600103-会话控制器不存在) | The session controller does not exist. |
 
 ## offSessionEvent
 
@@ -2236,8 +2230,8 @@ Unregister session event callback
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 6600101 | Session service exception. |
-| 6600103 | The session controller does not exist. |
+| [6600101](../errorcode-avsession.md#6600101-会话服务端异常) | Session service exception. |
+| [6600103](../errorcode-avsession.md#6600103-会话控制器不存在) | The session controller does not exist. |
 
 ## offSupportedLoopModesChange
 
@@ -2271,8 +2265,8 @@ offSupportedLoopModesChange(callback?: Callback<Array<LoopMode>>): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 6600101 | Session service exception |
-| 6600103 | The session controller does not exist. |
+| [6600101](../errorcode-avsession.md#6600101-会话服务端异常) | Session service exception |
+| [6600103](../errorcode-avsession.md#6600103-会话控制器不存在) | The session controller does not exist. |
 
 ## offSupportedPlaySpeedsChange
 
@@ -2312,8 +2306,8 @@ offSupportedPlaySpeedsChange(callback?: Callback<Array<double>>): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 6600101 | Session service exception |
-| 6600103 | The session controller does not exist. |
+| [6600101](../errorcode-avsession.md#6600101-会话服务端异常) | Session service exception |
+| [6600103](../errorcode-avsession.md#6600103-会话控制器不存在) | The session controller does not exist. |
 
 ## offValidCommandChange
 
@@ -2341,8 +2335,8 @@ Unregister the valid commands of the session changed callback
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 6600101 | Session service exception. |
-| 6600103 | The session controller does not exist. |
+| [6600101](../errorcode-avsession.md#6600101-会话服务端异常) | Session service exception. |
+| [6600103](../errorcode-avsession.md#6600103-会话控制器不存在) | The session controller does not exist. |
 
 ## on('metadataChange')
 
@@ -2376,9 +2370,9 @@ on(type: 'metadataChange', filter: Array<keyof AVMetadata> | 'all', callback: (d
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 401 | parameter check failed. 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. |
-| 6600101 | Session service exception. |
-| 6600103 | The session controller does not exist. |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | parameter check failed. 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. |
+| [6600101](../errorcode-avsession.md#6600101-会话服务端异常) | Session service exception. |
+| [6600103](../errorcode-avsession.md#6600103-会话控制器不存在) | The session controller does not exist. |
 
 ## on('playbackStateChange')
 
@@ -2412,9 +2406,9 @@ on(type: 'playbackStateChange', filter: Array<keyof AVPlaybackState> | 'all', ca
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 401 | parameter check failed. 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. |
-| 6600101 | Session service exception. |
-| 6600103 | The session controller does not exist. |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | parameter check failed. 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. |
+| [6600101](../errorcode-avsession.md#6600101-会话服务端异常) | Session service exception. |
+| [6600103](../errorcode-avsession.md#6600103-会话控制器不存在) | The session controller does not exist. |
 
 ## on('callMetadataChange')
 
@@ -2448,9 +2442,9 @@ on(type: 'callMetadataChange', filter: Array<keyof CallMetadata> | 'all', callba
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 401 | parameter check failed. 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. |
-| 6600101 | Session service exception. |
-| 6600103 | The session controller does not exist. |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | parameter check failed. 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. |
+| [6600101](../errorcode-avsession.md#6600101-会话服务端异常) | Session service exception. |
+| [6600103](../errorcode-avsession.md#6600103-会话控制器不存在) | The session controller does not exist. |
 
 ## on('callStateChange')
 
@@ -2484,9 +2478,9 @@ on(type: 'callStateChange', filter: Array<keyof AVCallState> | 'all', callback: 
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 401 | parameter check failed. 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. |
-| 6600101 | Session service exception. |
-| 6600103 | The session controller does not exist. |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | parameter check failed. 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. |
+| [6600101](../errorcode-avsession.md#6600101-会话服务端异常) | Session service exception. |
+| [6600103](../errorcode-avsession.md#6600103-会话控制器不存在) | The session controller does not exist. |
 
 ## on('sessionDestroy')
 
@@ -2519,9 +2513,9 @@ on(type: 'sessionDestroy', callback: () => void)
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 401 | parameter check failed. 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. |
-| 6600101 | Session service exception. |
-| 6600103 | The session controller does not exist. |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | parameter check failed. 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. |
+| [6600101](../errorcode-avsession.md#6600101-会话服务端异常) | Session service exception. |
+| [6600103](../errorcode-avsession.md#6600103-会话控制器不存在) | The session controller does not exist. |
 
 ## on('activeStateChange')
 
@@ -2554,9 +2548,9 @@ on(type: 'activeStateChange', callback: (isActive: boolean) => void)
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 401 | parameter check failed. 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. |
-| 6600101 | Session service exception. |
-| 6600103 | The session controller does not exist. |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | parameter check failed. 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. |
+| [6600101](../errorcode-avsession.md#6600101-会话服务端异常) | Session service exception. |
+| [6600103](../errorcode-avsession.md#6600103-会话控制器不存在) | The session controller does not exist. |
 
 ## on('validCommandChange')
 
@@ -2589,9 +2583,9 @@ on(type: 'validCommandChange', callback: (commands: Array<AVControlCommandType>)
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 401 | parameter check failed. 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. |
-| 6600101 | Session service exception. |
-| 6600103 | The session controller does not exist. |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | parameter check failed. 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. |
+| [6600101](../errorcode-avsession.md#6600101-会话服务端异常) | Session service exception. |
+| [6600103](../errorcode-avsession.md#6600103-会话控制器不存在) | The session controller does not exist. |
 
 ## on('outputDeviceChange')
 
@@ -2624,9 +2618,9 @@ on(type: 'outputDeviceChange', callback: (state: ConnectionState, device: Output
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 401 | parameter check failed. 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. |
-| 6600101 | Session service exception |
-| 6600103 | The session controller does not exist |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | parameter check failed. 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. |
+| [6600101](../errorcode-avsession.md#6600101-会话服务端异常) | Session service exception |
+| [6600103](../errorcode-avsession.md#6600103-会话控制器不存在) | The session controller does not exist |
 
 ## on('sessionEvent')
 
@@ -2659,9 +2653,9 @@ on(type: 'sessionEvent', callback: (sessionEvent: string, args: {[key: string]: 
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 401 | parameter check failed. 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. |
-| 6600101 | Session service exception. |
-| 6600103 | The session controller does not exist. |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | parameter check failed. 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. |
+| [6600101](../errorcode-avsession.md#6600101-会话服务端异常) | Session service exception. |
+| [6600103](../errorcode-avsession.md#6600103-会话控制器不存在) | The session controller does not exist. |
 
 ## on('queueItemsChange')
 
@@ -2694,9 +2688,9 @@ on(type: 'queueItemsChange', callback: (items: Array<AVQueueItem>) => void): voi
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 401 | parameter check failed. 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. |
-| 6600101 | Session service exception. |
-| 6600103 | The session controller does not exist. |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | parameter check failed. 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. |
+| [6600101](../errorcode-avsession.md#6600101-会话服务端异常) | Session service exception. |
+| [6600103](../errorcode-avsession.md#6600103-会话控制器不存在) | The session controller does not exist. |
 
 ## on('queueTitleChange')
 
@@ -2727,9 +2721,9 @@ on(type: 'queueTitleChange', callback: (title: string) => void): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 401 | parameter check failed. 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. |
-| 6600101 | Session service exception. |
-| 6600103 | The session controller does not exist. |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | parameter check failed. 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. |
+| [6600101](../errorcode-avsession.md#6600101-会话服务端异常) | Session service exception. |
+| [6600103](../errorcode-avsession.md#6600103-会话控制器不存在) | The session controller does not exist. |
 
 ## on('extrasChange')
 
@@ -2760,9 +2754,9 @@ on(type: 'extrasChange', callback: (extras: {[key: string]: Object}) => void): v
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 401 | parameter check failed. 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. |
-| 6600101 | Session service exception. |
-| 6600103 | The session controller does not exist. |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | parameter check failed. 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. |
+| [6600101](../errorcode-avsession.md#6600101-会话服务端异常) | Session service exception. |
+| [6600103](../errorcode-avsession.md#6600103-会话控制器不存在) | The session controller does not exist. |
 
 ## on('customDataChange')
 
@@ -2793,8 +2787,8 @@ on(type: 'customDataChange', callback: Callback<Record<string, Object>>): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 6600101 | Session service exception |
-| 6600103 | The session controller does not exist. |
+| [6600101](../errorcode-avsession.md#6600101-会话服务端异常) | Session service exception |
+| [6600103](../errorcode-avsession.md#6600103-会话控制器不存在) | The session controller does not exist. |
 
 ## onActiveStateChange
 
@@ -2822,8 +2816,8 @@ Register the active state of this session changed callback
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 6600101 | Session service exception. |
-| 6600103 | The session controller does not exist. |
+| [6600101](../errorcode-avsession.md#6600101-会话服务端异常) | Session service exception. |
+| [6600103](../errorcode-avsession.md#6600103-会话控制器不存在) | The session controller does not exist. |
 
 ## onCallMetadataChange
 
@@ -2852,8 +2846,8 @@ Register call metadata changed callback
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 6600101 | Session service exception. |
-| 6600103 | The session controller does not exist. |
+| [6600101](../errorcode-avsession.md#6600101-会话服务端异常) | Session service exception. |
+| [6600103](../errorcode-avsession.md#6600103-会话控制器不存在) | The session controller does not exist. |
 
 ## onCallMetadataChangeAll
 
@@ -2881,8 +2875,8 @@ Register call metadata changed callback
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 6600101 | Session service exception. |
-| 6600103 | The session controller does not exist. |
+| [6600101](../errorcode-avsession.md#6600101-会话服务端异常) | Session service exception. |
+| [6600103](../errorcode-avsession.md#6600103-会话控制器不存在) | The session controller does not exist. |
 
 ## onCallStateChange
 
@@ -2911,8 +2905,8 @@ Register call state changed callback
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 6600101 | Session service exception. |
-| 6600103 | The session controller does not exist. |
+| [6600101](../errorcode-avsession.md#6600101-会话服务端异常) | Session service exception. |
+| [6600103](../errorcode-avsession.md#6600103-会话控制器不存在) | The session controller does not exist. |
 
 ## onCallStateChangeAll
 
@@ -2940,8 +2934,8 @@ Register call state changed callback
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 6600101 | Session service exception. |
-| 6600103 | The session controller does not exist. |
+| [6600101](../errorcode-avsession.md#6600101-会话服务端异常) | Session service exception. |
+| [6600103](../errorcode-avsession.md#6600103-会话控制器不存在) | The session controller does not exist. |
 
 ## onCustomDataChange
 
@@ -2969,8 +2963,8 @@ Register listener for custom data.
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 6600101 | Session service exception |
-| 6600103 | The session controller does not exist. |
+| [6600101](../errorcode-avsession.md#6600101-会话服务端异常) | Session service exception |
+| [6600103](../errorcode-avsession.md#6600103-会话控制器不存在) | The session controller does not exist. |
 
 ## onDesktopLyricEnabled
 
@@ -3000,8 +2994,8 @@ onDesktopLyricEnabled(callback: Callback<boolean>): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 6600101 | Session service exception. |
-| 6600103 | The session controller does not exist. |
+| [6600101](../errorcode-avsession.md#6600101-会话服务端异常) | Session service exception. |
+| [6600103](../errorcode-avsession.md#6600103-会话控制器不存在) | The session controller does not exist. |
 
 ## onDesktopLyricStateChanged
 
@@ -3031,8 +3025,8 @@ onDesktopLyricStateChanged(callback: Callback<DesktopLyricState>): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 6600101 | Session service exception. |
-| 6600103 | The session controller does not exist. |
+| [6600101](../errorcode-avsession.md#6600101-会话服务端异常) | Session service exception. |
+| [6600103](../errorcode-avsession.md#6600103-会话控制器不存在) | The session controller does not exist. |
 
 ## onDesktopLyricVisibilityChanged
 
@@ -3062,8 +3056,8 @@ onDesktopLyricVisibilityChanged(callback: Callback<boolean>): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 6600101 | Session service exception. |
-| 6600103 | The session controller does not exist. |
+| [6600101](../errorcode-avsession.md#6600101-会话服务端异常) | Session service exception. |
+| [6600103](../errorcode-avsession.md#6600103-会话控制器不存在) | The session controller does not exist. |
 
 ## onExtrasChange
 
@@ -3091,8 +3085,8 @@ Register the custom media packets change callback
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 6600101 | Session service exception. |
-| 6600103 | The session controller does not exist. |
+| [6600101](../errorcode-avsession.md#6600101-会话服务端异常) | Session service exception. |
+| [6600103](../errorcode-avsession.md#6600103-会话控制器不存在) | The session controller does not exist. |
 
 ## onMediaCenterControlTypeChanged
 
@@ -3124,8 +3118,8 @@ onMediaCenterControlTypeChanged(callback: Callback<Array<AVMediaCenterControlTyp
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 6600101 | Session service exception. |
-| 6600103 | The session controller does not exist. |
+| [6600101](../errorcode-avsession.md#6600101-会话服务端异常) | Session service exception. |
+| [6600103](../errorcode-avsession.md#6600103-会话控制器不存在) | The session controller does not exist. |
 
 ## onMetadataChange
 
@@ -3154,8 +3148,8 @@ Register metadata changed callback
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 6600101 | Session service exception. |
-| 6600103 | The session controller does not exist. |
+| [6600101](../errorcode-avsession.md#6600101-会话服务端异常) | Session service exception. |
+| [6600103](../errorcode-avsession.md#6600103-会话控制器不存在) | The session controller does not exist. |
 
 ## onMetadataChangeAll
 
@@ -3183,8 +3177,8 @@ Register metadata changed callback
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 6600101 | Session service exception. |
-| 6600103 | The session controller does not exist. |
+| [6600101](../errorcode-avsession.md#6600101-会话服务端异常) | Session service exception. |
+| [6600103](../errorcode-avsession.md#6600103-会话控制器不存在) | The session controller does not exist. |
 
 ## onOutputDeviceChange
 
@@ -3212,8 +3206,8 @@ Register session output device change callback
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 6600101 | Session service exception |
-| 6600103 | The session controller does not exist |
+| [6600101](../errorcode-avsession.md#6600101-会话服务端异常) | Session service exception |
+| [6600103](../errorcode-avsession.md#6600103-会话控制器不存在) | The session controller does not exist |
 
 ## onPlaybackStateChange
 
@@ -3242,8 +3236,8 @@ Register playback state changed callback
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 6600101 | Session service exception. |
-| 6600103 | The session controller does not exist. |
+| [6600101](../errorcode-avsession.md#6600101-会话服务端异常) | Session service exception. |
+| [6600103](../errorcode-avsession.md#6600103-会话控制器不存在) | The session controller does not exist. |
 
 ## onPlaybackStateChangeAll
 
@@ -3271,8 +3265,8 @@ Register playback state changed callback
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 6600101 | Session service exception. |
-| 6600103 | The session controller does not exist. |
+| [6600101](../errorcode-avsession.md#6600101-会话服务端异常) | Session service exception. |
+| [6600103](../errorcode-avsession.md#6600103-会话控制器不存在) | The session controller does not exist. |
 
 ## onQueueItemsChange
 
@@ -3300,8 +3294,8 @@ Register session playlist change callback
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 6600101 | Session service exception. |
-| 6600103 | The session controller does not exist. |
+| [6600101](../errorcode-avsession.md#6600101-会话服务端异常) | Session service exception. |
+| [6600103](../errorcode-avsession.md#6600103-会话控制器不存在) | The session controller does not exist. |
 
 ## onQueueTitleChange
 
@@ -3329,8 +3323,8 @@ Register the name of session playlist change callback
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 6600101 | Session service exception. |
-| 6600103 | The session controller does not exist. |
+| [6600101](../errorcode-avsession.md#6600101-会话服务端异常) | Session service exception. |
+| [6600103](../errorcode-avsession.md#6600103-会话控制器不存在) | The session controller does not exist. |
 
 ## onSessionDestroy
 
@@ -3358,8 +3352,8 @@ Register current session destroyed callback
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 6600101 | Session service exception. |
-| 6600103 | The session controller does not exist. |
+| [6600101](../errorcode-avsession.md#6600101-会话服务端异常) | Session service exception. |
+| [6600103](../errorcode-avsession.md#6600103-会话控制器不存在) | The session controller does not exist. |
 
 ## onSessionEvent
 
@@ -3387,8 +3381,8 @@ Register session event callback
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 6600101 | Session service exception. |
-| 6600103 | The session controller does not exist. |
+| [6600101](../errorcode-avsession.md#6600101-会话服务端异常) | Session service exception. |
+| [6600103](../errorcode-avsession.md#6600103-会话控制器不存在) | The session controller does not exist. |
 
 ## onSupportedLoopModesChange
 
@@ -3422,8 +3416,8 @@ onSupportedLoopModesChange(callback: Callback<Array<LoopMode>>): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 6600101 | Session service exception |
-| 6600103 | The session controller does not exist. |
+| [6600101](../errorcode-avsession.md#6600101-会话服务端异常) | Session service exception |
+| [6600103](../errorcode-avsession.md#6600103-会话控制器不存在) | The session controller does not exist. |
 
 ## onSupportedPlaySpeedsChange
 
@@ -3463,8 +3457,8 @@ onSupportedPlaySpeedsChange(callback: Callback<Array<double>>): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 6600101 | Session service exception |
-| 6600103 | The session controller does not exist. |
+| [6600101](../errorcode-avsession.md#6600101-会话服务端异常) | Session service exception |
+| [6600103](../errorcode-avsession.md#6600103-会话控制器不存在) | The session controller does not exist. |
 
 ## onValidCommandChange
 
@@ -3492,8 +3486,8 @@ Register the valid commands of the session changed callback
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 6600101 | Session service exception. |
-| 6600103 | The session controller does not exist. |
+| [6600101](../errorcode-avsession.md#6600101-会话服务端异常) | Session service exception. |
+| [6600103](../errorcode-avsession.md#6600103-会话控制器不存在) | The session controller does not exist. |
 
 ## sendAVKeyEvent
 
@@ -3523,7 +3517,7 @@ sendAVKeyEvent(event: KeyEvent, callback: AsyncCallback<void>): void
 | 错误码ID | 错误信息 |
 | --- | --- |
 | 600105 | Invalid session command. |
-| 401 | parameter check failed. 1.Mandatory parameters are left unspecified. 2.Parameter verification failed. |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | parameter check failed. 1.Mandatory parameters are left unspecified. 2.Parameter verification failed. |
 | 600106 | The session is not activated. |
 | 600101 | Session service exception. |
 | 600103 | The session controller does not exist. |
@@ -3564,7 +3558,7 @@ sendAVKeyEvent(event: KeyEvent): Promise<void>
 | 错误码ID | 错误信息 |
 | --- | --- |
 | 600105 | Invalid session command. |
-| 401 | parameter check failed. 1.Mandatory parameters are left unspecified. 2.Parameter verification failed. |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | parameter check failed. 1.Mandatory parameters are left unspecified. 2.Parameter verification failed. |
 | 600106 | The session is not activated. |
 | 600101 | Session service exception. |
 | 600103 | The session controller does not exist. |
@@ -3598,13 +3592,13 @@ sendCommonCommand(command: string, args: {[key: string]: Object}, callback: Asyn
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 401 | parameter check failed. 1.Mandatory parameters are left unspecified. 2.Parameter verification failed. |
-| 6600101 | Session service exception. |
-| 6600102 | The session does not exist. |
-| 6600103 | The session controller does not exist. |
-| 6600105 | Invalid session command. |
-| 6600106 | The session is not activated. |
-| 6600107 | Too many commands or events. |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | parameter check failed. 1.Mandatory parameters are left unspecified. 2.Parameter verification failed. |
+| [6600101](../errorcode-avsession.md#6600101-会话服务端异常) | Session service exception. |
+| [6600102](../errorcode-avsession.md#6600102-会话不存在) | The session does not exist. |
+| [6600103](../errorcode-avsession.md#6600103-会话控制器不存在) | The session controller does not exist. |
+| [6600105](../errorcode-avsession.md#6600105-无效会话命令) | Invalid session command. |
+| [6600106](../errorcode-avsession.md#6600106-会话未激活) | The session is not activated. |
+| [6600107](../errorcode-avsession.md#6600107-命令消息过载) | Too many commands or events. |
 
 ## sendCommonCommand
 
@@ -3629,19 +3623,19 @@ Send common commands to this session
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | command | string | 是 | The command name to be sent. &lt;br&gt;通用控制命令 |
-| args | [Record](../../apis-default/arkts-apis/arkts-record-t.md)&lt;string, Object&gt; | 是 | The parameters of session event |
+| args | Record&lt;string, Object&gt; | 是 | The parameters of session event |
 | callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | The asyncCallback triggered when the command is executed successfully. |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 6600101 | Session service exception. |
-| 6600102 | The session does not exist. |
-| 6600103 | The session controller does not exist. |
-| 6600105 | Invalid session command. |
-| 6600106 | The session is not activated. |
-| 6600107 | Too many commands or events. |
+| [6600101](../errorcode-avsession.md#6600101-会话服务端异常) | Session service exception. |
+| [6600102](../errorcode-avsession.md#6600102-会话不存在) | The session does not exist. |
+| [6600103](../errorcode-avsession.md#6600103-会话控制器不存在) | The session controller does not exist. |
+| [6600105](../errorcode-avsession.md#6600105-无效会话命令) | Invalid session command. |
+| [6600106](../errorcode-avsession.md#6600106-会话未激活) | The session is not activated. |
+| [6600107](../errorcode-avsession.md#6600107-命令消息过载) | Too many commands or events. |
 
 ## sendCommonCommand
 
@@ -3678,13 +3672,13 @@ sendCommonCommand(command: string, args: {[key: string]: Object}): Promise<void>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 401 | parameter check failed. 1.Mandatory parameters are left unspecified. 2.Parameter verification failed. |
-| 6600101 | Session service exception. |
-| 6600102 | The session does not exist. |
-| 6600103 | The session controller does not exist. |
-| 6600105 | Invalid session command. |
-| 6600106 | The session is not activated. |
-| 6600107 | Too many commands or events. |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | parameter check failed. 1.Mandatory parameters are left unspecified. 2.Parameter verification failed. |
+| [6600101](../errorcode-avsession.md#6600101-会话服务端异常) | Session service exception. |
+| [6600102](../errorcode-avsession.md#6600102-会话不存在) | The session does not exist. |
+| [6600103](../errorcode-avsession.md#6600103-会话控制器不存在) | The session controller does not exist. |
+| [6600105](../errorcode-avsession.md#6600105-无效会话命令) | Invalid session command. |
+| [6600106](../errorcode-avsession.md#6600106-会话未激活) | The session is not activated. |
+| [6600107](../errorcode-avsession.md#6600107-命令消息过载) | Too many commands or events. |
 
 ## sendCommonCommand
 
@@ -3709,7 +3703,7 @@ Send common commands to this session
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | command | string | 是 | The command name to be sent. |
-| args | [Record](../../apis-default/arkts-apis/arkts-record-t.md)&lt;string, Object&gt; | 是 | The parameters of session event |
+| args | Record&lt;string, Object&gt; | 是 | The parameters of session event |
 
 **返回值：**
 
@@ -3721,12 +3715,12 @@ Send common commands to this session
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 6600101 | Session service exception. |
-| 6600102 | The session does not exist. |
-| 6600103 | The session controller does not exist. |
-| 6600105 | Invalid session command. |
-| 6600106 | The session is not activated. |
-| 6600107 | Too many commands or events. |
+| [6600101](../errorcode-avsession.md#6600101-会话服务端异常) | Session service exception. |
+| [6600102](../errorcode-avsession.md#6600102-会话不存在) | The session does not exist. |
+| [6600103](../errorcode-avsession.md#6600103-会话控制器不存在) | The session controller does not exist. |
+| [6600105](../errorcode-avsession.md#6600105-无效会话命令) | Invalid session command. |
+| [6600106](../errorcode-avsession.md#6600106-会话未激活) | The session is not activated. |
+| [6600107](../errorcode-avsession.md#6600107-命令消息过载) | Too many commands or events. |
 
 ## sendControlCommand
 
@@ -3761,13 +3755,13 @@ sendControlCommand(command: AVControlCommand, callback: AsyncCallback<void>): vo
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 401 | parameter check failed. 1.Mandatory parameters are left unspecified. 2.Parameter verification failed. |
-| 6600101 | Session service exception. |
-| 6600102 | The session does not exist. |
-| 6600103 | The session controller does not exist. |
-| 6600105 | Invalid session command. |
-| 6600106 | The session is not activated. |
-| 6600107 | Too many commands or events. |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | parameter check failed. 1.Mandatory parameters are left unspecified. 2.Parameter verification failed. |
+| [6600101](../errorcode-avsession.md#6600101-会话服务端异常) | Session service exception. |
+| [6600102](../errorcode-avsession.md#6600102-会话不存在) | The session does not exist. |
+| [6600103](../errorcode-avsession.md#6600103-会话控制器不存在) | The session controller does not exist. |
+| [6600105](../errorcode-avsession.md#6600105-无效会话命令) | Invalid session command. |
+| [6600106](../errorcode-avsession.md#6600106-会话未激活) | The session is not activated. |
+| [6600107](../errorcode-avsession.md#6600107-命令消息过载) | Too many commands or events. |
 
 ## sendControlCommand
 
@@ -3809,13 +3803,13 @@ sendControlCommand(command: AVControlCommand): Promise<void>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 401 | parameter check failed. 1.Mandatory parameters are left unspecified. 2.Parameter verification failed. |
-| 6600101 | Session service exception. |
-| 6600102 | The session does not exist. |
-| 6600103 | The session controller does not exist. |
-| 6600105 | Invalid session command. |
-| 6600106 | The session is not activated. |
-| 6600107 | Too many commands or events. |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | parameter check failed. 1.Mandatory parameters are left unspecified. 2.Parameter verification failed. |
+| [6600101](../errorcode-avsession.md#6600101-会话服务端异常) | Session service exception. |
+| [6600102](../errorcode-avsession.md#6600102-会话不存在) | The session does not exist. |
+| [6600103](../errorcode-avsession.md#6600103-会话控制器不存在) | The session controller does not exist. |
+| [6600105](../errorcode-avsession.md#6600105-无效会话命令) | Invalid session command. |
+| [6600106](../errorcode-avsession.md#6600106-会话未激活) | The session is not activated. |
+| [6600107](../errorcode-avsession.md#6600107-命令消息过载) | Too many commands or events. |
 
 ## sendCustomData
 
@@ -3839,7 +3833,7 @@ sendCustomData(data: Record<string, Object>): Promise<void>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| data | [Record](../../apis-default/arkts-apis/arkts-record-t.md)&lt;string, Object&gt; | 是 | 应用程序填充的自定义数据。服务端仅解析key为'customData'，且Object为string类型的对象。 |
+| data | Record&lt;string, Object&gt; | 是 | 应用程序填充的自定义数据。服务端仅解析key为'customData'，且Object为string类型的对象。 |
 
 **返回值：**
 
@@ -3851,9 +3845,9 @@ sendCustomData(data: Record<string, Object>): Promise<void>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 6600101 | Session service exception. |
-| 6600102 | The session does not exist. |
-| 6600103 | The session controller does not exist. |
+| [6600101](../errorcode-avsession.md#6600101-会话服务端异常) | Session service exception. |
+| [6600102](../errorcode-avsession.md#6600102-会话不存在) | The session does not exist. |
+| [6600103](../errorcode-avsession.md#6600103-会话控制器不存在) | The session controller does not exist. |
 
 ## setDesktopLyricState
 
@@ -3889,11 +3883,11 @@ setDesktopLyricState(state: DesktopLyricState): Promise<void>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 6600101 | Session service exception. |
-| 6600102 | The session does not exist. |
-| 6600103 | The session controller does not exist. |
-| 6600110 | The desktop lyrics feature of this application is not enabled. |
-| 6600111 | The desktop lyrics feature is not supported. |
+| [6600101](../errorcode-avsession.md#6600101-会话服务端异常) | Session service exception. |
+| [6600102](../errorcode-avsession.md#6600102-会话不存在) | The session does not exist. |
+| [6600103](../errorcode-avsession.md#6600103-会话控制器不存在) | The session controller does not exist. |
+| [6600110](../errorcode-avsession.md#6600110-应用程序的桌面歌词功能未开启) | The desktop lyrics feature of this application is not enabled. |
+| [6600111](../errorcode-avsession.md#6600111-当前设备不支持桌面歌词功能) | The desktop lyrics feature is not supported. |
 
 ## setDesktopLyricVisible
 
@@ -3929,11 +3923,11 @@ setDesktopLyricVisible(visible: boolean): Promise<void>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 6600101 | Session service exception. |
-| 6600102 | The session does not exist. |
-| 6600103 | The session controller does not exist. |
-| 6600110 | The desktop lyrics feature of this application is not enabled. |
-| 6600111 | The desktop lyrics feature is not supported. |
+| [6600101](../errorcode-avsession.md#6600101-会话服务端异常) | Session service exception. |
+| [6600102](../errorcode-avsession.md#6600102-会话不存在) | The session does not exist. |
+| [6600103](../errorcode-avsession.md#6600103-会话控制器不存在) | The session controller does not exist. |
+| [6600110](../errorcode-avsession.md#6600110-应用程序的桌面歌词功能未开启) | The desktop lyrics feature of this application is not enabled. |
+| [6600111](../errorcode-avsession.md#6600111-当前设备不支持桌面歌词功能) | The desktop lyrics feature is not supported. |
 
 ## skipToQueueItem
 
@@ -3968,10 +3962,10 @@ skipToQueueItem(itemId: int, callback: AsyncCallback<void>): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 401 | parameter check failed. 1.Mandatory parameters are left unspecified. 2.Parameter verification failed. |
-| 6600101 | Session service exception. |
-| 6600102 | The session does not exist. |
-| 6600103 | The session controller does not exist. |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | parameter check failed. 1.Mandatory parameters are left unspecified. 2.Parameter verification failed. |
+| [6600101](../errorcode-avsession.md#6600101-会话服务端异常) | Session service exception. |
+| [6600102](../errorcode-avsession.md#6600102-会话不存在) | The session does not exist. |
+| [6600103](../errorcode-avsession.md#6600103-会话控制器不存在) | The session controller does not exist. |
 
 ## skipToQueueItem
 
@@ -4013,10 +4007,10 @@ skipToQueueItem(itemId: int): Promise<void>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 401 | parameter check failed. 1.Mandatory parameters are left unspecified. 2.Parameter verification failed. |
-| 6600101 | Session service exception. |
-| 6600102 | The session does not exist. |
-| 6600103 | The session controller does not exist. |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | parameter check failed. 1.Mandatory parameters are left unspecified. 2.Parameter verification failed. |
+| [6600101](../errorcode-avsession.md#6600101-会话服务端异常) | Session service exception. |
+| [6600102](../errorcode-avsession.md#6600102-会话不存在) | The session does not exist. |
+| [6600103](../errorcode-avsession.md#6600103-会话控制器不存在) | The session controller does not exist. |
 
 ## sessionId
 

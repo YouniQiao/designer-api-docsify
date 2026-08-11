@@ -1,6 +1,6 @@
 # Animator
 
-定义Animator类
+Defines the Animator class.
 
 **Since:** 23
 
@@ -22,7 +22,7 @@ import { AnimatorOptions, SimpleAnimatorOptions, AnimatorResult } from 'kits/@ki
 static create(options: AnimatorOptions | SimpleAnimatorOptions): AnimatorResult
 ```
 
-为自定义动画创建Animator对象。This interface depends on the UI context and cannot be used when the UI context is unclear. It is recommended to use {@link ohos.arkui.UIContext.UIContext#createAnimator}.
+Create an animator object for custom animation.This interface depends on the UI context and cannot be used when the UI context is unclear. It is recommended to use {@link ohos.arkui.UIContext.UIContext#createAnimator}.
 
 **Since:** 23
 
@@ -50,5 +50,5 @@ static create(options: AnimatorOptions | SimpleAnimatorOptions): AnimatorResult
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. Possible causes: &lt;br&gt; 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameters types. &lt;br&gt; 3. Parameter verification failed. @static |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: &lt;br&gt; 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameters types. &lt;br&gt; 3. Parameter verification failed. @static |
 

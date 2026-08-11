@@ -1,6 +1,6 @@
 # OnPageVisibleEvent
 
-Defines the triggered callback when previous page will no longer be drawn and next page begin to draw.
+Represents the callback invoked when the old page is not displayed and the new page is about to be visible.
 
 **Since:** 12
 
@@ -16,7 +16,7 @@ Defines the triggered callback when previous page will no longer be drawn and ne
 url: string
 ```
 
-The URL of page.
+URL for the download task.
 
 **Type:** string
 

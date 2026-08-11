@@ -1,6 +1,6 @@
 # HdrCompositionConfig
 
-HDR合成配置选项。
+Options for HDR composition configuration.
 
 **Since:** 26.0.0
 
@@ -22,7 +22,7 @@ import { DrawableDescriptor, AnimatedDrawableDescriptor, AnimationStopMode, Anim
 rect: Rectangle
 ```
 
-HDR合成的矩形区域。
+Rectangle area for HDR composition.
 
 **Type:** [Rectangle](../arkts-components/arkts-arkui-rectangle-i.md)
 

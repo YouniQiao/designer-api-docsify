@@ -6,7 +6,7 @@ typedef struct ArkUI_RenderBlurStyleOption ArkUI_RenderBlurStyleOption
 
 ## Overview
 
-Handle to ArkUI render blur style option.
+Defines a blur style.
 
 **Since**: 26.0.0
 

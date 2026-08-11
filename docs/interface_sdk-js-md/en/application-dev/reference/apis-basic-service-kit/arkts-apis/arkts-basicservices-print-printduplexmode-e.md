@@ -1,6 +1,6 @@
 # PrintDuplexMode
 
-打印单双面模式的枚举。
+Enumerates the duplex modes.
 
 **Since:** 11
 
@@ -16,7 +16,7 @@
 DUPLEX_MODE_NONE = 0
 ```
 
-表示单面打印。
+Simplex (single-sided).
 
 **Since:** 11
 
@@ -32,7 +32,7 @@ DUPLEX_MODE_NONE = 0
 DUPLEX_MODE_LONG_EDGE = 1
 ```
 
-表示双面打印沿长边翻转。
+Duplex (double-sided) with flipping on long edge.
 
 **Since:** 11
 
@@ -48,7 +48,7 @@ DUPLEX_MODE_LONG_EDGE = 1
 DUPLEX_MODE_SHORT_EDGE = 2
 ```
 
-表示双面打印沿短边翻转。
+Duplex (double-sided) with flipping on short edge.
 
 **Since:** 11
 

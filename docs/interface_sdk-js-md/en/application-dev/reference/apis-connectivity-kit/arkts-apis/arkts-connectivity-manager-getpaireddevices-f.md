@@ -12,7 +12,7 @@ import { manager } from 'kits/@kit.ConnectivityKit';
 function getPairedDevices(): string[]
 ```
 
-获取已与当前设备配对的设备列表。如果用户有ohos.permission.GET_NEARLINK_PEER_MAC权限，则返回真实设备地址。否则，返回随机的设备地址
+Gets the list of devices that have been paired with the current device.If the user has the ohos.permission.GET_NEARLINK_PEER_MAC permission, the real device address is returned.Otherwise, a random device address is returned.
 
 **Since:** 26.0.0
 
@@ -36,8 +36,8 @@ function getPairedDevices(): string[]
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 801 | Capability not supported because the chip does not support it. |
+| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported because the chip does not support it. |
 | 36100003 | NearLink disabled. |
 | 36100099 | Operation failed. |
-| 201 | Permission denied. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
 

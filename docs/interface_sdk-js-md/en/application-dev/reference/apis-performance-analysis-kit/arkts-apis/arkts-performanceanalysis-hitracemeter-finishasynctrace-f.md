@@ -12,9 +12,10 @@ import { hiTraceMeter } from 'kits/@kit.PerformanceAnalysisKit';
 function finishAsyncTrace(level: HiTraceOutputLevel, name: string, taskId: int): void
 ```
 
-标记一个异步跟踪耗时任务的结束，分级控制跟踪输出。
+Stops an asynchronous trace with the trace output level specified.
 
-finishAsyncTrace的level、name和taskId必须与流程开始的[startAsyncTrace()](arkts-performanceanalysis-hitracemeter-startasynctrace-f.md#startasynctrace)对应参数值一致。
+The **level**, **name**, and **taskId** used in **finishAsyncTrace()** must be the same as those of  
+[startAsyncTrace()](arkts-performanceanalysis-hitracemeter-startasynctrace-f.md#startasynctrace).
 
 **Since:** 19
 
@@ -30,9 +31,9 @@ finishAsyncTrace的level、name和taskId必须与流程开始的[startAsyncTrace
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| level | [HiTraceOutputLevel](arkts-performanceanalysis-hitracemeter-hitraceoutputlevel-e.md) | Yes | 跟踪输出级别，必须与流程开始的 [startAsyncTrace()](arkts-performanceanalysis-hitracemeter-startasynctrace-f.md#startasynctrace)的level参数值一致。 |
-| name | string | Yes | 要跟踪的任务名称，必须与流程开始的[startAsyncTrace()](arkts-performanceanalysis-hitracemeter-startasynctrace-f.md#startasynctrace)的name 参数值一致。 |
-| taskId | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | 任务id，必须与流程开始的[startAsyncTrace()](arkts-performanceanalysis-hitracemeter-startasynctrace-f.md#startasynctrace)的taskId参数值一致。 |
+| level | [HiTraceOutputLevel](arkts-performanceanalysis-hitracemeter-hitraceoutputlevel-e.md) | Yes | Trace output level. |
+| name | string | Yes | Name of the trace to start. |
+| taskId | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | Task ID. |
 
 ## Examples
 

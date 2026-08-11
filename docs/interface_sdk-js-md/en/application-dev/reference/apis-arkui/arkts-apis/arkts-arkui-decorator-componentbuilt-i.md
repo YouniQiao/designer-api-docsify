@@ -1,6 +1,6 @@
 # ComponentBuilt
 
-定义ComponentBuilt方法装饰器
+Define ComponentBuilt Method Decorator.
 
 **Since:** 24
 

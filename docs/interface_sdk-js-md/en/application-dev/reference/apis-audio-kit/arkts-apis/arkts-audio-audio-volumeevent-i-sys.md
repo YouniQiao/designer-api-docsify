@@ -1,6 +1,6 @@
 # VolumeEvent
 
-音量改变时，应用接收到的事件。
+Describes the event received by the application when the volume is changed.
 
 **Since:** 9
 

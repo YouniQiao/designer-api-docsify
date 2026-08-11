@@ -1,6 +1,6 @@
 # Client
 
-管理SSAP客户端。在调用ssap客户端方法之前，必须使用{@link createClient}创建ssap客户端实例。
+Manages SSAP client. Before calling a SSAP client method,you must use {@link createClient} to create a ssap client instance.
 
 **Since:** 26.0.0
 
@@ -22,7 +22,7 @@ import { ssap } from 'kits/@kit.ConnectivityKit';
 callMethod(method: Method): Promise<Method>
 ```
 
-调用服务端的方法。
+Calls the method of a server.
 
 **Since:** 26.0.0
 
@@ -42,13 +42,13 @@ callMethod(method: Method): Promise<Method>
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| method | [Method](arkts-connectivity-ssap-method-i-sys.md) | Yes | 指示要调用的方法 |
+| method | [Method](arkts-connectivity-ssap-method-i-sys.md) | Yes | Indicates the Method to call. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;Method&gt; | Promise用于返回方法结果。 |
+| Promise&lt;Method&gt; | Promise used to return the Method result. |
 
 **Error codes:**
 
@@ -56,8 +56,8 @@ callMethod(method: Method): Promise<Method>
 | --- | --- |
 | 36100003 | NearLink disabled. |
 | 36100099 | Operation failed. |
-| 201 | Permission denied. |
-| 202 | Non-system applications are not allowed to use system APIs. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Non-system applications are not allowed to use system APIs. |
 | 36100044 | NearLink standard UUID not allowed. |
 | 36100043 | Invalid UUID. |
 
@@ -67,7 +67,7 @@ callMethod(method: Method): Promise<Method>
 offEventNotify(callback?: Callback<Event>): void
 ```
 
-取消订阅事件通知。
+Unsubscribes from event notifications.
 
 **Since:** 26.0.0
 
@@ -85,7 +85,7 @@ offEventNotify(callback?: Callback<Event>): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;Event&gt; | No | 用于监听事件通知事件的回调。 |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;Event&gt; | No | Callback used to listen for the event notified event. |
 
 ## onEventNotify
 
@@ -93,9 +93,9 @@ offEventNotify(callback?: Callback<Event>): void
 onEventNotify(callback: Callback<Event>): void
 ```
 
-订阅事件通知。
+Subscribes to event notifications.
 
-只有授予了ohos.permission.NEARLINK_ACCESS权限的系统应用程序才能访问此事件。
+This event is accessible only to system applications that granted the ohos.permission.NEARLINK_ACCESS permission.
 
 **Since:** 26.0.0
 
@@ -113,7 +113,7 @@ onEventNotify(callback: Callback<Event>): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;Event&gt; | Yes | 用于监听事件通知事件的回调。 |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;Event&gt; | Yes | Callback used to listen for the event notified event. |
 
 ## readDescriptor
 
@@ -121,7 +121,7 @@ onEventNotify(callback: Callback<Event>): void
 readDescriptor(descriptor: PropertyDescriptor): Promise<PropertyDescriptor>
 ```
 
-读取服务器的描述符。
+Reads the descriptor of a server.
 
 **Since:** 26.0.0
 
@@ -141,13 +141,13 @@ readDescriptor(descriptor: PropertyDescriptor): Promise<PropertyDescriptor>
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| descriptor | [PropertyDescriptor](arkts-connectivity-ssap-propertydescriptor-i.md) | Yes | 指示要读取的描述符 |
+| descriptor | [PropertyDescriptor](arkts-connectivity-ssap-propertydescriptor-i.md) | Yes | Indicates the descriptor to read. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;PropertyDescriptor&gt; | Promise用于返回描述符值。 |
+| Promise&lt;PropertyDescriptor&gt; | Promise used to return the descriptor value. |
 
 **Error codes:**
 
@@ -155,8 +155,8 @@ readDescriptor(descriptor: PropertyDescriptor): Promise<PropertyDescriptor>
 | --- | --- |
 | 36100003 | NearLink disabled. |
 | 36100099 | Operation failed. |
-| 201 | Permission denied. |
-| 202 | Non-system applications are not allowed to use system APIs. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Non-system applications are not allowed to use system APIs. |
 | 36100044 | NearLink standard UUID not allowed. |
 | 36100043 | Invalid UUID in descriptor. |
 
@@ -166,7 +166,7 @@ readDescriptor(descriptor: PropertyDescriptor): Promise<PropertyDescriptor>
 setPropertyIndication(property: Property, enable: boolean): Promise<void>
 ```
 
-启用或禁用属性值变更指示。
+Enables or disables indication of a property when value changed.
 
 **Since:** 26.0.0
 
@@ -186,14 +186,14 @@ setPropertyIndication(property: Property, enable: boolean): Promise<void>
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| property | [Property](arkts-connectivity-ssap-property-i.md) | Yes | 要指示的属性。 |
-| enable | boolean | Yes | 指定是否启用属性的指示 |
+| property | [Property](arkts-connectivity-ssap-property-i.md) | Yes | Indicates the property to indicate. |
+| enable | boolean | Yes | Specifies whether to enable indication of the property. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | 返回promise对象。 |
+| Promise&lt;void&gt; | Returns the promise object. |
 
 **Error codes:**
 
@@ -202,8 +202,8 @@ setPropertyIndication(property: Property, enable: boolean): Promise<void>
 | 36100003 | NearLink disabled. |
 | 36100099 | Operation failed. |
 | 36100030 | The connection is not established. |
-| 201 | Permission denied. |
-| 202 | Non-system applications are not allowed to use system APIs. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Non-system applications are not allowed to use system APIs. |
 | 36100044 | NearLink standard UUID not allowed. |
 | 36100043 | Invalid UUID in property. |
 
@@ -213,9 +213,10 @@ setPropertyIndication(property: Property, enable: boolean): Promise<void>
 writeDescriptor(descriptor: PropertyDescriptor): Promise<void>
 ```
 
-写入服务端的描述符。
+Writes the descriptor of a server.
 
-此方法不支持写入客户端属性配置描述符。要写入客户端属性配置描述符，请改为调用[setPropertyNotification](arkts-connectivity-ssap-client-i.md#setpropertynotification)或[setPropertyIndication](arkts-connectivity-ssap-client-i-sys.md#setpropertyindication)。
+This method does not support writing client property configuration descriptors. To write client property configuration descriptors, call [setPropertyNotification](arkts-connectivity-ssap-client-i.md#setpropertynotification) or  
+[setPropertyIndication](arkts-connectivity-ssap-client-i-sys.md#setpropertyindication) instead.
 
 **Since:** 26.0.0
 
@@ -235,13 +236,13 @@ writeDescriptor(descriptor: PropertyDescriptor): Promise<void>
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| descriptor | [PropertyDescriptor](arkts-connectivity-ssap-propertydescriptor-i.md) | Yes | 指示要写入的描述符。 &lt;br&gt;描述符类型不应为CLIENT_PROPERTY_CONFIG。 |
+| descriptor | [PropertyDescriptor](arkts-connectivity-ssap-propertydescriptor-i.md) | Yes | Indicates the descriptor to write. &lt;br&gt;The descriptor type should not be CLIENT_PROPERTY_CONFIG. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise用于返回结果。 |
+| Promise&lt;void&gt; | Promise used to return the result. |
 
 **Error codes:**
 
@@ -249,8 +250,8 @@ writeDescriptor(descriptor: PropertyDescriptor): Promise<void>
 | --- | --- |
 | 36100003 | NearLink disabled. |
 | 36100099 | Operation failed. |
-| 201 | Permission denied. |
-| 202 | Non-system applications are not allowed to use system APIs. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Non-system applications are not allowed to use system APIs. |
 | 36100044 | NearLink standard UUID not allowed. |
 | 36100043 | Invalid UUID in descriptor. |
 

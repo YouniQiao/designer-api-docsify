@@ -4,7 +4,7 @@
 declare type EditableTextOnChangeCallback = (value: string, previewText?: PreviewText, options?: TextChangeOptions) => void
 ```
 
-输入内容发生变化时，触发该回调。
+Represents the callback triggered when the content in the text box changes.
 
 **Since:** 12
 

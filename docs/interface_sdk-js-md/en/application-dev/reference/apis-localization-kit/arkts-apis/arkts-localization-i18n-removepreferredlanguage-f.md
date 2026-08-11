@@ -12,15 +12,13 @@ import { i18n } from 'kits/@kit.LocalizationKit';
 export function removePreferredLanguage(index: int): boolean
 ```
 
-从系统偏好语言列表中移除指定位置的偏好语言。
+Removes a preferred language from the specified position on the preferred language list.
 
 **Since:** 8
 
 **ArkTS mode:** ArkTS-Dyn only, since version 8.
 
 **Deprecated since:** 9
-
-**Substitutes:** [i18n.System.removePreferredLanguage](arkts-localization-i18n-system-c-sys.md#removepreferredlanguage)
 
 **Required permissions:** ohos.permission.UPDATE_CONFIGURATION
 
@@ -32,11 +30,11 @@ export function removePreferredLanguage(index: int): boolean
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| index | int | Yes | 待移除偏好语言在系统偏好语言列表中的位置。 |
+| index | int | Yes | Position of the preferred language to delete. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| boolean | true表示移除成功，false表示移除失败。 |
+| boolean | Whether the operation is successful. The value **true** indicates that the operation is successful, and the value **false** indicates the opposite. |
 

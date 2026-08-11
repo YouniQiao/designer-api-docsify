@@ -1,6 +1,6 @@
 # OsAccountSwitchEventData (System API)
 
-表示系统账号前后台开始切换和结束切换事件的数据结构。
+Defines the event that indicates the start or end of a foreground-background OS account switchover.
 
 **Since:** 12
 
@@ -24,7 +24,7 @@ import { osAccount } from 'kits/@kit.BasicServicesKit';
 displayId?: long
 ```
 
-切换事件发生的逻辑屏ID，默认值为0。
+ID of the logical display where the switchover occurs. The default value is **0**.
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：long
 
@@ -44,7 +44,7 @@ displayId?: long
 fromAccountId: int
 ```
 
-切换来源系统账号ID。
+ID of the source OS account.
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
@@ -64,7 +64,7 @@ fromAccountId: int
 toAccountId: int
 ```
 
-切换目标系统账号ID。
+ID of the target OS account.
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 

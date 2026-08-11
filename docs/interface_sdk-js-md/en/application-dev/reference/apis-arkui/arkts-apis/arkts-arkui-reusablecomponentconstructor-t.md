@@ -4,7 +4,7 @@
 declare type ReusableComponentConstructor = Function
 ```
 
-复用自定义组件初始化函数。
+Function for initializing the reusable custom component.
 
 **Since:** 26.0.0
 

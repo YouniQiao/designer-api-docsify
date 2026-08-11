@@ -1,6 +1,6 @@
 # Router
 
-通过不同的uri访问不同的页面。
+The **Router** module provides APIs to access pages through URIs.
 
 **Since:** 3
 
@@ -26,7 +26,12 @@ import { BackRouterOptions, DisableAlertBeforeBackPageOptions, RouterOptions, Ro
 static back(options?: BackRouterOptions): void
 ```
 
-返回上一页面或指定的页面。
+Returns to the previous or a specified page.
+
+> **NOTE：**
+> 
+> In the example, the **uri** field indicates the page route, which is specified by the **pages** list in the
+> configuration file.
 
 **Since:** 3
 
@@ -44,7 +49,7 @@ static back(options?: BackRouterOptions): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| options | [BackRouterOptions](arkts-arkui-system-router-backrouteroptions-i.md) | No | 详细请参考BackRouterOptions。 |
+| options | [BackRouterOptions](arkts-arkui-system-router-backrouteroptions-i.md) | No | For details, see **BackRouterOptions**. |
 
 ## clear
 
@@ -52,7 +57,7 @@ static back(options?: BackRouterOptions): void
 static clear(): void
 ```
 
-清空页面栈中的所有历史页面，仅保留当前页面作为栈顶页面。
+Clears all historical pages in the stack and retains only the current page at the top of the stack.
 
 **Since:** 3
 
@@ -72,7 +77,7 @@ static clear(): void
 static disableAlertBeforeBackPage(options?: DisableAlertBeforeBackPageOptions): void
 ```
 
-禁用页面返回询问对话框。
+Disables the display of a confirm dialog box before returning to the previous page.
 
 **Since:** 6
 
@@ -90,7 +95,7 @@ static disableAlertBeforeBackPage(options?: DisableAlertBeforeBackPageOptions): 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| options | [DisableAlertBeforeBackPageOptions](arkts-arkui-system-router-disablealertbeforebackpageoptions-i.md) | No | 详细请参见DisableAlertBeforeBackPageOptions。 |
+| options | [DisableAlertBeforeBackPageOptions](arkts-arkui-system-router-disablealertbeforebackpageoptions-i.md) | No | For details, see **DisableAlertBeforeBackPageOptions**. |
 
 ## enableAlertBeforeBackPage
 
@@ -98,7 +103,7 @@ static disableAlertBeforeBackPage(options?: DisableAlertBeforeBackPageOptions): 
 static enableAlertBeforeBackPage(options: EnableAlertBeforeBackPageOptions): void
 ```
 
-开启页面返回询问对话框。
+Enables the display of a confirm dialog box before returning to the previous page.
 
 **Since:** 6
 
@@ -116,7 +121,7 @@ static enableAlertBeforeBackPage(options: EnableAlertBeforeBackPageOptions): voi
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| options | [EnableAlertBeforeBackPageOptions](arkts-arkui-system-router-enablealertbeforebackpageoptions-i.md) | Yes | 详细请参见EnableAlertBeforeBackPageOptions。 |
+| options | [EnableAlertBeforeBackPageOptions](arkts-arkui-system-router-enablealertbeforebackpageoptions-i.md) | Yes | For details, see **EnableAlertBeforeBackPageOptions**. |
 
 ## getLength
 
@@ -124,7 +129,7 @@ static enableAlertBeforeBackPage(options: EnableAlertBeforeBackPageOptions): voi
 static getLength(): string
 ```
 
-获取当前在页面栈内的页面数量。
+Obtains the number of pages in the current stack.
 
 **Since:** 3
 
@@ -142,7 +147,7 @@ static getLength(): string
 
 | Type | Description |
 | --- | --- |
-| string | 页面数量，页面栈支持最大数值是32。 |
+| string | Number of pages in the stack. The maximum value is **32**. |
 
 ## getParams
 
@@ -150,7 +155,7 @@ static getLength(): string
 static getParams(): ParamsInterface
 ```
 
-获取当前页面的参数信息。
+Obtains parameter information about the current page.
 
 **Since:** 7
 
@@ -168,7 +173,7 @@ static getParams(): ParamsInterface
 
 | Type | Description |
 | --- | --- |
-| [ParamsInterface](arkts-arkui-paramsinterface-t.md) | 详细请参见ParamsInterface。 |
+| [ParamsInterface](arkts-arkui-paramsinterface-t.md) | For details, see **ParamsInterface**. |
 
 ## getState
 
@@ -176,7 +181,7 @@ static getParams(): ParamsInterface
 static getState(): RouterState
 ```
 
-获取当前页面的状态信息。
+Obtains state information about the current page.
 
 **Since:** 3
 
@@ -194,7 +199,7 @@ static getState(): RouterState
 
 | Type | Description |
 | --- | --- |
-| [RouterState](arkts-arkui-router-routerstate-i.md) | 详细请参见RouterState。 |
+| [RouterState](arkts-arkui-router-routerstate-i.md) | For details, see **RouterState**. |
 
 ## push
 
@@ -202,11 +207,11 @@ static getState(): RouterState
 static push(options: RouterOptions): void
 ```
 
-跳转到应用内的指定页面。
+Navigates to a specified page in the application.
 
-> **说明：**
+> **NOTE：**
 > 
-> 页面路由栈支持的最大Page数量为32。
+> The page routing stack supports a maximum of 32 pages.
 
 **Since:** 3
 
@@ -224,7 +229,7 @@ static push(options: RouterOptions): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| options | [RouterOptions](arkts-arkui-system-router-routeroptions-i.md) | Yes | 页面路由参数，详细请参考RouterOptions。 |
+| options | [RouterOptions](arkts-arkui-system-router-routeroptions-i.md) | Yes | Page routing parameters. For details, see **RouterOptions**. |
 
 ## replace
 
@@ -232,7 +237,7 @@ static push(options: RouterOptions): void
 static replace(options: RouterOptions): void
 ```
 
-用应用内的某个页面替换当前页面，并销毁被替换的页面。
+Replaces the current page with another one in the application and destroys the current page.
 
 **Since:** 3
 
@@ -250,5 +255,5 @@ static replace(options: RouterOptions): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| options | [RouterOptions](arkts-arkui-system-router-routeroptions-i.md) | Yes | 页面路由参数，详细请参考RouterOptions。 |
+| options | [RouterOptions](arkts-arkui-system-router-routeroptions-i.md) | Yes | Page routing parameters. For details, see **RouterOptions**. |
 

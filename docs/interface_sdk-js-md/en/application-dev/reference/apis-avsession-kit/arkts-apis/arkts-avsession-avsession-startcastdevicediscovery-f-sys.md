@@ -12,7 +12,7 @@ import { avSession } from 'kits/@kit.AVSessionKit';
 function startCastDeviceDiscovery(callback: AsyncCallback<void>): void
 ```
 
-开始设备搜索发现。结果通过callback异步回调方式返回。
+Start device discovery.
 
 **Since:** 10
 
@@ -28,19 +28,25 @@ function startCastDeviceDiscovery(callback: AsyncCallback<void>): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | 回调函数。当命令发送成功并开始搜索，err为undefined，否则返回错误对象。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | a callback function |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 202 | Not System App. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not System App. |
 
 ## Examples
 
 ```TypeScript
-avSession.startCastDeviceDiscovery(() => {
-    console.info('Succeeded in starting cast device discovery.');
+import { BusinessError } from '@kit.BasicServicesKit';
+
+avSession.startCastDeviceDiscovery((err: BusinessError) => {
+  if (err) {
+    console.error(`startCastDeviceDiscovery BusinessError: code: ${err.code}, message: ${err.message}`);
+  } else {
+    console.info('startCastDeviceDiscovery successfully');
+  }
 });
 ```
 
@@ -51,7 +57,7 @@ avSession.startCastDeviceDiscovery(() => {
 function startCastDeviceDiscovery(filter: int, callback: AsyncCallback<void>): void
 ```
 
-指定过滤条件，开始设备搜索发现。结果通过callback异步回调方式返回。
+Start device discovery.
 
 **Since:** 10
 
@@ -67,22 +73,28 @@ function startCastDeviceDiscovery(filter: int, callback: AsyncCallback<void>): v
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| filter | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | 进行设备发现的过滤条件，由ProtocolType组合而成。 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | 回调函数。当命令发送成功并开始搜索，err为undefined，否则返回错误对象。 |
+| filter | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | device filter when discovering, can be an union of { |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | a callback function |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | parameter check failed. 1.Mandatory parameters are left unspecified. 2.Parameter verification failed. |
-| 202 | Not System App. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | parameter check failed. 1.Mandatory parameters are left unspecified. 2.Parameter verification failed. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not System App. |
 
 ## Examples
 
 ```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
 let filter = 2;
-avSession.startCastDeviceDiscovery(filter, () => {
-    console.info('Succeeded in starting cast device discovery.');
+avSession.startCastDeviceDiscovery(filter, (err: BusinessError) => {
+  if (err) {
+    console.error(`startCastDeviceDiscovery BusinessError: code: ${err.code}, message: ${err.message}`);
+  } else {
+    console.info('startCastDeviceDiscovery successfully');
+  }
 });
 ```
 
@@ -93,7 +105,7 @@ avSession.startCastDeviceDiscovery(filter, () => {
 function startCastDeviceDiscovery(filter?: int, drmSchemes?: Array<string>): Promise<void>
 ```
 
-开始设备搜索发现。结果通过Promise异步回调方式返回。
+Start device discovery.
 
 **Since:** 10
 
@@ -109,29 +121,33 @@ function startCastDeviceDiscovery(filter?: int, drmSchemes?: Array<string>): Pro
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| filter | ArkTS-Dyn: number  <br>ArkTS-Sta：int | No | 进行设备发现的过滤条件，由ProtocolType组合而成。<br>**Since:** 12 |
-| drmSchemes | Array&lt;string&gt; | No | 进行支持DRM资源播放的设备发现的过滤条件，由DRM uuid组合而成。 &lt;br/&gt;从API version 12开始支持该可选参 数。<br>**Since:** 12 |
+| filter | ArkTS-Dyn: number  <br>ArkTS-Sta：int | No | device filter when discovering, can be an union of {@link ProtocolType}<br>**Since:** 12 |
+| drmSchemes | Array&lt;string&gt; | No | filter drm-enabled devices which are represented by uuid. It is effective when protocol type is TYPE_CAST_PLUS_STREAM.<br>**Since:** 12 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise对象。当命令发送成功并开始搜索，无返回结果，否则返回错误对象。 |
+| Promise&lt;void&gt; | Promise for the result |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | parameter check failed. 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. 3.Parameter verification failed. |
-| 202 | Not System App.<br>**Applicable version:** 12 and later |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | parameter check failed. 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. 3.Parameter verification failed. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not System App.<br>**Applicable version:** 12 and later |
 
 ## Examples
 
 ```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
 let filter = 2;
 let drmSchemes = ['3d5e6d35-9b9a-41e8-b843-dd3c6e72c42c'];
 avSession.startCastDeviceDiscovery(filter, drmSchemes).then(() => {
-  console.info('Succeeded in starting cast device discovery.');
+  console.info('startCastDeviceDiscovery successfully');
+}).catch((err: BusinessError) => {
+  console.error(`startCastDeviceDiscovery BusinessError: code: ${err.code}, message: ${err.message}`);
 });
 ```
 

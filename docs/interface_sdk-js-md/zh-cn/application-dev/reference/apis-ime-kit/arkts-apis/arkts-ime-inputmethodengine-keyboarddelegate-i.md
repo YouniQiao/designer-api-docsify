@@ -23,12 +23,6 @@ false表示不消费。
 
 **系统能力：** SystemCapability.MiscServices.InputMethodFramework
 
-## 导入模块
-
-```TypeScript
-import { inputMethodEngine } from 'kits/@kit.IMEKit';
-```
-
 ## off('keyDown' | 'keyUp')
 
 ```TypeScript
@@ -282,6 +276,17 @@ offCursorContextChange(callback?: CursorContextChangeCallback): void
 | --- | --- | --- | --- |
 | callback | [CursorContextChangeCallback](arkts-ime-inputmethodengine-cursorcontextchangecallback-t.md) | 否 | 取消订阅的回调函数。 参数不填写时，取消订阅type对应的所有回调事件。 changes. |
 
+## 示例
+
+```TypeScript
+let inputMethodEngineDelegate = inputMethodEngine.getKeyboardDelegate();
+if (inputMethodEngineDelegate) {
+  inputMethodEngineDelegate!.offCursorContextChange((x: double, y: double, height: double) => {
+    console.info('delete cursorContextChange notification.');
+  });
+}
+```
+
 ## offEditorAttributeChanged
 
 ```TypeScript
@@ -303,6 +308,15 @@ offEditorAttributeChanged(callback?: Callback<EditorAttribute>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;EditorAttribute&gt; | 否 | 所要取消订阅的回调处理函数。 参数不填写时，取消订阅type对应的所有回调事件。 |
+
+## 示例
+
+```TypeScript
+let inputMethodEngineDelegate = inputMethodEngine.getKeyboardDelegate();
+if (inputMethodEngineDelegate) {
+  inputMethodEngineDelegate!.offEditorAttributeChanged();
+}
+```
 
 ## offKeyDown
 
@@ -326,6 +340,22 @@ offKeyDown(callback?: KeyEventCallback): void
 | --- | --- | --- | --- |
 | callback | [KeyEventCallback](arkts-ime-inputmethodengine-keyeventcallback-t.md) | 否 | 取消订阅的回调函数。 参数不填写时，取消订阅type对应的所有回调事件。 |
 
+## 示例
+
+```TypeScript
+let inputMethodEngineDelegate = inputMethodEngine.getKeyboardDelegate();
+if (inputMethodEngineDelegate) {
+  inputMethodEngineDelegate!.offKeyUp((keyEvent: inputMethodEngine.KeyEvent) => {
+    console.info('delete keyUp notification.');
+    return true;
+  });
+  inputMethodEngineDelegate!.offKeyDown((keyEvent: inputMethodEngine.KeyEvent) => {
+    console.info('delete keyDown notification.');
+    return true;
+  });
+}
+```
+
 ## offKeyEvent
 
 ```TypeScript
@@ -347,6 +377,21 @@ offKeyEvent(callback?: InputKeyEventCallback): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | callback | [InputKeyEventCallback](arkts-ime-inputmethodengine-inputkeyeventcallback-t.md) | 否 | 取消订阅的回调函数。 参数不填写时，取消订阅type对应的所有回调事件。 |
+
+## 示例
+
+```TypeScript
+import type { KeyEvent } from '@kit.InputKit';
+
+let inputMethodEngineDelegate = inputMethodEngine.getKeyboardDelegate();
+if (inputMethodEngineDelegate) {
+  inputMethodEngineDelegate!.offKeyEvent((keyEvent: KeyEvent) => {
+    console.info('This is a callback function which will be deregistered.');
+    return true;
+  });
+  inputMethodEngineDelegate!.offKeyEvent();
+}
+```
 
 ## offKeyUp
 
@@ -370,6 +415,22 @@ offKeyUp(callback?: KeyEventCallback): void
 | --- | --- | --- | --- |
 | callback | [KeyEventCallback](arkts-ime-inputmethodengine-keyeventcallback-t.md) | 否 | 取消订阅的回调函数。 参数不填写时，取消订阅type对应的所有回调事件。 |
 
+## 示例
+
+```TypeScript
+let inputMethodEngineDelegate = inputMethodEngine.getKeyboardDelegate();
+if (inputMethodEngineDelegate) {
+  inputMethodEngineDelegate!.offKeyUp((keyEvent: inputMethodEngine.KeyEvent) => {
+    console.info('delete keyUp notification.');
+    return true;
+  });
+  inputMethodEngineDelegate!.offKeyDown((keyEvent: inputMethodEngine.KeyEvent) => {
+    console.info('delete keyDown notification.');
+    return true;
+  });
+}
+```
+
 ## offSelectionChange
 
 ```TypeScript
@@ -392,6 +453,17 @@ offSelectionChange(callback?: SelectionChangeCallback): void
 | --- | --- | --- | --- |
 | callback | [SelectionChangeCallback](arkts-ime-inputmethodengine-selectionchangecallback-t.md) | 否 | 取消订阅的回调函数。 参数不填写时，取消订阅type对应的所有回调事件。 |
 
+## 示例
+
+```TypeScript
+let inputMethodEngineDelegate = inputMethodEngine.getKeyboardDelegate();
+if (inputMethodEngineDelegate) {
+  inputMethodEngineDelegate!.offSelectionChange((oldBegin: int, oldEnd: int, newBegin: int, newEnd: int) => {
+    console.info('delete selectionChange notification.');
+  });
+}
+```
+
 ## offTextChange
 
 ```TypeScript
@@ -413,6 +485,17 @@ offTextChange(callback?: Callback<string>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;string&gt; | 否 | 取消订阅的回调函数。 参数不填写时，取消订阅type对应的所有回调事件。 |
+
+## 示例
+
+```TypeScript
+let inputMethodEngineDelegate = inputMethodEngine.getKeyboardDelegate();
+if (inputMethodEngineDelegate) {
+  inputMethodEngineDelegate!.offTextChange((text: string) => {
+    console.info(`delete textChange notification. text: ${text}`);
+  });
+}
+```
 
 ## on('keyDown' | 'keyUp')
 
@@ -711,6 +794,17 @@ onCursorContextChange(callback: CursorContextChangeCallback): void
 | --- | --- | --- | --- |
 | callback | [CursorContextChangeCallback](arkts-ime-inputmethodengine-cursorcontextchangecallback-t.md) | 是 | 回调函数，返回光标信息。 x为光标上端的的x坐标值，单位为px。y为光标上端的y坐标值，单位为px。height为光标的高度值，单位为px。 |
 
+## 示例
+
+```TypeScript
+let inputMethodEngineDelegate = inputMethodEngine.getKeyboardDelegate();
+if (inputMethodEngineDelegate) {
+  inputMethodEngineDelegate!.onCursorContextChange((x: double, y: double, height: double) => {
+    console.info(`inputMethodEngine cursorContextChange x:${x}, y:${y}, height:${height}`);
+  });
+}
+```
+
 ## onEditorAttributeChanged
 
 ```TypeScript
@@ -732,6 +826,17 @@ onEditorAttributeChanged(callback: Callback<EditorAttribute>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;EditorAttribute&gt; | 是 | 回调函数，返回变化的编辑框属性。 |
+
+## 示例
+
+```TypeScript
+let inputMethodEngineDelegate = inputMethodEngine.getKeyboardDelegate();
+if (inputMethodEngineDelegate) {
+  inputMethodEngineDelegate!.onEditorAttributeChanged((attr: inputMethodEngine.EditorAttribute) => {
+    console.info(`Succeeded in receiving attribute of editor, inputPattern = ${attr.inputPattern}, enterKeyType = ${attr.enterKeyType}`);
+  });
+}
+```
 
 ## onKeyDown
 
@@ -755,6 +860,26 @@ onKeyDown(callback: KeyEventCallback): void
 | --- | --- | --- | --- |
 | callback | [KeyEventCallback](arkts-ime-inputmethodengine-keyeventcallback-t.md) | 是 | 回调函数，返回按键信息。 若按键事件被事件订阅者消费，则callback应返回true，否则返回false。 |
 
+## 示例
+
+```TypeScript
+let KeyboardDelegate = inputMethodEngine.getKeyboardDelegate()
+let inputMethodEngineDelegate = inputMethodEngine.getKeyboardDelegate();
+if (inputMethodEngineDelegate) {
+
+  inputMethodEngineDelegate!.onKeyUp((keyEvent: inputMethodEngine.KeyEvent) => {
+    console.info(`inputMethodEngine keyCode.(keyDown): ${keyEvent.keyCode}`);
+    console.info(`inputMethodEngine keyAction.(keyDown): ${keyEvent.keyAction}`);
+    return true;
+  });
+  inputMethodEngineDelegate!.onKeyDown((keyEvent: inputMethodEngine.KeyEvent) => {
+    console.info(`inputMethodEngine keyCode.(keyDown): ${keyEvent.keyCode}`);
+    console.info(`inputMethodEngine keyAction.(keyDown): ${keyEvent.keyAction}`);
+    return true;
+  });
+}
+```
+
 ## onKeyEvent
 
 ```TypeScript
@@ -776,6 +901,23 @@ onKeyEvent(callback: InputKeyEventCallback): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | callback | [InputKeyEventCallback](arkts-ime-inputmethodengine-inputkeyeventcallback-t.md) | 是 | 回调函数，入参为按键事件信息，返回值类型为布尔类型。 入参按键事件信息的数据类型为InputKeyEvent。 若按键事件被事件订阅者消费，则callback应返回true，否则返回false。 |
+
+## 示例
+
+```TypeScript
+import type { KeyEvent } from '@kit.InputKit';
+
+let inputMethodEngineDelegate = inputMethodEngine.getKeyboardDelegate();
+if (inputMethodEngineDelegate) {
+  inputMethodEngineDelegate!.onKeyEvent((keyEvent: KeyEvent) => {
+    console.info(`inputMethodEngine keyEvent.action: ${keyEvent.action}`);
+    console.info(`inputMethodEngine keyEvent.key.code: ${keyEvent.key.code}`);
+    console.info(`inputMethodEngine keyEvent.ctrlKey: ${keyEvent.ctrlKey}`);
+    console.info(`inputMethodEngine keyEvent.unicodeChar: ${keyEvent.unicodeChar}`);
+    return true;
+  });
+}
+```
 
 ## onKeyUp
 
@@ -799,6 +941,24 @@ onKeyUp(callback: KeyEventCallback): void
 | --- | --- | --- | --- |
 | callback | [KeyEventCallback](arkts-ime-inputmethodengine-keyeventcallback-t.md) | 是 | 回调函数，返回按键信息。 若按键事件被事件订阅者消费，则callback应返回true，否则返回false。 |
 
+## 示例
+
+```TypeScript
+let inputMethodEngineDelegate = inputMethodEngine.getKeyboardDelegate();
+if (inputMethodEngineDelegate) {
+  inputMethodEngineDelegate!.onKeyUp((keyEvent: inputMethodEngine.KeyEvent) => {
+    console.info(`inputMethodEngine keyCode.(keyDown): ${keyEvent.keyCode}`);
+    console.info(`inputMethodEngine keyAction.(keyDown): ${keyEvent.keyAction}`);
+    return true;
+  });
+  inputMethodEngineDelegate!.onKeyDown((keyEvent: inputMethodEngine.KeyEvent) => {
+    console.info(`inputMethodEngine keyCode.(keyDown): ${keyEvent.keyCode}`);
+    console.info(`inputMethodEngine keyAction.(keyDown): ${keyEvent.keyAction}`);
+    return true;
+  });
+}
+```
+
 ## onSelectionChange
 
 ```TypeScript
@@ -821,6 +981,22 @@ onSelectionChange(callback: SelectionChangeCallback): void
 | --- | --- | --- | --- |
 | callback | [SelectionChangeCallback](arkts-ime-inputmethodengine-selectionchangecallback-t.md) | 是 | 回调函数，返回文本选择信息。 oldBegin为变化前被选中文本的起始下标，oldEnd为变化前被选中文本的终止下标。 newBegin为变化后被选中文本的起始下标，newEnd为变化后被选中文本的终止下标。 |
 
+## 示例
+
+```TypeScript
+let inputMethodEngineDelegate = inputMethodEngine.getKeyboardDelegate();
+if (inputMethodEngineDelegate) {
+  inputMethodEngineDelegate!
+    .onSelectionChange((oldBegin: int, oldEnd: int, newBegin: int, newEnd: int) => {
+      console.info(`inputMethodEngine beforeEach selectionChange oldBegin: ${oldBegin}`);
+      console.info(`inputMethodEngine beforeEach selectionChange oldEnd: ${oldEnd}`);
+      console.info(`inputMethodEngine beforeEach selectionChange newBegin: ${newBegin}`);
+      console.info(`inputMethodEngine beforeEach selectionChange newEnd: ${newEnd}`);
+    });
+
+}
+```
+
 ## onTextChange
 
 ```TypeScript
@@ -842,4 +1018,15 @@ onTextChange(callback: Callback<string>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;string&gt; | 是 | 回调函数，返回订阅的文本内容。 |
+
+## 示例
+
+```TypeScript
+let inputMethodEngineDelegate = inputMethodEngine.getKeyboardDelegate();
+if (inputMethodEngineDelegate) {
+  inputMethodEngineDelegate!.onTextChange((text: string) => {
+    console.info(`inputMethodEngine textChange. text: ' ${text}`);
+  });
+}
+```
 

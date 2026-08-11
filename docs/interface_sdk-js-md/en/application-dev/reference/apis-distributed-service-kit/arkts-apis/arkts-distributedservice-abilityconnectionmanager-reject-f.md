@@ -12,7 +12,7 @@ import { abilityConnectionManager } from 'kits/@kit.DistributedServiceKit';
 function reject(token: string, reason: string): void
 ```
 
-在跨端应用协同过程中，在拒绝对端的连接请求后，向对端发送拒绝原因。
+Rejects a connection request in a cross-device collaboration session. After a connection request sent from the peer  application is rejected, a rejection reason is returned.
 
 **Since:** 18
 
@@ -28,14 +28,14 @@ function reject(token: string, reason: string): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| token | string | Yes | 用于协作服务管理的令牌。 |
-| reason | string | Yes | 连接被拒绝的原因。 |
+| token | string | Yes | Token used for application collaboration management. |
+| reason | string | Yes | Reason why the connection is rejected. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. |
 
 ## Examples
 

@@ -1,8 +1,7 @@
 # Preferences
 
-首选项实例，提供获取和修改存储数据的接口。
-
-下列接口都需先使用[preferences.getPreferences](arkts-arkdata-preferences-getpreferences-f.md#getpreferences)获取到Preferences实例，再通过此实例调用对应接口。
+Provides APIs for obtaining and modifying the stored data.Before calling any API of **Preferences**, you must obtain a **Preferences** instance by using   
+[preferences.getPreferences](arkts-arkdata-preferences-getpreferences-f.md#getpreferences).
 
 **Since:** 9
 
@@ -24,7 +23,8 @@ import { preferences } from 'kits/@kit.ArkData';
 clear(callback: AsyncCallback<void>): void
 ```
 
-清除缓存的Preferences实例中的所有数据，可通过[flush](arkts-arkdata-preferences-preferences-i.md#flush)将Preferences实例持久化，使用callback异步回调。
+Clears this **Preferences** instance. This API uses an asynchronous callback to return the result. You can use   
+[flush](arkts-arkdata-preferences-preferences-i.md#flush) to persist the **Preferences** instance.
 
 **Since:** 9
 
@@ -40,14 +40,14 @@ clear(callback: AsyncCallback<void>): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | 回调函数。当清除成功，err为undefined；否则为错误对象。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined**. Otherwise, **err** is an error object. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. Mandatory parameters are left unspecified. |
-| 15500000 | Inner error.<br>**Applicable version:** 11 and later |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Mandatory parameters are left unspecified. |
+| [15500000](../errorcode-preferences.md#15500000-internal-error) | Inner error.<br>**Applicable version:** 11 and later |
 
 ## Examples
 
@@ -69,7 +69,8 @@ dataPreferences.clear((err: BusinessError) =>{
 clear(): Promise<void>
 ```
 
-清除缓存的Preferences实例中的所有数据，可通过[flush](arkts-arkdata-preferences-preferences-i.md#flush)将Preferences实例持久化，使用Promise异步回调。
+Clears this **Preferences** instance. This API uses a promise to return the result. You can use   
+[flush](arkts-arkdata-preferences-preferences-i.md#flush) to persist the **Preferences** instance.
 
 **Since:** 9
 
@@ -85,13 +86,13 @@ clear(): Promise<void>
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | 无返回结果的Promise对象。 |
+| Promise&lt;void&gt; | Promise that returns no value. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 15500000 | Inner error.<br>**Applicable version:** 11 and later |
+| [15500000](../errorcode-preferences.md#15500000-internal-error) | Inner error.<br>**Applicable version:** 11 and later |
 
 ## Examples
 
@@ -112,7 +113,8 @@ promise.then(() => {
 clearSync(): void
 ```
 
-清除缓存的Preferences实例中的所有数据，可通过[flush](arkts-arkdata-preferences-preferences-i.md#flush)将Preferences实例持久化，此为同步接口。
+Clears this **Preferences** instance. This API returns the result synchronously. You can use   
+[flush](arkts-arkdata-preferences-preferences-i.md#flush) to persist the **Preferences** instance.
 
 **Since:** 10
 
@@ -136,7 +138,8 @@ dataPreferences.clearSync();
 delete(key: string, callback: AsyncCallback<void>): void
 ```
 
-从缓存的Preferences实例中删除名为给定Key的存储键值对，可通过[flush](arkts-arkdata-preferences-preferences-i.md#flush)将Preferences实例持久化，使用callback异步回调。
+Deletes a KV pair from this **Preferences** instance. This API uses an asynchronous callback to return the result. You can use [flush](arkts-arkdata-preferences-preferences-i.md#flush) to persist the   
+**Preferences** instance.
 
 **Since:** 9
 
@@ -152,15 +155,15 @@ delete(key: string, callback: AsyncCallback<void>): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| key | string | Yes | 要删除的存储Key名称，不能为空，最大长度限制为 [MAX_KEY_LENGTH](../../../reference/apis-arkdata/js-apis-data-sendablePreferences.md#constants)。 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | 回调函数。当删除成功，err为undefined；否则为错误对象。 |
+| key | string | Yes | Key to be deleted. The value cannot be empty. For details about its maximum length, see [MAX_KEY_LENGTH](../../../reference/apis-arkdata/js-apis-data-preferences.md#constants). |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined**. Otherwise, **err** is an error object. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. Possible causes: &lt;br&gt;1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; &lt;br&gt;3. Parameter verification failed. |
-| 15500000 | Inner error.<br>**Applicable version:** 11 and later |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: &lt;br&gt;1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; &lt;br&gt;3. Parameter verification failed. |
+| [15500000](../errorcode-preferences.md#15500000-internal-error) | Inner error.<br>**Applicable version:** 11 and later |
 
 ## Examples
 
@@ -182,7 +185,8 @@ dataPreferences.delete('startup', (err: BusinessError) => {
 delete(key: string): Promise<void>
 ```
 
-从缓存的Preferences实例中删除名为给定Key的存储键值对，可通过[flush](arkts-arkdata-preferences-preferences-i.md#flush)将Preferences实例持久化，使用Promise异步回调。
+Deletes a KV pair from this **Preferences** instance. This API uses a promise to return the result. You can use   
+[flush](arkts-arkdata-preferences-preferences-i.md#flush) to persist the **Preferences** instance.
 
 **Since:** 9
 
@@ -198,20 +202,20 @@ delete(key: string): Promise<void>
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| key | string | Yes | 要删除的存储Key名称，不能为空，最大长度限制为 [MAX_KEY_LENGTH](../../../reference/apis-arkdata/js-apis-data-sendablePreferences.md#constants)。 |
+| key | string | Yes | Key to be deleted. The value cannot be empty. For details about its maximum length, see [MAX_KEY_LENGTH](../../../reference/apis-arkdata/js-apis-data-preferences.md#constants). |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | 无返回结果的Promise对象。 |
+| Promise&lt;void&gt; | Promise that returns no value. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. Possible causes: &lt;br&gt;1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; &lt;br&gt;3. Parameter verification failed. |
-| 15500000 | Inner error.<br>**Applicable version:** 11 and later |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: &lt;br&gt;1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; &lt;br&gt;3. Parameter verification failed. |
+| [15500000](../errorcode-preferences.md#15500000-internal-error) | Inner error.<br>**Applicable version:** 11 and later |
 
 ## Examples
 
@@ -232,7 +236,8 @@ promise.then(() => {
 deleteSync(key: string): void
 ```
 
-从缓存的Preferences实例中删除名为给定Key的存储键值对，可通过[flush](arkts-arkdata-preferences-preferences-i.md#flush)将Preferences实例持久化，此为同步接口。
+Deletes a KV pair from this **Preferences** instance. This API returns the result synchronously. You can use   
+[flush](arkts-arkdata-preferences-preferences-i.md#flush) to persist the **Preferences** instance.
 
 **Since:** 10
 
@@ -248,14 +253,14 @@ deleteSync(key: string): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| key | string | Yes | 要删除的存储Key名称，不能为空，最大长度限制为 [MAX_KEY_LENGTH](../../../reference/apis-arkdata/js-apis-data-sendablePreferences.md#constants)。 |
+| key | string | Yes | Key to be deleted. The value cannot be empty. For details about its maximum length, see [MAX_KEY_LENGTH](../../../reference/apis-arkdata/js-apis-data-preferences.md#constants). |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. Possible causes: &lt;br&gt;1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; &lt;br&gt;3. Parameter verification failed. |
-| 15500000 | Inner error.<br>**Applicable version:** 11 and later |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: &lt;br&gt;1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; &lt;br&gt;3. Parameter verification failed. |
+| [15500000](../errorcode-preferences.md#15500000-internal-error) | Inner error.<br>**Applicable version:** 11 and later |
 
 ## Examples
 
@@ -269,14 +274,7 @@ dataPreferences.deleteSync('startup');
 flush(callback: AsyncCallback<void>): void
 ```
 
-将缓存的Preferences实例中的数据异步存储到用户首选项的持久化文件中，使用callback异步回调。
-
-> **说明：**
-> 
-> 当数据未修改或修改后的数据与缓存数据一致时，不会刷新持久化文件。
-> 
-> 只在XML存储模式下使用，在GSKV存储模式下无需调用，因为当选择该模式时首选项对数据的操作会实时落盘。Preferences存储模式可见
-> [存储模式说明](../../../database/data-persistence-by-preferences.md#存储模式说明)。
+Flushes the data in this **Preferences** instance to the persistent file. This API uses an asynchronous callback to return the result.
 
 **Since:** 9
 
@@ -292,14 +290,14 @@ flush(callback: AsyncCallback<void>): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | 回调函数。当保存成功，err为undefined；否则为错误对象。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined**. Otherwise, **err** is an error object. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. Mandatory parameters are left unspecified. |
-| 15500000 | Inner error.<br>**Applicable version:** 11 and later |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Mandatory parameters are left unspecified. |
+| [15500000](../errorcode-preferences.md#15500000-internal-error) | Inner error.<br>**Applicable version:** 11 and later |
 
 ## Examples
 
@@ -321,14 +319,7 @@ dataPreferences.flush((err: BusinessError) => {
 flush(): Promise<void>
 ```
 
-将缓存的Preferences实例中的数据异步存储到用户首选项的持久化文件中，使用Promise异步回调。
-
-> **说明：**
-> 
-> 当数据未修改或修改后的数据与缓存数据一致时，不会刷新持久化文件。
-> 
-> 只在XML存储模式下使用，在GSKV存储模式下无需调用，因为当选择该模式时首选项对数据的操作会实时落盘。Preferences存储模式可见
-> [存储模式说明](../../../database/data-persistence-by-preferences.md#存储模式说明)。
+Flushes the data in this **Preferences** instance to the persistent file. This API uses a promise to return the result.
 
 **Since:** 9
 
@@ -344,13 +335,13 @@ flush(): Promise<void>
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | 无返回结果的Promise对象。 |
+| Promise&lt;void&gt; | Promise that returns no value. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 15500000 | Inner error.<br>**Applicable version:** 11 and later |
+| [15500000](../errorcode-preferences.md#15500000-internal-error) | Inner error.<br>**Applicable version:** 11 and later |
 
 ## Examples
 
@@ -371,11 +362,7 @@ promise.then(() => {
 flushSync(): void
 ```
 
-将缓存的Preferences实例中的数据存储到用户首选项的持久化文件中。
-
-> **说明：**
-> 
-> 当数据未修改或修改后的数据与缓存数据一致时，不会刷新持久化文件。
+Flushes the data in the cached **Preferences** instance to the persistent file.
 
 **Since:** 14
 
@@ -391,7 +378,7 @@ flushSync(): void
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 15500000 | Inner error. |
+| [15500000](../errorcode-preferences.md#15500000-internal-error) | Inner error. |
 
 ## Examples
 
@@ -405,7 +392,7 @@ dataPreferences.flushSync();
 get(key: string, defValue: ValueType, callback: AsyncCallback<ValueType>): void
 ```
 
-从缓存的Preferences实例中获取键对应的值，如果值为null或者非默认值类型，返回默认数据defValue，使用callback异步回调。
+Obtains the value of a key from this **Preferences** instance. This API uses an asynchronous callback to return the result. If the value is null or is not of the default value type, **defValue** is returned.
 
 **Since:** 9
 
@@ -421,16 +408,16 @@ get(key: string, defValue: ValueType, callback: AsyncCallback<ValueType>): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| key | string | Yes | 要获取的存储Key名称，不能为空，最大长度限制为 [MAX_KEY_LENGTH](../../../reference/apis-arkdata/js-apis-data-sendablePreferences.md#constants)。 |
-| defValue | [ValueType](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-pasteboard-valuetype-t.md) | Yes | 默认返回值。 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;ValueType&gt; | Yes | 回调函数。当获取成功时，err为undefined，data为键对应的值；否则err为错误对象。 |
+| key | string | Yes | Key to be obtained. The value cannot be empty. For details about its maximum length, see [MAX_KEY_LENGTH](../../../reference/apis-arkdata/js-apis-data-preferences.md#constants). |
+| defValue | [ValueType](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-pasteboard-valuetype-t.md) | Yes | Default value to be returned. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;ValueType&gt; | Yes | Callback used to return the result. If the operation is successful , **err** is **undefined** and **data** is the value obtained. Otherwise, **err** is an error object. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. Possible causes: &lt;br&gt;1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; &lt;br&gt;3. Parameter verification failed. |
-| 15500000 | Inner error.<br>**Applicable version:** 11 and later |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: &lt;br&gt;1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; &lt;br&gt;3. Parameter verification failed. |
+| [15500000](../errorcode-preferences.md#15500000-internal-error) | Inner error.<br>**Applicable version:** 11 and later |
 
 ## Examples
 
@@ -452,7 +439,7 @@ dataPreferences.get('startup', 'default', (err: BusinessError, val: preferences.
 get(key: string, defValue: ValueType): Promise<ValueType>
 ```
 
-从缓存的Preferences实例中获取键对应的值，如果值为null或者非默认值类型，返回默认数据defValue，使用Promise异步回调。
+Obtains the value of a key from this **Preferences** instance. This API uses a promise to return the result. If the value is null or is not of the default value type, **defValue** is returned.
 
 **Since:** 9
 
@@ -468,21 +455,21 @@ get(key: string, defValue: ValueType): Promise<ValueType>
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| key | string | Yes | 要获取的存储Key名称，不能为空，最大长度限制为 [MAX_KEY_LENGTH](../../../reference/apis-arkdata/js-apis-data-sendablePreferences.md#constants)。 |
-| defValue | [ValueType](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-pasteboard-valuetype-t.md) | Yes | 默认返回值。 |
+| key | string | Yes | Key to be obtained. The value cannot be empty. For details about its maximum length, see [MAX_KEY_LENGTH](../../../reference/apis-arkdata/js-apis-data-preferences.md#constants). |
+| defValue | [ValueType](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-pasteboard-valuetype-t.md) | Yes | Default value to be returned. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;ValueType&gt; | Promise对象，返回键对应的值。 |
+| Promise&lt;ValueType&gt; | Promise used to return the value obtained. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. Possible causes: &lt;br&gt;1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; &lt;br&gt;3. Parameter verification failed. |
-| 15500000 | Inner error.<br>**Applicable version:** 11 and later |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: &lt;br&gt;1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; &lt;br&gt;3. Parameter verification failed. |
+| [15500000](../errorcode-preferences.md#15500000-internal-error) | Inner error.<br>**Applicable version:** 11 and later |
 
 ## Examples
 
@@ -503,7 +490,7 @@ promise.then((data: preferences.ValueType) => {
 getAll(callback: AsyncCallback<Object>): void
 ```
 
-获取缓存的Preferences实例中的所有键值数据。
+Obtains all KV pairs from a **Preferences** instance. This API uses an asynchronous callback to return the result.
 
 **Since:** 9
 
@@ -519,14 +506,14 @@ getAll(callback: AsyncCallback<Object>): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Object&gt; | Yes | 回调函数。当获取成功，err为undefined，value为所有键值数据；否则err为错误对象。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Object&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined** and **value** provides all KV pairs obtained. Otherwise, **err** is an error object. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. Mandatory parameters are left unspecified. |
-| 15500000 | Inner error.<br>**Applicable version:** 11 and later |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Mandatory parameters are left unspecified. |
+| [15500000](../errorcode-preferences.md#15500000-internal-error) | Inner error.<br>**Applicable version:** 11 and later |
 
 ## Examples
 
@@ -557,7 +544,7 @@ dataPreferences.getAll((err: BusinessError, value: Object) => {
 getAll(): Promise<Object>
 ```
 
-获取缓存的Preferences实例中的所有键值数据，使用Promise异步回调。
+Obtains all KV pairs from this **Preferences** instance. This API uses a promise to return the result.
 
 **Since:** 9
 
@@ -573,13 +560,13 @@ getAll(): Promise<Object>
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;Object&gt; | Promise对象，返回所有包含的键值数据。 |
+| Promise&lt;Object&gt; | Promise used to return the KV pairs obtained. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 15500000 | Inner error.<br>**Applicable version:** 11 and later |
+| [15500000](../errorcode-preferences.md#15500000-internal-error) | Inner error.<br>**Applicable version:** 11 and later |
 
 ## Examples
 
@@ -609,7 +596,7 @@ promise.then((value: Object) => {
 getAllSync(): Object
 ```
 
-获取缓存的Preferences实例中的所有键值数据，此为同步接口。
+Obtains all KV pairs from this **Preferences** instance. This API returns the result synchronously.
 
 **Since:** 10
 
@@ -625,13 +612,13 @@ getAllSync(): Object
 
 | Type | Description |
 | --- | --- |
-| Object | 返回所有包含的键值数据。 |
+| Object | Returns all KV pairs obtained. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 15500000 | Inner error.<br>**Applicable version:** 11 and later |
+| [15500000](../errorcode-preferences.md#15500000-internal-error) | Inner error.<br>**Applicable version:** 11 and later |
 
 ## Examples
 
@@ -655,7 +642,7 @@ console.info("getAll object = " + JSON.stringify(value));
 getSync(key: string, defValue: ValueType): ValueType
 ```
 
-从缓存的Preferences实例中获取键对应的值，如果值为null或者非默认值类型，返回默认数据defValue，此为同步接口。
+Obtains the value of a key from this **Preferences** instance. This API returns the result synchronously. If the value is null or is not of the default value type, **defValue** is returned.
 
 **Since:** 10
 
@@ -671,21 +658,21 @@ getSync(key: string, defValue: ValueType): ValueType
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| key | string | Yes | 要获取的存储Key名称，不能为空，最大长度限制为 [MAX_KEY_LENGTH](../../../reference/apis-arkdata/js-apis-data-sendablePreferences.md#constants)。 |
-| defValue | [ValueType](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-pasteboard-valuetype-t.md) | Yes | 默认返回值。 |
+| key | string | Yes | Key to be obtained. The value cannot be empty. For details about its maximum length, see [MAX_KEY_LENGTH](../../../reference/apis-arkdata/js-apis-data-preferences.md#constants). |
+| defValue | [ValueType](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-pasteboard-valuetype-t.md) | Yes | Default value to be returned. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [ValueType](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-pasteboard-valuetype-t.md) | 返回键对应的值。 |
+| [ValueType](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-pasteboard-valuetype-t.md) | Returns the value obtained. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. Possible causes: &lt;br&gt;1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; &lt;br&gt;3. Parameter verification failed. |
-| 15500000 | Inner error.<br>**Applicable version:** 11 and later |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: &lt;br&gt;1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; &lt;br&gt;3. Parameter verification failed. |
+| [15500000](../errorcode-preferences.md#15500000-internal-error) | Inner error.<br>**Applicable version:** 11 and later |
 
 ## Examples
 
@@ -699,7 +686,7 @@ let value: preferences.ValueType = dataPreferences.getSync('startup', 'default')
 has(key: string, callback: AsyncCallback<boolean>): void
 ```
 
-检查缓存的Preferences实例中是否包含指定Key的存储键值对，使用callback异步回调。
+Checks whether this **Preferences** instance contains the KV pair of the given key. This API uses an asynchronous callback to return the result.
 
 **Since:** 9
 
@@ -715,15 +702,15 @@ has(key: string, callback: AsyncCallback<boolean>): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| key | string | Yes | 要检查的存储Key名称，不能为空，最大长度限制为 [MAX_KEY_LENGTH](../../../reference/apis-arkdata/js-apis-data-sendablePreferences.md#constants)。 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;boolean&gt; | Yes | 回调函数。返回Preferences实例是否包含给定Key的存储键值对，true表示存在，false表示不存在。 |
+| key | string | Yes | Key to be checked. The value cannot be empty. For details about its maximum length, see [MAX_KEY_LENGTH](../../../reference/apis-arkdata/js-apis-data-preferences.md#constants). |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;boolean&gt; | Yes | Callback used to return the result. If the **Preferences** instance contains the KV pair, **true** will be returned. Otherwise, **false** will be returned. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. Possible causes: &lt;br&gt;1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; &lt;br&gt;3. Parameter verification failed. |
-| 15500000 | Inner error.<br>**Applicable version:** 11 and later |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: &lt;br&gt;1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; &lt;br&gt;3. Parameter verification failed. |
+| [15500000](../errorcode-preferences.md#15500000-internal-error) | Inner error.<br>**Applicable version:** 11 and later |
 
 ## Examples
 
@@ -749,7 +736,7 @@ dataPreferences.has('startup', (err: BusinessError, val: boolean) => {
 has(key: string): Promise<boolean>
 ```
 
-检查缓存的Preferences实例中是否包含指定Key的存储键值对，使用Promise异步回调。
+Checks whether this **Preferences** instance contains the KV pair of the given key. This API uses a promise to return the result.
 
 **Since:** 9
 
@@ -765,20 +752,20 @@ has(key: string): Promise<boolean>
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| key | string | Yes | 要检查的存储Key名称，不能为空，最大长度限制为 [MAX_KEY_LENGTH](../../../reference/apis-arkdata/js-apis-data-sendablePreferences.md#constants)。 |
+| key | string | Yes | Key to be checked. The value cannot be empty. For details about its maximum length, see [MAX_KEY_LENGTH](../../../reference/apis-arkdata/js-apis-data-preferences.md#constants). |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;boolean&gt; | Promise对象。返回Preferences实例是否包含给定Key的存储键值对，true表示存在，false表示不存在。 |
+| Promise&lt;boolean&gt; | Promise used to return the result. If the **Preferences** instance contains the KV pair, **true** will be returned. Otherwise, **false** will be returned. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. Possible causes: &lt;br&gt;1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; &lt;br&gt;3. Parameter verification failed. |
-| 15500000 | Inner error.<br>**Applicable version:** 11 and later |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: &lt;br&gt;1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; &lt;br&gt;3. Parameter verification failed. |
+| [15500000](../errorcode-preferences.md#15500000-internal-error) | Inner error.<br>**Applicable version:** 11 and later |
 
 ## Examples
 
@@ -803,7 +790,7 @@ promise.then((val: boolean) => {
 hasSync(key: string): boolean
 ```
 
-检查缓存的Preferences实例中是否包含指定Key的存储键值对，此为同步接口。
+Checks whether this **Preferences** instance contains the KV pair of the given key. This API returns the result synchronously.
 
 **Since:** 10
 
@@ -819,20 +806,20 @@ hasSync(key: string): boolean
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| key | string | Yes | 要检查的存储Key名称，不能为空，最大长度限制为 [MAX_KEY_LENGTH](../../../reference/apis-arkdata/js-apis-data-sendablePreferences.md#constants)。 |
+| key | string | Yes | Key to be checked. The value cannot be empty. For details about its maximum length, see [MAX_KEY_LENGTH](../../../reference/apis-arkdata/js-apis-data-preferences.md#constants). |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| boolean | 返回Preferences实例是否包含给定Key的存储键值对，true表示存在，false表示不存在。 |
+| boolean | If the **Preferences** instance contains the KV pair, **true** will be returned. Otherwise, **false** will be returned. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. Possible causes: &lt;br&gt;1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; &lt;br&gt;3. Parameter verification failed. |
-| 15500000 | Inner error.<br>**Applicable version:** 11 and later |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: &lt;br&gt;1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; &lt;br&gt;3. Parameter verification failed. |
+| [15500000](../errorcode-preferences.md#15500000-internal-error) | Inner error.<br>**Applicable version:** 11 and later |
 
 ## Examples
 
@@ -851,7 +838,7 @@ if (isExist) {
 off(type: 'change', callback?: Callback<string>): void
 ```
 
-取消订阅数据变更。
+Unsubscribes from data changes.
 
 **Since:** 9
 
@@ -867,15 +854,15 @@ off(type: 'change', callback?: Callback<string>): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'change' | Yes | 事件类型，固定值'change'，表示数据变更。 |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;string&gt; | No | 需要取消的回调函数，若不填写，表示取消所有已注册的回调函数；若填写，表示只取消指定的回调函数。<br>**Since:** 11 |
+| type | 'change' | Yes | Event type. The value is **'change'**, which indicates data changes. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;string&gt; | No | Callback to unregister. If this parameter is not specified, this API unregisters all callbacks for data changes.<br>**Since:** 11 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. Possible causes: &lt;br&gt;1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; &lt;br&gt;3. Parameter verification failed. |
-| 15500000 | Inner error.<br>**Applicable version:** 11 and later |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: &lt;br&gt;1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; &lt;br&gt;3. Parameter verification failed. |
+| [15500000](../errorcode-preferences.md#15500000-internal-error) | Inner error.<br>**Applicable version:** 11 and later |
 
 ## Examples
 
@@ -903,9 +890,7 @@ dataPreferences.off('change', observer);
 off(type: 'multiProcessChange', callback?: Callback<string>): void
 ```
 
-取消订阅进程间数据变更。
-
-本接口提供给申请了[dataGroupId](arkts-arkdata-preferences-options-i.md)的应用进行使用，未申请的应用不推荐使用（监听不到数据变更），多进程操作可能会损坏持久化文件，导致数据丢失。
+Unsubscribes from inter-process data changes.This API is provided for applications that have applied for [dataGroupId](arkts-arkdata-preferences-options-i.md). Avoid using this API for the applications that have not applied for **dataGroupId** because calling it in multiple process may damage the persistent files and cause data loss.
 
 **Since:** 10
 
@@ -921,15 +906,15 @@ off(type: 'multiProcessChange', callback?: Callback<string>): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'multiProcessChange' | Yes | 事件类型，固定值'multiProcessChange'，表示多进程间的数据变更。 |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;string&gt; | No | 需要取消的回调函数，若不填写，表示取消所有已注册的回调函数；若填写，表示只取消指定的回调函数。<br>**Since:** 11 |
+| type | 'multiProcessChange' | Yes | Event type. The value is **'multiProcessChange'**, which indicates inter- process data changes. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;string&gt; | No | Callback to unregister. If this parameter is not specified, this API unregisters all callbacks for data changes.<br>**Since:** 11 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. Possible causes: &lt;br&gt;1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; &lt;br&gt;3. Parameter verification failed. |
-| 15500000 | Inner error.<br>**Applicable version:** 11 and later |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: &lt;br&gt;1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; &lt;br&gt;3. Parameter verification failed. |
+| [15500000](../errorcode-preferences.md#15500000-internal-error) | Inner error.<br>**Applicable version:** 11 and later |
 
 ## Examples
 
@@ -957,7 +942,7 @@ dataPreferences.off('multiProcessChange', observer);
 off(type: 'dataChange', keys: Array<string>, callback?: Callback<Record<string, ValueType>>): void
 ```
 
-取消精确订阅数据变更。
+Unsubscribes from changes of specific data.
 
 **Since:** 12
 
@@ -973,16 +958,16 @@ off(type: 'dataChange', keys: Array<string>, callback?: Callback<Record<string, 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'dataChange' | Yes | 事件类型，固定值'dataChange'，表示精确的数据变更。 |
-| keys | Array&lt;string&gt; | Yes | 需要取消订阅的Key集合，当Keys为空数组时，表示取消订阅全部Key；当Keys为非空数组时，表示只取消订阅Key集合中的Key。 |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;Record&lt;string, ValueType&gt;&gt; | No | 需要取消的回调函数，若不填写，表示取消所有已注册的回调函数；若填写，表示只取消指定的回调函数。 |
+| type | 'dataChange' | Yes | Event type. The value is **'dataChange'**, which indicates data changes. |
+| keys | Array&lt;string&gt; | Yes | Array of keys to be unsubscribed from. If this parameter is left empty, all keys are unsubscribed from. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;Record&lt;string, ValueType&gt;&gt; | No | Callback to unregister. If this parameter is not specified, this API unregisters all callbacks for the changes of the specified data. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. Possible causes: &lt;br&gt;1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; &lt;br&gt;3. Parameter verification failed. |
-| 15500000 | Inner error. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: &lt;br&gt;1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; &lt;br&gt;3. Parameter verification failed. |
+| [15500000](../errorcode-preferences.md#15500000-internal-error) | Inner error. |
 
 ## Examples
 
@@ -1029,13 +1014,13 @@ Unregisters an existing observer.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;string&gt; | No | 需要取消的回调函数，若不填写，表示取消所有已注册的回调函数；若填写，表示只取消指定的回调函数。 |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;string&gt; | No | Indicates the callback function. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 15500000 | Inner error. |
+| [15500000](../errorcode-preferences.md#15500000-internal-error) | Inner error. |
 
 ## offDataChange
 
@@ -1057,14 +1042,14 @@ Unregisters an observer for changes to the {@ link Preferences} object.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| keys | Array&lt;string&gt; | Yes | 需要取消订阅的key集合，当keys为空数组时，表示取消订阅全部key；当keys为非空数组时，表示只取消订阅key集合中的key。 |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;Record&lt;string, ValueType&gt;&gt; | No | 需要取消的回调函数，若不填写，表示取消所有已注册的回调函数；若填写，表示只取消指定的回调函数。 |
+| keys | Array&lt;string&gt; | Yes | Indicates the data whose changes are not observed. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;Record&lt;string, ValueType&gt;&gt; | No | Indicates the callback to unregister. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 15500000 | Inner error. |
+| [15500000](../errorcode-preferences.md#15500000-internal-error) | Inner error. |
 
 ## offMultiProcessChange
 
@@ -1086,13 +1071,13 @@ Unregisters an existing observer.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;string&gt; | No | 需要取消的回调函数，若不填写，表示取消所有已注册的回调函数；若填写，表示只取消指定的回调函数。 |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;string&gt; | No | Indicates the callback function. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 15500000 | Inner error. |
+| [15500000](../errorcode-preferences.md#15500000-internal-error) | Inner error. |
 
 ## on('change')
 
@@ -1100,23 +1085,8 @@ Unregisters an existing observer.
 on(type: 'change', callback: Callback<string>): void
 ```
 
-订阅数据变更，订阅的Key的值发生变更后，并且在执行[flush](arkts-arkdata-preferences-preferences-i.md#flush)方法后，触发callback回调。
-
-> **不同订阅方法的对比：**
-> 
-> - on('change')：订阅所有Key变化，适合全局数据变化感知需求。
-> 
-> - on('dataChange')：精确订阅指定Key的变化，适合关注特定数据场景，可回调返回具体值。
-> 
-> - on('multiProcessChange')：订阅多进程数据变化，适合多进程共享同一首选项文件的场景。
-> 
-> **选取建议：** 单进程应用推荐使用on('change')或on('dataChange')；多进程数据同步时使用on('multiProcessChange')；需要精确知道特定Key变化并获取新值时使用on('
-> dataChange')。
-> > **说明：**
-> 
-> 当调用[removePreferencesFromCache](arkts-arkdata-preferences-removepreferencesfromcache-f.md#removepreferencesfromcache)或
-> [deletePreferences](arkts-arkdata-preferences-deletepreferences-f.md#deletepreferences)后，订阅的数据变更会主动取消订阅，在重新
-> [getPreferences](arkts-arkdata-preferences-getpreferences-f.md#getpreferences)后需要重新订阅数据变更。
+Subscribes to data changes. The registered callback will be invoked to return the new value if the data change is  
+[flushed](arkts-arkdata-preferences-preferences-i.md#flush).
 
 **Since:** 9
 
@@ -1132,15 +1102,15 @@ on(type: 'change', callback: Callback<string>): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'change' | Yes | 事件类型，固定值'change'，表示数据变更。 |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;string&gt; | Yes | 回调函数，用于接收数据变更通知，回调参数为Key字符串，表示发生变更的键名称。<br>**Since:** 11 |
+| type | 'change' | Yes | Event type. The value is **'change'**, which indicates data changes. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;string&gt; | Yes | Callback used to return the data change.<br>**Since:** 11 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. Possible causes: &lt;br&gt;1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; &lt;br&gt;3. Parameter verification failed. |
-| 15500000 | Inner error.<br>**Applicable version:** 11 and later |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: &lt;br&gt;1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; &lt;br&gt;3. Parameter verification failed. |
+| [15500000](../errorcode-preferences.md#15500000-internal-error) | Inner error.<br>**Applicable version:** 11 and later |
 
 ## Examples
 
@@ -1167,18 +1137,8 @@ dataPreferences.flush((err: BusinessError) => {
 on(type: 'multiProcessChange', callback: Callback<string>): void
 ```
 
-订阅进程间数据变更，多个进程持有同一个首选项文件时，在任意一个进程（包括本进程）执行  
-[flush](arkts-arkdata-preferences-preferences-i.md#flush)方法，持久化文件发生变更后，触发callback回调。
-
-本接口提供给申请了[dataGroupId](arkts-arkdata-preferences-options-i.md)的应用进行使用，未申请的应用不推荐使用（监听不到数据变更），多进程操作可能会损坏持久化文件，导致数据丢失。
-
-> **说明：**
-> 
-> 同一持久化文件在当前进程对多进程数据变更订阅的最大数量为50次，超过最大限制后订阅会失败。建议在触发callback回调后及时取消订阅。
-> 
-> 当调用[removePreferencesFromCache](arkts-arkdata-preferences-removepreferencesfromcache-f.md#removepreferencesfromcache)或
-> [deletePreferences](arkts-arkdata-preferences-deletepreferences-f.md#deletepreferences)后，订阅的数据变更会主动取消订阅，在重新
-> [getPreferences](arkts-arkdata-preferences-getpreferences-f.md#getpreferences)后需要重新订阅数据变更。
+Subscribes to data changes between processes. When multiple processes hold the same preference file, calling   
+[flush](arkts-arkdata-preferences-preferences-i.md#flush) in any process (including the current process) will trigger the callback in this API.This API is provided for applications that have applied for [dataGroupId](arkts-arkdata-preferences-options-i.md). Avoid using this API for the applications that have not applied for **dataGroupId** because calling it in multiple process may damage the persistent files and cause data loss.
 
 **Since:** 10
 
@@ -1194,16 +1154,16 @@ on(type: 'multiProcessChange', callback: Callback<string>): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'multiProcessChange' | Yes | 事件类型，固定值'multiProcessChange'，表示多进程间的数据变更。 |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;string&gt; | Yes | 多进程间数据变更时触发的回调函数，回调参数为发生变更的Key字符串。<br>**Since:** 11 |
+| type | 'multiProcessChange' | Yes | Event type. The value is **'multiProcessChange'**, which indicates inter- process data changes. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;string&gt; | Yes | Callback used to return the data change.<br>**Since:** 11 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. Possible causes: &lt;br&gt;1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; &lt;br&gt;3. Parameter verification failed. |
-| 15500000 | Inner error.<br>**Applicable version:** 11 and later |
-| 15500019 | Failed to obtain the subscription service. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: &lt;br&gt;1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; &lt;br&gt;3. Parameter verification failed. |
+| [15500000](../errorcode-preferences.md#15500000-internal-error) | Inner error.<br>**Applicable version:** 11 and later |
+| [15500019](../errorcode-preferences.md#15500019-failed-to-obtain-the-subscription-service) | Failed to obtain the subscription service. |
 
 ## Examples
 
@@ -1230,13 +1190,7 @@ dataPreferences.flush((err: BusinessError) => {
 on(type: 'dataChange', keys: Array<string>, callback: Callback<Record<string, ValueType>>): void
 ```
 
-精确订阅数据变更，只有被订阅的Key值发生变更后，在执行[flush](arkts-arkdata-preferences-preferences-i.md#flush)方法后，触发callback回调。
-
-> **说明：**
-> 
-> 当调用[removePreferencesFromCache](arkts-arkdata-preferences-removepreferencesfromcache-f.md#removepreferencesfromcache)或
-> [deletePreferences](arkts-arkdata-preferences-deletepreferences-f.md#deletepreferences)后，订阅的数据变更会主动取消订阅，在重新
-> [getPreferences](arkts-arkdata-preferences-getpreferences-f.md#getpreferences)后需要重新订阅数据变更。
+Subscribes to changes of specific data. The registered callback will be invoked only after the values of the specified keys are changed and [flushed](arkts-arkdata-preferences-preferences-i.md#flush).
 
 **Since:** 12
 
@@ -1252,16 +1206,16 @@ on(type: 'dataChange', keys: Array<string>, callback: Callback<Record<string, Va
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'dataChange' | Yes | 事件类型，固定值'dataChange'，表示精确的数据变更。 |
-| keys | Array&lt;string&gt; | Yes | 需要订阅的Key集合。 |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;Record&lt;string, ValueType&gt;&gt; | Yes | 回调函数。回调支持返回多个键值对，其中键为发生变更的订阅Key，类型为string；值为变更后的数据，类型为 [ValueType](arkts-arkdata-preferences-valuetype-t.md)。 |
+| type | 'dataChange' | Yes | Event type. The value is **'dataChange'**, which indicates data changes. |
+| keys | Array&lt;string&gt; | Yes | Array of the keys to be observed. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;Record&lt;string, ValueType&gt;&gt; | Yes | Callback used to return the changed data, in an array of KV pairs. The keys identify the data changed, and the values are the new values. The values support the following data types: number, string, boolean, Array&lt;number&gt;, Array&lt;string&gt;, Array&lt; boolean&gt;, Uint8Array, and object. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
-| 15500000 | Inner error. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| [15500000](../errorcode-preferences.md#15500000-internal-error) | Inner error. |
 
 ## Examples
 
@@ -1307,13 +1261,13 @@ Registers an observer to listen for the change of a {@link Preferences} object.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;string&gt; | Yes | 回调函数，用于接收数据变更通知，回调参数为Key字符串，表示发生变更的键名称。 |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;string&gt; | Yes | Indicates the callback function. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 15500000 | Inner error. |
+| [15500000](../errorcode-preferences.md#15500000-internal-error) | Inner error. |
 
 ## onDataChange
 
@@ -1335,14 +1289,14 @@ Registers an observer to listen for changes to the {@ link Preferences} object.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| keys | Array&lt;string&gt; | Yes | 需要订阅的key集合。 |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;Record&lt;string, ValueType&gt;&gt; | Yes | 回调函数。回调支持返回多个键值对，其中键为发生变更的订阅key，类型为string；值为变更后的数据，类型为[ValueType](#valuetype)。 |
+| keys | Array&lt;string&gt; | Yes | Indicates one or more keys to listen for. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;Record&lt;string, ValueType&gt;&gt; | Yes | Indicates the callback used to return the data change. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 15500000 | Inner error. |
+| [15500000](../errorcode-preferences.md#15500000-internal-error) | Inner error. |
 
 ## onMultiProcessChange
 
@@ -1364,14 +1318,14 @@ Registers an observer to listen for the change of a {@link Preferences} object.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;string&gt; | Yes | 多进程间数据变更时触发的回调函数，回调参数为发生变更的Key字符串。 |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;string&gt; | Yes | Indicates the callback function. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 15500000 | Inner error. |
-| 15500019 | Failed to obtain the subscription service. |
+| [15500000](../errorcode-preferences.md#15500000-internal-error) | Inner error. |
+| [15500019](../errorcode-preferences.md#15500019-failed-to-obtain-the-subscription-service) | Failed to obtain the subscription service. |
 
 ## put
 
@@ -1379,13 +1333,8 @@ Registers an observer to listen for the change of a {@link Preferences} object.
 put(key: string, value: ValueType, callback: AsyncCallback<void>): void
 ```
 
-将数据写入缓存的Preferences实例中，可通过[flush](arkts-arkdata-preferences-preferences-i.md#flush)将Preferences实例持久化，使用callback异步回调。
-
-> **说明：**
-> 
-> 当value中包含非UTF-8格式的字符串时，请使用Uint8Array类型存储，否则会造成持久化文件出现格式错误造成文件损坏。
-> 
-> 当对应的键已经存在时，put()方法会覆盖其值。可以使用hasSync()方法检查是否存在对应键值对。
+Writes data to this **Preferences** instance. This API uses an asynchronous callback to return the result. You can use [flush](arkts-arkdata-preferences-preferences-i.md#flush) to persist the   
+**Preferences** instance.
 
 **Since:** 9
 
@@ -1401,16 +1350,16 @@ put(key: string, value: ValueType, callback: AsyncCallback<void>): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| key | string | Yes | 要修改的存储的Key，不能为空，最大长度限制为 [MAX_KEY_LENGTH](../../../reference/apis-arkdata/js-apis-data-sendablePreferences.md#constants)。 |
-| value | [ValueType](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-pasteboard-valuetype-t.md) | Yes | 存储的新值。 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | 回调函数。当数据写入成功，err为undefined；否则为错误对象。 |
+| key | string | Yes | Key to be modified. The value cannot be empty. For details about its maximum length, see [MAX_KEY_LENGTH](../../../reference/apis-arkdata/js-apis-data-preferences.md#constants). |
+| value | [ValueType](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-pasteboard-valuetype-t.md) | Yes | Value to write. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined**. Otherwise, **err** is an error object. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. Possible causes: &lt;br&gt;1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; &lt;br&gt;3. Parameter verification failed. |
-| 15500000 | Inner error.<br>**Applicable version:** 11 and later |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: &lt;br&gt;1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; &lt;br&gt;3. Parameter verification failed. |
+| [15500000](../errorcode-preferences.md#15500000-internal-error) | Inner error.<br>**Applicable version:** 11 and later |
 
 ## Examples
 
@@ -1432,13 +1381,8 @@ dataPreferences.put('startup', 'auto', (err: BusinessError) => {
 put(key: string, value: ValueType): Promise<void>
 ```
 
-将数据写入缓存的Preferences实例中，可通过[flush](arkts-arkdata-preferences-preferences-i.md#flush)将Preferences实例持久化，使用Promise异步回调。
-
-> **说明：**
-> 
-> 当value中包含非UTF-8格式的字符串时，请使用Uint8Array类型存储，否则会造成持久化文件出现格式错误造成文件损坏。
-> 
-> 当对应的键已经存在时，put()方法会覆盖其值。可以使用hasSync()方法检查是否存在对应键值对。
+Writes data to this **Preferences** instance. This API uses a promise to return the result. You can use   
+[flush](arkts-arkdata-preferences-preferences-i.md#flush) to persist the **Preferences** instance.
 
 **Since:** 9
 
@@ -1454,21 +1398,21 @@ put(key: string, value: ValueType): Promise<void>
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| key | string | Yes | 要修改的存储的Key，不能为空，最大长度限制为 [MAX_KEY_LENGTH](../../../reference/apis-arkdata/js-apis-data-sendablePreferences.md#constants)。 |
-| value | [ValueType](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-pasteboard-valuetype-t.md) | Yes | 存储的新值。 |
+| key | string | Yes | Key to be modified. The value cannot be empty. For details about its maximum length, see [MAX_KEY_LENGTH](../../../reference/apis-arkdata/js-apis-data-preferences.md#constants). |
+| value | [ValueType](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-pasteboard-valuetype-t.md) | Yes | Value to write. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | 无返回结果的Promise对象。 |
+| Promise&lt;void&gt; | Promise that returns no value. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. Possible causes: &lt;br&gt;1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; &lt;br&gt;3. Parameter verification failed. |
-| 15500000 | Inner error.<br>**Applicable version:** 11 and later |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: &lt;br&gt;1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; &lt;br&gt;3. Parameter verification failed. |
+| [15500000](../errorcode-preferences.md#15500000-internal-error) | Inner error.<br>**Applicable version:** 11 and later |
 
 ## Examples
 
@@ -1489,13 +1433,8 @@ promise.then(() => {
 putSync(key: string, value: ValueType): void
 ```
 
-将数据写入缓存的Preferences实例中，可通过[flush](arkts-arkdata-preferences-preferences-i.md#flush)将Preferences实例持久化，此为同步接口。
-
-> **说明：**
-> 
-> 当value中包含非UTF-8格式的字符串时，请使用Uint8Array类型存储，否则会造成持久化文件出现格式错误造成文件损坏。
-> 
-> 当对应的键已经存在时，putSync()方法会覆盖其值。可以使用hasSync()方法检查是否存在对应键值对。
+Writes data to this **Preferences** instance. This API returns the result synchronously. You can use   
+[flush](arkts-arkdata-preferences-preferences-i.md#flush) to persist the **Preferences** instance.
 
 **Since:** 10
 
@@ -1511,15 +1450,15 @@ putSync(key: string, value: ValueType): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| key | string | Yes | 要修改的存储的Key，不能为空，最大长度限制为 [MAX_KEY_LENGTH](../../../reference/apis-arkdata/js-apis-data-sendablePreferences.md#constants)。 |
-| value | [ValueType](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-pasteboard-valuetype-t.md) | Yes | 存储的新值。 |
+| key | string | Yes | Key to be modified. The value cannot be empty. For details about its maximum length, see [MAX_KEY_LENGTH](../../../reference/apis-arkdata/js-apis-data-preferences.md#constants). |
+| value | [ValueType](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-pasteboard-valuetype-t.md) | Yes | Value to write. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. Possible causes: &lt;br&gt;1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; &lt;br&gt;3. Parameter verification failed. |
-| 15500000 | Inner error.<br>**Applicable version:** 11 and later |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: &lt;br&gt;1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; &lt;br&gt;3. Parameter verification failed. |
+| [15500000](../errorcode-preferences.md#15500000-internal-error) | Inner error.<br>**Applicable version:** 11 and later |
 
 ## Examples
 

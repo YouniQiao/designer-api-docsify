@@ -14,12 +14,6 @@ ArcScrollBar的构造函数参数。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Circle
 
-## 导入模块
-
-```TypeScript
-import { ArcScrollBarAttribute, ArcScrollBar } from 'kits/@kit.ArkUI';
-```
-
 ## scroller
 
 ```TypeScript

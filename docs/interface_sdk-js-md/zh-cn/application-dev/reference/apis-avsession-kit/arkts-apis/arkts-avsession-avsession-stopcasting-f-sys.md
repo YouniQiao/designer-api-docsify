@@ -1,11 +1,5 @@
 # stopCasting（系统接口）
 
-## 导入模块
-
-```TypeScript
-import { avSession } from 'kits/@kit.AVSessionKit';
-```
-
 ## stopCasting
 
 ```TypeScript
@@ -35,9 +29,9 @@ function stopCasting(session: SessionToken, callback: AsyncCallback<void>): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 401 | parameter check failed. 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. 3.Parameter verification failed. |
-| 6600109 | The remote connection is not established |
-| 202 | Not System App. |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | parameter check failed. 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. 3.Parameter verification failed. |
+| [6600109](../errorcode-avsession.md#6600109-远端会话不存在) | The remote connection is not established |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not System App. |
 
 ## 示例
 
@@ -85,9 +79,9 @@ function stopCasting(session: SessionToken): Promise<void>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 401 | parameter check failed. 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. 3.Parameter verification failed. |
-| 6600109 | The remote connection is not established |
-| 202 | Not System App. |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | parameter check failed. 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. 3.Parameter verification failed. |
+| [6600109](../errorcode-avsession.md#6600109-远端会话不存在) | The remote connection is not established |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not System App. |
 
 ## 示例
 
@@ -96,7 +90,7 @@ let myToken: avSession.SessionToken = {
   sessionId: sessionId,
 }
 avSession.stopCasting(myToken).then(() => {
-  console.info('Succeeded in stopping casting.');
+  console.info('stopCasting successfully');
 });
 ```
 

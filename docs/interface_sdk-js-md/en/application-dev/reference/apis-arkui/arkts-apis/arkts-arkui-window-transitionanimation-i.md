@@ -1,6 +1,6 @@
 # TransitionAnimation
 
-窗口转场动画配置。
+Describes the window transition animation.
 
 **Since:** 20
 
@@ -22,7 +22,7 @@ import { window } from 'kits/@kit.ArkUI';
 config: WindowAnimationConfig
 ```
 
-本次转场动画配置。
+Transition animation configuration.
 
 **Type:** [WindowAnimationConfig](arkts-arkui-window-windowanimationconfig-i.md)
 
@@ -42,7 +42,8 @@ config: WindowAnimationConfig
 opacity?: double
 ```
 
-不透明度，转场动画作用的窗口属性，值为0时窗口完全透明，默认值为1.0。当动画类型为WindowTransitionType.DESTROY时，代表动画终点的不透明度。取值范围0~1.0，在动画结束时恢复为1.0。
+Opacity of the window during the transition animation. If this parameter is set to **0**, the window is completely transparent. The default value is **1.0**. When the animation type is **WindowTransitionType.DESTROY**, this represents the opacity at the end of the animation. The value ranges from 0 to 1.0. The value is reset to  
+**1.0** when the animation ends.
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：double
 

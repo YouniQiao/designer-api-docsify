@@ -12,7 +12,7 @@ import { bundleManager } from 'kits/@kit.AbilityKit';
 function getAllBundleInfoByDeveloperId(developerId: string): Array<BundleInfo>
 ```
 
-根据给定的developerId获取当前用户下的包信息列表。
+Obtains the information about all bundles of the current user based on the given developer ID.
 
 **Since:** 12
 
@@ -30,22 +30,22 @@ function getAllBundleInfoByDeveloperId(developerId: string): Array<BundleInfo>
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| developerId | string | Yes | 表示应用的开发者ID。 |
+| developerId | string | Yes | Developer ID. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Array&lt;BundleInfo&gt; | 同步返回Array&lt;BundleInfo&gt;。 |
+| Array&lt;BundleInfo&gt; | An array of bundle information. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter developerId is empty. |
-| 17700059 | The specified developerId is invalid. |
-| 201 | Permission denied. |
-| 202 | Permission denied, non-system app called system api. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter developerId is empty. |
+| [17700059](../errorcode-bundle.md#17700059-specified-developer-id-does-not-exist) | The specified developerId is invalid. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission denied, non-system app called system api. |
 
 ## Examples
 

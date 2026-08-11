@@ -10,12 +10,6 @@
 
 **系统能力：** SystemCapability.Utils.Lang
 
-## 导入模块
-
-```TypeScript
-import { Retention, RetentionPolicy } from 'kits/@kit.ArkTS';
-```
-
 ## policy
 
 ```TypeScript

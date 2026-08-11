@@ -1,6 +1,6 @@
 # BundleInfo
 
-应用包信息。
+The module defines the bundle information.
 
 **Since:** 9
 
@@ -16,7 +16,7 @@
 readonly appIndex: int
 ```
 
-应用包的分身索引标识，仅在分身应用中生效。
+Index of an application clone. It takes effect only for application clones.
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
@@ -34,8 +34,9 @@ readonly appIndex: int
 readonly appInfo: ApplicationInfo
 ```
 
-应用程序的配置信息，通过调用  
-[getBundleInfoForSelf](arkts-ability-bundlemanager-getbundleinfoforself-f.md#getbundleinfoforself)接口，bundleFlags参数传入GET_BUNDLE_INFO_WITH_APPLICATION获取。
+Application information. The information can be obtained by passing in **GET_BUNDLE_INFO_WITH_APPLICATION** to the  
+**bundleFlags** parameter of  
+[getBundleInfoForSelf](arkts-ability-bundlemanager-getbundleinfoforself-f.md#getbundleinfoforself).
 
 **Type:** [ApplicationInfo](arkts-ability-applicationinfo-i.md)
 
@@ -55,8 +56,7 @@ readonly appInfo: ApplicationInfo
 readonly buildVersion?: string
 ```
 
-应用包的构建版本号，用于标识相同发布版本下的不同构建版本包，对应[app.json5](../../../quick-start/app-configuration-file.md)中配置的buildVersion字段。  
-**模型约束：** 此接口仅可在Stage模型下使用。
+Build version number of the application package, which identifies different build version packages under the same release version. It corresponds to the buildVersion field in the app.json5 file.
 
 **Type:** string
 
@@ -78,7 +78,7 @@ readonly buildVersion?: string
 readonly firstInstallTime?: long
 ```
 
-应用在当前设备的首次安装时间戳，表示从1970-01-01 08:00:00 UTC+8逝去的毫秒数，单位毫秒，预置应用的首次安装时间戳为1533657660000。
+Timestamp for the initial installation of the application package. It measures the milliseconds that have passed since the Unix epoch (January 1, 1970, 08:00:00 UTC+8), in milliseconds. For preinstalled applications, the initial installation timestamp is 1533657660000.
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：long
 
@@ -98,8 +98,8 @@ readonly firstInstallTime?: long
 readonly hapModulesInfo: Array<HapModuleInfo>
 ```
 
-模块的配置信息，通过调用  
-[getBundleInfoForSelf](arkts-ability-bundlemanager-getbundleinfoforself-f.md#getbundleinfoforself)接口，bundleFlags参数传入GET_BUNDLE_INFO_WITH_HAP_MODULE获取。
+Module configuration information. The information can be obtained by passing in **GET_BUNDLE_INFO_WITH_HAP_MODULE**to the **bundleFlags** parameter of  
+[getBundleInfoForSelf](arkts-ability-bundlemanager-getbundleinfoforself-f.md#getbundleinfoforself).
 
 **Type:** Array&lt;[HapModuleInfo](arkts-ability-hapmoduleinfo-i.md)&gt;
 
@@ -119,11 +119,11 @@ readonly hapModulesInfo: Array<HapModuleInfo>
 readonly installTime: long
 ```
 
-应用包安装时间戳，表示从1970-01-01 08:00:00 UTC+8逝去的毫秒数，单位毫秒。
+Timestamp for the installation of the application package. It measures the milliseconds that have passed since the Unix epoch (January 1, 1970, 08:00:00 UTC+8), in milliseconds.
 
-**说明：**
+**NOTE：**
 
-设备出厂首次开机时，如果未获取到当前时间，会以Unix时间戳基准（1970-01-01 08:00:00 UTC+8）作为当前系统的起始时间。例如，开机后未获取到时间，等待32s之后安装成功，则应用包安装时间戳为32000。
+If the current time is not obtained when the device is powered on for the first time from the factory, the Unix epoch (1970-01-01 08:00:00 UTC+8) is used as the start time of the current system. For example, if the time is not obtained after startup and the installation succeeds after a 32-second wait, the application package installation timestamp is 32000.
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：long
 
@@ -143,7 +143,8 @@ readonly installTime: long
 readonly minCompatibleVersionCode: int
 ```
 
-分布式场景下的应用包兼容的最低版本，对应[app.json5](../../../quick-start/app-configuration-file.md)中配置的minCompatibleVersionCode字段。
+Minimum compatible version of the application package in the distributed scenario. It corresponds to the  
+**minCompatibleVersionCode** field in the [app.json5](../../../quick-start/app-configuration-file.md) file.
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
@@ -163,7 +164,8 @@ readonly minCompatibleVersionCode: int
 readonly name: string
 ```
 
-应用包的名称，对应[app.json5](../../../quick-start/app-configuration-file.md)中配置的bundleName字段。
+Name of the application package. It corresponds to the **bundleName** field in the  
+[app.json5](../../../quick-start/app-configuration-file.md) file.
 
 **Type:** string
 
@@ -183,8 +185,9 @@ readonly name: string
 readonly permissionGrantStates: Array<bundleManager.PermissionGrantState>
 ```
 
-申请权限的授予状态，通过调用  
-[getBundleInfoForSelf](arkts-ability-bundlemanager-getbundleinfoforself-f.md#getbundleinfoforself)接口，bundleFlags参数传入GET_BUNDLE_INFO_WITH_REQUESTED_PERMISSION获取。reqPermissionDetails数组和permissionGrantStates数组的索引顺序一一对应，即reqPermissionDetails[2]的授权状态为permissionGrantStates[2]。
+Permission grant state. The information can be obtained by passing in **GET_BUNDLE_INFO_WITH_REQUESTED_PERMISSION**to the **bundleFlags** parameter of  
+[getBundleInfoForSelf](arkts-ability-bundlemanager-getbundleinfoforself-f.md#getbundleinfoforself).The indices of the **reqPermissionDetails** array and the **permissionGrantStates** array are in one-to-one correspondence, meaning that the authorization status of **reqPermissionDetails[2]** is  
+**permissionGrantStates[2]**.
 
 **Type:** Array&lt;bundleManager.PermissionGrantState&gt;
 
@@ -204,8 +207,10 @@ readonly permissionGrantStates: Array<bundleManager.PermissionGrantState>
 readonly reqPermissionDetails: Array<ReqPermissionDetail>
 ```
 
-应用运行时需向系统申请的权限集合的详细信息，通过调用  
-[getBundleInfoForSelf](arkts-ability-bundlemanager-getbundleinfoforself-f.md#getbundleinfoforself)接口，bundleFlags参数传入GET_BUNDLE_INFO_WITH_REQUESTED_PERMISSION获取。reqPermissionDetails数组和permissionGrantStates数组的索引顺序一一对应，即reqPermissionDetails[2]的授权状态为permissionGrantStates[2]。
+Detailed information of the permissions to request from the system. The information can be obtained by passing in  
+**GET_BUNDLE_INFO_WITH_REQUESTED_PERMISSION** to the **bundleFlags** parameter of  
+[getBundleInfoForSelf](arkts-ability-bundlemanager-getbundleinfoforself-f.md#getbundleinfoforself).The indices of the **reqPermissionDetails** array and the **permissionGrantStates** array are in one-to-one correspondence, meaning that the authorization status of **reqPermissionDetails[2]** is  
+**permissionGrantStates[2]**.
 
 **Type:** Array&lt;ReqPermissionDetail&gt;
 
@@ -225,8 +230,8 @@ readonly reqPermissionDetails: Array<ReqPermissionDetail>
 readonly routerMap: Array<RouterItem>
 ```
 
-应用的路由表配置，由hapModulesInfo下的routerMap信息，根据RouterItem中的name字段进行去重后合并得到。通过调用  
-[getBundleInfoForSelf](arkts-ability-bundlemanager-getbundleinfoforself-f.md#getbundleinfoforself)接口，bundleFlags参数传入GET_BUNDLE_INFO_WITH_HAP_MODULE和GET_BUNDLE_INFO_WITH_ROUTER_MAP获取。
+Router table of the application. The table is obtained by deduplicating and combining the **routerMap** information under **hapModulesInfo** based on the **name** field in **RouterItem**. The information can be obtained by passing in **GET_BUNDLE_INFO_WITH_HAP_MODULE** and **GET_BUNDLE_INFO_WITH_ROUTER_MAP** to the **bundleFlags** parameter of  
+[getBundleInfoForSelf](arkts-ability-bundlemanager-getbundleinfoforself-f.md#getbundleinfoforself).
 
 **Type:** Array&lt;[RouterItem](arkts-ability-hapmoduleinfo-routeritem-i.md)&gt;
 
@@ -246,8 +251,9 @@ readonly routerMap: Array<RouterItem>
 readonly signatureInfo: SignatureInfo
 ```
 
-应用包的签名信息，通过调用  
-[getBundleInfoForSelf](arkts-ability-bundlemanager-getbundleinfoforself-f.md#getbundleinfoforself)接口，bundleFlags参数传入GET_BUNDLE_INFO_WITH_SIGNATURE_INFO获取。
+Signature information of the bundle. The information can be obtained by passing in  
+**GET_BUNDLE_INFO_WITH_SIGNATURE_INFO** to the **bundleFlags** parameter of  
+[getBundleInfoForSelf](arkts-ability-bundlemanager-getbundleinfoforself-f.md#getbundleinfoforself).
 
 **Type:** [SignatureInfo](../../apis-mdm-kit/arkts-apis/arkts-mdm-bundlemanager-signatureinfo-i.md)
 
@@ -267,7 +273,8 @@ readonly signatureInfo: SignatureInfo
 readonly targetVersion: int
 ```
 
-应用运行目标版本，对应[app.json5](../../../quick-start/app-configuration-file.md)中配置的targetAPIVersion字段。
+Target version of the application. It corresponds to the **targetAPIVersion** field in the  
+[app.json5](../../../quick-start/app-configuration-file.md) file.
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
@@ -287,7 +294,7 @@ readonly targetVersion: int
 readonly updateTime: long
 ```
 
-应用包更新时间戳，表示从1970-01-01 08:00:00 UTC+8逝去的毫秒数，单位毫秒。
+Timestamp for the last update of the application package. It measures the milliseconds that have passed since the Unix epoch (January 1, 1970, 08:00:00 UTC+8), in milliseconds.
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：long
 
@@ -307,7 +314,8 @@ readonly updateTime: long
 readonly vendor: string
 ```
 
-应用包的供应商，对应[app.json5](../../../quick-start/app-configuration-file.md)中配置的vendor字段。
+Vendor of the application package. It corresponds to the **vendor** field in the  
+[app.json5](../../../quick-start/app-configuration-file.md) file.
 
 **Type:** string
 
@@ -327,7 +335,8 @@ readonly vendor: string
 readonly versionCode: long
 ```
 
-应用包的版本号，对应[app.json5](../../../quick-start/app-configuration-file.md)中配置的versionCode字段。
+Version code of the application package. It corresponds to the **versionCode** field in the  
+[app.json5](../../../quick-start/app-configuration-file.md) file.
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：long
 
@@ -347,7 +356,8 @@ readonly versionCode: long
 readonly versionName: string
 ```
 
-应用包的版本文本描述信息，对应[app.json5](../../../quick-start/app-configuration-file.md)中配置的versionName字段。
+Version description of the application package. It corresponds to the **versionName** field in the  
+[app.json5](../../../quick-start/app-configuration-file.md) file.
 
 **Type:** string
 

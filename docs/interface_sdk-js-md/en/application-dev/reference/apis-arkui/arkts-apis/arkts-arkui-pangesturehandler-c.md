@@ -1,6 +1,6 @@
 # PanGestureHandler
 
-滑动手势处理器对象类型。
+Defines a pan gesture handler object.
 
 **Inheritance/Implementation:** PanGestureHandler extends [GestureHandler<PanGestureHandler>](GestureHandler<PanGestureHandler>)
 
@@ -18,7 +18,7 @@
 constructor(options?: PanGestureHandlerOptions)
 ```
 
-滑动手势处理器的构造函数。
+Constructor used to create a pan gesture handler instance.
 
 **Since:** 12
 
@@ -36,7 +36,7 @@ constructor(options?: PanGestureHandlerOptions)
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| options | [PanGestureHandlerOptions](arkts-arkui-pangesturehandleroptions-i.md) | No | 滑动手势处理器配置参数。 |
+| options | [PanGestureHandlerOptions](arkts-arkui-pangesturehandleroptions-i.md) | No | Parameters of the pan gesture handler. |
 
 ## onActionCancel
 
@@ -44,7 +44,7 @@ constructor(options?: PanGestureHandlerOptions)
 onActionCancel(event: Callback<void>): PanGestureHandler
 ```
 
-设置滑动手势处理器取消回调。滑动手势处理器识别成功后，接收到触摸取消事件时触发回调。不返回手势事件信息。
+Sets the callback for pan gesture cancellation. This callback is triggered when a touch cancellation event occurs after successful recognition. No gesture event information is returned.
 
 **Since:** 12
 
@@ -62,13 +62,13 @@ onActionCancel(event: Callback<void>): PanGestureHandler
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| event | [Callback](../arkts-components/arkts-arkui-callback-i.md)&lt;void&gt; | Yes | 滑动手势处理器取消回调。 |
+| event | [Callback](../arkts-components/arkts-arkui-callback-i.md)&lt;void&gt; | Yes | Callback invoked when the pan gesture is cancelled. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [PanGestureHandler](arkts-arkui-gesture-pangesturehandler-c.md) | 返回当前滑动手势处理器对象。 |
+| [PanGestureHandler](arkts-arkui-gesture-pangesturehandler-c.md) | Pan gesture handler object. |
 
 ## onActionCancel
 
@@ -76,8 +76,8 @@ onActionCancel(event: Callback<void>): PanGestureHandler
 onActionCancel(event: Callback<GestureEvent>): PanGestureHandler
 ```
 
-设置滑动手势处理器取消回调。滑动手势处理器识别成功后，接收到触摸取消事件时触发回调。与  
-[onActionCancel](arkts-arkui-pangesturehandler-c.md#onactioncancel)接口相比，此接口返回手势事件信息。
+Sets the callback for pan gesture cancellation. This callback is triggered when a touch cancellation event occurs after successful recognition. Compared with   
+[onActionCancel](arkts-arkui-pangesturehandler-c.md#onactioncancel), this API returns gesture event information.
 
 **Since:** 18
 
@@ -95,13 +95,13 @@ onActionCancel(event: Callback<GestureEvent>): PanGestureHandler
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| event | [Callback](../arkts-components/arkts-arkui-callback-i.md)&lt;GestureEvent&gt; | Yes | 滑动手势处理器取消回调。返回手势事件信息。 |
+| event | [Callback](../arkts-components/arkts-arkui-callback-i.md)&lt;GestureEvent&gt; | Yes | Callback invoked when the pan gesture is cancelled. Gesture event information is returned. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [PanGestureHandler](arkts-arkui-gesture-pangesturehandler-c.md) | 返回当前滑动手势处理器对象。 |
+| [PanGestureHandler](arkts-arkui-gesture-pangesturehandler-c.md) | Pan gesture handler object. |
 
 ## onActionEnd
 
@@ -109,7 +109,7 @@ onActionCancel(event: Callback<GestureEvent>): PanGestureHandler
 onActionEnd(event: Callback<GestureEvent>): PanGestureHandler
 ```
 
-设置滑动手势处理器结束回调。滑动手势处理器识别成功后，手指抬起时触发回调。
+Sets the callback for pan gesture recognition completion. This callback is triggered when all fingers are lifted after successful recognition.
 
 **Since:** 12
 
@@ -127,13 +127,13 @@ onActionEnd(event: Callback<GestureEvent>): PanGestureHandler
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| event | [Callback](../arkts-components/arkts-arkui-callback-i.md)&lt;GestureEvent&gt; | Yes | 滑动手势处理器结束回调。 |
+| event | [Callback](../arkts-components/arkts-arkui-callback-i.md)&lt;GestureEvent&gt; | Yes | Callback invoked when pan gesture recognition completes. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [PanGestureHandler](arkts-arkui-gesture-pangesturehandler-c.md) | 返回当前滑动手势处理器对象。 |
+| [PanGestureHandler](arkts-arkui-gesture-pangesturehandler-c.md) | Pan gesture handler object. |
 
 ## onActionStart
 
@@ -141,7 +141,7 @@ onActionEnd(event: Callback<GestureEvent>): PanGestureHandler
 onActionStart(event: Callback<GestureEvent>): PanGestureHandler
 ```
 
-设置滑动手势处理器识别成功回调。
+Sets the callback for successful pan gesture recognition.
 
 **Since:** 12
 
@@ -159,13 +159,13 @@ onActionStart(event: Callback<GestureEvent>): PanGestureHandler
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| event | [Callback](../arkts-components/arkts-arkui-callback-i.md)&lt;GestureEvent&gt; | Yes | 滑动手势处理器识别成功回调。 |
+| event | [Callback](../arkts-components/arkts-arkui-callback-i.md)&lt;GestureEvent&gt; | Yes | Callback invoked upon successful pan gesture recognition. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [PanGestureHandler](arkts-arkui-gesture-pangesturehandler-c.md) | 返回当前滑动手势处理器对象。 |
+| [PanGestureHandler](arkts-arkui-gesture-pangesturehandler-c.md) | Pan gesture handler object. |
 
 ## onActionUpdate
 
@@ -173,7 +173,7 @@ onActionStart(event: Callback<GestureEvent>): PanGestureHandler
 onActionUpdate(event: Callback<GestureEvent>): PanGestureHandler
 ```
 
-设置滑动手势处理器更新回调。滑动手势处理器移动过程中触发回调。
+Sets the callback for pan gesture movement updates. The callback is triggered when the pan gesture moves.
 
 **Since:** 12
 
@@ -191,11 +191,11 @@ onActionUpdate(event: Callback<GestureEvent>): PanGestureHandler
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| event | [Callback](../arkts-components/arkts-arkui-callback-i.md)&lt;GestureEvent&gt; | Yes | 滑动手势处理器更新回调。&lt;br/&gt;fingerList为多根手指时，该回调监听每次只会更新一根手指的位置信息。 |
+| event | [Callback](../arkts-components/arkts-arkui-callback-i.md)&lt;GestureEvent&gt; | Yes | Callback invoked during pan gesture movement.&lt;br&gt;If **fingerList** contains multiple fingers, this callback updates the location information of only one finger each time. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [PanGestureHandler](arkts-arkui-gesture-pangesturehandler-c.md) | 返回当前滑动手势处理器对象。 |
+| [PanGestureHandler](arkts-arkui-gesture-pangesturehandler-c.md) | Pan gesture handler object. |
 

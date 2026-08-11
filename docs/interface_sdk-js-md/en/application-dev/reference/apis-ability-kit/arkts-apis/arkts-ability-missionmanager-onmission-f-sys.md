@@ -12,7 +12,7 @@ import { missionManager } from 'kits/@kit.AbilityKit';
 function onMission(listener: MissionListener): long
 ```
 
-注册系统任务状态监听器。
+Register the missionListener to ams.
 
 **Since:** 23
 
@@ -30,18 +30,18 @@ function onMission(listener: MissionListener): long
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| listener | [MissionListener](arkts-ability-missionmanager-missionlistener-t-sys.md) | Yes | 系统任务监听器。 |
+| listener | [MissionListener](arkts-ability-missionmanager-missionlistener-t-sys.md) | Yes | Indicates the MissionListener to be registered. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| long | 监听器的index值，由系统创建，在注册系统任务状态监听时分配，和监听器一一对应 。 |
+| long | Returns the index number of the MissionListener. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 201 | Permission denied. |
-| 202 | Not system application. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system application. |
 

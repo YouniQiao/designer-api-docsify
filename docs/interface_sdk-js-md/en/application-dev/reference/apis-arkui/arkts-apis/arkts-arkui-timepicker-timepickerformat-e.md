@@ -1,6 +1,6 @@
 # TimePickerFormat
 
-时间选择器的数据格式。
+Type of the TimePicker that need to be displayed.
 
 **Since:** 23
 

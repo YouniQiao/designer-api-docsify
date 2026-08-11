@@ -38,7 +38,7 @@ options?: TextChangeOptions
 
 变化的文本内容信息。
 
-**类型：** [TextChangeOptions](arkts-arkui-textcommon-textchangeoptions-i.md)
+**类型：** [TextChangeOptions](arkts-arkui-textchangeoptions-i.md)
 
 **起始版本：** 23
 

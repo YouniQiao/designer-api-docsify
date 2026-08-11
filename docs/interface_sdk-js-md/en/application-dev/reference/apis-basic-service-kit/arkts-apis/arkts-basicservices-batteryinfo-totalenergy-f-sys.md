@@ -12,7 +12,7 @@ import { batteryInfo } from 'kits/@kit.BasicServicesKit';
 function totalEnergy(): int
 ```
 
-获取当前设备电池的总容量，单位毫安时。
+Total battery capacity of the device, in unit of mAh. This is a system API.
 
 **Since:** 23
 
@@ -28,5 +28,5 @@ function totalEnergy(): int
 
 | Type | Description |
 | --- | --- |
-| int | 返回当前设备电池的总容量，单位毫安时。 |
+| int | Returns the total battery capacity of the device, in mAh. |
 

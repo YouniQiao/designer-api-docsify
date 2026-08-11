@@ -1,10 +1,11 @@
 # AutoDeviceSwitch
 
-自动切换镜头类，继承自[AutoDeviceSwitchQuery](arkts-camera-camera-autodeviceswitchquery-i.md)，用于使能或去使能自动切换镜头。自动切换镜头能力仅支持折叠屏设备使用，详细开发指导请参考  
-[自动切换摄像头实践](../../../media/camera/camera-auto-switch.md)。
+**AutoDeviceSwitch** inherits from [AutoDeviceSwitchQuery](arkts-camera-camera-autodeviceswitchquery-i.md) and is used to enable or disable automatic camera switch. This capability can be used only on foldable devices. For details about the development, see   
+[Practices for Automatic Camera Switching (ArkTS)](../../../media/camera/camera-auto-switch.md).
 
-使用建议：自动切换镜头功能由系统自动完成输入设备切换、会话配置和参数接续。如系统发现镜头切换时，两颗镜头的变焦范围不一致，则会通过  
-[AutoDeviceSwitchStatus](arkts-camera-camera-autodeviceswitchstatus-i.md)中的isDeviceCapabilityChanged字段告知应用，但仍需要应用自己处理UX的变更（如变焦范围的调整，需要重新通过[getZoomRatioRange](arkts-camera-camera-zoomquery-i.md#getzoomratiorange)接口获取数据并更新UX），因此更适用于极简UX交互的场景。
+It is recommended that the system automatically handle input device switching, session configuration, and parameter continuity during automatic camera switch. If the system detects that the zoom ranges of the two cameras are different during camera switching, it will notify the application through the **isDeviceCapabilityChanged** field in [AutoDeviceSwitchStatus](arkts-camera-camera-autodeviceswitchstatus-i.md). However, the application still needs to handle the UX change. For example, for the zoom range adjustment, the application needs to call   
+[getZoomRatioRange](arkts-camera-camera-zoomquery-i.md#getzoomratiorange) to obtain data and update the UX. Therefore,   
+**AutoDeviceSwitch** is more applicable to simplified UX interactions.
 
 **Inheritance/Implementation:** AutoDeviceSwitch extends [AutoDeviceSwitchQuery](arkts-camera-camera-autodeviceswitchquery-i.md)
 
@@ -28,11 +29,14 @@ import { camera } from 'kits/@kit.CameraKit';
 enableAutoDeviceSwitch(enabled: boolean): void
 ```
 
-使能或去使能自动切换镜头。可以先通过[isAutoDeviceSwitchSupported](arkts-camera-camera-autodeviceswitchquery-i.md#isautodeviceswitchsupported)获取当前设备是否支持自动切换镜头。
+Enables or disables automatic camera switch. You can use   
+[isAutoDeviceSwitchSupported](arkts-camera-camera-autodeviceswitchquery-i.md#isautodeviceswitchsupported) to check whether the device supports automatic camera switch.
 
-> **说明：**
+> **NOTE：**
 > 
-> 该接口仅用于有多个前置镜头的折叠设备，在不同的折叠状态下可自动切换到当前可使用的前置镜头。无法实现前后置镜头的切换。
+> This API is used only for foldable devices with multiple front cameras. In different fold states, the system
+> can automatically switch to an available front camera. It does not enable automatic switching between front and
+> rear cameras.
 
 **Since:** 13
 
@@ -48,14 +52,14 @@ enableAutoDeviceSwitch(enabled: boolean): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| enabled | boolean | Yes | 使能或去使能自动切换镜头。true表示使能，false表示不使能。 |
+| enabled | boolean | Yes | Whether to enable automatic camera switch. **true** to enable, **false** otherwise. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 7400101 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameters verification failed.<br>**Applicable version:** 19 and later |
-| 7400102 | Operation not allowed. |
-| 7400103 | Session not config. |
-| 7400201 | Camera service fatal error. |
+| [7400101](../errorcode-camera.md#7400101-invalid-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameters verification failed.<br>**Applicable version:** 19 and later |
+| [7400102](../errorcode-camera.md#7400102-invalid-operation) | Operation not allowed. |
+| [7400103](../errorcode-camera.md#7400103-session-not-configured) | Session not config. |
+| [7400201](../errorcode-camera.md#7400201-camera-service-error) | Camera service fatal error. |
 

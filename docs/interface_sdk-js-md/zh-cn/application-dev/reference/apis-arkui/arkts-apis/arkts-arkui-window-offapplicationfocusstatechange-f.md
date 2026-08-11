@@ -1,11 +1,5 @@
 # offApplicationFocusStateChange
 
-## 导入模块
-
-```TypeScript
-import { window } from 'kits/@kit.ArkUI';
-```
-
 ## offApplicationFocusStateChange
 
 ```TypeScript

@@ -1,9 +1,12 @@
 # BackgroundTaskMode
 
-长时任务主类型。通常与长时任务子类型[BackgroundTaskSubmode](arkts-backgroundtasks-backgroundtaskmanager-backgroundtasksubmode-e.md)配合使用，对照关系请参考长时任务主类型与子类型对照表，两者共同作为API version 21新增的  
-[申请](arkts-backgroundtasks-backgroundtaskmanager-startbackgroundrunning-f.md#startbackgroundrunning)、  
-[更新](arkts-backgroundtasks-backgroundtaskmanager-updatebackgroundrunning-f.md#updatebackgroundrunning)长时任务接口入参，用于指定长时任务类型。&lt;/br&gt;仅当主类型为MODE_SPECIAL_SCENARIO_PROCESSING特殊场景类型，或非PC/2in1设备主类型为MODE_TASK_KEEPING计算任务时，调用长时任务相关接口时需同时申请ACL权限  
-[ohos.permission.KEEP_BACKGROUND_RUNNING_SYSTEM](../../../security/AccessToken/restricted-permissions.md#ohospermissionkeep_background_running_system)，其他场景无需申请该权限。
+Main type of a continuous task. It is usually used together with the subtype   
+[BackgroundTaskSubmode](arkts-backgroundtasks-backgroundtaskmanager-backgroundtasksubmode-e.md). For details, see the mapping table. The two types are newly added in API version 21 for   
+[requesting](arkts-backgroundtasks-backgroundtaskmanager-startbackgroundrunning-f.md#startbackgroundrunning) and   
+[updating](arkts-backgroundtasks-backgroundtaskmanager-updatebackgroundrunning-f.md#updatebackgroundrunning) continuous tasks.
+
+When the main type of the continuous task is **MODE_SPECIAL_SCENARIO_PROCESSING**, or that of a non-PC/2-in-1 device is **MODE_TASK_KEEPING**, you need to request the ACL permission   
+[ohos.permission.KEEP_BACKGROUND_RUNNING_SYSTEM](../../../security/AccessToken/restricted-permissions.md#ohospermissionkeep_background_running_system)before calling APIs related to continuous tasks. In other scenarios, this permission is not required.
 
 **Since:** 21
 
@@ -19,13 +22,14 @@
 MODE_DATA_TRANSFER = 1
 ```
 
-数据传输。
+Data transfer.
 
-使用场景举例：非托管形式的上传、下载，如在浏览器后台上传或下载数据。
+Use scenario: upload and download in non-hosting mode, for example, uploading or downloading data in the background of a browser.
 
-**说明：**
+**NOTE：**
 
-1. 在数据传输时，应用需要更新进度，如果进度长时间（超过10分钟）未更新，数据传输的长时任务会被取消。2. 更新进度的通知类型必须为实况窗，具体实现可参考[startBackgroundRunning()](arkts-backgroundtasks-backgroundtaskmanager-startbackgroundrunning-f.md#startbackgroundrunning)中的示例。
+1. During data transfer, the application needs to update the progress.If the progress is not updated for more than 10 minutes,the continuous task of the **DATA_TRANSFER** type will be canceled.2. The notification type of the progress update must be live view. For details, see the example in  
+[startBackgroundRunning()](arkts-backgroundtasks-backgroundtaskmanager-startbackgroundrunning-f.md#startbackgroundrunning).
 
 **Since:** 21
 
@@ -41,11 +45,11 @@ MODE_DATA_TRANSFER = 1
 MODE_AUDIO_PLAYBACK = 2
 ```
 
-音视频播放。
+Audio and video playback.
 
-使用场景举例：音频、视频在后台播放，音视频投播。
+Use scenario: audio/video playback in the background and audio/video casting.
 
-**说明：** 申请/更新MODE_AUDIO_PLAYBACK类型长时任务但不接入AVSession，申请/更新长时任务成功后会在通知栏显示通知。接入AVSession后，后台任务模块不会发送通知栏通知，由AVSession发送通知。
+Note: If a continuous task of the **MODE_AUDIO_PLAYBACK** type is requested or updated without connecting to AVSession, a notification will appear in the notification panel once the task is successfully requested or updated. Once AVSession is connected, notifications will be sent by AVSession instead of the background task module.
 
 **Since:** 21
 
@@ -63,11 +67,11 @@ MODE_AUDIO_PLAYBACK = 2
 MODE_AUDIO_RECORDING = 3
 ```
 
-录制。
+Audio recording.
 
-使用场景举例：录音、录屏退后台。&lt;!--Del--&gt;
+Use scenario: recording and screen capture in the background.&lt;!--Del--&gt;
 
-**说明：** 系统应用申请/更新该类型的长时任务，没有通知栏消息。&lt;!--DelEnd--&gt;
+Note: No notification is displayed if a system application requests or updates a continuous task.&lt;!--DelEnd--&gt;
 
 **Since:** 21
 
@@ -83,7 +87,7 @@ MODE_AUDIO_RECORDING = 3
 MODE_LOCATION = 4
 ```
 
-定位导航。
+Positioning and navigation.
 
 **Since:** 21
 
@@ -101,9 +105,9 @@ MODE_LOCATION = 4
 MODE_BLUETOOTH_INTERACTION = 5
 ```
 
-蓝牙相关业务。
+Bluetooth-related services.
 
-使用场景举例：通过蓝牙传输文件时退后台。
+Use scenario: An application moves to the background while transferring files via Bluetooth.
 
 **Since:** 21
 
@@ -119,9 +123,9 @@ MODE_BLUETOOTH_INTERACTION = 5
 MODE_MULTI_DEVICE_CONNECTION = 6
 ```
 
-多设备互联。
+Multi-device connection.
 
-使用场景举例：分布式业务连接、投播。
+Use scenario: distributed service connection and casting.
 
 **Since:** 21
 
@@ -139,11 +143,11 @@ MODE_MULTI_DEVICE_CONNECTION = 6
 MODE_VOIP = 8
 ```
 
-音视频通话。
+Audio and video calls.
 
-使用场景举例：某些聊天类应用（具有音视频业务）音频、视频通话时退后台。 &lt;!--Del--&gt;
+Use scenario: Chat applications (with audio and video services) transition into the background during audio and video calls. &lt;!--Del--&gt;
 
-**说明：** 系统应用申请/更新该类型的长时任务，没有通知栏消息。&lt;!--DelEnd--&gt;
+Note: No notification is displayed if a system application requests or updates a continuous task.&lt;!--DelEnd--&gt;
 
 **Since:** 21
 
@@ -159,12 +163,12 @@ MODE_VOIP = 8
 MODE_TASK_KEEPING = 9
 ```
 
-计算任务。
+Computing tasks.
 
-使用场景举例：杀毒软件。
+Use scenario: antivirus software.
 
-**说明：** 仅对PC/2in1设备开放，或者非PC/2in1设备但申请了ACL权限为
-[ohos.permission.KEEP_BACKGROUND_RUNNING_SYSTEM](../../../security/AccessToken/restricted-permissions.md#ohospermissionkeep_background_running_system)的应用开放。
+**NOTE：**: This capability is available only to PCs/2-in-1 devices, or non-PCs/2-in-1 devices that have obtained the ACL permission
+[ohos.permission.KEEP_BACKGROUND_RUNNING_SYSTEM](../../../security/AccessToken/restricted-permissions.md#ohospermissionkeep_background_running_system).
 
 **Since:** 21
 
@@ -180,9 +184,9 @@ MODE_TASK_KEEPING = 9
 MODE_AV_PLAYBACK_AND_RECORD = 12
 ```
 
-多媒体相关业务。
+Multimedia services.
 
-使用场景举例：音视频播放、录制、音视频通话场景，场景需与长时任务子类型相匹配。在上述场景下，选择此类型或者对应的长时任务主类型均可。例如：音视频播放场景可以申请MODE_AUDIO_PLAYBACK或者MODE_AV_PLAYBACK_AND_RECORD长时任务主类型。
+Use scenarios: audio/video playback, recording, and audio/video calls. The scenario must match that of the subtype. You can select this task type or the corresponding main type for preceding scenarios. For example, you can request a continuous task of the **MODE_AUDIO_PLAYBACK** or **MODE_AV_PLAYBACK_AND_RECORD** type for audio/video playback.
 
 **Since:** 22
 
@@ -200,13 +204,17 @@ MODE_AV_PLAYBACK_AND_RECORD = 12
 MODE_SPECIAL_SCENARIO_PROCESSING = 13
 ```
 
-特殊场景类型（仅对Phone、Tablet、PC/2in1设备开放）。
+Special scenarios (available only for smartphones, tablets, PCs/2-in-1 devices).
 
-使用场景举例：应用在后台导出媒体文件、应用使用三方投播组件在后台进行投播，场景需与长时任务子类型相匹配。
+Use scenarios: An application exports media files in the background or uses a third-party component to cast content in the background. The scenario must match that of the subtype.
 
-**说明：**
+**NOTE：**
 
-1. 如果应用需要在后台长时间运行，可以通过[requestAuthFromUser](arkts-backgroundtasks-backgroundtaskmanager-continuoustaskrequest-c.md#requestauthfromuser)接口请求用户授权、通过[checkSpecialScenarioAuth](arkts-backgroundtasks-backgroundtaskmanager-continuoustaskrequest-c.md#checkspecialscenarioauth)接口查询用户授权结果。2. 从API version 24开始，仅对申请ACL权限[ohos.permission.KEEP_BACKGROUND_RUNNING_SPECIAL_SCENARIO](../../../security/AccessToken/restricted-permissions.md#ohospermissionkeep_background_running_special_scenario)的应用开放。API version 23及之前版本，仅对申请ACL权限[ohos.permission.KEEP_BACKGROUND_RUNNING_SYSTEM](../../../security/AccessToken/restricted-permissions.md#ohospermissionkeep_background_running_system)的应用开放，已经申请该权限的应用在API version 24之后不受影响。3. 必须单独使用且不支持通知合并，即申请或更新长时任务时，长时任务类型只能有特殊场景类型，否则返回错误。
+1. If an application needs to run in the background for a long time,it can request user authorization through the  
+[requestAuthFromUser](arkts-backgroundtasks-backgroundtaskmanager-continuoustaskrequest-c.md#requestauthfromuser) API and check the authorization result via  
+[checkSpecialScenarioAuth](arkts-backgroundtasks-backgroundtaskmanager-continuoustaskrequest-c.md#checkspecialscenarioauth).2. Since API version 24, this capability is available only to applications that have obtainedthe ACL permission  
+[ohos.permission.KEEP_BACKGROUND_RUNNING_SPECIAL_SCENARIO](../../../security/AccessToken/restricted-permissions.md#ohospermissionkeep_background_running_special_scenario).For API version 23 and earlier,this capability is available only to applications that have obtained the ACL permission  
+[ohos.permission.KEEP_BACKGROUND_RUNNING_SYSTEM](../../../security/AccessToken/restricted-permissions.md#ohospermissionkeep_background_running_system).Applications that have obtained this permission are not affected for API version 24 and later.3. This task type must be used independently and notifications cannot be combined.Specifically, when you request or update a continuous task,it must be of the **MODE_SPECIAL_SCENARIO_PROCESSING** type. Otherwise, an error is returned.
 
 **Since:** 22
 
@@ -222,9 +230,9 @@ MODE_SPECIAL_SCENARIO_PROCESSING = 13
 MODE_NEARLINK = 14
 ```
 
-星闪业务。
+NearLink device.
 
-使用场景举例：通过星闪传输文件时退后台。
+Use scenario: An application transitions into the background during the process of file transfer using NearLink.
 
 **Since:** 26.0.0
 

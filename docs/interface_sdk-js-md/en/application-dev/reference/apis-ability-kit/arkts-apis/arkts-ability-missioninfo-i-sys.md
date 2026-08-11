@@ -1,7 +1,7 @@
 # MissionInfo (System API)
 
-表示任务的详细信息，可以通过  
-[getMissionInfo](arkts-ability-missionmanager-getmissioninfo-f-sys.md#getmissioninfo)获取。
+The module defines detailed information about a mission. The information can be obtained through  
+[getMissionInfo](arkts-ability-missionmanager-getmissioninfo-f-sys.md#getmissioninfo).
 
 **Since:** 8
 
@@ -19,7 +19,7 @@
 abilityState: int
 ```
 
-表示此任务的能力状态。
+Indicates the ability state of this mission.
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
@@ -39,7 +39,7 @@ abilityState: int
 continuable: boolean
 ```
 
-表示任务是否可以迁移。返回true表示可以迁移，返回false表示不可迁移。
+Indicates whether the mission is continuable.
 
 **Type:** boolean
 
@@ -59,7 +59,7 @@ continuable: boolean
 iconPath: string
 ```
 
-表示任务的图标路径。
+Indicates icon path of the mission.
 
 **Type:** string
 
@@ -79,7 +79,7 @@ iconPath: string
 label: string
 ```
 
-表示任务的标签。
+Indicates label of the mission.
 
 **Type:** string
 
@@ -99,7 +99,7 @@ label: string
 lockedState: boolean
 ```
 
-表示锁定状态。返回true表示锁定状态，返回false表示未锁定状态。
+Indicates locked state.
 
 **Type:** boolean
 
@@ -119,7 +119,7 @@ lockedState: boolean
 missionId: int
 ```
 
-表示任务ID。
+Indicates mission id.
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
@@ -139,7 +139,7 @@ missionId: int
 runningState: int
 ```
 
-表示运行状态。
+Indicates running state.
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
@@ -159,7 +159,7 @@ runningState: int
 timestamp: string
 ```
 
-表示任务的最近创建或更新时间。
+Indicates the recent created or updated time of the mission.
 
 **Type:** string
 
@@ -179,7 +179,7 @@ timestamp: string
 unclearable: boolean
 ```
 
-表示任务是否可以被用户手动删除。返回true表示可以被用户手动删除，返回false表示不可被用户手动删除。
+Indicates whether the mission is unclearable.
 
 **Type:** boolean
 
@@ -199,7 +199,7 @@ unclearable: boolean
 want: Want
 ```
 
-表示任务的Want信息。
+Indicates want of the mission.
 
 **Type:** [Want](arkts-ability-app-ability-want-want-c.md)
 

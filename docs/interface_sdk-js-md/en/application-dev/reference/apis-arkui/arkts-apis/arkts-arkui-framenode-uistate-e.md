@@ -1,8 +1,6 @@
 # UIState
 
-多态样式状态枚举，用于处理多态样式。
-
-.0.0
+Enum for the UI state of one component, which is used for handling of state style.
 
 **Since:** 26.0.0
 
@@ -18,7 +16,7 @@
 NORMAL = 0
 ```
 
-正常状态。
+The normal state.
 
 **Since:** 26.0.0
 
@@ -36,7 +34,7 @@ NORMAL = 0
 PRESSED = 1 << 0
 ```
 
-按下状态。
+The pressed state.
 
 **Since:** 26.0.0
 
@@ -54,7 +52,7 @@ PRESSED = 1 << 0
 FOCUSED = 1 << 1
 ```
 
-获焦状态。
+The focused state.
 
 **Since:** 26.0.0
 
@@ -72,7 +70,7 @@ FOCUSED = 1 << 1
 DISABLED = 1 << 2
 ```
 
-禁用状态。
+The disabled state.
 
 **Since:** 26.0.0
 
@@ -90,9 +88,7 @@ DISABLED = 1 << 2
 SELECTED = 1 << 3
 ```
 
-选中状态。
-
-仅特定的组件支持此状态：Checkbox、Radio、Toggle、List、Grid、MenuItem。
+The selected state, this state is only supported by some specific kind of component,they are Checkbox, Radio, Toggle and List/Grid/MenuItem, please check the StateStyles docs for details.
 
 **Since:** 26.0.0
 
@@ -110,7 +106,7 @@ SELECTED = 1 << 3
 HOVERED = 1 << 4
 ```
 
-悬浮状态。
+The hovered state.
 
 **Since:** 26.0.0
 

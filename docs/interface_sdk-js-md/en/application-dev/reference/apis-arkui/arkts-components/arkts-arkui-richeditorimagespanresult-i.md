@@ -1,6 +1,6 @@
 # RichEditorImageSpanResult
 
-后端返回的图片信息。
+Provides the image information returned by the backend.
 
 **Since:** 10
 
@@ -16,7 +16,7 @@
 imageStyle: RichEditorImageSpanStyleResult
 ```
 
-图片样式。
+Image style.
 
 **Type:** [RichEditorImageSpanStyleResult](arkts-arkui-richeditorimagespanstyleresult-i.md)
 
@@ -38,7 +38,7 @@ imageStyle: RichEditorImageSpanStyleResult
 offsetInSpan: [number, number]
 ```
 
-Span里图片的起始和结束位置。
+Start and end positions of the image in the span.
 
 **Type:** [number, number]
 
@@ -60,7 +60,7 @@ Span里图片的起始和结束位置。
 spanPosition: RichEditorSpanPosition
 ```
 
-Span位置。
+Span position.
 
 **Type:** [RichEditorSpanPosition](arkts-arkui-richeditorspanposition-i.md)
 
@@ -82,7 +82,7 @@ Span位置。
 valuePixelMap?: PixelMap
 ```
 
-图片内容。
+Image content.
 
 **Type:** [PixelMap](../../apis-image-kit/arkts-apis/arkts-image-image-pixelmap-i.md)
 
@@ -104,7 +104,7 @@ valuePixelMap?: PixelMap
 valueResourceStr?: ResourceStr
 ```
 
-图片资源id。
+Image resource ID.
 
 **Type:** [ResourceStr](../arkts-apis/arkts-arkui-resourcestr-t.md)
 

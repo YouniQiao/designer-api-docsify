@@ -1,12 +1,13 @@
 # MutableStyledString
 
-继承于[StyledString](arkts-arkui-styledstring-c.md)类。
+Inherits from the [StyledString](arkts-arkui-styledstring-c.md) class.
 
-> **以下接口异常入参处理统一说明：**
+> **An exception is thrown in the following cases:**
 > 
-> 当start和length越界或者必填传入undefined时，会抛出异常；
+> If the values of **start** and **length** are out of the acceptable range or if any mandatory parameter is passed
+> as **undefined**, an exception is thrown.
 > 
-> 当styledKey和styledValue传入异常值或者两者对应关系不匹配时，会抛出异常。
+> **styledKey** or **styledValue** is set to an invalid value or they do not match.
 
 **Inheritance/Implementation:** MutableStyledString extends [StyledString](arkts-arkui-styledstring-c.md)
 
@@ -24,7 +25,7 @@
 appendStyledString(other: StyledString): void
 ```
 
-在末尾位置追加新的属性字符串。
+Appends a styled string.
 
 **Since:** 12
 
@@ -42,7 +43,7 @@ appendStyledString(other: StyledString): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| other | [StyledString](arkts-arkui-styledstring-c.md) | Yes | 新的属性字符串对象。 |
+| other | [StyledString](arkts-arkui-styledstring-c.md) | Yes | New styled string. |
 
 ## clearStyles
 
@@ -50,9 +51,9 @@ appendStyledString(other: StyledString): void
 clearStyles(): void
 ```
 
-清除属性字符串对象的所有样式。
+Removes all styles of this styled string.
 
-被清空样式类型对象属性使用的是对应[Text](../../apis-arkgraphics2d/arkts-apis/arkts-graphics-text.md/arkts-graphics-text.md)组件属性的设置值，若Text组件未设置值，则使用对应Text组件属性的默认值。
+After a style is removed, the value set for the corresponding style attribute in the [Text](../../apis-arkgraphics2d/arkts-apis/arkts-graphics-text.md/arkts-graphics-text.md) component is used. If the value is not set, the default value is used.
 
 **Since:** 12
 
@@ -72,7 +73,7 @@ clearStyles(): void
 insertString(start: number, other: string): void
 ```
 
-插入字符串。
+Inserts a string.
 
 **Since:** 12
 
@@ -90,14 +91,14 @@ insertString(start: number, other: string): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| start | number | Yes | 插入位置的下标。 |
-| other | string | Yes | 插入的新文本内容。 &lt;br&gt;**说明：** &lt;br&gt;插入的字符串使用的是start-1位置字符的样式。若start-1位置字符未设置样式，则使用start位置字符样式。 |
+| start | number | Yes | Subscript of the position where the string will be inserted. |
+| other | string | Yes | String to insert.&lt;br&gt;**NOTE：**&lt;br&gt;The string specified here uses the style of the character at the **start** - 1 position or, if that character does not have style set, the style of the character at the **start** position. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. Possible causes: &lt;br&gt; 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameters types. &lt;br&gt; 3. Parameter verification failed. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: &lt;br&gt; 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameters types. &lt;br&gt; 3. Parameter verification failed. |
 
 ## insertStyledString
 
@@ -105,7 +106,7 @@ insertString(start: number, other: string): void
 insertStyledString(start: number, other: StyledString): void
 ```
 
-在指定位置插入新的属性字符串。
+Inserts a new styled string at the specified position.
 
 **Since:** 12
 
@@ -123,14 +124,14 @@ insertStyledString(start: number, other: StyledString): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| start | number | Yes | 开始插入位置的下标。 |
-| other | [StyledString](arkts-arkui-styledstring-c.md) | Yes | 新的属性字符串对象。 |
+| start | number | Yes | Subscript of the position to insert the styled string. |
+| other | [StyledString](arkts-arkui-styledstring-c.md) | Yes | New styled string. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. Possible causes: &lt;br&gt; 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameters types. &lt;br&gt; 3. Parameter verification failed. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: &lt;br&gt; 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameters types. &lt;br&gt; 3. Parameter verification failed. |
 
 ## removeString
 
@@ -138,9 +139,9 @@ insertStyledString(start: number, other: StyledString): void
 removeString(start: number, length: number): void
 ```
 
-移除指定范围的字符串。
+Removes the string in the specified range of this styled string.
 
-当属性字符串中包含图片或[CustomSpan](arkts-arkui-customspan-c.md)时，同样生效。
+This API equally works when the styled string contains an image or [CustomSpan](arkts-arkui-customspan-c.md).
 
 **Since:** 12
 
@@ -158,14 +159,14 @@ removeString(start: number, length: number): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| start | number | Yes | 指定范围的下标。 |
-| length | number | Yes | 指定范围的长度。 |
+| start | number | Yes | Subscript of the target range. |
+| length | number | Yes | Length of the target range. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. Possible causes: &lt;br&gt; 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameters types. &lt;br&gt; 3. Parameter verification failed. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: &lt;br&gt; 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameters types. &lt;br&gt; 3. Parameter verification failed. |
 
 ## removeStyle
 
@@ -173,11 +174,11 @@ removeString(start: number, length: number): void
 removeStyle(start: number, length: number, styledKey: StyledStringKey): void
 ```
 
-清除指定范围内容的指定类型样式。
+Removes the style for the specified range of this styled string.
 
-被清空样式类型对象属性使用的是对应[Text](../../apis-arkgraphics2d/arkts-apis/arkts-graphics-text.md/arkts-graphics-text.md)组件属性的设置值，若Text组件未设置值，则使用对应Text组件属性的默认值。
+After a style is removed, the value set for the corresponding style attribute in the [Text](../../apis-arkgraphics2d/arkts-apis/arkts-graphics-text.md/arkts-graphics-text.md) component is used. If the value is not set, the default value is used.
 
-当属性字符串中包含图片时，同样生效。
+This API equally works when the styled string contains an image.
 
 **Since:** 12
 
@@ -195,15 +196,15 @@ removeStyle(start: number, length: number, styledKey: StyledStringKey): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| start | number | Yes | 指定范围开始位置的下标。 |
-| length | number | Yes | 指定范围的长度。 |
-| styledKey | [StyledStringKey](arkts-arkui-styledstring-styledstringkey-e.md) | Yes | 样式类型枚举值。 |
+| start | number | Yes | Subscript that corresponds to the start position of the target range. |
+| length | number | Yes | Length of the target range. |
+| styledKey | [StyledStringKey](arkts-arkui-styledstring-styledstringkey-e.md) | Yes | Styled key. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. Possible causes: &lt;br&gt; 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameters types. &lt;br&gt; 3. Parameter verification failed. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: &lt;br&gt; 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameters types. &lt;br&gt; 3. Parameter verification failed. |
 
 ## removeStyles
 
@@ -211,11 +212,11 @@ removeStyle(start: number, length: number, styledKey: StyledStringKey): void
 removeStyles(start: number, length: number): void
 ```
 
-清除指定范围内容的所有样式。
+Removes all styles for the specified range of this styled string.
 
-被清空样式类型对象属性使用的是对应[Text](../../apis-arkgraphics2d/arkts-apis/arkts-graphics-text.md/arkts-graphics-text.md)组件属性的设置值，若Text组件未设置值，则使用对应Text组件属性的默认值。
+After a style is removed, the value set for the corresponding style attribute in the [Text](../../apis-arkgraphics2d/arkts-apis/arkts-graphics-text.md/arkts-graphics-text.md) component is used. If the value is not set, the default value is used.
 
-当属性字符串中包含图片时，同样生效。
+This API equally works when the styled string contains an image.
 
 **Since:** 12
 
@@ -233,14 +234,14 @@ removeStyles(start: number, length: number): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| start | number | Yes | 指定范围开始位置的下标。 |
-| length | number | Yes | 指定范围的长度。 |
+| start | number | Yes | Subscript that corresponds to the start position of the target range. |
+| length | number | Yes | Length of the target range. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. Possible causes: &lt;br&gt; 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameters types. &lt;br&gt; 3. Parameter verification failed. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: &lt;br&gt; 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameters types. &lt;br&gt; 3. Parameter verification failed. |
 
 ## replaceString
 
@@ -248,7 +249,7 @@ removeStyles(start: number, length: number): void
 replaceString(start: number, length: number, other: string): void
 ```
 
-替换指定范围的字符串。
+Replaces the string in the specified range of this styled string.
 
 **Since:** 12
 
@@ -266,15 +267,15 @@ replaceString(start: number, length: number, other: string): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| start | number | Yes | 指定范围的下标。 |
-| length | number | Yes | 指定范围的长度。 |
-| other | string | Yes | 替换的新文本内容。 &lt;br&gt;**说明：** &lt;br&gt;替换的字符串使用的是start位置字符的样式。 |
+| start | number | Yes | Subscript of the target range. |
+| length | number | Yes | Length of the target range. |
+| other | string | Yes | String to replace the content in the target range.&lt;br&gt;**NOTE：**&lt;br&gt;The string specified here uses the style of the character at the **start** position. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. Possible causes: &lt;br&gt; 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameters types. &lt;br&gt; 3. Parameter verification failed. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: &lt;br&gt; 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameters types. &lt;br&gt; 3. Parameter verification failed. |
 
 ## replaceStyle
 
@@ -282,7 +283,7 @@ replaceString(start: number, length: number, other: string): void
 replaceStyle(spanStyle: SpanStyle): void
 ```
 
-替换指定范围内容为指定类型新样式。
+Replaces the style in the specified range of this styled string.
 
 **Since:** 12
 
@@ -300,13 +301,13 @@ replaceStyle(spanStyle: SpanStyle): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| spanStyle | [SpanStyle](arkts-arkui-styledstring-spanstyle-i.md) | Yes | 样式对象。 &lt;br&gt;**说明：** &lt;br&gt;默认清空原有样式，替换为新样式。 &lt;br&gt;当SpanStyle的styledKey为IMAGE或CUSTOM_SPAN时，只有当start的位置当前是image或CustomSpan且长度为1，才会生效，其余情况无效果。 |
+| spanStyle | [SpanStyle](arkts-arkui-styledstring-spanstyle-i.md) | Yes | Style object.&lt;br&gt;**NOTE：**&lt;br&gt;By default, the original style is removed and replaced with the new style.&lt;br&gt;If **styledKey** of **SpanStyle** is **IMAGE** or **CUSTOM_SPAN**, this API takes effect only when an image or custom span with the length of 1 is at the **start** position. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. Possible causes: &lt;br&gt; 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameters types. &lt;br&gt; 3. Parameter verification failed. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: &lt;br&gt; 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameters types. &lt;br&gt; 3. Parameter verification failed. |
 
 ## replaceStyledString
 
@@ -314,7 +315,7 @@ replaceStyle(spanStyle: SpanStyle): void
 replaceStyledString(start: number, length: number, other: StyledString): void
 ```
 
-替换指定范围为新的属性字符串。
+Replaces the styled string in the specified range.
 
 **Since:** 12
 
@@ -332,15 +333,15 @@ replaceStyledString(start: number, length: number, other: StyledString): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| start | number | Yes | 指定范围开始位置的下标。 |
-| length | number | Yes | 指定范围的长度。 |
-| other | [StyledString](arkts-arkui-styledstring-c.md) | Yes | 新的属性字符串对象。 |
+| start | number | Yes | Subscript that corresponds to the start position of the target range. |
+| length | number | Yes | Length of the target range. |
+| other | [StyledString](arkts-arkui-styledstring-c.md) | Yes | New styled string. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. Possible causes: &lt;br&gt; 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameters types. &lt;br&gt; 3. Parameter verification failed. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: &lt;br&gt; 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameters types. &lt;br&gt; 3. Parameter verification failed. |
 
 ## setStyle
 
@@ -348,7 +349,7 @@ replaceStyledString(start: number, length: number, other: StyledString): void
 setStyle(spanStyle: SpanStyle): void
 ```
 
-为指定范围内容设置指定类型新样式。
+Sets a new style for the specified range of this styled string.
 
 **Since:** 12
 
@@ -366,11 +367,11 @@ setStyle(spanStyle: SpanStyle): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| spanStyle | [SpanStyle](arkts-arkui-styledstring-spanstyle-i.md) | Yes | 样式对象。 &lt;br&gt;默认不清空原有样式，叠加新样式。如果StyledStringValue类型相同，则新样式将覆盖旧样式。 &lt;br&gt;当SpanStyle的styledKey为IMAGE或CUSTOM_SPAN时，只有当start的位置当前是image或CustomSpan且长度为1，才会生效，其余情况无效果。 |
+| spanStyle | [SpanStyle](arkts-arkui-styledstring-spanstyle-i.md) | Yes | Style object.&lt;br&gt;By default, the new style is applied without removing the original style. If the **StyledStringValue** types are the same, the new style overwrites the old one.&lt;br&gt;If **styledKey** of **SpanStyle** is **IMAGE** or **CUSTOM_SPAN**, this API takes effect only when an image or custom span with the length of 1 is at the **start** position. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | The parameter check failed. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | The parameter check failed. |
 

@@ -18,7 +18,7 @@ Define Provide decoration variable interface.
 resetOnReuse(newValue: T): void
 ```
 
-在重用@Reusable Component实例时提供Link变量。
+Provide Link variable when the @Reusable Component instance is reused.
 
 **Since:** 26.0.0
 
@@ -34,5 +34,5 @@ resetOnReuse(newValue: T): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| newValue | T | Yes | 默认值 |
+| newValue | T | Yes | default value |
 

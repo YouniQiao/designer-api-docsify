@@ -1,6 +1,6 @@
 # ProgressConfiguration
 
-进度条配置。继承自[CommonConfiguration](../arkts-apis/arkts-arkui-common-commonconfiguration-i.md/arkts-arkui-common-commonconfiguration-i.md)。
+Provides progress indicator configuration. Inherits from [CommonConfiguration](../arkts-apis/arkts-arkui-common-commonconfiguration-i.md/arkts-arkui-common-commonconfiguration-i.md).
 
 **Inheritance/Implementation:** ProgressConfiguration extends [CommonConfiguration<ProgressConfiguration>](CommonConfiguration<ProgressConfiguration>)
 
@@ -18,13 +18,13 @@
 total: number
 ```
 
-进度总长。
+Total progress.
 
-取值范围：(0, +∞)
+Default value: **100**
 
-**说明：**
+**NOTE：**
 
-total小于等于0时，按照100处理。
+If the value of **total** is a negative number, it is treated as 100.
 
 **Type:** number
 
@@ -46,13 +46,11 @@ total小于等于0时，按照100处理。
 value: number
 ```
 
-当前进度值。当设置的数值小于0时，将其置为0。当设置的数值大于total时，将其置为total。
+Current progress. Values less than 0 are adjusted to **0**. Values greater than the value of **total** are capped at the value of **total**.
 
-默认值：0
+Default value: **0**
 
-取值范围：[0, total]
-
-**说明：** 当Ring类型进度条的status设置为ProgressStatus.LOADING时，设置进度值不生效。
+Value range: [0, total]
 
 **Type:** number
 

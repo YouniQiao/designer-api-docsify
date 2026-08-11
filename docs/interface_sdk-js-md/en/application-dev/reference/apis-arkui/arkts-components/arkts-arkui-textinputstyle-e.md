@@ -1,6 +1,6 @@
 # TextInputStyle
 
-文本输入样式。
+Text input style.
 
 **Since:** 9
 
@@ -16,7 +16,7 @@
 Default
 ```
 
-默认风格，光标宽1.5vp，光标高度与文本选中底板高度和字体大小相关。
+Default style. The caret width is fixed at 1.5 vp, and the caret height is subject to the background height and font size of the selected text.
 
 **Since:** 9
 
@@ -34,13 +34,13 @@ Default
 Inline
 ```
 
-内联输入风格。文本选中底板高度与输入框高度相同。
+Inline style. The background height of the selected text is the same as the height of the text box.
 
-内联输入是在有明显的编辑态/非编辑态的区分场景下使用，例如：文件列表视图中的重命名。
+This style is used in scenarios where editing and non-editing states are obvious, for example, renaming in the file list view.
 
-不支持showError属性。
+The **showError** attribute is not supported for this style.
 
-[内联模式](../../../ui/arkts-common-components-text-input.md#内联模式)下，不支持拖入文本。
+In the [inline style](../../../ui/arkts-common-components-text-input.md#inline-style), text cannot be dragged into the text box.
 
 **Since:** 9
 

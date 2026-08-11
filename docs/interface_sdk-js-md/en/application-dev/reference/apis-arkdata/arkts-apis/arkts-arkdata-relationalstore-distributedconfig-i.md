@@ -1,6 +1,6 @@
 # DistributedConfig
 
-记录表的分布式配置信息。
+Defines a struct for distributed configuration of a table.
 
 **Since:** 10
 
@@ -22,7 +22,7 @@ import { relationalStore } from 'kits/@kit.ArkData';
 assetConflictPolicy?: AssetConflictPolicy
 ```
 
-资产冲突策略。默认值为CONFLICT_POLICY_DEFAULT。
+Specifies the asset conflict policy.
 
 **Type:** [AssetConflictPolicy](arkts-arkdata-relationalstore-assetconflictpolicy-e.md)
 
@@ -42,7 +42,7 @@ assetConflictPolicy?: AssetConflictPolicy
 assetDownloadOnDemand?: boolean
 ```
 
-是否按需下载资产。true表示仅下行数据到本地，当需要下载资产时，调用[cloudSyncEx](arkts-arkdata-relationalstore-rdbstore-i.md#cloudsyncex)接口触发资产下载；false表示数据与资产都下行到本地。默认值为false。
+Specifies whether to download assets on demand.
 
 **Type:** boolean
 
@@ -62,8 +62,7 @@ assetDownloadOnDemand?: boolean
 assetTempPath?: string
 ```
 
-资产临时路径。仅当assetConflictPolicy值为CONFLICT_POLICY_TEMP_PATH时生效，需指定为  
-[distributedfiles](../../../file-management/app-sandbox-directory.md#应用文件目录与应用文件路径)下的临时路径，格式示例：tmp/，若未填写或路径不合规，将抛出 401 错误码。默认值为空。
+Specifies the asset temp path.
 
 **Type:** string
 
@@ -83,7 +82,9 @@ assetTempPath?: string
 asyncDownloadAsset?: boolean
 ```
 
-表示当前数据库在端云同步时，同步或异步下载资产。true表示优先下载完所有数据后，使用异步任务下载资产；false表示同步下载资产；默认值为false。
+Whether to download assets synchronously or asynchronously when device-cloud sync is being performed for the current RDB store. The value **true** means to use an asynchronous task to download assets after all data is downloaded; **false** means to download assets synchronously. 
+
+Default value: **false**.
 
 **Type:** boolean
 
@@ -101,8 +102,7 @@ asyncDownloadAsset?: boolean
 autoSync: boolean
 ```
 
-表示该表是否支持端云自动同步。为true时，支持系统自动触发端云同步；为false时不支持系统自动触发端云同步，需要调用  
-[cloudSync](arkts-arkdata-relationalstore-rdbstore-i.md#cloudsync)接口触发端云同步。
+Whether the table supports automatic device-cloud synchronization. If the value is **true**, the system can automatically trigger device-cloud sync. If the value is **false**, the system cannot automatically trigger device-cloud sync, and the [cloudSync](arkts-arkdata-relationalstore-rdbstore-i.md#cloudsync)API needs to be called to trigger device-cloud sync.
 
 **Type:** boolean
 
@@ -120,7 +120,7 @@ autoSync: boolean
 autoSyncSwitch?: boolean
 ```
 
-是否启用自动同步开关。true表示启用自动同步，false表示不启用。默认值为true。
+Specifies the auto synchronization switch.
 
 **Type:** boolean
 
@@ -140,7 +140,8 @@ autoSyncSwitch?: boolean
 enableCloud?: boolean
 ```
 
-表示当前数据库是否允许端云同步。true表示允许端云同步；false表示不允许端云同步。默认值为true。
+Whether to enable device-cloud sync for this RDB store. The value **true** means to enable device-cloud sync;   
+**false** means the opposite. The default value is **true**.
 
 **Type:** boolean
 
@@ -158,7 +159,7 @@ enableCloud?: boolean
 tableType?: DistributedTableType
 ```
 
-分布式表类型。DEVICE_COLLABORATION表示设备协作表；SINGLE_VERSION表示单版本表。跨设备数据同步时，默认值为DEVICE_COLLABORATION；端云数据同步时，默认值为SINGLE_VERSION，不支持DEVICE_COLLABORATION。
+Distributed table type. **DEVICE_COLLABORATION** indicates the device collaboration table, and **SINGLE_VERSION**indicates the single version table. For cross-device data sync, the default value is **DEVICE_COLLABORATION**. For device-cloud data sync, the default value is **SINGLE_VERSION**, and **DEVICE_COLLABORATION** is not supported.
 
 **Type:** [DistributedTableType](arkts-arkdata-relationalstore-distributedtabletype-e.md)
 

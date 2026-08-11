@@ -4,7 +4,7 @@
 export type InterceptionShowCallback = (from: NavDestinationContext | NavBar, to: NavDestinationContext | NavBar, operation: NavigationOperation, isAnimated: boolean) => void
 ```
 
-Navigation页面跳转前和页面跳转后的拦截回调。
+navigation interception callback using in willShow and didShow
 
 **Since:** 23
 
@@ -20,8 +20,8 @@ Navigation页面跳转前和页面跳转后的拦截回调。
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| from | [NavDestinationContext](../arkts-components/arkts-arkui-navdestinationcontext-i.md) \| NavBar | Yes | 页面跳转之前的栈顶页面信息。 <br>取值约束:参数值为navBar，则表示跳转前的页面为Navigation首页。 |
-| to | [NavDestinationContext](../arkts-components/arkts-arkui-navdestinationcontext-i.md) \| NavBar | Yes | 页面跳转之后的栈顶页面信息。 <br>取值约束:参数值为navBar，则表示跳转的目标页面为Navigation首页。 |
-| operation | [NavigationOperation](../arkts-components/arkts-arkui-navigationoperation-e.md) | Yes | 当前页面跳转类型。 |
-| isAnimated | boolean | Yes | 页面跳转是否有动画。 <br>true：页面跳转有动画。 false：页面跳转没有动画。 |
+| from | [NavDestinationContext](../arkts-components/arkts-arkui-navdestinationcontext-i.md) \| NavBar | Yes | Indicates the starting NavDestination or NavBar. <br>Value constraint:If the parameter value is navBar, the navigation home page is displayed. |
+| to | [NavDestinationContext](../arkts-components/arkts-arkui-navdestinationcontext-i.md) \| NavBar | Yes | Indicates the destination NavDestination or NavBar. <br>Value constraint:If the parameter value is navBar, the navigation home page is displayed. |
+| operation | [NavigationOperation](../arkts-components/arkts-arkui-navigationoperation-e.md) | Yes | Indicates the type of stack operation. |
+| isAnimated | boolean | Yes | Indicates whether the transition is animated. |
 

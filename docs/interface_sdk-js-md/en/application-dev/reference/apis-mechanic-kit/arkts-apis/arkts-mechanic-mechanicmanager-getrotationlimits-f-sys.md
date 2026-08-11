@@ -28,21 +28,21 @@ Obtains the maximum rotation angles relative to the reference point for the spec
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| mechId | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | 机械设备ID |
+| mechId | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | ID of the mechanical device. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [RotationLimits](arkts-mechanic-mechanicmanager-rotationlimits-i-sys.md) | 最大旋转角度 |
+| [RotationLimits](arkts-mechanic-mechanicmanager-rotationlimits-i-sys.md) | Maximum rotation angles. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 202 | Not system application. |
-| 33300001 | Service exception. |
-| 33300002 | Device not connected. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system application. |
+| [33300001](../errorcode-mechanic.md#33300001-system-error) | Service exception. |
+| [33300002](../errorcode-mechanic.md#33300002-device-not-connected) | Device not connected. |
 
 ## Examples
 

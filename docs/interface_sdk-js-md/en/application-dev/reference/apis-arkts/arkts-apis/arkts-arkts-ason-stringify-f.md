@@ -12,9 +12,7 @@ import { ArkTSUtils } from 'kits/@kit.ArkTS';
 function stringify(value: Object | null | undefined): string
 ```
 
-该方法将ArkTS对象数据转换为JSON字符串，额外支持Map和Set相关类型。
-
-从API 18开始参数修改为Object类型，API 18之前参数只支持ISendable类型（除Int8Array、Uint8Array、Int16Array、Uint16Array、Int32Array、Uint32Array、Uint8ClampedArray、Float32Array外）。
+Converts an ArkTS value to a JavaScript Object Notation (JSON) string.Extra supports Map and Set.
 
 **Since:** 12
 
@@ -30,11 +28,11 @@ function stringify(value: Object | null | undefined): string
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | Object \| null \| undefined | Yes | ArkTS对象数据。<br>**Since:** 18 |
+| value | Object \| null \| undefined | Yes | The value to stringify.<br>**Since:** 18 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| string | 转换后的JSON字符串。 |
+| string | The JSON string representation of the value. |
 

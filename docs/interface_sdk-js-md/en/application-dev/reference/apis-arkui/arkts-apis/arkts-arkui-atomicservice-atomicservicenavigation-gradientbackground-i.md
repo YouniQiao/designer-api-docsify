@@ -1,6 +1,6 @@
 # GradientBackground
 
-品牌渐变色选项。
+Provides options for setting gradient colors for branding.
 
 **Since:** 18
 
@@ -22,7 +22,7 @@ import { GradientBackground, TitleBarType, MixMode, AtomicServiceNavigation, Sid
 alpha?: GradientAlpha
 ```
 
-设置渐变色显示区域的不透明度。
+the opacity of background colors.
 
 **Type:** [GradientAlpha](arkts-arkui-atomicservice-atomicservicenavigation-gradientalpha-e.md)
 
@@ -42,7 +42,7 @@ alpha?: GradientAlpha
 backgroundTheme?: BackgroundTheme
 ```
 
-导航栏背景底色。
+the theme color of Background.
 
 **Type:** [BackgroundTheme](arkts-arkui-atomicservice-atomicservicenavigation-backgroundtheme-e.md)
 
@@ -62,7 +62,7 @@ backgroundTheme?: BackgroundTheme
 mixMode?: MixMode
 ```
 
-同时设置primaryColor和secondaryColor时此参数生效。表示双色渐变下两种颜色的融合方式。
+the blend mode of background color.
 
 **Type:** [MixMode](arkts-arkui-atomicservice-atomicservicenavigation-mixmode-e.md)
 
@@ -82,7 +82,7 @@ mixMode?: MixMode
 primaryColor: ResourceColor
 ```
 
-单色渐变色彩值和双色渐变第一色彩值。
+the primaryColor of Background.
 
 **Type:** [ResourceColor](arkts-arkui-resourcecolor-t.md)
 
@@ -102,7 +102,7 @@ primaryColor: ResourceColor
 secondaryColor?: ResourceColor
 ```
 
-双色渐变色第二色彩值。
+the secondaryColor of Background.
 
 **Type:** [ResourceColor](arkts-arkui-resourcecolor-t.md)
 

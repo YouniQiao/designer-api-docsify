@@ -1,6 +1,6 @@
 # ConnectionState
 
-连接状态枚举。
+Define the device connection state.
 
 **Since:** 10
 
@@ -16,7 +16,7 @@
 STATE_AUTHENTICATING = 10
 ```
 
-与远端设备连接认证中。
+Authenticating with a remote device.
 
 **Since:** 26.0.0
 
@@ -38,7 +38,7 @@ STATE_AUTHENTICATING = 10
 STATE_MIRROR_TO_STREAM = 11
 ```
 
-从镜像模式切换到音视频投播。
+Mirroring to the stream.
 
 **Since:** 26.0.0
 
@@ -60,7 +60,7 @@ STATE_MIRROR_TO_STREAM = 11
 STATE_STREAM_TO_MIRROR = 12
 ```
 
-从音视频投播切换到镜像模式。
+Streaming to the mirror.
 
 **Since:** 26.0.0
 

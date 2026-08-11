@@ -1,12 +1,14 @@
 # AbilityDelegator
 
-AbilityDelegator模块可以通过[AbilityMonitor](arkts-ability-abilitymonitor-i.md)实例来监听和管理  
-[UIAbility](arkts-app-ability-uiability.md)生命周期的变化。例如获取UIAbility当前状态（如是否已创建/是否在前台等）、查询当前获焦的UIAbility、等待UIAbility进入某个生命周期节点（如等待UIAbility进入onForeground）、启动指定UIAbility、设置超时机制等功能。AbilityDelegator可以通过  
-[getAbilityDelegator](../../apis-test-kit/arkts-apis/arkts-test-abilitydelegatorregistry-getabilitydelegator-f.md/arkts-test-abilitydelegatorregistry-getabilitydelegator-f.md#getabilitydelegator)方法获取。
+The **AbilityDelegator** module can listen for and manage the lifecycle changes of  
+[UIAbility](arkts-app-ability-uiability.md) through  
+[AbilityMonitor](arkts-ability-abilitymonitor-i.md) instances. For example, you can obtain the current state of a UIAbility (for example, whether the UIAbility has been created or is in the foreground), obtain the UIAbility that currently has the focus, wait for the UIAbility to enter a lifecycle node (for example, the  
+**onForeground** state), start a specified UIAbility, and set the timeout mechanism.You can obtain **AbilityDelegator** by calling  
+[getAbilityDelegator](../../apis-test-kit/arkts-apis/arkts-test-abilitydelegatorregistry-getabilitydelegator-f.md/arkts-test-abilitydelegatorregistry-getabilitydelegator-f.md#getabilitydelegator).
 
-> **说明：**
+> **NOTE：**
 > 
-> 本模块接口仅可在[单元测试框架](../../../application-test/unittest-guidelines.md)中使用。
+> The APIs of this module can be used only in [JsUnit](../../../application-test/unittest-guidelines.md).
 
 **Since:** 9
 
@@ -22,7 +24,7 @@ AbilityDelegator模块可以通过[AbilityMonitor](arkts-ability-abilitymonitor-
 addAbilityMonitor(monitor: AbilityMonitor, callback: AsyncCallback<void>): void
 ```
 
-添加AbilityMonitor实例。使用callback异步回调。不支持多线程并发调用。
+Adds an **AbilityMonitor** instance. This API uses an asynchronous callback to return the result. Multi-thread concurrent calls are not supported.
 
 **Since:** 9
 
@@ -38,15 +40,15 @@ addAbilityMonitor(monitor: AbilityMonitor, callback: AsyncCallback<void>): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| monitor | [AbilityMonitor](arkts-ability-abilitymonitor-i.md) | Yes | [AbilityMonitor](arkts-ability-abilitymonitor-i.md)实例。 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | 回调函数。当添加AbilityMonitor实例成功，err为undefined，否则为错误对象。 |
+| monitor | [AbilityMonitor](arkts-ability-abilitymonitor-i.md) | Yes | [AbilityMonitor](arkts-ability-abilitymonitor-i.md) instance. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. If the **AbilityMonitor** instance is added, **err** is **undefined**. Otherwise, **err** is an error object. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 16000100 | Calling AddAbilityMonitor failed. |
-| 401 | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
+| [16000100](../errorcode-ability.md#16000100-failed-to-call-abilitymonitor-apis-to-listen-for-ability-lifecycle-changes) | Calling AddAbilityMonitor failed. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
 
 ## addAbilityMonitor
 
@@ -54,7 +56,7 @@ addAbilityMonitor(monitor: AbilityMonitor, callback: AsyncCallback<void>): void
 addAbilityMonitor(monitor: AbilityMonitor): Promise<void>
 ```
 
-添加AbilityMonitor实例。使用Promise异步回调。不支持多线程并发调用。
+Adds an **AbilityMonitor** instance. This API uses a promise to return the result. Multi-thread concurrent calls are not supported.
 
 **Since:** 9
 
@@ -70,20 +72,20 @@ addAbilityMonitor(monitor: AbilityMonitor): Promise<void>
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| monitor | [AbilityMonitor](arkts-ability-abilitymonitor-i.md) | Yes | [AbilityMonitor](arkts-ability-abilitymonitor-i.md)实例。 |
+| monitor | [AbilityMonitor](arkts-ability-abilitymonitor-i.md) | Yes | [AbilityMonitor](arkts-ability-abilitymonitor-i.md) instance. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise对象。无返回结果的Promise对象。 |
+| Promise&lt;void&gt; | Promise that returns no value. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 16000100 | Calling AddAbilityMonitor failed. |
-| 401 | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
+| [16000100](../errorcode-ability.md#16000100-failed-to-call-abilitymonitor-apis-to-listen-for-ability-lifecycle-changes) | Calling AddAbilityMonitor failed. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
 
 ## addAbilityMonitorSync
 
@@ -91,7 +93,7 @@ addAbilityMonitor(monitor: AbilityMonitor): Promise<void>
 addAbilityMonitorSync(monitor: AbilityMonitor): void
 ```
 
-同步添加AbilityMonitor实例。不支持多线程并发调用。
+Adds an **AbilityMonitor** instance. This API returns the result synchronously. Multi-thread concurrent calls are not supported.
 
 **Since:** 10
 
@@ -107,14 +109,14 @@ addAbilityMonitorSync(monitor: AbilityMonitor): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| monitor | [AbilityMonitor](arkts-ability-abilitymonitor-i.md) | Yes | [AbilityMonitor](arkts-ability-abilitymonitor-i.md)实例。 |
+| monitor | [AbilityMonitor](arkts-ability-abilitymonitor-i.md) | Yes | [AbilityMonitor](arkts-ability-abilitymonitor-i.md) instance. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 16000100 | Calling AddAbilityMonitorSync failed. |
-| 401 | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
+| [16000100](../errorcode-ability.md#16000100-failed-to-call-abilitymonitor-apis-to-listen-for-ability-lifecycle-changes) | Calling AddAbilityMonitorSync failed. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
 
 ## addAbilityStageMonitor
 
@@ -122,7 +124,7 @@ addAbilityMonitorSync(monitor: AbilityMonitor): void
 addAbilityStageMonitor(monitor: AbilityStageMonitor, callback: AsyncCallback<void>): void
 ```
 
-添加一个AbilityStageMonitor对象，用于监视指定AbilityStage的生命周期状态更改。使用callback异步回调。
+Adds an **AbilityStageMonitor** instance to monitor the lifecycle state changes of an ability stage. This API uses an asynchronous callback to return the result.
 
 **Since:** 9
 
@@ -138,15 +140,15 @@ addAbilityStageMonitor(monitor: AbilityStageMonitor, callback: AsyncCallback<voi
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| monitor | [AbilityStageMonitor](arkts-ability-abilitystagemonitor-i.md) | Yes | [AbilityStageMonitor](arkts-ability-abilitystagemonitor-i.md) 实例。 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | 回调函数。当添加一个用于监视指定AbilityStage的生命周期状态更改的AbilityStageMonitor对象成功，err为undefined，否则 为错误对象。 |
+| monitor | [AbilityStageMonitor](arkts-ability-abilitystagemonitor-i.md) | Yes | [AbilityStageMonitor](arkts-ability-abilitystagemonitor-i.md) instance. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. If the **AbilityStageMonitor** instance is added, **err** is undefined. Otherwise, **err** is an error object. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 16000100 | Calling AddAbilityStageMonitor failed. |
-| 401 | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
+| [16000100](../errorcode-ability.md#16000100-failed-to-call-abilitymonitor-apis-to-listen-for-ability-lifecycle-changes) | Calling AddAbilityStageMonitor failed. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
 
 ## addAbilityStageMonitor
 
@@ -154,7 +156,7 @@ addAbilityStageMonitor(monitor: AbilityStageMonitor, callback: AsyncCallback<voi
 addAbilityStageMonitor(monitor: AbilityStageMonitor): Promise<void>
 ```
 
-添加一个AbilityStageMonitor对象，用于监视指定AbilityStage的生命周期状态更改。使用Promise异步回调。
+Adds an **AbilityStageMonitor** instance to monitor the lifecycle state changes of an ability stage. This API uses a promise to return the result.
 
 **Since:** 9
 
@@ -170,20 +172,20 @@ addAbilityStageMonitor(monitor: AbilityStageMonitor): Promise<void>
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| monitor | [AbilityStageMonitor](arkts-ability-abilitystagemonitor-i.md) | Yes | [AbilityStageMonitor](arkts-ability-abilitystagemonitor-i.md) 实例。 |
+| monitor | [AbilityStageMonitor](arkts-ability-abilitystagemonitor-i.md) | Yes | [AbilityStageMonitor](arkts-ability-abilitystagemonitor-i.md) instance. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise对象。无返回结果的Promise对象。 |
+| Promise&lt;void&gt; | Promise that returns no value. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 16000100 | Calling AddAbilityStageMonitor failed. |
-| 401 | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
+| [16000100](../errorcode-ability.md#16000100-failed-to-call-abilitymonitor-apis-to-listen-for-ability-lifecycle-changes) | Calling AddAbilityStageMonitor failed. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
 
 ## addAbilityStageMonitorSync
 
@@ -191,7 +193,7 @@ addAbilityStageMonitor(monitor: AbilityStageMonitor): Promise<void>
 addAbilityStageMonitorSync(monitor: AbilityStageMonitor): void
 ```
 
-同步添加一个AbilityStageMonitor对象，用于监视指定AbilityStage的生命周期状态更改。
+Adds an **AbilityStageMonitor** instance to monitor the lifecycle state changes of an ability stage. This API returns the result synchronously.
 
 **Since:** 10
 
@@ -207,14 +209,14 @@ addAbilityStageMonitorSync(monitor: AbilityStageMonitor): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| monitor | [AbilityStageMonitor](arkts-ability-abilitystagemonitor-i.md) | Yes | [AbilityStageMonitor](arkts-ability-abilitystagemonitor-i.md) 实例。 |
+| monitor | [AbilityStageMonitor](arkts-ability-abilitystagemonitor-i.md) | Yes | [AbilityStageMonitor](arkts-ability-abilitystagemonitor-i.md) instance. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 16000100 | Calling AddAbilityStageMonitorSync failed. |
-| 401 | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
+| [16000100](../errorcode-ability.md#16000100-failed-to-call-abilitymonitor-apis-to-listen-for-ability-lifecycle-changes) | Calling AddAbilityStageMonitorSync failed. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
 
 ## addInteropAbilityMonitorSync
 
@@ -222,7 +224,7 @@ addAbilityStageMonitorSync(monitor: AbilityStageMonitor): void
 addInteropAbilityMonitorSync(monitor: InteropAbilityMonitor): void
 ```
 
-新增InteropAbilityMonitor对象，用于监控此进程中指定能力的生命周期状态变化。
+Add an InteropAbilityMonitor object for monitoring the lifecycle state changes of the specified ability  in this process.
 
 **Since:** 26.0.0
 
@@ -240,13 +242,13 @@ addInteropAbilityMonitorSync(monitor: InteropAbilityMonitor): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| monitor | [InteropAbilityMonitor](arkts-ability-interopabilitymonitor-i.md) | Yes | InteropAbilityMonitor对象。 |
+| monitor | [InteropAbilityMonitor](arkts-ability-interopabilitymonitor-i.md) | Yes | InteropAbilityMonitor object. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 16000100 | Calling InteropAbilityMonitor failed. |
+| [16000100](../errorcode-ability.md#16000100-failed-to-call-abilitymonitor-apis-to-listen-for-ability-lifecycle-changes) | Calling AddInteropAbilityMonitorSync failed. |
 
 ## doAbilityBackground
 
@@ -254,7 +256,7 @@ addInteropAbilityMonitorSync(monitor: InteropAbilityMonitor): void
 doAbilityBackground(ability: UIAbility, callback: AsyncCallback<void>): void
 ```
 
-调度指定Ability生命周期状态到Background状态。使用callback异步回调。
+Schedules the lifecycle state of an ability to **Background**. This API uses an asynchronous callback to return the  result.
 
 **Since:** 9
 
@@ -270,15 +272,15 @@ doAbilityBackground(ability: UIAbility, callback: AsyncCallback<void>): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| ability | [UIAbility](arkts-ability-app-ability-uiability-uiability-c.md) | Yes | 指定Ability对象。 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | 回调函数。当调度指定Ability生命周期状态到Background状态成功，err为undefined，否则为错误对象。 |
+| ability | [UIAbility](arkts-ability-app-ability-uiability-uiability-c.md) | Yes | Target ability. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. If the ability lifecycle state is changed to **Background**, **err** is **undefined**. Otherwise, **err** is an error object. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 16000100 | Calling DoAbilityBackground failed. |
-| 401 | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
+| [16000100](../errorcode-ability.md#16000100-failed-to-call-abilitymonitor-apis-to-listen-for-ability-lifecycle-changes) | Calling DoAbilityBackground failed. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
 
 ## doAbilityBackground
 
@@ -286,7 +288,7 @@ doAbilityBackground(ability: UIAbility, callback: AsyncCallback<void>): void
 doAbilityBackground(ability: UIAbility): Promise<void>
 ```
 
-调度指定Ability生命周期状态到Background状态。使用Promise异步回调。
+Schedules the lifecycle state of an ability to **Background**. This API uses a promise to return the result.
 
 **Since:** 9
 
@@ -302,20 +304,20 @@ doAbilityBackground(ability: UIAbility): Promise<void>
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| ability | [UIAbility](arkts-ability-app-ability-uiability-uiability-c.md) | Yes | 指定Ability对象。 |
+| ability | [UIAbility](arkts-ability-app-ability-uiability-uiability-c.md) | Yes | Target ability. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise对象。无返回结果的Promise对象。 |
+| Promise&lt;void&gt; | Promise that returns no value. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 16000100 | Calling DoAbilityBackground failed. |
-| 401 | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
+| [16000100](../errorcode-ability.md#16000100-failed-to-call-abilitymonitor-apis-to-listen-for-ability-lifecycle-changes) | Calling DoAbilityBackground failed. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
 
 ## doAbilityForeground
 
@@ -323,7 +325,7 @@ doAbilityBackground(ability: UIAbility): Promise<void>
 doAbilityForeground(ability: UIAbility, callback: AsyncCallback<void>): void
 ```
 
-调度指定Ability生命周期状态到Foreground状态。使用callback异步回调。
+Schedules the lifecycle state of an ability to **Foreground**. This API uses an asynchronous callback to return the  result.
 
 **Since:** 9
 
@@ -339,15 +341,15 @@ doAbilityForeground(ability: UIAbility, callback: AsyncCallback<void>): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| ability | [UIAbility](arkts-ability-app-ability-uiability-uiability-c.md) | Yes | 指定Ability对象。 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | 回调函数。当调度指定Ability生命周期状态到Foreground状态成功，err为undefined，否则为错误对象。 |
+| ability | [UIAbility](arkts-ability-app-ability-uiability-uiability-c.md) | Yes | Target ability. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. If the ability lifecycle state is changed to **Foreground**, **err** is **undefined**. Otherwise, **err** is an error object. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 16000100 | Calling DoAbilityForeground failed. |
-| 401 | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
+| [16000100](../errorcode-ability.md#16000100-failed-to-call-abilitymonitor-apis-to-listen-for-ability-lifecycle-changes) | Calling DoAbilityForeground failed. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
 
 ## doAbilityForeground
 
@@ -355,7 +357,7 @@ doAbilityForeground(ability: UIAbility, callback: AsyncCallback<void>): void
 doAbilityForeground(ability: UIAbility): Promise<void>
 ```
 
-调度指定Ability生命周期状态到Foreground状态。使用Promise异步回调。
+Schedules the lifecycle state of an ability to **Foreground**. This API uses a promise to return the result.
 
 **Since:** 9
 
@@ -371,20 +373,20 @@ doAbilityForeground(ability: UIAbility): Promise<void>
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| ability | [UIAbility](arkts-ability-app-ability-uiability-uiability-c.md) | Yes | 指定Ability对象。 |
+| ability | [UIAbility](arkts-ability-app-ability-uiability-uiability-c.md) | Yes | Target ability. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise对象。无返回结果的Promise对象。 |
+| Promise&lt;void&gt; | Promise that returns no value. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 16000100 | Calling DoAbilityForeground failed. |
-| 401 | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
+| [16000100](../errorcode-ability.md#16000100-failed-to-call-abilitymonitor-apis-to-listen-for-ability-lifecycle-changes) | Calling DoAbilityForeground failed. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
 
 ## executeShellCommand
 
@@ -392,7 +394,7 @@ doAbilityForeground(ability: UIAbility): Promise<void>
 executeShellCommand(cmd: string, callback: AsyncCallback<ShellCmdResult>): void
 ```
 
-执行指定的shell命令。使用callback异步回调。仅支持如下shell命令：aa, bm, cp, mkdir, rm, uinput, hilog, ppwd, echo, uitest, acm, hidumper, wukong, pkill, ps, pidof
+Executes a shell command. This API uses an asynchronous callback to return the result.Only the following shell commands are supported: aa, bm, cp, mkdir, rm, uinput, hilog, ppwd, echo, uitest, acm,hidumper, wukong, pkill, ps, and pidof.
 
 **Since:** 9
 
@@ -408,8 +410,8 @@ executeShellCommand(cmd: string, callback: AsyncCallback<ShellCmdResult>): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| cmd | string | Yes | shell命令字符串。 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[ShellCmdResult](arkts-ability-shellcmdresult-shellcmdresult-i.md)&gt; | Yes | 回调函数。当执行指定的shell命令成功，err为undefined，data为获取到的执行结果；否则为错误对象。 |
+| cmd | string | Yes | Shell command string. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[ShellCmdResult](arkts-ability-shellcmdresult-shellcmdresult-i.md)&gt; | Yes | Callback used to return the result. If the shell command is executed , **err** is **undefined** and **data** is the execution result obtained. Otherwise, **err** is an error object. |
 
 ## executeShellCommand
 
@@ -423,7 +425,7 @@ ArkTS-Sta:
 executeShellCommand(cmd: string, timeoutSecs: long, callback: AsyncCallback<ShellCmdResult>): void
 ```
 
-指定超时时间，并执行指定的shell命令。使用callback异步回调。仅支持如下shell命令：aa, bm, cp, mkdir, rm, uinput, hilog, ppwd, echo, uitest, acm, hidumper, wukong, pkill, ps, pidof
+Executes a shell command with the timeout period specified. This API uses an asynchronous callback to return the result.Only the following shell commands are supported: aa, bm, cp, mkdir, rm, uinput, hilog, ppwd, echo, uitest, acm,hidumper, wukong, pkill, ps, and pidof.
 
 **Since:** 9
 
@@ -439,9 +441,9 @@ executeShellCommand(cmd: string, timeoutSecs: long, callback: AsyncCallback<Shel
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| cmd | string | Yes | shell命令字符串。 |
-| timeoutSecs | ArkTS-Dyn: number  <br>ArkTS-Sta：long | Yes | 设定命令超时时间，单位秒（s）。 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[ShellCmdResult](arkts-ability-shellcmdresult-shellcmdresult-i.md)&gt; | Yes | 回调函数。当执行指定的shell命令成功，err为undefined，data为获取到的执行结果；否则为错误对象。 |
+| cmd | string | Yes | Shell command string. |
+| timeoutSecs | ArkTS-Dyn: number  <br>ArkTS-Sta：long | Yes | Command timeout period, in seconds. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[ShellCmdResult](arkts-ability-shellcmdresult-shellcmdresult-i.md)&gt; | Yes | Callback used to return the result. If the shell command is executed , **err** is **undefined** and **data** is the execution result obtained. Otherwise, **err** is an error object. |
 
 ## executeShellCommand
 
@@ -455,7 +457,7 @@ ArkTS-Sta:
 executeShellCommand(cmd: string, timeoutSecs?: long): Promise<ShellCmdResult>
 ```
 
-指定超时时间，并执行指定的shell命令。使用Promise异步回调。仅支持如下shell命令：aa, bm, cp, mkdir, rm, uinput, hilog, ppwd, echo, uitest, acm, hidumper, wukong, pkill, ps, pidof
+Executes a shell command with the timeout period specified. This API uses a promise to return the result.Only the following shell commands are supported: aa, bm, cp, mkdir, rm, uinput, hilog, ppwd, echo, uitest, acm,hidumper, wukong, pkill, ps, and pidof.
 
 **Since:** 9
 
@@ -471,14 +473,14 @@ executeShellCommand(cmd: string, timeoutSecs?: long): Promise<ShellCmdResult>
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| cmd | string | Yes | shell命令字符串。 |
-| timeoutSecs | ArkTS-Dyn: number  <br>ArkTS-Sta：long | No | 设定命令超时时间，单位秒（s）。默认值为0，表示不设置超时时间。 |
+| cmd | string | Yes | Shell command string. |
+| timeoutSecs | ArkTS-Dyn: number  <br>ArkTS-Sta：long | No | Command timeout period, in seconds. The default value is **0**, indicating that the timeout period is not set. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;[ShellCmdResult](arkts-ability-shellcmdresult-shellcmdresult-i.md)&gt; | Promise对象，返回Shell命令执行结果 [ShellCmdResult]{ |
+| Promise&lt;[ShellCmdResult](arkts-ability-shellcmdresult-shellcmdresult-i.md)&gt; | Promise used to return a [ShellCmdResult]{ |
 
 ## finishTest
 
@@ -492,7 +494,7 @@ ArkTS-Sta:
 finishTest(msg: string, code: long, callback: AsyncCallback<void>): void
 ```
 
-结束测试并打印日志信息到单元测试终端控制台。使用callback异步回调。
+Finishes the test and prints log information to the unit test console. This API uses an asynchronous callback to return the result.
 
 **Since:** 9
 
@@ -508,16 +510,16 @@ finishTest(msg: string, code: long, callback: AsyncCallback<void>): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| msg | string | Yes | 日志字符串。 |
-| code | ArkTS-Dyn: number  <br>ArkTS-Sta：long | Yes | 日志码。 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | 回调函数。当结束测试并打印日志信息到单元测试终端控制台成功，err为undefined，否则为错误对象。 |
+| msg | string | Yes | Log string. |
+| code | ArkTS-Dyn: number  <br>ArkTS-Sta：long | Yes | Log code. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. If the test finishes and the log information is printed to the unit test console, **err** is undefined. Otherwise, **err** is an error object. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 16000100 | Calling FinishTest failed. |
-| 401 | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
+| [16000100](../errorcode-ability.md#16000100-failed-to-call-abilitymonitor-apis-to-listen-for-ability-lifecycle-changes) | Calling FinishTest failed. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
 
 ## finishTest
 
@@ -531,7 +533,7 @@ ArkTS-Sta:
 finishTest(msg: string, code: long): Promise<void>
 ```
 
-结束测试并打印日志信息到单元测试终端控制台。使用Promise异步回调。
+Finishes the test and prints log information to the unit test console. This API uses a promise to return the result.
 
 **Since:** 9
 
@@ -547,21 +549,21 @@ finishTest(msg: string, code: long): Promise<void>
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| msg | string | Yes | 日志字符串。 |
-| code | ArkTS-Dyn: number  <br>ArkTS-Sta：long | Yes | 日志码。 |
+| msg | string | Yes | Log string. |
+| code | ArkTS-Dyn: number  <br>ArkTS-Sta：long | Yes | Log code. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise对象。无返回结果的Promise对象。 |
+| Promise&lt;void&gt; | Promise that returns no value. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 16000100 | Calling FinishTest failed. |
-| 401 | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
+| [16000100](../errorcode-ability.md#16000100-failed-to-call-abilitymonitor-apis-to-listen-for-ability-lifecycle-changes) | Calling FinishTest failed. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
 
 ## getAbilityState
 
@@ -575,7 +577,7 @@ ArkTS-Sta:
 getAbilityState(ability: UIAbility): int
 ```
 
-获取指定ability的生命周期状态。
+Obtains the lifecycle state of an ability.
 
 **Since:** 9
 
@@ -591,19 +593,19 @@ getAbilityState(ability: UIAbility): int
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| ability | [UIAbility](arkts-ability-app-ability-uiability-uiability-c.md) | Yes | 指定Ability对象。 |
+| ability | [UIAbility](arkts-ability-app-ability-uiability-uiability-c.md) | Yes | Target ability. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| ArkTS-Dyn: number  <br>ArkTS-Sta：int | 指定ability的生命周期状态。状态枚举值使用 [AbilityLifecycleState]{ |
+| ArkTS-Dyn: number  <br>ArkTS-Sta：int | Lifecycle state of the ability, For details about the state values, see [AbilityLifecycleState]{ |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
 
 ## getAppContext
 
@@ -611,7 +613,7 @@ getAbilityState(ability: UIAbility): int
 getAppContext(): Context
 ```
 
-获取应用Context。
+Obtains the application context.
 
 **Since:** 9
 
@@ -627,7 +629,7 @@ getAppContext(): Context
 
 | Type | Description |
 | --- | --- |
-| [Context](arkts-ability-context-c.md) | 应用[Context]{ |
+| [Context](arkts-ability-context-c.md) | [Context]{ |
 
 ## getCurrentTopAbility
 
@@ -635,7 +637,7 @@ getAppContext(): Context
 getCurrentTopAbility(callback: AsyncCallback<UIAbility>): void
 ```
 
-获取当前应用顶部Ability。使用callback异步回调。不支持Worker线程调用。
+Obtains the top ability of this application. This API uses an asynchronous callback to return the result. It cannot  be called in the worker thread.
 
 **Since:** 9
 
@@ -651,14 +653,14 @@ getCurrentTopAbility(callback: AsyncCallback<UIAbility>): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[UIAbility](arkts-ability-app-ability-uiability-uiability-c.md)&gt; | Yes | 回调函数。当获取当前应用顶部Ability成功，err为undefined，data为获取到的Ability实例；否则为错误对象。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[UIAbility](arkts-ability-app-ability-uiability-uiability-c.md)&gt; | Yes | Callback used to return the result. If the top ability is obtained, **err** is **undefined** and **data** is the **Ability** instance obtained. Otherwise, **err** is an error object. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 16000100 | Calling GetCurrentTopAbility failed. |
-| 401 | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
+| [16000100](../errorcode-ability.md#16000100-failed-to-call-abilitymonitor-apis-to-listen-for-ability-lifecycle-changes) | Calling GetCurrentTopAbility failed. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
 
 ## getCurrentTopAbility
 
@@ -666,7 +668,7 @@ getCurrentTopAbility(callback: AsyncCallback<UIAbility>): void
 getCurrentTopAbility(): Promise<UIAbility>
 ```
 
-获取当前应用顶部Ability。使用Promise异步回调。不支持Worker线程调用。
+Obtains the top ability of this application. This API uses a promise to return the result. It cannot be called in the worker thread.
 
 **Since:** 9
 
@@ -682,13 +684,13 @@ getCurrentTopAbility(): Promise<UIAbility>
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;[UIAbility](arkts-ability-app-ability-uiability-uiability-c.md)&gt; | Promise对象，返回前应用顶部Ability。 |
+| Promise&lt;[UIAbility](arkts-ability-app-ability-uiability-uiability-c.md)&gt; | Promise used to return the top ability. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 16000100 | Calling GetCurrentTopAbility failed. |
+| [16000100](../errorcode-ability.md#16000100-failed-to-call-abilitymonitor-apis-to-listen-for-ability-lifecycle-changes) | Calling GetCurrentTopAbility failed. |
 
 ## print
 
@@ -696,7 +698,7 @@ getCurrentTopAbility(): Promise<UIAbility>
 print(msg: string, callback: AsyncCallback<void>): void
 ```
 
-打印日志信息到单元测试终端控制台。使用callback异步回调。
+Prints log information to the unit test console. This API uses an asynchronous callback to return the result.
 
 **Since:** 9
 
@@ -712,8 +714,8 @@ print(msg: string, callback: AsyncCallback<void>): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| msg | string | Yes | 日志字符串。字符串最大长度为10000。 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | 回调函数。当打印日志信息到单元测试终端控制台成功，err为undefined，否则为错误对象。 |
+| msg | string | Yes | Log string. The value contains a maximum of 10,000 characters. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. If the log information is printed to the unit test console, **err** is **undefined**. Otherwise, **err** is an error object. |
 
 ## print
 
@@ -721,7 +723,7 @@ print(msg: string, callback: AsyncCallback<void>): void
 print(msg: string): Promise<void>
 ```
 
-打印日志信息到单元测试终端控制台。使用Promise异步回调。
+Prints log information to the unit test console. This API uses a promise to return the result.
 
 **Since:** 9
 
@@ -737,13 +739,13 @@ print(msg: string): Promise<void>
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| msg | string | Yes | 日志字符串。字符串最大长度为10000。 |
+| msg | string | Yes | Log string. The value contains a maximum of 10,000 characters. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise对象。无返回结果的Promise对象。 |
+| Promise&lt;void&gt; | Promise that returns no value. |
 
 ## printSync
 
@@ -751,7 +753,7 @@ print(msg: string): Promise<void>
 printSync(msg: string): void
 ```
 
-打印日志信息到单元测试终端控制台。
+Prints log information to the unit test console.
 
 **Since:** 9
 
@@ -767,13 +769,13 @@ printSync(msg: string): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| msg | string | Yes | 日志字符串。字符串最大长度为10000。 |
+| msg | string | Yes | Log string. The value contains a maximum of 10,000 characters. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
 
 ## removeAbilityMonitor
 
@@ -781,7 +783,7 @@ printSync(msg: string): void
 removeAbilityMonitor(monitor: AbilityMonitor, callback: AsyncCallback<void>): void
 ```
 
-删除已经添加的AbilityMonitor实例。使用callback异步回调。
+Removes an **AbilityMonitor** instance. This API uses an asynchronous callback to return the result.
 
 **Since:** 9
 
@@ -797,15 +799,15 @@ removeAbilityMonitor(monitor: AbilityMonitor, callback: AsyncCallback<void>): vo
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| monitor | [AbilityMonitor](arkts-ability-abilitymonitor-i.md) | Yes | [AbilityMonitor](arkts-ability-abilitymonitor-i.md)实例。 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | 回调函数。当删除已经添加的AbilityMonitor实例成功，err为undefined，否则为错误对象。 |
+| monitor | [AbilityMonitor](arkts-ability-abilitymonitor-i.md) | Yes | [AbilityMonitor](arkts-ability-abilitymonitor-i.md) instance. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. If the **AbilityMonitor** instance is removed, **err** is **undefined**. Otherwise, **err** is an error object. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 16000100 | Calling RemoveAbilityMonitor failed. |
-| 401 | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
+| [16000100](../errorcode-ability.md#16000100-failed-to-call-abilitymonitor-apis-to-listen-for-ability-lifecycle-changes) | Calling RemoveAbilityMonitor failed. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
 
 ## removeAbilityMonitor
 
@@ -813,7 +815,7 @@ removeAbilityMonitor(monitor: AbilityMonitor, callback: AsyncCallback<void>): vo
 removeAbilityMonitor(monitor: AbilityMonitor): Promise<void>
 ```
 
-删除已经添加的AbilityMonitor实例。使用Promise异步回调。不支持多线程并发调用。
+Removes an **AbilityMonitor** instance. This API uses a promise to return the result. Multi-thread concurrent calls  are not supported.
 
 **Since:** 9
 
@@ -829,20 +831,20 @@ removeAbilityMonitor(monitor: AbilityMonitor): Promise<void>
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| monitor | [AbilityMonitor](arkts-ability-abilitymonitor-i.md) | Yes | [AbilityMonitor](arkts-ability-abilitymonitor-i.md)实例。 |
+| monitor | [AbilityMonitor](arkts-ability-abilitymonitor-i.md) | Yes | [AbilityMonitor](arkts-ability-abilitymonitor-i.md) instance. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise对象。无返回结果的Promise对象。 |
+| Promise&lt;void&gt; | Promise that returns no value. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 16000100 | Calling RemoveAbilityMonitor failed. |
-| 401 | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
+| [16000100](../errorcode-ability.md#16000100-failed-to-call-abilitymonitor-apis-to-listen-for-ability-lifecycle-changes) | Calling RemoveAbilityMonitor failed. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
 
 ## removeAbilityMonitorSync
 
@@ -850,7 +852,7 @@ removeAbilityMonitor(monitor: AbilityMonitor): Promise<void>
 removeAbilityMonitorSync(monitor: AbilityMonitor): void
 ```
 
-同步删除已经添加的AbilityMonitor实例。不支持多线程并发调用。
+Removes an **AbilityMonitor** instance. This API returns the result synchronously. Multi-thread concurrent calls are not supported.
 
 **Since:** 10
 
@@ -866,14 +868,14 @@ removeAbilityMonitorSync(monitor: AbilityMonitor): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| monitor | [AbilityMonitor](arkts-ability-abilitymonitor-i.md) | Yes | [AbilityMonitor](arkts-ability-abilitymonitor-i.md)实例。 |
+| monitor | [AbilityMonitor](arkts-ability-abilitymonitor-i.md) | Yes | [AbilityMonitor](arkts-ability-abilitymonitor-i.md) instance. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 16000100 | Calling RemoveAbilityMonitorSync failed. |
-| 401 | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
+| [16000100](../errorcode-ability.md#16000100-failed-to-call-abilitymonitor-apis-to-listen-for-ability-lifecycle-changes) | Calling RemoveAbilityMonitorSync failed. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
 
 ## removeAbilityStageMonitor
 
@@ -881,7 +883,7 @@ removeAbilityMonitorSync(monitor: AbilityMonitor): void
 removeAbilityStageMonitor(monitor: AbilityStageMonitor, callback: AsyncCallback<void>): void
 ```
 
-从应用程序内存中删除指定的AbilityStageMonitor对象。使用callback异步回调。
+Removes an **AbilityStageMonitor** instance from the application memory. This API uses an asynchronous callback to return the result.
 
 **Since:** 9
 
@@ -897,15 +899,15 @@ removeAbilityStageMonitor(monitor: AbilityStageMonitor, callback: AsyncCallback<
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| monitor | [AbilityStageMonitor](arkts-ability-abilitystagemonitor-i.md) | Yes | [AbilityStageMonitor](arkts-ability-abilitystagemonitor-i.md) 实例。 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | 回调函数。当从应用程序内存中删除指定的AbilityStageMonitor对象成功，err为undefined，否则为错误对象。 |
+| monitor | [AbilityStageMonitor](arkts-ability-abilitystagemonitor-i.md) | Yes | [AbilityStageMonitor](arkts-ability-abilitystagemonitor-i.md) instance. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. If the **AbilityStageMonitor** instance is removed, **err** is undefined. Otherwise, **err** is an error object. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 16000100 | Calling RemoveAbilityStageMonitor failed. |
-| 401 | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
+| [16000100](../errorcode-ability.md#16000100-failed-to-call-abilitymonitor-apis-to-listen-for-ability-lifecycle-changes) | Calling RemoveAbilityStageMonitor failed. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
 
 ## removeAbilityStageMonitor
 
@@ -913,7 +915,7 @@ removeAbilityStageMonitor(monitor: AbilityStageMonitor, callback: AsyncCallback<
 removeAbilityStageMonitor(monitor: AbilityStageMonitor): Promise<void>
 ```
 
-从应用程序内存中删除指定的AbilityStageMonitor对象。使用Promise异步回调。
+Removes an **AbilityStageMonitor** instance from the application memory. This API uses a promise to return the result.
 
 **Since:** 9
 
@@ -929,20 +931,20 @@ removeAbilityStageMonitor(monitor: AbilityStageMonitor): Promise<void>
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| monitor | [AbilityStageMonitor](arkts-ability-abilitystagemonitor-i.md) | Yes | [AbilityStageMonitor](arkts-ability-abilitystagemonitor-i.md) 实例。 |
+| monitor | [AbilityStageMonitor](arkts-ability-abilitystagemonitor-i.md) | Yes | [AbilityStageMonitor](arkts-ability-abilitystagemonitor-i.md) instance. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise对象。无返回结果的Promise对象。 |
+| Promise&lt;void&gt; | Promise that returns no value. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 16000100 | Calling RemoveAbilityStageMonitor failed. |
-| 401 | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
+| [16000100](../errorcode-ability.md#16000100-failed-to-call-abilitymonitor-apis-to-listen-for-ability-lifecycle-changes) | Calling RemoveAbilityStageMonitor failed. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
 
 ## removeAbilityStageMonitorSync
 
@@ -950,7 +952,7 @@ removeAbilityStageMonitor(monitor: AbilityStageMonitor): Promise<void>
 removeAbilityStageMonitorSync(monitor: AbilityStageMonitor): void
 ```
 
-同步从应用程序内存中删除指定的AbilityStageMonitor对象。
+Removes an **AbilityStageMonitor** instance from the application memory. This API returns the result synchronously.
 
 **Since:** 10
 
@@ -966,14 +968,14 @@ removeAbilityStageMonitorSync(monitor: AbilityStageMonitor): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| monitor | [AbilityStageMonitor](arkts-ability-abilitystagemonitor-i.md) | Yes | [AbilityStageMonitor](arkts-ability-abilitystagemonitor-i.md) 实例。 |
+| monitor | [AbilityStageMonitor](arkts-ability-abilitystagemonitor-i.md) | Yes | [AbilityStageMonitor](arkts-ability-abilitystagemonitor-i.md) instance. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 16000100 | Calling RemoveAbilityStageMonitorSync failed. |
-| 401 | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
+| [16000100](../errorcode-ability.md#16000100-failed-to-call-abilitymonitor-apis-to-listen-for-ability-lifecycle-changes) | Calling RemoveAbilityStageMonitorSync failed. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
 
 ## removeInteropAbilityMonitorSync
 
@@ -981,7 +983,7 @@ removeAbilityStageMonitorSync(monitor: AbilityStageMonitor): void
 removeInteropAbilityMonitorSync(monitor: InteropAbilityMonitor): void
 ```
 
-从应用程序内存中移除指定的InteropAbilityMonitor对象。
+Remove a specified InteropAbilityMonitor object from the application memory.
 
 **Since:** 26.0.0
 
@@ -999,13 +1001,13 @@ removeInteropAbilityMonitorSync(monitor: InteropAbilityMonitor): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| monitor | [InteropAbilityMonitor](arkts-ability-interopabilitymonitor-i.md) | Yes | InteropAbilityMonitor对象。 |
+| monitor | [InteropAbilityMonitor](arkts-ability-interopabilitymonitor-i.md) | Yes | InteropAbilityMonitor object. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 16000100 | Calling removeInteropAbilityMonitorSync failed. |
+| [16000100](../errorcode-ability.md#16000100-failed-to-call-abilitymonitor-apis-to-listen-for-ability-lifecycle-changes) | Calling RemoveInteropAbilityMonitorSync failed. |
 
 ## setMockList
 
@@ -1013,7 +1015,7 @@ removeInteropAbilityMonitorSync(monitor: InteropAbilityMonitor): void
 setMockList(mockList: Record<string, string>): void
 ```
 
-设置模块的mock替换关系。
+Sets a list of mock data.
 
 **Since:** 11
 
@@ -1029,14 +1031,14 @@ setMockList(mockList: Record<string, string>): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| mockList | [Record](../../apis-default/arkts-apis/arkts-record-t.md)&lt;string, string&gt; | Yes | 模块mock替换关系的键值对象，其中key为待替换的目标路径，value为用于替换的mock实现文件的路径。 |
+| mockList | [Record](../../apis-default/arkts-apis/arkts-record-t.md)&lt;string, string&gt; | Yes | Key-value object of the mock, where **key** is the target path to be replaced and **value** is the path of the mock implementation to be used for the replacement. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
-| 16000050 | Internal error. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
+| [16000050](../errorcode-ability.md#16000050-internal-error) | Internal error. |
 
 ## startAbility
 
@@ -1044,7 +1046,7 @@ setMockList(mockList: Record<string, string>): void
 startAbility(want: Want, callback: AsyncCallback<void>): void
 ```
 
-启动指定Ability。使用callback异步回调。
+Starts an ability. This API uses an asynchronous callback to return the result.
 
 **Since:** 9
 
@@ -1060,29 +1062,29 @@ startAbility(want: Want, callback: AsyncCallback<void>): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| want | [Want](arkts-ability-app-ability-want-want-c.md) | Yes | 启动Ability参数。 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | 回调函数。当启动指定Ability成功，err为undefined，否则为错误对象。 |
+| want | [Want](arkts-ability-app-ability-want-want-c.md) | Yes | Want** parameter for starting the ability. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. If the ability is started, **err** is **undefined**. Otherwise, **err** is an error object. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 16000053 | The ability is not on the top of the UI. |
-| 16000055 | Installation-free timed out. |
-| 16000050 | Internal error. |
-| 16000004 | Cannot start an invisible component. |
-| 401 | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
-| 16000005 | The specified process does not have the permission. |
-| 16000006 | Cross-user operations are not allowed. |
-| 16000001 | The specified ability does not exist. |
-| 16000002 | Incorrect ability type. |
-| 16200001 | The caller has been released. |
-| 16000012 | The application is controlled.<br>**Applicable version:** 10 and later |
-| 16000013 | The application is controlled by EDM.<br>**Applicable version:** 10 and later |
-| 16000008 | The crowdtesting application expires. |
-| 16000009 | An ability cannot be started or stopped in Wukong mode. |
-| 16000010 | The call with the continuation and prepare continuation flag is forbidden. |
-| 16000011 | The context does not exist. |
+| [16000053](../errorcode-ability.md#16000053-ability-is-not-on-top-of-ui) | The ability is not on the top of the UI. |
+| [16000055](../errorcode-ability.md#16000055-installationfree-timeout) | Installation-free timed out. |
+| [16000050](../errorcode-ability.md#16000050-internal-error) | Internal error. |
+| [16000004](../errorcode-ability.md#16000004-visibility-verification-failure) | Cannot start an invisible component. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
+| [16000005](../errorcode-ability.md#16000005-process-permission-verification-failure) | The specified process does not have the permission. |
+| [16000006](../errorcode-ability.md#16000006-crossuser-operation-is-not-allowed) | Cross-user operations are not allowed. |
+| [16000001](../errorcode-ability.md#16000001-ability-name-does-not-exist) | The specified ability does not exist. |
+| [16000002](../errorcode-ability.md#16000002-incorrect-ability-type) | Incorrect ability type. |
+| [16200001](../errorcode-ability.md#16200001-caller-released) | The caller has been released. |
+| [16000012](../errorcode-ability.md#16000012-application-under-control) | The application is controlled.<br>**Applicable version:** 10 and later |
+| [16000013](../errorcode-ability.md#16000013-application-controlled-by-edm) | The application is controlled by EDM.<br>**Applicable version:** 10 and later |
+| [16000008](../errorcode-ability.md#16000008-crowdtesting-application-expires) | The crowdtesting application expires. |
+| [16000009](../errorcode-ability.md#16000009-ability-start-or-stop-failure-in-wukong-mode) | An ability cannot be started or stopped in Wukong mode. |
+| [16000010](../errorcode-ability.md#16000010-continuation-flag-is-forbidden) | The call with the continuation and prepare continuation flag is forbidden. |
+| [16000011](../errorcode-ability.md#16000011-context-does-not-exist) | The context does not exist. |
 
 ## startAbility
 
@@ -1090,7 +1092,7 @@ startAbility(want: Want, callback: AsyncCallback<void>): void
 startAbility(want: Want): Promise<void>
 ```
 
-启动指定Ability。使用Promise异步回调。
+Starts an ability. This API uses a promise to return the result.
 
 **Since:** 9
 
@@ -1106,34 +1108,34 @@ startAbility(want: Want): Promise<void>
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| want | [Want](arkts-ability-app-ability-want-want-c.md) | Yes | 启动Ability参数。 |
+| want | [Want](arkts-ability-app-ability-want-want-c.md) | Yes | Want** parameter for starting the ability. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise对象。无返回结果的Promise对象。 |
+| Promise&lt;void&gt; | Promise that returns no value. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 16000053 | The ability is not on the top of the UI. |
-| 16000055 | Installation-free timed out. |
-| 16000050 | Internal error. |
-| 16000004 | Cannot start an invisible component. |
-| 401 | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
-| 16000005 | The specified process does not have the permission. |
-| 16000006 | Cross-user operations are not allowed. |
-| 16000001 | The specified ability does not exist. |
-| 16000002 | Incorrect ability type. |
-| 16200001 | The caller has been released. |
-| 16000012 | The application is controlled.<br>**Applicable version:** 10 and later |
-| 16000013 | The application is controlled by EDM.<br>**Applicable version:** 10 and later |
-| 16000008 | The crowdtesting application expires. |
-| 16000009 | An ability cannot be started or stopped in Wukong mode. |
-| 16000010 | The call with the continuation and prepare continuation flag is forbidden. |
-| 16000011 | The context does not exist. |
+| [16000053](../errorcode-ability.md#16000053-ability-is-not-on-top-of-ui) | The ability is not on the top of the UI. |
+| [16000055](../errorcode-ability.md#16000055-installationfree-timeout) | Installation-free timed out. |
+| [16000050](../errorcode-ability.md#16000050-internal-error) | Internal error. |
+| [16000004](../errorcode-ability.md#16000004-visibility-verification-failure) | Cannot start an invisible component. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
+| [16000005](../errorcode-ability.md#16000005-process-permission-verification-failure) | The specified process does not have the permission. |
+| [16000006](../errorcode-ability.md#16000006-crossuser-operation-is-not-allowed) | Cross-user operations are not allowed. |
+| [16000001](../errorcode-ability.md#16000001-ability-name-does-not-exist) | The specified ability does not exist. |
+| [16000002](../errorcode-ability.md#16000002-incorrect-ability-type) | Incorrect ability type. |
+| [16200001](../errorcode-ability.md#16200001-caller-released) | The caller has been released. |
+| [16000012](../errorcode-ability.md#16000012-application-under-control) | The application is controlled.<br>**Applicable version:** 10 and later |
+| [16000013](../errorcode-ability.md#16000013-application-controlled-by-edm) | The application is controlled by EDM.<br>**Applicable version:** 10 and later |
+| [16000008](../errorcode-ability.md#16000008-crowdtesting-application-expires) | The crowdtesting application expires. |
+| [16000009](../errorcode-ability.md#16000009-ability-start-or-stop-failure-in-wukong-mode) | An ability cannot be started or stopped in Wukong mode. |
+| [16000010](../errorcode-ability.md#16000010-continuation-flag-is-forbidden) | The call with the continuation and prepare continuation flag is forbidden. |
+| [16000011](../errorcode-ability.md#16000011-context-does-not-exist) | The context does not exist. |
 
 ## waitAbilityMonitor
 
@@ -1141,7 +1143,7 @@ startAbility(want: Want): Promise<void>
 waitAbilityMonitor(monitor: AbilityMonitor, callback: AsyncCallback<UIAbility>): void
 ```
 
-等待与AbilityMonitor实例匹配的Ability到达OnCreate生命周期，并返回Ability实例。使用callback异步回调。不支持多线程并发调用。
+Waits for the **Ability** instance that matches the **AbilityMonitor** instance to reach the **onCreate** lifecycle  state and returns the **Ability** instance. This API uses an asynchronous callback to return the result. Multi-thread concurrent calls are not supported.
 
 **Since:** 9
 
@@ -1157,15 +1159,15 @@ waitAbilityMonitor(monitor: AbilityMonitor, callback: AsyncCallback<UIAbility>):
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| monitor | [AbilityMonitor](arkts-ability-abilitymonitor-i.md) | Yes | [AbilityMonitor](arkts-ability-abilitymonitor-i.md)实例。 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[UIAbility](arkts-ability-app-ability-uiability-uiability-c.md)&gt; | Yes | 回调函数。当等待与AbilityMonitor实例匹配的Ability到达OnCreate生命周期成功，err为undefined，data为获取 到的Ability实例，否则为错误对象。 |
+| monitor | [AbilityMonitor](arkts-ability-abilitymonitor-i.md) | Yes | [AbilityMonitor](arkts-ability-abilitymonitor-i.md) instance. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[UIAbility](arkts-ability-app-ability-uiability-uiability-c.md)&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined** and **data** is the **Ability** instance obtained. Otherwise, **err** is an error object. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 16000100 | Calling WaitAbilityMonitor failed. |
-| 401 | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
+| [16000100](../errorcode-ability.md#16000100-failed-to-call-abilitymonitor-apis-to-listen-for-ability-lifecycle-changes) | Calling WaitAbilityMonitor failed. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
 
 ## waitAbilityMonitor
 
@@ -1179,7 +1181,8 @@ ArkTS-Sta:
 waitAbilityMonitor(monitor: AbilityMonitor, timeout: long, callback: AsyncCallback<UIAbility>): void
 ```
 
-设置等待时间，等待与AbilityMonitor实例匹配的Ability到达OnCreate生命周期，并返回Ability实例。使用callback异步回调。不支持多线程并发调用。
+Waits a period of time for the **Ability** instance that matches the **AbilityMonitor** instance to reach the  
+**onCreate** lifecycle state and returns the **Ability** instance. This API uses an asynchronous callback to return  the result. Multi-thread concurrent calls are not supported.
 
 **Since:** 9
 
@@ -1195,16 +1198,16 @@ waitAbilityMonitor(monitor: AbilityMonitor, timeout: long, callback: AsyncCallba
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| monitor | [AbilityMonitor](arkts-ability-abilitymonitor-i.md) | Yes | [AbilityMonitor](arkts-ability-abilitymonitor-i.md)实例。 |
-| timeout | ArkTS-Dyn: number  <br>ArkTS-Sta：long | Yes | 最大等待时间，单位毫秒（ms），默认值为5000毫秒。 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[UIAbility](arkts-ability-app-ability-uiability-uiability-c.md)&gt; | Yes | 表示指定的回调方法。 |
+| monitor | [AbilityMonitor](arkts-ability-abilitymonitor-i.md) | Yes | [AbilityMonitor](arkts-ability-abilitymonitor-i.md) instance. |
+| timeout | ArkTS-Dyn: number  <br>ArkTS-Sta：long | Yes | Maximum waiting time, in milliseconds. The default value is 5000 ms. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[UIAbility](arkts-ability-app-ability-uiability-uiability-c.md)&gt; | Yes | Callback used to return the result. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 16000100 | Calling WaitAbilityMonitor failed. |
-| 401 | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
+| [16000100](../errorcode-ability.md#16000100-failed-to-call-abilitymonitor-apis-to-listen-for-ability-lifecycle-changes) | Calling WaitAbilityMonitor failed. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
 
 ## waitAbilityMonitor
 
@@ -1218,7 +1221,8 @@ ArkTS-Sta:
 waitAbilityMonitor(monitor: AbilityMonitor, timeout?: long): Promise<UIAbility>
 ```
 
-设置等待时间，等待与AbilityMonitor实例匹配的Ability到达OnCreate生命周期，并返回Ability实例。使用Promise异步回调。不支持多线程并发调用。
+Waits a period of time for the **Ability** instance that matches the **AbilityMonitor** instance to reach the  
+**onCreate** lifecycle state and returns the **Ability** instance. This API uses a promise to return the result.Multi-thread concurrent calls are not supported.
 
 **Since:** 9
 
@@ -1234,21 +1238,21 @@ waitAbilityMonitor(monitor: AbilityMonitor, timeout?: long): Promise<UIAbility>
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| monitor | [AbilityMonitor](arkts-ability-abilitymonitor-i.md) | Yes | [AbilityMonitor](arkts-ability-abilitymonitor-i.md)实例。 |
-| timeout | ArkTS-Dyn: number  <br>ArkTS-Sta：long | No | 最大等待时间，单位毫秒（ms），默认值为5000毫秒。 |
+| monitor | [AbilityMonitor](arkts-ability-abilitymonitor-i.md) | Yes | [AbilityMonitor](arkts-ability-abilitymonitor-i.md) instance. |
+| timeout | ArkTS-Dyn: number  <br>ArkTS-Sta：long | No | Maximum waiting time, in milliseconds. The default value is 5000 ms. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;[UIAbility](arkts-ability-app-ability-uiability-uiability-c.md)&gt; | Promise对象，返回Ability实例。 |
+| Promise&lt;[UIAbility](arkts-ability-app-ability-uiability-uiability-c.md)&gt; | Promise used to return the **Ability** instance obtained. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 16000100 | Calling WaitAbilityMonitor failed. |
-| 401 | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
+| [16000100](../errorcode-ability.md#16000100-failed-to-call-abilitymonitor-apis-to-listen-for-ability-lifecycle-changes) | Calling WaitAbilityMonitor failed. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
 
 ## waitAbilityStageMonitor
 
@@ -1256,7 +1260,7 @@ waitAbilityMonitor(monitor: AbilityMonitor, timeout?: long): Promise<UIAbility>
 waitAbilityStageMonitor(monitor: AbilityStageMonitor, callback: AsyncCallback<AbilityStage>): void
 ```
 
-返回与AbilityStageMonitor中设置条件相匹配的AbilityStage对象。使用callback异步回调。
+Returns an **AbilityStage** instance that matches the conditions set in an **AbilityStageMonitor** instance. This API uses an asynchronous callback to return the result.
 
 **Since:** 9
 
@@ -1272,15 +1276,15 @@ waitAbilityStageMonitor(monitor: AbilityStageMonitor, callback: AsyncCallback<Ab
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| monitor | [AbilityStageMonitor](arkts-ability-abilitystagemonitor-i.md) | Yes | [AbilityStageMonitor](arkts-ability-abilitystagemonitor-i.md) 实例。 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[AbilityStage](arkts-ability-app-ability-abilitystage-abilitystage-c.md)&gt; | Yes | 回调函数。当等待并返回与给定AbilityStageMonitor中设置的条件匹配的AbilityStage对象的操作成功，err为 undefined，data为获取到的[AbilityStage](arkts-ability-app-ability-abilitystage-abilitystage-c.md)对象；否则为错误对象。 |
+| monitor | [AbilityStageMonitor](arkts-ability-abilitystagemonitor-i.md) | Yes | [AbilityStageMonitor](arkts-ability-abilitystagemonitor-i.md) instance. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[AbilityStage](arkts-ability-app-ability-abilitystage-abilitystage-c.md)&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is undefined and data is the [AbilityStage](arkts-ability-app-ability-abilitystage-abilitystage-c.md) instance obtained. Otherwise, **err** is an error object. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 16000100 | Calling WaitAbilityStageMonitor failed. |
-| 401 | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
+| [16000100](../errorcode-ability.md#16000100-failed-to-call-abilitymonitor-apis-to-listen-for-ability-lifecycle-changes) | Calling WaitAbilityStageMonitor failed. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
 
 ## waitAbilityStageMonitor
 
@@ -1294,7 +1298,7 @@ ArkTS-Sta:
 waitAbilityStageMonitor(monitor: AbilityStageMonitor, timeout: long, callback: AsyncCallback<AbilityStage>): void
 ```
 
-在指定的超时最大等待时间内，返回与AbilityStageMonitor中设置条件相匹配的AbilityStage对象。使用callback异步回调。
+Returns an **AbilityStage** instance that matches the conditions set in an **AbilityStageMonitor** instance within the specified timeout period. This API uses an asynchronous callback to return the result.
 
 **Since:** 9
 
@@ -1310,16 +1314,16 @@ waitAbilityStageMonitor(monitor: AbilityStageMonitor, timeout: long, callback: A
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| monitor | [AbilityStageMonitor](arkts-ability-abilitystagemonitor-i.md) | Yes | [AbilityStageMonitor](arkts-ability-abilitystagemonitor-i.md) 实例。 |
-| timeout | ArkTS-Dyn: number  <br>ArkTS-Sta：long | Yes | 超时最大等待时间，单位毫秒（ms），默认值为5000毫秒。 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[AbilityStage](arkts-ability-app-ability-abilitystage-abilitystage-c.md)&gt; | Yes | 回调函数。当等待并返回与给定AbilityStageMonitor中设置的条件匹配的AbilityStage对象的操作成功，err为 undefined，data为获取到的[AbilityStage](arkts-ability-app-ability-abilitystage-abilitystage-c.md)对象；否则为错误对象。 |
+| monitor | [AbilityStageMonitor](arkts-ability-abilitystagemonitor-i.md) | Yes | [AbilityStageMonitor](arkts-ability-abilitystagemonitor-i.md) instance. |
+| timeout | ArkTS-Dyn: number  <br>ArkTS-Sta：long | Yes | Maximum waiting time, in milliseconds. The default value is 5000 ms. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[AbilityStage](arkts-ability-app-ability-abilitystage-abilitystage-c.md)&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is undefined and data is the [AbilityStage](arkts-ability-app-ability-abilitystage-abilitystage-c.md) instance obtained. Otherwise, **err** is an error object. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 16000100 | Calling WaitAbilityStageMonitor failed. |
-| 401 | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
+| [16000100](../errorcode-ability.md#16000100-failed-to-call-abilitymonitor-apis-to-listen-for-ability-lifecycle-changes) | Calling WaitAbilityStageMonitor failed. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
 
 ## waitAbilityStageMonitor
 
@@ -1333,7 +1337,7 @@ ArkTS-Sta:
 waitAbilityStageMonitor(monitor: AbilityStageMonitor, timeout?: long): Promise<AbilityStage>
 ```
 
-返回与AbilityStageMonitor中设置条件相匹配的AbilityStage对象，支持设置超时最大等待时间。使用Promise异步回调。
+Returns an **AbilityStage** instance that matches the conditions set in an **AbilityStageMonitor** instance. You can specify the timeout period. This API uses a promise to return the result.
 
 **Since:** 9
 
@@ -1349,19 +1353,19 @@ waitAbilityStageMonitor(monitor: AbilityStageMonitor, timeout?: long): Promise<A
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| monitor | [AbilityStageMonitor](arkts-ability-abilitystagemonitor-i.md) | Yes | [AbilityStageMonitor](arkts-ability-abilitystagemonitor-i.md) 实例。 |
-| timeout | ArkTS-Dyn: number  <br>ArkTS-Sta：long | No | 超时最大等待时间，单位毫秒（ms），默认值为5000毫秒。 |
+| monitor | [AbilityStageMonitor](arkts-ability-abilitystagemonitor-i.md) | Yes | [AbilityStageMonitor](arkts-ability-abilitystagemonitor-i.md) instance. |
+| timeout | ArkTS-Dyn: number  <br>ArkTS-Sta：long | No | Maximum waiting time, in milliseconds. The default value is 5000 ms. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;[AbilityStage](arkts-ability-app-ability-abilitystage-abilitystage-c.md)&gt; | Promise对象，返回 [AbilityStage]{ |
+| Promise&lt;[AbilityStage](arkts-ability-app-ability-abilitystage-abilitystage-c.md)&gt; | Promise used to return the [AbilityStage]{ |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 16000100 | Calling WaitAbilityStageMonitor failed. |
-| 401 | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
+| [16000100](../errorcode-ability.md#16000100-failed-to-call-abilitymonitor-apis-to-listen-for-ability-lifecycle-changes) | Calling WaitAbilityStageMonitor failed. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
 

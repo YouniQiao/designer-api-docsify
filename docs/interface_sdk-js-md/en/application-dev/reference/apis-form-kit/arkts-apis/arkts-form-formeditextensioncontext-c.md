@@ -52,10 +52,10 @@ Starts the widget provider page to be edited. This API uses a promise to return 
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 16501000 | An internal functional error occurred. |
-| 16500050 | An IPC connection error happened. |
-| 202 | The application is not a system application. |
-| 16500100 | Failed to obtain the configuration information. |
+| [16501000](../errorcode-form.md#16501000-internal-function-error) | An internal functional error occurred. |
+| [16500050](../errorcode-form.md#16500050-ipc-failure) | An IPC connection error happened. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | The application is not a system application. |
+| [16500100](../errorcode-form.md#16500100-failed-to-obtain-widget-configuration-information) | Failed to obtain the configuration information. |
 
 ## startUIAbility
 
@@ -91,9 +91,9 @@ Starts UIAbility of the application to which a widget belongs. This API uses a p
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 16000130 | The target UIAbility does not belong to the caller. |
-| 16500050 | An IPC connection error happened. |
-| 16501014 | The form edit page is not in the foreground. The current operation is not supported. |
-| 16000121 | The target component type is not a UIAbility. |
-| 16500100 | Failed to obtain the configuration information. |
+| [16000130](../../apis-ability-kit/errorcode-ability.md#16000130-uiability-does-not-belong-to-the-caller) | The target UIAbility does not belong to the caller. |
+| [16500050](../errorcode-form.md#16500050-ipc-failure) | An IPC connection error happened. |
+| [16501014](../errorcode-form.md#16501014-semimodal-widget-editing-page-not-in-foreground) | The form edit page is not in the foreground. The current operation is not supported. |
+| [16000121](../../apis-ability-kit/errorcode-ability.md#16000121-target-component-is-not-a-uiability) | The target component type is not a UIAbility. |
+| [16500100](../errorcode-form.md#16500100-failed-to-obtain-widget-configuration-information) | Failed to obtain the configuration information. |
 

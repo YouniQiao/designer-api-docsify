@@ -12,7 +12,7 @@ import { power } from 'kits/@kit.BasicServicesKit';
 function getPowerConfig(sceneName: string): string
 ```
 
-按场景名称查询电源配置值。
+Query the power configuration value for a given scene name.
 
 **Since:** 26.0.0
 
@@ -32,32 +32,21 @@ function getPowerConfig(sceneName: string): string
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| sceneName | string | Yes | 电源配置的场景名称。最大长度128字节。 |
+| sceneName | string | Yes | Indicates the scene name of the power configuration. sceneName parameter must be a string and its length cannot exceed 128 bytes. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| string | 返回电源配置值。 |
+| string | Returns the power configuration value on success. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 201 | Permission verification failed. The application does not have the permission required to call the API. |
-| 202 | Permission verification failed. A non-system application calls a system API. |
-| 4900400 | Invalid parameter. Possible causes: 1. The sceneName parameter is an empty string; 2. The length of sceneName parameter exceeds 128 bytes. |
-| 4900101 | Failed to connect to the service. |
-| 4900501 | Failed to read the power configuration value. |
-
-## Examples
-
-```TypeScript
-try {
-    let configVal = power.getPowerConfig('scene_name_test');
-    console.info('get power config success, configVal: ' + configVal);
-} catch(err) {
-    console.error('get power config failed, err: ' + err);
-}
-```
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed. The application does not have the permission required to call the API. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
+| [4900400](../../apis-basic-services-kit/errorcode-power.md#4900400-incorrect-input-parameter) | Invalid parameter. Possible causes: 1. The sceneName parameter is an empty string; 2. The length of sceneName parameter exceeds 128 bytes. |
+| [4900101](../../apis-basic-services-kit/errorcode-power.md#4900101-service-connection-failure) | Failed to connect to the service. |
+| [4900501](../../apis-basic-services-kit/errorcode-power.md#4900501-failure-to-read-the-power-supply-configuration-node) | Failed to read the power configuration value. |
 

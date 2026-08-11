@@ -2,7 +2,7 @@
 
 ## Overview
 
-This file declares the functions related to font management in the drawing module. The functions can be usedto load fonts and match available fonts in the system.
+Declares functions related to system font management, used to match and obtain fonts preset in the system.OH_Drawing_FontMgr (font manager) manages the font families preset in the system. Each font family corresponds to afont style set [OH_Drawing_FontStyleSet](capi-drawing-oh-drawing-fontstyleset.md), and each style set contains multiple typeface objects[OH_Drawing_Typeface](capi-drawing-oh-drawing-typeface.md).
 
 **Library**: libnative_drawing.so
 
@@ -21,17 +21,17 @@ This file declares the functions related to font management in the drawing modul
 | [OH_Drawing_FontMgr* OH_Drawing_FontMgrCreate(void)](#oh_drawing_fontmgrcreate) | Creates an **OH_Drawing_FontMgr** object, which can be used only to manage system fonts. |
 | [void OH_Drawing_FontMgrDestroy(OH_Drawing_FontMgr* drawingFontMgr)](#oh_drawing_fontmgrdestroy) | Destroys an **OH_Drawing_FontMgr** object and reclaims the memory occupied by the object. |
 | [int OH_Drawing_FontMgrGetFamilyCount(OH_Drawing_FontMgr* drawingFontMgr)](#oh_drawing_fontmgrgetfamilycount) | Obtains the number of font families. |
-| [char* OH_Drawing_FontMgrGetFamilyName(OH_Drawing_FontMgr* drawingFontMgr, int index)](#oh_drawing_fontmgrgetfamilyname) | Obtains the font family name based on an index. |
+| [char* OH_Drawing_FontMgrGetFamilyName(OH_Drawing_FontMgr* drawingFontMgr, int index)](#oh_drawing_fontmgrgetfamilyname) | Obtains the font family name based on an index. When the returned name is no longer needed, use[OH_Drawing_FontMgrDestroyFamilyName](capi-drawing-font-mgr-h.md#oh_drawing_fontmgrdestroyfamilyname) to release the memory occupied by the name. |
 | [void OH_Drawing_FontMgrDestroyFamilyName(char* familyName)](#oh_drawing_fontmgrdestroyfamilyname) | Reclaims the memory occupied by a font family name. |
-| [OH_Drawing_FontStyleSet* OH_Drawing_FontMgrCreateFontStyleSet(OH_Drawing_FontMgr* drawingFontMgr, int index)](#oh_drawing_fontmgrcreatefontstyleset) | Creates a font style set from an **OH_Drawing_FontMgr** object. |
+| [OH_Drawing_FontStyleSet* OH_Drawing_FontMgrCreateFontStyleSet(OH_Drawing_FontMgr* drawingFontMgr, int index)](#oh_drawing_fontmgrcreatefontstyleset) | Creates a font style set object from a font manager object. |
 | [void OH_Drawing_FontMgrDestroyFontStyleSet(OH_Drawing_FontStyleSet* drawingFontStyleSet)](#oh_drawing_fontmgrdestroyfontstyleset) | Reclaims the memory occupied by a font style set. |
-| [OH_Drawing_FontStyleSet* OH_Drawing_FontMgrMatchFamily(OH_Drawing_FontMgr* drawingFontMgr, const char* familyName)](#oh_drawing_fontmgrmatchfamily) | Obtains a font style set based on a font family name. |
-| [OH_Drawing_Typeface* OH_Drawing_FontMgrMatchFamilyStyle(OH_Drawing_FontMgr* drawingFontMgr, const char* familyName, OH_Drawing_FontStyleStruct fontStyle)](#oh_drawing_fontmgrmatchfamilystyle) | Obtains a typeface based on the font style information and font family name. |
-| [OH_Drawing_Typeface* OH_Drawing_FontMgrMatchFamilyStyleCharacter(OH_Drawing_FontMgr* drawingFontMgr, const char* familyName, OH_Drawing_FontStyleStruct fontStyle, const char* bcp47[], int bcp47Count, int32_t character)](#oh_drawing_fontmgrmatchfamilystylecharacter) | Obtains a typeface for the specified character. A null pointer is returned only when no typefacecorresponding to the input UTF-8 character is found in the **OH_Drawing_FontMgr** object. |
-| [OH_Drawing_Typeface* OH_Drawing_FontStyleSetCreateTypeface(OH_Drawing_FontStyleSet* fontStyleSet, int index)](#oh_drawing_fontstylesetcreatetypeface) | Creates a typeface for the specified index. |
+| [OH_Drawing_FontStyleSet* OH_Drawing_FontMgrMatchFamily(OH_Drawing_FontMgr* drawingFontMgr, const char* familyName)](#oh_drawing_fontmgrmatchfamily) | Obtains a font style set object based on a specified font family name. When the object is no longer needed,use [OH_Drawing_FontMgrDestroyFontStyleSet](capi-drawing-font-mgr-h.md#oh_drawing_fontmgrdestroyfontstyleset) to release it. |
+| [OH_Drawing_Typeface* OH_Drawing_FontMgrMatchFamilyStyle(OH_Drawing_FontMgr* drawingFontMgr, const char* familyName, OH_Drawing_FontStyleStruct fontStyle)](#oh_drawing_fontmgrmatchfamilystyle) | Obtains a typeface object based on the specified font style information and font family name. When the objectis no longer needed, use {@link OH_Drawing_TypefaceDestroy} to release it. |
+| [OH_Drawing_Typeface* OH_Drawing_FontMgrMatchFamilyStyleCharacter(OH_Drawing_FontMgr* drawingFontMgr, const char* familyName, OH_Drawing_FontStyleStruct fontStyle, const char* bcp47[], int bcp47Count, int32_t character)](#oh_drawing_fontmgrmatchfamilystylecharacter) | Obtains a typeface for the specified character. A null pointer is returned only when no typefacecorresponding to the input UTF-8 character is found in the font management object. When the object is no longerneeded, use {@link OH_Drawing_TypefaceDestroy} to release it. |
+| [OH_Drawing_Typeface* OH_Drawing_FontStyleSetCreateTypeface(OH_Drawing_FontStyleSet* fontStyleSet, int index)](#oh_drawing_fontstylesetcreatetypeface) | Gets a typeface for the specified index. When the object is no longer needed, use{@link OH_Drawing_TypefaceDestroy} to release it. |
 | [OH_Drawing_FontStyleStruct OH_Drawing_FontStyleSetGetStyle(OH_Drawing_FontStyleSet* fontStyleSet, int32_t index, char** styleName)](#oh_drawing_fontstylesetgetstyle) | Obtains the font style. Call [OH_Drawing_FontStyleSetFreeStyleName](capi-drawing-font-mgr-h.md#oh_drawing_fontstylesetfreestylename) to release **styleName** when it isno longer needed, freeing up the allocated memory. |
 | [void OH_Drawing_FontStyleSetFreeStyleName(char** styleName)](#oh_drawing_fontstylesetfreestylename) | Frees the memory occupied by a font style. |
-| [OH_Drawing_Typeface* OH_Drawing_FontStyleSetMatchStyle(OH_Drawing_FontStyleSet* fontStyleSet, OH_Drawing_FontStyleStruct fontStyleStruct)](#oh_drawing_fontstylesetmatchstyle) | Obtains the typeface closest to the font style. |
+| [OH_Drawing_Typeface* OH_Drawing_FontStyleSetMatchStyle(OH_Drawing_FontStyleSet* fontStyleSet, OH_Drawing_FontStyleStruct fontStyleStruct)](#oh_drawing_fontstylesetmatchstyle) | Obtains the typeface closest to the font style (font weight, font width, and slant). When the object is nolonger needed, use {@link OH_Drawing_TypefaceDestroy} to release it. |
 | [int OH_Drawing_FontStyleSetCount(OH_Drawing_FontStyleSet* fontStyleSet)](#oh_drawing_fontstylesetcount) | Obtains the number of fonts in the font style set. |
 
 ## Function description
@@ -54,7 +54,7 @@ Creates an **OH_Drawing_FontMgr** object, which can be used only to manage syste
 
 | Type | Description |
 | -- | -- |
-| [OH_Drawing_FontMgr*](capi-drawing-oh-drawing-fontmgr.md) | Returns the pointer to the <b>OH_Drawing_FontMgr</b> object created. |
+| [OH_Drawing_FontMgr*](capi-drawing-oh-drawing-fontmgr.md) | Pointer to the [OH_Drawing_FontMgr](capi-drawing-oh-drawing-fontmgr.md) object created. |
 
 ### OH_Drawing_FontMgrDestroy()
 
@@ -100,7 +100,7 @@ Obtains the number of font families.
 
 | Type | Description |
 | -- | -- |
-| int | Returns the count of font families. |
+| int | Returns the number of font families. |
 
 ### OH_Drawing_FontMgrGetFamilyName()
 
@@ -110,7 +110,7 @@ char* OH_Drawing_FontMgrGetFamilyName(OH_Drawing_FontMgr* drawingFontMgr, int in
 
 **Description**
 
-Obtains the font family name based on an index.
+Obtains the font family name based on an index. When the returned name is no longer needed, use[OH_Drawing_FontMgrDestroyFamilyName](capi-drawing-font-mgr-h.md#oh_drawing_fontmgrdestroyfamilyname) to release the memory occupied by the name.
 
 **System capability**: SystemCapability.Graphic.Graphic2D.NativeDrawing
 
@@ -121,13 +121,13 @@ Obtains the font family name based on an index.
 | Parameter | Description |
 | -- | -- |
 | [OH_Drawing_FontMgr](capi-drawing-oh-drawing-fontmgr.md)* drawingFontMgr | Pointer to an [OH_Drawing_FontMgr](capi-drawing-oh-drawing-fontmgr.md) object, which is obtained from[OH_Drawing_FontMgrCreate](capi-drawing-font-mgr-h.md#oh_drawing_fontmgrcreate). |
-| int index | Index of the font family name. |
+| int index | Index used to obtain the corresponding font family name. The value range is [0,OH_Drawing_FontMgrGetFamilyCount() - 1]. |
 
 **Returns**:
 
 | Type | Description |
 | -- | -- |
-| char* | Returns the font family name corresponding to the index value. |
+| char* | Font family name corresponding to the index. When no longer needed, use<br>     [OH_Drawing_FontMgrDestroyFamilyName](capi-drawing-font-mgr-h.md#oh_drawing_fontmgrdestroyfamilyname) to release the memory occupied by the name. |
 
 ### OH_Drawing_FontMgrDestroyFamilyName()
 
@@ -157,7 +157,7 @@ OH_Drawing_FontStyleSet* OH_Drawing_FontMgrCreateFontStyleSet(OH_Drawing_FontMgr
 
 **Description**
 
-Creates a font style set from an **OH_Drawing_FontMgr** object.
+Creates a font style set object from a font manager object.
 
 **System capability**: SystemCapability.Graphic.Graphic2D.NativeDrawing
 
@@ -168,13 +168,13 @@ Creates a font style set from an **OH_Drawing_FontMgr** object.
 | Parameter | Description |
 | -- | -- |
 | [OH_Drawing_FontMgr](capi-drawing-oh-drawing-fontmgr.md)* drawingFontMgr | Pointer to an [OH_Drawing_FontMgr](capi-drawing-oh-drawing-fontmgr.md) object, which is obtained from[OH_Drawing_FontMgrCreate](capi-drawing-font-mgr-h.md#oh_drawing_fontmgrcreate). |
-| int index | Index of the font style set. |
+| int index | Index value used to obtain the font style set object from the font manager object. Value range: [0,OH_Drawing_FontMgrGetFamilyCount() - 1]. |
 
 **Returns**:
 
 | Type | Description |
 | -- | -- |
-| [OH_Drawing_FontStyleSet*](capi-drawing-oh-drawing-fontstyleset.md) | Returns the pointer to the <b>OH_Drawing_FontStyleSet</b> object created. |
+| [OH_Drawing_FontStyleSet*](capi-drawing-oh-drawing-fontstyleset.md) | Returns a pointer to the [OH_Drawing_FontStyleSet](capi-drawing-oh-drawing-fontstyleset.md) object created. |
 
 ### OH_Drawing_FontMgrDestroyFontStyleSet()
 
@@ -204,7 +204,7 @@ OH_Drawing_FontStyleSet* OH_Drawing_FontMgrMatchFamily(OH_Drawing_FontMgr* drawi
 
 **Description**
 
-Obtains a font style set based on a font family name.
+Obtains a font style set object based on a specified font family name. When the object is no longer needed,use [OH_Drawing_FontMgrDestroyFontStyleSet](capi-drawing-font-mgr-h.md#oh_drawing_fontmgrdestroyfontstyleset) to release it.
 
 **System capability**: SystemCapability.Graphic.Graphic2D.NativeDrawing
 
@@ -221,7 +221,7 @@ Obtains a font style set based on a font family name.
 
 | Type | Description |
 | -- | -- |
-| [OH_Drawing_FontStyleSet*](capi-drawing-oh-drawing-fontstyleset.md) | Returns the pointer to the <b>OH_Drawing_FontStyleSet</b> object matched. |
+| [OH_Drawing_FontStyleSet*](capi-drawing-oh-drawing-fontstyleset.md) | Pointer to the corresponding font style set object [OH_Drawing_FontStyleSet](capi-drawing-oh-drawing-fontstyleset.md). When no longer needed,<br>     use [OH_Drawing_FontMgrDestroyFontStyleSet](capi-drawing-font-mgr-h.md#oh_drawing_fontmgrdestroyfontstyleset) to release the object pointer. <br>NULL is returned if<br>     matching fails. |
 
 ### OH_Drawing_FontMgrMatchFamilyStyle()
 
@@ -231,7 +231,7 @@ OH_Drawing_Typeface* OH_Drawing_FontMgrMatchFamilyStyle(OH_Drawing_FontMgr* draw
 
 **Description**
 
-Obtains a typeface based on the font style information and font family name.
+Obtains a typeface object based on the specified font style information and font family name. When the objectis no longer needed, use {@link OH_Drawing_TypefaceDestroy} to release it.
 
 **System capability**: SystemCapability.Graphic.Graphic2D.NativeDrawing
 
@@ -249,7 +249,7 @@ Obtains a typeface based on the font style information and font family name.
 
 | Type | Description |
 | -- | -- |
-| [OH_Drawing_Typeface*](capi-drawing-oh-drawing-typeface.md) | Returns the pointer to the <b>OH_Drawing_Typeface</b> object matched. |
+| [OH_Drawing_Typeface*](capi-drawing-oh-drawing-typeface.md) | Pointer to the [OH_Drawing_Typeface](capi-drawing-oh-drawing-typeface.md) object corresponding to the font style. Use<br>     {@link OH_Drawing_TypefaceDestroy} to release the pointer when it is no longer needed. <br>NULL is returned if<br>     the match fails. |
 
 ### OH_Drawing_FontMgrMatchFamilyStyleCharacter()
 
@@ -259,7 +259,7 @@ OH_Drawing_Typeface* OH_Drawing_FontMgrMatchFamilyStyleCharacter(OH_Drawing_Font
 
 **Description**
 
-Obtains a typeface for the specified character. A null pointer is returned only when no typefacecorresponding to the input UTF-8 character is found in the **OH_Drawing_FontMgr** object.
+Obtains a typeface for the specified character. A null pointer is returned only when no typefacecorresponding to the input UTF-8 character is found in the font management object. When the object is no longerneeded, use {@link OH_Drawing_TypefaceDestroy} to release it.
 
 **System capability**: SystemCapability.Graphic.Graphic2D.NativeDrawing
 
@@ -272,15 +272,15 @@ Obtains a typeface for the specified character. A null pointer is returned only 
 | [OH_Drawing_FontMgr](capi-drawing-oh-drawing-fontmgr.md)* drawingFontMgr | Pointer to an [OH_Drawing_FontMgr](capi-drawing-oh-drawing-fontmgr.md) object, which is obtained from[OH_Drawing_FontMgrCreate](capi-drawing-font-mgr-h.md#oh_drawing_fontmgrcreate). |
 | const char* familyName | Pointer to a font family name. |
 | [OH_Drawing_FontStyleStruct](capi-drawing-oh-drawing-fontstylestruct.md) fontStyle | Font style, including the font weight, width, and slant. |
-| const char* bcp47[] | Pointer to the character language code array, which is a combination of ISO 639, 15924, and 3166-1language codes. |
-| int bcp47Count | Size of the character language code array. |
-| int32_t character | UTF8 character used for matching. |
+| const char* bcp47[] | Array of BCP47 language codes, which is a combination of ISO 639, 15924, and 3166-1 language codes. |
+| int bcp47Count | Size of the bcp47 array, which must match the actual number of elements in the bcp47 array. |
+| int32_t character | UTF-8 character used for matching. |
 
 **Returns**:
 
 | Type | Description |
 | -- | -- |
-| [OH_Drawing_Typeface*](capi-drawing-oh-drawing-typeface.md) | Returns the pointer to the <b>OH_Drawing_Typeface</b> object matched. |
+| [OH_Drawing_Typeface*](capi-drawing-oh-drawing-typeface.md) | Pointer to the corresponding [OH_Drawing_Typeface](capi-drawing-oh-drawing-typeface.md) typeface object, or NULL if no typeface is matched. |
 
 ### OH_Drawing_FontStyleSetCreateTypeface()
 
@@ -290,7 +290,7 @@ OH_Drawing_Typeface* OH_Drawing_FontStyleSetCreateTypeface(OH_Drawing_FontStyleS
 
 **Description**
 
-Creates a typeface for the specified index.
+Gets a typeface for the specified index. When the object is no longer needed, use{@link OH_Drawing_TypefaceDestroy} to release it.
 
 **System capability**: SystemCapability.Graphic.Graphic2D.NativeDrawing
 
@@ -301,13 +301,13 @@ Creates a typeface for the specified index.
 | Parameter | Description |
 | -- | -- |
 | [OH_Drawing_FontStyleSet](capi-drawing-oh-drawing-fontstyleset.md)* fontStyleSet | Pointer to an [OH_Drawing_FontStyleSet](capi-drawing-oh-drawing-fontstyleset.md) object. |
-| int index | Index of the typeface. |
+| int index | Index of the specified typeface object. The value range is [0, OH_Drawing_FontStyleSetCount() - 1]. |
 
 **Returns**:
 
 | Type | Description |
 | -- | -- |
-| [OH_Drawing_Typeface*](capi-drawing-oh-drawing-typeface.md) | If successful, return a pointer to <b>OH_Drawing_Typeface</b> object; if failed, return nullptr. |
+| [OH_Drawing_Typeface*](capi-drawing-oh-drawing-typeface.md) | Typeface object if successful; NULL otherwise. |
 
 ### OH_Drawing_FontStyleSetGetStyle()
 
@@ -328,14 +328,14 @@ Obtains the font style. Call [OH_Drawing_FontStyleSetFreeStyleName](capi-drawing
 | Parameter | Description |
 | -- | -- |
 | [OH_Drawing_FontStyleSet](capi-drawing-oh-drawing-fontstyleset.md)* fontStyleSet | Pointer to an [OH_Drawing_FontStyleSet](capi-drawing-oh-drawing-fontstyleset.md) object. |
-| int32_t index | Index of the font style. |
+| int32_t index | Index of the specified font style. The value range is [0, OH_Drawing_FontStyleSetCount() - 1]. |
 | char** styleName | String specifying the font style name. Call [OH_Drawing_FontStyleSetFreeStyleName](capi-drawing-font-mgr-h.md#oh_drawing_fontstylesetfreestylename) to releaseit when it is no longer needed, freeing up the allocated memory. |
 
 **Returns**:
 
 | Type | Description |
 | -- | -- |
-| [OH_Drawing_FontStyleStruct](capi-drawing-oh-drawing-fontstylestruct.md) | Return the <b>OH_Drawing_FontStyleStruct<b> structure. |
+| [OH_Drawing_FontStyleStruct](capi-drawing-oh-drawing-fontstylestruct.md) | Returns the font style. |
 
 ### OH_Drawing_FontStyleSetFreeStyleName()
 
@@ -365,7 +365,7 @@ OH_Drawing_Typeface* OH_Drawing_FontStyleSetMatchStyle(OH_Drawing_FontStyleSet* 
 
 **Description**
 
-Obtains the typeface closest to the font style.
+Obtains the typeface closest to the font style (font weight, font width, and slant). When the object is nolonger needed, use {@link OH_Drawing_TypefaceDestroy} to release it.
 
 **System capability**: SystemCapability.Graphic.Graphic2D.NativeDrawing
 
@@ -382,7 +382,7 @@ Obtains the typeface closest to the font style.
 
 | Type | Description |
 | -- | -- |
-| [OH_Drawing_Typeface*](capi-drawing-oh-drawing-typeface.md) | A pointer to matched <b>OH_Drawing_Typeface</b>. |
+| [OH_Drawing_Typeface*](capi-drawing-oh-drawing-typeface.md) | Pointer to the corresponding typeface object [OH_Drawing_Typeface](capi-drawing-oh-drawing-typeface.md), or NULL if matching fails. |
 
 ### OH_Drawing_FontStyleSetCount()
 
@@ -408,6 +408,6 @@ Obtains the number of fonts in the font style set.
 
 | Type | Description |
 | -- | -- |
-| int | The count of typeface in this font style set. |
+| int | Returns the number of fonts. |
 
 

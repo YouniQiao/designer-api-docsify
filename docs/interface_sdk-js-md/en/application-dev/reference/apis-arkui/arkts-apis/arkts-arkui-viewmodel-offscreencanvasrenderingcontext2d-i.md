@@ -206,7 +206,7 @@ Create an ImageData object.
 
 | Type | Description |
 | --- | --- |
-| [ImageData](arkts-arkui-imagedata-c.md) | ImageData New ImageData object with width and height specified. |
+| [ImageData](../arkts-components/arkts-arkui-imagedata-c.md) | ImageData New ImageData object with width and height specified. |
 
 ## createImageData
 
@@ -230,13 +230,13 @@ Create an ImageData object.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| imageData | [ImageData](arkts-arkui-imagedata-c.md) | Yes | Copy an object of the same width and height from an existing ImageData object The image itself is not allowed to be copied. |
+| imageData | [ImageData](../arkts-components/arkts-arkui-imagedata-c.md) | Yes | Copy an object of the same width and height from an existing ImageData object The image itself is not allowed to be copied. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [ImageData](arkts-arkui-imagedata-c.md) | ImageData New ImageData object with width and height specified. |
+| [ImageData](../arkts-components/arkts-arkui-imagedata-c.md) | ImageData New ImageData object with width and height specified. |
 
 ## createLinearGradient
 
@@ -269,7 +269,7 @@ Creates a linear gradient color.
 
 | Type | Description |
 | --- | --- |
-| [CanvasGradient](arkts-arkui-canvasgradient-c.md) | LinearGradient object. |
+| [CanvasGradient](../arkts-components/arkts-arkui-canvasgradient-c.md) | LinearGradient object. |
 
 ## createPath2D
 
@@ -395,7 +395,7 @@ Create a radial tween object.
 
 | Type | Description |
 | --- | --- |
-| [CanvasGradient](arkts-arkui-canvasgradient-c.md) | RadialGradient object. |
+| [CanvasGradient](../arkts-components/arkts-arkui-canvasgradient-c.md) | RadialGradient object. |
 
 ## drawImage
 
@@ -679,7 +679,7 @@ Get an ImageData object.
 
 | Type | Description |
 | --- | --- |
-| [ImageData](arkts-arkui-imagedata-c.md) | ImageData An ImageData object that contains the rectangular ImageData given by the canvas. |
+| [ImageData](../arkts-components/arkts-arkui-imagedata-c.md) | ImageData An ImageData object that contains the rectangular ImageData given by the canvas. |
 
 ## getPixelMap
 
@@ -942,7 +942,7 @@ Draws the specified ImageData object to the canvas.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| imageData | [ImageData](arkts-arkui-imagedata-c.md) | Yes | An array object containing pixel values. |
+| imageData | [ImageData](../arkts-components/arkts-arkui-imagedata-c.md) | Yes | An array object containing pixel values. |
 | dx | number | Yes | The offset of the position of the source image data in the target canvas (the offset in the X-axis direction). |
 | dy | number | Yes | The offset of the position of the source image data in the target canvas (the Y-axis offset). |
 
@@ -976,7 +976,7 @@ Draws the specified ImageData object to the canvas.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| imageData | [ImageData](arkts-arkui-imagedata-c.md) | Yes | An array object containing pixel values. |
+| imageData | [ImageData](../arkts-components/arkts-arkui-imagedata-c.md) | Yes | An array object containing pixel values. |
 | dx | number | Yes | The offset of the position of the source image data in the target canvas (the offset in the X-axis direction). |
 | dy | number | Yes | he offset of the position of the source image data in the target canvas (the Y-axis offset). |
 | dirtyX | number | Yes | In the source image data, the position of the upper left corner of the rectangular region Default is the upper left corner of the entire image data (x coordinate). |

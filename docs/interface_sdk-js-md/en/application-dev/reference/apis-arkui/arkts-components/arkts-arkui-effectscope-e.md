@@ -1,6 +1,6 @@
 # EffectScope
 
-EffectScope的枚举值。
+The scope type of the symbol effect.
 
 **Since:** 12
 
@@ -16,7 +16,7 @@ EffectScope的枚举值。
 LAYER = 0
 ```
 
-分层模式。
+Layered mode.
 
 **Since:** 12
 
@@ -38,7 +38,7 @@ LAYER = 0
 WHOLE = 1
 ```
 
-整体模式。
+Whole mode.
 
 **Since:** 12
 

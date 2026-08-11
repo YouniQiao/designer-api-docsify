@@ -1,6 +1,6 @@
 # MemberPurchaseInfo
 
-会员购买信息的定义。
+The definition of member purchase information.
 
 **Since:** 23
 
@@ -22,7 +22,7 @@ import { avMusicTemplate } from 'kits/@kit.AVSessionKit';
 diagramContent: string
 ```
 
-会员购买图片的内容。
+Member purchase diagram content.
 
 **Type:** string
 
@@ -42,7 +42,7 @@ diagramContent: string
 diagramData?: image.PixelMap
 ```
 
-会员购买图片。
+Member purchase diagram.
 
 **Type:** image.PixelMap
 
@@ -62,7 +62,7 @@ diagramData?: image.PixelMap
 diagramUrl: string
 ```
 
-会员购买图片的URL（该图片必须采用21:9的宽高比）。
+The URL for the member purchase illustration must be in 21:9 aspect ratio.
 
 **Type:** string
 
@@ -82,7 +82,7 @@ diagramUrl: string
 id: string
 ```
 
-会员购买信息的唯一ID。
+Unique id of the member purchase information.
 
 **Type:** string
 
@@ -102,7 +102,7 @@ id: string
 memberPurchaseType: MemberPurchaseType
 ```
 
-会员购买类型。
+Member purchase type
 
 **Type:** [MemberPurchaseType](arkts-avsession-avmusictemplate-memberpurchasetype-e.md)
 

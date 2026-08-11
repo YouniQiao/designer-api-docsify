@@ -32,6 +32,6 @@ Unsubscribe P2P local device change events.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 801 | Capability not supported. |
-| 2801000 | Operation failed. |
+| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. |
+| [2801000](../errorcode-wifi.md#2801000-p2p-module-error) | Operation failed. |
 

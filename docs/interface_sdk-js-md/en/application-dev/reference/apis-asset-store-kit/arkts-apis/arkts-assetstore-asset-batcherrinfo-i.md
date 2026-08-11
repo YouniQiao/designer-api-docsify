@@ -1,6 +1,6 @@
 # BatchErrInfo
 
-批量操作中单个关键资产的错误信息。
+Result object containing error information with a specific index, error code, and message for a single asset.
 
 **Since:** 26.0.0
 
@@ -22,7 +22,7 @@ import { asset } from 'kits/@kit.AssetStoreKit';
 errCode: number
 ```
 
-批量操作的错误码。
+The error code of the batch operation.
 
 **Type:** number
 
@@ -40,7 +40,7 @@ errCode: number
 index: number
 ```
 
-关键资产的索引。
+The index in the source assets array.
 
 **Type:** number
 
@@ -58,7 +58,7 @@ index: number
 message: string
 ```
 
-批量操作的错误信息。
+The error message of the batch operation.
 
 **Type:** string
 

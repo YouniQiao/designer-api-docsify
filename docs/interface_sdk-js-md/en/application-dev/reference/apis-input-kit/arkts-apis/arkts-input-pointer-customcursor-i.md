@@ -1,6 +1,6 @@
 # CustomCursor
 
-自定义光标资源。
+Defines custom cursor resources.
 
 **Since:** 15
 
@@ -22,7 +22,8 @@ import { pointer } from 'kits/@kit.InputKit';
 focusX?: int
 ```
 
-自定义光标焦点的水平坐标。该坐标受自定义光标大小的限制。最小值为0，最大值为资源图的宽度最大值该参数缺省时默认为0，单位为像素（px）。
+Horizontal coordinate of the custom pointer focus, in px. This coordinate is limited by the custom pointer size.The minimum value is 0, and the maximum value is the maximum width of the resource image. The default value is  
+**0** when this parameter is omitted.
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
@@ -40,7 +41,8 @@ focusX?: int
 focusY?: int
 ```
 
-自定义光标焦点的垂直坐标。该坐标受自定义光标大小的限制。最小值为0，最大值为资源图的高度最大值该参数缺省时默认为0，单位为像素（px）。
+Vertical coordinate of the custom pointer focus, in px. This coordinate is limited by the custom pointer size.The minimum value is 0, and the maximum value is the maximum width of the resource image. The default value is  
+**0** when this parameter is omitted.
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
@@ -58,7 +60,7 @@ focusY?: int
 pixelMap: image.PixelMap
 ```
 
-自定义光标。最小限制为资源图本身的最小限制。最大限制为256 x 256px。
+Pixel map. The minimum size is subject to the minimum limit of the image. The maximum size is 256 x 256 px.
 
 **Type:** image.PixelMap
 

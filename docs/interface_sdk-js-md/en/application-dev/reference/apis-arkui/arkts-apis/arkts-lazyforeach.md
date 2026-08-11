@@ -6,39 +6,39 @@
 
 | Name | Description |
 | --- | --- |
-| [LazyForEach](arkts-arkui-lazyforeach-lazyforeach-f.md#lazyforeach) | 定义LazyForEach组件。它需要在组件属性设置开始时调用setLazyForEachOptions。并且它需要在组件属性设置结束时调用applyAttributeFinish。 |
+| [LazyForEach](arkts-arkui-lazyforeach-lazyforeach-f.md#lazyforeach) | Defines LazyForEach Component. It requires calling setLazyForEachOptions at start of component attribute set-up,and it requires calling applyAttributesFinish at end of component attribute set-up. |
 
 ### Interfaces
 
 | Name | Description |
 | --- | --- |
-| [DataAddOperation](arkts-arkui-lazyforeach-dataaddoperation-i.md) | 添加单个数据。 |
-| [DataChangeListener](arkts-arkui-lazyforeach-datachangelistener-i.md) | 数据变化监听器。 |
-| [DataChangeOperation](arkts-arkui-lazyforeach-datachangeoperation-i.md) | 执行单个数据的插入、更新或删除。 |
-| [DataDeleteOperation](arkts-arkui-lazyforeach-datadeleteoperation-i.md) | 删除单个数据。 |
-| [DataExchangeOperation](arkts-arkui-lazyforeach-dataexchangeoperation-i.md) | 交换单个数据。 |
-| [DataMoveOperation](arkts-arkui-lazyforeach-datamoveoperation-i.md) | 移动数据操作。 |
-| [DataReloadOperation](arkts-arkui-lazyforeach-datareloadoperation-i.md) | 重载所有数据操作。当onDatasetChange含有DataOperationType.RELOAD操作时，其余操作全部失效，框架会自己调用keyGenerator进行键值比对。 |
-| [ExchangeIndex](arkts-arkui-lazyforeach-exchangeindex-i.md) | 定义交换数据的位置。 |
-| [ExchangeKey](arkts-arkui-lazyforeach-exchangekey-i.md) | 定义交换数据的新键值。 |
-| [IDataSource](arkts-arkui-lazyforeach-idatasource-i.md) | LazyForEach的数据源。ArkTS-Sta中IDataSource强制要求声明`&lt;T&gt;`类型。 |
-| [LazyForEachOptions](arkts-arkui-lazyforeach-lazyforeachoptions-i.md) | 配置LazyForEach的参数。 |
-| [MoveIndex](arkts-arkui-lazyforeach-moveindex-i.md) | 定义移动数据的位置。 |
+| [DataAddOperation](arkts-arkui-lazyforeach-dataaddoperation-i.md) | Defines add operation. |
+| [DataChangeListener](arkts-arkui-lazyforeach-datachangelistener-i.md) | Data Change Listener. |
+| [DataChangeOperation](arkts-arkui-lazyforeach-datachangeoperation-i.md) | Defines change operation. |
+| [DataDeleteOperation](arkts-arkui-lazyforeach-datadeleteoperation-i.md) | Defines delete operation. |
+| [DataExchangeOperation](arkts-arkui-lazyforeach-dataexchangeoperation-i.md) | Defines exchange operation. |
+| [DataMoveOperation](arkts-arkui-lazyforeach-datamoveoperation-i.md) | Defines move&exchange operation. |
+| [DataReloadOperation](arkts-arkui-lazyforeach-datareloadoperation-i.md) | Defines reload operation. |
+| [ExchangeIndex](arkts-arkui-lazyforeach-exchangeindex-i.md) | Defines position of exchange data. |
+| [ExchangeKey](arkts-arkui-lazyforeach-exchangekey-i.md) | Defines new key of exchange data. |
+| [IDataSource](arkts-arkui-lazyforeach-idatasource-i.md) | Developers need to implement this interface to provide data to LazyForEach component. |
+| [LazyForEachOptions](arkts-arkui-lazyforeach-lazyforeachoptions-i.md) | Options for LazyForEach. |
+| [MoveIndex](arkts-arkui-lazyforeach-moveindex-i.md) | Defines position of moved data. |
 
 ### Enums
 
 | Name | Description |
 | --- | --- |
-| [DataOperationType](arkts-arkui-lazyforeach-dataoperationtype-e.md) | 枚举类型，数据操作说明。 |
-| [LazyForEachCustomComponentFreezeMode](arkts-arkui-lazyforeach-lazyforeachcustomcomponentfreezemode-e.md) | 冻结模式枚举，用于配置LazyForEach中已移出组件树的缓存自定义节点的冻结行为。 |
-| [LazyForEachMemOptStrategy](arkts-arkui-lazyforeach-lazyforeachmemoptstrategy-e.md) | 定义内存优化策略的类型。 |
-| [LazyForEachReleaseStrategy](arkts-arkui-lazyforeach-lazyforeachreleasestrategy-e.md) | 资源释放策略枚举，用于配置LazyForEach待销毁节点的资源释放策略。 |
+| [DataOperationType](arkts-arkui-lazyforeach-dataoperationtype-e.md) | Defines the types of data source operations. |
+| [LazyForEachCustomComponentFreezeMode](arkts-arkui-lazyforeach-lazyforeachcustomcomponentfreezemode-e.md) | Enumerates the freeze modes for cached custom nodes that have been removed from the component tree in LazyForEach. |
+| [LazyForEachMemOptStrategy](arkts-arkui-lazyforeach-lazyforeachmemoptstrategy-e.md) | Defines type for memory optimization strategy. |
+| [LazyForEachReleaseStrategy](arkts-arkui-lazyforeach-lazyforeachreleasestrategy-e.md) | Enumerates the release strategies for LazyForEach discarded nodes. |
 
 ### Types
 
 | Name | Description |
 | --- | --- |
-| [DataOperation](arkts-arkui-dataoperation-t.md) | 定义数据操作类型。 |
-| [ItemGeneratorFunc](arkts-arkui-itemgeneratorfunc-t.md) | Define item generator function. |
-| [KeyGeneratorFunc](arkts-arkui-keygeneratorfunc-t.md) | Define key generator function. |
+| [DataOperation](arkts-arkui-dataoperation-t.md) | All data operation types. |
+| [ItemGeneratorFunc](arkts-arkui-itemgeneratorfunc-t.md) | Defines item generator function. |
+| [KeyGeneratorFunc](arkts-arkui-keygeneratorfunc-t.md) | Defines key generator function. |
 

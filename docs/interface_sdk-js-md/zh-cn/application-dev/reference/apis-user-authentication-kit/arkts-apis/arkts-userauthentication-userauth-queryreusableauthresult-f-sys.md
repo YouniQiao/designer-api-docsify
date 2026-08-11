@@ -1,11 +1,5 @@
 # queryReusableAuthResult（系统接口）
 
-## 导入模块
-
-```TypeScript
-import { userAuth } from 'kits/@kit.UserAuthenticationKit';
-```
-
 ## queryReusableAuthResult
 
 ```TypeScript
@@ -42,11 +36,11 @@ function queryReusableAuthResult(authParam: AuthParam): Uint8Array
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 12500008 | The parameter is out of range. |
-| 201 | Permission denied. |
-| 202 | Permission denied. Called by non-system application. |
-| 12500002 | General operation error. |
-| 12500017 | Failed to reuse authentication result. |
+| [12500008](../errorcode-useriam.md#12500008-参数校验失败) | The parameter is out of range. |
+| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission denied. Called by non-system application. |
+| [12500002](../errorcode-useriam.md#12500002-身份认证系统通用错误码) | General operation error. |
+| [12500017](../errorcode-useriam.md#12500017-复用身份认证结果失败) | Failed to reuse authentication result. |
 
 ## 示例
 
@@ -57,7 +51,7 @@ import { userAuth } from '@kit.UserAuthenticationKit';
 
 try {
   const rand = cryptoFramework.createRandom();
-  const len: number = 16;
+  const len = 16;
   const randData: Uint8Array = rand?.generateRandomSync(len)?.data;
   const reuseUnlockResult: userAuth.ReuseUnlockResult = {
     reuseMode: userAuth.ReuseMode.AUTH_TYPE_RELEVANT,

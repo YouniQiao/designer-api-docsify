@@ -1,6 +1,6 @@
 # SystemWindowOptions (System API)
 
-系统窗口的创建参数。
+Describes the parameters for creating a system window.
 
 **Since:** 14
 
@@ -24,7 +24,7 @@ import { window } from 'kits/@kit.ArkUI';
 windowType: WindowType
 ```
 
-窗口类型。无默认类型，不配置会导致窗口创建失败。不支持TYPE_DIALOG类型。
+Window type. There is no default value. If null is passed in, the window fails to be created. **TYPE_DIALOG** is not supported.
 
 **Type:** [WindowType](../../apis-accessibility-kit/arkts-apis/arkts-accessibility-windowtype-t.md)
 

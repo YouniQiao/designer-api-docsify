@@ -1,11 +1,5 @@
 # queryTouchEvents（系统接口）
 
-## 导入模块
-
-```TypeScript
-import { inputMonitor } from 'kits/@kit.InputKit';
-```
-
 ## queryTouchEvents
 
 ```TypeScript
@@ -42,10 +36,12 @@ function queryTouchEvents(count: int) : Promise<Array<TouchEvent>>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 201 | Permission denied. |
-| 202 | Permission denied, non-system app called system api. |
+| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission denied, non-system app called system api. |
 
 ## 示例
+
+ArkTS-Dyn示例：
 
 ```TypeScript
 import { inputMonitor, TouchEvent } from '@kit.InputKit';
@@ -64,6 +60,36 @@ try {
   const code = (error as BusinessError).code;
   const message = (error as BusinessError).message;
   console.error(`Failed to query touch events, Code: ${code}, message: ${message}.`);
+}
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+import { Entry, Text, RelativeContainer, Component } from '@kit.ArkUI';
+import { BusinessError } from '@kit.BasicServicesKit';
+import { inputMonitor, TouchEvent } from '@kit.InputKit'
+
+@Entry
+@Component
+struct Index {
+  build() {
+    RelativeContainer() {
+      Text()
+        .onClick(() => {
+          try {
+            // 查询触屏事件数量
+            inputMonitor.queryTouchEvents(10).then((events: Array<TouchEvent>) => {
+              console.info(`Succeeded in querying touch events, events=${events}.`);
+            });
+          } catch(error) {
+            const code = (error as BusinessError).code;
+            const message = (error as BusinessError).message;
+            console.error(`Failed to query touch events, Code: ${code}, message: ${message}.`);
+          }
+        })
+    }
+  }
 }
 ```
 

@@ -1,6 +1,6 @@
 # UIGestureEvent
 
-用于设置组件绑定的手势。
+Provides APIs for configuring gestures bound to a component.
 
 **Since:** 12
 
@@ -16,7 +16,7 @@
 addGesture<T>(gesture: GestureHandler<T>, priority?: GesturePriority, mask?: GestureMask): void
 ```
 
-添加手势。
+Adds a gesture.
 
 **Since:** 12
 
@@ -34,9 +34,9 @@ addGesture<T>(gesture: GestureHandler<T>, priority?: GesturePriority, mask?: Ges
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| gesture | [GestureHandler](../arkts-apis/arkts-arkui-gesturehandler-c.md)&lt;T&gt; | Yes | 手势处理器对象。 |
-| priority | [GesturePriority](../arkts-apis/arkts-arkui-gesturepriority-e.md) | No | 绑定手势的优先级。&lt;br&gt;默认值：GesturePriority.NORMAL |
-| mask | [GestureMask](../arkts-apis/arkts-arkui-gesturemask-e.md) | No | 事件响应设置。&lt;br&gt;默认值：GestureMask.Normal |
+| gesture | [GestureHandler](../arkts-apis/arkts-arkui-gesturehandler-c.md)&lt;T&gt; | Yes | Gesture handler object. |
+| priority | [GesturePriority](../arkts-apis/arkts-arkui-gesturepriority-e.md) | No | Priority of the bound gesture.&lt;br&gt;Default value: **GesturePriority.NORMAL**. |
+| mask | [GestureMask](../arkts-apis/arkts-arkui-gesturemask-e.md) | No | Mask for gesture events.&lt;br&gt;Default value: **GestureMask.Normal**. |
 
 ## addParallelGesture
 
@@ -44,7 +44,7 @@ addGesture<T>(gesture: GestureHandler<T>, priority?: GesturePriority, mask?: Ges
 addParallelGesture<T>(gesture: GestureHandler<T>, mask?: GestureMask): void
 ```
 
-绑定可与子组件手势同时触发的手势。
+Adds a gesture that can be recognized at once by the component and its child component.
 
 **Since:** 12
 
@@ -62,8 +62,8 @@ addParallelGesture<T>(gesture: GestureHandler<T>, mask?: GestureMask): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| gesture | [GestureHandler](../arkts-apis/arkts-arkui-gesturehandler-c.md)&lt;T&gt; | Yes | 手势处理器对象。 |
-| mask | [GestureMask](../arkts-apis/arkts-arkui-gesturemask-e.md) | No | 事件响应设置。&lt;br&gt;默认值：GestureMask.Normal |
+| gesture | [GestureHandler](../arkts-apis/arkts-arkui-gesturehandler-c.md)&lt;T&gt; | Yes | Gesture handler object. |
+| mask | [GestureMask](../arkts-apis/arkts-arkui-gesturemask-e.md) | No | Mask for gesture events.&lt;br&gt;Default value: **GestureMask.Normal**. |
 
 ## clearGestures
 
@@ -71,7 +71,7 @@ addParallelGesture<T>(gesture: GestureHandler<T>, mask?: GestureMask): void
 clearGestures(): void
 ```
 
-清除该组件上通过modifier绑定的所有手势。
+Clears all gestures that have been bound to the component through a modifier.
 
 **Since:** 12
 
@@ -91,7 +91,7 @@ clearGestures(): void
 removeGestureByTag(tag: string): void
 ```
 
-移除该组件上通过modifier绑定的设置为指定标志的手势。
+Remove a gesture from a component that has been bound with a specific tag through a modifier.
 
 **Since:** 12
 
@@ -109,5 +109,5 @@ removeGestureByTag(tag: string): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| tag | string | Yes | 手势处理器标志。 |
+| tag | string | Yes | Gesture handler flag. |
 

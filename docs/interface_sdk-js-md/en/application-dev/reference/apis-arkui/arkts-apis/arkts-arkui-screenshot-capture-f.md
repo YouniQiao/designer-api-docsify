@@ -12,9 +12,11 @@ import { screenshot } from 'kits/@kit.ArkUI';
 function capture(options?: CaptureOption): Promise<image.PixelMap>
 ```
 
-获取屏幕全屏截图，使用Promise异步回调。
+Takes a screenshot of the entire screen. This API uses a promise to return the result.
 
-此接口可以通过设置不同的displayId截取不同屏幕的截图，且只能截取全屏；[pick](arkts-arkui-screenshot-pick-f.md#pick)接口可实现区域截屏。
+This API allows you to take screenshots of different screens by setting various **displayId** values, but only full  
+-screen captures are supported. The [pick](arkts-arkui-screenshot-pick-f.md#pick) API allows you to take screenshots of a specified  
+region.
 
 **Since:** 14
 
@@ -34,7 +36,7 @@ function capture(options?: CaptureOption): Promise<image.PixelMap>
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| options | [CaptureOption](arkts-arkui-screenshot-captureoption-i.md) | No | 截取图像的相关信息。此参数不填时，默认截取displayId为0的屏幕截图。<br>**Since:** 22 |
+| options | [CaptureOption](arkts-arkui-screenshot-captureoption-i.md) | No | Capture options. If this parameter is left blank, the display with ID 0 is captured by default.<br>**Since:** 22 |
 
 **Return value:**
 
@@ -46,10 +48,10 @@ function capture(options?: CaptureOption): Promise<image.PixelMap>
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1.Incorrect parameter types. 2.Parameter verification failed. |
-| 801 | Capability not supported on this device. |
-| 1400003 | This display manager service works abnormally. |
-| 201 | Permission verification failed. The application does not have the permission required to call the API. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.Incorrect parameter types. 2.Parameter verification failed. |
+| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported on this device. |
+| [1400003](../errorcode-display.md#1400003-abnormal-display-manager-service) | This display manager service works abnormally. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed. The application does not have the permission required to call the API. |
 
 ## Examples
 
@@ -57,21 +59,19 @@ function capture(options?: CaptureOption): Promise<image.PixelMap>
 import { BusinessError } from '@kit.BasicServicesKit';
 import { image } from '@kit.ImageKit';
 
-// Set screenshot parameters and specify the screen whose displayId is 0.
 let captureOption: screenshot.CaptureOption = {
   "displayId": 0
 };
 try {
-  // Call the capture API to obtain a full-screen screenshot.
   let promise = screenshot.capture(captureOption);
   promise.then((pixelMap: image.PixelMap) => {
-    console.info(`Succeeded in saving screenshot. Pixel bytes number: ${pixelMap.getPixelBytesNumber()}`);
+    console.info('Succeeded in saving screenshot. Pixel bytes number: ' + pixelMap.getPixelBytesNumber());
     pixelMap.release(); // Release the memory in time after the PixelMap is used.
   }).catch((err: BusinessError) => {
     console.error(`Failed to save screenshot. Code: ${err.code}, message: ${err.message}`);
   });
 } catch (exception) {
   console.error(`Failed to save screenshot. Code: ${exception.code}, message: ${exception.message}`);
-}
+};
 ```
 

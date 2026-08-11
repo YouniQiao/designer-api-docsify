@@ -1,24 +1,26 @@
 # WindowLimits
 
-窗口尺寸限制参数，应用可以通过[getWindowLimits](arkts-arkui-window-window-i.md#getwindowlimits)获得当前窗口的尺寸限制（单位为px）；从API version 22开始，还可以通过[getWindowLimitsVP](arkts-arkui-window-window-i.md#getwindowlimitsvp)获取窗口尺寸限制（单位为vp）。
+Describes the parameters for window size limits. Applications can obtain the current window size limits (in px) via  
+[getWindowLimits](arkts-arkui-window-window-i.md#getwindowlimits). Starting from API version 22, they can also be obtained via [getWindowLimitsVP](arkts-arkui-window-window-i.md#getwindowlimitsvp) (in vp).
 
-窗口尺寸限制的最终生效结果由默认系统限制、应用配置和运行时设置的数据取交集得到，优先级从高到低依次为：
+The actual window size limits applied are determined by the intersection of the default system limits, application configurations, and runtime settings, with the priority (from highest to lowest) as follows:
 
-1. 应用通过[setWindowLimits](arkts-arkui-window-window-i.md#setwindowlimits)设置窗口尺寸限制。2. 应用在[startAbility](../../apis-ability-kit/arkts-apis/arkts-ability-uiabilitycontext-c.md/arkts-ability-uiabilitycontext-c.md#startability)拉起窗口时通过[StartOptions](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-startoptions-startoptions-c.md/arkts-ability-app-ability-startoptions-startoptions-c.md)指定窗口尺寸限制（API version 17开始支持）。3. 应用在[module.json5配置文件中的abilities标签](../../../quick-start/module-configuration-file.md#abilities标签)中配置windowLimits。4. 默认系统限制（基于不同产品和窗口类型，其windowLimits系统默认限制存在差异）。
+1. Window size limits configured by the application via [setWindowLimits](arkts-arkui-window-window-i.md#setwindowlimits).2. Window size limits specified by the application via [StartOptions](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-startoptions-startoptions-c.md/arkts-ability-app-ability-startoptions-startoptions-c.md) when the application starts the window through [startAbility](../../apis-ability-kit/arkts-apis/arkts-ability-uiabilitycontext-c.md/arkts-ability-uiabilitycontext-c.md#startability). (This approach is supported since API version 17.)3. Window size limits configured by the application in [abilities in the module.json5 file](../../../quick-start/module-configuration-file.md#abilities).4. Default system limits (which vary depending on the product and window type).
 
-> **说明：**
+> **NOTE：**
 > 
-> 针对maxWidth、maxHeight、minWidth、minHeight属性：
+> For the **maxWidth**, **maxHeight**, **minWidth**, and **minHeight** properties:
 > 
-> - 默认单位为px，从API version 22开始支持通过pixelUnit设置单位为px或vp。
+> - The default unit is px. Starting from API version 22, the unit can be px or vp, depending on the setting of
+> **pixelUnit**.
 > 
-> - 参数为整数，浮点数会向下取整。
+> - The value is an integer. Floating-point values will be rounded down.
 > 
-> - 默认值为0，表示属性不发生变化。
+> - The default value is **0**, indicating that the property does not change.
 > 
-> - 可生效范围下限值：系统限定的最小高度/宽度。
+> - The lower bound of the effective range is the minimum height/width limited by the system.
 > 
-> - 可生效范围上限值：系统限定的最大高度/宽度。
+> - The upper bound of the effective range is the maximum height/width limited by the system.
 
 **Since:** 11
 
@@ -40,7 +42,7 @@ import { window } from 'kits/@kit.ArkUI';
 maxHeight?: int
 ```
 
-窗口的最大高度。
+Maximum window height.
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
@@ -60,7 +62,7 @@ maxHeight?: int
 maxWidth?: int
 ```
 
-窗口的最大宽度。
+Maximum window width.
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
@@ -80,7 +82,7 @@ maxWidth?: int
 minHeight?: int
 ```
 
-窗口的最小高度。
+Minimum window height.
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
@@ -100,7 +102,7 @@ minHeight?: int
 minWidth?: int
 ```
 
-窗口的最小宽度。
+Minimum window width.
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
@@ -120,7 +122,7 @@ minWidth?: int
 pixelUnit?: PixelUnit
 ```
 
-窗口尺寸限制的单位，默认为px。可显式设置为px或vp。
+Unit of the window size limits. The default value is **px**. The value can be **px** or **vp**.
 
 **Type:** [PixelUnit](arkts-arkui-window-pixelunit-e.md)
 

@@ -1,6 +1,6 @@
 # DistributedExtensionAbility
 
-DistributedExtensionAbility模块提供分布式相关扩展能力，提供分布式创建、销毁、连接的生命周期回调。
+The **DistributedExtensionAbility** module provides distributed extension capabilities and lifecycle callbacks for distributed ability creation, destruction, and connection.
 
 **Since:** 20
 
@@ -22,7 +22,7 @@ import { DistributedExtensionAbility } from 'kits/@kit.DistributedServiceKit';
 onCollaborate(wantParam: Record<string, Object>): AbilityConstant.CollaborateResult
 ```
 
-多设备协作场景下返回协作结果的回调。
+Callback invoked to return the collaboration result in multi-device collaboration scenarios.
 
 **Since:** 20
 
@@ -38,13 +38,13 @@ onCollaborate(wantParam: Record<string, Object>): AbilityConstant.CollaborateRes
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| wantParam | [Record](../../apis-default/arkts-apis/arkts-record-t.md)&lt;string, Object&gt; | Yes | want相关参数，仅支持key值取"ohos.extra.param.key.supportCollaborateIndex"。通过该key值可以获 取到调用方传输的数据并进行相应的处理。 |
+| wantParam | [Record](../../apis-default/arkts-apis/arkts-record-t.md)&lt;string, Object&gt; | Yes | Want parameter, which supports only the key **" ohos.extra.param.key.supportCollaborateIndex"**. The key can be used to obtain the data passed by the caller and perform corresponding processing. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| AbilityConstant.CollaborateResult | 协同方应用是否接受协同。 |
+| AbilityConstant.CollaborateResult | Collaboration result, that is, whether the target application accepts the collaboration request. |
 
 ## Examples
 
@@ -72,7 +72,7 @@ export default class DistributedExtension extends DistributedExtensionAbility {
 onCreate(want: Want): void
 ```
 
-Extension生命周期回调，在创建时回调，执行初始化业务逻辑操作。
+Callback invoked to initialize the service logic when a **DistributedExtensionAbility** instance is created.
 
 **Since:** 20
 
@@ -88,7 +88,7 @@ Extension生命周期回调，在创建时回调，执行初始化业务逻辑�
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| want | [Want](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-want-want-c.md) | Yes | 当前Extension相关的Want类型信息，包括ability名称、bundle名称等。 |
+| want | [Want](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-want-want-c.md) | Yes | Want information related to the **DistributedExtensionAbility** instance, including the ability name and bundle name. |
 
 ## Examples
 
@@ -111,7 +111,7 @@ export default class DistributedExtension extends DistributedExtensionAbility {
 onDestroy(): void
 ```
 
-Extension生命周期回调，在销毁时回调，执行资源清理等操作。
+Callback invoked to clear resources when a **ServiceExtensionAbility** instance is destroyed.
 
 **Since:** 20
 
@@ -141,7 +141,7 @@ export default class DistributedExtension extends DistributedExtensionAbility {
 context: DistributedExtensionContext
 ```
 
-DistributedExtension的上下文环境，继承自ExtensionContext。
+Context of the **DistributedExtension**. This context inherits from **ExtensionContext**.
 
 **Type:** [DistributedExtensionContext](arkts-distributedservice-application-distributedextensioncontext-distributedextensioncontext-c.md)
 

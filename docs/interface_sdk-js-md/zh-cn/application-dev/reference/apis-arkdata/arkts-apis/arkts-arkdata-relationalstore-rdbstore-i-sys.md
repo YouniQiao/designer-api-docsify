@@ -14,12 +14,6 @@
 
 **系统能力：** SystemCapability.DistributedDataManager.RelationalStore.Core
 
-## 导入模块
-
-```TypeScript
-import { relationalStore } from 'kits/@kit.ArkData';
-```
-
 ## cleanDeviceDirtyData
 
 ArkTS-Dyn:
@@ -63,14 +57,14 @@ cleanDeviceDirtyData(table: string, cursor?: long): Promise<void>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 14800001 | Invalid arguments. Possible causes: 1. Parameter is out of valid range. |
-| 14800021 | SQLite: Generic error. |
-| 14800024 | SQLite: The database file is locked. |
-| 202 | Permission verification failed, application which is not a system application uses system API. |
-| 14800011 | The current operation failed because the database is corrupted. |
+| [14800001](../errorcode-data-rdb.md#14800001-无效的参数) | Invalid arguments. Possible causes: 1. Parameter is out of valid range. |
+| [14800021](../errorcode-data-rdb.md#14800021-sqlite通用错误) | SQLite: Generic error. |
+| [14800024](../errorcode-data-rdb.md#14800024-sqlite数据库文件已锁定) | SQLite: The database file is locked. |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed, application which is not a system application uses system API. |
+| [14800011](../errorcode-data-rdb.md#14800011-数据库文件异常) | The current operation failed because the database is corrupted. |
 | 14800043 | The database does not support this scenario. Possible causes: 1. The database type is not support;2. The table type is not supported; 3. This is a read-only database. |
-| 14800015 | The database does not respond. |
-| 14800014 | The target instance is already closed. |
+| [14800015](../errorcode-data-rdb.md#14800015-数据库没有响应) | The database does not respond. |
+| [14800014](../errorcode-data-rdb.md#14800014-目标实例已关闭) | The target instance is already closed. |
 
 ## cloudSync
 
@@ -107,7 +101,7 @@ cloudSync(
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | mode | [SyncMode](arkts-arkdata-relationalstore-syncmode-e.md) | 是 | 表示数据库的同步模式。 |
-| predicates | [RdbPredicates](arkts-arkdata-relationalstore-rdbpredicates-c.md) | 是 | 表示同步数据的谓词条件。 |
+| predicates | [RdbPredicates](arkts-arkdata-rdb-rdbpredicates-c.md) | 是 | 表示同步数据的谓词条件。 |
 | progress | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;ProgressDetails&gt; | 是 | 用来处理数据库同步详细信息的回调函数。 |
 | callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数。当同步成功，err为undefined；否则为错误对象。 |
 
@@ -115,10 +109,10 @@ cloudSync(
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1. Need 2 - 4 parameter(s). 2. The RdbStore must be not nullptr. 3. The mode must be a SyncMode of cloud. 4. The tablesNames must be not empty. 5. The progress must be a callback type. 6. The callback must be a function. |
-| 801 | Capability not supported. |
-| 202 | if permission verification failed, application which is not a system application uses system API. |
-| 14800014 | The target instance is already closed.<br>**适用版本：** 12+ |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1. Need 2 - 4 parameter(s). 2. The RdbStore must be not nullptr. 3. The mode must be a SyncMode of cloud. 4. The tablesNames must be not empty. 5. The progress must be a callback type. 6. The callback must be a function. |
+| [801](../../errorcode-universal.md#801-该设备不支持此api) | Capability not supported. |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | if permission verification failed, application which is not a system application uses system API. |
+| [14800014](../errorcode-data-rdb.md#14800014-目标实例已关闭) | The target instance is already closed.<br>**适用版本：** 12+ |
 
 ## cloudSync
 
@@ -150,7 +144,7 @@ cloudSync(mode: SyncMode, predicates: RdbPredicates, progress: Callback<Progress
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | mode | [SyncMode](arkts-arkdata-relationalstore-syncmode-e.md) | 是 | 表示数据库的同步模式。 |
-| predicates | [RdbPredicates](arkts-arkdata-relationalstore-rdbpredicates-c.md) | 是 | 表示同步数据的谓词条件。 |
+| predicates | [RdbPredicates](arkts-arkdata-rdb-rdbpredicates-c.md) | 是 | 表示同步数据的谓词条件。 |
 | progress | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;ProgressDetails&gt; | 是 | 用来处理数据库同步详细信息的回调函数。 |
 
 **返回值：**
@@ -163,10 +157,10 @@ cloudSync(mode: SyncMode, predicates: RdbPredicates, progress: Callback<Progress
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1. Need 2 - 4 parameter(s). 2. The RdbStore must be not nullptr. 3. The mode must be a SyncMode of cloud. 4. The tablesNames must be not empty. 5. The progress must be a callback type. |
-| 801 | Capability not supported. |
-| 202 | if permission verification failed, application which is not a system application uses system API. |
-| 14800014 | The target instance is already closed.<br>**适用版本：** 12+ |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1. Need 2 - 4 parameter(s). 2. The RdbStore must be not nullptr. 3. The mode must be a SyncMode of cloud. 4. The tablesNames must be not empty. 5. The progress must be a callback type. |
+| [801](../../errorcode-universal.md#801-该设备不支持此api) | Capability not supported. |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | if permission verification failed, application which is not a system application uses system API. |
+| [14800014](../errorcode-data-rdb.md#14800014-目标实例已关闭) | The target instance is already closed.<br>**适用版本：** 12+ |
 
 ## delete
 
@@ -206,27 +200,27 @@ delete(table: string, predicates: dataSharePredicates.DataSharePredicates, callb
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 14800033 | SQLite: Data type mismatch.<br>**适用版本：** 12+ |
-| 14800000 | Inner error. |
-| 14800032 | SQLite: Abort due to constraint violation.<br>**适用版本：** 12+ |
-| 14800034 | SQLite: Library used incorrectly.<br>**适用版本：** 12+ |
-| 202 | Permission verification failed, application which is not a system application uses system API. |
-| 14800011 | The current operation failed because the database is corrupted.<br>**适用版本：** 12+ |
-| 14800047 | The WAL file size exceeds the default limit.<br>**适用版本：** 10+ |
-| 14800015 | The database does not respond.<br>**适用版本：** 12+ |
-| 14800014 | The target instance is already closed.<br>**适用版本：** 12+ |
-| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; 3. Parameter verification failed. |
-| 14800021 | SQLite: Generic error.<br>**适用版本：** 12+ |
-| 14800023 | SQLite: Access permission denied.<br>**适用版本：** 12+ |
-| 14800022 | SQLite: Callback routine requested an abort.<br>**适用版本：** 12+ |
-| 14800025 | SQLite: A table in the database is locked.<br>**适用版本：** 12+ |
-| 14800024 | SQLite: The database file is locked.<br>**适用版本：** 12+ |
-| 14800027 | SQLite: Attempt to write a readonly database.<br>**适用版本：** 12+ |
-| 14800026 | SQLite: The database is out of memory.<br>**适用版本：** 12+ |
-| 14800029 | SQLite: The database is full.<br>**适用版本：** 12+ |
-| 14800028 | SQLite: Some kind of disk I/O error occurred.<br>**适用版本：** 12+ |
-| 14800031 | SQLite: TEXT or BLOB exceeds size limit.<br>**适用版本：** 12+ |
-| 14800030 | SQLite: Unable to open the database file.<br>**适用版本：** 12+ |
+| [14800033](../errorcode-data-rdb.md#14800033-sqlite数据类型不匹配) | SQLite: Data type mismatch.<br>**适用版本：** 12+ |
+| [14800000](../../apis-basic-services-kit/errorcode-settings.md#14800000-参数检查失败) | Inner error. |
+| [14800032](../errorcode-data-rdb.md#14800032-sqlite由于违反约束而中止) | SQLite: Abort due to constraint violation.<br>**适用版本：** 12+ |
+| [14800034](../errorcode-data-rdb.md#14800034-sqlite库使用不正确) | SQLite: Library used incorrectly.<br>**适用版本：** 12+ |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed, application which is not a system application uses system API. |
+| [14800011](../errorcode-data-rdb.md#14800011-数据库文件异常) | The current operation failed because the database is corrupted.<br>**适用版本：** 12+ |
+| [14800047](../errorcode-data-rdb.md#14800047-wal文件大小超过默认上限) | The WAL file size exceeds the default limit.<br>**适用版本：** 10+ |
+| [14800015](../errorcode-data-rdb.md#14800015-数据库没有响应) | The database does not respond.<br>**适用版本：** 12+ |
+| [14800014](../errorcode-data-rdb.md#14800014-目标实例已关闭) | The target instance is already closed.<br>**适用版本：** 12+ |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; 3. Parameter verification failed. |
+| [14800021](../errorcode-data-rdb.md#14800021-sqlite通用错误) | SQLite: Generic error.<br>**适用版本：** 12+ |
+| [14800023](../errorcode-data-rdb.md#14800023-sqlite访问权限被拒绝) | SQLite: Access permission denied.<br>**适用版本：** 12+ |
+| [14800022](../errorcode-data-rdb.md#14800022-sqlite异步回调请求被中止) | SQLite: Callback routine requested an abort.<br>**适用版本：** 12+ |
+| [14800025](../errorcode-data-rdb.md#14800025-sqlite数据库中的表被锁定) | SQLite: A table in the database is locked.<br>**适用版本：** 12+ |
+| [14800024](../errorcode-data-rdb.md#14800024-sqlite数据库文件已锁定) | SQLite: The database file is locked.<br>**适用版本：** 12+ |
+| [14800027](../errorcode-data-rdb.md#14800027-sqlite尝试写入只读数据库) | SQLite: Attempt to write a readonly database.<br>**适用版本：** 12+ |
+| [14800026](../errorcode-data-rdb.md#14800026-sqlite数据库内存不足) | SQLite: The database is out of memory.<br>**适用版本：** 12+ |
+| [14800029](../errorcode-data-rdb.md#14800029-sqlite数据库已满) | SQLite: The database is full.<br>**适用版本：** 12+ |
+| [14800028](../errorcode-data-rdb.md#14800028-sqlite发生了某种磁盘io错误) | SQLite: Some kind of disk I/O error occurred.<br>**适用版本：** 12+ |
+| [14800031](../errorcode-data-rdb.md#14800031-sqlitetext或blob超出大小限制) | SQLite: TEXT or BLOB exceeds size limit.<br>**适用版本：** 12+ |
+| [14800030](../errorcode-data-rdb.md#14800030-sqlite无法打开数据库文件) | SQLite: Unable to open the database file.<br>**适用版本：** 12+ |
 
 ## delete
 
@@ -271,27 +265,27 @@ delete(table: string, predicates: dataSharePredicates.DataSharePredicates): Prom
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 14800033 | SQLite: Data type mismatch.<br>**适用版本：** 12+ |
-| 14800000 | Inner error. |
-| 14800032 | SQLite: Abort due to constraint violation.<br>**适用版本：** 12+ |
-| 14800034 | SQLite: Library used incorrectly.<br>**适用版本：** 12+ |
-| 202 | Permission verification failed, application which is not a system application uses system API. |
-| 14800011 | The current operation failed because the database is corrupted.<br>**适用版本：** 12+ |
-| 14800047 | The WAL file size exceeds the default limit.<br>**适用版本：** 10+ |
-| 14800015 | The database does not respond.<br>**适用版本：** 12+ |
-| 14800014 | The target instance is already closed.<br>**适用版本：** 12+ |
-| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; 3. Parameter verification failed. |
-| 14800021 | SQLite: Generic error.<br>**适用版本：** 12+ |
-| 14800023 | SQLite: Access permission denied.<br>**适用版本：** 12+ |
-| 14800022 | SQLite: Callback routine requested an abort.<br>**适用版本：** 12+ |
-| 14800025 | SQLite: A table in the database is locked.<br>**适用版本：** 12+ |
-| 14800024 | SQLite: The database file is locked.<br>**适用版本：** 12+ |
-| 14800027 | SQLite: Attempt to write a readonly database.<br>**适用版本：** 12+ |
-| 14800026 | SQLite: The database is out of memory.<br>**适用版本：** 12+ |
-| 14800029 | SQLite: The database is full.<br>**适用版本：** 12+ |
-| 14800028 | SQLite: Some kind of disk I/O error occurred.<br>**适用版本：** 12+ |
-| 14800031 | SQLite: TEXT or BLOB exceeds size limit.<br>**适用版本：** 12+ |
-| 14800030 | SQLite: Unable to open the database file.<br>**适用版本：** 12+ |
+| [14800033](../errorcode-data-rdb.md#14800033-sqlite数据类型不匹配) | SQLite: Data type mismatch.<br>**适用版本：** 12+ |
+| [14800000](../../apis-basic-services-kit/errorcode-settings.md#14800000-参数检查失败) | Inner error. |
+| [14800032](../errorcode-data-rdb.md#14800032-sqlite由于违反约束而中止) | SQLite: Abort due to constraint violation.<br>**适用版本：** 12+ |
+| [14800034](../errorcode-data-rdb.md#14800034-sqlite库使用不正确) | SQLite: Library used incorrectly.<br>**适用版本：** 12+ |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed, application which is not a system application uses system API. |
+| [14800011](../errorcode-data-rdb.md#14800011-数据库文件异常) | The current operation failed because the database is corrupted.<br>**适用版本：** 12+ |
+| [14800047](../errorcode-data-rdb.md#14800047-wal文件大小超过默认上限) | The WAL file size exceeds the default limit.<br>**适用版本：** 10+ |
+| [14800015](../errorcode-data-rdb.md#14800015-数据库没有响应) | The database does not respond.<br>**适用版本：** 12+ |
+| [14800014](../errorcode-data-rdb.md#14800014-目标实例已关闭) | The target instance is already closed.<br>**适用版本：** 12+ |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; 3. Parameter verification failed. |
+| [14800021](../errorcode-data-rdb.md#14800021-sqlite通用错误) | SQLite: Generic error.<br>**适用版本：** 12+ |
+| [14800023](../errorcode-data-rdb.md#14800023-sqlite访问权限被拒绝) | SQLite: Access permission denied.<br>**适用版本：** 12+ |
+| [14800022](../errorcode-data-rdb.md#14800022-sqlite异步回调请求被中止) | SQLite: Callback routine requested an abort.<br>**适用版本：** 12+ |
+| [14800025](../errorcode-data-rdb.md#14800025-sqlite数据库中的表被锁定) | SQLite: A table in the database is locked.<br>**适用版本：** 12+ |
+| [14800024](../errorcode-data-rdb.md#14800024-sqlite数据库文件已锁定) | SQLite: The database file is locked.<br>**适用版本：** 12+ |
+| [14800027](../errorcode-data-rdb.md#14800027-sqlite尝试写入只读数据库) | SQLite: Attempt to write a readonly database.<br>**适用版本：** 12+ |
+| [14800026](../errorcode-data-rdb.md#14800026-sqlite数据库内存不足) | SQLite: The database is out of memory.<br>**适用版本：** 12+ |
+| [14800029](../errorcode-data-rdb.md#14800029-sqlite数据库已满) | SQLite: The database is full.<br>**适用版本：** 12+ |
+| [14800028](../errorcode-data-rdb.md#14800028-sqlite发生了某种磁盘io错误) | SQLite: Some kind of disk I/O error occurred.<br>**适用版本：** 12+ |
+| [14800031](../errorcode-data-rdb.md#14800031-sqlitetext或blob超出大小限制) | SQLite: TEXT or BLOB exceeds size limit.<br>**适用版本：** 12+ |
+| [14800030](../errorcode-data-rdb.md#14800030-sqlite无法打开数据库文件) | SQLite: Unable to open the database file.<br>**适用版本：** 12+ |
 
 ## lockCloudContainer
 
@@ -331,7 +325,7 @@ lockCloudContainer(): Promise<int>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 202 | Permission verification failed, application which is not a system application uses system API. |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed, application which is not a system application uses system API. |
 
 ## query
 
@@ -366,11 +360,11 @@ query(table: string, predicates: dataSharePredicates.DataSharePredicates, callba
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; 3. Parameter verification failed. |
-| 14800000 | Inner error. |
-| 202 | Permission verification failed, application which is not a system application uses system API. |
-| 14800015 | The database does not respond.<br>**适用版本：** 12+ |
-| 14800014 | The target instance is already closed.<br>**适用版本：** 12+ |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; 3. Parameter verification failed. |
+| [14800000](../../apis-basic-services-kit/errorcode-settings.md#14800000-参数检查失败) | Inner error. |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed, application which is not a system application uses system API. |
+| [14800015](../errorcode-data-rdb.md#14800015-数据库没有响应) | The database does not respond.<br>**适用版本：** 12+ |
+| [14800014](../errorcode-data-rdb.md#14800014-目标实例已关闭) | The target instance is already closed.<br>**适用版本：** 12+ |
 
 ## query
 
@@ -411,11 +405,11 @@ query(
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; 3. Parameter verification failed. |
-| 14800000 | Inner error. |
-| 202 | Permission verification failed, application which is not a system application uses system API. |
-| 14800015 | The database does not respond.<br>**适用版本：** 12+ |
-| 14800014 | The target instance is already closed.<br>**适用版本：** 12+ |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; 3. Parameter verification failed. |
+| [14800000](../../apis-basic-services-kit/errorcode-settings.md#14800000-参数检查失败) | Inner error. |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed, application which is not a system application uses system API. |
+| [14800015](../errorcode-data-rdb.md#14800015-数据库没有响应) | The database does not respond.<br>**适用版本：** 12+ |
+| [14800014](../errorcode-data-rdb.md#14800014-目标实例已关闭) | The target instance is already closed.<br>**适用版本：** 12+ |
 
 ## query
 
@@ -460,11 +454,11 @@ query(
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; 3. Parameter verification failed. |
-| 14800000 | Inner error. |
-| 202 | Permission verification failed, application which is not a system application uses system API. |
-| 14800015 | The database does not respond.<br>**适用版本：** 12+ |
-| 14800014 | The target instance is already closed.<br>**适用版本：** 12+ |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; 3. Parameter verification failed. |
+| [14800000](../../apis-basic-services-kit/errorcode-settings.md#14800000-参数检查失败) | Inner error. |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed, application which is not a system application uses system API. |
+| [14800015](../errorcode-data-rdb.md#14800015-数据库没有响应) | The database does not respond.<br>**适用版本：** 12+ |
+| [14800014](../errorcode-data-rdb.md#14800014-目标实例已关闭) | The target instance is already closed.<br>**适用版本：** 12+ |
 
 ## querySharingResource
 
@@ -488,7 +482,7 @@ querySharingResource(predicates: RdbPredicates, columns?: Array<string>): Promis
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| predicates | [RdbPredicates](arkts-arkdata-relationalstore-rdbpredicates-c.md) | 是 | 表示查询的谓词条件。 |
+| predicates | [RdbPredicates](arkts-arkdata-rdb-rdbpredicates-c.md) | 是 | 表示查询的谓词条件。 |
 | columns | Array&lt;string&gt; | 否 | 表示要查找的列字段名。此参数不填时，返回的结果集中只包含共享资源标识字段。 |
 
 **返回值：**
@@ -501,26 +495,26 @@ querySharingResource(predicates: RdbPredicates, columns?: Array<string>): Promis
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 14800033 | SQLite: Data type mismatch.<br>**适用版本：** 12+ |
-| 801 | Capability not supported. |
-| 14800000 | Inner error. |
-| 14800032 | SQLite: Abort due to constraint violation.<br>**适用版本：** 12+ |
-| 14800034 | SQLite: Library used incorrectly.<br>**适用版本：** 12+ |
-| 14800011 | The current operation failed because the database is corrupted.<br>**适用版本：** 12+ |
-| 14800015 | The database does not respond.<br>**适用版本：** 12+ |
-| 14800014 | The target instance is already closed.<br>**适用版本：** 12+ |
-| 401 | Parameter error. Possible causes: 1. Need 1 - 3 parameter(s)! 2. The RdbStore must be not nullptr. 3. The predicates must be an RdbPredicates. 4. The columns must be a string array. |
-| 14800021 | SQLite: Generic error.<br>**适用版本：** 12+ |
-| 14800023 | SQLite: Access permission denied.<br>**适用版本：** 12+ |
-| 14800022 | SQLite: Callback routine requested an abort.<br>**适用版本：** 12+ |
-| 14800025 | SQLite: A table in the database is locked.<br>**适用版本：** 12+ |
-| 14800024 | SQLite: The database file is locked.<br>**适用版本：** 12+ |
-| 14800027 | SQLite: Attempt to write a readonly database.<br>**适用版本：** 12+ |
-| 14800026 | SQLite: The database is out of memory.<br>**适用版本：** 12+ |
-| 14800029 | SQLite: The database is full.<br>**适用版本：** 12+ |
-| 14800028 | SQLite: Some kind of disk I/O error occurred.<br>**适用版本：** 12+ |
-| 14800031 | SQLite: TEXT or BLOB exceeds size limit.<br>**适用版本：** 12+ |
-| 14800030 | SQLite: Unable to open the database file.<br>**适用版本：** 12+ |
+| [14800033](../errorcode-data-rdb.md#14800033-sqlite数据类型不匹配) | SQLite: Data type mismatch.<br>**适用版本：** 12+ |
+| [801](../../errorcode-universal.md#801-该设备不支持此api) | Capability not supported. |
+| [14800000](../../apis-basic-services-kit/errorcode-settings.md#14800000-参数检查失败) | Inner error. |
+| [14800032](../errorcode-data-rdb.md#14800032-sqlite由于违反约束而中止) | SQLite: Abort due to constraint violation.<br>**适用版本：** 12+ |
+| [14800034](../errorcode-data-rdb.md#14800034-sqlite库使用不正确) | SQLite: Library used incorrectly.<br>**适用版本：** 12+ |
+| [14800011](../errorcode-data-rdb.md#14800011-数据库文件异常) | The current operation failed because the database is corrupted.<br>**适用版本：** 12+ |
+| [14800015](../errorcode-data-rdb.md#14800015-数据库没有响应) | The database does not respond.<br>**适用版本：** 12+ |
+| [14800014](../errorcode-data-rdb.md#14800014-目标实例已关闭) | The target instance is already closed.<br>**适用版本：** 12+ |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1. Need 1 - 3 parameter(s)! 2. The RdbStore must be not nullptr. 3. The predicates must be an RdbPredicates. 4. The columns must be a string array. |
+| [14800021](../errorcode-data-rdb.md#14800021-sqlite通用错误) | SQLite: Generic error.<br>**适用版本：** 12+ |
+| [14800023](../errorcode-data-rdb.md#14800023-sqlite访问权限被拒绝) | SQLite: Access permission denied.<br>**适用版本：** 12+ |
+| [14800022](../errorcode-data-rdb.md#14800022-sqlite异步回调请求被中止) | SQLite: Callback routine requested an abort.<br>**适用版本：** 12+ |
+| [14800025](../errorcode-data-rdb.md#14800025-sqlite数据库中的表被锁定) | SQLite: A table in the database is locked.<br>**适用版本：** 12+ |
+| [14800024](../errorcode-data-rdb.md#14800024-sqlite数据库文件已锁定) | SQLite: The database file is locked.<br>**适用版本：** 12+ |
+| [14800027](../errorcode-data-rdb.md#14800027-sqlite尝试写入只读数据库) | SQLite: Attempt to write a readonly database.<br>**适用版本：** 12+ |
+| [14800026](../errorcode-data-rdb.md#14800026-sqlite数据库内存不足) | SQLite: The database is out of memory.<br>**适用版本：** 12+ |
+| [14800029](../errorcode-data-rdb.md#14800029-sqlite数据库已满) | SQLite: The database is full.<br>**适用版本：** 12+ |
+| [14800028](../errorcode-data-rdb.md#14800028-sqlite发生了某种磁盘io错误) | SQLite: Some kind of disk I/O error occurred.<br>**适用版本：** 12+ |
+| [14800031](../errorcode-data-rdb.md#14800031-sqlitetext或blob超出大小限制) | SQLite: TEXT or BLOB exceeds size limit.<br>**适用版本：** 12+ |
+| [14800030](../errorcode-data-rdb.md#14800030-sqlite无法打开数据库文件) | SQLite: Unable to open the database file.<br>**适用版本：** 12+ |
 
 ## querySharingResource
 
@@ -544,33 +538,33 @@ querySharingResource(predicates: RdbPredicates, callback: AsyncCallback<ResultSe
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| predicates | [RdbPredicates](arkts-arkdata-relationalstore-rdbpredicates-c.md) | 是 | 表示查询的谓词条件。 |
+| predicates | [RdbPredicates](arkts-arkdata-rdb-rdbpredicates-c.md) | 是 | 表示查询的谓词条件。 |
 | callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;ResultSet&gt; | 是 | 回调函数。返回查询的结果集。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 14800033 | SQLite: Data type mismatch.<br>**适用版本：** 12+ |
-| 801 | Capability not supported. |
-| 14800000 | Inner error. |
-| 14800032 | SQLite: Abort due to constraint violation.<br>**适用版本：** 12+ |
-| 14800034 | SQLite: Library used incorrectly.<br>**适用版本：** 12+ |
-| 14800011 | The current operation failed because the database is corrupted.<br>**适用版本：** 12+ |
-| 14800015 | The database does not respond.<br>**适用版本：** 12+ |
-| 14800014 | The target instance is already closed.<br>**适用版本：** 12+ |
-| 401 | Parameter error. Possible causes: 1. Need 1 - 3 parameter(s)! 2. The RdbStore must be not nullptr. 3. The predicates must be an RdbPredicates. |
-| 14800021 | SQLite: Generic error.<br>**适用版本：** 12+ |
-| 14800023 | SQLite: Access permission denied.<br>**适用版本：** 12+ |
-| 14800022 | SQLite: Callback routine requested an abort.<br>**适用版本：** 12+ |
-| 14800025 | SQLite: A table in the database is locked.<br>**适用版本：** 12+ |
-| 14800024 | SQLite: The database file is locked.<br>**适用版本：** 12+ |
-| 14800027 | SQLite: Attempt to write a readonly database.<br>**适用版本：** 12+ |
-| 14800026 | SQLite: The database is out of memory.<br>**适用版本：** 12+ |
-| 14800029 | SQLite: The database is full.<br>**适用版本：** 12+ |
-| 14800028 | SQLite: Some kind of disk I/O error occurred.<br>**适用版本：** 12+ |
-| 14800031 | SQLite: TEXT or BLOB exceeds size limit.<br>**适用版本：** 12+ |
-| 14800030 | SQLite: Unable to open the database file.<br>**适用版本：** 12+ |
+| [14800033](../errorcode-data-rdb.md#14800033-sqlite数据类型不匹配) | SQLite: Data type mismatch.<br>**适用版本：** 12+ |
+| [801](../../errorcode-universal.md#801-该设备不支持此api) | Capability not supported. |
+| [14800000](../../apis-basic-services-kit/errorcode-settings.md#14800000-参数检查失败) | Inner error. |
+| [14800032](../errorcode-data-rdb.md#14800032-sqlite由于违反约束而中止) | SQLite: Abort due to constraint violation.<br>**适用版本：** 12+ |
+| [14800034](../errorcode-data-rdb.md#14800034-sqlite库使用不正确) | SQLite: Library used incorrectly.<br>**适用版本：** 12+ |
+| [14800011](../errorcode-data-rdb.md#14800011-数据库文件异常) | The current operation failed because the database is corrupted.<br>**适用版本：** 12+ |
+| [14800015](../errorcode-data-rdb.md#14800015-数据库没有响应) | The database does not respond.<br>**适用版本：** 12+ |
+| [14800014](../errorcode-data-rdb.md#14800014-目标实例已关闭) | The target instance is already closed.<br>**适用版本：** 12+ |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1. Need 1 - 3 parameter(s)! 2. The RdbStore must be not nullptr. 3. The predicates must be an RdbPredicates. |
+| [14800021](../errorcode-data-rdb.md#14800021-sqlite通用错误) | SQLite: Generic error.<br>**适用版本：** 12+ |
+| [14800023](../errorcode-data-rdb.md#14800023-sqlite访问权限被拒绝) | SQLite: Access permission denied.<br>**适用版本：** 12+ |
+| [14800022](../errorcode-data-rdb.md#14800022-sqlite异步回调请求被中止) | SQLite: Callback routine requested an abort.<br>**适用版本：** 12+ |
+| [14800025](../errorcode-data-rdb.md#14800025-sqlite数据库中的表被锁定) | SQLite: A table in the database is locked.<br>**适用版本：** 12+ |
+| [14800024](../errorcode-data-rdb.md#14800024-sqlite数据库文件已锁定) | SQLite: The database file is locked.<br>**适用版本：** 12+ |
+| [14800027](../errorcode-data-rdb.md#14800027-sqlite尝试写入只读数据库) | SQLite: Attempt to write a readonly database.<br>**适用版本：** 12+ |
+| [14800026](../errorcode-data-rdb.md#14800026-sqlite数据库内存不足) | SQLite: The database is out of memory.<br>**适用版本：** 12+ |
+| [14800029](../errorcode-data-rdb.md#14800029-sqlite数据库已满) | SQLite: The database is full.<br>**适用版本：** 12+ |
+| [14800028](../errorcode-data-rdb.md#14800028-sqlite发生了某种磁盘io错误) | SQLite: Some kind of disk I/O error occurred.<br>**适用版本：** 12+ |
+| [14800031](../errorcode-data-rdb.md#14800031-sqlitetext或blob超出大小限制) | SQLite: TEXT or BLOB exceeds size limit.<br>**适用版本：** 12+ |
+| [14800030](../errorcode-data-rdb.md#14800030-sqlite无法打开数据库文件) | SQLite: Unable to open the database file.<br>**适用版本：** 12+ |
 
 ## querySharingResource
 
@@ -594,7 +588,7 @@ querySharingResource(predicates: RdbPredicates, columns: Array<string>, callback
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| predicates | [RdbPredicates](arkts-arkdata-relationalstore-rdbpredicates-c.md) | 是 | 表示查询的谓词条件。 |
+| predicates | [RdbPredicates](arkts-arkdata-rdb-rdbpredicates-c.md) | 是 | 表示查询的谓词条件。 |
 | columns | Array&lt;string&gt; | 是 | 表示要查找的列字段名。 |
 | callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;ResultSet&gt; | 是 | 回调函数。返回查询的结果集。 |
 
@@ -602,26 +596,26 @@ querySharingResource(predicates: RdbPredicates, columns: Array<string>, callback
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 14800033 | SQLite: Data type mismatch.<br>**适用版本：** 12+ |
-| 801 | Capability not supported. |
-| 14800000 | Inner error. |
-| 14800032 | SQLite: Abort due to constraint violation.<br>**适用版本：** 12+ |
-| 14800034 | SQLite: Library used incorrectly.<br>**适用版本：** 12+ |
-| 14800011 | The current operation failed because the database is corrupted.<br>**适用版本：** 12+ |
-| 14800015 | The database does not respond.<br>**适用版本：** 12+ |
-| 14800014 | The target instance is already closed.<br>**适用版本：** 12+ |
-| 401 | Parameter error. Possible causes: 1. Need 1 - 3 parameter(s)! 2. The RdbStore must be not nullptr. 3. The predicates must be an RdbPredicates. 4. The columns must be a string array. |
-| 14800021 | SQLite: Generic error.<br>**适用版本：** 12+ |
-| 14800023 | SQLite: Access permission denied.<br>**适用版本：** 12+ |
-| 14800022 | SQLite: Callback routine requested an abort.<br>**适用版本：** 12+ |
-| 14800025 | SQLite: A table in the database is locked.<br>**适用版本：** 12+ |
-| 14800024 | SQLite: The database file is locked.<br>**适用版本：** 12+ |
-| 14800027 | SQLite: Attempt to write a readonly database.<br>**适用版本：** 12+ |
-| 14800026 | SQLite: The database is out of memory.<br>**适用版本：** 12+ |
-| 14800029 | SQLite: The database is full.<br>**适用版本：** 12+ |
-| 14800028 | SQLite: Some kind of disk I/O error occurred.<br>**适用版本：** 12+ |
-| 14800031 | SQLite: TEXT or BLOB exceeds size limit.<br>**适用版本：** 12+ |
-| 14800030 | SQLite: Unable to open the database file.<br>**适用版本：** 12+ |
+| [14800033](../errorcode-data-rdb.md#14800033-sqlite数据类型不匹配) | SQLite: Data type mismatch.<br>**适用版本：** 12+ |
+| [801](../../errorcode-universal.md#801-该设备不支持此api) | Capability not supported. |
+| [14800000](../../apis-basic-services-kit/errorcode-settings.md#14800000-参数检查失败) | Inner error. |
+| [14800032](../errorcode-data-rdb.md#14800032-sqlite由于违反约束而中止) | SQLite: Abort due to constraint violation.<br>**适用版本：** 12+ |
+| [14800034](../errorcode-data-rdb.md#14800034-sqlite库使用不正确) | SQLite: Library used incorrectly.<br>**适用版本：** 12+ |
+| [14800011](../errorcode-data-rdb.md#14800011-数据库文件异常) | The current operation failed because the database is corrupted.<br>**适用版本：** 12+ |
+| [14800015](../errorcode-data-rdb.md#14800015-数据库没有响应) | The database does not respond.<br>**适用版本：** 12+ |
+| [14800014](../errorcode-data-rdb.md#14800014-目标实例已关闭) | The target instance is already closed.<br>**适用版本：** 12+ |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1. Need 1 - 3 parameter(s)! 2. The RdbStore must be not nullptr. 3. The predicates must be an RdbPredicates. 4. The columns must be a string array. |
+| [14800021](../errorcode-data-rdb.md#14800021-sqlite通用错误) | SQLite: Generic error.<br>**适用版本：** 12+ |
+| [14800023](../errorcode-data-rdb.md#14800023-sqlite访问权限被拒绝) | SQLite: Access permission denied.<br>**适用版本：** 12+ |
+| [14800022](../errorcode-data-rdb.md#14800022-sqlite异步回调请求被中止) | SQLite: Callback routine requested an abort.<br>**适用版本：** 12+ |
+| [14800025](../errorcode-data-rdb.md#14800025-sqlite数据库中的表被锁定) | SQLite: A table in the database is locked.<br>**适用版本：** 12+ |
+| [14800024](../errorcode-data-rdb.md#14800024-sqlite数据库文件已锁定) | SQLite: The database file is locked.<br>**适用版本：** 12+ |
+| [14800027](../errorcode-data-rdb.md#14800027-sqlite尝试写入只读数据库) | SQLite: Attempt to write a readonly database.<br>**适用版本：** 12+ |
+| [14800026](../errorcode-data-rdb.md#14800026-sqlite数据库内存不足) | SQLite: The database is out of memory.<br>**适用版本：** 12+ |
+| [14800029](../errorcode-data-rdb.md#14800029-sqlite数据库已满) | SQLite: The database is full.<br>**适用版本：** 12+ |
+| [14800028](../errorcode-data-rdb.md#14800028-sqlite发生了某种磁盘io错误) | SQLite: Some kind of disk I/O error occurred.<br>**适用版本：** 12+ |
+| [14800031](../errorcode-data-rdb.md#14800031-sqlitetext或blob超出大小限制) | SQLite: TEXT or BLOB exceeds size limit.<br>**适用版本：** 12+ |
+| [14800030](../errorcode-data-rdb.md#14800030-sqlite无法打开数据库文件) | SQLite: Unable to open the database file.<br>**适用版本：** 12+ |
 
 ## restore
 
@@ -651,26 +645,26 @@ restore(): Promise<void>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 14800033 | SQLite: Data type mismatch. |
-| 14800000 | Inner error. |
-| 14800032 | SQLite: Abort due to constraint violation. |
-| 14800034 | SQLite: Library used incorrectly. |
-| 202 | Permission verification failed, application which is not a system application uses system API. |
-| 14800011 | The current operation failed because the database is corrupted. |
-| 14800010 | Failed to open or delete the database by an invalid database path. |
-| 14800015 | The database does not respond. |
-| 14800014 | The target instance is already closed. |
-| 14800021 | SQLite: Generic error. |
-| 14800023 | SQLite: Access permission denied. |
-| 14800022 | SQLite: Callback routine requested an abort. |
-| 14800025 | SQLite: A table in the database is locked. |
-| 14800024 | SQLite: The database file is locked. |
-| 14800027 | SQLite: Attempt to write a readonly database. |
-| 14800026 | SQLite: The database is out of memory. |
-| 14800029 | SQLite: The database is full. |
-| 14800028 | SQLite: Some kind of disk I/O error occurred. |
-| 14800031 | SQLite: TEXT or BLOB exceeds size limit. |
-| 14800030 | SQLite: Unable to open the database file. |
+| [14800033](../errorcode-data-rdb.md#14800033-sqlite数据类型不匹配) | SQLite: Data type mismatch. |
+| [14800000](../../apis-basic-services-kit/errorcode-settings.md#14800000-参数检查失败) | Inner error. |
+| [14800032](../errorcode-data-rdb.md#14800032-sqlite由于违反约束而中止) | SQLite: Abort due to constraint violation. |
+| [14800034](../errorcode-data-rdb.md#14800034-sqlite库使用不正确) | SQLite: Library used incorrectly. |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed, application which is not a system application uses system API. |
+| [14800011](../errorcode-data-rdb.md#14800011-数据库文件异常) | The current operation failed because the database is corrupted. |
+| [14800010](../../apis-basic-services-kit/errorcode-settings.md#14800010-上下文参数不是uiability类型) | Failed to open or delete the database by an invalid database path. |
+| [14800015](../errorcode-data-rdb.md#14800015-数据库没有响应) | The database does not respond. |
+| [14800014](../errorcode-data-rdb.md#14800014-目标实例已关闭) | The target instance is already closed. |
+| [14800021](../errorcode-data-rdb.md#14800021-sqlite通用错误) | SQLite: Generic error. |
+| [14800023](../errorcode-data-rdb.md#14800023-sqlite访问权限被拒绝) | SQLite: Access permission denied. |
+| [14800022](../errorcode-data-rdb.md#14800022-sqlite异步回调请求被中止) | SQLite: Callback routine requested an abort. |
+| [14800025](../errorcode-data-rdb.md#14800025-sqlite数据库中的表被锁定) | SQLite: A table in the database is locked. |
+| [14800024](../errorcode-data-rdb.md#14800024-sqlite数据库文件已锁定) | SQLite: The database file is locked. |
+| [14800027](../errorcode-data-rdb.md#14800027-sqlite尝试写入只读数据库) | SQLite: Attempt to write a readonly database. |
+| [14800026](../errorcode-data-rdb.md#14800026-sqlite数据库内存不足) | SQLite: The database is out of memory. |
+| [14800029](../errorcode-data-rdb.md#14800029-sqlite数据库已满) | SQLite: The database is full. |
+| [14800028](../errorcode-data-rdb.md#14800028-sqlite发生了某种磁盘io错误) | SQLite: Some kind of disk I/O error occurred. |
+| [14800031](../errorcode-data-rdb.md#14800031-sqlitetext或blob超出大小限制) | SQLite: TEXT or BLOB exceeds size limit. |
+| [14800030](../errorcode-data-rdb.md#14800030-sqlite无法打开数据库文件) | SQLite: Unable to open the database file. |
 
 ## retainDeviceData
 
@@ -710,7 +704,7 @@ retainDeviceData(retainDevices?: Record<string, Array<string>>): Promise<void>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| retainDevices | [Record](../../apis-default/arkts-apis/arkts-record-t.md)&lt;string, Array&lt;string&gt;&gt; | 否 | 指定要保留的分布式数据库表名和对应的设备id，无默认值，不传入则删除当前数据库中所有单版本分布式表中全量同步 数据。 |
+| retainDevices | Record&lt;string, Array&lt;string&gt;&gt; | 否 | 指定要保留的分布式数据库表名和对应的设备id，无默认值，不传入则删除当前数据库中所有单版本分布式表中全量同步 数据。 |
 
 **返回值：**
 
@@ -722,14 +716,14 @@ retainDeviceData(retainDevices?: Record<string, Array<string>>): Promise<void>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 14800001 | Invalid arguments. Possible causes: 1. Parameter is out of valid range. |
-| 14800021 | SQLite: Generic error. |
-| 14800024 | SQLite: The database file is locked. |
-| 202 | Permission verification failed, application which is not a system application uses system API. |
-| 14800011 | The current operation failed because the database is corrupted. |
+| [14800001](../errorcode-data-rdb.md#14800001-无效的参数) | Invalid arguments. Possible causes: 1. Parameter is out of valid range. |
+| [14800021](../errorcode-data-rdb.md#14800021-sqlite通用错误) | SQLite: Generic error. |
+| [14800024](../errorcode-data-rdb.md#14800024-sqlite数据库文件已锁定) | SQLite: The database file is locked. |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed, application which is not a system application uses system API. |
+| [14800011](../errorcode-data-rdb.md#14800011-数据库文件异常) | The current operation failed because the database is corrupted. |
 | 14800043 | The database does not support this scenario. Possible causes: 1. The database type is not supported;2. The table type is not supported; 3. This is a read-only database. |
 | 14800042 | The database does not exist. Possible causes: 1. The database is deleted; &lt;br&gt;2. The database is not created. |
-| 14800014 | The RdbStore or ResultSet is already closed. |
+| [14800014](../errorcode-data-rdb.md#14800014-目标实例已关闭) | The RdbStore or ResultSet is already closed. |
 
 ## unlockCloudContainer
 
@@ -759,7 +753,7 @@ unlockCloudContainer(): Promise<void>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 202 | Permission verification failed, application which is not a system application uses system API. |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed, application which is not a system application uses system API. |
 
 ## update
 
@@ -813,27 +807,27 @@ update(
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 14800033 | SQLite: Data type mismatch.<br>**适用版本：** 12+ |
-| 14800000 | Inner error. |
-| 14800032 | SQLite: Abort due to constraint violation.<br>**适用版本：** 12+ |
-| 14800034 | SQLite: Library used incorrectly.<br>**适用版本：** 12+ |
-| 202 | Permission verification failed, application which is not a system application uses system API. |
-| 14800011 | The current operation failed because the database is corrupted.<br>**适用版本：** 12+ |
-| 14800047 | The WAL file size exceeds the default limit.<br>**适用版本：** 10+ |
-| 14800015 | The database does not respond.<br>**适用版本：** 12+ |
-| 14800014 | The target instance is already closed.<br>**适用版本：** 12+ |
-| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; 3. Parameter verification failed. |
-| 14800021 | SQLite: Generic error. Possible causes: Insert failed or the updated data does not exist.<br>**适用版本：** 12+ |
-| 14800023 | SQLite: Access permission denied.<br>**适用版本：** 12+ |
-| 14800022 | SQLite: Callback routine requested an abort.<br>**适用版本：** 12+ |
-| 14800025 | SQLite: A table in the database is locked.<br>**适用版本：** 12+ |
-| 14800024 | SQLite: The database file is locked.<br>**适用版本：** 12+ |
-| 14800027 | SQLite: Attempt to write a readonly database.<br>**适用版本：** 12+ |
-| 14800026 | SQLite: The database is out of memory.<br>**适用版本：** 12+ |
-| 14800029 | SQLite: The database is full.<br>**适用版本：** 12+ |
-| 14800028 | SQLite: Some kind of disk I/O error occurred.<br>**适用版本：** 12+ |
-| 14800031 | SQLite: TEXT or BLOB exceeds size limit.<br>**适用版本：** 12+ |
-| 14800030 | SQLite: Unable to open the database file.<br>**适用版本：** 12+ |
+| [14800033](../errorcode-data-rdb.md#14800033-sqlite数据类型不匹配) | SQLite: Data type mismatch.<br>**适用版本：** 12+ |
+| [14800000](../../apis-basic-services-kit/errorcode-settings.md#14800000-参数检查失败) | Inner error. |
+| [14800032](../errorcode-data-rdb.md#14800032-sqlite由于违反约束而中止) | SQLite: Abort due to constraint violation.<br>**适用版本：** 12+ |
+| [14800034](../errorcode-data-rdb.md#14800034-sqlite库使用不正确) | SQLite: Library used incorrectly.<br>**适用版本：** 12+ |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed, application which is not a system application uses system API. |
+| [14800011](../errorcode-data-rdb.md#14800011-数据库文件异常) | The current operation failed because the database is corrupted.<br>**适用版本：** 12+ |
+| [14800047](../errorcode-data-rdb.md#14800047-wal文件大小超过默认上限) | The WAL file size exceeds the default limit.<br>**适用版本：** 10+ |
+| [14800015](../errorcode-data-rdb.md#14800015-数据库没有响应) | The database does not respond.<br>**适用版本：** 12+ |
+| [14800014](../errorcode-data-rdb.md#14800014-目标实例已关闭) | The target instance is already closed.<br>**适用版本：** 12+ |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; 3. Parameter verification failed. |
+| [14800021](../errorcode-data-rdb.md#14800021-sqlite通用错误) | SQLite: Generic error. Possible causes: Insert failed or the updated data does not exist.<br>**适用版本：** 12+ |
+| [14800023](../errorcode-data-rdb.md#14800023-sqlite访问权限被拒绝) | SQLite: Access permission denied.<br>**适用版本：** 12+ |
+| [14800022](../errorcode-data-rdb.md#14800022-sqlite异步回调请求被中止) | SQLite: Callback routine requested an abort.<br>**适用版本：** 12+ |
+| [14800025](../errorcode-data-rdb.md#14800025-sqlite数据库中的表被锁定) | SQLite: A table in the database is locked.<br>**适用版本：** 12+ |
+| [14800024](../errorcode-data-rdb.md#14800024-sqlite数据库文件已锁定) | SQLite: The database file is locked.<br>**适用版本：** 12+ |
+| [14800027](../errorcode-data-rdb.md#14800027-sqlite尝试写入只读数据库) | SQLite: Attempt to write a readonly database.<br>**适用版本：** 12+ |
+| [14800026](../errorcode-data-rdb.md#14800026-sqlite数据库内存不足) | SQLite: The database is out of memory.<br>**适用版本：** 12+ |
+| [14800029](../errorcode-data-rdb.md#14800029-sqlite数据库已满) | SQLite: The database is full.<br>**适用版本：** 12+ |
+| [14800028](../errorcode-data-rdb.md#14800028-sqlite发生了某种磁盘io错误) | SQLite: Some kind of disk I/O error occurred.<br>**适用版本：** 12+ |
+| [14800031](../errorcode-data-rdb.md#14800031-sqlitetext或blob超出大小限制) | SQLite: TEXT or BLOB exceeds size limit.<br>**适用版本：** 12+ |
+| [14800030](../errorcode-data-rdb.md#14800030-sqlite无法打开数据库文件) | SQLite: Unable to open the database file.<br>**适用版本：** 12+ |
 
 ## update
 
@@ -882,27 +876,27 @@ update(table: string, values: ValuesBucket, predicates: dataSharePredicates.Data
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 14800033 | SQLite: Data type mismatch.<br>**适用版本：** 12+ |
-| 14800000 | Inner error. |
-| 14800032 | SQLite: Abort due to constraint violation.<br>**适用版本：** 12+ |
-| 14800034 | SQLite: Library used incorrectly.<br>**适用版本：** 12+ |
-| 202 | Permission verification failed, application which is not a system application uses system API. |
-| 14800011 | The current operation failed because the database is corrupted.<br>**适用版本：** 12+ |
-| 14800047 | The WAL file size exceeds the default limit.<br>**适用版本：** 10+ |
-| 14800015 | The database does not respond.<br>**适用版本：** 12+ |
-| 14800014 | The target instance is already closed.<br>**适用版本：** 12+ |
-| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; 3. Parameter verification failed. |
-| 14800021 | SQLite: Generic error. Possible causes: Insert failed or the updated data does not exist.<br>**适用版本：** 12+ |
-| 14800023 | SQLite: Access permission denied.<br>**适用版本：** 12+ |
-| 14800022 | SQLite: Callback routine requested an abort.<br>**适用版本：** 12+ |
-| 14800025 | SQLite: A table in the database is locked.<br>**适用版本：** 12+ |
-| 14800024 | SQLite: The database file is locked.<br>**适用版本：** 12+ |
-| 14800027 | SQLite: Attempt to write a readonly database.<br>**适用版本：** 12+ |
-| 14800026 | SQLite: The database is out of memory.<br>**适用版本：** 12+ |
-| 14800029 | SQLite: The database is full.<br>**适用版本：** 12+ |
-| 14800028 | SQLite: Some kind of disk I/O error occurred.<br>**适用版本：** 12+ |
-| 14800031 | SQLite: TEXT or BLOB exceeds size limit.<br>**适用版本：** 12+ |
-| 14800030 | SQLite: Unable to open the database file.<br>**适用版本：** 12+ |
+| [14800033](../errorcode-data-rdb.md#14800033-sqlite数据类型不匹配) | SQLite: Data type mismatch.<br>**适用版本：** 12+ |
+| [14800000](../../apis-basic-services-kit/errorcode-settings.md#14800000-参数检查失败) | Inner error. |
+| [14800032](../errorcode-data-rdb.md#14800032-sqlite由于违反约束而中止) | SQLite: Abort due to constraint violation.<br>**适用版本：** 12+ |
+| [14800034](../errorcode-data-rdb.md#14800034-sqlite库使用不正确) | SQLite: Library used incorrectly.<br>**适用版本：** 12+ |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed, application which is not a system application uses system API. |
+| [14800011](../errorcode-data-rdb.md#14800011-数据库文件异常) | The current operation failed because the database is corrupted.<br>**适用版本：** 12+ |
+| [14800047](../errorcode-data-rdb.md#14800047-wal文件大小超过默认上限) | The WAL file size exceeds the default limit.<br>**适用版本：** 10+ |
+| [14800015](../errorcode-data-rdb.md#14800015-数据库没有响应) | The database does not respond.<br>**适用版本：** 12+ |
+| [14800014](../errorcode-data-rdb.md#14800014-目标实例已关闭) | The target instance is already closed.<br>**适用版本：** 12+ |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; 3. Parameter verification failed. |
+| [14800021](../errorcode-data-rdb.md#14800021-sqlite通用错误) | SQLite: Generic error. Possible causes: Insert failed or the updated data does not exist.<br>**适用版本：** 12+ |
+| [14800023](../errorcode-data-rdb.md#14800023-sqlite访问权限被拒绝) | SQLite: Access permission denied.<br>**适用版本：** 12+ |
+| [14800022](../errorcode-data-rdb.md#14800022-sqlite异步回调请求被中止) | SQLite: Callback routine requested an abort.<br>**适用版本：** 12+ |
+| [14800025](../errorcode-data-rdb.md#14800025-sqlite数据库中的表被锁定) | SQLite: A table in the database is locked.<br>**适用版本：** 12+ |
+| [14800024](../errorcode-data-rdb.md#14800024-sqlite数据库文件已锁定) | SQLite: The database file is locked.<br>**适用版本：** 12+ |
+| [14800027](../errorcode-data-rdb.md#14800027-sqlite尝试写入只读数据库) | SQLite: Attempt to write a readonly database.<br>**适用版本：** 12+ |
+| [14800026](../errorcode-data-rdb.md#14800026-sqlite数据库内存不足) | SQLite: The database is out of memory.<br>**适用版本：** 12+ |
+| [14800029](../errorcode-data-rdb.md#14800029-sqlite数据库已满) | SQLite: The database is full.<br>**适用版本：** 12+ |
+| [14800028](../errorcode-data-rdb.md#14800028-sqlite发生了某种磁盘io错误) | SQLite: Some kind of disk I/O error occurred.<br>**适用版本：** 12+ |
+| [14800031](../errorcode-data-rdb.md#14800031-sqlitetext或blob超出大小限制) | SQLite: TEXT or BLOB exceeds size limit.<br>**适用版本：** 12+ |
+| [14800030](../errorcode-data-rdb.md#14800030-sqlite无法打开数据库文件) | SQLite: Unable to open the database file.<br>**适用版本：** 12+ |
 
 ## updateDistributedInfo
 
@@ -945,7 +939,7 @@ updateDistributedInfo(info: DistributedInfo, predicates: RdbPredicates): Promise
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | info | [DistributedInfo](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-distributedaccount-distributedinfo-i.md) | 是 | 指定要更新的分布式表的日志信息。 |
-| predicates | [RdbPredicates](arkts-arkdata-relationalstore-rdbpredicates-c.md) | 是 | RdbPredicates的实例对象指定的查询条件。 |
+| predicates | [RdbPredicates](arkts-arkdata-rdb-rdbpredicates-c.md) | 是 | RdbPredicates的实例对象指定的查询条件。 |
 
 **返回值：**
 
@@ -957,12 +951,12 @@ updateDistributedInfo(info: DistributedInfo, predicates: RdbPredicates): Promise
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 14800001 | Invalid arguments. Possible causes: 1. Parameter is out of valid range. |
-| 14800021 | SQLite: Generic error. |
-| 14800024 | SQLite: The database file is locked. |
-| 202 | Permission verification failed, application which is not a system application uses system API. |
-| 14800011 | The current operation failed because the database is corrupted. |
+| [14800001](../errorcode-data-rdb.md#14800001-无效的参数) | Invalid arguments. Possible causes: 1. Parameter is out of valid range. |
+| [14800021](../errorcode-data-rdb.md#14800021-sqlite通用错误) | SQLite: Generic error. |
+| [14800024](../errorcode-data-rdb.md#14800024-sqlite数据库文件已锁定) | SQLite: The database file is locked. |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed, application which is not a system application uses system API. |
+| [14800011](../errorcode-data-rdb.md#14800011-数据库文件异常) | The current operation failed because the database is corrupted. |
 | 14800043 | The database does not support this scenario. Possible causes: 1. The database type is not supported;2. The table type is not supported; 3. This is a read-only database. |
-| 14800015 | The database does not respond. |
-| 14800014 | The RdbStore or ResultSet is already closed. |
+| [14800015](../errorcode-data-rdb.md#14800015-数据库没有响应) | The database does not respond. |
+| [14800014](../errorcode-data-rdb.md#14800014-目标实例已关闭) | The RdbStore or ResultSet is already closed. |
 

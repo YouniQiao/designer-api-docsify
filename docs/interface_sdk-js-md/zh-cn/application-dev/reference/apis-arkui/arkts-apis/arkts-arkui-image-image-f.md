@@ -32,7 +32,7 @@ Defines the Image component.
 
 | 类型 | 说明 |
 | --- | --- |
-| [ImageAttribute](../arkts-components/arkts-arkui-image-attribute.md) | The attribute of the Image. |
+| [ImageAttribute](arkts-arkui-image-imageattribute-i.md) | The attribute of the Image. |
 
 
 ## Image
@@ -69,7 +69,7 @@ export declare function Image(
 
 | 类型 | 说明 |
 | --- | --- |
-| [ImageAttribute](../arkts-components/arkts-arkui-image-attribute.md) | Image的属性。 |
+| [ImageAttribute](arkts-arkui-image-imageattribute-i.md) | Image的属性。 |
 
 
 ## Image
@@ -104,7 +104,7 @@ export declare function Image(
 
 | 类型 | 说明 |
 | --- | --- |
-| [ImageAttribute](../arkts-components/arkts-arkui-image-attribute.md) | The attribute of the Image. |
+| [ImageAttribute](arkts-arkui-image-imageattribute-i.md) | The attribute of the Image. |
 
 
 ## Image
@@ -137,5 +137,5 @@ export declare function Image(style: CustomBuilderT<ImageAttribute>): ImageAttri
 
 | 类型 | 说明 |
 | --- | --- |
-| [ImageAttribute](../arkts-components/arkts-arkui-image-attribute.md) | Image的属性。 |
+| [ImageAttribute](arkts-arkui-image-imageattribute-i.md) | Image的属性。 |
 

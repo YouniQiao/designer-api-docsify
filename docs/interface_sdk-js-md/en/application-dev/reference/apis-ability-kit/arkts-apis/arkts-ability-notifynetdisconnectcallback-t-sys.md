@@ -4,7 +4,7 @@
 type NotifyNetDisconnectCallback = (deviceId: string, state: int) => void
 ```
 
-断开连接时的回调函数。
+Callback function on network disconnect.
 
 **Since:** 9
 

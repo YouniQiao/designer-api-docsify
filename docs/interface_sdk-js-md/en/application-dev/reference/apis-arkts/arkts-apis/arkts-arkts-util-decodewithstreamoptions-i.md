@@ -1,6 +1,6 @@
 # DecodeWithStreamOptions
 
-定义解码是否跟随数据块。
+Defines whether decoding follows data blocks.
 
 **Since:** 11
 
@@ -22,7 +22,7 @@ import { util } from 'kits/@kit.ArkTS';
 stream?: boolean
 ```
 
-是否允许后续的 **decodeWithStream()** 处理数据块。如果按块处理数据，请将此参数设置为 **true**。如果这是要处理的最后一个数据块或数据未分块，请将此参数设置为 **false**。默认值为 **false**。
+Whether to allow data blocks in subsequent **decodeWithStream()**. If data is processed in blocks, set this parameter to **true**. If this is the last data block to process or data is not divided into blocks, set this parameter to **false**. The default value is **false**.
 
 **Type:** boolean
 

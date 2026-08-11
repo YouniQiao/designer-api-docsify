@@ -13,7 +13,7 @@ function minimizeWindowWithAnimation(windowTarget: WindowAnimationTarget,
     callback: AsyncCallback<WindowAnimationFinishedCallback>): void
 ```
 
-最小化动画目标窗口，并返回动画完成的回调。使用callback异步回调。
+Minimize the window target with animation.
 
 **Since:** 9
 
@@ -29,8 +29,8 @@ function minimizeWindowWithAnimation(windowTarget: WindowAnimationTarget,
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| windowTarget | [WindowAnimationTarget](arkts-arkui-remotewindow-windowanimationtarget-i-sys.md) | Yes | 动画目标窗口。 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;WindowAnimationFinishedCallback&gt; | Yes | 回调函数。当最小化动画目标窗口成功，err为undefined，data为获取到的 WindowAnimationFinishedCallback；否则返回err.code为-1，data为undefined。 |
+| windowTarget | [WindowAnimationTarget](arkts-arkui-remotewindow-windowanimationtarget-i-sys.md) | Yes | The window target to be minimized. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;WindowAnimationFinishedCallback&gt; | Yes | Returns the animation finished callback. |
 
 ## Examples
 
@@ -103,7 +103,7 @@ windowAnimationManager.minimizeWindowWithAnimation(target, (err: BusinessError, 
 function minimizeWindowWithAnimation(windowTarget: WindowAnimationTarget): Promise<WindowAnimationFinishedCallback>
 ```
 
-最小化动画目标窗口，并返回动画完成的回调。使用Promise异步回调。
+Minimize the window target with animation.
 
 **Since:** 9
 
@@ -119,13 +119,13 @@ function minimizeWindowWithAnimation(windowTarget: WindowAnimationTarget): Promi
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| windowTarget | [WindowAnimationTarget](arkts-arkui-remotewindow-windowanimationtarget-i-sys.md) | Yes | 动画目标窗口。 |
+| windowTarget | [WindowAnimationTarget](arkts-arkui-remotewindow-windowanimationtarget-i-sys.md) | Yes |  |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;WindowAnimationFinishedCallback&gt; | Promise对象，返回动画完成的回调。 |
+| Promise&lt;WindowAnimationFinishedCallback&gt; | Promise used to return the animation finished callback. |
 
 ## Examples
 

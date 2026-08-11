@@ -1,11 +1,12 @@
 # ScryptSpec
 
-密钥派生函数参数[KdfSpec](arkts-cryptoarchitecture-cryptoframework-kdfspec-i.md)的子类，作为SCRYPT密钥派生函数进行密钥派生时的输入。
+Defines the child class of [KdfSpec](arkts-cryptoarchitecture-cryptoframework-kdfspec-i.md). It is a parameter for scrypt key derivation function (KDF).
 
-> **说明：**
+> **NOTE：**
 > 
-> passphrase指的是原始密码，如果使用string类型，需要直接传入用于密钥派生的数据，而不是HexString、base64等字符串类型，同时需要确保该
-> 字符串为utf-8编码，否则派生结果会有差异。
+> **passphrase** specifies the original password. If **passphrase** is of the string type, pass in the data used for
+> key derivation rather than a string of the HexString or Base64 type. In addition, the string must be in UTF-8
+> format. Otherwise, the key derived may be different from the one expected.
 
 **Inheritance/Implementation:** ScryptSpec extends [KdfSpec](arkts-cryptoarchitecture-cryptoframework-kdfspec-i.md)
 
@@ -29,7 +30,7 @@ import { cryptoFramework } from 'kits/@kit.CryptoArchitectureKit';
 keySize: int
 ```
 
-派生得到的密钥字节长度，需要为正整数，单位为bytes。
+Length of the derived key, in bytes. The value must be a positive integer.
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
@@ -49,7 +50,7 @@ keySize: int
 maxMemory: long
 ```
 
-最大内存限制参数，需要为正整数，单位为bytes。
+Maximum memory size, in bytes. The value must be a positive integer.
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：long
 
@@ -69,7 +70,7 @@ maxMemory: long
 n: long
 ```
 
-CPU/内存开销参数，需要为正整数。
+CPU/memory cost parameter. The value must be a positive integer.
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：long
 
@@ -89,7 +90,7 @@ CPU/内存开销参数，需要为正整数。
 p: long
 ```
 
-并行化参数，需要为正整数。
+Parallelization parameter. The value must be a positive integer.
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：long
 
@@ -109,7 +110,7 @@ p: long
 passphrase: string | Uint8Array
 ```
 
-用户输入的原始密码。
+Original password entered by the user.
 
 **Type:** string \| Uint8Array
 
@@ -129,7 +130,7 @@ passphrase: string | Uint8Array
 r: long
 ```
 
-块大小参数，需要为正整数。
+Block size. The value must be a positive integer.
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：long
 
@@ -149,7 +150,7 @@ r: long
 salt: Uint8Array
 ```
 
-盐值。
+Salt value.
 
 **Type:** Uint8Array
 

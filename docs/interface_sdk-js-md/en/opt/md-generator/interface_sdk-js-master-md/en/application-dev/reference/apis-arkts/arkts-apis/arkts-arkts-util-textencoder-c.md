@@ -1,0 +1,280 @@
+# TextEncoder
+
+Provides APIs to encode strings into byte arrays. Multiple encoding formats are supported.When **TextEncoder** is used for encoding, the number of bytes occupied by a character varies according to the encoding format. You must explicitly specify the encoding format to obtain the required encoding result.
+
+**Since:** 7
+
+<!--Device-util-class TextEncoder--><!--Device-util-class TextEncoder-End-->
+
+**System capability:** SystemCapability.Utils.Lang
+
+## Modules to Import
+
+```TypeScript
+import { util } from 'kits/@kit.ArkTS';
+```
+
+## constructor
+
+```TypeScript
+constructor()
+```
+
+A constructor used to create a **TextEncoder** object.
+
+**Since:** 7
+
+**Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-TextEncoder-constructor()--><!--Device-TextEncoder-constructor()-End-->
+
+**System capability:** SystemCapability.Utils.Lang
+
+## Examples
+
+```TypeScript
+let textEncoder = new util.TextEncoder();
+```
+
+## constructor
+
+```TypeScript
+constructor(encoding?: string)
+```
+
+A constructor used to create a **TextEncoder** object.
+
+**Since:** 9
+
+**Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-TextEncoder-constructor(encoding?: string)--><!--Device-TextEncoder-constructor(encoding?: string)-End-->
+
+**System capability:** SystemCapability.Utils.Lang
+
+**Parameters:**
+
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| [encoding](#encoding) | string | No |
+
+## Examples
+
+```TypeScript
+let textEncoder = new util.TextEncoder("utf-8");
+```
+
+## create
+
+```TypeScript
+static create(encoding?: string): TextEncoder
+```
+
+Creates a **TextEncoder** object.
+
+**Since:** 12
+
+**Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-TextEncoder-static create(encoding?: string): TextEncoder--><!--Device-TextEncoder-static create(encoding?: string): TextEncoder-End-->
+
+**System capability:** SystemCapability.Utils.Lang
+
+**Parameters:**
+
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| [encoding](#encoding) | string | No |
+
+**Return value:**
+
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| [TextEncoder](arkts-arkts-util-textencoder-c.md) |
+
+## Examples
+
+```TypeScript
+let textEncoder = util.TextEncoder.create("utf-8");
+```
+
+## encode
+
+```TypeScript
+encode(input?: string): Uint8Array
+```
+
+Encodes the input content in to a Uint8Array object.
+
+**Since:** 7
+
+**Deprecated since:** 9
+
+**Substitutes:** ohos.util.encodeInto
+
+<!--Device-TextEncoder-encode(input?: string): Uint8Array--><!--Device-TextEncoder-encode(input?: string): Uint8Array-End-->
+
+**System capability:** SystemCapability.Utils.Lang
+
+**Parameters:**
+
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| input | string | No |
+
+**Return value:**
+
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| Uint8Array |
+
+## Examples
+
+```TypeScript
+let textEncoder = new util.TextEncoder();
+let result = textEncoder.encode("\uD800¥¥");
+console.info("result = " + result);
+// Output: result = 237,160,128,194,165,194,165
+```
+
+## encodeInto
+
+```TypeScript
+encodeInto(input?: string): Uint8Array
+```
+
+Encodes the input content into a Uint8Array object.
+
+**Since:** 9
+
+**Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-TextEncoder-encodeInto(input?: string): Uint8Array--><!--Device-TextEncoder-encodeInto(input?: string): Uint8Array-End-->
+
+**System capability:** SystemCapability.Utils.Lang
+
+**Parameters:**
+
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| input | string | No |
+
+**Return value:**
+
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| Uint8Array |
+
+## Examples
+
+```TypeScript
+let textEncoder = new util.TextEncoder();
+let result = textEncoder.encodeInto("\uD800¥¥");
+console.info("result = " + result);
+// Output: result = 237,160,128,194,165,194,165
+```
+
+## encodeInto
+
+```TypeScript
+encodeInto(input: string, dest: Uint8Array): { read: number; written: number }
+```
+
+Writes the generated UTF-8 encoded text to an array.
+
+**Since:** 7
+
+**Deprecated since:** 9
+
+**Substitutes:** [util.TextEncoder.encodeIntoUint8Array](arkts-arkts-util-textencoder-c.md#encodeintouint8array)
+
+<!--Device-TextEncoder-encodeInto(input: string, dest: Uint8Array): { read: number; written: number }--><!--Device-TextEncoder-encodeInto(input: string, dest: Uint8Array): { read: number; written: number }-End-->
+
+**System capability:** SystemCapability.Utils.Lang
+
+**Parameters:**
+
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| input | string | Yes |
+| dest | Uint8Array | Yes |
+
+**Return value:**
+
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| { read: number; written: number } |
+
+## Examples
+
+```TypeScript
+let textEncoder = new util.TextEncoder();
+let buffer = new ArrayBuffer(4);
+let uint8 = new Uint8Array(buffer);
+let result = textEncoder.encodeInto('abcd', uint8);
+console.info("uint8 = " + uint8);
+// Output: uint8 = 97,98,99,100
+```
+
+## encodeIntoUint8Array
+
+```TypeScript
+encodeIntoUint8Array(input: string, dest: Uint8Array): EncodeIntoUint8ArrayInfo
+```
+
+Encodes the input content and stores the result into a Uint8Array object.
+
+**Since:** 9
+
+**Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-TextEncoder-encodeIntoUint8Array(input: string, dest: Uint8Array): EncodeIntoUint8ArrayInfo--><!--Device-TextEncoder-encodeIntoUint8Array(input: string, dest: Uint8Array): EncodeIntoUint8ArrayInfo-End-->
+
+**System capability:** SystemCapability.Utils.Lang
+
+**Parameters:**
+
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| input | string | Yes |
+| dest | Uint8Array | Yes |
+
+**Return value:**
+
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| object |
+| [EncodeIntoUint8ArrayInfo](arkts-arkts-util-encodeintouint8arrayinfo-i.md) |
+
+## Examples
+
+```TypeScript
+let textEncoder = new util.TextEncoder();
+let buffer = new ArrayBuffer(4);
+let uint8 = new Uint8Array(buffer);
+let result = textEncoder.encodeIntoUint8Array('abcd', uint8);
+console.info("uint8 = " + uint8);
+// Output: uint8 = 97,98,99,100
+console.info("result.read = " + result.read);
+// Output: result.read = 4
+console.info("result.written = " + result.written);
+// Output: result.written = 4
+```
+
+## encoding
+
+```TypeScript
+readonly encoding = 'utf-8'
+```
+
+Encoding format.&lt;br&gt;The following formats are supported: utf-8, gb2312, gb18030, ibm866, iso-8859-1, iso-8859-2,iso-8859-3, iso-8859-4, iso-8859-5, iso-8859-6, iso-8859-7, iso-8859-8, iso-8859-8-i, iso-8859-10, iso-8859-13,iso-8859-14, iso-8859-15, koi8-r, koi8-u, macintosh, windows-874, windows-1250, windows-1251, windows-1252,windows-1253, windows-1254, windows-1255, windows-1256, windows-1257, windows-1258, gbk, big5, euc-jp, iso-2022-jp, shift_jis, euc-kr, x-mac-cyrillic, utf-16be, and utf-16le.&lt;br&gt;The default value is **'utf-8'**.
+
+**Type:** 'utf-8'
+
+**Since:** 7
+
+**Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-TextEncoder-readonly encoding = 'utf-8'--><!--Device-TextEncoder-readonly encoding = 'utf-8'-End-->
+
+**System capability:** SystemCapability.Utils.Lang

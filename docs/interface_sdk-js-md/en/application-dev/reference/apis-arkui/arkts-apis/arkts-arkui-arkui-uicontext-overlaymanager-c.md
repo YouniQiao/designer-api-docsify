@@ -1,17 +1,6 @@
 # OverlayManager
 
-提供绘制浮层的能力。  
-> **说明：**
-> 
-> - 本Class首批接口从API version 12开始支持。
-> - 以下API需先使用UIContext中的[getOverlayManager()](arkts-arkui-arkui-uicontext-uicontext-c.md#getoverlaymanager)方法获取到
-> OverlayManager对象，再通过该对象调用对应方法。
-> 
-> - OverlayManager上节点的层级在Page页面层级之上，在Dialog、Popup、Menu、BindSheet、BindContentCover和Toast等之下。
-> 
-> - OverlayManager上节点安全区域内外的绘制方式与Page一致，键盘避让方式与Page一致。
-> 
-> - 与OverlayManager相关的属性推荐采用AppStorage来进行应用全局存储，以免切换页面后属性值发生变化从而导致业务错误。
+class OverlayManager
 
 **Since:** 23
 
@@ -33,7 +22,7 @@ import { OverlayManager, FrameCallback, ResolvedUIContext, NodeRenderStateChange
 addComponentContent<T>(content: ComponentContent<T>, index?: int): void
 ```
 
-在OverlayManager上新增指定节点。
+Add the ComponentContent to the OverlayManager.
 
 **Since:** 23
 
@@ -49,7 +38,7 @@ addComponentContent<T>(content: ComponentContent<T>, index?: int): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| content | [ComponentContent](../arkts-components/arkts-arkui-componentcontent-t.md)&lt;T&gt; | Yes | 在OverlayManager的指定节点上添加此content。 &lt;br&gt;**说明：** &lt;br/&gt; 新增的节点默认处于页面居中，按层级堆叠。 |
+| content | [ComponentContent](../arkts-components/arkts-arkui-componentcontent-t.md)&lt;T&gt; | Yes | The content will be added to the OverlayManager. |
 | index | int | No |  |
 
 ## addComponentContentWithOrder
@@ -58,7 +47,7 @@ addComponentContent<T>(content: ComponentContent<T>, index?: int): void
 addComponentContentWithOrder<T>(content: ComponentContent<T>, levelOrder?: LevelOrder): void
 ```
 
-创建浮层节点时，指定显示顺序。支持在浮层节点创建时指定显示的顺序。
+Add the ComponentContent to the OverlayManager with order.
 
 **Since:** 23
 
@@ -74,7 +63,7 @@ addComponentContentWithOrder<T>(content: ComponentContent<T>, levelOrder?: Level
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| content | [ComponentContent](../arkts-components/arkts-arkui-componentcontent-t.md)&lt;T&gt; | Yes | 在OverlayManager的指定节点上添加此content。 &lt;br&gt;**说明：** &lt;br/&gt; 新增的节点默认处于页面居中位置，按层级堆叠。 |
+| content | [ComponentContent](../arkts-components/arkts-arkui-componentcontent-t.md)&lt;T&gt; | Yes | The content will be added to the OverlayManager. |
 | levelOrder | [LevelOrder](arkts-arkui-promptaction-levelorder-c.md) | No |  |
 
 ## hideAllComponentContents
@@ -83,7 +72,7 @@ addComponentContentWithOrder<T>(content: ComponentContent<T>, levelOrder?: Level
 hideAllComponentContents(): void
 ```
 
-隐藏OverlayManager上的所有ComponentContent。
+Hide all ComponentContents on the OverlayManager.
 
 **Since:** 23
 
@@ -101,7 +90,7 @@ hideAllComponentContents(): void
 hideComponentContent<T>(content: ComponentContent<T>): void
 ```
 
-隐藏OverlayManager上的指定节点。
+Hide the ComponentContent.
 
 **Since:** 23
 
@@ -117,7 +106,7 @@ hideComponentContent<T>(content: ComponentContent<T>): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| content | [ComponentContent](../arkts-components/arkts-arkui-componentcontent-t.md)&lt;T&gt; | Yes | 在OverlayManager上隐藏此content。 |
+| content | [ComponentContent](../arkts-components/arkts-arkui-componentcontent-t.md)&lt;T&gt; | Yes | The content will be hidden. |
 
 ## openOrderOverlay
 
@@ -125,7 +114,7 @@ hideComponentContent<T>(content: ComponentContent<T>): void
 openOrderOverlay(content: ComponentContent<Object>, options?: OrderOverlayOptions): Promise<void>
 ```
 
-打开具有指定ComponentContent和选项的浮层。
+Opens an overlay with the specified ComponentContent and options.
 
 **Since:** 26.0.0
 
@@ -141,8 +130,8 @@ openOrderOverlay(content: ComponentContent<Object>, options?: OrderOverlayOption
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| content | [ComponentContent](../arkts-components/arkts-arkui-componentcontent-t.md)&lt;Object&gt; | Yes | 该内容将被添加到OverlayManager中。 |
-| options | [OrderOverlayOptions](arkts-arkui-arkui-uicontext-orderoverlayoptions-i.md) | No | Options for the overlay. |
+| content | [ComponentContent](../arkts-components/arkts-arkui-componentcontent-t.md)&lt;Object&gt; | Yes | The content will be added to the OverlayManager. |
+| options | [OrderOverlayOptions](arkts-arkui-arkui-uicontext-orderoverlayoptions-i.md) | No |  |
 
 **Return value:**
 
@@ -154,7 +143,7 @@ openOrderOverlay(content: ComponentContent<Object>, options?: OrderOverlayOption
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 103307 | The overlay cannot be opened due to the system pop-up window. |
+| [103307](../errorcode-promptAction.md#103307-failed-to-open-the-overlay-due-to-a-system-popup-window) | The overlay cannot be opened due to the system pop-up window. |
 
 ## removeComponentContent
 
@@ -162,7 +151,7 @@ openOrderOverlay(content: ComponentContent<Object>, options?: OrderOverlayOption
 removeComponentContent<T>(content: ComponentContent<T>): void
 ```
 
-删除overlay上的指定节点。
+Remove the ComponentContent from the OverlayManager.
 
 **Since:** 23
 
@@ -178,7 +167,7 @@ removeComponentContent<T>(content: ComponentContent<T>): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| content | [ComponentContent](../arkts-components/arkts-arkui-componentcontent-t.md)&lt;T&gt; | Yes | 在OverlayManager上删除此content。 |
+| content | [ComponentContent](../arkts-components/arkts-arkui-componentcontent-t.md)&lt;T&gt; | Yes | The content will be removed from the OverlayManager. |
 
 ## showAllComponentContents
 
@@ -186,7 +175,7 @@ removeComponentContent<T>(content: ComponentContent<T>): void
 showAllComponentContents(): void
 ```
 
-显示OverlayManager上所有的ComponentContent。
+Show all ComponentContents on the OverlayManager.
 
 **Since:** 23
 
@@ -204,7 +193,7 @@ showAllComponentContents(): void
 showComponentContent<T>(content: ComponentContent<T>): void
 ```
 
-在OverlayManager上显示指定节点。
+Show the ComponentContent.
 
 **Since:** 23
 
@@ -220,5 +209,5 @@ showComponentContent<T>(content: ComponentContent<T>): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| content | [ComponentContent](../arkts-components/arkts-arkui-componentcontent-t.md)&lt;T&gt; | Yes | 在OverlayManager上显示此content。 |
+| content | [ComponentContent](../arkts-components/arkts-arkui-componentcontent-t.md)&lt;T&gt; | Yes | The content will be shown. |
 

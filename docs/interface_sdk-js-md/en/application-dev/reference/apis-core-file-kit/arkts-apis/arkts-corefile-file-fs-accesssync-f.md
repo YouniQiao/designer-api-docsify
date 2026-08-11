@@ -12,9 +12,9 @@ import { Options, ReaderIteratorResult, Watcher, ReadTextOptions, WatchEventList
 declare function accessSync(path: string, mode?: AccessModeType): boolean
 ```
 
-以同步方法检查文件或目录是否存在，或校验操作权限。
+Checks whether a file or directory exists or has the operation permission. This API returns the result synchronously.
 
-校验读、写或读写权限不通过会抛出13900012（Permission denied）错误码。
+If the read, write, or read and write permission verification fails, the error code 13900012 (Permission denied) will be thrown.
 
 **Since:** 9
 
@@ -30,14 +30,14 @@ declare function accessSync(path: string, mode?: AccessModeType): boolean
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| path | string | Yes | 文件或目录应用沙箱路径。 |
-| mode | [AccessModeType](arkts-corefile-file-fs-accessmodetype-e.md) | No | 文件或目录校验的权限。不填该参数则默认校验文件或目录是否存在。<br>**Since:** 12 |
+| path | string | Yes | Application sandbox path of the file or directory. |
+| mode | [AccessModeType](arkts-corefile-file-fs-accessmodetype-e.md) | No | Permission on the file or directory to check. If this parameter is left blank, the system checks whether the file or directory exists.<br>**Since:** 12 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| boolean | 返回true，表示文件存在；返回false，表示文件不存在。 |
+| boolean | The value **true** means the file exists; the value **false** means the opposite. |
 
 **Error codes:**
 
@@ -63,9 +63,9 @@ declare function accessSync(path: string, mode?: AccessModeType): boolean
 declare function accessSync(path: string, mode: AccessModeType, flag: AccessFlagType): boolean
 ```
 
-以同步方法检查文件或目录是否在本地，或校验操作权限。
+Checks whether a file or directory is stored locally or has the operation permission. This API returns the result synchronously.
 
-校验读、写或读写权限不通过会抛出13900012（Permission denied）错误码。
+If the read, write, or read and write permission verification fails, the error code 13900012 (Permission denied) will be thrown.
 
 **Since:** 12
 
@@ -79,22 +79,22 @@ declare function accessSync(path: string, mode: AccessModeType, flag: AccessFlag
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| path | string | Yes | 文件应用沙箱路径。 |
-| mode | [AccessModeType](arkts-corefile-file-fs-accessmodetype-e.md) | Yes | 文件或目录校验的权限。 |
-| flag | [AccessFlagType](arkts-corefile-fileio-accessflagtype-e.md) | Yes | 文件或目录校验的位置。 |
+| path | string | Yes | Application sandbox path of the file to check. |
+| mode | [AccessModeType](arkts-corefile-file-fs-accessmodetype-e.md) | Yes | Permission on the file or directory to check. |
+| flag | [AccessFlagType](arkts-corefile-fileio-accessflagtype-e.md) | Yes | Position of the file or directory to check. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| boolean | 返回true，表示文件在本地且校验权限存在；返回false，表示文件不存在或者文件在云端或其他分布式设备上。 |
+| boolean | The value **true** means the file is a local file and has the related permission. The value **false** means the file does not exist or is on the cloud or a distributed device. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
 | 13900020 | Invalid argument |
-| 401 | Parameter error. Possible causes:1.Mandatory parameters are left unspecified; &lt;br&gt;2.Incorrect parameter types. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes:1.Mandatory parameters are left unspecified; &lt;br&gt;2.Incorrect parameter types. |
 | 13900005 | I/O error |
 | 13900023 | Text file busy |
 | 13900033 | Too many symbolic links encountered |

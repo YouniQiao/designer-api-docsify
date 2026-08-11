@@ -29,5 +29,5 @@ declare type TabsCustomContentTransitionCallback = (from: number, to: number) =>
 
 | 类型 | 说明 |
 | --- | --- |
-| [TabContentAnimatedTransition](../arkts-apis/arkts-arkui-tabs-tabcontentanimatedtransition-i.md) \| undefined | Information about the custom tab switching animation. |
+| [TabContentAnimatedTransition](arkts-arkui-tabcontentanimatedtransition-i.md) \| undefined | Information about the custom tab switching animation. |
 

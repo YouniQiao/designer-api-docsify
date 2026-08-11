@@ -12,15 +12,17 @@ import { taskpool } from 'kits/@kit.ArkTS';
 function getTask(taskId: number, taskName?: string): Task | undefined
 ```
 
-通过taskId或taskId与taskName获取对应的Task实例。
+Obtains the corresponding task instance by task ID, or by task ID and task name.
 
-> **说明：**
+> **NOTE：**
 > 
-> - 如果传入的taskId查询不到对应的Task实例，则会返回undefined；
+> - If no task instance is found based on the input task ID, **undefined** is returned.
 > 
-> - 如果传入的taskId能够查询到对应的Task实例，但是调用getTask方法的线程和创建Task实例的线程不一致，则会返回undefined；
+> - If the corresponding task instance can be queried based on the input task ID but the thread that calls the
+> **getTask** method is different from the thread that creates the task instance, **undefined** is returned.
 > 
-> - 如果同时传入taskId和taskName，通过taskId查询到的Task实例的name和传入的taskName不一致，则会返回undefined。
+> - If taskId and taskName are both passed, and the name of the task instance queried via task ID does not match
+> the provided task name, **undefined** is returned.
 
 **Since:** 22
 
@@ -36,14 +38,14 @@ function getTask(taskId: number, taskName?: string): Task | undefined
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| taskId | number | Yes | 任务ID。 该值应为整数。 |
-| taskName | string | No | 任务名称。默认值为undefined。 |
+| taskId | number | Yes | Task ID. The value should be an integer. |
+| taskName | string | No | Task name. The default value is **undefined**. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [Task](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-agent-task-i.md) | Task实例；当情况异常时，返回undefined，具体可见上文说明。 |
+| [Task](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-agent-task-i.md) | Task instance. If an exception occurs, **undefined** is returned. For details, see the preceding description. |
 
 ## Examples
 

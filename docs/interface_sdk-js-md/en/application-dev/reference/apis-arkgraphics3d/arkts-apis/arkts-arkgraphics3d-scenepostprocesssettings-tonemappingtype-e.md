@@ -1,6 +1,6 @@
 # ToneMappingType
 
-色调映射类型枚举.
+Enumerates the tone mapping types.
 
 **Since:** 12
 
@@ -16,7 +16,7 @@
 ACES = 0
 ```
 
-ACES色调映射类型.
+Academy Color Encoding System (ACES).
 
 **Since:** 12
 
@@ -32,7 +32,7 @@ ACES色调映射类型.
 ACES_2020 = 1
 ```
 
-ACES_2020色调映射类型.
+The tone mapping type is ACES_2020.
 
 **Since:** 12
 
@@ -48,7 +48,7 @@ ACES_2020色调映射类型.
 FILMIC = 2
 ```
 
-FILMIC色调映射类型.
+The tone mapping type is FILMIC.
 
 **Since:** 12
 

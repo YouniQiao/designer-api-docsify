@@ -1,6 +1,6 @@
 # BorderOptions
 
-边框属性集合，用于描述边框相关信息。
+Defines the options of border.
 
 **Since:** 23
 
@@ -16,7 +16,7 @@
 color?: EdgeColors | ResourceColor | LocalizedEdgeColors
 ```
 
-设置边框颜色。
+Defines the border color.
 
 **Type:** [EdgeColors](arkts-arkui-units-edgecolors-i.md) \| ResourceColor \| LocalizedEdgeColors
 
@@ -36,9 +36,7 @@ color?: EdgeColors | ResourceColor | LocalizedEdgeColors
 dashGap?: EdgeWidths | LengthMetrics | LocalizedEdgeWidths
 ```
 
-设置虚线的线段间距，仅在边框样式为虚线时生效。
-
-不支持设置百分比。
+Defines the gap of dash when BorderStyle is dashed.
 
 **Type:** [EdgeWidths](arkts-arkui-units-edgewidths-i.md) \| LengthMetrics \| LocalizedEdgeWidths
 
@@ -58,9 +56,7 @@ dashGap?: EdgeWidths | LengthMetrics | LocalizedEdgeWidths
 dashWidth?: EdgeWidths | LengthMetrics | LocalizedEdgeWidths
 ```
 
-设置虚线的线段长度，仅在边框样式为虚线时生效。
-
-不支持设置百分比。
+Defines the length of dash when BorderStyle is dashed.
 
 **Type:** [EdgeWidths](arkts-arkui-units-edgewidths-i.md) \| LengthMetrics \| LocalizedEdgeWidths
 
@@ -80,7 +76,7 @@ dashWidth?: EdgeWidths | LengthMetrics | LocalizedEdgeWidths
 radius?: BorderRadiuses | Length | LocalizedBorderRadiuses
 ```
 
-设置边框圆角半径。
+Defines the border radius.
 
 **Type:** [BorderRadiuses](arkts-arkui-units-borderradiuses-i.md) \| Length \| LocalizedBorderRadiuses
 
@@ -100,7 +96,7 @@ radius?: BorderRadiuses | Length | LocalizedBorderRadiuses
 style?: EdgeStyles | BorderStyle
 ```
 
-设置边框样式。
+Defines the border style.
 
 **Type:** [EdgeStyles](arkts-arkui-units-edgestyles-i.md) \| BorderStyle
 
@@ -120,7 +116,7 @@ style?: EdgeStyles | BorderStyle
 width?: EdgeWidths | Length | LocalizedEdgeWidths
 ```
 
-设置边框宽度。
+Defines the border width.
 
 **Type:** [EdgeWidths](arkts-arkui-units-edgewidths-i.md) \| Length \| LocalizedEdgeWidths
 

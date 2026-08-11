@@ -12,7 +12,7 @@ import { selectionManager } from 'kits/@kit.BasicServicesKit';
 function destroyPanel(panel: Panel): Promise<void>
 ```
 
-销毁划词面板。与[createPanel](arkts-basicservices-selectionmanager-createpanel-f.md#createpanel)搭配使用，用于销毁由createPanel()创建的面板对象。使用Promise异步回调。
+Destroys the word selection panel. This API is used together with [createPanel](arkts-basicservices-selectionmanager-createpanel-f.md#createpanel)to destroy the panel object created by **createPanel()**. This API uses a promise to return the result.
 
 **Since:** 24
 
@@ -28,21 +28,23 @@ function destroyPanel(panel: Panel): Promise<void>
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| panel | [Panel](arkts-basicservices-selectionmanager-panel-i.md) | Yes | 要销毁的面板对象。 |
+| panel | [Panel](arkts-basicservices-selectionmanager-panel-i.md) | Yes | Word selection panel to destroy. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise对象，无返回结果。 |
+| Promise&lt;void&gt; | Promise that returns no value. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 33600001 | Selection service exception. |
+| [33600001](../../apis-basic-services-kit/errorcode-selection.md#33600001-word-selection-service-invocation-error) | Selection service exception. |
 
 ## Examples
+
+ArkTS-Dyn example:
 
 ```TypeScript
 import { selectionManager, SelectionExtensionAbility, PanelInfo, PanelType, BusinessError } from '@kit.BasicServicesKit';
@@ -50,8 +52,8 @@ import { rpc } from '@kit.IPCKit';
 import { Want } from '@kit.AbilityKit';
 
 class SelectionAbilityStub extends rpc.RemoteObject {
-  constructor(descriptor: string) {
-    super(descriptor);
+  constructor(des: string) {
+    super(des);
   }
   onRemoteMessageRequest(
     code: number,
@@ -65,34 +67,91 @@ class SelectionAbilityStub extends rpc.RemoteObject {
 
 class ServiceExtAbility extends SelectionExtensionAbility {
   onConnect(want: Want): rpc.RemoteObject {
-    // Configure the word selection panel, including the panel type, position, and size.
     let panelInfo: PanelInfo = {
       panelType: PanelType.MENU_PANEL,
       x: 0,
       y: 0,
       width: 500,
       height: 200
-    };
+    }
     let selectionPanel: selectionManager.Panel | undefined = undefined;
-    // Create a word selection panel first. Obtain a Panel instance to be destroyed later. Obtain this.context by inheriting SelectionExtensionAbility.
+
     selectionManager.createPanel(this.context, panelInfo)
       .then((panel: selectionManager.Panel) => {
         console.info('Succeed in creating panel.');
         selectionPanel = panel;
         try {
           if (selectionPanel) {
-            // Destroy the word selection panel.
             selectionManager.destroyPanel(selectionPanel).then(() => {
               console.info('Succeed in destroying panel.');
             }).catch((err: BusinessError) => {
-              console.error(`Failed to destroy panel. Error code: ${err.code}, error message: ${err.message}`);
+              console.error(`Failed to destroy panel: ${err.code}, error message: ${err.message}`);
             });
           }
         } catch (err) {
-          console.error(`Failed to destroy panel. Error code: ${err.code}, error message: ${err.message}`);
+          console.error(`Failed to destroy panel: ${err.code}, error message: ${err.message}`);
         }
       }).catch((err: BusinessError) => {
-        console.error(`Failed to create panel. Error code: ${err.code}, error message: ${err.message}`);
+      console.error(`Failed to create panel: ${err.code}, error message: ${err.message}`);
+    });
+    return new SelectionAbilityStub('remote');
+  }
+}
+export default ServiceExtAbility;
+```
+
+ArkTS-Sta example:
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+import SelectionExtensionAbility from '@ohos.selectionInput.SelectionExtensionAbility';
+import { PanelInfo, PanelType } from '@ohos.selectionInput.SelectionPanel';
+import selectionManager from '@ohos.selectionInput.selectionManager';
+import rpc from '@ohos.rpc';
+import { Want } from '@kit.AbilityKit';
+
+class SelectionAbilityStub extends rpc.RemoteObject {
+  constructor(des: string) {
+    super(des);
+  }
+  onRemoteMessageRequest(
+    code: number,
+    data: rpc.MessageSequence,
+    reply: rpc.MessageSequence,
+    options: rpc.MessageOption
+  ): boolean | Promise<boolean> {
+    return true;
+  }
+}
+
+class ServiceExtAbility extends SelectionExtensionAbility {
+  onConnect(want: Want): rpc.RemoteObject {
+    let panelInfo: PanelInfo = {
+      panelType: PanelType.MENU_PANEL,
+      x: 0,
+      y: 0,
+      width: 500,
+      height: 200
+    }
+    let selectionPanel: selectionManager.Panel | undefined = undefined;
+
+    selectionManager.createPanel(this.context, panelInfo)
+      .then((panel: selectionManager.Panel) => {
+        console.info('Succeed in creating panel.');
+        selectionPanel = panel;
+        try {
+          if (selectionPanel) {
+            selectionManager.destroyPanel(selectionPanel as selectionManager.Panel).then(() => {
+              console.info('Succeed in destroying panel.');
+            }).catch((err) => {
+              console.error(`Failed to destroy panel: ${err.code}, error message: ${err.message}`);
+            });
+          }
+        } catch (err) {
+          console.error(`Failed to destroy panel: ${err.code}, error message: ${err.message}`);
+        }
+      }).catch((err) => {
+      console.error(`Failed to create panel: ${err.code}, error message: ${err.message}`);
     });
     return new SelectionAbilityStub('remote');
   }

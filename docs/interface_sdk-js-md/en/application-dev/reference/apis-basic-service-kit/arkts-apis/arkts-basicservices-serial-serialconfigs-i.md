@@ -1,6 +1,6 @@
 # SerialConfigs
 
-串口通信配置
+Serial port communication configuration.
 
 **Since:** 26.0.0
 
@@ -22,7 +22,7 @@ import { serial } from 'kits/@kit.BasicServicesKit';
 baudRate?: int
 ```
 
-波特率取值限定为整数。取值约束:标准波特率。&lt;br&gt;单位:bps。&lt;br&gt;默认值:115200。
+Baud rate.The value must be an integer.Value constraint: standard baud rates.&lt;br&gt;Unit: bit/s&lt;br&gt;Default value: 115200
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
@@ -44,7 +44,7 @@ baudRate?: int
 dataBits?: DataBits
 ```
 
-数据位&lt;br&gt;默认值:EIGHT。
+Data bits.&lt;br&gt;Default value: EIGHT
 
 **Type:** [DataBits](arkts-basicservices-serial-databits-e.md)
 
@@ -66,7 +66,7 @@ dataBits?: DataBits
 parity?: Parity
 ```
 
-校验位&lt;br&gt;默认值:NONE。
+Parity bit.&lt;br&gt;Default value: NONE
 
 **Type:** [Parity](arkts-basicservices-serialmanager-parity-e.md)
 
@@ -88,7 +88,7 @@ parity?: Parity
 rtscts?: boolean
 ```
 
-是否开启硬件自动流控&lt;br&gt;默认值:false。
+Whether to enable hardware-based automatic flow control.&lt;br&gt;Default value: false.
 
 **Type:** boolean
 
@@ -110,9 +110,9 @@ rtscts?: boolean
 stopBits?: StopBits
 ```
 
-停止位
+Stop bits.
 
-&lt;br&gt;默认值:ONE。
+Default value: ONE
 
 **Type:** [StopBits](arkts-basicservices-serial-stopbits-e.md)
 
@@ -134,7 +134,7 @@ stopBits?: StopBits
 xany?: boolean
 ```
 
-是否启用XANY软件流控&lt;br&gt;默认值:false。
+Whether to enable XANY to control the flow.&lt;br&gt;Default value: false
 
 **Type:** boolean
 
@@ -156,7 +156,7 @@ xany?: boolean
 xoff?: boolean
 ```
 
-是否启用XOFF软件流控接收&lt;br&gt;默认值:false。
+Whether to enable XOFF to control the reception of flows.&lt;br&gt;Default value: false
 
 **Type:** boolean
 
@@ -178,7 +178,7 @@ xoff?: boolean
 xon?: boolean
 ```
 
-是否启用XON软件流控发送&lt;br&gt;默认值:false。
+Whether to enable XON to control the sending of flows.&lt;br&gt;Default value: false
 
 **Type:** boolean
 

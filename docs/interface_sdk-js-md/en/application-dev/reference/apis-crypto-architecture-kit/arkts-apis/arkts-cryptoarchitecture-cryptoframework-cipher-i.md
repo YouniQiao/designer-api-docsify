@@ -1,19 +1,19 @@
 # Cipher
 
-加解密接口，定义对称加解密和非对称加解密方法。调用前，需通过  
-[createCipher(transformation: string): Cipher](arkts-cryptoarchitecture-cryptoframework-createcipher-f.md#createcipher)方法创建一个Cipher实例。按序调用Cipher实例中的  
-[init()](arkts-cryptoarchitecture-cryptoframework-cipher-i.md#init)、  
-[update()](arkts-cryptoarchitecture-cryptoframework-cipher-i.md#update)、  
-[doFinal()](arkts-cryptoarchitecture-cryptoframework-cipher-i.md#dofinal)方法完成加解密操作。
+Encryption and decryption interface, defining methods for symmetric and asymmetric encryption and decryption.Before use, you must create a **Cipher** instance by using  
+[createCipher(transformation: string): Cipher](arkts-cryptoarchitecture-cryptoframework-createcipher-f.md#createcipher).Call the [init()](arkts-cryptoarchitecture-cryptoframework-cipher-i.md#init),  
+[update()](arkts-cryptoarchitecture-cryptoframework-cipher-i.md#update), and  
+[doFinal()](arkts-cryptoarchitecture-cryptoframework-cipher-i.md#dofinal) APIs in this class as needed to complete encryption or decryption operations.
 
-&lt;br&gt;完整的加解密流程示例可参考[开发指南](../../../security/CryptoArchitectureKit/crypto-encryption-decryption.md)。
+&lt;br&gt;For details about the complete encryption and decryption process, see  
+[Encryption and Decryption Overview](../../../security/CryptoArchitectureKit/crypto-encryption-decryption.md).
 
-&lt;br&gt;一次完整的加/解密流程在对称加密和非对称加密中略有不同：
+&lt;br&gt;A complete symmetric encryption/decryption process is slightly different from the asymmetric encryption/decryption process.
 
-- 对称加解密：init为必选，update为可选（且允许多次update加/解密大数据），doFinal为必选；doFinal结束后可以重新init开始新一轮加/解密  
-流程。  
-- RSA、SM2非对称加解密：init为必选，不支持update操作，doFinal为必选（允许连续多次doFinal加/解密大数据）；RSA不支持重复init，切换  
-加解密模式或填充方式时，需要重新创建Cipher对象。
+- Symmetric encryption and decryption: **init()** and **doFinal()** are mandatory. **update()** is optional and can  
+be called multiple times to encrypt or decrypt big data. After **doFinal()** is called to complete an encryption or decryption operation, **init()** can be called to start a new encryption or decryption operation.  
+- RSA or SM2 asymmetric encryption and decryption: **init()** and **doFinal()** are mandatory, and **update()** is  
+not supported. **doFinal()** can be called multiple times to encrypt or decrypt big data. **init()** cannot be called repeatedly. If the encryption/decryption mode or padding mode is changed, a new **Cipher** object must be created.
 
 **Since:** 9
 
@@ -37,7 +37,7 @@ import { cryptoFramework } from 'kits/@kit.CryptoArchitectureKit';
 doFinal(data: DataBlob, callback: AsyncCallback<DataBlob>): void
 ```
 
-完成加密操作，对输入数据进行加密或解密，然后反馈输出数据。加密操作完成后，数据无法更新。使用Callback异步回调。
+Finishes the crypto operation, encrypts or decrypts the input data, and then feeds back the output data.Data cannot be updated after the crypto operation is finished. This API uses an asynchronous callback to return the result.
 
 **Since:** 9
 
@@ -55,18 +55,18 @@ doFinal(data: DataBlob, callback: AsyncCallback<DataBlob>): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| data | [DataBlob](arkts-cryptoarchitecture-cryptoframework-datablob-i.md) | Yes | 表示最终要加密或解密的数据。 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;DataBlob&gt; | Yes | 回调函数。当加/解密成功时，err为undefined，data为加/解密结果DataBlob；否则 为错误对象。 |
+| data | [DataBlob](arkts-cryptoarchitecture-cryptoframework-datablob-i.md) | Yes | Indicates the data to be finally encrypted or decrypted. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;DataBlob&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined**, and **data** is the encrypted or decrypted data obtained. Otherwise, **err** is an error object. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | 非法入参。可能的原因： &lt;br&gt;1. 必填参数未指定； &lt;br&gt;2. 参数类型不正确； &lt;br&gt;3. 参数验证失败。 |
-| 17630001 | 密码操作错误。 |
-| 17620001 | 内存操作失败。 |
-| 17620002 | 获取Native对象失败或参数转换失败。 |
-| 17620003 | 参数检查失败。可能的原因： &lt;br&gt;1. 数据过长。<br>**Applicable version:** 22 and later |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Invalid parameters. Possible causes: &lt;br&gt;1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; &lt;br&gt;3. Parameter verification failed. |
+| [17630001](../errorcode-crypto-framework.md#17630001-cryptographic-operation-error) | Crypto operation error. |
+| [17620001](../errorcode-crypto-framework.md#17620001-memory-operation-failed) | Memory operation failed. |
+| [17620002](../errorcode-crypto-framework.md#17620002-failed-to-obtain-the-native-object-or-convert-parameters) | Failed to obtain the native object or convert parameters. |
+| [17620003](../errorcode-crypto-framework.md#17620003-parameter-check-failed) | Parameter check failed. Possible causes: &lt;br&gt;1. The data is too long.<br>**Applicable version:** 22 and later |
 
 ## doFinal
 
@@ -74,29 +74,40 @@ doFinal(data: DataBlob, callback: AsyncCallback<DataBlob>): void
 doFinal(data: DataBlob | null, callback: AsyncCallback<DataBlob>): void
 ```
 
-完成加密操作，对输入数据进行加密或解密，然后反馈输出数据。加密操作完成后，数据无法更新。使用Callback异步回调。
+Finishes the crypto operation, encrypts or decrypts the input data, and then feeds back the output data.Data cannot be updated after the crypto operation is finished. This API uses an asynchronous callback to return the result.
 
-&lt;br&gt;（1）在对称加解密中**doFinal**用于处理剩余数据和本次传入的数据，并最终结束加密或解密操作，使用callback异步回调函数获取加密或解密后的数据。如果数据量较小，可以在**doFinal**中一次性传入数据，而不使用**update**；如果在本次加解密流程中已经使用**update**传入过数据，可以在**doFinal**的data参数处传入null。根据对称加解密的模式不同，**doFinal**的输出有以下区别：  
-- 在GCM和CCM模式的对称加密中，一次加密流程中，将每次**update**和**doFinal**的结果拼接起来，会得到“密文 + authTag”。GCM模式下，  
-authTag为末尾的16字节；CCM模式下，authTag为末尾的12字节。其余部分均为密文。如果**doFinal**的data参数传入null，则**doFinal**的结果就是authTag。解密时，authTag需要填入[GcmParamsSpec](arkts-cryptoarchitecture-cryptoframework-gcmparamsspec-i.md)或  
-[CcmParamsSpec](arkts-cryptoarchitecture-cryptoframework-ccmparamsspec-i.md)，密文作为解密时的data参数。  
-- 对于其他模式的对称加解密及GCM和CCM模式的加解密：每次加/解密流程中，**update**和**doFinal**的结果拼接起来，得到完整的明文或密文。
+&lt;br&gt;(1) Processes the remaining data and the data passed in this time, and completes the encryption or decryption operation for symmetric encryption and decryption. This API uses an asynchronous callback to return the encrypted or decrypted data. If a small amount of data needs to be encrypted or decrypted, you can use **doFinal()** to pass in all the data without using **update()**. If all the data has been passed in by  
+[update()](arkts-cryptoarchitecture-cryptoframework-cipher-i.md#update), you can pass in **null** in **data** of **doFinal()**. The output of **doFinal()** varies with the symmetric block cipher mode in use. This API uses an asynchronous callback to return the result.
 
-（2）在RSA、SM2非对称加解密中，**doFinal**加密或解密本次传入的数据，使用callback异步回调函数获取加密或者解密数据。如果数据量较大，可以多次调用**doFinal**，拼接结果得到完整的明文/密文。
+- In a single encryption process with GCM or CCM mode, concatenating the results of each **update()** and  
+**doFinal()** produces the ciphertext and **authTag**. In GCM mode, **authTag** is the last 16 bytes. In CCM mode, **authTag** is the last 12 bytes. The rest part is the ciphertext. If **data** passed to **doFinal()** is  
+**null**, the **doFinal()** result is only the **authTag**. During decryption, **authTag** must be set in  
+[GcmParamsSpec](arkts-cryptoarchitecture-cryptoframework-gcmparamsspec-i.md) or [CcmParamsSpec](arkts-cryptoarchitecture-cryptoframework-ccmparamsspec-i.md), and the ciphertext must be set in **data**.  
+- For other symmetric encryption and decryption modes and GCM and CCM decryption modes, concatenating the results  
+of **update()** and **doFinal()** throughout the process will yield the complete plaintext or ciphertext.
 
-> **说明：**
+(2) Encrypts or decrypts the data passed in this time in RSA and SM2 asymmetric encryption or decryption. This API uses an asynchronous callback to return the encrypted or decrypted data. If a large amount of data needs to be encrypted/decrypted, call **doFinal()** multiple times and concatenate the result of each **doFinal()** to obtain the complete plaintext/ciphertext.
+
+> **NOTE：**
 > 
-> 1. 对称加解密中，调用**doFinal**标志着一次加解密流程已经完成，即[Cipher](arkts-cryptoarchitecture-cryptoframework-cipher-i.md)实例的状态被清除，
-> 因此当后续开启新一轮加解密流程时，需要重新调用**init**并传入完整的参数列表进行初始化。即使是对同一个Cipher实例，采用同样的对称
-> 密钥，进行加密然后解密，则解密中调用**init**的时候仍需填写params参数，而不能直接省略为null。
-> 如果遇到解密失败，需检查加解密数据和**init**时的参数是否匹配，包括GCM模式下加密得到的authTag是否填入解密时的GcmParamsSpec等。
-> **doFinal**的结果可能为null，因此使用.data字段访问**doFinal**结果的具体数据前，请记得先判断结果是否为null，避免产生异常。
-> 2. 对于加密，CFB、OFB和CTR模式，如果**doFinal**传null，则返回结果为null。
-> 3. 对于解密，GCM、CCM、CFB、OFB和CTR模式，如果**doFinal**传null，则返回结果为null；对于解密，其他模式，如果明文是加密块大小的
-> 整倍数，调用**update**传入所有密文，调用**doFinal**传null，则返回结果为null。
-> 4. 非对称加解密时多次**doFinal**操作的示例代码请参阅
-> [使用RSA非对称密钥对按段加密和解密](../../../security/CryptoArchitectureKit/crypto-rsa-asym-encrypt-decrypt.md)。
-> SM2和RSA的操作类似。
+> 1. In symmetric encryption and decryption, after **doFinal** is called, the encryption and decryption process
+> is complete and the [Cipher](arkts-cryptoarchitecture-cryptoframework-cipher-i.md) instance is cleared. When a new encryption and
+> decryption process is started, **init()** must be called with a complete parameter list for initialization.
+> Even if the same symmetric key is used to encrypt and decrypt the same **Cipher** instance, the **params**
+> parameter must be set when **init** is called during decryption.
+> 2. If a decryption fails, check whether the data to be encrypted and decrypted matches the parameters in
+> **init()**. For the GCM mode, check whether the **authTag** obtained after encryption is obtained from the
+> **GcmParamsSpec** for decryption.
+> 3. The result of **doFinal()** may be **null**. To avoid exceptions, determine whether the result is **null**
+> before using the **.data** field to access the **doFinal()** result.
+> For encryption in CFB, OFB, or CTR mode, if **doFinal()** passes in **null**, the returned result is **null**.
+> For decryption in GCM, CCM, CFB, OFB, or CTR mode, if **doFinal()** passes in **null**, the returned result is
+> **null**. For decryption in other modes, if **update** is called to pass in all the plaintext, which is an
+> integer multiple of the encryption block size, and **doFinal()** is called to pass in **null**, the returned
+> result is **null**.
+> 4. For details about the sample code for calling **doFinal** multiple times in asymmetric encryption and
+> decryption, see [Encryption and Decryption by Segment with an RSA Asymmetric Key Pair](../../../security/CryptoArchitectureKit/crypto-rsa-asym-encrypt-decrypt.md).
+> The operations are similar for SM2 and RSA.
 
 **Since:** 10
 
@@ -114,70 +125,18 @@ authTag为末尾的16字节；CCM模式下，authTag为末尾的12字节。其�
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| data | [DataBlob](arkts-cryptoarchitecture-cryptoframework-datablob-i.md) \| null | Yes | 要加密或解密的数据。在对称加解密中，这个参数可以是**null**，但是 **{data: Uint8Array()}**不能传入。在API版本10之前，仅支持**DataBlob**。从API版本10开始，还支持**null**。 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;DataBlob&gt; | Yes | 回调函数。当加/解密成功时，err为undefined，data为加/解密结果DataBlob；否则 为错误对象。 |
+| data | [DataBlob](arkts-cryptoarchitecture-cryptoframework-datablob-i.md) \| null | Yes | Data to encrypt or decrypt. In symmetric encryption and decryption, this parameter can be **null**, but **{data: Uint8Array (empty)}** cannot be passed in. Before API version 10, only **DataBlob** is supported. Since API version 10, **null** is also supported. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;DataBlob&gt; | Yes | Callback used to return the result. If the encryption or decryption is successful, **err** is **undefined**, and **data** is the encryption or decryption result obtained. Otherwise, **err** is an error object. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | 非法入参。可能的原因： &lt;br&gt;1. 必填参数未指定； &lt;br&gt;2. 参数类型不正确； &lt;br&gt;3. 参数验证失败。 |
-| 17630001 | 密码操作错误。 |
-| 17620001 | 内存操作失败。 |
-| 17620002 | 获取Native对象失败或参数转换失败。 |
-| 17620003 | 参数检查失败。可能的原因： &lt;br&gt;1. 数据过长。<br>**Applicable version:** 22 and later |
-
-## Examples
-
-For more encryption and decryption examples, see [Encryption and Decryption with an AES Symmetric Key (GCM Mode)](../../security/CryptoArchitectureKit/crypto-aes-sym-encrypt-decrypt-gcm.md).
-
-```TypeScript
-import { cryptoFramework } from '@kit.CryptoArchitectureKit';
-import { buffer } from '@kit.ArkTS';
-
-function generateRandom(len: number) {
-  let rand = cryptoFramework.createRandom();
-  let generateRandSync = rand.generateRandomSync(len);
-  return generateRandSync;
-}
-
-function genGcmParamsSpec() {
-  let ivBlob = generateRandom(12);
-  let arr = [1, 2, 3, 4, 5, 6, 7, 8];
-  let dataAad = new Uint8Array(arr);
-  let aadBlob: cryptoFramework.DataBlob = { data: dataAad };
-  arr = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0];
-  let dataTag = new Uint8Array(arr);
-  let tagBlob: cryptoFramework.DataBlob = {
-    data: dataTag
-  };
-  let gcmParamsSpec: cryptoFramework.GcmParamsSpec = {
-    iv: ivBlob,
-    aad: aadBlob,
-    authTag: tagBlob,
-    algName: 'GcmParamsSpec'
-  };
-  return gcmParamsSpec;
-}
-
-function cipherByCallback() {
-  let gcmParams = genGcmParamsSpec();
-  let symKeyGenerator = cryptoFramework.createSymKeyGenerator('AES128');
-  let cipher = cryptoFramework.createCipher('AES128|GCM|PKCS7');
-  symKeyGenerator.generateSymKey((err, symKey) => {
-    cipher.init(cryptoFramework.CryptoMode.ENCRYPT_MODE, symKey, gcmParams, (err) => {
-      let message = 'This is a test';
-      let plainText: cryptoFramework.DataBlob = { data: new Uint8Array(buffer.from(message, 'utf-8').buffer) };
-      cipher.update(plainText, (err, encryptUpdate) => {
-        cipher.doFinal(null, (err, tag) => {
-          gcmParams.authTag = tag;
-          console.info('encryptUpdate plainText: ' + encryptUpdate.data);
-        });
-      });
-    });
-  });
-}
-```
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Invalid parameters. Possible causes: &lt;br&gt;1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; &lt;br&gt;3. Parameter verification failed. |
+| [17630001](../errorcode-crypto-framework.md#17630001-cryptographic-operation-error) | Crypto operation error. |
+| [17620001](../errorcode-crypto-framework.md#17620001-memory-operation-failed) | Memory operation failed. |
+| [17620002](../errorcode-crypto-framework.md#17620002-failed-to-obtain-the-native-object-or-convert-parameters) | Failed to obtain the native object or convert parameters. |
+| [17620003](../errorcode-crypto-framework.md#17620003-parameter-check-failed) | Parameter check failed. Possible causes: &lt;br&gt;1. The data is too long.<br>**Applicable version:** 22 and later |
 
 ## doFinal
 
@@ -185,21 +144,29 @@ function cipherByCallback() {
 doFinal(data: DataBlob | null, callback: AsyncCallback<DataBlob | null>): void
 ```
 
-完成加密操作，对输入数据进行加密或解密，然后反馈输出数据。加密操作完成后，数据无法再更新。使用Callback异步回调。
+Finishes the crypto operation, encrypts or decrypts the input data, and then feeds back the output data.Data cannot be updated after the crypto operation is finished. This API uses an asynchronous callback to return the result.
 
-> **说明：**
+> **NOTE：**
 > 
-> 1. 对称加解密中，调用**doFinal**标志着一次加解密流程已经完成，即[Cipher](arkts-cryptoarchitecture-cryptoframework-cipher-i.md)实例的状态被清除，
-> 因此当后续开启新一轮加解密流程时，需要重新调用**init**并传入完整的参数列表进行初始化。即使是对同一个Cipher实例，采用同样的对称
-> 密钥，进行加密然后解密，则解密中调用**init**的时候仍需填写params参数，而不能直接省略为null。
-> 如果遇到解密失败，需检查加解密数据和**init**时的参数是否匹配，包括GCM模式下加密得到的authTag是否填入解密时的GcmParamsSpec等。
-> **doFinal**的结果可能为null，因此使用.data字段访问**doFinal**结果的具体数据前，请记得先判断结果是否为null，避免产生异常。
-> 2. 对于加密，CFB、OFB和CTR模式，如果**doFinal**传null，则返回结果为null。
-> 3. 对于解密，GCM、CCM、CFB、OFB和CTR模式，如果**doFinal**传null，则返回结果为null；对于解密，其他模式，如果明文是加密块大小的
-> 整倍数，调用**update**传入所有密文，调用**doFinal**传null，则返回结果为null。
-> 4. 非对称加解密时多次**doFinal**操作的示例代码请参阅
-> [使用RSA非对称密钥对按段加密和解密](../../../security/CryptoArchitectureKit/crypto-rsa-asym-encrypt-decrypt.md)。
-> SM2和RSA的操作类似。
+> 1. In symmetric encryption and decryption, after **doFinal** is called, the encryption and decryption process
+> is complete and the [Cipher](arkts-cryptoarchitecture-cryptoframework-cipher-i.md) instance is cleared. When a new encryption and
+> decryption process is started, **init()** must be called with a complete parameter list for initialization.
+> Even if the same symmetric key is used to encrypt and decrypt the same **Cipher** instance, the **params**
+> parameter must be set when **init** is called during decryption.
+> 2. If a decryption fails, check whether the data to be encrypted and decrypted matches the parameters in
+> **init()**. For the GCM mode, check whether the **authTag** obtained after encryption is obtained from the
+> **GcmParamsSpec** for decryption.
+> 3. The result of **doFinal()** may be **null**. To avoid exceptions, determine whether the result is **null**
+> before using the **.data** field to access the **doFinal()** result.
+> For encryption in CFB, OFB, or CTR mode, if **doFinal()** passes in **null**, the returned result is **null**.
+> For decryption in GCM, CCM, CFB, OFB, or CTR mode, if **doFinal()** passes in **null**, the returned result is
+> **null**. For decryption in other modes, if **update** is called to pass in all the plaintext, which is an
+> integer multiple of the encryption block size, and **doFinal()** is called to pass in **null**, the returned
+> result is **null**.
+> 4. For details about the sample code for calling **doFinal** multiple times in asymmetric encryption and
+> decryption, see
+> [Encryption and Decryption by Segment with an RSA Asymmetric Key Pair](../../../security/CryptoArchitectureKit/crypto-rsa-asym-encrypt-decrypt.md).
+> The operations are similar for SM2 and RSA.
 
 **Since:** 23
 
@@ -215,18 +182,18 @@ doFinal(data: DataBlob | null, callback: AsyncCallback<DataBlob | null>): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| data | [DataBlob](arkts-cryptoarchitecture-cryptoframework-datablob-i.md) \| null | Yes | 表示最终要加密或解密的数据。 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;DataBlob \| null&gt; | Yes | 回调函数。当加/解密成功时，err为undefined，data为加密或解密后的数据； 否则为错误对象。 |
+| data | [DataBlob](arkts-cryptoarchitecture-cryptoframework-datablob-i.md) \| null | Yes | Indicates the data to be finally encrypted or decrypted. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;DataBlob \| null&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined**, and **data** is the encrypted or decrypted data obtained. Otherwise, **err** is an error object. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | 非法入参。可能的原因： &lt;br&gt;1. 必填参数未指定； &lt;br&gt;2. 参数类型不正确； &lt;br&gt;3. 参数验证失败。 |
-| 17630001 | 密码操作错误。 |
-| 17620001 | 内存操作失败。 |
-| 17620002 | 获取Native对象失败或参数转换失败。 |
-| 17620003 | 参数检查失败。可能的原因： &lt;br&gt;1. 数据过长。 |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Invalid parameters. Possible causes: &lt;br&gt;1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; &lt;br&gt;3. Parameter verification failed. |
+| [17630001](../errorcode-crypto-framework.md#17630001-cryptographic-operation-error) | Crypto operation error. |
+| [17620001](../errorcode-crypto-framework.md#17620001-memory-operation-failed) | Memory operation failed. |
+| [17620002](../errorcode-crypto-framework.md#17620002-failed-to-obtain-the-native-object-or-convert-parameters) | Failed to obtain the native object or convert parameters. |
+| [17620003](../errorcode-crypto-framework.md#17620003-parameter-check-failed) | Parameter check failed. Possible causes: &lt;br&gt;1. The data is too long. |
 
 ## doFinal
 
@@ -234,7 +201,7 @@ doFinal(data: DataBlob | null, callback: AsyncCallback<DataBlob | null>): void
 doFinal(data: DataBlob): Promise<DataBlob>
 ```
 
-完成加密操作，对输入数据进行加密或解密，然后反馈输出数据。加密操作完成后，数据无法更新。使用Promise异步回调。
+Finishes the crypto operation, encrypts or decrypts the input data, and then feeds back the output data.Data cannot be updated after the crypto operation is finished. This API uses a promise to return the result.
 
 **Since:** 9
 
@@ -252,23 +219,23 @@ doFinal(data: DataBlob): Promise<DataBlob>
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| data | [DataBlob](arkts-cryptoarchitecture-cryptoframework-datablob-i.md) | Yes | 表示最终要加密或解密的数据。 |
+| data | [DataBlob](arkts-cryptoarchitecture-cryptoframework-datablob-i.md) | Yes | Indicates the data to be finally encrypted or decrypted. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;DataBlob&gt; | Promise对象，返回加密或解密的数据。 |
+| Promise&lt;DataBlob&gt; | Promise used to return the encrypted or decrypted data. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | 非法入参。可能的原因： &lt;br&gt;1. 必填参数未指定； &lt;br&gt;2. 参数类型不正确； &lt;br&gt;3. 参数验证失败。 |
-| 17630001 | 密码操作错误。 |
-| 17620001 | 内存操作失败。 |
-| 17620002 | 获取Native对象失败或参数转换失败。 |
-| 17620003 | 参数检查失败。可能的原因： &lt;br&gt;1. 数据过长。<br>**Applicable version:** 22 and later |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Invalid parameters. Possible causes: &lt;br&gt;1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; &lt;br&gt;3. Parameter verification failed. |
+| [17630001](../errorcode-crypto-framework.md#17630001-cryptographic-operation-error) | Crypto operation error. |
+| [17620001](../errorcode-crypto-framework.md#17620001-memory-operation-failed) | Memory operation failed. |
+| [17620002](../errorcode-crypto-framework.md#17620002-failed-to-obtain-the-native-object-or-convert-parameters) | Failed to obtain the native object or convert parameters. |
+| [17620003](../errorcode-crypto-framework.md#17620003-parameter-check-failed) | Parameter check failed. Possible causes: &lt;br&gt;1. The data is too long.<br>**Applicable version:** 22 and later |
 
 ## doFinal
 
@@ -276,31 +243,48 @@ doFinal(data: DataBlob): Promise<DataBlob>
 doFinal(data: DataBlob | null): Promise<DataBlob>
 ```
 
-完成加密操作，对输入数据进行加密或解密，然后反馈输出数据。加密操作完成后，数据无法更新。使用Promise异步回调。
+Finishes the crypto operation, encrypts or decrypts the input data, and then feeds back the output data.Data cannot be updated after the crypto operation is finished. This API uses a promise to return the result.
 
-&lt;br&gt;（1）在对称加解密中，**doFinal**加/解密（分组模式产生的）剩余数据和本次传入的数据，最后结束加密或者解密数据操作，使用Promise异步回调获取加密或者解密数据。如果数据量较小，可以在**doFinal**中一次性传入数据，而不使用**update**；如果在本次加解密流程中，已经使用**update**传入过数据，可以在**doFinal**的data参数处传入null。根据对称加解密的模式不同，**doFinal**的输出有如下区别：  
-- 对于GCM和CCM模式的对称加密：一次加密流程中，如果将每一次**update**和**doFinal**的结果拼接起来，会得到“密文+authTag”，即末尾的  
-16字节（GCM模式）或12字节（CCM模式）是authTag，而其余部分均为密文。（也就是说，如果**doFinal**的data参数传入null，则  
-**doFinal**的结果就是authTag）authTag需要填入解密时的[GcmParamsSpec](arkts-cryptoarchitecture-cryptoframework-gcmparamsspec-i.md)或  
-[CcmParamsSpec](arkts-cryptoarchitecture-cryptoframework-ccmparamsspec-i.md)；密文则作为解密时的入参data。  
-- 对于其他模式的对称加解密及GCM和CCM模式的对称解密：一次加解密流程中，每次**update**和**doFinal**的结果拼接起来，得到完整的明文或  
-密文。
+&lt;br&gt;(1) Encrypts or decrypts the remaining data (generated by the block cipher mode) and the data passed in this time to finalize the symmetric encryption or decryption. This API uses a promise to return the result.
 
-（2）在RSA和SM2非对称加解密中，使用**doFinal**方法加解密传入的数据，并使用Promise异步回调获取加密或解密结果。如果数据量较大，可以多次调用**doFinal**，拼接结果以获得完整的明文或密文。
+If a small amount of data needs to be encrypted or decrypted, you can use **doFinal()** to pass in data without using **update()**. If all the data has been passed in by **update()**, you can pass in **null** in **data** of  
+**doFinal()**.
 
-> **说明：**
+The output of **doFinal()** varies with the symmetric encryption/decryption mode in use.
+
+- Symmetric encryption in GCM and CCM mode: The result consists of the ciphertext and **authTag** (the last 16  
+bytes for GCM and the last 12 bytes for CCM). If **data** in **doFinal** is null, the result of **doFinal** is  
+**authTag**.
+
+During decryption, **authTag** must be set in [GcmParamsSpec](arkts-cryptoarchitecture-cryptoframework-gcmparamsspec-i.md) or  
+[CcmParamsSpec](arkts-cryptoarchitecture-cryptoframework-ccmparamsspec-i.md), and the ciphertext must be set in **data**.
+
+- For other symmetric encryption and decryption modes and GCM and CCM decryption modes, concatenating the results  
+of **update()** and **doFinal()** throughout the process will yield the complete plaintext or ciphertext.
+
+(2) Encrypts or decrypts the data passed in RSA and SM2 asymmetric encryption or decryption. This API uses a promise to return the encrypted or decrypted data. If a large amount of data is to be processed, call  
+**doFinal()** multiple times and concatenate the results to obtain the complete plaintext or ciphertext.
+
+> **NOTE：**
 > 
-> 1. 对称加解密中，调用**doFinal**标志着一次加解密流程已经完成，即[Cipher](arkts-cryptoarchitecture-cryptoframework-cipher-i.md)实例的状态被清除，
-> 因此当后续开启新一轮加解密流程时，需要重新调用**init**并传入完整的参数列表进行初始化。即使是对同一个Cipher实例，采用同样的对称
-> 密钥，进行加密然后解密，则解密中调用**init**的时候仍需填写params参数，而不能直接省略为null。
-> 如果遇到解密失败，需检查加解密数据和**init**时的参数是否匹配，包括GCM模式下加密得到的authTag是否填入解密时的GcmParamsSpec等。
-> **doFinal**的结果可能为null，因此使用.data字段访问**doFinal**结果的具体数据前，请记得先判断结果是否为null，避免产生异常。
-> 2. 对于加密，CFB、OFB和CTR模式，如果**doFinal**传null，则返回结果为null。
-> 3. 对于解密，GCM、CCM、CFB、OFB和CTR模式，如果**doFinal**传null，则返回结果为null；对于解密，其他模式，如果明文是加密块大小的
-> 整倍数，调用**update**传入所有密文，调用**doFinal**传null，则返回结果为null。
-> 4. 非对称加解密时多次**doFinal**操作的示例代码请参阅
-> [使用RSA非对称密钥对按段加密和解密](../../../security/CryptoArchitectureKit/crypto-rsa-asym-encrypt-decrypt.md)。
-> SM2和RSA的操作类似。
+> 1. In symmetric encryption and decryption, after **doFinal** is called, the encryption and decryption process
+> is complete and the [Cipher](arkts-cryptoarchitecture-cryptoframework-cipher-i.md) instance is cleared. When a new encryption and
+> decryption process is started, **init()** must be called with a complete parameter list for initialization.
+> Even if the same symmetric key is used to encrypt and decrypt the same **Cipher** instance, the **params**
+> parameter must be set when **init** is called during decryption.
+> 2. If a decryption fails, check whether the data to be encrypted and decrypted matches the parameters in
+> **init()**. For the GCM mode, check whether the **authTag** obtained after encryption is obtained from the
+> **GcmParamsSpec** for decryption.
+> 3. The result of **doFinal()** may be **null**. To avoid exceptions, determine whether the result is **null**
+> before using the **.data** field to access the **doFinal()** result.
+> For encryption in CFB, OFB, or CTR mode, if **doFinal()** passes in **null**, the returned result is **null**.
+> For decryption in GCM, CCM, CFB, OFB, or CTR mode, if **doFinal()** passes in **null**, the returned result is
+> **null**. For decryption in other modes, if **update** is called to pass in all the plaintext, which is an
+> integer multiple of the encryption block size, and **doFinal()** is called to pass in **null**, the returned
+> result is **null**.
+> 4. For details about the sample code for calling **doFinal** multiple times in asymmetric encryption and
+> decryption, see [Encryption and Decryption by Segment with an RSA Asymmetric Key Pair](../../../security/CryptoArchitectureKit/crypto-rsa-asym-encrypt-decrypt.md).
+> The operations are similar for SM2 and RSA.
 
 **Since:** 10
 
@@ -318,70 +302,23 @@ doFinal(data: DataBlob | null): Promise<DataBlob>
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| data | [DataBlob](arkts-cryptoarchitecture-cryptoframework-datablob-i.md) \| null | Yes | 要加密或解密的数据。可以为**null**，但不能为{data:Uint8Array(0)}。在API版本10之前的版本 中，仅支持**DataBlob**。从API版本10开始，也支持**null**。 |
+| data | [DataBlob](arkts-cryptoarchitecture-cryptoframework-datablob-i.md) \| null | Yes | Data to encrypt or decrypt. It can be **null**, but cannot be {data:Uint8Array( empty)}. In versions earlier than API version 10, only **DataBlob** is supported. Since API version 10, **null** is also supported. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;DataBlob&gt; | Promise对象，返回剩余数据的加/解密结果DataBlob。 |
+| Promise&lt;DataBlob&gt; | Promise used to return the **DataBlob**, which is the encryption or decryption result of the remaining data. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | 非法入参。可能的原因： &lt;br&gt;1. 必填参数未指定； &lt;br&gt;2. 参数类型不正确； &lt;br&gt;3. 参数验证失败。 |
-| 17630001 | 密码操作错误。 |
-| 17620001 | 内存操作失败。 |
-| 17620002 | 获取Native对象失败或参数转换失败。 |
-| 17620003 | 参数检查失败。可能的原因： &lt;br&gt;1. 数据过长。<br>**Applicable version:** 22 and later |
-
-## Examples
-
-For more encryption and decryption examples, see [Encryption and Decryption with an AES Symmetric Key (GCM Mode)](../../security/CryptoArchitectureKit/crypto-aes-sym-encrypt-decrypt-gcm.md).
-
-```TypeScript
-import { cryptoFramework } from '@kit.CryptoArchitectureKit';
-import { buffer } from '@kit.ArkTS';
-
-function generateRandom(len: number) {
-  let rand = cryptoFramework.createRandom();
-  let generateRandSync = rand.generateRandomSync(len);
-  return generateRandSync;
-}
-
-function genGcmParamsSpec() {
-  let ivBlob = generateRandom(12);
-  let arr = [1, 2, 3, 4, 5, 6, 7, 8];
-  let dataAad = new Uint8Array(arr);
-  let aadBlob: cryptoFramework.DataBlob = { data: dataAad };
-  arr = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0];
-  let dataTag = new Uint8Array(arr);
-  let tagBlob: cryptoFramework.DataBlob = {
-    data: dataTag
-  };
-  let gcmParamsSpec: cryptoFramework.GcmParamsSpec = {
-    iv: ivBlob,
-    aad: aadBlob,
-    authTag: tagBlob,
-    algName: 'GcmParamsSpec'
-  };
-  return gcmParamsSpec;
-}
-
-async function cipherByPromise() {
-  let gcmParams = genGcmParamsSpec();
-  let symKeyGenerator = cryptoFramework.createSymKeyGenerator('AES128');
-  let cipher = cryptoFramework.createCipher('AES128|GCM|PKCS7');
-  let symKey = await symKeyGenerator.generateSymKey();
-  await cipher.init(cryptoFramework.CryptoMode.ENCRYPT_MODE, symKey, gcmParams);
-  let message = 'This is a test';
-  let plainText: cryptoFramework.DataBlob = { data: new Uint8Array(buffer.from(message, 'utf-8').buffer) };
-  let encryptUpdate = await cipher.update(plainText);
-  gcmParams.authTag = await cipher.doFinal(null);
-  console.info('encryptUpdate plainText: ' + encryptUpdate.data);
-}
-```
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Invalid parameters. Possible causes: &lt;br&gt;1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; &lt;br&gt;3. Parameter verification failed. |
+| [17630001](../errorcode-crypto-framework.md#17630001-cryptographic-operation-error) | Crypto operation error. |
+| [17620001](../errorcode-crypto-framework.md#17620001-memory-operation-failed) | Memory operation failed. |
+| [17620002](../errorcode-crypto-framework.md#17620002-failed-to-obtain-the-native-object-or-convert-parameters) | Failed to obtain the native object or convert parameters. |
+| [17620003](../errorcode-crypto-framework.md#17620003-parameter-check-failed) | Parameter check failed. Possible causes: &lt;br&gt;1. The data is too long.<br>**Applicable version:** 22 and later |
 
 ## doFinal
 
@@ -389,21 +326,28 @@ async function cipherByPromise() {
 doFinal(data: DataBlob | null): Promise<DataBlob | null>
 ```
 
-完成加密操作，对输入数据进行加密或解密，然后反馈输出数据。加密操作完成后，数据无法更新。使用Promise异步回调。
+Finishes the crypto operation, encrypts or decrypts the input data, and then feeds back the output data.Data cannot be updated after the crypto operation is finished. This API uses a promise to return the result.
 
-> **说明：**
+> **NOTE：**
 > 
-> 1. 对称加解密中，调用**doFinal**标志着一次加解密流程已经完成，即[Cipher](arkts-cryptoarchitecture-cryptoframework-cipher-i.md)实例的状态被清除，
-> 因此当后续开启新一轮加解密流程时，需要重新调用**init**并传入完整的参数列表进行初始化。即使是对同一个Cipher实例，采用同样的对称
-> 密钥，进行加密然后解密，则解密中调用**init**的时候仍需填写params参数，而不能直接省略为null。
-> 如果遇到解密失败，需检查加解密数据和**init**时的参数是否匹配，包括GCM模式下加密得到的authTag是否填入解密时的GcmParamsSpec等。
-> **doFinal**的结果可能为null，因此使用.data字段访问**doFinal**结果的具体数据前，请记得先判断结果是否为null，避免产生异常。
-> 2. 对于加密，CFB、OFB和CTR模式，如果**doFinal**传null，则返回结果为null。
-> 3. 对于解密，GCM、CCM、CFB、OFB和CTR模式，如果**doFinal**传null，则返回结果为null；对于解密，其他模式，如果明文是加密块大小的
-> 整倍数，调用**update**传入所有密文，调用**doFinal**传null，则返回结果为null。
-> 4. 非对称加解密时多次**doFinal**操作的示例代码请参阅
-> [使用RSA非对称密钥对按段加密和解密](../../../security/CryptoArchitectureKit/crypto-rsa-asym-encrypt-decrypt.md)。
-> SM2和RSA的操作类似。
+> 1. In symmetric encryption and decryption, after **doFinal** is called, the encryption and decryption process
+> is complete and the [Cipher](arkts-cryptoarchitecture-cryptoframework-cipher-i.md) instance is cleared. When a new encryption and
+> decryption process is started, **init()** must be called with a complete parameter list for initialization.
+> Even if the same symmetric key is used to encrypt and decrypt the same **Cipher** instance, the **params**
+> parameter must be set when **init** is called during decryption.
+> 2. If a decryption fails, check whether the data to be encrypted and decrypted matches the parameters in
+> **init()**. For the GCM mode, check whether the **authTag** obtained after encryption is obtained from the
+> **GcmParamsSpec** for decryption.
+> 3. The result of **doFinal()** may be **null**. To avoid exceptions, determine whether the result is **null**
+> before using the **.data** field to access the **doFinal()** result.
+> For encryption in CFB, OFB, or CTR mode, if **doFinal()** passes in **null**, the returned result is **null**.
+> For decryption in GCM, CCM, CFB, OFB, or CTR mode, if **doFinal()** passes in **null**, the returned result is
+> **null**. For decryption in other modes, if **update** is called to pass in all the plaintext, which is an
+> integer multiple of the encryption block size, and **doFinal()** is called to pass in **null**, the returned
+> result is **null**.
+> 4. For details about the sample code for calling **doFinal** multiple times in asymmetric encryption and
+> decryption, see [Encryption and Decryption by Segment with an RSA Asymmetric Key Pair](../../../security/CryptoArchitectureKit/crypto-rsa-asym-encrypt-decrypt.md).
+> The operations are similar for SM2 and RSA.
 
 **Since:** 23
 
@@ -419,23 +363,23 @@ doFinal(data: DataBlob | null): Promise<DataBlob | null>
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| data | [DataBlob](arkts-cryptoarchitecture-cryptoframework-datablob-i.md) \| null | Yes | 表示最终要加密或解密的数据。 |
+| data | [DataBlob](arkts-cryptoarchitecture-cryptoframework-datablob-i.md) \| null | Yes | Indicates the data to be finally encrypted or decrypted. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;DataBlob \| null&gt; | Promise对象，返回加密或解密后的数据。 |
+| Promise&lt;DataBlob \| null&gt; | Promise used to return the encrypted or decrypted data. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | 非法入参。可能的原因： &lt;br&gt;1. 必填参数未指定； &lt;br&gt;2. 参数类型不正确； &lt;br&gt;3. 参数验证失败。 |
-| 17630001 | 密码操作错误。 |
-| 17620001 | 内存操作失败。 |
-| 17620002 | 获取Native对象失败或参数转换失败。 |
-| 17620003 | 参数检查失败。可能的原因： &lt;br&gt;1. 数据过长。 |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Invalid parameters. Possible causes: &lt;br&gt;1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; &lt;br&gt;3. Parameter verification failed. |
+| [17630001](../errorcode-crypto-framework.md#17630001-cryptographic-operation-error) | Crypto operation error. |
+| [17620001](../errorcode-crypto-framework.md#17620001-memory-operation-failed) | Memory operation failed. |
+| [17620002](../errorcode-crypto-framework.md#17620002-failed-to-obtain-the-native-object-or-convert-parameters) | Failed to obtain the native object or convert parameters. |
+| [17620003](../errorcode-crypto-framework.md#17620003-parameter-check-failed) | Parameter check failed. Possible causes: &lt;br&gt;1. The data is too long. |
 
 ## doFinalSync
 
@@ -443,23 +387,29 @@ doFinal(data: DataBlob | null): Promise<DataBlob | null>
 doFinalSync(data: DataBlob | null): DataBlob
 ```
 
-完成加密操作，对输入数据进行加密或解密，然后反馈输出数据。加密操作完成后，数据无法更新。
+Finishes the crypto operation, encrypts or decrypts the input data, and then feeds back the output data.Data cannot be updated after the crypto operation is finished.
 
-&lt;br&gt;（1）在对称加解密中，**doFinal**加/解密（分组模式产生的）剩余数据和本次传入的数据，最后结束加密或者解密数据操作，使用Promise异步回调获取加密或者解密数据。如果数据量较小，可以在**doFinal**中一次性传入数据，而不使用**update**；如果在本次加解密流程中，已经使用**update**传入过数据，可以在**doFinal**的data参数处传入null。根据对称加解密的模式不同，**doFinal**的输出有如下区别：  
-- 对于GCM和CCM模式的对称加密：一次加密流程中，如果将每一次**update**和**doFinal**的结果拼接起来，会得到“密文+authTag”，即末尾的  
-16字节（GCM模式）或12字节（CCM模式）是authTag，而其余部分均为密文。（也就是说，如果**doFinal**的data参数传入null，则  
-**doFinal**的结果就是authTag）authTag需要填入解密时的[GcmParamsSpec](arkts-cryptoarchitecture-cryptoframework-gcmparamsspec-i.md)或  
-[CcmParamsSpec](arkts-cryptoarchitecture-cryptoframework-ccmparamsspec-i.md)；密文则作为解密时的入参data。  
-- 对于其他模式的对称加解密及GCM和CCM模式的对称解密：一次加解密流程中，每次**update**和**doFinal**的结果拼接起来，得到完整的明文或  
-密文。
+&lt;br&gt;(1) Processes the remaining data and the data passed in this time, and completes the encryption or decryption operation for symmetric encryption and decryption. This API returns the encrypted or decrypted data synchronously.
 
-（2）在RSA和SM2非对称加解密中，使用**doFinal**方法加解密传入的数据，并使用Promise异步回调获取加密或解密结果。如果数据量较大，可以多次调用**doFinal**，拼接结果以获得完整的明文或密文。
+If a small amount of data is to be processed, you can pass in all the data at a time in **doFinalSync()** without using **updateSync()**. If data has been passed in by using  
+[updateSync](arkts-cryptoarchitecture-cryptoframework-cipher-i.md#updatesync) in the current encryption and decryption process, you can pass in **null** to the **data** parameter of **doFinalSync()**.
 
-&lt;br&gt;关于其他注意事项，请参见  
-[doFinal()](arkts-cryptoarchitecture-cryptoframework-cipher-i.md#dofinal)中的  
-**说明：**。
+The output of **doFinalSync()** varies with the symmetric block cipher mode in use.
 
-&lt;br&gt;&lt;br&gt;**说明：**&lt;br&gt;建议优先使用异步API，{@link doFinal}。同步API可能因系统繁忙、高负载等原因耗时较长而阻塞主线程。因此建议在子线程中调用同步API，以避免阻塞主线程。
+- In a single encryption process with GCM or CCM mode, concatenating the results of each **updateSync()** and  
+**doFinalSync()** produces the ciphertext and **authTag**. In GCM mode, **authTag** is the last 16 bytes. In CCM mode, **authTag** is the last 12 bytes. The rest part is the ciphertext. If **data** in **doFinalSync()** is  
+**null**, the result of **doFinalSync()** is **authTag**.  
+- During decryption, **authTag** must be set in [GcmParamsSpec](arkts-cryptoarchitecture-cryptoframework-gcmparamsspec-i.md) or  
+[CcmParamsSpec](arkts-cryptoarchitecture-cryptoframework-ccmparamsspec-i.md), and the ciphertext must be set in **data**.  
+- For other symmetric encryption and decryption modes and GCM and CCM decryption modes, concatenating the results  
+of **updateSync()** and **doFinalSync()** throughout the process will yield the complete plaintext or ciphertext.
+
+(2) Encrypts or decrypts the input data for RSA or SM2 asymmetric encryption/decryption. This API returns the encrypted or decrypted data synchronously. If a large amount of data is to be processed, call **doFinalSync()**multiple times and concatenate the results to obtain the complete plaintext or ciphertext.
+
+&lt;br&gt;See **NOTE：**in
+[doFinal()](arkts-cryptoarchitecture-cryptoframework-cipher-i.md#dofinal) for other precautions.
+
+&lt;br&gt;&lt;br&gt;**NOTE：**&lt;br&gt;It is recommended to prioritize the use of asynchronous API, {@link doFinal}. Synchronous API may take a long time and block the main thread due to system busyness, high load, and other reasons. Therefore,it is advised to invoke synchronous API within a child thread to avoid blocking the main thread.
 
 **Since:** 12
 
@@ -475,70 +425,23 @@ doFinalSync(data: DataBlob | null): DataBlob
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| data | [DataBlob](arkts-cryptoarchitecture-cryptoframework-datablob-i.md) \| null | Yes | 待加密或解密的数据。在对称加解密中可以为**null**， 但不能传入{data: Uint8Array(0)}。 |
+| data | [DataBlob](arkts-cryptoarchitecture-cryptoframework-datablob-i.md) \| null | Yes | Data to encrypt or decrypt. It can be **null** in symmetric encryption or decryption, but cannot be {data:Uint8Array(empty)}. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [DataBlob](arkts-cryptoarchitecture-cryptoframework-datablob-i.md) | 加密或解密后的数据。 |
+| [DataBlob](arkts-cryptoarchitecture-cryptoframework-datablob-i.md) | Encrypted or decrypted data. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | 非法入参。可能的原因： &lt;br&gt;1. 必填参数未指定； &lt;br&gt;2. 参数类型不正确； &lt;br&gt;3. 参数验证失败。 |
-| 17630001 | 密码操作错误。 |
-| 17620001 | 内存操作失败。 |
-| 17620002 | 获取Native对象失败或参数转换失败。 |
-| 17620003 | 参数检查失败。可能的原因： &lt;br&gt;1. 数据过长。<br>**Applicable version:** 22 and later |
-
-## Examples
-
-For more encryption and decryption examples, see [Encryption and Decryption with an AES Symmetric Key (GCM Mode)](../../security/CryptoArchitectureKit/crypto-aes-sym-encrypt-decrypt-gcm.md).
-
-```TypeScript
-import { cryptoFramework } from '@kit.CryptoArchitectureKit';
-import { buffer } from '@kit.ArkTS';
-
-function generateRandom(len: number) {
-  let rand = cryptoFramework.createRandom();
-  let generateRandSync = rand.generateRandomSync(len);
-  return generateRandSync;
-}
-
-function genGcmParamsSpec() {
-  let ivBlob = generateRandom(12);
-  let arr = [1, 2, 3, 4, 5, 6, 7, 8];
-  let dataAad = new Uint8Array(arr);
-  let aadBlob: cryptoFramework.DataBlob = { data: dataAad };
-  arr = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0];
-  let dataTag = new Uint8Array(arr);
-  let tagBlob: cryptoFramework.DataBlob = {
-    data: dataTag
-  };
-  let gcmParamsSpec: cryptoFramework.GcmParamsSpec = {
-    iv: ivBlob,
-    aad: aadBlob,
-    authTag: tagBlob,
-    algName: 'GcmParamsSpec'
-  };
-  return gcmParamsSpec;
-}
-
-async function cipherBySync() {
-  let gcmParams = genGcmParamsSpec();
-  let symKeyGenerator = cryptoFramework.createSymKeyGenerator('AES128');
-  let cipher = cryptoFramework.createCipher('AES128|GCM|PKCS7');
-  let symKey = await symKeyGenerator.generateSymKey();
-  await cipher.init(cryptoFramework.CryptoMode.ENCRYPT_MODE, symKey, gcmParams);
-  let message = 'This is a test';
-  let plainText: cryptoFramework.DataBlob = { data: new Uint8Array(buffer.from(message, 'utf-8').buffer) };
-  let encryptUpdate = cipher.updateSync(plainText);
-  gcmParams.authTag = cipher.doFinalSync(null);
-  console.info('encryptUpdate plainText: ' + encryptUpdate.data);
-}
-```
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Invalid parameters. Possible causes: &lt;br&gt;1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; &lt;br&gt;3. Parameter verification failed. |
+| [17630001](../errorcode-crypto-framework.md#17630001-cryptographic-operation-error) | Crypto operation error. |
+| [17620001](../errorcode-crypto-framework.md#17620001-memory-operation-failed) | Memory operation failed. |
+| [17620002](../errorcode-crypto-framework.md#17620002-failed-to-obtain-the-native-object-or-convert-parameters) | Failed to obtain the native object or convert parameters. |
+| [17620003](../errorcode-crypto-framework.md#17620003-parameter-check-failed) | Parameter check failed. Possible causes: &lt;br&gt;1. The data is too long.<br>**Applicable version:** 22 and later |
 
 ## doFinalSync
 
@@ -546,9 +449,9 @@ async function cipherBySync() {
 doFinalSync(data: DataBlob | null): DataBlob | null
 ```
 
-完成加密操作，对输入数据进行加密或解密，然后反馈输出数据。加密操作完成后，数据无法更新。
+Finishes the crypto operation, encrypts or decrypts the input data, and then feeds back the output data.Data cannot be updated after the crypto operation is finished.
 
-&lt;br&gt;&lt;br&gt;**说明：**&lt;br&gt;建议优先使用异步API，{@link doFinal}。同步API可能因系统繁忙、高负载等原因耗时较长而阻塞主线程。因此建议在子线程中调用同步API，以避免阻塞主线程。
+&lt;br&gt;&lt;br&gt;**NOTE：**&lt;br&gt;It is recommended to prioritize the use of asynchronous API, {@link doFinal}. Synchronous API may take a long time and block the main thread due to system busyness, high load, and other reasons. Therefore,it is advised to invoke synchronous API within a child thread to avoid blocking the main thread.
 
 **Since:** 23
 
@@ -564,23 +467,23 @@ doFinalSync(data: DataBlob | null): DataBlob | null
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| data | [DataBlob](arkts-cryptoarchitecture-cryptoframework-datablob-i.md) \| null | Yes | 表示最终要加密或解密的数据。 |
+| data | [DataBlob](arkts-cryptoarchitecture-cryptoframework-datablob-i.md) \| null | Yes | Indicates the data to be finally encrypted or decrypted. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [DataBlob](arkts-cryptoarchitecture-cryptoframework-datablob-i.md) | 加密时返回密文，解密时返回明文。 |
+| [DataBlob](arkts-cryptoarchitecture-cryptoframework-datablob-i.md) | ciphertext when encrypted or plaintext when decrypted. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | 非法入参。可能的原因： &lt;br&gt;1. 必填参数未指定； &lt;br&gt;2. 参数类型不正确； &lt;br&gt;3. 参数验证失败。 |
-| 17630001 | 密码操作错误。 |
-| 17620001 | 内存操作失败。 |
-| 17620002 | 获取Native对象失败或参数转换失败。 |
-| 17620003 | 参数检查失败。可能的原因： &lt;br&gt;1. 数据过长。 |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Invalid parameters. Possible causes: &lt;br&gt;1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; &lt;br&gt;3. Parameter verification failed. |
+| [17630001](../errorcode-crypto-framework.md#17630001-cryptographic-operation-error) | Crypto operation error. |
+| [17620001](../errorcode-crypto-framework.md#17620001-memory-operation-failed) | Memory operation failed. |
+| [17620002](../errorcode-crypto-framework.md#17620002-failed-to-obtain-the-native-object-or-convert-parameters) | Failed to obtain the native object or convert parameters. |
+| [17620003](../errorcode-crypto-framework.md#17620003-parameter-check-failed) | Parameter check failed. Possible causes: &lt;br&gt;1. The data is too long. |
 
 ## getCipherSpec
 
@@ -588,7 +491,7 @@ doFinalSync(data: DataBlob | null): DataBlob | null
 getCipherSpec(itemType: CipherSpecItem): string | Uint8Array
 ```
 
-获取加解密参数。当前只支持RSA算法和SM2算法，从API version 11开始，支持SM2算法获取加解密参数。
+Obtains cipher specifications. Currently, only RSA and SM2 (available since API version 11) are supported.
 
 **Since:** 10
 
@@ -606,23 +509,23 @@ getCipherSpec(itemType: CipherSpecItem): string | Uint8Array
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| itemType | [CipherSpecItem](arkts-cryptoarchitecture-cryptoframework-cipherspecitem-e.md) | Yes | 用于指定需要获取的加解密参数。 |
+| itemType | [CipherSpecItem](arkts-cryptoarchitecture-cryptoframework-cipherspecitem-e.md) | Yes | Cipher parameter to obtain. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| string | 返回获取的加解密参数值。 |
+| string | Returns the value of the cipher parameter obtained. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | 非法入参。可能的原因： &lt;br&gt;1. 必填参数未指定； &lt;br&gt;2. 参数类型不正确； &lt;br&gt;3. 参数验证失败。 |
-| 801 | 该操作不支持。 |
-| 17630001 | 密码操作错误。 |
-| 17620001 | 内存操作失败。 |
-| 17620003 | 参数检查失败。可能的原因： &lt;br&gt;1. 不支持的itemType。<br>**Applicable version:** 22 and later |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Invalid parameters. Possible causes: &lt;br&gt;1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; &lt;br&gt;3. Parameter verification failed. |
+| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | This operation is not supported. |
+| [17630001](../errorcode-crypto-framework.md#17630001-cryptographic-operation-error) | Crypto operation error. |
+| [17620001](../errorcode-crypto-framework.md#17620001-memory-operation-failed) | Memory operation failed. |
+| [17620003](../errorcode-crypto-framework.md#17620003-parameter-check-failed) | Parameter check failed. Possible causes: &lt;br&gt;1. Unsupported itemType.<br>**Applicable version:** 22 and later |
 
 ## Examples
 
@@ -642,9 +545,10 @@ function testGetCipherSpec() {
 init(opMode: CryptoMode, key: Key, params: ParamsSpec, callback: AsyncCallback<void>): void
 ```
 
-使用给定的加密模式、密钥和参数初始化加密操作。
+Initializes the crypto operation with the given crypto mode, key and parameters. This API uses an asynchronous callback to return the result.
 
-&lt;br&gt;init、update和doFinal必须配合使用，其中init和doFinal是必选的，update是可选的。
+&lt;br&gt;**init**, **update**, and **doFinal** must be used together. **init** and **doFinal** are mandatory, and  
+**update** is optional.
 
 **Since:** 9
 
@@ -662,20 +566,20 @@ init(opMode: CryptoMode, key: Key, params: ParamsSpec, callback: AsyncCallback<v
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| opMode | [CryptoMode](arkts-cryptoarchitecture-cryptoframework-cryptomode-e.md) | Yes | 要执行的操作（加密或解密） |
-| key | [Key](../../apis-input-kit/arkts-apis/arkts-input-multimodalinput-keyevent-key-i.md) | Yes | 用于加密或解密的密钥 |
-| params | [ParamsSpec](arkts-cryptoarchitecture-cryptoframework-paramsspec-i.md) | Yes | IV等算法参数 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | 回调函数。当加解密初始化成功时，err为undefined；否则为错误对象。 |
+| opMode | [CryptoMode](arkts-cryptoarchitecture-cryptoframework-cryptomode-e.md) | Yes | Operation (encryption or decryption) to perform. |
+| key | [Key](../../apis-input-kit/arkts-apis/arkts-input-multimodalinput-keyevent-key-i.md) | Yes | Key for encryption or decryption. |
+| params | [ParamsSpec](arkts-cryptoarchitecture-cryptoframework-paramsspec-i.md) | Yes | Indicates the algorithm parameters such as IV. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined**. Otherwise, **err** is an error object. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | 非法入参。可能的原因： &lt;br&gt;1. 必填参数未指定； &lt;br&gt;2. 参数类型不正确； &lt;br&gt;3. 参数验证失败。 |
-| 17630001 | 密码操作错误。 |
-| 17620001 | 内存操作失败。 |
-| 17620002 | 获取Native对象失败或参数转换失败。 |
-| 17620003 | 参数检查失败。可能的原因： &lt;br&gt;1. 无效的opMode值； &lt;br&gt;2. 无效的iv长度； &lt;br&gt;3. 无效的密钥长度。<br>**Applicable version:** 22 and later |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Invalid parameters. Possible causes: &lt;br&gt;1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; &lt;br&gt;3. Parameter verification failed. |
+| [17630001](../errorcode-crypto-framework.md#17630001-cryptographic-operation-error) | Crypto operation error. |
+| [17620001](../errorcode-crypto-framework.md#17620001-memory-operation-failed) | Memory operation failed. |
+| [17620002](../errorcode-crypto-framework.md#17620002-failed-to-obtain-the-native-object-or-convert-parameters) | Failed to obtain the native object or convert parameters. |
+| [17620003](../errorcode-crypto-framework.md#17620003-parameter-check-failed) | Parameter check failed. Possible causes: &lt;br&gt;1. Invalid opMode value; &lt;br&gt;2. Invalid iv length; &lt;br&gt;3. Invalid key length.<br>**Applicable version:** 22 and later |
 
 ## init
 
@@ -683,9 +587,10 @@ init(opMode: CryptoMode, key: Key, params: ParamsSpec, callback: AsyncCallback<v
 init(opMode: CryptoMode, key: Key, params: ParamsSpec | null, callback: AsyncCallback<void>): void
 ```
 
-初始化加解密的[cipher](arkts-cryptoarchitecture-cryptoframework-cipher-i.md)对象，使用callback异步回调获取结果。
+Initializes the [cipher](arkts-cryptoarchitecture-cryptoframework-cipher-i.md) object for encryption and decryption. This API uses an asynchronous callback to return the result.
 
-&lt;br&gt;init、update、doFinal为三段式接口，需要成组使用。其中init和doFinal必选，update可选。
+&lt;br&gt;**init**, **update**, and **doFinal** must be used together. **init** and **doFinal** are mandatory, and  
+**update** is optional.
 
 **Since:** 10
 
@@ -703,20 +608,20 @@ init(opMode: CryptoMode, key: Key, params: ParamsSpec | null, callback: AsyncCal
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| opMode | [CryptoMode](arkts-cryptoarchitecture-cryptoframework-cryptomode-e.md) | Yes | 加密或者解密模式。 |
-| key | [Key](../../apis-input-kit/arkts-apis/arkts-input-multimodalinput-keyevent-key-i.md) | Yes | 指定加密或解密的密钥。 |
-| params | [ParamsSpec](arkts-cryptoarchitecture-cryptoframework-paramsspec-i.md) \| null | Yes | 指定加密或解密的参数，对于ECB等没有参数的算法模式，请传入null。API 10之前只支持 ParamsSpec， API 10之后增加支持null。 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | 回调函数。当加解密初始化成功，err为undefined，否则为错误对象。 |
+| opMode | [CryptoMode](arkts-cryptoarchitecture-cryptoframework-cryptomode-e.md) | Yes | Operation (encryption or decryption) to perform. |
+| key | [Key](../../apis-input-kit/arkts-apis/arkts-input-multimodalinput-keyevent-key-i.md) | Yes | Key for encryption or decryption. |
+| params | [ParamsSpec](arkts-cryptoarchitecture-cryptoframework-paramsspec-i.md) \| null | Yes | Parameters for encryption or decryption. For algorithm modes without parameters (such as ECB), set this parameter to **null**. In versions earlier than API version 10, only **ParamsSpec** is supported. Since API version 10, **null** is also supported. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined**. Otherwise, **err** is an error object. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | 非法入参。可能的原因： &lt;br&gt;1. 必填参数未指定； &lt;br&gt;2. 参数类型不正确； &lt;br&gt;3. 参数验证失败。 |
-| 17630001 | 密码操作错误。 |
-| 17620001 | 内存操作失败。 |
-| 17620002 | 获取Native对象失败或参数转换失败。 |
-| 17620003 | 参数检查失败。可能的原因： &lt;br&gt;1. 无效的opMode值； &lt;br&gt;2. 无效的iv长度； &lt;br&gt;3. 无效的密钥长度。<br>**Applicable version:** 22 and later |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Invalid parameters. Possible causes: &lt;br&gt;1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; &lt;br&gt;3. Parameter verification failed. |
+| [17630001](../errorcode-crypto-framework.md#17630001-cryptographic-operation-error) | Crypto operation error. |
+| [17620001](../errorcode-crypto-framework.md#17620001-memory-operation-failed) | Memory operation failed. |
+| [17620002](../errorcode-crypto-framework.md#17620002-failed-to-obtain-the-native-object-or-convert-parameters) | Failed to obtain the native object or convert parameters. |
+| [17620003](../errorcode-crypto-framework.md#17620003-parameter-check-failed) | Parameter check failed. Possible causes: &lt;br&gt;1. Invalid opMode value; &lt;br&gt;2. Invalid iv length; &lt;br&gt;3. Invalid key length.<br>**Applicable version:** 22 and later |
 
 ## init
 
@@ -724,9 +629,10 @@ init(opMode: CryptoMode, key: Key, params: ParamsSpec | null, callback: AsyncCal
 init(opMode: CryptoMode, key: Key, params: ParamsSpec): Promise<void>
 ```
 
-使用给定的加密模式、密钥和参数初始化加密操作。使用Promise异步回调。
+Initializes the crypto operation with the given crypto mode, key and parameters. This API uses a promise to return the result.
 
-&lt;br&gt;init、update和doFinal必须配合使用，其中init和doFinal是必选的，update是可选的。
+&lt;br&gt;**init**, **update**, and **doFinal** must be used together. **init** and **doFinal** are mandatory, and  
+**update** is optional.
 
 **Since:** 9
 
@@ -744,25 +650,25 @@ init(opMode: CryptoMode, key: Key, params: ParamsSpec): Promise<void>
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| opMode | [CryptoMode](arkts-cryptoarchitecture-cryptoframework-cryptomode-e.md) | Yes | 要执行的操作（加密或解密） |
-| key | [Key](../../apis-input-kit/arkts-apis/arkts-input-multimodalinput-keyevent-key-i.md) | Yes | 用于加密或解密的密钥 |
-| params | [ParamsSpec](arkts-cryptoarchitecture-cryptoframework-paramsspec-i.md) | Yes | IV等算法参数 |
+| opMode | [CryptoMode](arkts-cryptoarchitecture-cryptoframework-cryptomode-e.md) | Yes | Operation (encryption or decryption) to perform. |
+| key | [Key](../../apis-input-kit/arkts-apis/arkts-input-multimodalinput-keyevent-key-i.md) | Yes | Key for encryption or decryption. |
+| params | [ParamsSpec](arkts-cryptoarchitecture-cryptoframework-paramsspec-i.md) | Yes | Indicates the algorithm parameters such as IV. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise对象，无返回结果。 |
+| Promise&lt;void&gt; | Promise that returns no value. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | 非法入参。可能的原因： &lt;br&gt;1. 必填参数未指定； &lt;br&gt;2. 参数类型不正确； &lt;br&gt;3. 参数验证失败。 |
-| 17630001 | 密码操作错误。 |
-| 17620001 | 内存操作失败。 |
-| 17620002 | 获取Native对象失败或参数转换失败。 |
-| 17620003 | 参数检查失败。可能的原因： &lt;br&gt;1. 无效的opMode值； &lt;br&gt;2. 无效的iv长度； &lt;br&gt;3. 无效的密钥长度。<br>**Applicable version:** 22 and later |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Invalid parameters. Possible causes: &lt;br&gt;1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; &lt;br&gt;3. Parameter verification failed. |
+| [17630001](../errorcode-crypto-framework.md#17630001-cryptographic-operation-error) | Crypto operation error. |
+| [17620001](../errorcode-crypto-framework.md#17620001-memory-operation-failed) | Memory operation failed. |
+| [17620002](../errorcode-crypto-framework.md#17620002-failed-to-obtain-the-native-object-or-convert-parameters) | Failed to obtain the native object or convert parameters. |
+| [17620003](../errorcode-crypto-framework.md#17620003-parameter-check-failed) | Parameter check failed. Possible causes: &lt;br&gt;1. Invalid opMode value; &lt;br&gt;2. Invalid iv length; &lt;br&gt;3. Invalid key length.<br>**Applicable version:** 22 and later |
 
 ## init
 
@@ -770,9 +676,10 @@ init(opMode: CryptoMode, key: Key, params: ParamsSpec): Promise<void>
 init(opMode: CryptoMode, key: Key, params: ParamsSpec | null): Promise<void>
 ```
 
-初始化加解密的cipher对象。使用Promise异步回调。
+Initializes the cipher object for encryption and decryption. This API uses a promise to return the result.
 
-&lt;br&gt;init、update、doFinal为三段式接口，需要成组使用。其中init和doFinal必选，update可选。
+&lt;br&gt;**init**, **update**, and **doFinal** must be used together. **init** and **doFinal** are mandatory, and  
+**update** is optional.
 
 **Since:** 10
 
@@ -790,25 +697,25 @@ init(opMode: CryptoMode, key: Key, params: ParamsSpec | null): Promise<void>
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| opMode | [CryptoMode](arkts-cryptoarchitecture-cryptoframework-cryptomode-e.md) | Yes | 加密或者解密模式。 |
-| key | [Key](../../apis-input-kit/arkts-apis/arkts-input-multimodalinput-keyevent-key-i.md) | Yes | 指定加密或解密的密钥。 |
-| params | [ParamsSpec](arkts-cryptoarchitecture-cryptoframework-paramsspec-i.md) \| null | Yes | 指定加密或解密的参数，对于ECB等没有参数的算法模式，请传入null。API 10之前仅支持 ParamsSpec，从API 10开始增加对null的支持。 |
+| opMode | [CryptoMode](arkts-cryptoarchitecture-cryptoframework-cryptomode-e.md) | Yes | Operation (encryption or decryption) to perform. |
+| key | [Key](../../apis-input-kit/arkts-apis/arkts-input-multimodalinput-keyevent-key-i.md) | Yes | Key for encryption or decryption. |
+| params | [ParamsSpec](arkts-cryptoarchitecture-cryptoframework-paramsspec-i.md) \| null | Yes | Parameters for encryption or decryption. For algorithm modes without parameters (such as ECB), set this parameter to **null**. Before API version 10, only **ParamsSpec** is supported. Since API version 10, **null** is also supported. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise对象，无返回结果。 |
+| Promise&lt;void&gt; | Promise that returns no value. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | 非法入参。可能的原因： &lt;br&gt;1. 必填参数未指定； &lt;br&gt;2. 参数类型不正确； &lt;br&gt;3. 参数验证失败。 |
-| 17630001 | 密码操作错误。 |
-| 17620001 | 内存操作失败。 |
-| 17620002 | 获取Native对象失败或参数转换失败。 |
-| 17620003 | 参数检查失败。可能的原因： &lt;br&gt;1. 无效的opMode值； &lt;br&gt;2. 无效的iv长度； &lt;br&gt;3. 无效的密钥长度。<br>**Applicable version:** 22 and later |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Invalid parameters. Possible causes: &lt;br&gt;1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; &lt;br&gt;3. Parameter verification failed. |
+| [17630001](../errorcode-crypto-framework.md#17630001-cryptographic-operation-error) | Crypto operation error. |
+| [17620001](../errorcode-crypto-framework.md#17620001-memory-operation-failed) | Memory operation failed. |
+| [17620002](../errorcode-crypto-framework.md#17620002-failed-to-obtain-the-native-object-or-convert-parameters) | Failed to obtain the native object or convert parameters. |
+| [17620003](../errorcode-crypto-framework.md#17620003-parameter-check-failed) | Parameter check failed. Possible causes: &lt;br&gt;1. Invalid opMode value; &lt;br&gt;2. Invalid iv length; &lt;br&gt;3. Invalid key length.<br>**Applicable version:** 22 and later |
 
 ## initSync
 
@@ -816,11 +723,11 @@ init(opMode: CryptoMode, key: Key, params: ParamsSpec | null): Promise<void>
 initSync(opMode: CryptoMode, key: Key, params: ParamsSpec | null): void
 ```
 
-初始化加解密的[cipher](arkts-cryptoarchitecture-cryptoframework-cipher-i.md)对象，此API以同步方式返回结果。
+Initializes a [cipher](arkts-cryptoarchitecture-cryptoframework-cipher-i.md) instance. This API returns the result synchronously.
 
-&lt;br&gt;initSync、updateSync、doFinalSync为三段式接口，需要成组使用。其中initSync和doFinalSync必选，updateSync可选。
+&lt;br&gt;**initSync**, **updateSync**, and **doFinalSync** must be used together. **initSync** and **doFinalSync** are mandatory, and **updateSync** is optional.
 
-&lt;br&gt;&lt;br&gt;**说明：**&lt;br&gt;建议优先使用异步API，{@link init}。同步API可能因系统繁忙、高负载等原因耗时较长而阻塞主线程。因此建议在子线程中调用同步API，以避免阻塞主线程。
+&lt;br&gt;&lt;br&gt;**NOTE：**&lt;br&gt;It is recommended to prioritize the use of asynchronous API, {@link init}. Synchronous API may take a long time and block the main thread due to system busyness, high load, and other reasons. Therefore,it is advised to invoke synchronous API within a child thread to avoid blocking the main thread.
 
 **Since:** 12
 
@@ -836,19 +743,19 @@ initSync(opMode: CryptoMode, key: Key, params: ParamsSpec | null): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| opMode | [CryptoMode](arkts-cryptoarchitecture-cryptoframework-cryptomode-e.md) | Yes | 加密或者解密模式。 |
-| key | [Key](../../apis-input-kit/arkts-apis/arkts-input-multimodalinput-keyevent-key-i.md) | Yes | 指定加密或解密的密钥。 |
-| params | [ParamsSpec](arkts-cryptoarchitecture-cryptoframework-paramsspec-i.md) \| null | Yes | 指定加密或解密的参数，对于ECB等没有参数的算法模式，请传入null。 |
+| opMode | [CryptoMode](arkts-cryptoarchitecture-cryptoframework-cryptomode-e.md) | Yes | Operation (encryption or decryption) to perform. |
+| key | [Key](../../apis-input-kit/arkts-apis/arkts-input-multimodalinput-keyevent-key-i.md) | Yes | Key for encryption or decryption. |
+| params | [ParamsSpec](arkts-cryptoarchitecture-cryptoframework-paramsspec-i.md) \| null | Yes | Parameters for encryption or decryption. For algorithm modes without parameters (such as ECB), set this parameter to **null**. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | 非法入参。可能的原因： &lt;br&gt;1. 必填参数未指定； &lt;br&gt;2. 参数类型不正确； &lt;br&gt;3. 参数验证失败。 |
-| 17630001 | 密码操作错误。 |
-| 17620001 | 内存操作失败。 |
-| 17620002 | 获取Native对象失败或参数转换失败。 |
-| 17620003 | 参数检查失败。可能的原因： &lt;br&gt;1. 无效的opMode值； &lt;br&gt;2. 无效的iv长度； &lt;br&gt;3. 无效的密钥长度。<br>**Applicable version:** 22 and later |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Invalid parameters. Possible causes: &lt;br&gt;1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; &lt;br&gt;3. Parameter verification failed. |
+| [17630001](../errorcode-crypto-framework.md#17630001-cryptographic-operation-error) | Crypto operation error. |
+| [17620001](../errorcode-crypto-framework.md#17620001-memory-operation-failed) | Memory operation failed. |
+| [17620002](../errorcode-crypto-framework.md#17620002-failed-to-obtain-the-native-object-or-convert-parameters) | Failed to obtain the native object or convert parameters. |
+| [17620003](../errorcode-crypto-framework.md#17620003-parameter-check-failed) | Parameter check failed. Possible causes: &lt;br&gt;1. Invalid opMode value; &lt;br&gt;2. Invalid iv length; &lt;br&gt;3. Invalid key length.<br>**Applicable version:** 22 and later |
 
 ## setCipherSpec
 
@@ -856,7 +763,8 @@ initSync(opMode: CryptoMode, key: Key, params: ParamsSpec | null): void
 setCipherSpec(itemType: CipherSpecItem, itemValue: Uint8Array): void
 ```
 
-设置加解密参数。常用的加解密参数直接通过[createCipher](arkts-cryptoarchitecture-cryptoframework-createcipher-f.md#createcipher) 来指定，剩余参数通过本接口指定。当前只支持RSA算法。
+Sets cipher specifications. You can use this API to set cipher specifications that cannot be set by  
+[createCipher](arkts-cryptoarchitecture-cryptoframework-createcipher-f.md#createcipher). Currently, only RSA is supported.
 
 **Since:** 10
 
@@ -874,18 +782,18 @@ setCipherSpec(itemType: CipherSpecItem, itemValue: Uint8Array): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| itemType | [CipherSpecItem](arkts-cryptoarchitecture-cryptoframework-cipherspecitem-e.md) | Yes | 用于指定需要设置的加解密参数。 |
-| itemValue | Uint8Array | Yes | 用于指定加解密参数的具体值。 |
+| itemType | [CipherSpecItem](arkts-cryptoarchitecture-cryptoframework-cipherspecitem-e.md) | Yes | Cipher parameter to set. |
+| itemValue | Uint8Array | Yes | Value of the parameter to set. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | 非法入参。可能的原因： &lt;br&gt;1. 必填参数未指定； &lt;br&gt;2. 参数类型不正确； &lt;br&gt;3. 参数验证失败。 |
-| 801 | 该操作不支持。 |
-| 17630001 | 密码操作错误。 |
-| 17620001 | 内存操作失败。 |
-| 17620003 | 参数检查失败。可能的原因： &lt;br&gt;1. 不支持的itemType。<br>**Applicable version:** 22 and later |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Invalid parameters. Possible causes: &lt;br&gt;1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; &lt;br&gt;3. Parameter verification failed. |
+| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | This operation is not supported. |
+| [17630001](../errorcode-crypto-framework.md#17630001-cryptographic-operation-error) | Crypto operation error. |
+| [17620001](../errorcode-crypto-framework.md#17620001-memory-operation-failed) | Memory operation failed. |
+| [17620003](../errorcode-crypto-framework.md#17620003-parameter-check-failed) | Parameter check failed. Possible causes: &lt;br&gt;1. Unsupported itemType.<br>**Applicable version:** 22 and later |
 
 ## Examples
 
@@ -905,30 +813,39 @@ function testsetCipherSpec() {
 update(data: DataBlob, callback: AsyncCallback<DataBlob>): void
 ```
 
-更新要分段加密或解密的数据。使用Callback异步回调。
+Updates the data to encrypt or decrypt by segment. This API uses an asynchronous callback to return the result.
 
-&lt;br&gt;必须在对[Cipher](arkts-cryptoarchitecture-cryptoframework-cipher-i.md)实例使用  
-[init()](arkts-cryptoarchitecture-cryptoframework-cipher-i.md#init)初始化后，才能使用本函数。
+&lt;br&gt;This API can be called only after the [Cipher](arkts-cryptoarchitecture-cryptoframework-cipher-i.md) instance is initialized by using [init()](arkts-cryptoarchitecture-cryptoframework-cipher-i.md#init).
 
-> **说明：**
+> **NOTE：**
 > 
-> 1. 在进行对称加解密操作时，如果开发者对各分组模式不够熟悉，建议每次调用**update**和**doFinal**后，都判断结果是否为null。如果结果
-> 不为null，则取出其中的数据进行拼接，以形成完整的密文或明文。这是因为选择的分组模式等各项规格可能会影响**update**和**doFinal**的
-> 结果。
-> &lt;br&gt;例如，对于ECB和CBC模式，不论**update**传入的数据是否为分组长度的整数倍，都会以分组作为基本单位进行加密或解密，并输出本次
-> **update**新产生的加密或解密分组结果。
-> &lt;br&gt;可以理解为，**update**只要凑满一个新的分组就会有输出，如果没有凑满则此次**update**输出为null，把当前还没被加密或解密的数据留着，
-> 等下一次**update**或**doFinal**传入数据的时候，拼接起来继续凑分组。
-> &lt;br&gt;最后**doFinal**的时候，会把剩下的还没加/解密的数据，根据[createCipher](arkts-cryptoarchitecture-cryptoframework-createcipher-f.md#createcipher)时设置的
-> padding模式进行填充，补齐到分组的整数倍长度，再输出剩余加解密结果。
-> &lt;br&gt;而对于可以将分组密码转化为流模式实现的模式，还可能出现密文长度和明文长度相同的情况等。
-> 2. 根据数据量，可以不调用**update**（即**init**完成后直接调用**doFinal**）或多次调用**update**。
-> &lt;br&gt;算法库目前没有对**update**（单次或累计）的数据量设置大小限制，建议对于大数据量的对称加解密，可以采用多次**update**的方式传入数据。
-> &lt;br&gt;有关在多次**update()**调用中传递数据的示例代码的详细信息，请参见
-> [使用AES对称密钥分段加密和解密（GCM模式）](../../../security/CryptoArchitectureKit/crypto-aes-sym-encrypt-decrypt.md)。
-> 3. RSA或SM2非对称加解密不支持**update()**。
-> 4. 对于CCM模式的对称加解密算法，加密时只能调用1次**update**接口加密数据并调用**doFinal**接口获取tag，或直接调用**doFinal**
-> 接口加密数据并获取tag，解密时只能调用1次**update**接口或调用1次**doFinal**接口解密数据并验证tag。
+> 1. The results of **update()** and **doFinal()** may vary with the block mode used. If you are not familiar
+> with the block modes, you are advised to check each **update()** and **doFinal()** result to ensure that the
+> results are not **null**. When a valid result is returned, extract and concatenate the data to form a complete
+> ciphertext or plaintext.
+> &lt;br&gt;For example, in ECB and CBC modes, encryption and decryption are performed by block regardless of whether the
+> data input by **update()** is an integer multiple of the block size, and **update()** returns the newly
+> processed block data.
+> &lt;br&gt;That is, data is returned as long as the data passed in by **update()** reaches the size of a block. Otherwise,
+> **null** is returned and the data will be retained until a block is formed in the next **update()** or
+> **doFinal()**.
+> &lt;br&gt;In the final **doFinal()** operation, the remaining unprocessed data is padded based on the padding mode set in
+> [createCipher](arkts-cryptoarchitecture-cryptoframework-createcipher-f.md#createcipher) to the integer multiple of the block size to produce the
+> final encrypted or decrypted data.
+> &lt;br&gt;For block cipher modes that can be converted to stream mode, the ciphertext length may be the same as the
+> plaintext length.
+> 2. You can call **update()** multiple times or skip calling **update()** (call **doFinal()** directly after
+> **init()**), depending on the data volume.
+> &lt;br&gt;The amount of the data to be passed in by **update()** (one-time or accumulative) is not limited. If there is a
+> large amount of data, you are advised to pass data in multiple **update()** calls rather than processing it all
+> at once.
+> &lt;br&gt;For details about the sample code for passing data in multiple **update()** calls, see
+> [Encryption and Decryption by Segment with an AES Symmetric Key (GCM Mode)](../../../security/CryptoArchitectureKit/crypto-aes-sym-encrypt-decrypt.md).
+> 3. RSA or SM2 asymmetric encryption and decryption do not support **update()**.
+> 4. If CCM is used in symmetric encryption or decryption, **update()** can be called only once. In the
+> encryption process, you can either use **update()** to encrypt data and use **doFinal()** to obtain **authTag**
+> or use **doFinal()** without using **update()**. In the decryption process, you can either use **update()** or
+> **doFinal()** once to decrypt data and verify the tag.
 
 **Since:** 9
 
@@ -946,18 +863,18 @@ update(data: DataBlob, callback: AsyncCallback<DataBlob>): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| data | [DataBlob](arkts-cryptoarchitecture-cryptoframework-datablob-i.md) | Yes | 需要进行加密或解密的数据。data不能为null。 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;DataBlob&gt; | Yes | 回调函数。当更新加/解密数据成功时，err为undefined，data为加密或解密结果 DataBlob；否则为错误对象。 |
+| data | [DataBlob](arkts-cryptoarchitecture-cryptoframework-datablob-i.md) | Yes | Data to be encrypted or decrypted. It cannot be null. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;DataBlob&gt; | Yes | Callback used to return the result. If the data is updated successfully, **err** is **undefined**, and **data** is the encryption or decryption result obtained. Otherwise, **err** is an error object. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | 非法入参。可能的原因： &lt;br&gt;1. 必填参数未指定； &lt;br&gt;2. 参数类型不正确； &lt;br&gt;3. 参数验证失败。 |
-| 17630001 | 密码操作错误。 |
-| 17620001 | 内存操作失败。 |
-| 17620002 | 获取Native对象失败或参数转换失败。 |
-| 17620003 | 参数检查失败。可能的原因： &lt;br&gt;1. 数据过长。<br>**Applicable version:** 22 and later |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Invalid parameters. Possible causes: &lt;br&gt;1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; &lt;br&gt;3. Parameter verification failed. |
+| [17630001](../errorcode-crypto-framework.md#17630001-cryptographic-operation-error) | Crypto operation error. |
+| [17620001](../errorcode-crypto-framework.md#17620001-memory-operation-failed) | Memory operation failed. |
+| [17620002](../errorcode-crypto-framework.md#17620002-failed-to-obtain-the-native-object-or-convert-parameters) | Failed to obtain the native object or convert parameters. |
+| [17620003](../errorcode-crypto-framework.md#17620003-parameter-check-failed) | Parameter check failed. Possible causes: &lt;br&gt;1. The data is too long.<br>**Applicable version:** 22 and later |
 
 ## update
 
@@ -965,27 +882,37 @@ update(data: DataBlob, callback: AsyncCallback<DataBlob>): void
 update(data: DataBlob, callback: AsyncCallback<DataBlob | null>): void
 ```
 
-使用输入数据更新加密操作，并反馈此次加密或解密的数据。此API使用异步回调来返回结果。
+Updates the crypto operation with the input data, and feeds back the encrypted or decrypted data this time. This API uses an asynchronous callback to return the result.
 
-> **说明：**
+> **NOTE：**
 > 
-> 1. 在进行对称加解密操作时，如果开发者对各分组模式不够熟悉，建议每次调用**update**和**doFinal**后，都判断结果是否为null。如果结果
-> 不为null，则取出其中的数据进行拼接，以形成完整的密文或明文。这是因为选择的分组模式等各项规格可能会影响**update**和**doFinal**的
-> 结果。
-> &lt;br&gt;例如，对于ECB和CBC模式，不论**update**传入的数据是否为分组长度的整数倍，都会以分组作为基本单位进行加密或解密，并输出本次
-> **update**新产生的加密或解密分组结果。
-> &lt;br&gt;可以理解为，**update**只要凑满一个新的分组就会有输出，如果没有凑满则此次**update**输出为null，把当前还没被加密或解密的数据留着，
-> 等下一次**update**或**doFinal**传入数据的时候，拼接起来继续凑分组。
-> &lt;br&gt;最后**doFinal**的时候，会把剩下的还没加/解密的数据，根据[createCipher](arkts-cryptoarchitecture-cryptoframework-createcipher-f.md#createcipher)时设置的
-> padding模式进行填充，补齐到分组的整数倍长度，再输出剩余加解密结果。
-> &lt;br&gt;而对于可以将分组密码转化为流模式实现的模式，还可能出现密文长度和明文长度相同的情况等。
-> 2. 根据数据量，可以不调用**update**（即**init**完成后直接调用**doFinal**）或多次调用**update**。
-> &lt;br&gt;算法库目前没有对**update**（单次或累计）的数据量设置大小限制，建议对于大数据量的对称加解密，可以采用多次**update**的方式传入数据。
-> &lt;br&gt;有关在多次**update()**调用中传递数据的示例代码的详细信息，请参见
-> [使用AES对称密钥分段加密和解密（GCM模式）](../../../security/CryptoArchitectureKit/crypto-aes-sym-encrypt-decrypt.md)。
-> 3. RSA或SM2非对称加解密不支持**update()**。
-> 4. 对于CCM模式的对称加解密算法，加密时只能调用1次**update**接口加密数据并调用**doFinal**接口获取tag，或直接调用**doFinal**
-> 接口加密数据并获取tag，解密时只能调用1次**update**接口或调用1次**doFinal**接口解密数据并验证tag。
+> 1. The results of **update()** and **doFinal()** may vary with the block mode used. If you are not familiar
+> with the block modes, you are advised to check each **update()** and **doFinal()** result to ensure that the
+> results are not **null**. When a valid result is returned, extract and concatenate the data to form a complete
+> ciphertext or plaintext.
+> &lt;br&gt;For example, in ECB and CBC modes, encryption and decryption are performed by block regardless of whether the
+> data input by **update()** is an integer multiple of the block size, and **update()** returns the newly
+> processed block data.
+> &lt;br&gt;That is, data is returned as long as the data passed in by **update()** reaches the size of a block. Otherwise,
+> **null** is returned and the data will be retained until a block is formed in the next **update()** or
+> **doFinal()**.
+> &lt;br&gt;In the final **doFinal()** operation, the remaining unprocessed data is padded based on the padding mode set in
+> [createCipher](arkts-cryptoarchitecture-cryptoframework-createcipher-f.md#createcipher) to the integer multiple of the block size to produce the
+> final encrypted or decrypted data.
+> &lt;br&gt;For block cipher modes that can be converted to stream mode, the ciphertext length may be the same as the
+> plaintext length.
+> 2. You can call **update()** multiple times or skip calling **update()** (call **doFinal()** directly after
+> **init()**), depending on the data volume.
+> &lt;br&gt;The amount of the data to be passed in by **update()** (one-time or accumulative) is not limited. If there is a
+> large amount of data, you are advised to pass data in multiple **update()** calls rather than processing it all
+> at once.
+> &lt;br&gt;For details about the sample code for passing data in multiple **update()** calls, see
+> [Encryption and Decryption by Segment with an AES Symmetric Key (GCM Mode)](../../../security/CryptoArchitectureKit/crypto-aes-sym-encrypt-decrypt.md).
+> 3. RSA or SM2 asymmetric encryption and decryption do not support **update()**.
+> 4. If CCM is used in symmetric encryption or decryption, **update()** can be called only once. In the
+> encryption process, you can either use **update()** to encrypt data and use **doFinal()** to obtain **authTag**
+> or use **doFinal()** without using **update()**. In the decryption process, you can either use **update()** or
+> **doFinal()** once to decrypt data and verify the tag.
 
 **Since:** 23
 
@@ -1001,18 +928,18 @@ update(data: DataBlob, callback: AsyncCallback<DataBlob | null>): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| data | [DataBlob](arkts-cryptoarchitecture-cryptoframework-datablob-i.md) | Yes | 表示要加密或解密的数据。 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;DataBlob \| null&gt; | Yes | 回调函数。当更新加/解密数据成功时，err为undefined，data为加密或解密 后的数据；否则为错误对象。 |
+| data | [DataBlob](arkts-cryptoarchitecture-cryptoframework-datablob-i.md) | Yes | Indicates the data to be encrypted or decrypted. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;DataBlob \| null&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined**, and **data** is the encrypted or decrypted data obtained. Otherwise, **err** is an error object. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | 非法入参。可能的原因： &lt;br&gt;1. 必填参数未指定； &lt;br&gt;2. 参数类型不正确； &lt;br&gt;3. 参数验证失败。 |
-| 17630001 | 密码操作错误。 |
-| 17620001 | 内存操作失败。 |
-| 17620002 | 获取Native对象失败或参数转换失败。 |
-| 17620003 | 参数检查失败。可能的原因： &lt;br&gt;1. 数据过长。 |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Invalid parameters. Possible causes: &lt;br&gt;1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; &lt;br&gt;3. Parameter verification failed. |
+| [17630001](../errorcode-crypto-framework.md#17630001-cryptographic-operation-error) | Crypto operation error. |
+| [17620001](../errorcode-crypto-framework.md#17620001-memory-operation-failed) | Memory operation failed. |
+| [17620002](../errorcode-crypto-framework.md#17620002-failed-to-obtain-the-native-object-or-convert-parameters) | Failed to obtain the native object or convert parameters. |
+| [17620003](../errorcode-crypto-framework.md#17620003-parameter-check-failed) | Parameter check failed. Possible causes: &lt;br&gt;1. The data is too long. |
 
 ## update
 
@@ -1020,30 +947,39 @@ update(data: DataBlob, callback: AsyncCallback<DataBlob | null>): void
 update(data: DataBlob): Promise<DataBlob>
 ```
 
-分段更新加密或者解密数据操作。使用Promise异步回调。
+Updates the data to encrypt or decrypt by segment. This API uses a promise to return the result.
 
-&lt;br&gt;必须在对[Cipher](arkts-cryptoarchitecture-cryptoframework-cipher-i.md)实例使用  
-[init()](arkts-cryptoarchitecture-cryptoframework-cipher-i.md#init)初始化后，才能使用本函数。
+&lt;br&gt;This API can be called only after the [Cipher](arkts-cryptoarchitecture-cryptoframework-cipher-i.md) instance is initialized by using [init()](arkts-cryptoarchitecture-cryptoframework-cipher-i.md#init).
 
-> **说明：**
+> **NOTE：**
 > 
-> 1. 在进行对称加解密操作时，如果开发者对各分组模式不够熟悉，建议每次调用**update**和**doFinal**后，都判断结果是否为null。如果结果
-> 不为null，则取出其中的数据进行拼接，以形成完整的密文或明文。这是因为选择的分组模式等各项规格可能会影响**update**和**doFinal**的
-> 结果。
-> &lt;br&gt;例如，对于ECB和CBC模式，不论**update**传入的数据是否为分组长度的整数倍，都会以分组作为基本单位进行加密或解密，并输出本次
-> **update**新产生的加密或解密分组结果。
-> &lt;br&gt;可以理解为，**update**只要凑满一个新的分组就会有输出，如果没有凑满则此次**update**输出为null，把当前还没被加密或解密的数据留着，
-> 等下一次**update**或**doFinal**传入数据的时候，拼接起来继续凑分组。
-> &lt;br&gt;最后**doFinal**的时候，会把剩下的还没加/解密的数据，根据[createCipher](arkts-cryptoarchitecture-cryptoframework-createcipher-f.md#createcipher)时设置的
-> padding模式进行填充，补齐到分组的整数倍长度，再输出剩余加解密结果。
-> &lt;br&gt;而对于可以将分组密码转化为流模式实现的模式，还可能出现密文长度和明文长度相同的情况等。
-> 2. 根据数据量，可以不调用**update**（即**init**完成后直接调用**doFinal**）或多次调用**update**。
-> &lt;br&gt;算法库目前没有对**update**（单次或累计）的数据量设置大小限制，建议对于大数据量的对称加解密，可以采用多次**update**的方式传入数据。
-> &lt;br&gt;有关在多次**update()**调用中传递数据的示例代码的详细信息，请参见
-> [使用AES对称密钥分段加密和解密（GCM模式）](../../../security/CryptoArchitectureKit/crypto-aes-sym-encrypt-decrypt.md)。
-> 3. RSA或SM2非对称加解密不支持**update()**。
-> 4. 对于CCM模式的对称加解密算法，加密时只能调用1次**update**接口加密数据并调用**doFinal**接口获取tag，或直接调用**doFinal**
-> 接口加密数据并获取tag，解密时只能调用1次**update**接口或调用1次**doFinal**接口解密数据并验证tag。
+> 1. The results of **update()** and **doFinal()** may vary with the block mode used. If you are not familiar
+> with the block modes, you are advised to check each **update()** and **doFinal()** result to ensure that the
+> results are not **null**. When a valid result is returned, extract and concatenate the data to form a complete
+> ciphertext or plaintext.
+> &lt;br&gt;For example, in ECB and CBC modes, encryption and decryption are performed by block regardless of whether the
+> data input by **update()** is an integer multiple of the block size, and **update()** returns the newly
+> processed block data.
+> &lt;br&gt;That is, data is returned as long as the data passed in by **update()** reaches the size of a block. Otherwise,
+> **null** is returned and the data will be retained until a block is formed in the next **update()** or
+> **doFinal()**.
+> &lt;br&gt;In the final **doFinal()** operation, the remaining unprocessed data is padded based on the padding mode set in
+> [createCipher](arkts-cryptoarchitecture-cryptoframework-createcipher-f.md#createcipher) to the integer multiple of the block size to produce the
+> final encrypted or decrypted data.
+> &lt;br&gt;For block cipher modes that can be converted to stream mode, the ciphertext length may be the same as the
+> plaintext length.
+> 2. You can call **update()** multiple times or skip calling **update()** (call **doFinal()** directly after
+> **init()**), depending on the data volume.
+> &lt;br&gt;The amount of the data to be passed in by **update()** (one-time or accumulative) is not limited. If there is a
+> large amount of data, you are advised to pass data in multiple **update()** calls rather than processing it all
+> at once.
+> &lt;br&gt;For details about the sample code for passing data in multiple **update()** calls, see
+> [Encryption and Decryption by Segment with an AES Symmetric Key (GCM Mode)](../../../security/CryptoArchitectureKit/crypto-aes-sym-encrypt-decrypt.md).
+> 3. RSA or SM2 asymmetric encryption and decryption do not support **update()**.
+> 4. If CCM is used in symmetric encryption or decryption, **update()** can be called only once. In the
+> encryption process, you can either use **update()** to encrypt data and use **doFinal()** to obtain **authTag**
+> or use **doFinal()** without using **update()**. In the decryption process, you can either use **update()** or
+> **doFinal()** once to decrypt data and verify the tag.
 
 **Since:** 9
 
@@ -1061,23 +997,23 @@ update(data: DataBlob): Promise<DataBlob>
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| data | [DataBlob](arkts-cryptoarchitecture-cryptoframework-datablob-i.md) | Yes | 加密或者解密的数据。data不能为null。 |
+| data | [DataBlob](arkts-cryptoarchitecture-cryptoframework-datablob-i.md) | Yes | Data to encrypt or decrypt. It cannot be null. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;DataBlob&gt; | Promise对象，返回此次更新的加密或解密结果。 |
+| Promise&lt;DataBlob&gt; | Promise used to return the **DataBlob** (containing the encrypted or decrypted data). |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | 非法入参。可能的原因： &lt;br&gt;1. 必填参数未指定； &lt;br&gt;2. 参数类型不正确； &lt;br&gt;3. 参数验证失败。 |
-| 17630001 | 密码操作错误。 |
-| 17620001 | 内存操作失败。 |
-| 17620002 | 获取Native对象失败或参数转换失败。 |
-| 17620003 | 参数检查失败。可能的原因： &lt;br&gt;1. 数据过长。<br>**Applicable version:** 22 and later |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Invalid parameters. Possible causes: &lt;br&gt;1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; &lt;br&gt;3. Parameter verification failed. |
+| [17630001](../errorcode-crypto-framework.md#17630001-cryptographic-operation-error) | Crypto operation error. |
+| [17620001](../errorcode-crypto-framework.md#17620001-memory-operation-failed) | Memory operation failed. |
+| [17620002](../errorcode-crypto-framework.md#17620002-failed-to-obtain-the-native-object-or-convert-parameters) | Failed to obtain the native object or convert parameters. |
+| [17620003](../errorcode-crypto-framework.md#17620003-parameter-check-failed) | Parameter check failed. Possible causes: &lt;br&gt;1. The data is too long.<br>**Applicable version:** 22 and later |
 
 ## update
 
@@ -1085,27 +1021,37 @@ update(data: DataBlob): Promise<DataBlob>
 update(data: DataBlob): Promise<DataBlob | null>
 ```
 
-使用输入数据更新加密操作，并反馈此次加密或解密的数据。使用Promise异步回调。
+Updates the crypto operation with the input data, and feeds back the encrypted or decrypted data this time. This API uses a promise to return the result.
 
-> **说明：**
+> **NOTE：**
 > 
-> 1. 在进行对称加解密操作时，如果开发者对各分组模式不够熟悉，建议每次调用**update**和**doFinal**后，都判断结果是否为null。如果结果
-> 不为null，则取出其中的数据进行拼接，以形成完整的密文或明文。这是因为选择的分组模式等各项规格可能会影响**update**和**doFinal**的
-> 结果。
-> &lt;br&gt;例如，对于ECB和CBC模式，不论**update**传入的数据是否为分组长度的整数倍，都会以分组作为基本单位进行加密或解密，并输出本次
-> **update**新产生的加密或解密分组结果。
-> &lt;br&gt;可以理解为，**update**只要凑满一个新的分组就会有输出，如果没有凑满则此次**update**输出为null，把当前还没被加密或解密的数据留着，
-> 等下一次**update**或**doFinal**传入数据的时候，拼接起来继续凑分组。
-> &lt;br&gt;最后**doFinal**的时候，会把剩下的还没加/解密的数据，根据[createCipher](arkts-cryptoarchitecture-cryptoframework-createcipher-f.md#createcipher)时设置的
-> padding模式进行填充，补齐到分组的整数倍长度，再输出剩余加解密结果。
-> &lt;br&gt;而对于可以将分组密码转化为流模式实现的模式，还可能出现密文长度和明文长度相同的情况等。
-> 2. 根据数据量，可以不调用**update**（即**init**完成后直接调用**doFinal**）或多次调用**update**。
-> &lt;br&gt;算法库目前没有对**update**（单次或累计）的数据量设置大小限制，建议对于大数据量的对称加解密，可以采用多次**update**的方式传入数据。
-> &lt;br&gt;有关在多次**update()**调用中传递数据的示例代码的详细信息，请参见
-> [使用AES对称密钥分段加密和解密（GCM模式）](../../../security/CryptoArchitectureKit/crypto-aes-sym-encrypt-decrypt.md)。
-> 3. RSA或SM2非对称加解密不支持**update()**。
-> 4. 对于CCM模式的对称加解密算法，加密时只能调用1次**update**接口加密数据并调用**doFinal**接口获取tag，或直接调用**doFinal**
-> 接口加密数据并获取tag，解密时只能调用1次**update**接口或调用1次**doFinal**接口解密数据并验证tag。
+> 1. The results of **update()** and **doFinal()** may vary with the block mode used. If you are not familiar
+> with the block modes, you are advised to check each **update()** and **doFinal()** result to ensure that the
+> results are not **null**. When a valid result is returned, extract and concatenate the data to form a complete
+> ciphertext or plaintext.
+> &lt;br&gt;For example, in ECB and CBC modes, encryption and decryption are performed by block regardless of whether the
+> data input by **update()** is an integer multiple of the block size, and **update()** returns the newly
+> processed block data.
+> &lt;br&gt;That is, data is returned as long as the data passed in by **update()** reaches the size of a block. Otherwise,
+> **null** is returned and the data will be retained until a block is formed in the next **update()** or
+> **doFinal()**.
+> &lt;br&gt;In the final **doFinal()** operation, the remaining unprocessed data is padded based on the padding mode set in
+> [createCipher](arkts-cryptoarchitecture-cryptoframework-createcipher-f.md#createcipher) to the integer multiple of the block size to produce the
+> final encrypted or decrypted data.
+> &lt;br&gt;For block cipher modes that can be converted to stream mode, the ciphertext length may be the same as the
+> plaintext length.
+> 2. You can call **update()** multiple times or skip calling **update()** (call **doFinal()** directly after
+> **init()**), depending on the data volume.
+> &lt;br&gt;The amount of the data to be passed in by **update()** (one-time or accumulative) is not limited. If there is a
+> large amount of data, you are advised to pass data in multiple **update()** calls rather than processing it all
+> at once.
+> &lt;br&gt;For details about the sample code for passing data in multiple **update()** calls, see
+> [Encryption and Decryption by Segment with an AES Symmetric Key (GCM Mode)](../../../security/CryptoArchitectureKit/crypto-aes-sym-encrypt-decrypt.md).
+> 3. RSA or SM2 asymmetric encryption and decryption do not support **update()**.
+> 4. If CCM is used in symmetric encryption or decryption, **update()** can be called only once. In the
+> encryption process, you can either use **update()** to encrypt data and use **doFinal()** to obtain **authTag**
+> or use **doFinal()** without using **update()**. In the decryption process, you can either use **update()** or
+> **doFinal()** once to decrypt data and verify the tag.
 
 **Since:** 23
 
@@ -1121,23 +1067,23 @@ update(data: DataBlob): Promise<DataBlob | null>
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| data | [DataBlob](arkts-cryptoarchitecture-cryptoframework-datablob-i.md) | Yes | 表示要加密或解密的数据。 |
+| data | [DataBlob](arkts-cryptoarchitecture-cryptoframework-datablob-i.md) | Yes | Indicates the data to be encrypted or decrypted. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;DataBlob \| null&gt; | Promise对象，返回更新的加密或解密结果。 |
+| Promise&lt;DataBlob \| null&gt; | Promise used to return the encrypted or decrypted data. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | 非法入参。可能的原因： &lt;br&gt;1. 必填参数未指定； &lt;br&gt;2. 参数类型不正确； &lt;br&gt;3. 参数验证失败。 |
-| 17630001 | 密码操作错误。 |
-| 17620001 | 内存操作失败。 |
-| 17620002 | 获取Native对象失败或参数转换失败。 |
-| 17620003 | 参数检查失败。可能的原因： &lt;br&gt;1. 数据过长。 |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Invalid parameters. Possible causes: &lt;br&gt;1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; &lt;br&gt;3. Parameter verification failed. |
+| [17630001](../errorcode-crypto-framework.md#17630001-cryptographic-operation-error) | Crypto operation error. |
+| [17620001](../errorcode-crypto-framework.md#17620001-memory-operation-failed) | Memory operation failed. |
+| [17620002](../errorcode-crypto-framework.md#17620002-failed-to-obtain-the-native-object-or-convert-parameters) | Failed to obtain the native object or convert parameters. |
+| [17620003](../errorcode-crypto-framework.md#17620003-parameter-check-failed) | Parameter check failed. Possible causes: &lt;br&gt;1. The data is too long. |
 
 ## updateSync
 
@@ -1145,13 +1091,13 @@ update(data: DataBlob): Promise<DataBlob | null>
 updateSync(data: DataBlob): DataBlob
 ```
 
-分段更新加密或者解密数据操作。
+Updates the data to encrypt or decrypt by segment.
 
-&lt;br&gt;必须在对[Cipher](arkts-cryptoarchitecture-cryptoframework-cipher-i.md)实例使用[initSync()](arkts-cryptoarchitecture-cryptoframework-cipher-i.md#initsync)初始化后，才能使用本函数。
+&lt;br&gt;This API can be called only after the [Cipher](arkts-cryptoarchitecture-cryptoframework-cipher-i.md) instance is initialized by using [initSync()](arkts-cryptoarchitecture-cryptoframework-cipher-i.md#initsync).
 
-&lt;br&gt;其他注意事项同上异步接口说明。
+&lt;br&gt;See **NOTE：**in **update()** for other precautions.
 
-&lt;br&gt;&lt;br&gt;**说明：**&lt;br&gt;建议优先使用异步API，{@link update}。同步API可能因系统繁忙、高负载等原因耗时较长而阻塞主线程。因此建议在子线程中调用同步API，以避免阻塞主线程。
+&lt;br&gt;&lt;br&gt;**NOTE：**&lt;br&gt;It is recommended to prioritize the use of asynchronous API, {@link update}. Synchronous API may take a long time and block the main thread due to system busyness, high load, and other reasons. Therefore,it is advised to invoke synchronous API within a child thread to avoid blocking the main thread.
 
 **Since:** 12
 
@@ -1167,23 +1113,23 @@ updateSync(data: DataBlob): DataBlob
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| data | [DataBlob](arkts-cryptoarchitecture-cryptoframework-datablob-i.md) | Yes | 加密或者解密的数据。data不能为null。 |
+| data | [DataBlob](arkts-cryptoarchitecture-cryptoframework-datablob-i.md) | Yes | Data to encrypt or decrypt. It cannot be null. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [DataBlob](arkts-cryptoarchitecture-cryptoframework-datablob-i.md) | 返回此次更新的加/解密结果DataBlob。 |
+| [DataBlob](arkts-cryptoarchitecture-cryptoframework-datablob-i.md) | Encryption/decryption result. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | 非法入参。可能的原因： &lt;br&gt;1. 必填参数未指定； &lt;br&gt;2. 参数类型不正确； &lt;br&gt;3. 参数验证失败。 |
-| 17630001 | 密码操作错误。 |
-| 17620001 | 内存操作失败。 |
-| 17620002 | 获取Native对象失败或参数转换失败。 |
-| 17620003 | 参数检查失败。可能的原因： &lt;br&gt;1. 数据过长。<br>**Applicable version:** 22 and later |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Invalid parameters. Possible causes: &lt;br&gt;1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; &lt;br&gt;3. Parameter verification failed. |
+| [17630001](../errorcode-crypto-framework.md#17630001-cryptographic-operation-error) | Crypto operation error. |
+| [17620001](../errorcode-crypto-framework.md#17620001-memory-operation-failed) | Memory operation failed. |
+| [17620002](../errorcode-crypto-framework.md#17620002-failed-to-obtain-the-native-object-or-convert-parameters) | Failed to obtain the native object or convert parameters. |
+| [17620003](../errorcode-crypto-framework.md#17620003-parameter-check-failed) | Parameter check failed. Possible causes: &lt;br&gt;1. The data is too long.<br>**Applicable version:** 22 and later |
 
 ## updateSync
 
@@ -1191,9 +1137,9 @@ updateSync(data: DataBlob): DataBlob
 updateSync(data: DataBlob): DataBlob | null
 ```
 
-分段更新加密或者解密数据操作。
+Updates the data to encrypt or decrypt by segment.
 
-&lt;br&gt;&lt;br&gt;**说明：**&lt;br&gt;建议优先使用异步API，{@link update}。同步API可能因系统繁忙、高负载等原因耗时较长而阻塞主线程。因此建议在子线程中调用同步API，以避免阻塞主线程。
+&lt;br&gt;&lt;br&gt;**NOTE：**&lt;br&gt;It is recommended to prioritize the use of asynchronous API, {@link update}. Synchronous API may take a long time and block the main thread due to system busyness, high load, and other reasons. Therefore,it is advised to invoke synchronous API within a child thread to avoid blocking the main thread.
 
 **Since:** 23
 
@@ -1209,23 +1155,23 @@ updateSync(data: DataBlob): DataBlob | null
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| data | [DataBlob](arkts-cryptoarchitecture-cryptoframework-datablob-i.md) | Yes | 表示要加密或解密的数据。 |
+| data | [DataBlob](arkts-cryptoarchitecture-cryptoframework-datablob-i.md) | Yes | Indicates the data to be encrypted or decrypted. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [DataBlob](arkts-cryptoarchitecture-cryptoframework-datablob-i.md) | 加密时返回密文，解密时返回明文。 |
+| [DataBlob](arkts-cryptoarchitecture-cryptoframework-datablob-i.md) | ciphertext when encrypted or plaintext when decrypted. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | 非法入参。可能的原因： &lt;br&gt;1. 必填参数未指定； &lt;br&gt;2. 参数类型不正确； &lt;br&gt;3. 参数验证失败。 |
-| 17630001 | 密码操作错误。 |
-| 17620001 | 内存操作失败。 |
-| 17620002 | 获取Native对象失败或参数转换失败。 |
-| 17620003 | 参数检查失败。可能的原因： &lt;br&gt;1. 数据过长。 |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Invalid parameters. Possible causes: &lt;br&gt;1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; &lt;br&gt;3. Parameter verification failed. |
+| [17630001](../errorcode-crypto-framework.md#17630001-cryptographic-operation-error) | Crypto operation error. |
+| [17620001](../errorcode-crypto-framework.md#17620001-memory-operation-failed) | Memory operation failed. |
+| [17620002](../errorcode-crypto-framework.md#17620002-failed-to-obtain-the-native-object-or-convert-parameters) | Failed to obtain the native object or convert parameters. |
+| [17620003](../errorcode-crypto-framework.md#17620003-parameter-check-failed) | Parameter check failed. Possible causes: &lt;br&gt;1. The data is too long. |
 
 ## algName
 
@@ -1233,7 +1179,7 @@ updateSync(data: DataBlob): DataBlob | null
 readonly algName: string
 ```
 
-加解密生成器指定的算法名称。
+Indicates the algorithm name of the cipher object.
 
 **Type:** string
 

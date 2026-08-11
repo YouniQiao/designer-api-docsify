@@ -1,6 +1,6 @@
 # DialogBaseController
 
-用于控制对话框的类。
+The class used to control dialog.
 
 **Since:** 26.1.0
 
@@ -22,7 +22,7 @@ import { DialogButtonOrientation, DialogState, DialogResult, DialogBaseControlle
 close(): void
 ```
 
-关闭相应的对话框。
+Close the corresponding dialog.
 
 **Since:** 26.1.0
 
@@ -42,7 +42,7 @@ close(): void
 constructor()
 ```
 
-构造函数。
+The constructor.
 
 **Since:** 26.1.0
 
@@ -62,7 +62,7 @@ constructor()
 getState(): DialogState
 ```
 
-获取状态。
+Get the state.
 
 **Since:** 26.1.0
 
@@ -80,5 +80,5 @@ getState(): DialogState
 
 | Type | Description |
 | --- | --- |
-| [DialogState](arkts-arkui-arkui-dialog-dialogstate-e.md) | 返回状态。 |
+| [DialogState](arkts-arkui-arkui-dialog-dialogstate-e.md) | return the state. |
 

@@ -55,7 +55,7 @@ equals(other: StyledString): boolean
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| other | [StyledString](arkts-arkui-styledstring-c.md) | 是 | StyledString类型的比较对象。 |
+| other | [StyledString](arkts-arkui-styledstring-styledstring-c.md) | 是 | StyledString类型的比较对象。 |
 
 **返回值：**
 
@@ -93,13 +93,13 @@ static fromHtml(html: string): Promise<StyledString | undefined>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;StyledString \| undefined&gt; | [Promise](../../../arkts-utils/async-concurrency-overview.md#promise)对象，属性字符串。 |
+| Promise&lt;[StyledString](arkts-arkui-styledstring-styledstring-c.md) \| undefined&gt; | [Promise](../../../arkts-utils/async-concurrency-overview.md#promise)对象，属性字符串。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 170001 | Convert Error. |
+| [170001](../errorcode-styled-string.md#170001-转换错误) | Convert Error. |
 
 ## getString
 
@@ -188,7 +188,7 @@ subStyledString(start: int, length?: int): StyledString | undefined
 
 | 类型 | 说明 |
 | --- | --- |
-| [StyledString](arkts-arkui-styledstring-c.md) | 子属性字符串。&lt;br/&gt;**说明：** &lt;br/&gt;当start为合法入参时，length的默认值是被查询属性字符串对象的长度与start的值的差。&lt; br/&gt;当start和length越界或者必填传入undefined时，会抛出异常。 |
+| [StyledString](arkts-arkui-styledstring-styledstring-c.md) | 子属性字符串。&lt;br/&gt;**说明：** &lt;br/&gt;当start为合法入参时，length的默认值是被查询属性字符串对象的长度与start的值的差。&lt; br/&gt;当start和length越界或者必填传入undefined时，会抛出异常。 |
 
 ## toHtml
 
@@ -215,7 +215,7 @@ static toHtml(styledString: StyledString): string
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| styledString | [StyledString](arkts-arkui-styledstring-c.md) | 是 | 属性字符串。 |
+| styledString | [StyledString](arkts-arkui-styledstring-styledstring-c.md) | 是 | 属性字符串。 |
 
 **返回值：**
 
@@ -227,7 +227,7 @@ static toHtml(styledString: StyledString): string
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 401 | Parameter error. Possible causes: &lt;br&gt; 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameters types. &lt;br&gt; 3. Parameter verification failed. |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: &lt;br&gt; 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameters types. &lt;br&gt; 3. Parameter verification failed. |
 
 ## length
 

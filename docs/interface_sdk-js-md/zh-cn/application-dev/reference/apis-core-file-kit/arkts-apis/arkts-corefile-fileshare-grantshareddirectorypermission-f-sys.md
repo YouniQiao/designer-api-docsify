@@ -1,11 +1,5 @@
 # grantSharedDirectoryPermission（系统接口）
 
-## 导入模块
-
-```TypeScript
-import { fileShare } from 'kits/@kit.CoreFileKit';
-```
-
 ## grantSharedDirectoryPermission
 
 ```TypeScript
@@ -38,12 +32,14 @@ function grantSharedDirectoryPermission(): Promise<void>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 801 | Capability not supported. |
+| [801](../../errorcode-universal.md#801-该设备不支持此api) | Capability not supported. |
 | 13900001 | Operation not permitted. |
-| 201 | Permission verification failed, usually the result returned by VerifyAccessToken. |
-| 202 | The caller is not a system application. |
+| [201](../../errorcode-universal.md#201-权限校验失败) | Permission verification failed, usually the result returned by VerifyAccessToken. |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | The caller is not a system application. |
 
 ## 示例
+
+ArkTS-Dyn示例：
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -58,6 +54,23 @@ async function grantSharedDirectoryPermission() {
     });
   } catch (error) {
     console.error(`grantSharedDirectoryPermission error, Code: ${error.code}, message: ${error.message}`);
+  }
+}
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+import { fileShare } from '@kit.CoreFileKit';
+
+async function grantSharedDirectoryPermission() {
+  try {
+    await fileShare.grantSharedDirectoryPermission();
+    console.info("grantSharedDirectoryPermission success.");
+  }
+  catch (error) {
+    console.error('grantSharedDirectoryPermission error, Code: ' + error.code + ', message: ' + error.message);
   }
 }
 ```

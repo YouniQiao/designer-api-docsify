@@ -32,5 +32,5 @@ declare function createWatcher(filename: string, events: number, callback: Async
 
 | 类型 | 说明 |
 | --- | --- |
-| [Watcher](arkts-corefile-watcher-t.md) | Promise对象。返回文件变化监听的实例。 |
+| [Watcher](arkts-corefile-file-fs-watcher-i.md) | Promise对象。返回文件变化监听的实例。 |
 

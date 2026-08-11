@@ -1,6 +1,6 @@
 # ColorMetricsStop
 
-线性渐变颜色断点类型，用于描述渐进色颜色断点。
+ColorMetricsStop type
 
 **Since:** 23
 
@@ -16,7 +16,7 @@
 color: ColorMetrics
 ```
 
-线性渐变颜色断点的颜色值。
+Color property.
 
 **Type:** [ColorMetrics](arkts-arkui-graphics-colormetrics-c.md)
 
@@ -36,11 +36,9 @@ color: ColorMetrics
 offset: Length
 ```
 
-线性渐变颜色断点的断点值，取值为0~1之间的比例值，如果数据值小于0则置为0，如果数据值大于1则置为1。 
+the color offset. value range [0, 1].
 
-**说明：**
-
-如果传入字符串类型且内容为数字，则转换为对应的数值。例如'10vp'转换为10，'10%'转换为0.1。
+**NOTE：**If the value specified is less than 0, the value **0** is used.If the value specified is greater than 1, the value **1** is used.
 
 **Type:** [Length](arkts-arkui-length-t.md)
 

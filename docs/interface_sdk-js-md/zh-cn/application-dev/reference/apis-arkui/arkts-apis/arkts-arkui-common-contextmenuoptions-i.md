@@ -218,7 +218,7 @@ backgroundEffect?: BackgroundEffectOptions
 
 Defines the menu's background effect with options
 
-**类型：** [BackgroundEffectOptions](../arkts-components/arkts-arkui-backgroundeffectoptions-i.md)
+**类型：** [BackgroundEffectOptions](arkts-arkui-common-backgroundeffectoptions-i.md)
 
 **起始版本：** 23
 
@@ -664,7 +664,7 @@ preview?: MenuPreviewMode | CustomBuilder
 
 Preview displayed when the context menu is triggered by a long-press or use the isShown variable of bindContextMenu to display the preview content style of the menu.&lt;p&gt;&lt;strong&gt;NOTE&lt;/strong&gt;:&lt;br&gt;This parameter has no effect when responseType is set to ResponseType.RightClick.&lt;br&gt;If preview is set to MenuPreviewMode.NONE or is not set, the enableArrow parameter is effective.&lt;br&gt;If preview is set to MenuPreviewMode.IMAGE or CustomBuilder, no arrow will be displayed even when enableArrow is true.&lt;/p&gt;
 
-**类型：** [MenuPreviewMode](../arkts-components/arkts-arkui-menupreviewmode-e.md) \| CustomBuilder
+**类型：** [MenuPreviewMode](arkts-arkui-common-menupreviewmode-e.md) \| CustomBuilder
 
 **默认值：** MenuPreviewMode.NONE
 
@@ -686,7 +686,7 @@ previewAnimationOptions?: ContextMenuAnimationOptions
 
 The preview animator options.
 
-**类型：** [ContextMenuAnimationOptions](../arkts-components/arkts-arkui-contextmenuanimationoptions-i.md)
+**类型：** [ContextMenuAnimationOptions](arkts-arkui-common-contextmenuanimationoptions-i.md)
 
 **起始版本：** 23
 
@@ -726,7 +726,7 @@ previewScaleMode?: PreviewScaleMode
 
 Defines the scaling mode for custom preview of contextMenu.
 
-**类型：** [PreviewScaleMode](arkts-arkui-common-previewscalemode-e.md)
+**类型：** [PreviewScaleMode](../arkts-components/arkts-arkui-previewscalemode-e.md)
 
 **默认值：** PreviewScaleMode.AUTO
 
@@ -810,7 +810,7 @@ transition?: TransitionEffect
 
 Defines the transition effect of menu opening and closing.
 
-**类型：** [TransitionEffect](arkts-arkui-common-transitioneffect-c.md)
+**类型：** [TransitionEffect](../arkts-components/arkts-arkui-transitioneffect-c.md)
 
 **起始版本：** 23
 

@@ -24,7 +24,7 @@ import { mechanicManager } from 'kits/@kit.MechanicKit';
 pitch?: double
 ```
 
-俯仰角，范围从-2π到2*π，以弧度为单位。
+Pitch angle, ranging from -2*Math.PI to 2*Math.PI, measured in radians.
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：double
 
@@ -44,7 +44,7 @@ pitch?: double
 roll?: double
 ```
 
-滚动角度，范围从-2π到2*π，以弧度为单位。
+Roll angle, ranging from -2*Math.PI to 2*Math.PI, measured in radians.
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：double
 
@@ -64,7 +64,7 @@ roll?: double
 yaw?: double
 ```
 
-偏航角，范围从-2π到2*π，以弧度为单位。
+Yaw angle, ranging from -2*Math.PI to 2*Math.PI, measured in radians.
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：double
 

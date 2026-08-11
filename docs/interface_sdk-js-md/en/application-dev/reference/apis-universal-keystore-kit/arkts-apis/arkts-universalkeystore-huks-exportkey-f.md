@@ -12,13 +12,7 @@ import { huks } from 'kits/@kit.UniversalKeystoreKit';
 function exportKey(keyAlias: string, options: HuksOptions, callback: AsyncCallback<HuksResult>): void
 ```
 
-导出密钥，使用Callback方式回调异步返回的结果。
-
-> **说明：**
-> 
-> 从API version 8开始支持，从API version 9开始废弃，建议使用
-> [huks.exportKeyItem&lt;sup&gt;9+&lt;/sup&gt;](arkts-universalkeystore-huks-exportkeyitem-f.md#exportkeyitem)
-> 替代。
+Exports a key. This API uses an asynchronous callback to return the result.
 
 **Since:** 8
 
@@ -36,9 +30,9 @@ function exportKey(keyAlias: string, options: HuksOptions, callback: AsyncCallba
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| keyAlias | string | Yes | 密钥别名，应与所用密钥生成时使用的别名相同。 |
-| options | [HuksOptions](arkts-universalkeystore-huks-huksoptions-i.md) | Yes | 空对象（此处传空即可）。 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;HuksResult&gt; | Yes | 回调函数。当导出密钥成功时，err为undefined，data为获取到的HuksResult；否则为错误对象。HuksResult的 outData返回从密钥中导出的公钥。 |
+| keyAlias | string | Yes | Key alias, which must be the same as the alias used when the key was generated. |
+| options | [HuksOptions](arkts-universalkeystore-huks-huksoptions-i.md) | Yes | Empty object (leave this parameter empty). |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;HuksResult&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined**, and **data** is the obtained **HuksResult**. Otherwise, **err** is an error object. **outData** of **HuksResult** returns the public key exported. |
 
 ## Examples
 
@@ -61,12 +55,7 @@ huks.exportKey(keyAlias, emptyOptions, (err, data) => {
 function exportKey(keyAlias: string, options: HuksOptions): Promise<HuksResult>
 ```
 
-导出密钥。使用Promise异步回调。
-
-> **说明：**
-> 
-> 从API version 8开始支持，从API version 9开始废弃，建议使用
-> [huks.exportKeyItem&lt;sup&gt;9+&lt;/sup&gt;](arkts-universalkeystore-huks-exportkeyitem-f.md#exportkeyitem)替代。
+Exports a key. This API uses a promise to return the result.
 
 **Since:** 8
 
@@ -84,14 +73,14 @@ function exportKey(keyAlias: string, options: HuksOptions): Promise<HuksResult>
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| keyAlias | string | Yes | 密钥别名，应与所用密钥生成时使用的别名相同。 |
-| options | [HuksOptions](arkts-universalkeystore-huks-huksoptions-i.md) | Yes | 空对象（此处传空即可）。 |
+| keyAlias | string | Yes | Key alias, which must be the same as the alias used when the key was generated. |
+| options | [HuksOptions](arkts-universalkeystore-huks-huksoptions-i.md) | Yes | Empty object (leave this parameter empty). |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;HuksResult&gt; | Promise对象，返回HuksResult。HuksResult的outData返回从HUKS中导出的公钥。 |
+| Promise&lt;HuksResult&gt; | Promise that returns **HuksResult**. **outData** of **HuksResult** returns the public key exported from HUKS. |
 
 ## Examples
 

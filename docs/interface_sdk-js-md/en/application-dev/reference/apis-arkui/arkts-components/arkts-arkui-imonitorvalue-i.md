@@ -1,5 +1,7 @@
 # IMonitorValue
 
+Define IMonitorValue interface
+
 **Since:** 12
 
 **ArkTS mode:** ArkTS-Dyn only, since version 12.
@@ -14,7 +16,7 @@
 before: T
 ```
 
-状态变量变化前的值。
+Get the previous value.
 
 **Type:** T
 
@@ -38,7 +40,7 @@ before: T
 now: T
 ```
 
-状态变量当前的值。
+Get current value.
 
 **Type:** T
 
@@ -62,7 +64,7 @@ now: T
 path: string
 ```
 
-状态变量的路径。
+Monitored path input by the user.
 
 **Type:** string
 

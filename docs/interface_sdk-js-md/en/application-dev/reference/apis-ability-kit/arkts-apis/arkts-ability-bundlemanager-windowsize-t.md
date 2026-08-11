@@ -4,7 +4,7 @@
 export type WindowSize = _AbilityInfo.WindowSize
 ```
 
-窗口尺寸。
+Defines the window size.
 
 **Since:** 9
 

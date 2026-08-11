@@ -1,0 +1,91 @@
+# DrawingRenderingContext
+
+**DrawingRenderingContext** provides a rendering context for drawing rectangles, text, images, and other objects on a canvas.
+
+**Since:** 12
+
+<!--Device-unnamed-declare class DrawingRenderingContext--><!--Device-unnamed-declare class DrawingRenderingContext-End-->
+
+**System capability:** SystemCapability.ArkUI.ArkUI.Full
+
+## constructor
+
+```TypeScript
+constructor(unit?: LengthMetricsUnit)
+```
+
+Creates a **Canvas** object for drawing operations using the drawing API. Configuration of the unit mode for the **DrawingRenderingContext** object is supported.
+
+**Since:** 12
+
+**Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-DrawingRenderingContext-constructor(unit?: LengthMetricsUnit)--><!--Device-DrawingRenderingContext-constructor(unit?: LengthMetricsUnit)-End-->
+
+**System capability:** SystemCapability.ArkUI.ArkUI.Full
+
+**Parameters:**
+
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| unit | [LengthMetricsUnit](../arkts-apis/arkts-arkui-graphics-lengthmetricsunit-e.md) | No |
+
+## invalidate
+
+```TypeScript
+invalidate(): void
+```
+
+Invalidates the component and triggers re-rendering of the component.
+
+**Since:** 12
+
+**Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-DrawingRenderingContext-invalidate(): void--><!--Device-DrawingRenderingContext-invalidate(): void-End-->
+
+**System capability:** SystemCapability.ArkUI.ArkUI.Full
+
+## canvas
+
+```TypeScript
+get canvas(): DrawingCanvas
+```
+
+Obtains the canvas object for drawing content.
+
+**Type:** [DrawingCanvas](arkts-arkui-drawingcanvas-t.md)
+
+**Since:** 12
+
+**Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-DrawingRenderingContext-get canvas(): DrawingCanvas--><!--Device-DrawingRenderingContext-get canvas(): DrawingCanvas-End-->
+
+**System capability:** SystemCapability.ArkUI.ArkUI.Full
+
+## size
+
+```TypeScript
+get size(): Size
+```
+
+Obtains the size of the **DrawingRenderingContext** object.
+
+**Type:** [Size](../arkts-apis/arkts-arkui-window-size-i.md)
+
+**Since:** 12
+
+**Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-DrawingRenderingContext-get size(): Size--><!--Device-DrawingRenderingContext-get size(): Size-End-->
+
+**System capability:** SystemCapability.ArkUI.ArkUI.Full

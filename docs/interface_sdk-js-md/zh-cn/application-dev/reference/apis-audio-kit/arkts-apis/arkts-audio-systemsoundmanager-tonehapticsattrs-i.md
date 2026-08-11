@@ -12,12 +12,6 @@
 
 **系统能力：** SystemCapability.Multimedia.SystemSound.Core
 
-## 导入模块
-
-```TypeScript
-import { systemSoundManager } from 'kits/@kit.AudioKit';
-```
-
 ## getFileName
 
 ```TypeScript
@@ -44,7 +38,7 @@ getFileName(): string
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 202 | Caller is not a system application. |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Caller is not a system application. |
 
 ## 示例
 
@@ -78,7 +72,7 @@ getGentleFileName(): string | null
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 202 | Caller is not a system application. |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Caller is not a system application. |
 
 ## 示例
 
@@ -112,7 +106,7 @@ getGentleTitle(): string | null
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 202 | Caller is not a system application. |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Caller is not a system application. |
 
 ## 示例
 
@@ -146,7 +140,7 @@ getGentleUri(): string | null
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 202 | Caller is not a system application. |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Caller is not a system application. |
 
 ## 示例
 
@@ -180,7 +174,7 @@ getTitle(): string
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 202 | Caller is not a system application. |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Caller is not a system application. |
 
 ## 示例
 
@@ -214,7 +208,7 @@ getUri(): string
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 202 | Caller is not a system application. |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Caller is not a system application. |
 
 ## 示例
 

@@ -12,7 +12,7 @@ import { print } from 'kits/@kit.BasicServicesKit';
 function on(type: 'printerStateChange', callback: (state: PrinterState, info: PrinterInfo) => void): void
 ```
 
-注册打印机状态变化事件回调，使用callback回调。
+Registers a listener for printer state change events. This API uses a callback to return the result.
 
 **Since:** 10
 
@@ -30,16 +30,16 @@ function on(type: 'printerStateChange', callback: (state: PrinterState, info: Pr
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'printerStateChange' | Yes | 表示打印机状态改变。 |
-| callback | (state: PrinterState, info: PrinterInfo) =&gt; void | Yes | 打印机状态改变之后的回调。 |
+| type | 'printerStateChange' | Yes | Listening type. The value is fixed at **'printerStateChange'**. |
+| callback | (state: PrinterState, info: PrinterInfo) =&gt; void | Yes | Callback used to return the result. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
-| 201 | the application does not have permission to call this function. |
-| 202 | not system application |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
+| [201](../../errorcode-universal.md#201-permission-denied) | the application does not have permission to call this function. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | not system application |
 
 ## Examples
 
@@ -64,7 +64,7 @@ print.on('printerStateChange', (state: print.PrinterState, info: print.PrinterIn
 function on(type: 'jobStateChange', callback: (state: PrintJobState, job: PrintJob) => void): void
 ```
 
-注册打印任务状态变化事件回调，使用callback回调。
+Registers a listener for print job state change events. This API uses a callback to return the result.
 
 **Since:** 10
 
@@ -82,16 +82,16 @@ function on(type: 'jobStateChange', callback: (state: PrintJobState, job: PrintJ
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'jobStateChange' | Yes | 表示打印任务状态改变。 |
-| callback | (state: PrintJobState, job: PrintJob) =&gt; void | Yes | 打印任务状态改变之后的回调。 |
+| type | 'jobStateChange' | Yes | Listening type. The value is fixed at **'jobStateChange'**. |
+| callback | (state: PrintJobState, job: PrintJob) =&gt; void | Yes | Callback used to return the result. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
-| 201 | the application does not have permission to call this function. |
-| 202 | not system application |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
+| [201](../../errorcode-universal.md#201-permission-denied) | the application does not have permission to call this function. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | not system application |
 
 ## Examples
 
@@ -110,7 +110,7 @@ print.on('jobStateChange', (state: print.PrintJobState, job: print.PrintJob) => 
 function on(type: 'extInfoChange', callback: (extensionId: string, info: string) => void): void
 ```
 
-注册打印扩展信息变化事件回调，使用callback回调。
+Registers a listener for printer extension information change events. This API uses a callback to return the result.
 
 **Since:** 10
 
@@ -128,16 +128,16 @@ function on(type: 'extInfoChange', callback: (extensionId: string, info: string)
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'extInfoChange' | Yes | 表示打印扩展信息改变。 |
-| callback | (extensionId: string, info: string) =&gt; void | Yes | 打印扩展信息改变之后的回调。 |
+| type | 'extInfoChange' | Yes | Listening type. The value is fixed at **'extInfoChange'**. |
+| callback | (extensionId: string, info: string) =&gt; void | Yes | Callback used to return the result. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
-| 201 | the application does not have permission to call this function. |
-| 202 | not system application |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
+| [201](../../errorcode-universal.md#201-permission-denied) | the application does not have permission to call this function. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | not system application |
 
 ## Examples
 

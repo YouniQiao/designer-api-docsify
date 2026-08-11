@@ -1,11 +1,12 @@
 # CmsGenerator
 
-提供生成CMS（Cryptographic Message Syntax）消息的API。
+Provides APIs for generating the messages in CMS format.
 
-> **说明：**
+> **NOTE：**
 > 
-> PKCS #7是用于存储签名或加密数据的标准语法。注意CMS是PKCS #7的扩展，PKCS #7支持的数据类型包括数据、签名数据、封装数据、
-> 签名和封装数据、摘要数据、加密数据。常用于保护数据的完整性和机密性。
+> PKCS #7 is a standard syntax for storing signed or encrypted data. CMS is an extension of PKCS #7. PKCS #7
+> supports data types including data, signed data, enveloped data, signed and enveloped data, digested
+> data, and encrypted data. It is often used to protect data integrity and confidentiality.
 
 **Since:** 18
 
@@ -27,9 +28,9 @@ import { cert } from 'kits/@kit.DeviceCertificateKit';
 addCert(cert: X509Cert): void
 ```
 
-用于添加内容类型为SIGNED_DATA的CMS的证书，例如签名证书的颁发者证书。
+Adds a CMS certificate of the **SIGNED_DATA** content type, for example, the issuer certificate of a signing certificate.
 
-&lt;br&gt;如果未调用addSigner接口，并且仅添加证书后，生成的CMS签名数据将只包含证书。
+&lt;br&gt;If the **addSigner** API is not called and only the certificate is added, the generated CMS signed data contains only the certificate.
 
 **Since:** 18
 
@@ -45,16 +46,16 @@ addCert(cert: X509Cert): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| cert | [X509Cert](../../apis-network-kit/arkts-apis/arkts-network-http-x509cert-t.md) | Yes | 要添加的X.509证书。 |
+| cert | [X509Cert](../../apis-network-kit/arkts-apis/arkts-network-http-x509cert-t.md) | Yes | X.509 certificate to add. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 19020002 | 运行时外部错误。可能的原因： &lt;br&gt;1. 内存拷贝失败； &lt;br&gt;2. 系统内部出现空指针； &lt;br&gt;3. 获取Native对象失败或参数转换失败。 |
-| 401 | 参数错误。可能的原因： &lt;br&gt;1. 必填参数未指定； &lt;br&gt;2. 参数类型不正确； &lt;br&gt;3. 参数校验失败。 |
-| 19020001 | 内存错误。 |
-| 19030001 | 调用三方算法库API出错。 |
+| [19020002](../errorcode-cert.md#19020002-runtime-error) | Runtime error. Possible causes: &lt;br&gt;1. Memory copy failed; &lt;br&gt;2. A null pointer occurs inside the system; &lt;br&gt;3. Failed to obtain the native object or convert parameters. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Invalid parameters. Possible causes: &lt;br&gt;1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; &lt;br&gt;3. Parameter verification failed. |
+| [19020001](../errorcode-cert.md#19020001-memory-error) | Memory malloc failed. |
+| [19030001](../errorcode-cert.md#19030001-crypto-operation-error) | Crypto operation error. |
 
 ## Examples
 
@@ -119,9 +120,9 @@ function testAddCert() {
 addRecipientInfo(recipientInfo: CmsRecipientInfo): Promise<void>
 ```
 
-为内容类型为ENVELOPED_DATA的CMS添加接收者信息。使用Promise方式返回结果。
+Adds recipient information to a CMS with the content type of **ENVELOPED_DATA**. This API uses a promise to return the result.
 
-&lt;br&gt;该方法至少需要设置一个接收者。
+&lt;br&gt;At least one recipient needs to be set.
 
 **Since:** 22
 
@@ -137,22 +138,22 @@ addRecipientInfo(recipientInfo: CmsRecipientInfo): Promise<void>
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| recipientInfo | [CmsRecipientInfo](arkts-devicecertificate-cert-cmsrecipientinfo-i.md) | Yes | 接收者信息。 |
+| recipientInfo | [CmsRecipientInfo](arkts-devicecertificate-cert-cmsrecipientinfo-i.md) | Yes | Recipient information. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise对象，无返回结果。 |
+| Promise&lt;void&gt; | Promise that returns no value. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 19020002 | 运行时外部错误。可能的原因： &lt;br&gt;1. 内存拷贝失败； &lt;br&gt;2. 系统内部出现空指针； &lt;br&gt;3. 获取Native对象失败或参数转换失败。 |
-| 19020003 | 参数检查失败。可能的原因： &lt;br&gt;1. 接收者证书类型无效或不支持； &lt;br&gt;2. CmsKeyAgreeRecipientInfo的digestAlgorithm无效或不支持； &lt;br&gt;3. recipientInfo中无接收者信息。 |
-| 19020001 | 内存错误。 |
-| 19030001 | 调用三方算法库API出错。 |
+| [19020002](../errorcode-cert.md#19020002-runtime-error) | Runtime error. Possible causes: &lt;br&gt;1. Memory copy failed; &lt;br&gt;2. A null pointer occurs inside the system; &lt;br&gt;3. Failed to obtain the native object or convert parameters. |
+| [19020003](../errorcode-cert.md#19020003-parameter-check-failure) | Parameter check failed. Possible causes: &lt;br&gt;1. The type of recipient certificate is invalid or not supported; &lt;br&gt;2. The digestAlgorithm of CmsKeyAgreeRecipientInfo is invalid or not supported; &lt;br&gt;3. The recipientInfo does not have any recipient info. |
+| [19020001](../errorcode-cert.md#19020001-memory-error) | Memory malloc failed. |
+| [19030001](../errorcode-cert.md#19030001-crypto-operation-error) | Crypto operation error. |
 
 ## Examples
 
@@ -243,7 +244,7 @@ async function testAddRecipientInfo() {
 addSigner(cert: X509Cert, keyInfo: PrivateKeyInfo, config: CmsSignerConfig): void
 ```
 
-用于为内容类型为SIGNED_DATA的CMS添加签名者信息。
+Adds signer information to the CMS whose content type is **SIGNED_DATA**.
 
 **Since:** 18
 
@@ -259,19 +260,19 @@ addSigner(cert: X509Cert, keyInfo: PrivateKeyInfo, config: CmsSignerConfig): voi
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| cert | [X509Cert](../../apis-network-kit/arkts-apis/arkts-network-http-x509cert-t.md) | Yes | 指定X.509证书。 |
-| keyInfo | [PrivateKeyInfo](arkts-devicecertificate-cert-privatekeyinfo-i.md) | Yes | 指定私钥信息。 |
-| config | [CmsSignerConfig](arkts-devicecertificate-cert-cmssignerconfig-i.md) | Yes | 指定签名者选项。 |
+| cert | [X509Cert](../../apis-network-kit/arkts-apis/arkts-network-http-x509cert-t.md) | Yes | X.509 certificate. |
+| keyInfo | [PrivateKeyInfo](arkts-devicecertificate-cert-privatekeyinfo-i.md) | Yes | Private key information. |
+| config | [CmsSignerConfig](arkts-devicecertificate-cert-cmssignerconfig-i.md) | Yes | Signer configuration. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 19020002 | 运行时外部错误。可能的原因： &lt;br&gt;1. 内存拷贝失败； &lt;br&gt;2. 系统内部出现空指针； &lt;br&gt;3. 获取Native对象失败或参数转换失败。 |
-| 401 | 参数错误。可能的原因： &lt;br&gt;1. 必填参数未指定； &lt;br&gt;2. 参数类型不正确； &lt;br&gt;3. 参数校验失败。 |
-| 19020001 | 内存错误。 |
-| 19030001 | 调用三方算法库API出错。 |
-| 19030008 | 私钥密码错误。 |
+| [19020002](../errorcode-cert.md#19020002-runtime-error) | Runtime error. Possible causes: &lt;br&gt;1. Memory copy failed; &lt;br&gt;2. A null pointer occurs inside the system; &lt;br&gt;3. Failed to obtain the native object or convert parameters. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Invalid parameters. Possible causes: &lt;br&gt;1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; &lt;br&gt;3. Parameter verification failed. |
+| [19020001](../errorcode-cert.md#19020001-memory-error) | Memory malloc failed. |
+| [19030001](../errorcode-cert.md#19030001-crypto-operation-error) | Crypto operation error. |
+| [19030008](../errorcode-cert.md#19030008-incorrect-private-key-password) | Maybe wrong password. |
 
 ## Examples
 
@@ -365,7 +366,7 @@ function testAddSigner() {
 doFinal(data: Uint8Array, options?: CmsGeneratorOptions): Promise<Uint8Array | string>
 ```
 
-用于获取CMS最终数据，例如CMS签名数据或CMS封装数据。使用Promise方式返回结果。
+Obtains the CMS message, for example, the CMS signed data or CMS enveloped data. This API uses a promise to return the result.
 
 **Since:** 18
 
@@ -381,23 +382,23 @@ doFinal(data: Uint8Array, options?: CmsGeneratorOptions): Promise<Uint8Array | s
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| data | Uint8Array | Yes | Cms操作的内容。 |
-| options | [CmsGeneratorOptions](arkts-devicecertificate-cert-cmsgeneratoroptions-i.md) | No | Cms操作的配置选项。 |
+| data | Uint8Array | Yes | Data to be operated. |
+| options | [CmsGeneratorOptions](arkts-devicecertificate-cert-cmsgeneratoroptions-i.md) | No | Configuration of the CMS operation. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;Uint8Array \| string&gt; | Promise对象，返回CMS消息。 |
+| Promise&lt;Uint8Array \| string&gt; | Promise used to return the CMS message. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 19020002 | 运行时外部错误。可能的原因： &lt;br&gt;1. 内存拷贝失败； &lt;br&gt;2. 系统内部出现空指针； &lt;br&gt;3. 获取Native对象失败或参数转换失败。 |
-| 401 | 参数错误。可能的原因： &lt;br&gt;1. 必填参数未指定； &lt;br&gt;2. 参数类型不正确； &lt;br&gt;3. 参数校验失败。 |
-| 19020001 | 内存错误。 |
-| 19030001 | 调用三方算法库API出错。 |
+| [19020002](../errorcode-cert.md#19020002-runtime-error) | Runtime error. Possible causes: &lt;br&gt;1. Memory copy failed; &lt;br&gt;2. A null pointer occurs inside the system; &lt;br&gt;3. Failed to obtain the native object or convert parameters. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Invalid parameters. Possible causes: &lt;br&gt;1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; &lt;br&gt;3. Parameter verification failed. |
+| [19020001](../errorcode-cert.md#19020001-memory-error) | Memory malloc failed. |
+| [19030001](../errorcode-cert.md#19030001-crypto-operation-error) | Crypto operation error. |
 
 ## Examples
 
@@ -504,7 +505,7 @@ async function testDoFinalByPromise() {
 doFinalSync(data: Uint8Array, options?: CmsGeneratorOptions): Uint8Array | string
 ```
 
-用于获取CMS消息，例如CMS签名数据或CMS封装数据。
+Obtains the CMS message, for example, the CMS signed data or CMS enveloped data. This API returns the result synchronously.
 
 **Since:** 18
 
@@ -520,23 +521,23 @@ doFinalSync(data: Uint8Array, options?: CmsGeneratorOptions): Uint8Array | strin
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| data | Uint8Array | Yes | Cms操作的内容。 |
-| options | [CmsGeneratorOptions](arkts-devicecertificate-cert-cmsgeneratoroptions-i.md) | No | Cms操作的配置选项。 |
+| data | Uint8Array | Yes | Data to be operated. |
+| options | [CmsGeneratorOptions](arkts-devicecertificate-cert-cmsgeneratoroptions-i.md) | No | Configuration of the CMS operation. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Uint8Array | 生成的CMS消息。 |
+| Uint8Array | CMS message generated. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 19020002 | 运行时外部错误。可能的原因： &lt;br&gt;1. 内存拷贝失败； &lt;br&gt;2. 系统内部出现空指针； &lt;br&gt;3. 获取Native对象失败或参数转换失败。 |
-| 401 | 参数错误。可能的原因： &lt;br&gt;1. 必填参数未指定； &lt;br&gt;2. 参数类型不正确； &lt;br&gt;3. 参数校验失败。 |
-| 19020001 | 内存错误。 |
-| 19030001 | 调用三方算法库API出错。 |
+| [19020002](../errorcode-cert.md#19020002-runtime-error) | Runtime error. Possible causes: &lt;br&gt;1. Memory copy failed; &lt;br&gt;2. A null pointer occurs inside the system; &lt;br&gt;3. Failed to obtain the native object or convert parameters. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Invalid parameters. Possible causes: &lt;br&gt;1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; &lt;br&gt;3. Parameter verification failed. |
+| [19020001](../errorcode-cert.md#19020001-memory-error) | Memory malloc failed. |
+| [19030001](../errorcode-cert.md#19030001-crypto-operation-error) | Crypto operation error. |
 
 ## Examples
 
@@ -640,9 +641,9 @@ function testDoFinalSync() {
 getEncryptedContentData(): Promise<Uint8Array>
 ```
 
-用于获取内容类型为ENVELOPED_DATA的CMS的加密内容数据。使用Promise方式返回结果。
+Obtains the encrypted content data of the CMS whose content type is **ENVELOPED_DATA**. This API uses a promise to return the result.
 
-&lt;br&gt;如果创建了类型为ENVELOPED_DATA的CmsGenerator并使用了数据分离来生成CMS封装数据，使用此方法来获取加密的内容数据。
+&lt;br&gt;Obtains the encrypted content data if the **CmsGenerator** of the **ENVELOPED_DATA** type is created and data separation is used to generate detached CMS enveloped data.
 
 **Since:** 22
 
@@ -658,15 +659,15 @@ getEncryptedContentData(): Promise<Uint8Array>
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;Uint8Array&gt; | Promise对象，返回加密的数据内容。 |
+| Promise&lt;Uint8Array&gt; | Promise used to return the encrypted data. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 19020002 | 运行时外部错误。可能的原因： &lt;br&gt;1. 内存拷贝失败； &lt;br&gt;2. 系统内部出现空指针； &lt;br&gt;3. 获取Native对象失败或参数转换失败。 |
-| 19020001 | 内存错误。 |
-| 19030001 | 调用三方算法库API出错。 |
+| [19020002](../errorcode-cert.md#19020002-runtime-error) | Runtime error. Possible causes: &lt;br&gt;1. Memory copy failed; &lt;br&gt;2. A null pointer occurs inside the system; &lt;br&gt;3. Failed to obtain the native object or convert parameters. |
+| [19020001](../errorcode-cert.md#19020001-memory-error) | Memory malloc failed. |
+| [19030001](../errorcode-cert.md#19030001-crypto-operation-error) | Crypto operation error. |
 
 ## Examples
 
@@ -771,9 +772,9 @@ async function testGetEncryptedContentData() {
 setRecipientEncryptionAlgorithm(algorithm: CmsRecipientEncryptionAlgorithm): void
 ```
 
-为内容类型为ENVELOPED_DATA的CMS设置加密算法。
+Sets the encryption algorithm for the CMS whose content type is **ENVELOPED_DATA**.
 
-&lt;br&gt;该方法应在创建ENVELOPED_DATA类型的CmsGenerator后立即调用。如果未调用此方法，则默认使用AES_256_GCM作为加密算法。
+&lt;br&gt;This method should be called immediately after the **CmsGenerator** of the **ENVELOPED_DATA** type is created. If this method is not called, AES_256_GCM is used as the encryption algorithm by default.
 
 **Since:** 22
 
@@ -789,16 +790,16 @@ setRecipientEncryptionAlgorithm(algorithm: CmsRecipientEncryptionAlgorithm): voi
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| algorithm | [CmsRecipientEncryptionAlgorithm](arkts-devicecertificate-cert-cmsrecipientencryptionalgorithm-e.md) | Yes | 用于CMS封装数据的加密算法。 |
+| algorithm | [CmsRecipientEncryptionAlgorithm](arkts-devicecertificate-cert-cmsrecipientencryptionalgorithm-e.md) | Yes | Encryption algorithm used by the CMS to encapsulate data. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 19020002 | 运行时外部错误。可能的原因： &lt;br&gt;1. 内存拷贝失败； &lt;br&gt;2. 系统内部出现空指针； &lt;br&gt;3. 获取Native对象失败或参数转换失败。 |
-| 19020003 | 参数检查失败。可能的原因： &lt;br&gt;1. 算法类型无效或不支持。 |
-| 19020001 | 内存错误。 |
-| 19030001 | 调用三方算法库API出错。 |
+| [19020002](../errorcode-cert.md#19020002-runtime-error) | Runtime error. Possible causes: &lt;br&gt;1. Memory copy failed; &lt;br&gt;2. A null pointer occurs inside the system; &lt;br&gt;3. Failed to obtain the native object or convert parameters. |
+| [19020003](../errorcode-cert.md#19020003-parameter-check-failure) | Parameter check failed. Possible causes: &lt;br&gt;1. The type of algorithm is invalid or not supported. |
+| [19020001](../errorcode-cert.md#19020001-memory-error) | Memory malloc failed. |
+| [19030001](../errorcode-cert.md#19030001-crypto-operation-error) | Crypto operation error. |
 
 ## Examples
 

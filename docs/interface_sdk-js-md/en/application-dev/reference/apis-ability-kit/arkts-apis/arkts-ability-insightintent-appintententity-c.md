@@ -1,6 +1,6 @@
 # AppIntentEntity
 
-定义AppIntentEntity。
+Define AppIntentEntity.
 
 **Inheritance/Implementation:** AppIntentEntity implements [IntentEntity](arkts-ability-insightintent-intententity-i.md)
 
@@ -24,7 +24,7 @@ import { insightIntent } from 'kits/@kit.AbilityKit';
 abstract onQueryEntity(params: QueryEntityParam): Promise<Array<T>>
 ```
 
-在查询实体执行时调用。
+Called when query entity execute.
 
 **Since:** 26.0.0
 
@@ -42,7 +42,7 @@ abstract onQueryEntity(params: QueryEntityParam): Promise<Array<T>>
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| params | [QueryEntityParam](arkts-ability-insightintent-queryentityparam-i.md) | Yes | 查询实体的参数。 |
+| params | [QueryEntityParam](arkts-ability-insightintent-queryentityparam-i.md) | Yes | The params of query entity. |
 
 **Return value:**
 
@@ -56,7 +56,7 @@ abstract onQueryEntity(params: QueryEntityParam): Promise<Array<T>>
 displayName: string
 ```
 
-实体的显示名称。
+The display name of entity.
 
 **Type:** string
 

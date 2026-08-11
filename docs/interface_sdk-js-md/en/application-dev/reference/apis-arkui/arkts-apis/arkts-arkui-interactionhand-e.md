@@ -1,6 +1,6 @@
 # InteractionHand
 
-定义事件是由左手点击触发还是右手点击触发。
+Enumerates how an input event is triggered.
 
 **Since:** 15
 
@@ -16,7 +16,7 @@
 NONE = 0
 ```
 
-未定义。
+Unspecified.
 
 **Since:** 15
 
@@ -36,7 +36,7 @@ NONE = 0
 LEFT = 1
 ```
 
-左手触发。
+Left-hand interaction.
 
 **Since:** 15
 
@@ -56,7 +56,7 @@ LEFT = 1
 RIGHT = 2
 ```
 
-右手触发。
+Right-hand interaction.
 
 **Since:** 15
 

@@ -1,6 +1,6 @@
 # AdDisplayOptions
 
-广告展示参数。
+Defines the ad display parameters.
 
 **Since:** 11
 
@@ -22,10 +22,10 @@ import { advertising } from 'kits/@kit.AdsKit';
 [key: string]: number | boolean | string | undefined
 ```
 
-自定义参数。
+Custom parameter.
 
-- refreshTime：AutoAdComponent组件可选自定义参数，用于控制广告的轮播时间间隔。类型number，单位：ms，取值范围  
-[30000, 120000]。如果不设置或取值为非数字或小于等于0的数字，则不轮播，只会展示广告响应中的第一个广告内容。设置小于30000的数字取值30000，设置大于120000的数字取值120000。
+- refreshTime: An optional custom parameter for the AutoAdComponent,   
+used to control the ad rotation interval. Type number, unit: ms, value range [30000, 120000]. If not set or the value is non-numeric or less than or equal to 0, no rotation occurs, and only the first ad content in the ad response is displayed. Values less than 30000 are set to 30000, and values greater than 120000 are set to 120000.
 
 &lt;!--RP3--&gt;&lt;!--RP3End--&gt;
 
@@ -47,12 +47,13 @@ import { advertising } from 'kits/@kit.AdsKit';
 audioFocusType?: number
 ```
 
-视频播放过程中获得音频焦点的场景类型。
+Scenario type for obtaining audio focus during video playback.
 
-- 0：视频播放静音、非静音时都获取焦点。  
-- 1：视频静音播放时不获取焦点。  
-- 2：视频播放静音、非静音时都不获取焦点。  
-- 该接口依赖的相关功能当前不支持使用，暂不确定默认值。
+- 0: Obtain focus during both muted and non-muted video playback.  
+- 1: Do not obtain focus during muted video playback.  
+- 2: Do not obtain focus during either muted or non-muted video playback.  
+- The related features that this API depends on are currently not supported for use,   
+so the default value is temporarily uncertain.
 
 **Type:** number
 
@@ -72,7 +73,7 @@ audioFocusType?: number
 customData?: string
 ```
 
-媒体自定义数据。用于服务端通知媒体服务器某位用户因为与激励视频广告互动而应予以奖励，从而规避欺骗的行为（不填则不会通知）。
+Media custom data. Used for the server to notify the media server that a user should be rewarded for interacting with a rewarded video ad,thereby preventing fraudulent behavior (no notification will be sent if not set).
 
 **Type:** string
 
@@ -92,12 +93,12 @@ customData?: string
 mute?: boolean
 ```
 
-广告视频播放是否静音。
+Whether to mute the ad video playback.
 
-- true：静音播放。  
-- false：非静音播放。
+- true: Mute playback.  
+- false: Non-mute playback.
 
-不填以业务逻辑为准。
+If not set, the business logic prevails.
 
 **Type:** boolean
 
@@ -117,11 +118,12 @@ mute?: boolean
 useMobileDataReminder?: boolean
 ```
 
-使用移动数据播放视频或下载应用时是否弹框通知用户。
+Whether to display a pop-up notification to the user when using mobile data to play videos or download apps.
 
-- true：弹框通知。  
-- false：不弹框通知。  
-- 该参数依赖流量弹窗功能，当前不支持完整功能的使用，暂不确定默认值。
+- true: Display pop-up notification.  
+- false: Do not display pop-up notification.  
+- This parameter depends on the traffic pop-up feature,   
+which currently does not support full functionality, so the default value is temporarily uncertain.
 
 **Type:** boolean
 
@@ -141,7 +143,7 @@ useMobileDataReminder?: boolean
 userId?: string
 ```
 
-媒体自定义用户id。用于服务端通知媒体服务器某位用户因为与激励视频广告互动而应予以奖励，从而规避欺骗的行为（不填则不会通知）。
+Media custom user ID. Used for the server to notify the media server that a user should be rewarded for interacting with a rewarded video ad,thereby preventing fraudulent behavior (no notification will be sent if not set).
 
 **Type:** string
 

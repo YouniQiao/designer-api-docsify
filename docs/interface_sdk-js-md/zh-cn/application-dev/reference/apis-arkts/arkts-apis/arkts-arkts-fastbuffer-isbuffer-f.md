@@ -1,11 +1,5 @@
 # isBuffer
 
-## 导入模块
-
-```TypeScript
-import { fastbuffer } from 'kits/@kit.ArkTS';
-```
-
 ## isBuffer
 
 ```TypeScript
@@ -28,7 +22,7 @@ function isBuffer(obj: Object): boolean
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| obj | Object | 是 | 要判断是否为FastBuffer的对象。 |
+| obj | Object | 是 | 待判断是否为FastBuffer的对象。 |
 
 **返回值：**
 

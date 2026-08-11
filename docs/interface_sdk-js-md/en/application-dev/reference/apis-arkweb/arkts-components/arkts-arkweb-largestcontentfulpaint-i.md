@@ -1,6 +1,6 @@
 # LargestContentfulPaint
 
-提供网页绘制页面最大内容的详细信息。
+Provides detailed information about the largest contentful paint.
 
 **Since:** 12
 
@@ -16,7 +16,7 @@
 imageBPP?: number
 ```
 
-最大图片像素位数。
+Number of pixels of the maximum image.
 
 **Type:** number
 
@@ -30,13 +30,53 @@ imageBPP?: number
 
 **System capability:** SystemCapability.Web.Webview.Core
 
+## largestImageLoadEndTime
+
+```TypeScript
+largestImageLoadEndTime?: number
+```
+
+End time of the loading of the maximum image.&lt;br&gt;Unit: milliseconds.
+
+**Type:** number
+
+**Since:** 12
+
+**ArkTS mode:** ArkTS-Dyn only, since version 12.
+
+**Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-LargestContentfulPaint-largestImageLoadEndTime?: number--><!--Device-LargestContentfulPaint-largestImageLoadEndTime?: number-End-->
+
+**System capability:** SystemCapability.Web.Webview.Core
+
+## largestImageLoadStartTime
+
+```TypeScript
+largestImageLoadStartTime?: number
+```
+
+Start time of the loading of the maximum image.&lt;br&gt;Unit: milliseconds.
+
+**Type:** number
+
+**Since:** 12
+
+**ArkTS mode:** ArkTS-Dyn only, since version 12.
+
+**Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-LargestContentfulPaint-largestImageLoadStartTime?: number--><!--Device-LargestContentfulPaint-largestImageLoadStartTime?: number-End-->
+
+**System capability:** SystemCapability.Web.Webview.Core
+
 ## largestImagePaintTime
 
 ```TypeScript
 largestImagePaintTime?: number
 ```
 
-最大图片加载的时间，单位是以毫秒表示。
+Paint time of largest image.&lt;br&gt;Unit:milliseconds.
 
 **Type:** number
 
@@ -56,7 +96,7 @@ largestImagePaintTime?: number
 largestTextPaintTime?: number
 ```
 
-最大文本加载时间，单位是以毫秒表示。
+Paint time of largest text.&lt;br&gt;Unit:milliseconds.
 
 **Type:** number
 
@@ -76,7 +116,7 @@ largestTextPaintTime?: number
 navigationStartTime?: number
 ```
 
-导航条加载时间，单位以微秒表示。
+Start time of navigation.&lt;br&gt;Unit:microseconds.
 
 **Type:** number
 

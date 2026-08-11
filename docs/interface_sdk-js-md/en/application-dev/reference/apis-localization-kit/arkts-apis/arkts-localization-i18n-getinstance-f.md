@@ -12,7 +12,7 @@ import { i18n } from 'kits/@kit.LocalizationKit';
 export function getInstance(locale?:string): IndexUtil
 ```
 
-创建并返回IndexUtil对象。
+Creates an IndexUtil object.
 
 **Since:** 23
 
@@ -28,11 +28,11 @@ export function getInstance(locale?:string): IndexUtil
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| locale | string | No | [表示区域ID的字符串](../../../internationalization/i18n-locale-culture.md#实现原理)，由语言、脚本、国家地区组 成。 &lt;br&gt;默认值：系统当前区域ID。 |
+| locale | string | No | System locale, which consists of the language, script, and country/region. The default value is the current system locale. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [IndexUtil](arkts-localization-i18n-indexutil-c.md) | 根据区域ID创建的IndexUtil对象。 |
+| [IndexUtil](arkts-localization-i18n-indexutil-c.md) | IndexUtil object created based on the specified locale ID. |
 

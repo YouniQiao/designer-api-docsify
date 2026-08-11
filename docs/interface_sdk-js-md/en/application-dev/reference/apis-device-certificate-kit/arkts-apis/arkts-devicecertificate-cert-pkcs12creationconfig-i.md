@@ -1,6 +1,6 @@
 # Pkcs12CreationConfig
 
-表示创建P12的配置。
+Represents the configuration for creating .p12 files.
 
 **Since:** 21
 
@@ -22,7 +22,7 @@ import { cert } from 'kits/@kit.DeviceCertificateKit';
 certEncParams?: PbesParams
 ```
 
-表示证书加密的算法参数。
+Algorithm parameters for encrypting the certificate.
 
 **Type:** [PbesParams](arkts-devicecertificate-cert-pbesparams-i.md)
 
@@ -42,7 +42,8 @@ certEncParams?: PbesParams
 encryptCert?: boolean
 ```
 
-表示是否加密证书。默认为true。true为加密，false为不加密。
+Whether to encrypt the certificate. The default value is **true**. **true** means to encrypt the certificate;  
+**false** otherwise.
 
 **Type:** boolean
 
@@ -64,7 +65,7 @@ encryptCert?: boolean
 keyEncParams?: PbesParams
 ```
 
-表示私钥加密的算法参数。
+Algorithm parameters for encrypting the private key.
 
 **Type:** [PbesParams](arkts-devicecertificate-cert-pbesparams-i.md)
 
@@ -84,7 +85,7 @@ keyEncParams?: PbesParams
 macDigestAlgorithm?: Pkcs12MacDigestAlgorithm
 ```
 
-表示P12的MAC摘要算法。默认为SHA256。
+MAC digest algorithm for the P12. The default value is **SHA256**.
 
 **Type:** [Pkcs12MacDigestAlgorithm](arkts-devicecertificate-cert-pkcs12macdigestalgorithm-e.md)
 
@@ -106,7 +107,7 @@ macDigestAlgorithm?: Pkcs12MacDigestAlgorithm
 macIterations?: int
 ```
 
-表示P12的MAC的迭代次数。默认为2048。取值应为正整数。
+Number of P12 MAC iterations. The default value is **2048**.The value must be a positive integer.
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
@@ -128,7 +129,7 @@ macIterations?: int
 macSaltLen?: int
 ```
 
-表示P12的MAC的盐值长度。最小值为8，默认为16。取值应为≥8的整数。
+Length of the salt value of the P12 MAC. The minimum value is **8**, and the default value is **16**.The value must be an integer greater than or equal to 8.
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
@@ -150,7 +151,7 @@ macSaltLen?: int
 password: string
 ```
 
-表示P12的密码。最小长度为4。
+Password of the .p12 file. The minimum length is 4.
 
 **Type:** string
 

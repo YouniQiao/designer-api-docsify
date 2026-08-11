@@ -1,6 +1,6 @@
 # Email
 
-联系人的邮箱。
+Defines a contact's email.
 
 **Since:** 7
 
@@ -22,7 +22,7 @@ import { contact } from 'kits/@kit.ContactsKit';
 static readonly CUSTOM_LABEL: 0
 ```
 
-自定义邮箱类型，默认值为0。
+Custom email type, the default value is **0**.
 
 **Type:** 0
 
@@ -42,7 +42,7 @@ static readonly CUSTOM_LABEL: 0
 static readonly EMAIL_HOME: 1
 ```
 
-家庭邮箱类型，默认值为1。
+Home email type, the default value is **1**.
 
 **Type:** 1
 
@@ -62,7 +62,7 @@ static readonly EMAIL_HOME: 1
 static readonly EMAIL_OTHER: 3
 ```
 
-其它邮箱类型，默认值为3。
+Other email type, the default value is **3**.
 
 **Type:** 3
 
@@ -82,7 +82,7 @@ static readonly EMAIL_OTHER: 3
 static readonly EMAIL_WORK: 2
 ```
 
-工作邮箱类型，默认值为2。
+Work email type, the default value is **2**.
 
 **Type:** 2
 
@@ -102,7 +102,7 @@ static readonly EMAIL_WORK: 2
 static readonly INVALID_LABEL_ID: -1
 ```
 
-无效邮箱类型，默认值为-1。
+Invalid email type, the default value is **-1**.
 
 **Type:** -1
 
@@ -122,7 +122,7 @@ static readonly INVALID_LABEL_ID: -1
 displayName?: string
 ```
 
-邮箱的显示名称。
+Displayed name of the email.
 
 **Type:** string
 
@@ -142,7 +142,7 @@ displayName?: string
 email: string
 ```
 
-联系人的邮箱地址。
+Email address of the contact.
 
 **Type:** string
 
@@ -162,7 +162,7 @@ email: string
 labelId?: number
 ```
 
-邮箱的类型。
+Type of the email.
 
 **Type:** number
 
@@ -182,7 +182,7 @@ labelId?: number
 labelName?: string
 ```
 
-邮箱的类型名称。
+Type name of the email.
 
 **Type:** string
 

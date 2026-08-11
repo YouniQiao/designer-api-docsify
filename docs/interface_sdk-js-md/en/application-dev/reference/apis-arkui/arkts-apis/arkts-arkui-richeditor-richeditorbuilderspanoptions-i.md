@@ -1,6 +1,6 @@
 # RichEditorBuilderSpanOptions
 
-设置builder的偏移位置和样式。
+Defines the builder span options of RichEditor.
 
 **Since:** 23
 
@@ -16,8 +16,7 @@
 accessibilitySpanOptions?: AccessibilitySpanOptions
 ```
 
-无障碍朗读功能属性。缺省时，取  
-[AccessibilitySpanOptions](arkts-arkui-textcommon-accessibilityspanoptions-i.md)的默认值。
+Set accessibility options for builder span.
 
 **Type:** [AccessibilitySpanOptions](arkts-arkui-accessibilityspanoptions-i.md)
 
@@ -37,7 +36,7 @@ accessibilitySpanOptions?: AccessibilitySpanOptions
 offset?: int
 ```
 
-添加builder的位置。省略或者为异常值时，添加到所有内容的最后。
+The offset that add custom builder span at.
 
 **Type:** int
 

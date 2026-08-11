@@ -1,6 +1,6 @@
 # ServiceType
 
-日程服务类型枚举。
+Enumerates the event service types.
 
 **Since:** 10
 
@@ -16,7 +16,7 @@
 MEETING = 'Meeting'
 ```
 
-一键入会。
+Join a meeting.
 
 **Since:** 10
 
@@ -34,7 +34,7 @@ MEETING = 'Meeting'
 WATCHING = 'Watching'
 ```
 
-一键追剧。
+Watch a video.
 
 **Since:** 10
 
@@ -52,7 +52,7 @@ WATCHING = 'Watching'
 REPAYMENT = 'Repayment'
 ```
 
-一键还款。
+Make a payment.
 
 **Since:** 10
 
@@ -70,7 +70,7 @@ REPAYMENT = 'Repayment'
 LIVE = 'Live'
 ```
 
-一键直播。
+Watch live TV.
 
 **Since:** 10
 
@@ -88,7 +88,7 @@ LIVE = 'Live'
 SHOPPING = 'Shopping'
 ```
 
-一键购物。
+Go shopping.
 
 **Since:** 10
 
@@ -106,7 +106,7 @@ SHOPPING = 'Shopping'
 TRIP = 'Trip'
 ```
 
-一键查看。
+View the trip.
 
 **Since:** 10
 
@@ -124,7 +124,7 @@ TRIP = 'Trip'
 CLASS = 'Class'
 ```
 
-一键上课。
+Join class.
 
 **Since:** 10
 
@@ -142,7 +142,7 @@ CLASS = 'Class'
 SPORTS_EVENTS = 'SportsEvents'
 ```
 
-一键看赛事。
+Watch a sports event.
 
 **Since:** 10
 
@@ -160,7 +160,7 @@ SPORTS_EVENTS = 'SportsEvents'
 SPORTS_EXERCISE = 'SportsExercise'
 ```
 
-一键运动。
+Start exercising.
 
 **Since:** 10
 

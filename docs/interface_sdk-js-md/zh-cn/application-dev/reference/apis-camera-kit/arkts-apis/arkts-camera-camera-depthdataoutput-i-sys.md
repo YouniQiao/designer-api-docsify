@@ -14,12 +14,6 @@ Implements depth data output. It inherits from [CameraOutput](arkts-camera-camer
 
 **系统接口：** 此接口为系统接口。
 
-## 导入模块
-
-```TypeScript
-import { camera } from 'kits/@kit.CameraKit';
-```
-
 ## off('depthDataAvailable')
 
 ```TypeScript
@@ -49,7 +43,7 @@ Unsubscribes from depth data availability events.
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 202 | Not System Application. |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not System Application. |
 
 ## 示例
 
@@ -97,7 +91,7 @@ Unsubscribes from DepthDataOutput error events.
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 202 | Not System Application. |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not System Application. |
 
 ## 示例
 
@@ -135,7 +129,7 @@ Unsubscribes from depth data objects available event callback.
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 202 | Not System Application. |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not System Application. |
 
 ## offError
 
@@ -165,7 +159,7 @@ Unsubscribes from error events.
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 202 | Not System Application. |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not System Application. |
 
 ## on('depthDataAvailable')
 
@@ -200,7 +194,7 @@ Subscribes to depth data availability events. This API uses an asynchronous call
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 202 | Not System Application. |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not System Application. |
 
 ## 示例
 
@@ -252,7 +246,7 @@ Subscribes to DepthDataOutput error events. This API uses an asynchronous callba
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 202 | Not System Application. |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not System Application. |
 
 ## 示例
 
@@ -296,7 +290,7 @@ Subscribes to depth data objects available event callback.
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 202 | Not System Application. |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not System Application. |
 
 ## onError
 
@@ -326,7 +320,7 @@ Subscribes to error events.
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 202 | Not System Application. |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not System Application. |
 
 ## start
 
@@ -356,9 +350,9 @@ Starts depth data output. This API uses a promise to return the result.
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 7400103 | Session not config. |
-| 7400201 | Camera service fatal error. |
-| 202 | Not System Application. |
+| [7400103](../errorcode-camera.md#7400103-会话未配置) | Session not config. |
+| [7400201](../errorcode-camera.md#7400201-相机服务异常) | Camera service fatal error. |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not System Application. |
 
 ## 示例
 
@@ -402,9 +396,9 @@ Stops depth data output. This API uses a promise to return the result.
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 7400103 | Session not config. |
-| 7400201 | Camera service fatal error. |
-| 202 | Not System Application. |
+| [7400103](../errorcode-camera.md#7400103-会话未配置) | Session not config. |
+| [7400201](../errorcode-camera.md#7400201-相机服务异常) | Camera service fatal error. |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not System Application. |
 
 ## 示例
 

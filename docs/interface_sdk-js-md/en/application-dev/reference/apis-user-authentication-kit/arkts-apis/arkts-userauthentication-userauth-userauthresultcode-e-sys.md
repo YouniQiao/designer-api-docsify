@@ -1,6 +1,6 @@
 # UserAuthResultCode
 
-表示返回码的枚举。该枚举定义了用户认证操作可能返回的所有结果码，包括成功码和各类错误码。应用可根据返回码判断认证结果，并采取相应的处理措施。
+Enumerates the authentication result codes. They include all success codes and error codes for user authentication operations. The application can determine the authentication result based on the return code and take corresponding measures.
 
 **Since:** 9
 
@@ -16,7 +16,7 @@
 AUTH_TOKEN_CHECK_FAILED = 12500015
 ```
 
-AuthToken校验失败。verifyAuthToken系统接口错误码，表示验证的AuthToken完整性校验失败，令牌可能被篡改或损坏。
+Failed to verify the **AuthToken**. It is an error code of the system API **verifyAuthToken**, indicating that the integrity verification of the verified **AuthToken** fails and the token may be tampered or damaged.
 
 **Since:** 18
 
@@ -34,7 +34,7 @@ AuthToken校验失败。verifyAuthToken系统接口错误码，表示验证的Au
 AUTH_TOKEN_EXPIRED = 12500016
 ```
 
-AuthToken已过期。verifyAuthToken系统接口错误码，表示AuthToken的签发时间至发起验证时的时间间隔超过传入的最大有效时长（allowableDuration）。
+The **AuthToken** has expired. It is an error code of the system API **verifyAuthToken**, indicating that the interval between the **AuthToken** issuance time and the **AuthToken** verification time exceeds the maximum validity period (**allowableDuration**).
 
 **Since:** 18
 
@@ -52,7 +52,7 @@ AuthToken已过期。verifyAuthToken系统接口错误码，表示AuthToken的�
 REUSE_AUTH_RESULT_FAILED = 12500017
 ```
 
-复用认证结果失败。queryReusableAuthResult系统接口错误码，表示查询可复用的身份认证结果失败，可能原因包括：不存在满足复用条件的认证结果、认证结果已失效或凭据已变更。
+Failed to reuse the authentication result. It is an error code of the system API **queryReusableAuthResult**,indicating that the reusable authentication result fails to be queried. The possible causes are as follows: No authentication result that meets the reuse conditions exists, the authentication result has expired, or the credential has been changed.
 
 **Since:** 20
 

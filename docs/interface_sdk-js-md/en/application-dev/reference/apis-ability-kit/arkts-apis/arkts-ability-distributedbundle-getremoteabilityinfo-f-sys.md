@@ -12,7 +12,7 @@ import { distributedBundle } from 'kits/@kit.AbilityKit';
 function getRemoteAbilityInfo(elementName: ElementName, callback: AsyncCallback<RemoteAbilityInfo>): void
 ```
 
-根据给定的ElementName获取有关远程设备AbilityInfo信息，使用callback异步回调。
+Obtains the information about the remote ability that matches the given element name. This API uses an asynchronous callback to return the result.
 
 **Since:** 8
 
@@ -34,8 +34,8 @@ function getRemoteAbilityInfo(elementName: ElementName, callback: AsyncCallback<
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| elementName | [ElementName](arkts-ability-elementname-elementname-depr-i.md) | Yes | 获得的ElementName信息。 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[RemoteAbilityInfo](arkts-ability-remoteabilityinfo-remoteabilityinfo-depr-i-sys.md)&gt; | Yes | 程序启动作为入参的回调函数，返回远程基本能力信息。 |
+| elementName | [ElementName](arkts-ability-elementname-elementname-depr-i.md) | Yes | ElementName**. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[RemoteAbilityInfo](arkts-ability-remoteabilityinfo-remoteabilityinfo-depr-i-sys.md)&gt; | Yes | Callback used to return the remote ability information. |
 
 
 ## getRemoteAbilityInfo
@@ -44,7 +44,7 @@ function getRemoteAbilityInfo(elementName: ElementName, callback: AsyncCallback<
 function getRemoteAbilityInfo(elementName: ElementName): Promise<RemoteAbilityInfo>
 ```
 
-根据给定的ElementName获取有关远程设备AbilityInfo信息，使用Promise异步回调。
+Obtains the information about the remote ability that matches the given element name. This API uses a promise to return the result.
 
 **Since:** 8
 
@@ -66,11 +66,11 @@ function getRemoteAbilityInfo(elementName: ElementName): Promise<RemoteAbilityIn
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| elementName | [ElementName](arkts-ability-elementname-elementname-depr-i.md) | Yes | 获得的ElementName信息。 |
+| elementName | [ElementName](arkts-ability-elementname-elementname-depr-i.md) | Yes | ElementName**. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;[RemoteAbilityInfo](arkts-ability-remoteabilityinfo-remoteabilityinfo-depr-i-sys.md)&gt; | Promise形式返回远程基本能力信息。 |
+| Promise&lt;[RemoteAbilityInfo](arkts-ability-remoteabilityinfo-remoteabilityinfo-depr-i-sys.md)&gt; | Promise used to return the remote ability information. |
 

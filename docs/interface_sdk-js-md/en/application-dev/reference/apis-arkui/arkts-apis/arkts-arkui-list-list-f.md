@@ -4,12 +4,12 @@
 
 ```TypeScript
 export declare function List(
-    options?: ListOptions, 
+    options?: ListOptions,
     content_?: CustomBuilder,
 ): ListAttribute
 ```
 
-定义List组件。
+Defines List Component.
 
 **Since:** 23
 
@@ -17,7 +17,7 @@ export declare function List(
 
 **Model restriction:** This API can be used only in the stage model.
 
-<!--Device-unnamed-export declare function List(    options?: ListOptions,     content_?: CustomBuilder,): ListAttribute--><!--Device-unnamed-export declare function List(    options?: ListOptions,     content_?: CustomBuilder,): ListAttribute-End-->
+<!--Device-unnamed-export declare function List(    options?: ListOptions,    content_?: CustomBuilder,): ListAttribute--><!--Device-unnamed-export declare function List(    options?: ListOptions,    content_?: CustomBuilder,): ListAttribute-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -44,11 +44,11 @@ export declare function List(
 ): ListAttribute
 ```
 
-可扩展List组件的入口。
+Defines List Component.
 
-**Since:** 26.0.0
+**Since:** 26.1.0
 
-**ArkTS mode:** ArkTS-Sta only, since version 26.0.0.
+**ArkTS mode:** ArkTS-Sta only, since version 26.1.0.
 
 **Decorator:** @Builder
 

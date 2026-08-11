@@ -1,6 +1,6 @@
 # @ohos.nearlink.ssap
 
-提供操作或管理星闪服务的方法。
+Provides methods to operate or manage service of NearLink.
 
 **Since:** 26.0.0
 
@@ -24,45 +24,45 @@ import { ssap } from 'kits/@kit.ConnectivityKit';
 
 | Name | Description |
 | --- | --- |
-| [createClient](arkts-connectivity-ssap-createclient-f.md#createclient) | 创建SSAP客户端实例。 |
-| [createServer](arkts-connectivity-ssap-createserver-f.md#createserver) | 创建SSAP服务端实例。 |
+| [createClient](arkts-connectivity-ssap-createclient-f.md#createclient) | Creates a SSAP client instance. |
+| [createServer](arkts-connectivity-ssap-createserver-f.md#createserver) | Creates a SSAP server instance. |
 
 ### Interfaces
 
 | Name | Description |
 | --- | --- |
-| [Client](arkts-connectivity-ssap-client-i.md) | 管理SSAP客户端。在调用ssap客户端方法之前，必须使用{@link createClient}创建ssap客户端实例。 |
-| [ConnectionChangeState](arkts-connectivity-ssap-connectionchangestate-i.md) | 描述SSAP连接状态。 |
-| [Property](arkts-connectivity-ssap-property-i.md) | SSAP属性。 |
-| [PropertyDescriptor](arkts-connectivity-ssap-propertydescriptor-i.md) | 属性的SSAP描述符。 |
-| [PropertyReadRequest](arkts-connectivity-ssap-propertyreadrequest-i.md) | SSAP客户端属性读请求参数说明。 |
-| [PropertyWriteRequest](arkts-connectivity-ssap-propertywriterequest-i.md) | SSAP客户端属性写请求参数说明。 |
-| [Server](arkts-connectivity-ssap-server-i.md) | 管理SSAP服务端。在调用SSAP服务端方法之前，必须使用{@link createServer}创建SSAP服务端实例。 |
-| [ServerResponse](arkts-connectivity-ssap-serverresponse-i.md) | 服务端对指定读或写请求的响应的参数。 |
-| [Service](arkts-connectivity-ssap-service-i.md) | SSAP服务。 |
+| [Client](arkts-connectivity-ssap-client-i.md) | Manages SSAP client. Before calling a SSAP client method,you must use {@link createClient} to create a ssap client instance. |
+| [ConnectionChangeState](arkts-connectivity-ssap-connectionchangestate-i.md) | Describes SSAP connection state. |
+| [Property](arkts-connectivity-ssap-property-i.md) | Describes the SSAP property. |
+| [PropertyDescriptor](arkts-connectivity-ssap-propertydescriptor-i.md) | Describes the SSAP descriptor for property. |
+| [PropertyReadRequest](arkts-connectivity-ssap-propertyreadrequest-i.md) | Describes the parameters of the SSAP client's property read request. |
+| [PropertyWriteRequest](arkts-connectivity-ssap-propertywriterequest-i.md) | Describes the parameters of the SSAP client's property write request. |
+| [Server](arkts-connectivity-ssap-server-i.md) | Manages SSAP server. Before calling a SSAP server method,you must use {@link createServer} to create a SSAP server instance. |
+| [ServerResponse](arkts-connectivity-ssap-serverresponse-i.md) | Describes the parameters of a response send by the server to a specified read or write request. |
+| [Service](arkts-connectivity-ssap-service-i.md) | Describes the SSAP service. |
 
 <!--Del-->
 ### Interfaces（系统接口）
 
 | Name | Description |
 | --- | --- |
-| [Client](arkts-connectivity-ssap-client-i-sys.md) | 管理SSAP客户端。在调用ssap客户端方法之前，必须使用{@link createClient}创建ssap客户端实例。 |
-| [Event](arkts-connectivity-ssap-event-i-sys.md) | SSAP事件。 |
-| [Method](arkts-connectivity-ssap-method-i-sys.md) | SSAP方法。 |
-| [Service](arkts-connectivity-ssap-service-i-sys.md) | SSAP服务。 |
+| [Client](arkts-connectivity-ssap-client-i-sys.md) | Manages SSAP client. Before calling a SSAP client method,you must use {@link createClient} to create a ssap client instance. |
+| [Event](arkts-connectivity-ssap-event-i-sys.md) | Describes the SSAP event. |
+| [Method](arkts-connectivity-ssap-method-i-sys.md) | Describes the SSAP method. |
+| [Service](arkts-connectivity-ssap-service-i-sys.md) | Describes the SSAP service. |
 <!--DelEnd-->
 
 ### Enums
 
 | Name | Description |
 | --- | --- |
-| [Operation](arkts-connectivity-ssap-operation-e.md) | 属性操作指示的枚举。 |
-| [PropertyDescriptorType](arkts-connectivity-ssap-propertydescriptortype-e.md) | 属性描述符类型的枚举。 |
-| [PropertyWriteType](arkts-connectivity-ssap-propertywritetype-e.md) | 属性写入类型的枚举。 |
+| [Operation](arkts-connectivity-ssap-operation-e.md) | Enum of property operation indication. |
+| [PropertyDescriptorType](arkts-connectivity-ssap-propertydescriptortype-e.md) | The enum of property descriptor type. |
+| [PropertyWriteType](arkts-connectivity-ssap-propertywritetype-e.md) | The enum of property write type. |
 
 ### Types
 
 | Name | Description |
 | --- | --- |
-| [ConnectionState](arkts-connectivity-ssap-connectionstate-t.md) | 连接状态。 |
+| [ConnectionState](arkts-connectivity-ssap-connectionstate-t.md) | Indicates the connection state. |
 

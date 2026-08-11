@@ -1,6 +1,6 @@
 # ConnectOptions
 
-globalConnect参数类型。
+Define ConnectOptions class.
 
 **Since:** 26.0.0
 
@@ -16,7 +16,7 @@ globalConnect参数类型。
 defaultCreator?: StorageDefaultCreator<T>
 ```
 
-默认数据的构造器，默认值为undefined，建议传递，如果globalConnect是第一次连接key，不传会报错。
+Define the function generating the default value.If defaultCreator is not set, then existing data will be retrieved, or return undefined.
 
 **Since:** 26.0.0
 
@@ -34,7 +34,7 @@ defaultCreator?: StorageDefaultCreator<T>
 areaMode?: contextConstant.AreaMode
 ```
 
-加密级别：EL1-EL5，详见[加密级别](../../../application-models/application-context-stage.md#获取和修改加密分区)，不传时默认为EL2，不同加密级别对应不同的加密分区，即不同的存储路径。
+Define encrypted partition for data storage.if not passed in, the default value is El2.
 
 **Type:** contextConstant.AreaMode
 
@@ -54,7 +54,7 @@ areaMode?: contextConstant.AreaMode
 defaultSubCreators?: StorageDefaultSubCreators
 ```
 
-保存对象类型及其默认构造器的Map。用于恢复内层对象数据。默认值为undefined。
+Map that contains Class and its default creator.It is used to restore inner object.The default value is undefined.
 
 **Type:** [StorageDefaultSubCreators](arkts-arkui-storagedefaultsubcreators-t.md)
 
@@ -74,7 +74,7 @@ defaultSubCreators?: StorageDefaultSubCreators
 enableAutoSave?: boolean
 ```
 
-是否自动持久化存储数据，默认值为true。
+Enable autosave feature. Default value is true.
 
 **Type:** boolean
 
@@ -94,9 +94,9 @@ enableAutoSave?: boolean
 fromJson?: FromJSONType<T>
 ```
 
-转换JSON格式对象到存储对象的函数。
+Customize deserialize callback.If fromJson is not set, then default deserialization method will be used.
 
-**Type:** [FromJSONType](../../apis-default/arkts-apis/arkts-fromjsontype-t.md)&lt;T&gt;
+**Type:** [FromJSONType](arkts-arkui-fromjsontype-t.md)&lt;T&gt;
 
 **Since:** 26.0.0
 
@@ -114,7 +114,7 @@ fromJson?: FromJSONType<T>
 key?: string
 ```
 
-传入的key，不传则使用type的名字作为key。
+Defines alias name for the key.If key is not set, type will be used to find matching data.key should not be more than 1024 characters, or undefined will be returned.
 
 **Type:** string
 
@@ -134,9 +134,9 @@ key?: string
 toJson?: ToJSONType<T>
 ```
 
-转换存储对象到JSON格式对象的函数。
+Customize serialize callback.If toJson is not set, then default serialization method will be used.
 
-**Type:** [ToJSONType](../../apis-default/arkts-apis/arkts-tojsontype-t.md)&lt;T&gt;
+**Type:** [ToJSONType](arkts-arkui-tojsontype-t.md)&lt;T&gt;
 
 **Since:** 26.0.0
 
@@ -154,7 +154,7 @@ toJson?: ToJSONType<T>
 type: Class
 ```
 
-指定的类型。
+Define class constructor
 
 **Type:** [Class](../../apis-arkts/arkts-apis/arkts-arkts-class-c.md)
 

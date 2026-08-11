@@ -1,6 +1,7 @@
 # AccessibilityGrid (System API)
 
-辅助功能网格信息。详见[AccessibilityElement](arkts-accessibility-accessibilityextensioncontext-accessibilityelement-i.md)中的属性currentItem。
+Defines accessibility grid information. For details, see the currentItem attribute in   
+[AccessibilityElement](arkts-accessibility-accessibilityextensioncontext-accessibilityelement-i.md).
 
 **Since:** 20
 
@@ -18,7 +19,7 @@
 columnIndex: int
 ```
 
-网格列索引。
+Column index.
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
@@ -38,7 +39,7 @@ columnIndex: int
 rowIndex: int
 ```
 
-网格行索引。
+Row index.
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 

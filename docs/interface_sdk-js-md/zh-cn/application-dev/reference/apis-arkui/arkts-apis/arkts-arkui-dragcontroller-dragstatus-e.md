@@ -1,10 +1,10 @@
 # DragStatus
 
-Defines the Drag Status.
+拖拽开始和结束状态。
 
-**起始版本：** 23
+**起始版本：** 11
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为11。
 
 <!--Device-dragController-const enum DragStatus--><!--Device-dragController-const enum DragStatus-End-->
 
@@ -16,13 +16,15 @@ Defines the Drag Status.
 STARTED = 0
 ```
 
-Drag has started.
+拖拽已成功发起。
 
-**起始版本：** 23
+**起始版本：** 11
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为11。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 <!--Device-DragStatus-STARTED = 0--><!--Device-DragStatus-STARTED = 0-End-->
 
@@ -34,13 +36,15 @@ Drag has started.
 ENDED = 1
 ```
 
-Drag has ended.
+拖拽结束。
 
-**起始版本：** 23
+**起始版本：** 11
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为11。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 <!--Device-DragStatus-ENDED = 1--><!--Device-DragStatus-ENDED = 1-End-->
 

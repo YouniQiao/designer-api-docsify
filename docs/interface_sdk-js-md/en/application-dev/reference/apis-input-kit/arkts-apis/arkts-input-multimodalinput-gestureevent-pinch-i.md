@@ -1,6 +1,6 @@
 # Pinch
 
-捏合手势事件。
+Defines a pinch event.
 
 **Since:** 10
 
@@ -22,7 +22,7 @@ import { SwipeInward, FourFingersSwipe, Pinch, ActionType, Rotate, ThreeFingersT
 scale: double
 ```
 
-捏合度，取值范围大于等于0。
+Pinch scale factor. The value is greater than or equal to 0.
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：double
 
@@ -40,7 +40,7 @@ scale: double
 type: ActionType
 ```
 
-手势事件类型。如：手势开始、手势更新、手势结束等。
+Gesture event type, for example, gesture start, gesture update, or gesture end.
 
 **Type:** [ActionType](../../apis-avsession-kit/arkts-apis/arkts-avsession-avmusictemplate-actiontype-t.md)
 

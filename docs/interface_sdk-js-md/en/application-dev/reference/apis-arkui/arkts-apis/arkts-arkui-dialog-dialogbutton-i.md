@@ -1,6 +1,6 @@
 # DialogButton
 
-固定样式对话框的按钮配置。
+Button configuration for fixed-style dialog.
 
 **Since:** 26.1.0
 
@@ -22,7 +22,7 @@ import { DialogButtonOrientation, DialogState, DialogResult, DialogBaseControlle
 action: VoidCallback
 ```
 
-点击按钮时执行的回调。
+Callback executed when the button is clicked.
 
 **Since:** 26.1.0
 
@@ -42,7 +42,7 @@ action: VoidCallback
 backgroundColor?: ResourceColor
 ```
 
-按钮背景色。
+Background color of the button.
 
 **Type:** [ResourceColor](arkts-arkui-resourcecolor-t.md)
 
@@ -64,7 +64,7 @@ backgroundColor?: ResourceColor
 defaultFocus?: boolean
 ```
 
-按钮是否为默认焦点。
+Whether the button is the default focus.
 
 **Type:** boolean
 
@@ -88,7 +88,7 @@ defaultFocus?: boolean
 enabled?: boolean
 ```
 
-点击按钮时是否响应。
+Whether to respond when the button is clicked.
 
 **Type:** boolean
 
@@ -112,7 +112,7 @@ enabled?: boolean
 fontColor?: ResourceColor
 ```
 
-按钮文字颜色。
+Text color of the button.
 
 **Type:** [ResourceColor](arkts-arkui-resourcecolor-t.md)
 
@@ -134,7 +134,7 @@ fontColor?: ResourceColor
 primary?: boolean
 ```
 
-定义按钮是否默认响应回车/空格键。
+Define whether the button responds to Enter/Space key by default.
 
 **Type:** boolean
 
@@ -156,7 +156,7 @@ primary?: boolean
 style?: DialogButtonStyle
 ```
 
-按钮的样式。
+Style of the button.
 
 **Type:** [DialogButtonStyle](arkts-arkui-dialogbuttonstyle-e.md)
 
@@ -180,7 +180,7 @@ style?: DialogButtonStyle
 value: ResourceStr
 ```
 
-按钮的文本内容。
+Text content of the button.
 
 **Type:** [ResourceStr](arkts-arkui-resourcestr-t.md)
 

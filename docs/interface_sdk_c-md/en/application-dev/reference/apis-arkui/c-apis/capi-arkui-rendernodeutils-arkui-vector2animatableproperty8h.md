@@ -6,7 +6,7 @@ typedef struct ArkUI_Vector2AnimatableProperty* ArkUI_Vector2AnimatablePropertyH
 
 ## Overview
 
-Handle to the ArkUI native animatable vector2 render property.
+Defines an animatable 2D vector property pointer.
 
 **Since**: 20
 

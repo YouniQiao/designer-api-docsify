@@ -1,6 +1,6 @@
 # WidgetParam
 
-用户认证界面配置相关参数。该接口用于配置认证界面的显示样式和交互方式，包括标题、导航按钮文本、窗口模式等。通过合理配置这些参数，可以为用户提供清晰的认证引导和良好的交互体验。
+Represents the information presented on the user authentication page. This API is used to configure the display style and interaction mode of the authentication screen, including the title, navigation button text, and window mode. By properly setting these parameters, you can provide clear authentication guidance and good interaction experience for users.
 
 **Since:** 10
 
@@ -22,7 +22,7 @@ import { userAuth } from 'kits/@kit.UserAuthenticationKit';
 appWindow?: window.Window
 ```
 
-应用窗口对象。用于以模应用弹窗方式显示身份认证对话框，适用于需要通过窗口对象控制认证对话框显示的场景。如果已提供此参数，则uiContext将被忽略。
+Application window object. It is used to display the identity authentication dialog box as an application modal dialog. It is suitable for scenarios where the authentication dialog box needs to be controlled through a window object. If this parameter is provided, **uiContext** will be ignored.
 
 **Type:** window.Window
 
@@ -46,7 +46,8 @@ appWindow?: window.Window
 windowMode?: WindowModeType
 ```
 
-用户认证界面的显示类型。DIALOG_BOX适用于大多数认证场景（用户体验较好），FULLSCREEN适用于需要沉浸式认证体验或认证信息较多的场景。不传入时默认为WindowModeType.DIALOG_BOX。
+Window type of the user authentication screen. **DIALOG_BOX** is suitable for most authentication scenarios (with better user experience), and **FULLSCREEN** is suitable for scenarios that require an immersive authentication experience or involve more authentication information. If not specified, the default value is  
+**WindowModeType.DIALOG_BOX**.
 
 **Type:** [WindowModeType](arkts-userauthentication-userauth-windowmodetype-e-sys.md)
 

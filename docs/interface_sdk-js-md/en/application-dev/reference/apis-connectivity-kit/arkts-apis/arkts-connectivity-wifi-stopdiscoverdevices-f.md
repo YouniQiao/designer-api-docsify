@@ -40,9 +40,9 @@ Stops discovering Wi-Fi P2P devices.
 import wifi from '@ohos.wifi';
 
 try {
-  wifi.stopDiscoverDevices();  
+	wifi.stopDiscoverDevices();	
 }catch(error){
-  console.error("failed:" + JSON.stringify(error));
+	console.error("failed:" + JSON.stringify(error));
 }
 ```
 

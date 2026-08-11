@@ -14,15 +14,18 @@ function onActiveStateChange(
     callback: Callback<ActiveChangeResponse>): void
 ```
 
-订阅指定权限列表的权限使用状态变更事件。权限使用状态变更由  
-[startUsingPermission](arkts-ability-privacymanager-startusingpermission-f-sys.md#startusingpermission)和  
-[stopUsingPermission](arkts-ability-privacymanager-stopusingpermission-f-sys.md#stopusingpermission)调用触发。订阅成功后，当权限使用状态变更时，回调函数会被触发，返回[ActiveChangeResponse](arkts-ability-privacymanager-activechangeresponse-i-sys.md)对象，包含权限使用状态变化的详情。使用callback异步回调。
+Subscribes to permission usage status change events for a specified permission list. Permission usage status changes are triggered by calls to [startUsingPermission](arkts-ability-privacymanager-startusingpermission-f-sys.md#startusingpermission) and  
+[stopUsingPermission](arkts-ability-privacymanager-stopusingpermission-f-sys.md#stopusingpermission). After a successful subscription, when the permission usage status changes, the callback function is triggered, returning an  
+[ActiveChangeResponse](arkts-ability-privacymanager-activechangeresponse-i-sys.md) object containing details of the permission usage status change. This API uses an asynchronous callback to return the result.
 
-允许相同permissionList订阅多个回调函数。
+Multiple callback functions are allowed to be subscribed for the same permissionList.
 
-> **说明：**
-> 不允许使用有交集的两个permissionList分别订阅同一个回调函数。即如果两个permissionList包含相同的权限名，则不能使用同一个回调函数进行订阅。
-> 该接口通常与[offActiveStateChange](privacyManager.offActiveStateChange)配套使用，在不再需要监听时应调用offActiveStateChange取消订阅。
+> **NOTE：**
+> It is not allowed to subscribe the same callback function using two permissionLists that have an intersection.
+> That is, if two permissionLists contain the same permission name, the same callback function cannot be used for
+subscription.  
+> This API is typically used in conjunction with [offActiveStateChange](privacyManager.offActiveStateChange).
+ When listening is no longer needed, offActiveStateChange should be called to unsubscribe.
 
 **Since:** 23
 
@@ -42,18 +45,18 @@ function onActiveStateChange(
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| permissionList | Array&lt;[Permissions](arkts-ability-permissions-t.md)&gt; | Yes | 订阅的权限名列表。为空时表示订阅所有的权限使用状态变化。传入无效值时返回错误码12100001。 &lt;br&gt;取值约束：数组长度不能超过1024。 |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;ActiveChangeResponse&gt; | Yes | 回调函数，返回订阅指定权限使用状态变更事件的对象。 |
+| permissionList | Array&lt;[Permissions](arkts-ability-permissions-t.md)&gt; | Yes | List of subscribed permission names. An empty value indicates subscription to the usage status changes of all permissions. Passing an invalid value returns error code 12100001. &lt;br&gt;Value constraint: The array length cannot exceed 1024. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;ActiveChangeResponse&gt; | Yes | Callback used to return the event object for the subscribed permission state change. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 12100008 | Out of memory. |
-| 201 | Permission denied. Interface caller does not have permission "ohos.permission.PERMISSION_USED_STATS". |
-| 12100001 | Invalid parameter. The permissionList exceeds the size limit, or the permissionNames in the list are all invalid. |
-| 202 | Not system app. Interface caller is not a system app. |
-| 12100004 | The API is used repeatedly with the same input. |
-| 12100005 | The registration time has exceeded the limit. |
-| 12100007 | Service exception. |
+| [12100008](../errorcode-access-token.md#12100008-out-of-memory) | Out of memory. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. Interface caller does not have permission "ohos.permission.PERMISSION_USED_STATS". |
+| [12100001](../errorcode-access-token.md#12100001-invalid-parameters) | Invalid parameter. The permissionList exceeds the size limit, or the permissionNames in the list are all invalid. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system app. Interface caller is not a system app. |
+| [12100004](../errorcode-access-token.md#12100004-listener-apis-not-used-in-pairs) | The API is used repeatedly with the same input. |
+| [12100005](../errorcode-access-token.md#12100005-listener-overflows) | The registration time has exceeded the limit. |
+| [12100007](../errorcode-access-token.md#12100007-system-service-not-working-properly) | Service exception. |
 

@@ -1,11 +1,5 @@
 # stopDistributedHardware（系统接口）
 
-## 导入模块
-
-```TypeScript
-import { hardwareManager } from 'kits/@kit.DistributedServiceKit';
-```
-
 ## stopDistributedHardware
 
 ```TypeScript
@@ -42,11 +36,11 @@ function stopDistributedHardware(description: HardwareDescriptor): Promise<void>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 401 | Input parameter error. |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Input parameter error. |
 | 24200101 | The specified distributed hardware is not started. |
 | 24200102 | The specified source device is not connected. |
-| 201 | Permission verification failed. |
-| 202 | Permission denied, non-system app called system api. |
+| [201](../../errorcode-universal.md#201-权限校验失败) | Permission verification failed. |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission denied, non-system app called system api. |
 
 ## 示例
 

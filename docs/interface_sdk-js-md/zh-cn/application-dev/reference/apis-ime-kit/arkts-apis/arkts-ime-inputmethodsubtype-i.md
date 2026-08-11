@@ -24,12 +24,6 @@
 
 **系统能力：** SystemCapability.MiscServices.InputMethodFramework
 
-## 导入模块
-
-```TypeScript
-import { InputMethodSubtype } from 'kits/@kit.IMEKit';
-```
-
 ## extra
 
 ```TypeScript

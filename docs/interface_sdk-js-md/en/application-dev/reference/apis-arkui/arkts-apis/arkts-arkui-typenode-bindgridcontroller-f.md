@@ -6,7 +6,7 @@
 export function bindGridController(node: FrameNode, controller: Scroller): void
 ```
 
-绑定FrameNode的控制器。
+Bind the controller of FrameNode.
 
 **Since:** 26.0.0
 
@@ -22,12 +22,12 @@ export function bindGridController(node: FrameNode, controller: Scroller): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| node | [FrameNode](arkts-arkui-framenode-c.md) | Yes | 目标FrameNode。 |
-| controller | [Scroller](../arkts-components/arkts-arkui-scroller-c.md) | Yes | the controller which is bind to 目标FrameNode。 |
+| node | [FrameNode](arkts-arkui-framenode-c.md) | Yes | the target FrameNode. |
+| controller | [Scroller](../arkts-components/arkts-arkui-scroller-c.md) | Yes | the controller which is bind to the target FrameNode. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 100023 | Parameter error. Possible causes: 1. The component type of the node is incorrect. 2. The node is null or undefined. 3. The controller is null or undefined. |
+| [100023](../errorcode-node.md#100023-parameter-error) | Parameter error. Possible causes: 1. The component type of the node is incorrect. 2. The node is null or undefined. 3. The controller is null or undefined. |
 

@@ -16,7 +16,7 @@ Declare the animation mode of SwiperController's changeIndex method.
 NO_ANIMATION = 0
 ```
 
-无动效翻页至指定页面。
+Jump to target index without animation.
 
 **Since:** 23
 
@@ -34,7 +34,7 @@ NO_ANIMATION = 0
 DEFAULT_ANIMATION = 1
 ```
 
-有动效翻页至指定页面。
+Scroll to target index with animation.
 
 **Since:** 23
 
@@ -52,7 +52,7 @@ DEFAULT_ANIMATION = 1
 FAST_ANIMATION = 2
 ```
 
-先无动效翻页至指定页面附近，再有动效翻页至指定页面。
+Jump to some index near the target index without animation,then scroll to target index with animation.
 
 **Since:** 23
 

@@ -1,6 +1,6 @@
 # DelaySuspendInfo
 
-短时任务信息。
+Defines the information about the transient task.
 
 **Since:** 9
 
@@ -24,7 +24,8 @@ actualDelayTime: int
 
 Actual duration of the transient task requested by the application, in milliseconds.&lt;br&gt;Unit:ms
 
-**说明：** 申请时间最长为3分钟，低电量（[BatteryCapacityLevel](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-batteryinfo-batterycapacitylevel-e.md/arkts-basicservices-batteryinfo-batterycapacitylevel-e.md)为LEVEL_LOW）时最长为1分钟。
+Note: The maximum duration of a transient task is 3 minutes in normal cases. In the case of a low battery (  
+[BatteryCapacityLevel](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-batteryinfo-batterycapacitylevel-e.md/arkts-basicservices-batteryinfo-batterycapacitylevel-e.md) set to **LEVEL_LOW**), the maximum duration is decreased to 1 minute.
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
@@ -42,7 +43,7 @@ Actual duration of the transient task requested by the application, in milliseco
 requestId: int
 ```
 
-应用实际申请的短时任务时间，单位：ms。
+Request ID of the transient task.
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 

@@ -1,6 +1,6 @@
 # NavigationCustomTitle
 
-Navigation自定义标题。
+Defines a custom title for the **Navigation** component.
 
 **Since:** 9
 
@@ -16,7 +16,7 @@ Navigation自定义标题。
 builder: CustomBuilder
 ```
 
-设置标题栏内容。
+Content of the title bar.
 
 **Type:** [CustomBuilder](arkts-arkui-custombuilder-t.md)
 
@@ -36,7 +36,7 @@ builder: CustomBuilder
 height: TitleHeight | Length
 ```
 
-设置标题栏高度。
+Height of the title bar.
 
 **Type:** [TitleHeight](../arkts-apis/arkts-arkui-titleheight-e.md) \| Length
 

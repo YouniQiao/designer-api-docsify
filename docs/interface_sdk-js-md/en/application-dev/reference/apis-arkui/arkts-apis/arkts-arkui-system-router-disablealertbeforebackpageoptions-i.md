@@ -1,6 +1,6 @@
 # DisableAlertBeforeBackPageOptions
 
-定义DisableAlertBeforeBackPage参数选项。
+Defines the **DisableAlertBeforeBackPage** parameter.
 
 **Since:** 6
 
@@ -26,7 +26,7 @@ import { BackRouterOptions, DisableAlertBeforeBackPageOptions, RouterOptions, Ro
 cancel?: (errMsg: string) => void
 ```
 
-关闭询问对话框失败时触发，errMsg表示返回信息。
+Called when the dialog box fails to be closed. **errMsg** indicates the returned information.
 
 **Since:** 6
 
@@ -52,7 +52,7 @@ cancel?: (errMsg: string) => void
 complete?: () => void
 ```
 
-当对话框关闭时触发该回调。
+Called when the dialog box is closed.
 
 **Since:** 6
 
@@ -72,7 +72,7 @@ complete?: () => void
 success?: (errMsg: string) => void
 ```
 
-关闭询问对话框成功时触发，errMsg表示返回信息。
+Called when the dialog box is closed. **errMsg** indicates the returned information.
 
 **Since:** 6
 

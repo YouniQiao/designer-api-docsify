@@ -36,13 +36,15 @@ function onBadgeNumberQuery(callback: (bundle: BundleOption) => Promise<long>): 
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 201 | Permission denied. |
-| 1600001 | Internal error. |
-| 202 | Not system application to call the interface. |
-| 1600002 | Marshalling or unmarshalling error. |
-| 1600003 | Failed to connect to the service. |
+| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
+| [1600001](../errorcode-notification.md#1600001-内部错误) | Internal error. |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not system application to call the interface. |
+| [1600002](../errorcode-notification.md#1600002-序列化或反序列化错误) | Marshalling or unmarshalling error. |
+| [1600003](../errorcode-notification.md#1600003-连接通知服务失败) | Failed to connect to the service. |
 
 ## 示例
+
+ArkTS-Dyn示例：
 
 ```TypeScript
 try{
@@ -53,6 +55,20 @@ try{
     );
 } catch (err) {
     console.error(`OnBadgeNumberQuery failed, code is ${err.code}, message is ${err.message}`);
+}
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+try{
+    notificationManager.onBadgeNumberQuery(
+        async (bundleOption: notificationManager.BundleOption) => {
+            return 1;
+        }
+    );
+} catch (err) {
+    console.info(`onBadgeNumberQuery failed, code is ${err.code}, message is ${err.message}`);
 }
 ```
 

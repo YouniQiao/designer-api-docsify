@@ -12,9 +12,9 @@ import { bundleManager } from 'kits/@kit.AbilityKit';
 function cleanBundleCacheFiles(bundleName: string, callback: AsyncCallback<void>): void
 ```
 
-根据给定的bundleName清理BundleCache。使用callback异步回调。
+Clears the bundle cache based on the given bundle name. This API uses an asynchronous callback to return the result.
 
-调用方清理自身缓存数据时不需要权限。
+No permission is required when the caller clears its own cache.
 
 **Since:** 9
 
@@ -32,18 +32,18 @@ function cleanBundleCacheFiles(bundleName: string, callback: AsyncCallback<void>
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| bundleName | string | Yes | 表示要清理其缓存数据的应用程序的bundleName。 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md/arkts-basicservices-base-asynccallback-i.md)，当清理应用缓存目录数据成功，err为 undefined，否则为错误对象。 |
+| bundleName | string | Yes | Bundle name. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md/arkts-basicservices-base-asynccallback-i.md) used to return the result. If the operation is successful, **err** is **null**. Otherwise, **err** is an error object. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 17700030 | The specified bundle does not support clearing of cache files. |
-| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types. |
-| 201 | Permission denied. |
-| 202 | Permission denied, non-system app called system api. |
-| 17700001 | The specified bundleName is not found. |
+| [17700030](../errorcode-bundle.md#17700030-failure-in-clearing-cache-files) | The specified bundle does not support clearing of cache files. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission denied, non-system app called system api. |
+| [17700001](../errorcode-bundle.md#17700001-bundle-name-does-not-exist) | The specified bundleName is not found. |
 
 ## Examples
 
@@ -75,9 +75,9 @@ try {
 function cleanBundleCacheFiles(bundleName: string): Promise<void>
 ```
 
-根据给定的bundleName清理BundleCache。使用Promise异步回调。
+Clears the bundle cache based on the given bundle name. This API uses a promise to return the result.
 
-调用方清理自身缓存数据时不需要权限。
+No permission is required when the caller clears its own cache.
 
 **Since:** 9
 
@@ -95,23 +95,23 @@ function cleanBundleCacheFiles(bundleName: string): Promise<void>
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| bundleName | string | Yes | 表示要清理其缓存数据的应用程序的bundleName。 |
+| bundleName | string | Yes | Bundle name. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise对象，无返回结果。 |
+| Promise&lt;void&gt; | Promise that returns no value. If clearing the cache files fails, an error object is thrown. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 17700030 | The specified bundle does not support clearing of cache files. |
-| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types. |
-| 201 | Permission denied. |
-| 202 | Permission denied, non-system app called system api. |
-| 17700001 | The specified bundleName is not found. |
+| [17700030](../errorcode-bundle.md#17700030-failure-in-clearing-cache-files) | The specified bundle does not support clearing of cache files. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission denied, non-system app called system api. |
+| [17700001](../errorcode-bundle.md#17700001-bundle-name-does-not-exist) | The specified bundleName is not found. |
 
 ## Examples
 
@@ -141,9 +141,9 @@ try {
 function cleanBundleCacheFiles(bundleName: string, appIndex: int): Promise<void>
 ```
 
-根据给定的bundleName和appIndex清理BundleCache。使用Promise异步回调。
+Clears the bundle cache based on the given bundle name and application index. This API uses a promise to return the result.
 
-调用方清理自身缓存数据时不需要权限。
+No permission is required when the caller clears its own cache.
 
 **Since:** 15
 
@@ -161,25 +161,25 @@ function cleanBundleCacheFiles(bundleName: string, appIndex: int): Promise<void>
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| bundleName | string | Yes | 表示要清理其缓存数据的应用程序的bundleName。 |
-| appIndex | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | 表示要清理其缓存数据的应用程序的分身应用索引。&lt;br&gt;appIndex为0时，表示清理主应用缓存数据。appIndex大于0时，表示清理指定分身应用缓存数据。 |
+| bundleName | string | Yes | Bundle name. |
+| appIndex | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | Index of the application clone.&lt;br&gt;The value **0** means to clear the cache of the main application. A value greater than 0 means to clear the cache data of the application clone. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise对象，无返回结果。 |
+| Promise&lt;void&gt; | Promise that returns no value. If clearing the cache files fails, an error object is thrown. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 17700030 | The specified bundle does not support clearing of cache files. |
-| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types. |
-| 17700061 | AppIndex not in valid range. |
-| 201 | Permission denied. |
-| 202 | Permission denied, non-system app called system api. |
-| 17700001 | The specified bundleName is not found. |
+| [17700030](../errorcode-bundle.md#17700030-failure-in-clearing-cache-files) | The specified bundle does not support clearing of cache files. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types. |
+| [17700061](../errorcode-bundle.md#17700061-appindex-for-a-clone-is-invalid) | AppIndex not in valid range. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission denied, non-system app called system api. |
+| [17700001](../errorcode-bundle.md#17700001-bundle-name-does-not-exist) | The specified bundleName is not found. |
 
 ## Examples
 

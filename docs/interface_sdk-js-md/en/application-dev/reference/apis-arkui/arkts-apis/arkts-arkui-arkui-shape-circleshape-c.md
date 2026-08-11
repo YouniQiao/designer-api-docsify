@@ -1,8 +1,6 @@
 # CircleShape
 
-用于clipShape和maskShape接口的圆形形状。
-
-继承自[BaseShape](arkts-arkui-arkui-shape-baseshape-c.md)。
+Defines a circle drawing class.
 
 **Inheritance/Implementation:** CircleShape extends [BaseShape](arkts-arkui-arkui-shape-baseshape-c.md)
 
@@ -26,7 +24,7 @@ import { RectShape, CircleShape, EllipseShape, PathShape } from 'kits/@kit.ArkUI
 constructor(options?: ShapeSize)
 ```
 
-创建CircleShape对象。
+Constructor.
 
 **Since:** 23
 
@@ -42,5 +40,5 @@ constructor(options?: ShapeSize)
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| options | [ShapeSize](arkts-arkui-arkui-shape-shapesize-i.md) | No | 形状的大小。 |
+| options | [ShapeSize](arkts-arkui-arkui-shape-shapesize-i.md) | No |  |
 

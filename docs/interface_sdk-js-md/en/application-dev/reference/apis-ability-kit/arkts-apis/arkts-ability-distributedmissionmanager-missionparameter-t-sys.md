@@ -4,8 +4,8 @@
 export type MissionParameter = _MissionParameter
 ```
 
-作为  
-[startSyncRemoteMissions](arkts-ability-distributedmissionmanager-startsyncremotemissions-f-sys.md#startsyncremotemissions)的入参，表示同步时所需参数的枚举。
+Defines the parameters required for mission synchronization. It is used an input parameter in  
+[startSyncRemoteMissions](arkts-ability-distributedmissionmanager-startsyncremotemissions-f-sys.md#startsyncremotemissions).
 
 **Since:** 10
 

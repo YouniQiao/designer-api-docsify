@@ -4,7 +4,7 @@
 type OnCompletedFn = (error: BusinessError<void>) => void
 ```
 
-所有启动任务完成时的回调函数。
+Defines a onCompleted function.
 
 **Since:** 23
 
@@ -18,5 +18,5 @@ type OnCompletedFn = (error: BusinessError<void>) => void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| error | [BusinessError](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-businesserror-i.md)&lt;void&gt; | Yes | 错误信息。 |
+| error | [BusinessError](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-businesserror-i.md)&lt;void&gt; | Yes | Indicates the error during execution. |
 

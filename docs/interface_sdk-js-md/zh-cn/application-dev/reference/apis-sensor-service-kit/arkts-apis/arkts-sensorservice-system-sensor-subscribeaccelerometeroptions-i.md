@@ -16,12 +16,6 @@
 
 **系统能力：** SystemCapability.Sensors.Sensor.Lite
 
-## 导入模块
-
-```TypeScript
-import { OnBodyStateResponse, subscribeAccelerometerOptions, ProximityResponse, SubscribeGyroscopeOptions, SubscribeStepCounterOptions, SubscribeDeviceOrientationOptions, HeartRateResponse, LightResponse, AccelerometerResponse, SubscribeLightOptions, DeviceOrientationResponse, SubscribeHeartRateOptions, StepCounterResponse, SubscribeCompassOptions, GetOnBodyStateOptions, SubscribeBarometerOptions, BarometerResponse, SubscribeProximityOptions, CompassResponse, GyroscopeResponse, SubscribeOnBodyStateOptions } from 'kits/@kit.SensorServiceKit';
-```
-
 ## fail
 
 ```TypeScript
@@ -81,7 +75,7 @@ success: (data: AccelerometerResponse) => void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| data | [AccelerometerResponse](arkts-sensorservice-system-sensor-accelerometerresponse-i.md) | 是 |  |
+| data | [AccelerometerResponse](arkts-sensorservice-sensor-accelerometerresponse-i.md) | 是 |  |
 
 ## interval
 

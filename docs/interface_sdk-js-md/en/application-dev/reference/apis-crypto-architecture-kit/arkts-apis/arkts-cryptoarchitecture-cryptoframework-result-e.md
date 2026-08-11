@@ -1,6 +1,6 @@
 # Result
 
-表示执行结果的枚举。
+Enumerates the operation results.
 
 **Since:** 9
 
@@ -16,7 +16,7 @@
 INVALID_PARAMS = 401
 ```
 
-非法入参。
+Invalid parameter.
 
 **Since:** 9
 
@@ -38,7 +38,7 @@ INVALID_PARAMS = 401
 NOT_SUPPORT = 801
 ```
 
-操作不支持。
+Unsupported operation.
 
 **Since:** 9
 
@@ -60,7 +60,7 @@ NOT_SUPPORT = 801
 ERR_OUT_OF_MEMORY = 17620001
 ```
 
-内存操作失败。
+The memory operation failed.
 
 **Since:** 9
 
@@ -82,7 +82,7 @@ ERR_OUT_OF_MEMORY = 17620001
 ERR_RUNTIME_ERROR = 17620002
 ```
 
-获取Native对象失败或参数转换失败。
+Failed to obtain the native object or convert parameters.
 
 **Since:** 9
 
@@ -104,7 +104,7 @@ ERR_RUNTIME_ERROR = 17620002
 ERR_PARAMETER_CHECK_FAILED = 17620003
 ```
 
-表示参数检查失败。
+The parameter check failed.
 
 **Since:** 20
 
@@ -124,7 +124,7 @@ ERR_PARAMETER_CHECK_FAILED = 17620003
 ERR_INVALID_CALL = 17620004
 ```
 
-表示无效的函数调用。
+Invalid function call.
 
 **Since:** 26.0.0
 
@@ -144,7 +144,7 @@ ERR_INVALID_CALL = 17620004
 ERR_CRYPTO_OPERATION = 17630001
 ```
 
-密码操作错误。
+Cryptographic operation error.
 
 **Since:** 9
 

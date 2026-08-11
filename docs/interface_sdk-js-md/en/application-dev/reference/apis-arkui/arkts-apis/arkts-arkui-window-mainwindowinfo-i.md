@@ -1,6 +1,6 @@
 # MainWindowInfo
 
-主窗口信息。
+Describes the main window information.
 
 **Since:** 21
 
@@ -40,7 +40,7 @@ ID of the display to which the main window belongs.
 label: string
 ```
 
-主窗口的任务名称。
+Task name of the main window.
 
 **Type:** string
 

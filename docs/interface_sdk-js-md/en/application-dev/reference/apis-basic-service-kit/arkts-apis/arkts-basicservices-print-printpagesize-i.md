@@ -1,6 +1,6 @@
 # PrintPageSize
 
-定义打印页面尺寸的接口。
+Defines the size of the printed page.
 
 **Since:** 11
 
@@ -22,7 +22,7 @@ import { print } from 'kits/@kit.BasicServicesKit';
 height: int
 ```
 
-表示页面高度，单位：毫米。
+Page height, in millimeters.
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
@@ -40,7 +40,7 @@ height: int
 id: string
 ```
 
-表示纸张类型ID。
+Paper size ID.
 
 **Type:** string
 
@@ -58,7 +58,7 @@ id: string
 name: string
 ```
 
-表示纸张类型名称。
+Paper size name.
 
 **Type:** string
 
@@ -76,7 +76,7 @@ name: string
 width: int
 ```
 
-表示页面宽度，单位：毫米。
+Page width, in millimeters.
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 

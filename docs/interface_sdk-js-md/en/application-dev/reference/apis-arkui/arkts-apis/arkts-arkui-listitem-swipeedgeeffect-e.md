@@ -1,6 +1,6 @@
 # SwipeEdgeEffect
 
-滑动效果枚举。
+Sliding effect
 
 **Since:** 23
 

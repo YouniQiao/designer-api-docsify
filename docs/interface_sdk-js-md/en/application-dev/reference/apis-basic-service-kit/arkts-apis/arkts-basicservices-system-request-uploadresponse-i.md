@@ -24,7 +24,7 @@ import { UploadResponse, RequestData, DownloadRequestOptions, DownloadResponse, 
 code: number
 ```
 
-服务器返回的HTTP状态码。
+HTTP status code returned by the server.
 
 **Type:** number
 
@@ -46,7 +46,7 @@ code: number
 data: string
 ```
 
-服务器返回的内容。根据返回头内容中的type决定该值的类型。
+Content returned by the server. The value type is determined by the type in the returned headers.
 
 **Type:** string
 
@@ -68,7 +68,7 @@ data: string
 headers: Object
 ```
 
-服务器返回的返回头内容。
+Headers returned by the server.
 
 **Type:** Object
 

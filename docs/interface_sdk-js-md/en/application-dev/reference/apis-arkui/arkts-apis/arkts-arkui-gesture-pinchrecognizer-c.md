@@ -1,6 +1,6 @@
 # PinchRecognizer
 
-捏合手势识别器对象，继承于[GestureRecognizer](arkts-arkui-gesturerecognizer-c.md)。
+Defines the pinch gesture recognizer.
 
 **Inheritance/Implementation:** PinchRecognizer extends [GestureRecognizer](arkts-arkui-gesturerecognizer-c.md)
 
@@ -18,7 +18,7 @@
 getDistance(): double
 ```
 
-返回预设捏合手势识别器最小识别距离阈值。
+Returns the pinch gesture's distance.The unit is vp.
 
 **Since:** 23
 
@@ -34,5 +34,5 @@ getDistance(): double
 
 | Type | Description |
 | --- | --- |
-| double | 预设捏合手势识别器最小识别距离阈值，单位为vp。&lt;br/&gt;取值范围：[0, +∞) |
+| double | the distance of the pinch gesture. |
 

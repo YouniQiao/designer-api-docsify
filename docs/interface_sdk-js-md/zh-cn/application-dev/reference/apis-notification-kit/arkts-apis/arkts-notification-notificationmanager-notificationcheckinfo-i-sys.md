@@ -48,7 +48,7 @@ contentType: ContentType
 
 通知类型。
 
-**类型：** [ContentType](../../apis-arkui/arkts-components/arkts-arkui-contenttype-e.md)
+**类型：** [ContentType](../../apis-audio-kit/arkts-apis/arkts-audio-audio-contenttype-e.md)
 
 **起始版本：** 10
 
@@ -92,7 +92,7 @@ extraInfos?: Record<string, Object>
 
 实况通知的附加信息。
 
-**类型：** [Record](../../apis-default/arkts-apis/arkts-record-t.md)&lt;string, Object&gt;
+**类型：** Record&lt;string, Object&gt;
 
 **起始版本：** 11
 

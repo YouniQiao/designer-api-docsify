@@ -24,7 +24,7 @@ import { mechanicManager } from 'kits/@kit.MechanicKit';
 pitchEnabled: boolean
 ```
 
-是否使能俯仰轴
+Whether the pitch axis is enabled.
 
 **Type:** boolean
 
@@ -64,7 +64,7 @@ Whether the pitch axis is limited.
 rollEnabled: boolean
 ```
 
-是否启用滚动轴
+Whether the roll axis is enabled.
 
 **Type:** boolean
 
@@ -104,7 +104,7 @@ Whether the roll axis is limited.
 yawEnabled: boolean
 ```
 
-是否启用偏航轴
+Whether the yaw axis is enabled.
 
 **Type:** boolean
 
@@ -124,7 +124,7 @@ yawEnabled: boolean
 yawLimited?: RotationAxisLimited
 ```
 
-偏航轴是否限位
+Whether the yaw axis is limited.
 
 **Type:** [RotationAxisLimited](arkts-mechanic-mechanicmanager-rotationaxislimited-e-sys.md)
 

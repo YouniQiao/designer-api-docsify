@@ -1,7 +1,7 @@
 # AuthOptions (System API)
 
-表示  
-[认证用户](arkts-basicservices-osaccount-userauth-c-sys.md#auth)的可选参数集合。
+Represents a set of optional parameters for  
+[auth](arkts-basicservices-osaccount-userauth-c-sys.md#auth).
 
 **Since:** 12
 
@@ -25,7 +25,7 @@ import { osAccount } from 'kits/@kit.BasicServicesKit';
 accountId?: int
 ```
 
-系统账号标识，默认为undefined。
+OS account ID, which is **undefined** by default.
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
@@ -45,7 +45,7 @@ accountId?: int
 additionalInfo?: string
 ```
 
-表示有关身份验证选项的附加信息。
+Indicates the additional information about the authentication options.
 
 **Type:** string
 
@@ -67,7 +67,7 @@ additionalInfo?: string
 authIntent?: AuthIntent
 ```
 
-认证意图，默认为undefined。
+Authentication intent, which is **undefined** by default.
 
 **Type:** [AuthIntent](arkts-basicservices-osaccount-authintent-e-sys.md)
 
@@ -87,7 +87,7 @@ authIntent?: AuthIntent
 remoteAuthOptions?: RemoteAuthOptions
 ```
 
-远程认证选项，默认为undefined。
+Remote authentication options, which is **undefined** by default.
 
 **Type:** [RemoteAuthOptions](arkts-basicservices-osaccount-remoteauthoptions-i-sys.md)
 

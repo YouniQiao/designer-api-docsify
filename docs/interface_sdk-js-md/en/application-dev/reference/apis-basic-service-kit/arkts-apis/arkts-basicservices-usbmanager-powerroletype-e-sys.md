@@ -18,7 +18,7 @@ Enumerates power role types.
 NONE = 0
 ```
 
-没有功能。
+No function.
 
 **Since:** 9
 

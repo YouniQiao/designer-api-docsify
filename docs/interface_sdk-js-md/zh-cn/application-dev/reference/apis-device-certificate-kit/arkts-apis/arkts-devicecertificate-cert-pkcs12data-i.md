@@ -10,12 +10,6 @@ P12（PKCS #12）数据，包含私钥、证书和其他证书。
 
 **系统能力：** SystemCapability.Security.Cert
 
-## 导入模块
-
-```TypeScript
-import { cert } from 'kits/@kit.DeviceCertificateKit';
-```
-
 ## cert
 
 ```TypeScript
@@ -24,7 +18,7 @@ cert?: X509Cert
 
 和私钥匹配的证书。
 
-**类型：** [X509Cert](../../apis-network-kit/arkts-apis/arkts-network-http-x509cert-t.md)
+**类型：** [X509Cert](arkts-devicecertificate-cert-x509cert-i.md)
 
 **起始版本：** 18
 

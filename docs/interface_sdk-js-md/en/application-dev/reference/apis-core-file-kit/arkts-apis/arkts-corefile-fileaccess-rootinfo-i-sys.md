@@ -1,6 +1,6 @@
 # RootInfo (System API)
 
-表示设备的根属性信息和接口能力。
+Provides APIs for managing the device's root attribute information.
 
 **Since:** 9
 
@@ -26,8 +26,7 @@ import { fileAccess } from 'kits/@kit.CoreFileKit';
 listFile(filter?: Filter): FileIterator
 ```
 
-以同步方法从某个目录，基于过滤器，获取下一级符合条件的文件(夹)信息的迭代器对象FileIterator，然后通过[next](arkts-corefile-fileaccess-fileiterator-i-sys.md#next)方法返回  
-[FileInfo](arkts-corefile-fileaccess-fileinfo-i-sys.md)。目前仅支持内置存储设备过滤，外置存储设备不支持过滤。
+Obtains a **FileIterator** object that lists the next-level files or directories matching the specified conditions of this directory. This API returns the result synchronously. [FileInfo](arkts-corefile-fileaccess-fileinfo-i-sys.md) is returned by [next()](arkts-corefile-fileaccess-fileiterator-i-sys.md#next). Currently, only built-in storage devices support the file filter.
 
 **Since:** 9
 
@@ -136,8 +135,7 @@ try {
 scanFile(filter?: Filter): FileIterator
 ```
 
-以同步方法从某设备根节点开始，基于过滤器，递归获取符合条件的文件信息的迭代器对象FileIterator，然后通过[next](arkts-corefile-fileaccess-fileiterator-i-sys.md#next)方法返回  
-[FileInfo](arkts-corefile-fileaccess-fileinfo-i-sys.md)。目前仅支持内置存储设备。
+Obtains a **FileIterator** object that recursively retrieves the files matching the specified conditions from the device root directory. This API returns the result synchronously. [FileInfo](arkts-corefile-fileaccess-fileinfo-i-sys.md) is returned by [next](arkts-corefile-fileaccess-fileiterator-i-sys.md#next). Currently, this API supports only built-in storage devices.
 
 **Since:** 9
 
@@ -244,7 +242,7 @@ try {
 deviceFlags: number
 ```
 
-设备支持的能力。
+Capabilities supported by the device.
 
 **Type:** number
 
@@ -270,7 +268,7 @@ deviceFlags: number
 deviceType: number
 ```
 
-设备支持的能力。
+Capabilities supported by the device.
 
 **Type:** number
 
@@ -296,7 +294,7 @@ deviceType: number
 displayName: string
 ```
 
-设备支持的能力。
+Capabilities supported by the device.
 
 **Type:** string
 
@@ -322,7 +320,7 @@ displayName: string
 relativePath: string
 ```
 
-根目录的相对路径。
+Relative path of the root directory.
 
 **Type:** string
 
@@ -348,7 +346,7 @@ relativePath: string
 uri: string
 ```
 
-设备支持的能力。
+Capabilities supported by the device.
 
 **Type:** string
 

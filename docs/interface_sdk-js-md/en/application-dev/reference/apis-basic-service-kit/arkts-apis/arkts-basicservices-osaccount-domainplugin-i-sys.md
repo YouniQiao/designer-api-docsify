@@ -1,6 +1,6 @@
 # DomainPlugin (System API)
 
-域插件，提供域账号认证功能。
+Provides APIs for domain account authentication.
 
 **Since:** 9
 
@@ -24,7 +24,7 @@ import { osAccount } from 'kits/@kit.BasicServicesKit';
 auth(domainAccountInfo: DomainAccountInfo, credential: Uint8Array, callback: IUserAuthCallback): void
 ```
 
-认证指定的域账号。
+Authenticates a domain account.
 
 **Since:** 9
 
@@ -40,9 +40,9 @@ auth(domainAccountInfo: DomainAccountInfo, credential: Uint8Array, callback: IUs
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| domainAccountInfo | [DomainAccountInfo](arkts-basicservices-osaccount-domainaccountinfo-i-sys.md) | Yes | 指示域账号信息。 |
-| credential | Uint8Array | Yes | 指示域账号的凭据。 |
-| callback | [IUserAuthCallback](arkts-basicservices-osaccount-iuserauthcallback-i-sys.md) | Yes | 指示认证结果回调。 |
+| domainAccountInfo | [DomainAccountInfo](arkts-basicservices-osaccount-domainaccountinfo-i-sys.md) | Yes | Domain account information. |
+| credential | Uint8Array | Yes | Credentials of the domain account. |
+| callback | [IUserAuthCallback](arkts-basicservices-osaccount-iuserauthcallback-i-sys.md) | Yes | Callback used to return the authentication result. |
 
 ## Examples
 
@@ -100,7 +100,7 @@ try {
 auth: DomainPluginAuthFunc
 ```
 
-认证指定的域账号。
+Authenticates the specified domain account.
 
 **Since:** 23
 
@@ -118,7 +118,7 @@ auth: DomainPluginAuthFunc
 authWithPopup(domainAccountInfo: DomainAccountInfo, callback: IUserAuthCallback): void
 ```
 
-弹窗认证指定的域账号。
+Authenticates a domain account in a pop-up window.
 
 **Since:** 10
 
@@ -134,8 +134,8 @@ authWithPopup(domainAccountInfo: DomainAccountInfo, callback: IUserAuthCallback)
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| domainAccountInfo | [DomainAccountInfo](arkts-basicservices-osaccount-domainaccountinfo-i-sys.md) | Yes | 指示域账号信息。 |
-| callback | [IUserAuthCallback](arkts-basicservices-osaccount-iuserauthcallback-i-sys.md) | Yes | 指示认证结果回调。 |
+| domainAccountInfo | [DomainAccountInfo](arkts-basicservices-osaccount-domainaccountinfo-i-sys.md) | Yes | Domain account information. |
+| callback | [IUserAuthCallback](arkts-basicservices-osaccount-iuserauthcallback-i-sys.md) | Yes | Callback used to return the authentication result. |
 
 ## Examples
 
@@ -178,7 +178,7 @@ osAccount.DomainAccountManager.registerPlugin(plugin)
 authWithPopup: DomainPluginAuthWithPopupFunc
 ```
 
-弹窗认证指定的域账号。
+Authenticates the specified domain account with a popup.
 
 **Since:** 23
 
@@ -196,7 +196,7 @@ authWithPopup: DomainPluginAuthWithPopupFunc
 authWithToken(domainAccountInfo: DomainAccountInfo, token: Uint8Array, callback: IUserAuthCallback): void
 ```
 
-使用授权令牌认证指定的域账号。
+Authenticates a domain account by the authorization token.
 
 **Since:** 10
 
@@ -212,9 +212,9 @@ authWithToken(domainAccountInfo: DomainAccountInfo, token: Uint8Array, callback:
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| domainAccountInfo | [DomainAccountInfo](arkts-basicservices-osaccount-domainaccountinfo-i-sys.md) | Yes | 指示域账号信息。 |
-| token | Uint8Array | Yes | 指示PIN码或生物识别认证成功时生成的授权令牌。 |
-| callback | [IUserAuthCallback](arkts-basicservices-osaccount-iuserauthcallback-i-sys.md) | Yes | 指示认证结果回调。 |
+| domainAccountInfo | [DomainAccountInfo](arkts-basicservices-osaccount-domainaccountinfo-i-sys.md) | Yes | Domain account information. |
+| token | Uint8Array | Yes | Authorization token generated when the PIN or biometric authentication is successful. |
+| callback | [IUserAuthCallback](arkts-basicservices-osaccount-iuserauthcallback-i-sys.md) | Yes | Callback used to return the authentication result. |
 
 ## Examples
 
@@ -257,7 +257,7 @@ osAccount.DomainAccountManager.registerPlugin(plugin)
 authWithToken: DomainPluginAuthWithTokenFunc
 ```
 
-使用授权令牌认证指定的域账号。
+Authenticates the specified domain account with an authorization token.
 
 **Since:** 23
 
@@ -275,7 +275,7 @@ authWithToken: DomainPluginAuthWithTokenFunc
 bindAccount(domainAccountInfo: DomainAccountInfo, localId: number, callback: AsyncCallback<void>): void
 ```
 
-绑定指定的域账号。
+Binds a domain account.
 
 **Since:** 10
 
@@ -291,9 +291,9 @@ bindAccount(domainAccountInfo: DomainAccountInfo, localId: number, callback: Asy
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| domainAccountInfo | [DomainAccountInfo](arkts-basicservices-osaccount-domainaccountinfo-i-sys.md) | Yes | 指示域账号信息。 |
-| localId | number | Yes | 系统账号ID。 |
-| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | 指示绑定结果回调。 |
+| domainAccountInfo | [DomainAccountInfo](arkts-basicservices-osaccount-domainaccountinfo-i-sys.md) | Yes | Domain account information. |
+| localId | number | Yes | ID of the target OS account. |
+| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. |
 
 ## Examples
 
@@ -336,7 +336,7 @@ osAccount.DomainAccountManager.registerPlugin(plugin)
 bindAccount: DomainPluginBindAccountFunc
 ```
 
-绑定指定的域账号。
+Binds the specified domain account with an OS account.
 
 **Since:** 23
 
@@ -354,7 +354,7 @@ bindAccount: DomainPluginBindAccountFunc
 getAccessToken(options: GetDomainAccessTokenOptions, callback: AsyncCallback<Uint8Array>): void
 ```
 
-根据指定的选项获取域访问令牌。使用callback异步回调。
+Obtains the domain access token based on the specified conditions. This API uses an asynchronous callback to return the result.
 
 **Since:** 10
 
@@ -370,8 +370,8 @@ getAccessToken(options: GetDomainAccessTokenOptions, callback: AsyncCallback<Uin
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| options | [GetDomainAccessTokenOptions](arkts-basicservices-osaccount-getdomainaccesstokenoptions-i-sys.md) | Yes | 指示获取域访问令牌的选项。 |
-| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;Uint8Array&gt; | Yes | 指示结果回调。 |
+| options | [GetDomainAccessTokenOptions](arkts-basicservices-osaccount-getdomainaccesstokenoptions-i-sys.md) | Yes | Options specified for obtaining the domain access token. |
+| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;Uint8Array&gt; | Yes | Callback used to return the result. |
 
 ## Examples
 
@@ -415,7 +415,7 @@ osAccount.DomainAccountManager.registerPlugin(plugin)
 getAccessToken: DomainPluginGetAccessTokenFunc
 ```
 
-根据指定的选项获取域访问令牌。
+Gets the access token based on the specified options.
 
 **Since:** 23
 
@@ -433,7 +433,7 @@ getAccessToken: DomainPluginGetAccessTokenFunc
 getAccountInfo(options: GetDomainAccountInfoPluginOptions, callback: AsyncCallback<DomainAccountInfo>): void
 ```
 
-查询指定域账号的信息。使用callback异步回调。
+Obtains information about a domain account. This API uses an asynchronous callback to return the result.
 
 **Since:** 10
 
@@ -449,8 +449,8 @@ getAccountInfo(options: GetDomainAccountInfoPluginOptions, callback: AsyncCallba
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| options | [GetDomainAccountInfoPluginOptions](arkts-basicservices-osaccount-getdomainaccountinfopluginoptions-i-sys.md) | Yes | 指示域账号信息。 |
-| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;DomainAccountInfo&gt; | Yes | 指示查询结果回调。 |
+| options | [GetDomainAccountInfoPluginOptions](arkts-basicservices-osaccount-getdomainaccountinfopluginoptions-i-sys.md) | Yes | Domain account information. |
+| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;DomainAccountInfo&gt; | Yes | Callback used to return the result. |
 
 ## Examples
 
@@ -498,7 +498,7 @@ osAccount.DomainAccountManager.registerPlugin(plugin)
 getAccountInfo: DomainPluginGetAccountInfoFunc
 ```
 
-查询指定域账号的信息。
+Gets the domain account information with the specified options.
 
 **Since:** 23
 
@@ -516,7 +516,7 @@ getAccountInfo: DomainPluginGetAccountInfoFunc
 getAuthStatusInfo(domainAccountInfo: DomainAccountInfo, callback: AsyncCallback<AuthStatusInfo>): void
 ```
 
-查询指定域账号的认证状态信息。
+Obtains the authentication status of a domain account.
 
 **Since:** 10
 
@@ -532,8 +532,8 @@ getAuthStatusInfo(domainAccountInfo: DomainAccountInfo, callback: AsyncCallback<
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| domainAccountInfo | [DomainAccountInfo](arkts-basicservices-osaccount-domainaccountinfo-i-sys.md) | Yes | 指示域账号信息。 |
-| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;AuthStatusInfo&gt; | Yes | 指示查询结果回调。 |
+| domainAccountInfo | [DomainAccountInfo](arkts-basicservices-osaccount-domainaccountinfo-i-sys.md) | Yes | Domain account information. |
+| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;AuthStatusInfo&gt; | Yes | Callback used to return the result. |
 
 ## Examples
 
@@ -578,7 +578,7 @@ osAccount.DomainAccountManager.registerPlugin(plugin)
 getAuthStatusInfo: DomainPluginGetAuthStatusInfoFunc
 ```
 
-查询指定域账号的认证状态信息。
+Gets the domain authentication property for the specified domain account.
 
 **Since:** 23
 
@@ -600,7 +600,7 @@ isAccountTokenValid(
     ): void
 ```
 
-检查指定的域账号令牌是否有效。
+Checks whether the specified domain account token is valid.
 
 **Since:** 10
 
@@ -616,9 +616,9 @@ isAccountTokenValid(
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| domainAccountInfo | [DomainAccountInfo](arkts-basicservices-osaccount-domainaccountinfo-i-sys.md) | Yes | 指示域账号信息。 |
-| token | Uint8Array | Yes | 指示域账号令牌。 |
-| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;boolean&gt; | Yes | 指示检查结果回调。true表示指定的域账号令牌是有效的；false表示指定的域账号令牌是无效的。 |
+| domainAccountInfo | [DomainAccountInfo](arkts-basicservices-osaccount-domainaccountinfo-i-sys.md) | Yes | Domain account information. |
+| token | Uint8Array | Yes | Domain account token to check. |
+| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;boolean&gt; | Yes | Callback used to return the result. The value **true** means that the specified domain account token is valid; the value **false** means the opposite. |
 
 ## Examples
 
@@ -661,7 +661,7 @@ osAccount.DomainAccountManager.registerPlugin(plugin)
 isAccountTokenValid: DomainPluginIsAccountTokenValidFunc
 ```
 
-检查指定的域账号令牌是否有效。
+Checks whether the token of specified domain account is valid.
 
 **Since:** 23
 
@@ -679,7 +679,7 @@ isAccountTokenValid: DomainPluginIsAccountTokenValidFunc
 unbindAccount(domainAccountInfo: DomainAccountInfo, callback: AsyncCallback<void>): void
 ```
 
-解绑指定的域账号。
+Unbinds a domain account.
 
 **Since:** 10
 
@@ -695,8 +695,8 @@ unbindAccount(domainAccountInfo: DomainAccountInfo, callback: AsyncCallback<void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| domainAccountInfo | [DomainAccountInfo](arkts-basicservices-osaccount-domainaccountinfo-i-sys.md) | Yes | 指示域账号信息。 |
-| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | 指示绑定结果回调。 |
+| domainAccountInfo | [DomainAccountInfo](arkts-basicservices-osaccount-domainaccountinfo-i-sys.md) | Yes | Domain account information. |
+| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. |
 
 ## Examples
 
@@ -739,7 +739,7 @@ osAccount.DomainAccountManager.registerPlugin(plugin)
 unbindAccount: DomainPluginUnbindAccountFunc
 ```
 
-解绑指定的域账号。
+Unbind the specified domain account.
 
 **Since:** 23
 

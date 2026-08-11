@@ -4,7 +4,7 @@
 declare type OnDidStopDraggingCallback = (willFling: boolean) => void
 ```
 
-滚动组件在结束拖拽时触发的回调。
+On scroll callback using in scrollable onDidStopDragging.
 
 **Since:** 21
 
@@ -24,5 +24,5 @@ declare type OnDidStopDraggingCallback = (willFling: boolean) => void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| willFling | boolean | Yes | 结束拖拽后是否会有惯性动效。返回true代表拖拽结束后有惯性动效，返回false代表没有惯性动效。 |
+| willFling | boolean | Yes | whether start fling animation. |
 

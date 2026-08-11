@@ -12,7 +12,7 @@ import { bundle } from 'kits/@kit.AbilityKit';
 function cleanBundleCacheFiles(bundleName: string, callback: AsyncCallback<void>): void
 ```
 
-清除指定应用程序的缓存数据，使用callback异步回调。
+Clears the cache data of an application. This API uses an asynchronous callback to return the result.
 
 **Since:** 8
 
@@ -34,8 +34,8 @@ function cleanBundleCacheFiles(bundleName: string, callback: AsyncCallback<void>
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| bundleName | string | Yes | 指示要清除其缓存数据的应用Bundle名称。 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | 回调函数。 |
+| bundleName | string | Yes | Bundle name. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. |
 
 
 ## cleanBundleCacheFiles
@@ -44,7 +44,7 @@ function cleanBundleCacheFiles(bundleName: string, callback: AsyncCallback<void>
 function cleanBundleCacheFiles(bundleName: string): Promise<void>
 ```
 
-清除指定应用程序的缓存数据，使用Promise异步回调。
+Clears the cache data of an application. This API uses a promise to return the result.
 
 **Since:** 8
 
@@ -66,11 +66,11 @@ function cleanBundleCacheFiles(bundleName: string): Promise<void>
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| bundleName | string | Yes | 指示要清除其缓存数据的应用Bundle名称。 |
+| bundleName | string | Yes | Bundle name. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise对象，无返回结果的Promise对象。 |
+| Promise&lt;void&gt; | Promise that returns no value. |
 

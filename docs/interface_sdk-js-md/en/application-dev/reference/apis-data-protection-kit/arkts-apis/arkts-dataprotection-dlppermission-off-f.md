@@ -12,9 +12,9 @@ import { dlpPermission } from 'kits/@kit.DataProtectionKit';
 function off(type: 'openDLPFile', listener?: Callback<AccessedDLPFileInfo>): void
 ```
 
-取消监听打开DLP文件。仅支持在非DLP沙箱应用中调用。调用成功后，将不再接收DLP文件打开事件的通知。
+Unsubscribes from the DLP file open event. This API can be called only in non-DLP sandbox applications. After the API is successfully called, the application will no longer receive notifications for the DLP file open event.
 
-该接口通常在页面销毁或不再需要监听时调用以释放资源。
+This API is usually called to release resources when the page is destroyed or the subscription is no longer needed.
 
 **Since:** 10
 
@@ -28,25 +28,31 @@ function off(type: 'openDLPFile', listener?: Callback<AccessedDLPFileInfo>): voi
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'openDLPFile' | Yes | 监听事件类型。固定值为'openDLPFile'：打开DLP文件事件。 |
-| listener | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;AccessedDLPFileInfo&gt; | No | DLP文件被打开的事件的回调。当需要取消特定回调时传入此参数（传入之前注册的回调函数）， 当需要取消所有回调时可不传此参数。不传入时默认为空，取消该类型事件的所有回调。 |
+| type | 'openDLPFile' | Yes | Event type. It has a fixed value of **openDLPFile**, which indicates the DLP file open event. |
+| listener | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;AccessedDLPFileInfo&gt; | No | Callback for the DLP file open event. The application will not be notified when a DLP file is opened. By default, this parameter is left blank, which unregisters all callbacks for the file open event. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. 3. Parameter verification failed. |
-| 19100001 | Invalid parameter value. |
-| 19100007 | No permission to call this API, which is available only for non-DLP sandbox applications. |
-| 19100011 | The system ability works abnormally. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. 3. Parameter verification failed. |
+| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported because car not support DLP feature.<br>**Applicable version:** 26.1.0 and later |
+| [19100001](../errorcode-dlp.md#19100001-invalid-parameter) | Invalid parameter value. |
+| [19100007](../errorcode-dlp.md#19100007-access-denied-for-a-dlp-sandbox-application) | No permission to call this API, which is available only for non-DLP sandbox applications. |
+| [19100011](../errorcode-dlp.md#19100011-system-service-abnormal) | The system ability works abnormally. |
 
 ## Examples
 
 ```TypeScript
 import { dlpPermission } from '@kit.DataProtectionKit';
+import { BusinessError } from '@kit.BasicServicesKit';
 
-dlpPermission.off('openDLPFile', (info: dlpPermission.AccessedDLPFileInfo) => {
-  console.info('openDlpFile event', info.uri, info.lastOpenTime);
-}); // Unsubscribe from the DLP file open event.
+try {
+  dlpPermission.off('openDLPFile', (info: dlpPermission.AccessedDLPFileInfo) => {
+    console.info('openDlpFile event', info.uri, info.lastOpenTime)
+  }); // Unsubscribe from the DLP file open event.
+} catch (err) {
+  console.error('error', (err as BusinessError).code, (err as BusinessError).message); // Throw an error if the operation fails.
+}
 ```
 

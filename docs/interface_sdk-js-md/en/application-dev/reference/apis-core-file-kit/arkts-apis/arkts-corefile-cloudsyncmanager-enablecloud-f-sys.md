@@ -12,7 +12,7 @@ import { cloudSyncManager } from 'kits/@kit.CoreFileKit';
 function enableCloud(accountId: string, switches: Record<string, boolean>): Promise<void>
 ```
 
-异步方法使能端云协同能力。使用Promise异步回调。
+Enables device-cloud sync. This API uses a promise to return the result.
 
 **Since:** 10
 
@@ -30,22 +30,22 @@ function enableCloud(accountId: string, switches: Record<string, boolean>): Prom
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| accountId | string | Yes | 账号Id。 |
-| switches | [Record](../../apis-default/arkts-apis/arkts-record-t.md)&lt;string, boolean&gt; | Yes | 应用的端云协同特性使能开关，string类型为应用包名，boolean类型为开关状态。true为打开；false为关闭。 |
+| accountId | string | Yes | Account ID. |
+| switches | [Record](../../apis-default/arkts-apis/arkts-record-t.md)&lt;string, boolean&gt; | Yes | Whether to enable the device-cloud sync feature. The application bundle name is a string. The switch status is a Boolean value. The value **true** means to enable this function ; the value **false** means the opposite. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise对象，无返回结果。 |
+| Promise&lt;void&gt; | Promise that returns no value. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | The input parameter is invalid.Possible causes:1.Mandatory parameters are left unspecified; &lt;br&gt;2.Incorrect parameter types. |
-| 201 | Permission verification failed. |
-| 202 | The caller is not a system application. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | The input parameter is invalid.Possible causes:1.Mandatory parameters are left unspecified; &lt;br&gt;2.Incorrect parameter types. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | The caller is not a system application. |
 
 ## Examples
 
@@ -58,9 +58,9 @@ let switches: Record<string, boolean> = {
   'com.example.bundleName2': false
 }
 cloudSyncManager.enableCloud(accountId, switches).then(() => {
-  console.info("enableCloud successfully.");
+  console.error("enableCloud successfully");
 }).catch((err: BusinessError) => {
-  console.error("enableCloud failed with error message: " + err.message + ", error code: " + err.code);
+  console.info("enableCloud failed with error message: " + err.message + ", error code: " + err.code);
 });
 ```
 
@@ -75,7 +75,7 @@ function enableCloud(
   ): void
 ```
 
-异步方法使能端云协同能力。使用callback异步回调。
+Enables device-cloud sync. This API uses an asynchronous callback to return the result.
 
 **Since:** 10
 
@@ -93,17 +93,17 @@ function enableCloud(
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| accountId | string | Yes | 账号Id。 |
-| switches | [Record](../../apis-default/arkts-apis/arkts-record-t.md)&lt;string, boolean&gt; | Yes | 应用的端云协同特性使能开关，string类型为应用包名，boolean类型为开关状态。true为打开；false为关闭。 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | 回调函数。异步使能端云协同能力之后。 |
+| accountId | string | Yes | Account ID. |
+| switches | [Record](../../apis-default/arkts-apis/arkts-record-t.md)&lt;string, boolean&gt; | Yes | Whether to enable the device-cloud sync feature. The application bundle name is a string. The switch status is a Boolean value. The value **true** means to enable this function ; the value **false** means the opposite. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result of enabling device-cloud sync. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | The input parameter is invalid.Possible causes:1.Mandatory parameters are left unspecified; &lt;br&gt;2.Incorrect parameter types. |
-| 201 | Permission verification failed. |
-| 202 | The caller is not a system application. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | The input parameter is invalid.Possible causes:1.Mandatory parameters are left unspecified; &lt;br&gt;2.Incorrect parameter types. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | The caller is not a system application. |
 
 ## Examples
 

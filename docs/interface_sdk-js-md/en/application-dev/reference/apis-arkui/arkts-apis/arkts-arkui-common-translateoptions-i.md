@@ -16,13 +16,7 @@ Defines the options of translate.
 x?: double | string
 ```
 
-x轴的平移距离。
-
-类型为number时，单位为vp，取值范围为(-∞, +∞)。
-
-默认值：0
-
-类型为string时，形式参考[Length](arkts-arkui-length-t.md)的string类型。
+Translation distance along the x-axis.For the number type, the unit is VP, and the value range is (-∞, +∞).For the string type, the value follows the format of length string type.
 
 **Type:** double \| string
 
@@ -42,13 +36,7 @@ x轴的平移距离。
 y?: double | string
 ```
 
-y轴的平移距离。
-
-类型为number时，单位为vp，取值范围为(-∞, +∞)。
-
-默认值：0
-
-类型为string时，形式参考[Length](arkts-arkui-length-t.md)的string类型。
+Translation distance along the y-axis.For the number type, the unit is VP, and the value range is (-∞, +∞).For the string type, the value follows the format of length string type.
 
 **Type:** double \| string
 
@@ -68,13 +56,7 @@ y轴的平移距离。
 z?: double | string
 ```
 
-z轴的平移距离。
-
-类型为number时，单位为vp，取值范围为(-∞, +∞)。
-
-默认值：0
-
-类型为string时，形式参考[Length](arkts-arkui-length-t.md)的string类型。
+Distance to translate along the z-axis. The value is a floating point number, the default value is 0.0, and the unit is px.
 
 **Type:** double \| string
 

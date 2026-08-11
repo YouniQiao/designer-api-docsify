@@ -1,6 +1,6 @@
 # SecurityDpiFollowStrategy (System API)
 
-定义SecurityUIExtensionComponent内容分辨率跟随策略的枚举。
+Enumeration of different types of SecurityDpiFollowStrategy.
 
 **Since:** 26.0.0
 
@@ -18,7 +18,7 @@
 FOLLOW_HOST_DPI = 0
 ```
 
-表示分辨率跟随宿主。
+Follow host DPI
 
 **Since:** 26.0.0
 
@@ -38,7 +38,7 @@ FOLLOW_HOST_DPI = 0
 FOLLOW_UI_EXTENSION_ABILITY_DPI = 1
 ```
 
-表示分辨率跟随UIExtensionAbility。
+DPI following provider UIExtensionAbility
 
 **Since:** 26.0.0
 

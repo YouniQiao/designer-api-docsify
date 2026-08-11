@@ -119,7 +119,7 @@ clip(path: Path2D, fillRule?: CanvasFillRule): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| path | [Path2D](arkts-arkui-viewmodel-path2d-i.md) | 是 | Path2D剪切路径。&lt;br&gt;异常值undefined或null按无效值处理。 |
+| path | [Path2D](arkts-arkui-canvas-path2d-c.md) | 是 | Path2D剪切路径。&lt;br&gt;异常值undefined或null按无效值处理。 |
 | fillRule | [CanvasFillRule](arkts-arkui-canvasfillrule-t.md) | 否 | 指定要剪切对象的规则。&lt;br&gt;可选参数为："nonzero"，"evenodd"。&lt;br&gt;异常值undefined或null按默认值处理。&lt;br&gt;默认值："nonzero" |
 
 ## createConicGradient
@@ -482,7 +482,7 @@ fill(path: Path2D, fillRule?: CanvasFillRule): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| path | [Path2D](arkts-arkui-viewmodel-path2d-i.md) | 是 | Path2D填充路径。&lt;br&gt;异常值undefined或null按无效值处理。 |
+| path | [Path2D](arkts-arkui-canvas-path2d-c.md) | 是 | Path2D填充路径。&lt;br&gt;异常值undefined或null按无效值处理。 |
 | fillRule | [CanvasFillRule](arkts-arkui-canvasfillrule-t.md) | 否 | 指定要填充对象的规则。&lt;br&gt;可选参数为："nonzero"，"evenodd"。&lt;br&gt;异常值undefined或null按默认值处理。&lt;br&gt;默认值："nonzero" |
 
 ## fillRect
@@ -693,7 +693,7 @@ measureText(text: string): TextMetrics
 
 | 类型 | 说明 |
 | --- | --- |
-| [TextMetrics](arkts-arkui-canvas-textmetrics-i.md) | 文本的尺寸信息。 |
+| [TextMetrics](arkts-arkui-textmetrics-i.md) | 文本的尺寸信息。 |
 
 ## putImageData
 
@@ -1097,7 +1097,7 @@ stroke(path: Path2D): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| path | [Path2D](arkts-arkui-viewmodel-path2d-i.md) | 是 | 需要绘制的Path2D。&lt;br&gt;异常值undefined或null按无效值处理，不进行绘制。 |
+| path | [Path2D](arkts-arkui-canvas-path2d-c.md) | 是 | 需要绘制的Path2D。&lt;br&gt;异常值undefined或null按无效值处理，不进行绘制。 |
 
 ## strokeRect
 

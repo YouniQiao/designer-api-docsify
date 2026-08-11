@@ -16,7 +16,7 @@ Enumerates control request types.
 USB_REQUEST_TYPE_STANDARD = 0
 ```
 
-标准。
+Standard.
 
 **Since:** 9
 
@@ -32,7 +32,7 @@ USB_REQUEST_TYPE_STANDARD = 0
 USB_REQUEST_TYPE_CLASS = 1
 ```
 
-类。
+Class.
 
 **Since:** 9
 
@@ -48,7 +48,7 @@ USB_REQUEST_TYPE_CLASS = 1
 USB_REQUEST_TYPE_VENDOR = 2
 ```
 
-厂商。
+Vendor.
 
 **Since:** 9
 

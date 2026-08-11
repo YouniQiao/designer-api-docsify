@@ -1,10 +1,10 @@
 # EapMethod
 
-表示EAP认证方式的枚举。
+Enumerates the EAP authentication methods.
 
-> **说明：**
+> **NOTE：**
 > 
-> 当前仅支持使用EAP_PEAP、EAP_TLS两种认证方式，其他暂不支持。
+> Currently, only the EAP_PEAP and EAP_TLS authentication methods are supported.
 
 **Since:** 12
 
@@ -20,7 +20,7 @@
 EAP_NONE = 0
 ```
 
-未指定。
+Not specified.
 
 **Since:** 12
 
@@ -38,7 +38,7 @@ EAP_NONE = 0
 EAP_PEAP = 1
 ```
 
-PEAP类型，受保护的可扩展认证协议。先建立安全的TLS隧道、然后进行简单认证。
+Protected Extensible Authentication Protocol (PEAP). It first establishes a secure TLS tunnel, followed by performing simple authentication within the tunnel.
 
 **Since:** 12
 
@@ -56,7 +56,7 @@ PEAP类型，受保护的可扩展认证协议。先建立安全的TLS隧道、�
 EAP_TLS = 2
 ```
 
-TLS类型，传输层安全协议。双向证书认证。
+Transport Layer Security (TLS). It implements mutual certificate authentication.
 
 **Since:** 12
 
@@ -74,7 +74,7 @@ TLS类型，传输层安全协议。双向证书认证。
 EAP_TTLS = 3
 ```
 
-TTLS类型，隧道传输层安全协议。与PEAP类似，但后续隧道内部认证方法更加丰富。
+Tunnel Transport Layer Security (TTLS). It is similar to PEAP, but supports a more diverse set of authentication methods inside the tunnel.
 
 **Since:** 12
 
@@ -92,7 +92,7 @@ TTLS类型，隧道传输层安全协议。与PEAP类似，但后续隧道内部
 EAP_PWD = 4
 ```
 
-PWD类型，密码认证。无需服务器证书。
+Password Authentication (PWD). It enables password-based authentication and does not require a server certificate.
 
 **Since:** 12
 
@@ -110,7 +110,7 @@ PWD类型，密码认证。无需服务器证书。
 EAP_SIM = 5
 ```
 
-SIM类型，使用手机SIM卡中的密钥和算法进行认证。
+Subscriber Identity Module (SIM). It performs authentication using the keys and algorithms stored in the SIM card of a smartphone.
 
 **Since:** 12
 
@@ -128,7 +128,7 @@ SIM类型，使用手机SIM卡中的密钥和算法进行认证。
 EAP_AKA = 6
 ```
 
-AKA类型，使用USIM卡（3G/4G/5G SIM卡）中的增强密钥和算法进行认证。
+Authentication and Key Agreement (AKA). It performs authentication using enhanced keys and algorithms stored in a USIM card (applicable to 3G/4G/5G SIM cards).
 
 **Since:** 12
 
@@ -146,7 +146,7 @@ AKA类型，使用USIM卡（3G/4G/5G SIM卡）中的增强密钥和算法进行�
 EAP_AKA_PRIME = 7
 ```
 
-AKA Prime类型，EAP-AKA增强版，在密钥派生中绑定网络名称。
+AKA Prime. It is an enhanced version of EAP-AKA and binds the network name during key derivation.
 
 **Since:** 12
 
@@ -164,7 +164,7 @@ AKA Prime类型，EAP-AKA增强版，在密钥派生中绑定网络名称。
 EAP_UNAUTH_TLS = 8
 ```
 
-UNAUTH TLS类型，单向认证（仅认证客户端）和加密通道。
+Unauthenticated TLS (UNAUTH TLS). It implements one-way authentication (client authentication only) while establishing an encrypted communication channel.
 
 **Since:** 12
 

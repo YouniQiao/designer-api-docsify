@@ -1,6 +1,6 @@
 # CopyEvent
 
-定义用户复制事件。
+the callback of copy event.
 
 **Since:** 23
 
@@ -16,7 +16,7 @@
 preventDefault(): void
 ```
 
-阻止组件的默认复制操作。
+Prevent system cut event.
 
 **Since:** 23
 

@@ -1,6 +1,6 @@
 # GaugeShadowOptions
 
-GaugeShadowOptions继承自[MultiShadowOptions](../arkts-apis/arkts-arkui-common-multishadowoptions-i.md/arkts-arkui-common-multishadowoptions-i.md)，具有MultiShadowOptions的全部属性。
+Inherits from [MultiShadowOptions](../arkts-apis/arkts-arkui-common-multishadowoptions-i.md/arkts-arkui-common-multishadowoptions-i.md) and has all attributes of **MultiShadowOptions**.
 
 **Inheritance/Implementation:** GaugeShadowOptions extends [MultiShadowOptions](../arkts-apis/arkts-arkui-common-multishadowoptions-i.md/arkts-arkui-common-multishadowoptions-i.md)
 

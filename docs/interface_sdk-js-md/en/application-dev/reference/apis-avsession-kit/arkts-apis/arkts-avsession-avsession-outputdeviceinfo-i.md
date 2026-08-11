@@ -1,6 +1,6 @@
 # OutputDeviceInfo
 
-播放设备的相关信息。
+Target Device Information Definition
 
 **Since:** 10
 
@@ -22,7 +22,7 @@ import { avSession } from 'kits/@kit.AVSessionKit';
 devices: Array<DeviceInfo>
 ```
 
-播放设备的集合。
+Arrays of device information
 
 **Type:** Array&lt;DeviceInfo&gt;
 

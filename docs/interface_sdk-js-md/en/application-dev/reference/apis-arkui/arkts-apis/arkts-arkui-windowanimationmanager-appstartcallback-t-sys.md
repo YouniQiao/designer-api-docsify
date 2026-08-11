@@ -5,7 +5,7 @@ type AppStartCallback = (startingWindowTarget: WindowAnimationTarget,
     finishCallback: WindowAnimationFinishedCallback) => void
 ```
 
-应用启动时的回调。
+Callback function on starting an application.
 
 **Since:** 23
 
@@ -21,6 +21,6 @@ type AppStartCallback = (startingWindowTarget: WindowAnimationTarget,
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| startingWindowTarget | [WindowAnimationTarget](arkts-arkui-remotewindow-windowanimationtarget-i-sys.md) | Yes | 动画目标窗口。 |
-| finishCallback | [WindowAnimationFinishedCallback](arkts-arkui-windowanimationmanager-windowanimationfinishedcallback-i-sys.md) | Yes | 动画完成后的回调。 |
+| startingWindowTarget | [WindowAnimationTarget](arkts-arkui-remotewindow-windowanimationtarget-i-sys.md) | Yes | Window target of the starting application. |
+| finishCallback | [WindowAnimationFinishedCallback](arkts-arkui-windowanimationmanager-windowanimationfinishedcallback-i-sys.md) | Yes | Animation finished callback. |
 

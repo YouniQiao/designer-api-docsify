@@ -2,7 +2,7 @@
 
 ## Overview
 
-Declares the sleep and yield interfaces in C.
+Declares the [ffrt_usleep](capi-sleep-h.md#ffrt_usleep) and [ffrt_yield](capi-sleep-h.md#ffrt_yield) interfaces in C.
 
 **Library**: libffrt.z.so
 
@@ -18,7 +18,7 @@ Declares the sleep and yield interfaces in C.
 
 | Name | Description |
 | -- | -- |
-| [FFRT_C_API int ffrt_usleep(uint64_t usec)](#ffrt_usleep) | Suspends the calling thread for a given duration. |
+| [FFRT_C_API int ffrt_usleep(uint64_t usec)](#ffrt_usleep) | Suspends the calling thread for a given duration.If `usec` exceeds the maximum supported value, it is clamped to that maximum. |
 | [FFRT_C_API void ffrt_yield(void)](#ffrt_yield) | Passes control to other tasks so that they can be executed. |
 
 ## Function description
@@ -31,7 +31,7 @@ FFRT_C_API int ffrt_usleep(uint64_t usec)
 
 **Description**
 
-Suspends the calling thread for a given duration.
+Suspends the calling thread for a given duration.If `usec` exceeds the maximum supported value, it is clamped to that maximum.
 
 **Since**: 10
 
@@ -45,7 +45,7 @@ Suspends the calling thread for a given duration.
 
 | Type | Description |
 | -- | -- |
-| FFRT_C_API int | <b>ffrt_success</b> if the thread is suspended;<br>         <b>ffrt_error</b> otherwise. |
+| FFRT_C_API int | `ffrt_success`. The function does not fail. |
 
 ### ffrt_yield()
 

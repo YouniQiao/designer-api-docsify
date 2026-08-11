@@ -16,7 +16,7 @@ Enum type supplied to {@link threatType} for the website's threat type.
 THREAT_ILLEGAL = 0
 ```
 
-非法网站。
+Illegal websites.
 
 **Since:** 11
 
@@ -34,7 +34,7 @@ THREAT_ILLEGAL = 0
 THREAT_FRAUD = 1
 ```
 
-欺诈网站。
+Fraud websites.
 
 **Since:** 11
 
@@ -52,7 +52,7 @@ THREAT_FRAUD = 1
 THREAT_RISK = 2
 ```
 
-存在安全风险的网站。
+Websites with security risks.
 
 **Since:** 11
 
@@ -70,7 +70,7 @@ THREAT_RISK = 2
 THREAT_WARNING = 3
 ```
 
-涉嫌包含不健康内容的网站。ArkWeb 不会拦截此类网站，应用程序可以自行处理。
+Websites suspected of containing unhealthy content.ArkWeb will not intercept this type of website and apps could handle it themselves.
 
 **Since:** 11
 
@@ -88,7 +88,7 @@ THREAT_WARNING = 3
 THREAT_NONE = 4
 ```
 
-安全检查通过，未发现任何风险。
+Security check passed, no risks found.
 
 **Since:** 21
 
@@ -104,7 +104,7 @@ THREAT_NONE = 4
 THREAT_UNPROCESSED = 5
 ```
 
-未进行安全检查。
+Security check not performed.
 
 **Since:** 21
 

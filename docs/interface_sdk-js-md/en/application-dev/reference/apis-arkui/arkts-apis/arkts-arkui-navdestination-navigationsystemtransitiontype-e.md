@@ -1,15 +1,6 @@
 # NavigationSystemTransitionType
 
-系统转场动画类型。
-
-> **说明：**
-> 
-> 设置系统转场动画，支持分别设置系统标题栏动画和内容动画。
-> 
-> 系统默认转场动画中只有STANDARD页面的push和pop动画有单独的标题栏动画，存在如下限制：
-> 
-> 
-> 设置NONE或者TITLE时没有系统转场动画，设置CONTENT和DEFAULT时默认系统转场动画。
+Types of system Transition.
 
 **Since:** 23
 
@@ -25,7 +16,7 @@
 DEFAULT = 0
 ```
 
-默认系统转场动画。
+Default system transition.
 
 **Since:** 23
 
@@ -43,7 +34,7 @@ DEFAULT = 0
 NONE = 1
 ```
 
-无系统转场动画。
+None system transition.
 
 **Since:** 23
 
@@ -61,7 +52,7 @@ NONE = 1
 TITLE = 2
 ```
 
-标题栏系统转场动画。
+Configure only titlebar transition.
 
 **Since:** 23
 
@@ -79,7 +70,7 @@ TITLE = 2
 CONTENT = 3
 ```
 
-内容区系统转场动画。
+Configure only content transition.
 
 **Since:** 23
 
@@ -97,7 +88,7 @@ CONTENT = 3
 FADE = 4
 ```
 
-渐变类型的系统转场动画。
+Configure fade style system transition.
 
 **Since:** 23
 
@@ -115,7 +106,7 @@ FADE = 4
 EXPLODE = 5
 ```
 
-中心缩放类型的系统转场动画。
+Configure explode style system transition.
 
 **Since:** 23
 
@@ -133,7 +124,7 @@ EXPLODE = 5
 SLIDE_RIGHT = 6
 ```
 
-右侧平移类型的系统转场动画。
+Configure right-side slide style system transition.
 
 **Since:** 23
 
@@ -151,7 +142,7 @@ SLIDE_RIGHT = 6
 SLIDE_BOTTOM = 7
 ```
 
-底部平移类型的系统转场动画。
+Configure bottom-side slide style system transition.
 
 **Since:** 23
 

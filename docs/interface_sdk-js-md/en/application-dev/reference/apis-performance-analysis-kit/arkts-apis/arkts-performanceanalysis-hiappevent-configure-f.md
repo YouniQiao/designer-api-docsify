@@ -12,7 +12,7 @@ import { hiAppEvent } from 'kits/@kit.PerformanceAnalysisKit';
 function configure(config: ConfigOption): void
 ```
 
-应用事件打点配置方法，支持配置打点开关和目录存储配额大小。
+Configures the application event logging function, such as setting the logging switch and directory storage quota.
 
 **Since:** 9
 
@@ -28,14 +28,14 @@ function configure(config: ConfigOption): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| config | [ConfigOption](arkts-performanceanalysis-hiappevent-configoption-i.md) | Yes | 应用事件打点配置项对象。 |
+| config | [ConfigOption](arkts-performanceanalysis-hiappevent-configoption-i.md) | Yes | Configuration items for application event logging. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 11103001 | Invalid max storage quota value. Possibly caused by incorrectly formatted. |
-| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types. |
+| [11103001](../errorcode-hiappevent.md#11103001-invalid-maximum-storage-quota) | Invalid max storage quota value. Possibly caused by incorrectly formatted. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types. |
 
 ## Examples
 

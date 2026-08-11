@@ -1,6 +1,6 @@
 # AccessModeType
 
-枚举，表示需要校验的具体权限。若不填，默认校验文件是否存在。
+Enumerates the access modes to verify. If this parameter is left blank, the system checks whether the file exists.
 
 **Since:** 12
 
@@ -16,7 +16,7 @@
 EXIST = 0
 ```
 
-文件是否存在。
+Whether the file exists.
 
 **Since:** 12
 
@@ -34,7 +34,7 @@ EXIST = 0
 WRITE = 2
 ```
 
-文件是否具有写入权限。
+Verify the write permission on the file.
 
 **Since:** 12
 
@@ -52,7 +52,7 @@ WRITE = 2
 READ = 4
 ```
 
-文件是否具有读取权限。
+Verify the read permission on the file.
 
 **Since:** 12
 
@@ -70,7 +70,7 @@ READ = 4
 READ_WRITE = 6
 ```
 
-文件是否具有读写权限。
+Verify the read/write permission on the file.
 
 **Since:** 12
 

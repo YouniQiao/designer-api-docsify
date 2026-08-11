@@ -1,6 +1,6 @@
 # TabsAnimationEvent
 
-Tabs组件动画相关信息集合。
+Describes the animation information of the **Tabs** component.
 
 **Since:** 11
 
@@ -16,7 +16,11 @@ Tabs组件动画相关信息集合。
 currentOffset: number
 ```
 
-Tabs当前显示元素在主轴方向上，相对于Tabs起始位置的位移。单位vp，默认值为0。
+Offset of the currently displayed element relative to the start position of the **Tabs** component along the main axis.
+
+Unit: vp.
+
+Default value: **0**.
 
 **Type:** number
 
@@ -40,7 +44,11 @@ Tabs当前显示元素在主轴方向上，相对于Tabs起始位置的位移。
 targetOffset: number
 ```
 
-Tabs动画目标元素在主轴方向上，相对于Tabs起始位置的位移。单位vp，默认值为0。
+Offset of the target element relative to the start position of the **Tabs** component along the main axis.
+
+Unit: vp.
+
+Default value: **0**.
 
 **Type:** number
 
@@ -64,7 +72,9 @@ Tabs动画目标元素在主轴方向上，相对于Tabs起始位置的位移。
 velocity: number
 ```
 
-Tabs离手动画开始时的离手速度。单位vp/s，默认值为0。
+Hands-off velocity at the beginning of the animation. Unit: vp/s.
+
+Default value: **0**.
 
 **Type:** number
 

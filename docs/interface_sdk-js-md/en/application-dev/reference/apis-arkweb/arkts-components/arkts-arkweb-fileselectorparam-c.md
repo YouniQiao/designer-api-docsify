@@ -1,6 +1,6 @@
 # FileSelectorParam
 
-封装消息信息，作为 {@link onFileSelectorShow} 方法的入参。
+Encompassed message information as parameters to {@link onFileSelectorShow} method.
 
 **Since:** 9
 
@@ -16,7 +16,7 @@
 constructor()
 ```
 
-FileSelectorParam的构造函数。
+Constructor.
 
 **Since:** 9
 
@@ -34,7 +34,7 @@ FileSelectorParam的构造函数。
 getAcceptType(): Array<string>
 ```
 
-获取可接受的MIME类型数组。
+Gets an array of acceptable MIME type.
 
 **Since:** 9
 
@@ -58,7 +58,7 @@ getAcceptType(): Array<string>
 getAcceptableFileTypes(): Array<Array<AcceptableFileType>>
 ```
 
-获取网页文件的已选类型数组。
+Gets an array of selected types for web page files.
 
 **Since:** 23
 
@@ -80,7 +80,7 @@ getAcceptableFileTypes(): Array<Array<AcceptableFileType>>
 getDefaultPath(): string
 ```
 
-获取拉起选择器时默认打开的路径。
+Get the default path opened when pulling up the selector.
 
 **Since:** 23
 
@@ -102,7 +102,7 @@ getDefaultPath(): string
 getDescriptions(): Array<string>
 ```
 
-获取文件类型的描述信息数组。
+Gets a description array of file types.
 
 **Since:** 23
 
@@ -124,7 +124,7 @@ getDescriptions(): Array<string>
 getMimeTypes(): Array<string>
 ```
 
-获取原始可接受 MIME 类型数组。
+Gets an array of raw acceptable MIME type.
 
 **Since:** 18
 
@@ -146,7 +146,7 @@ getMimeTypes(): Array<string>
 getMode(): FileSelectorMode
 ```
 
-获取当前文件选择器的选择模式。
+Gets the FileSelectorMode of this file selector.
 
 **Since:** 9
 
@@ -170,7 +170,7 @@ getMode(): FileSelectorMode
 getSuggestedName(): string
 ```
 
-获取推荐文件名列表。
+Gets suggested file names.
 
 **Since:** 23
 
@@ -192,7 +192,7 @@ getSuggestedName(): string
 getTitle(): string
 ```
 
-获取此文件选择器的标题。
+Gets the title of this file selector.
 
 **Since:** 9
 
@@ -216,7 +216,7 @@ getTitle(): string
 isAcceptAllOptionExcluded(): boolean
 ```
 
-获取是否过滤完全匹配的文件类型。
+Gets whether to filter fully matching file types.
 
 **Since:** 23
 
@@ -238,7 +238,7 @@ isAcceptAllOptionExcluded(): boolean
 isCapture(): boolean
 ```
 
-获取此文件选择器是否使用实时媒体拍摄所得内容。
+Gets whether this file selector use a live media captured value.
 
 **Since:** 9
 

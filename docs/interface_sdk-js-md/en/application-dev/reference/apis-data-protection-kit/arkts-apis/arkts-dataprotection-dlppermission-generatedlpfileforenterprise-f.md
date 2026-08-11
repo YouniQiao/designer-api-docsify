@@ -12,13 +12,15 @@ import { dlpPermission } from 'kits/@kit.DataProtectionKit';
 function generateDlpFileForEnterprise(plaintextFd: number, dlpFd: number, property: DLPProperty, customProperty: CustomProperty): Promise<void>
 ```
 
-将明文文件加密生成企业账号DLP文件，仅支持企业账号调用。使用Promise异步回调。
+Encrypts a plaintext file to generate a DLP file for an enterprise account. This API can be called only by enterprise accounts. This API uses a promise to return the result.
 
-用于将明文文件加密生成企业账号的DLP权限受控文件，实现企业级的文件权限管理。
+This API encrypts a plaintext file to generate a DLP file that can be accessed only by enterprise accounts, implementing enterprise-level file permission management.
 
-> **说明：**
+> **NOTE：**
 > 
-> 该接口仅支持企业账号调用，需要企业自行搭建企业账号服务器配套使用。使用该接口可以将明文文件加密生成权限受控文件，由企业服务器管控账号是否有权限解密该文件。
+> This API can be called only by enterprise accounts. Enterprises need to set up their own enterprise account
+> servers. This API generates a DLP file, which is an encrypted file that can be accessed only by accounts
+> authorized by the enterprise server.
 
 **Since:** 21
 
@@ -34,67 +36,70 @@ function generateDlpFileForEnterprise(plaintextFd: number, dlpFd: number, proper
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| plaintextFd | number | Yes | 明文文件的文件描述符。取值范围为[0, 2&lt;sup&gt;31&lt;/sup&gt;-1]。当fd小于0时，打印错误日志，函数停止运行；当fd大于2&lt;sup&gt;31&lt;/sup&gt;-1 时，fd的值被截断。 |
-| dlpFd | number | Yes | 加密文件的文件描述符。取值范围为[0, 2&lt;sup&gt;31&lt;/sup&gt;-1]。当fd小于0时，打印错误日志，函数停止运行；当fd大于2&lt;sup&gt;31&lt;/sup&gt;-1时，fd的值 被截断。 |
-| property | [DLPProperty](arkts-dataprotection-dlppermission-dlpproperty-i.md) | Yes | DLP文件通用策略。 |
-| customProperty | [CustomProperty](../../apis-arkui/arkts-apis/arkts-arkui-customproperty-t.md) | Yes | 企业定制策略。 |
+| plaintextFd | number | Yes | FD of a plaintext file. The value range is [0, 2&lt;sup&gt;31&lt;/sup&gt;-1]. If the value of **fd** is less than 0, an error log is generated, and the function stops running. If the value of **fd** is greater than 2&lt;sup&gt;31&lt;/sup&gt;-1, the excess part will be truncated. |
+| dlpFd | number | Yes | FD of an encrypted file. The value range is [0, 2&lt;sup&gt;31&lt;/sup&gt;-1]. If the value of **fd** is less than 0, an error log is generated, and the function stops running. If the value of **fd** is greater than 2&lt;sup&gt;31&lt;/sup&gt;-1, the excess part will be truncated. |
+| property | [DLPProperty](arkts-dataprotection-dlppermission-dlpproperty-i.md) | Yes | General policy of DLP files. |
+| customProperty | [CustomProperty](../../apis-arkui/arkts-apis/arkts-arkui-customproperty-t.md) | Yes | Enterprise custom policy. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise对象，无返回结果。 |
+| Promise&lt;void&gt; | Promise that returns no value. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 19100003 | Credential task time out. |
-| 19100002 | Credential service busy due to too many tasks or duplicate tasks. |
-| 19100001 | Invalid parameter value. |
-| 19100005 | Credential authentication server error. |
-| 19100004 | Credential service error. |
-| 19100011 | The system ability works abnormally. |
-| 201 | Permission denied. |
-| 202 | Non-system applications use system APIs.<br>**Applicable version:** 20 and later |
-| 19100009 | Failed to operate the DLP file. |
-| 19100014 | Account not logged in. |
+| [19100003](../errorcode-dlp.md#19100003-encryptiondecryption-timeout) | Credential task time out. |
+| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported because car not support DLP feature.<br>**Applicable version:** 26.1.0 and later |
+| [19100002](../errorcode-dlp.md#19100002-encryption-and-decryption-error) | Credential service busy due to too many tasks or duplicate tasks. |
+| [19100001](../errorcode-dlp.md#19100001-invalid-parameter) | Invalid parameter value. |
+| [19100005](../errorcode-dlp.md#19100005-credential-authentication-server-error) | Credential authentication server error. |
+| [19100004](../errorcode-dlp.md#19100004-credential-service-error) | Credential service error. |
+| [19100011](../errorcode-dlp.md#19100011-system-service-abnormal) | The system ability works abnormally. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Non-system applications use system APIs.<br>**Applicable version:** 20 and later |
+| [19100009](../errorcode-dlp.md#19100009-failed-to-operate-the-dlp-file) | Failed to operate the DLP file. |
+| [19100014](../errorcode-dlp.md#19100014-account-not-logged-in) | Account not logged in. |
 
 ## Examples
 
 ```TypeScript
 import { dlpPermission } from '@kit.DataProtectionKit';
 import { fileIo } from '@kit.CoreFileKit';
+import { BusinessError } from '@kit.BasicServicesKit';
 
-let plaintextFd: number | undefined = undefined;
-let dlpFd: number | undefined = undefined;
-let plainFilePath: string = "file://docs/storage/Users/currentUser/Documents/test.txt";
-let dlpFilePath: string = "file://docs/storage/Users/currentUser/Documents/test.txt.dlp";
-plaintextFd = fileIo.openSync(plainFilePath, fileIo.OpenMode.READ_ONLY).fd; // Open a plaintext file.
-dlpFd = fileIo.openSync(dlpFilePath, fileIo.OpenMode.READ_WRITE | fileIo.OpenMode.CREATE).fd; // Open a DLP file.
-let dlpProperty: dlpPermission.DLPProperty = {
-  ownerAccount: 'zhangsan',
-  ownerAccountType: dlpPermission.AccountType.DOMAIN_ACCOUNT,
-  authUserList: [],
-  contactAccount: 'zhangsan',
-  offlineAccess: true,
-  ownerAccountID: 'xxxxxxx',
-  everyoneAccessList: []
-};
-let customProperty: dlpPermission.CustomProperty = {
-  enterprise: 'customProperty'
-};
-dlpPermission.generateDlpFileForEnterprise(plaintextFd, dlpFd, dlpProperty, customProperty).then((res) => {
-  console.info('Successfully generate DLP file for enterprise.');
-}).catch((error: BusinessError)=> {
-  console.error(`Failed to generate DLP file for enterprise. Code: ${error.code}, message: ${error.message}`);
-}).finally(()=>{
-  if (dlpFd) {
-    fileIo.closeSync(dlpFd);
+async function ExampleFunction(plainFilePath: string, dlpFilePath: string) {
+  let plaintextFd: number | undefined = undefined;
+  let dlpFd: number | undefined = undefined;
+  try {
+    plaintextFd = fileIo.openSync(plainFilePath, fileIo.OpenMode.READ_ONLY).fd;
+    dlpFd = fileIo.openSync(dlpFilePath, fileIo.OpenMode.READ_WRITE | fileIo.OpenMode.CREATE).fd;
+    let dlpProperty: dlpPermission.DLPProperty = {
+      ownerAccount: 'zhangsan',
+      ownerAccountType: dlpPermission.AccountType.DOMAIN_ACCOUNT,
+      authUserList: [],
+      contactAccount: 'zhangsan',
+      offlineAccess: true,
+      ownerAccountID: 'xxxxxxx',
+      everyoneAccessList: []
+    };
+    let customProperty: dlpPermission.CustomProperty = {
+      enterprise: 'customProperty'
+    };
+    await dlpPermission.generateDlpFileForEnterprise(plaintextFd, dlpFd, dlpProperty, customProperty);
+    console.info('Successfully generate DLP file for enterprise.');
+  } catch(err) {
+    console.error('error', (err as BusinessError).code, (err as BusinessError).message);
+  } finally {
+    if (dlpFd) {
+      fileIo.closeSync(dlpFd);
+    }
+    if (plaintextFd) {
+      fileIo.closeSync(plaintextFd);
+    }
   }
-  if (plaintextFd) {
-    fileIo.closeSync(plaintextFd);
-  }
-});
+}
 ```
 

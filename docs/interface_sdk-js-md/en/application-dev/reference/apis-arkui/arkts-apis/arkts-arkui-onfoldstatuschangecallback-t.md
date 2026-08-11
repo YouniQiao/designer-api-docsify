@@ -4,7 +4,7 @@
 export type OnFoldStatusChangeCallback = (event: OnFoldStatusChangeInfo) => void
 ```
 
-当前设备的折叠状态。
+Callback when onStateChangeCallback.
 
 Anonymous Object Rectification
 
@@ -22,5 +22,5 @@ Anonymous Object Rectification
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| event | [OnFoldStatusChangeInfo](arkts-arkui-folderstack-onfoldstatuschangeinfo-i.md) | Yes | 当前设备的折叠状态。 |
+| event | [OnFoldStatusChangeInfo](arkts-arkui-folderstack-onfoldstatuschangeinfo-i.md) | Yes | the folding information of the current device |
 

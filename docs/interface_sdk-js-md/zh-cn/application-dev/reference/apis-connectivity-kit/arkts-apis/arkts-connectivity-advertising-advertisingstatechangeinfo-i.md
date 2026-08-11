@@ -10,12 +10,6 @@
 
 **系统能力：** SystemCapability.Communication.NearLink.Base
 
-## 导入模块
-
-```TypeScript
-import { advertising } from 'kits/@kit.ConnectivityKit';
-```
-
 ## advertisingId
 
 ```TypeScript
@@ -44,7 +38,7 @@ state: AdvertisingState
 
 广播状态。
 
-**类型：** [AdvertisingState](arkts-connectivity-ble-advertisingstate-e.md)
+**类型：** [AdvertisingState](arkts-connectivity-advertising-advertisingstate-e.md)
 
 **起始版本：** 26.0.0
 

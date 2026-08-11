@@ -1,7 +1,8 @@
 # StateType
 
-保存应用数据场景原因，该类型为枚举。配合UIAbility的  
-[onSaveState()](arkts-ability-app-ability-uiability-uiability-c.md#onsavestate)方法使用，可以实现[UIAbility备份恢复](../../../application-models/ability-recover-guideline.md)。
+Enumerates the scenarios for saving application data. You can use it in  
+[onSaveState()](arkts-ability-app-ability-uiability-uiability-c.md#onsavestate) of the UIAbility to complete  
+[UIAbility backup and restore](../../../application-models/ability-recover-guideline.md).
 
 **Since:** 9
 
@@ -17,7 +18,7 @@
 CONTINUATION = 0
 ```
 
-应用迁移场景。
+Application migration scenario.
 
 **Since:** 9
 
@@ -37,7 +38,7 @@ CONTINUATION = 0
 APP_RECOVERY = 1
 ```
 
-应用故障恢复场景。
+Application recovery scenario.
 
 **Since:** 9
 

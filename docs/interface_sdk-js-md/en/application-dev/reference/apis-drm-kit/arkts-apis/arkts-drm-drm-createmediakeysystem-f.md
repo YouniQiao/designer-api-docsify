@@ -40,19 +40,22 @@ Creates a MediaKeySystem instance.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | The parameter check failed. Possibly because: 1.Mandatory parameters are left unspecified. 2.Parameter verification failed. |
-| 24700201 | Fatal service error, for example, service died. |
-| 24700101 | All unknown errors. |
-| 24700103 | Meet max MediaKeySystem num limit. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | The parameter check failed. Possibly because: 1.Mandatory parameters are left unspecified. 2.Parameter verification failed. |
+| [24700201](../errorcode-drm.md#24700201-service-exception) | Fatal service error, for example, service died. |
+| [24700101](../errorcode-drm.md#24700101-unknown-error) | All unknown errors. |
+| [24700103](../errorcode-drm.md#24700103-too-many-mediakeysystem-instances) | Meet max MediaKeySystem num limit. |
 
 ## Examples
 
 ```TypeScript
 import { drm } from '@kit.DrmKit';
-// name indicates the DRM solution name. You can obtain the DRM solution name supported by the device through the drm.getMediaKeySystems API, for example, **com.clearplay.drm**.
-let name = 'com.clearplay.drm';
-let mediaKeySystem: drm.MediaKeySystem = drm.createMediaKeySystem(name);
-console.info(`createMediaKeySystem success, name: ${name}`);
+import { BusinessError } from '@kit.BasicServicesKit';
+try {
+  let mediaKeySystem: drm.MediaKeySystem = drm.createMediaKeySystem("com.clearplay.drm");
+} catch (err) {
+  let error = err as BusinessError;
+  console.error(`createMediaKeySystem ERROR: ${error}`);  
+}
 ```
 
 
@@ -88,8 +91,8 @@ Creates a MediaKeySystem instance.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | The parameter check failed. Possibly because: 1.Mandatory parameters are left unspecified. 2.Parameter verification failed. |
-| 24700201 | Fatal service error, for example, service died. |
-| 24700101 | All unknown errors. |
-| 24700103 | Meet max MediaKeySystem num limit. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | The parameter check failed. Possibly because: 1.Mandatory parameters are left unspecified. 2.Parameter verification failed. |
+| [24700201](../errorcode-drm.md#24700201-service-exception) | Fatal service error, for example, service died. |
+| [24700101](../errorcode-drm.md#24700101-unknown-error) | All unknown errors. |
+| [24700103](../errorcode-drm.md#24700103-too-many-mediakeysystem-instances) | Meet max MediaKeySystem num limit. |
 

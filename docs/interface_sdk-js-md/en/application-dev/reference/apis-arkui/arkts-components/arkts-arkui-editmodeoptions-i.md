@@ -1,6 +1,6 @@
 # EditModeOptions
 
-List/Grid组件编辑模式选项属性参数对象。
+Define edit mode options.
 
 **Since:** 23
 
@@ -16,7 +16,7 @@ List/Grid组件编辑模式选项属性参数对象。
 onGetPreviewBadge?: OnGetPreviewBadgeCallback
 ```
 
-调用以返回是否显示数字脚本或在上下文菜单预览的角标上显示的数字。如果未设置，将使用显示范围内的选定项的数量作为角标。返回false表示不显示角标。返回true表示使用显示范围内的选定项的数量。返回一个数字以包括显示范围之外的选定项。
+Called to return whether to display the number badge or the number displayed on the badge for the context menu preview. If not set, the number of selected items within the display range will be used.Returning false means not displaying the badge.Returning true means using the number of selected items within the display range.Returning a number to include selected items outside the display range.
 
 **Since:** 23
 
@@ -36,7 +36,7 @@ onGetPreviewBadge?: OnGetPreviewBadgeCallback
 enableGatherSelectedItemsAnimation?: boolean
 ```
 
-定义当项目被长按上下文菜单时，是否在网格或列表中收集选定项目。
+Define whether to gather selected items in grid or list when item is long pressed for context menu.
 
 **Type:** boolean
 
@@ -60,7 +60,7 @@ enableGatherSelectedItemsAnimation?: boolean
 enableTwoFingerMultiSelect?: boolean
 ```
 
-启用双指滑动多选。{@code true}表示双指滑动可以进入编辑模式，进行多选操作。{@code false}表示两指滑动不支持多指滑动。
+Enable two-finger swipe multi-selection.{@code true} indicates that two-finger swiping can enter edit mode and perform multi-selection.{@code false} indicates that two-finger swiping cannot perform multi-selection.
 
 **Type:** boolean
 
@@ -84,7 +84,7 @@ enableTwoFingerMultiSelect?: boolean
 useDefaultMultiSelectStyle?: boolean
 ```
 
-使用默认的多选样式。{@code true}表示进入多选状态后为GridItem或ListItem显示复选框。{@code false}表示进入多选状态后没有默认样式。
+Use default multi-select style.{@code true} indicates that the check box is displayed for GridItem or ListItem after entering the multi-select state.{@code false} indicates that there is no default style after entering the multi-select state.
 
 **Type:** boolean
 

@@ -1,6 +1,6 @@
 # RichEditorBaseController
 
-RichEditor组件控制器基类。
+Represents the base class of the **RichEditor** component controller.
 
 **Inheritance/Implementation:** RichEditorBaseController implements [TextEditControllerEx](../arkts-apis/arkts-arkui-textcommon-texteditcontrollerex-i.md/arkts-arkui-textcommon-texteditcontrollerex-i.md)
 
@@ -18,9 +18,7 @@ RichEditor组件控制器基类。
 closeSelectionMenu(): void
 ```
 
-关闭自定义选择菜单或系统默认选择菜单。
-
-当controller未绑定组件或绑定controller的组件被释放时，该接口调用无效。
+Closes the custom or default context menu on selection.
 
 **Since:** 10
 
@@ -40,9 +38,9 @@ closeSelectionMenu(): void
 deleteBackward(): void
 ```
 
-删除光标前字符或选中内容。没有内容被选中时，删除当前光标位置前的1个字符；有内容被选中时，删除选中内容。
+The capability of deleting characters is provided. If no content is selected, the character before the caret is deleted. If some content is selected, the selected content is deleted.
 
-该接口不支持预上屏场景使用。
+This API cannot be used in the pre-screen display scenario.
 
 **Since:** 23
 
@@ -62,9 +60,9 @@ deleteBackward(): void
 getCaretOffset(): number
 ```
 
-返回当前光标所在位置。
+Obtains the current caret position.
 
-当无法获取光标位置时（例如controller未与组件绑定时），该接口返回-1。
+If the caret position cannot be obtained (for example, the controller is not bound to a component), -1 is returned.
 
 **Since:** 10
 
@@ -82,7 +80,7 @@ getCaretOffset(): number
 
 | Type | Description |
 | --- | --- |
-| number | 当前光标所在位置。 |
+| number | Position of the caret. |
 
 ## getCaretRect
 
@@ -90,7 +88,7 @@ getCaretOffset(): number
 getCaretRect(): RectResult | undefined
 ```
 
-返回当前光标与RichEditor组件的相对位置。如果光标不闪烁或controller未绑定组件，返回undefined。
+Obtains the relative position of the caret in the **RichEditor** component. If the caret is not blinking, the API returns **undefined**.
 
 **Since:** 18
 
@@ -108,7 +106,7 @@ getCaretRect(): RectResult | undefined
 
 | Type | Description |
 | --- | --- |
-| [RectResult](../arkts-apis/arkts-arkui-common-rectresult-i.md) | 当前光标与RichEditor的相对位置。 |
+| [RectResult](../arkts-apis/arkts-arkui-common-rectresult-i.md) | Relative position of the caret in the **RichEditor** component. |
 
 ## getLayoutManager
 
@@ -116,7 +114,7 @@ getCaretRect(): RectResult | undefined
 getLayoutManager(): LayoutManager
 ```
 
-获取布局管理器对象。
+Obtains a **LayoutManager** object.
 
 **Since:** 12
 
@@ -134,7 +132,7 @@ getLayoutManager(): LayoutManager
 
 | Type | Description |
 | --- | --- |
-| [LayoutManager](../arkts-apis/arkts-arkui-layoutmanager-i.md) | 布局管理器对象，可用于获取组件内容的布局位置等信息。 &lt;br&gt;当controller未绑定组件或绑定controller的组件被释放时，返回undefined。 |
+| [LayoutManager](../arkts-apis/arkts-arkui-layoutmanager-i.md) | LayoutManager** object. &lt;br&gt;If no component is bound to the controller or the component bound to the controller is released, **undefined** is returned. |
 
 ## getPreviewText
 
@@ -142,7 +140,7 @@ getLayoutManager(): LayoutManager
 getPreviewText(): PreviewText
 ```
 
-获取预上屏信息。
+Obtains the preview text.
 
 **Since:** 12
 
@@ -160,7 +158,7 @@ getPreviewText(): PreviewText
 
 | Type | Description |
 | --- | --- |
-| [PreviewText](../arkts-apis/arkts-arkui-previewtext-i.md) | 预上屏文本信息，包含输入法预显示的候选文本内容及起始位置。 &lt;br&gt;当controller未绑定组件或绑定controller的组件被释放时，返回undefined。 |
+| [PreviewText](../arkts-apis/arkts-arkui-previewtext-i.md) | Preview text. &lt;br&gt;If no component is bound to the controller or the component bound to the controller is released, **undefined** is returned. |
 
 ## getTypingStyle
 
@@ -168,7 +166,7 @@ getPreviewText(): PreviewText
 getTypingStyle(): RichEditorTextStyle
 ```
 
-获取用户预设的文本样式。
+Obtains the preset text style of a user.
 
 **Since:** 11
 
@@ -186,7 +184,7 @@ getTypingStyle(): RichEditorTextStyle
 
 | Type | Description |
 | --- | --- |
-| [RichEditorTextStyle](arkts-arkui-richeditortextstyle-i.md) | 用户预设的文本输入样式对象，包含字体颜色、大小、粗细等样式属性，可用于查询当前组件的输入文本样式配置。 &lt;br&gt;当controller未绑定组件或绑定controller的组件被释放时，返回undefined。 |
+| [RichEditorTextStyle](arkts-arkui-richeditortextstyle-i.md) | Preset typing style. &lt;br&gt;If no component is bound to the controller or the component bound to the controller is released, **undefined** is returned. |
 
 ## isEditing
 
@@ -194,7 +192,7 @@ getTypingStyle(): RichEditorTextStyle
 isEditing(): boolean
 ```
 
-获取当前富文本的编辑状态。当controller未绑定组件或绑定controller的组件被释放时，返回false。
+Obtains the editing state of this **RichEditor** component.
 
 **Since:** 12
 
@@ -212,7 +210,7 @@ isEditing(): boolean
 
 | Type | Description |
 | --- | --- |
-| boolean | true表示编辑态，false表示非编辑态。 |
+| boolean | Editing state. The value **true** indicates the editing state, and **false** indicates the non -editing state. |
 
 ## scrollToVisible
 
@@ -220,7 +218,7 @@ isEditing(): boolean
 scrollToVisible(range?: TextRange): void
 ```
 
-将指定范围内的内容滚动到可视区域。
+Scroll the input field component to make the specified content visible.
 
 **Since:** 26.0.0
 
@@ -236,7 +234,7 @@ scrollToVisible(range?: TextRange): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| range | [TextRange](../arkts-apis/arkts-arkui-textrange-i.md) | No | 滚动到可视区域的内容范围，包括内容起始位置和终止位置。 &lt;br&gt;起始位置应小于等于结束位置，否则接口调用无效。起始位置小于0视为0，结束位置大于全文长度视为全文长度。 &lt;br&gt;未指定范围时，默认为全部内容。未指定起始位置，默认起始位置为0；未指定结束位置，默认结束位置为全文长度。 |
+| range | [TextRange](../arkts-apis/arkts-arkui-textrange-i.md) | No | The visible range. If the parameter is invalid, this method will have no effect. |
 
 ## setCaretOffset
 
@@ -244,9 +242,7 @@ scrollToVisible(range?: TextRange): void
 setCaretOffset(offset: number): boolean
 ```
 
-设置光标位置。
-
-当controller未绑定组件或绑定controller的组件被释放时，该接口返回false，设置不成功。
+Sets the cursor offset.
 
 **Since:** 10
 
@@ -264,13 +260,13 @@ setCaretOffset(offset: number): boolean
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| offset | number | Yes | 光标偏移位置。超出所有内容范围时，设置失败。 |
+| offset | number | Yes | Offset of the caret. If it exceeds the range of all content, the setting will fail. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| boolean | 光标是否设置成功。&lt;br/&gt;true表示光标位置设置成功，false表示未成功。 |
+| boolean | Whether the caret offset is set successfully. &lt;br&gt;**true** if the caret offset is set successfully; **false** otherwise. |
 
 ## setSelection
 
@@ -278,15 +274,18 @@ setCaretOffset(offset: number): boolean
 setSelection(selectionStart: number, selectionEnd: number, options?: SelectionOptions): void
 ```
 
-设置组件内的内容选中，选中部分背板高亮。
+Sets the range of content selection. The selected content is highlighted.
 
-selectionStart和selectionEnd均为-1时表示全选，均为0时可以清空选中区。
+If both selectionStart and selectionEnd are set to -1, all the content is selected. If both selectionStart and selectionEnd are set to 0, the selected content can be cleared.
 
-未获焦时调用该接口不产生选中效果。
+If this API is called when the text box is not focused, the selected effect is not displayed.
 
-从API version 12开始，在PC/2in1设备（可通过deviceInfo.deviceType获取设备类型进行判断）中，无论options取何值，调用setSelection接口都不会弹出菜单；如果组件中已经存在菜单，调用setSelection接口会关闭菜单。在非PC/2in1设备中，options取值为MenuPolicy.DEFAULT时，遵循以下规则：
+Since API version 12, on 2-in-1 devices, regardless of the value of **options**, calling the **setSelection** API will not display the menu. In addition, if there is already a menu present within the component, calling the   
+**setSelection** API will close the menu.
 
-1. 组件内有手柄菜单时，接口调用后不关闭菜单，并且调整菜单位置。2. 组件内有不带手柄的菜单时，接口调用后不关闭菜单，并且菜单位置不变。3. 组件内无菜单时，接口调用后也无菜单显示。
+On non-2-in-1 devices, when **options** is set to **MenuPolicy.DEFAULT**, the following rules apply:
+
+1. If the component has a selection handle menu, calling the API will not close the menu, and the menu position will be adjusted.2. If the component has a menu without a selection handle, calling the API will not close the menu, and the menu position will remain unchanged.3. If there is no menu within the component, calling the API will not display the menu.
 
 **Since:** 11
 
@@ -304,9 +303,9 @@ selectionStart和selectionEnd均为-1时表示全选，均为0时可以清空选
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| selectionStart | number | Yes | 选中开始位置。 |
-| selectionEnd | number | Yes | 选中结束位置。 |
-| options | [SelectionOptions](../arkts-apis/arkts-arkui-common-selectionoptions-i.md) | No | 选择项配置，用于控制选中操作时的菜单弹出策略。 &lt;br&gt;当需要自定义菜单弹出行为（如强制显示或隐藏菜单）时传入此参数； &lt;br&gt;省略时默认使用MenuPolicy.DEFAULT，遵循系统默认菜单弹出策略。 &lt;br&gt;各MenuPolicy取值的适用场景请参考SelectionOptions对象说明。<br>**Since:** 12 |
+| selectionStart | number | Yes | Start position of the selection. |
+| selectionEnd | number | Yes | End position of the selection. |
+| options | [SelectionOptions](../arkts-apis/arkts-arkui-common-selectionoptions-i.md) | No | Configuration of options.<br>**Since:** 12 |
 
 ## setStyledPlaceholder
 
@@ -314,7 +313,7 @@ selectionStart和selectionEnd均为-1时表示全选，均为0时可以清空选
 setStyledPlaceholder(styledString: StyledString): void
 ```
 
-设置无输入时的属性字符串样式的提示文本。
+Set the styledString placeholder.
 
 **Since:** 24
 
@@ -332,7 +331,7 @@ setStyledPlaceholder(styledString: StyledString): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| styledString | [StyledString](../arkts-apis/arkts-arkui-styledstring-c.md) | Yes | 设置属性字符串样式的提示文本，其优先级高于[placeholder](RichEditorAttribute#placeholder)属性设 置的提示文本。 &lt;br&gt;提示文本不支持触发属性字符串[GestureStyle](../arkts-apis/arkts-arkui-styledstring-gesturestyle-c.md/arkts-arkui-styledstring-gesturestyle-c.md)样式绑定的手势事件，以及[UrlStyle](../arkts-apis/arkts-arkui-styledstring-urlstyle-c.md/arkts-arkui-styledstring-urlstyle-c.md)样式的超链接跳转能力。 |
+| styledString | [StyledString](../arkts-apis/arkts-arkui-styledstring-c.md) | Yes | The styledString for placeholder. If the parameter is invalid, this method will have no effect. |
 
 ## setTypingParagraphStyle
 
@@ -340,7 +339,7 @@ setStyledPlaceholder(styledString: StyledString): void
 setTypingParagraphStyle(style: RichEditorParagraphStyle): void
 ```
 
-设置用户预设的段落样式。仅在组件内容为空或组件末尾换行后，输入文本生效。当controller未绑定组件或绑定controller的组件被释放时，该接口调用无效。
+Sets the preset paragraph style. The input text takes effect only when the component content is empty or a line break is added at the end of the component.
 
 **Since:** 20
 
@@ -358,7 +357,7 @@ setTypingParagraphStyle(style: RichEditorParagraphStyle): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| style | [RichEditorParagraphStyle](../arkts-apis/arkts-arkui-richeditor-richeditorparagraphstyle-i.md) | Yes | 预设段落样式。 |
+| style | [RichEditorParagraphStyle](../arkts-apis/arkts-arkui-richeditor-richeditorparagraphstyle-i.md) | Yes | Preset paragraph style. |
 
 ## setTypingStyle
 
@@ -366,9 +365,7 @@ setTypingParagraphStyle(style: RichEditorParagraphStyle): void
 setTypingStyle(value: RichEditorTextStyle): void
 ```
 
-设置用户预设的文本样式。
-
-当controller未绑定组件或绑定controller的组件被释放时，该接口调用无效。
+Sets the preset typing style.
 
 **Since:** 11
 
@@ -386,7 +383,7 @@ setTypingStyle(value: RichEditorTextStyle): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | [RichEditorTextStyle](arkts-arkui-richeditortextstyle-i.md) | Yes | 预设的文本输入样式，包含字体颜色、大小、粗细等属性，用于设置后续输入文本的默认样式。 |
+| value | [RichEditorTextStyle](arkts-arkui-richeditortextstyle-i.md) | Yes | Preset typing style. |
 
 ## stopEditing
 
@@ -394,9 +391,7 @@ setTypingStyle(value: RichEditorTextStyle): void
 stopEditing(): void
 ```
 
-退出编辑态。
-
-当controller未绑定组件或绑定controller的组件被释放时，该接口调用无效。
+Exits the editing state.
 
 **Since:** 12
 

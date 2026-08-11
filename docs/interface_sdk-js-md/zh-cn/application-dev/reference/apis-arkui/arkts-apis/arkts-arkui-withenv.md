@@ -1,11 +1,5 @@
 # @ohos.arkui.WithEnv(定义WithEnv组件，允许为子组件设置环境属性。)
 
-## 导入模块
-
-```TypeScript
-import { WithEnvAttribute, WithEnv } from 'kits/@kit.ArkUI';
-```
-
 ## 汇总
 
 ### 函数

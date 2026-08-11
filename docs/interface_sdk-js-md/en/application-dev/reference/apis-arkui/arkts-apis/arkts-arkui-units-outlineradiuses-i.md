@@ -1,6 +1,6 @@
 # OutlineRadiuses
 
-引用该对象时，至少传入一个参数。
+Defines the outline radius property.
 
 **Since:** 23
 
@@ -16,7 +16,7 @@
 bottomLeft?: Dimension
 ```
 
-左下角圆角半径。
+bottom-left property.
 
 **Type:** [Dimension](arkts-arkui-dimension-t.md)
 
@@ -36,7 +36,7 @@ bottomLeft?: Dimension
 bottomRight?: Dimension
 ```
 
-右下角圆角半径。
+bottom-right property.
 
 **Type:** [Dimension](arkts-arkui-dimension-t.md)
 
@@ -56,7 +56,7 @@ bottomRight?: Dimension
 topLeft?: Dimension
 ```
 
-左上角圆角半径。
+top-left property.
 
 **Type:** [Dimension](arkts-arkui-dimension-t.md)
 
@@ -76,7 +76,7 @@ topLeft?: Dimension
 topRight?: Dimension
 ```
 
-右上角圆角半径。
+top-right property.
 
 **Type:** [Dimension](arkts-arkui-dimension-t.md)
 

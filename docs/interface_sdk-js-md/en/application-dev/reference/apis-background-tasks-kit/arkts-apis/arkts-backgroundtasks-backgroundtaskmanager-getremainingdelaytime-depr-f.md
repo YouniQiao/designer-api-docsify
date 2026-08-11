@@ -6,7 +6,7 @@
 function getRemainingDelayTime(requestId: number, callback: AsyncCallback<number>): void
 ```
 
-获取本次短时任务的剩余时间，使用callback异步回调。
+Obtains the remaining duration before the application is suspended. This API uses an asynchronous callback to return the result.
 
 **Since:** 7
 
@@ -24,8 +24,8 @@ function getRemainingDelayTime(requestId: number, callback: AsyncCallback<number
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| requestId | number | Yes | 延迟挂起的请求ID。这个值通过调用 [requestSuspendDelay](arkts-backgroundtasks-backgroundtaskmanager-requestsuspenddelay-depr-f.md#requestsuspenddelay)方法获取。 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;number&gt; | Yes | 回调函数，返回本次短时任务的剩余时间，单位：ms。 |
+| requestId | number | Yes | ID of the suspension delay request. The value is obtained by calling [requestSuspendDelay](arkts-backgroundtasks-backgroundtaskmanager-requestsuspenddelay-depr-f.md#requestsuspenddelay). |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;number&gt; | Yes | Callback used to return the remaining duration before the application is suspended, in milliseconds. |
 
 ## Examples
 
@@ -50,7 +50,7 @@ backgroundTaskManager.getRemainingDelayTime(delayInfo.requestId, (err: BusinessE
 function getRemainingDelayTime(requestId: number): Promise<number>
 ```
 
-获取本次短时任务的剩余时间，使用Promise异步回调。
+Obtains the remaining duration before the application is suspended. This API uses a promise to return the result.
 
 **Since:** 7
 
@@ -68,13 +68,13 @@ function getRemainingDelayTime(requestId: number): Promise<number>
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| requestId | number | Yes | 延迟挂起的请求ID。这个值通过调用 [requestSuspendDelay](arkts-backgroundtasks-backgroundtaskmanager-requestsuspenddelay-depr-f.md#requestsuspenddelay)方法获取。 |
+| requestId | number | Yes | ID of the suspension delay request. The value is obtained by calling [requestSuspendDelay](arkts-backgroundtasks-backgroundtaskmanager-requestsuspenddelay-depr-f.md#requestsuspenddelay). |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;number&gt; | Promise对象，返回本次短时任务的剩余时间，单位：ms。 |
+| Promise&lt;number&gt; | Promise used to return the remaining duration before the application is suspended, in milliseconds. |
 
 ## Examples
 

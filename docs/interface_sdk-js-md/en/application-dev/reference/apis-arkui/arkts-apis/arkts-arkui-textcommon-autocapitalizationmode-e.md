@@ -1,6 +1,6 @@
 # AutoCapitalizationMode
 
-自动大小写模式类型，只提供接口能力，具体实现以输入法应用为主。
+Declare the type of automatic case mode switching.
 
 **Since:** 23
 
@@ -16,7 +16,7 @@
 NONE = 0
 ```
 
-默认状态无效。
+The default status is invalid.
 
 **Since:** 23
 
@@ -34,7 +34,7 @@ NONE = 0
 WORDS = 1
 ```
 
-按单词自动大小写，即输入单词的首个字符大写，其他字符小写。
+Automatic case by words.
 
 **Since:** 23
 
@@ -52,7 +52,7 @@ WORDS = 1
 SENTENCES = 2
 ```
 
-按句子自动大小写，即输入句子的首个字符大写，其他字符小写。
+Automatic case by sentences.
 
 **Since:** 23
 
@@ -70,7 +70,7 @@ SENTENCES = 2
 ALL_CHARACTERS = 3
 ```
 
-按全字符自动大小写。
+Automatic case by full characters.
 
 **Since:** 23
 

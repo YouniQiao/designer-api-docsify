@@ -1,6 +1,6 @@
 # BlurStyle
 
-模糊样式类型。
+Enumerates blur styles.
 
 **Since:** 9
 
@@ -16,7 +16,7 @@
 Thin
 ```
 
-轻薄材质模糊。
+Thin material.
 
 **Since:** 9
 
@@ -36,7 +36,7 @@ Thin
 Regular
 ```
 
-普通厚度材质模糊。
+Regular material.
 
 **Since:** 9
 
@@ -56,7 +56,7 @@ Regular
 Thick
 ```
 
-厚材质模糊。
+Thick material.
 
 **Since:** 9
 
@@ -76,7 +76,7 @@ Thick
 BACKGROUND_THIN
 ```
 
-近距景深模糊。
+Material that creates the minimum depth of field effect.
 
 **Since:** 10
 
@@ -98,7 +98,7 @@ BACKGROUND_THIN
 BACKGROUND_REGULAR
 ```
 
-中距景深模糊。
+Material that creates a medium shallow depth of field effect.
 
 **Since:** 10
 
@@ -120,7 +120,7 @@ BACKGROUND_REGULAR
 BACKGROUND_THICK
 ```
 
-远距景深模糊。
+Material that creates a high shallow depth of field effect.
 
 **Since:** 10
 
@@ -142,7 +142,7 @@ BACKGROUND_THICK
 BACKGROUND_ULTRA_THICK
 ```
 
-超远距景深模糊。
+Material that creates the maximum depth of field effect.
 
 **Since:** 10
 
@@ -164,7 +164,7 @@ BACKGROUND_ULTRA_THICK
 NONE
 ```
 
-关闭模糊。
+No blur.
 
 **Since:** 10
 
@@ -186,7 +186,7 @@ NONE
 COMPONENT_ULTRA_THIN = 8
 ```
 
-组件超轻薄材质模糊。
+Component ultra-thin material.
 
 **Since:** 11
 
@@ -208,7 +208,7 @@ COMPONENT_ULTRA_THIN = 8
 COMPONENT_THIN = 9
 ```
 
-组件轻薄材质模糊。
+Component thin material.
 
 **Since:** 11
 
@@ -230,7 +230,7 @@ COMPONENT_THIN = 9
 COMPONENT_REGULAR = 10
 ```
 
-组件普通材质模糊。
+Component regular material.
 
 **Since:** 11
 
@@ -252,7 +252,7 @@ COMPONENT_REGULAR = 10
 COMPONENT_THICK = 11
 ```
 
-组件厚材质模糊。
+Component thick material.
 
 **Since:** 11
 
@@ -274,7 +274,7 @@ COMPONENT_THICK = 11
 COMPONENT_ULTRA_THICK = 12
 ```
 
-组件超厚材质模糊。
+Component ultra-thick material.
 
 **Since:** 11
 

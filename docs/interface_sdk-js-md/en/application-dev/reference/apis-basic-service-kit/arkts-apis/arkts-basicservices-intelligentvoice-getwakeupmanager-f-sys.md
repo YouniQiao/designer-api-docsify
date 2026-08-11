@@ -36,10 +36,10 @@ Obtains an {@link WakeupManager} instance.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 22700107 | System error. |
-| 201 | Permission denied. |
-| 202 | Not system application. |
-| 22700101 | No memory. |
+| [22700107](../../apis-basic-services-kit/errorcode-intelligentVoice.md#22700107-system-error) | System error. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system application. |
+| [22700101](../../apis-basic-services-kit/errorcode-intelligentVoice.md#22700101-insufficient-memory) | No memory. |
 
 ## Examples
 

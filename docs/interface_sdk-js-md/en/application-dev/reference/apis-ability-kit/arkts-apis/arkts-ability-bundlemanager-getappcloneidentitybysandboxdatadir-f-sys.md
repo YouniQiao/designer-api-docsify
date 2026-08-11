@@ -12,7 +12,7 @@ import { bundleManager } from 'kits/@kit.AbilityKit';
 function getAppCloneIdentityBySandboxDataDir(sandboxDataDir: string): AppCloneIdentity
 ```
 
-根据应用的沙箱目录名称获取应用的身份信息，包括应用包名和分身索引信息。
+Obtains the identity information of an application, including the bundle name and clone index, based on the given sandbox directory name.
 
 **Since:** 20
 
@@ -28,55 +28,48 @@ function getAppCloneIdentityBySandboxDataDir(sandboxDataDir: string): AppCloneId
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| sandboxDataDir | string | Yes | 表示[应用的沙箱目录](../../../file-management/app-sandbox-directory.md)名称。 &lt;br&gt;**说明：**&lt; br&gt; 参数不校验合法性，如果入参sandboxDataDir不符合分身应用或元服务的目录名称格式，则sandboxDataDir将作为返回信息中的AppCloneIdentity.bundleName返回，此时 AppCloneIdentity.appIndex为0。 &lt;br&gt; 1.分身应用目录名称格式要求：`+clone-{appIndex}+{bundleName}`，appIndex和bundleName是变量，对应分身索引 和应用包名，例如： `+clone-1+com.example.myapplication`。&lt;br&gt; 2.元服务目录名称格式格式要求：`+auid-{uid}+{bundleName}`，uid和bundleName是变 量，对应应用程序的UID和应用包名，例如： `+auid-20000000+com.example.myapplication`。 |
+| sandboxDataDir | string | Yes | Name of the [sandbox directory of the application](../../../file-management/app-sandbox-directory.md).&lt;br&gt;**NOTE：**&lt;br&gt; The validity of this parameter is not verified. If the input **sandboxDataDir** does not match the directory name format for application clones or atomic services, **sandboxDataDir** is returned as **AppCloneIdentity.bundleName**, and **AppCloneIdentity.appIndex** is **0**.&lt;br&gt; 1. Directory name format for application clones: `+clone-{appIndex}+{bundleName}`, where **appIndex** and **bundleName** are variables corresponding to the clone index and bundle name, respectively. Example: `+clone-1+com.example.myapplication`.&lt; br&gt; 2. Directory name format for atomic services: `+auid-{uid}+{bundleName}`, where **uid** and **bundleName** are variables corresponding to the UID and bundle name, respectively. Example: `+auid-20000000+ com.example.myapplication`. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [AppCloneIdentity](arkts-ability-bundlemanager-appcloneidentity-t.md) | 返回应用包名和分身索引信息。 |
+| [AppCloneIdentity](arkts-ability-bundlemanager-appcloneidentity-t.md) | Bundle name and clone index of the application. |
 
 ## Examples
 
 ```TypeScript
 import { bundleManager } from '@kit.AbilityKit';
 import { BusinessError } from '@kit.BasicServicesKit';
-import { hilog } from '@kit.PerformanceAnalysisKit';
 
 // Main application.
 let dataDir = 'com.example.myapplication';
 try {
   let res = bundleManager.getAppCloneIdentityBySandboxDataDir(dataDir);
-  hilog.info(0x0000, 'testTag', 'getAppCloneIdentityBySandboxDataDir successfully. res:%{public}s',
-    JSON.stringify(res));
+  console.info('getAppCloneIdentityBySandboxDataDir successfully. res = ' + JSON.stringify(res));
 } catch (err) {
   let message = (err as BusinessError).message;
-  hilog.error(0x0000, 'testTag', 'getAppCloneIdentityBySandboxDataDir failed. Cause: %{public}s',
-    message);
+  console.error('getAppCloneIdentityBySandboxDataDir failed. Cause = ' + message);
 }
 
 // Application clone.
 let cloneDataDir = '+clone-1+com.example.myapplication';
 try {
   let res = bundleManager.getAppCloneIdentityBySandboxDataDir(cloneDataDir);
-  hilog.info(0x0000, 'testTag', 'getAppCloneIdentityBySandboxDataDir successfully. res:%{public}s',
-    JSON.stringify(res));
+  console.info('getAppCloneIdentityBySandboxDataDir successfully. res = ' + JSON.stringify(res));
 } catch (err) {
   let message = (err as BusinessError).message;
-  hilog.error(0x0000, 'testTag', 'getAppCloneIdentityBySandboxDataDir failed. Cause: %{public}s',
-    message);
+  console.error('getAppCloneIdentityBySandboxDataDir failed. Cause = ' + message);
 }
 
-// Atomic services
+// Atomic service.
 let atomicDataDir = '+auid-20000000+com.example.myapplication';
 try {
   let res = bundleManager.getAppCloneIdentityBySandboxDataDir(atomicDataDir);
-  hilog.info(0x0000, 'testTag', 'getAppCloneIdentityBySandboxDataDir successfully. res:%{public}s',
-    JSON.stringify(res));
+  console.info('getAppCloneIdentityBySandboxDataDir successfully. res = ' + JSON.stringify(res));
 } catch (err) {
   let message = (err as BusinessError).message;
-  hilog.error(0x0000, 'testTag', 'getAppCloneIdentityBySandboxDataDir failed. Cause: %{public}s',
-    message);
+  console.error('getAppCloneIdentityBySandboxDataDir failed. Cause = ' + message);
 }
 ```
 

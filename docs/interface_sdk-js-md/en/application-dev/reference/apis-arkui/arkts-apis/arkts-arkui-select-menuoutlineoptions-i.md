@@ -1,6 +1,6 @@
 # MenuOutlineOptions
 
-菜单外描边选项。
+The declare of menuOutlineOptions.
 
 **Since:** 23
 
@@ -16,7 +16,7 @@
 color?: ResourceColor | EdgeColors
 ```
 
-外描边颜色。
+the color of the menu outline.
 
 **Type:** [ResourceColor](arkts-arkui-resourcecolor-t.md) \| EdgeColors
 
@@ -36,7 +36,7 @@ color?: ResourceColor | EdgeColors
 width?: Dimension | EdgeOutlineWidths
 ```
 
-外描边宽度。
+the width of the menu outline.
 
 **Type:** [Dimension](arkts-arkui-dimension-t.md) \| EdgeOutlineWidths
 

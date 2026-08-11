@@ -1,7 +1,6 @@
 # RunningMultiInstanceInfo (System API)
 
-定义多实例应用在运行态的结构信息，通过appManager的  
-[getRunningMultiAppInfo](arkts-ability-appmanager-getrunningmultiappinfo-f-sys.md#getrunningmultiappinfo)来获取。
+The module defines the information of a multi-instance application in the running state. The information can be obtained through [getRunningMultiAppInfo](arkts-ability-appmanager-getrunningmultiappinfo-f-sys.md#getrunningmultiappinfo)of appManager.
 
 **Since:** 14
 
@@ -19,7 +18,7 @@
 instanceKey: string
 ```
 
-多实例应用的唯一实例标识。
+Unique instance ID of a multi-instance application.
 
 **Type:** string
 
@@ -39,7 +38,7 @@ instanceKey: string
 pids: Array<int>
 ```
 
-应用的进程ID集合。
+Process ID set of the application.
 
 **Type:** ArkTS-Dyn: Array&lt;number&gt;  <br>ArkTS-Sta：Array&lt;int&gt;
 
@@ -59,7 +58,7 @@ pids: Array<int>
 uid: int
 ```
 
-表示应用程序的UID。
+UID of the application.
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 

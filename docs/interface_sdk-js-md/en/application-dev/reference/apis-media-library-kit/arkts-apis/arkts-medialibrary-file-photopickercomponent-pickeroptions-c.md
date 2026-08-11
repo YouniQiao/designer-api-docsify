@@ -329,7 +329,7 @@ public photoBrowserCheckboxPosition?: [
 
 Support to set photo browser checkbox position
 
-**Type:** [         double,         double     ]
+**Type:** [         double,         double     ]
 
 **Since:** 26.0.0
 

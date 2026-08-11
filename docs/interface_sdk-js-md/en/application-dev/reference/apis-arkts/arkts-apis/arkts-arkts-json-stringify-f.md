@@ -12,7 +12,7 @@ import { JSON } from 'kits/@kit.ArkTS';
 function stringify(value: Object, replacer?: (number | string)[] | null, space?: string | number): string
 ```
 
-该方法将一个ArkTS对象或数组转换为JSON字符串，支持线性容器的转换，不支持非线性容器（传入非线性容器时无法正确序列化）。
+Converts an ArkTS object or array into a JSON string. In the case of a container, linear containers are supported,but non-linear containers are not.
 
 **Since:** 12
 
@@ -28,15 +28,15 @@ function stringify(value: Object, replacer?: (number | string)[] | null, space?:
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | Object | Yes | ArkTS对象或数组，支持线性容器的转换，不支持非线性容器。 |
-| replacer | (number \| string)[] \| null | No | 用于筛选序列化属性。当参数为string[]时，只有包含在该数组中的对象属性名才会被序列化； 当参数为number[]时，只有对应索引的数组元素才会被序列化；当参数为null或者未提供时，则对象所有的属性都会被序列化。默认值是undefined。 |
-| space | string \| number | No | 指定缩进用的空格或字符串，用于美化输出。当参数是数字时表示缩进空格数，取值需为非负整数；当参数是字符串时表示缩进字符；无参数则无缩进。默认值是空字符串。 |
+| value | Object | Yes | ArkTS object or array. In the case of a container, linear containers are supported, but non-linear containers are not. |
+| replacer | (number \| string)[] \| null | No | If an array is passed in, only the keys in the array are serialized to the final JSON string. If null is passed in, all keys of the object are serialized. The default value is undefined. |
+| space | string \| number | No | White spaces or strings inserted into the output JSON string for readability purposes. If the parameter is a number, it represents the number of indentation spaces; if it is a string, it represents the indentation characters. If no parameter is provided, there will be no indentation. The default value is an empty string. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| string | 表示对象或数组经序列化处理后生成的JSON格式文本字符串。 |
+| string | Return a JSON text. |
 
 
 ## stringify
@@ -45,7 +45,7 @@ function stringify(value: Object, replacer?: (number | string)[] | null, space?:
 function stringify(value: Object, replacer?: Transformer, space?: string | number): string
 ```
 
-该方法将一个ArkTS对象或数组转换为JSON字符串，支持线性容器的转换，不支持非线性容器（传入非线性容器时无法正确序列化）。
+Converts an ArkTS object or array into a JSON string. In the case of a container, linear containers are supported,but non-linear containers are not.
 
 **Since:** 12
 
@@ -61,13 +61,13 @@ function stringify(value: Object, replacer?: Transformer, space?: string | numbe
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | Object | Yes | ArkTS对象或数组，支持线性容器的转换，不支持非线性容器。 |
-| replacer | [Transformer](arkts-arkts-ason-transformer-t.md) | No | 序列化期间，序列化值的每个键都由此函数转换和处理。默认值为undefined。 |
-| space | string \| number | No | 为提高可读性，添加到输出JSON字符串中的缩进、空白或换行字符。如果是数字，表示作为缩进的空格字符数。 如果是字符串，该字符串将插入到输出JSON字符串之前。如果传入null，不使用任何空白字符。默认值为空字符串。 |
+| value | Object | Yes | ArkTS object or array. In the case of a container, linear containers are supported, but non-linear containers are not. |
+| replacer | [Transformer](arkts-arkts-ason-transformer-t.md) | No | During serialization, each key of the serialized value is converted and processed by this function. The default value is undefined. |
+| space | string \| number | No | Indentation, white space, or line break characters inserted into the output JSON string for readability purposes. If a number is passed in, it indicates the number of space characters to be used as indentation. If a string is passed in, the string is inserted before the output JSON string. If null is passed in, no white space is used. The default value is an empty string. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| string | 返回JSON文本。 |
+| string | Return a JSON text. |
 

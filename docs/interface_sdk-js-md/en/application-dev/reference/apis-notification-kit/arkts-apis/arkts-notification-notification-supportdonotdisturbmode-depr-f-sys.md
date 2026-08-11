@@ -6,7 +6,7 @@
 function supportDoNotDisturbMode(callback: AsyncCallback<boolean>): void
 ```
 
-查询是否支持免打扰功能（Callback形式）。
+Checks whether DND mode is supported. This API uses an asynchronous callback to return the result.
 
 **Since:** 8
 
@@ -28,7 +28,7 @@ function supportDoNotDisturbMode(callback: AsyncCallback<boolean>): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;boolean&gt; | Yes | 查询是否支持免打扰功能回调函数。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;boolean&gt; | Yes | Callback used to return the result. |
 
 
 ## supportDoNotDisturbMode
@@ -37,7 +37,7 @@ function supportDoNotDisturbMode(callback: AsyncCallback<boolean>): void
 function supportDoNotDisturbMode(): Promise<boolean>
 ```
 
-查询是否支持免打扰功能（Promise形式）。
+Checks whether DND mode is supported. This API uses a promise to return the result.
 
 **Since:** 8
 
@@ -59,5 +59,5 @@ function supportDoNotDisturbMode(): Promise<boolean>
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;boolean&gt; | 以Promise形式返回获取是否支持免打扰功能的结果。 |
+| Promise&lt;boolean&gt; | Promise used to return the result. |
 

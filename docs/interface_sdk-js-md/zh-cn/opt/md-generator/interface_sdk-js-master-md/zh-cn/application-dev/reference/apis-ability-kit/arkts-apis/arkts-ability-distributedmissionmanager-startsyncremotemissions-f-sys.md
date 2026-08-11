@@ -1,0 +1,124 @@
+# startSyncRemoteMissions（系统接口）
+
+## startSyncRemoteMissions
+
+```TypeScript
+function startSyncRemoteMissions(parameter: MissionParameter, callback: AsyncCallback<void>): void
+```
+
+开始同步远端设备的任务列表。使用callback异步回调。
+
+**起始版本：** 9
+
+**需要权限：** ohos.permission.MANAGE_MISSIONS
+
+**模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-distributedMissionManager-function startSyncRemoteMissions(parameter: MissionParameter, callback: AsyncCallback<void>): void--><!--Device-distributedMissionManager-function startSyncRemoteMissions(parameter: MissionParameter, callback: AsyncCallback<void>): void-End-->
+
+**系统能力：** SystemCapability.Ability.AbilityRuntime.Mission
+
+**系统接口：** 此接口为系统接口。
+
+**参数：**
+
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| parameter | [MissionParameter](arkts-ability-missionparameter-i-sys.md) | 是 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 |
+
+**错误码：**
+
+| 错误码ID |
+| --- |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
+| [201](../../errorcode-universal.md#201-权限校验失败) |
+
+## 示例
+
+```TypeScript
+import { distributedMissionManager } from '@kit.AbilityKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+try {
+  // 开始同步远端设备的任务列表
+  distributedMissionManager.startSyncRemoteMissions(
+    {
+      deviceId: "",
+      fixConflict: false,
+      tag: 0
+    },
+    (error: BusinessError) => {
+      if (error) {
+        console.error(`startSyncRemoteMissions failed. Code: ${error.code}, message: ${error.message}`);
+        return;
+      }
+      console.info('startSyncRemoteMissions finished');}
+  )
+} catch (error) {
+  console.error(`startSyncRemoteMissions failed. Code: ${error.code}, message: ${error.message}`);
+}
+```
+
+
+## startSyncRemoteMissions
+
+```TypeScript
+function startSyncRemoteMissions(parameter: MissionParameter): Promise<void>
+```
+
+开始同步远端设备的任务列表。使用promise异步回调。
+
+**起始版本：** 9
+
+**需要权限：** ohos.permission.MANAGE_MISSIONS
+
+**模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-distributedMissionManager-function startSyncRemoteMissions(parameter: MissionParameter): Promise<void>--><!--Device-distributedMissionManager-function startSyncRemoteMissions(parameter: MissionParameter): Promise<void>-End-->
+
+**系统能力：** SystemCapability.Ability.AbilityRuntime.Mission
+
+**系统接口：** 此接口为系统接口。
+
+**参数：**
+
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| parameter | [MissionParameter](arkts-ability-missionparameter-i-sys.md) | 是 |
+
+**返回值：**
+
+| 类型 |
+| --- |
+| Promise&lt;void&gt; |
+
+**错误码：**
+
+| 错误码ID |
+| --- |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
+| [201](../../errorcode-universal.md#201-权限校验失败) |
+
+## 示例
+
+```TypeScript
+import { distributedMissionManager } from '@kit.AbilityKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+try {
+  distributedMissionManager.startSyncRemoteMissions(
+    {
+      deviceId: "",
+      fixConflict: false,
+      tag: 0
+    }
+  ).then(() => {
+      console.info('startSyncRemoteMissions finished successfully');
+    }).catch((error: BusinessError) => {
+    console.error(`startSyncRemoteMissions failed. Code: ${error.code}, message: ${error.message}`);
+  });
+} catch (error) {
+  console.error(`startSyncRemoteMissions failed. Code: ${error.code}, message: ${error.message}`);
+}
+```

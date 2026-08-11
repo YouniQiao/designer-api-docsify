@@ -122,7 +122,7 @@ measureResult: MeasureResult
 
 子组件测量后的尺寸信息。单位为： vp。
 
-**类型：** [MeasureResult](../arkts-apis/arkts-arkui-common-measureresult-i.md)
+**类型：** [MeasureResult](arkts-arkui-measureresult-i.md)
 
 **起始版本：** 10
 

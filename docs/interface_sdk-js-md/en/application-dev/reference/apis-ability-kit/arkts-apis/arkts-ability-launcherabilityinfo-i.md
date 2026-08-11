@@ -1,8 +1,8 @@
 # LauncherAbilityInfo
 
-桌面应用的Ability信息，可以通过  
-[getLauncherAbilityInfoSync](arkts-ability-launcherbundlemanager-getlauncherabilityinfosync-f.md#getlauncherabilityinfosync)&lt;!--Del--&gt;或者  
-[getLauncherAbilityInfo](arkts-ability-launcherbundlemanager-getlauncherabilityinfo-f-sys.md#getlauncherabilityinfo)&lt;!--DelEnd--&gt;获取。
+The module describes the ability information of the launcher application. The information can be obtained by calling  
+[getLauncherAbilityInfoSync](arkts-ability-launcherbundlemanager-getlauncherabilityinfosync-f.md#getlauncherabilityinfosync)&lt;!--Del--&gt; or  
+[getLauncherAbilityInfo](arkts-ability-launcherbundlemanager-getlauncherabilityinfo-f-sys.md#getlauncherabilityinfo)&lt;!--DelEnd--&gt;.
 
 **Since:** 18
 
@@ -18,7 +18,7 @@
 readonly applicationInfo: ApplicationInfo
 ```
 
-launcher ability的应用程序配置信息。
+Application information of the launcher ability.
 
 **Type:** [ApplicationInfo](arkts-ability-applicationinfo-i.md)
 
@@ -36,7 +36,7 @@ launcher ability的应用程序配置信息。
 readonly elementName: ElementName
 ```
 
-launcher ability的ElementName信息。
+Element name of the launcher ability.
 
 **Type:** [ElementName](arkts-ability-elementname-i.md)
 
@@ -54,7 +54,7 @@ launcher ability的ElementName信息。
 readonly iconId: long
 ```
 
-launcher ability的图标的资源ID值。
+Icon ID of the launcher ability.
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：long
 
@@ -72,7 +72,7 @@ launcher ability的图标的资源ID值。
 readonly installTime: long
 ```
 
-launcher ability的安装时间戳，单位毫秒。
+Timestamp when the launcher ability was installed, in milliseconds.
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：long
 
@@ -90,7 +90,7 @@ launcher ability的安装时间戳，单位毫秒。
 readonly labelId: long
 ```
 
-launcher ability的名称的资源ID值。
+Label ID of the launcher ability.
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：long
 
@@ -108,7 +108,7 @@ launcher ability的名称的资源ID值。
 readonly userId: int
 ```
 
-launcher ability的用户ID。
+User ID of the launcher ability.
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 

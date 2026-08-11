@@ -1,11 +1,5 @@
 # getPermissionUsedRecord（系统接口）
 
-## 导入模块
-
-```TypeScript
-import { privacyManager } from 'kits/@kit.AbilityKit';
-```
-
 ## getPermissionUsedRecord
 
 ```TypeScript
@@ -42,13 +36,15 @@ function getPermissionUsedRecord(request: PermissionUsedRequest): Promise<Permis
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types. |
-| 201 | Permission denied. Interface caller does not have permission "ohos.permission.PERMISSION_USED_STATS". |
-| 12100001 | Invalid parameter. The value of flag, begin, or end in request is invalid. |
-| 202 | Not system app. Interface caller is not a system app. |
-| 12100007 | Service exception. |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types. |
+| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. Interface caller does not have permission "ohos.permission.PERMISSION_USED_STATS". |
+| [12100001](../errorcode-access-token.md#12100001-入参错误) | Invalid parameter. The value of flag, begin, or end in request is invalid. |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not system app. Interface caller is not a system app. |
+| [12100007](../errorcode-access-token.md#12100007-系统服务工作异常) | Service exception. |
 
 ## 示例
+
+ArkTS-Dyn示例：
 
 ```TypeScript
 import { privacyManager } from '@kit.AbilityKit';
@@ -67,6 +63,30 @@ let request: privacyManager.PermissionUsedRequest = {
 
 // 查询历史权限使用记录
 privacyManager.getPermissionUsedRecord(request).then((data) => {
+  console.info(`getPermissionUsedRecord success, result: ${data}`);
+}).catch((err: BusinessError): void => {
+  console.error(`getPermissionUsedRecord fail, code: ${err.code}, message: ${err.message}`);
+});
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+import { privacyManager } from '@kit.AbilityKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let request: privacyManager.PermissionUsedRequest = {
+    'tokenId': 1,
+    'isRemote': false,
+    'deviceId': 'device',
+    'bundleName': 'bundle',
+    'permissionNames': [],
+    'beginTime': 0,
+    'endTime': 1,
+    'flag':privacyManager.PermissionUsageFlag.FLAG_PERMISSION_USAGE_DETAIL,
+};
+
+privacyManager.getPermissionUsedRecord(request).then((data: privacyManager.PermissionUsedResponse) => {
   console.info(`getPermissionUsedRecord success, result: ${data}`);
 }).catch((err: BusinessError): void => {
   console.error(`getPermissionUsedRecord fail, code: ${err.code}, message: ${err.message}`);
@@ -107,13 +127,15 @@ function getPermissionUsedRecord(
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types. |
-| 201 | Permission denied. Interface caller does not have permission "ohos.permission.PERMISSION_USED_STATS". |
-| 12100001 | Invalid parameter. The value of flag, begin, or end in request is invalid. |
-| 202 | Not system app. Interface caller is not a system app. |
-| 12100007 | Service exception. |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types. |
+| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. Interface caller does not have permission "ohos.permission.PERMISSION_USED_STATS". |
+| [12100001](../errorcode-access-token.md#12100001-入参错误) | Invalid parameter. The value of flag, begin, or end in request is invalid. |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not system app. Interface caller is not a system app. |
+| [12100007](../errorcode-access-token.md#12100007-系统服务工作异常) | Service exception. |
 
 ## 示例
+
+ArkTS-Dyn示例：
 
 ```TypeScript
 import { privacyManager } from '@kit.AbilityKit';
@@ -132,6 +154,32 @@ let request: privacyManager.PermissionUsedRequest = {
 
 // 查询历史权限使用记录
 privacyManager.getPermissionUsedRecord(request, (err: BusinessError, data: privacyManager.PermissionUsedResponse) => {
+  if (err) {
+    console.error(`getPermissionUsedRecord fail, code: ${err.code}, message: ${err.message}`);
+  } else {
+    console.info(`getPermissionUsedRecord success, result: ${data}`);
+  }
+});
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+import { privacyManager } from '@kit.AbilityKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let request: privacyManager.PermissionUsedRequest = {
+    'tokenId': 1,
+    'isRemote': false,
+    'deviceId': 'device',
+    'bundleName': 'bundle',
+    'permissionNames': [],
+    'beginTime': 0,
+    'endTime': 1,
+    'flag':privacyManager.PermissionUsageFlag.FLAG_PERMISSION_USAGE_DETAIL,
+};
+
+privacyManager.getPermissionUsedRecord(request, (err: BusinessError | null, data: privacyManager.PermissionUsedResponse | undefined): void => {
   if (err) {
     console.error(`getPermissionUsedRecord fail, code: ${err.code}, message: ${err.message}`);
   } else {

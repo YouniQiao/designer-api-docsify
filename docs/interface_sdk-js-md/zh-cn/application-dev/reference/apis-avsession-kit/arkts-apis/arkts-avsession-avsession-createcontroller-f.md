@@ -1,11 +1,5 @@
 # createController
 
-## 导入模块
-
-```TypeScript
-import { avSession } from 'kits/@kit.AVSessionKit';
-```
-
 ## createController
 
 ```TypeScript
@@ -42,10 +36,10 @@ function createController(sessionId: string): Promise<AVSessionController>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 6600101 | Session service exception. |
-| 6600102 | The session does not exist. |
-| 201 | Permission denied |
-| 202 | Not System App.<br>**适用版本：** 9 - 22 |
+| [6600101](../errorcode-avsession.md#6600101-会话服务端异常) | Session service exception. |
+| [6600102](../errorcode-avsession.md#6600102-会话不存在) | The session does not exist. |
+| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not System App.<br>**适用版本：** 9 - 22 |
 
 ## 示例
 
@@ -75,5 +69,13 @@ struct Index {
     .height('100%')
   }
 }
+```
+
+```TypeScript
+let currentAVcontroller: avSession.AVSessionController | undefined = undefined;
+avSession.createController(sessionId).then((avcontroller: avSession.AVSessionController) => {
+  currentAVcontroller = avcontroller;
+  console.info('Succeeded in creating controller.');
+});
 ```
 

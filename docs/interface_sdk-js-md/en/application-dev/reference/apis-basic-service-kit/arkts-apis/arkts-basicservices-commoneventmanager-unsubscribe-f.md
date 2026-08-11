@@ -12,7 +12,7 @@ import { commonEventManager } from 'kits/@kit.BasicServicesKit';
 function unsubscribe(subscriber: CommonEventSubscriber, callback?: AsyncCallback<void>): void
 ```
 
-取消订阅公共事件。使用callback异步回调。
+Unsubscribes from a common event. This API uses an asynchronous callback to return the result.
 
 **Since:** 9
 
@@ -28,19 +28,21 @@ function unsubscribe(subscriber: CommonEventSubscriber, callback?: AsyncCallback
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| subscriber | [CommonEventSubscriber](arkts-basicservices-commoneventsubscriber-commoneventsubscriber-i.md) | Yes | 表示订阅者对象。 |
-| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | No | 回调函数。当取消公共事件订阅成功时，err为undefined；取消失败时， err为错误对象。不传该参数时，默认取消订阅且不返回结果。 |
+| subscriber | [CommonEventSubscriber](arkts-basicservices-commoneventsubscriber-commoneventsubscriber-i.md) | Yes | Subscriber object. |
+| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | No | Callback used to return the result. If the common event is successfully unsubscribed from, **err** is **undefined**; if the unsubscription fails, **err** is an error object. If this parameter is not passed, the subscription is canceled by default and no result is returned. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
-| 801 | Capability not supported. |
-| 1500007 | Failed to send the message to the common event service. |
-| 1500008 | Failed to initialize the common event service. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. |
+| [1500007](../../apis-basic-services-kit/errorcode-CommonEventService.md#1500007-failed-to-send-a-request-through-ipc) | Failed to send the message to the common event service. |
+| [1500008](../../apis-basic-services-kit/errorcode-CommonEventService.md#1500008-failed-to-initialize-the-common-event-service) | Failed to initialize the common event service. |
 
 ## Examples
+
+ArkTS-Dyn example:
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -56,7 +58,7 @@ let subscribeInfo: commonEventManager.CommonEventSubscribeInfo = {
 try {
   commonEventManager.createSubscriber(subscribeInfo,
     (err: BusinessError, commonEventSubscriber: commonEventManager.CommonEventSubscriber) => {
-      if (!err) {
+      if(!err) {
         console.info(`Succeeded in creating subscriber.`);
         subscriber = commonEventSubscriber;
         // Subscribe to a common event.
@@ -97,6 +99,85 @@ setTimeout(() => {
   } catch (error) {
     let err: BusinessError = error as BusinessError;
     console.error(`Failed to unsubscribe. Code is ${err.code}, message is ${err.message}`);
+  }
+}, 500);
+```
+
+ArkTS-Sta example:
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+// Define a subscriber, which can be null or undefined.
+let subscriber: commonEventManager.CommonEventSubscriber | null | undefined = null;
+
+// Subscriber information.
+let subscribeInfo: commonEventManager.CommonEventSubscribeInfo = {
+  events: ['event']
+};
+
+    // Create the subscriber.
+try {
+  commonEventManager.createSubscriber(
+    subscribeInfo,
+    (err: BusinessError | null,
+      commonEventSubscriber: commonEventManager.CommonEventSubscriber | undefined | null) => {
+      if (!err && commonEventSubscriber) {
+        console.info(`Succeeded in creating subscriber.`);
+        subscriber = commonEventSubscriber as commonEventManager.CommonEventSubscriber;
+        // Subscribe to a common event. Use a non-null object.
+        try {
+          commonEventManager.subscribe(
+            commonEventSubscriber, // Directly use the callback parameter, and ensure it is not null.
+            (err: BusinessError | null, data: commonEventManager.CommonEventData | undefined | null) => {
+              if (err) {
+                console.error(`Failed to subscribe. Code is ${err.code}, message is ${err.message}`);
+                return;
+              }
+              console.info(`Succeeded in subscribing, data is ${JSON.stringify(data)}`);
+            }
+          );
+        } catch (error) {
+          const err = error as BusinessError;
+          console.error(`Failed to subscribe. Code is ${err.code}, message is ${err.message}`);
+        }
+        return;
+      }
+
+      if (err) {
+         console.error(`Failed to create subscriber. Code is ${err.code}, message is ${err.message}`);
+      } else {
+        console.error(`Failed to create subscriber: commonEventSubscriber is null or undefined`);
+      }
+    }
+  );
+} catch (error) {
+  const err = error as BusinessError;
+  console.error(`Failed to create subscriber. Code is ${err.code}, message is ${err.message}`);
+}
+
+// Unsubscribe from the common event.
+setTimeout(() => {
+  if (subscriber) {
+    const currentSubscriber = subscriber as commonEventManager.CommonEventSubscriber;
+    try {
+      commonEventManager.unsubscribe(
+        currentSubscriber,
+        (err: BusinessError | null) => {
+          if (err) {
+            console.error(`Failed to unsubscribe. Code is ${err.code}, message is ${err.message}`);
+            return;
+          }
+          subscriber = undefined;
+          console.info(`Succeeded in unsubscribing.`);
+        }
+      );
+    } catch (error) {
+      const err = error as BusinessError;
+      console.error(`Failed to unsubscribe. Code is ${err.code}, message is ${err.message}`);
+    }
+  } else {
+    console.warn("Cannot unsubscribe: subscriber is null or undefined");
   }
 }, 500);
 ```

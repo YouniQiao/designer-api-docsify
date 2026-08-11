@@ -1,11 +1,5 @@
 # getCurrentBundleInodes
 
-## 导入模块
-
-```TypeScript
-import { storageStatistics } from 'kits/@kit.CoreFileKit';
-```
-
 ## getCurrentBundleInodes
 
 ```TypeScript
@@ -40,12 +34,26 @@ function getCurrentBundleInodes(): Promise<long>
 
 ## 示例
 
+ArkTS-Dyn示例：
+
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
 
-storageStatistics.getCurrentBundleInodes().then((bundleInodes: number) => {
-  console.info('getCurrentBundleInodes successfully:' + bundleInodes);
+storageStatistics.getCurrentBundleInodes().then((curInodes: number) => {
+  console.info('getCurrentBundleInodes successfully:' + curInodes);
 }).catch((err: BusinessError) => {
+  console.error(`getCurrentBundleInodes failed. Code: ${err.code}, message: ${err.message}`);
+});
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+storageStatistics.getCurrentBundleInodes().then((curInodes: long) => {
+  console.info('getCurrentBundleInodes successfully:' + curInodes);
+}).catch((err: BusinessError): void => {
   console.error(`getCurrentBundleInodes failed. Code: ${err.code}, message: ${err.message}`);
 });
 ```

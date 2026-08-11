@@ -11,12 +11,6 @@
 
 **系统能力：** SystemCapability.MiscServices.Pasteboard
 
-## 导入模块
-
-```TypeScript
-import { pasteboard } from 'kits/@kit.BasicServicesKit';
-```
-
 ## 汇总
 
 ### 函数
@@ -49,7 +43,7 @@ import { pasteboard } from 'kits/@kit.BasicServicesKit';
 | [GetDataParams](arkts-basicservices-pasteboard-getdataparams-i.md) | 应用在使用剪贴板提供的文件拷贝能力的情况下需要的参数，包含目标路径、文件冲突选项、进度条类型等。调用本接口前，需确保无其他拷贝或粘贴操作正在进行。 |
 | [PasteData](arkts-basicservices-pasteboard-pastedata-i.md) | 剪贴板内容对象。剪贴板内容包含一个或者多个内容条目（[PasteDataRecord](arkts-basicservices-pasteboard-pastedatarecord-i.md)）以及属性描述对象（[PasteDataProperty](arkts-basicservices-pasteboard-pastedataproperty-i.md)）。在调用PasteData的接口前，需要先通过[createData()](arkts-basicservices-pasteboard-createdata-f.md#createdata)或[getData()](arkts-basicservices-pasteboard-systempasteboard-i.md#getdata)获取一个PasteData对象。 |
 | [PasteDataProperty](arkts-basicservices-pasteboard-pastedataproperty-i.md) | 定义剪贴板中所有内容条目的属性，包含时间戳、数据类型、粘贴范围以及一些附加数据等，该属性必须通过[setProperty](arkts-basicservices-pasteboard-pastedata-i.md#setproperty)方法，才能设置到剪贴板中。 |
-| [PasteDataRecord](arkts-basicservices-pasteboard-pastedatarecord-i.md) | 对于剪贴板中内容记录的抽象定义，称之为条目。剪贴板内容部分由一个或者多个条目构成，例如一条文本内容、一份HTML、一个URI或者一个Want。 |
+| [PasteDataRecord](arkts-basicservices-pasteboard-pastedatarecord-i.md) | 对于剪贴板中内容记录的抽象定义，称之为条目。剪贴板内容部分由一个或者多个条目构成，例如一条文本内容、一份HTML、一个URI或者一个Want。不支持在创建PasteDataRecord之后，修改PasteDataRecord的默认数据类型的值，应在创建PasteDataRecord时指定正确的默认数据类型的值。如需刷新PasteDataRecord的属性值，请使用[addEntry](PasteDataRecord.addEntry(type: string, value: ValueType))。 |
 | [ProgressInfo](arkts-basicservices-pasteboard-progressinfo-i.md) | 定义进度上报的数据结构，且仅当进度指示选项[ProgressIndicator](arkts-basicservices-pasteboard-progressindicator-e.md)设置为NONE时才会上报此信息。 |
 | [SystemPasteboard](arkts-basicservices-pasteboard-systempasteboard-i.md) | 系统剪贴板对象。在调用SystemPasteboard的接口前，需要先通过[getSystemPasteboard](arkts-basicservices-pasteboard-getsystempasteboard-f.md#getsystempasteboard)获取系统剪贴板。 |
 

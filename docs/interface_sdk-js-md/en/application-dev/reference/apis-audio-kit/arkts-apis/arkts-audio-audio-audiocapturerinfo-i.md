@@ -1,6 +1,6 @@
 # AudioCapturerInfo
 
-描述音频采集器信息。
+Describes audio capturer information.
 
 **Since:** 8
 
@@ -22,9 +22,9 @@ import { audio } from 'kits/@kit.AudioKit';
 capturerFlags: int
 ```
 
-录制流行为标志。
+Flags that control the capturer behavior.
 
-设置为0即可。
+Set this parameter to **0**.
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
@@ -42,7 +42,7 @@ capturerFlags: int
 source: SourceType
 ```
 
-音源类型。
+Audio source type.
 
 **Type:** [SourceType](../../apis-arkweb/arkts-apis/arkts-arkweb-webview-sourcetype-e.md)
 

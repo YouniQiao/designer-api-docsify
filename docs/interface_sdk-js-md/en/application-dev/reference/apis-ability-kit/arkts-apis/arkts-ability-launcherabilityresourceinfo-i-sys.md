@@ -1,11 +1,11 @@
 # LauncherAbilityResourceInfo (System API)
 
-应用配置的入口图标和名称信息，可以通过  
-[getLauncherAbilityResourceInfo](arkts-ability-bundleresourcemanager-getlauncherabilityresourceinfo-f-sys.md#getlauncherabilityresourceinfo)获取。
+The module provides resource information of the entry ability of an application, such as the icon and label. The information can be obtained by calling  
+[getLauncherAbilityResourceInfo](arkts-ability-bundleresourcemanager-getlauncherabilityresourceinfo-f-sys.md#getlauncherabilityresourceinfo).
 
-> **说明：**
+> **NOTE：**
 > 
-> 本模块为系统接口。
+> The APIs provided by this module are system APIs.
 
 **Since:** 11
 
@@ -23,7 +23,7 @@
 readonly abilityName: string
 ```
 
-应用的组件名称。
+Name of the entry ability.
 
 **Type:** string
 
@@ -43,7 +43,7 @@ readonly abilityName: string
 readonly appIndex: int
 ```
 
-应用分身Id。
+Index of an application clone.
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
@@ -63,7 +63,7 @@ readonly appIndex: int
 readonly bundleName: string
 ```
 
-应用的包名。
+Bundle name of the application.
 
 **Type:** string
 
@@ -83,7 +83,7 @@ readonly bundleName: string
 readonly drawableDescriptor: DrawableDescriptor
 ```
 
-应用图标的drawableDescriptor对象。
+**drawableDescriptor** object of the application icon.
 
 **Type:** [DrawableDescriptor](../../apis-arkui/arkts-components/arkts-arkui-drawabledescriptor-t.md)
 
@@ -103,7 +103,7 @@ readonly drawableDescriptor: DrawableDescriptor
 readonly icon: string
 ```
 
-应用图标，为Base64编码格式。
+Application icon, which is encoded using Base64.
 
 **Type:** string
 
@@ -123,7 +123,7 @@ readonly icon: string
 readonly label: string
 ```
 
-应用名称。
+Application label.
 
 **Type:** string
 
@@ -143,7 +143,7 @@ readonly label: string
 readonly moduleName: string
 ```
 
-应用的模块名称。
+Module name of the application.
 
 **Type:** string
 

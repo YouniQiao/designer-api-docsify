@@ -22,7 +22,7 @@ import { uiObserver } from 'kits/@kit.ArkUI';
 axis?: Axis
 ```
 
-滚动轴。
+Scroll axis.
 
 **Type:** [Axis](arkts-arkui-axis-e.md)
 

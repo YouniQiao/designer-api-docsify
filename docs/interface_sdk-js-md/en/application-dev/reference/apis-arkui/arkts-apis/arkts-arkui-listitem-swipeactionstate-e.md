@@ -1,6 +1,6 @@
 # SwipeActionState
 
-列表项滑动状态枚举。
+Declare enum SwipeActionState.
 
 **Since:** 23
 

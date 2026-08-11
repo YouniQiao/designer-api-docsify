@@ -34,9 +34,9 @@ Get the ethernet mac address list.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 2200002 | Operation failed. Cannot connect to service. |
-| 201 | Permission denied. |
-| 2201005 | Device information does not exist. |
+| [2200002](../errorcode-net-sharing.md#2200002-service-connection-failure) | Operation failed. Cannot connect to service. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
+| [2201005](../errorcode-net-ethernet.md#2201005-device-information-not-exist) | Device information does not exist. |
 
 ## Examples
 

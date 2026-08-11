@@ -1,6 +1,6 @@
 # ConflictFiles
 
-冲突文件信息，支持copyDir及moveDir接口使用。
+Defines conflicting file information used in **copyDir()** or **moveDir()**.
 
 **Since:** 23
 
@@ -22,7 +22,7 @@ import { Options, ReaderIteratorResult, Watcher, ReadTextOptions, WatchEventList
 destFile: string
 ```
 
-目标冲突文件路径。
+Path of the destination file.
 
 **Type:** string
 
@@ -40,7 +40,7 @@ destFile: string
 srcFile: string
 ```
 
-源冲突文件路径。
+Path of the source file.
 
 **Type:** string
 

@@ -10,12 +10,6 @@
 
 **系统能力：** SystemCapability.Utils.Lang
 
-## 导入模块
-
-```TypeScript
-import { stream } from 'kits/@kit.ArkTS';
-```
-
 ## constructor
 
 ```TypeScript
@@ -62,7 +56,7 @@ constructor(options: ReadableOptions)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| options | [ReadableOptions](arkts-arkts-stream-readableoptions-i.md) | 是 | Readable**构造函数中的选项。 |
+| options | [ReadableOptions](arkts-arkts-stream-readableoptions-i.md) | 是 | Readable构造函数的选项信息。 |
 
 ## 示例
 
@@ -99,6 +93,8 @@ doInitialize(callback: Function): void
 
 ## 示例
 
+ArkTS-Dyn示例：
+
 ```TypeScript
 class MyReadable extends stream.Readable {
   doInitialize(callback: Function) {
@@ -107,6 +103,24 @@ class MyReadable extends stream.Readable {
   }
 
   doRead(size: number) {
+  }
+}
+
+let myReadable = new MyReadable();
+myReadable.on("data", () => {
+});
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+class MyReadable extends stream.Readable {
+  doInitialize(callback: Function) {
+    super.doInitialize(callback);
+    console.info("Readable doInitialize"); // 期望结果: Readable doInitialize
+  }
+
+  doRead(size: int) {
   }
 }
 
@@ -143,9 +157,11 @@ doRead(size: int): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| size | ArkTS-Dyn: number  <br>ArkTS-Sta：int | 是 | 待读取的字节数。取值范围：0 <= size <= Number.MAX_VALUE |
+| size | ArkTS-Dyn: number  <br>ArkTS-Sta：int | 是 | 读取数据的字节数。取值范围：0 <= size <= Number.MAX_VALUE。 |
 
 ## 示例
+
+ArkTS-Dyn示例：
 
 ```TypeScript
 class TestReadable extends stream.Readable {
@@ -155,6 +171,24 @@ class TestReadable extends stream.Readable {
 
   doRead(size: number) {
     console.info("doRead called"); // doRead called
+  }
+}
+
+let readableStream = new TestReadable();
+readableStream.on("data", () => {
+});
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+class TestReadable extends stream.Readable {
+  constructor() {
+    super();
+  }
+
+  doRead(size: int) {
+    console.info("doRead called"); // 期望结果: doRead called
   }
 }
 
@@ -185,9 +219,11 @@ isPaused(): boolean
 
 | 类型 | 说明 |
 | --- | --- |
-| boolean | 检查结果。流已暂停返回**true**，否则返回**false**。 |
+| boolean | 返回流是否处于暂停模式。true表示流处于暂停模式，false表示流未处于暂停模式。 |
 
 ## 示例
+
+ArkTS-Dyn示例：
 
 ```TypeScript
 class TestReadable extends stream.Readable {
@@ -203,6 +239,24 @@ let readableStream = new TestReadable();
 console.info("Readable isPaused", readableStream.isPaused()); // Readable isPaused false
 readableStream.pause();
 console.info("Readable isPaused", readableStream.isPaused()); // Readable isPaused true
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+class TestReadable extends stream.Readable {
+  constructor() {
+    super();
+  }
+
+  doRead(size: int) {
+  }
+}
+
+let readableStream = new TestReadable();
+console.info("Readable isPaused", readableStream.isPaused()); // 期望结果: Readable isPaused false
+readableStream.pause();
+console.info("Readable isPaused", readableStream.isPaused()); // 期望结果: Readable isPaused true
 ```
 
 ## off
@@ -232,6 +286,8 @@ off(event: string, callback?: Callback<emitter.EventData>): void
 
 ## 示例
 
+ArkTS-Dyn示例：
+
 ```TypeScript
 class TestReadable extends stream.Readable {
   constructor() {
@@ -239,6 +295,31 @@ class TestReadable extends stream.Readable {
   }
 
   doRead(size: number) {
+  }
+}
+
+let readableStream = new TestReadable();
+
+function read() {
+  console.info("read() called");
+}
+
+readableStream.setEncoding("utf8");
+readableStream.on("readable", read);
+readableStream.off("readable");
+readableStream.push("test");
+// off注销对readable事件的监听后，read函数不会被调用，"read() called"也不会被打印
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+class TestReadable extends stream.Readable {
+  constructor() {
+    super();
+  }
+
+  doRead(size: int) {
   }
 }
 
@@ -307,6 +388,8 @@ on(event: string, callback: Callback<emitter.EventData>): void
 
 ## 示例
 
+ArkTS-Dyn示例：
+
 ```TypeScript
 class TestReadable extends stream.Readable {
   constructor() {
@@ -322,6 +405,26 @@ let readableStream = new TestReadable();
 readableStream.push("test");
 readableStream.on("error", () => {
   console.error("error event called"); // error event called
+});
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+class TestReadable extends stream.Readable {
+  constructor() {
+    super();
+  }
+
+  doRead(size: int) {
+    throw new Error("Simulated error");
+  }
+}
+
+let readableStream = new TestReadable();
+readableStream.push("test");
+readableStream.on("error", (): void => {
+  console.error("error event called"); // 期望结果: error event called
 });
 ```
 
@@ -372,9 +475,11 @@ pause(): Readable
 
 | 类型 | 说明 |
 | --- | --- |
-| [Readable](arkts-arkts-stream-readable-c.md) | 当前**Readable**对象。 |
+| [Readable](arkts-arkts-stream-readable-c.md) | 当前可读流本身。 |
 
 ## 示例
+
+ArkTS-Dyn示例：
 
 ```TypeScript
 class TestReadable extends stream.Readable {
@@ -389,6 +494,23 @@ class TestReadable extends stream.Readable {
 let readableStream = new TestReadable();
 readableStream.pause();
 console.info("Readable test pause", readableStream.isPaused()); // Readable test pause true
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+class TestReadable extends stream.Readable {
+  constructor() {
+    super();
+  }
+
+  doRead(size: int) {
+  }
+}
+
+let readableStream = new TestReadable();
+readableStream.pause();
+console.info("Readable test pause", readableStream.isPaused()); // 期望结果: Readable test pause true
 ```
 
 ## pipe
@@ -414,15 +536,17 @@ pipe(destination: Writable, options?: Object): Writable
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | destination | [Writable](arkts-arkts-stream-writable-c.md) | 是 | 接收数据的可写流。 |
-| options | Object | 否 | 预留参数。 |
+| options | Object | 否 | 预留字段，暂不支持使用。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| [Writable](arkts-arkts-stream-writable-c.md) | 当前**Writable**对象。 |
+| [Writable](arkts-arkts-stream-writable-c.md) | 返回当前可写流对象。 |
 
 ## 示例
+
+ArkTS-Dyn示例：
 
 ```TypeScript
 class TestReadable extends stream.Readable {
@@ -444,6 +568,36 @@ class TestWritable extends stream.Writable {
   doWrite(chunk: string | Uint8Array, encoding: string, callback: Function) {
     console.info("Readable test pipe", chunk); // Readable test pipe test
     callback();
+  }
+}
+
+let readableStream = new TestReadable();
+let writableStream = new TestWritable();
+readableStream.pipe(writableStream);
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+class TestReadable extends stream.Readable {
+  constructor() {
+    super();
+  }
+
+  doRead(size: int) {
+    this.push("test");
+    this.push(null);
+  }
+}
+
+class TestWritable extends stream.Writable {
+  constructor() {
+    super();
+  }
+
+  doWrite(chunk: string | Uint8Array, encoding: string, callback: Function) {
+    console.info("Readable test pipe", chunk); // 期望结果: Readable test pipe test
+    callback.unsafeCall();
   }
 }
 
@@ -474,16 +628,18 @@ push(chunk: Uint8Array | string | undefined | null, encoding?: string): boolean
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| chunk | Uint8Array \| string \| undefined \| null | 是 | 待读取的数据。&lt;br&gt; 从API version 22起有兼容性变更。在API version 21及之前版本，类型为 `Uint8Array \| string \| null`。<br>**起始版本：** 23 |
-| encoding | string | 否 | 编码格式。默认值为**'utf8'**。目前支持**'utf8'**、**'gb18030'**、**'gbk'**和**'gb2312'**。 |
+| chunk | Uint8Array \| string \| undefined \| null | 是 | 读取的数据。 &lt;br&gt; API version22开始发生兼容性变更，在API version21及之前的版本其类型为：`Uint8Array \| string \| null`。<br>**起始版本：** 23 |
+| encoding | string | 否 | 数据的字符编码类型。默认值是'utf8'，当前版本支持'utf8'、'gb18030'、'gbk'以及'gb2312'。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| boolean | 表示可读流缓冲区中是否还有空间。**true**表示缓冲区中还有空间；**false**表示缓冲区已满。如果传入**null**，则始终返回**false**，表示没有可推送的数据块。 |
+| boolean | 可读流的缓冲区中是否还有空间。true表示缓冲区还有空间，false表示流的内部缓冲区已满。输入null时，固定返回false表示推送结束，没有数据块可推送。 |
 
 ## 示例
+
+ArkTS-Dyn示例：
 
 ```TypeScript
 class TestReadable extends stream.Readable {
@@ -499,6 +655,24 @@ let readableStream = new TestReadable();
 let testData = "Hello world";
 readableStream.push(testData);
 console.info("Readable push test", readableStream.readableLength); // Readable push test 11
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+class TestReadable extends stream.Readable {
+  constructor() {
+    super();
+  }
+
+  doRead(size: int) {
+  }
+}
+
+let readableStream = new TestReadable();
+let testData = "Hello world";
+readableStream.push(testData);
+console.info("Readable push test", readableStream.readableLength); // 期望结果: Readable push test 11
 ```
 
 ## read
@@ -523,21 +697,23 @@ read(size?: number): string | null
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| size | number | 否 | 待读取的字节数。默认值为**undefined**。 |
+| size | number | 否 | 读取数据的字节数。默认为undefined。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| string | 从可读流中读取的数据。 |
+| string | 从可读流缓冲区读取出的数据。如果未读取到数据，则返回null。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 10200038 | The doRead method has not been implemented. |
+| [10200038](../errorcode-utils.md#10200038-doread接口未实现) | The doRead method has not been implemented. |
 
 ## 示例
+
+ArkTS-Dyn示例：
 
 ```TypeScript
 class TestReadable extends stream.Readable {
@@ -554,6 +730,25 @@ readableStream.push("test");
 readableStream.pause();
 let dataChunk = readableStream.read();
 console.info("Readable data is", dataChunk); // Readable data is test
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+class TestReadable extends stream.Readable {
+  constructor() {
+    super();
+  }
+
+  doRead(size: int) {
+  }
+}
+
+let readableStream = new TestReadable();
+readableStream.push("test");
+readableStream.pause();
+let dataChunk = readableStream.read();
+console.info("Readable data is", dataChunk); // 期望结果: Readable data is test
 ```
 
 ## read
@@ -590,7 +785,7 @@ read(size?: int): buffer.Buffer | string | null
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 10200038 | The doRead method has not been implemented. |
+| [10200038](../errorcode-utils.md#10200038-doread接口未实现) | The doRead method has not been implemented. |
 
 ## resume
 
@@ -614,9 +809,11 @@ resume(): Readable
 
 | 类型 | 说明 |
 | --- | --- |
-| [Readable](arkts-arkts-stream-readable-c.md) | 当前**Readable**对象。 |
+| [Readable](arkts-arkts-stream-readable-c.md) | 当前可读流本身。 |
 
 ## 示例
+
+ArkTS-Dyn示例：
 
 ```TypeScript
 class TestReadable extends stream.Readable {
@@ -633,13 +830,30 @@ readableStream.resume();
 console.info("Readable test resume", !readableStream.isPaused()); // 切换流动模式成功时，此处日志将打印"Readable test resume true"
 ```
 
+ArkTS-Sta示例：
+
+```TypeScript
+class TestReadable extends stream.Readable {
+  constructor() {
+    super();
+  }
+
+  doRead(size: int) {
+  }
+}
+
+let readableStream = new TestReadable();
+readableStream.resume();
+console.info("Readable test resume", !readableStream.isPaused()); // 切换流动模式成功时，此处日志将打印"Readable test resume true"
+```
+
 ## setEncoding
 
 ```TypeScript
 setEncoding(encoding?: string): boolean
 ```
 
-设置可读流的编码格式。如果缓冲区中包含数据，则不允许设置编码格式，并返回**false**。
+设置可读流的字符编码类型。当缓冲区有数据时，不允许设置字符编码类型，返回值为**false**。
 
 **起始版本：** 12
 
@@ -655,15 +869,17 @@ setEncoding(encoding?: string): boolean
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| encoding | string | 否 | 编码格式。默认值为**'utf8'**。目前支持**'utf8'**、**'gb18030'**、**'gbk'**和**'gb2312'**。 |
+| encoding | string | 否 | 需要设置的字符编码类型。默认值是'utf8'，当前版本支持'utf8'、'gb18030'、'gbk'以及'gb2312'。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| boolean | 操作结果。设置成功返回**true**，否则返回**false**。 |
+| boolean | 返回是否设置成功。true表示设置成功，false表示设置失败。 |
 
 ## 示例
+
+ArkTS-Dyn示例：
 
 ```TypeScript
 class TestReadable extends stream.Readable {
@@ -678,6 +894,23 @@ class TestReadable extends stream.Readable {
 let readableStream = new TestReadable();
 let result = readableStream.setEncoding("utf8");
 console.info("Readable result", result); // Readable result true
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+class TestReadable extends stream.Readable {
+  constructor() {
+    super();
+  }
+
+  doRead(size: int) {
+  }
+}
+
+let readableStream = new TestReadable();
+let result = readableStream.setEncoding("utf8");
+console.info("Readable result", result); // 期望结果: Readable result true
 ```
 
 ## unpipe
@@ -702,15 +935,17 @@ unpipe(destination?: Writable): Readable
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| destination | [Writable](arkts-arkts-stream-writable-c.md) | 否 | 待分离的可写流。默认值为**undefined**。 |
+| destination | [Writable](arkts-arkts-stream-writable-c.md) | 否 | 从当前可写流中移除指定的这个可读流。默认为undefined。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| [Readable](arkts-arkts-stream-readable-c.md) | 当前**Readable**对象。 |
+| [Readable](arkts-arkts-stream-readable-c.md) | 返回当前可读流对象。 |
 
 ## 示例
+
+ArkTS-Dyn示例：
 
 ```TypeScript
 class TestReadable extends stream.Readable {
@@ -744,13 +979,47 @@ readableStream.on("data", () => {
 // unpipe成功断开连接之后，data事件将不会触发，不会打印"Readable test unpipe data event triggered"
 ```
 
+ArkTS-Sta示例：
+
+```TypeScript
+class TestReadable extends stream.Readable {
+  constructor() {
+    super();
+  }
+
+  doRead(size: int) {
+    this.push("test");
+    this.push(null);
+  }
+}
+
+class TestWritable extends stream.Writable {
+  constructor() {
+    super();
+  }
+
+  doWrite(chunk: string | Uint8Array, encoding: string, callback: Function) {
+    callback.unsafeCall();
+  }
+}
+
+let readableStream = new TestReadable();
+let writableStream = new TestWritable();
+readableStream.pipe(writableStream);
+readableStream.unpipe(writableStream);
+readableStream.on("data", () => {
+  console.info("Readable test unpipe data event called");
+});
+// unpipe成功断开连接之后，data事件将不会触发，不会打印"Readable test unpipe data event called"
+```
+
 ## readable
 
 ```TypeScript
 get readable(): boolean
 ```
 
-如果调用readable.read()是安全的，返回true，即表示流未被销毁、未发出'error'或'end'。
+表示可读流是否处于可读状态。true表示流处于可读状态，false表示流中没有更多数据可供读取。
 
 **类型：** boolean
 
@@ -770,7 +1039,7 @@ get readable(): boolean
 get readableEncoding(): string | null
 ```
 
-获取给定Readable流的encoding属性的getter。encoding属性可通过readable.setEncoding()方法设置。
+被解码成字符串时所使用的字符编码。默认值是'utf8'，当前版本支持'utf8'、'gb18030'、'gbk'以及'gb2312'。
 
 **类型：** string
 
@@ -790,7 +1059,7 @@ get readableEncoding(): string | null
 get readableEnded(): boolean
 ```
 
-是否已生成所有数据。
+表示当前可读流是否已经结束。true表示流已经没有更多数据可读且已结束，false表示流尚未结束，仍有数据可读或等待读取。
 
 **类型：** boolean
 
@@ -810,7 +1079,7 @@ get readableEnded(): boolean
 get readableFlowing(): boolean | null
 ```
 
-此属性反映可读流的当前状态 null/true/false。
+表示当前可读流的状态。true表示流处于流动模式，false表示流处于非流动模式。默认值是true。
 
 **类型：** boolean
 
@@ -830,7 +1099,7 @@ get readableFlowing(): boolean | null
 get readableHighWatermark(): int
 ```
 
-返回创建此Readable时传入的highWatermark的值。
+定义缓冲区的最大数据量，单位：字节。默认值为16 * 1024字节。
 
 **类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
@@ -850,7 +1119,7 @@ get readableHighWatermark(): int
 get readableLength(): int
 ```
 
-可读取的数据大小，单位为字节或对象。
+表示缓冲区的当前字节数。
 
 **类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
@@ -870,7 +1139,7 @@ get readableLength(): int
 get readableObjectMode(): boolean
 ```
 
-返回布尔值，表示是否处于ObjectMode。
+用于指定可读流是否以对象模式工作。true表示流被配置为对象模式，false表示流处于非对象模式。当前版本只支持原始数据（字符串和Uint8Array），返回值为false。
 
 **类型：** boolean
 

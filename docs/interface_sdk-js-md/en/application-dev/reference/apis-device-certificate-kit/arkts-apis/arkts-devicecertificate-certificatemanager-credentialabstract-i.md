@@ -1,6 +1,6 @@
 # CredentialAbstract
 
-表示凭据的简要信息。
+Represents brief information about a credential.
 
 **Since:** 11
 
@@ -22,7 +22,7 @@ import { certificateManager } from 'kits/@kit.DeviceCertificateKit';
 alias: string
 ```
 
-表示凭据的别名，最大长度为128字节。
+Alias of a credential. The value contains up to 128 bytes.
 
 **Type:** string
 
@@ -40,7 +40,7 @@ alias: string
 keyUri: string
 ```
 
-表示凭据的唯一标识符，最大长度为256字节。
+Unique identifier of a credential. The value contains up to 256 bytes.
 
 **Type:** string
 
@@ -58,7 +58,7 @@ keyUri: string
 type: string
 ```
 
-表示凭据的类型，最大长度为8字节。
+Type of a credential. The value contains up to 8 bytes.
 
 **Type:** string
 

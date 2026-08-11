@@ -4,7 +4,7 @@
 type CloudType = null | long | double | string | boolean | Uint8Array | CloudAsset | CloudAssets
 ```
 
-表示云数据字段可使用的类型。各接口参数的实际类型视其功能而定。
+Enumerates the types of the cloud data field. The specific type is determined by the parameter function.
 
 **Since:** 11
 
@@ -18,12 +18,12 @@ type CloudType = null | long | double | string | boolean | Uint8Array | CloudAss
 
 | Type | Description |
 | --- | --- |
-| null | 表示值的类型为空。 |
-| long | 表示值的类型为数字类型。 |
-| double | 表示值的类型为数字类型。 |
-| string | 表示值的类型为字符串类型。 |
-| boolean | 表示值的类型为布尔类型。 |
-| Uint8Array | 表示值的类型为Uint8Array类型。 |
-| CloudAsset | 表示值的类型为云资产类型。 |
-| CloudAssets | 表示值的类型为云资产数组类型。 |
+| null | The value is null. |
+| long | The value is a 64-bit integer (int64_t). |
+| double | The value is a floating-point number (float). |
+| string | The value is a string. |
+| boolean | The value is true or false. |
+| Uint8Array | The value is a Uint8 array. |
+| CloudAsset | The value is of the cloud asset type. |
+| CloudAssets | The value is an array of cloud assets. |
 

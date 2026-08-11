@@ -4,7 +4,7 @@
 export type ArrayListReplaceCb<T> =  (value: T, index: int, arrlist: ArrayList<T>) => T
 ```
 
-ArrayList中replaceAllElements方法的回调函数。
+The type of ArrayList callback function.
 
 **Since:** 23
 
@@ -22,13 +22,13 @@ ArrayList中replaceAllElements方法的回调函数。
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | T | Yes | 当前遍历到的元素。 |
-| index | int | Yes | 当前遍历到的下标值。 |
-| arrlist | [ArrayList](arkts-arkts-util-arraylist-arraylist-c.md)&lt;T&gt; | Yes | 当前调用replaceAllElements方法的实例对象。 |
+| value | T | Yes | The current element being processed |
+| index | int | Yes | The index of the current element |
+| arrlist | [ArrayList](arkts-arkts-util-arraylist-arraylist-c.md)&lt;T&gt; | Yes | The ArrayList instance being traversed |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| T | 此回调返回替换后的元素。 |
+| T | This callback does not return a value |
 

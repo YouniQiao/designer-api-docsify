@@ -1,6 +1,6 @@
 # PublishedItem
 
-指定发布的数据类型。
+Defines the data to publish.
 
 **Since:** 10
 
@@ -22,7 +22,7 @@ import { dataShare } from 'kits/@kit.ArkData';
 data: string | ArrayBuffer
 ```
 
-指定发布的数据。如果发布数据大小超过20KB，建议使用ArrayBuffer。
+Data to publish. If the data to publish exceeds 20 KB, you are advised to use the data in ArrayBuffer format.
 
 **Type:** string \| ArrayBuffer
 
@@ -42,7 +42,7 @@ data: string | ArrayBuffer
 key: string
 ```
 
-指定发布数据的键。
+Key of the data to publish.
 
 **Type:** string
 
@@ -62,7 +62,7 @@ key: string
 subscriberId: string
 ```
 
-指定订阅者id。
+Subscriber ID.
 
 **Type:** string
 

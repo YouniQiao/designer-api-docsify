@@ -1,14 +1,23 @@
 # SwiperContentTransitionProxy
 
-ArcSwiper自定义切换动画执行过程中，返回给开发者的proxy对象。开发者可通过该对象获取自定义动画视窗内的页面信息，同时，也可以通过调用该对象的finishTransition接口通知ArcSwiper组件页面自定义动画已结束。
+Implements the proxy object returned during the execution of the custom page transition animation of the  
+**ArcSwiper** component. You can use this object to obtain the page information in the custom animation viewport. You can also call the **finishTransition** API of this object to notify the **ArcSwiper** component that the custom animation has finished playing.
 
-> **说明：**
+> **NOTE：**
 
-> - 假设当前选中的子组件的索引为0，从第0页切换到第1页的动画过程中，每帧都会对视窗内所有页面触发回调，当视窗内有第0页和第1页两页时，每帧会触发两次回调。其中第一次回调的selectedIndex为0，index为0，
-> position为当前帧第0页相对于动画开始前第0页的移动比例，mainAxisLength为主轴方向上第0页的长度；第二次回调的selectedIndex仍为0，index为1，position为当前帧第1页相对于动画开始前第0
-> 页的移动比例，mainAxisLength为主轴方向上第1页的长度。
+> - For example, when the index of the currently selected child component is 0, during a transition animation from
+> page 0 to page 1, the callback is triggered for all pages within the viewport on every frame. When pages 0 and 1
+> are both in the viewport, the callback is triggered twice per frame. The first callback has **selectedIndex** as
+> **0**, **index** as **0**, **position** as the ratio of how much page 0 has moved relative to its position before
+> the animation started on the current frame, and **mainAxisLength** as the length of page 0 on the main axis. The
+> second callback has **selectedIndex** as **0**, **index** as **1**, **position** as the ratio of how much page 1
+> has moved relative to page 0 before the animation started on the current frame, and **mainAxisLength** as the
+> length of page 1 on the main axis.
 > 
-> - 若动画曲线为弹簧插值曲线，从第0页切换到第1页的动画过程中，可能会因为离手时的位置和速度，先过滑到第2页，再回弹到第1页，该过程中每帧会对视窗内第1页和第2页触发回调。
+> - If the animation curve is a spring interpolation curve, during the transition animation from page 0 to page 1,
+> due to the position and velocity when the user lifts their finger off the screen, animation may overshoot and slide
+> past to page 2, then bounce back to page 1. Throughout this process, a callback is triggered for pages 1 and 2
+> within the viewport on every frame.
 
 **Since:** 18
 
@@ -30,7 +39,7 @@ import { ArcSwiperAttribute, ArcSwiper, ArcDirection, ArcSwiperController, ArcDo
 finishTransition(): void
 ```
 
-通知ArcSwiper组件，此页面的自定义动画已结束。
+Notifies the **ArcSwiper** component that the custom animation has finished playing.
 
 **Since:** 18
 
@@ -48,7 +57,7 @@ finishTransition(): void
 index: number
 ```
 
-视窗内页面的索引。
+Index of a page in the viewport.
 
 **Type:** number
 
@@ -68,7 +77,7 @@ index: number
 mainAxisLength: number
 ```
 
-index对应页面在主轴方向上的长度。
+Length of the page specified by **index** along the main axis.Unit: vp.
 
 **Type:** number
 
@@ -88,7 +97,7 @@ index对应页面在主轴方向上的长度。
 position: number
 ```
 
-index页面相对于ArcSwiper主轴起始位置（selectedIndex对应页面的起始位置）的移动比例。
+Position of the page specified by **index** relative to the start position of the **ArcSwiper** main axis (start position of the page corresponding to **selectedIndex**).
 
 **Type:** number
 
@@ -108,7 +117,7 @@ index页面相对于ArcSwiper主轴起始位置（selectedIndex对应页面的�
 selectedIndex: number
 ```
 
-当前选中页面的索引。
+Index of the currently selected page.
 
 **Type:** number
 

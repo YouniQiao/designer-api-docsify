@@ -1,6 +1,6 @@
 # Affinity
 
-位置亲和度枚举。
+Enumerates the affinity modes.
 
 **Since:** 12
 
@@ -16,7 +16,7 @@
 UPSTREAM = 0
 ```
 
-该位置与文本位置的前一位有关联。
+The position has affinity for the upstream side of the text position.
 
 **Since:** 12
 
@@ -34,7 +34,7 @@ UPSTREAM = 0
 DOWNSTREAM = 1
 ```
 
-该位置与文本位置的后一位有关联。
+The position has affinity for the downstream side of the text position.
 
 **Since:** 12
 

@@ -17,12 +17,6 @@
 
 **系统能力：** SystemCapability.Multimedia.Media.AVMetadataExtractor
 
-## 导入模块
-
-```TypeScript
-import { media } from 'kits/@kit.MediaKit';
-```
-
 ## cancelAllFetchFrames
 
 ```TypeScript
@@ -67,8 +61,8 @@ fetchAlbumCover(callback: AsyncCallback<image.PixelMap>): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 5400102 | Operation not allowed. Return by callback. |
-| 5400106 | Unsupported format. Returned by callback. |
+| [5400102](../errorcode-media.md#5400102-当前状态不支持此操作) | Operation not allowed. Return by callback. |
+| [5400106](../errorcode-media.md#5400106-不支持的规格) | Unsupported format. Returned by callback. |
 
 ## fetchAlbumCover
 
@@ -96,8 +90,8 @@ Obtains the cover of the audio album. This API uses an asynchronous callback to 
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 5400102 | Operation not allowed. Return by callback. |
-| 5400106 | Unsupported format. Returned by callback. |
+| [5400102](../errorcode-media.md#5400102-当前状态不支持此操作) | Operation not allowed. Return by callback. |
+| [5400106](../errorcode-media.md#5400106-不支持的规格) | Unsupported format. Returned by callback. |
 
 ## fetchAlbumCover
 
@@ -125,8 +119,8 @@ fetchAlbumCover(): Promise<image.PixelMap>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 5400102 | Operation not allowed. Returned by promise. |
-| 5400106 | Unsupported format. Returned by promise. |
+| [5400102](../errorcode-media.md#5400102-当前状态不支持此操作) | Operation not allowed. Returned by promise. |
+| [5400106](../errorcode-media.md#5400106-不支持的规格) | Unsupported format. Returned by promise. |
 
 ## fetchAlbumCover
 
@@ -154,8 +148,8 @@ Obtains the cover of the audio album. This API uses a promise to return the resu
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 5400102 | Operation not allowed. Returned by promise. |
-| 5400106 | Unsupported format. Returned by promise. |
+| [5400102](../errorcode-media.md#5400102-当前状态不支持此操作) | Operation not allowed. Returned by promise. |
+| [5400106](../errorcode-media.md#5400106-不支持的规格) | Unsupported format. Returned by promise. |
 
 ## fetchFrameByTime
 
@@ -191,10 +185,10 @@ fetchFrameByTime(timeUs: number, options: AVImageQueryOptions, param: PixelMapPa
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 5400102 | Operation not allowed. Returned by promise. |
-| 5411012 | Http cleartext traffic is not permitted.<br>**适用版本：** 23+ |
-| 5400106 | Unsupported format. Returned by promise. |
-| 5400108 | Parameter check failed. Returned by promise. |
+| [5400102](../errorcode-media.md#5400102-当前状态不支持此操作) | Operation not allowed. Returned by promise. |
+| [5411012](../errorcode-media.md#5411012-http明文拦截导致请求不受支持) | Http cleartext traffic is not permitted.<br>**适用版本：** 23+ |
+| [5400106](../errorcode-media.md#5400106-不支持的规格) | Unsupported format. Returned by promise. |
+| [5400108](../errorcode-media.md#5400108-参数超过取值范围) | Parameter check failed. Returned by promise. |
 
 ## fetchFrameByTime
 
@@ -230,10 +224,10 @@ It will decode the given video resource. Then fetch a picture at @timeUs accordi
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 5400102 | Operation not allowed. Returned by promise. |
-| 5411012 | Http cleartext traffic is not permitted. |
-| 5400106 | Unsupported format. Returned by promise. |
-| 5400108 | Parameter check failed. Returned by promise. |
+| [5400102](../errorcode-media.md#5400102-当前状态不支持此操作) | Operation not allowed. Returned by promise. |
+| [5411012](../errorcode-media.md#5411012-http明文拦截导致请求不受支持) | Http cleartext traffic is not permitted. |
+| [5400106](../errorcode-media.md#5400106-不支持的规格) | Unsupported format. Returned by promise. |
+| [5400108](../errorcode-media.md#5400108-参数超过取值范围) | Parameter check failed. Returned by promise. |
 
 ## fetchFrameByTimeWithTimeout
 
@@ -280,11 +274,11 @@ fetchFrameByTimeWithTimeout(timeUs: long, options: AVImageQueryOptions, param: P
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 5400102 | Operation not allowed. Returned by promise. |
-| 5411012 | Http cleartext traffic is not permitted. |
-| 5400106 | Unsupported format. Returned by promise. |
-| 5400104 | Operation timeout. |
-| 5400108 | Parameter check failed. Returned by promise. |
+| [5400102](../errorcode-media.md#5400102-当前状态不支持此操作) | Operation not allowed. Returned by promise. |
+| [5411012](../errorcode-media.md#5411012-http明文拦截导致请求不受支持) | Http cleartext traffic is not permitted. |
+| [5400106](../errorcode-media.md#5400106-不支持的规格) | Unsupported format. Returned by promise. |
+| [5400104](../errorcode-media.md#5400104-操作超时) | Operation timeout. |
+| [5400108](../errorcode-media.md#5400108-参数超过取值范围) | Parameter check failed. Returned by promise. |
 
 ## fetchFramesByTimes
 
@@ -331,12 +325,12 @@ fetchFramesByTimes(timesUs: long[], queryOption: AVImageQueryOptions, param: Pix
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 5400102 | Operation not allowed. Returned by callback. |
-| 5411012 | Http cleartext not permitted. |
-| 5400106 | Unsupported format. Returned by callback. |
-| 5400104 | Fetch timeout, Returned by callback. |
-| 5400105 | Service died. |
-| 5400108 | Parameter check failed. e.g. The size of timesUs is larger than 4096. |
+| [5400102](../errorcode-media.md#5400102-当前状态不支持此操作) | Operation not allowed. Returned by callback. |
+| [5411012](../errorcode-media.md#5411012-http明文拦截导致请求不受支持) | Http cleartext not permitted. |
+| [5400106](../errorcode-media.md#5400106-不支持的规格) | Unsupported format. Returned by callback. |
+| [5400104](../errorcode-media.md#5400104-操作超时) | Fetch timeout, Returned by callback. |
+| [5400105](../errorcode-media.md#5400105-播放服务死亡) | Service died. |
+| [5400108](../errorcode-media.md#5400108-参数超过取值范围) | Parameter check failed. e.g. The size of timesUs is larger than 4096. |
 
 ## fetchFramesByTimesWithTimeout
 
@@ -386,12 +380,12 @@ fetchFramesByTimesWithTimeout(timesUs: long[], queryOption: AVImageQueryOptions,
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 5400102 | Operation not allowed. Returned by callback. |
-| 5411012 | Http cleartext not permitted. |
-| 5400106 | Unsupported format. Returned by callback. |
-| 5400104 | Fetch timeout, Returned by callback. |
-| 5400105 | Service died. |
-| 5400108 | Parameter check failed. e.g. The size of timesUs is larger than 4096. |
+| [5400102](../errorcode-media.md#5400102-当前状态不支持此操作) | Operation not allowed. Returned by callback. |
+| [5411012](../errorcode-media.md#5411012-http明文拦截导致请求不受支持) | Http cleartext not permitted. |
+| [5400106](../errorcode-media.md#5400106-不支持的规格) | Unsupported format. Returned by callback. |
+| [5400104](../errorcode-media.md#5400104-操作超时) | Fetch timeout, Returned by callback. |
+| [5400105](../errorcode-media.md#5400105-播放服务死亡) | Service died. |
+| [5400108](../errorcode-media.md#5400108-参数超过取值范围) | Parameter check failed. e.g. The size of timesUs is larger than 4096. |
 
 ## fetchMetadata
 
@@ -419,9 +413,9 @@ fetchMetadata(callback: AsyncCallback<AVMetadata>): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 5400102 | Operation not allowed. Returned by callback. |
-| 5411012 | Http cleartext traffic is not permitted.<br>**适用版本：** 23+ |
-| 5400106 | Unsupported format. Returned by callback. |
+| [5400102](../errorcode-media.md#5400102-当前状态不支持此操作) | Operation not allowed. Returned by callback. |
+| [5411012](../errorcode-media.md#5411012-http明文拦截导致请求不受支持) | Http cleartext traffic is not permitted.<br>**适用版本：** 23+ |
+| [5400106](../errorcode-media.md#5400106-不支持的规格) | Unsupported format. Returned by callback. |
 
 ## fetchMetadata
 
@@ -449,9 +443,9 @@ Obtains media metadata. This API uses an asynchronous callback to return the res
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 5400102 | Operation not allowed. Returned by callback. |
-| 5411012 | Http cleartext traffic is not permitted. |
-| 5400106 | Unsupported format. Returned by callback. |
+| [5400102](../errorcode-media.md#5400102-当前状态不支持此操作) | Operation not allowed. Returned by callback. |
+| [5411012](../errorcode-media.md#5411012-http明文拦截导致请求不受支持) | Http cleartext traffic is not permitted. |
+| [5400106](../errorcode-media.md#5400106-不支持的规格) | Unsupported format. Returned by callback. |
 
 ## fetchMetadata
 
@@ -479,9 +473,9 @@ fetchMetadata(): Promise<AVMetadata>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 5400102 | Operation not allowed. Returned by promise. |
-| 5411012 | Http cleartext traffic is not permitted.<br>**适用版本：** 23+ |
-| 5400106 | Unsupported format. Returned by promise. |
+| [5400102](../errorcode-media.md#5400102-当前状态不支持此操作) | Operation not allowed. Returned by promise. |
+| [5411012](../errorcode-media.md#5411012-http明文拦截导致请求不受支持) | Http cleartext traffic is not permitted.<br>**适用版本：** 23+ |
+| [5400106](../errorcode-media.md#5400106-不支持的规格) | Unsupported format. Returned by promise. |
 
 ## fetchMetadata
 
@@ -509,9 +503,9 @@ Obtains media metadata. This API uses a promise to return the result.
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 5400102 | Operation not allowed. Returned by promise. |
-| 5411012 | Http cleartext traffic is not permitted. |
-| 5400106 | Unsupported format. Returned by promise. |
+| [5400102](../errorcode-media.md#5400102-当前状态不支持此操作) | Operation not allowed. Returned by promise. |
+| [5411012](../errorcode-media.md#5411012-http明文拦截导致请求不受支持) | Http cleartext traffic is not permitted. |
+| [5400106](../errorcode-media.md#5400106-不支持的规格) | Unsupported format. Returned by promise. |
 
 ## fetchMetadataWithTimeout
 
@@ -553,11 +547,11 @@ fetchMetadataWithTimeout(timeoutMs: long): Promise<AVMetadata | undefined>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 5400102 | Operation not allowed. Returned by promise. |
-| 5411012 | Http cleartext traffic is not permitted. |
-| 5400106 | Unsupported format. Returned by promise. |
-| 5400104 | Operation timeout. |
-| 5400108 | Parameter check failed. Returned by promise. |
+| [5400102](../errorcode-media.md#5400102-当前状态不支持此操作) | Operation not allowed. Returned by promise. |
+| [5411012](../errorcode-media.md#5411012-http明文拦截导致请求不受支持) | Http cleartext traffic is not permitted. |
+| [5400106](../errorcode-media.md#5400106-不支持的规格) | Unsupported format. Returned by promise. |
+| [5400104](../errorcode-media.md#5400104-操作超时) | Operation timeout. |
+| [5400108](../errorcode-media.md#5400108-参数超过取值范围) | Parameter check failed. Returned by promise. |
 
 ## release
 
@@ -585,7 +579,7 @@ release(callback: AsyncCallback<void>): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 5400102 | Operation not allowed. Returned by callback. |
+| [5400102](../errorcode-media.md#5400102-当前状态不支持此操作) | Operation not allowed. Returned by callback. |
 
 ## release
 
@@ -613,7 +607,7 @@ release(): Promise<void>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 5400102 | Operation not allowed. Returned by promise. |
+| [5400102](../errorcode-media.md#5400102-当前状态不支持此操作) | Operation not allowed. Returned by promise. |
 
 ## setUrlSource
 
@@ -638,7 +632,7 @@ setUrlSource(url: string, headers?: Record<string, string>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | url | string | 是 | 媒体资源URL。&lt;br/&gt;1. 支持的视频格式包括：mp4、mpeg-ts、mkv。&lt;br/&gt;2. 支持的音频格式包括：m4a、aac、mp3、ogg、wav、flac、amr。 &lt;br/&gt;**支持路径示例**：&lt;br/&gt;1. http网络播放：`http://xx`。&lt;br/&gt;2. https网络播放：`https://xx`。&lt;br/&gt;**说明：** 不支持设置HLS/Dash、直播资源。 |
-| headers | [Record](../../apis-default/arkts-apis/arkts-record-t.md)&lt;string, string&gt; | 否 | 支持访问网络资源HttpHeader自定义。默认为空。 |
+| headers | Record&lt;string, string&gt; | 否 | 支持访问网络资源HttpHeader自定义。默认为空。 |
 
 ## dataSrc
 

@@ -12,7 +12,7 @@ import { fastbuffer } from 'kits/@kit.ArkTS';
 function byteLength(value: string | FastBuffer | TypedArray | DataView | ArrayBuffer | SharedArrayBuffer, encoding?: BufferEncoding): number
 ```
 
-根据不同的编码格式，返回指定内容的字节数。
+Returns the byte length of a string when encoded using `encoding`.This is not the same as [`String.prototype.length`], which does not account for the encoding that is used to convert the string into bytes.
 
 **Since:** 20
 
@@ -28,14 +28,14 @@ function byteLength(value: string | FastBuffer | TypedArray | DataView | ArrayBu
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | string \| FastBuffer \| TypedArray \| DataView \| ArrayBuffer \| SharedArrayBuffer | Yes | 指定用于计算字节长度的内容。 |
-| encoding | [BufferEncoding](arkts-arkts-fastbuffer-bufferencoding-t.md) | No | 编码格式（当`value`为string时，才有意义）。默认值：'utf8'。传入无法识别的encoding会抛出TypeError。 |
+| value | string \| FastBuffer \| TypedArray \| DataView \| ArrayBuffer \| SharedArrayBuffer | Yes | Target string. |
+| encoding | [BufferEncoding](arkts-arkts-fastbuffer-bufferencoding-t.md) | No | Encoding format of the string. The default value is 'utf8'. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| number | 返回指定内容的字节数。 |
+| number | The number of bytes contained within `string` |
 
 ## Examples
 

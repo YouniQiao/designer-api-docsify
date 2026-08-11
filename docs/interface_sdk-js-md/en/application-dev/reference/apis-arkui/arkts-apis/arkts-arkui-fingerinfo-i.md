@@ -1,6 +1,6 @@
 # FingerInfo
 
-手指信息类型。
+Defines the finger information type.
 
 **Since:** 8
 
@@ -16,7 +16,7 @@
 getCurrentLocalPosition?(): Coordinate2D
 ```
 
-获取点击位置相对于当前组件实时位置的左上角坐标。
+Gets the coordinates of the top-left corner of the current component based on its real-time position.
 
 **Since:** 26.0.0
 
@@ -34,7 +34,7 @@ getCurrentLocalPosition?(): Coordinate2D
 
 | Type | Description |
 | --- | --- |
-| [Coordinate2D](arkts-arkui-coordinate2d-i.md) | 点击位置相对于当前组件实时位置的左上角坐标。 |
+| [Coordinate2D](arkts-arkui-coordinate2d-i.md) | return the coordinates of the top-left corner of the current component based on its real-time position. |
 
 ## displayX
 
@@ -42,9 +42,9 @@ getCurrentLocalPosition?(): Coordinate2D
 displayX: number
 ```
 
-相对于屏幕左上角的x轴坐标，单位为vp。
+X-coordinate relative to the upper left corner of the screen, in vp.
 
-取值范围：[0, +∞)
+Value range: [0, +∞)
 
 **Type:** number
 
@@ -66,9 +66,9 @@ displayX: number
 displayY: number
 ```
 
-相对于屏幕左上角的y轴坐标，单位为vp。
+Y-coordinate relative to the upper left corner of the screen, in vp.
 
-取值范围：[0, +∞)
+Value range: [0, +∞)
 
 **Type:** number
 
@@ -90,9 +90,9 @@ displayY: number
 globalDisplayX?: number
 ```
 
-相对于全局屏幕的左上角的X坐标，单位为vp。
+X-coordinate relative to the upper left corner of the global display, in vp.
 
-取值范围：[0, +∞)
+Value range: [0, +∞)
 
 **Type:** number
 
@@ -114,9 +114,9 @@ globalDisplayX?: number
 globalDisplayY?: number
 ```
 
-相对于全局屏幕的左上角的Y坐标，单位为vp。
+Y-coordinate relative to the upper left corner of the global display, in vp.
 
-取值范围：[0, +∞)
+Value range: [0, +∞)
 
 **Type:** number
 
@@ -138,9 +138,9 @@ globalDisplayY?: number
 globalX: number
 ```
 
-相对于应用窗口左上角的x轴坐标，单位为vp。
+X-coordinate relative to the upper left corner of the application window, in vp.
 
-取值范围：[0, +∞)
+Value range: [0, +∞)
 
 **Type:** number
 
@@ -160,9 +160,9 @@ globalX: number
 globalY: number
 ```
 
-相对于应用窗口左上角的y轴坐标，单位为vp。
+Y-coordinate relative to the upper left corner of the application window, in vp.
 
-取值范围：[0, +∞)
+Value range: [0, +∞)
 
 **Type:** number
 
@@ -182,7 +182,7 @@ globalY: number
 hand?: InteractionHand
 ```
 
-表示事件是由左手点击还是右手点击触发。
+Whether the event is triggered by a left-hand or right-hand tap.
 
 **Type:** [InteractionHand](arkts-arkui-interactionhand-e.md)
 
@@ -204,13 +204,13 @@ hand?: InteractionHand
 id: number
 ```
 
-手指的索引编号，由按下手指的数量决定，按下一根手指为0，之后每按下1根手指索引编号加一。
+Index of the finger, determined by the number of fingers pressed. The first pressed finger is assigned 0, with the index incrementing by one for each subsequent finger.
 
-**说明：**
+**NOTE：**
 
-鼠标（索引编号为1001）、手写笔（索引编号为102）、鼠标滚轮（索引编号为0）、触摸板双指滑动（索引编号为0）的索引编号也会被转化为手指的索引编号。
+Indexes for other input sources (mouse: 1001, stylus: 102, mouse wheel: 0, two-finger trackpad slide: 0) are also converted to finger indexes.
 
-取值范围：[0, 9)
+Value range: [0, 9)
 
 **Type:** number
 
@@ -230,9 +230,9 @@ id: number
 localX: number
 ```
 
-相对于当前组件元素原始区域左上角的x轴坐标，单位为vp。
+X-coordinate relative to the upper left corner of the current component's original area, in vp.
 
-取值范围：[0, +∞)
+Value range: [0, +∞)
 
 **Type:** number
 
@@ -252,9 +252,9 @@ localX: number
 localY: number
 ```
 
-相对于当前组件元素原始区域左上角的y轴坐标，单位为vp。
+Y-coordinate relative to the upper left corner of the current component's original area, in vp.
 
-取值范围：[0, +∞)
+Value range: [0, +∞)
 
 **Type:** number
 

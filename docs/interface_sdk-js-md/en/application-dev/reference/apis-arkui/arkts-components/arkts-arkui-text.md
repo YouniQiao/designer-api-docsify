@@ -1,16 +1,16 @@
 # Text
 
-Text组件用于显示文本内容，支持设置字体样式、文本对齐、行高、装饰线等属性，支持图文混排、文本选择、文本识别等功能，适用于需要展示文本信息的各类应用场景。
+The **Text** component is used to display a piece of textual information.
 
-## 子组件
+## Child Components
 
-可以包含[Span]{@link ./span}、[ImageSpan]{@link ./image_span}、[SymbolSpan]{@link ./symbol_span}和  
-[ContainerSpan]{@link ./container_span}子组件。
+This component can contain the [Span]{@link ./span}, [ImageSpan]{@link ./image_span},  
+[SymbolSpan]{@link ./symbol_span}, and [ContainerSpan]{@link ./container_span} child components.
 
-> **说明：**
+> **NOTE：**
 > 
-> 使用[子组件](docroot://reference/apis-arkui/arkui-ts/ts-basic-components-text.md#子组件)实现
-> [图文混排](docroot://ui/arkts-text-image-layout.md)场景。
+> Use [child components](docroot://reference/apis-arkui/arkui-ts/ts-basic-components-text.md#child-components) to
+> implement [text and image layout](docroot://ui/arkts-text-image-layout.md) scenarios.
 
 ## Text
 
@@ -18,7 +18,7 @@ Text组件用于显示文本内容，支持设置字体样式、文本对齐、�
 Text(content?: string | Resource, value?: TextOptions)
 ```
 
-定义文本组件构造函数。
+Defines the constructor of Text.
 
 **Since:** 7
 
@@ -36,8 +36,8 @@ Text(content?: string | Resource, value?: TextOptions)
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| content | string \| Resource | No | 文本内容。当需要直接显示文本内容时传入此参数。包含子组件[Span]{@link ./span}或设置了 [属性字符串]{@link ./styled_string}时，该参数不生效。 <br>默认值：' ' <br>**说明：** <br>显示内容的优先级：属性字符串>Span>Text的文本内容。 |
-| value | [TextOptions](arkts-arkui-textoptions-i.md) | No | 文本组件初始化选项，用于配置文本控制器。当需要使用TextController的功能控制文本内容和选择时，传入此参数。 <br>默认值：不设置时，不使用文本控制器。 <br> |
+| content | string \| Resource | No | Plain text. This parameter takes effect when the child component [Span]{@link ./span} is not included and [styled string]{@link ./styled_string} is not set.<br>Default value: **' '**<br>**NOTE**<br>Priority of displayed content: Styled string > Content of the **Span** component > Text content of the **Text** component. |
+| value | [TextOptions](arkts-arkui-textoptions-i.md) | No | Initialization options of the component. |
 
 ## Summary
 

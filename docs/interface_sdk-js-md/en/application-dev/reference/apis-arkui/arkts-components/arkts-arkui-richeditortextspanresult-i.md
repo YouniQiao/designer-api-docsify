@@ -1,6 +1,6 @@
 # RichEditorTextSpanResult
 
-文本Span信息。
+Provides the text span information.
 
 **Since:** 10
 
@@ -16,7 +16,7 @@
 offsetInSpan: [number, number]
 ```
 
-文本Span内容里有效内容的起始和结束位置。
+Start and end positions of the valid content in the text span.
 
 **Type:** [number, number]
 
@@ -38,9 +38,7 @@ offsetInSpan: [number, number]
 paragraphStyle?: RichEditorParagraphStyle
 ```
 
-段落样式。
-
-省略时，使用系统默认段落样式。
+Paragraph style.
 
 **Type:** [RichEditorParagraphStyle](../arkts-apis/arkts-arkui-richeditor-richeditorparagraphstyle-i.md)
 
@@ -62,7 +60,7 @@ paragraphStyle?: RichEditorParagraphStyle
 previewText?: string
 ```
 
-文本Span预上屏内容。
+Content of the preview text.
 
 **Type:** string
 
@@ -84,7 +82,7 @@ previewText?: string
 spanPosition: RichEditorSpanPosition
 ```
 
-Span位置。
+Span position.
 
 **Type:** [RichEditorSpanPosition](arkts-arkui-richeditorspanposition-i.md)
 
@@ -106,7 +104,7 @@ Span位置。
 symbolSpanStyle?: RichEditorSymbolSpanStyle
 ```
 
-组件SymbolSpan样式信息。
+Style of the **SymbolSpan** component.
 
 **Type:** [RichEditorSymbolSpanStyle](../arkts-apis/arkts-arkui-richeditor-richeditorsymbolspanstyle-i.md)
 
@@ -128,7 +126,7 @@ symbolSpanStyle?: RichEditorSymbolSpanStyle
 textStyle: RichEditorTextStyleResult
 ```
 
-文本Span样式信息。
+Text span style.
 
 **Type:** [RichEditorTextStyleResult](../arkts-apis/arkts-arkui-richeditor-richeditortextstyleresult-i.md)
 
@@ -150,11 +148,9 @@ textStyle: RichEditorTextStyleResult
 urlStyle?: RichEditorUrlStyle
 ```
 
-url信息。
+URL information.
 
-默认值：undefined。
-
-当需要为文本设置超链接样式时传入此参数。
+Default value: **undefined**
 
 **Type:** [RichEditorUrlStyle](arkts-arkui-richeditorurlstyle-i.md)
 
@@ -176,7 +172,7 @@ url信息。
 value: string
 ```
 
-文本Span内容或Symbol的id。
+Content of the text span or symbol ID.
 
 **Type:** string
 
@@ -198,9 +194,7 @@ value: string
 valueResource?: Resource
 ```
 
-SymbolSpan资源内容。
-
-默认值：undefined。
+Content of the **SymbolSpan** component.
 
 **Type:** [Resource](../../apis-localization-kit/arkts-apis/arkts-localization-resource-resource-i.md)
 

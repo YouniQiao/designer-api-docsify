@@ -10,12 +10,6 @@ PixelMap的初始化选项。
 
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
-## 导入模块
-
-```TypeScript
-import { image } from 'kits/@kit.ImageKit';
-```
-
 ## alphaType
 
 ```TypeScript
@@ -68,7 +62,7 @@ pixelFormat?: PixelMapFormat
 
 生成的PixelMap的像素格式。默认值为RGBA_8888。
 
-**类型：** [PixelMapFormat](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-multimedia-movingphotoview-pixelmapformat-e.md)
+**类型：** [PixelMapFormat](arkts-image-image-pixelmapformat-e.md)
 
 **起始版本：** 8
 
@@ -134,7 +128,7 @@ srcPixelFormat?: PixelMapFormat
 
 传入的缓冲区数据的像素格式。默认值为BGRA_8888。
 
-**类型：** [PixelMapFormat](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-multimedia-movingphotoview-pixelmapformat-e.md)
+**类型：** [PixelMapFormat](arkts-image-image-pixelmapformat-e.md)
 
 **起始版本：** 12
 

@@ -6,7 +6,7 @@
 const OS: string
 ```
 
-系统领域。
+System domain.
 
 **Since:** 11
 

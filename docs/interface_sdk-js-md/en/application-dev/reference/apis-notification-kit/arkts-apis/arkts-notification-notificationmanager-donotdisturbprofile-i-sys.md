@@ -1,6 +1,6 @@
 # DoNotDisturbProfile (System API)
 
-勿扰模式的配置信息。
+Do Not Disturb profile.
 
 **Since:** 12
 
@@ -24,7 +24,7 @@ import { notificationManager } from 'kits/@kit.NotificationKit';
 id: long
 ```
 
-勿扰模式编号。
+ID of the Do Not Disturb profile.
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：long
 
@@ -44,7 +44,7 @@ id: long
 name: string
 ```
 
-勿扰模式名称。
+Name of the Do Not Disturb profile.
 
 **Type:** string
 
@@ -64,7 +64,7 @@ name: string
 trustlist?: Array<BundleOption>
 ```
 
-勿扰模式的信任列表。
+Trustlist in Do Not Disturb profile.
 
 **Type:** Array&lt;BundleOption&gt;
 

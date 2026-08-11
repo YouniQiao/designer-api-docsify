@@ -4,7 +4,7 @@
 type TypedArrayFromMapFn<FromElementType, ToElementType> = (value: FromElementType, index: number) => ToElementType
 ```
 
-ArkTS TypedArray映射函数类型。
+Describes the mapping function of the ArkTS typed array.
 
 **Since:** 12
 
@@ -20,12 +20,12 @@ ArkTS TypedArray映射函数类型。
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | FromElementType | Yes | 当前遍历的用于构造ArkTS TypedArray的元素。 |
-| index | number | Yes | 当前遍历的用于构造ArkTS TypedArray的元素索引，从0开始。 |
+| value | FromElementType | Yes | Element that is currently traversed and used to construct an ArkTS typed array. |
+| index | number | Yes | Index of the element. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| ToElementType | 转换后的元素值。 |
+| ToElementType | The transformed value. |
 

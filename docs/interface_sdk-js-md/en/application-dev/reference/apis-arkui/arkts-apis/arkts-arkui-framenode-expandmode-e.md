@@ -1,6 +1,6 @@
 # ExpandMode
 
-子节点展开模式枚举。
+Enum for the expand mode.
 
 **Since:** 23
 
@@ -16,7 +16,7 @@
 NOT_EXPAND = 0
 ```
 
-表示不展开当前FrameNode的子节点。如果FrameNode包含[LazyForEach](lazy_for_each)子节点，获取在主节点树上的子节点时，不展开当前FrameNode的子节点。子节点序列号按在主节点树上的子节点计算。
+Do not expand the children of node.
 
 **Since:** 23
 
@@ -34,7 +34,7 @@ NOT_EXPAND = 0
 EXPAND = 1
 ```
 
-表示展开当前FrameNode的子节点。如果FrameNode包含[LazyForEach](lazy_for_each)子节点，获取所有子节点时，展开当前FrameNode的子节点。子节点序列号按所有子节点计算。
+Expand the children of node.
 
 **Since:** 23
 
@@ -52,7 +52,7 @@ EXPAND = 1
 LAZY_EXPAND = 2
 ```
 
-表示按需展开当前FrameNode的子节点。如果FrameNode包含[LazyForEach](lazy_for_each)子节点，获取在主树上的子节点时，不展开当前FrameNode的子节点；获取不在主树上的子节点时，展开当前FrameNode的子节点。子节点序列号按所有子节点计算。
+Expand the children of node if needed.
 
 **Since:** 23
 
@@ -70,7 +70,7 @@ LAZY_EXPAND = 2
 LAZY_NOT_EXPAND = 3
 ```
 
-表示不展开当前FrameNode的子节点，如果FrameNode包含[LazyForEach](lazy_for_each)子节点，获取已经展开的子节点时，可以直接获取，获取未展开的子节点时，仅创建对应位置的节点，而不展开所有子节点。子节点序列号按所有子节点计算。
+Do not expand children of node.If the FrameNode contains LazyForEach child nodes, child nodes can be obtained directly when nodes in main tree.When nodes are not in main tree, only a node at corresponding position will be created,rather than expanding all child nodes.The child node sequence numbers are calculated based on all child nodes.
 
 **Since:** 26.0.0
 

@@ -10,12 +10,6 @@ AtomicServiceSearch中“选择区”的可选属性。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
-## 导入模块
-
-```TypeScript
-import { SearchParams, AtomicServiceSearch, SearchButtonParams, OperationParams, SelectParams, InputFilterParams, MenuAlignParams } from 'kits/@kit.ArkUI';
-```
-
 ## onSelect
 
 ```TypeScript
@@ -42,7 +36,7 @@ arrowPosition?: ArrowPosition
 
 下拉菜单项的文本与箭头之间的对齐方式。默认值：ArrowPosition.END。
 
-**类型：** [ArrowPosition](../arkts-components/arkts-arkui-arrowposition-e.md)
+**类型：** [ArrowPosition](arkts-arkui-select-arrowposition-e.md)
 
 **起始版本：** 18
 
@@ -182,7 +176,7 @@ menuItemContentModifier?: ContentModifier<MenuItemConfiguration>
 
 在Select组件上，定制下拉菜单项内容区的方法。在应用了该属性后，下拉菜单的内容将完全由开发者自定义，此时为选择区设置的下拉菜单分割线、背景色及字体样式等属性将不再生效。modifier: 内容修改器，开发者需要自定义class实现ContentModifier接口。默认值为undefined。
 
-**类型：** [ContentModifier](../arkts-components/arkts-arkui-contentmodifier-i.md)&lt;MenuItemConfiguration&gt;
+**类型：** [ContentModifier](arkts-arkui-common-contentmodifier-i.md)&lt;MenuItemConfiguration&gt;
 
 **起始版本：** 18
 

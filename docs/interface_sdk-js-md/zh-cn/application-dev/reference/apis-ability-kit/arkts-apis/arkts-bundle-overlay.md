@@ -17,12 +17,6 @@ overlay特征应用指应用中包含有overlay资源包，overlay资源包详�
 
 **系统能力：** SystemCapability.BundleManager.BundleFramework.Overlay
 
-## 导入模块
-
-```TypeScript
-import { overlay } from 'kits/@kit.AbilityKit';
-```
-
 ## 汇总
 
 ### 函数

@@ -4,6 +4,8 @@
 type window = import('../api/@ohos.window').default
 ```
 
+The type for window.
+
 **Since:** 26.0.0
 
 **ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.

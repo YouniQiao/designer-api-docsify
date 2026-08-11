@@ -1,6 +1,7 @@
 # RectChangeOptions
 
-组件（EmbeddedComponent或UIExtensionComponent）矩形（位置及尺寸）变化返回的值及变化原因。
+Provides the values and reasons returned when the rectangle (position and size) of the component (  
+**EmbeddedComponent** or **UIExtensionComponent**) changes.
 
 **Since:** 14
 
@@ -22,7 +23,7 @@ import { uiExtension } from 'kits/@kit.ArkUI';
 reason: RectChangeReason
 ```
 
-组件矩形变化的原因。
+Reason for the rectangle change.
 
 **Type:** [RectChangeReason](arkts-arkui-uiextension-rectchangereason-e.md)
 
@@ -44,7 +45,7 @@ reason: RectChangeReason
 rect: window.Rect
 ```
 
-组件矩形变化后的值。
+New values of the rectangle of the component after the change.
 
 **Type:** window.Rect
 

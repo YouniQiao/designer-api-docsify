@@ -1,6 +1,6 @@
 # Size
 
-用于返回组件布局大小的宽和高。默认单位为vp，不同的接口使用Size类型时会再定义单位，以接口定义的单位为准。
+Size info.
 
 **Since:** 23
 
@@ -16,7 +16,7 @@
 height: double
 ```
 
-组件大小的高度。单位：vp。取值范围：[0, +∞)。
+Get the height of the Size.
 
 **Type:** double
 
@@ -36,7 +36,7 @@ height: double
 width: double
 ```
 
-组件大小的宽度。单位：vp。取值范围：[0, +∞)。
+Get the width of the Size.
 
 **Type:** double
 

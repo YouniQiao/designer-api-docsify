@@ -1,4 +1,4 @@
-# notificationSortingMap(Provides sorting information about the active notifications among all the notifications that have been subscribed to)
+# notificationSortingMap(The **NotificationSortingMap** module provides APIs for defining the sorting information of active notifications in all subscribed notifications.)
 
 ## Summary
 
@@ -7,6 +7,6 @@
 
 | Name | Description |
 | --- | --- |
-| [NotificationSortingMap](arkts-notification-notificationsortingmap-notificationsortingmap-i-sys.md) | 提供有关已订阅的所有通知中的活动通知的排序信息。 |
+| [NotificationSortingMap](arkts-notification-notificationsortingmap-notificationsortingmap-i-sys.md) | The **NotificationSortingMap** module provides APIs for defining the sorting information of active notifications in all subscribed notifications. |
 <!--DelEnd-->
 

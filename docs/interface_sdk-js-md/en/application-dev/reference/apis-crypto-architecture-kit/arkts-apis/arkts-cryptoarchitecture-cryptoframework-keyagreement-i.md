@@ -1,7 +1,7 @@
 # KeyAgreement
 
-密钥协商接口，定义基于非对称密钥对生成共享密钥的方法。调用前，需通过  
-[createKeyAgreement(algName: string): KeyAgreement](arkts-cryptoarchitecture-cryptoframework-createkeyagreement-f.md#createkeyagreement)方法创建一个KeyAgreement实例。
+Key agreement interface, defining methods for generating shared secrets based on asymmetric key pairs. Before use, you must create a **KeyAgreement** instance by using  
+[createKeyAgreement(algName: string): KeyAgreement](arkts-cryptoarchitecture-cryptoframework-createkeyagreement-f.md#createkeyagreement).
 
 **Since:** 9
 
@@ -25,7 +25,7 @@ import { cryptoFramework } from 'kits/@kit.CryptoArchitectureKit';
 generateSecret(priKey: PriKey, pubKey: PubKey, callback: AsyncCallback<DataBlob>): void
 ```
 
-基于传入的私钥与公钥进行密钥协商。使用callback异步回调。
+Generates a shared secret based on the given private key and public key. This API uses an asynchronous callback to return the result.
 
 **Since:** 9
 
@@ -43,18 +43,18 @@ generateSecret(priKey: PriKey, pubKey: PubKey, callback: AsyncCallback<DataBlob>
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| priKey | [PriKey](arkts-cryptoarchitecture-cryptoframework-prikey-i.md) | Yes | 设置密钥协商的私钥输入。 |
-| pubKey | [PubKey](arkts-cryptoarchitecture-cryptoframework-pubkey-i.md) | Yes | 设置密钥协商的公钥输入。 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;DataBlob&gt; | Yes | 回调函数。当密钥协商成功时，err为undefined，data为协商的共享密钥；否则为 错误对象。 |
+| priKey | [PriKey](arkts-cryptoarchitecture-cryptoframework-prikey-i.md) | Yes | Private key used for key agreement. |
+| pubKey | [PubKey](arkts-cryptoarchitecture-cryptoframework-pubkey-i.md) | Yes | Public key used for key agreement. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;DataBlob&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined**, and **data** is the shared secret obtained. Otherwise, **err** is an error object. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | 非法入参。可能的原因： &lt;br&gt;1. 必填参数未指定； &lt;br&gt;2. 参数类型不正确； &lt;br&gt;3. 参数验证失败。 |
-| 17630001 | 密码操作错误。 |
-| 17620001 | 内存操作失败。 |
-| 17620002 | 获取Native对象失败或参数转换失败。 |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Invalid parameters. Possible causes: &lt;br&gt;1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; &lt;br&gt;3. Parameter verification failed. |
+| [17630001](../errorcode-crypto-framework.md#17630001-cryptographic-operation-error) | Crypto operation error. |
+| [17620001](../errorcode-crypto-framework.md#17620001-memory-operation-failed) | Memory operation failed. |
+| [17620002](../errorcode-crypto-framework.md#17620002-failed-to-obtain-the-native-object-or-convert-parameters) | Failed to obtain the native object or convert parameters. |
 
 ## generateSecret
 
@@ -62,7 +62,7 @@ generateSecret(priKey: PriKey, pubKey: PubKey, callback: AsyncCallback<DataBlob>
 generateSecret(priKey: PriKey, pubKey: PubKey): Promise<DataBlob>
 ```
 
-基于传入的私钥与公钥进行密钥协商。使用Promise异步回调。
+Generates a shared secret based on the given private key and public key. This API uses a promise to return the result.
 
 **Since:** 9
 
@@ -80,23 +80,23 @@ generateSecret(priKey: PriKey, pubKey: PubKey): Promise<DataBlob>
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| priKey | [PriKey](arkts-cryptoarchitecture-cryptoframework-prikey-i.md) | Yes | 设置密钥协商的私钥输入。 |
-| pubKey | [PubKey](arkts-cryptoarchitecture-cryptoframework-pubkey-i.md) | Yes | 设置密钥协商的公钥输入。 |
+| priKey | [PriKey](arkts-cryptoarchitecture-cryptoframework-prikey-i.md) | Yes | Private key used for key agreement. |
+| pubKey | [PubKey](arkts-cryptoarchitecture-cryptoframework-pubkey-i.md) | Yes | Public key used for key agreement. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;DataBlob&gt; | Promise对象，返回密钥协商的共享密钥。 |
+| Promise&lt;DataBlob&gt; | Promise used to return the shared secret of key agreement. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | 非法入参。可能的原因： &lt;br&gt;1. 必填参数未指定； &lt;br&gt;2. 参数类型不正确； &lt;br&gt;3. 参数验证失败。 |
-| 17630001 | 密码操作错误。 |
-| 17620001 | 内存操作失败。 |
-| 17620002 | 获取Native对象失败或参数转换失败。 |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Invalid parameters. Possible causes: &lt;br&gt;1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; &lt;br&gt;3. Parameter verification failed. |
+| [17630001](../errorcode-crypto-framework.md#17630001-cryptographic-operation-error) | Crypto operation error. |
+| [17620001](../errorcode-crypto-framework.md#17620001-memory-operation-failed) | Memory operation failed. |
+| [17620002](../errorcode-crypto-framework.md#17620002-failed-to-obtain-the-native-object-or-convert-parameters) | Failed to obtain the native object or convert parameters. |
 
 ## generateSecretSync
 
@@ -104,9 +104,9 @@ generateSecret(priKey: PriKey, pubKey: PubKey): Promise<DataBlob>
 generateSecretSync(priKey: PriKey, pubKey: PubKey): DataBlob
 ```
 
-基于传入的私钥与公钥进行密钥协商，通过同步返回共享密钥。
+Generates a shared secret based on the given private key and public key. This API returns the shared secret generated synchronously.
 
-&lt;br&gt;&lt;br&gt;**说明：**&lt;br&gt;建议优先使用异步API，{@link generateSecret}。同步API可能因系统繁忙、高负载等原因耗时较长而阻塞主线程。因此建议在子线程中调用同步API，以避免阻塞主线程。
+&lt;br&gt;&lt;br&gt;**NOTE：**&lt;br&gt;It is recommended to prioritize the use of asynchronous API, {@link generateSecret}. Synchronous API may take a long time and block the main thread due to system busyness, high load, and other reasons. Therefore,it is advised to invoke synchronous API within a child thread to avoid blocking the main thread.
 
 **Since:** 12
 
@@ -122,71 +122,23 @@ generateSecretSync(priKey: PriKey, pubKey: PubKey): DataBlob
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| priKey | [PriKey](arkts-cryptoarchitecture-cryptoframework-prikey-i.md) | Yes | 设置密钥协商的私钥输入。 |
-| pubKey | [PubKey](arkts-cryptoarchitecture-cryptoframework-pubkey-i.md) | Yes | 设置密钥协商的公钥输入。 |
+| priKey | [PriKey](arkts-cryptoarchitecture-cryptoframework-prikey-i.md) | Yes | Private key used for key agreement. |
+| pubKey | [PubKey](arkts-cryptoarchitecture-cryptoframework-pubkey-i.md) | Yes | Public key used for key agreement. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [DataBlob](arkts-cryptoarchitecture-cryptoframework-datablob-i.md) | 共享密钥。 |
+| [DataBlob](arkts-cryptoarchitecture-cryptoframework-datablob-i.md) | Returns the shared secret generated. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | 非法入参。可能的原因： &lt;br&gt;1. 必填参数未指定； &lt;br&gt;2. 参数类型不正确； &lt;br&gt;3. 参数验证失败。 |
-| 17630001 | 密码操作错误。 |
-| 17620001 | 内存操作失败。 |
-| 17620002 | 获取Native对象失败或参数转换失败。 |
-
-## Examples
-
-```TypeScript
-import { cryptoFramework } from '@kit.CryptoArchitectureKit';
-
-async function testGenerateSecret() {
-  let eccGen = cryptoFramework.createAsyKeyGenerator('ECC256');
-  let globalKeyPair = await eccGen.generateKeyPair();
-  let keyAgreement = cryptoFramework.createKeyAgreement('ECC256');
-  keyAgreement.generateSecret(globalKeyPair.priKey, globalKeyPair.pubKey, (err, secret) => {
-    if (err) {
-      console.error(`keyAgreement failed, errCode: ${err.code}, errMsg: ${err.message}`);
-      return;
-    }
-    console.info('keyAgreement output = ' + secret.data);
-  });
-}
-```
-
-```TypeScript
-import { cryptoFramework } from '@kit.CryptoArchitectureKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-async function testGenerateSecret() {
-  let eccGen = cryptoFramework.createAsyKeyGenerator('ECC256');
-  let globalKeyPair = await eccGen.generateKeyPair();
-  let keyAgreement = cryptoFramework.createKeyAgreement('ECC256');
-  let keyAgreementPromise = keyAgreement.generateSecret(globalKeyPair.priKey, globalKeyPair.pubKey);
-  keyAgreementPromise.then(secret => {
-    console.info('keyAgreement output = ' + secret.data);
-  }).catch((error: BusinessError) => {
-    console.error(`keyAgreement failed: errCode: ${error.code}, errMsg: ${error.message}`);
-  });
-}
-```
-
-```TypeScript
-import { cryptoFramework } from '@kit.CryptoArchitectureKit';
-
-async function testGenerateSecretSync() {
-  let eccGen = cryptoFramework.createAsyKeyGenerator('ECC256');
-  let globalKeyPair = await eccGen.generateKeyPair();
-  let keyAgreement = cryptoFramework.createKeyAgreement('ECC256');
-  let secret = keyAgreement.generateSecretSync(globalKeyPair.priKey, globalKeyPair.pubKey);
-  console.info('[Sync]keyAgreement output = ' + secret.data);
-}
-```
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Invalid parameters. Possible causes: &lt;br&gt;1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; &lt;br&gt;3. Parameter verification failed. |
+| [17630001](../errorcode-crypto-framework.md#17630001-cryptographic-operation-error) | Crypto operation error. |
+| [17620001](../errorcode-crypto-framework.md#17620001-memory-operation-failed) | Memory operation failed. |
+| [17620002](../errorcode-crypto-framework.md#17620002-failed-to-obtain-the-native-object-or-convert-parameters) | Failed to obtain the native object or convert parameters. |
 
 ## algName
 
@@ -194,7 +146,7 @@ async function testGenerateSecretSync() {
 readonly algName: string
 ```
 
-密钥协商的算法名称。
+Indicates the algorithm name.
 
 **Type:** string
 

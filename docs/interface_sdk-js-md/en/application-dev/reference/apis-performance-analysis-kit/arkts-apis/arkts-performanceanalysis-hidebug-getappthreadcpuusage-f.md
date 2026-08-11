@@ -12,11 +12,12 @@ import { hidebug } from 'kits/@kit.PerformanceAnalysisKit';
 function getAppThreadCpuUsage(): ThreadCpuUsage[]
 ```
 
-��ȡӦ���߳�CPUʹ�������
+Obtains the CPU usage of application threads.
 
-> **ע��**
+> **NOTE：**
 > 
-> ���ڸýӿ��漰�����ͨ�ţ���ʱ�ϳ���Ϊ�˱��������������⣬���鲻Ҫ�����߳���ֱ�ӵ��øýӿڡ�
+> This API involves cross-process communication and takes a long time. To avoid performance problems, you are
+> advised not to call this API in the main thread.
 
 **Since:** 12
 
@@ -30,7 +31,7 @@ function getAppThreadCpuUsage(): ThreadCpuUsage[]
 
 | Type | Description |
 | --- | --- |
-| [ThreadCpuUsage](arkts-performanceanalysis-hidebug-threadcpuusage-i.md)[] | ���ص�ǰӦ�ý���������ThreadCpuUsage���顣 |
+| [ThreadCpuUsage](arkts-performanceanalysis-hidebug-threadcpuusage-i.md)[] | CPU usage of all threads of the current application process. |
 
 ## Examples
 

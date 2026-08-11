@@ -1,6 +1,6 @@
 # DisposedRule (System API)
 
-标识拦截规则。
+Defines a disposed rule.
 
 **Since:** 11
 
@@ -24,7 +24,7 @@ import { appControl } from 'kits/@kit.AbilityKit';
 componentType: ComponentType
 ```
 
-拦截时将提升的能力的类型。
+Type of application component that functions as the displayed page.
 
 **Type:** [ComponentType](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-update-componenttype-e-sys.md)
 
@@ -44,7 +44,7 @@ componentType: ComponentType
 controlType: ControlType
 ```
 
-拦截指定应用程序的不同策略。
+Control type of application disposal.
 
 **Type:** [ControlType](arkts-ability-appcontrol-controltype-e-sys.md)
 
@@ -64,7 +64,7 @@ controlType: ControlType
 disposedType: DisposedType
 ```
 
-对应用的拦截规则。
+Type of application disposal.
 
 **Type:** [DisposedType](arkts-ability-appcontrol-disposedtype-e-sys.md)
 
@@ -84,7 +84,7 @@ disposedType: DisposedType
 elementList: Array<ElementName>
 ```
 
-拦截指定应用程序能力的列表。
+List of application components to be disposed of or exempted.
 
 **Type:** Array&lt;[ElementName](arkts-ability-elementname-i.md)&gt;
 
@@ -98,13 +98,35 @@ elementList: Array<ElementName>
 
 **System API:** This is a system API.
 
+## pageJump
+
+```TypeScript
+pageJump?: PageJumpMode
+```
+
+Specifies whether to jump to another page when the target application is blocked. The default value is{@link PageJumpMode.PAGE_JUMP_WINDOW_SHOW}.
+
+**Type:** [PageJumpMode](arkts-ability-appcontrol-pagejumpmode-e-sys.md)
+
+**Since:** 26.0.0
+
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
+
+**Model restriction:** This API can be used only in the stage model.
+
+<!--Device-DisposedRule-pageJump?: PageJumpMode--><!--Device-DisposedRule-pageJump?: PageJumpMode-End-->
+
+**System capability:** SystemCapability.BundleManager.BundleFramework.AppControl
+
+**System API:** This is a system API.
+
 ## priority
 
 ```TypeScript
 priority: int
 ```
 
-拦截规则的优先级，用于规则列表查询结果排序。取值为整数，数值越小，优先级越高，排序越靠前。
+Priority of the disposed rule, which is used to sort the query results of the rule list. The value is an integer.A smaller value indicates a higher priority.
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
@@ -124,7 +146,7 @@ priority: int
 want: Want
 ```
 
-指定应用被拦截时，跳转到的页面。
+Page displayed when the application is disposed of.
 
 **Type:** [Want](arkts-ability-app-ability-want-want-c.md)
 

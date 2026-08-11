@@ -1,6 +1,6 @@
 # UndoStyle
 
-撤销还原是否保留原样式选项。
+Defines undo style.
 
 **Since:** 24
 
@@ -16,7 +16,7 @@
 CLEAR_STYLE = 0
 ```
 
-撤销还原内容不保留原样式。
+Undo without style.
 
 **Since:** 24
 
@@ -34,7 +34,7 @@ CLEAR_STYLE = 0
 KEEP_STYLE = 1
 ```
 
-撤销还原内容保留原样式。
+Undo keep style.
 
 **Since:** 24
 

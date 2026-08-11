@@ -4,7 +4,7 @@
 export type HashSetCbFn<T> = (value: T, key: T, set: HashSet<T>) => void
 ```
 
-HashSet中forEach方法的回调函数。
+The type of HashSet callback function.
 
 **Since:** 23
 
@@ -20,7 +20,7 @@ HashSet中forEach方法的回调函数。
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | T | Yes | 当前遍历到的元素键值对的值。 |
-| key | T | Yes | 当前遍历到的元素键值对的键（和value相同）。 |
-| set | [HashSet](arkts-arkts-util-hashset-hashset-c.md)&lt;T&gt; | Yes | 当前调用forEach方法的实例对象，默认值为当前实例对象。 |
+| value | T | Yes | The current element being processed |
+| key | T | Yes | [Deprecated] HashSet does not use key-value pairs, this parameter exists only for API compatibility |
+| set | [HashSet](arkts-arkts-util-hashset-hashset-c.md)&lt;T&gt; | Yes | The HashSet instance being traversed |
 

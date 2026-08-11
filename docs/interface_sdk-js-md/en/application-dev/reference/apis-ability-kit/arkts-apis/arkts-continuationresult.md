@@ -6,5 +6,5 @@
 
 | Name | Description |
 | --- | --- |
-| [ContinuationResult](arkts-ability-continuationresult-continuationresult-i.md) | 流转管理入口返回的设备信息。 |
+| [ContinuationResult](arkts-ability-continuationresult-continuationresult-i.md) | The ContinuationResult module describes the device information returned by the continuation management entry. |
 

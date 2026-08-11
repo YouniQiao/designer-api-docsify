@@ -1,11 +1,5 @@
 # getPowerMode
 
-## 导入模块
-
-```TypeScript
-import { power } from 'kits/@kit.BasicServicesKit';
-```
-
 ## getPowerMode
 
 ```TypeScript

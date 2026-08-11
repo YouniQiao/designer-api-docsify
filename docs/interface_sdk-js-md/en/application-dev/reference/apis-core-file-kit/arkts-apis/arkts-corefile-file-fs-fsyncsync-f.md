@@ -12,7 +12,7 @@ import { Options, ReaderIteratorResult, Watcher, ReadTextOptions, WatchEventList
 declare function fsyncSync(fd: number): void
 ```
 
-以同步方法将文件系统缓存数据写入磁盘。
+Synchronizes the cached data of a file to storage. This API returns the result synchronously.
 
 **Since:** 9
 
@@ -26,7 +26,7 @@ declare function fsyncSync(fd: number): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| fd | number | Yes | 已打开的文件描述符。 |
+| fd | number | Yes | FD of the file. |
 
 **Error codes:**
 

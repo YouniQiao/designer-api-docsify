@@ -1,6 +1,6 @@
 # GestureJudgeResult
 
-定义手势竞争结果。
+Creating an Object
 
 **Since:** 23
 
@@ -16,7 +16,7 @@
 CONTINUE = 0
 ```
 
-不影响系统手势判定流程。
+The system gesture determination is not affected.
 
 **Since:** 23
 
@@ -34,7 +34,7 @@ CONTINUE = 0
 REJECT = 1
 ```
 
-手势判定结果为失败。
+The user-defined gesture determination result of the current component is fail.
 
 **Since:** 23
 

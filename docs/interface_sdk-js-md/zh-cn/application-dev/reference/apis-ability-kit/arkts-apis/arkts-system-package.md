@@ -6,12 +6,6 @@
  > [@ohos.bundle.bundleManager](arkts-bundle-bundlemanager.md) instead.
 
 
-## 导入模块
-
-```TypeScript
-import { CheckPackageHasInstalledResponse, CheckPackageHasInstalledOptions } from 'kits/@kit.AbilityKit';
-```
-
 ## 汇总
 
 ### 类

@@ -1,6 +1,6 @@
 # Value
 
-存储在数据库中的值对象。
+Defines the **value** object in a KV store.
 
 **Since:** 7
 
@@ -20,7 +20,7 @@
 type: ValueType
 ```
 
-值类型。
+Type of the value.
 
 **Type:** [ValueType](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-pasteboard-valuetype-t.md)
 
@@ -42,7 +42,7 @@ type: ValueType
 value: Uint8Array | string | number | boolean
 ```
 
-值。
+Value of the KV pair stored in the KV store.
 
 **Type:** Uint8Array \| string \| number \| boolean
 

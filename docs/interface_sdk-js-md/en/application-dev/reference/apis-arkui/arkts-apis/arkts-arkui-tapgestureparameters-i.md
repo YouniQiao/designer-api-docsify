@@ -1,10 +1,12 @@
 # TapGestureParameters
 
-点击手势参数。继承自[BaseHandlerOptions](arkts-arkui-basehandleroptions-i.md)。
+Defines tap gesture parameters. Inherits from [BaseHandlerOptions](arkts-arkui-basehandleroptions-i.md).
 
-> **说明：**
+> **NOTE：**
 > 
-> 为规范匿名对象的定义，API 12版本修改了此处的元素定义。其中，保留了历史匿名对象的起始版本信息，会出现外层元素@since版本号高于内层元素版本号的情况，但这不影响接口的使用。
+> To standardize anonymous object definitions, the element definitions here have been revised in API version 12.
+> While historical version information is preserved for anonymous objects, there may be cases where the outer element
+> 's @since version number is higher than inner elements'. This does not affect interface usability.
 
 **Inheritance/Implementation:** TapGestureParameters extends [BaseHandlerOptions](arkts-arkui-basehandleroptions-i.md)
 
@@ -22,15 +24,15 @@
 count?: number
 ```
 
-识别的连续点击次数。当设置的值小于1或不设置时，会被转化为默认值。
+Number of consecutive taps. If the value is less than 1 or is not set, the default value is used.
 
-默认值：1
+Default value: **1**
 
-取值范围：[0, +∞)
+Value range: [0, +∞)
 
-**说明：**
+**NOTE：**
 
-1. 当配置多击时，上一次的最后一根手指抬起和下一次的第一根手指按下的超时时间为300毫秒。2. 当上次点击的位置与当前点击的位置距离超过60vp时，手势识别失败。在多指情况下，点击的位置为所有参与手势响应手指的平均位置。
+1. If multi-tap is configured, the timeout interval between a lift and the next tap is 300 ms.2. If the distance between the last tapped position and the current tapped position exceeds 60 vp, gesture recognition fails. In multi-finger scenarios, the tapped position is the average position of all fingers involved in the gesture response.
 
 **Type:** number
 
@@ -52,15 +54,15 @@ count?: number
 distanceThreshold?: number
 ```
 
-点击手势移动阈值。当设置的值小于等于0或不设置时，会被转化为默认值。
+Movement threshold for the tap gesture. If the value is less than or equal to 0 or is not set, the default value is used.
 
-默认值：2^31-1
+Default value: 2^31-1
 
-单位：vp
+Unit: vp
 
-**说明：**
+**NOTE：**
 
-当手指的移动距离超出开发者预设的移动阈值时，点击识别失败。如果初始化为默认阈值时，手指移动超过组件热区范围，点击识别失败。
+If the finger movement exceeds the preset movement threshold, the tap gesture recognition fails. If the default threshold is used during initialization and the finger moves beyond the component's touch target, the tap gesture recognition fails.
 
 **Type:** number
 
@@ -82,13 +84,13 @@ distanceThreshold?: number
 fingers?: number
 ```
 
-触发点击的手指数，最小为1指， 最大为10指。当设置小于1的值或不设置时，会被转化为默认值。
+Number of fingers required to trigger a tap. The value ranges from 1 to 10. If the value is less than 1 or is not set, the default value is used.
 
-默认值：1
+Default value: **1**
 
-**说明：**
+**NOTE：**
 
-1. 当配置多指时，第一根手指按下后300毫秒内未有足够的手指数按下，手势识别失败；手指抬起时，抬起后剩余的手指数小于阈值时开始计时，如300ms内未全部抬起则手势识别失败。2. 实际点击手指数超过配置值，手势识别成功。
+1. For a multi-finger gesture, recognition fails if the required number of fingers is not pressed within 300 ms after the first finger; when fingers are lifted, if the remaining number of fingers is below the threshold after lifting, all fingers must be lifted within 300 ms for the gesture to be successfully recognized.2. When the number of fingers touching the screen exceeds the set value, the gesture can be recognized.
 
 **Type:** number
 

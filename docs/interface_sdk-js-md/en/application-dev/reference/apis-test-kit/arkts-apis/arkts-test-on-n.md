@@ -1,6 +1,6 @@
 # ON
 
-用于便捷构造{@link On}对象的静态构造器，使用示例：ON.text('txt').enabled(true)。
+The static builder for building {@link On}object conveniently,usage example:ON.text('txt').enabled(true).
 
 **Since:** 23
 
@@ -42,8 +42,8 @@ import { ResizeDirection, WindowMode, PenMode, PenKeyOperation, Driver, MatchPat
 | [id](arkts-test-on-id-f.md#id-1) | Specifies the id of the target Component. |
 | [type](arkts-test-on-type-f.md#type-1) | Specifies the type of the target Component. |
 | [hint](arkts-test-on-hint-f.md#hint) | Specifies the hint for the target Component. |
-| [originalText](arkts-test-on-originaltext-f.md#originaltext) | Specifies the original text for the target Component.If the accessibility property 'accessibilityLevel' of a component is set to 'no' or 'no-hide-descendants',you will not be able to use {@link On.text} to match the component with the specified original text, but you can use this method to achieve it;if the component does not set the above accessibility property, this method has no difference with {@link On.text} |
-| [beforeComponent](arkts-test-on-beforecomponent-f.md#beforecomponent) | 要求目标组件位于由给定{@link Component}指定的另一个组件之前对象，用于相对于组件定位。 |
-| [afterComponent](arkts-test-on-aftercomponent-f.md#aftercomponent) | 要求目标组件位于由给定{@link Component}指定的另一个组件之后对象，用于相对于组件定位。 |
-| [withinComponent](arkts-test-on-withincomponent-f.md#withincomponent) | 要求目标组件位于由给定{@link Component}指定的另一个组件的内部对象，用于相对于组件定位。 |
+| [originalText](arkts-test-on-originaltext-f.md#originaltext) | Specifies the original text for the target Component.If the accessibility property  [accessibilityLevel](../../apis-arkui/arkts-apis/arkts-arkui-common-commonmethod-i.md/arkts-arkui-common-commonmethod-i.md#accessibilitylevel)of a component is set to 'no' or 'no-hide-descendants',you will not be able to use {@link On.text} to match the component with the specified original text, but you can use this method to achieve it;if the component does not set the above accessibility property, this method has no difference with {@link On.text} |
+| [beforeComponent](arkts-test-on-beforecomponent-f.md#beforecomponent) | Requires that the target Component which is before another Component that specified by the given {@link Component}object,used to locate Component relatively. |
+| [afterComponent](arkts-test-on-aftercomponent-f.md#aftercomponent) | Requires that the target Component which is after another Component that specified by the given {@link Component}object,used to locate Component relatively. |
+| [withinComponent](arkts-test-on-withincomponent-f.md#withincomponent) | Requires that the target Component which is inside of another Component that specified by the given {@link Component}object,used to locate Component relatively. |
 

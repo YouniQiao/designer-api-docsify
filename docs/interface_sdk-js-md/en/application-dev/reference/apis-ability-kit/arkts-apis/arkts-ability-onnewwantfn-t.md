@@ -4,7 +4,7 @@
 type OnNewWantFn = (ability: UIAbility) => void
 ```
 
-注册监听应用上下文的生命周期后，在UIAbility的onNewWant触发后回调。
+Defines a onNewWant function.
 
 **Since:** 23
 
@@ -18,5 +18,5 @@ type OnNewWantFn = (ability: UIAbility) => void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| ability | [UIAbility](arkts-ability-app-ability-uiability-uiability-c.md) | Yes | 当前Ability对象。 |
+| ability | [UIAbility](arkts-ability-app-ability-uiability-uiability-c.md) | Yes | Indicates the ability to register for listening. |
 

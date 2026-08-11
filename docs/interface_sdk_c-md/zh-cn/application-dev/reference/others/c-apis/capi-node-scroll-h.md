@@ -2,7 +2,7 @@
 
 ## 概述
 
-Provides shared scroll-related enum definitions for <b>NativeNode</b> APIs.
+提供滚动方向、边缘效果、滚动条状态、内容裁剪、嵌套滚动、滚动状态和滚动来源等枚举，用于配置和监听Scroll组件及相关可滚动组件的行为。
 
 **库：** libace_ndk.z.so
 
@@ -21,9 +21,9 @@ Provides shared scroll-related enum definitions for <b>NativeNode</b> APIs.
 | [ArkUI_EdgeEffect](#arkui_edgeeffect) | ArkUI_EdgeEffect | 定义边缘滑动效果枚举值。Grid、Scroll、WaterFlow组件默认值为ARKUI_EDGE_EFFECT_NONE，List组件默认值为ARKUI_EDGE_EFFECT_SPRING。 |
 | [ArkUI_BarState](#arkui_barstate) | ArkUI_BarState | 定义文本控制滚动条状态枚举值。 |
 | [ArkUI_EffectEdge](#arkui_effectedge) | ArkUI_EffectEdge | 定义边缘效果生效边缘的方向枚举值。 |
-| [ArkUI_ScrollDirection](#arkui_scrolldirection) | ArkUI_ScrollDirection | 定义Scroll组件排列方向枚举值。 |
+| [ArkUI_ScrollDirection](#arkui_scrolldirection) | ArkUI_ScrollDirection | 定义{@link Scroll}组件排列方向枚举值。 |
 | [ArkUI_ScrollSnapAlign](#arkui_scrollsnapalign) | ArkUI_ScrollSnapAlign | 定义列表项滚动结束对齐效果枚举值。 |
-| [ArkUI_ScrollSnapAnimationSpeed](#arkui_scrollsnapanimationspeed) | ArkUI_ScrollSnapAnimationSpeed | 定义列表限位滚动动画速度。 |
+| [ArkUI_ScrollSnapAnimationSpeed](#arkui_scrollsnapanimationspeed) | ArkUI_ScrollSnapAnimationSpeed | 列表限位滚动动画速度。 |
 | [ArkUI_ScrollBarDisplayMode](#arkui_scrollbardisplaymode) | ArkUI_ScrollBarDisplayMode | 定义滚动条状态枚举值。 |
 | [ArkUI_ContentClipMode](#arkui_contentclipmode) | ArkUI_ContentClipMode | 定义滚动容器的内容层裁剪区域枚举值。 |
 | [ArkUI_ScrollNestedMode](#arkui_scrollnestedmode) | ArkUI_ScrollNestedMode | 定义嵌套滚动选项。 |
@@ -67,7 +67,7 @@ enum ArkUI_BarState
 | 枚举项 | 描述 |
 | -- | -- |
 | ARKUI_BAR_STATE_OFF = 0 | 不显示。 |
-| ARKUI_BAR_STATE_AUTO = 1 | 按需显示。 |
+| ARKUI_BAR_STATE_AUTO = 1 | 按需显示（在触摸时显示滚动条，2秒后自动消失）。 |
 | ARKUI_BAR_STATE_ON = 2 | 常驻显示。 |
 
 ### ArkUI_EffectEdge
@@ -95,7 +95,7 @@ enum ArkUI_ScrollDirection
 
 **描述**
 
-定义Scroll组件排列方向枚举值。
+定义{@link Scroll}组件排列方向枚举值。
 
 **起始版本：** 12
 
@@ -133,13 +133,13 @@ enum ArkUI_ScrollSnapAnimationSpeed
 
 **描述**
 
-定义列表限位滚动动画速度。
+列表限位滚动动画速度。
 
 **起始版本：** 22
 
 | 枚举项 | 描述 |
 | -- | -- |
-| ARKUI_SCROLL_SNAP_ANIMATION_NORMAL = 0 | 限位滚动动画速度快。 |
+| ARKUI_SCROLL_SNAP_ANIMATION_NORMAL = 0 | 限位滚动动画速度正常。 |
 | ARKUI_SCROLL_SNAP_ANIMATION_SLOW = 1 | 限位滚动动画速度慢。 |
 
 ### ArkUI_ScrollBarDisplayMode
@@ -233,7 +233,7 @@ enum ArkUI_ScrollAlignment
 | ARKUI_SCROLL_ALIGNMENT_START = 0 | 首部对齐。指定item首部与容器首部对齐。 |
 | ARKUI_SCROLL_ALIGNMENT_CENTER | 居中对齐。指定item主轴方向居中对齐于容器。 |
 | ARKUI_SCROLL_ALIGNMENT_END | 尾部对齐。指定item尾部与容器尾部对齐。 |
-| ARKUI_SCROLL_ALIGNMENT_AUTO | 自动对齐。若指定item完全处于显示区，不做调整。否则依照滑动距离最短的原则，将指定item首部对齐或尾部对齐于容器,使指定item完全处于显示区。 |
+| ARKUI_SCROLL_ALIGNMENT_AUTO | 自动对齐。若指定item完全处于显示区，不做调整。否则依照滑动距离最短的原则，将指定item首部对齐或尾部对齐于容器，使指定item完全处于显示区。 |
 
 ### ArkUI_ScrollState
 

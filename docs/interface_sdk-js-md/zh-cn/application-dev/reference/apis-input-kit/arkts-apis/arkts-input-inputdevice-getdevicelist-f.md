@@ -1,11 +1,5 @@
 # getDeviceList
 
-## 导入模块
-
-```TypeScript
-import { inputDevice } from 'kits/@kit.InputKit';
-```
-
 ## getDeviceList
 
 ```TypeScript
@@ -32,9 +26,11 @@ function getDeviceList(callback: AsyncCallback<Array<int>>): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; 3. Parameter verification failed. |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; 3. Parameter verification failed. |
 
 ## 示例
+
+ArkTS-Dyn示例：
 
 ```TypeScript
 import { inputDevice } from '@kit.InputKit';
@@ -65,6 +61,38 @@ struct Index {
 }
 ```
 
+ArkTS-Sta示例：
+
+```TypeScript
+import { Entry, Text, RelativeContainer, Component } from '@kit.ArkUI';
+import { inputDevice } from '@kit.InputKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+@Entry
+@Component
+struct Index {
+  build() {
+    RelativeContainer() {
+      Text()
+        .onClick(() => {
+          try {
+            // 获取输入设备列表
+            inputDevice.getDeviceList((error: BusinessError<void> | null, ids: Array<int> | undefined) => {
+              if (error) {
+                console.error(`Failed to get device id list, Code: ${(error as BusinessError).code}, message: ${(error as BusinessError).message}.`);
+                return;
+              }
+              console.info(`Succeeded in getting device id list: ${JSON.stringify(ids)}.`);
+            });
+          } catch (error) {
+            console.error(`Failed to get device id list, Code: ${(error as BusinessError).code}, message: ${(error as BusinessError).message}.`);
+          }
+        })
+    }
+  }
+}
+```
+
 
 ## getDeviceList
 
@@ -90,6 +118,8 @@ function getDeviceList(): Promise<Array<int>>
 
 ## 示例
 
+ArkTS-Dyn示例：
+
 ```TypeScript
 import { inputDevice } from '@kit.InputKit';
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -106,6 +136,36 @@ struct Index {
             inputDevice.getDeviceList().then((ids: Array<number>) => {
               console.info(`Succeeded in getting device id list: ${JSON.stringify(ids)}.`);
             }).catch((error: BusinessError) => {
+              console.error(`Failed to get device id list, Code: ${(error as BusinessError).code}, message: ${(error as BusinessError).message}.`);
+            });
+          } catch (error) {
+            console.error(`Failed to get device id list, Code: ${(error as BusinessError).code}, message: ${(error as BusinessError).message}.`);
+          }
+        })
+    }
+  }
+}
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+import { Entry, Text, RelativeContainer, Component } from '@kit.ArkUI';
+import { inputDevice } from '@kit.InputKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+@Entry
+@Component
+struct Index {
+  build() {
+    RelativeContainer() {
+      Text()
+        .onClick(() => {
+          try {
+            // 获取输入设备列表
+            inputDevice.getDeviceList().then((ids: Array<int>) => {
+              console.info(`Succeeded in getting device id list: ${JSON.stringify(ids)}.`);
+            }).catch((error) => {
               console.error(`Failed to get device id list, Code: ${(error as BusinessError).code}, message: ${(error as BusinessError).message}.`);
             });
           } catch (error) {

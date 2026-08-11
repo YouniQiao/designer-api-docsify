@@ -1,10 +1,10 @@
 # CaretOffset
 
-CaretOffset info.
+Describes the position of the caret relative to the text box.
 
-**Since:** 12
+**Since:** 11
 
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
+**ArkTS mode:** ArkTS-Dyn only, since version 11.
 
 <!--Device-unnamed-declare interface CaretOffset--><!--Device-unnamed-declare interface CaretOffset-End-->
 
@@ -16,13 +16,13 @@ CaretOffset info.
 index: number
 ```
 
-获取CaretOffset的索引
+Index of the caret position.
 
 **Type:** number
 
-**Since:** 12
+**Since:** 11
 
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
+**ArkTS mode:** ArkTS-Dyn only, since version 11.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -38,13 +38,13 @@ index: number
 x: number
 ```
 
-Get the x of the relative position.
+X coordinate of the cursor relative to the text box, in px.
 
 **Type:** number
 
-**Since:** 12
+**Since:** 11
 
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
+**ArkTS mode:** ArkTS-Dyn only, since version 11.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -60,13 +60,13 @@ Get the x of the relative position.
 y: number
 ```
 
-获取相对位置的y。
+Y coordinate of the cursor relative to the text box, in px.
 
 **Type:** number
 
-**Since:** 12
+**Since:** 11
 
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
+**ArkTS mode:** ArkTS-Dyn only, since version 11.
 
 **Model restriction:** This API can be used only in the stage model.
 

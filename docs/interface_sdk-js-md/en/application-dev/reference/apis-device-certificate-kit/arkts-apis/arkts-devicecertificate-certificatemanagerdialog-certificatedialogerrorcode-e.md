@@ -1,6 +1,6 @@
 # CertificateDialogErrorCode
 
-表示调用证书管理对话框相关API的错误码。
+Enumerates the error codes reported when the certificate management dialog box APIs are called.
 
 **Since:** 13
 
@@ -16,7 +16,7 @@
 ERROR_GENERIC = 29700001
 ```
 
-表示调用接口时发生内部错误。例如IPC通信失败、内存操作失败、文件操作失败。
+Internal error.For example, IPC communication failure, memory operation failure, and file operation failure.
 
 **Since:** 13
 
@@ -34,7 +34,7 @@ ERROR_GENERIC = 29700001
 ERROR_OPERATION_CANCELED = 29700002
 ```
 
-表示用户在证书管理对话框中取消操作。
+The user canceled the operation in the certificate management dialog box.
 
 **Since:** 14
 
@@ -52,7 +52,7 @@ ERROR_OPERATION_CANCELED = 29700002
 ERROR_OPERATION_FAILED = 29700003
 ```
 
-表示用户在证书管理对话框中操作失败。例如安装证书失败。
+The operation fails in the certificate management dialog box.For example, the certificate fails to be installed.
 
 **Since:** 14
 
@@ -70,7 +70,7 @@ ERROR_OPERATION_FAILED = 29700003
 ERROR_DEVICE_NOT_SUPPORTED = 29700004
 ```
 
-表示接口不支持该设备
+The device does not support the API called.
 
 **Since:** 14
 
@@ -88,7 +88,7 @@ ERROR_DEVICE_NOT_SUPPORTED = 29700004
 ERROR_NOT_COMPLY_SECURITY_POLICY = 29700005
 ```
 
-表示该操作不符合设备安全策略。例如设备不允许用户管理GLOBAL_USER的CA证书。
+The device security policy is not met when the API is called.For example, the device does not allow users to manage the CA certificate of GLOBAL_USER.
 
 **Since:** 18
 
@@ -106,9 +106,9 @@ ERROR_NOT_COMPLY_SECURITY_POLICY = 29700005
 ERROR_PARAMETER_VALIDATION_FAILED = 29700006
 ```
 
-表示输入参数校验失败。
+The input parameter verification fails.
 
-例如：参数格式不正确、取值范围无效
+For example, the parameter format is incorrect or the parameter range is invalid.
 
 **Since:** 22
 
@@ -126,7 +126,7 @@ ERROR_PARAMETER_VALIDATION_FAILED = 29700006
 ERROR_NO_AVAILABLE_CERTIFICATE = 29700007
 ```
 
-表示没有可用证书。
+No certificate is available.
 
 **Since:** 22
 

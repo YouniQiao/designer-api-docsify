@@ -1,6 +1,6 @@
 # PreviewOutput
 
-预览输出类。继承[CameraOutput](arkts-camera-camera-cameraoutput-i.md)。
+PreviewOutput implements preview output. It inherits from [CameraOutput](arkts-camera-camera-cameraoutput-i.md).
 
 **Inheritance/Implementation:** PreviewOutput extends [CameraOutput](arkts-camera-camera-cameraoutput-i.md)
 
@@ -24,7 +24,8 @@ import { camera } from 'kits/@kit.CameraKit';
 addDeferredSurface(surfaceId: string): void
 ```
 
-配置延迟预览的Surface，可以在[commitConfig](arkts-camera-camera-session-i.md#commitconfig)配流和[start](arkts-camera-camera-session-i.md#start)启流之后运行。
+Adds a surface for delayed preview. This API can run after [commitConfig](arkts-camera-camera-session-i.md#commitconfig) or  
+[start](arkts-camera-camera-session-i.md#start) is called.
 
 **Since:** 24
 
@@ -40,14 +41,42 @@ addDeferredSurface(surfaceId: string): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| surfaceId | string | Yes | 从[XComponent](../../apis-arkui/arkts-apis/arkts-arkui-xcomponent-xcomponent-f.md/arkts-arkui-xcomponent-xcomponent-f.md#xcomponent)组件获取的surfaceId。 |
+| surfaceId | string | Yes | Surface ID, which is obtained from [XComponent](../../apis-arkui/arkts-apis/arkts-arkui-xcomponent-xcomponent-f.md/arkts-arkui-xcomponent-xcomponent-f.md#xcomponent). |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 7400101 | Parameter missing or parameter type incorrect. |
-| 202 | Permission verification failed. A non-system application calls a system API.<br>**Applicable version:** 13 - 23 |
+| [7400101](../errorcode-camera.md#7400101-invalid-parameter) | Parameter missing or parameter type incorrect. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API.<br>**Applicable version:** 13 - 23 |
+
+## Examples
+
+```TypeScript
+import { common } from '@kit.AbilityKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+async function preview(context: common.BaseContext, cameraDevice: camera.CameraDevice, previewProfile: camera.Profile, photoProfile: camera.Profile, mode: camera.SceneMode, previewSurfaceId: string): Promise<void> {
+  const cameraManager: camera.CameraManager = camera.getCameraManager(context);
+  const cameraInput: camera.CameraInput = cameraManager.createCameraInput(cameraDevice);
+  const previewOutput: camera.PreviewOutput = cameraManager.createDeferredPreviewOutput(previewProfile);
+  const photoOutput: camera.PhotoOutput = cameraManager.createPhotoOutput(photoProfile);
+  const session: camera.Session  = cameraManager.createSession(mode);
+  session.beginConfig();
+  session.addInput(cameraInput);
+  session.addOutput(previewOutput);
+  session.addOutput(photoOutput);
+  await session.commitConfig();
+  try {
+    await session.start();
+  } catch (error) {
+    // If the operation fails, error.code is returned and processed.
+    let err = error as BusinessError;
+    console.error(`start session failed. error code: ${err.code}`);
+  }
+  previewOutput.addDeferredSurface(previewSurfaceId);
+}
+```
 
 ## enableBandwidthCompression
 
@@ -55,14 +84,16 @@ addDeferredSurface(surfaceId: string): void
 enableBandwidthCompression(enabled: boolean): void
 ```
 
-使能预览带宽压缩。
+Enables preview bandwidth compression.
 
-使能之前，可先使用方法[isBandwidthCompressionSupported](arkts-camera-camera-previewoutput-i.md#isbandwidthcompressionsupported)对设备是否支持预览带宽压缩进行检查。
+Before enabling this feature, you can call   
+[isBandwidthCompressionSupported](arkts-camera-camera-previewoutput-i.md#isbandwidthcompressionsupported) to check whether the device supports preview bandwidth compression.
 
-> **说明：**
+> **NOTE：**
 > 
-> 该接口只能在使用[Session.commitConfig](arkts-camera-camera-session-i.md#commitconfig)接口之前调用，否则会影响预览流
-> 出流格式。
+> This function must be called prior to
+> [Session.commitConfig](arkts-camera-camera-session-i.md#commitconfig). Otherwise, the
+> preview output stream format will be affected.
 
 **Since:** 23
 
@@ -78,15 +109,15 @@ enableBandwidthCompression(enabled: boolean): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| enabled | boolean | Yes | 是否使能预览带宽压缩。true表示使能，false表示不使能。 |
+| enabled | boolean | Yes | Whether to enable preview bandwidth compression. **true** to enable, **false** otherwise. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 7400102 | Operation not allowed. |
-| 7400103 | Session not config. |
-| 7400201 | Camera service fatal error. |
+| [7400102](../errorcode-camera.md#7400102-invalid-operation) | Operation not allowed. |
+| [7400103](../errorcode-camera.md#7400103-session-not-configured) | Session not config. |
+| [7400201](../errorcode-camera.md#7400201-camera-service-error) | Camera service fatal error. |
 
 ## getActiveFrameRate
 
@@ -94,9 +125,9 @@ enableBandwidthCompression(enabled: boolean): void
 getActiveFrameRate(): FrameRateRange
 ```
 
-获取已设置的帧率范围。
+Obtains the configured frame rate range.
 
-使用[setFrameRate](arkts-camera-camera-previewoutput-i.md#setframerate)接口对预览流设置过帧率后可查询。
+This API is valid only after [setFrameRate](arkts-camera-camera-previewoutput-i.md#setframerate) is called to set a frame rate range for preview streams.
 
 **Since:** 12
 
@@ -112,7 +143,7 @@ getActiveFrameRate(): FrameRateRange
 
 | Type | Description |
 | --- | --- |
-| [FrameRateRange](arkts-camera-camera-frameraterange-i.md) | 帧率范围 |
+| [FrameRateRange](arkts-camera-camera-frameraterange-i.md) | Frame rate range. |
 
 ## getActiveProfile
 
@@ -120,7 +151,7 @@ getActiveFrameRate(): FrameRateRange
 getActiveProfile(): Profile
 ```
 
-获取当前生效的配置信息。
+Obtains the profile that takes effect currently.
 
 **Since:** 12
 
@@ -136,13 +167,13 @@ getActiveProfile(): Profile
 
 | Type | Description |
 | --- | --- |
-| [Profile](arkts-camera-camera-profile-i.md) | 当前生效的配置信息 |
+| [Profile](arkts-camera-camera-profile-i.md) | Profile obtained. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 7400201 | Camera service fatal error. |
+| [7400201](../errorcode-camera.md#7400201-camera-service-error) | Camera service fatal error. |
 
 ## getPreviewRotation
 
@@ -156,12 +187,14 @@ ArkTS-Sta:
 getPreviewRotation(displayRotation?: int): ImageRotation
 ```
 
-获取预览旋转角度。
+Obtains the preview rotation angle.
 
-- 设备自然方向：设备默认使用方向。例如，直板机默认使用方向为竖屏（充电口向下）。  
-- 相机镜头角度：值等于相机图像顺时针旋转到设备自然方向的角度。例如，直板机后置相机传感器是横屏安装的，所以需要顺时针旋转90度到设备自然方向。  
+- Device' natural orientation: the default orientation for using a device. For example, the default orientation   
+of the bar-type phone is in portrait mode, with the charging port facing downward.  
+- Camera lens angle: equivalent to the angle at which the camera is rotated clockwise to match the device's   
+natural orientation. For example, the rear camera sensor of a bar-type phone is installed in landscape mode. Therefore, it needs to be rotated by 90 degrees clockwise to match the device's natural orientation.  
 -   
-[屏幕旋转角度](https://developer.huawei.com/consumer/cn/doc/best-practices/bpta-multi-device-window-direction#section737072712182)：显示设备的屏幕顺时针旋转角度。
+[Screen Rotation](https://developer.huawei.com/consumer/en/doc/best-practices/bpta-multi-device-window-direction):indicates the clockwise rotation angle of the device screen.
 
 **Since:** 12
 
@@ -179,20 +212,20 @@ getPreviewRotation(displayRotation?: int): ImageRotation
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| displayRotation | ArkTS-Dyn: number  <br>ArkTS-Sta：int | No | 显示设备的屏幕旋转角度，通过 [display.getDefaultDisplaySync](../../apis-arkui/arkts-apis/arkts-arkui-display-getdefaultdisplaysync-f.md/arkts-arkui-display-getdefaultdisplaysync-f.md#getdefaultdisplaysync)获得。 &lt;br&gt; 从API version 23开始，入参displayRotation为可选参数，当不传入参数时，由系统获取displayRotation进行预览旋转角度计算。 &lt;br&gt; 单位为度数（degree），取值范围为[0, 360]。<br>**Since:** 23 |
+| displayRotation | ArkTS-Dyn: number  <br>ArkTS-Sta：int | No | Screen rotation angle of the display. It is obtained by calling [display.getDefaultDisplaySync](../../apis-arkui/arkts-apis/arkts-arkui-display-getdefaultdisplaysync-f.md/arkts-arkui-display-getdefaultdisplaysync-f.md#getdefaultdisplaysync). &lt;br&gt; Since API version 23, the input parameter **displayRotation** is optional. If no parameter is passed, the system obtains the **displayRotation** value to calculate rotation angle of a video. &lt;br&gt; The value ranges from 0 to 360, in degrees.<br>**Since:** 23 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [ImageRotation](arkts-camera-camera-imagerotation-e.md) | 返回预览旋转角度。若接口调用失败，返回undefined。 |
+| [ImageRotation](arkts-camera-camera-imagerotation-e.md) | The preview rotation angle obtained. If the API call fails, undefined is returned. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 7400101 | Parameter missing or parameter type incorrect.<br>**Applicable version:** 12 - 22 |
-| 7400201 | Camera service fatal error. |
+| [7400101](../errorcode-camera.md#7400101-invalid-parameter) | Parameter missing or parameter type incorrect.<br>**Applicable version:** 12 - 22 |
+| [7400201](../errorcode-camera.md#7400201-camera-service-error) | Camera service fatal error. |
 
 ## getSupportedFrameRates
 
@@ -200,7 +233,7 @@ getPreviewRotation(displayRotation?: int): ImageRotation
 getSupportedFrameRates(): Array<FrameRateRange>
 ```
 
-查询支持的帧率范围。
+Obtains the supported frame rates.
 
 **Since:** 12
 
@@ -216,7 +249,7 @@ getSupportedFrameRates(): Array<FrameRateRange>
 
 | Type | Description |
 | --- | --- |
-| Array&lt;FrameRateRange&gt; | 支持的帧率范围列表。若接口调用失败，返回undefined。 |
+| Array&lt;FrameRateRange&gt; | Array of supported frame rates. If the API call fails, undefined is returned. |
 
 ## isBandwidthCompressionSupported
 
@@ -224,7 +257,7 @@ getSupportedFrameRates(): Array<FrameRateRange>
 isBandwidthCompressionSupported(): boolean
 ```
 
-检查是否支持预览带宽压缩（指通过编码减少数据量，降低其在传输链路中的带宽占用）。
+Checks whether preview bandwidth compression is supported. This involves reducing data volume through encoding to minimize bandwidth usage during transmission.
 
 **Since:** 23
 
@@ -240,7 +273,7 @@ isBandwidthCompressionSupported(): boolean
 
 | Type | Description |
 | --- | --- |
-| boolean | 是否支持预览带宽压缩。true表示支持，false表示不支持。 |
+| boolean | Check result for the support of preview bandwidth compression. **true** if supported, **false** otherwise. |
 
 ## isLogViewAssistSupported
 
@@ -248,11 +281,7 @@ isBandwidthCompressionSupported(): boolean
 isLogViewAssistSupported(): boolean
 ```
 
-LOG视频下，查询是否支持辅助监看功能。辅助监看开启后，预览画面还原至原色域，录制出的视频仍然是LOG视频格式。
-
-> **说明：**
-> 
-> 辅助监看效果仅支持1080P及以下分辨率。
+Checks whether log video view assistance is supported.
 
 **Since:** 26.0.0
 
@@ -270,7 +299,7 @@ LOG视频下，查询是否支持辅助监看功能。辅助监看开启后，�
 
 | Type | Description |
 | --- | --- |
-| boolean | 是否支持辅助监看功能。true表示支持，false表示不支持。 |
+| boolean | Check result for the support of log video view assistance. **true** if supported, **false** otherwise. |
 
 ## off('frameStart')
 
@@ -278,7 +307,7 @@ LOG视频下，查询是否支持辅助监看功能。辅助监看开启后，�
 off(type: 'frameStart', callback?: AsyncCallback<void>): void
 ```
 
-注销预览帧启动的监听。
+Unsubscribes from preview frame start events.
 
 **Since:** 10
 
@@ -294,8 +323,8 @@ off(type: 'frameStart', callback?: AsyncCallback<void>): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'frameStart' | Yes | 监听事件，固定为'frameStart'，previewOutput创建成功可监听。 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | No | 回调函数，如果指定参数则取消对应callback（callback对象不可是匿名函数），否则取消所有callback。 |
+| type | 'frameStart' | Yes | Event type. The value is fixed at **'frameStart'**. The event can be listened for when a previewOutput instance is created. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | No | Callback used to return the result. If this parameter is specified, the subscription to the specified event with the specified callback is canceled. (The callback object cannot be an anonymous function.) Otherwise, the subscriptions to the specified event with all the callbacks are canceled. |
 
 ## off('frameEnd')
 
@@ -303,7 +332,7 @@ off(type: 'frameStart', callback?: AsyncCallback<void>): void
 off(type: 'frameEnd', callback?: AsyncCallback<void>): void
 ```
 
-注销监听预览帧结束。
+Unsubscribes from preview frame end events.
 
 **Since:** 10
 
@@ -319,8 +348,8 @@ off(type: 'frameEnd', callback?: AsyncCallback<void>): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'frameEnd' | Yes | 监听事件，固定为'frameEnd'，previewOutput创建成功可监听。 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | No | 回调函数，如果指定参数则取消对应callback（callback对象不可是匿名函数），否则取消所有callback。 |
+| type | 'frameEnd' | Yes | Event type. The value is fixed at **'frameEnd'**. The event can be listened for when a previewOutput instance is created. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | No | Callback used to return the result. If this parameter is specified, the subscription to the specified event with the specified callback is canceled. (The callback object cannot be an anonymous function.) Otherwise, the subscriptions to the specified event with all the callbacks are canceled. |
 
 ## off('error')
 
@@ -328,7 +357,7 @@ off(type: 'frameEnd', callback?: AsyncCallback<void>): void
 off(type: 'error', callback?: ErrorCallback): void
 ```
 
-注销监听预览输出的错误事件。
+Unsubscribes from PreviewOutput error events.
 
 **Since:** 10
 
@@ -344,8 +373,8 @@ off(type: 'error', callback?: ErrorCallback): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'error' | Yes | 监听事件，固定为'error'，previewOutput创建成功可监听。 |
-| callback | [ErrorCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-errorcallback-i.md) | No | 回调函数，如果指定参数则取消对应callback（callback对象不可是匿名函数），否则取消所有callback。 |
+| type | 'error' | Yes | Event type. The value is fixed at **'error'**. The event can be listened for when a previewOutput instance is created. |
+| callback | [ErrorCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-errorcallback-i.md) | No | Callback used to return the result. If this parameter is specified, the subscription to the specified event with the specified callback is canceled. (The callback object cannot be an anonymous function.) Otherwise, the subscriptions to the specified event with all the callbacks are canceled. |
 
 ## offError
 
@@ -419,11 +448,11 @@ Unsubscribes from frame start event callback.
 on(type: 'frameStart', callback: AsyncCallback<void>): void
 ```
 
-监听预览帧启动，通过注册回调函数获取结果。使用callback异步回调。
+Subscribes to preview frame start events. This API uses an asynchronous callback to return the result.
 
-> **说明：**
+> **NOTE：**
 > 
-> 当前注册监听接口，不支持在on监听的回调方法里，调用off注销回调。
+> Currently, you cannot use **off()** to unregister the callback in the callback method of **on()**.
 
 **Since:** 10
 
@@ -439,8 +468,8 @@ on(type: 'frameStart', callback: AsyncCallback<void>): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'frameStart' | Yes | 监听事件，固定为'frameStart'，previewOutput创建成功可监听。底层第一次开始曝光时触发该事件并返回。 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | 回调函数，用于获取结果。只要有该事件返回就证明预览开始。 |
+| type | 'frameStart' | Yes | Event type. The value is fixed at **'frameStart'**. The event can be listened for when a previewOutput instance is created. This event is triggered and returned when the bottom layer starts exposure for the first time. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. The preview starts as long as this event is returned. |
 
 ## on('frameEnd')
 
@@ -448,11 +477,11 @@ on(type: 'frameStart', callback: AsyncCallback<void>): void
 on(type: 'frameEnd', callback: AsyncCallback<void>): void
 ```
 
-监听预览帧结束，通过注册回调函数获取结果。使用callback异步回调。
+Subscribes to preview frame end events. This API uses an asynchronous callback to return the result.
 
-> **说明：**
+> **NOTE：**
 > 
-> 当前注册监听接口，不支持在on监听的回调方法里，调用off注销回调。
+> Currently, you cannot use **off()** to unregister the callback in the callback method of **on()**.
 
 **Since:** 10
 
@@ -468,8 +497,8 @@ on(type: 'frameEnd', callback: AsyncCallback<void>): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'frameEnd' | Yes | 监听事件，固定为'frameEnd'，previewOutput创建成功可监听。预览完全结束最后一帧时触发该事件并返回。 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | 回调函数，用于获取结果。只要有该事件返回就证明预览结束。 |
+| type | 'frameEnd' | Yes | Event type. The value is fixed at **'frameEnd'**. The event can be listened for when a previewOutput instance is created. This event is triggered and returned when the last frame of preview ends. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. The preview ends as long as this event is returned. |
 
 ## on('error')
 
@@ -477,11 +506,11 @@ on(type: 'frameEnd', callback: AsyncCallback<void>): void
 on(type: 'error', callback: ErrorCallback): void
 ```
 
-监听预览输出的错误事件，通过注册回调函数获取结果。使用callback异步回调。
+Subscribes to PreviewOutput error events. This API uses an asynchronous callback to return the result.
 
-> **说明：**
+> **NOTE：**
 > 
-> 当前注册监听接口，不支持在on监听的回调方法里，调用off注销回调。
+> Currently, you cannot use **off()** to unregister the callback in the callback method of **on()**.
 
 **Since:** 10
 
@@ -497,8 +526,8 @@ on(type: 'error', callback: ErrorCallback): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'error' | Yes | 监听事件，固定为'error'，previewOutput创建成功可监听。预览接口使用错误时触发该事件，比如调用 [Session.start](arkts-camera-camera-session-i.md#start)，[CameraOutput.release](arkts-camera-camera-cameraoutput-i.md#release)等接口发 生错误时返回对应错误信息。 |
-| callback | [ErrorCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-errorcallback-i.md) | Yes | 回调函数，用于获取错误信息。返回错误码，错误码类型[CameraErrorCode](arkts-camera-camera-cameraerrorcode-e.md)。 |
+| type | 'error' | Yes | Event type. The value is fixed at **'error'**. The event can be listened for when a previewOutput instance is created. This event is triggered and the corresponding error message is returned when an error occurs during the use of a preview-related API such as [Session.start](arkts-camera-camera-session-i.md#start) or [CameraOutput.release](arkts-camera-camera-cameraoutput-i.md#release). |
+| callback | [ErrorCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-errorcallback-i.md) | Yes | Callback used to return an error code defined in [CameraErrorCode](arkts-camera-camera-cameraerrorcode-e.md). |
 
 ## onError
 
@@ -578,13 +607,14 @@ ArkTS-Sta:
 setFrameRate(minFps: int, maxFps: int): void
 ```
 
-设置预览流帧率范围，设置的范围必须在支持的帧率范围内。
+Sets a frame rate range for preview streams. The range must be within the supported frame rate range,
 
-进行设置前，可通过[getSupportedFrameRates](arkts-camera-camera-previewoutput-i.md#getsupportedframerates)接口查询支持的帧率范围。
+which can be obtained by calling [getSupportedFrameRates](arkts-camera-camera-previewoutput-i.md#getsupportedframerates).
 
-> **说明：**
+> **NOTE：**
 > 
-> 仅在[PhotoSession](arkts-camera-camera-photosession-i.md)或[VideoSession](arkts-camera-camera-videosession-i.md)模式下支持。
+> This API is valid only in [PhotoSession](arkts-camera-camera-photosession-i.md) or
+> [VideoSession](arkts-camera-camera-videosession-i.md) mode.
 
 **Since:** 12
 
@@ -600,15 +630,15 @@ setFrameRate(minFps: int, maxFps: int): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| minFps | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | 最小帧率（单位：fps），当传入的最大值小于最小值时，传参异常，接口不生效。 |
-| maxFps | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | 最大帧率（单位：fps），当传入的最小值大于最大值时，传参异常，接口不生效。 |
+| minFps | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | Minimum frame rate, in fps. When the maximum value is less than the minimum value, the API does not take effect. |
+| maxFps | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | Maximum frame rate, in fps. When the minimum value is greater than the maximum value, the API does not take effect. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 7400101 | Parameter missing or parameter type incorrect. |
-| 7400110 | Unresolved conflicts with current configurations. |
+| [7400101](../errorcode-camera.md#7400101-invalid-parameter) | Parameter missing or parameter type incorrect. |
+| [7400110](../errorcode-camera.md#7400110-configuration-conflicts) | Unresolved conflicts with current configurations. |
 
 ## setLogViewAssistEnable
 
@@ -616,13 +646,8 @@ setFrameRate(minFps: int, maxFps: int): void
 setLogViewAssistEnable(enable: boolean): void
 ```
 
-LOG视频下，使能辅助监看之前，可先使用方法[isLogViewAssistSupported](arkts-camera-camera-previewoutput-i.md#islogviewassistsupported)查询设备是否支持预览辅助监看。
-
-> **说明：**
-> 
-> - 该接口只能在使用[Session.commitConfig](arkts-camera-camera-session-i.md#commitconfig)接口之后调用。
-> 
-> - 预览辅助监看效果仅支持1080P及以下分辨率。
+Log video view assistance toggle. Before enabling this feature, you can call  
+[isLogViewAssistSupported](arkts-camera-camera-previewoutput-i.md#islogviewassistsupported) to check whether the device supports log video view assistance.
 
 **Since:** 26.0.0
 
@@ -640,15 +665,15 @@ LOG视频下，使能辅助监看之前，可先使用方法[isLogViewAssistSupp
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| enable | boolean | Yes | 是否使能辅助监看。true表示使能，false表示不使能。 |
+| enable | boolean | Yes | Whether to enable log video view assistance, **true** to enable, **false** otherwise. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 801 | Capability not supported. |
-| 7400103 | Session not config. |
-| 7400201 | Camera service fatal error. |
+| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. |
+| [7400103](../errorcode-camera.md#7400103-session-not-configured) | Session not config. |
+| [7400201](../errorcode-camera.md#7400201-camera-service-error) | Camera service fatal error. |
 
 ## setPreviewRotation
 
@@ -656,7 +681,7 @@ LOG视频下，使能辅助监看之前，可先使用方法[isLogViewAssistSupp
 setPreviewRotation(previewRotation: ImageRotation, isDisplayLocked?: boolean): void
 ```
 
-设置预览旋转角度。
+Sets the preview rotation angle.
 
 **Since:** 12
 
@@ -672,15 +697,15 @@ setPreviewRotation(previewRotation: ImageRotation, isDisplayLocked?: boolean): v
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| previewRotation | [ImageRotation](arkts-camera-camera-imagerotation-e.md) | Yes | 预览旋转角度 |
-| isDisplayLocked | boolean | No | Surface在屏幕旋转时是否锁定方向，未设置时默认取值为false，即不锁定方向。true表示锁定方向，false表示不锁定方向。详情请参考 [SurfaceRotationOptions](../../apis-arkui/arkts-apis/arkts-arkui-xcomponent-surfacerotationoptions-i.md/arkts-arkui-xcomponent-surfacerotationoptions-i.md) |
+| previewRotation | [ImageRotation](arkts-camera-camera-imagerotation-e.md) | Yes | Preview rotation angle. |
+| isDisplayLocked | boolean | No | Whether the orientation of the surface is locked when the screen rotates. If this parameter is not set, the default value **false** is used, indicating that the orientation is not locked. **true** if locked, **false** otherwise. For details, see [SurfaceRotationOptions](../../apis-arkui/arkts-apis/arkts-arkui-xcomponent-surfacerotationoptions-i.md/arkts-arkui-xcomponent-surfacerotationoptions-i.md). |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 7400101 | Parameter missing or parameter type incorrect. |
-| 7400201 | Camera service fatal error. |
+| [7400101](../errorcode-camera.md#7400101-invalid-parameter) | Parameter missing or parameter type incorrect. |
+| [7400201](../errorcode-camera.md#7400201-camera-service-error) | Camera service fatal error. |
 
 ## start
 
@@ -688,11 +713,7 @@ setPreviewRotation(previewRotation: ImageRotation, isDisplayLocked?: boolean): v
 start(callback: AsyncCallback<void>): void
 ```
 
-开始输出预览流，通过注册回调函数获取结果。使用callback异步回调。
-
-> **说明：**
-> 
-> 从 API version 10开始支持，从API version 11开始废弃。
+Starts to output preview streams. This API uses an asynchronous callback to return the result.
 
 **Since:** 10
 
@@ -710,13 +731,13 @@ start(callback: AsyncCallback<void>): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | 回调函数。当开始输出预览流成功，err为undefined，否则为错误对象。错误码类型 [CameraErrorCode](arkts-camera-camera-cameraerrorcode-e.md)。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. If the preview stream output starts successfully, **err** is **undefined**; otherwise, **err** is an error object with an error code defined in [CameraErrorCode](arkts-camera-camera-cameraerrorcode-e.md). |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 7400103 | Session not config. |
+| [7400103](../errorcode-camera.md#7400103-session-not-configured) | Session not config. |
 
 ## start
 
@@ -724,11 +745,7 @@ start(callback: AsyncCallback<void>): void
 start(): Promise<void>
 ```
 
-开始输出预览流。使用Promise异步回调。
-
-> **说明：**
-> 
-> 从 API version 10开始支持，从API version 11开始废弃。
+Starts to output preview streams. This API uses a promise to return the result.
 
 **Since:** 10
 
@@ -746,13 +763,13 @@ start(): Promise<void>
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise对象，无返回结果。 |
+| Promise&lt;void&gt; | Promise that returns no value. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 7400103 | Session not config. |
+| [7400103](../errorcode-camera.md#7400103-session-not-configured) | Session not config. |
 
 ## stop
 
@@ -760,11 +777,7 @@ start(): Promise<void>
 stop(callback: AsyncCallback<void>): void
 ```
 
-停止输出预览流，通过注册回调函数获取结果。使用callback异步回调。
-
-> **说明：**
-> 
-> 从 API version 10开始支持，从API version 11开始废弃。
+Stops outputting preview streams. This API uses an asynchronous callback to return the result.
 
 **Since:** 10
 
@@ -782,7 +795,7 @@ stop(callback: AsyncCallback<void>): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | 回调函数。当停止输出预览流成功，err为undefined，否则为错误对象。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. If the preview stream output stops successfully, **err** is **undefined**; otherwise, **err** is an error object. |
 
 ## stop
 
@@ -790,11 +803,7 @@ stop(callback: AsyncCallback<void>): void
 stop(): Promise<void>
 ```
 
-停止输出预览流。使用Promise异步回调。
-
-> **说明：**
-> 
-> 从 API version 10开始支持，从API version 11开始废弃。
+Stops outputting preview streams. This API uses a promise to return the result.
 
 **Since:** 10
 
@@ -812,5 +821,5 @@ stop(): Promise<void>
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise对象，无返回结果。 |
+| Promise&lt;void&gt; | Promise that returns no value. |
 

@@ -1,11 +1,5 @@
 # getTimezoneSync
 
-## 导入模块
-
-```TypeScript
-import { systemDateTime } from 'kits/@kit.BasicServicesKit';
-```
-
 ## getTimezoneSync
 
 ```TypeScript
@@ -29,6 +23,21 @@ function getTimezoneSync(): string
 | string | 返回系统时区。具体可见[支持的系统时区](../../../reference/apis-basic-services-kit/js-apis-date-time.md#支持的系统时区)。 |
 
 ## 示例
+
+ArkTS-Dyn示例：
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+try {
+  let timezone: string = systemDateTime.getTimezoneSync();
+} catch(e) {
+  let error = e as BusinessError;
+  console.error(`Failed to get timezone. message: ${error.message}, code: ${error.code}`);
+}
+```
+
+ArkTS-Sta示例：
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';

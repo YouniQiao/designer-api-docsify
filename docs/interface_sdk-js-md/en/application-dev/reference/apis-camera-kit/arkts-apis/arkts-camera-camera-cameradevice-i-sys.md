@@ -1,6 +1,6 @@
 # CameraDevice
 
-相机设备信息。
+Describes the camera device information.
 
 **Since:** 10
 

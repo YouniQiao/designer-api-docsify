@@ -26,13 +26,12 @@ import { VibrateOptions } from 'kits/@kit.SensorServiceKit';
 static vibrate(options?: VibrateOptions): void
 ```
 
-触发设备振动，根据指定的振动模式执行短振动或长振动效果。该接口通过callback方式返回调用结果。
+Triggers device vibration.
 
-> **说明：**
+> **NOTE：**
 > 
-> 除Lite Wearable外，从API version 8开始，建议使用
-> [vibrator.startVibration()](arkts-sensorservice-vibrator-startvibration-f.md#startvibration)
-> 替代。
+> Except for lite wearables. You are advised to use
+> [vibrator.startVibration()](arkts-sensorservice-vibrator-startvibration-f.md#startvibration) since API version 8.
 
 **Since:** 3
 
@@ -54,5 +53,25 @@ static vibrate(options?: VibrateOptions): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| options | [VibrateOptions](arkts-sensorservice-system-vibrator-vibrateoptions-i.md) | No | 振动配置参数，用于指定振动模式及回调函数。不传时使用默认配置（mode默认为'long'），此时仅触发success和complete回调（无fail回调场景下）。 |
+| options | [VibrateOptions](arkts-sensorservice-system-vibrator-vibrateoptions-i.md) | No | Vibration options. |
+
+## Examples
+
+```TypeScript
+import { Vibrator, VibrateOptions } from '@kit.SensorServiceKit';
+
+let vibrateOptions: VibrateOptions = {
+  mode: 'short',
+  success: () => {
+    console.info('Succeed in vibrating');
+  },
+  fail: (data: string, code: number) => {
+    console.error(`Failed to vibrate. Data: ${data}, code: ${code}`);
+  },
+  complete: () => {
+    console.info('completed in vibrating');
+  }
+};
+Vibrator.vibrate(vibrateOptions);
+```
 

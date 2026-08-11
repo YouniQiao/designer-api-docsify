@@ -1,6 +1,6 @@
 # DpiFollowStrategy (System API)
 
-表示不同类型的DpiFollowStrategy的枚举。
+Enumeration of different types of DpiFollowStrategy.
 
 **Since:** 23
 
@@ -18,7 +18,7 @@
 FOLLOW_HOST_DPI = 0
 ```
 
-表示DPI跟随宿主。
+Followed the host DPI.
 
 **Since:** 23
 
@@ -38,7 +38,7 @@ FOLLOW_HOST_DPI = 0
 FOLLOW_UI_EXTENSION_ABILITY_DPI = 1
 ```
 
-表示DPI跟随UIExtensionAbility。
+Followed the UIExtensionAbility.
 
 **Since:** 23
 

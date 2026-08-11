@@ -1,6 +1,6 @@
 # KeyOptions (System API)
 
-组合键选项。
+Represents combination key options.
 
 **Since:** 8
 
@@ -24,9 +24,9 @@ import { inputConsumer } from 'kits/@kit.InputKit';
 finalKey: int
 ```
 
-最终按键，此项必填，最终按键触发上报回调函数。
+Final key. This parameter is mandatory. A callback is triggered by the final key.
 
-如组合按键Ctrl+Alt+A中，A称为最终按键。
+For example, in the combination keys **Ctrl+Alt+A**, **A** is called the final key.
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
@@ -46,11 +46,11 @@ finalKey: int
 finalKeyDownDuration: int
 ```
 
-最终按键保持按下持续时间，单位为微秒（μs）。
+Duration for holding down the key, in μs.
 
-当finalKeyDownDuration为0时，立即触发回调函数。
+If the value of this field is **0**, a callback is triggered immediately.
 
-当finalKeyDownDuration大于0时，isFinalKeyDown为true，则最终按键按下超过设置时长后触发回调函数；isFinalKeyDown为false，则最终按键按下到抬起时间小于设置时长时触发回调函数。
+If the value of this field is greater than **0** and **isFinalKeyDown** is **true**, a callback is triggered when the key keeps being pressed after the specified duration expires. If **isFinalKeyDown** is **false**, a callback is triggered when the key is released before the specified duration expires.
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
@@ -70,9 +70,9 @@ finalKeyDownDuration: int
 isFinalKeyDown: boolean
 ```
 
-最终按键状态。
+Whether the final key is pressed.
 
-true表示按键按下，false表示按键抬起。
+The value **true** indicates that the key is pressed, and the value **false** indicates the opposite.
 
 **Type:** boolean
 
@@ -92,7 +92,8 @@ true表示按键按下，false表示按键抬起。
 isRepeat?: boolean
 ```
 
-是否上报重复的按键事件。true表示上报，false表示不上报，若不填默认为true。
+Whether to report repeated key events. The value **true** means to report repeated key events, and the value  
+**false** means the opposite. The default value is **true**.
 
 **Type:** boolean
 
@@ -112,9 +113,9 @@ isRepeat?: boolean
 preKeys: Array<int>
 ```
 
-前置按键集合，数量范围[0, 4]，前置按键无顺序要求。
+Preceding key set. The number of preceding keys ranges from 0 to 4. There is no requirement on the sequence of the keys.
 
-如组合按键Ctrl+Alt+A中，Ctrl+Alt称为前置按键。
+For example, in the combination keys **Ctrl+Alt+A**, **Ctrl+Alt** are called preceding keys.
 
 **Type:** ArkTS-Dyn: Array&lt;number&gt;  <br>ArkTS-Sta：Array&lt;int&gt;
 
@@ -134,9 +135,7 @@ preKeys: Array<int>
 triggerType?: KeyCommandTriggerType
 ```
 
-触发模式。取值为PRESSED(1)、REPEAT_PRESSED(2)或ALL_RELEASED(3)。启用命令触发模式。一旦设置此值，isFinalKeyDown和isRepeat将被忽略。对于  
-[inputConsumer.on('key')](inputConsumer.on(type: 'key', keyOptions: KeyOptions, callback: Callback&lt;KeyOptions&gt;))接口该参数是可选参数，对于  
-[inputConsumer.onKey](inputConsumer.onKey(keyOptions: KeyOptions, callback:KeyCommandCallback))接口该参数是必填参数。
+Trigger type, which indicates that the conditions for triggering the callback expected by the shortcut key are met. Once this value is set, isFinalKeyDown and isRepeat will be ignored. This property is only for use in APIs that take KeyCommandCallback as the callback function and must be specified.
 
 **Type:** [KeyCommandTriggerType](arkts-input-inputconsumer-keycommandtriggertype-e-sys.md)
 

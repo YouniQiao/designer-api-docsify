@@ -10,12 +10,6 @@
 
 **系统能力：** SystemCapability.FileManagement.DistributedFileService.CloudSyncManager
 
-## 导入模块
-
-```TypeScript
-import { cloudSyncManager } from 'kits/@kit.CoreFileKit';
-```
-
 ## bothFileCount
 
 ```TypeScript

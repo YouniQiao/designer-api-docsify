@@ -73,11 +73,11 @@ wifi.getCurrentGroup((err, data:wifi.WifiP2pGroupInfo) => {
        console.error("get current P2P group error");
        return;
    }
-  console.info("get current P2P group: " + JSON.stringify(data));
+	console.info("get current P2P group: " + JSON.stringify(data));
 });
 
 wifi.getCurrentGroup().then(data => {
-  console.info("get current P2P group: " + JSON.stringify(data));
+	console.info("get current P2P group: " + JSON.stringify(data));
 });
 ```
 

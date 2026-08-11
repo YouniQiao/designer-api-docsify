@@ -1,6 +1,6 @@
 # ScrollFrameNode
 
-定义Scroll类型的FrameNode。
+Define the Scroll type of FrameNode.
 
 **Inheritance/Implementation:** ScrollFrameNode extends [TypedFrameNode<ScrollAttribute>](TypedFrameNode<ScrollAttribute>)
 
@@ -18,7 +18,7 @@
 abstract initialize(scroller?: Scroller): ScrollAttribute
 ```
 
-初始化Scroll类型的FrameNode。
+Initialize Scroll FrameNode.
 
 **Since:** 23
 
@@ -34,7 +34,7 @@ abstract initialize(scroller?: Scroller): ScrollAttribute
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| scroller | [Scroller](../arkts-components/arkts-arkui-scroller-c.md) | No | scroll的控制器。 |
+| scroller | [Scroller](../arkts-components/arkts-arkui-scroller-c.md) | No | The controller for scroll. |
 
 **Return value:**
 

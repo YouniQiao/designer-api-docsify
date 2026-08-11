@@ -12,19 +12,15 @@ import { LevelMode, ImmersiveMode, LevelOrder } from 'kits/@kit.ArkUI';
 function closeCustomDialog(dialogId: number): void
 ```
 
-关闭自定义弹窗。
+Closes the specified custom dialog box.
 
-> **说明：**
+> **NOTE：**
 > 
-> - 从API version 11开始支持，从API version 18开始废弃，建议使用[closeCustomDialog](arkts-apis-uicontext-promptaction.md#closecustomdialog12-1)替代。
-closeCustomDialog需先通过[UIContext](arkts-apis-uicontext-uicontext.md)中的  
-[getPromptAction](arkts-apis-uicontext-uicontext.md#getpromptaction)方法获取  
-[PromptAction](arkts-apis-uicontext-promptaction.md)对象，然后通过该对象进行调用。且直接使用closeCustomDialog可能导致  
-[UI上下文不明确](../../ui/arkts-global-interface.md#ui上下文不明确)的问题。  
+> - This API is supported since API version 11 and deprecated since API version 18.
+You are advised to use [closeCustomDialog](arkts-apis-uicontext-promptaction.md#closecustomdialog12-1) instead. Before calling this API, you need to obtain the [PromptAction](arkts-apis-uicontext-promptaction.md) object using the [getPromptAction](arkts-apis-uicontext-uicontext.md#getpromptaction) method in [UIContext](arkts-apis-uicontext-uicontext.md). Directly using **closeCustomDialog** can lead to the issue of [ambiguous UI context](../../ui/arkts-global-interface.md#ambiguous-ui-context).  
 > 
-> - 从API version 12开始，可以通过使用[UIContext](arkts-apis-uicontext-uicontext.md)中的
-[getPromptAction](arkts-apis-uicontext-uicontext.md#getpromptaction)方法获取当前UI上下文关联的  
-[PromptAction](arkts-apis-uicontext-promptaction.md)对象。
+> - Since API version 12, you can use the [getPromptAction](arkts-apis-uicontext-uicontext.md#getpromptaction) API
+in [UIContext](arkts-apis-uicontext-uicontext.md) to obtain the [PromptAction](arkts-apis-uicontext-promptaction.md) object associated with the current UI context.
 
 **Since:** 11
 
@@ -46,12 +42,12 @@ closeCustomDialog需先通过[UIContext](arkts-apis-uicontext-uicontext.md)中�
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| dialogId | number | Yes | openCustomDialog返回的对话框id。 |
+| dialogId | number | Yes | ID of the custom dialog box to close. It is returned from **openCustomDialog**. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 100001 | Internal error. |
-| 401 | Parameter error. Possible causes: &lt;br&gt; 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameters types. &lt;br&gt; 3. Parameter verification failed. |
+| [100001](../errorcode-internal.md#100001-internal-error) | Internal error. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: &lt;br&gt; 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameters types. &lt;br&gt; 3. Parameter verification failed. |
 

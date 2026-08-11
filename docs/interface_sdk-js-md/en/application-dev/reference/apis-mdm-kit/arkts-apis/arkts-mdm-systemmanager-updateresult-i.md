@@ -1,6 +1,6 @@
 # UpdateResult
 
-系统更新结果信息。
+Represents the update result information.
 
 **Since:** 12
 
@@ -22,7 +22,7 @@ import { systemManager } from 'kits/@kit.MDMKit';
 errorInfo: ErrorInfo
 ```
 
-系统更新错误信息。
+Error information.
 
 **Type:** [ErrorInfo](arkts-mdm-systemmanager-errorinfo-i.md)
 
@@ -42,7 +42,7 @@ errorInfo: ErrorInfo
 status: UpdateStatus
 ```
 
-系统更新状态。
+System update status.
 
 **Type:** [UpdateStatus](arkts-mdm-systemmanager-updatestatus-e.md)
 
@@ -62,7 +62,7 @@ status: UpdateStatus
 version: string
 ```
 
-系统当前版本号。
+Current version of the system.
 
 **Type:** string
 

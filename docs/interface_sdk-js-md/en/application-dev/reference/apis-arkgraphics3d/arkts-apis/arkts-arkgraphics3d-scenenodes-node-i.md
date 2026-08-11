@@ -1,6 +1,6 @@
 # Node
 
-定义Node接口.
+The 3D scene consists of nodes in a tree hierarchy, where each node implements a Node interface.
 
 **Inheritance/Implementation:** Node extends [SceneResource](arkts-arkgraphics3d-sceneresources-sceneresource-i.md)
 
@@ -18,7 +18,7 @@
 getNodeByPath(path: string): Node | null
 ```
 
-通过路径获取节点.
+Obtains a node by path. If no node is obtained, null is returned.
 
 **Since:** 12
 
@@ -32,13 +32,13 @@ getNodeByPath(path: string): Node | null
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| path | string | Yes | 场景节点层次中的路径。每层之间使用'/'符号进行分割。 |
+| path | string | Yes | Path in the scene node tree. Each layer is separated by a slash (/). |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [Node](arkts-arkgraphics3d-scenenodes-node-i.md) |  |
+| [Node](arkts-arkgraphics3d-scenenodes-node-i.md) | Returns the node object. |
 
 ## children
 
@@ -46,7 +46,8 @@ getNodeByPath(path: string): Node | null
 readonly children: Container<Node>
 ```
 
-节点的子节点，不存在则为空值。为只读属性，表示不能替换整个children容器，但可以通过容器方法操作子节点（如append()、insertAfter()、remove()或clear()）。如果append或insertAfter的节点已存在于容器中，容器会先移除该节点再插入，因此数量不会增加，看似“无效”；添加新节点才会真正增加子节点数量。
+Child node of the node and null if it does not exist.This is a read-only property, indicating that you cannot directly replace the entire children container.However, you can operate the child nodes using container methods like [append](arkts-arkgraphics3d-scenenodes-container-i.md#append),  
+[insertAfter](arkts-arkgraphics3d-scenenodes-container-i.md#insertafter), [remove](arkts-arkgraphics3d-scenenodes-container-i.md#remove), or [clear](arkts-arkgraphics3d-scenenodes-container-i.md#clear).If the node being appended or inserted already exists in the container, it is removed first and then reinserted.As a result, the total number of child nodes remains unchanged, making the operation seem ineffective.The count increases only when a new node is added.
 
 **Type:** [Container](arkts-arkgraphics3d-scenenodes-container-i.md)&lt;[Node](arkts-arkgraphics3d-scenenodes-node-i.md)&gt;
 
@@ -64,7 +65,7 @@ readonly children: Container<Node>
 readonly layerMask: LayerMask
 ```
 
-节点图层掩码.
+Layer mask of a node.
 
 **Type:** [LayerMask](arkts-arkgraphics3d-scenenodes-layermask-i.md)
 
@@ -82,7 +83,7 @@ readonly layerMask: LayerMask
 readonly nodeType: NodeType
 ```
 
-节点类型.
+Node type.
 
 **Type:** [NodeType](arkts-arkgraphics3d-scenenodes-nodetype-e.md)
 
@@ -100,7 +101,7 @@ readonly nodeType: NodeType
 readonly parent: Node | null
 ```
 
-节点的父节点.
+Parent node of the node and null if it does not exist.
 
 **Type:** [Node](arkts-arkgraphics3d-scenenodes-node-i.md) \| null
 
@@ -118,7 +119,7 @@ readonly parent: Node | null
 readonly path: string
 ```
 
-节点路径.
+Node path.
 
 **Type:** string
 
@@ -136,7 +137,7 @@ readonly path: string
 position: Position3
 ```
 
-节点位置, 单位为世界坐标系下的场景单位（例如cm、m、km等）.
+Node position, in scene units of the world coordinate system (for example, cm, m, or km).
 
 **Type:** [Position3](arkts-arkgraphics3d-position3-t.md)
 
@@ -154,7 +155,7 @@ position: Position3
 rotation: Quaternion
 ```
 
-节点旋转.
+Rotation angle of a node.
 
 **Type:** [Quaternion](arkts-arkgraphics3d-scenetypes-quaternion-i.md)
 
@@ -172,7 +173,7 @@ rotation: Quaternion
 scale: Scale3
 ```
 
-节点缩放.
+Node scale.
 
 **Type:** [Scale3](arkts-arkgraphics3d-scale3-t.md)
 
@@ -190,7 +191,7 @@ scale: Scale3
 visible: boolean
 ```
 
-节点可见性标志.
+Whether a node is visible. true if visible, false otherwise.
 
 **Type:** boolean
 

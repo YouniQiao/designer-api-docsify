@@ -12,7 +12,7 @@ import { appManager } from 'kits/@kit.AbilityKit';
 function off(type: 'appForegroundState', observer?: AppForegroundStateObserver): void
 ```
 
-注销应用启动和退出的监听器。
+Unregisters the observer used to listen for application start or exit events.
 
 **Since:** 11
 
@@ -30,17 +30,17 @@ function off(type: 'appForegroundState', observer?: AppForegroundStateObserver):
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'appForegroundState' | Yes | 调用接口类型，固定填'appForegroundState'字符串。 |
-| observer | [AppForegroundStateObserver](arkts-ability-appforegroundstateobserver-i-sys.md) | No | 取消注册的应用启动和退出监听器。 |
+| type | 'appForegroundState' | Yes | Event type. It is fixed at **'appForegroundState'**. |
+| observer | [AppForegroundStateObserver](arkts-ability-appforegroundstateobserver-i-sys.md) | No | Observer used to listen for application start or exit events. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
-| 16000050 | Internal error. |
-| 201 | Permission denied. |
-| 202 | Not system application. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| [16000050](../errorcode-ability.md#16000050-internal-error) | Internal error. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system application. |
 
 ## Examples
 
@@ -83,7 +83,7 @@ try {
 function off(type: 'abilityFirstFrameState', observer?: AbilityFirstFrameStateObserver): void
 ```
 
-取消注册监听Ability首帧绘制完成事件观察者对象。
+Deregisters the observer used to listen for the complete of the first frame rendering of a given ability.
 
 **Since:** 12
 
@@ -101,17 +101,17 @@ function off(type: 'abilityFirstFrameState', observer?: AbilityFirstFrameStateOb
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'abilityFirstFrameState' | Yes | 调用接口类型，固定填'abilityFirstFrameState'字符串。 |
-| observer | [AbilityFirstFrameStateObserver](arkts-ability-appmanager-abilityfirstframestateobserver-t-sys.md) | No | 表示待取消的Ability首帧绘制完成事件观察者对象，不填表示取消所有监听对象。 |
+| type | 'abilityFirstFrameState' | Yes | Event type. It is fixed at **'abilityFirstFrameState'**. |
+| observer | [AbilityFirstFrameStateObserver](arkts-ability-appmanager-abilityfirstframestateobserver-t-sys.md) | No | Callback used for deregistration. If this parameter is left blank , all subscriptions to the specified event are canceled. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
-| 16000050 | Internal error. |
-| 201 | Permission denied. |
-| 202 | Not system application. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| [16000050](../errorcode-ability.md#16000050-internal-error) | Internal error. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system application. |
 
 ## Examples
 

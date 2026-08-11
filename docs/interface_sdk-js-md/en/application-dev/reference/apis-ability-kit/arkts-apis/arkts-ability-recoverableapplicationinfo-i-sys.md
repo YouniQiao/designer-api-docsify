@@ -1,11 +1,11 @@
 # RecoverableApplicationInfo (System API)
 
-预置应用被卸载后可以恢复的预置应用信息，通过接口  
-[bundleManager.getRecoverableApplicationInfo](arkts-ability-bundlemanager-getrecoverableapplicationinfo-f-sys.md#getrecoverableapplicationinfo)获取。
+The module defines the information about a preinstalled application that can be restored after being uninstalled. The information can be obtained through  
+[bundleManager.getRecoverableApplicationInfo](arkts-ability-bundlemanager-getrecoverableapplicationinfo-f-sys.md#getrecoverableapplicationinfo).
 
-> **说明：**
+> **NOTE：**
 > 
-> 本模块为系统接口。
+> The APIs provided by this module are system APIs.
 
 **Since:** 11
 
@@ -23,7 +23,7 @@
 readonly bundleName: string
 ```
 
-应用包的名称。
+Bundle name.
 
 **Type:** string
 
@@ -43,7 +43,7 @@ readonly bundleName: string
 readonly bundleType: bundleManager.BundleType
 ```
 
-标识应用类型。
+Bundle type.
 
 **Type:** bundleManager.BundleType
 
@@ -63,7 +63,7 @@ readonly bundleType: bundleManager.BundleType
 readonly codePaths: Array<string>
 ```
 
-应用程序的安装目录。
+Installation directory of the application.
 
 **Type:** Array&lt;string&gt;
 
@@ -83,7 +83,7 @@ readonly codePaths: Array<string>
 readonly iconId: long
 ```
 
-模块图标的资源ID值。
+ID of the module icon.
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：long
 
@@ -103,7 +103,7 @@ readonly iconId: long
 readonly labelId: long
 ```
 
-模块标签的资源ID值。
+ID of the module label.
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：long
 
@@ -123,7 +123,7 @@ readonly labelId: long
 readonly moduleName: string
 ```
 
-模块名称。
+Module name.
 
 **Type:** string
 
@@ -143,7 +143,7 @@ readonly moduleName: string
 readonly systemApp: boolean
 ```
 
-标识应用是否为系统应用，取值为true表示系统应用，取值为false表示非系统应用。
+Whether the application is a system application. **true** if it is a system application, **false** otherwise.
 
 **Type:** boolean
 

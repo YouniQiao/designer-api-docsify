@@ -1,6 +1,6 @@
 # FusionPressureResponse
 
-融合压力传感器数据，继承于[Response](arkts-sensorservice-sensor-response-i.md)。
+Describes the fusion pressure sensor data. It extends from [Response](arkts-sensorservice-sensor-response-i.md).
 
 **Inheritance/Implementation:** FusionPressureResponse extends [Response](arkts-sensorservice-sensor-response-i.md)
 
@@ -24,7 +24,7 @@ import { sensor } from 'kits/@kit.SensorServiceKit';
 fusionPressure: double
 ```
 
-融合压力值，表示施加在融合压力传感器上的压力值百分比。单位：%（百分比）。
+Pressure percentage on the fused pressure sensor, in percentage (%)
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：double
 

@@ -1,6 +1,6 @@
 # SmartGestureShortcutOptions
 
-智慧手势响应行为配置对象。
+Smart gesture response behavior configuration object.
 
 **Since:** 26.0.0
 
@@ -16,9 +16,9 @@
 action?: GestureShortcut
 ```
 
-智慧手势响应优先级。当前仅支持GestureShortcut.PRIMARY。
+Smart gesture response priority. Currently only **GestureShortcut.PRIMARY** is supported, indicating the component serves as the preferred response target for smart gesture operations such as swiping and clicking.
 
-当未显式传入该参数或参数异常时，会清空当前组件的智慧手势响应行为配置。
+Default value: **GestureShortcut.PRIMARY**.
 
 **Type:** [GestureShortcut](../arkts-apis/arkts-arkui-gestureshortcut-e.md)
 
@@ -40,11 +40,13 @@ action?: GestureShortcut
 enabled?: boolean
 ```
 
-当前组件是否响应智慧手势。
+Whether the current component responds to smart gestures.
 
-true表示组件响应智慧手势，false表示组件不响应智慧手势。
+**true**: The component responds to smart gestures.
 
-默认值为false。
+**false**: The component does not respond to smart gestures.
+
+Default value: **false**.
 
 **Type:** boolean
 
@@ -66,11 +68,14 @@ true表示组件响应智慧手势，false表示组件不响应智慧手势。
 selectable?: boolean
 ```
 
-组件被智慧手势操作选中后是否展示并保留选中态。
+Whether to display and retain the selected state after the component is selected by a smart gesture operation.
 
-true表示显示选中框，false表示不显示选中框。
+**true**: Show the selection indicator.
 
-当enabled为true时，默认值为true；当enabled为false时，默认值为false。
+**false**: Do not show the selection indicator.
+
+When **enabled** is **true**, the default value is **true**; when **enabled** is **false**, the default value is  
+**false**.
 
 **Type:** boolean
 

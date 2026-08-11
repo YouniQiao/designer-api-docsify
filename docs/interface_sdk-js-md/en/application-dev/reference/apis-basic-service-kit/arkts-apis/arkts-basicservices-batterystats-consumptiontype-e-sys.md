@@ -1,6 +1,6 @@
 # ConsumptionType (System API)
 
-表示电量消耗类型的枚举值。
+Enumerates power consumption types.
 
 **Since:** 8
 
@@ -18,7 +18,7 @@
 CONSUMPTION_TYPE_INVALID = -17
 ```
 
-表示电量消耗类型未知。
+Unknown type.
 
 **Since:** 8
 
@@ -36,7 +36,7 @@ CONSUMPTION_TYPE_INVALID = -17
 CONSUMPTION_TYPE_APP
 ```
 
-表示应用消耗的电量类型。
+Power consumption of an application.
 
 **Since:** 8
 
@@ -54,7 +54,7 @@ CONSUMPTION_TYPE_APP
 CONSUMPTION_TYPE_BLUETOOTH
 ```
 
-表示蓝牙消耗的电量类型。
+Power consumption of Bluetooth.
 
 **Since:** 8
 
@@ -72,7 +72,7 @@ CONSUMPTION_TYPE_BLUETOOTH
 CONSUMPTION_TYPE_IDLE
 ```
 
-表示CPU空闲时消耗的电量类型。
+Power consumption when the CPU is idle.
 
 **Since:** 8
 
@@ -90,7 +90,7 @@ CONSUMPTION_TYPE_IDLE
 CONSUMPTION_TYPE_PHONE
 ```
 
-表示通话来电消耗的电量类型。
+Power consumption of a phone call.
 
 **Since:** 8
 
@@ -108,7 +108,7 @@ CONSUMPTION_TYPE_PHONE
 CONSUMPTION_TYPE_RADIO
 ```
 
-表示无线通讯消耗的电量类型。
+Power consumption of wireless communication.
 
 **Since:** 8
 
@@ -126,7 +126,7 @@ CONSUMPTION_TYPE_RADIO
 CONSUMPTION_TYPE_SCREEN
 ```
 
-表示屏幕消耗的电量类型。
+Power consumption of the screen.
 
 **Since:** 8
 
@@ -144,7 +144,7 @@ CONSUMPTION_TYPE_SCREEN
 CONSUMPTION_TYPE_USER
 ```
 
-表示用户消耗的电量类型。
+Power consumption of the user.
 
 **Since:** 8
 
@@ -162,7 +162,7 @@ CONSUMPTION_TYPE_USER
 CONSUMPTION_TYPE_WIFI
 ```
 
-表示无线网消耗的电量类型。
+Power consumption of Wi-Fi.
 
 **Since:** 8
 

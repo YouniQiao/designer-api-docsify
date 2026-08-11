@@ -12,12 +12,6 @@
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 
-## 导入模块
-
-```TypeScript
-import { insightIntent } from 'kits/@kit.AbilityKit';
-```
-
 ## 汇总
 
 ### 类

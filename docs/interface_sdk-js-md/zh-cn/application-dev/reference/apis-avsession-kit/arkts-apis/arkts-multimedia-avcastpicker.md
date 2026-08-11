@@ -3,12 +3,6 @@
 投播组件
 
 
-## 导入模块
-
-```TypeScript
-import { AVCastPicker } from 'kits/@kit.AVSessionKit';
-```
-
 ## 汇总
 
 ### 结构体

@@ -4,7 +4,7 @@
 declare type Filter = import('../api/@ohos.graphics.uiEffect').default.Filter
 ```
 
-导入Filter类型对象。
+Represents a filter object.
 
 **Since:** 12
 

@@ -1,10 +1,11 @@
 # ModuleInfo
 
-应用程序的模块信息。
+The ModuleInfo module provides module information of an application.
 
-> **说明：**
+> **NOTE：**
 > 
-> 从API version 9开始，该模块不再维护，建议使用[bundleManager-HapModuleInfo](arkts-ability-hapmoduleinfo-i.md)替代。
+> The APIs of this module have been deprecated since API version 9. You are advised to use
+> [bundleManager-HapModuleInfo](arkts-ability-hapmoduleinfo-i.md) instead.
 
 **Since:** 7
 
@@ -24,7 +25,7 @@
 readonly moduleName: string
 ```
 
-模块名称。
+The module name.
 
 **Type:** string
 
@@ -48,7 +49,7 @@ readonly moduleName: string
 readonly moduleSourceDir: string
 ```
 
-安装目录。不能拼接路径访问资源文件，请使用[资源管理接口](../../apis-localization-kit/arkts-apis/arkts-resourcemanager.md/arkts-resourcemanager.md)访问资源。
+The module source path.
 
 **Type:** string
 

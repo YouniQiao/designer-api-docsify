@@ -1,9 +1,11 @@
 # DriverExtensionContext
 
-DriverExtensionContext模块是DriverExtensionAbility的上下文环境，继承自ExtensionContext。DriverExtensionContext模块提供DriverExtensionAbility实现中需要主动发起的操作。
+The **DriverExtensionContext** module provides the context of **DriverExtensionAbility**. It inherits from  
+**ExtensionContext**.The **DriverExtensionContext** module provides the operations that need to be actively initiated in the  
+**DriverExtensionAbility** implementation.
 
-> **说明：**
-> - 本模块接口仅可在Stage模型下使用。
+> **NOTE：**
+> - The APIs of this module can be used only in the stage model.
 
 **Inheritance/Implementation:** DriverExtensionContext extends [ExtensionContext](../../apis-ability-kit/arkts-apis/arkts-ability-extensioncontext-c.md/arkts-ability-extensioncontext-c.md)
 
@@ -21,7 +23,7 @@ DriverExtensionContext模块是DriverExtensionAbility的上下文环境，继承
 updateDriverState(): void
 ```
 
-驱动状态上报。预留接口，暂不提供具体功能。
+Updates the driver state. This interface is reserved and does not provide specific functionality currently.
 
 **Since:** 10
 

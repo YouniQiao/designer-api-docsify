@@ -1,7 +1,7 @@
 # OH_Huks_KeyMaterialDsa
 
 ```c
-struct OH_Huks_KeyMaterialDsa {...}
+typedef struct OH_Huks_KeyMaterialDsa {...} OH_Huks_KeyMaterialDsa
 ```
 
 ## Overview

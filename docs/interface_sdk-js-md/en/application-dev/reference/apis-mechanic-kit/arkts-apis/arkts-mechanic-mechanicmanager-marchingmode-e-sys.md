@@ -1,6 +1,6 @@
 # MarchingMode (System API)
 
-行进模式定义
+Marching mode definition.
 
 **Since:** 26.0.0
 
@@ -18,7 +18,7 @@
 TURN_THEN_MOVE = 0
 ```
 
-先转动再移动
+Turn first, then move.
 
 **Since:** 26.0.0
 
@@ -36,7 +36,7 @@ TURN_THEN_MOVE = 0
 TURNING_MOVING = 1
 ```
 
-边移动边转动
+Move and rotate simultaneously.
 
 **Since:** 26.0.0
 

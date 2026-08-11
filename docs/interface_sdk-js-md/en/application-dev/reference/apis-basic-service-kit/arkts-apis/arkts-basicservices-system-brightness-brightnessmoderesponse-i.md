@@ -1,6 +1,6 @@
 # BrightnessModeResponse
 
-包含屏幕亮度模式的对象。
+Defines a response that returns the screen brightness mode.
 
 **Since:** 3
 
@@ -24,7 +24,7 @@ import { BrightnessResponse, BrightnessModeResponse, SetBrightnessModeOptions, G
 mode: number
 ```
 
-0表示手动调节屏幕亮度模式，1表示自动调节屏幕亮度模式。
+The value **0** indicates the manual adjustment mode, and the value **1** indicates the automatic adjustment mode.
 
 **Type:** number
 

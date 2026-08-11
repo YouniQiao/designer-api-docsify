@@ -24,7 +24,7 @@ import { UploadResponse, RequestData, DownloadRequestOptions, DownloadResponse, 
 static download(options: DownloadRequestOptions): void
 ```
 
-下载文件，无返回值。
+Downloads a file. This API returns no value.
 
 **Since:** 3
 
@@ -42,7 +42,7 @@ static download(options: DownloadRequestOptions): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| options | [DownloadRequestOptions](arkts-basicservices-system-request-downloadrequestoptions-i.md) | Yes | 下载的配置信息。 |
+| options | [DownloadRequestOptions](arkts-basicservices-system-request-downloadrequestoptions-i.md) | Yes | Download configurations. |
 
 ## onDownloadComplete
 
@@ -50,7 +50,7 @@ static download(options: DownloadRequestOptions): void
 static onDownloadComplete(options: OnDownloadCompleteOptions): void
 ```
 
-获取下载任务状态，无返回值。
+Listens for download task status. This API returns no value.
 
 **Since:** 3
 
@@ -68,7 +68,7 @@ static onDownloadComplete(options: OnDownloadCompleteOptions): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| options | [OnDownloadCompleteOptions](arkts-basicservices-system-request-ondownloadcompleteoptions-i.md) | Yes | 监听下载任务的配置信息。 |
+| options | [OnDownloadCompleteOptions](arkts-basicservices-system-request-ondownloadcompleteoptions-i.md) | Yes | Configurations of the download task. |
 
 ## upload
 
@@ -76,7 +76,7 @@ static onDownloadComplete(options: OnDownloadCompleteOptions): void
 static upload(options: UploadRequestOptions): void
 ```
 
-上传文件，无返回值。
+Uploads a file. This API returns no value.
 
 **Since:** 3
 
@@ -94,5 +94,5 @@ static upload(options: UploadRequestOptions): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| options | [UploadRequestOptions](arkts-basicservices-system-request-uploadrequestoptions-i.md) | Yes | 上传的配置信息。 |
+| options | [UploadRequestOptions](arkts-basicservices-system-request-uploadrequestoptions-i.md) | Yes | Upload configurations. |
 

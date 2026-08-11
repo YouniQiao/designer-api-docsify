@@ -19,12 +19,6 @@ LiteResultSet实例不会实时刷新。使用结果集后，如果数据库中�
 
 **系统能力：** SystemCapability.DistributedDataManager.RelationalStore.Core
 
-## 导入模块
-
-```TypeScript
-import { relationalStore } from 'kits/@kit.ArkData';
-```
-
 ## getFloat32Array
 
 ArkTS-Dyn:
@@ -67,8 +61,8 @@ getFloat32Array(columnIndex: int): Float32Array
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 14800041 | Type conversion failed. |
-| 14800013 | Column index is out of bounds. |
-| 14800012 | ResultSet is empty or pointer index is out of bounds. |
-| 14800014 | The target instance is already closed. |
+| [14800041](../errorcode-data-rdb.md#14800041-类型转换失败) | Type conversion failed. |
+| [14800013](../errorcode-data-rdb.md#14800013-列号越界或列类型与当前调用接口不兼容) | Column index is out of bounds. |
+| [14800012](../errorcode-data-rdb.md#14800012-结果集为空或指定位置不合法) | ResultSet is empty or pointer index is out of bounds. |
+| [14800014](../errorcode-data-rdb.md#14800014-目标实例已关闭) | The target instance is already closed. |
 

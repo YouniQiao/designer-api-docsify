@@ -4,7 +4,7 @@
 type ValuesBucket = collections.Map<string, ValueType>
 ```
 
-表示[ValueType](arkts-arkdata-sendablerelationalstore-valuetype-t.md)数据的键值对存储，用于支持ValueType数据跨线程传递。
+Represents the KV pair of the [ValueType](arkts-arkdata-sendablerelationalstore-valuetype-t.md) data that can be passed across threads.
 
 **Since:** 12
 

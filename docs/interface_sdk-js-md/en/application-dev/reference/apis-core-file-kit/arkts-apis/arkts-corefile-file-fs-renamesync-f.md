@@ -12,11 +12,11 @@ import { Options, ReaderIteratorResult, Watcher, ReadTextOptions, WatchEventList
 declare function renameSync(oldPath: string, newPath: string): void
 ```
 
-以同步方法重命名文件或目录。
+Renames a file or directory. This API returns the result synchronously.
 
-> **说明：**
+> **NOTE：**
 > 
-> 该接口不支持在分布式文件路径下操作。
+> This API is not supported in a distributed directory.
 
 **Since:** 9
 
@@ -32,8 +32,8 @@ declare function renameSync(oldPath: string, newPath: string): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| oldPath | string | Yes | 文件的应用沙箱原路径。 |
-| newPath | string | Yes | 文件的应用沙箱新路径。 |
+| oldPath | string | Yes | Application sandbox path of the file or directory to rename. |
+| newPath | string | Yes | Application sandbox path of the renamed file or directory. |
 
 **Error codes:**
 

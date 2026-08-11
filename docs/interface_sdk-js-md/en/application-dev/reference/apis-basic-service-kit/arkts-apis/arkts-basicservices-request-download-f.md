@@ -12,7 +12,7 @@ import { request } from 'kits/@kit.BasicServicesKit';
 function download(config: DownloadConfig, callback: AsyncCallback<DownloadTask>): void
 ```
 
-创建并启动一个下载任务，使用callback异步回调。
+Downloads a file. This API uses an asynchronous callback to return the result.
 
 **Since:** 6
 
@@ -34,14 +34,14 @@ function download(config: DownloadConfig, callback: AsyncCallback<DownloadTask>)
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| config | [DownloadConfig](arkts-basicservices-request-downloadconfig-i.md) | Yes | 下载的配置信息。 |
-| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;DownloadTask&gt; | Yes | 回调函数。当下载任务成功，err为undefined，data为获取到的DownloadTask对象；否则为错误对象。 |
+| config | [DownloadConfig](arkts-basicservices-request-downloadconfig-i.md) | Yes | Download configuration. |
+| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;DownloadTask&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined** and **data** is the **DownloadTask** object obtained. Otherwise, **err** is an error object. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 201 | The permissions check fails. |
+| [201](../../errorcode-universal.md#201-permission-denied) | The permissions check fails. |
 
 ## Examples
 
@@ -65,7 +65,7 @@ filePath: 'xxx/xxxxx.hap'}, (err: BusinessError, data: request.DownloadTask) => 
 function download(config: DownloadConfig): Promise<DownloadTask>
 ```
 
-创建并启动一个下载任务，使用Promise异步回调。
+Downloads a file. This API uses a promise to return the result.
 
 **Since:** 6
 
@@ -87,19 +87,19 @@ function download(config: DownloadConfig): Promise<DownloadTask>
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| config | [DownloadConfig](arkts-basicservices-request-downloadconfig-i.md) | Yes | 下载的配置信息。 |
+| config | [DownloadConfig](arkts-basicservices-request-downloadconfig-i.md) | Yes | Download configuration. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;DownloadTask&gt; | 使用Promise方式，异步返回下载任务DownloadTask的Promise对象。 |
+| Promise&lt;DownloadTask&gt; | Promise used to return the **DownloadTask** object. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 201 | The permissions check fails. |
+| [201](../../errorcode-universal.md#201-permission-denied) | The permissions check fails. |
 
 ## Examples
 

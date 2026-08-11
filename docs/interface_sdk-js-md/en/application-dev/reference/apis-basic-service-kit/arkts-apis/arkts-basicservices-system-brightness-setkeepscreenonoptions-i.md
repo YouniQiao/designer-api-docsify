@@ -1,6 +1,6 @@
 # SetKeepScreenOnOptions
 
-设置屏幕常亮的参数对象。
+Options for setting the screen to be steady on.
 
 **Since:** 3
 
@@ -24,7 +24,7 @@ import { BrightnessResponse, BrightnessModeResponse, SetBrightnessModeOptions, G
 complete?: () => void
 ```
 
-接口调用结束的回调函数。
+Called when an API call is complete.
 
 **Since:** 3
 
@@ -42,7 +42,7 @@ complete?: () => void
 fail?: (data: string, code: number) => void
 ```
 
-接口调用失败的回调函数。data为错误信息，code为错误码。
+Called when an API call has failed. **data** indicates the error information, and **code** indicates the error code.
 
 **Since:** 3
 
@@ -67,7 +67,7 @@ fail?: (data: string, code: number) => void
 success?: () => void
 ```
 
-接口调用成功的回调函数。
+Called when an API call is successful.
 
 **Since:** 3
 
@@ -85,7 +85,7 @@ success?: () => void
 keepScreenOn: boolean
 ```
 
-true表示保持屏幕常亮，false表示取消屏幕常亮。
+The value **true** means to keep the screen steady on, and the value **false** indicates the opposite.
 
 **Type:** boolean
 

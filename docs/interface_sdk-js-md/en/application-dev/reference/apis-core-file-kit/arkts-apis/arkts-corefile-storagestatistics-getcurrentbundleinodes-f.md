@@ -12,7 +12,7 @@ import { storageStatistics } from 'kits/@kit.CoreFileKit';
 function getCurrentBundleInodes(): Promise<long>
 ```
 
-获取当前应用的inode占用量，使用Promise异步回调。
+Get the current bundle inodes.
 
 **Since:** 24
 
@@ -28,7 +28,7 @@ function getCurrentBundleInodes(): Promise<long>
 
 | Type | Description |
 | --- | --- |
-| ArkTS-Dyn: Promise&lt;number&gt;  <br>ArkTS-Sta：Promise&lt;long&gt; | Promise对象，返回当前应用的inode占用量。 |
+| ArkTS-Dyn: Promise&lt;number&gt;  <br>ArkTS-Sta：Promise&lt;long&gt; | return Promise |
 
 **Error codes:**
 

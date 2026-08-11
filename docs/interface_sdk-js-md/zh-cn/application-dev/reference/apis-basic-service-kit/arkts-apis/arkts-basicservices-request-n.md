@@ -13,12 +13,6 @@ request模块给应用提供上传下载文件、后台代理传输的基础功�
 **系统能力：** 
 - API版本10+：SystemCapability.Request.FileTransferAgent
 
-## 导入模块
-
-```TypeScript
-import { request } from 'kits/@kit.BasicServicesKit';
-```
-
 ## 汇总
 
 ### 命名空间

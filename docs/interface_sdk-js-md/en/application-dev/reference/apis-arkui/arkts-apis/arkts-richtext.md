@@ -6,11 +6,11 @@
 
 | Name | Description |
 | --- | --- |
-| [RichText](arkts-arkui-richtext-richtext-f.md#richtext) | 定义RichText组件。 |
+| [RichText](arkts-arkui-richtext-richtext-f.md#richtext) | Defines RichText Component. |
 
 ### Interfaces
 
 | Name | Description |
 | --- | --- |
-| [RichTextAttribute](arkts-arkui-richtext-richtextattribute-i.md) | 定义RichText属性函数。 |
+| [RichTextAttribute](arkts-arkui-richtext-richtextattribute-i.md) | Defines the RichText attribute functions. |
 

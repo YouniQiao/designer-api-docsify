@@ -12,7 +12,7 @@ import { batteryInfo } from 'kits/@kit.BasicServicesKit';
 function estimatedRemainingChargeTime(): long
 ```
 
-获取当前设备充满电的预估时间，单位毫秒。
+Estimated time for fully charging the current device, in unit of milliseconds. This is a system API.
 
 **Since:** 23
 
@@ -28,5 +28,5 @@ function estimatedRemainingChargeTime(): long
 
 | Type | Description |
 | --- | --- |
-| long | 返回当前设备充满电的预估时间，单位毫秒。 |
+| long | Returns the estimated remaining time for the current device to be fully charged, in ms. |
 

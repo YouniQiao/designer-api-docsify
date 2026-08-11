@@ -1,7 +1,5 @@
 # BundleStatsInfo (System API)
 
-FA模型的使用信息属性集合。
-
 **Since:** 9
 
 **ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
@@ -24,7 +22,7 @@ import { usageStatistics } from 'kits/@kit.BackgroundTasksKit';
 abilityInFgTotalTime?: long
 ```
 
-应用在前台可见的总时间，单位：ms。
+The total duration, in milliseconds.&lt;br&gt; Unit:ms
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：long
 
@@ -44,7 +42,7 @@ abilityInFgTotalTime?: long
 abilityPrevAccessTime?: long
 ```
 
-应用最后一次使用的时间，单位：ms。
+The last time when the application was accessed, in milliseconds.&lt;br&gt; Unit:ms
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：long
 
@@ -64,7 +62,7 @@ abilityPrevAccessTime?: long
 abilityPrevSeenTime?: long
 ```
 
-应用最后一次在前台可见的时间，单位：ms。
+The last time when the application was visible in the foreground, in milliseconds.&lt;br&gt; Unit:ms
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：long
 
@@ -84,7 +82,7 @@ abilityPrevSeenTime?: long
 abilitySeenTotalTime?: long
 ```
 
-应用在前台可见的总时间，单位：ms。
+The total duration, in milliseconds.&lt;br&gt; Unit:ms
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：long
 
@@ -104,7 +102,7 @@ abilitySeenTotalTime?: long
 appIndex?: int
 ```
 
-应用程序的索引。
+The app index of the application.
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
@@ -124,7 +122,7 @@ appIndex?: int
 bundleName?: string
 ```
 
-应用包名。
+The bundle name of the application.
 
 **Type:** string
 
@@ -144,7 +142,7 @@ bundleName?: string
 fgAbilityAccessTotalTime?: long
 ```
 
-应用在前台可见的总时间，单位：ms。
+The total duration, in milliseconds.&lt;br&gt; Unit:ms
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：long
 
@@ -164,7 +162,7 @@ fgAbilityAccessTotalTime?: long
 fgAbilityPrevAccessTime?: long
 ```
 
-应用最后一次访问前台的时间，单位：ms。
+The last time when the foreground application was accessed, in milliseconds.&lt;br&gt; Unit:ms
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：long
 
@@ -184,7 +182,7 @@ fgAbilityPrevAccessTime?: long
 id: int
 ```
 
-用户id。
+The identifier of BundleStatsInfo.
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
@@ -204,7 +202,7 @@ id: int
 infosBeginTime?: long
 ```
 
-BundleActiveInfo对象中第一条应用使用统计的记录时间，单位：ms。
+The time of the first bundle usage record in this {@code BundleActiveInfo} object,in milliseconds.&lt;br&gt; Unit:ms
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：long
 
@@ -224,7 +222,7 @@ BundleActiveInfo对象中第一条应用使用统计的记录时间，单位：m
 infosEndTime?: long
 ```
 
-BundleActiveInfo对象中最后一条应用使用统计的记录时间，单位：ms。
+The time of the last bundle usage record in this {@code BundleActiveInfo} object,in milliseconds.&lt;br&gt; Unit:ms
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：long
 

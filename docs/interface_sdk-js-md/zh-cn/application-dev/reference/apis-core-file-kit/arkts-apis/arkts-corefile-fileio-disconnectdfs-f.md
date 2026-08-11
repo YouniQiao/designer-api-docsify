@@ -1,11 +1,5 @@
 # disconnectDfs
 
-## 导入模块
-
-```TypeScript
-import { Options, ReaderIteratorResult, Watcher, ReadTextOptions, WatchEventListener, TaskSignal, WriteOptions, ListFileExtOptions, DfsListeners, Filter, ReadOptions, ListFileOptions, WatchEvent, FileFilter, ConflictFiles } from 'kits/@kit.CoreFileKit';
-```
-
 ## disconnectDfs
 
 ```TypeScript
@@ -40,7 +34,7 @@ function disconnectDfs(networkId: string): Promise<void>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 401 | The parameter check failed.Possible causes:1.Mandatory parameters are left unspecified; &lt;br&gt;2.Incorrect parameter types. |
-| 201 | Permission denied. |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | The parameter check failed.Possible causes:1.Mandatory parameters are left unspecified; &lt;br&gt;2.Incorrect parameter types. |
+| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
 | 13600004 | Unmount failed. |
 

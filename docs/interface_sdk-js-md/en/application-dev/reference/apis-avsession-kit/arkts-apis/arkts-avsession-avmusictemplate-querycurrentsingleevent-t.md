@@ -4,7 +4,7 @@
 type QueryCurrentSingleEvent = () => Promise<Single>
 ```
 
-当前单曲查询事件。使用Promise异步回调。
+The query current single event.
 
 **Since:** 23
 

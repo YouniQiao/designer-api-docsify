@@ -1,6 +1,6 @@
 # ChangeInfo
 
-记录端云同步过程详情。
+Defines a struct for the details about the device-cloud sync process.
 
 **Since:** 10
 
@@ -22,7 +22,7 @@ import { relationalStore } from 'kits/@kit.ArkData';
 deleted: Array<string> | Array<long>
 ```
 
-记录删除数据的位置，如果该表的主键是string类型，该值是主键的值，否则该值表示删除数据的行号。
+Location where data is deleted. If the primary key of the table is of the string type, it is the value of the primary key. Otherwise, it is the row number of the deleted data.
 
 **Type:** ArkTS-Dyn: Array&lt;string&gt; \| Array&lt;number&gt;  <br>ArkTS-Sta：Array&lt;string&gt; \| Array&lt;long&gt;
 
@@ -40,7 +40,7 @@ deleted: Array<string> | Array<long>
 inserted: Array<string> | Array<long>
 ```
 
-记录插入数据的位置，如果该表的主键是string类型，该值是主键的值，否则该值表示插入数据的行号。
+Location where data is inserted. If the primary key of the table is of the string type, it is the value of the primary key. Otherwise, it is the row number of the inserted data.
 
 **Type:** ArkTS-Dyn: Array&lt;string&gt; \| Array&lt;number&gt;  <br>ArkTS-Sta：Array&lt;string&gt; \| Array&lt;long&gt;
 
@@ -58,7 +58,7 @@ inserted: Array<string> | Array<long>
 table: string
 ```
 
-表示发生变化的表的名称。
+Name of the table with data changes.
 
 **Type:** string
 
@@ -76,7 +76,7 @@ table: string
 type: ChangeType
 ```
 
-表示发生变化的数据的类型，数据或者资产附件发生变化。
+Type of the data changed, which can be data or asset.
 
 **Type:** [ChangeType](arkts-arkdata-relationalstore-changetype-e.md)
 
@@ -94,7 +94,7 @@ type: ChangeType
 updated: Array<string> | Array<long>
 ```
 
-记录更新数据的位置，如果该表的主键是string类型，该值是主键的值，否则该值表示更新数据的行号。
+Location where data is updated. If the primary key of the table is of the string type, it is the value of the primary key. Otherwise, it is the row number of the updated data.
 
 **Type:** ArkTS-Dyn: Array&lt;string&gt; \| Array&lt;number&gt;  <br>ArkTS-Sta：Array&lt;string&gt; \| Array&lt;long&gt;
 

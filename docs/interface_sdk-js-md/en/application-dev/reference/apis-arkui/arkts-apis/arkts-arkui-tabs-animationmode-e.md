@@ -1,6 +1,6 @@
 # AnimationMode
 
-点击[TabBar](../../../reference/apis-arkui/arkui-ts/ts-container-tabcontent.md#tabbar)页签时切换TabContent的动画形式枚举。
+Declare the animation mode of tab content.
 
 **Since:** 23
 
@@ -16,7 +16,7 @@
 CONTENT_FIRST = 0
 ```
 
-先加载目标页内容，再开始切换动画。
+Load the content of the target page before starting the switching animation.
 
 **Since:** 23
 
@@ -34,7 +34,7 @@ CONTENT_FIRST = 0
 ACTION_FIRST = 1
 ```
 
-先开始切换动画，再加载目标页内容；生效需要同时需要满足：Tabs的height、width没有设置成auto。
+Start the switching animation before loading the content of the target page.
 
 **Since:** 23
 
@@ -52,9 +52,7 @@ ACTION_FIRST = 1
 NO_ANIMATION = 2
 ```
 
-关闭默认动画。调用TabsController的[changeIndex](../arkts-components/arkts-arkui-tabscontroller-c.md/arkts-arkui-tabscontroller-c.md#changeindex)接口切换TabContent时该枚举值不生效。
-
-可以通过设置[animationDuration](TabsAttribute.animationDuration)为0实现调用TabsController的changeIndex接口时不带动画。
+Disable the default switching animation.
 
 **Since:** 23
 
@@ -72,7 +70,7 @@ NO_ANIMATION = 2
 CONTENT_FIRST_WITH_JUMP = 3
 ```
 
-先加载目标页内容，再无动画跳转到目标页附近，最后有动画跳转到目标页。
+Load the content of the target page first, then jump to the vicinity of the target page without animation,and finally jump to the target page with animation.
 
 **Since:** 23
 
@@ -90,7 +88,7 @@ CONTENT_FIRST_WITH_JUMP = 3
 ACTION_FIRST_WITH_JUMP = 4
 ```
 
-先无动画跳转到目标页附近，再有动画跳转到目标页，最后加载目标页内容。此项生效需要同时需要满足：Tabs的height、width没有设置成auto。
+Jump to the vicinity of the target page without animation first,then jump to the target page with animation, and finally load the content of the target page.
 
 **Since:** 23
 

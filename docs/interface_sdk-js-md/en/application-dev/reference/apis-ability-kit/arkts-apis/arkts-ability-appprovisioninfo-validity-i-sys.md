@@ -1,6 +1,6 @@
 # Validity (System API)
 
-配置文件中的有效期。
+Validity period in the configuration file.
 
 **Since:** 10
 
@@ -18,7 +18,7 @@
 readonly notAfter: long
 ```
 
-表示配置文件有效期的结束时间，单位：秒。
+End time of the validity period of the configuration file.
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：long
 
@@ -38,7 +38,7 @@ readonly notAfter: long
 readonly notBefore: long
 ```
 
-表示配置文件有效期的开始时间，单位：秒。
+Start time of the validity period of the configuration file.
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：long
 

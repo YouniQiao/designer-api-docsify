@@ -1,6 +1,6 @@
 # CustomEnvKey
 
-自定义环境变量的Key的类型。
+Defines the custom environment Key.
 
 **Since:** 26.0.0
 
@@ -16,7 +16,7 @@
 protected constructor()
 ```
 
-用于创建该类的实例对象。
+constructor.
 
 **Since:** 26.0.0
 
@@ -36,7 +36,7 @@ protected constructor()
 static create<T>(): CustomEnvKey<T>
 ```
 
-创建一个自定义环境变量Key，作为\@CustomEnv装饰器的参数。
+create CustomEnvKey
 
 **Since:** 26.0.0
 
@@ -54,7 +54,7 @@ static create<T>(): CustomEnvKey<T>
 
 | Type | Description |
 | --- | --- |
-| [CustomEnvKey](arkts-arkui-customenvkey-c.md)&lt;T&gt; | 自定义环境变量Key，用于标识要获取的自定义环境变量。 |
+| [CustomEnvKey](arkts-arkui-customenvkey-c.md)&lt;T&gt; | CustomEnvKey |
 
 ## type
 
@@ -62,7 +62,7 @@ static create<T>(): CustomEnvKey<T>
 private type?: S
 ```
 
-自定义环境变量Key的类型。
+The corresponding type of the custom env key.
 
 **Type:** S
 

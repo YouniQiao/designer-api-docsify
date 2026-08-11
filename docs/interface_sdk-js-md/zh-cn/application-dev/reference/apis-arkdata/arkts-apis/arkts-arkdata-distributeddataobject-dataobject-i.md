@@ -10,12 +10,6 @@
 
 **系统能力：** SystemCapability.DistributedDataManager.DataObject.DistributedObject
 
-## 导入模块
-
-```TypeScript
-import { distributedDataObject } from 'kits/@kit.ArkData';
-```
-
 ## bindAssetStore
 
 ```TypeScript
@@ -46,10 +40,12 @@ bindAssetStore(assetKey: string, bindInfo: BindInfo, callback: AsyncCallback<voi
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types. |
-| 801 | Capability not supported. |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types. |
+| [801](../../errorcode-universal.md#801-该设备不支持此api) | Capability not supported. |
 
 ## 示例
+
+ArkTS-Dyn示例：
 
 ```TypeScript
 import { UIAbility } from '@kit.AbilityKit';
@@ -97,7 +93,61 @@ class EntryAbility extends UIAbility {
     g_object.bindAssetStore('attachment', bindInfo, (err: BusinessError) => {
       if (err) {
         console.error(`Failed to bind asset store. Code: ${err.code}, message: ${err.message}`);
-        return;
+      }
+      console.info('bindAssetStore success.');
+    });
+  }
+}
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+import { UIAbility } from '@kit.AbilityKit';
+import { window } from '@kit.ArkUI';
+import commonType from '@ohos.data.commonType';
+import distributedDataObject from '@ohos.data.distributedDataObject';
+
+class Note {
+  title: string
+  text: string
+  attachment: commonType.Asset
+
+  constructor(title: string, text: string, attachment: commonType.Asset) {
+    this.title = title;
+    this.text = text;
+    this.attachment = attachment;
+  }
+}
+
+class EntryAbility extends UIAbility {
+  onWindowStageCreate(windowStage: window.WindowStage) {
+    let attachment: commonType.Asset = {
+      name: 'test_img.jpg',
+      uri: 'file://com.example.myapplication/data/storage/el2/distributedfiles/dir/test_img.jpg',
+      path: '/dir/test_img.jpg',
+      createTime: '2024-01-02 10:00:00',
+      modifyTime: '2024-01-02 10:00:00',
+      size: '5',
+      status: commonType.AssetStatus.ASSET_NORMAL
+    }
+    let note: Note = new Note('test', 'test', attachment);
+    let g_object: distributedDataObject.DataObject = distributedDataObject.create(this.context, note);
+    g_object.setSessionId('123456');
+
+    const bindInfo: distributedDataObject.BindInfo = {
+      storeName: 'notepad',
+      tableName: 'note_t',
+      primaryKey: {
+        'uuid': '00000000-0000-0000-0000-000000000000'
+      },
+      field: 'attachment',
+      assetName: attachment.name as string
+    }
+
+    g_object.bindAssetStore('attachment', bindInfo, (err: BusinessError<void> | null): void => {
+      if (err) {
+        console.error('bindAssetStore failed.');
       }
       console.info('bindAssetStore success.');
     });
@@ -140,10 +190,12 @@ bindAssetStore(assetKey: string, bindInfo: BindInfo): Promise<void>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types. |
-| 801 | Capability not supported. |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types. |
+| [801](../../errorcode-universal.md#801-该设备不支持此api) | Capability not supported. |
 
 ## 示例
+
+ArkTS-Dyn示例：
 
 ```TypeScript
 import { UIAbility } from '@kit.AbilityKit';
@@ -197,6 +249,60 @@ class EntryAbility extends UIAbility {
 }
 ```
 
+ArkTS-Sta示例：
+
+```TypeScript
+import { UIAbility } from '@kit.AbilityKit';
+import { window } from '@kit.ArkUI';
+import commonType from '@ohos.data.commonType';
+import distributedDataObject from '@ohos.data.distributedDataObject';
+
+class Note {
+  title: string
+  text: string
+  attachment: commonType.Asset
+
+  constructor(title: string, text: string, attachment: commonType.Asset) {
+    this.title = title;
+    this.text = text;
+    this.attachment = attachment;
+  }
+}
+
+class EntryAbility extends UIAbility {
+  onWindowStageCreate(windowStage: window.WindowStage) {
+    let attachment: commonType.Asset = {
+      name: 'test_img.jpg',
+      uri: 'file://com.example.myapplication/data/storage/el2/distributedfiles/dir/test_img.jpg',
+      path: '/dir/test_img.jpg',
+      createTime: '2024-01-02 10:00:00',
+      modifyTime: '2024-01-02 10:00:00',
+      size: '5',
+      status: commonType.AssetStatus.ASSET_NORMAL
+    }
+    let note: Note = new Note('test', 'test', attachment);
+    let g_object: distributedDataObject.DataObject = distributedDataObject.create(this.context, note);
+    g_object.setSessionId('123456');
+
+    const bindInfo: distributedDataObject.BindInfo = {
+      storeName: 'notepad',
+      tableName: 'note_t',
+      primaryKey: {
+        'uuid': '00000000-0000-0000-0000-000000000000'
+      },
+      field: 'attachment',
+      assetName: attachment.name as string
+    }
+
+    g_object.bindAssetStore('attachment', bindInfo).then(() => {
+      console.info('bindAssetStore success.');
+    }).catch((err) => {
+      console.error(`bindAssetStore failed, error code = ${err.code}`);
+    });
+  }
+}
+```
+
 ## off('change')
 
 ```TypeScript
@@ -224,7 +330,7 @@ off(type: 'change', callback?: (sessionId: string, fields: Array<string>) => voi
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types. |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types. |
 
 ## 示例
 
@@ -272,7 +378,7 @@ off(
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types. |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types. |
 
 ## 示例
 
@@ -461,6 +567,41 @@ offChange(callback?: DataObserver): void
 | --- | --- | --- | --- |
 | callback | [DataObserver](arkts-arkdata-distributeddataobject-dataobserver-t.md) | 否 | 需要删除的数据变更回调实例，若不设置则删除该对象所有的数据变更回调实例。 |
 
+## 示例
+
+```TypeScript
+const changeCallback1: distributedDataObject.DataObserver = (sessionId: string, fields: Array<string>) => {
+  console.info('change callback1 ' + sessionId);
+  if (fields != null && fields != undefined) {
+    for (let index: int = 0; index < fields.length; index++) {
+      console.info('change !' + fields[index]);
+    }
+  }
+}
+
+const changeCallback2: distributedDataObject.DataObserver = (sessionId: string, fields: Array<string>) => {
+  console.info('change callback2 ' + sessionId);
+  if (fields != null && fields != undefined) {
+    for (let index: int = 0; index < fields.length; index++) {
+      console.info('change !' + fields[index]);
+    }
+  }
+}
+
+try {
+  // 删除单个数据变更回调函数
+  g_object!.onChange(changeCallback1);
+  g_object!.offChange(changeCallback1);
+
+  // 删除所有数据变更回调函数
+  g_object!.onChange(changeCallback1);
+  g_object!.onChange(changeCallback2);
+  g_object!.offChange();
+} catch (error) {
+  console.error(`Execute failed, error code =  ${error.code}`);
+}
+```
+
 ## offProgressChanged
 
 ```TypeScript
@@ -483,6 +624,32 @@ offProgressChanged(callback?: ProgressObserver): void
 | --- | --- | --- | --- |
 | callback | [ProgressObserver](arkts-arkdata-distributeddataobject-progressobserver-t.md) | 否 | 需要取消监听的事件回调，若不设置，则取消对该事件的所有监听。 |
 
+## 示例
+
+```TypeScript
+const progressChangedCallback1: distributedDataObject.ProgressObserver = (sessionId: string, progress: int) => {
+  console.info('progressChanged callback1' + sessionId);
+  console.info('progressChanged callback1' + progress);
+}
+
+const progressChangedCallback2: distributedDataObject.ProgressObserver = (sessionId: string, progress: int) => {
+  console.info('progressChanged callback2' + sessionId);
+  console.info('progressChanged callback2' + progress);
+}
+try {
+  g_object!.onProgressChanged(progressChangedCallback1);
+  // 取消对资产传输进度的监听
+  g_object!.offProgressChanged(progressChangedCallback1);
+
+  g_object!.onProgressChanged(progressChangedCallback1);
+  g_object!.onProgressChanged(progressChangedCallback2);
+  // 取消对资产传输进度的所有监听
+  g_object!.offProgressChanged();
+} catch (error) {
+  console.error(`Execute failed, error code =  ${error.code}`);
+}
+```
+
 ## offStatus
 
 ```TypeScript
@@ -504,6 +671,32 @@ offStatus(callback?: StatusObserver): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | callback | [StatusObserver](arkts-arkdata-distributeddataobject-statusobserver-t.md) | 否 | 需要删除状态变更的回调实例，若不设置则删除该对象所有的状态变更回调实例。 |
+
+## 示例
+
+```TypeScript
+const statusCallback1: distributedDataObject.StatusObserver =
+  (sessionId: string, networkId: string, status: string) => {
+    console.info('status callback1' + sessionId);
+  }
+
+const statusCallback2: distributedDataObject.StatusObserver =
+  (sessionId: string, networkId: string, status: string) => {
+    console.info('status callback2' + sessionId);
+  }
+try {
+  // 删除单个状态变更回调函数
+  g_object!.onStatus(statusCallback1);
+  g_object!.offStatus(statusCallback1);
+
+  // 删除所有状态变更回调函数
+  g_object!.onStatus(statusCallback1);
+  g_object!.onStatus(statusCallback2);
+  g_object!.offStatus();
+} catch (error) {
+  console.error(`Execute failed, error code =  ${error.code}`);
+}
+```
 
 ## on('change')
 
@@ -532,7 +725,7 @@ on(type: 'change', callback: (sessionId: string, fields: Array<string>) => void 
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types. |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types. |
 
 ## 示例
 
@@ -577,7 +770,7 @@ on(
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types. |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types. |
 
 ## 示例
 
@@ -723,6 +916,24 @@ onChange(callback: DataObserver): void
 | --- | --- | --- | --- |
 | callback | [DataObserver](arkts-arkdata-distributeddataobject-dataobserver-t.md) | 是 | 表示分布式对象数据变更的回调实例。 |
 
+## 示例
+
+```TypeScript
+const changeCallback1: distributedDataObject.DataObserver = (sessionId: string, fields: Array<string>) => {
+  console.info('change callback callback1 ' + sessionId);
+  if (fields != null && fields != undefined) {
+    for (let index: int = 0; index < fields.length; index++) {
+      console.info('change !' + fields[index]);
+    }
+  }
+}
+try {
+  g_object!.onChange(changeCallback1);
+} catch (error) {
+  console.error(`Execute failed, error code =  ${error.code}`);
+}
+```
+
 ## onProgressChanged
 
 ```TypeScript
@@ -744,6 +955,20 @@ onProgressChanged(callback: ProgressObserver): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | callback | [ProgressObserver](arkts-arkdata-distributeddataobject-progressobserver-t.md) | 是 |  |
+
+## 示例
+
+```TypeScript
+const progressChangedCallback: distributedDataObject.ProgressObserver = (sessionId: string, progress: int) => {
+  console.info('progressChanged callback' + sessionId);
+  console.info('progressChanged callback' + progress);
+}
+try {
+  g_object!.onProgressChanged(progressChangedCallback);
+} catch (error) {
+  console.error(`Execute failed, error code =  ${error.code}`);
+}
+```
 
 ## onStatus
 
@@ -768,6 +993,20 @@ onStatus(callback: StatusObserver): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | callback | [StatusObserver](arkts-arkdata-distributeddataobject-statusobserver-t.md) | 是 | 表示分布式对象状态变更的回调实例。 |
+
+## 示例
+
+```TypeScript
+const statusCallback1: distributedDataObject.StatusObserver =
+  (sessionId: string, networkId: string, status: string) => {
+    console.info('status callback ' + sessionId);
+  }
+try {
+  g_object!.onStatus(statusCallback1);
+} catch (error) {
+  console.error(`Execute failed, error code =  ${error.code}`);
+}
+```
 
 ## revokeSave
 
@@ -799,10 +1038,12 @@ revokeSave(callback: AsyncCallback<RevokeSaveSuccessResponse>): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 401 | Parameter error. Incorrect parameter types. |
-| 801 | Capability not supported. |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Incorrect parameter types. |
+| [801](../../errorcode-universal.md#801-该设备不支持此api) | Capability not supported. |
 
 ## 示例
+
+ArkTS-Dyn示例：
 
 ```TypeScript
 g_object.setSessionId('123456');
@@ -825,6 +1066,32 @@ g_object.revokeSave((err: BusinessError, result: distributedDataObject.RevokeSav
     }
     console.info('revokeSave callback');
     console.info('revokeSave sessionId ' + result.sessionId);
+});
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+g_object!.setSessionId('123456');
+// 持久化数据
+g_object!.save('local', (err: Error | null, result: distributedDataObject.SaveSuccessResponse): void => {
+  if (err) {
+    console.error(`save failed, error code = ${err.code}, message: ${err.message}`);
+    return;
+  }
+  console.info('save callback');
+  console.info('save sessionId: ' + result.sessionId);
+  console.info('save version: ' + result.version);
+  console.info('save deviceId:  ' + result.deviceId);
+});
+// 删除持久化保存的数据
+g_object!.revokeSave((err: Error, result: distributedDataObject.RevokeSaveSuccessResponse): void => {
+  if (err) {
+    console.error(`revokeSave failed, error code = ${err.code}, message: ${err.message}`);
+    return;
+  }
+  console.info('revokeSave callback');
+  console.info('revokeSave sessionId ' + result.sessionId);
 });
 ```
 
@@ -858,9 +1125,11 @@ revokeSave(): Promise<RevokeSaveSuccessResponse>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 801 | Capability not supported. |
+| [801](../../errorcode-universal.md#801-该设备不支持此api) | Capability not supported. |
 
 ## 示例
+
+ArkTS-Dyn示例：
 
 ```TypeScript
 g_object.setSessionId('123456');
@@ -879,6 +1148,29 @@ g_object.revokeSave().then((result: distributedDataObject.RevokeSaveSuccessRespo
     console.info('sessionId' + result.sessionId);
 }).catch((err: BusinessError) => {
     console.error(`Failed to revoke save. Code: ${err.code}, message: ${err.message}`);
+});
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+g_object!.setSessionId('123456');
+// 持久化数据
+g_object!.save('local').then((result: distributedDataObject.SaveSuccessResponse) => {
+  console.info('save callback');
+  console.info('save sessionId ' + result.sessionId);
+  console.info('save version ' + result.version);
+  console.info('save deviceId ' + result.deviceId);
+}).catch((err) => {
+  console.error(`save failed, error code = ${err.code}, message: ${err.message}`);
+});
+// 删除持久化保存的数据
+g_object!.revokeSave().then((result: distributedDataObject.RevokeSaveSuccessResponse) => {
+  console.info('revokeSave callback');
+  console.info('sessionId') + result.sessionId);
+}).catch((err) => {
+  console.error(`revokeSave failed, error code = ${err.code}`);
+  console.error('revokeSave failed, error message = ' + err.message);
 });
 ```
 
@@ -917,16 +1209,34 @@ save(deviceId: string, callback: AsyncCallback<SaveSuccessResponse>): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types. |
-| 801 | Capability not supported. |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types. |
+| [801](../../errorcode-universal.md#801-该设备不支持此api) | Capability not supported. |
 
 ## 示例
+
+ArkTS-Dyn示例：
 
 ```TypeScript
 g_object.setSessionId('123456');
 g_object.save('local', (err: BusinessError, result:distributedDataObject.SaveSuccessResponse) => {
     if (err) {
         console.error(`Failed to save. Code: ${err.code}, message: ${err.message}`);
+        return;
+    }
+    console.info('save callback');
+    console.info('save sessionId: ' + result.sessionId);
+    console.info('save version: ' + result.version);
+    console.info('save deviceId:  ' + result.deviceId);
+});
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+g_object!.setSessionId('123456');
+g_object!.save('local', (err: Error | null, result: distributedDataObject.SaveSuccessResponse): void => {
+    if (err) {
+        console.error(`save failed, error code = ${err.code}, message: ${err.message}`);
         return;
     }
     console.info('save callback');
@@ -976,10 +1286,12 @@ save(deviceId: string): Promise<SaveSuccessResponse>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types. |
-| 801 | Capability not supported. |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types. |
+| [801](../../errorcode-universal.md#801-该设备不支持此api) | Capability not supported. |
 
 ## 示例
+
+ArkTS-Dyn示例：
 
 ```TypeScript
 g_object.setSessionId('123456');
@@ -990,6 +1302,20 @@ g_object.save('local').then((callbackInfo: distributedDataObject.SaveSuccessResp
     console.info('save deviceId ' + callbackInfo.deviceId);
 }).catch((err: BusinessError) => {
     console.error(`Failed to save. Code: ${err.code}, message: ${err.message}`);
+});
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+g_object!.setSessionId('123456');
+g_object!.save('local').then((callbackInfo: distributedDataObject.SaveSuccessResponse) => {
+    console.info('save callback');
+    console.info('save sessionId ' + callbackInfo.sessionId);
+    console.info('save version ' + callbackInfo.version);
+    console.info('save deviceId ' + callbackInfo.deviceId);
+}).catch((err) => {
+    console.error(`save failed, error code = ${err.code}, message: ${err.message}`);
 });
 ```
 
@@ -1026,10 +1352,12 @@ setAsset(assetKey: string, uri: string): Promise<void>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 15400002 | Parameter error. Possible causes: 1. The assetKey is invalid, such as ""; 2. The uri is invalid, such as "". |
-| 15400003 | The sessionId of the distributed object has been set. |
+| [15400002](../errorcode-distributed-dataObject.md#15400002-参数错误) | Parameter error. Possible causes: 1. The assetKey is invalid, such as ""; 2. The uri is invalid, such as "". |
+| [15400003](../errorcode-distributed-dataObject.md#15400003-已设置分布式对象的sessionid) | The sessionId of the distributed object has been set. |
 
 ## 示例
+
+ArkTS-Dyn示例：
 
 ```TypeScript
 import { UIAbility } from '@kit.AbilityKit';
@@ -1073,6 +1401,50 @@ class EntryAbility extends UIAbility {
 }
 ```
 
+ArkTS-Sta示例：
+
+```TypeScript
+import { UIAbility } from '@kitabilityKit';
+import { window } from '@kit.ArkUI';
+import commonType from '@ohos.data.commonType';
+import distributedDataObject from '@ohos.data.distributedDataObject';
+
+class Note {
+  title: string
+  text: string
+  attachment: commonType.Asset
+
+  constructor(title: string, text: string, attachment: commonType.Asset) {
+    this.title = title;
+    this.text = text;
+    this.attachment = attachment;
+  }
+}
+
+class EntryAbility extends UIAbility {
+  onWindowStageCreate(windowStage: window.WindowStage) {
+    let attachment: commonType.Asset = {
+      name: 'test_img.jpg',
+      uri: 'file://com.example.myapplication/data/storage/el2/distributedfiles/dir/test_img.jpg',
+      path: '/dir/test_img.jpg',
+      createTime: '2024-01-02 10:00:00',
+      modifyTime: '2024-01-02 10:00:00',
+      size: '5',
+      status: commonType.AssetStatus.ASSET_NORMAL
+    }
+    let note: Note = new Note('test', 'test', attachment);
+    let g_object: distributedDataObject.DataObject = distributedDataObject.create(this.context, note);
+
+    let uri = 'file://test/test.img';
+    g_object.setAsset('attachment', uri).then(() => {
+      console.info('setAsset success.');
+    }).catch((err) => {
+      console.error(`setAsset failed, error code = ${err.code}`);
+    });
+  }
+}
+```
+
 ## setAssets
 
 ```TypeScript
@@ -1106,10 +1478,12 @@ setAssets(assetsKey: string, uris: Array<string>): Promise<void>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 15400002 | Parameter error. Possible causes: 1. The assetsKey is invalid, such as ""; 2. The uris is invalid, such as the length of uris is more than 50. |
-| 15400003 | The sessionId of the distributed object has been set. |
+| [15400002](../errorcode-distributed-dataObject.md#15400002-参数错误) | Parameter error. Possible causes: 1. The assetsKey is invalid, such as ""; 2. The uris is invalid, such as the length of uris is more than 50. |
+| [15400003](../errorcode-distributed-dataObject.md#15400003-已设置分布式对象的sessionid) | The sessionId of the distributed object has been set. |
 
 ## 示例
+
+ArkTS-Dyn示例：
 
 ```TypeScript
 import { UIAbility } from '@kit.AbilityKit';
@@ -1153,6 +1527,50 @@ class EntryAbility extends UIAbility {
 }
 ```
 
+ArkTS-Sta示例：
+
+```TypeScript
+import { UIAbility } from '@kit.AbilityKit';
+import { window } from '@kit.ArkUI';
+import commonType from '@ohos.data.commonType';
+import distributedDataObject from '@ohos.data.distributedDataObject';
+
+class Note {
+  title: string
+  text: string
+  attachment: commonType.Asset
+
+  constructor(title: string, text: string, attachment: commonType.Asset) {
+    this.title = title;
+    this.text = text;
+    this.attachment = attachment;
+  }
+}
+
+class EntryAbility extends UIAbility {
+  onWindowStageCreate(windowStage: window.WindowStage) {
+    let attachment: commonType.Asset = {
+      name: 'test_img.jpg',
+      uri: 'file://com.example.myapplication/data/storage/el2/distributedfiles/dir/test_img.jpg',
+      path: '/dir/test_img.jpg',
+      createTime: '2024-01-02 10:00:00',
+      modifyTime: '2024-01-02 10:00:00',
+      size: '5',
+      status: commonType.AssetStatus.ASSET_NORMAL
+    }
+    let note: Note = new Note('test', 'test', attachment);
+    let g_object: distributedDataObject.DataObject = distributedDataObject.create(this.context, note);
+
+    let uris: Array<string> = ['file://test/test_1.txt', 'file://test/test_2.txt'];
+    g_object.setAssets('attachment', uris).then(() => {
+      console.info('setAssets success.');
+    }).catch((err) => {
+      console.error(`setAssets failed, error code = ${err.code}`);
+    });
+  }
+}
+```
+
 ## setSessionId
 
 ```TypeScript
@@ -1182,9 +1600,9 @@ setSessionId(sessionId: string, callback: AsyncCallback<void>): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1. Incorrect parameter types; 2. The sessionId allows only letters, digits, and underscores(_), and cannot exceed 128 in length. |
-| 201 | Permission verification failed. |
-| 15400001 | Failed to create the in-memory database. |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1. Incorrect parameter types; 2. The sessionId allows only letters, digits, and underscores(_), and cannot exceed 128 in length. |
+| [201](../../errorcode-universal.md#201-权限校验失败) | Permission verification failed. |
+| [15400001](../errorcode-distributed-dataObject.md#15400001-创建内存数据库失败) | Failed to create the in-memory database. |
 
 ## 示例
 
@@ -1228,9 +1646,9 @@ setSessionId(callback: AsyncCallback<void>): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 401 | Parameter error. Incorrect parameter types. |
-| 201 | Permission verification failed.<br>**适用版本：** 9 - 19 |
-| 15400001 | Failed to create the in-memory database. |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Incorrect parameter types. |
+| [201](../../errorcode-universal.md#201-权限校验失败) | Permission verification failed.<br>**适用版本：** 9 - 19 |
+| [15400001](../errorcode-distributed-dataObject.md#15400001-创建内存数据库失败) | Failed to create the in-memory database. |
 
 ## 示例
 
@@ -1279,11 +1697,13 @@ setSessionId(sessionId?: string): Promise<void>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1. Incorrect parameter types; 2. The sessionId allows only letters, digits, and underscores(_), and cannot exceed 128 in length. |
-| 201 | Permission verification failed. |
-| 15400001 | Failed to create the in-memory database. |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1. Incorrect parameter types; 2. The sessionId allows only letters, digits, and underscores(_), and cannot exceed 128 in length. |
+| [201](../../errorcode-universal.md#201-权限校验失败) | Permission verification failed. |
+| [15400001](../errorcode-distributed-dataObject.md#15400001-创建内存数据库失败) | Failed to create the in-memory database. |
 
 ## 示例
+
+ArkTS-Dyn示例：
 
 ```TypeScript
 // g_object加入分布式组网
@@ -1297,6 +1717,23 @@ g_object.setSessionId().then(() => {
     console.info('leave all session.');
 }).catch((error: BusinessError) => {
     console.error(`Failed to set sessionId. Code: ${error.code}, message: ${error.message}`);
+});
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+// g_object加入分布式组网
+g_object!.setSessionId(distributedDataObject.genSessionId()).then(() => {
+  console.info('join session.');
+}).catch((error) => {
+  console.error(`Failed to set sessionId. Code: ${error.code}, message: ${error.message}`);
+});
+// 退出分布式组网
+g_object!.setSessionId().then(() => {
+  console.info('leave all session.');
+}).catch((error) => {
+  console.error(`Failed to set sessionId. Code: ${error.code}, message: ${error.message}`);
 });
 ```
 

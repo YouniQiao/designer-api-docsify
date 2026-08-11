@@ -1,7 +1,7 @@
 # LoopObserver
 
-定义异常监听，可以作为  
-[ErrorManager.on](./../@ohos.app.ability.errorManager:errorManager.on(type: 'loopObserver', timeout: number, observer: LoopObserver))的入参监听当前应用主线程事件处理事件。
+The module defines an observer to listen for event processing timeout. It can be used as an input parameter in   
+[ErrorManager.on](./../@ohos.app.ability.errorManager:errorManager.on(type: 'loopObserver', timeout: number, observer: LoopObserver))to listen for the event processing timeout of the current application's main thread.
 
 **Since:** 12
 
@@ -17,7 +17,7 @@
 onLoopTimeOut?(timeout: int): void
 ```
 
-将在js运行时应用主线程处理事件超时的回调。
+Called when a timeout occurs for the main thread to process an event in the JS runtime.
 
 **Since:** 12
 
@@ -33,5 +33,5 @@ onLoopTimeOut?(timeout: int): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| timeout | int | Yes | 返回应用主线程消息实际执行时间。 阈值必须大于0。 单位为毫秒（ms）。 |
+| timeout | int | Yes | Actual execution time of the main thread. The value must be greater than **0**. The unit is milliseconds (ms). The value should be an integer. |
 

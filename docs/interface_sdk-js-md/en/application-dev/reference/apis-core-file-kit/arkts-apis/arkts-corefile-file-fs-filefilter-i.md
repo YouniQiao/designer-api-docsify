@@ -1,6 +1,6 @@
 # FileFilter
 
-文件名过滤器接口，可通过该接口自定义文件名过滤规则。
+Describes a file name filter, which can be used to customize file name filtering rules.
 
 **Since:** 26.0.0
 
@@ -22,11 +22,12 @@ import { Options, ReaderIteratorResult, Watcher, ReadTextOptions, WatchEventList
 filter(name: string): boolean
 ```
 
-用于[listFileExt](arkts-corefile-fileio-listfileext-f.md#listfileext)或[listFileExtSync](arkts-corefile-fileio-listfileextsync-f.md#listfileextsync)接口的文件过滤，判断指定文件名是否应包含在返回的文件列表中。
+Filters files of the [listFileExt](arkts-corefile-fileio-listfileext-f.md#listfileext) or [listFileExtSync](arkts-corefile-fileio-listfileextsync-f.md#listfileextsync) API and determines whether a specified file name should be included in the returned file list.
 
-> **说明：**
+> **NOTE：**
 > 
-> 该函数调用频率较高，请避免执行耗时操作，如文件I/O、网络请求等。
+> This function is frequently called. Do not perform time-consuming operations, such as file I/O operations and
+> network requests.
 
 **Since:** 26.0.0
 
@@ -42,11 +43,11 @@ filter(name: string): boolean
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| name | string | Yes | 待过滤的文件名或文件相对路径。递归模式下为文件的相对路径，相对路径以“/”开头。 |
+| name | string | Yes | Name or relative path of the file to be filtered. In recursive mode, the value is a relative file path, which starts with a slash (/). |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| boolean | 表示是否包含在返回的文件列表中。true：包含该文件；false：不包含该文件。 |
+| boolean | Whether the file is included in the returned file list. The value **true** indicates the file is included, and the value **false** indicates the opposite. |
 

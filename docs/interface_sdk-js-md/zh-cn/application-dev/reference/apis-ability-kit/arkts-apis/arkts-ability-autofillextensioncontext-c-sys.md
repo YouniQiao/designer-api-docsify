@@ -51,8 +51,8 @@ reloadInModal(customData: CustomData): Promise<void>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 401 | If the input parameter is not valid parameter. |
-| 16000050 | Internal error. |
-| 202 | Not System App. Interface caller is not a system app. |
-| 16000011 | The context does not exist. |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | If the input parameter is not valid parameter. |
+| [16000050](../errorcode-ability.md#16000050-内部错误) | Internal error. |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not System App. Interface caller is not a system app. |
+| [16000011](../errorcode-ability.md#16000011-上下文对象不存在) | The context does not exist. |
 

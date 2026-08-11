@@ -1,6 +1,6 @@
 # StyledNumberFormat
 
-提供富文本数字格式化的能力。
+Provide a number formatting interface which could format number to StyleString.
 
 **Since:** 23
 
@@ -22,7 +22,7 @@ import { i18n } from 'kits/@kit.LocalizationKit';
 constructor(numberFormat: Intl.NumberFormat | SimpleNumberFormat, options?: StyledNumberFormatOptions)
 ```
 
-创建需要富文本显示的数字格式化的对象。
+A constructor used to create a StyledNumberFormat object.
 
 **Since:** 23
 
@@ -38,8 +38,8 @@ constructor(numberFormat: Intl.NumberFormat | SimpleNumberFormat, options?: Styl
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| numberFormat | Intl.NumberFormat \| SimpleNumberFormat | Yes | 用于格式化数字的对象。 |
-| options | [StyledNumberFormatOptions](arkts-localization-i18n-stylednumberformatoptions-i.md) | No | 指定数字格式化对象的配置项。默认值：默认的文本样式。 |
+| numberFormat | Intl.NumberFormat \| SimpleNumberFormat | Yes | Indicates the number format object that used to format number. |
+| options | [StyledNumberFormatOptions](arkts-localization-i18n-stylednumberformatoptions-i.md) | No | Indicates the options used to format the number. |
 
 ## format
 
@@ -47,7 +47,7 @@ constructor(numberFormat: Intl.NumberFormat | SimpleNumberFormat, options?: Styl
 format(value: double): StyledString
 ```
 
-使用数字格式化对象对数字进行格式化，返回富文本对象。
+Formats a number as a rich text object.
 
 **Since:** 23
 
@@ -63,11 +63,11 @@ format(value: double): StyledString
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | double | Yes | 需要格式化的数字。 |
+| value | double | Yes | Number to be formatted. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [StyledString](../../apis-arkui/arkts-apis/arkts-arkui-styledstring-c.md) | 格式化后的富文本对象。 |
+| [StyledString](../../apis-arkui/arkts-apis/arkts-arkui-styledstring-c.md) | Rich text object after formatting. |
 

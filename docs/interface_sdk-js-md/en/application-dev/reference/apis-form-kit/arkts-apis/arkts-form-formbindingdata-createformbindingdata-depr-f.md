@@ -46,25 +46,20 @@ struct Index {
   pathDir: string = this.content.filesDir;
 
   createFormBindingData() {
-    let filePath = this.pathDir + "/form.png";
-    let fd: number = -1;
     try {
-      fd = fileIo.openSync(filePath, fileIo.OpenMode.READ_ONLY).fd;
+      let filePath = this.pathDir + "/form.png";
+      let file = fileIo.openSync(filePath);
       let formImagesParam: Record<string, number> = {
-        'image': fd
+        'image': file.fd
       };
       let createFormBindingDataParam: Record<string, string | Record<string, number>> = {
         'name': '21°',
         'imgSrc': 'image',
         'formImages': formImagesParam
       };
-      let formBindingDataObj = formBindingData.createFormBindingData(createFormBindingDataParam);
+      formBindingData.createFormBindingData(createFormBindingDataParam);
     } catch (error) {
-      console.error(`catch error, code: ${(error as BusinessError).code}, message: ${(error as BusinessError).message}`);
-    } finally {
-      if (fd !== -1) {
-        fileIo.closeSync(fd);
-      }
+      console.error(`catch error, error: ${JSON.stringify(error)}`);
     }
   }
 

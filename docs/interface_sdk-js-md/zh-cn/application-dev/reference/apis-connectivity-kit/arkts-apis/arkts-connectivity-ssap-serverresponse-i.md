@@ -10,12 +10,6 @@
 
 **系统能力：** SystemCapability.Communication.NearLink.Base
 
-## 导入模块
-
-```TypeScript
-import { ssap } from 'kits/@kit.ConnectivityKit';
-```
-
 ## address
 
 ```TypeScript

@@ -4,7 +4,7 @@
 type RingtonePlayer = _RingtonePlayer
 ```
 
-系统铃音播放器对象。
+Ringtone player object.
 
 **Since:** 10
 

@@ -4,7 +4,7 @@
 declare type OnContentScrollCallback = (totalOffsetX: number, totalOffsetY: number) => void
 ```
 
-文本内容滚动回调。
+Defines the callback for text content scrolling.
 
 **Since:** 18
 
@@ -22,6 +22,6 @@ declare type OnContentScrollCallback = (totalOffsetX: number, totalOffsetY: numb
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| totalOffsetX | number | Yes | 文本在内容区的横坐标偏移，单位px。 |
-| totalOffsetY | number | Yes | 文本在内容区的纵坐标偏移，单位px。 |
+| totalOffsetX | number | Yes | Offset in the X coordinate of the text in the content area, in px. |
+| totalOffsetY | number | Yes | Offset in the Y coordinate of the text in the content area, in px. |
 

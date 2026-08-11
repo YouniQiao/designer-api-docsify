@@ -1,7 +1,7 @@
 # MissionSnapshot (System API)
 
-一个任务的任务快照对象，可以通过  
-[missionManager.getMissionSnapShot](arkts-ability-missionmanager-getmissionsnapshot-f-sys.md#getmissionsnapshot)获取。
+The module defines the snapshot of a mission. The snapshot can be obtained through  
+[missionManager.getMissionSnapShot](arkts-ability-missionmanager-getmissionsnapshot-f-sys.md#getmissionsnapshot).
 
 **Since:** 8
 
@@ -19,7 +19,7 @@
 ability: ElementName
 ```
 
-表示该任务的组件信息。
+Ability information of the mission.
 
 **Type:** [ElementName](arkts-ability-elementname-i.md)
 
@@ -39,7 +39,7 @@ ability: ElementName
 snapshot: image.PixelMap
 ```
 
-表示任务快照。
+Snapshot of the mission.
 
 **Type:** image.PixelMap
 

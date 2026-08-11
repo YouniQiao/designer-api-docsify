@@ -12,7 +12,8 @@ import { adminManager } from 'kits/@kit.MDMKit';
 function isSuperAdmin(bundleName: String, callback: AsyncCallback<boolean>): void
 ```
 
-根据bundleName查询首用户（u100）下的超级设备管理应用是否被激活。使用callback异步回调。
+Checks whether the super device administrator application of the first user (u100) is enabled based on  
+**bundleName**. This API uses an asynchronous callback to return the result.
 
 **Since:** 9
 
@@ -28,15 +29,15 @@ function isSuperAdmin(bundleName: String, callback: AsyncCallback<boolean>): voi
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| bundleName | String | Yes | 超级设备管理应用。 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;boolean&gt; | Yes | 回调函数，当接口调用成功，err为null，data为boolean类型值，true表示当前用户下指定的设备管理应用被激活，false表示当 前用户下指定的设备管理应用未激活，否则err为错误对象。 |
+| bundleName | String | Yes | Super device administrator application. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;boolean&gt; | Yes | Callback invoked to return the result. If the operation is successful, **err** is **null** and **data** is a Boolean value (**true** means that the device administrator application is enabled; and **false** means the opposite). If the operation fails, **err** is an error object. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types. |
-| 202 | Permission verification failed. A non-system application calls a system API. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
 
 ## Examples
 
@@ -63,7 +64,8 @@ adminManager.isSuperAdmin(bundleName, (err, result) => {
 function isSuperAdmin(bundleName: String): Promise<boolean>
 ```
 
-根据bundleName查询首用户（u100）下的超级设备管理应用是否被激活。使用Promise异步回调。
+Checks whether the super device administrator application of the first user (u100) is enabled based on  
+**bundleName**. This API uses a promise to return the result.
 
 **Since:** 9
 
@@ -79,20 +81,20 @@ function isSuperAdmin(bundleName: String): Promise<boolean>
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| bundleName | String | Yes | 超级设备管理应用。 |
+| bundleName | String | Yes | Super device administrator application. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;boolean&gt; | Promise对象, 返回true表示指定的超级设备管理应用被激活，返回false表示指定的超级设备管理应用未激活。 |
+| Promise&lt;boolean&gt; | Promise used to return the result. The value **true** means the super device administrator application is enabled; the value **false** means the opposite. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types. |
-| 202 | Permission verification failed. A non-system application calls a system API. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
 
 ## Examples
 

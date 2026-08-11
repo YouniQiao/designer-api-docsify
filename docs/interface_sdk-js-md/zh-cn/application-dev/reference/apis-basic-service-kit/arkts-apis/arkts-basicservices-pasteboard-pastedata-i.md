@@ -10,12 +10,6 @@
 
 **系统能力：** SystemCapability.MiscServices.Pasteboard
 
-## 导入模块
-
-```TypeScript
-import { pasteboard } from 'kits/@kit.BasicServicesKit';
-```
-
 ## addHtmlRecord
 
 ```TypeScript
@@ -77,9 +71,7 @@ addRecord(record: PasteDataRecord): void
 ## 示例
 
 ```TypeScript
-// 创建URI类型剪贴板内容对象
 let pasteData: pasteboard.PasteData = pasteboard.createData(pasteboard.MIMETYPE_TEXT_URI, 'dataability:///com.example.myapplication1/user.txt');
-// 创建纯文本类型数据条目
 let textRecord: pasteboard.PasteDataRecord = pasteboard.createRecord(pasteboard.MIMETYPE_TEXT_PLAIN, 'hello');
 let html: string = "<!DOCTYPE html>\n" + "<html>\n" + "<head>\n" + "<meta charset=\"utf-8\">\n" + "<title>HTML-PASTEBOARD_HTML</title>\n" + "</head>\n" + "<body>\n" + "    <h1>HEAD</h1>\n" + "    <p></p>\n" + "</body>\n" + "</html>";
 let htmlRecord: pasteboard.PasteDataRecord = pasteboard.createRecord(pasteboard.MIMETYPE_TEXT_HTML, html);
@@ -116,14 +108,13 @@ addRecord(mimeType: string, value: ValueType): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 401 | Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameters types; 3. Parameter verification failed. |
-| 12900002 | The number of records exceeds the upper limit.<br>**适用版本：** 9+ |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameters types; 3. Parameter verification failed. |
+| [12900002](../../apis-basic-services-kit/errorcode-pasteboard.md#12900002-record数量超过最大限制) | The number of records exceeds the upper limit.<br>**适用版本：** 9+ |
 
 ## 示例
 
 ```TypeScript
 let pasteData: pasteboard.PasteData = pasteboard.createData(pasteboard.MIMETYPE_TEXT_URI, 'dataability:///com.example.myapplication1/user.txt');
-// 创建ArrayBuffer数据
 let dataXml = new ArrayBuffer(256);
 pasteData.addRecord('app/xml', dataXml);
 ```
@@ -297,7 +288,7 @@ const systemPasteboard: pasteboard.SystemPasteboard = pasteboard.getSystemPasteb
 systemPasteboard.getData().then((pasteData: pasteboard.PasteData) => {
     let htmlText: string = pasteData.getPrimaryHtml();
 }).catch((err: BusinessError) => {
-    console.error(`Failed to get PasteData. errorCode: ${err.code}, errorMessage: ${err.message}.`);
+    console.error('Failed to get PasteData. Cause: ' + err.message);
 });
 ```
 
@@ -358,12 +349,12 @@ getPrimaryPixelMap(): image.PixelMap
 
 ## 示例
 
+ArkTS-Dyn示例：
+
 ```TypeScript
 import { image } from '@kit.ImageKit';
 
-// 创建图像数据缓冲区
 let buffer = new ArrayBuffer(128);
-// 定义图像尺寸
 let realSize: image.Size = { height: 3, width: 5 };
 let opt: image.InitializationOptions = {
     size: realSize,
@@ -375,6 +366,26 @@ let opt: image.InitializationOptions = {
 image.createPixelMap(buffer, opt).then((pixelMap: image.PixelMap) => {
     let pasteData: pasteboard.PasteData = pasteboard.createData(pasteboard.MIMETYPE_PIXELMAP, pixelMap);
     let PixelMap: image.PixelMap = pasteData.getPrimaryPixelMap();
+});
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+import { image } from '@kit.ImageKit';
+
+let buffer = new ArrayBuffer(128);
+let realSize: image.Size = { height: 3, width: 5 };
+let opt: image.InitializationOptions = {
+  size: realSize,
+  pixelFormat: image.PixelMapFormat.RGBA_8888,
+  editable: true,
+  alphaType: image.AlphaType.OPAQUE,
+  scaleMode: image.ScaleMode.CENTER_CROP
+};
+image.createPixelMap(buffer, opt).then((pixelMap: image.PixelMap) => {
+  let pasteData: pasteboard.PasteData = pasteboard.createData(pasteboard.MIMETYPE_PIXELMAP, pixelMap);
+  let PixelMap: image.PixelMap = pasteData.getPrimaryPixelMap();
 });
 ```
 
@@ -407,15 +418,11 @@ getPrimaryText(): string
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
 
-// 获取系统剪贴板对象
 const systemPasteboard: pasteboard.SystemPasteboard = pasteboard.getSystemPasteboard();
-// 异步读取剪贴板数据
 systemPasteboard.getData().then((pasteData: pasteboard.PasteData) => {
-    // 获取剪贴板中的纯文本内容
     let text: string = pasteData.getPrimaryText();
 }).catch((err: BusinessError) => {
-    // 处理获取失败的情况
-    console.error(`Failed to get PasteData. errorCode: ${err.code}, errorMessage: ${err.message}.`);
+    console.error('Failed to get PasteData. Cause: ' + err.message);
 });
 ```
 
@@ -452,7 +459,7 @@ const systemPasteboard: pasteboard.SystemPasteboard = pasteboard.getSystemPasteb
 systemPasteboard.getData().then((pasteData: pasteboard.PasteData) => {
     let uri: string = pasteData.getPrimaryUri();
 }).catch((err: BusinessError) => {
-    console.error(`Failed to get PasteData. errorCode: ${err.code}, errorMessage: ${err.message}.`);
+    console.error('Failed to get PasteData. Cause: ' + err.message);
 });
 ```
 
@@ -490,7 +497,7 @@ const systemPasteboard: pasteboard.SystemPasteboard = pasteboard.getSystemPasteb
 systemPasteboard.getData().then((pasteData: pasteboard.PasteData) => {
     let want: Want = pasteData.getPrimaryWant();
 }).catch((err: BusinessError) => {
-    console.error(`Failed to get PasteData. errorCode: ${err.code}, errorMessage: ${err.message}.`);
+    console.error('Failed to get PasteData. Cause: ' + err.message);
 });
 ```
 
@@ -565,10 +572,19 @@ getRecord(index: int): PasteDataRecord
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. 3. Parameter verification failed. |
-| 12900001 | The index is out of the record. |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. 3. Parameter verification failed. |
+| [12900001](../../apis-basic-services-kit/errorcode-pasteboard.md#12900001-索引超过范围) | The index is out of the record. |
 
 ## 示例
+
+ArkTS-Dyn示例：
+
+```TypeScript
+let pasteData: pasteboard.PasteData = pasteboard.createData(pasteboard.MIMETYPE_TEXT_PLAIN, 'hello');
+let record: pasteboard.PasteDataRecord = pasteData.getRecord(0);
+```
+
+ArkTS-Sta示例：
 
 ```TypeScript
 let pasteData: pasteboard.PasteData = pasteboard.createData(pasteboard.MIMETYPE_TEXT_PLAIN, 'hello');
@@ -611,7 +627,7 @@ getRecordAt(index: number): PasteDataRecord
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 401 | Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameters types. |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameters types. |
 
 ## 示例
 
@@ -652,9 +668,18 @@ getRecordCount(): int
 
 ## 示例
 
+ArkTS-Dyn示例：
+
 ```TypeScript
 let pasteData: pasteboard.PasteData = pasteboard.createData(pasteboard.MIMETYPE_TEXT_PLAIN, 'hello');
 let count: number = pasteData.getRecordCount();
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+let pasteData: pasteboard.PasteData = pasteboard.createData(pasteboard.MIMETYPE_TEXT_PLAIN, 'hello');
+let count: int = pasteData.getRecordCount();
 ```
 
 ## getTag
@@ -724,7 +749,7 @@ hasMimeType(mimeType: string): boolean
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 401 | Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameters types. |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameters types. |
 
 ## 示例
 
@@ -767,7 +792,7 @@ hasType(mimeType: string): boolean
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 401 | Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameters types. |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameters types. |
 
 ## 示例
 
@@ -794,18 +819,37 @@ pasteComplete(): void
 
 ## 示例
 
+ArkTS-Dyn示例：
+
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
 
 const systemPasteboard: pasteboard.SystemPasteboard = pasteboard.getSystemPasteboard();
 systemPasteboard.getData((err: BusinessError, pasteData: pasteboard.PasteData) => {
     if (err) {
-        console.error(`Failed to get PasteData. errorCode: ${err.code}, errorMessage: ${err.message}.`);
+        console.error('Failed to get PasteData. Cause: ' + err.message);
         return;
     }
     pasteData.pasteStart();
     console.info(`using data: ${pasteData.getPrimaryText()}`);
     pasteData.pasteComplete();
+});
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let systemPasteboard: pasteboard.SystemPasteboard = pasteboard.getSystemPasteboard();
+systemPasteboard.getData((err: BusinessError | null, pasteData: pasteboard.PasteData | undefined) => {
+  if (err != null) {
+    console.error('Failed to get PasteData. Cause: ' + err!.message);
+    return;
+  }
+  pasteData!.pasteStart();
+  console!.info(`using data: ${pasteData!.getPrimaryText()}`);
+  pasteData!.pasteComplete();
 });
 ```
 
@@ -831,18 +875,37 @@ pasteStart(): void
 
 ## 示例
 
+ArkTS-Dyn示例：
+
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
 
 const systemPasteboard: pasteboard.SystemPasteboard = pasteboard.getSystemPasteboard();
 systemPasteboard.getData((err: BusinessError, pasteData: pasteboard.PasteData) => {
     if (err) {
-        console.error(`Failed to get PasteData. errorCode: ${err.code}, errorMessage: ${err.message}.`);
+        console.error('Failed to get PasteData. Cause: ' + err.message);
         return;
     }
     pasteData.pasteStart();
     console.info(`using data: ${pasteData.getPrimaryText()}`);
     pasteData.pasteComplete();
+});
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let systemPasteboard: pasteboard.SystemPasteboard = pasteboard.getSystemPasteboard();
+systemPasteboard.getData((err: BusinessError | null, pasteData: pasteboard.PasteData | undefined) => {
+    if (err != null) {
+        console.error('Failed to get PasteData. Cause: ' + err!.message);
+        return;
+    }
+    pasteData!.pasteStart();
+    console.info(`using data: ${pasteData!.getPrimaryText()}`);
+    pasteData!.pasteComplete();
 });
 ```
 
@@ -880,10 +943,19 @@ removeRecord(index: int): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. 3. Parameter verification failed. |
-| 12900001 | The index is out of the record. |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. 3. Parameter verification failed. |
+| [12900001](../../apis-basic-services-kit/errorcode-pasteboard.md#12900001-索引超过范围) | The index is out of the record. |
 
 ## 示例
+
+ArkTS-Dyn示例：
+
+```TypeScript
+let pasteData: pasteboard.PasteData = pasteboard.createData(pasteboard.MIMETYPE_TEXT_PLAIN, 'hello');
+pasteData.removeRecord(0);
+```
+
+ArkTS-Sta示例：
 
 ```TypeScript
 let pasteData: pasteboard.PasteData = pasteboard.createData(pasteboard.MIMETYPE_TEXT_PLAIN, 'hello');
@@ -926,7 +998,7 @@ removeRecordAt(index: number): boolean
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 401 | Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameters types. |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameters types. |
 
 ## 示例
 
@@ -970,10 +1042,20 @@ replaceRecord(index: int, record: PasteDataRecord): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. 3. Parameter verification failed. |
-| 12900001 | The index is out of the record. |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. 3. Parameter verification failed. |
+| [12900001](../../apis-basic-services-kit/errorcode-pasteboard.md#12900001-索引超过范围) | The index is out of the record. |
 
 ## 示例
+
+ArkTS-Dyn示例：
+
+```TypeScript
+let pasteData: pasteboard.PasteData = pasteboard.createData(pasteboard.MIMETYPE_TEXT_PLAIN, 'hello');
+let record: pasteboard.PasteDataRecord = pasteboard.createRecord(pasteboard.MIMETYPE_TEXT_URI, 'file://com.example.myapplication1/data/storage/el2/base/files/file.txt');
+pasteData.replaceRecord(0, record);
+```
+
+ArkTS-Sta示例：
 
 ```TypeScript
 let pasteData: pasteboard.PasteData = pasteboard.createData(pasteboard.MIMETYPE_TEXT_PLAIN, 'hello');
@@ -1050,17 +1132,14 @@ setProperty(property: PasteDataProperty): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 401 | Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameters types. |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameters types. |
 
 ## 示例
 
 ```TypeScript
-// 定义附加属性的类型
 type AdditionType = Record<string, Record<string, Object>>;
 
-// 创建HTML类型剪贴板内容对象
 let pasteData: pasteboard.PasteData = pasteboard.createData(pasteboard.MIMETYPE_TEXT_HTML, 'application/xml');
-// 获取剪贴板属性对象
 let prop: pasteboard.PasteDataProperty = pasteData.getProperty();
 prop.shareOption = pasteboard.ShareOption.INAPP;
 // 需要注意，不支持对addition进行追加属性的操作，只能通过重新赋值的方式达到追加属性的目的。

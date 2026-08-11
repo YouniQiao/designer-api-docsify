@@ -8,7 +8,7 @@ export declare function Marquee(
 ): MarqueeAttribute
 ```
 
-创建跑马灯组件。
+Defines Marquee Component.
 
 **Since:** 23
 
@@ -41,7 +41,7 @@ export declare function Marquee(
 ): MarqueeAttribute
 ```
 
-定义Marquee组件。
+Defines Marquee Component.
 
 **Since:** 26.1.0
 
@@ -59,7 +59,7 @@ export declare function Marquee(
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| style | [CustomBuilderT](../arkts-components/arkts-arkui-custombuildert-t.md)&lt;MarqueeAttribute&gt; | Yes | Marquee属性实例。 |
+| style | [CustomBuilderT](../arkts-components/arkts-arkui-custombuildert-t.md)&lt;MarqueeAttribute&gt; | Yes | Marquee attribute instance |
 
 **Return value:**
 

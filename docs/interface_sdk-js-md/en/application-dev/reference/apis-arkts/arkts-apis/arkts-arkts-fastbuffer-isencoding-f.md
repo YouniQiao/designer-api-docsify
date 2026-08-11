@@ -12,7 +12,7 @@ import { fastbuffer } from 'kits/@kit.ArkTS';
 function isEncoding(encoding: string): boolean
 ```
 
-判断`encoding`是否为支持的编码格式。
+Returns true if encoding is the name of a supported character encoding, or false otherwise.
 
 **Since:** 20
 
@@ -28,13 +28,13 @@ function isEncoding(encoding: string): boolean
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| encoding | string | Yes | 编码格式，支持的格式范围为[BufferEncoding](arkts-arkts-fastbuffer-bufferencoding-t.md)。 |
+| encoding | string | Yes | The character encoding name to validate |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| boolean | 是支持的编码格式返回true，反之则返回false。 |
+| boolean | true or false |
 
 ## Examples
 

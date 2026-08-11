@@ -1,6 +1,6 @@
 # HuksOptions
 
-调用接口使用的options。
+Defines **options** used in the APIs.
 
 **Since:** 8
 
@@ -22,7 +22,7 @@ import { huks } from 'kits/@kit.UniversalKeystoreKit';
 inData?: Uint8Array
 ```
 
-标签。
+Tag.
 
 **Type:** Uint8Array
 
@@ -42,7 +42,7 @@ inData?: Uint8Array
 properties?: Array<HuksParam>
 ```
 
-标签。
+Tag.
 
 **Type:** Array&lt;HuksParam&gt;
 

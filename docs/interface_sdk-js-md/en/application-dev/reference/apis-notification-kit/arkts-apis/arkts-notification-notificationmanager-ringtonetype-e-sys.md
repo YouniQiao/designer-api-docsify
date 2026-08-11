@@ -1,6 +1,6 @@
 # RingtoneType (System API)
 
-描述自定义铃声类型。
+Enumerates the custom ringtone types.
 
 **Since:** 21
 
@@ -18,7 +18,7 @@
 RINGTONE_TYPE_SYSTEM = 0
 ```
 
-表示系统自定义铃声。
+System ringtone.
 
 **Since:** 21
 
@@ -36,7 +36,7 @@ RINGTONE_TYPE_SYSTEM = 0
 RINGTONE_TYPE_LOCAL = 1
 ```
 
-表示本地自定义铃声。
+Local ringtone.
 
 **Since:** 21
 
@@ -54,7 +54,7 @@ RINGTONE_TYPE_LOCAL = 1
 RINGTONE_TYPE_ONLINE = 2
 ```
 
-表示在线自定义铃声。
+Online ringtone.
 
 **Since:** 21
 
@@ -72,7 +72,7 @@ RINGTONE_TYPE_ONLINE = 2
 RINGTONE_TYPE_NONE = 3
 ```
 
-表示非自定义铃声。
+Non-custom ringtone.
 
 **Since:** 21
 

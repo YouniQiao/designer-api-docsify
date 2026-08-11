@@ -12,7 +12,7 @@ import { manager } from 'kits/@kit.ConnectivityKit';
 function isNearLinkSupported(): boolean
 ```
 
-检查当前设备是否支持星闪。
+Check whether the current device supports NearLink.
 
 **Since:** 26.0.0
 
@@ -28,5 +28,5 @@ function isNearLinkSupported(): boolean
 
 | Type | Description |
 | --- | --- |
-| boolean | 返回是否支持星闪。 |
+| boolean | Return whether the NearLink is supported. |
 

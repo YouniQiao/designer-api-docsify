@@ -1,6 +1,6 @@
 # ComposeTitleBarV2MenuItemParams
 
-菜单项参数接口，用于创建ComposeTitleBarV2MenuItem实例。
+Options for creating a menu item instance.
 
 **Since:** 26.0.0
 
@@ -22,7 +22,7 @@ import { ComposeTitleBarV2MenuItemParams, ComposeTitleBarV2, ComposeTitleBarV2Me
 action?: OnActionCallback
 ```
 
-触发时的动作闭包，item属性不支持触发action事件。
+Callback function when click on this menu item.
 
 **Since:** 26.0.0
 
@@ -40,9 +40,7 @@ action?: OnActionCallback
 accessibilityDescription?: ResourceStr
 ```
 
-标题栏右侧自定义按钮的无障碍描述。此描述用于向用户详细解释当前组件，开发人员应为组件的这一属性提供较为详尽的文本说明，以协助用户理解即将执行的操作及其可能产生的后果。特别是当这些后果无法仅从组件的属性和无障碍文本中直接获知时。如果组件同时具备文本属性和无障碍说明属性，当组件被选中时，系统将首先播报组件的文本属性，随后播报无障碍说明属性的内容。
-
-默认值："单指双击即可执行"。
+The accessibilityDescription of this menu item.
 
 **Type:** [ResourceStr](arkts-arkui-resourcestr-t.md)
 
@@ -62,19 +60,7 @@ accessibilityDescription?: ResourceStr
 accessibilityLevel?: string
 ```
 
-标题栏右侧自定义按钮无障碍重要性。用于控制当前项是否可被无障碍辅助服务所识别。
-
-支持的值为：
-
-"auto"：当前组件会根据情况转换成'yes'或'no'。
-
-"yes"：当前组件可被无障碍辅助服务所识别。
-
-"no"：当前组件不可被无障碍辅助服务所识别。
-
-"no-hide-descendants"：当前组件及其所有子组件不可被无障碍辅助服务所识别。
-
-默认值："auto"。
+The accessibilityLevel of this menu item.
 
 **Type:** string
 
@@ -96,9 +82,7 @@ accessibilityLevel?: string
 accessibilityText?: ResourceStr
 ```
 
-标题栏右侧自定义按钮的无障碍文本属性。当组件不包含文本属性时，屏幕朗读选中此组件时不播报，使用者无法清楚地知道当前选中了什么组件。为了解决此场景，开发人员可为不包含文字信息的组件设置无障碍文本，当屏幕朗读选中此组件时播报无障碍文本的内容，帮助屏幕朗读的使用者清楚地知道自己选中了什么组件。
-
-默认值：有label默认值为当前项label属性内容，没有设置label时，默认值为" "。
+The accessibilityText of this menu item.
 
 **Type:** [ResourceStr](arkts-arkui-resourcestr-t.md)
 
@@ -118,15 +102,7 @@ accessibilityText?: ResourceStr
 isEnabled?: boolean
 ```
 
-是否启用，默认启用。
-
-isEnabled为true时，表示启用。
-
-isEnabled为false时，表示禁用。
-
-item属性不支持触发isEnabled属性。
-
-默认值：true。
+Whether to enable this menu item.
 
 **Type:** boolean
 
@@ -146,7 +122,7 @@ item属性不支持触发isEnabled属性。
 label?: ResourceStr
 ```
 
-图标标签描述。
+Icon label for this menu item.
 
 **Type:** [ResourceStr](arkts-arkui-resourcestr-t.md)
 
@@ -166,7 +142,7 @@ label?: ResourceStr
 symbolStyle?: SymbolGlyphModifier
 ```
 
-Symbol图标资源，优先级大于value，item左侧头像不支持设置该属性。
+Symbol icon resource for this menu item, which has higher priority than value.
 
 **Type:** [SymbolGlyphModifier](../arkts-components/arkts-arkui-symbolglyphmodifier-t.md)
 
@@ -186,7 +162,7 @@ Symbol图标资源，优先级大于value，item左侧头像不支持设置该�
 value: ResourceStr
 ```
 
-图标资源。
+Icon resource for this menu item.
 
 **Type:** [ResourceStr](arkts-arkui-resourcestr-t.md)
 

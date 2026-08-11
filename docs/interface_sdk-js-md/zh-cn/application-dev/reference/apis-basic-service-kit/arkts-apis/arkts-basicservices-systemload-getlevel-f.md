@@ -1,11 +1,5 @@
 # getLevel
 
-## 导入模块
-
-```TypeScript
-import { systemLoad } from 'kits/@kit.BasicServicesKit';
-```
-
 ## getLevel
 
 ```TypeScript

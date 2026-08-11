@@ -1,10 +1,12 @@
 # SearchOptions
 
-Search初始化参数。
+Describes the initialization options of the **Search** component.
 
-> **说明：**
+> **NOTE：**
 > 
-> 为规范匿名对象的定义，API 18版本修改了此处的元素定义。其中，保留了历史匿名对象的起始版本信息，会出现外层元素@since版本号高于内层元素版本号的情况，但这不影响接口的使用。
+> To standardize anonymous object definitions, the element definitions here have been revised in API version 18.
+> While historical version information is preserved for anonymous objects, there may be cases where the outer element
+> 's @since version number is higher than inner elements'. This does not affect interface usability.
 
 **Since:** 18
 
@@ -20,7 +22,7 @@ Search初始化参数。
 controller?: SearchController
 ```
 
-设置Search组件控制器。当需要通过控制器操作搜索框（如设置光标位置、停止编辑等）时传入此参数，不传入时无法使用控制器相关方法。
+Controller of the **Search** component.
 
 **Type:** [SearchController](arkts-arkui-searchcontroller-c.md)
 
@@ -40,19 +42,18 @@ controller?: SearchController
 icon?: string
 ```
 
-设置搜索图标路径，默认使用系统搜索图标。
+Path to the search icon. By default, the system search icon is used.
 
-**说明：**
+**NOTE：**
 
-icon的数据源支持[使用相对路径显示图片](../../../reference/apis-arkui/arkui-ts/ts-basic-components-image.md#示例25使用相对路径显示图片)和网络图片。
+The icon data source supports both  
+[relative paths](../../../reference/apis-arkui/arkui-ts/ts-basic-components-image.md#example-25-displaying-an-image-using-a-relative-path)and network images.
 
-- 支持的图片格式包括png、jpg、bmp、svg、gif、pixelmap和heif。
+- The supported formats include PNG, JPG, BMP, SVG, GIF, pixelmap, and HEIF.  
+- The Base64 string is supported in the following format: data:image/[png|jpeg|bmp|webp|heif];base64,[base64 data],  
+where *[base64 data]* is a Base64 string.
 
-- 支持Base64字符串。格式data:image/[png|jpeg|bmp|webp|heif];base64,[base64 data], 其中[base64 data]为Base64字符串数据。
-
-如果与属性searchIcon同时设置，则searchIcon优先。
-
-Wearable设备上默认图标大小为16vp。
+If this attribute and the **searchIcon** attribute are both set, the **searchIcon** attribute takes precedence.
 
 **Type:** string
 
@@ -72,7 +73,7 @@ Wearable设备上默认图标大小为16vp。
 placeholder?: ResourceStr
 ```
 
-设置无输入时的提示文本。当需要自定义提示文本时传入此参数，不传入时不显示提示文本。
+Text displayed when there is no input.
 
 **Type:** [ResourceStr](../arkts-apis/arkts-arkui-resourcestr-t.md)
 
@@ -89,20 +90,28 @@ placeholder?: ResourceStr
 ## value
 
 ```TypeScript
-value?: string | Bindable<string>
+value?: ResourceStr
 ```
 
-Text input in the search text box.
+Sets the text input in the search text box.
 
-**Type:** string \| Bindable&lt;string&gt;
+Since API version 10, this parameter supports two-way binding through  
+[\$\$](../../../ui/state-management/arkts-two-way-sync.md).
 
-**Since:** 20
+Since API version 18, this parameter supports two-way binding through  
+[!!](../../../ui/state-management/arkts-new-binding.md#two-way-binding-between-built-in-component-parameters).
 
-**ArkTS mode:** ArkTS-Dyn only, since version 20.
+The Resource type is supported since API version 20.
 
-**Atomic service API:** This API can be used in atomic services since API version 20.
+**Type:** [ResourceStr](../arkts-apis/arkts-arkui-resourcestr-t.md)
 
-<!--Device-SearchOptions-value?: string | Bindable<string>--><!--Device-SearchOptions-value?: string | Bindable<string>-End-->
+**Since:** 8
+
+**ArkTS mode:** ArkTS-Dyn only, since version 8.
+
+**Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-SearchOptions-value?: ResourceStr--><!--Device-SearchOptions-value?: ResourceStr-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 

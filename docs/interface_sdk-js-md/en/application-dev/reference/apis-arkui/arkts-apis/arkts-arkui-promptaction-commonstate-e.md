@@ -1,6 +1,6 @@
 # CommonState
 
-自定义弹窗的状态。
+Enum for state.
 
 **Since:** 23
 
@@ -16,7 +16,7 @@
 UNINITIALIZED = 0
 ```
 
-未初始化，控制器未与dialog绑定时。
+Indicates it is uninitialized.
 
 **Since:** 23
 
@@ -34,7 +34,7 @@ UNINITIALIZED = 0
 INITIALIZED = 1
 ```
 
-已初始化，控制器与dialog绑定后。
+Indicates it is initialized.
 
 **Since:** 23
 
@@ -52,7 +52,7 @@ INITIALIZED = 1
 APPEARING = 2
 ```
 
-显示中，dialog显示动画过程中。
+Indicates it is appearing.
 
 **Since:** 23
 
@@ -70,7 +70,7 @@ APPEARING = 2
 APPEARED = 3
 ```
 
-已显示，dialog显示动画结束。
+Indicates it is appeared.
 
 **Since:** 23
 
@@ -88,7 +88,7 @@ APPEARED = 3
 DISAPPEARING = 4
 ```
 
-消失中，dialog消失动画过程中。
+Indicates it is disappearing.
 
 **Since:** 23
 
@@ -106,7 +106,7 @@ DISAPPEARING = 4
 DISAPPEARED = 5
 ```
 
-已消失，dialog消失动画结束后。
+Indicates it is disappeared.
 
 **Since:** 23
 

@@ -1,6 +1,6 @@
 # CacheCountInfo
 
-缓存数量信息。
+Define cache count information.
 
 **Since:** 23
 
@@ -16,9 +16,7 @@
 maxCount: int
 ```
 
-最大缓存数，当实际缓存数大于最大缓存数时，缓存内容会回收或释放，当UI空闲时（无动画或用户操作），会加载缓存到最大缓存数。
-
-取值范围：[minCount, +∞)，小于minCount时按minCount处理。
+max cache count.
 
 **Type:** int
 
@@ -38,9 +36,7 @@ maxCount: int
 minCount: int
 ```
 
-最小缓存数，当实际缓存数小于最小缓存数时，在滚动动画帧间空闲时隙加载缓存。
-
-取值范围：[0, +∞)，小于0时按1处理。
+min cache count.
 
 **Type:** int
 

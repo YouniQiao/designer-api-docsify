@@ -1,6 +1,6 @@
 # ObservedResult
 
-对象是否可被观察的结果。
+The return result that defines whether the object data is observable.
 
 **Since:** 24
 
@@ -16,7 +16,7 @@
 decoratorInfo: DecoratorInfo[]
 ```
 
-对象可被观察时，数组中内容为对象关联的装饰器和组件信息。对象不可被观察时，此数组为空。
+The UI component information associated with the object data.If the data object can not be observed, will return empty array.
 
 **Type:** [DecoratorInfo](arkts-arkui-arkui-statemanagement-decoratorinfo-i.md)[]
 
@@ -36,11 +36,7 @@ decoratorInfo: DecoratorInfo[]
 isObserved: boolean
 ```
 
-对象是否可被观察。
-
-true：表示是可被观察对象。
-
-false：表示不是可被观察对象。
+Whether the object data of class/Array/Map/Set/Date type is observable.if true, the object data can be observed.if false, the object data can not be not observed.
 
 **Type:** boolean
 
@@ -60,13 +56,7 @@ false：表示不是可被观察对象。
 reason: string
 ```
 
-对象是否可被观察的原因。
-
-不可被观察原因：对象本身是不可被观察的。
-
-可被观察原因或使用场景：
-
-1. 对象被[@Observed](../../../ui/state-management-static/arkts-static-observed-and-objectlink.md)装饰器装饰。 2. 对象被[@ObservedV2和@Trace](../../../ui/state-management-static/arkts-static-new-observedV2-and-trace.md)装饰。 3. 对象为被V1装饰器装饰或被[makeObserved](../../apis-arkts/arkts-apis/arkts-arkts-atomics-atomicreference-c.md/arkts-arkts-atomics-atomicreference-c.md#compareandswap)方法转换的interface字面量。 4. 对象为被V1/V2装饰器装饰或被makeObserved方法转换的Array/Map/Set/Date类型。5. 对象被@Observed装饰器装饰，但未使用在UI上。 6. 对象被@ObservedV2和@Trace装饰，但未使用在UI上。 7. 对象为被V1装饰器装饰或被makeObserved方法转换的interface字面量，但未用在UI上。 8. 对象为被V1/V2装饰器装饰或被makeObserved方法转换的Array/Map/Set/Date类型，但未用在UI上。
+Reasons why the object data of class/Array/Map/Set/Date type can be observed or not.1 The object data is not an observable object.2 The object data is observed data for the following reasons:2.1 The object data is decorated with @Observed.2.2 The object data is decorated with V2 @ObservedV2 and @Trace.2.3 The object data is object literal decorated with V1 decorators or wrapped by makeObserved.2.4 The object data is built-in type data (Array/Map/Set/Date)decorated with V1/V2 decorators or wrapped by makeObserved.2.5 The object data is decorated with @Observed, but not used in UI.2.6 The object data is decorated with V2 @ObservedV2 and @Trace, but not used in UI.2.7 The object data is object literal decorated with V1 decorators or wrapped by makeObserved, but not used in UI.2.8 The object data is built-in type data (Array/Map/Set/Date)decorated with V1/V2 decorators or wrapped by makeObserved, but not used in UI.
 
 **Type:** string
 

@@ -1,6 +1,6 @@
 # ImageMetadata
 
-图像的元数据集。
+Metadata set of an image.
 
 **Since:** 23
 
@@ -22,7 +22,7 @@ import { image } from 'kits/@kit.ImageKit';
 avisMetadata?: AvisMetadata
 ```
 
-AVIS图像元数据。
+Avis metadata.
 
 **Type:** [AvisMetadata](arkts-image-image-avismetadata-c.md)
 
@@ -42,7 +42,7 @@ AVIS图像元数据。
 dngMetadata?: DngMetadata
 ```
 
-DNG图像元数据。
+Dng metadata.
 
 **Type:** [DngMetadata](arkts-image-image-dngmetadata-c.md)
 
@@ -62,7 +62,7 @@ DNG图像元数据。
 exifMetadata?: ExifMetadata
 ```
 
-Exif元数据。
+Exif metadata.
 
 **Type:** [ExifMetadata](arkts-image-image-exifmetadata-c.md)
 
@@ -82,7 +82,7 @@ Exif元数据。
 gifMetadata?: GifMetadata
 ```
 
-GIF图像元数据。
+Gif metadata.
 
 **Type:** [GifMetadata](arkts-image-image-gifmetadata-c.md)
 
@@ -102,7 +102,7 @@ GIF图像元数据。
 heifsMetadata?: HeifsMetadata
 ```
 
-HEIF序列图像元数据类，用于存储图像的元数据。
+Heifs metadata.
 
 **Type:** [HeifsMetadata](arkts-image-image-heifsmetadata-c.md)
 
@@ -122,7 +122,7 @@ HEIF序列图像元数据类，用于存储图像的元数据。
 jfifMetadata?: JfifMetadata
 ```
 
-JFIF图像元数据。
+Jfif metadata.
 
 **Type:** [JfifMetadata](arkts-image-image-jfifmetadata-c.md)
 
@@ -142,7 +142,7 @@ JFIF图像元数据。
 makerNoteHuaweiMetadata?: MakerNoteHuaweiMetadata
 ```
 
-来自Huawei相机的照片元数据。
+Huawei Camera metadata.
 
 **Type:** [MakerNoteHuaweiMetadata](arkts-image-image-makernotehuaweimetadata-c.md)
 
@@ -162,7 +162,7 @@ makerNoteHuaweiMetadata?: MakerNoteHuaweiMetadata
 pngMetadata?: PngMetadata
 ```
 
-PNG图像元数据。
+Png metadata.
 
 **Type:** [PngMetadata](arkts-image-image-pngmetadata-c.md)
 
@@ -182,7 +182,7 @@ PNG图像元数据。
 tiffMetadata?: TiffMetadata
 ```
 
-TIFF图像元数据。
+Tiff metadata.
 
 **Type:** [TiffMetadata](arkts-image-image-tiffmetadata-c.md)
 
@@ -202,7 +202,7 @@ TIFF图像元数据。
 webPMetadata?: WebPMetadata
 ```
 
-WebP图像元数据类，用于存储图像的元数据。
+WebP metadata.
 
 **Type:** [WebPMetadata](arkts-image-image-webpmetadata-c.md)
 
@@ -222,7 +222,7 @@ WebP图像元数据类，用于存储图像的元数据。
 xmpMetadata?: XMPMetadata
 ```
 
-XMP元数据。
+XMP metadata.
 
 **Type:** [XMPMetadata](arkts-image-image-xmpmetadata-c.md)
 

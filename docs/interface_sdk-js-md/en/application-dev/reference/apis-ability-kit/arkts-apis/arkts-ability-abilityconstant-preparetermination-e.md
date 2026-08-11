@@ -1,8 +1,9 @@
 # PrepareTermination
 
-应用准备关闭时返回的动作，该类型为枚举。需要配合[AbilityStage](arkts-ability-app-ability-abilitystage-abilitystage-c.md)的  
-[onPrepareTermination](arkts-ability-app-ability-abilitystage-abilitystage-c.md#onpreparetermination)或者  
-[onPrepareTerminationAsync](arkts-ability-app-ability-abilitystage-abilitystage-c.md#onprepareterminationasync)方法使用。
+Enumerates the actions triggered when an application is closed by the user. You can use it in  
+[onPrepareTermination](arkts-ability-app-ability-abilitystage-abilitystage-c.md#onpreparetermination) or  
+[onPrepareTerminationAsync](arkts-ability-app-ability-abilitystage-abilitystage-c.md#onprepareterminationasync) of  
+[AbilityStage](arkts-ability-app-ability-abilitystage-abilitystage-c.md).
 
 **Since:** 15
 
@@ -18,7 +19,7 @@
 TERMINATE_IMMEDIATELY = 0
 ```
 
-表示立即执行结束动作，默认值。
+Executes the termination action immediately. This is the default behavior.
 
 **Since:** 15
 
@@ -38,7 +39,7 @@ TERMINATE_IMMEDIATELY = 0
 CANCEL = 1
 ```
 
-表示取消结束动作。
+Cancels the termination action.
 
 **Since:** 15
 

@@ -1,6 +1,6 @@
 # LocalDateTime
 
-用于日历类提醒设置时指定时间信息。
+Defines the time information for a calendar reminder.
 
 **Since:** 9
 
@@ -22,7 +22,7 @@ import { reminderAgentManager } from 'kits/@kit.BackgroundTasksKit';
 day: int
 ```
 
-日，取值范围是[1, 31]。
+Day. The value ranges from 1 to 31.
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
@@ -40,7 +40,7 @@ day: int
 hour: int
 ```
 
-时，取值范围是[0, 23]。
+Hour. The value ranges from 0 to 23.
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
@@ -58,7 +58,7 @@ hour: int
 minute: int
 ```
 
-分，取值范围是[0, 59]。
+Minute. The value ranges from 0 to 59.
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
@@ -76,7 +76,7 @@ minute: int
 month: int
 ```
 
-月，取值范围是[1, 12]。
+Month. The value ranges from 1 to 12.
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
@@ -94,7 +94,7 @@ month: int
 second?: int
 ```
 
-秒，取值范围是[0, 59]。
+Second. The value ranges from 0 to 59.
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
@@ -112,7 +112,7 @@ second?: int
 year: int
 ```
 
-年
+Year.
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 

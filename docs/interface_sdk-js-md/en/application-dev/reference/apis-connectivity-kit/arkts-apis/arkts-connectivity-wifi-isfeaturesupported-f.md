@@ -46,11 +46,11 @@ Checks whether this device supports a specified feature.
 import wifi from '@ohos.wifi';
 
 try {
-  let featureId = 0;
-  let ret = wifi.isFeatureSupported(featureId);
-  console.info("isFeatureSupported:" + ret);
+	let featureId = 0;
+	let ret = wifi.isFeatureSupported(featureId);
+	console.info("isFeatureSupported:" + ret);
 }catch(error){
-  console.error("failed:" + JSON.stringify(error));
+	console.error("failed:" + JSON.stringify(error));
 }
 ```
 

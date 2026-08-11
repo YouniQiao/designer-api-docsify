@@ -1,6 +1,6 @@
 # ChineseCalendar
 
-提供农历相关的能力，包括设置农历时间、判断指定年份某月是否存在闰月。继承自[Calendar](arkts-localization-i18n-calendar-c.md)，支持[Calendar](arkts-localization-i18n-calendar-c.md)的方法。
+Provide a ChineseCalendar interface which could handle unique characteristics of the chinese calendar,such as leap month.
 
 **Inheritance/Implementation:** ChineseCalendar extends [Calendar](arkts-localization-i18n-calendar-c.md)
 
@@ -24,7 +24,7 @@ import { i18n } from 'kits/@kit.LocalizationKit';
 public static checkLeapMonth(gregorianYear: int, cyclicalYear: int, month: int): boolean
 ```
 
-判断指定年份某月是否存在闰月。
+Checks whether a given month exist leap month in gregorianYear and cyclicalYear.
 
 **Since:** 26.0.0
 
@@ -42,21 +42,21 @@ public static checkLeapMonth(gregorianYear: int, cyclicalYear: int, month: int):
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| gregorianYear | int | Yes | 公历的年。 &lt;br&gt;取值范围：[1900, 2100]。 |
-| cyclicalYear | int | Yes | 农历的干支年。 &lt;br&gt;取值范围：[1, 60]。 |
-| month | int | Yes | 农历的月。 &lt;br&gt;**说明：** &lt;br&gt;月份从0开始计数，0表示一月。 |
+| gregorianYear | int | Yes | Gregorian year to check, supported range is from 1900 to 2100 &lt;br&gt;The value range is all integers. |
+| cyclicalYear | int | Yes | Cyclical year to check, supported range is from 1 to 60 &lt;br&gt;The value range is all integers. |
+| month | int | Yes | Month to check. Note: The month starts from 0. For example, 0 indicates January &lt;br&gt;The value range is all integers. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| boolean | 是否存在闰月。true表示该月存在闰月，false表示该月不存在闰月。 |
+| boolean | Check whether the input month is a leap month. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 8900001 | Invalid parameter. Possible causes: Parameter verification failed. |
+| [8900001](../errorcode-i18n.md#8900001-parameter-verification-error) | Invalid parameter. Possible causes: Parameter verification failed. |
 
 ## setChineseCalendarTime
 
@@ -64,7 +64,7 @@ public static checkLeapMonth(gregorianYear: int, cyclicalYear: int, month: int):
 public setChineseCalendarTime(chineseCalendarTime: ChineseCalendarTime): void
 ```
 
-设置农历对象的时间日期。
+Sets the year, month, day, hour, minute, second, isLeapMonth for this ChineseCalendar object.
 
 **Since:** 26.0.0
 
@@ -82,5 +82,5 @@ public setChineseCalendarTime(chineseCalendarTime: ChineseCalendarTime): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| chineseCalendarTime | [ChineseCalendarTime](arkts-localization-i18n-chinesecalendartime-i.md) | Yes | 农历时间对象。 |
+| chineseCalendarTime | [ChineseCalendarTime](arkts-localization-i18n-chinesecalendartime-i.md) | Yes | Indicates the time element used to set for ChineseCalendar. |
 

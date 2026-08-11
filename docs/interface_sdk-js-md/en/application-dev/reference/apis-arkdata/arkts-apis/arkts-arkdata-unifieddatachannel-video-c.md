@@ -1,6 +1,6 @@
 # Video
 
-视频类型数据，是[File](arkts-arkdata-unifieddatachannel-file-c.md)的子类，用于描述视频文件。
+Represents video data. It is a child class of [File](arkts-arkdata-unifieddatachannel-file-c.md) and is used to describe a video file.
 
 **Inheritance/Implementation:** Video extends [File](arkts-arkdata-unifieddatachannel-file-c.md)
 
@@ -24,7 +24,7 @@ import { unifiedDataChannel } from 'kits/@kit.ArkData';
 set videoUri(value: string)
 ```
 
-本地视频数据uri或网络视频uri，本地视频数据uri可通过[getUriFromPath](../../apis-core-file-kit/arkts-apis/arkts-corefile-fileuri-geturifrompath-f.md/arkts-corefile-fileuri-geturifrompath-f.md#geturifrompath)函数获取。
+Indicates the uri of video
 
 **Type:** string
 

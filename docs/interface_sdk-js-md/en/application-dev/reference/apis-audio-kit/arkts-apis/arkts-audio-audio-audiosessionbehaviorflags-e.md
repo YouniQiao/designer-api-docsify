@@ -1,6 +1,6 @@
 # AudioSessionBehaviorFlags
 
-表示音频会话行为的枚举。
+Enumerates audio session behavior flags.
 
 **Since:** 24
 
@@ -16,7 +16,7 @@
 DEFAULT_BEHAVIOR = 0x00000000
 ```
 
-默认行为，用于清空音频会话行为设置。
+Default behavior, used to clear behavior settings.
 
 **Since:** 24
 
@@ -34,17 +34,7 @@ DEFAULT_BEHAVIOR = 0x00000000
 MUTE_WHEN_INTERRUPTED = 0x00000002
 ```
 
-当系统需要停止或暂停音频流时，执行强制静音替代。
-
-调用[setAudioSessionBehavior](arkts-audio-audio-audiosessionmanager-i.md#setaudiosessionbehavior)接口配置该行为时，必须同步调用  
-[setAudioSessionScene](arkts-audio-audio-audiosessionmanager-i.md#setaudiosessionscene)接口，否则配置将无法生效。
-
-在音频会话场景下，当音频流静音或恢复时，应用将分别收到[AudioSessionStateChangeHint](arkts-audio-audio-audiosessionstatechangehint-e.md).AUDIO_SESSION_STATE_CHANGE_HINT_MUTE与[AudioSessionStateChangeHint](arkts-audio-audio-audiosessionstatechangehint-e.md).AUDIO_SESSION_STATE_CHANGE_HINT_UNMUTE的通知。
-
-在AudioRenderer和AudioCapturer场景下，当音频流静音或恢复时，应用将分别收到[InterruptHint](arkts-audio-audio-interrupthint-e.md).INTERRUPT_HINT_MUTE与  
-[InterruptHint](arkts-audio-audio-interrupthint-e.md).INTERRUPT_HINT_UNMUTE的通知。
-
-**注意：** 该标志不能与PAUSE_WHEN_INTERRUPTED共存，若同时设置，仅PAUSE_WHEN_INTERRUPTED生效。
+When the system needs to stop or pause the audio stream, it performs a forced mute instead.In the audio session scenario, the application will receive a notification{@link #AUDIO_SESSION_STATE_CHANGE_HINT_MUTE} when muted and a notification {@link #AUDIO_SESSION_STATE_CHANGE_HINT_UNMUTE} when resumed.In the AudioRenderer and AudioCapturer scenarios, the application will receive a notification{@link #INTERRUPT_HINT_MUTE} when muted and a notification {@link #INTERRUPT_HINT_UNMUTE} when resumed.This flag cannot coexist with {@link #PAUSE_WHEN_INTERRUPTED}; if both flags are set,only {@link #PAUSE_WHEN_INTERRUPTED} will take effect.
 
 **Since:** 24
 
@@ -62,16 +52,7 @@ MUTE_WHEN_INTERRUPTED = 0x00000002
 PAUSE_WHEN_INTERRUPTED = 0x00000004
 ```
 
-当系统需要停止音频流时，执行暂停替代。
-
-调用[setAudioSessionBehavior](arkts-audio-audio-audiosessionmanager-i.md#setaudiosessionbehavior)接口配置该行为时，必须同步调用  
-[setAudioSessionScene](arkts-audio-audio-audiosessionmanager-i.md#setaudiosessionscene)接口，否则配置将无法生效。
-
-在音频会话场景下，当音频流暂停或恢复时，应用将分别收到[AudioSessionStateChangeHint](arkts-audio-audio-audiosessionstatechangehint-e.md).AUDIO_SESSION_STATE_CHANGE_HINT_PAUSE与[AudioSessionStateChangeHint](arkts-audio-audio-audiosessionstatechangehint-e.md).AUDIO_SESSION_STATE_CHANGE_HINT_RESUME的通知。
-
-在AudioRenderer和AudioCapturer场景下，当音频流暂停或恢复时，应用将分别收到[InterruptHint](arkts-audio-audio-interrupthint-e.md).INTERRUPT_HINT_PAUSE与[InterruptHint](arkts-audio-audio-interrupthint-e.md).INTERRUPT_HINT_RESUME的通知。
-
-**注意：** 该标志不能与MUTE_WHEN_INTERRUPTED共存，若同时设置，仅该标志生效。
+When the system needs to stop the audio stream, it performs a pause instead.In the audio session scenario, the application will receive a notification{@link #AUDIO_SESSION_STATE_CHANGE_HINT_PAUSE} when paused and a notification {@link #AUDIO_SESSION_STATE_CHANGE_HINT_RESUME} when resumed.In the AudioRenderer and AudioCapturer scenarios, the application will receive a notification{@link #INTERRUPT_HINT_PAUSE} when paused and a notification {@link #INTERRUPT_HINT_RESUME} when resumed.This flag cannot coexist with {@link #MUTE_WHEN_INTERRUPTED}; if both flags are set,only this flag will take effect.
 
 **Since:** 26.0.0
 

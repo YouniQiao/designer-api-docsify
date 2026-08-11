@@ -12,12 +12,6 @@ USB设备类型信息。
 
 **系统能力：** SystemCapability.Customization.EnterpriseDeviceManager
 
-## 导入模块
-
-```TypeScript
-import { usbManager } from 'kits/@kit.MDMKit';
-```
-
 ## baseClass
 
 ```TypeScript

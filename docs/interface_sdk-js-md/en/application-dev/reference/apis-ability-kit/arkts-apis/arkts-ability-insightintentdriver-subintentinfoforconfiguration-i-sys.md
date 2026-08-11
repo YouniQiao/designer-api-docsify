@@ -1,6 +1,7 @@
 # SubIntentInfoForConfiguration (System API)
 
-用于描述[使用配置文件开发的意图](../../../application-models/insight-intent-config-development.md)的特有信息。
+Describes the unique information of the  
+[intent developed using a configuration file](../../../application-models/insight-intent-config-development.md).
 
 **Since:** 23
 
@@ -24,7 +25,7 @@ import { insightIntentDriver } from 'kits/@kit.AbilityKit';
 readonly entities?: Record<string, Object>
 ```
 
-表示意图包含的实体信息。
+Entity information contained in the intent.
 
 **Type:** [Record](../../apis-default/arkts-apis/arkts-record-t.md)&lt;string, Object&gt;
 
@@ -46,7 +47,7 @@ readonly entities?: Record<string, Object>
 readonly form?: FormIntentInfo
 ```
 
-表示意图绑定的卡片信息。
+Information about the widget bound to the intent.
 
 **Type:** [FormIntentInfo](arkts-ability-insightintentdriver-formintentinfo-i-sys.md)
 
@@ -68,7 +69,7 @@ readonly form?: FormIntentInfo
 readonly inputParams?: Array<Record<string, Object>>
 ```
 
-表示意图参数的数据格式声明，用于意图调用时定义入参的数据格式。
+Data format of intent parameters, which is used to define the input data format during intent calls.
 
 **Type:** Array&lt;Record&lt;string, Object&gt;&gt;
 
@@ -90,7 +91,7 @@ readonly inputParams?: Array<Record<string, Object>>
 readonly outputParams?: Array<Record<string, Object>>
 ```
 
-表示意图调用返回结果的数据格式声明，用于定义意图调用返回结果的数据格式。
+Data format for the results returned by intent calls. It defines how the data should be structured.
 
 **Type:** Array&lt;Record&lt;string, Object&gt;&gt;
 
@@ -112,7 +113,7 @@ readonly outputParams?: Array<Record<string, Object>>
 readonly serviceExtension?: ServiceExtensionIntentInfo
 ```
 
-表示意图绑定的ServiceExtensionAbility组件信息。
+Information about the ServiceExtensionAbility bound to the intent.
 
 **Type:** [ServiceExtensionIntentInfo](arkts-ability-insightintentdriver-serviceextensionintentinfo-i-sys.md)
 
@@ -134,7 +135,7 @@ readonly serviceExtension?: ServiceExtensionIntentInfo
 readonly srcEntry: string
 ```
 
-表示意图执行文件的相对路径，取值为长度不超过127字节的字符串。
+Relative path of the intent execution file. The value is a string of a maximum of 127 bytes.
 
 **Type:** string
 
@@ -156,7 +157,7 @@ readonly srcEntry: string
 readonly uiAbility?: UIAbilityIntentInfo
 ```
 
-表示意图绑定的UIAbility组件信息，包含"ability"字段和"executeMode"字段。
+Information about the UIAbility bound to the intent, including the **ability** and **executeMode** fields.
 
 **Type:** [UIAbilityIntentInfo](arkts-ability-insightintentdriver-uiabilityintentinfo-i-sys.md)
 
@@ -178,7 +179,7 @@ readonly uiAbility?: UIAbilityIntentInfo
 readonly uiExtension?: UIExtensionIntentInfo
 ```
 
-表示意图绑定的UIExtensionAbility组件信息。
+Information about the UIExtensionAbility bound to the intent.
 
 **Type:** [UIExtensionIntentInfo](arkts-ability-insightintentdriver-uiextensionintentinfo-i-sys.md)
 

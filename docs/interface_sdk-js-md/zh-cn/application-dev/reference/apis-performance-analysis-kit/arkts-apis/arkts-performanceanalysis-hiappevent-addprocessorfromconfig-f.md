@@ -1,11 +1,5 @@
 # addProcessorFromConfig
 
-## 导入模块
-
-```TypeScript
-import { hiAppEvent } from 'kits/@kit.PerformanceAnalysisKit';
-```
-
 ## addProcessorFromConfig
 
 ```TypeScript
@@ -41,9 +35,11 @@ function addProcessorFromConfig(processorName: string, configName?: string): Pro
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 11105001 | Invalid parameter value. Possible causes: 1. Incorrect parameter length; 2. Incorrect parameter format. |
+| [11105001](../errorcode-hiappevent.md#11105001-非法的参数值) | Invalid parameter value. Possible causes: 1. Incorrect parameter length; 2. Incorrect parameter format. |
 
 ## 示例
+
+ArkTS-Dyn示例：
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -53,6 +49,20 @@ hiAppEvent.addProcessorFromConfig("test_name").then((processorId) => {
   hilog.info(0x0000, 'hiAppEvent', `Succeeded in adding processor from config, processorId=${processorId}`);
 }).catch((err: BusinessError) => {
   hilog.error(0x0000, 'hiAppEvent', `Failed to add processor from config, code: ${err.code}, message: ${err.message}`);
+});
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+import { BusinessError } from '@ohos.base';
+import { hilog } from '@kit.PerformanceAnalysisKit';
+
+hiAppEvent.addProcessorFromConfig("test_name").then((processorId: long) => {
+  hilog.info(0x0000, 'hiAppEvent', `Succeeded in adding processor from config, processorId=${processorId}`);
+}).catch((err: Error) => {
+  const bErr = err as BusinessError;
+  hilog.error(0x0000, 'hiAppEvent', `Failed to add processor from config, code: ${bErr.code}, message: ${bErr.message}`);
 });
 ```
 

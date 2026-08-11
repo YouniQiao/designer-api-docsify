@@ -1,6 +1,6 @@
 # StrategyForHeartbeat (System API)
 
-表示心跳广播策略。
+Defines the heartbeat broadcast policy.
 
 **Since:** 15
 
@@ -18,7 +18,7 @@
 TEMP_STOP_HEARTBEAT = 100
 ```
 
-临时停止心跳广播，超时后自动恢复。
+Stops the heartbeat broadcast temporarily, and resumes it upon timeout expiration.
 
 **Since:** 15
 
@@ -36,7 +36,7 @@ TEMP_STOP_HEARTBEAT = 100
 START_HEARTBEAT = 101
 ```
 
-开始心跳广播。
+Starts heartbeat broadcast.
 
 **Since:** 15
 

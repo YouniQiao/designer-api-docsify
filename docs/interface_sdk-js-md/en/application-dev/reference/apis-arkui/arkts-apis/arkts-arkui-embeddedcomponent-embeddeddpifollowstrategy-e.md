@@ -1,6 +1,6 @@
 # EmbeddedDpiFollowStrategy
 
-EmbeddedDpiFollowStrategy的不同类型的枚举。
+Enumeration of different types of EmbeddedDpiFollowStrategy.
 
 **Since:** 26.0.0
 
@@ -16,7 +16,7 @@ EmbeddedDpiFollowStrategy的不同类型的枚举。
 FOLLOW_HOST_DPI = 0
 ```
 
-跟随宿主应用的DPI配置。
+Follow the host application's DPI configuration.
 
 **Since:** 26.0.0
 
@@ -34,7 +34,7 @@ FOLLOW_HOST_DPI = 0
 FOLLOW_UI_EXTENSION_ABILITY_DPI = 1
 ```
 
-跟随EmbeddedUIExtensionAbility的DPI配置。
+Follow the EmbeddedUIExtensionAbility's DPI configuration.
 
 **Since:** 26.0.0
 

@@ -4,7 +4,7 @@
 declare type OnTabsContentWillChangeCallback = (currentIndex: number, comingIndex: number) => boolean
 ```
 
-自定义Tabs页面切换拦截事件能力，新页面即将显示时触发的回调。
+Defines the callback invoked when a new page is about to be displayed.
 
 **Since:** 18
 
@@ -22,12 +22,12 @@ declare type OnTabsContentWillChangeCallback = (currentIndex: number, comingInde
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| currentIndex | number | Yes | 当前显示页面的index索引，索引从0开始计算。 |
-| comingIndex | number | Yes | 将要显示的新页面的index索引。 |
+| currentIndex | number | Yes | Index of the active tab. The index starts from 0. |
+| comingIndex | number | Yes | Index of the new tab to be displayed. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| boolean | 当回调函数handler的返回值为true时，Tabs可以切换到新页面。<br/>当回调函数handler的返回值为false时，Tabs无法切换到新页面，仍然显示原来页面内容。 |
+| boolean | The return value **true** means that the tab can switch to the new page. <br>The value **false** means that the tab cannot switch to the new page and will remain on the current page. |
 

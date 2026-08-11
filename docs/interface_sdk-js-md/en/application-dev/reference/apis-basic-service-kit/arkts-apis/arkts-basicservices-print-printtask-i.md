@@ -1,6 +1,6 @@
 # PrintTask
 
-打印任务完成后的事件监听回调接口类。
+Implements event listeners for print jobs.
 
 **Since:** 10
 
@@ -22,7 +22,7 @@ import { print } from 'kits/@kit.BasicServicesKit';
 off(type: 'block', callback?: Callback<void>): void
 ```
 
-取消打印任务阻塞的监听，使用callback异步回调。
+Unsubscribes from the block events of a print job. This API uses an asynchronous callback to return the result.
 
 **Since:** 10
 
@@ -38,15 +38,15 @@ off(type: 'block', callback?: Callback<void>): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'block' | Yes | 取消监听，&lt;br/&gt;监听字段：block，&lt;br/&gt;表示打印任务阻塞。 |
-| callback | [Callback](arkts-basicservices-base-callback-i.md)&lt;void&gt; | No | 回调函数，取消指定的打印任务阻塞事件订阅。 |
+| type | 'block' | Yes | Listening type.&lt;br&gt;The value is fixed at **'block'**.&lt;br&gt;It means that the print job is blocked. |
+| callback | [Callback](arkts-basicservices-base-callback-i.md)&lt;void&gt; | No | Callback used to unsubscribe from the block events of a specified print job. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
-| 201 | the application does not have permission to call this function. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
+| [201](../../errorcode-universal.md#201-permission-denied) | the application does not have permission to call this function. |
 
 ## Examples
 
@@ -89,7 +89,7 @@ struct Index {
 off(type: 'succeed', callback?: Callback<void>): void
 ```
 
-取消打印任务成功的监听，使用callback异步回调。
+Unsubscribes from the success events of a print job. This API uses an asynchronous callback to return the result.
 
 **Since:** 10
 
@@ -105,15 +105,15 @@ off(type: 'succeed', callback?: Callback<void>): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'succeed' | Yes | 取消监听，&lt;br/&gt;监听字段：succeed，&lt;br/&gt;表示打印任务成功。 |
-| callback | [Callback](arkts-basicservices-base-callback-i.md)&lt;void&gt; | No | 回调函数，取消指定的打印任务成功事件订阅。 |
+| type | 'succeed' | Yes | Listening type.&lt;br&gt;The value is fixed at **'succeed'**.&lt;br&gt;It means that the print job is successful. |
+| callback | [Callback](arkts-basicservices-base-callback-i.md)&lt;void&gt; | No | Callback used to unsubscribe from the success events of a specified print job. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
-| 201 | the application does not have permission to call this function. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
+| [201](../../errorcode-universal.md#201-permission-denied) | the application does not have permission to call this function. |
 
 ## Examples
 
@@ -156,7 +156,7 @@ struct Index {
 off(type: 'fail', callback?: Callback<void>): void
 ```
 
-取消打印任务失败的监听，使用callback异步回调。
+Unsubscribes from the failure events of a print job. This API uses an asynchronous callback to return the result.
 
 **Since:** 10
 
@@ -172,15 +172,15 @@ off(type: 'fail', callback?: Callback<void>): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'fail' | Yes | 取消监听，&lt;br/&gt;监听字段：fail，&lt;br/&gt;表示打印任务失败。 |
-| callback | [Callback](arkts-basicservices-base-callback-i.md)&lt;void&gt; | No | 回调函数，取消指定的打印任务失败事件订阅。 |
+| type | 'fail' | Yes | Listening type.&lt;br&gt;The value is fixed at **'fail'**.&lt;br&gt;It means that the print job is failed. |
+| callback | [Callback](arkts-basicservices-base-callback-i.md)&lt;void&gt; | No | Callback used to unsubscribe from the failure events of a specified print job. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
-| 201 | the application does not have permission to call this function. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
+| [201](../../errorcode-universal.md#201-permission-denied) | the application does not have permission to call this function. |
 
 ## Examples
 
@@ -223,7 +223,7 @@ struct Index {
 off(type: 'cancel', callback?: Callback<void>): void
 ```
 
-取消打印任务被取消的监听，使用callback异步回调。
+Unsubscribes from the cancellation events of a print job. This API uses an asynchronous callback to return the result.
 
 **Since:** 10
 
@@ -239,15 +239,15 @@ off(type: 'cancel', callback?: Callback<void>): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'cancel' | Yes | 取消监听，&lt;br/&gt;监听字段：cancel，&lt;br/&gt;表示打印任务被取消。 |
-| callback | [Callback](arkts-basicservices-base-callback-i.md)&lt;void&gt; | No | 回调函数，取消指定的打印任务被取消事件订阅。 |
+| type | 'cancel' | Yes | Listening type.&lt;br&gt;The value is fixed at **'cancel'**.&lt;br&gt;It means that the print job is canceled. |
+| callback | [Callback](arkts-basicservices-base-callback-i.md)&lt;void&gt; | No | Callback used to unsubscribe from the cancellation events of a specified print job. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
-| 201 | the application does not have permission to call this function. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
+| [201](../../errorcode-universal.md#201-permission-denied) | the application does not have permission to call this function. |
 
 ## Examples
 
@@ -312,8 +312,8 @@ Unregister event callback when the current print task is in process.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
-| 201 | the application does not have permission to call this function. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
+| [201](../../errorcode-universal.md#201-permission-denied) | the application does not have permission to call this function. |
 
 ## offCancel
 
@@ -343,8 +343,8 @@ Unregister event callback when the current print task is in process.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
-| 201 | the application does not have permission to call this function. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
+| [201](../../errorcode-universal.md#201-permission-denied) | the application does not have permission to call this function. |
 
 ## offFail
 
@@ -374,8 +374,8 @@ Unregister event callback when the current print task is in process.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
-| 201 | the application does not have permission to call this function. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
+| [201](../../errorcode-universal.md#201-permission-denied) | the application does not have permission to call this function. |
 
 ## offSucceed
 
@@ -405,8 +405,8 @@ Unregister event callback when the current print task is in process.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
-| 201 | the application does not have permission to call this function. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
+| [201](../../errorcode-universal.md#201-permission-denied) | the application does not have permission to call this function. |
 
 ## on('block')
 
@@ -414,7 +414,7 @@ Unregister event callback when the current print task is in process.
 on(type: 'block', callback: Callback<void>): void
 ```
 
-注册打印任务阻塞的监听，使用callback异步回调。
+Subscribes to the block events of a print job. This API uses an asynchronous callback to return the result.
 
 **Since:** 10
 
@@ -430,15 +430,15 @@ on(type: 'block', callback: Callback<void>): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'block' | Yes | 注册监听，&lt;br/&gt;监听字段：block，&lt;br/&gt;表示打印任务阻塞。 |
-| callback | [Callback](arkts-basicservices-base-callback-i.md)&lt;void&gt; | Yes | 回调函数，通知调用方打印任务阻塞。 |
+| type | 'block' | Yes | Listening type.&lt;br&gt;The value is fixed at **'block'**.&lt;br&gt;It means that the print job is blocked. |
+| callback | [Callback](arkts-basicservices-base-callback-i.md)&lt;void&gt; | Yes | Callback used to notify the caller that the print job is blocked. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
-| 201 | the application does not have permission to call this function. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
+| [201](../../errorcode-universal.md#201-permission-denied) | the application does not have permission to call this function. |
 
 ## Examples
 
@@ -481,7 +481,7 @@ struct Index {
 on(type: 'succeed', callback: Callback<void>): void
 ```
 
-注册打印任务成功的监听，使用callback异步回调。
+Subscribes to the success events of a print job. This API uses an asynchronous callback to return the result.
 
 **Since:** 10
 
@@ -497,15 +497,15 @@ on(type: 'succeed', callback: Callback<void>): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'succeed' | Yes | 注册监听，&lt;br/&gt;监听字段：succeed，&lt;br/&gt;表示打印任务成功。 |
-| callback | [Callback](arkts-basicservices-base-callback-i.md)&lt;void&gt; | Yes | 回调函数，通知调用方打印任务成功。 |
+| type | 'succeed' | Yes | Listening type.&lt;br&gt;The value is fixed at **'succeed'**.&lt;br&gt;It means that the print job is successful. |
+| callback | [Callback](arkts-basicservices-base-callback-i.md)&lt;void&gt; | Yes | Callback used to notify the caller that the print job is successful. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
-| 201 | the application does not have permission to call this function. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
+| [201](../../errorcode-universal.md#201-permission-denied) | the application does not have permission to call this function. |
 
 ## Examples
 
@@ -548,7 +548,7 @@ struct Index {
 on(type: 'fail', callback: Callback<void>): void
 ```
 
-注册打印任务失败的监听，使用callback异步回调。
+Subscribes to the failure events of a print job. This API uses an asynchronous callback to return the result.
 
 **Since:** 10
 
@@ -564,15 +564,15 @@ on(type: 'fail', callback: Callback<void>): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'fail' | Yes | 注册监听，&lt;br/&gt;监听字段：fail，&lt;br/&gt;表示打印任务失败。 |
-| callback | [Callback](arkts-basicservices-base-callback-i.md)&lt;void&gt; | Yes | 回调函数，通知调用方打印任务失败。 |
+| type | 'fail' | Yes | Listening type.&lt;br&gt;The value is fixed at **'fail'**.&lt;br&gt;It means that the print job is failed. |
+| callback | [Callback](arkts-basicservices-base-callback-i.md)&lt;void&gt; | Yes | Callback used to notify the caller that the print job is failed. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
-| 201 | the application does not have permission to call this function. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
+| [201](../../errorcode-universal.md#201-permission-denied) | the application does not have permission to call this function. |
 
 ## Examples
 
@@ -615,7 +615,7 @@ struct Index {
 on(type: 'cancel', callback: Callback<void>): void
 ```
 
-注册打印任务被取消的监听，使用callback异步回调。
+Subscribes to the cancellation events of a print job. This API uses an asynchronous callback to return the result.
 
 **Since:** 10
 
@@ -631,15 +631,15 @@ on(type: 'cancel', callback: Callback<void>): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'cancel' | Yes | 注册监听，&lt;br/&gt;监听字段：cancel，&lt;br/&gt;表示打印任务被取消。 |
-| callback | [Callback](arkts-basicservices-base-callback-i.md)&lt;void&gt; | Yes | 回调函数，通知调用方打印任务被取消。 |
+| type | 'cancel' | Yes | Listening type.&lt;br&gt;The value is fixed at **'cancel'**.&lt;br&gt;It means that the print job is canceled. |
+| callback | [Callback](arkts-basicservices-base-callback-i.md)&lt;void&gt; | Yes | Callback used to notify the caller that the print job is canceled. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
-| 201 | the application does not have permission to call this function. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
+| [201](../../errorcode-universal.md#201-permission-denied) | the application does not have permission to call this function. |
 
 ## Examples
 
@@ -704,8 +704,8 @@ Register event callback when the current print task is in process.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
-| 201 | the application does not have permission to call this function. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
+| [201](../../errorcode-universal.md#201-permission-denied) | the application does not have permission to call this function. |
 
 ## onCancel
 
@@ -735,8 +735,8 @@ Register event callback when the current print task is in process.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
-| 201 | the application does not have permission to call this function. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
+| [201](../../errorcode-universal.md#201-permission-denied) | the application does not have permission to call this function. |
 
 ## onFail
 
@@ -766,8 +766,8 @@ Register event callback when the current print task is in process.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
-| 201 | the application does not have permission to call this function. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
+| [201](../../errorcode-universal.md#201-permission-denied) | the application does not have permission to call this function. |
 
 ## onSucceed
 
@@ -797,6 +797,6 @@ Register event callback when the current print task is in process.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
-| 201 | the application does not have permission to call this function. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
+| [201](../../errorcode-universal.md#201-permission-denied) | the application does not have permission to call this function. |
 

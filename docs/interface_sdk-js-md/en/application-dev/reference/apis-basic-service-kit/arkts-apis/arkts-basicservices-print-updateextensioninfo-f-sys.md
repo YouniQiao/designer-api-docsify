@@ -12,7 +12,7 @@ import { print } from 'kits/@kit.BasicServicesKit';
 function updateExtensionInfo(info: string, callback: AsyncCallback<void>): void
 ```
 
-更新打印扩展状态，使用callback异步回调。
+Updates the printer extension information. This API uses an asynchronous callback to return the result.
 
 **Since:** 10
 
@@ -30,16 +30,16 @@ function updateExtensionInfo(info: string, callback: AsyncCallback<void>): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| info | string | Yes | 表示打印扩展变更信息。 |
-| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | 异步更新打印扩展状态之后的回调。 |
+| info | string | Yes | New printer extension information. |
+| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
-| 201 | the application does not have permission to call this function. |
-| 202 | not system application |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
+| [201](../../errorcode-universal.md#201-permission-denied) | the application does not have permission to call this function. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | not system application |
 
 ## Examples
 
@@ -64,7 +64,7 @@ print.updateExtensionInfo(info, (err: BusinessError) => {
 function updateExtensionInfo(info: string): Promise<void>
 ```
 
-更新打印扩展状态，使用Promise异步回调。
+Updates the printer extension information. This API uses a promise to return the result.
 
 **Since:** 10
 
@@ -82,21 +82,21 @@ function updateExtensionInfo(info: string): Promise<void>
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| info | string | Yes | 表示打印扩展变更信息。 |
+| info | string | Yes | New printer extension information. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise对象，无返回结果。 |
+| Promise&lt;void&gt; | Promise that returns no value. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
-| 201 | the application does not have permission to call this function. |
-| 202 | not system application |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
+| [201](../../errorcode-universal.md#201-permission-denied) | the application does not have permission to call this function. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | not system application |
 
 ## Examples
 

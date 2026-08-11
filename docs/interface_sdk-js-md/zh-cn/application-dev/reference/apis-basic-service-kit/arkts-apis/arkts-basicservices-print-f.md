@@ -1,11 +1,5 @@
 # print
 
-## 导入模块
-
-```TypeScript
-import { print } from 'kits/@kit.BasicServicesKit';
-```
-
 ## print
 
 ```TypeScript
@@ -35,21 +29,21 @@ function print(files: Array<string>, callback: AsyncCallback<PrintTask>): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
-| 201 | the application does not have permission to call this function. |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
+| [201](../../errorcode-universal.md#201-权限校验失败) | the application does not have permission to call this function. |
 
 ## 示例
 
 ```TypeScript
 import { print } from '@kit.BasicServicesKit';
-import { BusinessError } from '@kit.BasicServicesKit';
+import { BusinessError } from '@ohos.base';
 import { fileUri } from '@kit.CoreFileKit';
 
-// 传入文件的URI
+// 传入文件的uri
 let filePath = '/data/storage/el2/base/haps/entry/files/test.pdf';
-print.print([fileUri.getUriFromPath(filePath)], (error: BusinessError, printTask: print.PrintTask) => {
-    if (error) {
-        console.error(`Failed to print. Code: ${error.code}, message: ${error.message}`);
+print.print([fileUri.getUriFromPath(filePath)], (err: BusinessError, printTask: print.PrintTask) => {
+    if (err) {
+        console.error('print err ' + JSON.stringify(err));
     } else {
         printTask.on('succeed', () => {
             console.info('print state is succeed');
@@ -94,17 +88,17 @@ function print(files: Array<string>): Promise<PrintTask>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
-| 201 | the application does not have permission to call this function. |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
+| [201](../../errorcode-universal.md#201-权限校验失败) | the application does not have permission to call this function. |
 
 ## 示例
 
 ```TypeScript
 import { print } from '@kit.BasicServicesKit';
-import { BusinessError } from '@kit.BasicServicesKit';
+import { BusinessError } from '@ohos.base';
 import { fileUri } from '@kit.CoreFileKit';
 
-// 传入文件的URI
+// 传入文件的uri
 let filePath = '/data/storage/el2/base/haps/entry/files/test.pdf';
 print.print([fileUri.getUriFromPath(filePath)]).then((printTask: print.PrintTask) => {
     printTask.on('succeed', () => {
@@ -112,7 +106,7 @@ print.print([fileUri.getUriFromPath(filePath)]).then((printTask: print.PrintTask
     })
     // ...
 }).catch((error: BusinessError) => {
-    console.error(`Failed to print. Code: ${error.code}, message: ${error.message}`);
+    console.error('print err ' + JSON.stringify(error));
 })
 ```
 
@@ -147,14 +141,14 @@ function print(files: Array<string>, context: Context, callback: AsyncCallback<P
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
-| 201 | the application does not have permission to call this function. |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
+| [201](../../errorcode-universal.md#201-权限校验失败) | the application does not have permission to call this function. |
 
 ## 示例
 
 ```TypeScript
 import { print } from '@kit.BasicServicesKit';
-import { BusinessError } from '@kit.BasicServicesKit';
+import { BusinessError } from '@ohos.base';
 import { fileUri } from '@kit.CoreFileKit';
 
 @Entry
@@ -163,21 +157,19 @@ struct Index {
     build() {
         Scroll() {
             Column({ space: 10 }) {
-                Button('打印').width('90%').height(50).onClick(() => {
+                Button("打印").width('90%').height(50).onClick(() => {
                     let filePath = '/data/storage/el2/base/haps/entry/files/test.pdf';
                     let context = this.getUIContext().getHostContext();
-                    print.print([fileUri.getUriFromPath(filePath)], context, (error: BusinessError, printTask: print.PrintTask) => {
-                        if (error) {
-                            console.error(`Failed to print. Code: ${error.code}, message: ${error.message}`);
+                    print.print([fileUri.getUriFromPath(filePath)], context, (err: BusinessError, printTask: print.PrintTask) => {
+                        if (err) {
+                            console.error('print err ' + JSON.stringify(err));
                         } else {
                             printTask.on('succeed', () => {
                                 console.info('print state is succeed');
                             })
                             // ...
                         }
-                    })
-                })
-            }
+}
             .justifyContent(FlexAlign.Center)
             .constraintSize({ minHeight: '100%' })
             .width('100%')
@@ -223,14 +215,14 @@ function print(files: Array<string>, context: Context): Promise<PrintTask>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
-| 201 | the application does not have permission to call this function. |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
+| [201](../../errorcode-universal.md#201-权限校验失败) | the application does not have permission to call this function. |
 
 ## 示例
 
 ```TypeScript
 import { print } from '@kit.BasicServicesKit';
-import { BusinessError } from '@kit.BasicServicesKit';
+import { BusinessError } from '@ohos.base';
 import { fileUri } from '@kit.CoreFileKit';
 
 @Entry
@@ -239,7 +231,7 @@ struct Index {
     build() {
         Scroll() {
             Column({ space: 10 }) {
-                Button('打印').width('90%').height(50).onClick(() => {
+                Button("打印").width('90%').height(50).onClick(() => {
                     let filePath = '/data/storage/el2/base/haps/entry/files/test.pdf';
                     let context = this.getUIContext().getHostContext();
                     print.print([fileUri.getUriFromPath(filePath)], context).then((printTask: print.PrintTask) => {
@@ -248,7 +240,7 @@ struct Index {
                         })
                         // ...
                     }).catch((error: BusinessError) => {
-                        console.error(`Failed to print. Code: ${error.code}, message: ${error.message}`);
+                        console.error('print err ' + JSON.stringify(error));
                     })
                 })
             }
@@ -300,14 +292,14 @@ function print(jobName: string, printAdapter: PrintDocumentAdapter, printAttribu
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
-| 201 | the application does not have permission to call this function. |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
+| [201](../../errorcode-universal.md#201-权限校验失败) | the application does not have permission to call this function. |
 
 ## 示例
 
 ```TypeScript
 import { print } from '@kit.BasicServicesKit';
-import { BusinessError } from '@kit.BasicServicesKit';
+import { BusinessError } from '@ohos.base';
 
 @Entry
 @Component
@@ -315,10 +307,9 @@ struct Index {
     build() {
         Scroll() {
             Column({ space: 10 }) {
-                Button('打印').width('90%').height(50).onClick(() => {
-                    let jobName : string = 'jobName';
-                    // printAdapter需要用户实现PrintDocumentAdapter接口，这里提供简单的示例供参考
-                    let printAdapter : print.PrintDocumentAdapter = new MyPrintDocumentAdapter();
+                Button("打印").width('90%').height(50).onClick(() => {
+                    let jobName : string = "jobName";
+                    let printAdapter : print.PrintDocumentAdapter | null = null;
                     let printAttributes : print.PrintAttributes = {
                         copyNumber: 1,
                         pageRange: {
@@ -330,7 +321,7 @@ struct Index {
                         directionMode: print.PrintDirectionMode.DIRECTION_MODE_AUTO,
                         colorMode: print.PrintColorMode.COLOR_MODE_MONOCHROME,
                         duplexMode: print.PrintDuplexMode.DUPLEX_MODE_NONE
-                    };
+                    }
                     let context = this.getUIContext().getHostContext();
 
                     print.print(jobName, printAdapter, printAttributes, context).then((printTask: print.PrintTask) => {
@@ -339,7 +330,7 @@ struct Index {
                         })
                         // ...
                     }).catch((error: BusinessError) => {
-                        console.error(`Failed to print. Code: ${error.code}, message: ${error.message}`);
+                        console.error('print err ' + JSON.stringify(error));
                     })
                 })
             }
@@ -348,26 +339,6 @@ struct Index {
             .width('100%')
         }
         .height('100%')
-    }
-}
-
-class MyPrintDocumentAdapter implements print.PrintDocumentAdapter {
-    onStartLayoutWrite(jobId: string, oldAttrs: print.PrintAttributes, newAttrs: print.PrintAttributes, fd: number,
-        writeResultCallback: (jobId: string, writeResult: print.PrintFileCreationState) => void) {
-        writeResultCallback(jobId, print.PrintFileCreationState.PRINT_FILE_CREATED);
-    }
-    onJobStateChanged(jobId: string, state: print.PrintDocumentAdapterState) {
-        if (state === print.PrintDocumentAdapterState.PREVIEW_DESTROY) {
-            console.info('PREVIEW_DESTROY');
-        } else if (state === print.PrintDocumentAdapterState.PRINT_TASK_SUCCEED) {
-            console.info('PRINT_TASK_SUCCEED');
-        } else if (state === print.PrintDocumentAdapterState.PRINT_TASK_FAIL) {
-            console.info('PRINT_TASK_FAIL');
-        } else if (state === print.PrintDocumentAdapterState.PRINT_TASK_CANCEL) {
-            console.info('PRINT_TASK_CANCEL');
-        } else if (state === print.PrintDocumentAdapterState.PRINT_TASK_BLOCK) {
-            console.info('PRINT_TASK_BLOCK');
-        }
     }
 }
 ```

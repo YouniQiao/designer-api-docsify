@@ -1,11 +1,5 @@
 # from
 
-## 导入模块
-
-```TypeScript
-import { buffer } from 'kits/@kit.ArkTS';
-```
-
 ## from
 
 ```TypeScript
@@ -83,7 +77,7 @@ function from(arrayBuffer: ArrayBuffer | SharedArrayBuffer, byteOffset?: number,
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 10200001 | The value of "[byteOffset/length]" is out of range. It must be >= [left range] and <= [right range]. Received value is: [byteOffset/length] |
+| [10200001](../errorcode-utils.md#10200001-参数范围越界错误) | The value of "[byteOffset/length]" is out of range. It must be >= [left range] and <= [right range]. Received value is: [byteOffset/length] |
 
 ## 示例
 
@@ -132,7 +126,17 @@ function from(arrayBuffer: ArrayBuffer, byteOffset?: int, length?: int): Buffer
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 10200001 | The value of "[byteOffset/length]" is out of range. It must be >= [left range] and <= [right range]. Received value is: [byteOffset/length] |
+| [10200001](../errorcode-utils.md#10200001-参数范围越界错误) | The value of "[byteOffset/length]" is out of range. It must be >= [left range] and <= [right range]. Received value is: [byteOffset/length] |
+
+## 示例
+
+```TypeScript
+import { buffer } from '@kit.ArkTS';
+
+let ab = new ArrayBuffer(10);
+let buf = buffer.from(ab, 0, 2);
+console.info(JSON.stringify(buf)); // {"type":"Buffer","data":[0,0]}
+```
 
 
 ## from

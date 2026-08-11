@@ -1,11 +1,5 @@
 # createImageReceiver
 
-## 导入模块
-
-```TypeScript
-import { image } from 'kits/@kit.ImageKit';
-```
-
 ## createImageReceiver
 
 ```TypeScript
@@ -92,9 +86,21 @@ function createImageReceiver(size: Size, format: ImageFormat, capacity: int): Im
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types; |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types; |
 
 ## 示例
+
+ArkTS-Dyn示例:
+
+```TypeScript
+let size: image.Size = {
+  height: 8192,
+  width: 8192
+}
+let receiver: image.ImageReceiver = image.createImageReceiver(size, image.ImageFormat.JPEG, 8);
+```
+
+ArkTS-Sta示例：
 
 ```TypeScript
 let size: image.Size = {
@@ -173,9 +179,11 @@ function createImageReceiver(options?: ImageReceiverOptions): ImageReceiver | un
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 7900201 | Invalid parameter. |
+| [7900201](../errorcode-image.md#7900201-无效参数) | Invalid parameter. |
 
 ## 示例
+
+ArkTS-Dyn示例:
 
 ```TypeScript
 let options: image.ImageReceiverOptions = {
@@ -183,5 +191,15 @@ let options: image.ImageReceiverOptions = {
   capacity: 3
 }
 let receiver: image.ImageReceiver | undefined = image.createImageReceiver(options);
+```
+
+ArkTS-Sta示例:
+
+```TypeScript
+let options: image.ImageReceiverOptions = {
+  size: { width: 480, height: 480 },
+  capacity: 3
+};
+let receiver: image.ImageReceiver = image.createImageReceiver(options)!;
 ```
 

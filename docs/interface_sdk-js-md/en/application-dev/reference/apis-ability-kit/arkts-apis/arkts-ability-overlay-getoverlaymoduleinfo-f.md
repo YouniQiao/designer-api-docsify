@@ -12,7 +12,7 @@ import { overlay } from 'kits/@kit.AbilityKit';
 function getOverlayModuleInfo(moduleName: string, callback: AsyncCallback<OverlayModuleInfo>): void
 ```
 
-获取当前应用中overlay特征module的OverlayModuleInfo信息。使用callback异步回调。
+Obtains the OverlayModuleInfo about a module with the overlay feature in the current application. This API uses an asynchronous callback to return the result.
 
 **Since:** 10
 
@@ -26,17 +26,17 @@ function getOverlayModuleInfo(moduleName: string, callback: AsyncCallback<Overla
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| moduleName | string | Yes | 指定当前应用中的overlay特征module的名称。 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;OverlayModuleInfo&gt; | Yes | [回调函数](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md/arkts-basicservices-base-asynccallback-i.md)，当获取当前应用中指定的module的 [OverlayModuleInfo](arkts-ability-overlay-overlaymoduleinfo-t.md)信息成功时，err返回undefined。否则回调函数返回具体错误 对象。 |
+| moduleName | string | Yes | Name of the module with the overlay feature. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;OverlayModuleInfo&gt; | Yes | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md/arkts-basicservices-base-asynccallback-i.md) used to return the result, which is an [OverlayModuleInfo](arkts-ability-overlay-overlaymoduleinfo-t.md) object. If the operation is successful, **err** is **null**; otherwise, **err** is an error object. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types. |
-| 17700002 | The specified module name is not found. |
-| 17700032 | The specified bundle does not contain any overlay module. |
-| 17700033 | The specified module is not an overlay module. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types. |
+| [17700002](../errorcode-bundle.md#17700002-module-name-does-not-exist) | The specified module name is not found. |
+| [17700032](../errorcode-bundle.md#17700032-application-does-not-contain-a-module-with-the-overlay-feature) | The specified bundle does not contain any overlay module. |
+| [17700033](../errorcode-bundle.md#17700033-module-is-not-configured-with-the-overlay-feature) | The specified module is not an overlay module. |
 
 ## Examples
 
@@ -68,7 +68,7 @@ try {
 function getOverlayModuleInfo(moduleName: string): Promise<OverlayModuleInfo>
 ```
 
-获取当前应用中overlay特征module的OverlayModuleInfo信息。使用Promise异步回调。
+Obtains the OverlayModuleInfo about a module with the overlay feature in the current application. This API uses a promise to return the result.
 
 **Since:** 10
 
@@ -82,22 +82,22 @@ function getOverlayModuleInfo(moduleName: string): Promise<OverlayModuleInfo>
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| moduleName | string | Yes | 指定当前应用中的overlay module的名称。 |
+| moduleName | string | Yes | Name of the module with the overlay feature. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;OverlayModuleInfo&gt; | Promise对象，返回 [OverlayModuleInfo]{ |
+| Promise&lt;OverlayModuleInfo&gt; | Promise used to return the result, which is an [OverlayModuleInfo]{ |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types. |
-| 17700002 | The specified module name is not found. |
-| 17700032 | The specified bundle does not contain any overlay module. |
-| 17700033 | The specified module is not an overlay module. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types. |
+| [17700002](../errorcode-bundle.md#17700002-module-name-does-not-exist) | The specified module name is not found. |
+| [17700032](../errorcode-bundle.md#17700032-application-does-not-contain-a-module-with-the-overlay-feature) | The specified bundle does not contain any overlay module. |
+| [17700033](../errorcode-bundle.md#17700033-module-is-not-configured-with-the-overlay-feature) | The specified module is not an overlay module. |
 
 ## Examples
 

@@ -1,0 +1,46 @@
+# getCountryCode
+
+## Modules to Import
+
+```TypeScript
+import { wifi } from 'kits/@kit.ConnectivityKit';
+```
+
+## getCountryCode
+
+```TypeScript
+function getCountryCode(): string
+```
+
+Obtains the country code of this device.
+
+**Since:** 7
+
+**Deprecated since:** 9
+
+**Substitutes:** ohos.wifiManager/wifiManager.getCountryCode
+
+**Required permissions:** ohos.permission.GET_WIFI_INFO
+
+<!--Device-wifi-function getCountryCode(): string--><!--Device-wifi-function getCountryCode(): string-End-->
+
+**System capability:** SystemCapability.Communication.WiFi.Core
+
+**Return value:**
+
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| string |
+
+## Examples
+
+```TypeScript
+import wifi from '@ohos.wifi';
+
+try {
+  let code = wifi.getCountryCode();
+  console.info("code:" + code);
+}catch(error){
+  console.error("failed:" + JSON.stringify(error));
+}
+```

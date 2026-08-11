@@ -1,6 +1,6 @@
 # NotificationSortingMap (System API)
 
-提供有关已订阅的所有通知中的活动通知的排序信息。
+The **NotificationSortingMap** module provides APIs for defining the sorting information of active notifications in all subscribed notifications.
 
 **Since:** 7
 
@@ -18,7 +18,7 @@
 readonly sortedHashCode: Array<string>
 ```
 
-通知排序的HashCode。
+Hash codes for notification sorting.
 
 **Type:** Array&lt;string&gt;
 
@@ -38,7 +38,7 @@ readonly sortedHashCode: Array<string>
 readonly sortings: Record<string, NotificationSorting>
 ```
 
-通知排序信息。
+Array of notification sorting information.
 
 **Type:** [Record](../../apis-default/arkts-apis/arkts-record-t.md)&lt;string, [NotificationSorting](arkts-notification-notificationsorting-notificationsorting-i-sys.md)&gt;
 

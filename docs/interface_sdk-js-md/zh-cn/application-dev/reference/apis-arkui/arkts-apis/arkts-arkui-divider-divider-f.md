@@ -27,7 +27,7 @@ export declare function Divider(): DividerAttribute
 
 | 类型 | 说明 |
 | --- | --- |
-| [DividerAttribute](arkts-arkui-divider-dividerattribute-i.md) |  |
+| [DividerAttribute](../arkts-components/arkts-arkui-divider-attribute.md) |  |
 
 
 ## Divider
@@ -62,5 +62,5 @@ Defines Divider Component.
 
 | 类型 | 说明 |
 | --- | --- |
-| [DividerAttribute](arkts-arkui-divider-dividerattribute-i.md) |  |
+| [DividerAttribute](../arkts-components/arkts-arkui-divider-attribute.md) |  |
 

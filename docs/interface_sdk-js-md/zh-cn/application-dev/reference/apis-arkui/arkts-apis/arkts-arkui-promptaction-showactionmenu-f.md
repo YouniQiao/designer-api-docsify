@@ -1,11 +1,5 @@
 # showActionMenu
 
-## 导入模块
-
-```TypeScript
-import { LevelMode, ImmersiveMode, LevelOrder } from 'kits/@kit.ArkUI';
-```
-
 ## showActionMenu
 
 ```TypeScript
@@ -51,114 +45,8 @@ showActionMenu需先通过[UIContext](arkts-apis-uicontext-uicontext.md)中的
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 100001 | Internal error. |
-| 401 | Parameter error. Possible causes: &lt;br&gt; 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameters types. &lt;br&gt; 3. Parameter verification failed. |
-
-## 示例
-
-示例：1
-
-```TypeScript
-import { promptAction } from '@kit.ArkUI';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-try {
-  promptAction.showActionMenu({
-    title: 'Title Info',
-    buttons: [
-      {
-        text: 'item1',
-        color: '#666666'
-      },
-      {
-        text: 'item2',
-        color: '#000000'
-      },
-    ]
-  }, (err, data) => {
-    if (err) {
-      console.info('showActionMenu err: ' + err);
-      return;
-    }
-    console.info('showActionMenu success callback, click button: ' + data.index);
-  })
-} catch (error) {
-  let message = (error as BusinessError).message
-  let code = (error as BusinessError).code
-  console.error(`showActionMenu args error code is ${code}, message is ${message}`);
-};
-```
-
-从API version 19开始，该示例通过调用[ActionMenuOptions](#actionmenuoptions)中的onDidAppear、onDidDisappear、onWillAppear和onWillDisappear属性展示了操作菜单生命周期相关接口的使用方法。
-
-```TypeScript
-import { promptAction } from '@kit.ArkUI';
-
-@Entry
-@Component
-struct Index {
-  @State isShown: boolean = false
-  @State textColor: Color = Color.Black
-  @State blueColor: Color = Color.Blue
-
-  @State onWillAppear: boolean = false
-  @State onDidAppear: boolean = false
-  @State onWillDisappear: boolean = false
-  @State onDidDisappear: boolean = false
-  build() {
-    Column({ space: 50 }) {
-      Text('onWillAppear').fontColor(this.onWillAppear ? this.blueColor : this.textColor)
-      Text('onDidAppear').fontColor(this.onDidAppear ? this.blueColor : this.textColor)
-      Text('onWillDisappear').fontColor(this.onWillDisappear ? this.blueColor : this.textColor)
-      Text('onDidDisappear').fontColor(this.onDidDisappear ? this.blueColor : this.textColor)
-      Button('click')
-        .width(200)
-        .height(100)
-        .margin(100)
-        .fontColor(this.textColor)
-        .onClick(() => {
-          promptAction.showActionMenu({
-            title: 'showActionMenu Title Info',
-            buttons: [
-              {
-                text: 'item1',
-                color: '#666666'
-              },
-              {
-                text: 'item2',
-                color: '#000000'
-              },
-            ],
-            onWillAppear:() => {
-              console.info("promptAction menu cycle life onWillAppear");
-              this.onWillAppear = true;
-            },
-            onDidAppear:() => {
-              console.info("promptAction menu cycle life onDidAppear");
-              this.onDidAppear = true;
-            },
-            onWillDisappear:() => {
-              this.isShown = false;
-              console.info("promptAction menu cycle life onWillDisappear");
-              this.onWillDisappear = true;
-            },
-            onDidDisappear:() => {
-              console.info("promptAction menu cycle life onDidDisappear");
-              this.onDidDisappear = true;
-            }
-          })
-            .then(data => {
-              console.info('showActionMenu success, click button: ' + data.index);
-            })
-            .catch((err: Error) => {
-              console.info('showActionMenu error: ' + err);
-            })
-        })
-    }
-    .width('100%')
-  }
-}
-```
+| [100001](../errorcode-internal.md#100001-接口调用异常错误码) | Internal error. |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: &lt;br&gt; 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameters types. &lt;br&gt; 3. Parameter verification failed. |
 
 
 ## showActionMenu
@@ -211,56 +99,6 @@ showActionMenu需先通过[UIContext](arkts-apis-uicontext-uicontext.md)中的
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 100001 | Internal error. |
-| 401 | Parameter error. Possible causes: &lt;br&gt; 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameters types. &lt;br&gt; 3. Parameter verification failed. |
-
-## 示例
-
-```TypeScript
-import { promptAction } from '@kit.ArkUI';
-
-promptAction.showActionMenu({
-  title: 'showActionMenu Title Info',
-  buttons: [
-    {
-      text: 'item1',
-      color: '#666666'
-    },
-    {
-      text: 'item2',
-      color: '#000000'
-    },
-  ]
-})
-  .then(data => {
-    console.info('showActionMenu success, click button: ' + data.index);
-  })
-  .catch((err: Error) => {
-    console.info('showActionMenu error: ' + err);
-  })
-```
-
-```TypeScript
-import { promptAction } from '@kit.ArkUI';
-
-promptAction.showActionMenu({
-  title: 'showActionMenu Title Info',
-  buttons: [
-    {
-      text: 'item1',
-      color: '#666666'
-    },
-    {
-      text: 'item2',
-      color: '#000000'
-    },
-  ]
-})
-  .then(data => {
-    console.info('showActionMenu success, click button: ' + data.index);
-  })
-  .catch((err: Error) => {
-    console.info('showActionMenu error: ' + err);
-  })
-```
+| [100001](../errorcode-internal.md#100001-接口调用异常错误码) | Internal error. |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: &lt;br&gt; 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameters types. &lt;br&gt; 3. Parameter verification failed. |
 

@@ -1,6 +1,8 @@
 # HashStream
 
-HashStream 类是用于创建数据的哈希摘要的实用工具。由 [createHash](arkts-corefile-hash-createhash-f.md#createhash) 接口获得。
+The **HashStream** class is a utility for creating a message digest of data. You can use  
+[createHash](../../../reference/apis-core-file-kit/js-apis-file-hash.md#hashcreatehash12) to create a  
+**HashStream** instance.
 
 **Inheritance/Implementation:** HashStream extends [stream.Transform](../../apis-arkts/arkts-apis/arkts-arkts-stream-transform-c.md/arkts-arkts-stream-transform-c.md)
 
@@ -24,7 +26,7 @@ import { hash } from 'kits/@kit.CoreFileKit';
 digest(): string
 ```
 
-计算传递给哈希处理的所有数据的摘要。
+Generates a message digest.
 
 **Since:** 12
 
@@ -38,13 +40,13 @@ digest(): string
 
 | Type | Description |
 | --- | --- |
-| string | 返回数据的哈希值。该哈希值表示为十六进制数字串，所有字母均大写。 |
+| string | Hash value, which is a hexadecimal string consisting of digits and uppercase letters. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error |
 | 13900042 | Unknown error |
 
 ## Examples
@@ -65,7 +67,7 @@ console.info(`hashResult: ${hashResult}`);
 update(data: ArrayBuffer): void
 ```
 
-使用给定的 data 更新哈希内容，可多次调用。
+Updates the data for generating a message digest. This API can be called multiple times.
 
 **Since:** 12
 
@@ -79,13 +81,13 @@ update(data: ArrayBuffer): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| data | ArrayBuffer | Yes | updated data. |
+| data | ArrayBuffer | Yes | Data to be calculated. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error |
 | 13900042 | Unknown error |
 
 ## Examples

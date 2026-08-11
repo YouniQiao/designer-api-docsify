@@ -1,6 +1,6 @@
 # AutoFinalizerCleaner
 
-用于通过开发者自定义回调释放由开发者管理的资源的 cleaner。
+A cleaner for releasing resources managed by developers through a developer-defined callback.
 
 **Since:** 22
 
@@ -22,7 +22,7 @@ import { util } from 'kits/@kit.ArkTS';
 static register<T>(obj: AutoFinalizer<T>, heldValue: T): void
 ```
 
-注册释放由开发者管理的资源的对象。
+Register objects that release resources managed by developers.
 
 **Since:** 22
 
@@ -38,6 +38,6 @@ static register<T>(obj: AutoFinalizer<T>, heldValue: T): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| obj | [AutoFinalizer](arkts-arkts-util-autofinalizer-i.md)&lt;T&gt; | Yes | 注册到 cleaner 的对象。 |
-| heldValue | T | Yes | 传递给 finalizer 的值。 |
+| obj | [AutoFinalizer](arkts-arkts-util-autofinalizer-i.md)&lt;T&gt; | Yes | The object is registered to the cleaner. |
+| heldValue | T | Yes | The value to pass to the finalizer. |
 

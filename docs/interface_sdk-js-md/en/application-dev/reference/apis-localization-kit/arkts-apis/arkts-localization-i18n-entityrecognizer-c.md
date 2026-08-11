@@ -1,6 +1,6 @@
 # EntityRecognizer
 
-提供实体识别相关的能力，可以获取文本中实体的类型和起止位置。当前支持识别的实体包括电话号码和时间日期。
+Provide some functions to find named entity in text.
 
 **Since:** 23
 
@@ -22,7 +22,7 @@ import { i18n } from 'kits/@kit.LocalizationKit';
 constructor(locale?: string)
 ```
 
-创建实体识别对象。该对象根据区域规则识别文本中的实体。
+Creates an entityRecognizer object. This object is used to recognize entities in the text for the specified locale.
 
 **Since:** 23
 
@@ -38,14 +38,14 @@ constructor(locale?: string)
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| locale | string | No | [表示区域ID的字符串](../../../internationalization/i18n-locale-culture.md#实现原理)，由语言、脚本、国家地区 组成，例如zh-Hans-CN。 &lt;br&gt;默认值：系统当前区域ID。 |
+| locale | string | No | Locale ID, which consists of the language, script, and country/region, for example, "zh-Hans-CN". The default value is the current system locale. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
-| 890001 | Invalid parameter. Possible causes: Parameter verification failed. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
+| [890001](../errorcode-i18n.md#890001-parameter-error) | Invalid parameter. Possible causes: Parameter verification failed. |
 
 ## findEntityInfo
 
@@ -53,7 +53,7 @@ constructor(locale?: string)
 findEntityInfo(text: string): Array<EntityInfoItem>
 ```
 
-获取文本中的实体信息。
+Obtains entity information in the text object.
 
 **Since:** 23
 
@@ -69,17 +69,17 @@ findEntityInfo(text: string): Array<EntityInfoItem>
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| text | string | Yes | 输入文本。 |
+| text | string | Yes | text object. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Array&lt;EntityInfoItem&gt; | 文本中的实体信息列表。 |
+| Array&lt;EntityInfoItem&gt; | List of entities in the text. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
 

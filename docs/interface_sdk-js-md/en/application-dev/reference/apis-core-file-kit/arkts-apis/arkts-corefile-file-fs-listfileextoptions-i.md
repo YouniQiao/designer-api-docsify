@@ -1,6 +1,6 @@
 # ListFileExtOptions
 
-可选项类型，支持listFileExt接口使用。
+Defines the options used in **listFileExt**.
 
 **Since:** 26.0.0
 
@@ -22,7 +22,7 @@ import { Options, ReaderIteratorResult, Watcher, ReadTextOptions, WatchEventList
 fileFilter?: FileFilter
 ```
 
-自定义文件名过滤的规则，默认为空，表示不进行过滤。
+File name filtering rule. The default value is empty, indicating that no filtering is performed.
 
 **Type:** [FileFilter](arkts-corefile-file-fs-filefilter-i.md)
 
@@ -42,7 +42,7 @@ fileFilter?: FileFilter
 listNum?: long
 ```
 
-列出文件名数量，默认为0，表示列出所有文件。
+Number of file names to be listed. The default value is **0**, indicating that all files are listed.
 
 **Type:** long
 
@@ -62,11 +62,11 @@ listNum?: long
 recursion?: boolean
 ```
 
-是否递归子目录下的文件名，默认为false。
+Whether to list all files in subfolders recursively. The default value is **false**.
 
-false：返回当前目录下满足过滤要求的文件名及目录名。
+**false**: The names of files and directories that meet the filtering requirements in the current directory are returned.
 
-true：返回该目录下所有符合过滤条件的文件的相对路径，相对路径以“/”开头。
+**true**: Relative paths (starting with /) of all files that meet the filtering requirements in the directory are returned.
 
 **Type:** boolean
 

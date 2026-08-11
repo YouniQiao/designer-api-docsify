@@ -1,14 +1,15 @@
 # BroadcastEvent
 
-定义自定义系统事件。用户可以使用公共事件接口获取该事件。
+Defines a custom system event. You can use a common event API to obtain the event.
 
-上传下载SA具有'ohos.permission.SEND_TASK_COMPLETE_EVENT'权限，用户可以配置事件的metadata指向的二级配置文件来拦截其他事件发送者。
+The upload and download SA has the **ohos.permission.SEND_TASK_COMPLETE_EVENT** permission. You can configure the level-2 configuration file to which the metadata of an event points to intercept other event senders.
 
-调用CommonEventData类型传输公共事件相关数据，成员的内容填写和 [CommonEventData](arkts-basicservices-commoneventdata-commoneventdata-i.md) 介绍的有所区别，其中CommonEventData.code表示任务的状态，目前为0x40 COMPLETE或0x41 FAILED；CommonEventData.data表示任务的taskId。
+Use the **CommonEventData** type to transmit data related to common events. The members in **CommonEventData** are different from those described in [CommonEventData](arkts-basicservices-commoneventdata-commoneventdata-i.md). Specifically, **CommonEventData.code** indicates the task status, which is **0x40 COMPLETE** or **0x41 FAILED**, and **CommonEventData.data** indicates the task ID.
 
 &lt;!--Del--&gt;
 
-请参考[静态订阅公共事件](../../../basic-services/common-event/common-event-static-subscription-sys.md)以获取事件配置信息和二级配置文件的配置方式。&lt;!--DelEnd--&gt;
+For details about how to obtain the event configuration and configure the level-2 configuration file, see   
+[Subscribing to Common Events in Static Mode (for System Applications Only)](../../../basic-services/common-event/common-event-static-subscription-sys.md).&lt;!--DelEnd--&gt;
 
 **Since:** 11
 
@@ -24,7 +25,7 @@
 COMPLETE = 'ohos.request.event.COMPLETE'
 ```
 
-表示自定义系统事件完成。在任务结束后会触发该事件，根据任务的成功或失败，事件的code返回0x40或者0x41。
+Task completion event. The returned event code can be **0x40** or **0x41**, depending on whether the task is successful or fails.
 
 **Since:** 11
 

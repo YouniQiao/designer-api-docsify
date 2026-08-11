@@ -1,6 +1,6 @@
 # ComponentType (System API)
 
-标识功能组件类型。
+Enumerates the types of application components that function as the displayed page.
 
 **Since:** 11
 
@@ -18,7 +18,7 @@
 UI_ABILITY = 1
 ```
 
-UI基础功能类型。
+UIAbility component.
 
 **Since:** 11
 
@@ -36,7 +36,7 @@ UI基础功能类型。
 UI_EXTENSION = 2
 ```
 
-UI扩展能力类型。
+UIExtensionAbility component.
 
 **Since:** 11
 

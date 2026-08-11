@@ -1,5 +1,7 @@
 # MonitorDecoratorOptions
 
+Defines MonitorDecoratorOptions interface
+
 **Since:** 26.0.0
 
 **ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
@@ -14,7 +16,7 @@
 enableWildcard?: boolean
 ```
 
-是否支持通配符能力。true：使能通配符能力，路径中可使用通配符（'*'）进行模糊监听；false：关闭通配符能力。默认值为true。
+Enables wildcard feature.Set to true to enable wildcard feature, set to false to disable it.The default value is true.
 
 **Type:** boolean
 

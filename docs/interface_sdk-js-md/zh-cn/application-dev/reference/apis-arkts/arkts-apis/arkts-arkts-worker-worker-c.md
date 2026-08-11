@@ -16,12 +16,6 @@ Worker类包含所有Worker功能。
 
 **系统能力：** SystemCapability.Utils.Lang
 
-## 导入模块
-
-```TypeScript
-import { MessageEvents, PostMessageOptions, MessageEvent, Priority, WorkerEventTarget, ThreadWorkerPriority, ThreadWorkerGlobalScope, DedicatedWorkerGlobalScope, ErrorEvent, Event, EventListener, WorkerOptions, EventTarget, WorkerEventListener } from 'kits/@kit.ArkTS';
-```
-
 ## constructor
 
 ```TypeScript
@@ -86,7 +80,7 @@ off(type: string, listener?: EventListener): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | string | 是 | 需要移除的事件类型。 |
-| listener | [EventListener](arkts-arkts-worker-eventlistener-i.md) | 否 | listener 要移除的事件监听的回调函数。 |
+| listener | [EventListener](arkts-arkts-process-eventlistener-t.md) | 否 | listener 要移除的事件监听的回调函数。 |
 
 ## 示例
 
@@ -124,7 +118,7 @@ on(type: string, listener: EventListener): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | string | 是 | type 向Worker添加一个事件监听。 |
-| listener | [EventListener](arkts-arkts-worker-eventlistener-i.md) | 是 | listener 当指定类型的事件发生时调用的回调函数。 |
+| listener | [EventListener](arkts-arkts-process-eventlistener-t.md) | 是 | listener 当指定类型的事件发生时调用的回调函数。 |
 
 ## 示例
 
@@ -163,7 +157,7 @@ once(type: string, listener: EventListener): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | string | 是 | 监听的事件类型。 |
-| listener | [EventListener](arkts-arkts-worker-eventlistener-i.md) | 是 | listener 当指定类型的事件发生时调用的回调函数。 |
+| listener | [EventListener](arkts-arkts-process-eventlistener-t.md) | 是 | listener 当指定类型的事件发生时调用的回调函数。 |
 
 ## 示例
 
@@ -183,7 +177,7 @@ workerInstance.once("alert", () => {
 onerror?: (err: ErrorEvent) => void
 ```
 
-onerror属性用于指定Worker在执行过程中发生异常时被调用的事件处理程序，该事件处理程序在宿主线程中执行。
+回调函数。表示Worker在执行过程中发生异常被调用的事件处理程序，处理程序在宿主线程中执行。其中回调函数中err类型为ErrorEvent，表示收到的异常数据。默认值为undefined。
 
 **起始版本：** 7
 
@@ -209,7 +203,7 @@ onerror属性用于指定Worker在执行过程中发生异常时被调用的事�
 onexit?: (code: number) => void
 ```
 
-当Worker销毁时被调用的事件处理程序，处理程序在宿主线程中执行。回调函数中code类型为number，异常退出为1，正常退出为0。默认值为undefined。
+回调函数。表示Worker销毁时被调用的事件处理程序，处理程序在宿主线程中执行。其中回调函数中code类型为number，异常退出为1，正常退出为0。默认值为undefined。
 
 **起始版本：** 7
 
@@ -235,7 +229,7 @@ onexit?: (code: number) => void
 onmessage?: (event: MessageEvent) => void
 ```
 
-onmessage属性用于指定当宿主线程接收到来自其创建的Worker通过parentPort.postMessage发送的消息时被调用的事件处理程序，该事件处理程序在宿主线程中执行。
+回调函数。表示宿主线程接收到来自其创建的Worker通过workerPort.postMessage接口发送的消息时被调用的事件处理程序，处理程序在宿主线程中执行。其中回调函数中event类型为MessageEvent，表示收到的Worker消息数据。默认值为undefined。
 
 **起始版本：** 7
 
@@ -261,7 +255,7 @@ onmessage属性用于指定当宿主线程接收到来自其创建的Worker通�
 onmessageerror?: (event: MessageEvent) => void
 ```
 
-onmessage属性用于指定当Worker收到一条无法被序列化的消息时被调用的事件处理程序，该事件处理程序在宿主线程中执行。
+回调函数。表示当Worker对象接收到一条无法被序列化的消息时被调用的事件处理程序，处理程序在宿主线程中执行。其中回调函数中event类型为MessageEvent，表示收到的Worker消息数据。默认值为undefined。
 
 **起始版本：** 7
 
@@ -367,7 +361,7 @@ workerInstance.postMessage(buffer, [buffer]);
 terminate(): void
 ```
 
-销毁Worker线程，终止Worker接收消息。
+由宿主线程主动销毁Worker线程并停止Worker线程接收消息。
 
 **起始版本：** 7
 

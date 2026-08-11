@@ -5,18 +5,12 @@ PlainArray可用于存储具有关联关系的key-value键值对集合，其中k
  PlainArray和[LightWeightMap](arkts-util-lightweightmap.md)都是用来存储键值对，且均采用轻量级结构，
  但PlainArray的key值类型仅限于number。
  **推荐使用场景：** 当需要存储key值为number类型的键值对时，可以使用PlainArray。
- 文档中使用了泛型，涉及以下泛型标记符：
+ 文档中使用了泛型，涉及以下泛型类型参数：
  - T：Type，类型
  > **说明**
  >
  > 容器类使用静态语言实现，限制了存储位置和属性，不支持自定义属性和方法。
 
-
-## 导入模块
-
-```TypeScript
-import { PlainArray } from 'kits/@kit.ArkTS';
-```
 
 ## 汇总
 

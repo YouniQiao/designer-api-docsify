@@ -12,11 +12,12 @@ import { identifier } from 'kits/@kit.AdsKit';
 function getOAID(callback: AsyncCallback<string>): void
 ```
 
-获取开放匿名设备标识符（OAID）。使用callback异步回调。
+Obtains the OAID. This API uses an asynchronous callback to return the result.
 
-> **说明：**
+> **NOTE：**
 > 
-> 设置项“跨应用关联访问权限”在HarmonyOS NEXT Developer Beta5及更早版本名称为“应用跟踪访问权限”。
+> The setting item of cross-app association access permission was named app tracking access permission
+> in HarmonyOS NEXT Developer Beta5 and earlier versions.
 
 **Since:** 10
 
@@ -32,13 +33,13 @@ function getOAID(callback: AsyncCallback<string>): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;string&gt; | Yes | 回调函数，返回开放匿名设备标识符（OAID）。 1.如应用已配置ohos.permission.APP_TRACKING_CONSENT权限，且“跨应用关联访问权限”为“允许”，则返回OAID。 2.如应用已配置ohos.permission.APP_TRACKING_CONSENT权限，且“跨应用关联访问权限”为“禁止”，则返回 00000000-0000-0000-0000-000000000000。 3.如应用未配置ohos.permission.APP_TRACKING_CONSENT权限，则返回00000000-0000-0000-0000-000000000000。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;string&gt; | Yes | Callback used to return the OAID. 1. If the app has configured the ohos.permission.APP_TRACKING_CONSENT permission and the cross-app association access permission is allowed, the OAID is returned. 2. If the app has configured the ohos.permission.APP_TRACKING_CONSENT permission and the cross-app association access permission is disallowed, 00000000-0000-0000-0000-000000000000 is returned. 3. If the app has not configured the ohos.permission.APP_TRACKING_CONSENT permission, 00000000-0000-0000-0000-000000000000 is returned. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 17300001 | System internal error. |
+| [17300001](../errorcode-oaid.md#17300001-system-internal-error) | System internal error. |
 
 ## Examples
 
@@ -61,11 +62,12 @@ identifier.getOAID((err: BusinessError, data: string) => {
 function getOAID(): Promise<string>
 ```
 
-获取开放匿名设备标识符（OAID）。使用Promise异步回调。
+Obtains the OAID. This API uses a promise to return the result.
 
-> **说明：**
+> **NOTE：**
 > 
-> 设置项“跨应用关联访问权限”在HarmonyOS NEXT Developer Beta5及更早版本名称为“应用跟踪访问权限”。
+> The setting item of cross-app association access permission was named app tracking access permission
+> in HarmonyOS NEXT Developer Beta5 and earlier versions.
 
 **Since:** 10
 
@@ -81,13 +83,13 @@ function getOAID(): Promise<string>
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;string&gt; | Promise对象，返回开放匿名设备标识符（OAID）。 1.如应用已配置ohos.permission.APP_TRACKING_CONSENT权限，且跨应用关联访问权限为“允许”，则返回OAID。 2.如应用已配置ohos.permission.APP_TRACKING_CONSENT权限，且跨应用关联访问权限为“禁止”，则返回 00000000-0000-0000-0000-000000000000。 3.如应用未配置ohos.permission.APP_TRACKING_CONSENT权限，则返回00000000-0000-0000-0000-000000000000。 |
+| Promise&lt;string&gt; | Promise used to return the OAID. 1. If the app has configured the ohos.permission.APP_TRACKING_CONSENT permission and the cross-app association access permission is allowed, the OAID is returned. 2. If the app has configured the ohos.permission.APP_TRACKING_CONSENT permission and the cross-app association access permission is disallowed, 00000000-0000-0000-0000-000000000000 is returned. 3. If the app has not configured the ohos.permission.APP_TRACKING_CONSENT permission, 00000000-0000-0000-0000-000000000000 is returned. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 17300001 | System internal error. |
+| [17300001](../errorcode-oaid.md#17300001-system-internal-error) | System internal error. |
 
 ## Examples
 

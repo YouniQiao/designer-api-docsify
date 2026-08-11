@@ -1,6 +1,6 @@
 # Frame
 
-用于设置或返回组件的布局大小和位置。
+Frame info, include the position info and size info.
 
 **Since:** 23
 
@@ -16,7 +16,7 @@
 height: double
 ```
 
-组件的高度。单位：vp。取值范围：[0, +∞)。
+Size value for height of the frame info.
 
 **Type:** double
 
@@ -36,7 +36,7 @@ height: double
 width: double
 ```
 
-组件的宽度。单位：vp。取值范围：[0, +∞)。
+Size value for width of the frame info.
 
 **Type:** double
 
@@ -56,7 +56,7 @@ width: double
 x: double
 ```
 
-水平方向位置。单位：vp。取值范围：(-∞, +∞)。
+Position value for x-axis of the frame info.
 
 **Type:** double
 
@@ -76,7 +76,7 @@ x: double
 y: double
 ```
 
-垂直方向位置。单位：vp。取值范围：(-∞, +∞)。
+Position value for y-axis of the frame info.
 
 **Type:** double
 

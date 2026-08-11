@@ -12,7 +12,7 @@ import { manager } from 'kits/@kit.ConnectivityKit';
 function getLocalAddress(): string
 ```
 
-获取本端设备的MAC地址。
+Gets the MAC address of the local device.
 
 **Since:** 26.0.0
 
@@ -32,15 +32,15 @@ function getLocalAddress(): string
 
 | Type | Description |
 | --- | --- |
-| string | 本地MAC地址。例如，“11:22:33:AA:BB:FF”。 |
+| string | The local MAC address. For example, "11:22:33:AA:BB:FF". |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 801 | Capability not supported because the chip does not support it. |
+| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported because the chip does not support it. |
 | 36100003 | NearLink disabled. |
 | 36100099 | Operation failed. |
-| 201 | Permission denied. |
-| 202 | Non-system applications are not allowed to use system APIs. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Non-system applications are not allowed to use system APIs. |
 

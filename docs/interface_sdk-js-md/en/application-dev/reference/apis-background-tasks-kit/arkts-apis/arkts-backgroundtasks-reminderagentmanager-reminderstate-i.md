@@ -1,8 +1,8 @@
 # ReminderState
 
-代理提醒状态信息。状态信息会在如下两种情况发送通知：
+Defines the agent-powered reminder state information, for which notifications are triggered in the following scenarios:
 
-1. 用户点击代理提醒的通知按钮时，如果应用进程存在，则会发送用户点击的按钮类型的通知给应用。如果应用未运行，则无法收到通知。2. 由于第1点不能保证应用可以收到通知，因此应用注册新的回调函数时，会将该应用下所有用户点击的按钮类型回调给应用。状态信息最多保存30天，应用注册新的回调函数时或者超过30天未注册回调函数，会删除缓存的状态信息。
+1. When a user taps a button on an agent-powered reminder notification,a notification specifying the tapped button type is sent to the application if it is running.If the application is not running, the notification will not be received.2. Since the above scenario cannot guarantee that the application receives the notification,all callbacks associated with user-tapped button types under the application are returned to the application when it registers a new callback function. State information is retained for a maximum of 30 days.Cached state information is cleared when the application registers a new callback function or has not registered any callback function for more than 30 days.
 
 **Since:** 23
 
@@ -24,7 +24,7 @@ import { reminderAgentManager } from 'kits/@kit.BackgroundTasksKit';
 buttonType: ActionButtonType
 ```
 
-按钮类型。
+Button type.
 
 **Type:** [ActionButtonType](arkts-backgroundtasks-reminderagentmanager-actionbuttontype-e.md)
 
@@ -44,10 +44,12 @@ buttonType: ActionButtonType
 isMessageResent: boolean
 ```
 
-信息是否为重复发送。
+Whether a message is sent repeatedly.
 
-- false：信息首次发送。具体场景包括：用户点击代理提醒的通知按钮时，应用进程存在；用户点击代理提醒的通知按钮时，应用未运行，后续应用注册新的回调函数。  
-- true：信息重复发送，具体场景为：应用进程存在，用户点击代理提醒的通知按钮后，应用注册新的回调函数。
+- **false**: The message is sent for the first time. Applicable scenarios: The application is running when the   
+user taps a button on the agent-powered reminder notification; the application is not running when the user taps the button, and the application registers a new callback function afterward.  
+- **true**: The message is sent repeatedly. Applicable scenario: The application is running and registers a new   
+callback function after the user taps a button on the agent-powered reminder notification.
 
 **Type:** boolean
 
@@ -67,7 +69,7 @@ isMessageResent: boolean
 reminderId: int
 ```
 
-发布提醒后返回的id。
+Reminder ID.The value range is all integers.
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 

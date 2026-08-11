@@ -1,6 +1,6 @@
 # Mesh
 
-网格节点拥有的网格实例
+The mesh instance owned by the mesh node
 
 **Inheritance/Implementation:** Mesh extends [SceneResource](arkts-arkgraphics3d-sceneresources-sceneresource-i.md)
 
@@ -18,7 +18,7 @@
 readonly aabb: Aabb
 ```
 
-网格的轴对齐包围盒.
+The axis aligned bounding box of the mesh.
 
 **Type:** [Aabb](arkts-arkgraphics3d-scenetypes-aabb-i.md)
 
@@ -36,7 +36,7 @@ readonly aabb: Aabb
 materialOverride?: Material
 ```
 
-覆盖子网格材质的材质.
+The material override sub mesh's material.
 
 **Type:** [Material](arkts-arkgraphics3d-sceneresources-material-i.md)
 
@@ -54,7 +54,7 @@ materialOverride?: Material
 readonly subMeshes: SubMesh[]
 ```
 
-网格的子网格.
+The sub meshes of the mesh.
 
 **Type:** [SubMesh](arkts-arkgraphics3d-sceneresources-submesh-i.md)[]
 

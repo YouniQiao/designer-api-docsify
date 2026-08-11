@@ -1,6 +1,6 @@
 # FragmentMapPropertyKey
 
-表示水印裁剪图图片信息的枚举。
+Enumerates the fragment map information.
 
 **Since:** 13
 
@@ -16,7 +16,7 @@
 X_IN_ORIGINAL = 'XInOriginal'
 ```
 
-水印裁剪图左上角在原始图中的X坐标。
+X coordinate of the top-left corner of the fragment map in the original image.
 
 **Since:** 13
 
@@ -32,7 +32,7 @@ X_IN_ORIGINAL = 'XInOriginal'
 Y_IN_ORIGINAL = 'YInOriginal'
 ```
 
-水印裁剪图左上角在原始图中的Y坐标。
+Y coordinate of the top-left corner of the fragment map in the original image.
 
 **Since:** 13
 
@@ -48,7 +48,7 @@ Y_IN_ORIGINAL = 'YInOriginal'
 WIDTH = 'FragmentImageWidth'
 ```
 
-水印裁剪图的宽。单位：像素（px）。
+Width of the fragment map.
 
 **Since:** 13
 
@@ -64,7 +64,7 @@ WIDTH = 'FragmentImageWidth'
 HEIGHT = 'FragmentImageHeight'
 ```
 
-水印裁剪图的高。单位：像素（px）。
+Height of the fragment map.
 
 **Since:** 13
 

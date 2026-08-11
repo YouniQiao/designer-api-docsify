@@ -1,11 +1,5 @@
 # setTextUndefinedGlyphDisplay
 
-## 导入模块
-
-```TypeScript
-import { text } from 'kits/@kit.ArkGraphics2D';
-```
-
 ## setTextUndefinedGlyphDisplay
 
 ```TypeScript

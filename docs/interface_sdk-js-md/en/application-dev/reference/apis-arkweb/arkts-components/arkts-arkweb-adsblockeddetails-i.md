@@ -16,7 +16,7 @@ Defines the ads block details.
 adsBlocked: Array<string>
 ```
 
-被过滤的资源的url或dompath标识，被过滤的多个对象url相同则可能出现重复元素。
+the url of ads.
 
 **Type:** Array&lt;string&gt;
 
@@ -36,7 +36,7 @@ adsBlocked: Array<string>
 url: string
 ```
 
-发生广告过滤的页面url。
+The url of main frame.
 
 **Type:** string
 

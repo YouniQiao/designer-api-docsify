@@ -1,6 +1,6 @@
 # RectInVP
 
-窗口矩形区域，单位为vp。
+Describes the rectangular area of the window, in vp.
 
 **Since:** 23
 
@@ -22,7 +22,7 @@ import { window } from 'kits/@kit.ArkUI';
 height: double
 ```
 
-矩形区域的高度，单位为vp。
+Height of the rectangle, in vp.
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：double
 
@@ -42,7 +42,7 @@ height: double
 left: double
 ```
 
-矩形区域的左边界值，单位为vp。
+Left boundary of the rectangle, in vp.
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：double
 
@@ -62,7 +62,7 @@ left: double
 top: double
 ```
 
-矩形区域的上边界值，单位为vp。
+Top boundary of the rectangle, in vp.
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：double
 
@@ -82,7 +82,7 @@ top: double
 width: double
 ```
 
-矩形区域的宽度，单位为vp。
+Width of the rectangle, in vp.
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：double
 

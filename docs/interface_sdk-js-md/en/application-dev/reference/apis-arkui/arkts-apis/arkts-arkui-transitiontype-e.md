@@ -1,6 +1,6 @@
 # TransitionType
 
-指定该转场样式生效的场景。
+TransitionType enumeration description.
 
 **Since:** 7
 
@@ -16,7 +16,7 @@
 All
 ```
 
-指定当前的Transition动效在组件的所有变化场景中生效。
+The transition takes effect in all scenarios.
 
 **Since:** 7
 
@@ -36,7 +36,7 @@ All
 Insert
 ```
 
-指定当前的Transition动效在组件的插入显示场景中生效。
+The transition takes effect when a component is inserted or displayed.
 
 **Since:** 7
 
@@ -56,7 +56,7 @@ Insert
 Delete
 ```
 
-指定当前的Transition动效在组件的删除隐藏场景中生效。
+The transition takes effect when a component is deleted or hidden.
 
 **Since:** 7
 

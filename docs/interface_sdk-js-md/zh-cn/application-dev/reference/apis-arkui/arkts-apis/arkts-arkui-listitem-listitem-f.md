@@ -25,7 +25,7 @@ export declare function ListItem(
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | [ListItemOptions](arkts-arkui-listitem-listitemoptions-i.md) | 否 |  |
+| value | [ListItemOptions](../arkts-components/arkts-arkui-listitemoptions-i.md) | 否 |  |
 | content_ | [CustomBuilder](../arkts-components/arkts-arkui-custombuilder-t.md) | 否 |  |
 
 **返回值：**

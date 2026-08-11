@@ -12,7 +12,7 @@ import { bundleManager } from 'kits/@kit.AbilityKit';
 function getBundleArchiveInfo(hapFilePath: string, bundleFlags: int, callback: AsyncCallback<BundleInfo>): void
 ```
 
-根据给定的hapFilePath和bundleFlags获取BundleInfo。使用callback异步回调。
+Obtains the bundle information based on the given HAP file path and bundle flags. This API uses an asynchronous callback to return the result.
 
 **Since:** 9
 
@@ -30,18 +30,18 @@ function getBundleArchiveInfo(hapFilePath: string, bundleFlags: int, callback: A
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| hapFilePath | string | Yes | 表示存储HAP的路径，路径应该是当前应用程序数据目录的相对路径。 |
-| bundleFlags | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | 表示用于指定要返回的BundleInfo对象中包含的信息的标志。 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;BundleInfo&gt; | Yes | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md/arkts-basicservices-base-asynccallback-i.md)，当获取成功时，err为 undefined，data为获取到的BundleInfo；否则为错误对象。 |
+| hapFilePath | string | Yes | Path where the HAP file is stored. The path must be the relative path of the current bundle's data directory. |
+| bundleFlags | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | Type of the bundle information to obtain. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;BundleInfo&gt; | Yes | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md/arkts-basicservices-base-asynccallback-i.md) used to return the result. If the operation is successful, **err** is **null** and **data** is the bundle information obtained. Otherwise, **err** is an error object. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types. |
-| 17700022 | The hapFilePath is invalid. |
-| 201 | Permission denied. |
-| 202 | Permission denied, non-system app called system api. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types. |
+| [17700022](../errorcode-bundle.md#17700022-invalid-source-file) | The hapFilePath is invalid. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission denied, non-system app called system api. |
 
 ## Examples
 
@@ -74,7 +74,7 @@ try {
 function getBundleArchiveInfo(hapFilePath: string,  bundleFlags: int): Promise<BundleInfo>
 ```
 
-根据给定的hapFilePath和bundleFlags获取BundleInfo。使用Promise异步回调。
+Obtains the bundle information based on the given HAP file path and bundle flags. This API uses a promise to return the result.
 
 **Since:** 9
 
@@ -92,23 +92,23 @@ function getBundleArchiveInfo(hapFilePath: string,  bundleFlags: int): Promise<B
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| hapFilePath | string | Yes | 表示存储HAP的路径，路径应该是当前应用程序数据目录的相对路径。 |
-| bundleFlags | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | 表示用于指定要返回的BundleInfo对象中包含的信息的标志。 |
+| hapFilePath | string | Yes | Path where the HAP file is stored. The path must be the relative path of the current bundle's data directory. |
+| bundleFlags | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | Type of the bundle information to obtain. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;BundleInfo&gt; | Promise对象，返回BundleInfo。 |
+| Promise&lt;BundleInfo&gt; | Promise used to return the bundle information obtained. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types. |
-| 17700022 | The hapFilePath is invalid. |
-| 201 | Permission denied. |
-| 202 | Permission denied, non-system app called system api. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types. |
+| [17700022](../errorcode-bundle.md#17700022-invalid-source-file) | The hapFilePath is invalid. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission denied, non-system app called system api. |
 
 ## Examples
 

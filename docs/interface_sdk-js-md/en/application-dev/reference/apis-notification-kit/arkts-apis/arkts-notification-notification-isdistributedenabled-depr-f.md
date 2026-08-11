@@ -6,7 +6,7 @@
 function isDistributedEnabled(callback: AsyncCallback<boolean>): void
 ```
 
-查询设备是否支持分布式通知（Callback形式）。
+Checks whether this device supports distributed notifications. This API uses an asynchronous callback to return the result.
 
 **Since:** 8
 
@@ -24,7 +24,7 @@ function isDistributedEnabled(callback: AsyncCallback<boolean>): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;boolean&gt; | Yes | 设备是否支持分布式通知的回调函数。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;boolean&gt; | Yes | Callback used to return the result. |
 
 
 ## isDistributedEnabled
@@ -33,7 +33,7 @@ function isDistributedEnabled(callback: AsyncCallback<boolean>): void
 function isDistributedEnabled(): Promise<boolean>
 ```
 
-查询设备是否支持分布式通知（Promise形式）。
+Checks whether this device supports distributed notifications. This API uses a promise to return the result.
 
 **Since:** 8
 
@@ -51,5 +51,5 @@ function isDistributedEnabled(): Promise<boolean>
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;boolean&gt; | Promise方式返回设备是否支持分布式通知的结果。 |
+| Promise&lt;boolean&gt; | Promise used to return the result. |
 

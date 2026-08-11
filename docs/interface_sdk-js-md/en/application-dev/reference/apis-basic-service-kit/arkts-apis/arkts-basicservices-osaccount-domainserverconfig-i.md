@@ -1,6 +1,6 @@
 # DomainServerConfig
 
-域服务器配置。
+Represents the configuration of a domain server.
 
 **Since:** 18
 
@@ -22,7 +22,7 @@ import { osAccount } from 'kits/@kit.BasicServicesKit';
 domain: string
 ```
 
-服务器所属的域。
+Domain to which the server belongs.
 
 **Type:** string
 
@@ -40,7 +40,7 @@ domain: string
 id: string
 ```
 
-服务器配置标识。
+Server configuration ID.
 
 **Type:** string
 
@@ -58,7 +58,7 @@ id: string
 parameters: Record<string, Object>
 ```
 
-服务器配置参数。
+Server configuration parameters.
 
 **Type:** [Record](../../apis-default/arkts-apis/arkts-record-t.md)&lt;string, Object&gt;
 

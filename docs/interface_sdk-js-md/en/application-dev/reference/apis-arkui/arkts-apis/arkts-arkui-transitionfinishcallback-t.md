@@ -4,7 +4,7 @@
 export type TransitionFinishCallback = (transitionIn: boolean) => void
 ```
 
-组件转场动画的结束回调类型。
+Defines the finish callback type used in transition.
 
 **Since:** 23
 
@@ -20,5 +20,5 @@ export type TransitionFinishCallback = (transitionIn: boolean) => void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| transitionIn | boolean | Yes | 该入参表示转场动画的结束回调类型。<br/>该参数为true表示该转场回调是出现动画的结束回调，该参数为false表示该转场回调是消失动画的结束回调。 |
+| transitionIn | boolean | Yes | a boolean value indicates whether it is the callback of transitionIn or transitionOut. |
 

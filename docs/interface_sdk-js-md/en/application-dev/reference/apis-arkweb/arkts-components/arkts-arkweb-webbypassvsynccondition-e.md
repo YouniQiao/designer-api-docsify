@@ -1,6 +1,6 @@
 # WebBypassVsyncCondition
 
-跳过渲染vsync条件。
+Enumerates whether to allow the rendering process to bypass the vsync scheduling.
 
 **Since:** 20
 
@@ -16,7 +16,7 @@
 NONE = 0
 ```
 
-默认值，按vsync调度流程绘制。
+The rendering process does not bypass the vsync scheduling. Default value.
 
 **Since:** 20
 
@@ -32,7 +32,7 @@ NONE = 0
 SCROLLBY_FROM_ZERO_OFFSET = 1
 ```
 
-在使用scrollby（只支持带滚动偏移量）且Web页面滚动偏移量为0，渲染流程跳过vsync调度直接绘制。
+When **scrollBy** is used (only the scrolling offset is supported) and the scrolling offset of the web page is **0**, the rendering process bypasses the vsync scheduling.
 
 **Since:** 20
 

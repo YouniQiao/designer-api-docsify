@@ -7,7 +7,7 @@ export type DoubleLengthDetents = [
 ]
 ```
 
-定义了两个高度的挡位。
+Defines the detent array of a two-length.
 
 **Since:** 23
 

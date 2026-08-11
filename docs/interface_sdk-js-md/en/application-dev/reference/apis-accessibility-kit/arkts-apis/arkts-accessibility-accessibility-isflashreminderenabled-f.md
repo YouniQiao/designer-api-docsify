@@ -12,7 +12,7 @@ import { accessibility } from 'kits/@kit.AccessibilityKit';
 function isFlashReminderEnabled(): Promise<boolean>
 ```
 
-判断闪烁提醒模式是否开启。使用Promise异步回调。
+Checks whether flash alerts mode is enabled. This API uses a promise to return the result.
 
 **Since:** 23
 
@@ -28,7 +28,7 @@ function isFlashReminderEnabled(): Promise<boolean>
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;boolean&gt; | Promise对象。返回true表示闪烁提醒模式已开启；返回false表示闪烁提醒模式已关闭。 |
+| Promise&lt;boolean&gt; | Promise used to return the result. Returns **true** if flash alerts mode is enabled; returns **false** otherwise. |
 
 ## Examples
 

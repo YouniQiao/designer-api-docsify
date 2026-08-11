@@ -1,6 +1,6 @@
 # GestureHandler
 
-手势处理器的基础类型。
+Defines the gesture handler.
 
 **Since:** 23
 
@@ -16,7 +16,7 @@
 allowedTypes(types: Array<SourceTool>): this
 ```
 
-设置手势处理器所支持的事件输入源。
+Input source type for gesture response.
 
 **Since:** 23
 
@@ -32,13 +32,13 @@ allowedTypes(types: Array<SourceTool>): this
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| types | Array&lt;[SourceTool](../arkts-components/arkts-arkui-sourcetool-e.md)&gt; | Yes | 手势处理器所支持的事件输入源。 |
+| types | Array&lt;[SourceTool](../arkts-components/arkts-arkui-sourcetool-e.md)&gt; | Yes | indicate the allowed input source for gesture to response |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| this | 返回当前组件。 |
+| this |  |
 
 ## tag
 
@@ -46,7 +46,7 @@ allowedTypes(types: Array<SourceTool>): this
 tag(tag: string): this
 ```
 
-设置手势处理器的标志。
+Set the GestureHandler's tag.
 
 **Since:** 23
 
@@ -62,11 +62,11 @@ tag(tag: string): this
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| tag | string | Yes | 手势处理器的标志。 |
+| tag | string | Yes |  |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| this | 返回当前组件。 |
+| this |  |
 

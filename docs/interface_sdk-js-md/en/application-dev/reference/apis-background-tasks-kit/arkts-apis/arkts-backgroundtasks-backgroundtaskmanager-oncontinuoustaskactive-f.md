@@ -12,7 +12,7 @@ import { backgroundTaskManager } from 'kits/@kit.BackgroundTasksKit';
 function onContinuousTaskActive(callback: Callback<ContinuousTaskActiveInfo>): void
 ```
 
-注册长时任务激活的监听，使用callback异步回调。应用回前台激活暂停的长时任务。
+Register continuous task active callback.
 
 **Since:** 23
 
@@ -34,6 +34,6 @@ function onContinuousTaskActive(callback: Callback<ContinuousTaskActiveInfo>): v
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 9800005 | Continuous task verification failed. |
-| 201 | Permission denied. |
+| [9800005](../../apis-backgroundtasks-kit/errorcode-backgroundTaskMgr.md#9800005-continuous-task-verification-failure) | Continuous task verification failed. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
 

@@ -1,6 +1,6 @@
 # PreparedInfo
 
-用于描述当前视频的时长。
+Prepared information of the video.
 
 **Since:** 23
 
@@ -16,7 +16,7 @@
 duration: int
 ```
 
-当前视频的时长。单位：秒，取值范围：[0,+∞)
+The duration of the current video, in seconds.
 
 **Type:** int
 

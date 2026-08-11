@@ -6,7 +6,7 @@
 function publish(request: NotificationRequest, callback: AsyncCallback<void>): void
 ```
 
-发布通知（callback形式）。
+Publishes a notification. This API uses an asynchronous callback to return the result.
 
 **Since:** 7
 
@@ -24,8 +24,8 @@ function publish(request: NotificationRequest, callback: AsyncCallback<void>): v
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| request | [NotificationRequest](arkts-notification-notificationrequest-notificationrequest-i.md) | Yes | 用于设置要发布通知的内容和相关配置信息。 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | 发布通知的回调方法。 |
+| request | [NotificationRequest](arkts-notification-notificationrequest-notificationrequest-i.md) | Yes | Content and related configuration of the notification to publish. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. |
 
 
 ## publish
@@ -34,7 +34,7 @@ function publish(request: NotificationRequest, callback: AsyncCallback<void>): v
 function publish(request: NotificationRequest): Promise<void>
 ```
 
-发布通知（Promise形式）。
+Publishes a notification. This API uses a promise to return the result.
 
 **Since:** 7
 
@@ -52,11 +52,11 @@ function publish(request: NotificationRequest): Promise<void>
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| request | [NotificationRequest](arkts-notification-notificationrequest-notificationrequest-i.md) | Yes | 用于设置要发布通知的内容和相关配置信息。 |
+| request | [NotificationRequest](arkts-notification-notificationrequest-notificationrequest-i.md) | Yes | Content and related configuration of the notification to publish. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | 无返回结果的Promise对象。 |
+| Promise&lt;void&gt; | Promise that returns no value. |
 

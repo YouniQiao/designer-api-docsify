@@ -1,6 +1,6 @@
 # PacMap
 
-用于存储数据的PacMap类型。
+Defines the PacMap type used for data storage.
 
 **Since:** 7
 
@@ -16,7 +16,7 @@
 [key: string]: number | string | boolean | Array<string | number | boolean> | null
 ```
 
-用于存储数据的PacMap类型。如果自定义sequencable对象被放入PacMap对象中，并将跨进程传输，你必须调用BasePacMap.setClassLoader(ClassLoader)为自定义对象设置一个类加载器。如果要将PacMap对象传输到非ohos进程，支持基本类型的值，但不支持自定义可序列对象。
+Indicates the parameter of the PacMap type.If a custom Sequenceable object is put in the PacMap object and will be transferred across processes,you must call BasePacMap.setClassLoader(ClassLoader) to set a class loader for the custom object.If the PacMap object is to be transferred to a non-OHOS process,values of primitive types are supported, but not custom Sequenceable objects.
 
 **Type:** number \| string \| boolean \| Array&lt;string \| number \| boolean&gt; \| null
 
@@ -25,7 +25,7 @@
 **ArkTS mode:** ArkTS-Dyn only, since version 7.
 
 **Model restriction:** 
-- API version 7 to 10: This API can be used only in the FA model.
+- API version 11 and later: This API can be used in both the stage model and FA model.
 
 <!--Device-PacMap-[key: string]: number | string | boolean | Array<string | number | boolean> | null--><!--Device-PacMap-[key: string]: number | string | boolean | Array<string | number | boolean> | null-End-->
 

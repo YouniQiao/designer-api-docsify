@@ -12,12 +12,14 @@ import { particleAbility } from 'kits/@kit.AbilityKit';
 function connectAbility(request: Want, options: ConnectOptions): number
 ```
 
-将当前ability与指定的ServiceAbility进行连接。
+Connects this ability to a ServiceAbility.
 
-> **说明：**
+> **NOTE：**
 > 
-> 组件启动规则详见：[组件启动规则（FA模型）](../../../application-models/component-startup-rules-fa.md)。
-> > 跨应用连接serviceAbility，对端应用需配置关联启动。
+> For details about the startup rules for the components in the FA model, see
+> [Component Startup Rules (FA Model)](../../../application-models/component-startup-rules-fa.md).
+> > To connect to a ServiceAbility of another application, the target application must be configured with
+> associated startup (**AssociateWakeUp** set to **true**).
 
 **Since:** 7
 
@@ -33,14 +35,14 @@ function connectAbility(request: Want, options: ConnectOptions): number
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| request | [Want](arkts-ability-app-ability-want-want-c.md) | Yes | 表示被连接的ServiceAbility。 |
-| options | [ConnectOptions](arkts-ability-connectoptions-connectoptions-i.md) | Yes | 连接回调方法。 |
+| request | [Want](arkts-ability-app-ability-want-want-c.md) | Yes | ServiceAbility to connect. |
+| options | [ConnectOptions](arkts-ability-connectoptions-connectoptions-i.md) | Yes | Connection options. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| number | 连接的ServiceAbility的ID(ID从0开始自增，每连接成功一次ID加1)。 |
+| number | ID of the connected ServiceAbility. The ID starts from 0 and is incremented by 1 each time a connection is set up. |
 
 ## Examples
 

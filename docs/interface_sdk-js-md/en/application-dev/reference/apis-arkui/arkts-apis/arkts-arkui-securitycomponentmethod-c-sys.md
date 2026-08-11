@@ -1,22 +1,31 @@
 # SecurityComponentMethod
 
-安全控件通用属性模块，提供安全控件的布局、尺寸、文字、图标、颜色、边框和交互等通用属性的统一配置能力。  
-- 为[PasteButton](./paste_button)、[SaveButton](./save_button)等安全控件统一设置布局、尺寸、文字、图标、颜色、边框和交互相关属性。  
-- 在满足安全控件规范的前提下，调整安全控件显示效果和交互体验。具体约束请参见[约束与限制](../../../security/AccessToken/security-component-overview.md#约束与限制)。  
-- 通过链式调用方式复用安全控件通用属性能力。
+The universal attributes module for security components enables unified configuration of universal attributes such as layout, size, text, icon, color, border, and interaction behaviors.
 
-## 核心枚举类型
+This module is mainly used in the following scenarios:  
+- Set layout, size, text, icon, color, border, and interaction-related attributes for security components  
+such as [PasteButton](./paste_button) and [SaveButton](./save_button).  
+- Adjust the display effect and interaction experience of security components while ensuring compliance with  
+the security component specifications. For specific constraints,see [Constraints](../../../security/AccessToken/security-component-overview.md#constraints).  
+- Reuse the universal attribute capabilities of security components through chained calls.
 
-- **[SecurityComponentLayoutDirection](arkts-arkui-securitycomponentlayoutdirection-e.md)：** 安全控件图标和文字排列方向枚举，用于指定横向或纵向布局。  
-- **[ButtonType](arkts-arkui-button-buttontype-e.md)：** 安全控件按钮样式枚举，用于指定胶囊、圆形、圆角矩形或普通按钮样式。
+## Key Enums
 
-## 核心接口类型
+- [SecurityComponentLayoutDirection](arkts-arkui-securitycomponentlayoutdirection-e.md): Enumeration of icon and text  
+layout directions for the security component. Specifies horizontal or vertical layout.  
+- [ButtonType](arkts-arkui-button-buttontype-e.md): Enumeration of button styles for the security component.  
+Specifies capsule, circle, rounded rectangle, or normal button style.
 
-- **[SecurityComponentMethod](arkts-arkui-securitycomponentmethod-c.md)：** 安全控件通用属性方法集合，用于为具体安全控件配置布局、尺寸、文字、图标、颜色、边框和交互属性。
+## Key APIs
 
-## 子组件
+- [SecurityComponentMethod](arkts-arkui-securitycomponentmethod-c.md): A collection of universal attribute methods for  
+security components. Configures layout, size, text, icon, color, border, and interaction attributes for specific security components.
 
-不支持
+## Child Components
+
+- Not supported
+
+Defines the method of a security component.
 
 **Since:** 10
 
@@ -32,9 +41,9 @@
 key(value: string): T
 ```
 
-设置组件的唯一标识，唯一性由开发者保证。调用成功后，组件将被赋予指定的唯一标识字符串，可在测试场景中精确定位该组件实例。与[id](arkts-arkui-securitycomponentmethod-c.md#id)同时使用时，后设置的标识值会覆盖先设置的标识值，建议仅设置id。
+Sets the unique ID for the component. You shall guarantee its uniqueness. Upon successful invocation, the component is assigned the specified ID for precise positioning of the component instance during testing. If this API is used together with [id](arkts-arkui-securitycomponentmethod-c.md#id), the value set later overrides the value set earlier.You are advised to set only **id**.
 
-此接口仅用于应用测试场景，验证安全控件的属性设置和交互行为。生产环境请使用公开接口[id](arkts-arkui-securitycomponentmethod-c.md#id)。
+&lt;br&gt;This API is intended exclusively for app testing to verify attribute configurations and interactive behaviors of security components. In production environments, use the public API [id](arkts-arkui-securitycomponentmethod-c.md#id).
 
 **Since:** 10
 
@@ -52,11 +61,11 @@ key(value: string): T
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | string | Yes | 组件的唯一标识，唯一性由开发者保证。适用于测试场景中按标识精确定位安全控件实例。 |
+| value | string | Yes | Unique ID for the component. You shall guarantee its uniqueness. This parameter is used to accurately locate security component instances by ID in test scenarios. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| T | 安全控件的属性。 |
+| T | Attributes of the security component. |
 

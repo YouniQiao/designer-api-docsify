@@ -1,6 +1,6 @@
 # PositionWithAffinity
 
-位置和亲和度。
+Describes the position and affinity of a glyph.
 
 **Since:** 12
 
@@ -22,7 +22,7 @@ import { text } from 'kits/@kit.ArkGraphics2D';
 affinity: Affinity
 ```
 
-位置亲和度。
+Affinity of the position.
 
 **Type:** [Affinity](../../apis-arkui/arkts-apis/arkts-arkui-affinity-t.md)
 
@@ -42,7 +42,7 @@ affinity: Affinity
 position: int
 ```
 
-字形相对于段落的索引，整数。
+Index of the glyph relative to the paragraph. The value is an integer.
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 

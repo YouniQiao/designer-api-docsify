@@ -1,11 +1,5 @@
 # isFunctionKeyEnabled
 
-## 导入模块
-
-```TypeScript
-import { inputDevice } from 'kits/@kit.InputKit';
-```
-
 ## isFunctionKeyEnabled
 
 ```TypeScript
@@ -38,10 +32,12 @@ function isFunctionKeyEnabled(functionKey: FunctionKey): Promise<boolean>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; 3. Parameter verification failed. |
-| 3900002 | There is currently no keyboard device connected. |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; 3. Parameter verification failed. |
+| [3900002](../errorcode-inputdevice.md#3900002-键盘设备没有连接) | There is currently no keyboard device connected. |
 
 ## 示例
+
+ArkTS-Dyn示例：
 
 ```TypeScript
 import { inputDevice } from '@kit.InputKit';
@@ -61,6 +57,36 @@ struct Index {
             }).catch((error: BusinessError) => {
               console.error(`Failed to get capslock state, Code: ${(error as BusinessError).code}, message: ${(error as BusinessError).message}.`);
             })
+          } catch (error) {
+            console.error(`Failed to get capslock state, Code: ${(error as BusinessError).code}, message: ${(error as BusinessError).message}.`);
+          }
+        })
+    }
+  }
+}
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+import { Entry, Text, RelativeContainer, Component } from '@kit.ArkUI';
+import { BusinessError } from '@kit.BasicServicesKit';
+import { inputDevice } from '@kit.InputKit';
+
+@Entry
+@Component
+struct Index {
+  build() {
+    RelativeContainer() {
+      Text()
+        .onClick(() => {
+          try {
+            // 查询功能键是否使能
+            inputDevice.isFunctionKeyEnabled(inputDevice.FunctionKey.CAPS_LOCK).then((state: boolean) => {
+              console.info(`Succeeded in getting capslock state: ${JSON.stringify(state)}.`);
+            }).catch((error) => {
+              console.error(`Failed to get capslock state, Code: ${(error as BusinessError).code}, message: ${(error as BusinessError).message}.`);
+            });
           } catch (error) {
             console.error(`Failed to get capslock state, Code: ${(error as BusinessError).code}, message: ${(error as BusinessError).message}.`);
           }

@@ -1,6 +1,6 @@
 # GridItemAlignment
 
-GridItem的对齐方式枚举。
+Declare grid item alignment status
 
 **Since:** 23
 
@@ -16,7 +16,7 @@ GridItem的对齐方式枚举。
 DEFAULT = 0
 ```
 
-使用Grid的默认对齐方式。
+Use the default alignment of the Grid.
 
 **Since:** 23
 
@@ -34,7 +34,7 @@ DEFAULT = 0
 STRETCH = 1
 ```
 
-以一行中的最高的GridItem作为其他GridItem的高度。
+The height of the tallest grid item in the current line will be used as the height for the other items in the same line
 
 **Since:** 23
 

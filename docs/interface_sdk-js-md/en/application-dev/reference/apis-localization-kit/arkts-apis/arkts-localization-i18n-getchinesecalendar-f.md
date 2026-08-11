@@ -12,7 +12,7 @@ import { i18n } from 'kits/@kit.LocalizationKit';
 export function getChineseCalendar(locale?: Intl.Locale): ChineseCalendar
 ```
 
-获取指定区域的农历对象。
+Obtains the ChineseCalendar object for the specified locale.
 
 **Since:** 26.0.0
 
@@ -30,11 +30,11 @@ export function getChineseCalendar(locale?: Intl.Locale): ChineseCalendar
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| locale | Intl.Locale | No | 区域对象，默认值：系统区域对象。 |
+| locale | Intl.Locale | No | Locale object. The default value is the current system locale. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [ChineseCalendar](arkts-localization-i18n-chinesecalendar-c.md) | 农历对象。 |
+| [ChineseCalendar](arkts-localization-i18n-chinesecalendar-c.md) | ChineseCalendar object. |
 

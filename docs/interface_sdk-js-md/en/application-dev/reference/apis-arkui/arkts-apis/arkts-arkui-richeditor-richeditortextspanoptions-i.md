@@ -1,6 +1,6 @@
 # RichEditorTextSpanOptions
 
-添加文本的偏移位置和文本样式信息。
+Defines the span options of RichEditor.
 
 **Since:** 23
 
@@ -16,7 +16,7 @@
 gesture?: RichEditorGesture
 ```
 
-行为触发回调。省略时，仅使用系统默认行为。
+RichEditor gesture.
 
 **Type:** [RichEditorGesture](../arkts-components/arkts-arkui-richeditorgesture-i.md)
 
@@ -36,9 +36,7 @@ gesture?: RichEditorGesture
 offset?: int
 ```
 
-添加文本的位置。省略时，添加到所有内容的最后。
-
-当值小于0时，放在所有内容最前面；当值大于所有内容长度时，放在所有内容最后面。
+the offset that add a text span at.
 
 **Type:** int
 
@@ -58,7 +56,7 @@ offset?: int
 paragraphStyle?: RichEditorParagraphStyle
 ```
 
-段落样式。
+Paragraph style.
 
 **Type:** [RichEditorParagraphStyle](arkts-arkui-richeditor-richeditorparagraphstyle-i.md)
 
@@ -78,7 +76,7 @@ paragraphStyle?: RichEditorParagraphStyle
 style?: RichEditorTextStyle
 ```
 
-文本Span样式信息。
+text style.
 
 **Type:** [RichEditorTextStyle](../arkts-components/arkts-arkui-richeditortextstyle-i.md)
 
@@ -98,9 +96,7 @@ style?: RichEditorTextStyle
 urlStyle?: RichEditorUrlStyle
 ```
 
-url信息。
-
-默认值：undefined
+RichEditor url style.
 
 **Type:** [RichEditorUrlStyle](../arkts-components/arkts-arkui-richeditorurlstyle-i.md)
 

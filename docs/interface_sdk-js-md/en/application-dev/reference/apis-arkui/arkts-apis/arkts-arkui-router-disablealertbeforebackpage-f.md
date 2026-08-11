@@ -12,12 +12,7 @@ import { router } from 'kits/@kit.ArkUI';
 function disableAlertBeforeBackPage(): void
 ```
 
-禁用页面返回询问对话框。适用于用户已完成保存操作可以安全返回、页面状态切换后不再需要返回确认、需要动态控制返回行为等场景。与showAlertBeforeBackPage()方法成对使用：调用showAlertBeforeBackPage()开启对话框后，可在适当时机调用本方法关闭对话框。
-
-> **说明：**
-> 
-> 从API version 8开始支持，从API version 9开始废弃，建议使用
-> [hideAlertBeforeBackPage](arkts-arkui-arkui-uicontext-router-c.md#hidealertbeforebackpage)替代。
+Disables the display of a confirm dialog box before returning to the previous page.
 
 **Since:** 8
 
@@ -34,14 +29,10 @@ function disableAlertBeforeBackPage(): void
 ## Examples
 
 ```TypeScript
-import { router } from '@kit.ArkUI';
-
 router.disableAlertBeforeBackPage();
 ```
 
 ```TypeScript
-import { router } from '@kit.ArkUI';
-
 router.disableAlertBeforeBackPage();
 ```
 

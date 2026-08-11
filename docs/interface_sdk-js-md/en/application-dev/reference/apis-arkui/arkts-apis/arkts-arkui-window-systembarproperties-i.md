@@ -1,6 +1,6 @@
 # SystemBarProperties
 
-状态栏&lt;!--Del--&gt;、三键导航栏的&lt;!--DelEnd--&gt;属性。
+Describes the properties of the status bar&lt;!--Del--&gt; and three-button navigation bar&lt;!--DelEnd--&gt;.
 
 **Since:** 6
 
@@ -22,7 +22,7 @@ import { window } from 'kits/@kit.ArkUI';
 enableNavigationBarAnimation?: boolean
 ```
 
-是否启用三键导航栏属性变化时的动画效果。true表示启用；false表示不启用。默认值：false。 
+Whether to enable animation for a three-button navigation bar property change. **true** to enable, **false**otherwise. The default value is **false**.
 
 &lt;!--RP13--&gt;&lt;!--RP13End--&gt;
 
@@ -44,7 +44,7 @@ enableNavigationBarAnimation?: boolean
 enableStatusBarAnimation?: boolean
 ```
 
-是否启用状态栏属性变化时的动画效果。true表示启用；false表示不启用。默认值：false。
+Whether to enable animation for a status bar property change. **true** to enable, **false** otherwise. The default value is **false**.
 
 **Type:** boolean
 
@@ -64,7 +64,7 @@ enableStatusBarAnimation?: boolean
 isNavigationBarLightIcon?: boolean
 ```
 
-三键导航栏图标是否为高亮状态。true表示高亮；false表示不高亮。默认值：false。 
+Whether any icon on the three-button navigation bar is highlighted. **true** if highlighted, **false** otherwise.The default value is **false**.
 
 &lt;!--RP13--&gt;&lt;!--RP13End--&gt;
 
@@ -86,7 +86,7 @@ isNavigationBarLightIcon?: boolean
 isStatusBarLightIcon?: boolean
 ```
 
-状态栏图标是否为高亮状态。true表示高亮；false表示不高亮。默认值：false。
+Whether any icon on the status bar is highlighted. **true** if highlighted, **false** otherwise. The default value is **false**.
 
 **Type:** boolean
 
@@ -106,7 +106,7 @@ isStatusBarLightIcon?: boolean
 navigationBarColor?: string
 ```
 
-三键导航栏背景颜色。作为入参时格式为十六进制RGB或ARGB颜色，不区分大小写，例如'#00FF00'或'#FF00FF00'；作为返回值时格式固定为ARGB颜色，如'#FF00FF00'，默认值为系统配置的颜色。
+Background color of the three-button navigation bar. The value is a hexadecimal RGB or ARGB color code and is case insensitive, for example, **'#00FF00'** or **'#FF00FF00'**. The default value is **'#66000000'**.
 
 &lt;!--RP13--&gt;&lt;!--RP13End--&gt;
 
@@ -128,7 +128,8 @@ navigationBarColor?: string
 navigationBarContentColor?: string
 ```
 
-三键导航栏文字颜色。当设置此属性后，`isNavigationBarLightIcon`属性设置无效。默认值：`'#E5FFFFFF'`。 
+Color of the text on the three-button navigation bar. After this property is set, the setting of  
+**isNavigationBarLightIcon** is invalid. The default value is **'#E5FFFFFF'**.
 
 &lt;!--RP13--&gt;&lt;!--RP13End--&gt;
 
@@ -150,7 +151,7 @@ navigationBarContentColor?: string
 statusBarColor?: string
 ```
 
-状态栏背景颜色。作为入参时格式为十六进制RGB或ARGB颜色，不区分大小写，例如'#00FF00'或'#FF00FF00'；作为返回值时格式固定为ARGB颜色，如'#FF00FF00'，默认值为系统配置的颜色。
+Background color of the status bar. The value is a hexadecimal RGB or ARGB color code and is case insensitive,for example, **'#00FF00'** or **'#FF00FF00'**. The default value is **'#66000000'**.
 
 **Type:** string
 
@@ -170,7 +171,7 @@ statusBarColor?: string
 statusBarContentColor?: string
 ```
 
-状态栏文字颜色。当设置此属性后，`isStatusBarLightIcon`属性设置无效。默认值：`'#E5FFFFFF'`。
+Color of the text on the status bar. After this property is set, the setting of **isStatusBarLightIcon** is invalid. The default value is **'#E5FFFFFF'**.
 
 **Type:** string
 

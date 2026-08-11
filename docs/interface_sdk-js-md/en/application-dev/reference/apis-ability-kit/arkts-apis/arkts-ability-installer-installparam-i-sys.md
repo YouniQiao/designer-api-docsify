@@ -1,6 +1,6 @@
 # InstallParam (System API)
 
-应用程序安装、卸载或恢复需指定的参数信息。
+Defines the parameters that need to be specified for bundle installation, uninstall, or recovering.
 
 **Since:** 9
 
@@ -24,7 +24,7 @@ import { installer } from 'kits/@kit.AbilityKit';
 additionalInfo?: string
 ```
 
-应用安装时的额外信息，默认值为空，最大长度为3000字节。该字段通常由操作系统运营方的应用市场在安装企业应用时指定，用于保存应用的额外信息。
+Additional information during application installation (usually an enterprise application). By default, no value is passed. The maximum length is 3,000 bytes. This field is usually specified by the application market of the operating system operator.
 
 **Type:** string
 
@@ -44,7 +44,7 @@ additionalInfo?: string
 crowdtestDeadline?: long
 ```
 
-众测活动的截止日期，默认值为-1，表示无截止日期约束，单位：秒。
+End date of crowdtesting. The default value is **-1**, indicating that no end date is specified for crowdtesting.
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：long
 
@@ -64,7 +64,7 @@ crowdtestDeadline?: long
 hashParams?: Array<HashParam>
 ```
 
-哈希值参数，默认值为空。
+Hash parameters. By default, no value is passed.
 
 **Type:** Array&lt;HashParam&gt;
 
@@ -84,7 +84,8 @@ hashParams?: Array<HashParam>
 installFlag?: int
 ```
 
-指示安装标志，枚举值：0x00：应用初次安装，0x01：应用覆盖安装，0x10：应用免安装，默认值为应用初次安装。
+Installation flag. The value **0x00** means initial installation, **0x01** means overwrite installation, and  
+**0x10** means installation-free. The default value is **0x00**.
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
@@ -104,7 +105,8 @@ installFlag?: int
 isKeepData?: boolean
 ```
 
-卸载时是否保留数据目录，默认值为false。true表示卸载时保留数据目录，false表示卸载时不保留数据目录。
+Whether to retain the data directory during bundle uninstall. The default value is **false**. **true** to retain,  
+**false** otherwise.
 
 **Type:** boolean
 
@@ -124,8 +126,22 @@ isKeepData?: boolean
 parameters?: Array<Parameters>
 ```
 
-扩展参数，Parameters类型的数组，默认值为空。Parameters.key取值支持：&lt;/br&gt; - "ohos.bms.param.renameInstall"：若对应value值为“true”，表示安装时使用共享目录将安装包从应用沙箱移动到安装目录，否则使用常规目录将安装包从应用沙箱拷贝到安装目录。&lt;/br&gt; - "ohos.bms.param.enterpriseForAllUser"：若对应value值为“true”，表示在安装企业应用时为所有用户安装，该参数只对[签名证书的分发类型](arkts-ability-applicationinfo-i.md)为enterprise_mdm和enterprise_normal的应用生效。&lt;/br&gt; - "ohos.bms.param.verifyUninstallRule"：若对应value值为“true”，表示设置卸载处置规则，用于拦截应用卸载。&lt;/br&gt; - "ohos.bms.param.enterpriseManifest"：value值为json文件的沙箱路径，json文件用于存储应用的描述文件，包括应用包名等，该字段用于企业应用克隆场景。克隆时，若该json文件存在，则将旧机的应用安装包拷贝到新机进行安装。&lt;/br&gt; - "ohos.bms.param.installBundleName"：value值为应用的包名，该字段用于应用安装场景（从API version 23开始支持）。如果安装时传入了该字段，则在应用安装过程中调用接口[getBundleInstallStatus](arkts-ability-bundlemanager-getbundleinstallstatus-f-sys.md#getbundleinstallstatus)能够查询到应用正在安装的状态。&lt;/br&gt; - "ohos.bms.param.installAllowDowngrade"：若对应value值为“true”，该字段表示支持应用降级安装（从API version 23开始支持），即设备已安装较高版本的应用，也可以覆盖安装较低版本的应用。仅支持签名证书分发类型为app_gallery或者签名证书类型为debug的三方应用降级安装。使用降级安装能力需要同时申请ohos.permission.INSTALL_BUNDLE和ohos.permission.INSTALL_ALLOW_DOWNGRADE权限。&lt;/br&gt; - "ohos.bms.param.originalInstallSource"：用于指定待安装应用的原始安装来源，对应value取值范围为  
-[ApplicationInfo](arkts-ability-applicationinfo-i.md)中的installSource字段取值。使用该参数安装的应用，其安装来源installSource会被设置为指定的value值。参数生效条件：待安装应用必须未在设备上安装；当value指定为应用包名时，要求指定的应用必须已安装且为系统应用。从API version 23开始支持。
+Extended parameters, represented as an array of the Parameters type. The default value is empty. The options of  
+**Parameters.key** are as follows:
+
+- **ohos.bms.param.renameInstall**: If the value is **true**, the installation package is moved from the  
+application sandbox to the installation directory using a shared directory. Otherwise, it is copied from the application sandbox to the installation directory using a regular directory.  
+- **ohos.bms.param.enterpriseForAllUser**: If the value is **true**, the enterprise app is installed for all  
+users. This parameter takes effect only for applications whose  
+[distribution type of the application signing certificate](arkts-ability-applicationinfo-i.md)is **enterprise_mdm** or **enterprise_normal**.  
+- **ohos.bms.param.verifyUninstallRule**: If the value is **true**, an uninstallation handling rule is set to  
+block application uninstallation.  
+- **ohos.bms.param.enterpriseManifest**: The value is the sandbox path of the JSON file used to store the  
+application's manifest, including the bundle name. It is used in the scenario of cloning enterprise applications.If this JSON file exists during cloning, the application package from the old device is copied to the new device for installation.  
+- **ohos.bms.param.installBundleName**: The value is the bundle name of the application. It is used in  
+application installation scenarios and supported since API version 23. If this field is passed during installation, the [getBundleInstallStatus](arkts-ability-bundlemanager-getbundleinstallstatus-f.md#getbundleinstallstatus)API can be called to obtain the installation status of the application.  
+- **ohos.bms.param.installAllowDowngrade**: If the value is **true**, the application can be installed in  
+downgrade mode (supported since API version 23). That is, if a higher version of the application is already installed on the device, a lower version can be installed over it. Only third-party applications with the signing certificate distribution type set to **app_gallery** or the signing certificate type set to **debug** support downgrade installation. To use downgrade installation, you must request the ohos.permission.INSTALL_BUNDLE and ohos.permission.INSTALL_ALLOW_DOWNGRADE permissions.
 
 **Type:** Array&lt;Parameters&gt;
 
@@ -145,7 +161,7 @@ parameters?: Array<Parameters>
 pgoParams?: Array<PGOParam>
 ```
 
-PGO配置文件参数，默认值为空。
+Parameters of the Profile-guided Optimization (PGO) configuration file. The default value is null.
 
 **Type:** Array&lt;PGOParam&gt;
 
@@ -165,7 +181,7 @@ PGO配置文件参数，默认值为空。
 sharedBundleDirPaths?: Array<string>
 ```
 
-共享包文件所在路径，默认值为空。从API version 24开始，当指定目录时，路径目录下可以存在多个同包名、不同模块名的HSP。API version 23及之前版本，路径目录下只能存在一个HSP。
+Paths of the shared bundle files. By default, no value is passed.
 
 **Type:** Array&lt;string&gt;
 
@@ -185,7 +201,7 @@ sharedBundleDirPaths?: Array<string>
 specifiedDistributionType?: string
 ```
 
-应用安装时指定的[分发类型](../../../security/app-provision-structure.md)，默认值为空，最大长度为128字节。该字段通常由操作系统运营方的应用市场指定。
+[Distribution type](../../../security/app-provision-structure.md) specified during application installation. By default, no value is passed. The maximum length is 128 bytes. This field is usually specified by the application market of the operating system operator.
 
 **Type:** string
 
@@ -205,8 +221,8 @@ specifiedDistributionType?: string
 userId?: int
 ```
 
-指示用户id，默认值：调用方所在用户，取值范围：大于等于0，可使用  
-[getOsAccountLocalId](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-osaccount-accountmanager-i.md/arkts-basicservices-osaccount-accountmanager-i.md#getosaccountlocalid)获取当前进程所在用户。当安装、卸载或恢复一个驱动应用时，该参数会被忽略，会在所有用户下执行。
+User ID. The default value is the user ID of the caller. The value must be greater than or equal to 0. You can call  
+[queryOsAccountLocalIdFromProcess](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-osaccount-accountmanager-i.md/arkts-basicservices-osaccount-accountmanager-i.md#getosaccountlocalid)to obtain the user ID of the current process. When a driver application is installed, uninstalled, or restored,this parameter is ignored and the operation is executed for all users.
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
@@ -226,11 +242,11 @@ userId?: int
 verifyCodeParams?: Array<VerifyCodeParam>
 ```
 
-代码签名文件参数，默认值为空。
+Information about the code signature file. The default value is null.
 
-**说明：**
+**NOTE：**
 
-从API version 10开始支持，从API version 11开始不再维护，应用的代码签名文件将集成到安装包中，不再需要通过本接口指定安装包的代码签名文件。
+Starting from API version 10, the code signature file of an application is integrated into the installation package, rather than being specified by using this field. This field is deprecated since API version 11.
 
 **Type:** Array&lt;VerifyCodeParam&gt;
 

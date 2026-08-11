@@ -1,11 +1,5 @@
 # uninstallLocalPlugin
 
-## 导入模块
-
-```TypeScript
-import { pluginBundleManager } from 'kits/@kit.AbilityKit';
-```
-
 ## uninstallLocalPlugin
 
 ```TypeScript
@@ -42,6 +36,6 @@ function uninstallLocalPlugin(pluginBundleName: string): Promise<void>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 17700092 | Failed to uninstall the plugin because the specified plugin is not found. |
-| 201 | Calling interface without permission 'ohos.permission.kernel.SUPPORT_LOCAL_PLUGIN'. |
+| [17700092](../errorcode-bundle.md#17700092-插件包名不存在) | Failed to uninstall the plugin because the specified plugin is not found. |
+| [201](../../errorcode-universal.md#201-权限校验失败) | Calling interface without permission 'ohos.permission.kernel.SUPPORT_LOCAL_PLUGIN'. |
 

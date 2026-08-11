@@ -4,7 +4,7 @@
 declare type OnSwiperGestureSwipeCallback = (index: number, extraInfo: SwiperAnimationEvent) => void
 ```
 
-在页面跟手滑动过程中，逐帧触发的回调。
+Defines the callback triggered on a frame-by-frame basis when the page is turned by a swipe.
 
 **Since:** 18
 
@@ -22,6 +22,6 @@ declare type OnSwiperGestureSwipeCallback = (index: number, extraInfo: SwiperAni
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| index | number | Yes | 当前显示元素的索引。多列Swiper时，index为最左侧组件的索引。 |
-| extraInfo | [SwiperAnimationEvent](arkts-arkui-swiperanimationevent-i.md) | Yes | 动画相关信息，只返回主轴方向上当前显示元素相对于Swiper起始位置的位移。 |
+| index | number | Yes | Index of the currently displayed element. If there are multiple columns, **index** indicates the index of the leftmost component. |
+| extraInfo | [SwiperAnimationEvent](arkts-arkui-swiperanimationevent-i.md) | Yes | Extra information of the animation, which is the offset of the currently displayed element relative to the start position of the **Swiper** along the main axis. |
 

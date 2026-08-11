@@ -1,0 +1,135 @@
+# query
+
+## query
+
+```TypeScript
+function query(faultType: FaultType, callback: AsyncCallback<Array<FaultLogInfo>>): void
+```
+
+获取当前应用故障信息，该方法通过回调方式获取故障信息数组，故障信息数组内最多上报10份故障信息。
+
+**起始版本：** 9
+
+**废弃版本：** 18
+
+**替代接口：** ohos.hiviewdfx.hiAppEvent/hiAppEvent#addWatcher
+
+<!--Device-FaultLogger-function query(faultType: FaultType, callback: AsyncCallback<Array<FaultLogInfo>>): void--><!--Device-FaultLogger-function query(faultType: FaultType, callback: AsyncCallback<Array<FaultLogInfo>>): void-End-->
+
+**系统能力：** SystemCapability.HiviewDFX.Hiview.FaultLogger
+
+**参数：**
+
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| faultType | [FaultType](arkts-performanceanalysis-faultlogger-faulttype-e.md) | 是 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;FaultLogInfo&gt;&gt; | 是 |
+
+**错误码：**
+
+| 错误码ID |
+| --- |
+| [10600001](../errorcode-faultlogger.md#10600001-服务未启动或故障) |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
+| [801](../../errorcode-universal.md#801-该设备不支持此api) |
+
+## 示例
+
+```TypeScript
+import { FaultLogger } from '@kit.PerformanceAnalysisKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+function queryFaultLogCallback(error: BusinessError, value: Array<FaultLogger.FaultLogInfo>) {
+    if (error) {
+        console.error(`error code:${error.code}, error msg:${error.message}`);
+    } else {
+        console.info("value length is " + value.length);
+        let len: number = value.length;
+        for (let i = 0; i < len; i++) {
+            console.info(`log: ${i}`);
+            console.info(`Log pid: ${value[i].pid}`);
+            console.info(`Log uid: ${value[i].uid}`);
+            console.info(`Log type: ${value[i].type}`);
+            console.info(`Log timestamp: ${value[i].timestamp}`);
+            console.info(`Log reason: ${value[i].reason}`);
+            console.info(`Log module: ${value[i].module}`);
+            console.info(`Log summary: ${value[i].summary}`);
+            console.info(`Log text: ${value[i].fullLog}`);
+        }
+    }
+}
+try {
+    FaultLogger.query(FaultLogger.FaultType.JS_CRASH, queryFaultLogCallback);
+} catch (err) {
+    console.error(`code: ${(err as BusinessError).code}, message: ${(err as BusinessError).message}`);
+}
+```
+
+
+## query
+
+```TypeScript
+function query(faultType: FaultType): Promise<Array<FaultLogInfo>>
+```
+
+获取当前应用故障信息，该方法通过Promise方式返回故障信息数组，故障信息数组内最多上报10份故障信息。
+
+**起始版本：** 9
+
+**废弃版本：** 18
+
+**替代接口：** ohos.hiviewdfx.hiAppEvent/hiAppEvent#addWatcher
+
+<!--Device-FaultLogger-function query(faultType: FaultType): Promise<Array<FaultLogInfo>>--><!--Device-FaultLogger-function query(faultType: FaultType): Promise<Array<FaultLogInfo>>-End-->
+
+**系统能力：** SystemCapability.HiviewDFX.Hiview.FaultLogger
+
+**参数：**
+
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| faultType | [FaultType](arkts-performanceanalysis-faultlogger-faulttype-e.md) | 是 |
+
+**返回值：**
+
+| 类型 |
+| --- |
+| Promise&lt;Array&lt;FaultLogInfo&gt;&gt; |
+
+**错误码：**
+
+| 错误码ID |
+| --- |
+| [10600001](../errorcode-faultlogger.md#10600001-服务未启动或故障) |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
+| [801](../../errorcode-universal.md#801-该设备不支持此api) |
+
+## 示例
+
+```TypeScript
+import { FaultLogger } from '@kit.PerformanceAnalysisKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+async function getLog() {
+  try {
+    let value: Array<FaultLogger.FaultLogInfo> = await FaultLogger.query(FaultLogger.FaultType.JS_CRASH);
+    if (value) {
+      console.info(`value length: ${value.length}`);
+      let len: number = value.length;
+      for (let i = 0; i < len; i++) {
+        console.info(`log: ${i}`);
+        console.info(`Log pid: ${value[i].pid}`);
+        console.info(`Log uid: ${value[i].uid}`);
+        console.info(`Log type: ${value[i].type}`);
+        console.info(`Log timestamp: ${value[i].timestamp}`);
+        console.info(`Log reason: ${value[i].reason}`);
+        console.info(`Log module: ${value[i].module}`);
+        console.info(`Log summary: ${value[i].summary}`);
+        console.info(`Log text: ${value[i].fullLog}`);
+      }
+    }
+  } catch (err) {
+    console.error(`code: ${(err as BusinessError).code}, message: ${(err as BusinessError).message}`);
+  }
+}
+```

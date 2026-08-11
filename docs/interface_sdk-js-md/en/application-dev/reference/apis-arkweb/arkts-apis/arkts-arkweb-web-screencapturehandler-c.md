@@ -1,6 +1,15 @@
 # ScreenCaptureHandler
 
-Defines the onScreenCapture callback, related to {@link onScreenCapture} method.
+Implements the **ScreenCaptureHandler** object for accepting or rejecting a screen capture request.For details about the sample code,see [onScreenCaptureRequest](./arkts-basic-components-web-events.md#onscreencapturerequest10).
+
+> **NOTE：**
+> 
+> - The initial APIs of this component are supported since API version 8.
+> Updates will be marked with a superscript to indicate their earliest API version.
+> 
+> - The initial APIs of this class are supported since API version 10.
+> 
+> - The sample effect is subject to the actual device.
 
 **Since:** 23
 
@@ -16,7 +25,7 @@ Defines the onScreenCapture callback, related to {@link onScreenCapture} method.
 constructor()
 ```
 
-WebKeyboardController的构造函数。
+Constructs a **ScreenCaptureHandler** object.
 
 **Since:** 23
 
@@ -32,7 +41,7 @@ WebKeyboardController的构造函数。
 deny(): void
 ```
 
-Reject the request.
+Rejects this screen capture request.
 
 **Since:** 23
 
@@ -48,7 +57,7 @@ Reject the request.
 getOrigin(): string
 ```
 
-Gets the source of the webpage that attempted to access the restricted resource.
+Obtains the origin of this web page.
 
 **Since:** 23
 
@@ -62,7 +71,7 @@ Gets the source of the webpage that attempted to access the restricted resource.
 
 | Type | Description |
 | --- | --- |
-| string |  |
+| string | Origin of the web page that requests the permission. |
 
 ## grant
 
@@ -70,7 +79,7 @@ Gets the source of the webpage that attempted to access the restricted resource.
 grant(config: ScreenCaptureConfig): void
 ```
 
-Grant origin access to a given resource.
+Grants the screen capture permission.
 
 **Since:** 23
 
@@ -84,5 +93,5 @@ Grant origin access to a given resource.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| config | [ScreenCaptureConfig](../arkts-components/arkts-arkweb-screencaptureconfig-i.md) | Yes | The screen capture configuration. |
+| config | [ScreenCaptureConfig](../arkts-components/arkts-arkweb-screencaptureconfig-i.md) | Yes | Screen capture configuration. |
 

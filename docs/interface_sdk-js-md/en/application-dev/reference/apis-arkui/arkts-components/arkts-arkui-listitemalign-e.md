@@ -1,6 +1,6 @@
 # ListItemAlign
 
-设置子组件在List交叉轴方向的对齐方式。
+Sets the alignment mode of child components in the cross-axis direction of the list.
 
 **Since:** 9
 
@@ -16,7 +16,7 @@
 Start
 ```
 
-ListItem在List中，交叉轴方向首部对齐。
+The list items are packed toward the start edge of the **List** component along the cross axis.
 
 **Since:** 9
 
@@ -36,7 +36,7 @@ ListItem在List中，交叉轴方向首部对齐。
 Center
 ```
 
-ListItem在List中，交叉轴方向居中对齐。
+The list items are centered in the **List** component along the cross axis.
 
 **Since:** 9
 
@@ -56,7 +56,7 @@ ListItem在List中，交叉轴方向居中对齐。
 End
 ```
 
-ListItem在List中，交叉轴方向尾部对齐。
+The list items are packed toward the end edge of the **List** component along the cross axis.
 
 **Since:** 9
 

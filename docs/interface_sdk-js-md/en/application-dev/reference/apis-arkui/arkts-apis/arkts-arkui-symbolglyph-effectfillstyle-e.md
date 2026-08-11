@@ -1,6 +1,6 @@
 # EffectFillStyle
 
-动效模式。
+Declare fill style of symbol
 
 **Since:** 23
 
@@ -16,7 +16,7 @@
 CUMULATIVE = 0
 ```
 
-累加填充样式。
+The cumulative fill style of symbol
 
 **Since:** 23
 
@@ -34,7 +34,7 @@ CUMULATIVE = 0
 ITERATIVE = 1
 ```
 
-迭代填充样式。
+The iterative fill style of symbol
 
 **Since:** 23
 

@@ -13,12 +13,6 @@ SingleKVStore数据库实例，提供增加数据、删除数据和订阅数据�
 
 **系统能力：** SystemCapability.DistributedDataManager.KVStore.Core
 
-## 导入模块
-
-```TypeScript
-import { distributedKVStore } from 'kits/@kit.ArkData';
-```
-
 ## delete
 
 ```TypeScript
@@ -48,9 +42,9 @@ delete(predicates: dataSharePredicates.DataSharePredicates, callback: AsyncCallb
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 401 | Parameter error.Possible causes:1.Mandatory parameters are left unspecified; &lt;br&gt;2.Incorrect parameters types. [ |
-| 15100003 | Database corrupted. [ |
-| 14800047 | The WAL file size exceeds the default limit.<br>**适用版本：** 10+ |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error.Possible causes:1.Mandatory parameters are left unspecified; &lt;br&gt;2.Incorrect parameters types. [ |
+| [15100003](../errorcode-distributedKVStore.md#15100003-数据库损坏) | Database corrupted. [ |
+| [14800047](../errorcode-data-rdb.md#14800047-wal文件大小超过默认上限) | The WAL file size exceeds the default limit.<br>**适用版本：** 10+ |
 
 ## delete
 
@@ -86,9 +80,9 @@ delete(predicates: dataSharePredicates.DataSharePredicates): Promise<void>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 401 | Parameter error.Possible causes:1.Mandatory parameters are left unspecified; &lt;br&gt;2.Incorrect parameters types. [ |
-| 15100003 | Database corrupted. [ |
-| 14800047 | The WAL file size exceeds the default limit.<br>**适用版本：** 10+ |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error.Possible causes:1.Mandatory parameters are left unspecified; &lt;br&gt;2.Incorrect parameters types. [ |
+| [15100003](../errorcode-distributedKVStore.md#15100003-数据库损坏) | Database corrupted. [ |
+| [14800047](../errorcode-data-rdb.md#14800047-wal文件大小超过默认上限) | The WAL file size exceeds the default limit.<br>**适用版本：** 10+ |
 
 ## getResultSet
 
@@ -119,9 +113,9 @@ getResultSet(predicates: dataSharePredicates.DataSharePredicates, callback: Asyn
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 401 | Parameter error.Possible causes:1.Mandatory parameters are left unspecified; &lt;br&gt;2.Incorrect parameters types. [ |
-| 15100003 | Database corrupted. [ |
-| 15100001 | Over max limits.<br>**适用版本：** 10+ |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error.Possible causes:1.Mandatory parameters are left unspecified; &lt;br&gt;2.Incorrect parameters types. [ |
+| [15100003](../errorcode-distributedKVStore.md#15100003-数据库损坏) | Database corrupted. [ |
+| [15100001](../errorcode-distributedKVStore.md#15100001-超过最大订阅数量或结果集数量) | Over max limits.<br>**适用版本：** 10+ |
 
 ## getResultSet
 
@@ -157,9 +151,9 @@ getResultSet(predicates: dataSharePredicates.DataSharePredicates): Promise<KVSto
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 401 | Parameter error.Possible causes:1.Mandatory parameters are left unspecified; &lt;br&gt;2.Incorrect parameters types. [ |
-| 15100003 | Database corrupted. [ |
-| 15100001 | Over max limits.<br>**适用版本：** 10+ |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error.Possible causes:1.Mandatory parameters are left unspecified; &lt;br&gt;2.Incorrect parameters types. [ |
+| [15100003](../errorcode-distributedKVStore.md#15100003-数据库损坏) | Database corrupted. [ |
+| [15100001](../errorcode-distributedKVStore.md#15100001-超过最大订阅数量或结果集数量) | Over max limits.<br>**适用版本：** 10+ |
 
 ## putBatch
 
@@ -190,9 +184,9 @@ putBatch(value: Array<ValuesBucket>, callback: AsyncCallback<void>): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 401 | Parameter error.Possible causes:1.Mandatory parameters are left unspecified; &lt;br&gt;2.Incorrect parameters types. [ |
-| 15100003 | Database corrupted. [ |
-| 14800047 | The WAL file size exceeds the default limit.<br>**适用版本：** 10+ |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error.Possible causes:1.Mandatory parameters are left unspecified; &lt;br&gt;2.Incorrect parameters types. [ |
+| [15100003](../errorcode-distributedKVStore.md#15100003-数据库损坏) | Database corrupted. [ |
+| [14800047](../errorcode-data-rdb.md#14800047-wal文件大小超过默认上限) | The WAL file size exceeds the default limit.<br>**适用版本：** 10+ |
 
 ## putBatch
 
@@ -228,9 +222,9 @@ putBatch(value: Array<ValuesBucket>): Promise<void>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 401 | Parameter error.Possible causes:1.Mandatory parameters are left unspecified; &lt;br&gt;2.Incorrect parameters types. [ |
-| 15100003 | Database corrupted. [ |
-| 14800047 | The WAL file size exceeds the default limit.<br>**适用版本：** 10+ |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error.Possible causes:1.Mandatory parameters are left unspecified; &lt;br&gt;2.Incorrect parameters types. [ |
+| [15100003](../errorcode-distributedKVStore.md#15100003-数据库损坏) | Database corrupted. [ |
+| [14800047](../errorcode-data-rdb.md#14800047-wal文件大小超过默认上限) | The WAL file size exceeds the default limit.<br>**适用版本：** 10+ |
 
 ## putValuesBuckets
 
@@ -261,8 +255,8 @@ putValuesBuckets(value: Array<ValuesBucket>, callback: AsyncCallback<void>): voi
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 15100005 | Database or result set already closed. [ |
-| 202 | Permission verification failed, application which is not a system application uses system API. [ |
+| [15100005](../errorcode-distributedKVStore.md#15100005-数据库或查询结果集已关闭) | Database or result set already closed. [ |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed, application which is not a system application uses system API. [ |
 
 ## putValuesBuckets
 
@@ -298,6 +292,6 @@ putValuesBuckets(value: Array<ValuesBucket>): Promise<void>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 15100005 | Database or result set already closed. [ |
-| 202 | Permission verification failed, application which is not a system application uses system API. [ |
+| [15100005](../errorcode-distributedKVStore.md#15100005-数据库或查询结果集已关闭) | Database or result set already closed. [ |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed, application which is not a system application uses system API. [ |
 

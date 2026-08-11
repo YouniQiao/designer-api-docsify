@@ -1,6 +1,6 @@
 # StyledStringKey
 
-范围属性字符串样式。
+Sets the style for a range styled string.
 
 **Since:** 12
 
@@ -16,7 +16,7 @@
 FONT = 0
 ```
 
-字体样式键。[TextStyle](arkts-arkui-textstyle-c.md)所属键。
+Font style key, applicable to [TextStyle](arkts-arkui-textstyle-c.md).
 
 **Since:** 12
 
@@ -36,7 +36,7 @@ FONT = 0
 DECORATION = 1
 ```
 
-文本装饰线样式键。[DecorationStyle](arkts-arkui-decorationstyle-c.md)所属键。
+Text decorative line style key, applicable to [DecorationStyle](arkts-arkui-decorationstyle-c.md).
 
 **Since:** 12
 
@@ -56,7 +56,7 @@ DECORATION = 1
 BASELINE_OFFSET = 2
 ```
 
-文本基线偏移量样式键。[BaselineOffsetStyle](arkts-arkui-baselineoffsetstyle-c.md)所属键。
+Text baseline offset style key, applicable to [BaselineOffsetStyle](arkts-arkui-baselineoffsetstyle-c.md).
 
 **Since:** 12
 
@@ -76,7 +76,7 @@ BASELINE_OFFSET = 2
 LETTER_SPACING = 3
 ```
 
-文本字符间距样式键。[LetterSpacingStyle](arkts-arkui-letterspacingstyle-c.md)所属键。
+Text letter spacing style key, applicable to [LetterSpacingStyle](arkts-arkui-letterspacingstyle-c.md).
 
 **Since:** 12
 
@@ -96,7 +96,7 @@ LETTER_SPACING = 3
 TEXT_SHADOW = 4
 ```
 
-文本阴影样式键。[TextShadowStyle](arkts-arkui-textshadowstyle-c.md)所属键。
+Text shadow style key, applicable to [TextShadowStyle](arkts-arkui-textshadowstyle-c.md).
 
 **Since:** 12
 
@@ -116,7 +116,7 @@ TEXT_SHADOW = 4
 LINE_HEIGHT = 5
 ```
 
-文本行高样式键。[LineHeightStyle](arkts-arkui-lineheightstyle-c.md)所属键。
+Text line height style key, applicable to [LineHeightStyle](arkts-arkui-lineheightstyle-c.md).
 
 **Since:** 12
 
@@ -136,7 +136,7 @@ LINE_HEIGHT = 5
 BACKGROUND_COLOR = 6
 ```
 
-文本背景色样式键。[BackgroundColorStyle](arkts-arkui-backgroundcolorstyle-c.md)所属键。
+Text background color style key, applicable to [BackgroundColorStyle](arkts-arkui-backgroundcolorstyle-c.md).
 
 **Since:** 14
 
@@ -156,7 +156,7 @@ BACKGROUND_COLOR = 6
 URL = 7
 ```
 
-超链接样式键。[UrlStyle](arkts-arkui-urlstyle-c.md)所属键。
+Hyperlink style key, applicable to [UrlStyle](arkts-arkui-urlstyle-c.md).
 
 **Since:** 14
 
@@ -176,7 +176,9 @@ URL = 7
 LINE_SPACING = 8
 ```
 
-文本行间距样式键。[LineSpacingStyle](arkts-arkui-linespacingstyle-c.md)所属键。
+Text line spacing style key, applicable to [LineSpacingStyle](arkts-arkui-linespacingstyle-c.md).
+
+**Since**: 26.0.0
 
 **Since:** 26.0.0
 
@@ -196,7 +198,7 @@ LINE_SPACING = 8
 GESTURE = 100
 ```
 
-事件手势键。[GestureStyle](arkts-arkui-gesturestyle-c.md)所属键。
+Gesture key, applicable to [GestureStyle](arkts-arkui-gesturestyle-c.md).
 
 **Since:** 12
 
@@ -216,7 +218,7 @@ GESTURE = 100
 PARAGRAPH_STYLE = 200
 ```
 
-段落样式键。[ParagraphStyle](arkts-arkui-paragraphstyle-c.md)所属键。
+Paragraph style key, applicable to [ParagraphStyle](arkts-arkui-paragraphstyle-c.md).
 
 **Since:** 12
 
@@ -236,7 +238,7 @@ PARAGRAPH_STYLE = 200
 IMAGE = 300
 ```
 
-图片键。[ImageAttachment](arkts-arkui-imageattachment-c.md)所属键。
+Image key, applicable to [ImageAttachment](arkts-arkui-imageattachment-c.md).
 
 **Since:** 12
 
@@ -256,7 +258,7 @@ IMAGE = 300
 CUSTOM_SPAN = 400
 ```
 
-自定义绘制Span键。[CustomSpan](arkts-arkui-customspan-c.md)所属键。
+Custom span key, applicable to [CustomSpan](arkts-arkui-customspan-c.md).
 
 **Since:** 12
 
@@ -276,7 +278,7 @@ CUSTOM_SPAN = 400
 USER_DATA = 500
 ```
 
-UserDataSpan键。[UserDataSpan](arkts-arkui-userdataspan-c.md)所属键。
+User data span key, applicable to [UserDataSpan](arkts-arkui-userdataspan-c.md).
 
 **Since:** 12
 

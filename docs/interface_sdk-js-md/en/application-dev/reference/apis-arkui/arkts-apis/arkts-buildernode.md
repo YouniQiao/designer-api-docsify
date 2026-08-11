@@ -6,25 +6,25 @@
 
 | Name | Description |
 | --- | --- |
-| [BuilderNode](arkts-arkui-buildernode-c.md) | class BuilderNode\&lt;T = undefined&gt;BuilderNode支持通过无状态的UI方法[@Builder](../../../ui/state-management/arkts-builder.md)生成组件树，并持有组件树的根节点。不支持定义为状态变量。BuilderNode中持有的FrameNode仅用于将该BuilderNode作为子节点挂载到其他FrameNode上。对BuilderNode持有的FrameNode进行属性设置与子节点操作可能会产生未定义行为，因此不建议通过BuilderNode的[getFrameNode](arkts-arkui-buildernode-c.md#getframenode)方法和[FrameNode](arkts-arkui-framenode-c.md)的  [getRenderNode](arkts-arkui-framenode-c.md#getrendernode)方法获取RenderNode，并通过[RenderNode](arkts-arkui-rendernode-c.md)的接口对其进行属性设置与子节点操作。 |
-| [ReactiveBuilderNode](arkts-arkui-buildernode-reactivebuildernode-c.md) | ReactiveBuilderNode支持通过无状态的UI方法[@Builder](../../../ui/state-management/arkts-builder.md)生成组件树，并持有该组件树的根节点，不支持定义为状态变量。ReactiveBuilderNode中持有的[FrameNode](arkts-arkui-framenode-c.md)仅用于将此ReactiveBuilderNode作为子节点挂载到其他FrameNode上。对ReactiveBuilderNode持有的FrameNode进行属性设置与子节点操作可能会导致未定义行为，因此不建议通过ReactiveBuilderNode的  [getFrameNode](arkts-arkui-buildernode-c.md#getframenode)方法和[FrameNode](arkts-arkui-framenode-c.md)节点的  [getRenderNode](arkts-arkui-framenode-c.md#getrendernode)方法获取RenderNode，并通过[RenderNode](arkts-arkui-rendernode-c.md)的接口对其进行属性设置与子节点操作。 |
+| [BuilderNode](arkts-arkui-buildernode-c.md) | Defines BuilderNode. |
+| [ReactiveBuilderNode](arkts-arkui-buildernode-reactivebuildernode-c.md) | Defines ReactiveBuilderNode. |
 
 ### Interfaces
 
 | Name | Description |
 | --- | --- |
-| [BuildOptions](arkts-arkui-buildernode-buildoptions-i.md) | build的可选参数。 |
-| [RenderOptions](arkts-arkui-buildernode-renderoptions-i.md) | 创建BuilderNode时的可选参数。 |
+| [BuildOptions](arkts-arkui-buildernode-buildoptions-i.md) | BuildOptions info. |
+| [RenderOptions](arkts-arkui-buildernode-renderoptions-i.md) | RenderOptions info. |
 
 ### Enums
 
 | Name | Description |
 | --- | --- |
-| [NodeRenderType](arkts-arkui-buildernode-noderendertype-e.md) | 节点渲染类型枚举。  @Component](../../../ui/state-management/arkts-create-custom-components.md#component)修饰的自定义组件、 > [NodeContainer](node_container)以及[NodeContainer](node_container)下挂载的[FrameNode](arkts-arkui-framenode-c.md)和 > [RenderNode](arkts-arkui-rendernode-c.md)。 >  > - 使用方式可参考[同层渲染绘制](../../../web/web-same-layer.md)。 |
+| [NodeRenderType](arkts-arkui-buildernode-noderendertype-e.md) | Render type of the node used for indicating that if the node will be shown on the display or rendered to a texture |
 
 ### Types
 
 | Name | Description |
 | --- | --- |
-| [InputEventType](arkts-arkui-inputeventtype-t.md) | [postInputEvent](arkts-arkui-buildernode-c.md#postinputevent)的参数，定义要发送的输入事件类型。 |
+| [InputEventType](arkts-arkui-inputeventtype-t.md) | Defines the event type used for posting. |
 

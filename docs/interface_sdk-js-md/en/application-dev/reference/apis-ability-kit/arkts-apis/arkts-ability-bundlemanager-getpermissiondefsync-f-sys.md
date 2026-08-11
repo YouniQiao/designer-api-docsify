@@ -12,7 +12,7 @@ import { bundleManager } from 'kits/@kit.AbilityKit';
 function getPermissionDefSync(permissionName: string): PermissionDef
 ```
 
-以同步方法根据给定的permissionName获取权限定义结构体PermissionDef信息。
+Obtains the **PermissionDef** struct based on the given permission name. This API returns the result synchronously.
 
 **Since:** 10
 
@@ -30,22 +30,22 @@ function getPermissionDefSync(permissionName: string): PermissionDef
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| permissionName | string | Yes | 表示权限参数名。 |
+| permissionName | string | Yes | Name of the permission. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [PermissionDef](arkts-ability-bundlemanager-permissiondef-t-sys.md) | PermissionDef对象。 |
+| [PermissionDef](arkts-ability-bundlemanager-permissiondef-t-sys.md) | PermissionDef object. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types. |
-| 17700006 | The specified permission is not found. |
-| 201 | Permission denied. |
-| 202 | Permission denied, non-system app called system api. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types. |
+| [17700006](../errorcode-bundle.md#17700006-permission-does-not-exist) | The specified permission is not found. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission denied, non-system app called system api. |
 
 ## Examples
 

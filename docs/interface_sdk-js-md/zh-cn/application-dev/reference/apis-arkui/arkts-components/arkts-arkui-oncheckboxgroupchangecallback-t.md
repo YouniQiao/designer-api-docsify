@@ -24,5 +24,5 @@ declare type OnCheckboxGroupChangeCallback = (value: CheckboxGroupResult) => voi
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | [CheckboxGroupResult](arkts-arkui-checkboxgroupresult-i.md) | 是 | 多选框群组的信息。 |
+| value | [CheckboxGroupResult](../arkts-apis/arkts-arkui-checkboxgroup-checkboxgroupresult-i.md) | 是 | 多选框群组的信息。 |
 

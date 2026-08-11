@@ -1,10 +1,13 @@
 # FocusQuery
 
-提供了查询是否支持当前对焦模式的方法。
+FocusQuery provides APIs to check whether a focus mode is supported.
 
-> **说明：**
+> **NOTE：**
 > 
-> - 本Interface的起始版本为API version 12。接口在API version 12发生兼容变更，保留了内层元素的起始版本信息，会出现外层元素@since版本号大于内层元素的情况，不影响接口使用。
+> - This interface was first introduced in API version 12. In this version, a compatibility change was made that
+> preserved the initial version information of inner elements. As a result, you might see outer element's @since
+> version number being higher than that of the inner elements. However, this discrepancy does not affect the
+> functionality of the interface.
 
 **Since:** 12
 
@@ -26,7 +29,7 @@ import { camera } from 'kits/@kit.CameraKit';
 isFocusModeSupported(afMode: FocusMode): boolean
 ```
 
-检测对焦模式是否支持。
+Checks whether a focus mode is supported.
 
 **Since:** 11
 
@@ -42,19 +45,19 @@ isFocusModeSupported(afMode: FocusMode): boolean
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| afMode | [FocusMode](arkts-camera-camera-focusmode-e.md) | Yes | 指定的焦距模式。传参为null或者undefined，作为0处理，手动对焦模式。 |
+| afMode | [FocusMode](arkts-camera-camera-focusmode-e.md) | Yes | Focus mode. If the input parameter is null or undefined, it is treated as 0 and manual focus is used. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| boolean | 检测对焦模式是否支持。true表示支持，false表示不支持。接口调用失败会抛出相应错误码并返回undefined，错误码类型 [CameraErrorCode]{ |
+| boolean | Check result for the support of the focus mode. **true** if supported, **false** otherwise. If the operation fails, undefined is returned and an error code defined in [CameraErrorCode]{ |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 7400103 | Session not config, only throw in session usage. |
+| [7400103](../errorcode-camera.md#7400103-session-not-configured) | Session not config, only throw in session usage. |
 
 ## isLockFocusTrackingSupported
 
@@ -62,7 +65,7 @@ isFocusModeSupported(afMode: FocusMode): boolean
 isLockFocusTrackingSupported(): boolean
 ```
 
-检查设备是否支持锁定焦点跟踪的功能。
+Checks whether lock focus tracking is supported.
 
 **Since:** 26.0.0
 
@@ -80,11 +83,11 @@ isLockFocusTrackingSupported(): boolean
 
 | Type | Description |
 | --- | --- |
-| boolean | 检查是否支持锁定焦点跟踪。true表示支持，false表示不支持。接口调用失败会抛出相应错误码并返回undefined。 |
+| boolean | Is the lock focus tracking supported. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 7400103 | Session not config, only throw in session usage. |
+| [7400103](../errorcode-camera.md#7400103-session-not-configured) | Session not config, only throw in session usage. |
 

@@ -1,6 +1,6 @@
 # OnLoadFinishedEvent
 
-定义网页加载结束时触发的函数。
+Defines the triggered function at the end of web page loading.
 
 **Since:** 20
 
@@ -16,7 +16,7 @@
 url: string
 ```
 
-页面的URL地址。
+The url to be loaded.
 
 **Type:** string
 

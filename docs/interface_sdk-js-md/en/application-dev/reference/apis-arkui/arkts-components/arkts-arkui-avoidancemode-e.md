@@ -1,6 +1,6 @@
 # AvoidanceMode
 
-下拉菜单避让模式的枚举选项。
+Enumerates the drop-down menu avoidance modes.
 
 **Since:** 19
 
@@ -16,7 +16,7 @@
 COVER_TARGET
 ```
 
-目标组件下方无足够空间时，覆盖目标组件。
+If there is not enough space below the target component, cover the target component.
 
 **Since:** 19
 
@@ -36,7 +36,7 @@ COVER_TARGET
 AVOID_AROUND_TARGET
 ```
 
-目标组件四周无足够空间时，在最大空间处压缩显示（可滚动）。
+If there is not enough space around the target component, compress and display in the largest available space (scrollable).
 
 **Since:** 19
 

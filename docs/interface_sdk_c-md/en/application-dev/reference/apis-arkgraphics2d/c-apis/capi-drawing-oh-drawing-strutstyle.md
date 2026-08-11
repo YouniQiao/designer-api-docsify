@@ -21,7 +21,7 @@ This struct describes a strut style. The strut style determines the line spacing
 | Name | Description |
 | -- | -- |
 | [OH_Drawing_FontWeight](capi-drawing-text-typography-h.md#oh_drawing_fontweight) weight | Font weight used for calculating the strut. |
-| [OH_Drawing_FontStyle](capi-drawing-text-typography-h.md#oh_drawing_fontstyle) style | Font style used for calculating the strut. |
+| [OH_Drawing_FontStyle](capi-drawing-text-typography-h.md#oh_drawing_fontstyle) style | Font style used when calculating the strut. |
 | double size | Size of the ascent plus descent in the logical pixels. |
 | double heightScale | Scale factor of the line height. |
 | bool heightOverride | Whether to enable height override. **true**: enabled; **false**: disabled. |

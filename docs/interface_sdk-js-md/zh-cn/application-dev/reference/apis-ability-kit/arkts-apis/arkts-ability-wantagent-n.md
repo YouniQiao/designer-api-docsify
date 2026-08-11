@@ -12,12 +12,6 @@ WantAgent模块封装了[Want](arkts-ability-app-ability-want-want-c.md)对象�
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 
-## 导入模块
-
-```TypeScript
-import { WantAgent } from 'kits/@kit.AbilityKit';
-```
-
 ## 汇总
 
 ### 函数

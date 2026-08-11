@@ -1,6 +1,6 @@
 # DeviceKey (System API)
 
-设备标识。用于唯一标识一个设备及其用户，包含设备ID类型、设备ID和设备用户ID等信息。
+Defines the device service ID. It uniquely identifies a device and its user, including the device ID type, device ID, and user ID.
 
 **Since:** 23
 
@@ -24,7 +24,8 @@ import { companionDeviceAuth } from 'kits/@kit.UserAuthenticationKit';
 deviceId: string
 ```
 
-设备ID。设备的唯一标识字符串，具体格式由deviceIdType决定。
+Device ID. It is a string that uniquely identifies a device. The format is determined by the value of  
+**deviceIdType**.
 
 **Type:** string
 
@@ -46,7 +47,7 @@ deviceId: string
 deviceIdType: int
 ```
 
-设备ID类型。用于指定设备业务标识的类型，可在[DeviceIdType](arkts-userauthentication-companiondeviceauth-deviceidtype-e-sys.md)基础上自定义扩展，如使用UNIFIED_DEVICE_ID(1)表示统一设备ID，或使用厂商自定义值（≥10000）。
+Enumerates device ID types. They are used to specify the type of the device service ID and can be extended based on [DeviceIdType](arkts-userauthentication-companiondeviceauth-deviceidtype-e-sys.md). For example, you can use **UNIFIED_DEVICE_ID(1)** to indicate the unified device ID or use the vendor-defined value (≥ 10000).
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
@@ -68,7 +69,7 @@ deviceIdType: int
 deviceUserId: int
 ```
 
-设备用户ID。设备上的用户标识，为非负整数，用于区分设备上的不同用户。
+Device user ID. It is an integer greater than or equal to 0 and is used to distinguish different users on the device.
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 

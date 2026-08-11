@@ -1,13 +1,7 @@
 # DeviceKVStore
 
-设备协同数据库，继承自SingleKVStore，提供查询数据和端端同步数据的方法，可以使用SingleKVStore的方法例如：put、putBatch等。
-
-设备协同数据库，以设备维度对数据进行区分，每台设备仅能写入和修改本设备的数据，其它设备的数据对其是只读的，无法修改其它设备的数据。
-
-比如，可以使用设备协同数据库实现设备间的图片分享，可以查看其他设备的图片，但无法修改和删除其他设备的图片。
-
-在调用DeviceKVStore的方法前，需要先通过  
-[getKVStore](arkts-arkdata-distributedkvstore-kvmanager-i.md#getkvstore)构建一个DeviceKVStore实例。
+Provides APIs for querying data in a device KV store and performing cross-device data sync. This class inherits from **SingleKVStore**. The **SingleKVStore** APIs such as **put** and **putBatch** can be used.Data is distinguished by device in a device KV store. Each device can only write and modify its own data. Data of other devices is read-only and cannot be modified.For example, a device KV store can be used to implement image sharing between devices. The images of other devices can be viewed, but not be modified or deleted.Before calling any method in **DeviceKVStore**, you must use  
+[getKVStore](arkts-arkdata-distributedkvstore-kvmanager-i.md#getkvstore) to obtain a **DeviceKVStore** object.
 
 **Inheritance/Implementation:** DeviceKVStore extends [SingleKVStore](arkts-arkdata-distributedkvstore-singlekvstore-i.md)
 
@@ -37,7 +31,7 @@ ArkTS-Sta:
 get(key: string, callback: AsyncCallback<boolean | string | long | double | Uint8Array>): void
 ```
 
-获取本设备指定键的值，使用callback异步回调。
+Obtains the value of the specified key for this device. This API uses an asynchronous callback to return the result.
 
 **Since:** 9
 
@@ -53,17 +47,17 @@ get(key: string, callback: AsyncCallback<boolean | string | long | double | Uint
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| key | string | Yes | 要查询数据的Key，不能为空且长度范围为1-[MAX_KEY_LENGTH](arkts-arkdata-distributedkvstore-constants-i.md)。 |
-| callback | ArkTS-Dyn: [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;boolean \| string \| number \| number \| Uint8Array&gt;  <br>ArkTS-Sta：[AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;boolean \| string \| long \| double \| Uint8Array&gt; | Yes | 回调函数。返回获取查询的值。 |
+| key | string | Yes | Key of the value to obtain. It cannot be empty, and the length cannot exceed [MAX_KEY_LENGTH](arkts-arkdata-distributedkvstore-constants-i.md). |
+| callback | ArkTS-Dyn: [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;boolean \| string \| number \| number \| Uint8Array&gt;  <br>ArkTS-Sta：[AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;boolean \| string \| long \| double \| Uint8Array&gt; | Yes | Callback used to return the value obtained. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error.Possible causes:1.Mandatory parameters are left unspecified; &lt;br&gt;2.Incorrect parameters types; &lt;br&gt;3.Parameter verification failed. |
-| 15100004 | Not found. |
-| 15100005 | Database or result set already closed. |
-| 15100003 | Database corrupted. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error.Possible causes:1.Mandatory parameters are left unspecified; &lt;br&gt;2.Incorrect parameters types; &lt;br&gt;3.Parameter verification failed. |
+| [15100004](../errorcode-distributedKVStore.md#15100004-failed-to-find-data) | Not found. |
+| [15100005](../errorcode-distributedKVStore.md#15100005-kv-store-or-result-set-closed) | Database or result set already closed. |
+| [15100003](../errorcode-distributedKVStore.md#15100003-kv-store-corrupted) | Database corrupted. |
 
 ## get
 
@@ -77,7 +71,7 @@ ArkTS-Sta:
 get(key: string): Promise<boolean | string | long | double | Uint8Array>
 ```
 
-获取本设备指定键的值，使用Promise异步回调。
+Obtains the value of the specified key for this device. This API uses a promise to return the result.
 
 **Since:** 9
 
@@ -93,22 +87,22 @@ get(key: string): Promise<boolean | string | long | double | Uint8Array>
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| key | string | Yes | 要查询数据的Key，不能为空且长度范围为1-[MAX_KEY_LENGTH](arkts-arkdata-distributedkvstore-constants-i.md)。 |
+| key | string | Yes | Key of the value to obtain. It cannot be empty, and the length cannot exceed [MAX_KEY_LENGTH](arkts-arkdata-distributedkvstore-constants-i.md). |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| ArkTS-Dyn: Promise&lt;boolean \| string \| number \| number \| Uint8Array&gt;  <br>ArkTS-Sta：Promise&lt;boolean \| string \| long \| double \| Uint8Array&gt; | Promise对象。返回获取查询的值，值的类型取决于存储时的数据类型。 |
+| ArkTS-Dyn: Promise&lt;boolean \| string \| number \| number \| Uint8Array&gt;  <br>ArkTS-Sta：Promise&lt;boolean \| string \| long \| double \| Uint8Array&gt; | Promise used to return the value obtained. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error.Possible causes:1.Mandatory parameters are left unspecified; &lt;br&gt;2.Incorrect parameters types; &lt;br&gt;3.Parameter verification failed. |
-| 15100004 | Not found. |
-| 15100005 | Database or result set already closed. |
-| 15100003 | Database corrupted. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error.Possible causes:1.Mandatory parameters are left unspecified; &lt;br&gt;2.Incorrect parameters types; &lt;br&gt;3.Parameter verification failed. |
+| [15100004](../errorcode-distributedKVStore.md#15100004-failed-to-find-data) | Not found. |
+| [15100005](../errorcode-distributedKVStore.md#15100005-kv-store-or-result-set-closed) | Database or result set already closed. |
+| [15100003](../errorcode-distributedKVStore.md#15100003-kv-store-corrupted) | Database corrupted. |
 
 ## get
 
@@ -122,16 +116,14 @@ ArkTS-Sta:
 get(deviceId: string, key: string, callback: AsyncCallback<boolean | string | long | double | Uint8Array>): void
 ```
 
-获取与指定设备ID和Key匹配的值，使用callback异步回调。
+Obtains a string value that matches the specified device ID and key. This API uses an asynchronous callback to return the result.
 
-> **说明：**
+> **NOTE：**
 > 
-> 其中deviceId通过调用
+> **deviceId** can be obtained by
 > [deviceManager.getAvailableDeviceListSync](../../apis-distributed-service-kit/arkts-apis/arkts-distributedservice-distributeddevicemanager-devicemanager-i.md/arkts-distributedservice-distributeddevicemanager-devicemanager-i.md#getavailabledevicelistsync)
-> 方法得到。
-> 
-> deviceId具体获取方式请参考
-> [sync接口示例](arkts-arkdata-distributedkvstore-singlekvstore-i.md#sync)。
+> .
+> > For details about how to obtain **deviceId**, see [sync()](arkts-arkdata-distributedkvstore-syncmode-e.md).
 
 **Since:** 9
 
@@ -147,18 +139,18 @@ get(deviceId: string, key: string, callback: AsyncCallback<boolean | string | lo
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| deviceId | string | Yes | 设备的networkId，标识要查询其数据的设备，不能为空。 |
-| key | string | Yes | 要查询数据的键名，不能为空且长度范围为1-[MAX_KEY_LENGTH](arkts-arkdata-distributedkvstore-constants-i.md)。 |
-| callback | ArkTS-Dyn: [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;boolean \| string \| number \| number \| Uint8Array&gt;  <br>ArkTS-Sta：[AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;boolean \| string \| long \| double \| Uint8Array&gt; | Yes | 回调函数。成功时返回匹配给定条件的值（值的类型取决于存储时的 数据类型），失败时返回错误对象。 |
+| deviceId | string | Yes | ID of the target device. |
+| key | string | Yes | Key of the value to obtain. It cannot be empty or exceed [MAX_KEY_LENGTH](arkts-arkdata-distributedkvstore-constants-i.md). |
+| callback | ArkTS-Dyn: [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;boolean \| string \| number \| number \| Uint8Array&gt;  <br>ArkTS-Sta：[AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;boolean \| string \| long \| double \| Uint8Array&gt; | Yes | Callback used to return the value obtained. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error.Possible causes:1.Mandatory parameters are left unspecified; &lt;br&gt;2.Incorrect parameters types; &lt;br&gt;3.Parameter verification failed. |
-| 15100004 | Not found. |
-| 15100005 | Database or result set already closed. |
-| 15100003 | Database corrupted. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error.Possible causes:1.Mandatory parameters are left unspecified; &lt;br&gt;2.Incorrect parameters types; &lt;br&gt;3.Parameter verification failed. |
+| [15100004](../errorcode-distributedKVStore.md#15100004-failed-to-find-data) | Not found. |
+| [15100005](../errorcode-distributedKVStore.md#15100005-kv-store-or-result-set-closed) | Database or result set already closed. |
+| [15100003](../errorcode-distributedKVStore.md#15100003-kv-store-corrupted) | Database corrupted. |
 
 ## get
 
@@ -172,16 +164,14 @@ ArkTS-Sta:
 get(deviceId: string, key: string): Promise<boolean | string | long | double | Uint8Array>
 ```
 
-获取与指定设备ID和Key匹配的值，使用Promise异步回调。
+Obtains a string value that matches the specified device ID and key. This API uses a promise to return the result.
 
-> **说明：**
+> **NOTE：**
 > 
-> 其中deviceId通过调用
+> **deviceId** can be obtained by
 > [deviceManager.getAvailableDeviceListSync](../../apis-distributed-service-kit/arkts-apis/arkts-distributedservice-distributeddevicemanager-devicemanager-i.md/arkts-distributedservice-distributeddevicemanager-devicemanager-i.md#getavailabledevicelistsync)
-> 方法得到。
-> 
-> deviceId具体获取方式请参考
-> [sync接口示例](arkts-arkdata-distributedkvstore-singlekvstore-i.md#sync)。
+> .
+> > For details about how to obtain **deviceId**, see [sync()](arkts-arkdata-distributedkvstore-syncmode-e.md).
 
 **Since:** 9
 
@@ -197,23 +187,23 @@ get(deviceId: string, key: string): Promise<boolean | string | long | double | U
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| deviceId | string | Yes | 设备的networkId，标识要查询其数据的设备，不能为空。 |
-| key | string | Yes | 表示要查询Key值的键，不能为空且长度范围为1-[MAX_KEY_LENGTH](arkts-arkdata-distributedkvstore-constants-i.md)。 |
+| deviceId | string | Yes | ID of the target device. |
+| key | string | Yes | Key of the value to obtain. It cannot be empty or exceed [MAX_KEY_LENGTH](arkts-arkdata-distributedkvstore-constants-i.md). |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| ArkTS-Dyn: Promise&lt;boolean \| string \| number \| number \| Uint8Array&gt;  <br>ArkTS-Sta：Promise&lt;boolean \| string \| long \| double \| Uint8Array&gt; | Promise对象。返回匹配给定条件的值，值的类型取决于存储时的数据类型。 |
+| ArkTS-Dyn: Promise&lt;boolean \| string \| number \| number \| Uint8Array&gt;  <br>ArkTS-Sta：Promise&lt;boolean \| string \| long \| double \| Uint8Array&gt; | Promise used to return the string value that matches the given condition. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error.Possible causes:1.Mandatory parameters are left unspecified; &lt;br&gt;2.Incorrect parameters types; &lt;br&gt;3.Parameter verification failed. |
-| 15100004 | Not found. |
-| 15100005 | Database or result set already closed. |
-| 15100003 | Database corrupted. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error.Possible causes:1.Mandatory parameters are left unspecified; &lt;br&gt;2.Incorrect parameters types; &lt;br&gt;3.Parameter verification failed. |
+| [15100004](../errorcode-distributedKVStore.md#15100004-failed-to-find-data) | Not found. |
+| [15100005](../errorcode-distributedKVStore.md#15100005-kv-store-or-result-set-closed) | Database or result set already closed. |
+| [15100003](../errorcode-distributedKVStore.md#15100003-kv-store-corrupted) | Database corrupted. |
 
 ## getEntries
 
@@ -221,7 +211,7 @@ get(deviceId: string, key: string): Promise<boolean | string | long | double | U
 getEntries(keyPrefix: string, callback: AsyncCallback<Entry[]>): void
 ```
 
-获取匹配本设备指定键前缀的所有键值对，使用callback异步回调。
+Obtains all KV pairs that match the specified key prefix for this device. This API uses an asynchronous callback to return the result.
 
 **Since:** 9
 
@@ -237,16 +227,16 @@ getEntries(keyPrefix: string, callback: AsyncCallback<Entry[]>): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| keyPrefix | string | Yes | 表示要匹配的键前缀，长度范围为1-[MAX_KEY_LENGTH](arkts-arkdata-distributedkvstore-constants-i.md)。不能包含'^'，包含'^' 将导致谓词失效，查询结果会返回数据库中的所有数据。 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Entry[]&gt; | Yes | 回调函数。返回匹配指定前缀的键值对列表。 |
+| keyPrefix | string | Yes | Key prefix to match. It cannot contain '^'; otherwise, the predicate becomes invalid and all data in the RDB store will be returned. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Entry[]&gt; | Yes | Callback used to return the KV pairs that match the specified prefix. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error.Possible causes:1.Mandatory parameters are left unspecified; &lt;br&gt;2.Incorrect parameters types. |
-| 15100005 | Database or result set already closed. |
-| 15100003 | Database corrupted. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error.Possible causes:1.Mandatory parameters are left unspecified; &lt;br&gt;2.Incorrect parameters types. |
+| [15100005](../errorcode-distributedKVStore.md#15100005-kv-store-or-result-set-closed) | Database or result set already closed. |
+| [15100003](../errorcode-distributedKVStore.md#15100003-kv-store-corrupted) | Database corrupted. |
 
 ## Examples
 
@@ -268,15 +258,15 @@ try {
   }
   console.info(`entries: ${entries}`);
   kvStore.putBatch(entries, async (err: BusinessError) => {
-    if (err) {
-      console.error(`Failed to put Batch. Code: ${err.code}, message: ${err.message}`);
+    if (err != undefined) {
+      console.error(`Failed to put Batch.code is ${err.code},message is ${err.message}`);
       return;
     }
     console.info('Succeeded in putting Batch');
     if (kvStore != null) {
       kvStore.getEntries('batch_test_string_key', (err: BusinessError, entries: distributedKVStore.Entry[]) => {
-        if (err) {
-          console.error(`Failed to get Entries. Code: ${err.code}, message: ${err.message}`);
+        if (err != undefined) {
+          console.error(`Failed to get Entries.code is ${err.code},message is ${err.message}`);
           return;
         }
         console.info('Succeeded in getting Entries');
@@ -285,9 +275,9 @@ try {
       });
     }
   });
-} catch (err) {
-  let error = err as BusinessError;
-  console.error(`An unexpected error occurred. Code: ${error.code}, message: ${error.message}`);
+} catch (e) {
+  let error = e as BusinessError;
+  console.error(`An unexpected error occurred.code is ${error.code},message is ${error.message} `);
 }
 ```
 
@@ -297,7 +287,7 @@ try {
 getEntries(keyPrefix: string): Promise<Entry[]>
 ```
 
-获取匹配本设备指定键前缀的所有键值对，使用Promise异步回调。
+Obtains all KV pairs that match the specified key prefix for this device. This API uses a promise to return the result.
 
 **Since:** 9
 
@@ -313,21 +303,21 @@ getEntries(keyPrefix: string): Promise<Entry[]>
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| keyPrefix | string | Yes | 表示要匹配的键前缀，长度范围为1-[MAX_KEY_LENGTH](arkts-arkdata-distributedkvstore-constants-i.md)。不能包含'^'，包含'^' 将导致谓词失效，查询结果会返回数据库中的所有数据。 |
+| keyPrefix | string | Yes | Key prefix to match. It cannot contain '^'; otherwise, the predicate becomes invalid and all data in the RDB store will be returned. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;Entry[]&gt; | Promise对象。返回匹配指定前缀的键值对列表。 |
+| Promise&lt;Entry[]&gt; | Promise used to return the KV pairs that match the specified prefix. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error.Possible causes:1.Mandatory parameters are left unspecified; &lt;br&gt;2.Incorrect parameters types. |
-| 15100005 | Database or result set already closed. |
-| 15100003 | Database corrupted. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error.Possible causes:1.Mandatory parameters are left unspecified; &lt;br&gt;2.Incorrect parameters types. |
+| [15100005](../errorcode-distributedKVStore.md#15100005-kv-store-or-result-set-closed) | Database or result set already closed. |
+| [15100003](../errorcode-distributedKVStore.md#15100003-kv-store-corrupted) | Database corrupted. |
 
 ## Examples
 
@@ -355,15 +345,15 @@ try {
         console.info('Succeeded in getting Entries');
         console.info(`PutBatch ${entries}`);
       }).catch((err: BusinessError) => {
-        console.error(`Failed to get Entries. Code: ${err.code}, message: ${err.message}`);
+        console.error(`Failed to get Entries.code is ${err.code},message is ${err.message}`);
       });
     }
   }).catch((err: BusinessError) => {
-    console.error(`Failed to put Batch. Code: ${err.code}, message: ${err.message}`);
+    console.error(`Failed to put Batch.code is ${err.code},message is ${err.message}`);
   });
-} catch (err) {
-  let error = err as BusinessError;
-  console.error(`An unexpected error occurred. Code: ${error.code}, message: ${error.message}`);
+} catch (e) {
+  let error = e as BusinessError;
+  console.error(`An unexpected error occurred.code is ${error.code},message is ${error.message} `);
 }
 ```
 
@@ -373,16 +363,14 @@ try {
 getEntries(deviceId: string, keyPrefix: string, callback: AsyncCallback<Entry[]>): void
 ```
 
-获取与指定设备ID和Key前缀匹配的所有键值对，使用callback异步回调。
+Obtains all KV pairs that match the specified device ID and key prefix. This API uses an asynchronous callback to  return the result.
 
-> **说明：**
+> **NOTE：**
 > 
-> 其中deviceId通过调用
+> **deviceId** can be obtained by
 > [deviceManager.getAvailableDeviceListSync](../../apis-distributed-service-kit/arkts-apis/arkts-distributedservice-distributeddevicemanager-devicemanager-i.md/arkts-distributedservice-distributeddevicemanager-devicemanager-i.md#getavailabledevicelistsync)
-> 方法得到。
-> 
-> deviceId具体获取方式请参考
-> [sync接口示例](arkts-arkdata-distributedkvstore-singlekvstore-i.md#sync)。
+> .
+> > For details about how to obtain **deviceId**, see [sync()](arkts-arkdata-distributedkvstore-syncmode-e.md).
 
 **Since:** 9
 
@@ -398,17 +386,17 @@ getEntries(deviceId: string, keyPrefix: string, callback: AsyncCallback<Entry[]>
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| deviceId | string | Yes | 设备的networkId，标识要查询其数据的设备，不能为空。 |
-| keyPrefix | string | Yes | 表示要匹配的键前缀，长度范围为1-[MAX_KEY_LENGTH](arkts-arkdata-distributedkvstore-constants-i.md)。不能包含'^'，包含'^' 将导致谓词失效，查询结果会返回数据库中的所有数据。 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Entry[]&gt; | Yes | 回调函数，返回满足给定条件的所有键值对的列表。 |
+| deviceId | string | Yes | ID of the target device. |
+| keyPrefix | string | Yes | Key prefix to match. It cannot contain '^'; otherwise, the predicate becomes invalid and all data in the RDB store will be returned. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Entry[]&gt; | Yes | Callback used to return the KV pairs obtained. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error.Possible causes:1.Mandatory parameters are left unspecified; &lt;br&gt;2.Incorrect parameters types. |
-| 15100005 | Database or result set already closed. |
-| 15100003 | Database corrupted. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error.Possible causes:1.Mandatory parameters are left unspecified; &lt;br&gt;2.Incorrect parameters types. |
+| [15100005](../errorcode-distributedKVStore.md#15100005-kv-store-or-result-set-closed) | Database or result set already closed. |
+| [15100003](../errorcode-distributedKVStore.md#15100003-kv-store-corrupted) | Database corrupted. |
 
 ## Examples
 
@@ -430,15 +418,15 @@ try {
   }
   console.info(`entries : ${entries}`);
   kvStore.putBatch(entries, async (err: BusinessError) => {
-    if (err) {
-      console.error(`Failed to put batch. Code: ${err.code}, message: ${err.message}`);
+    if (err != undefined) {
+      console.error(`Failed to put batch.code is ${err.code},message is ${err.message}`);
       return;
     }
     console.info('Succeeded in putting batch');
     if (kvStore != null) {
       kvStore.getEntries('localDeviceId', 'batch_test_string_key', (err: BusinessError, entries: distributedKVStore.Entry[]) => {
-        if (err) {
-          console.error(`Failed to get entries. Code: ${err.code}, message: ${err.message}`);
+        if (err != undefined) {
+          console.error(`Failed to get entries.code is ${err.code},message is ${err.message}`);
           return;
         }
         console.info('Succeeded in getting entries');
@@ -447,9 +435,9 @@ try {
       });
     }
   });
-} catch (err) {
-  let error = err as BusinessError;
-  console.error(`Failed to put batch. Code: ${error.code}, message: ${error.message}`);
+} catch (e) {
+  let error = e as BusinessError;
+  console.error(`Failed to put batch.code is ${error.code},message is ${error.message}`);
 }
 ```
 
@@ -459,16 +447,14 @@ try {
 getEntries(deviceId: string, keyPrefix: string): Promise<Entry[]>
 ```
 
-获取与指定设备ID和Key前缀匹配的所有键值对，使用Promise异步回调。
+Obtains all KV pairs that match the specified device ID and key prefix. This API uses a promise to return the result.
 
-> **说明：**
+> **NOTE：**
 > 
-> 其中deviceId通过调用
+> **deviceId** can be obtained by
 > [deviceManager.getAvailableDeviceListSync](../../apis-distributed-service-kit/arkts-apis/arkts-distributedservice-distributeddevicemanager-devicemanager-i.md/arkts-distributedservice-distributeddevicemanager-devicemanager-i.md#getavailabledevicelistsync)
-> 方法得到。
-> 
-> deviceId具体获取方式请参考
-> [sync接口示例](arkts-arkdata-distributedkvstore-singlekvstore-i.md#sync)。
+> .
+> > For details about how to obtain **deviceId**, see [sync()](arkts-arkdata-distributedkvstore-syncmode-e.md).
 
 **Since:** 9
 
@@ -484,22 +470,22 @@ getEntries(deviceId: string, keyPrefix: string): Promise<Entry[]>
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| deviceId | string | Yes | 设备的networkId，标识要查询其数据的设备，不能为空。 |
-| keyPrefix | string | Yes | 表示要匹配的键前缀，长度范围为1-[MAX_KEY_LENGTH](arkts-arkdata-distributedkvstore-constants-i.md)。不能包含'^'，包含'^' 将导致谓词失效，查询结果会返回数据库中的所有数据。 |
+| deviceId | string | Yes | ID of the target device. |
+| keyPrefix | string | Yes | Key prefix to match. It cannot contain '^'; otherwise, the predicate becomes invalid and all data in the RDB store will be returned. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;Entry[]&gt; | Promise对象。返回匹配给定条件的所有键值对的列表。 |
+| Promise&lt;Entry[]&gt; | Promise used to return all the KV pairs that match the given condition. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error.Possible causes:1.Mandatory parameters are left unspecified; &lt;br&gt;2.Incorrect parameters types. |
-| 15100005 | Database or result set already closed. |
-| 15100003 | Database corrupted. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error.Possible causes:1.Mandatory parameters are left unspecified; &lt;br&gt;2.Incorrect parameters types. |
+| [15100005](../errorcode-distributedKVStore.md#15100005-kv-store-or-result-set-closed) | Database or result set already closed. |
+| [15100003](../errorcode-distributedKVStore.md#15100003-kv-store-corrupted) | Database corrupted. |
 
 ## Examples
 
@@ -530,15 +516,15 @@ try {
         console.info(`entries[0].value: ${entries[0].value}`);
         console.info(`entries[0].value.value: ${entries[0].value.value}`);
       }).catch((err: BusinessError) => {
-        console.error(`Failed to get entries. Code: ${err.code}, message: ${err.message}`);
+        console.error(`Failed to get entries.code is ${err.code},message is ${err.message}`);
       });
     }
   }).catch((err: BusinessError) => {
-    console.error(`Failed to put batch. Code: ${err.code}, message: ${err.message}`);
+    console.error(`Failed to put batch.code is ${err.code},message is ${err.message}`);
   });
-} catch (err) {
-  let error = err as BusinessError;
-  console.error(`Failed to put batch. Code: ${error.code}, message: ${error.message}`);
+} catch (e) {
+  let error = e as BusinessError;
+  console.error(`Failed to put batch.code is ${error.code},message is ${error.message}`);
 }
 ```
 
@@ -548,7 +534,7 @@ try {
 getEntries(query: Query, callback: AsyncCallback<Entry[]>): void
 ```
 
-获取本设备与指定Query对象匹配的键值对列表，使用callback异步回调。
+Obtains all KV pairs that match the specified **Query** object for this device. This API uses an asynchronous callback to return the result.
 
 **Since:** 9
 
@@ -564,16 +550,16 @@ getEntries(query: Query, callback: AsyncCallback<Entry[]>): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| query | [Query](arkts-arkdata-distributeddata-query-c.md) | Yes | 表示要查询的对象。 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Entry[]&gt; | Yes | 回调函数。返回本设备与指定Query对象匹配的键值对列表。 |
+| query | [Query](arkts-arkdata-distributeddata-query-c.md) | Yes | Key prefix to match. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Entry[]&gt; | Yes | Callback used to return the KV pairs that match the specified **Query** object on the local device. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error.Possible causes:1.Mandatory parameters are left unspecified; &lt;br&gt;2.Incorrect parameters types. |
-| 15100005 | Database or result set already closed. |
-| 15100003 | Database corrupted. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error.Possible causes:1.Mandatory parameters are left unspecified; &lt;br&gt;2.Incorrect parameters types. |
+| [15100005](../errorcode-distributedKVStore.md#15100005-kv-store-or-result-set-closed) | Database or result set already closed. |
+| [15100003](../errorcode-distributedKVStore.md#15100003-kv-store-corrupted) | Database corrupted. |
 
 ## Examples
 
@@ -594,19 +580,15 @@ try {
     }
     entries.push(entry);
   }
-  console.info(`entries: ${entries}`);
+  console.info(`entries: {entries}`);
   kvStore.putBatch(entries, (err: BusinessError) => {
-    if (err) {
-      console.error(`Failed to put Batch. Code: ${err.code}, message: ${err.message}`);
-      return;
-    }
     console.info('Succeeded in putting Batch');
     const query = new distributedKVStore.Query();
-    query.prefixKey('batch_test');
+    query.prefixKey("batch_test");
     if (kvStore != null) {
       kvStore.getEntries(query, (err: BusinessError, entries: distributedKVStore.Entry[]) => {
-        if (err) {
-          console.error(`Failed to get Entries. Code: ${err.code}, message: ${err.message}`);
+        if (err != undefined) {
+          console.error(`Failed to get Entries.code is ${err.code},message is ${err.message}`);
           return;
         }
         console.info('Succeeded in getting Entries');
@@ -615,9 +597,9 @@ try {
       });
     }
   });
-} catch (err) {
-  let error = err as BusinessError;
-  console.error(`Failed to get Entries. Code: ${error.code}, message: ${error.message}`);
+} catch (e) {
+  let error = e as BusinessError;
+  console.error(`Failed to get Entries.code is ${error.code},message is ${error.message}`);
 }
 ```
 
@@ -627,7 +609,7 @@ try {
 getEntries(query: Query): Promise<Entry[]>
 ```
 
-获取本设备与指定Query对象匹配的键值对列表，使用Promise异步回调。
+Obtains all KV pairs that match the specified **Query** object for this device. This API uses a promise to return  the result.
 
 **Since:** 9
 
@@ -643,21 +625,21 @@ getEntries(query: Query): Promise<Entry[]>
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| query | [Query](arkts-arkdata-distributeddata-query-c.md) | Yes | 表示查询对象。 |
+| query | [Query](arkts-arkdata-distributeddata-query-c.md) | Yes | Query** object to match. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;Entry[]&gt; | Promise对象。返回本设备与指定Query对象匹配的键值对列表。 |
+| Promise&lt;Entry[]&gt; | Promise used to return the KV pairs that match the specified **Query** object on the local device. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error.Possible causes:1.Mandatory parameters are left unspecified; &lt;br&gt;2.Incorrect parameters types. |
-| 15100005 | Database or result set already closed. |
-| 15100003 | Database corrupted. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error.Possible causes:1.Mandatory parameters are left unspecified; &lt;br&gt;2.Incorrect parameters types. |
+| [15100005](../errorcode-distributedKVStore.md#15100005-kv-store-or-result-set-closed) | Database or result set already closed. |
+| [15100003](../errorcode-distributedKVStore.md#15100003-kv-store-corrupted) | Database corrupted. |
 
 ## Examples
 
@@ -678,25 +660,25 @@ try {
     }
     entries.push(entry);
   }
-  console.info(`entries: ${entries}`);
+  console.info(`entries: {entries}`);
   kvStore.putBatch(entries).then(async () => {
     console.info('Succeeded in putting Batch');
     const query = new distributedKVStore.Query();
-    query.prefixKey('batch_test');
+    query.prefixKey("batch_test");
     if (kvStore != null) {
       kvStore.getEntries(query).then((entries: distributedKVStore.Entry[]) => {
         console.info('Succeeded in getting Entries');
       }).catch((err: BusinessError) => {
-        console.error(`Failed to get Entries. Code: ${err.code}, message: ${err.message}`);
+        console.error(`Failed to get Entries.code is ${err.code},message is ${err.message}`);
       });
     }
   }).catch((err: BusinessError) => {
-    console.error(`Failed to get Entries. Code: ${err.code}, message: ${err.message}`);
+    console.error(`Failed to get Entries.code is ${err.code},message is ${err.message}`)
   });
   console.info('Succeeded in getting Entries');
-} catch (err) {
-  let error = err as BusinessError;
-  console.error(`Failed to get Entries. Code: ${error.code}, message: ${error.message}`);
+} catch (e) {
+  let error = e as BusinessError;
+  console.error(`Failed to get Entries.code is ${error.code},message is ${error.message}`);
 }
 ```
 
@@ -706,16 +688,14 @@ try {
 getEntries(deviceId: string, query: Query, callback: AsyncCallback<Entry[]>): void
 ```
 
-获取与指定设备ID和Query对象匹配的键值对列表，使用callback异步回调。
+Obtains the KV pairs that match the specified device ID and **Query** object. This API uses an asynchronous callback to return the result.
 
-> **说明：**
+> **NOTE：**
 > 
-> 其中deviceId通过调用
+> **deviceId** can be obtained by
 > [deviceManager.getAvailableDeviceListSync](../../apis-distributed-service-kit/arkts-apis/arkts-distributedservice-distributeddevicemanager-devicemanager-i.md/arkts-distributedservice-distributeddevicemanager-devicemanager-i.md#getavailabledevicelistsync)
-> 方法得到。
-> 
-> deviceId具体获取方式请参考
-> [sync接口示例](arkts-arkdata-distributedkvstore-singlekvstore-i.md#sync)。
+> .
+> > For details about how to obtain **deviceId**, see [sync()](arkts-arkdata-distributedkvstore-syncmode-e.md).
 
 **Since:** 9
 
@@ -731,17 +711,17 @@ getEntries(deviceId: string, query: Query, callback: AsyncCallback<Entry[]>): vo
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| deviceId | string | Yes | 设备的networkId，标识要查询其数据的设备，不能为空。 |
-| query | [Query](arkts-arkdata-distributeddata-query-c.md) | Yes | 表示查询对象。 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Entry[]&gt; | Yes | 回调函数。返回与指定设备ID和Query对象匹配的键值对列表。 |
+| deviceId | string | Yes | ID of the target device. |
+| query | [Query](arkts-arkdata-distributeddata-query-c.md) | Yes | Query** object to match. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Entry[]&gt; | Yes | Callback used to return the KV pairs that match the specified device ID and **Query** object. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error.Possible causes:1.Mandatory parameters are left unspecified; &lt;br&gt;2.Incorrect parameters types. |
-| 15100005 | Database or result set already closed. |
-| 15100003 | Database corrupted. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error.Possible causes:1.Mandatory parameters are left unspecified; &lt;br&gt;2.Incorrect parameters types. |
+| [15100005](../errorcode-distributedKVStore.md#15100005-kv-store-or-result-set-closed) | Database or result set already closed. |
+| [15100003](../errorcode-distributedKVStore.md#15100003-kv-store-corrupted) | Database corrupted. |
 
 ## Examples
 
@@ -764,18 +744,18 @@ try {
   }
   console.info(`entries: ${entries}`);
   kvStore.putBatch(entries, async (err: BusinessError) => {
-    if (err) {
-      console.error(`Failed to put batch. Code: ${err.code}, message: ${err.message}`);
+    if (err != undefined) {
+      console.error(`Failed to put batch.code is ${err.code},message is ${err.message}`);
       return;
     }
     console.info('Succeeded in putting batch');
     let query = new distributedKVStore.Query();
     query.deviceId('localDeviceId');
-    query.prefixKey('batch_test');
+    query.prefixKey("batch_test");
     if (kvStore != null) {
       kvStore.getEntries('localDeviceId', query, (err: BusinessError, entries: distributedKVStore.Entry[]) => {
-        if (err) {
-          console.error(`Failed to get entries. Code: ${err.code}, message: ${err.message}`);
+        if (err != undefined) {
+          console.error(`Failed to get entries.code is ${err.code},message is ${err.message}`);
           return;
         }
         console.info('Succeeded in getting entries');
@@ -785,9 +765,9 @@ try {
     }
   });
   console.info('Succeeded in getting entries');
-} catch (err) {
-  let error = err as BusinessError;
-  console.error(`Failed to get entries. Code: ${error.code}, message: ${error.message}`);
+} catch (e) {
+  let error = e as BusinessError;
+  console.error(`Failed to get entries.code is ${error.code},message is ${error.message}`);
 }
 ```
 
@@ -797,16 +777,14 @@ try {
 getEntries(deviceId: string, query: Query): Promise<Entry[]>
 ```
 
-获取与指定设备ID和Query对象匹配的键值对列表，使用Promise异步回调。
+Obtains the KV pairs that match the specified device ID and **Query** object. This API uses a promise to return the result.
 
-> **说明：**
+> **NOTE：**
 > 
-> 其中deviceId通过调用
+> **deviceId** can be obtained by
 > [deviceManager.getAvailableDeviceListSync](../../apis-distributed-service-kit/arkts-apis/arkts-distributedservice-distributeddevicemanager-devicemanager-i.md/arkts-distributedservice-distributeddevicemanager-devicemanager-i.md#getavailabledevicelistsync)
-> 方法得到。
-> 
-> deviceId具体获取方式请参考
-> [sync接口示例](arkts-arkdata-distributedkvstore-singlekvstore-i.md#sync)。
+> .
+> > For details about how to obtain **deviceId**, see [sync()](arkts-arkdata-distributedkvstore-syncmode-e.md).
 
 **Since:** 9
 
@@ -822,22 +800,22 @@ getEntries(deviceId: string, query: Query): Promise<Entry[]>
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| deviceId | string | Yes | 设备的networkId，标识要查询其数据的设备，不能为空。 |
-| query | [Query](arkts-arkdata-distributeddata-query-c.md) | Yes | 表示查询对象。 |
+| deviceId | string | Yes | ID of the target device. |
+| query | [Query](arkts-arkdata-distributeddata-query-c.md) | Yes | Query** object to match. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;Entry[]&gt; | Promise对象。返回与指定设备ID和Query对象匹配的键值对列表。 |
+| Promise&lt;Entry[]&gt; | Promise used to return the KV pairs that match the specified device ID and **Query** object. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error.Possible causes:1.Mandatory parameters are left unspecified; &lt;br&gt;2.Incorrect parameters types. |
-| 15100005 | Database or result set already closed. |
-| 15100003 | Database corrupted. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error.Possible causes:1.Mandatory parameters are left unspecified; &lt;br&gt;2.Incorrect parameters types. |
+| [15100005](../errorcode-distributedKVStore.md#15100005-kv-store-or-result-set-closed) | Database or result set already closed. |
+| [15100003](../errorcode-distributedKVStore.md#15100003-kv-store-corrupted) | Database corrupted. |
 
 ## Examples
 
@@ -863,21 +841,21 @@ try {
     console.info('Succeeded in putting batch');
     let query = new distributedKVStore.Query();
     query.deviceId('localDeviceId');
-    query.prefixKey('batch_test');
+    query.prefixKey("batch_test");
     if (kvStore != null) {
       kvStore.getEntries('localDeviceId', query).then((entries: distributedKVStore.Entry[]) => {
         console.info('Succeeded in getting entries');
       }).catch((err: BusinessError) => {
-        console.error(`Failed to get entries. Code: ${err.code}, message: ${err.message}`);
+        console.error(`Failed to get entries.code is ${err.code},message is ${err.message}`);
       });
     }
   }).catch((err: BusinessError) => {
-    console.error(`Failed to put batch. Code: ${err.code}, message: ${err.message}`);
+    console.error(`Failed to put batch.code is ${err.code},message is ${err.message}`);
   });
   console.info('Succeeded in getting entries');
-} catch (err) {
-  let error = err as BusinessError;
-  console.error(`Failed to get entries. Code: ${error.code}, message: ${error.message}`);
+} catch (e) {
+  let error = e as BusinessError;
+  console.error(`Failed to get entries.code is ${error.code},message is ${error.message}`);
 }
 ```
 
@@ -887,8 +865,7 @@ try {
 getResultSet(keyPrefix: string, callback: AsyncCallback<KVStoreResultSet>): void
 ```
 
-从DeviceKVStore数据库中获取本设备具有指定前缀的结果集，使用callback异步回调。获取结果集后，在使用完毕时需调用  
-[closeResultSet](arkts-arkdata-distributedkvstore-singlekvstore-i.md#closeresultset)关闭结果集释放资源。
+Obtains a result set with the specified prefix for this device. This API uses an asynchronous callback to return the result.
 
 **Since:** 9
 
@@ -904,17 +881,17 @@ getResultSet(keyPrefix: string, callback: AsyncCallback<KVStoreResultSet>): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| keyPrefix | string | Yes | 表示要匹配的键前缀，长度范围为1-[MAX_KEY_LENGTH](arkts-arkdata-distributedkvstore-constants-i.md)。不能包含'^'，包含'^' 将导致谓词失效，查询结果会返回数据库中的所有数据。 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;KVStoreResultSet&gt; | Yes | 回调函数。返回具有指定前缀的结果集。 |
+| keyPrefix | string | Yes | Key prefix to match. It cannot contain '^'; otherwise, the predicate becomes invalid and all data in the RDB store will be returned. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;KVStoreResultSet&gt; | Yes | Callback used to return the result set with the specified prefix. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error.Possible causes:1.Mandatory parameters are left unspecified; &lt;br&gt;2.Incorrect parameters types. |
-| 15100005 | Database or result set already closed. |
-| 15100003 | Database corrupted. |
-| 15100001 | Over max limits.<br>**Applicable version:** 10 and later |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error.Possible causes:1.Mandatory parameters are left unspecified; &lt;br&gt;2.Incorrect parameters types. |
+| [15100005](../errorcode-distributedKVStore.md#15100005-kv-store-or-result-set-closed) | Database or result set already closed. |
+| [15100003](../errorcode-distributedKVStore.md#15100003-kv-store-corrupted) | Database corrupted. |
+| [15100001](../errorcode-distributedKVStore.md#15100001-subscription-count-or-result-set-count-reaches-the-limit) | Over max limits.<br>**Applicable version:** 10 and later |
 
 ## Examples
 
@@ -936,23 +913,23 @@ try {
     entries.push(entry);
   }
   kvStore.putBatch(entries, async (err: BusinessError) => {
-    if (err) {
-      console.error(`Failed to put batch. Code: ${err.code}, message: ${err.message}`);
+    if (err != undefined) {
+      console.error(`Failed to put batch.code is ${err.code},message is ${err.message}`);
       return;
     }
     console.info('Succeeded in putting batch');
     if (kvStore != null) {
       kvStore.getResultSet('batch_test_string_key', async (err: BusinessError, result: distributedKVStore.KVStoreResultSet) => {
-        if (err) {
-          console.error(`Failed to get resultset. Code: ${err.code}, message: ${err.message}`);
+        if (err != undefined) {
+          console.error(`Failed to get resultset.code is ${err.code},message is ${err.message}`);
           return;
         }
         console.info('Succeeded in getting result set');
         resultSet = result;
         if (kvStore != null) {
           kvStore.closeResultSet(resultSet, (err: BusinessError) => {
-            if (err) {
-              console.error(`Failed to close resultset. Code: ${err.code}, message: ${err.message}`);
+            if (err != undefined) {
+              console.error(`Failed to close resultset.code is ${err.code},message is ${err.message}`);
               return;
             }
             console.info('Succeeded in closing result set');
@@ -961,9 +938,9 @@ try {
       });
     }
   });
-} catch (err) {
-  let error = err as BusinessError;
-  console.error(`An unexpected error occurred. Code: ${error.code}, message: ${error.message}`);
+} catch (e) {
+  let error = e as BusinessError;
+  console.error(`An unexpected error occurred.code is ${error.code},message is ${error.message}`);
 }
 ```
 
@@ -973,8 +950,7 @@ try {
 getResultSet(keyPrefix: string): Promise<KVStoreResultSet>
 ```
 
-从DeviceKVStore数据库中获取本设备具有指定前缀的结果集，使用Promise异步回调。获取结果集后，在使用完毕时需调用  
-[closeResultSet](arkts-arkdata-distributedkvstore-singlekvstore-i.md#closeresultset)关闭结果集释放资源。
+Obtains a result set with the specified prefix for this device. This API uses a promise to return the result.
 
 **Since:** 9
 
@@ -990,22 +966,22 @@ getResultSet(keyPrefix: string): Promise<KVStoreResultSet>
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| keyPrefix | string | Yes | 表示要匹配的键前缀，长度范围为1-[MAX_KEY_LENGTH](arkts-arkdata-distributedkvstore-constants-i.md)。不能包含'^'，包含'^' 将导致谓词失效，查询结果会返回数据库中的所有数据。 |
+| keyPrefix | string | Yes | Key prefix to match. It cannot contain '^'; otherwise, the predicate becomes invalid and all data in the RDB store will be returned. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;KVStoreResultSet&gt; | Promise对象。返回具有指定前缀的结果集。 |
+| Promise&lt;KVStoreResultSet&gt; | Promise used to return the result set with the specified prefix. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error.Possible causes:1.Mandatory parameters are left unspecified; &lt;br&gt;2.Incorrect parameters types. |
-| 15100005 | Database or result set already closed. |
-| 15100003 | Database corrupted. |
-| 15100001 | Over max limits.<br>**Applicable version:** 10 and later |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error.Possible causes:1.Mandatory parameters are left unspecified; &lt;br&gt;2.Incorrect parameters types. |
+| [15100005](../errorcode-distributedKVStore.md#15100005-kv-store-or-result-set-closed) | Database or result set already closed. |
+| [15100003](../errorcode-distributedKVStore.md#15100003-kv-store-corrupted) | Database corrupted. |
+| [15100001](../errorcode-distributedKVStore.md#15100001-subscription-count-or-result-set-count-reaches-the-limit) | Over max limits.<br>**Applicable version:** 10 and later |
 
 ## Examples
 
@@ -1028,25 +1004,25 @@ try {
   }
   kvStore.putBatch(entries).then(async () => {
     console.info('Succeeded in putting batch');
-    kvStore.getResultSet('batch_test_string_key').then((result: distributedKVStore.KVStoreResultSet) => {
-      console.info('Succeeded in getting result set');
-      resultSet = result;
-      if (kvStore != null) {
-        kvStore.closeResultSet(resultSet).then(() => {
-          console.info('Succeeded in closing result set');
-        }).catch((err: BusinessError) => {
-          console.error(`Failed to close resultset. Code: ${err.code}, message: ${err.message}`);
-        });
-      }
-    }).catch((err: BusinessError) => {
-      console.error(`Failed to get resultset. Code: ${err.code}, message: ${err.message}`);
-    });
   }).catch((err: BusinessError) => {
-    console.error(`Failed to put batch. Code: ${err.code}, message: ${err.message}`);
+    console.error(`Failed to put batch.code is ${err.code},message is ${err.message}`);
   });
-} catch (err) {
-  let error = err as BusinessError;
-  console.error(`An unexpected error occurred. Code: ${error.code}, message: ${error.message}`);
+  kvStore.getResultSet('batch_test_string_key').then((result: distributedKVStore.KVStoreResultSet) => {
+    console.info('Succeeded in getting result set');
+    resultSet = result;
+    if (kvStore != null) {
+      kvStore.closeResultSet(resultSet).then(() => {
+        console.info('Succeeded in closing result set');
+      }).catch((err: BusinessError) => {
+        console.error(`Failed to close resultset.code is ${err.code},message is ${err.message}`);
+      });
+    }
+  }).catch((err: BusinessError) => {
+    console.error(`Failed to get resultset.code is ${err.code},message is ${err.message}`);
+  });
+} catch (e) {
+  let error = e as BusinessError;
+  console.error(`An unexpected error occurred.code is ${error.code},message is ${error.message}`);
 }
 ```
 
@@ -1056,16 +1032,14 @@ try {
 getResultSet(deviceId: string, keyPrefix: string, callback: AsyncCallback<KVStoreResultSet>): void
 ```
 
-获取与指定设备ID和Key前缀匹配的KVStoreResultSet对象，使用callback异步回调。
+Obtains a **KVStoreResultSet** object that matches the specified device ID and key prefix. This API uses an asynchronous callback to return the result.
 
-> **说明：**
+> **NOTE：**
 > 
-> 其中deviceId通过调用
+> **deviceId** can be obtained by
 > [deviceManager.getAvailableDeviceListSync](../../apis-distributed-service-kit/arkts-apis/arkts-distributedservice-distributeddevicemanager-devicemanager-i.md/arkts-distributedservice-distributeddevicemanager-devicemanager-i.md#getavailabledevicelistsync)
-> 方法得到。
-> 
-> deviceId具体获取方式请参考
-> [sync接口示例](arkts-arkdata-distributedkvstore-singlekvstore-i.md#sync)。
+> .
+> > For details about how to obtain **deviceId**, see [sync()](arkts-arkdata-distributedkvstore-syncmode-e.md).
 
 **Since:** 9
 
@@ -1081,18 +1055,18 @@ getResultSet(deviceId: string, keyPrefix: string, callback: AsyncCallback<KVStor
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| deviceId | string | Yes | 设备的networkId，标识要查询其数据的设备，不能为空。 |
-| keyPrefix | string | Yes | 表示要匹配的键前缀，长度范围为1-[MAX_KEY_LENGTH](arkts-arkdata-distributedkvstore-constants-i.md)。不能包含'^'，包含'^' 将导致谓词失效，查询结果会返回数据库中的所有数据。 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;KVStoreResultSet&gt; | Yes | 回调函数。返回与指定设备ID和Key前缀匹配的KVStoreResultSet对象。 |
+| deviceId | string | Yes | ID of the target device. |
+| keyPrefix | string | Yes | Key prefix to match. It cannot contain '^'; otherwise, the predicate becomes invalid and all data in the RDB store will be returned. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;KVStoreResultSet&gt; | Yes | Callback used to return the **KVStoreResultSet** object obtained. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error.Possible causes:1.Mandatory parameters are left unspecified; &lt;br&gt;2.Incorrect parameters types. |
-| 15100005 | Database or result set already closed. |
-| 15100003 | Database corrupted. |
-| 15100001 | Over max limits.<br>**Applicable version:** 10 and later |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error.Possible causes:1.Mandatory parameters are left unspecified; &lt;br&gt;2.Incorrect parameters types. |
+| [15100005](../errorcode-distributedKVStore.md#15100005-kv-store-or-result-set-closed) | Database or result set already closed. |
+| [15100003](../errorcode-distributedKVStore.md#15100003-kv-store-corrupted) | Database corrupted. |
+| [15100001](../errorcode-distributedKVStore.md#15100001-subscription-count-or-result-set-count-reaches-the-limit) | Over max limits.<br>**Applicable version:** 10 and later |
 
 ## Examples
 
@@ -1102,25 +1076,25 @@ import { BusinessError } from '@kit.BasicServicesKit';
 try {
   let resultSet: distributedKVStore.KVStoreResultSet;
   kvStore.getResultSet('localDeviceId', 'batch_test_string_key', async (err: BusinessError, result: distributedKVStore.KVStoreResultSet) => {
-    if (err) {
-      console.error(`Failed to get resultSet. Code: ${err.code}, message: ${err.message}`);
+    if (err != undefined) {
+      console.error(`Failed to get resultSet.code is ${err.code},message is ${err.message}`);
       return;
     }
     console.info('Succeeded in getting resultSet');
     resultSet = result;
     if (kvStore != null) {
       kvStore.closeResultSet(resultSet, (err: BusinessError) => {
-        if (err) {
-          console.error(`Failed to close resultSet. Code: ${err.code}, message: ${err.message}`);
+        if (err != undefined) {
+          console.error(`Failed to close resultSet.code is ${err.code},message is ${err.message}`);
           return;
         }
         console.info('Succeeded in closing resultSet');
       })
     }
   });
-} catch (err) {
-  let error = err as BusinessError;
-  console.error(`Failed to get resultSet. Code: ${error.code}, message: ${error.message}`);
+} catch (e) {
+  let error = e as BusinessError;
+  console.error(`Failed to get resultSet.code is ${error.code},message is ${error.message}`);
 }
 ```
 
@@ -1130,16 +1104,14 @@ try {
 getResultSet(deviceId: string, keyPrefix: string): Promise<KVStoreResultSet>
 ```
 
-获取与指定设备ID和Key前缀匹配的KVStoreResultSet对象，使用Promise异步回调。
+Obtains a **KVStoreResultSet** object that matches the specified device ID and key prefix. This API uses a promise to return the result.
 
-> **说明：**
+> **NOTE：**
 > 
-> 其中deviceId通过调用
+> **deviceId** can be obtained by
 > [deviceManager.getAvailableDeviceListSync](../../apis-distributed-service-kit/arkts-apis/arkts-distributedservice-distributeddevicemanager-devicemanager-i.md/arkts-distributedservice-distributeddevicemanager-devicemanager-i.md#getavailabledevicelistsync)
-> 方法得到。
-> 
-> deviceId具体获取方式请参考
-> [sync接口示例](arkts-arkdata-distributedkvstore-singlekvstore-i.md#sync)。
+> .
+> > For details about how to obtain **deviceId**, see [sync()](arkts-arkdata-distributedkvstore-syncmode-e.md).
 
 **Since:** 9
 
@@ -1155,23 +1127,23 @@ getResultSet(deviceId: string, keyPrefix: string): Promise<KVStoreResultSet>
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| deviceId | string | Yes | 设备的networkId，标识要查询其数据的设备，不能为空。 |
-| keyPrefix | string | Yes | 表示要匹配的键前缀，长度范围为1-[MAX_KEY_LENGTH](arkts-arkdata-distributedkvstore-constants-i.md)。不能包含'^'，包含'^' 将导致谓词失效，查询结果会返回数据库中的所有数据。 |
+| deviceId | string | Yes | ID of the target device. |
+| keyPrefix | string | Yes | Key prefix to match. It cannot contain '^'; otherwise, the predicate becomes invalid and all data in the RDB store will be returned. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;KVStoreResultSet&gt; | Promise对象。返回与指定设备ID和Key前缀匹配的KVStoreResultSet对象。 |
+| Promise&lt;KVStoreResultSet&gt; | Promise used to return the **KVStoreResultSet** object obtained. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error.Possible causes:1.Mandatory parameters are left unspecified; &lt;br&gt;2.Incorrect parameters types. |
-| 15100005 | Database or result set already closed. |
-| 15100003 | Database corrupted. |
-| 15100001 | Over max limits.<br>**Applicable version:** 10 and later |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error.Possible causes:1.Mandatory parameters are left unspecified; &lt;br&gt;2.Incorrect parameters types. |
+| [15100005](../errorcode-distributedKVStore.md#15100005-kv-store-or-result-set-closed) | Database or result set already closed. |
+| [15100003](../errorcode-distributedKVStore.md#15100003-kv-store-corrupted) | Database corrupted. |
+| [15100001](../errorcode-distributedKVStore.md#15100001-subscription-count-or-result-set-count-reaches-the-limit) | Over max limits.<br>**Applicable version:** 10 and later |
 
 ## Examples
 
@@ -1187,15 +1159,15 @@ try {
       kvStore.closeResultSet(resultSet).then(() => {
         console.info('Succeeded in closing resultSet');
       }).catch((err: BusinessError) => {
-        console.error(`Failed to close resultSet. Code: ${err.code}, message: ${err.message}`);
+        console.error(`Failed to close resultSet.code is ${err.code},message is ${err.message}`);
       });
     }
   }).catch((err: BusinessError) => {
-    console.error(`Failed to get resultSet. Code: ${err.code}, message: ${err.message}`);
+    console.error(`Failed to get resultSet.code is ${err.code},message is ${err.message}`);
   });
-} catch (err) {
-  let error = err as BusinessError;
-  console.error(`Failed to get resultSet. Code: ${error.code}, message: ${error.message}`);
+} catch (e) {
+  let error = e as BusinessError;
+  console.error(`Failed to get resultSet.code is ${error.code},message is ${error.message}`);
 }
 ```
 
@@ -1205,7 +1177,14 @@ try {
 getResultSet(query: Query, callback: AsyncCallback<KVStoreResultSet>): void
 ```
 
-获取与本设备指定Query对象匹配的KVStoreResultSet对象，使用callback异步回调。
+Obtains a **KVStoreResultSet** object that matches the specified **Query** object for this device. This API uses an asynchronous callback to return the result.
+
+> **NOTE：**
+> 
+> **deviceId** can be obtained by
+> [deviceManager.getAvailableDeviceListSync](../../apis-distributed-service-kit/arkts-apis/arkts-distributedservice-distributeddevicemanager-devicemanager-i.md/arkts-distributedservice-distributeddevicemanager-devicemanager-i.md#getavailabledevicelistsync)
+> .
+> > For details about how to obtain **deviceId**, see [sync()](arkts-arkdata-distributedkvstore-syncmode-e.md).
 
 **Since:** 9
 
@@ -1221,17 +1200,17 @@ getResultSet(query: Query, callback: AsyncCallback<KVStoreResultSet>): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| query | [Query](arkts-arkdata-distributeddata-query-c.md) | Yes | 表示查询对象。 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;KVStoreResultSet&gt; | Yes | 回调函数。成功时返回与指定Query对象匹配的KVStoreResultSet对象，失败时返回错误对象。 |
+| query | [Query](arkts-arkdata-distributeddata-query-c.md) | Yes | Query** object to match. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;KVStoreResultSet&gt; | Yes | Callback used to return the **KVStoreResultSet** object obtained. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error.Possible causes:1.Mandatory parameters are left unspecified; &lt;br&gt;2.Incorrect parameters types. |
-| 15100005 | Database or result set already closed. |
-| 15100003 | Database corrupted. |
-| 15100001 | Over max limits.<br>**Applicable version:** 10 and later |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error.Possible causes:1.Mandatory parameters are left unspecified; &lt;br&gt;2.Incorrect parameters types. |
+| [15100005](../errorcode-distributedKVStore.md#15100005-kv-store-or-result-set-closed) | Database or result set already closed. |
+| [15100003](../errorcode-distributedKVStore.md#15100003-kv-store-corrupted) | Database corrupted. |
+| [15100001](../errorcode-distributedKVStore.md#15100001-subscription-count-or-result-set-count-reaches-the-limit) | Over max limits.<br>**Applicable version:** 10 and later |
 
 ## Examples
 
@@ -1253,25 +1232,25 @@ try {
     entries.push(entry);
   }
   kvStore.putBatch(entries, async (err: BusinessError) => {
-    if (err) {
-      console.error(`Failed to put batch. Code: ${err.code}, message: ${err.message}`);
+    if (err != undefined) {
+      console.error(`Failed to put batch.code is ${err.code},message is ${err.message}`);
       return;
     }
     console.info('Succeeded in putting batch');
     const query = new distributedKVStore.Query();
-    query.prefixKey('batch_test');
+    query.prefixKey("batch_test");
     if (kvStore != null) {
       kvStore.getResultSet(query, async (err: BusinessError, result: distributedKVStore.KVStoreResultSet) => {
-        if (err) {
-          console.error(`Failed to get resultSet. Code: ${err.code}, message: ${err.message}`);
+        if (err != undefined) {
+          console.error(`Failed to get resultSet.code is ${err.code},message is ${err.message}`);
           return;
         }
         console.info('Succeeded in getting resultSet');
         resultSet = result;
         if (kvStore != null) {
           kvStore.closeResultSet(resultSet, (err: BusinessError) => {
-            if (err) {
-              console.error(`Failed to close resultSet. Code: ${err.code}, message: ${err.message}`);
+            if (err != undefined) {
+              console.error(`Failed to close resultSet.code is ${err.code},message is ${err.message}`);
               return;
             }
             console.info('Succeeded in closing resultSet');
@@ -1280,9 +1259,9 @@ try {
       });
     }
   });
-} catch (err) {
-  let error = err as BusinessError;
-  console.error(`Failed to get resultSet. Code: ${error.code}, message: ${error.message}`);
+} catch (e) {
+  let error = e as BusinessError;
+  console.error(`Failed to get resultSet`);
 }
 ```
 
@@ -1292,7 +1271,7 @@ try {
 getResultSet(query: Query): Promise<KVStoreResultSet>
 ```
 
-获取与本设备指定Query对象匹配的KVStoreResultSet对象，使用Promise异步回调。
+Obtains a **KVStoreResultSet** object that matches the specified **Query** object for this device. This API uses a promise to return the result.
 
 **Since:** 9
 
@@ -1308,22 +1287,22 @@ getResultSet(query: Query): Promise<KVStoreResultSet>
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| query | [Query](arkts-arkdata-distributeddata-query-c.md) | Yes | 表示查询对象。 |
+| query | [Query](arkts-arkdata-distributeddata-query-c.md) | Yes | Query** object to match. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;KVStoreResultSet&gt; | Promise对象。获取与本设备指定Query对象匹配的KVStoreResultSet对象。 |
+| Promise&lt;KVStoreResultSet&gt; | Promise used to return the **KVStoreResultSet** object obtained. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error.Possible causes:1.Mandatory parameters are left unspecified; &lt;br&gt;2.Incorrect parameters types. |
-| 15100005 | Database or result set already closed. |
-| 15100003 | Database corrupted. |
-| 15100001 | Over max limits.<br>**Applicable version:** 10 and later |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error.Possible causes:1.Mandatory parameters are left unspecified; &lt;br&gt;2.Incorrect parameters types. |
+| [15100005](../errorcode-distributedKVStore.md#15100005-kv-store-or-result-set-closed) | Database or result set already closed. |
+| [15100003](../errorcode-distributedKVStore.md#15100003-kv-store-corrupted) | Database corrupted. |
+| [15100001](../errorcode-distributedKVStore.md#15100001-subscription-count-or-result-set-count-reaches-the-limit) | Over max limits.<br>**Applicable version:** 10 and later |
 
 ## Examples
 
@@ -1347,19 +1326,19 @@ try {
   kvStore.putBatch(entries).then(async () => {
     console.info('Succeeded in putting batch');
   }).catch((err: BusinessError) => {
-    console.error(`Failed to put batch. Code: ${err.code}, message: ${err.message}`);
+    console.error(`Failed to put batch.code is ${err.code},message is ${err.message}`);
   });
   const query = new distributedKVStore.Query();
-  query.prefixKey('batch_test');
+  query.prefixKey("batch_test");
   kvStore.getResultSet(query).then((result: distributedKVStore.KVStoreResultSet) => {
     console.info('Succeeded in getting result set');
     resultSet = result;
   }).catch((err: BusinessError) => {
-    console.error(`Failed to get resultset. Code: ${err.code}, message: ${err.message}`);
+    console.error(`Failed to get resultset.code is ${err.code},message is ${err.message}`);
   });
-} catch (err) {
-  let error = err as BusinessError;
-  console.error(`An unexpected error occurred. Code: ${error.code}, message: ${error.message}`);
+} catch (e) {
+  let error = e as BusinessError;
+  console.error(`An unexpected error occurred.code is ${error.code},message is ${error.message}`);
 }
 ```
 
@@ -1369,17 +1348,14 @@ try {
 getResultSet(deviceId: string, query: Query, callback: AsyncCallback<KVStoreResultSet>): void
 ```
 
-获取与指定设备ID和Query对象匹配的KVStoreResultSet对象，使用callback异步回调。获取结果集后，在使用完毕时需调用  
-[closeResultSet](arkts-arkdata-distributedkvstore-singlekvstore-i.md#closeresultset)关闭结果集释放资源。
+Obtains a **KVStoreResultSet** object that matches the specified device ID and **Query** object. This API uses an  asynchronous callback to return the result.
 
-> **说明：**
+> **NOTE：**
 > 
-> 其中deviceId通过调用
+> **deviceId** can be obtained by
 > [deviceManager.getAvailableDeviceListSync](../../apis-distributed-service-kit/arkts-apis/arkts-distributedservice-distributeddevicemanager-devicemanager-i.md/arkts-distributedservice-distributeddevicemanager-devicemanager-i.md#getavailabledevicelistsync)
-> 方法得到。
-> 
-> deviceId具体获取方式请参考
-> [sync接口示例](arkts-arkdata-distributedkvstore-singlekvstore-i.md#sync)。
+> .
+> > For details about how to obtain **deviceId**, see [sync()](arkts-arkdata-distributedkvstore-syncmode-e.md).
 
 **Since:** 9
 
@@ -1395,18 +1371,18 @@ getResultSet(deviceId: string, query: Query, callback: AsyncCallback<KVStoreResu
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| deviceId | string | Yes | 设备的networkId，标识要查询其数据的设备，不能为空。 |
-| query | [Query](arkts-arkdata-distributeddata-query-c.md) | Yes | 表示查询对象。 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;KVStoreResultSet&gt; | Yes | 回调函数。返回与指定设备ID和Query对象匹配的KVStoreResultSet对象。 |
+| deviceId | string | Yes | ID of the device to which the **KVStoreResultSet** object belongs. |
+| query | [Query](arkts-arkdata-distributeddata-query-c.md) | Yes | Query** object to match. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;KVStoreResultSet&gt; | Yes | Callback used to return the **KVStoreResultSet** object that matches the specified device ID and **Query** object. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error.Possible causes:1.Mandatory parameters are left unspecified; &lt;br&gt;2.Incorrect parameters types. |
-| 15100005 | Database or result set already closed. |
-| 15100003 | Database corrupted. |
-| 15100001 | Over max limits.<br>**Applicable version:** 10 and later |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error.Possible causes:1.Mandatory parameters are left unspecified; &lt;br&gt;2.Incorrect parameters types. |
+| [15100005](../errorcode-distributedKVStore.md#15100005-kv-store-or-result-set-closed) | Database or result set already closed. |
+| [15100003](../errorcode-distributedKVStore.md#15100003-kv-store-corrupted) | Database corrupted. |
+| [15100001](../errorcode-distributedKVStore.md#15100001-subscription-count-or-result-set-count-reaches-the-limit) | Over max limits.<br>**Applicable version:** 10 and later |
 
 ## Examples
 
@@ -1428,25 +1404,25 @@ try {
     entries.push(entry);
   }
   kvStore.putBatch(entries, async (err: BusinessError) => {
-    if (err) {
-      console.error(`Failed to put batch. Code: ${err.code}, message: ${err.message}`);
+    if (err != undefined) {
+      console.error(`Failed to put batch.code is ${err.code},message is ${err.message}`);
       return;
     }
     console.info('Succeeded in putting batch');
     const query = new distributedKVStore.Query();
-    query.prefixKey('batch_test');
+    query.prefixKey("batch_test");
     if (kvStore != null) {
       kvStore.getResultSet('localDeviceId', query, async (err: BusinessError, result: distributedKVStore.KVStoreResultSet) => {
-        if (err) {
-          console.error(`Failed to get resultSet. Code: ${err.code}, message: ${err.message}`);
+        if (err != undefined) {
+          console.error(`Failed to get resultSet.code is ${err.code},message is ${err.message}`);
           return;
         }
         console.info('Succeeded in getting resultSet');
         resultSet = result;
         if (kvStore != null) {
           kvStore.closeResultSet(resultSet, (err: BusinessError) => {
-            if (err) {
-              console.error(`Failed to close resultSet. Code: ${err.code}, message: ${err.message}`);
+            if (err != undefined) {
+              console.error(`Failed to close resultSet.code is ${err.code},message is ${err.message}`);
               return;
             }
             console.info('Succeeded in closing resultSet');
@@ -1455,9 +1431,9 @@ try {
       });
     }
   });
-} catch (err) {
-  let error = err as BusinessError;
-  console.error(`Failed to get resultSet. Code: ${error.code}, message: ${error.message}`);
+} catch (e) {
+  let error = e as BusinessError;
+  console.error(`Failed to get resultSet.code is ${error.code},message is ${error.message}`);
 }
 ```
 
@@ -1467,17 +1443,14 @@ try {
 getResultSet(deviceId: string, query: Query): Promise<KVStoreResultSet>
 ```
 
-获取与指定设备ID和Query对象匹配的KVStoreResultSet对象，使用Promise异步回调。获取结果集后，在使用完毕时需调用  
-[closeResultSet](arkts-arkdata-distributedkvstore-singlekvstore-i.md#closeresultset)关闭结果集释放资源。
+Obtains a **KVStoreResultSet** object that matches the specified device ID and **Query** object. This API uses a promise to return the result.
 
-> **说明：**
+> **NOTE：**
 > 
-> 其中deviceId通过调用
+> **deviceId** can be obtained by
 > [deviceManager.getAvailableDeviceListSync](../../apis-distributed-service-kit/arkts-apis/arkts-distributedservice-distributeddevicemanager-devicemanager-i.md/arkts-distributedservice-distributeddevicemanager-devicemanager-i.md#getavailabledevicelistsync)
-> 方法得到。
-> 
-> deviceId具体获取方式请参考
-> [sync接口示例](arkts-arkdata-distributedkvstore-singlekvstore-i.md#sync)。
+> .
+> > For details about how to obtain **deviceId**, see [sync()](arkts-arkdata-distributedkvstore-syncmode-e.md).
 
 **Since:** 9
 
@@ -1493,23 +1466,23 @@ getResultSet(deviceId: string, query: Query): Promise<KVStoreResultSet>
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| deviceId | string | Yes | 设备的networkId，标识要查询其数据的设备，不能为空。 |
-| query | [Query](arkts-arkdata-distributeddata-query-c.md) | Yes | 表示查询对象。 |
+| deviceId | string | Yes | ID of the device to which the **KVStoreResultSet** object belongs. |
+| query | [Query](arkts-arkdata-distributeddata-query-c.md) | Yes | Query** object to match. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;KVStoreResultSet&gt; | Promise对象。返回与指定设备ID和Query对象匹配的KVStoreResultSet对象。 |
+| Promise&lt;KVStoreResultSet&gt; | Promise used to return the **KVStoreResultSet** object that matches the specified device ID and **Query** object. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error.Possible causes:1.Mandatory parameters are left unspecified; &lt;br&gt;2.Incorrect parameters types. |
-| 15100005 | Database or result set already closed. |
-| 15100003 | Database corrupted. |
-| 15100001 | Over max limits.<br>**Applicable version:** 10 and later |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error.Possible causes:1.Mandatory parameters are left unspecified; &lt;br&gt;2.Incorrect parameters types. |
+| [15100005](../errorcode-distributedKVStore.md#15100005-kv-store-or-result-set-closed) | Database or result set already closed. |
+| [15100003](../errorcode-distributedKVStore.md#15100003-kv-store-corrupted) | Database corrupted. |
+| [15100001](../errorcode-distributedKVStore.md#15100001-subscription-count-or-result-set-count-reaches-the-limit) | Over max limits.<br>**Applicable version:** 10 and later |
 
 ## Examples
 
@@ -1533,10 +1506,10 @@ try {
   kvStore.putBatch(entries).then(async () => {
     console.info('Succeeded in putting batch');
   }).catch((err: BusinessError) => {
-    console.error(`Failed to put batch. Code: ${err.code}, message: ${err.message}`);
+    console.error(`Failed to put batch.code is ${err.code},message is ${err.message}`);
   });
   const query = new distributedKVStore.Query();
-  query.prefixKey('batch_test');
+  query.prefixKey("batch_test");
   if (kvStore != null) {
     kvStore.getResultSet('localDeviceId', query).then((result: distributedKVStore.KVStoreResultSet) => {
       console.info('Succeeded in getting resultSet');
@@ -1545,19 +1518,19 @@ try {
         kvStore.closeResultSet(resultSet).then(() => {
           console.info('Succeeded in closing resultSet');
         }).catch((err: BusinessError) => {
-          console.error(`Failed to close resultSet. Code: ${err.code}, message: ${err.message}`);
+          console.error(`Failed to close resultSet.code is ${err.code},message is ${err.message}`);
         });
       }
     }).catch((err: BusinessError) => {
-      console.error(`Failed to get resultSet. Code: ${err.code}, message: ${err.message}`);
+      console.error(`Failed to get resultSet.code is ${err.code},message is ${err.message}`);
     });
   }
   query.deviceId('localDeviceId');
-  console.info('GetResultSet ' + query.getSqlLike());
+  console.info("GetResultSet " + query.getSqlLike());
 
-} catch (err) {
-  let error = err as BusinessError;
-  console.error(`Failed to get resultSet. Code: ${error.code}, message: ${error.message}`);
+} catch (e) {
+  let error = e as BusinessError;
+  console.error(`Failed to get resultSet.code is ${error.code},message is ${error.message}`);
 }
 ```
 
@@ -1573,7 +1546,7 @@ ArkTS-Sta:
 getResultSize(query: Query, callback: AsyncCallback<int>): void
 ```
 
-获取与本设备指定Query对象匹配的结果数，使用callback异步回调。
+Obtains the number of results that match the specified **Query** object for this device. This API uses an asynchronous callback to return the result.
 
 **Since:** 9
 
@@ -1589,17 +1562,17 @@ getResultSize(query: Query, callback: AsyncCallback<int>): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| query | [Query](arkts-arkdata-distributeddata-query-c.md) | Yes | 表示查询对象。 |
-| callback | ArkTS-Dyn: [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;number&gt;  <br>ArkTS-Sta：[AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;int&gt; | Yes | 回调函数。返回与本设备指定Query对象匹配的结果数。 |
+| query | [Query](arkts-arkdata-distributeddata-query-c.md) | Yes | Query** object to match. |
+| callback | ArkTS-Dyn: [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;number&gt;  <br>ArkTS-Sta：[AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;int&gt; | Yes | Callback used to return the number of results obtained. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error.Possible causes:1.Mandatory parameters are left unspecified; &lt;br&gt;2.Incorrect parameters types. |
-| 15100004 | Not found. |
-| 15100005 | Database or result set already closed. |
-| 15100003 | Database corrupted. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error.Possible causes:1.Mandatory parameters are left unspecified; &lt;br&gt;2.Incorrect parameters types. |
+| [15100004](../errorcode-distributedKVStore.md#15100004-failed-to-find-data) | Not found. |
+| [15100005](../errorcode-distributedKVStore.md#15100005-kv-store-or-result-set-closed) | Database or result set already closed. |
+| [15100003](../errorcode-distributedKVStore.md#15100003-kv-store-corrupted) | Database corrupted. |
 
 ## Examples
 
@@ -1620,26 +1593,22 @@ try {
     entries.push(entry);
   }
   kvStore.putBatch(entries, (err: BusinessError) => {
-    if (err) {
-      console.error(`Failed to put batch. Code: ${err.code}, message: ${err.message}`);
-      return;
-    }
     console.info('Succeeded in putting batch');
     const query = new distributedKVStore.Query();
-    query.prefixKey('batch_test');
+    query.prefixKey("batch_test");
     if (kvStore != null) {
       kvStore.getResultSize(query, (err: BusinessError, resultSize: number) => {
-        if (err) {
-          console.error(`Failed to get result size. Code: ${err.code}, message: ${err.message}`);
+        if (err != undefined) {
+          console.error(`Failed to get result size.code is ${err.code},message is ${err.message}`);
           return;
         }
         console.info('Succeeded in getting result set size');
       });
     }
   });
-} catch (err) {
-  let error = err as BusinessError;
-  console.error(`An unexpected error occurred. Code: ${error.code}, message: ${error.message}`);
+} catch (e) {
+  let error = e as BusinessError;
+  console.error(`An unexpected error occurred.code is ${error.code},message is ${error.message}`);
 }
 ```
 
@@ -1655,7 +1624,7 @@ ArkTS-Sta:
 getResultSize(query: Query): Promise<int>
 ```
 
-获取与本设备指定Query对象匹配的结果数，使用Promise异步回调。
+Obtains the number of results that match the specified **Query** object for this device. This API uses a promise to return the result.
 
 **Since:** 9
 
@@ -1671,22 +1640,22 @@ getResultSize(query: Query): Promise<int>
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| query | [Query](arkts-arkdata-distributeddata-query-c.md) | Yes | 表示查询对象。 |
+| query | [Query](arkts-arkdata-distributeddata-query-c.md) | Yes | Query** object to match. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| ArkTS-Dyn: Promise&lt;number&gt;  <br>ArkTS-Sta：Promise&lt;int&gt; | Promise对象。获取与本设备指定Query对象匹配的结果数。 |
+| ArkTS-Dyn: Promise&lt;number&gt;  <br>ArkTS-Sta：Promise&lt;int&gt; | Promise used to return the number of results obtained. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error.Possible causes:1.Mandatory parameters are left unspecified; &lt;br&gt;2.Incorrect parameters types. |
-| 15100004 | Not found. |
-| 15100005 | Database or result set already closed. |
-| 15100003 | Database corrupted. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error.Possible causes:1.Mandatory parameters are left unspecified; &lt;br&gt;2.Incorrect parameters types. |
+| [15100004](../errorcode-distributedKVStore.md#15100004-failed-to-find-data) | Not found. |
+| [15100005](../errorcode-distributedKVStore.md#15100005-kv-store-or-result-set-closed) | Database or result set already closed. |
+| [15100003](../errorcode-distributedKVStore.md#15100003-kv-store-corrupted) | Database corrupted. |
 
 ## Examples
 
@@ -1709,18 +1678,18 @@ try {
   kvStore.putBatch(entries).then(async () => {
     console.info('Succeeded in putting batch');
   }).catch((err: BusinessError) => {
-    console.error(`Failed to put batch. Code: ${err.code}, message: ${err.message}`);
+    console.error(`Failed to put batch.code is ${err.code},message is ${err.message}`);
   });
   const query = new distributedKVStore.Query();
-  query.prefixKey('batch_test');
+  query.prefixKey("batch_test");
   kvStore.getResultSize(query).then((resultSize: number) => {
     console.info('Succeeded in getting result set size');
   }).catch((err: BusinessError) => {
-    console.error(`Failed to get result size. Code: ${err.code}, message: ${err.message}`);
+    console.error(`Failed to get result size.code is ${err.code},message is ${err.message}`);
   });
-} catch (err) {
-  let error = err as BusinessError;
-  console.error(`An unexpected error occurred. Code: ${error.code}, message: ${error.message}`);
+} catch (e) {
+  let error = e as BusinessError;
+  console.error(`An unexpected error occurred.code is ${error.code},message is ${error.message}`);
 }
 ```
 
@@ -1736,16 +1705,14 @@ ArkTS-Sta:
 getResultSize(deviceId: string, query: Query, callback: AsyncCallback<int>): void
 ```
 
-获取与指定设备ID和Query对象匹配的结果数，使用callback异步回调。
+Obtains the number of results that match the specified device ID and **Query** object. This API uses an asynchronous callback to return the result.
 
-> **说明：**
+> **NOTE：**
 > 
-> 其中deviceId通过调用
+> **deviceId** can be obtained by
 > [deviceManager.getAvailableDeviceListSync](../../apis-distributed-service-kit/arkts-apis/arkts-distributedservice-distributeddevicemanager-devicemanager-i.md/arkts-distributedservice-distributeddevicemanager-devicemanager-i.md#getavailabledevicelistsync)
-> 方法得到。
-> 
-> deviceId具体获取方式请参考
-> [sync接口示例](arkts-arkdata-distributedkvstore-singlekvstore-i.md#sync)。
+> .
+> > For details about how to obtain **deviceId**, see [sync()](arkts-arkdata-distributedkvstore-syncmode-e.md).
 
 **Since:** 9
 
@@ -1761,18 +1728,18 @@ getResultSize(deviceId: string, query: Query, callback: AsyncCallback<int>): voi
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| deviceId | string | Yes | 设备的networkId，标识要查询其数据的设备，不能为空。 |
-| query | [Query](arkts-arkdata-distributeddata-query-c.md) | Yes | 表示查询对象。 |
-| callback | ArkTS-Dyn: [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;number&gt;  <br>ArkTS-Sta：[AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;int&gt; | Yes | 回调函数。返回与指定设备ID和Query对象匹配的结果数。 |
+| deviceId | string | Yes | ID of the device to which the **KVStoreResultSet** object belongs. |
+| query | [Query](arkts-arkdata-distributeddata-query-c.md) | Yes | Query** object to match. |
+| callback | ArkTS-Dyn: [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;number&gt;  <br>ArkTS-Sta：[AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;int&gt; | Yes | Callback used to return the number of results obtained. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error.Possible causes:1.Mandatory parameters are left unspecified; &lt;br&gt;2.Incorrect parameters types. |
-| 15100004 | Not found. |
-| 15100005 | Database or result set already closed. |
-| 15100003 | Database corrupted. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error.Possible causes:1.Mandatory parameters are left unspecified; &lt;br&gt;2.Incorrect parameters types. |
+| [15100004](../errorcode-distributedKVStore.md#15100004-failed-to-find-data) | Not found. |
+| [15100005](../errorcode-distributedKVStore.md#15100005-kv-store-or-result-set-closed) | Database or result set already closed. |
+| [15100003](../errorcode-distributedKVStore.md#15100003-kv-store-corrupted) | Database corrupted. |
 
 ## Examples
 
@@ -1793,26 +1760,26 @@ try {
     entries.push(entry);
   }
   kvStore.putBatch(entries, (err: BusinessError) => {
-    if (err) {
-      console.error(`Failed to put batch. Code: ${err.code}, message: ${err.message}`);
+    if (err != undefined) {
+      console.error(`Failed to put batch.code is ${err.code},message is ${err.message}`);
       return;
     }
     console.info('Succeeded in putting batch');
     const query = new distributedKVStore.Query();
-    query.prefixKey('batch_test');
+    query.prefixKey("batch_test");
     if (kvStore != null) {
       kvStore.getResultSize('localDeviceId', query, (err: BusinessError, resultSize: number) => {
-        if (err) {
-          console.error(`Failed to get resultSize. Code: ${err.code}, message: ${err.message}`);
+        if (err != undefined) {
+          console.error(`Failed to get resultSize.code is ${err.code},message is ${err.message}`);
           return;
         }
         console.info('Succeeded in getting resultSize');
       });
     }
   });
-} catch (err) {
-  let error = err as BusinessError;
-  console.error(`Failed to get resultSize. Code: ${error.code}, message: ${error.message}`);
+} catch (e) {
+  let error = e as BusinessError;
+  console.error(`Failed to get resultSize.code is ${error.code},message is ${error.message}`);
 }
 ```
 
@@ -1828,16 +1795,14 @@ ArkTS-Sta:
 getResultSize(deviceId: string, query: Query): Promise<int>
 ```
 
-获取与指定设备ID和Query对象匹配的结果数，使用Promise异步回调。
+Obtains the number of results that match the specified device ID and **Query** object. This API uses a promise to  return the result.
 
-> **说明：**
+> **NOTE：**
 > 
-> 其中deviceId通过调用
+> **deviceId** can be obtained by
 > [deviceManager.getAvailableDeviceListSync](../../apis-distributed-service-kit/arkts-apis/arkts-distributedservice-distributeddevicemanager-devicemanager-i.md/arkts-distributedservice-distributeddevicemanager-devicemanager-i.md#getavailabledevicelistsync)
-> 方法得到。
-> 
-> deviceId具体获取方式请参考
-> [sync接口示例](arkts-arkdata-distributedkvstore-singlekvstore-i.md#sync)。
+> .
+> > For details about how to obtain **deviceId**, see [sync()](arkts-arkdata-distributedkvstore-syncmode-e.md).
 
 **Since:** 9
 
@@ -1853,23 +1818,23 @@ getResultSize(deviceId: string, query: Query): Promise<int>
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| deviceId | string | Yes | 设备的networkId，标识要查询其数据的设备，不能为空。 |
-| query | [Query](arkts-arkdata-distributeddata-query-c.md) | Yes | 表示查询对象。 |
+| deviceId | string | Yes | ID of the device to which the **KVStoreResultSet** object belongs. |
+| query | [Query](arkts-arkdata-distributeddata-query-c.md) | Yes | Query** object to match. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| ArkTS-Dyn: Promise&lt;number&gt;  <br>ArkTS-Sta：Promise&lt;int&gt; | Promise对象。返回与指定设备ID和Query对象匹配的结果数。 |
+| ArkTS-Dyn: Promise&lt;number&gt;  <br>ArkTS-Sta：Promise&lt;int&gt; | Promise used to return the number of results obtained. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error.Possible causes:1.Mandatory parameters are left unspecified; &lt;br&gt;2.Incorrect parameters types. |
-| 15100004 | Not found. |
-| 15100005 | Database or result set already closed. |
-| 15100003 | Database corrupted. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error.Possible causes:1.Mandatory parameters are left unspecified; &lt;br&gt;2.Incorrect parameters types. |
+| [15100004](../errorcode-distributedKVStore.md#15100004-failed-to-find-data) | Not found. |
+| [15100005](../errorcode-distributedKVStore.md#15100005-kv-store-or-result-set-closed) | Database or result set already closed. |
+| [15100003](../errorcode-distributedKVStore.md#15100003-kv-store-corrupted) | Database corrupted. |
 
 ## Examples
 
@@ -1892,18 +1857,18 @@ try {
   kvStore.putBatch(entries).then(async () => {
     console.info('Succeeded in putting batch');
   }).catch((err: BusinessError) => {
-    console.error(`Failed to put batch. Code: ${err.code}, message: ${err.message}`);
+    console.error(`Failed to put batch.code is ${err.code},message is ${err.message}`);
   });
   let query = new distributedKVStore.Query();
-  query.prefixKey('batch_test');
+  query.prefixKey("batch_test");
   kvStore.getResultSize('localDeviceId', query).then((resultSize: number) => {
     console.info('Succeeded in getting resultSize');
   }).catch((err: BusinessError) => {
-    console.error(`Failed to get resultSize. Code: ${err.code}, message: ${err.message}`);
+    console.error(`Failed to get resultSize.code is ${err.code},message is ${err.message}`);
   });
-} catch (err) {
-  let error = err as BusinessError;
-  console.error(`Failed to get resultSize. Code: ${error.code}, message: ${error.message}`);
+} catch (e) {
+  let error = e as BusinessError;
+  console.error(`Failed to get resultSize.code is ${error.code},message is ${error.message}`);
 }
 ```
 

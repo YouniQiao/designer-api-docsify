@@ -1,13 +1,13 @@
 # AudioVolumeGroupManager
 
-管理音频组音量。
+This interface implements volume management for an audio group.
 
-在使用AudioVolumeGroupManager的接口之前，需先通过  
-[getVolumeGroupManager](arkts-audio-audio-audiovolumemanager-i.md#getvolumegroupmanager)获取AudioVolumeGroupManager实例。
+Before calling any API in AudioVolumeGroupManager, you must use  
+[getVolumeGroupManager](arkts-audio-audio-audiovolumemanager-i.md#getvolumegroupmanager)to obtain an AudioVolumeGroupManager instance.
 
-> **说明：**
+> **NOTE：**
 > 
-> - 本Interface首批接口从API version 9开始支持。
+> - The initial APIs of this interface are supported since API version 9.
 
 **Since:** 9
 
@@ -28,6 +28,8 @@ import { audio } from 'kits/@kit.AudioKit';
 ```TypeScript
 adjustSystemVolumeByStep(volumeType: AudioVolumeType, adjustType: VolumeAdjustType, callback: AsyncCallback<void>): void
 ```
+
+Adjusts system volume by step for target volume type.This method uses an asynchronous callback to return the result.
 
 **Since:** 10
 
@@ -53,10 +55,10 @@ adjustSystemVolumeByStep(volumeType: AudioVolumeType, adjustType: VolumeAdjustTy
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
-| 6800101 | Parameter verification failed. Return by callback. |
-| 201 | Permission denied. |
-| 6800301 | System error. Return by callback. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
+| [6800101](../errorcode-audio.md#6800101-invalid-parameter) | Parameter verification failed. Return by callback. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
+| [6800301](../errorcode-audio.md#6800301-system-error) | System error. Return by callback. |
 
 ## Examples
 
@@ -77,6 +79,8 @@ audioVolumeGroupManager.adjustSystemVolumeByStep(audio.AudioVolumeType.MEDIA, au
 ```TypeScript
 adjustSystemVolumeByStep(volumeType: AudioVolumeType, adjustType: VolumeAdjustType): Promise<void>
 ```
+
+Adjusts system volume by step for target volume type.This method uses a promise to return the result.
 
 **Since:** 10
 
@@ -101,16 +105,16 @@ adjustSystemVolumeByStep(volumeType: AudioVolumeType, adjustType: VolumeAdjustTy
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; |  |
+| Promise&lt;void&gt; | Promise used to return the result. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
-| 6800101 | Parameter verification failed. Return by promise. |
-| 201 | @throws { BusinessError } 201 - Permission denied. |
-| 6800301 | System error. Return by promise. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
+| [6800101](../errorcode-audio.md#6800101-invalid-parameter) | Parameter verification failed. Return by promise. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
+| [6800301](../errorcode-audio.md#6800301-system-error) | System error. Return by promise. |
 
 ## Examples
 
@@ -129,6 +133,8 @@ audioVolumeGroupManager.adjustSystemVolumeByStep(audio.AudioVolumeType.MEDIA, au
 ```TypeScript
 adjustVolumeByStep(adjustType: VolumeAdjustType, callback: AsyncCallback<void>): void
 ```
+
+Adjusts system volume by step, volume type is decided by system.This method uses an asynchronous callback to return the result.
 
 **Since:** 10
 
@@ -153,10 +159,10 @@ adjustVolumeByStep(adjustType: VolumeAdjustType, callback: AsyncCallback<void>):
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
-| 6800101 | Parameter verification failed. Return by callback. |
-| 201 | Permission denied. |
-| 6800301 | System error. Return by callback. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
+| [6800101](../errorcode-audio.md#6800101-invalid-parameter) | Parameter verification failed. Return by callback. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
+| [6800301](../errorcode-audio.md#6800301-system-error) | System error. Return by callback. |
 
 ## Examples
 
@@ -178,6 +184,8 @@ audioVolumeGroupManager.adjustVolumeByStep(audio.VolumeAdjustType.VOLUME_UP, (er
 ```TypeScript
 adjustVolumeByStep(adjustType: VolumeAdjustType): Promise<void>
 ```
+
+Adjusts system volume by step, volume type is decided by system.This method uses a promise to return the result.
 
 **Since:** 10
 
@@ -201,16 +209,16 @@ adjustVolumeByStep(adjustType: VolumeAdjustType): Promise<void>
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; |  |
+| Promise&lt;void&gt; | Promise used to return the result. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
-| 6800101 | Parameter verification failed. Return by promise. |
-| 201 | @throws { BusinessError } 201 - Permission denied. |
-| 6800301 | System error. Return by promise. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
+| [6800101](../errorcode-audio.md#6800101-invalid-parameter) | Parameter verification failed. Return by promise. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
+| [6800301](../errorcode-audio.md#6800301-system-error) | System error. Return by promise. |
 
 ## Examples
 
@@ -264,9 +272,9 @@ Obtains the active volume type in the calling moment. This method returns in syn
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1.Mandatory parameters unspecified. 2.Incorrect parameter types. |
-| 6800101 | Parameter verification failed. |
-| 202 | Not system App. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.Mandatory parameters unspecified. 2.Incorrect parameter types. |
+| [6800101](../errorcode-audio.md#6800101-invalid-parameter) | Parameter verification failed. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system App. |
 
 ## Examples
 
@@ -281,6 +289,8 @@ let value = audioVolumeGroupManager.getActiveVolumeTypeSync(uid);
 ```TypeScript
 isPersistentMicMute(): boolean
 ```
+
+Checks whether the persistent microphone status is muted.
 
 **Since:** 12
 
@@ -298,14 +308,14 @@ isPersistentMicMute(): boolean
 
 | Type | Description |
 | --- | --- |
-| boolean |  |
+| boolean | Returns microphone persistent mute status. true: The persistent mic mute is enabled in the current system. false: The persistent mic mute is disabled in the current system. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 201 | @throws { BusinessError } 201 - Permission denied. |
-| 202 | Not system App. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system App. |
 
 ## Examples
 
@@ -318,6 +328,8 @@ let value: boolean = audioVolumeGroupManager.isPersistentMicMute();
 ```TypeScript
 mute(volumeType: AudioVolumeType, mute: boolean, callback: AsyncCallback<void>): void
 ```
+
+Mutes a stream. This method uses an asynchronous callback to return the result.
 
 **Since:** 9
 
@@ -359,6 +371,8 @@ audioVolumeGroupManager.mute(audio.AudioVolumeType.MEDIA, true, (err: BusinessEr
 mute(volumeType: AudioVolumeType, mute: boolean): Promise<void>
 ```
 
+Mutes a stream. This method uses a promise to return the result.
+
 **Since:** 9
 
 **ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
@@ -367,9 +381,7 @@ mute(volumeType: AudioVolumeType, mute: boolean): Promise<void>
 
 <!--Device-AudioVolumeGroupManager-mute(volumeType: AudioVolumeType, mute: boolean): Promise<void>--><!--Device-AudioVolumeGroupManager-mute(volumeType: AudioVolumeType, mute: boolean): Promise<void>-End-->
 
-**System capability:** 
-- SystemCapability.Multimedia.Audio.Volume
-- SystemCapability.Multimedia.Audio.Volume
+**System capability:** SystemCapability.Multimedia.Audio.Volume
 
 **System API:** This is a system API.
 
@@ -384,7 +396,7 @@ mute(volumeType: AudioVolumeType, mute: boolean): Promise<void>
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; |  |
+| Promise&lt;void&gt; | Promise used to return the result. |
 
 ## Examples
 
@@ -399,6 +411,8 @@ audioVolumeGroupManager.mute(audio.AudioVolumeType.MEDIA, true).then(() => {
 ```TypeScript
 setMicMute(mute: boolean): Promise<void>
 ```
+
+Mutes or unmutes the microphone. This method uses a promise to return the result.
 
 **Since:** 11
 
@@ -422,16 +436,16 @@ setMicMute(mute: boolean): Promise<void>
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; |  |
+| Promise&lt;void&gt; | Promise used to return the result. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
-| 6800101 | Parameter verification failed. |
-| 201 | @throws { BusinessError } 201 - Permission denied. |
-| 202 | Not system App. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
+| [6800101](../errorcode-audio.md#6800101-invalid-parameter) | Parameter verification failed. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system App. |
 
 ## Examples
 
@@ -446,6 +460,8 @@ audioVolumeGroupManager.setMicMute(true).then(() => {
 ```TypeScript
 setMicMutePersistent(mute: boolean, type: PolicyType): Promise<void>
 ```
+
+Mutes or unmutes the microphone. This method uses a promise to return the result.
 
 **Since:** 12
 
@@ -470,16 +486,16 @@ setMicMutePersistent(mute: boolean, type: PolicyType): Promise<void>
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; |  |
+| Promise&lt;void&gt; | Promise used to return the result. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1.Mandatory parameters missing. 2.Incorrect parameter types. |
-| 6800101 | Parameter verification failed. |
-| 201 | @throws { BusinessError } 201 - Permission denied. |
-| 202 | Not system App. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.Mandatory parameters missing. 2.Incorrect parameter types. |
+| [6800101](../errorcode-audio.md#6800101-invalid-parameter) | Parameter verification failed. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system App. |
 
 ## Examples
 
@@ -494,6 +510,8 @@ audioVolumeGroupManager.setMicMutePersistent(true, audio.PolicyType.PRIVACY).the
 ```TypeScript
 setRingerMode(mode: AudioRingMode, callback: AsyncCallback<void>): void
 ```
+
+Sets the ringer mode. This method uses an asynchronous callback to return the result.
 
 **Since:** 9
 
@@ -534,6 +552,8 @@ audioVolumeGroupManager.setRingerMode(audio.AudioRingMode.RINGER_MODE_NORMAL, (e
 setRingerMode(mode: AudioRingMode): Promise<void>
 ```
 
+Sets the ringer mode. This method uses a promise to return the result.
+
 **Since:** 9
 
 **ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
@@ -542,9 +562,7 @@ setRingerMode(mode: AudioRingMode): Promise<void>
 
 <!--Device-AudioVolumeGroupManager-setRingerMode(mode: AudioRingMode): Promise<void>--><!--Device-AudioVolumeGroupManager-setRingerMode(mode: AudioRingMode): Promise<void>-End-->
 
-**System capability:** 
-- SystemCapability.Multimedia.Audio.Volume
-- SystemCapability.Multimedia.Audio.Volume
+**System capability:** SystemCapability.Multimedia.Audio.Volume
 
 **System API:** This is a system API.
 
@@ -558,7 +576,7 @@ setRingerMode(mode: AudioRingMode): Promise<void>
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; |  |
+| Promise&lt;void&gt; | Promise used to return the result. |
 
 ## Examples
 
@@ -707,8 +725,8 @@ Sets the volume for a stream. This method uses a promise to return the result.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 201 | Permission denied. |
-| 202 | Not system App. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system App. |
 
 ## Examples
 

@@ -1,7 +1,8 @@
 # AbilityStageMonitor
 
-本模块提供监听指定[AbilityStage](arkts-ability-app-ability-abilitystage-abilitystage-c.md)对象的能力。开发者可以将AbilityStageMonitor作为  
-[abilityDelegator.waitAbilityStageMonitor](arkts-ability-abilitydelegator-i.md#waitabilitystagemonitor)的入参来注册监听。
+The module provides the capability to listen for a specified  
+[AbilityStage](arkts-ability-app-ability-abilitystage-abilitystage-c.md) object. You can use AbilityStageMonitor as an input parameter of  
+[abilityDelegator.waitAbilityStageMonitor](arkts-ability-abilitydelegator-i.md#waitabilitystagemonitor)to register a listener.
 
 **Since:** 9
 
@@ -17,7 +18,7 @@
 moduleName: string
 ```
 
-被监听的AbilityStage的模块名。
+Module name of the AbilityStage object.
 
 **Type:** string
 
@@ -37,7 +38,7 @@ moduleName: string
 srcEntrance: string
 ```
 
-被监听的AbilityStage的源路径。
+Source path of the AbilityStage object.
 
 **Type:** string
 

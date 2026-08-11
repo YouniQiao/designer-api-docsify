@@ -1,11 +1,5 @@
 # getDevices
 
-## 导入模块
-
-```TypeScript
-import { usbManager } from 'kits/@kit.BasicServicesKit';
-```
-
 ## getDevices
 
 ```TypeScript
@@ -37,13 +31,15 @@ function getDevices(): Array<Readonly<USBDevice>>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 801 | Capability not supported.<br>**适用版本：** 18+ |
+| [801](../../errorcode-universal.md#801-该设备不支持此api) | Capability not supported.<br>**适用版本：** 18+ |
 
 ## 示例
 
 ```TypeScript
 let devicesList: Array<usbManager.USBDevice> = usbManager.getDevices();
-console.info(`devicesList = ${devicesList}`);
+if (devicesList) {
+  console.info(`devicesList = ${JSON.stringify(devicesList)}`);
+}
 /*
   devicesList 返回的数据结构，此处提供一个简单的示例，如下
   [

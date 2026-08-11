@@ -10,12 +10,6 @@ CMS封装数据的KeyTrans接收方信息。
 
 **系统能力：** SystemCapability.Security.Cert
 
-## 导入模块
-
-```TypeScript
-import { cert } from 'kits/@kit.DeviceCertificateKit';
-```
-
 ## cert
 
 ```TypeScript
@@ -24,7 +18,7 @@ cert: X509Cert
 
 RSA证书。
 
-**类型：** [X509Cert](../../apis-network-kit/arkts-apis/arkts-network-http-x509cert-t.md)
+**类型：** [X509Cert](arkts-devicecertificate-cert-x509cert-i.md)
 
 **起始版本：** 22
 

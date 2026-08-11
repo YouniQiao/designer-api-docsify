@@ -10,12 +10,6 @@
 
 **系统能力：** SystemCapability.BundleManager.BundleFramework.DefaultApp
 
-## 导入模块
-
-```TypeScript
-import { defaultAppManager } from 'kits/@kit.AbilityKit';
-```
-
 ## 汇总
 
 ### 函数

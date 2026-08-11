@@ -1,6 +1,6 @@
 # MutableBinding
 
-可变数据绑定的泛型类，允许对绑定值进行读写操作，提供完整的get和set访问器（需要与@builder参数列表同时使用）。当调用函数时，需要使用makeBinding来进行值的传递。
+Represents a mutable data binding allowing both read and write operations.Use with @Builder argument list for primitive types. Use makeBinding to pass values when calling the function.
 
 **Since:** 23
 
@@ -16,7 +16,7 @@
 set value(newValue: T)
 ```
 
-提供set访问器，用于设置当前绑定值。构造MutableBinding类实例时必须提供set访问器，否则会触发运行时错误。
+Set function that can set the new value.
 
 **Type:** T
 

@@ -1,6 +1,6 @@
 # NavigationConfiguration
 
-导航配置选项。
+Navigation configuration options.
 
 **Since:** 26.0.0
 
@@ -10,22 +10,75 @@
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
+## clearContentStackOnPrimaryNavigation
+
+```TypeScript
+clearContentStackOnPrimaryNavigation?: boolean
+```
+
+Whether to clear the content stack when navigation is triggered from the primary side.
+
+In Navigation split mode, when enabled, navigaiton triggered from the primary side clears old NavDestination after the Primary/Home node while preserving all NavDestinations created by the current operation.
+
+**Type:** boolean
+
+**Default:** false
+
+**Since:** 26.1.0
+
+**ArkTS mode:** ArkTS-Dyn only, since version 26.1.0.
+
+**Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API:** This API can be used in atomic services since API version 26.1.0.
+
+<!--Device-NavigationConfiguration-clearContentStackOnPrimaryNavigation?: boolean--><!--Device-NavigationConfiguration-clearContentStackOnPrimaryNavigation?: boolean-End-->
+
+**System capability:** SystemCapability.ArkUI.ArkUI.Full
+
+## recyclePagesOnLowMemory
+
+```TypeScript
+recyclePagesOnLowMemory?: boolean
+```
+
+Whether to recycle invisible pages when a low memory signal is received.
+
+When enabled, Navigation recycles invisible NavDestination page instance after receiving low memory pressure notifications. NavPathInfo is preserved, and the page can be reconstructed later.
+
+**Type:** boolean
+
+**Default:** false
+
+**Since:** 26.1.0
+
+**ArkTS mode:** ArkTS-Dyn only, since version 26.1.0.
+
+**Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API:** This API can be used in atomic services since API version 26.1.0.
+
+<!--Device-NavigationConfiguration-recyclePagesOnLowMemory?: boolean--><!--Device-NavigationConfiguration-recyclePagesOnLowMemory?: boolean-End-->
+
+**System capability:** SystemCapability.ArkUI.ArkUI.Full
+
 ## stackSizeLimit
 
 ```TypeScript
-stackSizeLimit?: number
+stackSizeLimit?: int
 ```
 
-导航页面堆栈大小限制。说明：  
--限制导航页面堆栈中活动页面节点的最大数量。  
--超过限制时，自动销毁最旧的页节点  
-以先进先出（先进先出）的顺序。  
--完全保留页面的NavPathInfo，支持页面重建。  
-- value &lt;=0不限制页面堆栈大小（默认值）。  
-- value &gt;0将堆栈大小限制为指定值。  
-取值范围为全体整数。
+Navigation page stack size limit.
 
-**Type:** number
+Description:  
+- Limits to maximum number of active page nodes in Navigation page stack.  
+- When limit is exceeded, oldest page nodes are automatically destroyed  
+ in FIFO (First-In-First-Out) order.  
+- NavPathInfo of pages is completely retained, supporting page recreation.  
+- value &lt;=0 No limit on page stack size (default value).  
+- value &gt;0 Limit stack size to specified value.
+
+**Type:** int
 
 **Default:** 0 (nolimit)
 
@@ -37,7 +90,7 @@ stackSizeLimit?: number
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
-<!--Device-NavigationConfiguration-stackSizeLimit?: number--><!--Device-NavigationConfiguration-stackSizeLimit?: number-End-->
+<!--Device-NavigationConfiguration-stackSizeLimit?: int--><!--Device-NavigationConfiguration-stackSizeLimit?: int-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 

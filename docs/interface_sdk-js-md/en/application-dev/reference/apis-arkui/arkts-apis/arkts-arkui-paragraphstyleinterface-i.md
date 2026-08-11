@@ -1,6 +1,6 @@
 # ParagraphStyleInterface
 
-文本段落样式。
+ParagraphStyleInterface
 
 **Since:** 12
 
@@ -16,9 +16,9 @@
 leadingMargin?: LengthMetrics | LeadingMarginPlaceholder
 ```
 
-设置文本段落的缩进。不支持百分比。
+Indent of the text paragraph. The value cannot be in percentage.
 
-默认值：0
+Default value: **0**.
 
 **Type:** [LengthMetrics](arkts-arkui-lengthmetrics-t.md) \| LeadingMarginPlaceholder
 
@@ -40,9 +40,9 @@ leadingMargin?: LengthMetrics | LeadingMarginPlaceholder
 leadingMarginSpan?: LeadingMarginSpan
 ```
 
-设置文本段落的自定义缩进。不支持百分比。
+Custom indentation information for text paragraphs. The value cannot be in percentage.
 
-默认值：0
+Default value: **0**.
 
 **Type:** [LeadingMarginSpan](arkts-arkui-styledstring-leadingmarginspan-c.md)
 
@@ -64,13 +64,7 @@ leadingMarginSpan?: LeadingMarginSpan
 maxLines?: number
 ```
 
-设置文本段落的最大行数。
-
-**说明：** 仅在Text中生效，建议在组件侧设置。
-
-默认不限制。
-
-取值范围：[0, INT32_MAX]，传入负数时不限制。
+Maximum number of lines in the text paragraph. By default, the number of lines is not limited.
 
 **Type:** number
 
@@ -92,13 +86,11 @@ maxLines?: number
 overflow?: TextOverflow
 ```
 
-设置文本段落超长时的显示方式。
+Display mode when the text is too long in the text paragraph.
 
-**说明：** 仅在Text中生效，建议在组件侧设置。
+Default value: **TextOverflow.None**.
 
-默认值：TextOverflow.None
-
-需配合maxLines使用，单独设置不生效。不支持TextOverflow.MARQUEE。
+This parameter must be used with **maxLines** for the settings to take effect. **TextOverflow.MARQUEE** is not supported.
 
 **Type:** [TextOverflow](arkts-arkui-enums-textoverflow-e.md)
 
@@ -120,9 +112,9 @@ overflow?: TextOverflow
 paragraphSpacing?: LengthMetrics
 ```
 
-设置文本段落的段落间距。
+Paragraph spacing of the styled string text.
 
-段落间距默认大小为0。不支持百分比。
+Default value: **0**. The value cannot be in percentage.
 
 **Type:** [LengthMetrics](arkts-arkui-lengthmetrics-t.md)
 
@@ -144,12 +136,13 @@ paragraphSpacing?: LengthMetrics
 shaderStyle?: ShaderStyle
 ```
 
-设置文本着色器效果。
+Text shader effect.
 
-**默认效果：** 不传入时不应用着色器效果，使用fontColor设置的颜色。
+This API does not take effect when used together with [TextStyleInterface](arkts-arkui-textstyleinterface-i.md)  
+**strokeWidth**. **shaderStyle** has a higher priority than [TextStyleInterface](arkts-arkui-textstyleinterface-i.md)  
+**fontColor**.
 
-该接口与[TextStyleInterface](arkts-arkui-textstyleinterface-i.md)的strokeWidth同时设置时，该接口不生效，shaderStyle的优先级高于  
-[TextStyleInterface](arkts-arkui-textstyleinterface-i.md)中的fontColor。
+**Since**: 26.0.0.
 
 **Type:** [ShaderStyle](arkts-arkui-shaderstyle-c.md)
 
@@ -171,7 +164,9 @@ shaderStyle?: ShaderStyle
 tailIndents?: LengthMetrics | Array<LengthMetrics>
 ```
 
-设置文本段落的文本尾部缩进。不支持百分比。当提供一个单独的LengthMetrics值时，所有行共享相同的尾部缩进；当提供一个数组时，第i个元素指定第i行的尾部缩进；如果文本行数超过数组长度，则数组中的最后一个元素将用于剩余的行。默认值：0
+Specify the tail indentation for each line in a paragraph.
+
+&lt;p&gt;&lt;strong&gt;NOTE&lt;/strong&gt;:&lt;br&gt;When a single LengthMetrics value is provided, all lines share the same tail indent.&lt;br&gt;When an array is provided, the i-th element specifies the tail indent for the i-th line.If the number of text lines exceeds the array length, the last element in the array is used for the remaining lines.&lt;br&gt;Negative values are treated as 0.&lt;/p&gt;
 
 **Type:** [LengthMetrics](arkts-arkui-lengthmetrics-t.md) \| Array&lt;LengthMetrics&gt;
 
@@ -193,9 +188,9 @@ tailIndents?: LengthMetrics | Array<LengthMetrics>
 textAlign?: TextAlign
 ```
 
-设置文本段落在水平方向的对齐方式。
+Horizontal alignment of the text paragraph.
 
-默认值：TextAlign.Start
+Default value: **TextAlign.Start**.
 
 **Type:** [TextAlign](../../apis-arkgraphics2d/arkts-apis/arkts-arkgraphics2d-text-textalign-e.md)
 
@@ -217,9 +212,9 @@ textAlign?: TextAlign
 textDirection?: TextDirection
 ```
 
-设置文本方向。
+Text direction.
 
-默认值：TextDirection.DEFAULT
+Default value: **TextDirection.DEFAULT**
 
 **Type:** [TextDirection](../../apis-arkgraphics2d/arkts-apis/arkts-arkgraphics2d-text-textdirection-e.md)
 
@@ -241,9 +236,9 @@ textDirection?: TextDirection
 textIndent?: LengthMetrics
 ```
 
-设置文本段落的首行文本缩进。不支持百分比。
+First line indent of the text paragraph. The value cannot be in percentage.
 
-默认值：0
+Default value: **0**.
 
 **Type:** [LengthMetrics](arkts-arkui-lengthmetrics-t.md)
 
@@ -265,9 +260,9 @@ textIndent?: LengthMetrics
 textVerticalAlign?: TextVerticalAlign
 ```
 
-设置文本段落在垂直方向的对齐方式。
+Vertical alignment mode of text paragraphs.
 
-默认值：TextVerticalAlign.BASELINE
+Default value: **TextVerticalAlign.BASELINE**.
 
 **Type:** [TextVerticalAlign](arkts-arkui-textverticalalign-e.md)
 
@@ -289,9 +284,9 @@ textVerticalAlign?: TextVerticalAlign
 wordBreak?: WordBreak
 ```
 
-设置文本段落的断行规则。
+Word break rule of the text paragraph.
 
-默认值：WordBreak.NORMAL
+Default value: **WordBreak.NORMAL**.
 
 **Type:** [WordBreak](arkts-arkui-enums-wordbreak-e.md)
 

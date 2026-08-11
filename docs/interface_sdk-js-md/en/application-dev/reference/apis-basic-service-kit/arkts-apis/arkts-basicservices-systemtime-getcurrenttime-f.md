@@ -12,7 +12,7 @@ import { systemTime } from 'kits/@kit.BasicServicesKit';
 function getCurrentTime(isNano: boolean, callback: AsyncCallback<number>): void
 ```
 
-获取自Unix纪元以来经过的时间，使用callback异步回调。
+Obtains the time elapsed since the Unix epoch. This API uses an asynchronous callback to return the result.
 
 **Since:** 8
 
@@ -30,8 +30,8 @@ function getCurrentTime(isNano: boolean, callback: AsyncCallback<number>): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| isNano | boolean | Yes | 返回结果是否为纳秒数。&lt;br&gt;- true：表示返回结果为纳秒数（ns）。 &lt;br&gt;- false：表示返回结果为毫秒数（ms）。 |
-| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;number&gt; | Yes | 回调函数，返回自Unix纪元以来经过的时间。 |
+| isNano | boolean | Yes | Whether the time to return is in nanoseconds.&lt;br&gt;- **true**: The result is in nanoseconds.&lt;br&gt;- **false**: The result is in milliseconds. |
+| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;number&gt; | Yes | Callback used to return the time elapsed since the Unix epoch. |
 
 **Error codes:**
 
@@ -65,7 +65,7 @@ try {
 function getCurrentTime(callback: AsyncCallback<number>): void
 ```
 
-获取自Unix纪元以来经过的时间，使用callback异步回调。
+Obtains the time elapsed since the Unix epoch. This API uses an asynchronous callback to return the result.
 
 **Since:** 8
 
@@ -83,7 +83,7 @@ function getCurrentTime(callback: AsyncCallback<number>): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;number&gt; | Yes | 回调函数，返回自Unix纪元以来经过的时间（ms）。 |
+| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;number&gt; | Yes | Callback used to return the time elapsed since the Unix epoch, in milliseconds. |
 
 **Error codes:**
 
@@ -117,7 +117,7 @@ try {
 function getCurrentTime(isNano?: boolean): Promise<number>
 ```
 
-获取自Unix纪元以来经过的时间，使用Promise异步回调。
+Obtains the time elapsed since the Unix epoch. This API uses a promise to return the result.
 
 **Since:** 8
 
@@ -135,13 +135,13 @@ function getCurrentTime(isNano?: boolean): Promise<number>
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| isNano | boolean | No | 返回结果是否为纳秒数，默认值为false。&lt;br/&gt;默认值为false。&lt;br/&gt;- true：表示返回结果为纳秒数（ns）。 &lt;br/&gt;- false：表示返回结果为毫秒数 （ms）。 |
+| isNano | boolean | No | Whether the time to return is in nanoseconds. The default value is **false**.&lt;br&gt;The default value is false.&lt;br&gt;- **true**: The result is in nanoseconds.&lt;br&gt;- **false**: The result is in milliseconds. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;number&gt; | Promise对象，返回自Unix纪元以来经过的时间。 |
+| Promise&lt;number&gt; | Promise used to return the time elapsed since the Unix epoch. |
 
 **Error codes:**
 

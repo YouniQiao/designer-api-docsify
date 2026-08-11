@@ -4,7 +4,7 @@
 export declare type CustomDarkColors = Partial<Colors>
 ```
 
-自定义深色主题颜色资源类型。
+Defines a struct for custom dark theme colors.
 
 **Since:** 23
 

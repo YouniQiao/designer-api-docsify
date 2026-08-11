@@ -6,7 +6,7 @@
 function getWantAgent(info: WantAgentInfo, callback: AsyncCallback<WantAgent>): void
 ```
 
-创建WantAgent。创建失败返回的WantAgent为空值。使用callback异步回调。
+Obtains a WantAgent object.
 
 **Since:** 7
 
@@ -26,8 +26,8 @@ function getWantAgent(info: WantAgentInfo, callback: AsyncCallback<WantAgent>): 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| info | [WantAgentInfo](arkts-ability-wantagentinfo-wantagentinfo-i.md) | Yes | WantAgent信息。 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;WantAgent&gt; | Yes | 创建WantAgent的回调方法。 |
+| info | [WantAgentInfo](arkts-ability-wantagentinfo-wantagentinfo-i.md) | Yes | about the WantAgent object to obtain. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;WantAgent&gt; | Yes | Callback method for obtaining the user ID of WantAgent instance. |
 
 ## Examples
 
@@ -79,7 +79,7 @@ wantAgent.getWantAgent({
 function getWantAgent(info: WantAgentInfo): Promise<WantAgent>
 ```
 
-创建WantAgent。创建失败返回的WantAgent为空值。使用Promise异步回调。
+Obtains a WantAgent object.
 
 **Since:** 7
 
@@ -99,13 +99,13 @@ function getWantAgent(info: WantAgentInfo): Promise<WantAgent>
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| info | [WantAgentInfo](arkts-ability-wantagentinfo-wantagentinfo-i.md) | Yes | WantAgent信息。 |
+| info | [WantAgentInfo](arkts-ability-wantagentinfo-wantagentinfo-i.md) | Yes | about the WantAgent object to obtain. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;WantAgent&gt; | 以Promise形式返回WantAgent。 |
+| Promise&lt;WantAgent&gt; | Returns the created { |
 
 ## Examples
 

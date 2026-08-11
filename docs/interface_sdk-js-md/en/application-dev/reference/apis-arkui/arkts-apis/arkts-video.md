@@ -6,31 +6,32 @@
 
 | Name | Description |
 | --- | --- |
-| [VideoController](arkts-arkui-video-videocontroller-c.md) | 一个VideoController对象可以控制一个或多个Video。 |
+| [VideoController](arkts-arkui-video-videocontroller-c.md) | Defines the video controller. |
+| [VideoControllerAsync](arkts-arkui-video-videocontrollerasync-c.md) | Video playback controller class for asynchronous operations.Provides methods to control video playback, timing, and display mode. |
 
 ### Interfaces
 
 | Name | Description |
 | --- | --- |
-| [FullscreenInfo](arkts-arkui-video-fullscreeninfo-i.md) | 用于描述当前视频是否进入全屏播放状态。 |
-| [PlaybackInfo](arkts-arkui-video-playbackinfo-i.md) | 用于描述当前视频播放的进度。 |
-| [PosterOptions](arkts-arkui-video-posteroptions-i.md) | 用于描述当前视频是否配置首帧送显。 |
-| [PreparedInfo](arkts-arkui-video-preparedinfo-i.md) | 用于描述当前视频的时长。 |
-| [VideoAttribute](arkts-arkui-video-videoattribute-i.md) | 用于播放视频文件并控制其播放状态的组件。 |
-| [VideoOptions](arkts-arkui-video-videooptions-i.md) | 定义Video的具体配置参数。 |
+| [FullscreenInfo](arkts-arkui-video-fullscreeninfo-i.md) | Fullscreen information of the video. |
+| [PlaybackInfo](arkts-arkui-video-playbackinfo-i.md) | Playback information of the video. |
+| [PosterOptions](arkts-arkui-video-posteroptions-i.md) | Defines the video poster options. |
+| [PreparedInfo](arkts-arkui-video-preparedinfo-i.md) | Prepared information of the video. |
+| [VideoAttribute](arkts-arkui-video-videoattribute-i.md) | Defines the Video attribute. |
+| [VideoOptions](arkts-arkui-video-videooptions-i.md) | Defines the video options. |
 
 <!--Del-->
 ### Interfaces（系统接口）
 
 | Name | Description |
 | --- | --- |
-| [VideoAttribute](arkts-arkui-video-videoattribute-i-sys.md) | 用于播放视频文件并控制其播放状态的组件。 |
+| [VideoAttribute](arkts-arkui-video-videoattribute-i-sys.md) | Defines the Video attribute. |
 <!--DelEnd-->
 
 ### Enums
 
 | Name | Description |
 | --- | --- |
-| [PlaybackSpeed](arkts-arkui-video-playbackspeed-e.md) | 视频播放倍速选项。 |
-| [SeekMode](arkts-arkui-video-seekmode-e.md) | 视频跳转模式选项。 |
+| [PlaybackSpeed](arkts-arkui-video-playbackspeed-e.md) | playback speed. |
+| [SeekMode](arkts-arkui-video-seekmode-e.md) | Seek mode. |
 

@@ -16,7 +16,7 @@ Enum type supplied to {@link error} when onSslErrorEventReceive being called.
 Invalid = 0
 ```
 
-一般错误。
+General error.
 
 **Since:** 9
 
@@ -34,7 +34,7 @@ Invalid = 0
 HostMismatch = 1
 ```
 
-主机名不匹配。
+Hostname mismatch.
 
 **Since:** 9
 
@@ -52,7 +52,7 @@ HostMismatch = 1
 DateInvalid = 2
 ```
 
-证书日期无效。
+The certificate date is invalid.
 
 **Since:** 9
 
@@ -70,7 +70,7 @@ DateInvalid = 2
 Untrusted = 3
 ```
 
-证书颁发机构不受信任。
+The certificate authority is not trusted.
 
 **Since:** 9
 

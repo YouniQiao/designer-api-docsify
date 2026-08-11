@@ -8,7 +8,7 @@ export declare function AlphabetIndexer(
 ): AlphabetIndexerAttribute
 ```
 
-创建索引条组件。
+Defines AlphabetIndexer Component
 
 **Since:** 23
 
@@ -24,7 +24,7 @@ export declare function AlphabetIndexer(
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| options | [AlphabetIndexerOptions](arkts-arkui-alphabetindexer-alphabetindexeroptions-i.md) | Yes | 设置索引条组件参数。 |
+| options | [AlphabetIndexerOptions](arkts-arkui-alphabetindexer-alphabetindexeroptions-i.md) | Yes | indexer constructor options |
 
 **Return value:**
 
@@ -41,11 +41,11 @@ export declare function AlphabetIndexer(
 ): AlphabetIndexerAttribute
 ```
 
-定义AlphabetIndexer组件
+Defines AlphabetIndexer Component
 
-**Since:** 26.0.0
+**Since:** 26.1.0
 
-**ArkTS mode:** ArkTS-Sta only, since version 26.0.0.
+**ArkTS mode:** ArkTS-Sta only, since version 26.1.0.
 
 **Decorator:** @Builder
 
@@ -59,7 +59,7 @@ export declare function AlphabetIndexer(
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| style_ | [CustomBuilderT](../arkts-components/arkts-arkui-custombuildert-t.md)&lt;AlphabetIndexerAttribute&gt; | Yes | AlphabetIndexer属性实例 |
+| style_ | [CustomBuilderT](../arkts-components/arkts-arkui-custombuildert-t.md)&lt;AlphabetIndexerAttribute&gt; | Yes | AlphabetIndexer attribute instance |
 
 **Return value:**
 

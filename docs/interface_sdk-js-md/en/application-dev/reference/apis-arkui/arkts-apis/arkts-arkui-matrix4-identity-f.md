@@ -12,7 +12,7 @@ import { matrix4 } from 'kits/@kit.ArkUI';
 function identity(): Matrix4Transit
 ```
 
-Matrix的初始化函数，可以返回一个单位矩阵对象。
+Matrix initialization function, which can return an identity matrix object.
 
 **Since:** 23
 
@@ -28,5 +28,5 @@ Matrix的初始化函数，可以返回一个单位矩阵对象。
 
 | Type | Description |
 | --- | --- |
-| [Matrix4Transit](arkts-arkui-matrix4-matrix4transit-i.md) | 单位矩阵对象。 |
+| [Matrix4Transit](arkts-arkui-matrix4-matrix4transit-i.md) | Return to Matrix4Transit |
 

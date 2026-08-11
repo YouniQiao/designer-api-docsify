@@ -1,6 +1,6 @@
 # ExtendableComponent
 
-可扩展组件，是自定义组件和自定义对话框的基类。
+Definition of extendable component, which is base class of custom component and custom dialog.
 
 **Inheritance/Implementation:** ExtendableComponent implements [LifeCycle](arkts-arkui-extendablecomponent-lifecycle-i.md), [IVariableOwner](arkts-arkui-decorator-ivariableowner-i.md)
 
@@ -42,7 +42,7 @@ The dialog controller of the custom component.
 getUIContext(): UIContext
 ```
 
-获取UIContext对象。
+Get current UIContext.
 
 **Since:** 23
 
@@ -58,7 +58,7 @@ getUIContext(): UIContext
 
 | Type | Description |
 | --- | --- |
-| [UIContext](arkts-arkui-arkui-uicontext-uicontext-c.md) | 返回UIContext实例对象。在异步调用的回调方法中使用该接口，或者该接口的起始调用不在当前页面时，可能导致接口调用发生在自定义组件销毁之后，返回undefined。 |
+| [UIContext](arkts-arkui-arkui-uicontext-uicontext-c.md) | The UIContext that the custom component belongs to. |
 
 ## getUniqueId
 
@@ -66,7 +66,7 @@ getUIContext(): UIContext
 getUniqueId(): int
 ```
 
-获取当前组件的UniqueId。UniqueId为系统为每个组件分配的Id，可保证当前应用中的唯一性。若在组件对应的节点未创建或已销毁时获取，返回无效UniqueId：-1。
+Get uniqueId of the custom component.
 
 **Since:** 23
 
@@ -82,7 +82,7 @@ getUniqueId(): int
 
 | Type | Description |
 | --- | --- |
-| int | 返回当前Component的UniqueId。 |
+| int | The uniqueId of the custom component. |
 
 ## onWillApplyTheme
 
@@ -90,7 +90,7 @@ getUniqueId(): int
 onWillApplyTheme(theme: Theme): void
 ```
 
-onWillApplyTheme函数用于获取当前组件上下文的Theme对象，在创建自定义组件的新实例后，在执行其build()函数之前执行。允许在onWillApplyTheme函数中改变状态变量，更改将在后续执行build()函数中生效。
+The onWillApplyTheme function is a custom hook to get active theme object from the context.
 
 **Since:** 23
 
@@ -106,7 +106,7 @@ onWillApplyTheme函数用于获取当前组件上下文的Theme对象，在创�
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| theme | [Theme](arkts-arkui-arkui-theme-theme-i.md) | Yes | 自定义组件当前生效的Theme对象。 |
+| theme | [Theme](arkts-arkui-arkui-theme-theme-i.md) | Yes | Custom theme init params. |
 
 ## queryNavDestinationInfo
 
@@ -114,7 +114,7 @@ onWillApplyTheme函数用于获取当前组件上下文的Theme对象，在创�
 queryNavDestinationInfo(): NavDestinationInfo | undefined
 ```
 
-查询自定义组件所属的NavDestination信息，仅当自定义组件在NavDestination的内部时才生效。
+Queries the navigation destination information.
 
 **Since:** 23
 
@@ -138,7 +138,7 @@ queryNavDestinationInfo(): NavDestinationInfo | undefined
 queryNavDestinationInfo(isInner: boolean | undefined): NavDestinationInfo | undefined
 ```
 
-查询当前自定义组件距离最近的NavDestination信息（要求该NavDestination是Navigation的导航页或子页），isInner为true表示向内查找，false表示向外查找。
+Queries the navigation destination information.
 
 **Since:** 23
 
@@ -168,7 +168,7 @@ queryNavDestinationInfo(isInner: boolean | undefined): NavDestinationInfo | unde
 queryNavigationInfo(): NavigationInfo | undefined
 ```
 
-查询自定义组件所属的Navigation信息。
+Query the navigation information of the current custom component.
 
 **Since:** 23
 
@@ -192,7 +192,7 @@ queryNavigationInfo(): NavigationInfo | undefined
 queryRouterPageInfo(): RouterPageInfo | undefined
 ```
 
-获取RouterPageInfo实例对象。
+Query the router page information of the current custom component.
 
 **Since:** 23
 

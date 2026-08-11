@@ -12,9 +12,9 @@ import { hiAppEvent } from 'kits/@kit.PerformanceAnalysisKit';
 function configEventPolicy(policy: EventPolicy): Promise<void>
 ```
 
-系统事件相关的配置策略设置方法，使用Promise方式作为异步回调。
+Sets a system event configuration policy. This API uses a promise to return the result.
 
-在同一生命周期中，可以通过配置策略设置系统事件相关的策略参数。
+In the same lifecycle, you can set system event configuration by policy.
 
 **Since:** 22
 
@@ -30,13 +30,13 @@ function configEventPolicy(policy: EventPolicy): Promise<void>
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| policy | [EventPolicy](arkts-performanceanalysis-hiappevent-eventpolicy-i.md) | Yes | 系统事件配置策略。 |
+| policy | [EventPolicy](arkts-performanceanalysis-hiappevent-eventpolicy-i.md) | Yes | System event configuration policy. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise对象，无返回结果。 &lt;br&gt;各个事件的事件配置策略，详细规格见[EventPolicy]{ |
+| Promise&lt;void&gt; | Promise that returns no value. &lt;br&gt;For details about the event configuration policy, see [EventPolicy]{ |
 
 ## Examples
 
@@ -47,13 +47,13 @@ import { BusinessError } from '@kit.BasicServicesKit';
 import { hilog } from '@kit.PerformanceAnalysisKit';
 
 let policy: hiAppEvent.EventPolicy = {
-  mainThreadJankPolicy:{
-    logType: 1,
-    sampleInterval: 100,
-    ignoreStartupTime: 11,
-    sampleCount: 21,
-    reportTimesPerApp: 3,
-    autoStopSampling: true
+  "mainThreadJankPolicy":{
+    "logType": 1,
+    "sampleInterval": 100,
+    "ignoreStartupTime": 11,
+    "sampleCount": 21,
+    "reportTimesPerApp": 3,
+    "autoStopSampling": true
   }
 };
 hiAppEvent.configEventPolicy(policy).then(() => {

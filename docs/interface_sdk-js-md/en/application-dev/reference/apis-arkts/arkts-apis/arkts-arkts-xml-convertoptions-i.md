@@ -1,6 +1,6 @@
 # ConvertOptions
 
-转换选项，用于自定义XML到JavaScript对象的转换行为，如控制是否修剪空白字符、是否忽略特定组件（声明、指令、属性、注释、CDATA、Doctype和文本等），以及指定输出对象中各类型组件的属性键名称。
+Options for conversion.
 
 **Since:** 8
 
@@ -22,7 +22,7 @@ import { convertxml } from 'kits/@kit.ArkTS';
 attributesKey: string
 ```
 
-用于输出对象中attributes的属性键的名称，仅在ignoreAttributes为false时生效。
+Name of the attribute key for **attributes** in the output object.
 
 **Type:** string
 
@@ -42,7 +42,7 @@ attributesKey: string
 cdataKey: string
 ```
 
-用于输出对象中cdata的属性键的名称，仅在ignoreCDATA为false时生效。
+Name of the attribute key for **cdata** in the output object.
 
 **Type:** string
 
@@ -62,7 +62,7 @@ cdataKey: string
 commentKey: string
 ```
 
-用于输出对象中comment的属性键的名称，仅在ignoreComment为false时生效。
+Name of the attribute key for **comment** in the output object.
 
 **Type:** string
 
@@ -82,7 +82,7 @@ commentKey: string
 declarationKey: string
 ```
 
-用于输出对象中declaration的属性键的名称，仅在ignoreDeclaration为false时生效。
+Name of the attribute key for **declaration** in the output object.
 
 **Type:** string
 
@@ -102,7 +102,7 @@ declarationKey: string
 doctypeKey: string
 ```
 
-用于输出对象中doctype的属性键的名称，仅在ignoreDoctype为false时生效。
+Name of the attribute key for **doctype** in the output object.
 
 **Type:** string
 
@@ -122,7 +122,7 @@ doctypeKey: string
 elementsKey: string
 ```
 
-用于输出对象中elements的属性键的名称。
+Name of the attribute key for **elements** in the output object.
 
 **Type:** string
 
@@ -142,7 +142,7 @@ elementsKey: string
 ignoreAttributes?: boolean
 ```
 
-是否忽略元素的属性信息，true表示忽略元素的属性信息，false表示保留元素的属性信息，默认false。
+Whether to ignore the element's attribute information. The value **true** means to ignore the element's attribute information, and **false** means the opposite. The default value is **false**.
 
 **Type:** boolean
 
@@ -162,7 +162,7 @@ ignoreAttributes?: boolean
 ignoreCDATA?: boolean
 ```
 
-是否忽略元素的CDATA（Character Data）信息，true表示忽略元素的CDATA信息，false表示保留元素的CDATA信息，默认false。
+Whether to ignore the element's CDATA information. The value **true** means to ignore the element's CDATA information, and **false** means the opposite. The default value is **false**.
 
 **Type:** boolean
 
@@ -182,7 +182,7 @@ ignoreCDATA?: boolean
 ignoreComment?: boolean
 ```
 
-是否忽略元素的注释信息，true表示忽略元素的注释信息，false表示保留元素的注释信息，默认false。
+Whether to ignore element comments. The value **true** means to ignore element comments, and **false** means the opposite. The default value is **false**.
 
 **Type:** boolean
 
@@ -202,7 +202,7 @@ ignoreComment?: boolean
 ignoreDeclaration?: boolean
 ```
 
-是否忽略XML声明，true表示忽略XML声明，false表示保留XML声明，默认false。
+Whether to ignore the XML declaration. The value **true** means to ignore the XML declaration, and **false**means the opposite. The default value is **false**.
 
 **Type:** boolean
 
@@ -222,7 +222,7 @@ ignoreDeclaration?: boolean
 ignoreDoctype?: boolean
 ```
 
-是否忽略Doctype（Document Type Declaration）信息，true表示忽略元素的Doctype信息，false表示保留元素的Doctype信息，默认false。
+Whether to ignore the element's Doctype information. The value **true** means to ignore the element's Doctype information, and **false** means the opposite. The default value is **false**.
 
 **Type:** boolean
 
@@ -242,7 +242,7 @@ ignoreDoctype?: boolean
 ignoreInstruction?: boolean
 ```
 
-是否忽略XML处理指令，true表示忽略XML处理指令，false表示保留XML处理指令，默认false。
+Whether to ignore the XML processing instruction. The value **true** means to ignore the XML processing instruction, and **false** means the opposite. The default value is **false**.
 
 **Type:** boolean
 
@@ -262,7 +262,7 @@ ignoreInstruction?: boolean
 ignoreText?: boolean
 ```
 
-是否忽略元素的文本信息，true表示忽略元素的文本信息，false表示保留元素的文本信息，默认false。
+Whether to ignore the element's text information. The value **true** means to ignore the element's text information, and **false** means the opposite. The default value is **false**.
 
 **Type:** boolean
 
@@ -282,7 +282,7 @@ ignoreText?: boolean
 instructionKey: string
 ```
 
-用于输出对象中instruction的属性键的名称，仅在ignoreInstruction为false时生效。
+Name of the attribute key for **instruction** in the output object.
 
 **Type:** string
 
@@ -302,7 +302,7 @@ instructionKey: string
 nameKey: string
 ```
 
-用于输出对象中name的属性键的名称。
+Name of the attribute key for **name** in the output object.
 
 **Type:** string
 
@@ -322,7 +322,7 @@ nameKey: string
 parentKey: string
 ```
 
-用于输出对象中parent的属性键的名称，parent表示当前元素所属的父元素名称。
+Name of the attribute key for **parent** in the output object.
 
 **Type:** string
 
@@ -342,7 +342,7 @@ parentKey: string
 textKey: string
 ```
 
-用于输出对象中text的属性键的名称，仅在ignoreText为false时生效。
+Name of the attribute key for **text** in the output object.
 
 **Type:** string
 
@@ -362,7 +362,7 @@ textKey: string
 trim: boolean
 ```
 
-是否修剪位于文本内容前后的空白字符，true表示元素内文本内容前后的空白字符将会被修剪，false则表示空白字符会被保留，默认false。
+Whether to trim the whitespace characters before and after the text. The value **true** means to trim the whitespace characters before and after the text, and **false** means to keep them.
 
 **Type:** boolean
 
@@ -382,7 +382,7 @@ trim: boolean
 typeKey: string
 ```
 
-用于输出对象中type的属性键的名称，type标识XML组件的类型（如element、text、cdata、comment、instruction等）。
+Name of the attribute key for **type** in the output object.
 
 **Type:** string
 

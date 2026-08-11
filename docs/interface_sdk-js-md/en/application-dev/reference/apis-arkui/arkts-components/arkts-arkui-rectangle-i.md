@@ -1,20 +1,28 @@
 # Rectangle
 
-矩形区域类型。
+The data type used to describe a rectangular area.
 
-> **说明：**
+> **NOTE：**
 > 
-> - x和y可以设置正负值百分比。当x设置为'100%'时表示热区往右偏移组件本身宽度大小，当x设置为'-100%'时表示热区往左偏移组件本身宽度大小。当y设置为'100%'时表示热区往下偏移组件本身高度大小，当y设置为
-> '-100%'时表示热区往上偏移组件本身高度大小。
+> - **x** and **y** can be set to a positive or negative percentage value. For example, when **x** is set to
+> **'100%'**, the touch target is the offset from the right edge of the component by the component's width. When
+> **x** is set to **'-100%'**, the touch target is the offset from the left edge of the component by the component's
+> width. When **y** is set to **'100%'**, the touch target is the offset from the bottom edge of the component by the
+> component's height. When **y** is set to **'-100%'**, the touch target is the offset from the top edge of the
+> component by the component's height.
 > 
-> - width和height设置百分比时，只能设置正值百分比。width：'100%'表示热区宽度设置为该组件本身的宽度。比如组件本身宽度是100vp，那么'100%'表示热区宽度也为100vp。height：'100%'表示热区
-> 高度设置为该组件本身的高度。
+> - **width** and **height** can only be set to positive percentage values. When **width** is set to **'100%'**, the
+> width of the touch target is equal to that of the component. For example, if the width of a component is 100 vp,
+> **'100%'** indicates that the width of the touch target is also 100 vp. When **height** is set to **'100%'**, the
+> height of the touch target is equal to that of the component.
 > 
-> - 百分比相对于组件自身宽高进行计算。
+> - The percentage is measured relative to the component itself.
 > 
-> - 当父组件设置[clip](arkts-arkui-commonmethod-c.md#clip)(true)时，子组件的响应会受到父组件触摸热区的影响，不在父组件触摸热区内的子组件无法响应手势和事件。
+> - When the parent component has [clip](arkts-arkui-commonmethod-c.md#clip) set to **true**, child component
+> interaction is affected by the parent component's response region. Children outside the parent component's response
+> region won't respond to gestures or events.
 > 
-> - width和height不支持calc()的动态计算。
+> - **width** and **height** do not support **calc()** dynamic calculations.
 
 **Since:** 8
 
@@ -30,9 +38,9 @@
 height?: Length
 ```
 
-触摸热区的高度。
+Height of the touch target.
 
-默认值：'100%'
+Default value: **'100%'**
 
 **Type:** [Length](../arkts-apis/arkts-arkui-length-t.md)
 
@@ -54,9 +62,9 @@ height?: Length
 width?: Length
 ```
 
-触摸热区的宽度。
+Width of the touch target.
 
-默认值：'100%'
+Default value: **'100%'**
 
 **Type:** [Length](../arkts-apis/arkts-arkui-length-t.md)
 
@@ -78,9 +86,9 @@ width?: Length
 x?: Length
 ```
 
-触摸点相对于组件左上角的x轴坐标。
+X coordinate of the touch point relative to the upper left corner of the component.
 
-默认值：0vp
+Default value: **0vp**
 
 **Type:** [Length](../arkts-apis/arkts-arkui-length-t.md)
 
@@ -102,9 +110,9 @@ x?: Length
 y?: Length
 ```
 
-触摸点相对于组件左上角的y轴坐标。
+Y coordinate of the touch point relative to the upper left corner of the component.
 
-默认值：0vp
+Default value: **0vp**
 
 **Type:** [Length](../arkts-apis/arkts-arkui-length-t.md)
 

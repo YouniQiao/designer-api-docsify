@@ -1,14 +1,15 @@
 # AdComponent
 
-本模块提供展示广告的能力，覆盖了原生、贴片、开屏等广告样式。
+This module provides the capability of displaying ads, covering native, roll, splash, and other ad styles.
 
-> **说明：**
+> **NOTE：**
 > 
-> 为了保证广告能正确展示，该接口必须和请求广告接口配套使用。效果和使用方法可参考
-> [原生广告](https://developer.huawei.com/consumer/cn/doc/harmonyos-guides/ads-publisher-service-native)、
-> [贴片广告](https://developer.huawei.com/consumer/cn/doc/harmonyos-guides/ads-publisher-service-roll)、
-> [开屏广告](https://developer.huawei.com/consumer/cn/doc/harmonyos-guides/ads-publisher-service-splash)
-> 接入和展示。
+> To ensure that ads can be displayed correctly, this API must be used in conjunction with the ad request API.
+> For effects and usage methods, refer to
+> [Native Ads](https://developer.huawei.com/consumer/en/doc/harmonyos-guides/ads-publisher-service-native),
+> [Roll Ads](https://developer.huawei.com/consumer/en/doc/harmonyos-guides/ads-publisher-service-roll),
+> and [Splash Ads](https://developer.huawei.com/consumer/en/doc/harmonyos-guides/ads-publisher-service-splash)
+> integration and display.
 
 **Since:** 11
 
@@ -32,8 +33,8 @@ import { AdComponent } from 'kits/@kit.AdsKit';
 adRenderer?: () => void
 ```
 
-应用自渲染广告样式。应用自渲染广告样式为受限使用能力，具体请前往  
-[流量变现官网客服支持](https://developer.huawei.com/consumer/cn/doc/monetize/kefuzhichi-0000001104461922)进行咨询。
+Application self-rendered ad style. The application self-rendered ad style is a restricted capability. For details,please consult   
+[Traffic Monetization Official Website Customer Support](https://developer.huawei.com/consumer/en/doc/monetize/support-0000001061434261).
 
 **Since:** 12
 
@@ -53,7 +54,7 @@ adRenderer?: () => void
 build(): void
 ```
 
-用于创建AdComponent对象的构造函数。
+A constructor used to create an **AdComponent** object.
 
 **Since:** 11
 
@@ -71,9 +72,9 @@ build(): void
 ads: advertising.Advertisement[]
 ```
 
-广告对象数组。
+Array of ad objects.
 
-说明：非贴片广告类型，组件只展示数组第一个数据。
+NOTE: For non-roll ad types, the component only displays the first data in the array.
 
 **Type:** advertising.Advertisement[]
 
@@ -93,7 +94,7 @@ ads: advertising.Advertisement[]
 displayOptions: advertising.AdDisplayOptions
 ```
 
-广告展示参数。
+Ad display parameters.
 
 **Type:** advertising.AdDisplayOptions
 
@@ -113,7 +114,7 @@ displayOptions: advertising.AdDisplayOptions
 interactionListener: advertising.AdInteractionListener
 ```
 
-广告状态变化回调。
+Callback for ad status changes.
 
 **Type:** advertising.AdInteractionListener
 
@@ -133,8 +134,8 @@ interactionListener: advertising.AdInteractionListener
 rollPlayState?: number
 ```
 
-用于对外提供贴片广告播放状态，设置1为播放，2为暂停，默认值为2，其他值为非法值，不改变之前的播放状态。在贴片广告所在页面需要通过@State关联属性，使用方法参考  
-[示例代码](https://developer.huawei.com/consumer/cn/doc/harmonyos-guides/ads-publisher-service-roll#展示广告)。
+Used to provide the playback status of roll ads externally. Set to 1 for playing and 2 for paused. The default value is 2. Other values are invalid and do not change the previous playback status. The page where the roll ad is located needs to be associated with the property through @State. For usage methods, refer to the   
+[sample code](https://developer.huawei.com/consumer/en/doc/harmonyos-guides/ads-publisher-service-roll#section4281165885118).
 
 **Type:** number
 

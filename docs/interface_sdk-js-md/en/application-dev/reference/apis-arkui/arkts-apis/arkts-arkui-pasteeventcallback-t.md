@@ -4,7 +4,7 @@
 export type PasteEventCallback = (event?: PasteEvent) => void
 ```
 
-粘贴完成前，触发回调。
+Callback function when a paste operation is performed.
 
 **Since:** 23
 
@@ -20,5 +20,5 @@ export type PasteEventCallback = (event?: PasteEvent) => void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| event | [PasteEvent](arkts-arkui-richeditor-pasteevent-i.md) | No | 定义用户粘贴事件。 |
+| event | [PasteEvent](arkts-arkui-richeditor-pasteevent-i.md) | No | The paste event. |
 

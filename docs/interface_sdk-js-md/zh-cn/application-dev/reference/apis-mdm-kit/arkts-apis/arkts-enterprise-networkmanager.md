@@ -16,12 +16,6 @@
 
 **系统能力：** SystemCapability.Customization.EnterpriseDeviceManager
 
-## 导入模块
-
-```TypeScript
-import { networkManager } from 'kits/@kit.MDMKit';
-```
-
 ## 汇总
 
 ### 函数

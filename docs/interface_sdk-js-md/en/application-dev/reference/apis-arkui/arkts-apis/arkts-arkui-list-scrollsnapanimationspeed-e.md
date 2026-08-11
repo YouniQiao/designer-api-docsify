@@ -1,6 +1,6 @@
 # ScrollSnapAnimationSpeed
 
-设置列表项滚动限位动画速度。
+Declare the speed scroll snap animation.
 
 **Since:** 26.0.0
 
@@ -16,7 +16,7 @@
 NORMAL = 0
 ```
 
-默认列表限位动画速度，通常用于列表项尺寸较大，划一下滚动一个列表项场景。
+The speed of scroll snap animation is normal.
 
 **Since:** 26.0.0
 
@@ -34,7 +34,7 @@ NORMAL = 0
 SLOW = 1
 ```
 
-列表限位动画速度较慢，通常用于列表项尺寸较小，划一下滚动多个列表项场景。
+The speed of scroll snap animation slow.
 
 **Since:** 26.0.0
 

@@ -12,7 +12,7 @@ import { insightIntentDriver } from 'kits/@kit.AbilityKit';
 function getInsightIntentInfoByBundleName(bundleName: string, intentFlags: int): Promise<Array<InsightIntentInfo>>
 ```
 
-根据包名查询当前设备上的意图信息。使用Promise异步回调。
+Obtains the intent information on the current device based on the given bundle name. This API uses a promise to return the result.
 
 **Since:** 20
 
@@ -32,20 +32,20 @@ function getInsightIntentInfoByBundleName(bundleName: string, intentFlags: int):
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| bundleName | string | Yes | 应用包名称。 &lt;br/&gt;**说明：**&lt;br/&gt; 若包名不存在，则返回空数组。 |
-| intentFlags | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | 意图信息（[InsightIntentInfo](arkts-ability-insightintentdriver-insightintentinfo-i-sys.md)）的标识，用于表示查询全量意图信息或者简要意 图信息，参考[GetInsightIntentFlag](arkts-ability-insightintentdriver-getinsightintentflag-e-sys.md)。 |
+| bundleName | string | Yes | Bundle name of the application.&lt;br&gt;**NOTE：**&lt;br&gt; If the bundle name does not exist, an empty array is returned. |
+| intentFlags | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | Flag of the intent information ( [InsightIntentInfo](arkts-ability-insightintentdriver-insightintentinfo-i-sys.md)). It is used to query full or brief intent information. For details, see [GetInsightIntentFlag](arkts-ability-insightintentdriver-getinsightintentflag-e-sys.md). |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;Array&lt;InsightIntentInfo&gt;&gt; | Promise对象，返回意图信息对象数组。 |
+| Promise&lt;Array&lt;InsightIntentInfo&gt;&gt; | Promise used to return an array holding InsightIntentInfo objects. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 16000050 | Internal error. Possible causes: 1. Failed to connect to the system service; 2. The system service fails to communicate with the dependency module. |
-| 201 | Permission denied. |
-| 202 | Not system application. |
+| [16000050](../errorcode-ability.md#16000050-internal-error) | Internal error. Possible causes: 1. Failed to connect to the system service; 2. The system service fails to communicate with the dependency module. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system application. |
 

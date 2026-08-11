@@ -23,12 +23,6 @@
 
 **系统能力：** SystemCapability.HiviewDFX.Hiview.FaultLogger
 
-## 导入模块
-
-```TypeScript
-import { FaultLogExtensionAbility } from 'kits/@kit.PerformanceAnalysisKit';
-```
-
 ## onConnect
 
 ```TypeScript

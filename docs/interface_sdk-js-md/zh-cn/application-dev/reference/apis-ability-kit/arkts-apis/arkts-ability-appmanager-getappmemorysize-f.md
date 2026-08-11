@@ -1,11 +1,5 @@
 # getAppMemorySize
 
-## 导入模块
-
-```TypeScript
-import { appManager } from 'kits/@kit.AbilityKit';
-```
-
 ## getAppMemorySize
 
 ```TypeScript
@@ -34,7 +28,7 @@ function getAppMemorySize(): Promise<int>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 16000050 | Internal error. |
+| [16000050](../errorcode-ability.md#16000050-内部错误) | Internal error. |
 
 ## 示例
 
@@ -43,8 +37,9 @@ import { appManager } from '@kit.AbilityKit';
 import { BusinessError } from '@kit.BasicServicesKit';
 
 appManager.getAppMemorySize().then((data) => {
-  console.info(`The size of app memory is: ${JSON.stringify(data)}`);
-}).catch((error: BusinessError) => {
+  console.info(`The size of app memory is: ${data}`);
+}).catch((err: Error) => {
+  let error = err as BusinessError;
   console.error(`code: ${error.code}, msg:${error.message}`);
 });
 ```
@@ -78,8 +73,8 @@ function getAppMemorySize(callback: AsyncCallback<int>): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
-| 16000050 | Internal error. |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| [16000050](../errorcode-ability.md#16000050-内部错误) | Internal error. |
 
 ## 示例
 
@@ -92,6 +87,6 @@ appManager.getAppMemorySize((err, data) => {
   } else {
     console.info(`The size of app memory is: ${JSON.stringify(data)}`);
   }
-});
+})
 ```
 

@@ -12,7 +12,7 @@ import { media } from 'kits/@kit.MediaKit';
 function createMediaSourceWithDataSource(dataSrc: AVDataSrcDescriptor): MediaSource | undefined
 ```
 
-通过自定义数据源创建媒体源。
+Creates a media source from a custom data source.
 
 **Since:** 26.0.0
 
@@ -30,37 +30,11 @@ function createMediaSourceWithDataSource(dataSrc: AVDataSrcDescriptor): MediaSou
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| dataSrc | [AVDataSrcDescriptor](arkts-media-multimedia-media-avdatasrcdescriptor-i.md) | Yes | 流式媒体资源描述符。 |
+| dataSrc | [AVDataSrcDescriptor](arkts-media-media-avdatasrcdescriptor-i.md) | Yes | Interface definition for obtaining media data. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [MediaSource](arkts-media-multimedia-media-mediasource-i.md) | 返回MediaSource，用于媒体资源设置。 |
-
-## Examples
-
-```TypeScript
-import { common } from '@kit.AbilityKit';
-import { fileIo as fs, ReadOptions } from '@kit.CoreFileKit';
-
-let context = this.getUIContext().getHostContext() as common.UIAbilityContext;
-let fileDescriptor = await context.resourceManager.getRawFd('xxx.mp4');
-let file = fs.openSync("xxx.mp4");
-let dataSrc: media.AVDataSrcDescriptor = {
-  fileSize: fileDescriptor.length,
-  callback: (buf: ArrayBuffer, length: number, pos?: number) => {
-    let readLen = 0;
-    if (pos) {
-      let option: ReadOptions = {
-        offset: pos,
-        length: length,
-      };
-      readLen = fs.readSync(file.fd, buf, option);
-    }
-    return readLen > 0 ? readLen : -1;
-  }
-}
-let mediaSource : media.MediaSource | undefined =  media.createMediaSourceWithDataSource(dataSrc);
-```
+| [MediaSource](arkts-media-media-mediasource-i.md) | MediaSource instance if the operation is successful; returns undefined otherwise. |
 

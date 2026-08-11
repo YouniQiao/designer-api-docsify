@@ -12,7 +12,7 @@ import { emitter } from 'kits/@kit.BasicServicesKit';
 function onceGenericEventData<T>(eventId: string, callback: Callback<GenericEventData<T>>): void
 ```
 
-单次订阅当前Emitter类实例指定的事件，在接收到该事件且执行完相应的回调函数后，自动取消订阅。使用callback异步回调。
+Subscribes to an event in one-shot manner and unsubscribes from it after the event callback is executed.
 
 **Since:** 23
 
@@ -26,6 +26,31 @@ function onceGenericEventData<T>(eventId: string, callback: Callback<GenericEven
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| eventId | string | Yes | 单次订阅的事件。取值为长度不超过10240字节的自定义字符串，且不可为空字符。 |
-| callback | [Callback](arkts-basicservices-base-callback-i.md)&lt;GenericEventData&lt;T&gt;&gt; | Yes | 接收到该事件时需要执行的回调处理函数。 |
+| eventId | string | Yes | Event to subscribe to in one-shot manner. The value cannot be an empty string and exceed 10240 bytes. |
+| callback | [Callback](arkts-basicservices-base-callback-i.md)&lt;GenericEventData&lt;T&gt;&gt; | Yes | Callback to be executed when the event is received. |
+
+## Examples
+
+```TypeScript
+import { Callback } from '@kit.BasicServicesKit';
+
+class Sample {
+  constructor() {
+    this.count = 100;
+  }
+  printCount() {
+    console.info('Print count : ' + this.count);
+  }
+  count: number;
+}
+
+let callback: Callback<emitter.GenericEventData<Sample>> = (eventData: emitter.GenericEventData<Sample>): void => {
+  console.info(`eventData: ${JSON.stringify(eventData?.data)}`);
+  let storage: Sample = eventData.data! as Sample;
+  storage.printCount();
+}
+
+// Execute the callback after receiving the event whose ID is eventId.
+emitter.onceGenericEventData("eventId", callback);
+```
 

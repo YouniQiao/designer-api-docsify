@@ -12,7 +12,7 @@ import { wallpaper } from 'kits/@kit.BasicServicesKit';
 function isOperationAllowed(callback: AsyncCallback<boolean>): void
 ```
 
-是否允许用户设置壁纸。
+Checks whether a user is allowed to set wallpapers.Returns true if a user is allowed to set wallpapers. returns false otherwise.
 
 **Since:** 7
 
@@ -28,7 +28,7 @@ function isOperationAllowed(callback: AsyncCallback<boolean>): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;boolean&gt; | Yes |  |
+| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;boolean&gt; | Yes | the callback of isOperationAllowed. |
 
 ## Examples
 
@@ -51,7 +51,7 @@ wallpaper.isOperationAllowed((error: BusinessError, data: Boolean) => {
 function isOperationAllowed(): Promise<boolean>
 ```
 
-是否允许用户设置壁纸。
+Checks whether a user is allowed to set wallpapers.Returns true if a user is allowed to set wallpapers. returns false otherwise.
 
 **Since:** 7
 
@@ -67,7 +67,7 @@ function isOperationAllowed(): Promise<boolean>
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;boolean&gt; | 异步回调函数，返回是否允许用户设置壁纸。如果允许返回true，否则返回false。 |
+| Promise&lt;boolean&gt; | the promise returned by the function. |
 
 ## Examples
 

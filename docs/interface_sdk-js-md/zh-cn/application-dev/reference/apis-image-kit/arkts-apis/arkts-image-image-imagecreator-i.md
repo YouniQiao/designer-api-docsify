@@ -18,12 +18,6 @@ ImageCreator类，作为图片的生产者，用于将图片写入到Surface中�
 
 **系统能力：** SystemCapability.Multimedia.Image.ImageCreator
 
-## 导入模块
-
-```TypeScript
-import { image } from 'kits/@kit.ImageKit';
-```
-
 ## dequeueImage
 
 ```TypeScript

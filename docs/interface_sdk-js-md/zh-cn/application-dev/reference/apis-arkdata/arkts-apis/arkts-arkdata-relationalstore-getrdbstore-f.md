@@ -1,11 +1,5 @@
 # getRdbStore
 
-## 导入模块
-
-```TypeScript
-import { relationalStore } from 'kits/@kit.ArkData';
-```
-
 ## getRdbStore
 
 ```TypeScript
@@ -45,21 +39,21 @@ getRdbStore支持多线程并发操作。
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 14800000 | Inner error. |
-| 14801001 | The operation is supported in the stage model only.<br>**适用版本：** 10+ |
-| 14800011 | The current operation failed because the database is corrupted. |
-| 14800010 | Failed to open or delete the database by an invalid database path. |
-| 14801002 | Invalid data group ID.<br>**适用版本：** 10+ |
-| 14800017 | StoreConfig is changed.<br>**适用版本：** 12+ |
-| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; 3. Parameter verification failed. |
-| 14800021 | SQLite: Generic error.<br>**适用版本：** 12+ |
-| 14800020 | The secret key is corrupted or lost.<br>**适用版本：** 14+ |
-| 14800023 | SQLite: Access permission denied.<br>**适用版本：** 12+ |
-| 14800022 | SQLite: Callback routine requested an abort.<br>**适用版本：** 12+ |
-| 14800027 | SQLite: Attempt to write a readonly database.<br>**适用版本：** 12+ |
-| 14800029 | SQLite: The database is full.<br>**适用版本：** 12+ |
-| 14800028 | SQLite: Some kind of disk I/O error occurred.<br>**适用版本：** 12+ |
-| 14800030 | SQLite: Unable to open the database file.<br>**适用版本：** 12+ |
+| [14800000](../../apis-basic-services-kit/errorcode-settings.md#14800000-参数检查失败) | Inner error. |
+| [14801001](../errorcode-data-rdb.md#14801001-上下文环境非stage模型) | The operation is supported in the stage model only.<br>**适用版本：** 10+ |
+| [14800011](../errorcode-data-rdb.md#14800011-数据库文件异常) | The current operation failed because the database is corrupted. |
+| [14800010](../../apis-basic-services-kit/errorcode-settings.md#14800010-上下文参数不是uiability类型) | Failed to open or delete the database by an invalid database path. |
+| [14801002](../errorcode-data-rdb.md#14801002-storeconfig中传入的datagroupid参数非法) | Invalid data group ID.<br>**适用版本：** 10+ |
+| [14800017](../errorcode-data-rdb.md#14800017-关键配置已被更改) | StoreConfig is changed.<br>**适用版本：** 12+ |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; 3. Parameter verification failed. |
+| [14800021](../errorcode-data-rdb.md#14800021-sqlite通用错误) | SQLite: Generic error.<br>**适用版本：** 12+ |
+| [14800020](../errorcode-data-rdb.md#14800020-密钥损坏或丢失) | The secret key is corrupted or lost.<br>**适用版本：** 14+ |
+| [14800023](../errorcode-data-rdb.md#14800023-sqlite访问权限被拒绝) | SQLite: Access permission denied.<br>**适用版本：** 12+ |
+| [14800022](../errorcode-data-rdb.md#14800022-sqlite异步回调请求被中止) | SQLite: Callback routine requested an abort.<br>**适用版本：** 12+ |
+| [14800027](../errorcode-data-rdb.md#14800027-sqlite尝试写入只读数据库) | SQLite: Attempt to write a readonly database.<br>**适用版本：** 12+ |
+| [14800029](../errorcode-data-rdb.md#14800029-sqlite数据库已满) | SQLite: The database is full.<br>**适用版本：** 12+ |
+| [14800028](../errorcode-data-rdb.md#14800028-sqlite发生了某种磁盘io错误) | SQLite: Some kind of disk I/O error occurred.<br>**适用版本：** 12+ |
+| [14800030](../errorcode-data-rdb.md#14800030-sqlite无法打开数据库文件) | SQLite: Unable to open the database file.<br>**适用版本：** 12+ |
 
 ## 示例
 
@@ -77,7 +71,7 @@ const STORE_CONFIG: relationalStore.StoreConfig = {
   securityLevel: relationalStore.SecurityLevel.S3
 };
 
-relationalStore.getRdbStore(context, STORE_CONFIG, async (err: BusinessError, rdbStore: relationalStore.RdbStore) => {
+relationalStore.getRdbStore(context, STORE_CONFIG, (err, rdbStore) => {
   if (err) {
     console.error(`Get RdbStore failed, code is ${err.code},message is ${err.message}`);
     return;
@@ -104,7 +98,7 @@ class EntryAbility extends UIAbility {
       securityLevel: relationalStore.SecurityLevel.S3
     };
 
-    relationalStore.getRdbStore(this.context, STORE_CONFIG, async (err: BusinessError, rdbStore: relationalStore.RdbStore) => {
+    relationalStore.getRdbStore(this.context, STORE_CONFIG, (err, rdbStore) => {
       if (err) {
         console.error(`Get RdbStore failed, code is ${err.code},message is ${err.message}`);
         return;
@@ -162,21 +156,21 @@ getRdbStore支持多线程并发操作。
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 14800000 | Inner error. |
-| 14801001 | The operation is supported in the stage model only.<br>**适用版本：** 10+ |
-| 14800011 | The current operation failed because the database is corrupted. |
-| 14800010 | Failed to open or delete the database by an invalid database path. |
-| 14801002 | Invalid data group ID.<br>**适用版本：** 10+ |
-| 14800017 | StoreConfig is changed.<br>**适用版本：** 12+ |
-| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; 3. Parameter verification failed. |
-| 14800021 | SQLite: Generic error.<br>**适用版本：** 12+ |
-| 14800020 | The secret key is corrupted or lost.<br>**适用版本：** 14+ |
-| 14800023 | SQLite: Access permission denied.<br>**适用版本：** 14+ |
-| 14800022 | SQLite: Callback routine requested an abort.<br>**适用版本：** 14+ |
-| 14800027 | SQLite: Attempt to write a readonly database.<br>**适用版本：** 12+ |
-| 14800029 | SQLite: The database is full.<br>**适用版本：** 12+ |
-| 14800028 | SQLite: Some kind of disk I/O error occurred.<br>**适用版本：** 12+ |
-| 14800030 | SQLite: Unable to open the database file.<br>**适用版本：** 12+ |
+| [14800000](../../apis-basic-services-kit/errorcode-settings.md#14800000-参数检查失败) | Inner error. |
+| [14801001](../errorcode-data-rdb.md#14801001-上下文环境非stage模型) | The operation is supported in the stage model only.<br>**适用版本：** 10+ |
+| [14800011](../errorcode-data-rdb.md#14800011-数据库文件异常) | The current operation failed because the database is corrupted. |
+| [14800010](../../apis-basic-services-kit/errorcode-settings.md#14800010-上下文参数不是uiability类型) | Failed to open or delete the database by an invalid database path. |
+| [14801002](../errorcode-data-rdb.md#14801002-storeconfig中传入的datagroupid参数非法) | Invalid data group ID.<br>**适用版本：** 10+ |
+| [14800017](../errorcode-data-rdb.md#14800017-关键配置已被更改) | StoreConfig is changed.<br>**适用版本：** 12+ |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; 3. Parameter verification failed. |
+| [14800021](../errorcode-data-rdb.md#14800021-sqlite通用错误) | SQLite: Generic error.<br>**适用版本：** 12+ |
+| [14800020](../errorcode-data-rdb.md#14800020-密钥损坏或丢失) | The secret key is corrupted or lost.<br>**适用版本：** 14+ |
+| [14800023](../errorcode-data-rdb.md#14800023-sqlite访问权限被拒绝) | SQLite: Access permission denied.<br>**适用版本：** 14+ |
+| [14800022](../errorcode-data-rdb.md#14800022-sqlite异步回调请求被中止) | SQLite: Callback routine requested an abort.<br>**适用版本：** 14+ |
+| [14800027](../errorcode-data-rdb.md#14800027-sqlite尝试写入只读数据库) | SQLite: Attempt to write a readonly database.<br>**适用版本：** 12+ |
+| [14800029](../errorcode-data-rdb.md#14800029-sqlite数据库已满) | SQLite: The database is full.<br>**适用版本：** 12+ |
+| [14800028](../errorcode-data-rdb.md#14800028-sqlite发生了某种磁盘io错误) | SQLite: Some kind of disk I/O error occurred.<br>**适用版本：** 12+ |
+| [14800030](../errorcode-data-rdb.md#14800030-sqlite无法打开数据库文件) | SQLite: Unable to open the database file.<br>**适用版本：** 12+ |
 
 ## 示例
 
@@ -197,8 +191,9 @@ const STORE_CONFIG: relationalStore.StoreConfig = {
 relationalStore.getRdbStore(context, STORE_CONFIG).then(async (rdbStore: relationalStore.RdbStore) => {
   store = rdbStore;
   console.info('Get RdbStore successfully.');
-}).catch((err: BusinessError) => {
-  console.error(`Get RdbStore failed, code is ${err.code},message is ${err.message}`);
+}).catch((err: Error) => {
+  let businessError = err as BusinessError;
+  console.error(`Get RdbStore failed, code is ${businessError.code},message is ${businessError.message}`);
 });
 ```
 
@@ -221,8 +216,9 @@ class EntryAbility extends UIAbility {
     relationalStore.getRdbStore(this.context, STORE_CONFIG).then(async (rdbStore: relationalStore.RdbStore) => {
       store = rdbStore;
       console.info('Get RdbStore successfully.');
-    }).catch((err: BusinessError) => {
-      console.error(`Get RdbStore failed, code is ${err.code},message is ${err.message}`);
+    }).catch((err: Error) => {
+      let businessError = err as BusinessError;
+      console.error(`Get RdbStore failed, code is ${businessError.code},message is ${businessError.message}`);
     });
   }
 }

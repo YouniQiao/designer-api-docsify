@@ -1,6 +1,6 @@
 # MediaTabContent
 
-媒体标签页内容的定义。继承自[OperResult](arkts-avsession-avmusictemplate-operresult-i.md)。
+The definition of the tab page content.
 
 **Inheritance/Implementation:** MediaTabContent extends [OperResult](arkts-avsession-avmusictemplate-operresult-i.md)
 
@@ -24,7 +24,7 @@ import { avMusicTemplate } from 'kits/@kit.AVSessionKit';
 compilations: Compilation[]
 ```
 
-页面内容的合集数组。
+Compilations content of the tab page.
 
 **Type:** [Compilation](arkts-avsession-avmusictemplate-compilation-i.md)[]
 
@@ -44,7 +44,7 @@ compilations: Compilation[]
 tabId: string
 ```
 
-标签页的ID。
+Tab id corresponding to the content.
 
 **Type:** string
 

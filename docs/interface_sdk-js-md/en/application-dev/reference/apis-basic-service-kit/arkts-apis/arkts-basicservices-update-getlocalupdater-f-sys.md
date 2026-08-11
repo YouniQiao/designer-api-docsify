@@ -12,21 +12,24 @@ import { update } from 'kits/@kit.BasicServicesKit';
 function getLocalUpdater(): LocalUpdater
 ```
 
-获取本地升级对象，用于从本地存储设备（如SD卡）执行系统升级。调用此方法后，系统返回LocalUpdater工具类对象，提供本地升级包校验、安装等功能。
+Obtains a **LocalUpdater** object, which is used to upgrade the system from a local storage device (such as the SD card). After this API is called, the system returns the **LocalUpdater** utility object, which provides functions such as verifying and installing the local upgrade package.
 
-典型流程为：开发者准备升级包（格式为.zip或.bin）和证书文件（格式为.cert或.der） → 系统校验包签名和完整性 → 系统安装升级包 → 系统重启以应用新版本。
+The typical process is as follows: The developer prepares the upgrade package (in .zip or .bin format) and certificate file (in .cert or .der format). The system verifies the package signature and integrity. The system installs the upgrade package. The system restarts to apply the new version.
 
-**原理说明**：
+**Overview**
 
-该方法获取本地升级工具对象，封装了升级包校验（验证数字签名、文件完整性、版本兼容性）和安装（解压写入系统分区）等功能。本地升级不依赖网络，从设备本地存储读取升级包。
+This API obtains a **LocalUpdater** object and encapsulates the capabilities of verifying the upgrade package (the digital signature, file integrity, and version compatibility) and installing the upgrade package (decompress the package and writing it to the system partition). The local upgrade does not depend on the network. The upgraded package is read from the device.
 
-**约束和限制**：
+**Constraints**
 
-- 升级包必须从设备厂商官网或官方渠道下载，确保来源可信。  
-- 安装前必须先校验升级包（调用verifyUpgradePackage），未校验的包可能导致系统损坏。  
-- 升级过程中设备会重启，应用需做好状态保存。  
-- 调用getLocalUpdater相关接口时，需要权限ohos.permission.UPDATE_SYSTEM。  
-- 升级包文件路径长度不超过255字符。超出255字符时将抛出异常。
+- The upgrade package must be downloaded from the official website of the vendor or from an official channel to   
+ensure that the source is trusted.  
+- Before the installation, you must verify the upgrade package by calling **verifyUpgradePackage**. An unverified   
+package may damage the system.  
+- During the upgrade, the device automatically restarts. The app status needs to be saved.  
+- The **ohos.permission.UPDATE_SYSTEM** permission is required for calling **getLocalUpdater** APIs.  
+- The upgrade package file path contains a maximum of 255 characters. If the value contains more than 255   
+characters, an exception is thrown.
 
 **Since:** 9
 
@@ -42,18 +45,21 @@ function getLocalUpdater(): LocalUpdater
 
 | Type | Description |
 | --- | --- |
-| [LocalUpdater](arkts-basicservices-update-localupdater-i-sys.md) | 用于执行本地升级相关操作的工具类对象。 |
+| [LocalUpdater](arkts-basicservices-update-localupdater-i-sys.md) | Utility object used to perform local update operations. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 202 | Permission verification failed. A non-system application calls a system API. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
 
 ## Examples
 
 ```TypeScript
-// Obtain a LocalUpdater object.
+try {
   let localUpdater = update.getLocalUpdater();
+} catch(error) {
+  console.error(`Fail to get localUpdater error: ${error}`);
+}
 ```
 

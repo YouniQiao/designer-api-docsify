@@ -1,6 +1,6 @@
 # Watcher
 
-Watcher是文件变化监听的实例，调用Watcher.stop()方法（同步或异步）来停止文件监听。
+Listens for file change. You can call the **Watcher.stop()** method synchronously or asynchronously to stop the listening.
 
 **Since:** 7
 
@@ -20,7 +20,7 @@ Watcher是文件变化监听的实例，调用Watcher.stop()方法（同步或�
 stop(): Promise<void>
 ```
 
-关闭watcher监听，使用Promise异步回调。
+Stops the **watcher** instance. This API uses a promise to return the result.
 
 **Since:** 7
 
@@ -58,7 +58,7 @@ watcher.stop().then(() => {
 stop(callback: AsyncCallback<void>): void
 ```
 
-关闭watcher监听，使用callback异步回调。
+Stops the **watcher** instance. This API uses an asynchronous callback to return the result.
 
 **Since:** 7
 
@@ -76,7 +76,7 @@ stop(callback: AsyncCallback<void>): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | 以异步方法关闭watcher监听之后的回调。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback invoked when **watcher** is stopped asynchronously. |
 
 ## Examples
 

@@ -10,12 +10,6 @@ autoStartupManager模块提供获取自身应用的开机自启状态。
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 
-## 导入模块
-
-```TypeScript
-import { autoStartupManager } from 'kits/@kit.AbilityKit';
-```
-
 ## 汇总
 
 ### 函数

@@ -1,6 +1,6 @@
 # GenericEventData
 
-发送事件时传递的泛型数据。
+Describes the generic data carried by the emitted event.
 
 **Since:** 12
 
@@ -22,7 +22,7 @@ import { emitter } from 'kits/@kit.BasicServicesKit';
 data?: T
 ```
 
-发送事件时传递的数据。T：泛型类型，由开发者根据业务需要自定义具体的数据类型。
+Data carried by the emitted event. **T** represents a generic type, which can be customized based on service requirements.
 
 **Type:** T
 

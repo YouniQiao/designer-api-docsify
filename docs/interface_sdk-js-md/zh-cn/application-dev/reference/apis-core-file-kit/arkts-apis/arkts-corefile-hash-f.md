@@ -1,11 +1,5 @@
 # hash
 
-## 导入模块
-
-```TypeScript
-import { hash } from 'kits/@kit.CoreFileKit';
-```
-
 ## hash
 
 ```TypeScript

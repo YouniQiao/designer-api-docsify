@@ -1,6 +1,6 @@
 # MenuOutlineOptions
 
-下拉菜单框的外描边参数对象。
+Defines the outline of the drop-down menu.
 
 **Since:** 20
 
@@ -16,9 +16,9 @@
 color?: ResourceColor | EdgeColors
 ```
 
-设置外描边颜色。
+Color of the outline.
 
-默认值：#19ffffff
+Default value: **#19ffffff**
 
 **Type:** [ResourceColor](../arkts-apis/arkts-arkui-resourcecolor-t.md) \| EdgeColors
 
@@ -40,9 +40,9 @@ color?: ResourceColor | EdgeColors
 width?: Dimension | EdgeOutlineWidths
 ```
 
-设置外描边宽度，不支持百分比。
+Width of the outline. Percentage values are not supported.
 
-默认值：0
+Default value: **0**
 
 **Type:** [Dimension](../arkts-apis/arkts-arkui-dimension-t.md) \| EdgeOutlineWidths
 

@@ -1,6 +1,6 @@
 # FavoriteData
 
-收藏/订阅的定义。
+The definition of Favorite/Subscribe.
 
 **Since:** 23
 
@@ -22,7 +22,7 @@ import { avMusicTemplate } from 'kits/@kit.AVSessionKit';
 favCounts: string
 ```
 
-收藏/订阅的数量。
+Favorite counts.
 
 **Type:** string
 
@@ -42,7 +42,7 @@ favCounts: string
 isFavorite: boolean
 ```
 
-是否已收藏/订阅。true表示已收藏/订阅，false表示未收藏/订阅。无默认值。
+Is favorite.
 
 **Type:** boolean
 
@@ -62,7 +62,7 @@ isFavorite: boolean
 isSupportFav: boolean
 ```
 
-是否支持收藏/订阅。true表示支持，false表示不支持。无默认值。
+Is supported favorite.
 
 **Type:** boolean
 

@@ -8,7 +8,7 @@ export declare function ContentSlot(
 ): ContentSlotAttribute
 ```
 
-当内容添加到占位符组件时调用。
+ContentSlot is returned when the parameter is transferred.
 
 **Since:** 23
 
@@ -18,21 +18,19 @@ export declare function ContentSlot(
 
 <!--Device-unnamed-export declare function ContentSlot(    content: Content): ContentSlotAttribute--><!--Device-unnamed-export declare function ContentSlot(    content: Content): ContentSlotAttribute-End-->
 
-**System capability:** 
-- SystemCapability.ArkUI.ArkUI.Full
-- SystemCapability.ArkUI.ArkUI.Full
+**System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| content | [Content](../arkts-components/arkts-arkui-content-t.md) | Yes | Content作为ContentSlot的管理器，通过Native侧提供的接口，可以注册并触发ContentSlot的上下树事件回调以及管理ContentSlot的子组件。 |
+| content | [Content](../arkts-components/arkts-arkui-content-t.md) | Yes | Indicates the class object of NodeContent. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [ContentSlotAttribute](arkts-arkui-contentslot-contentslotattribute-i.md) |  |
+| [ContentSlotAttribute](arkts-arkui-contentslot-contentslotattribute-i.md) | The attribute of the ContentSlot. |
 
 
 ## ContentSlot
@@ -43,7 +41,7 @@ export declare function ContentSlot(
 ): ContentSlotAttribute
 ```
 
-定义ContentSlot组件。需要在组件属性设置开始时调用setContentSlotOptions，并在组件属性设置结束时调用applyAttributeFinish。
+Defines ContentSlot Component.It requires calling setContentSlotOptions at start of the component attribute set-up,and it requires calling applyAttributesFinish at the end of the component attribute set-up.
 
 **Since:** 26.1.0
 
@@ -61,11 +59,11 @@ export declare function ContentSlot(
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| style | [CustomBuilderT](../arkts-components/arkts-arkui-custombuildert-t.md)&lt;ContentSlotAttribute&gt; | Yes | 用于设置ContentSlot属性的回调。 |
+| style | [CustomBuilderT](../arkts-components/arkts-arkui-custombuildert-t.md)&lt;ContentSlotAttribute&gt; | Yes | the callback to set up ContentSlot's attributes. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [ContentSlotAttribute](arkts-arkui-contentslot-contentslotattribute-i.md) | ContentSlot属性对象。 |
+| [ContentSlotAttribute](arkts-arkui-contentslot-contentslotattribute-i.md) | The attribute of the ContentSlot. |
 

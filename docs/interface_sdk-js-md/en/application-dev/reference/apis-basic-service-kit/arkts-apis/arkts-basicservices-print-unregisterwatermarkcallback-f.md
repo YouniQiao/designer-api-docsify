@@ -12,7 +12,7 @@ import { print } from 'kits/@kit.BasicServicesKit';
 function unregisterWatermarkCallback(callback?: WatermarkCallback): void
 ```
 
-注销强制水印处理的监听事件。
+Unregister to listen for watermark handling.
 
 **Since:** 24
 
@@ -30,32 +30,11 @@ function unregisterWatermarkCallback(callback?: WatermarkCallback): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [WatermarkCallback](arkts-basicservices-print-watermarkcallback-t.md) | No | 表示注册监听强制水印处理时使用的回调类型。 |
+| callback | [WatermarkCallback](arkts-basicservices-print-watermarkcallback-t.md) | No | Indicates the callback type used in registering to listen for watermark handling. &lt;br&gt;Indicates the callback type used in registering to listen for watermark handling. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 201 | the application does not have permission to call this function. |
-
-## Examples
-
-```TypeScript
-import { print } from '@kit.BasicServicesKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let watermarkCallback: print.WatermarkCallback = (jobId: string, fd: number) => {
-    console.info('Watermark callback triggered, jobId: ' + jobId + ', fd: ' + fd);
-}
-
-try {
-    print.registerWatermarkCallback(watermarkCallback);
-    console.info('registerWatermarkCallback success');
-    // Deregister the specified callback for watermark processing.
-    print.unregisterWatermarkCallback(watermarkCallback);
-    console.info('unregisterWatermarkCallback success');
-} catch (error) {
-    console.error('unregisterWatermarkCallback error: ' + JSON.stringify(error));
-}
-```
+| [201](../../errorcode-universal.md#201-permission-denied) | the application does not have permission to call this function. |
 

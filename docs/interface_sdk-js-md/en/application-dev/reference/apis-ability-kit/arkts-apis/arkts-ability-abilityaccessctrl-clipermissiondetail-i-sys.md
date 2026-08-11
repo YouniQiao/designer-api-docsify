@@ -1,6 +1,6 @@
 # CliPermissionDetail (System API)
 
-表示CLI指令声明的单个CLI权限的状态信息。
+Represents the status information of a single CLI permission declared by a CLI command.
 
 **Since:** 26.0.0
 
@@ -24,7 +24,7 @@ import { Context, Permissions, PermissionRequestResult } from 'kits/@kit.Ability
 cliPermissionStatus: PermissionDecisionStatus
 ```
 
-CLI指令声明的CLI权限的决策状态。
+Decision status of the CLI permission declared by the CLI command.
 
 **Type:** [PermissionDecisionStatus](arkts-ability-abilityaccessctrl-permissiondecisionstatus-e-sys.md)
 
@@ -46,7 +46,7 @@ CLI指令声明的CLI权限的决策状态。
 requiredCliPermission: Permissions
 ```
 
-调用CLI所需的CLI权限。
+CLI permission required to call the CLI.
 
 **Type:** [Permissions](arkts-ability-permissions-t.md)
 
@@ -68,7 +68,7 @@ requiredCliPermission: Permissions
 usedPermissions: Array<Permissions>
 ```
 
-由requiredCliPermission映射出的运行时权限列表。
+List of runtime permissions mapped from requiredCliPermission.
 
 **Type:** Array&lt;[Permissions](arkts-ability-permissions-t.md)&gt;
 

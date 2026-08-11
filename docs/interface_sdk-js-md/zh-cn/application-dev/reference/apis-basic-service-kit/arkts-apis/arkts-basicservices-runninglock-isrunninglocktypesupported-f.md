@@ -1,11 +1,5 @@
 # isRunningLockTypeSupported
 
-## 导入模块
-
-```TypeScript
-import { runningLock } from 'kits/@kit.BasicServicesKit';
-```
-
 ## isRunningLockTypeSupported
 
 ```TypeScript
@@ -36,11 +30,11 @@ function isRunningLockTypeSupported(type: RunningLockType, callback: AsyncCallba
 ## 示例
 
 ```TypeScript
-runningLock.isRunningLockTypeSupported(runningLock.RunningLockType.BACKGROUND, (err: BusinessError, data: boolean) => {
-    if (err) {
-        console.error(`Failed to check BACKGROUND lock support status. Code: ${err.code}, message: ${err.message}`);
-    } else {
+runningLock.isRunningLockTypeSupported(runningLock.RunningLockType.BACKGROUND, (err: Error, data: boolean) => {
+    if (typeof err === 'undefined') {
         console.info('BACKGROUND lock support status: ' + data);
+    } else {
+        console.error('check BACKGROUND lock support status failed, err: ' + err);
     }
 });
 ```
@@ -85,8 +79,8 @@ runningLock.isRunningLockTypeSupported(runningLock.RunningLockType.BACKGROUND)
 .then((data: boolean) => {
     console.info('BACKGROUND lock support status: ' + data);
 })
-.catch((err: BusinessError) => {
-    console.error(`Failed to check BACKGROUND lock support status. Code: ${err.code}, message: ${err.message}`);
+.catch((err: Error) => {
+    console.error('check BACKGROUND lock support status failed, err: ' + err);
 });
 ```
 

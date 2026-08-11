@@ -12,7 +12,7 @@ import { wifiManager } from 'kits/@kit.MDMKit';
 function getAllowedWifiList(admin: Want): Array<WifiAccessInfo>
 ```
 
-获取Wi-Fi允许名单。
+Obtains Wi-Fi networks from the allowed list.
 
 **Since:** 19
 
@@ -30,62 +30,21 @@ function getAllowedWifiList(admin: Want): Array<WifiAccessInfo>
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| admin | [Want](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-want-want-c.md) | Yes | 企业设备管理扩展组件。Want中必须包含企业设备管理扩展能力的abilityName和所在应用的bundleName。 |
+| admin | [Want](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-want-want-c.md) | Yes | EnterpriseAdminExtensionAbility. **Want** must contain the ability name of the EnterpriseAdminExtensionAbility and the bundle name of the application. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Array&lt;WifiAccessInfo&gt; | Wi-Fi允许名单数组。 |
+| Array&lt;WifiAccessInfo&gt; | Array of allowed Wi-Fi networks. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 201 | Permission verification failed. The application does not have the permission required to call the API. |
-| 9200001 | The application is not an administrator application of the device. |
-| 9200002 | The administrator application does not have permission to manage the device. |
-
-
-## getAllowedWifiList
-
-```TypeScript
-function getAllowedWifiList(admin: Want | null): Array<WifiAccessInfo>
-```
-
-获取Wi-Fi允许名单。
-
-**Since:** 26.0.0
-
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Required permissions:** ohos.permission.ENTERPRISE_MANAGE_WIFI
-
-**Model restriction:** This API can be used only in the stage model.
-
-<!--Device-wifiManager-function getAllowedWifiList(admin: Want | null): Array<WifiAccessInfo>--><!--Device-wifiManager-function getAllowedWifiList(admin: Want | null): Array<WifiAccessInfo>-End-->
-
-**System capability:** SystemCapability.Customization.EnterpriseDeviceManager
-
-**Parameters:**
-
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| admin | [Want](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-want-want-c.md) \| null | Yes | 企业设备管理扩展组件。Want中必须包含企业设备管理扩展能力的abilityName和所在应用的bundleName。 当设备存在多个MDM应用时，传入Want时查询对应企业设备管理应用设置的策略，传入null时查询实际生效的策略。 |
-
-**Return value:**
-
-| Type | Description |
-| --- | --- |
-| Array&lt;WifiAccessInfo&gt; | Wi-Fi允许名单数组。 |
-
-**Error codes:**
-
-| Error Code ID | Error Message |
-| --- | --- |
-| 201 | Permission verification failed. The application does not have the permission required to call the API. |
-| 9200001 | The application is not an administrator application of the device. |
-| 9200002 | The administrator application does not have permission to manage the device. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed. The application does not have the permission required to call the API. |
+| [9200001](../errorcode-enterpriseDeviceManager.md#9200001-deviceadmin-not-enabled) | The application is not an administrator application of the device. |
+| [9200002](../errorcode-enterpriseDeviceManager.md#9200002-permission-denied) | The administrator application does not have permission to manage the device. |
 
 ## Examples
 
@@ -105,4 +64,45 @@ try {
   console.error(`Failed to get allowed Wi-Fi list. Code: ${err.code}, message: ${err.message}`);
 }
 ```
+
+
+## getAllowedWifiList
+
+```TypeScript
+function getAllowedWifiList(admin: Want | null): Array<WifiAccessInfo>
+```
+
+Obtains Wi-Fi networks from the allowed list.
+
+**Since:** 26.0.0
+
+**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
+
+**Required permissions:** ohos.permission.ENTERPRISE_MANAGE_WIFI
+
+**Model restriction:** This API can be used only in the stage model.
+
+<!--Device-wifiManager-function getAllowedWifiList(admin: Want | null): Array<WifiAccessInfo>--><!--Device-wifiManager-function getAllowedWifiList(admin: Want | null): Array<WifiAccessInfo>-End-->
+
+**System capability:** SystemCapability.Customization.EnterpriseDeviceManager
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| admin | [Want](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-want-want-c.md) \| null | Yes | EnterpriseAdminExtensionAbility. **Want** must contain the ability name of the. EnterpriseAdminExtensionAbility and the bundle name of the application.&lt;br&gt;If the device has multiple MDM applications, you can pass **admin** to query the corresponding policies. If **null** is passed, the policies that actually take effect on the device are returned. |
+
+**Return value:**
+
+| Type | Description |
+| --- | --- |
+| Array&lt;WifiAccessInfo&gt; | Array of allowed Wi-Fi networks. |
+
+**Error codes:**
+
+| Error Code ID | Error Message |
+| --- | --- |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed. The application does not have the permission required to call the API. |
+| [9200001](../errorcode-enterpriseDeviceManager.md#9200001-deviceadmin-not-enabled) | The application is not an administrator application of the device. |
+| [9200002](../errorcode-enterpriseDeviceManager.md#9200002-permission-denied) | The administrator application does not have permission to manage the device. |
 

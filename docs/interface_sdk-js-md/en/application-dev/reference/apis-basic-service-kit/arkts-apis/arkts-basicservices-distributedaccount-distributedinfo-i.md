@@ -1,6 +1,6 @@
 # DistributedInfo
 
-提供操作系统账号的分布式信息。
+Represents the distributed information about an OS account.
 
 **Since:** 7
 
@@ -22,7 +22,7 @@ import { distributedAccount } from 'kits/@kit.BasicServicesKit';
 avatar?: string
 ```
 
-分布式账号的头像，默认为空。
+Avatar of the distributed account. By default, no value is passed in.
 
 **Type:** string
 
@@ -40,7 +40,7 @@ avatar?: string
 event: string
 ```
 
-分布式账号登录状态，包括登录、登出、Token失效和注销，分别对应以下字符串：
+Login state of the distributed account. The state can be login, logout, token invalid, or logoff, which correspond to the following strings respectively:
 
 - Ohos.account.event.LOGIN
 
@@ -66,7 +66,7 @@ event: string
 id: string
 ```
 
-分布式账号UID，非空字符串。
+UID of the distributed account. It must be a non-null string.
 
 **Type:** string
 
@@ -84,7 +84,7 @@ id: string
 name: string
 ```
 
-分布式账号名称，非空字符串。
+Name of the distributed account. It must be a non-null string.
 
 **Type:** string
 
@@ -102,7 +102,7 @@ name: string
 nickname?: string
 ```
 
-分布式账号的昵称，默认为空。
+Nickname of the distributed account. By default, no value is passed in.
 
 **Type:** string
 
@@ -120,7 +120,7 @@ nickname?: string
 scalableData?: object
 ```
 
-分布式账号扩展信息，根据业务所需，以k-v形式传递定制化信息，默认为空。
+Additional information about the distributed account, in the form of KV pairs. This parameter is left empty by default.
 
 **Type:** object
 
@@ -138,7 +138,7 @@ scalableData?: object
 readonly status?: DistributedAccountStatus
 ```
 
-分布式账号的状态，枚举类型，默认为未登录状态。
+Status of the distributed account. The value is of the enumerated type. The default status is unlogged.
 
 **Type:** [DistributedAccountStatus](arkts-basicservices-distributedaccount-distributedaccountstatus-e.md)
 

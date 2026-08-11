@@ -22,7 +22,7 @@ import { OverlayManager, FrameCallback, ResolvedUIContext, NodeRenderStateChange
 getParagraphs(styledString: StyledString, options?: TextLayoutOptions): Array<Paragraph>
 ```
 
-获取属性字符串的布局信息。
+Get layout info of the styled string.
 
 **Since:** 24
 
@@ -38,8 +38,8 @@ getParagraphs(styledString: StyledString, options?: TextLayoutOptions): Array<Pa
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| styledString | [StyledString](arkts-arkui-styledstring-c.md) | Yes | 属性字符串值。 |
-| options | [TextLayoutOptions](arkts-arkui-textlayoutoptions-i.md) | No | 布局选项。 |
+| styledString | [StyledString](arkts-arkui-styledstring-c.md) | Yes | The styled string value. |
+| options | [TextLayoutOptions](arkts-arkui-textlayoutoptions-i.md) | No | The layout options. |
 
 **Return value:**
 
@@ -53,7 +53,7 @@ getParagraphs(styledString: StyledString, options?: TextLayoutOptions): Array<Pa
 measureText(options: MeasureOptions): double
 ```
 
-获取单行文本的宽度。
+Obtains the width of the specified text in a single line layout.
 
 **Since:** 23
 
@@ -83,7 +83,7 @@ measureText(options: MeasureOptions): double
 measureTextSize(options: MeasureOptions): SizeOptions
 ```
 
-获取单行文本的宽度和高度。
+Obtains the width and height of the specified text in a single line layout.
 
 **Since:** 23
 

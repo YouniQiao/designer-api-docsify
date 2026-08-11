@@ -1,6 +1,6 @@
 # ErrorInfo
 
-系统更新错误信息。
+Represents the update error information.
 
 **Since:** 12
 
@@ -22,7 +22,7 @@ import { systemManager } from 'kits/@kit.MDMKit';
 code: number
 ```
 
-错误码。
+Error code.
 
 **Type:** number
 
@@ -42,7 +42,7 @@ code: number
 message: string
 ```
 
-错误描述信息。
+Error message.
 
 **Type:** string
 

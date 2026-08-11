@@ -22,7 +22,7 @@ import { mechanicManager } from 'kits/@kit.MechanicKit';
 event: TrackingEvent
 ```
 
-跟踪事件
+Tracking event.
 
 **Type:** [TrackingEvent](arkts-mechanic-mechanicmanager-trackingevent-e.md)
 

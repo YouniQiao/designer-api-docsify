@@ -4,7 +4,7 @@
 export type ServiceExtensionContext = _ServiceExtensionContext.default
 ```
 
-ServiceExtensionContext二级模块。
+Level-2 module ServiceExtensionContext.
 
 **Since:** 9
 

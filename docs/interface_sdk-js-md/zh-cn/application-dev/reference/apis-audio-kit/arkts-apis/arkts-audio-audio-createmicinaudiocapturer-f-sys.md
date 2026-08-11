@@ -1,11 +1,5 @@
 # createMicInAudioCapturer（系统接口）
 
-## 导入模块
-
-```TypeScript
-import { audio } from 'kits/@kit.AudioKit';
-```
-
 ## createMicInAudioCapturer
 
 ```TypeScript
@@ -44,11 +38,11 @@ function createMicInAudioCapturer(config: AudioCapturerMicInConfig): Promise<Aud
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 6800101 | Parameter verification failed. |
-| 201 | Permission denied, including background recording. |
-| 202 | Caller is not a system application. |
-| 6800301 | Audio system internal error, such as system process crash. |
-| 6800104 | Capturer creation is not supported, may caused by following problems: &lt;br&gt; 1. Source type is unsupported for this capturer, only {@link #SOURCE_TYPE_UNPROCESSED_VOICE_ASSISTANT} and {@link #SOURCE_TYPE_VOICE_RECOGNITION} are supported currently. &lt;br&gt; 2. Echo reference signal's config is unsupported, echo reference's sampling rate and format must be the same as MicIn audio data currently. |
+| [6800101](../errorcode-audio.md#6800101-无效入参) | Parameter verification failed. |
+| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied, including background recording. |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Caller is not a system application. |
+| [6800301](../errorcode-audio.md#6800301-系统处理异常) | Audio system internal error, such as system process crash. |
+| [6800104](../errorcode-audio.md#6800104-参数选项不支持) | Capturer creation is not supported, may caused by following problems: &lt;br&gt; 1. Source type is unsupported for this capturer, only {@link #SOURCE_TYPE_UNPROCESSED_VOICE_ASSISTANT} and {@link #SOURCE_TYPE_VOICE_RECOGNITION} are supported currently. &lt;br&gt; 2. Echo reference signal's config is unsupported, echo reference's sampling rate and format must be the same as MicIn audio data currently. |
 
 ## 示例
 

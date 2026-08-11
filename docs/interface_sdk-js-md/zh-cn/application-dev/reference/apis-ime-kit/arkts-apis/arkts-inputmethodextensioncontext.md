@@ -3,12 +3,6 @@
 在使用InputMethodExtensionContext的功能前，需要通过InputMethodExtensionAbility子类实例获取。
 
 
-## 导入模块
-
-```TypeScript
-import { InputMethodExtensionContext } from 'kits/@kit.IMEKit';
-```
-
 ## 汇总
 
 ### 类

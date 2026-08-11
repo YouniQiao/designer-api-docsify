@@ -1,6 +1,6 @@
 # DecoratorInfo
 
-可被观察对象关联的装饰器和组件信息。
+The UI component information associated with the object data.
 
 **Since:** 24
 
@@ -16,25 +16,7 @@
 decoratorName: string
 ```
 
-当对象被[@Observed](../../../ui/state-management-static/arkts-static-observed-and-objectlink.md)装饰时，值为对象关联的装饰器名称。
-
-当对象属性使用[@Track](../../../ui/state-management-static/arkts-static-track.md)时，值为：`@Track`。
-
-当对象属性使用[@Trace](../../../ui/state-management-static/arkts-static-new-observedV2-and-trace.md)时，值为：`@Trace`。
-
-当对象经过[makeObserved](../../apis-arkts/arkts-apis/arkts-arkts-atomics-atomicreference-c.md/arkts-arkts-atomics-atomicreference-c.md#compareandswap)转换时，值为：`MakeObserved`。
-
-当对象为被V1装饰器装饰的built-in类型时，值为对象关联的装饰器名称。
-
-当对象为被V1装饰器装饰的interface字面量时，值为对象关联的装饰器名称。
-
-当对象被@Observed装饰且使用在V2组件中时，值为：`@Observed(mix used in V2)`。 
-
-当对象为被V1装饰器装饰的built-in类型且使用在V2组件中时，值为：`V1 Decorated BuiltInType(mix used in V2)`。
-
-当对象为被V1装饰器装饰的interface字面量且使用在V2组件中时，值为：`V1 Decorated ObjectLiteral(mix used in V2)`。
-
-当对象为被V2装饰器装饰的built-in类型时，值为：`V2 Decorated BuiltInType`。
+Decorator name of the object data.
 
 **Type:** string
 
@@ -54,7 +36,7 @@ decoratorName: string
 dependentInfo: ElementInfo[]
 ```
 
-使用该可观察对象的组件信息。若对象没有用在任何UI上，则返回空数组。
+Dependent component information including custom component and UI component (Text, Image)for the object data.For the V2 @Monitor or @Computed scenario, will return the id and decorated function name by @Monitor or @Computed.For V2 scenario, if it is not used in the UI, nor on @Monitor or @Computed, return an empty array.For V1 scenario, if it is not used in the UI, will return an empty array.
 
 **Type:** [ElementInfo](arkts-arkui-arkui-statemanagement-elementinfo-i.md)[]
 
@@ -74,9 +56,7 @@ dependentInfo: ElementInfo[]
 owningComponentId: int
 ```
 
-在V1组件中被状态管理V1装饰器装饰的@Observed装饰的对象、interface字面量和built-in类型对象返回V1组件ID。
-
-其余情况返回-1。
+The custom component id that the object data belongs to.In the V1 scenario, return the custom component id, in the V2 @ObservedV2 scenario, return -1.
 
 **Type:** int
 
@@ -96,13 +76,7 @@ owningComponentId: int
 owningComponentOrClassName: string
 ```
 
-在V1组件中被状态管理V1装饰器装饰的@Observed装饰的对象、interface字面量和built-in类型对象返回V1组件名称。
-
-使用@Track装饰器、@Trace装饰器时返回对象名称。
-
-使用V2装饰器装饰或makeObserved转换的built-in对象时，返回对象名称。
-
-使用makeObserved转换的interface字面量时，返回字面量的定义名称。
+The custom component name that the object data belongs to.In the V1 scenario, return the custom component name, in the V2 @ObservedV2 scenario, return class name.
 
 **Type:** string
 
@@ -122,15 +96,7 @@ owningComponentOrClassName: string
 stateVariableName: string
 ```
 
-被装饰器装饰的属性名称。
-
-在V1组件中被状态管理V1装饰器装饰的@Observed装饰的对象、interface字面量和built-in类型对象返回V1装饰器的名称。
-
-使用@Track装饰器、@Trace装饰器时返回属性名。
-
-使用V2装饰器装饰或makeObserved转换的built-in对象时，返回可观测属性的名称。常见的框架内置可观察属性见下表。
-
-makeObserved转换的interface字面量返回`Any Object Literal Property`。
+State Variable name of the object data.
 
 **Type:** string
 

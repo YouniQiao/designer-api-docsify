@@ -12,9 +12,7 @@ import { EditorMenuOptions, SelectionMenuOptions, EditorEventInfo, SelectionMenu
 export declare function SelectionMenu(options: SelectionMenuOptions): void
 ```
 
-入参为空时，文本选择菜单组件SelectionMenu内容区大小及组件大小为零。表现例如，富文本组件  
-[RichEditor](../../../reference/apis-arkui/arkui-ts/ts-basic-components-richeditor.md)使用  
-[bindSelectionMenu](../../../reference/apis-arkui/arkui-ts/ts-basic-components-richeditor.md#bindselectionmenu)接口绑定一个SelectionMenu的右键菜单，则右键富文本组件区域时无任何菜单弹出。
+Declare Builder SelectionMenu.
 
 **Since:** 23
 
@@ -32,5 +30,5 @@ export declare function SelectionMenu(options: SelectionMenuOptions): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| options | [SelectionMenuOptions](arkts-arkui-arkui-advanced-selectionmenu-selectionmenuoptions-i.md) | Yes | 文本选择菜单可选项。 |
+| options | [SelectionMenuOptions](arkts-arkui-arkui-advanced-selectionmenu-selectionmenuoptions-i.md) | Yes | Selection menu options. |
 

@@ -4,7 +4,7 @@
 export type DynamicIconInfo = _BundleInfo.DynamicIconInfo
 ```
 
-应用的动态图标信息。
+Describes the information about the dynamic icon of an application.
 
 **Since:** 20
 

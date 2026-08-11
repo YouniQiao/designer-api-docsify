@@ -546,7 +546,7 @@ default mode(value: NavDestinationMode | undefined): this
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | [NavDestinationMode](../arkts-components/arkts-arkui-navdestinationmode-e.md) \| undefined | 是 | NavDestination类型。&lt;br/&gt;取值为undefined时，按默认值处理。&lt;br/&gt;默认值： NavDestinationMode.STANDARD<br>**起始版本：** 23 - 24 |
+| value | [NavDestinationMode](arkts-arkui-navdestination-navdestinationmode-e.md) \| undefined | 是 | NavDestination类型。&lt;br/&gt;取值为undefined时，按默认值处理。&lt;br/&gt;默认值： NavDestinationMode.STANDARD<br>**起始版本：** 23 - 24 |
 
 **返回值：**
 
@@ -1149,7 +1149,7 @@ default systemTransition(type: NavigationSystemTransitionType | undefined): this
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| type | [NavigationSystemTransitionType](arkts-arkui-navdestination-navigationsystemtransitiontype-e.md) \| undefined | 是 | 系统转场动画类型。&lt;br/&gt;取值为undefined时，按默认值处理。&lt;br/&gt;默认值： NavigationSystemTransitionType.DEFAULT |
+| type | [NavigationSystemTransitionType](../arkts-components/arkts-arkui-navigationsystemtransitiontype-e.md) \| undefined | 是 | 系统转场动画类型。&lt;br/&gt;取值为undefined时，按默认值处理。&lt;br/&gt;默认值： NavigationSystemTransitionType.DEFAULT |
 
 **返回值：**
 

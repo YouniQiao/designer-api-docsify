@@ -12,7 +12,7 @@ import { text } from 'kits/@kit.ArkGraphics2D';
 function getFontPathsByType(fontType: SystemFontType): Array<string>
 ```
 
-获取指定字体类型的所有字体文件路径。
+Obtains the paths of all font files of a specified font type.
 
 **Since:** 23
 
@@ -28,13 +28,13 @@ function getFontPathsByType(fontType: SystemFontType): Array<string>
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| fontType | [SystemFontType](arkts-arkgraphics2d-text-systemfonttype-e.md) | Yes | 指定的字体类型。 |
+| fontType | [SystemFontType](arkts-arkgraphics2d-text-systemfonttype-e.md) | Yes | Font type. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Array&lt;string&gt; | 字体文件路径列表。 |
+| Array&lt;string&gt; | List of font file paths. |
 
 ## Examples
 

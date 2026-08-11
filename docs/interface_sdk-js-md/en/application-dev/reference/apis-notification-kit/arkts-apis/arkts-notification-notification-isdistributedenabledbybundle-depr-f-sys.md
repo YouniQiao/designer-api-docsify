@@ -6,7 +6,7 @@
 function isDistributedEnabledByBundle(bundle: BundleOption, callback: AsyncCallback<boolean>): void
 ```
 
-根据应用的包获取应用程序是否支持分布式通知（Callback形式）。
+Obtains whether an application supports distributed notifications based on the bundle.This API uses an asynchronous callback to return the result.
 
 **Since:** 8
 
@@ -28,8 +28,8 @@ function isDistributedEnabledByBundle(bundle: BundleOption, callback: AsyncCallb
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| bundle | [BundleOption](arkts-notification-notificationextensionsubscription-bundleoption-t.md) | Yes | 应用的包。 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;boolean&gt; | Yes | 查询指定应用是否支持分布式通知的回调函数。 |
+| bundle | [BundleOption](arkts-notification-notificationextensionsubscription-bundleoption-t.md) | Yes | Application bundle. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;boolean&gt; | Yes | Callback used to return the result. |
 
 
 ## isDistributedEnabledByBundle
@@ -38,7 +38,7 @@ function isDistributedEnabledByBundle(bundle: BundleOption, callback: AsyncCallb
 function isDistributedEnabledByBundle(bundle: BundleOption): Promise<boolean>
 ```
 
-查询指定应用是否支持分布式通知（Promise形式）。
+Checks whether a specified application supports distributed notifications.This API uses an asynchronous callback to return the result.
 
 **Since:** 8
 
@@ -60,11 +60,11 @@ function isDistributedEnabledByBundle(bundle: BundleOption): Promise<boolean>
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| bundle | [BundleOption](arkts-notification-notificationextensionsubscription-bundleoption-t.md) | Yes | 应用的包。 |
+| bundle | [BundleOption](arkts-notification-notificationextensionsubscription-bundleoption-t.md) | Yes | Application bundle. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;boolean&gt; | Promise方式返回指定应用是否支持分布式通知的结果。 |
+| Promise&lt;boolean&gt; | Promise used to return the result. |
 

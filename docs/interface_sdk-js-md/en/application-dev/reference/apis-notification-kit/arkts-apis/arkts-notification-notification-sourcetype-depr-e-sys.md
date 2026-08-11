@@ -1,6 +1,6 @@
 # SourceType (System API)
 
-通知来源类型。
+Defines the notification source type.
 
 **Since:** 8
 
@@ -22,7 +22,7 @@
 TYPE_NORMAL = 0
 ```
 
-一般通知。
+Normal notification.
 
 **Since:** 8
 
@@ -44,7 +44,7 @@ TYPE_NORMAL = 0
 TYPE_CONTINUOUS = 1
 ```
 
-连续通知。
+Continuous notification.
 
 **Since:** 8
 
@@ -66,7 +66,7 @@ TYPE_CONTINUOUS = 1
 TYPE_TIMER = 2
 ```
 
-计划通知。
+Timed notification.
 
 **Since:** 8
 

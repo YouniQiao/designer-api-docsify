@@ -1,6 +1,6 @@
 # PickInfo
 
-截取图像的信息。
+Describes the screenshot options.
 
 **Since:** 12
 
@@ -22,7 +22,7 @@ import { screenshot } from 'kits/@kit.ArkUI';
 pickRect: Rect
 ```
 
-表示截取图像的区域。
+Region of the screen to capture.
 
 **Type:** [Rect](../../apis-form-kit/arkts-apis/arkts-form-forminfo-rect-i.md)
 
@@ -42,7 +42,7 @@ pickRect: Rect
 pixelMap: image.PixelMap
 ```
 
-表示截取的图像PixelMap对象。
+PixelMap object of the captured image.
 
 **Type:** image.PixelMap
 

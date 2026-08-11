@@ -1,6 +1,6 @@
 # OutlineOptions
 
-定义外描边的参数选项
+Defines the options of outline.
 
 **Since:** 12
 

@@ -23,7 +23,7 @@ Defines center point for angle gradient.
 
 Anonymous Object Rectification.
 
-**类型：** [         Length,         Length     ]
+**类型：** [         Length,         Length     ]
 
 **起始版本：** 23
 
@@ -48,7 +48,7 @@ Defines color description for gradients.
 
 Anonymous Object Rectification.
 
-**类型：** Array&lt;[         ResourceColor, double     ]&gt;
+**类型：** Array&lt;[         ResourceColor, double     ]&gt;
 
 **起始版本：** 23
 
@@ -95,7 +95,7 @@ metricsColors?: Array<[
 
 Defines color description in ColorMetrics format for gradients.This parameter takes precedence over colors parameter.
 
-**类型：** Array&lt;[         ColorMetrics, double     ]&gt;
+**类型：** Array&lt;[         ColorMetrics, double     ]&gt;
 
 **起始版本：** 23
 

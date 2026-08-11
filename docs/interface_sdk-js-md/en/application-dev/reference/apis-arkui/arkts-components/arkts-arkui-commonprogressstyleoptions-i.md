@@ -1,6 +1,6 @@
 # CommonProgressStyleOptions
 
-进度条通用样式选项。
+Provides common style configuration options for the progress indicator.
 
 **Since:** 10
 
@@ -16,13 +16,13 @@
 enableSmoothEffect?: boolean
 ```
 
-进度平滑动效的开关。开启平滑动效后设置进度，进度会从当前值渐变至设定值，页面会有进度变化的动效；否则进度从当前值突变至设定值，页面无动效。
+Whether to enable the smooth effect. When this feature is enabled, the progress value transitions from the current value to the target value with a progress change animation displayed on the page. When this feature is disabled,the progress value jumps directly to the target value without any animation.
 
-true：表示开启进度平滑动效。
+**true**: The smooth effect is enabled.
 
-false：表示关闭进度平滑动效。
+**false**: The smooth effect is disabled.
 
-默认值：true
+Default value: **true**
 
 **Type:** boolean
 

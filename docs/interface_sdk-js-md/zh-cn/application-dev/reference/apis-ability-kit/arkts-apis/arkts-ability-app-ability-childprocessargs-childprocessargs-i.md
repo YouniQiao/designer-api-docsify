@@ -10,12 +10,6 @@
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 
-## 导入模块
-
-```TypeScript
-import { ChildProcessArgs } from 'kits/@kit.AbilityKit';
-```
-
 ## entryParams
 
 ```TypeScript
@@ -50,7 +44,7 @@ fds?: Record<string, int>
 - fds最多支持16组，每组key的最大长度为20字符。  
 - 传递到子进程中句柄数字可能会变，但是指向的文件是一致的。
 
-**类型：** ArkTS-Dyn: [Record](../../apis-default/arkts-apis/arkts-record-t.md)&lt;string, number&gt;  <br>ArkTS-Sta：[Record](../../apis-default/arkts-apis/arkts-record-t.md)&lt;string, int&gt;
+**类型：** ArkTS-Dyn: Record&lt;string, number&gt;  <br>ArkTS-Sta：Record&lt;string, int&gt;
 
 **起始版本：** 12
 

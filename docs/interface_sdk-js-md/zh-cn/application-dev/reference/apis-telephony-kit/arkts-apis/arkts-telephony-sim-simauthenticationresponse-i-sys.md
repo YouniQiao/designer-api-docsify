@@ -12,12 +12,6 @@ Defines the SIM card authentication response.
 
 **系统接口：** 此接口为系统接口。
 
-## 导入模块
-
-```TypeScript
-import { sim } from 'kits/@kit.TelephonyKit';
-```
-
 ## response
 
 ```TypeScript

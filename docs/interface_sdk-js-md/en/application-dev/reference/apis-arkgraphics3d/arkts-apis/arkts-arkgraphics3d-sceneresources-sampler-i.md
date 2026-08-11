@@ -1,6 +1,6 @@
 # Sampler
 
-采样器接口
+Describes the sampling modes used during texture sampling.
 
 **Since:** 20
 
@@ -16,7 +16,7 @@
 addressModeU?: SamplerAddressMode
 ```
 
-U寻址模式
+Sampling mode of the texture in the U (horizontal) direction. The default value is REPEAT.
 
 **Type:** [SamplerAddressMode](arkts-arkgraphics3d-sceneresources-sampleraddressmode-e.md)
 
@@ -34,7 +34,7 @@ U寻址模式
 addressModeV?: SamplerAddressMode
 ```
 
-V寻址模式
+Sampling mode of the texture in the V (vertical) direction. The default value is REPEAT.
 
 **Type:** [SamplerAddressMode](arkts-arkgraphics3d-sceneresources-sampleraddressmode-e.md)
 
@@ -52,7 +52,7 @@ V寻址模式
 magFilter?: SamplerFilter
 ```
 
-放大过滤
+Sampling mode when the texture is enlarged. The default value is LINEAR.
 
 **Type:** [SamplerFilter](arkts-arkgraphics3d-sceneresources-samplerfilter-e.md)
 
@@ -70,7 +70,7 @@ magFilter?: SamplerFilter
 minFilter?: SamplerFilter
 ```
 
-缩小过滤
+Sampling mode when the texture is reduced. The default value is LINEAR.
 
 **Type:** [SamplerFilter](arkts-arkgraphics3d-sceneresources-samplerfilter-e.md)
 
@@ -88,7 +88,7 @@ minFilter?: SamplerFilter
 mipMapMode?: SamplerFilter
 ```
 
-Mip-map模式
+Sampling modes between different texture resolutions. The default value is LINEAR.
 
 **Type:** [SamplerFilter](arkts-arkgraphics3d-sceneresources-samplerfilter-e.md)
 

@@ -12,7 +12,7 @@ import { media } from 'kits/@kit.MediaKit';
 function createAVMetadataExtractor(): Promise<AVMetadataExtractor>
 ```
 
-创建AVMetadataExtractor实例。使用Promise异步回调。
+Creates an AVMetadataExtractor instance. This API uses a promise to return the result.
 
 **Since:** 11
 
@@ -26,13 +26,13 @@ function createAVMetadataExtractor(): Promise<AVMetadataExtractor>
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;AVMetadataExtractor&gt; | Promise对象。异步返回元数据获取类对象（AVMetadataExtractor）。 |
+| Promise&lt;AVMetadataExtractor&gt; | Promise used to return the AVMetadataExtractor instance. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 5400101 | No memory. Returned by promise. |
+| [5400101](../errorcode-media.md#5400101-memory-allocation-failed) | No memory. Returned by promise. |
 
 ## Examples
 
@@ -73,13 +73,13 @@ Creates an **AVMetadataExtractor** instance. This API uses a promise to return t
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;AVMetadataExtractor \| undefined&gt; | A Promise instance used to return AVMetadataExtractor instance if the operation is successful; returns null otherwise. |
+| Promise&lt;AVMetadataExtractor \| undefined&gt; | A Promise instance used to return AVMetadataExtractor instance if the operation is successful; returns undefined otherwise. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 5400101 | No memory. Returned by promise. |
+| [5400101](../errorcode-media.md#5400101-memory-allocation-failed) | No memory. Returned by promise. |
 
 
 ## createAVMetadataExtractor
@@ -88,7 +88,7 @@ Creates an **AVMetadataExtractor** instance. This API uses a promise to return t
 function createAVMetadataExtractor(callback: AsyncCallback<AVMetadataExtractor>): void
 ```
 
-创建AVMetadataExtractor实例。使用callback异步回调。
+Creates an AVMetadataExtractor instance. This API uses an asynchronous callback to return the result.
 
 **Since:** 11
 
@@ -102,13 +102,13 @@ function createAVMetadataExtractor(callback: AsyncCallback<AVMetadataExtractor>)
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;AVMetadataExtractor&gt; | Yes | 回调函数。当创建AVMetadataExtractor实例成功，err为undefined，data为获取到的 AVMetadataExtractor实例，否则为错误对象。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;AVMetadataExtractor&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined** and **data** is the AVMetadataExtractor instance created; otherwise, **err** is an error object. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 5400101 | No memory. Returned by callback. |
+| [5400101](../errorcode-media.md#5400101-memory-allocation-failed) | No memory. Returned by callback. |
 
 ## Examples
 
@@ -153,5 +153,5 @@ Creates an **AVMetadataExtractor** instance. This API uses an asynchronous callb
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 5400101 | No memory. Returned by callback. |
+| [5400101](../errorcode-media.md#5400101-memory-allocation-failed) | No memory. Returned by callback. |
 

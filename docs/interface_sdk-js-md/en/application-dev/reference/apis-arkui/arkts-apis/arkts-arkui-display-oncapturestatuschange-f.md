@@ -12,7 +12,7 @@ import { display } from 'kits/@kit.ArkUI';
 function onCaptureStatusChange(callback: Callback<boolean>): void
 ```
 
-Register the callback for device capture, casting, or recording status changes.
+Register the callback for the status of the device's screen content is being captured.
 
 **Since:** 23
 
@@ -32,5 +32,5 @@ Register the callback for device capture, casting, or recording status changes.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 1400003 | This display manager service works abnormally. |
+| [1400003](../errorcode-display.md#1400003-abnormal-display-manager-service) | This display manager service works abnormally. |
 

@@ -58,7 +58,7 @@ Name of the function which returns LocalStorage instance.
 useSharedStorage: boolean = false
 ```
 
-Determines whether to use the LocalStorage instance object returned by UIContext.getSharedLocalStorage() interface.
+Determines whether to use the LocalStorage instance object returned by UIContext.getSharedLocalStorage()interface.
 
 **Type:** boolean
 

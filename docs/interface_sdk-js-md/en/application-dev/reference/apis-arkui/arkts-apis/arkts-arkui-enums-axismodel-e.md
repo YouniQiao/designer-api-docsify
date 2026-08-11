@@ -1,6 +1,6 @@
 # AxisModel
 
-定义焦点轴事件的轴类型。
+Type of axis.
 
 **Since:** 23
 
@@ -16,7 +16,7 @@
 ABS_X = 0
 ```
 
-游戏手柄X轴。
+ABS_X axis type.
 
 **Since:** 23
 
@@ -34,7 +34,7 @@ ABS_X = 0
 ABS_Y = 1
 ```
 
-游戏手柄Y轴。
+ABS_Y axis type.
 
 **Since:** 23
 
@@ -52,7 +52,7 @@ ABS_Y = 1
 ABS_Z = 2
 ```
 
-游戏手柄Z轴。
+ABS_Z axis type.
 
 **Since:** 23
 
@@ -70,7 +70,7 @@ ABS_Z = 2
 ABS_RZ = 3
 ```
 
-游戏手柄RZ轴。
+ABS_RZ axis type.
 
 **Since:** 23
 
@@ -88,7 +88,7 @@ ABS_RZ = 3
 ABS_GAS = 4
 ```
 
-游戏手柄GAS轴。
+ABS_GAS axis type.
 
 **Since:** 23
 
@@ -106,7 +106,7 @@ ABS_GAS = 4
 ABS_BRAKE = 5
 ```
 
-游戏手柄BRAKE轴。
+ABS_BRAKE axis type.
 
 **Since:** 23
 
@@ -124,7 +124,7 @@ ABS_BRAKE = 5
 ABS_HAT0X = 6
 ```
 
-游戏手柄HAT0X轴。
+ABS_HAT0X axis type.
 
 **Since:** 23
 
@@ -142,7 +142,7 @@ ABS_HAT0X = 6
 ABS_HAT0Y = 7
 ```
 
-游戏手柄HAT0Y轴。
+ABS_HAT0Y axis type.
 
 **Since:** 23
 
@@ -160,7 +160,7 @@ ABS_HAT0Y = 7
 ABS_RX = 8
 ```
 
-游戏手柄RX轴。
+ABS_RX axis type.
 
 **Since:** 23
 
@@ -178,7 +178,7 @@ ABS_RX = 8
 ABS_RY = 9
 ```
 
-游戏手柄RY轴。
+ABS_RY axis type.
 
 **Since:** 23
 
@@ -196,7 +196,7 @@ ABS_RY = 9
 ABS_THROTTLE = 10
 ```
 
-游戏手柄THROTTLE轴。
+ABS_THROTTLE axis type.
 
 **Since:** 23
 
@@ -214,7 +214,7 @@ ABS_THROTTLE = 10
 ABS_RUDDER = 11
 ```
 
-游戏手柄RUDDER轴。
+ABS_RUDDER axis type.
 
 **Since:** 23
 
@@ -232,7 +232,7 @@ ABS_RUDDER = 11
 ABS_WHEEL = 12
 ```
 
-游戏手柄WHEEL轴。
+ABS_WHEEL axis type.
 
 **Since:** 23
 
@@ -250,7 +250,7 @@ ABS_WHEEL = 12
 ABS_HAT1X = 13
 ```
 
-游戏手柄HAT1X轴。
+ABS_HAT1X axis type.
 
 **Since:** 23
 
@@ -268,7 +268,7 @@ ABS_HAT1X = 13
 ABS_HAT1Y = 14
 ```
 
-游戏手柄HAT1Y轴。
+ABS_HAT1Y axis type.
 
 **Since:** 23
 
@@ -286,7 +286,7 @@ ABS_HAT1Y = 14
 ABS_HAT2X = 15
 ```
 
-游戏手柄HAT2X轴。
+ABS_HAT2X axis type.
 
 **Since:** 23
 
@@ -304,7 +304,7 @@ ABS_HAT2X = 15
 ABS_HAT2Y = 16
 ```
 
-游戏手柄HAT2Y轴。
+ABS_HAT2Y axis type.
 
 **Since:** 23
 
@@ -322,7 +322,7 @@ ABS_HAT2Y = 16
 ABS_HAT3X = 17
 ```
 
-游戏手柄HAT3X轴。
+ABS_HAT3X axis type.
 
 **Since:** 23
 
@@ -340,7 +340,7 @@ ABS_HAT3X = 17
 ABS_HAT3Y = 18
 ```
 
-游戏手柄HAT3Y轴。
+ABS_HAT3Y axis type.
 
 **Since:** 23
 

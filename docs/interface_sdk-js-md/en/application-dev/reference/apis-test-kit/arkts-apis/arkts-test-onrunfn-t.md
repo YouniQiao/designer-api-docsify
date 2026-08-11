@@ -4,13 +4,11 @@
 type OnRunFn = () => void
 ```
 
-运行测试用例。
+Run all test cases.
 
 **Since:** 23
 
 **ArkTS mode:** ArkTS-Sta only, since version 23.
-
-**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-unnamed-type OnRunFn = () => void--><!--Device-unnamed-type OnRunFn = () => void-End-->
 

@@ -38,7 +38,7 @@ Notifies state changes for both active ranging and passive ranging operations.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 801 | Capability not supported. |
-| 34900099 | Internal system error. For example, Internal object is invalid. |
-| 201 | Permission denied. |
+| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. |
+| [34900099](../errorcode-fusionConnectivity.md#34900099-operation-failed) | Internal system error. For example, Internal object is invalid. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
 

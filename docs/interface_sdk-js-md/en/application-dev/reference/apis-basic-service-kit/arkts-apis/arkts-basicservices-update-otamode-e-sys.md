@@ -1,6 +1,6 @@
 # OtaMode (System API)
 
-升级模式。
+Enumerates the update modes.
 
 **Since:** 20
 
@@ -18,7 +18,7 @@
 REGULAR_OTA = 0
 ```
 
-正常升级，先下载完整升级包到本地，再执行安装升级，适用于大多数常规升级场景。
+Regular OTA. In this mode, download the complete upgrade package to the local device and then install the package. This mode applies to most regular upgrade scenarios.
 
 **Since:** 20
 
@@ -36,7 +36,8 @@ REGULAR_OTA = 0
 STREAM_OTA = 1
 ```
 
-流式升级，边下载边升级，无需等待完整下载，适用于存储空间受限或需要快速升级的场景。详见[术语](../../../basic-services/update/update-kit-term.md)。
+Streaming OTA. In this mode, the upgrade is performed while the package is being downloaded. This mode applies to scenarios where the storage space is limited or a quick upgrade is required. For details, see   
+[Upgrading Service Terms](../../../basic-services/update/update-kit-term.md)
 
 **Since:** 20
 
@@ -54,7 +55,8 @@ STREAM_OTA = 1
 AB_REGULAR_OTA = 2
 ```
 
-AB正常升级，适用于A/B分区设备。详见[术语](../../../basic-services/update/update-kit-term.md)。
+Regular A/B OTA. This mode applies to devices with A/B partitions. For details, see   
+[Upgrading Service Terms](../../../basic-services/update/update-kit-term.md)
 
 **Since:** 20
 
@@ -72,7 +74,8 @@ AB正常升级，适用于A/B分区设备。详见[术语](../../../basic-servic
 AB_STREAM_OTA = 3
 ```
 
-AB流式升级，适用于A/B分区设备。详见[术语](../../../basic-services/update/update-kit-term.md)。
+Streaming A/B OTA. This mode applies to devices with A/B partitions. For details, see   
+[Upgrading Service Terms](../../../basic-services/update/update-kit-term.md)
 
 **Since:** 20
 

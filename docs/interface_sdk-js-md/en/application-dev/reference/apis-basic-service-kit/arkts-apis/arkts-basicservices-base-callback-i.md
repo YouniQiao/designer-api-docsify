@@ -1,6 +1,6 @@
 # Callback
 
-通用回调函数，用于在异步操作完成时回传处理结果。类型由开发者自定义。
+Defines a common callback used to return the processing result when an asynchronous operation is successful.You need to define the callback type.
 
 **Since:** 6
 
@@ -38,5 +38,5 @@ import { Callback, BusinessError, ErrorCallback, AsyncCallback } from 'kits/@kit
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| data | T | Yes | 接口调用时的公共回调信息。类型由开发者自定义，回调成功时将返回对应类型的数据。失败则不返回数据。 |
+| data | T | Yes | Common callback information. The type is defined by the developer. The callback is used to return data of the corresponding type. No data is returned if the callback fails. |
 

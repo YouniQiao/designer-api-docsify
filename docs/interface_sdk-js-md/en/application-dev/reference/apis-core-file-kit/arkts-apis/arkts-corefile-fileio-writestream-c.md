@@ -1,7 +1,7 @@
 # WriteStream
 
-文件可写流，需要先通过[fileIo.createWriteStream](arkts-corefile-fileio-createwritestream-f.md#createwritestream)方法来构建一个WriteStream实例。WriteStream继承自数据流基类  
-[stream.Writable](../../apis-arkts/arkts-apis/arkts-arkts-stream-writable-c.md/arkts-arkts-stream-writable-c.md)。
+Defines a writeable stream. You need to use [fileIo.createWriteStream](arkts-corefile-fileio-createwritestream-f.md#createwritestream) to create a  
+**WriteStream** instance, which is inherited from [stream.Writable](../../apis-arkts/arkts-apis/arkts-arkts-stream-writable-c.md/arkts-arkts-stream-writable-c.md).
 
 **Inheritance/Implementation:** WriteStream extends [stream.Writable](../../apis-arkts/arkts-apis/arkts-arkts-stream-writable-c.md/arkts-arkts-stream-writable-c.md)
 
@@ -25,7 +25,7 @@ import { Options, ReaderIteratorResult, Watcher, ReadTextOptions, WatchEventList
 close(): void
 ```
 
-关闭可写流。
+Closes this writeable stream.
 
 **Since:** 23
 
@@ -68,7 +68,7 @@ The WriteStream constructor.
 seek(offset: long, whence?: WhenceType): long
 ```
 
-调整可写流的偏移指针位置。
+Adjusts the position of the writeable stream offset pointer.
 
 **Since:** 23
 
@@ -82,21 +82,21 @@ seek(offset: long, whence?: WhenceType): long
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| offset | long | Yes | 相对偏移位置，单位为Byte。 |
+| offset | long | Yes | Relative offset, in bytes. |
 | whence | [WhenceType](arkts-corefile-fileio-whencetype-e.md) | No | = WhenceType.SEEK_SET] - Where to start the offset. &lt;br&gt;The default value is SEEK_SET, which indicates the beginning of the file. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| long | 当前可写流偏移指针位置（相对于文件头的偏移量，单位为Byte）。 |
+| long | Position of the current offset pointer (offset relative to the file header, in bytes). |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
 | 13900020 | Invalid argument |
-| 401 | Parameter error |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error |
 | 13900026 | Illegal seek |
 | 13900042 | Unknown error |
 
@@ -106,7 +106,7 @@ seek(offset: long, whence?: WhenceType): long
 readonly bytesWritten: long
 ```
 
-可写流已经写入的字节数。
+Number of bytes written to the writable stream.
 
 **Type:** long
 
@@ -124,7 +124,7 @@ readonly bytesWritten: long
 readonly path: string
 ```
 
-当前可写流对应的文件路径。
+Path of the file corresponding to the writeable stream.
 
 **Type:** string
 

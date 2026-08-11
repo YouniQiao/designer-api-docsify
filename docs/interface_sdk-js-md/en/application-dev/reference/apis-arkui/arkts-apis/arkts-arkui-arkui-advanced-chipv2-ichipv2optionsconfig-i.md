@@ -1,6 +1,6 @@
 # IChipV2OptionsConfig
 
-定义ChipV2选项接口。
+Defines ChipV2 options interface.
 
 **Since:** 26.0.0
 

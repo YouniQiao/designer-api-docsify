@@ -12,19 +12,14 @@ import { router } from 'kits/@kit.ArkUI';
 function hideAlertBeforeBackPage(): void
 ```
 
-禁用页面返回询问对话框。调用此方法后，将关闭由[showAlertBeforeBackPage](#routershowalertbeforebackpagedeprecated)开启的返回询问对话框，[back](#routerbackdeprecated)操作将不再弹出确认对话框，直接执行页面返回。
+Disables the display of a confirm dialog box before returning to the previous page.
 
-> **说明：**
+> **NOTE：**
 > 
-> - 从API version 9开始支持，从API version 18开始废弃，建议使用
-> [hideAlertBeforeBackPage](arkts-arkui-arkui-uicontext-router-c.md#hidealertbeforebackpage)替代。hideAlertBeforeBackPage需先
-> 通过[UIContext](arkts-arkui-uicontext.md)中的
-> [getRouter](../../../reference/apis-arkui/arkts-apis-uicontext-uicontext.md#getrouter)获取
-> [Router](arkts-arkui-uicontext.md)实例，然后通过该实例进行调用。
-> 
-> - 从API version 10开始，可以通过使用[UIContext](arkts-arkui-uicontext.md)中的
-> [getRouter](../../../reference/apis-arkui/arkts-apis-uicontext-uicontext.md#getrouter)方法获取当前UI上下文关联的
-> [Router](arkts-arkui-uicontext.md)对象。
+> - Since API version 10, you can use the
+> [getRouter](../../../reference/apis-arkui/arkts-apis-uicontext-uicontext.md#getrouter) API in
+> [UIContext](arkts-arkui-uicontext.md) to obtain the [Router](arkts-arkui-uicontext.md) object associated
+> with the current UI context.
 
 **Since:** 9
 

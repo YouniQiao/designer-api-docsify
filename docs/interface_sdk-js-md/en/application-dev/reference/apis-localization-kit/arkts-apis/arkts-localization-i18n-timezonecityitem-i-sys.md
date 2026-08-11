@@ -1,6 +1,6 @@
 # TimeZoneCityItem (System API)
 
-时区城市的组合信息。
+Represents a time zone and city combination item.
 
 **Since:** 23
 
@@ -24,7 +24,7 @@ import { i18n } from 'kits/@kit.LocalizationKit';
 cityDisplayName: string
 ```
 
-城市ID在系统区域下显示的名称。
+City display name in the system locale.
 
 **Type:** string
 
@@ -44,7 +44,7 @@ cityDisplayName: string
 cityId: string
 ```
 
-城市ID，例如Shanghai。
+City ID, for example, "Shanghai".
 
 **Type:** string
 
@@ -64,7 +64,7 @@ cityId: string
 offset: int
 ```
 
-时区ID的偏移量，单位为毫秒（ms）。
+Offset of the time zone ID.The value should be an integer.
 
 **Type:** int
 
@@ -84,7 +84,7 @@ offset: int
 rawOffset?: int
 ```
 
-时区ID的固定偏移量，单位为毫秒（ms）。
+Fixed offset of the time zone ID.The value should be an integer.
 
 **Type:** int
 
@@ -104,7 +104,7 @@ rawOffset?: int
 zoneDisplayName: string
 ```
 
-时区ID在系统区域下显示的名称。
+Time zone display name in the system locale.
 
 **Type:** string
 
@@ -124,7 +124,7 @@ zoneDisplayName: string
 zoneId: string
 ```
 
-时区ID，例如Asia/Shanghai。
+Time zone ID, for example, "Asia/Shanghai".
 
 **Type:** string
 

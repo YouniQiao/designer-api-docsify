@@ -1,11 +1,5 @@
 # getAbilityIcon（系统接口）
 
-## 导入模块
-
-```TypeScript
-import { bundleManager } from 'kits/@kit.AbilityKit';
-```
-
 ## getAbilityIcon
 
 ```TypeScript
@@ -51,14 +45,40 @@ function getAbilityIcon(bundleName: string, moduleName: string, abilityName: str
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 801 | Capability not supported. |
-| 17700029 | The specified ability is disabled. |
-| 17700026 | The specified bundle is disabled. |
-| 201 | Permission denied. |
-| 202 | Permission denied, non-system app called system api. |
-| 17700002 | The specified module is not found. |
-| 17700003 | The specified ability is not found. |
-| 17700001 | The specified bundle is not found. |
+| [801](../../errorcode-universal.md#801-该设备不支持此api) | Capability not supported. |
+| [17700029](../errorcode-bundle.md#17700029-指定的ability被禁用) | The specified ability is disabled. |
+| [17700026](../errorcode-bundle.md#17700026-指定应用被禁用) | The specified bundle is disabled. |
+| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission denied, non-system app called system api. |
+| [17700002](../errorcode-bundle.md#17700002-指定的modulename不存在) | The specified module is not found. |
+| [17700003](../errorcode-bundle.md#17700003-指定的abilityname不存在) | The specified ability is not found. |
+| [17700001](../errorcode-bundle.md#17700001-指定的bundlename不存在) | The specified bundle is not found. |
+
+## 示例
+
+```TypeScript
+import { bundleManager } from '@kit.AbilityKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+import { hilog } from '@kit.PerformanceAnalysisKit';
+
+// 需要替换为要查询的应用Bundle名称、Module名称和Ability组件名
+let bundleName: string = "com.example.myapplication";
+let moduleName: string = "entry";
+let abilityName: string = "EntryAbility";
+
+try {
+  bundleManager.getAbilityIcon(bundleName, moduleName, abilityName, (err, data) => {
+    if (err) {
+      hilog.error(0x0000, 'testTag', 'getAbilityIcon failed: %{public}s', err.message);
+    } else {
+      hilog.info(0x0000, 'testTag', 'getAbilityIcon successfully: %{public}s', JSON.stringify(data));
+    }
+  });
+} catch (err) {
+  let message = (err as BusinessError).message;
+  hilog.error(0x0000, 'testTag', 'getAbilityIcon failed: %{public}s', message);
+}
+```
 
 
 ## getAbilityIcon
@@ -111,14 +131,14 @@ function getAbilityIcon(bundleName: string, moduleName: string, abilityName: str
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 801 | Capability not supported. |
-| 17700029 | The specified ability is disabled. |
-| 17700026 | The specified bundle is disabled. |
-| 201 | Permission denied. |
-| 202 | Permission denied, non-system app called system api. |
-| 17700002 | The specified module is not found. |
-| 17700003 | The specified ability is not found. |
-| 17700001 | The specified bundle is not found. |
+| [801](../../errorcode-universal.md#801-该设备不支持此api) | Capability not supported. |
+| [17700029](../errorcode-bundle.md#17700029-指定的ability被禁用) | The specified ability is disabled. |
+| [17700026](../errorcode-bundle.md#17700026-指定应用被禁用) | The specified bundle is disabled. |
+| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission denied, non-system app called system api. |
+| [17700002](../errorcode-bundle.md#17700002-指定的modulename不存在) | The specified module is not found. |
+| [17700003](../errorcode-bundle.md#17700003-指定的abilityname不存在) | The specified ability is not found. |
+| [17700001](../errorcode-bundle.md#17700001-指定的bundlename不存在) | The specified bundle is not found. |
 
 ## 示例
 

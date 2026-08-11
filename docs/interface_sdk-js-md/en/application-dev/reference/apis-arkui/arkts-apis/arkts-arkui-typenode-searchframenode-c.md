@@ -1,6 +1,6 @@
 # SearchFrameNode
 
-定义Search类型的FrameNode。
+Define the Search type of FrameNode.
 
 **Inheritance/Implementation:** SearchFrameNode extends [TypedFrameNode<SearchAttribute>](TypedFrameNode<SearchAttribute>)
 
@@ -18,7 +18,7 @@
 abstract initialize(value?: SearchOptions): SearchAttribute
 ```
 
-初始化Search类型的FrameNode。
+Initialize Search FrameNode.
 
 **Since:** 23
 

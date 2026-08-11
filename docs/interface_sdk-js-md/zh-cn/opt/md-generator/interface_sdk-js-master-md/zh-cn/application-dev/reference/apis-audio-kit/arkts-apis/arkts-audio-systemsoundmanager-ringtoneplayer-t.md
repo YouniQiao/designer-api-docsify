@@ -1,0 +1,15 @@
+# RingtonePlayer
+
+```TypeScript
+type RingtonePlayer = _RingtonePlayer
+```
+
+系统铃音播放器对象。
+
+**起始版本：** 10
+
+<!--Device-systemSoundManager-type RingtonePlayer = _RingtonePlayer--><!--Device-systemSoundManager-type RingtonePlayer = _RingtonePlayer-End-->
+
+**系统能力：** SystemCapability.Multimedia.SystemSound.Core
+
+**属性类型：** _RingtonePlayer

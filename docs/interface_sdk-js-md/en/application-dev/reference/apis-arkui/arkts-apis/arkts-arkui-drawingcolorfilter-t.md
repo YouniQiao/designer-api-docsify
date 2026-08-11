@@ -4,9 +4,7 @@
 export type DrawingColorFilter = drawing.ColorFilter
 ```
 
-type DrawingColorFilter = drawing.ColorFilter
-
-颜色滤波器对象。
+Import the DrawingColorFilter type object for image color filter setting.
 
 **Since:** 23
 

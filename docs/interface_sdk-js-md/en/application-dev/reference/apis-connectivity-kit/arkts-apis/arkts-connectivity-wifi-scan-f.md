@@ -42,9 +42,9 @@ Scans Wi-Fi hotspot.
 import wifi from '@ohos.wifi';
 
 try {
-  wifi.scan();
+	wifi.scan();
 }catch(error){
-  console.error("failed:" + JSON.stringify(error));
+	console.error("failed:" + JSON.stringify(error));
 }
 ```
 

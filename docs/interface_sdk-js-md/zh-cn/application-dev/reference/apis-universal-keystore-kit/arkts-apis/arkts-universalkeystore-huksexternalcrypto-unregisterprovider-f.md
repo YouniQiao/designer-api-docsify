@@ -1,11 +1,5 @@
 # unregisterProvider
 
-## 导入模块
-
-```TypeScript
-import { huksExternalCrypto } from 'kits/@kit.UniversalKeystoreKit';
-```
-
 ## unregisterProvider
 
 ```TypeScript
@@ -41,13 +35,13 @@ function unregisterProvider(providerName: string, params?: Array<HuksExternalCry
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 801 | api is not supported. |
-| 12000005 | IPC communication failed. |
-| 12000018 | the input parameter is invalid. |
-| 201 | check permission failed. |
-| 12000014 | memory is insufficient. |
-| 12000012 | Device environment or input parameter is abnormal. This may happen for several reasons, such as the model already being unloaded. |
-| 12000011 | the provider is not found. |
+| [801](../../errorcode-universal.md#801-该设备不支持此api) | api is not supported. |
+| [12000005](../errorcode-huks.md#12000005-进程通信错误) | IPC communication failed. |
+| [12000018](../errorcode-huks.md#12000018-输入参数非法) | the input parameter is invalid. |
+| [201](../../errorcode-universal.md#201-权限校验失败) | check permission failed. |
+| [12000014](../errorcode-huks.md#12000014-内存不足) | memory is insufficient. |
+| [12000012](../errorcode-huks.md#12000012-外部错误) | Device environment or input parameter is abnormal. This may happen for several reasons, such as the model already being unloaded. |
+| [12000011](../errorcode-huks.md#12000011-目标对象不存在) | the provider is not found. |
 
 ## 示例
 

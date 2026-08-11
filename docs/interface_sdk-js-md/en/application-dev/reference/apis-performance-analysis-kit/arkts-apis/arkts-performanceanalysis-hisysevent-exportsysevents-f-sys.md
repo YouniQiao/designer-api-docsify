@@ -12,7 +12,7 @@ import { hiSysEvent } from 'kits/@kit.PerformanceAnalysisKit';
 function exportSysEvents(queryArg: QueryArg, rules: QueryRule[]): long
 ```
 
-批量导出系统事件，以文件格式写入应用沙箱固定目录(/data/storage/el2/base/cache/hiview/event/)。
+Exports system events in batches and writes them as a file to the fixed directory of the application sandbox (that is, /data/storage/el2/base/cache/hiview/event/).
 
 **Since:** 10
 
@@ -30,25 +30,25 @@ function exportSysEvents(queryArg: QueryArg, rules: QueryRule[]): long
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| queryArg | [QueryArg](arkts-performanceanalysis-hisysevent-queryarg-i-sys.md) | Yes | 导出需要配置的查询参数。 |
-| rules | [QueryRule](arkts-performanceanalysis-hisysevent-queryrule-i-sys.md)[] | Yes | 查询规则数组，每次导出可配置多个查询规则。 |
+| queryArg | [QueryArg](arkts-performanceanalysis-hisysevent-queryarg-i-sys.md) | Yes | Event query parameters for the export. |
+| rules | [QueryRule](arkts-performanceanalysis-hisysevent-queryrule-i-sys.md)[] | Yes | Array of event query rules for the export. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| ArkTS-Dyn: number  <br>ArkTS-Sta：long | 接口调用时间戳。 |
+| ArkTS-Dyn: number  <br>ArkTS-Sta：long | API call timestamp. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. 3. Parameter verification failed. |
-| 11200302 | Invalid query rule. |
-| 11200301 | The number of query rules exceeds the limit. |
-| 201 | Permission denied. An attempt was made to read system event forbidden by permission: ohos.permission.READ_DFX_SYSEVENT. |
-| 202 | System API is not allowed called by Non-system application. |
-| 11200304 | The query frequency exceeds the limit. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. 3. Parameter verification failed. |
+| [11200302](../errorcode-hisysevent-sys.md#11200302-invalid-query-rule) | Invalid query rule. |
+| [11200301](../errorcode-hisysevent-sys.md#11200301-number-of-query-rules-exceeding-the-limit) | The number of query rules exceeds the limit. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. An attempt was made to read system event forbidden by permission: ohos.permission.READ_DFX_SYSEVENT. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | System API is not allowed called by Non-system application. |
+| [11200304](../errorcode-hisysevent-sys.md#11200304-query-frequency-exceeding-the-limit) | The query frequency exceeds the limit. |
 
 ## Examples
 

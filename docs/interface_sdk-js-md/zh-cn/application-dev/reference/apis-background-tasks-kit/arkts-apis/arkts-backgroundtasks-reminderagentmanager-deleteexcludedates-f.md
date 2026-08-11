@@ -1,11 +1,5 @@
 # deleteExcludeDates
 
-## 导入模块
-
-```TypeScript
-import { reminderAgentManager } from 'kits/@kit.BackgroundTasksKit';
-```
-
 ## deleteExcludeDates
 
 ```TypeScript
@@ -38,10 +32,12 @@ function deleteExcludeDates(reminderId: int): Promise<void>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 201 | Permission denied |
-| 1700003 | The reminder does not exist. |
+| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied |
+| [1700003](../../apis-backgroundtasks-kit/errorcode-reminderAgentManager.md#1700003-提醒不存在) | The reminder does not exist. |
 
 ## 示例
+
+ArkTS-Dyn示例：
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -52,6 +48,19 @@ reminderAgentManager.deleteExcludeDates(reminderId).then(() => {
   console.info("deleteExcludeDates promise");
 }).catch((err: BusinessError) => {
   console.error("promise err code:" + err.code + " message:" + err.message);
+});
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+import { reminderAgentManager } from '@kit.BackgroundTasksKit';
+
+let reminderId: int = 1;
+reminderAgentManager.deleteExcludeDates(reminderId).then(() => {
+  console.info(`Succeeded in deleting exclude dates`);
+}).catch((err): void => {
+  console.error(`Failed to delete exclude dates. Code is ${err.code}, message is ${err.message}`);
 });
 ```
 

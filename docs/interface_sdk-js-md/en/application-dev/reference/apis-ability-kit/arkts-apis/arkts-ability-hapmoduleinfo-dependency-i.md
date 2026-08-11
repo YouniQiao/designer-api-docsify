@@ -1,6 +1,6 @@
 # Dependency
 
-描述模块所依赖的动态共享库信息。
+Describes the information about the dynamic shared library on which the module depends.
 
 **Since:** 9
 
@@ -16,7 +16,7 @@
 readonly bundleName: string
 ```
 
-标识当前模块依赖的共享包包名。
+Name of the shared bundle on which the current module depends.
 
 **Type:** string
 
@@ -36,7 +36,7 @@ readonly bundleName: string
 readonly moduleName: string
 ```
 
-标识当前模块依赖的共享包模块名。
+Module name of the shared bundle on which the current module depends.
 
 **Type:** string
 
@@ -56,7 +56,7 @@ readonly moduleName: string
 readonly versionCode: long
 ```
 
-标识当前共享包的版本号。
+Version number of the shared bundle.
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：long
 

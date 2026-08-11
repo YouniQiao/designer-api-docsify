@@ -1,6 +1,6 @@
 # BadgeNumberCallbackData (System API)
 
-应用角标数量变化的回调函数类型。
+Returns the changes of the application badge number.
 
 **Since:** 10
 
@@ -18,7 +18,7 @@
 readonly appInstanceKey?: string
 ```
 
-应用实例键值。
+Key value of an application instance.
 
 **Type:** string
 
@@ -38,7 +38,7 @@ readonly appInstanceKey?: string
 readonly badgeNumber: int
 ```
 
-角标个数。
+Number of notifications displayed on the application icon.
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
@@ -58,7 +58,7 @@ readonly badgeNumber: int
 readonly bundle: string
 ```
 
-应用的包名。
+Bundle name of the application.
 
 **Type:** string
 
@@ -78,7 +78,7 @@ readonly bundle: string
 readonly instanceKey?: number
 ```
 
-应用实例键值。
+Key value of an application instance.
 
 **Type:** number
 
@@ -102,7 +102,7 @@ readonly instanceKey?: number
 readonly uid: int
 ```
 
-应用的uid。
+UID of the application.
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 

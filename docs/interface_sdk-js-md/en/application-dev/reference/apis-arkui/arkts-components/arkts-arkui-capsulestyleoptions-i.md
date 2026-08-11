@@ -1,8 +1,9 @@
 # CapsuleStyleOptions
 
-胶囊样式选项。
+Capsule style options.
 
-继承自[ScanEffectOptions](arkts-arkui-scaneffectoptions-i.md)和[CommonProgressStyleOptions](arkts-arkui-commonprogressstyleoptions-i.md)。
+Inherits from [ScanEffectOptions](arkts-arkui-scaneffectoptions-i.md) and  
+[CommonProgressStyleOptions](arkts-arkui-commonprogressstyleoptions-i.md).
 
 **Inheritance/Implementation:** CapsuleStyleOptions extends [ScanEffectOptions](arkts-arkui-scaneffectoptions-i.md), [CommonProgressStyleOptions](arkts-arkui-commonprogressstyleoptions-i.md)
 
@@ -20,13 +21,13 @@
 borderColor?: ResourceColor
 ```
 
-内描边颜色。
+Border color.
 
-默认值：
+Default value:
 
-API version 10：'#33006cde'
+API version 10: **'#33006cde'**
 
-API version 11及以上：'#33007dff'
+API version 11 or later: **'#33007dff'**
 
 **Type:** [ResourceColor](../arkts-apis/arkts-arkui-resourcecolor-t.md)
 
@@ -48,11 +49,13 @@ API version 11及以上：'#33007dff'
 borderRadius?: LengthMetrics
 ```
 
-Capsule进度条圆角半径（不支持百分比设置）。
+Border radius. Percentage values are not supported.
 
-取值范围：[0, 组件高度/2]。默认值：组件高度 / 2。
+Value range: [0, min(width, height)/2]
 
-设置非法数值时，按照默认值处理。
+Default value: min(width, height)/2
+
+If an invalid value is set, the default value is used.
 
 **Type:** [LengthMetrics](../arkts-apis/arkts-arkui-graphics-lengthmetrics-c.md)
 
@@ -76,13 +79,9 @@ Capsule进度条圆角半径（不支持百分比设置）。
 borderWidth?: Length
 ```
 
-内描边宽度。
+Border width. Percentage values are not supported.
 
-默认值：1vp
-
-取值范围：大于等于0的数值，不支持百分比设置。
-
-超出取值范围或设置非法值时按默认值处理。
+Default value: **1vp**
 
 **Type:** [Length](../arkts-apis/arkts-arkui-length-t.md)
 
@@ -104,11 +103,7 @@ borderWidth?: Length
 content?: ResourceStr
 ```
 
-文本内容，应用可自定义。
-
-当需要在Capsule进度条上显示自定义文本时传入此参数；不传入时不显示文本内容（若需显示百分比文本，可设置showDefaultPercentage为true）。
-
-从API version 20开始，支持Resource类型。
+Text content, which can be customized.
 
 **Type:** [ResourceStr](../arkts-apis/arkts-arkui-resourcestr-t.md)
 
@@ -130,13 +125,13 @@ content?: ResourceStr
 font?: Font
 ```
 
-文本样式。
+Text style.
 
-默认值：
+Default value:
 
-文本大小（不支持百分比设置）：12fp 
+Font size (percentage values are not supported): **12fp**
 
-其他文本参数跟随[Text](../../apis-arkgraphics2d/arkts-apis/arkts-graphics-text.md/arkts-graphics-text.md)组件的主题值。
+Other text parameters are subject to the theme values of the [Text](../../apis-arkgraphics2d/arkts-apis/arkts-graphics-text.md/arkts-graphics-text.md) component.
 
 **Type:** [Font](../arkts-apis/arkts-arkui-font-i.md)
 
@@ -158,9 +153,9 @@ font?: Font
 fontColor?: ResourceColor
 ```
 
-文本颜色。
+Font color.
 
-默认值：'#ff182431'
+Default value: **'#ff182431'**
 
 **Type:** [ResourceColor](../arkts-apis/arkts-arkui-resourcecolor-t.md)
 
@@ -182,11 +177,11 @@ fontColor?: ResourceColor
 showDefaultPercentage?: boolean
 ```
 
-显示百分比文本的开关。开启后，进度条上显示当前进度的百分比。设置了content属性时该属性不生效。
+Whether to display the percentage text. After this feature is enabled, the progress percentage is displayed on the progress indicator. This property does not take effect when **content** is set.
 
-true：表示显示百分比文本；false：表示不显示百分比文本。
+**true**: The percentage text is displayed. **false**: The percentage text is not displayed.
 
-默认值：false
+Default value: **false**
 
 **Type:** boolean
 

@@ -1,11 +1,5 @@
 # subscribeThermalLevel
 
-## 导入模块
-
-```TypeScript
-import { thermal } from 'kits/@kit.BasicServicesKit';
-```
-
 ## subscribeThermalLevel
 
 ```TypeScript
@@ -36,10 +30,6 @@ function subscribeThermalLevel(callback: AsyncCallback<ThermalLevel>): void
 
 ```TypeScript
 thermal.subscribeThermalLevel((err: Error, level: thermal.ThermalLevel) => {
-    if (err) {
-        console.error('subscribe thermal level failed, err: ' + err);
-        return;
-    }
     console.info('thermal level is: ' + level);
 });
 ```

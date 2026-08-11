@@ -1,11 +1,5 @@
 # getAuthenticator
 
-## 导入模块
-
-```TypeScript
-import { userAuth } from 'kits/@kit.UserAuthenticationKit';
-```
-
 ## getAuthenticator
 
 ```TypeScript

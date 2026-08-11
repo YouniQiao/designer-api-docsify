@@ -1,14 +1,19 @@
 # TemplateOptions
 
-当cachedCount值被设置为当前template在容器组件显示区域的最大节点数量时，Repeat会做到最大程度的复用。当容器组件显示区域内没有当前template的节点时，缓存池不会释放，同时应用内存增大。开发者需要根据应用对内存占用和组件复用效率的需求自行调整，推荐cachedCount值设置为容器组件显示区域内节点个数。需要注意，不建议设置cachedCount小于2，这会导致在快速滑动场景下频繁创建新的节点，从而造成性能劣化。
+When **cachedCount** is set to the maximum number of nodes in the display area of the container component for the current template, **Repeat** achieves maximum reuse efficiency. If there are no nodes of the current template in the container component's display area, the cache list is not released, which increases application memory usage. You are advised to set **cachedCount** to the number of nodes within the container component's display area and adjust the value according to the actual situation. Yet, setting **cachedCount** to less than 2 is not recommended, as this may lead to the frequent node creation during rapid scrolling and result in performance degradation.
 
-> **说明：**
+> **NOTE：**
 > 
-> 滚动容器组件属性`.cachedCount()`和Repeat组件属性`.template()`的参数`cachedCount`都是为了平衡性能和内存，但是含义是不同的。
+> The **.cachedCount()** attribute of the scrollable container component and the **cachedCount** parameter of the
+> **.template()** method of **Repeat** are used to balance performance and memory, but their meanings are different.
 > 
-> - 滚动容器组件`.cachedCount()`：是指在容器组件显示区域外预加载区域的大小，该区域内子组件节点位于组件树上。滚动容器组件会额外渲染这些预加载区域的节点，从而提高列表滑动性能。
+> - **.cachedCount()** of the scrollable container component: size of the preloading area outside the display area of
+> the container component. The child component nodes in this area are located in the component tree. The scrollable
+> container component renders nodes in these preloading areas, improving the list scrolling performance.
 > 
-> - `.template()`中的`cachedCount`：指Repeat每个template的缓存池大小，当渲染新的子组件时，Repeat先判断对应template缓存池中是否有可用节点，有则复用，没有则创建新节点。
+> - cachedCount in .template(): size of the cache pool for each template in the **Repeat** component. When rendering
+> a new child component, **Repeat** checks whether there are available nodes in the cache pool for the corresponding
+> template. If yes, the nodes are reused. If no, new nodes are created.
 
 **Since:** 12
 
@@ -24,8 +29,7 @@
 cachedCount?: number
 ```
 
-当前template的缓存池中可缓存子组件节点的最大数量。取值范围是  
-[0, +∞)，默认值为容器组件显示区域节点与预加载区域节点的个数之和。当容器组件显示区域节点与预加载节点的个数之和增多时（滑动过程中，只有部分高度的子组件在显示区域），cachedCount也会对应增长。需要注意cachedCount数量不会减少。传入负数等超出取值范围的值时，使用默认值处理。
+Maximum number of child component nodes that can be cached in the cache pool of the current template. The value range is [0, +∞). The default value is the sum of the number of nodes in the display area of the container component and the number of nodes in the preloading area. When this sum increases (during the scrolling, when only part of the height of child components is within the display area), the value of **cachedCount** also increases accordingly. Note that the value of **cachedCount** does not decrease.
 
 **Type:** number
 

@@ -1,6 +1,6 @@
 # CommonTransition
 
-页面转场通用动效。
+Defines a common transition animation for page transitions.
 
 **Since:** 7
 
@@ -16,7 +16,7 @@
 constructor()
 ```
 
-转场通用动效的构造函数。
+A constructor used to create a common transition animation.
 
 **Since:** 7
 
@@ -34,7 +34,7 @@ constructor()
 opacity(value: number): T
 ```
 
-设置入场的起点透明度值或者退场的终点透明度值。
+Sets the starting opacity value for entrance or the ending opacity value for exit.
 
 **Since:** 7
 
@@ -50,13 +50,13 @@ opacity(value: number): T
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | number | Yes | 设置入场的起点透明度值或者退场的终点透明度值。&lt;br/&gt;取值范围：[0, 1] |
+| value | number | Yes | Starting opacity value for entrance or the ending opacity value for exit.&lt;br&gt;Value range: [0, 1] |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| T | 返回当前组件。 |
+| T | Current component. |
 
 ## scale
 
@@ -64,7 +64,7 @@ opacity(value: number): T
 scale(value: ScaleOptions): T
 ```
 
-设置页面转场时的缩放效果。
+Sets the scaling effect for page transitions.
 
 **Since:** 7
 
@@ -80,13 +80,13 @@ scale(value: ScaleOptions): T
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | [ScaleOptions](arkts-arkui-scaleoptions-i.md) | Yes | 设置页面转场时的缩放效果，为入场时起点和退场时终点的值。&lt;br/&gt;- x：横向放大倍数（或缩小比例）。&lt;br/&gt;- y：纵向放大倍数（或缩小比例）。&lt;br/&gt;- z： 竖向放大倍数（或缩小比例）。&lt;br/&gt;- centerX、centerY缩放中心点。centerX和centerY默认值是"50%"，即默认以页面的中心点为旋转中心点。&lt;br/&gt;- 中心点为(0, 0)代表页面的左上 角。<br>**Since:** 18 |
+| value | [ScaleOptions](arkts-arkui-scaleoptions-i.md) | Yes | Scaling effect for page transitions, specifying the start value for entrance and the end value for exit.&lt;br&gt;- **x**: scale factor along the x-axis.&lt;br&gt;- **y**: scale factor along the y-axis.&lt; br&gt;- **z**: scale factor along the z-axis.&lt;br&gt;- **centerX** and **centerY**: scaling center. The default values are both **"50%"**, meaning the center of the page is used as the scaling center by default.&lt;br&gt;- If the center point is (0, 0), it refers to the upper left corner of the component.<br>**Since:** 18 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| T | 返回当前组件。 |
+| T | Current component. |
 
 ## slide
 
@@ -94,7 +94,7 @@ scale(value: ScaleOptions): T
 slide(value: SlideEffect): T
 ```
 
-设置页面转场时的滑入滑出效果。
+Sets the slide-in and slide-out effects for page transitions.
 
 **Since:** 7
 
@@ -110,13 +110,13 @@ slide(value: SlideEffect): T
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | [SlideEffect](arkts-arkui-slideeffect-e.md) | Yes | 页面转场时的滑入滑出效果。 |
+| value | [SlideEffect](arkts-arkui-slideeffect-e.md) | Yes | Slide-in and slide-out effects for page transitions. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| T | 返回当前组件。 |
+| T | Current component. |
 
 ## translate
 
@@ -124,7 +124,7 @@ slide(value: SlideEffect): T
 translate(value: TranslateOptions): T
 ```
 
-设置页面转场时的平移效果。
+Sets the translation effect for page transitions.
 
 **Since:** 7
 
@@ -140,11 +140,11 @@ translate(value: TranslateOptions): T
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | [TranslateOptions](../arkts-apis/arkts-arkui-common-translateoptions-i.md) | Yes | 设置页面转场时的平移效果，为入场时起点和退场时终点的值，和slide同时设置时默认生效slide。&lt;br/&gt;- x：横向的平移距离。&lt;br/&gt;- y：纵向的平 移距离。&lt;br/&gt;- z：竖向的平移距离。<br>**Since:** 18 |
+| value | [TranslateOptions](../arkts-apis/arkts-arkui-common-translateoptions-i.md) | Yes | Translation effect for page transitions, specifying the start value for entrance and the end value for exit. When this parameter is set together with **slide**, the latter takes effect by default.&lt;br&gt;- **x**: translation distance along the x-axis.&lt;br&gt;- **y**: translation distance along the y-axis.&lt;br&gt;- **z**: translation distance along the y-axis.<br>**Since:** 18 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| T | 返回当前组件。 |
+| T | Current component. |
 

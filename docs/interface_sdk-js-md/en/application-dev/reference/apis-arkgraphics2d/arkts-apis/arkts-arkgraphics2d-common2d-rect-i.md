@@ -1,6 +1,6 @@
 # Rect
 
-矩形区域，通过2个坐标点可以描述出一个矩形区域，这2个点分别认为是矩形区域的左上角点与右下角点。
+Describes a rectangle, which can be defined by two coordinate points: upper left corner point and lower right corner point.
 
 **Since:** 11
 
@@ -22,7 +22,7 @@ import { common2D } from 'kits/@kit.ArkGraphics2D';
 bottom: double
 ```
 
-矩形区域的右下角纵坐标，浮点数。
+Y coordinate of the lower right corner of the rectangle. The value is a floating point number.
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：double
 
@@ -42,7 +42,7 @@ bottom: double
 left: double
 ```
 
-矩形区域的左上角横坐标，浮点数。
+X coordinate of the upper left corner of the rectangle. The value is a floating point number.
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：double
 
@@ -62,7 +62,7 @@ left: double
 right: double
 ```
 
-矩形区域的右下角横坐标，浮点数。
+X coordinate of the lower right corner of the rectangle. The value is a floating point number.
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：double
 
@@ -82,7 +82,7 @@ right: double
 top: double
 ```
 
-矩形区域的左上角纵坐标，浮点数。
+Y coordinate of the upper left corner of the rectangle. The value is a floating point number.
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：double
 

@@ -1,6 +1,6 @@
 # ResourceInfo
 
-预下载的资源信息。
+Describes the pre-downloaded resource information.
 
 **Since:** 20
 
@@ -22,7 +22,7 @@ import { cacheDownload } from 'kits/@kit.BasicServicesKit';
 readonly size: long
 ```
 
-预下载资源解压后的大小，单位为字节（B）。当值为正整数时表示资源下载成功，-1表示下载失败。
+Size of a pre-downloaded resource after decompression, in bytes. If the value is a positive integer, the resource is successfully downloaded; if the value is **-1**, the resource fails to be downloaded.
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：long
 

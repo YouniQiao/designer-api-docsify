@@ -14,12 +14,6 @@
 
 **系统能力：** SystemCapability.Global.ResourceManager
 
-## 导入模块
-
-```TypeScript
-import { resourceManager } from 'kits/@kit.LocalizationKit';
-```
-
 ## [[Call]]
 
 ```TypeScript

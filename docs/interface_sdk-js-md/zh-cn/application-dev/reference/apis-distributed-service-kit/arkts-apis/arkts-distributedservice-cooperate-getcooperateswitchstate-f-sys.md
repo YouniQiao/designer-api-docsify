@@ -1,11 +1,5 @@
 # getCooperateSwitchState（系统接口）
 
-## 导入模块
-
-```TypeScript
-import { cooperate } from 'kits/@kit.DistributedServiceKit';
-```
-
 ## getCooperateSwitchState
 
 ```TypeScript
@@ -37,11 +31,13 @@ function getCooperateSwitchState(networkId: string, callback: AsyncCallback<bool
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 401 | Parameter error. Possible causes: &lt;br&gt;1. Mandatory parameters are left unspecified. &lt;br&gt;2. Incorrect parameter types. &lt;br&gt;3. Parameter verification failed. |
-| 201 | Permission denied. |
-| 202 | Permission verification failed. A non-system application calls a system API. |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: &lt;br&gt;1. Mandatory parameters are left unspecified. &lt;br&gt;2. Incorrect parameter types. &lt;br&gt;3. Parameter verification failed. |
+| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed. A non-system application calls a system API. |
 
 ## 示例
+
+ArkTS-Dyn示例：
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -49,6 +45,23 @@ import { BusinessError } from '@kit.BasicServicesKit';
 let deviceDescriptor = "networkId";
 try {
   cooperate.getCooperateSwitchState(deviceDescriptor, (error: BusinessError, data: boolean) => {
+    if (error) {
+      console.error(`Get the status failed, error: ${JSON.stringify(error, [`code`, `message`])}`);
+      return;
+    }
+    console.info(`Get the status success, data: ${JSON.stringify(data)}`);
+  });
+} catch (error) {
+  console.error(`Get the status failed, error: ${JSON.stringify(error, [`code`, `message`])}`);
+}
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+let deviceDescriptor: string = "networkId";
+try {
+  cooperate.getCooperateSwitchState(deviceDescriptor, (error: BusinessError|null, data: boolean|undefined) => {
     if (error) {
       console.error(`Get the status failed, error: ${JSON.stringify(error, [`code`, `message`])}`);
       return;
@@ -97,11 +110,13 @@ function getCooperateSwitchState(networkId: string): Promise<boolean>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 401 | Parameter error. Possible causes: &lt;br&gt;1. Mandatory parameters are left unspecified. &lt;br&gt;2. Incorrect parameter types. &lt;br&gt;3. Parameter verification failed. |
-| 201 | Permission denied. |
-| 202 | Permission verification failed. A non-system application calls a system API. |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: &lt;br&gt;1. Mandatory parameters are left unspecified. &lt;br&gt;2. Incorrect parameter types. &lt;br&gt;3. Parameter verification failed. |
+| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed. A non-system application calls a system API. |
 
 ## 示例
+
+ArkTS-Dyn示例：
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -111,6 +126,21 @@ try {
   cooperate.getCooperateSwitchState(deviceDescriptor).then((data: boolean) => {
     console.info(`Get the status success, data: ${JSON.stringify(data)}`);
   }, (error: BusinessError) => {
+    console.error(`Get the status failed, error: ${JSON.stringify(error, [`code`, `message`])}`);
+  });
+} catch (error) {
+  console.error(`Get the status failed, error: ${JSON.stringify(error, [`code`, `message`])}`);
+}
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+let deviceDescriptor: string = "networkId";
+try {
+  cooperate.getCooperateSwitchState(deviceDescriptor).then((data: boolean): void => {
+    console.info(`Get the status success, data: ${JSON.stringify(data)}`);
+  }, (error: Error): void => {
     console.error(`Get the status failed, error: ${JSON.stringify(error, [`code`, `message`])}`);
   });
 } catch (error) {

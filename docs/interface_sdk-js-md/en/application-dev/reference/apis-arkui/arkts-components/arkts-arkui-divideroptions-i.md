@@ -1,6 +1,6 @@
 # DividerOptions
 
-分割线的信息。
+Define the divider configuration options.
 
 **Since:** 12
 
@@ -16,9 +16,9 @@
 color?: ResourceColor
 ```
 
-分割线的颜色。
+Color of the divider.
 
-> 默认值：'#33000000'
+Default value: **'#33000000'**
 
 **Type:** [ResourceColor](../arkts-apis/arkts-arkui-resourcecolor-t.md)
 
@@ -42,15 +42,13 @@ color?: ResourceColor
 endMargin?: Dimension
 ```
 
-分割线与TextPicker侧边结束端的距离。
+Distance between the divider and the end edge of the text picker.
 
-> 默认值：0
+Default value: **0**
 
-> 单位：默认为vp，也可指定单位为px。
+Unit: vp (default) or px.
 
-> 取值范围：[0, +∞)，endMargin小于0时无效，最大值不得超过TextPicker列宽。不支持“百分比”类型。
-
-> **说明：** 当startMargin + endMargin超过组件宽度时，会被置0。
+Values less than 0 are invalid. The maximum value allowed is the width of the column. Percentages are not supported.
 
 **Type:** [Dimension](../arkts-apis/arkts-arkui-dimension-t.md)
 
@@ -74,15 +72,13 @@ endMargin?: Dimension
 startMargin?: Dimension
 ```
 
-分割线与TextPicker侧边起始端的距离。
+Distance between the divider and the start edge of the text picker.
 
-> 默认值：0
+Default value: **0**
 
-> 单位：默认为vp，也可指定单位为px。
+Unit: vp (default) or px.
 
-> 取值范围：[0, +∞)，startMargin小于0时无效，最大值不得超过TextPicker列宽。不支持“百分比”类型。
-
-> **说明：**当startMargin + endMargin超过组件宽度时，会被置0。
+Values less than 0 are invalid. The maximum value allowed is the width of the column. Percentages are not supported.
 
 **Type:** [Dimension](../arkts-apis/arkts-arkui-dimension-t.md)
 
@@ -106,13 +102,13 @@ startMargin?: Dimension
 strokeWidth?: Dimension
 ```
 
-分割线的线宽。
+Stroke width of the divider.
 
-> 默认值：2.0px
+Default value: **2.0px**
 
-> 单位：默认为vp，也可指定单位为px。
+Unit: vp (default) or px.
 
-> 取值范围：[0, +∞)，strokeWidth小于0取默认值，最大不得超过列高的一半。不支持“百分比”类型。
+If the value is less than 0, the default value is used. The maximum value allowed is half the height of the column.Percentages are not supported.
 
 **Type:** [Dimension](../arkts-apis/arkts-arkui-dimension-t.md)
 

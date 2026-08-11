@@ -1,6 +1,6 @@
 # InstallParam
 
-应用包安装需指定的参数信息。
+Defines the parameters for application installation.
 
 **Since:** 12
 
@@ -22,7 +22,9 @@ import { bundleManager } from 'kits/@kit.MDMKit';
 installFlag?: number
 ```
 
-安装标志。枚举值：0：应用初次安装，1：应用覆盖安装，2：应用免安装，默认值为0(应用初次安装)。
+Installation flag.
+
+**0** (default value) indicates fresh installation of the application, **1** indicates overlay installation of the application, and **2** indicates installation-free.
 
 **Type:** number
 
@@ -42,7 +44,7 @@ installFlag?: number
 parameters?: Record<string, string>
 ```
 
-扩展参数，默认值为空。key取值支持"ohos.bms.param.enterpriseForAllUser"，若对应的value值为"true"，表示为所有用户安装应用。
+Extended parameters. The default value is null. The key can be **ohos.bms.param.enterpriseForAllUser**. If the corresponding value is set **true**, the application is installed for all users.
 
 **Type:** [Record](../../apis-default/arkts-apis/arkts-record-t.md)&lt;string, string&gt;
 
@@ -62,7 +64,7 @@ parameters?: Record<string, string>
 userId?: number
 ```
 
-指示用户ID，默认值：调用方所在用户，取值范围：大于等于0。
+User ID, which must be greater than or equal to 0. The default value is the user ID of the caller.
 
 **Type:** number
 

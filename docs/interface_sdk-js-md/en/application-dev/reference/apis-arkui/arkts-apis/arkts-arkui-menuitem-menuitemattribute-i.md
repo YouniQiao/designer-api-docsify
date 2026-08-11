@@ -1,6 +1,6 @@
 # MenuItemAttribute
 
-除支持[通用属性](../../apis-ability-kit/arkts-apis/arkts-app-ability-common.md/arkts-app-ability-common.md)外，还支持以下属性：
+Defines the MenuItem component attributes.
 
 **Inheritance/Implementation:** MenuItemAttribute extends [CommonMethod](arkts-arkui-common-commonmethod-i.md)
 
@@ -19,7 +19,7 @@ default attributeModifier(
         modifier: AttributeModifier<MenuItemAttribute> | AttributeModifier<CommonMethod> | undefined): this
 ```
 
-设置MenuItem组件的属性修改器。
+Set the attribute modifier of menu item.
 
 **Since:** 23
 
@@ -35,7 +35,7 @@ default attributeModifier(
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| modifier | [AttributeModifier](../arkts-components/arkts-arkui-attributemodifier-i.md)&lt;[MenuItemAttribute](arkts-arkui-menuitem-menuitemattribute-i.md)&gt; \| AttributeModifier&lt;CommonMethod&gt; \| undefined | Yes | MenuItem 组件的属性修改器。取值为undefined时，则不使用属性修改器。&lt;br/&gt;CommonMethod：[通用属性](../../apis-ability-kit/arkts-apis/arkts-app-ability-common.md/arkts-app-ability-common.md) |
+| modifier | [AttributeModifier](../arkts-components/arkts-arkui-attributemodifier-i.md)&lt;[MenuItemAttribute](arkts-arkui-menuitem-menuitemattribute-i.md)&gt; \| AttributeModifier&lt;CommonMethod&gt; \| undefined | Yes | The attribute modifier of menu item. |
 
 **Return value:**
 
@@ -49,7 +49,7 @@ default attributeModifier(
 default contentFont(value: Font | undefined): this
 ```
 
-设置菜单项中内容信息的字体样式。
+Sets the content font style.Family and style are not supported currently and will be fixed in future.
 
 **Since:** 23
 
@@ -65,7 +65,7 @@ default contentFont(value: Font | undefined): this
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | [Font](arkts-arkui-font-i.md) \| undefined | Yes | 菜单项中内容信息的字体样式。取值为undefined时，按各属性的默认值处理。 |
+| value | [Font](arkts-arkui-font-i.md) \| undefined | Yes | Indicates the font style of content text. |
 
 **Return value:**
 
@@ -79,7 +79,7 @@ default contentFont(value: Font | undefined): this
 default contentFontColor(value: ResourceColor | undefined): this
 ```
 
-设置菜单项中内容信息的字体颜色。
+Sets the font color of content text.
 
 **Since:** 23
 
@@ -95,7 +95,7 @@ default contentFontColor(value: ResourceColor | undefined): this
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | [ResourceColor](arkts-arkui-resourcecolor-t.md) \| undefined | Yes | 菜单项中内容信息的字体颜色。取值为undefined时，按默认值处理。&lt;br /&gt;默认值：'#E5000000' |
+| value | [ResourceColor](arkts-arkui-resourcecolor-t.md) \| undefined | Yes | Indicates the font color of content text. |
 
 **Return value:**
 
@@ -109,7 +109,7 @@ default contentFontColor(value: ResourceColor | undefined): this
 default labelFont(value: Font | undefined): this
 ```
 
-设置菜单项中标签信息的字体样式。
+Sets the label info font style.Family and style are not supported currently and will be fixed in future.
 
 **Since:** 23
 
@@ -125,7 +125,7 @@ default labelFont(value: Font | undefined): this
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | [Font](arkts-arkui-font-i.md) \| undefined | Yes | 菜单项中标签信息的字体样式。取值为undefined时，按各属性的默认值处理。 |
+| value | [Font](arkts-arkui-font-i.md) \| undefined | Yes | Indicates the font style of label info text. |
 
 **Return value:**
 
@@ -139,7 +139,7 @@ default labelFont(value: Font | undefined): this
 default labelFontColor(value: ResourceColor | undefined): this
 ```
 
-设置菜单项中标签信息的字体颜色。
+Sets the font color of label info text.
 
 **Since:** 23
 
@@ -155,7 +155,7 @@ default labelFontColor(value: ResourceColor | undefined): this
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | [ResourceColor](arkts-arkui-resourcecolor-t.md) \| undefined | Yes | 菜单项中标签信息的字体颜色。取值为undefined时，按默认值处理。&lt;br /&gt;默认值：'#99000000' |
+| value | [ResourceColor](arkts-arkui-resourcecolor-t.md) \| undefined | Yes | Indicates the font color of label info text. |
 
 **Return value:**
 
@@ -169,7 +169,7 @@ default labelFontColor(value: ResourceColor | undefined): this
 default onChange(callback: ((selected: boolean) => void) | undefined): this
 ```
 
-当选中状态发生变化时，触发该回调。只有手动触发且MenuItem状态改变时才会触发onChange回调。
+Triggers a callback when a menu item is selected or unchecked.
 
 **Since:** 23
 
@@ -185,7 +185,7 @@ default onChange(callback: ((selected: boolean) => void) | undefined): this
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | ((selected: boolean) =&gt; void) \| undefined | Yes | 选中状态发生变化时，触发该回调。&lt;br /&gt;true：未选中切换为选中；false：选中切换为未选 中。&lt;br/&gt;ArkTS-Sta：当callback的值为undefined时，不使用回调函数。 |
+| callback | ((selected: boolean) =&gt; void) \| undefined | Yes |  |
 
 **Return value:**
 
@@ -199,7 +199,7 @@ default onChange(callback: ((selected: boolean) => void) | undefined): this
 default selectIcon(value: boolean | ResourceStr | SymbolGlyphModifier | undefined): this
 ```
 
-设置当菜单项被选中时，是否显示被选中的图标。
+Whether the relevant check icon is displayed when a menu item is selected.Use type ResourceStr or SymbolGlyphModifier to specify icon instead of the default check mark.
 
 **Since:** 23
 
@@ -215,7 +215,7 @@ default selectIcon(value: boolean | ResourceStr | SymbolGlyphModifier | undefine
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | boolean \| ResourceStr \| SymbolGlyphModifier \| undefined | Yes | 菜单项被选中时，是否显示被选中的图标。取值为undefined时，按默认值处 理。&lt;br/&gt;true：显示默认的对勾图标；false：不显示图标。&lt;br/&gt;ResourceStr：显示指定的图标。&lt;br/&gt;SymbolGlyphModifier：显示指定的HMSymbol图标。&lt;br/&gt;默认值： false |
+| value | boolean \| ResourceStr \| SymbolGlyphModifier \| undefined | Yes | Whether to display icon when selected. &lt;br&gt;true: displays the default check mark when selected. &lt;br&gt;false: does not displays icon when selected. &lt;br&gt;ResourceStr or SymbolGlyphModifier: displays the specified icon when selected. |
 
 **Return value:**
 
@@ -229,11 +229,7 @@ default selectIcon(value: boolean | ResourceStr | SymbolGlyphModifier | undefine
 default selected(value: boolean | undefined | Bindable<boolean>): this
 ```
 
-设置菜单项是否选中。
-
-从API version 10开始，该参数支持[\$\$](../../../ui/state-management/arkts-two-way-sync.md)双向绑定变量。
-
-从API version 18开始，该参数支持[!!](../../../ui/state-management/arkts-new-binding.md#系统组件参数双向绑定)双向绑定变量。
+Setting whether menuItem is selected.
 
 **Since:** 23
 
@@ -249,7 +245,67 @@ default selected(value: boolean | undefined | Bindable<boolean>): this
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | boolean \| undefined \| Bindable&lt;boolean&gt; | Yes | 菜单项是否选中。取值为undefined时，按默认值处理。&lt;br/&gt;true：菜单项被选中；false：菜单 项不被选中。&lt;br /&gt;默认值：false |
+| value | boolean \| undefined \| Bindable&lt;boolean&gt; | Yes |  |
+
+**Return value:**
+
+| Type | Description |
+| --- | --- |
+| this |  |
+
+## setMenuItemOptions
+
+```TypeScript
+default setMenuItemOptions(value?: MenuItemOptions | CustomBuilder): this
+```
+
+Set menuitem options.
+
+**Since:** 26.1.0
+
+**ArkTS mode:** ArkTS-Sta only, since version 26.1.0.
+
+**Model restriction:** This API can be used only in the stage model.
+
+<!--Device-MenuItemAttribute-default setMenuItemOptions(value?: MenuItemOptions | CustomBuilder): this--><!--Device-MenuItemAttribute-default setMenuItemOptions(value?: MenuItemOptions | CustomBuilder): this-End-->
+
+**System capability:** SystemCapability.ArkUI.ArkUI.Full
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| value | [MenuItemOptions](arkts-arkui-menuitem-menuitemoptions-i.md) \| CustomBuilder | No | menuitem constructor options |
+
+**Return value:**
+
+| Type | Description |
+| --- | --- |
+| this | Returns the instance of the MenuItemAttribute. |
+
+## subMenuBuilder
+
+```TypeScript
+default subMenuBuilder(builder: CustomBuilder | undefined): this
+```
+
+Create the submenu for custom menu item.
+
+**Since:** 26.0.0
+
+**ArkTS mode:** ArkTS-Sta only, since version 26.0.0.
+
+**Model restriction:** This API can be used only in the stage model.
+
+<!--Device-MenuItemAttribute-default subMenuBuilder(builder: CustomBuilder | undefined): this--><!--Device-MenuItemAttribute-default subMenuBuilder(builder: CustomBuilder | undefined): this-End-->
+
+**System capability:** SystemCapability.ArkUI.ArkUI.Full
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| builder | [CustomBuilder](../arkts-components/arkts-arkui-custombuilder-t.md) \| undefined | Yes | Indicates the builder function for submenu. |
 
 **Return value:**
 

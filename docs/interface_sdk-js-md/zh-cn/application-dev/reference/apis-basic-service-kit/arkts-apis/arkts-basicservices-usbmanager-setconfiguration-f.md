@@ -1,11 +1,5 @@
 # setConfiguration
 
-## 导入模块
-
-```TypeScript
-import { usbManager } from 'kits/@kit.BasicServicesKit';
-```
-
 ## setConfiguration
 
 ```TypeScript
@@ -39,8 +33,8 @@ function setConfiguration(pipe: USBDevicePipe, config: USBConfiguration): int
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 401 | Parameter error. Possible causes:  &lt;br&gt;1.Mandatory parameters are left unspecified.  &lt;br&gt;2.Incorrect parameter types. |
-| 801 | Capability not supported.<br>**适用版本：** 18+ |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes:  &lt;br&gt;1.Mandatory parameters are left unspecified.  &lt;br&gt;2.Incorrect parameter types. |
+| [801](../../errorcode-universal.md#801-该设备不支持此api) | Capability not supported.<br>**适用版本：** 18+ |
 
 ## 示例
 
@@ -64,7 +58,7 @@ async function setConfiguration() {
     return;
   }
   let config: usbManager.USBConfiguration = device.configs?.[0];
-  let ret: number = usbManager.setConfiguration(devicePipe, config);
+  let ret: int = usbManager.setConfiguration(devicePipe, config);
   console.info(`setConfiguration = ${ret}`);
   usbManager.closePipe(devicePipe);
 }

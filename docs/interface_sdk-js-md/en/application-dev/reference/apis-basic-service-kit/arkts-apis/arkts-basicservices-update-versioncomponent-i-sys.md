@@ -1,6 +1,6 @@
 # VersionComponent (System API)
 
-版本组件。
+Represents a version component.
 
 **Since:** 9
 
@@ -24,7 +24,8 @@ import { update } from 'kits/@kit.BasicServicesKit';
 componentId: string
 ```
 
-组件标识，用于唯一标识升级包中的组件。从版本检查结果的versionComponents数组中获取，用于后续描述信息查询或组件信息展示等场景。
+Component ID, which uniquely identifies a component in the upgrade package. The value is obtained from the   
+**versionComponents** array in the version check result and is used for subsequent description query or component information display.
 
 **Type:** string
 
@@ -44,7 +45,7 @@ componentId: string
 componentType: ComponentType
 ```
 
-组件类型。
+Component type.
 
 **Type:** [ComponentType](arkts-basicservices-update-componenttype-e-sys.md)
 
@@ -64,7 +65,7 @@ componentType: ComponentType
 descriptionInfo: DescriptionInfo
 ```
 
-描述文件信息.
+Information about the version description file.
 
 **Type:** [DescriptionInfo](arkts-basicservices-update-descriptioninfo-i-sys.md)
 
@@ -84,7 +85,7 @@ descriptionInfo: DescriptionInfo
 displayVersion: string
 ```
 
-显示版本号。
+Display version number.
 
 **Type:** string
 
@@ -104,7 +105,9 @@ displayVersion: string
 effectiveMode: EffectiveMode
 ```
 
-生效模式，取值原则：COLD为冷升级，需重启设备生效；LIVE为热升级，无需重启即可生效；LIVE_AND_COLD为融合升级，结合两者特性。
+Effective mode. The value **COLD** indicates the cold upgrade, which takes effect after the device is restarted;   
+**LIVE** indicates the hot upgrade, which does not require restarting the device to take effect;   
+**LIVE_AND_COLD** indicates the integrated upgrade, which combines the characteristics of **COLD** and **LIVE**.
 
 **Type:** [EffectiveMode](arkts-basicservices-update-effectivemode-e-sys.md)
 
@@ -124,7 +127,7 @@ effectiveMode: EffectiveMode
 innerVersion: string
 ```
 
-版本号。
+Internal version number.
 
 **Type:** string
 
@@ -144,7 +147,9 @@ innerVersion: string
 otaMode?: OtaMode
 ```
 
-升级模式。当需要指定特定的升级模式时传入此参数，适用于存储空间受限、快速升级或A/B分区设备等特殊场景。取值原则：REGULAR_OTA为正常升级，适用于大多数常规升级场景；STREAM_OTA为流式升级，适用于存储空间受限或需要快速升级的场景；AB_REGULAR_OTA为AB正常升级，适用于A/B分区设备；AB_STREAM_OTA为AB流式升级，适用于A/B分区设备。不传入时默认为REGULAR_OTA，使用正常升级模式。
+OTA mode. Pass this parameter to specify a specific upgrade mode, which is applicable to special scenarios such as the upgrade with limited storage space, fast upgrade, and A/B partition device upgrade. The value   
+**REGULAR_OTA** indicates a regular upgrade, which is applicable to most common upgrade scenarios. **STREAM_OTA**indicates a streaming upgrade, which is applicable to scenarios where the storage space is limited or a fast upgrade is required. **AB_REGULAR_OTA** indicates the normal A/B upgrade and applies to the A/B partition device.  
+**AB_STREAM_OTA** indicates the A/B streaming upgrade and applies to the A/B partition device. If this parameter is not specified, the default value **REGULAR_OTA** is used, indicating that the regular upgrade mode is used.
 
 **Type:** [OtaMode](arkts-basicservices-update-otamode-e-sys.md)
 
@@ -164,7 +169,7 @@ otaMode?: OtaMode
 size: int
 ```
 
-升级包大小，单位为B，取值范围[0, +∞]。超出范围时抛出异常。
+Size of the upgrade package, in bytes. The value range is [0, +∞]. An exception is thrown if the value is out of range.
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
@@ -184,7 +189,7 @@ size: int
 upgradeAction: UpgradeAction
 ```
 
-升级方式，取值原则：UPGRADE为差分包，适用于增量升级场景；RECOVERY为修复包，适用于系统故障修复场景。
+Upgrade action. The value **UPGRADE** indicates that the upgrade package is a differential package, which applies to incremental upgrade. The value **RECOVERY** indicates that the upgrade package is a repair package, which applies to system failure repair.
 
 **Type:** [UpgradeAction](arkts-basicservices-update-upgradeaction-e-sys.md)
 

@@ -1,11 +1,5 @@
 # getTotalSizeOfVolume（系统接口）
 
-## 导入模块
-
-```TypeScript
-import { storageStatistics } from 'kits/@kit.CoreFileKit';
-```
-
 ## getTotalSizeOfVolume
 
 ```TypeScript
@@ -37,35 +31,54 @@ function getTotalSizeOfVolume(volumeUuid: string, callback: AsyncCallback<long>)
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 401 | The input parameter is invalid.Possible causes:1.Mandatory parameters are left unspecified; &lt;br&gt;2.Incorrect parameter types. |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | The input parameter is invalid.Possible causes:1.Mandatory parameters are left unspecified; &lt;br&gt;2.Incorrect parameter types. |
 | 13600008 | No such object. |
-| 201 | Permission verification failed. |
-| 202 | The caller is not a system application. |
+| [201](../../errorcode-universal.md#201-权限校验失败) | Permission verification failed. |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | The caller is not a system application. |
 | 13600001 | IPC error. |
 | 13900042 | Unknown error. |
 
 ## 示例
+
+ArkTS-Dyn示例：
 
 ```TypeScript
 import { volumeManager } from '@kit.CoreFileKit';
 import { BusinessError } from '@kit.BasicServicesKit';
 
 volumeManager.getAllVolumes().then((volumes: Array<volumeManager.Volume>) => {
-  if (volumes == null || volumes.length <= 0) {
-    console.error("volumes is null or length is invalid");
-    return;
-  }
   let uuid: string = volumes[0].uuid;
-  storageStatistics.getTotalSizeOfVolume(uuid, (error: BusinessError, number: number) => {
+  storageStatistics.getTotalSizeOfVolume(uuid, (error: BusinessError, totalSize: number) => {
     if (error) {
       console.error(`getTotalSizeOfVolume failed with err, code is: ${error.code}, message is: ${error.message}`);
     } else {
       // do something
-      console.info("getTotalSizeOfVolume successfully:" + number);
+      console.info("getTotalSizeOfVolume successfully:" + totalSize);
     }
   });
 }).catch((err: BusinessError) => {
   console.error(`getAllVolumes failed with err, code is: ${err.code}, message is: ${err.message}`);
+});
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+import { volumeManager } from '@kit.CoreFileKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+volumeManager.getAllVolumes().then((volumes: Array<volumeManager.Volume>) => {
+  let uuid: string = volumes[0].uuid;
+  storageStatistics.getTotalSizeOfVolume(uuid, (error: BusinessError, totalSize: long): void => {
+    if (error) {
+      console.error(`getTotalSizeOfVolume failed with err, code is: ${error.code}, message is: ${error.message}`);
+    } else {
+      // do something
+      console.info("getTotalSizeOfVolume successfully:" + totalSize);
+    }
+  });
+}).catch((err: BusinessError): void => {
+  console.error("getAllVolumes failed with err:" + JSON.stringify(err));
 });
 ```
 
@@ -106,31 +119,47 @@ function getTotalSizeOfVolume(volumeUuid: string): Promise<long>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 401 | The input parameter is invalid.Possible causes:1.Mandatory parameters are left unspecified; &lt;br&gt;2.Incorrect parameter types. |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | The input parameter is invalid.Possible causes:1.Mandatory parameters are left unspecified; &lt;br&gt;2.Incorrect parameter types. |
 | 13600008 | No such object. |
-| 201 | Permission verification failed. |
-| 202 | The caller is not a system application. |
+| [201](../../errorcode-universal.md#201-权限校验失败) | Permission verification failed. |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | The caller is not a system application. |
 | 13600001 | IPC error. |
 | 13900042 | Unknown error. |
 
 ## 示例
+
+ArkTS-Dyn示例：
 
 ```TypeScript
 import { volumeManager } from '@kit.CoreFileKit';
 import { BusinessError } from '@kit.BasicServicesKit';
 
 volumeManager.getAllVolumes().then((volumes: Array<volumeManager.Volume>) => {
-  if (volumes == null || volumes.length <= 0) {
-    console.error("volumes is null or length is invalid");
-    return;
-  }
   let uuid: string = volumes[0].uuid;
-  storageStatistics.getTotalSizeOfVolume(uuid).then((number: number) => {
-    console.info("getTotalSizeOfVolume successfully:" + number);
+  storageStatistics.getTotalSizeOfVolume(uuid).then((totalSize: number) => {
+    console.info("getTotalSizeOfVolume successfully:" + totalSize);
   }).catch((err: BusinessError) => {
     console.error(`getTotalSizeOfVolume failed with err, code is: ${err.code}, message is: ${err.message}`);
   });
 }).catch((err: BusinessError) => {
+  console.error(`getAllVolumes failed with err, code is: ${err.code}, message is: ${err.message}`);
+});
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+import { volumeManager } from '@kit.CoreFileKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+volumeManager.getAllVolumes().then((volumes: Array<volumeManager.Volume>) => {
+  let uuid: string = volumes[0].uuid;
+  storageStatistics.getTotalSizeOfVolume(uuid).then((totalSize: long) => {
+    console.info("getTotalSizeOfVolume successfully:" + totalSize);
+  }).catch((err: BusinessError): void => {
+    console.error(`getTotalSizeOfVolume failed with err, code is: ${err.code}, message is: ${err.message}`);
+  });
+}).catch((err: BusinessError): void => {
   console.error(`getAllVolumes failed with err, code is: ${err.code}, message is: ${err.message}`);
 });
 ```

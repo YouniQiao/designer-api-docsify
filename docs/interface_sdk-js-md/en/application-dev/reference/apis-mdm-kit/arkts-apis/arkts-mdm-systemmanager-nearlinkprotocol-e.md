@@ -1,6 +1,6 @@
 # NearLinkProtocol
 
-星闪协议枚举。
+Enumerates NearLink protocols.
 
 **Since:** 20
 
@@ -16,7 +16,7 @@
 SSAP = 0
 ```
 
-SSAP（SparkLink Service Access Protocol）协议。
+SparkLink Service Access Protocol (SSAP).
 
 **Since:** 20
 
@@ -34,7 +34,7 @@ SSAP（SparkLink Service Access Protocol）协议。
 DATA_TRANSFER = 1
 ```
 
-数据传输协议。
+Data transfer protocol.
 
 **Since:** 20
 

@@ -1,6 +1,6 @@
 # RichEditorUrlStyle
 
-Url信息。
+URL information.
 
 **Since:** 19
 
@@ -16,9 +16,9 @@ Url信息。
 url?: ResourceStr
 ```
 
-url地址。
+URL.
 
-默认值：undefined
+Default value: **undefined**
 
 **Type:** [ResourceStr](../arkts-apis/arkts-arkui-resourcestr-t.md)
 

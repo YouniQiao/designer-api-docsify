@@ -1,6 +1,6 @@
 # RippleFieldOptions
 
-用于描述粒子波动场信息的参数。
+Defines ripple field options.
 
 **Since:** 24
 

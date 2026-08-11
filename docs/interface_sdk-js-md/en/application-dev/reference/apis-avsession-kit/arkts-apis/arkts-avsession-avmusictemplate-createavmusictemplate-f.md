@@ -12,7 +12,7 @@ import { avMusicTemplate } from 'kits/@kit.AVSessionKit';
 function createAVMusicTemplate(accessType: AVMusicTemplateType): AVMusicTemplate
 ```
 
-创建音频模板，返回音频模板实例。
+Create an AVMusicTemplate instance.
 
 **Since:** 23
 
@@ -28,18 +28,18 @@ function createAVMusicTemplate(accessType: AVMusicTemplateType): AVMusicTemplate
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| accessType | [AVMusicTemplateType](arkts-avsession-avmusictemplate-avmusictemplatetype-e.md) | Yes | 音频模板类型。 |
+| accessType | [AVMusicTemplateType](arkts-avsession-avmusictemplate-avmusictemplatetype-e.md) | Yes | type of access, default is 'smartCar' |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [AVMusicTemplate](arkts-avsession-avmusictemplate-avmusictemplate-c.md) | 音频模板对象，可用于获取会话ID。 |
+| [AVMusicTemplate](arkts-avsession-avmusictemplate-avmusictemplate-c.md) | an AVMusicTemplate instance |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 801 | Capability not supported.function createAVMusicTemplate can not work correctly due to limited device capabilities. |
-| 35000001 | Failed to create the AVMusicTemplate. |
+| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported.function createAVMusicTemplate can not work correctly due to limited device capabilities. |
+| [35000001](../errorcode-avmusictemplate.md#35000001-audio-template-creation-failure) | Failed to create the AVMusicTemplate. |
 

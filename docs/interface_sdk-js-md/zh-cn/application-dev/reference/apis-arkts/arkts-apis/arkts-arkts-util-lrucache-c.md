@@ -10,12 +10,6 @@ Provides APIs to discard the least recently used data to make rooms for new elem
 
 **系统能力：** SystemCapability.Utils.Lang
 
-## 导入模块
-
-```TypeScript
-import { util } from 'kits/@kit.ArkTS';
-```
-
 ## $_iterator
 
 ```TypeScript
@@ -36,7 +30,7 @@ Specifies the default iterator for an object.
 
 | 类型 | 说明 |
 | --- | --- |
-| [IterableIterator](arkts-arkts-iterator-iterableiterator-i.md)&lt;[K, V]&gt; | Returns a two - dimensional array in the form of key - value pairs. |
+| IterableIterator&lt;[K, V]&gt; | Returns a two - dimensional array in the form of key - value pairs. |
 
 ## afterRemoval
 
@@ -177,7 +171,7 @@ Returns an array of key-value pairs of enumeratable properties of a given object
 
 | 类型 | 说明 |
 | --- | --- |
-| [IterableIterator](arkts-arkts-iterator-iterableiterator-i.md)&lt;[K, V]&gt; | Returns an array of key-value pairs for the enumeratable properties of the given object itself. |
+| IterableIterator&lt;[K, V]&gt; | Returns an array of key-value pairs for the enumeratable properties of the given object itself. |
 
 ## get
 

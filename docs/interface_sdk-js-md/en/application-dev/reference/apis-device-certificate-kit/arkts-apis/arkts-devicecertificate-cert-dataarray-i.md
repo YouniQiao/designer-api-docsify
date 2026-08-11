@@ -1,6 +1,6 @@
 # DataArray
 
-数据数组的列表。
+Defines a list of data arrays.
 
 **Since:** 9
 
@@ -22,7 +22,7 @@ import { cert } from 'kits/@kit.DeviceCertificateKit';
 data: Array<Uint8Array>
 ```
 
-表示数据数组内容。
+Indicates the content of the data array.
 
 **Type:** Array&lt;Uint8Array&gt;
 

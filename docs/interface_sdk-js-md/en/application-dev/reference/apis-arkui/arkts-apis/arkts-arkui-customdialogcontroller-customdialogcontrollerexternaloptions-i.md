@@ -1,6 +1,6 @@
 # CustomDialogControllerExternalOptions
 
-自定义弹窗的外部选项。
+Defines the external options of CustomDialogController.
 
 **Since:** 23
 
@@ -16,7 +16,7 @@
 customStyle?: boolean
 ```
 
-是否使用自定义样式。&lt;br/&gt;默认值：false
+Defines if use custom style.
 
 **Type:** boolean
 

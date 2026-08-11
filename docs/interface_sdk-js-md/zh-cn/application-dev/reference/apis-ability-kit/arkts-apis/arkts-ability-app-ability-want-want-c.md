@@ -10,12 +10,6 @@ Want是对象间信息传递的载体，可以用于应用组件间的信息传�
 
 **系统能力：** SystemCapability.Ability.AbilityBase
 
-## 导入模块
-
-```TypeScript
-import { Want } from 'kits/@kit.AbilityKit';
-```
-
 ## abilityName
 
 ```TypeScript
@@ -127,7 +121,7 @@ readonly fds?: Record<string, int>
 
 从API version 15开始，该接口支持在原子化服务中使用。
 
-**类型：** ArkTS-Dyn: [Record](../../apis-default/arkts-apis/arkts-record-t.md)&lt;string, number&gt;  <br>ArkTS-Sta：[Record](../../apis-default/arkts-apis/arkts-record-t.md)&lt;string, int&gt;
+**类型：** ArkTS-Dyn: Record&lt;string, number&gt;  <br>ArkTS-Sta：Record&lt;string, int&gt;
 
 **起始版本：** 15
 
@@ -230,7 +224,7 @@ want的Params操作的常量的具体信息请参考[wantConstant](arkts-ability
 
 parameters的Value值仅支持基本数据类型：String、Number、Boolean、Object、undefined和null，不支持传递Object内部的function。
 
-**类型：** [Record](../../apis-default/arkts-apis/arkts-record-t.md)&lt;string, Object&gt;
+**类型：** Record&lt;string, Object&gt;
 
 **起始版本：** 9
 

@@ -4,7 +4,7 @@
 declare type OnListScrollIndexCallback = (start: number, end: number, center: number) => void
 ```
 
-List组件可见区域item变化事件的回调类型。
+Represents a callback for item changes in the visible area of the **List** component.
 
 **Since:** 19
 
@@ -24,7 +24,7 @@ List组件可见区域item变化事件的回调类型。
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| start | number | Yes | List显示区域内第一个子组件的索引值。 |
-| end | number | Yes | List显示区域内最后一个子组件的索引值。 |
-| center | number | Yes | List显示区域内中间位置子组件的索引值。 |
+| start | number | Yes | Index of the first child component in the list display area. |
+| end | number | Yes | Index of the last child component in the list display area. |
+| center | number | Yes | Index of the center child component in the list display area. |
 

@@ -1,6 +1,6 @@
 # SelectionMenuOptionsExt
 
-自定义菜单扩展项。
+Represents the selection menu option extension.
 
 **Since:** 13
 
@@ -16,11 +16,11 @@
 menuType?: MenuType
 ```
 
-自定义选择菜单类型。
+Type of the custom selection menu.
 
-默认值：`MenuType.SELECTION_MENU`。
+Default value: **MenuType.SELECTION_MENU**
 
-从API version 20起，`MenuType.PREVIEW_MENU`支持超链接预览。
+Since API version 20, **MenuType.PREVIEW_MENU** supports hyperlink preview.
 
 **Type:** [MenuType](../../apis-arkui/arkts-apis/arkts-arkui-menutype-e.md)
 
@@ -38,7 +38,7 @@ menuType?: MenuType
 onAppear?: Callback<void>
 ```
 
-自定义选择菜单弹出时回调。
+Callback invoked when the custom selection menu appears.
 
 **Type:** [Callback](../../apis-arkui/arkts-components/arkts-arkui-callback-i.md)&lt;void&gt;
 
@@ -56,7 +56,7 @@ onAppear?: Callback<void>
 onDisappear?: Callback<void>
 ```
 
-自定义选择菜单关闭时回调。
+Callback invoked when the custom selection menu disappears.
 
 **Type:** [Callback](../../apis-arkui/arkts-components/arkts-arkui-callback-i.md)&lt;void&gt;
 
@@ -74,7 +74,7 @@ onDisappear?: Callback<void>
 onMenuHide?: Callback<void>
 ```
 
-自定义选择菜单隐藏时回调。
+Callback invoked when the custom context menu on selection is hidden.
 
 **Type:** [Callback](../../apis-arkui/arkts-components/arkts-arkui-callback-i.md)&lt;void&gt;
 
@@ -92,7 +92,7 @@ onMenuHide?: Callback<void>
 onMenuShow?: Callback<void>
 ```
 
-自定义选择菜单显示时回调。
+Callback invoked when the custom context menu on selection is shown.
 
 **Type:** [Callback](../../apis-arkui/arkts-components/arkts-arkui-callback-i.md)&lt;void&gt;
 
@@ -110,7 +110,7 @@ onMenuShow?: Callback<void>
 preview?: CustomBuilder
 ```
 
-自定义选择菜单的预览内容样式，未配置时无预览内容。
+Preview content style of the custom selection menu. If this parameter is not set, there is no preview content.
 
 **Type:** [CustomBuilder](../../apis-arkui/arkts-components/arkts-arkui-custombuilder-t.md)
 
@@ -128,7 +128,7 @@ preview?: CustomBuilder
 previewMenuOptions?: PreviewMenuOptions
 ```
 
-自定义选择预览菜单选项。
+Custom preview menu options.
 
 **Type:** [PreviewMenuOptions](../../apis-arkui/arkts-components/arkts-arkui-previewmenuoptions-i.md)
 

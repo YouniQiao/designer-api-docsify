@@ -10,12 +10,6 @@ Describes the information of an Metrics Event.
 
 **系统能力：** SystemCapability.Multimedia.Media.AVPlayer
 
-## 导入模块
-
-```TypeScript
-import { media } from 'kits/@kit.MediaKit';
-```
-
 ## details
 
 ```TypeScript
@@ -24,7 +18,7 @@ details: Record<string, Object>
 
 The detailed information of the event.
 
-**类型：** [Record](../../apis-default/arkts-apis/arkts-record-t.md)&lt;string, Object&gt;
+**类型：** Record&lt;string, Object&gt;
 
 **起始版本：** 23
 

@@ -12,9 +12,10 @@ import { cryptoFramework } from 'kits/@kit.CryptoArchitectureKit';
 function createSign(algName: string): Sign
 ```
 
-创建签名实例。
+Creates a **Sign** instance.
 
-&lt;br&gt;支持的规格详见[签名验签规格](../../../security/CryptoArchitectureKit/crypto-sign-sig-verify-overview.md)。
+&lt;br&gt;For details about the supported specifications, see  
+ [Signing and Signature Verification Overview and Algorithm Specifications](../../../security/CryptoArchitectureKit/crypto-sign-sig-verify-overview.md).
 
 **Since:** 9
 
@@ -32,21 +33,21 @@ function createSign(algName: string): Sign
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| algName | string | Yes | 指定签名算法。当前支持RSA、ECC、DSA、SM2&lt;sup&gt;10+&lt;/sup&gt;，Ed25519&lt;sup&gt;11+&lt;/sup&gt;和 ML-DSA&lt;sup&gt;26.0.0+&lt;/sup&gt;。 &lt;br&gt;使用RSA PKCS1模式时需设置摘要；使用RSA PSS模式时需设置摘要和掩码摘要。签名时，通过设置OnlySign参数可传入数据摘要仅作签名。 &lt;br&gt;支持的规格详见 [签名验签规格](../../../security/CryptoArchitectureKit/crypto-sign-sig-verify-overview.md)。 |
+| algName | string | Yes | Signing algorithm to use. Currently, RSA, ECC, DSA, SM2&lt;sup&gt;10+&lt;/sup&gt;, Ed25519&lt;sup&gt;11+&lt;/sup&gt; and ML-DSA&lt;sup&gt;26.0.0+&lt;/sup&gt; are supported. &lt;br&gt;If RSA PKCS1 is used, you must set the digest. If RSA PSS is used, you must set the digest and mask digest. For signing, you can set **OnlySign** to enable the data digest to be used for signing only. &lt;br&gt;For details about the supported specifications, see [Signing and Signature Verification Overview and Algorithm Specifications](../../../security/CryptoArchitectureKit/crypto-sign-sig-verify-overview.md) |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [Sign](arkts-cryptoarchitecture-cryptoframework-sign-i.md) | 返回对应算法的Sign实例。 |
+| [Sign](arkts-cryptoarchitecture-cryptoframework-sign-i.md) | Returns the **Sign** instance corresponding to the specified algorithm. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | 非法入参。可能的原因： &lt;br&gt;1. 必填参数未指定； &lt;br&gt;2. 参数类型不正确； &lt;br&gt;3. 参数验证失败。 |
-| 801 | 该操作不支持。 |
-| 17620001 | 内存操作失败。 |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Invalid parameters. Possible causes: &lt;br&gt;1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; &lt;br&gt;3. Parameter verification failed. |
+| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | This operation is not supported. |
+| [17620001](../errorcode-crypto-framework.md#17620001-memory-operation-failed) | Memory operation failed. |
 
 ## Examples
 

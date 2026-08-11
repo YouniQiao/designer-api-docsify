@@ -1,12 +1,11 @@
 # HuksResult
 
-调用接口返回的result。
+Represents the result returned.
 
-> **说明：**
+> **NOTE：**
 > 
-> - 从API version 8开始，从API version 9开始废弃，建议使用[HuksReturnResult&lt;sup&gt;9+&lt;/sup&gt;](arkts-universalkeystore-huks-huksreturnresult-i.md)替代。
-> 
-> - errorCode的具体信息，请参考[HUKS错误码](../../../reference/apis-universal-keystore-kit/errorcode-huks.md)。
+> - For details about the error codes, see
+> [HUKS Error Codes](../../../reference/apis-universal-keystore-kit/errorcode-huks.md).
 
 **Since:** 8
 
@@ -32,9 +31,9 @@ import { huks } from 'kits/@kit.UniversalKeystoreKit';
 certChains?: Array<string>
 ```
 
-原为预留字段。
+Reserved field.
 
-**说明：** 从API version 9开始废弃，无替代接口。
+Note: This API is deprecated since API version 9. No substitute API is provided.
 
 **Type:** Array&lt;string&gt;
 
@@ -54,9 +53,9 @@ certChains?: Array<string>
 errorCode: number
 ```
 
-原为预留字段。
+Reserved field.
 
-**说明：** 从API version 9开始废弃，无替代接口。
+Note: This API is deprecated since API version 9. No substitute API is provided.
 
 **Type:** number
 
@@ -76,9 +75,9 @@ errorCode: number
 outData?: Uint8Array
 ```
 
-原为预留字段。
+Reserved field.
 
-**说明：** 从API version 9开始废弃，无替代接口。
+Note: This API is deprecated since API version 9. No substitute API is provided.
 
 **Type:** Uint8Array
 
@@ -98,9 +97,9 @@ outData?: Uint8Array
 properties?: Array<HuksParam>
 ```
 
-原为预留字段。
+Reserved field.
 
-**说明：** 从API version 9开始废弃，无替代接口。
+Note: This API is deprecated since API version 9. No substitute API is provided.
 
 **Type:** Array&lt;HuksParam&gt;
 

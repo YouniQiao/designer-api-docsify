@@ -28,12 +28,6 @@ InputMethodController是输入法客户端控制器，面向前台应用提供�
 
 **系统能力：** SystemCapability.MiscServices.InputMethodFramework
 
-## 导入模块
-
-```TypeScript
-import { inputMethod } from 'kits/@kit.IMEKit';
-```
-
 ## hideSoftKeyboard
 
 ArkTS-Dyn:
@@ -78,12 +72,14 @@ hideSoftKeyboard(displayId: long): Promise<void>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 12800003 | input method client error. Possible causes: 1.the edit box is not focused. 2.no edit box is bound to current input method application. 3.ipc failed due to the large amount of data transferred or other reasons. |
-| 201 | permissions check fails. |
-| 202 | not system application. |
-| 12800008 | input method manager service error. Possible cause: a system error, such as null pointer, IPC exception. |
+| [12800003](../errorcode-inputmethod-framework.md#12800003-客户端应用异常) | input method client error. Possible causes: 1.the edit box is not focused. 2.no edit box is bound to current input method application. 3.ipc failed due to the large amount of data transferred or other reasons. |
+| [201](../../errorcode-universal.md#201-权限校验失败) | permissions check fails. |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | not system application. |
+| [12800008](../errorcode-inputmethod-framework.md#12800008-输入法管理服务异常) | input method manager service error. Possible cause: a system error, such as null pointer, IPC exception. |
 
 ## 示例
+
+ArkTS-Dyn示例:
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -92,6 +88,19 @@ let displayId: number = 30;
 inputMethod.getController().hideSoftKeyboard(displayId).then(() => {
   console.info('Succeeded in hiding softKeyboard.');
 }).catch((err: BusinessError) => {
+  console.error(`Failed to hide softKeyboard, code: ${err.code}, message: ${err.message}`);
+});
+```
+
+ArkTS-Sta示例:
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let displayId: long = 30;
+inputMethod.getController().hideSoftKeyboard(displayId).then(() => {
+  console.info('Succeeded in hiding softKeyboard.');
+}).catch((err: BusinessError): void=> {
   console.error(`Failed to hide softKeyboard, code: ${err.code}, message: ${err.message}`);
 });
 ```
@@ -140,12 +149,14 @@ showSoftKeyboard(displayId: long): Promise<void>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 12800003 | input method client error. Possible causes: 1.the edit box is not focused. 2.no edit box is bound to current input method application. 3.ipc failed due to the large amount of data transferred or other reasons. |
-| 201 | permissions check fails. |
-| 202 | not system application. |
-| 12800008 | input method manager service error. Possible cause: a system error, such as null pointer, IPC exception. |
+| [12800003](../errorcode-inputmethod-framework.md#12800003-客户端应用异常) | input method client error. Possible causes: 1.the edit box is not focused. 2.no edit box is bound to current input method application. 3.ipc failed due to the large amount of data transferred or other reasons. |
+| [201](../../errorcode-universal.md#201-权限校验失败) | permissions check fails. |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | not system application. |
+| [12800008](../errorcode-inputmethod-framework.md#12800008-输入法管理服务异常) | input method manager service error. Possible cause: a system error, such as null pointer, IPC exception. |
 
 ## 示例
+
+ArkTS-Dyn示例:
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -154,6 +165,19 @@ let displayId: number = 20;
 inputMethod.getController().showSoftKeyboard(displayId).then(() => {
   console.info('Succeeded in showing softKeyboard.');
 }).catch((err: BusinessError) => {
+  console.error(`Failed to show softKeyboard, code: ${err.code}, message: ${err.message}`);
+});
+```
+
+ArkTS-Sta示例:
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let displayId: long = 20;
+inputMethod.getController().showSoftKeyboard(displayId).then(() => {
+  console.info('Succeeded in showing softKeyboard.');
+}).catch((err: BusinessError): void=> {
   console.error(`Failed to show softKeyboard, code: ${err.code}, message: ${err.message}`);
 });
 ```

@@ -1,0 +1,46 @@
+# disconnectServiceExtensionAbility (System API)
+
+## Modules to Import
+
+```TypeScript
+import { agentManager } from 'kits/@kit.AbilityKit';
+```
+
+## disconnectServiceExtensionAbility
+
+```TypeScript
+function disconnectServiceExtensionAbility(context: AgentExtensionContext, connectId: number): Promise<void>
+```
+
+Disconnects an AgentExtensionAbility from a ServiceExtensionAbility, in contrast to{@link connectServiceExtensionAbility}.
+
+**Since:** 26.0.0
+
+**Model restriction:** This API can be used only in the stage model.
+
+<!--Device-agentManager-function disconnectServiceExtensionAbility(context: AgentExtensionContext, connectId: long): Promise<void>--><!--Device-agentManager-function disconnectServiceExtensionAbility(context: AgentExtensionContext, connectId: long): Promise<void>-End-->
+
+**System capability:** SystemCapability.Ability.AgentRuntime.Core
+
+**System API:** This is a system API.
+
+**Parameters:**
+
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| context | [AgentExtensionContext](arkts-ability-agentextensioncontext-c.md) | Yes |
+| connectId | number | Yes |
+
+**Return value:**
+
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| Promise&lt;void&gt; |
+
+**Error codes:**
+
+| Error Code ID |
+| --- |
+| [16000050](../errorcode-ability.md#16000050-internal-error) |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+| [16000011](../errorcode-ability.md#16000011-context-does-not-exist) |

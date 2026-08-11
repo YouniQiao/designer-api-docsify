@@ -12,7 +12,7 @@ import { notificationManager } from 'kits/@kit.NotificationKit';
 function setPriorityEnabledByBundle(bundle: BundleOption, enableStatus: PriorityEnableStatus): Promise<void>
 ```
 
-设置应用通知优先级开关。
+Sets the enabling status of the priority notification for an application.
 
 **Since:** 23
 
@@ -30,25 +30,25 @@ function setPriorityEnabledByBundle(bundle: BundleOption, enableStatus: Priority
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| bundle | [BundleOption](arkts-notification-notificationextensionsubscription-bundleoption-t.md) | Yes | 指定应用的包信息。 |
-| enableStatus | [PriorityEnableStatus](arkts-notification-notificationmanager-priorityenablestatus-e-sys.md) | Yes | 应用通知优先级开关状态。&lt;br&gt; - DISABLE：不允许设置为优先通知。&lt;br&gt; - ENABLE_BY_INTELLIGENT：允 许经智能识别、用户关键词匹配、应用规则匹配等方式设置为优先通知。&lt;br&gt; - ENABLE：应用通知均设置为优先通知。 |
+| bundle | [BundleOption](arkts-notification-notificationextensionsubscription-bundleoption-t.md) | Yes | Bundle information of the application. |
+| enableStatus | [PriorityEnableStatus](arkts-notification-notificationmanager-priorityenablestatus-e-sys.md) | Yes | Whether the priority notification for an application is enabled.&lt;br&gt; - **DISABLE**: The priority notification is disabled.&lt;br&gt; - **ENABLE_BY_INTELLIGENT**: The priority notification can be enabled through intelligent recognition, user keyword matching, or application rule matching.&lt;br&gt; - **ENABLE**: The priority notification is enabled for all applications. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise对象，无返回结果。 |
+| Promise&lt;void&gt; | Promise that returns no value. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. 3. Parameter verification failed. |
-| 201 | Permission denied. |
-| 1600001 | Internal error. |
-| 202 | Not system application to call the interface. |
-| 1600003 | Failed to connect to the service. |
-| 17700001 | The specified bundle name was not found. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. 3. Parameter verification failed. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
+| [1600001](../errorcode-notification.md#1600001-internal-error) | Internal error. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system application to call the interface. |
+| [1600003](../errorcode-notification.md#1600003-failed-to-connect-to-the-notification-service) | Failed to connect to the service. |
+| [17700001](../../apis-ability-kit/errorcode-bundle.md#17700001-bundle-name-does-not-exist) | The specified bundle name was not found. |
 
 ## Examples
 

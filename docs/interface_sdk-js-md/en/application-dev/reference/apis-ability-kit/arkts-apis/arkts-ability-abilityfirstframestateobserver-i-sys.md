@@ -1,7 +1,7 @@
 # AbilityFirstFrameStateObserver (System API)
 
-定义了Ability首帧绘制完成事件监听对象，可以作为  
-[on](./../@ohos.app.ability.appManager:appManager.on(type: 'abilityFirstFrameState', observer: AbilityFirstFrameStateObserver, bundleName?: string))的入参，用于监听Ability首帧绘制完成事件。
+The module defines the observer used to listen for the first frame rendering completion event of a given ability. It is used as an input parameter of  
+[on](./../@ohos.app.ability.appManager:appManager.on(type: 'abilityFirstFrameState', observer: AbilityFirstFrameStateObserver, bundleName?: string))to listen for the completion event.
 
 **Since:** 12
 
@@ -19,7 +19,7 @@
 onAbilityFirstFrameDrawn(data: AbilityFirstFrameStateData): void
 ```
 
-Ability首帧绘制完成时触发的回调函数。
+Called when the first frame of the ability is rendered.
 
 **Since:** 12
 
@@ -35,5 +35,5 @@ Ability首帧绘制完成时触发的回调函数。
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| data | [AbilityFirstFrameStateData](arkts-ability-abilityfirstframestatedata-i-sys.md) | Yes | 表示首帧绘制完成时返回的数据。 |
+| data | [AbilityFirstFrameStateData](arkts-ability-abilityfirstframestatedata-i-sys.md) | Yes | Data returned after the first frame is rendered. |
 

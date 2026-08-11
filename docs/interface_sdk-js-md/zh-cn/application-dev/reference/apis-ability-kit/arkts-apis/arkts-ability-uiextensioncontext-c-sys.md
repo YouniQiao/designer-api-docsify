@@ -64,19 +64,19 @@ connectServiceExtensionAbilityWithRootHostToken(want: Want, connect: ConnectOpti
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 16000053 | The ability is not on the top of the UI. |
-| 16000050 | Internal error. Possible causes: 1. Connect to system service failed; 2.Send restart message to system service failed; 3.System service failed to communicate with dependency module. |
-| 201 | The application does not have permission to call the interface. Possible cause: target service extension ability is in cross-device and needed designated permission to be started, but call ability do not have this permission. |
-| 202 | Not system application |
-| 16000004 | Cannot start an invisible component. |
-| 16000005 | The specified process does not have the permission. |
-| 16000070 | The extension cannot start the service. |
-| 16000001 | The specified ability does not exist. |
-| 16000002 | Incorrect ability type. |
-| 16000012 | The application is controlled. |
-| 16000013 | The application is controlled by EDM. |
-| 16000008 | The crowdtesting application expires. |
-| 16000011 | The context does not exist. |
+| [16000053](../errorcode-ability.md#16000053-非顶层ability) | The ability is not on the top of the UI. |
+| [16000050](../errorcode-ability.md#16000050-内部错误) | Internal error. Possible causes: 1. Connect to system service failed; 2.Send restart message to system service failed; 3.System service failed to communicate with dependency module. |
+| [201](../../errorcode-universal.md#201-权限校验失败) | The application does not have permission to call the interface. Possible cause: target service extension ability is in cross-device and needed designated permission to be started, but call ability do not have this permission. |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not system application |
+| [16000004](../errorcode-ability.md#16000004-可见性校验失败) | Cannot start an invisible component. |
+| [16000005](../errorcode-ability.md#16000005-指定的进程权限校验失败) | The specified process does not have the permission. |
+| [16000070](../errorcode-ability.md#16000070-严格模式下不允许该类型extension启动指定serviceextensionability) | The extension cannot start the service. |
+| [16000001](../errorcode-ability.md#16000001-指定的ability名称不存在) | The specified ability does not exist. |
+| [16000002](../errorcode-ability.md#16000002-接口调用ability类型错误) | Incorrect ability type. |
+| [16000012](../errorcode-ability.md#16000012-应用被管控) | The application is controlled. |
+| [16000013](../errorcode-ability.md#16000013-应用被edm管控) | The application is controlled by EDM. |
+| [16000008](../errorcode-ability.md#16000008-众测应用到期) | The crowdtesting application expires. |
+| [16000011](../errorcode-ability.md#16000011-上下文对象不存在) | The context does not exist. |
 
 ## setHostPageOverlayForbidden
 
@@ -115,8 +115,8 @@ setHostPageOverlayForbidden(isForbidden: boolean) : void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. |
-| 202 | The application is not system-app, can not use system-api. |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | The application is not system-app, can not use system-api. |
 
 ## startAbilityForResultAsCaller
 
@@ -165,22 +165,22 @@ startAbilityForResultAsCaller(want: Want, options?: StartOptions): Promise<Abili
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 16000080 | Creating a new instance is not supported.<br>**适用版本：** 14+ |
-| 16000050 | Internal error. |
-| 201 | The application does not have permission to call the interface. |
-| 202 | Not System App. Interface caller is not a system app. |
-| 16000004 | Cannot start an invisible component. |
-| 401 | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. |
-| 16000069 | The extension cannot start the third party application. |
-| 16000070 | The extension cannot start the service. |
-| 16000071 | App clone is not supported.<br>**适用版本：** 14+ |
-| 16000001 | The specified ability does not exist. |
-| 16000076 | The app instance key is invalid.<br>**适用版本：** 14+ |
-| 16000077 | The number of app instances reaches the limit.<br>**适用版本：** 14+ |
-| 16000078 | The multi-instance is not supported.<br>**适用版本：** 14+ |
-| 16000079 | The APP_INSTANCE_KEY cannot be specified.<br>**适用版本：** 14+ |
-| 16000072 | App clone or multi-instance is not supported.<br>**适用版本：** 14+ |
-| 16000073 | The app clone index is invalid. |
+| [16000080](../errorcode-ability.md#16000080-不支持创建新实例) | Creating a new instance is not supported.<br>**适用版本：** 14+ |
+| [16000050](../errorcode-ability.md#16000050-内部错误) | Internal error. |
+| [201](../../errorcode-universal.md#201-权限校验失败) | The application does not have permission to call the interface. |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not System App. Interface caller is not a system app. |
+| [16000004](../errorcode-ability.md#16000004-可见性校验失败) | Cannot start an invisible component. |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. |
+| [16000069](../errorcode-ability.md#16000069-严格模式下不允许该类型extension启动三方应用) | The extension cannot start the third party application. |
+| [16000070](../errorcode-ability.md#16000070-严格模式下不允许该类型extension启动指定serviceextensionability) | The extension cannot start the service. |
+| [16000071](../errorcode-ability.md#16000071-不支持应用分身模式) | App clone is not supported.<br>**适用版本：** 14+ |
+| [16000001](../errorcode-ability.md#16000001-指定的ability名称不存在) | The specified ability does not exist. |
+| [16000076](../errorcode-ability.md#16000076-指定的appinstancekey不存在) | The app instance key is invalid.<br>**适用版本：** 14+ |
+| [16000077](../errorcode-ability.md#16000077-应用的实例数量已达到上限) | The number of app instances reaches the limit.<br>**适用版本：** 14+ |
+| [16000078](../errorcode-ability.md#16000078-不支持应用多实例) | The multi-instance is not supported.<br>**适用版本：** 14+ |
+| [16000079](../errorcode-ability.md#16000079-不支持指定appinstancekey) | The APP_INSTANCE_KEY cannot be specified.<br>**适用版本：** 14+ |
+| [16000072](../errorcode-ability.md#16000072-不支持应用多开) | App clone or multi-instance is not supported.<br>**适用版本：** 14+ |
+| [16000073](../errorcode-ability.md#16000073-传入的appcloneindex是一个无效值) | The app clone index is invalid. |
 
 ## startServiceExtensionAbility
 
@@ -218,21 +218,21 @@ startServiceExtensionAbility(want: Want): Promise<void>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 16000050 | Internal error. |
-| 16000019 | No matching ability is found. |
-| 201 | The application does not have permission to call the interface. |
-| 202 | The application is not system-app, can not use system-api. |
-| 16000004 | Cannot start an invisible component. |
-| 401 | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. |
-| 16000005 | The specified process does not have the permission. |
-| 16000006 | Cross-user operations are not allowed. |
-| 16000001 | The specified ability does not exist. |
-| 16000002 | Incorrect ability type. |
-| 16200001 | The caller has been released. |
-| 16000012 | The application is controlled. |
-| 16000013 | The application is controlled by EDM. |
-| 16000008 | The crowdtesting application expires. |
-| 16000011 | The context does not exist. |
+| [16000050](../errorcode-ability.md#16000050-内部错误) | Internal error. |
+| [16000019](../errorcode-ability.md#16000019-隐式启动未查找到匹配ability) | No matching ability is found. |
+| [201](../../errorcode-universal.md#201-权限校验失败) | The application does not have permission to call the interface. |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | The application is not system-app, can not use system-api. |
+| [16000004](../errorcode-ability.md#16000004-可见性校验失败) | Cannot start an invisible component. |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. |
+| [16000005](../errorcode-ability.md#16000005-指定的进程权限校验失败) | The specified process does not have the permission. |
+| [16000006](../errorcode-ability.md#16000006-不允许跨用户操作) | Cross-user operations are not allowed. |
+| [16000001](../errorcode-ability.md#16000001-指定的ability名称不存在) | The specified ability does not exist. |
+| [16000002](../errorcode-ability.md#16000002-接口调用ability类型错误) | Incorrect ability type. |
+| [16200001](../errorcode-ability.md#16200001-通用组件客户端caller已回收) | The caller has been released. |
+| [16000012](../errorcode-ability.md#16000012-应用被管控) | The application is controlled. |
+| [16000013](../errorcode-ability.md#16000013-应用被edm管控) | The application is controlled by EDM. |
+| [16000008](../errorcode-ability.md#16000008-众测应用到期) | The crowdtesting application expires. |
+| [16000011](../errorcode-ability.md#16000011-上下文对象不存在) | The context does not exist. |
 
 ## startServiceExtensionAbilityWithAccount
 
@@ -285,21 +285,21 @@ startServiceExtensionAbilityWithAccount(want: Want, accountId: int): Promise<voi
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 16000050 | Internal error. |
-| 16000019 | No matching ability is found. |
-| 201 | The application does not have permission to call the interface. |
-| 202 | The application is not system-app, can not use system-api. |
-| 16000004 | Cannot start an invisible component. |
-| 401 | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. |
-| 16000005 | The specified process does not have the permission. |
-| 16000006 | Cross-user operations are not allowed. |
-| 16000001 | The specified ability does not exist. |
-| 16000002 | Incorrect ability type. |
-| 16200001 | The caller has been released. |
-| 16000012 | The application is controlled. |
-| 16000013 | The application is controlled by EDM. |
-| 16000008 | The crowdtesting application expires. |
-| 16000011 | The context does not exist. |
+| [16000050](../errorcode-ability.md#16000050-内部错误) | Internal error. |
+| [16000019](../errorcode-ability.md#16000019-隐式启动未查找到匹配ability) | No matching ability is found. |
+| [201](../../errorcode-universal.md#201-权限校验失败) | The application does not have permission to call the interface. |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | The application is not system-app, can not use system-api. |
+| [16000004](../errorcode-ability.md#16000004-可见性校验失败) | Cannot start an invisible component. |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. |
+| [16000005](../errorcode-ability.md#16000005-指定的进程权限校验失败) | The specified process does not have the permission. |
+| [16000006](../errorcode-ability.md#16000006-不允许跨用户操作) | Cross-user operations are not allowed. |
+| [16000001](../errorcode-ability.md#16000001-指定的ability名称不存在) | The specified ability does not exist. |
+| [16000002](../errorcode-ability.md#16000002-接口调用ability类型错误) | Incorrect ability type. |
+| [16200001](../errorcode-ability.md#16200001-通用组件客户端caller已回收) | The caller has been released. |
+| [16000012](../errorcode-ability.md#16000012-应用被管控) | The application is controlled. |
+| [16000013](../errorcode-ability.md#16000013-应用被edm管控) | The application is controlled by EDM. |
+| [16000008](../errorcode-ability.md#16000008-众测应用到期) | The crowdtesting application expires. |
+| [16000011](../errorcode-ability.md#16000011-上下文对象不存在) | The context does not exist. |
 
 ## startUIAbilities
 
@@ -341,28 +341,28 @@ startUIAbilities(wantList: Array<Want>): Promise<void>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 801 | Capability not supported. |
-| 16000080 | Creating a new instance is not supported. |
-| 16000050 | Internal error. |
-| 16000124 | Starting a remote UIAbility is not supported. |
-| 201 | The application does not have permission to call the interface. |
-| 16000125 | Starting a plugin UIAbility is not supported. |
-| 202 | Not system application. |
-| 16000126 | Starting DLP files is not supported. |
-| 16000120 | A maximum of four UIAbility instances can be started simultaneously. The current parameter exceeds the maximum number or is less than 1. |
-| 16000121 | The target component type is not a UIAbility. |
-| 16000122 | The target component is blocked by the system module and does not support startup. |
-| 16000123 | Implicit startup is not supported. |
-| 16000004 | Cannot start an invisible component. |
-| 16000005 | The specified process does not have the permission. |
-| 16000006 | Cross-user operations are not allowed. |
-| 16000001 | The specified ability does not exist. |
-| 16200001 | The caller has been released. |
-| 16000076 | The app instance key is invalid. |
-| 16000008 | The crowdtesting application expires. |
-| 16000009 | An ability cannot be started or stopped in Wukong mode. |
-| 16000073 | The app clone index is invalid. |
-| 16000011 | The context does not exist. |
+| [801](../../errorcode-universal.md#801-该设备不支持此api) | Capability not supported. |
+| [16000080](../errorcode-ability.md#16000080-不支持创建新实例) | Creating a new instance is not supported. |
+| [16000050](../errorcode-ability.md#16000050-内部错误) | Internal error. |
+| [16000124](../errorcode-ability.md#16000124-不支持启动分布式uiability) | Starting a remote UIAbility is not supported. |
+| [201](../../errorcode-universal.md#201-权限校验失败) | The application does not have permission to call the interface. |
+| [16000125](../errorcode-ability.md#16000125-不支持启动插件uiability) | Starting a plugin UIAbility is not supported. |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not system application. |
+| [16000126](../errorcode-ability.md#16000126-不支持启动dlp文件) | Starting DLP files is not supported. |
+| [16000120](../errorcode-ability.md#16000120-wantlist内的元素个数超出4个或小于1个) | A maximum of four UIAbility instances can be started simultaneously. The current parameter exceeds the maximum number or is less than 1. |
+| [16000121](../errorcode-ability.md#16000121-待启动的目标组件类型不是uiability) | The target component type is not a UIAbility. |
+| [16000122](../errorcode-ability.md#16000122-待启动的目标组件被系统管控模块拦截) | The target component is blocked by the system module and does not support startup. |
+| [16000123](../errorcode-ability.md#16000123-不支持隐式启动) | Implicit startup is not supported. |
+| [16000004](../errorcode-ability.md#16000004-可见性校验失败) | Cannot start an invisible component. |
+| [16000005](../errorcode-ability.md#16000005-指定的进程权限校验失败) | The specified process does not have the permission. |
+| [16000006](../errorcode-ability.md#16000006-不允许跨用户操作) | Cross-user operations are not allowed. |
+| [16000001](../errorcode-ability.md#16000001-指定的ability名称不存在) | The specified ability does not exist. |
+| [16200001](../errorcode-ability.md#16200001-通用组件客户端caller已回收) | The caller has been released. |
+| [16000076](../errorcode-ability.md#16000076-指定的appinstancekey不存在) | The app instance key is invalid. |
+| [16000008](../errorcode-ability.md#16000008-众测应用到期) | The crowdtesting application expires. |
+| [16000009](../errorcode-ability.md#16000009-wukong模式不允许启动停止ability) | An ability cannot be started or stopped in Wukong mode. |
+| [16000073](../errorcode-ability.md#16000073-传入的appcloneindex是一个无效值) | The app clone index is invalid. |
+| [16000011](../errorcode-ability.md#16000011-上下文对象不存在) | The context does not exist. |
 
 ## startUIAbilitiesInSplitWindowMode
 
@@ -419,23 +419,23 @@ startUIAbilitiesInSplitWindowMode(primaryWindowId: int, secondaryWant: Want): Pr
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 801 | Capability not supported. |
-| 16000080 | Creating a new instance is not supported. |
-| 16000050 | Failed to connect to the system service or system server handle failed. |
-| 16000124 | Starting a remote UIAbility is not supported. |
-| 201 | The application does not have permission to call the interface. |
-| 16000125 | Starting a plugin UIAbility is not supported. |
-| 202 | Not system application. |
-| 16000126 | Starting DLP files is not supported. |
-| 16000122 | The target component is blocked by the system module and does not support startup. |
-| 16000123 | Implicit startup is not supported. |
-| 16000004 | Cannot start an invisible component. |
-| 16000005 | The specified process does not have the permission. |
-| 16000006 | Cross-user operations are not allowed. |
-| 16000001 | Target UIAbility does not exist. |
-| 16000076 | The app instance key is invalid. |
-| 16000008 | The crowdtesting application expires. |
-| 16000009 | An ability cannot be started or stopped in Wukong mode. |
-| 16000073 | The app clone index is invalid. |
-| 16000011 | The context does not exist. |
+| [801](../../errorcode-universal.md#801-该设备不支持此api) | Capability not supported. |
+| [16000080](../errorcode-ability.md#16000080-不支持创建新实例) | Creating a new instance is not supported. |
+| [16000050](../errorcode-ability.md#16000050-内部错误) | Failed to connect to the system service or system server handle failed. |
+| [16000124](../errorcode-ability.md#16000124-不支持启动分布式uiability) | Starting a remote UIAbility is not supported. |
+| [201](../../errorcode-universal.md#201-权限校验失败) | The application does not have permission to call the interface. |
+| [16000125](../errorcode-ability.md#16000125-不支持启动插件uiability) | Starting a plugin UIAbility is not supported. |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not system application. |
+| [16000126](../errorcode-ability.md#16000126-不支持启动dlp文件) | Starting DLP files is not supported. |
+| [16000122](../errorcode-ability.md#16000122-待启动的目标组件被系统管控模块拦截) | The target component is blocked by the system module and does not support startup. |
+| [16000123](../errorcode-ability.md#16000123-不支持隐式启动) | Implicit startup is not supported. |
+| [16000004](../errorcode-ability.md#16000004-可见性校验失败) | Cannot start an invisible component. |
+| [16000005](../errorcode-ability.md#16000005-指定的进程权限校验失败) | The specified process does not have the permission. |
+| [16000006](../errorcode-ability.md#16000006-不允许跨用户操作) | Cross-user operations are not allowed. |
+| [16000001](../errorcode-ability.md#16000001-指定的ability名称不存在) | Target UIAbility does not exist. |
+| [16000076](../errorcode-ability.md#16000076-指定的appinstancekey不存在) | The app instance key is invalid. |
+| [16000008](../errorcode-ability.md#16000008-众测应用到期) | The crowdtesting application expires. |
+| [16000009](../errorcode-ability.md#16000009-wukong模式不允许启动停止ability) | An ability cannot be started or stopped in Wukong mode. |
+| [16000073](../errorcode-ability.md#16000073-传入的appcloneindex是一个无效值) | The app clone index is invalid. |
+| [16000011](../errorcode-ability.md#16000011-上下文对象不存在) | The context does not exist. |
 

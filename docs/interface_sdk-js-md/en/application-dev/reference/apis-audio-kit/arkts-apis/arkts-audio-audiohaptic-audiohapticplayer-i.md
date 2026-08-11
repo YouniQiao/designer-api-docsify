@@ -1,7 +1,7 @@
 # AudioHapticPlayer
 
-音振播放器，提供音振协同播放功能。在调用AudioHapticPlayer的接口前，需要先通过  
-[createPlayer](arkts-audio-audiohaptic-audiohapticmanager-i.md#createplayer)创建实例。
+Implements audio-haptic playback. Before calling any API in AudioHapticPlayer, you must use   
+[createPlayer](arkts-audio-audiohaptic-audiohapticmanager-i.md#createplayer) to create an AudioHapticPlayer instance.
 
 **Since:** 11
 
@@ -23,7 +23,7 @@ import { audioHaptic } from 'kits/@kit.AudioKit';
 isMuted(type: AudioHapticType): boolean
 ```
 
-查询该音振类型是否被静音。
+Checks whether an audio-haptic type is muted.
 
 **Since:** 11
 
@@ -37,19 +37,19 @@ isMuted(type: AudioHapticType): boolean
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | [AudioHapticType](arkts-audio-audiohaptic-audiohaptictype-e.md) | Yes | 音振类型。 |
+| type | [AudioHapticType](arkts-audio-audiohaptic-audiohaptictype-e.md) | Yes | Audio-haptic type. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| boolean | 表示查询的音振类型是否被静音。true表示静音，false表示非静音。 |
+| boolean | Check result for whether the audio-haptic type is muted. **true** if muted, **false** otherwise. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Parameter verification failed. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Parameter verification failed. |
 
 ## Examples
 
@@ -65,7 +65,7 @@ let result: boolean = audioHapticPlayerInstance.isMuted(audioHapticType);
 off(type: 'endOfStream', callback?: Callback<void>): void
 ```
 
-取消监听流结束事件。使用callback异步回调。
+Unsubscribes from the EOS event. This API uses an asynchronous callback to return the result.
 
 **Since:** 11
 
@@ -79,8 +79,8 @@ off(type: 'endOfStream', callback?: Callback<void>): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'endOfStream' | Yes | 事件回调类型，支持的事件为'endOfStream'，当取消监听流结束事件时，触发该事件。 |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;void&gt; | No | 回调函数，无返回结果。 |
+| type | 'endOfStream' | Yes | Event type. The event **'endOfStream'** is triggered when the audio stream playback ends. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;void&gt; | No | Callback that returns no value. |
 
 ## Examples
 
@@ -104,7 +104,7 @@ audioHapticPlayerInstance.off('endOfStream', endOfStreamCallback);
 off(type: 'audioInterrupt', callback?: Callback<audio.InterruptEvent>): void
 ```
 
-取消监听音频中断事件。使用callback异步回调。
+Unsubscribes from the audio interruption event. This API uses an asynchronous callback to return the result.
 
 **Since:** 11
 
@@ -118,8 +118,8 @@ off(type: 'audioInterrupt', callback?: Callback<audio.InterruptEvent>): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'audioInterrupt' | Yes | 事件回调类型，支持的事件为'audioInterrupt'，当取消监听音频中断事件时，触发该事件。 |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;audio.InterruptEvent&gt; | No | 回调函数，返回中断事件信息。 |
+| type | 'audioInterrupt' | Yes | Event type. The event **'audioInterrupt'** is triggered when the audio focus is changed. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;audio.InterruptEvent&gt; | No | Callback used to return the event information. |
 
 ## Examples
 
@@ -233,7 +233,7 @@ Unsubscribes end of stream event.
 on(type: 'endOfStream', callback: Callback<void>): void
 ```
 
-监听流结束事件（音频流播放结束时触发）。使用callback异步回调。
+Subscribes to end of stream (EOS) event, which is triggered when the audio stream playback ends. This API uses an asynchronous callback to return the result.
 
 **Since:** 11
 
@@ -247,8 +247,8 @@ on(type: 'endOfStream', callback: Callback<void>): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'endOfStream' | Yes | 事件回调类型，支持的事件为'endOfStream'，当音频流播放结束时，触发该事件。 |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;void&gt; | Yes | 回调函数，无返回结果。 |
+| type | 'endOfStream' | Yes | Event type. The event **'endOfStream'** is triggered when the audio stream playback ends. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;void&gt; | Yes | Callback that returns no value. |
 
 ## Examples
 
@@ -264,7 +264,7 @@ audioHapticPlayerInstance.on('endOfStream', () => {
 on(type: 'audioInterrupt', callback: Callback<audio.InterruptEvent>): void
 ```
 
-监听音频中断事件（当音频焦点发生变化时触发）。使用callback异步回调。
+Subscribes to the audio interruption event, which is triggered when the audio focus is changed. This API uses an asynchronous callback to return the result.
 
 **Since:** 11
 
@@ -278,8 +278,8 @@ on(type: 'audioInterrupt', callback: Callback<audio.InterruptEvent>): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'audioInterrupt' | Yes | 事件回调类型，支持的事件为'audioInterrupt'，当音频焦点状态发生变化时，触发该事件。 |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;audio.InterruptEvent&gt; | Yes | 回调函数，返回中断事件信息。 |
+| type | 'audioInterrupt' | Yes | Event type. The event **'audioInterrupt'** is triggered when the audio focus is changed. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;audio.InterruptEvent&gt; | Yes | Callback used to return the event information. |
 
 ## Examples
 
@@ -386,7 +386,7 @@ Subscribes end of stream event.
 release(): Promise<void>
 ```
 
-释放音振播放器。使用Promise异步回调。
+Releases this audio-haptic player. This API uses a promise to return the result.
 
 **Since:** 11
 
@@ -400,13 +400,13 @@ release(): Promise<void>
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise对象。无返回结果的Promise对象。 |
+| Promise&lt;void&gt; | Promise that returns no value. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 5400105 | Service died. |
+| [5400105](../../apis-media-kit/errorcode-media.md#5400105-play-service-dead) | Service died. |
 
 ## Examples
 
@@ -426,11 +426,11 @@ audioHapticPlayerInstance.release().then(() => {
 setLoop(loop: boolean): Promise<void>
 ```
 
-设置音振播放器循环播放。使用Promise异步回调。
+Sets this audio-haptic player to play in a loop. This API uses a promise to return the result.
 
-> **注意：**
+> **NOTE：**
 > 
-> 该方法需在音振播放器销毁前调用。
+> This API must be called before the audio-haptic player is released.
 
 **Since:** 20
 
@@ -444,19 +444,19 @@ setLoop(loop: boolean): Promise<void>
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| loop | boolean | Yes | 是否循环播放。true表示循环播放，false表示不循环播放。 |
+| loop | boolean | Yes | Whether to play in a loop. **true** to play in a loop, **false** otherwise. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise对象，无返回结果。 |
+| Promise&lt;void&gt; | Promise that returns no value. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 5400102 | Operate not permit in current state. |
+| [5400102](../../apis-media-kit/errorcode-media.md#5400102-unsupported-operation) | Operate not permit in current state. |
 
 ## Examples
 
@@ -482,11 +482,11 @@ ArkTS-Sta:
 setVolume(volume: double): Promise<void>
 ```
 
-设置音振播放器的音量。使用Promise异步回调。
+Sets the volume for this audio-haptic player. This API uses a promise to return the result.
 
-> **注意：**
+> **NOTE：**
 > 
-> 该方法需在音振播放器释放前调用。
+> This API must be called before the audio-haptic player is released.
 
 **Since:** 20
 
@@ -500,21 +500,21 @@ setVolume(volume: double): Promise<void>
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| volume | ArkTS-Dyn: number  <br>ArkTS-Sta：double | Yes | 取值范围为[0.00, 1.00]，其中1.00表示最大音量（100%）。 |
+| volume | ArkTS-Dyn: number  <br>ArkTS-Sta：double | Yes | Volume, in the range [0.00, 1.00], where 1.00 indicates the maximum volume (100%). |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise对象，无返回结果。 |
+| Promise&lt;void&gt; | Promise that returns no value. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 5400102 | Operate not permit in current state. |
-| 5400105 | Service died. |
-| 5400108 | Parameter out of range. |
+| [5400102](../../apis-media-kit/errorcode-media.md#5400102-unsupported-operation) | Operate not permit in current state. |
+| [5400105](../../apis-media-kit/errorcode-media.md#5400105-play-service-dead) | Service died. |
+| [5400108](../../apis-media-kit/errorcode-media.md#5400108-parameter-value-out-of-range) | Parameter out of range. |
 
 ## Examples
 
@@ -534,7 +534,7 @@ audioHapticPlayerInstance.setVolume(0.5).then(() => {
 start(): Promise<void>
 ```
 
-开始播放。使用Promise异步回调。
+Starts playback. This API uses a promise to return the result.
 
 **Since:** 11
 
@@ -548,15 +548,15 @@ start(): Promise<void>
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise对象。无返回结果的Promise对象。 |
+| Promise&lt;void&gt; | Promise that returns no value. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 5400102 | Operate not permit. |
-| 5400103 | IO error. |
-| 5400105 | Service died. |
+| [5400102](../../apis-media-kit/errorcode-media.md#5400102-unsupported-operation) | Operate not permit. |
+| [5400103](../../apis-media-kit/errorcode-media.md#5400103-io-error) | IO error. |
+| [5400105](../../apis-media-kit/errorcode-media.md#5400105-play-service-dead) | Service died. |
 
 ## Examples
 
@@ -576,7 +576,7 @@ audioHapticPlayerInstance.start().then(() => {
 stop(): Promise<void>
 ```
 
-停止播放。使用Promise异步回调。
+Stops playback. This API uses a promise to return the result.
 
 **Since:** 11
 
@@ -590,14 +590,14 @@ stop(): Promise<void>
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise对象。无返回结果的Promise对象。 |
+| Promise&lt;void&gt; | Promise that returns no value. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 5400102 | Operate not permit. |
-| 5400105 | Service died. |
+| [5400102](../../apis-media-kit/errorcode-media.md#5400102-unsupported-operation) | Operate not permit. |
+| [5400105](../../apis-media-kit/errorcode-media.md#5400105-play-service-dead) | Service died. |
 
 ## Examples
 

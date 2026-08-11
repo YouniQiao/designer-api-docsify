@@ -1,6 +1,6 @@
 # ScanErrorCode
 
-定义扫描错误码的枚举。
+Enumerates the scan error codes.
 
 **Since:** 20
 
@@ -16,7 +16,7 @@
 SCAN_ERROR_NO_PERMISSION = 201
 ```
 
-无权限。
+No permission.
 
 **Since:** 20
 
@@ -32,7 +32,7 @@ SCAN_ERROR_NO_PERMISSION = 201
 SCAN_ERROR_NOT_SYSTEM_APPLICATION = 202
 ```
 
-非系统应用。
+Non-system application.
 
 **Since:** 20
 
@@ -48,7 +48,7 @@ SCAN_ERROR_NOT_SYSTEM_APPLICATION = 202
 SCAN_ERROR_INVALID_PARAMETER = 401
 ```
 
-无效参数。
+Invalid parameter.
 
 **Since:** 20
 
@@ -64,7 +64,7 @@ SCAN_ERROR_INVALID_PARAMETER = 401
 SCAN_ERROR_GENERIC_FAILURE = 13100001
 ```
 
-通用失败。
+Generic failure.
 
 **Since:** 20
 
@@ -80,7 +80,7 @@ SCAN_ERROR_GENERIC_FAILURE = 13100001
 SCAN_ERROR_RPC_FAILURE = 13100002
 ```
 
-RPC失败。
+RPC failure.
 
 **Since:** 20
 
@@ -96,7 +96,7 @@ RPC失败。
 SCAN_ERROR_SERVER_FAILURE = 13100003
 ```
 
-服务失败。
+Service failure.
 
 **Since:** 20
 
@@ -112,7 +112,7 @@ SCAN_ERROR_SERVER_FAILURE = 13100003
 SCAN_ERROR_UNSUPPORTED = 13100004
 ```
 
-不支持的操作。
+Unsupported operation.
 
 **Since:** 20
 
@@ -128,7 +128,7 @@ SCAN_ERROR_UNSUPPORTED = 13100004
 SCAN_ERROR_CANCELED = 13100005
 ```
 
-操作取消。
+Operation canceled.
 
 **Since:** 20
 
@@ -144,7 +144,7 @@ SCAN_ERROR_CANCELED = 13100005
 SCAN_ERROR_DEVICE_BUSY = 13100006
 ```
 
-设备忙。
+Device busy.
 
 **Since:** 20
 
@@ -160,7 +160,7 @@ SCAN_ERROR_DEVICE_BUSY = 13100006
 SCAN_ERROR_INVALID = 13100007
 ```
 
-无效操作。
+Invalid operation.
 
 **Since:** 20
 
@@ -176,7 +176,7 @@ SCAN_ERROR_INVALID = 13100007
 SCAN_ERROR_JAMMED = 13100008
 ```
 
-卡纸。
+Paper jammed.
 
 **Since:** 20
 
@@ -192,7 +192,7 @@ SCAN_ERROR_JAMMED = 13100008
 SCAN_ERROR_NO_DOCS = 13100009
 ```
 
-缺纸。
+Out of paper.
 
 **Since:** 20
 
@@ -208,7 +208,7 @@ SCAN_ERROR_NO_DOCS = 13100009
 SCAN_ERROR_COVER_OPEN = 13100010
 ```
 
-盖子打开。
+Cover open.
 
 **Since:** 20
 
@@ -224,7 +224,7 @@ SCAN_ERROR_COVER_OPEN = 13100010
 SCAN_ERROR_IO_ERROR = 13100011
 ```
 
-I/O错误。
+I/O error.
 
 **Since:** 20
 
@@ -240,7 +240,7 @@ I/O错误。
 SCAN_ERROR_NO_MEMORY = 13100012
 ```
 
-内存不足。
+Insufficient memory.
 
 **Since:** 20
 

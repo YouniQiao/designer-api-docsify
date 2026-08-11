@@ -36,7 +36,7 @@ getDirection(): PanDirection
 
 | 类型 | 说明 |
 | --- | --- |
-| [PanDirection](arkts-arkui-gesture-pandirection-e.md) | 当前滑动手势识别器的识别方向。 |
+| [PanDirection](arkts-arkui-pandirection-e.md) | 当前滑动手势识别器的识别方向。 |
 
 ## getDistance
 

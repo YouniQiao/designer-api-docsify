@@ -1,6 +1,6 @@
 # FlipDirection
 
-翻牌方向。默认值为DOWN。
+Defines the flip direction of numeric text transition.
 
 **Since:** 24
 
@@ -16,7 +16,7 @@
 DOWN = 0
 ```
 
-内容往下翻。
+The flip direction is down.
 
 **Since:** 24
 
@@ -34,7 +34,7 @@ DOWN = 0
 UP = 1
 ```
 
-内容往上翻。
+The flip direction is up.
 
 **Since:** 24
 

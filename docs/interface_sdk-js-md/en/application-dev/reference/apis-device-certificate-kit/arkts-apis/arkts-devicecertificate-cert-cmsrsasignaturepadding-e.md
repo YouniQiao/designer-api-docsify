@@ -1,6 +1,6 @@
 # CmsRsaSignaturePadding
 
-表示RSA类型CMS签名填充方式的枚举。
+Enumerates the RSA CMS signature padding modes.
 
 **Since:** 22
 
@@ -16,7 +16,7 @@
 PKCS1_PADDING = 0
 ```
 
-PKCS #1 v1.5填充方式。
+PKCS #1 padding mode.
 
 **Since:** 22
 
@@ -34,7 +34,7 @@ PKCS #1 v1.5填充方式。
 PKCS1_PSS_PADDING = 1
 ```
 
-PKCS #1 PSS填充方式。
+PKCS #1 PSS padding mode.
 
 **Since:** 22
 

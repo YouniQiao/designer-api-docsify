@@ -1,6 +1,6 @@
 # NavDestinationInfo
 
-NavDestination组件信息。
+NavDestination info.
 
 **Since:** 23
 
@@ -22,7 +22,7 @@ import { uiObserver } from 'kits/@kit.ArkUI';
 index: int
 ```
 
-NavDestination在页面栈中的索引。取值限定为整数。
+NavDestination index.The value should be an integer.
 
 **Type:** int
 
@@ -42,7 +42,7 @@ NavDestination在页面栈中的索引。取值限定为整数。
 mode?: NavDestinationMode
 ```
 
-NavDestination类型。
+NavDestination mode.
 
 **Type:** [NavDestinationMode](../arkts-components/arkts-arkui-navdestinationmode-e.md)
 
@@ -62,7 +62,7 @@ NavDestination类型。
 name: ResourceStr
 ```
 
-NavDestination组件的名称。
+Changed NavDestination name.
 
 **Type:** [ResourceStr](arkts-arkui-resourcestr-t.md)
 
@@ -82,7 +82,7 @@ NavDestination组件的名称。
 navDestinationId: string
 ```
 
-NavDestination组件的唯一标识ID。
+Auto-generated navDestination id, which is different from common property id of Component.
 
 **Type:** string
 
@@ -102,7 +102,7 @@ NavDestination组件的唯一标识ID。
 navigationId: ResourceStr
 ```
 
-包含NavDestination组件的Navigation组件的id。
+Navigation id.
 
 **Type:** [ResourceStr](arkts-arkui-resourcestr-t.md)
 
@@ -122,7 +122,7 @@ navigationId: ResourceStr
 param?: Object
 ```
 
-NavDestination组件的参数。
+The detailed parameter of NavDestination.
 
 **Type:** Object
 
@@ -142,9 +142,9 @@ NavDestination组件的参数。
 size?: Size
 ```
 
-NavDestination的尺寸。
+NavDestination size.
 
-**Type:** [Size](arkts-arkui-size-i.md)
+**Type:** [Size](../arkts-components/arkts-arkui-size-i.md)
 
 **Since:** 23
 
@@ -162,7 +162,7 @@ NavDestination的尺寸。
 state: NavDestinationState
 ```
 
-NavDestination组件的状态。
+Changed NavDestination state.
 
 **Type:** [NavDestinationState](arkts-arkui-uiobserver-navdestinationstate-e.md)
 
@@ -182,7 +182,7 @@ NavDestination组件的状态。
 uniqueId?: int
 ```
 
-NavDestination组件的uniqueId。取值限定为整数。
+NavDestination uniqueId.The value should be an integer.
 
 **Type:** int
 

@@ -12,7 +12,7 @@ import { systemDateTime } from 'kits/@kit.BasicServicesKit';
 function getDate(callback: AsyncCallback<Date>): void
 ```
 
-获取当前系统日期，使用callback异步回调。
+Obtains the current system date. This API uses an asynchronous callback to return the result.
 
 **Since:** 9
 
@@ -30,13 +30,13 @@ function getDate(callback: AsyncCallback<Date>): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;Date&gt; | Yes | 回调函数，返回当前系统日期。 |
+| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;Date&gt; | Yes | Callback used to return the current system date. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. Possible causes: &lt;br&gt; 1. System error. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: &lt;br&gt; 1. System error. |
 
 ## Examples
 
@@ -64,7 +64,7 @@ try {
 function getDate(): Promise<Date>
 ```
 
-获取当前系统日期，使用Promise异步回调。
+Obtains the current system date. This API uses a promise to return the result.
 
 **Since:** 9
 
@@ -82,13 +82,13 @@ function getDate(): Promise<Date>
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;Date&gt; | Promise对象，返回当前系统日期。 |
+| Promise&lt;Date&gt; | Promise used to return the current system date. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. Possible causes: &lt;br&gt; 1. System error. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: &lt;br&gt; 1. System error. |
 
 ## Examples
 

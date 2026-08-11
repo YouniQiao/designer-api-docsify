@@ -12,7 +12,7 @@ import { inputMethod } from 'kits/@kit.IMEKit';
 function getSystemInputMethodConfigAbility(): ElementName
 ```
 
-获取系统输入法设置界面Ability信息。
+Get system input method config ability
 
 **Since:** 11
 
@@ -26,13 +26,13 @@ function getSystemInputMethodConfigAbility(): ElementName
 
 | Type | Description |
 | --- | --- |
-| [ElementName](../../apis-ability-kit/arkts-apis/arkts-ability-elementname-i.md) | 系统输入法设置界面Ability的ElementName。 |
+| [ElementName](../../apis-ability-kit/arkts-apis/arkts-ability-elementname-i.md) | the information of system input method config ability. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 12800008 | input method manager service error. Possible cause: a system error, such as null pointer, IPC exception. |
+| [12800008](../errorcode-inputmethod-framework.md#12800008-input-method-manager-service-error) | input method manager service error. Possible cause: a system error, such as null pointer, IPC exception. |
 
 ## Examples
 

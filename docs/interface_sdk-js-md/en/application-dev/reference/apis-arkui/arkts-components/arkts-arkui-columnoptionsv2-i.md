@@ -1,6 +1,12 @@
 # ColumnOptionsV2
 
-设置Column组件的子组件间距属性。间距类型SpaceType支持number、string或Resource类型。
+Sets the spacing between child components of the **Column** component.
+
+> **NOTE：**
+> 
+> To standardize anonymous object definitions, the element definitions here have been revised in API version 18.
+> While historical version information is preserved for anonymous objects, there may be cases where the outer element
+> 's @since version number is higher than inner elements'. This does not affect interface usability.
 
 **Since:** 18
 
@@ -16,21 +22,9 @@
 space?: SpaceType
 ```
 
-设置纵向布局元素垂直方向间距。
-
-space为负数或者[justifyContent](ColumnAttribute#justifyContent)设置为FlexAlign.SpaceBetween、FlexAlign.SpaceAround、FlexAlign.SpaceEvenly时，space不生效。
-
-取值范围：[0, +∞)
-
-默认值：0
-
-单位：vp
-
-非法值：按默认值处理。
-
-**说明：**
-
-space取值是大于等于0的数字，或者可以转换为非负数字的字符串，或者可以转换为数字的Resource类型数据。
+Vertical spacing between two adjacent child components.This parameter has no effect if the value specified is a negative number, or if **justifyContent** is set to  
+**FlexAlign.SpaceBetween**, **FlexAlign.SpaceAround**, or **FlexAlign.SpaceEvenly**.Unit: vp, Invalid values are treated as the default value.  
+**NOTE：**The value of **space** can be a number greater than or equal to 0, a string that can be converted to a number, or a Resource type that can be converted to a number. Default value: **0**.
 
 **Type:** [SpaceType](../arkts-apis/arkts-arkui-spacetype-t.md)
 

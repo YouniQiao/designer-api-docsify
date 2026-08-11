@@ -10,12 +10,6 @@
 
 **系统能力：** SystemCapability.DistributedDataManager.DataShare.Consumer
 
-## 导入模块
-
-```TypeScript
-import { dataShare } from 'kits/@kit.ArkData';
-```
-
 ## allowList
 
 ```TypeScript
@@ -126,7 +120,7 @@ values?: Record<int, ValueType>
 
 多值类型取值。**Record**中的第一个参数为key，key由用户指定，必须唯一。第二个参数为key对应的value。单个应用在单个URI下最多支持添加10个value，每个value最大长度为4096字节。同时，所有va lue的总长度受参数值[maxValueLength](arkts-arkdata-datashare-dataproxyconfig-i.md#maxvaluelength)]限制。该参数仅在[isMultiValues](arkts-arkdata-datashare-proxydata-i.md#ismultivalues)}设置为true时生效。
 
-**类型：** ArkTS-Dyn: [Record](../../apis-default/arkts-apis/arkts-record-t.md)&lt;number, [ValueType](arkts-arkdata-valuetype-t.md)&gt;  <br>ArkTS-Sta：[Record](../../apis-default/arkts-apis/arkts-record-t.md)&lt;int, [ValueType](arkts-arkdata-valuetype-t.md)&gt;
+**类型：** ArkTS-Dyn: Record&lt;number, [ValueType](arkts-arkdata-valuetype-t.md)&gt;  <br>ArkTS-Sta：Record&lt;int, [ValueType](arkts-arkdata-valuetype-t.md)&gt;
 
 **起始版本：** 26.0.0
 

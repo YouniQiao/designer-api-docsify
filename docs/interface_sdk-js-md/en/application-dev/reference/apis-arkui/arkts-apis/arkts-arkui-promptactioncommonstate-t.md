@@ -4,7 +4,7 @@
 declare type PromptActionCommonState = import('../api/@ohos.promptAction').promptAction.CommonState
 ```
 
-自定义弹窗的状态。
+Defines the state of the custom dialog box.
 
 **Since:** 20
 

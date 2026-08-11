@@ -8,7 +8,7 @@ export declare function Rect(
 ): RectAttribute
 ```
 
-用于绘制矩形的构造函数。
+Rect is returned when the parameter is transferred.
 
 **Since:** 23
 
@@ -24,7 +24,7 @@ export declare function Rect(
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| options | [RectOptions](arkts-arkui-rect-rectoptions-i.md) \| RoundedRectOptions | No | Rect绘制属性。异常值undefined和null按照无效值处理，本次设置不生效。 |
+| options | [RectOptions](arkts-arkui-rect-rectoptions-i.md) \| RoundedRectOptions | No | The options to create a Rect |
 
 **Return value:**
 
@@ -43,9 +43,9 @@ export declare function Rect(
 
 Defines Rect Component.
 
-**Since:** 26.0.0
+**Since:** 26.1.0
 
-**ArkTS mode:** ArkTS-Sta only, since version 26.0.0.
+**ArkTS mode:** ArkTS-Sta only, since version 26.1.0.
 
 **Decorator:** @Builder
 

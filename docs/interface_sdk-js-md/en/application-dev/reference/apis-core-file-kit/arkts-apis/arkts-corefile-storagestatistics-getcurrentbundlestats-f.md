@@ -12,7 +12,7 @@ import { storageStatistics } from 'kits/@kit.CoreFileKit';
 function getCurrentBundleStats(callback: AsyncCallback<BundleStats>): void
 ```
 
-应用异步获取当前应用存储空间大小（单位为Byte），使用callback异步回调。
+Obtains the storage space (in bytes) of this application. This API uses an asynchronous callback to return the result.
 
 **Since:** 9
 
@@ -26,13 +26,13 @@ function getCurrentBundleStats(callback: AsyncCallback<BundleStats>): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;BundleStats&gt; | Yes | 获取指定卷上的应用存储空间大小之后的回调。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;BundleStats&gt; | Yes | Callback used to return the application space obtained. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | The input parameter is invalid.Possible causes:Mandatory parameters are left unspecified; |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | The input parameter is invalid.Possible causes:Mandatory parameters are left unspecified; |
 | 13600001 | IPC error. |
 | 13900042 | Unknown error. |
 
@@ -57,7 +57,7 @@ storageStatistics.getCurrentBundleStats((error: BusinessError, bundleStats: stor
 function getCurrentBundleStats(): Promise<BundleStats>
 ```
 
-应用异步获取当前应用存储空间大小（单位为Byte），以Promise方式返回。
+Obtains the storage space (in bytes) of this application. This API uses a promise to return the result.
 
 **Since:** 9
 
@@ -71,13 +71,13 @@ function getCurrentBundleStats(): Promise<BundleStats>
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;BundleStats&gt; | Promise对象，返回指定卷上的应用存储空间大小（单位为Byte）。 |
+| Promise&lt;BundleStats&gt; | Promise used to return the application storage space obtained. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | The input parameter is invalid.Possible causes:Mandatory parameters are left unspecified; |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | The input parameter is invalid.Possible causes:Mandatory parameters are left unspecified; |
 | 13600001 | IPC error. |
 | 13900042 | Unknown error. |
 

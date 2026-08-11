@@ -1,6 +1,6 @@
 # AdInteractionListener
 
-广告状态变化回调。
+Defines the ad status change callback.
 
 **Since:** 11
 
@@ -22,7 +22,7 @@ import { advertising } from 'kits/@kit.AdsKit';
 onStatusChanged(status: string, ad: Advertisement, data: string)
 ```
 
-广告状态回调。
+Called when the ad display status changes.
 
 **Since:** 11
 
@@ -38,9 +38,9 @@ onStatusChanged(status: string, ad: Advertisement, data: string)
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| status | string | Yes | 广告展示状态。 - onAdLoad：广告加载成功。 - onAdFail：广告加载失败。 - onAdOpen：打开广告。 - onAdClick：点击广告。 - onAdClose：关闭广告。 - onMediaProgress：广告播放进度。 - onMediaStart：广告开始播放。 - onMediaPause：广告暂停播放。 - onMediaStop：广告停止播放。 - onMediaComplete：广告播放完成。 - onMediaCountDown：广告倒计时。 - onMediaError：广告播放失败。 - onLandscape：竖屏状态下点击全屏按钮。 - onPortrait：全屏状态下点击返回按钮。 - onBackClicked：点击返回按钮。 - onAdSubWindow：打开半模态。 |
-| ad | [Advertisement](arkts-ads-advertisement-advertisement-i.md) | Yes | 发生状态变化的广告内容。 |
-| data | string | Yes | 扩展信息。 当status参数为onAdClose时，data值为关闭原因，关闭原因描述如下： - adShowEnded：广告展示结束。 - adCloseBtnClicked：点击关闭按钮。 - adSkipBtnClicked：点击跳过。 - adFeedbackClosed：负反馈关闭。 - adBackgroundClosed：开屏切后台关闭。 |
+| status | string | Yes | Ad show status. - onAdLoad: Ad loaded successfully. - onAdFail: Ad failed to load. - onAdOpen: Ad opened. - onAdClick: Ad clicked. - onAdClose: Ad closed. - onMediaProgress: Ad playback progress. - onMediaStart: Ad playback started. - onMediaPause: Ad playback paused. - onMediaStop: Ad playback stopped. - onMediaComplete: Ad playback completed. - onMediaCountDown: Ad countdown. - onMediaError: Ad playback failed. - onLandscape: Full-screen button clicked in portrait mode. - onPortrait: Back button clicked in full-screen mode. - onBackClicked: Back button clicked. - onAdSubWindow: Sheet opened. |
+| ad | [Advertisement](arkts-ads-advertisement-advertisement-i.md) | Yes | Content of the ad. |
+| data | string | Yes | Extended information. When **status** is **onAdClose**, the data value is the close reason, described as follows: - adShowEnded: Ad show ended. - adCloseBtnClicked: Close button clicked. - adSkipBtnClicked: Skip button clicked. - adFeedbackClosed: The ad is closed due to negative feedback. - adBackgroundClosed: The splash ad is closed when the app switches to the background. |
 
 ## Examples
 

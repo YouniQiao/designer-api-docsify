@@ -14,12 +14,6 @@
 
 **系统能力：** SystemCapability.Security.DataLossPrevention
 
-## 导入模块
-
-```TypeScript
-import { dlpPermission } from 'kits/@kit.DataProtectionKit';
-```
-
 ## constructor
 
 ```TypeScript
@@ -44,7 +38,7 @@ constructor()
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 201 | Permission denied. |
+| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
 
 ## 示例
 
@@ -94,11 +88,11 @@ static registerPlugin(plugin: DlpConnPlugin): number
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 19100003 | Credential task time out. |
-| 19100002 | Credential service busy due to too many tasks or duplicate tasks. |
-| 19100001 | Invalid parameter value. |
-| 19100004 | Credential service error. |
-| 201 | Permission denied. |
+| [19100003](../errorcode-dlp.md#19100003-加解密超时) | Credential task time out. |
+| [19100002](../errorcode-dlp.md#19100002-加解密出错) | Credential service busy due to too many tasks or duplicate tasks. |
+| [19100001](../errorcode-dlp.md#19100001-入参错误) | Invalid parameter value. |
+| [19100004](../errorcode-dlp.md#19100004-凭据服务错误) | Credential service error. |
+| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
 
 ## 示例
 
@@ -155,11 +149,11 @@ static unregisterPlugin(): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 19100003 | Credential task time out. |
-| 19100002 | Credential service busy due to too many tasks or duplicate tasks. |
-| 19100001 | Invalid parameter value. |
-| 19100004 | Credential service error. |
-| 201 | Permission denied. |
+| [19100003](../errorcode-dlp.md#19100003-加解密超时) | Credential task time out. |
+| [19100002](../errorcode-dlp.md#19100002-加解密出错) | Credential service busy due to too many tasks or duplicate tasks. |
+| [19100001](../errorcode-dlp.md#19100001-入参错误) | Invalid parameter value. |
+| [19100004](../errorcode-dlp.md#19100004-凭据服务错误) | Credential service error. |
+| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
 
 ## 示例
 

@@ -12,12 +12,6 @@
 
 **系统能力：** SystemCapability.PowerManager.DisplayPowerManager.Lite
 
-## 导入模块
-
-```TypeScript
-import { BrightnessResponse, BrightnessModeResponse, SetBrightnessModeOptions, GetBrightnessModeOptions, SetBrightnessOptions, GetBrightnessOptions, SetKeepScreenOnOptions } from 'kits/@kit.BasicServicesKit';
-```
-
 ## complete
 
 ```TypeScript

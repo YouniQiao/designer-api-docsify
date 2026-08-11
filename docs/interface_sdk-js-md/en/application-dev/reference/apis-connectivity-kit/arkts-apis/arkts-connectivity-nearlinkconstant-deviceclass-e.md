@@ -16,7 +16,7 @@ The enum of device class.
 DEVICE_INVALID_CLASS = -1
 ```
 
-无效的设备类别。缺少设备类信息。
+Invalid device class. Missing device class information.
 
 **Since:** 26.0.0
 

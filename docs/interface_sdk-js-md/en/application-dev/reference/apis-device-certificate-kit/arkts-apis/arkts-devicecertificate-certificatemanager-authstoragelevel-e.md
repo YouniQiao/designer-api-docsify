@@ -1,6 +1,6 @@
 # AuthStorageLevel
 
-表示凭据的存储级别。
+Enumerates the credential storage levels.
 
 **Since:** 18
 
@@ -16,7 +16,7 @@
 EL1 = 1
 ```
 
-EL1级别，表示设备启动后可以访问。
+The credential can be accessed after the device is started.
 
 **Since:** 18
 
@@ -32,7 +32,7 @@ EL1级别，表示设备启动后可以访问。
 EL2 = 2
 ```
 
-EL2级别，表示设备首次解锁后可以访问。
+The credential can be accessed after the device is unlocked for the first time.
 
 **Since:** 18
 
@@ -48,7 +48,7 @@ EL2级别，表示设备首次解锁后可以访问。
 EL4 = 4
 ```
 
-EL4级别，表示设备解锁时可以访问。
+The credential can be accessed after the device is unlocked.
 
 **Since:** 18
 

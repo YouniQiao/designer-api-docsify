@@ -1,10 +1,10 @@
 # WebOptions
 
-Defines the Web options.
+Defines web options through the [APIs](../arkts-apis/arkts-arkweb-web-web-f.md/arkts-arkweb-web-web-f.md#web).
 
-**Since:** 12
+**Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
+**ArkTS mode:** ArkTS-Dyn only, since version 8.
 
 <!--Device-unnamed-declare interface WebOptions--><!--Device-unnamed-declare interface WebOptions-End-->
 
@@ -16,13 +16,14 @@ Defines the Web options.
 controller: WebController | WebviewController
 ```
 
-Sets the controller of the Web.
+Controller that controls various behaviors of **Web** components, including page navigation, declaration period status, and JavaScript interaction. **WebController** is deprecated since API version 9. You are advised to use  
+[WebviewController](arkts-arkweb-webviewcontroller-t.md) instead.
 
 **Type:** [WebController](arkts-arkweb-webcontroller-c.md) \| WebviewController
 
-**Since:** 11
+**Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn only, since version 11.
+**ArkTS mode:** ArkTS-Dyn only, since version 8.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -36,9 +37,9 @@ Sets the controller of the Web.
 emulateTouchFromMouseEvent? : boolean
 ```
 
-设定鼠标事件是否被转换成触摸事件。
+Whether to convert mouse events into touch events.
 
-默认值：false。
+Default value: **false**.
 
 **Type:** boolean
 
@@ -56,15 +57,15 @@ emulateTouchFromMouseEvent? : boolean
 incognitoMode? : boolean
 ```
 
-Sets the incognito mode of the Web, the parameter is optional and default value is false.When the Web is in incognito mode, cookies, records of websites, geolocation permissions will not save in persistent files.
+Whether to enable incognito mode. The value **true** means to enable incognito mode, and **false** means the opposite.Default value: **false**.If **undefined** or **null** is passed, the value is **false**.
 
 **Type:** boolean
 
-**Since:** 18
+**Since:** 11
 
-**ArkTS mode:** ArkTS-Dyn only, since version 18.
+**ArkTS mode:** ArkTS-Dyn only, since version 11.
 
-**Atomic service API:** This API can be used in atomic services since API version 18.
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-WebOptions-incognitoMode? : boolean--><!--Device-WebOptions-incognitoMode? : boolean-End-->
 
@@ -76,7 +77,7 @@ Sets the incognito mode of the Web, the parameter is optional and default value 
 renderMode? : RenderMode
 ```
 
-Sets the render mode of the web.
+Rendering mode.
 
 **Type:** [RenderMode](../arkts-apis/arkts-arkweb-web-rendermode-e.md)
 
@@ -96,7 +97,8 @@ Sets the render mode of the web.
 sharedRenderProcessToken? : string
 ```
 
-Sets the shared render process token of the web.When the web is in multiprocess mode, web with the same sharedRenderProcessToken will attempt to reuse the same render process.The shared render process will remain active until all associated web are destroyed.
+Token of the shared rendering process specified by the **Web** component. In multi-rendering process mode, the  
+**Web** component with the same token preferentially attempts to reuse the rendering process bound to the token.The token is bound to the rendering process when the rendering process is initialized. When the rendering process is not associated with a **Web** component, its binding to the token is removed.Default value: **""**.
 
 **Type:** string
 
@@ -114,13 +116,13 @@ Sets the shared render process token of the web.When the web is in multiprocess 
 src: string | Resource
 ```
 
-Sets the address of the web page to be displayed.
+Address of a web page resource. To access local resource files, use the \$rawfile or resource protocol. To load a local resource file (in HTML or TXT format) in the sandbox outside of the application package, use **file://** to specify the path of the sandbox.
 
 **Type:** string \| Resource
 
-**Since:** 11
+**Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn only, since version 11.
+**ArkTS mode:** ArkTS-Dyn only, since version 8.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 

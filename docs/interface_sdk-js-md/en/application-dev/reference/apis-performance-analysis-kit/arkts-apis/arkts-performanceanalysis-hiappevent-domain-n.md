@@ -1,10 +1,10 @@
 # domain
 
-提供域名常量。
+Provides domain name constants.
 
-|名称|类型|只读|描述|  
+| Name| Type | Read Only | Description |  
 | --- | ------ | ------ | ---------- |  
-| OS | string |是|系统域|
+| OS | string | Yes| System domain.|
 
 **Since:** 11
 
@@ -26,5 +26,5 @@ import { hiAppEvent } from 'kits/@kit.PerformanceAnalysisKit';
 
 | Name | Description |
 | --- | --- |
-| [OS](arkts-performanceanalysis-domain-con.md#os) | 系统领域。 |
+| [OS](arkts-performanceanalysis-domain-con.md#os) | System domain. |
 

@@ -1,6 +1,6 @@
 # EffectLayer (System API)
 
-EffectComponent的渲染层级。
+Rendering layer of the EffectComponent.
 
 **Since:** 20
 
@@ -18,7 +18,7 @@ EffectComponent的渲染层级。
 NONE = 0
 ```
 
-无特效层。
+No special effect layer.
 
 **Since:** 20
 
@@ -38,7 +38,7 @@ NONE = 0
 CHARGE_MOTION = 1
 ```
 
-充电动画层。
+Charging animation layer.
 
 **Since:** 20
 
@@ -58,7 +58,7 @@ CHARGE_MOTION = 1
 CHARGE_TEXT = 2
 ```
 
-充电文字层。
+Charging text layer.
 
 **Since:** 20
 

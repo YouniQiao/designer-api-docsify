@@ -1,7 +1,7 @@
 # UserAuthTipCode
 
-表示身份认证中间状态的枚举。该枚举用于描述认证过程中的各种中间状态，包括认证不通过、超时、冻结状态以及认证界面的加载和释放等。应用可通过  
-[on('authTip')](userAuth.UserAuthInstance.on(type: 'authTip', callback: AuthTipCallback))接口订阅这些中间状态，以便在认证过程中提供更精细的用户反馈和状态感知。
+Enumerates the intermediate states of identity authentication. This enum is used to describe various intermediate states during authentication, including authentication failure, timeout, lockout, and loading and release of the authentication screen. Applications can subscribe to these intermediate states through the  
+[on('authTip')](userAuth.UserAuthInstance.on(type: 'authTip', callback: AuthTipCallback)) API to provide more refined user feedback and status awareness during authentication.
 
 **Since:** 20
 
@@ -17,7 +17,7 @@
 COMPARE_FAILURE = 1
 ```
 
-认证不通过。表示当前认证尝试失败，用户特征与已注册凭据比对不匹配。此状态会在每次认证不通过时触发，应用可根据此状态提示用户重新尝试。
+The authentication fails. This state occurs because the user's biometric features do not match the registered credential. It is triggered each time the authentication fails. Your application can prompt the user to try again based on this state.
 
 **Since:** 20
 
@@ -35,7 +35,7 @@ COMPARE_FAILURE = 1
 TIMEOUT = 2
 ```
 
-认证超时。表示认证操作超时，通常是由于用户在规定时间内未完成认证交互（如未及时输入密码、未正视摄像头等）导致。
+The authentication has timed out. This state usually occurs because the user has not completed the authentication interaction within the specified time (for example, the user has not entered the password in time or has not looked straight at the camera lens).
 
 **Since:** 20
 
@@ -53,7 +53,7 @@ TIMEOUT = 2
 TEMPORARILY_LOCKED = 3
 ```
 
-临时冻结。表示认证器进入临时冻结状态，用户需等待冻结时长结束后才能继续尝试认证。临时冻结通常由连续多次认证失败触发。
+The authentication is temporarily locked. When this state occurs, users can attempt to perform authentication only after the lockout duration expires. The temporary lockout status is usually triggered by multiple consecutive authentication failures.
 
 **Since:** 20
 
@@ -71,7 +71,7 @@ TEMPORARILY_LOCKED = 3
 PERMANENTLY_LOCKED = 4
 ```
 
-永久冻结。表示认证器进入永久冻结状态，用户无法通过等待自动解锁，必须使用PIN认证解锁后才能继续使用该认证类型。永久冻结通常由临时冻结期间继续尝试认证不通过触发。
+The authentication is permanently locked. When this state occurs, automatic unlocking is unavailable. Users must use PIN authentication to unlock the authenticator before using the authentication type. The permanent lockout status is usually triggered by failed authentication attempts during the temporary lockout period.
 
 **Since:** 20
 
@@ -89,7 +89,7 @@ PERMANENTLY_LOCKED = 4
 WIDGET_LOADED = 5
 ```
 
-身份认证界面加载完毕。表示认证控件已成功加载并显示，用户可以开始进行认证交互。应用可在此状态触发后进行界面相关的初始化操作。
+The identity authentication page is loaded. This state indicates that the authentication widget is successfully loaded and displayed, and the user can start authentication interaction. The application can perform UI-related initialization operations after this state is triggered.
 
 **Since:** 20
 
@@ -107,7 +107,7 @@ WIDGET_LOADED = 5
 WIDGET_RELEASED = 6
 ```
 
-当前的身份认证界面退出，切换其他认证界面或身份认证控件关闭。表示认证控件已释放，应用可在此状态触发后进行后续操作，如弹出其他窗口等。在PC/2in1设备上使用模应用弹窗方式认证时，建议订阅此状态以确保控件完全释放后再执行其他界面操作。
+The current identity authentication page is switched to another authentication page or the identity authentication component is closed. This state indicates that the authentication widget has been released. The application can perform follow-up operations, such as displaying another window, after this state is triggered.When using the application modal dialog for authentication on a PC/2-in-1 device, you are advised to subscribe to this status to ensure that the widget is completely released before performing other operations.
 
 **Since:** 20
 
@@ -125,7 +125,7 @@ WIDGET_RELEASED = 6
 COMPARE_FAILURE_WITH_FROZEN = 7
 ```
 
-认证不通过并触发了认证冻结。表示当前认证不通过，并且失败次数已达到阈值，认证器进入冻结状态。此状态同时包含认证不通过和冻结两个信息，应用可根据冻结类型（临时或永久）提示用户相应的解锁方式。
+The authentication fails and authentication freezing is triggered. This state indicates that the number of authentication failures reaches the threshold and the authenticator is locked. This state contains both authentication failure and freezing information. Your application can prompt the user with the corresponding unlock method based on the lockout type (temporary or permanent).
 
 **Since:** 20
 

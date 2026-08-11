@@ -4,7 +4,7 @@
 export type OnContentWillChangeCallback = (currentIndex: number, comingIndex: number) => boolean
 ```
 
-页面内容即将发生变化时触发的回调函数，用于拦截页面切换，开发者可通过返回值控制是否允许切换。
+Defines the callback function triggered when the page content changes.
 
 **Since:** 12
 
@@ -20,8 +20,8 @@ export type OnContentWillChangeCallback = (currentIndex: number, comingIndex: nu
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| currentIndex | number | Yes | 当前页签索引。 |
-| comingIndex | number | Yes | 即将切换的页签索引。 |
+| currentIndex | number | Yes | Index of the current tab. |
+| comingIndex | number | Yes | Index of the tab to be switched to. |
 
 **Return value:**
 

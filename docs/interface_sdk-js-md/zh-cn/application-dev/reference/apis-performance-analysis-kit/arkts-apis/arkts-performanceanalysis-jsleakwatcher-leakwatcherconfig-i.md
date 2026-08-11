@@ -10,12 +10,6 @@ LeakWatcherConfig�������ͣ������а�������
 
 **系统能力：** SystemCapability.HiviewDFX.HiChecker
 
-## 导入模块
-
-```TypeScript
-import { jsLeakWatcher } from 'kits/@kit.PerformanceAnalysisKit';
-```
-
 ## bgLeakCountThreshold
 
 ```TypeScript

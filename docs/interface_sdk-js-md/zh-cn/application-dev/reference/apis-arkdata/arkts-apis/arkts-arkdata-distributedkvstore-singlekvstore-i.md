@@ -13,12 +13,6 @@ SingleKVStore数据库实例，提供增加数据、删除数据和订阅数据�
 
 **系统能力：** SystemCapability.DistributedDataManager.KVStore.Core
 
-## 导入模块
-
-```TypeScript
-import { distributedKVStore } from 'kits/@kit.ArkData';
-```
-
 ## backup
 
 ```TypeScript
@@ -47,9 +41,11 @@ backup(file: string, callback: AsyncCallback<void>): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 401 | Parameter error.Possible causes:1.Mandatory parameters are left unspecified; &lt;br&gt;2.Parameter verification failed. [ |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error.Possible causes:1.Mandatory parameters are left unspecified; &lt;br&gt;2.Parameter verification failed. [ |
 
 ## 示例
+
+ArkTS-Dyn示例：
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -65,6 +61,25 @@ try {
   });
 } catch (err) {
   let error = err as BusinessError;
+  console.error(`An unexpected error occurred. Code: ${error.code}, message: ${error.message}`);
+}
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let backupFile = 'BK001';
+try {
+  kvStore!.backup(backupFile, (err: BusinessError | null): void => {
+    if (err != null) {
+      console.error(`Failed to backup. Code: ${err.code}, message: ${err.message} `);
+    } else {
+      console.info(`Succeeded in backupping data`);
+    }
+  });
+} catch (error) {
   console.error(`An unexpected error occurred. Code: ${error.code}, message: ${error.message}`);
 }
 ```
@@ -102,9 +117,11 @@ backup(file: string): Promise<void>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 401 | Parameter error.Possible causes:1.Mandatory parameters are left unspecified; &lt;br&gt;2.Parameter verification failed. [ |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error.Possible causes:1.Mandatory parameters are left unspecified; &lt;br&gt;2.Parameter verification failed. [ |
 
 ## 示例
+
+ArkTS-Dyn示例：
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -118,6 +135,23 @@ try {
   });
 } catch (err) {
   let error = err as BusinessError;
+  console.error(`An unexpected error occurred. Code: ${error.code}, message: ${error.message}`);
+}
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let backupFile = 'BK001';
+try {
+  kvStore!.backup(backupFile).then((): void => {
+    console.info(`Succeeded in backupping data`);
+  }).catch((err): void => {
+    console.error(`Failed to backup. Code: ${err.code}, message: ${err.message}`);
+  });
+} catch (error) {
   console.error(`An unexpected error occurred. Code: ${error.code}, message: ${error.message}`);
 }
 ```
@@ -154,9 +188,11 @@ backupEx(backupConfig: BackupConfig): Promise<void>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 15100000 | Input parameters do not meet the API requirements, such as invalid value ranges, length limits, or incorrect formats. [ |
+| [15100000](../errorcode-distributedKVStore.md#15100000-无效的参数) | Input parameters do not meet the API requirements, such as invalid value ranges, length limits, or incorrect formats. [ |
 
 ## 示例
+
+ArkTS-Dyn示例：
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -169,6 +205,27 @@ try {
   kvStore.backupEx(backupConfig).then(() => {
     console.info(`Succeeded in backupping data`);
   }).catch((err: BusinessError) => {
+    console.error(`Failed to backup. Code: ${err.code}, message: ${err.message}`);
+  });
+} catch (err) {
+  let error = err as BusinessError;
+  console.error(`An unexpected error occurred. Code: ${error.code}, message: ${error.message}`);
+}
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+import { BusinessError } from '@ohos.base';
+
+const backupConfig: distributedKVStore.BackupConfig = {
+  fileName: 'BK001',
+  filePath: '/data/storage/el2/database'
+};
+try {
+  kvStore?.backupEx(backupConfig).then(() => {
+    console.info(`Succeeded in backupping data`);
+  }).catch((err) => {
     console.error(`Failed to backup. Code: ${err.code}, message: ${err.message}`);
   });
 } catch (err) {
@@ -204,9 +261,11 @@ closeResultSet(resultSet: KVStoreResultSet, callback: AsyncCallback<void>): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 401 | Parameter error.Possible causes:1.Mandatory parameters are left unspecified; &lt;br&gt;2.Incorrect parameters types. |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error.Possible causes:1.Mandatory parameters are left unspecified; &lt;br&gt;2.Incorrect parameters types. |
 
 ## 示例
+
+ArkTS-Dyn示例：
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -227,12 +286,43 @@ try {
           return;
         }
         console.info('Succeeded in closing result set');
-      })
+      });
     }
   });
 } catch (err) {
   let error = err as BusinessError;
   console.error(`An unexpected error occurred. Code: ${error.code}, message: ${error.message}`);
+}
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+
+let resultSet: distributedKVStore.KVStoreResultSet;
+try {
+    kvStore!.getResultSet('batch_test_string_key', (err: BusinessError | null, result: distributedKVStore.KVStoreResultSet | undefined): void => {
+        if (err != null) {
+            console.error(`Failed to get resultset. Code: ${err.code}, message: ${err.message}`);
+            return;
+        }
+        console.info('Succeeded in getting result set');
+        if (result != undefined) {
+            resultSet = result;
+            kvStore!.closeResultSet(resultSet, (err: BusinessError | null): void => {
+                if (err != null) {
+                    console.error(`Failed to close resultset. Code: ${err.code}, message: ${err.message}`);
+                    return;
+                }
+                console.info('Succeeded in closing result set');
+            });
+        }
+    });
+} catch (err) {
+    let error = err as BusinessError;
+    console.error(`An unexpected error occurred. Code: ${error.code}, message: ${error.message}`);
 }
 ```
 
@@ -268,9 +358,11 @@ closeResultSet(resultSet: KVStoreResultSet): Promise<void>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 401 | Parameter error.Possible causes:1.Mandatory parameters are left unspecified; &lt;br&gt;2.Incorrect parameters types. |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error.Possible causes:1.Mandatory parameters are left unspecified; &lt;br&gt;2.Incorrect parameters types. |
 
 ## 示例
+
+ArkTS-Dyn示例：
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -288,6 +380,33 @@ try {
       });
     }
   }).catch((err: BusinessError) => {
+    console.error(`Failed to get resultset. Code: ${err.code}, message: ${err.message}`);
+  });
+
+} catch (err) {
+  let error = err as BusinessError;
+  console.error(`An unexpected error occurred. Code: ${error.code}, message: ${error.message}`);
+}
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let resultSet: distributedKVStore.KVStoreResultSet;
+try {
+  kvStore!.getResultSet('batch_test_string_key').then((result: distributedKVStore.KVStoreResultSet) => {
+    console.info('Succeeded in getting result set');
+    resultSet = result;
+    if (kvStore != null) {
+      kvStore!.closeResultSet(resultSet).then(() => {
+        console.info('Succeeded in closing result set');
+      }).catch((err) => {
+        console.error(`Failed to close resultset. Code: ${err.code}, message: ${err.message}`);
+      });
+    }
+  }).catch((err) => {
     console.error(`Failed to get resultset. Code: ${err.code}, message: ${err.message}`);
   });
 
@@ -326,9 +445,11 @@ commit(callback: AsyncCallback<void>): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 15100005 | Database or result set already closed. |
+| [15100005](../errorcode-distributedKVStore.md#15100005-数据库或查询结果集已关闭) | Database or result set already closed. |
 
 ## 示例
+
+ArkTS-Dyn示例：
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -343,6 +464,31 @@ try {
   });
 } catch (err) {
   let error = err as BusinessError;
+  console.error(`An unexpected error occurred. Code: ${error.code}, message: ${error.message}`);
+}
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+try {
+  kvStore!.startTransaction((err: BusinessError | null): void => {
+    if (err != null) {
+      console.error(`Failed to start Transaction. Code: ${err.code}, message: ${err.message}`);
+      return;
+    }
+    console.info('Succeeded in starting Transaction');
+    kvStore!.commit((err: BusinessError | null): void => {
+      if (err != null) {
+        console.error(`Failed to commit. Code: ${err.code}, message: ${err.message}`);
+      } else {
+        console.info('Succeeded in committing');
+      }
+    });
+  });
+} catch (error) {
   console.error(`An unexpected error occurred. Code: ${error.code}, message: ${error.message}`);
 }
 ```
@@ -376,9 +522,11 @@ commit(): Promise<void>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 15100005 | Database or result set already closed. |
+| [15100005](../errorcode-distributedKVStore.md#15100005-数据库或查询结果集已关闭) | Database or result set already closed. |
 
 ## 示例
+
+ArkTS-Dyn示例：
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -391,6 +539,29 @@ try {
   });
 } catch (err) {
   let error = err as BusinessError;
+  console.error(`An unexpected error occurred. Code: ${error.code}, message: ${error.message}`);
+}
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+try {
+  kvStore!.startTransaction((err: BusinessError | null): void => {
+    if (err != null) {
+      console.error(`Failed to start Transaction. Code: ${err.code}, message: ${err.message}`);
+      return;
+    }
+    console.info('Succeeded in starting Transaction');
+    kvStore!.commit().then((): void => {
+      console.info('Succeeded in committing');
+    }).catch((err): void => {
+      console.error(`Failed to commit. Code: ${err.code}, message: ${err.message}`);
+    });
+  });
+} catch (error) {
   console.error(`An unexpected error occurred. Code: ${error.code}, message: ${error.message}`);
 }
 ```
@@ -422,10 +593,12 @@ delete(key: string, callback: AsyncCallback<void>): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 401 | Parameter error.Possible causes:1.Mandatory parameters are left unspecified; &lt;br&gt;2.Incorrect parameters types; &lt;br&gt;3.Parameter verification failed. [ |
-| 15100005 | Database or result set already closed. [ |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error.Possible causes:1.Mandatory parameters are left unspecified; &lt;br&gt;2.Incorrect parameters types; &lt;br&gt;3.Parameter verification failed. [ |
+| [15100005](../errorcode-distributedKVStore.md#15100005-数据库或查询结果集已关闭) | Database or result set already closed. [ |
 
 ## 示例
+
+ArkTS-Dyn示例：
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -452,6 +625,36 @@ try {
 } catch (err) {
   let error = err as BusinessError;
   console.error(`An unexpected error occurred. Code: ${error.code}, message: ${error.message}`);
+}
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+const KEY_TEST_STRING_ELEMENT = 'key_test_string';
+const VALUE_TEST_STRING_ELEMENT = 'value-test-string';
+try {
+    kvStore!.put(KEY_TEST_STRING_ELEMENT, VALUE_TEST_STRING_ELEMENT, (err: BusinessError|null) => {
+        if (err != null) {
+            console.error(`Failed to put. Code: ${err.code}, message: ${err.message}`);
+            return;
+        }
+        console.info('Succeeded in putting');
+        if (kvStore != null) {
+            kvStore!.delete(KEY_TEST_STRING_ELEMENT, (err: BusinessError|null) => {
+                if (err != null) {
+                    console.error(`Failed to delete. Code: ${err.code}, message: ${err.message}`);
+                    return;
+                }
+                console.info('Succeeded in deleting');
+            });
+        }
+    });
+} catch (err) {
+    let error = err as BusinessError;
+    console.error(`An unexpected error occurred. Code: ${error.code}, message: ${error.message}`);
 }
 ```
 
@@ -487,10 +690,12 @@ delete(key: string): Promise<void>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 401 | Parameter error.Possible causes:1.Mandatory parameters are left unspecified; &lt;br&gt;2.Incorrect parameters types; &lt;br&gt;3.Parameter verification failed. [ |
-| 15100005 | Database or result set already closed. [ |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error.Possible causes:1.Mandatory parameters are left unspecified; &lt;br&gt;2.Incorrect parameters types; &lt;br&gt;3.Parameter verification failed. [ |
+| [15100005](../errorcode-distributedKVStore.md#15100005-数据库或查询结果集已关闭) | Database or result set already closed. [ |
 
 ## 示例
+
+ArkTS-Dyn示例：
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -508,6 +713,32 @@ try {
       });
     }
   }).catch((err: BusinessError) => {
+    console.error(`Failed to put. Code: ${err.code}, message: ${err.message}`);
+  });
+} catch (err) {
+  let error = err as BusinessError;
+  console.error(`An unexpected error occurred. Code: ${error.code}, message: ${error.message}`);
+}
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+const KEY_TEST_STRING_ELEMENT = 'key_test_string';
+const VALUE_TEST_STRING_ELEMENT = 'value-test-string';
+try {
+  kvStore!.put(KEY_TEST_STRING_ELEMENT, VALUE_TEST_STRING_ELEMENT).then(() => {
+    console.info(`Succeeded in putting data`);
+    if (kvStore != null) {
+      kvStore!.delete(KEY_TEST_STRING_ELEMENT).then(() => {
+        console.info('Succeeded in deleting');
+      }).catch((err) => {
+        console.error(`Failed to delete. Code: ${err.code}, message: ${err.message}`);
+      });
+    }
+  }).catch((err) => {
     console.error(`Failed to put. Code: ${err.code}, message: ${err.message}`);
   });
 } catch (err) {
@@ -545,9 +776,11 @@ deleteBackup(files: Array<string>, callback: AsyncCallback<Array<[string, int]>>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 401 | Parameter error.Possible causes:1.Mandatory parameters are left unspecified; &lt;br&gt;2.Parameter verification failed. |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error.Possible causes:1.Mandatory parameters are left unspecified; &lt;br&gt;2.Parameter verification failed. |
 
 ## 示例
+
+ArkTS-Dyn示例：
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -563,6 +796,34 @@ try {
   });
 } catch (err) {
   let error = err as BusinessError;
+  console.error(`An unexpected error occurred. Code: ${error.code}, message: ${error.message}`);
+}
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let files = ['BK001', 'BK002'];
+try {
+  for(let backupFile of files) {
+    kvStore!.backup(backupFile, (err: BusinessError | null): void => {
+      if (err != null) {
+        console.error(`Failed to backup. Code: ${err.code}, message: ${err.message} `);
+      } else {
+        console.info(`Succeeded in backupping data`);
+      }
+    });
+  }
+  kvStore!.deleteBackup(files, (err: BusinessError | null, data: [string, number][] | undefined): void => {
+    if (err != null) {
+      console.error(`Failed to delete Backup. Code: ${err.code}, message: ${err.message}`);
+    } else {
+      console.info(`Succeed in deleting Backup.data=${data}`);
+    }
+  });
+} catch (error) {
   console.error(`An unexpected error occurred. Code: ${error.code}, message: ${error.message}`);
 }
 ```
@@ -608,9 +869,11 @@ deleteBackup(files: Array<string>): Promise<Array<[string, int]>>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 401 | Parameter error.Possible causes:1.Mandatory parameters are left unspecified; &lt;br&gt;2.Parameter verification failed. |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error.Possible causes:1.Mandatory parameters are left unspecified; &lt;br&gt;2.Parameter verification failed. |
 
 ## 示例
+
+ArkTS-Dyn示例：
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -621,9 +884,35 @@ try {
     console.info(`Succeed in deleting Backup.data=${data}`);
   }).catch((err: BusinessError) => {
     console.error(`Failed to delete Backup. Code: ${err.code}, message: ${err.message}`);
-  })
+  });
 } catch (err) {
   let error = err as BusinessError;
+  console.error(`An unexpected error occurred. Code: ${error.code}, message: ${error.message}`);
+}
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let files = ['BK001', 'BK002'];
+try {
+  for(let backupFile of files) {
+    kvStore!.backup(backupFile, (err: BusinessError | null): void => {
+      if (err != null) {
+        console.error(`Failed to backup. Code: ${err.code}, message: ${err.message} `);
+      } else {
+        console.info(`Succeeded in backupping data`);
+      }
+    });
+  }
+  kvStore!.deleteBackup(files).then((data: [string, number][]): void => {
+    console.info(`Succeed in deleting Backup.data=${data}`);
+  }).catch((err): void => {
+    console.error(`Failed to delete Backup. Code: ${err.code}, message: ${err.message}`);
+  });
+} catch (error) {
   console.error(`An unexpected error occurred. Code: ${error.code}, message: ${error.message}`);
 }
 ```
@@ -662,9 +951,11 @@ deleteBackupEx(backupConfig: BackupConfig): Promise<void>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 15100000 | Input parameters do not meet the API requirements, such as invalid value ranges, length limits, or incorrect formats. |
+| [15100000](../errorcode-distributedKVStore.md#15100000-无效的参数) | Input parameters do not meet the API requirements, such as invalid value ranges, length limits, or incorrect formats. |
 
 ## 示例
+
+ArkTS-Dyn示例：
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -678,7 +969,28 @@ try {
     console.info(`Succeed in deleting Backup.`);
   }).catch((err: BusinessError) => {
     console.error(`Failed to delete Backup. Code: ${err.code}, message: ${err.message}`);
-  })
+  });
+} catch (err) {
+  let error = err as BusinessError;
+  console.error(`An unexpected error occurred. Code: ${error.code}, message: ${error.message}`);
+}
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+import { BusinessError } from '@ohos.base';
+
+const backupConfig: distributedKVStore.BackupConfig = {
+  fileName: 'BK001',
+  filePath: '/data/storage/el2/database'
+};
+try {
+  kvStore?.deleteBackupEx(backupConfig).then(() => {
+    console.info(`Succeed in deleting Backup`);
+  }).catch((err) => {
+    console.error(`Failed to delete Backup. Code: ${err.code}, message: ${err.message}`);
+  });
 } catch (err) {
   let error = err as BusinessError;
   console.error(`An unexpected error occurred. Code: ${error.code}, message: ${error.message}`);
@@ -712,10 +1024,12 @@ deleteBatch(keys: string[], callback: AsyncCallback<void>): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 401 | Parameter error.Possible causes:1.Mandatory parameters are left unspecified; &lt;br&gt;2.Incorrect parameters types; &lt;br&gt;3.Parameter verification failed. [ |
-| 15100005 | Database or result set already closed. [ |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error.Possible causes:1.Mandatory parameters are left unspecified; &lt;br&gt;2.Incorrect parameters types; &lt;br&gt;3.Parameter verification failed. [ |
+| [15100005](../errorcode-distributedKVStore.md#15100005-数据库或查询结果集已关闭) | Database or result set already closed. [ |
 
 ## 示例
+
+ArkTS-Dyn示例：
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -758,6 +1072,49 @@ try {
 }
 ```
 
+ArkTS-Sta示例：
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+try {
+    let entries: distributedKVStore.Entry[] = [];
+    let keys: string[] = [];
+    for (let i = 0; i < 5; i++) {
+        let key = 'batch_test_string_key';
+        let entry: distributedKVStore.Entry = {
+            key: key + i,
+            value: {
+                type: distributedKVStore.ValueType.STRING,
+                value: 'batch_test_string_value'
+            }
+        }
+        entries.push(entry);
+        keys.push(key + i);
+    }
+    console.info(`entries: ${entries}`);
+    kvStore!.putBatch(entries,  (err: BusinessError|null) => {
+        if (err != null) {
+            console.error(`Failed to put Batch. Code: ${err.code}, message: ${err.message}`);
+            return;
+        }
+        console.info('Succeeded in putting Batch');
+        if (kvStore != null) {
+            kvStore!.deleteBatch(keys,  (err: BusinessError|null) => {
+                if (err != null) {
+                    console.error(`Failed to delete Batch. Code: ${err.code}, message: ${err.message}`);
+                    return;
+                }
+                console.info('Succeeded in deleting Batch');
+            });
+        }
+    });
+} catch (err) {
+    let error = err as BusinessError;
+    console.error(`An unexpected error occurred. Code: ${error.code}, message: ${error.message}`);
+}
+```
+
 ## deleteBatch
 
 ```TypeScript
@@ -790,10 +1147,12 @@ deleteBatch(keys: string[]): Promise<void>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 401 | Parameter error.Possible causes:1.Mandatory parameters are left unspecified; &lt;br&gt;2.Incorrect parameters types; &lt;br&gt;3.Parameter verification failed. [ |
-| 15100005 | Database or result set already closed. [ |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error.Possible causes:1.Mandatory parameters are left unspecified; &lt;br&gt;2.Incorrect parameters types; &lt;br&gt;3.Parameter verification failed. [ |
+| [15100005](../errorcode-distributedKVStore.md#15100005-数据库或查询结果集已关闭) | Database or result set already closed. [ |
 
 ## 示例
+
+ArkTS-Dyn示例：
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -832,6 +1191,45 @@ try {
 }
 ```
 
+ArkTS-Sta示例：
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+try {
+  let entries: distributedKVStore.Entry[] = [];
+  let keys: string[] = [];
+  for (let i = 0; i < 5; i++) {
+    let key = 'batch_test_string_key';
+    let entry: distributedKVStore.Entry = {
+      key: key + i,
+      value: {
+        type: distributedKVStore.ValueType.STRING,
+        value: 'batch_test_string_value'
+      }
+    }
+    entries.push(entry);
+    keys.push(key + i);
+  }
+  console.info(`entries: ${entries}`);
+  kvStore!.putBatch(entries).then(async () => {
+    console.info('Succeeded in putting Batch');
+    if (kvStore != null) {
+      kvStore!.deleteBatch(keys).then(() => {
+        console.info('Succeeded in deleting Batch');
+      }).catch((err) => {
+        console.error(`Failed to delete Batch. Code: ${err.code}, message: ${err.message}`);
+      });
+    }
+  }).catch((err) => {
+    console.error(`Failed to put Batch. Code: ${err.code}, message: ${err.message}`);
+  });
+} catch (err) {
+  let error = err as BusinessError;
+  console.error(`An unexpected error occurred. Code: ${error.code}, message: ${error.message}`);
+}
+```
+
 ## enableSync
 
 ```TypeScript
@@ -862,9 +1260,11 @@ enableSync(enabled: boolean, callback: AsyncCallback<void>): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 401 | Parameter error.Possible causes:1.Mandatory parameters are left unspecified; &lt;br&gt;2.Incorrect parameters types. |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error.Possible causes:1.Mandatory parameters are left unspecified; &lt;br&gt;2.Incorrect parameters types. |
 
 ## 示例
+
+ArkTS-Dyn示例：
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -879,6 +1279,24 @@ try {
   });
 } catch (err) {
   let error = err as BusinessError;
+  console.error(`An unexpected error occurred. Code: ${error.code}, message: ${error.message}`);
+}
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+try {
+  kvStore!.enableSync(true, (err: BusinessError | null):void => {
+    if (err == null) {
+      console.info('Succeeded in enabling sync');
+    } else {
+      console.error(`Failed to enable sync. Code: ${err.code}, message: ${err.message}`);
+    }
+  });
+} catch (error) {
   console.error(`An unexpected error occurred. Code: ${error.code}, message: ${error.message}`);
 }
 ```
@@ -918,9 +1336,11 @@ enableSync(enabled: boolean): Promise<void>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 401 | Parameter error.Possible causes:1.Mandatory parameters are left unspecified; &lt;br&gt;2.Incorrect parameters types. |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error.Possible causes:1.Mandatory parameters are left unspecified; &lt;br&gt;2.Incorrect parameters types. |
 
 ## 示例
+
+ArkTS-Dyn示例：
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -933,6 +1353,22 @@ try {
   });
 } catch (err) {
   let error = err as BusinessError;
+  console.error(`An unexpected error occurred. Code: ${error.code}, message: ${error.message}`);
+}
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+try {
+  kvStore!.enableSync(true).then((): void => {
+    console.info('Succeeded in enabling sync');
+  }).catch((err): void => {
+    console.error(`Failed to enable sync. Code: ${err.code}, message: ${err.message}`);
+  });
+} catch (error) {
   console.error(`An unexpected error occurred. Code: ${error.code}, message: ${error.message}`);
 }
 ```
@@ -964,8 +1400,8 @@ get(key: string, callback: AsyncCallback<boolean | string | long | double | Uint
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 401 | Parameter error.Possible causes:1.Mandatory parameters are left unspecified; &lt;br&gt;2.Incorrect parameters types; &lt;br&gt;3.Parameter verification failed. [ |
-| 15100004 | Not found. [ |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error.Possible causes:1.Mandatory parameters are left unspecified; &lt;br&gt;2.Incorrect parameters types; &lt;br&gt;3.Parameter verification failed. [ |
+| [15100004](../errorcode-distributedKVStore.md#15100004-未找到相关数据) | Not found. [ |
 
 ## get
 
@@ -999,8 +1435,8 @@ get(key: string): Promise<boolean | string | long | double | Uint8Array>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 401 | Parameter error.Possible causes:1.Mandatory parameters are left unspecified; &lt;br&gt;2.Incorrect parameters types; &lt;br&gt;3.Parameter verification failed. [ |
-| 15100004 | Not found. [ |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error.Possible causes:1.Mandatory parameters are left unspecified; &lt;br&gt;2.Incorrect parameters types; &lt;br&gt;3.Parameter verification failed. [ |
+| [15100004](../errorcode-distributedKVStore.md#15100004-未找到相关数据) | Not found. [ |
 
 ## getEntries
 
@@ -1029,10 +1465,12 @@ getEntries(keyPrefix: string, callback: AsyncCallback<Entry[]>): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 401 | Parameter error.Possible causes:1.Mandatory parameters are left unspecified; &lt;br&gt;2.Incorrect parameters types. [ |
-| 15100005 | Database or result set already closed. |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error.Possible causes:1.Mandatory parameters are left unspecified; &lt;br&gt;2.Incorrect parameters types. [ |
+| [15100005](../errorcode-distributedKVStore.md#15100005-数据库或查询结果集已关闭) | Database or result set already closed. |
 
 ## 示例
+
+ArkTS-Dyn示例：
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -1071,7 +1509,52 @@ try {
   });
 } catch (err) {
   let error = err as BusinessError;
-  console.error(`An unexpected error occurred. Code: ${error.code}, message: ${error.message}`);
+  console.error(`An unexpected error occurred. Code: ${error.code}, message: ${error.message} `);
+}
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+try {
+    let entries: distributedKVStore.Entry[] = [];
+    for (let i = 0; i < 10; i++) {
+        let key = 'batch_test_string_key';
+        let entry: distributedKVStore.Entry = {
+            key: key + i,
+            value: {
+                type: distributedKVStore.ValueType.STRING,
+                value: 'batch_test_string_value'
+            }
+        }
+        entries.push(entry);
+    }
+    console.info(`entries: ${entries}`);
+    kvStore!.putBatch(entries,  (err: BusinessError|null) => {
+        if (err) {
+            console.error(`Failed to put Batch. Code: ${err.code}, message: ${err.message}`);
+            return;
+        }
+        console.info('Succeeded in putting Batch');
+        if (kvStore != null) {
+            kvStore!.getEntries('batch_test_string_key', (err: BusinessError|null, entries: distributedKVStore.Entry[]|undefined) => {
+                if (err) {
+                    console.error(`Failed to get Entries. Code: ${err.code}, message: ${err.message}`);
+                    return;
+                }
+                if(entries != undefined) {
+                    console.info('Succeeded in getting Entries');
+                    console.info(`entries.length: ${entries.length}`);
+                    console.info(`entries[0]: ${entries[0]}`);
+                }
+            });
+        }
+    });
+} catch (err) {
+    let error = err as BusinessError;
+    console.error(`An unexpected error occurred. Code: ${error.code}, message: ${error.message} `);
 }
 ```
 
@@ -1107,14 +1590,15 @@ getEntries(keyPrefix: string): Promise<Entry[]>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 401 | Parameter error.Possible causes:1.Mandatory parameters are left unspecified; &lt;br&gt;2.Incorrect parameters types. [ |
-| 15100005 | Database or result set already closed. |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error.Possible causes:1.Mandatory parameters are left unspecified; &lt;br&gt;2.Incorrect parameters types. [ |
+| [15100005](../errorcode-distributedKVStore.md#15100005-数据库或查询结果集已关闭) | Database or result set already closed. |
 
 ## 示例
 
+ArkTS-Dyn示例：
+
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
-
 
 try {
   let entries: distributedKVStore.Entry[] = [];
@@ -1145,7 +1629,45 @@ try {
   });
 } catch (err) {
   let error = err as BusinessError;
-  console.error(`An unexpected error occurred. Code: ${error.code}, message: ${error.message}`);
+  console.error(`An unexpected error occurred. Code: ${error.code}, message: ${error.message} `);
+}
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+try {
+  let entries: distributedKVStore.Entry[] = [];
+  for (let i = 0; i < 10; i++) {
+    let key = 'batch_test_string_key';
+    let entry: distributedKVStore.Entry = {
+      key: key + i,
+      value: {
+        type: distributedKVStore.ValueType.STRING,
+        value: 'batch_test_string_value'
+      }
+    }
+    entries.push(entry);
+  }
+  console.info(`entries: ${entries}`);
+  kvStore!.putBatch(entries).then(async () => {
+    console.info('Succeeded in putting Batch');
+    if (kvStore != null) {
+      kvStore!.getEntries('batch_test_string_key').then((entries: distributedKVStore.Entry[]) => {
+        console.info('Succeeded in getting Entries');
+        console.info(`PutBatch ${entries}`);
+      }).catch((err) => {
+        console.error(`Failed to get Entries. Code: ${err.code}, message: ${err.message}`);
+      });
+    }
+  }).catch((err) => {
+    console.error(`Failed to put Batch. Code: ${err.code}, message: ${err.message}`);
+  });
+} catch (err) {
+  let error = err as BusinessError;
+  console.error(`An unexpected error occurred. Code: ${error.code}, message: ${error.message} `);
 }
 ```
 
@@ -1176,10 +1698,12 @@ getEntries(query: Query, callback: AsyncCallback<Entry[]>): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 401 | Parameter error.Possible causes:1.Mandatory parameters are left unspecified; &lt;br&gt;2.Incorrect parameters types. [ |
-| 15100005 | Database or result set already closed. |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error.Possible causes:1.Mandatory parameters are left unspecified; &lt;br&gt;2.Incorrect parameters types. [ |
+| [15100005](../errorcode-distributedKVStore.md#15100005-数据库或查询结果集已关闭) | Database or result set already closed. |
 
 ## 示例
+
+ArkTS-Dyn示例：
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -1200,10 +1724,6 @@ try {
   }
   console.info(`entries: ${entries}`);
   kvStore.putBatch(entries, async (err: BusinessError) => {
-    if (err) {
-      console.error(`Failed to put Batch. Code: ${err.code}, message: ${err.message}`);
-      return;
-    }
     console.info('Succeeded in putting Batch');
     const query = new distributedKVStore.Query();
     query.prefixKey('batch_test');
@@ -1222,6 +1742,50 @@ try {
 } catch (err) {
   let error = err as BusinessError;
   console.error(`Failed to get Entries. Code: ${error.code}, message: ${error.message}`);
+}
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+try {
+    let arr = new Uint8Array([21, 31]);
+    let entries: distributedKVStore.Entry[] = [];
+    for (let i = 0; i < 10; i++) {
+        let key = 'batch_test_bool_key';
+        let entry: distributedKVStore.Entry = {
+            key: key + i,
+            value: {
+                type: distributedKVStore.ValueType.BYTE_ARRAY,
+                value: arr
+            }
+        }
+        entries.push(entry);
+    }
+    console.info(`entries: ${entries}`);
+    kvStore!.putBatch(entries,  (err: BusinessError|null) => {
+        console.info('Succeeded in putting batch');
+        const query = new distributedKVStore.Query();
+        query.prefixKey('batch_test');
+        if (kvStore != null) {
+            kvStore!.getEntries(query, (err: BusinessError|null, entries: distributedKVStore.Entry[]|undefined) => {
+                if (err != null) {
+                    console.error(`Failed to get Entries. Code: ${err.code}, message: ${err.message}`);
+                    return;
+                }
+                if(entries != undefined){
+                    console.info('Succeeded in getting Entries');
+                    console.info(`entries.length: ${entries.length}`);
+                    console.info(`entries[0]: ${entries[0]}`);
+                }
+            });
+        }
+    });
+} catch (err) {
+    let error = err as BusinessError;
+    console.error(`Failed to get Entries. Code: ${error.code}, message: ${error.message}`);
 }
 ```
 
@@ -1257,10 +1821,12 @@ getEntries(query: Query): Promise<Entry[]>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 401 | Parameter error.Possible causes:1.Mandatory parameters are left unspecified; &lt;br&gt;2.Incorrect parameters types. [ |
-| 15100005 | Database or result set already closed. |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error.Possible causes:1.Mandatory parameters are left unspecified; &lt;br&gt;2.Incorrect parameters types. [ |
+| [15100005](../errorcode-distributedKVStore.md#15100005-数据库或查询结果集已关闭) | Database or result set already closed. |
 
 ## 示例
+
+ArkTS-Dyn示例：
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -1292,7 +1858,48 @@ try {
       });
     }
   }).catch((err: BusinessError) => {
-    console.error(`Failed to get Entries. Code: ${err.code}, message: ${err.message}`);
+    console.error(`Failed to get Entries. Code: ${err.code}, message: ${err.message}`)
+  });
+  console.info('Succeeded in getting Entries');
+} catch (err) {
+  let error = err as BusinessError;
+  console.error(`Failed to get Entries. Code: ${error.code}, message: ${error.message}`);
+}
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+ try {
+  let arr = new Uint8Array([21, 31]);
+  let entries: distributedKVStore.Entry[] = [];
+  for (let i = 0; i < 10; i++) {
+      let key = 'batch_test_bool_key';
+      let entry: distributedKVStore.Entry = {
+          key: key + i,
+          value: {
+              type: distributedKVStore.ValueType.BYTE_ARRAY,
+              value: arr
+          }
+      }
+      entries.push(entry);
+  }
+  console.info(`entries: ${entries}`);
+  kvStore!.putBatch(entries).then(async () => {
+      console.info('Succeeded in putting Batch');
+      const query = new distributedKVStore.Query();
+      query.prefixKey('batch_test');
+      if (kvStore != null) {
+          kvStore!.getEntries(query).then((entries: distributedKVStore.Entry[]) => {
+              console.info('Succeeded in getting Entries');
+          }).catch((err) => {
+              console.error(`Failed to get Entries. Code: ${err.code}, message: ${err.message}`);
+          });
+      }
+  }).catch((err) => {
+      console.error(`Failed to get Entries. Code: ${err.code}, message: ${err.message}`)
   });
   console.info('Succeeded in getting Entries');
 } catch (err) {
@@ -1329,16 +1936,17 @@ getResultSet(keyPrefix: string, callback: AsyncCallback<KVStoreResultSet>): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 401 | Parameter error.Possible causes:1.Mandatory parameters are left unspecified; &lt;br&gt;2.Incorrect parameters types. [ |
-| 15100005 | Database or result set already closed. [ |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error.Possible causes:1.Mandatory parameters are left unspecified; &lt;br&gt;2.Incorrect parameters types. [ |
+| [15100005](../errorcode-distributedKVStore.md#15100005-数据库或查询结果集已关闭) | Database or result set already closed. [ |
 
 ## 示例
+
+ArkTS-Dyn示例：
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
 
 try {
-  let resultSet: distributedKVStore.KVStoreResultSet;
   let entries: distributedKVStore.Entry[] = [];
   for (let i = 0; i < 10; i++) {
     let key = 'batch_test_string_key';
@@ -1383,6 +1991,58 @@ try {
 }
 ```
 
+ArkTS-Sta示例：
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+try {
+  let resultSet: distributedKVStore.KVStoreResultSet;
+  let entries: distributedKVStore.Entry[] = [];
+  for (let i = 0; i < 10; i++) {
+      let key = 'batch_test_string_key';
+      let entry: distributedKVStore.Entry = {
+          key: key + i,
+          value: {
+              type: distributedKVStore.ValueType.STRING,
+              value: 'batch_test_string_value'
+          }
+      }
+      entries.push(entry);
+  }
+  kvStore!.putBatch(entries,  (err: BusinessError|null) => {
+      if (err != null) {
+          console.error(`Failed to put batch. Code: ${err.code}, message: ${err.message}`);
+          return;
+      }
+      console.info('Succeeded in putting batch');
+      if (kvStore != null) {
+          kvStore!.getResultSet('batch_test_string_key',  (err: BusinessError|null, result: distributedKVStore.KVStoreResultSet|undefined) => {
+              if (err != null) {
+                  console.error(`Failed to get resultset. Code: ${err.code}, message: ${err.message}`);
+                  return;
+              }
+              console.info('Succeeded in getting result set');
+
+              if (result != undefined) {
+                  resultSet = result;
+                  kvStore!.closeResultSet(resultSet, (err :BusinessError|null) => {
+                      if (err != null) {
+                          console.error(`Failed to close resultset. Code: ${err.code}, message: ${err.message}`);
+                          return;
+                      }
+                      console.info('Succeeded in closing result set');
+                  });
+              }
+          });
+      }
+  });
+} catch (err) {
+  let error = err as BusinessError;
+  console.error(`An unexpected error occurred. Code: ${error.code}, message: ${error.message}`);
+}
+```
+
 ## getResultSet
 
 ```TypeScript
@@ -1416,10 +2076,12 @@ getResultSet(keyPrefix: string): Promise<KVStoreResultSet>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 401 | Parameter error.Possible causes:1.Mandatory parameters are left unspecified; &lt;br&gt;2.Incorrect parameters types. [ |
-| 15100005 | Database or result set already closed. [ |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error.Possible causes:1.Mandatory parameters are left unspecified; &lt;br&gt;2.Incorrect parameters types. [ |
+| [15100005](../errorcode-distributedKVStore.md#15100005-数据库或查询结果集已关闭) | Database or result set already closed. [ |
 
 ## 示例
+
+ArkTS-Dyn示例：
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -1462,6 +2124,49 @@ try {
 }
 ```
 
+ArkTS-Sta示例：
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+ try {
+  let resultSet: distributedKVStore.KVStoreResultSet;
+  let entries: distributedKVStore.Entry[] = [];
+  for (let i = 0; i < 10; i++) {
+      let key = 'batch_test_string_key';
+      let entry: distributedKVStore.Entry = {
+          key: key + i,
+          value: {
+              type: distributedKVStore.ValueType.STRING,
+              value: 'batch_test_string_value'
+          }
+      }
+      entries.push(entry);
+  }
+  kvStore!.putBatch(entries).then(async () => {
+      console.info('Succeeded in putting batch');
+  }).catch((err) => {
+      console.error(`Failed to put batch. Code: ${err.code}, message: ${err.message}`);
+  });
+  kvStore!.getResultSet('batch_test_string_key').then((result: distributedKVStore.KVStoreResultSet) => {
+      console.info('Succeeded in getting result set');
+      resultSet = result;
+      if (kvStore != null) {
+          kvStore!.closeResultSet(resultSet).then(() => {
+              console.info('Succeeded in closing result set');
+          }).catch((err) => {
+              console.error(`Failed to close resultset. Code: ${err.code}, message: ${err.message}`);
+          });
+      }
+  }).catch((err) => {
+      console.error(`Failed to get resultset. Code: ${err.code}, message: ${err.message}`);
+  });
+} catch (err) {
+  let error = err as BusinessError;
+  console.error(`An unexpected error occurred. Code: ${error.code}, message: ${error.message}`);
+}
+```
+
 ## getResultSet
 
 ```TypeScript
@@ -1490,10 +2195,12 @@ getResultSet(query: Query, callback: AsyncCallback<KVStoreResultSet>): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 401 | Parameter error.Possible causes:1.Mandatory parameters are left unspecified; &lt;br&gt;2.Incorrect parameters types. [ |
-| 15100005 | Database or result set already closed. [ |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error.Possible causes:1.Mandatory parameters are left unspecified; &lt;br&gt;2.Incorrect parameters types. [ |
+| [15100005](../errorcode-distributedKVStore.md#15100005-数据库或查询结果集已关闭) | Database or result set already closed. [ |
 
 ## 示例
+
+ArkTS-Dyn示例：
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -1536,6 +2243,49 @@ try {
 }
 ```
 
+ArkTS-Sta示例：
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+try {
+  let resultSet: distributedKVStore.KVStoreResultSet;
+  let entries: distributedKVStore.Entry[] = [];
+  for (let i = 0; i < 10; i++) {
+      let key = 'batch_test_string_key';
+      let entry: distributedKVStore.Entry = {
+          key: key + i,
+          value: {
+              type: distributedKVStore.ValueType.STRING,
+              value: 'batch_test_string_value'
+          }
+      }
+      entries.push(entry);
+  }
+  kvStore!.putBatch(entries,  (err: BusinessError|null) => {
+      if (err != null) {
+          console.error(`Failed to put batch. Code: ${err.code}, message: ${err.message}`);
+          return;
+      }
+      console.info('Succeeded in putting batch');
+      const query = new distributedKVStore.Query();
+      query.prefixKey('batch_test');
+      if (kvStore != null) {
+          kvStore!.getResultSet(query,  (err: BusinessError|null, result: distributedKVStore.KVStoreResultSet|undefined) => {
+              if (err != null) {
+                  console.error(`Failed to get resultset. Code: ${err.code}, message: ${err.message}`);
+                  return;
+              }
+              console.info('Succeeded in getting result set');
+          });
+      }
+  });
+} catch (err) {
+  let error = err as BusinessError;
+  console.error(`An unexpected error occurred. Code: ${error.code}, message: ${error.message}`);
+}
+```
+
 ## getResultSet
 
 ```TypeScript
@@ -1569,15 +2319,18 @@ getResultSet(query: Query): Promise<KVStoreResultSet>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 401 | Parameter error.Possible causes:1.Mandatory parameters are left unspecified; &lt;br&gt;2.Incorrect parameters types. [ |
-| 15100005 | Database or result set already closed. [ |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error.Possible causes:1.Mandatory parameters are left unspecified; &lt;br&gt;2.Incorrect parameters types. [ |
+| [15100005](../errorcode-distributedKVStore.md#15100005-数据库或查询结果集已关闭) | Database or result set already closed. [ |
 
 ## 示例
+
+ArkTS-Dyn示例：
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
 
 try {
+  let resultSet: distributedKVStore.KVStoreResultSet;
   let entries: distributedKVStore.Entry[] = [];
   for (let i = 0; i < 10; i++) {
     let key = 'batch_test_string_key';
@@ -1595,7 +2348,7 @@ try {
     const query = new distributedKVStore.Query();
     query.prefixKey('batch_test');
     kvStore!.getResultSet(query).then((result: distributedKVStore.KVStoreResultSet) => {
-      console.info(`Succeeded in getting result set size=${result.getCount()}`);
+      console.info(`Succeeded in getting result set size=${result.getCount()}}`);
     }).catch((err: BusinessError) => {
       console.error(`Failed to get resultset. Code: ${err.code}, message: ${err.message}`);
     });
@@ -1605,6 +2358,44 @@ try {
 } catch (err) {
   let error = err as BusinessError;
   console.error(`An unexpected error occurred. Code: ${error.code}, message: ${error.message}`);
+}
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+try {
+    let resultSet: distributedKVStore.KVStoreResultSet;
+    let entries: distributedKVStore.Entry[] = [];
+    for (let i = 0; i < 10; i++) {
+        let key = 'batch_test_string_key';
+        let entry: distributedKVStore.Entry = {
+            key: key + i,
+            value: {
+                type: distributedKVStore.ValueType.STRING,
+                value: 'batch_test_string_value'
+            }
+        }
+        entries.push(entry);
+    }
+    kvStore!.putBatch(entries).then(async () => {
+        console.info('Succeeded in putting batch');
+    }).catch((err) => {
+        console.error(`Failed to put batch. Code: ${err.code}, message: ${err.message}`);
+    });
+    const query = new distributedKVStore.Query();
+    query.prefixKey('batch_test');
+    kvStore!.getResultSet(query).then((result: distributedKVStore.KVStoreResultSet) => {
+        console.info('Succeeded in getting result set');
+        resultSet = result;
+    }).catch((err) => {
+        console.error(`Failed to get resultset. Code: ${err.code}, message: ${err.message}`);
+    });
+} catch (err) {
+    let error = err as BusinessError;
+    console.error(`An unexpected error occurred. Code: ${error.code}, message: ${error.message}`);
 }
 ```
 
@@ -1635,10 +2426,12 @@ getResultSize(query: Query, callback: AsyncCallback<int>): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 401 | Parameter error.Possible causes:1.Mandatory parameters are left unspecified; &lt;br&gt;2.Incorrect parameters types. [ |
-| 15100004 | Not found. [ |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error.Possible causes:1.Mandatory parameters are left unspecified; &lt;br&gt;2.Incorrect parameters types. [ |
+| [15100004](../errorcode-distributedKVStore.md#15100004-未找到相关数据) | Not found. [ |
 
 ## 示例
+
+ArkTS-Dyn示例：
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -1657,10 +2450,6 @@ try {
     entries.push(entry);
   }
   kvStore.putBatch(entries, (err: BusinessError) => {
-    if (err) {
-      console.error(`Failed to put batch. Code: ${err.code}, message: ${err.message}`);
-      return;
-    }
     console.info('Succeeded in putting batch');
     const query = new distributedKVStore.Query();
     query.prefixKey('batch_test');
@@ -1677,6 +2466,44 @@ try {
 } catch (err) {
   let error = err as BusinessError;
   console.error(`An unexpected error occurred. Code: ${error.code}, message: ${error.message}`);
+}
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+try {
+    let entries: distributedKVStore.Entry[] = [];
+    for (let i = 0; i < 10; i++) {
+        let key = 'batch_test_string_key';
+        let entry: distributedKVStore.Entry = {
+            key: key + i,
+            value: {
+                type: distributedKVStore.ValueType.STRING,
+                value: 'batch_test_string_value'
+            }
+        }
+        entries.push(entry);
+    }
+    kvStore!.putBatch(entries,  (err: BusinessError|null) => {
+        console.info('Succeeded in putting batch');
+        const query = new distributedKVStore.Query();
+        query.prefixKey('batch_test');
+        if (kvStore != null) {
+            kvStore!.getResultSize(query,  (err: BusinessError|null, resultSize: int|undefined) : void =>  {
+                if (err != null) {
+                    console.error(`Failed to get result size. Code: ${err.code}, message: ${err.message}`);
+                    return;
+                }
+                console.info('Succeeded in getting result set size');
+            });
+        }
+    });
+} catch (err) {
+    let error = err as BusinessError;
+    console.error(`An unexpected error occurred. Code: ${error.code}, message: ${error.message}`);
 }
 ```
 
@@ -1712,10 +2539,12 @@ getResultSize(query: Query): Promise<int>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 401 | Parameter error.Possible causes:1.Mandatory parameters are left unspecified; &lt;br&gt;2.Incorrect parameters types. [ |
-| 15100004 | Not found. [ |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error.Possible causes:1.Mandatory parameters are left unspecified; &lt;br&gt;2.Incorrect parameters types. [ |
+| [15100004](../errorcode-distributedKVStore.md#15100004-未找到相关数据) | Not found. [ |
 
 ## 示例
+
+ArkTS-Dyn示例：
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -1743,6 +2572,42 @@ try {
   kvStore.getResultSize(query).then((resultSize: number) => {
     console.info('Succeeded in getting result set size');
   }).catch((err: BusinessError) => {
+    console.error(`Failed to get result size. Code: ${err.code}, message: ${err.message}`);
+  });
+} catch (err) {
+  let error = err as BusinessError;
+  console.error(`An unexpected error occurred. Code: ${error.code}, message: ${error.message}`);
+}
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+try {
+  let entries: distributedKVStore.Entry[] = [];
+  for (let i = 0; i < 10; i++) {
+    let key = 'batch_test_string_key';
+    let entry: distributedKVStore.Entry = {
+      key: key + i,
+      value: {
+        type: distributedKVStore.ValueType.STRING,
+        value: 'batch_test_string_value'
+      }
+    }
+    entries.push(entry);
+  }
+  kvStore!.putBatch(entries).then(async () => {
+    console.info('Succeeded in putting batch');
+  }).catch((err) => {
+    console.error(`Failed to put batch. Code: ${err.code}, message: ${err.message}`);
+  });
+  const query = new distributedKVStore.Query();
+  query.prefixKey('batch_test');
+  kvStore!.getResultSize(query).then((resultSize: int) => {
+    console.info('Succeeded in getting result set size');
+  }).catch((err) => {
     console.error(`Failed to get result size. Code: ${err.code}, message: ${err.message}`);
   });
 } catch (err) {
@@ -1779,9 +2644,11 @@ getSecurityLevel(callback: AsyncCallback<SecurityLevel>): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 15100005 | Database or result set already closed. |
+| [15100005](../errorcode-distributedKVStore.md#15100005-数据库或查询结果集已关闭) | Database or result set already closed. |
 
 ## 示例
+
+ArkTS-Dyn示例：
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -1796,6 +2663,24 @@ try {
   });
 } catch (err) {
   let error = err as BusinessError;
+  console.error(`An unexpected error occurred. Code: ${error.code}, message: ${error.message}`);
+}
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+try {
+  kvStore!.getSecurityLevel((err: BusinessError | null, data: distributedKVStore.SecurityLevel | undefined): void => {
+    if (err != null) {
+      console.error(`Failed to get SecurityLevel. Code: ${err.code}, message: ${err.message}`);
+      return;
+    }
+    console.info('Succeeded in getting securityLevel');
+  });
+} catch (error) {
   console.error(`An unexpected error occurred. Code: ${error.code}, message: ${error.message}`);
 }
 ```
@@ -1828,9 +2713,11 @@ getSecurityLevel(): Promise<SecurityLevel>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 15100005 | Database or result set already closed. |
+| [15100005](../errorcode-distributedKVStore.md#15100005-数据库或查询结果集已关闭) | Database or result set already closed. |
 
 ## 示例
+
+ArkTS-Dyn示例：
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -1843,6 +2730,22 @@ try {
   });
 } catch (err) {
   let error = err as BusinessError;
+  console.error(`An unexpected error occurred. Code: ${error.code}, message: ${error.message}`);
+}
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+try {
+  kvStore!.getSecurityLevel().then((data: distributedKVStore.SecurityLevel): void => {
+    console.info('Succeeded in getting securityLevel');
+  }).catch((err): void => {
+    console.error(`Failed to get SecurityLevel. Code: ${err.code}, message: ${err.message}`);
+  });
+} catch (error) {
   console.error(`An unexpected error occurred. Code: ${error.code}, message: ${error.message}`);
 }
 ```
@@ -1875,8 +2778,8 @@ off(event: 'dataChange', listener?: Callback<ChangeNotification>): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 401 | Parameter error.Possible causes:1.Mandatory parameters are left unspecified; &lt;br&gt;2.Incorrect parameters types. |
-| 15100005 | Database or result set already closed. |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error.Possible causes:1.Mandatory parameters are left unspecified; &lt;br&gt;2.Incorrect parameters types. |
+| [15100005](../errorcode-distributedKVStore.md#15100005-数据库或查询结果集已关闭) | Database or result set already closed. |
 
 ## 示例
 
@@ -1940,7 +2843,7 @@ off(event: 'syncComplete', syncCallback?: Callback<Array<[string, number]>>): vo
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 401 | Parameter error.Possible causes:1.Mandatory parameters are left unspecified; &lt;br&gt;2.Incorrect parameters types. |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error.Possible causes:1.Mandatory parameters are left unspecified; &lt;br&gt;2.Incorrect parameters types. |
 
 ## 示例
 
@@ -2004,7 +2907,23 @@ offDataChange(listener?: Callback<ChangeNotification>): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 15100005 | Database or result set already closed. |
+| [15100005](../errorcode-distributedKVStore.md#15100005-数据库或查询结果集已关闭) | Database or result set already closed. |
+
+## 示例
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+try {
+  const dataChangeCallback = (data: distributedKVStore.ChangeNotification): void => {
+    console.info(`dataChange callback call data: ${data}`);
+  }
+  kvStore.onDataChange(distributedKVStore.SubscribeType.SUBSCRIBE_TYPE_LOCAL, dataChangeCallback);
+  kvStore.offDataChange(dataChangeCallback);
+} catch (error) {
+  console.error(`An unexpected error occurred. Code: ${error.code}, message: ${error.message}`);
+}
+```
 
 ## offSyncComplete
 
@@ -2030,6 +2949,22 @@ offSyncComplete(syncCallback?: Callback<Array<[string, int]>>): void
 | --- | --- | --- | --- |
 | syncCallback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;Array&lt;[string, int]&gt;&gt; | 否 |  |
 
+## 示例
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+try {
+  const syncCompleteCallback = (data: [string, int][]): void => {
+    console.info(`syncComplete ${data}`);
+  }
+  kvStore.onSyncComplete(syncCompleteCallback);
+  kvStore.offSyncComplete(syncCompleteCallback);
+} catch (error) {
+  console.error(`An unexpected error occurred. Code: ${error.code}, message: ${error.message}`);
+}
+```
+
 ## on
 
 ```TypeScript
@@ -2052,16 +2987,16 @@ on(event: 'dataChange', type: SubscribeType, listener: Callback<ChangeNotificati
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | event | 'dataChange' | 是 | 订阅的事件名，固定为'dataChange'，表示数据变更事件。 |
-| type | [SubscribeType](arkts-arkdata-rdb-subscribetype-e.md) | 是 | 表示订阅的类型。 |
+| type | [SubscribeType](../../apis-notification-kit/arkts-apis/arkts-notification-notificationextensionsubscription-subscribetype-e.md) | 是 | 表示订阅的类型。 |
 | listener | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;ChangeNotification&gt; | 是 | 回调函数。成功返回数据变更时通知的对象。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 401 | Parameter error.Possible causes:1.Mandatory parameters are left unspecified; &lt;br&gt;2.Incorrect parameters types. |
-| 15100005 | Database or result set already closed. |
-| 15100001 | Over max limits. |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error.Possible causes:1.Mandatory parameters are left unspecified; &lt;br&gt;2.Incorrect parameters types. |
+| [15100005](../errorcode-distributedKVStore.md#15100005-数据库或查询结果集已关闭) | Database or result set already closed. |
+| [15100001](../errorcode-distributedKVStore.md#15100001-超过最大订阅数量或结果集数量) | Over max limits. |
 
 ## 示例
 
@@ -2106,7 +3041,7 @@ on(event: 'syncComplete', syncCallback: Callback<Array<[string, number]>>): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 401 | Parameter error.Possible causes:1.Mandatory parameters are left unspecified; &lt;br&gt;2.Incorrect parameters types. |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error.Possible causes:1.Mandatory parameters are left unspecified; &lt;br&gt;2.Incorrect parameters types. |
 
 ## 示例
 
@@ -2153,15 +3088,29 @@ onDataChange(type: SubscribeType, listener: Callback<ChangeNotification>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| type | [SubscribeType](arkts-arkdata-rdb-subscribetype-e.md) | 是 | 表示订阅的类型。. |
+| type | [SubscribeType](../../apis-notification-kit/arkts-apis/arkts-notification-notificationextensionsubscription-subscribetype-e.md) | 是 | 表示订阅的类型。. |
 | listener | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;ChangeNotification&gt; | 是 | 回调函数。成功返回数据变更时通知的对象。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 15100005 | Database or result set already closed. |
-| 15100001 | Over max limits. |
+| [15100005](../errorcode-distributedKVStore.md#15100005-数据库或查询结果集已关闭) | Database or result set already closed. |
+| [15100001](../errorcode-distributedKVStore.md#15100001-超过最大订阅数量或结果集数量) | Over max limits. |
+
+## 示例
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+try {
+  kvStore.onDataChange(distributedKVStore.SubscribeType.SUBSCRIBE_TYPE_LOCAL, (data: distributedKVStore.ChangeNotification): void => {
+    console.info(`dataChange callback call data: ${data}`);
+  });
+} catch (error) {
+  console.error(`An unexpected error occurred. Code: ${error.code}, message: ${error.message}`);
+}
+```
 
 ## onSyncComplete
 
@@ -2186,6 +3135,14 @@ onSyncComplete(syncCallback: Callback<Array<[string, int]>>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | syncCallback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;Array&lt;[string, int]&gt;&gt; | 是 | 回调函数。用于向调用方发送同步结果的回调。 |
+
+## 示例
+
+```TypeScript
+kvStore.onSyncComplete((data: [string, int][]): void => {
+  console.info(`syncComplete ${data}`);
+});
+```
 
 ## put
 
@@ -2223,10 +3180,10 @@ put(key: string, value: Uint8Array | string | long | double | boolean, callback:
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 401 | Parameter error.Possible causes:1.Mandatory parameters are left unspecified; &lt;br&gt;2.Incorrect parameters types; &lt;br&gt;3.Parameter verification failed. |
-| 15100005 | Database or result set already closed. |
-| 15100003 | Database corrupted. |
-| 14800047 | The WAL file size exceeds the default limit.<br>**适用版本：** 10+ |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error.Possible causes:1.Mandatory parameters are left unspecified; &lt;br&gt;2.Incorrect parameters types; &lt;br&gt;3.Parameter verification failed. |
+| [15100005](../errorcode-distributedKVStore.md#15100005-数据库或查询结果集已关闭) | Database or result set already closed. |
+| [15100003](../errorcode-distributedKVStore.md#15100003-数据库损坏) | Database corrupted. |
+| [14800047](../errorcode-data-rdb.md#14800047-wal文件大小超过默认上限) | The WAL file size exceeds the default limit.<br>**适用版本：** 10+ |
 
 ## put
 
@@ -2269,10 +3226,10 @@ put(key: string, value: Uint8Array | string | long | double | boolean): Promise<
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 401 | Parameter error.Possible causes:1.Mandatory parameters are left unspecified; &lt;br&gt;2.Incorrect parameters types; &lt;br&gt;3.Parameter verification failed. |
-| 15100005 | Database or result set already closed. |
-| 15100003 | Database corrupted. |
-| 14800047 | The WAL file size exceeds the default limit.<br>**适用版本：** 10+ |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error.Possible causes:1.Mandatory parameters are left unspecified; &lt;br&gt;2.Incorrect parameters types; &lt;br&gt;3.Parameter verification failed. |
+| [15100005](../errorcode-distributedKVStore.md#15100005-数据库或查询结果集已关闭) | Database or result set already closed. |
+| [15100003](../errorcode-distributedKVStore.md#15100003-数据库损坏) | Database corrupted. |
+| [14800047](../errorcode-data-rdb.md#14800047-wal文件大小超过默认上限) | The WAL file size exceeds the default limit.<br>**适用版本：** 10+ |
 
 ## putBatch
 
@@ -2296,19 +3253,21 @@ putBatch(entries: Entry[], callback: AsyncCallback<void>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| entries | [Entry](../../apis-arkui/arkts-apis/arkts-arkui-customcomponent-entry-i.md)[] | 是 | 表示要批量插入的键值对。一个entries对象中允许的最大数据量为512MB。 |
+| entries | [Entry](arkts-arkdata-distributeddata-entry-i.md)[] | 是 | 表示要批量插入的键值对。一个entries对象中允许的最大数据量为512MB。 |
 | callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数。数据批量插入成功，err为undefined，否则为错误对象。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 401 | Parameter error.Possible causes:1.Mandatory parameters are left unspecified; &lt;br&gt;2.Incorrect parameters types. |
-| 15100005 | Database or result set already closed. |
-| 15100003 | Database corrupted. |
-| 14800047 | The WAL file size exceeds the default limit.<br>**适用版本：** 10+ |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error.Possible causes:1.Mandatory parameters are left unspecified; &lt;br&gt;2.Incorrect parameters types. |
+| [15100005](../errorcode-distributedKVStore.md#15100005-数据库或查询结果集已关闭) | Database or result set already closed. |
+| [15100003](../errorcode-distributedKVStore.md#15100003-数据库损坏) | Database corrupted. |
+| [14800047](../errorcode-data-rdb.md#14800047-wal文件大小超过默认上限) | The WAL file size exceeds the default limit.<br>**适用版本：** 10+ |
 
 ## 示例
+
+ArkTS-Dyn示例：
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -2349,7 +3308,53 @@ try {
   });
 } catch (err) {
   let error = err as BusinessError;
-  console.error(`An unexpected error occurred. Code: ${error.code}, message: ${error.message}`);
+  console.error(`An unexpected error occurred. Code: ${error.code}, message: ${error.message} `);
+}
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+try {
+  let entries: distributedKVStore.Entry[] = [];
+  for (let i = 0; i < 10; i++) {
+      let key = 'batch_test_string_key';
+      let entry: distributedKVStore.Entry = {
+          key: key + i,
+          value: {
+              type: distributedKVStore.ValueType.STRING,
+              value: 'batch_test_string_value'
+          }
+      }
+      entries.push(entry);
+  }
+  console.info(`entries: ${entries}`);
+  kvStore!.putBatch(entries,  (err: BusinessError|null) => {
+      if (err != null) {
+          console.error(`Failed to put Batch. Code: ${err.code}, message: ${err.message}`);
+          return;
+      }
+      console.info('Succeeded in putting Batch');
+      if (kvStore != null) {
+          kvStore!.getEntries('batch_test_string_key', (err: BusinessError|null, entries: distributedKVStore.Entry[]|undefined) => {
+              if (err != null) {
+                  console.error(`Failed to get Entries. Code: ${err.code}, message: ${err.message}`);
+              }
+              if (entries != undefined) {
+                  console.info('Succeeded in getting Entries');
+                  console.info(`entries.length: ${entries.length}`);
+                  console.info(`entries[0]: ${entries[0]}`);
+              }
+          });
+      } else {
+          console.error('KvStore is null'); // 后续示例代码与此处保持一致
+      }
+  });
+} catch (err) {
+  let error = err as BusinessError;
+  console.error(`An unexpected error occurred. Code: ${error.code}, message: ${error.message} `);
 }
 ```
 
@@ -2375,7 +3380,7 @@ putBatch(entries: Entry[]): Promise<void>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| entries | [Entry](../../apis-arkui/arkts-apis/arkts-arkui-customcomponent-entry-i.md)[] | 是 | 表示要批量插入的键值对。一个entries对象中允许的最大数据量为512MB。 |
+| entries | [Entry](arkts-arkdata-distributeddata-entry-i.md)[] | 是 | 表示要批量插入的键值对。一个entries对象中允许的最大数据量为512MB。 |
 
 **返回值：**
 
@@ -2387,12 +3392,14 @@ putBatch(entries: Entry[]): Promise<void>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 401 | Parameter error.Possible causes:1.Mandatory parameters are left unspecified; &lt;br&gt;2.Incorrect parameters types. |
-| 15100005 | Database or result set already closed. |
-| 15100003 | Database corrupted. |
-| 14800047 | The WAL file size exceeds the default limit.<br>**适用版本：** 10+ |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error.Possible causes:1.Mandatory parameters are left unspecified; &lt;br&gt;2.Incorrect parameters types. |
+| [15100005](../errorcode-distributedKVStore.md#15100005-数据库或查询结果集已关闭) | Database or result set already closed. |
+| [15100003](../errorcode-distributedKVStore.md#15100003-数据库损坏) | Database corrupted. |
+| [14800047](../errorcode-data-rdb.md#14800047-wal文件大小超过默认上限) | The WAL file size exceeds the default limit.<br>**适用版本：** 10+ |
 
 ## 示例
+
+ArkTS-Dyn示例：
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -2426,7 +3433,45 @@ try {
   });
 } catch (err) {
   let error = err as BusinessError;
-  console.error(`An unexpected error occurred. Code: ${error.code}, message: ${error.message}`);
+  console.error(`An unexpected error occurred. Code: ${error.code}, message: ${error.message} `);
+}
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+try {
+  let entries: distributedKVStore.Entry[] = [];
+  for (let i = 0; i < 10; i++) {
+    let key = 'batch_test_string_key';
+    let entry: distributedKVStore.Entry = {
+      key: key + i,
+      value: {
+        type: distributedKVStore.ValueType.STRING,
+        value: 'batch_test_string_value'
+      }
+    }
+    entries.push(entry);
+  }
+  console.info(`entries: ${entries}`);
+  kvStore!.putBatch(entries).then(async () => {
+    console.info('Succeeded in putting Batch');
+    if (kvStore != null) {
+      kvStore!.getEntries('batch_test_string_key').then((entries: distributedKVStore.Entry[]) => {
+        console.info('Succeeded in getting Entries');
+        console.info(`PutBatch ${entries}`);
+      }).catch((err) => {
+        console.error(`Failed to get Entries. Code: ${err.code}, message: ${err.message}`);
+      });
+    }
+  }).catch((err) => {
+    console.error(`Failed to put Batch. Code: ${err.code}, message: ${err.message}`);
+  });
+} catch (err) {
+  let error = err as BusinessError;
+  console.error(`An unexpected error occurred. Code: ${error.code}, message: ${error.message} `);
 }
 ```
 
@@ -2462,24 +3507,9 @@ rekey(): Promise<void>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 15100006 | Failed to update the key. |
-| 15100005 | Database or result set already closed. |
-| 15100003 | Database corrupted. |
-
-## 示例
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-try {
-  kvStore.rekey().then(() => {
-    console.info('Success');
-  });
-} catch (err) {
-  let error = err as BusinessError;
-  console.error(`Failed to rekey. Code: ${error.code}, message: ${error.message}`);
-}
-```
+| [15100006](../errorcode-distributedKVStore.md#15100006-更新数据库加密密钥失败) | Failed to update the key. |
+| [15100005](../errorcode-distributedKVStore.md#15100005-数据库或查询结果集已关闭) | Database or result set already closed. |
+| [15100003](../errorcode-distributedKVStore.md#15100003-数据库损坏) | Database corrupted. |
 
 ## removeDeviceData
 
@@ -2518,9 +3548,11 @@ removeDeviceData(deviceId: string, callback: AsyncCallback<void>): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 401 | Parameter error.Possible causes:1.Mandatory parameters are left unspecified; &lt;br&gt;2.Parameter verification failed. [ |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error.Possible causes:1.Mandatory parameters are left unspecified; &lt;br&gt;2.Parameter verification failed. [ |
 
 ## 示例
+
+ArkTS-Dyn示例：
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -2530,7 +3562,7 @@ const VALUE_TEST_STRING_ELEMENT = 'value-string-002';
 try {
   kvStore.put(KEY_TEST_STRING_ELEMENT, VALUE_TEST_STRING_ELEMENT, async (err: BusinessError) => {
     if (err) {
-      console.error(`Failed to put device data. Code: ${err.code}, message: ${err.message}`);
+      console.error(`Failed to put device data: ${err.code} - ${err.message}`);
       return;
     }
     console.info('Succeeded in putting data');
@@ -2555,8 +3587,40 @@ try {
     }
   });
 } catch (err) {
-  let error = err as BusinessError;
-  console.error(`An unexpected error occurred. Code: ${error.code}, message: ${error.message}`);
+    let error = err as BusinessError;
+    console.error(`An unexpected error occurred. Code: ${error.code}, message: ${error.message}`)
+}
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+const KEY_TEST_STRING_ELEMENT = 'key_test_string_2';
+const VALUE_TEST_STRING_ELEMENT = 'value-string-002';
+try {
+    kvStore!.put(KEY_TEST_STRING_ELEMENT, VALUE_TEST_STRING_ELEMENT,  (err: BusinessError|null) => {
+        console.info('Succeeded in putting data');
+        const deviceId = 'no_exist_device_id';
+        if (kvStore != null) {
+            kvStore!.removeDeviceData(deviceId,  (err: BusinessError|null) => {
+                if (err == null) {
+                    console.info('succeeded in removing device data');
+                } else {
+                    console.error(`Failed to remove device data. Code: ${err.code}, message: ${err.message} `);
+                    if (kvStore != null) {
+                        kvStore!.get(KEY_TEST_STRING_ELEMENT,  (err: BusinessError|null, data: boolean | string | long | double | Uint8Array |undefined) => {
+                            console.info('Succeeded in getting data');
+                        });
+                    }
+                }
+            });
+        }
+    });
+} catch (err) {
+    let error = err as BusinessError;
+    console.error(`An unexpected error occurred. Code: ${error.code}, message: ${error.message}`)
 }
 ```
 
@@ -2602,9 +3666,11 @@ removeDeviceData(deviceId: string): Promise<void>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 401 | Parameter error.Possible causes:1.Mandatory parameters are left unspecified; &lt;br&gt;2.Parameter verification failed. [ |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error.Possible causes:1.Mandatory parameters are left unspecified; &lt;br&gt;2.Parameter verification failed. [ |
 
 ## 示例
+
+ArkTS-Dyn示例：
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -2630,7 +3696,37 @@ try {
   });
 } catch (err) {
   let error = err as BusinessError;
-  console.error(`An unexpected error occurred. Code: ${error.code}, message: ${error.message}`);
+  console.error(`An unexpected error occurred. Code: ${error.code}, message: ${error.message}`)
+}
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+const KEY_TEST_STRING_ELEMENT = 'key_test_string_2';
+const VALUE_TEST_STRING_ELEMENT = 'value-string-001';
+try {
+    kvStore!.put(KEY_TEST_STRING_ELEMENT, VALUE_TEST_STRING_ELEMENT).then(() => {
+        console.info('Succeeded in putting data');
+    }).catch((err) => {
+        console.error(`Failed to put data. Code: ${err.code}, message: ${err.message} `);
+    });
+    const deviceId = 'no_exist_device_id';
+    kvStore!.removeDeviceData(deviceId).then(() => {
+        console.info('succeeded in removing device data');
+    }).catch((err) => {
+        console.error(`Failed to remove device data. Code: ${err.code}, message: ${err.message} `);
+    });
+    kvStore!.get(KEY_TEST_STRING_ELEMENT).then((data: boolean | string | long | double | Uint8Array) => {
+        console.info('Succeeded in getting data');
+    }).catch((err) => {
+        console.error(`Failed to get data. Code: ${err.code}, message: ${err.message} `);
+    });
+} catch (err) {
+    let error = err as BusinessError;
+    console.error(`An unexpected error occurred. Code: ${error.code}, message: ${error.message}`)
 }
 ```
 
@@ -2661,9 +3757,11 @@ restore(file: string, callback: AsyncCallback<void>): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 401 | Parameter error.Possible causes:1.Mandatory parameters are left unspecified; &lt;br&gt;2.Parameter verification failed. [ |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error.Possible causes:1.Mandatory parameters are left unspecified; &lt;br&gt;2.Parameter verification failed. [ |
 
 ## 示例
+
+ArkTS-Dyn示例：
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -2679,6 +3777,32 @@ try {
   });
 } catch (err) {
   let error = err as BusinessError;
+  console.error(`An unexpected error occurred. Code: ${error.code}, message: ${error.message}`);
+}
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let backupFile = 'BK001';
+try {
+  kvStore!.backup(backupFile, (err: BusinessError | null): void => {
+    if (err != null) {
+      console.error(`Failed to backup. Code: ${err.code}, message: ${err.message} `);
+    } else {
+      console.info(`Succeeded in backupping data`);
+      kvStore!.restore(backupFile, (err: BusinessError | null): void => {
+        if (err != null) {
+          console.error(`Failed to restore. Code: ${err.code}, message: ${err.message}`);
+        } else {
+          console.info(`Succeeded in restoring data`);
+        }
+      });
+    }
+  });
+} catch (error) {
   console.error(`An unexpected error occurred. Code: ${error.code}, message: ${error.message}`);
 }
 ```
@@ -2715,9 +3839,11 @@ restore(file: string): Promise<void>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 401 | Parameter error.Possible causes:1.Mandatory parameters are left unspecified; &lt;br&gt;2.Parameter verification failed. [ |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error.Possible causes:1.Mandatory parameters are left unspecified; &lt;br&gt;2.Parameter verification failed. [ |
 
 ## 示例
+
+ArkTS-Dyn示例：
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -2731,6 +3857,30 @@ try {
   });
 } catch (err) {
   let error = err as BusinessError;
+  console.error(`An unexpected error occurred. Code: ${error.code}, message: ${error.message}`);
+}
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let backupFile = 'BK001';
+try {
+  kvStore!.backup(backupFile, (err: BusinessError | null): void => {
+    if (err != null) {
+      console.error(`Failed to backup. Code: ${err.code}, message: ${err.message} `);
+    } else {
+      console.info(`Succeeded in backupping data`);
+      kvStore!.restore(backupFile).then((): void => {
+        console.info(`Succeeded in restoring data`);
+      }).catch((err): void => {
+        console.error(`Failed to restore. Code: ${err.code}, message: ${err.message}`);
+      });
+    }
+  });
+} catch (error) {
   console.error(`An unexpected error occurred. Code: ${error.code}, message: ${error.message}`);
 }
 ```
@@ -2767,9 +3917,11 @@ restoreEx(backupConfig: BackupConfig): Promise<void>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 15100000 | Input parameters do not meet the API requirements, such as invalid value ranges, length limits, or incorrect formats. [ |
+| [15100000](../errorcode-distributedKVStore.md#15100000-无效的参数) | Input parameters do not meet the API requirements, such as invalid value ranges, length limits, or incorrect formats. [ |
 
 ## 示例
+
+ArkTS-Dyn示例：
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -2782,6 +3934,27 @@ try {
   kvStore.restoreEx(backupConfig).then(() => {
     console.info(`Succeeded in restoring data`);
   }).catch((err: BusinessError) => {
+    console.error(`Failed to restore. Code: ${err.code}, message: ${err.message}`);
+  });
+} catch (err) {
+  let error = err as BusinessError;
+  console.error(`An unexpected error occurred. Code: ${error.code}, message: ${error.message}`);
+}
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+import { BusinessError } from '@ohos.base';
+
+const backupConfig: distributedKVStore.BackupConfig = {
+  fileName: 'BK001',
+  filePath: '/data/storage/el2/database'
+};
+try {
+  kvStore?.restoreEx(backupConfig).then(() => {
+    console.info(`Succeeded in restoring data`);
+  }).catch((err) => {
     console.error(`Failed to restore. Code: ${err.code}, message: ${err.message}`);
   });
 } catch (err) {
@@ -2819,9 +3992,11 @@ rollback(callback: AsyncCallback<void>): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 15100005 | Database or result set already closed. |
+| [15100005](../errorcode-distributedKVStore.md#15100005-数据库或查询结果集已关闭) | Database or result set already closed. |
 
 ## 示例
+
+ArkTS-Dyn示例：
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -2836,6 +4011,31 @@ try {
   });
 } catch (err) {
   let error = err as BusinessError;
+  console.error(`An unexpected error occurred. Code: ${error.code}, message: ${error.message}`);
+}
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+try {
+  kvStore!.startTransaction((err: BusinessError | null): void => {
+    if (err != null) {
+      console.error(`Failed to start Transaction. Code: ${err.code}, message: ${err.message}`);
+      return;
+    }
+    console.info('Succeeded in starting Transaction');
+    kvStore!.rollback((err: BusinessError | null): void => {
+      if (err != null) {
+        console.error(`Failed to rollback. Code: ${err.code}, message: ${err.message}`);
+      } else {
+        console.info('Succeeded in rolling back');
+      }
+    });
+  });
+} catch (error) {
   console.error(`An unexpected error occurred. Code: ${error.code}, message: ${error.message}`);
 }
 ```
@@ -2869,9 +4069,11 @@ rollback(): Promise<void>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 15100005 | Database or result set already closed. |
+| [15100005](../errorcode-distributedKVStore.md#15100005-数据库或查询结果集已关闭) | Database or result set already closed. |
 
 ## 示例
+
+ArkTS-Dyn示例：
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -2884,6 +4086,29 @@ try {
   });
 } catch (err) {
   let error = err as BusinessError;
+  console.error(`An unexpected error occurred. Code: ${error.code}, message: ${error.message}`);
+}
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+try {
+  kvStore!.startTransaction((err: BusinessError | null): void => {
+    if (err != null) {
+      console.error(`Failed to start Transaction. Code: ${err.code}, message: ${err.message}`);
+      return;
+    }
+    console.info('Succeeded in starting Transaction');
+    kvStore!.rollback().then((): void => {
+      console.info('Succeeded in rolling back');
+    }).catch((err): void => {
+      console.error(`Failed to rollback. Code: ${err.code}, message: ${err.message}`);
+    });
+  });
+} catch (error) {
   console.error(`An unexpected error occurred. Code: ${error.code}, message: ${error.message}`);
 }
 ```
@@ -2929,9 +4154,11 @@ setSyncParam(defaultAllowedDelayMs: int, callback: AsyncCallback<void>): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 401 | Parameter error.Possible causes:1.Mandatory parameters are left unspecified; &lt;br&gt;2.Incorrect parameters types. |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error.Possible causes:1.Mandatory parameters are left unspecified; &lt;br&gt;2.Incorrect parameters types. |
 
 ## 示例
+
+ArkTS-Dyn示例：
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -2947,6 +4174,25 @@ try {
   });
 } catch (err) {
   let error = err as BusinessError;
+  console.error(`An unexpected error occurred. Code: ${error.code}, message: ${error.message}`);
+}
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+try {
+  const defaultAllowedDelayMs: int = 500;
+  kvStore!.setSyncParam(defaultAllowedDelayMs, (err: BusinessError | null): void => {
+    if (err != null) {
+      console.error(`Failed to set syncParam. Code: ${err.code}, message: ${err.message}`);
+      return;
+    }
+    console.info('Succeeded in setting syncParam');
+  });
+} catch (error) {
   console.error(`An unexpected error occurred. Code: ${error.code}, message: ${error.message}`);
 }
 ```
@@ -2997,9 +4243,11 @@ setSyncParam(defaultAllowedDelayMs: int): Promise<void>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 401 | Parameter error.Possible causes:1.Mandatory parameters are left unspecified; &lt;br&gt;2.Incorrect parameters types. |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error.Possible causes:1.Mandatory parameters are left unspecified; &lt;br&gt;2.Incorrect parameters types. |
 
 ## 示例
+
+ArkTS-Dyn示例：
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -3013,6 +4261,23 @@ try {
   });
 } catch (err) {
   let error = err as BusinessError;
+  console.error(`An unexpected error occurred. Code: ${error.code}, message: ${error.message}`);
+}
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+try {
+  const defaultAllowedDelayMs: int = 500;
+  kvStore!.setSyncParam(defaultAllowedDelayMs).then((): void => {
+    console.info('Succeeded in setting syncParam');
+  }).catch((err): void => {
+    console.error(`Failed to set syncParam. Code: ${err.code}, message: ${err.message}`);
+  });
+} catch (error) {
   console.error(`An unexpected error occurred. Code: ${error.code}, message: ${error.message}`);
 }
 ```
@@ -3047,9 +4312,11 @@ setSyncRange(localLabels: string[], remoteSupportLabels: string[], callback: Asy
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 401 | Parameter error.Possible causes:1.Mandatory parameters are left unspecified; &lt;br&gt;2.Incorrect parameters types. |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error.Possible causes:1.Mandatory parameters are left unspecified; &lt;br&gt;2.Incorrect parameters types. |
 
 ## 示例
+
+ArkTS-Dyn示例：
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -3066,6 +4333,26 @@ try {
   });
 } catch (err) {
   let error = err as BusinessError;
+  console.error(`An unexpected error occurred. Code: ${error.code}, message: ${error.message}`);
+}
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+try {
+  const localLabels = ['A', 'B'];
+  const remoteSupportLabels = ['C', 'D'];
+  kvStore!.setSyncRange(localLabels, remoteSupportLabels, (err: BusinessError | null): void => {
+    if (err != null) {
+      console.error(`Failed to set syncRange. Code: ${err.code}, message: ${err.message}`);
+      return;
+    }
+    console.info('Succeeded in setting syncRange');
+  });
+} catch (error) {
   console.error(`An unexpected error occurred. Code: ${error.code}, message: ${error.message}`);
 }
 ```
@@ -3105,9 +4392,11 @@ setSyncRange(localLabels: string[], remoteSupportLabels: string[]): Promise<void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 401 | Parameter error.Possible causes:1.Mandatory parameters are left unspecified; &lt;br&gt;2.Incorrect parameters types. |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error.Possible causes:1.Mandatory parameters are left unspecified; &lt;br&gt;2.Incorrect parameters types. |
 
 ## 示例
+
+ArkTS-Dyn示例：
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -3122,6 +4411,24 @@ try {
   });
 } catch (err) {
   let error = err as BusinessError;
+  console.error(`An unexpected error occurred. Code: ${error.code}, message: ${error.message}`);
+}
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+try {
+  const localLabels = ['A', 'B'];
+  const remoteSupportLabels = ['C', 'D'];
+  kvStore!.setSyncRange(localLabels, remoteSupportLabels).then((): void => {
+    console.info('Succeeded in setting syncRange');
+  }).catch((err): void => {
+    console.error(`Failed to set syncRange. Code: ${err.code}, message: ${err.message}`);
+  });
+} catch (error) {
   console.error(`An unexpected error occurred. Code: ${error.code}, message: ${error.message}`);
 }
 ```
@@ -3156,10 +4463,12 @@ startTransaction(callback: AsyncCallback<void>): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 15100005 | Database or result set already closed. |
-| 14800047 | The WAL file size exceeds the default limit.<br>**适用版本：** 10+ |
+| [15100005](../errorcode-distributedKVStore.md#15100005-数据库或查询结果集已关闭) | Database or result set already closed. |
+| [14800047](../errorcode-data-rdb.md#14800047-wal文件大小超过默认上限) | The WAL file size exceeds the default limit.<br>**适用版本：** 10+ |
 
 ## 示例
+
+ArkTS-Dyn示例：
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -3209,6 +4518,24 @@ try {
 }
 ```
 
+ArkTS-Sta示例：
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+try {
+  kvStore!.startTransaction((err: BusinessError | null): void => {
+    if (err != null) {
+      console.error(`Failed to start Transaction. Code: ${err.code}, message: ${err.message}`);
+      return;
+    }
+    console.info('Succeeded in starting Transaction');
+  });
+} catch (error) {
+  console.error(`An unexpected error occurred. Code: ${error.code}, message: ${error.message}`);
+}
+```
+
 ## startTransaction
 
 ```TypeScript
@@ -3239,17 +4566,21 @@ startTransaction(): Promise<void>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 15100005 | Database or result set already closed. |
-| 14800047 | The WAL file size exceeds the default limit.<br>**适用版本：** 10+ |
+| [15100005](../errorcode-distributedKVStore.md#15100005-数据库或查询结果集已关闭) | Database or result set already closed. |
+| [14800047](../errorcode-data-rdb.md#14800047-wal文件大小超过默认上限) | The WAL file size exceeds the default limit.<br>**适用版本：** 10+ |
 
 ## 示例
+
+ArkTS-Dyn示例：
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
 
 try {
+  let count = 0;
   kvStore.on('dataChange', distributedKVStore.SubscribeType.SUBSCRIBE_TYPE_ALL, (data: distributedKVStore.ChangeNotification) => {
     console.info(`startTransaction 0 ${data}`);
+    count++;
   });
   kvStore.startTransaction().then(async () => {
     console.info('Succeeded in starting Transaction');
@@ -3259,6 +4590,22 @@ try {
 } catch (err) {
   let error = err as BusinessError;
   console.error(`Failed to start Transaction. Code: ${error.code}, message: ${error.message}`);
+}
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+try {
+  kvStore!.startTransaction().then((): void => {
+    console.info('Succeeded in starting Transaction');
+  }).catch((err): void => {
+    console.error(`Failed to start Transaction. Code: ${err.code}, message: ${err.message}`);
+  });
+} catch (error) {
+  console.error(`An unexpected error occurred. Code: ${error.code}, message: ${error.message}`);
 }
 ```
 
@@ -3308,11 +4655,13 @@ sync(deviceIds: string[], mode: SyncMode, delayMs?: int): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 401 | Parameter error.Possible causes:1.Mandatory parameters are left unspecified; &lt;br&gt;2.Incorrect parameters types. |
-| 15100004 | Not found. |
-| 15100003 | Database corrupted. |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error.Possible causes:1.Mandatory parameters are left unspecified; &lt;br&gt;2.Incorrect parameters types. |
+| [15100004](../errorcode-distributedKVStore.md#15100004-未找到相关数据) | Not found. |
+| [15100003](../errorcode-distributedKVStore.md#15100003-数据库损坏) | Database corrupted. |
 
 ## 示例
+
+ArkTS-Dyn示例：
 
 ```TypeScript
 import { distributedDeviceManager } from '@kit.DistributedServiceKit';
@@ -3367,6 +4716,49 @@ export default class EntryAbility extends UIAbility {
 }
 ```
 
+ArkTS-Sta示例：
+
+```TypeScript
+import { distributedDeviceManager } from '@kit.DistributedServiceKit';
+import { UIAbility } from '@kit.AbilityKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let devManager: distributedDeviceManager.DeviceManager;
+const KEY_TEST_SYNC_ELEMENT = 'key_test_sync';
+const VALUE_TEST_SYNC_ELEMENT = 'value-string-001';
+class EntryAbility extends UIAbility {
+  onCreate(want: Want, launchParam: AbilityConstant.LaunchParam): void {
+    let context = this.context;
+    try {
+      devManager = distributedDeviceManager.createDeviceManager(context.applicationInfo.name);
+      let deviceIds: string[] = [];
+      if (devManager != null) {
+        let devices = devManager.getAvailableDeviceListSync();
+        for (let i = 0; i < devices.length; i++) {
+          deviceIds[i] = devices[i].networkId as string;
+        }
+      }
+      try {
+        kvStore!.put(KEY_TEST_SYNC_ELEMENT + 'testSync101', VALUE_TEST_SYNC_ELEMENT, (err: BusinessError | null): void => {
+          if (err != null) {
+            console.error(`Failed to sync. Code: ${err.code}, message: ${err.message}`);
+            return;
+          }
+          console.info('Succeeded in putting data');
+          const mode: distributedKVStore.SyncMode = distributedKVStore.SyncMode.PULL_ONLY;
+          const syncDelayMs: int = 1000;
+          kvStore!.sync(deviceIds, mode, syncDelayMs);
+        });
+      } catch (error) {
+        console.error(`Failed to sync. Code: ${error.code}, message: ${error.message}`);
+      }
+    } catch (error) {
+      console.error(`Failed to create device manager. Code: ${error.code}, message: ${error.message}`);
+    }
+  }
+}
+```
+
 ## sync
 
 ArkTS-Dyn:
@@ -3414,11 +4806,13 @@ sync(deviceIds: string[], query: Query, mode: SyncMode, delayMs?: int): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 401 | Parameter error.Possible causes:1.Mandatory parameters are left unspecified; &lt;br&gt;2.Incorrect parameters types. |
-| 15100004 | Not found. |
-| 15100003 | Database corrupted. |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error.Possible causes:1.Mandatory parameters are left unspecified; &lt;br&gt;2.Incorrect parameters types. |
+| [15100004](../errorcode-distributedKVStore.md#15100004-未找到相关数据) | Not found. |
+| [15100003](../errorcode-distributedKVStore.md#15100003-数据库损坏) | Database corrupted. |
 
 ## 示例
+
+ArkTS-Dyn示例：
 
 ```TypeScript
 import { distributedDeviceManager } from '@kit.DistributedServiceKit';
@@ -3469,6 +4863,51 @@ export default class EntryAbility extends UIAbility {
 
     } catch (err) {
       let error = err as BusinessError;
+      console.error(`Failed to create device manager. Code: ${error.code}, message: ${error.message}`);
+    }
+  }
+}
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+import { distributedDeviceManager } from '@kit.DistributedServiceKit';
+import { UIAbility } from '@kit.AbilityKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let devManager: distributedDeviceManager.DeviceManager;
+const KEY_TEST_SYNC_ELEMENT = 'key_test_sync';
+const VALUE_TEST_SYNC_ELEMENT = 'value-string-001';
+class EntryAbility extends UIAbility {
+  onCreate(want: Want, launchParam: AbilityConstant.LaunchParam): void {
+    let context = this.context;
+    try {
+      devManager = distributedDeviceManager.createDeviceManager(context.applicationInfo.name);
+      let deviceIds: string[] = [];
+      if (devManager != null) {
+        let devices = devManager.getAvailableDeviceListSync();
+        for (let i = 0; i < devices.length; i++) {
+          deviceIds[i] = devices[i].networkId as string;
+        }
+      }
+      try {
+        kvStore!.put(KEY_TEST_SYNC_ELEMENT + 'testSync101', VALUE_TEST_SYNC_ELEMENT, (err: BusinessError | null): void => {
+          if (err != null) {
+            console.error(`Failed to sync. Code: ${err.code}, message: ${err.message}`);
+            return;
+          }
+          console.info('Succeeded in putting data');
+          const query: distributedKVStore.Query = new distributedKVStore.Query();
+          query.prefixKey('batch_test');
+          const mode: distributedKVStore.SyncMode = distributedKVStore.SyncMode.PULL_ONLY;
+          const syncDelayMs: int = 1000;
+          kvStore!.sync(deviceIds, query, mode, syncDelayMs);
+        });
+      } catch (error) {
+        console.error(`Failed to sync. Code: ${error.code}, message: ${error.message}`);
+      }
+    } catch (error) {
       console.error(`Failed to create device manager. Code: ${error.code}, message: ${error.message}`);
     }
   }

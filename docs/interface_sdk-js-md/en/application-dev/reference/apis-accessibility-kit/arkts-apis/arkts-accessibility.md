@@ -1,6 +1,7 @@
 # @ohos.accessibility
 
-本模块提供辅助应用查询能力，包括获取辅助应用列表、获取辅助应用启用状态、获取无障碍字幕配置等。
+The **Accessibility** module implements the accessibility features, including obtaining the accessibility application
+ list, accessibility application enabling state, and captions configuration.
 
 
 ## Modules to Import
@@ -15,17 +16,20 @@ import { accessibility } from 'kits/@kit.AccessibilityKit';
 
 | Name | Description |
 | --- | --- |
-| [accessibility](arkts-accessibility-accessibility-n.md) | 辅助功能 |
+| [accessibility](arkts-accessibility-accessibility-n.md) | Accessibility |
 
 <!--Del-->
 ### Enums（系统接口）
 
 | Name | Description |
 | --- | --- |
-| [AccessibilityAction](arkts-accessibility-accessibility-accessibilityaction-e-sys.md) | 表示无障碍节点元素可执行的操作枚举。  无障碍节点元素是指，UI界面上可执行无障碍操作的一些组件，例如：按钮、文本输入框等组件。 |
-| [AccessibilityEventType](arkts-accessibility-accessibility-accessibilityeventtype-e-sys.md) | 无障碍事件类型。 |
+| [AccessibilityAction](arkts-accessibility-accessibility-accessibilityaction-e-sys.md) | Enumerates executable actions for accessibility node elements.  Accessibility node elements are UI components that support accessibility actions, such as buttons, text boxes, and so on. |
+| [AccessibilityEventType](arkts-accessibility-accessibility-accessibilityeventtype-e-sys.md) | Enumerates accessibility event types. |
 | [AccessibilityFocusScene](arkts-accessibility-accessibility-accessibilityfocusscene-e-sys.md) | Enumeration of scenes of accessibility focus. |
-| [FocusMoveResultCode](arkts-accessibility-accessibility-focusmoveresultcode-e-sys.md) | 表示查询无障碍节点返回结果类型的枚举。 |
-| [InjectActionType](arkts-accessibility-accessibility-injectactiontype-e-sys.md) | 表示注入动作的枚举。 |
+| [AccessibilitySourceType](arkts-accessibility-accessibility-accessibilitysourcetype-e-sys.md) | Accessibility Element Source Type Enumeration |
+| [FocusMoveResultCode](arkts-accessibility-accessibility-focusmoveresultcode-e-sys.md) | Enumerates the result codes returned by the focusable node query. |
+| [FocusRuleType](arkts-accessibility-accessibility-focusruletype-e-sys.md) | Focus Rule Type Enumeration |
+| [InjectActionType](arkts-accessibility-accessibility-injectactiontype-e-sys.md) | Enumerates injection actions. |
+| [OperateVirtualNodeResult](arkts-accessibility-accessibility-operatevirtualnoderesult-e-sys.md) | Result Code Enumeration |
 <!--DelEnd-->
 

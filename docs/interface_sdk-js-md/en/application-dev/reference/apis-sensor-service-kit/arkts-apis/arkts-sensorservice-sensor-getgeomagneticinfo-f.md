@@ -12,7 +12,7 @@ import { sensor } from 'kits/@kit.SensorServiceKit';
 function getGeomagneticInfo(locationOptions: LocationOptions, timeMillis: long, callback: AsyncCallback<GeomagneticResponse>): void
 ```
 
-获取某时刻地球上特定位置的地磁场信息，使用Callback异步方式返回结果。
+Obtains the geomagnetic field of a geographic location at a certain time. This API uses an asynchronous callback to return the result.
 
 **Since:** 9
 
@@ -26,16 +26,16 @@ function getGeomagneticInfo(locationOptions: LocationOptions, timeMillis: long, 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| locationOptions | [LocationOptions](arkts-sensorservice-sensor-locationoptions-i.md) | Yes | 地理位置，包括经度、纬度和海拔高度。 |
-| timeMillis | ArkTS-Dyn: number  <br>ArkTS-Sta：long | Yes | 获取磁偏角的时间，unix时间戳。单位：ms（毫秒）。取值范围：正整数。 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;GeomagneticResponse&gt; | Yes | 回调函数，异步返回地磁场信息。 |
+| locationOptions | [LocationOptions](arkts-sensorservice-sensor-locationoptions-i.md) | Yes | Geographic location, including the longitude, latitude, and altitude. |
+| timeMillis | ArkTS-Dyn: number  <br>ArkTS-Sta：long | Yes | Time when the magnetic declination is obtained. The value is a Unix timestamp, in ms. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;GeomagneticResponse&gt; | Yes | Callback used to return the geomagnetic field. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt; 2. Incorrect parameter types; 3. Parameter verification failed. |
-| 14500101 | Service exception. Possible causes: 1. Sensor hdf service exception; &lt;br&gt; 2. Sensor service ipc exception;3. Sensor data channel exception. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| [14500101](../errorcode-sensor.md#14500101-service-exception) | Service exception. Possible causes: 1. Sensor hdf service exception; &lt;br&gt; 2. Sensor service ipc exception;3. Sensor data channel exception. |
 
 ## Examples
 
@@ -72,7 +72,7 @@ try {
 function getGeomagneticInfo(locationOptions: LocationOptions, timeMillis: long): Promise<GeomagneticResponse>
 ```
 
-获取某时刻地球上特定位置的地磁场信息，使用Promise异步方式返回结果。
+Obtains the geomagnetic field of a geographic location at a certain time. This API uses a promise to return the result.
 
 **Since:** 9
 
@@ -86,21 +86,21 @@ function getGeomagneticInfo(locationOptions: LocationOptions, timeMillis: long):
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| locationOptions | [LocationOptions](arkts-sensorservice-sensor-locationoptions-i.md) | Yes | 地理位置，包括经度、纬度和海拔高度。 |
-| timeMillis | ArkTS-Dyn: number  <br>ArkTS-Sta：long | Yes | 获取磁偏角的时间，unix时间戳。单位：ms（毫秒）。取值范围：正整数。 |
+| locationOptions | [LocationOptions](arkts-sensorservice-sensor-locationoptions-i.md) | Yes | Geographic location, including the longitude, latitude, and altitude. |
+| timeMillis | ArkTS-Dyn: number  <br>ArkTS-Sta：long | Yes | Time when the magnetic declination is obtained. The value is a Unix timestamp, in ms. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;GeomagneticResponse&gt; | Promise对象，使用异步方式返回地磁场信息。 |
+| Promise&lt;GeomagneticResponse&gt; | Promise used to return the geomagnetic field. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt; 2. Incorrect parameter types; 3. Parameter verification failed. |
-| 14500101 | Service exception. Possible causes: 1. Sensor hdf service exception; &lt;br&gt; 2. Sensor service ipc exception;3. Sensor data channel exception. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| [14500101](../errorcode-sensor.md#14500101-service-exception) | Service exception. Possible causes: 1. Sensor hdf service exception; &lt;br&gt; 2. Sensor service ipc exception;3. Sensor data channel exception. |
 
 ## Examples
 

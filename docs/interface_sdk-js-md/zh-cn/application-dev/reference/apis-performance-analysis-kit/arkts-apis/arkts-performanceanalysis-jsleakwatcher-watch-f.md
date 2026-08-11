@@ -1,11 +1,5 @@
 # watch
 
-## 导入模块
-
-```TypeScript
-import { jsLeakWatcher } from 'kits/@kit.PerformanceAnalysisKit';
-```
-
 ## watch
 
 ```TypeScript

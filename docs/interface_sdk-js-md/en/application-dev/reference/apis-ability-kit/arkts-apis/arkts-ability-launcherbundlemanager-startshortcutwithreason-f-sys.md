@@ -12,9 +12,10 @@ import { launcherBundleManager } from 'kits/@kit.AbilityKit';
 function startShortcutWithReason(shortcutInfo: ShortcutInfo, startReason: string, options?: StartOptions): Promise<void>
 ```
 
-根据指定的快捷方式信息，拉起对应的Ability，并携带快捷方式的启动原因。使用Promise异步回调。
+Starts an ability based on the specified shortcut information, and carries the reason for the shortcut launch. This API uses a promise to return the result.
 
-被拉起方可以通过[LaunchParam](arkts-ability-abilityconstant-launchparam-i.md)的launchReasonMessage字段获取到启动原因，并根据启动原因进行业务逻辑处理。
+The launched ability can obtain the launch reason through the **launchReasonMessage** field of  
+[LaunchParam](arkts-ability-abilityconstant-launchparam-i.md) and handle service logic accordingly.
 
 **Since:** 20
 
@@ -32,24 +33,24 @@ function startShortcutWithReason(shortcutInfo: ShortcutInfo, startReason: string
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| shortcutInfo | [ShortcutInfo](arkts-ability-shortcutinfo-i.md) | Yes | 应用的快捷方式信息。 |
-| startReason | string | Yes | 快捷方式的启动原因，取值包括： [AbilityConstant.REASON_MESSAGE_DESKTOP_SHORTCUT](../../../reference/apis-ability-kit/js-apis-app-ability-abilityConstant.md#常量) ，表示桌面快捷方式启动。 |
-| options | [StartOptions](arkts-ability-app-ability-startoptions-startoptions-c-sys.md) | No | 启动Ability所携带的参数，用于指定目标Ability的窗口模式。 |
+| shortcutInfo | [ShortcutInfo](arkts-ability-shortcutinfo-i.md) | Yes | Shortcut information of the application. |
+| startReason | string | Yes | Reason for launching the shortcut. The value can be [AbilityConstant.REASON_MESSAGE_DESKTOP_SHORTCUT](../../../reference/apis-ability-kit/js-apis-app-ability-abilityConstant.md#constants) , indicating a home screen shortcut launch. |
+| options | [StartOptions](arkts-ability-app-ability-startoptions-startoptions-c-sys.md) | No | Parameters used to specify the window mode of the target ability. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise对象，无返回结果。 |
+| Promise&lt;void&gt; | Promise that returns no value. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 801 | Capability not support. |
-| 201 | Verify permission denied. |
-| 202 | Permission denied, non-system app called system api. |
-| 17700065 | The specified shortcut want in shortcut info is not supported to be started. |
+| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not support. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Verify permission denied. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission denied, non-system app called system api. |
+| [17700065](../errorcode-bundle.md#17700065-ability-specified-by-want-in-the-shortcutinfo-struct-cannot-be-started) | The specified shortcut want in shortcut info is not supported to be started. |
 
 ## Examples
 

@@ -1,6 +1,6 @@
 # IndicatorComponentController
 
-Indicator组件的控制器，可以将此对象绑定至Indicator组件来控制翻页。
+Provides methods for switching components.
 
 **Since:** 23
 
@@ -16,7 +16,7 @@ Indicator组件的控制器，可以将此对象绑定至Indicator组件来控�
 changeIndex(index: int | undefined, useAnimation?: boolean): void
 ```
 
-翻至指定页面。
+Controlling IndicatorComponent to change to the specified subcomponent.
 
 **Since:** 23
 
@@ -32,8 +32,8 @@ changeIndex(index: int | undefined, useAnimation?: boolean): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| index | int \| undefined | Yes | 指定页面在Swiper中的索引值。 |
-| useAnimation | boolean | No | 设置翻至指定页面时是否有动效，true表示有动效，false表示没有动效。&lt;br/&gt;默认值：false。 |
+| index | int \| undefined | Yes | The index of item to be redirected, default value is 0. undefined means set to default value. |
+| useAnimation | boolean | No | If true, swipe to index item with animation. If false, swipe to index item without animation. The default value is false. |
 
 ## constructor
 
@@ -41,7 +41,7 @@ changeIndex(index: int | undefined, useAnimation?: boolean): void
 constructor()
 ```
 
-IndicatorComponentController的构造函数。
+constructor.
 
 **Since:** 23
 
@@ -59,7 +59,7 @@ IndicatorComponentController的构造函数。
 showNext(): void
 ```
 
-跳转到下一导航点。
+Called when the next child component is displayed.
 
 **Since:** 23
 
@@ -77,7 +77,7 @@ showNext(): void
 showPrevious(): void
 ```
 
-跳转到上一导航点。
+Called when the previous subcomponent is displayed.
 
 **Since:** 23
 

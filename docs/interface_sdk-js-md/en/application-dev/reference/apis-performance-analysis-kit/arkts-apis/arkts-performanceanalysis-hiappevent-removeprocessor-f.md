@@ -12,7 +12,7 @@ import { hiAppEvent } from 'kits/@kit.PerformanceAnalysisKit';
 function removeProcessor(id: long): void
 ```
 
-移除上报事件的数据处理者。
+Removes the data processor of a reported event.
 
 **Since:** 11
 
@@ -28,13 +28,13 @@ function removeProcessor(id: long): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| id | ArkTS-Dyn: number  <br>ArkTS-Sta：long | Yes | 上报事件数据处理者ID。值大于0。由调用[addProcessor](arkts-performanceanalysis-hiappevent-addprocessor-f.md#addprocessor)或 [addProcessorFromConfig](arkts-performanceanalysis-hiappevent-addprocessorfromconfig-f.md#addprocessorfromconfig)接口返回值所得。 |
+| id | ArkTS-Dyn: number  <br>ArkTS-Sta：long | Yes | ID of a data processor. The value must be greater than **0**. The value is obtained by calling [addProcessor](arkts-performanceanalysis-hiappevent-addprocessor-f.md#addprocessor) or [addProcessorFromConfig](arkts-performanceanalysis-hiappevent-addprocessorfromconfig-f.md#addprocessorfromconfig). |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types. |
 
 ## Examples
 
@@ -42,14 +42,14 @@ function removeProcessor(id: long): void
 import { hilog } from '@kit.PerformanceAnalysisKit';
 
 try {
-  let processor: hiAppEvent.Processor = {
-    name: 'analytics_demo'
-  };
-  let id: number = hiAppEvent.addProcessor(processor);
-  // Remove a specified data processor based on the ID returned after the data processor is added.
-  hiAppEvent.removeProcessor(id);
+    let processor: hiAppEvent.Processor = {
+      name: 'analytics_demo'
+    };
+    let id: number = hiAppEvent.addProcessor(processor);
+    // Remove a specified data processor based on the ID returned after the data processor is added.
+    hiAppEvent.removeProcessor(id);
 } catch (error) {
-  hilog.error(0x0000, 'hiAppEvent', `failed to removeProcessor event, code=${error.code}`);
+    hilog.error(0x0000, 'hiAppEvent', `failed to removeProcessor event, code=${error.code}`);
 }
 ```
 

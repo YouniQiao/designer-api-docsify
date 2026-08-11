@@ -1,6 +1,6 @@
 # AuthenticatorInfo
 
-表示OAuth认证器信息。
+Defines OAuth authenticator information.
 
 **Since:** 8
 
@@ -22,7 +22,7 @@ import { appAccount } from 'kits/@kit.BasicServicesKit';
 iconId: long
 ```
 
-认证器的图标标识。
+ID of the authenticator icon.
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：long
 
@@ -40,7 +40,7 @@ iconId: long
 labelId: long
 ```
 
-认证器的标签标识。
+ID of the authenticator label.
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：long
 
@@ -58,7 +58,7 @@ labelId: long
 owner: string
 ```
 
-认证器的所有者的包名。
+Owner of the authenticator. The value is the Bundle name of the application.
 
 **Type:** string
 

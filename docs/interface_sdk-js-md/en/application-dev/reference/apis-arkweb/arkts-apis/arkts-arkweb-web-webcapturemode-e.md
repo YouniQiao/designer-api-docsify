@@ -1,6 +1,6 @@
 # WebCaptureMode
 
-Web屏幕捕获模式。
+Enumerates the web screen capture modes.
 
 **Since:** 23
 
@@ -16,7 +16,7 @@ Web屏幕捕获模式。
 HOME_SCREEN = 0
 ```
 
-主屏捕获模式。
+Home screen capture mode.
 
 **Since:** 23
 

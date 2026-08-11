@@ -1,17 +1,15 @@
 # Polyline
 
-折线绘制组件。
-
-> **说明：**
+The **Polyline** component is used to draw a polyline.
+> **NOTE**
 >
-> 该组件从API version 7开始支持。后续版本的新增接口，采用上角标单独标记接口的起始版本。
+> This component supports dynamic constructor parameter updates using the
+> [updateConstructorParams](docroot://reference/apis-arkui/js-apis-arkui-AttributeUpdater.md#properties) API of the
+> [AttributeUpdater](docroot://reference/apis-arkui/js-apis-arkui-AttributeUpdater.md) class since API version 20.
 >
-> 该组件从API version 20开始支持使用[AttributeUpdater]{@link ../../../arkui/AttributeUpdater}类的
-> [updateConstructorParams](docroot://reference/apis-arkui/js-apis-arkui-AttributeUpdater.md#属性)接口更新构造参数。
-
-## 子组件
-
-无
+> **Child Components**
+>
+> None
 
 ## Polyline
 
@@ -45,7 +43,7 @@ Uses new to create Polyline.Anonymous Object Rectification.
 Polyline(options?: PolylineOptions)
 ```
 
-用于绘制折线的构造函数。
+Defines the constructor of Polyline component.
 
 **Since:** 7
 
@@ -63,7 +61,7 @@ Polyline(options?: PolylineOptions)
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| options | [PolylineOptions](arkts-arkui-polylineoptions-i.md) | No | Polyline绘制区域，用于设置Polyline组件的宽度和高度。当需要指定Polyline的绘制区域大小时传入此参数，不传入时使用默认宽度和高度（均 为0）。 <br>异常值undefined和null按照无效值处理，本次设置不生效。 |
+| options | [PolylineOptions](arkts-arkui-polylineoptions-i.md) | No | Options of the polyline.<br>The **undefined** and **null** values are treated as invalid and will not take effect. |
 
 ## Summary
 

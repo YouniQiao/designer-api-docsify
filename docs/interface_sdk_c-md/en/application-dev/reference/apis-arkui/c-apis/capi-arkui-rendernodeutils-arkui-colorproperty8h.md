@@ -6,7 +6,7 @@ typedef struct ArkUI_ColorProperty* ArkUI_ColorPropertyHandle
 
 ## Overview
 
-Handle to the ArkUI native color render property.
+Defines a color property pointer.
 
 **Since**: 20
 

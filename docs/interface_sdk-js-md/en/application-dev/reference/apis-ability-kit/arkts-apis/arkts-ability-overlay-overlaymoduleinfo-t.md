@@ -4,7 +4,7 @@
 export type OverlayModuleInfo = _OverlayModuleInfo.OverlayModuleInfo
 ```
 
-OverlayModuleInfo信息。
+Defines the information about a module with the overlay feature.
 
 **Since:** 10
 

@@ -1,6 +1,6 @@
 # LazyLayoutAlgorithm
 
-定义懒加载布局算法。
+Defines lazy layout algorithm.
 
 **Since:** 26.0.0
 

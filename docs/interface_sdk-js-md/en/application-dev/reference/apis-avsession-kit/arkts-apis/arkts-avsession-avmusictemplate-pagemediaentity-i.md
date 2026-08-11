@@ -1,6 +1,6 @@
 # PageMediaEntity
 
-标签页媒体的定义。继承自[OperResult](arkts-avsession-avmusictemplate-operresult-i.md)。
+The definition of pagination object.
 
 **Inheritance/Implementation:** PageMediaEntity extends [OperResult](arkts-avsession-avmusictemplate-operresult-i.md)
 
@@ -24,7 +24,7 @@ import { avMusicTemplate } from 'kits/@kit.AVSessionKit';
 elements: MediaEntity[]
 ```
 
-查询数据内容（根据类型传递相应的结构数据）。
+Query data content (pass corresponding structure data according to the type).
 
 **Type:** [MediaEntity](arkts-avsession-avmusictemplate-mediaentity-i.md)[]
 
@@ -44,7 +44,7 @@ elements: MediaEntity[]
 episodeRange?: EpisodeRange
 ```
 
-剧集区间。
+Episode Range
 
 **Type:** [EpisodeRange](arkts-avsession-avmusictemplate-episoderange-i.md)
 
@@ -64,7 +64,7 @@ episodeRange?: EpisodeRange
 hasMoreData: boolean
 ```
 
-是否有下一页。true表示有，false表示没有。无默认值。
+Have next page data.
 
 **Type:** boolean
 
@@ -84,7 +84,7 @@ hasMoreData: boolean
 memberMediaType: EntityType
 ```
 
-媒体资源类型。
+Media type.
 
 **Type:** [EntityType](arkts-avsession-avmusictemplate-entitytype-e.md)
 
@@ -104,7 +104,7 @@ memberMediaType: EntityType
 pageIndex: int
 ```
 
-分页查询页码。
+Pagination query page number.
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
@@ -124,7 +124,7 @@ pageIndex: int
 pageSize: int
 ```
 
-页面的大小。
+Size of per page.
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
@@ -144,7 +144,7 @@ pageSize: int
 sort?: Sort
 ```
 
-数据排序。
+Data Sorting
 
 **Type:** [Sort](arkts-avsession-avmusictemplate-sort-e.md)
 
@@ -164,7 +164,7 @@ sort?: Sort
 totalSize: int
 ```
 
-数据总大小。
+Total size of data.
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 

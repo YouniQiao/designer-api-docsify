@@ -1,6 +1,6 @@
 # SortOptions (System API)
 
-语言或国家地区排序选项。
+Represents the language or country/region sorting option.
 
 **Since:** 23
 
@@ -24,7 +24,7 @@ import { i18n } from 'kits/@kit.LocalizationKit';
 isSuggestedFirst?: boolean
 ```
 
-true表示将推荐语言或国家地区在排序结果中置顶，false表示不将推荐语言或国家地区在排序结果中置顶。默认值：true。
+Whether to move the recommended language or country/region to the top in the sorting result. The value "true"means to move the recommended language or country/region to the top, and the value "false" means the opposite.The default value is true.
 
 **Type:** boolean
 
@@ -44,7 +44,7 @@ true表示将推荐语言或国家地区在排序结果中置顶，false表示�
 isUseLocalName?: boolean
 ```
 
-true表示使用本地名称进行排序，false表示不使用本地名称进行排序。若调用方法为getLanguageInfoArray，isUseLocalName属性默认值为true。若调用方法为getRegionInfoArray，isUseLocalName属性默认值为false。
+Whether to use the local name for sorting. The value "true" means to use the local name for sorting, and the value "false" means the opposite. If getLanguageInfoArray is called, the default value of isUseLocalName is true. If getRegionInfoArray is called, the default value of isUseLocalName is false.
 
 **Type:** boolean
 
@@ -64,7 +64,7 @@ true表示使用本地名称进行排序，false表示不使用本地名称进�
 locale?: string
 ```
 
-表示区域ID的字符串，由语言、脚本、国家或地区组成，如"zh-Hans-CN"。默认值：系统当前区域ID。
+Locale information, which consists of the language, script, and country/region, for example, "zh-Hans-CN".The default value is the current system locale.
 
 **Type:** string
 

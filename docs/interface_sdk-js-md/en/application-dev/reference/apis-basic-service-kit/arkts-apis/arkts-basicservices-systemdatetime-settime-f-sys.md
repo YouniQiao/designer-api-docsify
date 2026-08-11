@@ -12,7 +12,7 @@ import { systemDateTime } from 'kits/@kit.BasicServicesKit';
 function setTime(time: long, callback: AsyncCallback<void>): void
 ```
 
-设置系统时间，使用callback异步回调。
+Sets the system time. This API uses an asynchronous callback to return the result.
 
 **Since:** 9
 
@@ -30,17 +30,17 @@ function setTime(time: long, callback: AsyncCallback<void>): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| time | ArkTS-Dyn: number  <br>ArkTS-Sta：long | Yes | 目标时间戳(ms)。 |
-| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | 回调函数。 |
+| time | ArkTS-Dyn: number  <br>ArkTS-Sta：long | Yes | Timestamp to set, in milliseconds. |
+| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. Possible causes: &lt;br&gt; 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameter types. |
-| 201 | Permission denied |
-| 202 | Permission verification failed. A non-system application calls a system API. |
-| 204 | Access denied due to user access control policy. Possible causes: 1. The operation is restricted by the OS-account constraint. 2. The required privilege for the operation has not been granted.<br>**Applicable version:** 24 and later |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: &lt;br&gt; 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameter types. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
+| [204](../../errorcode-universal.md#204-access-denied-by-user-access-control-policy) | Access denied due to user access control policy. Possible causes: 1. The operation is restricted by the OS-account constraint. 2. The required privilege for the operation has not been granted.<br>**Applicable version:** 26.0.0 and later |
 
 ## Examples
 
@@ -70,7 +70,7 @@ try {
 function setTime(time: long): Promise<void>
 ```
 
-设置系统时间，使用Promise异步回调。
+Sets the system time. This API uses a promise to return the result.
 
 **Since:** 9
 
@@ -88,22 +88,22 @@ function setTime(time: long): Promise<void>
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| time | ArkTS-Dyn: number  <br>ArkTS-Sta：long | Yes | 目标时间戳(ms)。 |
+| time | ArkTS-Dyn: number  <br>ArkTS-Sta：long | Yes | Timestamp to set, in milliseconds. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | 无返回结果的Promise对象。 |
+| Promise&lt;void&gt; | Promise that returns no value. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. Possible causes: &lt;br&gt; 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameter types. |
-| 201 | Permission denied |
-| 202 | Permission verification failed. A non-system application calls a system API. |
-| 204 | Access denied due to user access control policy. Possible causes: 1. The operation is restricted by the OS-account constraint. 2. The required privilege for the operation has not been granted.<br>**Applicable version:** 24 and later |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: &lt;br&gt; 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameter types. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
+| [204](../../errorcode-universal.md#204-access-denied-by-user-access-control-policy) | Access denied due to user access control policy. Possible causes: 1. The operation is restricted by the OS-account constraint. 2. The required privilege for the operation has not been granted.<br>**Applicable version:** 26.0.0 and later |
 
 ## Examples
 

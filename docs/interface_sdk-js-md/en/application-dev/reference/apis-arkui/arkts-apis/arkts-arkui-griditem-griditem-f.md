@@ -9,7 +9,7 @@ export declare function GridItem(
 ): GridItemAttribute
 ```
 
-创建网格容器中单项内容容器。
+Defines GridItem Component.
 
 **Since:** 23
 
@@ -25,8 +25,8 @@ export declare function GridItem(
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | [GridItemOptions](../arkts-components/arkts-arkui-griditemoptions-i.md) | No | 为GridItem提供可选参数。 |
-| content_ | [CustomBuilder](../arkts-components/arkts-arkui-custombuilder-t.md) | No | 容器内容。 |
+| value | [GridItemOptions](../arkts-components/arkts-arkui-griditemoptions-i.md) | No | options |
+| content_ | [CustomBuilder](../arkts-components/arkts-arkui-custombuilder-t.md) | No | container |
 
 **Return value:**
 
@@ -44,11 +44,11 @@ export declare function GridItem(
 ): GridItemAttribute
 ```
 
-可扩展的GridItem组件的入口。
+Defines GridItem Component.
 
-**Since:** 26.0.0
+**Since:** 26.1.0
 
-**ArkTS mode:** ArkTS-Sta only, since version 26.0.0.
+**ArkTS mode:** ArkTS-Sta only, since version 26.1.0.
 
 **Decorator:** @Builder
 

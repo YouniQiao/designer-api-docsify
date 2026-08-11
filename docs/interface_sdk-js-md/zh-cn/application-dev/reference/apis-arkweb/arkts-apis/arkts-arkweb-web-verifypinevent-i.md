@@ -18,7 +18,7 @@ handler: VerifyPinHandler
 
 Handle the result of PIN verification.
 
-**类型：** [VerifyPinHandler](../arkts-components/arkts-arkweb-verifypinhandler-c.md)
+**类型：** [VerifyPinHandler](arkts-arkweb-web-verifypinhandler-c.md)
 
 **起始版本：** 23
 

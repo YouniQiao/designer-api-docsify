@@ -20,7 +20,7 @@ import { LocaleResponse } from 'kits/@kit.ArkUI';
 static getLocale(): LocaleResponse
 ```
 
-获取应用当前的语言和地区。默认与系统的语言和地区同步。
+Obtains the current locale of the application, which is the same as the system locale.
 
 **Since:** 12
 
@@ -30,9 +30,11 @@ static getLocale(): LocaleResponse
 
 <!--Device-Configuration-static getLocale(): LocaleResponse--><!--Device-Configuration-static getLocale(): LocaleResponse-End-->
 
+**System capability:** SystemCapability.ArkUI.ArkUI.Lite
+
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [LocaleResponse](arkts-arkui-system-configuration-localeresponse-i.md) | 应用当前Locale相关信息。 |
+| [LocaleResponse](arkts-arkui-system-configuration-localeresponse-i.md) |  |
 

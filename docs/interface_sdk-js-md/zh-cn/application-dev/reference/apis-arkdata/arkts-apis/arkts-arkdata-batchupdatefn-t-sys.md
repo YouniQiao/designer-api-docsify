@@ -25,6 +25,6 @@ type BatchUpdateFn = (
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| operations | [Record](../../apis-default/arkts-apis/arkts-record-t.md)&lt;string, Array&lt;UpdateOperation&gt;&gt; | 是 | Indicates the data to update. |
+| operations | Record&lt;string, Array&lt;UpdateOperation&gt;&gt; | 是 | Indicates the data to update. |
 | callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Record&lt;string, Array&lt;int&gt;&gt;&gt; | 是 | Callback used to return the result. |
 

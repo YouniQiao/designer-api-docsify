@@ -1,6 +1,6 @@
 # FunctionKey
 
-输入法功能键类型。
+Enumerates the input method function keys.
 
 **Since:** 10
 
@@ -16,7 +16,7 @@
 ESC
 ```
 
-表示键盘上ESC功能键。
+Esc key on the keyboard.
 
 **Since:** 10
 
@@ -36,7 +36,7 @@ ESC
 F1
 ```
 
-表示键盘上F1功能键。
+F1 key on the keyboard.
 
 **Since:** 10
 
@@ -56,7 +56,7 @@ F1
 F2
 ```
 
-表示键盘上F2功能键。
+F2 key on the keyboard.
 
 **Since:** 10
 
@@ -76,7 +76,7 @@ F2
 F3
 ```
 
-表示键盘上F3功能键。
+F3 key on the keyboard.
 
 **Since:** 10
 
@@ -96,7 +96,7 @@ F3
 F4
 ```
 
-表示键盘上F4功能键。
+F4 key on the keyboard.
 
 **Since:** 10
 
@@ -116,7 +116,7 @@ F4
 F5
 ```
 
-表示键盘上F5功能键。
+F5 key on the keyboard.
 
 **Since:** 10
 
@@ -136,7 +136,7 @@ F5
 F6
 ```
 
-表示键盘上F6功能键。
+F6 key on the keyboard.
 
 **Since:** 10
 
@@ -156,7 +156,7 @@ F6
 F7
 ```
 
-表示键盘上F7功能键。
+F7 key on the keyboard.
 
 **Since:** 10
 
@@ -176,7 +176,7 @@ F7
 F8
 ```
 
-表示键盘上F8功能键。
+F8 key on the keyboard.
 
 **Since:** 10
 
@@ -196,7 +196,7 @@ F8
 F9
 ```
 
-表示键盘上F9功能键。
+F9 key on the keyboard.
 
 **Since:** 10
 
@@ -216,7 +216,7 @@ F9
 F10
 ```
 
-表示键盘上F10功能键。
+F10 key on the keyboard.
 
 **Since:** 10
 
@@ -236,7 +236,7 @@ F10
 F11
 ```
 
-表示键盘上F11功能键。
+F11 key on the keyboard.
 
 **Since:** 10
 
@@ -256,7 +256,7 @@ F11
 F12
 ```
 
-表示键盘上F12功能键。
+F12 key on the keyboard.
 
 **Since:** 10
 
@@ -276,7 +276,7 @@ F12
 TAB
 ```
 
-表示键盘上TAB功能键。
+Tab key on the keyboard.
 
 **Since:** 12
 
@@ -296,7 +296,7 @@ TAB
 DPAD_UP
 ```
 
-表示键盘上UP方向键。
+Up arrow key on the keyboard.
 
 **Since:** 12
 
@@ -316,7 +316,7 @@ DPAD_UP
 DPAD_DOWN
 ```
 
-表示键盘上DOWN方向键。
+Down arrow key on the keyboard.
 
 **Since:** 12
 
@@ -336,7 +336,7 @@ DPAD_DOWN
 DPAD_LEFT
 ```
 
-表示键盘上LEFT方向键。
+Left arrow key on the keyboard.
 
 **Since:** 12
 
@@ -356,7 +356,7 @@ DPAD_LEFT
 DPAD_RIGHT
 ```
 
-表示键盘上RIGHT方向键。
+Right arrow key on the keyboard.
 
 **Since:** 12
 

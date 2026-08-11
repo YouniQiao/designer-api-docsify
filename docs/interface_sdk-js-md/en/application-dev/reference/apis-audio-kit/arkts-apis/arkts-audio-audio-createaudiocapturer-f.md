@@ -12,7 +12,7 @@ import { audio } from 'kits/@kit.AudioKit';
 function createAudioCapturer(options: AudioCapturerOptions, callback: AsyncCallback<AudioCapturer>): void
 ```
 
-获取音频采集器。使用callback异步回调。
+Creates an AudioCapturer instance. This API uses an asynchronous callback to return the result.
 
 **Since:** 8
 
@@ -26,8 +26,8 @@ function createAudioCapturer(options: AudioCapturerOptions, callback: AsyncCallb
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| options | [AudioCapturerOptions](arkts-audio-audio-audiocaptureroptions-i.md) | Yes | 配置音频采集器。 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;AudioCapturer&gt; | Yes | 回调函数。当获取音频采集器成功，err为undefined，data为获取到的音频采集器对象；否则为错误对象。异常将返回 error对象： &lt;br&gt;错误码6800301：表示参数校验异常、权限校验异常或系统处理异常（具体错误查看系统日志）。 &lt;br&gt;错误码6800101：表示必选参数为空或参数类型错误。 |
+| options | [AudioCapturerOptions](arkts-audio-audio-audiocaptureroptions-i.md) | Yes | Capturer configurations. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;AudioCapturer&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined** and **data** is the AudioCapturer instance obtained; otherwise, **err** is an error object. If the operation fails, an error object with one of the following error codes is returned:&lt;br&gt; Error code 6800301: indicates a parameter verification exception, permission verification exception, or system processing exception. For details, see system logs.&lt;br&gt;Error code 6800101: indicates that a mandatory parameter is null or the parameter type is incorrect. |
 
 ## Examples
 
@@ -70,7 +70,7 @@ audio.createAudioCapturer(audioCapturerOptions, (err, data) => {
 function createAudioCapturer(options: AudioCapturerOptions, callback: AsyncCallback<AudioCapturer | null>): void
 ```
 
-Obtains an {@link AudioCapturer} instance. This method uses an asynchronous callback to return the capturer instance.Using {@link #AudioCapturer} to record audio will need permission according to different {@link #Sourcetype}in options parameter, like {@link #ohos.permission.MICROPHONE} for the most microphone recording cases.
+Obtains an {@link #AudioCapturer} instance. This method uses an asynchronous callback to return the capturer instance.Using {@link #AudioCapturer} to record audio will need permission according to different {@link #Sourcetype}in options parameter, like {@link #ohos.permission.MICROPHONE} for the most microphone recording cases.
 
 **Since:** 23
 
@@ -93,8 +93,8 @@ Obtains an {@link AudioCapturer} instance. This method uses an asynchronous call
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 6800101 | Parameter verification failed. |
-| 6800301 | Audio system internal error, such as system crash. |
+| [6800101](../errorcode-audio.md#6800101-invalid-parameter) | Parameter verification failed. |
+| [6800301](../errorcode-audio.md#6800301-system-error) | Audio system internal error, such as system crash. |
 
 
 ## createAudioCapturer
@@ -103,7 +103,7 @@ Obtains an {@link AudioCapturer} instance. This method uses an asynchronous call
 function createAudioCapturer(options: AudioCapturerOptions): Promise<AudioCapturer>
 ```
 
-获取音频采集器。使用Promise异步回调。
+Creates an AudioCapturer instance. This API uses a promise to return the result.
 
 **Since:** 8
 
@@ -117,13 +117,13 @@ function createAudioCapturer(options: AudioCapturerOptions): Promise<AudioCaptur
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| options | [AudioCapturerOptions](arkts-audio-audio-audiocaptureroptions-i.md) | Yes | 配置音频采集器。 |
+| options | [AudioCapturerOptions](arkts-audio-audio-audiocaptureroptions-i.md) | Yes | Capturer configurations. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;AudioCapturer&gt; | Promise对象，成功将返回音频采集器对象，异常将返回error对象： &lt;br&gt;错误码6800301：表示参数校验异常、权限校验异常或系统处理异常（具体错误查看系统日志）。 &lt;br&gt;错误码6800101：表示必选参数为空或参数类型错误。 |
+| Promise&lt;AudioCapturer&gt; | Promise used to return the result. If the operation is successful, an AudioCapturer instance is returned; otherwise, an error object with either of the following error codes is returned: &lt;br&gt;Error code 6800301: indicates a parameter verification exception, permission verification exception, or system processing exception. For details, see system logs. &lt;br&gt;Error code 6800101: indicates that a mandatory parameter is null or the parameter type is incorrect. |
 
 ## Examples
 
@@ -193,6 +193,6 @@ Obtains an {@link AudioCapturer} instance. This method uses a promise to return 
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 6800101 | Parameter verification failed. |
-| 6800301 | Audio system internal error, such as system crash. |
+| [6800101](../errorcode-audio.md#6800101-invalid-parameter) | Parameter verification failed. |
+| [6800301](../errorcode-audio.md#6800301-system-error) | Audio system internal error, such as system crash. |
 

@@ -4,7 +4,7 @@
 export type NavDestinationBuilder = (name: string, param?: Object) => void
 ```
 
-用于创建NavDestination组件内容的构建器类型。
+Defines the content of the **NavDestination** component.
 
 **Since:** 12
 
@@ -20,6 +20,6 @@ export type NavDestinationBuilder = (name: string, param?: Object) => void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| name | string | Yes | [NavDestination](../../apis-arkui/arkts-components/arkts-arkui-nav_destination-i)页面名称。 |
-| param | Object | No | [NavDestination](../../apis-arkui/arkts-components/arkts-arkui-nav_destination-i)页面详细参数。默认值为空。 |
+| name | string | Yes | Name of the [NavDestination](../../apis-arkui/arkts-components/arkts-arkui-nav_destination-i) page. |
+| param | Object | No | Settings of the [NavDestination](../../apis-arkui/arkts-components/arkts-arkui-nav_destination-i) page. The default value is undefined. |
 

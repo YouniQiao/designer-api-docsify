@@ -1,6 +1,6 @@
 # InterruptEvent
 
-音频中断时，应用接收的中断事件。
+Describes the interruption event received by the application when the audio is interrupted.
 
 **Since:** 9
 
@@ -22,7 +22,7 @@ import { audio } from 'kits/@kit.AudioKit';
 eventType: InterruptType
 ```
 
-音频中断事件类型，开始或是结束。
+Whether the audio interruption has started or ended.
 
 **Type:** [InterruptType](arkts-audio-audio-interrupttype-e.md)
 
@@ -42,7 +42,7 @@ eventType: InterruptType
 forceType: InterruptForceType
 ```
 
-操作是由系统强制执行或是由应用程序执行。
+Whether the audio interruption is forcibly taken by the system or taken by an application.
 
 **Type:** [InterruptForceType](arkts-audio-audio-interruptforcetype-e.md)
 
@@ -62,7 +62,7 @@ forceType: InterruptForceType
 hintType: InterruptHint
 ```
 
-中断提示，用于提供中断事件的相关信息。
+Hint provided along the interruption to provide information related to the interruption event.
 
 **Type:** [InterruptHint](arkts-audio-audio-interrupthint-e.md)
 

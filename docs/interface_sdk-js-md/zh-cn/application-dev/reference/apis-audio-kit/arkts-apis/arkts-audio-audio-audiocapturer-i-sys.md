@@ -16,12 +16,6 @@
 
 **系统能力：** SystemCapability.Multimedia.Audio.Capturer
 
-## 导入模块
-
-```TypeScript
-import { audio } from 'kits/@kit.AudioKit';
-```
-
 ## offReadMicInData
 
 ```TypeScript
@@ -52,9 +46,9 @@ offReadMicInData(callback?: Callback<AudioCapturerMicInData>): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 6800103 | Operation not permitted at running state. |
-| 6800101 | Parameter verification failed. |
-| 202 | Caller is not a system application. |
+| [6800103](../errorcode-audio.md#6800103-状态不支持) | Operation not permitted at running state. |
+| [6800101](../errorcode-audio.md#6800101-无效入参) | Parameter verification failed. |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Caller is not a system application. |
 
 ## onReadMicInData
 
@@ -86,8 +80,8 @@ onReadMicInData(callback: Callback<AudioCapturerMicInData>): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 6800103 | Operation not permitted at running state. |
-| 202 | Caller is not a system application. |
+| [6800103](../errorcode-audio.md#6800103-状态不支持) | Operation not permitted at running state. |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Caller is not a system application. |
 
 ## setInputDeviceToAccessory
 
@@ -111,6 +105,6 @@ Sets default input device of this Capturer to DEVICE_TYPE_ACCESSORY.Other captur
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 6800103 | Operation not permit at current state. |
-| 202 | Caller is not a system application. |
+| [6800103](../errorcode-audio.md#6800103-状态不支持) | Operation not permit at current state. |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Caller is not a system application. |
 

@@ -1,6 +1,6 @@
 # PreviewMenuOptions
 
-预览菜单选项。
+Represents the options of the preview menu.
 
 **Since:** 20
 
@@ -16,9 +16,9 @@
 hapticFeedbackMode?: HapticFeedbackMode
 ```
 
-菜单弹出时振动效果。需配置"ohos.permission.VIBRATE"权限
+Vibration effect when the menu is displayed. The **ohos.permission.VIBRATE** permission is required.
 
-默认值：HapticFeedbackMode.DISABLED，菜单弹出时不振动。
+Default value: **HapticFeedbackMode.DISABLED**, indicating no vibration when the menu is displayed.
 
 **Type:** [HapticFeedbackMode](../../apis-arkui/arkts-components/arkts-arkui-hapticfeedbackmode-e.md)
 

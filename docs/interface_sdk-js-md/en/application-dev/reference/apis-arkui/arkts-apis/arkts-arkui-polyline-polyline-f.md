@@ -8,7 +8,7 @@ export declare function Polyline(
 ): PolylineAttribute
 ```
 
-用于绘制折线的构造函数。
+Polyline is returned when the parameter is transferred.
 
 **Since:** 23
 
@@ -24,13 +24,13 @@ export declare function Polyline(
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| options | [PolylineOptions](../arkts-components/arkts-arkui-polylineoptions-i.md) | No | Polyline绘制区域。&lt;br/&gt;异常值undefined和null按照无效值处理，本次设置不生效。 |
+| options | [PolylineOptions](../arkts-components/arkts-arkui-polylineoptions-i.md) | No | The options to create a Polyline |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [PolylineAttribute](../arkts-components/arkts-arkui-polyline-attribute.md) | 折线的属性。 |
+| [PolylineAttribute](../arkts-components/arkts-arkui-polyline-attribute.md) | The attribute of the Polyline. |
 
 
 ## Polyline
@@ -41,11 +41,11 @@ export declare function Polyline(
 ): PolylineAttribute
 ```
 
-定义Polyline组件。
+Defines Polyline Component.
 
-**Since:** 26.0.0
+**Since:** 26.1.0
 
-**ArkTS mode:** ArkTS-Sta only, since version 26.0.0.
+**ArkTS mode:** ArkTS-Sta only, since version 26.1.0.
 
 **Decorator:** @Builder
 
@@ -59,7 +59,7 @@ export declare function Polyline(
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| style | [CustomBuilderT](../arkts-components/arkts-arkui-custombuildert-t.md)&lt;PolylineAttribute&gt; | Yes | 设置组件属性的回调。 |
+| style | [CustomBuilderT](../arkts-components/arkts-arkui-custombuildert-t.md)&lt;PolylineAttribute&gt; | Yes | the callback to set up component's attributes. |
 
 **Return value:**
 

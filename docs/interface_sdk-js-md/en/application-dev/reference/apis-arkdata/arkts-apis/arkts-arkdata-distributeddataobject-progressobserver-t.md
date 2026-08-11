@@ -4,7 +4,7 @@
 type ProgressObserver = (sessionId: string, progress: int) => void
 ```
 
-定义传输进度的监听回调函数。
+Defines an observer for obtaining the transfer progress.
 
 **Since:** 20
 
@@ -18,6 +18,6 @@ type ProgressObserver = (sessionId: string, progress: int) => void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| sessionId | string | Yes | 标识变更对象的sessionId。长度不大于128字节，且只能包含字母、数字或下划线_。 |
-| progress | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | 标识资产传输进度。取值范围为[-1, 100]，取值为整数，-1表示获取进度失败，100表示传输完成。 |
+| sessionId | string | Yes | Session ID of the distributed data object, with a maximum length of 128 bytes. The value can contain only letters, digits, and underscores (_). |
+| progress | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | Asset transfer progress. The value is an integer ranging from -1 to 100. The value **-1** indicates that the progress fails to be obtained, and the value **100** indicates that the transfer is complete. |
 

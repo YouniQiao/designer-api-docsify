@@ -12,7 +12,7 @@ import { effectKit } from 'kits/@kit.ArkGraphics2D';
 function createEffect(source: image.PixelMap): Filter
 ```
 
-通过传入的PixelMap创建Filter实例。后续可通过链式调用添加各种图像效果，最终通过[getEffectPixelMap](arkts-arkgraphics2d-effectkit-filter-i.md#geteffectpixelmap)获取处理后的图像。
+Creates a Filter instance based on the input PixelMap. You can then add various image effects through chained calls, and finally obtain the processed image via getEffectPixelMap.
 
 **Since:** 9
 
@@ -30,23 +30,21 @@ function createEffect(source: image.PixelMap): Filter
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| source | image.PixelMap | Yes | image模块创建的PixelMap实例。可通过图片解码或直接创建获得，具体可见 [Image Kit简介](../../../media/image/image-overview.md)。 |
+| source | image.PixelMap | Yes | PixelMap instance created by the image module. An instance can be obtained by decoding an image or directly created. For details, see Introduction to Image Kit. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [Filter](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-agent-filter-i.md) | 返回一个未添加任何效果的Filter实例，失败时返回null。 |
+| [Filter](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-agent-filter-i.md) | Returns a Filter instance with no effects added, or null if the operation fails. |
 
 ## Examples
 
 ```TypeScript
-import { image } from '@kit.ImageKit';
-import { effectKit } from '@kit.ArkGraphics2D';
+import { image } from "@kit.ImageKit";
+import { effectKit } from "@kit.ArkGraphics2D";
 
-// Create a buffer for the image effect.
-const colorBuffer = new ArrayBuffer(96);
-// Set the image initialization options.
+const color = new ArrayBuffer(96);
 let opts : image.InitializationOptions = {
   editable: true,
   pixelFormat: 3,
@@ -54,11 +52,9 @@ let opts : image.InitializationOptions = {
     height: 4,
     width: 6
   }
-};
-// Create a PixelMap instance.
-image.createPixelMap(colorBuffer, opts).then((pixelMap) => {
-  // Create a Filter instance.
+}
+image.createPixelMap(color, opts).then((pixelMap) => {
   let headFilter = effectKit.createEffect(pixelMap);
-});
+})
 ```
 

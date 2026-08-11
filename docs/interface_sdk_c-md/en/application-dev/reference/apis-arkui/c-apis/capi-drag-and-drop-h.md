@@ -18,9 +18,6 @@ Declares the APIs of **NativeDrag**.
 
 | Name | typedef keyword | Description |
 | -- | -- | -- |
-| [ArkUI_NodeEvent](capi-arkui-nativemodule-arkui-nodeevent.md) | ArkUI_NodeEvent | Defines a component event. This is a general struct type. |
-| [ArkUI_Context](capi-arkui-nativemodule-arkui-context.md) | ArkUI_Context | Defines a native UI context instance. |
-| [ArkUI_Context*](capi-arkui-nativemodule-arkui-context8h.md) | ArkUI_ContextHandle | Defines the pointer to the ArkUI native UI context. |
 | [ArkUI_DragEvent](capi-arkui-nativemodule-arkui-dragevent.md) | ArkUI_DragEvent | Defines a struct for a drag event. |
 | [ArkUI_DragPreviewOption](capi-arkui-nativemodule-arkui-dragpreviewoption.md) | ArkUI_DragPreviewOption | Defines a struct for custom drag preview options. |
 | [ArkUI_DragAction](capi-arkui-nativemodule-arkui-dragaction.md) | ArkUI_DragAction | Defines a drag action. |
@@ -224,7 +221,7 @@ Obtains a **DragEvent** object from the specified **NodeEvent** object.
 
 | Parameter | Description |
 | -- | -- |
-| [ArkUI_NodeEvent](capi-arkui-nativemodule-arkui-nodeevent.md)* nodeEvent | Pointer to the target **ArkUI_NodeEvent** object. |
+| ArkUI_NodeEvent* nodeEvent | Pointer to the target **ArkUI_NodeEvent** object. |
 
 **Returns**:
 
@@ -248,7 +245,7 @@ Obtains the state prior to a drop and drop operation.
 
 | Parameter | Description |
 | -- | -- |
-| [ArkUI_NodeEvent](capi-arkui-nativemodule-arkui-nodeevent.md)* nodeEvent | Pointer to the target **ArkUI_NodeEvent** object. |
+| ArkUI_NodeEvent* nodeEvent | Pointer to the target **ArkUI_NodeEvent** object. |
 
 **Returns**:
 
@@ -379,7 +376,7 @@ This API provides data loading parameters to the system instead of directly prov
 
 | Type | Description |
 | -- | -- |
-| [ArkUI_ErrorCode](capi-error-code-h.md#arkui_errorcode) | Result code.<br>     <br>Returns [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.<br>     <br>Returns [ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter error occurs. |
+| ArkUI_ErrorCode | Result code.<br>     <br>Returns [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.<br>     <br>Returns [ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter error occurs. |
 
 ### OH_ArkUI_DragEvent_GetUdmfData()
 
@@ -868,7 +865,7 @@ Obtains the ID of the screen where this drag event occurs. This API is not suppo
 
 | Type | Description |
 | -- | -- |
-| [ArkUI_ErrorCode](capi-error-code-h.md#arkui_errorcode) | Result code.<br>     <br>Returns [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.<br>     <br>Returns [ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter error occurs. |
+| ArkUI_ErrorCode | Result code.<br>     <br>Returns [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.<br>     <br>Returns [ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter error occurs. |
 
 ### OH_ArkUI_DragEvent_GetDragSource()
 
@@ -894,7 +891,7 @@ Obtains the bundle name of the drag source application. The caller must provide 
 
 | Type | Description |
 | -- | -- |
-| [ArkUI_ErrorCode](capi-error-code-h.md#arkui_errorcode) | Result code.<br>     <br>Returns [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.<br>     <br>Returns [ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter error occurs. |
+| ArkUI_ErrorCode | Result code.<br>     <br>Returns [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.<br>     <br>Returns [ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter error occurs. |
 
 ### OH_ArkUI_DragEvent_IsRemote()
 
@@ -919,7 +916,7 @@ Checks whether the current drag operation is a cross-device drag.
 
 | Type | Description |
 | -- | -- |
-| [ArkUI_ErrorCode](capi-error-code-h.md#arkui_errorcode) | Result code.<br>     <br>Returns [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.<br>     <br>Returns [ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter error occurs. |
+| ArkUI_ErrorCode | Result code.<br>     <br>Returns [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.<br>     <br>Returns [ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter error occurs. |
 
 ### OH_ArkUI_DragEvent_StartDataLoading()
 
@@ -964,7 +961,7 @@ Cancels the ongoing data synchronization.
 
 | Parameter | Description |
 | -- | -- |
-| [ArkUI_ContextHandle](capi-arkui-nativemodule-arkui-context8h.md) uiContext | Pointer to the UI instance. |
+| ArkUI_ContextHandle uiContext | Pointer to the UI instance. |
 | const char* key | Data key value, which is returned via [OH_ArkUI_DragEvent_StartDataLoading](capi-drag-and-drop-h.md#oh_arkui_dragevent_startdataloading). |
 
 **Returns**:
@@ -989,7 +986,7 @@ Sets whether to disable the data prefetch process before executing {@link NODE_O
 
 | Parameter | Description |
 | -- | -- |
-| [ArkUI_NodeHandle](capi-arkui-nativemodule-arkui-node8h.md) node | Pointer to the component node. |
+| ArkUI_NodeHandle node | Pointer to the component node. |
 | bool disabled | Whether to disable the data prefetching process. The value **true** means to disable the dataprefetching process, and **false** means the opposite. |
 
 **Returns**:
@@ -1014,7 +1011,7 @@ Sets whether to enable strict reporting on drag events. This feature is disabled
 
 | Parameter | Description |
 | -- | -- |
-| [ArkUI_NodeHandle](capi-arkui-nativemodule-arkui-node8h.md) node | Pointer to the component node. |
+| ArkUI_NodeHandle node | Pointer to the component node. |
 | bool enabled | Whether to enable strict reporting on drag events. The value **true** means to enable strictreporting on drag events, and **false** means the opposite. |
 
 **Returns**:
@@ -1039,7 +1036,7 @@ Sets whether to enable strict reporting on drag events. This feature is disabled
 
 | Parameter | Description |
 | -- | -- |
-| [ArkUI_ContextHandle](capi-arkui-nativemodule-arkui-context8h.md) uiContext | Pointer to the UI instance. |
+| ArkUI_ContextHandle uiContext | Pointer to the UI instance. |
 | bool enabled | Whether to enable strict reporting on drag events. The value **true** means to enable strictreporting on drag events, and **false** means the opposite. |
 
 **Returns**:
@@ -1064,7 +1061,7 @@ Sets the types of data that can be dropped to the specified component. This API 
 
 | Parameter | Description |
 | -- | -- |
-| [ArkUI_NodeHandle](capi-arkui-nativemodule-arkui-node8h.md) node | Pointer to the component node. |
+| ArkUI_NodeHandle node | Pointer to the component node. |
 | const char* typesArray[] | Indicates the array of types of data that can be dropped. |
 | int32_t count | Length of the array. |
 
@@ -1090,7 +1087,7 @@ Configures the specified component to disallow any data types. This API resets t
 
 | Parameter | Description |
 | -- | -- |
-| [ArkUI_NodeHandle](capi-arkui-nativemodule-arkui-node8h.md) node | Pointer to the component node. |
+| ArkUI_NodeHandle node | Pointer to the component node. |
 
 **Returns**:
 
@@ -1114,7 +1111,7 @@ Configures the specified component to allow any data types. This API resets the 
 
 | Parameter | Description |
 | -- | -- |
-| [ArkUI_NodeHandle](capi-arkui-nativemodule-arkui-node8h.md) node | Pointer to the component node. |
+| ArkUI_NodeHandle node | Pointer to the component node. |
 
 **Returns**:
 
@@ -1138,7 +1135,7 @@ Sets whether the component is draggable.
 
 | Parameter | Description |
 | -- | -- |
-| [ArkUI_NodeHandle](capi-arkui-nativemodule-arkui-node8h.md) node | Pointer to the component node. |
+| ArkUI_NodeHandle node | Pointer to the component node. |
 | bool enabled | Whether the component is draggable. The value **true** means that the component is draggable, and false** means the opposite. |
 
 **Returns**:
@@ -1163,8 +1160,8 @@ Sets a custom drag preview for the specified component.
 
 | Parameter | Description |
 | -- | -- |
-| [ArkUI_NodeHandle](capi-arkui-nativemodule-arkui-node8h.md) node | Pointer to the component node. |
-| [OH_PixelmapNative](capi-arkui-nativemodule-oh-pixelmapnative.md)* preview | Custom drag preview, which is a pixel map. |
+| ArkUI_NodeHandle node | Pointer to the component node. |
+| [OH_PixelmapNative](../ImageKit/capi-image-nativemodule-oh-pixelmapnative.md)* preview | Custom drag preview, which is a pixel map. |
 
 **Returns**:
 
@@ -1374,7 +1371,7 @@ Sets an **ArkUI_DragPreviewOption** object for the specified component.
 
 | Parameter | Description |
 | -- | -- |
-| [ArkUI_NodeHandle](capi-arkui-nativemodule-arkui-node8h.md) node | Pointer to the component node. |
+| ArkUI_NodeHandle node | Pointer to the component node. |
 | [ArkUI_DragPreviewOption](capi-arkui-nativemodule-arkui-dragpreviewoption.md)* option | Custom parameters. |
 
 **Returns**:
@@ -1399,7 +1396,7 @@ Creates a drag action object. The object needs to be associated with a UI instan
 
 | Parameter | Description |
 | -- | -- |
-| [ArkUI_NodeHandle](capi-arkui-nativemodule-arkui-node8h.md) node | Pointer to the component node. |
+| ArkUI_NodeHandle node | Pointer to the component node. |
 
 **Returns**:
 
@@ -1423,7 +1420,7 @@ Creates a drag action object for the specified UI instance.
 
 | Parameter | Description |
 | -- | -- |
-| [ArkUI_ContextHandle](capi-arkui-nativemodule-arkui-context8h.md) uiContext | Pointer to the UI instance. |
+| ArkUI_ContextHandle uiContext | Pointer to the UI instance. |
 
 **Returns**:
 
@@ -1491,7 +1488,7 @@ Sets the drag previews for a drag action. Only pixel map objects are supported.
 | Parameter | Description |
 | -- | -- |
 | [ArkUI_DragAction](capi-arkui-nativemodule-arkui-dragaction.md)* dragAction | Pointer to the target drag action object. |
-| [OH_PixelmapNative](capi-arkui-nativemodule-oh-pixelmapnative.md)* pixelmapArray[] | Indicates the array of the drag previews to set, which must be pixel maps. |
+| [OH_PixelmapNative](../ImageKit/capi-image-nativemodule-oh-pixelmapnative.md)* pixelmapArray[] | Indicates the array of the drag previews to set, which must be pixel maps. |
 | int32_t size | Number of drag previews. |
 
 **Returns**:
@@ -1598,7 +1595,7 @@ This API provides data loading parameters to the system instead of directly prov
 
 | Type | Description |
 | -- | -- |
-| [ArkUI_ErrorCode](capi-error-code-h.md#arkui_errorcode) | Result code.<br>     <br>Returns [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.<br>     <br>Returns [ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter error occurs. |
+| ArkUI_ErrorCode | Result code.<br>     <br>Returns [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.<br>     <br>Returns [ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter error occurs. |
 
 ### OH_ArkUI_DragAction_SetDragPreviewOption()
 
@@ -1881,13 +1878,13 @@ Sets whether the drop-disallowed badge can be displayed.
 
 | Parameter | Description |
 | -- | -- |
-| [ArkUI_ContextHandle](capi-arkui-nativemodule-arkui-context8h.md) uiContext | Pointer to the UI instance. |
+| ArkUI_ContextHandle uiContext | Pointer to the UI instance. |
 | bool enabled | Whether the drop-disallowed badge can be displayed. The value **true** means that the drop-disallowed badge can be displayed, and **false** means the opposite. |
 
 **Returns**:
 
 | Type | Description |
 | -- | -- |
-| [ArkUI_ErrorCode](capi-error-code-h.md#arkui_errorcode) | Result code.<br>      <br>Returns [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.<br>      <br>Returns [ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter error occurs. |
+| ArkUI_ErrorCode | Result code.<br>      <br>Returns [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.<br>      <br>Returns [ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter error occurs. |
 
 

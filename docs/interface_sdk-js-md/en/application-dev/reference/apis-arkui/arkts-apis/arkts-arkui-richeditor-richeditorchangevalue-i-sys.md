@@ -1,6 +1,6 @@
 # RichEditorChangeValue
 
-图文变化信息。
+Provides an interface for changes in the text.
 
 **Since:** 23
 
@@ -16,8 +16,7 @@
 changeReason?: TextChangeReason
 ```
 
-组件内容变化的原因。&lt;br/&gt;**系统接口：** 此接口为系统接口。&lt;br&gt;  
-**模型约束：** 此接口仅可在Stage模型下使用。
+The reason for text changes.
 
 **Type:** [TextChangeReason](arkts-arkui-textchangereason-e-sys.md)
 

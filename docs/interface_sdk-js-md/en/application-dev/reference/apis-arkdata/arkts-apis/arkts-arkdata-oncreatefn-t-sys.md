@@ -4,7 +4,7 @@
 type OnCreateFn = (want: Want, callback: AsyncCallback<void>) => void
 ```
 
-业务逻辑初始化操作的属性类型。
+Callback function called when a datashare extension ability is started for initialization.
 
 **Since:** 23
 

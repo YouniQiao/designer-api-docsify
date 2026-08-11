@@ -1,6 +1,6 @@
 # TransferPolicy
 
-传输策略。
+Transfer policy.
 
 **Since:** 26.0.0
 
@@ -16,7 +16,7 @@
 SEND_ONLY = 0
 ```
 
-禁止发送。
+Disable sending.
 
 **Since:** 26.0.0
 
@@ -34,7 +34,7 @@ SEND_ONLY = 0
 RECEIVE_ONLY = 1
 ```
 
-禁止接收。
+Disable receiving.
 
 **Since:** 26.0.0
 
@@ -52,7 +52,7 @@ RECEIVE_ONLY = 1
 RECEIVE_SEND = 2
 ```
 
-禁止发送和接收。
+Disable sending and receiving.
 
 **Since:** 26.0.0
 

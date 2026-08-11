@@ -48,9 +48,9 @@ Enable auto-framing effect.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 7400104 | Session not running. |
-| 7400201 | Camera service fatal error. |
-| 202 | Not System Application. |
+| [7400104](../errorcode-camera.md#7400104-session-not-running) | Session not running. |
+| [7400201](../errorcode-camera.md#7400201-camera-service-error) | Camera service fatal error. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not System Application. |
 
 ## getAutoFramingStatus
 
@@ -80,7 +80,7 @@ Gets the status of auto-framing effect.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 202 | Not System Application. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not System Application. |
 
 ## getControlCenterHeight
 
@@ -118,7 +118,7 @@ Gets the control center height.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 202 | Not System Application. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not System Application. |
 
 ## getCurrentDevice
 
@@ -150,8 +150,8 @@ Gets the current camera device.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 7400104 | Session not running. |
-| 202 | Not System Application. |
+| [7400104](../errorcode-camera.md#7400104-session-not-running) | Session not running. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not System Application. |
 
 ## isAutoFramingSupported
 
@@ -181,7 +181,7 @@ Checks whether auto-framing is supported.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 202 | Not System Application. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not System Application. |
 
 ## release
 
@@ -211,7 +211,7 @@ Release control center session object.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 202 | Not System Application. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not System Application. |
 
 ## usedAsPosition
 
@@ -243,7 +243,7 @@ Sets the camera to be used as a camera at the specified position.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 7400104 | Session not running. |
-| 7400201 | Camera service fatal error. |
-| 202 | Not System Application. |
+| [7400104](../errorcode-camera.md#7400104-session-not-running) | Session not running. |
+| [7400201](../errorcode-camera.md#7400201-camera-service-error) | Camera service fatal error. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not System Application. |
 

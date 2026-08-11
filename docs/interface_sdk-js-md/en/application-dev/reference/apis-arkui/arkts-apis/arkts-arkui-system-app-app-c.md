@@ -1,6 +1,6 @@
 # App
 
-定义App类的静态函数
+Defines static functions of App class
 
 **Since:** 3
 
@@ -22,10 +22,10 @@ import { AppResponse, ScreenOnVisibleOptions, RequestFullWindowOptions } from 'k
 static getInfo(): AppResponse
 ```
 
-获取当前应用配置文件中声明的信息。在Stage模型下接口返回值为null。
+Obtains the declared information in the **config.json** file of an application. In the stage model, this API returns **null**.
 
-从API version9开始，推荐使用  
-[bundleManager.getBundleInfoForSelf](../../apis-ability-kit/arkts-apis/arkts-ability-bundlemanager-getbundleinfoforself-f.md/arkts-ability-bundlemanager-getbundleinfoforself-f.md#getbundleinfoforself)。
+This API is deprecated since API version 9. You are advised to use  
+[bundleManager.getBundleInfoForSelf](../../apis-ability-kit/arkts-apis/arkts-ability-bundlemanager-getbundleinfoforself-f.md/arkts-ability-bundlemanager-getbundleinfoforself-f.md#getbundleinfoforself)instead.
 
 **Since:** 3
 
@@ -41,7 +41,7 @@ static getInfo(): AppResponse
 
 | Type | Description |
 | --- | --- |
-| [AppResponse](arkts-arkui-system-app-appresponse-i.md) | 定义AppResponse信息。 |
+| [AppResponse](arkts-arkui-system-app-appresponse-i.md) | Application response information. |
 
 ## Examples
 
@@ -203,9 +203,9 @@ export default class Req {
 static screenOnVisible(options?: ScreenOnVisibleOptions): void
 ```
 
-定义屏幕唤醒时是否保持应用可见。
+Defines whether to keep the application visible when the screen is woken up.
 
-该接口从API version 8 开始废弃。
+This API is deprecated since API version 8.
 
 **Since:** 3
 
@@ -221,7 +221,7 @@ static screenOnVisible(options?: ScreenOnVisibleOptions): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| options | [ScreenOnVisibleOptions](arkts-arkui-system-app-screenonvisibleoptions-i.md) | No | 当启动保活时，锁屏时将阻止系统返回桌面显示，以保持屏幕唤醒时应用可见。 |
+| options | [ScreenOnVisibleOptions](arkts-arkui-system-app-screenonvisibleoptions-i.md) | No | With keep-alive, the system is prevented from returning to the home screen when the screen is locked, so that the application is visible when the screen is woken up. |
 
 ## setImageCacheCount
 
@@ -282,9 +282,7 @@ struct Index {
 static setImageFileCacheSize(value: number): void
 ```
 
-设置图像文件在解码前在磁盘上的缓存大小（字节）。
-
-如果未设置，应用程序将在磁盘上缓存 100MB 的图像文件。
+Set image file cache size in bytes on disk before decode.if not set, the application will cache 100MB image files on disk.
 
 **Since:** 7
 
@@ -300,7 +298,7 @@ static setImageFileCacheSize(value: number): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | number | Yes | 原始图像数据大小的容量，单位为字节。 |
+| value | number | Yes | capacity of raw image data size in bytes. |
 
 ## Examples
 
@@ -379,9 +377,10 @@ struct Index {
 static terminate(): void
 ```
 
-退出当前Ability。在Stage模型下接口功能不生效。
+Terminates the current ability. In the stage model, this API has no effect.
 
-从API version 7开始，推荐使用[`@ohos.ability.featureAbility`](../../apis-ability-kit/arkts-apis/arkts-ability-featureability.md/arkts-ability-featureability.md)。
+This API is deprecated since API version 7. You are advised to use  
+[@ohos.ability.featureAbility](../../apis-ability-kit/arkts-apis/arkts-ability-featureability.md/arkts-ability-featureability.md) instead.
 
 **Since:** 3
 

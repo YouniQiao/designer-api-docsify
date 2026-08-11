@@ -1,6 +1,6 @@
 # BreakpointsReference
 
-设置栅格容器组件的断点参照物。
+Defines the breakpoint reference of grid-container component.
 
 **Since:** 23
 
@@ -16,7 +16,7 @@
 WindowSize
 ```
 
-以窗口为参照。
+Respond to breakpoint changes according to window width
 
 **Since:** 23
 
@@ -34,7 +34,7 @@ WindowSize
 ComponentSize
 ```
 
-以容器为参照。
+Respond to breakpoint changes according to component width
 
 **Since:** 23
 

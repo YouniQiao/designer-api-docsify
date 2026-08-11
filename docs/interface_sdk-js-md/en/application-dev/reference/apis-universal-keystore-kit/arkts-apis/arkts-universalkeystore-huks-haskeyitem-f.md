@@ -12,9 +12,9 @@ import { huks } from 'kits/@kit.UniversalKeystoreKit';
 function hasKeyItem(keyAlias: string, options: HuksOptions, callback: AsyncCallback<boolean>): void
 ```
 
-判断密钥是否存在。使用callback异步回调。
+Checks whether a key exists. This API uses an asynchronous callback to return the result.
 
-若密钥不存在，则通过callback返回false。
+If the key does not exist, **false** is returned through the callback.
 
 **Since:** 11
 
@@ -30,22 +30,22 @@ function hasKeyItem(keyAlias: string, options: HuksOptions, callback: AsyncCallb
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| keyAlias | string | Yes | 所需查找的密钥的别名。 |
-| options | [HuksOptions](arkts-universalkeystore-huks-huksoptions-i.md) | Yes | 用于查询时指定密钥的属性TAG，如使用[HuksAuthStorageLevel](arkts-universalkeystore-huks-huksauthstoragelevel-e.md)指定需查询密钥的 安全级别，&lt;br&gt;可传空，当API version ≥ 12时，传空默认为CE，当API version ＜ 12时，传空默认为DE。 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;boolean&gt; | Yes | 回调函数。若密钥存在，data为true，若密钥不存在，data为false。 |
+| keyAlias | string | Yes | Alias of the key to check. |
+| options | [HuksOptions](arkts-universalkeystore-huks-huksoptions-i.md) | Yes | Attribute tag of the key to be checked. If [HuksAuthStorageLevel](arkts-universalkeystore-huks-huksauthstoragelevel-e.md) is used to specify the security level of the key to be checked,&lt;br&gt;this parameter can be left empty. If the API version is 12 or later, the default value **CE** is passed in. If the API version is earlier than 12, the default value **DE** is passed in. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;boolean&gt; | Yes | Callback used to return the result. If the key exists, **data** is **true**. Otherwise, **data** is **false**. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. 3. Parameter verification failed. |
-| 801 | api is not supported |
-| 12000006 | error occurred in crypto engine |
-| 12000005 | IPC communication failed |
-| 12000004 | operating file failed |
-| 12000018 | the group id specified by the access group tag is invalid<br>**Applicable version:** 23 and later |
-| 12000014 | memory is insufficient |
-| 12000012 | Device environment or input parameter abnormal |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. 3. Parameter verification failed. |
+| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | api is not supported |
+| [12000006](../errorcode-huks.md#12000006-algorithm-library-operation-failed) | error occurred in crypto engine |
+| [12000005](../errorcode-huks.md#12000005-ipc-error) | IPC communication failed |
+| [12000004](../errorcode-huks.md#12000004-file-error) | operating file failed |
+| [12000018](../errorcode-huks.md#12000018-invalid-input-parameter) | the group id specified by the access group tag is invalid<br>**Applicable version:** 23 and later |
+| [12000014](../errorcode-huks.md#12000014-insufficient-memory) | memory is insufficient |
+| [12000012](../errorcode-huks.md#12000012-external-error) | Device environment or input parameter abnormal |
 
 ## Examples
 
@@ -78,9 +78,9 @@ huks.hasKeyItem(keyAlias, emptyOptions, (error, data) => {
 function hasKeyItem(keyAlias: string, options: HuksOptions): Promise<boolean>
 ```
 
-判断密钥是否存在。使用Promise异步回调。
+Checks whether a key exists. This API uses a promise to return the result.
 
-若密钥不存在，则通过Promise返回false。
+If the key does not exist, **false** is returned through the promise.
 
 **Since:** 11
 
@@ -96,27 +96,27 @@ function hasKeyItem(keyAlias: string, options: HuksOptions): Promise<boolean>
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| keyAlias | string | Yes | 所需查找的密钥的别名。 |
-| options | [HuksOptions](arkts-universalkeystore-huks-huksoptions-i.md) | Yes | 用于查询时指定密钥的属性TAG，如使用[HuksAuthStorageLevel](arkts-universalkeystore-huks-huksauthstoragelevel-e.md)指定需查询密钥的 安全级别，&lt;br&gt;可传空，当API version ≥ 12时，传空默认为CE，当API version ＜ 12时，传空默认为DE。 |
+| keyAlias | string | Yes | Alias of the key to check. |
+| options | [HuksOptions](arkts-universalkeystore-huks-huksoptions-i.md) | Yes | Attribute tag of the key to be checked. If [HuksAuthStorageLevel](arkts-universalkeystore-huks-huksauthstoragelevel-e.md) is used to specify the security level of the key to be checked,&lt;br&gt;this parameter can be left empty. If the API version is 12 or later, the default value **CE** is passed in. If the API version is earlier than 12, the default value **DE** is passed in. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;boolean&gt; | Promise对象。若密钥存在，返回值为true，若密钥不存在，返回值为false。 |
+| Promise&lt;boolean&gt; | Promise used to return the result. If the key exists, **true** is returned. If the key does not exist, **false** is returned. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. 3. Parameter verification failed. |
-| 801 | api is not supported |
-| 12000006 | error occurred in crypto engine |
-| 12000005 | IPC communication failed |
-| 12000004 | operating file failed |
-| 12000018 | the group id specified by the access group tag is invalid<br>**Applicable version:** 23 and later |
-| 12000014 | memory is insufficient |
-| 12000012 | Device environment or input parameter abnormal |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. 3. Parameter verification failed. |
+| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | api is not supported |
+| [12000006](../errorcode-huks.md#12000006-algorithm-library-operation-failed) | error occurred in crypto engine |
+| [12000005](../errorcode-huks.md#12000005-ipc-error) | IPC communication failed |
+| [12000004](../errorcode-huks.md#12000004-file-error) | operating file failed |
+| [12000018](../errorcode-huks.md#12000018-invalid-input-parameter) | the group id specified by the access group tag is invalid<br>**Applicable version:** 23 and later |
+| [12000014](../errorcode-huks.md#12000014-insufficient-memory) | memory is insufficient |
+| [12000012](../errorcode-huks.md#12000012-external-error) | Device environment or input parameter abnormal |
 
 ## Examples
 

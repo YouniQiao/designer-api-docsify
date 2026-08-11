@@ -1,6 +1,6 @@
 # AutoFinalizer
 
-提供一个可通过开发者自定义回调释放由开发者管理的资源的接口。
+Provides an interface that can be implemented for releasing a resource which is managed by developers through a developer-defined callback.
 
 **Since:** 22
 
@@ -22,7 +22,7 @@ import { util } from 'kits/@kit.ArkTS';
 onFinalization(heldValue: T): void
 ```
 
-开发者自定义的用于释放资源的回调。
+The developer-defined callback used to release resources.
 
 **Since:** 22
 
@@ -38,5 +38,5 @@ onFinalization(heldValue: T): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| heldValue | T | Yes | 传递给 finalizer 的值。 |
+| heldValue | T | Yes | The value to pass to the finalizer. |
 

@@ -1,6 +1,6 @@
 # SafeAreaEdge
 
-扩展安全区域的边缘。
+Enumerates the edges for expanding the safe area.
 
 **Since:** 10
 
@@ -16,7 +16,7 @@
 TOP = 0
 ```
 
-上方区域。
+Top edge.
 
 **Since:** 10
 
@@ -36,7 +36,7 @@ TOP = 0
 BOTTOM = 1
 ```
 
-下方区域。
+Bottom edge.
 
 **Since:** 10
 
@@ -56,7 +56,7 @@ BOTTOM = 1
 START = 2
 ```
 
-前部区域。
+Start edge.
 
 **Since:** 10
 
@@ -76,7 +76,7 @@ START = 2
 END = 3
 ```
 
-尾部区域。
+End edge.
 
 **Since:** 10
 

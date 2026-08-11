@@ -46,7 +46,7 @@ install(bundleFilePaths: Array<string>, param: InstallParam, callback: AsyncCall
 | --- | --- | --- | --- |
 | bundleFilePaths | Array&lt;string&gt; | 是 | 指示存储HAP的沙箱路径。 |
 | param | [InstallParam](../../apis-mdm-kit/arkts-apis/arkts-mdm-bundlemanager-installparam-i.md) | 是 | 指定安装所需的其他参数。 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;InstallStatus&gt; | 是 | [回调函数](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md/arkts-basicservices-base-asynccallback-i.md)，程序 启动作为入参的回调函数，返回安装状态信息。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;InstallStatus&gt; | 是 | [回调函数](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md/arkts-basicservices-base-asynccallback-i.md)，程序 启动作为入参的回调函数，返回安装状态信息。 |
 
 ## recover
 
@@ -78,7 +78,7 @@ recover(bundleName: string, param: InstallParam, callback: AsyncCallback<Install
 | --- | --- | --- | --- |
 | bundleName | string | 是 | 应用Bundle名称。 |
 | param | [InstallParam](../../apis-mdm-kit/arkts-apis/arkts-mdm-bundlemanager-installparam-i.md) | 是 | 指定应用恢复所需的其他参数。 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;InstallStatus&gt; | 是 | [回调函数](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md/arkts-basicservices-base-asynccallback-i.md)，程序 启动作为入参的回调函数，返回安装状态信息。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;InstallStatus&gt; | 是 | [回调函数](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md/arkts-basicservices-base-asynccallback-i.md)，程序 启动作为入参的回调函数，返回安装状态信息。 |
 
 ## uninstall
 
@@ -110,5 +110,5 @@ uninstall(bundleName: string, param: InstallParam, callback: AsyncCallback<Insta
 | --- | --- | --- | --- |
 | bundleName | string | 是 | 应用Bundle名称。 |
 | param | [InstallParam](../../apis-mdm-kit/arkts-apis/arkts-mdm-bundlemanager-installparam-i.md) | 是 | 指定卸载所需的其他参数。 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;InstallStatus&gt; | 是 | [回调函数](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md/arkts-basicservices-base-asynccallback-i.md)，程序 启动作为入参的回调函数，返回安装状态信息。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;InstallStatus&gt; | 是 | [回调函数](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md/arkts-basicservices-base-asynccallback-i.md)，程序 启动作为入参的回调函数，返回安装状态信息。 |
 

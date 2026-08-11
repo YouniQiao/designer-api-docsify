@@ -12,7 +12,7 @@ import { i18n } from 'kits/@kit.LocalizationKit';
 export function getSystemLanguage(): string
 ```
 
-获取系统语言。
+Obtains the system language.
 
 **Since:** 7
 
@@ -30,5 +30,5 @@ export function getSystemLanguage(): string
 
 | Type | Description |
 | --- | --- |
-| string | 系统语言ID。 |
+| string | System language ID. |
 

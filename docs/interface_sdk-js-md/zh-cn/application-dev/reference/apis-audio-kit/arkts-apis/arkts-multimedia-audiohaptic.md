@@ -11,12 +11,6 @@
 
 **系统能力：** SystemCapability.Multimedia.AudioHaptic.Core
 
-## 导入模块
-
-```TypeScript
-import { audioHaptic } from 'kits/@kit.AudioKit';
-```
-
 ## 汇总
 
 ### 函数

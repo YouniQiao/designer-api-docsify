@@ -6,7 +6,7 @@
 const EXECUTE_IMMEDIATE: string
 ```
 
-请求的任务是否立即执行。
+Whether the requested task is executed immediately.
 
 **Since:** 26.0.0
 
@@ -26,7 +26,7 @@ const EXECUTE_IMMEDIATE: string
 const WORK_SCHEDULER_CONDITION: string
 ```
 
-当前任务触发时满足的最后一个条件。
+The last condition met when the current task is triggered.
 
 **Since:** 26.0.0
 

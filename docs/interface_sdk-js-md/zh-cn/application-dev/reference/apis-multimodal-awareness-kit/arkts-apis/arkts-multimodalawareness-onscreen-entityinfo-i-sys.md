@@ -1,6 +1,6 @@
 # EntityInfo（系统接口）
 
-Provides entity information perceived, including content, links, images, and other types of entities.
+提供感知到的实体信息，包括内容、链接、图像和其他类型的实体。
 
 **起始版本：** 23
 
@@ -12,21 +12,15 @@ Provides entity information perceived, including content, links, images, and oth
 
 **系统接口：** 此接口为系统接口。
 
-## 导入模块
-
-```TypeScript
-import { onScreen } from 'kits/@kit.MultimodalAwarenessKit';
-```
-
 ## entityInfo
 
 ```TypeScript
 entityInfo: Record<string, Object>
 ```
 
-Entity information of the awareness result, including the content, links, images, and other entity information.
+感知结果实体信息，包括内容、链接、图像和其它实体。
 
-**类型：** [Record](../../apis-default/arkts-apis/arkts-record-t.md)&lt;string, Object&gt;
+**类型：** Record&lt;string, Object&gt;
 
 **起始版本：** 23
 
@@ -46,7 +40,7 @@ Entity information of the awareness result, including the content, links, images
 entityName: string
 ```
 
-Name of the perceived entity, which is fixed.
+感知结果实体名称，固定内容。
 
 **类型：** string
 

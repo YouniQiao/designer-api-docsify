@@ -1,10 +1,12 @@
 # RowOptions
 
-设置Row组件的子组件间距属性。
+Sets the spacing between child components of the **Row** component.
 
-> **说明：**
+> **NOTE：**
 > 
-> 为规范匿名对象的定义，API 18版本修改了此处的元素定义。其中，保留了历史匿名对象的起始版本信息，会出现外层元素@since版本号高于内层元素版本号的情况，但这不影响接口的使用。
+> To standardize anonymous object definitions, the element definitions here have been revised in API version 18.
+> While starting version information is preserved for historical anonymous objects, there may be cases where the
+> outer element's @since version number is higher than inner element's. This does not affect interface usability.
 
 **Since:** 18
 
@@ -20,19 +22,12 @@
 space?: string | number
 ```
 
-横向布局元素间距。
-
-从API version 9开始，space为负数或者justifyContent设置为FlexAlign.SpaceBetween、FlexAlign.SpaceAround、FlexAlign.SpaceEvenly时不生效。
-
-默认值：0
-
-单位：vp
-
-非法值：按默认值处理。
-
-**说明：**
-
-space取值是大于等于0的数字，或者可以转换为数字的字符串。
+Spacing between child components.Since API version 9, this parameter does not take effect when it is set to a negative number or when  
+**justifyContent** is set to **FlexAlign.SpaceBetween**, **FlexAlign.SpaceAround** or **FlexAlign.SpaceEvenly**.Unit: vp. If an invalid value is set, the default value is used instead.  
+> **NOTE：**
+> 
+> The value of **space** can be a number greater than or equal to 0 or a string that can be converted to a number.
+> Default value: **0**.
 
 **Type:** string \| number
 

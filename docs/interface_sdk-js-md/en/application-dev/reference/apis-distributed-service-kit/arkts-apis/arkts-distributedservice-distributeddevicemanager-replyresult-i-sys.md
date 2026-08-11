@@ -1,6 +1,6 @@
 # ReplyResult (System API)
 
-分布式设备基本信息。
+Reply result.
 
 **Since:** 23
 
@@ -24,7 +24,7 @@ import { distributedDeviceManager } from 'kits/@kit.DistributedServiceKit';
 param: string
 ```
 
-认证用户界面状态改变信息。
+Param of ui state changes.
 
 **Type:** string
 

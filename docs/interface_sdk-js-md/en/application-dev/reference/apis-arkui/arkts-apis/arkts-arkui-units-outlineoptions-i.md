@@ -1,6 +1,6 @@
 # OutlineOptions
 
-外描边选项设置。
+Defines the options of outline.
 
 **Since:** 23
 
@@ -16,9 +16,7 @@
 color?: EdgeColors | ResourceColor | LocalizedEdgeColors
 ```
 
-设置外描边颜色。
-
-默认值：Color.Black
+Defines the outline color.
 
 **Type:** [EdgeColors](arkts-arkui-units-edgecolors-i.md) \| ResourceColor \| LocalizedEdgeColors
 
@@ -38,11 +36,7 @@ color?: EdgeColors | ResourceColor | LocalizedEdgeColors
 radius?: OutlineRadiuses | Dimension
 ```
 
-设置外描边圆角半径，不支持百分比。
-
-默认值：0
-
-最大生效值：组件width/2 + outlineWidth或组件height/2 + outlineWidth。
+Defines the outline radius.
 
 **Type:** [OutlineRadiuses](arkts-arkui-units-outlineradiuses-i.md) \| Dimension
 
@@ -62,9 +56,7 @@ radius?: OutlineRadiuses | Dimension
 style?: EdgeOutlineStyles | OutlineStyle
 ```
 
-设置外描边样式。
-
-默认值：OutlineStyle.SOLID
+Defines the outline style.
 
 **Type:** [EdgeOutlineStyles](arkts-arkui-units-edgeoutlinestyles-i.md) \| OutlineStyle
 
@@ -84,9 +76,7 @@ style?: EdgeOutlineStyles | OutlineStyle
 width?: EdgeOutlineWidths | Dimension
 ```
 
-设置外描边宽度，不支持百分比。
-
-默认值：0，外描边效果中width为必设项，否则不显示外描边。
+Defines the outline width.
 
 **Type:** [EdgeOutlineWidths](arkts-arkui-units-edgeoutlinewidths-i.md) \| Dimension
 

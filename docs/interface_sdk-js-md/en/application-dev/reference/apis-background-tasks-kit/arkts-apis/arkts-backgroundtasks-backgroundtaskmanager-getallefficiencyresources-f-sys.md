@@ -12,7 +12,7 @@ import { backgroundTaskManager } from 'kits/@kit.BackgroundTasksKit';
 function getAllEfficiencyResources(): Promise<EfficiencyResourcesInfo[]>
 ```
 
-获取已申请的所有能效资源信息，如能效资源类型等，使用Promise异步回调。
+Obtains all information about the requested efficiency resources, including the resource type. This API uses a promise to return the result.
 
 **Since:** 20
 
@@ -28,16 +28,16 @@ function getAllEfficiencyResources(): Promise<EfficiencyResourcesInfo[]>
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;EfficiencyResourcesInfo[]&gt; | Promise对象，返回所有能效资源信息。 |
+| Promise&lt;EfficiencyResourcesInfo[]&gt; | Promise used to return all information about efficiency resources. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 18700004 | System service operation failed. |
-| 202 | Not System App. |
-| 18700001 | Caller information verification failed for an energy resource request. |
-| 18700002 | Failed to write data into parcel. Possible reasons: 1. Invalid parameters; &lt;br&gt; 2. Failed to apply for memory. |
+| [18700004](../../apis-backgroundtasks-kit/errorcode-backgroundTaskMgr.md#18700004-system-service-failure) | System service operation failed. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not System App. |
+| [18700001](../../apis-backgroundtasks-kit/errorcode-backgroundTaskMgr.md#18700001-caller-information-verification-failure-for-an-energy-resource-request) | Caller information verification failed for an energy resource request. |
+| [18700002](../../apis-backgroundtasks-kit/errorcode-backgroundTaskMgr.md#18700002-parcel-operation-failure) | Failed to write data into parcel. Possible reasons: 1. Invalid parameters; &lt;br&gt; 2. Failed to apply for memory. |
 
 ## Examples
 

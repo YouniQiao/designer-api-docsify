@@ -1,6 +1,6 @@
 # TransactionType
 
-描述创建事务对象的枚举。请使用枚举名称而非枚举值。
+Enumerates the types of transaction objects that can be created. Use the enum name rather than the enum value.
 
 **Since:** 14
 
@@ -16,7 +16,7 @@
 DEFERRED = 0
 ```
 
-表示创建一个DEFERRED类型的事务对象，该类型的事务对象在创建时只会关闭自动提交而不会真正开始事务，只有在首次读或写操作时会真正开始一个读或写事务。
+Deferred transaction object. When a deferred transaction object is created, automatic commit is disabled and no transaction will start. A read or write transaction starts only when the first read or write operation is performed.
 
 **Since:** 14
 
@@ -32,7 +32,7 @@ DEFERRED = 0
 IMMEDIATE = 1
 ```
 
-表示创建一个IMMEDIATE类型的事务对象，该类型的事务对象在创建时会真正开始一个写事务；如果有别的写事务未提交，则会创建失败，返回错误码14800024。
+Immediate transaction object. When an immediate transaction object is created, a write transaction starts. If there is any uncommitted write transaction, the transaction object cannot be created and error 14800024 is returned.
 
 **Since:** 14
 
@@ -48,7 +48,7 @@ IMMEDIATE = 1
 EXCLUSIVE = 2
 ```
 
-表示创建一个EXCLUSIVE类型的事务对象，该类型的事务在WAL模式下和IMMEDIATE相同，但在其他日志模式下能够防止事务期间有其他连接读取数据库。
+Exclusive transaction object. In WAL mode, the exclusive transaction object is the same as the immediate transaction object. In other log modes, this type of transaction can prevent the database from being read by other connections during the transaction.
 
 **Since:** 14
 

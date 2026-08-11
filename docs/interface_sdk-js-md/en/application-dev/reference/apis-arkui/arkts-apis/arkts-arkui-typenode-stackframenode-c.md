@@ -1,6 +1,6 @@
 # StackFrameNode
 
-定义Stack类型的FrameNode。
+Define the Stack type of FrameNode.
 
 **Inheritance/Implementation:** StackFrameNode extends [TypedFrameNode<StackAttribute>](TypedFrameNode<StackAttribute>)
 
@@ -18,7 +18,7 @@
 abstract initialize(options?: StackOptions): StackAttribute
 ```
 
-初始化Stack类型的FrameNode。
+Initialize Stack FrameNode.
 
 **Since:** 23
 
@@ -34,7 +34,7 @@ abstract initialize(options?: StackOptions): StackAttribute
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| options | [StackOptions](../arkts-components/arkts-arkui-stackoptions-i.md) | No | Stack节点的选项。 |
+| options | [StackOptions](../arkts-components/arkts-arkui-stackoptions-i.md) | No | Stack options. |
 
 **Return value:**
 

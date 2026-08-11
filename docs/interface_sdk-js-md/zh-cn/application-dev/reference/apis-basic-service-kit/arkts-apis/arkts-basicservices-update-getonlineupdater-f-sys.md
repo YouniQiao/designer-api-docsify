@@ -1,11 +1,5 @@
 # getOnlineUpdater（系统接口）
 
-## 导入模块
-
-```TypeScript
-import { update } from 'kits/@kit.BasicServicesKit';
-```
-
 ## getOnlineUpdater
 
 ```TypeScript
@@ -48,20 +42,22 @@ function getOnlineUpdater(upgradeInfo: UpgradeInfo): Updater
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 202 | Permission verification failed. A non-system application calls a system API. |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed. A non-system application calls a system API. |
 
 ## 示例
 
 ```TypeScript
-// 定义升级信息对象
+try {
   const upgradeInfo: update.UpgradeInfo = {
-    upgradeApp: 'com.ohos.ota.updateclient',  // 调用方包名
+    upgradeApp: "com.ohos.ota.updateclient",
     businessType: {
-      vendor: update.BusinessVendor.PUBLIC, // 供应商类型
-      subType: update.BusinessSubType.FIRMWARE // 升级类型为固件
+      vendor: update.BusinessVendor.PUBLIC,
+      subType: update.BusinessSubType.FIRMWARE
     }
-  };  
-  // 获取在线升级对象
-  let onlineUpdater = update.getOnlineUpdater(upgradeInfo);
+  };
+  let updater = update.getOnlineUpdater(upgradeInfo);
+} catch(error) {
+  console.error(`Fail to get updater error: ${error}`);
+}
 ```
 

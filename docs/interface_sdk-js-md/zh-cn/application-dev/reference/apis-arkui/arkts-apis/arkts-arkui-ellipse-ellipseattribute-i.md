@@ -64,7 +64,7 @@ default setEllipseOptions(options?: EllipseOptions): this
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| options | [EllipseOptions](../arkts-components/arkts-arkui-ellipseoptions-i.md) | 否 | 椭圆绘制尺寸。&lt;br/&gt;异常值undefined和null按照无效值处理，本次设置不生效。 |
+| options | [EllipseOptions](arkts-arkui-ellipse-ellipseoptions-i.md) | 否 | 椭圆绘制尺寸。&lt;br/&gt;异常值undefined和null按照无效值处理，本次设置不生效。 |
 
 **返回值：**
 

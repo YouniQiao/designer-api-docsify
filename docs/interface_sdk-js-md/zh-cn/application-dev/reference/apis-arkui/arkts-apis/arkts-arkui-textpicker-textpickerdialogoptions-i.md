@@ -598,7 +598,7 @@ offset?: Offset
 
 默认值：{ dx: 0 , dy: 0 }
 
-**类型：** [Offset](arkts-arkui-componentutils-offset-i.md)
+**类型：** [Offset](arkts-arkui-units-offset-i.md)
 
 **默认值：** { dx: 0 , dy: 0 }
 

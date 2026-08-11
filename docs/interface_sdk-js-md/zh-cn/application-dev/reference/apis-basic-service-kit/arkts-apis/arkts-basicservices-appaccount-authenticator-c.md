@@ -10,12 +10,6 @@
 
 **系统能力：** SystemCapability.Account.AppAccount
 
-## 导入模块
-
-```TypeScript
-import { appAccount } from 'kits/@kit.BasicServicesKit';
-```
-
 ## addAccountImplicitly
 
 ```TypeScript
@@ -76,7 +70,7 @@ auth(name: string, authType: string, options: Record<string, Object>, callback: 
 | --- | --- | --- | --- |
 | name | string | 是 | 应用账号的名称。最大长度为512个字符。 |
 | authType | string | 是 | 应用账号的鉴权类型。自定义数据，最大长度为1024个字符。 |
-| options | [Record](../../apis-default/arkts-apis/arkts-record-t.md)&lt;string, Object&gt; | 是 | 鉴权所需要的可选项。 |
+| options | Record&lt;string, Object&gt; | 是 | 鉴权所需要的可选项。 |
 | callback | [AuthCallback](arkts-basicservices-appaccount-authcallback-i.md) | 是 | 认证器回调，用于返回鉴权结果。 |
 
 ## auth
@@ -101,7 +95,7 @@ auth(name: string, authType: string, options: Record<string, RecordData>, callba
 | --- | --- | --- | --- |
 | name | string | 是 | 应用账号的名称。最大长度为512个字符。 |
 | authType | string | 是 | 应用账号的鉴权类型。自定义数据，最大长度为1024个字符。 |
-| options | [Record](../../apis-default/arkts-apis/arkts-record-t.md)&lt;string, RecordData&gt; | 是 | 鉴权所需要的可选项。 |
+| options | Record&lt;string, RecordData&gt; | 是 | 鉴权所需要的可选项。 |
 | callback | [AuthCallback](arkts-basicservices-appaccount-authcallback-i.md) | 是 | 认证器回调，用于返回鉴权结果。 |
 
 ## authenticate
@@ -246,6 +240,8 @@ getRemoteObject(): rpc.RemoteObject
 
 ## 示例
 
+ArkTS-Dyn示例：
+
 ```TypeScript
 import { rpc } from '@kit.IPCKit';
 import { Want } from '@kit.AbilityKit';
@@ -253,14 +249,14 @@ import { Want } from '@kit.AbilityKit';
 class MyAuthenticator extends appAccount.Authenticator {
   verifyCredential(name: string,
     options: appAccount.VerifyCredentialOptions, callback: appAccount.AuthCallback) {
-      let want: Want = {
-        bundleName: 'com.example.accountjsdemo',
-        abilityName: 'com.example.accountjsdemo.VerifyAbility',
-        parameters: {
-          name: name
-        }
-      };
-      callback.onRequestRedirected(want);
+    let want: Want = {
+      bundleName: 'com.example.accountjsdemo',
+      abilityName: 'com.example.accountjsdemo.VerifyAbility',
+      parameters: {
+        name: name
+      }
+    };
+    callback.onRequestRedirected(want);
   }
 
   setProperties(options: appAccount.SetPropertiesOptions, callback: appAccount.AuthCallback) {
@@ -285,6 +281,120 @@ class MyAuthenticator extends appAccount.Authenticator {
 
 export default {
   onConnect(want: Want): rpc.RemoteObject { // serviceAbility 生命周期函数, 需要放在serviceAbility中
+    let authenticator = new MyAuthenticator();
+    return authenticator.getRemoteObject();
+  }
+}
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+import { rpc } from '@kit.IPCKit';
+import { Want } from '@kit.AbilityKit';
+import { RecordData } from '@ohos.base';
+
+import appAccount from '@ohos.account.appAccount';
+
+@Entry
+@Component
+struct ListDemo5 {
+  build(){
+  }
+}
+
+class MyAuthenticator extends appAccount.Authenticator {
+  verifyCredential(name: string,
+    options: appAccount.VerifyCredentialOptions, callback: appAccount.AuthCallback) {
+    let dataName: Record<String, RecordData> = {"name": name };
+    let want: Want = {
+      bundleName: 'com.example.accountjsdemo',
+      abilityName: 'com.example.accountjsdemo.VerifyAbility',
+      parameters: dataName
+    };
+    callback.onResult(0);
+  }
+
+  setProperties(options: appAccount.SetPropertiesOptions, callback: appAccount.AuthCallback) {
+    let dataOptions: Record<String, RecordData> = {"options": options }
+    let want: Want = {
+      bundleName: 'com.example.accountjsdemo',
+      abilityName: 'com.example.accountjsdemo.SetPropertiesAbility',
+      parameters: dataOptions
+    };
+    callback.onResult(0);
+  }
+
+  checkAccountLabels(name: string, labels: string[], callback: appAccount.AuthCallback) {
+
+    let accountLabels: Record<string, Array<string>> = {
+      'zhangsan': ['male', '30-40', 'level4'],
+      'lisi': ['female']
+    };
+    let authResult: appAccount.AuthResult = {
+      account: {
+        name: name,
+        owner: 'com.acts.accountauthenticator.static'
+      },
+      tokenInfo: undefined
+    }
+    if (name === 'notExistAccount') {
+      callback.onResult(12300003);
+      return;
+    }
+    if (labels.length == 0) {
+      callback.onResult(0, authResult)
+      return
+    }
+    let allLabels: Array<string> | undefined;
+    try {
+      allLabels = accountLabels[name];
+    } catch (err) {
+      console.info('[Authenticator] no labels');
+      allLabels == undefined
+    }
+    if (allLabels == undefined || allLabels.length == 0) {
+      callback.onResult(0, undefined);
+      return;
+    }
+    for (let i = 0; i < labels.length; ++i) {
+      if (allLabels.indexOf(labels[i]) == -1) {
+        callback.onResult(0, undefined);
+        return;
+      }
+    }
+    callback.onResult(0, authResult)
+  }
+
+  checkAccountRemovable(name: string, callback: appAccount.AuthCallback) {
+    let accountRemovability: Record<string, boolean> = {
+      'zhangsan': false,
+      'lisi': true
+    };
+    console.info('[Authenticator] name: ' + name);
+    let isRemovable: Boolean | undefined = false;
+    try {
+      isRemovable = accountRemovability[name];
+    } catch (err) {
+      console.info('[Authenticator] error: ' + JSON.stringify(err));
+    }
+    let authResult: appAccount.AuthResult = {
+      account: {
+        name: name,
+        owner: 'com.acts.accountauthenticator.static'
+      },
+      tokenInfo: undefined
+    }
+    if (isRemovable) {
+      callback.onResult(0, authResult);
+      return;
+    }
+    callback.onResult(0, undefined);
+  }
+}
+
+export default class ServiceExtAbilitty {
+  onConnect(want: Want) {
     let authenticator = new MyAuthenticator();
     return authenticator.getRemoteObject();
   }

@@ -1,6 +1,6 @@
 # CreateAccountOptions
 
-表示创建账号的选项。
+Defines the options for creating an application account.
 
 **Since:** 9
 
@@ -22,7 +22,7 @@ import { appAccount } from 'kits/@kit.BasicServicesKit';
 customData?: Record<string, string>
 ```
 
-自定义数据，默认为空。
+Custom data. By default, no value is passed in.
 
 **Type:** [Record](../../apis-default/arkts-apis/arkts-record-t.md)&lt;string, string&gt;
 

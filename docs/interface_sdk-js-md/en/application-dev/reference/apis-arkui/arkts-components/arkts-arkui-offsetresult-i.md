@@ -1,6 +1,6 @@
 # OffsetResult
 
-滑动偏移量对象。
+Represents the offset values resulting from a scroll operation.
 
 **Since:** 11
 
@@ -16,9 +16,7 @@
 xOffset: number
 ```
 
-水平滑动偏移。
-
-单位：vp。
+Horizontal scrolling offset.&lt;br&gt;The unit of the return value is vp.
 
 **Type:** number
 
@@ -40,9 +38,7 @@ xOffset: number
 yOffset: number
 ```
 
-竖直滑动偏移。
-
-单位：vp。
+Vertical scrolling offset.&lt;br&gt;The unit of the return value is vp.
 
 **Type:** number
 

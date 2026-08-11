@@ -1,6 +1,6 @@
 # AudioTimestampInfo
 
-音频流时间戳和当前数据帧位置信息。
+Describes the information about the audio stream timestamp and the current data frame position.
 
 **Since:** 19
 
@@ -22,7 +22,7 @@ import { audio } from 'kits/@kit.AudioKit';
 readonly framePos: long
 ```
 
-当前播放或者录制的数据帧位置。
+Position of the current data frame for playback or recording.
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：long
 
@@ -40,7 +40,7 @@ readonly framePos: long
 readonly timestamp: long
 ```
 
-播放或者录制到当前数据帧位置时对应的时间戳，单位为纳秒。
+Timestamp corresponding to the current data frame position during playback or recording, in nanoseconds.
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：long
 

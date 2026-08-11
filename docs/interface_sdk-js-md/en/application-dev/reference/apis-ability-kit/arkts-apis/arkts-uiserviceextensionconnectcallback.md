@@ -6,5 +6,5 @@
 
 | Name | Description |
 | --- | --- |
-| [UIServiceExtensionConnectCallback](arkts-ability-uiserviceextensionconnectcallback-i.md) | UIServiceExtensionConnectCallback是UIServiceExtension连接回调接口类，提供UIServiceExtension连接回调数据能力。 |
+| [UIServiceExtensionConnectCallback](arkts-ability-uiserviceextensionconnectcallback-i.md) | UIServiceExtensionConnectCallback provides callbacks for the connection to a UIServiceExtensionAbility.  > **NOTE：** >  > - The APIs of this module must be used in the main thread, but not in child threads such as Worker and TaskPool. |
 

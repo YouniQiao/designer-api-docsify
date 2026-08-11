@@ -1,6 +1,6 @@
 # AuthForm (System API)
 
-表示设备认证类型的枚举类。
+Enumerates the device authentication types.
 
 **Since:** 10
 
@@ -20,7 +20,7 @@
 INVALID_TYPE = -1
 ```
 
-设备没有认证。
+No authentication.
 
 **Since:** 10
 
@@ -40,7 +40,7 @@ INVALID_TYPE = -1
 PEER_TO_PEER = 0
 ```
 
-无账号设备点对点认证。
+Point-to-point authentication for devices without accounts.
 
 **Since:** 10
 
@@ -60,7 +60,7 @@ PEER_TO_PEER = 0
 IDENTICAL_ACCOUNT = 1
 ```
 
-设备同账号认证。
+Authentication for devices using the same account.
 
 **Since:** 10
 
@@ -80,7 +80,7 @@ IDENTICAL_ACCOUNT = 1
 ACROSS_ACCOUNT = 2
 ```
 
-设备跨账号认证。
+Authentication for devices using different accounts.
 
 **Since:** 10
 

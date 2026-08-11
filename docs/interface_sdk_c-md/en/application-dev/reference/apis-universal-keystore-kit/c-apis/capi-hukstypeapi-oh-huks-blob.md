@@ -1,7 +1,7 @@
 # OH_Huks_Blob
 
 ```c
-struct OH_Huks_Blob {...}
+typedef struct OH_Huks_Blob {...} OH_Huks_Blob
 ```
 
 ## Overview
@@ -20,7 +20,7 @@ Defines the struct of a binary large object (BLOB).
 
 | Name | Description |
 | -- | -- |
-| uint32_t size | Data size. |
-| uint8_t *data | Pointer to the memory in which the data is stored. |
+| uint32_t size | Data size in bytes. |
+| uint8_t *data | Pointer to the data. |
 
 

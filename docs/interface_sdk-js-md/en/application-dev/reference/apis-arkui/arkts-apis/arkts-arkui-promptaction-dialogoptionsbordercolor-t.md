@@ -4,7 +4,7 @@
 export type DialogOptionsBorderColor = ResourceColor | EdgeColors
 ```
 
-表示弹窗背板的边框颜色允许的数据字段类型。
+Border color type of DialogOptions.
 
 **Since:** 23
 
@@ -18,6 +18,6 @@ export type DialogOptionsBorderColor = ResourceColor | EdgeColors
 
 | Type | Description |
 | --- | --- |
-| ResourceColor | 表示值类型为颜色类型，用于描述资源颜色类型。 |
-| EdgeColors | 表示值类型为边框颜色，用于描述组件边框四条边的颜色。 |
+| ResourceColor |  |
+| EdgeColors |  |
 

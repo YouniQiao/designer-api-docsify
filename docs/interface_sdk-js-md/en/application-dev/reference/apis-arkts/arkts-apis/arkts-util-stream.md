@@ -1,6 +1,8 @@
 # @ohos.util.stream
 
-本模块提供基本流类型的处理能力，支持数据分块读取或写入，避免一次性加载整个数据到内存。包括可写流（[Writable](arkts-arkts-stream-writable-c.md)）、可读流（[Readable](arkts-arkts-stream-readable-c.md)）、双工流（[Duplex](arkts-arkts-stream-duplex-c.md)）和转换流（[Transform](arkts-arkts-stream-transform-c.md)）。
+The stream module provides APIs to process basic types of streams. With streams, data is read or written by chunk,instead of being loaded to the memory at a time.There are four fundamental stream types: writable streams ([Writable](arkts-arkts-stream-writable-c.md)), readable streams (  
+[Readable](arkts-arkts-stream-readableoptions-i.md)), duplex streams ([Duplex](arkts-arkts-stream-duplex-c.md)), and transform streams (  
+[Transform](arkts-arkts-stream-transform-c.md)).
 
 **Since:** 12
 
@@ -22,14 +24,14 @@ import { stream } from 'kits/@kit.ArkTS';
 
 | Name | Description |
 | --- | --- |
-| [Duplex](arkts-arkts-stream-duplex-c.md) | 既可读又可写的流。双工流允许数据双向传输，即可读可写。  **Duplex**类继承自[Readable](arkts-arkts-stream-readableoptions-i.md)，支持**Readable**中的所有API。 |
-| [Readable](arkts-arkts-stream-readable-c.md) | 可从中读取数据的流。可读流用于从源（如文件或网络套接字）读取数据。 |
-| [Transform](arkts-arkts-stream-transform-c.md) | 一种特殊的双工流，支持数据转换和结果输出。**Transform**类继承自[Duplex](arkts-arkts-stream-duplex-c.md)，支持**Duplex**中的所有API。 |
-| [Writable](arkts-arkts-stream-writable-c.md) | 可写入数据的流。可写流允许将数据写入到目标中，这个目标可以是文件、HTTP响应、标准输出、另一个流等。可写流采用缓冲区机制：数据通过write()写入缓冲区，缓冲区数据通过doWrite()自动写出到目标，开发者需实现doWrite以定义数据写出的具体行为。 |
+| [Duplex](arkts-arkts-stream-duplex-c.md) | A stream that is both readable and writable. A duplex stream allows data to be transmitted in two directions, that is, data can be read and written.The **Duplex** class inherits from [Readable](arkts-arkts-stream-readableoptions-i.md) and supports all the APIs in  **Readable**. |
+| [Readable](arkts-arkts-stream-readable-c.md) | Stream from which data can be read. A readable stream is used to read data from a source, such as a file or a network socket. |
+| [Transform](arkts-arkts-stream-transform-c.md) | A special duplex stream that supports data conversion and result output. The **Transform** class inherits from  [Duplex](arkts-arkts-stream-duplex-c.md) and supports all the APIs in **Duplex**. |
+| [Writable](arkts-arkts-stream-writable-c.md) | Stream to which data can be written. A writable stream allows data to be written to a target, which can be a file,an HTTP response, a standard output, another stream, or the like. |
 
 ### Interfaces
 
 | Name | Description |
 | --- | --- |
-| [ReadableOptions](arkts-arkts-stream-readableoptions-i.md) | 描述**Readable**构造函数中使用的选项。 |
+| [ReadableOptions](arkts-arkts-stream-readableoptions-i.md) | Describes the options used in the **Readable** constructor. |
 

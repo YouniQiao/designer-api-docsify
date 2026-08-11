@@ -12,7 +12,7 @@ import { curves } from 'kits/@kit.ArkUI';
 export function initCurve(curve?: Curve): ICurve
 ```
 
-插值曲线的初始化函数，可以根据入参创建一个插值曲线对象。
+Implements initialization for the interpolation curve,which is used to create an interpolation curve based on the input parameter.
 
 **Since:** 23
 
@@ -28,11 +28,11 @@ export function initCurve(curve?: Curve): ICurve
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| curve | [Curve](arkts-arkui-curve-e.md) | No | 曲线类型。&lt;br/&gt;默认值：Curve.Linear |
+| curve | [Curve](arkts-arkui-curve-e.md) | No | Curve type.&lt;br&gt;Default value: **Curve.Linear**. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [ICurve](arkts-arkui-curves-icurve-i.md) | 曲线的插值对象。 |
+| [ICurve](arkts-arkui-curves-icurve-i.md) |  |
 

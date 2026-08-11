@@ -1,6 +1,6 @@
 # Movement
 
-选中文本时，光标移动的方向
+Describes the direction in which the cursor moves when the text is selected.
 
 **Since:** 10
 
@@ -22,7 +22,7 @@ import { inputMethodEngine } from 'kits/@kit.IMEKit';
 direction: Direction
 ```
 
-选中文本时，光标的移动方向。
+Direction in which the cursor moves when the text is selected.
 
 **Type:** [Direction](../../apis-mdm-kit/arkts-apis/arkts-mdm-networkmanager-direction-e.md)
 

@@ -12,7 +12,7 @@ import { bundleResourceManager } from 'kits/@kit.AbilityKit';
 function getBundleResourceInfo(bundleName: string, resourceFlags?: int): BundleResourceInfo
 ```
 
-以同步方法根据给定的bundleName和resourceFlags获取当前应用的BundleResourceInfo。
+Obtains the resource information of an application based on the given bundle name and resource flags. This API returns the result synchronously.
 
 **Since:** 11
 
@@ -30,23 +30,23 @@ function getBundleResourceInfo(bundleName: string, resourceFlags?: int): BundleR
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| bundleName | string | Yes | 指定查询应用的包名。 |
-| resourceFlags | int | No | 指定返回的BundleResourceInfo所包含的信息。 |
+| bundleName | string | Yes | Bundle name of the application. |
+| resourceFlags | int | No | Type of the resource information to obtain. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [BundleResourceInfo](arkts-ability-bundleresourceinfo-i-sys.md) | 返回指定应用的BundleResourceInfo。 |
+| [BundleResourceInfo](arkts-ability-bundleresourceinfo-i-sys.md) | Resource information of the application obtained. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types. |
-| 201 | Permission denied. |
-| 202 | Permission denied, non-system app called system api. |
-| 17700001 | The specified bundleName is not found. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission denied, non-system app called system api. |
+| [17700001](../errorcode-bundle.md#17700001-bundle-name-does-not-exist) | The specified bundleName is not found. |
 
 
 ## getBundleResourceInfo
@@ -55,7 +55,7 @@ function getBundleResourceInfo(bundleName: string, resourceFlags?: int): BundleR
 function getBundleResourceInfo(bundleName: string, resourceFlags?: int, appIndex?: int): BundleResourceInfo
 ```
 
-以同步方法根据给定的bundleName、resourceFlags和appIndex获取当前应用或分身应用的BundleResourceInfo。
+Obtains the resource information of an application based on the given bundle name, resource flags, and app index.This API returns the result synchronously.
 
 **Since:** 12
 
@@ -73,23 +73,23 @@ function getBundleResourceInfo(bundleName: string, resourceFlags?: int, appIndex
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| bundleName | string | Yes | 指定查询应用的包名。 |
-| resourceFlags | ArkTS-Dyn: number  <br>ArkTS-Sta：int | No | 指定返回的BundleResourceInfo所包含的信息。 |
-| appIndex | ArkTS-Dyn: number  <br>ArkTS-Sta：int | No | 指定查询应用分身的ID，默认值为0。 |
+| bundleName | string | Yes | Bundle name of the application. |
+| resourceFlags | ArkTS-Dyn: number  <br>ArkTS-Sta：int | No | Type of the resource information to obtain. |
+| appIndex | ArkTS-Dyn: number  <br>ArkTS-Sta：int | No | Index of the application clone. The default value is **0**. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [BundleResourceInfo](arkts-ability-bundleresourceinfo-i-sys.md) | 返回指定应用的BundleResourceInfo。 |
+| [BundleResourceInfo](arkts-ability-bundleresourceinfo-i-sys.md) | Resource information of the application obtained. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types. |
-| 17700061 | AppIndex not in valid range or not found. |
-| 201 | Permission denied. |
-| 202 | Permission denied, non-system app called system api. |
-| 17700001 | The specified bundleName is not found. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types. |
+| [17700061](../errorcode-bundle.md#17700061-appindex-for-a-clone-is-invalid) | AppIndex not in valid range or not found. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission denied, non-system app called system api. |
+| [17700001](../errorcode-bundle.md#17700001-bundle-name-does-not-exist) | The specified bundleName is not found. |
 

@@ -48,8 +48,8 @@ Obtains the supported ISO range.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 7400103 | Session not config, only throw in session usage. |
-| 202 | Not System Application. |
+| [7400103](../errorcode-camera.md#7400103-session-not-configured) | Session not config, only throw in session usage. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not System Application. |
 
 ## Examples
 
@@ -103,8 +103,8 @@ Get a array of supported standard ISO sensitivity values, as defined in ISO 1223
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 7400102 | Operation not allowed, the inputDevice or the session is abnormal. |
-| 7400103 | Session not config, only throw in session usage. |
+| [7400102](../errorcode-camera.md#7400102-invalid-operation) | Operation not allowed, the inputDevice or the session is abnormal. |
+| [7400103](../errorcode-camera.md#7400103-session-not-configured) | Session not config, only throw in session usage. |
 
 ## isManualIsoSupported
 
@@ -132,8 +132,8 @@ Checks whether manual ISO setting is supported.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 7400103 | Session not config, only throw in session usage. |
-| 202 | Not System Application. |
+| [7400103](../errorcode-camera.md#7400103-session-not-configured) | Session not config, only throw in session usage. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not System Application. |
 
 ## Examples
 

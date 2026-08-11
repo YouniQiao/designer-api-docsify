@@ -1,6 +1,6 @@
 # LeadingMarginSpan
 
-文本段落的自定义缩进，仅提供基类，具体实现由开发者定义。适用于需要在段落首行或各行开头绘制自定义标记、图标等内容的场景，例如列表项前的自定义符号、段落首行装饰图案等。
+Defines custom indentation for text paragraphs. Only a base class is provided; the specific implementation is left to developers.
 
 **Since:** 22
 
@@ -16,7 +16,7 @@
 abstract getLeadingMargin(): LengthMetrics
 ```
 
-返回文本段落的缩进距离。
+Returns the indentation distance for a text paragraph.
 
 **Since:** 22
 
@@ -34,7 +34,7 @@ abstract getLeadingMargin(): LengthMetrics
 
 | Type | Description |
 | --- | --- |
-| [LengthMetrics](arkts-arkui-lengthmetrics-t.md) | 文本段落的缩进。不支持百分比。 &lt;br&gt;默认值：0 |
+| [LengthMetrics](arkts-arkui-lengthmetrics-t.md) | Paragraph indentation distance. The value cannot be in percentage. &lt;br&gt;Default value: **0**. &lt;br&gt; |
 
 ## onDraw
 
@@ -42,7 +42,7 @@ abstract getLeadingMargin(): LengthMetrics
 abstract onDraw(context: DrawContext, drawInfo: LeadingMarginSpanDrawInfo): void
 ```
 
-绘制自定义图案。段落中的每一行文本都会触发一次onDraw。
+Draws a custom pattern. This API is triggered once for each line of text in a paragraph.
 
 **Since:** 22
 
@@ -60,6 +60,6 @@ abstract onDraw(context: DrawContext, drawInfo: LeadingMarginSpanDrawInfo): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| context | [DrawContext](arkts-arkui-graphics-drawcontext-c.md) | Yes | 图形绘制上下文。 &lt;br&gt;DrawContext的canvas方法获取的是组件的画布，绘制时不会超出组件的范围。 |
-| drawInfo | [LeadingMarginSpanDrawInfo](arkts-arkui-styledstring-leadingmarginspandrawinfo-i.md) | Yes | 自定义绘制信息。 |
+| context | [DrawContext](arkts-arkui-graphics-drawcontext-c.md) | Yes | Drawing context.&lt;br&gt;The **canvas** method of **DrawContext** obtains the canvas of the component. As such, the custom span does not extend beyond the area of the component. |
+| drawInfo | [LeadingMarginSpanDrawInfo](arkts-arkui-styledstring-leadingmarginspandrawinfo-i.md) | Yes | Custom drawing information. |
 

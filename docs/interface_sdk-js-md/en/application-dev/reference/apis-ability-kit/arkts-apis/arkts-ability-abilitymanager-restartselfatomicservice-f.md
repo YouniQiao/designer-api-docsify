@@ -12,16 +12,16 @@ import { abilityManager } from 'kits/@kit.AbilityKit';
 function restartSelfAtomicService(context: Context): void
 ```
 
-重启当前原子化服务。
+Restarts the current atomic service.
 
-> **说明：**
+> **NOTE：**
 > 
-> - 当前仅支持以独立窗口方式拉起原子化服务。
+> - Currently, atomic services can be started only in an independent window.
 > 
-> - 在调用本接口成功后的3秒内，再次调用本接口、
-> [ApplicationContext.restartApp()](arkts-ability-applicationcontext-c.md#restartapp)或
-> [UIAbilityContext.restartApp()](arkts-ability-uiabilitycontext-c.md#restartapp)接口中的任一接口，系统将返回错误码1
-> 6000064。
+> - If you call this API,
+> [ApplicationContext.restartApp()](./application/ApplicationContext:ApplicationContext/restartApp), or
+> [UIAbilityContext.restartApp()](arkts-ability-uiabilitycontext-c.md#restartapp) within 3 seconds
+> after a successful call to this API, the system returns error code 16000064.
 
 **Since:** 20
 
@@ -39,17 +39,17 @@ function restartSelfAtomicService(context: Context): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| context | [Context](arkts-ability-context-c.md) | Yes | 当前Ability的上下文。&lt;br&gt;**说明：**当前仅支持 [UIAbilityContext](arkts-ability-uiabilitycontext-c.md)。&lt;/br&gt; |
+| context | [Context](arkts-ability-context-c.md) | Yes | Context of the ability.&lt;br&gt;Note: Currently, only [UIAbilityContext](arkts-ability-uiabilitycontext-c.md) is supported.&lt;br&gt; |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 16000053 | The ability is not on the top of the UI. |
-| 16000086 | The context is not UIAbilityContext. |
-| 16000064 | Restart too frequently. Try again at least 3s later. |
-| 16000050 | Internal error. Possible causes: 1. Connect to system service failed; 2.Send restart message to system service failed; 3.System service failed to communicate with dependency module. |
-| 16000090 | The caller is not an atomic service. |
+| [16000053](../errorcode-ability.md#16000053-ability-is-not-on-top-of-ui) | The ability is not on the top of the UI. |
+| [16000086](../errorcode-ability.md#16000086-context-is-not-a-uiabilitycontext) | The context is not UIAbilityContext. |
+| [16000064](../errorcode-ability.md#16000064-frequent-application-restart) | Restart too frequently. Try again at least 3s later. |
+| [16000050](../errorcode-ability.md#16000050-internal-error) | Internal error. Possible causes: 1. Connect to system service failed; 2.Send restart message to system service failed; 3.System service failed to communicate with dependency module. |
+| [16000090](../errorcode-ability.md#16000090-caller-is-not-an-atomic-service) | The caller is not an atomic service. |
 
 ## Examples
 

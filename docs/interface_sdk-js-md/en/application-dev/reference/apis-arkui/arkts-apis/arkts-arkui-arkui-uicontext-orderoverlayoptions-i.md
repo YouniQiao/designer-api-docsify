@@ -1,6 +1,6 @@
 # OrderOverlayOptions
 
-使用顺序打开浮层的选项。
+Options for opening an overlay with order.
 
 **Since:** 26.0.0
 
@@ -22,7 +22,7 @@ import { OverlayManager, FrameCallback, ResolvedUIContext, NodeRenderStateChange
 levelMode?: LevelMode
 ```
 
-浮层的显示模式。
+The display mode of the overlay.
 
 **Type:** [LevelMode](arkts-arkui-promptaction-levelmode-e.md)
 
@@ -42,7 +42,7 @@ levelMode?: LevelMode
 levelOrder?: LevelOrder
 ```
 
-浮层的显示顺序。
+The display order of the overlay.
 
 **Type:** [LevelOrder](arkts-arkui-promptaction-levelorder-c.md)
 
@@ -62,7 +62,7 @@ levelOrder?: LevelOrder
 levelUniqueId?: int
 ```
 
-路由器或导航页面中任何节点的唯一ID。
+The uniqueId of any node in the router or navigation page.
 
 **Type:** int
 

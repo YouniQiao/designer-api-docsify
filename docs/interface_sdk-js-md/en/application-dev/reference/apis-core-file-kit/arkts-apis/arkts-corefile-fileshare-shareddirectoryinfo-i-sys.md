@@ -1,6 +1,6 @@
 # SharedDirectoryInfo (System API)
 
-应用程序向系统捐献的目录信息。
+The directory information shared with the system by the application.
 
 **Since:** 26.0.0
 
@@ -24,7 +24,7 @@ import { fileShare } from 'kits/@kit.CoreFileKit';
 bundleName: string
 ```
 
-应用程序的包名。
+Indicates the bundle name of the application.
 
 **Type:** string
 
@@ -46,7 +46,7 @@ bundleName: string
 path: string
 ```
 
-应用程序捐献的目录。
+Indicates the path of the application's shared directory.
 
 **Type:** string
 
@@ -68,7 +68,7 @@ path: string
 permissionMode: int
 ```
 
-应用程序捐献目录的权限，例如 { OperationMode.READ_MODE } 或{ OperationMode.READ_MODE | OperationMode.WRITE_MODE }。
+Indicates the permission for the application's shared directory, e.g., { OperationMode.READ_MODE }or { OperationMode.READ_MODE | OperationMode.WRITE_MODE }
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 

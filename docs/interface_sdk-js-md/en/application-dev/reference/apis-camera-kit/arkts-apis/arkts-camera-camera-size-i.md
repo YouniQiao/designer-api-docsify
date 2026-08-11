@@ -1,6 +1,6 @@
 # Size
 
-尺寸参数。
+Describes the image dimensions.
 
 **Since:** 10
 
@@ -22,7 +22,7 @@ import { camera } from 'kits/@kit.CameraKit';
 height: int
 ```
 
-图像尺寸高（像素）。
+Image height, in pixels.
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
@@ -42,7 +42,7 @@ height: int
 width: int
 ```
 
-图像尺寸宽（像素）。
+Image width, in pixels.
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 

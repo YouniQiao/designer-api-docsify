@@ -9,7 +9,7 @@ export declare function ToolBarItem(
 ): ToolBarItemAttribute
 ```
 
-定义ToolBarItem组件。
+Defines ToolBarItem Component.
 
 **Since:** 23
 
@@ -25,8 +25,8 @@ export declare function ToolBarItem(
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| options | [ToolBarItemOptions](../arkts-components/arkts-arkui-toolbaritemoptions-i.md) | No | 分栏选项 |
-| content_ | [CustomBuilder](../arkts-components/arkts-arkui-custombuilder-t.md) | No | 容器 |
+| options | [ToolBarItemOptions](../arkts-components/arkts-arkui-toolbaritemoptions-i.md) | No | column options |
+| content_ | [CustomBuilder](../arkts-components/arkts-arkui-custombuilder-t.md) | No | container |
 
 **Return value:**
 
@@ -44,11 +44,11 @@ export declare function ToolBarItem(
 ): ToolBarItemAttribute
 ```
 
-定义ToolBarItem组件。需要在组件属性设置开始时调用setToolBarItemOptions，并在组件属性设置结束时调用applyAttributeFinish。
+Defines ToolBarItem Component.It requires call setToolBarItemOptions at start of the component attribute set-up,and it requires call applyAttributeFinish at the end of the component attribute set-up.
 
-**Since:** 26.0.0
+**Since:** 26.1.0
 
-**ArkTS mode:** ArkTS-Sta only, since version 26.0.0.
+**ArkTS mode:** ArkTS-Sta only, since version 26.1.0.
 
 **Decorator:** @Builder
 
@@ -62,12 +62,12 @@ export declare function ToolBarItem(
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| style | [CustomBuilderT](../arkts-components/arkts-arkui-custombuildert-t.md)&lt;ToolBarItemAttribute&gt; | Yes | 用于设置toolbaritem属性的回调。 |
-| content_ | [CustomBuilder](../arkts-components/arkts-arkui-custombuilder-t.md) | No | 容器。 |
+| style | [CustomBuilderT](../arkts-components/arkts-arkui-custombuildert-t.md)&lt;ToolBarItemAttribute&gt; | Yes | the callback to set up toolbaritem's attributes. |
+| content_ | [CustomBuilder](../arkts-components/arkts-arkui-custombuilder-t.md) | No | container. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [ToolBarItemAttribute](arkts-arkui-toolbar-toolbaritemattribute-i.md) | ToolBarItem的属性。 |
+| [ToolBarItemAttribute](arkts-arkui-toolbar-toolbaritemattribute-i.md) | The attribute of the ToolBarItem. |
 

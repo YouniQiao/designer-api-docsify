@@ -1,6 +1,6 @@
 # SamplerAddressMode
 
-采样器的寻址模式
+Enumerates the sampler addressing modes, which are used to control how texture coordinates are handled when they go beyond the [0, 1] range.
 
 **Since:** 20
 
@@ -16,7 +16,7 @@
 REPEAT = 0
 ```
 
-重复
+The texture repeats when the coordinates exceed the range.
 
 **Since:** 20
 
@@ -32,7 +32,7 @@ REPEAT = 0
 MIRRORED_REPEAT = 1
 ```
 
-镜像重复
+The texture mirrors and repeats when the coordinates exceed the range.
 
 **Since:** 20
 
@@ -48,7 +48,7 @@ MIRRORED_REPEAT = 1
 CLAMP_TO_EDGE = 2
 ```
 
-钳制到边缘
+The edge pixels of the texture are stretched when the coordinates exceed the range.
 
 **Since:** 20
 

@@ -4,7 +4,7 @@
 type BundleChangedEvent = 'add' | 'update' | 'remove'
 ```
 
-监听的事件类型。
+Indicates the event type of bundle change
 
 **Since:** 9
 

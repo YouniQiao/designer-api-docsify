@@ -34,11 +34,11 @@ Unsubscribes from the callback for listening to the carrier call state.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 8800999 | Unknown error. |
-| 8800002 | Service connection failed. |
-| 8800003 | System internal error. |
-| 8800001 | Invalid parameter value. |
-| 201 | Permission denied. |
+| [8800999](../errorcode-telephony.md#8800999-internal-error) | Unknown error. |
+| [8800002](../errorcode-telephony.md#8800002-service-connection-error) | Service connection failed. |
+| [8800003](../errorcode-telephony.md#8800003-system-internal-error) | System internal error. |
+| [8800001](../errorcode-telephony.md#8800001-input-parameter-value-out-of-range) | Invalid parameter value. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
 
 ## Examples
 

@@ -1,6 +1,6 @@
 # FocusBoxStyle
 
-设置当前组件系统焦点框样式。
+Sets the system focus box style for the component.
 
 **Since:** 12
 
@@ -16,9 +16,9 @@
 margin?: LengthMetrics
 ```
 
-焦点框相对组件边缘的距离。
+Distance of the focus box from the component's edge.
 
-正数代表外侧，负数代表内侧。不支持百分比。
+A positive number indicates the outside, and a negative number indicates the inside. The value cannot be in percentage.
 
 **Type:** [LengthMetrics](arkts-arkui-graphics-lengthmetrics-c.md)
 
@@ -40,7 +40,7 @@ margin?: LengthMetrics
 strokeColor?: ColorMetrics
 ```
 
-焦点框颜色。
+Stroke color of the focus box.
 
 **Type:** [ColorMetrics](arkts-arkui-graphics-colormetrics-c.md)
 
@@ -62,9 +62,9 @@ strokeColor?: ColorMetrics
 strokeWidth?: LengthMetrics
 ```
 
-焦点框宽度。
+Stroke width of the focus box.
 
-不支持负数与百分比。
+Negative numbers and percentages are not supported.
 
 **Type:** [LengthMetrics](arkts-arkui-graphics-lengthmetrics-c.md)
 

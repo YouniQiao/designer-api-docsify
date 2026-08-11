@@ -1,6 +1,6 @@
 # CompressStrategy
 
-CompressStrategy作为[Options](arkts-basicservices-zlib-options-i.md)的一个属性，用于指定压缩时的压缩策略。
+CompressStrategy
 
 **Since:** 7
 
@@ -16,7 +16,7 @@ CompressStrategy作为[Options](arkts-basicservices-zlib-options-i.md)的一个�
 COMPRESS_STRATEGY_DEFAULT_STRATEGY = 0
 ```
 
-常规数据策略。
+Default compression strategy.
 
 **Since:** 7
 
@@ -34,7 +34,7 @@ COMPRESS_STRATEGY_DEFAULT_STRATEGY = 0
 COMPRESS_STRATEGY_FILTERED = 1
 ```
 
-过滤器产生的数据压缩策略。
+Filtered compression strategy.
 
 **Since:** 7
 
@@ -52,7 +52,7 @@ COMPRESS_STRATEGY_FILTERED = 1
 COMPRESS_STRATEGY_HUFFMAN_ONLY = 2
 ```
 
-霍夫曼编码格式压缩策略。
+Huffman coding compression strategy.
 
 **Since:** 7
 
@@ -70,7 +70,7 @@ COMPRESS_STRATEGY_HUFFMAN_ONLY = 2
 COMPRESS_STRATEGY_RLE = 3
 ```
 
-游标编码压缩策略。
+RLE compression strategy.
 
 **Since:** 7
 
@@ -88,7 +88,7 @@ COMPRESS_STRATEGY_RLE = 3
 COMPRESS_STRATEGY_FIXED = 4
 ```
 
-固定的压缩策略。
+Fixed compression strategy.
 
 **Since:** 7
 

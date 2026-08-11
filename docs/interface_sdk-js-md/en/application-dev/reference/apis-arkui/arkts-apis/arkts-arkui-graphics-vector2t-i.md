@@ -1,6 +1,6 @@
 # Vector2T
 
-用于表示T类型的包含x和y两个值的向量。
+Defines a vector with two T type values.
 
 **Since:** 23
 
@@ -16,7 +16,7 @@
 x: T
 ```
 
-向量x轴方向的值。取值范围：(-∞, +∞)。
+Value for x-axis of the vector.
 
 **Type:** T
 
@@ -36,7 +36,7 @@ x: T
 y: T
 ```
 
-向量y轴方向的值。取值范围：(-∞, +∞)。
+Value for y-axis of the vector.
 
 **Type:** T
 

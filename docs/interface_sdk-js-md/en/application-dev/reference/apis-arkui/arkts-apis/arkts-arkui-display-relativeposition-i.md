@@ -1,6 +1,6 @@
 # RelativePosition
 
-相对坐标系下的坐标位置，以displayId对应的屏幕左上角为原点。
+Describes a coordinate position in the relative coordinate system, with the origin in the top-left corner of the screen specified by **displayId**.
 
 **Since:** 20
 
@@ -22,7 +22,7 @@ import { display } from 'kits/@kit.ArkUI';
 displayId: long
 ```
 
-相对坐标所对应的屏幕ID，仅支持整数输入，且需大于等于0。
+Display ID for the relative coordinates. Only integers are supported, and the value must be greater than or equal to 0.
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：long
 
@@ -40,7 +40,7 @@ displayId: long
 position: Position
 ```
 
-以displayId所指定屏幕左上角为原点的坐标值。
+Coordinates with the top-left corner of the screen specified by **displayId** as the origin.
 
 **Type:** [Position](arkts-arkui-display-position-i.md)
 

@@ -29,5 +29,5 @@ export function createButtonNode(context: UIContext, options?: FrameNodeOptions)
 
 | 类型 | 说明 |
 | --- | --- |
-| [Button](../../apis-input-kit/arkts-apis/arkts-input-multimodalinput-mouseevent-button-e.md) | 返回 Button 类型的 FrameNode |
+| [Button](arkts-arkui-typenode-button-t.md) | 返回 Button 类型的 FrameNode |
 

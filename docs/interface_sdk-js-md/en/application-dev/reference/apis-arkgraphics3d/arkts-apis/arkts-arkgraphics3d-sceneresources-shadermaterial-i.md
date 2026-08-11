@@ -1,6 +1,6 @@
 # ShaderMaterial
 
-着色器材质资源.
+Shader material resource.
 
 **Inheritance/Implementation:** ShaderMaterial extends [Material](arkts-arkgraphics3d-sceneresources-material-i.md)
 
@@ -18,7 +18,7 @@
 colorShader?: Shader
 ```
 
-材质的颜色着色器.
+Color shader of material.
 
 **Type:** [Shader](arkts-arkgraphics3d-sceneresources-shader-i.md)
 

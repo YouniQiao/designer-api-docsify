@@ -1,6 +1,6 @@
 # MenuAlignType
 
-定义Select组件下拉菜单与Select组件本身的对齐方式。
+The type of alignment between select and menu.
 
 **Since:** 23
 
@@ -16,7 +16,7 @@
 START
 ```
 
-菜单与Select组件左对齐。
+The value of menu align type start.
 
 **Since:** 23
 
@@ -34,7 +34,7 @@ START
 CENTER
 ```
 
-菜单与Select组件居中对齐。
+The value of menu align type center.
 
 **Since:** 23
 
@@ -52,7 +52,7 @@ CENTER
 END
 ```
 
-菜单与Select组件右对齐。
+The value of menu align type end.
 
 **Since:** 23
 

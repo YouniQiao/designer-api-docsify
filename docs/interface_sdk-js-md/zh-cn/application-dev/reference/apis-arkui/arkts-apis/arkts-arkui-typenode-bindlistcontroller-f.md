@@ -29,5 +29,5 @@ export function bindListController(node: FrameNode, controller: Scroller): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 100023 | Parameter error. Possible causes: 1. The component type of the node is incorrect. 2. The node is null or undefined. 3. The controller is null or undefined. |
+| [100023](../errorcode-node.md#100023-参数错误) | Parameter error. Possible causes: 1. The component type of the node is incorrect. 2. The node is null or undefined. 3. The controller is null or undefined. |
 

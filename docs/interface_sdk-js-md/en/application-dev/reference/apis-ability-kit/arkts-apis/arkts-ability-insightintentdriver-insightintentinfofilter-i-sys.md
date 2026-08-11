@@ -1,6 +1,6 @@
 # InsightIntentInfoFilter (System API)
 
-意图筛选器，描述目标意图的筛选条件，用于筛选设备上符合条件的意图。
+Defines an intent filter, which specifies the criteria for selecting target intents. It is used to filter intents on the device that meet these criteria.
 
 **Since:** 23
 
@@ -24,7 +24,7 @@ import { insightIntentDriver } from 'kits/@kit.AbilityKit';
 bundleName?: string
 ```
 
-目标意图所属的应用包名称。
+Bundle name of the application to which the intent belongs.
 
 **Type:** string
 
@@ -46,8 +46,8 @@ bundleName?: string
 intentFlags: int
 ```
 
-意图信息（[InsightIntentInfo](arkts-ability-insightintentdriver-insightintentinfo-i-sys.md)）的标识，用于表示查询全量意图信息或者简要意图信息，取值可参考  
-[GetInsightIntentFlag](arkts-ability-insightintentdriver-getinsightintentflag-e-sys.md)。
+Flag of the intent information ([InsightIntentInfo](arkts-ability-insightintentdriver-insightintentinfo-i-sys.md)). It is used to query full or brief intent information. For details, see  
+[GetInsightIntentFlag](arkts-ability-insightintentdriver-getinsightintentflag-e-sys.md).
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
@@ -69,7 +69,7 @@ intentFlags: int
 intentName?: string
 ```
 
-目标意图名称。
+Intent name.
 
 **Type:** string
 
@@ -91,7 +91,7 @@ intentName?: string
 moduleName?: string
 ```
 
-目标意图所属的模块名称。
+Module name of the application to which the intent belongs.
 
 **Type:** string
 
@@ -113,11 +113,11 @@ moduleName?: string
 userId?: int
 ```
 
-目标意图所属的用户ID。
+ID of the user to which the intent belongs.
 
-**说明：**
+**NOTE：**
 
-如果调用方应用的用户ID与目标意图所属的用户ID不同，则需要申请权限`ohos.permission.INTERACT_ACROSS_LOCAL_ACCOUNTS`。
+If the user ID of the calling application is different from the user ID of the intent, the calling application must request the ohos.permission.INTERACT_ACROSS_LOCAL_ACCOUNTS permission.
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 

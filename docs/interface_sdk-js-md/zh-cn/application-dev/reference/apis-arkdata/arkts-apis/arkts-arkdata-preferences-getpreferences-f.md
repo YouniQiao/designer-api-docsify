@@ -1,11 +1,5 @@
 # getPreferences
 
-## 导入模块
-
-```TypeScript
-import { preferences } from 'kits/@kit.ArkData';
-```
-
 ## getPreferences
 
 ```TypeScript
@@ -38,8 +32,8 @@ function getPreferences(context: Context, name: string, callback: AsyncCallback<
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 401 | Parameter error. Possible causes: &lt;br&gt;1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; &lt;br&gt;3. Parameter verification failed. |
-| 15500000 | Inner error.<br>**适用版本：** 11+ |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: &lt;br&gt;1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; &lt;br&gt;3. Parameter verification failed. |
+| [15500000](../errorcode-preferences.md#15500000-内部错误) | Inner error.<br>**适用版本：** 11+ |
 
 ## 示例
 
@@ -54,7 +48,7 @@ let dataPreferences: preferences.Preferences | null = null;
 
 preferences.getPreferences(context, 'myStore', (err: BusinessError, val: preferences.Preferences) => {
   if (err) {
-    console.error("Failed to get preferences. Code = " + err.code + ", message = " + err.message);
+    console.error("Failed to get preferences. code =" + err.code + ", message =" + err.message);
     return;
   }
   dataPreferences = val;
@@ -62,7 +56,7 @@ preferences.getPreferences(context, 'myStore', (err: BusinessError, val: prefere
 })
 ```
 
-Stage模型示例：
+ArkTS-Dyn示例：
 
 ```TypeScript
 import { UIAbility } from '@kit.AbilityKit';
@@ -75,7 +69,30 @@ class EntryAbility extends UIAbility {
   onWindowStageCreate(windowStage: window.WindowStage) {
     preferences.getPreferences(this.context, 'myStore', (err: BusinessError, val: preferences.Preferences) => {
       if (err) {
-        console.error("Failed to get preferences. Code = " + err.code + ", message = " + err.message);
+        console.error("Failed to get preferences. code =" + err.code + ", message =" + err.message);
+        return;
+      }
+      dataPreferences = val;
+      console.info("Succeeded in getting preferences.");
+    })
+  }
+}
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+import { UIAbility } from '@kit.AbilityKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+import { window } from '@kit.ArkUI';
+
+let dataPreferences: preferences.Preferences | undefined = undefined;
+
+class EntryAbility extends UIAbility {
+  onWindowStageCreate(windowStage: window.WindowStage) {
+    preferences.getPreferences(this.context, 'myStore', (err: BusinessError | null, val: preferences.Preferences | undefined) => {
+      if (err) {
+        console.error("Failed to get preferences. code =" + err.code + ", message =" + err.message);
         return;
       }
       dataPreferences = val;
@@ -118,11 +135,11 @@ function getPreferences(context: Context, options: Options, callback: AsyncCallb
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 401 | Parameter error. Possible causes: &lt;br&gt;1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; &lt;br&gt;3. Parameter verification failed. |
-| 801 | Capability not supported. |
-| 15501001 | The operations is supported in stage mode only. |
-| 15501002 | Invalid dataGroupId. |
-| 15500000 | Inner error.<br>**适用版本：** 11+ |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: &lt;br&gt;1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; &lt;br&gt;3. Parameter verification failed. |
+| [801](../../errorcode-universal.md#801-该设备不支持此api) | Capability not supported. |
+| [15501001](../errorcode-preferences.md#15501001-上下文环境非stage模型) | The operations is supported in stage mode only. |
+| [15501002](../errorcode-preferences.md#15501002-options中传入的datagroupid参数非法) | Invalid dataGroupId. |
+| [15500000](../errorcode-preferences.md#15500000-内部错误) | Inner error.<br>**适用版本：** 11+ |
 
 ## 示例
 
@@ -139,7 +156,7 @@ let dataPreferences: preferences.Preferences | null = null;
 let options: preferences.Options = { name: 'myStore' };
 preferences.getPreferences(context, options, (err: BusinessError, val: preferences.Preferences) => {
   if (err) {
-    console.error("Failed to get preferences. Code = " + err.code + ", message = " + err.message);
+    console.error("Failed to get preferences. code =" + err.code + ", message =" + err.message);
     return;
   }
   dataPreferences = val;
@@ -147,7 +164,7 @@ preferences.getPreferences(context, options, (err: BusinessError, val: preferenc
 })
 ```
 
-Stage模型示例：
+ArkTS-Dyn示例：
 
 ```TypeScript
 import { UIAbility } from '@kit.AbilityKit';
@@ -161,7 +178,31 @@ class EntryAbility extends UIAbility {
     let options: preferences.Options = { name: 'myStore' };
     preferences.getPreferences(this.context, options, (err: BusinessError, val: preferences.Preferences) => {
       if (err) {
-        console.error("Failed to get preferences. Code = " + err.code + ", message = " + err.message);
+        console.error("Failed to get preferences. code =" + err.code + ", message =" + err.message);
+        return;
+      }
+      dataPreferences = val;
+      console.info("Succeeded in getting preferences.");
+    })
+  }
+}
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+import { UIAbility } from '@kit.AbilityKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+import { window } from '@kit.ArkUI';
+
+let dataPreferences: preferences.Preferences | undefined = undefined;
+
+class EntryAbility extends UIAbility {
+  onWindowStageCreate(windowStage: window.WindowStage) {
+    let options: preferences.Options = { name: 'myStore' };
+    preferences.getPreferences(this.context, options, (err: BusinessError | null, val: preferences.Preferences | undefined) => {
+      if (err) {
+        console.error("Failed to get preferences. code =" + err.code + ", message =" + err.message);
         return;
       }
       dataPreferences = val;
@@ -209,8 +250,8 @@ function getPreferences(context: Context, name: string): Promise<Preferences>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 401 | Parameter error. Possible causes: &lt;br&gt;1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; &lt;br&gt;3. Parameter verification failed. |
-| 15500000 | Inner error.<br>**适用版本：** 11+ |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: &lt;br&gt;1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; &lt;br&gt;3. Parameter verification failed. |
+| [15500000](../errorcode-preferences.md#15500000-内部错误) | Inner error.<br>**适用版本：** 11+ |
 
 ## 示例
 
@@ -229,11 +270,11 @@ sp.then((object: preferences.Preferences) => {
   dataPreferences = object;
   console.info("Succeeded in getting preferences.");
 }).catch((err: BusinessError) => {
-  console.error("Failed to get preferences. Code = " + err.code + ", message = " + err.message);
+  console.error("Failed to get preferences. code =" + err.code + ", message =" + err.message);
 })
 ```
 
-Stage模型示例：
+ArkTS-Dyn示例：
 
 ```TypeScript
 import { UIAbility } from '@kit.AbilityKit';
@@ -249,7 +290,28 @@ class EntryAbility extends UIAbility {
       dataPreferences = object;
       console.info("Succeeded in getting preferences.");
     }).catch((err: BusinessError) => {
-      console.error("Failed to get preferences. Code = " + err.code + ", message = " + err.message);
+      console.error("Failed to get preferences. code =" + err.code + ", message =" + err.message);
+    })
+  }
+}
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+import { UIAbility } from '@kit.AbilityKit';
+import { window } from '@kit.ArkUI';
+
+let dataPreferences: preferences.Preferences | undefined = undefined;
+
+class EntryAbility extends UIAbility {
+  onWindowStageCreate(windowStage: window.WindowStage) {
+    let sp = preferences.getPreferences(this.context, 'myStore');
+    sp.then((object: preferences.Preferences | undefined) => {
+      dataPreferences = object;
+      console.info("Succeeded in getting preferences.");
+    }).catch((err) => {
+      console.error("Failed to get preferences. code =" + err.code + ", message =" + err.message);
     })
   }
 }
@@ -293,11 +355,11 @@ function getPreferences(context: Context, options: Options): Promise<Preferences
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 401 | Parameter error. Possible causes: &lt;br&gt;1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; &lt;br&gt;3. Parameter verification failed. |
-| 801 | Capability not supported. |
-| 15501001 | The operations is supported in stage mode only. |
-| 15501002 | Invalid dataGroupId. |
-| 15500000 | Inner error.<br>**适用版本：** 11+ |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: &lt;br&gt;1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; &lt;br&gt;3. Parameter verification failed. |
+| [801](../../errorcode-universal.md#801-该设备不支持此api) | Capability not supported. |
+| [15501001](../errorcode-preferences.md#15501001-上下文环境非stage模型) | The operations is supported in stage mode only. |
+| [15501002](../errorcode-preferences.md#15501002-options中传入的datagroupid参数非法) | Invalid dataGroupId. |
+| [15500000](../errorcode-preferences.md#15500000-内部错误) | Inner error.<br>**适用版本：** 11+ |
 
 ## 示例
 
@@ -317,11 +379,11 @@ sp.then((object: preferences.Preferences) => {
   dataPreferences = object;
   console.info("Succeeded in getting preferences.");
 }).catch((err: BusinessError) => {
-  console.error("Failed to get preferences. Code = " + err.code + ", message = " + err.message);
+  console.error("Failed to get preferences. code =" + err.code + ", message =" + err.message);
 })
 ```
 
-Stage模型示例：
+ArkTS-Dyn示例：
 
 ```TypeScript
 import { UIAbility } from '@kit.AbilityKit';
@@ -338,7 +400,30 @@ class EntryAbility extends UIAbility {
       dataPreferences = object;
       console.info("Succeeded in getting preferences.");
     }).catch((err: BusinessError) => {
-      console.error("Failed to get preferences. Code = " + err.code + ", message = " + err.message);
+      console.error("Failed to get preferences. code =" + err.code + ", message =" + err.message);
+    })
+  }
+}
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+import { UIAbility } from '@kit.AbilityKit';
+import { window } from '@kit.ArkUI';
+
+let dataPreferences: preferences.Preferences | undefined = undefined;
+
+class EntryAbility extends UIAbility {
+  onWindowStageCreate(windowStage: window.WindowStage) {
+    let options: preferences.Options = { name: 'myStore' };
+    let sp = preferences.getPreferences(this.context, 'myStore');
+    sp = preferences.getPreferences(this.context, options);
+    sp.then((object: preferences.Preferences | undefined) => {
+      dataPreferences = object;
+      console.info("Succeeded in getting preferences.");
+    }).catch((err) => {
+      console.error("Failed to get preferences. code =" + err.code + ", message =" + err.message);
     })
   }
 }

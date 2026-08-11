@@ -1,6 +1,6 @@
 # AdRequestParams
 
-广告请求参数。
+Defines the ad request parameters.
 
 **Since:** 11
 
@@ -22,7 +22,7 @@ import { advertising } from 'kits/@kit.AdsKit';
 [key: string]: number | boolean | string | undefined
 ```
 
-自定义参数。
+Custom parameter.
 
 &lt;!--RP2--&gt;&lt;!--RP2End--&gt;
 
@@ -44,7 +44,7 @@ import { advertising } from 'kits/@kit.AdsKit';
 adCount?: number
 ```
 
-请求的广告数量。不填以业务逻辑为准。
+Number of ads requested. If not set, the business logic prevails.
 
 **Type:** number
 
@@ -64,7 +64,7 @@ adCount?: number
 adHeight?: number
 ```
 
-请求广告时期望的创意高度，单位vp（横幅广告必填）。不填以业务逻辑为准。
+Expected creative height when requesting an ad, in vp (mandatory for banner ads). If not set, the business logic prevails.
 
 **Type:** number
 
@@ -84,9 +84,9 @@ adHeight?: number
 adId: string
 ```
 
-广告位ID。
+Ad slot ID.
 
-说明：getAdRequestBody接口可以不传该参数。
+Note: The getAdRequestBody API can omit this parameter.
 
 **Type:** string
 
@@ -106,9 +106,9 @@ adId: string
 adSearchKeyword?: string
 ```
 
-广告关键字。不填默认""。
+Ad keyword. Defaults to "" if not set.
 
-说明：暂不支持使用。
+Note: Not supported for use currently.
 
 **Type:** string
 
@@ -128,16 +128,16 @@ adSearchKeyword?: string
 adType?: number
 ```
 
-请求的广告类型。
+Requested ad type.
 
-- 1：开屏广告。  
-- 3：原生广告。  
-- 7：激励广告。  
-- 8：横幅广告。  
-- 12：插屏广告。  
-- 60：贴片广告。
+- 1: Splash ad.  
+- 3: Native ad.  
+- 7: Rewarded ad.  
+- 8: Banner ad.  
+- 12: Interstitial ad  
+- 60: Roll ad.
 
-不填默认为原生广告类型。
+If not set, the default is the native ad type.
 
 **Type:** number
 
@@ -157,7 +157,7 @@ adType?: number
 adWidth?: number
 ```
 
-请求广告时期望的创意宽度，单位vp（横幅广告必填）。不填以业务逻辑为准。
+Expected creative width when requesting an ad, in vp (mandatory for banner ads).If not set, the business logic prevails.
 
 **Type:** number
 

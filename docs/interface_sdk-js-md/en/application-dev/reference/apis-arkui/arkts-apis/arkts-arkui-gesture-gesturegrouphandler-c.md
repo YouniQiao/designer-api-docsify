@@ -1,6 +1,6 @@
 # GestureGroupHandler
 
-手势组处理器对象类型。
+Defines the GestureGroup handler.
 
 **Inheritance/Implementation:** GestureGroupHandler extends [GestureHandler](arkts-arkui-gesturehandler-c.md)
 
@@ -18,7 +18,7 @@
 constructor(options?: GestureGroupGestureHandlerOptions)
 ```
 
-手势组处理器的构造函数。
+Constructor parameters.
 
 **Since:** 23
 
@@ -34,7 +34,7 @@ constructor(options?: GestureGroupGestureHandlerOptions)
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| options | [GestureGroupGestureHandlerOptions](arkts-arkui-gesturegroupgesturehandleroptions-i.md) | No | 手势组处理器配置参数。 |
+| options | [GestureGroupGestureHandlerOptions](arkts-arkui-gesturegroupgesturehandleroptions-i.md) | No |  |
 
 ## onCancel
 
@@ -42,7 +42,7 @@ constructor(options?: GestureGroupGestureHandlerOptions)
 onCancel(event: VoidCallback): this
 ```
 
-设置手势组处理器取消回调。顺序组合手势（[GestureMode](arkts-arkui-gesturemode-e.md).Sequence）取消后触发回调。
+The GestureGroup gesture is successfully recognized and a callback is triggered when the touch cancel event is received.
 
 **Since:** 23
 
@@ -58,11 +58,11 @@ onCancel(event: VoidCallback): this
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| event | [VoidCallback](arkts-arkui-voidcallback-t.md) | Yes | 手势组处理器取消回调。 |
+| event | [VoidCallback](arkts-arkui-voidcallback-t.md) | Yes |  |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| this | 返回当前手势组处理器对象。 |
+| this |  |
 

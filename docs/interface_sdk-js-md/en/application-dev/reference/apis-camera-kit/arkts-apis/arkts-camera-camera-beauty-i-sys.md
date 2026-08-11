@@ -60,8 +60,8 @@ Obtains the level of the beauty type in use.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 7400103 | Session not config. |
-| 202 | Not System Application. |
+| [7400103](../errorcode-camera.md#7400103-session-not-configured) | Session not config. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not System Application. |
 
 ## Examples
 
@@ -119,8 +119,8 @@ Sets a beauty type and its level. Beauty mode is turned off only when all the
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 7400103 | Session not config. |
-| 202 | Not System Application. |
+| [7400103](../errorcode-camera.md#7400103-session-not-configured) | Session not config. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not System Application. |
 
 ## Examples
 
@@ -166,7 +166,7 @@ Sets a portrait theme type for a camera device.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 7400101 | Parameter missing or parameter type incorrect. |
-| 7400103 | Session not config, only throw in session usage. |
-| 202 | Not System Application. |
+| [7400101](../errorcode-camera.md#7400101-invalid-parameter) | Parameter missing or parameter type incorrect. |
+| [7400103](../errorcode-camera.md#7400103-session-not-configured) | Session not config, only throw in session usage. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not System Application. |
 

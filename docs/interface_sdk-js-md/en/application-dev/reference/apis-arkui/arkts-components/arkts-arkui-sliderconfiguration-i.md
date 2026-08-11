@@ -1,6 +1,7 @@
 # SliderConfiguration
 
-开发者需要自定义class实现ContentModifier接口。继承自[CommonConfiguration](../arkts-apis/arkts-arkui-common-commonconfiguration-i.md/arkts-arkui-common-commonconfiguration-i.md)。
+You need a custom class to implement the **ContentModifier** API. Inherits from   
+[CommonConfiguration](../arkts-apis/arkts-arkui-common-commonconfiguration-i.md/arkts-arkui-common-commonconfiguration-i.md).
 
 **Inheritance/Implementation:** SliderConfiguration extends [CommonConfiguration<SliderConfiguration>](CommonConfiguration<SliderConfiguration>)
 
@@ -18,7 +19,7 @@
 triggerChange: SliderTriggerChangeCallback
 ```
 
-触发Slider变化。
+Triggers slider changes.
 
 **Since:** 12
 
@@ -38,7 +39,7 @@ triggerChange: SliderTriggerChangeCallback
 max: number
 ```
 
-最大值。
+Maximum value.
 
 **Type:** number
 
@@ -60,7 +61,7 @@ max: number
 min: number
 ```
 
-最小值。
+Minimum value.
 
 **Type:** number
 
@@ -82,7 +83,7 @@ min: number
 step: number
 ```
 
-Slider滑动步长，表示滑动条每次滑动的数值增量。
+Step of the slider.
 
 **Type:** number
 
@@ -104,7 +105,7 @@ Slider滑动步长，表示滑动条每次滑动的数值增量。
 value: number
 ```
 
-当前进度值。
+Current progress.
 
 **Type:** number
 

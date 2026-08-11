@@ -8,7 +8,7 @@ export declare function Counter(
 ): CounterAttribute
 ```
 
-创建计数器组件。
+Defines the Counter component.
 
 **Since:** 23
 
@@ -42,11 +42,11 @@ export declare function Counter(
 ): CounterAttribute
 ```
 
-定义Counter组件。
+Defines Counter Component.
 
-**Since:** 26.0.0
+**Since:** 26.1.0
 
-**ArkTS mode:** ArkTS-Sta only, since version 26.0.0.
+**ArkTS mode:** ArkTS-Sta only, since version 26.1.0.
 
 **Decorator:** @Builder
 
@@ -60,8 +60,8 @@ export declare function Counter(
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| style | [CustomBuilderT](../arkts-components/arkts-arkui-custombuildert-t.md)&lt;CounterAttribute&gt; | Yes | Counter属性实例。 |
-| content_ | [CustomBuilder](../arkts-components/arkts-arkui-custombuilder-t.md) | No | 子组件。 |
+| style | [CustomBuilderT](../arkts-components/arkts-arkui-custombuildert-t.md)&lt;CounterAttribute&gt; | Yes | Counter attribute instance |
+| content_ | [CustomBuilder](../arkts-components/arkts-arkui-custombuilder-t.md) | No | Child component |
 
 **Return value:**
 

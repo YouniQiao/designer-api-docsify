@@ -16,8 +16,8 @@ CommonMethod.
 advancedBlendMode(effect: BlendMode | Blender, type?: BlendApplyType): T
 ```
 
-将当前组件的内容（包含子节点内容）与下方画布（可能为离屏画布）已有内容进行混合。不能与  
-[blendMode](arkts-arkui-commonmethod-c.md#blendmode)接口同时使用。
+Defines how the component's content (including the content of it child components) is blended with the existing content on the canvas (possibly offscreen canvas) below. This API cannot be used with   
+[blendMode](arkts-arkui-commonmethod-c.md#blendmode).
 
 **Since:** 13
 
@@ -29,20 +29,22 @@ advancedBlendMode(effect: BlendMode | Blender, type?: BlendApplyType): T
 
 <!--Device-CommonMethod-advancedBlendMode(effect: BlendMode | Blender, type?: BlendApplyType): T--><!--Device-CommonMethod-advancedBlendMode(effect: BlendMode | Blender, type?: BlendApplyType): T-End-->
 
+**System capability:** SystemCapability.ArkUI.ArkUI.Full
+
 **System API:** This is a system API.
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| effect | [BlendMode](../arkts-apis/arkts-arkui-common-blendmode-e.md) \| Blender | Yes | 入参类型为BlendMode时表示混合模式。&lt;br/&gt;默认值：BlendMode.NONE &lt;br/&gt;入参类型为Blender时表示混合器类型，用于描 述混合效果。&lt;br/&gt;需要使用uiEffect模块中的方法创建Blender实例。例如： [uiEffect.createBrightnessBlender](../../../reference/apis-arkgraphics2d/js-apis-uiEffect-sys.md#uieffectcreatebrightnessblender)。 使用自定义object作为入参不会生效。 |
-| type | [BlendApplyType](arkts-arkui-blendapplytype-e-sys.md) | No | blendMode实现方式是否离屏。&lt;br/&gt;默认值：BlendApplyType.FAST&lt;br/&gt;**说明：**&lt;br/&gt;1. 设置为 BlendApplyType.FAST，不离屏。&lt;br/&gt;2. 设置为BlendApplyType.OFFSCREEN，会创建当前组件大小的离屏画布，再将当前组件（含子组件）的内容绘制到离屏画布上，再用指定的混合模式与下方 画布已有内容进行混合。&lt;br/&gt;3. 不离屏情况下对文字类组件中emoji表情不生效。&lt;br/&gt;4. 相比BlendApplyType.OFFSCREEN，设置为 BlendApplyType.OFFSCREEN_WITH_BACKGROUND，系统在创建与当前组件大小一致的离屏画布时，会先复制一份带有背景的画布作为初始化底色（BlendApplyType.OFFSCREEN类型的画 布初始为透明背景），随后在此基础上进行混合操作。两者在其他功能特性上保持一致。 |
+| effect | [BlendMode](../arkts-apis/arkts-arkui-common-blendmode-e.md) \| Blender | Yes | Blend mode or blender type, depending on the parameter type.&lt;br&gt;When the parameter type is **BlendMode**, it indicates the blend mode.&lt;br&gt;Default value: **BlendMode.NONE**&lt;br&gt;When the parameter type is **Blender**, it indicates the blender type, used to describe the blending effect.&lt;br&gt;A **Blender** instance must be created using methods, for example, [uiEffect.createBrightnessBlender](../../../reference/apis-arkgraphics2d/js-apis-uiEffect-sys.md#uieffectcreatebrightnessblender), from the **uiEffect** module. Using a custom object as a parameter will not take effect. |
+| type | [BlendApplyType](arkts-arkui-blendapplytype-e-sys.md) | No | Whether the blend mode is implemented offscreen.&lt;br&gt;Default value: **BlendApplyType.FAST**&lt;br&gt;**NOTE：**&lt;br&gt;1. When this parameter is set to **BlendApplyType.FAST**, the blend mode is not implemented offscreen.&lt;br&gt;2. When this parameter is set to **BlendApplyType.OFFSCREEN**, an offscreen canvas matching the size of the current component is created. The content of the current component (including its child components) is then drawn onto the offscreen canvas, and blended with the existing content on the underlying canvas using the specified blend mode.&lt;br&gt;3. For text components, this API does not apply to emoji expressions when not offscreen.&lt;br&gt;4. Compared with **BlendApplyType.OFFSCREEN**, when this parameter is set to **BlendApplyType.OFFSCREEN_WITH_BACKGROUND**, the system first copies a canvas with a background as the initial background color (the canvas for **BlendApplyType.OFFSCREEN** starts with a transparent background) when creating an offscreen canvas matching the current component's size. The blending operation is then performed on this base. The two modes are identical in all other functional aspects. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| T | 返回当前组件。 |
+| T | Current component. |
 
 ## constructor
 
@@ -70,16 +72,9 @@ constructor.
 edgeLight(params: EdgeLightParams | undefined): T
 ```
 
-为组件添加边缘流光效果。边缘流光效果会在组件的边缘创建发光效果，从指定位置开始并沿边缘延伸，此效果可以增强组件的视觉吸引力并突出显示重要组件。
+Sets the edge light effect for the component.
 
-> **说明：**
-> 
-> - 仅设置edgeLight不会产生边缘流光效果，需结合
-> [animateTo](../../../reference/apis-arkui/arkts-apis-uicontext-uicontext.md#animateto)更改position参数达到流光效果。可参考
-> [示例4（设置组件边缘流光效果）](../../../reference/apis-arkui/arkui-ts/ts-universal-attributes-image-effect-sys.md#示例4设置组件边缘流光效果)。
-> 
-> 
-> - 当position参数以对角线方式变更时，边缘流光将沿倾斜角45°的方式运行。
+&lt;p&gt;&lt;strong&gt;NOTE&lt;/strong&gt;:&lt;br&gt;The edge light effect creates a glowing light effect along the component's edges,starting from the specified position and extending along the edge.&lt;br&gt;This effect can enhance the visual appeal and highlight important components.&lt;/p&gt;
 
 **Since:** 26.0.0
 
@@ -89,19 +84,21 @@ edgeLight(params: EdgeLightParams | undefined): T
 
 <!--Device-CommonMethod-edgeLight(params: EdgeLightParams | undefined): T--><!--Device-CommonMethod-edgeLight(params: EdgeLightParams | undefined): T-End-->
 
+**System capability:** SystemCapability.ArkUI.ArkUI.Full
+
 **System API:** This is a system API.
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| params | [EdgeLightParams](../arkts-apis/arkts-arkui-common-edgelightparams-i-sys.md) \| undefined | Yes | 定义边缘流光效果的位置、长度、强度、颜色和厚度。&lt;br/&gt;当params的值为undefined时，移除边缘流光效果。 |
+| params | [EdgeLightParams](../arkts-apis/arkts-arkui-common-edgelightparams-i-sys.md) \| undefined | Yes | Edge light effect parameters. Defines the position, length, intensity, color, and thickness of the light effect. If params is undefined, the edge light effect is removed. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| T | 返回当前组件。 |
+| T |  |
 
 ## excludeFromRenderGroup
 
@@ -109,20 +106,25 @@ edgeLight(params: EdgeLightParams | undefined): T
 excludeFromRenderGroup(exclude: boolean | undefined): T
 ```
 
-设置当前组件和其子组件是否从祖先组件的节点组中剔除。需搭配祖先组件设置节点组[renderGroup](arkts-arkui-commonmethod-c.md#rendergroup)属性使用，单独使用无效果。
+Sets whether the current component and its child components are removed from the render group of the ancestor component. If this attribute is used alone, no effect is achieved. It must be used with the   
+[renderGroup](arkts-arkui-commonmethod-c.md#rendergroup) attribute of the ancestor component. 
 
-从节点组剔除后，当前组件和子组件不再影响祖先组件的离屏画布，不会引起节点组的缓存失效，从而达到复用节点组缓存的目的。如果当前组件的显示区域只占节点组绘制内容显示区域的一部分，且当前组件及子组件的显示效果频繁更新，设置excludeFromRenderGroup属性有助于绘制性能优化。
+Removing the current component and its children from the render group does not affect the offscreen canvas of the ancestor component, and the cache of the render group is still valid. In this way, the render group cache can be reused. If the display area of the current component occupies only a part of the display area of the render group drawing content, and the display effect of the current component and its children is frequently updated, setting   
+**excludeFromRenderGroup** helps optimize the drawing performance.
 
-不设置该属性时，默认当前组件和其子组件不从祖先组件的节点组中剔除。
+If this attribute is not set, the current component and its children are not removed from the render group of the ancestor component by default.
 
-> **说明：**
+> **NOTE：**
 > 
-> 设置excludeFromRenderGroup为true的组件及其子组件的绘制内容不能超过该组件本身的边界范围，否则会出现显示内容被裁剪的问题。例如当子组件通过
-> [translate](arkts-arkui-commonmethod-c.md#translate)或
-> [scale](arkts-arkui-commonmethod-c.md#scale)等属性导致子组件超出当前组件范围，或当前组件上有
-> [shadow](arkts-arkui-commonmethod-c.md#shadow)、
-> [pixelStretchEffect](arkts-arkui-commonmethod-c.md#pixelstretcheffect)等属性导致当前组件的绘制内容超出组件
-> 边界时，可能出现显示内容被裁剪的问题。此类场景不应设置excludeFromRenderGroup属性为true。
+> The drawing content of the component with **excludeFromRenderGroup** set to **true** and its children cannot the
+> component's own boundary range. Otherwise, the displayed content may be clipped. For example, if the child
+> component exceeds the boundary range of the current component due to attributes such as
+> [translate](arkts-arkui-commonmethod-c.md#translate) or
+> [scale](arkts-arkui-commonmethod-c.md#scale), or the drawing content extend beyond its boundaries
+> because the current component has attributes such as
+> [shadow](arkts-arkui-commonmethod-c.md#shadow) and
+> [pixelStretchEffect](arkts-arkui-commonmethod-c.md#pixelstretcheffect), the displayed
+> content may be clipped. In such scenarios, **excludeFromRenderGroup** should not be set to **true**.
 
 **Since:** 22
 
@@ -132,19 +134,21 @@ excludeFromRenderGroup(exclude: boolean | undefined): T
 
 <!--Device-CommonMethod-excludeFromRenderGroup(exclude: boolean | undefined): T--><!--Device-CommonMethod-excludeFromRenderGroup(exclude: boolean | undefined): T-End-->
 
+**System capability:** SystemCapability.ArkUI.ArkUI.Full
+
 **System API:** This is a system API.
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| exclude | boolean \| undefined | Yes | 设置当前组件及其子组件是否从祖先组件的节点组中剔除。&lt;br/&gt;true表示当前组件及其子组件从祖先组件的节点组中剔除，不属于祖先组件的节点组； false表示当前组件及其子组件归属于祖先组件的节点组。&lt;br/&gt;当exclude的值为undefined时，按false处理。 |
+| exclude | boolean \| undefined | Yes | Whether to remove the current component and its child components from the render group of the ancestor component.&lt;br&gt;**true**: yes. **false**: no.&lt;br&gt;If **exclude** is set to **undefined**, the value **false** is used. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| T | 返回当前组件。 |
+| T | Current component. |
 
 ## spatialEffect
 
@@ -152,7 +156,7 @@ excludeFromRenderGroup(exclude: boolean | undefined): T
 spatialEffect(params: SpatialEffectParams | undefined): T
 ```
 
-将空间效果应用于组件。
+Applies a spatial effect to component.
 
 **Since:** 26.0.0
 
@@ -172,7 +176,7 @@ spatialEffect(params: SpatialEffectParams | undefined): T
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| params | [SpatialEffectParams](arkts-arkui-spatialeffectparams-i-sys.md) \| undefined | Yes | 空间效果参数。 |
+| params | [SpatialEffectParams](arkts-arkui-spatialeffectparams-i-sys.md) \| undefined | Yes | Spatial effect parameters. |
 
 **Return value:**
 
@@ -186,7 +190,7 @@ spatialEffect(params: SpatialEffectParams | undefined): T
 useUnionEffect(value: boolean | undefined): T
 ```
 
-指定当前组件是否参与祖先组件UnionEffectContainer的融合效果
+Specify whether the current component participates in the fusion effect of the ancestor component UnionEffectContainer
 
 **Since:** 23
 
@@ -218,7 +222,7 @@ useUnionEffect(value: boolean | undefined): T
 useUnionEffect(value: boolean | undefined, options?: GravityCenterOptions): T
 ```
 
-指定当前组件是否参与祖先组件UnionEffectContainer的融合效果
+Specify whether the current component participates in the fusion effect of the ancestor component UnionEffectContainer
 
 **Since:** 26.0.0
 
@@ -236,12 +240,12 @@ useUnionEffect(value: boolean | undefined, options?: GravityCenterOptions): T
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | boolean \| undefined | Yes | 组件是否参与融合效果祖先组件**UnionEffectContainer**.&lt;br&gt;值为**true**表示组件参与在祖先组件**UnionEffectContainer**的融合效果中，而**false**表示相反。 &lt;br&gt;值为**t rue**表示该组件参与祖先组件**UnionEffectContainer**的融合效果，**false**表示相反。 |
-| options | [GravityCenterOptions](arkts-arkui-gravitycenteroptions-i-sys.md) | No | 引力中心参数。 需要配合UnionMode.GRAVITY_UNION使用。 |
+| value | boolean \| undefined | Yes | Whether the component participates in the fusion effect of the ancestor component **UnionEffectContainer**. The value **true** means that the component participates in the fusion effect of the ancestor component **UnionEffectContainer**, and **false** means the opposite. |
+| options | [GravityCenterOptions](arkts-arkui-gravitycenteroptions-i-sys.md) | No | Gravitational center parameter. GRAVITY_UNION. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| T | 返回组件属性。 |
+| T | return the component attribute. |
 

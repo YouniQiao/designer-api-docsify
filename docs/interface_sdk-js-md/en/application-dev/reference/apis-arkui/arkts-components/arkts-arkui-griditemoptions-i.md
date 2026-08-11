@@ -1,6 +1,6 @@
 # GridItemOptions
 
-GridItem样式对象，用于配置GridItem的样式选项。
+Defines the style of a grid item.
 
 **Since:** 11
 
@@ -16,13 +16,13 @@ GridItem样式对象，用于配置GridItem的样式选项。
 style?: GridItemStyle
 ```
 
-设置GridItem样式。
+Style of the grid item.
 
-默认值：GridItemStyle.NONE
+Default value: **GridItemStyle.NONE**.
 
-设置为GridItemStyle.NONE时无样式。
+If this parameter is set to **GridItemStyle.NONE**, no style is applied.
 
-设置为GridItemStyle.PLAIN时，显示Hover、Press态样式。Hover态为鼠标悬停时的样式，Press态为按下时的样式。
+If this parameter is set to **GridItemStyle.PLAIN**, the grid item is in hover or press style depending on the state.
 
 **Type:** [GridItemStyle](../arkts-apis/arkts-arkui-griditem-griditemstyle-e.md)
 

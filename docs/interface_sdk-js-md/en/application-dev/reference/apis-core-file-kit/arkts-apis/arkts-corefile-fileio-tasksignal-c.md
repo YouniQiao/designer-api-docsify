@@ -1,6 +1,6 @@
 # TaskSignal
 
-拷贝中断信号。
+Provides APIs for interrupting a copy task.
 
 **Since:** 23
 
@@ -22,7 +22,7 @@ import { Options, ReaderIteratorResult, Watcher, ReadTextOptions, WatchEventList
 cancel(): void
 ```
 
-取消拷贝任务。
+Cancels a copy task.
 
 **Since:** 23
 

@@ -1,6 +1,6 @@
 # ImageParticleParameters
 
-设置图片选项。
+Defines the parameters for an image-like particle.
 
 **Since:** 23
 
@@ -16,7 +16,7 @@
 objectFit?: ImageFit
 ```
 
-图片显示模式。
+Image fit.
 
 **Type:** [ImageFit](arkts-arkui-imagefit-e.md)
 
@@ -38,9 +38,9 @@ objectFit?: ImageFit
 size: ParticleTuple<Dimension, Dimension>
 ```
 
-图像尺寸。
+Particle image size.
 
-默认值：[0, 0]
+Anonymous Object Rectification.
 
 **Type:** [ParticleTuple](arkts-arkui-particletuple-t.md)&lt;[Dimension](arkts-arkui-dimension-t.md), [Dimension](arkts-arkui-dimension-t.md)&gt;
 
@@ -60,11 +60,7 @@ size: ParticleTuple<Dimension, Dimension>
 src: ResourceStr
 ```
 
-图片路径，支持本地图片和网络图片，引用方式请参考[加载图片资源](../../../ui/arkts-graphics-display.md#加载图片资源)。
-
-暂不支持svg图片类型。
-
-src未发生变化时，会优先使用缓存的资源，无法动态切换资源。如需动态切换资源建议切换为不同的src。
+Particle image pixelMap.
 
 **Type:** [ResourceStr](arkts-arkui-resourcestr-t.md)
 

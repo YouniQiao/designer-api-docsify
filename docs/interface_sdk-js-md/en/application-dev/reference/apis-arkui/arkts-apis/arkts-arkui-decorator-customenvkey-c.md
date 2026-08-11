@@ -1,6 +1,6 @@
 # CustomEnvKey
 
-自定义环境变量的Key的类型。
+Defines the custom environment Key.
 
 **Since:** 26.0.0
 
@@ -16,7 +16,7 @@
 protected constructor()
 ```
 
-用于创建该类的实例对象。
+constructor.
 
 **Since:** 26.0.0
 
@@ -34,7 +34,7 @@ protected constructor()
 static create<T>(): CustomEnvKey<T>
 ```
 
-创建一个自定义环境变量Key，作为@CustomEnv装饰器的参数。
+create CustomEnvKey
 
 **Since:** 26.0.0
 

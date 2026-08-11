@@ -1,11 +1,5 @@
 # verifyAuthToken（系统接口）
 
-## 导入模块
-
-```TypeScript
-import { userAccessCtrl } from 'kits/@kit.UserAuthenticationKit';
-```
-
 ## verifyAuthToken
 
 ```TypeScript
@@ -45,14 +39,16 @@ function verifyAuthToken(authToken: Uint8Array, allowableDuration: int): Promise
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 401 | Parameter error. Possible causes: &lt;br&gt;1. Mandatory parameters are left unspecified. &lt;br&gt;2. Incorrect parameter types. &lt;br&gt;3. Parameter verification failed. |
-| 12500015 | AuthToken integrity check failed. |
-| 201 | Permission denied. |
-| 202 | Permission denied. Called by non-system application. |
-| 12500002 | General operation error. |
-| 12500016 | AuthToken has expired. |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: &lt;br&gt;1. Mandatory parameters are left unspecified. &lt;br&gt;2. Incorrect parameter types. &lt;br&gt;3. Parameter verification failed. |
+| [12500015](../errorcode-useriam.md#12500015-authtoken完整性校验失败) | AuthToken integrity check failed. |
+| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission denied. Called by non-system application. |
+| [12500002](../errorcode-useriam.md#12500002-身份认证系统通用错误码) | General operation error. |
+| [12500016](../errorcode-useriam.md#12500016-authtoken过期) | AuthToken has expired. |
 
 ## 示例
+
+ArkTS-Dyn示例：
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -109,6 +105,56 @@ try {
           const err: BusinessError = error as BusinessError;
           console.error(`verify authToken failed. Code is ${err?.code}, message is ${err?.message}`);
         }
+    }
+  });
+  console.info('auth on successfully.');
+  // 启动认证。
+  userAuthInstance.start();
+  console.info('auth start successfully.');
+} catch (error) {
+  const err: BusinessError = error as BusinessError;
+  console.error(`auth failed. Code is ${err?.code}, message is ${err?.message}`);
+}
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+import { BusinessError } from '@ohos.base';
+import { cryptoFramework } from '@kit.CryptoArchitectureKit';
+import { userAccessCtrl } from '@kit.UserAuthenticationKit';
+import { userAuth } from '@kit.UserAuthenticationKit';
+
+try {
+  const rand = cryptoFramework.createRandom();
+  const allowableDuration: int = 5000;
+  const len: int = 16;
+  const randData: Uint8Array = rand?.generateRandomSync(len)?.data;
+  const authParam: userAuth.AuthParam = {
+    challenge: randData,
+    authType: [userAuth.UserAuthType.PIN],
+    authTrustLevel: userAuth.AuthTrustLevel.ATL3,
+  };
+  const widgetParam: userAuth.WidgetParam = {
+    title: '请输入密码',
+  };
+
+  const userAuthInstance = userAuth.getUserAuthInstance(authParam, widgetParam);
+  console.info('get userAuth instance successfully.');
+  // 需要调用UserAuthInstance的start()接口，启动认证后，才能通过onResult获取到认证结果。
+  userAuthInstance.onResult({
+    onResult: (result) => {
+      if (!result.token) {
+        console.error('userAuthInstance callback result.token is null');
+        return;
+      }
+      // 发起AuthToken验证请求。
+      userAccessCtrl.verifyAuthToken(result.token!, allowableDuration)
+        .then((retAuthToken: userAccessCtrl.AuthToken) => {
+          console.info('retAuthToken: ' + JSON.stringify(retAuthToken));
+        }).catch ((error) => {
+        console.error(`verify authToken failed. Code is ${error?.code}, message is ${error?.message}`);
+      })
     }
   });
   console.info('auth on successfully.');

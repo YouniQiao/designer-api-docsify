@@ -8,7 +8,7 @@ Defines DepthComponent Component.
 DepthComponent(background: ResourceStr | PixelMap, options?: DepthComponentOptions)
 ```
 
-创建景深组件。
+Defines the DepthComponent constructor.
 
 **Since:** 26.0.0
 
@@ -28,8 +28,8 @@ DepthComponent(background: ResourceStr | PixelMap, options?: DepthComponentOptio
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| background | [ResourceStr](../arkts-apis/arkts-arkui-resourcestr-t.md) \| PixelMap | Yes | 背景资源。支持静态图片或3D模型。  静态图支持加载PixelMap和ResourceStr的数据源，引用方式请参考[加载图片资源](docroot://ui/arkts-graphics-display.md#加载图片资源)。  3D模型仅支持加载ResourceStr的数据源，仅支持glTF和glb的3D模型格式。ResourceStr包含Resource和string格式。其中string格式可用于加载本地3D模型，支持绝对路径或file://前缀的沙箱 URI，不支持网络资源的加载；Resource格式可以跨包/跨模块访问模型资源文件，推荐以该方式加载本地3D模型。 |
-| options | [DepthComponentOptions](../arkts-apis/arkts-arkui-depthcomponent-depthcomponentoptions-i-sys.md) | No | 景深组件配置项。默认值：`{ depthSpace: DepthSpaceType.INSTANCE }`。 |
+| background | [ResourceStr](../arkts-apis/arkts-arkui-resourcestr-t.md) \| PixelMap | Yes | Background resource or PixelMap (required). |
+| options | [DepthComponentOptions](../arkts-apis/arkts-arkui-depthcomponent-depthcomponentoptions-i-sys.md) | No | DepthComponent options. |
 
 ## Summary
 

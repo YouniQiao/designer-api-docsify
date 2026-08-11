@@ -1,11 +1,5 @@
 # registerProvider
 
-## 导入模块
-
-```TypeScript
-import { huksExternalCrypto } from 'kits/@kit.UniversalKeystoreKit';
-```
-
 ## registerProvider
 
 ```TypeScript
@@ -53,15 +47,15 @@ function registerProvider(providerName: string, params: Array<HuksExternalCrypto
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 801 | api is not supported. |
-| 12000005 | IPC communication failed. |
-| 12000020 | an error occurred in the dependent module. |
-| 12000019 | the provider is already registered. |
-| 12000002 | the ability name param is missing. |
-| 12000018 | the input parameter is invalid. |
-| 201 | check permission failed. |
-| 12000014 | memory is insufficient. |
-| 12000025 | the number of providers exceeds the limit. |
+| [801](../../errorcode-universal.md#801-该设备不支持此api) | api is not supported. |
+| [12000005](../errorcode-huks.md#12000005-进程通信错误) | IPC communication failed. |
+| [12000020](../errorcode-huks.md#12000020-依赖的模块报错) | an error occurred in the dependent module. |
+| [12000019](../errorcode-huks.md#12000019-同名provider已注册) | the provider is already registered. |
+| [12000002](../errorcode-huks.md#12000002-缺少密钥算法参数) | the ability name param is missing. |
+| [12000018](../errorcode-huks.md#12000018-输入参数非法) | the input parameter is invalid. |
+| [201](../../errorcode-universal.md#201-权限校验失败) | check permission failed. |
+| [12000014](../errorcode-huks.md#12000014-内存不足) | memory is insufficient. |
+| [12000025](../errorcode-huks.md#12000025-资源超过限制) | the number of providers exceeds the limit. |
 
 ## 示例
 

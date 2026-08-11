@@ -12,7 +12,7 @@ import { appManager } from 'kits/@kit.AbilityKit';
 function onApplicationStateChange(observer: ApplicationStateObserver): int
 ```
 
-注册所有应用程序的状态监听器。
+Register application state observer.
 
 **Since:** 23
 
@@ -28,20 +28,20 @@ function onApplicationStateChange(observer: ApplicationStateObserver): int
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| observer | [ApplicationStateObserver](arkts-ability-applicationstateobserver-c.md) | Yes | 应用状态监听器，用于监听应用的生命周期变化。 |
+| observer | [ApplicationStateObserver](arkts-ability-applicationstateobserver-c.md) | Yes | The application state observer. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| int | 已注册监听器ID。 |
+| int | Returns the number code of the observer. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 16000050 | Internal error. |
-| 201 | Permission denied. |
+| [16000050](../errorcode-ability.md#16000050-internal-error) | Internal error. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
 
 
 ## onApplicationStateChange
@@ -50,7 +50,7 @@ function onApplicationStateChange(observer: ApplicationStateObserver): int
 function onApplicationStateChange(observer: ApplicationStateObserver, bundleNameList: Array<string>): int
 ```
 
-注册指定应用程序的状态监听器。
+Register application state observer.
 
 **Since:** 23
 
@@ -66,19 +66,19 @@ function onApplicationStateChange(observer: ApplicationStateObserver, bundleName
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| observer | [ApplicationStateObserver](arkts-ability-applicationstateobserver-c.md) | Yes | 应用状态监听器，用于监听应用的生命周期变化。 |
-| bundleNameList | Array&lt;string&gt; | Yes | 表示需要注册监听的bundleName数组。最大值128。 |
+| observer | [ApplicationStateObserver](arkts-ability-applicationstateobserver-c.md) | Yes | The application state observer. |
+| bundleNameList | Array&lt;string&gt; | Yes | The list of bundleName. The max length is 128. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| int | 已注册监听器ID。 |
+| int | Returns the number code of the observer. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 16000050 | Internal error. |
-| 201 | Permission denied. |
+| [16000050](../errorcode-ability.md#16000050-internal-error) | Internal error. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
 

@@ -4,7 +4,7 @@
 export type BaseContext = _BaseContext.default
 ```
 
-所有Context类型的父类。
+Defines the parent class of all context types.
 
 **Since:** 9
 

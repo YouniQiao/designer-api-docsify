@@ -12,7 +12,8 @@ import { hidebug } from 'kits/@kit.PerformanceAnalysisKit';
 function getNativeHeapSize() : bigint
 ```
 
-��ȡ�ڴ������ͳ�ƵĽ��̳��е���ͨ����ռ�õ����ֽ�����
+Obtains the total number of bytes occupied by the total space (**uordblks** + **fordblks**, which are obtained from  
+**mallinfo**) held by a process, which is measured by the memory allocator.
 
 **Since:** 8
 
@@ -26,7 +27,7 @@ function getNativeHeapSize() : bigint
 
 | Type | Description |
 | --- | --- |
-| bigint | �ڴ������ͳ�ƵĽ��̳��е���ͨ����ռ���ڴ�Ĵ�С����������Ԫ���ݣ�����λΪByte�� |
+| bigint | Size of the memory occupied by the total space held by the process, in bytes. |
 
 ## Examples
 
@@ -34,6 +35,5 @@ function getNativeHeapSize() : bigint
 import { hidebug } from '@kit.PerformanceAnalysisKit';
 
 let nativeHeapSize: bigint = hidebug.getNativeHeapSize();
-console.info(`nativeHeapSize = ${nativeHeapSize}`);
 ```
 

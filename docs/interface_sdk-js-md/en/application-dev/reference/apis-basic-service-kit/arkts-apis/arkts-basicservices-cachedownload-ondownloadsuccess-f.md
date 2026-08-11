@@ -12,7 +12,7 @@ import { cacheDownload } from 'kits/@kit.BasicServicesKit';
 function onDownloadSuccess(url: string, callback: Callback<void>): void
 ```
 
-订阅预下载的完成事件。使用callback异步回调。
+Subscribes to the pre-download completion events. This API uses an asynchronous callback to return the result.
 
 **Since:** 23
 
@@ -26,8 +26,8 @@ function onDownloadSuccess(url: string, callback: Callback<void>): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| url | string | Yes | 待注册回调的url，url字符串的最大长度为8192字节。 |
-| callback | [Callback](arkts-basicservices-base-callback-i.md)&lt;void&gt; | Yes | 回调函数。 |
+| url | string | Yes | Callback URL to be registered, with a maximum of 8,192 bytes. |
+| callback | [Callback](arkts-basicservices-base-callback-i.md)&lt;void&gt; | Yes | Callback used to return the result. |
 
 ## Examples
 

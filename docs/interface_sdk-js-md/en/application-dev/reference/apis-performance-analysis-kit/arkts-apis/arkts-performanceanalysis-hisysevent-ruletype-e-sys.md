@@ -1,6 +1,6 @@
 # RuleType (System API)
 
-匹配规则类型枚举。
+Enumerates matching rule types.
 
 **Since:** 9
 
@@ -18,7 +18,7 @@
 WHOLE_WORD = 1
 ```
 
-全词匹配类型。
+Whole word matching.
 
 **Since:** 9
 
@@ -36,7 +36,7 @@ WHOLE_WORD = 1
 PREFIX = 2
 ```
 
-前缀匹配类型。
+Prefix matching.
 
 **Since:** 9
 
@@ -54,7 +54,7 @@ PREFIX = 2
 REGULAR = 3
 ```
 
-正则匹配类型。
+Regular expression matching.
 
 **Since:** 9
 

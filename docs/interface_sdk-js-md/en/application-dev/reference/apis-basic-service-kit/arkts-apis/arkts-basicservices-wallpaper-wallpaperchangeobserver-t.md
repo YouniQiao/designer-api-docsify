@@ -4,7 +4,7 @@
 type WallpaperChangeObserver = (wallpaperType: WallpaperType, resourceType: WallpaperResourceType, uri?: string) => void
 ```
 
-定义壁纸变化的监听回调函数。
+Defines a callback used to return wallpaper change.
 
 **Since:** 23
 
@@ -18,7 +18,7 @@ type WallpaperChangeObserver = (wallpaperType: WallpaperType, resourceType: Wall
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| wallpaperType | [WallpaperType](arkts-basicservices-wallpaper-wallpapertype-e.md) | Yes | 壁纸类型。 |
-| resourceType | [WallpaperResourceType](arkts-basicservices-wallpaper-wallpaperresourcetype-e-sys.md) | Yes | 壁纸资源类型。 |
-| uri | string | No | 壁纸资源地址。 |
+| wallpaperType | [WallpaperType](arkts-basicservices-wallpaper-wallpapertype-e.md) | Yes | indicates the wallpaper type. |
+| resourceType | [WallpaperResourceType](arkts-basicservices-wallpaper-wallpaperresourcetype-e-sys.md) | Yes | indicates the resource type of the wallpaper. |
+| uri | string | No | indicates the wallpaper resource address. |
 

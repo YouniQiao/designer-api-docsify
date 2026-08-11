@@ -1,11 +1,5 @@
 # getAutoTimeStatus
 
-## 导入模块
-
-```TypeScript
-import { systemDateTime } from 'kits/@kit.BasicServicesKit';
-```
-
 ## getAutoTimeStatus
 
 ```TypeScript
@@ -32,9 +26,24 @@ function getAutoTimeStatus(): boolean
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 13000001 | Network connection error or OS error. Possible causes: 1.System memory is insufficient; 2.Calls the underlying system interface failed. |
+| [13000001](../../apis-basic-services-kit/errorcode-time.md#13000001-网络或操作系统异常) | Network connection error or OS error. Possible causes: 1.System memory is insufficient; 2.Calls the underlying system interface failed. |
 
 ## 示例
+
+ArkTS-Dyn示例：
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+try {
+  let status: boolean = systemDateTime.getAutoTimeStatus();
+} catch(e) {
+  let error = e as BusinessError;
+  console.error(`Failed to get autotime status. message: ${error.message}, code: ${error.code}`);
+}
+```
+
+ArkTS-Sta示例：
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';

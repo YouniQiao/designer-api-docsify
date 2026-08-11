@@ -1,11 +1,5 @@
 # createPixelMapFromSurfaceWithTransformationSync
 
-## 导入模块
-
-```TypeScript
-import { image } from 'kits/@kit.ImageKit';
-```
-
 ## createPixelMapFromSurfaceWithTransformationSync
 
 ```TypeScript
@@ -35,18 +29,20 @@ Creates a PixelMap object based on the ID of a Surface with transformation.
 
 | 类型 | 说明 |
 | --- | --- |
-| [PixelMap](arkts-image-image-pixelmap-i.md) | A PixelMap instance if the operation is successful. Otherwise, an exception will be thrown. |
+| [PixelMap](../../apis-arkui/arkts-apis/arkts-arkui-pixelmap-t.md) | A PixelMap instance if the operation is successful. Otherwise, an exception will be thrown. |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 7600305 | Failed to create the PixelMap. |
-| 7600201 | Unsupported operation, e.g. on cross-platform. |
-| 7600104 | Failed to get the data from Surface. |
-| 7600206 | Invalid parameter. |
+| [7600305](../errorcode-image.md#7600305-创建pixelmap失败) | Failed to create the PixelMap. |
+| [7600201](../errorcode-image.md#7600201-不支持的操作) | Unsupported operation, e.g. on cross-platform. |
+| [7600104](../errorcode-image.md#7600104-获取图像数据失败) | Failed to get the data from Surface. |
+| [7600206](../errorcode-image.md#7600206-无效参数) | Invalid parameter. |
 
 ## 示例
+
+ArkTS-Dyn示例：
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -57,6 +53,21 @@ function createPixelMapFromSurfaceWithTransformationSync(surfaceId: string, tran
     console.info('Succeeded in creating the PixelMap from Surface.');
   } catch (e) {
     const err = e as BusinessError;
+    console.error(`Failed to create the PixelMap from Surface. Code: ${err.code}, message: ${err.message}`);
+  }
+}
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+function createPixelMapFromSurfaceWithTransformationSync(surfaceId: string, transformEnabled: boolean) {
+  try {
+    const pixelMap: image.PixelMap = image.createPixelMapFromSurfaceWithTransformationSync(surfaceId, transformEnabled);
+    console.info('Succeeded in creating the PixelMap from Surface.');
+  } catch (err) {
     console.error(`Failed to create the PixelMap from Surface. Code: ${err.code}, message: ${err.message}`);
   }
 }

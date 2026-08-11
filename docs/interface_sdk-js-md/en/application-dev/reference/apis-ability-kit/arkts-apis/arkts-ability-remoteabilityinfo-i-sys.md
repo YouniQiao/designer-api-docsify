@@ -1,11 +1,11 @@
 # RemoteAbilityInfo (System API)
 
-包含远程的ability信息，通过接口  
-[distributedBundle.getRemoteAbilityInfo](arkts-ability-distributedbundlemanager-getremoteabilityinfo-f-sys.md#getremoteabilityinfo)获取。
+The module provides information about a remote ability, which can be obtained through  
+[distributedBundle.getRemoteAbilityInfo](arkts-ability-distributedbundlemanager-getremoteabilityinfo-f-sys.md#getremoteabilityinfo).
 
-> **说明：**
+> **NOTE：**
 > 
-> 本模块为系统接口。
+> The APIs provided by this module are system APIs.
 
 **Since:** 9
 
@@ -23,7 +23,7 @@
 readonly elementName: ElementName
 ```
 
-指明远程ability的ElementName信息。
+Element name information of the remote ability.
 
 **Type:** [ElementName](arkts-ability-elementname-i.md)
 
@@ -43,7 +43,7 @@ readonly elementName: ElementName
 readonly icon: string
 ```
 
-指明的远程ability的图标信息。
+Icon of the remote ability.
 
 **Type:** string
 
@@ -63,7 +63,7 @@ readonly icon: string
 readonly label: string
 ```
 
-指明远程ability的标签信息。
+Label of the remote ability.
 
 **Type:** string
 

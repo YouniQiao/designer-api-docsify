@@ -1,6 +1,6 @@
 # RotationAxisLimited (System API)
 
-旋转轴限位状态
+Enumerates the rotation axis limit states.
 
 **Since:** 20
 
@@ -18,7 +18,7 @@
 NOT_LIMITED = 0
 ```
 
-不限位
+Not limited.
 
 **Since:** 20
 
@@ -36,7 +36,7 @@ NOT_LIMITED = 0
 NEGATIVE_LIMITED = 1
 ```
 
-负限位
+Negative limited.
 
 **Since:** 20
 

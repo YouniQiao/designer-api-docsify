@@ -10,12 +10,6 @@
 
 **系统能力：** SystemCapability.MiscServices.InputMethodFramework
 
-## 导入模块
-
-```TypeScript
-import { inputMethod } from 'kits/@kit.IMEKit';
-```
-
 ## enterKeyType
 
 ```TypeScript
@@ -24,7 +18,7 @@ enterKeyType: EnterKeyType
 
 输入法enter键类型。
 
-**类型：** [EnterKeyType](../../apis-arkui/arkts-apis/arkts-arkui-textinput-enterkeytype-e.md)
+**类型：** [EnterKeyType](../../apis-arkui/arkts-components/arkts-arkui-enterkeytype-e.md)
 
 **起始版本：** 10
 

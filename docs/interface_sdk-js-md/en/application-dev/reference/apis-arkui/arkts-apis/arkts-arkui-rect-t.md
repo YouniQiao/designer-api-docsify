@@ -4,7 +4,7 @@
 export type Rect = common2D.Rect
 ```
 
-用于设置矩形的形状。
+Rect info.
 
 **Since:** 23
 

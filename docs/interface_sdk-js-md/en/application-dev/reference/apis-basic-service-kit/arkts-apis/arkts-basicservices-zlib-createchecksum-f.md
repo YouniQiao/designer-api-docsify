@@ -12,7 +12,7 @@ import { zlib } from 'kits/@kit.BasicServicesKit';
 function createChecksum(): Promise<Checksum>
 ```
 
-创建校验对象。使用Promise异步回调。
+Creates this checksum object. This API uses a promise to return the result.
 
 **Since:** 12
 
@@ -28,7 +28,7 @@ function createChecksum(): Promise<Checksum>
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;Checksum&gt; | Promise对象。返回校验对象实例。 |
+| Promise&lt;Checksum&gt; | Promise used to return the created checksum object. |
 
 ## Examples
 

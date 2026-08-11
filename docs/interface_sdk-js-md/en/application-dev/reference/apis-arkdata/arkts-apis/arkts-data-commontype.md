@@ -1,6 +1,6 @@
 # @ohos.data.commonType
 
-数据通用类型（commonType）是数据管理中通用的数据类型。
+The commonType module defines common data types in data management.
 
 **Since:** 11
 
@@ -22,19 +22,19 @@ import { commonType } from 'kits/@kit.ArkData';
 
 | Name | Description |
 | --- | --- |
-| [Asset](arkts-arkdata-commontype-asset-i.md) | 记录资产附件（文件、图片、视频等类型文件）的相关信息。 |
+| [Asset](arkts-arkdata-commontype-asset-i.md) | Represents asset (such as a file, image, or video) information. |
 
 ### Enums
 
 | Name | Description |
 | --- | --- |
-| [AssetStatus](arkts-arkdata-commontype-assetstatus-e.md) | 描述资产附件的状态枚举。请使用枚举名称而非枚举值。 |
+| [AssetStatus](arkts-arkdata-commontype-assetstatus-e.md) | Enumerates the asset statuses. |
 
 ### Types
 
 | Name | Description |
 | --- | --- |
-| [Assets](arkts-arkdata-commontype-assets-t.md) | 表示Asset类型的数组。 |
-| [ValueType](arkts-arkdata-commontype-valuetype-t.md) | 用于表示允许的数据字段类型，接口参数具体类型根据其功能而定。。 |
-| [ValuesBucket](arkts-arkdata-commontype-valuesbucket-t.md) | 用于存储键值对的类型。该类型不是多线程安全的，如果应用中存在多线程同时操作该类派生出的实例，注意加锁保护。 |
+| [Assets](arkts-arkdata-commontype-assets-t.md) | Represents an array of Assets. |
+| [ValueType](arkts-arkdata-commontype-valuetype-t.md) | Enumerates the value types, which vary with the parameter function. |
+| [ValuesBucket](arkts-arkdata-commontype-valuesbucket-t.md) | Defines the types of the key and value in a KV pair. |
 

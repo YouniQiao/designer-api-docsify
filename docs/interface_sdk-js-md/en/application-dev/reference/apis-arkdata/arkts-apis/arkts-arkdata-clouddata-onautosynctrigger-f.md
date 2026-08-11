@@ -12,7 +12,7 @@ import { cloudData } from 'kits/@kit.ArkData';
 function onAutoSyncTrigger(observer: Callback<AutoSyncTriggerInfo>): void
 ```
 
-在已打开端云同步且应用关闭自动同步的条件下，注册自动同步触发事件通知。当满足自动触发条件时，回调函数会被调用。
+Describes the triggering method for automatic device-cloud synchronization subscription.
 
 **Since:** 26.0.0
 
@@ -28,21 +28,11 @@ function onAutoSyncTrigger(observer: Callback<AutoSyncTriggerInfo>): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| observer | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;AutoSyncTriggerInfo&gt; | Yes | 回调函数。 |
+| observer | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;AutoSyncTriggerInfo&gt; | Yes | Callback for automatic synchronization trigger interception. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 801 | Capability not supported. |
-
-## Examples
-
-```TypeScript
-function autoSyncTriggerObserver(info: cloudData.AutoSyncTriggerInfo) {
-  console.info(`Auto sync triggered, mode: ${info.mode}`);
-}
-
-cloudData.onAutoSyncTrigger(autoSyncTriggerObserver);
-```
+| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. |
 

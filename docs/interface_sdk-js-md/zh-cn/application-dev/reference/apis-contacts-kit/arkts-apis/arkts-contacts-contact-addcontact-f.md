@@ -1,11 +1,5 @@
 # addContact
 
-## 导入模块
-
-```TypeScript
-import { contact } from 'kits/@kit.ContactsKit';
-```
-
 ## addContact
 
 ```TypeScript
@@ -93,8 +87,8 @@ function addContact(context: Context, contact: Contact, callback: AsyncCallback<
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 401 | Parameter error. Possible causes: Mandatory parameters are left unspecified. |
-| 201 | Permission denied. |
+| [401](../errorcode-contacts.md#401-系统内部错误) | 1.Parameter error. Possible causes: Mandatory parameters are left unspecified. 2.Failed to open contact portrait file. 3.Internal error. Invalid contact id. Failed to generate contact profile. 4.Internal error. Failed to save contact portrait. |
+| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
 
 ## 示例
 
@@ -216,8 +210,8 @@ function addContact(context: Context, contact: Contact): Promise<number>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 401 | Parameter error. Possible causes: Mandatory parameters are left unspecified. |
-| 201 | Permission denied. |
+| [401](../errorcode-contacts.md#401-系统内部错误) | 1.Parameter error. Possible causes: Mandatory parameters are left unspecified. 2.Failed to open contact portrait file. 3.Internal error. Invalid contact id. Failed to generate contact profile. 4.Internal error. Failed to save contact portrait. |
+| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
 
 ## 示例
 

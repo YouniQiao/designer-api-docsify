@@ -1,6 +1,6 @@
 # UploadState (System API)
 
-文件上传状态的枚举。
+Describes the State type of file upload.
 
 **Since:** 26.0.0
 
@@ -18,7 +18,7 @@
 WAITING = 0
 ```
 
-等待上传。
+Indicates that the upload task is in waiting state.
 
 **Since:** 26.0.0
 
@@ -38,7 +38,7 @@ WAITING = 0
 RUNNING = 1
 ```
 
-正在上传中。
+Indicates that the upload task is in process now.
 
 **Since:** 26.0.0
 
@@ -58,7 +58,7 @@ RUNNING = 1
 COMPLETED = 2
 ```
 
-上传完成。
+Indicates that the upload task finished.
 
 **Since:** 26.0.0
 
@@ -78,7 +78,7 @@ COMPLETED = 2
 FAILED = 3
 ```
 
-上传失败。
+Indicates that the upload task failed.
 
 **Since:** 26.0.0
 
@@ -98,7 +98,7 @@ FAILED = 3
 STOPPED = 4
 ```
 
-上传已停止。
+Indicates that the upload task stopped.
 
 **Since:** 26.0.0
 
@@ -118,7 +118,7 @@ STOPPED = 4
 PAUSED = 5
 ```
 
-上传已暂停。
+Indicates that the upload task paused.
 
 **Since:** 26.0.0
 

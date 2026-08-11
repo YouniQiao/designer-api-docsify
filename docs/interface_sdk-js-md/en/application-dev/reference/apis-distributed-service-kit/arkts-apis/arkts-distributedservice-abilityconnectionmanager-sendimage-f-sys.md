@@ -44,8 +44,8 @@ Send image data.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. |
-| 202 | Not system App. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system App. |
 
 ## Examples
 
@@ -54,7 +54,7 @@ import { abilityConnectionManager } from '@kit.DistributedServiceKit';
 import { hilog } from '@kit.PerformanceAnalysisKit';
 import { photoAccessHelper } from '@kit.MediaLibraryKit';
 import { image } from '@kit.ImageKit';
-import { fileIo } from '@kit.CoreFileKit';
+import { fileIo as fs } from '@kit.CoreFileKit';
 
 try {
   let photoSelectOptions = new photoAccessHelper.PhotoSelectOptions();
@@ -67,7 +67,7 @@ try {
     return;
     }
 
-    let file = fileIo.openSync(photoSelectResult.photoUris[0], fileIo.OpenMode.READ_ONLY);
+    let file = fs.openSync(photoSelectResult.photoUris[0], fs.OpenMode.READ_ONLY);
     hilog.info(0x0000, 'testTag', 'file.fd:' + file.fd);
 
     let sessionId = 100;

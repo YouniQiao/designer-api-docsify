@@ -1,6 +1,6 @@
 # OffsetReferencePoint
 
-偏移参考点。
+Defines the reference point for the offset.
 
 **Since:** 12
 
@@ -16,7 +16,7 @@
 SEEK_SET = 0
 ```
 
-从文件开头查找。
+Searches from the beginning of a file.
 
 **Since:** 12
 
@@ -34,7 +34,7 @@ SEEK_SET = 0
 SEEK_CUR = 1
 ```
 
-从当前位置查找。
+Searches from the current location.
 
 **Since:** 12
 

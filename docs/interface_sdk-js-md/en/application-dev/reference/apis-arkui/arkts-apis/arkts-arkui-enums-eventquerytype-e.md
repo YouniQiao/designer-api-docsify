@@ -1,6 +1,6 @@
 # EventQueryType
 
-要查询的交互事件类型。
+Event query type.
 
 **Since:** 26.0.0
 
@@ -16,7 +16,7 @@
 ON_CLICK = 0
 ```
 
-点击事件。
+Type of onClick event.
 
 **Since:** 26.0.0
 

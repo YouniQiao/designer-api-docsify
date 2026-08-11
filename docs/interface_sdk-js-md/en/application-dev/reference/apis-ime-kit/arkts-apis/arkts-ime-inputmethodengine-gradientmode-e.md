@@ -1,11 +1,6 @@
 # GradientMode
 
-枚举，输入法渐变模式。
-
-| 名称 | 值 | 说明 |  
-| ------------ | -- | ------------------ |  
-| NONE | 0 | 不使用渐变模式。 |  
-| LINEAR_GRADIENT | 1 | 线性渐变。 |
+Enumerates the gradient modes of the input method.
 
 **Since:** 20
 
@@ -21,7 +16,7 @@
 NONE = 0
 ```
 
-不使用渐变模式。
+Disable gradient mode.
 
 **Since:** 20
 
@@ -37,7 +32,7 @@ NONE = 0
 LINEAR_GRADIENT = 1
 ```
 
-线性渐变。
+Linear gradient mode.
 
 **Since:** 20
 

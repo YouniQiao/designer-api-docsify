@@ -1,11 +1,5 @@
 # getOpNameSync
 
-## 导入模块
-
-```TypeScript
-import { sim } from 'kits/@kit.TelephonyKit';
-```
-
 ## getOpNameSync
 
 ```TypeScript

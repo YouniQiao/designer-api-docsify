@@ -1,11 +1,5 @@
 # createGroup
 
-## 导入模块
-
-```TypeScript
-import { request } from 'kits/@kit.BasicServicesKit';
-```
-
 ## createGroup
 
 ```TypeScript
@@ -38,6 +32,25 @@ function createGroup(config: GroupConfig): Promise<string>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 401 | Parameter error. Possible causes: &lt;br&gt; 1. Missing mandatory parameters. &lt;br&gt; 2. Incorrect parameter type. &lt;br&gt; 3. Parameter verification failed. |
-| 13400003 | Task service ability error. |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: &lt;br&gt; 1. Missing mandatory parameters. &lt;br&gt; 2. Incorrect parameter type. &lt;br&gt; 3. Parameter verification failed. |
+| [13400003](../../apis-basic-services-kit/errorcode-request.md#13400003-服务异常) | Task service ability error. |
+
+## 示例
+
+ArkTS-Sta示例：
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+// 准备分组配置选项 GroupConfig 对象。
+let config: request.agent.GroupConfig = {
+    notification: {},
+};
+// 调用 createGroup 接口创建分组。
+request.agent.createGroup(config).then((gid: string) => {
+  console.info(`Succeeded in creating a download task group. `);
+}).catch((err: Error) => {
+  console.error(`Failed to create a download group, Code: ${err.code}, message: ${err.message}`);
+});
+```
 

@@ -1,6 +1,6 @@
 # TouchTestInfo
 
-当前屏幕触点所在组件的坐标系、id和尺寸相关信息。
+Provides information about the coordinate system, ID, and size of the component where the current touch point is located.
 
 **Since:** 11
 
@@ -16,7 +16,7 @@
 id: string
 ```
 
-子组件的唯一标识。
+Unique ID of the child component.
 
 **Type:** string
 
@@ -38,9 +38,9 @@ id: string
 parentX: number
 ```
 
-按压点相对于父组件左上角的x轴坐标。
+X-coordinate of the touch point relative to the upper left corner of the parent component.
 
-单位：vp
+Unit: vp.
 
 **Type:** number
 
@@ -62,9 +62,9 @@ parentX: number
 parentY: number
 ```
 
-按压点相对于父组件左上角的y轴坐标。
+Y-coordinate of the touch point relative to the upper left corner of the parent component.
 
-单位：vp
+Unit: vp.
 
 **Type:** number
 
@@ -86,7 +86,7 @@ parentY: number
 rect: RectResult
 ```
 
-子组件的位置和宽高。
+Position, width, and height of the child component.
 
 **Type:** [RectResult](../arkts-apis/arkts-arkui-common-rectresult-i.md)
 
@@ -108,9 +108,9 @@ rect: RectResult
 windowX: number
 ```
 
-按压点相对于窗口左上角的x轴坐标。
+X-coordinate of the touch point relative to the upper left corner of the window.
 
-单位：vp
+Unit: vp.
 
 **Type:** number
 
@@ -132,9 +132,9 @@ windowX: number
 windowY: number
 ```
 
-按压点相对于窗口左上角的y轴坐标。
+Y-coordinate of the touch point relative to the upper left corner of the window.
 
-单位：vp
+Unit: vp.
 
 **Type:** number
 
@@ -156,9 +156,9 @@ windowY: number
 x: number
 ```
 
-按压点相对于子组件左上角的x轴坐标。
+X-coordinate of the touch point relative to the upper left corner of the child component.
 
-单位：vp
+Unit: vp.
 
 **Type:** number
 
@@ -180,9 +180,9 @@ x: number
 y: number
 ```
 
-按压点相对于子组件左上角的y轴坐标。
+Y-coordinate of the touch point relative to the upper left corner of the child component.
 
-单位：vp
+Unit: vp.
 
 **Type:** number
 

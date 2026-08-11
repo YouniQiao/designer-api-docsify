@@ -1,6 +1,6 @@
 # KemEncapResult
 
-KEM封装结果。
+Represents the encapsulation result of the KEM.
 
 **Since:** 26.0.0
 
@@ -22,7 +22,7 @@ import { cryptoFramework } from 'kits/@kit.CryptoArchitectureKit';
 sharedSecret: Uint8Array
 ```
 
-KEM的共享密钥。
+Indicates the shared secret key of the KEM.
 
 **Type:** Uint8Array
 
@@ -44,7 +44,7 @@ KEM的共享密钥。
 wrappedKey: Uint8Array
 ```
 
-KEM封装的密钥，即KEM的密文。
+Indicates the wrapped key of the KEM, which is the ciphertext of the KEM.
 
 **Type:** Uint8Array
 

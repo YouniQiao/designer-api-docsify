@@ -1,6 +1,6 @@
 # FileData (System API)
 
-文件数据，包含一个已经打开的文件描述符，在与备份服务进行IPC时使用。
+Corresponding to a file's data. Filedata is useful when doing IPC with the backup service.
 
 **Since:** 10
 
@@ -24,7 +24,7 @@ import { backup } from 'kits/@kit.CoreFileKit';
 fd: int
 ```
 
-已经打开的文件描述符，通过备份服务获取，可用于读取或写入备份、恢复文件内容。
+Indicates a native file descriptor typically retrieved from the backup service to hold the file's content.
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 

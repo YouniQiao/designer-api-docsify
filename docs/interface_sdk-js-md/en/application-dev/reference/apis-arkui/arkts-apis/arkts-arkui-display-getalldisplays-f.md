@@ -12,7 +12,7 @@ import { display } from 'kits/@kit.ArkUI';
 function getAllDisplays(callback: AsyncCallback<Array<Display>>): void
 ```
 
-获取当前所有的Display对象，使用callback异步回调。
+Obtains all Display objects. This API uses an asynchronous callback to return the result.
 
 **Since:** 9
 
@@ -28,18 +28,19 @@ function getAllDisplays(callback: AsyncCallback<Array<Display>>): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;Display&gt;&gt; | Yes | 回调函数。返回当前所有的Display对象。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;Display&gt;&gt; | Yes | Callback used to return all the Display objects. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 1400001 | Invalid display or screen. |
+| [1400001](../errorcode-display.md#1400001-invalid-display-or-screen) | Invalid display or screen. |
 
 ## Examples
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
+import { display } from '@kit.ArkUI';
 
 let displayClass: Array<display.Display> = [];
 display.getAllDisplays((err: BusinessError, data: Array<display.Display>) => {
@@ -60,7 +61,7 @@ display.getAllDisplays((err: BusinessError, data: Array<display.Display>) => {
 function getAllDisplays(): Promise<Array<Display>>
 ```
 
-获取当前所有的Display对象，使用Promise异步回调。
+Obtains all Display objects. This API uses a promise to return the result.
 
 **Since:** 9
 
@@ -76,18 +77,19 @@ function getAllDisplays(): Promise<Array<Display>>
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;Array&lt;Display&gt;&gt; | Promise对象。返回当前所有的Display对象。 |
+| Promise&lt;Array&lt;Display&gt;&gt; | Promise used to return all the Display objects. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 1400001 | Invalid display or screen. |
+| [1400001](../errorcode-display.md#1400001-invalid-display-or-screen) | Invalid display or screen. |
 
 ## Examples
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
+import { display } from '@kit.ArkUI';
 
 let displayClass: Array<display.Display> =[];
 let promise: Promise<Array<display.Display>> = display.getAllDisplays();

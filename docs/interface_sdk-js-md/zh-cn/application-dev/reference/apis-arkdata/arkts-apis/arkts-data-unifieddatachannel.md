@@ -16,12 +16,6 @@ UDMF处理数据时，不会解析用户数据的内容，存储路径安全性�
 
 **系统能力：** SystemCapability.DistributedDataManager.UDMF.Core
 
-## 导入模块
-
-```TypeScript
-import { unifiedDataChannel } from 'kits/@kit.ArkData';
-```
-
 ## 汇总
 
 ### 函数

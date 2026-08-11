@@ -1,118 +1,126 @@
 # ScaleResult
 
-Scale Result
+缩放信息。
 
-**起始版本：** 23
+**起始版本：** 10
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为10。
 
-<!--Device-componentUtils-export interface ScaleResult--><!--Device-componentUtils-export interface ScaleResult-End-->
+<!--Device-componentUtils-interface ScaleResult--><!--Device-componentUtils-interface ScaleResult-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
-
-## 导入模块
-
-```TypeScript
-import { componentUtils } from 'kits/@kit.ArkUI';
-```
 
 ## centerX
 
 ```TypeScript
-centerX: double
+centerX: number
 ```
 
-Transform the x-axis coordinate of the center point.
+变换中心点x轴坐标。
 
-**类型：** double
+单位: vp
 
-**起始版本：** 23
+**类型：** number
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
+**起始版本：** 10
+
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为10。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-<!--Device-ScaleResult-centerX: double--><!--Device-ScaleResult-centerX: double-End-->
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+
+<!--Device-ScaleResult-centerX: number--><!--Device-ScaleResult-centerX: number-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 ## centerY
 
 ```TypeScript
-centerY: double
+centerY: number
 ```
 
-Transform the y-axis coordinate of the center point.
+变换中心点y轴坐标。
 
-**类型：** double
+单位: vp
 
-**起始版本：** 23
+**类型：** number
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
+**起始版本：** 10
+
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为10。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-<!--Device-ScaleResult-centerY: double--><!--Device-ScaleResult-centerY: double-End-->
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+
+<!--Device-ScaleResult-centerY: number--><!--Device-ScaleResult-centerY: number-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 ## x
 
 ```TypeScript
-x: double
+x: number
 ```
 
-Zoom factor of the x-axis.
+x轴缩放倍数。
 
-**类型：** double
+**类型：** number
 
-**起始版本：** 23
+**起始版本：** 10
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为10。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-<!--Device-ScaleResult-x: double--><!--Device-ScaleResult-x: double-End-->
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+
+<!--Device-ScaleResult-x: number--><!--Device-ScaleResult-x: number-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 ## y
 
 ```TypeScript
-y: double
+y: number
 ```
 
-Zoom factor of the y-axis.
+y轴缩放倍数。
 
-**类型：** double
+**类型：** number
 
-**起始版本：** 23
+**起始版本：** 10
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为10。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-<!--Device-ScaleResult-y: double--><!--Device-ScaleResult-y: double-End-->
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+
+<!--Device-ScaleResult-y: number--><!--Device-ScaleResult-y: number-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 ## z
 
 ```TypeScript
-z: double
+z: number
 ```
 
-Zoom factor of the z-axis.
+z轴缩放倍数。
 
-**类型：** double
+**类型：** number
 
-**起始版本：** 23
+**起始版本：** 10
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为10。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-<!--Device-ScaleResult-z: double--><!--Device-ScaleResult-z: double-End-->
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+
+<!--Device-ScaleResult-z: number--><!--Device-ScaleResult-z: number-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 

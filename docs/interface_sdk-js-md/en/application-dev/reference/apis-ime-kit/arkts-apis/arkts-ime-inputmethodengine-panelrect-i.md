@@ -1,6 +1,6 @@
 # PanelRect
 
-输入法面板位置大小信息。
+Represents the size of the input method panel.
 
 **Since:** 12
 
@@ -22,7 +22,7 @@ import { inputMethodEngine } from 'kits/@kit.IMEKit';
 landscapeRect: window.Rect
 ```
 
-横屏状态时输入法面板窗口的位置大小。
+Size of the input method panel window in landscape mode.
 
 **Type:** window.Rect
 
@@ -40,7 +40,7 @@ landscapeRect: window.Rect
 portraitRect: window.Rect
 ```
 
-竖屏状态时输入法面板窗口的位置大小。
+Size of the input method panel window in portrait mode.
 
 **Type:** window.Rect
 

@@ -12,9 +12,9 @@ import { adminManager } from 'kits/@kit.MDMKit';
 function subscribeManagedEventSync(admin: Want, managedEvents: Array<ManagedEvent>): void
 ```
 
-订阅系统管理事件。调用成功后，当已订阅的系统管理事件发生时，设备管理应用将收到相应的通知。
+Subscribes to system management events. After the call is successful, the device administrator application will receive a notification when a subscribed system management event occurs.
 
-从API版本26.0.0开始，非超级设备管理应用调用该接口订阅[MANAGED_EVENT_POLICIES_CHANGED](arkts-mdm-adminmanager-managedevent-e.md)事件时返回9200002错误码。
+Since API version 26.0.0, error code 9200002 is returned when a non-super device administrator application calls this API to subscribe to the [MANAGED_EVENT_POLICIES_CHANGED](arkts-mdm-adminmanager-managedevent-e.md) event.
 
 **Since:** 12
 
@@ -32,18 +32,18 @@ function subscribeManagedEventSync(admin: Want, managedEvents: Array<ManagedEven
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| admin | [Want](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-want-want-c.md) | Yes | 企业设备管理扩展组件。Want中必须包含企业设备管理扩展能力的abilityName和所在应用的bundleName。 |
-| managedEvents | Array&lt;ManagedEvent&gt; | Yes | 订阅事件数组，用于指定需要订阅的系统管理事件。数组元素为 [ManagedEvent](arkts-mdm-adminmanager-managedevent-e.md)枚举值，可订阅多个事件类型，如应用安装/卸载/启动/停止事件、系统更新事件等。 |
+| admin | [Want](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-want-want-c.md) | Yes | EnterpriseAdminExtensionAbility. **Want** must contain the ability name of the EnterpriseAdminExtensionAbility and the bundle name of the application. |
+| managedEvents | Array&lt;ManagedEvent&gt; | Yes | Array of system management events to be subscribed to. Each element in the array is a value from the [ManagedEvent](arkts-mdm-adminmanager-managedevent-e.md) enumeration. Multiple event types can be subscribed to, such as application installation/uninstallation/start/stop events, system update events, and more. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
-| 9200008 | The specified system event is invalid. |
-| 201 | Permission verification failed. The application does not have the permission required to call the API. |
-| 9200001 | The application is not an administrator application of the device. |
-| 9200002 | The administrator application does not have permission to manage the device.<br>**Applicable version:** 26.0.0 and later |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| [9200008](../errorcode-enterpriseDeviceManager.md#9200008-invalid-system-subscription-event) | The specified system event is invalid. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed. The application does not have the permission required to call the API. |
+| [9200001](../errorcode-enterpriseDeviceManager.md#9200001-deviceadmin-not-enabled) | The application is not an administrator application of the device. |
+| [9200002](../errorcode-enterpriseDeviceManager.md#9200002-permission-denied) | The administrator application does not have permission to manage the device.<br>**Applicable version:** 26.0.0 and later |
 
 ## Examples
 

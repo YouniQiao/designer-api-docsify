@@ -1,6 +1,6 @@
 # DeviceStateChangeResult
 
-设备状态改变结果信息。
+Device status change result.
 
 **Since:** 23
 
@@ -22,7 +22,7 @@ import { distributedDeviceManager } from 'kits/@kit.DistributedServiceKit';
 action: DeviceStateChange
 ```
 
-设备状态信息。
+The state of the nearby devices.
 
 **Type:** [DeviceStateChange](arkts-distributedservice-distributeddevicemanager-devicestatechange-e.md)
 
@@ -40,7 +40,7 @@ action: DeviceStateChange
 device: DeviceBasicInfo
 ```
 
-分布式设备基本信息。
+Basic description information of a distributed device.
 
 **Type:** [DeviceBasicInfo](arkts-distributedservice-distributeddevicemanager-devicebasicinfo-i.md)
 

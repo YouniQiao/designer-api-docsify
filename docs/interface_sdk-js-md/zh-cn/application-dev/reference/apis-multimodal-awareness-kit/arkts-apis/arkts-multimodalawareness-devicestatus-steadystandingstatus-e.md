@@ -1,8 +1,8 @@
 # SteadyStandingStatus
 
-Defines the steady standing state (that is, stand mode).
+设备静止姿态感知状态（支架态）。
 
-A device enters stand mode when it is stationary, and its screen is at an angle between 45 and 135 degrees relative to the horizontal plane. For foldable smartphones, the device must be in a folded state or fully unfolded state.
+设备进入支架态指设备静止，且屏幕与水平面角度处于45度-135度。折叠屏手机需处于折叠状态或者完全展开状态。系统通过传感器检测设备的运动状态和角度变化，判断设备是否满足支架态条件。
 
 **起始版本：** 18
 
@@ -18,7 +18,7 @@ A device enters stand mode when it is stationary, and its screen is at an angle 
 STATUS_EXIT = 0
 ```
 
-Exit of the stand mode.
+表示设备退出支架态。
 
 **起始版本：** 18
 
@@ -34,7 +34,7 @@ Exit of the stand mode.
 STATUS_ENTER = 1
 ```
 
-Entry to the stand mode.
+表示设备进入支架态。
 
 **起始版本：** 18
 

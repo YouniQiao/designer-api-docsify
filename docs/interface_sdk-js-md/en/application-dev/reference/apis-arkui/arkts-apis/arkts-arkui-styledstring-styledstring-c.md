@@ -1,6 +1,6 @@
 # StyledString
 
-属性字符串
+StyledString
 
 **Since:** 23
 
@@ -16,7 +16,7 @@
 constructor(value: string | ImageAttachment | CustomSpan, styles?: Array<StyleOptions>)
 ```
 
-属性字符串的构造函数。
+constructor.
 
 **Since:** 23
 
@@ -32,8 +32,8 @@ constructor(value: string | ImageAttachment | CustomSpan, styles?: Array<StyleOp
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | string \| ImageAttachment \| CustomSpan | Yes | 属性字符串文本内容。&lt;br/&gt;**说明：** &lt;br/&gt;当value的类型为ImageAttachment或 CustomSpan时，styles参数不生效。&lt;br/&gt;需要设置styles时，通过[setStyle](arkts-arkui-styledstring-mutablestyledstring-c.md#setstyle)等方法实现。 |
-| styles | Array&lt;StyleOptions&gt; | No | 属性字符串初始化选项。&lt;br/&gt;**说明：** &lt;br/&gt;start为异常值时，按默认值0处理；&lt;br/&gt;当length为异常值时， length等于属性字符串在start后的实际长度；&lt;br/&gt;当StyledStringKey与StyledStringValue不匹配时，styles不生效。 |
+| value | string \| ImageAttachment \| CustomSpan | Yes | indicates the current object value of the StyledString. |
+| styles | Array&lt;StyleOptions&gt; | No | indicates the SpanStyle objects. |
 
 ## equals
 
@@ -41,7 +41,7 @@ constructor(value: string | ImageAttachment | CustomSpan, styles?: Array<StyleOp
 equals(other: StyledString): boolean
 ```
 
-判断两个属性字符串是否相等。
+Judge if two attribute strings are equal.
 
 **Since:** 23
 
@@ -51,17 +51,19 @@ equals(other: StyledString): boolean
 
 <!--Device-StyledString-equals(other: StyledString): boolean--><!--Device-StyledString-equals(other: StyledString): boolean-End-->
 
+**System capability:** SystemCapability.ArkUI.ArkUI.Full
+
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| other | [StyledString](arkts-arkui-styledstring-c.md) | Yes | StyledString类型的比较对象。 |
+| other | [StyledString](arkts-arkui-styledstring-c.md) | Yes | another StyledString. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| boolean | 两个属性字符串是否相等。&lt;br/&gt;true表示相等，false表示不相等。&lt;br/&gt;**说明：** &lt;br/&gt;当属性字符串的文本及样式均一致，视为相等。&lt;br/&gt;不比较 [GestureStyle]{ |
+| boolean |  |
 
 ## fromHtml
 
@@ -69,9 +71,7 @@ equals(other: StyledString): boolean
 static fromHtml(html: string): Promise<StyledString | undefined>
 ```
 
-将HTML格式字符串转换成属性字符串，使用Promise异步回调。当前支持转换的HTML标签范围：\&lt;p&gt;、\&lt;span&gt;、\&lt;img&gt;、\
-
-、\&lt;strong&gt;、\&lt;b&gt;、\&lt;a&gt;、\&lt;i&gt;、\&lt;em&gt;、\&lt;s&gt;、\&lt;u&gt;、\&lt;del&gt;、\&lt;sup&gt;、\&lt;sub&gt;、\&lt;cite&gt;、\&lt;dfn&gt;、\&lt;small&gt;、\&lt;h1&gt;、\&lt;h2&gt;、\&lt;h3&gt;、\&lt;h4&gt;、\&lt;h5&gt;、\
+Returns StyledString from the provided HTML string.
 
 **Since:** 23
 
@@ -87,19 +87,20 @@ static fromHtml(html: string): Promise<StyledString | undefined>
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| html | string | Yes | html格式的字符串。 |
+| html | string | Yes | the html text will be converted to a StyledString. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;StyledString \| undefined&gt; | [Promise](../../../arkts-utils/async-concurrency-overview.md#promise)对象，属性字符串。 |
+| Promise&lt;StyledString \| undefined&gt; |  |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 170001 | Convert Error. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: &lt;br&gt; 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameters types. &lt;br&gt; 3. Parameter verification failed. |
+| [170001](../errorcode-styled-string.md#170001-conversion-error) | Convert Error. |
 
 ## getString
 
@@ -107,7 +108,7 @@ static fromHtml(html: string): Promise<StyledString | undefined>
 getString(): string
 ```
 
-获取字符串信息。
+Get the literal content of the StyledString.
 
 **Since:** 23
 
@@ -123,7 +124,7 @@ getString(): string
 
 | Type | Description |
 | --- | --- |
-| string | 属性字符串文本内容。&lt;br/&gt;**说明：** &lt;br/&gt;当属性字符串中包含图片或[CustomSpan]{ |
+| string | the literal content of the StyledString |
 
 ## getStyles
 
@@ -131,9 +132,7 @@ getString(): string
 getStyles(start: int, length: int, styledKey?: StyledStringKey): Array<SpanStyle> | undefined
 ```
 
-获取指定范围属性字符串的样式集合。不能超出属性字符串的长度。
-
-该接口仅返回开发者设置的样式。
+Get the attribute objects of the subStyledString.
 
 **Since:** 23
 
@@ -149,15 +148,21 @@ getStyles(start: int, length: int, styledKey?: StyledStringKey): Array<SpanStyle
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| start | int | Yes | 指定范围属性字符串的下标。&lt;br/&gt;取值范围：大于等于0。 |
-| length | int | Yes | 指定范围属性字符串的长度。&lt;br/&gt;取值范围：大于等于0。 |
-| styledKey | [StyledStringKey](arkts-arkui-styledstring-styledstringkey-e.md) | No | 指定范围属性字符串样式的枚举值。&lt;br/&gt;**说明：** &lt;br/&gt;当不传入该参数时默认获取开发者设置的 [StyledStringKey](arkts-arkui-styledstring-styledstringkey-e.md)所有枚举值样式。 |
+| start | int | Yes | the start position of the subStyledString. |
+| length | int | Yes | the length of the subStyledString's characters. |
+| styledKey | [StyledStringKey](arkts-arkui-styledstring-styledstringkey-e.md) | No | the specified type. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Array&lt;SpanStyle&gt; | 各样式对象的数组。&lt;br/&gt;**说明：** &lt;br/&gt;当指定范围属性字符串未设置任何样式，则返回空数组。&lt;br/&gt;当start和length越 界或者必填传入undefined时，会抛出异常；&lt;br/&gt;当styledKey传入异常值或undefined时，会抛出异常。&lt;br/&gt;当styledKey为CustomSpan时，返回的是创建CustomSpan时传入 的样式对象，即修改该样式对象也会影响实际的显示效果。 |
+| Array&lt;SpanStyle&gt; |  |
+
+**Error codes:**
+
+| Error Code ID | Error Message |
+| --- | --- |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: &lt;br&gt; 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameters types. &lt;br&gt; 3. Parameter verification failed. |
 
 ## subStyledString
 
@@ -165,7 +170,7 @@ getStyles(start: int, length: int, styledKey?: StyledStringKey): Array<SpanStyle
 subStyledString(start: int, length?: int): StyledString | undefined
 ```
 
-获取属性字符串的子属性字符串。不能超出属性字符串的长度。
+Get the substring of the StyledString.
 
 **Since:** 23
 
@@ -181,14 +186,20 @@ subStyledString(start: int, length?: int): StyledString | undefined
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| start | int | Yes | 子属性字符串开始位置的下标。&lt;br/&gt;取值范围：大于等于0。 |
-| length | int | No | 子属性字符串的长度。&lt;br/&gt;取值范围：大于等于0。 |
+| start | int | Yes | the start position of the subStyledString. |
+| length | int | No | the length of the subStyledString's characters. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [StyledString](arkts-arkui-styledstring-c.md) | 子属性字符串。&lt;br/&gt;**说明：** &lt;br/&gt;当start为合法入参时，length的默认值是被查询属性字符串对象的长度与start的值的差。&lt; br/&gt;当start和length越界或者必填传入undefined时，会抛出异常。 |
+| [StyledString](arkts-arkui-styledstring-c.md) |  |
+
+**Error codes:**
+
+| Error Code ID | Error Message |
+| --- | --- |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: &lt;br&gt; 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameters types. &lt;br&gt; 3. Parameter verification failed. |
 
 ## toHtml
 
@@ -196,10 +207,7 @@ subStyledString(start: int, length?: int): StyledString | undefined
 static toHtml(styledString: StyledString): string
 ```
 
-将属性字符串转换成HTML格式字符串。支持转换的属性字符串[StyledStringKey](arkts-arkui-styledstring-styledstringkey-e.md)包括：StyledStringKey.FONT、StyledStringKey.DECORATION、StyledStringKey.LETTER_SPACING、StyledStringKey.TEXT_SHADOW、StyledStringKey.LINE_HEIGHT、StyledStringKey.IMAGE。
-
-使用方法参考  
-[示例12（fromHtml和toHtml互相转换）](../../../reference/apis-arkui/arkui-ts/ts-universal-styled-string.md#示例12fromhtml和tohtml互相转换)。
+Returns HTML string from the provided StyledString.
 
 **Since:** 23
 
@@ -215,19 +223,19 @@ static toHtml(styledString: StyledString): string
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| styledString | [StyledString](arkts-arkui-styledstring-c.md) | Yes | 属性字符串。 |
+| styledString | [StyledString](arkts-arkui-styledstring-c.md) | Yes | the StyledString will be converted to a HTML string. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| string | HTML格式字符串。 |
+| string | Returns the HTML string converted from the provided StyledString. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. Possible causes: &lt;br&gt; 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameters types. &lt;br&gt; 3. Parameter verification failed. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: &lt;br&gt; 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameters types. &lt;br&gt; 3. Parameter verification failed. |
 
 ## length
 
@@ -235,7 +243,7 @@ static toHtml(styledString: StyledString): string
 get length(): int
 ```
 
-获取属性字符串内容长度。
+Get the length of the StyledString's characters.
 
 **Type:** int
 

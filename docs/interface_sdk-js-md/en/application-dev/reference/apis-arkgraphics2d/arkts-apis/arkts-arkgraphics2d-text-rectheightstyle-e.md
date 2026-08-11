@@ -1,6 +1,6 @@
 # RectHeightStyle
 
-矩形区域高度规格枚举。
+Enumerates the rectangle height styles.
 
 **Since:** 12
 
@@ -16,7 +16,7 @@
 TIGHT = 0
 ```
 
-与字形紧贴。
+Tight style.
 
 **Since:** 12
 
@@ -34,7 +34,7 @@ TIGHT = 0
 MAX = 1
 ```
 
-扩展高度，以匹配所有行上最高矩形的位置。
+Extends the height to match the highest rectangle in all lines.
 
 **Since:** 12
 
@@ -52,7 +52,7 @@ MAX = 1
 INCLUDE_LINE_SPACE_MIDDLE = 2
 ```
 
-每个矩形的顶部和底部将覆盖行上方和行下方的一半空间。
+Includes half of the line spacing to both the top and bottom of the rectangle.
 
 **Since:** 12
 
@@ -70,7 +70,7 @@ INCLUDE_LINE_SPACE_MIDDLE = 2
 INCLUDE_LINE_SPACE_TOP = 3
 ```
 
-行间距将被添加到矩形的顶部。
+Includes the line spacing to the top of the rectangle.
 
 **Since:** 12
 
@@ -88,7 +88,7 @@ INCLUDE_LINE_SPACE_TOP = 3
 INCLUDE_LINE_SPACE_BOTTOM = 4
 ```
 
-行间距将被添加到矩形的底部。
+Includes the line spacing to the bottom of the rectangle.
 
 **Since:** 12
 
@@ -106,7 +106,7 @@ INCLUDE_LINE_SPACE_BOTTOM = 4
 STRUT = 5
 ```
 
-高度按照文本的样式设置。
+Sets the height according to the strut style.
 
 **Since:** 12
 

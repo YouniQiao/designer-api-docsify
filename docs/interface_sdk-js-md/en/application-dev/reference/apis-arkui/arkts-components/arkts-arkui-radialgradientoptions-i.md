@@ -1,17 +1,22 @@
 # RadialGradientOptions
 
-径向渐变参数。
+Defines the radial gradient parameters.
 
-> **说明：**
+> **NOTE：**
 > 
-> 为规范匿名对象的定义，API 18版本修改了此处的元素定义。其中，保留了历史匿名对象的起始版本信息，会出现外层元素@since版本号高于内层元素版本号的情况，但这不影响接口的使用。
+> To standardize anonymous object definitions, the element definitions here have been revised in API version 18.
+> While historical version information is preserved for anonymous objects, there may be cases where the outer element
+> 's @since version number is higher than inner elements'. This does not affect interface usability.
 
-> **说明：**
+> **NOTE：**
 > 
-> colors参数的约束：
+> When using the **colors** parameter, take note of the following:
 > 
-> [ResourceColor](../arkts-apis/arkts-arkui-resourcecolor-t.md/arkts-arkui-resourcecolor-t.md)表示填充的颜色，number表示指定颜色所处的位置，取值范围为[0,1.0]，0表示需要设置渐变色的容器的开始处，1.0表示容器的结尾处。想要实现多个颜色渐变
-> 效果时，多个数组中number参数建议递增设置，如后一个数组number参数比前一个数组number小的话，按照等于前一个数组number的值处理。
+> [ResourceColor](../arkts-apis/arkts-arkui-resourcecolor-t.md/arkts-arkui-resourcecolor-t.md) indicates the color, and **number** indicates the color's position, which
+> ranges from 0 to 1.0: **0** indicates the start of the container, and **1.0** indicates the end of the container.
+> To create a gradient with multiple color stops, you are advised to set the **number** values in ascending order. If
+> a value of **number** in an array is smaller than that in the previous one, it is considered as equal to the
+> previous value.
 
 **Since:** 18
 
@@ -27,19 +32,17 @@
 center: [Length, Length]
 ```
 
-Defines center point for radial gradient.
-
-Anonymous Object Rectification.
+Center of the radial gradient, that is, the coordinates relative to the upper left corner of the current component.
 
 **Type:** [Length, Length]
 
-**Since:** 18
+**Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 18.
+**ArkTS mode:** ArkTS-Dyn only, since version 7.
 
-**Atomic service API:** This API can be used in atomic services since API version 18.
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
-**Widget capability:** This API can be used in ArkTS widgets since API version 18.
+**Widget capability:** This API can be used in ArkTS widgets since API version 9.
 
 <!--Device-RadialGradientOptions-center: [Length, Length]--><!--Device-RadialGradientOptions-center: [Length, Length]-End-->
 
@@ -51,19 +54,19 @@ Anonymous Object Rectification.
 colors: Array<[ResourceColor, number]>
 ```
 
-Defines color description for gradients.
+Array of color stops, each of which consists of a color and its stop position. Invalid colors are automatically skipped. **ResourceColor** represents the color. **number** represents the stop position of the color, with a range of [0, 1.0]. Values less than 0 are treated as **0**, and values greater than 1.0 are treated as **1.0**. **0** indicates the start of the gradient; **1.0** indicates the end. To achieve multi-color gradients, the **number** parameters in the array should be set in ascending order. If a later number is less than a previous one, it is treated as equal to the previous value.
 
-Anonymous Object Rectification.
+Default value: **[]**, meaning no gradient effect.
 
 **Type:** Array&lt;[ResourceColor, number]&gt;
 
-**Since:** 18
+**Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 18.
+**ArkTS mode:** ArkTS-Dyn only, since version 7.
 
-**Atomic service API:** This API can be used in atomic services since API version 18.
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
-**Widget capability:** This API can be used in ArkTS widgets since API version 18.
+**Widget capability:** This API can be used in ArkTS widgets since API version 9.
 
 <!--Device-RadialGradientOptions-colors: Array<[ResourceColor, number]>--><!--Device-RadialGradientOptions-colors: Array<[ResourceColor, number]>-End-->
 
@@ -75,19 +78,20 @@ Anonymous Object Rectification.
 radius: Length
 ```
 
-Defines radius of the radial gradient.
+Radius of the radial gradient.
 
-Anonymous Object Rectification.
+Value range:   
+[0, +∞). A value less than 0 is treated as **0**. If the value is **undefined**, the system adaptively determines the gradient radius.
 
 **Type:** [Length](../arkts-apis/arkts-arkui-length-t.md)
 
-**Since:** 18
+**Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 18.
+**ArkTS mode:** ArkTS-Dyn only, since version 7.
 
-**Atomic service API:** This API can be used in atomic services since API version 18.
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
-**Widget capability:** This API can be used in ArkTS widgets since API version 18.
+**Widget capability:** This API can be used in ArkTS widgets since API version 9.
 
 <!--Device-RadialGradientOptions-radius: Length--><!--Device-RadialGradientOptions-radius: Length-End-->
 
@@ -99,21 +103,25 @@ Anonymous Object Rectification.
 repeating?: boolean
 ```
 
-Defines gradient colors with repeated coloring.
+Whether the colors are repeated.
 
-Anonymous Object Rectification.
+Default value: **false**.
+
+**true**: The colors are repeated.
+
+**false**: The colors are not repeated.
 
 **Type:** boolean
 
-**Default:** false
+**Default:** false [since 18]
 
-**Since:** 18
+**Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 18.
+**ArkTS mode:** ArkTS-Dyn only, since version 7.
 
-**Atomic service API:** This API can be used in atomic services since API version 18.
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
-**Widget capability:** This API can be used in ArkTS widgets since API version 18.
+**Widget capability:** This API can be used in ArkTS widgets since API version 9.
 
 <!--Device-RadialGradientOptions-repeating?: boolean--><!--Device-RadialGradientOptions-repeating?: boolean-End-->
 

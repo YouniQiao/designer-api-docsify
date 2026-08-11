@@ -24,7 +24,7 @@ import { UploadResponse, RequestData, DownloadRequestOptions, DownloadResponse, 
 uri: string
 ```
 
-表示下载文件的uri。
+URI of the download file.
 
 **Type:** string
 

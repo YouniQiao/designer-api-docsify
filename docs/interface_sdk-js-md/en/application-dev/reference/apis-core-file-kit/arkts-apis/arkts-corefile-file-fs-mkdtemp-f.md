@@ -12,7 +12,7 @@ import { Options, ReaderIteratorResult, Watcher, ReadTextOptions, WatchEventList
 declare function mkdtemp(prefix: string): Promise<string>
 ```
 
-创建临时目录，使用promise异步回调。
+Creates a temporary directory. This API uses a promise to return the result.
 
 **Since:** 9
 
@@ -26,13 +26,13 @@ declare function mkdtemp(prefix: string): Promise<string>
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| prefix | string | Yes | 指定目录路径，命名时需要以"XXXXXX"作为结尾。路径末尾的"XXXXXX"字符串将被替换为随机字符，以创建唯一的目录名。 |
+| prefix | string | Yes | String to be replaced with six randomly generated characters to create a unique temporary directory. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;string&gt; | Promise对象。返回生成的唯一目录路径。 |
+| Promise&lt;string&gt; | Promise used to return the directory created. |
 
 **Error codes:**
 
@@ -61,7 +61,7 @@ declare function mkdtemp(prefix: string): Promise<string>
 declare function mkdtemp(prefix: string, callback: AsyncCallback<string>): void
 ```
 
-创建临时目录，使用callback异步回调。
+Creates a temporary directory. This API uses an asynchronous callback to return the result.
 
 **Since:** 9
 
@@ -75,8 +75,8 @@ declare function mkdtemp(prefix: string, callback: AsyncCallback<string>): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| prefix | string | Yes | 指定目录路径，命名时需要以"XXXXXX"作为结尾。路径末尾的"XXXXXX"字符串将被替换为随机字符，以创建唯一的目录名。 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;string&gt; | Yes | 异步创建临时目录之后的回调。 |
+| prefix | string | Yes | String to be replaced with six randomly generated characters to create a unique temporary directory. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;string&gt; | Yes | Callback used to return the result. |
 
 **Error codes:**
 

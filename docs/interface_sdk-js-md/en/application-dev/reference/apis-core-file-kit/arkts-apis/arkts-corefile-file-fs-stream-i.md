@@ -1,8 +1,7 @@
 # Stream
 
-文件流，在调用Stream的方法前，需要先通过  
-[fileIo.createStream](../../../reference/apis-core-file-kit/js-apis-file-fs.md#fileiocreatestream)方法或者  
-[fileIo.fdopenStream](../../../reference/apis-core-file-kit/js-apis-file-fs.md#fileiofdopenstream)（同步或异步）来构建一个Stream实例。
+Provides API for stream operations. Before calling any API of **Stream**, you need to create a **Stream** instance by using [fileIo.createStream](../../../reference/apis-core-file-kit/js-apis-file-fs.md#fileiocreatestream) or  
+[fileIo.fdopenStream](../../../reference/apis-core-file-kit/js-apis-file-fs.md#fileiofdopenstream).
 
 **Since:** 9
 
@@ -24,7 +23,7 @@ import { Options, ReaderIteratorResult, Watcher, ReadTextOptions, WatchEventList
 close(): Promise<void>
 ```
 
-关闭文件流，使用promise异步回调。
+Closes the file stream. This API uses a promise to return the result.
 
 **Since:** 9
 
@@ -40,7 +39,7 @@ close(): Promise<void>
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise对象。无返回值。 |
+| Promise&lt;void&gt; | Promise that returns no value. |
 
 **Error codes:**
 
@@ -57,13 +56,12 @@ close(): Promise<void>
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
-
 let filePath = pathDir + "/test.txt";
-let stream = fileIo.createStreamSync(filePath, "r+");
+let stream = fs.createStreamSync(filePath, "r+");
 stream.close().then(() => {
-  console.info(`Succeeded in closing file stream.`);
+  console.info("close fileStream succeed");
 }).catch((err: BusinessError) => {
-  console.error(`Failed to close file stream. Code: ${err.code}, message: ${err.message}`);
+  console.error("close fileStream  failed with error message: " + err.message + ", error code: " + err.code);
 });
 ```
 
@@ -73,7 +71,7 @@ stream.close().then(() => {
 close(callback: AsyncCallback<void>): void
 ```
 
-异步关闭文件流，使用callback异步回调。
+Closes the file stream. This API uses an asynchronous callback to return the result.
 
 **Since:** 9
 
@@ -89,7 +87,7 @@ close(callback: AsyncCallback<void>): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | 异步关闭文件流之后的回调。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback invoked immediately after the stream is closed. |
 
 **Error codes:**
 
@@ -106,14 +104,13 @@ close(callback: AsyncCallback<void>): void
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
-
 let filePath = pathDir + "/test.txt";
-let stream = fileIo.createStreamSync(filePath, "r+");
+let stream = fs.createStreamSync(filePath, "r+");
 stream.close((err: BusinessError) => {
   if (err) {
-    console.error(`Failed to close stream. Code: ${err.code}, message: ${err.message}`);
+    console.error("close stream failed with error message: " + err.message + ", error code: " + err.code);
   } else {
-    console.info(`Succeeded in closing stream.`);
+    console.info("close stream succeed");
   }
 });
 ```
@@ -124,7 +121,7 @@ stream.close((err: BusinessError) => {
 closeSync(): void
 ```
 
-同步关闭文件流。
+Closes the file stream. This API returns the result synchronously.
 
 **Since:** 9
 
@@ -151,7 +148,7 @@ closeSync(): void
 
 ```TypeScript
 let filePath = pathDir + "/test.txt";
-let stream = fileIo.createStreamSync(filePath, "r+");
+let stream = fs.createStreamSync(filePath, "r+");
 stream.closeSync();
 ```
 
@@ -161,7 +158,7 @@ stream.closeSync();
 flush(): Promise<void>
 ```
 
-刷新文件流，使用promise异步回调。
+Flushes the file stream. This API uses a promise to return the result.
 
 **Since:** 9
 
@@ -177,7 +174,7 @@ flush(): Promise<void>
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise对象。返回表示异步刷新文件流的结果。 |
+| Promise&lt;void&gt; | Promise used to return the result. |
 
 **Error codes:**
 
@@ -200,14 +197,13 @@ flush(): Promise<void>
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
-
 let filePath = pathDir + "/test.txt";
-let stream = fileIo.createStreamSync(filePath, "r+");
+let stream = fs.createStreamSync(filePath, "r+");
 stream.flush().then(() => {
-  console.info(`Succeeded in flushing.`);
+  console.info("flush succeed");
   stream.close();
 }).catch((err: BusinessError) => {
-  console.error(`Failed to flush. Code: ${err.code}, message: ${err.message}`);
+  console.error("flush failed with error message: " + err.message + ", error code: " + err.code);
 });
 ```
 
@@ -217,7 +213,7 @@ stream.flush().then(() => {
 flush(callback: AsyncCallback<void>): void
 ```
 
-异步刷新文件流，使用callback异步回调。
+Flushes the file stream. This API uses an asynchronous callback to return the result.
 
 **Since:** 9
 
@@ -233,7 +229,7 @@ flush(callback: AsyncCallback<void>): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | 异步刷新文件流后的回调函数。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. |
 
 **Error codes:**
 
@@ -256,14 +252,13 @@ flush(callback: AsyncCallback<void>): void
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
-
 let filePath = pathDir + "/test.txt";
-let stream = fileIo.createStreamSync(filePath, "r+");
+let stream = fs.createStreamSync(filePath, "r+");
 stream.flush((err: BusinessError) => {
   if (err) {
-    console.error(`Failed to flush stream. Code: ${err.code}, message: ${err.message}`);
+    console.error("flush stream failed with error message: " + err.message + ", error code: " + err.code);
   } else {
-    console.info(`Succeeded in flushing.`);
+    console.info("flush succeed");
     stream.close();
   }
 });
@@ -275,7 +270,7 @@ stream.flush((err: BusinessError) => {
 flushSync(): void
 ```
 
-同步刷新文件流。
+Flushes the file stream. This API returns the result synchronously.
 
 **Since:** 9
 
@@ -308,7 +303,7 @@ flushSync(): void
 
 ```TypeScript
 let filePath = pathDir + "/test.txt";
-let stream = fileIo.createStreamSync(filePath, "r+");
+let stream = fs.createStreamSync(filePath, "r+");
 stream.flushSync();
 stream.close();
 ```
@@ -322,7 +317,7 @@ read(
   ): Promise<number>
 ```
 
-从流文件读取数据，使用promise异步回调。
+Reads data from a stream file. This API uses a promise to return the result.
 
 **Since:** 9
 
@@ -338,14 +333,14 @@ read(
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| buffer | ArrayBuffer | Yes | 用于读取文件的缓冲区。 |
-| options | [ReadOptions](arkts-corefile-file-fs-readoptions-i.md) | No | 支持如下选项：&lt;br/&gt;- length，number类型，表示期望读取数据的长度，单位为Byte。可选，默认缓冲区长度。&lt;br/&gt;- offset， number类型，表示期望读取文件的位置，单位为Byte。可选，默认从当前位置开始读。<br>**Since:** 11 |
+| buffer | ArrayBuffer | Yes | Buffer used to store the file read. |
+| options | [ReadOptions](arkts-corefile-file-fs-readoptions-i.md) | No | The options are as follows:&lt;br&gt;- **length** (number): length of the data to read , in bytes. This parameter is optional. The default value is the buffer length.&lt;br&gt;- **offset** (number): position of the data to read in the file, in bytes. This parameter is optional. By default, data is read from the current position.<br>**Since:** 11 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;number&gt; | Promise对象。返回读取的结果，单位为Byte。 |
+| Promise&lt;number&gt; | Promise used to return the data read, in bytes. |
 
 **Error codes:**
 
@@ -367,21 +362,21 @@ read(
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
 import { buffer } from '@kit.ArkTS';
-import { ReadOptions } from '@kit.CoreFileKit';
-
+import { fileIo as fs, ReadOptions } from '@kit.CoreFileKit';
 let filePath = pathDir + "/test.txt";
-let stream = fileIo.createStreamSync(filePath, "r+");
+let stream = fs.createStreamSync(filePath, "r+");
 let arrayBuffer = new ArrayBuffer(4096);
 let readOption: ReadOptions = {
   offset: 5,
   length: 5
 };
 stream.read(arrayBuffer, readOption).then((readLen: number) => {
+  console.info("read data succeed");
   let buf = buffer.from(arrayBuffer, 0, readLen);
-  console.info(`Succeeded in reading data, the content of file is: ${buf.toString()}`);
+  console.info(`The content of file: ${buf.toString()}`);
   stream.close();
 }).catch((err: BusinessError) => {
-  console.error(`Failed to read data. Code: ${err.code}, message: ${err.message}`);
+  console.error("read data failed with error message: " + err.message + ", error code: " + err.code);
 });
 ```
 
@@ -391,7 +386,7 @@ stream.read(arrayBuffer, readOption).then((readLen: number) => {
 read(buffer: ArrayBuffer, callback: AsyncCallback<number>): void
 ```
 
-从流文件读取数据，使用callback异步回调。
+Reads data from a stream file. This API uses an asynchronous callback to return the result.
 
 **Since:** 9
 
@@ -407,8 +402,8 @@ read(buffer: ArrayBuffer, callback: AsyncCallback<number>): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| buffer | ArrayBuffer | Yes | 用于读取文件的缓冲区。 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;number&gt; | Yes | 异步读取完成后的回调。返回读取的结果，单位为Byte。 |
+| buffer | ArrayBuffer | Yes | Buffer used to store the file read. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;number&gt; | Yes | Callback used to return the result. The callback returns the data read, in bytes. |
 
 **Error codes:**
 
@@ -424,26 +419,6 @@ read(buffer: ArrayBuffer, callback: AsyncCallback<number>): void
 | 13900010 | Try again |
 | 13900042 | Unknown error |
 
-## Examples
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-import { buffer } from '@kit.ArkTS';
-
-let filePath = pathDir + "/test.txt";
-let stream = fileIo.createStreamSync(filePath, "r+");
-let arrayBuffer = new ArrayBuffer(4096);
-stream.read(arrayBuffer, (err: BusinessError, readLen: number) => {
-  if (err) {
-    console.error(`Failed to read stream. Code: ${err.code}, message: ${err.message}`);
-  } else {
-    let buf = buffer.from(arrayBuffer, 0, readLen);
-    console.info(`Succeeded in reading data, the content of file is: ${buf.toString()}`);
-    stream.close();
-  }
-});
-```
-
 ## read
 
 ```TypeScript
@@ -454,7 +429,7 @@ read(
   ): void
 ```
 
-从流文件读取数据，使用callback异步回调。
+Reads data from a stream file. This API uses an asynchronous callback to return the result.
 
 **Since:** 9
 
@@ -470,9 +445,9 @@ read(
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| buffer | ArrayBuffer | Yes | 用于读取文件的缓冲区。 |
-| options | [ReadOptions](arkts-corefile-file-fs-readoptions-i.md) | Yes | 支持如下选项：&lt;br/&gt;- length，number类型，表示期望读取数据的长度，单位为Byte。可选，默认缓冲区长度。&lt;br/&gt;- offset， number类型，表示期望读取文件的位置，单位为Byte。可选，默认从当前位置开始读取。<br>**Since:** 11 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;number&gt; | Yes | 异步读取完成后的回调。返回读取的结果，单位为Byte。 |
+| buffer | ArrayBuffer | Yes | Buffer used to store the file read. |
+| options | [ReadOptions](arkts-corefile-file-fs-readoptions-i.md) | Yes | The options are as follows:&lt;br&gt;- **length** (number): length of the data to read , in bytes. This parameter is optional. The default value is the buffer length.&lt;br&gt;- **offset** (number): position of the data to read in the file, in bytes. This parameter is optional. By default, data is read from the current position.<br>**Since:** 11 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;number&gt; | Yes | Callback used to return the result. The callback returns the data read, in bytes. |
 
 **Error codes:**
 
@@ -488,31 +463,6 @@ read(
 | 13900010 | Try again |
 | 13900042 | Unknown error |
 
-## Examples
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-import { buffer } from '@kit.ArkTS';
-import { ReadOptions } from '@kit.CoreFileKit';
-
-let filePath = pathDir + "/test.txt";
-let stream = fileIo.createStreamSync(filePath, "r+");
-let arrayBuffer = new ArrayBuffer(4096);
-let readOption: ReadOptions = {
-  offset: 5,
-  length: 5
-};
-stream.read(arrayBuffer, readOption, (err: BusinessError, readLen: number) => {
-  if (err) {
-    console.error(`Failed to read stream. Code: ${err.code}, message: ${err.message}`);
-  } else {
-    let buf = buffer.from(arrayBuffer, 0, readLen);
-    console.info(`Succeeded in reading data, the content of file is: ${buf.toString()}`);
-    stream.close();
-  }
-});
-```
-
 ## readSync
 
 ```TypeScript
@@ -522,7 +472,7 @@ readSync(
   ): number
 ```
 
-以同步方法从流文件读取数据。
+Reads data from a stream file. This API returns the result synchronously.
 
 **Since:** 9
 
@@ -538,14 +488,14 @@ readSync(
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| buffer | ArrayBuffer | Yes | 用于读取文件的缓冲区。 |
-| options | [ReadOptions](arkts-corefile-file-fs-readoptions-i.md) | No | 支持如下选项：&lt;br/&gt;- length，number类型，表示期望读取数据的长度，单位为Byte。可选，默认缓冲区长度。&lt;br/&gt;- offset， number类型，表示期望读取文件的位置，单位为Byte。可选，默认从当前位置开始读。&lt;br/&gt;<br>**Since:** 11 |
+| buffer | ArrayBuffer | Yes | Buffer used to store the file read. |
+| options | [ReadOptions](arkts-corefile-file-fs-readoptions-i.md) | No | The options are as follows:&lt;br&gt;- **length** (number): length of the data to read , in bytes. This parameter is optional. The default value is the buffer length.&lt;br&gt;- **offset** (number): position of the data to read in the file, in bytes. This parameter is optional. By default, data is read from the current position.&lt;br&gt;<br>**Since:** 11 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| number | 实际读取的长度，单位为Byte。 |
+| number | Length of the data read, in bytes. |
 
 **Error codes:**
 
@@ -565,10 +515,9 @@ readSync(
 ## Examples
 
 ```TypeScript
-import { ReadOptions } from '@kit.CoreFileKit';
-
+import { fileIo as fs, ReadOptions } from '@kit.CoreFileKit';
 let filePath = pathDir + "/test.txt";
-let stream = fileIo.createStreamSync(filePath, "r+");
+let stream = fs.createStreamSync(filePath, "r+");
 let readOption: ReadOptions = {
   offset: 5,
   length: 5
@@ -587,7 +536,7 @@ write(
   ): Promise<number>
 ```
 
-将数据写入流文件，使用promise异步回调。
+Writes data to a stream file. This API uses a promise to return the result.
 
 **Since:** 9
 
@@ -603,14 +552,14 @@ write(
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| buffer | ArrayBuffer \| string | Yes | 待写入文件的数据，可来自缓冲区或字符串。 |
-| options | [WriteOptions](arkts-corefile-file-fs-writeoptions-i.md) | No | 支持如下选项：&lt;br/&gt;- length，number类型，表示期望写入数据的长度，单位为Byte。默认缓冲区长度。&lt;br/&gt;- offset，number类 型，表示期望写入文件的位置，单位为Byte。可选，默认从当前位置开始写。&lt;br/&gt;- encoding，string类型，当数据是string类型时有效，表示数据的编码方式，默认'utf-8'。仅支持'utf-8' 。<br>**Since:** 11 |
+| buffer | ArrayBuffer \| string | Yes | Data to write. It can be a string or data from a buffer. |
+| options | [WriteOptions](arkts-corefile-file-fs-writeoptions-i.md) | No | The options are as follows:&lt;br&gt;- **length** (number): length of the data to write, in bytes. The default value is the buffer length.&lt;br&gt;- **offset** (number): start position to write the data in the file, in bytes. This parameter is optional. By default, data is written from the current position.&lt; br&gt;- **encoding** (string): format of the data to be encoded when the data is a string. The default value is **'utf-8'**, which is the only value supported.<br>**Since:** 11 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;number&gt; | Promise对象。返回实际写入的长度，单位为Byte。 |
+| Promise&lt;number&gt; | Promise used to return the length of the data written, in bytes. |
 
 **Error codes:**
 
@@ -633,20 +582,19 @@ write(
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
-import { WriteOptions } from '@kit.CoreFileKit';
-
+import { fileIo as fs, WriteOptions } from '@kit.CoreFileKit';
 let filePath = pathDir + "/test.txt";
-let stream = fileIo.createStreamSync(filePath, "r+");
+let stream = fs.createStreamSync(filePath, "r+");
 let writeOption: WriteOptions = {
   offset: 5,
   length: 5,
   encoding: 'utf-8'
 };
 stream.write("hello, world", writeOption).then((number: number) => {
-  console.info(`Succeeded in writing, size is: ${number}`);
+  console.info("write succeed and size is:" + number);
   stream.close();
 }).catch((err: BusinessError) => {
-  console.error(`Failed to write. Code: ${err.code}, message: ${err.message}`);
+  console.error("write failed with error message: " + err.message + ", error code: " + err.code);
 });
 ```
 
@@ -656,7 +604,7 @@ stream.write("hello, world", writeOption).then((number: number) => {
 write(buffer: ArrayBuffer | string, callback: AsyncCallback<number>): void
 ```
 
-将数据写入流文件，使用callback异步回调。
+Writes data to a stream file. This API uses an asynchronous callback to return the result.
 
 **Since:** 9
 
@@ -672,8 +620,8 @@ write(buffer: ArrayBuffer | string, callback: AsyncCallback<number>): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| buffer | ArrayBuffer \| string | Yes | 待写入文件的数据，可来自缓冲区或字符串。 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;number&gt; | Yes | 异步写入完成后执行的回调函数。返回实际写入的数据长度，单位为Byte。 |
+| buffer | ArrayBuffer \| string | Yes | Data to write. It can be a string or data from a buffer. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;number&gt; | Yes | Callback used to return the result. The callback returns the length of the data written, in bytes. |
 
 **Error codes:**
 
@@ -692,25 +640,6 @@ write(buffer: ArrayBuffer | string, callback: AsyncCallback<number>): void
 | 13900010 | Try again |
 | 13900042 | Unknown error |
 
-## Examples
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let filePath = pathDir + "/test.txt";
-let stream = fileIo.createStreamSync(filePath, "r+");
-stream.write("hello, world", (err: BusinessError, bytesWritten: number) => {
-  if (err) {
-    console.error(`Failed to write stream. Code: ${err.code}, message: ${err.message}`);
-  } else {
-    if (bytesWritten) {
-      console.info(`Succeeded in writing, size is: ${bytesWritten}`);
-    }
-  }
-  stream.close();
-});
-```
-
 ## write
 
 ```TypeScript
@@ -721,7 +650,7 @@ write(
   ): void
 ```
 
-将数据写入流文件，使用callback异步回调。
+Writes data to a stream file. This API uses an asynchronous callback to return the result.
 
 **Since:** 9
 
@@ -737,9 +666,9 @@ write(
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| buffer | ArrayBuffer \| string | Yes | 待写入文件的数据，可来自缓冲区或字符串。 |
-| options | [WriteOptions](arkts-corefile-file-fs-writeoptions-i.md) | Yes | 支持如下选项：&lt;br/&gt;- length，number类型，表示期望写入数据的长度，单位为Byte。可选，默认缓冲区长度。&lt;br/&gt;- offset， number类型，表示期望写入文件的位置，单位为Byte。可选，默认从当前位置开始写。&lt;br/&gt;- encoding，string类型，当数据是string类型时有效，表示数据的编码方式，默认'utf-8'。仅支持?' utf-8'。<br>**Since:** 11 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;number&gt; | Yes | 异步写入完成后执行的回调函数。返回实际写入的数据长度，单位为Byte。 |
+| buffer | ArrayBuffer \| string | Yes | Data to write. It can be a string or data from a buffer. |
+| options | [WriteOptions](arkts-corefile-file-fs-writeoptions-i.md) | Yes | The options are as follows:&lt;br&gt;- **length** (number): length of the data to write, in bytes. This parameter is optional. The default value is the buffer length.&lt;br&gt;- **offset** (number): start position to write the data in the file, in bytes. This parameter is optional. By default, data is written from the current position.&lt;br&gt;- **encoding** (string): format of the data to be encoded when the data is a string. The default value is **'utf-8'**, which is the only value supported.<br>**Since:** 11 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;number&gt; | Yes | Callback used to return the result. The callback returns the length of the data written, in bytes. |
 
 **Error codes:**
 
@@ -758,31 +687,6 @@ write(
 | 13900010 | Try again |
 | 13900042 | Unknown error |
 
-## Examples
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-import { WriteOptions } from '@kit.CoreFileKit';
-
-let filePath = pathDir + "/test.txt";
-let stream = fileIo.createStreamSync(filePath, "r+");
-let writeOption: WriteOptions = {
-  offset: 5,
-  length: 5,
-  encoding: 'utf-8'
-};
-stream.write("hello, world", writeOption, (err: BusinessError, bytesWritten: number) => {
-  if (err) {
-    console.error(`Failed to write stream. Code: ${err.code}, message: ${err.message}`);
-  } else {
-    if (bytesWritten) {
-      console.info(`Succeeded in writing, size is: ${bytesWritten}`);
-    }
-  }
-  stream.close();
-});
-```
-
 ## writeSync
 
 ```TypeScript
@@ -792,7 +696,7 @@ writeSync(
   ): number
 ```
 
-以同步方法将数据写入流文件。
+Writes data to a stream file. This API returns the result synchronously.
 
 **Since:** 9
 
@@ -808,14 +712,14 @@ writeSync(
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| buffer | ArrayBuffer \| string | Yes | 待写入文件的数据，可来自缓冲区或字符串。 |
-| options | [WriteOptions](arkts-corefile-file-fs-writeoptions-i.md) | No | 支持如下选项：&lt;br/&gt;- length，number类型，表示期望写入数据的长度，单位为Byte。可选，默认缓冲区长度。&lt;br/&gt;- offset， number类型，表示期望写入文件的位置，单位为Byte。可选，默认从当前位置开始写。&lt;br/&gt;- encoding，string类型，当数据是string类型时有效，表示数据的编码方式，默认'utf-8'。仅支持?' utf-8'。<br>**Since:** 11 |
+| buffer | ArrayBuffer \| string | Yes | Data to write. It can be a string or data from a buffer. |
+| options | [WriteOptions](arkts-corefile-file-fs-writeoptions-i.md) | No | The options are as follows:&lt;br&gt;- **length** (number): length of the data to write, in bytes. This parameter is optional. The default value is the buffer length.&lt;br&gt;- **offset** (number): start position to write the data in the file, in bytes. This parameter is optional. By default, data is written from the current position.&lt;br&gt;- **encoding** (string): format of the data to be encoded when the data is a string. The default value is **'utf-8'**, which is the only value supported.<br>**Since:** 11 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| number | 实际写入的长度，单位为Byte。 |
+| number | Length of the data written in the file, in bytes. |
 
 **Error codes:**
 
@@ -837,10 +741,9 @@ writeSync(
 ## Examples
 
 ```TypeScript
-import { WriteOptions } from '@kit.CoreFileKit';
-
+import { fileIo as fs, WriteOptions } from '@kit.CoreFileKit';
 let filePath = pathDir + "/test.txt";
-let stream = fileIo.createStreamSync(filePath,"r+");
+let stream = fs.createStreamSync(filePath,"r+");
 let writeOption: WriteOptions = {
   offset: 5,
   length: 5,

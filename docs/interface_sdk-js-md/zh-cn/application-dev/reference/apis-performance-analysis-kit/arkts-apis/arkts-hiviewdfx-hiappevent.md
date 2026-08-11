@@ -7,12 +7,6 @@
 
 应用事件来源于应用，是应用开发者自己定义的事件，这类事件信息支持自定义后通过[Write](arkts-performanceanalysis-hiappevent-write-f.md#write)打点接口进行配置设定，具体字段含义可结合开发者需求展开。
 
-## 导入模块
-
-```TypeScript
-import { hiAppEvent } from 'kits/@kit.PerformanceAnalysisKit';
-```
-
 ## 汇总
 
 ### 命名空间

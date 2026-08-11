@@ -1,11 +1,5 @@
 # doAction（系统接口）
 
-## 导入模块
-
-```TypeScript
-import { mechanicManager } from 'kits/@kit.MechanicKit';
-```
-
 ## doAction
 
 ```TypeScript
@@ -29,7 +23,7 @@ function doAction(mechId: int, actionType: ActionType): Promise<Result>
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | mechId | ArkTS-Dyn: number  <br>ArkTS-Sta：int | 是 | 具身设备ID。 &lt;br&gt;取值限定为整数。 |
-| actionType | [ActionType](../../apis-avsession-kit/arkts-apis/arkts-avsession-avmusictemplate-actiontype-t.md) | 是 | 动作序列类型。 |
+| actionType | [ActionType](../../apis-data-protection-kit/arkts-apis/arkts-dataprotection-dlppermission-actiontype-e.md) | 是 | 动作序列类型。 |
 
 **返回值：**
 
@@ -41,8 +35,8 @@ function doAction(mechId: int, actionType: ActionType): Promise<Result>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 202 | Not system application. |
-| 33300001 | Service exception. |
-| 33300002 | Device not connected. |
-| 33300003 | Feature not supported. |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not system application. |
+| [33300001](../errorcode-mechanic.md#33300001-系统错误) | Service exception. |
+| [33300002](../errorcode-mechanic.md#33300002-设备未连接) | Device not connected. |
+| [33300003](../errorcode-mechanic.md#33300003-功能不支持) | Feature not supported. |
 

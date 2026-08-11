@@ -1,6 +1,6 @@
 # @ohos.ability.particleAbility
 
-particleAbility模块提供了操作Data和Service类型的Ability的能力，包括启动、停止指定的particleAbility，获取dataAbilityHelper，连接、断连指定的ServiceAbility等。
+The particleAbility module provides APIs for operating a DataAbility and ServiceAbility. You can use the APIs to start and terminate a ParticleAbility, obtain a dataAbilityHelper object, and connect to or disconnect from a ServiceAbility.
 
 **Since:** 7
 
@@ -24,22 +24,22 @@ import { particleAbility } from 'kits/@kit.AbilityKit';
 
 | Name | Description |
 | --- | --- |
-| [acquireDataAbilityHelper](arkts-ability-particleability-acquiredataabilityhelper-f.md#acquiredataabilityhelper) | 获取dataAbilityHelper对象。 |
-| [cancelBackgroundRunning](arkts-ability-particleability-cancelbackgroundrunning-f.md#cancelbackgroundrunning) | 向系统申请取消长时任务。使用callback异步回调。 |
-| [cancelBackgroundRunning](arkts-ability-particleability-cancelbackgroundrunning-f.md#cancelbackgroundrunning-1) | 向系统申请取消长时任务。使用Promise异步回调。 |
-| [connectAbility](arkts-ability-particleability-connectability-f.md#connectability) | 将当前ability与指定的ServiceAbility进行连接。 |
-| [disconnectAbility](arkts-ability-particleability-disconnectability-f.md#disconnectability) | 断开当前ability与指定ServiceAbility的连接。使用callback异步回调。 |
-| [disconnectAbility](arkts-ability-particleability-disconnectability-f.md#disconnectability-1) | 断开当前ability与指定ServiceAbility的连接。使用Promise异步回调。 |
-| [startAbility](arkts-ability-particleability-startability-f.md#startability) | 启动指定的particleAbility。使用callback异步回调。 |
-| [startAbility](arkts-ability-particleability-startability-f.md#startability-1) | 启动指定的particleAbility。使用Promise异步回调。 |
-| [startBackgroundRunning](arkts-ability-particleability-startbackgroundrunning-f.md#startbackgroundrunning) | 向系统申请长时任务。使用callback异步回调。 |
-| [startBackgroundRunning](arkts-ability-particleability-startbackgroundrunning-f.md#startbackgroundrunning-1) | 向系统申请长时任务。使用Promise异步回调。 |
-| [terminateSelf](arkts-ability-particleability-terminateself-f.md#terminateself) | 销毁当前particleAbility。使用callback异步回调。 |
-| [terminateSelf](arkts-ability-particleability-terminateself-f.md#terminateself-1) | 销毁当前particleAbility。使用Promise异步回调。 |
+| [acquireDataAbilityHelper](arkts-ability-particleability-acquiredataabilityhelper-f.md#acquiredataabilityhelper) | Obtains a dataAbilityHelper object.  > **NOTE：** >  > For details about the startup rules for the components in the FA model, see > [Component Startup Rules (FA Model)](../../../application-models/component-startup-rules-fa.md). > To access a DataAbility of another application, the target application must be configured with associated > startup (**AssociateWakeUp** set to **true**). |
+| [cancelBackgroundRunning](arkts-ability-particleability-cancelbackgroundrunning-f.md#cancelbackgroundrunning) | Requests to cancel a continuous task from the system. This API uses an asynchronous callback to return the result. |
+| [cancelBackgroundRunning](arkts-ability-particleability-cancelbackgroundrunning-f.md#cancelbackgroundrunning-1) | Requests to cancel a continuous task from the system. This API uses a promise to return the result. |
+| [connectAbility](arkts-ability-particleability-connectability-f.md#connectability) | Connects this ability to a ServiceAbility.  > **NOTE：** >  > For details about the startup rules for the components in the FA model, see > [Component Startup Rules (FA Model)](../../../application-models/component-startup-rules-fa.md). > > To connect to a ServiceAbility of another application, the target application must be configured with > associated startup (**AssociateWakeUp** set to **true**). |
+| [disconnectAbility](arkts-ability-particleability-disconnectability-f.md#disconnectability) | Disconnects this ability from a specific ServiceAbility. This API uses an asynchronous callback to return the result. |
+| [disconnectAbility](arkts-ability-particleability-disconnectability-f.md#disconnectability-1) | Disconnects this ability from a specific ServiceAbility. This API uses a promise to return the result. |
+| [startAbility](arkts-ability-particleability-startability-f.md#startability) | Starts a ParticleAbility. This API uses an asynchronous callback to return the result.  > **NOTE：** >  > For details about the startup rules for the components in the FA model, see > [Component Startup Rules (FA Model)](../../../application-models/component-startup-rules-fa.md). |
+| [startAbility](arkts-ability-particleability-startability-f.md#startability-1) | Starts a ParticleAbility. This API uses a promise to return the result.  > **NOTE：** >  > For details about the startup rules for the components in the FA model, see > [Component Startup Rules (FA Model)](../../../application-models/component-startup-rules-fa.md). |
+| [startBackgroundRunning](arkts-ability-particleability-startbackgroundrunning-f.md#startbackgroundrunning) | Requests a continuous task from the system. This API uses an asynchronous callback to return the result. |
+| [startBackgroundRunning](arkts-ability-particleability-startbackgroundrunning-f.md#startbackgroundrunning-1) | Requests a continuous task from the system. This API uses a promise to return the result. |
+| [terminateSelf](arkts-ability-particleability-terminateself-f.md#terminateself) | Terminates this ParticleAbility. This API uses an asynchronous callback to return the result. |
+| [terminateSelf](arkts-ability-particleability-terminateself-f.md#terminateself-1) | Terminates this ParticleAbility. This API uses a promise to return the result. |
 
 ### Enums
 
 | Name | Description |
 | --- | --- |
-| [ErrorCode](arkts-ability-particleability-errorcode-e.md) | 定义启动Ability时返回的错误码。 |
+| [ErrorCode](arkts-ability-particleability-errorcode-e.md) | Enumerates the error codes that may be returned when an ability is started. |
 

@@ -1,6 +1,6 @@
 # ParseInfo
 
-当前XML解析信息。
+The current parse info.
 
 **Since:** 8
 
@@ -28,9 +28,7 @@ ArkTS-Sta:
 getAttributeCount(): int
 ```
 
-ArkTS-Sta: getAttributeCount(): int
-
-获取当前开始标记的属性数。
+Obtains the number of attributes for the current start tag.
 
 **Since:** 8
 
@@ -80,9 +78,7 @@ ArkTS-Sta:
 getColumnNumber(): int
 ```
 
-ArkTS-Sta: getColumnNumber(): int
-
-获取当前列号，从1开始计数。
+Obtains the current column number, starting from 1.
 
 **Since:** 8
 
@@ -98,7 +94,7 @@ ArkTS-Sta: getColumnNumber(): int
 
 | Type | Description |
 | --- | --- |
-| ArkTS-Dyn: number  <br>ArkTS-Sta：int | 返回当前列号。 |
+| ArkTS-Dyn: number  <br>ArkTS-Sta：int |  |
 
 ## Examples
 
@@ -132,13 +128,7 @@ ArkTS-Sta:
 getDepth(): int
 ```
 
-ArkTS-Sta: getDepth(): int
-
-获取元素的当前深度。
-
-> **说明：**
-> 
-> 标签内的空白事件深度与标签的深度保持一致。
+Obtains the depth of this element.
 
 **Since:** 8
 
@@ -154,7 +144,7 @@ ArkTS-Sta: getDepth(): int
 
 | Type | Description |
 | --- | --- |
-| ArkTS-Dyn: number  <br>ArkTS-Sta：int | 返回元素的当前深度。 |
+| ArkTS-Dyn: number  <br>ArkTS-Sta：int |  |
 
 ## Examples
 
@@ -192,9 +182,7 @@ ArkTS-Sta:
 getLineNumber(): int
 ```
 
-ArkTS-Sta: getLineNumber(): int
-
-获取当前行号，从1开始。
+Obtains the current line number, starting from 1.
 
 **Since:** 8
 
@@ -210,7 +198,7 @@ ArkTS-Sta: getLineNumber(): int
 
 | Type | Description |
 | --- | --- |
-| ArkTS-Dyn: number  <br>ArkTS-Sta：int | 返回当前行号。 |
+| ArkTS-Dyn: number  <br>ArkTS-Sta：int |  |
 
 ## Examples
 
@@ -238,7 +226,7 @@ console.info(str);
 getName(): string
 ```
 
-获取当前元素名称。
+Obtains the name of this element.
 
 **Since:** 8
 
@@ -254,7 +242,7 @@ getName(): string
 
 | Type | Description |
 | --- | --- |
-| string | 返回当前元素名称。 |
+| string |  |
 
 ## Examples
 
@@ -282,7 +270,7 @@ console.info(str);
 getNamespace(): string
 ```
 
-获取当前元素的命名空间。
+Obtains the namespace of this element.
 
 **Since:** 8
 
@@ -298,7 +286,7 @@ getNamespace(): string
 
 | Type | Description |
 | --- | --- |
-| string | 返回当前元素的命名空间。 |
+| string |  |
 
 ## Examples
 
@@ -330,7 +318,7 @@ console.info(str);
 getPrefix(): string
 ```
 
-获取当前元素前缀。
+Obtains the prefix of this element.
 
 **Since:** 8
 
@@ -346,7 +334,7 @@ getPrefix(): string
 
 | Type | Description |
 | --- | --- |
-| string | 返回当前元素前缀。 |
+| string |  |
 
 ## Examples
 
@@ -378,7 +366,7 @@ console.info(str);
 getText(): string
 ```
 
-获取当前事件的文本内容。
+Obtains the text of the current event.
 
 **Since:** 8
 
@@ -394,7 +382,7 @@ getText(): string
 
 | Type | Description |
 | --- | --- |
-| string | 返回当前事件的文本内容。 |
+| string |  |
 
 ## Examples
 
@@ -422,7 +410,7 @@ console.info(str);
 isEmptyElementTag(): boolean
 ```
 
-判断当前元素是否为空元素。
+Checks whether the current element is empty.
 
 **Since:** 8
 
@@ -438,7 +426,7 @@ isEmptyElementTag(): boolean
 
 | Type | Description |
 | --- | --- |
-| boolean | 返回true，表示当前元素为空元素。返回false，表示当前元素为非空元素。 |
+| boolean |  |
 
 ## Examples
 
@@ -470,7 +458,7 @@ console.info(str);
 isWhitespace(): boolean
 ```
 
-判断当前事件是否仅包含空格字符。
+Checks whether the current event contains only whitespace characters.
 
 **Since:** 8
 
@@ -486,7 +474,7 @@ isWhitespace(): boolean
 
 | Type | Description |
 | --- | --- |
-| boolean | 返回true，表示当前文本事件仅包含空格字符。返回false，表示当前文本事件包含非空格字符。 |
+| boolean |  |
 
 ## Examples
 

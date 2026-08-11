@@ -1,6 +1,6 @@
 # AudioRendererRate
 
-表示音频渲染速度的枚举。
+Enumerates the audio renderer rates.
 
 **Since:** 8
 
@@ -16,7 +16,7 @@
 RENDER_RATE_NORMAL = 0
 ```
 
-正常速度。
+Normal rate.
 
 **Since:** 8
 
@@ -32,7 +32,7 @@ RENDER_RATE_NORMAL = 0
 RENDER_RATE_DOUBLE = 1
 ```
 
-2倍速。
+Double rate.
 
 **Since:** 8
 
@@ -48,7 +48,7 @@ RENDER_RATE_DOUBLE = 1
 RENDER_RATE_HALF = 2
 ```
 
-0.5倍速。
+0.5x rate.
 
 **Since:** 8
 

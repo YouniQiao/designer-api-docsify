@@ -1,6 +1,6 @@
 # CameraFormat
 
-枚举，输出格式。
+Enumerates the camera output formats.
 
 **Since:** 10
 

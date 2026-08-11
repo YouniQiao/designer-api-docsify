@@ -1,6 +1,6 @@
 # NotificationSlot
 
-描述通知渠道，不同通知渠道对应的通知提醒方式不同。
+The **NotificationSlot** module provides APIs for defining the notification slots. The notification reminder modes vary according to notification slots.
 
 **Since:** 7
 
@@ -16,10 +16,10 @@
 badgeFlag?: boolean
 ```
 
-是否显示角标。默认值为true。
+Whether to display the badge. The default value is **true**.
 
-- true：显示角标。  
-- false：不显示角标。
+- **true**: Display the badge.  
+- **false**: Do not display the badge.
 
 **Type:** boolean
 
@@ -37,10 +37,10 @@ badgeFlag?: boolean
 bypassDnd?: boolean
 ```
 
-是否在系统中绕过免打扰模式。默认值为false。
+Whether to bypass Do Not Disturb mode in the system. The default value is **false**.
 
-- true：绕过免打扰模式，免打扰模式下仍会提醒。  
-- false：不绕过免打扰模式，免打扰模式下不提醒。
+- **true**: Bypass Do Not Disturb mode, and notifications will still be alerted in Do Not Disturb mode.  
+- **false**: Do not bypass Do Not Disturb mode, and notifications will not be alerted in Do Not Disturb mode.
 
 **Type:** boolean
 
@@ -58,7 +58,7 @@ bypassDnd?: boolean
 desc?: string
 ```
 
-通知渠道描述信息。大小不超过243字节，超出部分会被截断。
+Description of the notification channel. The size cannot exceed 243 bytes, and the excess part will be truncated.
 
 **Type:** string
 
@@ -76,10 +76,10 @@ desc?: string
 readonly enabled?: boolean
 ```
 
-是否允许发布此通知渠道类型的通知。
+Whether to allow notifications of this slot type to be published.
 
-- true：允许发布通知。  
-- false：禁止发布通知。
+- **true**: yes.  
+- **false**: no.
 
 **Type:** boolean
 
@@ -97,7 +97,7 @@ readonly enabled?: boolean
 level?: notification.SlotLevel
 ```
 
-通知级别。
+Notification level.
 
 **Type:** notification.SlotLevel
 
@@ -119,7 +119,7 @@ level?: notification.SlotLevel
 lightColor?: int
 ```
 
-通知灯颜色。预留能力，暂不支持。
+Indicator color of the notification. This is a reserved capability and is not supported currently.
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
@@ -137,10 +137,10 @@ lightColor?: int
 lightEnabled?: boolean
 ```
 
-是否闪灯。默认值为false。
+Whether to enable the light. The default value is **false**.
 
-- true：闪灯。  
-- false：不闪灯。
+- **true**: yes.  
+- **false**: no.
 
 **Type:** boolean
 
@@ -158,7 +158,7 @@ lightEnabled?: boolean
 lockscreenVisibility?: int
 ```
 
-在锁定屏幕上显示通知的模式。预留能力，暂不支持。
+Mode for displaying the notification on the lock screen. This is a reserved capability and is not supported currently.
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
@@ -176,7 +176,7 @@ lockscreenVisibility?: int
 notificationLevel?: notificationManager.SlotLevel
 ```
 
-通知级别，用于描述该渠道类型通知的显示优先级和提醒强度。
+Notification level, which is used to describe the display priority and alert intensity of notifications of this channel type.
 
 **Type:** notificationManager.SlotLevel
 
@@ -194,7 +194,7 @@ notificationLevel?: notificationManager.SlotLevel
 notificationType?: notificationManager.SlotType
 ```
 
-渠道类型。不同渠道类型的通知提醒方式不同。
+Slot type. Different slot types have different notification reminder types.
 
 **Type:** notificationManager.SlotType
 
@@ -212,7 +212,8 @@ notificationType?: notificationManager.SlotType
 sound?: string
 ```
 
-该渠道的通知的自定义铃声文件名。该文件放在resources/rawfile目录下，支持m4a、aac、mp3、ogg、wav、flac、amr等格式。大小不超过243字节，超出部分会被截断。
+File name of the custom ringtone for notifications from this channel. The file is placed in the  
+**resources/rawfile** directory, and formats such as M4A, AAC, MP3, OGG, WAV, FLAC, and AMR are supported. The size cannot exceed 243 bytes, and the excess part will be truncated.
 
 **Type:** string
 
@@ -230,7 +231,7 @@ sound?: string
 type?: notification.SlotType
 ```
 
-渠道类型。
+Channel type.
 
 **Type:** notification.SlotType
 
@@ -252,10 +253,10 @@ type?: notification.SlotType
 vibrationEnabled?: boolean
 ```
 
-是否可振动。默认值为false。
+Whether to enable vibration. The default value is **false**.
 
-- true：可振动。  
-- false：不可振动。
+- **true**: yes.  
+- **false**: no.
 
 **Type:** boolean
 
@@ -273,7 +274,7 @@ vibrationEnabled?: boolean
 vibrationValues?: Array<long>
 ```
 
-通知振动样式。预留能力，暂不支持。
+Vibration mode of the notification. This is a reserved capability and is not supported currently.
 
 **Type:** ArkTS-Dyn: Array&lt;number&gt;  <br>ArkTS-Sta：Array&lt;long&gt;
 

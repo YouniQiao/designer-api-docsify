@@ -1,6 +1,6 @@
 # IDataSource
 
-LazyForEach的数据源，开发者需要实现该接口以提供数据访问和数据变化通知能力，包括获取数据总数、按索引获取数据、注册和注销数据变化监听器等。
+Data source of **LazyForEach**.
 
 **Since:** 7
 
@@ -16,7 +16,7 @@ LazyForEach的数据源，开发者需要实现该接口以提供数据访问和
 getData(index: number): any
 ```
 
-获取索引值index对应的数据。
+Obtains the data item that matches the specified index.
 
 **Since:** 7
 
@@ -32,13 +32,13 @@ getData(index: number): any
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| index | number | Yes | 获取数据对应的索引值。取值范围是[0, 数据源长度-1]。超出取值范围时行为由数据源实现决定，建议开发者做边界检查。 |
+| index | number | Yes | Index of the data record to obtain. The value range is [0, data source length - 1]. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| any | 获取索引值index对应的数据，由数据源决定具体类型。 |
+| any | Data item that matches the specified index. The actual type is determined by the data source implementation. |
 
 ## registerDataChangeListener
 
@@ -46,7 +46,7 @@ getData(index: number): any
 registerDataChangeListener(listener: DataChangeListener): void
 ```
 
-注册数据改变的监听器。
+Registers a listener for data changes.
 
 **Since:** 7
 
@@ -62,7 +62,7 @@ registerDataChangeListener(listener: DataChangeListener): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| listener | [DataChangeListener](arkts-arkui-datachangelistener-i.md) | Yes | 数据变化监听器，用于在数据源发生变化时通知组件刷新。 |
+| listener | [DataChangeListener](arkts-arkui-datachangelistener-i.md) | Yes | Listener for data changes. |
 
 ## totalCount
 
@@ -70,7 +70,7 @@ registerDataChangeListener(listener: DataChangeListener): void
 totalCount(): number
 ```
 
-获得数据总数。
+Obtains the total number of data items.
 
 **Since:** 7
 
@@ -86,7 +86,7 @@ totalCount(): number
 
 | Type | Description |
 | --- | --- |
-| number | 获得数据总数，由数据源决定实际大小。 |
+| number | Total number of data items, which is subject to the data source. |
 
 ## unregisterDataChangeListener
 
@@ -94,7 +94,7 @@ totalCount(): number
 unregisterDataChangeListener(listener: DataChangeListener): void
 ```
 
-注销数据改变的监听器。
+Unregisters the listener for data changes.
 
 **Since:** 7
 
@@ -110,5 +110,5 @@ unregisterDataChangeListener(listener: DataChangeListener): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| listener | [DataChangeListener](arkts-arkui-datachangelistener-i.md) | Yes | 数据变化监听器，用于在数据源发生变化时通知组件刷新。 |
+| listener | [DataChangeListener](arkts-arkui-datachangelistener-i.md) | Yes | Listener for data changes. |
 

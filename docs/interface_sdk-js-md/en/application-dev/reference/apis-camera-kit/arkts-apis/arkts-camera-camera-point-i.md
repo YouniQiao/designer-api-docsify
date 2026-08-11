@@ -1,6 +1,6 @@
 # Point
 
-点坐标用于对焦和曝光配置。
+Describes the point coordinates, which are used for focus and exposure configuration.
 
 **Since:** 10
 
@@ -22,7 +22,7 @@ import { camera } from 'kits/@kit.CameraKit';
 x: double
 ```
 
-点的x坐标。
+X coordinate of a point.
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：double
 
@@ -42,7 +42,7 @@ x: double
 y: double
 ```
 
-点的y坐标。
+Y coordinate of a point.
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：double
 

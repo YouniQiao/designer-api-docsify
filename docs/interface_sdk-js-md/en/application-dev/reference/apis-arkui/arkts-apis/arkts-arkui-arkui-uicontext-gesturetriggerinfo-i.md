@@ -1,6 +1,6 @@
 # GestureTriggerInfo
 
-特定手势回调函数触发时的信息。
+The information when one gesture specific callback is triggered.
 
 **Since:** 26.0.0
 
@@ -22,7 +22,7 @@ import { OverlayManager, FrameCallback, ResolvedUIContext, NodeRenderStateChange
 current: GestureRecognizer
 ```
 
-手势识别器对象。可从中获取手势的详细信息，但请勿在本地保留此对象，因为当节点释放后该对象可能失效。
+The gesture recognizer object. You can obtain the detailed information of the gesture from it,but please do not keep this object locally, as it might be unavailable when the node is released.
 
 **Type:** [GestureRecognizer](arkts-arkui-gesturerecognizer-c.md)
 
@@ -42,7 +42,7 @@ current: GestureRecognizer
 currentPhase: GestureActionPhase
 ```
 
-手势动作回调阶段。
+The gesture action callback phase.
 
 **Type:** [GestureActionPhase](arkts-arkui-arkui-uicontext-gestureactionphase-e.md)
 
@@ -62,7 +62,7 @@ currentPhase: GestureActionPhase
 event: GestureEvent
 ```
 
-手势事件对象。
+The gesture event object.
 
 **Type:** [GestureEvent](arkts-arkui-gestureevent-i.md)
 
@@ -82,9 +82,9 @@ event: GestureEvent
 node?: FrameNode
 ```
 
-触发手势的节点。默认值为null，表示没有触发手势的节点。
+The node which the gesture is being triggered on.
 
-**Type:** [FrameNode](arkts-arkui-framenode-t.md)
+**Type:** [FrameNode](../arkts-components/arkts-arkui-framenode-t.md)
 
 **Since:** 26.0.0
 

@@ -12,7 +12,7 @@ import { mechanicManager } from 'kits/@kit.MechanicKit';
 function offTrackingStateChange(callback?: Callback<TrackingEventInfo>): void
 ```
 
-设置相机跟踪布局
+Unsubscribes from tracking events.
 
 **Since:** 23
 
@@ -32,5 +32,5 @@ function offTrackingStateChange(callback?: Callback<TrackingEventInfo>): void
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 33300001 | Service exception. |
+| [33300001](../errorcode-mechanic.md#33300001-system-error) | Service exception. |
 

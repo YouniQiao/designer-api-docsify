@@ -1,11 +1,5 @@
 # onUnhandledRejection
 
-## 导入模块
-
-```TypeScript
-import { errorManager } from 'kits/@kit.AbilityKit';
-```
-
 ## onUnhandledRejection
 
 ```TypeScript
@@ -32,5 +26,5 @@ Register unhandled rejection observer.
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 401 | 参数错误。可能的原因：1. 必填参数未填写； 2. 参数类型不正确；3. 参数校验失败。 |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | 参数错误。可能的原因：1. 必填参数未填写； 2. 参数类型不正确；3. 参数校验失败。 |
 

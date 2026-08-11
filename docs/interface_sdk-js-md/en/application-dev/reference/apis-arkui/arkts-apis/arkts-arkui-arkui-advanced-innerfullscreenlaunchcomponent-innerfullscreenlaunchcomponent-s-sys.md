@@ -1,14 +1,12 @@
 # InnerFullScreenLaunchComponent (System API)
 
-非显式全屏拉起原子化服务组件，拉起方可以选择拉起原子化服务的时机。当被拉起方授权使用方嵌入式运行原子化服务时，使用方全屏嵌入式运行原子化服务；未授权时，使用方跳出式拉起原子化服务。
+**InnerFullScreenLaunchComponent** is a component that allows the invoker to choose the timing for launching an atomic service. If the invoked app (the one being launched) grants the invoker the authorization to run the atomic service in an embedded manner, the invoker can operate the atomic service in full-screen embedded mode. If authorization is not provided, the invoker will launch the atomic service in a pop-up manner.
 
-> **说明：**
+> **NOTE：**
 > 
-> 该组件从API version 12开始支持。后续版本的新增接口，采用上角标单独标记接口的起始版本。
-> 
-> 当需要在该组件中实现一个可嵌入式运行的原子化服务时，必须继承自
-> [EmbeddableUIAbility](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-embeddableuiability-embeddableuiability-c.md/arkts-ability-app-ability-embeddableuiability-embeddableuiability-c.md)。若不继承自EmbeddableUIAbility，系统无
-> 法保证原子化服务功能正常。
+> To implement an embeddable atomic service within this component, it must inherit from
+> [EmbeddableUIAbility](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-embeddableuiability-embeddableuiability-c.md/arkts-ability-app-ability-embeddableuiability-embeddableuiability-c.md). If it does not inherit from
+> **EmbeddableUIAbility**, the system cannot guarantee that the atomic service will function properly.
 
 **Since:** 12
 
@@ -34,7 +32,7 @@ import { InnerFullScreenLaunchComponent, LaunchController } from 'kits/@kit.ArkU
 content: Callback<void>
 ```
 
-组件显示内容。
+Content displayed in the component.
 
 **Type:** [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;void&gt;
 
@@ -56,7 +54,7 @@ content: Callback<void>
 controller: LaunchController
 ```
 
-拉起原子化服务的控制器。
+Controller for launching the atomic service.
 
 **Type:** [LaunchController](arkts-arkui-arkui-advanced-innerfullscreenlaunchcomponent-launchcontroller-c-sys.md)
 
@@ -76,7 +74,7 @@ controller: LaunchController
 onError?: ErrorCallback
 ```
 
-被拉起的嵌入式运行原子化服务在运行过程中发生异常时触发本回调。可通过回调参数中的code、name和message获取错误信息并做处理。
+Callback triggered when an exception occurs during the execution of an embedded atomic service. You can obtain the error information based on the **code**, **name**, and **message** parameters in the callback and rectify the exception accordingly.
 
 **Type:** [ErrorCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-errorcallback-i.md)
 
@@ -96,7 +94,7 @@ onError?: ErrorCallback
 onReceive?: Callback<Record<string, Object>>
 ```
 
-被拉起的嵌入式运行原子化服务通过[@ohos.window (窗口)](arkts-window.md)调用相关API时，触发本回调。
+Callback triggered when an embedded atomic service calls [@ohos.window (window)](arkts-window.md) APIs.
 
 **Type:** [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;Record&lt;string, Object&gt;&gt;
 
@@ -116,9 +114,9 @@ onReceive?: Callback<Record<string, Object>>
 onTerminated?: Callback<TerminationInfo>
 ```
 
-被拉起的嵌入式运行原子化服务通过点击原子化服务退出按钮、手势侧滑、调用  
-[terminateSelfWithResult](../../apis-ability-kit/arkts-apis/arkts-ability-uiabilitycontext-c.md/arkts-ability-uiabilitycontext-c.md#terminateselfwithresult)或者  
-[terminateSelf](../../apis-ability-kit/arkts-apis/arkts-ability-uiabilitycontext-c.md/arkts-ability-uiabilitycontext-c.md#terminateself)正常退出时，触发本回调。
+Callback triggered when an embedded atomic service exits normally. Exit scenarios include user-triggered exit button taps or edge swipes, or calls to  
+[terminateSelfWithResult](../../apis-ability-kit/arkts-apis/arkts-ability-uiabilitycontext-c.md/arkts-ability-uiabilitycontext-c.md#terminateselfwithresult)or  
+[terminateSelf](../../apis-ability-kit/arkts-apis/arkts-ability-uiabilitycontext-c.md/arkts-ability-uiabilitycontext-c.md#terminateself).
 
 **Type:** [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;TerminationInfo&gt;
 

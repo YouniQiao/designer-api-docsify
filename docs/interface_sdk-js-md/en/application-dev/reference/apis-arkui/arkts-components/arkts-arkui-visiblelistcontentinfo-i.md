@@ -1,6 +1,6 @@
 # VisibleListContentInfo
 
-用于表示List可见内容区子组件的详细信息。
+Describes the details of the child components in the visible area of a list.
 
 **Since:** 12
 
@@ -16,7 +16,7 @@
 index: number
 ```
 
-表示ListItem或ListItemGroup在List中的索引值。
+Index of the list item or list item group in the list display area.
 
 **Type:** number
 
@@ -38,7 +38,7 @@ index: number
 itemGroupArea?: ListItemGroupArea
 ```
 
-表示处于ListItemGroup的哪一个区域。
+Position of the top or bottom edge of the viewport in the list item group to which the edge is located, if applicable.
 
 **Type:** [ListItemGroupArea](../arkts-apis/arkts-arkui-list-listitemgrouparea-e.md)
 
@@ -60,7 +60,7 @@ itemGroupArea?: ListItemGroupArea
 itemIndexInGroup?: number
 ```
 
-表示ListItem在ListItemGroup中的索引值。
+Index of the starting or ending list item in the list item group to which the top or bottom edge of the viewport is located.
 
 **Type:** number
 

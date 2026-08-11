@@ -1,6 +1,6 @@
 # Geometry
 
-定义Geometry接口.
+Geometric node type that holds renderable mesh data and supports optional deformation features.
 
 **Inheritance/Implementation:** Geometry extends [Node](arkts-arkgraphics3d-scenenodes-node-i.md)
 
@@ -18,7 +18,7 @@
 readonly mesh: Mesh
 ```
 
-节点的网格.
+Mesh property.
 
 **Type:** [Mesh](arkts-arkgraphics3d-sceneresources-mesh-i.md)
 
@@ -36,7 +36,7 @@ readonly mesh: Mesh
 readonly morpher?: Morpher
 ```
 
-Morpher目标定义.
+Optional morpher that adds vertex-based deformation or animation effects to the geometry.If this parameter is not specified, the geometry does not support deformation.
 
 **Type:** [Morpher](arkts-arkgraphics3d-sceneresources-morpher-i.md)
 

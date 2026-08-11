@@ -1,6 +1,6 @@
 # IpType
 
-表示IP类型的枚举。
+Enumerates the IP address types.
 
 **Since:** 12
 
@@ -16,7 +16,7 @@
 STATIC = 0
 ```
 
-静态IP，一般用于需要固定IP的场景、例如办公室打印机，固定打印机IP地址，便于大家稳定地添加和使用。
+Static IP address, which is used in scenarios where a fixed IP address is required, for example, a fixed IP address of an office printer.
 
 **Since:** 12
 
@@ -34,7 +34,7 @@ STATIC = 0
 DHCP = 1
 ```
 
-动态主机配置协议，一种能自动为网络中的设备分配IP地址和其他网络配置信息的服务。
+Dynamic Host Configuration Protocol (DHCP), which is a service that automatically allocates IP addresses and other network configuration information to devices on a network.
 
 **Since:** 12
 
@@ -52,7 +52,7 @@ DHCP = 1
 UNKNOWN = 2
 ```
 
-未指定。
+Not specified.
 
 **Since:** 12
 

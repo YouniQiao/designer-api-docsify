@@ -1,11 +1,12 @@
 # SecurityLevel
 
-数据库的安全级别枚举。请使用枚举名称而非枚举值。数据库的安全级别仅支持由低向高设置，不支持由高向低设置。
+Enumerates the KV store security levels. Use the enum name rather than the enum value. You cannot change the security level of an RDB store from a higher level to a lower one.
 
-> **说明：**
+> **NOTE：**
 > 
-> 若需要进行同步操作，数据库安全级别应不高于对端设备安全级别，具体可见
-> [跨设备同步访问控制机制](../../../database/sync-app-data-across-devices-overview.md#跨设备同步访问控制机制)。
+> To perform data sync operations, the RDB store security level must be lower than or equal to that of the peer
+> device. For details, see [Access Control Mechanism in Cross-Device Sync]
+> (../../../database/sync-app-data-across-devices-overview.md#access-control-mechanism-in-cross-device-sync).
 
 **Since:** 9
 
@@ -21,7 +22,7 @@
 S1 = 1
 ```
 
-表示数据库的安全级别为低级别，当数据泄露时会产生较低影响。例如，包含壁纸等系统数据的数据库。
+The RDB store security level is low. If data leakage occurs, minor impact will be caused on the database. An example would be a graph store containing non-sensitive system data such as wallpapers.
 
 **Since:** 9
 
@@ -37,7 +38,7 @@ S1 = 1
 S2 = 2
 ```
 
-表示数据库的安全级别为中级别，当数据泄露时会产生较大影响。例如，包含录音、视频等用户生成数据或通话记录等信息的数据库。
+The RDB store security level is medium. If data leakage occurs, moderate impact will be caused on the database. An example would be a graph store containing audio and video data created by users or call logs.
 
 **Since:** 9
 
@@ -53,7 +54,7 @@ S2 = 2
 S3 = 3
 ```
 
-表示数据库的安全级别为高级别，当数据泄露时会产生重大影响。例如，包含用户运动、健康、位置等信息的数据库。
+The RDB store security level is high. If data leakage occurs, major impact will be caused on the database. An example would be a graph store containing user fitness, health, and location data.
 
 **Since:** 9
 
@@ -69,7 +70,7 @@ S3 = 3
 S4 = 4
 ```
 
-表示数据库的安全级别为关键级别，当数据泄露时会产生严重影响。例如，包含认证凭据、财务数据等信息的数据库。
+The RDB store security level is critical. If data leakage occurs, severe impact will be caused on the database. An example would be a graph store containing authentication credentials and financial data.
 
 **Since:** 9
 

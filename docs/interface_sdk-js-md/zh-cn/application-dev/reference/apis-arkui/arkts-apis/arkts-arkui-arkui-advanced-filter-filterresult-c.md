@@ -10,12 +10,6 @@ This parameter specifies the selection result of a filtering dimension.The index
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
-## 导入模块
-
-```TypeScript
-import { FilterType, Filter, FilterParams, FilterResult } from 'kits/@kit.ArkUI';
-```
-
 ## index
 
 ```TypeScript

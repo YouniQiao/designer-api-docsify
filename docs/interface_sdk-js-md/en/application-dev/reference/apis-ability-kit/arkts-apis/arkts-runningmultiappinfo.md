@@ -7,6 +7,6 @@
 
 | Name | Description |
 | --- | --- |
-| [RunningMultiAppInfo](arkts-ability-runningmultiappinfo-i-sys.md) | 定义应用多开在运行态的结构信息。 |
+| [RunningMultiAppInfo](arkts-ability-runningmultiappinfo-i-sys.md) | The RunningMultiAppInfo module defines the information of an application in multi-app mode in the running state. |
 <!--DelEnd-->
 

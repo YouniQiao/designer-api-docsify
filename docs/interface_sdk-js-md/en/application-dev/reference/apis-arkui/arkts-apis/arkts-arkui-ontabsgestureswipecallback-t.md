@@ -4,7 +4,7 @@
 export type OnTabsGestureSwipeCallback = (index: int, extraInfo: TabsAnimationEvent) => void
 ```
 
-在页面跟手滑动过程中，逐帧触发的回调。
+Defines a tabs callback when onGestureSwipe.
 
 **Since:** 23
 
@@ -20,6 +20,6 @@ export type OnTabsGestureSwipeCallback = (index: int, extraInfo: TabsAnimationEv
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| index | int | Yes | 当前显示元素的索引，索引从0开始。 <br/> 取值范围为全体整数 取值限定为整数。 取值范围：[0, 索引值-1] |
-| extraInfo | [TabsAnimationEvent](arkts-arkui-tabs-tabsanimationevent-i.md) | Yes | 动画相关信息，只返回主轴方向上当前显示元素相对于Tabs起始位置的位移。 |
+| index | int | Yes | The index value of the tab before gesture swipe. The value range is all integers The value should be an integer. |
+| extraInfo | [TabsAnimationEvent](arkts-arkui-tabs-tabsanimationevent-i.md) | Yes | The extra callback info. |
 

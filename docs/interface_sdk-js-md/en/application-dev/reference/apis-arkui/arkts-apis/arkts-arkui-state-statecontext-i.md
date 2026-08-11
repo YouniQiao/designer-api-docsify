@@ -32,7 +32,7 @@ The scope which is used to track the changes of state context.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| id | int | Yes | state cotext id |
+| id | int | Yes | state context id |
 | paramCount | int | Yes | the count of param |
 
 **Return value:**

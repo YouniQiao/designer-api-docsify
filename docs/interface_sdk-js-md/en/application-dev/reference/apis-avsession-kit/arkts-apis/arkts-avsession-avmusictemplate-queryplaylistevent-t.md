@@ -4,7 +4,7 @@
 type QueryPlaylistEvent = (pageIndex: int, sort: Sort) => Promise<PageMediaEntity>
 ```
 
-播放列表查询事件。使用Promise异步回调。
+The query play list event.
 
 **Since:** 23
 
@@ -20,12 +20,12 @@ type QueryPlaylistEvent = (pageIndex: int, sort: Sort) => Promise<PageMediaEntit
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| pageIndex | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | 页面的索引。 |
-| sort | [Sort](arkts-avsession-avmusictemplate-sort-e.md) | Yes |  |
+| pageIndex | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | page index |
+| sort | [Sort](arkts-avsession-avmusictemplate-sort-e.md) | Yes | sort |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;PageMediaEntity&gt; | Promise对象，返回查询的播放列表的分页对象。 |
+| Promise&lt;PageMediaEntity&gt; | (PageMediaEntity) returned through promise |
 

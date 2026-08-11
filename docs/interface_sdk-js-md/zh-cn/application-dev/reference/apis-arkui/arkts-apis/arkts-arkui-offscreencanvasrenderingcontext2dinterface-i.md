@@ -41,7 +41,7 @@
 | --- | --- | --- | --- |
 | width | number | 是 |  |
 | height | number | 是 |  |
-| settings | [RenderingContextSettings](arkts-arkui-canvas-renderingcontextsettings-c.md) | 否 |  |
+| settings | [RenderingContextSettings](arkts-arkui-renderingcontextsettings-c.md) | 否 |  |
 
 **返回值：**
 
@@ -67,7 +67,7 @@
 | --- | --- | --- | --- |
 | width | number | 是 |  |
 | height | number | 是 |  |
-| settings | [RenderingContextSettings](arkts-arkui-canvas-renderingcontextsettings-c.md) | 否 |  |
+| settings | [RenderingContextSettings](arkts-arkui-renderingcontextsettings-c.md) | 否 |  |
 | unit | [LengthMetricsUnit](arkts-arkui-lengthmetricsunit-t.md) | 否 |  |
 
 **返回值：**

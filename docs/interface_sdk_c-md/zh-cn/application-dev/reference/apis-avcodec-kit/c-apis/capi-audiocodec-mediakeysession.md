@@ -6,7 +6,7 @@ typedef struct MediaKeySession MediaKeySession
 
 ## 概述
 
-MediaKeySession字段。
+MediaKeySession结构。
 
 **起始版本：** 12
 

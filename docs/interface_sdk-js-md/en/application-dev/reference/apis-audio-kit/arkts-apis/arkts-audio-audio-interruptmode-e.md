@@ -1,6 +1,6 @@
 # InterruptMode
 
-表示焦点模型的枚举。
+Enumerates the audio interruption modes.
 
 **Since:** 9
 
@@ -16,7 +16,7 @@
 SHARE_MODE = 0
 ```
 
-共享焦点模式。
+Mode that different stream share one interrupt unit.
 
 **Since:** 9
 
@@ -34,7 +34,7 @@ SHARE_MODE = 0
 INDEPENDENT_MODE = 1
 ```
 
-独立焦点模式。
+Mode that each stream has independent interrupt unit.
 
 **Since:** 9
 

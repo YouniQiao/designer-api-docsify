@@ -1,0 +1,25 @@
+# getSystemLanguage
+
+## getSystemLanguage
+
+```TypeScript
+export function getSystemLanguage(): string
+```
+
+获取系统语言。
+
+**起始版本：** 7
+
+**废弃版本：** 9
+
+**替代接口：** [i18n.System.getSystemLanguage](arkts-localization-i18n-system-c.md#getsystemlanguage)
+
+<!--Device-i18n-export function getSystemLanguage(): string--><!--Device-i18n-export function getSystemLanguage(): string-End-->
+
+**系统能力：** SystemCapability.Global.I18n
+
+**返回值：**
+
+| 类型 |
+| --- |
+| string |

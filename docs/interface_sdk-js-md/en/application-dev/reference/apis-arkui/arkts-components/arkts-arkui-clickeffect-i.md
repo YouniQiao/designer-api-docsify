@@ -1,6 +1,6 @@
 # ClickEffect
 
-定义点击效果。
+Defines the click effect.
 
 **Since:** 10
 
@@ -16,13 +16,14 @@
 level: ClickEffectLevel
 ```
 
-设置当前组件的点击回弹效果。
+Click feedback effect of the component.
 
-默认值：ClickEffectLevel.LIGHT
+Default value: **ClickEffectLevel.LIGHT**
 
-**说明：**
+**NOTE：**
 
-当level为undefined或者null时， ClickEffect采用ClickEffectLevel.LIGHT对应的回弹效果，缩放比参照scale说明。
+When **level** is **undefined** or **null**, **ClickEffect** uses the effect corresponding to   
+**ClickEffectLevel.LIGHT** with a scaling ratio as described below.
 
 **Type:** [ClickEffectLevel](../arkts-apis/arkts-arkui-clickeffectlevel-e.md)
 
@@ -46,17 +47,19 @@ level: ClickEffectLevel
 scale?: number
 ```
 
-回弹缩放比例，支持在设置ClickEffectLevel的基础上微调。
+Custom scaling ratio for fine-tuning the click feedback effect.
 
-**说明：**
+**NOTE：**
 
-当level为ClickEffectLevel.LIGHT时，默认值：0.90 
+The default value varies depending on the value of **level**:
 
-当level为ClickEffectLevel.MIDDLE或者ClickEffectLevel.HEAVY时，默认值：0.95 
+**ClickEffectLevel.LIGHT**: **0.90**
 
-当level为undefined或者null时，level为ClickEffectLevel.LIGHT，默认值：0.90 
+**ClickEffectLevel.MIDDLE** or **ClickEffectLevel.HEAVY**: **0.95**
 
-当scale为undefined或者null时，使用当前level对应的默认缩放比例。
+**undefined** or **null** (treated as **ClickEffectLevel.LIGHT**): **0.90**
+
+When **scale** is set to **undefined** or **null**, the default scaling ratio for the current **level** is used.
 
 **Type:** number
 

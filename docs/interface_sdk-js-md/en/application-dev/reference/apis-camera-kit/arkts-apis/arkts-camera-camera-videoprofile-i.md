@@ -1,6 +1,6 @@
 # VideoProfile
 
-视频配置信息项，继承[Profile](arkts-camera-camera-profile-i.md)。
+Describes the video configuration information. It inherits from [Profile](arkts-camera-camera-profile-i.md).
 
 **Inheritance/Implementation:** VideoProfile extends [Profile](arkts-camera-camera-profile-i.md)
 
@@ -24,7 +24,7 @@ import { camera } from 'kits/@kit.CameraKit';
 readonly frameRateRange: FrameRateRange
 ```
 
-帧率范围。单位：fps(frames per second)。
+Describes the frame rate range. Unit: FPS
 
 **Type:** [FrameRateRange](arkts-camera-camera-frameraterange-i.md)
 

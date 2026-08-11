@@ -1,6 +1,6 @@
 # PolyToPolyOptions
 
-多边形到多边形的映射选项。
+Set poly to poly point options.
 
 **Since:** 23
 
@@ -22,7 +22,7 @@ import { matrix4 } from 'kits/@kit.ArkUI';
 dst: Array<Point>
 ```
 
-目标点坐标。
+Array of point coordinates for the target polygon.
 
 **Type:** Array&lt;Point&gt;
 
@@ -42,11 +42,7 @@ dst: Array<Point>
 dstIndex?: int
 ```
 
-目标坐标起始索引。
-
-默认值: src.length/2 
-
-取值范围：[0, +∞)
+Start index of the target polygon, which defaults to 0.
 
 **Type:** int
 
@@ -68,11 +64,7 @@ dstIndex?: int
 pointCount?: int
 ```
 
-使用到的点数量。
-
-默认值: 0 
-
-取值范围：[0, +∞)
+The number of points to be used.If it is 0, it returns the identity matrix.If it is 1, it returns a translation matrix that changed before two points.If it is 2-4, it returns a transformation matrix.
 
 **Type:** int
 
@@ -94,7 +86,7 @@ pointCount?: int
 src: Array<Point>
 ```
 
-源点坐标。
+Array of point coordinates for the source polygon.
 
 **Type:** Array&lt;Point&gt;
 
@@ -114,11 +106,7 @@ src: Array<Point>
 srcIndex?: int
 ```
 
-源点坐标起始索引。
-
-默认值:0 
-
-取值范围：[0, +∞)
+Start point index of the source polygon, which defaults to 0.
 
 **Type:** int
 

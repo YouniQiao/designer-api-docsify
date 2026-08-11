@@ -1,11 +1,5 @@
 # offDidLayout
 
-## 导入模块
-
-```TypeScript
-import { uiObserver } from 'kits/@kit.ArkUI';
-```
-
 ## offDidLayout
 
 ```TypeScript

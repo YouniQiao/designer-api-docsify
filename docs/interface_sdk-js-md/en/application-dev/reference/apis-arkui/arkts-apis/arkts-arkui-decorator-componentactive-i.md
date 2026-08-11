@@ -1,6 +1,6 @@
 # ComponentActive
 
-定义ComponentActive方法装饰器。
+Define ComponentActive Method Decorator.
 
 **Since:** 26.0.0
 

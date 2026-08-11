@@ -1,6 +1,6 @@
 # TypedArray
 
-TypedArray继承Int8Array的特性与方法。
+TypedArray inherits the features and methods of Int8Array
 
 **Inheritance/Implementation:** TypedArray extends [Int8Array](../../apis-default/arkts-apis/arkts-lib-es5-int8array-i.md/arkts-lib-es5-int8array-i.md)
 

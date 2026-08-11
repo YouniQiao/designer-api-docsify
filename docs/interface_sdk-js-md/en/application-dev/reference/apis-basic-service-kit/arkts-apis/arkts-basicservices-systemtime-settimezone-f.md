@@ -12,7 +12,7 @@ import { systemTime } from 'kits/@kit.BasicServicesKit';
 function setTimezone(timezone: string, callback: AsyncCallback<void>): void
 ```
 
-设置系统时区，使用callback异步回调。
+Sets the system time zone. This API uses an asynchronous callback to return the result.
 
 **Since:** 7
 
@@ -32,8 +32,8 @@ function setTimezone(timezone: string, callback: AsyncCallback<void>): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| timezone | string | Yes | 系统时区。具体可见 [支持的系统时区](../../../reference/apis-basic-services-kit/js-apis-system-time.md#支持的系统时区) 。 |
-| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | 回调函数。 |
+| timezone | string | Yes | System time zone to set. For details, see [Supported System Time Zones](../../../reference/apis-basic-services-kit/js-apis-system-time.md#supported-system-time-zones) . |
+| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. |
 
 **Error codes:**
 
@@ -49,7 +49,7 @@ import { BusinessError } from '@kit.BasicServicesKit';
 try {
   systemTime.setTimezone('Asia/Shanghai', (error: BusinessError) => {
     if (error) {
-      console.info(`Failed to set timezone. message: ${error.message}, code: ${error.code}`);
+      console.info(`Failed to setting timezone. message: ${error.message}, code: ${error.code}`);
       return;
     }
     console.info(`Succeeded in setting timezone.`);
@@ -67,7 +67,7 @@ try {
 function setTimezone(timezone: string): Promise<void>
 ```
 
-使用Promise异步回调设置系统时区。
+Sets the system time zone. This API uses a promise to return the result.
 
 **Since:** 7
 
@@ -87,13 +87,13 @@ function setTimezone(timezone: string): Promise<void>
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| timezone | string | Yes | 系统时区。具体可见 [支持的系统时区](../../../reference/apis-basic-services-kit/js-apis-system-time.md#支持的系统时区) 。 |
+| timezone | string | Yes | System time zone to set. For details, see [Supported System Time Zones](../../../reference/apis-basic-services-kit/js-apis-system-time.md#supported-system-time-zones) . |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | 无返回结果的Promise对象。 |
+| Promise&lt;void&gt; | Promise that returns no value. |
 
 **Error codes:**
 
@@ -110,7 +110,7 @@ try {
   systemTime.setTimezone('Asia/Shanghai').then(() => {
     console.info(`Succeeded in setting timezone.`);
   }).catch((error: BusinessError) => {
-    console.info(`Failed to set timezone. message: ${error.message}, code: ${error.code}`);
+    console.info(`Failed to setting timezone. message: ${error.message}, code: ${error.code}`);
   });
 } catch(e) {
   let error = e as BusinessError;

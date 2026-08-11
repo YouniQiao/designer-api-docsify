@@ -12,9 +12,9 @@ The module defines the HAP module information. An application can obtain its own
 
 | Name | Description |
 | --- | --- |
-| [DataItem](arkts-ability-hapmoduleinfo-dataitem-i.md) | 描述模块配置的路由表中的自定义数据。 |
-| [Dependency](arkts-ability-hapmoduleinfo-dependency-i.md) | 描述模块所依赖的动态共享库信息。 |
-| [HapModuleInfo](arkts-ability-hapmoduleinfo-i.md) | HAP信息。 |
-| [PreloadItem](arkts-ability-hapmoduleinfo-preloaditem-i.md) | 描述原子化服务中模块的预加载模块信息。 |
-| [RouterItem](arkts-ability-hapmoduleinfo-routeritem-i.md) | 描述模块配置的路由表信息。 |
+| [DataItem](arkts-ability-hapmoduleinfo-dataitem-i.md) | Describes the user-defined data in the routing table configuration of the module. |
+| [Dependency](arkts-ability-hapmoduleinfo-dependency-i.md) | Describes the information about the dynamic shared library on which the module depends. |
+| [HapModuleInfo](arkts-ability-hapmoduleinfo-i.md) | The module defines the HAP module information. |
+| [PreloadItem](arkts-ability-hapmoduleinfo-preloaditem-i.md) | Describes the preloaded module information in the atomic service. |
+| [RouterItem](arkts-ability-hapmoduleinfo-routeritem-i.md) | Describes the router table configuration of the module. |
 

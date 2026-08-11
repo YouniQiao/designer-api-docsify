@@ -1,6 +1,6 @@
 # BadgeParamWithNumber
 
-BadgeParamWithNumber继承自[BadgeParam](arkts-arkui-badgeparam-i.md)，具有BadgeParam的全部属性。
+Inherits from [BadgeParam](arkts-arkui-badgeparam-i.md) and has all attributes of **BadgeParam**.
 
 **Inheritance/Implementation:** BadgeParamWithNumber extends [BadgeParam](arkts-arkui-badgeparam-i.md)
 
@@ -18,13 +18,13 @@ BadgeParamWithNumber继承自[BadgeParam](arkts-arkui-badgeparam-i.md)，具有B
 count: number
 ```
 
-设置提醒消息数。
+Number of notifications.
 
-**说明：**
+**NOTE：**
 
-当该值小于等于0且小于maxCount时不显示信息标记。
+If the value is less than or equal to 0 and less than the value of **maxCount**, no badge is displayed.
 
-取值范围：[-2147483648, 2147483647]。超出范围时会加上或减去4294967296，使得值仍在范围内，非整数时会舍去小数部分取整数部分，如5.5取5。
+Value range: [-2147483648, 2147483647]. If the value is out of the range, 4294967296 is added or subtracted so that the value is within the range. If the value is not an integer, it is rounded off to the nearest integer. For example, 5.5 is rounded off to 5.
 
 **Type:** number
 
@@ -46,11 +46,11 @@ count: number
 maxCount?: number
 ```
 
-最大消息数，超过最大消息时仅显示maxCount+，如maxCount是99时，显示`99+`。
+Maximum number of messages. If the number of messages exceeds the maximum, only **maxCount+** is displayed. For example, if **maxCount** is 99, **99+** is displayed.
 
-默认值：99
+Default value: **99**
 
-取值范围：[-2147483648, 2147483647]。超出范围时会加上或减去4294967296，使得值仍在范围内，非整数时会舍去小数部分取整数部分，如5.5取5。
+Value range: [-2147483648, 2147483647]. If the value is out of the range, 4294967296 is added or subtracted so that the value is within the range. If the value is not an integer, it is rounded off to the nearest integer. For example, 5.5 is rounded off to 5.
 
 **Type:** number
 

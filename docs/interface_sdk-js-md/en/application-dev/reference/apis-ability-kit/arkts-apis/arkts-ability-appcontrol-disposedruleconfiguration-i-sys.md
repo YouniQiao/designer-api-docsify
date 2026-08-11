@@ -1,6 +1,6 @@
 # DisposedRuleConfiguration (System API)
 
-标识批量设置拦截规则的配置。
+Describes the configurations for setting disposed rules in batches.
 
 **Since:** 20
 
@@ -24,16 +24,13 @@ import { appControl } from 'kits/@kit.AbilityKit';
 appId: string
 ```
 
-要被设置拦截规则应用的appId或appIdentifier。appId和appIdentifier可以标识同一个应用，因此针对同一应用如果用appIdentifier设置拦截规则，可以覆盖之前采用appId设置的，反之同理。
+appId or appIdentifier of the target application. Identical appId and appIdentifier values indicate the same application instance. If a rule is set using appId, it overwrites the one set with appIdentifier, and the reverse is also true.
 
-**说明：**
+**NOTE：**
 
-appId是应用的唯一标识，由应用Bundle名称和签名信息决定，获取方法参见  
-[获取应用的appId](../../../quick-start/common-problem-of-application.md#如何获取应用信息中的appid)。
-
-[appIdentifier](arkts-ability-bundleinfo-signatureinfo-i.md)也是应用的唯一标识，详情信息可参考  
-[什么是appIdentifier](../../../quick-start/common-problem-of-application.md#什么是appidentifier)，获取方法参见  
-[获取应用的appIdentifier](../../../quick-start/common-problem-of-application.md#如何获取应用信息中的appidentifier)。
+**appId** is also the unique identifier of an app. For details, see  
+[What is appIdentifier](../../../quick-start/common_problem_of_application.md#what-is-appidentifier). For details about how to obtain **appIdentifier**, see  
+[How do I obtain appIdentifier from application information](../../../quick-start/common_problem_of_application.md#how-do-i-obtain-appidentifier-from-application-information).
 
 **Type:** string
 
@@ -53,9 +50,9 @@ appId是应用的唯一标识，由应用Bundle名称和签名信息决定，获
 appIndex: int
 ```
 
-表示分身应用的索引，默认值为0。
+Index of the application clone. The default value is **0**.
 
-appIndex为0时，表示设置主应用的拦截规则。appIndex大于0时，表示设置指定分身应用的拦截规则。
+The value **0** means to set the disposed rule for the main application. A value greater than 0 means to set the disposed rule for the application clone with the specified index.
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
@@ -75,7 +72,7 @@ appIndex为0时，表示设置主应用的拦截规则。appIndex大于0时，�
 disposedRule: DisposedRule
 ```
 
-表示对应用的拦截规则，包括拦截时将拉起能力的类型等。
+Disposal rule of the application, including the type of the ability to be started during disposal.
 
 **Type:** [DisposedRule](arkts-ability-appcontrol-disposedrule-i-sys.md)
 

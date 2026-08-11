@@ -10,12 +10,6 @@
 
 **系统能力：** SystemCapability.Applications.ContactsData
 
-## 导入模块
-
-```TypeScript
-import { contact } from 'kits/@kit.ContactsKit';
-```
-
 ## 汇总
 
 ### 函数
@@ -26,7 +20,7 @@ import { contact } from 'kits/@kit.ContactsKit';
 | [addContact](arkts-contacts-contact-addcontact-f.md#addcontact-1) | 添加联系人。使用callback异步回调。 |
 | [addContact](arkts-contacts-contact-addcontact-f.md#addcontact-2) | 添加联系人。使用Promise异步回调。 |
 | [addContact](arkts-contacts-contact-addcontact-f.md#addcontact-3) | 添加联系人。使用Promise异步回调。 |
-| [addContactViaUI](arkts-contacts-contact-addcontactviaui-f.md#addcontactviaui) | 通过UI交互创建联系人。使用Promise异步回调。 |
+| [addContactViaUI](arkts-contacts-contact-addcontactviaui-f.md#addcontactviaui) | 调用新建联系人接口，打开新建联系人UI界面。使用Promise异步回调。 |
 | [addContacts](arkts-contacts-contact-addcontacts-f.md#addcontacts) | 批量添加联系人。使用Promise异步回调。 |
 | [deleteContact](arkts-contacts-contact-deletecontact-f.md#deletecontact) | 删除联系人。使用callback异步回调。 |
 | [deleteContact](arkts-contacts-contact-deletecontact-f.md#deletecontact-1) | 删除联系人。使用callback异步回调。 |
@@ -34,7 +28,7 @@ import { contact } from 'kits/@kit.ContactsKit';
 | [deleteContact](arkts-contacts-contact-deletecontact-f.md#deletecontact-3) | 删除联系人。使用Promise异步回调。 |
 | [hasMatchedCallLog](arkts-contacts-contact-hasmatchedcalllog-f.md#hasmatchedcalllog) | 检查是否有符合条件的通话记录，默认查询6小时以内的通话记录，仅针对运营商通话。使用Promise异步回调。 |
 | [hasMatchedCallLog](arkts-contacts-contact-hasmatchedcalllog-f.md#hasmatchedcalllog-1) | 检查是否有符合条件的通话记录，仅针对运营商通话。使用Promise异步回调。 |
-| [importContactsViaUI](arkts-contacts-contact-importcontactsviaui-f.md#importcontactsviaui) | 通过UI交互批量导入多个联系人。   每次最多可导入100个联系人。 |
+| [importContactsViaUI](arkts-contacts-contact-importcontactsviaui-f.md#importcontactsviaui) | 通过UI交互批量导入多个联系人。   每次最多可导入100个联系人。不支持导入联系人的头像。 |
 | [isLocalContact](arkts-contacts-contact-islocalcontact-f.md#islocalcontact) | 判断当前联系人id是否在电话簿中。使用callback异步回调。 |
 | [isLocalContact](arkts-contacts-contact-islocalcontact-f.md#islocalcontact-1) | 判断当前联系人id是否在电话簿中。使用callback异步回调。 |
 | [isLocalContact](arkts-contacts-contact-islocalcontact-f.md#islocalcontact-2) | 判断当前联系人id是否在电话簿中。使用Promise异步回调。 |
@@ -106,7 +100,7 @@ import { contact } from 'kits/@kit.ContactsKit';
 | [queryMyCard](arkts-contacts-contact-querymycard-f.md#querymycard-2) | 查询“我的名片”（支持传入联系人的属性列表）。使用callback异步回调。 |
 | [queryMyCard](arkts-contacts-contact-querymycard-f.md#querymycard-3) | 查询“我的名片”（支持传入联系人的属性列表）。使用callback异步回调。 |
 | [queryMyCard](arkts-contacts-contact-querymycard-f.md#querymycard-4) | 查询“我的名片”（支持传入联系人的属性列表）。使用Promise异步回调。 |
-| [queryMyCard](arkts-contacts-contact-querymycard-f.md#querymycard-5) | 查询“我的名片”（支持传入联系人的属性列表）。使用Promise异步回调。 |
+| [queryMyCard](arkts-contacts-contact-querymycard-f.md#querymycard-5) | 查询"我的名片"（支持传入联系人的属性列表）。使用Promise异步回调。 |
 | [saveToExistingContactViaUI](arkts-contacts-contact-savetoexistingcontactviaui-f.md#savetoexistingcontactviaui) | 调用保存至已有联系人接口，选择联系人UI界面并完成编辑。使用Promise异步回调。 |
 | [selectContact](arkts-contacts-contact-selectcontact-f.md#selectcontact) | 调用选择联系人接口，打开选择联系人UI界面。使用callback异步回调。 |
 | [selectContact](arkts-contacts-contact-selectcontact-f.md#selectcontact-1) | 调用选择联系人接口，打开选择联系人UI界面。使用Promise异步回调。 |
@@ -114,7 +108,7 @@ import { contact } from 'kits/@kit.ContactsKit';
 | [selectContacts](arkts-contacts-contact-selectcontacts-f.md#selectcontacts-1) | 调用选择联系人接口，打开选择联系人UI界面。使用Promise异步回调。 |
 | [selectContacts](arkts-contacts-contact-selectcontacts-f.md#selectcontacts-2) | 调用选择联系人接口，打开选择联系人UI界面（选择联系人时支持传入[筛选条件](arkts-contacts-contact-contactselectionoptions-i.md)）。使用callback异步回调。 |
 | [selectContacts](arkts-contacts-contact-selectcontacts-f.md#selectcontacts-3) | 调用选择联系人接口，打开选择联系人UI界面（选择联系人时支持传入筛选条件）。使用Promise异步回调。 |
-| [syncContacts](arkts-contacts-contact-synccontacts-f.md#synccontacts) | 批量同步多个联系人至联系人数据库。   最多可批量同步400个联系人。调用方必须处于前台。 |
+| [syncContacts](arkts-contacts-contact-synccontacts-f.md#synccontacts) | 批量同步多个联系人至联系人数据库。   每次最多可批量同步400个联系人。调用方必须处于前台。 |
 | [updateContact](arkts-contacts-contact-updatecontact-f.md#updatecontact) | 更新联系人。使用callback异步回调。 |
 | [updateContact](arkts-contacts-contact-updatecontact-f.md#updatecontact-1) | 更新联系人。使用callback异步回调。 |
 | [updateContact](arkts-contacts-contact-updatecontact-f.md#updatecontact-2) | 更新联系人，支持传入联系人的属性列表。使用callback异步回调。 |

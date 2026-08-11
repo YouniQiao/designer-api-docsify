@@ -12,7 +12,7 @@ import { thermal } from 'kits/@kit.BasicServicesKit';
 function subscribeThermalLevel(callback: AsyncCallback<ThermalLevel>): void
 ```
 
-订阅热档位变化时的回调提醒。使用callback异步回调。
+Subscribes to the thermal level changes. This API uses an asynchronous callback to return the result.
 
 **Since:** 8
 
@@ -30,7 +30,7 @@ function subscribeThermalLevel(callback: AsyncCallback<ThermalLevel>): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;ThermalLevel&gt; | Yes | 回调函数，返回变化后的热档位；该参数是一个函数类型。 |
+| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;ThermalLevel&gt; | Yes | Callback used to return thermal level. This parameter is of the function type. |
 
 ## Examples
 

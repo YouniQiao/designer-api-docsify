@@ -4,7 +4,7 @@
 export type DataAbilityHelper = _DataAbilityHelper
 ```
 
-DataAbilityHelper二级模块。
+Defines the level-2 module DataAbilityHelper.
 
 **Since:** 9
 

@@ -1,6 +1,6 @@
 # NavigationInfo
 
-Navigation组件信息。
+Navigation info.
 
 **Since:** 23
 
@@ -22,7 +22,7 @@ import { uiObserver } from 'kits/@kit.ArkUI';
 navigationId: string
 ```
 
-包含NavDestination组件的Navigation组件的id。
+Navigation id.
 
 **Type:** string
 
@@ -42,7 +42,7 @@ navigationId: string
 pathStack: NavPathStack
 ```
 
-Navigation组件的导航控制器。
+Navigation path stack.
 
 **Type:** [NavPathStack](../arkts-components/arkts-arkui-navpathstack-c.md)
 
@@ -62,7 +62,7 @@ Navigation组件的导航控制器。
 uniqueId?: int
 ```
 
-The uniqueId of the navigation.
+The uniqueId of the navigation.The value should be an integer.
 
 **Type:** int
 

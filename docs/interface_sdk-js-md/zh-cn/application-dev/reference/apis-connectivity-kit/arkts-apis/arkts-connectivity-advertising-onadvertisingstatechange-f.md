@@ -1,11 +1,5 @@
 # onAdvertisingStateChange
 
-## 导入模块
-
-```TypeScript
-import { advertising } from 'kits/@kit.ConnectivityKit';
-```
-
 ## onAdvertisingStateChange
 
 ```TypeScript
@@ -36,5 +30,5 @@ function onAdvertisingStateChange(callback: Callback<AdvertisingStateChangeInfo>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 801 | Capability not supported because the chip does not support it. |
+| [801](../../errorcode-universal.md#801-该设备不支持此api) | Capability not supported because the chip does not support it. |
 

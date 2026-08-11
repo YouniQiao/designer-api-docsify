@@ -1,11 +1,5 @@
 # createImageReceiver
 
-## 导入模块
-
-```TypeScript
-import { sendableImage } from 'kits/@kit.ImageKit';
-```
-
 ## createImageReceiver
 
 ```TypeScript
@@ -42,7 +36,7 @@ function createImageReceiver(size: image.Size, format: image.ImageFormat, capaci
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 401 | The parameter check failed. |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | The parameter check failed. |
 
 ## 示例
 

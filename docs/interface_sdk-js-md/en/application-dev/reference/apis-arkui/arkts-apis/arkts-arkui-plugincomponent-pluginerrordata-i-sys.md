@@ -1,6 +1,6 @@
 # PluginErrorData (System API)
 
-发生错误时提供的数据。AnonyMous Object Rectification
+Data provided when an error occurs.AnonyMous Object Rectification
 
 **Since:** 23
 
@@ -18,7 +18,7 @@
 errcode: int
 ```
 
-错误码。AnonyMous Object Rectification
+Error code.AnonyMous Object Rectification
 
 **Type:** int
 
@@ -40,7 +40,7 @@ errcode: int
 msg: string
 ```
 
-错误信息。AnonyMous Object Rectification
+Error message.AnonyMous Object Rectification
 
 **Type:** string
 

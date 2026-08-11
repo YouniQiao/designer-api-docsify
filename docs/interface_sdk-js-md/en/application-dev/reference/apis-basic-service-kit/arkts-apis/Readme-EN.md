@@ -385,6 +385,7 @@
   - [PerformanceClassLevel](arkts-basicservices-deviceinfo-performanceclasslevel-e.md)
   - [Constants](arkts-basicservices-deviceinfo-con.md)
 - [@ohos.deviceInfo](arkts-deviceinfo.md)
+  - [apiAvailable](arkts-basicservices-deviceinfo-apiavailable-f.md)
   - [DeviceTypes](arkts-basicservices-deviceinfo-devicetypes-e.md)
   - [PerformanceClassLevel](arkts-basicservices-deviceinfo-performanceclasslevel-e.md)
 - [@ohos.events.emitter](arkts-events-emitter.md)

@@ -16,12 +16,6 @@
 
 **系统能力：** SystemCapability.Multimedia.Camera.Core
 
-## 导入模块
-
-```TypeScript
-import { camera } from 'kits/@kit.CameraKit';
-```
-
 ## enableAutoDeviceSwitch
 
 ```TypeScript
@@ -54,8 +48,8 @@ enableAutoDeviceSwitch(enabled: boolean): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 7400101 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameters verification failed.<br>**适用版本：** 19+ |
-| 7400102 | Operation not allowed. |
-| 7400103 | Session not config. |
-| 7400201 | Camera service fatal error. |
+| [7400101](../errorcode-camera.md#7400101-无效入参) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameters verification failed.<br>**适用版本：** 19+ |
+| [7400102](../errorcode-camera.md#7400102-非法操作) | Operation not allowed. |
+| [7400103](../errorcode-camera.md#7400103-会话未配置) | Session not config. |
+| [7400201](../errorcode-camera.md#7400201-相机服务异常) | Camera service fatal error. |
 

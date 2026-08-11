@@ -4,7 +4,7 @@
 type AuthCallbackOnResultFunc = (result: UserAuthResult) => void
 ```
 
-回调函数，返回认证结果。认证成功时，可以通过UserAuthResult获取到认证成功的令牌信息。
+Called to return the authentication result. If the authentication is successful,UserAuthResult contains the token information.
 
 **Since:** 23
 

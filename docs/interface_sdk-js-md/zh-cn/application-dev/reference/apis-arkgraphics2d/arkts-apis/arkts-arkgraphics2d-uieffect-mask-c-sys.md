@@ -12,12 +12,6 @@ Mask效果类，作为Filter以及VisualEffect的输入使用。不同类型的M
 
 **系统接口：** 此接口为系统接口。
 
-## 导入模块
-
-```TypeScript
-import { uiEffect } from 'kits/@kit.ArkGraphics2D';
-```
-
 ## createPixelMapMask
 
 ```TypeScript
@@ -44,7 +38,7 @@ static createPixelMapMask(pixelMap: image.PixelMap, srcRect: common2D.Rect, dstR
 | pixelMap | image.PixelMap | 是 | image模块创建的PixelMap实例。可通过图片解码或直接创建获得。 |
 | srcRect | common2D.Rect | 是 | pixelMap的待绘制区域。 图片最左侧和最上侧对应位置0，最右侧和最下侧对应位置1。right需大于left，bottom需大于top，违反约束时效果不生效。 |
 | dstRect | common2D.Rect | 是 | pixelMap在mask挂载的节点上的绘制区域。 节点最左侧和最上侧对应位置0，最右侧和最下侧对应位置1。right需大于left，bottom需大于top，违反约束时效果不生效。 |
-| fillColor | [Color](../../apis-arkui/arkts-apis/arkts-arkui-enums-color-e.md) | 否 | 节点上在pixelMap绘制区域之外的区域填充的颜色， 各元素取值范围为[0, 1]，默认透明色，小于0的转为0，大于1的转为1。 |
+| fillColor | [Color](../../apis-arkgraphics3d/arkts-apis/arkts-arkgraphics3d-scenetypes-color-i.md) | 否 | 节点上在pixelMap绘制区域之外的区域填充的颜色， 各元素取值范围为[0, 1]，默认透明色，小于0的转为0，大于1的转为1。 |
 
 **返回值：**
 
@@ -56,47 +50,47 @@ static createPixelMapMask(pixelMap: image.PixelMap, srcRect: common2D.Rect, dstR
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 202 | 权限校验失败，非系统应用调用系统接口。 |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | 权限校验失败，非系统应用调用系统接口。 |
 
 ## 示例
 
 ```TypeScript
-import { image } from '@kit.ImageKit';
-import { uiEffect, common2D } from '@kit.ArkGraphics2D';
-import { BusinessError } from '@kit.BasicServicesKit';
+import { image } from "@kit.ImageKit";
+import { uiEffect, common2D } from "@kit.ArkGraphics2D";
+import { BusinessError } from '@kit.BasicServicesKit'
 
-const colorBuffer = new ArrayBuffer(96);
-let opts: image.InitializationOptions = {
+const color = new ArrayBuffer(96);
+let opts : image.InitializationOptions = {
   editable: true,
   pixelFormat: 3,
   size: {
     height: 4,
     width: 6
   }
-};
-image.createPixelMap(colorBuffer, opts).then((pixelMap) => {
-  let srcRect: common2D.Rect = {
+}
+image.createPixelMap(color, opts).then((pixelMap) => {
+  let srcRect : common2D.Rect = {
     left: 0,
     top: 0,
     right: 1,
     bottom: 1
-  };
-  let dstRect: common2D.Rect = {
+  }
+  let dstRect : common2D.Rect = {
     left: 0,
     top: 0,
     right: 1,
     bottom: 1
-  };
-  let fillColor: uiEffect.Color = {
+  }
+  let fillColor : uiEffect.Color = {
     red: 0,
     green: 0,
     blue: 0,
     alpha: 1
-  };
+  }
   let mask = uiEffect.Mask.createPixelMapMask(pixelMap, srcRect, dstRect, fillColor);
 }).catch((error: BusinessError)=>{
   console.error(`Failed to create pixelmap. code is ${error.code}, message is ${error.message}`);
-});
+})
 ```
 
 ## createPixelMapMask
@@ -133,7 +127,7 @@ static createPixelMapMask(pixelMap: image.PixelMap): Mask
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 202 | 权限校验失败，非系统应用调用系统接口。 |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | 权限校验失败，非系统应用调用系统接口。 |
 
 ## 示例
 
@@ -155,26 +149,18 @@ struct Index {
   @State tintColorG: number = 1.;
   @State tintColorB: number = 1.;
   @State tintColorA: number = 1.;
-  @State pixelMapDistort: image.PixelMap | undefined = undefined;
-
-  aboutToAppear(): void {
-    this.pixelMapDistort = this.getPixelMap();
-  }
+  @State pixelMapDistort: image.PixelMap | undefined = this.getPixelMap();
 
   private getPixelMap(): image.PixelMap | undefined {
     try {
       let context = this.getUIContext().getHostContext() as common.UIAbilityContext;
       // this path should be created in local
-      const path: string = context.resourceDir + '/perlin_worley_noise_3d_64.bmp';
+      const path: string = context.resourceDir + "/perlin_worley_noise_3d_64.bmp";
       const imageSource: image.ImageSource = image.createImageSource(path);
       if (!imageSource) {
         return undefined;
       }
-      const pixelMap: image.PixelMap | null = imageSource.createPixelMapSync();
-      if (!pixelMap) {
-        imageSource.release();
-        return undefined;
-      }
+      const pixelMap: image.PixelMap = imageSource.createPixelMapSync();
       imageSource.release();
       return pixelMap;
     } catch (err) {
@@ -182,25 +168,21 @@ struct Index {
     }
   }
 
-  private getMaterialVisualEffect(): uiEffect.VisualEffect {
+  private GetMaterialVisualEffect(): uiEffect.VisualEffect {
     let effect: uiEffect.VisualEffect = uiEffect.createEffect();
-    let distortMask: uiEffect.Mask | undefined = undefined;
-    if (this.pixelMapDistort) {
-      distortMask = uiEffect.Mask.createPixelMapMask(this.pixelMapDistort);
-    }
     effect.liquidMaterial({
       enable: true,
-      distortProgress: this.distortProgress,
+      distortProgress : this.distortProgress,
       rippleProgress: this.rippleProgress,
       distortFactor: this.distortFactor,
-      materialFactor: this.materialFactor,
-      refractionFactor: this.refractionFactor,
+      materialFactor : this.materialFactor,
+      refractionFactor : this.refractionFactor,
       reflectionFactor: this.reflectionFactor,
-      tintColor: [this.tintColorR, this.tintColorG, this.tintColorB, this.tintColorA],
+      tintColor : [this.tintColorR, this.tintColorG, this.tintColorB, this.tintColorA],
       ripplePosition: undefined,
     },
       uiEffect.Mask.createUseEffectMask(true),
-      distortMask
+      uiEffect.Mask.createPixelMapMask(this.pixelMapDistort), // createImageMask使用示例
       );
     return effect;
   }
@@ -213,15 +195,15 @@ struct Index {
           .height(553 + 'px')
           .width(553 + 'px')
           .borderRadius(12)
-          .visualEffect(this.getMaterialVisualEffect())
+          .visualEffect(this.GetMaterialVisualEffect())
       }
       .backgroundEffect({
         radius: 15,
       }, { disableSystemAdaptation: true })
-      .width('100%').height('100%').align(Alignment.Center)
+      .width("100%").height("100%").align(Alignment.Center)
     }
     .backgroundImage($r('app.media.bg6'), ImageRepeat.NoRepeat) // the image should be created in local
-    .width('100%').height('100%').align(Alignment.Center)
+    .width("100%").height("100%").align(Alignment.Center)
   }
 }
 ```
@@ -271,7 +253,7 @@ static createRadialGradientMask(center: common2D.Point, radiusX: double, radiusY
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 202 | 权限校验失败，非系统应用调用系统接口。 |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | 权限校验失败，非系统应用调用系统接口。 |
 
 ## createRippleMask
 
@@ -316,12 +298,42 @@ static createRippleMask(center: common2D.Point, radius: double, width: double, o
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 202 | 权限校验失败，非系统应用调用系统接口。 |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | 权限校验失败，非系统应用调用系统接口。 |
 
 ## 示例
 
+ArkTS-Dyn示例：
+
 ```TypeScript
-let mask = uiEffect.Mask.createRippleMask({x: 0.5, y: 1.0}, 0.5, 0.3, 0.0);
+let mask = uiEffect.Mask.createRippleMask({x:0.5, y:1.0}, 0.5, 0.3, 0.0);
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+import { Entry, Component, Stack, State, Image, RelativeContainer, $r } from '@kit.ArkUI'
+import uiEffect from '@ohos.graphics.uiEffect'
+
+@Entry
+@Component
+struct CreateRippleMask {
+  @State centerX: double = 0.5
+  @State centerY: double = 0.5
+  @State radius: double = 0.5
+  @State rf: [double, double] = [0.3, -0.3] as [double, double]
+  @State gf: [double, double] = [0, 0] as [double, double]
+  @State bf: [double, double] = [-0.3, 0.3] as [double, double]
+
+  build() {
+    RelativeContainer() {
+      Image($r('app.media.man'))
+      Stack().width("100%").height("100%")
+        .backgroundFilter(uiEffect.createFilter().maskDispersion(
+          uiEffect.Mask.createRippleMask({ x: this.centerX, y: this.centerY }, this.radius, 0.3, 0.0),
+          1.0, this.rf, this.gf, this.bf))
+    }
+  }
+}
 ```
 
 ## createUseEffectMask
@@ -358,7 +370,7 @@ static createUseEffectMask(useEffect: boolean): Mask
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 202 | 权限校验失败，非系统应用调用系统接口。 |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | 权限校验失败，非系统应用调用系统接口。 |
 
 ## 示例
 
@@ -379,17 +391,17 @@ struct Index {
   @State tintColorB: number = 1.;
   @State tintColorA: number = 1.;
 
-  private getMaterialVisualEffect(): uiEffect.VisualEffect {
+  private GetMaterialVisualEffect(): uiEffect.VisualEffect {
     let effect: uiEffect.VisualEffect = uiEffect.createEffect();
     effect.liquidMaterial({
         enable: true,
-        distortProgress: this.distortProgress,
+        distortProgress : this.distortProgress,
         rippleProgress: this.rippleProgress,
         distortFactor: this.distortFactor,
-        materialFactor: this.materialFactor,
-        refractionFactor: this.refractionFactor,
+        materialFactor : this.materialFactor,
+        refractionFactor : this.refractionFactor,
         reflectionFactor: this.reflectionFactor,
-        tintColor: [this.tintColorR, this.tintColorG, this.tintColorB, this.tintColorA],
+        tintColor : [this.tintColorR, this.tintColorG, this.tintColorB, this.tintColorA],
         ripplePosition: undefined,
       },
       uiEffect.Mask.createUseEffectMask(true), // useEffectMask使用示例
@@ -405,15 +417,15 @@ struct Index {
           .height(553 + 'px')
           .width(553 + 'px')
           .borderRadius(12)
-          .visualEffect(this.getMaterialVisualEffect())
+          .visualEffect(this.GetMaterialVisualEffect())
       }
       .backgroundEffect({
         radius: 15,
       }, { disableSystemAdaptation: true })
-      .width('100%').height('100%').align(Alignment.Center)
+      .width("100%").height("100%").align(Alignment.Center)
     }
     .backgroundImage($r('app.media.bg6'), ImageRepeat.NoRepeat)
-    .width('100%').height('100%').align(Alignment.Center)
+    .width("100%").height("100%").align(Alignment.Center)
   }
 }
 ```
@@ -464,12 +476,12 @@ static createWaveGradientMask(center: common2D.Point, width: double, propagation
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 202 | 权限校验失败，非系统应用调用系统接口。 |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | 权限校验失败，非系统应用调用系统接口。 |
 
 ## 示例
 
 ```TypeScript
-import { uiEffect } from '@kit.ArkGraphics2D';
+import { uiEffect } from "@kit.ArkGraphics2D";
 // center: [0.5, 0.5]；width: 0.01; propagationRadius: 0.5; blurRadius: 0.1; turbulenceStrength: 0.1
 let mask = uiEffect.Mask.createWaveGradientMask({x: 0.5, y: 0.5}, 0.01, 0.5, 0.1, 0.1);
 @Entry

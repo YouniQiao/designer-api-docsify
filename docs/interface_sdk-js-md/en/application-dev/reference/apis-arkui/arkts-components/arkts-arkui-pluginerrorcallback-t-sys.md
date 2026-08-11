@@ -4,7 +4,7 @@
 declare type PluginErrorCallback = (info: PluginErrorData) => void
 ```
 
-发生错误时触发的回调。
+Callback invoked when an error occurs.
 
 **Since:** 18
 
@@ -22,5 +22,5 @@ declare type PluginErrorCallback = (info: PluginErrorData) => void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| info | [PluginErrorData](../arkts-apis/arkts-arkui-plugincomponent-pluginerrordata-i-sys.md) | Yes | 插件错误数据 |
+| info | [PluginErrorData](../arkts-apis/arkts-arkui-plugincomponent-pluginerrordata-i-sys.md) | Yes | Plugin error data |
 

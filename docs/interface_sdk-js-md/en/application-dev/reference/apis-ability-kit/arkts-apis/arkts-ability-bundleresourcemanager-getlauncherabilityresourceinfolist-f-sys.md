@@ -12,7 +12,7 @@ import { bundleResourceManager } from 'kits/@kit.AbilityKit';
 function getLauncherAbilityResourceInfoList(optionsList: Array<BundleOptions>, resourceFlags: int): Promise<Array<LauncherAbilityResourceInfo>>
 ```
 
-根据传入的optionsList获取列表中每个BundleOptions元素对应的应用的LauncherAbilityResourceInfo。使用Promise异步回调。
+Obtains the launcher ability resource information of each application corresponding to the **BundleOptions**element in **optionsList**. This API uses a promise to return the result.
 
 **Since:** 23
 
@@ -32,26 +32,26 @@ function getLauncherAbilityResourceInfoList(optionsList: Array<BundleOptions>, r
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| optionsList | Array&lt;[BundleOptions](arkts-ability-bundleinfo-bundleoptions-i-sys.md)&gt; | Yes | 要查询的应用的参数列表。&lt;br/&gt;其中bundleName、moduleName、abilityName为必传参数。&lt;br/&gt; appIndex取值范围：[0, 5]，不传时默认为0。&lt;br/&gt;userId为无效参数，无需传入，传入不生效。 |
-| resourceFlags | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | 指定返回的LauncherAbilityResourceInfo所包含的信息，取值为 [ResourceFlag](arkts-ability-bundleresourcemanager-resourceflag-e-sys.md)枚举值，不支持取值 [ResourceFlag](arkts-ability-bundleresourcemanager-resourceflag-e-sys.md).GET_RESOURCE_INFO_WITH_SORTED_BY_LABEL和 [ResourceFlag](arkts-ability-bundleresourcemanager-resourceflag-e-sys.md).GET_RESOURCE_INFO_ONLY_WITH_MAIN_ABILITY。 |
+| optionsList | Array&lt;[BundleOptions](arkts-ability-bundleinfo-bundleoptions-i-sys.md)&gt; | Yes | Parameters of the applications to query.&lt;br&gt;**bundleName**, **moduleName**, and **abilityName** are mandatory parameters.&lt;br&gt;Value range of **appIndex**: [0, 5]. The default value is **0** if not specified.&lt;br&gt;**userId** is an invalid parameter. It does not need to be passed, and will not take effect if passed. |
+| resourceFlags | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | Resource information flags, which indicate the type of resource information to obtain. The value is an enumerated value of [ResourceFlag](arkts-ability-bundleresourcemanager-resourceflag-e-sys.md), excluding [ResourceFlag](arkts-ability-bundleresourcemanager-resourceflag-e-sys.md).GET_RESOURCE_INFO_WITH_SORTED_BY_LABEL and [ResourceFlag](arkts-ability-bundleresourcemanager-resourceflag-e-sys.md).GET_RESOURCE_INFO_ONLY_WITH_MAIN_ABILITY. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;Array&lt;LauncherAbilityResourceInfo&gt;&gt; | Promise对象，返回指定应用列表的LauncherAbilityResourceInfo。 |
+| Promise&lt;Array&lt;LauncherAbilityResourceInfo&gt;&gt; | Promise used to return the launcher ability resource information of the specified application list. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 801 | Capability not supported. |
-| 17700061 | The specified app index is invalid. |
-| 201 | Permission denied. |
-| 202 | Permission denied. A non-system application is not allowed to call a system API. |
-| 17700002 | The specified module is not existed. |
-| 17700003 | The specified ability is not existed. |
-| 17700001 | The specified bundle is not found. |
+| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. |
+| [17700061](../errorcode-bundle.md#17700061-appindex-for-a-clone-is-invalid) | The specified app index is invalid. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission denied. A non-system application is not allowed to call a system API. |
+| [17700002](../errorcode-bundle.md#17700002-module-name-does-not-exist) | The specified module is not found. |
+| [17700003](../errorcode-bundle.md#17700003-ability-name-does-not-exist) | The specified ability is not found. |
+| [17700001](../errorcode-bundle.md#17700001-bundle-name-does-not-exist) | The specified bundle is not found. |
 
 ## Examples
 

@@ -14,6 +14,6 @@ The module defines a skill object. Such an object can be obtained through
 
 | Name | Description |
 | --- | --- |
-| [Skill](arkts-ability-skill-i.md) | skill标签对象。 |
-| [SkillUri](arkts-ability-skill-skilluri-i.md) | Want匹配的Uri集合。 |
+| [Skill](arkts-ability-skill-i.md) | The module defines a skill object. |
+| [SkillUri](arkts-ability-skill-skilluri-i.md) | Indicates the uris of the skill |
 

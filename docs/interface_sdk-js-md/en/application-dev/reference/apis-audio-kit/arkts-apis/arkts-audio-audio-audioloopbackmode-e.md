@@ -1,6 +1,6 @@
 # AudioLoopbackMode
 
-表示返听模式的枚举。
+Enumerates the audio loopback modes.
 
 **Since:** 20
 
@@ -16,7 +16,7 @@
 HARDWARE = 0
 ```
 
-表示硬件返听模式。
+Hardware loopback.
 
 **Since:** 20
 

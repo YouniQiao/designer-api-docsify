@@ -1,6 +1,6 @@
 # Buffer
 
-Buffer对象是处理二进制数据的缓冲区。
+The Buffer object is a method of handling buffers dedicated to binary data.
 
 **Since:** 9
 
@@ -28,7 +28,7 @@ compare(
     ): -1 | 0 | 1
 ```
 
-比较当前Buffer对象与目标Buffer对象，并返回Buffer在排序中的结果。
+Compares this **Buffer** object with another object.
 
 **Since:** 9
 
@@ -44,23 +44,23 @@ compare(
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| target | [Buffer](arkts-arkts-buffer-buffer-c.md) \| Uint8Array | Yes | 要比较的实例对象。 |
-| targetStart | number | No | target实例中开始的偏移量。默认值：0。 |
-| targetEnd | number | No | target实例中结束的偏移量（不包含结束位置）。默认值：目标对象的字节长度。 |
-| sourceStart | number | No | this实例中开始的偏移量。默认值：0。 |
-| sourceEnd | number | No | this实例中结束的偏移量（不包含结束位置）。默认值：当前对象的字节长度。 |
+| target | [Buffer](arkts-arkts-buffer-buffer-c.md) \| Uint8Array | Yes | Target **Buffer** object to compare. |
+| targetStart | number | No | Offset to the start of the data to compare in the target **Buffer** object. The default value is **0**. |
+| targetEnd | number | No | Offset to the end of the data to compare in the target **Buffer** object (not inclusive). The default value is the length of the target **Buffer** object. |
+| sourceStart | number | No | Offset to the start of the data to compare in this **Buffer** object. The default value is **0**. |
+| sourceEnd | number | No | Offset to the end of the data to compare in this **Buffer** object (not inclusive ). The default value is the length of this **Buffer** object. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| -1 | 比较结果。如果两个Buffer对象相同，则返回0；如果当前对象在排序时位于目标对象之后，则返回1； 如果当前对象在排序时位于目标对象之前，则返回-1。 |
+| -1 | Comparison result. The value **0** is returned if the two **Buffer** objects are the same ; **1** is returned if this object comes after the target object when sorted; **-1** is returned if this object comes before the target object when sorted. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 10200001 | The value of "[targetStart/targetEnd/sourceStart/sourceEnd]" is out of range. It must be >= 0 and <= [right range]. Received value is: [targetStart/targetEnd/sourceStart/sourceEnd] |
+| [10200001](../errorcode-utils.md#10200001-value-out-of-range) | The value of "[targetStart/targetEnd/sourceStart/sourceEnd]" is out of range. It must be >= 0 and <= [right range]. Received value is: [targetStart/targetEnd/sourceStart/sourceEnd] |
 
 ## Examples
 
@@ -90,7 +90,7 @@ compare(
     ): int
 ```
 
-比较当前Buffer对象与目标Buffer对象，并返回Buffer在排序中的结果。
+Compares buf with target and returns a number indicating whether buf comes before, after,or is the same as target in sort order. Comparison is based on the actual sequence of bytes in each Buffer.
 
 **Since:** 23
 
@@ -106,23 +106,23 @@ compare(
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| target | [Buffer](arkts-arkts-buffer-buffer-c.md) \| Uint8Array | Yes | 要比较的实例对象。 |
-| targetStart | int | No | `target`实例中开始的偏移量。默认值：0。 |
-| targetEnd | int | No | `target`实例中结束的偏移量（不包含结束位置）。默认值：目标对象的字节长度。 |
-| sourceStart | int | No | `this`实例中开始的偏移量。默认值：0。 |
-| sourceEnd | int | No | `this`实例中结束的偏移量（不包含结束位置）。默认值：当前对象的字节长度。 |
+| target | [Buffer](arkts-arkts-buffer-buffer-c.md) \| Uint8Array | Yes | The buffer to compare with this buffer |
+| targetStart | int | No | targetStart [targetStart = 0] The offset within target at which to begin comparison |
+| targetEnd | int | No | targetEnd [targetEnd = target.length] The offset within target at which to end comparison (not inclusive) |
+| sourceStart | int | No | sourceStart [sourceStart = 0] The offset within buf at which to begin comparison |
+| sourceEnd | int | No | sourceEnd [sourceEnd = buf.length] The offset within buf at which to end comparison (not inclusive) |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| int | 返回比较结果。-1：当前排列在目标前，0：当前与目标相同，1：当前排列在目标后。 |
+| int | number is returned if target is the same as buf |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 10200001 | The value of "[targetStart/targetEnd/sourceStart/sourceEnd]" is out of range. It must be >= 0 and <= [right range]. Received value is: [targetStart/targetEnd/sourceStart/sourceEnd] |
+| [10200001](../errorcode-utils.md#10200001-value-out-of-range) | The value of "[targetStart/targetEnd/sourceStart/sourceEnd]" is out of range. It must be >= 0 and <= [right range]. Received value is: [targetStart/targetEnd/sourceStart/sourceEnd] |
 
 ## copy
 
@@ -136,7 +136,7 @@ ArkTS-Sta:
 copy(target: Buffer | Uint8Array, targetStart?: int, sourceStart?: int, sourceEnd?: int): int
 ```
 
-将`this`实例中指定位置的数据复制到`target`的指定位置上，并返回复制的字节总长度。
+Copies data at the specified position in this **Buffer** object to the specified position in another **Buffer**object.
 
 **Since:** 9
 
@@ -152,22 +152,22 @@ copy(target: Buffer | Uint8Array, targetStart?: int, sourceStart?: int, sourceEn
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| target | [Buffer](arkts-arkts-buffer-buffer-c.md) \| Uint8Array | Yes | 要复制到的Buffer或Uint8Array实例。 |
-| targetStart | ArkTS-Dyn: number  <br>ArkTS-Sta：int | No | `target`实例中开始写入的偏移量。默认值：0。 |
-| sourceStart | ArkTS-Dyn: number  <br>ArkTS-Sta：int | No | `this`实例中开始复制的偏移量。默认值: 0。 |
-| sourceEnd | ArkTS-Dyn: number  <br>ArkTS-Sta：int | No | `this`实例中结束复制的偏移量（不包含结束位置）。默认值：当前对象的字节长度。 |
+| target | [Buffer](arkts-arkts-buffer-buffer-c.md) \| Uint8Array | Yes | Buffer** or **Uint8Array** object to which data is copied. |
+| targetStart | ArkTS-Dyn: number  <br>ArkTS-Sta：int | No | Offset to the start position in the target object where data is copied. The default value is **0**. |
+| sourceStart | ArkTS-Dyn: number  <br>ArkTS-Sta：int | No | Offset to the start position in this **Buffer** object where data is copied. The default value is **0**. |
+| sourceEnd | ArkTS-Dyn: number  <br>ArkTS-Sta：int | No | Offset to the end position in this **Buffer** object (not inclusive). The default value is the length of this **Buffer** object. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| ArkTS-Dyn: number  <br>ArkTS-Sta：int | 复制的字节总长度。 |
+| ArkTS-Dyn: number  <br>ArkTS-Sta：int | Total length of the data copied, in bytes. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 10200001 | The value of "[targetStart/sourceStart/sourceEnd]" is out of range. It must be >= 0. Received value is: [targetStart/sourceStart/sourceEnd] |
+| [10200001](../errorcode-utils.md#10200001-value-out-of-range) | The value of "[targetStart/sourceStart/sourceEnd]" is out of range. It must be >= 0. Received value is: [targetStart/sourceStart/sourceEnd] |
 
 ## Examples
 
@@ -198,7 +198,7 @@ ArkTS-Sta:
 entries(): IterableIterator<[int, long]>
 ```
 
-返回一个包含key和value的迭代器。
+Creates and returns an iterator that contains key-value pairs of this **Buffer** object.
 
 **Since:** 9
 
@@ -214,7 +214,7 @@ entries(): IterableIterator<[int, long]>
 
 | Type | Description |
 | --- | --- |
-| [IterableIterator](arkts-arkts-iterator-iterableiterator-i.md)&lt;[number, number]&gt; | 包含key和value的迭代器，同时两者皆为number类型。<br>**Applicable version:** 9 - 10 |
+| [IterableIterator](arkts-arkts-iterator-iterableiterator-i.md)&lt;[number, number]&gt; | Iterator that contains the key and value, both of which are of the number type.<br>**Applicable version:** 9 - 10 |
 | ArkTS-Dyn: [IterableIterator](arkts-arkts-iterator-iterableiterator-i.md)&lt;[number, number]&gt;  <br>ArkTS-Sta：[IterableIterator](arkts-arkts-iterator-iterableiterator-i.md)&lt;[int, long]&gt; | <br>**Applicable version:** 11 and later |
 
 ## Examples
@@ -234,7 +234,7 @@ while (!next.done) {
            buffer: 3,102
            buffer: 4,101
            buffer: 5,114
-   */
+  */
   next = pair.next();
 }
 ```
@@ -245,7 +245,7 @@ while (!next.done) {
 equals(otherBuffer: Uint8Array | Buffer): boolean
 ```
 
-比较`this`实例和otherBuffer实例是否相等。
+Checks whether this **Buffer** object is the same as another **Buffer** object.
 
 **Since:** 9
 
@@ -261,13 +261,13 @@ equals(otherBuffer: Uint8Array | Buffer): boolean
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| otherBuffer | Uint8Array \| Buffer | Yes | 比较的目标对象。 |
+| otherBuffer | Uint8Array \| Buffer | Yes | Buffer** object to compare. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| boolean | 相等则返回true，否则返回false。 |
+| boolean | Check result. The value **true** is returned if the two objects are the same; otherwise, **false** is returned. |
 
 ## Examples
 
@@ -306,7 +306,7 @@ fill(
     ): Buffer
 ```
 
-使用value填充当前对象指定位置的数据，默认为循环填充，并返回填充后的Buffer对象。
+Fills this **Buffer** object at the specified position. By default, data is filled cyclically.
 
 **Since:** 9
 
@@ -322,22 +322,22 @@ fill(
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | ArkTS-Dyn: string \| Buffer \| Uint8Array \| number \| number \| number  <br>ArkTS-Sta：string \| Buffer \| Uint8Array \| int \| double \| long | Yes | 用于填充的值。<br>**Since:** 11 |
-| offset | ArkTS-Dyn: number  <br>ArkTS-Sta：int | No | 起始偏移量。默认值：0。 |
-| end | ArkTS-Dyn: number  <br>ArkTS-Sta：int | No | 结束偏移量（不包含结束位置）。默认值：当前对象的字节长度。 |
-| encoding | [BufferEncoding](arkts-arkts-fastbuffer-bufferencoding-t.md) | No | 字符编码格式（value为string才有意义）。默认值：'utf8'。 |
+| value | ArkTS-Dyn: string \| Buffer \| Uint8Array \| number \| number \| number  <br>ArkTS-Sta：string \| Buffer \| Uint8Array \| int \| double \| long | Yes | Value to fill.<br>**Since:** 11 |
+| offset | ArkTS-Dyn: number  <br>ArkTS-Sta：int | No | Offset to the start position in this **Buffer** object where data is filled. The default value is **0**. |
+| end | ArkTS-Dyn: number  <br>ArkTS-Sta：int | No | Offset to the end position in this **Buffer** object (not inclusive). The default value is the length of this **Buffer** object. |
+| encoding | [BufferEncoding](arkts-arkts-fastbuffer-bufferencoding-t.md) | No | Encoding format (valid only when **value** is a string). The default value is **'utf8'**. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [Buffer](arkts-arkts-buffer-buffer-c.md) | 返回填充后的Buffer对象。 |
+| [Buffer](arkts-arkts-buffer-buffer-c.md) | Buffer** object filled with the specified value. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 10200001 | The value of "[offset/end]" is out of range. It must be >= 0 and <= [right range]. Received value is: [offset/end] |
+| [10200001](../errorcode-utils.md#10200001-value-out-of-range) | The value of "[offset/end]" is out of range. It must be >= 0 and <= [right range]. Received value is: [offset/end] |
 
 ## includes
 
@@ -351,7 +351,7 @@ ArkTS-Sta:
 includes(value: string | int | double | long | Buffer | Uint8Array, byteOffset?: int, encoding?: BufferEncoding): boolean
 ```
 
-检查Buffer对象是否包含value值。
+Checks whether this **Buffer** object contains the specified value.
 
 **Since:** 9
 
@@ -367,15 +367,15 @@ includes(value: string | int | double | long | Buffer | Uint8Array, byteOffset?:
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | ArkTS-Dyn: string \| number \| number \| number \| Buffer \| Uint8Array  <br>ArkTS-Sta：string \| int \| double \| long \| Buffer \| Uint8Array | Yes | 要搜索的内容。<br>**Since:** 11 |
-| byteOffset | ArkTS-Dyn: number  <br>ArkTS-Sta：int | No | 字节偏移量。如果为负数，则从末尾开始计算偏移量。默认值：0。 |
-| encoding | [BufferEncoding](arkts-arkts-fastbuffer-bufferencoding-t.md) | No | 字符编码格式（value为string才有意义）。默认值：'utf8'。 |
+| value | ArkTS-Dyn: string \| number \| number \| number \| Buffer \| Uint8Array  <br>ArkTS-Sta：string \| int \| double \| long \| Buffer \| Uint8Array | Yes | Value to match.<br>**Since:** 11 |
+| byteOffset | ArkTS-Dyn: number  <br>ArkTS-Sta：int | No | Number of bytes to skip before starting to check data. If the offset is a negative number, data is checked from the end of the **Buffer** object. The default value is **0**. |
+| encoding | [BufferEncoding](arkts-arkts-fastbuffer-bufferencoding-t.md) | No | Encoding format (valid only when **value** is a string). The default value is **'utf8'**. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| boolean | 存在返回true，否则返回false。 |
+| boolean | Check result. The value **true** is returned if the object contains the specified value; otherwise, **false** is returned. |
 
 ## indexOf
 
@@ -389,7 +389,8 @@ ArkTS-Sta:
 indexOf(value: string | int | double | long | Buffer | Uint8Array, byteOffset?: int, encoding?: BufferEncoding): int
 ```
 
-返回当前对象中首次出现value的索引，如果不包含value，则返回-1。
+Obtains the index of the first occurrence of the specified value in this **Buffer** object. If no match is found,  
+**-1** is returned.
 
 **Since:** 9
 
@@ -405,15 +406,15 @@ indexOf(value: string | int | double | long | Buffer | Uint8Array, byteOffset?: 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | ArkTS-Dyn: string \| number \| number \| number \| Buffer \| Uint8Array  <br>ArkTS-Sta：string \| int \| double \| long \| Buffer \| Uint8Array | Yes | 要查找的内容。<br>**Since:** 11 |
-| byteOffset | ArkTS-Dyn: number  <br>ArkTS-Sta：int | No | 字节偏移量。如果为负数，则从末尾开始计算偏移量。默认值：0。 |
-| encoding | [BufferEncoding](arkts-arkts-fastbuffer-bufferencoding-t.md) | No | 字符编码格式（value为string才有意义）。默认值：'utf8'。 |
+| value | ArkTS-Dyn: string \| number \| number \| number \| Buffer \| Uint8Array  <br>ArkTS-Sta：string \| int \| double \| long \| Buffer \| Uint8Array | Yes | Value to match.<br>**Since:** 11 |
+| byteOffset | ArkTS-Dyn: number  <br>ArkTS-Sta：int | No | Number of bytes to skip before starting to check data. If the offset is a negative number, data is checked from the end of the **Buffer** object. The default value is **0**. |
+| encoding | [BufferEncoding](arkts-arkts-fastbuffer-bufferencoding-t.md) | No | Encoding format (valid only when **value** is a string). The default value is **'utf8'**. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| ArkTS-Dyn: number  <br>ArkTS-Sta：int | 第一次出现位置。 |
+| ArkTS-Dyn: number  <br>ArkTS-Sta：int | Index obtained. |
 
 ## keys
 
@@ -427,7 +428,7 @@ ArkTS-Sta:
 keys(): IterableIterator<int>
 ```
 
-返回包含key值的迭代器。
+Creates and returns an iterator that contains the keys of this **Buffer** object.
 
 **Since:** 9
 
@@ -443,7 +444,7 @@ keys(): IterableIterator<int>
 
 | Type | Description |
 | --- | --- |
-| ArkTS-Dyn: [IterableIterator](arkts-arkts-iterator-iterableiterator-i.md)&lt;number&gt;  <br>ArkTS-Sta：[IterableIterator](arkts-arkts-iterator-iterableiterator-i.md)&lt;int&gt; | 返回一个包含key值的迭代器。 |
+| ArkTS-Dyn: [IterableIterator](arkts-arkts-iterator-iterableiterator-i.md)&lt;number&gt;  <br>ArkTS-Sta：[IterableIterator](arkts-arkts-iterator-iterableiterator-i.md)&lt;int&gt; | Iterator created. |
 
 ## Examples
 
@@ -462,7 +463,7 @@ Output: 0
         3
         4
         5
- */
+*/
 ```
 
 ## lastIndexOf
@@ -477,7 +478,8 @@ ArkTS-Sta:
 lastIndexOf(value: string | int | double | long | Buffer | Uint8Array, byteOffset?: int, encoding?: BufferEncoding): int
 ```
 
-返回this实例中最后一次出现value的索引，如果对象不包含value，则返回-1。
+Obtains the index of the last occurrence of the specified value in this **Buffer** object. If no match is found,  
+**-1** is returned.
 
 **Since:** 9
 
@@ -493,15 +495,15 @@ lastIndexOf(value: string | int | double | long | Buffer | Uint8Array, byteOffse
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | ArkTS-Dyn: string \| number \| number \| number \| Buffer \| Uint8Array  <br>ArkTS-Sta：string \| int \| double \| long \| Buffer \| Uint8Array | Yes | 要搜索的内容。<br>**Since:** 11 |
-| byteOffset | ArkTS-Dyn: number  <br>ArkTS-Sta：int | No | 字节偏移量。如果为负数，则从末尾开始计算偏移量。默认值：Buffer.length。 |
-| encoding | [BufferEncoding](arkts-arkts-fastbuffer-bufferencoding-t.md) | No | 字符编码格式（value为string才有意义）。默认值：'utf8'。 |
+| value | ArkTS-Dyn: string \| number \| number \| number \| Buffer \| Uint8Array  <br>ArkTS-Sta：string \| int \| double \| long \| Buffer \| Uint8Array | Yes | Value to match.<br>**Since:** 11 |
+| byteOffset | ArkTS-Dyn: number  <br>ArkTS-Sta：int | No | Number of bytes to skip before starting to check data. If the offset is a negative number, data is checked from the end of the **Buffer** object. The default value is the length of this **Buffer** object. |
+| encoding | [BufferEncoding](arkts-arkts-fastbuffer-bufferencoding-t.md) | No | Encoding format (valid only when **value** is a string). The default value is **'utf8'**. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| ArkTS-Dyn: number  <br>ArkTS-Sta：int | 最后一次出现value值的索引。 |
+| ArkTS-Dyn: number  <br>ArkTS-Sta：int | Index obtained. |
 
 ## readBigInt64BE
 
@@ -515,7 +517,7 @@ ArkTS-Sta:
 readBigInt64BE(offset?: int): bigint
 ```
 
-从指定的`offset`处读取有符号的大端序64位整数。
+Reads a 64-bit, big-endian, signed big integer from this **Buffer** object at the specified offset.
 
 **Since:** 9
 
@@ -531,19 +533,19 @@ readBigInt64BE(offset?: int): bigint
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| offset | ArkTS-Dyn: number  <br>ArkTS-Sta：int | No | 偏移量。默认值：0。取值范围：0 <= offset <= Buffer.length - 8。 |
+| offset | ArkTS-Dyn: number  <br>ArkTS-Sta：int | No | Offset. The default value is **0**. Value range: 0 <= offset <= Buffer.length - 8 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| bigint | 读取出的内容。 |
+| bigint | Data read. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 10200001 | The value of "offset" is out of range. It must be >= 0 and <= buf.length - 8 . Received value is: [offset] |
+| [10200001](../errorcode-utils.md#10200001-value-out-of-range) | The value of "offset" is out of range. It must be >= 0 and <= buf.length - 8 . Received value is: [offset] |
 
 ## Examples
 
@@ -573,7 +575,7 @@ ArkTS-Sta:
 readBigInt64LE(offset?: int): bigint
 ```
 
-从指定的`offset`处读取有符号的小端序64位整数。
+Reads a 64-bit, little-endian, signed big integer from this **Buffer** object at the specified offset.
 
 **Since:** 9
 
@@ -589,19 +591,19 @@ readBigInt64LE(offset?: int): bigint
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| offset | ArkTS-Dyn: number  <br>ArkTS-Sta：int | No | 偏移量。取值范围：0 <= offset <= Buffer.length - 8，默认值：0。 |
+| offset | ArkTS-Dyn: number  <br>ArkTS-Sta：int | No | Offset. The default value is **0**. Value range: 0 <= offset <= Buffer.length - 8 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| bigint | 读取出的内容。 |
+| bigint | Data read. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 10200001 | The value of "offset" is out of range. It must be >= 0 and <= buf.length - 8 . Received value is: [offset] |
+| [10200001](../errorcode-utils.md#10200001-value-out-of-range) | The value of "offset" is out of range. It must be >= 0 and <= buf.length - 8 . Received value is: [offset] |
 
 ## Examples
 
@@ -631,7 +633,7 @@ ArkTS-Sta:
 readBigUInt64BE(offset?: int): bigint
 ```
 
-从指定的`offset`处读取无符号的大端序64位整数。
+Reads a 64-bit, big-endian, unsigned big integer from this **Buffer** object at the specified offset.
 
 **Since:** 9
 
@@ -647,19 +649,19 @@ readBigUInt64BE(offset?: int): bigint
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| offset | ArkTS-Dyn: number  <br>ArkTS-Sta：int | No | 偏移量。取值范围：0 <= offset <= Buffer.length - 8，默认值：0。 |
+| offset | ArkTS-Dyn: number  <br>ArkTS-Sta：int | No | Offset. The default value is **0**. Value range: 0 <= offset <= Buffer.length - 8 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| bigint | 读取出的内容。 |
+| bigint | Data read. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 10200001 | The value of "offset" is out of range. It must be >= 0 and <= buf.length - 8 . Received value is: [offset] |
+| [10200001](../errorcode-utils.md#10200001-value-out-of-range) | The value of "offset" is out of range. It must be >= 0 and <= buf.length - 8 . Received value is: [offset] |
 
 ## Examples
 
@@ -688,7 +690,7 @@ ArkTS-Sta:
 readBigUInt64LE(offset?: int): bigint
 ```
 
-从指定的`offset`处读取无符号的小端序64位整数。
+Reads a 64-bit, little-endian, unsigned big integer from this **Buffer** object at the specified offset.
 
 **Since:** 9
 
@@ -704,19 +706,19 @@ readBigUInt64LE(offset?: int): bigint
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| offset | ArkTS-Dyn: number  <br>ArkTS-Sta：int | No | 偏移量。取值范围：0 <= offset <= Buffer.length - 8，默认值：0。 |
+| offset | ArkTS-Dyn: number  <br>ArkTS-Sta：int | No | Offset. The default value is **0**. Value range: 0 <= offset <= Buffer.length - 8 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| bigint | 读取出的内容。 |
+| bigint | Data read. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 10200001 | The value of "offset" is out of range. It must be >= 0 and <= buf.length - 8 . Received value is: [offset] |
+| [10200001](../errorcode-utils.md#10200001-value-out-of-range) | The value of "offset" is out of range. It must be >= 0 and <= buf.length - 8 . Received value is: [offset] |
 
 ## Examples
 
@@ -746,7 +748,7 @@ ArkTS-Sta:
 readDoubleBE(offset?: int): double
 ```
 
-从指定的`offset`处读取64位大端序双精度值。
+Reads a 64-bit, big-endian, double-precision floating-point number from this **Buffer** object at the specified offset.
 
 **Since:** 9
 
@@ -762,19 +764,19 @@ readDoubleBE(offset?: int): double
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| offset | ArkTS-Dyn: number  <br>ArkTS-Sta：int | No | 偏移量。取值范围：0 <= offset <= Buffer.length - 8，默认值：0。 |
+| offset | ArkTS-Dyn: number  <br>ArkTS-Sta：int | No | Offset. The default value is **0**. Value range: 0 <= offset <= Buffer.length - 8 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| ArkTS-Dyn: number  <br>ArkTS-Sta：double | 读取出的内容。 |
+| ArkTS-Dyn: number  <br>ArkTS-Sta：double | Data read. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 10200001 | The value of "offset" is out of range. It must be >= 0 and <= buf.length - 8 . Received value is: [offset] |
+| [10200001](../errorcode-utils.md#10200001-value-out-of-range) | The value of "offset" is out of range. It must be >= 0 and <= buf.length - 8 . Received value is: [offset] |
 
 ## Examples
 
@@ -802,7 +804,7 @@ ArkTS-Sta:
 readDoubleLE(offset?: int): double
 ```
 
-从指定的`offset`处读取64位小端序双精度值。
+Reads a 64-bit, little-endian, double-precision floating-point number from this **Buffer** object at the specified offset.
 
 **Since:** 9
 
@@ -818,19 +820,19 @@ readDoubleLE(offset?: int): double
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| offset | ArkTS-Dyn: number  <br>ArkTS-Sta：int | No | 偏移量。取值范围：0 <= offset <= Buffer.length - 8，默认值：0。 |
+| offset | ArkTS-Dyn: number  <br>ArkTS-Sta：int | No | Offset. The default value is **0**. Value range: 0 <= offset <= Buffer.length - 8 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| ArkTS-Dyn: number  <br>ArkTS-Sta：double | 读取出的内容。 |
+| ArkTS-Dyn: number  <br>ArkTS-Sta：double | Data read. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 10200001 | The value of "offset" is out of range. It must be >= 0 and <= buf.length - 8 . Received value is: [offset] |
+| [10200001](../errorcode-utils.md#10200001-value-out-of-range) | The value of "offset" is out of range. It must be >= 0 and <= buf.length - 8 . Received value is: [offset] |
 
 ## Examples
 
@@ -858,7 +860,7 @@ ArkTS-Sta:
 readFloatBE(offset?: int): double
 ```
 
-从指定的`offset`处读取32位大端序浮点数。
+Reads a 32-bit, big-endian, single-precision floating-point number from this **Buffer** object at the specified offset.
 
 **Since:** 9
 
@@ -874,19 +876,19 @@ readFloatBE(offset?: int): double
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| offset | ArkTS-Dyn: number  <br>ArkTS-Sta：int | No | 偏移量。取值范围：0 <= offset <= Buffer.length - 4，默认值：0。 |
+| offset | ArkTS-Dyn: number  <br>ArkTS-Sta：int | No | Offset. The default value is **0**. Value range: 0 <= offset <= Buffer.length - 4 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| ArkTS-Dyn: number  <br>ArkTS-Sta：double | 读取出的内容。 |
+| ArkTS-Dyn: number  <br>ArkTS-Sta：double | Data read. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 10200001 | The value of "offset" is out of range. It must be >= 0 and <= buf.length - 4 . Received value is: [offset] |
+| [10200001](../errorcode-utils.md#10200001-value-out-of-range) | The value of "offset" is out of range. It must be >= 0 and <= buf.length - 4 . Received value is: [offset] |
 
 ## Examples
 
@@ -914,7 +916,7 @@ ArkTS-Sta:
 readFloatLE(offset?: int): double
 ```
 
-从指定的`offset`处读取32位小端序浮点数。
+Reads a 32-bit, little-endian, single-precision floating-point number from this **Buffer** object at the specified offset.
 
 **Since:** 9
 
@@ -930,19 +932,19 @@ readFloatLE(offset?: int): double
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| offset | ArkTS-Dyn: number  <br>ArkTS-Sta：int | No | 偏移量。取值范围：0 <= offset <= Buffer.length - 4，默认值：0。 |
+| offset | ArkTS-Dyn: number  <br>ArkTS-Sta：int | No | Offset. The default value is **0**. Value range: 0 <= offset <= Buffer.length - 4 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| ArkTS-Dyn: number  <br>ArkTS-Sta：double | 读取出的内容。 |
+| ArkTS-Dyn: number  <br>ArkTS-Sta：double | Data read. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 10200001 | The value of "offset" is out of range. It must be >= 0 and <= buf.length - 4 . Received value is: [offset] |
+| [10200001](../errorcode-utils.md#10200001-value-out-of-range) | The value of "offset" is out of range. It must be >= 0 and <= buf.length - 4 . Received value is: [offset] |
 
 ## Examples
 
@@ -970,7 +972,7 @@ ArkTS-Sta:
 readInt16BE(offset?: int): long
 ```
 
-从指定的`offset`处读取有符号的大端序16位整数。
+Reads a 16-bit, big-endian, signed integer from this **Buffer** object at the specified offset.
 
 **Since:** 9
 
@@ -986,19 +988,19 @@ readInt16BE(offset?: int): long
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| offset | ArkTS-Dyn: number  <br>ArkTS-Sta：int | No | 偏移量。取值范围：0 <= offset <= Buffer.length - 2，默认值：0。 |
+| offset | ArkTS-Dyn: number  <br>ArkTS-Sta：int | No | Offset. The default value is **0**. Value range: 0 <= offset <= Buffer.length - 2 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| ArkTS-Dyn: number  <br>ArkTS-Sta：long | 读取出的内容。 |
+| ArkTS-Dyn: number  <br>ArkTS-Sta：long | Data read. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 10200001 | The value of "offset" is out of range. It must be >= 0 and <= buf.length - 2 . Received value is: [offset] |
+| [10200001](../errorcode-utils.md#10200001-value-out-of-range) | The value of "offset" is out of range. It must be >= 0 and <= buf.length - 2 . Received value is: [offset] |
 
 ## Examples
 
@@ -1026,7 +1028,7 @@ ArkTS-Sta:
 readInt16LE(offset?: int): long
 ```
 
-从指定的`offset`处读取有符号的小端序16位整数。
+Reads a 16-bit, little-endian, signed integer from this **Buffer** object at the specified offset.
 
 **Since:** 9
 
@@ -1042,19 +1044,19 @@ readInt16LE(offset?: int): long
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| offset | ArkTS-Dyn: number  <br>ArkTS-Sta：int | No | 偏移量。取值范围：0 <= offset <= Buffer.length - 2，默认值：0。 |
+| offset | ArkTS-Dyn: number  <br>ArkTS-Sta：int | No | Offset. The default value is **0**. Value range: 0 <= offset <= Buffer.length - 2 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| ArkTS-Dyn: number  <br>ArkTS-Sta：long | 读取出的内容。 |
+| ArkTS-Dyn: number  <br>ArkTS-Sta：long | Data read. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 10200001 | The value of "offset" is out of range. It must be >= 0 and <= buf.length - 2 . Received value is: [offset] |
+| [10200001](../errorcode-utils.md#10200001-value-out-of-range) | The value of "offset" is out of range. It must be >= 0 and <= buf.length - 2 . Received value is: [offset] |
 
 ## Examples
 
@@ -1082,7 +1084,7 @@ ArkTS-Sta:
 readInt32BE(offset?: int): long
 ```
 
-从指定的`offset`处读取有符号的大端序32位整数。
+Reads a 32-bit, big-endian, signed integer from this **Buffer** object at the specified offset.
 
 **Since:** 9
 
@@ -1098,19 +1100,19 @@ readInt32BE(offset?: int): long
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| offset | ArkTS-Dyn: number  <br>ArkTS-Sta：int | No | 偏移量。取值范围：0 <= offset <= Buffer.length - 4，默认值：0。 |
+| offset | ArkTS-Dyn: number  <br>ArkTS-Sta：int | No | Offset. The default value is **0**. Value range: 0 <= offset <= Buffer.length - 4 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| ArkTS-Dyn: number  <br>ArkTS-Sta：long | 读取出的内容。 |
+| ArkTS-Dyn: number  <br>ArkTS-Sta：long | Data read. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 10200001 | The value of "offset" is out of range. It must be >= 0 and <= buf.length - 4 . Received value is: [offset] |
+| [10200001](../errorcode-utils.md#10200001-value-out-of-range) | The value of "offset" is out of range. It must be >= 0 and <= buf.length - 4 . Received value is: [offset] |
 
 ## Examples
 
@@ -1138,7 +1140,7 @@ ArkTS-Sta:
 readInt32LE(offset?: int): long
 ```
 
-从指定的`offset`处读取有符号的小端序32位整数。
+Reads a 32-bit, little-endian, signed integer from this **Buffer** object at the specified offset.
 
 **Since:** 9
 
@@ -1154,19 +1156,19 @@ readInt32LE(offset?: int): long
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| offset | ArkTS-Dyn: number  <br>ArkTS-Sta：int | No | 偏移量。取值范围：0 <= offset <= Buffer.length - 4，默认值：0。 |
+| offset | ArkTS-Dyn: number  <br>ArkTS-Sta：int | No | Offset. The default value is **0**. Value range: 0 <= offset <= Buffer.length - 4 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| ArkTS-Dyn: number  <br>ArkTS-Sta：long | 读取出的内容。 |
+| ArkTS-Dyn: number  <br>ArkTS-Sta：long | Data read. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 10200001 | The value of "offset" is out of range. It must be >= 0 and <= buf.length - 4 . Received value is: [offset] |
+| [10200001](../errorcode-utils.md#10200001-value-out-of-range) | The value of "offset" is out of range. It must be >= 0 and <= buf.length - 4 . Received value is: [offset] |
 
 ## Examples
 
@@ -1194,7 +1196,7 @@ ArkTS-Sta:
 readInt8(offset?: int): long
 ```
 
-从指定的`offset`处读取有符号的8位整数。
+Reads an 8-bit signed integer from this **Buffer** object at the specified offset.
 
 **Since:** 9
 
@@ -1210,19 +1212,19 @@ readInt8(offset?: int): long
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| offset | ArkTS-Dyn: number  <br>ArkTS-Sta：int | No | 偏移量。取值范围：0 <= offset <= Buffer.length - 1，默认值：0。 |
+| offset | ArkTS-Dyn: number  <br>ArkTS-Sta：int | No | Offset. The default value is **0**. Value range: 0 <= offset <= Buffer.length - 1 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| ArkTS-Dyn: number  <br>ArkTS-Sta：long | 读取出的内容。 |
+| ArkTS-Dyn: number  <br>ArkTS-Sta：long | Data read. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 10200001 | The value of "offset" is out of range. It must be >= 0 and <= buf.length - 1 . Received value is: [offset] |
+| [10200001](../errorcode-utils.md#10200001-value-out-of-range) | The value of "offset" is out of range. It must be >= 0 and <= buf.length - 1 . Received value is: [offset] |
 
 ## Examples
 
@@ -1252,7 +1254,7 @@ ArkTS-Sta:
 readIntBE(offset: int, byteLength: int): long
 ```
 
-从指定的`offset`处读取byteLength个字节，并将结果解释为支持最高48位精度的大端序、二进制补码有符号值。
+Reads the specified number of bytes from this **Buffer** object at the specified offset, and interprets the result as a big-endian, two's complement signed value that supports up to 48 bits of precision.
 
 **Since:** 9
 
@@ -1268,20 +1270,20 @@ readIntBE(offset: int, byteLength: int): long
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| offset | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | 偏移量。取值范围：0 <= offset <= Buffer.length - byteLength，默认值：0。 |
-| byteLength | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | 读取的字节数。取值范围：1 <= byteLength <= 6。 |
+| offset | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | Offset. The default value is **0**. Value range: 0 <= offset <= Buffer.length - byteLength |
+| byteLength | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | Number of bytes to read. Value range: 1 <= byteLength <= 6 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| ArkTS-Dyn: number  <br>ArkTS-Sta：long | 读取的内容。当offset为小数时，返回undefined。 |
+| ArkTS-Dyn: number  <br>ArkTS-Sta：long | Data read. If the offset is a decimal, undefined is returned. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 10200001 | The value of "[param]" is out of range. It must be >= [left range] and <= [right range]. Received value is: [param] |
+| [10200001](../errorcode-utils.md#10200001-value-out-of-range) | The value of "[param]" is out of range. It must be >= [left range] and <= [right range]. Received value is: [param] |
 
 ## Examples
 
@@ -1310,7 +1312,7 @@ ArkTS-Sta:
 readIntLE(offset: int, byteLength: int): long
 ```
 
-从指定的`offset`处读取`byteLength`个字节，并将结果解释为支持最高48位精度的小端序、二进制补码有符号值。
+Reads the specified number of bytes from this **Buffer** object at the specified offset and interprets the result as a little-endian, two's complement signed value that supports up to 48 bits of precision.
 
 **Since:** 9
 
@@ -1326,20 +1328,20 @@ readIntLE(offset: int, byteLength: int): long
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| offset | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | 偏移量。取值范围：0 <= offset <= Buffer.length - byteLength，默认值：0。 |
-| byteLength | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | 读取的字节数。取值范围：1 <= byteLength <= 6。 |
+| offset | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | Offset. The default value is **0**. Value range: 0 <= offset <= Buffer.length - byteLength |
+| byteLength | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | Number of bytes to read. Value range: 1 <= byteLength <= 6 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| ArkTS-Dyn: number  <br>ArkTS-Sta：long | 读取出的内容。当offset为小数时，返回undefined。 |
+| ArkTS-Dyn: number  <br>ArkTS-Sta：long | Data read. If the offset is a decimal, undefined is returned. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 10200001 | The value of "[param]" is out of range. It must be >= [left range] and <= [right range]. Received value is: [param] |
+| [10200001](../errorcode-utils.md#10200001-value-out-of-range) | The value of "[param]" is out of range. It must be >= [left range] and <= [right range]. Received value is: [param] |
 
 ## Examples
 
@@ -1367,7 +1369,7 @@ ArkTS-Sta:
 readUInt16BE(offset?: int): long
 ```
 
-从指定的`offset`处读取无符号的大端序16位整数。
+Reads a 16-bit, big-endian, unsigned integer from this **Buffer** object at the specified offset.
 
 **Since:** 9
 
@@ -1383,19 +1385,19 @@ readUInt16BE(offset?: int): long
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| offset | ArkTS-Dyn: number  <br>ArkTS-Sta：int | No | 偏移量。取值范围：0 <= offset <= Buffer.length - 2，默认值：0。 |
+| offset | ArkTS-Dyn: number  <br>ArkTS-Sta：int | No | Offset. The default value is **0**. Value range: 0 <= offset <= Buffer.length - 2 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| ArkTS-Dyn: number  <br>ArkTS-Sta：long | 读取出的内容。 |
+| ArkTS-Dyn: number  <br>ArkTS-Sta：long | Data read. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 10200001 | The value of "offset" is out of range. It must be >= 0 and <= buf.length - 2 . Received value is: [offset] |
+| [10200001](../errorcode-utils.md#10200001-value-out-of-range) | The value of "offset" is out of range. It must be >= 0 and <= buf.length - 2 . Received value is: [offset] |
 
 ## Examples
 
@@ -1425,7 +1427,7 @@ ArkTS-Sta:
 readUInt16LE(offset?: int): long
 ```
 
-从指定的`offset`处的buf读取无符号的小端序16位整数。
+Reads a 16-bit, little-endian, unsigned integer from this **Buffer** object at the specified offset.
 
 **Since:** 9
 
@@ -1441,19 +1443,19 @@ readUInt16LE(offset?: int): long
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| offset | ArkTS-Dyn: number  <br>ArkTS-Sta：int | No | 偏移量。取值范围：0 <= offset <= Buffer.length - 2，默认值：0。 |
+| offset | ArkTS-Dyn: number  <br>ArkTS-Sta：int | No | Offset. The default value is **0**. Value range: 0 <= offset <= Buffer.length - 2 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| ArkTS-Dyn: number  <br>ArkTS-Sta：long | 读取出的内容。 |
+| ArkTS-Dyn: number  <br>ArkTS-Sta：long | Data read. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 10200001 | The value of "offset" is out of range. It must be >= 0 and <= buf.length - 2 . Received value is: [offset] |
+| [10200001](../errorcode-utils.md#10200001-value-out-of-range) | The value of "offset" is out of range. It must be >= 0 and <= buf.length - 2 . Received value is: [offset] |
 
 ## Examples
 
@@ -1483,7 +1485,7 @@ ArkTS-Sta:
 readUInt32BE(offset?: int): long
 ```
 
-从指定的`offset`处的buf读取无符号的大端序32位整数。
+Reads a 32-bit, big-endian, unsigned integer from this **Buffer** object at the specified offset.
 
 **Since:** 9
 
@@ -1499,19 +1501,19 @@ readUInt32BE(offset?: int): long
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| offset | ArkTS-Dyn: number  <br>ArkTS-Sta：int | No | 偏移量。取值范围：0 <= offset <= Buffer.length - 4，默认值：0。 |
+| offset | ArkTS-Dyn: number  <br>ArkTS-Sta：int | No | Offset. The default value is **0**. Value range: 0 <= offset <= Buffer.length - 4 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| ArkTS-Dyn: number  <br>ArkTS-Sta：long | 读取出的内容。 |
+| ArkTS-Dyn: number  <br>ArkTS-Sta：long | Data read. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 10200001 | The value of "offset" is out of range. It must be >= 0 and <= buf.length - 4 . Received value is: [offset] |
+| [10200001](../errorcode-utils.md#10200001-value-out-of-range) | The value of "offset" is out of range. It must be >= 0 and <= buf.length - 4 . Received value is: [offset] |
 
 ## Examples
 
@@ -1539,7 +1541,7 @@ ArkTS-Sta:
 readUInt32LE(offset?: int): long
 ```
 
-从指定的`offset`处的buf读取无符号的小端序32位整数。
+Reads a 32-bit, little-endian, unsigned integer from this **Buffer** object at the specified offset.
 
 **Since:** 9
 
@@ -1555,19 +1557,19 @@ readUInt32LE(offset?: int): long
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| offset | ArkTS-Dyn: number  <br>ArkTS-Sta：int | No | 偏移量。取值范围：0 <= offset <= Buffer.length - 4，默认值：0。 |
+| offset | ArkTS-Dyn: number  <br>ArkTS-Sta：int | No | Offset. The default value is **0**. Value range: 0 <= offset <= Buffer.length - 4 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| ArkTS-Dyn: number  <br>ArkTS-Sta：long | 读取出的内容。 |
+| ArkTS-Dyn: number  <br>ArkTS-Sta：long | Data read. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 10200001 | The value of "offset" is out of range. It must be >= 0 and <= buf.length - 4 . Received value is: [offset] |
+| [10200001](../errorcode-utils.md#10200001-value-out-of-range) | The value of "offset" is out of range. It must be >= 0 and <= buf.length - 4 . Received value is: [offset] |
 
 ## Examples
 
@@ -1595,7 +1597,7 @@ ArkTS-Sta:
 readUInt8(offset?: int): long
 ```
 
-从`offset`处读取8位无符号整型数。
+Reads an 8-bit unsigned integer from this **Buffer** object at the specified offset.
 
 **Since:** 9
 
@@ -1611,19 +1613,19 @@ readUInt8(offset?: int): long
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| offset | ArkTS-Dyn: number  <br>ArkTS-Sta：int | No | 偏移量。取值范围：0 <= offset <= Buffer.length - 1，默认值：0。 |
+| offset | ArkTS-Dyn: number  <br>ArkTS-Sta：int | No | Offset. The default value is **0**. Value range: 0 <= offset <= Buffer.length - 1 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| ArkTS-Dyn: number  <br>ArkTS-Sta：long | 读取出的内容。 |
+| ArkTS-Dyn: number  <br>ArkTS-Sta：long | Data read. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 10200001 | The value of "offset" is out of range. It must be >= 0 and <= buf.length - 1 . Received value is: [offset] |
+| [10200001](../errorcode-utils.md#10200001-value-out-of-range) | The value of "offset" is out of range. It must be >= 0 and <= buf.length - 1 . Received value is: [offset] |
 
 ## Examples
 
@@ -1653,7 +1655,7 @@ ArkTS-Sta:
 readUIntBE(offset: int, byteLength: int): long
 ```
 
-从指定的`offset`处的buf读取`byteLength`个字节，并将结果解释为支持最高48位精度的无符号大端序整数。
+Reads the specified number of bytes from this **Buffer** object at the specified offset, and interprets the result as an unsigned, big-endian integer that supports up to 48 bits of precision.
 
 **Since:** 9
 
@@ -1669,20 +1671,20 @@ readUIntBE(offset: int, byteLength: int): long
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| offset | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | 偏移量。取值范围：0 <= offset <= Buffer.length - byteLength，默认值：0。 |
-| byteLength | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | 要读取的字节数。读取的字节数。取值范围：1 <= byteLength <= 6。 |
+| offset | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | Offset. The default value is **0**. Value range: 0 <= offset <= Buffer.length - byteLength |
+| byteLength | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | Number of bytes to read. Value range: 1 <= byteLength <= 6 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| ArkTS-Dyn: number  <br>ArkTS-Sta：long | 读取出的内容。当offset为小数时，返回undefined。 |
+| ArkTS-Dyn: number  <br>ArkTS-Sta：long | Data read. If the offset is a decimal, undefined is returned. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 10200001 | The value of "[param]" is out of range. It must be >= [left range] and <= [right range]. Received value is: [param] |
+| [10200001](../errorcode-utils.md#10200001-value-out-of-range) | The value of "[param]" is out of range. It must be >= [left range] and <= [right range]. Received value is: [param] |
 
 ## Examples
 
@@ -1710,7 +1712,7 @@ ArkTS-Sta:
 readUIntLE(offset: int, byteLength: int): long
 ```
 
-从指定的`offset`处的buf读取`byteLength`个字节，并将结果解释为支持最高48位精度的无符号小端序整数。
+Reads the specified number of bytes from this **Buffer** object at the specified offset, and interprets the result as an unsigned, little-endian integer that supports up to 48 bits of precision.
 
 **Since:** 9
 
@@ -1726,20 +1728,20 @@ readUIntLE(offset: int, byteLength: int): long
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| offset | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | 偏移量。取值范围：0 <= offset <= Buffer.length - byteLength，默认值：0。 |
-| byteLength | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | 读取的字节数。取值范围：1 <= byteLength <= 6。 |
+| offset | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | Offset. The default value is **0**. Value range: 0 <= offset <= Buffer.length - byteLength |
+| byteLength | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | Number of bytes to read. Value range: 1 <= byteLength <= 6 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| ArkTS-Dyn: number  <br>ArkTS-Sta：long | 读取出的内容。当offset为小数时，返回undefined。 |
+| ArkTS-Dyn: number  <br>ArkTS-Sta：long | Data read. If the offset is a decimal, undefined is returned. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 10200001 | The value of "[param]" is out of range. It must be >= [left range] and <= [right range]. Received value is: [param] |
+| [10200001](../errorcode-utils.md#10200001-value-out-of-range) | The value of "[param]" is out of range. It must be >= [left range] and <= [right range]. Received value is: [param] |
 
 ## Examples
 
@@ -1767,7 +1769,7 @@ ArkTS-Sta:
 subarray(start?: int, end?: int): Buffer
 ```
 
-截取当前对象指定位置的数据并返回。
+Truncates this **Buffer** object from the specified position to create a new **Buffer** object.
 
 **Since:** 9
 
@@ -1783,14 +1785,14 @@ subarray(start?: int, end?: int): Buffer
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| start | ArkTS-Dyn: number  <br>ArkTS-Sta：int | No | 截取开始位置。默认值：0。 |
-| end | ArkTS-Dyn: number  <br>ArkTS-Sta：int | No | 截取结束位置（不包含结束位置）。默认值：当前对象的字节长度。在传入null时返回空Buffer。 |
+| start | ArkTS-Dyn: number  <br>ArkTS-Sta：int | No | Offset to the start position in this **Buffer** object where data is truncated. The default value is **0**. |
+| end | ArkTS-Dyn: number  <br>ArkTS-Sta：int | No | Offset to the end position in this **Buffer** object (not inclusive). The default value is the length of this **Buffer** object. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [Buffer](arkts-arkts-buffer-buffer-c.md) | 返回新的Buffer对象。当start < 0或end < 0时返回空Buffer。 |
+| [Buffer](arkts-arkts-buffer-buffer-c.md) | Buffer** object created. When the value of **start** or **end** is less than **0**, an empty buffer is returned. |
 
 ## Examples
 
@@ -1813,7 +1815,7 @@ console.info(buf2.toString('ascii', 0, buf2.length));
 swap16(): Buffer
 ```
 
-将当前对象转换为无符号的16位整数数组，并交换字节顺序。
+Converts this **Buffer** object into an array of unsigned 16-bit integers and swaps the byte order in place.
 
 **Since:** 9
 
@@ -1829,13 +1831,13 @@ swap16(): Buffer
 
 | Type | Description |
 | --- | --- |
-| [Buffer](arkts-arkts-buffer-buffer-c.md) | 交换之后的Buffer对象。 |
+| [Buffer](arkts-arkts-buffer-buffer-c.md) | Buffer** object swapped. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 10200009 | The buffer size must be a multiple of 16-bits |
+| [10200009](../errorcode-utils.md#10200009-buffer-size-error) | The buffer size must be a multiple of 16-bits |
 
 ## Examples
 
@@ -1856,7 +1858,7 @@ console.info(buf1.toString('hex'));
 swap32(): Buffer
 ```
 
-将当前对象转换为无符号的32位整数数组，并交换字节顺序。
+Converts this **Buffer** object into an array of unsigned 32-bit integers and swaps the byte order in place.
 
 **Since:** 9
 
@@ -1872,13 +1874,13 @@ swap32(): Buffer
 
 | Type | Description |
 | --- | --- |
-| [Buffer](arkts-arkts-buffer-buffer-c.md) | 交换之后的Buffer对象。 |
+| [Buffer](arkts-arkts-buffer-buffer-c.md) | Buffer** object swapped. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 10200009 | The buffer size must be a multiple of 32-bits |
+| [10200009](../errorcode-utils.md#10200009-buffer-size-error) | The buffer size must be a multiple of 32-bits |
 
 ## Examples
 
@@ -1899,7 +1901,7 @@ console.info(buf1.toString('hex'));
 swap64(): Buffer
 ```
 
-将当前对象转换为无符号的64位整数数组，并交换字节顺序。
+Converts this **Buffer** object into an array of unsigned 64-bit integers and swaps the byte order in place.
 
 **Since:** 9
 
@@ -1915,13 +1917,13 @@ swap64(): Buffer
 
 | Type | Description |
 | --- | --- |
-| [Buffer](arkts-arkts-buffer-buffer-c.md) | 交换之后的Buffer对象。 |
+| [Buffer](arkts-arkts-buffer-buffer-c.md) | Buffer** object swapped. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 10200009 | The buffer size must be a multiple of 64-bits |
+| [10200009](../errorcode-utils.md#10200009-buffer-size-error) | The buffer size must be a multiple of 64-bits |
 
 ## Examples
 
@@ -1942,7 +1944,7 @@ console.info(buf1.toString('hex'));
 toJSON(): Object
 ```
 
-将Buffer转为JSON并返回。
+Converts this **Buffer** object into a JSON object.
 
 **Since:** 9
 
@@ -1958,7 +1960,7 @@ toJSON(): Object
 
 | Type | Description |
 | --- | --- |
-| Object | JSON对象。 |
+| Object | JSON object. |
 
 ## Examples
 
@@ -1977,7 +1979,7 @@ console.info(JSON.stringify(obj));
 toJSON(): jsonx.JsonElement
 ```
 
-将此Buffer实例转换为JsonElement。
+Converts this Buffer instance into a JsonElement.
 
 **Since:** 23
 
@@ -1993,7 +1995,7 @@ toJSON(): jsonx.JsonElement
 
 | Type | Description |
 | --- | --- |
-| jsonx.JsonElement | 新的JsonElement对象，包含此Buffer的内容。 |
+| jsonx.JsonElement | A new JsonElement containing the Buffer |
 
 ## toString
 
@@ -2001,7 +2003,7 @@ toJSON(): jsonx.JsonElement
 toString(encoding?: string, start?: number, end?: number): string
 ```
 
-将当前对象中指定位置的数据转成指定编码格式的字符串并返回。
+Converts the data at the specified position in this **Buffer** object into a string in the specified encoding format.
 
 **Since:** 9
 
@@ -2017,15 +2019,15 @@ toString(encoding?: string, start?: number, end?: number): string
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| encoding | string | No | 字符编码格式。默认值：'utf8'。 |
-| start | number | No | 开始位置。默认值：0。 |
-| end | number | No | 结束位置。默认值：Buffer.length。 |
+| encoding | string | No | Encoding format (valid only when **value** is a string). The default value is **'utf8'**. |
+| start | number | No | Offset to the start position of the data to convert. The default value is **0**. |
+| end | number | No | Offset to the end position of data. The default value is the length of this **Buffer** object. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| string | 字符串。当start >= Buffer.length或start > end时返回空字符串。 |
+| string | String. When the value of **start** is greater than or equal to **Buffer.length** or **start** is greater than **end**, an empty string is returned. |
 
 ## Examples
 
@@ -2046,7 +2048,7 @@ console.info(buf1.toString('utf-8'));
 toString(): string
 ```
 
-按照encoding指定的字符编码将buf解码为字符串。
+Decodes buf to a string according to the specified character encoding in encoding
 
 **Since:** 24
 
@@ -2064,7 +2066,7 @@ toString(): string
 
 | Type | Description |
 | --- | --- |
-| string | 解码后的字符串。 |
+| string |  |
 
 ## toString
 
@@ -2072,7 +2074,7 @@ toString(): string
 toString(encoding?: BufferEncoding, start?: int, end?: int): string
 ```
 
-按照encoding指定的字符编码将buf解码为字符串。
+Decodes buf to a string according to the specified character encoding in encoding
 
 **Since:** 23
 
@@ -2090,15 +2092,15 @@ toString(encoding?: BufferEncoding, start?: int, end?: int): string
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| encoding | [BufferEncoding](arkts-arkts-fastbuffer-bufferencoding-t.md) | No | encoding [encoding='utf8'] 使用的字符编码。 |
-| start | int | No | start [start = 0] 开始解码的字节偏移量。 该值应为整数。 |
-| end | int | No | end [end = buf.length] 结束解码的字节偏移量（不包含结束位置）。 该值应为整数。 |
+| encoding | [BufferEncoding](arkts-arkts-fastbuffer-bufferencoding-t.md) | No | encoding [encoding='utf8'] The character encoding to use |
+| start | int | No | start [start = 0] The byte offset to start decoding at The value should be an integer. |
+| end | int | No | end [end = buf.length] The byte offset to stop decoding at (not inclusive) The value should be an integer. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| string | 解码后的字符串。 |
+| string |  |
 
 ## values
 
@@ -2112,7 +2114,7 @@ ArkTS-Sta:
 values(): IterableIterator<long>
 ```
 
-返回一个包含value的迭代器。
+Creates and returns an iterator that contains the values of this **Buffer** object.
 
 **Since:** 9
 
@@ -2128,7 +2130,7 @@ values(): IterableIterator<long>
 
 | Type | Description |
 | --- | --- |
-| ArkTS-Dyn: [IterableIterator](arkts-arkts-iterator-iterableiterator-i.md)&lt;number&gt;  <br>ArkTS-Sta：[IterableIterator](arkts-arkts-iterator-iterableiterator-i.md)&lt;long&gt; | 迭代器。 |
+| ArkTS-Dyn: [IterableIterator](arkts-arkts-iterator-iterableiterator-i.md)&lt;number&gt;  <br>ArkTS-Sta：[IterableIterator](arkts-arkts-iterator-iterableiterator-i.md)&lt;long&gt; | Iterator. |
 
 ## Examples
 
@@ -2147,7 +2149,7 @@ while (!next.done) {
            102
            101
            114
-   */
+  */
   next = pair.next();
 }
 ```
@@ -2164,7 +2166,7 @@ ArkTS-Sta:
 write(str: string, offset?: int, length?: int, encoding?: string): int
 ```
 
-在Buffer对象的offset偏移处写入指定编码的字符串，写入的字节长度为length。
+Writes a string of the specified length to this **Buffer** object at the specified position in the given encoding format.
 
 **Since:** 9
 
@@ -2180,22 +2182,22 @@ write(str: string, offset?: int, length?: int, encoding?: string): int
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| str | string | Yes | 要写入Buffer的字符串。 |
-| offset | ArkTS-Dyn: number  <br>ArkTS-Sta：int | No | 偏移量。默认值：0。 |
-| length | ArkTS-Dyn: number  <br>ArkTS-Sta：int | No | 最大字节长度。默认值：（Buffer.length - offset）。 |
-| encoding | string | No | 字符编码。默认值：'utf8'。 |
+| str | string | Yes | String to write. |
+| offset | ArkTS-Dyn: number  <br>ArkTS-Sta：int | No | Offset. The default value is **0**. |
+| length | ArkTS-Dyn: number  <br>ArkTS-Sta：int | No | Maximum number of bytes to write. The default value is **Buffer.length** minus **offset**. |
+| encoding | string | No | Encoding format of the string. The default value is **'utf8'**. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| ArkTS-Dyn: number  <br>ArkTS-Sta：int | 写入的字节数。 |
+| ArkTS-Dyn: number  <br>ArkTS-Sta：int | Number of bytes written. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 10200001 | The value of "[offset/length]" is out of range. It must be >= 0 and <= buf.length. Received value is: [offset/length] |
+| [10200001](../errorcode-utils.md#10200001-value-out-of-range) | The value of "[offset/length]" is out of range. It must be >= 0 and <= buf.length. Received value is: [offset/length] |
 
 ## Examples
 
@@ -2225,7 +2227,7 @@ ArkTS-Sta:
 writeBigInt64BE(value: bigint, offset?: int): int
 ```
 
-在Buffer对象的offset偏移处写入有符号的大端序64位BigInt型数据。
+Writes a 64-bit, big-endian, signed big integer to this **Buffer** object at the specified offset.
 
 **Since:** 9
 
@@ -2241,20 +2243,20 @@ writeBigInt64BE(value: bigint, offset?: int): int
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | bigint | Yes | 写入Buffer的数据。 |
-| offset | ArkTS-Dyn: number  <br>ArkTS-Sta：int | No | 偏移量。默认值：0。取值范围：0 <= offset <= Buffer.length - 8。 |
+| value | bigint | Yes | Data to write. |
+| offset | ArkTS-Dyn: number  <br>ArkTS-Sta：int | No | Offset. The default value is **0**. Value range: 0 <= offset <= Buffer.length - 8 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| ArkTS-Dyn: number  <br>ArkTS-Sta：int | 偏移量offset加上写入的字节数。 |
+| ArkTS-Dyn: number  <br>ArkTS-Sta：int | Offset plus the number of written bytes. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 10200001 | The value of "[param]" is out of range. It must be >= [left range] and <= [right range]. Received value is: [param] |
+| [10200001](../errorcode-utils.md#10200001-value-out-of-range) | The value of "[param]" is out of range. It must be >= [left range] and <= [right range]. Received value is: [param] |
 
 ## Examples
 
@@ -2279,7 +2281,7 @@ ArkTS-Sta:
 writeBigInt64LE(value: bigint, offset?: int): int
 ```
 
-在Buffer对象的offset偏移处写入有符号的小端序64位BigInt型数据。
+Writes a 64-bit, little-endian, signed big integer to this **Buffer** object at the specified offset.
 
 **Since:** 9
 
@@ -2295,20 +2297,20 @@ writeBigInt64LE(value: bigint, offset?: int): int
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | bigint | Yes | 写入Buffer的数据。 |
-| offset | ArkTS-Dyn: number  <br>ArkTS-Sta：int | No | 偏移量。默认值：0。取值范围：0 <= offset <= Buffer.length - 8。 |
+| value | bigint | Yes | Data to write. |
+| offset | ArkTS-Dyn: number  <br>ArkTS-Sta：int | No | Offset. The default value is **0**. Value range: 0 <= offset <= Buffer.length - 8 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| ArkTS-Dyn: number  <br>ArkTS-Sta：int | 偏移量offset加上写入的字节数。 |
+| ArkTS-Dyn: number  <br>ArkTS-Sta：int | Offset plus the number of written bytes. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 10200001 | The value of "[param]" is out of range. It must be >= [left range] and <= [right range]. Received value is: [param] |
+| [10200001](../errorcode-utils.md#10200001-value-out-of-range) | The value of "[param]" is out of range. It must be >= [left range] and <= [right range]. Received value is: [param] |
 
 ## Examples
 
@@ -2333,7 +2335,7 @@ ArkTS-Sta:
 writeBigUInt64BE(value: bigint, offset?: int): int
 ```
 
-在Buffer对象的offset偏移处写入无符号的大端序64位BigUInt型数据。
+Writes a 64-bit, big-endian, signed big integer to this **Buffer** object at the specified offset.
 
 **Since:** 9
 
@@ -2349,20 +2351,20 @@ writeBigUInt64BE(value: bigint, offset?: int): int
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | bigint | Yes | 写入Buffer的数据。 |
-| offset | ArkTS-Dyn: number  <br>ArkTS-Sta：int | No | 偏移量。默认值：0。取值范围：0 <= offset <= Buffer.length - 8。 |
+| value | bigint | Yes | Data to write. |
+| offset | ArkTS-Dyn: number  <br>ArkTS-Sta：int | No | Offset. The default value is **0**. Value range: 0 <= offset <= Buffer.length - 8 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| ArkTS-Dyn: number  <br>ArkTS-Sta：int | 偏移量offset加上写入的字节数。 |
+| ArkTS-Dyn: number  <br>ArkTS-Sta：int | Offset plus the number of written bytes. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 10200001 | The value of "[param]" is out of range. It must be >= [left range] and <= [right range]. Received value is: [param] |
+| [10200001](../errorcode-utils.md#10200001-value-out-of-range) | The value of "[param]" is out of range. It must be >= [left range] and <= [right range]. Received value is: [param] |
 
 ## Examples
 
@@ -2387,7 +2389,7 @@ ArkTS-Sta:
 writeBigUInt64LE(value: bigint, offset?: int): int
 ```
 
-在Buffer对象的offset偏移处写入无符号的小端序64位BigUInt型数据。
+Writes a 64-bit, little-endian, unsigned big integer to this **Buffer** object at the specified offset.
 
 **Since:** 9
 
@@ -2403,20 +2405,20 @@ writeBigUInt64LE(value: bigint, offset?: int): int
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | bigint | Yes | 写入Buffer的数据。 |
-| offset | ArkTS-Dyn: number  <br>ArkTS-Sta：int | No | 偏移量。默认值：0。取值范围：0 <= offset <= Buffer.length - 8。 |
+| value | bigint | Yes | Data to write. |
+| offset | ArkTS-Dyn: number  <br>ArkTS-Sta：int | No | Offset. The default value is **0**. Value range: 0 <= offset <= Buffer.length - 8 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| ArkTS-Dyn: number  <br>ArkTS-Sta：int | 偏移量offset加上写入的字节数。 |
+| ArkTS-Dyn: number  <br>ArkTS-Sta：int | Offset plus the number of written bytes. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 10200001 | The value of "[param]" is out of range. It must be >= [left range] and <= [right range]. Received value is: [param] |
+| [10200001](../errorcode-utils.md#10200001-value-out-of-range) | The value of "[param]" is out of range. It must be >= [left range] and <= [right range]. Received value is: [param] |
 
 ## Examples
 
@@ -2441,7 +2443,7 @@ ArkTS-Sta:
 writeDoubleBE(value: double, offset?: int): int
 ```
 
-在Buffer对象的offset偏移处写入大端序的64位双浮点型数据。
+Writes a 64-bit, big-endian, double-precision floating-point number to this **Buffer** object at the specified offset.
 
 **Since:** 9
 
@@ -2457,20 +2459,20 @@ writeDoubleBE(value: double, offset?: int): int
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | ArkTS-Dyn: number  <br>ArkTS-Sta：double | Yes | 写入Buffer的数据。 |
-| offset | ArkTS-Dyn: number  <br>ArkTS-Sta：int | No | 偏移量。默认值：0。取值范围：0 <= offset <= Buffer.length - 8。 |
+| value | ArkTS-Dyn: number  <br>ArkTS-Sta：double | Yes | Data to write. |
+| offset | ArkTS-Dyn: number  <br>ArkTS-Sta：int | No | Offset. The default value is **0**. Value range: 0 <= offset <= Buffer.length - 8 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| ArkTS-Dyn: number  <br>ArkTS-Sta：int | 偏移量offset加上写入的字节数。 |
+| ArkTS-Dyn: number  <br>ArkTS-Sta：int | Offset plus the number of written bytes. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 10200001 | The value of "offset" is out of range. It must be >= 0 and <= buf.length - 8 . Received value is: [offset] |
+| [10200001](../errorcode-utils.md#10200001-value-out-of-range) | The value of "offset" is out of range. It must be >= 0 and <= buf.length - 8 . Received value is: [offset] |
 
 ## Examples
 
@@ -2495,7 +2497,7 @@ ArkTS-Sta:
 writeDoubleLE(value: double, offset?: int): int
 ```
 
-在Buffer对象的offset偏移处写入小端序的64位双浮点型数据。
+Writes a 64-bit, little-endian, double-precision floating-point number to this **Buffer** object at the specified offset.
 
 **Since:** 9
 
@@ -2511,20 +2513,20 @@ writeDoubleLE(value: double, offset?: int): int
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | ArkTS-Dyn: number  <br>ArkTS-Sta：double | Yes | 写入Buffer的数据。 |
-| offset | ArkTS-Dyn: number  <br>ArkTS-Sta：int | No | 偏移量。默认值：0。取值范围：0 <= offset <= Buffer.length - 8。 |
+| value | ArkTS-Dyn: number  <br>ArkTS-Sta：double | Yes | Data to write. |
+| offset | ArkTS-Dyn: number  <br>ArkTS-Sta：int | No | Offset. The default value is **0**. Value range: 0 <= offset <= Buffer.length - 8 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| ArkTS-Dyn: number  <br>ArkTS-Sta：int | 偏移量offset加上写入的字节数。 |
+| ArkTS-Dyn: number  <br>ArkTS-Sta：int | Offset plus the number of written bytes. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 10200001 | The value of "offset" is out of range. It must be >= 0 and <= buf.length - 8 . Received value is: [offset] |
+| [10200001](../errorcode-utils.md#10200001-value-out-of-range) | The value of "offset" is out of range. It must be >= 0 and <= buf.length - 8 . Received value is: [offset] |
 
 ## Examples
 
@@ -2549,7 +2551,7 @@ ArkTS-Sta:
 writeFloatBE(value: double, offset?: int): int
 ```
 
-在Buffer对象的offset偏移处写入大端序的32位浮点型数据。
+Writes a 32-bit, big-endian, single-precision floating-point number to this **Buffer** object at the specified offset.
 
 **Since:** 9
 
@@ -2565,20 +2567,20 @@ writeFloatBE(value: double, offset?: int): int
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | ArkTS-Dyn: number  <br>ArkTS-Sta：double | Yes | 写入Buffer的数据。 |
-| offset | ArkTS-Dyn: number  <br>ArkTS-Sta：int | No | 偏移量。默认值：0。取值范围：0 <= offset <= Buffer.length - 4。 |
+| value | ArkTS-Dyn: number  <br>ArkTS-Sta：double | Yes | Data to write. |
+| offset | ArkTS-Dyn: number  <br>ArkTS-Sta：int | No | Offset. The default value is **0**. Value range: 0 <= offset <= Buffer.length - 4 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| ArkTS-Dyn: number  <br>ArkTS-Sta：int | 偏移量offset加上写入的字节数。 |
+| ArkTS-Dyn: number  <br>ArkTS-Sta：int | Offset plus the number of written bytes. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 10200001 | The value of "offset" is out of range. It must be >= 0 and <= buf.length - 4 . Received value is: [offset] |
+| [10200001](../errorcode-utils.md#10200001-value-out-of-range) | The value of "offset" is out of range. It must be >= 0 and <= buf.length - 4 . Received value is: [offset] |
 
 ## Examples
 
@@ -2603,7 +2605,7 @@ ArkTS-Sta:
 writeFloatLE(value: double, offset?: int): int
 ```
 
-在Buffer对象的offset偏移处写入小端序的32位浮点型数据。
+Writes a 32-bit, little-endian, single-precision floating-point number to this **Buffer** object at the specified offset.
 
 **Since:** 9
 
@@ -2619,20 +2621,20 @@ writeFloatLE(value: double, offset?: int): int
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | ArkTS-Dyn: number  <br>ArkTS-Sta：double | Yes | 写入Buffer的数据。 |
-| offset | ArkTS-Dyn: number  <br>ArkTS-Sta：int | No | 偏移量。默认值：0。取值范围：0 <= offset <= Buffer.length - 4。 |
+| value | ArkTS-Dyn: number  <br>ArkTS-Sta：double | Yes | Data to write. |
+| offset | ArkTS-Dyn: number  <br>ArkTS-Sta：int | No | Offset. The default value is **0**. Value range: 0 <= offset <= Buffer.length - 4 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| ArkTS-Dyn: number  <br>ArkTS-Sta：int | 偏移量offset加上写入的字节数。 |
+| ArkTS-Dyn: number  <br>ArkTS-Sta：int | Offset plus the number of written bytes. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 10200001 | The value of "offset" is out of range. It must be >= 0 and <= buf.length - 4 . Received value is: [offset] |
+| [10200001](../errorcode-utils.md#10200001-value-out-of-range) | The value of "offset" is out of range. It must be >= 0 and <= buf.length - 4 . Received value is: [offset] |
 
 ## Examples
 
@@ -2657,7 +2659,7 @@ ArkTS-Sta:
 writeInt16BE(value: long, offset?: int): int
 ```
 
-在Buffer对象的offset偏移处写入大端序的16位有符号整型数据。
+Writes a 16-bit, big-endian, signed integer to this **Buffer** object at the specified offset.
 
 **Since:** 9
 
@@ -2673,20 +2675,20 @@ writeInt16BE(value: long, offset?: int): int
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | ArkTS-Dyn: number  <br>ArkTS-Sta：long | Yes | 写入Buffer的数据。 |
-| offset | ArkTS-Dyn: number  <br>ArkTS-Sta：int | No | 偏移量。默认值：0。取值范围：0 <= offset <= Buffer.length - 2。 |
+| value | ArkTS-Dyn: number  <br>ArkTS-Sta：long | Yes | Data to write. |
+| offset | ArkTS-Dyn: number  <br>ArkTS-Sta：int | No | Offset. The default value is **0**. Value range: 0 <= offset <= Buffer.length - 2 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| ArkTS-Dyn: number  <br>ArkTS-Sta：int | 偏移量offset加上写入的字节数。 |
+| ArkTS-Dyn: number  <br>ArkTS-Sta：int | Offset plus the number of written bytes. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 10200001 | The value of "[param]" is out of range. It must be >= [left range] and <= [right range]. Received value is: [param] |
+| [10200001](../errorcode-utils.md#10200001-value-out-of-range) | The value of "[param]" is out of range. It must be >= [left range] and <= [right range]. Received value is: [param] |
 
 ## Examples
 
@@ -2711,7 +2713,7 @@ ArkTS-Sta:
 writeInt16LE(value: long, offset?: int): int
 ```
 
-在Buffer对象的offset偏移处写入小端序的16位有符号整型数据。
+Writes a 16-bit, little-endian, signed integer to this **Buffer** object at the specified offset.
 
 **Since:** 9
 
@@ -2727,20 +2729,20 @@ writeInt16LE(value: long, offset?: int): int
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | ArkTS-Dyn: number  <br>ArkTS-Sta：long | Yes | 写入Buffer的数据。 |
-| offset | ArkTS-Dyn: number  <br>ArkTS-Sta：int | No | 偏移量。默认值：0。取值范围：0 <= offset <= Buffer.length - 2。 |
+| value | ArkTS-Dyn: number  <br>ArkTS-Sta：long | Yes | Data to write. |
+| offset | ArkTS-Dyn: number  <br>ArkTS-Sta：int | No | Offset. The default value is **0**. Value range: 0 <= offset <= Buffer.length - 2 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| ArkTS-Dyn: number  <br>ArkTS-Sta：int | 偏移量offset加上写入的字节数。 |
+| ArkTS-Dyn: number  <br>ArkTS-Sta：int | Offset plus the number of written bytes. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 10200001 | The value of "[param]" is out of range. It must be >= [left range] and <= [right range]. Received value is: [param] |
+| [10200001](../errorcode-utils.md#10200001-value-out-of-range) | The value of "[param]" is out of range. It must be >= [left range] and <= [right range]. Received value is: [param] |
 
 ## Examples
 
@@ -2765,7 +2767,7 @@ ArkTS-Sta:
 writeInt32BE(value: long, offset?: int): int
 ```
 
-在Buffer对象的offset偏移处写入大端序的32位有符号整型数据。
+Writes a 32-bit, big-endian, signed integer to this **Buffer** object at the specified offset.
 
 **Since:** 9
 
@@ -2781,20 +2783,20 @@ writeInt32BE(value: long, offset?: int): int
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | ArkTS-Dyn: number  <br>ArkTS-Sta：long | Yes | 写入Buffer的数据。 |
-| offset | ArkTS-Dyn: number  <br>ArkTS-Sta：int | No | 偏移量。默认值：0。取值范围：0 <= offset <= Buffer.length - 4。 |
+| value | ArkTS-Dyn: number  <br>ArkTS-Sta：long | Yes | Data to write. |
+| offset | ArkTS-Dyn: number  <br>ArkTS-Sta：int | No | Offset. The default value is **0**. Value range: 0 <= offset <= Buffer.length - 4 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| ArkTS-Dyn: number  <br>ArkTS-Sta：int | 偏移量offset加上写入的字节数。 |
+| ArkTS-Dyn: number  <br>ArkTS-Sta：int | Offset plus the number of written bytes. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 10200001 | The value of "[param]" is out of range. It must be >= [left range] and <= [right range]. Received value is: [param] |
+| [10200001](../errorcode-utils.md#10200001-value-out-of-range) | The value of "[param]" is out of range. It must be >= [left range] and <= [right range]. Received value is: [param] |
 
 ## Examples
 
@@ -2819,7 +2821,7 @@ ArkTS-Sta:
 writeInt32LE(value: long, offset?: int): int
 ```
 
-在Buffer对象的offset偏移处写入小端序的32位有符号整型数据。
+Writes a 32-bit, little-endian, signed integer to this **Buffer** object at the specified offset.
 
 **Since:** 9
 
@@ -2835,20 +2837,20 @@ writeInt32LE(value: long, offset?: int): int
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | ArkTS-Dyn: number  <br>ArkTS-Sta：long | Yes | 写入Buffer的数据。 |
-| offset | ArkTS-Dyn: number  <br>ArkTS-Sta：int | No | 偏移量。默认值：0。取值范围：0 <= offset <= Buffer.length - 4。 |
+| value | ArkTS-Dyn: number  <br>ArkTS-Sta：long | Yes | Data to write. |
+| offset | ArkTS-Dyn: number  <br>ArkTS-Sta：int | No | Offset. The default value is **0**. Value range: 0 <= offset <= Buffer.length - 4 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| ArkTS-Dyn: number  <br>ArkTS-Sta：int | 偏移量offset加上写入的字节数。 |
+| ArkTS-Dyn: number  <br>ArkTS-Sta：int | Offset plus the number of written bytes. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 10200001 | The value of "[param]" is out of range. It must be >= [left range] and <= [right range]. Received value is: [param] |
+| [10200001](../errorcode-utils.md#10200001-value-out-of-range) | The value of "[param]" is out of range. It must be >= [left range] and <= [right range]. Received value is: [param] |
 
 ## Examples
 
@@ -2873,7 +2875,7 @@ ArkTS-Sta:
 writeInt8(value: long, offset?: int): int
 ```
 
-在Buffer对象的offset偏移处写入8位有符号整型数据。
+Writes an 8-bit signed integer to this **Buffer** object at the specified offset.
 
 **Since:** 9
 
@@ -2889,20 +2891,20 @@ writeInt8(value: long, offset?: int): int
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | ArkTS-Dyn: number  <br>ArkTS-Sta：long | Yes | 写入Buffer的数据。 |
-| offset | ArkTS-Dyn: number  <br>ArkTS-Sta：int | No | 偏移量。默认值：0。取值范围：0 <= offset <= Buffer.length - 1。 |
+| value | ArkTS-Dyn: number  <br>ArkTS-Sta：long | Yes | Data to write. |
+| offset | ArkTS-Dyn: number  <br>ArkTS-Sta：int | No | Offset. The default value is **0**. Value range: 0 <= offset <= Buffer.length - 1 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| ArkTS-Dyn: number  <br>ArkTS-Sta：int | 偏移量offset加上写入的字节数。 |
+| ArkTS-Dyn: number  <br>ArkTS-Sta：int | Offset plus the number of written bytes. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 10200001 | The value of "[param]" is out of range. It must be >= [left range] and <= [right range]. Received value is: [param] |
+| [10200001](../errorcode-utils.md#10200001-value-out-of-range) | The value of "[param]" is out of range. It must be >= [left range] and <= [right range]. Received value is: [param] |
 
 ## Examples
 
@@ -2930,7 +2932,7 @@ ArkTS-Sta:
 writeIntBE(value: long, offset: int, byteLength: int): int
 ```
 
-在Buffer对象的offset偏移处写入大端序的有符号数据，字节长度为byteLength。
+Writes a big-endian signed value of the specified length to this **Buffer** object at the specified offset.
 
 **Since:** 9
 
@@ -2946,21 +2948,21 @@ writeIntBE(value: long, offset: int, byteLength: int): int
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | ArkTS-Dyn: number  <br>ArkTS-Sta：long | Yes | 写入Buffer的数据。 |
-| offset | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | 偏移量。默认值：0。取值范围：0 <= offset <= Buffer.length - byteLength。 |
-| byteLength | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | 要写入的字节数。 |
+| value | ArkTS-Dyn: number  <br>ArkTS-Sta：long | Yes | Data to write. |
+| offset | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | Offset. The default value is **0**. Value range: 0 <= offset <= Buffer.length - byteLength |
+| byteLength | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | Number of bytes to write. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| ArkTS-Dyn: number  <br>ArkTS-Sta：int | 偏移量offset加上写入的字节数。 |
+| ArkTS-Dyn: number  <br>ArkTS-Sta：int | Offset plus the number of written bytes. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 10200001 | The value of "[param]" is out of range. It must be >= [left range] and <= [right range]. Received value is: [param] |
+| [10200001](../errorcode-utils.md#10200001-value-out-of-range) | The value of "[param]" is out of range. It must be >= [left range] and <= [right range]. Received value is: [param] |
 
 ## Examples
 
@@ -2985,7 +2987,7 @@ ArkTS-Sta:
 writeIntLE(value: long, offset: int, byteLength: int): int
 ```
 
-在Buffer对象的offset偏移处写入小端序的有符号数据，字节长度为byteLength。
+Writes a little-endian signed value of the specified length to this **Buffer** object at the specified offset.
 
 **Since:** 9
 
@@ -3001,21 +3003,21 @@ writeIntLE(value: long, offset: int, byteLength: int): int
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | ArkTS-Dyn: number  <br>ArkTS-Sta：long | Yes | 写入Buffer的数据。 |
-| offset | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | 偏移量。默认值：0。取值范围：0 <= offset <= Buffer.length - byteLength。 |
-| byteLength | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | 要写入的字节数。 |
+| value | ArkTS-Dyn: number  <br>ArkTS-Sta：long | Yes | Data to write. |
+| offset | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | Offset. The default value is **0**. Value range: 0 <= offset <= Buffer.length - byteLength |
+| byteLength | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | Number of bytes to write. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| ArkTS-Dyn: number  <br>ArkTS-Sta：int | 偏移量offset加上写入的字节数。 |
+| ArkTS-Dyn: number  <br>ArkTS-Sta：int | Offset plus the number of written bytes. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 10200001 | The value of "[param]" is out of range. It must be >= [left range] and <= [right range]. Received value is: [param] |
+| [10200001](../errorcode-utils.md#10200001-value-out-of-range) | The value of "[param]" is out of range. It must be >= [left range] and <= [right range]. Received value is: [param] |
 
 ## Examples
 
@@ -3040,7 +3042,7 @@ ArkTS-Sta:
 writeUInt16BE(value: long, offset?: int): int
 ```
 
-在Buffer对象的offset偏移处写入大端序的16位无符号整型数据。
+Writes a 16-bit, big-endian, unsigned integer to this **Buffer** object at the specified offset.
 
 **Since:** 9
 
@@ -3056,20 +3058,20 @@ writeUInt16BE(value: long, offset?: int): int
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | ArkTS-Dyn: number  <br>ArkTS-Sta：long | Yes | 写入Buffer的数据。 |
-| offset | ArkTS-Dyn: number  <br>ArkTS-Sta：int | No | 偏移量。默认值为0。取值范围：0 <= offset <= Buffer.length - 2。 |
+| value | ArkTS-Dyn: number  <br>ArkTS-Sta：long | Yes | Data to write. |
+| offset | ArkTS-Dyn: number  <br>ArkTS-Sta：int | No | Offset. The default value is **0**. Value range: 0 <= offset <= Buffer.length - 2 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| ArkTS-Dyn: number  <br>ArkTS-Sta：int | 偏移量offset加上写入的字节数。 |
+| ArkTS-Dyn: number  <br>ArkTS-Sta：int | Offset plus the number of written bytes. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 10200001 | The value of "[param]" is out of range. It must be >= [left range] and <= [right range]. Received value is: [param] |
+| [10200001](../errorcode-utils.md#10200001-value-out-of-range) | The value of "[param]" is out of range. It must be >= [left range] and <= [right range]. Received value is: [param] |
 
 ## Examples
 
@@ -3097,7 +3099,7 @@ ArkTS-Sta:
 writeUInt16LE(value: long, offset?: int): int
 ```
 
-在Buffer对象的offset偏移处写入小端序的16位无符号整型数据。
+Writes a 16-bit, little-endian, unsigned integer to this **Buffer** object at the specified offset.
 
 **Since:** 9
 
@@ -3113,20 +3115,20 @@ writeUInt16LE(value: long, offset?: int): int
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | ArkTS-Dyn: number  <br>ArkTS-Sta：long | Yes | 写入Buffer的数据。 |
-| offset | ArkTS-Dyn: number  <br>ArkTS-Sta：int | No | 偏移量。默认值：0。取值范围：0 <= offset <= Buffer.length - 2。 |
+| value | ArkTS-Dyn: number  <br>ArkTS-Sta：long | Yes | Data to write. |
+| offset | ArkTS-Dyn: number  <br>ArkTS-Sta：int | No | Offset. The default value is **0**. Value range: 0 <= offset <= Buffer.length - 2 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| ArkTS-Dyn: number  <br>ArkTS-Sta：int | 偏移量offset加上写入的字节数。 |
+| ArkTS-Dyn: number  <br>ArkTS-Sta：int | Offset plus the number of written bytes. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 10200001 | The value of "[param]" is out of range. It must be >= [left range] and <= [right range]. Received value is: [param] |
+| [10200001](../errorcode-utils.md#10200001-value-out-of-range) | The value of "[param]" is out of range. It must be >= [left range] and <= [right range]. Received value is: [param] |
 
 ## Examples
 
@@ -3154,7 +3156,7 @@ ArkTS-Sta:
 writeUInt32BE(value: long, offset?: int): int
 ```
 
-在Buffer对象的offset偏移处写入大端序的32位无符号整型数据。
+Writes a 32-bit, big-endian, unsigned integer to this **Buffer** object at the specified offset.
 
 **Since:** 9
 
@@ -3170,20 +3172,20 @@ writeUInt32BE(value: long, offset?: int): int
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | ArkTS-Dyn: number  <br>ArkTS-Sta：long | Yes | 写入Buffer的数据。 |
-| offset | ArkTS-Dyn: number  <br>ArkTS-Sta：int | No | 偏移量。默认值：0。取值范围：0 <= offset <= Buffer.length - 4。 |
+| value | ArkTS-Dyn: number  <br>ArkTS-Sta：long | Yes | Data to write. |
+| offset | ArkTS-Dyn: number  <br>ArkTS-Sta：int | No | Offset. The default value is **0**. Value range: 0 <= offset <= Buffer.length - 4 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| ArkTS-Dyn: number  <br>ArkTS-Sta：int | 偏移量offset加上写入的字节数。 |
+| ArkTS-Dyn: number  <br>ArkTS-Sta：int | Offset plus the number of written bytes. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 10200001 | The value of "[param]" is out of range. It must be >= [left range] and <= [right range]. Received value is: [param] |
+| [10200001](../errorcode-utils.md#10200001-value-out-of-range) | The value of "[param]" is out of range. It must be >= [left range] and <= [right range]. Received value is: [param] |
 
 ## Examples
 
@@ -3208,7 +3210,7 @@ ArkTS-Sta:
 writeUInt32LE(value: long, offset?: int): int
 ```
 
-在Buffer对象的offset偏移处写入小端序的32位无符号整型数据。
+Writes a 32-bit, little-endian, unsigned integer to this **Buffer** object at the specified offset.
 
 **Since:** 9
 
@@ -3224,20 +3226,20 @@ writeUInt32LE(value: long, offset?: int): int
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | ArkTS-Dyn: number  <br>ArkTS-Sta：long | Yes | 写入Buffer对象的数据。 |
-| offset | ArkTS-Dyn: number  <br>ArkTS-Sta：int | No | 偏移量。默认值：0。取值范围：0 <= offset <= Buffer.length - 4。 |
+| value | ArkTS-Dyn: number  <br>ArkTS-Sta：long | Yes | Data to write. |
+| offset | ArkTS-Dyn: number  <br>ArkTS-Sta：int | No | Offset. The default value is **0**. Value range: 0 <= offset <= Buffer.length - 4 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| ArkTS-Dyn: number  <br>ArkTS-Sta：int | 偏移量offset加上写入的字节数。 |
+| ArkTS-Dyn: number  <br>ArkTS-Sta：int | Offset plus the number of written bytes. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 10200001 | The value of "[param]" is out of range. It must be >= [left range] and <= [right range]. Received value is: [param] |
+| [10200001](../errorcode-utils.md#10200001-value-out-of-range) | The value of "[param]" is out of range. It must be >= [left range] and <= [right range]. Received value is: [param] |
 
 ## Examples
 
@@ -3262,7 +3264,7 @@ ArkTS-Sta:
 writeUInt8(value: long, offset?: int): int
 ```
 
-在Buffer对象的offset偏移处写入8位无符号整型数据。
+Writes an 8-bit unsigned integer to this **Buffer** object at the specified offset.
 
 **Since:** 9
 
@@ -3278,20 +3280,20 @@ writeUInt8(value: long, offset?: int): int
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | ArkTS-Dyn: number  <br>ArkTS-Sta：long | Yes | 写入Buffer的数据。 |
-| offset | ArkTS-Dyn: number  <br>ArkTS-Sta：int | No | 偏移量。默认值：0。取值范围：0 <= offset <= Buffer.length - 1。 |
+| value | ArkTS-Dyn: number  <br>ArkTS-Sta：long | Yes | Data to write. |
+| offset | ArkTS-Dyn: number  <br>ArkTS-Sta：int | No | Offset. The default value is **0**. Value range: 0 <= offset <= Buffer.length - 1 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| ArkTS-Dyn: number  <br>ArkTS-Sta：int | 偏移量offset加上写入的字节数。 |
+| ArkTS-Dyn: number  <br>ArkTS-Sta：int | Offset plus the number of written bytes. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 10200001 | The value of "[param]" is out of range. It must be >= [left range] and <= [right range]. Received value is: [param] |
+| [10200001](../errorcode-utils.md#10200001-value-out-of-range) | The value of "[param]" is out of range. It must be >= [left range] and <= [right range]. Received value is: [param] |
 
 ## Examples
 
@@ -3325,7 +3327,7 @@ ArkTS-Sta:
 writeUIntBE(value: long, offset: int, byteLength: int): int
 ```
 
-在Buffer对象的offset偏移处写入大端序的无符号数据，字节长度为byteLength。
+Writes an unsigned big-endian value of the specified length to this **Buffer** object at the specified offset.
 
 **Since:** 9
 
@@ -3341,21 +3343,21 @@ writeUIntBE(value: long, offset: int, byteLength: int): int
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | ArkTS-Dyn: number  <br>ArkTS-Sta：long | Yes | 写入Buffer的数据。 |
-| offset | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | 偏移量。默认值：0。取值范围：0 <= offset <= Buffer.length - byteLength。 |
-| byteLength | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | 要写入的字节数。 |
+| value | ArkTS-Dyn: number  <br>ArkTS-Sta：long | Yes | Data to write. |
+| offset | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | Offset. The default value is **0**. Value range: 0 <= offset <= Buffer.length - byteLength |
+| byteLength | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | Number of bytes to write. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| ArkTS-Dyn: number  <br>ArkTS-Sta：int | 偏移量offset加上写入的字节数。 |
+| ArkTS-Dyn: number  <br>ArkTS-Sta：int | Offset plus the number of written bytes. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 10200001 | The value of "[param]" is out of range. It must be >= [left range] and <= [right range]. Received value is: [param] |
+| [10200001](../errorcode-utils.md#10200001-value-out-of-range) | The value of "[param]" is out of range. It must be >= [left range] and <= [right range]. Received value is: [param] |
 
 ## Examples
 
@@ -3380,7 +3382,7 @@ ArkTS-Sta:
 writeUIntLE(value: long, offset: int, byteLength: int): int
 ```
 
-在Buffer对象的offset偏移处写入小端序的无符号数据，字节长度为byteLength。
+Writes an unsigned little-endian value of the specified length to this **Buffer** object at the specified offset.
 
 **Since:** 9
 
@@ -3396,21 +3398,21 @@ writeUIntLE(value: long, offset: int, byteLength: int): int
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | ArkTS-Dyn: number  <br>ArkTS-Sta：long | Yes | 写入Buffer的数据。 |
-| offset | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | 偏移量。默认值：0。取值范围：0 <= offset <= Buffer.length - byteLength。 |
-| byteLength | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | 要写入的字节数。 |
+| value | ArkTS-Dyn: number  <br>ArkTS-Sta：long | Yes | Data to write. |
+| offset | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | Offset. The default value is **0**. Value range: 0 <= offset <= Buffer.length - byteLength |
+| byteLength | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | Number of bytes to write. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| ArkTS-Dyn: number  <br>ArkTS-Sta：int | 偏移量offset加上写入的字节数。 |
+| ArkTS-Dyn: number  <br>ArkTS-Sta：int | Offset plus the number of written bytes. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 10200001 | The value of "[param]" is out of range. It must be >= [left range] and <= [right range]. Received value is: [param] |
+| [10200001](../errorcode-utils.md#10200001-value-out-of-range) | The value of "[param]" is out of range. It must be >= [left range] and <= [right range]. Received value is: [param] |
 
 ## Examples
 
@@ -3429,7 +3431,7 @@ console.info("result = " + result);
 [index: int]: long
 ```
 
-返回指定索引处的元素。
+Returns the item at that index.
 
 **Type:** long
 
@@ -3449,7 +3451,7 @@ console.info("result = " + result);
 buffer: ArrayBuffer
 ```
 
-ArrayBuffer对象。
+**ArrayBuffer** object.
 
 **Type:** ArrayBuffer
 
@@ -3469,8 +3471,7 @@ ArrayBuffer对象。
 byteOffset: number
 ```
 
-当前Buffer所在内存池的偏移量。&lt;br&gt;- 当Buffer通过内存池创建时（如使用[allocUninitializedFromPool](arkts-arkts-buffer-allocuninitializedfrompool-f.md#allocuninitializedfrompool)创建Buffer，或使用buffer.from()传入字符串，且字符串长度加当前内存池偏移量小于4kb），返回相对于内存池的偏移量。&lt;br&gt;- 当Buffer直接分配内存时（如使用  
-[alloc](arkts-arkts-buffer-alloc-f.md#alloc)），返回值为0。
+Offset of the **Buffer** object in the memory pool.
 
 **Type:** number
 
@@ -3490,7 +3491,7 @@ byteOffset: number
 length: number
 ```
 
-Buffer对象的字节长度。
+Length of the **Buffer** object, in bytes.
 
 **Type:** number
 

@@ -46,7 +46,7 @@ Call when a new display frame is being rendered.
 onIdle(timeLeftInNano: long): void
 ```
 
-在下一帧空闲时回调。如果没有下一帧，会自动请求一帧。
+Called at the end of the next idle frame. If there is no next frame, will request one automatically.
 
 **Since:** 23
 

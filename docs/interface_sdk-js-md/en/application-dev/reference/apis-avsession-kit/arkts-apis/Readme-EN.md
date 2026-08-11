@@ -64,6 +64,7 @@
   - [UserInfo](arkts-avsession-avmusictemplate-userinfo-i.md)
   - [ActionType](arkts-avsession-avmusictemplate-actiontype-t.md)
   - [ClearSearchHistoryEvent](arkts-avsession-avmusictemplate-clearsearchhistoryevent-t.md)
+  - [CustomCommandEvent](arkts-avsession-avmusictemplate-customcommandevent-t.md)
   - [CustomType](arkts-avsession-avmusictemplate-customtype-t.md)
   - [DialogActionType](arkts-avsession-avmusictemplate-dialogactiontype-t.md)
   - [DialogControlType](arkts-avsession-avmusictemplate-dialogcontroltype-t.md)
@@ -135,15 +136,11 @@
   - [getHistoricalSessionDescriptors(system api)](arkts-avsession-avsession-gethistoricalsessiondescriptors-f-sys.md)<!--DelEnd-->
   <!--Del-->
   - [getSessionDescriptors(system api)](arkts-avsession-avsession-getsessiondescriptors-f-sys.md)<!--DelEnd-->
-  <!--Del-->
-  - [getSessionDescriptorsForAudioZone(system api)](arkts-avsession-avsession-getsessiondescriptorsforaudiozone-f-sys.md)<!--DelEnd-->
   - [isDesktopLyricSupported](arkts-avsession-avsession-isdesktoplyricsupported-f.md)
   <!--Del-->
   - [off(system api)](arkts-avsession-avsession-off-f-sys.md)<!--DelEnd-->
   <!--Del-->
   - [offActiveSessionChanged(system api)](arkts-avsession-avsession-offactivesessionchanged-f-sys.md)<!--DelEnd-->
-  <!--Del-->
-  - [offAudioZoneSessionChange(system api)](arkts-avsession-avsession-offaudiozonesessionchange-f-sys.md)<!--DelEnd-->
   <!--Del-->
   - [offDeviceAvailable(system api)](arkts-avsession-avsession-offdeviceavailable-f-sys.md)<!--DelEnd-->
   <!--Del-->
@@ -165,8 +162,6 @@
   - [on(system api)](arkts-avsession-avsession-on-f-sys.md)<!--DelEnd-->
   <!--Del-->
   - [onActiveSessionChanged(system api)](arkts-avsession-avsession-onactivesessionchanged-f-sys.md)<!--DelEnd-->
-  <!--Del-->
-  - [onAudioZoneSessionChange(system api)](arkts-avsession-avsession-onaudiozonesessionchange-f-sys.md)<!--DelEnd-->
   <!--Del-->
   - [onDeviceAvailable(system api)](arkts-avsession-avsession-ondeviceavailable-f-sys.md)<!--DelEnd-->
   <!--Del-->

@@ -1,6 +1,7 @@
 # CaptionsManager
 
-字幕配置管理，在调用CaptionsManager的方法前，需要先通过 [accessibility.getCaptionsManager()](arkts-accessibility-accessibility-getcaptionsmanager-f.md#getcaptionsmanager)获取 CaptionsManager实例。
+Implements configuration management for captions. Before calling any API of **CaptionsManager**, you must use the   
+[accessibility.getCaptionsManager()](arkts-accessibility-accessibility-getcaptionsmanager-f.md#getcaptionsmanager) API to obtain a **CaptionsManager** instance.
 
 **Since:** 8
 
@@ -22,7 +23,7 @@ import { accessibility } from 'kits/@kit.AccessibilityKit';
 off(type: 'enableChange', callback?: Callback<boolean>): void
 ```
 
-取消监听字幕配置启用状态变化事件，使用callback异步回调。
+Unsubscribes from the state changes of captions configuration. This API uses an asynchronous callback to return the result.
 
 **Since:** 8
 
@@ -38,14 +39,14 @@ off(type: 'enableChange', callback?: Callback<boolean>): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'enableChange' | Yes | 取消监听的事件名，固定为‘enableChange’，即字幕配置启用状态变化事件。 |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;boolean&gt; | No | 回调函数，取消指定callback对象的事件响应。需与 [on('enableChange')](accessibility.CaptionsManager.on(type: 'enableChange', callback: Callback&lt;boolean&gt;)) 的callback一致。缺省时，表示注销所有已注册事件。 |
+| type | 'enableChange' | Yes | Event type, which is set to **'enableChange'** in this API. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;boolean&gt; | No | Callback used to unregister. It must be consistent with the callback used in [on('enableChange')](accessibility.CaptionsManager.on(type: 'enableChange', callback: Callback&lt;boolean&gt;)) . If this parameter is not specified, listening will be disabled for all callbacks corresponding to the specified type. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
 
 ## Examples
 
@@ -83,7 +84,7 @@ struct Index {
 off(type: 'styleChange', callback?: Callback<CaptionsStyle>): void
 ```
 
-取消字幕风格变化监听事件，使用callback异步回调。
+Unsubscribes from the captions style changes. This API uses an asynchronous callback to return the result.
 
 **Since:** 8
 
@@ -99,14 +100,14 @@ off(type: 'styleChange', callback?: Callback<CaptionsStyle>): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'styleChange' | Yes | 取消监听的事件名，固定为‘styleChange’，即字幕风格变化事件。 |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;CaptionsStyle&gt; | No | 回调函数，取消指定callback对象的事件响应。需与 [on('styleChange')](accessibility.CaptionsManager.on(type: 'styleChange', callback: Callback&lt;CaptionsStyle&gt;)) 的callback一致。缺省时，表示注销所有已注册事件。 |
+| type | 'styleChange' | Yes | Event type, which is set to **'styleChange'** in this API. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;CaptionsStyle&gt; | No | Callback used to unregister. It must be consistent with the callback used in [on('styleChange')](accessibility.CaptionsManager.on(type: 'styleChange', callback: Callback&lt;CaptionsStyle&gt;)) . If this parameter is not specified, listening will be disabled for all callbacks corresponding to the specified type. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
 
 ## Examples
 
@@ -188,15 +189,16 @@ Unregister the observer of the style.
 on(type: 'enableChange', callback: Callback<boolean>): void
 ```
 
-监听字幕配置启用状态变化事件，使用callback异步回调。
+Subscribes to the state changes of captions configuration. This API uses an asynchronous callback to return the result.
 
-> **说明：**
+> **NOTE：**
 > 
-> - 注册监听的callback参数应使用具名函数而非匿名函数，否则每次调用时会创建一个新的底层对象，引起内存泄漏问题。
+> - The callback parameter for registering a listener must use a named function instead of an anonymous function.
+> Otherwise, a new underlying object is created each time the function is called, causing memory leakage.
 > 
-> - 调用此方法后，务必在对象生命周期结束前使用
+> - After calling this method, you must use
 > [off('enableChange')](accessibility.CaptionsManager.off(type: 'enableChange', callback?: Callback&lt;boolean&gt;))
-> 取消监听，否则可能会导致崩溃。
+> to cancel the listener before the object's lifecycle ends. Otherwise, a crash may occur.
 
 **Since:** 8
 
@@ -212,14 +214,14 @@ on(type: 'enableChange', callback: Callback<boolean>): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'enableChange' | Yes | 监听的事件名，固定为‘enableChange’，即字幕配置启用状态变化事件。 |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;boolean&gt; | Yes | 回调函数，在启用状态变化时将状态通过此函数进行通知。返回true表示字幕配置开启，返回false表示字幕配置关闭。 |
+| type | 'enableChange' | Yes | Event type, which is set to **'enableChange'** in this API. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;boolean&gt; | Yes | Callback invoked when the enabled status of captions configuration changes. The value **true** indicates that the subtitle configuration is enabled, and the value **false** indicates that the subtitle configuration is disabled. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
 
 ## Examples
 
@@ -252,15 +254,16 @@ struct Index {
 on(type: 'styleChange', callback: Callback<CaptionsStyle>): void
 ```
 
-监听字幕风格变化事件，使用callback异步回调。
+Subscribes to captions style changes. This API uses an asynchronous callback to return the result.
 
-> **说明：**
+> **NOTE：**
 > 
-> - 注册监听的callback参数应使用具名函数而非匿名函数，否则每次调用时会创建一个新的底层对象，引起内存泄漏问题。
+> - The callback parameter for registering a listener must use a named function instead of an anonymous function.
+> Otherwise, a new underlying object is created each time the function is called, causing memory leakage.
 > 
-> - 调用此方法后，务必在对象生命周期结束前使用
+> - After calling this method, you must use
 > [off('styleChange')](accessibility.CaptionsManager.off(type: 'styleChange', callback?: Callback&lt;CaptionsStyle&gt;))
-> 取消监听，否则可能会导致崩溃。
+> to cancel the listener before the object's lifecycle ends. Otherwise, a crash may occur.
 
 **Since:** 8
 
@@ -276,14 +279,14 @@ on(type: 'styleChange', callback: Callback<CaptionsStyle>): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'styleChange' | Yes | 监听的事件名，固定为‘styleChange’，即字幕风格变化事件。 |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;CaptionsStyle&gt; | Yes | 回调函数，在字幕风格变化时通过此函数进行通知。 |
+| type | 'styleChange' | Yes | Event type, which is set to **'styleChange'** in this API. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;CaptionsStyle&gt; | Yes | Callback invoked when the style of captions changes. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
 
 ## Examples
 
@@ -360,7 +363,7 @@ Register the observer of the style.
 enabled: boolean
 ```
 
-表示是否启用字幕配置。true表示字幕配置开启，false表示字幕配置关闭。
+Whether to enable captions configuration. The value **true** indicates that the caption configuration is enabled,and **false** indicates the opposite.
 
 **Type:** boolean
 
@@ -382,7 +385,7 @@ enabled: boolean
 style: CaptionsStyle
 ```
 
-表示字幕风格。
+Style of captions.
 
 **Type:** [CaptionsStyle](arkts-accessibility-accessibility-captionsstyle-i.md)
 

@@ -1,11 +1,5 @@
 # @ohos.animator
 
-## 导入模块
-
-```TypeScript
-import { AnimatorOptions, SimpleAnimatorOptions, AnimatorResult } from 'kits/@kit.ArkUI';
-```
-
 ## 汇总
 
 ### 类

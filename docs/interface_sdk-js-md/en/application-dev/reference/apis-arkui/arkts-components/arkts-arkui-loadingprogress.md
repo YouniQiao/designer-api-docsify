@@ -1,18 +1,19 @@
 # LoadingProgress
 
-LoadingProgress是用于显示加载进度条的组件，在数据加载过程中为用户提供视觉反馈，提升用户体验。该组件支持设置前景色、控制动画显示状态等特性，适用于需要在应用内展示加载进度的场景。
+The **LoadingProgress** component is used to create a loading progress animation.
 
-加载进度条的动效在组件不可见时停止，组件的可见状态基于
+The loading progress animation stops when the component is invisible. The component's visibility is determined by the
+value of **ratios** in the
 [onVisibleAreaChange]{@link CommonMethod#onVisibleAreaChange(ratios: Array<number>, event: VisibleAreaChangeCallback)}
-处理，可见阈值ratios大于0即视为可见状态。
+event callback: If the value is greater than 0, the component is visible.
 
-> **说明：**
+> **NOTE**
 >
-> - 该组件从API版本26.0.0开始支持[WithTheme]{@link ./with_theme}。
+> - This component supports [WithTheme]{@link ./with_theme} since API version 26.0.0.
 
-## 子组件
+## Child Components
 
-无
+Not supported
 
 ## LoadingProgress
 
@@ -20,7 +21,7 @@ LoadingProgress是用于显示加载进度条的组件，在数据加载过程�
 LoadingProgress()
 ```
 
-创建加载进度组件。
+Creates a loading progress component.
 
 **Since:** 8
 

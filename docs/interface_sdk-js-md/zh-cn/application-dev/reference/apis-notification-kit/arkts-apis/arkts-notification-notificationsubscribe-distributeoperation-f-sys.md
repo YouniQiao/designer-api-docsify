@@ -43,13 +43,15 @@ function distributeOperation(hashcode: string, operationInfo?: OperationInfo): P
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. 3. Parameter verification failed. |
-| 1600010 | Distributed operation failed. |
-| 201 | Permission denied. |
-| 202 | Not system application to call the interface. |
-| 1600021 | Distributed operation timed out. |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. 3. Parameter verification failed. |
+| [1600010](../errorcode-notification.md#1600010-分布式操作失败) | Distributed operation failed. |
+| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not system application to call the interface. |
+| [1600021](../errorcode-notification.md#1600021-跨设备通信超时) | Distributed operation timed out. |
 
 ## 示例
+
+ArkTS-Dyn示例：
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -65,6 +67,22 @@ notificationSubscribe.distributeOperation(hashcode, operationInfo).then(() => {
   console.info('distributeOperation success');
 }).catch((err: BusinessError) => {
   console.error(`distributeOperation fail, code is ${err.code}, message is ${err.message}`);
+});
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+let hashcode: string = 'hashcode';
+let operationInfo: notificationSubscribe.OperationInfo = {
+  actionName: 'actionName',
+  userInput: 'userInput',
+};
+notificationSubscribe.distributeOperation(hashcode, operationInfo).then(() => {
+  console.info('distributeOperation success');
+}).catch((err: Error): void => {
+  let error: BusinessError = err as BusinessError;
+  console.error(`distributeOperation fail, code is ${error.code}, message is ${error.message}`);
 });
 ```
 

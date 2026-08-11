@@ -22,12 +22,6 @@
 
 **系统能力：** SystemCapability.Graphics.Drawing
 
-## 导入模块
-
-```TypeScript
-import { drawing } from 'kits/@kit.ArkGraphics2D';
-```
-
 ## centerX
 
 ArkTS-Dyn:

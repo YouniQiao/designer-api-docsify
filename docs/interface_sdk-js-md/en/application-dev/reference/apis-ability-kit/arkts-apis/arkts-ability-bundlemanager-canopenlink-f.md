@@ -12,7 +12,8 @@ import { bundleManager } from 'kits/@kit.AbilityKit';
 function canOpenLink(link: string): boolean
 ```
 
-根据给定的链接判断目标应用是否可访问，链接中的scheme需要在[module.json5文件](../../../quick-start/module-configuration-file.md)的querySchemes字段下配置。
+Checks whether the target application can be accessed based on the provided link. The scheme specified in the link must be configured in the **querySchemes** field of the  
+[module.json5](../../../quick-start/module-configuration-file.md) file.
 
 **Since:** 12
 
@@ -28,21 +29,21 @@ function canOpenLink(link: string): boolean
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| link | string | Yes | 表示需要查询的链接。 |
+| link | string | Yes | Link to check. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| boolean | 返回true表示给定的链接可以打开，返回false表示给定的链接不能打开。 |
+| boolean | Check result for whether the link can be opened. **true** if it can be opened, **false** otherwise. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types. |
-| 17700056 | The scheme of the specified link is not in the querySchemes. |
-| 17700055 | The specified link is invalid. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types. |
+| [17700056](../errorcode-bundle.md#17700056-scheme-of-the-link-not-configured-in-queryschemes) | The scheme of the specified link is not in the querySchemes. |
+| [17700055](../errorcode-bundle.md#17700055-invalid-link) | The specified link is invalid. |
 
 ## Examples
 

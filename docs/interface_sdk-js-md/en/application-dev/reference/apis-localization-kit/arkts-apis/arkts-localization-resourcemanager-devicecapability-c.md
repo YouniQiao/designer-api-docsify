@@ -1,6 +1,6 @@
 # DeviceCapability
 
-表示设备支持的能力。
+Defines the device capability.
 
 **Since:** 6
 
@@ -22,7 +22,7 @@ import { resourceManager } from 'kits/@kit.LocalizationKit';
 deviceType: DeviceType
 ```
 
-当前设备类型。
+Device type.
 
 **Type:** [DeviceType](../../apis-avsession-kit/arkts-apis/arkts-avsession-avsession-devicetype-e.md)
 
@@ -42,7 +42,7 @@ deviceType: DeviceType
 screenDensity: ScreenDensity
 ```
 
-当前设备屏幕密度。
+Screen density of the device.
 
 **Type:** [ScreenDensity](../../apis-ability-kit/arkts-apis/arkts-ability-configurationconstant-screendensity-e.md)
 

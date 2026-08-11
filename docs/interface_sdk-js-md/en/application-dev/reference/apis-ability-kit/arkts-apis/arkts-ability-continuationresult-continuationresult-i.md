@@ -1,6 +1,6 @@
 # ContinuationResult
 
-流转管理入口返回的设备信息。
+The ContinuationResult module describes the device information returned by the continuation management entry.
 
 **Since:** 8
 
@@ -20,7 +20,7 @@
 id: string
 ```
 
-表示设备标识。
+Device ID.
 
 **Type:** string
 
@@ -44,7 +44,7 @@ id: string
 name: string
 ```
 
-表示设备名称。
+Device name.
 
 **Type:** string
 
@@ -68,7 +68,7 @@ name: string
 type: string
 ```
 
-表示设备类型。
+Device type.
 
 **Type:** string
 

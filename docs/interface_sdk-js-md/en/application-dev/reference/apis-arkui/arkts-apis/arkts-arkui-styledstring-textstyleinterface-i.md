@@ -16,9 +16,7 @@ TextStyleInterface
 fontColor?: ResourceColor
 ```
 
-字体颜色。
-
-默认为主题色。
+The fontColor value of the font property object.
 
 **Type:** [ResourceColor](arkts-arkui-resourcecolor-t.md)
 
@@ -38,7 +36,7 @@ fontColor?: ResourceColor
 fontConfigs?: FontConfigs
 ```
 
-字体配置。默认值继承[FontConfigs](../../../reference/apis-arkui/arkui-ts/ts-text-common.md#fontconfigs24)。
+The fontConfigs value of the text.
 
 **Type:** [FontConfigs](arkts-arkui-fontconfigs-i.md)
 
@@ -58,9 +56,7 @@ fontConfigs?: FontConfigs
 fontFamily?: ResourceStr
 ```
 
-文本字体。
-
-默认为主题字体。
+The fontFamily value of the font property object.
 
 **Type:** [ResourceStr](arkts-arkui-resourcestr-t.md)
 
@@ -80,13 +76,7 @@ fontFamily?: ResourceStr
 fontSize?: LengthMetrics
 ```
 
-字体大小。
-
-默认字体大小为16fp。
-
-如果LengthMetrics的unit值是PERCENT，当前设置不生效，处理为16fp。
-
-单位：[fp](../../../reference/apis-arkui/arkui-ts/ts-pixel-units.md#基本像素单位)
+The fontSize value of the font property object.
 
 **Type:** [LengthMetrics](arkts-arkui-lengthmetrics-t.md)
 
@@ -106,9 +96,7 @@ fontSize?: LengthMetrics
 fontStyle?: FontStyle
 ```
 
-字体样式。
-
-默认值：FontStyle.Normal
+The fontStyle value of the font property object.
 
 **Type:** [FontStyle](arkts-arkui-fontstyle-e.md)
 
@@ -128,11 +116,7 @@ fontStyle?: FontStyle
 fontVariations?: Array<FontVariation>
 ```
 
-可变字体的属性。
-
-默认值：undefined，表示未设置可变字体的属性。
-
-fontVariations属性的优先级高于fontWeight。
+The font variation value of the text.
 
 **Type:** Array&lt;[FontVariation](arkts-arkui-fontvariation-t.md)&gt;
 
@@ -152,9 +136,7 @@ fontVariations属性的优先级高于fontWeight。
 fontWeight?: int | FontWeight | string
 ```
 
-字体粗细。
-
-number类型取值[100, 900]，取值间隔为100，默认为400，取值越大，字体越粗。string类型仅支持number类型取值的字符串形式，例如"400"，以及"bold"、"bolder"、"lighter"、"regular"、"medium"，分别对应FontWeight中相应的枚举值。
+The fontWeight value of the font property object.
 
 **Type:** int \| FontWeight \| string
 
@@ -174,9 +156,7 @@ number类型取值[100, 900]，取值间隔为100，默认为400，取值越大
 strokeColor?: ResourceColor
 ```
 
-文本描边颜色。
-
-默认值为字体颜色，设置异常值时取字体颜色。
+The stroke color of the text.
 
 **Type:** [ResourceColor](arkts-arkui-resourcecolor-t.md)
 
@@ -196,9 +176,7 @@ strokeColor?: ResourceColor
 strokeJoinStyle?: StrokeJoinStyle
 ```
 
-文本描边拐角样式。
-
-默认值：StrokeJoinStyle.MITER_JOIN。
+The stroke join style of the StyledString.
 
 **Type:** [StrokeJoinStyle](arkts-arkui-strokejoinstyle-e.md)
 
@@ -218,11 +196,7 @@ strokeJoinStyle?: StrokeJoinStyle
 strokeWidth?: LengthMetrics
 ```
 
-文本描边宽度。如果LengthMetrics的unit值是PERCENT，当前设置不生效，处理为0。
-
-设置值小于0时为实心字，大于0时为空心字。
-
-默认值为0。
+The stroke width of the text.
 
 **Type:** [LengthMetrics](arkts-arkui-lengthmetrics-t.md)
 
@@ -242,9 +216,7 @@ strokeWidth?: LengthMetrics
 superscript?: SuperscriptStyle
 ```
 
-文本上下角标。
-
-默认值：SuperscriptStyle.NORMAL
+The superscript value of the font property object.
 
 **Type:** [SuperscriptStyle](arkts-arkui-superscriptstyle-e.md)
 

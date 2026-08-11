@@ -18,7 +18,7 @@ newState: MicrophoneCaptureState
 
 改变后的状态
 
-**类型：** [MicrophoneCaptureState](arkts-arkweb-microphonecapturestate-e.md)
+**类型：** [MicrophoneCaptureState](../arkts-apis/arkts-arkweb-web-microphonecapturestate-e.md)
 
 **起始版本：** 23
 
@@ -36,7 +36,7 @@ originalState: MicrophoneCaptureState
 
 原来的状态
 
-**类型：** [MicrophoneCaptureState](arkts-arkweb-microphonecapturestate-e.md)
+**类型：** [MicrophoneCaptureState](../arkts-apis/arkts-arkweb-web-microphonecapturestate-e.md)
 
 **起始版本：** 23
 

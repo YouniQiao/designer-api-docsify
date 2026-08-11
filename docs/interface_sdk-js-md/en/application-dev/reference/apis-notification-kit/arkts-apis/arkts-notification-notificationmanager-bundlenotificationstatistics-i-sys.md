@@ -1,6 +1,6 @@
 # BundleNotificationStatistics (System API)
 
-描述指定应用通知统计信息。
+Describes the notification statistics of a specified application.
 
 **Since:** 26.0.0
 
@@ -24,7 +24,7 @@ import { notificationManager } from 'kits/@kit.NotificationKit';
 bundle: BundleOption
 ```
 
-指定应用的包信息。
+Bundle information of the application.
 
 **Type:** [BundleOption](arkts-notification-notificationextensionsubscription-bundleoption-t.md)
 
@@ -44,7 +44,7 @@ bundle: BundleOption
 lastTime: number
 ```
 
-应用最后一次发布通知的时间。数据格式：时间戳。单位：ms。
+Time when the app last published a notification.&lt;br&gt;Data format: timestamp.&lt;br&gt;Unit: millisecond.
 
 **Type:** number
 
@@ -64,7 +64,7 @@ lastTime: number
 recentCount: number
 ```
 
-应用最近7天发布的通知总量。
+Total number of notifications published by the application in the last seven days.
 
 **Type:** number
 

@@ -12,12 +12,6 @@
 
 **系统接口：** 此接口为系统接口。
 
-## 导入模块
-
-```TypeScript
-import { privacyManager } from 'kits/@kit.AbilityKit';
-```
-
 ## beginTime
 
 ```TypeScript
@@ -158,7 +152,7 @@ permissionNames?: Array<Permissions>
 
 需要查询的权限集合。默认值：空，表示查询所有权限的使用记录。
 
-**类型：** Array&lt;[Permissions](arkts-ability-permissions-t.md)&gt;
+**类型：** Array&lt;Permissions&gt;
 
 **起始版本：** 9
 

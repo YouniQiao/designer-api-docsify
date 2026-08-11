@@ -6,7 +6,7 @@
 function equal(agent: WantAgent, otherAgent: WantAgent, callback: AsyncCallback<boolean>): void
 ```
 
-判断两个WantAgent实例是否相等，以此来判断是否是来自同一应用的相同操作。使用callback异步回调。
+Checks whether two WantAgent objects are equal.
 
 **Since:** 7
 
@@ -26,9 +26,9 @@ function equal(agent: WantAgent, otherAgent: WantAgent, callback: AsyncCallback<
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| agent | [WantAgent](arkts-ability-wantagent-t.md) | Yes | WantAgent对象。 |
-| otherAgent | [WantAgent](arkts-ability-wantagent-t.md) | Yes | WantAgent对象。 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;boolean&gt; | Yes | 判断两个WantAgent实例是否相等的回调方法。返回true表示两个WantAgent实例相等；返回false表示不相等。 |
+| agent | [WantAgent](arkts-ability-wantagent-t.md) | Yes | to compare. |
+| otherAgent | [WantAgent](arkts-ability-wantagent-t.md) | Yes | WantAgent Object. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;boolean&gt; | Yes | Callback method for determining whether two WantAgent instances are equal. |
 
 ## Examples
 
@@ -93,7 +93,7 @@ wantAgent.getWantAgent({
 function equal(agent: WantAgent, otherAgent: WantAgent): Promise<boolean>
 ```
 
-判断两个WantAgent实例是否相等，以此来判断是否是来自同一应用的相同操作。使用Promise异步回调。
+Checks whether two WantAgent objects are equal.
 
 **Since:** 7
 
@@ -113,14 +113,14 @@ function equal(agent: WantAgent, otherAgent: WantAgent): Promise<boolean>
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| agent | [WantAgent](arkts-ability-wantagent-t.md) | Yes | WantAgent对象。 |
-| otherAgent | [WantAgent](arkts-ability-wantagent-t.md) | Yes | WantAgent对象。 |
+| agent | [WantAgent](arkts-ability-wantagent-t.md) | Yes | to compare. |
+| otherAgent | [WantAgent](arkts-ability-wantagent-t.md) | Yes | WantAgent Object. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;boolean&gt; | 以Promise形式返回获取判断两个WantAgent实例是否相等的结果。返回true表示两个WantAgent实例相等；返回false表示不相等。 |
+| Promise&lt;boolean&gt; | Returns { |
 
 ## Examples
 

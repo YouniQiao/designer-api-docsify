@@ -1,6 +1,6 @@
 # DictionaryOutputInfo
 
-InflateGetDictionary和deflateGetDictionary这两个函数会返回值的相关信息。
+InflateGetDictionary and deflateGetDictionary return value information.
 
 **Since:** 12
 
@@ -22,7 +22,7 @@ import { zlib } from 'kits/@kit.BasicServicesKit';
 dictionaryLength: int
 ```
 
-字典的长度。
+Length of a dictionary.
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
@@ -42,7 +42,7 @@ dictionaryLength: int
 status: ReturnStatus
 ```
 
-参考[ReturnStatus枚举定义](arkts-basicservices-zlib-returnstatus-e.md)。
+For details, see [ReturnStatus](arkts-basicservices-zlib-returnstatus-e.md).
 
 **Type:** [ReturnStatus](arkts-basicservices-zlib-returnstatus-e.md)
 

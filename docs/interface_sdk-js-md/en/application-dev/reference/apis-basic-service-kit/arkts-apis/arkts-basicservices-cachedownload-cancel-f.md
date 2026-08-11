@@ -12,10 +12,10 @@ import { cacheDownload } from 'kits/@kit.BasicServicesKit';
 function cancel(url: string): void
 ```
 
-根据url移除一个正在执行的缓存下载任务，已保存的内存缓存和文件缓存不会受到影响。
+Cancels an ongoing download task based on the URL. The saved memory cache and file cache are not affected.
 
-- 当不存在对应url的任务时无其他效果。  
-- 使用该方法同步执行时，不阻塞调用线程。
+- If there is no download task with the specified URL, this API does not take effect.  
+- When this API is used for synchronous execution, the calling thread is not blocked.
 
 **Since:** 18
 
@@ -29,13 +29,13 @@ function cancel(url: string): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| url | string | Yes | 目标资源的地址。支持HTTP和HTTPS协议，长度不超过8192字节。 |
+| url | string | Yes | URL of the target resource. HTTP and HTTPS are supported. The URL length cannot exceed 81 92 bytes. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | parameter error. Possible causes: &lt;br&gt; 1. Missing mandatory parameters. &lt;br&gt; 2. Incorrect parameter type. &lt;br&gt; 3. Parameter verification failed. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | parameter error. Possible causes: &lt;br&gt; 1. Missing mandatory parameters. &lt;br&gt; 2. Incorrect parameter type. &lt;br&gt; 3. Parameter verification failed. |
 
 ## Examples
 

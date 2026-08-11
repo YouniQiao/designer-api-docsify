@@ -1,6 +1,6 @@
 # ExtendableList
 
-定义可扩展List组件。
+Defines the Extendable List.
 
 **Inheritance/Implementation:** ExtendableList implements [ListAttribute](../arkts-components/arkts-arkui-list-attribute.md/arkts-arkui-list-attribute.md)
 
@@ -22,7 +22,7 @@ static $_instantiate<T extends ExtendableList>(
   ): T
 ```
 
-可扩展List组件的构造函数。
+Constructor of Extendable List.
 
 **Since:** 26.0.0
 
@@ -58,7 +58,7 @@ static _instantiateImpl<T extends ExtendableList>(
   ): void
 ```
 
-扩展列表组件入口
+Entry of Extendable List.
 
 **Since:** 26.0.0
 
@@ -86,7 +86,7 @@ static _instantiateImpl<T extends ExtendableList>(
 public setListOptions(options?: ListOptions): this
 ```
 
-设置List组件参数。
+Set the List Options.
 
 **Since:** 26.0.0
 

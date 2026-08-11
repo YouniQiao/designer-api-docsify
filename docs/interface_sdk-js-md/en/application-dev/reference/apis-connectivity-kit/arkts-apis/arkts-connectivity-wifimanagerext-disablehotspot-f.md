@@ -30,9 +30,9 @@ Disable Wi-Fi hotspot function.If Wi-Fi is enabled after the Wi-Fi hotspot is di
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 801 | Capability not supported. |
-| 2701000 | Operation failed. |
-| 201 | Permission denied. |
+| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. |
+| [2701000](../errorcode-wifi.md#2701000-ap-extension-module-error) | Operation failed. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
 
 ## Examples
 

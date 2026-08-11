@@ -8,7 +8,7 @@ export declare function Path(
 ): PathAttribute
 ```
 
-路径绘制组件，根据绘制路径生成封闭的自定义形状。
+Path is returned when the parameter is transferred.
 
 **Since:** 23
 
@@ -24,13 +24,13 @@ export declare function Path(
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| options | [PathOptions](../arkts-components/arkts-arkui-pathoptions-i.md) | No | Path绘制区域。 &lt;br&gt;异常值undefined和null按照无效值处理，本次设置不生效。 |
+| options | [PathOptions](../arkts-components/arkts-arkui-pathoptions-i.md) | No | The options to create a Path |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [PathAttribute](arkts-arkui-path-pathattribute-i.md) |  |
+| [PathAttribute](arkts-arkui-path-pathattribute-i.md) | The attribute of the Path. |
 
 
 ## Path
@@ -43,9 +43,9 @@ export declare function Path(
 
 Defines Path Component.
 
-**Since:** 26.0.0
+**Since:** 26.1.0
 
-**ArkTS mode:** ArkTS-Sta only, since version 26.0.0.
+**ArkTS mode:** ArkTS-Sta only, since version 26.1.0.
 
 **Decorator:** @Builder
 

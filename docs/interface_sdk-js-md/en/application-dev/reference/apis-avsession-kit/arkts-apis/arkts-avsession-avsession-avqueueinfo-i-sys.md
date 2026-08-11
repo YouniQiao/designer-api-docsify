@@ -1,6 +1,6 @@
 # AVQueueInfo (System API)
 
-歌单（歌曲列表）的相关属性。
+The play list information definition.
 
 **Since:** 11
 
@@ -24,7 +24,7 @@ import { avSession } from 'kits/@kit.AVSessionKit';
 avQueueId: string
 ```
 
-歌单（歌曲列表）唯一标识Id。
+The id of play list
 
 **Type:** string
 
@@ -44,7 +44,7 @@ avQueueId: string
 avQueueImage: image.PixelMap | string
 ```
 
-歌单（歌曲列表）封面图，图片的像素数据或者图片路径地址（本地路径或网络路径）。
+The artwork of play list, can be a {@link PixelMap} or a URI formatted string,
 
 **Type:** image.PixelMap \| string
 
@@ -64,7 +64,7 @@ avQueueImage: image.PixelMap | string
 avQueueName: string
 ```
 
-歌单（歌曲列表）名称。
+The name of play list
 
 **Type:** string
 
@@ -84,7 +84,7 @@ avQueueName: string
 bundleName: string
 ```
 
-歌单所属应用包名。
+The bundle name of application which current play list belongs to.
 
 **Type:** string
 
@@ -104,7 +104,7 @@ bundleName: string
 lastPlayedTime?: long
 ```
 
-歌单最后播放时间。
+The time when the user last played the playlist.The time format can be system, such as 1611081385000, it means 2021-01-20 02:36:25.
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：long
 

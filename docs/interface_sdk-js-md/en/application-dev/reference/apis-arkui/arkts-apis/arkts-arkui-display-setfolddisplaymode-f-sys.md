@@ -12,7 +12,7 @@ import { display } from 'kits/@kit.ArkUI';
 function setFoldDisplayMode(mode: FoldDisplayMode): void
 ```
 
-更改可折叠设备的显示模式。
+Sets the display mode of the foldable device.
 
 **Since:** 10
 
@@ -28,15 +28,15 @@ function setFoldDisplayMode(mode: FoldDisplayMode): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| mode | [FoldDisplayMode](arkts-arkui-display-folddisplaymode-e.md) | Yes | 可折叠设备的显示模式。 |
+| mode | [FoldDisplayMode](arkts-arkui-display-folddisplaymode-e.md) | Yes | Display mode. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt;2. Incorrect parameter types. |
-| 1400003 | This display manager service works abnormally. |
-| 202 | Permission verification failed. A non-system application calls a system API. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt;2. Incorrect parameter types. |
+| [1400003](../errorcode-display.md#1400003-abnormal-display-manager-service) | This display manager service works abnormally. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
 
 ## Examples
 
@@ -45,10 +45,9 @@ import { display } from '@kit.ArkUI';
 
 try {
   let mode: display.FoldDisplayMode = display.FoldDisplayMode.FOLD_DISPLAY_MODE_FULL;
-  // Set the display mode to full-screen display.
   display.setFoldDisplayMode(mode);
 } catch (exception) {
-  console.error(`Failed to change the fold display mode. Code: ${exception.code}, message: ${exception.message}`);
+  console.error(`Failed to change the fold display mode. Code: ${exception.code} , message : ${exception.message}`);
 }
 ```
 
@@ -59,7 +58,7 @@ try {
 function setFoldDisplayMode(mode: FoldDisplayMode, reason: string): void
 ```
 
-更改可折叠设备的显示模式，并指明更改原因。
+Sets the display mode of the foldable device, with the reason for the change specified.
 
 **Since:** 19
 
@@ -75,15 +74,15 @@ function setFoldDisplayMode(mode: FoldDisplayMode, reason: string): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| mode | [FoldDisplayMode](arkts-arkui-display-folddisplaymode-e.md) | Yes | 可折叠设备的显示模式。 |
-| reason | string | Yes | 更改显示模式的原因。不设置，则默认为空字符串。 |
+| mode | [FoldDisplayMode](arkts-arkui-display-folddisplaymode-e.md) | Yes | Display mode. |
+| reason | string | Yes | Reason for changing the display mode. If this parameter is not set, an empty string is used by default. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 1400003 | This display manager service works abnormally. |
-| 202 | Permission verification failed. A non-system application calls a system API. |
+| [1400003](../errorcode-display.md#1400003-abnormal-display-manager-service) | This display manager service works abnormally. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
 
 ## Examples
 
@@ -92,10 +91,9 @@ import { display } from '@kit.ArkUI';
 
 try {
   let mode: display.FoldDisplayMode = display.FoldDisplayMode.FOLD_DISPLAY_MODE_MAIN;
-  // Set the display mode to main screen display and specify the reason as "backSelfie".
   display.setFoldDisplayMode(mode, 'backSelfie');
 } catch (exception) {
-  console.error(`Failed to change the fold display mode. Code: ${exception.code}, message: ${exception.message}`);
+  console.error(`Failed to change the fold display mode. Code: ${exception}`);
 }
 ```
 

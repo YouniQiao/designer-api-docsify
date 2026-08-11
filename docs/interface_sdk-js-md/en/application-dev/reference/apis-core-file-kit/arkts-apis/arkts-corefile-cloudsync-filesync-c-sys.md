@@ -1,6 +1,6 @@
 # FileSync
 
-云盘同步对象，用于支撑文件管理器应用完成云盘文件的端云同步流程。在使用前，需要先创建FileSync实例。
+Provides APIs for the file manager application to perform device-cloud sync of the files stored in the Drive Kit.Before using the APIs of this class, you need to create a **FileSync** instance.
 
 **Since:** 12
 
@@ -22,7 +22,7 @@ import { cloudSync } from 'kits/@kit.CoreFileKit';
 constructor(bundleName: string)
 ```
 
-端云同步流程的构造函数，用于获取FileSync类的实例。
+A constructor used to create a **FileSync** instance.
 
 **Since:** 12
 
@@ -38,14 +38,14 @@ constructor(bundleName: string)
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| bundleName | string | Yes | 应用包名。 |
+| bundleName | string | Yes | Bundle name. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | The input parameter is invalid.Possible causes:1.Mandatory parameters are left unspecified; &lt;br&gt;2.Incorrect parameter types. |
-| 202 | Permission verification failed, application which is not a system application uses system API. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | The input parameter is invalid.Possible causes:1.Mandatory parameters are left unspecified; &lt;br&gt;2.Incorrect parameter types. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed, application which is not a system application uses system API. |
 
 ## Examples
 
@@ -59,7 +59,7 @@ let fileSync = new cloudSync.FileSync("com.ohos.demo")
 getUploadList(uris: Array<string>): Promise<Array<UploadProgress>>
 ```
 
-获取文件上传列表和进度信息。使用Promise异步回调。
+Query the upload state of the cloud file list.
 
 **Since:** 26.0.0
 
@@ -79,21 +79,21 @@ getUploadList(uris: Array<string>): Promise<Array<UploadProgress>>
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| uris | Array&lt;string&gt; | Yes | 待查询上传进度的文件URI数组，数组长度取值范围[1,100]。 |
+| uris | Array&lt;string&gt; | Yes | uris of queryed files. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;Array&lt;UploadProgress&gt;&gt; | Promise对象，返回上传进度信息数组。 |
+| Promise&lt;Array&lt;UploadProgress&gt;&gt; | Return Promise. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
 | 13900020 | Invalid argument. Possible causes: &lt;br&gt;1.Mandatory parameters are left unspecified. 2.The length of the input parameter exceeds the upper limit. &lt;br&gt;3.The input parameter contains an invalid uri. |
-| 201 | Permission verification failed. |
-| 202 | The caller is not a system application. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | The caller is not a system application. |
 | 13900010 | Try again. |
 
 ## pauseUpload
@@ -102,7 +102,7 @@ getUploadList(uris: Array<string>): Promise<Array<UploadProgress>>
 pauseUpload(uri: string): void
 ```
 
-暂停云文件上传。
+Pause the upload of the cloud file.
 
 **Since:** 26.0.0
 
@@ -122,7 +122,7 @@ pauseUpload(uri: string): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| uri | string | Yes | 待暂停的文件URI。 |
+| uri | string | Yes | uri of file. |
 
 **Error codes:**
 
@@ -130,8 +130,8 @@ pauseUpload(uri: string): void
 | --- | --- |
 | 13900002 | No such file or directory. |
 | 14000002 | Invalid uri. |
-| 201 | Permission verification failed. |
-| 202 | The caller is not a system application. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | The caller is not a system application. |
 | 13900010 | Try again. |
 
 ## registerUploadProgress
@@ -140,7 +140,7 @@ pauseUpload(uri: string): void
 registerUploadProgress(callback: Callback<UploadProgress>): void
 ```
 
-注册上传进度回调函数，用于监听文件上传进度变化。使用callback异步回调。
+Registers to cloud file upload progress change. This method uses a callback to get upload progress changes.
 
 **Since:** 26.0.0
 
@@ -160,15 +160,15 @@ registerUploadProgress(callback: Callback<UploadProgress>): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;UploadProgress&gt; | Yes | 回调函数，监听文件上传进度变化。当文件上传进度发生变化时触发回调，返回上传进度信息。 |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;UploadProgress&gt; | Yes | Callback function. The callback will be triggered when the upload progress changes, including state updates, processed size changes, and error occurrences. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
 | 13900020 | Invalid argument. Possible causes: &lt;br&gt;1.Mandatory parameter are left unspecified. &lt;br&gt;2.The number of instances registered at the same time exceeds the upper limit. |
-| 201 | Permission verification failed. |
-| 202 | The caller is not a system application. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | The caller is not a system application. |
 | 13900010 | Try again. |
 
 ## resumeUpload
@@ -177,7 +177,7 @@ registerUploadProgress(callback: Callback<UploadProgress>): void
 resumeUpload(uri: string): void
 ```
 
-恢复云文件上传。
+Resume the upload of the cloud file.
 
 **Since:** 26.0.0
 
@@ -197,7 +197,7 @@ resumeUpload(uri: string): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| uri | string | Yes | 待恢复上传的文件URI。 |
+| uri | string | Yes | uri of file. |
 
 **Error codes:**
 
@@ -205,8 +205,8 @@ resumeUpload(uri: string): void
 | --- | --- |
 | 13900002 | No such file or directory. |
 | 14000002 | Invalid uri. |
-| 201 | Permission verification failed. |
-| 202 | The caller is not a system application. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | The caller is not a system application. |
 | 13900010 | Try again. |
 
 ## unregisterUploadProgress
@@ -215,7 +215,7 @@ resumeUpload(uri: string): void
 unregisterUploadProgress(): void
 ```
 
-取消注册上传进度回调函数。
+Unregisters from cloud file upload progress change.
 
 **Since:** 26.0.0
 
@@ -235,7 +235,7 @@ unregisterUploadProgress(): void
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 201 | Permission verification failed. |
-| 202 | The caller is not a system application. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | The caller is not a system application. |
 | 13900010 | Try again. |
 

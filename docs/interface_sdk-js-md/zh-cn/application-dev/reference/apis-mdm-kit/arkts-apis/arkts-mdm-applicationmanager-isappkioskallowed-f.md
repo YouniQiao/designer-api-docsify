@@ -1,11 +1,5 @@
 # isAppKioskAllowed
 
-## 导入模块
-
-```TypeScript
-import { applicationManager } from 'kits/@kit.MDMKit';
-```
-
 ## isAppKioskAllowed
 
 ```TypeScript

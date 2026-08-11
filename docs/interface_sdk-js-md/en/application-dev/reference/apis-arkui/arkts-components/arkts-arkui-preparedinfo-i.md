@@ -1,10 +1,12 @@
 # PreparedInfo
 
-用于描述当前视频的时长。
+Describes the duration of the video.
 
-> **说明：**
+> **NOTE：**
 > 
-> 为规范匿名对象的定义，API 18版本修改了此处的元素定义。其中，保留了历史匿名对象的起始版本信息，会出现外层元素@since版本号高于内层元素版本号的情况，但这不影响接口的使用。
+> To standardize anonymous object definitions, the element definitions here have been revised in API version 18.
+> While historical version information is preserved for anonymous objects, there may be cases where the outer
+> element's @since version number is higher than inner elements'. This does not affect interface usability.
 
 **Since:** 18
 
@@ -20,11 +22,7 @@
 duration: number
 ```
 
-当前视频的时长。
-
-单位：s
-
-取值范围：[0,+∞)
+Duration of the video.Unit: second. The value range is all integers. Value range: [0, +∞).
 
 **Type:** number
 

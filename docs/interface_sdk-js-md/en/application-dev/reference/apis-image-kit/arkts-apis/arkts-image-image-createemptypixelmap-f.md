@@ -46,29 +46,7 @@ The following pixel format is not supported for PixelMap creation: ASTC_4x4.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 7600305 | Failed to create the PixelMap. Possible cause: Internal data is corrupted. Please check the logs for detailed information. |
-| 7600206 | Invalid parameter. |
-| 7600301 | Failed to allocate memory. Possible causes: 1. The resulting PixelMap size is too large. 2. The system is out of memory. |
-
-## Examples
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-function createEmptyPixelMap() {
-  const config: image.InitializationOptions = {
-    size: { width: 6, height: 4 },
-    pixelFormat: image.PixelMapFormat.RGBA_1010102, // Pixel format of the newly created PixelMap.
-    editable: true
-  };
-
-  try {
-    const pixelMap = image.createEmptyPixelMap(config);
-    console.info('Succeeded in creating the empty PixelMap.');
-  } catch (e) {
-    const err = e as BusinessError;
-    console.error(`Failed to create the empty PixelMap. Code: ${err.code}, message: ${err.message}`);
-  }
-}
-```
+| [7600305](../errorcode-image.md#7600305-failed-to-create-the-pixelmap) | Failed to create the PixelMap. Possible cause: Internal data is corrupted. Please check the logs for detailed information. |
+| [7600206](../errorcode-image.md#7600206-invalid-parameter) | Invalid parameter. |
+| [7600301](../errorcode-image.md#7600301-memory-allocation-failure) | Failed to allocate memory. Possible causes: 1. The resulting PixelMap size is too large. 2. The system is out of memory. |
 

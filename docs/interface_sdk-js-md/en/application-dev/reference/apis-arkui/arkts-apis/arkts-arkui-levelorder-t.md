@@ -4,7 +4,7 @@
 declare type LevelOrder = import('../api/@ohos.promptAction').LevelOrder
 ```
 
-弹窗的显示顺序。
+Defines the display order of the dialog box.
 
 **Since:** 18
 

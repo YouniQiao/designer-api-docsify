@@ -126,7 +126,7 @@ getXComponentSurfaceRotation(): Required<SurfaceRotationOptions>
 
 | 类型 | 说明 |
 | --- | --- |
-| [Required](../../apis-default/arkts-apis/arkts-required-t.md)&lt;SurfaceRotationOptions&gt; | surface旋转选项的结果。 |
+| Required&lt;SurfaceRotationOptions&gt; | surface旋转选项的结果。 |
 
 ## lockCanvas
 
@@ -267,7 +267,7 @@ setXComponentSurfaceConfig(config: SurfaceConfig):void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| config | [SurfaceConfig](../arkts-apis/arkts-arkui-xcomponent-surfaceconfig-i.md) | 是 | surface配置 |
+| config | [SurfaceConfig](arkts-arkui-surfaceconfig-i.md) | 是 | surface配置 |
 
 ## setXComponentSurfaceRect
 
@@ -350,7 +350,7 @@ setXComponentSurfaceSize(value: {
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | {     surfaceWidth: number;     surfaceHeight: number;   } | 是 | XComponent所持有的surface的宽度和高度。 |
+| value | {     surfaceWidth: number;     surfaceHeight: number;   } | 是 | XComponent所持有的surface的宽度和高度。 |
 
 ## startImageAnalyzer
 
@@ -398,9 +398,9 @@ startImageAnalyzer(config: ImageAnalyzerConfig): Promise<void>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 110001 | 不支持图像分析特性。 |
-| 110003 | 图像分析已停止。 |
-| 110002 | 图像分析正在执行中。 |
+| [110001](../arkui-ts/errorcode-image-analyzer.md#110001-ai图像分析功能不支持) | 不支持图像分析特性。 |
+| [110003](../arkui-ts/errorcode-image-analyzer.md#110003-ai图像分析已停止) | 图像分析已停止。 |
+| [110002](../arkui-ts/errorcode-image-analyzer.md#110002-ai图像分析正在进行中) | 图像分析正在执行中。 |
 
 ## stopImageAnalyzer
 

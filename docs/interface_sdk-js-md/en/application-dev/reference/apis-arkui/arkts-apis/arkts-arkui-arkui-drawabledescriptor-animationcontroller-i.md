@@ -1,6 +1,6 @@
 # AnimationController
 
-动画控制器对象。包含控制动画播放、停止、恢复、暂停和状态查询等方法。
+Define the data structure for PixelMap animations.
 
 **Since:** 23
 
@@ -22,7 +22,7 @@ import { DrawableDescriptor, AnimatedDrawableDescriptor, AnimationStopMode, Anim
 getStatus(): AnimationStatus
 ```
 
-获取当前动图播放的状态。
+Get animtion status of the current component.
 
 **Since:** 23
 
@@ -38,7 +38,7 @@ getStatus(): AnimationStatus
 
 | Type | Description |
 | --- | --- |
-| [AnimationStatus](arkts-arkui-animationstatus-e.md) | 动图的播放状态。包含4种状态：初始态、播放态、暂停态、停止态。 |
+| [AnimationStatus](arkts-arkui-animationstatus-e.md) | Return the status of animation. |
 
 ## pause
 
@@ -46,7 +46,7 @@ getStatus(): AnimationStatus
 pause(): void
 ```
 
-暂停动图的播放，保持在当前帧。
+Pause animation playback, and keep it to the current frame.
 
 **Since:** 23
 
@@ -64,7 +64,7 @@ pause(): void
 resume(): void
 ```
 
-在当前帧恢复播放动图。
+Resume animation playback from the current frame.
 
 **Since:** 23
 
@@ -82,7 +82,7 @@ resume(): void
 start(): void
 ```
 
-从首帧开始播放。
+Start animtion playback.
 
 **Since:** 23
 
@@ -100,7 +100,7 @@ start(): void
 stop(): void
 ```
 
-停止动图的播放并回到首帧。
+Stop animation playback, and reset to first frame.
 
 **Since:** 23
 

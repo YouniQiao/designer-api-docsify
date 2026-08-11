@@ -1,6 +1,6 @@
 # RunningLock
 
-阻止系统睡眠的锁。
+Defines a **RunningLock** object.
 
 **Since:** 7
 
@@ -28,7 +28,7 @@ ArkTS-Sta:
 hold(timeout: int): void
 ```
 
-锁定和持有RunningLock。
+Holds a running lock.
 
 **Since:** 9
 
@@ -44,14 +44,14 @@ hold(timeout: int): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| timeout | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | 锁定和持有RunningLock的时长，单位：毫秒。&lt;br&gt;该参数必须为数字类型：&lt;br&gt;**-1**：永久持锁，需要主动释放。&lt;br&gt;**0**：默认3s后超时释放。&lt;br&gt; **>0**：按传入值超时释放。 |
+| timeout | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | Duration for locking and holding the **RunningLock** object, in ms.&lt;br&gt;The value must be a number:&lt;br&gt;**-1**: The lock is permanently held and needs to be released automatically.&lt;br&gt;**0**: The lock is released 3 seconds after the timer expires by default.&lt;br&gt;> 0: The lock is released based on the input value after the timer expires. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1. Incorrect parameter types; |
-| 201 | If the permission is denied. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Incorrect parameter types; |
+| [201](../../errorcode-universal.md#201-permission-denied) | If the permission is denied. |
 
 ## Examples
 
@@ -90,7 +90,7 @@ class RunningLockTest {
 isHolding(): boolean
 ```
 
-查询当前RunningLock是持有状态还是释放状态。
+Checks whether this running lock is being held.
 
 **Since:** 9
 
@@ -104,7 +104,7 @@ isHolding(): boolean
 
 | Type | Description |
 | --- | --- |
-| boolean | 返回true表示当前RunningLock是持有状态，返回false表示当前RunningLock是释放状态。 |
+| boolean | The value **true** indicates that the **RunningLock** object is held; and the value **false** indicates that the **RunningLock** object is released. |
 
 ## Examples
 
@@ -139,7 +139,7 @@ class RunningLockTest {
 isUsed(): boolean
 ```
 
-查询当前RunningLock是持有状态还是释放状态。
+Checks whether this running lock is used.
 
 **Since:** 7
 
@@ -157,7 +157,7 @@ isUsed(): boolean
 
 | Type | Description |
 | --- | --- |
-| boolean | 返回true表示当前RunningLock是持有状态，返回false表示当前RunningLock是释放状态。 |
+| boolean | Returns true if the lock is held or in use; returns false if the lock has been released. |
 
 ## Examples
 
@@ -178,7 +178,7 @@ runningLock.createRunningLock('running_lock_test', runningLock.RunningLockType.B
 lock(timeout: number): void
 ```
 
-锁定和持有RunningLock。
+Locks and holds a **RunningLock** object.
 
 **Since:** 7
 
@@ -198,7 +198,7 @@ lock(timeout: number): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| timeout | number | Yes | 锁定和持有RunningLock的时长，单位：毫秒。 |
+| timeout | number | Yes | Duration for locking and holding the **RunningLock** object, in ms. |
 
 ## Examples
 
@@ -219,7 +219,7 @@ runningLock.createRunningLock('running_lock_test', runningLock.RunningLockType.B
 unhold(): void
 ```
 
-释放RunningLock锁。
+Releases this running lock.
 
 **Since:** 9
 
@@ -235,7 +235,7 @@ unhold(): void
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 201 | If the permission is denied. |
+| [201](../../errorcode-universal.md#201-permission-denied) | If the permission is denied. |
 
 ## Examples
 
@@ -274,7 +274,7 @@ class RunningLockTest {
 unlock(): void
 ```
 
-释放RunningLock锁。
+Releases this running lock.
 
 **Since:** 7
 

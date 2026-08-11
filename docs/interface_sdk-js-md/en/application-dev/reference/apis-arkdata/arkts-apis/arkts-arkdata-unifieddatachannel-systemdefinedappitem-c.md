@@ -1,6 +1,7 @@
 # SystemDefinedAppItem
 
-系统定义的桌面图标类型数据，是[SystemDefinedRecord](arkts-arkdata-unifieddatachannel-systemdefinedrecord-c.md)的子类。
+Represents the data of the home screen icon defined by the system. It is a child class of   
+[SystemDefinedRecord](arkts-arkdata-unifieddatachannel-systemdefinedrecord-c.md).
 
 **Inheritance/Implementation:** SystemDefinedAppItem extends [SystemDefinedRecord](arkts-arkdata-unifieddatachannel-systemdefinedrecord-c.md)
 
@@ -24,7 +25,7 @@ import { unifiedDataChannel } from 'kits/@kit.ArkData';
 set abilityName(value: string)
 ```
 
-图标对应的应用ability名。
+Indicates the ability name of app
 
 **Type:** string
 
@@ -46,7 +47,7 @@ set abilityName(value: string)
 set appIconId(value: string)
 ```
 
-图标的图片id。This field can be sourced from BMS or customized as needed.
+Indicates the id of app icon.This field can be sourced from BMS or customized as needed.
 
 **Type:** string
 
@@ -68,7 +69,7 @@ set appIconId(value: string)
 set appId(value: string)
 ```
 
-图标对应的应用id。
+Indicates the app id
 
 **Type:** string
 
@@ -90,7 +91,7 @@ set appId(value: string)
 set appLabelId(value: string)
 ```
 
-图标名称对应的标签id。
+Indicates the id of app label.This field can be sourced from BMS or customized as needed.
 
 **Type:** string
 
@@ -112,7 +113,7 @@ set appLabelId(value: string)
 set appName(value: string)
 ```
 
-图标对应的应用名。
+Indicates the app name
 
 **Type:** string
 
@@ -134,7 +135,7 @@ set appName(value: string)
 set bundleName(value: string)
 ```
 
-图标对应的应用bundle名。
+Indicates the bundle name of app
 
 **Type:** string
 

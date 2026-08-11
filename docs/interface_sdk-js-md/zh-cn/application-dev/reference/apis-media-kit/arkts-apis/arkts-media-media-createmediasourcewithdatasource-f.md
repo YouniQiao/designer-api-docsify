@@ -1,11 +1,5 @@
 # createMediaSourceWithDataSource
 
-## 导入模块
-
-```TypeScript
-import { media } from 'kits/@kit.MediaKit';
-```
-
 ## createMediaSourceWithDataSource
 
 ```TypeScript
@@ -61,6 +55,6 @@ let dataSrc: media.AVDataSrcDescriptor = {
     return readLen > 0 ? readLen : -1;
   }
 }
-let mediaSource : media.MediaSource | undefined =  media.createMediaSourceWithDataSource(dataSrc);
+let mediaSource : media.MediaSource | undefined = media.createMediaSourceWithDataSource(dataSrc);
 ```
 

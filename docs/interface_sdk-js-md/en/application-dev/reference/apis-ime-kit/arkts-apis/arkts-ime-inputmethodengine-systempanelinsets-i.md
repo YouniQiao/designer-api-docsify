@@ -1,6 +1,6 @@
 # SystemPanelInsets
 
-输入法软键盘相对系统面板的偏移区域。
+Defines the offset area between the input method soft keyboard and the system panel.
 
 **Since:** 21
 
@@ -22,7 +22,7 @@ import { inputMethodEngine } from 'kits/@kit.IMEKit';
 readonly bottom: int
 ```
 
-键盘区域的下边界到系统面板区域下边界的距离，单位为px，该参数为整数。
+Distance between the bottom border of the keyboard area and the bottom border of the system panel area, in px. The value is an integer.
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
@@ -40,7 +40,7 @@ readonly bottom: int
 readonly left: int
 ```
 
-键盘区域的左边界到系统面板区域左边界的距离，单位为px，该参数为整数。
+Distance between the left border of the keyboard area and the left border of the system panel area, in px. The value is an integer.
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
@@ -58,7 +58,7 @@ readonly left: int
 readonly right: int
 ```
 
-键盘区域的右边界到系统面板区域右边界的距离，单位为px，该参数为整数。
+Distance between the right border of the keyboard area and the right border of the system panel area, in px. The value is an integer.
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 

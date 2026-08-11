@@ -19,9 +19,18 @@ import { router } from 'kits/@kit.ArkUI';
 
 ## Summary
 
+### Interfaces
+
+| Name | Description |
+| --- | --- |
+| [EnableAlertOptions](arkts-arkui-router-enablealertoptions-i.md) |  |
+| [NamedRouterOptions](arkts-arkui-router-namedrouteroptions-i.md) |  |
+| [RouterOptions](arkts-arkui-router-routeroptions-i.md) |  |
+| [RouterState](arkts-arkui-router-routerstate-i.md) |  |
+
 ### Enums
 
 | Name | Description |
 | --- | --- |
-| [RouterMode](arkts-arkui-router-routermode-e.md) | 路由跳转模式。 |
+| [RouterMode](arkts-arkui-router-routermode-e.md) | Router Mode |
 

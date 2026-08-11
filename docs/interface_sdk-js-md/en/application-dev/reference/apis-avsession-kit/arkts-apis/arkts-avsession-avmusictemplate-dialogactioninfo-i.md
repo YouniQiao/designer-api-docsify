@@ -1,6 +1,6 @@
 # DialogActionInfo
 
-对话框动作信息的定义。
+The definition of dialog action result.
 
 **Since:** 23
 
@@ -22,7 +22,7 @@ import { avMusicTemplate } from 'kits/@kit.AVSessionKit';
 clickedBtnId: string
 ```
 
-用户点击的按钮的ID。
+Id of the button clicked by the user.
 
 **Type:** string
 
@@ -42,7 +42,7 @@ clickedBtnId: string
 dialogId: string
 ```
 
-对话框动作的唯一标识符。
+Unique ID of the dialog action.
 
 **Type:** string
 
@@ -62,7 +62,7 @@ dialogId: string
 isChecked: boolean
 ```
 
-对话框中的复选框是否已选中。true表示已选中，false表示未选中。无默认值。
+Is the checkbox in the pop-up window selected.
 
 **Type:** boolean
 

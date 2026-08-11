@@ -10,12 +10,6 @@
 
 **系统能力：** SystemCapability.Communication.NearLink.Base
 
-## 导入模块
-
-```TypeScript
-import { remoteDevice } from 'kits/@kit.ConnectivityKit';
-```
-
 ## getAcbState
 
 ```TypeScript
@@ -40,15 +34,15 @@ getAcbState(): AcbState
 
 | 类型 | 说明 |
 | --- | --- |
-| [AcbState](arkts-connectivity-remotedevice-acbstate-t.md) | 返回ACB连接状态。 |
+| [AcbState](arkts-connectivity-nearlinkconstant-acbstate-e.md) | 返回ACB连接状态。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 36100003 | NearLink disabled. |
-| 36100099 | Operation failed. |
-| 201 | Permission denied. |
+| [36100003](../errorcode-nearlink-service.md#36100003--星闪关闭) | NearLink disabled. |
+| [36100099](../errorcode-nearlink-service.md#36100099-操作失败) | Operation failed. |
+| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
 
 ## getConnectionState
 
@@ -74,15 +68,15 @@ getConnectionState(): ConnectionState
 
 | 类型 | 说明 |
 | --- | --- |
-| [ConnectionState](arkts-connectivity-ssap-connectionstate-t.md) | 返回连接状态。 |
+| [ConnectionState](arkts-connectivity-remotedevice-connectionstate-t.md) | 返回连接状态。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 36100003 | NearLink disabled. |
-| 36100099 | Operation failed. |
-| 201 | Permission denied. |
+| [36100003](../errorcode-nearlink-service.md#36100003--星闪关闭) | NearLink disabled. |
+| [36100099](../errorcode-nearlink-service.md#36100099-操作失败) | Operation failed. |
+| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
 
 ## getDeviceClass
 
@@ -108,15 +102,15 @@ getDeviceClass(): DeviceClass
 
 | 类型 | 说明 |
 | --- | --- |
-| [DeviceClass](arkts-connectivity-connection-deviceclass-i.md) | 星闪设备的类型。 |
+| [DeviceClass](arkts-connectivity-nearlinkconstant-deviceclass-e.md) | 星闪设备的类型。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 36100003 | NearLink disabled. |
-| 36100099 | Operation failed. |
-| 201 | Permission denied. |
+| [36100003](../errorcode-nearlink-service.md#36100003--星闪关闭) | NearLink disabled. |
+| [36100099](../errorcode-nearlink-service.md#36100099-操作失败) | Operation failed. |
+| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
 
 ## getDeviceInformation
 
@@ -148,9 +142,9 @@ getDeviceInformation(): DeviceInformation
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 36100003 | NearLink disabled. |
-| 36100099 | Operation failed. |
-| 201 | Permission denied. |
+| [36100003](../errorcode-nearlink-service.md#36100003--星闪关闭) | NearLink disabled. |
+| [36100099](../errorcode-nearlink-service.md#36100099-操作失败) | Operation failed. |
+| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
 
 ## getDeviceName
 
@@ -182,9 +176,9 @@ getDeviceName(): string
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 36100003 | NearLink disabled. |
-| 36100099 | Operation failed. |
-| 201 | Permission denied. |
+| [36100003](../errorcode-nearlink-service.md#36100003--星闪关闭) | NearLink disabled. |
+| [36100099](../errorcode-nearlink-service.md#36100099-操作失败) | Operation failed. |
+| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
 
 ## getPairingState
 
@@ -210,15 +204,15 @@ getPairingState(): PairingState
 
 | 类型 | 说明 |
 | --- | --- |
-| [PairingState](arkts-connectivity-nearlinkconstant-pairingstate-e.md) | 返回配对状态。 |
+| [PairingState](arkts-connectivity-remotedevice-pairingstate-t.md) | 返回配对状态。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 36100003 | NearLink disabled. |
-| 36100099 | Operation failed. |
-| 201 | Permission denied. |
+| [36100003](../errorcode-nearlink-service.md#36100003--星闪关闭) | NearLink disabled. |
+| [36100099](../errorcode-nearlink-service.md#36100099-操作失败) | Operation failed. |
+| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
 
 ## startPairing
 
@@ -250,7 +244,7 @@ startPairing(): Promise<void>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 36100003 | NearLink disabled. |
-| 36100099 | Operation failed. |
-| 201 | Permission denied. |
+| [36100003](../errorcode-nearlink-service.md#36100003--星闪关闭) | NearLink disabled. |
+| [36100099](../errorcode-nearlink-service.md#36100099-操作失败) | Operation failed. |
+| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
 

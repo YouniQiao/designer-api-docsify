@@ -1,11 +1,5 @@
 # onEnabledAccessibilityExtensionListChange（系统接口）
 
-## 导入模块
-
-```TypeScript
-import { config } from 'kits/@kit.AccessibilityKit';
-```
-
 ## onEnabledAccessibilityExtensionListChange
 
 ```TypeScript
@@ -36,6 +30,30 @@ Register the listener that watches for changes in the enabled status of accessib
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 201 | Permission verification failed. The application does not have the permission required to call the API. |
-| 202 | Permission verification failed. A non-system application calls a system API. |
+| [201](../../errorcode-universal.md#201-权限校验失败) | Permission verification failed. The application does not have the permission required to call the API. |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed. A non-system application calls a system API. |
+
+## 示例
+
+```TypeScript
+import { config } from '@kit.AccessibilityKit';
+
+@Entry
+@Component
+struct Index {
+  callback: () => void = this.eventCallback;
+  eventCallback(): void {
+    console.info(`enabled accessibility extension list change`);
+  }
+
+  aboutToAppear(): void {
+    config.onEnabledAccessibilityExtensionListChange(this.callback);
+  }
+
+  build() {
+    Column() {
+    }
+  }
+}
+```
 

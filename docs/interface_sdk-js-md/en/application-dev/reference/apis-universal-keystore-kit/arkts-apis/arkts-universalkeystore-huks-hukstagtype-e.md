@@ -1,6 +1,6 @@
 # HuksTagType
 
-表示Tag的数据类型。
+Enumerates the tag data types.
 
 **Since:** 8
 
@@ -16,7 +16,7 @@
 HUKS_TAG_TYPE_INVALID = 0 << 28
 ```
 
-表示非法的Tag类型。
+Invalid tag type.
 
 **Since:** 8
 
@@ -34,7 +34,7 @@ HUKS_TAG_TYPE_INVALID = 0 << 28
 HUKS_TAG_TYPE_INT = 1 << 28
 ```
 
-表示该Tag的数据类型为int类型的number。
+Number of the int type.
 
 **Since:** 8
 
@@ -52,7 +52,7 @@ HUKS_TAG_TYPE_INT = 1 << 28
 HUKS_TAG_TYPE_UINT = 2 << 28
 ```
 
-表示该Tag的数据类型为uint类型的number。
+Number of the uint type.
 
 **Since:** 8
 
@@ -70,7 +70,7 @@ HUKS_TAG_TYPE_UINT = 2 << 28
 HUKS_TAG_TYPE_ULONG = 3 << 28
 ```
 
-表示该Tag的数据类型为bigint。
+BigInt.
 
 **Since:** 8
 
@@ -88,7 +88,7 @@ HUKS_TAG_TYPE_ULONG = 3 << 28
 HUKS_TAG_TYPE_BOOL = 4 << 28
 ```
 
-表示该Tag的数据类型为boolean。
+Boolean.
 
 **Since:** 8
 
@@ -106,7 +106,7 @@ HUKS_TAG_TYPE_BOOL = 4 << 28
 HUKS_TAG_TYPE_BYTES = 5 << 28
 ```
 
-表示该Tag的数据类型为Uint8Array。
+Uint8Array.
 
 **Since:** 8
 

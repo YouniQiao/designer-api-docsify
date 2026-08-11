@@ -1,6 +1,6 @@
 # ImageContent
 
-指定图像内容。
+Specify image's content.
 
 **Since:** 23
 
@@ -16,7 +16,7 @@
 EMPTY = 0
 ```
 
-空图像。
+Make image empty.
 
 **Since:** 23
 

@@ -4,7 +4,8 @@
 export type NotificationSwitchChangedCallback = (callbackData: NotificationSwitchChangedCallbackData) => void
 ```
 
-注册由[notificationManager.setNotificationSwitch](arkts-notification-notificationmanager-setnotificationswitch-f-sys.md#setnotificationswitch)接口设置的通知开关状态变化的回调函数类型。
+Registers the callback for notification switch state changes set by  
+[notificationManager.setNotificationSwitch](arkts-notification-notificationmanager-setnotificationswitch-f-sys.md#setnotificationswitch) API.
 
 **Since:** 26.0.0
 
@@ -22,5 +23,5 @@ export type NotificationSwitchChangedCallback = (callbackData: NotificationSwitc
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callbackData | [NotificationSwitchChangedCallbackData](arkts-notification-notificationsubscriber-notificationswitchchangedcallbackdata-i-sys.md) | Yes | 回调返回由[notificationManager.setNotificationSwitch](arkts-notification-notificationmanager-setnotificationswitch-f-sys.md#setnotificationswitch) 接口设置的通知开关状态变化信息。 |
+| callbackData | [NotificationSwitchChangedCallbackData](arkts-notification-notificationsubscriber-notificationswitchchangedcallbackdata-i-sys.md) | Yes | Callback that returns the notification switch state change information set by [notificationManager.setNotificationSwitch] {@link ../@ohos.notificationManager:notificationManager.setNotificationSwitch} API. |
 

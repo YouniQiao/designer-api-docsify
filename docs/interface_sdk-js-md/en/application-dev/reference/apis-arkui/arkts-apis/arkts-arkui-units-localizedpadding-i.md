@@ -1,6 +1,6 @@
 # LocalizedPadding
 
-内边距类型，用于描述组件不同方向的内边距。
+Defines the localized padding property.
 
 **Since:** 23
 
@@ -16,7 +16,7 @@
 bottom?: LengthMetrics
 ```
 
-下内边距，组件内元素距组件底部的尺寸。
+bottom property.
 
 **Type:** [LengthMetrics](arkts-arkui-lengthmetrics-t.md)
 
@@ -36,11 +36,7 @@ bottom?: LengthMetrics
 end?: LengthMetrics
 ```
 
-右内边距，组件内元素距组件右边界的尺寸。
-
-从右至左显示语言模式下为
-
-左内边距，组件内元素距组件左边界的尺寸。
+end property.
 
 **Type:** [LengthMetrics](arkts-arkui-lengthmetrics-t.md)
 
@@ -60,11 +56,7 @@ end?: LengthMetrics
 start?: LengthMetrics
 ```
 
-左内边距，组件内元素距组件左边界的尺寸。
-
-从右至左显示语言模式下为
-
-右内边距，组件内元素距组件右边界的尺寸。
+start property.
 
 **Type:** [LengthMetrics](arkts-arkui-lengthmetrics-t.md)
 
@@ -84,7 +76,7 @@ start?: LengthMetrics
 top?: LengthMetrics
 ```
 
-上内边距，组件内元素距组件顶部的尺寸。
+top property.
 
 **Type:** [LengthMetrics](arkts-arkui-lengthmetrics-t.md)
 

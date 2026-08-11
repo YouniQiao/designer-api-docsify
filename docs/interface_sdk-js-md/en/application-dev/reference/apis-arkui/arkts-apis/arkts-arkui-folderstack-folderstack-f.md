@@ -9,7 +9,7 @@ export declare function FolderStack(
 ): FolderStackAttribute
 ```
 
-FolderStack的配置项。
+Defines FolderStack Component.
 
 **Since:** 23
 
@@ -25,7 +25,7 @@ FolderStack的配置项。
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| options | [FolderStackOptions](arkts-arkui-folderstack-folderstackoptions-i.md) | No | FolderStack的配置项。 |
+| options | [FolderStackOptions](arkts-arkui-folderstack-folderstackoptions-i.md) | No | FolderStack options. |
 | content_ | [CustomBuilder](../arkts-components/arkts-arkui-custombuilder-t.md) | No | container |
 
 **Return value:**
@@ -46,9 +46,9 @@ export declare function FolderStack(
 
 Defines FolderStack Component.
 
-**Since:** 26.0.0
+**Since:** 26.1.0
 
-**ArkTS mode:** ArkTS-Sta only, since version 26.0.0.
+**ArkTS mode:** ArkTS-Sta only, since version 26.1.0.
 
 **Decorator:** @Builder
 
@@ -63,7 +63,7 @@ Defines FolderStack Component.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | style | [CustomBuilderT](../arkts-components/arkts-arkui-custombuildert-t.md)&lt;FolderStackAttribute&gt; | Yes | the callback to set up component's attributes. |
-| content_ | [CustomBuilder](../arkts-components/arkts-arkui-custombuilder-t.md) | No | container |
+| content_ | [CustomBuilder](../arkts-components/arkts-arkui-custombuilder-t.md) | No | container. |
 
 **Return value:**
 

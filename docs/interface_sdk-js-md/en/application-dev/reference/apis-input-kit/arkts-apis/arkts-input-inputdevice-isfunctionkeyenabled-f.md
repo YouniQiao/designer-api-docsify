@@ -12,7 +12,7 @@ import { inputDevice } from 'kits/@kit.InputKit';
 function isFunctionKeyEnabled(functionKey: FunctionKey): Promise<boolean>
 ```
 
-检查功能键（如：CapsLock键）是否使能。使用Promise异步回调。
+Checks whether the specified function key (for example, **CapsLock**) is enabled. This API uses a promise to return the result.
 
 **Since:** 15
 
@@ -26,20 +26,20 @@ function isFunctionKeyEnabled(functionKey: FunctionKey): Promise<boolean>
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| functionKey | [FunctionKey](arkts-input-inputdevice-functionkey-e.md) | Yes | 需要设置的功能键类型。 |
+| functionKey | [FunctionKey](arkts-input-inputdevice-functionkey-e.md) | Yes | Type of the function key. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;boolean&gt; | Promise对象。返回查询结果，true表示功能键使能，false表示功能键未使能。 |
+| Promise&lt;boolean&gt; | Promise used to return the result. The value **true** indicates that the function key is enabled, and the value **false** indicates the opposite. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; 3. Parameter verification failed. |
-| 3900002 | There is currently no keyboard device connected. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; 3. Parameter verification failed. |
+| [3900002](../errorcode-inputdevice.md#3900002-keyboard-not-connected) | There is currently no keyboard device connected. |
 
 ## Examples
 
@@ -55,14 +55,13 @@ struct Index {
       Text()
         .onClick(() => {
           try {
-            // Query Whether a Function Key Is Enabled
             inputDevice.isFunctionKeyEnabled(inputDevice.FunctionKey.CAPS_LOCK).then((state: boolean) => {
-              console.info(`Succeeded in getting capslock state: ${JSON.stringify(state)}.`);
+              console.info(`capslock state: ${JSON.stringify(state)}`);
             }).catch((error: BusinessError) => {
-              console.error(`Failed to get capslock state, Code: ${(error as BusinessError).code}, message: ${(error as BusinessError).message}.`);
+              console.error(`Get capslock state failed, error: ${JSON.stringify(error, [`code`, `message`])}`);
             })
           } catch (error) {
-            console.error(`Failed to get capslock state, Code: ${(error as BusinessError).code}, message: ${(error as BusinessError).message}.`);
+            console.error(`Failed to get capslock state, error: ${JSON.stringify(error, [`code`, `message`])}`);
           }
         })
     }

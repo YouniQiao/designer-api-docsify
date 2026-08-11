@@ -1,6 +1,6 @@
 # CustomDialogController
 
-自定义弹窗的控制器。
+Use the CustomDialogController class to display the custom pop-up window.
 
 **Since:** 23
 
@@ -16,7 +16,7 @@
 close(): void
 ```
 
-关闭显示的自定义弹窗，若已关闭，则不生效。
+Closes the custom pop-up window. If the window is closed, the window does not take effect.
 
 **Since:** 23
 
@@ -34,18 +34,7 @@ close(): void
 constructor(value: CustomDialogControllerOptions)
 ```
 
-自定义弹窗的构造器。
-
-> **说明：**
-> 
-> 自定义弹窗的所有参数，不支持动态刷新，但可以通过设置customStyle为true，并在自定义组件上设置
-[backgroundColor](ts-universal-attributes-background.md#backgroundcolor)、  
-[backgroundBlurStyle](ts-universal-attributes-background.md#backgroundblurstyle9)、  
-[尺寸设置](ts-universal-attributes-size.md)等属性，通过属性绑定的状态变量来实现动态刷新的效果。  
-> 
-> 在CustomDialogController作为全局变量以实现全局自定义弹窗的场景下，若对controller重新赋值，则无法通过其关闭之前的弹窗。建议在重新赋值前先关闭弹窗。
-> 
-> 在自定义弹窗内拉起另一个自定义弹窗时，不建议直接关闭拉起方。
+The constructor transfers parameter settings.
 
 **Since:** 23
 
@@ -69,7 +58,7 @@ constructor(value: CustomDialogControllerOptions)
 getExternalOptions(): CustomDialogControllerExternalOptions
 ```
 
-获取自定义弹窗的外部选项。
+Obtains the external options of CustomDialogController.
 
 **Since:** 23
 
@@ -85,7 +74,7 @@ getExternalOptions(): CustomDialogControllerExternalOptions
 
 | Type | Description |
 | --- | --- |
-| [CustomDialogControllerExternalOptions](arkts-arkui-customdialogcontroller-customdialogcontrollerexternaloptions-i.md) | 返回自定义弹窗的外部选项。 |
+| [CustomDialogControllerExternalOptions](arkts-arkui-customdialogcontroller-customdialogcontrollerexternaloptions-i.md) | return the external options of dialog. |
 
 ## getState
 
@@ -93,7 +82,7 @@ getExternalOptions(): CustomDialogControllerExternalOptions
 getState(): PromptActionCommonState
 ```
 
-获取自定义弹窗的状态。
+Get the state of the custom pop-up window.
 
 **Since:** 23
 
@@ -109,7 +98,7 @@ getState(): PromptActionCommonState
 
 | Type | Description |
 | --- | --- |
-| [PromptActionCommonState](arkts-arkui-promptactioncommonstate-t.md) | 返回对应的弹窗状态。 |
+| [PromptActionCommonState](arkts-arkui-promptactioncommonstate-t.md) | return the state of dialog. |
 
 ## open
 
@@ -117,12 +106,7 @@ getState(): PromptActionCommonState
 open(): void
 ```
 
-显示自定义弹窗内容，允许多次使用。如果弹框为SubWindow模式，弹窗可以显示在主窗口之外，此时弹框不允许再弹出SubWindow弹框。
-
-> **说明：**
-> 
-> 不支持在输入法类型窗口中使用子窗（showInSubwindow为true）的CustomDialog，详情见输入法框架的约束与限制说明
-[createPanel](../../apis-ime-kit/js-apis-inputmethodengine.md#createpanel10-1)。
+Display the content of the customized pop-up window. If the content has been displayed, it does not take effect.
 
 **Since:** 23
 

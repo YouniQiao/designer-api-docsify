@@ -7,6 +7,6 @@
 
 | Name | Description |
 | --- | --- |
-| [MissionSnapshot](arkts-ability-missionsnapshot-i-sys.md) | 一个任务的任务快照对象，可以通过  [missionManager.getMissionSnapShot](arkts-ability-missionmanager-getmissionsnapshot-f-sys.md#getmissionsnapshot)获取。 |
+| [MissionSnapshot](arkts-ability-missionsnapshot-i-sys.md) | The module defines the snapshot of a mission. The snapshot can be obtained through  [missionManager.getMissionSnapShot](arkts-ability-missionmanager-getmissionsnapshot-f-sys.md#getmissionsnapshot). |
 <!--DelEnd-->
 

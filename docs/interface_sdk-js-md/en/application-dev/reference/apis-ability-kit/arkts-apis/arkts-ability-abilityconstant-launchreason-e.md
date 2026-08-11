@@ -1,6 +1,7 @@
 # LaunchReason
 
-Ability启动原因，该类型为枚举，可配合UIAbility的[onCreate(want, launchParam)](arkts-ability-app-ability-uiability-uiability-c.md#oncreate)方法根据launchParam.launchReason的不同类型执行相应操作。
+Enumerates the ability launch reasons. You can use it together with the value of **launchParam.launchReason** in  
+[onCreate(want, launchParam)](arkts-ability-app-ability-uiability-uiability-c.md#oncreate) of the UIAbility to complete different operations.
 
 **Since:** 9
 
@@ -16,7 +17,7 @@ Ability启动原因，该类型为枚举，可配合UIAbility的[onCreate(want, 
 UNKNOWN = 0
 ```
 
-未知原因。
+Unknown reason.
 
 **Since:** 9
 
@@ -36,8 +37,8 @@ UNKNOWN = 0
 START_ABILITY = 1
 ```
 
-通过  
-[startAbility](arkts-ability-uiabilitycontext-c.md#startability)接口启动Ability。
+The ability is started by calling  
+[startAbility](arkts-ability-uiabilitycontext-c.md#startability).
 
 **Since:** 9
 
@@ -57,7 +58,8 @@ START_ABILITY = 1
 CALL = 2
 ```
 
-通过[startAbilityByCall](arkts-ability-uiabilitycontext-c.md#startabilitybycall)接口启动Ability。
+The ability is started by calling  
+[startAbilityByCall](arkts-ability-uiabilitycontext-c.md#startabilitybycall).
 
 **Since:** 9
 
@@ -77,7 +79,7 @@ CALL = 2
 CONTINUATION = 3
 ```
 
-跨端迁移启动Ability。
+The ability is started by means of cross-device migration.
 
 **Since:** 9
 
@@ -97,7 +99,7 @@ CONTINUATION = 3
 APP_RECOVERY = 4
 ```
 
-设置应用恢复后，应用故障时自动恢复启动Ability。
+The ability is automatically started when the application is restored from a fault.
 
 **Since:** 9
 
@@ -117,7 +119,7 @@ APP_RECOVERY = 4
 SHARE = 5
 ```
 
-通过原子化服务分享启动Ability。
+The ability is started by means of atomic service sharing.
 
 **Since:** 10
 
@@ -137,7 +139,7 @@ SHARE = 5
 AUTO_STARTUP = 8
 ```
 
-通过设置开机自启动来启动Ability。
+The ability is automatically started upon system boot.
 
 **Since:** 11
 
@@ -155,7 +157,7 @@ AUTO_STARTUP = 8
 INSIGHT_INTENT = 9
 ```
 
-通过洞察意图来启动Ability。
+The ability is started by the InsightIntent framework..
 
 **Since:** 11
 
@@ -175,7 +177,7 @@ INSIGHT_INTENT = 9
 PREPARE_CONTINUATION = 10
 ```
 
-跨端迁移提前启动Ability。
+The ability is started in advance during cross-device migration.
 
 **Since:** 12
 
@@ -195,7 +197,7 @@ PREPARE_CONTINUATION = 10
 PRELOAD = 11
 ```
 
-表明该UIAbility是通过预加载机制启动的。
+The ability is started through preloading.
 
 **Since:** 20
 

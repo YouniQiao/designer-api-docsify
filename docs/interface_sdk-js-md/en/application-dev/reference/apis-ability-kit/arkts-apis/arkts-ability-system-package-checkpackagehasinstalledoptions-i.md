@@ -1,10 +1,10 @@
 # CheckPackageHasInstalledOptions
 
-> **说明：**
+> **NOTE：**
 > 
-> 从API version 3开始支持，从API version 9开始废弃。
+> This API has been supported since API version 3 and deprecated since API version 9.
 
-指示应用包是否已安装。
+Checks whether a bundle has been installed.
 
 **Since:** 3
 
@@ -28,7 +28,7 @@ import { CheckPackageHasInstalledResponse, CheckPackageHasInstalledOptions } fro
 complete?: () => void
 ```
 
-接口调用结束的回调函数。
+Called when API call is complete.
 
 **Since:** 3
 
@@ -46,7 +46,7 @@ complete?: () => void
 fail?: (data: any, code: number) => void
 ```
 
-接口调用失败的回调函数。
+Called when API call has failed.
 
 **Since:** 3
 
@@ -71,7 +71,7 @@ fail?: (data: any, code: number) => void
 success?: (data: CheckPackageHasInstalledResponse) => void
 ```
 
-接口调用成功的回调函数。
+Called when API call is successful.
 
 **Since:** 3
 
@@ -95,7 +95,7 @@ success?: (data: CheckPackageHasInstalledResponse) => void
 bundleName: string
 ```
 
-应用Bundle名称。
+Bundle name.
 
 **Type:** string
 

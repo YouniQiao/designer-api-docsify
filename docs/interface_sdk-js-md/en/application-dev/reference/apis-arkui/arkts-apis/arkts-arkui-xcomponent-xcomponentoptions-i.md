@@ -1,6 +1,6 @@
 # XComponentOptions
 
-定义XComponent的具体配置参数。
+Defines the xcomponent options.
 
 **Since:** 23
 
@@ -16,7 +16,7 @@
 controller: XComponentController
 ```
 
-给组件绑定一个控制器，通过控制器调用组件方法，仅类型为SURFACE或TEXTURE时有效。未设置时不绑定控制器。
+The controller of xcomponent.
 
 **Type:** [XComponentController](arkts-arkui-xcomponent-xcomponentcontroller-c.md)
 
@@ -36,7 +36,7 @@ controller: XComponentController
 imageAIOptions?: ImageAIOptions
 ```
 
-给组件设置一个AI分析选项，通过此项可配置分析类型或绑定一个分析控制器，仅类型为SURFACE或TEXTURE时有效。未设置时不配置AI分析选项，可通过enableAnalyzer属性单独启用AI分析。
+Image ai options.
 
 **Type:** [ImageAIOptions](arkts-arkui-imageaioptions-i.md)
 
@@ -56,7 +56,7 @@ imageAIOptions?: ImageAIOptions
 type: XComponentType
 ```
 
-用于指定XComponent组件类型。
+The type of xcomponent
 
 **Type:** [XComponentType](arkts-arkui-xcomponenttype-e.md)
 

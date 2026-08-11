@@ -1,10 +1,12 @@
 # ActionSheetButtonOptions
 
-弹窗中按钮的样式。
+Provides button style configuration for the dialog box.
 
-> **说明：**
+> **NOTE：**
 > 
-> 为规范匿名对象的定义，API 18版本修改了此处的元素定义。其中，保留了历史匿名对象的起始版本信息，会出现外层元素@since版本号高于内层元素版本号的情况，但这不影响接口的使用。
+> To standardize anonymous object definitions, the element definitions here have been revised in API version 18.
+> While historical version information is preserved for anonymous objects, there may be cases where the outer element
+> 's @since version number is higher than inner elements'. This does not affect interface usability.
 
 **Since:** 18
 
@@ -20,7 +22,7 @@
 action: VoidCallback
 ```
 
-Button选中时的回调。
+Callback invoked when the button is selected.
 
 **Since:** 8
 
@@ -38,9 +40,10 @@ Button选中时的回调。
 defaultFocus?: boolean
 ```
 
-设置Button是否是默认焦点，true表示Button是默认焦点，false表示Button不是默认焦点。在弹窗获焦且未进行tab键走焦时，该按钮默认响应Enter键。多重弹窗情况下，可自动获焦并连续响应。默认响应Enter键能力在defaultFocus为true时不生效。
+Whether the button is the default focus. The value **true** means that the button is the default focus, and   
+**false** means the opposite.
 
-默认值：false
+Default value: **false**
 
 **Type:** boolean
 
@@ -64,9 +67,10 @@ defaultFocus?: boolean
 enabled?: boolean
 ```
 
-点击Button是否响应，true表示Button可以响应，false表示Button不可以响应。
+Whether to respond when the button is clicked. The value **true** means to respond when the button is clicked, and   
+**false** means the opposite.
 
-默认值：true
+Default value: **true**
 
 **Type:** boolean
 
@@ -90,9 +94,9 @@ enabled?: boolean
 style?: DialogButtonStyle
 ```
 
-设置Button的风格样式。
+Button style.
 
-默认值：DialogButtonStyle.DEFAULT
+Default value: **DialogButtonStyle.DEFAULT**
 
 **Type:** [DialogButtonStyle](arkts-arkui-dialogbuttonstyle-e.md)
 
@@ -116,9 +120,9 @@ style?: DialogButtonStyle
 value: string | Resource
 ```
 
-Button文本内容。
+Button text.
 
-当文本内容过长无法显示时，用省略号代替未显示的部分。
+If the text is too long to display, it is truncated with an ellipsis (...).
 
 **Type:** string \| Resource
 

@@ -1,6 +1,6 @@
 # PreinstalledApplicationInfo (System API)
 
-预装应用的信息。
+Indicates the information of preinstalled application.
 
 **Since:** 12
 
@@ -18,7 +18,7 @@
 readonly bundleName: string
 ```
 
-应用包的名称。
+Bundle name of the application.
 
 **Type:** string
 
@@ -38,9 +38,7 @@ readonly bundleName: string
 readonly descriptionId?: long
 ```
 
-应用描述Id。
-
-**模型约束：** 此接口仅可在Stage模型下使用。
+App description ID.
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：long
 
@@ -62,7 +60,7 @@ readonly descriptionId?: long
 readonly iconId: long
 ```
 
-应用图标Id。
+Icon ID of the application.
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：long
 
@@ -82,7 +80,7 @@ readonly iconId: long
 readonly labelId: long
 ```
 
-应用标签Id。
+Label ID of the application.
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：long
 
@@ -102,7 +100,7 @@ readonly labelId: long
 readonly moduleName: string
 ```
 
-应用包的模块名，返回entry模块的moduleName。若不存在entry模块则返回feature模块的moduleName。
+Module name of the application. The value is **moduleName** configured for the entry module. If the entry module does not exist, the value is **moduleName** configured for the feature module.
 
 **Type:** string
 

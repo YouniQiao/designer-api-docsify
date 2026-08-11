@@ -12,11 +12,11 @@ import { pointer } from 'kits/@kit.InputKit';
 function setPointerColorSync(color: int): void
 ```
 
-设置鼠标光标颜色，使用同步方式进行设置。
+Sets the pointer color. This API returns the result synchronously.
 
-> **说明：**
+> **NOTE：**
 > 
-> 设置和调试时，需连接外部设备，如鼠标、蓝牙等。
+> When performing this operation, you need to connect an external device, such as a mouse or Bluetooth device.
 
 **Since:** 10
 
@@ -32,14 +32,14 @@ function setPointerColorSync(color: int): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| color | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | 鼠标光标颜色，默认为黑色：0x000000。 |
+| color | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | Pointer color. The default value is **black** (0x000000). |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; 3. Parameter verification failed. |
-| 202 | SystemAPI permission error. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; 3. Parameter verification failed. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | SystemAPI permission error. |
 
 ## Examples
 
@@ -54,11 +54,10 @@ struct Index {
       Text()
         .onClick(() => {
           try {
-            // Set the mouse pointer color synchronously.
             pointer.setPointerColorSync(0xF6C800);
-            console.info(`Succeeded in setting pointer color sync.`);
+            console.info(`setPointerColorSync success`);
           } catch (error) {
-            console.error(`Failed to set pointer color sync, Code: ${(error as BusinessError).code}, message: ${(error as BusinessError).message}.`);
+            console.error(`setPointerColorSync failed, error: ${JSON.stringify(error, [`code`, `message`])}`);
           }
         })
     }

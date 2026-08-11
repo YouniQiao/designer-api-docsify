@@ -6,7 +6,7 @@ typedef struct ArkUI_ColorAnimatableProperty* ArkUI_ColorAnimatablePropertyHandl
 
 ## Overview
 
-Handle to the ArkUI native animatable color render property.
+Defines an animatable color property pointer.
 
 **Since**: 20
 

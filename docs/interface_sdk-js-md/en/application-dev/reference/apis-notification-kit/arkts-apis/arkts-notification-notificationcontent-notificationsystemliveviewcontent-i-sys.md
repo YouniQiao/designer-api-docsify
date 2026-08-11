@@ -1,10 +1,10 @@
 # NotificationSystemLiveViewContent
 
-描述系统实况窗通知内容，用于在实况窗中展示实时状态信息。不支持三方应用直接创建该类型通知，可以由系统代理创建系统实况窗类型通知后，三方应用发布同ID的通知来更新指定内容。继承自[NotificationBasicContent](arkts-notification-notificationcontent-notificationbasiccontent-i.md)。
+Describes the system live view notification content, which is used to display real-time status information in the live view. Third-party applications are not supported to directly create this notification type. After the system proxy creates a system live view notification, a third-party application can publish a notification with the same ID to update the specified content. This API is inherited from NotificationBasicContent.
 
-> **说明：**
+> **NOTE：**
 > 
-> 实际显示效果依赖于设备能力和通知中心UI样式。
+> The actual display effect depends on the device capabilities and the notification center UI style.
 
 **Inheritance/Implementation:** NotificationSystemLiveViewContent extends [NotificationBasicContent](arkts-notification-notificationcontent-notificationbasiccontent-i.md)
 
@@ -22,7 +22,7 @@
 cardButtons?: Array<NotificationIconButton>
 ```
 
-实况窗按钮（最多支持3个）。默认为空。
+Live view buttons (a maximum of three buttons are supported). This parameter is left empty by default.
 
 **Type:** Array&lt;NotificationIconButton&gt;
 
@@ -42,7 +42,7 @@ cardButtons?: Array<NotificationIconButton>
 liveViewType?: LiveViewTypes
 ```
 
-实况窗类型。默认值为LIVE_VIEW_ACTIVITY。
+Live view types. The default value is **LIVE_VIEW_ACTIVITY**.
 
 **Type:** [LiveViewTypes](arkts-notification-notificationcontent-liveviewtypes-e-sys.md)
 

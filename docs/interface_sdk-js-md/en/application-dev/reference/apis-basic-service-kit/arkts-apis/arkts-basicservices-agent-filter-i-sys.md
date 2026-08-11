@@ -1,6 +1,6 @@
 # Filter
 
-过滤条件。
+Defines the filter criteria.
 
 **Since:** 10
 

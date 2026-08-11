@@ -1,6 +1,6 @@
 # Note
 
-联系人的备注类。
+Defines a contact's note.
 
 **Since:** 7
 
@@ -22,7 +22,7 @@ import { contact } from 'kits/@kit.ContactsKit';
 noteContent: string
 ```
 
-联系人的备注内容。
+Notes of the contact.
 
 **Type:** string
 

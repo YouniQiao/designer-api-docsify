@@ -6,16 +6,16 @@
 
 | Name | Description |
 | --- | --- |
-| [BreakPoints](arkts-arkui-gridrow-breakpoints-i.md) | 设置栅格容器组件的断点。 |
-| [GridRowColumnOption](arkts-arkui-gridrow-gridrowcolumnoption-i.md) | 栅格在不同宽度设备类型下，栅格列数。 |
-| [GridRowOptions](arkts-arkui-gridrow-gridrowoptions-i.md) | 设置栅格行布局容器的布局选项。 |
-| [GridRowSizeOption](arkts-arkui-gridrow-gridrowsizeoption-i.md) | 栅格在不同宽度设备类型下，gutter的大小。 |
-| [GutterOption](arkts-arkui-gridrow-gutteroption-i.md) | 栅格布局间距类型，用于描述栅格子组件不同方向的间距。 |
+| [BreakPoints](arkts-arkui-gridrow-breakpoints-i.md) | Defines the breakpoints of grid-row component. |
+| [GridRowColumnOption](arkts-arkui-gridrow-gridrowcolumnoption-i.md) | Defines the option in int unit of grid-container component. |
+| [GridRowOptions](arkts-arkui-gridrow-gridrowoptions-i.md) | Defines the options of grid-row component. |
+| [GridRowSizeOption](arkts-arkui-gridrow-gridrowsizeoption-i.md) | Defines the option in length unit of grid-row component. |
+| [GutterOption](arkts-arkui-gridrow-gutteroption-i.md) | Defines the gutter of grid-row component. |
 
 ### Enums
 
 | Name | Description |
 | --- | --- |
-| [BreakpointsReference](arkts-arkui-gridrow-breakpointsreference-e.md) | 设置栅格容器组件的断点参照物。 |
-| [GridRowDirection](arkts-arkui-gridrow-gridrowdirection-e.md) | 栅格元素排列方向。 |
+| [BreakpointsReference](arkts-arkui-gridrow-breakpointsreference-e.md) | Defines the breakpoint reference of grid-container component. |
+| [GridRowDirection](arkts-arkui-gridrow-gridrowdirection-e.md) | Defines the direction of grid-container component. |
 

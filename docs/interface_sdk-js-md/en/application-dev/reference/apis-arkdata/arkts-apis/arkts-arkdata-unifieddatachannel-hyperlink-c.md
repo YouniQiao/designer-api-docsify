@@ -1,6 +1,6 @@
 # Hyperlink
 
-[Text](arkts-arkdata-unifieddatachannel-text-c.md)的子类，用于描述超链接类型数据。
+Represents the hyperlink data. It is a child class of [Text](arkts-arkdata-unifieddatachannel-text-c.md).
 
 **Inheritance/Implementation:** Hyperlink extends [Text](arkts-arkdata-unifieddatachannel-text-c.md)
 
@@ -24,7 +24,7 @@ import { unifiedDataChannel } from 'kits/@kit.ArkData';
 description?: string
 ```
 
-链接内容描述，非必填字段，默认值为空字符串。
+Indicates the description of a link
 
 **Type:** string
 
@@ -46,7 +46,7 @@ description?: string
 set url(value: string)
 ```
 
-链接url。
+Indicates the url of a link
 
 **Type:** string
 

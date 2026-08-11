@@ -4,7 +4,7 @@
 export type SharedBundleInfo = _SharedBundleInfo
 ```
 
-共享包信息。
+Defines the shared bundle information.
 
 **Since:** 10
 

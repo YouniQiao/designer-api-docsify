@@ -8,7 +8,7 @@ export declare function Line(
 ): LineAttribute
 ```
 
-用于绘制直线的构造函数。
+Line is returned when the parameter is transferred.
 
 **Since:** 23
 
@@ -24,13 +24,13 @@ export declare function Line(
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| options | [LineOptions](arkts-arkui-line-lineoptions-i.md) | No | Line绘制区域。&lt;br/&gt;异常值undefined和null按照无效值处理，本次设置不生效。 |
+| options | [LineOptions](arkts-arkui-line-lineoptions-i.md) | No | The options to create a Line |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [LineAttribute](../arkts-components/arkts-arkui-line-attribute.md) | 直线的属性。 |
+| [LineAttribute](../arkts-components/arkts-arkui-line-attribute.md) | The attribute of the Line. |
 
 
 ## Line
@@ -41,11 +41,11 @@ export declare function Line(
 ): LineAttribute
 ```
 
-定义Line组件。
+Defines Line Component.
 
-**Since:** 26.0.0
+**Since:** 26.1.0
 
-**ArkTS mode:** ArkTS-Sta only, since version 26.0.0.
+**ArkTS mode:** ArkTS-Sta only, since version 26.1.0.
 
 **Decorator:** @Builder
 
@@ -59,7 +59,7 @@ export declare function Line(
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| style | [CustomBuilderT](../arkts-components/arkts-arkui-custombuildert-t.md)&lt;LineAttribute&gt; | Yes | 设置组件属性的回调。 |
+| style | [CustomBuilderT](../arkts-components/arkts-arkui-custombuildert-t.md)&lt;LineAttribute&gt; | Yes | the callback to set up component's attributes. |
 
 **Return value:**
 

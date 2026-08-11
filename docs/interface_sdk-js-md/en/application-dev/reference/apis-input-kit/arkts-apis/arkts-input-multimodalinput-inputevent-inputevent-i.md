@@ -1,6 +1,6 @@
 # InputEvent
 
-设备上报的基本事件。
+The **inputEvent** module provides the basic events reported by the device.
 
 **Since:** 9
 
@@ -22,7 +22,7 @@ import { InputEvent } from 'kits/@kit.InputKit';
 actionTime: long
 ```
 
-上报输入事件的时间，表示系统启动运行至今逝去的微秒数，单位为微秒（μs）。
+Time when an input event is reported, in microseconds (μs) since the system starts.
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：long
 
@@ -42,7 +42,7 @@ actionTime: long
 deviceId: int
 ```
 
-输入设备的唯一标识，同一个物理设备反复插拔或重启，设备ID可能会发生变化。
+Unique ID of the input device. If a physical device is repeatedly reinstalled or restarted, its ID may change.
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
@@ -62,7 +62,7 @@ deviceId: int
 id: int
 ```
 
-事件ID。
+Enumerates event IDs.
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
@@ -82,7 +82,7 @@ id: int
 screenId: int
 ```
 
-目标屏幕ID。
+Target screen ID.
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
@@ -102,7 +102,7 @@ screenId: int
 windowId: int
 ```
 
-目标窗口ID。
+Target window ID.
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 

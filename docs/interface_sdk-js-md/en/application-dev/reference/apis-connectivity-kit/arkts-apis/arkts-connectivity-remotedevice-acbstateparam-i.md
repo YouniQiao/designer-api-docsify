@@ -1,6 +1,6 @@
 # AcbStateParam
 
-ACB连接状态参数。
+ACB connection status parameter.
 
 **Since:** 26.0.0
 
@@ -22,7 +22,7 @@ import { remoteDevice } from 'kits/@kit.ConnectivityKit';
 address: string
 ```
 
-设备地址。长度必须为17，由16进制数字和冒号组成，形如 "11:22:33:AA:BB:FF"。
+Indicates the device address.The length must be 17, The value consists of hexadecimal digits and colons (:), for example, 11:22:33:AA:BB:FF.
 
 **Type:** string
 
@@ -42,7 +42,7 @@ address: string
 state: AcbState
 ```
 
-ACB连接状态
+ACB connection status.
 
 **Type:** [AcbState](arkts-connectivity-remotedevice-acbstate-t.md)
 

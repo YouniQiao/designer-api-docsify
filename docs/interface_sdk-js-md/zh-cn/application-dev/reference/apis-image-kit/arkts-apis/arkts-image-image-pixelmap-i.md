@@ -14,12 +14,6 @@ The **PixelMap** class provides APIs to read or write image data and obtain imag
 
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
-## 导入模块
-
-```TypeScript
-import { image } from 'kits/@kit.ImageKit';
-```
-
 ## applyColorSpace
 
 ```TypeScript
@@ -47,10 +41,10 @@ Performs color space conversion (CSC) on the image pixel color based on a given 
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. 3.Parameter verification failed. |
-| 62980115 | Invalid image parameter. |
-| 62980104 | Failed to initialize the internal object. |
-| 62980108 | Failed to convert the color space. |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. 3.Parameter verification failed. |
+| [62980115](../errorcode-image.md#62980115-图片无效参数) | Invalid image parameter. |
+| [62980104](../errorcode-image.md#62980104-图片初始化错误) | Failed to initialize the internal object. |
+| [62980108](../errorcode-image.md#62980108-图片颜色转换错误) | Failed to convert the color space. |
 
 ## applyColorSpace
 
@@ -84,10 +78,10 @@ Performs Color Space Converters (CSC) on the image pixel color based on a given 
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. 3.Parameter verification failed. |
-| 62980115 | Invalid image parameter. |
-| 62980104 | Failed to initialize the internal object. |
-| 62980108 | Failed to convert the color space. |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. 3.Parameter verification failed. |
+| [62980115](../errorcode-image.md#62980115-图片无效参数) | Invalid image parameter. |
+| [62980104](../errorcode-image.md#62980104-图片初始化错误) | Failed to initialize the internal object. |
+| [62980108](../errorcode-image.md#62980108-图片颜色转换错误) | Failed to convert the color space. |
 
 ## applyCrop
 
@@ -115,7 +109,7 @@ Crops the PixelMap.
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| region | [Region](../../apis-arkgraphics2d/arkts-apis/arkts-arkgraphics2d-drawing-region-c.md) | 是 | The region to crop. |
+| region | [Region](arkts-image-image-region-i.md) | 是 | The region to crop. |
 
 **返回值：**
 
@@ -127,12 +121,12 @@ Crops the PixelMap.
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 7600106 | The PixelMap has been passed to another thread. |
-| 7600105 | The PixelMap has been released. |
-| 7600201 | Unsupported operation because the PixelMap is locked. |
-| 7600104 | Failed to get image data. Possible cause: Internal data is corrupted. Please check the logs for detailed information. |
-| 7600301 | Failed to allocate memory. Possible causes: 1. Failed to process pixel data. 2. The system is out of memory. |
-| 7600204 | The specified region is invalid or out of range. |
+| [7600106](../errorcode-image.md#7600106-pixelmap已被传递至另一个线程) | The PixelMap has been passed to another thread. |
+| [7600105](../errorcode-image.md#7600105-pixelmap已被释放) | The PixelMap has been released. |
+| [7600201](../errorcode-image.md#7600201-不支持的操作) | Unsupported operation because the PixelMap is locked. |
+| [7600104](../errorcode-image.md#7600104-获取图像数据失败) | Failed to get image data. Possible cause: Internal data is corrupted. Please check the logs for detailed information. |
+| [7600301](../errorcode-image.md#7600301-申请内存失败) | Failed to allocate memory. Possible causes: 1. Failed to process pixel data. 2. The system is out of memory. |
+| [7600204](../errorcode-image.md#7600204-无效的区域) | The specified region is invalid or out of range. |
 
 ## applyCropSync
 
@@ -160,18 +154,18 @@ Crops the PixelMap.
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| region | [Region](../../apis-arkgraphics2d/arkts-apis/arkts-arkgraphics2d-drawing-region-c.md) | 是 | The region to crop. |
+| region | [Region](arkts-image-image-region-i.md) | 是 | The region to crop. |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 7600106 | The PixelMap has been passed to another thread. |
-| 7600105 | The PixelMap has been released. |
-| 7600201 | Unsupported operation because the PixelMap is locked. |
-| 7600104 | Failed to get image data. Possible cause: Internal data is corrupted. Please check the logs for detailed information. |
-| 7600301 | Failed to allocate memory. Possible causes: 1. Failed to process pixel data. 2. The system is out of memory. |
-| 7600204 | The specified region is invalid or out of range. |
+| [7600106](../errorcode-image.md#7600106-pixelmap已被传递至另一个线程) | The PixelMap has been passed to another thread. |
+| [7600105](../errorcode-image.md#7600105-pixelmap已被释放) | The PixelMap has been released. |
+| [7600201](../errorcode-image.md#7600201-不支持的操作) | Unsupported operation because the PixelMap is locked. |
+| [7600104](../errorcode-image.md#7600104-获取图像数据失败) | Failed to get image data. Possible cause: Internal data is corrupted. Please check the logs for detailed information. |
+| [7600301](../errorcode-image.md#7600301-申请内存失败) | Failed to allocate memory. Possible causes: 1. Failed to process pixel data. 2. The system is out of memory. |
+| [7600204](../errorcode-image.md#7600204-无效的区域) | The specified region is invalid or out of range. |
 
 ## applyFlip
 
@@ -212,12 +206,12 @@ Flips the PixelMap in the horizontal and/or vertical directions.
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 7600106 | The PixelMap has been passed to another thread. |
-| 7600105 | The PixelMap has been released. |
-| 7600201 | Unsupported operation because the PixelMap is locked. |
-| 7600104 | Failed to get image data. Possible cause: Internal data is corrupted. Please check the logs for detailed information. |
-| 7600206 | Invalid parameter. |
-| 7600301 | Failed to allocate memory. Possible cause: The system is out of memory. |
+| [7600106](../errorcode-image.md#7600106-pixelmap已被传递至另一个线程) | The PixelMap has been passed to another thread. |
+| [7600105](../errorcode-image.md#7600105-pixelmap已被释放) | The PixelMap has been released. |
+| [7600201](../errorcode-image.md#7600201-不支持的操作) | Unsupported operation because the PixelMap is locked. |
+| [7600104](../errorcode-image.md#7600104-获取图像数据失败) | Failed to get image data. Possible cause: Internal data is corrupted. Please check the logs for detailed information. |
+| [7600206](../errorcode-image.md#7600206-无效参数) | Invalid parameter. |
+| [7600301](../errorcode-image.md#7600301-申请内存失败) | Failed to allocate memory. Possible cause: The system is out of memory. |
 
 ## applyFlipSync
 
@@ -252,12 +246,12 @@ Flips the PixelMap in the horizontal and/or vertical directions.
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 7600106 | The PixelMap has been passed to another thread. |
-| 7600105 | The PixelMap has been released. |
-| 7600201 | Unsupported operation because the PixelMap is locked. |
-| 7600104 | Failed to get image data. Possible cause: Internal data is corrupted. Please check the logs for detailed information. |
-| 7600206 | Invalid parameter. |
-| 7600301 | Failed to allocate memory. Possible cause: The system is out of memory. |
+| [7600106](../errorcode-image.md#7600106-pixelmap已被传递至另一个线程) | The PixelMap has been passed to another thread. |
+| [7600105](../errorcode-image.md#7600105-pixelmap已被释放) | The PixelMap has been released. |
+| [7600201](../errorcode-image.md#7600201-不支持的操作) | Unsupported operation because the PixelMap is locked. |
+| [7600104](../errorcode-image.md#7600104-获取图像数据失败) | Failed to get image data. Possible cause: Internal data is corrupted. Please check the logs for detailed information. |
+| [7600206](../errorcode-image.md#7600206-无效参数) | Invalid parameter. |
+| [7600301](../errorcode-image.md#7600301-申请内存失败) | Failed to allocate memory. Possible cause: The system is out of memory. |
 
 ## applyRotate
 
@@ -305,12 +299,12 @@ Note: YUV format PixelMaps only support rotation angles that are multiples of 90
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 7600106 | The PixelMap has been passed to another thread. |
-| 7600105 | The PixelMap has been released. |
-| 7600201 | Unsupported operation because the PixelMap is locked. |
-| 7600104 | Failed to get image data. Possible cause: Internal data is corrupted. Please check the logs for detailed information. |
-| 7600206 | Invalid parameter. |
-| 7600301 | Failed to allocate memory. Possible causes: 1. The resulting PixelMap size is too large. 2. The system is out of memory. |
+| [7600106](../errorcode-image.md#7600106-pixelmap已被传递至另一个线程) | The PixelMap has been passed to another thread. |
+| [7600105](../errorcode-image.md#7600105-pixelmap已被释放) | The PixelMap has been released. |
+| [7600201](../errorcode-image.md#7600201-不支持的操作) | Unsupported operation because the PixelMap is locked. |
+| [7600104](../errorcode-image.md#7600104-获取图像数据失败) | Failed to get image data. Possible cause: Internal data is corrupted. Please check the logs for detailed information. |
+| [7600206](../errorcode-image.md#7600206-无效参数) | Invalid parameter. |
+| [7600301](../errorcode-image.md#7600301-申请内存失败) | Failed to allocate memory. Possible causes: 1. The resulting PixelMap size is too large. 2. The system is out of memory. |
 
 ## applyRotateSync
 
@@ -352,12 +346,12 @@ Note: YUV format PixelMaps only support rotation angles that are multiples of 90
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 7600106 | The PixelMap has been passed to another thread. |
-| 7600105 | The PixelMap has been released. |
-| 7600201 | Unsupported operation because the PixelMap is locked. |
-| 7600104 | Failed to get image data. Possible cause: Internal data is corrupted. Please check the logs for detailed information. |
-| 7600206 | Invalid parameter. |
-| 7600301 | Failed to allocate memory. Possible causes: 1. The resulting PixelMap size is too large. 2. The system is out of memory. |
+| [7600106](../errorcode-image.md#7600106-pixelmap已被传递至另一个线程) | The PixelMap has been passed to another thread. |
+| [7600105](../errorcode-image.md#7600105-pixelmap已被释放) | The PixelMap has been released. |
+| [7600201](../errorcode-image.md#7600201-不支持的操作) | Unsupported operation because the PixelMap is locked. |
+| [7600104](../errorcode-image.md#7600104-获取图像数据失败) | Failed to get image data. Possible cause: Internal data is corrupted. Please check the logs for detailed information. |
+| [7600206](../errorcode-image.md#7600206-无效参数) | Invalid parameter. |
+| [7600301](../errorcode-image.md#7600301-申请内存失败) | Failed to allocate memory. Possible causes: 1. The resulting PixelMap size is too large. 2. The system is out of memory. |
 
 ## applyScale
 
@@ -405,12 +399,12 @@ Scales the PixelMap in the horizontal and/or vertical dimensions.
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 7600106 | The PixelMap has been passed to another thread. |
-| 7600105 | The PixelMap has been released. |
-| 7600201 | Unsupported operation because the PixelMap is locked. |
-| 7600104 | Failed to get image data. Possible cause: Internal data is corrupted. Please check the logs for detailed information. |
-| 7600206 | Invalid parameter. |
-| 7600301 | Failed to allocate memory. Possible causes: 1. The resulting PixelMap size is too large. 2. The system is out of memory. |
+| [7600106](../errorcode-image.md#7600106-pixelmap已被传递至另一个线程) | The PixelMap has been passed to another thread. |
+| [7600105](../errorcode-image.md#7600105-pixelmap已被释放) | The PixelMap has been released. |
+| [7600201](../errorcode-image.md#7600201-不支持的操作) | Unsupported operation because the PixelMap is locked. |
+| [7600104](../errorcode-image.md#7600104-获取图像数据失败) | Failed to get image data. Possible cause: Internal data is corrupted. Please check the logs for detailed information. |
+| [7600206](../errorcode-image.md#7600206-无效参数) | Invalid parameter. |
+| [7600301](../errorcode-image.md#7600301-申请内存失败) | Failed to allocate memory. Possible causes: 1. The resulting PixelMap size is too large. 2. The system is out of memory. |
 
 ## applyScaleSync
 
@@ -452,12 +446,12 @@ Scales the PixelMap in the horizontal and/or vertical dimensions.
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 7600106 | The PixelMap has been passed to another thread. |
-| 7600105 | The PixelMap has been released. |
-| 7600201 | Unsupported operation because the PixelMap is locked. |
-| 7600104 | Failed to get image data. Possible cause: Internal data is corrupted. Please check the logs for detailed information. |
-| 7600206 | Invalid parameter. |
-| 7600301 | Failed to allocate memory. Possible causes: 1. The resulting PixelMap size is too large. 2. The system is out of memory. |
+| [7600106](../errorcode-image.md#7600106-pixelmap已被传递至另一个线程) | The PixelMap has been passed to another thread. |
+| [7600105](../errorcode-image.md#7600105-pixelmap已被释放) | The PixelMap has been released. |
+| [7600201](../errorcode-image.md#7600201-不支持的操作) | Unsupported operation because the PixelMap is locked. |
+| [7600104](../errorcode-image.md#7600104-获取图像数据失败) | Failed to get image data. Possible cause: Internal data is corrupted. Please check the logs for detailed information. |
+| [7600206](../errorcode-image.md#7600206-无效参数) | Invalid parameter. |
+| [7600301](../errorcode-image.md#7600301-申请内存失败) | Failed to allocate memory. Possible causes: 1. The resulting PixelMap size is too large. 2. The system is out of memory. |
 
 ## applyTranslate
 
@@ -504,12 +498,12 @@ Repositions the PixelMap in the horizontal and/or vertical directions.
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 7600106 | The PixelMap has been passed to another thread. |
-| 7600105 | The PixelMap has been released. |
-| 7600201 | Unsupported operation because the PixelMap is locked. |
-| 7600104 | Failed to get image data. Possible cause: Internal data is corrupted. Please check the logs for detailed information. |
-| 7600206 | Invalid parameter. |
-| 7600301 | Failed to allocate memory. Possible causes: 1. The resulting PixelMap size is too large. 2. The system is out of memory. |
+| [7600106](../errorcode-image.md#7600106-pixelmap已被传递至另一个线程) | The PixelMap has been passed to another thread. |
+| [7600105](../errorcode-image.md#7600105-pixelmap已被释放) | The PixelMap has been released. |
+| [7600201](../errorcode-image.md#7600201-不支持的操作) | Unsupported operation because the PixelMap is locked. |
+| [7600104](../errorcode-image.md#7600104-获取图像数据失败) | Failed to get image data. Possible cause: Internal data is corrupted. Please check the logs for detailed information. |
+| [7600206](../errorcode-image.md#7600206-无效参数) | Invalid parameter. |
+| [7600301](../errorcode-image.md#7600301-申请内存失败) | Failed to allocate memory. Possible causes: 1. The resulting PixelMap size is too large. 2. The system is out of memory. |
 
 ## applyTranslateSync
 
@@ -550,12 +544,12 @@ Repositions the PixelMap in the horizontal and/or vertical directions.
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 7600106 | The PixelMap has been passed to another thread. |
-| 7600105 | The PixelMap has been released. |
-| 7600201 | Unsupported operation because the PixelMap is locked. |
-| 7600104 | Failed to get image data. Possible cause: Internal data is corrupted. Please check the logs for detailed information. |
-| 7600206 | Invalid parameter. |
-| 7600301 | Failed to allocate memory. Possible causes: 1. The resulting PixelMap size is too large. 2. The system is out of memory. |
+| [7600106](../errorcode-image.md#7600106-pixelmap已被传递至另一个线程) | The PixelMap has been passed to another thread. |
+| [7600105](../errorcode-image.md#7600105-pixelmap已被释放) | The PixelMap has been released. |
+| [7600201](../errorcode-image.md#7600201-不支持的操作) | Unsupported operation because the PixelMap is locked. |
+| [7600104](../errorcode-image.md#7600104-获取图像数据失败) | Failed to get image data. Possible cause: Internal data is corrupted. Please check the logs for detailed information. |
+| [7600206](../errorcode-image.md#7600206-无效参数) | Invalid parameter. |
+| [7600301](../errorcode-image.md#7600301-申请内存失败) | Failed to allocate memory. Possible causes: 1. The resulting PixelMap size is too large. 2. The system is out of memory. |
 
 ## clone
 
@@ -577,17 +571,17 @@ Copies this PixelMap object. This API uses a promise to return the result.
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;[PixelMap](arkts-image-image-pixelmap-i.md)&gt; | Promise used to return the PixelMap object. |
+| Promise&lt;PixelMap&gt; | Promise used to return the PixelMap object. |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 501 | Resource unavailable. |
-| 62980103 | Image YUV And ASTC types are not supported. |
-| 62980102 | Image malloc abnormal. This status code is thrown when an error occurs during the process of copying data. |
-| 62980104 | Image initialization abnormal. This status code is thrown when an error occurs during the process of creating empty pixelmap. |
-| 62980106 | The image data is too large. This status code is thrown when an error occurs during the process of checking size. |
+| [501](../errorcode-image.md#501-无法调用接口) | Resource unavailable. |
+| [62980103](../errorcode-image.md#62980103-图片类型不支持) | Image YUV And ASTC types are not supported. |
+| [62980102](../errorcode-image.md#62980102-图片分配内存错误) | Image malloc abnormal. This status code is thrown when an error occurs during the process of copying data. |
+| [62980104](../errorcode-image.md#62980104-图片初始化错误) | Image initialization abnormal. This status code is thrown when an error occurs during the process of creating empty pixelmap. |
+| [62980106](../errorcode-image.md#62980106-图片数据太大) | The image data is too large. This status code is thrown when an error occurs during the process of checking size. |
 
 ## cloneSync
 
@@ -609,17 +603,17 @@ Copies this PixelMap object. This API returns the result synchronously.
 
 | 类型 | 说明 |
 | --- | --- |
-| [PixelMap](arkts-image-image-pixelmap-i.md) | PixelMap object. If the operation fails, an error is thrown. |
+| [PixelMap](../../apis-arkui/arkts-apis/arkts-arkui-pixelmap-t.md) | PixelMap object. If the operation fails, an error is thrown. |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 501 | Resource unavailable. |
-| 62980103 | Image YUV And ASTC types are not supported. |
-| 62980102 | Image malloc abnormal. This status code is thrown when an error occurs during the process of copying data. |
-| 62980104 | Image initialization abnormal. This status code is thrown when an error occurs during the process of creating empty pixelmap. |
-| 62980106 | The image data is too large. This status code is thrown when an error occurs during the process of checking size. |
+| [501](../errorcode-image.md#501-无法调用接口) | Resource unavailable. |
+| [62980103](../errorcode-image.md#62980103-图片类型不支持) | Image YUV And ASTC types are not supported. |
+| [62980102](../errorcode-image.md#62980102-图片分配内存错误) | Image malloc abnormal. This status code is thrown when an error occurs during the process of copying data. |
+| [62980104](../errorcode-image.md#62980104-图片初始化错误) | Image initialization abnormal. This status code is thrown when an error occurs during the process of creating empty pixelmap. |
+| [62980106](../errorcode-image.md#62980106-图片数据太大) | The image data is too large. This status code is thrown when an error occurs during the process of checking size. |
 
 ## convertPixelFormat
 
@@ -641,7 +635,7 @@ The method is used for the transformation of the image formats. Pixel data will 
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| targetPixelFormat | [PixelMapFormat](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-multimedia-movingphotoview-pixelmapformat-e.md) | 是 | The pixel format for pixelmap conversion. |
+| targetPixelFormat | [PixelMapFormat](arkts-image-image-pixelmapformat-e.md) | 是 | The pixel format for pixelmap conversion. |
 
 **返回值：**
 
@@ -653,11 +647,11 @@ The method is used for the transformation of the image formats. Pixel data will 
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 62980115 | Invalid input parameter. |
-| 62980274 | The conversion failed. |
-| 62980178 | Failed to create the pixelmap. |
-| 62980276 | The type to be converted is an unsupported target pixel format. |
-| 62980111 | The image source data is incomplete. |
+| [62980115](../errorcode-image.md#62980115-图片无效参数) | Invalid input parameter. |
+| [62980274](../errorcode-image.md#62980274-图片转换失败) | The conversion failed. |
+| [62980178](../errorcode-image.md#62980178-pixelmap创建失败) | Failed to create the pixelmap. |
+| [62980276](../errorcode-image.md#62980276-不支持图片转换目标类型) | The type to be converted is an unsupported target pixel format. |
+| [62980111](../errorcode-image.md#62980111-图片源数据不完整) | The image source data is incomplete. |
 
 ## createAlphaPixelmap
 
@@ -685,7 +679,7 @@ Starting from API 26.0.0, it is recommended to use {@link extractAlphaPixelMap} 
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;[PixelMap](arkts-image-image-pixelmap-i.md)&gt; | Promise used to return the PixelMap object. |
+| Promise&lt;PixelMap&gt; | Promise used to return the PixelMap object. |
 
 ## createAlphaPixelmap
 
@@ -713,7 +707,7 @@ Starting from API 26.0.0, it is recommended to use {@link extractAlphaPixelMap} 
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[PixelMap](arkts-image-image-pixelmap-i.md)&gt; | 是 | Callback used to return the result. If the operation is successful, **err** is undefined and **data** is the PixelMap object obtained; otherwise, **err** is an error object. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;PixelMap&gt; | 是 | Callback used to return the result. If the operation is successful, **err** is undefined and **data** is the PixelMap object obtained; otherwise, **err** is an error object. |
 
 ## createAlphaPixelmapSync
 
@@ -739,14 +733,14 @@ Starting from API 26.0.0, it is recommended to use {@link extractAlphaPixelMapSy
 
 | 类型 | 说明 |
 | --- | --- |
-| [PixelMap](arkts-image-image-pixelmap-i.md) | PixelMap object. If the operation fails, an error is thrown. |
+| [PixelMap](../../apis-arkui/arkts-apis/arkts-arkui-pixelmap-t.md) | PixelMap object. If the operation fails, an error is thrown. |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1.Parameter verification failed. |
-| 501 | Resource Unavailable. |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1.Parameter verification failed. |
+| [501](../errorcode-image.md#501-无法调用接口) | Resource Unavailable. |
 
 ## createCroppedAndScaledPixelMap
 
@@ -774,7 +768,7 @@ Creates an image that has been cropped and resized based on the specified croppi
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| region | [Region](../../apis-arkgraphics2d/arkts-apis/arkts-arkgraphics2d-drawing-region-c.md) | 是 | Area to crop. It must be within the original image's dimension (in pixels). |
+| region | [Region](arkts-image-image-region-i.md) | 是 | Area to crop. It must be within the original image's dimension (in pixels). |
 | x | ArkTS-Dyn: number  <br>ArkTS-Sta：double | 是 | Scale factor of the width. It must not be **0**. |
 | y | ArkTS-Dyn: number  <br>ArkTS-Sta：double | 是 | Scale factor of the height. It must not be **0**. |
 | level | [AntiAliasingLevel](arkts-image-image-antialiasinglevel-e.md) | 否 | Anti-aliasing level. Default value: **NONE**. |
@@ -783,16 +777,16 @@ Creates an image that has been cropped and resized based on the specified croppi
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;[PixelMap](arkts-image-image-pixelmap-i.md)&gt; | Promise used to return the PixelMap object. |
+| Promise&lt;PixelMap&gt; | Promise used to return the PixelMap object. |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 7600201 | The PixelMap has been released. |
-| 7600205 | Unsupported memory format or pixel format. |
-| 7600301 | Memory alloc failed. |
-| 7600204 | Invalid region. |
+| [7600201](../errorcode-image.md#7600201-不支持的操作) | The PixelMap has been released. |
+| [7600205](../errorcode-image.md#7600205-不支持的内存格式或像素格式) | Unsupported memory format or pixel format. |
+| [7600301](../errorcode-image.md#7600301-申请内存失败) | Memory alloc failed. |
+| [7600204](../errorcode-image.md#7600204-无效的区域) | Invalid region. |
 
 ## createCroppedAndScaledPixelMapSync
 
@@ -820,7 +814,7 @@ Creates an image that has been cropped and resized based on the specified croppi
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| region | [Region](../../apis-arkgraphics2d/arkts-apis/arkts-arkgraphics2d-drawing-region-c.md) | 是 | Area to crop. It must be within the original image's dimension (in pixels). |
+| region | [Region](arkts-image-image-region-i.md) | 是 | Area to crop. It must be within the original image's dimension (in pixels). |
 | x | ArkTS-Dyn: number  <br>ArkTS-Sta：double | 是 | Scale factor of the width. It must not be **0**. |
 | y | ArkTS-Dyn: number  <br>ArkTS-Sta：double | 是 | Scale factor of the height. It must not be **0**. |
 | level | [AntiAliasingLevel](arkts-image-image-antialiasinglevel-e.md) | 否 | Anti-aliasing level. Default value: **NONE**. |
@@ -829,16 +823,16 @@ Creates an image that has been cropped and resized based on the specified croppi
 
 | 类型 | 说明 |
 | --- | --- |
-| [PixelMap](arkts-image-image-pixelmap-i.md) | PixelMap object. If the operation fails, an error is thrown. |
+| [PixelMap](../../apis-arkui/arkts-apis/arkts-arkui-pixelmap-t.md) | PixelMap object. If the operation fails, an error is thrown. |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 7600201 | The PixelMap has been released. |
-| 7600205 | Unsupported memory format or pixel format. |
-| 7600301 | Memory alloc failed. |
-| 7600204 | Invalid region. |
+| [7600201](../errorcode-image.md#7600201-不支持的操作) | The PixelMap has been released. |
+| [7600205](../errorcode-image.md#7600205-不支持的内存格式或像素格式) | Unsupported memory format or pixel format. |
+| [7600301](../errorcode-image.md#7600301-申请内存失败) | Memory alloc failed. |
+| [7600204](../errorcode-image.md#7600204-无效的区域) | Invalid region. |
 
 ## createScaledPixelMap
 
@@ -874,14 +868,14 @@ Creates an image that has been resized based on the specified anti-aliasing leve
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;[PixelMap](arkts-image-image-pixelmap-i.md)&gt; | Promise used to return the PixelMap object. |
+| Promise&lt;PixelMap&gt; | Promise used to return the PixelMap object. |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. 3.Parameter verification failed. |
-| 501 | Resource Unavailable. |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. 3.Parameter verification failed. |
+| [501](../errorcode-image.md#501-无法调用接口) | Resource Unavailable. |
 
 ## createScaledPixelMapSync
 
@@ -917,14 +911,14 @@ Creates an image that has been resized based on the specified anti-aliasing leve
 
 | 类型 | 说明 |
 | --- | --- |
-| [PixelMap](arkts-image-image-pixelmap-i.md) | PixelMap object. If the operation fails, an error is thrown. |
+| [PixelMap](../../apis-arkui/arkts-apis/arkts-arkui-pixelmap-t.md) | PixelMap object. If the operation fails, an error is thrown. |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. 3.Parameter verification failed. |
-| 501 | Resource Unavailable. |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. 3.Parameter verification failed. |
+| [501](../errorcode-image.md#501-无法调用接口) | Resource Unavailable. |
 
 ## crop
 
@@ -952,7 +946,7 @@ Starting from API 26.0.0, it is recommended to use {@link applyCrop} instead for
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| region | [Region](../../apis-arkgraphics2d/arkts-apis/arkts-arkgraphics2d-drawing-region-c.md) | 是 | Size of the image after cropping. The value cannot exceed the width or height of the image. |
+| region | [Region](arkts-image-image-region-i.md) | 是 | Size of the image after cropping. The value cannot exceed the width or height of the image. |
 | callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | Callback used to return the result. If the operation is successful, **err** is **undefined**; otherwise, **err** is an error object. |
 
 ## crop
@@ -981,7 +975,7 @@ Starting from API 26.0.0, it is recommended to use {@link applyCrop} instead for
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| region | [Region](../../apis-arkgraphics2d/arkts-apis/arkts-arkgraphics2d-drawing-region-c.md) | 是 | Size of the image after cropping. The value cannot exceed the width or height of the image. |
+| region | [Region](arkts-image-image-region-i.md) | 是 | Size of the image after cropping. The value cannot exceed the width or height of the image. |
 
 **返回值：**
 
@@ -1013,14 +1007,14 @@ Starting from API 26.0.0, it is recommended to use {@link applyCropSync} instead
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| region | [Region](../../apis-arkgraphics2d/arkts-apis/arkts-arkgraphics2d-drawing-region-c.md) | 是 | Size of the image after cropping. The value cannot exceed the width or height of the image. |
+| region | [Region](arkts-image-image-region-i.md) | 是 | Size of the image after cropping. The value cannot exceed the width or height of the image. |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. 3.Parameter verification failed. |
-| 501 | Resource Unavailable. |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. 3.Parameter verification failed. |
+| [501](../errorcode-image.md#501-无法调用接口) | Resource Unavailable. |
 
 ## extractAlphaPixelMap
 
@@ -1048,17 +1042,17 @@ Extracts the alpha channel from the current PixelMap to create a new ALPHA_U8 fo
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;[PixelMap](arkts-image-image-pixelmap-i.md)&gt; | A Promise of the new ALPHA_U8 format PixelMap. |
+| Promise&lt;PixelMap&gt; | A Promise of the new ALPHA_U8 format PixelMap. |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 7600306 | Failed to convert the data. Possible causes: 1. Failed to perform pixel format conversion. 2. The system is out of memory. |
-| 7600305 | Failed to create the PixelMap. Possible cause: Current PixelMap data is corrupted. |
-| 7600106 | The current PixelMap has been passed across threads. |
-| 7600105 | The current PixelMap has been released. |
-| 7600104 | Failed to get image data. Possible cause: Internal data is corrupted. Please check the logs for detailed information. |
+| [7600306](../errorcode-image.md#7600306-数据转换失败) | Failed to convert the data. Possible causes: 1. Failed to perform pixel format conversion. 2. The system is out of memory. |
+| [7600305](../errorcode-image.md#7600305-创建pixelmap失败) | Failed to create the PixelMap. Possible cause: Current PixelMap data is corrupted. |
+| [7600106](../errorcode-image.md#7600106-pixelmap已被传递至另一个线程) | The current PixelMap has been passed across threads. |
+| [7600105](../errorcode-image.md#7600105-pixelmap已被释放) | The current PixelMap has been released. |
+| [7600104](../errorcode-image.md#7600104-获取图像数据失败) | Failed to get image data. Possible cause: Internal data is corrupted. Please check the logs for detailed information. |
 
 ## extractAlphaPixelMapSync
 
@@ -1086,17 +1080,17 @@ Extracts the alpha channel from the current PixelMap to create a new ALPHA_U8 fo
 
 | 类型 | 说明 |
 | --- | --- |
-| [PixelMap](arkts-image-image-pixelmap-i.md) | A new ALPHA_U8 format PixelMap. |
+| [PixelMap](../../apis-arkui/arkts-apis/arkts-arkui-pixelmap-t.md) | A new ALPHA_U8 format PixelMap. |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 7600306 | Failed to convert the data. Possible causes: 1. Failed to perform pixel format conversion. 2. The system is out of memory. |
-| 7600305 | Failed to create the PixelMap. Possible cause: Current PixelMap data is corrupted. |
-| 7600106 | The current PixelMap has been passed across threads. |
-| 7600105 | The current PixelMap has been released. |
-| 7600104 | Failed to get image data. Possible cause: Internal data is corrupted. Please check the logs for detailed information. |
+| [7600306](../errorcode-image.md#7600306-数据转换失败) | Failed to convert the data. Possible causes: 1. Failed to perform pixel format conversion. 2. The system is out of memory. |
+| [7600305](../errorcode-image.md#7600305-创建pixelmap失败) | Failed to create the PixelMap. Possible cause: Current PixelMap data is corrupted. |
+| [7600106](../errorcode-image.md#7600106-pixelmap已被传递至另一个线程) | The current PixelMap has been passed across threads. |
+| [7600105](../errorcode-image.md#7600105-pixelmap已被释放) | The current PixelMap has been released. |
+| [7600104](../errorcode-image.md#7600104-获取图像数据失败) | Failed to get image data. Possible cause: Internal data is corrupted. Please check the logs for detailed information. |
 
 ## flip
 
@@ -1194,8 +1188,8 @@ Starting from API 26.0.0, it is recommended to use {@link applyFlipSync} instead
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. 3.Parameter verification failed. |
-| 501 | Resource Unavailable. |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. 3.Parameter verification failed. |
+| [501](../errorcode-image.md#501-无法调用接口) | Resource Unavailable. |
 
 ## getBytesNumberPerRow
 
@@ -1255,9 +1249,9 @@ Obtains the color space of this image.
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 62980115 | Invalid image parameter. |
-| 62980101 | The image data is abnormal. |
-| 62980103 | The image data is not supported. |
+| [62980115](../errorcode-image.md#62980115-图片无效参数) | Invalid image parameter. |
+| [62980101](../errorcode-image.md#62980101-图片输入数据错误) | The image data is abnormal. |
+| [62980103](../errorcode-image.md#62980103-图片类型不支持) | The image data is not supported. |
 
 ## getDensity
 
@@ -1373,7 +1367,7 @@ Obtains the image information. This API returns the result synchronously.
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 501 | Resource Unavailable. |
+| [501](../errorcode-image.md#501-无法调用接口) | Resource Unavailable. |
 
 ## getMetadata
 
@@ -1407,10 +1401,10 @@ Obtains the value of the metadata with a given key in this PixelMap.
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. 3.Parameter verification failed. |
-| 501 | Resource unavailable. |
-| 62980173 | The DMA memory does not exist. |
-| 62980302 | Memory copy failed. Possibly caused by invalid metadata value. |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. 3.Parameter verification failed. |
+| [501](../errorcode-image.md#501-无法调用接口) | Resource unavailable. |
+| [62980173](../errorcode-image.md#62980173-dma内存空间错误) | The DMA memory does not exist. |
+| [62980302](../errorcode-image.md#62980302-内存拷贝失败) | Memory copy failed. Possibly caused by invalid metadata value. |
 
 ## getPixelBytesNumber
 
@@ -1476,7 +1470,7 @@ Obtains the unique ID of this PixelMap.
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 7600201 | The PixelMap has been released. |
+| [7600201](../errorcode-image.md#7600201-不支持的操作) | The PixelMap has been released. |
 
 ## isReleased
 
@@ -1531,8 +1525,8 @@ Marshals this PixelMap object and writes it to a MessageSequence object.
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 62980097 | IPC error. Possible cause: 1.IPC communication failed. 2. Image upload exception. 3. Decode process exception. 4. Insufficient memory. |
-| 62980115 | Invalid image parameter. |
+| [62980097](../errorcode-image.md#62980097-pixelmap序列化传输失败) | IPC error. Possible cause: 1.IPC communication failed. 2. Image upload exception. 3. Decode process exception. 4. Insufficient memory. |
+| [62980115](../errorcode-image.md#62980115-图片无效参数) | Invalid image parameter. |
 
 ## opacity
 
@@ -1645,8 +1639,8 @@ Starting from API 26.0.0, it is recommended to use {@link setOpacitySync} instea
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. 3.Parameter verification failed. |
-| 501 | Resource Unavailable. |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. 3.Parameter verification failed. |
+| [501](../errorcode-image.md#501-无法调用接口) | Resource Unavailable. |
 
 ## readAllPixelsToBuffer
 
@@ -1686,11 +1680,11 @@ Reads all the pixel data from the PixelMap and writes the data to a buffer.The r
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 7600106 | The PixelMap has been passed to another thread. |
-| 7600105 | The PixelMap has been released. |
-| 7600104 | Failed to get image data. Possible cause: Internal data is corrupted. Please check the logs for detailed information. |
-| 7600206 | Invalid parameter. Possible cause: Size of the buffer is too small. |
-| 7600302 | Failed to copy the memory. |
+| [7600106](../errorcode-image.md#7600106-pixelmap已被传递至另一个线程) | The PixelMap has been passed to another thread. |
+| [7600105](../errorcode-image.md#7600105-pixelmap已被释放) | The PixelMap has been released. |
+| [7600104](../errorcode-image.md#7600104-获取图像数据失败) | Failed to get image data. Possible cause: Internal data is corrupted. Please check the logs for detailed information. |
+| [7600206](../errorcode-image.md#7600206-无效参数) | Invalid parameter. Possible cause: Size of the buffer is too small. |
+| [7600302](../errorcode-image.md#7600302-内存拷贝失败) | Failed to copy the memory. |
 
 ## readAllPixelsToBufferSync
 
@@ -1724,11 +1718,11 @@ Reads all the pixel data from the PixelMap and writes the data to a buffer.The r
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 7600106 | The PixelMap has been passed to another thread. |
-| 7600105 | The PixelMap has been released. |
-| 7600104 | Failed to get image data. Possible cause: Internal data is corrupted. Please check the logs for detailed information. |
-| 7600206 | Invalid parameter. Possible cause: Size of the buffer is too small. |
-| 7600302 | Failed to copy the memory. |
+| [7600106](../errorcode-image.md#7600106-pixelmap已被传递至另一个线程) | The PixelMap has been passed to another thread. |
+| [7600105](../errorcode-image.md#7600105-pixelmap已被释放) | The PixelMap has been released. |
+| [7600104](../errorcode-image.md#7600104-获取图像数据失败) | Failed to get image data. Possible cause: Internal data is corrupted. Please check the logs for detailed information. |
+| [7600206](../errorcode-image.md#7600206-无效参数) | Invalid parameter. Possible cause: Size of the buffer is too small. |
+| [7600302](../errorcode-image.md#7600302-内存拷贝失败) | Failed to copy the memory. |
 
 ## readPixels
 
@@ -1826,8 +1820,8 @@ Starting from API 26.0.0, it is recommended to use {@link readPixelsToAreaSync} 
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. 3.Parameter verification failed. |
-| 501 | Resource Unavailable. |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. 3.Parameter verification failed. |
+| [501](../errorcode-image.md#501-无法调用接口) | Resource Unavailable. |
 
 ## readPixelsToArea
 
@@ -1867,11 +1861,11 @@ Reads pixel data from a certain area of the PixelMap to a buffer. The resulting 
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 7600106 | The PixelMap has been passed to another thread. |
-| 7600105 | The PixelMap has been released. |
-| 7600104 | Failed to get image data. Possible cause: Internal data is corrupted. Please check the logs for detailed information. |
-| 7600206 | Invalid parameter. Possible causes: 1. PositionArea.pixels is too small. 2. PositionArea.region is out of range. |
-| 7600302 | Failed to copy the memory. |
+| [7600106](../errorcode-image.md#7600106-pixelmap已被传递至另一个线程) | The PixelMap has been passed to another thread. |
+| [7600105](../errorcode-image.md#7600105-pixelmap已被释放) | The PixelMap has been released. |
+| [7600104](../errorcode-image.md#7600104-获取图像数据失败) | Failed to get image data. Possible cause: Internal data is corrupted. Please check the logs for detailed information. |
+| [7600206](../errorcode-image.md#7600206-无效参数) | Invalid parameter. Possible causes: 1. PositionArea.pixels is too small. 2. PositionArea.region is out of range. |
+| [7600302](../errorcode-image.md#7600302-内存拷贝失败) | Failed to copy the memory. |
 
 ## readPixelsToAreaSync
 
@@ -1905,11 +1899,11 @@ Reads pixel data from a certain area of the PixelMap to a buffer. The resulting 
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 7600106 | The PixelMap has been passed to another thread. |
-| 7600105 | The PixelMap has been released. |
-| 7600104 | Failed to get image data. Possible cause: Internal data is corrupted. Please check the logs for detailed information. |
-| 7600206 | Invalid parameter. Possible causes: 1. PositionArea.pixels is too small. 2. PositionArea.region is out of range. |
-| 7600302 | Failed to copy the memory. |
+| [7600106](../errorcode-image.md#7600106-pixelmap已被传递至另一个线程) | The PixelMap has been passed to another thread. |
+| [7600105](../errorcode-image.md#7600105-pixelmap已被释放) | The PixelMap has been released. |
+| [7600104](../errorcode-image.md#7600104-获取图像数据失败) | Failed to get image data. Possible cause: Internal data is corrupted. Please check the logs for detailed information. |
+| [7600206](../errorcode-image.md#7600206-无效参数) | Invalid parameter. Possible causes: 1. PositionArea.pixels is too small. 2. PositionArea.region is out of range. |
+| [7600302](../errorcode-image.md#7600302-内存拷贝失败) | Failed to copy the memory. |
 
 ## readPixelsToBuffer
 
@@ -2006,8 +2000,8 @@ Starting from API 26.0.0, it is recommended to use {@link readAllPixelsToBufferS
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. 3.Parameter verification failed. |
-| 501 | Resource Unavailable. |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. 3.Parameter verification failed. |
+| [501](../errorcode-image.md#501-无法调用接口) | Resource Unavailable. |
 
 ## release
 
@@ -2182,8 +2176,8 @@ Starting from API 26.0.0, it is recommended to use {@link applyRotateSync} inste
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. 3.Parameter verification failed. |
-| 501 | Resource Unavailable. |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. 3.Parameter verification failed. |
+| [501](../errorcode-image.md#501-无法调用接口) | Resource Unavailable. |
 
 ## scale
 
@@ -2308,8 +2302,8 @@ Starting from API 26.0.0, it is recommended to use {@link applyScale} instead fo
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. 3.Parameter verification failed. |
-| 501 | Resource Unavailable. |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. 3.Parameter verification failed. |
+| [501](../errorcode-image.md#501-无法调用接口) | Resource Unavailable. |
 
 ## scaleSync
 
@@ -2348,8 +2342,8 @@ Starting from API 26.0.0, it is recommended to use {@link applyScaleSync} instea
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. 3.Parameter verification failed. |
-| 501 | Resource Unavailable. |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. 3.Parameter verification failed. |
+| [501](../errorcode-image.md#501-无法调用接口) | Resource Unavailable. |
 
 ## scaleSync
 
@@ -2389,8 +2383,8 @@ Starting from API 26.0.0, it is recommended to use {@link applyScaleSync} instea
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. 3.Parameter verification failed. |
-| 501 | Resource Unavailable. |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. 3.Parameter verification failed. |
+| [501](../errorcode-image.md#501-无法调用接口) | Resource Unavailable. |
 
 ## setColorSpace
 
@@ -2420,8 +2414,8 @@ This method is only used to set the colorspace property of pixelmap, while all p
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 62980115 | If the image parameter invalid. |
-| 62980111 | The image source data is incomplete. |
+| [62980115](../errorcode-image.md#62980115-图片无效参数) | If the image parameter invalid. |
+| [62980111](../errorcode-image.md#62980111-图片源数据不完整) | The image source data is incomplete. |
 
 ## setMemoryNameSync
 
@@ -2449,9 +2443,9 @@ Sets a memory name for this PixelMap.
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1.The length of the input parameter is too long. 2.Parameter verification failed. |
-| 501 | Resource unavailable. |
-| 62980286 | Memory format not supported. |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1.The length of the input parameter is too long. 2.Parameter verification failed. |
+| [501](../errorcode-image.md#501-无法调用接口) | Resource unavailable. |
+| [62980286](../errorcode-image.md#62980286-pixelmap设置内存标识符失败) | Memory format not supported. |
 
 ## setMetadata
 
@@ -2486,10 +2480,10 @@ Sets the value for the metadata with a given key in this PixelMap. This API uses
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. 3.Parameter verification failed. |
-| 501 | Resource unavailable. |
-| 62980173 | The DMA memory does not exist. |
-| 62980302 | Memory copy failed. Possibly caused by invalid metadata value. |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. 3.Parameter verification failed. |
+| [501](../errorcode-image.md#501-无法调用接口) | Resource unavailable. |
+| [62980173](../errorcode-image.md#62980173-dma内存空间错误) | The DMA memory does not exist. |
+| [62980302](../errorcode-image.md#62980302-内存拷贝失败) | Memory copy failed. Possibly caused by invalid metadata value. |
 
 ## setOpacity
 
@@ -2535,12 +2529,12 @@ Sets opacity of the PixelMap. Every pixel will be set to the same opacity value.
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 7600106 | The PixelMap has been passed to another thread. |
-| 7600105 | The PixelMap has been released. |
-| 7600201 | Unsupported operation because the PixelMap is locked. |
-| 7600104 | Failed to get image data. Possible cause: Internal data is corrupted. Please check the logs for detailed information. |
-| 7600207 | Unsupported data format. Possible cause: Alpha type is not supported. |
-| 7600206 | Invalid parameter. Possible cause: The specified value is out of range. |
+| [7600106](../errorcode-image.md#7600106-pixelmap已被传递至另一个线程) | The PixelMap has been passed to another thread. |
+| [7600105](../errorcode-image.md#7600105-pixelmap已被释放) | The PixelMap has been released. |
+| [7600201](../errorcode-image.md#7600201-不支持的操作) | Unsupported operation because the PixelMap is locked. |
+| [7600104](../errorcode-image.md#7600104-获取图像数据失败) | Failed to get image data. Possible cause: Internal data is corrupted. Please check the logs for detailed information. |
+| [7600207](../errorcode-image.md#7600207-不支持的数据格式) | Unsupported data format. Possible cause: Alpha type is not supported. |
+| [7600206](../errorcode-image.md#7600206-无效参数) | Invalid parameter. Possible cause: The specified value is out of range. |
 
 ## setOpacitySync
 
@@ -2580,12 +2574,12 @@ Sets opacity of the PixelMap. Every pixel will be set to the same opacity value.
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 7600106 | The PixelMap has been passed to another thread. |
-| 7600105 | The PixelMap has been released. |
-| 7600201 | Unsupported operation because the PixelMap is locked. |
-| 7600104 | Failed to get image data. Possible cause: Internal data is corrupted. Please check the logs for detailed information. |
-| 7600207 | Unsupported data format. Possible cause: Alpha type is not supported. |
-| 7600206 | Invalid parameter. Possible cause: The specified value is out of range. |
+| [7600106](../errorcode-image.md#7600106-pixelmap已被传递至另一个线程) | The PixelMap has been passed to another thread. |
+| [7600105](../errorcode-image.md#7600105-pixelmap已被释放) | The PixelMap has been released. |
+| [7600201](../errorcode-image.md#7600201-不支持的操作) | Unsupported operation because the PixelMap is locked. |
+| [7600104](../errorcode-image.md#7600104-获取图像数据失败) | Failed to get image data. Possible cause: Internal data is corrupted. Please check the logs for detailed information. |
+| [7600207](../errorcode-image.md#7600207-不支持的数据格式) | Unsupported data format. Possible cause: Alpha type is not supported. |
+| [7600206](../errorcode-image.md#7600206-无效参数) | Invalid parameter. Possible cause: The specified value is out of range. |
 
 ## setTransferDetached
 
@@ -2613,7 +2607,7 @@ Sets whether to detach from the original thread when this PixelMap is transmitte
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 501 | Resource Unavailable. |
+| [501](../errorcode-image.md#501-无法调用接口) | Resource Unavailable. |
 
 ## toSdr
 
@@ -2641,7 +2635,7 @@ Convert pixelmap to standard dynamic range.
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 62980137 | Invalid image operation. |
+| [62980137](../errorcode-image.md#62980137-图片操作无效) | Invalid image operation. |
 
 ## translate
 
@@ -2757,8 +2751,8 @@ Starting from API 26.0.0, it is recommended to use {@link applyTranslateSync} in
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. 3.Parameter verification failed. |
-| 501 | Resource Unavailable. |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. 3.Parameter verification failed. |
+| [501](../errorcode-image.md#501-无法调用接口) | Resource Unavailable. |
 
 ## unmarshalling
 
@@ -2786,15 +2780,15 @@ Unmarshals a MessageSequence object to obtain a PixelMap object. To create a Pix
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;[PixelMap](arkts-image-image-pixelmap-i.md)&gt; | Promise used to return the PixelMap object. |
+| Promise&lt;PixelMap&gt; | Promise used to return the PixelMap object. |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 62980097 | IPC error. Possible cause: 1.IPC communication failed. 2. Image upload exception. 3. Decode process exception. 4. Insufficient memory. |
-| 62980096 | The operation failed. Possible cause: 1.Image upload exception. 2. Decoding process exception. 3. Insufficient memory. |
-| 62980115 | Invalid image parameter. |
+| [62980097](../errorcode-image.md#62980097-pixelmap序列化传输失败) | IPC error. Possible cause: 1.IPC communication failed. 2. Image upload exception. 3. Decode process exception. 4. Insufficient memory. |
+| [62980096](../errorcode-image.md#62980096-操作失败) | The operation failed. Possible cause: 1.Image upload exception. 2. Decoding process exception. 3. Insufficient memory. |
+| [62980115](../errorcode-image.md#62980115-图片无效参数) | Invalid image parameter. |
 
 ## writeAllPixelsFromBuffer
 
@@ -2834,12 +2828,12 @@ Reads the pixel data from a buffer and writes the data to the PixelMap.The sourc
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 7600106 | The PixelMap has been passed to another thread. |
-| 7600105 | The PixelMap has been released. |
-| 7600201 | Unsupported operation because the PixelMap is not editable or is locked. |
-| 7600104 | Failed to get image data. Possible cause: Internal data is corrupted. Please check the logs for detailed information. |
-| 7600206 | Invalid parameter. Possible cause: Size of the buffer is too small. |
-| 7600302 | Failed to copy the memory. |
+| [7600106](../errorcode-image.md#7600106-pixelmap已被传递至另一个线程) | The PixelMap has been passed to another thread. |
+| [7600105](../errorcode-image.md#7600105-pixelmap已被释放) | The PixelMap has been released. |
+| [7600201](../errorcode-image.md#7600201-不支持的操作) | Unsupported operation because the PixelMap is not editable or is locked. |
+| [7600104](../errorcode-image.md#7600104-获取图像数据失败) | Failed to get image data. Possible cause: Internal data is corrupted. Please check the logs for detailed information. |
+| [7600206](../errorcode-image.md#7600206-无效参数) | Invalid parameter. Possible cause: Size of the buffer is too small. |
+| [7600302](../errorcode-image.md#7600302-内存拷贝失败) | Failed to copy the memory. |
 
 ## writeAllPixelsFromBufferSync
 
@@ -2873,12 +2867,12 @@ Reads the pixel data from a buffer and writes the data to the PixelMap.The sourc
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 7600106 | The PixelMap has been passed to another thread. |
-| 7600105 | The PixelMap has been released. |
-| 7600201 | Unsupported operation because the PixelMap is not editable or is locked. |
-| 7600104 | Failed to get image data. Possible cause: Internal data is corrupted. Please check the logs for detailed information. |
-| 7600206 | Invalid parameter. Possible cause: Size of the buffer is too small. |
-| 7600302 | Failed to copy the memory. |
+| [7600106](../errorcode-image.md#7600106-pixelmap已被传递至另一个线程) | The PixelMap has been passed to another thread. |
+| [7600105](../errorcode-image.md#7600105-pixelmap已被释放) | The PixelMap has been released. |
+| [7600201](../errorcode-image.md#7600201-不支持的操作) | Unsupported operation because the PixelMap is not editable or is locked. |
+| [7600104](../errorcode-image.md#7600104-获取图像数据失败) | Failed to get image data. Possible cause: Internal data is corrupted. Please check the logs for detailed information. |
+| [7600206](../errorcode-image.md#7600206-无效参数) | Invalid parameter. Possible cause: Size of the buffer is too small. |
+| [7600302](../errorcode-image.md#7600302-内存拷贝失败) | Failed to copy the memory. |
 
 ## writeBufferToPixels
 
@@ -2973,8 +2967,8 @@ Starting from API 26.0.0, it is recommended to use {@link writeAllPixelsFromBuff
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. 3.Parameter verification failed. |
-| 501 | Resource Unavailable. |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. 3.Parameter verification failed. |
+| [501](../errorcode-image.md#501-无法调用接口) | Resource Unavailable. |
 
 ## writePixels
 
@@ -3079,12 +3073,12 @@ Writes data from a buffer to a certain area of the PixelMap. The source data mus
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 7600106 | The PixelMap has been passed to another thread. |
-| 7600105 | The PixelMap has been released. |
-| 7600201 | Unsupported operation because the PixelMap is not editable or is locked. |
-| 7600104 | Failed to get image data. Possible cause: Internal data is corrupted. Please check the logs for detailed information. |
-| 7600206 | Invalid parameter. Possible causes: 1. PositionArea.pixels is too small. 2. PositionArea.region is out of range. |
-| 7600302 | Failed to copy the memory. |
+| [7600106](../errorcode-image.md#7600106-pixelmap已被传递至另一个线程) | The PixelMap has been passed to another thread. |
+| [7600105](../errorcode-image.md#7600105-pixelmap已被释放) | The PixelMap has been released. |
+| [7600201](../errorcode-image.md#7600201-不支持的操作) | Unsupported operation because the PixelMap is not editable or is locked. |
+| [7600104](../errorcode-image.md#7600104-获取图像数据失败) | Failed to get image data. Possible cause: Internal data is corrupted. Please check the logs for detailed information. |
+| [7600206](../errorcode-image.md#7600206-无效参数) | Invalid parameter. Possible causes: 1. PositionArea.pixels is too small. 2. PositionArea.region is out of range. |
+| [7600302](../errorcode-image.md#7600302-内存拷贝失败) | Failed to copy the memory. |
 
 ## writePixelsFromAreaSync
 
@@ -3118,12 +3112,12 @@ Writes data from a buffer to a certain area of the PixelMap. The source data mus
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 7600106 | The PixelMap has been passed to another thread. |
-| 7600105 | The PixelMap has been released. |
-| 7600201 | Unsupported operation because the PixelMap is not editable or is locked. |
-| 7600104 | Failed to get image data. Possible cause: Internal data is corrupted. Please check the logs for detailed information. |
-| 7600206 | Invalid parameter. Possible causes: 1. PositionArea.pixels is too small. 2. PositionArea.region is out of range. |
-| 7600302 | Failed to copy the memory. |
+| [7600106](../errorcode-image.md#7600106-pixelmap已被传递至另一个线程) | The PixelMap has been passed to another thread. |
+| [7600105](../errorcode-image.md#7600105-pixelmap已被释放) | The PixelMap has been released. |
+| [7600201](../errorcode-image.md#7600201-不支持的操作) | Unsupported operation because the PixelMap is not editable or is locked. |
+| [7600104](../errorcode-image.md#7600104-获取图像数据失败) | Failed to get image data. Possible cause: Internal data is corrupted. Please check the logs for detailed information. |
+| [7600206](../errorcode-image.md#7600206-无效参数) | Invalid parameter. Possible causes: 1. PositionArea.pixels is too small. 2. PositionArea.region is out of range. |
+| [7600302](../errorcode-image.md#7600302-内存拷贝失败) | Failed to copy the memory. |
 
 ## writePixelsSync
 
@@ -3158,8 +3152,8 @@ Starting from API 26.0.0, it is recommended to use {@link writePixelsFromAreaSyn
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. 3.Parameter verification failed. |
-| 501 | Resource Unavailable. |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. 3.Parameter verification failed. |
+| [501](../errorcode-image.md#501-无法调用接口) | Resource Unavailable. |
 
 ## isEditable
 

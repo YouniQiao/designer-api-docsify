@@ -1,14 +1,11 @@
 # ListScroller
 
-List组件的滚动控制器，通过它控制List组件的滚动，仅支持一对一绑定到List组件。
+Implements the scroll controller of the **List** component. A **List** component is bound to a **ListScroller** on a one-to-one basis.
 
-> **说明：**
+> **NOTE：**
 > 
-> ListScroller继承自[Scroller](../arkts-apis/arkts-arkui-scroll-scroller-c.md/arkts-arkui-scroll-scroller-c.md)，具有[Scroller](../arkts-apis/arkts-arkui-scroll-scroller-c.md/arkts-arkui-scroll-scroller-c.md)的全部方法。
-
-## 导入对象
-
-```ts listScroller: ListScroller = new ListScroller();```
+> **ListScroller** inherits from [Scroller](../arkts-apis/arkts-arkui-scroll-scroller-c.md/arkts-arkui-scroll-scroller-c.md) and has all methods of
+> [Scroller](../arkts-apis/arkts-arkui-scroll-scroller-c.md/arkts-arkui-scroll-scroller-c.md).
 
 **Inheritance/Implementation:** ListScroller extends [Scroller](../arkts-apis/arkts-arkui-scroll-scroller-c.md/arkts-arkui-scroll-scroller-c.md)
 
@@ -26,7 +23,7 @@ List组件的滚动控制器，通过它控制List组件的滚动，仅支持一
 closeAllSwipeActions(options?: CloseSwipeActionOptions): void
 ```
 
-将[EXPANDED](../arkts-apis/arkts-arkui-listitem-swipeactionstate-e.md/arkts-arkui-listitem-swipeactionstate-e.md)状态的[ListItem](./list_item)收起，并设置回调事件。
+Collapses the [list items](list_item) in the [EXPANDED](../arkts-apis/arkts-arkui-listitem-swipeactionstate-e.md/arkts-arkui-listitem-swipeactionstate-e.md) state and sets callback events.
 
 **Since:** 11
 
@@ -44,14 +41,14 @@ closeAllSwipeActions(options?: CloseSwipeActionOptions): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| options | [CloseSwipeActionOptions](../arkts-apis/arkts-arkui-list-closeswipeactionoptions-i.md) | No | 收起[EXPANDED](../arkts-apis/arkts-arkui-listitem-swipeactionstate-e.md/arkts-arkui-listitem-swipeactionstate-e.md)状态的[ListItem](./list_item)的回 调事件集合。不传入时不设置回调事件。 |
+| options | [CloseSwipeActionOptions](../arkts-apis/arkts-arkui-list-closeswipeactionoptions-i.md) | No | Callback events for collapsing [list items](list_item) in the [EXPANDED](../arkts-apis/arkts-arkui-listitem-swipeactionstate-e.md/arkts-arkui-listitem-swipeactionstate-e.md) state. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. Possible causes: &lt;br&gt; 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameters types. &lt;br&gt; 3. Parameter verification failed. |
-| 100004 | Controller not bound to a component. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: &lt;br&gt; 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameters types. &lt;br&gt; 3. Parameter verification failed. |
+| [100004](../errorcode-router.md#100004-incorrect-route-name) | Controller not bound to a component. |
 
 ## getItemRectInGroup
 
@@ -59,7 +56,17 @@ closeAllSwipeActions(options?: CloseSwipeActionOptions): void
 getItemRectInGroup(index: number, indexInGroup: number): RectResult
 ```
 
-获取[ListItemGroup](./list_item_group)中的[ListItem](./list_item)的大小和相对于List的位置。
+Obtains the size of a [list item](list_item) in a [list item group](list_item_group) and its position relative to the list.
+
+> **NOTE：**
+> 
+> - The value of **index** must be the index of a child component visible in the display area.
+ Otherwise, the value is considered invalid.  
+> - The child component for which **index** is set must be a list item group. Otherwise,
+ the **index** value is considered invalid.  
+> - The value of **indexInGroup** must be the index of a list item in the list item group visible
+ in the display area. Otherwise, the value is considered invalid.  
+> - When **index** or **indexInGroup** is set to an invalid value, the returned size and position are both **0**.
 
 **Since:** 11
 
@@ -77,21 +84,21 @@ getItemRectInGroup(index: number, indexInGroup: number): RectResult
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| index | number | Yes | ListItemGroup在List中的索引值。 |
-| indexInGroup | number | Yes | ListItem在ListItemGroup中的索引值。 |
+| index | number | Yes | Index of the list item group in the list. |
+| indexInGroup | number | Yes | Index of the list item in the list item group. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [RectResult](arkts-arkui-rectresult-i.md) | ListItemGroup中的ListItem的大小和相对于List的位置。&lt;br/&gt;单位：vp。 |
+| [RectResult](arkts-arkui-rectresult-i.md) | Size of the list item in the list item group and its position relative to the list. &lt;br&gt;Unit: vp |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. Possible causes: &lt;br&gt; 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameters types. &lt;br&gt; 3. Parameter verification failed. |
-| 100004 | Controller not bound to a component. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: &lt;br&gt; 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameters types. &lt;br&gt; 3. Parameter verification failed. |
+| [100004](../errorcode-router.md#100004-incorrect-route-name) | Controller not bound to a component. |
 
 ## getVisibleListContentInfo
 
@@ -99,7 +106,7 @@ getItemRectInGroup(index: number, indexInGroup: number): RectResult
 getVisibleListContentInfo(x: number, y: number): VisibleListContentInfo
 ```
 
-根据坐标获取子组件的索引信息。
+Obtains the index information of the child component at the specified coordinates.
 
 **Since:** 14
 
@@ -117,21 +124,21 @@ getVisibleListContentInfo(x: number, y: number): VisibleListContentInfo
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| x | number | Yes | x轴坐标，单位为vp。 |
-| y | number | Yes | y轴坐标，单位为vp。 |
+| x | number | Yes | X-coordinate, in vp. |
+| y | number | Yes | Y-coordinate, in vp. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [VisibleListContentInfo](arkts-arkui-visiblelistcontentinfo-i.md) | 入参坐标处的子组件的索引信息。 |
+| [VisibleListContentInfo](arkts-arkui-visiblelistcontentinfo-i.md) | Index information of a child component at the specified coordinates. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. Possible causes: &lt;br&gt; 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameters types. &lt;br&gt; 3. Parameter verification failed. |
-| 100004 | Controller not bound to a component. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: &lt;br&gt; 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameters types. &lt;br&gt; 3. Parameter verification failed. |
+| [100004](../errorcode-router.md#100004-incorrect-route-name) | Controller not bound to a component. |
 
 ## scrollToItemInGroup
 
@@ -139,7 +146,7 @@ getVisibleListContentInfo(x: number, y: number): VisibleListContentInfo
 scrollToItemInGroup(index: number, indexInGroup:number, smooth?: boolean, align?: ScrollAlign): void
 ```
 
-滑动到指定的ListItemGroup中指定的ListItem。
+Scrolls to the specified list item in the specified list item group.
 
 **Since:** 11
 
@@ -157,15 +164,15 @@ scrollToItemInGroup(index: number, indexInGroup:number, smooth?: boolean, align?
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| index | number | Yes | 要滑动到的目标元素所在的ListItemGroup在当前容器中的索引值。 &lt;br/&gt;**说明：** &lt;br/&gt;index值设置成负值或者大于当前容器子组件的最大索引值， 视为异常值，本次跳转不生效。 |
-| indexInGroup | number | Yes | 要滑动到的目标元素在index指定的ListItemGroup中的索引值。 &lt;br/&gt;**说明：** &lt;br/&gt;indexInGroup值设置成负值或者大 于index指定的ListItemGroup容器子组件的最大索引值，视为异常值，本次跳转不生效。 |
-| smooth | boolean | No | 设置该次滑动是否有动效，true表示有动效，false表示没有动效。&lt;br/&gt;默认值：false&lt;br/&gt;**说明：** &lt;br/&gt;开启动效时，会对经过的所有item进行加载 和布局计算，当大量加载item时会导致性能问题。 |
-| align | [ScrollAlign](arkts-arkui-scrollalign-e.md) | No | 指定滑动到的元素与当前容器的对齐方式。&lt;br/&gt;默认值：ScrollAlign.START。 |
+| index | number | Yes | Index of the target list item group in the current container.&lt;br&gt;**NOTE：**&lt;br&gt;If the value set is a negative value or greater than the maximum index of the items in the container, the value is deemed abnormal, and no scrolling will be performed. |
+| indexInGroup | number | Yes | Index of the target list item in the list item group specified by **index**.&lt;br&gt; **NOTE：**&lt;br&gt;If the value set is a negative value or greater than the maximum index of the items in the list item group, the value is deemed abnormal, and no scrolling will be performed. |
+| smooth | boolean | No | Whether the scroll animation is enabled. The options are **true** (enabled) and **false** (disabled).&lt;br&gt;Default value: **false**&lt;br&gt;**NOTE：**&lt;br&gt;When **smooth** is set to **true**, all passed items are loaded and counted in layout calculation. This may result in performance issues if a large number of items are involved. |
+| align | [ScrollAlign](arkts-arkui-scrollalign-e.md) | No | How the list item to scroll to is aligned with the container.&lt;br&gt;Default value: **ScrollAlign.START |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. Possible causes: &lt;br&gt; 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameters types. &lt;br&gt; 3. Parameter verification failed. |
-| 100004 | Controller not bound to a component. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: &lt;br&gt; 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameters types. &lt;br&gt; 3. Parameter verification failed. |
+| [100004](../errorcode-router.md#100004-incorrect-route-name) | Controller not bound to a component. |
 

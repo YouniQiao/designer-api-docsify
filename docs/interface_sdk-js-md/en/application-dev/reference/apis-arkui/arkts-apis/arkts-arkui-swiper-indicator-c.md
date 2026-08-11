@@ -16,7 +16,7 @@ Defines the indicator class.
 bottom(value: Length | undefined): this
 ```
 
-导航点底部相对于Swiper的位置。
+Set the indicator to the bottom.
 
 **Since:** 23
 
@@ -32,7 +32,7 @@ bottom(value: Length | undefined): this
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | [Length](arkts-arkui-length-t.md) \| undefined | Yes | 设置导航点底部相对于Swiper的位置。&lt;br/&gt;未设置top和bottom时，进行自适应大小布局，按照指示器本身大小和Swiper的大小，在交叉轴方向上 ，位于底部，效果与设置bottom=0一致。&lt;br/&gt;设置为0时：按照0位置布局计算。&lt;br/&gt;优先级：低于top属性。&lt;br/&gt;取值范围：[0,Swiper高度-导航点区域高度]，超出该范围时，取最近的边界值。 |
+| value | [Length](arkts-arkui-length-t.md) \| undefined | Yes | the indicator to the bottom, default value is adaptive size layout, centered alignment in the spindle direction according to the size of the indicator itself and the size of the swiper, undefined means setting to default value. |
 
 **Return value:**
 
@@ -46,7 +46,7 @@ bottom(value: Length | undefined): this
 bottom(bottom: LengthMetrics | Length | undefined, ignoreSize: boolean): this
 ```
 
-导航点底部相对于Swiper的位置，并可通过ignoreSize属性忽略导航点大小。
+Sets the position of the navigation indicator relative to the bottom edge of the Swiper component.You can also choose to ignore the size of the navigation indicator using the ignoreSize property.
 
 **Since:** 23
 
@@ -62,8 +62,8 @@ bottom(bottom: LengthMetrics | Length | undefined, ignoreSize: boolean): this
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| bottom | [LengthMetrics](arkts-arkui-lengthmetrics-t.md) \| Length \| undefined | Yes | 设置导航点底部相对于Swiper的位置。&lt;br/&gt;未设置top和bottom时，进行自适应大小布局，按照指示器本身大小和 Swiper的大小，在交叉轴方向上，位于底部，效果与设置bottom=0一致。&lt;br/&gt;设置为0时：按照0位置布局计算。&lt;br/&gt;优先级：低于top属性。&lt;br/&gt;取值范围：[0,Swiper高度-导航点区域高度]，超出该 范围时，取最近的边界值。 |
-| ignoreSize | boolean | Yes | 设置是否忽略导航点本身大小，默认false。&lt;br/&gt;true表示可以将导航点更靠近Swiper底部；false表示忽略导航点本身大小。&lt;br/&gt;使用方法可以参考 [示例9演示导航点space与bottom](../../../reference/apis-arkui/arkui-ts/ts-container-swiper copy.md#示例9演示导航点space与bottom) 。&lt;br/&gt; 说明：[数字导航点](../arkts-components/arkts-arkui-digitindicator-c.md/arkts-arkui-digitindicator-c.md)ignoreSize属性，不生效的场景如下：&lt;br/&gt; ? 当 [vertical](SwiperAttribute.vertical) 设置为false，且bottom > 0。&lt;br/&gt; ? 当 [vertical](SwiperAttribute.vertical) 设置为true时：&lt;br/&gt;1、bottom > 0 时。&lt;br/&gt; 2、bottom设为undefined。 &lt;br/&gt; 3、 isSidebarMiddle设置为false时。 |
+| bottom | [LengthMetrics](arkts-arkui-lengthmetrics-t.md) \| Length \| undefined | Yes | the offset of indicator to the bottom, default value is adaptive size layout, centered alignment in the spindle direction according to the size of the indicator itself and the size of the swiper, undefined means setting to default value. |
+| ignoreSize | boolean | Yes | ignore the size of the indicator. |
 
 **Return value:**
 
@@ -77,7 +77,7 @@ bottom(bottom: LengthMetrics | Length | undefined, ignoreSize: boolean): this
 static digit(): DigitIndicator
 ```
 
-返回一个DigitIndicator对象。
+DigitIndicator class object.
 
 **Since:** 23
 
@@ -87,11 +87,13 @@ static digit(): DigitIndicator
 
 <!--Device-Indicator-static digit(): DigitIndicator--><!--Device-Indicator-static digit(): DigitIndicator-End-->
 
+**System capability:** SystemCapability.ArkUI.ArkUI.Full
+
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [DigitIndicator](arkts-arkui-swiper-digitindicator-c.md) | 数字指示器对象，用于设置Swiper组件的数字导航样式。 |
+| [DigitIndicator](arkts-arkui-swiper-digitindicator-c.md) |  |
 
 ## dot
 
@@ -99,7 +101,7 @@ static digit(): DigitIndicator
 static dot(): DotIndicator
 ```
 
-返回一个DotIndicator对象。
+DotIndicator class object.
 
 **Since:** 23
 
@@ -109,11 +111,13 @@ static dot(): DotIndicator
 
 <!--Device-Indicator-static dot(): DotIndicator--><!--Device-Indicator-static dot(): DotIndicator-End-->
 
+**System capability:** SystemCapability.ArkUI.ArkUI.Full
+
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [DotIndicator](../arkts-components/arkts-arkui-dotindicator-c.md) | 圆点指示器对象，用于设置Swiper组件的圆点导航样式。 |
+| [DotIndicator](../arkts-components/arkts-arkui-dotindicator-c.md) |  |
 
 ## end
 
@@ -121,7 +125,7 @@ static dot(): DotIndicator
 end(value: LengthMetrics | undefined): this
 ```
 
-在RTL模式下为导航点距离Swiper组件左边的距离，在LTR模式下为导航点距离Swiper组件右边的距离。
+Set the indicator to the left in RTL Set the indicator to the right in LTR
 
 **Since:** 23
 
@@ -137,7 +141,7 @@ end(value: LengthMetrics | undefined): this
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | [LengthMetrics](arkts-arkui-lengthmetrics-t.md) \| undefined | Yes | 设置在RTL模式下为导航点距离Swiper组件左边的距离，在LTR模式下为导航点距离Swiper组件右边的距离。&lt;br/&gt;默认值：0&lt;br/ &gt;单位：vp&lt;br/&gt;取值范围：[0, Swiper宽度-导航点区域宽度]，超出该范围时，取最近的边界值。&lt;br/&gt;取值为undefined时，按默认值处理。 |
+| value | [LengthMetrics](arkts-arkui-lengthmetrics-t.md) \| undefined | Yes | the indicator to the left in RTL, Set the indicator to the right in LTR, default value is 0.0_vp, undefined means setting to default value. |
 
 **Return value:**
 
@@ -151,7 +155,7 @@ end(value: LengthMetrics | undefined): this
 left(value: Length | undefined): this
 ```
 
-导航点左侧相对于Swiper的位置。
+Set the indicator to the left.
 
 **Since:** 23
 
@@ -167,7 +171,7 @@ left(value: Length | undefined): this
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | [Length](arkts-arkui-length-t.md) \| undefined | Yes | 设置导航点左侧相对于Swiper的位置。&lt;br/&gt;未设置left和right时，进行自适应大小布局，按照指示器本身大小和Swiper的大小在主轴方向上进行 居中对齐。&lt;br/&gt;设置为0时：按照0位置布局计算。&lt;br/&gt;优先级：高于right属性。&lt;br/&gt;取值范围：[0,Swiper宽度-导航点区域宽度]，超出该范围时，取最近的边界值。 |
+| value | [Length](arkts-arkui-length-t.md) \| undefined | Yes | the indicator to the left, default value is adaptive size layout, centered alignment in the spindle direction according to the size of the indicator itself and the size of the swiper, undefined means setting to default value. |
 
 **Return value:**
 
@@ -181,7 +185,7 @@ left(value: Length | undefined): this
 right(value: Length | undefined): this
 ```
 
-导航点右侧相对于Swiper的位置。
+Set the indicator to the right.
 
 **Since:** 23
 
@@ -197,7 +201,7 @@ right(value: Length | undefined): this
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | [Length](arkts-arkui-length-t.md) \| undefined | Yes | 设置导航点右侧相对于Swiper的位置。&lt;br/&gt;未设置left和right时，进行自适应大小布局，按照指示器本身大小和Swiper的大小在主轴方向上进行 居中对齐。&lt;br/&gt;设置为0时：按照0位置布局计算。&lt;br/&gt;优先级：低于left属性。&lt;br/&gt;取值范围：[0,Swiper宽度-导航点区域宽度]，超出该范围 时，取最近的边界值。 |
+| value | [Length](arkts-arkui-length-t.md) \| undefined | Yes | the indicator to the right, default value is adaptive size layout, centered alignment in the spindle direction according to the size of the indicator itself and the size of the swiper, undefined means setting to default value. |
 
 **Return value:**
 
@@ -211,8 +215,7 @@ right(value: Length | undefined): this
 start(value: LengthMetrics | undefined): this
 ```
 
-在[RTL](arkts-arkui-layoutdirection-e.md)模式下为导航点距离Swiper组件右边的距离，在  
-[LTR](arkts-arkui-layoutdirection-e.md)模式下为导航点距离Swiper组件左边的距离。
+Set the indicator to the left in LTR Set the indicator to the right in RTL
 
 **Since:** 23
 
@@ -228,7 +231,7 @@ start(value: LengthMetrics | undefined): this
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | [LengthMetrics](arkts-arkui-lengthmetrics-t.md) \| undefined | Yes | 设置在RTL模式下为导航点距离Swiper组件右边的距离，在LTR模式下为导航点距离Swiper组件左边的距离。&lt;br/&gt;默认值：0&lt;br/ &gt;单位：vp&lt;br/&gt;取值范围：[0, Swiper宽度-导航点区域宽度]，超出该范围时，取最近的边界值。&lt;br/&gt;取值为undefined时，按默认值处理。 |
+| value | [LengthMetrics](arkts-arkui-lengthmetrics-t.md) \| undefined | Yes | the indicator to the right in LTR, indicator to the left in RTL, default value is 0.0_vp, undefined means setting to default value. |
 
 **Return value:**
 
@@ -242,7 +245,7 @@ start(value: LengthMetrics | undefined): this
 top(value: Length | undefined): this
 ```
 
-导航点顶部相对于Swiper的位置。
+Set the indicator to the top.
 
 **Since:** 23
 
@@ -258,7 +261,7 @@ top(value: Length | undefined): this
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | [Length](arkts-arkui-length-t.md) \| undefined | Yes | 设置导航点顶部相对于Swiper的位置。&lt;br/&gt;未设置top和bottom时，进行自适应大小布局，按照指示器本身大小和Swiper的大小，在交叉轴方向上 ，位于底部，效果与设置bottom=0一致。&lt;br/&gt;设置为0时：按照0位置布局计算。&lt;br/&gt;优先级：高于bottom属性。&lt;br/&gt;取值范围：[0,Swiper高度-导航点区域高度]，超出该范围时，取最近的边界值。 |
+| value | [Length](arkts-arkui-length-t.md) \| undefined | Yes | the indicator to the top, default value is adaptive size layout, centered alignment in the spindle direction according to the size of the indicator itself and the size of the swiper, undefined means setting to default value. |
 
 **Return value:**
 

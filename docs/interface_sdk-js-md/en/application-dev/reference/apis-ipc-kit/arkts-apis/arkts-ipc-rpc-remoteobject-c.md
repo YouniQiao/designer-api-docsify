@@ -1,6 +1,6 @@
 # RemoteObject
 
-实现远程对象。服务提供者必须继承此类。
+Provides methods to implement **RemoteObject**. The service provider must inherit from this class.
 
 **Inheritance/Implementation:** RemoteObject extends [IRemoteObject](arkts-ipc-rpc-iremoteobject-c.md)
 
@@ -24,7 +24,7 @@ import { rpc } from 'kits/@kit.IPCKit';
 attachLocalInterface(localInterface: IRemoteBroker, descriptor: string): void
 ```
 
-此接口用于把接口描述符和IRemoteBroker对象绑定。
+Binds an interface descriptor to an **IRemoteBroker** object.
 
 **Since:** 7
 
@@ -42,8 +42,8 @@ attachLocalInterface(localInterface: IRemoteBroker, descriptor: string): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| localInterface | [IRemoteBroker](arkts-ipc-rpc-iremotebroker-i.md) | Yes | 将与描述符绑定的IRemoteBroker对象。 |
-| descriptor | string | Yes | 用于与IRemoteBroker对象绑定的描述符。 |
+| localInterface | [IRemoteBroker](arkts-ipc-rpc-iremotebroker-i.md) | Yes | IRemoteBroker** object. |
+| descriptor | string | Yes | Interface descriptor. |
 
 ## Examples
 
@@ -79,7 +79,7 @@ let testRemoteObject = new TestRemoteObject("testObject");
 constructor(descriptor: string)
 ```
 
-RemoteObject构造函数。
+A constructor used to create a **RemoteObject** object.
 
 **Since:** 7
 
@@ -93,7 +93,7 @@ RemoteObject构造函数。
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| descriptor | string | Yes | 接口描述符，其长度应小于40960。 |
+| descriptor | string | Yes | Interface descriptor. The length of the string must be less than 40960. |
 
 ## Examples
 
@@ -119,7 +119,7 @@ ArkTS-Sta:
 getCallingPid(): int
 ```
 
-获取通信对端的进程Pid。
+Obtains the PID of the remote process.
 
 **Since:** 7
 
@@ -133,7 +133,7 @@ getCallingPid(): int
 
 | Type | Description |
 | --- | --- |
-| ArkTS-Dyn: number  <br>ArkTS-Sta：int | 返回通信对端的进程Pid。 |
+| ArkTS-Dyn: number  <br>ArkTS-Sta：int | PID of the remote process obtained. |
 
 ## Examples
 
@@ -171,7 +171,7 @@ ArkTS-Sta:
 getCallingUid(): int
 ```
 
-获取通信对端的进程Uid。
+Obtains the UID of the remote process.
 
 **Since:** 7
 
@@ -217,7 +217,7 @@ try {
 getDescriptor(): string
 ```
 
-获取对象的接口描述符。接口描述符为字符串。
+Obtains the interface descriptor of this object. The interface descriptor is a string.
 
 **Since:** 9
 
@@ -231,13 +231,13 @@ getDescriptor(): string
 
 | Type | Description |
 | --- | --- |
-| string | 返回接口描述符。 |
+| string | Interface descriptor obtained. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 1900008 | The proxy or remote object is invalid. |
+| [1900008](../errorcode-rpc.md#1900008-invalid-ipc-object) | The proxy or remote object is invalid. |
 
 ## Examples
 
@@ -273,7 +273,7 @@ try {
 getInterfaceDescriptor(): string
 ```
 
-查询接口描述符。
+Obtains the interface descriptor.
 
 **Since:** 7
 
@@ -291,7 +291,7 @@ getInterfaceDescriptor(): string
 
 | Type | Description |
 | --- | --- |
-| string | 返回接口描述符。 |
+| string | Interface descriptor obtained. |
 
 ## Examples
 
@@ -325,7 +325,7 @@ try {
 getLocalInterface(descriptor: string): IRemoteBroker
 ```
 
-查询接口描述符的字符串。
+Obtains the string of the interface descriptor.
 
 **Since:** 9
 
@@ -339,19 +339,19 @@ getLocalInterface(descriptor: string): IRemoteBroker
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| descriptor | string | Yes | 接口描述符的字符串，其长度应小于40960。 |
+| descriptor | string | Yes | String of the interface descriptor. The length of the string must be less than 40960. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [IRemoteBroker](arkts-ipc-rpc-iremotebroker-i.md) | 返回绑定到指定接口描述符的IRemoteBroker对象。 |
+| [IRemoteBroker](arkts-ipc-rpc-iremotebroker-i.md) | IRemoteBroker** object bound to the specified interface token. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1.The number of parameters is incorrect; 2.The parameter type does not match; 3.The string length is greater than or equal to 40960; 4.The number of bytes copied to the buffer is different from the length of the obtained string. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.The number of parameters is incorrect; 2.The parameter type does not match; 3.The string length is greater than or equal to 40960; 4.The number of bytes copied to the buffer is different from the length of the obtained string. |
 
 ## Examples
 
@@ -386,7 +386,7 @@ try {
 modifyLocalInterface(localInterface: IRemoteBroker, descriptor: string): void
 ```
 
-此接口用于把接口描述符和IRemoteBroker对象绑定。
+Binds an interface descriptor to an **IRemoteBroker** object.
 
 **Since:** 9
 
@@ -400,14 +400,14 @@ modifyLocalInterface(localInterface: IRemoteBroker, descriptor: string): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| localInterface | [IRemoteBroker](arkts-ipc-rpc-iremotebroker-i.md) | Yes | 将与描述符绑定的IRemoteBroker对象。 |
-| descriptor | string | Yes | 用于与IRemoteBroker对象绑定的描述符，其长度应小于40960。 |
+| localInterface | [IRemoteBroker](arkts-ipc-rpc-iremotebroker-i.md) | Yes | IRemoteBroker** object. |
+| descriptor | string | Yes | IRemoteBroker** object bound to the interface descriptor. The length of the descriptor must be less than 40960. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1.The number of parameters is incorrect; 2.The parameter type does not match; 3.The string length is greater than or equal to 40960; 4.The number of bytes copied to the buffer is different from the length of the obtained string. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.The number of parameters is incorrect; 2.The parameter type does not match; 3.The string length is greater than or equal to 40960; 4.The number of bytes copied to the buffer is different from the length of the obtained string. |
 
 ## Examples
 
@@ -464,13 +464,15 @@ onRemoteMessageRequest(
     ): boolean | Promise<boolean>
 ```
 
-sendMessageRequest请求的响应处理函数，服务端在该函数里同步或异步地处理请求，回复结果。
+Called to return a response to **sendMessageRequest()**. The server processes the request synchronously or  asynchronously and returns the result in this API.
 
-> **说明：**
+> **NOTE：**
 > 
-> 开发者应优先选择重写onRemoteMessageRequest方法，其中可以自由实现同步和异步的消息处理。
+> - You are advised to overload **onRemoteMessageRequest** preferentially, which implements synchronous and
+> asynchronous message processing.
 > 
-> 开发者同时重写onRemoteRequest和onRemoteMessageRequest方法时，仅onRemoteMessageRequest方法生效。
+> - If both **onRemoteRequest()** and **onRemoteMessageRequest()** are overloaded, only
+> **onRemoteMessageRequest()** takes effect.
 
 **Since:** 9
 
@@ -486,100 +488,16 @@ sendMessageRequest请求的响应处理函数，服务端在该函数里同步�
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| code | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | 对端发送的服务请求码。 |
-| data | [MessageSequence](arkts-ipc-rpc-messagesequence-c.md) | Yes | 携带客户端调用参数的MessageSequence对象。 |
-| reply | [MessageSequence](arkts-ipc-rpc-messagesequence-c.md) | Yes | 写入结果的MessageSequence对象。 |
-| options | [MessageOption](arkts-ipc-rpc-messageoption-c.md) | Yes | 指示操作是同步还是异步。 |
+| code | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | Service request code sent by the remote end. |
+| data | [MessageSequence](arkts-ipc-rpc-messagesequence-c.md) | Yes | MessageSequence** object that holds the parameters called by the client. |
+| reply | [MessageSequence](arkts-ipc-rpc-messagesequence-c.md) | Yes | MessageSequence** object to which the result is written. |
+| options | [MessageOption](arkts-ipc-rpc-messageoption-c.md) | Yes | Whether the operation is synchronous or asynchronous. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| boolean | 若在onRemoteMessageRequest中同步处理请求，则返回一个布尔值。返回true表示操作成功，返回false表示操作失败。 &lt;br/&gt;- 若在onRemoteMessageRequest中异步处理请求，则返回一个Promise对象。返回true表示操作成功，返回false表示操作失败。 |
-
-## Examples
-
-```TypeScript
-// Override **onRemoteMessageRequest** to process requests synchronously.
-import { rpc } from '@kit.IPCKit';
-import { hilog } from '@kit.PerformanceAnalysisKit';
-
-class TestRemoteObject extends rpc.RemoteObject {
-  constructor(descriptor: string) {
-    super(descriptor);
-  }
-
-  onRemoteMessageRequest(code: number, data: rpc.MessageSequence, reply: rpc.MessageSequence,
-    option: rpc.MessageOption): boolean {
-    if (code === 1) {
-      hilog.info(0x0000, 'testTag', 'RpcServer: sync onRemoteMessageRequest is called');
-      return true;
-    } else {
-      hilog.error(0x0000, 'testTag', 'RpcServer: unknown code: ' + code);
-      return false;
-    }
-  }
-}
-```
-
-```TypeScript
-// Override **onRemoteMessageRequest** to process requests asynchronously.
-import { rpc } from '@kit.IPCKit';
-import { hilog } from '@kit.PerformanceAnalysisKit';
-
-class TestRemoteObject extends rpc.RemoteObject {
-  constructor(descriptor: string) {
-    super(descriptor);
-  }
-
-  async onRemoteMessageRequest(code: number, data: rpc.MessageSequence, reply: rpc.MessageSequence,
-    option: rpc.MessageOption): Promise<boolean> {
-    if (code === 1) {
-      hilog.info(0x0000, 'testTag', 'RpcServer: async onRemoteMessageRequest is called');
-    } else {
-      hilog.error(0x0000, 'testTag', 'RpcServer: unknown code: ' + code);
-      return false;
-    }
-    await new Promise((resolve: (data: rpc.RequestResult) => void) => {
-      setTimeout(resolve, 100);
-    })
-    return true;
-  }
-}
-```
-
-```TypeScript
-// Override **onRemoteMessageRequest** and **onRemoteRequest** to process requests synchronously.
-import { rpc } from '@kit.IPCKit';
-import { hilog } from '@kit.PerformanceAnalysisKit';
-
-class TestRemoteObject extends rpc.RemoteObject {
-  constructor(descriptor: string) {
-    super(descriptor);
-  }
-
-  onRemoteRequest(code: number, data: rpc.MessageParcel, reply: rpc.MessageParcel, option: rpc.MessageOption): boolean {
-     if (code === 1) {
-        hilog.info(0x0000, 'testTag', 'RpcServer: sync onRemoteMessageRequest is called');
-        return true;
-     } else {
-        hilog.error(0x0000, 'testTag', 'RpcServer: unknown code: ' + code);
-        return false;
-     }
-  }
-    // Only onRemoteMessageRequest is executed.
-  onRemoteMessageRequest(code: number, data: rpc.MessageSequence, reply: rpc.MessageSequence,
-    option: rpc.MessageOption): boolean | Promise<boolean> {
-    if (code === 1) {
-      hilog.info(0x0000, 'testTag', 'RpcServer: async onRemoteMessageRequest is called');
-    } else {
-      hilog.error(0x0000, 'testTag', 'RpcServer: unknown code: ' + code);
-      return false;
-    }
-    return true;
-  }
-}
-```
+| boolean | If the request is processed synchronously in **onRemoteMessageRequest**, a Boolean value is returned. The value **true** means that the operation is successful, and **false** means the opposite.&lt;br&gt;- If the request is processed asynchronously in **onRemoteMessageRequest**, a promise object is returned. The value **true** means that the operation is successful, and **false** means the opposite. |
 
 ## onRemoteMessageRequest
 
@@ -605,13 +523,14 @@ onRemoteMessageRequest(
     ): boolean | Promise<boolean>
 ```
 
-sendMessageRequest请求的响应处理函数，服务端在该函数里同步或异步地处理请求，回复结果，该接口可从入参callingInfo中获取IPC上下文信息。
+Provides a response to **sendMessageRequest()**. The server processes the request and returns a response in this  API. The IPC context can be obtained from the input parameter **callingInfo**.
 
-> **说明：**
+> **NOTE：**
 > 
-> 开发者应优先选择重写带有CallingInfo参数的onRemoteMessageRequest方法，其中可以自由实现同步和异步的消息处理。
-> 
-> 开发者同时重写onRemoteRequest和onRemoteMessageRequest方法时，仅onRemoteMessageRequest方法生效。
+> You are advised to overload the **onRemoteMessageRequest** method with the **CallingInfo** parameter to
+> implement synchronous and asynchronous message processing.
+> If both **onRemoteRequest()** and **onRemoteMessageRequest()** are overloaded, only
+> **onRemoteMessageRequest()** takes effect.
 
 **Since:** 23
 
@@ -625,104 +544,17 @@ sendMessageRequest请求的响应处理函数，服务端在该函数里同步�
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| code | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | 对端发送的服务请求码。 |
-| data | [MessageSequence](arkts-ipc-rpc-messagesequence-c.md) | Yes | 携带客户端调用参数的MessageSequence对象。 |
-| reply | [MessageSequence](arkts-ipc-rpc-messagesequence-c.md) | Yes | 写入结果的MessageSequence对象。 |
-| options | [MessageOption](arkts-ipc-rpc-messageoption-c.md) | Yes | 指示操作是同步还是异步。 |
-| callingInfo | [CallingInfo](arkts-ipc-rpc-callinginfo-c.md) | No | 获取IPC上下文信息。不传此参数时，默认为undefined。当需要获取调用者的PID、UID、TokenId或设备ID等信息时传入此参数，可通过 callingInfo.callerPid等方式获取。不传入时无法直接获取IPC上下文信息，需通过rpc.IPCSkeleton其他方法（如getCallingPid、getCallingUid等）获取。 |
+| code | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | Service request code sent by the remote end. |
+| data | [MessageSequence](arkts-ipc-rpc-messagesequence-c.md) | Yes | MessageSequence** object that holds the parameters called by the client. |
+| reply | [MessageSequence](arkts-ipc-rpc-messagesequence-c.md) | Yes | MessageSequence** object to which the result is written. |
+| options | [MessageOption](arkts-ipc-rpc-messageoption-c.md) | Yes | Whether the operation is synchronous or asynchronous. |
+| callingInfo | [CallingInfo](arkts-ipc-rpc-callinginfo-c.md) | No | IPC context. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| boolean | 若在onRemoteMessageRequest中同步处理请求，则返回一个布尔值。返回true表示操作成功，返回false表示操作失败。 &lt;br/&gt;- 若在onRemoteMessageRequest中异步处理请求，则返回一个Promise对象。返回true表示操作成功，返回false表示操作失败。 |
-
-## Examples
-
-```TypeScript
-// Override **onRemoteMessageRequest** to process requests synchronously.
-import { rpc } from '@kit.IPCKit';
-import { hilog } from '@kit.PerformanceAnalysisKit';
-
-class TestRemoteObject extends rpc.RemoteObject {
-  constructor(descriptor: string) {
-    super(descriptor);
-  }
-
-  onRemoteMessageRequest(code: number, data: rpc.MessageSequence, reply: rpc.MessageSequence,
-    option: rpc.MessageOption, callingInfo?: rpc.CallingInfo): boolean | Promise<boolean> {
-    if (code === 1) {
-      hilog.info(0x0000, 'testTag', 'RpcServer: sync onRemoteMessageRequest is called');
-      let pid = callingInfo?.callerPid;
-      return true;
-    } else {
-      hilog.error(0x0000, 'testTag', 'RpcServer: unknown code: ' + code);
-      return false;
-    }
-  }
-}
-```
-
-```TypeScript
-// Override **onRemoteMessageRequest** to process requests asynchronously.
-import { rpc } from '@kit.IPCKit';
-import { hilog } from '@kit.PerformanceAnalysisKit';
-
-class TestRemoteObject extends rpc.RemoteObject {
-  constructor(descriptor: string) {
-    super(descriptor);
-  }
-
-  async onRemoteMessageRequest(code: number, data: rpc.MessageSequence, reply: rpc.MessageSequence,
-    option: rpc.MessageOption, callingInfo?: rpc.CallingInfo): Promise<boolean> {
-    if (code === 1) {
-      hilog.info(0x0000, 'testTag', 'RpcServer: async onRemoteMessageRequest is called');
-      let pid = callingInfo?.callerPid;
-    } else {
-      hilog.error(0x0000, 'testTag', 'RpcServer: unknown code: ' + code);
-      return false;
-    }
-    await new Promise((resolve: (data: rpc.RequestResult) => void) => {
-      setTimeout(resolve, 100);
-    })
-    return true;
-  }
-}
-```
-
-```TypeScript
-// Override **onRemoteMessageRequest** and **onRemoteRequest** to process requests synchronously.
-import { rpc } from '@kit.IPCKit';
-import { hilog } from '@kit.PerformanceAnalysisKit';
-
-class TestRemoteObject extends rpc.RemoteObject {
-  constructor(descriptor: string) {
-    super(descriptor);
-  }
-
-  onRemoteRequest(code: number, data: rpc.MessageParcel, reply: rpc.MessageParcel, option: rpc.MessageOption): boolean {
-     if (code === 1) {
-        hilog.info(0x0000, 'testTag', 'RpcServer: sync onRemoteMessageRequest is called');
-        return true;
-     } else {
-        hilog.error(0x0000, 'testTag', 'RpcServer: unknown code: ' + code);
-        return false;
-     }
-  }
-    // Only onRemoteMessageRequest is executed.
-  onRemoteMessageRequest(code: number, data: rpc.MessageSequence, reply: rpc.MessageSequence,
-    option: rpc.MessageOption, callingInfo?: rpc.CallingInfo): boolean | Promise<boolean> {
-    if (code === 1) {
-      hilog.info(0x0000, 'testTag', 'RpcServer: async onRemoteMessageRequest is called');
-      let pid = callingInfo?.callerPid;
-    } else {
-      hilog.error(0x0000, 'testTag', 'RpcServer: unknown code: ' + code);
-      return false;
-    }
-    return true;
-  }
-}
-```
+| boolean | If the request is processed synchronously in **onRemoteMessageRequest**, a Boolean value is returned. The value **true** means that the operation is successful, and **false** means the opposite.&lt;br&gt;- If the request is processed asynchronously in **onRemoteMessageRequest**, a promise object is returned. The value **true** means that the operation is successful, and **false** means the opposite. |
 
 ## onRemoteRequest
 
@@ -730,7 +562,7 @@ class TestRemoteObject extends rpc.RemoteObject {
 onRemoteRequest(code: number, data: MessageParcel, reply: MessageParcel, options: MessageOption): boolean
 ```
 
-sendRequest请求的响应处理函数，服务端在该函数里处理请求，回复结果。
+Called to return a response to **sendRequest()**. The server processes the request and returns a response in this  function.
 
 **Since:** 7
 
@@ -748,16 +580,16 @@ sendRequest请求的响应处理函数，服务端在该函数里处理请求，
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| code | number | Yes | 对端发送的服务请求码。 |
-| data | [MessageParcel](arkts-ipc-rpc-messageparcel-c.md) | Yes | 携带客户端调用参数的MessageParcel对象。 |
-| reply | [MessageParcel](arkts-ipc-rpc-messageparcel-c.md) | Yes | 写入结果的MessageParcel对象。 |
-| options | [MessageOption](arkts-ipc-rpc-messageoption-c.md) | Yes | 指示操作是同步还是异步。 |
+| code | number | Yes | Service request code sent by the remote end. |
+| data | [MessageParcel](arkts-ipc-rpc-messageparcel-c.md) | Yes | MessageParcel** object that holds the parameters called by the client. |
+| reply | [MessageParcel](arkts-ipc-rpc-messageparcel-c.md) | Yes | MessageParcel** object carrying the result. |
+| options | [MessageOption](arkts-ipc-rpc-messageoption-c.md) | Yes | Whether the operation is synchronous or asynchronous. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| boolean | true：操作成功，false：操作失败。 |
+| boolean | Returns **true** if the operation is successful; returns **false** otherwise. |
 
 ## Examples
 
@@ -787,7 +619,7 @@ class TestRemoteObject extends rpc.RemoteObject {
 queryLocalInterface(descriptor: string): IRemoteBroker
 ```
 
-查询并获取当前接口描述符对应的远端对象是否已经存在。
+Checks whether the remote object corresponding to the specified interface token exists.
 
 **Since:** 7
 
@@ -805,13 +637,13 @@ queryLocalInterface(descriptor: string): IRemoteBroker
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| descriptor | string | Yes | 需要查询的接口描述符。 |
+| descriptor | string | Yes | Interface descriptor. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [IRemoteBroker](arkts-ipc-rpc-iremotebroker-i.md) | 如果接口描述符对应的远端对象存在，则返回该远端对象，否则返回Null。 |
+| [IRemoteBroker](arkts-ipc-rpc-iremotebroker-i.md) | Returns the remote object if a match is found; returns **Null** otherwise. |
 
 ## Examples
 
@@ -859,7 +691,8 @@ sendMessageRequest(
     ): Promise<RequestResult>
 ```
 
-以同步或异步方式向对端进程发送MessageSequence消息。如果为选项设置了异步模式，则发送请求的响应结果立即返回，reply报文里没有内容，具体回复需要在业务侧的回调中获取。如果为选项设置了同步模式，则发送请求的响应结果将在sendMessageRequest返回时返回，回复内容在reply报文里。使用Promise异步回调。
+Sends a **MessageSequence** message to the remote process in synchronous or asynchronous mode. If asynchronous  mode is set in **options**, a promise will be fulfilled immediately and the reply message is empty. The  specific reply needs to be obtained from the callback on the service side. If synchronous mode is set in  
+ **options**, a promise will be fulfilled when the response to **sendMessageRequest** is returned, and the  reply message contains the returned information.
 
 **Since:** 9
 
@@ -873,22 +706,22 @@ sendMessageRequest(
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| code | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | 本次请求调用的消息码[1-16777215]，由通信双方确定。如果接口由IDL工具生成，则消息代码由IDL自动生成。 |
-| data | [MessageSequence](arkts-ipc-rpc-messagesequence-c.md) | Yes | 保存待发送数据的MessageSequence对象。 |
-| reply | [MessageSequence](arkts-ipc-rpc-messagesequence-c.md) | Yes | 接收应答数据的MessageSequence对象。 |
-| options | [MessageOption](arkts-ipc-rpc-messageoption-c.md) | Yes | 本次请求的同异步模式，默认同步调用。 |
+| code | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | Message code [1-16777215] called by the request, which is determined by the communication parties. If the method is generated by an IDL tool, the message code is automatically generated by the IDL tool. |
+| data | [MessageSequence](arkts-ipc-rpc-messagesequence-c.md) | Yes | MessageSequence** object holding the data to send. |
+| reply | [MessageSequence](arkts-ipc-rpc-messagesequence-c.md) | Yes | MessageSequence** object that receives the response. |
+| options | [MessageOption](arkts-ipc-rpc-messageoption-c.md) | Yes | Request sending mode, which can be synchronous (default) or asynchronous. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;RequestResult&gt; | Promise对象，返回发送请求的响应结果。 |
+| Promise&lt;RequestResult&gt; | Promise used to return a **requestResult** instance. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1.The number of parameters is incorrect; 2.The parameter type does not match; 3.Failed to obtain the passed object instance. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.The number of parameters is incorrect; 2.The parameter type does not match; 3.Failed to obtain the passed object instance. |
 
 ## Examples
 
@@ -960,7 +793,8 @@ sendMessageRequest(
     ): void
 ```
 
-以同步或异步方式向对端进程发送MessageSequence消息。使用callback异步回调。如果为选项设置了异步模式，则立即收到回调，reply报文里没有内容，具体回复需要在业务侧的回调中获取。如果为选项设置了同步模式，则将在sendMessageRequest返回时收到回调，回复内容在reply报文里。
+Sends a **MessageSequence** message to the remote process in synchronous or asynchronous mode. If asynchronous  mode is set in **options**, a callback will be called immediately, and the reply message is empty. The  specific reply needs to be obtained from the callback on the service side. If synchronous mode is set in  
+ **options**, a callback will be invoked when the response to **sendMessageRequest** is returned, and the  reply message contains the returned information.
 
 **Since:** 9
 
@@ -974,17 +808,17 @@ sendMessageRequest(
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| code | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | 本次请求调用的消息码[1-16777215]，由通信双方确定。如果接口由IDL工具生成，则消息代码由IDL自动生成。 |
-| data | [MessageSequence](arkts-ipc-rpc-messagesequence-c.md) | Yes | 保存待发送数据的MessageSequence对象。 |
-| reply | [MessageSequence](arkts-ipc-rpc-messagesequence-c.md) | Yes | 接收应答数据的MessageSequence对象。 |
-| options | [MessageOption](arkts-ipc-rpc-messageoption-c.md) | Yes | 本次请求的同异步模式，默认同步调用。 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;RequestResult&gt; | Yes | 回调函数。当消息发送成功时，可从RequestResult中读取服务端返回的数据。 |
+| code | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | Message code [1-16777215] called by the request, which is determined by the communication parties. If the method is generated by an IDL tool, the message code is automatically generated by the IDL tool. |
+| data | [MessageSequence](arkts-ipc-rpc-messagesequence-c.md) | Yes | MessageSequence** object holding the data to send. |
+| reply | [MessageSequence](arkts-ipc-rpc-messagesequence-c.md) | Yes | MessageSequence** object that receives the response. |
+| options | [MessageOption](arkts-ipc-rpc-messageoption-c.md) | Yes | Request sending mode, which can be synchronous (default) or asynchronous. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;RequestResult&gt; | Yes | Callback for receiving the sending result. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1.The number of parameters is incorrect; 2.The parameter type does not match; 3.Failed to obtain the passed object instance. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.The number of parameters is incorrect; 2.The parameter type does not match; 3.Failed to obtain the passed object instance. |
 
 ## sendRequest
 
@@ -992,7 +826,7 @@ sendMessageRequest(
 sendRequest(code: number, data: MessageParcel, reply: MessageParcel, options: MessageOption): boolean
 ```
 
-以同步或异步方式向对端进程发送MessageParcel消息。如果为选项设置了异步模式，则立即返回，reply报文里没有内容，具体回复需要在业务侧的回调中获取。如果为选项设置了同步模式，则将在sendRequest返回时收到回复，回复内容在reply报文里。
+Sends a **MessageParcel** message to the remote process in synchronous or asynchronous mode. If asynchronous mode  is set in **options**, a promise will be fulfilled immediately and the reply message is empty. The specific  reply needs to be obtained from the callback on the service side. If synchronous mode is set in **options**, a promise will be fulfilled when the response to **sendRequest** is returned, and the reply message contains  the returned information.
 
 **Since:** 7
 
@@ -1010,16 +844,16 @@ sendRequest(code: number, data: MessageParcel, reply: MessageParcel, options: Me
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| code | number | Yes | 本次请求调用的消息码[1-16777215]，由通信双方确定。如果接口由IDL工具生成，则消息代码由IDL自动生成。 |
-| data | [MessageParcel](arkts-ipc-rpc-messageparcel-c.md) | Yes | 保存待发送数据的MessageParcel对象。 |
-| reply | [MessageParcel](arkts-ipc-rpc-messageparcel-c.md) | Yes | 接收应答数据的MessageParcel对象。 |
-| options | [MessageOption](arkts-ipc-rpc-messageoption-c.md) | Yes | 本次请求的同异步模式，默认同步调用。 |
+| code | number | Yes | Message code [1-16777215] called by the request, which is determined by the communication parties. If the method is generated by an IDL tool, the message code is automatically generated by the IDL tool. |
+| data | [MessageParcel](arkts-ipc-rpc-messageparcel-c.md) | Yes | MessageParcel** object holding the data to send. |
+| reply | [MessageParcel](arkts-ipc-rpc-messageparcel-c.md) | Yes | MessageParcel** object that receives the response. |
+| options | [MessageOption](arkts-ipc-rpc-messageoption-c.md) | Yes | Request sending mode, which can be synchronous (default) or asynchronous. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| boolean | true：发送成功，false：发送失败。 |
+| boolean | Returns **true** if the message is sent successfully; returns **false** otherwise. |
 
 ## Examples
 
@@ -1068,7 +902,7 @@ sendRequest(
     ): Promise<SendRequestResult>
 ```
 
-以同步或异步方式向对端进程发送MessageParcel消息。如果为选项设置了异步模式，则发送请求的响应结果立即返回，reply报文里没有内容，具体回复需要在业务侧的回调中获取。如果为选项设置了同步模式，则发送请求的响应结果将在sendRequest返回时返回，回复内容在reply报文里。使用Promise异步回调。
+Sends a **MessageParcel** message to the remote process in synchronous or asynchronous mode. If asynchronous mode  is set in **options**, a promise will be fulfilled immediately and the reply message is empty. The specific  reply needs to be obtained from the callback on the service side. If synchronous mode is set in **options**, a promise will be fulfilled when the response to **sendRequest** is returned, and the reply message contains  the returned information.
 
 **Since:** 8
 
@@ -1086,16 +920,16 @@ sendRequest(
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| code | number | Yes | 本次请求调用的消息码[1-16777215]，由通信双方确定。如果接口由IDL工具生成，则消息代码由IDL自动生成。 |
-| data | [MessageParcel](arkts-ipc-rpc-messageparcel-c.md) | Yes | 保存待发送数据的MessageParcel对象。 |
-| reply | [MessageParcel](arkts-ipc-rpc-messageparcel-c.md) | Yes | 接收应答数据的MessageParcel对象。 |
-| options | [MessageOption](arkts-ipc-rpc-messageoption-c.md) | Yes | 本次请求的同异步模式，默认同步调用。 |
+| code | number | Yes | Message code [1-16777215] called by the request, which is determined by the communication parties. If the method is generated by an IDL tool, the message code is automatically generated by the IDL tool. |
+| data | [MessageParcel](arkts-ipc-rpc-messageparcel-c.md) | Yes | MessageParcel** object holding the data to send. |
+| reply | [MessageParcel](arkts-ipc-rpc-messageparcel-c.md) | Yes | MessageParcel** object that receives the response. |
+| options | [MessageOption](arkts-ipc-rpc-messageoption-c.md) | Yes | Request sending mode, which can be synchronous (default) or asynchronous. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;SendRequestResult&gt; | Promise对象，返回发送请求的响应结果。 |
+| Promise&lt;SendRequestResult&gt; | Promise used to return a **sendRequestResult** instance. |
 
 ## Examples
 
@@ -1155,7 +989,7 @@ sendRequest(
     ): void
 ```
 
-以同步或异步方式向对端进程发送MessageParcel消息。使用callback异步回调。如果为选项设置了异步模式，则立即收到回调，reply报文里没有内容，具体回复需要在业务侧的回调中获取。如果为选项设置了同步模式，则将在sendRequest返回时收到回调，回复内容在reply报文里。
+Sends a **MessageParcel** message to the remote process in synchronous or asynchronous mode. If asynchronous mode  is set in **options**, a callback will be called immediately, and the reply message is empty. The specific  reply needs to be obtained from the callback on the service side. If synchronous mode is set in **options**, a callback will be invoked when the response to **sendRequest** is returned, and the reply message contains  the returned information.
 
 **Since:** 8
 
@@ -1173,9 +1007,9 @@ sendRequest(
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| code | number | Yes | 本次请求调用的消息码[1-16777215]，由通信双方确定。如果接口由IDL工具生成，则消息代码由IDL自动生成。 |
-| data | [MessageParcel](arkts-ipc-rpc-messageparcel-c.md) | Yes | 保存待发送数据的MessageParcel对象。 |
-| reply | [MessageParcel](arkts-ipc-rpc-messageparcel-c.md) | Yes | 接收应答数据的MessageParcel对象。 |
-| options | [MessageOption](arkts-ipc-rpc-messageoption-c.md) | Yes | 本次请求的同异步模式，默认同步调用。 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;SendRequestResult&gt; | Yes | 接收发送结果的回调。 |
+| code | number | Yes | Message code [1-16777215] called by the request, which is determined by the communication parties. If the method is generated by an IDL tool, the message code is automatically generated by the IDL tool. |
+| data | [MessageParcel](arkts-ipc-rpc-messageparcel-c.md) | Yes | MessageParcel** object holding the data to send. |
+| reply | [MessageParcel](arkts-ipc-rpc-messageparcel-c.md) | Yes | MessageParcel** object that receives the response. |
+| options | [MessageOption](arkts-ipc-rpc-messageoption-c.md) | Yes | Request sending mode, which can be synchronous (default) or asynchronous. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;SendRequestResult&gt; | Yes | Callback for receiving the sending result. |
 

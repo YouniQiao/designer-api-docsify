@@ -4,7 +4,7 @@
 export type Metadata = _Metadata
 ```
 
-元数据信息。
+Defines the metadata.
 
 **Since:** 9
 

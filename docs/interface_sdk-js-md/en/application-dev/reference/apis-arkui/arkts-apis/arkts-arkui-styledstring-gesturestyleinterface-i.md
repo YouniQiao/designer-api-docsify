@@ -16,7 +16,7 @@ Defines the Gesture Events.
 onClick?: Callback<ClickEvent>
 ```
 
-设置点击事件。
+Trigger a click event when a click is clicked.
 
 **Type:** [Callback](../arkts-components/arkts-arkui-callback-i.md)&lt;[ClickEvent](../arkts-components/arkts-arkui-clickevent-i.md)&gt;
 
@@ -36,7 +36,7 @@ onClick?: Callback<ClickEvent>
 onLongPress?: Callback<GestureEvent>
 ```
 
-设置长按事件。
+Trigger a gesture event when long press event is complete.
 
 **Type:** [Callback](../arkts-components/arkts-arkui-callback-i.md)&lt;[GestureEvent](arkts-arkui-gestureevent-i.md)&gt;
 
@@ -56,9 +56,7 @@ onLongPress?: Callback<GestureEvent>
 onTouch?: Callback<TouchEvent>
 ```
 
-设置触摸事件。
-
-取值为undefined时，不使用回调函数。
+Trigger a touch event when touched.
 
 **Type:** [Callback](../arkts-components/arkts-arkui-callback-i.md)&lt;[TouchEvent](../arkts-components/arkts-arkui-touchevent-i.md)&gt;
 

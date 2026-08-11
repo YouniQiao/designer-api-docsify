@@ -1,6 +1,6 @@
 # EfficiencyResourcesCpuLevel (System API)
 
-能效资源CPU级别。
+Defines the CPU level of the efficiency resource.
 
 **Since:** 23
 
@@ -18,7 +18,7 @@
 SMALL_CPU = 0
 ```
 
-表示运行在小核，用于处理轻量级后台任务，CPU频点较低。
+The background task runs on small CPU cores. This level caters to lightweight background tasks with a relatively low CPU frequency.
 
 **Since:** 23
 
@@ -38,7 +38,7 @@ SMALL_CPU = 0
 MEDIUM_CPU = 1
 ```
 
-表示最高可以运行在中核，系统基于负载决策运行在小核或中核。平衡性能与能效，用于需要处理复杂任务的场景，CPU频点高。
+The background task can run on medium CPU cores at maximum. The system determines whether to run the task on small or medium CPU cores based on load. This level balances performance and energy efficiency, and is applicable to scenarios requiring complex task processing with a high CPU frequency.
 
 **Since:** 23
 
@@ -58,7 +58,7 @@ MEDIUM_CPU = 1
 LARGE_CPU = 2
 ```
 
-表示最高可以运行在大核，系统基于负载决策运行在小核、中核或大核。 极致性能，用于应对重载任务的场景，CPU频点最高。
+The background task can run on large CPU cores at maximum. The system determines whether to run the task on small, medium, or large CPU cores based on load. This level delivers ultimate performance, and is applicable to scenarios requiring heavy-load task processing with the highest CPU frequency.
 
 **Since:** 23
 

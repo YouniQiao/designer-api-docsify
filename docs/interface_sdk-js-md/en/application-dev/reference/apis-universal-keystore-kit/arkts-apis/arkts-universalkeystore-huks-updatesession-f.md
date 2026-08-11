@@ -12,9 +12,9 @@ import { huks } from 'kits/@kit.UniversalKeystoreKit';
 function updateSession(handle: long, options: HuksOptions, callback: AsyncCallback<HuksReturnResult>): void
 ```
 
-updateSession操作密钥接口。使用callback异步回调。
+Updates the key operation. This API uses an asynchronous callback to return the result.
 
-huks.initSession、huks.updateSession、huks.finishSession为三段式接口，需要一起使用。
+The **huks.initSession**, **huks.updateSession**, and **huks.finishSession** must be used together.
 
 **Since:** 9
 
@@ -30,34 +30,34 @@ huks.initSession、huks.updateSession、huks.finishSession为三段式接口，�
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| handle | long | Yes | updateSession操作的uint64类型的handle值。 |
-| options | [HuksOptions](arkts-universalkeystore-huks-huksoptions-i.md) | Yes | updateSession的参数集合。 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;HuksReturnResult&gt; | Yes | 回调函数。当密钥操作update成功时，err为undefined，data为获取到的HuksReturnResult；否 则为错误对象。 |
+| handle | long | Yes | Handle of the **updateSession** operation, which is of the uint64 type. |
+| options | [HuksOptions](arkts-universalkeystore-huks-huksoptions-i.md) | Yes | Parameter set used for the **updateSession** operation. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;HuksReturnResult&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined**, and **data** is the obtained **HuksReturnResult**. Otherwise, **err** is an error object. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 12000023 | the UKey PIN not authenticated<br>**Applicable version:** 22 and later |
-| 801 | api is not supported |
-| 12000021 | the UKey PIN is locked<br>**Applicable version:** 22 and later |
-| 12000020 | the provider operation failed<br>**Applicable version:** 22 and later |
-| 12000018 | the group id specified by the access group tag is invalid<br>**Applicable version:** 23 and later |
-| 12000026 | the secure element is not available<br>**Applicable version:** 26.0.0 and later |
-| 12000024 | the provider or UKey is busy<br>**Applicable version:** 22 and later |
-| 12000007 | this credential is already invalidated permanently |
-| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. 3. Parameter verification failed. |
-| 12000006 | error occurred in crypto engine or UKey driver |
-| 12000005 | IPC communication failed |
-| 12000004 | operating file failed |
-| 12000003 | algorithm param is invalid |
-| 12000002 | algorithm param is missing |
-| 12000001 | algorithm mode is not supported |
-| 12000014 | memory is insufficient |
-| 12000012 | Device environment or input parameter abnormal |
-| 12000011 | queried entity does not exist |
-| 12000009 | auth token is already timeout |
-| 12000008 | verify auth token failed |
+| [12000023](../errorcode-huks.md#12000023-unauthenticated-ukey-pin) | the UKey PIN not authenticated<br>**Applicable version:** 22 and later |
+| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | api is not supported |
+| [12000021](../errorcode-huks.md#12000021-ukey-pin-locked) | the UKey PIN is locked<br>**Applicable version:** 22 and later |
+| [12000020](../errorcode-huks.md#12000020-dependent-module-error) | the provider operation failed<br>**Applicable version:** 22 and later |
+| [12000018](../errorcode-huks.md#12000018-invalid-input-parameter) | the group id specified by the access group tag is invalid<br>**Applicable version:** 23 and later |
+| [12000026](../errorcode-huks.md#12000026-secure-element-fault) | the secure element is not available<br>**Applicable version:** 26.0.0 and later |
+| [12000024](../errorcode-huks.md#12000024-device-or-resource-busy) | the provider or UKey is busy<br>**Applicable version:** 22 and later |
+| [12000007](../errorcode-huks.md#12000007-failed-to-access-the-key-due-to-invalidated-credential) | this credential is already invalidated permanently |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. 3. Parameter verification failed. |
+| [12000006](../errorcode-huks.md#12000006-algorithm-library-operation-failed) | error occurred in crypto engine or UKey driver |
+| [12000005](../errorcode-huks.md#12000005-ipc-error) | IPC communication failed |
+| [12000004](../errorcode-huks.md#12000004-file-error) | operating file failed |
+| [12000003](../errorcode-huks.md#12000003-invalid-key-algorithm-parameter) | algorithm param is invalid |
+| [12000002](../errorcode-huks.md#12000002-missing-key-algorithm-parameter) | algorithm param is missing |
+| [12000001](../errorcode-huks.md#12000001-feature-not-supported) | algorithm mode is not supported |
+| [12000014](../errorcode-huks.md#12000014-insufficient-memory) | memory is insufficient |
+| [12000012](../errorcode-huks.md#12000012-external-error) | Device environment or input parameter abnormal |
+| [12000011](../errorcode-huks.md#12000011-the-entity-does-not-exist) | queried entity does not exist |
+| [12000009](../errorcode-huks.md#12000009-key-access-timed-out) | auth token is already timeout |
+| [12000008](../errorcode-huks.md#12000008-failed-to-access-the-key-due-to-a-failure-in-authentication-token-verification) | verify auth token failed |
 
 
 ## updateSession
@@ -71,7 +71,9 @@ function updateSession(
   ): void
 ```
 
-Updates the key operation by segment. This API uses an asynchronous callback to return the result.huks.initSession, huks.updateSession, and huks.finishSession must be used together.
+Updates the key operation by segment. The **updateSession** operation is used for user identity authentication and access control. This API uses an asynchronous callback to return the result.
+
+The **huks.initSession**, **huks.updateSession**, and **huks.finishSession** must be used together.
 
 **Since:** 9
 
@@ -96,22 +98,22 @@ Updates the key operation by segment. This API uses an asynchronous callback to 
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 801 | api is not supported |
-| 12000018 | the group id specified by the access group tag is invalid<br>**Applicable version:** 23 and later |
-| 12000026 | the secure element is not available<br>**Applicable version:** 26.0.0 and later |
-| 12000007 | this credential is already invalidated permanently |
-| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. 3. Parameter verification failed. |
-| 12000006 | error occurred in crypto engine |
-| 12000005 | IPC communication failed |
-| 12000004 | operating file failed |
-| 12000003 | algorithm param is invalid |
-| 12000002 | algorithm param is missing |
-| 12000001 | algorithm mode is not supported |
-| 12000014 | memory is insufficient |
-| 12000012 | Device environment or input parameter abnormal |
-| 12000011 | queried entity does not exist |
-| 12000009 | auth token is already timeout |
-| 12000008 | verify auth token failed |
+| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | api is not supported |
+| [12000018](../errorcode-huks.md#12000018-invalid-input-parameter) | the group id specified by the access group tag is invalid<br>**Applicable version:** 23 and later |
+| [12000026](../errorcode-huks.md#12000026-secure-element-fault) | the secure element is not available<br>**Applicable version:** 26.0.0 and later |
+| [12000007](../errorcode-huks.md#12000007-failed-to-access-the-key-due-to-invalidated-credential) | this credential is already invalidated permanently |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. 3. Parameter verification failed. |
+| [12000006](../errorcode-huks.md#12000006-algorithm-library-operation-failed) | error occurred in crypto engine |
+| [12000005](../errorcode-huks.md#12000005-ipc-error) | IPC communication failed |
+| [12000004](../errorcode-huks.md#12000004-file-error) | operating file failed |
+| [12000003](../errorcode-huks.md#12000003-invalid-key-algorithm-parameter) | algorithm param is invalid |
+| [12000002](../errorcode-huks.md#12000002-missing-key-algorithm-parameter) | algorithm param is missing |
+| [12000001](../errorcode-huks.md#12000001-feature-not-supported) | algorithm mode is not supported |
+| [12000014](../errorcode-huks.md#12000014-insufficient-memory) | memory is insufficient |
+| [12000012](../errorcode-huks.md#12000012-external-error) | Device environment or input parameter abnormal |
+| [12000011](../errorcode-huks.md#12000011-the-entity-does-not-exist) | queried entity does not exist |
+| [12000009](../errorcode-huks.md#12000009-key-access-timed-out) | auth token is already timeout |
+| [12000008](../errorcode-huks.md#12000008-failed-to-access-the-key-due-to-a-failure-in-authentication-token-verification) | verify auth token failed |
 
 
 ## updateSession
@@ -120,9 +122,9 @@ Updates the key operation by segment. This API uses an asynchronous callback to 
 function updateSession(handle: long, options: HuksOptions, token?: Uint8Array): Promise<HuksReturnResult>
 ```
 
-updateSession操作密钥接口。使用Promise异步回调。
+Updates the key operation. This API uses a promise to return the result.
 
-huks.initSession、huks.updateSession、huks.finishSession为三段式接口，需要一起使用。
+The **huks.initSession**, **huks.updateSession**, and **huks.finishSession** must be used together.
 
 **Since:** 9
 
@@ -138,38 +140,38 @@ huks.initSession、huks.updateSession、huks.finishSession为三段式接口，�
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| handle | long | Yes | updateSession操作的uint64类型的handle值。 |
-| options | [HuksOptions](arkts-universalkeystore-huks-huksoptions-i.md) | Yes | updateSession操作的参数集合。 |
-| token | Uint8Array | No | 密钥 [二次认证密钥访问控制](../../../security/UniversalKeystoreKit/huks-identity-authentication-overview.md#二次认证密钥访问控制)的用户鉴权证 明(AuthToken)，不填表示不进行二次认证密钥访问控制。 |
+| handle | long | Yes | Handle of the **updateSession** operation, which is of the uint64 type. |
+| options | [HuksOptions](arkts-universalkeystore-huks-huksoptions-i.md) | Yes | Parameter set used for the **updateSession** operation. |
+| token | Uint8Array | No | Authentication token for [refined key access control](../../../security/UniversalKeystoreKit/huks-identity-authentication-overview.md#refined-key-access-control) . If this parameter is left blank, refined key access control is not performed. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;HuksReturnResult&gt; | Promise对象，返回调用接口的结果。调用成功时，若使用AES/DES/3DES/SM4密钥加解密时，HuksReturnResult的outData 成员将返回加密后的密文或者解密后的明文；否则outData为空。 |
+| Promise&lt;HuksReturnResult&gt; | Promise that returns the operation result. If the operation is successful and the AES, DES, 3DES, or SM4 key is used for encryption or decryption, **outData** in **HuksReturnResult** returns the ciphertext or decrypted plaintext. Otherwise, **outData** is empty. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 12000023 | the UKey PIN not authenticated<br>**Applicable version:** 22 and later |
-| 801 | api is not supported |
-| 12000021 | the UKey PIN is locked<br>**Applicable version:** 22 and later |
-| 12000020 | the provider operation failed<br>**Applicable version:** 22 and later |
-| 12000018 | the group id specified by the access group tag is invalid<br>**Applicable version:** 23 and later |
-| 12000026 | the secure element is not available<br>**Applicable version:** 26.0.0 and later |
-| 12000024 | the provider or UKey is busy<br>**Applicable version:** 22 and later |
-| 12000007 | this credential is already invalidated permanently |
-| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. 3. Parameter verification failed. |
-| 12000006 | error occurred in crypto engine or UKey driver |
-| 12000005 | IPC communication failed |
-| 12000004 | operating file failed |
-| 12000003 | algorithm param is invalid |
-| 12000002 | algorithm param is missing |
-| 12000001 | algorithm mode is not supported |
-| 12000014 | memory is insufficient |
-| 12000012 | Device environment or input parameter abnormal |
-| 12000011 | queried entity does not exist |
-| 12000009 | auth token is already timeout |
-| 12000008 | verify auth token failed |
+| [12000023](../errorcode-huks.md#12000023-unauthenticated-ukey-pin) | the UKey PIN not authenticated<br>**Applicable version:** 22 and later |
+| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | api is not supported |
+| [12000021](../errorcode-huks.md#12000021-ukey-pin-locked) | the UKey PIN is locked<br>**Applicable version:** 22 and later |
+| [12000020](../errorcode-huks.md#12000020-dependent-module-error) | the provider operation failed<br>**Applicable version:** 22 and later |
+| [12000018](../errorcode-huks.md#12000018-invalid-input-parameter) | the group id specified by the access group tag is invalid<br>**Applicable version:** 23 and later |
+| [12000026](../errorcode-huks.md#12000026-secure-element-fault) | the secure element is not available<br>**Applicable version:** 26.0.0 and later |
+| [12000024](../errorcode-huks.md#12000024-device-or-resource-busy) | the provider or UKey is busy<br>**Applicable version:** 22 and later |
+| [12000007](../errorcode-huks.md#12000007-failed-to-access-the-key-due-to-invalidated-credential) | this credential is already invalidated permanently |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. 3. Parameter verification failed. |
+| [12000006](../errorcode-huks.md#12000006-algorithm-library-operation-failed) | error occurred in crypto engine or UKey driver |
+| [12000005](../errorcode-huks.md#12000005-ipc-error) | IPC communication failed |
+| [12000004](../errorcode-huks.md#12000004-file-error) | operating file failed |
+| [12000003](../errorcode-huks.md#12000003-invalid-key-algorithm-parameter) | algorithm param is invalid |
+| [12000002](../errorcode-huks.md#12000002-missing-key-algorithm-parameter) | algorithm param is missing |
+| [12000001](../errorcode-huks.md#12000001-feature-not-supported) | algorithm mode is not supported |
+| [12000014](../errorcode-huks.md#12000014-insufficient-memory) | memory is insufficient |
+| [12000012](../errorcode-huks.md#12000012-external-error) | Device environment or input parameter abnormal |
+| [12000011](../errorcode-huks.md#12000011-the-entity-does-not-exist) | queried entity does not exist |
+| [12000009](../errorcode-huks.md#12000009-key-access-timed-out) | auth token is already timeout |
+| [12000008](../errorcode-huks.md#12000008-failed-to-access-the-key-due-to-a-failure-in-authentication-token-verification) | verify auth token failed |
 

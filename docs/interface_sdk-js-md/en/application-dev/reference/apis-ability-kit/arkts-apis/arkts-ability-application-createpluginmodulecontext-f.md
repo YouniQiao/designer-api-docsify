@@ -12,7 +12,7 @@ import { application } from 'kits/@kit.AbilityKit';
 export function createPluginModuleContext(context: Context, pluginBundleName: string, pluginModuleName: string): Promise<Context>
 ```
 
-根据入参Context、指定的插件包名和插件模块名，创建本应用下插件的Context，用于获取插件的基本信息。使用Promise异步回调。
+Creates the context of a plugin under the current application based on the context, plugin bundle name, and plugin module name, so as to obtain the basic information about the plugin. This API uses a promise to return the result.
 
 **Since:** 19
 
@@ -28,15 +28,15 @@ export function createPluginModuleContext(context: Context, pluginBundleName: st
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| context | [Context](arkts-ability-context-c.md) | Yes | 表示应用上下文。 |
-| pluginBundleName | string | Yes | 表示应用的插件包名。 |
-| pluginModuleName | string | Yes | 表示应用的插件模块名。 |
+| context | [Context](arkts-ability-context-c.md) | Yes | Application context. |
+| pluginBundleName | string | Yes | Bundle name of the plugin. |
+| pluginModuleName | string | Yes | Module name of the plugin. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;[Context](arkts-ability-context-c.md)&gt; | Promise对象。返回创建的Context。 |
+| Promise&lt;[Context](arkts-ability-context-c.md)&gt; | Promise used to return the context created. |
 
 ## Examples
 

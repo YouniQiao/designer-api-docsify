@@ -1,6 +1,6 @@
 # PCFConfig
 
-PCF软阴影配置参数
+param config for pcf soft shadow
 
 **Inheritance/Implementation:** PCFConfig extends [SoftShadowConfig](arkts-arkgraphics3d-scene-softshadowconfig-c.md)
 
@@ -18,7 +18,7 @@ PCF软阴影配置参数
 set shadowSampleCount(value: int | undefined)
 ```
 
-设置用于渲染阴影像素的阴影图采样数量.
+Set the sample count number from shadow map used to render a shadow pixel.Values outside the range are ignored and the previous value is retained.
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
@@ -40,7 +40,7 @@ set shadowSampleCount(value: int | undefined)
 set shadowSampleRadius(value: double | undefined)
 ```
 
-设置像素级阴影边缘周围的采样半径.
+Set sample radius around the shadow edge at pixel-level.
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：double
 

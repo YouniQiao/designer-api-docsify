@@ -20,7 +20,7 @@ colors?: Color[]
 
 顶点颜色. 如果colors不为null，则colors[N]对应vertices[N].
 
-**类型：** [Color](../../apis-arkui/arkts-apis/arkts-arkui-enums-color-e.md)[]
+**类型：** [Color](arkts-arkgraphics3d-scenetypes-color-i.md)[]
 
 **起始版本：** 18
 

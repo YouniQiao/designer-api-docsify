@@ -1,6 +1,6 @@
 # X509CRLMatchParameters
 
-用于匹配证书吊销列表的过滤参数。如果参数中任一项都未指定，则匹配所有证书吊销列表。
+Represents the parameters used to match a certificate revocation list (CRL). If no parameter is specified, all CRLs are matched.
 
 **Since:** 11
 
@@ -22,7 +22,7 @@ import { cert } from 'kits/@kit.DeviceCertificateKit';
 issuer?: Array<Uint8Array>
 ```
 
-指定CRL颁发者，为DER编码格式。
+CRL issuer, in DER format.
 
 **Type:** Array&lt;Uint8Array&gt;
 
@@ -42,7 +42,7 @@ issuer?: Array<Uint8Array>
 maxCRL?: bigint
 ```
 
-指定CRL编号（CRL number）的最大值。
+Maximum value of the CRL number.
 
 **Type:** bigint
 
@@ -62,7 +62,7 @@ maxCRL?: bigint
 minCRL?: bigint
 ```
 
-指定CRL编号（CRL number）的最小值。
+Minimum value of the CRL number.
 
 **Type:** bigint
 
@@ -82,7 +82,7 @@ minCRL?: bigint
 updateDateTime?: string
 ```
 
-指定CRL更新时间。
+CRL update time.
 
 **Type:** string
 
@@ -102,7 +102,7 @@ updateDateTime?: string
 x509Cert?: X509Cert
 ```
 
-指定具体的证书对象。
+Certificate object.
 
 **Type:** [X509Cert](../../apis-network-kit/arkts-apis/arkts-network-http-x509cert-t.md)
 

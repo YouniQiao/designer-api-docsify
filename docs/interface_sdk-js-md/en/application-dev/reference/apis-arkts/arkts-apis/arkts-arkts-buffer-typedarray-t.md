@@ -14,7 +14,7 @@ type TypedArray = Int8Array
     | BigUint64Array
 ```
 
-TypedArray的特性与方法。
+TypedArray features and methods
 
 **Since:** 23
 

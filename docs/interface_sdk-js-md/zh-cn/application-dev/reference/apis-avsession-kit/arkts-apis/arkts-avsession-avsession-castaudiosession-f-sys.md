@@ -1,11 +1,5 @@
 # castAudioSession（系统接口）
 
-## 导入模块
-
-```TypeScript
-import { avSession } from 'kits/@kit.AVSessionKit';
-```
-
 ## castAudioSession
 
 ```TypeScript
@@ -38,11 +32,35 @@ Cast Audio to the remote devices or cast back local device
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 6600101 | Session service exception. |
-| 6600102 | The session does not exist. |
-| 201 | permission denied |
-| 202 | Not System App. |
-| 6600104 | The remote session connection failed. |
+| [6600101](../errorcode-avsession.md#6600101-会话服务端异常) | Session service exception. |
+| [6600102](../errorcode-avsession.md#6600102-会话不存在) | The session does not exist. |
+| [201](../../errorcode-universal.md#201-权限校验失败) | permission denied |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not System App. |
+| [6600104](../errorcode-avsession.md#6600104-远端会话连接失败) | The remote session connection failed. |
+
+## 示例
+
+```TypeScript
+import { audio } from '@kit.AudioKit';
+let audioManager = audio.getAudioManager();
+let audioRoutingManager = audioManager.getRoutingManager();
+let audioDevices: audio.AudioDeviceDescriptors | undefined = undefined;
+audioRoutingManager.getDevices(audio.DeviceFlag.OUTPUT_DEVICES_FLAG).then((data) => {
+  audioDevices = data;
+  console.info('Promise returned to indicate that the device list is obtained.');
+}).catch(async(err) => {
+});
+
+let sessionToken: avSession.SessionToken = {
+  sessionId: 'token'
+};
+
+if (audioDevices !== undefined) {
+  avSession.castAudioSession(sessionToken, audioDevices as audio.AudioDeviceDescriptors, (err | null) => {
+    console.info('CastAudio : SUCCESS ');
+  });
+}
+```
 
 
 ## castAudioSession
@@ -82,9 +100,9 @@ Cast Audio to the remote devices or cast back local device
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 6600101 | Session service exception. |
-| 6600102 | The session does not exist. |
-| 201 | permission denied |
-| 202 | Not System App. |
-| 6600104 | The remote session connection failed. |
+| [6600101](../errorcode-avsession.md#6600101-会话服务端异常) | Session service exception. |
+| [6600102](../errorcode-avsession.md#6600102-会话不存在) | The session does not exist. |
+| [201](../../errorcode-universal.md#201-权限校验失败) | permission denied |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not System App. |
+| [6600104](../errorcode-avsession.md#6600104-远端会话连接失败) | The remote session connection failed. |
 

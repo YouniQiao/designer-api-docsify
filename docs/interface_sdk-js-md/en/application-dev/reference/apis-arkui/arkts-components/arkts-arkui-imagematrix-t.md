@@ -4,7 +4,7 @@
 declare type ImageMatrix = import ('../api/@ohos.matrix4').default.Matrix4Transit
 ```
 
-当前的矩阵对象。
+Represents the current matrix object.
 
 **Since:** 15
 

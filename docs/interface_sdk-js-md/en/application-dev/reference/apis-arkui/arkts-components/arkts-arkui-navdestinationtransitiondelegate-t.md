@@ -5,7 +5,7 @@ declare type NavDestinationTransitionDelegate =
     (operation: NavigationOperation, isEnter: boolean) => Array<NavDestinationTransition> | undefined
 ```
 
-NavDestination自定义转场动画的代理函数。
+Defines the delegate function for custom transition animations of the **NavDestination** component.
 
 **Since:** 15
 
@@ -23,8 +23,8 @@ NavDestination自定义转场动画的代理函数。
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| operation | [NavigationOperation](arkts-arkui-navigationoperation-e.md) | Yes | 当前页面转场的操作类型。 |
-| isEnter | boolean | Yes | 当前页面是否为入场页面。<br/>true：当前页面是入场页面；false：当前页面不是入场页面。 |
+| operation | [NavigationOperation](arkts-arkui-navigationoperation-e.md) | Yes | Type of navigation operation for the current page transition. |
+| isEnter | boolean | Yes | Whether the current page is an entry page.<br>**true**: The current page is an entry page.<br>**false**: The current page is not an entry page. |
 
 **Return value:**
 

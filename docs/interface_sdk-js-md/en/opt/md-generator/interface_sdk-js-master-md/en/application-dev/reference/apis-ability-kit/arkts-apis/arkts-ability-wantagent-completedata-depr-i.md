@@ -1,0 +1,123 @@
+# CompleteData
+
+Describes the data returned by after wantAgent.trigger is called.
+
+**Since:** 7
+
+**Deprecated since:** 9
+
+**Substitutes:** ohos.app.ability.wantAgent/wantAgent#CompleteData
+
+<!--Device-wantAgent-export interface CompleteData--><!--Device-wantAgent-export interface CompleteData-End-->
+
+**System capability:** SystemCapability.Ability.AbilityRuntime.Core
+
+## extraInfo
+
+```TypeScript
+extraInfo?: { [key: string]: any }
+```
+
+Extra data collected by the common event.
+
+**Type:** { [key: string]: any }
+
+**Since:** 7
+
+**Deprecated since:** 9
+
+**Substitutes:** ohos.app.ability.wantAgent/wantAgent.CompleteData#extraInfo
+
+**Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-CompleteData-extraInfo?: { [key: string]: any }--><!--Device-CompleteData-extraInfo?: { [key: string]: any }-End-->
+
+**System capability:** SystemCapability.Ability.AbilityRuntime.Core
+
+## finalCode
+
+```TypeScript
+finalCode: number
+```
+
+Request code used to trigger the WantAgent.
+
+**Type:** number
+
+**Since:** 7
+
+**Deprecated since:** 9
+
+**Substitutes:** ohos.app.ability.wantAgent/wantAgent.CompleteData#finalCode
+
+**Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-CompleteData-finalCode: number--><!--Device-CompleteData-finalCode: number-End-->
+
+**System capability:** SystemCapability.Ability.AbilityRuntime.Core
+
+## finalData
+
+```TypeScript
+finalData: string
+```
+
+Final data collected by the common event.
+
+**Type:** string
+
+**Since:** 7
+
+**Deprecated since:** 9
+
+**Substitutes:** ohos.app.ability.wantAgent/wantAgent.CompleteData#finalData
+
+**Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-CompleteData-finalData: string--><!--Device-CompleteData-finalData: string-End-->
+
+**System capability:** SystemCapability.Ability.AbilityRuntime.Core
+
+## info
+
+```TypeScript
+info: WantAgent
+```
+
+Triggered WantAgent.
+
+**Type:** [WantAgent](../../apis-background-tasks-kit/arkts-apis/arkts-backgroundtasks-reminderagent-wantagent-i.md)
+
+**Since:** 7
+
+**Deprecated since:** 9
+
+**Substitutes:** ohos.app.ability.wantAgent/wantAgent.CompleteData#info
+
+**Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-CompleteData-info: WantAgent--><!--Device-CompleteData-info: WantAgent-End-->
+
+**System capability:** SystemCapability.Ability.AbilityRuntime.Core
+
+## want
+
+```TypeScript
+want: Want
+```
+
+Existing Want that is triggered.
+
+**Type:** [Want](arkts-ability-app-ability-want-want-c.md)
+
+**Since:** 7
+
+**Deprecated since:** 9
+
+**Substitutes:** ohos.app.ability.wantAgent/wantAgent.CompleteData#want
+
+**Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-CompleteData-want: Want--><!--Device-CompleteData-want: Want-End-->
+
+**System capability:** SystemCapability.Ability.AbilityRuntime.Core

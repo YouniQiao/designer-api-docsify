@@ -24,7 +24,7 @@ import { abilityConnectionManager } from 'kits/@kit.DistributedServiceKit';
 bitrate?: int
 ```
 
-视频码率，默认80(kbps)。仅在发送端有效。
+This value indicates video bitrate, default 80(kbps). Only valid on the sender side.
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
@@ -46,7 +46,7 @@ bitrate?: int
 colorSpaceConversionTarget?: colorSpaceManager.ColorSpace
 ```
 
-转换的目标色彩空间。目前仅支持BT709_LIMIT。如果发送端的视频格式为HDR且需要在传输时转换为SDR，则应设置此参数。
+The target color space for conversion. Currently, only BT709_LIMIT is supported.If the video format on the sender side is HDR and needs to be converted to SDR during transmission, this parameter should be set.
 
 **Type:** colorSpaceManager.ColorSpace
 
@@ -68,7 +68,7 @@ colorSpaceConversionTarget?: colorSpaceManager.ColorSpace
 name: string
 ```
 
-流名称，接收端必须与发送端保持一致。
+Stream name, the receive end must be consistent with the transmit end.
 
 **Type:** string
 
@@ -90,7 +90,7 @@ name: string
 role: StreamRole
 ```
 
-流传输角色，可以是接收流或发送流。
+Stream transmission role, which can be a receive stream or a transmit stream.
 
 **Type:** [StreamRole](arkts-distributedservice-abilityconnectionmanager-streamrole-e-sys.md)
 

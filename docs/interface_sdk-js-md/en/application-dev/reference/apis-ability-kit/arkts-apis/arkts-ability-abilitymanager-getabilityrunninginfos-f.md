@@ -12,11 +12,13 @@ import { abilityManager } from 'kits/@kit.AbilityKit';
 function getAbilityRunningInfos(): Promise<Array<AbilityRunningInfo>>
 ```
 
-获取UIAbility运行时的相关信息。使用Promise异步回调。
+Obtains the UIAbility running information. This API uses a promise to return the result.
 
-> **说明：**
+> **NOTE：**
 > 
-> 如果应用申请了ohos.permission.GET_RUNNING_INFO权限，可以获取所有应用UIAbility的运行信息，否则只能获取当前应用UIAbility的运行信息。
+> If the application has requested the ohos.permission.GET_RUNNING_INFO permission, it can obtain the UIAbility
+> running information of all applications; otherwise, it can obtain the UIAbility running information of the
+> current application.
 
 **Since:** 14
 
@@ -32,13 +34,13 @@ function getAbilityRunningInfos(): Promise<Array<AbilityRunningInfo>>
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;Array&lt;AbilityRunningInfo&gt;&gt; | Promise对象，返回UIAbility运行时的相关信息。开发者可在此进行错误处理或其他自定义处理。 |
+| Promise&lt;Array&lt;AbilityRunningInfo&gt;&gt; | Promise used to return the UIAbility running information. You can perform error handling or other custom processing. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 16000050 | Internal error. |
+| [16000050](../errorcode-ability.md#16000050-internal-error) | Internal error. |
 
 ## Examples
 

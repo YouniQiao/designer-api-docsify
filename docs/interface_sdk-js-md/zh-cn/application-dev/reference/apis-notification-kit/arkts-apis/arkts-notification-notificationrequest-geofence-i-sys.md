@@ -20,7 +20,7 @@ coordinateSystemType:CoordinateSystemType
 
 中心点坐标系类型。
 
-**类型：** [CoordinateSystemType](../../apis-location-kit/arkts-apis/arkts-location-geolocationmanager-coordinatesystemtype-e.md)
+**类型：** [CoordinateSystemType](arkts-notification-notificationmanager-coordinatesystemtype-t-sys.md)
 
 **起始版本：** 23
 
@@ -100,7 +100,7 @@ monitorEvent:MonitorEvent
 
 围栏触发条件类型。
 
-**类型：** [MonitorEvent](arkts-notification-notificationmanager-monitorevent-t-sys.md)
+**类型：** [MonitorEvent](arkts-notification-notificationrequest-monitorevent-e-sys.md)
 
 **起始版本：** 23
 

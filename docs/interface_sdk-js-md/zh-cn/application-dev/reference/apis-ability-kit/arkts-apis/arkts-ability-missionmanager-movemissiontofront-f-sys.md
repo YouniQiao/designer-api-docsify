@@ -1,11 +1,5 @@
 # moveMissionToFront（系统接口）
 
-## 导入模块
-
-```TypeScript
-import { missionManager } from 'kits/@kit.AbilityKit';
-```
-
 ## moveMissionToFront
 
 ```TypeScript
@@ -31,16 +25,16 @@ function moveMissionToFront(missionId: int, callback: AsyncCallback<void>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | missionId | ArkTS-Dyn: number  <br>ArkTS-Sta：int | 是 | 任务ID。 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | 是 | 执行结果回调函数。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 执行结果回调函数。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
-| 201 | Permission denied. |
-| 202 | Not system application. |
-| 16000009 | An ability cannot be started or stopped in Wukong mode. |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not system application. |
+| [16000009](../errorcode-ability.md#16000009-wukong模式不允许启动停止ability) | An ability cannot be started or stopped in Wukong mode. |
 
 ## 示例
 
@@ -52,7 +46,7 @@ import { BusinessError } from '@kit.BasicServicesKit';
 let testMissionId = 2;
 
 try {
-  missionManager.moveMissionToFront(testMissionId, (err: BusinessError, data: void) => {
+  missionManager.moveMissionToFront(testMissionId, (err: BusinessError | null, data: undefined) => {
     if (err) {
       console.error(`moveMissionToFront failed. Code: ${err.code}, message: ${err.message}.`);
     } else {
@@ -92,16 +86,16 @@ function moveMissionToFront(missionId: int, options: StartOptions, callback: Asy
 | --- | --- | --- | --- |
 | missionId | ArkTS-Dyn: number  <br>ArkTS-Sta：int | 是 | 任务ID。 |
 | options | [StartOptions](arkts-ability-app-ability-startoptions-startoptions-c-sys.md) | 是 | 启动参数选项，用于指定任务切到前台时的窗口模式，设备ID等。 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | 是 | 执行结果回调函数。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 执行结果回调函数。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
-| 201 | Permission denied. |
-| 202 | Not system application. |
-| 16000009 | An ability cannot be started or stopped in Wukong mode. |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not system application. |
+| [16000009](../errorcode-ability.md#16000009-wukong模式不允许启动停止ability) | An ability cannot be started or stopped in Wukong mode. |
 
 ## 示例
 
@@ -113,13 +107,14 @@ import { BusinessError } from '@kit.BasicServicesKit';
 let testMissionId = 2;
 
 try {
-  missionManager.moveMissionToFront(testMissionId, { windowMode: 101 }, (err: BusinessError, data: void) => {
-    if (err) {
-      console.error(`moveMissionToFront failed. Code: ${err.code}, message: ${err.message}.`);
-    } else {
-      console.info(`moveMissionToFront successfully: ${JSON.stringify(data)}`);
-    }
-  });
+  missionManager.moveMissionToFront(testMissionId, { windowMode: 101 },
+    (err: BusinessError | null, data: undefined) => {
+      if (err) {
+        console.error(`moveMissionToFront failed. Code: ${err.code}, message: ${err.message}.`);
+      } else {
+        console.info(`moveMissionToFront successfully: ${JSON.stringify(data)}`);
+      }
+    });
 } catch (error) {
   let err: BusinessError = error as BusinessError;
   console.error(`moveMissionToFront failed. Code: ${err.code}, message: ${err.message}.`);
@@ -164,10 +159,10 @@ function moveMissionToFront(missionId: int, options?: StartOptions): Promise<voi
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
-| 201 | Permission denied. |
-| 202 | Not system application. |
-| 16000009 | An ability cannot be started or stopped in Wukong mode. |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not system application. |
+| [16000009](../errorcode-ability.md#16000009-wukong模式不允许启动停止ability) | An ability cannot be started or stopped in Wukong mode. |
 
 ## 示例
 
@@ -179,10 +174,11 @@ import { BusinessError } from '@kit.BasicServicesKit';
 let testMissionId = 2;
 
 try {
-  missionManager.moveMissionToFront(testMissionId).then((data: void) => {
+  missionManager.moveMissionToFront(testMissionId).then((data) => {
     console.info(`moveMissionToFront successfully. Data: ${JSON.stringify(data)}`);
-  }).catch((error: BusinessError) => {
-    console.error(`moveMissionToFront failed. Code: ${error.code}, message: ${error.message}.`);
+  }).catch((error: Error) => {
+    let err: BusinessError = error as BusinessError;
+    console.error(`moveMissionToFront failed. Code: ${err.code}, message: ${err.message}.`);
   });
 } catch (error) {
   let err: BusinessError = error as BusinessError;

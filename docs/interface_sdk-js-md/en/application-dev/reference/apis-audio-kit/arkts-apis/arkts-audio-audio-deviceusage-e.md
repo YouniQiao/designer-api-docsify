@@ -1,6 +1,6 @@
 # DeviceUsage
 
-表示音频设备类型的枚举（根据用途分类）。
+Enumerates the audio device types by usage.
 
 **Since:** 12
 
@@ -16,7 +16,7 @@
 MEDIA_OUTPUT_DEVICES = 1
 ```
 
-媒体输出设备。
+Media output device.
 
 **Since:** 12
 
@@ -32,7 +32,7 @@ MEDIA_OUTPUT_DEVICES = 1
 MEDIA_INPUT_DEVICES = 2
 ```
 
-媒体输入设备。
+Media input device.
 
 **Since:** 12
 
@@ -48,7 +48,7 @@ MEDIA_INPUT_DEVICES = 2
 ALL_MEDIA_DEVICES = 3
 ```
 
-所有媒体设备。
+All media devices.
 
 **Since:** 12
 
@@ -64,7 +64,7 @@ ALL_MEDIA_DEVICES = 3
 CALL_OUTPUT_DEVICES = 4
 ```
 
-通话输出设备。
+Call output device.
 
 **Since:** 12
 
@@ -80,7 +80,7 @@ CALL_OUTPUT_DEVICES = 4
 CALL_INPUT_DEVICES = 8
 ```
 
-通话输入设备。
+Call input device.
 
 **Since:** 12
 
@@ -96,7 +96,7 @@ CALL_INPUT_DEVICES = 8
 ALL_CALL_DEVICES = 12
 ```
 
-所有通话设备。
+All call devices.
 
 **Since:** 12
 

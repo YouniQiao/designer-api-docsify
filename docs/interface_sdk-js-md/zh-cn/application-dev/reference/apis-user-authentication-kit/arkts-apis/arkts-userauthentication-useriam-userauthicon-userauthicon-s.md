@@ -18,12 +18,6 @@
 
 **系统能力：** SystemCapability.UserIAM.UserAuth.Core
 
-## 导入模块
-
-```TypeScript
-import { UserAuthIcon } from 'kits/@kit.UserAuthenticationKit';
-```
-
 ## build
 
 ```TypeScript

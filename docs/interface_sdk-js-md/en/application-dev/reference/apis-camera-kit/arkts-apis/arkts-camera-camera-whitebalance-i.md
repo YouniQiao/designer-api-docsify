@@ -1,8 +1,8 @@
 # WhiteBalance
 
-WhiteBalance继承自[WhiteBalanceQuery](arkts-camera-camera-whitebalancequery-i.md)。
+**WhiteBalance** inherits from [WhiteBalanceQuery](arkts-camera-camera-whitebalancequery-i.md).
 
-提供了处理设备白平衡的相关功能，包括获取和设置白平衡模式以及白平衡值。
+It provides APIs to process white balance, including obtaining and setting the white balance mode and white balance value.
 
 **Inheritance/Implementation:** WhiteBalance extends [WhiteBalanceQuery](arkts-camera-camera-whitebalancequery-i.md)
 
@@ -32,7 +32,7 @@ ArkTS-Sta:
 getColorTint(): int
 ```
 
-获取当前白平衡的色调调节值。
+Gets current color tint.
 
 **Since:** 26.0.0
 
@@ -50,13 +50,13 @@ getColorTint(): int
 
 | Type | Description |
 | --- | --- |
-| ArkTS-Dyn: number  <br>ArkTS-Sta：int | 返回当前白平衡色调调节值。 |
+| ArkTS-Dyn: number  <br>ArkTS-Sta：int | The current color tint. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 7400103 | Session not config. |
+| [7400103](../errorcode-camera.md#7400103-session-not-configured) | Session not config. |
 
 ## getWhiteBalance
 
@@ -70,7 +70,7 @@ ArkTS-Sta:
 getWhiteBalance(): int
 ```
 
-获取当前手动白平衡的值。
+Obtains the current white balance value.
 
 **Since:** 20
 
@@ -86,14 +86,14 @@ getWhiteBalance(): int
 
 | Type | Description |
 | --- | --- |
-| ArkTS-Dyn: number  <br>ArkTS-Sta：int | 返回当前白平衡值，单位为K（Kelvin，温度单位）。 |
+| ArkTS-Dyn: number  <br>ArkTS-Sta：int | White balance value, in units of K (Kelvin) |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 7400103 | Session not config. |
-| 202 | Not System Application.<br>**Applicable version:** 12 - 19 |
+| [7400103](../errorcode-camera.md#7400103-session-not-configured) | Session not config. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not System Application.<br>**Applicable version:** 12 - 19 |
 
 ## getWhiteBalanceGains
 
@@ -123,8 +123,8 @@ Gets RGB white balance gain values.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 7400103 | Session not config. |
-| 202 | Not System Application. |
+| [7400103](../errorcode-camera.md#7400103-session-not-configured) | Session not config. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not System Application. |
 
 ## getWhiteBalanceMode
 
@@ -132,7 +132,7 @@ Gets RGB white balance gain values.
 getWhiteBalanceMode(): WhiteBalanceMode
 ```
 
-获取当前白平衡模式。
+Obtains the white balance mode in use.
 
 **Since:** 20
 
@@ -148,14 +148,14 @@ getWhiteBalanceMode(): WhiteBalanceMode
 
 | Type | Description |
 | --- | --- |
-| [WhiteBalanceMode](arkts-camera-camera-whitebalancemode-e.md) | 获取当前白平衡模式。若接口调用失败，返回undefined。 |
+| [WhiteBalanceMode](arkts-camera-camera-whitebalancemode-e.md) | White balance mode in use. If the API call fails, undefined is returned. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 7400103 | Session not config. |
-| 202 | Not System Application.<br>**Applicable version:** 12 - 19 |
+| [7400103](../errorcode-camera.md#7400103-session-not-configured) | Session not config. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not System Application.<br>**Applicable version:** 12 - 19 |
 
 ## setColorTint
 
@@ -169,9 +169,7 @@ ArkTS-Sta:
 setColorTint(colorTint: int): void
 ```
 
-设置白平衡的色调调节值。
-
-设置之前需要先检查设备支持配置的白平衡色调调节范围，具体方法请参考[getColorTintRange](arkts-camera-camera-whitebalancequery-i.md#getcolortintrange)。
+Sets color tint.
 
 **Since:** 26.0.0
 
@@ -189,13 +187,13 @@ setColorTint(colorTint: int): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| colorTint | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | 设置手动白平衡色调调节值。 |
+| colorTint | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | Color tint, the supported range can be obtained by calling [getColorTintRange](arkts-camera-camera-whitebalancequery-i.md#getcolortintrange). |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 7400103 | Session not config. |
+| [7400103](../errorcode-camera.md#7400103-session-not-configured) | Session not config. |
 
 ## setWhiteBalance
 
@@ -209,9 +207,8 @@ ArkTS-Sta:
 setWhiteBalance(whiteBalance: int): void
 ```
 
-设置手动白平衡值。
-
-设置之前需要先检查设备支持的白平衡值范围，具体方法请参考[getWhiteBalanceRange](arkts-camera-camera-whitebalancequery-i.md#getwhitebalancerange)。
+Sets a white balance value.Before the setting, run  
+[getWhiteBalanceRange](arkts-camera-camera-whitebalancequery-i.md#getwhitebalancerange) to check the white balance value range supported by the device.
 
 **Since:** 20
 
@@ -227,15 +224,15 @@ setWhiteBalance(whiteBalance: int): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| whiteBalance | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | 设置手动白平衡值，单位为K（Kelvin，温度单位）。 |
+| whiteBalance | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | White balance value, in units of K (Kelvin) |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 7400101 | Parameter missing or parameter type incorrect. |
-| 7400103 | Session not config. |
-| 202 | Not System Application.<br>**Applicable version:** 12 - 19 |
+| [7400101](../errorcode-camera.md#7400101-invalid-parameter) | Parameter missing or parameter type incorrect. |
+| [7400103](../errorcode-camera.md#7400103-session-not-configured) | Session not config. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not System Application.<br>**Applicable version:** 12 - 19 |
 
 ## setWhiteBalanceGains
 
@@ -265,8 +262,8 @@ Sets RGB white balance gain values.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 7400103 | Session not config. |
-| 202 | Not System Application. |
+| [7400103](../errorcode-camera.md#7400103-session-not-configured) | Session not config. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not System Application. |
 
 ## setWhiteBalanceMode
 
@@ -274,8 +271,8 @@ Sets RGB white balance gain values.
 setWhiteBalanceMode(mode: WhiteBalanceMode): void
 ```
 
-设置白平衡模式。设置之前需要先检查设备是否支持指定的白平衡模式，具体方法请参考  
-[isWhiteBalanceModeSupported](arkts-camera-camera-whitebalancequery-i.md#iswhitebalancemodesupported)。
+Sets a white balance mode. Before the setting, run  
+[isWhiteBalanceModeSupported](arkts-camera-camera-whitebalancequery-i.md#iswhitebalancemodesupported)to check whether the device supports the specified white balance mode.
 
 **Since:** 20
 
@@ -291,13 +288,13 @@ setWhiteBalanceMode(mode: WhiteBalanceMode): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| mode | [WhiteBalanceMode](arkts-camera-camera-whitebalancemode-e.md) | Yes | 白平衡模式。 |
+| mode | [WhiteBalanceMode](arkts-camera-camera-whitebalancemode-e.md) | Yes | White balance mode. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 7400101 | Parameter missing or parameter type incorrect. |
-| 7400103 | Session not config. |
-| 202 | Not System Application.<br>**Applicable version:** 12 - 19 |
+| [7400101](../errorcode-camera.md#7400101-invalid-parameter) | Parameter missing or parameter type incorrect. |
+| [7400103](../errorcode-camera.md#7400103-session-not-configured) | Session not config. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not System Application.<br>**Applicable version:** 12 - 19 |
 

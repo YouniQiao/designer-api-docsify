@@ -6,7 +6,7 @@
 declare function stat(path: string): Promise<Stat>
 ```
 
-获取文件信息，使用Promise异步回调。
+Obtains file information. This API uses a promise to return the result.
 
 **Since:** 6
 
@@ -24,13 +24,13 @@ declare function stat(path: string): Promise<Stat>
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| path | string | Yes | 待获取文件的应用沙箱路径。 |
+| path | string | Yes | Application sandbox path of the file. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;Stat&gt; | Promise对象。返回文件的具体信息。 |
+| Promise&lt;Stat&gt; | Promise that returns the file information obtained. |
 
 
 ## stat
@@ -39,7 +39,7 @@ declare function stat(path: string): Promise<Stat>
 declare function stat(path: string, callback: AsyncCallback<Stat>): void
 ```
 
-获取文件信息，使用callback异步回调。
+Obtains file information. This API uses an asynchronous callback to return the result.
 
 **Since:** 6
 
@@ -57,6 +57,6 @@ declare function stat(path: string, callback: AsyncCallback<Stat>): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| path | string | Yes | 待获取文件的应用沙箱路径。 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Stat&gt; | Yes | 异步获取文件的信息之后的回调。 |
+| path | string | Yes | Application sandbox path of the file. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Stat&gt; | Yes | Callback used to return the file information obtained. |
 

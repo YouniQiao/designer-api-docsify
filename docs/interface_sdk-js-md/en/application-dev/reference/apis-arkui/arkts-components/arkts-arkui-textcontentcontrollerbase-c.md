@@ -1,10 +1,10 @@
 # TextContentControllerBase
 
-TextContentControllerBase
+Represents the base controller for **TextInput**, **TextArea**, and **Search** components.
 
-**Since:** 11
+**Since:** 10
 
-**ArkTS mode:** ArkTS-Dyn only, since version 11.
+**ArkTS mode:** ArkTS-Dyn only, since version 10.
 
 <!--Device-unnamed-declare abstract class TextContentControllerBase--><!--Device-unnamed-declare abstract class TextContentControllerBase-End-->
 
@@ -16,7 +16,11 @@ TextContentControllerBase
 addText(text: string, textOperationOptions?: TextContentControllerOptions): number
 ```
 
-Add a text.
+Inserts text at a specified position in the editable content. If no position is specified, the text is appended to the end of the existing content.
+
+This API does not work when the text is being dragged.
+
+**addText** only affects the UI performance within the application and has no effect on the internal logic of the input method application. Therefore, avoid calling this API for the preview text.
 
 **Since:** 15
 
@@ -34,14 +38,14 @@ Add a text.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| text | string | Yes | text value. |
-| textOperationOptions | [TextContentControllerOptions](arkts-arkui-textcontentcontrolleroptions-i.md) | No | operation info. |
+| text | string | Yes | Text to insert. |
+| textOperationOptions | [TextContentControllerOptions](arkts-arkui-textcontentcontrolleroptions-i.md) | No | Configuration option for inserting text. If this parameter is not provided, the text is appended to the end. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| number | caret index |
+| number | New cursor position after insertion. |
 
 ## clearPreviewText
 
@@ -49,15 +53,20 @@ Add a text.
 clearPreviewText(): void
 ```
 
-Clear the content of preview.
+Notifies the input method to clear the current preview text.
 
-**Since:** 23
+> **NOTE：**
+> 
+> When the controller is not bound to any component or the component bound to the controller is released, this
+interface does not take effect.
 
-**ArkTS mode:** ArkTS-Dyn only, since version 23.
+**Since:** 17
+
+**ArkTS mode:** ArkTS-Dyn only, since version 17.
 
 **Model restriction:** This API can be used only in the stage model.
 
-**Atomic service API:** This API can be used in atomic services since API version 23.
+**Atomic service API:** This API can be used in atomic services since API version 17.
 
 <!--Device-TextContentControllerBase-clearPreviewText(): void--><!--Device-TextContentControllerBase-clearPreviewText(): void-End-->
 
@@ -69,7 +78,14 @@ Clear the content of preview.
 deleteBackward(): void
 ```
 
-删除输入框文本末尾字符。
+Deletes the character before the text cursor in the text box bound to the basic controller. If some text has been selected using the mouse or keyboard before this function is called, the selected text will be deleted.
+
+This API is not supported in preview display scenarios.
+
+> **NOTE：**
+> 
+> When the controller is not bound to any component or the component bound to the controller is released, this
+interface does not take effect.
 
 **Since:** 23
 
@@ -89,7 +105,14 @@ deleteBackward(): void
 deleteText(range?: TextRange): void
 ```
 
-Delete text in TextRange.
+Deletes text within a specified range in the editable content.
+
+> **NOTE：**
+> 
+> - This API does not work when the text is being dragged.
+> 
+> - **deleteText** only affects the UI performance within the application and has no effect on the internal logic
+> of the input method application. Therefore, avoid calling this API for the preview text.
 
 **Since:** 15
 
@@ -107,7 +130,7 @@ Delete text in TextRange.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| range | [TextRange](../arkts-apis/arkts-arkui-textrange-i.md) | No | range for deleting. |
+| range | [TextRange](../arkts-apis/arkts-arkui-textrange-i.md) | No | Range of the text to be deleted, including the start and end positions.&lt;br&gt;If the range is not specified, the entire text is deleted. If the start position is not specified, deletion starts from index 0. If the end position is not specified, deletion ends at the end of the text. |
 
 ## getCaretOffset
 
@@ -115,13 +138,27 @@ Delete text in TextRange.
 getCaretOffset() : CaretOffset
 ```
 
-Get the index and relative position of the CaretOffset.
+Obtains the position information of the caret.
 
-&lt;p&gt;&lt;strong&gt;NOTE&lt;/strong&gt;:&lt;br&gt;If this API is called when the caret position is updated in the current frame, it will not take effect.&lt;br&gt;For the Search component, the returned position information is the offset of the first character relative to the search icon in the component.&lt;br&gt;If no text is entered in the Search component,the return value contains the position information relative to the component.&lt;br&gt;The location information in the return value is the location of the caret relative to the editable component.&lt;/p&gt;
+> **NOTE：**
+> 
+> - If this API is called when the caret position is updated in the current frame, it will not take effect.
+> 
+> - For the **Search** component, the returned position information is the offset of the first character relative
+> to the search icon in the component.
+> 
+> - If no text is entered in the **Search** component, the return value contains the position information relative
+> to the component.
+> 
+> - The location information in the return value is the location of the caret relative to the editable component.
+> 
+> - If the caret position cannot be obtained (for example, when the
+> [TextInputController](../arkts-apis/arkts-arkui-textinput-textinputcontroller-c.md/arkts-arkui-textinput-textinputcontroller-c.md) is not bound to the [TextInput](./text_input) component),
+> **null** is returned.
 
-**Since:** 12
+**Since:** 11
 
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
+**ArkTS mode:** ArkTS-Dyn only, since version 11.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -135,7 +172,7 @@ Get the index and relative position of the CaretOffset.
 
 | Type | Description |
 | --- | --- |
-| [CaretOffset](../arkts-apis/arkts-arkui-common-caretoffset-i.md) | index and relative position of the CaretOffset. |
+| [CaretOffset](../arkts-apis/arkts-arkui-common-caretoffset-i.md) | Position of the caret relative to the text box. &lt;br&gt;If no component is bound to the controller or the component bound to the controller is released, **undefined** is returned. |
 
 ## getSelection
 
@@ -143,7 +180,7 @@ Get the index and relative position of the CaretOffset.
 getSelection(): TextRange
 ```
 
-Gets the selected range of text content.
+Obtains the current text selection range.
 
 **Since:** 15
 
@@ -161,7 +198,7 @@ Gets the selected range of text content.
 
 | Type | Description |
 | --- | --- |
-| [TextRange](../arkts-apis/arkts-arkui-textrange-i.md) | range for selecting. |
+| [TextRange](../arkts-apis/arkts-arkui-textrange-i.md) | Current text selection range, or cursor position if no text is selected. &lt;br&gt;If no component is bound to the controller or the component bound to the controller is released, **undefined** is returned. |
 
 ## getTextContentLineCount
 
@@ -169,11 +206,11 @@ Gets the selected range of text content.
 getTextContentLineCount() : number
 ```
 
-Get the lines number of the text content.The getTextContentLineCount type is used to obtain the number of lines of the edited text.
+Obtains the number of lines of the edited text.
 
-**Since:** 11
+**Since:** 10
 
-**ArkTS mode:** ArkTS-Dyn only, since version 11.
+**ArkTS mode:** ArkTS-Dyn only, since version 10.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -187,7 +224,7 @@ Get the lines number of the text content.The getTextContentLineCount type is use
 
 | Type | Description |
 | --- | --- |
-| number | Text content line count |
+| number | Number of lines of the edited text. &lt;br&gt;If no component is bound to the controller or the component bound to the controller is released, **undefined** is returned. |
 
 ## getTextContentRect
 
@@ -195,13 +232,11 @@ Get the lines number of the text content.The getTextContentLineCount type is use
 getTextContentRect() : RectResult
 ```
 
-Get the start and end positions of the text content.
+Obtains the position of the edited text area relative to the component and its size. The unit of the return value is pixel.
 
-&lt;p&gt;&lt;strong&gt;NOTE&lt;/strong&gt;:&lt;br&gt;If no text is entered, the return value contains the position information, but the size is 0.&lt;br&gt;The position information is the offset of the first character relative to the editable area.&lt;br&gt;For the Search component, the returned position information is the offset of the first character relative to the search icon in the component.&lt;br&gt;If there is input, the width in the return value is the fixed width of the editable area.&lt;/p&gt;
+**Since:** 10
 
-**Since:** 11
-
-**ArkTS mode:** ArkTS-Dyn only, since version 11.
+**ArkTS mode:** ArkTS-Dyn only, since version 10.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -215,7 +250,7 @@ Get the start and end positions of the text content.
 
 | Type | Description |
 | --- | --- |
-| [RectResult](../arkts-apis/arkts-arkui-common-rectresult-i.md) | Text content rect.The unit of the return value is pixel. |
+| [RectResult](../arkts-apis/arkts-arkui-common-rectresult-i.md) | Position of the edited text area relative to the component and its size. &lt;br&gt;If no component is bound to the controller or the component bound to the controller is released, **undefined** is returned. |
 
 ## scrollToVisible
 
@@ -223,7 +258,11 @@ Get the start and end positions of the text content.
 scrollToVisible(range?: TextRange): void
 ```
 
-将输入框文本滚动到可见区。
+Passes the start and end indexes to the bound text box components (**TextInput**, **TextArea**, and **Search**),and scrolls the text within the range to the visible area.
+
+> **NOTE：**
+> When the controller is not bound to any component or the component bound to the controller is released, this
+interface does not take effect.
 
 **Since:** 23
 
@@ -241,7 +280,7 @@ scrollToVisible(range?: TextRange): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| range | [TextRange](../arkts-apis/arkts-arkui-textrange-i.md) | No | 可见区范围。 若该参数非法，则本方法不会生效。 |
+| range | [TextRange](../arkts-apis/arkts-arkui-textrange-i.md) | No | Text range to be scrolled to the visible area, including the start and end positions. of the text.&lt;br&gt;The start position must be less than or equal to the end position. Otherwise, the API call is invalid. If the start position is less than 0, it is treated as the value **0**. If the end position is greater than the length of the entire text, it is treated as the length of the entire text.&lt;br&gt;If no range is specified, the entire text is used by default. If the start position is not specified, the default start position is 0. If the end position is not specified, the default end position is the length of the entire text. |
 
 ## setStyledPlaceholder
 
@@ -249,7 +288,12 @@ scrollToVisible(range?: TextRange): void
 setStyledPlaceholder(styledString: StyledString): void
 ```
 
-设置提示文本的样式。
+Binds or updates the styled placeholder string.
+
+> **NOTE：**
+> 
+> When the controller is not bound to any component or the component bound to the controller is released, this
+interface does not take effect.
 
 **Since:** 22
 
@@ -267,5 +311,5 @@ setStyledPlaceholder(styledString: StyledString): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| styledString | [StyledString](../arkts-apis/arkts-arkui-styledstring-c.md) | Yes | 设置提示文本样式的属性字符串 若传入的入参无效，则本接口不生效 |
+| styledString | [StyledString](../arkts-apis/arkts-arkui-styledstring-c.md) | Yes | Styled string for the placeholder. This takes precedence over the plain text. **placeholder** attribute.&lt;br&gt;The placeholder does not support gesture events or hyperlink navigation within styled strings. |
 

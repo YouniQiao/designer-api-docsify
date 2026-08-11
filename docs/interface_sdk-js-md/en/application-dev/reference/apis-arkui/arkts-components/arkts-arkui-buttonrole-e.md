@@ -1,6 +1,6 @@
 # ButtonRole
 
-按钮的角色。
+Role of the button.
 
 **Since:** 12
 
@@ -16,7 +16,7 @@
 NORMAL = 0
 ```
 
-正常按钮。
+Normal button.
 
 **Since:** 12
 
@@ -38,7 +38,7 @@ NORMAL = 0
 ERROR = 1
 ```
 
-警示按钮，通常用于删除、清空等危险或警示性操作。
+Warning button.
 
 **Since:** 12
 

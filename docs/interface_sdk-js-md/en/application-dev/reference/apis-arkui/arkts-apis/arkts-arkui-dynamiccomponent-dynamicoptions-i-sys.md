@@ -1,6 +1,6 @@
 # DynamicOptions (System API)
 
-用于在DynamicComponent构造时传递参数。
+This interface is used to set the options for DynamicComponentAttribute during construction
 
 **Since:** 26.0.0
 
@@ -18,11 +18,9 @@
 allowCrossProcessNesting?: boolean
 ```
 
-是否允许DynamicComponent跨进程嵌套UIExtensionComponent。&lt;br/&gt;true：允许跨进程嵌套；false：不允许跨进程嵌套。&lt;br/&gt;默认值：false
+Indicates allow Inter-process UEC of the DynamicComponent.
 
 **Type:** boolean
-
-**Default:** false
 
 **Since:** 26.0.0
 
@@ -42,7 +40,7 @@ allowCrossProcessNesting?: boolean
 allowOccupied?: boolean
 ```
 
-表示是否允许DynamicComponent内部避让键盘。
+Indicates allow keyboard avoidance inside the DynamicComponent.
 
 **Type:** boolean
 
@@ -64,11 +62,9 @@ allowOccupied?: boolean
 backgroundTransparent?: boolean
 ```
 
-是否启用组件背景透明。&lt;br/&gt;true：启用背景透明；false：不启用背景透明。&lt;br/&gt;默认值：false
+Indicates backgroundTransparent of the DynamicComponent.
 
 **Type:** boolean
-
-**Default:** false
 
 **Since:** 26.0.0
 
@@ -88,7 +84,7 @@ backgroundTransparent?: boolean
 entryPoint: string
 ```
 
-要加载的Abc页面入口。&lt;br/&gt;取值格式：'bundleName/moduleName/pagePath'，例如'com.example.myapplication/entry/ets/pages/DynamicPage'。
+Indicates entryPoint of the DynamicOptions.
 
 **Type:** string
 
@@ -110,7 +106,7 @@ entryPoint: string
 worker: EAWorker | undefined
 ```
 
-运行Abc的Worker。&lt;br/&gt;ArkTS-Sta模式下，可传入undefined，表示回拉起一个空的DynamicComponent。
+Indicates restricted worker for run abc.
 
 **Type:** [EAWorker](../../apis-arkts/arkts-apis/arkts-arkts-eaworker-c.md) \| undefined
 

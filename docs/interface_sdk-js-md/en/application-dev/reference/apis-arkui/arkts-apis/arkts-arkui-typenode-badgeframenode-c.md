@@ -1,6 +1,6 @@
 # BadgeFrameNode
 
-定义Badge类型的FrameNode。
+Define the Badge type of FrameNode.
 
 **Inheritance/Implementation:** BadgeFrameNode extends [TypedFrameNode<BadgeAttribute>](TypedFrameNode<BadgeAttribute>)
 
@@ -18,7 +18,7 @@
 abstract initialize(value: BadgeParamWithNumber): BadgeAttribute
 ```
 
-初始化Badge类型的FrameNode。
+Initialize Badge FrameNode.
 
 **Since:** 23
 
@@ -48,7 +48,7 @@ abstract initialize(value: BadgeParamWithNumber): BadgeAttribute
 abstract initialize(value: BadgeParamWithString): BadgeAttribute
 ```
 
-初始化Badge类型的FrameNode。
+Initialize Badge FrameNode.
 
 **Since:** 23
 

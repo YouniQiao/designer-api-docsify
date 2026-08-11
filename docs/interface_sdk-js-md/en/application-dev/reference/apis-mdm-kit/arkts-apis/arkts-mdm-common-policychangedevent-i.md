@@ -1,9 +1,9 @@
 # PolicyChangedEvent
 
-策略变更事件。
+Defines the policy change event.
 
-该接口目前在  
-[onAdminPolicyChanged](../../apis-default/arkts-apis/arkts-enterprise-enterpriseadminextensionability-enterpriseadminextensionability-c.md/arkts-enterprise-enterpriseadminextensionability-enterpriseadminextensionability-c.md#onadminpolicychanged)接口中作为回调入参使用。
+This API is used as a callback input parameter of  
+[onAdminPolicyChanged](arkts-mdm-enterprise-enterpriseadminextensionability-enterpriseadminextensionability-c.md#onadminpolicychanged).
 
 **Since:** 26.0.0
 
@@ -25,7 +25,7 @@ import { common } from 'kits/@kit.MDMKit';
 bundleName: string
 ```
 
-应用包名。
+App bundle name.
 
 **Type:** string
 
@@ -45,7 +45,8 @@ bundleName: string
 functionName: string
 ```
 
-接口名称。例如调用[setPasswordPolicy](arkts-mdm-securitymanager-setpasswordpolicy-f.md#setpasswordpolicy)接口时，该字段返回值为setPasswordPolicy。
+API name. For example, if the  
+[setPasswordPolicy](arkts-mdm-securitymanager-setpasswordpolicy-f.md#setpasswordpolicy) API is called, the value of this parameter is **setPasswordPolicy**.
 
 **Type:** string
 
@@ -65,8 +66,8 @@ functionName: string
 parameters: string
 ```
 
-调用接口时传入的参数值（不包含admin参数），JSON格式字符串。例如调用  
-[setPasswordPolicy](arkts-mdm-securitymanager-setpasswordpolicy-f.md#setpasswordpolicy)接口，该字段返回值为{"policy":{"complexityRegex":"^(?=.*[a-zA-Z])(?=.*\\d).{8},\$","validityPeriod":1808309786000,"additionalDescription":"至少8个字符，且包含数字和字母。"}}。
+Input parameter value (excluding the **admin** parameter) when an API is called. The value is a JSON string. For example, if the [setPasswordPolicy](arkts-mdm-securitymanager-setpasswordpolicy-f.md#setpasswordpolicy) API is called, the return value of this parameter is  
+**{"policy":{"complexityRegex":"^(?=.*[a-zA-Z])(?=.*\\d).{8},\$","validityPeriod":1808309786000,"additionalDescription":"It must contain at least eight characters, including digits and letters."}}**.
 
 **Type:** string
 
@@ -86,7 +87,7 @@ parameters: string
 time: number
 ```
 
-调用接口的时间戳，单位：ms。
+Timestamp when an API is called, in milliseconds.
 
 **Type:** number
 

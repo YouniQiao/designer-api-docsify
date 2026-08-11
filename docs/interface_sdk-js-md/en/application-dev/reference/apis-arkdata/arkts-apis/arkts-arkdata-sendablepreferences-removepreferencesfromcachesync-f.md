@@ -12,10 +12,8 @@ import { sendablePreferences } from 'kits/@kit.ArkData';
 function removePreferencesFromCacheSync(context: Context, options: Options): void
 ```
 
-从缓存中移除指定的Preferences实例，此为同步接口。
-
-应用首次调用[getPreferences](arkts-arkdata-sendablepreferences-getpreferences-f.md#getpreferences)接口获取某个Preferences实例后，该实例会被缓存起来，后续调用  
-[getPreferences](arkts-arkdata-sendablepreferences-getpreferences-f.md#getpreferences)时不会再次从持久化文件中读取，直接从缓存中获取Preferences实例。调用此接口移除缓存中的实例之后，再次getPreferences将会重新读取持久化文件，生成新的Preferences实例。
+Removes a **Preferences** instance from the cache. This API returns the result synchronously.After an application calls [getPreferences](arkts-arkdata-sendablepreferences-getpreferences-f.md#getpreferences) for the first time to obtain a **Preferences** instance, the obtained **Preferences** instance is cached. When the application calls   
+[getPreferences](arkts-arkdata-sendablepreferences-getpreferences-f.md#getpreferences) again, the **Preferences** instance will be read from the cache instead of from the persistent file. After this API is called to remove the instance from the cache, calling **getPreferences** again will read data from the persistent file and create a **Preferences** instance.
 
 **Since:** 12
 
@@ -31,18 +29,18 @@ function removePreferencesFromCacheSync(context: Context, options: Options): voi
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| context | [Context](../../apis-arkui/arkts-components/arkts-arkui-context-t.md) | Yes | 应用上下文。 |
-| options | [Options](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-zlib-options-i.md) | Yes | 与Preferences实例相关的配置选项。 |
+| context | [Context](../../apis-arkui/arkts-components/arkts-arkui-context-t.md) | Yes | Application context. |
+| options | [Options](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-zlib-options-i.md) | Yes | Configuration options of the **Preferences** instance. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. Possible causes: &lt;br&gt;1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; &lt;br&gt;3. Parameter verification failed. |
-| 801 | Capability not supported. |
-| 15501001 | The operations is supported in stage mode only. |
-| 15501002 | Invalid dataGroupId. |
-| 15500000 | Inner error. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: &lt;br&gt;1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; &lt;br&gt;3. Parameter verification failed. |
+| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. |
+| [15501001](../errorcode-preferences.md#15501001-stage-model-required) | The operations is supported in stage mode only. |
+| [15501002](../errorcode-preferences.md#15501002-invalid-datagroupid-parameter-in-options) | Invalid dataGroupId. |
+| [15500000](../errorcode-preferences.md#15500000-internal-error) | Inner error. |
 
 ## Examples
 

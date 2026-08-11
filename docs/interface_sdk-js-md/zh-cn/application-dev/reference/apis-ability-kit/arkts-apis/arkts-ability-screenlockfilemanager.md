@@ -14,12 +14,6 @@
 
 **系统能力：** SystemCapability.Security.ScreenLockFileManager
 
-## 导入模块
-
-```TypeScript
-import { screenLockFileManager } from 'kits/@kit.AbilityKit';
-```
-
 ## 汇总
 
 ### 函数

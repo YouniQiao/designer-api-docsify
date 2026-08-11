@@ -1,6 +1,6 @@
 # SettingsForDevice
 
-设备设置项枚举。
+Enumerates device setting items.
 
 **Since:** 26.0.0
 
@@ -16,7 +16,7 @@
 SET_APN = 0
 ```
 
-APN设置，当前仅支持手机、平板使用。
+APN configuration, currently supported only on phones and tablets.
 
 **Since:** 26.0.0
 
@@ -34,7 +34,7 @@ APN设置，当前仅支持手机、平板使用。
 POWER_LONG_PRESS = 1
 ```
 
-长按电源键打开电源菜单，当前仅支持手机、平板使用。
+Opens the power menu by long-pressing the power button. Currently, this item is supported only on phones and tablets.
 
 **Since:** 26.0.0
 
@@ -52,7 +52,7 @@ POWER_LONG_PRESS = 1
 SET_ETHERNET_IP = 2
 ```
 
-修改以太网IP地址，当前仅支持PC/2in1设备使用。
+Changes the Ethernet IP address. Currently, this item is supported only on PCs/2-in-1 devices.
 
 **Since:** 26.0.0
 
@@ -70,7 +70,9 @@ SET_ETHERNET_IP = 2
 SET_DEVICE_NAME = 3
 ```
 
-修改设备名称，当前仅支持PC/2in1设备、手机、平板使用。禁用后，PC/2in1设备的设置中以下设备名称无法修改，包括关于本机、蓝牙、多设备协同->星闪。手机、平板设备设置中的关于本机、蓝牙、个人热点的设备名称无法修改。
+Changes the device name configuration. Currently, this item is supported only on PCs/2-in-1 devices, phones, and tablets. When it is disabled, the device name cannot be modified in the following settings: **About**,  
+**Bluetooth**, and **More connectivity options** > **NearLink** on PCs/2-in-1 devices, and **About**,  
+**Bluetooth**, and **Personal hotspot** on smartphones and tablets.
 
 **Since:** 26.0.0
 
@@ -88,7 +90,7 @@ SET_DEVICE_NAME = 3
 SET_BIOMETRICS_AND_SCREEN_LOCK = 4
 ```
 
-修改锁屏密码，当前仅支持PC/2in1设备、手机、平板使用。
+Changes the screen lock password. Currently, this item is supported only on PCs/2-in-1 devices, phones, and tablets.
 
 **Since:** 26.0.0
 

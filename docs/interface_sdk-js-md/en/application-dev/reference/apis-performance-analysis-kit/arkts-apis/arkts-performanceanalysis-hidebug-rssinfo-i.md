@@ -1,6 +1,6 @@
 # RssInfo
 
-����Ӧ�ý��̵������ڴ���Ϣ��
+Describes the physical memory information of the application process.
 
 **Since:** 24
 
@@ -22,7 +22,7 @@ import { hidebug } from 'kits/@kit.PerformanceAnalysisKit';
 rss: bigint
 ```
 
-ʵ��ռ�õ������ڴ��С��Resident Set Size������������ҳ���ļ�ӳ��ҳ�͹����ڴ�ҳ����KBΪ��λ�����㷽ʽ��/proc/{pid}/status: VmRss��
+Size of the occupied physical memory (including the memory occupied by the shared library), in KB.The value of this parameter is obtained by reading the value of VmRSS in the /proc/{pid}/status node.
 
 **Type:** bigint
 
@@ -42,7 +42,7 @@ rss: bigint
 swapRss: bigint
 ```
 
-��������������������˽��ҳ�ܴ�С����KBΪ��λ�����㷽ʽ��/proc/{pid}/status: VmSwap��
+Size of the memory occupied by the process in swap space, in KB.The value of this parameter is obtained by reading the value of VmSwap in the /proc/{pid}/status node.
 
 **Type:** bigint
 

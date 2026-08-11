@@ -1,6 +1,6 @@
 # ApplicationInfo
 
-应用程序信息。
+Defines the application information.
 
 **Since:** 20
 
@@ -22,8 +22,8 @@ import { bundleManager } from 'kits/@kit.MDMKit';
 readonly accessTokenId: number
 ```
 
-应用程序的accessTokenId，应用的身份标识，在程序访问控制校验接口  
-[checkAccessToken](../../apis-ability-kit/arkts-apis/arkts-ability-abilityaccessctrl-atmanager-i.md/arkts-ability-abilityaccessctrl-atmanager-i.md#checkaccesstoken)中使用。
+Access token ID of the application, which is used in the  
+[checkAccessToken](../../apis-ability-kit/arkts-apis/arkts-ability-abilityaccessctrl-atmanager-i.md/arkts-ability-abilityaccessctrl-atmanager-i.md#checkaccesstoken).
 
 **Type:** number
 
@@ -43,7 +43,8 @@ readonly accessTokenId: number
 readonly appDistributionType: string
 ```
 
-应用程序签名证书的分发类型，详细信息请参考[ApplicationInfo](arkts-mdm-bundlemanager-applicationinfo-i.md)的appProvisionType字段。
+Distribution type of the application signing certificate. For details, see the **appProvisionType** field in  
+[ApplicationInfo](arkts-mdm-bundlemanager-applicationinfo-i.md).
 
 **Type:** string
 
@@ -63,7 +64,7 @@ readonly appDistributionType: string
 readonly appIndex: number
 ```
 
-应用包的分身索引标识，仅在分身应用中生效。
+Index of an application clone. It takes effect only for application clones.
 
 **Type:** number
 
@@ -83,7 +84,7 @@ readonly appIndex: number
 readonly appProvisionType: string
 ```
 
-应用程序签名证书文件的类型，分为debug和release两种类型。
+Type of the application signing certificate file. The options are **debug** and **release**.
 
 **Type:** string
 
@@ -103,7 +104,7 @@ readonly appProvisionType: string
 readonly codePath: string
 ```
 
-应用程序的安装目录。
+Installation directory of the application.
 
 **Type:** string
 
@@ -123,7 +124,7 @@ readonly codePath: string
 readonly dataUnclearable: boolean
 ```
 
-标识应用数据是否可被删除。true表示不可删除，false表示可以删除。
+Whether the application data is unclearable. The value **true** means that the application data is unclearable,and **false** means the opposite.
 
 **Type:** boolean
 
@@ -143,7 +144,7 @@ readonly dataUnclearable: boolean
 readonly debug: boolean
 ```
 
-标识应用是否处于调试模式，取值为true表示应用处于调试模式，取值为false表示应用处于非调试模式。
+Whether the application is running in debug mode. **true** if in debug mode, **false** otherwise.
 
 **Type:** boolean
 
@@ -163,7 +164,9 @@ readonly debug: boolean
 readonly description: string
 ```
 
-标识应用的描述信息，对应[app.json5](../../../quick-start/app-configuration-file.md)中配置的description字段。关于description的详细信息详见本表中的descriptionResource字段说明。
+Description of the application. It corresponds to the **description** field in  
+[app.json5](../../../quick-start/app-configuration-file.md). For details about **description**, see the  
+**descriptionResource** field in this table.
 
 **Type:** string
 
@@ -183,7 +186,7 @@ readonly description: string
 readonly descriptionId: number
 ```
 
-标识应用的描述信息的资源id，是编译构建时根据应用配置的description自动生成的资源id。
+Resource ID of the application description. It is automatically generated during compilation and build based on the description configured for the application.
 
 **Type:** number
 
@@ -203,7 +206,7 @@ readonly descriptionId: number
 readonly descriptionResource: Resource
 ```
 
-应用程序的描述资源信息，包含了该资源的信息的bundleName、moduleName和id。
+Resource information of the application description, including the bundle name, module name, and ID of the resource.
 
 **Type:** [Resource](../../apis-localization-kit/arkts-apis/arkts-localization-resource-resource-i.md)
 
@@ -223,7 +226,7 @@ readonly descriptionResource: Resource
 readonly enabled: boolean
 ```
 
-判断应用程序是否可以使用，取值为true表示可以使用，取值为false表示不可使用。
+Whether the application is enabled. **true** if enabled, **false** otherwise.
 
 **Type:** boolean
 
@@ -243,7 +246,9 @@ readonly enabled: boolean
 readonly icon: string
 ```
 
-应用程序的图标，对应[app.json5](../../../quick-start/app-configuration-file.md)中配置的icon字段。关于icon的详细信息详见本表中的iconResource字段说明。
+Application icon. It corresponds to the **icon** field in the  
+[app.json5](../../../quick-start/app-configuration-file.md) file. For details about **icon**, see the  
+**iconResource** field in this table.
 
 **Type:** string
 
@@ -263,7 +268,7 @@ readonly icon: string
 readonly iconData: string
 ```
 
-应用程序的图标，为base64编码格式。
+Application icon, which is in Base64 encoding format.
 
 **Type:** string
 
@@ -283,7 +288,7 @@ readonly iconData: string
 readonly iconId: number
 ```
 
-应用程序图标的资源id，是编译构建时根据应用配置的icon自动生成的资源id。
+Resource ID of the application icon. It is automatically generated during compilation and build based on the icon configured for the application.
 
 **Type:** number
 
@@ -303,7 +308,7 @@ readonly iconId: number
 readonly iconResource: Resource
 ```
 
-应用程序的图标资源信息，包含了该资源的信息的bundleName、moduleName和id。
+Resource information of the application icon, including the bundle name, module name, and ID of the resource.
 
 **Type:** [Resource](../../apis-localization-kit/arkts-apis/arkts-localization-resource-resource-i.md)
 
@@ -323,13 +328,13 @@ readonly iconResource: Resource
 readonly installSource: string
 ```
 
-应用程序的安装来源，支持的取值如下：
+Installation source of the application. The options are as follows:
 
-- pre-installed表示应用为第一次开机时安装的预置应用。  
-- ota表示应用为系统升级时新增的预置应用。  
-- recovery表示卸载后再恢复的预置应用。  
-- bundleName表示应用由此包名对应的应用安装。  
-- unknown表示应用安装来源未知。
+- **pre-installed**: The application is a preset application installed at initial device startup.  
+- **ota**: The application is a preset application added during system upgrade.  
+- **recovery**: The preset application is uninstalled and then restored.  
+- **bundleName**: The application corresponding to the bundle name is installed.  
+- **unknown**: The installation source is unknown.
 
 **Type:** string
 
@@ -349,7 +354,7 @@ readonly installSource: string
 readonly label: string
 ```
 
-标识应用的名称。
+Application label.
 
 **Type:** string
 
@@ -369,7 +374,7 @@ readonly label: string
 readonly labelId: number
 ```
 
-标识应用名称的资源id，是编译构建时根据应用配置的label自动生成的资源id。
+Resource ID of the application label. It is automatically generated during compilation and build based on the label configured for the application.
 
 **Type:** number
 
@@ -389,7 +394,7 @@ readonly labelId: number
 readonly labelResource: Resource
 ```
 
-应用程序的标签资源信息，包含了该资源的信息的bundleName、moduleName和id。
+Resource information of the application label, including the bundle name, module name, and ID of the resource.
 
 **Type:** [Resource](../../apis-localization-kit/arkts-apis/arkts-localization-resource-resource-i.md)
 
@@ -409,7 +414,8 @@ readonly labelResource: Resource
 readonly name: string
 ```
 
-应用包的名称，对应[app.json5](../../../quick-start/app-configuration-file.md)中配置的bundleName字段。
+Name of the application bundle. It corresponds to the **bundleName** field in the  
+[app.json5](../../../quick-start/app-configuration-file.md) file.
 
 **Type:** string
 
@@ -429,7 +435,7 @@ readonly name: string
 readonly nativeLibraryPath: string
 ```
 
-应用程序的本地库文件路径。
+Local library file path of the application.
 
 **Type:** string
 
@@ -449,7 +455,7 @@ readonly nativeLibraryPath: string
 readonly process: string
 ```
 
-应用程序的进程名称。
+Process name.
 
 **Type:** string
 
@@ -469,7 +475,7 @@ readonly process: string
 readonly releaseType: string
 ```
 
-标识应用打包时使用的SDK的发布类型。当前SDK的发布类型可能为Canary、Beta、Release，其中Canary和Beta可能通过序号进一步细分，例如Canary1、Canary2、Beta1、Beta2等。开发者可通过对比应用打包依赖的SDK发布类型和OS的发布类型（[deviceInfo.distributionOSReleaseType](../../apis-basic-service-kit/arkts-apis/arkts-deviceinfo.md/arkts-deviceinfo.md)）来判断兼容性。
+Release type of the SDK used for application packing. Currently, the SDK release types include Canary, Beta, and Release. Each of the Canary and Beta releases can be distinguished by a sequential number, such as Canary1,Canary2, Beta1, and Beta2. You can compare the SDK release type on which application packaging depends and the OS release type (specified by [deviceInfo.distributionOSReleaseType](../../apis-basic-service-kit/arkts-apis/arkts-deviceinfo.md/arkts-deviceinfo.md)) to determine the compatibility.
 
 **Type:** string
 
@@ -489,7 +495,7 @@ readonly releaseType: string
 readonly removable: boolean
 ```
 
-应用程序是否可以被移除，取值为true表示可以被移除，取值为false表示不可以被移除。
+Whether the application is removable. **true** if removable, **false** otherwise.
 
 **Type:** boolean
 
@@ -509,7 +515,7 @@ readonly removable: boolean
 readonly systemApp: boolean
 ```
 
-标识应用是否为系统应用，取值为true表示系统应用，取值为false表示非系统应用。
+Whether the application is a system application. **true** if it is a system application, **false** otherwise.
 
 **Type:** boolean
 
@@ -529,7 +535,7 @@ readonly systemApp: boolean
 readonly uid: number
 ```
 
-应用程序的UID。
+UID of the application.
 
 **Type:** number
 

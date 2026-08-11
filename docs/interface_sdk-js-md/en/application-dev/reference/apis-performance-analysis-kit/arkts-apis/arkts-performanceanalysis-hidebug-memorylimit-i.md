@@ -1,6 +1,6 @@
 # MemoryLimit
 
-Ӧ�ý����ڴ����ơ�
+Defines the memory limit of the application process.
 
 **Since:** 12
 
@@ -22,7 +22,7 @@ import { hidebug } from 'kits/@kit.PerformanceAnalysisKit';
 rssLimit: bigint
 ```
 
-Ӧ�ó�����̿��õ������ڴ����ƣ���KBΪ��λ��
+The limit of the application process's resident set, in kilobyte
 
 **Type:** bigint
 
@@ -40,7 +40,7 @@ rssLimit: bigint
 vmHeapLimit: bigint
 ```
 
-��ǰ�̵߳� JS VM �Ѵ�С���ƣ���KBΪ��λ��
+The limit of the js vm heap size of current virtual machine, in kilobyte
 
 **Type:** bigint
 
@@ -58,7 +58,7 @@ vmHeapLimit: bigint
 vmTotalHeapSize: bigint
 ```
 
-��ǰ���̵� JS ���ڴ��С���ƣ���KBΪ��λ��
+The limit of the total js vm heap size of process, in kilobyte
 
 **Type:** bigint
 
@@ -76,7 +76,7 @@ vmTotalHeapSize: bigint
 vssLimit: bigint
 ```
 
-���̵������ڴ����ƣ���KBΪ��λ��
+The limit of the application process's virtual memory, in kilobyte
 
 **Type:** bigint
 

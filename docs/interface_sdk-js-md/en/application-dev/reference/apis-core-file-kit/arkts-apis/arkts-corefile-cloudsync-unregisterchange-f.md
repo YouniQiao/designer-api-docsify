@@ -12,7 +12,7 @@ import { cloudSync } from 'kits/@kit.CoreFileKit';
 function unregisterChange(uri: string): void
 ```
 
-取消订阅监听指定文件的变化通知。
+Unsubscribes from the change of a file.
 
 **Since:** 12
 
@@ -26,13 +26,13 @@ function unregisterChange(uri: string): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| uri | string | Yes | 待下载文件uri。 |
+| uri | string | Yes | URI of the file to download. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | The input parameter is invalid.Possible causes:1.Mandatory parameters are left unspecified; &lt;br&gt;2.Incorrect parameter types. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | The input parameter is invalid.Possible causes:1.Mandatory parameters are left unspecified; &lt;br&gt;2.Incorrect parameter types. |
 | 13900001 | Operation not permitted |
 | 13900002 | No such file or directory. |
 | 14000002 | Invalid uri. |
@@ -47,9 +47,9 @@ let path = "/data/storage/el2/cloud/1.txt";
 let uri = fileUri.getUriFromPath(path);
 let onCallback1 = (changeData: cloudSync.ChangeData) => {
   if (changeData.type == cloudSync.NotifyType.NOTIFY_ADDED) {
-    // file has been added, do something
+    // file had added, do something
   } else if (changeData.type== cloudSync.NotifyType.NOTIFY_DELETED) {
-    // file has been removed, do something
+    // file had removed, do something
   }
 }
 cloudSync.registerChange(uri, false, onCallback1);

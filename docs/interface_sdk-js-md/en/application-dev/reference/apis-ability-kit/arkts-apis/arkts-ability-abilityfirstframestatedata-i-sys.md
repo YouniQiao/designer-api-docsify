@@ -1,9 +1,8 @@
 # AbilityFirstFrameStateData (System API)
 
-定义了首帧绘制完成事件回调上报的数据结构。通过  
-[on](./../@ohos.app.ability.appManager:appManager.on(type: 'abilityFirstFrameState', observer: AbilityFirstFrameStateObserver, bundleName?: string))注册监听Ability首帧绘制完成事件后，可使用  
-[AbilityFirstFrameStateObserver](arkts-ability-abilityfirstframestateobserver-i-sys.md)的  
-[onAbilityFirstFrameDrawn](arkts-ability-abilityfirstframestateobserver-i-sys.md#onabilityfirstframedrawn)回调获取上报的数据结构。
+The module defines the struct reported by the callback when the first frame of an ability is rendered. After registering the first frame rendering completion event of an ability by using  
+[on](./../@ohos.app.ability.appManager:appManager.on(type: 'abilityFirstFrameState', observer: AbilityFirstFrameStateObserver, bundleName?: string)), you can obtain the reported struct through the  
+[onAbilityFirstFrameDrawn](arkts-ability-abilityfirstframestateobserver-i-sys.md#onabilityfirstframedrawn)callback of [AbilityFirstFrameStateObserver](arkts-ability-abilityfirstframestateobserver-i-sys.md).
 
 **Since:** 12
 
@@ -21,7 +20,7 @@
 abilityName: string
 ```
 
-Ability名称。
+The ability name.
 
 **Type:** string
 
@@ -41,7 +40,7 @@ Ability名称。
 appIndex: int
 ```
 
-DLP沙盒的索引。
+The index of DLP sandbox.
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
@@ -63,7 +62,7 @@ DLP沙盒的索引。
 bundleName: string
 ```
 
-应用Bundle名称。
+The bundle name.
 
 **Type:** string
 
@@ -83,7 +82,7 @@ bundleName: string
 isColdStart: boolean
 ```
 
-是否冷启动。true表示冷启动，false表示热启动。
+The entry ability of application is cold-start return true, others false.
 
 **Type:** boolean
 
@@ -105,7 +104,7 @@ isColdStart: boolean
 moduleName: string
 ```
 
-应用Module名称。
+The module name.
 
 **Type:** string
 

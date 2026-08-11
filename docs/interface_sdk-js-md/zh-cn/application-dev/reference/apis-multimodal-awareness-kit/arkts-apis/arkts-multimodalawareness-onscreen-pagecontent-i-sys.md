@@ -1,6 +1,6 @@
 # PageContent（系统接口）
 
-Defines the onscreen content.
+屏上内容。
 
 **起始版本：** 20
 
@@ -12,19 +12,13 @@ Defines the onscreen content.
 
 **系统接口：** 此接口为系统接口。
 
-## 导入模块
-
-```TypeScript
-import { onScreen } from 'kits/@kit.MultimodalAwarenessKit';
-```
-
 ## bundleName
 
 ```TypeScript
 bundleName: string
 ```
 
-Bundle name of the onscreen content.
+获取到的屏上内容的包名。
 
 **类型：** string
 
@@ -44,8 +38,7 @@ Bundle name of the onscreen content.
 content?: string
 ```
 
-Body of the onscreen content. This parameter is available only when **options.contentUnderstand** is set to   
-**True**.
+获取到的屏上内容的正文。只有在options.contentUnderstand为true时，才会获取该属性。
 
 **类型：** string
 
@@ -65,7 +58,7 @@ Body of the onscreen content. This parameter is available only when **options.co
 pageLink?: string
 ```
 
-Page link of the onscreen content. This parameter is available only when **options.pageLink** is set to **True**.
+获取到的屏上内容的复访链接。只有在options.pageLink为true时，才会获取该属性。
 
 **类型：** string
 
@@ -85,7 +78,7 @@ Page link of the onscreen content. This parameter is available only when **optio
 paragraphs?: Paragraph[]
 ```
 
-Paragraph information of the onscreen content. This parameter is available only when **options.textOnly** is set to **True**.
+获取到的文本段落信息。只有在options.textOnly为true时，才会获取该属性。
 
 **类型：** [Paragraph](../../apis-arkui/arkts-apis/arkts-arkui-paragraph-t.md)[]
 
@@ -105,8 +98,7 @@ Paragraph information of the onscreen content. This parameter is available only 
 scenario?: Scenario
 ```
 
-Scenario of the onscreen content. This parameter is available only when **options.contentUnderstand** is set to   
-**True**.
+获取到的屏上内容的场景。只有在options.contentUnderstand为true时，才会获取该属性。
 
 **类型：** [Scenario](arkts-multimodalawareness-onscreen-scenario-e-sys.md)
 
@@ -126,7 +118,7 @@ Scenario of the onscreen content. This parameter is available only when **option
 sessionId: long
 ```
 
-Session ID, which identifies the call action.
+此次调用该接口的session ID，标识当次调用动作。
 
 **类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：long
 
@@ -146,8 +138,7 @@ Session ID, which identifies the call action.
 title?: string
 ```
 
-Title of the onscreen content. This parameter is available only when **options.contentUnderstand** is set to   
-**True**.
+获取到的屏上内容的标题。只有在options.contentUnderstand为true时，才会获取该属性。
 
 **类型：** string
 
@@ -167,7 +158,7 @@ Title of the onscreen content. This parameter is available only when **options.c
 windowId: int
 ```
 
-Window ID of the onscreen content.
+获取到的屏上内容的窗口ID
 
 **类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 

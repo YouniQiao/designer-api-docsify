@@ -12,7 +12,7 @@ import { jsLeakWatcher } from 'kits/@kit.PerformanceAnalysisKit';
 function check(): string
 ```
 
-��ȡ��ͨ��jsLeakWatcher.watchע�ᷢ��й©�Ķ����б�������GC��δ�����յĶ���ᱻ���Ϊй©��
+Obtains the list of objects that are leaked and registered using **jsLeakWatcher.watch()**. Objects that are not reclaimed after GC is triggered are marked as leaked.
 
 **Since:** 12
 
@@ -26,7 +26,7 @@ function check(): string
 
 | Type | Description |
 | --- | --- |
-| string | ����GC��δ�����յ�й©�����б��� &lt;br&gt;**˵��**��check�ɹ�������JSON��ʽ��й©�����б���checkʧ�ܣ����ؿ��ַ����� |
+| string | List of leaked objects that are not reclaimed after GC is triggered. &lt;br&gt;Note: If this API is successful, a list of leaked objects in JSON format is returned. Otherwise, an empty string is returned. |
 
 ## Examples
 

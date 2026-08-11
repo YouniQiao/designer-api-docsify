@@ -1,11 +1,5 @@
 # ArcListItem
 
-## 导入模块
-
-```TypeScript
-import { ArcListItemAttribute, ArcList, ArcListItem, ArcListAttribute } from 'kits/@kit.ArkUI';
-```
-
 ## ArcListItem
 
 ```TypeScript
@@ -34,7 +28,7 @@ export declare function ArcListItem(
 
 | 类型 | 说明 |
 | --- | --- |
-| [ArcListItemAttribute](arkts-arkui-arkui-arclist-arclistitemattribute-c.md) |  |
+| [ArcListItemAttribute](arkts-arkui-arkui-arclist-arclistitemattribute-i.md) |  |
 
 
 ## ArcListItem
@@ -71,5 +65,5 @@ export declare function ArcListItem(
 
 | 类型 | 说明 |
 | --- | --- |
-| [ArcListItemAttribute](arkts-arkui-arkui-arclist-arclistitemattribute-c.md) | ArcListItem的属性。 |
+| [ArcListItemAttribute](arkts-arkui-arkui-arclist-arclistitemattribute-i.md) | ArcListItem的属性。 |
 

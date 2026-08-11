@@ -1,6 +1,6 @@
 # MainThreadJankPolicy
 
-提供主线程超时事件配置策略的定义。
+Defines the configuration policy for the main thread jank event.
 
 **Since:** 22
 
@@ -22,13 +22,13 @@ import { hiAppEvent } from 'kits/@kit.PerformanceAnalysisKit';
 autoStopSampling?: boolean
 ```
 
-主线程超时结束时，是否自动停止采样主线程堆栈。
+Whether to automatically stop sampling the main thread stack when the main thread jank event ends.
 
-true: 超时结束或达到设置的采样次数，停止采样。
+The value **true** means to stop sampling when the main thread jank event ends or the number of samplings reaches the specified value.
 
-false：达到设置的采样次数时停止采样。
+The value **false** means to stop sampling when the number of samplings reaches the specified value.
 
-默认值：false。
+The default value is **false**.
 
 **Type:** boolean
 
@@ -48,7 +48,7 @@ false：达到设置的采样次数时停止采样。
 ignoreStartupTime?: int
 ```
 
-应用启动期间忽略主线程超时检测的时间。单位：秒，默认值：10，最小值：3。
+Mainthread jank event detection time ignored during application startup, in seconds. The default value is **10**,and the minimum value is **3**.
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
@@ -68,18 +68,19 @@ ignoreStartupTime?: int
 logType?: int
 ```
 
-采集日志的类型。默认值：0。
+Type of logs to collect. Default value: **0**
 
-logType=0：其他选项均取默认值，主线程连续两次超时150ms~450ms，采集调用栈；主线程超时450ms，采集trace。
+**logType = 0**: The default values of other parameters are used. When the main thread experiences two consecutive timeouts between 150 ms and 450 ms, a call stack capture is triggered. When the timeout exceeds 450ms, a trace capture is triggered.
 
-logType=1：仅采集调用栈，触发检测的阈值由用户自定义。
+**logType=1**: Only the call stack is captured, and the threshold for triggering the detection is customized.
 
-logType=2：仅采集trace。
+**logType=2**: Only traces are captured.
 
-**说明：**
+**NOTE：**
 
-- logType=0时，仅需配置autoStopSampling参数，其他参数均取默认值，无需设置。  
-- logType=2时，其他参数均不生效，无需设置。
+- When **logType** is set to **0**, you only need to set **autoStopSampling**. Default values are used for other  
+parameters.  
+- When **logType** is set to **2**, other parameters do not take effect and do not need to be set.
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
@@ -99,11 +100,11 @@ logType=2：仅采集trace。
 reportTimesPerApp?: int
 ```
 
-同一个应用的PID一个生命周期内，主线程超时采样上报次数。一个生命周期内只能设置一次。
+Number of sampling reporting times for the main thread jank event of the processes with the same PID of an application. This parameter can be set only once for the processes with the same PID.
 
-默认值：1，单位：次。
+The default value is **1**, Unit: times.
 
-每分钟上报次数范围：[1, 3]。
+The number of times that the sampling is reported per minute ranges from 1 to 3.
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
@@ -123,15 +124,19 @@ reportTimesPerApp?: int
 sampleCount?: int
 ```
 
-主线程超时采样次数。单位：次，默认值：10，最小值：1。
+Number of samplings for the main thread jank event. Unit: times. The default value is **10**. The minimum
 
-最大值需要结合自定义的sampleInterval进行动态计算，计算公式：sampleCount <= (2500 / sampleInterval - 4)。
+value is 1. The maximum value is calculated using the following formula:
 
-**说明：**
+**sampleCount** = (2500/**sampleInterval** - 4).
 
-- 2500的含义：根据系统规定，主线程超时事件从检测到上报的时间不可以超过2.5s（即：2500ms）。因此sampleCount的设置值不能超过系统按计算公式得出的最大值。  
-- 4的含义：第一次超时间隔检测时间 + 第二次超时间隔（系统提供两次再次发生超时事件的检测机会）时间 + 收集并上报堆栈信息的时间。  
-- 开发者要结合需求场景，进行合理的设置。
+**NOTE：**
+
+- The value **2500** (ms) indicates the maximum time allowed for a main thread jank event to be reported after  
+being detected. Therefore, the value of **sampleCount** cannot be greater than the maximum value calculated based on the formula.  
+- The value **4** indicates the number of check intervals, that is, the first check interval, the twice second  
+check intervals, and the interval for collecting and reporting stack information.  
+- You need to set the parameters as required.
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
@@ -151,7 +156,7 @@ sampleCount?: int
 sampleInterval?: int
 ```
 
-主线程超时检测间隔和采样间隔。单位：毫秒，默认值：150，取值范围：[50, 500]。
+Interval for the main thread jank event detection and sampling, in milliseconds. The default value is **150**.The value range is [50, 500].
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 

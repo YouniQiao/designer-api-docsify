@@ -1,0 +1,25 @@
+# TrackingEventInfo
+
+Tracking event callback info.
+
+**起始版本：** 20
+
+<!--Device-mechanicManager-export interface TrackingEventInfo--><!--Device-mechanicManager-export interface TrackingEventInfo-End-->
+
+**系统能力：** SystemCapability.Mechanic.Core
+
+## event
+
+```TypeScript
+event: TrackingEvent
+```
+
+跟踪事件
+
+**类型：** [TrackingEvent](arkts-mechanic-mechanicmanager-trackingevent-e.md)
+
+**起始版本：** 20
+
+<!--Device-TrackingEventInfo-event: TrackingEvent--><!--Device-TrackingEventInfo-event: TrackingEvent-End-->
+
+**系统能力：** SystemCapability.Mechanic.Core

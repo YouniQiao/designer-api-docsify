@@ -1,6 +1,6 @@
 # ConflictResolution
 
-枚举，新增关键资产时的冲突（如：别名相同）处理策略。
+Enumerates the policies for resolving conflicts (for example, a duplicate alias) when an asset is added.
 
 **Since:** 11
 
@@ -16,7 +16,7 @@
 OVERWRITE = 0
 ```
 
-覆盖原有的关键资产。
+Overwrites the original asset.
 
 **Since:** 11
 
@@ -34,7 +34,7 @@ OVERWRITE = 0
 THROW_ERROR = 1
 ```
 
-抛出异常，由业务进行后续处理。
+Throws an exception for the service to perform subsequent processing.
 
 **Since:** 11
 

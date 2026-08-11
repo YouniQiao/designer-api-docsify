@@ -12,11 +12,9 @@ import { asset } from 'kits/@kit.AssetStoreKit';
 function batchRemove(assetsToBeRemoved: Array<AssetMap>): Promise<void>
 ```
 
-批量删除符合条件的关键资产。使用Promise异步回调。
+Removes assets in batches based on an alias list.
 
-批量删除的关键资产必须具有相同的[Tag.GROUP_ID](arkts-assetstore-asset-tagtype-e.md)和[Tag.REQUIRE_ATTR_ENCRYPTED](arkts-assetstore-asset-tagtype-e.md)属性。
-
-批量删除的关键资产数量最大值为100。
+Only assets with the same {@link Tag.GROUP_ID} and {@link Tag.REQUIRE_ATTR_ENCRYPTED} can be removed in batches.
 
 **Since:** 26.0.0
 
@@ -30,26 +28,26 @@ function batchRemove(assetsToBeRemoved: Array<AssetMap>): Promise<void>
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| assetsToBeRemoved | Array&lt;AssetMap&gt; | Yes | 待删除关键资产的搜索条件数组，如别名、访问控制属性、自定义数据等。 |
+| assetsToBeRemoved | Array&lt;AssetMap&gt; | Yes | an array of attributes of the asset to remove, such as the asset alias, access control attributes, and custom data. &lt;br&gt;The {@link Tag.GROUP_ID} and {@link Tag.REQUIRE_ATTR_ENCRYPTED} attributes of all data must be the same. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise对象，无返回结果。 |
+| Promise&lt;void&gt; | the promise object returned by the function. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 24000015 | Getting the system time failed. |
-| 24000012 | Calling the OS Account service failed. |
-| 24000013 | Calling the Access Token service failed. |
-| 24000010 | IPC failed. |
-| 24000011 | Calling the Bundle Manager service failed. |
-| 24000008 | The database operation failed. |
-| 24000006 | Insufficient memory. |
-| 24000007 | The asset is corrupted. |
-| 24000019 | Each value of {@link Tag.GROUP_ID} and {@link Tag.REQUIRE_ATTR_ENCRYPTED} in the array is not consistent. |
-| 24000001 | The ASSET service is unavailable. |
+| [24000015](../errorcode-asset.md#24000015-failed-to-obtain-the-system-time) | Getting the system time failed. |
+| [24000012](../errorcode-asset.md#24000012-account-system-service-abnormal) | Calling the OS Account service failed. |
+| [24000013](../errorcode-asset.md#24000013-access-token-service-abnormal) | Calling the Access Token service failed. |
+| [24000010](../errorcode-asset.md#24000010-ipc-failed) | IPC failed. |
+| [24000011](../errorcode-asset.md#24000011-bundle-manager-service-abnormal) | Calling the Bundle Manager service failed. |
+| [24000008](../errorcode-asset.md#24000008-database-operation-failed) | The database operation failed. |
+| [24000006](../errorcode-asset.md#24000006-insufficient-memory) | Insufficient memory. |
+| [24000007](../errorcode-asset.md#24000007-asset-corrupted) | The asset is corrupted. |
+| [24000019](../errorcode-asset.md#24000019-inconsistent-attribute-values) | Each value of {@link Tag.GROUP_ID} and {@link Tag.REQUIRE_ATTR_ENCRYPTED} in the array is not consistent. |
+| [24000001](../errorcode-asset.md#24000001-asset-store-service-unavailable) | The ASSET service is unavailable. |
 

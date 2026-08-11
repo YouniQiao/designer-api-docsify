@@ -12,15 +12,17 @@ import { applicationManager } from 'kits/@kit.MDMKit';
 function addHideLauncherIcon(admin: Want, bundleNames: Array<string>): void
 ```
 
-添加隐藏桌面应用图标名单。
+Adds applications to the home screen icon hide list.
 
-> **说明：**
+> **NOTE：**
 > 
-> 1、本接口仅支持隐藏当前用户的桌面应用图标，不支持隐藏应用卡片。
+> 1. This API can only hide home screen icons for applications of the current user. Hiding application widgets are
+> not supported.
 > 
-> 2、如果被隐藏的应用有应用分身，会同步隐藏应用分身。
+> 2. If a hidden application has clones, the clones are hidden synchronously.
 > 
-> 3、不能把桌面所有应用都添加到隐藏名单中，否则所有应用都会显示到桌面上。
+> 3. Not all applications on the home screen can be added to the hidden list. Otherwise, all applications will
+> still be displayed on the home screen.
 
 **Since:** 26.0.0
 
@@ -38,37 +40,16 @@ function addHideLauncherIcon(admin: Want, bundleNames: Array<string>): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| admin | [Want](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-want-want-c.md) | Yes | 企业设备管理扩展组件。Want中必须包含企业设备管理扩展能力的abilityName和所在应用的bundleName。 |
-| bundleNames | Array&lt;string&gt; | Yes | 应用包名数组，指定需要隐藏的应用，最大支持500个。 |
+| admin | [Want](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-want-want-c.md) | Yes | EnterpriseAdminExtensionAbility. **Want** must contain the ability name of the EnterpriseAdminExtensionAbility and the bundle name of the application. |
+| bundleNames | Array&lt;string&gt; | Yes | Application bundle name array, which specifies the applications to be hidden. A maximum of 500 applications are supported. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 9200012 | Parameter verification failed. |
-| 801 | Capability not supported. Failed to call the API due to limited device capabilities. |
-| 201 | Permission verification failed. The application does not have the permission required to call the API. |
-| 9200001 | The application is not an administrator application of the device. |
-| 9200002 | The administrator application does not have permission to manage the device. |
-
-## Examples
-
-```TypeScript
-import { applicationManager } from '@kit.MDMKit';
-import { Want } from '@kit.AbilityKit';
-
-let wantTemp: Want = {
-  // Replace it as required.
-  bundleName: 'com.example.myapplication',
-  abilityName: 'EnterpriseAdminAbility'
-};
-// Replace it as required.
-let bundleNames: Array<string> = ['com.example.test'];
-try {
-  applicationManager.addHideLauncherIcon(wantTemp, bundleNames);
-  console.info('Succeeded in adding hide launcher icon.');
-} catch (err) {
-  console.error(`Failed to add hide launcher icon. Code is ${err.code}, message is ${err.message}`);
-}
-```
+| [9200012](../errorcode-enterpriseDeviceManager.md#9200012-parameter-verification-failed) | Parameter verification failed. |
+| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. Failed to call the API due to limited device capabilities. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed. The application does not have the permission required to call the API. |
+| [9200001](../errorcode-enterpriseDeviceManager.md#9200001-deviceadmin-not-enabled) | The application is not an administrator application of the device. |
+| [9200002](../errorcode-enterpriseDeviceManager.md#9200002-permission-denied) | The administrator application does not have permission to manage the device. |
 

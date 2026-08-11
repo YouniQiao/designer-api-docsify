@@ -6,7 +6,7 @@
 function getMissionInfo(deviceId: string, missionId: number, callback: AsyncCallback<MissionInfo>): void
 ```
 
-获取单个任务信息。使用callback异步回调。
+Obtains the information about a given mission. This API uses an asynchronous callback to return the result.
 
 **Since:** 8
 
@@ -28,9 +28,9 @@ function getMissionInfo(deviceId: string, missionId: number, callback: AsyncCall
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| deviceId | string | Yes | 设备ID，本机默认为空字符串。 |
-| missionId | number | Yes | 任务ID。 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[MissionInfo](arkts-ability-missioninfo-i-sys.md)&gt; | Yes | 回调函数，返回任务信息。 |
+| deviceId | string | Yes | Device ID. It is a null string by default for the local device. |
+| missionId | number | Yes | Mission ID. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[MissionInfo](arkts-ability-missioninfo-i-sys.md)&gt; | Yes | Callback used to return the mission information obtained. |
 
 ## Examples
 
@@ -61,7 +61,7 @@ missionManager.getMissionInfo('', missionId, (error, mission) => {
 function getMissionInfo(deviceId: string, missionId: number): Promise<MissionInfo>
 ```
 
-获取单个任务信息。使用Promise异步回调。
+Obtains the information about a given mission. This API uses a promise to return the result.
 
 **Since:** 8
 
@@ -83,14 +83,14 @@ function getMissionInfo(deviceId: string, missionId: number): Promise<MissionInf
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| deviceId | string | Yes | 设备ID，本机默认为空字符串。 |
-| missionId | number | Yes | 任务ID。 |
+| deviceId | string | Yes | Device ID. It is a null string by default for the local device. |
+| missionId | number | Yes | Mission ID. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;[MissionInfo](arkts-ability-missioninfo-i-sys.md)&gt; | Promise对象，返回任务信息。 |
+| Promise&lt;[MissionInfo](arkts-ability-missioninfo-i-sys.md)&gt; | Promise used to return the mission information obtained. |
 
 ## Examples
 

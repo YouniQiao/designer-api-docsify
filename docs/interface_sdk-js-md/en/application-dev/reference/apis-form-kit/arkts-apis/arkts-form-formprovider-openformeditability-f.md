@@ -34,12 +34,12 @@ Opens the widget editing page.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 16501003 | The form cannot be operated by the current application. |
-| 801 | Capability not supported.function openFormEditAbility cannot work correctly due to limited device capabilities. |
-| 16501000 | An internal functional error occurred. |
-| 16501007 | Form is not trust. |
-| 16500050 | IPC connection error. |
-| 16500100 | Failed to obtain the configuration information. |
+| [16501003](../errorcode-form.md#16501003-widget-not-operatable) | The form cannot be operated by the current application. |
+| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported.function openFormEditAbility cannot work correctly due to limited device capabilities. |
+| [16501000](../errorcode-form.md#16501000-internal-function-error) | An internal functional error occurred. |
+| [16501007](../errorcode-form.md#16501007-untrusted-widget) | Form is not trust. |
+| [16500050](../errorcode-form.md#16500050-ipc-failure) | IPC connection error. |
+| [16500100](../errorcode-form.md#16500100-failed-to-obtain-widget-configuration-information) | Failed to obtain the configuration information. |
 
 ## Examples
 

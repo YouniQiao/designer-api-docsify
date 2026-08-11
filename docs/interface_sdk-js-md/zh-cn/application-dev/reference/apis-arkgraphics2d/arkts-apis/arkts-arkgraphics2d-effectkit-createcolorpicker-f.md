@@ -1,11 +1,5 @@
 # createColorPicker
 
-## 导入模块
-
-```TypeScript
-import { effectKit } from 'kits/@kit.ArkGraphics2D';
-```
-
 ## createColorPicker
 
 ```TypeScript
@@ -42,36 +36,32 @@ function createColorPicker(source: image.PixelMap): Promise<ColorPicker>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 401 | 输入参数错误。 |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | 输入参数错误。 |
 
 ## 示例
 
 ```TypeScript
-import { image } from '@kit.ImageKit';
-import { effectKit } from '@kit.ArkGraphics2D';
-import { BusinessError } from '@kit.BasicServicesKit';
+import { image } from "@kit.ImageKit";
+import { effectKit } from "@kit.ArkGraphics2D";
+import { BusinessError } from "@kit.BasicServicesKit";
 
-// 创建用于图像效果的buffer
-const colorBuffer = new ArrayBuffer(96);
-// 设置图像初始化选项
-let opts: image.InitializationOptions = {
+const color = new ArrayBuffer(96);
+let opts : image.InitializationOptions = {
   editable: true,
   pixelFormat: 3,
   size: {
     height: 4,
     width: 6
   }
-};
+}
 
-// 创建PixelMap实例
-image.createPixelMap(colorBuffer, opts).then((pixelMap) => {
-  // 创建ColorPicker实例
+image.createPixelMap(color, opts).then((pixelMap) => {
   effectKit.createColorPicker(pixelMap).then(colorPicker => {
-    console.info('Succeeded in creating colorPicker.');
-  }).catch((err: BusinessError) => {
-    console.error(`Failed to create colorPicker. Code: ${err.code}, message: ${err.message}`);
-  });
-});
+    console.info("color picker=" + colorPicker);
+  }).catch( (reason : BusinessError) => {
+    console.error("error=" + reason.message);
+  })
+})
 ```
 
 
@@ -112,36 +102,32 @@ function createColorPicker(source: image.PixelMap, region: Array<double>): Promi
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 401 | 输入参数错误。 |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | 输入参数错误。 |
 
 ## 示例
 
 ```TypeScript
-import { image } from '@kit.ImageKit';
-import { effectKit } from '@kit.ArkGraphics2D';
-import { BusinessError } from '@kit.BasicServicesKit';
+import { image } from "@kit.ImageKit";
+import { effectKit } from "@kit.ArkGraphics2D";
+import { BusinessError } from "@kit.BasicServicesKit";
 
-// 创建用于图像效果的buffer
-const colorBuffer = new ArrayBuffer(96);
-// 设置图像初始化选项
-let opts: image.InitializationOptions = {
+const color = new ArrayBuffer(96);
+let opts : image.InitializationOptions = {
   editable: true,
   pixelFormat: 3,
   size: {
     height: 4,
     width: 6
   }
-};
+}
 
-// 创建PixelMap实例
-image.createPixelMap(colorBuffer, opts).then((pixelMap) => {
-  // 创建指定取色区域的ColorPicker实例
+image.createPixelMap(color, opts).then((pixelMap) => {
   effectKit.createColorPicker(pixelMap, [0, 0, 1, 1]).then(colorPicker => {
-    console.info('Succeeded in creating colorPicker.');
-  }).catch((err: BusinessError) => {
-    console.error(`Failed to create colorPicker. Code: ${err.code}, message: ${err.message}`);
-  });
-});
+    console.info("color picker=" + colorPicker);
+  }).catch( (reason : BusinessError) => {
+    console.error("error=" + reason.message);
+  })
+})
 ```
 
 
@@ -176,36 +162,32 @@ function createColorPicker(source: image.PixelMap, callback: AsyncCallback<Color
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 401 | 输入参数错误。 |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | 输入参数错误。 |
 
 ## 示例
 
 ```TypeScript
-import { image } from '@kit.ImageKit';
-import { effectKit } from '@kit.ArkGraphics2D';
+import { image } from "@kit.ImageKit";
+import { effectKit } from "@kit.ArkGraphics2D";
 
-// 创建用于图像效果的buffer
-const colorBuffer = new ArrayBuffer(96);
-// 设置图像初始化选项
-let opts: image.InitializationOptions = {
+const color = new ArrayBuffer(96);
+let opts : image.InitializationOptions = {
   editable: true,
   pixelFormat: 3,
   size: {
     height: 4,
     width: 6
   }
-};
-// 创建PixelMap实例
-image.createPixelMap(colorBuffer, opts).then((pixelMap) => {
-  // 创建ColorPicker实例
+}
+image.createPixelMap(color, opts).then((pixelMap) => {
   effectKit.createColorPicker(pixelMap, (error, colorPicker) => {
     if (error) {
-      console.error(`Failed to create color picker. Code: ${error.code}, message: ${error.message}`);
+      console.error('Failed to create color picker.');
     } else {
       console.info('Succeeded in creating color picker.');
     }
-  });
-});
+  })
+})
 ```
 
 
@@ -241,35 +223,31 @@ function createColorPicker(source: image.PixelMap, region: Array<double>, callba
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 401 | 输入参数错误。 |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | 输入参数错误。 |
 
 ## 示例
 
 ```TypeScript
-import { image } from '@kit.ImageKit';
-import { effectKit } from '@kit.ArkGraphics2D';
+import { image } from "@kit.ImageKit";
+import { effectKit } from "@kit.ArkGraphics2D";
 
-// 创建用于图像效果的buffer
-const colorBuffer = new ArrayBuffer(96);
-// 设置图像初始化选项
-let opts: image.InitializationOptions = {
+const color = new ArrayBuffer(96);
+let opts : image.InitializationOptions = {
   editable: true,
   pixelFormat: 3,
   size: {
     height: 4,
     width: 6
   }
-};
-// 创建PixelMap实例
-image.createPixelMap(colorBuffer, opts).then((pixelMap) => {
-  // 创建指定取色区域的ColorPicker实例
+}
+image.createPixelMap(color, opts).then((pixelMap) => {
   effectKit.createColorPicker(pixelMap, [0, 0, 1, 1], (error, colorPicker) => {
     if (error) {
-      console.error(`Failed to create color picker. Code: ${error.code}, message: ${error.message}`);
+      console.error('Failed to create color picker.');
     } else {
       console.info('Succeeded in creating color picker.');
     }
-  });
-});
+  })
+})
 ```
 

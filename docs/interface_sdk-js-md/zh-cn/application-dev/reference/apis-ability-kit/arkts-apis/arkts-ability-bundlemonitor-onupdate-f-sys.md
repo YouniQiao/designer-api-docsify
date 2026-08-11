@@ -1,11 +1,5 @@
 # onUpdate（系统接口）
 
-## 导入模块
-
-```TypeScript
-import { bundleMonitor } from 'kits/@kit.AbilityKit';
-```
-
 ## onUpdate
 
 ```TypeScript
@@ -36,6 +30,25 @@ function onUpdate(callback: Callback<BundleChangedInfo>): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 201 | Permission denied. |
-| 202 | Permission denied, non-system app called system api. |
+| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission denied, non-system app called system api. |
+
+## 示例
+
+```TypeScript
+'use static'
+
+import { bundleMonitor } from '@kit.AbilityKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+try {
+  bundleMonitor.onUpdate((bundleChangeInfo) => {
+    console.info(`bundleName : ${bundleChangeInfo.bundleName} userId : ${bundleChangeInfo.userId}`);
+  })
+} catch (errData) {
+  let message = (errData as BusinessError).message;
+  let errCode = (errData as BusinessError).code;
+  console.error(`errData is errCode:${errCode}  message:${message}`);
+}
+```
 

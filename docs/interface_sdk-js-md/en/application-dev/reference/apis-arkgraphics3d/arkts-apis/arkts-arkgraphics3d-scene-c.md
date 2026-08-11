@@ -1,6 +1,6 @@
 # Scene
 
-定义3D场景.
+Defines the 3d scene.
 
 **Since:** 12
 
@@ -16,7 +16,7 @@
 cloneNode(node: Node, parent: Node, name: string): Node | null
 ```
 
-克隆以输入节点为根节点的节点或子树
+Clones a node in the current scene. Cross-scene node cloning is not supported.
 
 **Since:** 23
 
@@ -30,15 +30,15 @@ cloneNode(node: Node, parent: Node, name: string): Node | null
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| node | [Node](arkts-arkgraphics3d-scenenodes-node-i.md) | Yes | 要克隆的输入节点 |
-| parent | [Node](arkts-arkgraphics3d-scenenodes-node-i.md) | Yes | 克隆节点将被设置为其子节点的父节点 |
-| name | string | Yes | 克隆节点的名称 |
+| node | [Node](arkts-arkgraphics3d-scenenodes-node-i.md) | Yes | Node to be cloned. |
+| parent | [Node](arkts-arkgraphics3d-scenenodes-node-i.md) | Yes | Target parent node of the cloned node in the current scene. The cloned node and the target parent node must belong to the same scene. |
+| name | string | Yes | Name of the cloned node, which can be customized and has no special requirements. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [Node](arkts-arkgraphics3d-scenenodes-node-i.md) | 克隆结果，如果克隆失败则返回null. |
+| [Node](arkts-arkgraphics3d-scenenodes-node-i.md) | Returns the cloned node. If the operation fails, null is returned. |
 
 ## createComponent
 
@@ -46,7 +46,7 @@ cloneNode(node: Node, parent: Node, name: string): Node | null
 createComponent(node: Node, name: string): Promise<SceneComponent>
 ```
 
-创建新组件.
+Create a new component.
 
 **Since:** 20
 
@@ -60,14 +60,14 @@ createComponent(node: Node, name: string): Promise<SceneComponent>
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| node | [Node](arkts-arkgraphics3d-scenenodes-node-i.md) | Yes | 组件附加到的节点 |
-| name | string | Yes | 要加载的组件名称. 有效名称由各插件定义. |
+| node | [Node](arkts-arkgraphics3d-scenenodes-node-i.md) | Yes | The node the component is attached to |
+| name | string | Yes | The name of the component to load. Valid names are defined by each plugin. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;SceneComponent&gt; | 新添加的组件. |
+| Promise&lt;SceneComponent&gt; | The newly added component. |
 
 ## destroy
 
@@ -75,7 +75,7 @@ createComponent(node: Node, name: string): Promise<SceneComponent>
 destroy(): void
 ```
 
-释放所有原生场景资源. 所有TS引用将变为undefined.
+Destroys this scene and releases all scene resources.
 
 **Since:** 12
 
@@ -91,7 +91,7 @@ destroy(): void
 getComponent(node: Node, name: string): SceneComponent | null
 ```
 
-通过名称获取组件.
+Obtains the component instance from a node based on the component name.
 
 **Since:** 20
 
@@ -105,14 +105,14 @@ getComponent(node: Node, name: string): SceneComponent | null
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| node | [Node](arkts-arkgraphics3d-scenenodes-node-i.md) | Yes | 组件附加到的节点. |
-| name | string | Yes | 组件名称 |
+| node | [Node](arkts-arkgraphics3d-scenenodes-node-i.md) | Yes | Node to which the component is attached. |
+| name | string | Yes | Name of the component to obtain. The value must be a system predefined or registered custom component name, and follow the naming conventions. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [SceneComponent](arkts-arkgraphics3d-scene-scenecomponent-i.md) |  |
+| [SceneComponent](arkts-arkgraphics3d-scene-scenecomponent-i.md) | SceneComponent object corresponding to the given name, or null if not found. |
 
 ## getDefaultRenderContext
 
@@ -120,7 +120,7 @@ getComponent(node: Node, name: string): SceneComponent | null
 static getDefaultRenderContext(): RenderContext | null
 ```
 
-获取默认渲染上下文
+Get default render context
 
 **Since:** 20
 
@@ -134,7 +134,7 @@ static getDefaultRenderContext(): RenderContext | null
 
 | Type | Description |
 | --- | --- |
-| [RenderContext](arkts-arkgraphics3d-scene-rendercontext-i.md) | 默认RenderContext实例 |
+| [RenderContext](arkts-arkgraphics3d-scene-rendercontext-i.md) | The default RenderContext instance |
 
 ## getNodeByPath
 
@@ -142,7 +142,7 @@ static getDefaultRenderContext(): RenderContext | null
 getNodeByPath(path: string, type?: NodeType): Node | null
 ```
 
-通过路径获取节点.
+Obtains a node by path.
 
 **Since:** 12
 
@@ -156,14 +156,14 @@ getNodeByPath(path: string, type?: NodeType): Node | null
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| path | string | Yes | 节点路径 |
-| type | [NodeType](arkts-arkgraphics3d-scenenodes-nodetype-e.md) | No | 验证节点类型，如果不匹配则返回null |
+| path | string | Yes | Path in the scene node tree. Each layer is separated by a slash (/). |
+| type | [NodeType](arkts-arkgraphics3d-scenenodes-nodetype-e.md) | No | Expected type of the node to be returned. The default value is null. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [Node](arkts-arkgraphics3d-scenenodes-node-i.md) | 如果通过路径找到节点 |
+| [Node](arkts-arkgraphics3d-scenenodes-node-i.md) | Returns the instance of the requested node. Returns null if not found or if the type of the found node does not match the passed parameter. |
 
 ## getResourceFactory
 
@@ -171,7 +171,7 @@ getNodeByPath(path: string, type?: NodeType): Node | null
 getResourceFactory(): SceneResourceFactory
 ```
 
-获取资源工厂.
+Obtains the scene resource factory.
 
 **Since:** 12
 
@@ -185,7 +185,7 @@ getResourceFactory(): SceneResourceFactory
 
 | Type | Description |
 | --- | --- |
-| [SceneResourceFactory](arkts-arkgraphics3d-scene-sceneresourcefactory-i.md) | 如果通过路径找到节点 |
+| [SceneResourceFactory](arkts-arkgraphics3d-scene-sceneresourcefactory-i.md) | Scene resource factory. |
 
 ## importNode
 
@@ -193,7 +193,7 @@ getResourceFactory(): SceneResourceFactory
 importNode(name: string, node: Node, parent: Node | null): Node
 ```
 
-将节点导入场景. 原始节点可能来自另一个场景.节点将被克隆，导入后对旧节点的修改将不可见.
+Import node into the scene. The original node may come from separate Scene.The node will be cloned and any modifications to the old node will not be visible after the import.
 
 **Since:** 18
 
@@ -207,15 +207,15 @@ importNode(name: string, node: Node, parent: Node | null): Node
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| name | string | Yes | 新创建节点的名称. |
-| node | [Node](arkts-arkgraphics3d-scenenodes-node-i.md) | Yes | 要导入的节点. |
-| parent | [Node](arkts-arkgraphics3d-scenenodes-node-i.md) \| null | Yes | 父节点，根节点为null |
+| name | string | Yes | The name of the newly created node. |
+| node | [Node](arkts-arkgraphics3d-scenenodes-node-i.md) | Yes | The node to be imported. |
+| parent | [Node](arkts-arkgraphics3d-scenenodes-node-i.md) \| null | Yes | The parent node or null for root |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [Node](arkts-arkgraphics3d-scenenodes-node-i.md) | 新创建的节点. |
+| [Node](arkts-arkgraphics3d-scenenodes-node-i.md) | The newly created node. |
 
 ## importScene
 
@@ -223,7 +223,7 @@ importNode(name: string, node: Node, parent: Node | null): Node
 importScene(name: string, scene: Scene, parent: Node | null): Node
 ```
 
-将场景作为节点导入场景. 节点层级将出现在父节点下.场景中的所有动画将被复制.
+Import scene into the scene as a node. The node hierarchy will appear under the parent node.All animations from the scene will be duplicated in the scene.
 
 **Since:** 18
 
@@ -237,15 +237,15 @@ importScene(name: string, scene: Scene, parent: Node | null): Node
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| name | string | Yes | 新创建节点的名称 |
+| name | string | Yes | The name of the newly created node |
 | scene | [Scene](arkts-arkgraphics3d-scene-c.md) | Yes | The scene to be imported. |
-| parent | [Node](arkts-arkgraphics3d-scenenodes-node-i.md) \| null | Yes | 父节点，根节点为null |
+| parent | [Node](arkts-arkgraphics3d-scenenodes-node-i.md) \| null | Yes | The parent node or null for root |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [Node](arkts-arkgraphics3d-scenenodes-node-i.md) | 新创建的节点. |
+| [Node](arkts-arkgraphics3d-scenenodes-node-i.md) | The newly created node. |
 
 ## load
 
@@ -253,7 +253,7 @@ importScene(name: string, scene: Scene, parent: Node | null): Node
 static load(uri? : ResourceStr): Promise<Scene>
 ```
 
-从ResourceStr创建新场景.如果未提供uri，将返回空场景.
+Loads a resource by path.This API uses a promise to return the result.
 
 **Since:** 12
 
@@ -267,13 +267,13 @@ static load(uri? : ResourceStr): Promise<Scene>
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| uri | [ResourceStr](../../apis-arkui/arkts-apis/arkts-arkui-resourcestr-t.md) | No | 创建场景的资源 |
+| uri | [ResourceStr](../../apis-arkui/arkts-apis/arkts-arkui-resourcestr-t.md) | No | Path of the model file resource to load. The default value is undefined. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;[Scene](arkts-arkgraphics3d-scene-c.md)&gt; | 返回创建的场景 |
+| Promise&lt;[Scene](arkts-arkgraphics3d-scene-c.md)&gt; | Promise used to return the Scene object created. |
 
 ## renderFrame
 
@@ -281,7 +281,7 @@ static load(uri? : ResourceStr): Promise<Scene>
 renderFrame(params?: RenderParameters): boolean
 ```
 
-为所有活动相机渲染新帧.
+A new frame is rendered for all active camera.
 
 **Since:** 15
 
@@ -295,13 +295,13 @@ renderFrame(params?: RenderParameters): boolean
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| params | [RenderParameters](arkts-arkgraphics3d-scene-renderparameters-i.md) | No | 渲染参数 |
+| params | [RenderParameters](arkts-arkgraphics3d-scene-renderparameters-i.md) | No | Rendering parameters |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| boolean | 如果渲染被调度则返回true，否则返回false |
+| boolean | True if rendering was scheduled, false otherwise |
 
 ## animations
 
@@ -309,7 +309,7 @@ renderFrame(params?: RenderParameters): boolean
 get animations(): Animation[]
 ```
 
-场景的动画.
+The animations of the scene.
 
 **Type:** [Animation](arkts-arkgraphics3d-sceneresources-animation-i.md)[]
 
@@ -327,7 +327,7 @@ get animations(): Animation[]
 set environment(value: Environment)
 ```
 
-场景的环境.
+The environment of the scene.
 
 **Type:** [Environment](arkts-arkgraphics3d-sceneresources-environment-i.md)
 
@@ -345,7 +345,7 @@ set environment(value: Environment)
 get renderConfiguration(): RenderConfiguration
 ```
 
-渲染配置设置
+render configuration settings
 
 **Type:** [RenderConfiguration](arkts-arkgraphics3d-scene-renderconfiguration-i.md)
 
@@ -363,7 +363,7 @@ get renderConfiguration(): RenderConfiguration
 get root(): Node | null
 ```
 
-场景的根节点.
+The root node of the scene.
 
 **Type:** [Node](arkts-arkgraphics3d-scenenodes-node-i.md)
 

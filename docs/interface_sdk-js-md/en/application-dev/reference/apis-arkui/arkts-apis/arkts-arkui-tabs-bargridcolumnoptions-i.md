@@ -1,6 +1,6 @@
 # BarGridColumnOptions
 
-TabBar栅格化方式设置的对象，包括栅格模式下的column边距和间隔，以及小、中、大屏下，页签占用的columns数量。
+Provides an interface for the grid column options of an tab bar including sm, md, lg, margin and gutter.
 
 **Since:** 23
 
@@ -16,7 +16,7 @@ TabBar栅格化方式设置的对象，包括栅格模式下的column边距和�
 gutter?: Dimension
 ```
 
-栅格模式下的column间隔（不支持百分比设置）。单位：vp。 默认值： 24。
+Column gutter (that is, gap between columns) in grid mode. It cannot be set in percentage.Unit: vp. Default value: 24.
 
 **Type:** [Dimension](arkts-arkui-dimension-t.md)
 
@@ -38,7 +38,7 @@ gutter?: Dimension
 lg?: int
 ```
 
-大屏下，页签占用的columns数量，必须是非负偶数。大屏为大于等于840vp但小于1024vp。取值范围为全体整数，默认值为-1，代表页签占用TabBar全部宽度。 默认值： -1。
+Number of columns occupied by a tab on a screen whose width is greater than or equal to 840 vp but less than 1024 vp. The value must be a non-negative even int.The value range is all integers, The default value is - 1, indicating that the tab occupies the entire width of the  TabBar. Default value: -1.
 
 **Type:** int
 
@@ -60,7 +60,7 @@ lg?: int
 margin?: Dimension
 ```
 
-栅格模式下的column边距（不支持百分比设置）。单位: vp。 默认值： 24。
+Column margin in grid mode. It cannot be set in percentage.Unit: vp. Default value: 24.
 
 **Type:** [Dimension](arkts-arkui-dimension-t.md)
 
@@ -82,7 +82,7 @@ margin?: Dimension
 md?: int
 ```
 
-中屏下，页签占用的columns数量，必须是非负偶数。中屏为大于等于600vp但小于800vp。取值范围为全体整数，默认值为-1，代表页签占用TabBar全部宽度。 默认值： -1。
+Number of columns occupied by a tab on a screen whose width is greater than or equal to 600 vp but less than 800 vp. The value must be a non-negative even int.The value range is all integers, The default value is - 1, indicating that the tab occupies the entire width of the  TabBar. Default value: -1.
 
 **Type:** int
 
@@ -104,7 +104,7 @@ md?: int
 sm?: int
 ```
 
-小屏下，页签占用的columns数量，必须是非负偶数。小屏为大于等于320vp但小于600vp。取值范围为全体整数，默认值为-1，代表页签占用TabBar全部宽度。 默认值： -1。
+Number of columns occupied by a tab on a screen whose width is greater than or equal to 320 vp but less than 600 vp. The value must be a non-negative even int.The value range is all integers, The default value is - 1, indicating that the tab occupies the entire width of the  TabBar. Default value: -1.
 
 **Type:** int
 

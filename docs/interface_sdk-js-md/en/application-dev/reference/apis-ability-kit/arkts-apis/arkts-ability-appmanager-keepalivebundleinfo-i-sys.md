@@ -1,7 +1,8 @@
 # KeepAliveBundleInfo (System API)
 
-定义应用保活信息，可以通过[getKeepAliveBundles](arkts-ability-appmanager-getkeepalivebundles-f-sys.md#getkeepalivebundles)或  
-[getKeepAliveAppServiceExtensions](arkts-ability-appmanager-getkeepaliveappserviceextensions-f-sys.md#getkeepaliveappserviceextensions)获取。
+Describes the keep-alive application information, which can be obtained by calling  
+[getKeepAliveBundles](arkts-ability-appmanager-getkeepalivebundles-f-sys.md#getkeepalivebundles) or  
+[getKeepAliveAppServiceExtensions](arkts-ability-appmanager-getkeepaliveappserviceextensions-f-sys.md#getkeepaliveappserviceextensions).
 
 **Since:** 14
 
@@ -25,7 +26,7 @@ import { appManager } from 'kits/@kit.AbilityKit';
 allowUserToCancel?: boolean
 ```
 
-表示是否允许用户取消保活。true表示允许，false表示不允许。
+Whether the user can cancel the keep-alive status. **true** if yes, **false** otherwise.
 
 **Type:** boolean
 
@@ -45,7 +46,7 @@ allowUserToCancel?: boolean
 bundleName: string
 ```
 
-Bundle名称。
+Bundle name.
 
 **Type:** string
 
@@ -65,7 +66,7 @@ Bundle名称。
 setter: KeepAliveSetter
 ```
 
-表示应用保活设置者类型。
+Type of the party that sets to keep the application alive.
 
 **Type:** [KeepAliveSetter](arkts-ability-appmanager-keepalivesetter-e-sys.md)
 
@@ -85,7 +86,7 @@ setter: KeepAliveSetter
 setterUserId?: int
 ```
 
-应用保活设置者的用户ID。
+ID of the user who keeps the application alive.
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
@@ -105,7 +106,7 @@ setterUserId?: int
 type: KeepAliveAppType
 ```
 
-表示被保活应用的应用类型。
+Type of the application to be kept alive.
 
 **Type:** [KeepAliveAppType](arkts-ability-appmanager-keepaliveapptype-e-sys.md)
 

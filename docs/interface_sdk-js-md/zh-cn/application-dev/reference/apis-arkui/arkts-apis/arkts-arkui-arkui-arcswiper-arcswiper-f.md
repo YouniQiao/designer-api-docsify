@@ -1,11 +1,5 @@
 # ArcSwiper
 
-## 导入模块
-
-```TypeScript
-import { ArcSwiperAttribute, ArcSwiper, ArcDirection, ArcSwiperController, ArcDotIndicator } from 'kits/@kit.ArkUI';
-```
-
 ## ArcSwiper
 
 ```TypeScript

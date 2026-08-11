@@ -1,6 +1,6 @@
 # ConnectionNativeInfo
 
-表示Web原生消息连接的连接信息。
+Represents the information about the web native message connection.
 
 **Since:** 23
 
@@ -22,7 +22,7 @@ import { webNativeMessagingExtensionManager } from 'kits/@kit.ArkWeb';
 bundleName: string
 ```
 
-Web原生消息扩展应用的包名。
+Bundle name of the web native message extension application.
 
 **Type:** string
 
@@ -42,7 +42,7 @@ Web原生消息扩展应用的包名。
 connectionId: int
 ```
 
-Web原生消息扩展连接的唯一标识，由connectNative方法返回，用于标识和管理连接。
+Connection ID.The value range is all integers.
 
 **Type:** int
 
@@ -62,7 +62,7 @@ Web原生消息扩展连接的唯一标识，由connectNative方法返回，用�
 extensionOrigin: string
 ```
 
-浏览器扩展的源URL。
+Source URL of the browser extension.
 
 **Type:** string
 
@@ -82,7 +82,7 @@ extensionOrigin: string
 extensionPid: int
 ```
 
-Web原生消息扩展的进程ID。
+Process ID of the web native message extension.The value range is all integers.
 
 **Type:** int
 

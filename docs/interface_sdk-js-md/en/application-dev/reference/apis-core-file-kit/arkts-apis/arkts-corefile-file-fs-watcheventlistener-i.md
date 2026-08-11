@@ -1,6 +1,8 @@
 # WatchEventListener
 
-事件监听类。
+(event: WatchEvent): void
+
+Provides APIs for observing events.
 
 **Since:** 10
 

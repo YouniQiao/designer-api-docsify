@@ -1,6 +1,6 @@
 # Magnifier
 
-提供控制放大镜的能力。
+Provides the method for magnifier capabilities.
 
 **Since:** 23
 
@@ -22,7 +22,7 @@ import { OverlayManager, FrameCallback, ResolvedUIContext, NodeRenderStateChange
 bind(id: string): void
 ```
 
-将放大镜和组件绑定。
+Bind magnifier to a component.
 
 **Since:** 23
 
@@ -38,7 +38,7 @@ bind(id: string): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| id | string | Yes | 组件id |
+| id | string | Yes | component id. |
 
 ## show
 
@@ -46,7 +46,7 @@ bind(id: string): void
 show(x: double, y: double): void
 ```
 
-设置放大镜显示内容的位置。
+Set the position of the magnified content.
 
 **Since:** 23
 
@@ -62,8 +62,8 @@ show(x: double, y: double): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| x | double | Yes | 放大镜显示内容相对组件水平方向坐标。 单位为vp |
-| y | double | Yes | 放大镜显示内容相对组件垂直方向坐标。 单位为vp |
+| x | double | Yes | the x position of the magnified content relative to the component. The unit of x is vp. |
+| y | double | Yes | the y position of the magnified content relative to the component. The unit of y is vp. |
 
 ## unbind
 
@@ -71,7 +71,7 @@ show(x: double, y: double): void
 unbind(): void
 ```
 
-将放大镜和组件解绑。
+Unbind the magnifier from its associated component.
 
 **Since:** 23
 

@@ -1,6 +1,6 @@
 # ContainerReaderAttribute
 
-除支持[通用属性](../../apis-ability-kit/arkts-apis/arkts-app-ability-common.md/arkts-app-ability-common.md)外，还支持以下属性：
+Defines the ContainerReader attribute functions.Provides methods for configuring container reading parameters and breakpoint analysis properties.
 
 **Inheritance/Implementation:** ContainerReaderAttribute extends [CommonMethod<ContainerReaderAttribute>](CommonMethod<ContainerReaderAttribute>)
 
@@ -24,7 +24,7 @@ import { BreakpointOptions, ContainerReader, ContainerReaderAttribute } from 'ki
 breakpointConfig(value?: BreakpointOptions): ContainerReaderAttribute
 ```
 
-设置断点配置选项，定义触发不同布局行为的尺寸阈值。
+Sets the breakpoint configuration for container dimension analysis.Defines a set of threshold values that trigger different layout behaviors based on container size.
 
 **Since:** 26.0.0
 
@@ -44,7 +44,7 @@ breakpointConfig(value?: BreakpointOptions): ContainerReaderAttribute
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | [BreakpointOptions](arkts-arkui-arkui-components-containerreader-breakpointoptions-i.md) | No | 断点配置选项，包含宽度和高度的断点阈值数组。 |
+| value | [BreakpointOptions](arkts-arkui-arkui-components-containerreader-breakpointoptions-i.md) | No | An array of breakpoint values in vp |
 
 **Return value:**
 

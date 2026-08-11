@@ -1,11 +1,5 @@
 # migrateData（系统接口）
 
-## 导入模块
-
-```TypeScript
-import { bundleManager } from 'kits/@kit.AbilityKit';
-```
-
 ## migrateData
 
 ```TypeScript
@@ -43,17 +37,19 @@ function migrateData(sourcePaths: Array<string>, destinationPath: string): Promi
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 17700086 | System error occurred during copy execution. |
-| 201 | Permission denied. |
-| 202 | Permission denied, non-system app called system api. |
-| 17700084 | There are inaccessible path in the source paths. |
-| 17700085 | The destination path cannot be accessed. |
-| 17700082 | User authentication failed. |
-| 17700083 | Waiting for user authentication timeout. |
-| 17700080 | The source paths are invalid. |
-| 17700081 | The destination path is invalid. |
+| [17700086](../errorcode-bundle.md#17700086-发生系统错误) | System error occurred during copy execution. |
+| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission denied, non-system app called system api. |
+| [17700084](../errorcode-bundle.md#17700084-源路径中存在未开启权限路径) | There are inaccessible path in the source paths. |
+| [17700085](../errorcode-bundle.md#17700085-目标路径未开启写权限) | The destination path cannot be accessed. |
+| [17700082](../errorcode-bundle.md#17700082-用户身份认证失败) | User authentication failed. |
+| [17700083](../errorcode-bundle.md#17700083-用户身份认证超时) | Waiting for user authentication timeout. |
+| [17700080](../errorcode-bundle.md#17700080-源路径中存在无效路径) | The source paths are invalid. |
+| [17700081](../errorcode-bundle.md#17700081-目标路径为无效路径) | The destination path is invalid. |
 
 ## 示例
+
+ArkTS-Dyn示例:
 
 ```TypeScript
 import { bundleManager } from '@kit.AbilityKit';
@@ -75,6 +71,34 @@ try {
       hilog.error(0x0000, 'testTag', 'migrateData err: %{public}s', JSON.stringify(err));
     })
 } catch (err) {
+  hilog.error(0x0000, 'testTag', 'migrateData call err: %{public}s', JSON.stringify(err));
+}
+```
+
+ArkTS-Sta示例:
+
+```TypeScript
+'use static'
+
+import { bundleManager } from '@kit.AbilityKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+import { hilog } from '@kit.PerformanceAnalysisKit';
+
+try {
+  // 开发者需将source1、source2、dest内容更新为实际文件路径或目录路径。
+  let source1: string = "/data/app/el2/100/base/com.example.myapplication/";
+  let source2: string = "/data/app/el2/101/base/com.example.myapplication/log.txt";
+  let dest: string = "/data/local/tmp";
+  let sourcePaths: Array<string> = [source1, source2];
+
+  bundleManager.migrateData(sourcePaths, dest)
+    .then(() => {
+      hilog.info(0x0000, 'testTag', 'migrateData succeed');
+    })
+    .catch((err: Error) => {
+      hilog.error(0x0000, 'testTag', 'migrateData err: %{public}s', JSON.stringify(err as BusinessError));
+    })
+} catch(err) {
   hilog.error(0x0000, 'testTag', 'migrateData call err: %{public}s', JSON.stringify(err));
 }
 ```

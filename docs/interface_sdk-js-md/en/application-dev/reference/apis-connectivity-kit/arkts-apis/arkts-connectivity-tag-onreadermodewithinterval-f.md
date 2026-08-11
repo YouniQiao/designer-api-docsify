@@ -42,8 +42,8 @@ Set reader mode enabled when the specific application is on foreground and set c
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 801 | Capability not supported. |
-| 3100202 | The element state is invalid. |
-| 3100201 | The tag running state is abnormal in the service. |
-| 201 | Permission denied. |
+| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. |
+| [3100202](../errorcode-nfc.md#3100202-application-status-error) | The element state is invalid. |
+| [3100201](../errorcode-nfc.md#3100201-tag-readwrite-error) | The tag running state is abnormal in the service. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
 

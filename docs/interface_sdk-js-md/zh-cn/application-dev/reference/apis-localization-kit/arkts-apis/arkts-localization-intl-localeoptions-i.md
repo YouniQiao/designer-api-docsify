@@ -13,17 +13,11 @@
 
 **废弃版本：** 20
 
-**替代接口：** [Intl.LocaleOptions](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/Locale/Locale#options)
+**替代接口：** [Intl.LocaleOptions](arkts-intl.md#intl.localeoptions)
 
 <!--Device-intl-export interface LocaleOptions--><!--Device-intl-export interface LocaleOptions-End-->
 
 **系统能力：** SystemCapability.Global.I18n
-
-## 导入模块
-
-```TypeScript
-import { intl } from 'kits/@kit.LocalizationKit';
-```
 
 ## calendar
 
@@ -43,7 +37,7 @@ calendar?: string
 
 **废弃版本：** 20
 
-**替代接口：** [Intl.LocaleOptions.calendar](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/Locale/Locale#calendar)
+**替代接口：** [Intl.LocaleOptions.calendar](arkts-intl.md#intl.localeoptions.calendar)
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 

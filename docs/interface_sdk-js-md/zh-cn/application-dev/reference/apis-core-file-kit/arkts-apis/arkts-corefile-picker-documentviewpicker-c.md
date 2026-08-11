@@ -10,12 +10,6 @@
 
 **系统能力：** SystemCapability.FileManagement.UserFileService
 
-## 导入模块
-
-```TypeScript
-import { picker } from 'kits/@kit.CoreFileKit';
-```
-
 ## constructor
 
 ```TypeScript
@@ -69,7 +63,7 @@ constructor(context: Context)
 
 ```TypeScript
 import { common } from '@kit.AbilityKit';
-import { picker } from '@kit.CoreFileKit';
+
 @Entry
 @Component
 struct Index {
@@ -124,8 +118,8 @@ constructor(context: Context, window: window.Window)
 
 ```TypeScript
 import { common } from '@kit.AbilityKit';
-import { picker } from '@kit.CoreFileKit';
 import { window } from '@kit.ArkUI';
+
 @Entry
 @Component
 struct Index {
@@ -182,6 +176,73 @@ getSelectedIndex(): int
 | --- | --- |
 | ArkTS-Dyn: number  <br>ArkTS-Sta：int | 返回所选后缀类型在[DocumentSaveOptions.fileSuffixChoices]{ |
 
+## 示例
+
+ArkTS-Dyn示例：
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+import { common } from '@kit.AbilityKit';
+
+async function exampleIndex(context: common.UIAbilityContext) { // 需确保 context 由 UIAbilityContext 转换而来
+  try {
+    let documentSaveOptions = new picker.DocumentSaveOptions();
+    // 保存文件的名字
+    documentSaveOptions.newFileNames = ['DocumentViewPicker01'];
+    // 保存文件的后缀类型
+    documentSaveOptions.fileSuffixChoices = ['txt', 'mp4', 'pdf'];
+    let documentPicker = new picker.DocumentViewPicker(context);
+    documentPicker.save(documentSaveOptions).then((documentSaveResult: Array<string>) => {
+      if (documentSaveOptions.fileSuffixChoices != undefined && documentSaveResult != undefined) {
+        // 获取保存文件的后缀类型的下标
+        let index = documentPicker.getSelectedIndex();
+        // 获取保存文件的后缀类型。
+        let selectedSuffix = documentSaveOptions.fileSuffixChoices[index];
+        console.info('DocumentViewPicker.save selectedSuffix is ' + selectedSuffix);
+      }
+      console.info('DocumentViewPicker.save successfully, documentSaveResult uri: ' + JSON.stringify(documentSaveResult));
+    }).catch((err: BusinessError) => {
+      console.error(`DocumentViewPicker.save failed with err, code is: ${err.code}, message is: ${err.message}`);
+    });
+  } catch (error) {
+    let err: BusinessError = error as BusinessError;
+    console.error(`DocumentViewPicker failed with err, code is: ${err.code}, message is: ${err.message}`);
+  }
+}
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+import { common } from '@kit.AbilityKit';
+async function exampleIndex(context: common.UIAbilityContext) { // 需确保 context 由 UIAbilityContext 转换而来
+  try {
+    let documentSaveOptions: picker.DocumentSaveOptions = {
+      // 保存文件的名字
+      newFileNames: ['DocumentViewPicker01.txt'],
+      // 保存文件的后缀类型
+      fileSuffixChoices: ['txt', 'mp4', 'pdf']
+    };
+    let documentPicker = new picker.DocumentViewPicker(context);
+    documentPicker.save(documentSaveOptions).then((documentSaveResult: Array<string>) => {
+      if (documentSaveOptions.fileSuffixChoices != undefined && documentSaveResult != undefined) {
+        // 获取保存文件的后缀类型的下标
+        let index = documentPicker.getSelectedIndex();
+        // 获取保存文件的后缀类型。
+        let selectedSuffix = documentSaveOptions.fileSuffixChoices![index];
+        console.info('DocumentViewPicker.save selectedSuffix is ' + selectedSuffix);
+      }
+      console.info('DocumentViewPicker.save successfully, documentSaveResult uri: ' + JSON.stringify(documentSaveResult));
+    }).catch((err: BusinessError): void => {
+      console.error(`DocumentViewPicker.save failed with err, code is: ${err.code}, message is: ${err.message}`);
+    });
+  } catch (err: BusinessError) {
+    console.error(`DocumentViewPicker failed with err, code is: ${err.code}, message is: ${err.message}`);
+  }
+}
+```
+
 ## save
 
 ```TypeScript
@@ -214,10 +275,12 @@ save(option?: DocumentSaveOptions): Promise<Array<string>>
 
 ## 示例
 
+ArkTS-Dyn示例：
+
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
 import { common } from '@kit.AbilityKit';
-import { picker } from '@kit.CoreFileKit';
+
 async function example10(context: common.UIAbilityContext) { // 需确保 context 由 UIAbilityContext 转换而来
   try {
     let documentSaveOptions = new picker.DocumentSaveOptions();
@@ -230,6 +293,29 @@ async function example10(context: common.UIAbilityContext) { // 需确保 contex
     });
   } catch (error) {
     let err: BusinessError = error as BusinessError;
+    console.error(`DocumentViewPicker failed with err, code is: ${err.code}, message is: ${err.message}`);
+  }
+}
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+import { common } from '@kit.AbilityKit';
+
+async function example10(context: common.UIAbilityContext) { // 需确保 context 由 UIAbilityContext 转换而来
+  try {
+    let documentSaveOptions: picker.DocumentSaveOptions = {
+      newFileNames: ['DocumentViewPicker01.txt']
+    };
+    let documentPicker = new picker.DocumentViewPicker(context);
+    documentPicker.save(documentSaveOptions).then((documentSaveResult: Array<string>) => {
+      console.info('DocumentViewPicker.save successfully, documentSaveResult uri: ' + JSON.stringify(documentSaveResult));
+    }).catch((err: BusinessError): void => {
+      console.error(`DocumentViewPicker.save failed with err, code is: ${err.code}, message is: ${err.message}`);
+    });
+  } catch (err: BusinessError) {
     console.error(`DocumentViewPicker failed with err, code is: ${err.code}, message is: ${err.message}`);
   }
 }
@@ -262,16 +348,47 @@ save(option: DocumentSaveOptions, callback: AsyncCallback<Array<string>>): void
 
 ## 示例
 
+ArkTS-Dyn示例：
+
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
 import { common } from '@kit.AbilityKit';
-import { picker } from '@kit.CoreFileKit';
+
 async function example11(context: common.UIAbilityContext) { // 需确保 context 由 UIAbilityContext 转换而来
   try {
     let documentSaveOptions = new picker.DocumentSaveOptions();
     documentSaveOptions.newFileNames = ['DocumentViewPicker02.txt'];
     let documentPicker = new picker.DocumentViewPicker(context);
     documentPicker.save(documentSaveOptions, (err: BusinessError, documentSaveResult: Array<string>) => {
+      if (err) {
+        console.error(`DocumentViewPicker.save failed with err, code is: ${err.code}, message is: ${err.message}`);
+        return;
+      }
+      console.info('DocumentViewPicker.save successfully, documentSaveResult uri: ' + JSON.stringify(documentSaveResult));
+    });
+  } catch (error) {
+    let err: BusinessError = error as BusinessError;
+    console.error(`DocumentViewPicker failed with err, code is: ${err.code}, message is: ${err.message}`);
+  }
+}
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+import { common } from '@kit.AbilityKit';
+
+async function example11(context: common.UIAbilityContext) { // 需确保 context 由 UIAbilityContext 转换而来
+  try {
+    const documentSaveOptions: picker.DocumentSaveOptions = {
+      newFileNames: ['DocumentViewPicker02.txt'],
+      defaultFilePathUri: 'xxx',
+      fileSuffixChoices: ['txt|文本文件', 'doc|Word文档'],
+      pickerMode: picker.DocumentPickerMode.DEFAULT
+    };
+    let documentPicker = new picker.DocumentViewPicker(context);
+    documentPicker.save(documentSaveOptions, (err: BusinessError | null, documentSaveResult: Array<string> | undefined) => {
       if (err) {
         console.error(`DocumentViewPicker.save failed with err, code is: ${err.code}, message is: ${err.message}`);
         return;
@@ -311,10 +428,12 @@ save(callback: AsyncCallback<Array<string>>): void
 
 ## 示例
 
+ArkTS-Dyn示例：
+
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
 import { common } from '@kit.AbilityKit';
-import { picker } from '@kit.CoreFileKit';
+
 async function example12(context: common.UIAbilityContext) { // 需确保 context 由 UIAbilityContext 转换而来
   try {
     let documentPicker = new picker.DocumentViewPicker(context);
@@ -327,6 +446,28 @@ async function example12(context: common.UIAbilityContext) { // 需确保 contex
     });
   } catch (error) {
     let err: BusinessError = error as BusinessError;
+    console.error(`DocumentViewPicker failed with err, code is: ${err.code}, message is: ${err.message}`);
+  }
+}
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+import { common } from '@kit.AbilityKit';
+
+function example12(context: common.UIAbilityContext) { // 需确保 context 由 UIAbilityContext 转换而来
+  try {
+    let documentPicker = new picker.DocumentViewPicker(context);
+    documentPicker.save((err: BusinessError | null, documentSaveResult: Array<string> | undefined) => {
+      if (err) {
+        console.error(`DocumentViewPicker.save failed with err, code is: ${err.code}, message is: ${err.message}`);
+        return;
+      }
+      console.info('DocumentViewPicker.save successfully, documentSaveResult uri: ' + JSON.stringify(documentSaveResult));
+    });
+  } catch (err: BusinessError) {
     console.error(`DocumentViewPicker failed with err, code is: ${err.code}, message is: ${err.message}`);
   }
 }
@@ -364,10 +505,12 @@ select(option?: DocumentSelectOptions): Promise<Array<string>>
 
 ## 示例
 
+ArkTS-Dyn示例：
+
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
 import { common } from '@kit.AbilityKit';
-import { picker } from '@kit.CoreFileKit';
+
 async function example07(context: common.UIAbilityContext) { // 需确保 context 由 UIAbilityContext 转换而来
   try {
     let documentSelectOptions = new picker.DocumentSelectOptions();
@@ -379,6 +522,29 @@ async function example07(context: common.UIAbilityContext) { // 需确保 contex
     });
   } catch (error) {
     let err: BusinessError = error as BusinessError;
+    console.error(`DocumentViewPicker failed with err, code is: ${err.code}, message is: ${err.message}`);
+  }
+}
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+import { common } from '@kit.AbilityKit';
+
+async function example07(context: common.UIAbilityContext) { // 需确保 context 由 UIAbilityContext 转换而来
+  try {
+    let documentSelectOptions: picker.DocumentSelectOptions = {
+      selectMode: picker.DocumentSelectMode.MIXED
+    };
+    let documentPicker = new picker.DocumentViewPicker(context);
+    documentPicker.select(documentSelectOptions).then((documentSelectResult: Array<string>) => {
+      console.info('DocumentViewPicker.select successfully, documentSelectResult uri: ' + JSON.stringify(documentSelectResult));
+    }).catch((err: BusinessError): void => {
+      console.error(`DocumentViewPicker.select failed with err, code is: ${err.code}, message is: ${err.message}`);
+    });
+  } catch (err: BusinessError) {
     console.error(`DocumentViewPicker failed with err, code is: ${err.code}, message is: ${err.message}`);
   }
 }
@@ -411,10 +577,12 @@ select(option: DocumentSelectOptions, callback: AsyncCallback<Array<string>>): v
 
 ## 示例
 
+ArkTS-Dyn示例：
+
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
 import { common } from '@kit.AbilityKit';
-import { picker } from '@kit.CoreFileKit';
+
 async function example08(context: common.UIAbilityContext) { // 需确保 context 由 UIAbilityContext 转换而来
   try {
     let documentSelectOptions = new picker.DocumentSelectOptions();
@@ -428,6 +596,31 @@ async function example08(context: common.UIAbilityContext) { // 需确保 contex
     });
   } catch (error) {
     let err: BusinessError = error as BusinessError;
+    console.error(`DocumentViewPicker failed with err, code is: ${err.code}, message is: ${err.message}`);
+  }
+}
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+import { common } from '@kit.AbilityKit';
+
+function example08(context: common.UIAbilityContext) { // 需确保 context 由 UIAbilityContext 转换而来
+  try {
+    let documentSelectOptions: picker.DocumentSelectOptions = {
+      selectMode: picker.DocumentSelectMode.MIXED
+    };
+    let documentPicker = new picker.DocumentViewPicker(context);
+    documentPicker.select(documentSelectOptions, (err: BusinessError|null, documentSelectResult: Array<string>|undefined) => {
+      if (err) {
+        console.error(`DocumentViewPicker.select failed with err, code is: ${err.code}, message is: ${err.message}`);
+        return;
+      }
+      console.info('DocumentViewPicker.select successfully, documentSelectResult uri: ' + JSON.stringify(documentSelectResult));
+    });
+  } catch (err: BusinessError) {
     console.error(`DocumentViewPicker failed with err, code is: ${err.code}, message is: ${err.message}`);
   }
 }
@@ -459,10 +652,12 @@ select(callback: AsyncCallback<Array<string>>): void
 
 ## 示例
 
+ArkTS-Dyn示例：
+
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
 import { common } from '@kit.AbilityKit';
-import { picker } from '@kit.CoreFileKit';
+
 async function example09(context: common.UIAbilityContext) { // 需确保 context 由 UIAbilityContext 转换而来
   try {
     let documentPicker = new picker.DocumentViewPicker(context);
@@ -475,6 +670,28 @@ async function example09(context: common.UIAbilityContext) { // 需确保 contex
     });
   } catch (error) {
     let err: BusinessError = error as BusinessError;
+    console.error(`DocumentViewPicker failed with err, code is: ${err.code}, message is: ${err.message}`);
+  }
+}
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+import { common } from '@kit.AbilityKit';
+
+function example09(context: common.UIAbilityContext) { // 需确保 context 由 UIAbilityContext 转换而来
+  try {
+    let documentPicker = new picker.DocumentViewPicker(context);
+    documentPicker.select((err: BusinessError | null, documentSelectResult: Array<string> | undefined) => {
+      if (err) {
+        console.error(`DocumentViewPicker.select failed with err, code is: ${err.code}, message is: ${err.message}`);
+        return;
+      }
+      console.info('DocumentViewPicker.select successfully, documentSelectResult uri: ' + JSON.stringify(documentSelectResult));
+    });
+  } catch (err: BusinessError) {
     console.error(`DocumentViewPicker failed with err, code is: ${err.code}, message is: ${err.message}`);
   }
 }

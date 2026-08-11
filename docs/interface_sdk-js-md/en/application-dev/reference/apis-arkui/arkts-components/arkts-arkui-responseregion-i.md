@@ -1,18 +1,25 @@
 # ResponseRegion
 
-由输入工具类型、触摸位置和大小组成的触摸热区。
+Defines a touch target consisting of an input tool type, touch position, and size.
 
-> **说明：**
+> **NOTE：**
 > 
-> - 当父组件设置[clip](arkts-arkui-commonmethod-c.md#clip)为true时，子组件的响应会受到父组件触摸热区的影响，不在父组件触摸热区内的子组件无法响应手势和事件。
+> - When the parent component has [clip](arkts-arkui-commonmethod-c.md#clip) set to **true**, child component
+> interaction is affected by the parent component's response region. Children outside the parent component's response
+> region won't respond to gestures or events.
 > 
-> - 如果触摸热区未配置输入工具类型，触摸位置和大小均采用默认值。
+> - If the input tool type, touch position, and size are not configured for a touch target, default values are used.
 > 
-> - x和y的计算结果为正值时，分别代表向右偏移和向下偏移；当计算结果为负值时，分别代表向左偏移和向上偏移。
+> - Positive calculation results for x and y represent shifts to the right and down, respectively. Negative
+> calculation results represent shifts to the left and up, respectively.
 > 
-> - width和height采用string类型时，string需采用小写字符否则不生效，支持calc()的动态计算。指定calc()的入参字符串格式为'宽高缩放比例 ± 宽高增量'，宽高缩放比例为百分比，宽高增量单位为px或
-> vp。例如'calc(80% + 10vp)'中，80%为宽高缩放比例、10vp为宽高增量。width和height采用LengthMetrics类型且单位为percent时，相对于组件自身宽高进行计算，percent(1)代表1
-> 00%。当计算结果为负值时，采用默认值。
+> - If the width and height are of the string type, the string must be in lowercase. Dynamic calculation with
+> **calc()** is supported. The format of the input string for **calc()** is Width/Height scaling ratio ± Width/Height
+> increment, where the scaling ratio is a percentage and the increment unit is px or vp. For example, in
+> **calc(80% + 10vp)**, **80%** is the width/height scaling ratio, and **10vp** is the width/height increment. If the
+> width and height are of the **LengthMetrics** type and the unit is percent, the width and height are calculated
+> relative to the component's own width and height. **percent(1)** indicates 100%. If the calculation result is a
+> negative value, the default value is used.
 
 **Since:** 22
 
@@ -28,9 +35,9 @@
 height?: LengthMetrics | string
 ```
 
-触摸热区的高度。
+Height of the touch target.
 
-默认值：LengthMetrics.percent(1)
+Default value: **LengthMetrics.percent(1)**
 
 **Type:** [LengthMetrics](../arkts-apis/arkts-arkui-graphics-lengthmetrics-c.md) \| string
 
@@ -54,9 +61,9 @@ height?: LengthMetrics | string
 tool?: ResponseRegionSupportedTool
 ```
 
-触摸热区适用的输入工具类型。
+Type of the input tool applicable to the touch target.
 
-默认值：ResponseRegionSupportedTool.ALL
+Default value: **ResponseRegionSupportedTool.ALL**
 
 **Type:** [ResponseRegionSupportedTool](../arkts-apis/arkts-arkui-responseregionsupportedtool-e.md)
 
@@ -80,9 +87,9 @@ tool?: ResponseRegionSupportedTool
 width?: LengthMetrics | string
 ```
 
-触摸热区的宽度。
+Width of the touch target.
 
-默认值：LengthMetrics.percent(1)
+Default value: **LengthMetrics.percent(1)**
 
 **Type:** [LengthMetrics](../arkts-apis/arkts-arkui-graphics-lengthmetrics-c.md) \| string
 
@@ -106,9 +113,9 @@ width?: LengthMetrics | string
 x?: LengthMetrics
 ```
 
-触摸点相对于组件左上角的x轴坐标。
+X coordinate of the touch point relative to the upper left corner of the component.
 
-默认值：LengthMetrics.vp(0)
+Default value: **LengthMetrics.vp(0)**
 
 **Type:** [LengthMetrics](../arkts-apis/arkts-arkui-graphics-lengthmetrics-c.md)
 
@@ -132,9 +139,9 @@ x?: LengthMetrics
 y?: LengthMetrics
 ```
 
-触摸点相对于组件左上角的y轴坐标。
+Y coordinate of the touch point relative to the upper left corner of the component.
 
-默认值：LengthMetrics.vp(0)
+Default value: **LengthMetrics.vp(0)**
 
 **Type:** [LengthMetrics](../arkts-apis/arkts-arkui-graphics-lengthmetrics-c.md)
 

@@ -68,7 +68,7 @@ readonly fontConfigs?: FontConfigs
 
 默认返回undefined，表示未设置fontConfigs。
 
-**类型：** [FontConfigs](arkts-arkui-fontconfigs-i.md)
+**类型：** [FontConfigs](arkts-arkui-textcommon-fontconfigs-i.md)
 
 **起始版本：** 24
 
@@ -138,7 +138,7 @@ readonly fontStyle?: FontStyle
 
 获取属性字符串的文本字体样式。
 
-**类型：** [FontStyle](../../apis-arkgraphics2d/arkts-apis/arkts-arkgraphics2d-text-fontstyle-e.md)
+**类型：** [FontStyle](arkts-arkui-enums-fontstyle-e.md)
 
 **起始版本：** 12
 

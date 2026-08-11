@@ -1,6 +1,6 @@
 # PrintQuality
 
-打印质量的枚举。
+Enumerates the print qualities.
 
 **Since:** 14
 
@@ -16,7 +16,7 @@
 QUALITY_DRAFT = 3
 ```
 
-表示经济的打印质量。
+Draft
 
 **Since:** 14
 
@@ -32,7 +32,7 @@ QUALITY_DRAFT = 3
 QUALITY_NORMAL = 4
 ```
 
-表示标准的打印质量。
+Standard
 
 **Since:** 14
 
@@ -48,7 +48,7 @@ QUALITY_NORMAL = 4
 QUALITY_HIGH = 5
 ```
 
-表示最佳的打印质量。
+High
 
 **Since:** 14
 

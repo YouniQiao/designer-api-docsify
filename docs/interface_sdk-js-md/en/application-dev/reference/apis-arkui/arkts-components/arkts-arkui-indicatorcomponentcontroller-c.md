@@ -1,6 +1,6 @@
 # IndicatorComponentController
 
-Indicator组件的控制器，可以将此对象绑定至Indicator组件来控制翻页。通过将同一IndicatorComponentController实例传入IndicatorComponent的构造函数和Swiper组件的indicator属性，可实现Indicator与Swiper的绑定联动。
+Provides methods for switching components.
 
 **Since:** 15
 
@@ -16,7 +16,7 @@ Indicator组件的控制器，可以将此对象绑定至Indicator组件来控�
 changeIndex(index: number, useAnimation?: boolean):void
 ```
 
-翻至指定导航点。适用于需要跳转到指定导航点的场景。
+Controlling IndicatorComponent to change to the specified subcomponent.
 
 **Since:** 15
 
@@ -36,8 +36,8 @@ changeIndex(index: number, useAnimation?: boolean):void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| index | number | Yes | 指定导航点在Swiper中的索引值。&lt;br/&gt;**说明：** &lt;br/&gt;设置的值小于0或大于最大导航点索引时，取0。 |
-| useAnimation | boolean | No | 设置翻至指定导航点时是否有动效，true表示有动效，false表示没有动效。&lt;br/&gt;默认值：false。 |
+| index | number | Yes | The index of item to be redirected. |
+| useAnimation | boolean | No | If true, swipe to index item with animation. If false, swipe to index item without animation. The default value is false. |
 
 ## constructor
 
@@ -45,7 +45,7 @@ changeIndex(index: number, useAnimation?: boolean):void
 constructor()
 ```
 
-IndicatorComponentController的构造函数。
+constructor.
 
 **Since:** 15
 
@@ -67,7 +67,7 @@ IndicatorComponentController的构造函数。
 showNext():void
 ```
 
-跳转到下一导航点。当与Swiper组件绑定时，同时会控制Swiper切换至下一页面。适用于通过按钮或其他交互方式控制导航点切换的场景。
+Called when the next child component is displayed.
 
 **Since:** 15
 
@@ -89,7 +89,7 @@ showNext():void
 showPrevious():void
 ```
 
-跳转到上一导航点。当与Swiper组件绑定时，同时会控制Swiper切换至上一页面。适用于通过按钮等交互方式控制导航点切换的场景。
+Called when the previous subcomponent is displayed.
 
 **Since:** 15
 

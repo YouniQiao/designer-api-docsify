@@ -1,6 +1,6 @@
 # Edges
 
-用于设置边框的属性。
+Describes the edges.
 
 **Since:** 12
 
@@ -16,7 +16,7 @@
 bottom: T
 ```
 
-底部边框的属性。
+Bottom edge.
 
 **Type:** T
 
@@ -38,7 +38,7 @@ bottom: T
 left: T
 ```
 
-左侧边框的属性。
+Left edge.
 
 **Type:** T
 
@@ -60,7 +60,7 @@ left: T
 right: T
 ```
 
-右侧边框的属性。
+Right edge.
 
 **Type:** T
 
@@ -82,7 +82,7 @@ right: T
 top: T
 ```
 
-顶部边框的属性。
+Top edge.
 
 **Type:** T
 

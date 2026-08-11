@@ -1,7 +1,8 @@
 # OnSaveResult
 
-保存应用数据的结果，该类型为枚举。配合UIAbility的  
-[onSaveState()](arkts-ability-app-ability-uiability-uiability-c.md#onsavestate)方法使用，可以实现[UIAbility备份恢复](../../../application-models/ability-recover-guideline.md)。
+Enumerates the result types for the operation of saving application data. You can use it in  
+[onSaveState()](arkts-ability-app-ability-uiability-uiability-c.md#onsavestate) of the UIAbility to complete  
+[UIAbility backup and restore](../../../application-models/ability-recover-guideline.md).
 
 **Since:** 9
 
@@ -17,7 +18,7 @@
 ALL_AGREE = 0
 ```
 
-总是同意保存状态。
+Always agreed to save the status.
 
 **Since:** 9
 
@@ -37,7 +38,7 @@ ALL_AGREE = 0
 CONTINUATION_REJECT = 1
 ```
 
-拒绝迁移保存状态。
+Rejected to save the status in continuation.
 
 **Since:** 9
 
@@ -57,7 +58,7 @@ CONTINUATION_REJECT = 1
 CONTINUATION_MISMATCH = 2
 ```
 
-迁移不匹配。
+Continuation mismatch.
 
 **Since:** 9
 
@@ -77,7 +78,7 @@ CONTINUATION_MISMATCH = 2
 RECOVERY_AGREE = 3
 ```
 
-同意恢复保存状态。
+Agreed to restore the saved status.
 
 **Since:** 9
 
@@ -97,7 +98,7 @@ RECOVERY_AGREE = 3
 RECOVERY_REJECT = 4
 ```
 
-拒绝恢复保存状态。
+Rejected to restore the saved status.
 
 **Since:** 9
 

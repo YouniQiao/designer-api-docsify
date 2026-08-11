@@ -1,6 +1,6 @@
 # BundleInfo (System API)
 
-端云协同应用信息。
+Bundle information configuration.
 
 **Since:** 26.0.0
 
@@ -24,7 +24,7 @@ import { cloudData } from 'kits/@kit.ArkData';
 bundleName: string
 ```
 
-应用包名。
+Indicates the name of the application.
 
 **Type:** string
 
@@ -46,7 +46,7 @@ bundleName: string
 storeId?: string
 ```
 
-数据库名称。默认值为空字符串，此时查询该应用下所有数据库。
+Indicates the store ID.
 
 **Type:** string
 

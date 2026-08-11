@@ -10,12 +10,6 @@
 
 **系统能力：** SystemCapability.Applications.CalendarData
 
-## 导入模块
-
-```TypeScript
-import { calendarManager } from 'kits/@kit.CalendarKit';
-```
-
 ## filterById
 
 ```TypeScript

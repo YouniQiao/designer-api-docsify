@@ -21,12 +21,6 @@ Image的属性仅支持在创建时初始化，后续无法再修改，且其属
 
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
-## 导入模块
-
-```TypeScript
-import { image } from 'kits/@kit.ImageKit';
-```
-
 ## getBufferData
 
 ```TypeScript
@@ -140,8 +134,8 @@ getMetadata(key: HdrMetadataKey): HdrMetadataValue | null
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 7600206 | Invalid parameter. |
-| 7600302 | Memory copy failed. |
+| [7600206](../errorcode-image.md#7600206-无效参数) | Invalid parameter. |
+| [7600302](../errorcode-image.md#7600302-内存拷贝失败) | Memory copy failed. |
 
 ## release
 
@@ -207,7 +201,7 @@ clipRect: Region
 
 要裁剪的图像区域。恒等于整个图像，不支持修改。
 
-**类型：** [Region](../../apis-arkgraphics2d/arkts-apis/arkts-arkgraphics2d-drawing-region-c.md)
+**类型：** [Region](arkts-image-image-region-i.md)
 
 **起始版本：** 9
 

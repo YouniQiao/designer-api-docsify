@@ -1,6 +1,6 @@
 # DLPPermissionInfo
 
-表示DLP文件的权限信息。
+Represents the permission information about a DLP file.
 
 **Since:** 10
 
@@ -22,7 +22,7 @@ import { dlpPermission } from 'kits/@kit.DataProtectionKit';
 dlpFileAccess: DLPFileAccess
 ```
 
-表示DLP文件针对用户的授权类型，例如：只读。
+User permission on the DLP file, for example, read-only.
 
 **Type:** [DLPFileAccess](arkts-dataprotection-dlppermission-dlpfileaccess-e.md)
 
@@ -40,7 +40,8 @@ dlpFileAccess: DLPFileAccess
 flags: number
 ```
 
-表示DLP文件的详细操作权限，取值范围由不同[ActionFlagType](arkts-dataprotection-dlppermission-actionflagtype-e.md)的组合决定。
+Operations that can be performed on the DLP file. The value is determined by a combination of different  
+[ActionFlagTypes](arkts-dataprotection-dlppermission-actionflagtype-e.md).
 
 **Type:** number
 

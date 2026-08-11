@@ -12,7 +12,8 @@ import { hidebug } from 'kits/@kit.PerformanceAnalysisKit';
 function getAppNativeMemInfoAsync(): Promise<NativeMemInfo>
 ```
 
-��ȡ/proc/{pid}/smaps_rollup��/proc/{pid}/statm�ڵ�������Ի�ȡӦ�ý����ڴ���Ϣ��ʹ��Promise�첽�ص���
+Obtains the memory information of application processes by reading the data of the **\/proc/{pid}/smaps_rollup** and  
+**\/proc/{pid}/statm** nodes. This API uses a promise to return the result.
 
 **Since:** 20
 
@@ -26,7 +27,7 @@ function getAppNativeMemInfoAsync(): Promise<NativeMemInfo>
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;NativeMemInfo&gt; | promise���󣬷���Ӧ�ý����ڴ���Ϣ�� |
+| Promise&lt;NativeMemInfo&gt; | Promise used to return the application process memory information. |
 
 ## Examples
 

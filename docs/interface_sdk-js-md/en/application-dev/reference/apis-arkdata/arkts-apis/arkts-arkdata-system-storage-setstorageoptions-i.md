@@ -16,7 +16,7 @@
 complete?: () => void
 ```
 
-接口调用结束的回调函数。
+Called when the execution is completed.
 
 **Since:** 3
 
@@ -36,7 +36,7 @@ complete?: () => void
 fail?: (data: string, code: number) => void
 ```
 
-接口调用失败的回调函数，data为错误信息，code为错误码。
+Called when the stored content fails to be modified.
 
 **Since:** 3
 
@@ -63,7 +63,7 @@ fail?: (data: string, code: number) => void
 success?: () => void
 ```
 
-接口调用成功的回调函数。
+Called when the stored content is modified successfully.
 
 **Since:** 3
 
@@ -83,7 +83,7 @@ success?: () => void
 key: string
 ```
 
-要修改的存储值的索引。
+Index of the stored content to be modified.the value contains a maximum of 32 characters and cannot contain special characters such as \/"*+,:;&lt;=&gt;?[]|\x7F.
 
 **Type:** string
 
@@ -105,7 +105,7 @@ key: string
 value: string
 ```
 
-新值。长度需小于128字节。
+Target storage content.
 
 **Type:** string
 

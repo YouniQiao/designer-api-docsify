@@ -1,6 +1,6 @@
 # UserdataDirInfo (System API)
 
-用户设备中/data目录下的空间占用详情。
+Details the space usage of the **\/data** directory on the user device.
 
 **Since:** 23
 
@@ -24,7 +24,7 @@ import { storageStatistics } from 'kits/@kit.CoreFileKit';
 path: string
 ```
 
-路径名称。
+Path name.
 
 **Type:** string
 
@@ -46,7 +46,7 @@ path: string
 totalCnt: int
 ```
 
-路径下目录和文件总数量。
+The size of inode count.
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
@@ -68,7 +68,7 @@ totalCnt: int
 totalSize: long
 ```
 
-路径占用的总空间大小，单位Byte。
+The size of user data dirs.&lt;br&gt;Unit: Byte.
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：long
 

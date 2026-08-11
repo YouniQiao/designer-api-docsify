@@ -4,7 +4,7 @@
 type OnPlaybackRateDone = (rate: double) => void
 ```
 
-播放速率设置完成事件回调方法。
+Describes the callback invoked for the event indicating that the playback rate setting is complete.
 
 **Since:** 20
 
@@ -20,5 +20,5 @@ type OnPlaybackRateDone = (rate: double) => void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| rate | ArkTS-Dyn: number  <br>ArkTS-Sta：double | Yes | 播放速率。 |
+| rate | ArkTS-Dyn: number  <br>ArkTS-Sta：double | Yes | Playback rate. |
 

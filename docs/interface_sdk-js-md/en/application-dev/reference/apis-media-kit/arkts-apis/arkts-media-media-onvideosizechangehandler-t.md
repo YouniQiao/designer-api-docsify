@@ -4,7 +4,7 @@
 type OnVideoSizeChangeHandler = (width: int, height: int) => void
 ```
 
-视频播放宽高变化事件回调方法。
+Describes the callback invoked for the video size change event.
 
 **Since:** 12
 
@@ -20,6 +20,6 @@ type OnVideoSizeChangeHandler = (width: int, height: int) => void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| width | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | 视频宽度，单位为像素（px）。 |
-| height | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | 视频高度，单位为像素（px）。 |
+| width | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | Video width, in px. |
+| height | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | Video height, in px. |
 

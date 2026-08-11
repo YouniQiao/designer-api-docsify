@@ -4,7 +4,7 @@
 export declare type StorageDefaultCreator<T> = () => T
 ```
 
-返回默认构造器的函数。
+Function that returns the default creator.
 
 **Since:** 26.0.0
 

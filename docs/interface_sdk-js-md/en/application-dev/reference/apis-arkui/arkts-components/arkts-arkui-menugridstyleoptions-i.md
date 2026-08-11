@@ -1,6 +1,6 @@
 # MenuGridStyleOptions
 
-菜单栅格样式选项。
+Defines the grid style of menu.
 
 **Since:** 26.0.0
 
@@ -16,17 +16,7 @@
 count?: number
 ```
 
-栅格中元素的数量。
-
-默认值：3
-
-取值范围：
-
-当为上图下文形的栅格样式时，元素数量范围为[0, 6]。
-
-当为纯图标形的栅格样式时，元素数量范围[0, 4]。 
-
-未设置、异常值按照默认值处理。
+The count of items in grid.
 
 **Type:** number
 
@@ -50,17 +40,7 @@ count?: number
 horizontalSize?: number
 ```
 
-栅格中元素的水平尺寸，表示栅格内每行可显示的元素数量。
-
-默认值：3
-
-**说明：**
-
-当为上图下文形的栅格样式时，水平尺寸范围为[1, 3]，即栅格行数为[1, 2]。
-
-当为纯图标形的栅格样式时，水平尺寸范围为[1, 4]，即栅格行数为1。
-
-未设置、异常值按照默认值处理。
+The horizontal size of items in grid.
 
 **Type:** number
 
@@ -84,9 +64,7 @@ horizontalSize?: number
 position?: MenuGridPosition
 ```
 
-栅格在菜单中的位置。
-
-默认值：MenuGridPosition.TOP
+The position of grid.
 
 **Type:** [MenuGridPosition](../arkts-apis/arkts-arkui-common-menugridposition-e.md)
 

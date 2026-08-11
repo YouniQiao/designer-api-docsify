@@ -1,6 +1,6 @@
 # TextSelectableMode
 
-Type of text selectable.
+Sets whether text can be selected and focused on.
 
 **Since:** 12
 
@@ -16,7 +16,7 @@ Type of text selectable.
 SELECTABLE_UNFOCUSABLE = 0
 ```
 
-set text selectable and unfocusable.
+The text is selectable, but not focusable. Setting the **selection**, **bindSelectionMenu**, or **copyOption**attribute does not affect the behavior.
 
 **Since:** 12
 
@@ -36,7 +36,7 @@ set text selectable and unfocusable.
 SELECTABLE_FOCUSABLE = 1
 ```
 
-set text selectable and focusable.
+The text is selectable and focusable. It obtains focus when touched.
 
 **Since:** 12
 
@@ -56,7 +56,7 @@ set text selectable and focusable.
 UNSELECTABLE = 2
 ```
 
-set text unselectable and unfocusable.
+The text is not selectable nor focusable. The **selection**, **bindSelectionMenu**, and **copyOption** attributes do not work in this case.
 
 **Since:** 12
 

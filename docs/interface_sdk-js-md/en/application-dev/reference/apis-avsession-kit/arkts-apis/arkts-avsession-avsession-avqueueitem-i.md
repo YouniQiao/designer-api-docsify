@@ -1,6 +1,6 @@
 # AVQueueItem
 
-播放列表中单项的相关属性。
+The item in the playlist of the session
 
 **Since:** 10
 
@@ -22,7 +22,7 @@ import { avSession } from 'kits/@kit.AVSessionKit';
 description?: AVMediaDescription
 ```
 
-播放列表中单项的媒体元数据。
+The media description of the item in the playlist.
 
 **Type:** [AVMediaDescription](arkts-avsession-avsession-avmediadescription-i.md)
 
@@ -42,7 +42,7 @@ description?: AVMediaDescription
 itemId: int
 ```
 
-播放列表中单项的ID。
+Sequence number of the item in the playlist.
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 

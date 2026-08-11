@@ -1,6 +1,6 @@
 # Attendee
 
-会议日程参与者。
+Describes the attendees in a meeting.
 
 **Since:** 10
 
@@ -22,7 +22,7 @@ import { calendarManager } from 'kits/@kit.CalendarKit';
 email: string
 ```
 
-会议日程参与者的邮箱，邮箱格式为“用户名@域名.后缀”，用户名部分只能包含字母、数字、下划线“_”、点 “.”、连字符 “-”。不能以点 “.” 开头或结尾。 不能连续出现两个点（即“..”）。长度建议为[0,5000]字符。
+Email address of the attendee, with a maximum of 5,000 characters.
 
 **Type:** string
 
@@ -42,7 +42,7 @@ email: string
 name: string
 ```
 
-会议日程参与者的姓名。长度建议为[0,5000]字符。
+Name of the attendee, with a maximum of 5,000 characters.
 
 **Type:** string
 
@@ -62,7 +62,7 @@ name: string
 role?: AttendeeRole
 ```
 
-会议日程参与者的角色，不填时默认为空。
+Role of the Attendee.
 
 **Type:** [AttendeeRole](arkts-calendar-calendarmanager-attendeerole-e.md)
 
@@ -82,7 +82,7 @@ role?: AttendeeRole
 status?: AttendeeStatus
 ```
 
-会议日程参与者的状态，不填时默认为空。
+Status of the attendee. If this parameter is not set, the default value is empty.
 
 **Type:** [AttendeeStatus](arkts-calendar-calendarmanager-attendeestatus-e.md)
 
@@ -102,7 +102,7 @@ status?: AttendeeStatus
 type?: AttendeeType
 ```
 
-会议日程参与者的类型，不填时默认为空。
+Type of the attendee. If this parameter is not set, the default value is empty.
 
 **Type:** [AttendeeType](arkts-calendar-calendarmanager-attendeetype-e.md)
 

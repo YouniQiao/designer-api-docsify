@@ -12,7 +12,7 @@ import { certificateManager } from 'kits/@kit.DeviceCertificateKit';
 function update(handle: Uint8Array, data: Uint8Array, callback: AsyncCallback<void>): void
 ```
 
-签名、验签的数据更新操作，需要在init操作之后调用，用于传入待签名、验签的数据。使用Callback异步回调。
+Updates the data for the signing or signature verification operation. It needs to be invoked after the init operation to transfer the data to be signed and verified. This API uses an asynchronous callback to return the result.
 
 **Since:** 11
 
@@ -28,17 +28,17 @@ function update(handle: Uint8Array, data: Uint8Array, callback: AsyncCallback<vo
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| handle | Uint8Array | Yes | 表示操作句柄，需先调用init方法获得 |
-| data | Uint8Array | Yes | 表示待签名、验签的数据。 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | 回调函数。当签名、验签的数据更新操作成功时，err为null，否则为错误对象。 |
+| handle | Uint8Array | Yes | Handle of initialization which needs to be obtained by calling the init method. |
+| data | Uint8Array | Yes | Data to be signed or verified. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **null**. Otherwise, **err** is an error object. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; 3. Parameter verification failed. |
-| 201 | Permission verification failed. The application does not have the permission required to call the API. |
-| 17500001 | Internal error. Possible causes: 1. IPC communication failed; &lt;br&gt;2. Memory operation error; 3. File operation error. Please try again. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; 3. Parameter verification failed. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed. The application does not have the permission required to call the API. |
+| [17500001](../errorcode-certManager.md#17500001-internal-error) | Internal error. Possible causes: 1. IPC communication failed; &lt;br&gt;2. Memory operation error; 3. File operation error. Please try again. |
 
 ## Examples
 
@@ -72,7 +72,7 @@ try {
 function update(handle: Uint8Array, data: Uint8Array): Promise<void>
 ```
 
-签名、验签的数据更新操作。使用Promise异步回调。
+Updates the data for the signing or signature verification operation. This API uses a promise to return the result.
 
 **Since:** 11
 
@@ -88,22 +88,22 @@ function update(handle: Uint8Array, data: Uint8Array): Promise<void>
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| handle | Uint8Array | Yes | 表示操作句柄，需先调用init方法获得 |
-| data | Uint8Array | Yes | 表示待签名、验签的数据。 |
+| handle | Uint8Array | Yes | Handle of initialization, which needs to be obtained by calling the init method |
+| data | Uint8Array | Yes | Data to be signed or verified. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise对象，无返回结果。 |
+| Promise&lt;void&gt; | Promise that returns no value. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; 3. Parameter verification failed. |
-| 201 | Permission verification failed. The application does not have the permission required to call the API. |
-| 17500001 | Internal error. Possible causes: 1. IPC communication failed; &lt;br&gt;2. Memory operation error; 3. File operation error. Please try again. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; 3. Parameter verification failed. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed. The application does not have the permission required to call the API. |
+| [17500001](../errorcode-certManager.md#17500001-internal-error) | Internal error. Possible causes: 1. IPC communication failed; &lt;br&gt;2. Memory operation error; 3. File operation error. Please try again. |
 
 ## Examples
 
@@ -121,8 +121,7 @@ let srcData: Uint8Array = new Uint8Array([
 try {
   certificateManager.update(cmHandle, srcData).then((result) => {
     console.info('Succeeded in updating.');
-  }).catch((error: Error) => {
-    let err = error as BusinessError;
+  }).catch((err: BusinessError) => {
     console.error(`Failed to update. Code: ${err.code}, message: ${err.message}`);
   })
 } catch (error) {

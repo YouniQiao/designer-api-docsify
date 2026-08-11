@@ -10,12 +10,6 @@
 
 **系统能力：** SystemCapability.Multimedia.Audio.Device
 
-## 导入模块
-
-```TypeScript
-import { audio } from 'kits/@kit.AudioKit';
-```
-
 ## address
 
 ```TypeScript
@@ -124,7 +118,7 @@ readonly deviceType: DeviceType
 
 设备类型。
 
-**类型：** [DeviceType](../../apis-avsession-kit/arkts-apis/arkts-avsession-avsession-devicetype-e.md)
+**类型：** [DeviceType](../../apis-localization-kit/arkts-apis/arkts-localization-resourcemanager-devicetype-e.md)
 
 **起始版本：** 7
 

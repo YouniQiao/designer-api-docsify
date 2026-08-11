@@ -1,6 +1,6 @@
 # AsyncCallback
 
-异步回调接口
+Asynchronous callback interface.
 
 **Since:** 6
 
@@ -26,7 +26,7 @@ import { resourceManager } from 'kits/@kit.LocalizationKit';
 (err: Error, data: T): void
 ```
 
-异步回调函数，携带错误参数和异步返回值。
+Defines an asynchronous callback that carries an error parameter and asynchronous return value.
 
 **Since:** 6
 
@@ -44,6 +44,6 @@ import { resourceManager } from 'kits/@kit.LocalizationKit';
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| err | Error | Yes | 接口调用失败的错误信息。 |
-| data | T | Yes | 接口调用时的回调信息。 |
+| err | Error | Yes | Error message returned when the API fails to be called. |
+| data | T | Yes | Callback invoked when the API is called. |
 

@@ -4,7 +4,7 @@
 type KeyCommandCallback = (keyOptions: KeyOptions, keyEvent: KeyEvent) => void
 ```
 
-按键命令回调函数类型，当快捷键注册条件满足时触发的回调。
+Callback function when the shortcut key registered by the system application meets the conditions.
 
 **Since:** 26.0.0
 
@@ -22,6 +22,6 @@ type KeyCommandCallback = (keyOptions: KeyOptions, keyEvent: KeyEvent) => void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| keyOptions | [KeyOptions](../../apis-test-kit/arkts-apis/arkts-test-uitest-keyoptions-i.md) | Yes | 触发回调时的组合键选项。 |
-| keyEvent | [KeyEvent](arkts-input-multimodalinput-keyevent-keyevent-i.md) | Yes | 按键事件对象，包含按键详细信息。 |
+| keyOptions | [KeyOptions](../../apis-test-kit/arkts-apis/arkts-test-uitest-keyoptions-i.md) | Yes | Options for registering shortcut keys when the system applies. |
+| keyEvent | [KeyEvent](arkts-input-multimodalinput-keyevent-keyevent-i.md) | Yes | Key event when a shortcut key is triggered. |
 

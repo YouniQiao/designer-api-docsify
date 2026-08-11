@@ -1,11 +1,5 @@
 # getFileAccessAbilityInfo（系统接口）
 
-## 导入模块
-
-```TypeScript
-import { fileAccess } from 'kits/@kit.CoreFileKit';
-```
-
 ## getFileAccessAbilityInfo
 
 ```TypeScript

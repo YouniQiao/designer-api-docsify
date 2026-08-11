@@ -1,6 +1,6 @@
 # CustomComponentV2
 
-V2自定义组件类的定义。
+Definition of V2 custom component class.
 
 **Inheritance/Implementation:** CustomComponentV2 extends [BaseCustomComponent<T_Options>](BaseCustomComponent<T_Options>)
 
@@ -92,7 +92,7 @@ Implementation for creating a v2 custom component
 aboutToReuse(): void
 ```
 
-组件复用时，触发回调
+aboutToReuse Method
 
 **Since:** 23
 
@@ -110,7 +110,7 @@ aboutToReuse(): void
 resetStateVarsOnReuse(params?: T_Options): void
 ```
 
-重置状态变量
+Reset state variable
 
 **Since:** 23
 
@@ -126,5 +126,5 @@ resetStateVarsOnReuse(params?: T_Options): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| params | T_Options | No | 自定义组件成员变量的数据 |
+| params | T_Options | No | data for all the fields in custom component |
 

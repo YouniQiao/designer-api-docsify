@@ -1,11 +1,5 @@
 # changeAppCloudSwitch（系统接口）
 
-## 导入模块
-
-```TypeScript
-import { cloudSyncManager } from 'kits/@kit.CoreFileKit';
-```
-
 ## changeAppCloudSwitch
 
 ```TypeScript
@@ -42,11 +36,13 @@ function changeAppCloudSwitch(accountId: string, bundleName: string, status: boo
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 401 | The input parameter is invalid.Possible causes:1.Mandatory parameters are left unspecified; &lt;br&gt;2.Incorrect parameter types. |
-| 201 | Permission verification failed. |
-| 202 | The caller is not a system application. |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | The input parameter is invalid.Possible causes:1.Mandatory parameters are left unspecified; &lt;br&gt;2.Incorrect parameter types. |
+| [201](../../errorcode-universal.md#201-权限校验失败) | Permission verification failed. |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | The caller is not a system application. |
 
 ## 示例
+
+ArkTS-Dyn示例：
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -57,6 +53,20 @@ cloudSyncManager.changeAppCloudSwitch(accountId, bundleName, true).then(() => {
   console.info("changeAppCloudSwitch successfully");
 }).catch((err: BusinessError) => {
   console.error(`changeAppCloudSwitch failed with error message: ${err.message}, error code: ${err.code}`);
+});
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let accountId: string = "testAccount";
+let bundleName: string = "com.example.bundle";
+cloudSyncManager.changeAppCloudSwitch(accountId, bundleName, true).then<void>((): void => {
+  console.info("changeAppCloudSwitch successfully");
+}).catch((err: BusinessError<void>): void => {
+  console.error("changeAppCloudSwitch failed with error message: " + err.message + ", error code: " + err.code);
 });
 ```
 
@@ -92,11 +102,13 @@ function changeAppCloudSwitch(accountId: string, bundleName: string, status: boo
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 401 | The input parameter is invalid.Possible causes:1.Mandatory parameters are left unspecified; &lt;br&gt;2.Incorrect parameter types. |
-| 201 | Permission verification failed. |
-| 202 | The caller is not a system application. |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | The input parameter is invalid.Possible causes:1.Mandatory parameters are left unspecified; &lt;br&gt;2.Incorrect parameter types. |
+| [201](../../errorcode-universal.md#201-权限校验失败) | Permission verification failed. |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | The caller is not a system application. |
 
 ## 示例
+
+ArkTS-Dyn示例：
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -106,6 +118,22 @@ let bundleName: string = "com.example.bundle";
 cloudSyncManager.changeAppCloudSwitch(accountId, bundleName, true, (err: BusinessError) => {
   if (err) {
     console.error(`changeAppCloudSwitch failed with error message: ${err.message}, error code: ${err.code}`);
+  } else {
+    console.info("changeAppCloudSwitch successfully");
+  }
+});
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let accountId: string = "testAccount";
+let bundleName: string = "com.example.bundle";
+cloudSyncManager.changeAppCloudSwitch(accountId, bundleName, true, (err: BusinessError<void> | null) => {
+  if (err && err.code) {
+    console.error("changeAppCloudSwitch failed with error message: " + err.message + ", error code: " + err.code);
   } else {
     console.info("changeAppCloudSwitch successfully");
   }

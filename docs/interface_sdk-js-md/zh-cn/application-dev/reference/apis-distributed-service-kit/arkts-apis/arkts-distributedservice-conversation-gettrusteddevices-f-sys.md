@@ -1,11 +1,5 @@
 # getTrustedDevices（系统接口）
 
-## 导入模块
-
-```TypeScript
-import { conversation } from 'kits/@kit.DistributedServiceKit';
-```
-
 ## getTrustedDevices
 
 ```TypeScript
@@ -38,10 +32,10 @@ function getTrustedDevices(): DeviceNodeInfo[]
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 801 | Capability not supported. |
-| 201 | Permission denied. The application does not have the required permission to access distributed data. |
-| 202 | Permission verification failed. A non-system application calls a system API. |
-| 2000001 | Internal error. |
+| [801](../../errorcode-universal.md#801-该设备不支持此api) | Capability not supported. |
+| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. The application does not have the required permission to access distributed data. |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed. A non-system application calls a system API. |
+| [2000001](../../apis-distributedservice-kit/errorcode-conversation.md#2000001-内部错误) | Internal error. |
 
 ## 示例
 

@@ -1,11 +1,5 @@
 # onReceiveData
 
-## 导入模块
-
-```TypeScript
-import { proxyChannelManager } from 'kits/@kit.DistributedServiceKit';
-```
-
 ## onReceiveData
 
 ```TypeScript
@@ -37,9 +31,9 @@ function onReceiveData(channelId: int, callback: Callback<DataInfo>): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 32390006 | Parameter error. |
-| 201 | Permission denied. |
-| 32390004 | ChannelId is invalid or unavailable. |
-| 32390100 | Internal error. |
-| 32390101 | Call is restricted. |
+| [32390006](../../apis-distributedservice-kit/errorcode-proxyChannelManager.md#32390006-参数错误) | Parameter error. |
+| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
+| [32390004](../../apis-distributedservice-kit/errorcode-proxyChannelManager.md#32390004-通道id非法或者不可用) | ChannelId is invalid or unavailable. |
+| [32390100](../../apis-distributedservice-kit/errorcode-proxyChannelManager.md#32390100-内部异常) | Internal error. |
+| [32390101](../../apis-distributedservice-kit/errorcode-proxyChannelManager.md#32390101-调用受限) | Call is restricted. |
 

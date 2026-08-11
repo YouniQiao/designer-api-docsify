@@ -1,6 +1,6 @@
 # ClickEffectLevel
 
-定义点击效果的级别及对应动效参数。
+Enum of click effect level.
 
 **Since:** 10
 
@@ -16,7 +16,7 @@
 LIGHT = 0
 ```
 
-小面积（轻盈）
+Small area (light)
 
 **Since:** 10
 
@@ -36,7 +36,7 @@ LIGHT = 0
 MIDDLE = 1
 ```
 
-中面积（稳定）
+Medium area (stable)
 
 **Since:** 10
 
@@ -56,7 +56,7 @@ MIDDLE = 1
 HEAVY = 2
 ```
 
-大面积（厚重）
+Large area (heavy)
 
 **Since:** 10
 

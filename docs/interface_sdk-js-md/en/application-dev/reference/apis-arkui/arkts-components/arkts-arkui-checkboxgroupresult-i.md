@@ -1,6 +1,6 @@
 # CheckboxGroupResult
 
-多选框群组的名称和状态。
+Name and status of a check box group.
 
 **Since:** 8
 
@@ -16,7 +16,7 @@
 name: Array<string>
 ```
 
-群组内所有被选中的多选框名称。
+Names of all the selected check boxes in the group.
 
 **Type:** Array&lt;string&gt;
 
@@ -38,7 +38,7 @@ name: Array<string>
 status: SelectStatus
 ```
 
-群组多选框的选中状态。
+Selected status.
 
 **Type:** [SelectStatus](arkts-arkui-selectstatus-e.md)
 

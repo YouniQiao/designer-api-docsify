@@ -6,33 +6,21 @@
 export declare const ArcList: ArcListInterface
 ```
 
-弧形列表由沿弧形排列的一系列列表项组成，适用于圆形屏幕设备。适合连续、多行呈现同类数据，例如图片和文本。
+The **ArcList** component is a circular layout container that displays a series of list items in an arc shape. It is suitable for presenting homogeneous data, such as images and text,in a continuous, multi-row format.
 
-> **说明：**
-> 
-> - 该组件支持在Phone、PC/2in1、Tablet、TV、Wearable设备上使用。API version 22及以前版本，在Phone、PC/2in1、Tablet、TV上使用会编译告警，但可以正常运行。
+> **NOTE：**
 
-### 子组件
+> - This component is supported since API version 18. Updates will be marked with a
+> superscript to indicate their earliest API version.
+> 
+> - This component can be used on phones, PCs, 2-in-1 devices, tablets, TVs, and wearables.
+> In API version 22 and earlier versions, a compilation warning will be reported when this
+> component is used on phones, PCs, 2-in-1 devices, tablets, and TVs, but the component can
+> still run properly.
 
-仅支持[ArcListItem](arkts-arkui-arclist.md)子组件。
+### Child Components
 
-> **说明：**
-> 
-> ArcList的子组件索引值计算规则：
-> 
-> - 按子组件的顺序依次递增。
-> 
-> - [if/else](../../../ui/rendering-control/arkts-rendering-control-ifelse.md)语句中，只有条件成立的分支内的子组件会参与索引值计算，条件不成立的分支内子组
-> 件不计算索引值。
-> 
-> - [ForEach](../../../ui/rendering-control/arkts-rendering-control-foreach.md)/
-> [LazyForEach](../../../ui/rendering-control/arkts-rendering-control-lazyforeach.md)语句中，会计算展开所有子组件索引值。
-> 
-> - [if/else](../../../ui/rendering-control/arkts-rendering-control-ifelse.md)、
-> [ForEach](../../../ui/rendering-control/arkts-rendering-control-foreach.md)和
-> [LazyForEach](../../../ui/rendering-control/arkts-rendering-control-lazyforeach.md)发生变化以后，会更新子组件索引值。
-> 
-> - ArcList子组件[visibility](arkts-arkui-common-commonmethod-i.md#visibility)属性设置为Hidden或None依然会计算索引值。
+Only the [ArcListItem](arkts-arkui-arclist.md) component is supported.
 
 **Since:** 18
 
@@ -50,7 +38,7 @@ export declare const ArcList: ArcListInterface
 export declare const ArcListInstance: ArcListAttribute
 ```
 
-定义ArcList组件实例。
+Defines ArcList Component instance.
 
 **Since:** 18
 
@@ -68,22 +56,27 @@ export declare const ArcListInstance: ArcListAttribute
 export declare const ArcListItem: ArcListItemInterface
 ```
 
-用于展示弧形列表的子组件，必须配合[ArcList](arkts-arkui-arclist.md)使用。
+The **ArcListItem** component is used to display individual child components in an  
+[ArcList](arkts-arkui-arclist.md) component and must be used in conjunction with **ArcList**.
 
-> **说明：**
-> 
-> - 该组件的父组件只能是[ArcList](arkts-arkui-arclist.md)。
-> 
-> - 当ArcListItem配合[LazyForEach](../../../ui/rendering-control/arkts-rendering-control-lazyforeach.md)使用时，其子组件在
-> ArcListItem创建时创建；配合[if/else](../../../ui/rendering-control/arkts-rendering-control-ifelse.md)或
-> [ForEach](../../../ui/rendering-control/arkts-rendering-control-foreach.md)使用时，或直接作为
-> [ArcList](arkts-arkui-arclist.md)组件的子组件使用时，其子组件在ArcListItem布局时创建。
-> 
-> - 该组件支持在Phone、PC/2in1、Tablet、TV、Wearable设备上使用。API version 22及以前版本，在Phone、PC/2in1、Tablet、TV上使用会编译告警，但可以正常运行。
+> **NOTE：**
 
-### 子组件
+> - This component can be used only as a child of [ArcList](arkts-arkui-arclist.md).
+> 
+> - When this component is used with
+> [LazyForEach](../../../ui/rendering-control/arkts-rendering-control-lazyforeach.md), its child components are
+> created when it is created. When this component is used with
+> [if/else](../../../ui/rendering-control/arkts-rendering-control-ifelse.md) or
+> [ForEach](../../../ui/rendering-control/arkts-rendering-control-foreach.md), or when the parent component is
+> [ArcList](arkts-arkui-arclist.md), its child components are created when it is laid out.
+> 
+> - This component can be used on phones, PCs, 2-in-1 devices, tablets, TVs, and wearables. In API version 22 and
+> earlier versions, a compilation warning will be reported when this component is used on phones, PCs, 2-in-1 devices
+> , tablets, and TVs, but the component can still run properly.
 
-可以包含单个子组件。
+### Child Components
+
+This component can contain a single child component.
 
 **Since:** 18
 
@@ -101,7 +94,7 @@ export declare const ArcListItem: ArcListItemInterface
 export declare const ArcListItemInstance: ArcListItemAttribute
 ```
 
-定义ArcListItem组件实例。
+Defines ArcListItem Component instance.
 
 **Since:** 18
 

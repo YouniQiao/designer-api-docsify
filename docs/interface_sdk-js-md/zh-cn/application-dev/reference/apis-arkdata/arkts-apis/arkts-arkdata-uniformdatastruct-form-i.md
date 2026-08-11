@@ -10,12 +10,6 @@
 
 **系统能力：** SystemCapability.DistributedDataManager.UDMF.Core
 
-## 导入模块
-
-```TypeScript
-import { uniformDataStruct } from 'kits/@kit.ArkData';
-```
-
 ## abilityName
 
 ```TypeScript
@@ -64,7 +58,7 @@ details?: Record<string, int | long | double | string | Uint8Array>
 
 字典类型对象，key为string类型，value可包含number（数值类型）、string（字符串类型）或Uint8Array（二进制字节数组）类型数据。非必填字段，默认值为空字典对象。
 
-**类型：** ArkTS-Dyn: [Record](../../apis-default/arkts-apis/arkts-record-t.md)&lt;string, number \| number \| number \| string \| Uint8Array&gt;  <br>ArkTS-Sta：[Record](../../apis-default/arkts-apis/arkts-record-t.md)&lt;string, int \| long \| double \| string \| Uint8Array&gt;
+**类型：** ArkTS-Dyn: Record&lt;string, number \| number \| number \| string \| Uint8Array&gt;  <br>ArkTS-Sta：Record&lt;string, int \| long \| double \| string \| Uint8Array&gt;
 
 **起始版本：** 15
 

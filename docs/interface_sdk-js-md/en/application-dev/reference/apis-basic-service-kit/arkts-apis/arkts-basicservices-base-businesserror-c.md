@@ -1,6 +1,6 @@
 # BusinessError
 
-错误参数。
+Defines the error parameter.
 
 **Inheritance/Implementation:** BusinessError extends [Error](../../apis-arkts/arkts-apis/arkts-arkts-error-c.md/arkts-arkts-error-c.md)
 
@@ -24,7 +24,7 @@ import { Callback, BusinessError, ErrorCallback, AsyncCallback } from 'kits/@kit
 constructor()
 ```
 
-BusinessError的构造函数。
+Defines a constructor used to create a BusinessError object.
 
 **Since:** 23
 
@@ -40,7 +40,7 @@ BusinessError的构造函数。
 constructor(code: int, error: Error)
 ```
 
-BusinessError的构造函数。
+Defines a constructor used to create a **BusinessError** object.
 
 **Since:** 23
 
@@ -54,8 +54,8 @@ BusinessError的构造函数。
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| code | int | Yes | 接口调用失败返回的错误码信息。 |
-| error | Error | Yes | 错误参数。 |
+| code | int | Yes | Common error information about the API invoking failure. |
+| error | Error | Yes | Defines the error parameter. |
 
 ## constructor
 
@@ -63,7 +63,7 @@ BusinessError的构造函数。
 constructor(code: int, data: T, error: Error)
 ```
 
-BusinessError的构造函数。
+Defines a constructor used to create a **BusinessError** object.
 
 **Since:** 23
 
@@ -77,9 +77,9 @@ BusinessError的构造函数。
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| code | int | Yes | 接口调用失败返回的错误码信息。 |
-| data | T | Yes | 接口调用时的公共回调信息。 |
-| error | Error | Yes | 错误参数。 |
+| code | int | Yes | Common error information about the API invoking failure. |
+| data | T | Yes | Common callback information. |
+| error | Error | Yes | Defines the error parameter. |
 
 ## constructor
 
@@ -87,7 +87,7 @@ BusinessError的构造函数。
 constructor(code: int, message: string, data?: T)
 ```
 
-BusinessError的构造函数。
+Defines a constructor used to create a **BusinessError** object.
 
 **Since:** 23
 
@@ -101,9 +101,9 @@ BusinessError的构造函数。
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| code | int | Yes | 接口调用失败返回的错误码信息。 |
-| message | string | Yes | 接口调用失败返回描述信息。 |
-| data | T | No | 接口调用时的公共回调信息。 |
+| code | int | Yes | Common error information about the API invoking failure. |
+| message | string | Yes | Error message returned when the API call fails. |
+| data | T | No | Common callback information. |
 
 ## data
 
@@ -111,7 +111,7 @@ BusinessError的构造函数。
 public data?: T
 ```
 
-接口调用时的公共回调信息。如果不填，则回调不返回相关信息。
+Common callback information. If this parameter is left empty, no related information is returned.
 
 **Type:** T
 

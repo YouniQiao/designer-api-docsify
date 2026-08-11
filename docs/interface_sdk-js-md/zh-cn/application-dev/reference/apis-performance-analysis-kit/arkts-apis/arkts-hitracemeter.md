@@ -22,12 +22,6 @@
 
 **系统能力：** SystemCapability.HiviewDFX.HiTrace
 
-## 导入模块
-
-```TypeScript
-import { hiTraceMeter } from 'kits/@kit.PerformanceAnalysisKit';
-```
-
 ## 汇总
 
 ### 函数
@@ -42,7 +36,7 @@ import { hiTraceMeter } from 'kits/@kit.PerformanceAnalysisKit';
 | [startAsyncTrace](arkts-performanceanalysis-hitracemeter-startasynctrace-f.md#startasynctrace) | 标记一个异步跟踪耗时任务的开始，分级控制跟踪输出。  如果有多个相同name的任务需要跟踪或者对同一个任务要跟踪多次，并且任务同时被执行，则开发者每次调用startAsyncTrace传入的taskId需不同。  如果具有相同name的任务是串行执行的，则taskId可以相同。具体示例可参考[finishAsyncTrace()](arkts-performanceanalysis-hitracemeter-finishasynctrace-f.md#finishasynctrace)中的示例。 |
 | [startSyncTrace](arkts-performanceanalysis-hitracemeter-startsynctrace-f.md#startsynctrace) | 标记一个同步跟踪耗时任务的开始，分级控制跟踪输出。适用于需要跟踪同步代码块执行耗时的场景，能够帮助开发者定位同步操作的耗时问题，优化应用响应速度。具体示例可参考[finishSyncTrace()](arkts-performanceanalysis-hitracemeter-finishsynctrace-f.md#finishsynctrace)中的示例。 |
 | [startTrace](arkts-performanceanalysis-hitracemeter-starttrace-f.md#starttrace) | 标记一个异步跟踪耗时任务的开始。调用成功后，创建一条异步跟踪记录。  如果有多个相同name的任务需要跟踪或者对同一个任务要跟踪多次，并且任务同时被执行，则开发者每次调用startTrace传入的taskId需不同。  如果具有相同name的任务是串行执行的，则taskId可以相同。具体示例可参考[finishTrace()](arkts-performanceanalysis-hitracemeter-finishtrace-f.md#finishtrace)中的示例。  从API version 19开始，建议使用[startAsyncTrace()](arkts-performanceanalysis-hitracemeter-startasynctrace-f.md#startasynctrace)接口（需与  [finishAsyncTrace()](arkts-performanceanalysis-hitracemeter-finishasynctrace-f.md#finishasynctrace)接口配套使用），以便分级控制跟踪输出与跟踪聚类。 |
-| [traceByValue](arkts-performanceanalysis-hitracemeter-tracebyvalue-f.md#tracebyvalue) | 用来标记一个跟踪的整数变量，该变量的数值会不断变化。适用于需要实时监控数值变化（如网络请求次数、缓存命中率、内存占用等）的场景，能够帮助开发者快速发现异常波动，分析数据趋势。  从API version 19开始，建议使用[traceByValue&lt;sup&gt;19+&lt;/sup&gt;()](arkts-performanceanalysis-hitracemeter-tracebyvalue-f.md#tracebyvalue)接口，以便分级控制跟踪输出。 |
+| [traceByValue](arkts-performanceanalysis-hitracemeter-tracebyvalue-f.md#tracebyvalue) | 用来标记一个跟踪的整数变量，该变量的数值会不断变化。适用于需要实时监控数值变化（如网络请求次数、缓存命中率、内存占用等）的场景，能够帮助开发者快速发现异常波动，分析数据趋势。  从API version 19开始，建议使用  [traceByValue](arkts-performanceanalysis-hitracemeter-tracebyvalue-f.md#tracebyvalue)接口，以便分级控制跟踪输出。 |
 | [traceByValue](arkts-performanceanalysis-hitracemeter-tracebyvalue-f.md#tracebyvalue-1) | 整数跟踪事件，分级控制跟踪输出。用来标记一个预先定义需要跟踪的整数变量名及整数值。 |
 | [unregisterTraceListener](arkts-performanceanalysis-hitracemeter-unregistertracelistener-f.md#unregistertracelistener) | 注销通过registerTraceListener()注册的trace捕获开关通知回调函数。 |
 

@@ -1,6 +1,6 @@
 # Attribute
 
-枚举，类型为number。联系人属性列表。通过JSON格式创建数据。
+Enumerates contact attributes. The enumerated value is of the number type.Create contact data in JSON format:
 
 **Since:** 7
 
@@ -16,7 +16,7 @@
 ATTR_CONTACT_EVENT = 0
 ```
 
-联系人的生日、周年纪念等重要日期。
+Important dates such as birthday and anniversaries of the contact.
 
 **Since:** 7
 
@@ -34,7 +34,7 @@ ATTR_CONTACT_EVENT = 0
 ATTR_EMAIL = 1
 ```
 
-联系人的邮箱地址。
+Email address of the contact.
 
 **Since:** 7
 
@@ -52,7 +52,7 @@ ATTR_EMAIL = 1
 ATTR_GROUP_MEMBERSHIP = 2
 ```
 
-联系人的群组。
+Groups of the contact.
 
 **Since:** 7
 
@@ -70,7 +70,7 @@ ATTR_GROUP_MEMBERSHIP = 2
 ATTR_IM = 3
 ```
 
-联系人的即时消息地址。
+IM addresses of the contact.
 
 **Since:** 7
 
@@ -88,7 +88,7 @@ ATTR_IM = 3
 ATTR_NAME = 4
 ```
 
-联系人的姓名。
+Contact name.
 
 **Since:** 7
 
@@ -106,7 +106,7 @@ ATTR_NAME = 4
 ATTR_NICKNAME = 5
 ```
 
-联系人的昵称。
+Contact nickname.
 
 **Since:** 7
 
@@ -124,7 +124,7 @@ ATTR_NICKNAME = 5
 ATTR_NOTE = 6
 ```
 
-联系人的备注。
+Contact notes.
 
 **Since:** 7
 
@@ -142,7 +142,7 @@ ATTR_NOTE = 6
 ATTR_ORGANIZATION = 7
 ```
 
-联系人的组织信息。
+Organization of the contact.
 
 **Since:** 7
 
@@ -160,7 +160,7 @@ ATTR_ORGANIZATION = 7
 ATTR_PHONE = 8
 ```
 
-联系人的电话号码。
+Phone number of a contact. Only full match is supported, and wildcards are not  supported.
 
 **Since:** 7
 
@@ -178,7 +178,7 @@ ATTR_PHONE = 8
 ATTR_PORTRAIT = 9
 ```
 
-联系人的头像。
+Contact portrait.
 
 **Since:** 7
 
@@ -196,7 +196,7 @@ ATTR_PORTRAIT = 9
 ATTR_POSTAL_ADDRESS = 10
 ```
 
-联系人的邮政地址。
+Postal address of the contact.
 
 **Since:** 7
 
@@ -214,7 +214,7 @@ ATTR_POSTAL_ADDRESS = 10
 ATTR_RELATION = 11
 ```
 
-联系人的关系。
+Relationship with the contact.
 
 **Since:** 7
 
@@ -232,7 +232,7 @@ ATTR_RELATION = 11
 ATTR_SIP_ADDRESS = 12
 ```
 
-联系人的会话发起协议(SIP)地址。
+SIP addresses of the contact.
 
 **Since:** 7
 
@@ -250,7 +250,7 @@ ATTR_SIP_ADDRESS = 12
 ATTR_WEBSITE = 13
 ```
 
-联系人的网站。
+Website that stores the contact information.
 
 **Since:** 7
 

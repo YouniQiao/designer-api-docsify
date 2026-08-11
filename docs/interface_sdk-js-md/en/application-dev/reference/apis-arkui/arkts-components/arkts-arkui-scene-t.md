@@ -4,7 +4,7 @@
 declare type Scene = import('../api/@ohos.graphics.scene').Scene
 ```
 
-提供控制3D场景的方法
+Provides methods for controlling the 3d scene
 
 **Since:** 12
 

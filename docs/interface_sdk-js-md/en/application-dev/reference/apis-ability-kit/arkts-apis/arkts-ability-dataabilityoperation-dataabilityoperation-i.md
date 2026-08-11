@@ -1,7 +1,7 @@
 # DataAbilityOperation
 
-定义DataAbility数据操作方式，可以作为  
-[executeBatch](../../../reference/apis-ability-kit/js-apis-inner-ability-dataAbilityHelper.md#dataabilityhelperexecutebatch)的入参，操作数据库的信息。
+The module defines the operation on DataAbilities. It can be used as an input parameter of  
+[executeBatch](../../../reference/apis-ability-kit/js-apis-inner-ability-dataAbilityHelper.md#dataabilityhelperexecutebatch) to specify the database operation information.
 
 **Since:** 7
 
@@ -17,7 +17,7 @@
 expectedCount?: number
 ```
 
-指示要更新或删除的预期行数。
+Indicates the expected number of rows to update or delete.
 
 **Type:** number
 
@@ -37,7 +37,7 @@ expectedCount?: number
 interrupted?: boolean
 ```
 
-指示是否可以中断批处理操作。true表示可以中断批处理操作，false表示不可中断批处理操作。
+Specifies whether a batch operation can be interrupted.
 
 **Type:** boolean
 
@@ -57,7 +57,7 @@ interrupted?: boolean
 predicates?: dataAbility.DataAbilityPredicates
 ```
 
-指示要设置的筛选条件。如果此参数为空，则操作所有数据记录。
+Indicates the filter criteria to set. If this parameter is null, all data records will be operated by default.
 
 **Type:** dataAbility.DataAbilityPredicates
 
@@ -77,7 +77,7 @@ predicates?: dataAbility.DataAbilityPredicates
 predicatesBackReferences?: Map<number, number>
 ```
 
-指示用作谓词中筛选条件的反向引用。
+Indicates the back reference to be used as a filter criterion in predicates.
 
 **Type:** Map&lt;number, number&gt;
 
@@ -97,7 +97,7 @@ predicatesBackReferences?: Map<number, number>
 type: featureAbility.DataAbilityOperationType
 ```
 
-指示数据操作类型。
+Indicates a operation type.
 
 **Type:** featureAbility.DataAbilityOperationType
 
@@ -117,7 +117,7 @@ type: featureAbility.DataAbilityOperationType
 uri: string
 ```
 
-指示待处理的DataAbility。例：'dataability:///com.example.xxx.xxxx'。
+Indicates the path of data to operate.
 
 **Type:** string
 
@@ -137,7 +137,7 @@ uri: string
 valueBackReferences?: rdb.ValuesBucket
 ```
 
-指示包含一组键值对的valuesBucket对象。
+Indicates the valuesBucket object containing a set of key-value pairs.
 
 **Type:** rdb.ValuesBucket
 
@@ -157,7 +157,7 @@ valueBackReferences?: rdb.ValuesBucket
 valuesBucket?: rdb.ValuesBucket
 ```
 
-指示要操作的数据值。
+Indicates the data values to be set.
 
 **Type:** rdb.ValuesBucket
 

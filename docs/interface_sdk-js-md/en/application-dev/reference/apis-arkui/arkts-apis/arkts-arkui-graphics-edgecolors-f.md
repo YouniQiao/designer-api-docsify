@@ -6,6 +6,8 @@
 export declare function edgeColors(all: int): NodeEdges<int>
 ```
 
+Obtain an object with all edges are set to the same color.
+
 **Since:** 23
 
 **ArkTS mode:** ArkTS-Sta only, since version 23.
@@ -20,11 +22,11 @@ export declare function edgeColors(all: int): NodeEdges<int>
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| all | int | Yes | 边框颜色，ARGB格式，示例：0xffff00ff。&lt;br/&gt;取值范围：[0, 0xffffffff] |
+| all | int | Yes | The edge color will be set. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [NodeEdges](arkts-arkui-graphics-nodeedges-i.md)&lt;int&gt; | 边框颜色均设置为传入值的边框颜色对象。 |
+| [NodeEdges](arkts-arkui-graphics-nodeedges-i.md)&lt;int&gt; | The object with all edges are set to the same color. |
 

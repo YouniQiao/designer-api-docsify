@@ -1,11 +1,5 @@
 # queryAtomicServiceStartupRule（系统接口）
 
-## 导入模块
-
-```TypeScript
-import { abilityManager } from 'kits/@kit.AbilityKit';
-```
-
 ## queryAtomicServiceStartupRule
 
 ```TypeScript
@@ -43,9 +37,9 @@ function queryAtomicServiceStartupRule(context: Context, appId: string): Promise
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
-| 801 | Capability not supported. |
-| 16000050 | Internal error. |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| [801](../../errorcode-universal.md#801-该设备不支持此api) | Capability not supported. |
+| [16000050](../errorcode-ability.md#16000050-内部错误) | Internal error. |
 
 ## 示例
 
@@ -58,13 +52,17 @@ export default class EntryAbility extends UIAbility {
     // 应用的唯一标识
     let appId: string = '6918661953712445909';
     try {
-      abilityManager.queryAtomicServiceStartupRule(this.context, appId).then((data: abilityManager.AtomicServiceStartupRule) => {
-        console.info(`queryAtomicServiceStartupRule data: ${JSON.stringify(data)}`);
-      }).catch((err: BusinessError) => {
-        console.error(`queryAtomicServiceStartupRule failed, code is ${err.code}, message is ${err.message}`);
-      });
-    } catch (err) {
+      abilityManager.queryAtomicServiceStartupRule(this.context, appId)
+        .then((data: abilityManager.AtomicServiceStartupRule) => {
+          console.info(`queryAtomicServiceStartupRule data: ${data}`);
+        })
+        .catch((e: Error) => {
+          let err = e as BusinessError;
+          console.error(`queryAtomicServiceStartupRule failed, code is ${err.code}, message is ${err.message}`);
+        });
+    } catch (e) {
       // 处理入参错误异常
+      let err = e as BusinessError;
       console.error(`param is invalid, code is ${err.code}, message is ${err.message}`);
     }
   }

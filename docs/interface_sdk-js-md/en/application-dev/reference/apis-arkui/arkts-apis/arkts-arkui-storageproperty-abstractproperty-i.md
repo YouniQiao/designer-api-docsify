@@ -2,7 +2,7 @@
 
 Define AbstractProperty&lt;T&gt; interface.
 
- AbstractProperty can be understood as a handler or an alias  to a property inside LocalStorage / AppStorage singleton  allows to read the value with @see get and to change the  value with @see set.
+AbstractProperty can be understood as a handler or an alias to a property inside LocalStorage / AppStorage singleton allows to read the value with @see get and to change the value with @see set.
 
 **Since:** 23
 
@@ -18,8 +18,7 @@ Define AbstractProperty&lt;T&gt; interface.
 get(): T
 ```
 
-读取[AppStorage](../../../ui/state-management-static/arkts-static-appstorage.md)/  
-[LocalStorage](../../../ui/state-management-static/arkts-static-localstorage.md)中所引用属性的数据。
+Reads value of the referenced AppStorage/LocalStorage property.
 
 **Since:** 23
 
@@ -35,7 +34,7 @@ get(): T
 
 | Type | Description |
 | --- | --- |
-| T | AppStorage/LocalStorage中所引用属性的数据。 |
+| T | value of the referenced AppStorage/LocalStorage property. |
 
 ## info
 
@@ -43,8 +42,7 @@ get(): T
 default info(): string
 ```
 
-读取[AppStorage](../../../ui/state-management-static/arkts-static-appstorage.md)/  
-[LocalStorage](../../../ui/state-management-static/arkts-static-localstorage.md)中所引用属性的属性名。
+Returns the name of the referenced property
 
 **Since:** 23
 
@@ -60,7 +58,7 @@ default info(): string
 
 | Type | Description |
 | --- | --- |
-| string | AppStorage/LocalStorage中所引用属性的属性名。 |
+| string | name of the referenced property |
 
 ## onChange
 
@@ -68,8 +66,7 @@ default info(): string
 default onChange(onChangeFunc: OnChangeType<T> | undefined): void
 ```
 
-注册[AppStorage](../../../ui/state-management-static/arkts-static-appstorage.md)/  
-[LocalStorage](../../../ui/state-management-static/arkts-static-localstorage.md)中所引用属性变化的事件。
+Register callback function to be called on value change of the referenced property calling with value undefined clear the callback.
 
 **Since:** 23
 
@@ -85,7 +82,7 @@ default onChange(onChangeFunc: OnChangeType<T> | undefined): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| onChangeFunc | [OnChangeType](arkts-arkui-onchangetype-t.md)&lt;T&gt; \| undefined | Yes | 属性变化回调函数。&lt;/br&gt;如果传入有效值，则添加到监听属性变化的函数列表中。&lt;/br&gt;如果传入undefined，则清除所有 监听回调。 |
+| onChangeFunc | [OnChangeType](arkts-arkui-onchangetype-t.md)&lt;T&gt; \| undefined | Yes | register callback function |
 
 ## set
 
@@ -93,8 +90,7 @@ default onChange(onChangeFunc: OnChangeType<T> | undefined): void
 default set(newValue: T): void
 ```
 
-更新[AppStorage](../../../ui/state-management-static/arkts-static-appstorage.md)/  
-[LocalStorage](../../../ui/state-management-static/arkts-static-localstorage.md)中所引用属性的数据，newValue必须是T类型，可以为null或undefined。
+Assign a new value to the referenced property
 
 **Since:** 23
 
@@ -110,5 +106,5 @@ default set(newValue: T): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| newValue | T | Yes | 要更新的数据，可以为null或undefined。 |
+| newValue | T | Yes | a new value of the referenced property |
 

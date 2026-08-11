@@ -1,6 +1,6 @@
 # KioskStatus
 
-表示Kiosk状态信息，包括系统是否处于Kiosk模式以及该模式下的应用信息。
+The module provides the kiosk status information, including whether the system is in kiosk mode and the information about the application in kiosk mode.
 
 **Since:** 20
 
@@ -16,7 +16,7 @@
 isKioskMode: boolean
 ```
 
-当前系统是否处于Kiosk模式。true表示处于Kiosk模式，false表示不处于。
+Whether the system is in kiosk mode. **true** if in kiosk mode, **false** otherwise.
 
 **Type:** boolean
 
@@ -36,7 +36,7 @@ isKioskMode: boolean
 kioskBundleName: string
 ```
 
-进入Kiosk模式的应用的名称。
+Bundle name of the application in kiosk mode.
 
 **Type:** string
 
@@ -56,7 +56,7 @@ kioskBundleName: string
 kioskBundleUid: int
 ```
 
-进入Kiosk模式的应用的UID。
+UID of the application in kiosk mode.
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 

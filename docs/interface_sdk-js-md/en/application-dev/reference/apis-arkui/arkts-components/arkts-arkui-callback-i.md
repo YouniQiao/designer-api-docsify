@@ -1,6 +1,6 @@
 # Callback
 
-定义基础的回调函数。
+Defines the basic callback.
 
 **Since:** 12
 
@@ -16,7 +16,7 @@
 (data: T): V
 ```
 
-定义回调函数的信息。
+Defines the callback info.
 
 **Since:** 12
 
@@ -34,11 +34,11 @@
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| data | T | Yes | 将会在回调函数中被使用的数据 |
+| data | T | Yes | the data will be used in the callback. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| V | 返回回调函数的结果。 |
+| V | Returns result of the callback. |
 

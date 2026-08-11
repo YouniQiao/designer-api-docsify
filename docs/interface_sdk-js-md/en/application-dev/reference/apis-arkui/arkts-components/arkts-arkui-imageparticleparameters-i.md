@@ -1,6 +1,6 @@
 # ImageParticleParameters
 
-设置图片选项。
+Defines the parameters for an image-like particle.
 
 **Since:** 10
 
@@ -16,7 +16,7 @@
 objectFit?: ImageFit
 ```
 
-图片显示模式。
+Image display mode.
 
 **Type:** [ImageFit](../arkts-apis/arkts-arkui-imagefit-e.md)
 
@@ -40,9 +40,7 @@ objectFit?: ImageFit
 size: ParticleTuple<Dimension, Dimension>
 ```
 
-图像尺寸。
-
-默认值：[0, 0]
+Particle image size.
 
 **Type:** [ParticleTuple](../arkts-apis/arkts-arkui-particletuple-t.md)&lt;[Dimension](../arkts-apis/arkts-arkui-dimension-t.md), [Dimension](../arkts-apis/arkts-arkui-dimension-t.md)&gt;
 
@@ -64,11 +62,12 @@ size: ParticleTuple<Dimension, Dimension>
 src: ResourceStr
 ```
 
-图片路径，支持本地图片和网络图片，引用方式请参考[加载图片资源](../../../ui/arkts-graphics-display.md#加载图片资源)。
+Path to the image. Local and online sources are supported. For details about how to reference an image, see   
+[Loading Image Resources](../../../ui/arkts-graphics-display.md#loading-image-resources).
 
-暂不支持svg图片类型。
+SVG images are not supported.
 
-src未发生变化时，会优先使用缓存的资源，无法动态切换资源。如需动态切换资源建议切换为不同的src。
+If the value of src does not change, the cached resource is preferentially used. As a result, resources cannot be dynamically switched. If you want to dynamically switch resources, you are advised to switch to different src values.
 
 **Type:** [ResourceStr](../arkts-apis/arkts-arkui-resourcestr-t.md)
 

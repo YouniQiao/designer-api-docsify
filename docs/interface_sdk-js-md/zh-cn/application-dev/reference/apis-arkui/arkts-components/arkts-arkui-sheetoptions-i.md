@@ -182,7 +182,7 @@ detentSelection?: SheetSize | Length
 
 1. 该接口取值范围为detents数组范围，若设值非detents范围，该接口无效。2. 当设置SheetSize.FIT_CONTENT时，该接口无效。3. 不建议手势切换挡位与该接口切换挡位同时生效使用。
 
-**类型：** [SheetSize](../arkts-apis/arkts-arkui-common-sheetsize-e.md) \| Length
+**类型：** [SheetSize](arkts-arkui-sheetsize-e.md) \| Length
 
 **默认值：** detents[0]
 
@@ -400,7 +400,7 @@ height?: SheetSize | Length
 
 1. API version 14开始，底部弹窗横屏时，无状态栏则最大高度为距离屏幕顶部8vp，有状态栏则最大高度为距离状态栏8vp。2. 底部弹窗时，当设置detents时，该属性设置无效。3. 底部弹窗竖屏时，最大高度为距离状态栏8vp。4. 居中弹窗和跟手弹窗设置类型为SheetSize.LARGE和SheetSize.MEDIUM无效，显示默认高度560vp。5. 居中弹窗和跟手弹窗最小高度为320vp，最大高度为窗口短边的90%。6. 居中弹窗和跟手弹窗当使用Length设置的高度时，高度大于最大高度，则显示最大高度，小于最小高度，则显示最小高度。7. 如果半模态使用SheetSize.FIT_CONTENT自适应模式，且类型设置为居中弹窗或跟手弹窗，API version 22及之前版本，高度大于最大高度时显示最大高度，高度小于最小高度时显示最小高度。从API version 23开始，高度大于最大高度时显示最大高度，高度小于最小高度时按照实际自适应高度生效。
 
-**类型：** [SheetSize](../arkts-apis/arkts-arkui-common-sheetsize-e.md) \| Length
+**类型：** [SheetSize](arkts-arkui-sheetsize-e.md) \| Length
 
 **默认值：** SheetSize.LARGE
 
@@ -1055,7 +1055,7 @@ uiContext?: UIContext
 
 使用[openBindSheet](../../../reference/apis-arkui/arkts-apis-uicontext-uicontext.md#openbindsheet12)启动的半模态页面，不支持设置、更新该属性。
 
-**类型：** [UIContext](../arkts-apis/arkts-arkui-arkui-uicontext-uicontext-c.md)
+**类型：** [UIContext](arkts-arkui-uicontext-t.md)
 
 **起始版本：** 12
 

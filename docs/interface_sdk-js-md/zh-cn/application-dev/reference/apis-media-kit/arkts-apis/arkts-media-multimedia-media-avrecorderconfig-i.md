@@ -12,12 +12,6 @@ audioSourceType和videoSourceType参数用于区分纯音频录制、纯视频�
 
 **系统能力：** SystemCapability.Multimedia.Media.AVRecorder
 
-## 导入模块
-
-```TypeScript
-import { media } from 'kits/@kit.MediaKit';
-```
-
 ## audioSourceType
 
 ```TypeScript
@@ -64,7 +58,7 @@ location?: Location
 
 录制视频的地理位置。默认不记录地理位置信息。&lt;br&gt;此接口从API version 6开始支持，从API version 12开始废弃，建议使用**AVMetadata.location**替代。如果同时设置了两个参数，将使用**AVMetadata.location**。
 
-**类型：** [Location](../../apis-location-kit/arkts-apis/arkts-location-geolocationmanager-location-i.md)
+**类型：** [Location](../../apis-camera-kit/arkts-apis/arkts-camera-camera-location-i.md)
 
 **起始版本：** 9
 

@@ -12,12 +12,6 @@
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.AbilityCore
 
-## 导入模块
-
-```TypeScript
-import { Callee, Caller, OnReleaseCallback, OnRemoteStateChangeCallback, CalleeCallback } from 'kits/@kit.AbilityKit';
-```
-
 ## onBackPressed
 
 ```TypeScript
@@ -131,7 +125,7 @@ UIAbility生命周期回调，在多设备协同场景下，协同方应用在�
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| wantParam | [Record](../../apis-default/arkts-apis/arkts-record-t.md)&lt;string, Object&gt; | 是 | want相关参数，仅支持key值取"ohos.extra.param.key.supportCollaborateIndex"。通过该 key值可以获取到调用方传输的数据并进行相应的处理。 |
+| wantParam | Record&lt;string, Object&gt; | 是 | want相关参数，仅支持key值取"ohos.extra.param.key.supportCollaborateIndex"。通过该 key值可以获取到调用方传输的数据并进行相应的处理。 |
 
 **返回值：**
 
@@ -187,13 +181,29 @@ UIAbility生命周期回调，在多设备协同场景下，协同方应用在�
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| wantParam | [Record](../../apis-default/arkts-apis/arkts-record-t.md)&lt;string, RecordData&gt; | 是 | want相关参数，仅支持key值取"ohos.extra.param.key.supportCollaborateIndex"。通过该 key值可以获取到调用方传输的数据并进行相应的处理。 |
+| wantParam | Record&lt;string, RecordData&gt; | 是 | want相关参数，仅支持key值取"ohos.extra.param.key.supportCollaborateIndex"。通过该 key值可以获取到调用方传输的数据并进行相应的处理。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
 | AbilityConstant.CollaborateResult | 协同方是否接受协同的结果。 |
+
+## 示例
+
+ArkTS-Sta示例：
+
+```TypeScript
+'use static'
+import { UIAbility, AbilityConstant } from '@kit.AbilityKit';
+import { RecordData } from '@kit.BasicServicesKit';
+
+export default class MyAbility extends UIAbility {
+  onCollaborate(wantParam: Record<string, RecordData>) {
+    return AbilityConstant.CollaborateResult.ACCEPT;
+  }
+}
+```
 
 ## onContinue
 
@@ -224,7 +234,7 @@ onContinue(wantParam: Record<string, Object>):
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| wantParam | [Record](../../apis-default/arkts-apis/arkts-record-t.md)&lt;string, Object&gt; | 是 | 开发者通过该参数保存待迁移的数据。<br>**起始版本：** 11 |
+| wantParam | Record&lt;string, Object&gt; | 是 | 开发者通过该参数保存待迁移的数据。<br>**起始版本：** 11 |
 
 **返回值：**
 
@@ -410,6 +420,38 @@ onDestroy(): Promise<void> | undefined
 | --- | --- |
 | Promise&lt;void&gt; | 无返回结果或无返回结果的Promise对象。 |
 
+## 示例
+
+同步回调示例如下：
+
+```TypeScript
+'use static'
+import { UIAbility } from '@kit.AbilityKit';
+import { hilog } from '@kit.PerformanceAnalysisKit';
+
+export default class MyUIAbility extends UIAbility {
+  onDestroy(): Promise<void> {
+    hilog.info(0x0000, 'testTag', `onDestroy`);
+    // 调用同步函数...
+  }
+}
+```
+
+Promise异步回调示例如下：
+
+```TypeScript
+'use static'
+import { UIAbility } from '@kit.AbilityKit';
+import { hilog } from '@kit.PerformanceAnalysisKit';
+
+export default class MyUIAbility extends UIAbility {
+  async onDestroy() {
+    hilog.info(0x0000, 'testTag', `onDestroy`);
+    // 调用异步函数...
+  }
+}
+```
+
 ## onDidBackground
 
 ```TypeScript
@@ -441,7 +483,7 @@ import { hilog } from '@kit.PerformanceAnalysisKit';
 import { audio } from '@kit.AudioKit';
 
 export default class MyUIAbility extends UIAbility {
-  static audioRenderer: audio.AudioRenderer;
+  static audioRenderer: audio.AudioRenderer | null = null;
 
   // ...
   onForeground(): void {
@@ -466,16 +508,24 @@ export default class MyUIAbility extends UIAbility {
     audio.createAudioRenderer(audioRendererOptions).then((data) => {
       MyUIAbility.audioRenderer = data;
       hilog.info(0x0000, 'testTag', `AudioRenderer Created : Success : Stream Type: SUCCESS.`);
-    }).catch((err: BusinessError) => {
-      hilog.error(0x0000, 'testTag', `AudioRenderer Created : F : ${JSON.stringify(err)}.`);
+    }).catch((error: Error) => {
+      let err = error as BusinessError;
+      hilog.error(0x0000, 'testTag', `AudioRenderer Created : F : code: ${err.code} message: ${err.message}.`);
     });
   }
 
-  onDidBackground() {
+  onDidBackground(): void {
     // 转到后台后，释放audioRenderer资源
-    MyUIAbility.audioRenderer.release((err: BusinessError) => {
-      if (err) {
-        hilog.error(0x0000, 'testTag', `AudioRenderer release failed, error: ${JSON.stringify(err)}.`);
+    const renderer = MyUIAbility.audioRenderer;
+    if (renderer === null) {
+      hilog.warn(0x0000, 'testTag', 'AudioRenderer is null, cannot release');
+      return;
+    }
+    renderer.release((error: BusinessError | null) => {
+      if (error) {
+        // let err=error as BusinessError;
+        hilog.error(0x0000, 'testTag',
+          `AudioRenderer release failed, error: code: ${error.code} message: ${error.message}.`);
       } else {
         hilog.info(0x0000, 'testTag', `AudioRenderer released.`);
       }
@@ -679,7 +729,7 @@ onPrepareToTerminate(): boolean
 ## 示例
 
 ```TypeScript
-import { UIAbility, Want } from '@kit.AbilityKit';
+import { UIAbility, Want, common } from '@kit.AbilityKit';
 import { BusinessError } from '@kit.BasicServicesKit';
 
 export default class EntryAbility extends UIAbility {
@@ -692,15 +742,16 @@ export default class EntryAbility extends UIAbility {
       abilityName: 'SecondAbility'
     }
     this.context.startAbilityForResult(want)
-      .then((result) => {
+      .then((result: common.AbilityResult) => {
         // 获取ability处理结果，当返回结果的resultCode为0关闭当前UIAbility
         console.info('startAbilityForResult success, resultCode is ' + result.resultCode);
         if (result && result.resultCode === 0) {
           this.context.terminateSelf(); // 关闭当前UIAbility
         }
-      }).catch((err: BusinessError) => {
+      }).catch((error: Error) => {
       // 异常处理
-      console.error('startAbilityForResult failed, err:' + JSON.stringify(err));
+      let err = error as BusinessError;
+      console.error(`startAbilityForResult failed, err: ${err.code} , ${err.message}`);
       this.context.terminateSelf();
     });
 
@@ -800,7 +851,7 @@ onSaveState(reason: AbilityConstant.StateType, wantParam: Record<string, Object>
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | reason | AbilityConstant.StateType | 是 | 触发应用保存状态的原因，当前仅支持APP_RECOVERY（即应用故障恢复场景）。 |
-| wantParam | [Record](../../apis-default/arkts-apis/arkts-record-t.md)&lt;string, Object&gt; | 是 | 用户自定义的应用状态数据，应用再启动时被保存在[onCreate](arkts-ability-app-ability-uiability-uiability-c.md#oncreate)的 Want.parameters中。<br>**起始版本：** 11 |
+| wantParam | Record&lt;string, Object&gt; | 是 | 用户自定义的应用状态数据，应用再启动时被保存在[onCreate](arkts-ability-app-ability-uiability-uiability-c.md#oncreate)的 Want.parameters中。<br>**起始版本：** 11 |
 
 **返回值：**
 
@@ -852,13 +903,31 @@ onSaveState(reason: AbilityConstant.StateType, wantParam: Record<string, RecordD
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | reason | AbilityConstant.StateType | 是 | 触发应用保存状态的原因，当前仅支持APP_RECOVERY（即应用故障恢复场景）。 |
-| wantParam | [Record](../../apis-default/arkts-apis/arkts-record-t.md)&lt;string, RecordData&gt; | 是 | 用户自定义的应用状态数据，应用再启动时被保存在onCreate中的Want.parameters中。 |
+| wantParam | Record&lt;string, RecordData&gt; | 是 | 用户自定义的应用状态数据，应用再启动时被保存在onCreate中的Want.parameters中。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
 | AbilityConstant.OnSaveResult | 返回一个数据保存策略的对象（如全部拒绝、全部允许、只允许故障恢复场景等）。 |
+
+## 示例
+
+ArkTS-Sta示例：
+
+```TypeScript
+'use static'
+import { UIAbility, AbilityConstant } from '@kit.AbilityKit';
+import { RecordData } from '@kit.BasicServicesKit';
+
+export default class MyUIAbility extends UIAbility {
+  onSaveState(reason: AbilityConstant.StateType, wantParam: Record<string, RecordData>) {
+    console.info('onSaveState');
+    wantParam['myData'] = 'my1234567';
+    return AbilityConstant.OnSaveResult.RECOVERY_AGREE;
+  }
+}
+```
 
 ## onSaveStateAsync
 
@@ -886,7 +955,7 @@ onSaveStateAsync(stateType: AbilityConstant.StateType, wantParam: Record<string,
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | stateType | AbilityConstant.StateType | 是 | 触发应用保存状态的原因，当前仅支持`APP_RECOVERY`（即应用故障恢复场景）。 |
-| wantParam | [Record](../../apis-default/arkts-apis/arkts-record-t.md)&lt;string, Object&gt; | 是 | 用户自定义的应用状态数据，应用再启动时被保存在[onCreate](arkts-ability-app-ability-uiability-uiability-c.md#oncreate)的 Want.parameters中。 |
+| wantParam | Record&lt;string, Object&gt; | 是 | 用户自定义的应用状态数据，应用再启动时被保存在[onCreate](arkts-ability-app-ability-uiability-uiability-c.md#oncreate)的 Want.parameters中。 |
 
 **返回值：**
 
@@ -934,13 +1003,32 @@ onSaveStateAsync(stateType: AbilityConstant.StateType, wantParam: Record<string,
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | stateType | AbilityConstant.StateType | 是 | 触发应用保存状态的原因，当前仅支持`APP_RECOVERY`（即应用故障恢复场景）。 |
-| wantParam | [Record](../../apis-default/arkts-apis/arkts-record-t.md)&lt;string, RecordData&gt; | 是 | 用户自定义的应用状态数据，应用再启动时被保存在[onCreate](arkts-ability-app-ability-uiability-uiability-c.md#oncreate)的 Want.parameters中。 |
+| wantParam | Record&lt;string, RecordData&gt; | 是 | 用户自定义的应用状态数据，应用再启动时被保存在[onCreate](arkts-ability-app-ability-uiability-uiability-c.md#oncreate)的 Want.parameters中。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
 | Promise&lt;AbilityConstant.OnSaveResult&gt; | Promise对象。返回一个数据保存策略的对象（如全部拒绝、全部允许、只允许故障恢复场景等）。 |
+
+## 示例
+
+ArkTS-Sta示例：
+
+```TypeScript
+'use static'
+import { UIAbility, AbilityConstant } from '@kit.AbilityKit';
+import { RecordData } from '@kit.BasicServicesKit';
+
+class MyUIAbility extends UIAbility {
+  async onSaveStateAsync(reason: AbilityConstant.StateType, wantParam: Record<string, RecordData>) : Promise<AbilityConstant.OnSaveResult> {
+    await new Promise<string>((res, rej) => {
+      setTimeout(res, 1000); // 延时1秒后执行
+    });
+    return AbilityConstant.OnSaveResult.RECOVERY_AGREE;
+  }
+}
+```
 
 ## onShare
 
@@ -966,7 +1054,7 @@ onShare(wantParam: Record<string, Object>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| wantParam | [Record](../../apis-default/arkts-apis/arkts-record-t.md)&lt;string, Object&gt; | 是 | 待分享的数据。<br>**起始版本：** 11 |
+| wantParam | Record&lt;string, Object&gt; | 是 | 待分享的数据。<br>**起始版本：** 11 |
 
 ## 示例
 
@@ -1003,7 +1091,24 @@ onShare(wantParam: Record<string, RecordData>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| wantParam | [Record](../../apis-default/arkts-apis/arkts-record-t.md)&lt;string, RecordData&gt; | 是 | 待分享的数据。 |
+| wantParam | Record&lt;string, RecordData&gt; | 是 | 待分享的数据。 |
+
+## 示例
+
+ArkTS-Sta示例：
+
+```TypeScript
+'use static'
+import { UIAbility } from '@kit.AbilityKit';
+import { RecordData } from '@kit.BasicServicesKit';
+
+export default class MyUIAbility extends UIAbility {
+  onShare(wantParams: Record<string, RecordData>) {
+    console.info('onShare');
+    wantParams['ohos.extra.param.key.shareUrl'] = 'example.com';
+  }
+}
+```
 
 ## onWillBackground
 
@@ -1046,8 +1151,9 @@ export default class MyUIAbility extends UIAbility {
       name: "test_event",
       eventType: hiAppEvent.EventType.FAULT,
       params: eventParams,
-    }, (err: BusinessError) => {
-      if (err) {
+    }, (error) => {
+      if (error) {
+        let err = error as BusinessError;
         hilog.error(0x0000, 'testTag', `hiAppEvent code: ${err.code}, message: ${err.message}`);
         return;
       }
@@ -1105,7 +1211,8 @@ export default class EntryAbility extends UIAbility {
     };
     hiAppEvent.write(eventInfo).then(() => {
       hilog.info(0x0000, 'testTag', `HiAppEvent success to write event`);
-    }).catch((err: BusinessError) => {
+    }).catch((error: Error) => {
+      let err = error as BusinessError;
       hilog.error(0x0000, 'testTag', `HiAppEvent err.code: ${err.code}, err.message: ${err.message}`);
     });
   }
@@ -1127,7 +1234,8 @@ export default class EntryAbility extends UIAbility {
     };
     hiAppEvent.write(eventInfo).then(() => {
       hilog.info(0x0000, 'testTag', `HiAppEvent success to write event`);
-    }).catch((err: BusinessError) => {
+    }).catch((error: Error) => {
+      let err = error as BusinessError;
       hilog.error(0x0000, 'testTag', `HiAppEvent err.code: ${err.code}, err.message: ${err.message}`);
     });
   }
@@ -1171,7 +1279,7 @@ export default class MyUIAbility extends UIAbility {
   // 主窗口已创建，为该UIAbility设置主页面
   onWindowStageCreate(windowStage: window.WindowStage): void {
     windowStage.loadContent('pages/Index', (err, data) => {
-      if (err.code) {
+      if (err?.code) {
         hilog.error(0x0000, 'testTag', `Failed to load the content. Cause: ${JSON.stringify(err)}`);
         return;
       }

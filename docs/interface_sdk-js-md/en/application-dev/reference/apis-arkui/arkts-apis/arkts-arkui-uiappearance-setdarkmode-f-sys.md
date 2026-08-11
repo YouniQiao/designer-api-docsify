@@ -12,7 +12,7 @@ import { uiAppearance } from 'kits/@kit.ArkUI';
 function setDarkMode(mode: DarkMode, callback: AsyncCallback<void>): void
 ```
 
-设置系统深色模式。使用callback异步回调。
+Set the system dark-mode.
 
 **Since:** 23
 
@@ -37,9 +37,9 @@ function setDarkMode(mode: DarkMode, callback: AsyncCallback<void>): void
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. Possible causes: &lt;br&gt; 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameters types. &lt;br&gt; 3. Parameter verification failed. |
-| 500001 | Internal error. |
-| 201 | Permission denied. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: &lt;br&gt; 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameters types. &lt;br&gt; 3. Parameter verification failed. |
+| [500001](../errorcode-uiappearance.md#500001-internal-error) | Internal error. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
 
 
 ## setDarkMode
@@ -48,7 +48,7 @@ function setDarkMode(mode: DarkMode, callback: AsyncCallback<void>): void
 function setDarkMode(mode: DarkMode): Promise<void>
 ```
 
-设置系统深色模式。使用Promise异步回调。
+Set the system dark-mode.
 
 **Since:** 23
 
@@ -72,13 +72,13 @@ function setDarkMode(mode: DarkMode): Promise<void>
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise对象。无返回结果的Promise对象。 |
+| Promise&lt;void&gt; | the promise returned by the function |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. Possible causes: &lt;br&gt; 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameters types. &lt;br&gt; 3. Parameter verification failed. |
-| 500001 | Internal error. |
-| 201 | Permission denied. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: &lt;br&gt; 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameters types. &lt;br&gt; 3. Parameter verification failed. |
+| [500001](../errorcode-uiappearance.md#500001-internal-error) | Internal error. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
 

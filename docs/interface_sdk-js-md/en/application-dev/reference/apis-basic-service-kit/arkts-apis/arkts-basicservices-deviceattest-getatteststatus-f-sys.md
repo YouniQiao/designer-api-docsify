@@ -34,9 +34,9 @@ Obtains the AttestResultInfo object.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 20000001 | System service exception, please try again or reboot your device. |
-| 401 | Input parameters wrong, the number of parameters is incorrect,or the type of parameters is incorrect. |
-| 202 | This api is system api, Please use the system application to call this api. |
+| [20000001](../../apis-basic-services-kit/errorcode-deviceAttest.md#20000001-system-service-abnormal) | System service exception, please try again or reboot your device. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Input parameters wrong, the number of parameters is incorrect,or the type of parameters is incorrect. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | This api is system api, Please use the system application to call this api. |
 
 ## Examples
 
@@ -53,7 +53,7 @@ try {
         " patchLevelResult:" + value.softwareResultDetail[1],
         " rootHashResult:" + value.softwareResultDetail[2],
         " PCIDResult:" + value.softwareResultDetail[3],
-        " reserved:" + value.softwareResultDetail[4]);
+        " reserver:" + value.softwareResultDetail[4]);
     }
     })
 } catch (error) {
@@ -92,9 +92,9 @@ Obtains the AttestResultInfo object.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 20000001 | System service exception, please try again or reboot your device. |
-| 401 | Input parameters wrong, the number of parameters is incorrect,or the type of parameters is incorrect. |
-| 202 | This api is system api, Please use the system application to call this api. |
+| [20000001](../../apis-basic-services-kit/errorcode-deviceAttest.md#20000001-system-service-abnormal) | System service exception, please try again or reboot your device. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Input parameters wrong, the number of parameters is incorrect,or the type of parameters is incorrect. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | This api is system api, Please use the system application to call this api. |
 
 ## Examples
 
@@ -108,7 +108,7 @@ try {
         " patchLevelResult:" + value.softwareResultDetail[1],
         " rootHashResult:" + value.softwareResultDetail[2],
         " PCIDResult:" + value.softwareResultDetail[3],
-        " reserved:" + value.softwareResultDetail[4]);
+        " reserver:" + value.softwareResultDetail[4]);
     }).catch((error: BusinessError) => {
         console.error("error code:" + error.code + " message:" + error.message);
     });

@@ -1,11 +1,5 @@
 # makeUnique（系统接口）
 
-## 导入模块
-
-```TypeScript
-import { screen } from 'kits/@kit.ArkUI';
-```
-
 ## makeUnique
 
 ```TypeScript
@@ -40,13 +34,15 @@ function makeUnique(uniqueScreen: Array<long>): Promise<Array<long>>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. 3. Parameter verification failed. |
-| 801 | Capability not supported. Failed to call the API due to limited device capabilities. |
-| 1400001 | Invalid display or screen. |
-| 1400003 | This display manager service works abnormally. |
-| 202 | Permission verification failed, non-system application uses system API. |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. 3. Parameter verification failed. |
+| [801](../../errorcode-universal.md#801-该设备不支持此api) | Capability not supported. Failed to call the API due to limited device capabilities. |
+| [1400001](../errorcode-display.md#1400001-无效的显示设备) | Invalid display or screen. |
+| [1400003](../errorcode-display.md#1400003-系统服务工作异常) | This display manager service works abnormally. |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed, non-system application uses system API. |
 
 ## 示例
+
+ArkTS-Dyn示例：
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -58,6 +54,20 @@ screen.makeUnique(uniqueScreenIds).then((data: Array<number>) => {
   console.info('Succeeded in making unique screens.');
 }).catch((err: BusinessError) => {
   console.error(`Failed to make unique screens. Code: ${err.code}, message: ${err.message}`);
+});
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let uniqueScreenIds: Array<long> = [1001, 1002, 1003];
+screen.makeUnique(uniqueScreenIds).then((data: Array<long>) => {
+  console.info('Succeeded in making unique screens.');
+}).catch((err: BusinessError) => {
+  let error = exception as BusinessError;
+  console.error(`Failed to make unique screens. Code: ${error.code}, message: ${error.message}`);
 });
 ```
 

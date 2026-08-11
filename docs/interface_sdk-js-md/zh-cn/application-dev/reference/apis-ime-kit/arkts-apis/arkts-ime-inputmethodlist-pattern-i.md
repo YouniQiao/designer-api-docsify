@@ -10,12 +10,6 @@
 
 **系统能力：** SystemCapability.MiscServices.InputMethodFramework
 
-## 导入模块
-
-```TypeScript
-import { Pattern, InputMethodListDialog, PatternOptions } from 'kits/@kit.IMEKit';
-```
-
 ## icon
 
 ```TypeScript

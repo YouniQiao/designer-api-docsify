@@ -1,6 +1,6 @@
 # ReturnStatus
 
-压缩/解压缩函数的返回代码。
+Return codes for the compression/decompression functions.
 
 **Since:** 12
 
@@ -16,7 +16,7 @@
 OK = 0
 ```
 
-函数调用成功。该接口支持在原子化服务中使用。
+The API is successfully called. This API is supported for use in atomic services.
 
 **Since:** 12
 
@@ -34,7 +34,7 @@ OK = 0
 STREAM_END = 1
 ```
 
-函数调用成功，表示已处理了整个数据。
+The API is successfully called, indicating that the entire data has been processed.
 
 **Since:** 12
 
@@ -52,7 +52,7 @@ STREAM_END = 1
 NEED_DICT = 2
 ```
 
-函数调用成功，表示需要预设字典才能继续解压缩。
+The API is successfully called, indicating that a preset dictionary is required to continue decompression.
 
 **Since:** 12
 
@@ -70,7 +70,7 @@ NEED_DICT = 2
 ERRNO = -1
 ```
 
-函数调用失败，表示文件操作错误。
+The API fails to be called, indicating that the file operation is incorrect.
 
 **Since:** 23
 
@@ -88,7 +88,7 @@ ERRNO = -1
 STREAM_ERROR = -2
 ```
 
-函数调用失败，表示压缩或解压缩流错误。
+The API fails to be called, indicating that the compression or decompression stream is incorrect.
 
 **Since:** 23
 
@@ -106,7 +106,7 @@ STREAM_ERROR = -2
 DATA_ERROR = -3
 ```
 
-函数调用失败，表示输入数据不正确。
+The API fails to be called, indicating that the input data is incorrect.
 
 **Since:** 23
 
@@ -124,7 +124,7 @@ DATA_ERROR = -3
 MEM_ERROR = -4
 ```
 
-函数调用失败，表示内存分配失败。
+The API fails to be called, indicating that the memory allocation fails.
 
 **Since:** 23
 
@@ -142,7 +142,7 @@ MEM_ERROR = -4
 BUF_ERROR = -5
 ```
 
-函数调用失败，表示输入缓冲区不正确。
+The API fails to be called, indicating that the input buffer is incorrect.
 
 **Since:** 23
 

@@ -62,7 +62,7 @@ value: PixelMap | ResourceStr
 
 图片内容。
 
-**类型：** [PixelMap](../../apis-image-kit/arkts-apis/arkts-image-image-pixelmap-i.md) \| ResourceStr
+**类型：** [PixelMap](../arkts-apis/arkts-arkui-pixelmap-t.md) \| ResourceStr
 
 **起始版本：** 10
 

@@ -42,8 +42,8 @@ Unbinds a partner device.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 801 | Capability not supported. |
-| 34900001 | The device is not bound. |
-| 34900099 | Internal error. |
-| 201 | Permission denied. |
+| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. |
+| [34900001](../errorcode-fusionConnectivity.md#34900001-device-not-registered) | The device is not bound. |
+| [34900099](../errorcode-fusionConnectivity.md#34900099-operation-failed) | Internal error. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
 

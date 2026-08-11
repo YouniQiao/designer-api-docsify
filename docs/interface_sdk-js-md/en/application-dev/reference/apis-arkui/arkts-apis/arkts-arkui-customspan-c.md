@@ -1,8 +1,8 @@
 # CustomSpan
 
-自定义绘制Span，仅提供基类，具体实现由开发者定义。适用于需要在文本流中嵌入自定义绘制内容的场景，例如在文本中绘制自定义图标、进度条、特殊装饰效果等。
+Describes the custom span. Only the base class is provided. You need to define the specific implementation.
 
-自定义绘制Span拖拽显示的缩略图为空白。
+The drag preview of a custom span is blank.
 
 **Since:** 12
 
@@ -18,7 +18,7 @@
 invalidate(): void
 ```
 
-主动刷新使用CustomSpan的Text组件。
+Manually triggers a refresh of the **Text** component that uses this **CustomSpan**.
 
 **Since:** 13
 
@@ -38,7 +38,7 @@ invalidate(): void
 abstract onDraw(context: DrawContext,  drawInfo: CustomSpanDrawInfo): void
 ```
 
-绘制自定义绘制Span。
+Called to draw a custom span.
 
 **Since:** 12
 
@@ -56,8 +56,8 @@ abstract onDraw(context: DrawContext,  drawInfo: CustomSpanDrawInfo): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| context | [DrawContext](arkts-arkui-graphics-drawcontext-c.md) | Yes | 图形绘制上下文。 &lt;br&gt;**说明：** &lt;br&gt;DrawContext的canvas方法获取的画布是Text组件的画布，绘制时不会超出Text组件的范围。 |
-| drawInfo | [CustomSpanDrawInfo](arkts-arkui-styledstring-customspandrawinfo-i.md) | Yes | 自定义绘制Span的绘制信息。 |
+| context | [DrawContext](arkts-arkui-graphics-drawcontext-c.md) | Yes | Drawing context.&lt;br&gt;**NOTE：**&lt;br&gt;The **canvas** method of **DrawContext** obtains the canvas of the **Text** component. As such, the custom span does not extend beyond the area of the **Text** component. |
+| drawInfo | [CustomSpanDrawInfo](arkts-arkui-styledstring-customspandrawinfo-i.md) | Yes | Drawing information of the custom span. |
 
 ## onMeasure
 
@@ -65,7 +65,7 @@ abstract onDraw(context: DrawContext,  drawInfo: CustomSpanDrawInfo): void
 abstract onMeasure(measureInfo: CustomSpanMeasureInfo) : CustomSpanMetrics
 ```
 
-获取自定义绘制Span的尺寸大小。
+Called to obtain the size of a custom span.
 
 **Since:** 12
 
@@ -83,11 +83,11 @@ abstract onMeasure(measureInfo: CustomSpanMeasureInfo) : CustomSpanMetrics
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| measureInfo | [CustomSpanMeasureInfo](arkts-arkui-styledstring-customspanmeasureinfo-i.md) | Yes | 自定义绘制Span的测量信息。 |
+| measureInfo | [CustomSpanMeasureInfo](arkts-arkui-styledstring-customspanmeasureinfo-i.md) | Yes | Font size of the text. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [CustomSpanMetrics](arkts-arkui-customspanmetrics-i.md) | 自定义绘制Span的尺寸信息。 &lt;br&gt;**说明：** &lt;br&gt;最终的CustomSpan的高度是由当前Text组件的行高所决定的。当height不传值，则默认取Text组件的fontSize的值作为CustomSpan的高度；当height大于当前行的其他子组件的高度时，此时 height即为Text组件的行高。 |
+| [CustomSpanMetrics](arkts-arkui-customspanmetrics-i.md) | Size of the custom span. &lt;br&gt;**NOTE：**&lt;br&gt;The final height of the custom span is subject to the line height of the **Text** component. If no value is specified for **height**, the custom span takes the **fontSize** value of the **Text** component as its height. If the value specified is greater than the height of other child components on the same line, the custom span takes the line height of the **Text** component as its height. |
 

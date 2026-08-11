@@ -7,7 +7,7 @@
 
 | Name | Description |
 | --- | --- |
-| [IsolatedOptions](arkts-arkui-isolatedoptions-i-sys.md) | 用于在IsolatedComponent构造时传递构造参数。 |
+| [IsolatedOptions](arkts-arkui-isolatedoptions-i-sys.md) | Describes the optional construction parameters during **IsolatedComponent** construction. |
 <!--DelEnd-->
 
 <!--Del-->
@@ -15,8 +15,8 @@
 
 | Name | Description |
 | --- | --- |
-| [ErrorCallback](arkts-arkui-errorcallback-t-sys.md) | 错误回调类型，用于接收异常信息。 |
-| [RestrictedWorker](arkts-arkui-restrictedworker-t-sys.md) | 用于运行Abc的受限Worker。 |
-| [Want](arkts-arkui-want-t-sys.md) | 表示Want。 |
+| [ErrorCallback](arkts-arkui-errorcallback-t-sys.md) | Indicates error callback. |
+| [RestrictedWorker](arkts-arkui-restrictedworker-t-sys.md) | Indicates restricted worker for run abc. |
+| [Want](arkts-arkui-want-t-sys.md) | Indicates want. |
 <!--DelEnd-->
 

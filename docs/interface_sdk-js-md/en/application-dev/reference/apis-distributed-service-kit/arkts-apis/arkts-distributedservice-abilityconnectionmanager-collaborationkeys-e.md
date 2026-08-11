@@ -1,6 +1,6 @@
 # CollaborationKeys
 
-应用协作键值的枚举。
+Enumerates application collaboration key values.
 
 **Since:** 18
 
@@ -16,7 +16,7 @@
 PEER_INFO = 'ohos.collaboration.key.peerInfo'
 ```
 
-表示对端设备信息的键值。
+Key value of the peer device information.
 
 **Since:** 18
 
@@ -34,7 +34,7 @@ PEER_INFO = 'ohos.collaboration.key.peerInfo'
 CONNECT_OPTIONS = 'ohos.collaboration.key.connectOptions'
 ```
 
-表示连接选项的键值。
+Key value of the connection option.
 
 **Since:** 18
 
@@ -52,7 +52,7 @@ CONNECT_OPTIONS = 'ohos.collaboration.key.connectOptions'
 COLLABORATE_TYPE = 'ohos.collaboration.key.abilityCollaborateType'
 ```
 
-表示协作类型的键值。
+Key value of the collaboration type.
 
 **Since:** 18
 

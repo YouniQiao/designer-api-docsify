@@ -1,6 +1,6 @@
 # FlexSpaceOptions
 
-设置Flex容器的子组件在主轴或交叉轴的间距。
+Sets the spacing between child components along the main axis or cross axis of the **Flex** component.
 
 **Since:** 12
 
@@ -16,9 +16,9 @@
 cross?: LengthMetrics
 ```
 
-Flex容器交叉轴上相邻行之间的间距。设置后，交叉轴方向相邻行之间将按指定间距进行分隔，仅在多行布局（wrap为Wrap或WrapReverse）时生效。当space.cross为负数，或者justifyContent设置为FlexAlign.SpaceBetween、FlexAlign.SpaceAround、FlexAlign.SpaceEvenly时，该参数不生效。
+Space on the cross axis of the **Flex** component.
 
-默认值：LengthMetrics.px(0)
+Default value: **LengthMetrics.px(0)**.
 
 **Type:** [LengthMetrics](../arkts-apis/arkts-arkui-graphics-lengthmetrics-c.md)
 
@@ -40,9 +40,9 @@ Flex容器交叉轴上相邻行之间的间距。设置后，交叉轴方向相�
 main?: LengthMetrics
 ```
 
-Flex容器主轴上相邻子组件之间的间距。设置后，主轴方向相邻子组件之间将按指定间距进行分隔，在单行或多行布局时均生效。当space.main为负数，或者justifyContent设置为FlexAlign.SpaceBetween、FlexAlign.SpaceAround、FlexAlign.SpaceEvenly时，该参数不生效。
+Space on the main axis of the **Flex** component.
 
-默认值：LengthMetrics.px(0)
+Default value: **LengthMetrics.px(0)**.
 
 **Type:** [LengthMetrics](../arkts-apis/arkts-arkui-graphics-lengthmetrics-c.md)
 

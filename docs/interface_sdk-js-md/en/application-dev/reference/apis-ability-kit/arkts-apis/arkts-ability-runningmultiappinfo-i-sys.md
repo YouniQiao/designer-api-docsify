@@ -1,6 +1,6 @@
 # RunningMultiAppInfo (System API)
 
-定义应用多开在运行态的结构信息。
+The RunningMultiAppInfo module defines the information of an application in multi-app mode in the running state.
 
 **Since:** 12
 
@@ -18,7 +18,7 @@
 bundleName: string
 ```
 
-应用的包名。
+Bundle name of the application.
 
 **Type:** string
 
@@ -38,7 +38,7 @@ bundleName: string
 mode: MultiAppMode
 ```
 
-应用多开模式。
+Multi-app mode.
 
 **Type:** [MultiAppMode](arkts-ability-multiappmode-e-sys.md)
 
@@ -58,7 +58,7 @@ mode: MultiAppMode
 runningAppClones?: Array<RunningAppClone>
 ```
 
-特定包名在运行态的分身应用信息。
+Information about application clones with the specific bundle name in the running state.
 
 **Type:** Array&lt;[RunningAppClone](arkts-ability-runningappclone-i-sys.md)&gt;
 
@@ -78,7 +78,7 @@ runningAppClones?: Array<RunningAppClone>
 runningMultiInstances?: Array<RunningMultiInstanceInfo>
 ```
 
-特定包名在运行态的多实例应用信息。
+Information about a multi-instance application with the specific bundle name in the running state.
 
 **Type:** Array&lt;[RunningMultiInstanceInfo](arkts-ability-runningmultiinstanceinfo-i-sys.md)&gt;
 

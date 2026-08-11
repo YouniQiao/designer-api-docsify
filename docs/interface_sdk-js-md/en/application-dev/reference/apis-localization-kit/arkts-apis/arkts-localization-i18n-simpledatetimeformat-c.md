@@ -1,6 +1,6 @@
 # SimpleDateTimeFormat
 
-提供时间日期格式化的能力。
+Provide a simple date time formatting interface.
 
 **Since:** 23
 
@@ -22,7 +22,7 @@ import { i18n } from 'kits/@kit.LocalizationKit';
 format(date: Date): string
 ```
 
-对时间日期进行格式化。
+Formats the date and time.
 
 **Since:** 23
 
@@ -38,11 +38,11 @@ format(date: Date): string
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| date | Date | Yes | 时间日期。 &lt;br&gt;**说明：** &lt;br&gt;月份从0开始计数，0表示一月。 |
+| date | Date | Yes | Date and time. Note: The month starts from 0. For example, 0 indicates January. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| string | 格式化后的时间日期字符串。 |
+| string | A string containing the formatted date and time. |
 

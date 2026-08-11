@@ -1,6 +1,6 @@
 # GetDomainAccountInfoOptions (System API)
 
-表示查询域账号信息的选项。
+Defines the options for obtaining domain account information.
 
 **Since:** 10
 
@@ -24,7 +24,7 @@ import { osAccount } from 'kits/@kit.BasicServicesKit';
 accountName: string
 ```
 
-域账号名。
+Domain account name.
 
 **Type:** string
 
@@ -44,7 +44,7 @@ accountName: string
 domain?: string
 ```
 
-域名。默认为undefined。
+Domain name, which is **undefined** by default.
 
 **Type:** string
 
@@ -64,7 +64,7 @@ domain?: string
 serverConfigId?: string
 ```
 
-域账号所属服务器标识。默认为undefined。
+ID of the server to which the domain account belongs, which is **undefined** by default.
 
 **Type:** string
 

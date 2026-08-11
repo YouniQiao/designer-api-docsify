@@ -12,7 +12,7 @@ import { browser } from 'kits/@kit.MDMKit';
 function getSelfManagedBrowserPolicy(): ArrayBuffer
 ```
 
-获取当前设备浏览器策略。
+Obtains the browser policy of the current device.
 
 **Since:** 15
 
@@ -28,7 +28,7 @@ function getSelfManagedBrowserPolicy(): ArrayBuffer
 
 | Type | Description |
 | --- | --- |
-| ArrayBuffer | 浏览器策略。 |
+| ArrayBuffer | Browser policy obtained. |
 
 ## Examples
 

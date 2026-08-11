@@ -12,11 +12,7 @@ import { errorManager } from 'kits/@kit.AbilityKit';
 function setDefaultResourceUsageObserver(defaultObserver?: ResourceUsageObserver): ResourceUsageObserver
 ```
 
-设置资源占用观察者，应用资源超基线时，支持链式回调，返回上一次注册的资源占用观察者，仅限主线程调用。
-
-如果传入非法参数或在子线程调用，将抛出错误码并返回undefined，因此建议使用try-catch逻辑进行处理。
-
-若接口参数为空，后续注册的观察者将无法与前序已注册的观察者建立关联，从而中断链式调用。
+Set the default resource usage observer. You can use it to implement chain calls.If an empty observer is set for a certain module, it will cause the call chain to be interrupted.This API must be called on the main thread.
 
 **Since:** 24
 
@@ -34,17 +30,17 @@ function setDefaultResourceUsageObserver(defaultObserver?: ResourceUsageObserver
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| defaultObserver | [ResourceUsageObserver](arkts-ability-errormanager-resourceusageobserver-t.md) | No | 新注册的资源观察者，默认值为空。 |
+| defaultObserver | [ResourceUsageObserver](arkts-ability-errormanager-resourceusageobserver-t.md) | No | The default resource usage observer. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [ResourceUsageObserver](arkts-ability-errormanager-resourceusageobserver-t.md) | 返回上一次注册的资源观察者。 |
+| [ResourceUsageObserver](arkts-ability-errormanager-resourceusageobserver-t.md) | Returns the original default resource usage observer. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 16000205 | API未在主线程中调用。 |
+| [16000205](../errorcode-ability.md#16000205-api-not-called-in-main-thread) | The API is not called on the main thread. |
 

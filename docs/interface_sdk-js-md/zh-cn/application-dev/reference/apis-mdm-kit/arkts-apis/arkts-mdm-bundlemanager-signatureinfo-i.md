@@ -10,12 +10,6 @@
 
 **系统能力：** SystemCapability.Customization.EnterpriseDeviceManager
 
-## 导入模块
-
-```TypeScript
-import { bundleManager } from 'kits/@kit.MDMKit';
-```
-
 ## appId
 
 ```TypeScript

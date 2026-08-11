@@ -4,7 +4,7 @@
 export type ContinuationResult = _ContinuationResult
 ```
 
-流转管理入口返回的设备信息。
+Defines the device information returned by the continuation management entry.
 
 **Since:** 10
 

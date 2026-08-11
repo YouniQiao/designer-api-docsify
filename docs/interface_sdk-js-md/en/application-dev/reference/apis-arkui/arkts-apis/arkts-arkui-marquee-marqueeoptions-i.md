@@ -1,10 +1,8 @@
 # MarqueeOptions
 
-Marquee初始化参数。
+Defines Marquee constructor options.
 
-> **说明：**
-> 
-> 为规范匿名对象的定义，API 18版本修改了此处的元素定义。其中，保留了历史匿名对象的起始版本信息，会出现外层元素@since版本号高于内层元素版本号的情况，但这不影响接口的使用。
+Anonymous Object Rectification.
 
 **Since:** 23
 
@@ -20,13 +18,7 @@ Marquee初始化参数。
 delay?: int
 ```
 
-设置每次滚动的时间间隔。
-
-默认值：0
-
-取值范围：[0, +∞)，设置的值小于0时等价于设置0。
-
-单位：毫秒
+The waiting time between each round of the marquee.Unit: ms. The value should be an integer. Default value: 0.
 
 **Type:** int
 
@@ -46,13 +38,9 @@ delay?: int
 fromStart?: boolean
 ```
 
-设置文本从头开始滚动或反向滚动。
+Set text to scroll from the beginning or backward.
 
-true：表示从头开始滚动
-
-false：表示反向滚动。
-
-默认值：true
+Anonymous Object Rectification.
 
 **Type:** boolean
 
@@ -74,13 +62,11 @@ false：表示反向滚动。
 loop?: int
 ```
 
-设置重复滚动的次数，小于等于零时无限循环。
+Set the number of times the scroll is repeated, infinite loop if it is less than or equal to zero.
 
-默认值：-1
+Anonymous Object Rectification.
 
-**说明：**
-
-ArkTS卡片上该参数设置任意值都仅在可见时滚动一次。
+&lt;p&gt;&lt;strong&gt;NOTE&lt;/strong&gt;:&lt;br&gt;If the value is less than or equal to 0, the marquee will scroll continuously.&lt;br&gt;Regardless of the value, the marquee scrolls only once on an ArkTS widget.&lt;/p&gt;
 
 **Type:** int
 
@@ -102,9 +88,9 @@ ArkTS卡片上该参数设置任意值都仅在可见时滚动一次。
 spacing?: LengthMetrics
 ```
 
-两轮跑马灯之间的间距。如果LengthMetrics的unit值是PERCENT，当前设置不生效，按默认值处理。
+The spacing between two rounds of marquee.
 
-默认值：跑马灯组件宽度。
+Default value is marquee width.
 
 **Type:** [LengthMetrics](arkts-arkui-lengthmetrics-t.md)
 
@@ -124,11 +110,9 @@ spacing?: LengthMetrics
 src: string | undefined
 ```
 
-需要滚动的文本。
+Text that needs scrolling. In Marquee component, the default value is an empty string.Set to `undefined` will restore it to the default value.
 
-默认值：''
-
-取值为undefined时，按默认值处理。
+Anonymous Object Rectification.
 
 **Type:** string \| undefined
 
@@ -148,17 +132,11 @@ src: string | undefined
 start: boolean | undefined
 ```
 
-控制跑马灯是否进入播放状态。
+Control whether the running lamp enters the playing state.
 
-true：播放；false：不播放。
+Anonymous Object Rectification.
 
-默认值：false
-
-取值为undefined时，按默认值处理。
-
-**说明：**
-
-有限的滚动次数播放完毕后，不可以通过改变start重置滚动次数重新开始播放。
+&lt;p&gt;&lt;strong&gt;NOTE&lt;/strong&gt;:&lt;br&gt;&lt;em&gt;true&lt;/em&gt;: Start scrolling.&lt;br&gt;&lt;em&gt;false&lt;/em&gt;: Do not start scrolling.&lt;br&gt;This parameter cannot be used to restart scrolling that has been completed.&lt;br&gt;In Marquee component, the default value is false. Set to `undefined` will restore it to the default value.&lt;/p&gt;
 
 **Type:** boolean \| undefined
 
@@ -178,11 +156,13 @@ true：播放；false：不播放。
 step?: double
 ```
 
-滚动动画的文本步长。当step大于Marquee的文本宽度时，取默认值。
+Scroll animation text scroll step, when step is larger than the text width of Marquee, take the default value.
 
-默认值：6
+Anonymous Object Rectification.
 
-单位：[vp](../../../reference/apis-arkui/arkui-ts/ts-pixel-units.md#基本像素单位)
+Unit: vp. Default value: 6.
+
+&lt;p&gt;&lt;strong&gt;NOTE&lt;/strong&gt;:&lt;br&gt;If the value is greater than the text width of the marquee, the default value is used.&lt;/p&gt;
 
 **Type:** double
 

@@ -4,7 +4,7 @@
 type QueryMainTabsEvent = () => Promise<MediaTab[]>
 ```
 
-主标签页查询事件。使用Promise异步回调。
+The query main tabs event.
 
 **Since:** 23
 

@@ -12,9 +12,9 @@ import { dlpPermission } from 'kits/@kit.DataProtectionKit';
 function getDLPGatheringPolicy(): Promise<GatheringPolicyType>
 ```
 
-查询DLP沙箱聚合策略。使用Promise异步回调。
+Obtains the DLP sandbox gathering policy. This API uses a promise to return the result.
 
-应用需要获取当前系统的DLP沙箱聚合策略配置时使用此接口。
+This API is used to obtain the DLP sandbox gathering policy of the current system.
 
 **Since:** 10
 
@@ -32,27 +32,32 @@ function getDLPGatheringPolicy(): Promise<GatheringPolicyType>
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;GatheringPolicyType&gt; | Promise对象。返回当前DLP沙箱聚合策略。 |
+| Promise&lt;GatheringPolicyType&gt; | Promise used to return the DLP sandbox gathering policy obtained. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 19100001 | Invalid parameter value. |
-| 19100011 | The system ability works abnormally. |
-| 201 | Permission denied. |
-| 202 | Non-system applications use system APIs. |
+| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported because car not support DLP feature.<br>**Applicable version:** 26.1.0 and later |
+| [19100001](../errorcode-dlp.md#19100001-invalid-parameter) | Invalid parameter value. |
+| [19100011](../errorcode-dlp.md#19100011-system-service-abnormal) | The system ability works abnormally. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Non-system applications use system APIs. |
 
 ## Examples
 
 ```TypeScript
 import { dlpPermission } from '@kit.DataProtectionKit';
+import { BusinessError } from '@kit.BasicServicesKit';
 
-dlpPermission.getDLPGatheringPolicy().then((gatheringPolicy: dlpPermission.GatheringPolicyType) => {
-  console.info('gatheringPolicy: ', JSON.stringify(gatheringPolicy));
-}).catch((error: BusinessError)=> {
-  console.error(error.message);
-}); // Obtain the sandbox gathering policy.
+async function ExampleFunction() {
+  try {
+    let res: dlpPermission.GatheringPolicyType = await dlpPermission.getDLPGatheringPolicy(); // Obtain the sandbox gathering policy.
+    console.info('res', JSON.stringify(res));
+  } catch (err) {
+    console.error('error', (err as BusinessError).code, (err as BusinessError).message); // Throw an error if the operation fails.
+  }
+}
 ```
 
 
@@ -62,9 +67,9 @@ dlpPermission.getDLPGatheringPolicy().then((gatheringPolicy: dlpPermission.Gathe
 function getDLPGatheringPolicy(callback: AsyncCallback<GatheringPolicyType>): void
 ```
 
-查询DLP沙箱聚合策略。使用callback异步回调。
+Obtains the DLP sandbox gathering policy. This API uses an asynchronous callback to return the result.
 
-应用需要获取当前系统的DLP沙箱聚合策略配置时使用此接口。
+This API is used to obtain the DLP sandbox gathering policy of the current system.
 
 **Since:** 10
 
@@ -82,29 +87,35 @@ function getDLPGatheringPolicy(callback: AsyncCallback<GatheringPolicyType>): vo
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;GatheringPolicyType&gt; | Yes | 回调函数。err为undefined时表示查询成功；否则为错误对象。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;GatheringPolicyType&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined**. Otherwise, **err** is an error object. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1. Incorrect parameter types. |
-| 19100001 | Invalid parameter value. |
-| 19100011 | The system ability works abnormally. |
-| 201 | Permission denied. |
-| 202 | Non-system applications use system APIs. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Incorrect parameter types. |
+| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported because car not support DLP feature.<br>**Applicable version:** 26.1.0 and later |
+| [19100001](../errorcode-dlp.md#19100001-invalid-parameter) | Invalid parameter value. |
+| [19100011](../errorcode-dlp.md#19100011-system-service-abnormal) | The system ability works abnormally. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Non-system applications use system APIs. |
 
 ## Examples
 
 ```TypeScript
 import { dlpPermission } from '@kit.DataProtectionKit';
+import { BusinessError } from '@kit.BasicServicesKit';
 
-dlpPermission.getDLPGatheringPolicy((err, gatheringPolicy) => {
-  if (err) {
-    console.error('getDLPGatheringPolicy error,', err.code, err.message);
-  } else {
-    console.info('gatheringPolicy: ', JSON.stringify(gatheringPolicy));
-  }
-}); // Obtain the sandbox gathering policy.
+try {
+  dlpPermission.getDLPGatheringPolicy((err, res) => {
+    if (err !== undefined) {
+      console.error('getDLPGatheringPolicy error,', err.code, err.message);
+    } else {
+      console.info('res', JSON.stringify(res));
+    }
+  }); // Obtain the sandbox gathering policy.
+} catch (err) {
+  console.error('getDLPGatheringPolicy error,', (err as BusinessError).code, (err as BusinessError).message);
+}
 ```
 

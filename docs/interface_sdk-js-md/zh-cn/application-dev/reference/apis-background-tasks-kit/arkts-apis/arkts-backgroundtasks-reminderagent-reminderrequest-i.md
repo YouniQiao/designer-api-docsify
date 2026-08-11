@@ -14,12 +14,6 @@
 
 **系统能力：** SystemCapability.Notification.ReminderAgent
 
-## 导入模块
-
-```TypeScript
-import { reminderAgent } from 'kits/@kit.BackgroundTasksKit';
-```
-
 ## actionButton
 
 ```TypeScript
@@ -292,7 +286,7 @@ wantAgent?: WantAgent
 
 点击通知后需要跳转的目标ability信息。
 
-**类型：** [WantAgent](../../apis-ability-kit/arkts-apis/arkts-ability-wantagent-t.md)
+**类型：** [WantAgent](arkts-backgroundtasks-reminderagent-wantagent-i.md)
 
 **起始版本：** 7
 

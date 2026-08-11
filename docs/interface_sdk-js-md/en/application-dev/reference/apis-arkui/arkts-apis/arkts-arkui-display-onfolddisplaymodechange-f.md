@@ -32,5 +32,5 @@ Register the callback for fold display mode changes.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 1400003 | This display manager service works abnormally. |
+| [1400003](../errorcode-display.md#1400003-abnormal-display-manager-service) | This display manager service works abnormally. |
 

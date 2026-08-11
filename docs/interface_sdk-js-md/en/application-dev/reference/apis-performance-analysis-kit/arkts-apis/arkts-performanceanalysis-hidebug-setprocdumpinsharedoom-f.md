@@ -12,15 +12,17 @@ import { hidebug } from 'kits/@kit.PerformanceAnalysisKit';
 function setProcDumpInSharedOOM(enable: boolean): void
 ```
 
-��ת���Ķѿ������̼߳���Ϊ���̼���
+Changes the dump heap snapshot from the thread-level to the process-level.
 
-> **ע��**
+> **NOTE：**
 > 
-> Ҫ��ת�����̼��Ķѿ��գ����øýӿڲ�����true������OOMʱ��������SharedHeap OOM����������ȱһ���ɡ�
+> To dump a process-level heap snapshot, you must call this API and pass **true**. In addition, SharedHeap OOM must
+> occur.
 > 
-> �ýӿڲ�Ӱ������������ת���Ķѿ������ݡ��磺����Ӱ��dumpJsRawHeapData�Ľ����
+> This API does not affect the heap snapshot dumped in other scenarios. For example, it does not affect the result
+> of [dumpJsRawHeapData](arkts-performanceanalysis-hidebug-dumpjsrawheapdata-f.md#dumpjsrawheapdata).
 > 
-> �ýӿ���Ӧ�õ����������ڿɱ���ε��ã��������һ�ε��õ�ִ�н������Ч��
+> This API can be called multiple times in the application lifecycle, but only the last call takes effect.
 
 **Since:** 24
 
@@ -38,7 +40,7 @@ function setProcDumpInSharedOOM(enable: boolean): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| enable | boolean | Yes | �����̷���SharedHeap OOMʱ��ϵͳ�����ݸý��������������������һ�ε��øýӿ�����¼����Ϣ��ת����Ӧ����Ķѿ��ա� true�����̼��� false���̼߳��� Ĭ��ֵ��false�� |
+| enable | boolean | Yes | When SharedHeap OOM occurs in a process, the system dumps the heap snapshot of the corresponding level based on the information recorded when the process calls the API for the last time in its lifecycle.&lt;br&gt;**true**: process level.&lt;br&gt;**false**: thread level.&lt;br&gt; The default value is **false**. |
 
 ## Examples
 

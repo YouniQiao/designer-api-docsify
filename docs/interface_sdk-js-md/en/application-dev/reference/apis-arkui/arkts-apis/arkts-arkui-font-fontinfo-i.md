@@ -20,7 +20,7 @@ import { font } from 'kits/@kit.ArkUI';
 family: string
 ```
 
-系统字体的字体家族。
+A set of fonts with a common design.
 
 **Type:** string
 
@@ -40,7 +40,7 @@ family: string
 fullName: string
 ```
 
-系统字体的名称。
+The font name.
 
 **Type:** string
 
@@ -60,11 +60,7 @@ fullName: string
 italic: boolean
 ```
 
-系统字体是否倾斜。
-
-默认值：false
-
-值为true，表示斜体字体，值为false，表示非斜体字体。
+Whether it is italic.
 
 **Type:** boolean
 
@@ -84,11 +80,7 @@ italic: boolean
 monoSpace: boolean
 ```
 
-系统字体是否等宽。
-
-默认值：false
-
-值为true，表示等宽字体，值为false，表示非等宽字体。
+Whether it is compact.
 
 **Type:** boolean
 
@@ -108,7 +100,7 @@ monoSpace: boolean
 path: string
 ```
 
-系统字体的文件路径。
+The path of the font file.
 
 **Type:** string
 
@@ -128,7 +120,7 @@ path: string
 postScriptName: string
 ```
 
-系统字体的postScript名称。
+The name of postscript.
 
 **Type:** string
 
@@ -148,7 +140,7 @@ postScriptName: string
 subfamily: string
 ```
 
-系统字体的子字体家族。
+A subset of the font family.
 
 **Type:** string
 
@@ -168,11 +160,7 @@ subfamily: string
 symbolic: boolean
 ```
 
-系统字体是否支持符号字体。
-
-默认值：false
-
-值为true，表示支持符号字体，值为false，表示不支持符号字体。
+Whether symbol fonts are supported.
 
 **Type:** boolean
 
@@ -192,12 +180,7 @@ symbolic: boolean
 weight: int
 ```
 
-系统字体的字重。
-
-取值范围：[100,900]，取值间隔为100，分别对应  
-[FontWeight](../../../reference/apis-arkgraphics2d/js-apis-graphics-text.md#fontweight)枚举中的值。
-
-默认值：100
+The weight of the font.
 
 **Type:** int
 
@@ -217,9 +200,7 @@ weight: int
 width: int
 ```
 
-系统字体的宽度。
-
-取值范围：[1,9]，取值间隔为1，分别对应[FontWidth](../../../reference/apis-arkgraphics2d/js-apis-graphics-text.md#fontwidth)枚举中的值。
+The width of the font style.
 
 **Type:** int
 

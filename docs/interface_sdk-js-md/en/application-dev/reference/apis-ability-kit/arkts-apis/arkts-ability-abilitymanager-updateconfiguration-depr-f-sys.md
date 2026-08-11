@@ -6,7 +6,7 @@
 function updateConfiguration(config: Configuration, callback: AsyncCallback<void>): void
 ```
 
-通过传入要修改的配置项来更新配置。使用callback异步回调。
+Updates the configuration. This API uses an asynchronous callback to return the result.
 
 **Since:** 8
 
@@ -28,8 +28,8 @@ function updateConfiguration(config: Configuration, callback: AsyncCallback<void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| config | [Configuration](arkts-ability-application-configuration-configuration-depr-i.md) | Yes | 新的配置项。 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | 回调函数，当通过修改配置来更新配置成功，err为undefined，否则为错误对象。 |
+| config | [Configuration](arkts-ability-application-configuration-configuration-depr-i.md) | Yes | New configuration. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. If the configuration is updated, **err** is undefined; otherwise, **err** is an error object. |
 
 
 ## updateConfiguration
@@ -38,7 +38,7 @@ function updateConfiguration(config: Configuration, callback: AsyncCallback<void
 function updateConfiguration(config: Configuration): Promise<void>
 ```
 
-通过传入要修改的配置项来更新配置。使用Promise异步回调。
+Updates the configuration. This API uses a promise to return the result.
 
 **Since:** 8
 
@@ -60,11 +60,11 @@ function updateConfiguration(config: Configuration): Promise<void>
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| config | [Configuration](arkts-ability-application-configuration-configuration-depr-i.md) | Yes | 新的配置项。 |
+| config | [Configuration](arkts-ability-application-configuration-configuration-depr-i.md) | Yes | New configuration. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise对象。无返回结果的Promise对象。 |
+| Promise&lt;void&gt; | Promise that returns no value. |
 

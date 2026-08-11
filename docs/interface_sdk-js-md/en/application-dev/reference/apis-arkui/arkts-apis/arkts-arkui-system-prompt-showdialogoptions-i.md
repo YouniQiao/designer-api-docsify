@@ -1,10 +1,10 @@
 # ShowDialogOptions
 
-定义显示对话框的选项。
+Defines the option of show dialog.
 
-**Since:** 3
+**Since:** 11
 
-**ArkTS mode:** ArkTS-Dyn only, since version 3.
+**ArkTS mode:** ArkTS-Dyn only, since version 11.
 
 <!--Device-unnamed-export interface ShowDialogOptions--><!--Device-unnamed-export interface ShowDialogOptions-End-->
 
@@ -22,11 +22,11 @@ import { ShowActionMenuOptions, Button, ShowToastOptions, ShowDialogOptions, Sho
 cancel?: (data: string, code: string) => void
 ```
 
-接口调用失败的回调函数。
+Called when the operation is cancelled.
 
-**Since:** 3
+**Since:** 11
 
-**ArkTS mode:** ArkTS-Dyn only, since version 3.
+**ArkTS mode:** ArkTS-Dyn only, since version 11.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -47,11 +47,11 @@ cancel?: (data: string, code: string) => void
 complete?: (data: string) => void
 ```
 
-接口调用结束的回调函数。
+Called when the dialog box is closed.
 
-**Since:** 3
+**Since:** 11
 
-**ArkTS mode:** ArkTS-Dyn only, since version 3.
+**ArkTS mode:** ArkTS-Dyn only, since version 11.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -71,11 +71,11 @@ complete?: (data: string) => void
 success?: (data: ShowDialogSuccessResponse) => void
 ```
 
-接口调用成功的回调函数。
+Called when the dialog box is displayed.
 
-**Since:** 3
+**Since:** 11
 
-**ArkTS mode:** ArkTS-Dyn only, since version 3.
+**ArkTS mode:** ArkTS-Dyn only, since version 11.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -95,13 +95,13 @@ success?: (data: ShowDialogSuccessResponse) => void
 buttons?: [Button, Button?, Button?]
 ```
 
-对话框中按钮的数组，结构为：{text:'button', color: '#666666'}，支持1-6个按钮。大于6个按钮时弹窗不显示。
+Array of buttons in the dialog box.The array structure is {text:'button', color: '#666666'}.One to three buttons are supported. The first button is of the positiveButton type, the second is of the negativeButton type, and the third is of the neutralButton type.
 
 **Type:** [Button, Button?, Button?]
 
-**Since:** 3
+**Since:** 11
 
-**ArkTS mode:** ArkTS-Dyn only, since version 3.
+**ArkTS mode:** ArkTS-Dyn only, since version 11.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -115,13 +115,13 @@ buttons?: [Button, Button?, Button?]
 message?: string
 ```
 
-文本内容。
+Text body.
 
 **Type:** string
 
-**Since:** 3
+**Since:** 11
 
-**ArkTS mode:** ArkTS-Dyn only, since version 3.
+**ArkTS mode:** ArkTS-Dyn only, since version 11.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -135,13 +135,13 @@ message?: string
 title?: string
 ```
 
-标题文本。
+Title of the text to display.
 
 **Type:** string
 
-**Since:** 3
+**Since:** 11
 
-**ArkTS mode:** ArkTS-Dyn only, since version 3.
+**ArkTS mode:** ArkTS-Dyn only, since version 11.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 

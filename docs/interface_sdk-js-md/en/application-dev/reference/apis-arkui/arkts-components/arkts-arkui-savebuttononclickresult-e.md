@@ -1,6 +1,6 @@
 # SaveButtonOnClickResult
 
-保存控件点击后的授权结果。
+Enumerates the authorization results after the **SaveButton** component is tapped.
 
 **Since:** 10
 
@@ -16,7 +16,7 @@
 SUCCESS = 0
 ```
 
-保存控件点击后权限授权成功。
+Authorization is successful.
 
 **Since:** 10
 
@@ -36,7 +36,7 @@ SUCCESS = 0
 TEMPORARY_AUTHORIZATION_FAILED = 1
 ```
 
-保存控件点击后权限授权失败。
+Authorization fails.
 
 **Since:** 10
 
@@ -56,7 +56,7 @@ TEMPORARY_AUTHORIZATION_FAILED = 1
 CANCELED_BY_USER = 2
 ```
 
-保存控件点击后，弹窗中用户取消授权。仅在调用[userCancelEvent](SaveButtonAttribute#userCancelEvent)并设置参数为true时，回调结果中才会返回该值。
+Authorization is canceled by the user through a dialog box after the **SaveButton** component is clicked. This value is returned in the callback result only when [userCancelEvent](SaveButtonAttribute#userCancelEvent) is triggered with its parameter set to **true**.
 
 **Since:** 21
 

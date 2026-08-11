@@ -6,7 +6,7 @@ typedef struct ArkUI_RoundRectShape ArkUI_RoundRectShapeOption
 
 ## Overview
 
-Round rect shape option.
+Defines a rounded rectangle shape option.
 
 **Since**: 20
 

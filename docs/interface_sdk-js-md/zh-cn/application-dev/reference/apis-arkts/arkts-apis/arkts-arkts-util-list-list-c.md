@@ -10,12 +10,6 @@ List底层通过单向链表实现，每个节点有一个指向后一个元素�
 
 **系统能力：** SystemCapability.Utils.Lang
 
-## 导入模块
-
-```TypeScript
-import { List } from 'kits/@kit.ArkTS';
-```
-
 ## $_iterator
 
 ```TypeScript
@@ -38,7 +32,37 @@ $_iterator(): IterableIterator<T>
 
 | 类型 | 说明 |
 | --- | --- |
-| [IterableIterator](arkts-arkts-iterator-iterableiterator-i.md)&lt;T&gt; |  |
+| IterableIterator&lt;T&gt; |  |
+
+## 示例
+
+```TypeScript
+let list: List<int> = new List<int>();
+list.add(2);
+list.add(4);
+list.add(5);
+list.add(4);
+
+// 使用方法一：
+for (let item of list) {
+  console.info("value: " + item);
+}
+// value: 2
+// value: 4
+// value: 5
+// value: 4
+// 使用方法二：
+let iter = list.$_iterator();
+let temp: IteratorResult<int> = iter.next();
+while(!temp.done) {
+  console.info("value: " + temp.value);
+  temp = iter.next();
+}
+// value: 2
+// value: 4
+// value: 5
+// value: 4
+```
 
 ## [Symbol.iterator]
 
@@ -62,13 +86,13 @@ $_iterator(): IterableIterator<T>
 
 | 类型 | 说明 |
 | --- | --- |
-| [IterableIterator](arkts-arkts-iterator-iterableiterator-i.md)&lt;T&gt; | 返回一个迭代器。 |
+| IterableIterator&lt;T&gt; | 返回一个迭代器。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 10200011 | The Symbol.iterator method cannot be bound. |
+| [10200011](../errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) | The Symbol.iterator method cannot be bound. |
 
 ## 示例
 
@@ -81,24 +105,16 @@ list.add(4);
 
 // 使用方法一：
 for (let item of list) {
-  console.info("value: " + item);
+  console.info("value:", item);
 }
-// value: 2
-// value: 4
-// value: 5
-// value: 4
 
 // 使用方法二：
 let iter = list[Symbol.iterator]();
 let temp: IteratorResult<number> = iter.next();
 while(!temp.done) {
-  console.info("value: " + temp.value);
+  console.info("value:", temp.value);
   temp = iter.next();
 }
-// value: 2
-// value: 4
-// value: 5
-// value: 4
 ```
 
 ## add
@@ -135,9 +151,11 @@ add(element: T): boolean
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 10200011 | The add method cannot be bound. |
+| [10200011](../errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) | The add method cannot be bound. |
 
 ## 示例
+
+ArkTS-Dyn示例：
 
 ```TypeScript
 // 创建支持多种类型元素的List实例
@@ -158,6 +176,24 @@ let result4 = list.add(personInfo);
 console.info("result = ", result4); // result =  true
 let result5 = list.add(false);
 console.info("result = ", result5); // result =  true
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+let list: List<string | int | boolean | object> = new List<string | int | boolean | object>();
+let result1 = list.add("a");
+let result2 = list.add(1);
+let b = [1, 2, 3];
+let result3 = list.add(b);
+class C {
+  name: string = ''
+  age: string = ''
+}
+let c: C = {name : "Dylan", age : "13"};
+let result4 = list.add(c);
+let result5 = list.add(false);
+console.info("result = ", result5) // result =  true
 ```
 
 ## clear
@@ -182,9 +218,11 @@ clear(): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 10200011 | The clear method cannot be bound. |
+| [10200011](../errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) | The clear method cannot be bound. |
 
 ## 示例
+
+ArkTS-Dyn示例：
 
 ```TypeScript
 let list = new List<number>();
@@ -194,6 +232,19 @@ list.add(5);
 list.add(4);
 list.clear();
 let result = list.isEmpty();
+console.info("result:", result);  // result: true
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+let list: List<int> = new List<int>();
+list.add(2);
+list.add(4);
+list.add(5);
+list.add(4);
+list.clear();
+let result = list.isEmpty(); 
 console.info("result:", result);  // result: true
 ```
 
@@ -219,12 +270,20 @@ List的构造函数。
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 10200012 | The List's constructor cannot be directly invoked. |
+| [10200012](../errorcode-utils.md#10200012-构造函数调用异常) | The List's constructor cannot be directly invoked. |
 
 ## 示例
 
+ArkTS-Dyn示例：
+
 ```TypeScript
 let list = new List<string | number | boolean | object>();
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+let list: List<string | int | boolean | object> = new List<string | int | boolean | object>();
 ```
 
 ## convertToArray
@@ -255,12 +314,26 @@ convertToArray(): Array<T>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 10200011 | The convertToArray method cannot be bound. |
+| [10200011](../errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) | The convertToArray method cannot be bound. |
 
 ## 示例
 
+ArkTS-Dyn示例：
+
 ```TypeScript
 let list = new List<number>();
+list.add(2);
+list.add(4);
+list.add(5);
+list.add(4);
+let result = list.convertToArray();
+console.info("result:", result);  // result: 2,4,5,4
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+let list = new List<int>();
 list.add(2);
 list.add(4);
 list.add(5);
@@ -303,7 +376,7 @@ equal(obj: Object): boolean
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 10200011 | The equal method cannot be bound. |
+| [10200011](../errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) | The equal method cannot be bound. |
 
 ## 示例
 
@@ -354,7 +427,21 @@ equal(obj: RecordData): boolean
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 10200011 | The equal method cannot be bound. |
+| [10200011](../errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) | The equal method cannot be bound. |
+
+## 示例
+
+```TypeScript
+let list: List<int> = new List<int>();
+list.add(2);
+list.add(4);
+list.add(5);
+let obj: List<int> = new List<int>();
+obj.add(2);
+obj.add(4);
+obj.add(5);
+let result = list.equal(obj);//如果result为true，表示list与obj相等
+```
 
 ## forEach
 
@@ -385,7 +472,7 @@ forEach(callbackFn: (value: T, index?: number, List?: List<T>) => void, thisArg?
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 10200011 | The forEach method cannot be bound. |
+| [10200011](../errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) | The forEach method cannot be bound. |
 
 ## 示例
 
@@ -471,13 +558,30 @@ get(index: int): T
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 10200011 | The get method cannot be bound. |
-| 10200001 | The value of index is out of range.<br>**适用版本：** 23+  **ArkTS模式：** 该错误码仅适用于ArkTS-Sta。 |
+| [10200011](../errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) | The get method cannot be bound. |
+| [10200001](../errorcode-utils.md#10200001-参数范围越界错误) | The value of index is out of range.<br>**适用版本：** 23+  **ArkTS模式：** 该错误码仅适用于ArkTS-Sta。 |
 
 ## 示例
 
+ArkTS-Dyn示例：
+
 ```TypeScript
 let list = new List<number>();
+list.add(2);
+list.add(4);
+list.add(5);
+list.add(2);
+list.add(1);
+list.add(2);
+list.add(4);
+let result = list.get(2);
+console.info("result:", result);  // result: 5
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+let list: List<int> = new List<int>();
 list.add(2);
 list.add(4);
 list.add(5);
@@ -517,13 +621,27 @@ getFirst(): T
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 10200011 | The getFirst method cannot be bound. |
-| 10200010 | Container is empty.<br>**适用版本：** 23+  **ArkTS模式：** 该错误码仅适用于ArkTS-Sta。 |
+| [10200011](../errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) | The getFirst method cannot be bound. |
+| [10200010](../errorcode-utils.md#10200010-容器为空) | Container is empty.<br>**适用版本：** 23+  **ArkTS模式：** 该错误码仅适用于ArkTS-Sta。 |
 
 ## 示例
 
+ArkTS-Dyn示例：
+
 ```TypeScript
 let list = new List<number>();
+list.add(2);
+list.add(4);
+list.add(5);
+list.add(4);
+let result = list.getFirst();
+console.info("result:", result);  // result: 2
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+let list = new List<int>();
 list.add(2);
 list.add(4);
 list.add(5);
@@ -572,9 +690,11 @@ getIndexOf(element: T): int
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 10200011 | The getIndexOf method cannot be bound. |
+| [10200011](../errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) | The getIndexOf method cannot be bound. |
 
 ## 示例
+
+ArkTS-Dyn示例：
 
 ```TypeScript
 let list = new List<number>();
@@ -587,6 +707,21 @@ list.add(2);
 list.add(4);
 let result = list.getIndexOf(2);
 console.info("result:", result); // result: 0
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+let list: List<int> = new List<int>();
+list.add(2);
+list.add(4);
+list.add(5);
+list.add(2);
+list.add(1);
+list.add(2);
+list.add(4);
+let result = list.getIndexOf(2); 
+console.info("result = ", result); // result = 0
 ```
 
 ## getLast
@@ -617,13 +752,27 @@ getLast(): T
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 10200011 | The getLast method cannot be bound. |
-| 10200010 | Container is empty.<br>**适用版本：** 23+  **ArkTS模式：** 该错误码仅适用于ArkTS-Sta。 |
+| [10200011](../errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) | The getLast method cannot be bound. |
+| [10200010](../errorcode-utils.md#10200010-容器为空) | Container is empty.<br>**适用版本：** 23+  **ArkTS模式：** 该错误码仅适用于ArkTS-Sta。 |
 
 ## 示例
 
+ArkTS-Dyn示例：
+
 ```TypeScript
 let list = new List<number>();
+list.add(2);
+list.add(4);
+list.add(5);
+list.add(4);
+let result = list.getLast();
+console.info("result:", result);  // result: 4
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+let list = new List<int>();
 list.add(2);
 list.add(4);
 list.add(5);
@@ -672,9 +821,11 @@ getLastIndexOf(element: T): int
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 10200011 | The getLastIndexOf method cannot be bound. |
+| [10200011](../errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) | The getLastIndexOf method cannot be bound. |
 
 ## 示例
+
+ArkTS-Dyn示例：
 
 ```TypeScript
 let list = new List<number>();
@@ -687,6 +838,21 @@ list.add(2);
 list.add(4);
 let result = list.getLastIndexOf(2);
 console.info("result:", result); // result: 5
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+let list: List<int> = new List<int>();
+list.add(2);
+list.add(4);
+list.add(5);
+list.add(2);
+list.add(1);
+list.add(2);
+list.add(4);
+let result = list.getLastIndexOf(2);
+console.info("result = ", result); // result = 5
 ```
 
 ## getSubList
@@ -730,13 +896,27 @@ getSubList(fromIndex: int, toIndex: int): List<T>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 10200011 | The getSubList method cannot be bound. |
-| 10200001 | The value of fromIndex or toIndex is out of range. |
+| [10200011](../errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) | The getSubList method cannot be bound. |
+| [10200001](../errorcode-utils.md#10200001-参数范围越界错误) | The value of fromIndex or toIndex is out of range. |
 
 ## 示例
 
+ArkTS-Dyn示例：
+
 ```TypeScript
 let list = new List<number>();
+list.add(2);
+list.add(4);
+list.add(6);
+list.add(8);
+let result = list.getSubList(1, 3);
+console.info("result:", result.convertToArray());  // result: 4,6
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+let list: List<int> = new List<int>();
 list.add(2);
 list.add(4);
 list.add(6);
@@ -779,7 +959,7 @@ has(element: T): boolean
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 10200011 | The has method cannot be bound. |
+| [10200011](../errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) | The has method cannot be bound. |
 
 ## 示例
 
@@ -825,13 +1005,25 @@ insert(element: T, index: int): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 10200011 | The insert method cannot be bound. |
-| 10200001 | The value of index is out of range. |
+| [10200011](../errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) | The insert method cannot be bound. |
+| [10200001](../errorcode-utils.md#10200001-参数范围越界错误) | The value of index is out of range. |
 
 ## 示例
 
+ArkTS-Dyn示例：
+
 ```TypeScript
 let list = new List<string | number | boolean>();
+list.insert("A", 0);
+list.insert(0, 1);
+list.insert(true, 2);
+console.info("result:", list.get(1));  // result: 0
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+let list = new List<string | int | boolean>();
 list.insert("A", 0);
 list.insert(0, 1);
 list.insert(true, 2);
@@ -866,12 +1058,26 @@ isEmpty(): boolean
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 10200011 | The isEmpty method cannot be bound. |
+| [10200011](../errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) | The isEmpty method cannot be bound. |
 
 ## 示例
 
+ArkTS-Dyn示例：
+
 ```TypeScript
 let list = new List<number>();
+list.add(2);
+list.add(4);
+list.add(5);
+list.add(4);
+let result = list.isEmpty();
+console.info("result:", result);  // result: false
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+let list = new List<int>();
 list.add(2);
 list.add(4);
 list.add(5);
@@ -914,9 +1120,11 @@ remove(element: T): boolean
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 10200011 | The remove method cannot be bound. |
+| [10200011](../errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) | The remove method cannot be bound. |
 
 ## 示例
+
+ArkTS-Dyn示例：
 
 ```TypeScript
 let list = new List<number>();
@@ -926,6 +1134,18 @@ list.add(5);
 list.add(4);
 let result = list.remove(2);
 console.info("result:", result);  // result: true
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+let list: List<int> = new List<int>();
+list.add(2);
+list.add(4);
+list.add(5);
+list.add(4);
+let result = list.remove(2);
+console.info("result = ", result); // result = true
 ```
 
 ## removeByIndex
@@ -962,8 +1182,8 @@ removeByIndex(index: number): T
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 10200011 | The removeByIndex method cannot be bound. |
-| 10200001 | The value of index is out of range. |
+| [10200011](../errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) | The removeByIndex method cannot be bound. |
+| [10200001](../errorcode-utils.md#10200001-参数范围越界错误) | The value of index is out of range. |
 
 ## 示例
 
@@ -1012,7 +1232,20 @@ removeByIndex(index: int): T | undefined
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 10200001 | The value of "index" is out of range. It must be >= 0 && <= \\${length - 1}. Received value is: \\${index} |
+| [10200001](../errorcode-utils.md#10200001-参数范围越界错误) | The value of "index" is out of range. It must be >= 0 && <= \\${length - 1}. Received value is: \\${index} |
+
+## 示例
+
+```TypeScript
+let list: List<int> = new List<int>();
+list.add(2);
+list.add(4);
+list.add(5);
+list.add(2);
+list.add(4);
+let result = list.removeByIndex(2);
+console.info("result:", result);  // result: 5
+```
 
 ## replaceAllElements
 
@@ -1043,7 +1276,7 @@ replaceAllElements(callbackFn: (value: T, index?: number, list?: List<T>) => T, 
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 10200011 | The replaceAllElements method cannot be bound. |
+| [10200011](../errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) | The replaceAllElements method cannot be bound. |
 
 ## 示例
 
@@ -1131,13 +1364,27 @@ set(index: int, element: T): T
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 10200011 | The set method cannot be bound. |
-| 10200001 | The value of index is out of range. |
+| [10200011](../errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) | The set method cannot be bound. |
+| [10200001](../errorcode-utils.md#10200001-参数范围越界错误) | The value of index is out of range. |
 
 ## 示例
 
+ArkTS-Dyn示例：
+
 ```TypeScript
 let list = new List<number | string>();
+list.add(2);
+list.add(4);
+list.add(5);
+list.add(4);
+let result = list.set(2, "b");
+console.info("result:", JSON.stringify(list));  // result: {"0":2,"1":4,"2":"b","3":4}
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+let list = new List<int | string>();
 list.add(2);
 list.add(4);
 list.add(5);
@@ -1174,9 +1421,11 @@ sort(comparator: ListComparatorFn<T>): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 10200011 | The sort method cannot be bound. |
+| [10200011](../errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) | The sort method cannot be bound. |
 
 ## 示例
+
+ArkTS-Dyn示例：
 
 ```TypeScript
 let list = new List<number>();
@@ -1184,10 +1433,31 @@ list.add(2);
 list.add(1);
 list.add(3);
 list.add(4);
-list.sort((a: number, b: number) => a - b);  // 结果为升序排列
+list.sort((a: number, b: number) => a - b); // 结果为升序排列
 console.info("result:", list.convertToArray());  // result: 1,2,3,4
+list.sort((a: number, b: number) => b - a); // 结果为降序排列
+console.info("result:", list.convertToArray());  // result: 4,3,2,1
+```
 
-list.sort((a: number, b: number) => b - a);  // 结果为降序排列
+ArkTS-Sta示例：
+
+```TypeScript
+import { ListComparatorFn } from '@kit.ArkTS';
+
+let list: List<int> = new List<int>();
+list.add(2);
+list.add(4);
+list.add(5);
+list.add(4);
+let ListCb1: ListComparatorFn<int> = (a: int, b: int): double => {
+  return a - b;
+}
+let ListCb2: ListComparatorFn<int> = (a: int, b: int): double => {
+  return b - a;
+}
+list.sort(ListCb1); // 结果为升序排列
+console.info("result:", list.convertToArray());  // result: 1,2,3,4
+list.sort(ListCb2); // 结果为降序排列
 console.info("result:", list.convertToArray());  // result: 4,3,2,1
 ```
 

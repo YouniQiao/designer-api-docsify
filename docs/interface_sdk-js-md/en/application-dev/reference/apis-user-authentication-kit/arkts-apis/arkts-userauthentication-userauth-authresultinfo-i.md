@@ -1,6 +1,6 @@
 # AuthResultInfo
 
-表示认证结果信息，用于描述认证结果。
+Represents the authentication result.
 
 **Since:** 9
 
@@ -26,7 +26,7 @@ import { userAuth } from 'kits/@kit.UserAuthenticationKit';
 lockoutDuration?: number
 ```
 
-认证操作的锁定时长，时间单位为毫秒ms。
+Lock duration of the authentication operation, in ms.
 
 **Type:** number
 
@@ -48,7 +48,7 @@ lockoutDuration?: number
 remainAttempts?: number
 ```
 
-剩余的认证尝试次数。
+Number of remaining authentication attempts.
 
 **Type:** number
 
@@ -70,7 +70,7 @@ remainAttempts?: number
 result: number
 ```
 
-认证结果。
+Authentication result.
 
 **Type:** number
 
@@ -92,7 +92,7 @@ result: number
 token?: Uint8Array
 ```
 
-用户身份认证通过的凭证。
+Token that has passed the user identity authentication.
 
 **Type:** Uint8Array
 

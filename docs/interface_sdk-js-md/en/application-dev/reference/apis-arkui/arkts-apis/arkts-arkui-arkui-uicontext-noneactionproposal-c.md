@@ -1,6 +1,6 @@
 # NoneActionProposal
 
-类NoneActionProposal。
+Class NoneActionProposal.
 
 **Inheritance/Implementation:** NoneActionProposal extends [BaseGestureHandlingProposal](arkts-arkui-arkui-uicontext-basegesturehandlingproposal-c.md)
 
@@ -24,7 +24,7 @@ import { OverlayManager, FrameCallback, ResolvedUIContext, NodeRenderStateChange
 constructor()
 ```
 
-UIContext 构造函数
+NoneActionProposal constructor.
 
 **Since:** 26.0.0
 

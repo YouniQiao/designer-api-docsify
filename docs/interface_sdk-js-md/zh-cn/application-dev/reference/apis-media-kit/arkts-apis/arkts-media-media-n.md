@@ -11,12 +11,6 @@
 **系统能力：** 
 - API版本12+：SystemCapability.Multimedia.Media.Core
 
-## 导入模块
-
-```TypeScript
-import { media } from 'kits/@kit.MediaKit';
-```
-
 ## 汇总
 
 ### 函数

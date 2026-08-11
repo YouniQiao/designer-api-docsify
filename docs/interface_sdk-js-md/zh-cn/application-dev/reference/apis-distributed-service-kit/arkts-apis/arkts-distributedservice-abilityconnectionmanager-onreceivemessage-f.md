@@ -1,11 +1,5 @@
 # onReceiveMessage
 
-## 导入模块
-
-```TypeScript
-import { abilityConnectionManager } from 'kits/@kit.DistributedServiceKit';
-```
-
 ## onReceiveMessage
 
 ```TypeScript
@@ -36,5 +30,17 @@ Registers receiveMessage event.
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified.2. Incorrect parameter types. |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified.2. Incorrect parameter types. |
+
+## 示例
+
+```TypeScript
+import abilityConnectionManager from '@ohos.distributedsched.abilityConnectionManager';
+import hilog from '@ohos.hilog';
+
+let sessionId = 100;
+abilityConnectionManager.onReceiveMessage(sessionId,(callbackInfo) => {
+  hilog.info(0x0000, 'testTag', 'receiveMessage, sessionId is', callbackInfo.sessionId);
+});
+```
 

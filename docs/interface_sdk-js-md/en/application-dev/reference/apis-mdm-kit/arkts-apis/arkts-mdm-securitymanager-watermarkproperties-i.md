@@ -1,6 +1,6 @@
 # WatermarkProperties
 
-水印属性。
+Defines watermark properties.
 
 **Since:** 26.0.0
 
@@ -22,7 +22,7 @@ import { securityManager } from 'kits/@kit.MDMKit';
 intervalsCol: number
 ```
 
-显示水印的列数。
+Number of columns for displaying the watermark.
 
 **Type:** number
 
@@ -42,7 +42,7 @@ intervalsCol: number
 intervalsRow: number
 ```
 
-显示水印的行数。
+Number of rows for displaying the watermark.
 
 **Type:** number
 

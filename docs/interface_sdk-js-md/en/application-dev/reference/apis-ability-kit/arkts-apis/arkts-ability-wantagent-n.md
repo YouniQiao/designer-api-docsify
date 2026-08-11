@@ -1,8 +1,8 @@
 # wantAgent
 
-WantAgent模块封装了[Want](arkts-ability-app-ability-want-want-c.md)对象，允许应用程序在未来的某个时间点触发WantAgent实例执行指定操作（如启动Ability、发送公共事件等）。
+The WantAgent module encapsulates a [Want](arkts-ability-app-ability-want-want-c.md) object, enabling an application to trigger a WantAgent object to perform specified operations (such as starting an ability or publishing a common event)at a future time.
 
-该模块提供了创建WantAgent实例、获取WantAgent实例所属应用的包名、获取WantAgent实例所属应用的UID、主动触发WantAgent实例、判断两个WantAgent实例是否相等等功能。WantAgent的一个典型应用场景是通知处理。例如，当用户点击通知时，会触发WantAgent的[trigger](arkts-ability-wantagent-trigger-f.md#trigger)接口，并拉起目标应用。具体使用请参考[Notification](../../../notification/notification-with-wantagent.md)。
+The module provides the APIs for creating a WantAgent object, obtaining the bundle name and UID of the application to which a WantAgent object belongs, proactively triggering a WantAgent object, and checking whether two WantAgent objects are the same. A typical use scenario of WantAgent is notification processing. For example, when a user touches a notification, the [trigger](arkts-ability-wantagent-trigger-f.md#trigger) API of WantAgent is triggered and the target application is started. For details, see [Notification](../../../notification/notification-with-wantagent.md).
 
 **Since:** 9
 
@@ -24,66 +24,66 @@ import { WantAgent } from 'kits/@kit.AbilityKit';
 
 | Name | Description |
 | --- | --- |
-| [getBundleName](arkts-ability-wantagent-getbundlename-f.md#getbundlename) | 获取WantAgent实例所属应用的包名，使用callback异步回调。 |
-| [getBundleName](arkts-ability-wantagent-getbundlename-f.md#getbundlename-1) | 获取WantAgent实例所属应用的包名。使用Promise异步回调。 |
-| [getUid](arkts-ability-wantagent-getuid-f.md#getuid) | 获取WantAgent实例所属应用的UID，使用callback异步回调。 |
-| [getUid](arkts-ability-wantagent-getuid-f.md#getuid-1) | 获取WantAgent实例所属应用的UID。使用Promise异步回调。 |
-| [cancel](arkts-ability-wantagent-cancel-f.md#cancel) | 取消WantAgent实例，使用callback异步回调。 |
-| [cancel](arkts-ability-wantagent-cancel-f.md#cancel-1) | 取消WantAgent实例。使用Promise异步回调。 |
-| [trigger](arkts-ability-wantagent-trigger-f.md#trigger) | 触发WantAgent实例，执行指定的操作（启动Ability、发送公共事件等）。使用callback异步回调。 |
-| [equal](arkts-ability-wantagent-equal-f.md#equal) | 判断两个WantAgent实例是否相等，使用callback异步回调，以此来确定是否是来自同一应用的相同操作。当两个WantAgent实例由当前用户下的同一应用使用相同的WantAgentInfo信息创建，并且实例未被cancel取消，这两个实例相等。在通知（携带WantAgent实例）场景，通知更新时会比较2个通知中的WantAgent实例，不相等时会把旧通知的WantAgent实例删除。 |
-| [equal](arkts-ability-wantagent-equal-f.md#equal-1) | 判断两个WantAgent实例是否相等，使用Promise异步回调，以此来确定是否是来自同一应用的相同操作。当两个WantAgent实例由当前用户下的同一应用使用相同的WantAgentInfo信息创建，并且实例未被cancel取消，这两个实例相等。在通知（携带WantAgent实例）场景，通知更新时会比较2个通知中的WantAgent实例，不相等时会把旧通知的WantAgent实例删除。 |
-| [getWantAgent](arkts-ability-wantagent-getwantagent-f.md#getwantagent) | 创建WantAgent，使用callback异步回调。创建成功返回WantAgent对象，创建失败返回空值。 |
-| [getWantAgent](arkts-ability-wantagent-getwantagent-f.md#getwantagent-1) | 创建WantAgent。使用Promise异步回调。创建成功返回WantAgent对象，创建失败返回空值。 |
-| [getOperationType](arkts-ability-wantagent-getoperationtype-f.md#getoperationtype) | 获取一个WantAgent实例的OperationType信息，使用callback异步回调。 |
-| [getOperationType](arkts-ability-wantagent-getoperationtype-f.md#getoperationtype-1) | 获取一个WantAgent实例的OperationType信息。使用Promise异步回调。 |
+| [getBundleName](arkts-ability-wantagent-getbundlename-f.md#getbundlename) | Obtains the bundle name of a WantAgent object.This API uses an asynchronous callback to return the result. |
+| [getBundleName](arkts-ability-wantagent-getbundlename-f.md#getbundlename-1) | Obtains the bundle name of a WantAgent object.This API uses a promise to return the result. |
+| [getUid](arkts-ability-wantagent-getuid-f.md#getuid) | Obtains the user ID of a WantAgent object.This API uses an asynchronous callback to return the result. |
+| [getUid](arkts-ability-wantagent-getuid-f.md#getuid-1) | Obtains the user ID of a WantAgent object.This API uses a promise to return the result. |
+| [cancel](arkts-ability-wantagent-cancel-f.md#cancel) | Cancels a WantAgent object.This API uses an asynchronous callback to return the result. |
+| [cancel](arkts-ability-wantagent-cancel-f.md#cancel-1) | Cancels a WantAgent object.This API uses a promise to return the result. |
+| [trigger](arkts-ability-wantagent-trigger-f.md#trigger) | Proactively triggers a WantAgent object.This API uses an asynchronous callback to return the result. |
+| [equal](arkts-ability-wantagent-equal-f.md#equal) | Checks whether two WantAgent objects are equal, so as to determine whether the same operation is from the same application.This API uses an asynchronous callback to return the result. |
+| [equal](arkts-ability-wantagent-equal-f.md#equal-1) | Checks whether two WantAgent objects are equal, so as to determine whether the same operation is from the same application.This API uses a promise to return the result. |
+| [getWantAgent](arkts-ability-wantagent-getwantagent-f.md#getwantagent) | Obtains a WantAgent object.This API uses an asynchronous callback to return the result.If the creation fails, a null WantAgent object is returned.  &lt;p&gt;**NOTE：**:&lt;br&gt;Third-party applications can set only their own abilities.&lt;/p&gt; |
+| [getWantAgent](arkts-ability-wantagent-getwantagent-f.md#getwantagent-1) | Obtains a WantAgent object.This API uses a promise to return the result.If the creation fails, a null WantAgent object is returned.  &lt;p&gt;**NOTE：**:&lt;br&gt;Third-party applications can set only their own abilities.&lt;/p&gt; |
+| [getOperationType](arkts-ability-wantagent-getoperationtype-f.md#getoperationtype) | Obtains the operation type of a WantAgent object.This API uses an asynchronous callback to return the result. |
+| [getOperationType](arkts-ability-wantagent-getoperationtype-f.md#getoperationtype-1) | Obtains the operation type of a WantAgent object.This API uses a promise to return the result. |
 
 <!--Del-->
 ### Functions（系统接口）
 
 | Name | Description |
 | --- | --- |
-| [getWant](arkts-ability-wantagent-getwant-f-sys.md#getwant) | 获取WantAgent对象的want。使用callback异步回调。 |
-| [getWant](arkts-ability-wantagent-getwant-f-sys.md#getwant-1) | 获取WantAgent对象的want。使用Promise异步回调。 |
-| [triggerAsync](arkts-ability-wantagent-triggerasync-f-sys.md#triggerasync) | 主动触发WantAgent实例，即按照WantAgent实例中已封装的指定操作和参数等信息执行。使用Promise异步回调。仅当入参agent为本地WantAgent实例时需要申请: ohos.permission.TRIGGER_LOCAL_WANTAGENT permission. |
-| [setWantAgentMultithreading](arkts-ability-wantagent-setwantagentmultithreading-f-sys.md#setwantagentmultithreading) | 开启或者关闭WantAgent多线程传递功能。 |
-| [createLocalWantAgent](arkts-ability-wantagent-createlocalwantagent-f-sys.md#createlocalwantagent) | 创建本地WantAgent实例。 |
-| [isLocalWantAgent](arkts-ability-wantagent-islocalwantagent-f-sys.md#islocalwantagent) | 判断WantAgent实例是否为本地实例。 |
+| [getWant](arkts-ability-wantagent-getwant-f-sys.md#getwant) | Obtains the Want in a WantAgent object.This API uses an asynchronous callback to return the result. |
+| [getWant](arkts-ability-wantagent-getwant-f-sys.md#getwant-1) | Obtains the Want in a WantAgent object.This API uses a promise to return the result. |
+| [triggerAsync](arkts-ability-wantagent-triggerasync-f-sys.md#triggerasync) | Asynchronously triggers a predefined operation encration encapsulated in a Wantagent with specified trigger information.If the specified wantAgent is local, you need to apply for permission:ohos.permission.TRIGGER_LOCAL_WANTAGENT permission. |
+| [setWantAgentMultithreading](arkts-ability-wantagent-setwantagentmultithreading-f-sys.md#setwantagentmultithreading) | Enables or disables the WantAgent multithreading feature. |
+| [createLocalWantAgent](arkts-ability-wantagent-createlocalwantagent-f-sys.md#createlocalwantagent) | Create a local WantAgent object.The WantAgent created by this interface stores data on the client side and is not managed by the WantAgent servcer.If this WantAgent object is passed across processes,its contained data will be serialized and transmitted to the target process. |
+| [isLocalWantAgent](arkts-ability-wantagent-islocalwantagent-f-sys.md#islocalwantagent) | Checks whether the specified WantAgent is local. |
 <!--DelEnd-->
 
 ### Interfaces
 
 | Name | Description |
 | --- | --- |
-| [CompleteData](arkts-ability-wantagent-completedata-i.md) | 表示主动触发WantAgent返回的数据。 |
+| [CompleteData](arkts-ability-wantagent-completedata-i.md) | Describes the data returned by the operation of proactive triggering a WantAgent object. |
 
 ### Enums
 
 | Name | Description |
 | --- | --- |
-| [WantAgentFlags](arkts-ability-wantagent-wantagentflags-e.md) | 表示WantAgent行为控制标志，用于配置WantAgent的创建和触发行为。 |
-| [OperationType](arkts-ability-wantagent-operationtype-e.md) | 表示WantAgent支持的操作类型。 |
+| [WantAgentFlags](arkts-ability-wantagent-wantagentflags-e.md) | Enumerates the flags used by the WantAgent objects. |
+| [OperationType](arkts-ability-wantagent-operationtype-e.md) | Enumerates the operation types of the WantAgent objects. |
 
 <!--Del-->
 ### Enums（系统接口）
 
 | Name | Description |
 | --- | --- |
-| [OperationType](arkts-ability-wantagent-operationtype-e-sys.md) | 表示WantAgent支持的操作类型。 |
+| [OperationType](arkts-ability-wantagent-operationtype-e-sys.md) | Enumerates the operation types of the WantAgent objects. |
 <!--DelEnd-->
 
 ### Types
 
 | Name | Description |
 | --- | --- |
-| [TriggerInfo](arkts-ability-wantagent-triggerinfo-t.md) | TriggerInfo对象。 |
-| [WantAgentInfo](arkts-ability-wantagent-wantagentinfo-t.md) | WantAgentInfo对象。 |
+| [TriggerInfo](arkts-ability-wantagent-triggerinfo-t.md) | Defines the TriggerInfo object. |
+| [WantAgentInfo](arkts-ability-wantagent-wantagentinfo-t.md) | Defines the WantAgentInfo object. |
 
 <!--Del-->
 ### Types（系统接口）
 
 | Name | Description |
 | --- | --- |
-| [LocalWantAgentInfo](arkts-ability-wantagent-localwantagentinfo-t-sys.md) | LocalWantAgentInfo对象。 |
+| [LocalWantAgentInfo](arkts-ability-wantagent-localwantagentinfo-t-sys.md) | Provides the information required to create a local WantAgent. |
 <!--DelEnd-->
 

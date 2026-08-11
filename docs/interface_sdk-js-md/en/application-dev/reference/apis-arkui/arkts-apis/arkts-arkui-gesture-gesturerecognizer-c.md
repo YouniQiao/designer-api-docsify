@@ -1,6 +1,6 @@
 # GestureRecognizer
 
-手势识别器对象。
+Defines the gesture recognizer.
 
 **Since:** 23
 
@@ -16,7 +16,7 @@
 getEventTargetInfo(): EventTargetInfo
 ```
 
-返回当前手势识别器对应组件的信息。
+Returns the event target information of the component.
 
 **Since:** 23
 
@@ -32,7 +32,7 @@ getEventTargetInfo(): EventTargetInfo
 
 | Type | Description |
 | --- | --- |
-| [EventTargetInfo](arkts-arkui-eventtargetinfo-c.md) | 当前手势识别器对应组件的信息。 |
+| [EventTargetInfo](arkts-arkui-eventtargetinfo-c.md) | the event target information of the component. |
 
 ## getFingerCount
 
@@ -40,7 +40,7 @@ getEventTargetInfo(): EventTargetInfo
 getFingerCount(): int
 ```
 
-返回预设手指识别数阈值。
+Returns the tap gesture's finger count.
 
 **Since:** 23
 
@@ -56,7 +56,7 @@ getFingerCount(): int
 
 | Type | Description |
 | --- | --- |
-| int | 预设手指识别数阈值。&lt;br/&gt;取值范围：[1, 10], 整数。 |
+| int | the finger count of the tap gesture. |
 
 ## getState
 
@@ -64,7 +64,7 @@ getFingerCount(): int
 getState(): GestureRecognizerState
 ```
 
-返回当前手势识别器的状态。
+Returns the gesture recognizer's state.
 
 **Since:** 23
 
@@ -80,7 +80,7 @@ getState(): GestureRecognizerState
 
 | Type | Description |
 | --- | --- |
-| [GestureRecognizerState](arkts-arkui-gesturerecognizerstate-e.md) | 当前手势识别器的状态。 |
+| [GestureRecognizerState](arkts-arkui-gesturerecognizerstate-e.md) | the gesture recognizer's state |
 
 ## getTag
 
@@ -88,7 +88,7 @@ getState(): GestureRecognizerState
 getTag(): string
 ```
 
-返回当前手势识别器的tag。
+Returns the gesture's tag.
 
 **Since:** 23
 
@@ -104,7 +104,7 @@ getTag(): string
 
 | Type | Description |
 | --- | --- |
-| string | 当前手势识别器的标志。 |
+| string | the gesture's tag |
 
 ## getType
 
@@ -112,7 +112,7 @@ getTag(): string
 getType(): GestureControl.GestureType
 ```
 
-返回当前手势识别器的类型。
+Returns the gesture's type.
 
 **Since:** 23
 
@@ -128,7 +128,7 @@ getType(): GestureControl.GestureType
 
 | Type | Description |
 | --- | --- |
-| GestureControl.GestureType | 当前手势识别器的类型。 |
+| GestureControl.GestureType | the gesture's type |
 
 ## isBuiltIn
 
@@ -136,7 +136,7 @@ getType(): GestureControl.GestureType
 isBuiltIn(): boolean
 ```
 
-返回当前手势识别器是否为系统内置手势。
+Returns whether the gesture recognizer is built in recognizer.
 
 **Since:** 23
 
@@ -152,7 +152,7 @@ isBuiltIn(): boolean
 
 | Type | Description |
 | --- | --- |
-| boolean | 当前手势识别器是否为系统内置手势。true表示手势识别器为系统内置手势，false表示非系统内置手势。 |
+| boolean | true is built in recognizer, false is not built in recognizer |
 
 ## isEnabled
 
@@ -160,7 +160,7 @@ isBuiltIn(): boolean
 isEnabled(): boolean
 ```
 
-返回当前手势识别器的使能状态。
+Returns whether the gesture recognizer is enabled.
 
 **Since:** 23
 
@@ -176,7 +176,7 @@ isEnabled(): boolean
 
 | Type | Description |
 | --- | --- |
-| boolean | 当前手势识别器的使能状态。true表示当前手势识别器能够回调应用事件，false表示当前手势识别器不回调应用事件。 |
+| boolean | true is enabled, false is not enabled |
 
 ## isFingerCountLimit
 
@@ -184,7 +184,7 @@ isEnabled(): boolean
 isFingerCountLimit(): boolean
 ```
 
-返回预设手势是否会检测触摸屏幕上手指识别数量。
+Returns the tap gesture's limitFingerCount.
 
 **Since:** 23
 
@@ -200,7 +200,7 @@ isFingerCountLimit(): boolean
 
 | Type | Description |
 | --- | --- |
-| boolean | 预设手势是否会检测触摸屏幕上手指识别数量。当绑定手势事件且会检测触摸屏幕上手指的数量时，返回true。当绑定手势事件且不会检测触摸屏幕上手指的数量时，返回false。 |
+| boolean | the limitFingerCount of the tap gesture. |
 
 ## isHostBelongsTo
 
@@ -208,7 +208,7 @@ isFingerCountLimit(): boolean
 isHostBelongsTo(uniqueId: int): boolean
 ```
 
-返回当前手势识别器绑定节点是否为传入组件的后代节点。
+Check whether the current gesture binding node is a descendant of the passed-in component.
 
 **Since:** 26.0.0
 
@@ -224,13 +224,13 @@ isHostBelongsTo(uniqueId: int): boolean
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| uniqueId | int | Yes | 组件的唯一ID。可以通过[getUniqueId](arkts-arkui-eventtargetinfo-c.md#getuniqueid)接口获取该ID。 |
+| uniqueId | int | Yes | the unique id of the component. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| boolean | 当前手势识别器绑定节点是否为传入组件的后代节点。true表示当前绑定节点为传入组件的后代节点，false表示当前绑定节点非传入组件的后代节点。 |
+| boolean | the query result. |
 
 ## isValid
 
@@ -238,7 +238,7 @@ isHostBelongsTo(uniqueId: int): boolean
 isValid(): boolean
 ```
 
-返回当前手势识别器是否有效。
+Returns whether the gesture recognizer is valid.
 
 **Since:** 23
 
@@ -254,7 +254,7 @@ isValid(): boolean
 
 | Type | Description |
 | --- | --- |
-| boolean | 当前手势识别器是否有效。&lt;br/&gt;当该识别器绑定的组件被析构或该识别器不在响应链上时返回false。&lt;br/&gt;当该识别器绑定的组件未被析构且该识别器在响应链上时返回true。 |
+| boolean | true is valid, false is invalid |
 
 ## preventBegin
 
@@ -262,8 +262,9 @@ isValid(): boolean
 preventBegin(): void
 ```
 
-在手指全部抬起前阻止手势识别器参与当前手势识别。如果系统已确定该手势识别器的结果（无论成功与否），调用此接口将无效。此方法与GestureRecognizer.[setEnabled](arkts-arkui-gesturerecognizer-c.md#setenabled)(isEnabled: boolean)不同，  
-[setEnabled](arkts-arkui-gesturerecognizer-c.md#setenabled)并不会阻止手势识别器对象参与手势识别过程，而只会影响手势对应的回调函数是否执行。
+Prevent the gesture recognizer from participating in this gesture recognition until all fingers are lifted.If the system has already made out the result of this gesture recognizer (success and failure), calling this function will have no any effect.
+
+[Note]: This method is different from GestureRecognizer.setEnabled(isEnabled: boolean), setEnabled does not prevent a gesture recognizer object from participating in the gesture recognition process, but only affects whether the gesture's corresponding callback function is executed.
 
 **Since:** 23
 
@@ -281,7 +282,7 @@ preventBegin(): void
 setEnabled(isEnabled: boolean): void
 ```
 
-设置当前手势识别器的使能状态。
+set the enabled state of the gesture recognizer.
 
 **Since:** 23
 
@@ -297,5 +298,5 @@ setEnabled(isEnabled: boolean): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| isEnabled | boolean | Yes | 手势识别器的使能状态。true表示当前手势识别器能够回调应用事件，false表示当前手势识别器不回调应用事件。 |
+| isEnabled | boolean | Yes | Indicates the enabled state. |
 

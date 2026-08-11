@@ -10,12 +10,6 @@
 
 **系统能力：** SystemCapability.DistributedHardware.DeviceManager
 
-## 导入模块
-
-```TypeScript
-import { distributedDeviceManager } from 'kits/@kit.DistributedServiceKit';
-```
-
 ## bindTarget
 
 ```TypeScript
@@ -46,10 +40,10 @@ bindTarget(deviceId: string, bindParam: { [key: string]: Object; }, callback: As
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter type; 3. Parameter verification failed; 4. The size of specified deviceId is greater than 255. |
-| 11600101 | Failed to execute the function. |
-| 11600103 | Authentication unavailable. |
-| 201 | Permission verification failed. The application does not have the permission required to call the API. |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter type; 3. Parameter verification failed; 4. The size of specified deviceId is greater than 255. |
+| [11600101](../../apis-distributedservice-kit/errorcode-device-manager.md#11600101-服务调用异常) | Failed to execute the function. |
+| [11600103](../../apis-distributedservice-kit/errorcode-device-manager.md#11600103-认证业务不可用) | Authentication unavailable. |
+| [201](../../errorcode-universal.md#201-权限校验失败) | Permission verification failed. The application does not have the permission required to call the API. |
 
 ## 示例
 
@@ -111,16 +105,16 @@ bindTarget(deviceId: string, bindParam: Record<string, int | string>, callback: 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | deviceId | string | 是 | 设备标识。长度范围1~255字符。 |
-| bindParam | [Record](../../apis-default/arkts-apis/arkts-record-t.md)&lt;string, int \| string&gt; | 是 | 认证参数。由开发者自行决定传入的键值对。 默认会携带以下key值： &lt;br&gt;bindType 此值是绑定的类型，必填。 &lt;br /&gt;-1：PIN码。 &lt;br&gt;targetPkgName 绑定目标的包名。 &lt;br&gt;appName 尝试绑定目标的应用程序名称。 &lt;br&gt;appOperation 应用程序要绑定目标的原因。 &lt;br&gt;customDescription 操作的详细说明。 |
+| bindParam | Record&lt;string, int \| string&gt; | 是 | 认证参数。由开发者自行决定传入的键值对。 默认会携带以下key值： &lt;br&gt;bindType 此值是绑定的类型，必填。 &lt;br /&gt;-1：PIN码。 &lt;br&gt;targetPkgName 绑定目标的包名。 &lt;br&gt;appName 尝试绑定目标的应用程序名称。 &lt;br&gt;appOperation 应用程序要绑定目标的原因。 &lt;br&gt;customDescription 操作的详细说明。 |
 | callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;BindTargetResult&gt; | 是 | 认证结果回调。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 11600101 | Failed to execute the function. |
-| 11600103 | Authentication unavailable. |
-| 201 | Permission verification failed. The application does not have the permission required to call the API. |
+| [11600101](../../apis-distributedservice-kit/errorcode-device-manager.md#11600101-服务调用异常) | Failed to execute the function. |
+| [11600103](../../apis-distributedservice-kit/errorcode-device-manager.md#11600103-认证业务不可用) | Authentication unavailable. |
+| [201](../../errorcode-universal.md#201-权限校验失败) | Permission verification failed. The application does not have the permission required to call the API. |
 
 ## getAvailableDeviceList
 
@@ -150,8 +144,8 @@ getAvailableDeviceList(callback: AsyncCallback<Array<DeviceBasicInfo>>): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 11600101 | Failed to execute the function. |
-| 201 | Permission verification failed. The application does not have the permission required to call the API. |
+| [11600101](../../apis-distributedservice-kit/errorcode-device-manager.md#11600101-服务调用异常) | Failed to execute the function. |
+| [201](../../errorcode-universal.md#201-权限校验失败) | Permission verification failed. The application does not have the permission required to call the API. |
 
 ## 示例
 
@@ -204,8 +198,8 @@ getAvailableDeviceList(): Promise<Array<DeviceBasicInfo>>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 11600101 | Failed to execute the function. |
-| 201 | Permission verification failed. The application does not have the permission required to call the API. |
+| [11600101](../../apis-distributedservice-kit/errorcode-device-manager.md#11600101-服务调用异常) | Failed to execute the function. |
+| [201](../../errorcode-universal.md#201-权限校验失败) | Permission verification failed. The application does not have the permission required to call the API. |
 
 ## 示例
 
@@ -256,8 +250,8 @@ getAvailableDeviceListSync(): Array<DeviceBasicInfo>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 11600101 | Failed to execute the function. |
-| 201 | Permission verification failed. The application does not have the permission required to call the API. |
+| [11600101](../../apis-distributedservice-kit/errorcode-device-manager.md#11600101-服务调用异常) | Failed to execute the function. |
+| [201](../../errorcode-universal.md#201-权限校验失败) | Permission verification failed. The application does not have the permission required to call the API. |
 
 ## 示例
 
@@ -310,9 +304,9 @@ getDeviceName(networkId: string): string
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter type; 3. Parameter verification failed; 4. The size of specified networkId is greater than 255. |
-| 11600101 | Failed to execute the function. |
-| 201 | Permission verification failed. The application does not have the permission required to call the API. |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter type; 3. Parameter verification failed; 4. The size of specified networkId is greater than 255. |
+| [11600101](../../apis-distributedservice-kit/errorcode-device-manager.md#11600101-服务调用异常) | Failed to execute the function. |
+| [201](../../errorcode-universal.md#201-权限校验失败) | Permission verification failed. The application does not have the permission required to call the API. |
 
 ## 示例
 
@@ -327,7 +321,7 @@ try {
   let dmInstance = distributedDeviceManager.createDeviceManager('ohos.samples.jsHelloWorld');
   // 通过设备网络标识获取设备名称
   let deviceName: string = dmInstance.getDeviceName(networkId);
-  console.info('device name: ' + JSON.stringify(deviceName)); 
+  console.info('device name: ' + JSON.stringify(deviceName));
 } catch (err) {
   let error: BusinessError = err as BusinessError;
   console.error(`Failed to get device name. Code: ${error.code}, message: ${error.message}`);
@@ -374,9 +368,9 @@ getDeviceType(networkId: string): int
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter type; 3. Parameter verification failed; 4. The size of specified networkId is greater than 255. |
-| 11600101 | Failed to execute the function. |
-| 201 | Permission verification failed. The application does not have the permission required to call the API. |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter type; 3. Parameter verification failed; 4. The size of specified networkId is greater than 255. |
+| [11600101](../../apis-distributedservice-kit/errorcode-device-manager.md#11600101-服务调用异常) | Failed to execute the function. |
+| [201](../../errorcode-universal.md#201-权限校验失败) | Permission verification failed. The application does not have the permission required to call the API. |
 
 ## 示例
 
@@ -391,7 +385,7 @@ try {
   let dmInstance = distributedDeviceManager.createDeviceManager('ohos.samples.jsHelloWorld');
   // 通过设备网络标识获取设备类型
   let deviceType: number = dmInstance.getDeviceType(networkId);
-  console.info('device type: ' + JSON.stringify(deviceType)); 
+  console.info('device type: ' + JSON.stringify(deviceType));
 } catch (err) {
   let error: BusinessError = err as BusinessError;
   console.error(`Failed to get device type. Code: ${error.code}, message: ${error.message}`);
@@ -426,8 +420,8 @@ getLocalDeviceId(): string
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 11600101 | Failed to execute the function. |
-| 201 | Permission verification failed. The application does not have the permission required to call the API. |
+| [11600101](../../apis-distributedservice-kit/errorcode-device-manager.md#11600101-服务调用异常) | Failed to execute the function. |
+| [201](../../errorcode-universal.md#201-权限校验失败) | Permission verification failed. The application does not have the permission required to call the API. |
 
 ## 示例
 
@@ -475,8 +469,8 @@ getLocalDeviceName(): string
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 11600101 | Failed to execute the function. |
-| 201 | Permission verification failed. The application does not have the permission required to call the API. |
+| [11600101](../../apis-distributedservice-kit/errorcode-device-manager.md#11600101-服务调用异常) | Failed to execute the function. |
+| [201](../../errorcode-universal.md#201-权限校验失败) | Permission verification failed. The application does not have the permission required to call the API. |
 
 ## 示例
 
@@ -524,8 +518,8 @@ getLocalDeviceNetworkId(): string
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 11600101 | Failed to execute the function. |
-| 201 | Permission verification failed. The application does not have the permission required to call the API. |
+| [11600101](../../apis-distributedservice-kit/errorcode-device-manager.md#11600101-服务调用异常) | Failed to execute the function. |
+| [201](../../errorcode-universal.md#201-权限校验失败) | Permission verification failed. The application does not have the permission required to call the API. |
 
 ## 示例
 
@@ -579,24 +573,38 @@ getLocalDeviceType(): int
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 11600101 | Failed to execute the function. |
-| 201 | Permission verification failed. The application does not have the permission required to call the API. |
+| [11600101](../../apis-distributedservice-kit/errorcode-device-manager.md#11600101-服务调用异常) | Failed to execute the function. |
+| [201](../../errorcode-universal.md#201-权限校验失败) | Permission verification failed. The application does not have the permission required to call the API. |
 
 ## 示例
 
+ArkTS-Dyn示例：
+
 ```TypeScript
-import { distributedDeviceManager } from '@kit.DistributedServiceKit';
 import { BusinessError } from '@kit.BasicServicesKit';
 
 try {
-  // 创建设备管理实例
   let dmInstance = distributedDeviceManager.createDeviceManager('ohos.samples.jsHelloWorld');
-  // 获取本地设备类型
   let deviceType: number = dmInstance.getLocalDeviceType();
-  console.info('local device type: ' + JSON.stringify(deviceType));
+  console.info('local device type: ' + deviceType);
 } catch (err) {
-  let error: BusinessError = err as BusinessError;
-  console.error(`Failed to get local device type. Code: ${error.code}, message: ${error.message}`);
+  let e: BusinessError = err as BusinessError;
+  console.error(`getLocalDeviceType errCode: ${e.code}, errMessage: ${e.message}`);
+}
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+try {
+  let dmInstance = distributedDeviceManager.createDeviceManager('ohos.samples.jsHelloWorld');
+  let deviceType: int = dmInstance.getLocalDeviceType();
+  console.info('local device type: ' + deviceType);
+} catch (err) {
+  let e: BusinessError = err as BusinessError;
+  console.error(`getLocalDeviceType errCode: ${e.code}, errMessage: ${e.message}`);
 }
 ```
 
@@ -629,8 +637,8 @@ off(type: 'deviceStateChange', callback?: Callback<{ action: DeviceStateChange; 
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter type; 3. Parameter verification failed; 4. The size of specified type is greater than 255. |
-| 201 | Permission verification failed. The application does not have the permission required to call the API. |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter type; 3. Parameter verification failed; 4. The size of specified type is greater than 255. |
+| [201](../../errorcode-universal.md#201-权限校验失败) | Permission verification failed. The application does not have the permission required to call the API. |
 
 ## 示例
 
@@ -690,8 +698,8 @@ off(type: 'discoverSuccess', callback?: Callback<{ device: DeviceBasicInfo; }>):
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter type; 3. Parameter verification failed; 4. The size of specified type is greater than 255. |
-| 201 | Permission verification failed. The application does not have the permission required to call the API. |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter type; 3. Parameter verification failed; 4. The size of specified type is greater than 255. |
+| [201](../../errorcode-universal.md#201-权限校验失败) | Permission verification failed. The application does not have the permission required to call the API. |
 
 ## 示例
 
@@ -750,8 +758,8 @@ off(type: 'deviceNameChange', callback?: Callback<{ deviceName: string; }>): voi
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter type; 3. Parameter verification failed; 4. The size of specified type is greater than 255. |
-| 201 | Permission verification failed. The application does not have the permission required to call the API. |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter type; 3. Parameter verification failed; 4. The size of specified type is greater than 255. |
+| [201](../../errorcode-universal.md#201-权限校验失败) | Permission verification failed. The application does not have the permission required to call the API. |
 
 ## 示例
 
@@ -805,8 +813,8 @@ off(type: 'discoverFailure', callback?: Callback<{ reason: int; }>): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter type; 3. Parameter verification failed; 4. The size of specified type is greater than 255. |
-| 201 | Permission verification failed. The application does not have the permission required to call the API. |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter type; 3. Parameter verification failed; 4. The size of specified type is greater than 255. |
+| [201](../../errorcode-universal.md#201-权限校验失败) | Permission verification failed. The application does not have the permission required to call the API. |
 
 ## 示例
 
@@ -860,8 +868,8 @@ off(type: 'serviceDie', callback?: Callback<{}>): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter type; 3. Parameter verification failed; 4. The size of specified type is greater than 255. |
-| 201 | Permission verification failed. The application does not have the permission required to call the API. |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter type; 3. Parameter verification failed; 4. The size of specified type is greater than 255. |
+| [201](../../errorcode-universal.md#201-权限校验失败) | Permission verification failed. The application does not have the permission required to call the API. |
 
 ## 示例
 
@@ -910,7 +918,23 @@ offDeviceNameChange(callback?: Callback<DeviceNameChangeResult>): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 201 | Permission verification failed. The application does not have the permission required to call the API. |
+| [201](../../errorcode-universal.md#201-权限校验失败) | Permission verification failed. The application does not have the permission required to call the API. |
+
+## 示例
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+try {
+  let dmInstance = distributedDeviceManager.createDeviceManager('ohos.samples.jsHelloWorld');
+  dmInstance.offDeviceNameChange((data: distributedDeviceManager.DeviceNameChangeResult) => {
+    console.info('deviceNameChange' + JSON.stringify(data));
+  });
+} catch (err) {
+  let e: BusinessError = err as BusinessError;
+  console.error(`deviceNameChange errCode: ${e.code}, errMessage: ${e.message}`);
+}
+```
 
 ## offDeviceStateChange
 
@@ -940,7 +964,23 @@ offDeviceStateChange(callback?: Callback<DeviceStateChangeResult>): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 201 | Permission verification failed. The application does not have the permission required to call the API. |
+| [201](../../errorcode-universal.md#201-权限校验失败) | Permission verification failed. The application does not have the permission required to call the API. |
+
+## 示例
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+try {
+  let dmInstance = distributedDeviceManager.createDeviceManager('ohos.samples.jsHelloWorld');
+  dmInstance.offDeviceStateChange((data: distributedDeviceManager.DeviceStateChangeResult) => {
+    console.info('deviceStateChange' + JSON.stringify(data));
+  });
+} catch (err) {
+  let e: BusinessError = err as BusinessError;
+  console.error(`deviceStateChange errCode: ${e.code}, errMessage: ${e.message}`);
+}
+```
 
 ## offDiscoverFailure
 
@@ -970,7 +1010,23 @@ offDiscoverFailure(callback?: Callback<DiscoveryFailureResult>): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 201 | Permission verification failed. The application does not have the permission required to call the API. |
+| [201](../../errorcode-universal.md#201-权限校验失败) | Permission verification failed. The application does not have the permission required to call the API. |
+
+## 示例
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+try {
+  let dmInstance = distributedDeviceManager.createDeviceManager('ohos.samples.jsHelloWorld');
+  dmInstance.offDiscoverFailure((data: distributedDeviceManager.DiscoveryFailureResult) => {
+    console.info('discoverFailure' + JSON.stringify(data));
+  });
+} catch (err) {
+  let e: BusinessError = err as BusinessError;
+  console.error(`discoverFailure errCode: ${e.code}, errMessage: ${e.message}`);
+}
+```
 
 ## offDiscoverSuccess
 
@@ -1000,7 +1056,23 @@ offDiscoverSuccess(callback?: Callback<DiscoverySuccessResult>): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 201 | Permission verification failed. The application does not have the permission required to call the API. |
+| [201](../../errorcode-universal.md#201-权限校验失败) | Permission verification failed. The application does not have the permission required to call the API. |
+
+## 示例
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+try {
+  let dmInstance = distributedDeviceManager.createDeviceManager('ohos.samples.jsHelloWorld');
+  dmInstance.offDiscoverSuccess((data: distributedDeviceManager.DiscoverySuccessResult) => {
+    console.info('discoverSuccess' + JSON.stringify(data));
+  });
+} catch (err) {
+  let e: BusinessError = err as BusinessError;
+  console.error(`discoverSuccess errCode: ${e.code}, errMessage: ${e.message}`);
+}
+```
 
 ## offServiceDie
 
@@ -1030,7 +1102,23 @@ offServiceDie(callback?: Callback<ServiceDieData>): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 201 | Permission verification failed. The application does not have the permission required to call the API. |
+| [201](../../errorcode-universal.md#201-权限校验失败) | Permission verification failed. The application does not have the permission required to call the API. |
+
+## 示例
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+try {
+  let dmInstance = distributedDeviceManager.createDeviceManager('ohos.samples.jsHelloWorld');
+  dmInstance.offServiceDie((data: distributedDeviceManager.ServiceDieData) => {
+    console.info('serviceDie off');
+  });
+} catch (err) {
+  let e: BusinessError = err as BusinessError;
+  console.error(`serviceDie errCode: ${e.code}, errMessage: ${e.message}`);
+}
+```
 
 ## on('deviceStateChange')
 
@@ -1061,8 +1149,8 @@ on(type: 'deviceStateChange', callback: Callback<{ action: DeviceStateChange; de
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter type; 3. Parameter verification failed; 4. The size of specified type is greater than 255. |
-| 201 | Permission verification failed. The application does not have the permission required to call the API. |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter type; 3. Parameter verification failed; 4. The size of specified type is greater than 255. |
+| [201](../../errorcode-universal.md#201-权限校验失败) | Permission verification failed. The application does not have the permission required to call the API. |
 
 ## 示例
 
@@ -1122,8 +1210,8 @@ on(type: 'discoverSuccess', callback: Callback<{ device: DeviceBasicInfo; }>): v
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter type; 3. Parameter verification failed; 4. The size of specified type is greater than 255. |
-| 201 | Permission verification failed. The application does not have the permission required to call the API. |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter type; 3. Parameter verification failed; 4. The size of specified type is greater than 255. |
+| [201](../../errorcode-universal.md#201-权限校验失败) | Permission verification failed. The application does not have the permission required to call the API. |
 
 ## 示例
 
@@ -1182,8 +1270,8 @@ on(type: 'deviceNameChange', callback: Callback<{ deviceName: string; }>): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter type; 3. Parameter verification failed; 4. The size of specified type is greater than 255. |
-| 201 | Permission verification failed. The application does not have the permission required to call the API. |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter type; 3. Parameter verification failed; 4. The size of specified type is greater than 255. |
+| [201](../../errorcode-universal.md#201-权限校验失败) | Permission verification failed. The application does not have the permission required to call the API. |
 
 ## 示例
 
@@ -1237,8 +1325,8 @@ on(type: 'discoverFailure', callback: Callback<{ reason: number; }>): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter type; 3. Parameter verification failed; 4. The size of specified type is greater than 255. |
-| 201 | Permission verification failed. The application does not have the permission required to call the API. |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter type; 3. Parameter verification failed; 4. The size of specified type is greater than 255. |
+| [201](../../errorcode-universal.md#201-权限校验失败) | Permission verification failed. The application does not have the permission required to call the API. |
 
 ## 示例
 
@@ -1292,8 +1380,8 @@ on(type: 'serviceDie', callback?: Callback<{}>): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter type; 3. Parameter verification failed; 4. The size of specified type is greater than 255. |
-| 201 | Permission verification failed. The application does not have the permission required to call the API. |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter type; 3. Parameter verification failed; 4. The size of specified type is greater than 255. |
+| [201](../../errorcode-universal.md#201-权限校验失败) | Permission verification failed. The application does not have the permission required to call the API. |
 
 ## 示例
 
@@ -1342,7 +1430,23 @@ onDeviceNameChange(callback: Callback<DeviceNameChangeResult>): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 201 | Permission verification failed. The application does not have the permission required to call the API. |
+| [201](../../errorcode-universal.md#201-权限校验失败) | Permission verification failed. The application does not have the permission required to call the API. |
+
+## 示例
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+try {
+  let dmInstance = distributedDeviceManager.createDeviceManager('ohos.samples.jsHelloWorld');
+  dmInstance.onDeviceNameChange((data: distributedDeviceManager.DeviceNameChangeResult) => {
+    console.info('deviceNameChange on:' + JSON.stringify(data));
+  });
+} catch (err) {
+  let e: BusinessError = err as BusinessError;
+  console.error(`deviceNameChange errCode: ${e.code}, errMessage: ${e.message}`);
+}
+```
 
 ## onDeviceStateChange
 
@@ -1372,7 +1476,23 @@ onDeviceStateChange(callback: Callback<DeviceStateChangeResult>): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 201 | Permission verification failed. |
+| [201](../../errorcode-universal.md#201-权限校验失败) | Permission verification failed. |
+
+## 示例
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+try {
+  let dmInstance = distributedDeviceManager.createDeviceManager('ohos.samples.jsHelloWorld');
+  dmInstance.onDeviceStateChange((data: distributedDeviceManager.DeviceStateChangeResult) => {
+    console.info('deviceStateChange on:' + JSON.stringify(data));
+  });
+} catch (err) {
+  let e: BusinessError = err as BusinessError;
+  console.error(`deviceStateChange errCode: ${e.code}, errMessage: ${e.message}`);
+}
+```
 
 ## onDiscoverFailure
 
@@ -1402,7 +1522,23 @@ onDiscoverFailure(callback: Callback<DiscoveryFailureResult>): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 201 | Permission verification failed. The application does not have the permission required to call the API. |
+| [201](../../errorcode-universal.md#201-权限校验失败) | Permission verification failed. The application does not have the permission required to call the API. |
+
+## 示例
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+try {
+  let dmInstance = distributedDeviceManager.createDeviceManager('ohos.samples.jsHelloWorld');
+  dmInstance.onDiscoverFailure((data: distributedDeviceManager.DiscoveryFailureResult) => {
+    console.info('discoverFailure' + JSON.stringify(data));
+  });
+} catch (err) {
+  let e: BusinessError = err as BusinessError;
+  console.error(`discoverFailure errCode: ${e.code}, errMessage: ${e.message}`);
+}
+```
 
 ## onDiscoverSuccess
 
@@ -1432,7 +1568,23 @@ onDiscoverSuccess(callback: Callback<DiscoverySuccessResult>): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 201 | Permission verification failed. The application does not have the permission required to call the API. |
+| [201](../../errorcode-universal.md#201-权限校验失败) | Permission verification failed. The application does not have the permission required to call the API. |
+
+## 示例
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+try {
+  let dmInstance = distributedDeviceManager.createDeviceManager('ohos.samples.jsHelloWorld');
+  dmInstance.onDiscoverSuccess((data: distributedDeviceManager.DiscoverySuccessResult) => {
+    console.info('discoverSuccess:' + JSON.stringify(data));
+  });
+} catch (err) {
+  let e: BusinessError = err as BusinessError;
+  console.error(`discoverSuccess errCode: ${e.code}, errMessage: ${e.message}`);
+}
+```
 
 ## onServiceDie
 
@@ -1462,7 +1614,23 @@ onServiceDie(callback: Callback<ServiceDieData>): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 201 | Permission verification failed. The application does not have the permission required to call the API. |
+| [201](../../errorcode-universal.md#201-权限校验失败) | Permission verification failed. The application does not have the permission required to call the API. |
+
+## 示例
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+try {
+  let dmInstance = distributedDeviceManager.createDeviceManager('ohos.samples.jsHelloWorld');
+  dmInstance.onServiceDie((data: distributedDeviceManager.ServiceDieData) => {
+    console.info('serviceDie on');
+  });
+} catch (err) {
+  let e: BusinessError = err as BusinessError;
+  console.error(`serviceDie errCode: ${e.code}, errMessage: ${e.message}`);
+}
+```
 
 ## startDiscovering
 
@@ -1493,10 +1661,10 @@ startDiscovering(discoverParam: { [key: string]: Object; }, filterOptions?: { [k
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter type; 3. Parameter verification failed. |
-| 11600101 | Failed to execute the function. |
-| 201 | Permission verification failed. The application does not have the permission required to call the API. |
-| 11600104 | Discovery unavailable. |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter type; 3. Parameter verification failed. |
+| [11600101](../../apis-distributedservice-kit/errorcode-device-manager.md#11600101-服务调用异常) | Failed to execute the function. |
+| [201](../../errorcode-universal.md#201-权限校验失败) | Permission verification failed. The application does not have the permission required to call the API. |
+| [11600104](../../apis-distributedservice-kit/errorcode-device-manager.md#11600104-发现业务不可用) | Discovery unavailable. |
 
 ## 示例
 
@@ -1545,16 +1713,16 @@ startDiscovering(discoverParam: Record<string, int | string>, filterOptions?: Re
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| discoverParam | [Record](../../apis-default/arkts-apis/arkts-record-t.md)&lt;string, int \| string&gt; | 是 | 发现标识。 标识发现的目标类型。 &lt;br&gt;discoverTargetType: 发现目标默认为设备，值为1。 |
-| filterOptions | [Record](../../apis-default/arkts-apis/arkts-record-t.md)&lt;string, int \| string&gt; | 否 | 发现设备过滤信息。可选，默认为undefined，发现未上线设备。 会携带以下key值： &lt;br&gt;availableStatus(0-1)：仅发现设备可信，值为0表示设备不可信。 &lt;br /&gt;-0：设备离线，客户端需要通过调用bindTarget绑定设备。 &lt;br /&gt;-1：设备已在线，客户端可以进行连接。 &lt;br&gt;discoverDistance(0-100)：发现距离本地一定距离内的设备，单位为cm。wifi场景不传该参数。 &lt;br&gt;authenticationStatus(0-1)：根据不同的认证状态发现设备： &lt;br /&gt;-0：设备未认证。 &lt;br /&gt;-1：设备已认证。 &lt;br&gt;authorizationType(0-2)：根据不同的授权类型发现设备： &lt;br /&gt;-0：根据临时协商的会话密钥认证的设备。 &lt;br /&gt;-1：基于同账号密钥进行身份验证的设备。 &lt;br /&gt;-2：基于不同账号凭据密钥认证的设备。 |
+| discoverParam | Record&lt;string, int \| string&gt; | 是 | 发现标识。 标识发现的目标类型。 &lt;br&gt;discoverTargetType: 发现目标默认为设备，值为1。 |
+| filterOptions | Record&lt;string, int \| string&gt; | 否 | 发现设备过滤信息。可选，默认为undefined，发现未上线设备。 会携带以下key值： &lt;br&gt;availableStatus(0-1)：仅发现设备可信，值为0表示设备不可信。 &lt;br /&gt;-0：设备离线，客户端需要通过调用bindTarget绑定设备。 &lt;br /&gt;-1：设备已在线，客户端可以进行连接。 &lt;br&gt;discoverDistance(0-100)：发现距离本地一定距离内的设备，单位为cm。wifi场景不传该参数。 &lt;br&gt;authenticationStatus(0-1)：根据不同的认证状态发现设备： &lt;br /&gt;-0：设备未认证。 &lt;br /&gt;-1：设备已认证。 &lt;br&gt;authorizationType(0-2)：根据不同的授权类型发现设备： &lt;br /&gt;-0：根据临时协商的会话密钥认证的设备。 &lt;br /&gt;-1：基于同账号密钥进行身份验证的设备。 &lt;br /&gt;-2：基于不同账号凭据密钥认证的设备。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 11600101 | Failed to execute the function. |
-| 201 | Permission verification failed. The application does not have the permission required to call the API. |
-| 11600104 | Discovery unavailable. |
+| [11600101](../../apis-distributedservice-kit/errorcode-device-manager.md#11600101-服务调用异常) | Failed to execute the function. |
+| [201](../../errorcode-universal.md#201-权限校验失败) | Permission verification failed. The application does not have the permission required to call the API. |
+| [11600104](../../apis-distributedservice-kit/errorcode-device-manager.md#11600104-发现业务不可用) | Discovery unavailable. |
 
 ## stopDiscovering
 
@@ -1578,8 +1746,8 @@ stopDiscovering(): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 11600101 | Failed to execute the function. |
-| 201 | Permission verification failed. The application does not have the permission required to call the API. |
+| [11600101](../../apis-distributedservice-kit/errorcode-device-manager.md#11600101-服务调用异常) | Failed to execute the function. |
+| [201](../../errorcode-universal.md#201-权限校验失败) | Permission verification failed. The application does not have the permission required to call the API. |
 
 ## 示例
 
@@ -1626,9 +1794,9 @@ unbindTarget(deviceId: string): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter type; 3. Parameter verification failed; 4. The size of specified deviceId is greater than 255. |
-| 11600101 | Failed to execute the function. |
-| 201 | Permission verification failed. The application does not have the permission required to call the API. |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter type; 3. Parameter verification failed; 4. The size of specified deviceId is greater than 255. |
+| [11600101](../../apis-distributedservice-kit/errorcode-device-manager.md#11600101-服务调用异常) | Failed to execute the function. |
+| [201](../../errorcode-universal.md#201-权限校验失败) | Permission verification failed. The application does not have the permission required to call the API. |
 
 ## 示例
 

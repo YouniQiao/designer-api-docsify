@@ -1,8 +1,7 @@
 # DownloadTask
 
-下载任务，使用下列方法前，需要先获取DownloadTask对象，promise形式通过  
-[request.downloadFile](arkts-basicservices-request-downloadfile-f.md#downloadfile)获取，callback形式通过  
-[request.downloadFile](arkts-basicservices-request-downloadfile-f.md#downloadfile)获取。
+Implements file downloads. Before using any APIs of this class, you must obtain a **DownloadTask** object, from a promise through [request.downloadFile](arkts-basicservices-request-downloadfile-f.md#downloadfile) or from a callback through   
+[request.downloadFile](arkts-basicservices-request-downloadfile-f.md#downloadfile).
 
 **Since:** 6
 
@@ -24,11 +23,12 @@ import { request } from 'kits/@kit.BasicServicesKit';
 delete(callback: AsyncCallback<boolean>): void
 ```
 
-移除下载的任务，使用callback异步回调。
+Deletes the download task. This API uses an asynchronous callback to return the result.
 
-> **说明：**
+> **NOTE：**
 > 
-> 由于不存在401报错场景，在api12中 `401 the parameters check fails` 这个错误码被移除。
+> The scenarios for triggering error code **401 the parameters check fails** do not exist. Therefore, this error
+> code is removed from API version 12.
 
 **Since:** 9
 
@@ -44,13 +44,13 @@ delete(callback: AsyncCallback<boolean>): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;boolean&gt; | Yes | 回调函数。返回true表示移除下载任务成功；返回false表示移除下载任务失败。 |
+| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;boolean&gt; | Yes | Callback used to return the result. The value **true** indicates that the operation is successful; **false** indicates the opposite. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 201 | The permissions check fails. |
+| [201](../../errorcode-universal.md#201-permission-denied) | The permissions check fails. |
 
 ## Examples
 
@@ -85,11 +85,12 @@ try {
 delete(): Promise<boolean>
 ```
 
-移除下载的任务，使用Promise异步回调。
+Deletes the download task. This API uses a promise to return the result.
 
-> **说明：**
+> **NOTE：**
 > 
-> 由于不存在401报错场景，在api12中 `401 the parameters check fails` 这个错误码被移除。
+> The scenarios for triggering error code **401 the parameters check fails** do not exist. Therefore, this error
+> code is removed from API version 12.
 
 **Since:** 9
 
@@ -105,13 +106,13 @@ delete(): Promise<boolean>
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;boolean&gt; | Promise对象。返回true表示移除下载任务成功；返回false表示移除下载任务失败。 |
+| Promise&lt;boolean&gt; | Promise used to return the result. The value **true** indicates that the operation is successful; **false** indicates the opposite. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 201 | The permissions check fails. |
+| [201](../../errorcode-universal.md#201-permission-denied) | The permissions check fails. |
 
 ## Examples
 
@@ -143,11 +144,12 @@ try {
 getTaskInfo(callback: AsyncCallback<DownloadInfo>): void
 ```
 
-查询下载的任务，使用callback异步回调。
+Obtains the information about this download task. This API uses an asynchronous callback to return the result.
 
-> **说明：**
+> **NOTE：**
 > 
-> 由于不存在401报错场景，在api12中 `401 the parameters check fails` 这个错误码被移除。
+> The scenarios for triggering error code **401 the parameters check fails** do not exist. Therefore, this error
+> code is removed from API version 12.
 
 **Since:** 9
 
@@ -163,13 +165,13 @@ getTaskInfo(callback: AsyncCallback<DownloadInfo>): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;DownloadInfo&gt; | Yes | 回调函数。当查询下载任务操作成功，err为undefined，data为获取到的DownloadInfo对象；否则为错误对象。 |
+| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;DownloadInfo&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined** and **data** is the **DownloadInfo** object obtained. Otherwise, **err** is an error object. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 201 | The permissions check fails. |
+| [201](../../errorcode-universal.md#201-permission-denied) | The permissions check fails. |
 
 ## Examples
 
@@ -204,11 +206,12 @@ try {
 getTaskInfo(): Promise<DownloadInfo>
 ```
 
-查询下载任务的信息，使用Promise异步回调。
+Obtains the information about this download task. This API uses a promise to return the result.
 
-> **说明：**
+> **NOTE：**
 > 
-> 由于不存在401报错场景，在api12中 `401 the parameters check fails` 这个错误码被移除。
+> The scenarios for triggering error code **401 the parameters check fails** do not exist. Therefore, this error
+> code is removed from API version 12.
 
 **Since:** 9
 
@@ -224,13 +227,13 @@ getTaskInfo(): Promise<DownloadInfo>
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;DownloadInfo&gt; | Promise对象，返回DownloadInfo对象。 |
+| Promise&lt;DownloadInfo&gt; | Promise used to return a **DownloadInfo** object. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 201 | The permissions check fails. |
+| [201](../../errorcode-universal.md#201-permission-denied) | The permissions check fails. |
 
 ## Examples
 
@@ -263,11 +266,12 @@ try {
 getTaskMimeType(callback: AsyncCallback<string>): void
 ```
 
-查询下载任务的 MimeType（HTTP中表示资源的媒体类型），使用callback异步回调。
+Obtains the MIME type (that is, media type of resources in HTTP) of a download task. This API uses an asynchronous callback to return the result.
 
-> **说明：**
+> **NOTE：**
 > 
-> 由于不存在401报错场景，在api12中 `401 the parameters check fails` 这个错误码被移除。
+> The scenarios for triggering error code **401 the parameters check fails** do not exist. Therefore, this error
+> code is removed from API version 12.
 
 **Since:** 9
 
@@ -283,13 +287,13 @@ getTaskMimeType(callback: AsyncCallback<string>): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;string&gt; | Yes | 回调函数。当查询下载任务MimeType成功，err为undefined，data为获取到的下载任务的MimeType的对象；否则为错误对 象。 |
+| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;string&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined** and data is the **MimeType** object obtained. Otherwise, **err** is an error object. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 201 | The permissions check fails. |
+| [201](../../errorcode-universal.md#201-permission-denied) | The permissions check fails. |
 
 ## Examples
 
@@ -324,11 +328,12 @@ try {
 getTaskMimeType(): Promise<string>
 ```
 
-查询下载的任务的MimeType(HTTP中表示资源的媒体类型)，使用Promise异步回调。
+Obtains the MIME type (that is, media type of resources in HTTP) of a download task. This API uses a promise to return the result.
 
-> **说明：**
+> **NOTE：**
 > 
-> 由于不存在401报错场景，在api12中 `401 the parameters check fails` 这个错误码被移除。
+> The scenarios for triggering error code **401 the parameters check fails** do not exist. Therefore, this error
+> code is removed from API version 12.
 
 **Since:** 9
 
@@ -344,13 +349,13 @@ getTaskMimeType(): Promise<string>
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;string&gt; | Promise对象。返回下载任务的MimeType。 |
+| Promise&lt;string&gt; | Promise used to return the MIME type of a download task. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 201 | The permissions check fails. |
+| [201](../../errorcode-universal.md#201-permission-denied) | The permissions check fails. |
 
 ## Examples
 
@@ -383,7 +388,7 @@ try {
 off(type: 'progress', callback?: (receivedSize: long, totalSize: long) => void): void
 ```
 
-取消订阅下载任务进度事件。
+Unsubscribes from download progress events.
 
 **Since:** 6
 
@@ -397,14 +402,14 @@ off(type: 'progress', callback?: (receivedSize: long, totalSize: long) => void):
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'progress' | Yes | 取消订阅的事件类型。&lt;br&gt;- 取值为'progress'，表示下载的进度信息。 |
-| callback | (receivedSize: long, totalSize: long) =&gt; void | No | 需要取消订阅的回调函数。若无此参数，则取消订阅当前类型的所有回调函数。 |
+| type | 'progress' | Yes | Event type.&lt;br&gt;- **'progress'**: download progress. |
+| callback | (receivedSize: long, totalSize: long) =&gt; void | No | Callback to unregister. If this parameter is not specified, all callbacks of the current type will be unregistered. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | The parameters check fails. Possible causes: &lt;br&gt; 1. Missing mandatory parameters. &lt;br&gt; 2. Incorrect parameter type. &lt;br&gt; 3. Parameter verification failed.<br>**Applicable version:** 12 and later |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | The parameters check fails. Possible causes: &lt;br&gt; 1. Missing mandatory parameters. &lt;br&gt; 2. Incorrect parameter type. &lt;br&gt; 3. Parameter verification failed.<br>**Applicable version:** 12 and later |
 
 ## Examples
 
@@ -444,7 +449,7 @@ try {
 off(type: 'complete' | 'pause' | 'remove', callback?: () => void): void
 ```
 
-取消订阅下载任务相关的事件。
+Unsubscribes from download events.
 
 **Since:** 7
 
@@ -458,14 +463,14 @@ off(type: 'complete' | 'pause' | 'remove', callback?: () => void): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'complete' \| 'pause' \| 'remove' | Yes | 取消订阅的事件类型。&lt;br/&gt;- 取值为'complete'，表示下载任务完成。&lt;br/&gt;- 取值为'pause'，表示下载任 务暂停。&lt;br/&gt;- 取值为'remove'，表示下载任务移除。 |
-| callback | () =&gt; void | No | 需要取消订阅的回调函数。若无此参数，则取消订阅当前类型的所有回调函数。 |
+| type | 'complete' \| 'pause' \| 'remove' | Yes | Event type.&lt;br&gt;- **'complete'**: download task completion.&lt;br&gt;- **'pause'**: download task pause.&lt;br&gt;- **'remove'**: download task removal. |
+| callback | () =&gt; void | No | Callback to unregister. If this parameter is not specified, all callbacks of the current type will be unregistered. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | The parameters check fails. Possible causes: &lt;br&gt; 1. Missing mandatory parameters. &lt;br&gt; 2. Incorrect parameter type. &lt;br&gt; 3. Parameter verification failed.<br>**Applicable version:** 12 and later |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | The parameters check fails. Possible causes: &lt;br&gt; 1. Missing mandatory parameters. &lt;br&gt; 2. Incorrect parameter type. &lt;br&gt; 3. Parameter verification failed.<br>**Applicable version:** 12 and later |
 
 ## Examples
 
@@ -531,7 +536,7 @@ try {
 off(type: 'complete' | 'pause' | 'remove', callback?: () => void): void
 ```
 
-取消订阅下载任务相关的事件。
+Unsubscribes from download events.
 
 **Since:** 7
 
@@ -545,14 +550,14 @@ off(type: 'complete' | 'pause' | 'remove', callback?: () => void): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'complete' \| 'pause' \| 'remove' | Yes | 取消订阅的事件类型。&lt;br/&gt;- 取值为'complete'，表示下载任务完成。&lt;br/&gt;- 取值为'pause'，表示下载任 务暂停。&lt;br/&gt;- 取值为'remove'，表示下载任务移除。 |
-| callback | () =&gt; void | No | 需要取消订阅的回调函数。若无此参数，则取消订阅当前类型的所有回调函数。 |
+| type | 'complete' \| 'pause' \| 'remove' | Yes | Event type.&lt;br&gt;- **'complete'**: download task completion.&lt;br&gt;- **'pause'**: download task pause.&lt;br&gt;- **'remove'**: download task removal. |
+| callback | () =&gt; void | No | Callback to unregister. If this parameter is not specified, all callbacks of the current type will be unregistered. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | The parameters check fails. Possible causes: &lt;br&gt; 1. Missing mandatory parameters. &lt;br&gt; 2. Incorrect parameter type. &lt;br&gt; 3. Parameter verification failed.<br>**Applicable version:** 12 and later |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | The parameters check fails. Possible causes: &lt;br&gt; 1. Missing mandatory parameters. &lt;br&gt; 2. Incorrect parameter type. &lt;br&gt; 3. Parameter verification failed.<br>**Applicable version:** 12 and later |
 
 ## Examples
 
@@ -618,7 +623,7 @@ try {
 off(type: 'complete' | 'pause' | 'remove', callback?: () => void): void
 ```
 
-取消订阅下载任务相关的事件。
+Unsubscribes from download events.
 
 **Since:** 7
 
@@ -632,14 +637,14 @@ off(type: 'complete' | 'pause' | 'remove', callback?: () => void): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'complete' \| 'pause' \| 'remove' | Yes | 取消订阅的事件类型。&lt;br/&gt;- 取值为'complete'，表示下载任务完成。&lt;br/&gt;- 取值为'pause'，表示下载任 务暂停。&lt;br/&gt;- 取值为'remove'，表示下载任务移除。 |
-| callback | () =&gt; void | No | 需要取消订阅的回调函数。若无此参数，则取消订阅当前类型的所有回调函数。 |
+| type | 'complete' \| 'pause' \| 'remove' | Yes | Event type.&lt;br&gt;- **'complete'**: download task completion.&lt;br&gt;- **'pause'**: download task pause.&lt;br&gt;- **'remove'**: download task removal. |
+| callback | () =&gt; void | No | Callback to unregister. If this parameter is not specified, all callbacks of the current type will be unregistered. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | The parameters check fails. Possible causes: &lt;br&gt; 1. Missing mandatory parameters. &lt;br&gt; 2. Incorrect parameter type. &lt;br&gt; 3. Parameter verification failed.<br>**Applicable version:** 12 and later |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | The parameters check fails. Possible causes: &lt;br&gt; 1. Missing mandatory parameters. &lt;br&gt; 2. Incorrect parameter type. &lt;br&gt; 3. Parameter verification failed.<br>**Applicable version:** 12 and later |
 
 ## Examples
 
@@ -705,7 +710,7 @@ try {
 off(type: 'fail', callback?: (err: int) => void): void
 ```
 
-取消订阅下载任务失败事件。
+Unsubscribes from download failure events.
 
 **Since:** 7
 
@@ -719,14 +724,14 @@ off(type: 'fail', callback?: (err: int) => void): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'fail' | Yes | 取消订阅的事件类型。&lt;br&gt;- 取值为'fail'，表示下载失败。 |
-| callback | (err: int) =&gt; void | No | 需要取消订阅的回调函数。若无此参数，则取消订阅当前类型的所有回调函数。 |
+| type | 'fail' | Yes | Event type.&lt;br&gt;- **'fail'**: download task failure. |
+| callback | (err: int) =&gt; void | No | Callback to unregister. If this parameter is not specified, all callbacks of the current type will be unregistered.For details about the error codes, see [Download Error Codes](../../../reference/apis-basic-services-kit/js-apis-request.md#constants) . |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | The parameters check fails. Possible causes: &lt;br&gt; 1. Missing mandatory parameters. &lt;br&gt; 2. Incorrect parameter type. &lt;br&gt; 3. Parameter verification failed.<br>**Applicable version:** 12 and later |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | The parameters check fails. Possible causes: &lt;br&gt; 1. Missing mandatory parameters. &lt;br&gt; 2. Incorrect parameter type. &lt;br&gt; 3. Parameter verification failed.<br>**Applicable version:** 12 and later |
 
 ## Examples
 
@@ -876,11 +881,12 @@ Called when the current download session remove.
 on(type: 'progress', callback: (receivedSize: long, totalSize: long) => void): void
 ```
 
-订阅下载任务进度事件，使用callback异步回调。
+Subscribes to download progress events. This API uses an asynchronous callback to return the result.
 
-> **说明：**
+> **NOTE：**
 > 
-> 应用处于后台时，为满足功耗性能要求，不支持调用此接口进行回调。
+> To maintain a balance between power consumption and performance, this API cannot be called when the application
+> is running in the background.
 
 **Since:** 6
 
@@ -894,14 +900,14 @@ on(type: 'progress', callback: (receivedSize: long, totalSize: long) => void): v
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'progress' | Yes | 订阅的事件类型。&lt;br&gt;- 取值为'progress'，表示下载的进度信息，当任务进度有进展时触发该事件。 |
-| callback | (receivedSize: long, totalSize: long) =&gt; void | Yes | 下载任务进度的回调函数，返回已上传文件大小和上传文件大小总和，单位为字节（B）。在下载过程中，若服务器使用chunk方式传输导致无法从请求头中获取文件总大小时， totalSize为 -1。 |
+| type | 'progress' | Yes | Event type.&lt;br&gt;- **'progress'**: download progress. |
+| callback | (receivedSize: long, totalSize: long) =&gt; void | Yes | Callback used to return the size of the uploaded file and the total size of the file to upload, in bytes. If the server uses the chunk mode for data transmission and the total file size cannot be obtained from the request header, the value of **totalSize** is treated as **-1**. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | The parameters check fails. Possible causes: &lt;br&gt; 1. Missing mandatory parameters. &lt;br&gt; 2. Incorrect parameter type. &lt;br&gt; 3. Parameter verification failed.<br>**Applicable version:** 12 and later |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | The parameters check fails. Possible causes: &lt;br&gt; 1. Missing mandatory parameters. &lt;br&gt; 2. Incorrect parameter type. &lt;br&gt; 3. Parameter verification failed.<br>**Applicable version:** 12 and later |
 
 ## Examples
 
@@ -933,7 +939,7 @@ try {
 on(type: 'complete' | 'pause' | 'remove', callback: () => void): void
 ```
 
-订阅下载任务相关的事件，使用callback异步回调。
+Subscribes to download events. This API uses an asynchronous callback to return the result.
 
 **Since:** 7
 
@@ -947,14 +953,14 @@ on(type: 'complete' | 'pause' | 'remove', callback: () => void): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'complete' \| 'pause' \| 'remove' | Yes | 订阅的事件类型。&lt;br&gt;- 取值为'complete'，表示下载任务完成，任务完成时触发该事件。&lt;br/&gt;- 取值为' pause'，表示下载任务暂停，任务暂停时触发该事件。&lt;br/&gt;- 取值为'remove'，表示下载任务移除，任务移除时触发该事件。 |
-| callback | () =&gt; void | Yes | 下载任务相关的回调函数。 |
+| type | 'complete' \| 'pause' \| 'remove' | Yes | Event type.&lt;br&gt;- **'complete'**: download task completion.&lt;br&gt;- **'pause'**: download task pause.&lt;br&gt;- **'remove'**: download task removal. |
+| callback | () =&gt; void | Yes | Callback used to return the result. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | The parameters check fails. Possible causes: &lt;br&gt; 1. Missing mandatory parameters. &lt;br&gt; 2. Incorrect parameter type. &lt;br&gt; 3. Parameter verification failed.<br>**Applicable version:** 12 and later |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | The parameters check fails. Possible causes: &lt;br&gt; 1. Missing mandatory parameters. &lt;br&gt; 2. Incorrect parameter type. &lt;br&gt; 3. Parameter verification failed.<br>**Applicable version:** 12 and later |
 
 ## Examples
 
@@ -996,7 +1002,7 @@ try {
 on(type: 'complete' | 'pause' | 'remove', callback: () => void): void
 ```
 
-订阅下载任务相关的事件，使用callback异步回调。
+Subscribes to download events. This API uses an asynchronous callback to return the result.
 
 **Since:** 7
 
@@ -1010,14 +1016,14 @@ on(type: 'complete' | 'pause' | 'remove', callback: () => void): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'complete' \| 'pause' \| 'remove' | Yes | 订阅的事件类型。&lt;br&gt;- 取值为'complete'，表示下载任务完成，任务完成时触发该事件。&lt;br/&gt;- 取值为' pause'，表示下载任务暂停，任务暂停时触发该事件。&lt;br/&gt;- 取值为'remove'，表示下载任务移除，任务移除时触发该事件。 |
-| callback | () =&gt; void | Yes | 下载任务相关的回调函数。 |
+| type | 'complete' \| 'pause' \| 'remove' | Yes | Event type.&lt;br&gt;- **'complete'**: download task completion.&lt;br&gt;- **'pause'**: download task pause.&lt;br&gt;- **'remove'**: download task removal. |
+| callback | () =&gt; void | Yes | Callback used to return the result. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | The parameters check fails. Possible causes: &lt;br&gt; 1. Missing mandatory parameters. &lt;br&gt; 2. Incorrect parameter type. &lt;br&gt; 3. Parameter verification failed.<br>**Applicable version:** 12 and later |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | The parameters check fails. Possible causes: &lt;br&gt; 1. Missing mandatory parameters. &lt;br&gt; 2. Incorrect parameter type. &lt;br&gt; 3. Parameter verification failed.<br>**Applicable version:** 12 and later |
 
 ## Examples
 
@@ -1059,7 +1065,7 @@ try {
 on(type: 'complete' | 'pause' | 'remove', callback: () => void): void
 ```
 
-订阅下载任务相关的事件，使用callback异步回调。
+Subscribes to download events. This API uses an asynchronous callback to return the result.
 
 **Since:** 7
 
@@ -1073,14 +1079,14 @@ on(type: 'complete' | 'pause' | 'remove', callback: () => void): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'complete' \| 'pause' \| 'remove' | Yes | 订阅的事件类型。&lt;br&gt;- 取值为'complete'，表示下载任务完成，任务完成时触发该事件。&lt;br/&gt;- 取值为' pause'，表示下载任务暂停，任务暂停时触发该事件。&lt;br/&gt;- 取值为'remove'，表示下载任务移除，任务移除时触发该事件。 |
-| callback | () =&gt; void | Yes | 下载任务相关的回调函数。 |
+| type | 'complete' \| 'pause' \| 'remove' | Yes | Event type.&lt;br&gt;- **'complete'**: download task completion.&lt;br&gt;- **'pause'**: download task pause.&lt;br&gt;- **'remove'**: download task removal. |
+| callback | () =&gt; void | Yes | Callback used to return the result. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | The parameters check fails. Possible causes: &lt;br&gt; 1. Missing mandatory parameters. &lt;br&gt; 2. Incorrect parameter type. &lt;br&gt; 3. Parameter verification failed.<br>**Applicable version:** 12 and later |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | The parameters check fails. Possible causes: &lt;br&gt; 1. Missing mandatory parameters. &lt;br&gt; 2. Incorrect parameter type. &lt;br&gt; 3. Parameter verification failed.<br>**Applicable version:** 12 and later |
 
 ## Examples
 
@@ -1122,7 +1128,7 @@ try {
 on(type: 'fail', callback: (err: int) => void): void
 ```
 
-订阅下载任务失败事件，使用callback异步回调。
+Subscribes to download failure events. This API uses an asynchronous callback to return the result.
 
 **Since:** 7
 
@@ -1136,14 +1142,14 @@ on(type: 'fail', callback: (err: int) => void): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'fail' | Yes | 订阅的事件类型。&lt;br&gt;- 取值为'fail'，表示下载失败，任务失败时触发该事件。 |
-| callback | (err: int) =&gt; void | Yes | 下载失败的回调函数。错误原因见 [下载任务的错误码](../../../reference/apis-basic-services-kit/js-apis-request.md#constants)。 |
+| type | 'fail' | Yes | Event type.&lt;br&gt;- **'fail'**: download task failure. |
+| callback | (err: int) =&gt; void | Yes | Callback for the download task failure event.For details about the error codes, see [Download Error Codes](../../../reference/apis-basic-services-kit/js-apis-request.md#constants) . |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | The parameters check fails. Possible causes: &lt;br&gt; 1. Missing mandatory parameters. &lt;br&gt; 2. Incorrect parameter type. &lt;br&gt; 3. Parameter verification failed.<br>**Applicable version:** 12 and later |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | The parameters check fails. Possible causes: &lt;br&gt; 1. Missing mandatory parameters. &lt;br&gt; 2. Incorrect parameter type. &lt;br&gt; 3. Parameter verification failed.<br>**Applicable version:** 12 and later |
 
 ## Examples
 
@@ -1285,12 +1291,7 @@ Called when the current download session remove.
 pause(callback: AsyncCallback<void>): void
 ```
 
-暂停下载正在运行中的任务，使用callback异步回调。
-
-> **说明：**
-> 
-> 从API version 7开始支持，从API version 9开始废弃，建议使用
-> [suspend](arkts-basicservices-request-downloadtask-i.md#suspend)替代。
+Pauses this download task. This API uses an asynchronous callback to return the result.
 
 **Since:** 7
 
@@ -1310,13 +1311,13 @@ pause(callback: AsyncCallback<void>): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | 回调函数。当暂停下载任务成功，err为undefined，否则为错误对象。 |
+| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined**. Otherwise, **err** is an error object. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 201 | The permissions check fails. |
+| [201](../../errorcode-universal.md#201-permission-denied) | The permissions check fails. |
 
 ## Examples
 
@@ -1336,11 +1337,7 @@ downloadTask.pause((err: BusinessError) => {
 pause(): Promise<void>
 ```
 
-暂停下载正在运行中的任务，使用Promise异步回调。
-
-> **说明：**
-> 
-> 从API version 7开始支持，从API version 9开始废弃，建议使用[suspend](arkts-basicservices-request-downloadtask-i.md#suspend)替代。
+Pauses this download task. This API uses a promise to return the result.
 
 **Since:** 7
 
@@ -1360,13 +1357,13 @@ pause(): Promise<void>
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise对象。无返回结果的Promise对象。 |
+| Promise&lt;void&gt; | Promise that returns no value. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 201 | The permissions check fails. |
+| [201](../../errorcode-universal.md#201-permission-denied) | The permissions check fails. |
 
 ## Examples
 
@@ -1384,12 +1381,7 @@ downloadTask.pause().then(() => {
 query(callback: AsyncCallback<DownloadInfo>): void
 ```
 
-查询下载任务，返回下载任务的信息，使用callback异步回调。
-
-> **说明：**
-> 
-> 从API version 7开始支持，从API version 9开始废弃，建议使用
-> [getTaskInfo](arkts-basicservices-request-downloadtask-i.md#gettaskinfo)替代。
+Queries this download task. This API uses an asynchronous callback to return the result.
 
 **Since:** 7
 
@@ -1409,13 +1401,13 @@ query(callback: AsyncCallback<DownloadInfo>): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;DownloadInfo&gt; | Yes | 回调函数。当查询下载任务成功，err为undefined，data为获取到的DownloadInfo对象；否则为错误对象。 |
+| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;DownloadInfo&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined** and **data** is the **DownloadInfo** object obtained. Otherwise, **err** is an error object. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 201 | The permissions check fails. |
+| [201](../../errorcode-universal.md#201-permission-denied) | The permissions check fails. |
 
 ## Examples
 
@@ -1435,11 +1427,7 @@ downloadTask.query((err: BusinessError, downloadInfo: request.DownloadInfo)=>{
 query(): Promise<DownloadInfo>
 ```
 
-查询下载任务，返回下载任务的信息，使用Promise异步回调。
-
-> **说明：**
-> 
-> 从API version 7开始支持，从API version 9开始废弃,建议使用[getTaskInfo](arkts-basicservices-request-downloadtask-i.md#gettaskinfo)替代。
+Queries this download task. This API uses a promise to return the result.
 
 **Since:** 7
 
@@ -1459,13 +1447,13 @@ query(): Promise<DownloadInfo>
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;DownloadInfo&gt; | Promise对象。返回DownloadInfo。 |
+| Promise&lt;DownloadInfo&gt; | Promise used to return the **DownloadInfo** object. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 201 | The permissions check fails. |
+| [201](../../errorcode-universal.md#201-permission-denied) | The permissions check fails. |
 
 ## Examples
 
@@ -1483,12 +1471,7 @@ downloadTask.query().then((downloadInfo) => {
 queryMimeType(callback: AsyncCallback<string>): void
 ```
 
-查询下载的任务的MimeType，使用callback异步回调。
-
-> **说明：**
-> 
-> 从API version 7开始支持，从API version 9开始废弃，建议使用
-> [getTaskMimeType](arkts-basicservices-request-downloadtask-i.md#gettaskmimetype)替代。
+Queries the MIME type of this download task. This API uses an asynchronous callback to return the result.
 
 **Since:** 7
 
@@ -1508,13 +1491,13 @@ queryMimeType(callback: AsyncCallback<string>): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;string&gt; | Yes | 回调函数。当查询下载任务的MimeType成功，err为undefined，data为获取到的任务的MimeType对象；否则为错误对象。 |
+| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;string&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined** and data is the **MimeType** object obtained. Otherwise, **err** is an error object. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 201 | The permissions check fails. |
+| [201](../../errorcode-universal.md#201-permission-denied) | The permissions check fails. |
 
 ## Examples
 
@@ -1534,11 +1517,7 @@ downloadTask.queryMimeType((err: BusinessError, data: string)=>{
 queryMimeType(): Promise<string>
 ```
 
-查询下载任务的MimeType，使用Promise异步回调。
-
-> **说明：**
-> 
-> 从API version 7开始支持，从API version 9开始废弃，建议使用[getTaskMimeType](arkts-basicservices-request-downloadtask-i.md#gettaskmimetype)替代。
+Queries the MIME type of this download task. This API uses a promise to return the result.
 
 **Since:** 7
 
@@ -1558,13 +1537,13 @@ queryMimeType(): Promise<string>
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;string&gt; | Promise对象。返回下载任务的MimeType。 |
+| Promise&lt;string&gt; | Promise used to return the MIME type of a download task. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 201 | The permissions check fails. |
+| [201](../../errorcode-universal.md#201-permission-denied) | The permissions check fails. |
 
 ## Examples
 
@@ -1582,12 +1561,7 @@ downloadTask.queryMimeType().then((data: string) => {
 remove(callback: AsyncCallback<boolean>): void
 ```
 
-移除下载的任务，使用callback异步回调。
-
-> **说明：**
-> 
-> 从API version 6开始支持，从API version 9开始废弃，建议使用
-> [delete](arkts-basicservices-request-uploadtask-i.md#delete)替代。
+Deletes the download task. This API uses an asynchronous callback to return the result.
 
 **Since:** 6
 
@@ -1607,13 +1581,13 @@ remove(callback: AsyncCallback<boolean>): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;boolean&gt; | Yes | 回调函数。返回true表示移除下载任务成功；返回false表示移除下载任务失败。 |
+| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;boolean&gt; | Yes | Callback used to return the result. The value **true** indicates that the operation is successful; **false** indicates the opposite. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 201 | The permissions check fails. |
+| [201](../../errorcode-universal.md#201-permission-denied) | The permissions check fails. |
 
 ## Examples
 
@@ -1633,11 +1607,7 @@ downloadTask.remove((err, result)=>{
 remove(): Promise<boolean>
 ```
 
-移除下载的任务，使用Promise异步回调。
-
-> **说明：**
-> 
-> 从API version 6开始支持，从API version 9开始废弃，建议使用[delete](arkts-basicservices-request-uploadtask-i.md#delete)替代。
+Deletes the download task. This API uses a promise to return the result.
 
 **Since:** 6
 
@@ -1657,13 +1627,13 @@ remove(): Promise<boolean>
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;boolean&gt; | Promise对象。返回true表示移除下载任务成功；返回false表示移除下载任务失败。 |
+| Promise&lt;boolean&gt; | Promise used to return the result. The value **true** indicates that the operation is successful; **false** indicates the opposite. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 201 | The permissions check fails. |
+| [201](../../errorcode-universal.md#201-permission-denied) | The permissions check fails. |
 
 ## Examples
 
@@ -1681,11 +1651,12 @@ downloadTask.remove().then((result) => {
 restore(callback: AsyncCallback<boolean>): void
 ```
 
-重新启动被暂停的下载任务，使用callback异步回调。
+Restores the download task. This API uses an asynchronous callback to return the result.
 
-> **说明：**
+> **NOTE：**
 > 
-> 由于不存在401报错场景，在api12中 `401 the parameters check fails` 这个错误码被移除。
+> The scenarios for triggering error code **401 the parameters check fails** do not exist. Therefore, this error
+> code is removed from API version 12.
 
 **Since:** 9
 
@@ -1701,13 +1672,13 @@ restore(callback: AsyncCallback<boolean>): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;boolean&gt; | Yes | 回调函数。返回true表示重新启动已暂停的下载任务成功；返回false表示重新启动下载任务失败。 |
+| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;boolean&gt; | Yes | Callback used to return the result. The value **true** indicates that the operation is successful; **false** indicates the opposite. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 201 | The permissions check fails. |
+| [201](../../errorcode-universal.md#201-permission-denied) | The permissions check fails. |
 
 ## Examples
 
@@ -1742,11 +1713,12 @@ try {
 restore(): Promise<boolean>
 ```
 
-重新启动被暂停的下载任务，使用Promise异步回调。
+Restores the download task. This API uses a promise to return the result.
 
-> **说明：**
+> **NOTE：**
 > 
-> 由于不存在401报错场景，在api12中 `401 the parameters check fails` 这个错误码被移除。
+> The scenarios for triggering error code **401 the parameters check fails** do not exist. Therefore, this error
+> code is removed from API version 12.
 
 **Since:** 9
 
@@ -1762,13 +1734,13 @@ restore(): Promise<boolean>
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;boolean&gt; | Promise对象。返回true表示重新启动被暂停的下载任务成功；返回false表示重新启动被暂停的下载任务失败。 |
+| Promise&lt;boolean&gt; | Promise used to return the result. The value **true** indicates that the operation is successful; **false** indicates the opposite. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 201 | The permissions check fails. |
+| [201](../../errorcode-universal.md#201-permission-denied) | The permissions check fails. |
 
 ## Examples
 
@@ -1801,12 +1773,7 @@ try {
 resume(callback: AsyncCallback<void>): void
 ```
 
-重新启动被暂停的下载任务，使用callback异步回调。
-
-> **说明：**
-> 
-> 从API version 7开始支持，从API version 9开始废弃，建议使用
-> [restore](arkts-basicservices-request-downloadtask-i.md#restore)替代。
+Restores the download task. This API uses an asynchronous callback to return the result.
 
 **Since:** 7
 
@@ -1826,13 +1793,13 @@ resume(callback: AsyncCallback<void>): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | 回调函数。当重新启动已暂停的下载任务成功，err为undefined，否则为错误对象。 |
+| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined**. Otherwise, **err** is an error object. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 201 | The permissions check fails. |
+| [201](../../errorcode-universal.md#201-permission-denied) | The permissions check fails. |
 
 ## Examples
 
@@ -1852,11 +1819,7 @@ downloadTask.resume((err: BusinessError) => {
 resume(): Promise<void>
 ```
 
-重新启动被暂停的下载任务，使用Promise异步回调。
-
-> **说明：**
-> 
-> 从API version 7开始支持，从API version 9开始废弃，建议使用[restore](arkts-basicservices-request-downloadtask-i.md#restore)替代。
+Restores the download task. This API uses a promise to return the result.
 
 **Since:** 7
 
@@ -1876,13 +1839,13 @@ resume(): Promise<void>
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise对象。无返回结果的Promise对象。 |
+| Promise&lt;void&gt; | Promise that returns no value. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 201 | The permissions check fails. |
+| [201](../../errorcode-universal.md#201-permission-denied) | The permissions check fails. |
 
 ## Examples
 
@@ -1900,11 +1863,12 @@ downloadTask.resume().then(() => {
 suspend(callback: AsyncCallback<boolean>): void
 ```
 
-暂停下载正在运行中的任务，已暂停的任务可被[restore](arkts-basicservices-request-downloadtask-i.md#restore)恢复，使用callback异步回调。
+Suspends this download task. You can use [restore](arkts-basicservices-request-downloadtask-i.md#restore) to restore the download.This API uses an asynchronous callback to return the result.
 
-> **说明：**
+> **NOTE：**
 > 
-> 由于不存在401报错场景，在api12中 `401 the parameters check fails` 这个错误码被移除。
+> The scenarios for triggering error code **401 the parameters check fails** do not exist. Therefore, this error
+> code is removed from API version 12.
 
 **Since:** 9
 
@@ -1920,13 +1884,13 @@ suspend(callback: AsyncCallback<boolean>): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;boolean&gt; | Yes | 回调函数。返回true表示暂停下载任务成功；返回false表示暂停下载任务失败。 |
+| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;boolean&gt; | Yes | Callback used to return the result. The value **true** indicates that the operation is successful; **false** indicates the opposite. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 201 | The permissions check fails. |
+| [201](../../errorcode-universal.md#201-permission-denied) | The permissions check fails. |
 
 ## Examples
 
@@ -1961,11 +1925,12 @@ try {
 suspend(): Promise<boolean>
 ```
 
-暂停下载正在运行中的任务，已暂停的任务可被[restore](arkts-basicservices-request-downloadtask-i.md#restore)恢复，使用Promise异步回调。
+Suspends this download task. You can use [restore](arkts-basicservices-request-downloadtask-i.md#restore) to restore the download.This API uses a promise to return the result.
 
-> **说明：**
+> **NOTE：**
 > 
-> 由于不存在401报错场景，在api12中 `401 the parameters check fails` 这个错误码被移除。
+> The scenarios for triggering error code **401 the parameters check fails** do not exist. Therefore, this error
+> code is removed from API version 12.
 
 **Since:** 9
 
@@ -1981,13 +1946,13 @@ suspend(): Promise<boolean>
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;boolean&gt; | Promise对象。返回true表示暂停下载正在运行中的任务成功；返回false表示暂停下载正在运行中的任务失败。 |
+| Promise&lt;boolean&gt; | Promise used to return the result. The value **true** indicates that the operation is successful; **false** indicates the opposite. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 201 | The permissions check fails. |
+| [201](../../errorcode-universal.md#201-permission-denied) | The permissions check fails. |
 
 ## Examples
 

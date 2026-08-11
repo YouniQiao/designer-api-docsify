@@ -1,11 +1,5 @@
 # getSupportedProcessCachePids（系统接口）
 
-## 导入模块
-
-```TypeScript
-import { appManager } from 'kits/@kit.AbilityKit';
-```
-
 ## getSupportedProcessCachePids
 
 ```TypeScript
@@ -48,13 +42,15 @@ function getSupportedProcessCachePids(bundleName : string): Promise<Array<int>>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
-| 801 | Capability not supported. |
-| 16000050 | Internal error. |
-| 201 | Permission denied. |
-| 202 | Not system application. |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| [801](../../errorcode-universal.md#801-该设备不支持此api) | Capability not supported. |
+| [16000050](../errorcode-ability.md#16000050-内部错误) | Internal error. |
+| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not system application. |
 
 ## 示例
+
+ArkTS-Dyn示例：
 
 ```TypeScript
 import { appManager } from '@kit.AbilityKit';
@@ -69,7 +65,29 @@ try {
       hilog.error(0x0000, 'testTag', `get pids error, code: ${err.code}, msg:${err.message}`);
     })
 } catch (err) {
-  hilog.error(0x0000, 'testTag', `get pids error, code: ${(err as BusinessError).code}, msg:${(err as BusinessError).message}`);
+  hilog.error(0x0000, 'testTag', `get pids error, code: ${err.code}, msg:${err.message}`);
+}
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+'use static'
+import { appManager } from '@kit.AbilityKit';
+import { hilog } from '@kit.PerformanceAnalysisKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+try {
+  let bundleName = "ohos.samples.processcache";
+  appManager.getSupportedProcessCachePids(bundleName).then((pids: Array<int>) => {
+    hilog.info(0x0000, 'testTag', `pids: ${JSON.stringify(pids)}`);
+  }).catch((e) => {
+    let err = e as BusinessError;
+    hilog.error(0x0000, 'testTag', `get pids error, code: ${err.code}, msg:${err.message}`);
+  })
+} catch (e) {
+  let err = e as BusinessError;
+  hilog.error(0x0000, 'testTag', `get pids error, code: ${err.code}, msg:${err.message}`);
 }
 ```
 

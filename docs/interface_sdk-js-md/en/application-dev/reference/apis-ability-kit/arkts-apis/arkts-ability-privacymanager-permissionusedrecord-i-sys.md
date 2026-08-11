@@ -1,6 +1,6 @@
 # PermissionUsedRecord (System API)
 
-某个权限的访问记录。
+Represents the access records of a permission.
 
 **Since:** 9
 
@@ -24,7 +24,7 @@ import { privacyManager } from 'kits/@kit.AbilityKit';
 accessCount: int
 ```
 
-该权限访问总次数，表示在查询时间窗口内成功使用该权限的累计次数。
+Total number of accesses for this permission, indicating the cumulative number of successful uses of this permission within the query time window.
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
@@ -44,9 +44,9 @@ accessCount: int
 accessRecords: Array<UsedRecordDetail>
 ```
 
-访问记录集合，仅当flag为FLAG_PERMISSION_USAGE_DETAIL时生效。
+Access record collection, effective only when flag is FLAG_PERMISSION_USAGE_DETAIL.
 
-默认值：查询最近10条成功访问记录。
+Default value: Query the last 10 successful access records.
 
 **Type:** Array&lt;UsedRecordDetail&gt;
 
@@ -66,7 +66,7 @@ accessRecords: Array<UsedRecordDetail>
 enhancedIdentity?: string
 ```
 
-扩展身份，长度不超过48个字符。
+Extension identity, with a maximum length of 48 characters.
 
 **Type:** string
 
@@ -88,7 +88,7 @@ enhancedIdentity?: string
 lastAccessDuration: long
 ```
 
-最后一次访问时长。单位为：毫秒。
+Last access duration.Unit: milliseconds.
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：long
 
@@ -108,7 +108,7 @@ lastAccessDuration: long
 lastAccessTime: long
 ```
 
-最后一次访问时间。单位为：毫秒。
+Last time when the permission was accessed.Unit: milliseconds.
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：long
 
@@ -128,7 +128,7 @@ lastAccessTime: long
 lastRejectTime: long
 ```
 
-最后一次拒绝时间。单位为：毫秒。
+Last time when the access to the permission was rejected.Unit: milliseconds.
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：long
 
@@ -148,7 +148,7 @@ lastRejectTime: long
 permissionName: Permissions
 ```
 
-权限名，用于标识当前统计记录对应的敏感权限。
+Permission name, used to identify the sensitive permission corresponding to the current statistical record.
 
 **Type:** [Permissions](arkts-ability-permissions-t.md)
 
@@ -168,7 +168,7 @@ permissionName: Permissions
 rejectCount: int
 ```
 
-该权限拒绝总次数，表示在查询时间窗口内权限访问失败或被拒绝的累计次数。
+Total number of rejections for this permission, indicating the cumulative number of failed or denied permission accesses within the query time window.
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
@@ -188,9 +188,9 @@ rejectCount: int
 rejectRecords: Array<UsedRecordDetail>
 ```
 
-拒绝记录集合，仅当flag为FLAG_PERMISSION_USAGE_DETAIL时生效。
+Rejection record collection, effective only when flag is FLAG_PERMISSION_USAGE_DETAIL.
 
-默认值：查询最近10条失败或拒绝记录。
+Default value: Query the last 10 failed or rejected records.
 
 **Type:** Array&lt;UsedRecordDetail&gt;
 

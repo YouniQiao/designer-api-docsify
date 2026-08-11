@@ -1,6 +1,6 @@
 # RichEditorBuilderSpanOptions
 
-设置builder的偏移位置和样式。
+Sets the offset and style of the builder.
 
 **Since:** 11
 
@@ -16,9 +16,7 @@
 dragBackgroundColor? : ColorMetrics
 ```
 
-设置BuilderSpan单独拖拽时的背板颜色。未配置或传入无效颜色值时，按默认值处理。
-
-默认值：跟随系统主题拖拽背板色。
+Background color of the builder when it is dragged independently. If no valid value is specified, the default color is used.
 
 **Type:** [ColorMetrics](../arkts-apis/arkts-arkui-graphics-colormetrics-c-sys.md)
 
@@ -40,9 +38,9 @@ dragBackgroundColor? : ColorMetrics
 isDragShadowNeeded?: boolean
 ```
 
-设置BuilderSpan单独拖拽时是否需要投影。true表示需要投影，false表示不需要投影。未配置或传入无效值时，按默认值处理。
+Whether to apply a shadow when the builder is dragged independently. If no valid value is specified, a shadow is applied. The value **true** means to apply a shadow, and **false** means the opposite.
 
-默认值：true。
+Default value: **true**
 
 **Type:** boolean
 

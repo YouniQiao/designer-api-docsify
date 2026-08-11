@@ -1,6 +1,6 @@
 # GetPropertyRequest (System API)
 
-提供获取属性请求的信息。
+Defines the request for obtaining property information.
 
 **Since:** 8
 
@@ -24,7 +24,7 @@ import { osAccount } from 'kits/@kit.BasicServicesKit';
 accountId?: int
 ```
 
-系统账号标识，默认为undefined。
+OS account ID, which is **undefined** by default.
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
@@ -44,7 +44,7 @@ accountId?: int
 authType: AuthType
 ```
 
-身份验证凭据类型。
+Authentication credential type.
 
 **Type:** [AuthType](arkts-basicservices-osaccount-authtype-e-sys.md)
 
@@ -64,7 +64,7 @@ authType: AuthType
 keys: Array<GetPropertyType>
 ```
 
-指示要获取的属性类型数组。
+An array of the types of the properties to obtain.
 
 **Type:** Array&lt;GetPropertyType&gt;
 

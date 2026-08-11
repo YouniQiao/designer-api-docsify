@@ -1,11 +1,5 @@
 # getTypeDescriptor
 
-## 导入模块
-
-```TypeScript
-import { uniformTypeDescriptor } from 'kits/@kit.ArkData';
-```
-
 ## getTypeDescriptor
 
 ```TypeScript
@@ -40,18 +34,18 @@ function getTypeDescriptor(typeId: string): TypeDescriptor
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 401 | Parameter error. Possible causes:1.Mandatory parameters are left unspecified; &lt;br&gt;2.Incorrect parameter types; &lt;br&gt;3. Parameter verification failed. |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes:1.Mandatory parameters are left unspecified; &lt;br&gt;2.Incorrect parameter types; &lt;br&gt;3. Parameter verification failed. |
 
 ## 示例
+
+ArkTS-Dyn示例：
 
 ```TypeScript
 import { uniformTypeDescriptor } from '@kit.ArkData';
 import { BusinessError } from '@kit.BasicServicesKit';
 
 try {
-  // 获取指定类型的TypeDescriptor对象
-  let typeObj: uniformTypeDescriptor.TypeDescriptor =
-    uniformTypeDescriptor.getTypeDescriptor('com.adobe.photoshop-image');
+  let typeObj: uniformTypeDescriptor.TypeDescriptor = uniformTypeDescriptor.getTypeDescriptor('com.adobe.photoshop-image');
   if (typeObj) {
     let typeId = typeObj.typeId;
     let belongingToTypes = typeObj.belongingToTypes;
@@ -67,6 +61,33 @@ try {
 } catch (e) {
   let error: BusinessError = e as BusinessError;
   console.error(`getTypeDescriptor throws an exception. code is ${error.code}, message is ${error.message} `);
+}
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+import { uniformTypeDescriptor } from '@kit.ArkData';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+try {
+  let typeObj: uniformTypeDescriptor.TypeDescriptor | null = uniformTypeDescriptor.getTypeDescriptor('com.adobe.photoshop-image');
+  if (typeObj) {
+    let typeId = typeObj.typeId;
+    let belongingToTypes = typeObj.belongingToTypes;
+    let description = typeObj.description;
+    let referenceURL = typeObj.referenceURL;
+    let iconFile = typeObj.iconFile;
+    let filenameExtensions = typeObj.filenameExtensions;
+    let mimeTypes = typeObj.mimeTypes;
+    console.info(`typeId: ${typeId}, belongingToTypes: ${belongingToTypes}, description: ${description}, referenceURL: ${referenceURL}, iconFile:
+        ${iconFile}, filenameExtensions: ${filenameExtensions}, mimeTypes: ${mimeTypes}`);
+  } else {
+    console.info('type com.adobe.photoshop-image does not exist');
+  }
+} catch (e) {
+  let error: BusinessError = e as BusinessError;
+  console.info(`getTypeDescriptor throws an exception. code is ${error.code}, message is ${error.message} `);
 }
 ```
 
@@ -105,5 +126,5 @@ function getTypeDescriptor(typeId: string): TypeDescriptor | null
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2.Incorrect parameter types; &lt;br&gt;3. Parameter verification failed. |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2.Incorrect parameter types; &lt;br&gt;3. Parameter verification failed. |
 

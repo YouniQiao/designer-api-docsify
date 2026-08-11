@@ -1,0 +1,125 @@
+# AudioDeviceDescriptor
+
+Describes an audio device.
+
+**Since:** 7
+
+<!--Device-audio-interface AudioDeviceDescriptor--><!--Device-audio-interface AudioDeviceDescriptor-End-->
+
+**System capability:** SystemCapability.Multimedia.Audio.Device
+
+## Modules to Import
+
+```TypeScript
+import { audio } from 'kits/@kit.AudioKit';
+```
+
+## dmDeviceInfo
+
+```TypeScript
+readonly dmDeviceInfo?: string
+```
+
+Extended information for distributed device, includes whether the device supports stereo, Device SN, etc.
+
+**Type:** string
+
+**Since:** 23
+
+**Model restriction:** This API can be used only in the stage model.
+
+<!--Device-AudioDeviceDescriptor-readonly dmDeviceInfo?: string--><!--Device-AudioDeviceDescriptor-readonly dmDeviceInfo?: string-End-->
+
+**System capability:** SystemCapability.Multimedia.Audio.Core
+
+**System API:** This is a system API.
+
+## dmDeviceType
+
+```TypeScript
+readonly dmDeviceType?: number
+```
+
+Only {@link DeviceType.SPEAKER} with networkId、{@link DeviceType.REMOTE_CAST}or {@link DeviceType.REMOTE_DAUDIO} has dmDeviceType which indicated deviceTypeId.
+
+**Type:** number
+
+**Since:** 18
+
+<!--Device-AudioDeviceDescriptor-readonly dmDeviceType?: int--><!--Device-AudioDeviceDescriptor-readonly dmDeviceType?: int-End-->
+
+**System capability:** SystemCapability.Multimedia.Audio.Core
+
+**System API:** This is a system API.
+
+## highQualityRecordingSupported
+
+```TypeScript
+readonly highQualityRecordingSupported?: boolean
+```
+
+whether supports high-quality recording.
+
+**Type:** boolean
+
+**Since:** 21
+
+<!--Device-AudioDeviceDescriptor-readonly highQualityRecordingSupported?: boolean--><!--Device-AudioDeviceDescriptor-readonly highQualityRecordingSupported?: boolean-End-->
+
+**System capability:** SystemCapability.Multimedia.Audio.Core
+
+**System API:** This is a system API.
+
+## interruptGroupId
+
+```TypeScript
+readonly interruptGroupId: number
+```
+
+Interrupt group id
+
+**Type:** number
+
+**Since:** 9
+
+<!--Device-AudioDeviceDescriptor-readonly interruptGroupId: int--><!--Device-AudioDeviceDescriptor-readonly interruptGroupId: int-End-->
+
+**System capability:** SystemCapability.Multimedia.Audio.Device
+
+**System API:** This is a system API.
+
+## networkId
+
+```TypeScript
+readonly networkId: string
+```
+
+Device network id
+
+**Type:** string
+
+**Since:** 9
+
+<!--Device-AudioDeviceDescriptor-readonly networkId: string--><!--Device-AudioDeviceDescriptor-readonly networkId: string-End-->
+
+**System capability:** SystemCapability.Multimedia.Audio.Device
+
+**System API:** This is a system API.
+
+## volumeGroupId
+
+```TypeScript
+readonly volumeGroupId: number
+```
+
+Volume group id
+
+**Type:** number
+
+**Since:** 9
+
+<!--Device-AudioDeviceDescriptor-readonly volumeGroupId: int--><!--Device-AudioDeviceDescriptor-readonly volumeGroupId: int-End-->
+
+**System capability:** SystemCapability.Multimedia.Audio.Device
+
+**System API:** This is a system API.

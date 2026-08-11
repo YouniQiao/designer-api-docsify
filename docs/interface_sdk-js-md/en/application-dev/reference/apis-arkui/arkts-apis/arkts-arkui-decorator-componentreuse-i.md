@@ -1,6 +1,6 @@
 # ComponentReuse
 
-定义ComponentReuse方法装饰器。
+Define ComponentReuse Method Decorator.
 
 **Since:** 24
 

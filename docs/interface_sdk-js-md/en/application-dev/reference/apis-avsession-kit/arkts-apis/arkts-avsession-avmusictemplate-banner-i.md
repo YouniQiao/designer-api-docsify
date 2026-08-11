@@ -1,6 +1,6 @@
 # Banner
 
-海报的定义。继承自[MediaEntity](arkts-avsession-avmusictemplate-mediaentity-i.md)。
+The definition of Banner.
 
 **Inheritance/Implementation:** Banner extends [MediaEntity](arkts-avsession-avmusictemplate-mediaentity-i.md)
 
@@ -24,7 +24,7 @@ import { avMusicTemplate } from 'kits/@kit.AVSessionKit';
 isSupportOnePlay: boolean
 ```
 
-是否支持一键启播。true表示支持，false表示不支持。无默认值。
+Is support one play
 
 **Type:** boolean
 

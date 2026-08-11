@@ -1,6 +1,6 @@
 # PathDirection
 
-添加闭合轮廓方向的枚举。
+Enumerates the directions of a closed contour.
 
 **Since:** 12
 
@@ -16,7 +16,7 @@
 CLOCKWISE = 0
 ```
 
-顺时针方向添加闭合轮廓。
+Adds a closed contour clockwise.
 
 **Since:** 12
 
@@ -32,7 +32,7 @@ CLOCKWISE = 0
 COUNTER_CLOCKWISE = 1
 ```
 
-逆时针方向添加闭合轮廓。
+Adds a closed contour counterclockwise.
 
 **Since:** 12
 

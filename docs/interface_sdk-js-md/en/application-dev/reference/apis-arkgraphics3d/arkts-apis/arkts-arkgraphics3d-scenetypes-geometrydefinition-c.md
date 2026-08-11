@@ -1,6 +1,6 @@
 # GeometryDefinition
 
-定义用于网格创建的几何形状.
+Define a geometric shape for mesh creation.
 
 **Since:** 18
 
@@ -16,7 +16,7 @@
 get geometryType(): GeometryType
 ```
 
-从该定义中解释几何形状的类型.
+Which geometry shape to interpret from this definition.
 
 **Type:** [GeometryType](arkts-arkgraphics3d-scenetypes-geometrytype-e.md)
 

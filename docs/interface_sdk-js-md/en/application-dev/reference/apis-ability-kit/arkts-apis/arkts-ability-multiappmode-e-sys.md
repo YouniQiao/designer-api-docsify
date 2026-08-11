@@ -1,6 +1,6 @@
 # MultiAppMode (System API)
 
-定义应用是否支持多开模式。
+The module defines whether an application supports the multi-app mode.
 
 **Since:** 12
 
@@ -18,7 +18,7 @@
 NOT_SUPPORTED = 0
 ```
 
-应用不支持多开模式。
+The application does not support the multi-app mode.
 
 **Since:** 12
 
@@ -38,9 +38,9 @@ NOT_SUPPORTED = 0
 MULTI_INSTANCE = 1
 ```
 
-应用支持多实例模式。
+The application supports the multi-instance mode.
 
-**说明：** 只支持2in1设备。
+Note: This property is valid only for 2-in-1 devices.
 
 **Since:** 14
 
@@ -60,7 +60,7 @@ MULTI_INSTANCE = 1
 APP_CLONE = 2
 ```
 
-应用支持分身模式。
+The application supports the app-clone mode.
 
 **Since:** 12
 

@@ -1,7 +1,8 @@
 # AccessibilityElement
 
-无障碍节点元素。在调用 **AccessibilityElement** 的 API 之前，应该调用   
-[AccessibilityExtensionContext.getAccessibilityFocusedElement()](arkts-accessibility-accessibilityextensioncontext-c-sys.md#getaccessibilityfocusedelement)或 [AccessibilityExtensionContext.getRootInActiveWindow()](arkts-accessibility-accessibilityextensioncontext-c-sys.md#getrootinactivewindow) 来获取一个 **AccessibilityElement** 实例。
+Defines the **AccessibilityElement**. Before calling APIs of **AccessibilityElement**, you must call   
+[AccessibilityExtensionContext.getFocusElement()](arkts-accessibility-accessibilityextensioncontext-c.md#getfocuselement)or   
+[AccessibilityExtensionContext.getWindowRootElement()](arkts-accessibility-accessibilityextensioncontext-c.md#getwindowrootelement)to obtain an **AccessibilityElement** instance.
 
 **Since:** 9
 
@@ -17,7 +18,7 @@
 actionNames(callback: AsyncCallback<Array<string>>): void
 ```
 
-获取节点元素支持的所有操作名称，使用callback异步回调。
+Obtains the names of all actions supported by this element. This API uses an asynchronous callback to return the result.
 
 **Since:** 9
 
@@ -33,7 +34,7 @@ actionNames(callback: AsyncCallback<Array<string>>): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;string&gt;&gt; | Yes | 回调函数，返回节点元素支持的所有操作名称。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;string&gt;&gt; | Yes | Callback used to return the names of all actions supported by the element. |
 
 ## actionNames
 
@@ -41,7 +42,7 @@ actionNames(callback: AsyncCallback<Array<string>>): void
 actionNames(): Promise<Array<string>>
 ```
 
-获取节点元素支持的所有操作名称，使用Promise异步回调。
+Obtains the names of all actions supported by this element. This API uses a promise to return the result.
 
 **Since:** 9
 
@@ -57,7 +58,7 @@ actionNames(): Promise<Array<string>>
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;Array&lt;string&gt;&gt; | Promise对象，返回节点元素支持的所有操作名称。 |
+| Promise&lt;Array&lt;string&gt;&gt; | Promise used to return the names of all actions supported by the element. |
 
 ## attributeNames
 
@@ -65,7 +66,7 @@ actionNames(): Promise<Array<string>>
 attributeNames<T extends keyof ElementAttributeValues>(callback: AsyncCallback<Array<T>>): void
 ```
 
-获取节点元素的所有属性名称，使用callback异步回调。
+Obtains all attribute names of this element. This API uses an asynchronous callback to return the result.
 
 **Since:** 9
 
@@ -81,7 +82,7 @@ attributeNames<T extends keyof ElementAttributeValues>(callback: AsyncCallback<A
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;T&gt;&gt; | Yes | 回调函数，返回节点元素的所有属性名称。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;T&gt;&gt; | Yes | Callback used to return all attribute names of the element. |
 
 ## attributeNames
 
@@ -89,7 +90,7 @@ attributeNames<T extends keyof ElementAttributeValues>(callback: AsyncCallback<A
 attributeNames<T extends keyof ElementAttributeValues>(): Promise<Array<T>>
 ```
 
-获取节点元素的所有属性名称，使用Promise异步回调。
+Obtains all attribute names of this element. This API uses a promise to return the result.
 
 **Since:** 9
 
@@ -105,7 +106,7 @@ attributeNames<T extends keyof ElementAttributeValues>(): Promise<Array<T>>
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;Array&lt;T&gt;&gt; | Promise对象，返回节点元素的所有属性名称。 |
+| Promise&lt;Array&lt;T&gt;&gt; | Promise used to return all attribute names of the element. |
 
 ## attributeValue
 
@@ -116,7 +117,7 @@ attributeValue<T extends keyof ElementAttributeValues>(
   ): void
 ```
 
-根据属性名称获取属性值。使用callback异步回调。
+Obtains the attribute value based on an attribute name. This API uses an asynchronous callback to return the result.
 
 **Since:** 9
 
@@ -132,15 +133,15 @@ attributeValue<T extends keyof ElementAttributeValues>(
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| attributeName | T | Yes | 表示属性的名称。 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;ElementAttributeValues[T]&gt; | Yes | 回调函数，返回根据节点属性名称获取的属性值。 |
+| attributeName | T | Yes | Attribute name. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;ElementAttributeValues[T]&gt; | Yes | Callback used to return the attribute value. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
-| 9300004 | This property does not exist. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| [9300004](../errorcode-accessibility.md#9300004-attribute-does-not-exist) | This property does not exist. |
 
 ## attributeValue
 
@@ -148,7 +149,7 @@ attributeValue<T extends keyof ElementAttributeValues>(
 attributeValue<T extends keyof ElementAttributeValues>(attributeName: T): Promise<ElementAttributeValues[T]>
 ```
 
-根据属性名称获取属性值，使用Promise异步回调。
+Obtains the attribute value based on an attribute name. This API uses a promise to return the result.
 
 **Since:** 9
 
@@ -164,20 +165,20 @@ attributeValue<T extends keyof ElementAttributeValues>(attributeName: T): Promis
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| attributeName | T | Yes | 表示属性的名称。 |
+| attributeName | T | Yes | Attribute name. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;ElementAttributeValues[T]&gt; | Promise对象，返回根据节点属性名称获取的属性值。 |
+| Promise&lt;ElementAttributeValues[T]&gt; | Promise used to return the attribute value. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
-| 9300004 | This property does not exist. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| [9300004](../errorcode-accessibility.md#9300004-attribute-does-not-exist) | This property does not exist. |
 
 ## findElement
 
@@ -185,7 +186,7 @@ attributeValue<T extends keyof ElementAttributeValues>(attributeName: T): Promis
 findElement(type: 'content', condition: string, callback: AsyncCallback<Array<AccessibilityElement>>): void
 ```
 
-根据节点内容查询所有节点元素。使用callback异步回调。
+Finds an element based on the content type. This API uses an asynchronous callback to return the result.
 
 **Since:** 9
 
@@ -201,15 +202,15 @@ findElement(type: 'content', condition: string, callback: AsyncCallback<Array<Ac
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'content' | Yes | 固定为'content',表示查找的类型为节点元素内容。 |
-| condition | string | Yes | 表示查找的条件。 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;[AccessibilityElement](arkts-accessibility-accessibilityextensioncontext-accessibilityelement-i.md)&gt;&gt; | Yes | 回调函数，返回满足指定查询关键字的所有节点元素。 |
+| type | 'content' | Yes | Type of element finding. The value is fixed at **'content'**. |
+| condition | string | Yes | Search criteria. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;[AccessibilityElement](arkts-accessibility-accessibilityextensioncontext-accessibilityelement-i.md)&gt;&gt; | Yes | Callback used to return the result. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
 
 ## findElement
 
@@ -217,7 +218,7 @@ findElement(type: 'content', condition: string, callback: AsyncCallback<Array<Ac
 findElement(type: 'content', condition: string): Promise<Array<AccessibilityElement>>
 ```
 
-根据节点内容查询所有节点元素，使用Promise异步回调。
+Finds an element based on the content type. This API uses a promise to return the result.
 
 **Since:** 9
 
@@ -233,20 +234,20 @@ findElement(type: 'content', condition: string): Promise<Array<AccessibilityElem
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'content' | Yes | 固定为'content', 表示查找的类型为节点元素内容。 |
-| condition | string | Yes | 表示查找的条件。 |
+| type | 'content' | Yes | Type of element finding. The value is fixed at **'content'**. |
+| condition | string | Yes | Search criteria. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;Array&lt;[AccessibilityElement](arkts-accessibility-accessibilityextensioncontext-accessibilityelement-i.md)&gt;&gt; | Promise对象，返回满足指定查询关键字的所有节点元素。 |
+| Promise&lt;Array&lt;[AccessibilityElement](arkts-accessibility-accessibilityextensioncontext-accessibilityelement-i.md)&gt;&gt; | Promise used to return the result. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
 
 ## findElement
 
@@ -254,7 +255,7 @@ findElement(type: 'content', condition: string): Promise<Array<AccessibilityElem
 findElement(type: 'focusType', condition: FocusType, callback: AsyncCallback<AccessibilityElement>): void
 ```
 
-根据焦点元素类型查询节点元素，使用callback异步回调。
+Finds an element based on the focus type. This API uses an asynchronous callback to return the result.
 
 **Since:** 9
 
@@ -270,15 +271,15 @@ findElement(type: 'focusType', condition: FocusType, callback: AsyncCallback<Acc
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'focusType' | Yes | 固定为'focusType'，表示查询的类型为节点的焦点元素类型。 |
-| condition | [FocusType](arkts-accessibility-focustype-t.md) | Yes | 表示查询焦点元素的类型。 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[AccessibilityElement](arkts-accessibility-accessibilityextensioncontext-accessibilityelement-i.md)&gt; | Yes | 回调函数，返回满足指定查询焦点元素类型的节点元素。 |
+| type | 'focusType' | Yes | Type of element finding. The value is fixed at **'focusType'**. |
+| condition | [FocusType](arkts-accessibility-focustype-t.md) | Yes | Focus type. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[AccessibilityElement](arkts-accessibility-accessibilityextensioncontext-accessibilityelement-i.md)&gt; | Yes | Callback used to return the result. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
 
 ## findElement
 
@@ -286,7 +287,7 @@ findElement(type: 'focusType', condition: FocusType, callback: AsyncCallback<Acc
 findElement(type: 'focusType', condition: FocusType): Promise<AccessibilityElement>
 ```
 
-根据焦点元素类型查询节点元素，使用Promise异步回调。
+Finds an element based on the focus type. This API uses a promise to return the result.
 
 **Since:** 9
 
@@ -302,20 +303,20 @@ findElement(type: 'focusType', condition: FocusType): Promise<AccessibilityEleme
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'focusType' | Yes | 固定为'focusType'，表示查询的类型为节点的焦点元素类型。 |
-| condition | [FocusType](arkts-accessibility-focustype-t.md) | Yes | 表示查询焦点元素的类型。 |
+| type | 'focusType' | Yes | Type of element finding. The value is fixed at **'focusType'**. |
+| condition | [FocusType](arkts-accessibility-focustype-t.md) | Yes | Focus type. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;[AccessibilityElement](arkts-accessibility-accessibilityextensioncontext-accessibilityelement-i.md)&gt; | Promise对象，返回满足指定查询焦点元素类型的节点元素。 |
+| Promise&lt;[AccessibilityElement](arkts-accessibility-accessibilityextensioncontext-accessibilityelement-i.md)&gt; | Promise used to return the result. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
 
 ## findElement
 
@@ -323,7 +324,7 @@ findElement(type: 'focusType', condition: FocusType): Promise<AccessibilityEleme
 findElement(type: 'focusDirection', condition: FocusDirection, callback: AsyncCallback<AccessibilityElement>): void
 ```
 
-根据下一焦点元素方向查询节点元素，使用callback异步回调。
+Finds an element based on the focus direction. This API uses an asynchronous callback to return the result.
 
 **Since:** 9
 
@@ -339,15 +340,15 @@ findElement(type: 'focusDirection', condition: FocusDirection, callback: AsyncCa
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'focusDirection' | Yes | 固定为'focusDirection', 表示查询的类型为节点的下一焦点元素方向。 |
-| condition | [FocusDirection](arkts-accessibility-focusdirection-t.md) | Yes | 表示下一查询焦点元素的方向。 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[AccessibilityElement](arkts-accessibility-accessibilityextensioncontext-accessibilityelement-i.md)&gt; | Yes | 回调函数，返回满足指定查询下一焦点元素方向的节点元素。 |
+| type | 'focusDirection' | Yes | Type of element finding. The value is fixed at **'focusDirection'**. |
+| condition | [FocusDirection](arkts-accessibility-focusdirection-t.md) | Yes | Direction of the next focus element. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[AccessibilityElement](arkts-accessibility-accessibilityextensioncontext-accessibilityelement-i.md)&gt; | Yes | Callback used to return the result. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
 
 ## findElement
 
@@ -355,7 +356,7 @@ findElement(type: 'focusDirection', condition: FocusDirection, callback: AsyncCa
 findElement(type: 'focusDirection', condition: FocusDirection): Promise<AccessibilityElement>
 ```
 
-根据下一焦点元素方向查询节点元素，使用Promise异步回调。
+Finds an element based on the focus direction. This API uses a promise to return the result.
 
 **Since:** 9
 
@@ -371,20 +372,20 @@ findElement(type: 'focusDirection', condition: FocusDirection): Promise<Accessib
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'focusDirection' | Yes | 固定为'focusDirection'，表示查询的类型为节点的下一焦点元素方向。 |
-| condition | [FocusDirection](arkts-accessibility-focusdirection-t.md) | Yes | 表示查询下一焦点元素的方向。 |
+| type | 'focusDirection' | Yes | Type of element finding. The value is fixed at **'focusDirection'**. |
+| condition | [FocusDirection](arkts-accessibility-focusdirection-t.md) | Yes | Focus direction. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;[AccessibilityElement](arkts-accessibility-accessibilityextensioncontext-accessibilityelement-i.md)&gt; | Promise对象，返回满足指定查询下一焦点元素方向的节点元素。 |
+| Promise&lt;[AccessibilityElement](arkts-accessibility-accessibilityextensioncontext-accessibilityelement-i.md)&gt; | Promise used to return the result. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
 
 ## performAction
 
@@ -392,7 +393,7 @@ findElement(type: 'focusDirection', condition: FocusDirection): Promise<Accessib
 performAction(actionName: string, parameters: object, callback: AsyncCallback<void>): void
 ```
 
-根据操作名称执行某个操作，使用callback异步回调。
+Performs an action based on the specified action name. This API uses an asynchronous callback to return the result.
 
 **Since:** 9
 
@@ -408,16 +409,16 @@ performAction(actionName: string, parameters: object, callback: AsyncCallback<vo
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| actionName | string | Yes | 表示属性的名称，取值参考[Action](arkts-accessibility-accessibility-action-t.md)。 |
-| parameters | object | Yes | 表示执行操作时所需要的参数；默认为空。 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | 回调函数，表示执行指定操作的回调。 |
+| actionName | string | Yes | Action name. For details, see [Action](arkts-accessibility-accessibility-action-t.md). |
+| parameters | object | Yes | Parameters required for performing the target action. Empty by default. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
-| 9300005 | This action is not supported. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| [9300005](../errorcode-accessibility.md#9300005-operation-not-supported) | This action is not supported. |
 
 ## performAction
 
@@ -425,7 +426,7 @@ performAction(actionName: string, parameters: object, callback: AsyncCallback<vo
 performAction(actionName: string, parameters?: object): Promise<void>
 ```
 
-根据操作名称执行某个操作，使用Promise异步回调。
+Performs an action based on the specified action name. This API uses a promise to return the result.
 
 **Since:** 9
 
@@ -441,21 +442,21 @@ performAction(actionName: string, parameters?: object): Promise<void>
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| actionName | string | Yes | 表示属性的名称，取值参考[Action](arkts-accessibility-accessibility-action-t.md)。 |
-| parameters | object | No | 表示执行操作时所需要的参数；默认为空。 |
+| actionName | string | Yes | Action name. For details, see [Action](arkts-accessibility-accessibility-action-t.md). |
+| parameters | object | No | Parameters required for performing the target action. Empty by default. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise对象，无返回结果。 |
+| Promise&lt;void&gt; | Promise that returns no value. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
-| 9300005 | This action is not supported. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| [9300005](../errorcode-accessibility.md#9300005-operation-not-supported) | This action is not supported. |
 
 ## performAction
 
@@ -463,7 +464,7 @@ performAction(actionName: string, parameters?: object): Promise<void>
 performAction(actionName: string, callback: AsyncCallback<void>): void
 ```
 
-根据操作名称执行某个操作，使用callback异步回调。
+Performs an action based on the specified action name. This API uses an asynchronous callback to return the result.
 
 **Since:** 9
 
@@ -479,13 +480,13 @@ performAction(actionName: string, callback: AsyncCallback<void>): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| actionName | string | Yes | 表示属性的名称，取值参考[Action](arkts-accessibility-accessibility-action-t.md)。 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | 回调函数，表示执行指定操作的回调。 |
+| actionName | string | Yes | Action name. For details, see [Action](arkts-accessibility-accessibility-action-t.md). |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
-| 9300005 | This action is not supported. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| [9300005](../errorcode-accessibility.md#9300005-operation-not-supported) | This action is not supported. |
 

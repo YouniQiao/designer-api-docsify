@@ -1,11 +1,5 @@
 # createAtManager
 
-## 导入模块
-
-```TypeScript
-import { Context, Permissions, PermissionRequestResult } from 'kits/@kit.AbilityKit';
-```
-
 ## createAtManager
 
 ```TypeScript

@@ -1,11 +1,5 @@
 # rotateBySpeed（系统接口）
 
-## 导入模块
-
-```TypeScript
-import { mechanicManager } from 'kits/@kit.MechanicKit';
-```
-
 ## rotateBySpeed
 
 ```TypeScript
@@ -42,9 +36,9 @@ function rotateBySpeed(mechId: int, speed: RotationSpeed, duration: int): Promis
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 202 | Not system application. |
-| 33300001 | Service exception. |
-| 33300002 | Device not connected. |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not system application. |
+| [33300001](../errorcode-mechanic.md#33300001-系统错误) | Service exception. |
+| [33300002](../errorcode-mechanic.md#33300002-设备未连接) | Device not connected. |
 
 ## 示例
 

@@ -10,12 +10,6 @@
 
 **系统能力：** SystemCapability.Security.CertificateManager
 
-## 导入模块
-
-```TypeScript
-import { certificateManager } from 'kits/@kit.DeviceCertificateKit';
-```
-
 ## certAlg
 
 ```TypeScript
@@ -60,7 +54,7 @@ certType: CertType
 
 表示证书的类型。
 
-**类型：** [CertType](../../apis-network-kit/arkts-apis/arkts-network-http-certtype-e.md)
+**类型：** [CertType](arkts-devicecertificate-certificatemanager-certtype-e.md)
 
 **起始版本：** 18
 

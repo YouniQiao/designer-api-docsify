@@ -10,12 +10,6 @@
 
 **系统能力：** SystemCapability.DistributedDataManager.UDMF.Core
 
-## 导入模块
-
-```TypeScript
-import { unifiedDataChannel } from 'kits/@kit.ArkData';
-```
-
 ## getDelayData
 
 ```TypeScript
@@ -44,7 +38,7 @@ extras?: Record<string, object>
 
 是一个字典类型对象，用于设置其他附加属性数据。非必填字段，默认值为空字典对象。
 
-**类型：** [Record](../../apis-default/arkts-apis/arkts-record-t.md)&lt;string, object&gt;
+**类型：** Record&lt;string, object&gt;
 
 **起始版本：** 12
 

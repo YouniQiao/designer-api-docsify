@@ -1,6 +1,6 @@
 # KeyOptions
 
-表示按键操作的选项。
+Represents the options for key operations.
 
 **Since:** 26.0.0
 
@@ -22,7 +22,7 @@ import { ResizeDirection, WindowMode, PenMode, PenKeyOperation, Driver, MatchPat
 key1?: int
 ```
 
-操作期间要按下的第一个键码。如果未设置，将不会注入任何按键事件。如果仅设置 key2 而未设置 key1，将会导致业务错误 17000007。
+The first keyCode to press during the operation.If not set, no key event will be injected.Setting only key2 without key1 will result in a BusinessError 17000007.
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
@@ -42,7 +42,7 @@ key1?: int
 key2?: int
 ```
 
-操作期间要按下的第二个键码。 如果未设置，将不会注入任何按键事件。 如果仅设置 key2 而未设置 key1，将会导致业务错误 17000007。
+The second KeyCode to press during the operation.If not set, no key event will be injected.Setting only key2 without key1 will result in a BusinessError 17000007.
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 

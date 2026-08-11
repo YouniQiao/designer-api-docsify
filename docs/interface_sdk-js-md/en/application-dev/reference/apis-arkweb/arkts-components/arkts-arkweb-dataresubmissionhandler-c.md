@@ -16,7 +16,7 @@ Defines the onDataResubmission callback, related to {@link onDataResubmission} m
 cancel(): void
 ```
 
-取消重新发送表单数据。
+Do not resend related form data.
 
 **Since:** 9
 
@@ -52,7 +52,7 @@ Constructor.
 resend(): void
 ```
 
-重新发送表单数据。
+Resend related form data.
 
 **Since:** 9
 

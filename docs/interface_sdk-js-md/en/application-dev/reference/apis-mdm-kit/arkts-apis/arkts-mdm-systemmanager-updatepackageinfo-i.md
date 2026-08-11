@@ -1,6 +1,6 @@
 # UpdatePackageInfo
 
-系统更新包信息。
+Represents information about the system update packages.
 
 **Since:** 12
 
@@ -22,7 +22,7 @@ import { systemManager } from 'kits/@kit.MDMKit';
 authInfo?: string
 ```
 
-系统更新包的鉴权信息。
+Authentication information of the system update package.
 
 **Type:** string
 
@@ -42,7 +42,7 @@ authInfo?: string
 description?: PackageDescription
 ```
 
-系统更新包描述信息。
+Description of the system update packages.
 
 **Type:** [PackageDescription](arkts-mdm-systemmanager-packagedescription-i.md)
 
@@ -62,7 +62,7 @@ description?: PackageDescription
 packages: Array<Package>
 ```
 
-系统更新包详情。
+Details about the system update packages.
 
 **Type:** Array&lt;Package&gt;
 
@@ -82,7 +82,7 @@ packages: Array<Package>
 version: string
 ```
 
-系统更新包版本号。
+Version of the system update package.
 
 **Type:** string
 

@@ -1,6 +1,6 @@
 # @ohos.file.environment
 
-该模块提供环境目录能力，获取内存存储根目录、公共文件根目录的ArkTS接口。
+The **Environment** module provides ArkTS APIs for obtaining the root directories of the storage and user files.
 
 **Since:** 11
 
@@ -22,20 +22,20 @@ import { Environment } from 'kits/@kit.CoreFileKit';
 
 | Name | Description |
 | --- | --- |
-| [getUserDesktopDir](arkts-corefile-environment-getuserdesktopdir-f.md#getuserdesktopdir) | 获取当前用户预授权桌面目录的沙箱路径。 |
-| [getUserDocumentDir](arkts-corefile-environment-getuserdocumentdir-f.md#getuserdocumentdir) | 获取当前用户预授权文档目录的沙箱路径。 |
-| [getUserDownloadDir](arkts-corefile-environment-getuserdownloaddir-f.md#getuserdownloaddir) | 获取当前用户预授权下载目录的沙箱路径。 |
+| [getUserDesktopDir](arkts-corefile-environment-getuserdesktopdir-f.md#getuserdesktopdir) | Obtains the sandbox path of the pre-authorized **Desktop** directory. |
+| [getUserDocumentDir](arkts-corefile-environment-getuserdocumentdir-f.md#getuserdocumentdir) | Obtains the sandbox path of the pre-authorized **Document** directory. |
+| [getUserDownloadDir](arkts-corefile-environment-getuserdownloaddir-f.md#getuserdownloaddir) | Obtains the sandbox path of the pre-authorized **Download** directory. |
 
 <!--Del-->
 ### Functions（系统接口）
 
 | Name | Description |
 | --- | --- |
-| [getExternalStorageDir](arkts-corefile-environment-getexternalstoragedir-f-sys.md#getexternalstoragedir) | 获取外卡根目录的沙箱路径，该接口仅对具有该系统能力的设备开放。 |
-| [getStorageDataDir](arkts-corefile-environment-getstoragedatadir-f-sys.md#getstoragedatadir) | 异步方法获取内存存储根目录，使用promise异步回调。 |
-| [getStorageDataDir](arkts-corefile-environment-getstoragedatadir-f-sys.md#getstoragedatadir-1) | 异步方法获取内存存储根目录，使用callback异步回调。 |
-| [getUserDataDir](arkts-corefile-environment-getuserdatadir-f-sys.md#getuserdatadir) | 异步方法获取公共文件根目录，使用promise异步回调。 |
-| [getUserDataDir](arkts-corefile-environment-getuserdatadir-f-sys.md#getuserdatadir-1) | 异步方法获取公共文件根目录，使用callback异步回调。 |
-| [getUserHomeDir](arkts-corefile-environment-getuserhomedir-f-sys.md#getuserhomedir) | 获取当前用户下应用沙箱路径的内卡目录，该接口仅对具有该系统能力的设备开放。 |
+| [getExternalStorageDir](arkts-corefile-environment-getexternalstoragedir-f-sys.md#getexternalstoragedir) | Obtains the sandbox path of the root directory of an external storage card. This API is available only to the devices with the SystemCapability.FileManagement.File.Environment.FolderObtain system capability. |
+| [getStorageDataDir](arkts-corefile-environment-getstoragedatadir-f-sys.md#getstoragedatadir) | Obtains the root directory of the memory. This API uses a promise to return the result. |
+| [getStorageDataDir](arkts-corefile-environment-getstoragedatadir-f-sys.md#getstoragedatadir-1) | Obtains the root directory of the memory. This API uses an asynchronous callback to return the result. |
+| [getUserDataDir](arkts-corefile-environment-getuserdatadir-f-sys.md#getuserdatadir) | Obtains the root directory of user files. This API uses a promise to return the result. |
+| [getUserDataDir](arkts-corefile-environment-getuserdatadir-f-sys.md#getuserdatadir-1) | Obtains the root directory of user files. This API uses an asynchronous callback to return the result. |
+| [getUserHomeDir](arkts-corefile-environment-getuserhomedir-f-sys.md#getuserhomedir) | Obtains the sandbox path of the built-in card directory of the current user. This API is available only to the devices with the SystemCapability.FileManagement.File.Environment.FolderObtain system capability. |
 <!--DelEnd-->
 

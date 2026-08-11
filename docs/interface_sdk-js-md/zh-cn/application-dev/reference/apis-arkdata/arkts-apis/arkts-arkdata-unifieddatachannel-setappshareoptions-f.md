@@ -1,11 +1,5 @@
 # setAppShareOptions
 
-## 导入模块
-
-```TypeScript
-import { unifiedDataChannel } from 'kits/@kit.ArkData';
-```
-
 ## setAppShareOptions
 
 ```TypeScript
@@ -38,10 +32,10 @@ function setAppShareOptions(intention: Intention, shareOptions: ShareOptions): v
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
-| 20400001 | Settings already exist. To reconfigure, remove the existing sharing options. |
-| 201 | Permission denied. Interface caller does not have permission " ohos.permission.MANAGE_UDMF_APP_SHARE_OPTION".<br>**适用版本：** 14+ |
-| 202 | Permission verification failed, application which is not a system application uses system API.<br>**适用版本：** 12 - 13 |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| [20400001](../errorcode-udmf.md#20400001-设置已存在若要重新配置请删除现有的共享选项) | Settings already exist. To reconfigure, remove the existing sharing options. |
+| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. Interface caller does not have permission " ohos.permission.MANAGE_UDMF_APP_SHARE_OPTION".<br>**适用版本：** 14+ |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed, application which is not a system application uses system API.<br>**适用版本：** 12 - 13 |
 
 ## 示例
 

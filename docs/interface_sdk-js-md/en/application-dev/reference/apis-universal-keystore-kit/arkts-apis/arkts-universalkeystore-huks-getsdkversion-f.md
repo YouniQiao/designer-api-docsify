@@ -12,11 +12,11 @@ import { huks } from 'kits/@kit.UniversalKeystoreKit';
 function getSdkVersion(options: HuksOptions): string
 ```
 
-获取当前系统sdk版本。
+Obtains the SDK version of the current system.
 
-> **说明：**
+> **NOTE：**
 > 
-> 从API version 8开始支持，从API version 11开始废弃。
+> This API is supported since API version 8 and deprecated since API version 11.
 
 **Since:** 8
 
@@ -32,13 +32,13 @@ function getSdkVersion(options: HuksOptions): string
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| options | [HuksOptions](arkts-universalkeystore-huks-huksoptions-i.md) | Yes | 空对象（此处传空即可）。 |
+| options | [HuksOptions](arkts-universalkeystore-huks-huksoptions-i.md) | Yes | Empty object (leave this parameter empty). |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| string | 返回sdk版本。 |
+| string | SDK version obtained. |
 
 ## Examples
 

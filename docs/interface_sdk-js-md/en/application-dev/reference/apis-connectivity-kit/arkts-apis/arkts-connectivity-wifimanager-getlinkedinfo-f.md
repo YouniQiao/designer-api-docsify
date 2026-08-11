@@ -36,10 +36,10 @@ Obtain connection information about the Wi-Fi connection. If does't have the per
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 801 | Capability not supported. |
-| 201 | Permission denied. |
-| 2501000 | Operation failed. |
-| 2501001 | Wi-Fi STA disabled. |
+| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
+| [2501000](../errorcode-wifi.md#2501000-sta-internal-error) | Operation failed. |
+| [2501001](../errorcode-wifi.md#2501001-sta-disabled) | Wi-Fi STA disabled. |
 
 
 ## getLinkedInfo
@@ -70,11 +70,11 @@ Obtain connection information about the Wi-Fi connection.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Invalid parameters. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. |
-| 801 | Capability not supported. |
-| 201 | Permission denied. |
-| 2501000 | Operation failed. |
-| 2501001 | Wi-Fi STA disabled. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Invalid parameters. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. |
+| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
+| [2501000](../errorcode-wifi.md#2501000-sta-internal-error) | Operation failed. |
+| [2501001](../errorcode-wifi.md#2501001-sta-disabled) | Wi-Fi STA disabled. |
 
 ## Examples
 

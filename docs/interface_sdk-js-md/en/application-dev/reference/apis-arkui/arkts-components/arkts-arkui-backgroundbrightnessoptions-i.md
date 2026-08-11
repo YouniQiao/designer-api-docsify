@@ -1,13 +1,18 @@
 # BackgroundBrightnessOptions
 
-背景亮度选项。
+Provides background brightness options.
 
-> **说明：**
+> **NOTE：**
 > 
-> 对于组件背景内容，每个像素自身的亮度（灰阶值）的计算公式为：
-> > `Y = （0.299R + 0.587G + 0.114B）/ 255.0`（R、G、B分别表示像素红色、绿色和蓝色通道的值，Y表示灰阶值），通过上述公式将像素点的灰阶值归一化至0~1的范围。
-> > 每个像素的亮度提升计算公式为：`ΔY = -rate*Y + lightUpDegree`。例如，当rate=0.5，lightUpDegree=0.5时，对于灰阶值为0.2的像素点，亮度增加值为
-> `-0.5*0.2 + 0.5 = 0.4`，对于灰阶值为1的像素点，亮度增加值为`-0.5*1 + 0.5 = 0`。
+> The brightness (gray scale value) of each pixel in the component background content is calculated using the
+> following formula:
+> > Y = (0.299R + 0.587G + 0.114B) / 255.0, where **R**, **G**, and **B** represent red, green, and blue channel
+> values of the pixel, respectively, and **Y** is the gray scale value. This formula normalizes the gray scale value
+> to a range of 0 to 1.
+> > The formula for calculating the increase in brightness for each pixel is as follows: ΔY = -rate * Y +
+> lightUpDegree. For example, when rate = 0.5 and lightUpDegree = 0.5, for a pixel with a gray scale value of 0.2,
+> the increase in brightness is -0.5 * 0.2 + 0.5 = 0.4. For a pixel with a gray scale value of 1, the increase in
+> brightness is -0.5 * 1 + 0.5 = 0.
 
 **Since:** 12
 
@@ -23,11 +28,11 @@
 lightUpDegree: number
 ```
 
-提亮程度。提亮程度越大，亮度提升程度越大。
+Light up degree. A greater degree indicates a greater increase in brightness.
 
-默认值：0.0 
+Default value: **0.0**
 
-取值范围：[-1.0, 1.0]
+Value range: [-1.0, 1.0]
 
 **Type:** number
 
@@ -49,11 +54,12 @@ lightUpDegree: number
 rate: number
 ```
 
-亮度变化速率。亮度变化速率越大，提亮程度下降速度越快。若rate为0，则lightUpDegree将不生效，即不会产生任何提亮效果。
+Brightness change rate. A higher rate means that brightness decreases more quickly. If **rate** is set to **0**,   
+**lightUpDegree** will not take effect, meaning no brightening effect will occur.
 
-默认值：0.0 
+Default value: **0.0**
 
-取值范围：(0.0, +∞)
+Value range: (0.0, +∞)
 
 **Type:** number
 

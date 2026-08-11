@@ -1,6 +1,6 @@
 # PrinterInformation
 
-定义打印机信息的接口。
+Defines the printer information.
 
 **Since:** 14
 
@@ -22,7 +22,7 @@ import { print } from 'kits/@kit.BasicServicesKit';
 alias?: string
 ```
 
-表示打印机别名。
+Printer alias.
 
 **Type:** string
 
@@ -40,7 +40,7 @@ alias?: string
 capability?: PrinterCapabilities
 ```
 
-表示打印机能力。
+Printer capabilities.
 
 **Type:** [PrinterCapabilities](arkts-basicservices-print-printercapabilities-i.md)
 
@@ -58,7 +58,7 @@ capability?: PrinterCapabilities
 description?: string
 ```
 
-表示打印机说明。
+Printer description.
 
 **Type:** string
 
@@ -76,7 +76,7 @@ description?: string
 options?: string
 ```
 
-表示打印机详细信息。
+Printer details.
 
 **Type:** string
 
@@ -94,7 +94,7 @@ options?: string
 preferences?: PrinterPreferences
 ```
 
-表示打印机首选项。
+Printer preferences.
 
 **Type:** [PrinterPreferences](arkts-basicservices-print-printerpreferences-i.md)
 
@@ -112,7 +112,7 @@ preferences?: PrinterPreferences
 printerId: string
 ```
 
-表示打印机ID。
+Printer ID.
 
 **Type:** string
 
@@ -130,7 +130,7 @@ printerId: string
 printerMake?: string
 ```
 
-表示打印机型号。
+Printer model.
 
 **Type:** string
 
@@ -148,7 +148,7 @@ printerMake?: string
 printerName: string
 ```
 
-表示打印机名称。
+Printer name.
 
 **Type:** string
 
@@ -166,7 +166,7 @@ printerName: string
 printerStatus: PrinterStatus
 ```
 
-表示当前打印机状态。
+Printer state.
 
 **Type:** [PrinterStatus](arkts-basicservices-print-printerstatus-e.md)
 
@@ -184,9 +184,7 @@ printerStatus: PrinterStatus
 selectedDriver?: PpdInfo
 ```
 
-表示添加打印机时选择的驱动的信息。
-
-**模型约束：** 此接口仅可在Stage模型下使用。
+Information about the selected driver when adding the printer.
 
 **Type:** [PpdInfo](arkts-basicservices-print-ppdinfo-i.md)
 
@@ -206,9 +204,7 @@ selectedDriver?: PpdInfo
 selectedProtocol?: string
 ```
 
-表示添加打印机时使用的协议。
-
-**模型约束：** 此接口仅可在Stage模型下使用。
+Protocol used when adding the printer.
 
 **Type:** string
 
@@ -228,7 +224,7 @@ selectedProtocol?: string
 uri?: string
 ```
 
-表示打印机uri。
+Printer URI.
 
 **Type:** string
 

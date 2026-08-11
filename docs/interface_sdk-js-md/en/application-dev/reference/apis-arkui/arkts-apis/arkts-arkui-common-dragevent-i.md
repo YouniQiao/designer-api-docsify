@@ -63,8 +63,8 @@ Get dragData from DragEvent.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 190002 | Data error. |
-| 190001 | Data not found. |
+| [190002](../errorcode-uicontext.md#190002-invalid-callback-function) | Data error. |
+| [190001](../errorcode-uicontext.md#190001-invalid-uicontext-object) | Data not found. |
 
 ## getDisplayId
 
@@ -550,8 +550,8 @@ Request the drag data to be synchronized to caller, can be notified with the syn
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. |
-| 190003 | Operation not allowed for current phase. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. |
+| [190003](../errorcode-drag-event.md#190003-operation-not-allowed-in-the-current-phase) | Operation not allowed for current phase. |
 
 ## autoHideComponentUniqueIds
 

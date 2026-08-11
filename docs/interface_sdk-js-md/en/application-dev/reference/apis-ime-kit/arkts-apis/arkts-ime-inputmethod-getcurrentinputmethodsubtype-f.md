@@ -12,7 +12,7 @@ import { inputMethod } from 'kits/@kit.IMEKit';
 function getCurrentInputMethodSubtype(): InputMethodSubtype
 ```
 
-获取当前输入法的子类型。
+Get the current input method subtype
 
 **Since:** 9
 
@@ -26,7 +26,7 @@ function getCurrentInputMethodSubtype(): InputMethodSubtype
 
 | Type | Description |
 | --- | --- |
-| [InputMethodSubtype](arkts-ime-inputmethodsubtype-i.md) | 返回当前输入法子类型对象。 |
+| [InputMethodSubtype](arkts-ime-inputmethodsubtype-i.md) | the subtype of the current input method. |
 
 ## Examples
 

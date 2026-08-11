@@ -1,6 +1,6 @@
 # LiveViewTypes (System API)
 
-描述实况通知的类型。
+Enumerates live view types.
 
 **Since:** 18
 
@@ -18,7 +18,7 @@
 LIVE_VIEW_ACTIVITY = 0
 ```
 
-实时活动类（进度类）系统实况
+Real-time activity (progress).
 
 **Since:** 18
 
@@ -36,7 +36,7 @@ LIVE_VIEW_ACTIVITY = 0
 LIVE_VIEW_INSTANT = 1
 ```
 
-即时任务类系统实况
+Instant task.
 
 **Since:** 18
 
@@ -54,7 +54,7 @@ LIVE_VIEW_INSTANT = 1
 LIVE_VIEW_LONG_TERM = 2
 ```
 
-长时任务类系统实况
+Long-term task.
 
 **Since:** 18
 

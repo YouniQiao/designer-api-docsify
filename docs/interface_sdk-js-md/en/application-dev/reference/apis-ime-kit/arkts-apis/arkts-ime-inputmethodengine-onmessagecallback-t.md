@@ -4,7 +4,7 @@
 type OnMessageCallback = (msgId: string, msgParam?: ArrayBuffer) => void
 ```
 
-当输入法框架需要显示预览文本时触发的回调。
+Callback function on receiving a custom message.
 
 **Since:** 23
 
@@ -18,6 +18,6 @@ type OnMessageCallback = (msgId: string, msgParam?: ArrayBuffer) => void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| msgId | string | Yes | 接收到的自定义通信数据的标识符。 |
-| msgParam | ArrayBuffer | No | 接收到的自定义通信数据的消息体。 |
+| msgId | string | Yes | the identifier of the message. |
+| msgParam | ArrayBuffer | No | the parameter of the custom message. |
 

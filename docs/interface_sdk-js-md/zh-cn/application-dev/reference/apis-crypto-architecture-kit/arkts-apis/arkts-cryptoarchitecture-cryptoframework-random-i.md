@@ -12,12 +12,6 @@
 - API版本12+：SystemCapability.Security.CryptoFramework.Rand
 - API版本9-11：SystemCapability.Security.CryptoFramework
 
-## 导入模块
-
-```TypeScript
-import { cryptoFramework } from 'kits/@kit.CryptoArchitectureKit';
-```
-
 ## enableHardwareEntropy
 
 ```TypeScript
@@ -42,12 +36,14 @@ enableHardwareEntropy(): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 801 | 该操作不支持。 |
-| 17630001 | 密码操作错误。 |
-| 17620001 | 内存操作失败。 |
-| 17620002 | 获取Native对象失败或参数转换失败。 |
+| [801](../../errorcode-universal.md#801-该设备不支持此api) | 该操作不支持。 |
+| [17630001](../errorcode-crypto-framework.md#17630001-密码操作错误) | 密码操作错误。 |
+| [17620001](../errorcode-crypto-framework.md#17620001-内存操作失败) | 内存操作失败。 |
+| [17620002](../errorcode-crypto-framework.md#17620002-获取native对象失败或参数转换失败) | 获取Native对象失败或参数转换失败。 |
 
 ## 示例
+
+ArkTS-Dyn示例：
 
 ```TypeScript
 import { cryptoFramework } from '@kit.CryptoArchitectureKit';
@@ -68,6 +64,34 @@ rand.generateRandom(12, (err, randData) => {
     }
   }
 });
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+import { cryptoFramework } from '@kit.CryptoArchitectureKit';
+import { BusinessError } from '@ohos.base';
+
+function doTestEnableHardwareEntropy()
+{
+  let rand = cryptoFramework.createRandom();
+  rand.enableHardwareEntropy();
+  rand.generateRandom(12, (err, randData) => {
+    if (err) {
+      console.error("[Callback] err: " + err.code);
+    } else {
+      if (randData != undefined) {
+        console.info('[Callback]: generate random result: ' + randData.data);
+        try {
+          rand.setSeed(randData);
+        } catch (error) {
+          let e: BusinessError = error as BusinessError;
+          console.error(`sync error, ${e.code}, ${e.message}`);
+        }
+      }
+    }
+  });
+}
 ```
 
 ## generateRandom
@@ -111,11 +135,13 @@ generateRandom(len: int, callback: AsyncCallback<DataBlob>): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 401 | 非法入参。可能的原因： &lt;br&gt;1. 必填参数未指定； &lt;br&gt;2. 参数类型不正确； &lt;br&gt;3. 参数验证失败。 |
-| 17630001 | 密码操作错误。 |
-| 17620001 | 内存操作失败。 |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | 非法入参。可能的原因： &lt;br&gt;1. 必填参数未指定； &lt;br&gt;2. 参数类型不正确； &lt;br&gt;3. 参数验证失败。 |
+| [17630001](../errorcode-crypto-framework.md#17630001-密码操作错误) | 密码操作错误。 |
+| [17620001](../errorcode-crypto-framework.md#17620001-内存操作失败) | 内存操作失败。 |
 
 ## 示例
+
+ArkTS-Dyn示例：
 
 ```TypeScript
 import { cryptoFramework } from '@kit.CryptoArchitectureKit';
@@ -128,6 +154,25 @@ rand.generateRandom(12, (err, randData) => {
     console.info('[Callback]: generate random result: ' + randData.data);
   }
 });
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+import { cryptoFramework } from '@kit.CryptoArchitectureKit';
+
+function TestCreateRandom() {
+  let rand = cryptoFramework.createRandom();
+  rand.generateRandom(12, (err, randData) => {
+    if (err) {
+      console.error("[Callback] err: " + err.code);
+    } else {
+      if (randData != undefined) {
+        console.info('[Callback]: generate random result: ' + randData.data);
+      }
+    }
+  });
+}
 ```
 
 ## generateRandom
@@ -174,13 +219,13 @@ generateRandom(len: int): Promise<DataBlob>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 401 | 非法入参。可能的原因： &lt;br&gt;1. 必填参数未指定； &lt;br&gt;2. 参数类型不正确； &lt;br&gt;3. 参数验证失败。 |
-| 17630001 | 密码操作错误。 |
-| 17620001 | 内存操作失败。 |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | 非法入参。可能的原因： &lt;br&gt;1. 必填参数未指定； &lt;br&gt;2. 参数类型不正确； &lt;br&gt;3. 参数验证失败。 |
+| [17630001](../errorcode-crypto-framework.md#17630001-密码操作错误) | 密码操作错误。 |
+| [17620001](../errorcode-crypto-framework.md#17620001-内存操作失败) | 内存操作失败。 |
 
 ## 示例
 
-ArkTS示例：
+ArkTS-Dyn示例：
 
 ```TypeScript
 import { cryptoFramework } from '@kit.CryptoArchitectureKit';
@@ -193,6 +238,24 @@ promiseGenerateRand.then(randData => {
 }).catch((error: BusinessError) => {
   console.error(`[Promise] failed: errCode: ${error.code}, errMsg: ${error.message}`);
 });
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+import { cryptoFramework } from '@kit.CryptoArchitectureKit';
+import { BusinessError } from '@ohos.base';
+
+async function TestGenerateRandom() {
+  try {
+    let rand = cryptoFramework.createRandom();
+    let promiseGenerateRand = await rand.generateRandom(12);
+    console.info('[Promise]: rand result: ' + promiseGenerateRand.data);
+  } catch (err) {
+    let e: BusinessError = err as BusinessError;
+    console.error(`TestGenerateRandom error, ${e.code}, ${e.message}`);
+  }
+}
 ```
 
 JS示例：
@@ -303,15 +366,15 @@ generateRandomSync(len: int): DataBlob
 
 | 类型 | 说明 |
 | --- | --- |
-| [DataBlob](arkts-cryptoarchitecture-cryptoframework-datablob-i.md) | 表示生成的随机数。 |
+| [DataBlob](../../apis-device-certificate-kit/arkts-apis/arkts-devicecertificate-cert-datablob-i.md) | 表示生成的随机数。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 401 | 非法入参。可能的原因： &lt;br&gt;1. 必填参数未指定； &lt;br&gt;2. 参数类型不正确； &lt;br&gt;3. 参数验证失败。 |
-| 17630001 | 密码操作错误。 |
-| 17620001 | 内存操作失败。 |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | 非法入参。可能的原因： &lt;br&gt;1. 必填参数未指定； &lt;br&gt;2. 参数类型不正确； &lt;br&gt;3. 参数验证失败。 |
+| [17630001](../errorcode-crypto-framework.md#17630001-密码操作错误) | 密码操作错误。 |
+| [17620001](../errorcode-crypto-framework.md#17620001-内存操作失败) | 内存操作失败。 |
 
 ## 示例
 
@@ -430,15 +493,17 @@ setSeed(seed: DataBlob): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| seed | [DataBlob](arkts-cryptoarchitecture-cryptoframework-datablob-i.md) | 是 | 设置的种子。 |
+| seed | [DataBlob](../../apis-device-certificate-kit/arkts-apis/arkts-devicecertificate-cert-datablob-i.md) | 是 | 设置的种子。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 17620001 | 内存操作失败。 |
+| [17620001](../errorcode-crypto-framework.md#17620001-内存操作失败) | 内存操作失败。 |
 
 ## 示例
+
+ArkTS-Dyn示例：
 
 ```TypeScript
 import { cryptoFramework } from '@kit.CryptoArchitectureKit';
@@ -458,6 +523,32 @@ rand.generateRandom(12, (err, randData) => {
     }
   }
 });
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+import { cryptoFramework } from '@kit.CryptoArchitectureKit';
+import { BusinessError } from '@ohos.base';
+
+function TestGenerateRandom() {
+  let rand = cryptoFramework.createRandom();
+  rand.generateRandom(12, (err, randData) => {
+    if (err) {
+      console.error("[Callback] err: " + err.code);
+    } else {
+      if (randData != undefined) {
+        console.info('[Callback]: generate random result: ' + randData.data);
+        try {
+          rand.setSeed(randData);
+        } catch (error) {
+          let e: BusinessError = error as BusinessError;
+          console.error(`setSeed error, ${e.code}, ${e.message}`);
+        }
+      }
+    }
+  });
+}
 ```
 
 ## algName

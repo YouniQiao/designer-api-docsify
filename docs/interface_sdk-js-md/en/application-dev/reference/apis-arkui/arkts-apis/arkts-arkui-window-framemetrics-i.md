@@ -1,6 +1,6 @@
 # FrameMetrics
 
-帧率指标。
+Enumerates the metrics for frame performance.
 
 **Since:** 22
 
@@ -22,7 +22,7 @@ import { window } from 'kits/@kit.ArkUI';
 firstDrawFrame: boolean
 ```
 
-是否是首帧。true表示首帧，false表示非首帧。
+Whether the frame is the first frame. **true** for first frame, **false** otherwise.
 
 **Type:** boolean
 
@@ -40,7 +40,7 @@ firstDrawFrame: boolean
 inputHandlingDuration: long
 ```
 
-一帧中的手势处理耗时（单位：纳秒）。
+Duration of gesture handling in a frame, in nanoseconds.
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：long
 
@@ -58,7 +58,7 @@ inputHandlingDuration: long
 layoutMeasureDuration: long
 ```
 
-一帧中的布局测量耗时（单位：纳秒）。
+Duration of layout measurement in a frame, in nanoseconds.
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：long
 
@@ -76,7 +76,7 @@ layoutMeasureDuration: long
 vsyncTimestamp: long
 ```
 
-当前帧的开始时间戳（单位：纳秒）。
+Timestamp marking the start of the current frame, in nanoseconds.
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：long
 

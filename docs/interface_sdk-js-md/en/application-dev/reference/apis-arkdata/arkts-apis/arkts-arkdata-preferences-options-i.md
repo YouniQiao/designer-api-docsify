@@ -1,6 +1,6 @@
 # Options
 
-Preferences实例配置选项。
+Represents the configuration of a **Preferences** instance.
 
 **Since:** 10
 
@@ -22,13 +22,13 @@ import { preferences } from 'kits/@kit.ArkData';
 dataGroupId?: string | null | undefined
 ```
 
-应用组ID，&lt;!--RP1--&gt;暂不支持指定dataGroupId在对应共享沙箱路径下创建Preferences实例。&lt;!--RP1End--&gt;
+Application group ID. &lt;!--RP1--&gt;Currently, this parameter is not supported.&lt;!--RP1End--&gt;
 
-为可选参数。指定在此dataGroupId对应的沙箱路径下创建Preferences实例。当此参数不填时，默认在本应用沙箱目录下创建Preferences实例。
+This parameter is optional. A **Preferences** instance will be created in the sandbox path corresponding to the specified **dataGroupId**. If this parameter is not specified, the **Preferences** instance is created in the sandbox directory of the application.
 
-**模型约束：** 此属性仅在Stage模型下可用。
+This attribute can be used only in the stage model.
 
-**原子化服务API：** 从API version 11开始，该参数支持在原子化服务中使用。
+This API can be used in atomic services since API version 11.
 
 **Type:** string \| null \| undefined
 
@@ -50,9 +50,9 @@ dataGroupId?: string | null | undefined
 name: string
 ```
 
-Preferences实例的名称。名称长度需大于零且小于等于255字节，名称中不能包含'/'且不能以'/'结尾。 
+Name of the **Preferences** instance. It must be longer than 0 bytes and less than or equal to 255 bytes, and cannot contain or end with slashes (/).
 
-**原子化服务API：** 从API version 11开始，该参数支持在原子化服务中使用。
+This API can be used in atomic services since API version 11.
 
 **Type:** string
 
@@ -72,9 +72,9 @@ Preferences实例的名称。名称长度需大于零且小于等于255字节，
 storageType?: StorageType | null | undefined
 ```
 
-存储模式，为可选参数。表示当前Preferences实例需要使用的存储模式。当此参数不填时，默认使用XML存储模式。当选择某种存储模式创建Preferences后，不支持中途切换存储模式。 
+Storage mode to be used by the **Preferences** instance. This parameter is optional. If this parameter is left blank, the XML storage type is used by default. After the storage type is set for a **Preferences** instance, it cannot be changed.
 
-**原子化服务API：** 从API version 18开始，该参数支持在原子化服务中使用。
+This API can be used in atomic services since API version 18.
 
 **Type:** [StorageType](arkts-arkdata-preferences-storagetype-e.md) \| null \| undefined
 

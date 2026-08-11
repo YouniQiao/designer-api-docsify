@@ -1,9 +1,9 @@
 # Ability
 
-Ability类是应用生命周期调度的基本单元，是[UIAbility](arkts-app-ability-uiability.md)和  
-[ExtensionAbility](arkts-ability-app-ability-extensionability-extensionability-c.md)的基类，提供系统配置更新回调和系统内存级别变化回调能力。该基类不支持开发者直接继承，开发者应根据具体的业务场景选择使用[UIAbility](arkts-app-ability-uiability.md)或  
-[ExtensionAbility](arkts-ability-app-ability-extensionability-extensionability-c.md)，相关指南参见  
-[Ability Kit简介](../../../application-models/abilitykit-overview.md)。
+The Ability class is the fundamental unit for application lifecycle scheduling. It is the base class of  
+[UIAbility](arkts-app-ability-uiability.md) and  
+[ExtensionAbility](arkts-ability-app-ability-extensionability-extensionability-c.md), and provides callbacks for system configuration updates and memory level updates. However, you cannot inherit directly from this base class. You should  opt for either [UIAbility](arkts-app-ability-uiability.md) or  
+[ExtensionAbility](arkts-ability-app-ability-extensionability-extensionability-c.md) based on your service needs. For details, see [Introduction to Ability Kit](../../../application-models/abilitykit-overview.md).
 
 **Since:** 9
 
@@ -25,13 +25,14 @@ import { Ability } from 'kits/@kit.AbilityKit';
 onConfigurationUpdate(newConfig: Configuration): void
 ```
 
-当系统环境变量发生变化时，系统会触发该回调。开发者可以重写该回调实现对系统环境变量变化时的响应，例如当系统语言类型发生变化时，应用可以在回调中进行定制化的处理等。
+Called when a system environment variable changes. You can override this callback to respond to changes in the system environment variables. For example, when the system language changes, the application can perform customized  processing in the callback.
 
-> **说明：**
+> **NOTE：**
 > 
-> 该回调方法在实际触发时存在一定限制。例如如果开发者通过[setLanguage](arkts-ability-applicationcontext-c.md#setlanguage)接口设置
-> 应用的语言，即便系统语言发生变化，系统也不再触发onConfigurationUpdate回调。详见
-> [使用场景](../../../application-models/subscribe-system-environment-variable-changes.md#使用场景)。
+> There are certain restrictions when this callback is actually triggered. For example, if you set the application
+> language by calling [setLanguage](arkts-ability-applicationcontext-c.md#setlanguage), the
+> system does not trigger the **onConfigurationUpdate** callback even if the system language changes. For details,
+> see [When to Use](../../../application-models/subscribe-system-environment-variable-changes.md#when-to-use).
 
 **Since:** 9
 
@@ -49,7 +50,7 @@ onConfigurationUpdate(newConfig: Configuration): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| newConfig | [Configuration](arkts-ability-app-ability-configuration-configuration-i.md) | Yes | 表示更新后的配置信息。 |
+| newConfig | [Configuration](arkts-ability-app-ability-configuration-configuration-i.md) | Yes | New configuration. |
 
 ## Examples
 
@@ -70,11 +71,12 @@ class MyUIAbility extends UIAbility {
 onMemoryLevel(level: AbilityConstant.MemoryLevel): void
 ```
 
-当整机可用内存变化到指定程度时，系统会触发该回调。开发者可以重写该回调实现对内存级别变化的响应，例如释放缓存数据等。
+Called when the available memory of the entire device changes to a specified level. You can override this callback to respond to changes in the memory level, for example, releasing cached data.
 
-> **说明：**
+> **NOTE：**
 > 
-> onMemoryLevel回调运行在当前进程的主线程中，如果在该回调中做耗时的UI组件释放，会阻塞主线程任务，因此不建议在该回调中释放UI组件。
+> Releasing UI components in the **onMemoryLevel** callback may block the main thread tasks of the current process.
+> Therefore, you are advised not to release UI components in this callback.
 
 **Since:** 9
 
@@ -92,7 +94,7 @@ onMemoryLevel(level: AbilityConstant.MemoryLevel): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| level | AbilityConstant.MemoryLevel | Yes | 整机可用内存级别，对应的触发场景详见 [AbilityConstant.MemoryLevel](arkts-ability-abilityconstant-memorylevel-e.md)。 |
+| level | AbilityConstant.MemoryLevel | Yes | Level of the available memory.&lt;br&gt;**NOTE：**&lt;br&gt;The trigger conditions may differ across various devices. For example, on a standard device with 12 GB of memory:&lt;br&gt;- When the available memory of the entire device drops to 1700 MB to 1800 MB, the **onMemoryLevel** callback of the MEMORY_LEVEL_MODERATE type is triggered, indicating that the available memory is moderate.&lt;br&gt;- When the available memory of the entire device drops to 1600 MB to 1700 MB, the **onMemoryLevel** callback of the MEMORY_LEVEL_LOW type is triggered, indicating that the available memory is low.&lt;br&gt;- When the available memory of the entire device drops below 1600 MB , the **onMemoryLevel** callback of the MEMORY_LEVEL_CRITICAL type is triggered, indicating that the available memory is critically low. |
 
 ## Examples
 

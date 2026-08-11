@@ -1,6 +1,6 @@
 # Content
 
-定义ComponentContent和NodeContent基类。
+Defines the base class for ComponentContent and NodeContent.
 
 **Since:** 23
 

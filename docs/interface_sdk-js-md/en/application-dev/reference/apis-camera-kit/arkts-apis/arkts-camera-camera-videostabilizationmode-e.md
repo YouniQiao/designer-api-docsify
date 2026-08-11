@@ -1,6 +1,6 @@
 # VideoStabilizationMode
 
-枚举，视频防抖模式。
+Enumerates the video stabilization modes.
 
 **Since:** 10
 
@@ -16,7 +16,7 @@
 OFF = 0
 ```
 
-关闭视频防抖功能。
+Video stabilization is disabled.
 
 **Since:** 10
 
@@ -34,7 +34,7 @@ OFF = 0
 LOW = 1
 ```
 
-使用基础防抖算法。
+The basic video stabilization algorithm is used.
 
 **Since:** 10
 
@@ -52,7 +52,7 @@ LOW = 1
 MIDDLE = 2
 ```
 
-使用防抖效果一般的防抖算法，防抖效果优于LOW类型。
+A video stabilization algorithm with a stabilization effect better than that of the **LOW** type is used.
 
 **Since:** 10
 
@@ -70,7 +70,7 @@ MIDDLE = 2
 HIGH = 3
 ```
 
-使用防抖效果最好的防抖算法，防抖效果优于MIDDLE类型。
+A video stabilization algorithm with a stabilization effect better than that of the **MIDDLE** type is used.
 
 **Since:** 10
 
@@ -88,7 +88,7 @@ HIGH = 3
 AUTO = 4
 ```
 
-自动进行选择防抖算法。
+The system automatically selects a video stabilization algorithm.
 
 **Since:** 10
 

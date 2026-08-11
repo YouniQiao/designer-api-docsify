@@ -1,6 +1,6 @@
 # EditableTextChangeValue
 
-文本变化的详细信息，包括预上屏。
+Define the editableText Component changed value.
 
 **Since:** 23
 
@@ -16,7 +16,7 @@
 content: string
 ```
 
-当前的文本内容。
+Value of body text, without previewText value.
 
 **Type:** string
 
@@ -36,7 +36,7 @@ content: string
 options?: TextChangeOptions
 ```
 
-变化的文本内容信息。
+The TextChangeOptions.
 
 **Type:** [TextChangeOptions](arkts-arkui-textcommon-textchangeoptions-i.md)
 
@@ -56,7 +56,7 @@ options?: TextChangeOptions
 previewText?: PreviewText
 ```
 
-预上屏的内容信息。
+Info of previewText, contains previewText value and start index.
 
 **Type:** [PreviewText](arkts-arkui-previewtext-i.md)
 

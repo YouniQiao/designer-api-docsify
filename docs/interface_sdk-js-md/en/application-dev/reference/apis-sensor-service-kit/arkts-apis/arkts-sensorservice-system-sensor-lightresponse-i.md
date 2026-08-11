@@ -1,6 +1,6 @@
 # LightResponse
 
-光线感应数据改变后的回调函数的响应对象，包含环境光线强度数据。
+Defines a **LightResponse** object.
 
 **Since:** 3
 
@@ -26,7 +26,7 @@ import { OnBodyStateResponse, subscribeAccelerometerOptions, ProximityResponse, 
 intensity: number
 ```
 
-环境光线强度。单位：lux。取值范围：取值为实际上报物理量，由硬件传感器决定。
+Light intensity, in lux.
 
 **Type:** number
 

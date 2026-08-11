@@ -1,6 +1,6 @@
 # DataOperationType
 
-枚举类型，数据操作说明。
+Defines the types of data source operations.
 
 **Since:** 23
 
@@ -16,7 +16,7 @@
 ADD = 'add'
 ```
 
-数据添加。
+Add data.
 
 **Since:** 23
 
@@ -34,7 +34,7 @@ ADD = 'add'
 DELETE = 'delete'
 ```
 
-数据删除。
+Delete data.
 
 **Since:** 23
 
@@ -52,7 +52,7 @@ DELETE = 'delete'
 EXCHANGE = 'exchange'
 ```
 
-数据交换。
+Exchange data.
 
 **Since:** 23
 
@@ -70,7 +70,7 @@ EXCHANGE = 'exchange'
 MOVE = 'move'
 ```
 
-数据移动。
+Move data.
 
 **Since:** 23
 
@@ -88,7 +88,7 @@ MOVE = 'move'
 CHANGE = 'change'
 ```
 
-数据改变。
+Change data.
 
 **Since:** 23
 
@@ -106,7 +106,7 @@ CHANGE = 'change'
 RELOAD = 'reload'
 ```
 
-全部数据重载。
+Reload data.
 
 **Since:** 23
 

@@ -12,5 +12,5 @@
 
 | Name | Description |
 | --- | --- |
-| [StackOptions](arkts-arkui-stack-stackoptions-i.md) | 设置堆叠容器的子组件对齐方式。 |
+| [StackOptions](arkts-arkui-stack-stackoptions-i.md) | Options used to construct the stack. |
 

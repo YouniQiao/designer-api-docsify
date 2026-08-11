@@ -16,12 +16,6 @@
 
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
-## 导入模块
-
-```TypeScript
-import { sendableImage } from 'kits/@kit.ImageKit';
-```
-
 ## getComponent
 
 ```TypeScript
@@ -130,7 +124,7 @@ clipRect: Region
 
 要裁剪的图像区域。
 
-**类型：** [Region](../../apis-arkgraphics2d/arkts-apis/arkts-arkgraphics2d-drawing-region-c.md)
+**类型：** [Region](arkts-image-image-region-i.md)
 
 **起始版本：** 12
 

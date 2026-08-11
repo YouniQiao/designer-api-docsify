@@ -4,7 +4,7 @@
 export type UserGrantSetting = _UserGrantSetting
 ```
 
-用户授权的设置信息。
+Describes the user authorization settings.
 
 **Since:** 26.0.0
 

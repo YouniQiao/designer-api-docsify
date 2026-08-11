@@ -1,6 +1,6 @@
 # PasswordIcon
 
-PasswordIcon对象。
+PasswordIcon object.
 
 **Since:** 23
 
@@ -16,9 +16,7 @@ PasswordIcon对象。
 offIconSrc?: string | Resource
 ```
 
-密码输入模式时，能够切换密码不可见时显示的图标。
-
-string格式可用于加载网络图片和本地图片。
+Define the off icon source of PasswordIcon.&lt;p&gt;&lt;strong&gt;NOTE&lt;/strong&gt;:&lt;br&gt;Icon that can be used to show the password in password input mode.&lt;br&gt;The string type can be used to load network images and local images.&lt;/p&gt;
 
 **Type:** string \| Resource
 
@@ -38,9 +36,7 @@ string格式可用于加载网络图片和本地图片。
 onIconSrc?: string | Resource
 ```
 
-密码输入模式时，能够切换密码可见时显示的图标。
-
-string格式可用于加载网络图片和本地图片。
+Define the on icon source of PasswordIcon.&lt;p&gt;&lt;strong&gt;NOTE&lt;/strong&gt;:&lt;br&gt;Icon that can be used to hide the password in password input mode.&lt;br&gt;The string type can be used to load network images and local images.&lt;/p&gt;
 
 **Type:** string \| Resource
 

@@ -12,7 +12,7 @@ import { deviceSettings } from 'kits/@kit.MDMKit';
 function setValue(admin: Want, item: string, value: string): void
 ```
 
-设置设备策略。
+Sets the device policy.
 
 **Since:** 12
 
@@ -30,18 +30,18 @@ function setValue(admin: Want, item: string, value: string): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| admin | [Want](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-want-want-c.md) | Yes | 企业设备管理扩展组件。Want中必须包含企业设备管理扩展能力的abilityName和所在应用的bundleName。 |
-| item | string | Yes | 设备设置策略类型。&lt;br/&gt;- screenOff：设备息屏策略。对于PC/2in1设备，支持设置电池和电源供电下的设备息屏策略。&lt;br/&gt;- dateTime：设置系统时间。&lt; br/&gt;- powerPolicy：设备电源策略。该能力仅支持PC/2in1设备，策略设置之后不刷新设置—电源和电池页面，在手机平板设备设置后不生效。&lt;br/&gt;对于PC/2in1设备，仅支持设置电池供电下的设备电源策略。设 置设备超时灭屏时睡眠延迟策略，睡眠动作需要在设置—电源和电池页面显示的睡眠时间之后等待设置的delayTime才会生效。&lt;br/&gt;- eyeComfort：从API version 23开始支持，设置护眼模式开关状态，仅支 持全天开启和关闭护眼模式。&lt;br/&gt;- defaultInputMethod：从API version 23开始支持，设置默认输入法。 |
-| value | string | Yes | 策略类型值。&lt;br/&gt;当item为screenOff时，value为设备息屏时间（单位：毫秒）。建议value值和设置页面手动操作下拉框中的可选项保持一致。仅在PC/2in1设备 上支持传-1设置永不息屏，其他设备无效。&lt;br/&gt;当item为dateTime时，value为要设置的系统时间（单位：毫秒）。&lt;br/&gt;当item为powerPolicy时，value为JSON字符串，格式：{" powerScene":xx,"powerPolicy":{"powerPolicyAction":xx,"delayTime":xx}}。&lt;br/&gt;powerScene为电源策略场景，可设置参数如下：&lt;br/&gt;- 0：超 时灭屏场景。&lt;br/&gt;powerPolicyAction为休眠动作策略场景，可设置参数如下：&lt;br/&gt;- 0：不执行动作。&lt;br/&gt;- 1：自动进入睡眠。&lt;br/&gt;- 2：强制进入睡眠。&lt;br/&gt;- 3：进入休眠，该策略暂 不生效。&lt;br/&gt;- 4：关机。&lt;br/&gt;delayTime为延迟时间（单位：毫秒），不支持设置为30000毫秒，其余数值均在允许范围内。&lt;br/&gt;当item为eyeComfort时，value为护眼模式开关状态的字符串。 &lt;br/&gt;- on：全天开启护眼模式。&lt;br/&gt;- off：关闭护眼模式。&lt;br/&gt;当item为defaultInputMethod时，value为输入法应用包名字符串。&lt;br/&gt;- 可以通过 [getCurrentInputMethod](../../apis-ime-kit/arkts-apis/arkts-ime-inputmethod-getcurrentinputmethod-f.md/arkts-ime-inputmethod-getcurrentinputmethod-f.md#getcurrentinputmethod)获取当前输入法应用包名。 |
+| admin | [Want](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-want-want-c.md) | Yes | EnterpriseAdminExtensionAbility. **Want** must contain the ability name of the EnterpriseAdminExtensionAbility and the bundle name of the application. |
+| item | string | Yes | Type of the policy to set. &lt;br&gt;- **screenOff**: device screen-off policy. For PCs/2-in-1 devices, the device power policy can be set for both battery and power modes. &lt;br&gt;- **dateTime**: system time settings. &lt;br&gt;- **powerPolicy**: device power policy. This capability is supported only on PCs/2-in-1 devices. After the policy is set, the **Settings** > **Power & battery** screen is not refreshed. The settings do not take effect on phones or tablets. &lt;br&gt;For PCs/2-in-1 devices, the device power policy can be set only for battery supply. When the sleep delay policy upon device screen-off due to timeout is set, the sleep action takes effect after the sleep time shown in the **Settings** > **Power & battery** screen, followed by an additional **delayTime**. &lt;br&gt;- **eyeComfort**: eye comfort mode. This parameter is supported since API version 23. This mode can only be enabled all day or disabled. &lt;br&gt;- **defaultInputMethod**: default input method. This parameter is supported since API version 23. |
+| value | string | Yes | Policy type value. &lt;br&gt;If **item** is **screenOff**, **value** is the screen-off time, in ms. It is recommended that **value** be consistent with the options in the drop-down list box on the settings page. Passing **-1** to set the screen to never turn off is supported only on PCs/2‑in‑1 devices. This value does not take effect on other device types. &lt;br&gt;If **item** is **dateTime**, **value** is the system time to set, in ms. &lt;br&gt;If **item** is **powerPolicy**, **value** is a JSON string in {"powerScene":xx,"powerPolicy":{" powerPolicyAction":xx,"delayTime":xx}} format. &lt;br&gt;**powerScene** indicates the power policy scenario. The following values are supported: &lt;br&gt;- **0**: screen-off due to timeout. &lt;br&gt;**powerPolicyAction** indicates the sleep action policy scenario. The following values are supported: &lt;br&gt;- **0**: No action is performed. &lt;br&gt;- **1**: enter sleep mode automatically. &lt;br&gt;- **2**: forcibly enter sleep mode. &lt;br&gt;- **3**: enter sleep mode. This policy does not take effect currently. &lt;br&gt;- **4**: power off. &lt;br&gt;**delayTime** indicates the delay time (unit: ms). The value cannot be **30000**. Other values are allowed. &lt;br&gt;If **item** is **eyeComfort**, **value** is a string indicating the status of the eye comfort mode. &lt;br&gt;- **on**: The eye comfort mode is enabled all day. &lt;br&gt;- **off**: The eye comfort mode is disabled. &lt;br&gt;If **item** is **defaultInputMethod**, **value** is a string indicating the name of the input method application bundle. &lt;br&gt;- You can use [getCurrentInputMethod](../../apis-ime-kit/arkts-apis/arkts-ime-inputmethod-getcurrentinputmethod-f.md/arkts-ime-inputmethod-getcurrentinputmethod-f.md#getcurrentinputmethod) to obtain the current input method application bundle name. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
-| 201 | Permission verification failed. The application does not have the permission required to call the API. |
-| 9200001 | The application is not an administrator application of the device. |
-| 9200002 | The administrator application does not have permission to manage the device. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed. The application does not have the permission required to call the API. |
+| [9200001](../errorcode-enterpriseDeviceManager.md#9200001-deviceadmin-not-enabled) | The application is not an administrator application of the device. |
+| [9200002](../errorcode-enterpriseDeviceManager.md#9200002-permission-denied) | The administrator application does not have permission to manage the device. |
 
 ## Examples
 

@@ -1,54 +1,56 @@
 # Matrix4Result
 
 ```TypeScript
-export type Matrix4Result = [
-        double,
-        double,
-        double,
-        double,
-        double,
-        double,
-        double,
-        double,
-        double,
-        double,
-        double,
-        double,
-        double,
-        double,
-        double,
-        double
-    ]
+type Matrix4Result = [
+    number,
+    number,
+    number,
+    number,
+    number,
+    number,
+    number,
+    number,
+    number,
+    number,
+    number,
+    number,
+    number,
+    number,
+    number,
+    number,
+  ]
 ```
 
-The matrix is column-first fourth-order matrix.
+列优先四阶矩阵。
 
-**起始版本：** 23
+**起始版本：** 10
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为10。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-<!--Device-componentUtils-export type Matrix4Result = [        double,        double,        double,        double,        double,        double,        double,        double,        double,        double,        double,        double,        double,        double,        double,        double    ]--><!--Device-componentUtils-export type Matrix4Result = [        double,        double,        double,        double,        double,        double,        double,        double,        double,        double,        double,        double,        double,        double,        double,        double    ]-End-->
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+
+<!--Device-componentUtils-type Matrix4Result = [    number,    number,    number,    number,    number,    number,    number,    number,    number,    number,    number,    number,    number,    number,    number,    number,  ]--><!--Device-componentUtils-type Matrix4Result = [    number,    number,    number,    number,    number,    number,    number,    number,    number,    number,    number,    number,    number,    number,    number,    number,  ]-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **属性类型：** [
-        double,
-        double,
-        double,
-        double,
-        double,
-        double,
-        double,
-        double,
-        double,
-        double,
-        double,
-        double,
-        double,
-        double,
-        double,
-        double
-    ]
+    number,
+    number,
+    number,
+    number,
+    number,
+    number,
+    number,
+    number,
+    number,
+    number,
+    number,
+    number,
+    number,
+    number,
+    number,
+    number,
+  ]
 

@@ -16,12 +16,6 @@ ImageSource的所有方法均不支持并发调用。
 
 **系统能力：** SystemCapability.Multimedia.Image.ImageSource
 
-## 导入模块
-
-```TypeScript
-import { image } from 'kits/@kit.ImageKit';
-```
-
 ## createWideGamutSdrPixelMap
 
 ```TypeScript
@@ -59,10 +53,10 @@ createWideGamutSdrPixelMap(): Promise<PixelMap>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 7700101 | Bad source. |
-| 7700103 | Image too large. |
-| 7700102 | Unsupported MIME type. |
-| 7700301 | Decoding failed. |
+| [7700101](../errorcode-image.md#7700101-图片源存在问题) | Bad source. |
+| [7700103](../errorcode-image.md#7700103-图片太大) | Image too large. |
+| [7700102](../errorcode-image.md#7700102-不支持的mime类型) | Unsupported MIME type. |
+| [7700301](../errorcode-image.md#7700301-解码失败) | Decoding failed. |
 
 ## 示例
 
@@ -127,10 +121,10 @@ Decodes to a SDR PixelMap, using a as wide gamut as possible.For a SDR ImageSour
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 7700101 | Bad source. |
-| 7700103 | Image too large. |
-| 7700102 | Unsupported MIME type. |
-| 7700301 | Decoding failed. |
+| [7700101](../errorcode-image.md#7700101-图片源存在问题) | Bad source. |
+| [7700103](../errorcode-image.md#7700103-图片太大) | Image too large. |
+| [7700102](../errorcode-image.md#7700102-不支持的mime类型) | Unsupported MIME type. |
+| [7700301](../errorcode-image.md#7700301-解码失败) | Decoding failed. |
 
 ## isJpegProgressive
 
@@ -162,8 +156,8 @@ isJpegProgressive(): Promise<boolean>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 7700101 | Bad source. |
-| 7700102 | Unsupported MIME type. |
+| [7700101](../errorcode-image.md#7700101-图片源存在问题) | Bad source. |
+| [7700102](../errorcode-image.md#7700102-不支持的mime类型) | Unsupported MIME type. |
 
 ## 示例
 
@@ -213,7 +207,7 @@ Exif属性中除"JPEGInterchangeFormat"/"JPEGInterchangeFormatLength"/"GIFLoopCo
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| records | [Record](../../apis-default/arkts-apis/arkts-record-t.md)&lt;string, string \| null&gt; | 是 | 包含图片属性名和属性值的键值对集合。 |
+| records | Record&lt;string, string \| null&gt; | 是 | 包含图片属性名和属性值的键值对集合。 |
 
 **返回值：**
 
@@ -225,10 +219,10 @@ Exif属性中除"JPEGInterchangeFormat"/"JPEGInterchangeFormatLength"/"GIFLoopCo
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 7700102 | Unsupported MIME type. |
-| 7700304 | Failed to write image properties to the file. |
-| 202 | Non-system applications are not allowed to use system APIs. |
-| 7700202 | Unsupported metadata. For example, the property key is not supported, or the property value is invalid. |
+| [7700102](../errorcode-image.md#7700102-不支持的mime类型) | Unsupported MIME type. |
+| [7700304](../errorcode-image.md#7700304-图片信息写入文件失败) | Failed to write image properties to the file. |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Non-system applications are not allowed to use system APIs. |
+| [7700202](../errorcode-image.md#7700202-不支持的元数据) | Unsupported metadata. For example, the property key is not supported, or the property value is invalid. |
 
 ## 示例
 

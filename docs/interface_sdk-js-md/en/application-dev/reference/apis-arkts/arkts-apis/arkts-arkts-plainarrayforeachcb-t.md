@@ -4,7 +4,7 @@
 export type PlainArrayForEachCb<T> = (value: T, key: int, PlainArray: PlainArray<T>) => void
 ```
 
-PlainArray的回调函数类型。
+The type of PlainArray callback function.
 
 **Since:** 23
 
@@ -22,7 +22,7 @@ PlainArray的回调函数类型。
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | T | Yes | 当前元素的值。 |
-| key | int | Yes | 当前元素的键。 该值为整数。 |
-| PlainArray | [PlainArray](arkts-arkts-util-plainarray-plainarray-c.md)&lt;T&gt; | Yes | 当前正在遍历的PlainArray实例。 |
+| value | T | Yes | The value of current element |
+| key | int | Yes | The key of current element The value should be an integer. |
+| PlainArray | [PlainArray](arkts-arkts-util-plainarray-plainarray-c.md)&lt;T&gt; | Yes | The PlainArray instance being traversed |
 

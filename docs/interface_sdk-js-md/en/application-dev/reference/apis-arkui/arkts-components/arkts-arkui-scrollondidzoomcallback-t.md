@@ -4,7 +4,7 @@
 declare type ScrollOnDidZoomCallback = (scale: number) => void
 ```
 
-Scroll每帧缩放完成时触发的回调。
+callback of Scroll, using in onDidZoom.
 
 **Since:** 20
 
@@ -22,5 +22,5 @@ Scroll每帧缩放完成时触发的回调。
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| scale | number | Yes | 当前缩放倍数。 |
+| scale | number | Yes | current zoom scale. |
 

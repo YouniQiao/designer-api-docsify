@@ -1,6 +1,6 @@
 # DataProxyConfig
 
-数据代理操作配置的数据结构。
+Defines a struct for the data proxy configuration.
 
 **Since:** 20
 
@@ -22,7 +22,7 @@ import { dataShare } from 'kits/@kit.ArkData';
 maxValueLength?: DataProxyMaxValueLength
 ```
 
-设置共享配置的值允许的最大长度。如果未填写，默认为MAX_LENGTH_4K，即共享配置的值允许的最大长度为4096字节。
+Sets the maximum length of the data proxy value. The default value is MAX_LENGTH_4K, indicating that the maximum value length is 4096 bytes.If the length of the value that is actually transferred or obtained exceeds the maximum value length specified by this parameter, the publish or get operation will fail.Default value: MAX_LENGTH_4K.
 
 **Type:** [DataProxyMaxValueLength](arkts-arkdata-datashare-dataproxymaxvaluelength-e.md)
 
@@ -42,7 +42,7 @@ maxValueLength?: DataProxyMaxValueLength
 type: DataProxyType
 ```
 
-数据代理操作的类型。
+Type of the data proxy.
 
 **Type:** [DataProxyType](arkts-arkdata-datashare-dataproxytype-e.md)
 

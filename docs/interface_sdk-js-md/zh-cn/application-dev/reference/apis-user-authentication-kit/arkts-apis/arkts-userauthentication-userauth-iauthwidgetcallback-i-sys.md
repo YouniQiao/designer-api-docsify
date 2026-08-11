@@ -12,12 +12,6 @@
 
 **系统接口：** 此接口为系统接口。
 
-## 导入模块
-
-```TypeScript
-import { userAuth } from 'kits/@kit.UserAuthenticationKit';
-```
-
 ## sendCommand
 
 ```TypeScript
@@ -44,6 +38,8 @@ sendCommand(cmdData: string): void
 
 ## 示例
 
+ArkTS-Dyn示例：
+
 ```TypeScript
 import { userAuth } from '@kit.UserAuthenticationKit';
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -54,6 +50,28 @@ try {
   console.info('get userAuthWidgetMgr instance successfully.');
   userAuthWidgetMgr.on('command', {
     sendCommand: (cmdData) => {
+      console.info(`The cmdData is ${cmdData}`);
+    }
+  })
+  console.info('subscribe authentication event successfully.');
+} catch (error) {
+  const err: BusinessError = error as BusinessError;
+  console.error(`userAuth widgetMgr failed. Code is ${err?.code}, message is ${err?.message}`);
+}
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+import { userAuth } from '@kit.UserAuthenticationKit';
+import { BusinessError } from '@ohos.base';
+
+const userAuthWidgetMgrVersion = 1;
+try {
+  let userAuthWidgetMgr = userAuth.getUserAuthWidgetMgr(userAuthWidgetMgrVersion);
+  console.info('get userAuthWidgetMgr instance successfully.');
+  userAuthWidgetMgr.onCommand({
+    sendCommand: (cmdData: string) => {
       console.info(`The cmdData is ${cmdData}`);
     }
   })

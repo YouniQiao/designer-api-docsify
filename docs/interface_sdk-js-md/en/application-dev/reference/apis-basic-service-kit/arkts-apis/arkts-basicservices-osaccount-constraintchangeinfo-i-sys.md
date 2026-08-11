@@ -1,6 +1,6 @@
 # ConstraintChangeInfo (System API)
 
-表示约束变更信息。
+Defines the constraint change information.
 
 **Since:** 23
 
@@ -24,7 +24,7 @@ import { osAccount } from 'kits/@kit.BasicServicesKit';
 constraint: string
 ```
 
-发生变更的[约束](../../../reference/apis-basic-services-kit/js-apis-osAccount.md#系统账号约束列表)。
+[Constraint](../../../reference/apis-basic-services-kit/js-apis-osAccount.md#constraints) that has been changed.
 
 **Type:** string
 
@@ -44,9 +44,9 @@ constraint: string
 isEnabled: boolean
 ```
 
-发生变更的约束的使能状态。默认：false。
+Enabling state of the changed constraint. The default value is **false**.
 
-true表示目标约束已使能；false表示目标约束未使能。
+The value **true** indicates that the target constraint is enabled, and **false** indicates the opposite.
 
 **Type:** boolean
 

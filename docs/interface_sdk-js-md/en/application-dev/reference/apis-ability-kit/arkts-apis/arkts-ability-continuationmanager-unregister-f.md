@@ -12,7 +12,7 @@ import { continuationManager } from 'kits/@kit.AbilityKit';
 function unregister(token: number, callback: AsyncCallback<void>): void
 ```
 
-解注册流转管理服务，传入注册时获取的token进行解注册，使用AsyncCallback方式作为异步方法。
+Unregisters the continuation management service. This API uses an asynchronous callback to return the result.
 
 **Since:** 8
 
@@ -32,8 +32,8 @@ function unregister(token: number, callback: AsyncCallback<void>): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| token | number | Yes | 注册后的token。 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | 回调函数。当解注册成功，err为undefined，否则返回错误对象。 |
+| token | number | Yes | Token obtained after the registration of the continuation management service. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. If the unregistration is successful, **err** is **undefined**; otherwise, **err** is an error object. |
 
 ## Examples
 
@@ -57,7 +57,7 @@ continuationManager.unregister(token, (err) => {
 function unregister(token: number): Promise<void>
 ```
 
-解注册流转管理服务，传入注册时获取的token进行解注册，使用Promise方式作为异步方法。
+Unregisters the continuation management service. This API uses a promise to return the result.
 
 **Since:** 8
 
@@ -77,13 +77,13 @@ function unregister(token: number): Promise<void>
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| token | number | Yes | 注册后的token。 |
+| token | number | Yes | Token obtained after the registration of the continuation management service. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise形式返回接口调用结果。 |
+| Promise&lt;void&gt; | Promise used to return the result. |
 
 ## Examples
 

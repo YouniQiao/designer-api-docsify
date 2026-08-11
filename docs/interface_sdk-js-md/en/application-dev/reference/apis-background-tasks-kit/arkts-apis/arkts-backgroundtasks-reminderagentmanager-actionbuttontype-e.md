@@ -1,6 +1,6 @@
 # ActionButtonType
 
-提醒上的按钮的类型。
+Enumerates the types of buttons displayed for a reminder.
 
 **Since:** 9
 
@@ -16,7 +16,7 @@
 ACTION_BUTTON_TYPE_CLOSE = 0
 ```
 
-表示关闭提醒的按钮。
+Button for closing the reminder.
 
 **Since:** 9
 
@@ -32,7 +32,8 @@ ACTION_BUTTON_TYPE_CLOSE = 0
 ACTION_BUTTON_TYPE_SNOOZE = 1
 ```
 
-表示延时提醒的按钮，提醒次数和间隔通过[ReminderRequest](arkts-backgroundtasks-reminderagentmanager-reminderrequest-i.md)中snoozeTimes和timeInterval设置。
+Button for snoozing the reminder, with the frequency and timing configured via **snoozeTimes** and   
+**timeInterval** in the [ReminderRequest](arkts-backgroundtasks-reminderagentmanager-reminderrequest-i.md) struct.
 
 **Since:** 9
 

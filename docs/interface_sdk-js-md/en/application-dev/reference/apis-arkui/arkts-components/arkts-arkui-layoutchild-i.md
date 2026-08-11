@@ -1,6 +1,6 @@
 # LayoutChild
 
-布局和测量发生时，框架传递给子组件的信息。
+Sub component info passed from framework when layout and measure happens.
 
 **Since:** 9
 
@@ -20,7 +20,7 @@
 layout(childLayoutInfo: LayoutInfo)
 ```
 
-在 onLayout 回调中调用此布局方法，将布局信息分配给子组件。
+Call this layout method in onLayout callback to assign layout info to sub component.
 
 **Since:** 9
 
@@ -48,7 +48,7 @@ layout(childLayoutInfo: LayoutInfo)
 measure(childConstraint: ConstraintSizeOptions)
 ```
 
-在 onMeasure 回调中调用此 measure 方法以提供子组件的尺寸。
+Call this measure method in onMeasure callback to supply sub component size.
 
 **Since:** 9
 
@@ -76,7 +76,7 @@ measure(childConstraint: ConstraintSizeOptions)
 borderInfo: LayoutBorderInfo
 ```
 
-子组件边框信息
+Sub component border info.
 
 **Type:** [LayoutBorderInfo](arkts-arkui-layoutborderinfo-i.md)
 
@@ -100,7 +100,7 @@ borderInfo: LayoutBorderInfo
 constraint: ConstraintSizeOptions
 ```
 
-子组件约束
+Sub component constraint.
 
 **Type:** [ConstraintSizeOptions](../arkts-apis/arkts-arkui-constraintsizeoptions-i.md)
 
@@ -124,7 +124,7 @@ constraint: ConstraintSizeOptions
 id: string
 ```
 
-子组件id
+Sub component id.
 
 **Type:** string
 
@@ -148,7 +148,7 @@ id: string
 name: string
 ```
 
-子组件名字
+Sub component name.
 
 **Type:** string
 
@@ -172,7 +172,7 @@ name: string
 position: Position
 ```
 
-子组件位置信息
+Sub component position.
 
 **Type:** [Position](../arkts-apis/arkts-arkui-position-i.md)
 

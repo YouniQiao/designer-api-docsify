@@ -1,6 +1,6 @@
 # ExtraData (System API)
 
-云端数据变更信息。
+Represents the cloud data change information.
 
 **Since:** 11
 
@@ -24,7 +24,7 @@ import { cloudSyncManager } from 'kits/@kit.CoreFileKit';
 eventId: string
 ```
 
-变更事件id。
+Change event ID.
 
 **Type:** string
 
@@ -44,7 +44,7 @@ eventId: string
 extraData: string
 ```
 
-云端数据变更信息。
+Represents the cloud data change information.
 
 **Type:** string
 

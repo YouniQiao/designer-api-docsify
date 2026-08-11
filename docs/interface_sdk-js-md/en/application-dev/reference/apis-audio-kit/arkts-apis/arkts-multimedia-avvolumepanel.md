@@ -1,4 +1,4 @@
-# @ohos.multimedia.avVolumePanel(音量面板)
+# @ohos.multimedia.avVolumePanel(Defines a panel to set the system audio output volume.)
 
 ## Modules to Import
 
@@ -12,11 +12,11 @@ import { AVVolumePanelParameter, AVVolumePanel } from 'kits/@kit.AudioKit';
 
 | Name | Description |
 | --- | --- |
-| [AVVolumePanelParameter](arkts-audio-multimedia-avvolumepanel-avvolumepanelparameter-c.md) | 音量面板参数设置。 |
+| [AVVolumePanelParameter](arkts-audio-multimedia-avvolumepanel-avvolumepanelparameter-c.md) | Declare custom parameters used for volume panel. |
 
 ### Structs
 
 | Name | Description |
 | --- | --- |
-| [AVVolumePanel](arkts-audio-multimedia-avvolumepanel-avvolumepanel-s.md) | 音量面板，可用于在当前应用内展示音量调节面板。 |
+| [AVVolumePanel](arkts-audio-multimedia-avvolumepanel-avvolumepanel-s.md) | A panel to set the system audio output volume. |
 

@@ -1,6 +1,6 @@
 # ShowToastOptions
 
-定义ShowToast的选项。
+Defines the options of ShowToast.
 
 **Since:** 3
 
@@ -26,7 +26,7 @@ import { ShowActionMenuOptions, Button, ShowToastOptions, ShowDialogOptions, Sho
 bottom?: string | number
 ```
 
-设置弹窗边框距离屏幕底部的位置。
+The distance between toast dialog box and the bottom of screen.
 
 **Type:** string \| number
 
@@ -48,7 +48,7 @@ bottom?: string | number
 duration?: number
 ```
 
-默认值1500ms，建议区间：1500ms-10000ms。若小于1500ms则取默认值，最大取值为10000ms。
+Duration of toast dialog box. The default value is 1500.The recommended value ranges from 1500 ms to 10000ms.NOTE: A value less than 1500 is automatically changed to 1500. The maximum value is 10000 ms.
 
 **Type:** number
 
@@ -70,7 +70,7 @@ duration?: number
 message: string
 ```
 
-显示的文本信息。
+Text to display.
 
 **Type:** string
 

@@ -1,11 +1,5 @@
 # SelectionMenu
 
-## 导入模块
-
-```TypeScript
-import { EditorMenuOptions, SelectionMenuOptions, EditorEventInfo, SelectionMenu, ExpandedMenuOptions } from 'kits/@kit.ArkUI';
-```
-
 ## SelectionMenu
 
 ```TypeScript
@@ -32,5 +26,5 @@ export declare function SelectionMenu(options: SelectionMenuOptions): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| options | [SelectionMenuOptions](arkts-arkui-arkui-advanced-selectionmenu-selectionmenuoptions-i.md) | 是 | 文本选择菜单可选项。 |
+| options | [SelectionMenuOptions](arkts-arkui-richeditor-selectionmenuoptions-i.md) | 是 | 文本选择菜单可选项。 |
 

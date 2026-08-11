@@ -4,7 +4,7 @@
 export type NotificationCheckRequest = _NotificationCheckRequest
 ```
 
-描述通知的鉴权信息。
+Describes the notification authentication information.
 
 **Since:** 11
 

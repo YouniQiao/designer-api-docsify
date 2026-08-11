@@ -12,7 +12,7 @@ import { display } from 'kits/@kit.ArkUI';
 function off(type: 'add' | 'remove' | 'change', callback?: Callback<long>): void
 ```
 
-关闭显示设备变化的监听。
+Unsubscribes from display changes.
 
 **Since:** 7
 
@@ -28,20 +28,20 @@ function off(type: 'add' | 'remove' | 'change', callback?: Callback<long>): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'add' \| 'remove' \| 'change' | Yes | 监听事件。&lt;br/&gt;- type为"add"，表示增加显示设备事件。例如：插入显示器。&lt;br/&gt;- type为"remove"，表示移除显 示设备事件。例如：移除显示器。&lt;br/&gt;- type为"change"，表示改变显示设备事件。例如：显示器方向改变。 |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;long&gt; | No | 需要取消注册的回调函数。返回监听到的屏幕ID，该参数为整数。若无此参数，则取消注册当前type类型事件监听的所有回调函数。<br>**Since:** 20 |
+| type | 'add' \| 'remove' \| 'change' | Yes | Event type.&lt;br&gt;- **add**, indicating the display addition event. Example: event that a display is connected.&lt;br&gt;- **remove**, indicating the display removal event. Example: event that a display is disconnected.&lt;br&gt;- **change**, indicating the display change event. Example: event that the display orientation is changed. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;long&gt; | No | Callback used to return the ID of the display, which is an integer. If this parameter is not specified, all subscriptions to the specified event are canceled.<br>**Since:** 20 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. |
 
 ## Examples
 
 ```TypeScript
 // Unregister all the callbacks that have been registered through on().
-display.off('remove');
+display.off("remove");
 
 let callback: Callback<number> = (data: number) => {
   console.info(`Succeeded in unregistering the callback for display remove. Data: ${data}`)
@@ -57,7 +57,7 @@ display.off('remove', callback);
 function off(type: 'add' | 'remove' | 'change', callback?: Callback<long>): void
 ```
 
-关闭显示设备变化的监听。
+Unsubscribes from display changes.
 
 **Since:** 7
 
@@ -73,20 +73,20 @@ function off(type: 'add' | 'remove' | 'change', callback?: Callback<long>): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'add' \| 'remove' \| 'change' | Yes | 监听事件。&lt;br/&gt;- type为"add"，表示增加显示设备事件。例如：插入显示器。&lt;br/&gt;- type为"remove"，表示移除显 示设备事件。例如：移除显示器。&lt;br/&gt;- type为"change"，表示改变显示设备事件。例如：显示器方向改变。 |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;long&gt; | No | 需要取消注册的回调函数。返回监听到的屏幕ID，该参数为整数。若无此参数，则取消注册当前type类型事件监听的所有回调函数。<br>**Since:** 20 |
+| type | 'add' \| 'remove' \| 'change' | Yes | Event type.&lt;br&gt;- **add**, indicating the display addition event. Example: event that a display is connected.&lt;br&gt;- **remove**, indicating the display removal event. Example: event that a display is disconnected.&lt;br&gt;- **change**, indicating the display change event. Example: event that the display orientation is changed. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;long&gt; | No | Callback used to return the ID of the display, which is an integer. If this parameter is not specified, all subscriptions to the specified event are canceled.<br>**Since:** 20 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. |
 
 ## Examples
 
 ```TypeScript
 // Unregister all the callbacks that have been registered through on().
-display.off('remove');
+display.off("remove");
 
 let callback: Callback<number> = (data: number) => {
   console.info(`Succeeded in unregistering the callback for display remove. Data: ${data}`)
@@ -102,7 +102,7 @@ display.off('remove', callback);
 function off(type: 'add' | 'remove' | 'change', callback?: Callback<long>): void
 ```
 
-关闭显示设备变化的监听。
+Unsubscribes from display changes.
 
 **Since:** 7
 
@@ -118,20 +118,20 @@ function off(type: 'add' | 'remove' | 'change', callback?: Callback<long>): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'add' \| 'remove' \| 'change' | Yes | 监听事件。&lt;br/&gt;- type为"add"，表示增加显示设备事件。例如：插入显示器。&lt;br/&gt;- type为"remove"，表示移除显 示设备事件。例如：移除显示器。&lt;br/&gt;- type为"change"，表示改变显示设备事件。例如：显示器方向改变。 |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;long&gt; | No | 需要取消注册的回调函数。返回监听到的屏幕ID，该参数为整数。若无此参数，则取消注册当前type类型事件监听的所有回调函数。<br>**Since:** 20 |
+| type | 'add' \| 'remove' \| 'change' | Yes | Event type.&lt;br&gt;- **add**, indicating the display addition event. Example: event that a display is connected.&lt;br&gt;- **remove**, indicating the display removal event. Example: event that a display is disconnected.&lt;br&gt;- **change**, indicating the display change event. Example: event that the display orientation is changed. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;long&gt; | No | Callback used to return the ID of the display, which is an integer. If this parameter is not specified, all subscriptions to the specified event are canceled.<br>**Since:** 20 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. |
 
 ## Examples
 
 ```TypeScript
 // Unregister all the callbacks that have been registered through on().
-display.off('remove');
+display.off("remove");
 
 let callback: Callback<number> = (data: number) => {
   console.info(`Succeeded in unregistering the callback for display remove. Data: ${data}`)
@@ -147,7 +147,7 @@ display.off('remove', callback);
 function off(type: 'foldStatusChange', callback?: Callback<FoldStatus>): void
 ```
 
-关闭折叠设备折叠状态变化的监听。
+Unsubscribes from fold status change events of the foldable device.
 
 **Since:** 10
 
@@ -163,15 +163,15 @@ function off(type: 'foldStatusChange', callback?: Callback<FoldStatus>): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'foldStatusChange' | Yes | 监听事件，固定为'foldStatusChange'，表示折叠设备折叠状态发生变化。 |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;FoldStatus&gt; | No | 需要取消注册的回调函数。表示折叠设备折叠状态。若无此参数，则取消注册折叠状态变化监听的所有回调函数。<br>**Since:** 20 |
+| type | 'foldStatusChange' | Yes | Event type. The event **'foldStatusChange'** is triggered when the fold status of the device changes. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;FoldStatus&gt; | No | Callback used to return the fold status. If this parameter is not specified, all subscriptions to the specified event are canceled.<br>**Since:** 20 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt;2. Incorrect parameter types. |
-| 1400003 | This display manager service works abnormally. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt;2. Incorrect parameter types. |
+| [1400003](../errorcode-display.md#1400003-abnormal-display-manager-service) | This display manager service works abnormally. |
 
 ## Examples
 
@@ -193,7 +193,7 @@ display.off('foldStatusChange', callback);
 function off(type: 'foldAngleChange', callback?: Callback<Array<double>>): void
 ```
 
-关闭折叠设备折叠角度变化的监听。
+Unsubscribes from folding angle change events of the foldable device.
 
 **Since:** 12
 
@@ -209,21 +209,19 @@ function off(type: 'foldAngleChange', callback?: Callback<Array<double>>): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'foldAngleChange' | Yes | 监听事件，固定为'foldAngleChange'表示折叠设备折叠角度发生变化。 |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;Array&lt;double&gt;&gt; | No | 需要取消注册的回调函数。表示折叠设备屏幕折叠角度值（0度~180度）。若无此参数，则取消注册折叠角度变化监听的所有回调函数 。<br>**Since:** 20 |
+| type | 'foldAngleChange' | Yes | Event type. The event **'foldAngleChange'** is triggered when the folding angle of the device changes. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;Array&lt;double&gt;&gt; | No | Callback used to return the folding angle (0�C180 degrees). If this parameter is not specified, all subscriptions to the specified event are canceled.<br>**Since:** 20 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. |
-| 1400003 | This display manager service works abnormally. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. |
+| [1400003](../errorcode-display.md#1400003-abnormal-display-manager-service) | This display manager service works abnormally. |
 
 ## Examples
 
 ```TypeScript
-import { Callback } from '@kit.BasicServicesKit';
-
 // Unregister all the callbacks that have been registered through on().
 display.off('foldAngleChange');
 
@@ -241,7 +239,7 @@ display.off('foldAngleChange', callback);
 function off(type: 'captureStatusChange', callback?: Callback<boolean>): void
 ```
 
-关闭设备的屏幕显示信息是否被获取的监听。
+Unsubscribes from events indicating the status of the device's screen content is being captured.
 
 **Since:** 12
 
@@ -257,21 +255,19 @@ function off(type: 'captureStatusChange', callback?: Callback<boolean>): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'captureStatusChange' | Yes | 监听事件，固定为'captureStatusChange'表示设备的屏幕显示信息被获取的状态发生变化。 |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;boolean&gt; | No | 需要取消注册的回调函数。表示设备的屏幕显示信息是否被获取。true表示设备的屏幕显示信息开始被获取，包括处于截屏、投屏、录屏状态，或创建了虚拟屏幕(虚 拟屏幕可能被应用获取屏幕图像)，截屏仅返回一次true；false表示获取结束。若无此参数，则取消注册设备的屏幕显示信息是否存在被获取监听的所有回调函数。 |
+| type | 'captureStatusChange' | Yes | Event type. The event **'captureStatusChange'** is triggered when the screen capture status changes. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;boolean&gt; | No | Callback used to return the result indicating whether the device's screen content is being captured. **true** is returned when screen content is being captured (including active screen capture, casting, recording, or the creation of a virtual screen that could be captured). **false** is returned when screen content is no longer being captured. In the case of screen capture, **true** is returned only once. If this parameter is not specified, all subscriptions to the specified event are canceled. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt;2. Incorrect parameter types. |
-| 1400003 | This display manager service works abnormally. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt;2. Incorrect parameter types. |
+| [1400003](../errorcode-display.md#1400003-abnormal-display-manager-service) | This display manager service works abnormally. |
 
 ## Examples
 
 ```TypeScript
-import { Callback } from '@kit.BasicServicesKit';
-
 // Unregister all the callbacks that have been registered through on().
 display.off('captureStatusChange');
 
@@ -289,7 +285,7 @@ display.off('captureStatusChange', callback);
 function off(type: 'foldDisplayModeChange', callback?: Callback<FoldDisplayMode>): void
 ```
 
-关闭折叠设备屏幕显示模式变化的监听。
+Unsubscribes from display mode change events of the foldable device.
 
 **Since:** 10
 
@@ -305,21 +301,19 @@ function off(type: 'foldDisplayModeChange', callback?: Callback<FoldDisplayMode>
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'foldDisplayModeChange' | Yes | 监听事件，固定为'foldDisplayModeChange'，表示折叠设备屏幕显示模式发生变化。 |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;FoldDisplayMode&gt; | No | 需要取消注册的回调函数。表示折叠设备屏幕显示模式。若无此参数，则取消注册屏幕显示模式变化监听的所有回调函数。<br>**Since:** 20 |
+| type | 'foldDisplayModeChange' | Yes | Event type. The event **'foldDisplayModeChange'** is triggered when the display mode of the device changes. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;FoldDisplayMode&gt; | No | Callback used to return the display mode. If this parameter is not specified, all subscriptions to the specified event are canceled.<br>**Since:** 20 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt;2. Incorrect parameter types. |
-| 1400003 | This display manager service works abnormally. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt;2. Incorrect parameter types. |
+| [1400003](../errorcode-display.md#1400003-abnormal-display-manager-service) | This display manager service works abnormally. |
 
 ## Examples
 
 ```TypeScript
-import { Callback } from '@kit.BasicServicesKit';
-
 // Unregister all the callbacks that have been registered through on().
 display.off('foldDisplayModeChange');
 
@@ -337,7 +331,7 @@ display.off('foldDisplayModeChange', callback);
 function off(type: 'brightnessInfoChange', callback?: BrightnessCallback<long, BrightnessInfo>): void
 ```
 
-关闭所有屏幕亮度信息状态变化的监听。
+Unsubscribes from events related to screen brightness information changes.
 
 **Since:** 22
 
@@ -353,16 +347,16 @@ function off(type: 'brightnessInfoChange', callback?: BrightnessCallback<long, B
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'brightnessInfoChange' | Yes | 监听事件，固定为'brightnessInfoChange'，表示屏幕亮度信息状态发生变化。 |
-| callback | [BrightnessCallback](arkts-arkui-display-brightnesscallback-t.md)&lt;long, BrightnessInfo&gt; | No | 需要取消注册的回调函数。表示brightnessInfo状态发生改变。若无此参数，则取消所有注册 brightnessInfo状态发生改变的回调函数。参数1为displayId，参数2为屏幕亮度信息。 |
+| type | 'brightnessInfoChange' | Yes | Event type. The value is fixed at **'brightnessInfoChange'**, indicating that the screen brightness information is changed. |
+| callback | [BrightnessCallback](arkts-arkui-display-brightnesscallback-t.md)&lt;long, BrightnessInfo&gt; | No | Callback used to return the display ID (parameter 1) and the corresponding screen brightness information (parameter 2). If this parameter is not specified, all subscriptions to the specified event are canceled. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 801 | Capability not supported. |
-| 1400004 | Parameter error. Possible cause: 1. Invalid parameter range. |
-| 1400003 | This display manager service works abnormally. |
+| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. Function off('brightnessInfoChange') can not work correctly due to limited device capabilities. |
+| [1400004](../errorcode-display.md#1400004-parameter-error) | Parameter error. Possible cause: 1. Invalid parameter range. |
+| [1400003](../errorcode-display.md#1400003-abnormal-display-manager-service) | This display manager service works abnormally. |
 
 ## Examples
 
@@ -371,9 +365,9 @@ let callback: display.BrightnessCallback<number, display.BrightnessInfo> = (id: 
   console.info(`Listening enabled ${id}. Data: ${JSON.stringify(data)}`);
 };
 try {
-  display.off('brightnessInfoChange', callback);
+  display.off("brightnessInfoChange", callback);
 } catch (error) {
-  console.error(`Failed to unregister brightnessInfoChange listener. Code ${error.code}, message: ${error.message}`);
+  console.error(`brightnessInfoChange error. Code ${error.code}, message: ${error.message}`);
 }
 ```
 

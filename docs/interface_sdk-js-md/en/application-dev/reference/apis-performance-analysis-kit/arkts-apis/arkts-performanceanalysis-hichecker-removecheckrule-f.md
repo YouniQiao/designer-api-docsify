@@ -12,7 +12,7 @@ import { hichecker } from 'kits/@kit.PerformanceAnalysisKit';
 function removeCheckRule(rule: bigint) : void
 ```
 
-ɾ��һ�����������ɾ���Ĺ��������������Ч��
+Removes one or more rules. The removed rules will become ineffective.
 
 **Since:** 9
 
@@ -26,13 +26,13 @@ function removeCheckRule(rule: bigint) : void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| rule | bigint | Yes | ��Ҫɾ���Ĺ��� |
+| rule | bigint | Yes | Rule to be removed. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | the parameter check failed, only one bigint type parameter is needed |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | the parameter check failed, only one bigint type parameter is needed |
 
 ## Examples
 

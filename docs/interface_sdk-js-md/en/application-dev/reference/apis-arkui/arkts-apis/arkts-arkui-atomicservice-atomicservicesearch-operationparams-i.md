@@ -1,6 +1,6 @@
 # OperationParams
 
-AtomicServiceSearch中“功能区”的初始化参数。
+Sets initialization parameters of the function area.
 
 **Since:** 18
 
@@ -22,7 +22,7 @@ import { SearchParams, AtomicServiceSearch, SearchButtonParams, OperationParams,
 auxiliaryItem?: OperationOption
 ```
 
-附属于搜索区（右侧）的功能位。默认值为`undefined`。
+Auxiliary item on the right of the search area. Default value: **undefined**.
 
 **Type:** [OperationOption](arkts-arkui-arkui-advanced-subheader-operationoption-c.md)
 
@@ -42,7 +42,7 @@ auxiliaryItem?: OperationOption
 independentItem?: OperationOption
 ```
 
-独立于搜索区（右侧）的功能位。默认值为`undefined`。
+Independent item on the right of the search area. Default value: **undefined**.
 
 **Type:** [OperationOption](arkts-arkui-arkui-advanced-subheader-operationoption-c.md)
 

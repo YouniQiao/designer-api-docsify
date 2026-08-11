@@ -6,7 +6,7 @@ typedef struct OH_Drawing_FontFullDescriptor OH_Drawing_FontFullDescriptor
 
 ## Overview
 
-Defines a struct used to describe detailed information about a font, that is, the font descriptor.
+Describes the detailed information about a font.
 
 **Since**: 22
 

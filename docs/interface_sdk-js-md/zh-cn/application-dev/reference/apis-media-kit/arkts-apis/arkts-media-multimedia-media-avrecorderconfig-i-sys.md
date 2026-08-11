@@ -12,12 +12,6 @@ audioSourceType和videoSourceType参数用于区分纯音频录制、纯视频�
 
 **系统能力：** SystemCapability.Multimedia.Media.AVRecorder
 
-## 导入模块
-
-```TypeScript
-import { media } from 'kits/@kit.MediaKit';
-```
-
 ## metaSourceTypes
 
 ```TypeScript

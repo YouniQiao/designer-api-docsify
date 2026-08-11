@@ -34,7 +34,7 @@ Adds a path according to the specified path variable.
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| path | [Path2D](arkts-arkui-viewmodel-path2d-i.md) | 是 | Indicates the path object to be added. |
+| path | [Path2D](arkts-arkui-canvas-path2d-c.md) | 是 | Indicates the path object to be added. |
 | transform | [Matrix2D](arkts-arkui-matrix2d-c.md) | 否 | Transformation matrix of the new trail. The default value is null. |
 
 ## constructor
@@ -101,7 +101,7 @@ Create a copy of a path object
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| path | [Path2D](arkts-arkui-viewmodel-path2d-i.md) | 是 | Path object to be copied |
+| path | [Path2D](arkts-arkui-canvas-path2d-c.md) | 是 | Path object to be copied |
 
 ## constructor
 
@@ -125,7 +125,7 @@ Create a copy of a path object
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| path | [Path2D](arkts-arkui-viewmodel-path2d-i.md) | 是 | Path object to be copied |
+| path | [Path2D](arkts-arkui-canvas-path2d-c.md) | 是 | Path object to be copied |
 | unit | [LengthMetricsUnit](arkts-arkui-lengthmetricsunit-t.md) | 是 | the unit mode |
 
 ## constructor

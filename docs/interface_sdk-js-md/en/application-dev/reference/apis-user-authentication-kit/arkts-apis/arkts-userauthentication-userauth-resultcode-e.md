@@ -1,6 +1,6 @@
 # ResultCode
 
-表示返回码的枚举。
+Enumerates the authentication result codes.
 
 **Since:** 8
 
@@ -20,7 +20,7 @@
 SUCCESS = 0
 ```
 
-执行成功。
+The operation is successful.
 
 **Since:** 8
 
@@ -40,7 +40,7 @@ SUCCESS = 0
 FAIL = 1
 ```
 
-认证失败。
+The authentication failed.
 
 **Since:** 8
 
@@ -60,7 +60,7 @@ FAIL = 1
 GENERAL_ERROR = 2
 ```
 
-操作通用错误。
+A general operation error occurred.
 
 **Since:** 8
 
@@ -80,7 +80,7 @@ GENERAL_ERROR = 2
 CANCELED = 3
 ```
 
-操作取消。
+The authentication is canceled.
 
 **Since:** 8
 
@@ -100,7 +100,7 @@ CANCELED = 3
 TIMEOUT = 4
 ```
 
-操作超时。
+The authentication timed out.
 
 **Since:** 8
 
@@ -120,7 +120,7 @@ TIMEOUT = 4
 TYPE_NOT_SUPPORT = 5
 ```
 
-不支持的认证类型。
+The authentication type is not supported.
 
 **Since:** 8
 
@@ -140,7 +140,7 @@ TYPE_NOT_SUPPORT = 5
 TRUST_LEVEL_NOT_SUPPORT = 6
 ```
 
-不支持的认证等级。
+The authentication trust level is not supported.
 
 **Since:** 8
 
@@ -160,7 +160,7 @@ TRUST_LEVEL_NOT_SUPPORT = 6
 BUSY = 7
 ```
 
-忙碌状态。
+The system is busy.
 
 **Since:** 8
 
@@ -180,7 +180,7 @@ BUSY = 7
 INVALID_PARAMETERS = 8
 ```
 
-无效参数。
+Invalid parameters are detected.
 
 **Since:** 8
 
@@ -200,7 +200,7 @@ INVALID_PARAMETERS = 8
 LOCKED = 9
 ```
 
-认证器已锁定。
+The authentication executor is locked.
 
 **Since:** 8
 
@@ -220,7 +220,7 @@ LOCKED = 9
 NOT_ENROLLED = 10
 ```
 
-用户未录入认证信息。
+The user has not enrolled the authentication information.
 
 **Since:** 8
 

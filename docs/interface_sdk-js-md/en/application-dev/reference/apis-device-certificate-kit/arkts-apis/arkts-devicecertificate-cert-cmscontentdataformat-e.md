@@ -1,6 +1,6 @@
 # CmsContentDataFormat
 
-表示Cms内容数据格式的枚举。
+Enumerates the CMS message formats.
 
 **Since:** 18
 
@@ -16,7 +16,7 @@
 BINARY = 0
 ```
 
-表示二进制数据格式。
+Binary.
 
 **Since:** 18
 
@@ -34,7 +34,7 @@ BINARY = 0
 TEXT = 1
 ```
 
-表示文本数据格式。
+Text.
 
 **Since:** 18
 

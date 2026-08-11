@@ -20,6 +20,6 @@ The ContinueCallback module defines the callback function that indicates the res
 
 | Name | Description |
 | --- | --- |
-| [OnContinueDoneCallback](arkts-ability-oncontinuedonecallback-t-sys.md) |  |
+| [OnContinueDoneCallback](arkts-ability-oncontinuedonecallback-t-sys.md) | Callback function on continue mission done. |
 <!--DelEnd-->
 

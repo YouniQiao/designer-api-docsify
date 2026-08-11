@@ -14,12 +14,6 @@
 
 **系统接口：** 此接口为系统接口。
 
-## 导入模块
-
-```TypeScript
-import { insightIntent } from 'kits/@kit.AbilityKit';
-```
-
 ## abilityName
 
 ```TypeScript
@@ -116,7 +110,7 @@ parameters: Record<string, Object>
 
 传递给目标UIExtension的参数。
 
-**类型：** [Record](../../apis-default/arkts-apis/arkts-record-t.md)&lt;string, Object&gt;
+**类型：** Record&lt;string, Object&gt;
 
 **起始版本：** 26.1.0
 

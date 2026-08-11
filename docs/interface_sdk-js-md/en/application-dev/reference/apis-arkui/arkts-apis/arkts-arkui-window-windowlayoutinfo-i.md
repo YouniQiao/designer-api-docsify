@@ -1,6 +1,6 @@
 # WindowLayoutInfo
 
-窗口布局信息。
+Describes the information about the window layout.
 
 **Since:** 15
 
@@ -22,7 +22,7 @@ import { window } from 'kits/@kit.ArkUI';
 windowAlpha?: double
 ```
 
-窗口透明度。有效值范围为[0.0, 1.0]，0.0表示完全透明，1.0表示完全不透明。默认值是-1.0，表示未查询到窗口透明度或者查询失败。
+The window's alpha fade level. This number is in the range 0.0 to 1.0,where 0.0 is fully transparent and 1.0 is fully opaque.
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：double
 
@@ -44,7 +44,7 @@ windowAlpha?: double
 windowRect: Rect
 ```
 
-窗口尺寸，窗口在屏幕上的实际位置和大小。
+Window rectangle, that is, the position and size of the window on the display.
 
 **Type:** [Rect](../../apis-form-kit/arkts-apis/arkts-form-forminfo-rect-i.md)
 

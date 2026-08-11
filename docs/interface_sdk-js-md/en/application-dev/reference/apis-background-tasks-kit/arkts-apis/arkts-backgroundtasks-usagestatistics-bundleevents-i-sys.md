@@ -1,7 +1,5 @@
 # BundleEvents (System API)
 
-FA模型的使用信息属性集合。
-
 **Since:** 9
 
 **ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
@@ -24,7 +22,7 @@ import { usageStatistics } from 'kits/@kit.BackgroundTasksKit';
 appGroup?: int
 ```
 
-应用程序的使用优先级组。
+The usage group of the application.
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
@@ -44,7 +42,7 @@ appGroup?: int
 bundleName?: string
 ```
 
-应用名称。
+The bundle name.
 
 **Type:** string
 
@@ -64,7 +62,7 @@ bundleName?: string
 eventId?: int
 ```
 
-应用事件类型。
+The event id.
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
@@ -84,7 +82,7 @@ eventId?: int
 eventOccurredTime?: long
 ```
 
-应用事件发生的时间戳，单位：ms。
+The time when this state occurred, in milliseconds.&lt;br&gt; Unit:ms
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：long
 
@@ -104,7 +102,7 @@ eventOccurredTime?: long
 indexOfLink?: string
 ```
 
-快捷方式id。
+The shortcut ID.
 
 **Type:** string
 
@@ -124,7 +122,7 @@ indexOfLink?: string
 nameOfClass?: string
 ```
 
-类名。
+The class name.
 
 **Type:** string
 

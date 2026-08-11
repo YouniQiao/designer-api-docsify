@@ -1,6 +1,6 @@
 # Pkcs12MacDigestAlgorithm
 
-表示P12的MAC摘要算法枚举。
+Enumerates the P12 MAC digest algorithms.
 
 **Since:** 21
 
@@ -16,7 +16,7 @@
 SHA256 = 0
 ```
 
-SHA256摘要算法。
+SHA-256.
 
 **Since:** 21
 
@@ -34,7 +34,7 @@ SHA256摘要算法。
 SHA384 = 1
 ```
 
-SHA384摘要算法。
+SHA-384.
 
 **Since:** 21
 
@@ -52,7 +52,7 @@ SHA384摘要算法。
 SHA512 = 2
 ```
 
-SHA512摘要算法。
+SHA-512.
 
 **Since:** 21
 

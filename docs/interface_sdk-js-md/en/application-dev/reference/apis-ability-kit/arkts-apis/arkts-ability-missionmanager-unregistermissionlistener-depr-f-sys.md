@@ -6,7 +6,7 @@
 function unregisterMissionListener(listenerId: number, callback: AsyncCallback<void>): void
 ```
 
-解注册任务状态监听器。使用callback异步回调。
+Unregisters a mission status listener. This API uses an asynchronous callback to return the result.
 
 **Since:** 8
 
@@ -28,8 +28,8 @@ function unregisterMissionListener(listenerId: number, callback: AsyncCallback<v
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| listenerId | number | Yes | 系统任务状态监听器的index值，和监听器一一对应，由registerMissionListener方法返回。 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | 执行结果回调函数。 |
+| listenerId | number | Yes | Index of the mission status listener to unregister. It is returned by **registerMissionListener()**. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. |
 
 ## Examples
 
@@ -73,7 +73,7 @@ missionManager.unregisterMissionListener(listenerId, (error) => {
 function unregisterMissionListener(listenerId: number): Promise<void>
 ```
 
-解注册任务状态监听器。使用Promise异步回调。
+Unregisters a mission status listener. This API uses a promise to return the result.
 
 **Since:** 8
 
@@ -95,13 +95,13 @@ function unregisterMissionListener(listenerId: number): Promise<void>
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| listenerId | number | Yes | 系统任务状态监听器的index值，和监听器一一对应，由registerMissionListener方法返回。 |
+| listenerId | number | Yes | Index of the mission status listener to unregister. It is returned by **registerMissionListener()**. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise对象。无返回结果的Promise对象。 |
+| Promise&lt;void&gt; | Promise that returns no value. |
 
 ## Examples
 

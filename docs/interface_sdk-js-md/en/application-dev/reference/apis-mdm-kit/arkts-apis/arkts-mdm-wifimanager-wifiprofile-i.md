@@ -1,6 +1,6 @@
 # WifiProfile
 
-Wi-Fi配置信息。
+Represents the Wi-Fi configuration information.
 
 **Since:** 12
 
@@ -22,7 +22,8 @@ import { wifiManager } from 'kits/@kit.MDMKit';
 bssid?: string
 ```
 
-Wi-Fi热点的MAC地址，长度6个字节，例如：00:11:22:33:44:55。获取方式如下：打开设置应用-点击系统选项-点击开发者选项-开启WLAN详细日志记录开关，然后进入设置应用中的WLAN列表，查看显示的MAC地址。若一个Wi-Fi对应多个MAC地址，需添加所有MAC地址。
+MAC address of the Wi-Fi hotspot, with a length of 6 bytes. For example, **00:11:22:33:44:55**. To obtain the MAC address, enable **Enable Wi-Fi verbose logging** under **Settings** > **System & updates** >  
+**Developer options** first, and then go to the WLAN list to check the MAC address. If a Wi-Fi network has multiple MAC addresses, all of them must be added here.
 
 **Type:** string
 
@@ -42,7 +43,7 @@ Wi-Fi热点的MAC地址，长度6个字节，例如：00:11:22:33:44:55。获取
 creatorUid?: number
 ```
 
-创建用户的ID，默认值-1。
+ID of the user who creates the network. The default value is **-1**.
 
 **Type:** number
 
@@ -62,7 +63,7 @@ creatorUid?: number
 disableReason?: number
 ```
 
-禁用原因，默认值0。
+Disabling reason. The default value is **0**.
 
 **Type:** number
 
@@ -82,7 +83,7 @@ disableReason?: number
 eapProfile?: WifiEapProfile
 ```
 
-可扩展身份验证协议配置。只有securityType为WIFI_SEC_TYPE_EAP时必填。
+Extensible Authentication Protocol (EAP) configuration. This field is mandatory only when **securityType** is set to **WIFI_SEC_TYPE_EAP**.
 
 **Type:** [WifiEapProfile](arkts-mdm-wifimanager-wifieapprofile-i.md)
 
@@ -102,7 +103,7 @@ eapProfile?: WifiEapProfile
 ipType?: IpType
 ```
 
-IP地址类型，默认值DHCP。
+IP address type. The default value is **DHCP**.
 
 **Type:** [IpType](arkts-mdm-wifimanager-iptype-e.md)
 
@@ -122,7 +123,7 @@ IP地址类型，默认值DHCP。
 isHiddenSsid?: boolean
 ```
 
-是否是隐藏网络。true表示是隐藏网络，false表示不是隐藏网络，默认为false。
+Whether the network is hidden. The value **true** indicates yes, and the value **false** indicates no. The default value is **false**.
 
 **Type:** boolean
 
@@ -142,7 +143,7 @@ isHiddenSsid?: boolean
 netId?: number
 ```
 
-分配的网络ID，默认值-1。
+Allocated network ID. The default value is **-1**.
 
 **Type:** number
 
@@ -162,7 +163,7 @@ netId?: number
 preSharedKey: string
 ```
 
-热点的密钥，用于Wi-Fi连接认证。最大长度为64字节。
+Key of the hotspot, which is used for Wi-Fi connection authentication. The maximum length is 64 bytes.
 
 **Type:** string
 
@@ -182,7 +183,7 @@ preSharedKey: string
 randomMacAddr?: string
 ```
 
-MAC地址。randomMacType为设备MAC类型时，该字段必填。
+MAC address. This field is mandatory when **randomMacType** is set to device MAC address.
 
 **Type:** string
 
@@ -202,7 +203,7 @@ MAC地址。randomMacType为设备MAC类型时，该字段必填。
 randomMacType?: number
 ```
 
-随机MAC类型。0-随机MAC地址， 1-设备MAC地址，默认值0。
+Random MAC. The value **0** indicates random MAC address, and the value **1** indicates device MAC address. The default value is **0**.
 
 **Type:** number
 
@@ -222,7 +223,7 @@ randomMacType?: number
 securityType: WifiSecurityType
 ```
 
-安全类型。
+Security type.
 
 **Type:** [WifiSecurityType](arkts-mdm-wifimanager-wifisecuritytype-e.md)
 
@@ -242,7 +243,7 @@ securityType: WifiSecurityType
 ssid: string
 ```
 
-Wi-Fi热点名称，最大长度为32字节，编码格式为UTF-8。
+Wi-Fi hotspot name. The maximum length is 32 bytes, and the encoding format is UTF-8.
 
 **Type:** string
 
@@ -262,7 +263,7 @@ Wi-Fi热点名称，最大长度为32字节，编码格式为UTF-8。
 staticIp?: IpProfile
 ```
 
-静态IP配置信息。ipType为STATIC时，该字段必填。
+Static IP address information. This field is mandatory when **ipType** is set to **STATIC**.
 
 **Type:** [IpProfile](arkts-mdm-wifimanager-ipprofile-i.md)
 

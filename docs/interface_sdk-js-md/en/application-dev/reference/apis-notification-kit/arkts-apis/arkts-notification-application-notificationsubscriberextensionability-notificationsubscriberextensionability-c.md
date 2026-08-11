@@ -1,8 +1,8 @@
 # NotificationSubscriberExtensionAbility
 
-NotificationSubscriberExtensionAbility是通知订阅者扩展能力的基类，提供通知订阅的相关功能。三方穿戴类应用（如手表配套应用）通过继承此类实现回调逻辑，在本机发布通知时接收通知信息并通过蓝牙转发给穿戴设备，在本机通知被取消时接收取消通知的回调并转发给穿戴设备删除对应通知。
+NotificationSubscriberExtensionAbility is the base class for notification subscriber extension abilities, providing notification subscription-related functionality. Third-party wearable apps (such as companion applications for watches)implement callback logic by inheriting this class, receiving notification information when notifications are published on the local device and forwarding them to the wearable device via Bluetooth, and receiving callbacks for notification cancellation when local notifications are cancelled and forwarding them to the wearable device to delete the corresponding notifications.
 
-当穿戴类应用需要获取本机通知并同步到配对的穿戴设备时，使用本模块。本模块与notificationExtensionSubscription模块配合使用，本模块负责在回调中接收和处理通知数据，notificationExtensionSubscription模块负责授权、订阅和取消订阅等管理操作。
+Use this module when your wearable application needs to obtain local notifications and sync them to a paired wearable device. This module is used together with the notificationExtensionSubscription module. This module is responsible for receiving and processing notification data in callbacks, while the notificationExtensionSubscription module is responsible for management operations such as authorization, subscription, and unsubscription.
 
 **Since:** 22
 
@@ -24,7 +24,7 @@ import { NotificationSubscriberExtensionAbility } from 'kits/@kit.NotificationKi
 onCancelMessages(hashCodes: Array<string>): void
 ```
 
-取消通知时的回调。
+Called when notifications are canceled.
 
 **Since:** 22
 
@@ -40,7 +40,7 @@ onCancelMessages(hashCodes: Array<string>): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| hashCodes | Array&lt;string&gt; | Yes | 要取消的通知的哈希码列表。通过onReceiveMessage获取。 |
+| hashCodes | Array&lt;string&gt; | Yes | List of hash codes of the notifications to cancel, obtained through {@link @ohos.application.NotificationSubscriberExtensionAbility: NotificationSubscriberExtensionAbility.onReceiveMessage}. |
 
 ## Examples
 
@@ -48,9 +48,9 @@ onCancelMessages(hashCodes: Array<string>): void
 const TAG = 'NotificationSubscriberExtAbility';
 
 export default class NotificationSubscriberExtAbility extends NotificationSubscriberExtensionAbility {
-  onCancelMessages(hashCodes: Array<string>): void {
-    console.info(`${TAG} onCancelMessages. hashCodes: ${JSON.stringify(hashCodes)}`);
-  }
+    onCancelMessages(hashCodes: Array<string>): void {
+        console.info(`${TAG} onCancelMessages. hashCodes: ${JSON.stringify(hashCodes)}`);
+    }
 }
 ```
 
@@ -60,7 +60,7 @@ export default class NotificationSubscriberExtAbility extends NotificationSubscr
 onDestroy(): void
 ```
 
-通知订阅扩展被销毁时的回调。
+Called when the notification subscription extension is destroyed.
 
 **Since:** 22
 
@@ -90,7 +90,7 @@ export default class NotificationSubscriberExtAbility extends NotificationSubscr
 onReceiveMessage(notificationInfo: NotificationInfo): void
 ```
 
-收到通知时回调。
+Called when a notification is received.
 
 **Since:** 22
 
@@ -106,7 +106,7 @@ onReceiveMessage(notificationInfo: NotificationInfo): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| notificationInfo | [NotificationInfo](arkts-notification-notificationinfo-i.md) | Yes | 通知订阅扩展能力中收到通知的回调信息。 |
+| notificationInfo | [NotificationInfo](arkts-notification-notificationinfo-i.md) | Yes | Callback information about the notification received in the notification subscription extension capability. |
 
 ## Examples
 
@@ -126,7 +126,7 @@ export default class NotificationSubscriberExtAbility extends NotificationSubscr
 context: NotificationSubscriberExtensionContext
 ```
 
-NotificationSubscriberExtensionAbility的上下文环境。
+Context for the NotificationSubscriberExtensionAbility.
 
 **Type:** [NotificationSubscriberExtensionContext](arkts-notification-application-notificationsubscriberextensioncontext-notificationsubscriberextensioncontext-c.md)
 

@@ -16,7 +16,7 @@ declare function readSync(
 ): number
 ```
 
-以同步方法从文件读取数据。
+Reads data from a file. This API returns the result synchronously.
 
 **Since:** 9
 
@@ -32,15 +32,15 @@ declare function readSync(
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| fd | number | Yes | 已打开的文件描述符。 |
-| buffer | ArrayBuffer | Yes | 用于保存读取到的文件数据的缓冲区。 |
-| options | [ReadOptions](arkts-corefile-file-fs-readoptions-i.md) | No | 支持如下选项：&lt;br/&gt;- offset，number类型，表示期望读取文件的位置，单位为Byte。可选，默认从当前位置开始读。&lt;br/&gt;- length， number类型，表示期望读取数据的长度，单位为Byte。可选，默认缓冲区长度。<br>**Since:** 11 |
+| fd | number | Yes | FD of the file. |
+| buffer | ArrayBuffer | Yes | Buffer used to store the file data read. |
+| options | [ReadOptions](arkts-corefile-file-fs-readoptions-i.md) | No | The options are as follows:&lt;br&gt;- **offset** (number): position of the data to read in the file, in bytes. This parameter is optional. By default, data is read from the current position.&lt;br&gt;- **length** (number): length of the data to read, in bytes. This parameter is optional. The default value is the buffer length.<br>**Since:** 11 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| number | 返回实际读取的数据长度，单位为Byte。 |
+| number | Length of the data read, in bytes. |
 
 **Error codes:**
 

@@ -1,6 +1,6 @@
 # DotIndicator
 
-构造圆点指示器的样式，继承自[Indicator](arkts-arkui-indicator-c.md)。
+A constructor used to create a **DotIndicator** object. It inherits from [Indicator](arkts-arkui-indicator-c.md).
 
 **Inheritance/Implementation:** DotIndicator extends [Indicator<DotIndicator>](Indicator<DotIndicator>)
 
@@ -18,7 +18,7 @@
 color(value: ResourceColor): DotIndicator
 ```
 
-Swiper组件圆点导航指示器的颜色。
+Sets the color of the dot-style navigation indicator.
 
 **Since:** 10
 
@@ -38,13 +38,13 @@ Swiper组件圆点导航指示器的颜色。
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | [ResourceColor](../arkts-apis/arkts-arkui-resourcecolor-t.md) | Yes | 设置Swiper组件圆点导航指示器的颜色。&lt;br/&gt;默认值：'#1A182431'，浅灰色。 |
+| value | [ResourceColor](../arkts-apis/arkts-arkui-resourcecolor-t.md) | Yes | Color of the dot-style navigation indicator.&lt;br&gt;Default value: **'#1A182431'** ( light gray) |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [DotIndicator](arkts-arkui-dotindicator-c.md) | 返回当前圆点指示器，用于支持链式调用配置其他导航点属性。 |
+| [DotIndicator](arkts-arkui-dotindicator-c.md) | Current dot-style navigation indicator. |
 
 ## constructor
 
@@ -52,14 +52,17 @@ Swiper组件圆点导航指示器的颜色。
 constructor()
 ```
 
-DotIndicator的构造函数。
+A constructor used to create a **DotIndicator** object.
 
-> **说明：**
-
-> - 按压导航点时，导航点会放大至1.33倍显示，因此非按压态时导航点的可见范围边界至实际范围边界存在一定距离，该距离会随着itemWidth、itemHeight、selectedItemWidth、
-> selectedItemHeight等参数变大而变大。
+> **NOTE：**
 > 
-> - 若页面数量较多、圆点导航点超出页面时，建议使用maxDisplayCount设置导航点显示个数。
+> - When pressed, the navigation indicator is zoomed in to 1.33 times. To account for this, there is a certain
+> distance between the navigation indicator's visible boundary and its actual boundary in the non-pressed state.
+> The distance increases with the value of **itemWidth**, **itemHeight**, **selectedItemWidth**, and
+> **selectedItemHeight**.
+> 
+> - If there are too many pages and dot-style indicators exceed the page, you are advised to use the
+> **maxDisplayCount** parameter to set the number of dots to be displayed.
 
 **Since:** 10
 
@@ -81,7 +84,7 @@ DotIndicator的构造函数。
 indicatorIcon(iconList: Array<IndicatorIconInfo>): DotIndicator
 ```
 
-设置导航点图标。
+Set indicator icon.
 
 **Since:** 26.0.0
 
@@ -101,13 +104,13 @@ indicatorIcon(iconList: Array<IndicatorIconInfo>): DotIndicator
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| iconList | Array&lt;IndicatorIconInfo&gt; | Yes | 需要设置的导航点索引。 |
+| iconList | Array&lt;IndicatorIconInfo&gt; | Yes | Indicator items whose icons need to be set. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [DotIndicator](arkts-arkui-dotindicator-c.md) | 返回DotIndicator。 |
+| [DotIndicator](arkts-arkui-dotindicator-c.md) | return the DotIndicator. |
 
 ## itemHeight
 
@@ -115,7 +118,7 @@ indicatorIcon(iconList: Array<IndicatorIconInfo>): DotIndicator
 itemHeight(value: Length): DotIndicator
 ```
 
-Swiper组件圆点导航指示器的高。
+Sets the height of a dot-style navigation indicator of the **Swiper** component.
 
 **Since:** 10
 
@@ -135,13 +138,13 @@ Swiper组件圆点导航指示器的高。
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | [Length](../arkts-apis/arkts-arkui-length-t.md) | Yes | 设置Swiper组件圆点导航指示器的高，不支持设置百分比。&lt;br/&gt;默认值：6&lt;br/&gt;单位：vp&lt;br/&gt;取值范围：(0, +∞) |
+| value | [Length](../arkts-apis/arkts-arkui-length-t.md) | Yes | Height of the dot-style indicator. This parameter cannot be set in percentage.&lt;br&gt;Default value: **6**&lt;br&gt;Unit: vp&lt;br&gt;Value range: (0, +∞) |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [DotIndicator](arkts-arkui-dotindicator-c.md) | 返回当前圆点指示器，用于支持链式调用配置其他导航点属性。 |
+| [DotIndicator](arkts-arkui-dotindicator-c.md) | Current dot-style navigation indicator. |
 
 ## itemWidth
 
@@ -149,7 +152,7 @@ Swiper组件圆点导航指示器的高。
 itemWidth(value: Length): DotIndicator
 ```
 
-Swiper组件圆点导航指示器的宽。
+Sets the width of a dot-style navigation indicator of the **Swiper** component.
 
 **Since:** 10
 
@@ -169,13 +172,13 @@ Swiper组件圆点导航指示器的宽。
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | [Length](../arkts-apis/arkts-arkui-length-t.md) | Yes | 设置Swiper组件圆点导航指示器的宽，不支持设置百分比。&lt;br/&gt;默认值：6&lt;br/&gt;单位：vp&lt;br/&gt;取值范围：(0, +∞) |
+| value | [Length](../arkts-apis/arkts-arkui-length-t.md) | Yes | Width of the dot-style indicator. This parameter cannot be set in percentage.&lt;br&gt;Default value: **6**&lt;br&gt;Unit: vp&lt;br&gt;Value range: (0, +∞) |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [DotIndicator](arkts-arkui-dotindicator-c.md) | 返回当前圆点指示器，用于支持链式调用配置其他导航点属性。 |
+| [DotIndicator](arkts-arkui-dotindicator-c.md) | Current dot-style navigation indicator. |
 
 ## mask
 
@@ -183,7 +186,7 @@ Swiper组件圆点导航指示器的宽。
 mask(value: boolean): DotIndicator
 ```
 
-是否显示Swiper组件圆点导航指示器的蒙版样式。
+Sets whether to enable the mask for the dot-style navigation indicator.
 
 **Since:** 10
 
@@ -203,13 +206,13 @@ mask(value: boolean): DotIndicator
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | boolean | Yes | 设置是否显示Swiper组件圆点导航指示器的蒙版样式。为true时显示Swiper组件圆点导航指示器的蒙版样式，为false时不显示。&lt;br/&gt;默认值：false |
+| value | boolean | Yes | Whether to enable the mask for the dot-style navigation indicator. The value **true** means to enable the mask for the dot-style navigation indicator, and **false** means the opposite.&lt;br&gt;Default value: **false**. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [DotIndicator](arkts-arkui-dotindicator-c.md) | 返回当前圆点指示器，用于支持链式调用配置其他导航点属性。 |
+| [DotIndicator](arkts-arkui-dotindicator-c.md) | Current dot-style navigation indicator. |
 
 ## maxDisplayCount
 
@@ -217,7 +220,7 @@ mask(value: boolean): DotIndicator
 maxDisplayCount(maxDisplayCount: number): DotIndicator
 ```
 
-圆点导航点指示器样式下，导航点显示个数最大值。
+Sets the maximum number of navigation dots in the dot-style navigation indicator.
 
 **Since:** 12
 
@@ -235,13 +238,13 @@ maxDisplayCount(maxDisplayCount: number): DotIndicator
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| maxDisplayCount | number | Yes | 设置圆点导航点指示器样式下，导航点显示个数最大值，当实际导航点个数大于最大导航点个数时，会生效超长效果样式，样式如 [示例5](../../../reference/apis-arkui/arkui-ts/ts-container-swiper.md#示例5设置圆点导航点超长显示)所示。&lt;br/&gt;默认值：这个属性没有默认值，如果设置异 常值那等同于没有超长显示效果。&lt;br/&gt;取值范围：[6, 9]&lt;br/&gt;**说明：** &lt;br/&gt;1、超长显示场景，目前暂时不支持交互功能（包括：手指点击拖拽、鼠标操作等）。&lt;br/&gt;2、在超长显示场景下，中间页面对应的选 中导航点的位置，并不是完全固定的，取决于之前的翻页操作序列。&lt;br/&gt;3、当前仅支持displayCount为1的场景。 |
+| maxDisplayCount | number | Yes | Maximum number of navigation dots in the dot-style navigation point indicator. If the actual number of navigation dots exceeds this limit, the overflow effect is activated, as shown in [Example 5](../../../reference/apis-arkui/arkui-ts/ts-container-swiper.md#example-5-configuring-overflow-for-the-dot-style-indicator). &lt;br&gt;This parameter has no default value. If an invalid value is set, no overflow effect is applied.&lt;br&gt;Value range: [6, 9].&lt;br&gt;**NOTE：**&lt;br&gt;In scenarios involving overflow display:&lt;br&gt;1. Interactive features, such as gestures and mouse operations, are not supported.&lt;br&gt;2. The position of the selected navigation dot corresponding to the middle page is not strictly fixed; it depends on the sequence of previous page-turning operations.&lt;br&gt;3. Currently, only scenarios with **displayCount** set to **1** are supported. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [DotIndicator](arkts-arkui-dotindicator-c.md) | 返回当前圆点指示器，用于支持链式调用配置其他导航点属性。 |
+| [DotIndicator](arkts-arkui-dotindicator-c.md) | Current dot-style navigation indicator. |
 
 ## selectedColor
 
@@ -249,7 +252,7 @@ maxDisplayCount(maxDisplayCount: number): DotIndicator
 selectedColor(value: ResourceColor): DotIndicator
 ```
 
-选中Swiper组件圆点导航指示器的颜色。
+Sets the color of the selected dot-style navigation indicator.
 
 **Since:** 10
 
@@ -269,13 +272,13 @@ selectedColor(value: ResourceColor): DotIndicator
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | [ResourceColor](../arkts-apis/arkts-arkui-resourcecolor-t.md) | Yes | 设置选中Swiper组件圆点导航指示器的颜色。&lt;br/&gt;默认值：'#007DFF'，蓝色。 |
+| value | [ResourceColor](../arkts-apis/arkts-arkui-resourcecolor-t.md) | Yes | Color of the selected dot-style navigation indicator.&lt;br&gt;Default value: **'#007DFF'** (blue) |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [DotIndicator](arkts-arkui-dotindicator-c.md) | 返回当前圆点指示器，用于支持链式调用配置其他导航点属性。 |
+| [DotIndicator](arkts-arkui-dotindicator-c.md) | Current dot-style navigation indicator. |
 
 ## selectedItemHeight
 
@@ -283,7 +286,7 @@ selectedColor(value: ResourceColor): DotIndicator
 selectedItemHeight(value: Length): DotIndicator
 ```
 
-选中Swiper组件圆点导航指示器的高。
+Sets the height of the selected dot-style navigation indicator.
 
 **Since:** 10
 
@@ -303,13 +306,13 @@ selectedItemHeight(value: Length): DotIndicator
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | [Length](../arkts-apis/arkts-arkui-length-t.md) | Yes | 设置选中Swiper组件圆点导航指示器的高，不支持设置百分比。&lt;br/&gt;默认值：6&lt;br/&gt;单位：vp&lt;br/&gt;取值范围：(0, +∞) |
+| value | [Length](../arkts-apis/arkts-arkui-length-t.md) | Yes | Height of the selected dot-style indicator. This parameter cannot be set in percentage.&lt; br&gt;Default value: **6**&lt;br&gt;Unit: vp&lt;br&gt;Value range: (0, +∞) |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [DotIndicator](arkts-arkui-dotindicator-c.md) | 返回当前圆点指示器，用于支持链式调用配置其他导航点属性。 |
+| [DotIndicator](arkts-arkui-dotindicator-c.md) | Current dot-style navigation indicator. |
 
 ## selectedItemWidth
 
@@ -317,7 +320,7 @@ selectedItemHeight(value: Length): DotIndicator
 selectedItemWidth(value: Length): DotIndicator
 ```
 
-选中Swiper组件圆点导航指示器的宽。
+Sets the width of the selected dot-style navigation indicator.
 
 **Since:** 10
 
@@ -337,13 +340,13 @@ selectedItemWidth(value: Length): DotIndicator
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | [Length](../arkts-apis/arkts-arkui-length-t.md) | Yes | 设置选中Swiper组件圆点导航指示器的宽，不支持设置百分比。&lt;br/&gt;默认值：6&lt;br/&gt;单位：vp&lt;br/&gt;取值范围：(0, +∞) |
+| value | [Length](../arkts-apis/arkts-arkui-length-t.md) | Yes | Width of the selected dot-style navigation indicator. This parameter cannot be set in percentage.&lt;br&gt;Default value: **6**&lt;br&gt;Unit: vp&lt;br&gt;Value range: (0, +∞) |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [DotIndicator](arkts-arkui-dotindicator-c.md) | 返回当前圆点指示器，用于支持链式调用配置其他导航点属性。 |
+| [DotIndicator](arkts-arkui-dotindicator-c.md) | Current dot-style navigation indicator. |
 
 ## space
 
@@ -351,7 +354,7 @@ selectedItemWidth(value: Length): DotIndicator
 space(space: LengthMetrics): DotIndicator
 ```
 
-设置Swiper圆点导航点间距。
+Sets the spacing between dot-style navigation indicators of the **Swiper** component.
 
 **Since:** 19
 
@@ -371,11 +374,11 @@ space(space: LengthMetrics): DotIndicator
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| space | [LengthMetrics](../arkts-apis/arkts-arkui-lengthmetrics-t.md) | Yes | 设置圆点导航点间距，不支持设置百分比。&lt;br/&gt;默认值：PC/2in1设备上为10，其他设备为8。&lt;br/&gt;单位：vp&lt;br/&gt;取值范围：[0, +∞) |
+| space | [LengthMetrics](../arkts-apis/arkts-arkui-lengthmetrics-t.md) | Yes | Spacing between the dots in the dot-style navigation indicator. Percentage values are not supported.&lt;br&gt;Default value: **10** for PCs and 2-in-1 devices and **8** for other devices&lt;br&gt;Unit: vp&lt; br&gt;Value range: [0, +∞) |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [DotIndicator](arkts-arkui-dotindicator-c.md) | 返回当前圆点指示器，用于支持链式调用配置其他导航点属性。 |
+| [DotIndicator](arkts-arkui-dotindicator-c.md) | Current dot-style navigation indicator. |
 

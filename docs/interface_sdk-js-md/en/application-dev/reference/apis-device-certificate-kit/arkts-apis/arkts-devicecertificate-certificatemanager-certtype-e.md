@@ -1,6 +1,6 @@
 # CertType
 
-表示证书类型。
+Enumerates the certificate types.
 
 **Since:** 18
 
@@ -16,7 +16,7 @@
 CA_CERT_SYSTEM = 0
 ```
 
-表示系统CA证书。
+System CA certificate.
 
 **Since:** 18
 
@@ -32,7 +32,7 @@ CA_CERT_SYSTEM = 0
 CA_CERT_USER = 1
 ```
 
-表示用户CA证书。
+User CA certificate.
 
 **Since:** 18
 

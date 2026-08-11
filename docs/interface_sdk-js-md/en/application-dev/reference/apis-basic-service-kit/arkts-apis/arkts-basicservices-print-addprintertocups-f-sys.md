@@ -12,7 +12,7 @@ import { print } from 'kits/@kit.BasicServicesKit';
 function addPrinterToCups(printerUri: string, printerName: string, printerMake: string): Promise<boolean>
 ```
 
-添加打印机到cups，使用Promise异步回调。
+Add a printer to cups.
 
 **Since:** 24
 
@@ -32,23 +32,23 @@ function addPrinterToCups(printerUri: string, printerName: string, printerMake: 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| printerUri | string | Yes | 表示打印机uri。 |
-| printerName | string | Yes | 表示打印机名称。 |
-| printerMake | string | Yes | 表示打印机型号。 |
+| printerUri | string | Yes | Indicates the printer uri. &lt;br&gt;Printer URI in the process of connecting. |
+| printerName | string | Yes | Indicates the printer name. &lt;br&gt;Printer name in the process of connecting. |
+| printerMake | string | Yes | Indicates the printer make. &lt;br&gt;Printer make in the process of connecting. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;boolean&gt; | Promise对象，返回true表示添加打印机到cups成功；返回false表示添加打印机到cups失败。 |
+| Promise&lt;boolean&gt; | the promise returned by the function. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 13100003 | Add a printer to cups failed. |
-| 201 | the application does not have permission to call this function. |
-| 202 | not system application. |
+| [13100003](../../apis-basic-services-kit/errorcode-print.md#13100003-print-service-error) | Add a printer to cups failed. |
+| [201](../../errorcode-universal.md#201-permission-denied) | the application does not have permission to call this function. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | not system application. |
 
 ## Examples
 

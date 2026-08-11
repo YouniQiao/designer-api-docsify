@@ -4,7 +4,7 @@
 export type NodeBorderRadiuses = Corners<double>
 ```
 
-设置四个角的圆角度数。
+BorderRadiuses info.
 
 **Since:** 23
 

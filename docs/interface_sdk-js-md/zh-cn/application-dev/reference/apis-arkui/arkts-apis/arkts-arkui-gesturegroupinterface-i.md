@@ -33,7 +33,7 @@
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | mode | [GestureMode](arkts-arkui-gesture-gesturemode-e.md) | 是 |  |
-| gesture | [GestureType](arkts-arkui-gesturecontrol-gesturetype-e.md)[] | 是 |  |
+| gesture | [GestureType](../../apis-accessibility-kit/arkts-apis/arkts-accessibility-gesturetype-t.md)[] | 是 |  |
 
 **返回值：**
 

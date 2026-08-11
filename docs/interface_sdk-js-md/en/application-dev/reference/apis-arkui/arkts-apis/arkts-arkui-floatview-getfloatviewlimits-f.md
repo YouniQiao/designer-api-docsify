@@ -12,7 +12,7 @@ import { floatView } from 'kits/@kit.ArkUI';
 function getFloatViewLimits(templateType: FloatViewTemplateType): FloatViewLimits
 ```
 
-根据传入的模板类型获取对应标准悬浮窗窗口的限制，单位为px。
+Obtains the limits of the float view based on the passed template type. The unit is px.
 
 **Since:** 26.0.0
 
@@ -28,28 +28,20 @@ function getFloatViewLimits(templateType: FloatViewTemplateType): FloatViewLimit
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| templateType | [FloatViewTemplateType](arkts-arkui-floatview-floatviewtemplatetype-e.md) | Yes | 标准悬浮窗模板类型。 |
+| templateType | [FloatViewTemplateType](arkts-arkui-floatview-floatviewtemplatetype-e.md) | Yes | Template type of the float view. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [FloatViewLimits](arkts-arkui-floatview-floatviewlimits-i.md) | 返回标准悬浮窗窗口的限制，包括最大尺寸、最小尺寸和宽高比的限制范围。 |
+| [FloatViewLimits](arkts-arkui-floatview-floatviewlimits-i.md) | Limits of the float view, including the maximum size, minimum size, and aspect ratio. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 1300003 | This window manager service works abnormally. Possible cause: Internal IPC error. |
-| 801 | Capability not supported. Possible cause: Call the API on unsupported device. |
-| 1300002 | This window state is abnormal. Possible cause: System error, such as a null pointer, insufficient memory or a JS engine exception. |
-| 1300016 | Parameter error. Possible cause: Invalid template type. |
-
-## Examples
-
-```TypeScript
-// Obtain the float view limit of the rounded rectangle template.
-let limits: floatView.FloatViewLimits = floatView.getFloatViewLimits(floatView.FloatViewTemplateType.ROUNDED_RECTANGLE);
-console.info('Float view limits: ' + JSON.stringify(limits));
-```
+| [1300003](../errorcode-window.md#1300003-abnormal-window-manager-service) | This window manager service works abnormally. Possible cause: Internal IPC error. |
+| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. Possible cause: Call the API on unsupported device. |
+| [1300002](../errorcode-window.md#1300002-abnormal-window-state) | This window state is abnormal. Possible cause: System error, such as a null pointer, insufficient memory or a JS engine exception. |
+| [1300016](../errorcode-window.md#1300016-parameter-verification-error) | Parameter error. Possible cause: Invalid template type. |
 

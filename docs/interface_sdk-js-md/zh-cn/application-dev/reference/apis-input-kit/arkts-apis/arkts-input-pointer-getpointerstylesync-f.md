@@ -1,11 +1,5 @@
 # getPointerStyleSync
 
-## 导入模块
-
-```TypeScript
-import { pointer } from 'kits/@kit.InputKit';
-```
-
 ## getPointerStyleSync
 
 ```TypeScript
@@ -32,15 +26,17 @@ function getPointerStyleSync(windowId: int): PointerStyle
 
 | 类型 | 说明 |
 | --- | --- |
-| [PointerStyle](../../apis-arkui/arkts-components/arkts-arkui-pointerstyle-t.md) | 返回鼠标样式类型。 |
+| [PointerStyle](../../apis-arkui/arkts-apis/arkts-arkui-pointerstyle-t.md) | 返回鼠标样式类型。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; 3. Parameter verification failed. |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; 3. Parameter verification failed. |
 
 ## 示例
+
+ArkTS-Dyn示例：
 
 ```TypeScript
 import { pointer } from '@kit.InputKit';
@@ -54,6 +50,34 @@ struct Index {
       Text()
         .onClick(() => {
           let windowId = -1;
+          try {
+            let style: pointer.PointerStyle = pointer.getPointerStyleSync(windowId);
+            console.info(`Succeeded in getting pointer style, style: ${JSON.stringify(style)}.`);
+          } catch (error) {
+            console.error(`Failed to get pointer style, Code: ${(error as BusinessError).code}, message: ${(error as BusinessError).message}.`);
+          }
+        })
+    }
+  }
+}
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+import { Entry, Text, RelativeContainer, Component } from '@kit.ArkUI';
+import { pointer } from '@kit.InputKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+@Entry
+@Component
+struct Index {
+  build() {
+    RelativeContainer() {
+      Text()
+        .onClick(() => {
+          // 此次根据实际获取窗口id
+          let windowId: int = 100;
           try {
             let style: pointer.PointerStyle = pointer.getPointerStyleSync(windowId);
             console.info(`Succeeded in getting pointer style, style: ${JSON.stringify(style)}.`);

@@ -1,6 +1,6 @@
 # CmsFormat
 
-表示CMS编码格式的枚举。
+Enumerates the CMS encoding formats.
 
 **Since:** 18
 
@@ -16,7 +16,7 @@
 PEM = 0
 ```
 
-PEM格式。
+Privacy-Enhanced Mail (PEM) format.
 
 **Since:** 18
 
@@ -34,7 +34,7 @@ PEM格式。
 DER = 1
 ```
 
-DER格式。
+Distinguished Encoding Rules (DER) format.
 
 **Since:** 18
 

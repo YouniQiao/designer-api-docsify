@@ -2,7 +2,7 @@
 
 MakerNoteHuaweiMetadata implements Metadata
 
-来自Huawei相机的照片元数据。
+Photo metadata from Huawei cameras.
 
 **Inheritance/Implementation:** MakerNoteHuaweiMetadata implements [Metadata](arkts-image-image-metadata-i.md)
 
@@ -26,7 +26,7 @@ import { image } from 'kits/@kit.ImageKit';
 clone(): Promise<MakerNoteHuaweiMetadata>
 ```
 
-对[MakerNoteHuaweiMetadata](arkts-image-image-makernotehuaweimetadata-c.md)元数据进行克隆。使用Promise异步回调。
+Clones [MakerNoteHuaweiMetadata](arkts-image-image-makernotehuaweimetadata-c.md) metadata. This API returns the result asynchronously through a promise.
 
 **Since:** 23
 
@@ -42,7 +42,7 @@ clone(): Promise<MakerNoteHuaweiMetadata>
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;[MakerNoteHuaweiMetadata](arkts-image-image-makernotehuaweimetadata-c.md)&gt; | Promise对象，当成功获取元数据时返回MakerNoteHuaweiMetadata元数据实例。 |
+| Promise&lt;[MakerNoteHuaweiMetadata](arkts-image-image-makernotehuaweimetadata-c.md)&gt; | Promise used to return the **MakerNoteHuaweiMetadata** metadata instance if metadata is successfully obtained. |
 
 ## createInstance
 
@@ -50,7 +50,7 @@ clone(): Promise<MakerNoteHuaweiMetadata>
 static createInstance(): MakerNoteHuaweiMetadata
 ```
 
-返回[MakerNoteHuaweiMetadata](arkts-image-image-makernotehuaweimetadata-c.md)的空实例。
+Returns an empty [MakerNoteHuaweiMetadata](arkts-image-image-makernotehuaweimetadata-c.md) instance.
 
 **Since:** 23
 
@@ -66,7 +66,7 @@ static createInstance(): MakerNoteHuaweiMetadata
 
 | Type | Description |
 | --- | --- |
-| [MakerNoteHuaweiMetadata](arkts-image-image-makernotehuaweimetadata-c.md) | 返回MakerNoteHuaweiMetadata的空实例。 |
+| [MakerNoteHuaweiMetadata](arkts-image-image-makernotehuaweimetadata-c.md) | Empty **MakerNoteHuaweiMetadata** instance. |
 
 ## getAllProperties
 
@@ -74,7 +74,7 @@ static createInstance(): MakerNoteHuaweiMetadata
 getAllProperties(): Promise<Record<string, string | null>>
 ```
 
-获取图片中所有元数据的属性和值。使用Promise异步回调。
+Obtains all properties and their values from the image metadata. This API returns the result asynchronously through a promise.
 
 **Since:** 23
 
@@ -90,7 +90,7 @@ getAllProperties(): Promise<Record<string, string | null>>
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;Record&lt;string, string \| null&gt;&gt; | Promise对象，返回元数据中定义的所有键值对。 |
+| Promise&lt;Record&lt;string, string \| null&gt;&gt; | Promise used to return the values of all properties. |
 
 ## getBlob
 
@@ -98,7 +98,7 @@ getAllProperties(): Promise<Record<string, string | null>>
 getBlob(): Promise<ArrayBuffer>
 ```
 
-以二进制数据的形式获取元数据。使用Promise异步回调。
+Obtains the metadata in binary format. This API uses a promise to return the result.
 
 **Since:** 23
 
@@ -114,7 +114,7 @@ getBlob(): Promise<ArrayBuffer>
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;ArrayBuffer&gt; | Promise对象，返回元数据的二进制数据。 |
+| Promise&lt;ArrayBuffer&gt; | Promise that returns the binary data of the metadata. |
 
 ## getProperties
 
@@ -122,9 +122,7 @@ getBlob(): Promise<ArrayBuffer>
 getProperties(key: Array<string>): Promise<Record<string, string | null>>
 ```
 
-获取图像中属性的值。使用Promise异步回调。
-
-要查询的属性的具体信息请参考[PropertyKey](arkts-image-image-propertykey-e.md)。
+Obtains the property values from image metadata. This API returns the result asynchronously through a promise.
 
 **Since:** 23
 
@@ -140,19 +138,19 @@ getProperties(key: Array<string>): Promise<Record<string, string | null>>
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| key | Array&lt;string&gt; | Yes | 要获取其值的属性的名称。 |
+| key | Array&lt;string&gt; | Yes | Names of the properties to query. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;Record&lt;string, string \| null&gt;&gt; | Promise对象，返回元数据要获取的属性的值，如获取失败则返回错误码。 |
+| Promise&lt;Record&lt;string, string \| null&gt;&gt; | Promise used to return the obtained image metadata property values. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 7600202 | Unsupported metadata. Possible causes: unsupported metadata type. |
+| [7600202](../errorcode-image.md#7600202-unsupported-metadata-readwrite-operation) | Unsupported metadata. Possible causes: unsupported metadata type. |
 
 ## setBlob
 
@@ -160,7 +158,7 @@ getProperties(key: Array<string>): Promise<Record<string, string | null>>
 setBlob(blob: ArrayBuffer): Promise<void>
 ```
 
-使用二进制数据替换当前元数据。使用Promise异步回调。
+Replaces the current metadata with binary data. This API uses a promise to return the result.
 
 **Since:** 23
 
@@ -176,19 +174,19 @@ setBlob(blob: ArrayBuffer): Promise<void>
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| blob | ArrayBuffer | Yes | 要替换的二进制数据。 |
+| blob | ArrayBuffer | Yes | Binary data used to replace the metadata. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise对象，无返回结果。 |
+| Promise&lt;void&gt; | Promise that returns no value. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 7600206 | Invalid parameter. Possible causes: The blob is empty or has a length of 0. |
+| [7600206](../errorcode-image.md#7600206-invalid-parameter) | Invalid parameter. Possible causes: The blob is empty or has a length of 0. |
 
 ## setProperties
 
@@ -196,9 +194,9 @@ setBlob(blob: ArrayBuffer): Promise<void>
 setProperties(records: Record<string, string | null>): Promise<void>
 ```
 
-批量设置图片元数据中的指定属性的值。使用Promise异步回调。
+Sets the values of specified properties in image metadata in batches. This API returns the result asynchronously through a promise.
 
-要查询的属性的具体信息请参考[PropertyKey](arkts-image-image-propertykey-e.md)。
+For details about the properties, see [PropertyKey](arkts-image-image-propertykey-e.md).
 
 **Since:** 23
 
@@ -214,19 +212,19 @@ setProperties(records: Record<string, string | null>): Promise<void>
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| records | [Record](../../apis-default/arkts-apis/arkts-record-t.md)&lt;string, string \| null&gt; | Yes | 包含要修改的MakerNoteHuaweiMetadata对象属性键值对的数组。 |
+| records | [Record](../../apis-default/arkts-apis/arkts-record-t.md)&lt;string, string \| null&gt; | Yes | Array containing key-value pairs representing properties and their corresponding values of the **MakerNoteHuaweiMetadata** object to be modified. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise对象，无返回结果。 |
+| Promise&lt;void&gt; | Promise that returns no value. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 7600202 | Unsupported metadata. Possible causes: unsupported metadata type. |
+| [7600202](../errorcode-image.md#7600202-unsupported-metadata-readwrite-operation) | Unsupported metadata. Possible causes: unsupported metadata type. |
 
 ## burstNumber
 
@@ -234,7 +232,7 @@ setProperties(records: Record<string, string | null>): Promise<void>
 burstNumber?: int
 ```
 
-连拍数量。
+Number of burst shots.The value range is all integers.
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
@@ -254,7 +252,7 @@ burstNumber?: int
 captureMode?: int
 ```
 
-捕获模式。
+Capture mode.The value range is all integers.
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
@@ -274,7 +272,7 @@ captureMode?: int
 cloudLabel?: string
 ```
 
-云增强标签。
+Cloud enhancement label.
 
 **Type:** string
 
@@ -294,7 +292,7 @@ cloudLabel?: string
 faceConfidences?: int[]
 ```
 
-对指定数量的面孔置信度。
+Confidences of a specified number of faces.
 
 **Type:** ArkTS-Dyn: number[]  <br>ArkTS-Sta：int[]
 
@@ -314,7 +312,7 @@ faceConfidences?: int[]
 faceCount?: int
 ```
 
-人脸数。
+Number of faces.The value range is all integers.
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
@@ -334,7 +332,7 @@ faceCount?: int
 faceSmileScores?: int[]
 ```
 
-特定数量面孔的微笑得分。
+Smile scores of a specified number of faces.
 
 **Type:** ArkTS-Dyn: number[]  <br>ArkTS-Sta：int[]
 
@@ -354,7 +352,7 @@ faceSmileScores?: int[]
 focusMode?: FocusMode
 ```
 
-镜头对焦控制策略，决定相机如何调整焦距。
+Lens focus control policy, which determines how the camera adjusts the focal length.
 
 **Type:** [FocusMode](../../apis-camera-kit/arkts-apis/arkts-camera-camera-focusmode-e.md)
 
@@ -374,7 +372,7 @@ focusMode?: FocusMode
 isCloudEnhanced?: boolean
 ```
 
-图像是否存在云端增强。true表示存在，false表示不存在。
+Whether the image has been cloud-enhanced. **true** indicates yes; **false** indicates no.
 
 **Type:** boolean
 
@@ -394,7 +392,7 @@ isCloudEnhanced?: boolean
 isFrontCamera?: boolean
 ```
 
-是否使用前置摄像头。true表示使用，false表示不使用。
+Whether to use the front camera. **true** indicates yes; **false** indicates no.
 
 **Type:** boolean
 
@@ -414,9 +412,7 @@ isFrontCamera?: boolean
 isWindSnapshot?: boolean
 ```
 
-是否采用风快照模式拍摄。true表示采用，false表示不采用。
-
-该模式是针对拍摄快速移动物体或容易产生模糊场景（如大风中、抓拍运动物体）的专门摄影。
+Whether the wind snapshot mode is used. **true** indicates yes; **false** indicates no.This mode is a specialized photography mode designed for capturing fast-moving subjects or scenes prone to blurring, such as in windy conditions or when photographing moving objects.
 
 **Type:** boolean
 
@@ -436,7 +432,7 @@ isWindSnapshot?: boolean
 isXmageSupported?: boolean
 ```
 
-是否支持XMAGE。true表示支持，false表示不支持。
+Whether XMAGE is supported. **true** indicates yes; **false** indicates no.
 
 **Type:** boolean
 
@@ -456,7 +452,7 @@ isXmageSupported?: boolean
 physicalAperture?: int
 ```
 
-物理光圈值。单位是fNumber。
+Physical aperture, in fNumber.The value range is all integers.
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
@@ -476,7 +472,7 @@ physicalAperture?: int
 pitchAngle?: int
 ```
 
-俯仰角度。
+Pitch angle.The value range is all integers.
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
@@ -496,7 +492,7 @@ pitchAngle?: int
 rollAngle?: int
 ```
 
-左右滚动角度。
+Horizontal pan angle.The value range is all integers.
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
@@ -516,7 +512,7 @@ rollAngle?: int
 sceneBeachConfidence?: int
 ```
 
-拍摄场景：海滩置信度。
+Capture scene: beach confidence.The value range is all integers.
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
@@ -536,7 +532,7 @@ sceneBeachConfidence?: int
 sceneBlueSkyConfidence?: int
 ```
 
-拍摄场景：蓝天置信度。
+Capture scene: blue sky confidence.The value range is all integers.
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
@@ -556,7 +552,7 @@ sceneBlueSkyConfidence?: int
 sceneFlowersConfidence?: int
 ```
 
-拍摄场景：花卉置信度。
+Capture scene: flower confidence.The value range is all integers.
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
@@ -576,7 +572,7 @@ sceneFlowersConfidence?: int
 sceneFoodConfidence?: int
 ```
 
-拍摄场景：美食置信度。
+Capture scene: food confidence.The value range is all integers.
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
@@ -596,7 +592,7 @@ sceneFoodConfidence?: int
 sceneGreenPlantConfidence?: int
 ```
 
-拍摄场景：绿色植物置信度。
+Capture scene: green plant confidence.The value range is all integers.
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
@@ -616,7 +612,7 @@ sceneGreenPlantConfidence?: int
 sceneNightConfidence?: int
 ```
 
-拍摄场景：夜景置信度。
+Capture scene: night scene confidence.The value range is all integers.
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
@@ -636,7 +632,7 @@ sceneNightConfidence?: int
 sceneSnowConfidence?: int
 ```
 
-拍摄场景：雪景置信度。
+Capture scene: snow confidence.The value range is all integers.
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
@@ -656,7 +652,7 @@ sceneSnowConfidence?: int
 sceneStageConfidence?: int
 ```
 
-拍摄场景：舞台演出置信度。
+Capture scene: stage performance confidence.The value range is all integers.
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
@@ -676,7 +672,7 @@ sceneStageConfidence?: int
 sceneSunsetConfidence?: int
 ```
 
-拍摄场景：日落置信度。
+Capture scene: sunset confidence.The value range is all integers.
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
@@ -696,7 +692,7 @@ sceneSunsetConfidence?: int
 sceneTextConfidence?: int
 ```
 
-拍摄场景：文本置信度。
+Capture scene: text confidence.The value range is all integers.
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
@@ -716,7 +712,7 @@ sceneTextConfidence?: int
 sceneVersion?: int
 ```
 
-场景识别算法版本号。
+Version number of the scene recognition algorithm.The value range is all integers.
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
@@ -736,7 +732,7 @@ sceneVersion?: int
 xmageBottom?: int
 ```
 
-当照片包含XMAGE水印时，原始图片上，有效内容区域（不含水印覆盖范围）的下边界（相对于图片左上角原点）的垂直坐标。单位为像素（px）。
+Vertical coordinate of the bottom boundary of the effective content area (excluding the watermark coverage area)on the original image, relative to the top-left origin of the image. The unit is px.The value range is all integers.
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
@@ -756,7 +752,7 @@ xmageBottom?: int
 xmageColorMode?: XmageColorMode
 ```
 
-XMAGE颜色模式。
+XMAGE color mode.
 
 **Type:** [XmageColorMode](arkts-image-image-xmagecolormode-e.md)
 
@@ -776,7 +772,7 @@ XMAGE颜色模式。
 xmageLeft?: int
 ```
 
-当照片包含XMAGE水印时，原始图片上，有效内容区域（不含水印覆盖范围）的左边界（相对于图片左上角原点）的水平坐标。单位为像素（px）。
+Horizontal coordinate of the left boundary of the effective content area (excluding the watermark coverage area)on the original image, relative to the top-left origin of the image. The unit is px.The value range is all integers.
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
@@ -796,7 +792,7 @@ xmageLeft?: int
 xmageRight?: int
 ```
 
-当照片包含XMAGE水印时，原始图片上，有效内容区域（不含水印覆盖范围）的右边界（相对于图片左上角原点）的水平坐标。单位为像素（px）。
+Horizontal coordinate of the right boundary of the effective content area (excluding the watermark coverage area)on the original image, relative to the top-left origin of the image. The unit is px.The value range is all integers.
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
@@ -816,7 +812,7 @@ xmageRight?: int
 xmageTop?: int
 ```
 
-当照片包含XMAGE水印时，原始图片上，有效内容区域（不含水印覆盖范围）的上边界（相对于图片左上角原点）的垂直坐标。单位为像素（px）。
+Vertical coordinate of the top boundary of the effective content area (excluding the watermark coverage area) on the original image, relative to the top-left origin of the image. The unit is px.The value range is all integers.
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
@@ -836,7 +832,7 @@ xmageTop?: int
 xmageWatermarkMode?: int
 ```
 
-XMAGE水印模式。具体取值请参考[Constants](arkts-multimedia-image.md)。
+XMAGE watermark mode. For details, see [Constants](@ohos.multimedia.image:image.Constants).The value range is all integers.
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 

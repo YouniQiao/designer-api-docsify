@@ -11,12 +11,6 @@
 
 **系统能力：** SystemCapability.BundleManager.BundleFramework.Launcher
 
-## 导入模块
-
-```TypeScript
-import { launcherBundleManager } from 'kits/@kit.AbilityKit';
-```
-
 ## 汇总
 
 ### 函数

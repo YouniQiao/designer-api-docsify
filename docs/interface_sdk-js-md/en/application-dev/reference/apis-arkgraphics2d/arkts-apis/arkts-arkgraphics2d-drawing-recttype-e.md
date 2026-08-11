@@ -1,6 +1,7 @@
 # RectType
 
-定义填充网格的矩形类型的枚举，用于在图像分割绘制时指定各个矩形区域的填充方式。仅在[Lattice](arkts-arkgraphics2d-drawing-lattice-c.md)中使用。
+Enumerates the types of rectangles used to fill the lattices. Used only in  
+[Lattice](arkts-graphics-drawing.md).
 
 **Since:** 12
 
@@ -16,7 +17,7 @@
 DEFAULT = 0
 ```
 
-将图像绘制到矩形网格中。
+Draws an image into the lattice.
 
 **Since:** 12
 
@@ -32,7 +33,7 @@ DEFAULT = 0
 TRANSPARENT = 1
 ```
 
-将矩形网格设置为透明的。
+Sets the lattice to transparent.
 
 **Since:** 12
 
@@ -48,7 +49,7 @@ TRANSPARENT = 1
 FIXEDCOLOR = 2
 ```
 
-将[Lattice](arkts-arkgraphics2d-drawing-lattice-c.md)中fColors数组的颜色绘制到矩形网格中。
+Draws the colors in the **fColors** array in [Lattice](arkts-graphics-drawing.md) into a lattice.
 
 **Since:** 12
 

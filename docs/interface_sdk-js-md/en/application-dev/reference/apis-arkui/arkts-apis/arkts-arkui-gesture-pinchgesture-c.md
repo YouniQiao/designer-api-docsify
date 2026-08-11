@@ -1,10 +1,6 @@
 # PinchGesture
 
-用于触发捏合手势，最少需要2指，最多5指，最小识别距离为5vp。在支持鼠标和键盘输入的设备上，通过“Ctrl+鼠标滚轮”也可以触发捏合手势。
-
-> **说明：**
-> 
-> 捏合手势触发成功后，抬起手指直至不再满足触发条件。再次满足条件时，可重新触发捏合手势。
+Defines PinchGesture.
 
 **Inheritance/Implementation:** PinchGesture extends [Gesture](arkts-arkui-gesture-gesture-c.md)
 
@@ -22,7 +18,7 @@
 static $_instantiate(factory: () => PinchGesture, value?: PinchGestureHandlerOptions): PinchGesture
 ```
 
-设置捏合手势事件。继承自[Gesture](arkts-arkui-gesture-gesture-c.md)。
+Set the value.
 
 **Since:** 23
 
@@ -39,7 +35,7 @@ static $_instantiate(factory: () => PinchGesture, value?: PinchGestureHandlerOpt
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | factory | () =&gt; PinchGesture | Yes |  |
-| value | [PinchGestureHandlerOptions](arkts-arkui-gesture-pinchgesturehandleroptions-i.md) | No | 捏合手势处理器配置参数。 |
+| value | [PinchGestureHandlerOptions](arkts-arkui-gesture-pinchgesturehandleroptions-i.md) | No |  |
 
 **Return value:**
 
@@ -53,7 +49,7 @@ static $_instantiate(factory: () => PinchGesture, value?: PinchGestureHandlerOpt
 onActionCancel(event: Callback<GestureEvent>): this
 ```
 
-Pinch手势识别成功并接收到触摸取消事件的回调。与[onActionCancel](arkts-arkui-gesture-pinchgesture-c.md#onactioncancel)相比，该回调返回手势事件信息。
+The Pinch gesture is successfully recognized and a callback is triggered when the touch cancel event is received.
 
 **Since:** 23
 
@@ -69,7 +65,7 @@ Pinch手势识别成功并接收到触摸取消事件的回调。与[onActionCan
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| event | [Callback](../arkts-components/arkts-arkui-callback-i.md)&lt;GestureEvent&gt; | Yes | 手势事件回调函数。 |
+| event | [Callback](../arkts-components/arkts-arkui-callback-i.md)&lt;GestureEvent&gt; | Yes |  |
 
 **Return value:**
 
@@ -83,7 +79,7 @@ Pinch手势识别成功并接收到触摸取消事件的回调。与[onActionCan
 onActionEnd(event: Callback<GestureEvent>): this
 ```
 
-Pinch手势识别成功，当抬起最后一根满足手势触发条件的手指后，触发回调。
+The Pinch gesture is successfully recognized. When the finger is lifted, the callback is triggered.
 
 **Since:** 23
 
@@ -99,7 +95,7 @@ Pinch手势识别成功，当抬起最后一根满足手势触发条件的手指
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| event | [Callback](../arkts-components/arkts-arkui-callback-i.md)&lt;GestureEvent&gt; | Yes | 手势事件回调函数。 |
+| event | [Callback](../arkts-components/arkts-arkui-callback-i.md)&lt;GestureEvent&gt; | Yes |  |
 
 **Return value:**
 
@@ -113,7 +109,7 @@ Pinch手势识别成功，当抬起最后一根满足手势触发条件的手指
 onActionStart(event: Callback<GestureEvent>): this
 ```
 
-Pinch手势识别成功后触发回调。
+Pinch gesture recognition success callback.
 
 **Since:** 23
 
@@ -129,7 +125,7 @@ Pinch手势识别成功后触发回调。
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| event | [Callback](../arkts-components/arkts-arkui-callback-i.md)&lt;GestureEvent&gt; | Yes | 手势事件回调函数。 |
+| event | [Callback](../arkts-components/arkts-arkui-callback-i.md)&lt;GestureEvent&gt; | Yes |  |
 
 **Return value:**
 
@@ -143,7 +139,7 @@ Pinch手势识别成功后触发回调。
 onActionUpdate(event: Callback<GestureEvent>): this
 ```
 
-Pinch手势移动过程中回调。
+Callback when the Pinch gesture is moving.
 
 **Since:** 23
 
@@ -159,7 +155,7 @@ Pinch手势移动过程中回调。
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| event | [Callback](../arkts-components/arkts-arkui-callback-i.md)&lt;GestureEvent&gt; | Yes | 手势事件回调函数。 |
+| event | [Callback](../arkts-components/arkts-arkui-callback-i.md)&lt;GestureEvent&gt; | Yes |  |
 
 **Return value:**
 

@@ -1,7 +1,8 @@
 # DataShareHelper
 
-DataShare管理工具实例，可使用此实例访问或管理服务端的数据。在调用DataShareHelper提供的方法前，需要先通过  
-[createDataShareHelper](arkts-arkdata-datashare-createdatasharehelper-f.md#createdatasharehelper)构建一个实例。
+Provides a **DataShareHelper** instance to access or manage data on the server. Before calling an API provided by  
+**DataShareHelper**, you must create a **DataShareHelper** instance using  
+[createDataShareHelper](arkts-arkdata-datashare-createdatasharehelper-f.md#createdatasharehelper).
 
 **Since:** 9
 
@@ -23,9 +24,9 @@ import { dataShare } from 'kits/@kit.ArkData';
 addTemplate(uri: string, subscriberId: string, template: Template): void
 ```
 
-添加一个指定订阅者的数据模板。仅支持静默访问。
+Adds a data template with the specified subscriber. Only silent access is supported.
 
-静默场景下，调用此接口时，传入的uri、subscriberId和template参数的总大小不能超过200KB，超出限制将导致操作失败或抛出异常。
+In silent scenarios, the total size of the **uri**, **subscriberId**, and **template** parameters passed in this API cannot exceed 200 KB. If the size exceeds the limit, the operation fails or an exception is thrown.
 
 **Since:** 10
 
@@ -41,18 +42,18 @@ addTemplate(uri: string, subscriberId: string, template: Template): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| uri | string | Yes | 要插入的数据的路径。 |
-| subscriberId | string | Yes | 要添加模板的订阅者ID，每个订阅者的ID是唯一的。 |
-| template | [Template](arkts-arkdata-datashare-template-i.md) | Yes | 要添加的数据模板。 |
+| uri | string | Yes | URI of the data to add. |
+| subscriberId | string | Yes | Unique ID of the template subscriber. |
+| template | [Template](arkts-arkdata-datashare-template-i.md) | Yes | Data template to add. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error.Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameters types. |
-| 15700013 | The DataShareHelper instance is already closed.<br>**Applicable version:** 12 and later |
-| 15700011 | The URI is not exist. |
-| 202 | Permission verification failed. A non-system application calls a system API.<br>**Applicable version:** 12 and later |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error.Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameters types. |
+| [15700013](../errorcode-datashare.md#15700013-datasharehelper-instance-closed) | The DataShareHelper instance is already closed.<br>**Applicable version:** 12 and later |
+| [15700011](../errorcode-datashare.md#15700011-uri-not-exist) | The URI is not exist. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API.<br>**Applicable version:** 12 and later |
 
 ## Examples
 
@@ -88,9 +89,9 @@ ArkTS-Sta:
 batchInsert(uri: string, values: Array<ValuesBucket>, callback: AsyncCallback<int>): void
 ```
 
-将批量数据插入数据库。使用callback异步回调。暂不支持静默访问。
+Batch inserts data into the database. This API uses an asynchronous callback to return the result. Silent access is not supported currently.
 
-非静默场景下，调用此接口时，传入的values参数的大小不能超过128MB，传入的uri参数大小不能超过900KB，超出限制将导致操作失败或抛出异常。
+In non-silent scenarios, the size of the **values** parameter and the **uri** parameter passed in this API cannot exceed 128 MB and 900 KB, respectively. Otherwise, the operation fails or an exception is thrown.
 
 **Since:** 9
 
@@ -106,17 +107,17 @@ batchInsert(uri: string, values: Array<ValuesBucket>, callback: AsyncCallback<in
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| uri | string | Yes | 要插入的数据的路径。 |
-| values | Array&lt;[ValuesBucket](arkts-arkdata-valuesbucket-t.md)&gt; | Yes | 要插入的数据。 |
-| callback | ArkTS-Dyn: [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;number&gt;  <br>ArkTS-Sta：[AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;int&gt; | Yes | 回调函数。当将批量数据插入数据库成功，err为undefined，data为获取到的插入的数据记录数；否则为错误对象。&lt;br /&gt;因部分数据库（ 如KVDB）的相应接口并不提供相应支持，故若服务端使用此数据库，则此Promise也无法返回插入的数据记录数。 |
+| uri | string | Yes | URI of the data to insert. |
+| values | Array&lt;[ValuesBucket](arkts-arkdata-valuesbucket-t.md)&gt; | Yes | Data to insert. |
+| callback | ArkTS-Dyn: [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;number&gt;  <br>ArkTS-Sta：[AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;int&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined** and **data** is the number of data records inserted. Otherwise, **err** is an error object.The number of inserted data records is not returned if the APIs of the database in use (for example, KVDB) do not support this return. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error.Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameters types. |
-| 15700013 | The DataShareHelper instance is already closed.<br>**Applicable version:** 12 and later |
-| 202 | Permission verification failed. A non-system application calls a system API.<br>**Applicable version:** 12 and later |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error.Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameters types. |
+| [15700013](../errorcode-datashare.md#15700013-datasharehelper-instance-closed) | The DataShareHelper instance is already closed.<br>**Applicable version:** 12 and later |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API.<br>**Applicable version:** 12 and later |
 
 ## Examples
 
@@ -133,7 +134,7 @@ try {
   if (dataShareHelper != undefined) {
     (dataShareHelper as dataShare.DataShareHelper).batchInsert(uri, vbs, (err, data) => {
       if (err !== undefined) {
-        console.error(`Failed to batch insert. Code: ${err.code}, message: ${err.message}`);
+        console.error(`batchInsert error: code: ${err.code}, message: ${err.message} `);
         return;
       }
       console.info("batchInsert succeed, data : " + data);
@@ -142,8 +143,8 @@ try {
 } catch (err) {
   let code = (err as BusinessError).code;
   let message = (err as BusinessError).message;
-  console.error(`Failed to batch insert. Code: ${code}, message: ${message}`);
-}
+  console.error(`batchInsert error: code: ${code}, message: ${message} `);
+};
 ```
 
 ## batchInsert
@@ -158,9 +159,9 @@ ArkTS-Sta:
 batchInsert(uri: string, values: Array<ValuesBucket>): Promise<int>
 ```
 
-将批量数据插入数据库。使用Promise异步回调。暂不支持静默访问。
+Batch inserts data into the database. This API uses a promise to return the result. Silent access is not supported currently.
 
-非静默场景下，调用此接口时，传入的values参数的大小不能超过128MB，传入的uri参数大小不能超过900KB，超出限制将导致操作失败或抛出异常。
+In non-silent scenarios, the size of the **values** parameter and the **uri** parameter passed in this API cannot exceed 128 MB and 900 KB, respectively. Otherwise, the operation fails or an exception is thrown.
 
 **Since:** 9
 
@@ -176,22 +177,22 @@ batchInsert(uri: string, values: Array<ValuesBucket>): Promise<int>
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| uri | string | Yes | 要插入的数据的路径。 |
-| values | Array&lt;[ValuesBucket](arkts-arkdata-valuesbucket-t.md)&gt; | Yes | 要插入的数据。 |
+| uri | string | Yes | URI of the data to insert. |
+| values | Array&lt;[ValuesBucket](arkts-arkdata-valuesbucket-t.md)&gt; | Yes | Data to insert. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| ArkTS-Dyn: Promise&lt;number&gt;  <br>ArkTS-Sta：Promise&lt;int&gt; | Promise对象。返回插入的数据记录数。&lt;br /&gt;因部分数据库（如KVDB）的相应接口并不提供相应支持，故若服务端使用此数据库，则此Promise也无法返回插入的数据记录 数。 |
+| ArkTS-Dyn: Promise&lt;number&gt;  <br>ArkTS-Sta：Promise&lt;int&gt; | Promise used to return the number of data records inserted. The number of inserted data records is not returned if the APIs of the database in use (for example, KVDB) do not support this return. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error.Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameters types. |
-| 15700013 | The DataShareHelper instance is already closed.<br>**Applicable version:** 12 and later |
-| 202 | Permission verification failed. A non-system application calls a system API.<br>**Applicable version:** 12 and later |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error.Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameters types. |
+| [15700013](../errorcode-datashare.md#15700013-datasharehelper-instance-closed) | The DataShareHelper instance is already closed.<br>**Applicable version:** 12 and later |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API.<br>**Applicable version:** 12 and later |
 
 ## Examples
 
@@ -209,14 +210,14 @@ try {
     (dataShareHelper as dataShare.DataShareHelper).batchInsert(uri, vbs).then((data: number) => {
       console.info("batchInsert succeed, data : " + data);
     }).catch((err: BusinessError) => {
-      console.error(`Failed to batch insert. Code: ${err.code}, message: ${err.message}`);
+      console.error(`batchInsert error: code: ${err.code}, message: ${err.message} `);
     });
   }
 } catch (err) {
   let code = (err as BusinessError).code;
   let message = (err as BusinessError).message;
-  console.error(`Failed to batch insert. Code: ${code}, message: ${message}`);
-}
+  console.error(`batchInsert error: code: ${code}, message: ${message} `);
+};
 ```
 
 ## batchUpdate
@@ -231,9 +232,9 @@ ArkTS-Sta:
 batchUpdate(operations: Record<string, Array<UpdateOperation>>): Promise<Record<string, Array<int>>>
 ```
 
-批量更新数据库中的数据记录，所有操作的总数(即operations对象的键值对)不得超过4000个，超出限制将导致更新失败；该接口的事务性取决于provider（数据提供方）。使用Promise异步回调。暂不支持静默访问。
+Batch updates data in the database. The total number of objects for operations (that is, KV pairs of the objects)cannot exceed 4000. If the number exceeds 4000, the update will fail. The transaction of this API depends on the data provider. This API uses a promise to return the result. Silent access is not supported currently.
 
-非静默场景下，调用此接口时，传入的operations参数的大小不能超过900KB，超出限制将导致操作失败或抛出异常。
+In non-silent scenarios, the size of the **operations** parameter passed in this API called cannot exceed 900 KB.Otherwise, the operation fails or an exception is thrown.
 
 **Since:** 12
 
@@ -249,7 +250,7 @@ batchUpdate(operations: Record<string, Array<UpdateOperation>>): Promise<Record<
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| operations | [Record](../../apis-default/arkts-apis/arkts-record-t.md)&lt;string, Array&lt;UpdateOperation&gt;&gt; | Yes | 要更新数据的路径、筛选条件和数据集合。 |
+| operations | [Record](../../apis-default/arkts-apis/arkts-record-t.md)&lt;string, Array&lt;UpdateOperation&gt;&gt; | Yes | Collection of the path of the data to update, update conditions, and new data. |
 
 **Return value:**
 
@@ -261,10 +262,10 @@ batchUpdate(operations: Record<string, Array<UpdateOperation>>): Promise<Record<
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error.Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameters types. |
-| 15700013 | The DataShareHelper instance is already closed. |
-| 202 | Permission verification failed. A non-system application calls a system API. |
-| 15700000 | Inner error. Possible causes: 1.The internal status is abnormal; 2.The interface is incorrectly used; 3.Permission configuration error; 4.A system error. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error.Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameters types. |
+| [15700013](../errorcode-datashare.md#15700013-datasharehelper-instance-closed) | The DataShareHelper instance is already closed. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
+| [15700000](../errorcode-datashare.md#15700000-internal-error) | Inner error. Possible causes: 1.The internal status is abnormal; 2.The interface is incorrectly used; 3.Permission configuration error; 4.A system error. |
 
 ## Examples
 
@@ -314,14 +315,14 @@ try {
         }
       }
     }).catch((err: BusinessError) => {
-      console.error(`Failed to batch update. Code: ${err.code}, message: ${err.message}`);
+      console.error(`Batch update error: code: ${err.code}, message: ${err.message} `);
     });
   }
 } catch (err) {
   let code = (err as BusinessError).code;
   let message = (err as BusinessError).message;
-  console.error(`Failed to batch update. Code: ${code}, message: ${message}`);
-}
+  console.error(`Batch update error: code: ${code}, message: ${message} `);
+};
 ```
 
 ## close
@@ -330,7 +331,7 @@ try {
 close(): Promise<void>
 ```
 
-关闭DataShareHelper实例，调用后该实例失效。使用Promise异步回调。
+Closes the **DataShareHelper** instance. After this API is called, the instance becomes invalid. This API uses a promise to return the result.
 
 **Since:** 12
 
@@ -346,14 +347,14 @@ close(): Promise<void>
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | 无返回结果的Promise对象。 |
+| Promise&lt;void&gt; | returns no value. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 202 | Permission verification failed. A non-system application calls a system API.<br>**Applicable version:** 19 and later |
-| 15700000 | Inner error. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API.<br>**Applicable version:** 19 and later |
+| [15700000](../errorcode-datashare.md#15700000-internal-error) | Inner error. |
 
 ## Examples
 
@@ -369,9 +370,9 @@ if (dataShareHelper != undefined) {
 delTemplate(uri: string, subscriberId: string): void
 ```
 
-删除一个指定订阅者的数据模板。仅支持静默访问。
+Deletes a data template based on the specified subscriber. Only silent access is supported.
 
-静默场景下，调用此接口时，传入的uri和subscriberId参数的总大小不能超过200KB，超出限制将导致操作失败或抛出异常。
+In silent scenarios, the total size of the **uri** and **subscriberId** parameters passed in this API cannot exceed 200 KB. Otherwise, the operation fails or an exception is thrown.
 
 **Since:** 10
 
@@ -387,17 +388,17 @@ delTemplate(uri: string, subscriberId: string): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| uri | string | Yes | 要删除的数据的路径。 |
-| subscriberId | string | Yes | 订阅者ID，每个订阅者的ID是唯一的。 |
+| uri | string | Yes | URI of the data to delete. |
+| subscriberId | string | Yes | Unique ID of the subscriber. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error.Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameters types. |
-| 15700013 | The DataShareHelper instance is already closed.<br>**Applicable version:** 12 and later |
-| 15700011 | The URI is not exist. |
-| 202 | Permission verification failed. A non-system application calls a system API.<br>**Applicable version:** 12 and later |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error.Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameters types. |
+| [15700013](../errorcode-datashare.md#15700013-datasharehelper-instance-closed) | The DataShareHelper instance is already closed.<br>**Applicable version:** 12 and later |
+| [15700011](../errorcode-datashare.md#15700011-uri-not-exist) | The URI is not exist. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API.<br>**Applicable version:** 12 and later |
 
 ## Examples
 
@@ -433,11 +434,11 @@ ArkTS-Sta:
 delete(uri: string, predicates: dataSharePredicates.DataSharePredicates, callback: AsyncCallback<int>): void
 ```
 
-从数据库中删除一条或多条数据记录。使用callback异步回调。
+Deletes one or more data records from the database. This API uses an asynchronous callback to return the result.
 
-非静默场景下，调用此接口时，传入的uri和predicates参数的总大小不能超过900KB，超出限制将导致操作失败或抛出异常。
+In non-silent scenarios, the total size of the **uri** and **predicates** parameters passed in this API cannot exceed 900 KB. Otherwise, the operation fails or an exception is thrown.
 
-静默场景下，调用此接口时，传入的uri和predicates参数的总大小不能超过200KB，超出限制将导致操作失败或抛出异常。
+In silent scenarios, the total size of the **uri** and **predicates** parameters passed in this API cannot exceed200 KB. Otherwise, the operation fails or an exception is thrown.
 
 **Since:** 9
 
@@ -453,17 +454,17 @@ delete(uri: string, predicates: dataSharePredicates.DataSharePredicates, callbac
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| uri | string | Yes | 要删除的数据的路径。 |
-| predicates | dataSharePredicates.DataSharePredicates | Yes | 筛选条件。&lt;br /&gt;delete接口所支持的谓词方法取决于服务端所选用的数据库，如KVDB的删除 目前仅支持inKeys谓词。静默场景下谓词内方法为空时，默认全表删除。非静默场景下规格由数据提供方制定。 |
-| callback | ArkTS-Dyn: [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;number&gt;  <br>ArkTS-Sta：[AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;int&gt; | Yes | 回调函数。当从数据库中删除一条或多条数据记录成功，err为undefined，data为获取到的已删除的数据记录数；否则为错误对象。&lt;br /&gt; 因部分数据库（如KVDB）的相应接口并不提供相应支持，故若服务端使用此数据库，则此callback也无法返回删除的数据记录数。 |
+| uri | string | Yes | URI of the data to delete. |
+| predicates | dataSharePredicates.DataSharePredicates | Yes | Conditions for deleting data.The predicate methods supported by **delete()** vary depending on the database in use. For example, the KVDB supports only **inKeys**. If this parameter is left empty, the entire table will be deleted by default. |
+| callback | ArkTS-Dyn: [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;number&gt;  <br>ArkTS-Sta：[AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;int&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined** and **data** is the number of deleted data records. Otherwise, **err** is an error object.The number of deleted data records is not returned if the APIs of the database in use (for example , KVDB) do not support this return. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error.Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameters types. |
-| 15700013 | The DataShareHelper instance is already closed.<br>**Applicable version:** 12 and later |
-| 202 | Permission verification failed. A non-system application calls a system API.<br>**Applicable version:** 12 and later |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error.Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameters types. |
+| [15700013](../errorcode-datashare.md#15700013-datasharehelper-instance-closed) | The DataShareHelper instance is already closed.<br>**Applicable version:** 12 and later |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API.<br>**Applicable version:** 12 and later |
 
 ## Examples
 
@@ -478,7 +479,7 @@ try {
   if (dataShareHelper != undefined) {
     (dataShareHelper as dataShare.DataShareHelper).delete(uri, da, (err: BusinessError, data: number) => {
       if (err !== undefined) {
-        console.error(`Failed to delete. Code: ${err.code}, message: ${err.message}`);
+        console.error(`delete error: code: ${err.code}, message: ${err.message} `);
         return;
       }
       console.info("delete succeed, data : " + data);
@@ -487,8 +488,8 @@ try {
 } catch (err) {
   let code = (err as BusinessError).code;
   let message = (err as BusinessError).message;
-  console.error(`Failed to delete. Code: ${code}, message: ${message}`);
-}
+  console.error(`delete error: code: ${code}, message: ${message} `);
+};
 ```
 
 ## delete
@@ -503,11 +504,11 @@ ArkTS-Sta:
 delete(uri: string, predicates: dataSharePredicates.DataSharePredicates): Promise<int>
 ```
 
-从数据库中删除一条或多条数据记录。使用Promise异步回调。
+Deletes one or more data records from the database. This API uses a promise to return the result.
 
-非静默场景下，调用此接口时，传入的uri和predicates参数的总大小不能超过900KB，超出限制将导致操作失败或抛出异常。
+In non-silent scenarios, the total size of the **uri** and **predicates** parameters passed in this API cannot exceed 900 KB. Otherwise, the operation fails or an exception is thrown.
 
-静默场景下，调用此接口时，传入的uri和predicates参数的总大小不能超过200KB，超出限制将导致操作失败或抛出异常。
+In silent scenarios, the total size of the **uri** and **predicates** parameters passed in this API cannot exceed200 KB. Otherwise, the operation fails or an exception is thrown.
 
 **Since:** 9
 
@@ -523,22 +524,22 @@ delete(uri: string, predicates: dataSharePredicates.DataSharePredicates): Promis
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| uri | string | Yes | 要删除的数据的路径。 |
-| predicates | dataSharePredicates.DataSharePredicates | Yes | 筛选条件。&lt;br /&gt;delete接口所支持的谓词方法取决于服务端所选用的数据库，如KVDB的删除 目前仅支持inKeys谓词。静默场景下谓词内方法为空时，默认全表删除。非静默场景下规格由数据提供方制定。 |
+| uri | string | Yes | URI of the data to delete. |
+| predicates | dataSharePredicates.DataSharePredicates | Yes | Conditions for deleting data.The predicate methods supported by **delete()** vary depending on the database in use. For example, the KVDB supports only **inKeys**. If this parameter is left empty, the entire table will be deleted by default. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| ArkTS-Dyn: Promise&lt;number&gt;  <br>ArkTS-Sta：Promise&lt;int&gt; | Promise对象。返回已删除的数据记录数。&lt;br /&gt;因部分数据库（如KVDB）的相应接口并不提供相应支持，故若服务端使用此数据库，则此Promise也无法返回删除的数据记 录数。 |
+| ArkTS-Dyn: Promise&lt;number&gt;  <br>ArkTS-Sta：Promise&lt;int&gt; | Promise used to return the number of deleted data records. The number of deleted data records is not returned if the APIs of the database in use (for example, KVDB) do not support this return. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error.Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameters types. |
-| 15700013 | The DataShareHelper instance is already closed.<br>**Applicable version:** 12 and later |
-| 202 | Permission verification failed. A non-system application calls a system API.<br>**Applicable version:** 12 and later |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error.Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameters types. |
+| [15700013](../errorcode-datashare.md#15700013-datasharehelper-instance-closed) | The DataShareHelper instance is already closed.<br>**Applicable version:** 12 and later |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API.<br>**Applicable version:** 12 and later |
 
 ## Examples
 
@@ -554,14 +555,14 @@ try {
     (dataShareHelper as dataShare.DataShareHelper).delete(uri, da).then((data: number) => {
       console.info("delete succeed, data : " + data);
     }).catch((err: BusinessError) => {
-      console.error(`Failed to delete. Code: ${err.code}, message: ${err.message}`);
+      console.error(`delete error: code: ${err.code}, message: ${err.message} `);
     });
   }
 } catch (err) {
   let code = (err as BusinessError).code;
   let message = (err as BusinessError).message;
-  console.error(`Failed to delete. Code: ${code}, message: ${message}`);
-}
+  console.error(`delete error: code: ${code}, message: ${message} `);
+};
 ```
 
 ## denormalizeUri
@@ -570,7 +571,7 @@ try {
 denormalizeUri(uri: string, callback: AsyncCallback<string>): void
 ```
 
-将指定的URI转换为非规范化URI。使用callback异步回调。暂不支持静默访问。
+Denormalizes a URI. This API uses an asynchronous callback to return the result. Silent access is not supported currently.
 
 **Since:** 9
 
@@ -586,16 +587,16 @@ denormalizeUri(uri: string, callback: AsyncCallback<string>): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| uri | string | Yes | 要反规范化的[URI](../../apis-arkts/arkts-apis/arkts-arkts-uri-uri-c.md/arkts-arkts-uri-uri-c.md)。 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;string&gt; | Yes | 回调函数。当将指定的URI转换为非规范化URI，err为undefined，data为获取到的反规范化URI（如果反规范化成功，则返回反规 范化的URI；如果无需进行反规范化，则返回原始URI；若不支持则返回空）；否则为错误对象。 |
+| uri | string | Yes | [URI](../../apis-arkts/arkts-apis/arkts-arkts-uri-uri-c.md/arkts-arkts-uri-uri-c.md) to denormalize. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;string&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined** and **data** is the URI obtained. If the original URI is returned, denormalization is not required. If **null** is returned, denormalization is not supported. If the operation fails, **err** is an error object. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error.Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameters types.<br>**Applicable version:** 12 and later |
-| 15700013 | The DataShareHelper instance is already closed.<br>**Applicable version:** 12 and later |
-| 202 | Permission verification failed. A non-system application calls a system API.<br>**Applicable version:** 12 and later |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error.Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameters types.<br>**Applicable version:** 12 and later |
+| [15700013](../errorcode-datashare.md#15700013-datasharehelper-instance-closed) | The DataShareHelper instance is already closed.<br>**Applicable version:** 12 and later |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API.<br>**Applicable version:** 12 and later |
 
 ## Examples
 
@@ -606,7 +607,7 @@ let uri = "datashare:///com.samples.datasharetest.DataShare";
 if (dataShareHelper != undefined) {
   (dataShareHelper as dataShare.DataShareHelper).denormalizeUri(uri, (err: BusinessError, data: string) => {
     if (err !== undefined) {
-      console.error(`Failed to denormalize URI. Code: ${err.code}, message: ${err.message}`);
+      console.error("denormalizeUri failed, error message : " + err);
     } else {
       console.info("denormalizeUri = " + data);
     }
@@ -620,7 +621,7 @@ if (dataShareHelper != undefined) {
 denormalizeUri(uri: string): Promise<string>
 ```
 
-将指定的URI转换为非规范化URI。使用Promise异步回调。暂不支持静默访问。
+Denormalizes a URI. This API uses a promise to return the result. Silent access is not supported currently.
 
 **Since:** 9
 
@@ -636,21 +637,21 @@ denormalizeUri(uri: string): Promise<string>
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| uri | string | Yes | 要反规范化的[URI](../../apis-arkts/arkts-apis/arkts-arkts-uri-uri-c.md/arkts-arkts-uri-uri-c.md)。 |
+| uri | string | Yes | [URI](../../apis-arkts/arkts-apis/arkts-arkts-uri-uri-c.md/arkts-arkts-uri-uri-c.md) to denormalize. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;string&gt; | Promise对象。如果反规范化成功，则返回反规范化的URI；如果无需执行任何操作，则返回原始URI；若不支持则返回空。 |
+| Promise&lt;string&gt; | Promise used to return the result. If the denormalization is successful, the URI obtained is returned. If no operation is required, the original URI is returned. If denormalization is not supported, **null** is returned. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error.Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameters types.<br>**Applicable version:** 12 and later |
-| 15700013 | The DataShareHelper instance is already closed.<br>**Applicable version:** 12 and later |
-| 202 | Permission verification failed. A non-system application calls a system API.<br>**Applicable version:** 12 and later |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error.Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameters types.<br>**Applicable version:** 12 and later |
+| [15700013](../errorcode-datashare.md#15700013-datasharehelper-instance-closed) | The DataShareHelper instance is already closed.<br>**Applicable version:** 12 and later |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API.<br>**Applicable version:** 12 and later |
 
 ## Examples
 
@@ -662,7 +663,7 @@ if (dataShareHelper != undefined) {
   (dataShareHelper as dataShare.DataShareHelper).denormalizeUri(uri).then((data: string) => {
     console.info("denormalizeUri = " + data);
   }).catch((err: BusinessError) => {
-    console.error(`Failed to denormalize URI. Code: ${err.code}, message: ${err.message}`);
+    console.error("denormalizeUri failed, error message : " + err);
   });
 }
 ```
@@ -673,9 +674,9 @@ if (dataShareHelper != undefined) {
 getPublishedData(bundleName: string, callback: AsyncCallback<Array<PublishedItem>>): void
 ```
 
-获取给定的APP和模板指定的数据。仅支持静默访问。使用callback异步回调。
+Obtains the published data of an application. Only silent access is supported. This API uses an asynchronous callback to return the result.
 
-静默场景下，调用此接口时，传入的bundleName参数的大小不能超过200KB，超出限制将导致操作失败或抛出异常。
+In silent scenarios, the size of the **bundleName** parameter passed in this API cannot exceed 200 KB. Otherwise,the operation fails or an exception is thrown.
 
 **Since:** 10
 
@@ -691,17 +692,17 @@ getPublishedData(bundleName: string, callback: AsyncCallback<Array<PublishedItem
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| bundleName | string | Yes | 表示数据所属的APP。 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;PublishedItem&gt;&gt; | Yes | 回调函数，返回给定的APP和模板发布的数据。 |
+| bundleName | string | Yes | Application to which the data belongs. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;PublishedItem&gt;&gt; | Yes | Callback used to return the published data obtained. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error.Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameters types. |
-| 15700013 | The DataShareHelper instance is already closed.<br>**Applicable version:** 12 and later |
-| 15700012 | The data area does not exist. |
-| 202 | Permission verification failed. A non-system application calls a system API.<br>**Applicable version:** 12 and later |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error.Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameters types. |
+| [15700013](../errorcode-datashare.md#15700013-datasharehelper-instance-closed) | The DataShareHelper instance is already closed.<br>**Applicable version:** 12 and later |
+| [15700012](../errorcode-datashare.md#15700012-data-area-not-exist) | The data area does not exist. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API.<br>**Applicable version:** 12 and later |
 
 ## Examples
 
@@ -722,9 +723,9 @@ if (dataShareHelper != undefined) {
 getPublishedData(bundleName: string): Promise<Array<PublishedItem>>
 ```
 
-获取给定的APP和模板指定的数据。仅支持静默访问。使用Promise异步回调。
+Obtains the published data of an application. Only silent access is supported. This API uses a promise to return the result.
 
-静默场景下，调用此接口时，传入的bundleName参数的大小不能超过200KB，超出限制将导致操作失败或抛出异常。
+In silent scenarios, the size of the **bundleName** parameter passed in this API cannot exceed 200 KB. Otherwise,the operation fails or an exception is thrown.
 
 **Since:** 10
 
@@ -740,22 +741,22 @@ getPublishedData(bundleName: string): Promise<Array<PublishedItem>>
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| bundleName | string | Yes | 表示数据所属的APP。 |
+| bundleName | string | Yes | Application to which the data belongs. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;Array&lt;PublishedItem&gt;&gt; | Promise对象，返回给定的APP和模板发布的数据。 |
+| Promise&lt;Array&lt;PublishedItem&gt;&gt; | Promise used to return the published data obtained. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error.Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameters types. |
-| 15700013 | The DataShareHelper instance is already closed.<br>**Applicable version:** 12 and later |
-| 15700012 | The data area does not exist. |
-| 202 | Permission verification failed. A non-system application calls a system API.<br>**Applicable version:** 12 and later |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error.Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameters types. |
+| [15700013](../errorcode-datashare.md#15700013-datasharehelper-instance-closed) | The DataShareHelper instance is already closed.<br>**Applicable version:** 12 and later |
+| [15700012](../errorcode-datashare.md#15700012-data-area-not-exist) | The data area does not exist. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API.<br>**Applicable version:** 12 and later |
 
 ## Examples
 
@@ -777,11 +778,11 @@ ArkTS-Sta:
 insert(uri: string, value: ValuesBucket, callback: AsyncCallback<int>): void
 ```
 
-将单条数据插入数据库。使用callback异步回调。
+Inserts a single data record into the database. This API uses an asynchronous callback to return the result.
 
-非静默场景下，调用此接口时，传入的uri和value参数的总大小不能超过900KB，超出限制将导致操作失败或抛出异常。
+In non-silent scenarios, the total size of the **uri** and **value** parameters passed in this API cannot exceed900 KB. Otherwise, the operation fails or an exception is thrown.
 
-静默场景下，调用此接口时，传入的uri和value参数的总大小不能超过200KB，超出限制将导致操作失败或抛出异常。
+In silent scenarios, the total size of the **uri** and **value** parameters passed in this API cannot exceed 200KB. Otherwise, the operation fails or an exception is thrown.
 
 **Since:** 9
 
@@ -797,17 +798,17 @@ insert(uri: string, value: ValuesBucket, callback: AsyncCallback<int>): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| uri | string | Yes | 要插入的数据的路径。 |
-| value | [ValuesBucket](arkts-arkdata-valuesbucket-t.md) | Yes | 要插入的数据的值。 |
-| callback | ArkTS-Dyn: [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;number&gt;  <br>ArkTS-Sta：[AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;int&gt; | Yes | 回调函数。当将单条数据插入数据库成功，err为undefined，data为获取到的插入数据记录的索引；否则为错误对象。&lt;br /&gt;因部分数据库 （如KVDB）的相应接口并不支持返回索引，故若服务端使用了不支持索引的数据库，则此callback也无法返回索引值。 |
+| uri | string | Yes | URI of the data to insert. |
+| value | [ValuesBucket](arkts-arkdata-valuesbucket-t.md) | Yes | Value of the data to insert. |
+| callback | ArkTS-Dyn: [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;number&gt;  <br>ArkTS-Sta：[AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;int&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined** and **data** is the index of the inserted data record. Otherwise, **err** is an error object.The data index is not returned if the APIs of the database in use, for example, the key- value database (KVDB), do not support the return of indexes. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error.Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameters types. |
-| 15700013 | The DataShareHelper instance is already closed.<br>**Applicable version:** 12 and later |
-| 202 | Permission verification failed. A non-system application calls a system API.<br>**Applicable version:** 12 and later |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error.Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameters types. |
+| [15700013](../errorcode-datashare.md#15700013-datasharehelper-instance-closed) | The DataShareHelper instance is already closed.<br>**Applicable version:** 12 and later |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API.<br>**Applicable version:** 12 and later |
 
 ## Examples
 
@@ -831,7 +832,7 @@ try {
   if (dataShareHelper != undefined) {
     (dataShareHelper as dataShare.DataShareHelper).insert(uri, valueBucket, (err: BusinessError, data: number) => {
       if (err !== undefined) {
-        console.error(`Failed to insert. Code: ${err.code}, message: ${err.message}`);
+        console.error(`insert error: code: ${err.code}, message: ${err.message} `);
         return;
       }
       console.info("insert succeed, data : " + data);
@@ -840,8 +841,8 @@ try {
 } catch (err) {
   let code = (err as BusinessError).code;
   let message = (err as BusinessError).message;
-  console.error(`Failed to insert. Code: ${code}, message: ${message}`);
-}
+  console.error(`insert error: code: ${code}, message: ${message} `);
+};
 ```
 
 ## insert
@@ -856,11 +857,11 @@ ArkTS-Sta:
 insert(uri: string, value: ValuesBucket): Promise<int>
 ```
 
-将单条数据插入数据库。使用Promise异步回调。
+Inserts a single data record into the database. This API uses a promise to return the result.
 
-非静默场景下，调用此接口时，传入的uri和value参数的总大小不能超过900KB，超出限制将导致操作失败或抛出异常。
+In non-silent scenarios, the total size of the **uri** and **value** parameters passed in this API cannot exceed900 KB. Otherwise, the operation fails or an exception is thrown.
 
-静默场景下，调用此接口时，传入的uri和value参数的总大小不能超过200KB，超出限制将导致操作失败或抛出异常。
+In silent scenarios, the total size of the **uri** and **value** parameters passed in this API cannot exceed 200KB. Otherwise, the operation fails or an exception is thrown.
 
 **Since:** 9
 
@@ -876,22 +877,22 @@ insert(uri: string, value: ValuesBucket): Promise<int>
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| uri | string | Yes | 要插入的数据的路径。 |
-| value | [ValuesBucket](arkts-arkdata-valuesbucket-t.md) | Yes | 要插入的数据的值。 |
+| uri | string | Yes | URI of the data to insert. |
+| value | [ValuesBucket](arkts-arkdata-valuesbucket-t.md) | Yes | Value of the data to insert. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| ArkTS-Dyn: Promise&lt;number&gt;  <br>ArkTS-Sta：Promise&lt;int&gt; | Promise对象。返回插入数据记录的索引。&lt;br /&gt;因部分数据库（如KVDB）的相应接口并不支持返回索引，故若服务端使用了不支持索引的数据库，则此Promise也无法返回 索引值。 |
+| ArkTS-Dyn: Promise&lt;number&gt;  <br>ArkTS-Sta：Promise&lt;int&gt; | Promise used to return the index of the inserted data record. The data index is not returned if the APIs of the database in use (for example, KVDB) do not support this return. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error.Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameters types. |
-| 15700013 | The DataShareHelper instance is already closed.<br>**Applicable version:** 12 and later |
-| 202 | Permission verification failed. A non-system application calls a system API.<br>**Applicable version:** 12 and later |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error.Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameters types. |
+| [15700013](../errorcode-datashare.md#15700013-datasharehelper-instance-closed) | The DataShareHelper instance is already closed.<br>**Applicable version:** 12 and later |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API.<br>**Applicable version:** 12 and later |
 
 ## Examples
 
@@ -916,14 +917,14 @@ try {
     (dataShareHelper as dataShare.DataShareHelper).insert(uri, valueBucket).then((data: number) => {
       console.info("insert succeed, data : " + data);
     }).catch((err: BusinessError) => {
-      console.error(`Failed to insert. Code: ${err.code}, message: ${err.message}`);
+      console.error(`insert error: code: ${err.code}, message: ${err.message} `);
     });
   }
 } catch (err) {
   let code = (err as BusinessError).code;
   let message = (err as BusinessError).message;
-  console.error(`Failed to insert. Code: ${code}, message: ${message}`);
-}
+  console.error(`insert error: code: ${code}, message: ${message} `);
+};
 ```
 
 ## normalizeUri
@@ -932,7 +933,7 @@ try {
 normalizeUri(uri: string, callback: AsyncCallback<string>): void
 ```
 
-将给定的DataShare URI转换为规范化URI，规范化URI可供跨设备使用，DataShare URI仅供本地环境中使用。使用callback异步回调。暂不支持静默访问。
+Normalizes a **DataShare** URI. The **DataShare** URI can be used only by the local device, but the normalized URI can be used across devices. This API uses an asynchronous callback to return the result. Silent access is not supported currently.
 
 **Since:** 9
 
@@ -948,16 +949,16 @@ normalizeUri(uri: string, callback: AsyncCallback<string>): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| uri | string | Yes | 要规范化的[URI](../../apis-arkts/arkts-apis/arkts-arkts-uri-uri-c.md/arkts-arkts-uri-uri-c.md)。 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;string&gt; | Yes | 回调函数。当将给定的DataShare URI转换为规范化URI成功，err为undefined，data为获取到的规范化URI（如果支持 URI规范化，则返回规范化URI，否则返回空）；否则为错误对象。 |
+| uri | string | Yes | [URI](../../apis-arkts/arkts-apis/arkts-arkts-uri-uri-c.md/arkts-arkts-uri-uri-c.md) to normalize. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;string&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined** and **data** is the normalized URI (if **null** is returned, URI normalization is not supported). Otherwise, **err** is an error object. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error.Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameters types.<br>**Applicable version:** 12 and later |
-| 15700013 | The DataShareHelper instance is already closed.<br>**Applicable version:** 12 and later |
-| 202 | Permission verification failed. A non-system application calls a system API.<br>**Applicable version:** 12 and later |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error.Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameters types.<br>**Applicable version:** 12 and later |
+| [15700013](../errorcode-datashare.md#15700013-datasharehelper-instance-closed) | The DataShareHelper instance is already closed.<br>**Applicable version:** 12 and later |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API.<br>**Applicable version:** 12 and later |
 
 ## Examples
 
@@ -982,7 +983,7 @@ if (dataShareHelper != undefined) {
 normalizeUri(uri: string): Promise<string>
 ```
 
-将给定的DataShare URI转换为规范化URI，规范化URI可供跨设备使用，DataShare URI仅供本地环境中使用。使用Promise异步回调。暂不支持静默访问。
+Normalizes a **DataShare** URI. The **DataShare** URI can be used only by the local device, but the normalized URI can be used across devices. This API uses a promise to return the result. Silent access is not supported currently.
 
 **Since:** 9
 
@@ -998,21 +999,21 @@ normalizeUri(uri: string): Promise<string>
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| uri | string | Yes | 要规范化的[URI](../../apis-arkts/arkts-apis/arkts-arkts-uri-uri-c.md/arkts-arkts-uri-uri-c.md)。 |
+| uri | string | Yes | [URI](../../apis-arkts/arkts-apis/arkts-arkts-uri-uri-c.md/arkts-arkts-uri-uri-c.md) to normalize. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;string&gt; | Promise对象。如果支持URI规范化，则返回规范化URI，否则返回空。 |
+| Promise&lt;string&gt; | Promise used to return the result. If URI normalization is supported, the normalized URI is returned. Otherwise, **null** is returned. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error.Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameters types.<br>**Applicable version:** 12 and later |
-| 15700013 | The DataShareHelper instance is already closed.<br>**Applicable version:** 12 and later |
-| 202 | Permission verification failed. A non-system application calls a system API.<br>**Applicable version:** 12 and later |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error.Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameters types.<br>**Applicable version:** 12 and later |
+| [15700013](../errorcode-datashare.md#15700013-datasharehelper-instance-closed) | The DataShareHelper instance is already closed.<br>**Applicable version:** 12 and later |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API.<br>**Applicable version:** 12 and later |
 
 ## Examples
 
@@ -1035,9 +1036,9 @@ if (dataShareHelper != undefined) {
 notifyChange(uri: string, callback: AsyncCallback<void>): void
 ```
 
-通知已注册的观察者指定URI对应的数据资源已发生变更。使用callback异步回调。暂不支持静默访问。
+Notifies the registered observer of data changes. This API uses an asynchronous callback to return the result.Silent access is not supported currently.
 
-非静默场景下，调用此接口时，传入的uri参数大小不能超过200KB，超出限制将导致操作失败或抛出异常。
+In non-silent scenarios, the size of the **uri** parameter passed in this API called cannot exceed 200 KB.Otherwise, the operation fails or an exception is thrown.
 
 **Since:** 9
 
@@ -1053,16 +1054,16 @@ notifyChange(uri: string, callback: AsyncCallback<void>): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| uri | string | Yes | 表示指定的数据路径。 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | 回调函数。当通知已注册的观察者指定URI对应的数据资源已发生变更成功，err为undefined；否则为错误对象。 |
+| uri | string | Yes | URI of the data to be observed. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. If the observer is notified of the data changes, **err** is **undefined**. Otherwise, **err** is an error object. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error.Mandatory parameters are left unspecified.<br>**Applicable version:** 12 and later |
-| 15700013 | The DataShareHelper instance is already closed.<br>**Applicable version:** 12 and later |
-| 202 | Permission verification failed. A non-system application calls a system API.<br>**Applicable version:** 12 and later |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error.Mandatory parameters are left unspecified.<br>**Applicable version:** 12 and later |
+| [15700013](../errorcode-datashare.md#15700013-datasharehelper-instance-closed) | The DataShareHelper instance is already closed.<br>**Applicable version:** 12 and later |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API.<br>**Applicable version:** 12 and later |
 
 ## Examples
 
@@ -1081,9 +1082,9 @@ if (dataShareHelper != undefined) {
 notifyChange(uri: string): Promise<void>
 ```
 
-通知已注册的观察者指定URI对应的数据资源已发生变更。使用Promise异步回调。暂不支持静默访问。
+Notifies the registered observer of data changes. This API uses a promise to return the result. Silent access is not supported currently.
 
-非静默场景下，调用此接口时，传入的uri参数大小不能超过200KB，超出限制将导致操作失败或抛出异常。
+In non-silent scenarios, the size of the **uri** parameter passed in this API called cannot exceed 200 KB.Otherwise, the operation fails or an exception is thrown.
 
 **Since:** 9
 
@@ -1099,21 +1100,21 @@ notifyChange(uri: string): Promise<void>
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| uri | string | Yes | 表示指定的数据路径。 |
+| uri | string | Yes | URI of the data to be observed. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise对象。无返回结果的Promise对象。 |
+| Promise&lt;void&gt; | Promise that returns no value. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error.Mandatory parameters are left unspecified.<br>**Applicable version:** 12 and later |
-| 15700013 | The DataShareHelper instance is already closed.<br>**Applicable version:** 12 and later |
-| 202 | Permission verification failed. A non-system application calls a system API.<br>**Applicable version:** 12 and later |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error.Mandatory parameters are left unspecified.<br>**Applicable version:** 12 and later |
+| [15700013](../errorcode-datashare.md#15700013-datasharehelper-instance-closed) | The DataShareHelper instance is already closed.<br>**Applicable version:** 12 and later |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API.<br>**Applicable version:** 12 and later |
 
 ## Examples
 
@@ -1130,9 +1131,9 @@ if (dataShareHelper != undefined) {
 notifyChange(data: ChangeInfo): Promise<void>
 ```
 
-通知已注册的观察者指定URI对应的数据资源已发生变更类型及变更内容。使用Promise异步回调。暂不支持静默访问。
+Notifies the observer of the data change of the specified URI. This API uses a promise to return the result.Silent access is not supported currently.
 
-非静默场景下，调用此接口时，传入的data参数大小不能超过200KB，超出限制将导致操作失败或抛出异常。
+In non-silent scenarios, the size of the **data** parameter passed in this API called cannot exceed 200 KB.Otherwise, the operation fails or an exception is thrown.
 
 **Since:** 12
 
@@ -1148,21 +1149,21 @@ notifyChange(data: ChangeInfo): Promise<void>
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| data | [ChangeInfo](arkts-arkdata-datashare-changeinfo-i.md) | Yes | 表示数据变更类型、变化的uri、变更的数据内容。 |
+| data | [ChangeInfo](arkts-arkdata-datashare-changeinfo-i.md) | Yes | Information about the data change type, URI of the data changed, and changed data. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | 无返回结果的Promise对象。 |
+| Promise&lt;void&gt; | Promise that returns no value. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error.Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameters types. |
-| 15700013 | The DataShareHelper instance is already closed. |
-| 202 | Permission verification failed. A non-system application calls a system API. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error.Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameters types. |
+| [15700013](../errorcode-datashare.md#15700013-datasharehelper-instance-closed) | The DataShareHelper instance is already closed. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
 
 ## Examples
 
@@ -1188,8 +1189,8 @@ if (dataShareHelper != undefined) {
 off(type: 'dataChange', uri: string, callback?: AsyncCallback<void>): void
 ```
 
-取消订阅指定URI下指定callback对应的数据资源的变更通知。与订阅接口  
-[on](dataShare.DataShareHelper.on(type: 'dataChange', uri: string, callback: AsyncCallback&lt;void&gt;))相对应。
+Unsubscribes from the data change of the specified URI. This API corresponds to the  
+[on](dataShare.DataShareHelper.on(type: 'dataChange', uri: string, callback: AsyncCallback&lt;void&gt;)) API.
 
 **Since:** 9
 
@@ -1205,17 +1206,17 @@ off(type: 'dataChange', uri: string, callback?: AsyncCallback<void>): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'dataChange' | Yes | 取消订阅的事件/回调类型，支持的事件为'dataChange'。 |
-| uri | string | Yes | 表示指定的数据路径。 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | No | 表示指定取消订阅的callback通知，如果为空、为undefined、null，则取消订阅该uri下所有的通知事件。 |
+| type | 'dataChange' | Yes | Event/callback type. The value is **'dataChange'**, which indicates the data change. |
+| uri | string | Yes | URI of the data to be observed. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | No | Callback to unregister. If this parameter is **undefined**, **null**, or left empty, this API unregisters all callbacks for the specified URI. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error.Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameters types.<br>**Applicable version:** 12 and later |
-| 15700013 | The DataShareHelper instance is already closed.<br>**Applicable version:** 12 and later |
-| 202 | Permission verification failed. A non-system application calls a system API.<br>**Applicable version:** 12 and later |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error.Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameters types.<br>**Applicable version:** 12 and later |
+| [15700013](../errorcode-datashare.md#15700013-datasharehelper-instance-closed) | The DataShareHelper instance is already closed.<br>**Applicable version:** 12 and later |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API.<br>**Applicable version:** 12 and later |
 
 ## Examples
 
@@ -1236,8 +1237,8 @@ if (dataShareHelper != undefined) {
 off(event: 'dataChange', type:SubscriptionType, uri: string, callback?: AsyncCallback<ChangeInfo>): void
 ```
 
-取消订阅指定URI下指定callback对应的数据资源的变更通知。与订阅接口  
-[on](dataShare.DataShareHelper.on(event: 'dataChange', type:SubscriptionType, uri: string, callback: AsyncCallback&lt;ChangeInfo&gt;))相对应。
+Unsubscribes from the data change of the specified URI. This API corresponds to the  
+[on](dataShare.DataShareHelper.on(event: 'dataChange', type:SubscriptionType, uri: string, callback: AsyncCallback&lt;ChangeInfo&gt;))API.
 
 **Since:** 12
 
@@ -1253,18 +1254,18 @@ off(event: 'dataChange', type:SubscriptionType, uri: string, callback?: AsyncCal
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| event | 'dataChange' | Yes | 取消订阅的事件/回调类型，支持的事件为'dataChange'。 |
-| type | [SubscriptionType](arkts-arkdata-datashare-subscriptiontype-e.md) | Yes | 表示数据更改时按指定数据路径通知变更。 |
-| uri | string | Yes | 表示指定的数据路径。 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;ChangeInfo&gt; | No | 表示指定取消订阅的callback通知，如果为空、为undefined、null，则取消订阅该uri下所有的通知事件。如果不为空， 传入的callback必须和注册为同一个。 |
+| event | 'dataChange' | Yes | Event/callback type. The value is **'dataChange'**, which indicates the data change. |
+| type | [SubscriptionType](arkts-arkdata-datashare-subscriptiontype-e.md) | Yes | Subscription type. |
+| uri | string | Yes | URI of the data to be observed. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;ChangeInfo&gt; | No | Callback to unregister. If this parameter is **undefined**, **null**, or left empty, this API unregisters all callbacks for the specified URI. If this parameter is specified, the callback must be the one registered in [on('datachange')](dataShare.DataShareHelper.on(event: 'dataChange', type:SubscriptionType, uri: string, callback: AsyncCallback&lt;ChangeInfo&gt;)) . |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error.Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameters types. |
-| 15700013 | The DataShareHelper instance is already closed. |
-| 202 | Permission verification failed. A non-system application calls a system API. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error.Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameters types. |
+| [15700013](../errorcode-datashare.md#15700013-datasharehelper-instance-closed) | The DataShareHelper instance is already closed. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
 
 ## Examples
 
@@ -1292,7 +1293,7 @@ off(
      ): Array<OperationResult>
 ```
 
-取消订阅指定URI和模板对应的数据变更事件。仅支持静默访问。
+Unsubscribes from the changes of the data corresponding to the specified URI and template. Only silent access is supported.
 
 **Since:** 10
 
@@ -1308,24 +1309,24 @@ off(
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'rdbDataChange' | Yes | 取消订阅的事件类型，支持的事件为'rdbDataChange'，表示rdb数据的变更事件。 |
-| uris | Array&lt;string&gt; | Yes | 要操作的数据的路径。 |
-| templateId | [TemplateId](arkts-arkdata-datashare-templateid-i.md) | Yes | 处理回调的templateId。 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;RdbDataChangeNode&gt; | No | 回调函数。表示指定取消订阅的callback通知，如果为空、为undefined、null，则取消订阅该uri下所有 的通知事件。 |
+| type | 'rdbDataChange' | Yes | Event type. The value is **rdbDataChange**, which indicates the change of the RDB data. |
+| uris | Array&lt;string&gt; | Yes | URIs of the target data. |
+| templateId | [TemplateId](arkts-arkdata-datashare-templateid-i.md) | Yes | ID of the template that triggers the callback. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;RdbDataChangeNode&gt; | No | Callback to unregister. If this parameter is **undefined** , **null**, or left empty, this API unregisters all callbacks for the specified URI. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Array&lt;OperationResult&gt; | 返回操作结果。 |
+| Array&lt;OperationResult&gt; | Returns the operation result. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error.Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameters types. |
-| 15700013 | The DataShareHelper instance is already closed.<br>**Applicable version:** 12 and later |
-| 202 | Permission verification failed. A non-system application calls a system API.<br>**Applicable version:** 12 and later |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error.Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameters types. |
+| [15700013](../errorcode-datashare.md#15700013-datasharehelper-instance-closed) | The DataShareHelper instance is already closed.<br>**Applicable version:** 12 and later |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API.<br>**Applicable version:** 12 and later |
 
 ## Examples
 
@@ -1348,7 +1349,7 @@ off(
      ): Array<OperationResult>
 ```
 
-取消订阅已发布数据的数据变更通知。仅支持静默访问。
+Unsubscribes from the change of the published data. Only silent access is supported.
 
 **Since:** 10
 
@@ -1364,24 +1365,24 @@ off(
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'publishedDataChange' | Yes | 取消订阅的事件类型，支持的事件为'publishedDataChange'，表示已发布数据的变更事件。 |
-| uris | Array&lt;string&gt; | Yes | 要操作的数据的路径。 |
-| subscriberId | string | Yes | 指定处理回调的用户ID。 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;PublishedDataChangeNode&gt; | No | 回调函数。表示指定取消订阅的callback通知，如果为空、为undefined、null，则取消订阅该 uri下所有的通知事件。 |
+| type | 'publishedDataChange' | Yes | Event type. The value is **publishedDataChange**, which indicates the change of the published data. |
+| uris | Array&lt;string&gt; | Yes | URIs of the target data. |
+| subscriberId | string | Yes | Subscriber ID of the callback. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;PublishedDataChangeNode&gt; | No | Callback to unregister. If this parameter is **undefined**, **null**, or left empty, this API unregisters all callbacks for the specified URI. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Array&lt;OperationResult&gt; | 返回操作结果。 |
+| Array&lt;OperationResult&gt; | Returns the operation result. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error.Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameters types. |
-| 15700013 | The DataShareHelper instance is already closed.<br>**Applicable version:** 12 and later |
-| 202 | Permission verification failed. A non-system application calls a system API.<br>**Applicable version:** 12 and later |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error.Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameters types. |
+| [15700013](../errorcode-datashare.md#15700013-datasharehelper-instance-closed) | The DataShareHelper instance is already closed.<br>**Applicable version:** 12 and later |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API.<br>**Applicable version:** 12 and later |
 
 ## Examples
 
@@ -1404,7 +1405,8 @@ if (dataShareHelper != undefined) {
 offDataChange(uri: string, callback?: Callback<void>): void
 ```
 
-取消订阅指定URI下指定callback对应的数据资源的变更通知。与订阅接口[onDataChange](dataShare.DataShareHelper.onDataChange(uri: string, callback: Callback&lt;void&gt;))相对应。
+Unsubscribes from the data change of the specified URI. This API corresponds to the  
+[on](dataShare.DataShareHelper.onDataChange(uri: string, callback: Callback&lt;void&gt;)) API.
 
 **Since:** 23
 
@@ -1420,15 +1422,15 @@ offDataChange(uri: string, callback?: Callback<void>): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| uri | string | Yes | 表示指定的数据路径。 |
+| uri | string | Yes | URI of the data to be observed. |
 | callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;void&gt; | No | Callback to unregister. If this parameter is **undefined**, **null**, or left empty, this API unregisters all callbacks for the specified URI. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 15700013 | The DataShareHelper instance is already closed. |
-| 202 | Permission verification failed. A non-system application calls a system API. |
+| [15700013](../errorcode-datashare.md#15700013-datasharehelper-instance-closed) | The DataShareHelper instance is already closed. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
 
 ## offDataChange
 
@@ -1436,7 +1438,8 @@ offDataChange(uri: string, callback?: Callback<void>): void
 offDataChange(type:SubscriptionType, uri: string, callback?: Callback<ChangeInfo>): void
 ```
 
-取消订阅指定URI下指定callback对应的数据资源的变更通知。与订阅接口[onDataChange](dataShare.DataShareHelper.onDataChange(type:SubscriptionType, uri: string, callback:Callback&lt;ChangeInfo&gt;))相对应。
+Unsubscribes from the data change of the specified URI. This API corresponds to the  
+[on](dataShare.DataShareHelper.on(event: 'dataChange', type:SubscriptionType, uri: string, callback:AsyncCallback&lt;ChangeInfo&gt;))API.
 
 **Since:** 23
 
@@ -1452,16 +1455,16 @@ offDataChange(type:SubscriptionType, uri: string, callback?: Callback<ChangeInfo
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | [SubscriptionType](arkts-arkdata-datashare-subscriptiontype-e.md) | Yes | 表示数据更改时按指定数据路径通知变更。 |
-| uri | string | Yes | 表示指定的数据路径。 |
+| type | [SubscriptionType](arkts-arkdata-datashare-subscriptiontype-e.md) | Yes | Subscription type. |
+| uri | string | Yes | URI of the data to be observed. |
 | callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;ChangeInfo&gt; | No | Callback to unregister. If this parameter is **undefined**, **null**, or left empty, this API unregisters all callbacks for the specified URI. If this parameter is specified, the callback must be the one registered in [on('datachange')](dataShare.DataShareHelper.on(event: 'dataChange', type:SubscriptionType, uri: string, callback: AsyncCallback&lt;ChangeInfo&gt;)) . |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 15700013 | The DataShareHelper instance is already closed. |
-| 202 | Permission verification failed. A non-system application calls a system API. |
+| [15700013](../errorcode-datashare.md#15700013-datasharehelper-instance-closed) | The DataShareHelper instance is already closed. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
 
 ## offPublishedDataChange
 
@@ -1473,7 +1476,7 @@ offPublishedDataChange(
      ): Array<OperationResult>
 ```
 
-取消订阅已发布数据的数据变更通知。仅支持静默访问。
+Unsubscribes from the change of the published data. Only silent access is supported.
 
 **Since:** 23
 
@@ -1489,22 +1492,22 @@ offPublishedDataChange(
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| uris | Array&lt;string&gt; | Yes | 要操作的数据的路径。 |
-| subscriberId | string | Yes | 指定处理回调的用户ID。 |
+| uris | Array&lt;string&gt; | Yes | URIs of the target data. |
+| subscriberId | string | Yes | Subscriber ID of the callback. |
 | callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;PublishedDataChangeNode&gt; | No | Callback to unregister. If this parameter is **undefined**, **null**, or left empty, this API unregisters all callbacks for the specified URI. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Array&lt;OperationResult&gt; | 返回操作结果。 |
+| Array&lt;OperationResult&gt; | Returns the operation result. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 15700013 | The DataShareHelper instance is already closed. |
-| 202 | Permission verification failed. A non-system application calls a system API. |
+| [15700013](../errorcode-datashare.md#15700013-datasharehelper-instance-closed) | The DataShareHelper instance is already closed. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
 
 ## offRdbDataChange
 
@@ -1516,7 +1519,7 @@ offRdbDataChange(
      ): Array<OperationResult>
 ```
 
-取消订阅指定URI和模板对应的数据变更事件。仅支持静默访问。
+Unsubscribes from the changes of the data corresponding to the specified URI and template. Only silent access is supported.
 
 **Since:** 23
 
@@ -1532,8 +1535,8 @@ offRdbDataChange(
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| uris | Array&lt;string&gt; | Yes | 要操作的数据的路径。 |
-| templateId | [TemplateId](arkts-arkdata-datashare-templateid-i.md) | Yes | 处理回调的templateId。 |
+| uris | Array&lt;string&gt; | Yes | URIs of the target data. |
+| templateId | [TemplateId](arkts-arkdata-datashare-templateid-i.md) | Yes | ID of the template that triggers the callback. |
 | callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;RdbDataChangeNode&gt; | No | Callback to unregister. If this parameter is **undefined** , **null**, or left empty, this API unregisters all callbacks for the specified URI. |
 
 **Return value:**
@@ -1546,8 +1549,8 @@ offRdbDataChange(
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 15700013 | The DataShareHelper instance is already closed. |
-| 202 | Permission verification failed. A non-system application calls a system API. |
+| [15700013](../errorcode-datashare.md#15700013-datasharehelper-instance-closed) | The DataShareHelper instance is already closed. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
 
 ## on('dataChange')
 
@@ -1555,9 +1558,10 @@ offRdbDataChange(
 on(type: 'dataChange', uri: string, callback: AsyncCallback<void>): void
 ```
 
-订阅指定URI对应数据的数据变更事件。若订阅者已注册了观察者，当有其他通知者触发了变更通知时，订阅者将会接收到callback通知。使用callback异步回调。该功能不支持跨用户订阅通知。同一应用内对单个URI的重复订阅上限为51次。
+Subscribes to the data change of the specified URI. After an observer is registered, the subscriber will receive a notification when the **notifyChange** API is called. This API uses an asynchronous callback to return the result. This function does not support cross-user notification subscription. An application can subscribe to a single URI for a maximum of 51 times.
 
-触发通知：非静默场景下，调用[notifyChange](arkts-arkdata-datashare-datasharehelper-i.md#notifychange)方法，就会触发对指定URI订阅者的通知；或者静默场景下，使用指定URI的静默访问修改了数据，也会自动触发通知。
+Notification triggering: In non-silent scenarios, a notification is published if the  
+[notifyChange](arkts-arkdata-datashare-datasharehelper-i.md#notifychange) method is called. In silent scenarios,a notification is automatically published if data is modified via silent access.
 
 **Since:** 9
 
@@ -1573,17 +1577,17 @@ on(type: 'dataChange', uri: string, callback: AsyncCallback<void>): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'dataChange' | Yes | 订阅的事件/回调类型，支持的事件为'dataChange'，当数据更改时，触发该事件。 |
-| uri | string | Yes | 表示指定的数据路径。 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | 回调函数。当有其他用户触发了变更通知时调用，err为undefined；否则不被触发或为错误对象。 |
+| type | 'dataChange' | Yes | Event/callback type. The value is **dataChange**, which indicates the data change. |
+| uri | string | Yes | URI of the data to be observed. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. If the data is changed, **err** is **undefined**. Otherwise, this callback is not invoked or **err** is an error object. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error.Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameters types.<br>**Applicable version:** 12 and later |
-| 15700013 | The DataShareHelper instance is already closed.<br>**Applicable version:** 12 and later |
-| 202 | Permission verification failed. A non-system application calls a system API.<br>**Applicable version:** 12 and later |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error.Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameters types.<br>**Applicable version:** 12 and later |
+| [15700013](../errorcode-datashare.md#15700013-datasharehelper-instance-closed) | The DataShareHelper instance is already closed.<br>**Applicable version:** 12 and later |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API.<br>**Applicable version:** 12 and later |
 
 ## Examples
 
@@ -1603,9 +1607,10 @@ if (dataShareHelper !== undefined) {
 on(event: 'dataChange', type:SubscriptionType, uri: string, callback: AsyncCallback<ChangeInfo>): void
 ```
 
-订阅指定URI对应数据的数据变更事件。若订阅者已注册变更通知，当有其他通知者触发了变更通知时，订阅者将会接收到callback通知，通知携带数据变更类型、变化的uri、变更的数据内容。使用callback回调。该功能不支持跨用户订阅通知。同一应用内对单个URI的重复订阅上限为51次。
+Subscribes to the data change of the specified URI. After a change notification is registered, the subscriber will receive a notification when the **notifyChange** API is called. The change notification contains the data change type, URI of the data changed, and the changed data. This API uses an asynchronous callback to return the result. This function does not support cross-user notification subscription. An application can subscribe to a single URI for a maximum of 51 times.
 
-触发通知：非静默场景下，调用[notifyChange](arkts-arkdata-datashare-datasharehelper-i.md#notifychange)方法，就会触发对指定URI订阅者的通知；或者静默场景下，使用指定URI的静默访问修改了数据，也会自动触发通知, 但此时callback通知中的changeInfo无效。
+Notification triggering: In non-silent scenarios, a notification is published if the  
+[notifyChange](arkts-arkdata-datashare-datasharehelper-i.md#notifychange) method is called. In silent scenarios, a notification is automatically published if data is modified via silent access, but **changeInfo** in the callback is invalid.
 
 **Since:** 12
 
@@ -1621,18 +1626,18 @@ on(event: 'dataChange', type:SubscriptionType, uri: string, callback: AsyncCallb
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| event | 'dataChange' | Yes | 订阅的事件/回调类型，支持的事件为'dataChange'，当有其他用户触发了变更通知时，触发该事件。 |
-| type | [SubscriptionType](arkts-arkdata-datashare-subscriptiontype-e.md) | Yes | 表示数据更改时按指定数据路径通知变更。 |
-| uri | string | Yes | 表示指定的数据路径。 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;ChangeInfo&gt; | Yes | 回调函数。当有其他用户触发了变更通知时会回调该函数。 |
+| event | 'dataChange' | Yes | Event/callback type. The value is **dataChange**, which indicates the data change. |
+| type | [SubscriptionType](arkts-arkdata-datashare-subscriptiontype-e.md) | Yes | Subscription type. |
+| uri | string | Yes | URI of the data to be observed. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;ChangeInfo&gt; | Yes | Callback to be invoked when data is changed. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error.Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameters types. |
-| 15700013 | The DataShareHelper instance is already closed. |
-| 202 | Permission verification failed. A non-system application calls a system API. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error.Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameters types. |
+| [15700013](../errorcode-datashare.md#15700013-datasharehelper-instance-closed) | The DataShareHelper instance is already closed. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
 
 ## Examples
 
@@ -1659,7 +1664,7 @@ on(
      ): Array<OperationResult>
 ```
 
-订阅指定URI和模板对应的数据变更事件。仅支持静默访问。该功能不支持跨用户订阅通知。
+Subscribes to the changes of the data corresponding to the specified URI and template. Only silent access is supported. This function does not support cross-user notification subscription.
 
 **Since:** 10
 
@@ -1675,24 +1680,24 @@ on(
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'rdbDataChange' | Yes | 订阅的事件类型，支持的事件为'rdbDataChange'，表示rdb数据的变更事件。type是固定值以外时，接口无响应。 |
-| uris | Array&lt;string&gt; | Yes | 要操作的数据的路径。 |
-| templateId | [TemplateId](arkts-arkdata-datashare-templateid-i.md) | Yes | 处理回调的templateId。 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;RdbDataChangeNode&gt; | Yes | 回调函数。当触发变更通知时调用，err为undefined，node为订阅数据变更结果；否则不被触发或为错误对象。 |
+| type | 'rdbDataChange' | Yes | Event type. The value is **rdbDataChange**, which indicates the change of the RDB data. If **type** is any other value, there is no response to this API. |
+| uris | Array&lt;string&gt; | Yes | URIs of the target data. |
+| templateId | [TemplateId](arkts-arkdata-datashare-templateid-i.md) | Yes | ID of the template that triggers the callback. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;RdbDataChangeNode&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined** and **node** is the data changed. Otherwise, this callback is not invoked or **err** is an error object. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Array&lt;OperationResult&gt; | 返回操作结果。 |
+| Array&lt;OperationResult&gt; | Returns the operation result. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error.Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameters types. |
-| 15700013 | The DataShareHelper instance is already closed.<br>**Applicable version:** 12 and later |
-| 202 | Permission verification failed. A non-system application calls a system API.<br>**Applicable version:** 12 and later |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error.Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameters types. |
+| [15700013](../errorcode-datashare.md#15700013-datasharehelper-instance-closed) | The DataShareHelper instance is already closed.<br>**Applicable version:** 12 and later |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API.<br>**Applicable version:** 12 and later |
 
 ## Examples
 
@@ -1701,7 +1706,7 @@ import { BusinessError } from '@kit.BasicServicesKit';
 
 let onCallback: (err: BusinessError, node: dataShare.RdbDataChangeNode) => void = (err: BusinessError, node:dataShare.RdbDataChangeNode): void => {
   if (!node.data.length) {
-    console.info("node.data is empty");
+    console.error("node.data.length is empty");
     return;
   }
   console.info("onCallback " + JSON.stringify(node.uri));
@@ -1730,7 +1735,7 @@ on(
      ): Array<OperationResult>
 ```
 
-订阅已发布数据的数据变更通知。仅支持静默访问。该功能不支持跨用户订阅通知。
+Subscribes to the change of the published data. Only silent access is supported. This function does not support cross-user notification subscription.
 
 **Since:** 10
 
@@ -1746,24 +1751,24 @@ on(
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'publishedDataChange' | Yes | 订阅的事件类型，支持的事件为'publishedDataChange'，表示已发布数据的变更事件。 |
-| uris | Array&lt;string&gt; | Yes | 要操作的数据的路径。 |
-| subscriberId | string | Yes | 指定处理回调的用户ID。 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;PublishedDataChangeNode&gt; | Yes | 回调函数。当触发变更通知时调用，err为undefined，node为订阅数据变更结果；否则不被触发或为 错误对象。 |
+| type | 'publishedDataChange' | Yes | Event type. The value is **publishedDataChange**, which indicates the change of the published data. |
+| uris | Array&lt;string&gt; | Yes | URIs of the target data. |
+| subscriberId | string | Yes | Subscriber ID of the callback. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;PublishedDataChangeNode&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined** and **node** is the data changed. Otherwise, this callback is not invoked or **err** is an error object. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Array&lt;OperationResult&gt; | 返回操作结果。 |
+| Array&lt;OperationResult&gt; | Returns the operation result. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error.Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameters types. |
-| 15700013 | The DataShareHelper instance is already closed.<br>**Applicable version:** 12 and later |
-| 202 | Permission verification failed. A non-system application calls a system API.<br>**Applicable version:** 12 and later |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error.Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameters types. |
+| [15700013](../errorcode-datashare.md#15700013-datasharehelper-instance-closed) | The DataShareHelper instance is already closed.<br>**Applicable version:** 12 and later |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API.<br>**Applicable version:** 12 and later |
 
 ## Examples
 
@@ -1796,7 +1801,7 @@ if (dataShareHelper != undefined) {
 onDataChange(uri: string, callback: Callback<void>): void
 ```
 
-订阅指定URI对应数据的数据变更事件。若订阅者已注册了观察者，当有其他通知者触发了变更通知时，订阅者将会接收到callback通知。使用callback异步回调。该功能不支持跨用户订阅通知。同一应用内对单个URI的重复订阅上限为51次。
+Subscribes to the data change of the specified URI. After an observer is registered, the subscriber will receive a notification when the **notifyChange** API is called. This API uses an asynchronous callback to return the result. This function does not support cross-user notification subscription. An application can subscribe to a single URI for a maximum of 51 times.
 
 **Since:** 23
 
@@ -1812,15 +1817,15 @@ onDataChange(uri: string, callback: Callback<void>): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| uri | string | Yes | 表示指定的数据路径。 |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;void&gt; | Yes | 回调函数。当有其他用户触发了变更通知时调用；否则不被触发或为错误对象。 |
+| uri | string | Yes | URI of the data to be observed. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;void&gt; | Yes | Callback used to return the result. If the data is changed, **err** is **undefined**. Otherwise, this callback is not invoked or **err** is an error object. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 15700013 | The DataShareHelper instance is already closed. |
-| 202 | Permission verification failed. A non-system application calls a system API. |
+| [15700013](../errorcode-datashare.md#15700013-datasharehelper-instance-closed) | The DataShareHelper instance is already closed. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
 
 ## onDataChange
 
@@ -1828,7 +1833,7 @@ onDataChange(uri: string, callback: Callback<void>): void
 onDataChange(type:SubscriptionType, uri: string, callback: Callback<ChangeInfo>): void
 ```
 
-订阅指定URI对应数据的数据变更事件。若订阅者已注册变更通知，当有其他通知者触发了变更通知时，订阅者将会接收到callback通知，通知携带数据变更类型、变化的uri、变更的数据内容。使用callback回调。该功能不支持跨用户订阅通知。同一应用内对单个URI的重复订阅上限为51次。
+Subscribes to the data change of the specified URI. After a change notification is registered, the subscriber will receive a notification when the **notifyChange** API is called. The change notification contains the data change type, URI of the data changed, and the changed data. This API uses an asynchronous callback to return the result. This function does not support cross-user notification subscription. An application can subscribe to a single URI for a maximum of 51 times.
 
 **Since:** 23
 
@@ -1844,16 +1849,16 @@ onDataChange(type:SubscriptionType, uri: string, callback: Callback<ChangeInfo>)
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | [SubscriptionType](arkts-arkdata-datashare-subscriptiontype-e.md) | Yes | 表示数据更改时按指定数据路径通知变更。 |
-| uri | string | Yes | 表示指定的数据路径。 |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;ChangeInfo&gt; | Yes | 回调函数。当有其他用户触发了变更通知时会回调该函数。 |
+| type | [SubscriptionType](arkts-arkdata-datashare-subscriptiontype-e.md) | Yes | Subscription type. |
+| uri | string | Yes | URI of the data to be observed. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;ChangeInfo&gt; | Yes | Callback to be invoked when data is changed. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 15700013 | The DataShareHelper instance is already closed. |
-| 202 | Permission verification failed. A non-system application calls a system API. |
+| [15700013](../errorcode-datashare.md#15700013-datasharehelper-instance-closed) | The DataShareHelper instance is already closed. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
 
 ## onPublishedDataChange
 
@@ -1865,7 +1870,7 @@ onPublishedDataChange(
      ): Array<OperationResult>
 ```
 
-订阅已发布数据的数据变更通知。仅支持静默访问。该功能不支持跨用户订阅通知。
+Subscribes to the change of the published data. Only silent access is supported. This function does not support cross-user notification subscription.
 
 **Since:** 23
 
@@ -1881,22 +1886,22 @@ onPublishedDataChange(
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| uris | Array&lt;string&gt; | Yes | 要操作的数据的路径。 |
-| subscriberId | string | Yes | 指定处理回调的用户ID。 |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;PublishedDataChangeNode&gt; | Yes | 回调函数。当触发变更通知时调用，err为undefined， node为订阅数据变更结果；否则不被触发或为错误对象。 |
+| uris | Array&lt;string&gt; | Yes | URIs of the target data. |
+| subscriberId | string | Yes | Subscriber ID of the callback. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;PublishedDataChangeNode&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined** and **node** is the data changed. Otherwise, this callback is not invoked or **err** is an error object. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Array&lt;OperationResult&gt; | 返回操作结果。 |
+| Array&lt;OperationResult&gt; | Returns the operation result. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 15700013 | The DataShareHelper instance is already closed. |
-| 202 | Permission verification failed. A non-system application calls a system API. |
+| [15700013](../errorcode-datashare.md#15700013-datasharehelper-instance-closed) | The DataShareHelper instance is already closed. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
 
 ## onRdbDataChange
 
@@ -1908,7 +1913,7 @@ onRdbDataChange(
      ): Array<OperationResult>
 ```
 
-订阅指定URI和模板对应的数据变更事件。仅支持静默访问。该功能不支持跨用户订阅通知。
+Subscribes to the changes of the data corresponding to the specified URI and template. Only silent access is supported. This function does not support cross-user notification subscription.
 
 **Since:** 23
 
@@ -1924,22 +1929,22 @@ onRdbDataChange(
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| uris | Array&lt;string&gt; | Yes | 要操作的数据的路径。 |
-| templateId | [TemplateId](arkts-arkdata-datashare-templateid-i.md) | Yes | 处理回调的templateId。 |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;RdbDataChangeNode&gt; | Yes | 回调函数。当触发变更通知时调用，err为undefined，node为订阅数据变更结果；否则不被触发或为错误对象。 |
+| uris | Array&lt;string&gt; | Yes | URIs of the target data. |
+| templateId | [TemplateId](arkts-arkdata-datashare-templateid-i.md) | Yes | ID of the template that triggers the callback. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;RdbDataChangeNode&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined** and **node** is the data changed. Otherwise, this callback is not invoked or **err** is an error object. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Array&lt;OperationResult&gt; | 返回操作结果。 |
+| Array&lt;OperationResult&gt; | Returns the operation result. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 15700013 | The DataShareHelper instance is already closed. |
-| 202 | Permission verification failed. A non-system application calls a system API. |
+| [15700013](../errorcode-datashare.md#15700013-datasharehelper-instance-closed) | The DataShareHelper instance is already closed. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
 
 ## publish
 
@@ -1963,9 +1968,9 @@ publish(
      ): void
 ```
 
-发布数据，将数据更新至数据库。需传入要发布的数据版本，当传入版本号高于当前数据库记录的版本时成功。仅支持静默访问。使用callback异步回调。
+Publishes data to the database. You should pass in the version of the data to be published. If the passed version is later than the version recorded in the current database, the operation is successful. Only silent access is supported. This API uses an asynchronous callback to return the result.
 
-静默场景下，调用此接口时，传入的data和bundleName参数的总大小不能超过200KB，超出限制将导致操作失败或抛出异常。
+In silent scenarios, the total size of the **data** and **bundleName** parameters passed in this API cannot exceed 200 KB. Otherwise, the operation fails or an exception is thrown.
 
 **Since:** 10
 
@@ -1981,19 +1986,19 @@ publish(
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| data | Array&lt;PublishedItem&gt; | Yes | 要发布的数据。 |
-| bundleName | string | Yes | 表示要发布数据所属的APP，对发布的私有数据生效，仅该app可以读取数据。 |
-| version | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | 要发布的数据版本，越大表示数据版本越新。如果发布的版本号小于数据库中的记录，则更新失败。 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;OperationResult&gt;&gt; | Yes | 回调函数。当发布数据时调用，err为undefined，result为发布数据结果；否则不被触发或为错误对 象。 |
+| data | Array&lt;PublishedItem&gt; | Yes | Data to publish. |
+| bundleName | string | Yes | Application of the data to publish. This parameter is valid only for the private data published. Only the application can read the data. |
+| version | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | Version of the data to publish. A larger value indicates a later version. If the version of the data published is earlier than that of the data in the database, the data in the database will not be updated. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;OperationResult&gt;&gt; | Yes | Callback used to return the result. If data is published, **err** is **undefined**, and **result** is the data publish result. Otherwise, this callback is not triggered or **err** is an error object. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error.Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameters types. |
-| 15700013 | The DataShareHelper instance is already closed.<br>**Applicable version:** 12 and later |
-| 15700012 | The data area is not exist. |
-| 202 | Permission verification failed. A non-system application calls a system API.<br>**Applicable version:** 12 and later |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error.Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameters types. |
+| [15700013](../errorcode-datashare.md#15700013-datasharehelper-instance-closed) | The DataShareHelper instance is already closed.<br>**Applicable version:** 12 and later |
+| [15700012](../errorcode-datashare.md#15700012-data-area-not-exist) | The data area is not exist. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API.<br>**Applicable version:** 12 and later |
 
 ## Examples
 
@@ -2012,7 +2017,7 @@ try {
     (dataShareHelper as dataShare.DataShareHelper).publish(dataArray, "com.acts.ohos.data.datasharetest", version, publishCallback);
   }
 } catch (e) {
-  console.error(`Failed to publish. Code: ${e.code}, message: ${e.message}`);
+  console.error("publish error " + JSON.stringify(e));
 }
 ```
 
@@ -2026,9 +2031,9 @@ publish(
      ): void
 ```
 
-发布数据，将数据更新至数据库。仅支持静默访问。使用callback异步回调。
+Publishes data to the database. Only silent access is supported. This API uses an asynchronous callback to return the result.
 
-静默场景下，调用此接口时，传入的data和bundleName参数的总大小不能超过200KB，超出限制将导致操作失败或抛出异常。
+In silent scenarios, the total size of the **data** and **bundleName** parameters passed in this API cannot exceed 200 KB. Otherwise, the operation fails or an exception is thrown.
 
 **Since:** 10
 
@@ -2044,18 +2049,18 @@ publish(
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| data | Array&lt;PublishedItem&gt; | Yes | 要发布的数据。 |
-| bundleName | string | Yes | 表示要发布数据所属的APP，对发布的私有数据生效，仅该app可以读取数据。 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;OperationResult&gt;&gt; | Yes | 回调函数。当发布数据时调用，err为undefined，result为发布数据结果；否则不被触发或为错误对 象。 |
+| data | Array&lt;PublishedItem&gt; | Yes | Data to publish. |
+| bundleName | string | Yes | Application of the data to publish. This parameter is valid only for the private data published. Only the application can read the data. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;OperationResult&gt;&gt; | Yes | Callback used to return the result. If data is published, **err** is **undefined**, and **result** is the data publish result. Otherwise, this callback is not triggered or **err** is an error object. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error.Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameters types. |
-| 15700013 | The DataShareHelper instance is already closed.<br>**Applicable version:** 12 and later |
-| 15700012 | The data area is not exist. |
-| 202 | Permission verification failed. A non-system application calls a system API.<br>**Applicable version:** 12 and later |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error.Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameters types. |
+| [15700013](../errorcode-datashare.md#15700013-datasharehelper-instance-closed) | The DataShareHelper instance is already closed.<br>**Applicable version:** 12 and later |
+| [15700012](../errorcode-datashare.md#15700012-data-area-not-exist) | The data area is not exist. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API.<br>**Applicable version:** 12 and later |
 
 ## Examples
 
@@ -2086,9 +2091,9 @@ ArkTS-Sta:
 publish(data: Array<PublishedItem>, bundleName: string, version?: int): Promise<Array<OperationResult>>
 ```
 
-发布数据，将数据更新至数据库。可以选择传入要发布的数据版本，当传入版本号高于当前数据库记录的版本时成功。仅支持静默访问。使用Promise异步回调。
+Publishes data to the database. You should pass in the version of the data to be published. If the passed version is later than the version recorded in the current database, the operation is successful. Only silent access is supported. This API uses a promise to return the result.
 
-静默场景下，调用此接口时，传入的data和bundleName参数的总大小不能超过200KB，超出限制将导致操作失败或抛出异常。
+In silent scenarios, the total size of the **data** and **bundleName** parameters passed in this API cannot exceed 200 KB. Otherwise, the operation fails or an exception is thrown.
 
 **Since:** 10
 
@@ -2104,24 +2109,24 @@ publish(data: Array<PublishedItem>, bundleName: string, version?: int): Promise<
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| data | Array&lt;PublishedItem&gt; | Yes | 要发布的数据。 |
-| bundleName | string | Yes | 表示要发布数据所属的APP，对发布的私有数据生效，仅该app可以读取数据。 |
-| version | ArkTS-Dyn: number  <br>ArkTS-Sta：int | No | 要发布的数据版本，越大表示数据版本越新。如果发布的版本号小于数据库中的记录，则更新失败。 如果不检查要发布的数据版本，则不填。 |
+| data | Array&lt;PublishedItem&gt; | Yes | Data to publish. |
+| bundleName | string | Yes | Application of the data to publish. This parameter is valid only for the private data published. Only the application can read the data. |
+| version | ArkTS-Dyn: number  <br>ArkTS-Sta：int | No | Version of the data to publish. A larger value indicates a later version. If the version of the data published is earlier than that of the data in the database, the data in the database will not be updated. If the data version is not checked, leave this parameter unspecified. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;Array&lt;OperationResult&gt;&gt; | 发布数据结果。 |
+| Promise&lt;Array&lt;OperationResult&gt;&gt; | Returns the operation result. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error.Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameters types. |
-| 15700013 | The DataShareHelper instance is already closed.<br>**Applicable version:** 12 and later |
-| 15700012 | The data area is not exist. |
-| 202 | Permission verification failed. A non-system application calls a system API.<br>**Applicable version:** 12 and later |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error.Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameters types. |
+| [15700013](../errorcode-datashare.md#15700013-datasharehelper-instance-closed) | The DataShareHelper instance is already closed.<br>**Applicable version:** 12 and later |
+| [15700012](../errorcode-datashare.md#15700012-data-area-not-exist) | The data area is not exist. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API.<br>**Applicable version:** 12 and later |
 
 ## Examples
 
@@ -2146,15 +2151,15 @@ query(
      ): void
 ```
 
-查询数据库中的数据。使用callback异步回调。
+Queries data in the database. This API uses an asynchronous callback to return the result.
 
-非静默场景下，调用此接口时，传入的predicates参数的大小不能超过128MB，传入的uri和columns参数的总大小不能超过200KB，超出限制将导致操作失败或抛出异常。
+In non-silent scenarios, the size of the **predicates** parameter and the total size of the **uri** and  
+**columns** parameters passed in this API cannot exceed 128 MB and 200 KB, respectively. Otherwise, the operation fails or an exception is thrown.
 
-静默场景下，调用此接口时，传入的uri、predicates和columns参数的总大小不能超过200KB，超出限制将导致操作失败或抛出异常。
+In silent scenarios, the total size of the **uri**, **predicates**, and **columns** parameters passed in this API cannot exceed 200 KB. If the size exceeds the limit, the operation fails or an exception is thrown.
 
-使用此接口查询数据库数据时，如查询内容达到资源上限，操作将失败并返回错误，用户可根据场景考虑重试。有关于资源上限的详细说明，请参见  
-[通过数据管理服务实现数据共享静默访问](../../../database/share-data-by-silent-access-sys.md#约束与限制)和  
-[通过DataShareExtensionAbility实现数据共享](../../../database/share-data-by-datashareextensionability-sys.md#约束与限制)。
+When this API is used to query database data, if the query content exceeds the resource limit, the operation fails and an error is returned. You can retry the operation based on the scenario. For details about the resource limit, see [Silent Access via DatamgrService](../../../database/share-data-by-silent-access-sys.md#constraints)and  
+[Sharing Data Using DataShareExtensionAbility](../../../database/share-data-by-datashareextensionability-sys.md#constraints).
 
 **Since:** 9
 
@@ -2170,18 +2175,18 @@ query(
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| uri | string | Yes | 要查询的数据的路径。 |
-| predicates | dataSharePredicates.DataSharePredicates | Yes | 筛选条件。&lt;br /&gt;query接口所支持的谓词方法取决于服务端所选用的数据库，如KVDB目前仅支 持inKeys和prefixKey。静默场景下谓词内方法为空时，默认全表查询。非静默场景下规格由数据提供方制定。 |
-| columns | Array&lt;string&gt; | Yes | 要查询的列。如果此参数为空，则查询所有列。 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[DataShareResultSet](arkts-arkdata-data-datashareresultset-datashareresultset-i-sys.md)&gt; | Yes | 回调函数。当查询数据库中的数据成功，err为undefined，data为获取到的查询到的结果集；否则为错误对象。 |
+| uri | string | Yes | URI of the data to query. |
+| predicates | dataSharePredicates.DataSharePredicates | Yes | Conditions for querying data.The predicate methods supported by **query()** vary depending on the database used. For example, the KVDB supports only **inKeys** and **prefixKey**. If this parameter is left empty, the entire table will be queried by default. |
+| columns | Array&lt;string&gt; | Yes | Column to query. If this parameter is left empty, all columns will be queried. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[DataShareResultSet](arkts-arkdata-data-datashareresultset-datashareresultset-i-sys.md)&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined** and **data** is the result set obtained. Otherwise, **err** is an error object. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error.Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameters types. |
-| 15700013 | The DataShareHelper instance is already closed.<br>**Applicable version:** 12 and later |
-| 202 | Permission verification failed. A non-system application calls a system API.<br>**Applicable version:** 12 and later |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error.Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameters types. |
+| [15700013](../errorcode-datashare.md#15700013-datasharehelper-instance-closed) | The DataShareHelper instance is already closed.<br>**Applicable version:** 12 and later |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API.<br>**Applicable version:** 12 and later |
 
 ## Examples
 
@@ -2197,7 +2202,7 @@ try {
   if (dataShareHelper != undefined) {
     (dataShareHelper as dataShare.DataShareHelper).query(uri, da, columns, (err: BusinessError, data: DataShareResultSet) => {
       if (err !== undefined) {
-        console.error(`Failed to query. Code: ${err.code}, message: ${err.message}`);
+        console.error(`query error: code: ${err.code}, message: ${err.message} `);
         return;
       }
       console.info("query succeed, rowCount : " + data.rowCount);
@@ -2206,8 +2211,8 @@ try {
 } catch (err) {
   let code = (err as BusinessError).code;
   let message = (err as BusinessError).message;
-  console.error(`Failed to query. Code: ${code}, message: ${message}`);
-}
+  console.error(`query error: code: ${code}, message: ${message} `);
+};
 ```
 
 ## query
@@ -2220,15 +2225,16 @@ query(
      ): Promise<DataShareResultSet>
 ```
 
-查询数据库中的数据。使用Promise异步回调。
+Queries data in the database. This API uses a promise to return the result.
 
-非静默场景下，调用此接口时，传入的predicates参数的大小不能超过128MB，传入的uri和columns参数的总大小不能超过200KB，超出限制将导致操作失败或抛出异常。
+In non-silent scenarios, the size of the **predicates** parameter and the total size of the **uri** and  
+**columns** parameters passed in this API cannot exceed 128 MB and 200 KB, respectively. Otherwise, the operation fails or an exception is thrown.
 
-静默场景下，调用此接口时，传入的uri、predicates和columns参数的总大小不能超过200KB，超出限制将导致操作失败或抛出异常。
+In silent scenarios, the total size of the **uri**, **predicates**, and **columns** parameters passed in this API cannot exceed 200 KB. If the size exceeds the limit, the operation fails or an exception is thrown.
 
-使用此接口查询数据库数据时，如查询内容达到资源上限，操作将失败并返回错误，用户可根据场景考虑重试。有关于资源上限的详细说明，请参见  
-[通过数据管理服务实现数据共享静默访问](../../../database/share-data-by-silent-access-sys.md#约束与限制)和  
-[通过DataShareExtensionAbility实现数据共享](../../../database/share-data-by-datashareextensionability-sys.md#约束与限制)。
+When this API is used to query database data, if the query content exceeds the resource limit, the operation fails and an error is returned. You can retry the operation based on the scenario. For details about the resource limit, see  
+[Silent Access via DatamgrService (ArkTS) (for System Applications Only)](../../../database/share-data-by-silent-access-sys.md#constraints)and  
+[Sharing Data Using DataShareExtensionAbility (ArkTS) (for System Applications Only)](../../../database/share-data-by-datashareextensionability-sys.md#constraints).
 
 **Since:** 9
 
@@ -2244,23 +2250,23 @@ query(
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| uri | string | Yes | 要查询的数据的路径。 |
-| predicates | dataSharePredicates.DataSharePredicates | Yes | 筛选条件。&lt;br /&gt;query接口所支持的谓词方法取决于服务端所选用的数据库，如KVDB目前仅支 持inKeys和prefixKey。静默场景下谓词内方法为空时，默认全表查询。非静默场景下规格由数据提供方制定。 |
-| columns | Array&lt;string&gt; | Yes | 要查询的列。如果此参数为空，则查询所有列。 |
+| uri | string | Yes | URI of the data to query. |
+| predicates | dataSharePredicates.DataSharePredicates | Yes | Conditions for querying data.The predicate methods supported by **query()** vary depending on the database used. For example, the KVDB supports only **inKeys** and **prefixKey**. If this parameter is left empty, the entire table will be queried by default. |
+| columns | Array&lt;string&gt; | Yes | Column to query. If this parameter is left empty, all columns will be queried. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;[DataShareResultSet](arkts-arkdata-data-datashareresultset-datashareresultset-i-sys.md)&gt; | Promise对象。返回查询到的结果集。 |
+| Promise&lt;[DataShareResultSet](arkts-arkdata-data-datashareresultset-datashareresultset-i-sys.md)&gt; | Promise used to return the result set obtained. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error.Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameters types. |
-| 15700013 | The DataShareHelper instance is already closed.<br>**Applicable version:** 12 and later |
-| 202 | Permission verification failed. A non-system application calls a system API.<br>**Applicable version:** 12 and later |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error.Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameters types. |
+| [15700013](../errorcode-datashare.md#15700013-datasharehelper-instance-closed) | The DataShareHelper instance is already closed.<br>**Applicable version:** 12 and later |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API.<br>**Applicable version:** 12 and later |
 
 ## Examples
 
@@ -2277,14 +2283,14 @@ try {
     (dataShareHelper as dataShare.DataShareHelper).query(uri, da, columns).then((data: DataShareResultSet) => {
       console.info("query succeed, rowCount : " + data.rowCount);
     }).catch((err: BusinessError) => {
-      console.error(`Failed to query. Code: ${err.code}, message: ${err.message}`);
+      console.error(`query error: code: ${err.code}, message: ${err.message} `);
     });
   }
 } catch (err) {
   let code = (err as BusinessError).code;
   let message = (err as BusinessError).message;
-  console.error(`Failed to query. Code: ${code}, message: ${message}`);
-}
+  console.error(`query error: code: ${code}, message: ${message} `);
+};
 ```
 
 ## update
@@ -2309,11 +2315,11 @@ update(
      ): void
 ```
 
-更新数据库中的数据记录。使用callback异步回调。
+Updates data in the database. This API uses an asynchronous callback to return the result.
 
-非静默场景下，调用此接口时，传入的uri、predicates和value参数的总大小不能超过900KB，超出限制将导致操作失败或抛出异常。
+In non-silent scenarios, the total size of the **uri**, **predicates**, and **value** parameters passed in this API cannot exceed 900 KB. Otherwise, the operation fails or an exception is thrown.
 
-静默场景下，调用此接口时，传入的uri、predicates和value参数的总大小不能超过200KB，超出限制将导致操作失败或抛出异常。
+In silent scenarios, the total size of the **uri**, **predicates**, and **value** parameters passed when this API is called cannot exceed 200 KB. Otherwise, the operation fails or an exception is thrown.
 
 **Since:** 9
 
@@ -2329,18 +2335,18 @@ update(
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| uri | string | Yes | 要更新的数据的路径。 |
-| predicates | dataSharePredicates.DataSharePredicates | Yes | 筛选条件。&lt;br /&gt;update接口是否支持谓词筛选条件取决于服务端所选用的数据库，如KVDB目 前并不支持谓词筛选条件，仅RDB支持。静默场景下谓词内方法为空时，默认全表更新。非静默场景下规格由数据提供方制定。 |
-| value | [ValuesBucket](arkts-arkdata-valuesbucket-t.md) | Yes | 要更新的数据的值。 |
-| callback | ArkTS-Dyn: [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;number&gt;  <br>ArkTS-Sta：[AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;int&gt; | Yes | 回调函数。当更新数据库中的数据记录成功，err为undefined，data为获取到的更新的数据记录数；否则为错误对象。&lt;br /&gt;因部分数据库 （如KVDB）的相应接口并不提供相应支持，故若服务端使用此数据库，则此callback也无法返回更新的数据记录数。 |
+| uri | string | Yes | URI of the data to update. |
+| predicates | dataSharePredicates.DataSharePredicates | Yes | Conditions for updating data.The predicate methods supported by **update()** vary depending on the database in use. For example, only the relational database (RDB) supports predicates. If this parameter is left empty, the entire table will be updated by default. |
+| value | [ValuesBucket](arkts-arkdata-valuesbucket-t.md) | Yes | Value of the data to update. |
+| callback | ArkTS-Dyn: [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;number&gt;  <br>ArkTS-Sta：[AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;int&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined** and **data** is the number of updated data records. Otherwise, **err** is an error object.The number of updated data records is not returned if the APIs of the database in use (for example , KVDB) do not support this return. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error.Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameters types. |
-| 15700013 | The DataShareHelper instance is already closed.<br>**Applicable version:** 12 and later |
-| 202 | Permission verification failed. A non-system application calls a system API.<br>**Applicable version:** 12 and later |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error.Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameters types. |
+| [15700013](../errorcode-datashare.md#15700013-datasharehelper-instance-closed) | The DataShareHelper instance is already closed.<br>**Applicable version:** 12 and later |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API.<br>**Applicable version:** 12 and later |
 
 ## Examples
 
@@ -2366,7 +2372,7 @@ try {
   if (dataShareHelper != undefined) {
     (dataShareHelper as dataShare.DataShareHelper).update(uri, da, va, (err: BusinessError, data: number) => {
       if (err !== undefined) {
-        console.error(`Failed to update. Code: ${err.code}, message: ${err.message}`);
+        console.error(`update error: code: ${err.code}, message: ${err.message} `);
         return;
       }
       console.info("update succeed, data : " + data);
@@ -2375,8 +2381,8 @@ try {
 } catch (err) {
   let code = (err as BusinessError).code;
   let message = (err as BusinessError).message;
-  console.error(`Failed to update. Code: ${code}, message: ${message}`);
-}
+  console.error(`update error: code: ${code}, message: ${message} `);
+};
 ```
 
 ## update
@@ -2391,11 +2397,11 @@ ArkTS-Sta:
 update(uri: string, predicates: dataSharePredicates.DataSharePredicates, value: ValuesBucket): Promise<int>
 ```
 
-更新数据库中的数据记录。使用Promise异步回调。
+Updates data in the database. This API uses a promise to return the result.
 
-非静默场景下，调用此接口时，传入的uri、predicates和value参数的总大小不能超过900KB，超出限制将导致操作失败或抛出异常。
+In non-silent scenarios, the total size of the **uri**, **predicates**, and **value** parameters passed in this API cannot exceed 900 KB. Otherwise, the operation fails or an exception is thrown.
 
-静默场景下，调用此接口时，传入的uri、predicates和value参数的总大小不能超过200KB，超出限制将导致操作失败或抛出异常。
+In silent scenarios, the total size of the **uri**, **predicates**, and **value** parameters passed when this API is called cannot exceed 200 KB. Otherwise, the operation fails or an exception is thrown.
 
 **Since:** 9
 
@@ -2411,23 +2417,23 @@ update(uri: string, predicates: dataSharePredicates.DataSharePredicates, value: 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| uri | string | Yes | 要更新的数据的路径。 |
-| predicates | dataSharePredicates.DataSharePredicates | Yes | 筛选条件。&lt;br /&gt;update接口是否支持谓词筛选条件取决于服务端所选用的数据库，如KVDB目 前并不支持谓词筛选条件，仅RDB支持。静默场景下谓词内方法为空时，默认全表更新。非静默场景下规格由数据提供方制定。 |
-| value | [ValuesBucket](arkts-arkdata-valuesbucket-t.md) | Yes | 要更新的数据的值。 |
+| uri | string | Yes | URI of the data to update. |
+| predicates | dataSharePredicates.DataSharePredicates | Yes | Conditions for updating data.The predicate methods supported by **update()** vary depending on the database in use. For example, only the relational database (RDB) supports predicates. If this parameter is left empty, the entire table will be updated by default. |
+| value | [ValuesBucket](arkts-arkdata-valuesbucket-t.md) | Yes | Value of the data to update. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| ArkTS-Dyn: Promise&lt;number&gt;  <br>ArkTS-Sta：Promise&lt;int&gt; | Promise对象。返回更新的数据记录数。&lt;br /&gt;因部分数据库（如KVDB）的相应接口并不提供相应支持，故若服务端使用此数据库，则此Promise也无法返回更新的数据记录 数。 |
+| ArkTS-Dyn: Promise&lt;number&gt;  <br>ArkTS-Sta：Promise&lt;int&gt; | Promise used to return the number of data records updated. The number of updated data records is not returned if the APIs of the database in use (for example, KVDB) do not support this return. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error.Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameters types. |
-| 15700013 | The DataShareHelper instance is already closed.<br>**Applicable version:** 12 and later |
-| 202 | Permission verification failed. A non-system application calls a system API.<br>**Applicable version:** 12 and later |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error.Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameters types. |
+| [15700013](../errorcode-datashare.md#15700013-datasharehelper-instance-closed) | The DataShareHelper instance is already closed.<br>**Applicable version:** 12 and later |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API.<br>**Applicable version:** 12 and later |
 
 ## Examples
 
@@ -2454,13 +2460,13 @@ try {
     (dataShareHelper as dataShare.DataShareHelper).update(uri, da, va).then((data: number) => {
       console.info("update succeed, data : " + data);
     }).catch((err: BusinessError) => {
-      console.error(`Failed to update. Code: ${err.code}, message: ${err.message}`);
+      console.error(`update error: code: ${err.code}, message: ${err.message} `);
     });
   }
 } catch (err) {
   let code = (err as BusinessError).code;
   let message = (err as BusinessError).message;
-  console.error(`Failed to update. Code: ${code}, message: ${message}`);
-}
+  console.error(`update error: code: ${code}, message: ${message} `);
+};
 ```
 

@@ -1,11 +1,5 @@
 # startBackgroundRunning
 
-## 导入模块
-
-```TypeScript
-import { particleAbility } from 'kits/@kit.AbilityKit';
-```
-
 ## startBackgroundRunning
 
 ```TypeScript

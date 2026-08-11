@@ -1,6 +1,7 @@
 # Watcher
 
-文件目录变化监听对象。由createWatcher接口获得。
+Provides APIs for observing the changes of files or directories. Before using the APIs of **Watcher**, call  
+**createWatcher()** to create a **Watcher** object.
 
 **Since:** 10
 
@@ -22,7 +23,7 @@ import { Options, ReaderIteratorResult, Watcher, ReadTextOptions, WatchEventList
 start(): void
 ```
 
-开启监听。
+Starts listening.
 
 **Since:** 10
 
@@ -55,7 +56,7 @@ start(): void
 
 ```TypeScript
 let filePath = pathDir + "/test.txt";
-let watcher = fileIo.createWatcher(filePath, 0xfff, () => {});
+let watcher = fs.createWatcher(filePath, 0xfff, () => {});
 watcher.start();
 watcher.stop();
 ```
@@ -66,7 +67,7 @@ watcher.stop();
 stop(): void
 ```
 
-停止监听并移除Watcher对象。
+Stops listening and removes the **Watcher** object.
 
 **Since:** 10
 
@@ -99,7 +100,7 @@ stop(): void
 
 ```TypeScript
 let filePath = pathDir + "/test.txt";
-let watcher = fileIo.createWatcher(filePath, 0xfff, () => {});
+let watcher = fs.createWatcher(filePath, 0xfff, () => {});
 watcher.start();
 watcher.stop();
 ```

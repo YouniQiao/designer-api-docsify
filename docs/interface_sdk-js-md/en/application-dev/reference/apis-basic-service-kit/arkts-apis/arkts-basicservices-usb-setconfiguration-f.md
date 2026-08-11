@@ -12,10 +12,10 @@ import { usb } from 'kits/@kit.BasicServicesKit';
 function setConfiguration(pipe: USBDevicePipe, config: USBConfig): number
 ```
 
-设置设备配置。
+Sets the device configuration.
 
-需要调用[usb.getDevices](arkts-basicservices-usb-getdevices-f.md#getdevices)获取设备信息以及config；调用[usb.requestRight](arkts-basicservices-usb-requestright-f.md#requestright)获取设备请求权限；调用  
-[usb.connectDevice](arkts-basicservices-usb-connectdevice-f.md#connectdevice)得到devicepipe作为参数。
+Before you do this, call [usb.getDevices](arkts-basicservices-usb-getdevices-f.md#getdevices) to obtain the USB device list and device configuration, call [usb.requestRight](arkts-basicservices-usb-requestright-f.md#requestright) to request the device access permission, and call  
+[usb.connectDevice](arkts-basicservices-usb-connectdevice-f.md#connectdevice) to obtain **devicepipe** as an input parameter.
 
 **Since:** 8
 
@@ -33,14 +33,14 @@ function setConfiguration(pipe: USBDevicePipe, config: USBConfig): number
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| pipe | [USBDevicePipe](arkts-basicservices-usbmanager-usbdevicepipe-i.md) | Yes | 用于确定总线号和设备地址。 |
-| config | [USBConfig](arkts-basicservices-usb-usbconfig-i.md) | Yes | 用于确定需要设置的配置。 |
+| pipe | [USBDevicePipe](arkts-basicservices-usbmanager-usbdevicepipe-i.md) | Yes | Device pipe, which is used to determine the bus number and device address. |
+| config | [USBConfig](arkts-basicservices-usb-usbconfig-i.md) | Yes | USB configuration to set. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| number | 设置设备配置成功返回0；设置设备配置失败返回其他错误码。 |
+| number | Returns **0** if the USB configuration is successfully set; returns an error code otherwise. |
 
 ## Examples
 

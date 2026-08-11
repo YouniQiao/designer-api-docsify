@@ -12,11 +12,11 @@ import { Options, ReaderIteratorResult, Watcher, ReadTextOptions, WatchEventList
 declare function rename(oldPath: string, newPath: string): Promise<void>
 ```
 
-重命名文件或目录，使用promise异步回调。
+Renames a file or directory. This API uses a promise to return the result.
 
-> **说明：**
+> **NOTE：**
 > 
-> 该接口不支持在分布式文件路径下操作。
+> This API is not supported in a distributed directory.
 
 **Since:** 9
 
@@ -32,14 +32,14 @@ declare function rename(oldPath: string, newPath: string): Promise<void>
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| oldPath | string | Yes | 文件的应用沙箱原路径。 |
-| newPath | string | Yes | 文件的应用沙箱新路径。 |
+| oldPath | string | Yes | Application sandbox path of the file or directory to rename. |
+| newPath | string | Yes | Application sandbox path of the renamed file or directory. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise对象。无返回值。 |
+| Promise&lt;void&gt; | Promise that returns no value. |
 
 **Error codes:**
 
@@ -72,11 +72,11 @@ declare function rename(oldPath: string, newPath: string): Promise<void>
 declare function rename(oldPath: string, newPath: string, callback: AsyncCallback<void>): void
 ```
 
-重命名文件或目录，使用callback异步回调。
+Renames a file or directory. This API uses an asynchronous callback to return the result.
 
-> **说明：**
+> **NOTE：**
 > 
-> 该接口不支持在分布式文件路径下操作。
+> This API is not supported in a distributed directory.
 
 **Since:** 9
 
@@ -92,9 +92,9 @@ declare function rename(oldPath: string, newPath: string, callback: AsyncCallbac
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| oldPath | string | Yes | 文件的应用沙箱原路径。 |
-| newPath | string | Yes | 文件的应用沙箱新路径。 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | 异步重命名文件之后的回调。 |
+| oldPath | string | Yes | Application sandbox path of the file or directory to rename. |
+| newPath | string | Yes | Application sandbox path of the renamed file or directory. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. |
 
 **Error codes:**
 

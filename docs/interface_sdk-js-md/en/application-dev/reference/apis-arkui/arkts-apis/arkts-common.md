@@ -36,7 +36,7 @@ Defines the namespace of focus controller.
 | [TextContentControllerBase](arkts-arkui-common-textcontentcontrollerbase-c.md) | TextContentControllerBase |
 | [TouchResult](arkts-arkui-common-touchresult-c.md) | Defines TouchResult class. |
 | [TouchTestInfo](arkts-arkui-common-touchtestinfo-c.md) | Defines TouchTestInfo class. |
-| [TransitionEffect](arkts-arkui-common-transitioneffect-c.md) | 定义TransitionEffect类指定转场效果。 |
+| [TransitionEffect](arkts-arkui-common-transitioneffect-c.md) | Defines the transition effect |
 
 <!--Del-->
 ### Classes（系统接口）
@@ -52,30 +52,30 @@ Defines the namespace of focus controller.
 | --- | --- |
 | [AccessibilityHoverEvent](arkts-arkui-common-accessibilityhoverevent-i.md) | The accessibility hover action triggers this method invocation. |
 | [AlignRuleOption](arkts-arkui-common-alignruleoption-i.md) | Defines the align rule options of relative container. |
-| [AnimatableArithmetic](arkts-arkui-common-animatablearithmetic-i.md) | 该接口定义非number数据类型的动画运算规则。对非number类型的数据（如数组、结构体、颜色等）做动画，需要实现AnimatableArithmetic\&lt;T\&gt;接口中加法、减法、乘法和判断相等函数，使得该数据能参与动画的插值运算和识别该数据是否发生改变。即定义它们为实现了AnimatableArithmetic\&lt;T\&gt;接口的类型。 |
-| [AnimateParam](arkts-arkui-common-animateparam-i.md) | 动画效果相关参数。 |
+| [AnimatableArithmetic](arkts-arkui-common-animatablearithmetic-i.md) | The **AnimatableArithmetic** API defines the animation operation rules for non-number data types. To animate non-number data (such as arrays, structs,and colors), implement the addition, subtraction, multiplication, and equality judgment functions in the **AnimatableArithmetic\&lt;T\&gt;** API.In this way, the data can be involved in an interpolation operation of the animation and identify whether the data changes, that is, the non-number data is defined as the types that implement the **AnimatableArithmetic\&lt;T\&gt;** API. |
+| [AnimateParam](arkts-arkui-common-animateparam-i.md) | Defines the animate function params. |
 | [AreaChangeOptions](arkts-arkui-common-areachangeoptions-i.md) | Defines the options about AreaChangeEvent. |
 | [AsymmetricTransitionOption](arkts-arkui-common-asymmetrictransitionoption-i.md) | Defines the option of asymmetric transition. |
 | [AttributeModifier](arkts-arkui-common-attributemodifier-i.md) | Defines the attribute modifier. |
 | [AxisEvent](arkts-arkui-common-axisevent-i.md) | The axis event triggers this method invocation. |
-| [BackgroundBlurStyleOptions](arkts-arkui-common-backgroundblurstyleoptions-i.md) | 继承自[BlurStyleOptions](../arkts-components/arkts-arkui-blurstyleoptions-i.md/arkts-arkui-blurstyleoptions-i.md)。 |
-| [BackgroundBrightnessOptions](arkts-arkui-common-backgroundbrightnessoptions-i.md) | 背景亮度选项。 |
-| [BackgroundEffectOptions](arkts-arkui-common-backgroundeffectoptions-i.md) | 背景效果参数。 |
+| [BackgroundBlurStyleOptions](arkts-arkui-common-backgroundblurstyleoptions-i.md) | Defines the options of backgroundBlurStyle |
+| [BackgroundBrightnessOptions](arkts-arkui-common-backgroundbrightnessoptions-i.md) | Define BackgroundBrightness Options. |
+| [BackgroundEffectOptions](arkts-arkui-common-backgroundeffectoptions-i.md) | Defines the options of BackgroundEffect |
 | [BackgroundImageOptions](arkts-arkui-common-backgroundimageoptions-i.md) | Define the options for background image. |
 | [BackgroundOptions](arkts-arkui-common-backgroundoptions-i.md) | Defines background options. |
 | [BaseEvent](arkts-arkui-common-baseevent-i.md) | Defines the base event. |
-| [BindOptions](arkts-arkui-common-bindoptions-i.md) | 半模态、全模态的公共配置接口。 |
+| [BindOptions](arkts-arkui-common-bindoptions-i.md) | Overlay module options |
 | [Bindable](arkts-arkui-common-bindable-i.md) | Defines a bindable property |
 | [BlurOptions](arkts-arkui-common-bluroptions-i.md) | Defines the options of blur |
 | [BlurStyleOptions](arkts-arkui-common-blurstyleoptions-i.md) | Defines the options of blurStyle |
 | [BorderImageOption](arkts-arkui-common-borderimageoption-i.md) | Border image option |
 | [CaretOffset](arkts-arkui-common-caretoffset-i.md) | CaretOffset info. |
-| [ClickEffect](arkts-arkui-common-clickeffect-i.md) | 定义点击效果。 |
+| [ClickEffect](arkts-arkui-common-clickeffect-i.md) | Defines the click effect. |
 | [ClickEvent](arkts-arkui-common-clickevent-i.md) | The tap action triggers this method invocation. |
 | [CommonConfiguration](arkts-arkui-common-commonconfiguration-i.md) | Defines the common configuration. |
 | [CommonMethod](arkts-arkui-common-commonmethod-i.md) | CommonMethod |
 | [Configuration](arkts-arkui-common-configuration-i.md) | Defines the data type of the interface restriction. |
-| [ContentCoverOptions](arkts-arkui-common-contentcoveroptions-i.md) | 继承自[BindOptions](../arkts-components/arkts-arkui-bindoptions-i.md/arkts-arkui-bindoptions-i.md)。  全屏模态页面内容选项。 |
+| [ContentCoverOptions](arkts-arkui-common-contentcoveroptions-i.md) | Component content cover options |
 | [ContentModifier](arkts-arkui-common-contentmodifier-i.md) | Defines the content modifier. |
 | [ContextMenuAnimationOptions](arkts-arkui-common-contextmenuanimationoptions-i.md) | Defines the ContextMenu's preview animator options. |
 | [ContextMenuOptions](arkts-arkui-common-contextmenuoptions-i.md) | Defines the context menu options. |
@@ -84,7 +84,7 @@ Defines the namespace of focus controller.
 | [DateRange](arkts-arkui-common-daterange-i.md) | Defines a range of dates. |
 | [DismissContentCoverAction](arkts-arkui-common-dismisscontentcoveraction-i.md) | Component content cover dismiss |
 | [DismissPopupAction](arkts-arkui-common-dismisspopupaction-i.md) | Component popup dismiss |
-| [DismissSheetAction](arkts-arkui-common-dismisssheetaction-i.md) | 控制半模态的关闭。 |
+| [DismissSheetAction](arkts-arkui-common-dismisssheetaction-i.md) | Component sheet dismiss |
 | [DividerStyle](arkts-arkui-common-dividerstyle-i.md) | Provides an interface for the style of an divider including stroke width, color, start margin and end margin |
 | [DragEvent](arkts-arkui-common-dragevent-i.md) | DragEvent object description |
 | [DragInteractionOptions](arkts-arkui-common-draginteractionoptions-i.md) | Defines the drag options. |
@@ -95,7 +95,7 @@ Defines the namespace of focus controller.
 | [EdgeEffectOptions](arkts-arkui-common-edgeeffectoptions-i.md) | Define EdgeEffect Options. |
 | [EditModeOptions](arkts-arkui-common-editmodeoptions-i.md) | Define edit mode options. |
 | [EventTarget](arkts-arkui-common-eventtarget-i.md) | Defines the event target. |
-| [ExpectedFrameRateRange](arkts-arkui-common-expectedframeraterange-i.md) | 设置动画期望的帧率。 |
+| [ExpectedFrameRateRange](arkts-arkui-common-expectedframeraterange-i.md) | Interface for ExpectedFrameRateRange. |
 | [FadingEdgeOptions](arkts-arkui-common-fadingedgeoptions-i.md) | Defines the fadingEdge options. |
 | [FocusAxisEvent](arkts-arkui-common-focusaxisevent-i.md) | Focus axis event object description. |
 | [FocusMovement](arkts-arkui-common-focusmovement-i.md) | Defines the next focus item. |
@@ -114,8 +114,8 @@ Defines the namespace of focus controller.
 | [ItemDragEventHandler](arkts-arkui-common-itemdrageventhandler-i.md) | Define item drag event handler. |
 | [ItemDragInfo](arkts-arkui-common-itemdraginfo-i.md) | ItemDragInfo object description |
 | [KeyEvent](arkts-arkui-common-keyevent-i.md) | KeyEvent object description: |
-| [KeyframeAnimateParam](arkts-arkui-common-keyframeanimateparam-i.md) | 动画选项设置。 |
-| [KeyframeState](arkts-arkui-common-keyframestate-i.md) | 设置关键帧选项。 |
+| [KeyframeAnimateParam](arkts-arkui-common-keyframeanimateparam-i.md) | Defines the overall animation parameters of the keyframe animation. |
+| [KeyframeState](arkts-arkui-common-keyframestate-i.md) | Defines a keyframe state. |
 | [Layoutable](arkts-arkui-common-layoutable-i.md) | Provides the child component layout information. |
 | [LinearGradientBlurOptions](arkts-arkui-common-lineargradientbluroptions-i.md) | Linear Gradient Blur Interface |
 | [LinearGradientOptions](arkts-arkui-common-lineargradientoptions-i.md) | Defines the options of linear gradient. |
@@ -130,7 +130,7 @@ Defines the namespace of focus controller.
 | [MenuOptions](arkts-arkui-common-menuoptions-i.md) | Defines the menu options. |
 | [MotionBlurAnchor](arkts-arkui-common-motionbluranchor-i.md) | Define motion blur anchor coordinates. |
 | [MotionBlurOptions](arkts-arkui-common-motionbluroptions-i.md) | Define motion blur options. |
-| [MotionPathOptions](arkts-arkui-common-motionpathoptions-i.md) | 设置组件的运动路径。 |
+| [MotionPathOptions](arkts-arkui-common-motionpathoptions-i.md) | Defines the motion path options. |
 | [MouseEvent](arkts-arkui-common-mouseevent-i.md) | The mouse click action triggers this method invocation. |
 | [MouseHistoricalPoint](arkts-arkui-common-mousehistoricalpoint-i.md) | Defines the historical point information for mouse event. |
 | [MultiShadowOptions](arkts-arkui-common-multishadowoptions-i.md) | Defines the options of Shadow. |
@@ -154,20 +154,20 @@ Defines the namespace of focus controller.
 | [Rectangle](arkts-arkui-common-rectangle-i.md) | The data type used to describe a rectangular area. |
 | [ResponseRegion](arkts-arkui-common-responseregion-i.md) | Defines the response region interface. |
 | [ReuseOptions](arkts-arkui-common-reuseoptions-i.md) | Defining the reusable configuration parameters. |
-| [RotateAngleOptions](arkts-arkui-common-rotateangleoptions-i.md) | 指定各轴旋转角的旋转参数选项。 |
-| [RotateOptions](arkts-arkui-common-rotateoptions-i.md) | 组件旋转参数。 |
-| [ScaleOptions](arkts-arkui-common-scaleoptions-i.md) |  |
+| [RotateAngleOptions](arkts-arkui-common-rotateangleoptions-i.md) | The rotation parameters containing multi-axis angle information. |
+| [RotateOptions](arkts-arkui-common-rotateoptions-i.md) | The param of rotate. |
+| [ScaleOptions](arkts-arkui-common-scaleoptions-i.md) | Defines the options of scale. |
 | [SelectionOptions](arkts-arkui-common-selectionoptions-i.md) | Defines the selection options. |
 | [ShadowOptions](arkts-arkui-common-shadowoptions-i.md) | Define the options of shadow |
-| [SheetDismiss](arkts-arkui-common-sheetdismiss-i.md) | 控制半模态的关闭。 |
-| [SheetOptions](arkts-arkui-common-sheetoptions-i.md) | 继承自[BindOptions](../arkts-components/arkts-arkui-bindoptions-i.md/arkts-arkui-bindoptions-i.md)。  半模态页面内容选项。 |
-| [SheetTitleOptions](arkts-arkui-common-sheettitleoptions-i.md) | 半模态面板的标题。 |
+| [SheetDismiss](arkts-arkui-common-sheetdismiss-i.md) | Component sheet dismiss |
+| [SheetOptions](arkts-arkui-common-sheetoptions-i.md) | Component sheet options |
+| [SheetTitleOptions](arkts-arkui-common-sheettitleoptions-i.md) | Component sheet title options |
 | [SizeResult](arkts-arkui-common-sizeresult-i.md) | Provides the component size information. |
 | [SmartGestureShortcutOptions](arkts-arkui-common-smartgestureshortcutoptions-i.md) | Options for configuring smart gesture shortcuts. |
-| [SpringBackAction](arkts-arkui-common-springbackaction-i.md) | 控制半模态关闭前的回弹。 |
+| [SpringBackAction](arkts-arkui-common-springbackaction-i.md) | Defines sheet spring back action |
 | [StateStyles](arkts-arkui-common-statestyles-i.md) | Component State Styles. |
 | [SweepGradientOptions](arkts-arkui-common-sweepgradientoptions-i.md) | Defines the options of sweep gradient. |
-| [SystemAdaptiveOptions](arkts-arkui-common-systemadaptiveoptions-i.md) | 系统自适应调节参数，系统会默认开启根据芯片算力进行自适应效果调节的能力。 |
+| [SystemAdaptiveOptions](arkts-arkui-common-systemadaptiveoptions-i.md) | Defines the SystemAdaptiveOptions interface |
 | [TerminationInfo](arkts-arkui-common-terminationinfo-i.md) | Indicates the information when the provider of the embedded UI is terminated. |
 | [TextContentControllerOptions](arkts-arkui-common-textcontentcontrolleroptions-i.md) | Defines the span options of TextContentController. |
 | [TextDecorationOptions](arkts-arkui-common-textdecorationoptions-i.md) | Defines the options of decoration. |
@@ -180,13 +180,14 @@ Defines the namespace of focus controller.
 | [UIScrollableCommonEvent](arkts-arkui-common-uiscrollablecommonevent-i.md) | Defines a UIScrollableCommonEvent which is used to set event to target component. |
 | [VerticalAlignParam](arkts-arkui-common-verticalalignparam-i.md) | Defines the align rule options of relative container. |
 | [VisibleAreaEventOptions](arkts-arkui-common-visibleareaeventoptions-i.md) | Defines the options about VisibleAreaEvent. |
-| [sharedTransitionOptions](arkts-arkui-common-sharedtransitionoptions-i.md) | 共享元素转场动画参数。 |
+| [sharedTransitionOptions](arkts-arkui-common-sharedtransitionoptions-i.md) | Defines the shard transition function params. |
 
 <!--Del-->
 ### Interfaces（系统接口）
 
 | Name | Description |
 | --- | --- |
+| [BlurSnapshotOptions](arkts-arkui-common-blursnapshotoptions-i-sys.md) | Defines the options for blur snapshot optimization.Setting this object enables blur optimization. |
 | [CommonMethod](arkts-arkui-common-commonmethod-i-sys.md) | CommonMethod |
 | [ContextMenuOptions](arkts-arkui-common-contextmenuoptions-i-sys.md) | Defines the context menu options. |
 | [DepthColorRGB](arkts-arkui-common-depthcolorrgb-i-sys.md) | RGB color in depth space. |
@@ -196,10 +197,10 @@ Defines the namespace of focus controller.
 | [EdgeLightParams](arkts-arkui-common-edgelightparams-i-sys.md) | Defines the parameters of the edge light effect. |
 | [GeometryTransitionOptions](arkts-arkui-common-geometrytransitionoptions-i-sys.md) | Defines the options of geometry transition. |
 | [GravityCenterOptions](arkts-arkui-common-gravitycenteroptions-i-sys.md) | Defines the parameters of the center of gravity. |
-| [LightSource](arkts-arkui-common-lightsource-i-sys.md) | 一个组件支持添加1个光源。 |
+| [LightSource](arkts-arkui-common-lightsource-i-sys.md) | LightSource info |
 | [PixelMapMock](arkts-arkui-common-pixelmapmock-i-sys.md) | pixelmap object with release function. |
-| [PointLightStyle](arkts-arkui-common-pointlightstyle-i-sys.md) | 通过设置光源和被照亮的类型实现点光源照亮周围组件的UI效果。 |
-| [SheetOptions](arkts-arkui-common-sheetoptions-i-sys.md) | 继承自[BindOptions](../arkts-components/arkts-arkui-bindoptions-i.md/arkts-arkui-bindoptions-i.md)。  半模态页面内容选项。 |
+| [PointLightStyle](arkts-arkui-common-pointlightstyle-i-sys.md) | PointLightStyle info |
+| [SheetOptions](arkts-arkui-common-sheetoptions-i-sys.md) | Component sheet options |
 | [SpatialEffectParams](arkts-arkui-common-spatialeffectparams-i-sys.md) | Spatial effect params. |
 | [SpatialPosition](arkts-arkui-common-spatialposition-i-sys.md) | Spatial corner positions in 3D space. |
 <!--DelEnd-->
@@ -210,27 +211,27 @@ Defines the namespace of focus controller.
 | --- | --- |
 | [AccessibilityAction](arkts-arkui-common-accessibilityaction-e.md) | Enum for accessibility action type |
 | [AccessibilityActionInterceptResult](arkts-arkui-common-accessibilityactioninterceptresult-e.md) | Enum for the result of accessibility action intercept function |
-| [AccessibilityRoleType](arkts-arkui-common-accessibilityroletype-e.md) | Enum for accessibility component type |
-| [AccessibilitySamePageMode](arkts-arkui-common-accessibilitysamepagemode-e.md) | Defines the same page mode |
+| [AccessibilityRoleType](arkts-arkui-common-accessibilityroletype-e.md) | Enumerates the component role types used by screen readers. |
+| [AccessibilitySamePageMode](arkts-arkui-common-accessibilitysamepagemode-e.md) | Enumerates the same-page modes for cross-process embedded components and their host applications. |
 | [AdaptiveColor](arkts-arkui-common-adaptivecolor-e.md) | Defines adaptive color |
 | [AnchoredColorMode](arkts-arkui-common-anchoredcolormode-e.md) | enum color mode of pointing popup |
 | [AvailableLayoutArea](arkts-arkui-common-availablelayoutarea-e.md) | Defines the available layout area. |
 | [BlendApplyType](arkts-arkui-common-blendapplytype-e.md) | Enum for BlendApplyType.Indicate how to apply specified blend mode to the view's content. |
 | [BlendMode](arkts-arkui-common-blendmode-e.md) | Enum for BlendMode.Blend modes for compositing current component with overlapping content. Use overlapping content as dst, current component as src. |
-| [BlurStyle](arkts-arkui-common-blurstyle-e.md) | 模糊样式类型。 |
-| [BlurStyleActivePolicy](arkts-arkui-common-blurstyleactivepolicy-e.md) | 定义背景模糊激活策略。 |
+| [BlurStyle](arkts-arkui-common-blurstyle-e.md) | enum Blur style |
+| [BlurStyleActivePolicy](arkts-arkui-common-blurstyleactivepolicy-e.md) | Enumerates the policies for activating the blur style. |
 | [ChainStyle](arkts-arkui-common-chainstyle-e.md) | Enumerates the chain styles in relative container. |
 | [ContentClipMode](arkts-arkui-common-contentclipmode-e.md) | Enum of scrollable containers' content clip mode. |
-| [DismissReason](arkts-arkui-common-dismissreason-e.md) | 关闭原因类型。 |
+| [DismissReason](arkts-arkui-common-dismissreason-e.md) | Dismiss reason type. |
 | [DragBehavior](arkts-arkui-common-dragbehavior-e.md) | Enum for Drag Behavior.  &lt;strong&gt;NOTE&lt;/strong&gt;:&lt;br&gt;DragBehavior serves to inform you about the intended method of data handling,whether it's a copy or a move, but it does not actually dictate the real processing of the data. |
 | [DragPreviewMode](arkts-arkui-common-dragpreviewmode-e.md) | Defines the drag preview mode. |
 | [DragResult](arkts-arkui-common-dragresult-e.md) | Enum for Drag Result. |
 | [DraggingSizeChangeEffect](arkts-arkui-common-draggingsizechangeeffect-e.md) | Define drag start animation effect from drag preview to the handle drag image |
 | [EffectEdge](arkts-arkui-common-effectedge-e.md) | Enumerates the effective edge of the edge effect. |
 | [EffectType](arkts-arkui-common-effecttype-e.md) | Enum of using the effects template mode. |
-| [FinishCallbackType](arkts-arkui-common-finishcallbacktype-e.md) | 动画中定义onFinish回调的类型。 |
+| [FinishCallbackType](arkts-arkui-common-finishcallbacktype-e.md) | Enum for FinishCallbackType. |
 | [HapticFeedbackMode](arkts-arkui-common-hapticfeedbackmode-e.md) | Defines the menu haptic feedback mode. |
-| [HoverModeAreaType](arkts-arkui-common-hovermodeareatype-e.md) | 悬停态显示区域类型。 |
+| [HoverModeAreaType](arkts-arkui-common-hovermodeareatype-e.md) | Enumerates the type of area in hover mode. |
 | [KeyboardAvoidMode](arkts-arkui-common-keyboardavoidmode-e.md) | enum keyboard avoid mode |
 | [LayoutSafeAreaEdge](arkts-arkui-common-layoutsafeareaedge-e.md) | Define the edges for expanding the safe area in layout. |
 | [LayoutSafeAreaType](arkts-arkui-common-layoutsafeareatype-e.md) | Describe the types for expanding the safe area in layout. |
@@ -239,25 +240,25 @@ Defines the namespace of focus controller.
 | [MenuPolicy](arkts-arkui-common-menupolicy-e.md) | Define the menu pop-up policy |
 | [MenuPreviewMode](arkts-arkui-common-menupreviewmode-e.md) | Defines the menu preview mode. |
 | [ModalMode](arkts-arkui-common-modalmode-e.md) | Define the modal mode of menu. |
-| [ModalTransition](arkts-arkui-common-modaltransition-e.md) | 全屏模态转场方式枚举类型，用于设置全屏模态转场类型。 |
+| [ModalTransition](arkts-arkui-common-modaltransition-e.md) | Defines modal transition type. |
 | [OutlineStyle](arkts-arkui-common-outlinestyle-e.md) | Outline Style |
 | [PreDragStatus](arkts-arkui-common-predragstatus-e.md) | Defines the drag status before drag action. |
 | [PreviewScaleMode](arkts-arkui-common-previewscalemode-e.md) | Defines the scaling mode for custom preview of contextMenu. |
 | [RepeatMode](arkts-arkui-common-repeatmode-e.md) | Defines the Border Image Repeat Mode. |
 | [SafeAreaEdge](arkts-arkui-common-safeareaedge-e.md) | Enumerates the safe area edges. |
 | [SafeAreaType](arkts-arkui-common-safeareatype-e.md) | The types of expanded safe areas. |
-| [ScrollSizeMode](arkts-arkui-common-scrollsizemode-e.md) | 半模态面板上下滑动时的内容更新方式。 |
+| [ScrollSizeMode](arkts-arkui-common-scrollsizemode-e.md) | Define the scroll size mode of the sheet. |
 | [ShadowStyle](arkts-arkui-common-shadowstyle-e.md) | enum Shadow style |
 | [ShadowType](arkts-arkui-common-shadowtype-e.md) | Define the type of shadow |
-| [SheetKeyboardAvoidMode](arkts-arkui-common-sheetkeyboardavoidmode-e.md) | 半模态激活输入法时对软键盘的避让方式。 |
-| [SheetMode](arkts-arkui-common-sheetmode-e.md) | 半模态的显示层级模式。 |
-| [SheetSize](arkts-arkui-common-sheetsize-e.md) | 指定半模态的高度。 |
-| [SheetType](arkts-arkui-common-sheettype-e.md) | 半模态弹窗的样式。 |
+| [SheetKeyboardAvoidMode](arkts-arkui-common-sheetkeyboardavoidmode-e.md) | Define the mode of sheet how to avoid keyboard. |
+| [SheetMode](arkts-arkui-common-sheetmode-e.md) | Define the display mode of the sheet. |
+| [SheetSize](arkts-arkui-common-sheetsize-e.md) | Defines sheet size type. |
+| [SheetType](arkts-arkui-common-sheettype-e.md) | Defines the sheet type. |
 | [SourceTool](arkts-arkui-common-sourcetool-e.md) | Defines the event tool type. |
 | [SourceType](arkts-arkui-common-sourcetype-e.md) | Defines the event source type. |
 | [ThemeColorMode](arkts-arkui-common-themecolormode-e.md) | enum color mode |
 | [TouchTestStrategy](arkts-arkui-common-touchteststrategy-e.md) | Defines the touch test strategy object. |
-| [TransitionEdge](arkts-arkui-common-transitionedge-e.md) | 转场边缘类型。 |
+| [TransitionEdge](arkts-arkui-common-transitionedge-e.md) | Defines the Edge object. |
 
 <!--Del-->
 ### Enums（系统接口）
@@ -267,8 +268,9 @@ Defines the namespace of focus controller.
 | [BlendApplyType](arkts-arkui-common-blendapplytype-e-sys.md) | Enum for BlendApplyType.Indicate how to apply specified blend mode to the view's content. |
 | [DistortionMode](arkts-arkui-common-distortionmode-e-sys.md) | Enum for distortion animation mode. |
 | [DragAnimationType](arkts-arkui-common-draganimationtype-e-sys.md) | Enum for Drag Animation Type. |
-| [EdgeLightMode](arkts-arkui-common-edgelightmode-e-sys.md) | 边缘光效动画模式枚举。 |
-| [TransitionHierarchyStrategy](arkts-arkui-common-transitionhierarchystrategy-e-sys.md) | 共享元素动画过程中in/out组件层级位置移动策略枚举。  \| 名称 \| 值 \| 说明 \|  \| ------ \| - \| ---- \|  \| NONE \| 0 \| 无层级提拉，in/out组件保持原来的层级位置，受父组件scale、position影响。 \|  \| ADAPTIVE \| 1 \| 有层级提拉，in/out组件中相对低层级的组件被提拉至组件树上in/out组件相对高层级的位置上。  此模式还会导致被提拉的组件与父组件解绑，不受父组件scale、position影响。  例如in组件层级高于out组件，开启层级提拉后会在动画过程中将out组件从自己的父组件处解耦，并提拉至in组件的层级位置处，in组件层级位置不变。\| |
+| [EdgeLightMode](arkts-arkui-common-edgelightmode-e-sys.md) | Enum for edgeLight animation mode. |
+| [SpatialPositionMode](arkts-arkui-common-spatialpositionmode-e-sys.md) | Spatial position mode. Indicates the coordinate system used by the corner positions. |
+| [TransitionHierarchyStrategy](arkts-arkui-common-transitionhierarchystrategy-e-sys.md) | Source and target are two matched elements during the geometry transition.The animation starts at the source and ends at the target.TransitionHierarchyStrategy enumeration defines how levels of source and target elements would be changed in the hierarchy during the geometry transition. |
 <!--DelEnd-->
 
 ### Types
@@ -292,17 +294,17 @@ Defines the namespace of focus controller.
 | [DataLoadParams](arkts-arkui-dataloadparams-t.md) | Import the DataLoadParams type object for ui component. |
 | [DataSyncOptions](arkts-arkui-datasyncoptions-t.md) | Import the GetDataParams type object for ui component. |
 | [DateTimeOptions](arkts-arkui-datetimeoptions-t.md) | Defines the format for displaying dates and times. |
-| [DoubleLengthDetents](arkts-arkui-doublelengthdetents-t.md) | 定义了两个高度的挡位。 |
+| [DoubleLengthDetents](arkts-arkui-doublelengthdetents-t.md) | Defines the detent array of a two-length. |
 | [DragSpringLoadingConfiguration](arkts-arkui-dragspringloadingconfiguration-t.md) | The type for DragSpringLoadingConfiguration, see the detailed description in dragController. |
 | [DrawContext](arkts-arkui-drawcontext-t.md) | DrawContext. |
-| [Filter](arkts-arkui-filter-t.md) | 导入Filter类型对象。 |
+| [Filter](arkts-arkui-filter-t.md) | Filter |
 | [FractionStop](arkts-arkui-fractionstop-t.md) | Defines the segment of blur.The first element in the tuple means fraction.The range of this value is [0,1]. A value of 1 means opaque and 0 means completely transparent.The second element means the stop position.The range of this value is [0,1]. A value of 1 means region ending position and 0 means region starting position. |
 | [GestureCollectInterceptCallback](arkts-arkui-gesturecollectinterceptcallback-t.md) | Defines the callback type used in onGestureCollectIntercept. |
 | [GestureRecognizerJudgeBeginCallback](arkts-arkui-gesturerecognizerjudgebegincallback-t.md) | Defines the callback type used in onGestureRecognizerJudgeBegin. |
 | [HoverCallback](arkts-arkui-hovercallback-t.md) | Defines the callback type used in hover events.The value of isHover indicates whether the mouse is hovering over the component.The value of event contains information about HoverEvent. |
-| [ICurve](arkts-arkui-icurve-t.md) | 曲线对象。 |
+| [ICurve](arkts-arkui-icurve-t.md) | Interface for curve object. |
 | [InputEventListener](arkts-arkui-inputeventlistener-t.md) | Defines the input event listener callback function type.  Performance Warning: Do not perform time-consuming operations in the callback, otherwise it may cause the application to freeze.  The listener executes synchronously in the UI thread and will directly block the event processing flow.It is recommended to only perform simple judgments and calculations, avoiding:  - Synchronous I/O operations  - Complex data processing  - Network requests  - Massive log output |
-| [Matrix4Transit](arkts-arkui-matrix4transit-t.md) | 矩阵对象接口。 |
+| [Matrix4Transit](arkts-arkui-matrix4transit-t.md) | Interface for matrix object. |
 | [ModifierKeyStateGetter](arkts-arkui-modifierkeystategetter-t.md) | The modifier key state query function block. |
 | [NavDestinationInfo](arkts-arkui-navdestinationinfo-t.md) | The navigation destination information. |
 | [NavigationInfo](arkts-arkui-navigationinfo-t.md) | The navigation information. |
@@ -325,20 +327,20 @@ Defines the namespace of focus controller.
 | [RouterPageInfo](arkts-arkui-routerpageinfo-t.md) | The router page information. |
 | [ShouldBuiltInRecognizerParallelWithCallback](arkts-arkui-shouldbuiltinrecognizerparallelwithcallback-t.md) | Defines the callback type used in shouldBuiltInRecognizerParallelWith. |
 | [ShouldRecognizerParallelWithCallback](arkts-arkui-shouldrecognizerparallelwithcallback-t.md) | Defines the callback type used in shouldRecognizerParallelWith. |
-| [SingleLengthDetent](arkts-arkui-singlelengthdetent-t.md) | 定义了单个高度的挡位。 |
+| [SingleLengthDetent](arkts-arkui-singlelengthdetent-t.md) | Defines the detent array of a single length. |
 | [SizeChangeCallback](arkts-arkui-sizechangecallback-t.md) | Defines the callback type used in onSizeChange. |
 | [SpringLoadingContext](arkts-arkui-springloadingcontext-t.md) | The type for SpringLoadingContext, see the detailed description in dragController. |
 | [Summary](arkts-arkui-summary-t.md) | Import the Summary type object for ui component. |
 | [SystemUiMaterial](arkts-arkui-systemuimaterial-t.md) | SystemUiMaterial |
 | [TipsMessageType](arkts-arkui-tipsmessagetype-t.md) | Defines the TipsMessageType property with ResourceStr and StyledString. |
 | [TouchTestDoneCallback](arkts-arkui-touchtestdonecallback-t.md) | Defines the callback type used in onTouchTestDone.When the user touch down, the system performs hit test process to collect all gesture recognizers based on the press location, when the collection is completed, and before gesture begin to be recognizing,the callback is triggered, you can get all recognizer's information from this callback. |
-| [TransitionFinishCallback](arkts-arkui-transitionfinishcallback-t.md) | 组件转场动画的结束回调类型。 |
-| [TripleLengthDetents](arkts-arkui-triplelengthdetents-t.md) | 定义了三个高度的挡位。 |
+| [TransitionFinishCallback](arkts-arkui-transitionfinishcallback-t.md) | Defines the finish callback type used in transition. |
+| [TripleLengthDetents](arkts-arkui-triplelengthdetents-t.md) | Defines the detent array of a three-length. |
 | [UIContext](arkts-arkui-uicontext-t.md) | UIContext. |
 | [UnifiedData](arkts-arkui-unifieddata-t.md) | Import the UnifiedData type object for ui component. |
 | [UniformDataType](arkts-arkui-uniformdatatype-t.md) | Import the UniformDataType type object for ui component. |
 | [VisibleAreaChangeCallback](arkts-arkui-visibleareachangecallback-t.md) | Defines the callback type used in VisibleAreaChange events. |
-| [VisualEffect](arkts-arkui-visualeffect-t.md) | 导入VisualEffect类型对象。 |
+| [VisualEffect](arkts-arkui-visualeffect-t.md) | VisualEffect |
 
 <!--Del-->
 ### Types（系统接口）

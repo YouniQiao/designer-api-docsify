@@ -4,7 +4,7 @@
 export type Scale3 = Vec3
 ```
 
-3D缩放信息.
+3D scale information.
 
 **Since:** 12
 

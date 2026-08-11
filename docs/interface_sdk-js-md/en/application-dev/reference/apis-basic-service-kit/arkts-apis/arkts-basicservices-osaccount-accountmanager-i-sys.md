@@ -1,6 +1,6 @@
 # AccountManager
 
-系统账号管理类。
+Provides APIs for managing OS accounts.
 
 **Since:** 7
 
@@ -28,7 +28,7 @@ ArkTS-Sta:
 activateOsAccount(localId: int, callback: AsyncCallback<void>): void
 ```
 
-激活指定系统账号。使用callback异步回调。
+Activates an OS account. This API uses an asynchronous callback to return the result.
 
 **Since:** 7
 
@@ -46,45 +46,22 @@ activateOsAccount(localId: int, callback: AsyncCallback<void>): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| localId | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | 系统账号ID。 |
-| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | 回调函数。当账号激活成功时，err为null，否则为错误对象。 |
+| localId | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | ID of the target OS account. |
+| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **null**. Otherwise, **err** is an error object. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 12300010 | Service busy. Possible causes: The target account is being operated.<br>**Applicable version:** 12 and later |
-| 12300009 | Account has been activated.<br>**Applicable version:** 7 - 11 |
-| 12300008 | Restricted Account. |
-| 12300003 | Account not found. |
-| 201 | Permission denied. |
-| 12300002 | Invalid localId. |
-| 202 | Not system application. |
-| 12300001 | The system service works abnormally. |
-| 12300016 | The number of logged in accounts reaches the upper limit.<br>**Applicable version:** 12 and later |
-
-## Examples
-
-Activate OS account 100.
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let accountManager: osAccount.AccountManager = osAccount.getAccountManager();
-let localId: number = 100;
-try {
-  accountManager.activateOsAccount(localId, (err: BusinessError)=>{
-    if (err) {
-      console.error(`activateOsAccount failed, code is ${err.code}, message is ${err.message}`);
-    } else {
-      console.info('activateOsAccount successfully');
-    }
-  });
-} catch (e) {
-  const err = e as BusinessError;
-  console.error(`activateOsAccount failed, code is ${err.code}, message is ${err.message}`);
-}
-```
+| [12300010](../../apis-basic-services-kit/errorcode-account.md#12300010-account-service-not-respond) | Service busy. Possible causes: The target account is being operated.<br>**Applicable version:** 12 and later |
+| [12300009](../../apis-basic-services-kit/errorcode-account.md#12300009-account-already-activated) | Account has been activated.<br>**Applicable version:** 7 - 11 |
+| [12300008](../../apis-basic-services-kit/errorcode-account.md#12300008-restricted-account) | Restricted Account. |
+| [12300003](../../apis-basic-services-kit/errorcode-account.md#12300003-account-not-found) | Account not found. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
+| [12300002](../../apis-basic-services-kit/errorcode-account.md#12300002-invalid-parameter) | Invalid localId. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system application. |
+| [12300001](../../apis-basic-services-kit/errorcode-account.md#12300001-system-service-abnormal) | The system service works abnormally. |
+| [12300016](../../apis-basic-services-kit/errorcode-account.md#12300016-login-accounts-reached-the-limit) | The number of logged in accounts reaches the upper limit.<br>**Applicable version:** 12 and later |
 
 ## activateOsAccount
 
@@ -98,7 +75,7 @@ ArkTS-Sta:
 activateOsAccount(localId: int): Promise<void>
 ```
 
-激活指定系统账号。使用Promise异步回调。
+Activates an OS account. This API uses a promise to return the result.
 
 **Since:** 7
 
@@ -116,48 +93,27 @@ activateOsAccount(localId: int): Promise<void>
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| localId | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | 系统账号ID。 |
+| localId | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | ID of the target OS account. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise对象，无返回结果的Promise对象。 |
+| Promise&lt;void&gt; | Promise that returns no value. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 12300010 | Service busy. Possible causes: The target account is being operated.<br>**Applicable version:** 12 and later |
-| 12300009 | Account has been activated.<br>**Applicable version:** 7 - 11 |
-| 12300008 | Restricted Account. |
-| 12300003 | Account not found. |
-| 201 | Permission denied. |
-| 12300002 | Invalid localId. |
-| 202 | Not system application. |
-| 12300001 | The system service works abnormally. |
-| 12300016 | The number of logged in accounts reaches the upper limit.<br>**Applicable version:** 12 and later |
-
-## Examples
-
-Activate OS account 100.
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let accountManager: osAccount.AccountManager = osAccount.getAccountManager();
-let localId: number = 100;
-try {
-  accountManager.activateOsAccount(localId).then(() => {
-    console.info('activateOsAccount successfully');
-  }).catch((err: BusinessError) => {
-    console.error(`activateOsAccount failed, code is ${err.code}, message is ${err.message}`);
-  });
-} catch (e) {
-  const err = e as BusinessError;
-  console.error(`activateOsAccount exception: code is ${err.code}, message is ${err.message}`);
-}
-```
+| [12300010](../../apis-basic-services-kit/errorcode-account.md#12300010-account-service-not-respond) | Service busy. Possible causes: The target account is being operated.<br>**Applicable version:** 12 and later |
+| [12300009](../../apis-basic-services-kit/errorcode-account.md#12300009-account-already-activated) | Account has been activated.<br>**Applicable version:** 7 - 11 |
+| [12300008](../../apis-basic-services-kit/errorcode-account.md#12300008-restricted-account) | Restricted Account. |
+| [12300003](../../apis-basic-services-kit/errorcode-account.md#12300003-account-not-found) | Account not found. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
+| [12300002](../../apis-basic-services-kit/errorcode-account.md#12300002-invalid-parameter) | Invalid localId. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system application. |
+| [12300001](../../apis-basic-services-kit/errorcode-account.md#12300001-system-service-abnormal) | The system service works abnormally. |
+| [12300016](../../apis-basic-services-kit/errorcode-account.md#12300016-login-accounts-reached-the-limit) | The number of logged in accounts reaches the upper limit.<br>**Applicable version:** 12 and later |
 
 ## activateOsAccount
 
@@ -171,7 +127,7 @@ ArkTS-Sta:
 activateOsAccount(localId: int, displayId: long): Promise<void>
 ```
 
-在指定逻辑屏激活（前台启动或切换）目标系统账号。使用Promise异步回调。当前不支持跨逻辑屏激活，即在指定逻辑屏上激活另一个已在逻辑屏前台运行的系统账号。
+Activates (Starts on the foreground or switches to) the target OS account on the specified logical display.This API uses a promise to return the result.Currently, cross-logical-display activation is not supported. That is, you cannot activate an OS account that is already running on the foreground of another logical display on the specified logical display.
 
 **Since:** 23
 
@@ -189,51 +145,29 @@ activateOsAccount(localId: int, displayId: long): Promise<void>
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| localId | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | 系统账号ID。 |
-| displayId | ArkTS-Dyn: number  <br>ArkTS-Sta：long | Yes | 逻辑屏ID。 |
+| localId | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | ID of the target OS account. |
+| displayId | ArkTS-Dyn: number  <br>ArkTS-Sta：long | Yes | Logical display ID. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise对象，无返回结果。 |
+| Promise&lt;void&gt; | Promise that returns no value. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 801 | Capability not supported. |
-| 12300010 | Service busy. Possible causes: The target account is being operated. |
-| 12300008 | Restricted Account. |
-| 12300003 | Account not found. |
-| 12300019 | Cross-display activation not supported. |
-| 201 | Permission denied. |
-| 12300018 | Display not found. |
-| 202 | Not system application. |
-| 12300001 | The system service works abnormally. |
-| 12300016 | The number of logged in accounts reaches the upper limit. |
-
-## Examples
-
-Activate the OS account 100 on the logical screen 0.
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let accountManager: osAccount.AccountManager = osAccount.getAccountManager();
-let localId: number = 100;
-let displayId: number = 0;
-try {
-  accountManager.activateOsAccount(localId, displayId).then(() => {
-    console.info('activateOsAccount with displayId successfully');
-  }).catch((err: BusinessError) => {
-    console.error(`activateOsAccount with displayId failed, err: ${err.code} ${err.message}`);
-  });
-} catch (e) {
-  const err = e as BusinessError;
-  console.error(`activateOsAccount with displayId exception: ${err.code} ${err.message}`);
-}
-```
+| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. |
+| [12300010](../../apis-basic-services-kit/errorcode-account.md#12300010-account-service-not-respond) | Service busy. Possible causes: The target account is being operated. |
+| [12300008](../../apis-basic-services-kit/errorcode-account.md#12300008-restricted-account) | Restricted Account. |
+| [12300003](../../apis-basic-services-kit/errorcode-account.md#12300003-account-not-found) | Account not found. |
+| [12300019](../../apis-basic-services-kit/errorcode-account.md#12300019-crossdisplay-activation-not-supported) | Cross-display activation not supported. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
+| [12300018](../../apis-basic-services-kit/errorcode-account.md#12300018-logical-display-not-found) | Display not found. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system application. |
+| [12300001](../../apis-basic-services-kit/errorcode-account.md#12300001-system-service-abnormal) | The system service works abnormally. |
+| [12300016](../../apis-basic-services-kit/errorcode-account.md#12300016-login-accounts-reached-the-limit) | The number of logged in accounts reaches the upper limit. |
 
 ## bindDomainAccount
 
@@ -247,7 +181,7 @@ ArkTS-Sta:
 bindDomainAccount(localId: int, domainAccountInfo: DomainAccountInfo): Promise<void>
 ```
 
-在指定系统账号上绑定指定域账号。使用Promise异步回调。
+Binds a domain account to an OS account. This API uses a promise to return the result.
 
 **Since:** 20
 
@@ -265,29 +199,29 @@ bindDomainAccount(localId: int, domainAccountInfo: DomainAccountInfo): Promise<v
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| localId | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | 要查询的系统账号ID。 |
-| domainAccountInfo | [DomainAccountInfo](arkts-basicservices-osaccount-domainaccountinfo-i-sys.md) | Yes | 域账号信息。 |
+| localId | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | ID of the target OS account. |
+| domainAccountInfo | [DomainAccountInfo](arkts-basicservices-osaccount-domainaccountinfo-i-sys.md) | Yes | Domain account information. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise对象，无返回结果。 |
+| Promise&lt;void&gt; | Promise that returns no value. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 801 | Capability not supported. |
-| 12300010 | Service busy. Possible causes: The target OS account or domain account is being operated. |
-| 12300008 | Restricted OS account. Possible causes: The OS account cannot be bound. |
-| 12300003 | The OS account not found. |
-| 201 | Permission denied. |
-| 12300002 | Invalid domain account information. |
-| 202 | Not system application. |
-| 12300001 | The system service works abnormally. |
-| 12300022 | The domain account is already bound. |
-| 12300021 | The OS account is already bound. |
+| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. |
+| [12300010](../../apis-basic-services-kit/errorcode-account.md#12300010-account-service-not-respond) | Service busy. Possible causes: The target OS account or domain account is being operated. |
+| [12300008](../../apis-basic-services-kit/errorcode-account.md#12300008-restricted-account) | Restricted OS account. Possible causes: The OS account cannot be bound. |
+| [12300003](../../apis-basic-services-kit/errorcode-account.md#12300003-account-not-found) | The OS account not found. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
+| [12300002](../../apis-basic-services-kit/errorcode-account.md#12300002-invalid-parameter) | Invalid domain account information. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system application. |
+| [12300001](../../apis-basic-services-kit/errorcode-account.md#12300001-system-service-abnormal) | The system service works abnormally. |
+| [12300022](../../apis-basic-services-kit/errorcode-account.md#12300022-domain-account-already-bound) | The domain account is already bound. |
+| [12300021](../../apis-basic-services-kit/errorcode-account.md#12300021-os-account-already-bound) | The OS account is already bound. |
 
 ## Examples
 
@@ -306,7 +240,7 @@ try {
   });
 } catch (e) {
   const err = e as BusinessError;
-  console.error(`bindDomainAccount error, errCode=${err.code}, errMsg=${err.message}`);
+  console.error(`bindDomainAccount error, errCode=${error.code}, errMsg=${error.message}`);
 }
 ```
 
@@ -316,7 +250,7 @@ try {
 createOsAccount(localName: string, type: OsAccountType, callback: AsyncCallback<OsAccountInfo>): void
 ```
 
-创建一个系统账号。使用callback异步回调。
+Creates an OS account. This API uses an asynchronous callback to return the result.
 
 **Since:** 7
 
@@ -334,24 +268,24 @@ createOsAccount(localName: string, type: OsAccountType, callback: AsyncCallback<
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| localName | string | Yes | 创建的系统账号的名称。 |
-| type | [OsAccountType](arkts-basicservices-osaccount-osaccounttype-e-sys.md) | Yes | 创建的系统账号的类型。 |
-| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;OsAccountInfo&gt; | Yes | 回调函数。如果创建成功，err为null，data为新创建的系统账号的信息；否则为错误对象。 |
+| localName | string | Yes | Name of the OS account to create. |
+| type | [OsAccountType](arkts-basicservices-osaccount-osaccounttype-e-sys.md) | Yes | Type of the OS account to create. |
+| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;OsAccountInfo&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **null** and **data** is the created OS account. Otherwise, **err** is an error object. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 201 | Permission denied. |
-| 12300002 | Invalid localName or type. |
-| 202 | Not system application. |
-| 12300001 | The system service works abnormally. |
-| 204 | Access denied due to user access control policy. Possible causes: 1. The operation is restricted by the OS-account constraint. 2. The required privilege for the operation has not been granted.<br>**Applicable version:** 24 and later |
-| 12300007 | The number of accounts has reached the upper limit. |
-| 12300023 | The number of accounts of the specified type has reached the upper limit.<br>**Applicable version:** 24 and later |
-| 12300006 | Unsupported account type. |
-| 12300005 | Multi-user not supported. |
-| 12300004 | Local name already exists.<br>**Applicable version:** 12 and later |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
+| [12300002](../../apis-basic-services-kit/errorcode-account.md#12300002-invalid-parameter) | Invalid localName or type. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system application. |
+| [12300001](../../apis-basic-services-kit/errorcode-account.md#12300001-system-service-abnormal) | The system service works abnormally. |
+| [204](../../errorcode-universal.md#204-access-denied-by-user-access-control-policy) | Access denied due to user access control policy. Possible causes: 1. The operation is restricted by the OS-account constraint. 2. The required privilege for the operation has not been granted.<br>**Applicable version:** 24 and later |
+| [12300007](../../apis-basic-services-kit/errorcode-account.md#12300007-account-count-reached-the-limit) | The number of accounts has reached the upper limit. |
+| [12300023](../../apis-basic-services-kit/errorcode-account.md#12300023-accounts-of-a-specified-type-reached-the-limit) | The number of accounts of the specified type has reached the upper limit.<br>**Applicable version:** 24 and later |
+| [12300006](../../apis-basic-services-kit/errorcode-account.md#12300006-unsupported-account-type) | Unsupported account type. |
+| [12300005](../../apis-basic-services-kit/errorcode-account.md#12300005-multiple-users-not-supported) | Multi-user not supported. |
+| [12300004](../../apis-basic-services-kit/errorcode-account.md#12300004-account-already-exists) | Local name already exists.<br>**Applicable version:** 12 and later |
 
 ## Examples
 
@@ -380,7 +314,7 @@ try {
 createOsAccount(localName: string, type: OsAccountType, options?: CreateOsAccountOptions): Promise<OsAccountInfo>
 ```
 
-创建一个系统账号。使用Promise异步回调。
+Creates an OS account. This API uses a promise to return the result.
 
 **Since:** 7
 
@@ -398,31 +332,31 @@ createOsAccount(localName: string, type: OsAccountType, options?: CreateOsAccoun
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| localName | string | Yes | 创建的系统账号的名称。 |
-| type | [OsAccountType](arkts-basicservices-osaccount-osaccounttype-e-sys.md) | Yes | 创建的系统账号的类型。 |
-| options | [CreateOsAccountOptions](arkts-basicservices-osaccount-createosaccountoptions-i-sys.md) | No | 创建系统账号的选项，默认为空。&lt;br/&gt;从API version 12开始支持该可选参数。 |
+| localName | string | Yes | Name of the OS account to create. |
+| type | [OsAccountType](arkts-basicservices-osaccount-osaccounttype-e-sys.md) | Yes | Type of the OS account to create. |
+| options | [CreateOsAccountOptions](arkts-basicservices-osaccount-createosaccountoptions-i-sys.md) | No | Options for creating an OS account. By default, this parameter is left blank.&lt;br&gt;This parameter is supported since API version 12.<br>**Since:** 12 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;OsAccountInfo&gt; | Promise对象，返回新创建的系统账号的信息。 |
+| Promise&lt;OsAccountInfo&gt; | Promise used to return the information about the created OS account. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 12300015 | The short name already exists.<br>**Applicable version:** 12 and later |
-| 201 | Permission denied. |
-| 12300002 | Invalid localName, type or options. |
-| 202 | Not system application. |
-| 12300001 | The system service works abnormally. |
-| 204 | Access denied due to user access control policy. Possible causes: 1. The operation is restricted by the OS-account constraint. 2. The required privilege for the operation has not been granted.<br>**Applicable version:** 24 and later |
-| 12300007 | The number of accounts has reached the upper limit. |
-| 12300023 | The number of accounts of the specified type has reached the upper limit.<br>**Applicable version:** 24 and later |
-| 12300006 | Unsupported account type. |
-| 12300005 | Multi-user not supported. |
-| 12300004 | Local name already exists.<br>**Applicable version:** 12 and later |
+| [12300015](../../apis-basic-services-kit/errorcode-account.md#12300015-duplicate-short-name) | The short name already exists.<br>**Applicable version:** 12 and later |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
+| [12300002](../../apis-basic-services-kit/errorcode-account.md#12300002-invalid-parameter) | Invalid localName, type or options. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system application. |
+| [12300001](../../apis-basic-services-kit/errorcode-account.md#12300001-system-service-abnormal) | The system service works abnormally. |
+| [204](../../errorcode-universal.md#204-access-denied-by-user-access-control-policy) | Access denied due to user access control policy. Possible causes: 1. The operation is restricted by the OS-account constraint. 2. The required privilege for the operation has not been granted.<br>**Applicable version:** 24 and later |
+| [12300007](../../apis-basic-services-kit/errorcode-account.md#12300007-account-count-reached-the-limit) | The number of accounts has reached the upper limit. |
+| [12300023](../../apis-basic-services-kit/errorcode-account.md#12300023-accounts-of-a-specified-type-reached-the-limit) | The number of accounts of the specified type has reached the upper limit.<br>**Applicable version:** 24 and later |
+| [12300006](../../apis-basic-services-kit/errorcode-account.md#12300006-unsupported-account-type) | Unsupported account type. |
+| [12300005](../../apis-basic-services-kit/errorcode-account.md#12300005-multiple-users-not-supported) | Multi-user not supported. |
+| [12300004](../../apis-basic-services-kit/errorcode-account.md#12300004-account-already-exists) | Local name already exists.<br>**Applicable version:** 12 and later |
 
 ## Examples
 
@@ -458,7 +392,7 @@ createOsAccountForDomain(
     ): void
 ```
 
-根据域账号信息，创建一个系统账号并将其与域账号关联。使用callback异步回调。
+Creates an OS account and associates it with the specified domain account. This API uses an asynchronous callback to return the result.
 
 **Since:** 8
 
@@ -476,25 +410,25 @@ createOsAccountForDomain(
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | [OsAccountType](arkts-basicservices-osaccount-osaccounttype-e-sys.md) | Yes | 创建的系统账号的类型。 |
-| domainInfo | [DomainAccountInfo](arkts-basicservices-osaccount-domainaccountinfo-i-sys.md) | Yes | 域账号信息。 |
-| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;OsAccountInfo&gt; | Yes | 回调函数。如果创建成功，err为null，data为新创建的系统账号的信息；否则为错误对象。 |
+| type | [OsAccountType](arkts-basicservices-osaccount-osaccounttype-e-sys.md) | Yes | Type of the OS account to create. |
+| domainInfo | [DomainAccountInfo](arkts-basicservices-osaccount-domainaccountinfo-i-sys.md) | Yes | Domain account information. |
+| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;OsAccountInfo&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **null** and **data** is the created OS account. Otherwise, **err** is an error object. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 801 | Capability not supported.<br>**Applicable version:** 12 and later |
-| 201 | Permission denied. |
-| 12300002 | Invalid type or domainInfo. |
-| 202 | Not system application. |
-| 12300001 | The system service works abnormally. |
-| 204 | Access denied due to user access control policy. Possible causes: 1. The operation is restricted by the OS-account constraint. 2. The required privilege for the operation has not been granted.<br>**Applicable version:** 24 and later |
-| 12300007 | The number of accounts has reached the upper limit. |
-| 12300023 | The number of accounts of the specified type has reached the upper limit.<br>**Applicable version:** 24 and later |
-| 12300006 | Unsupported account type. |
-| 12300005 | Multi-user not supported. |
-| 12300004 | Account already exists. |
+| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported.<br>**Applicable version:** 12 and later |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
+| [12300002](../../apis-basic-services-kit/errorcode-account.md#12300002-invalid-parameter) | Invalid type or domainInfo. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system application. |
+| [12300001](../../apis-basic-services-kit/errorcode-account.md#12300001-system-service-abnormal) | The system service works abnormally. |
+| [204](../../errorcode-universal.md#204-access-denied-by-user-access-control-policy) | Access denied due to user access control policy. Possible causes: 1. The operation is restricted by the OS-account constraint. 2. The required privilege for the operation has not been granted.<br>**Applicable version:** 24 and later |
+| [12300007](../../apis-basic-services-kit/errorcode-account.md#12300007-account-count-reached-the-limit) | The number of accounts has reached the upper limit. |
+| [12300023](../../apis-basic-services-kit/errorcode-account.md#12300023-accounts-of-a-specified-type-reached-the-limit) | The number of accounts of the specified type has reached the upper limit.<br>**Applicable version:** 24 and later |
+| [12300006](../../apis-basic-services-kit/errorcode-account.md#12300006-unsupported-account-type) | Unsupported account type. |
+| [12300005](../../apis-basic-services-kit/errorcode-account.md#12300005-multiple-users-not-supported) | Multi-user not supported. |
+| [12300004](../../apis-basic-services-kit/errorcode-account.md#12300004-account-already-exists) | Account already exists. |
 
 ## Examples
 
@@ -525,7 +459,7 @@ try {
 createOsAccountForDomain(type: OsAccountType, domainInfo: DomainAccountInfo, options?: CreateOsAccountForDomainOptions): Promise<OsAccountInfo>
 ```
 
-根据传入的域账号信息，创建与其关联的系统账号。使用Promise异步回调。
+Creates an OS account and associates it with the specified domain account. This API uses a promise to return the result.
 
 **Since:** 8
 
@@ -543,32 +477,32 @@ createOsAccountForDomain(type: OsAccountType, domainInfo: DomainAccountInfo, opt
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | [OsAccountType](arkts-basicservices-osaccount-osaccounttype-e-sys.md) | Yes | 创建的系统账号的类型。 |
-| domainInfo | [DomainAccountInfo](arkts-basicservices-osaccount-domainaccountinfo-i-sys.md) | Yes | 域账号信息。 |
-| options | [CreateOsAccountForDomainOptions](arkts-basicservices-osaccount-createosaccountfordomainoptions-i.md) | No | 创建账号的可选参数，默认为空。 &lt;br/&gt;从API version 12开始支持该可选参数。 |
+| type | [OsAccountType](arkts-basicservices-osaccount-osaccounttype-e-sys.md) | Yes | Type of the OS account to create. |
+| domainInfo | [DomainAccountInfo](arkts-basicservices-osaccount-domainaccountinfo-i-sys.md) | Yes | Domain account information. |
+| options | [CreateOsAccountForDomainOptions](arkts-basicservices-osaccount-createosaccountfordomainoptions-i.md) | No | Optional parameters for creating the account. By default, this parameter is left blank.&lt;br&gt;This parameter is supported since API version 12.<br>**Since:** 12 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;OsAccountInfo&gt; | Promise对象，返回新创建的系统账号的信息。 |
+| Promise&lt;OsAccountInfo&gt; | Promise used to return the information about the created OS account. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 801 | Capability not supported.<br>**Applicable version:** 12 and later |
-| 12300015 | The short name already exists.<br>**Applicable version:** 12 and later |
-| 201 | Permission denied. |
-| 12300002 | Invalid type, domainInfo or options. |
-| 202 | Not system application. |
-| 12300001 | The system service works abnormally. |
-| 204 | Access denied due to user access control policy. Possible causes: 1. The operation is restricted by the OS-account constraint. 2. The required privilege for the operation has not been granted.<br>**Applicable version:** 24 and later |
-| 12300007 | The number of accounts has reached the upper limit. |
-| 12300023 | The number of accounts of the specified type has reached the upper limit.<br>**Applicable version:** 24 and later |
-| 12300006 | Unsupported account type. |
-| 12300005 | Multi-user not supported. |
-| 12300004 | Account already exists. |
+| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported.<br>**Applicable version:** 12 and later |
+| [12300015](../../apis-basic-services-kit/errorcode-account.md#12300015-duplicate-short-name) | The short name already exists.<br>**Applicable version:** 12 and later |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
+| [12300002](../../apis-basic-services-kit/errorcode-account.md#12300002-invalid-parameter) | Invalid type, domainInfo or options. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system application. |
+| [12300001](../../apis-basic-services-kit/errorcode-account.md#12300001-system-service-abnormal) | The system service works abnormally. |
+| [204](../../errorcode-universal.md#204-access-denied-by-user-access-control-policy) | Access denied due to user access control policy. Possible causes: 1. The operation is restricted by the OS-account constraint. 2. The required privilege for the operation has not been granted.<br>**Applicable version:** 24 and later |
+| [12300007](../../apis-basic-services-kit/errorcode-account.md#12300007-account-count-reached-the-limit) | The number of accounts has reached the upper limit. |
+| [12300023](../../apis-basic-services-kit/errorcode-account.md#12300023-accounts-of-a-specified-type-reached-the-limit) | The number of accounts of the specified type has reached the upper limit.<br>**Applicable version:** 24 and later |
+| [12300006](../../apis-basic-services-kit/errorcode-account.md#12300006-unsupported-account-type) | Unsupported account type. |
+| [12300005](../../apis-basic-services-kit/errorcode-account.md#12300005-multiple-users-not-supported) | Multi-user not supported. |
+| [12300004](../../apis-basic-services-kit/errorcode-account.md#12300004-account-already-exists) | Account already exists. |
 
 ## Examples
 
@@ -606,7 +540,7 @@ ArkTS-Sta:
 deactivateOsAccount(localId: int): Promise<void>
 ```
 
-注销（退出登录）指定系统账号。使用Promise异步回调。
+Deactivates (logs out of) an OS account. This API uses a promise to return the result.
 
 **Since:** 12
 
@@ -624,46 +558,25 @@ deactivateOsAccount(localId: int): Promise<void>
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| localId | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | 系统账号ID。 |
+| localId | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | ID of the target OS account. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise对象，无返回结果的Promise对象。 |
+| Promise&lt;void&gt; | Promise that returns no value. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameter types. |
-| 12300010 | Service busy. Possible causes: The target account is being operated. |
-| 12300008 | Restricted Account. |
-| 12300003 | Account not found. |
-| 201 | Permission denied. |
-| 202 | Not system application. |
-| 12300001 | The system service works abnormally. |
-
-## Examples
-
-Deactivate OS account 100.
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let accountManager: osAccount.AccountManager = osAccount.getAccountManager();
-let localId: number = 100;
-try {
-  accountManager.deactivateOsAccount(localId).then(() => {
-    console.info('deactivateOsAccount successfully');
-  }).catch((err: BusinessError) => {
-    console.error(`deactivateOsAccount failed, code is ${err.code}, message is ${err.message}`);
-  });
-} catch (e) {
-  const err = e as BusinessError;
-  console.error(`deactivateOsAccount exception: code is ${err.code}, message is ${err.message}`);
-}
-```
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameter types. |
+| [12300010](../../apis-basic-services-kit/errorcode-account.md#12300010-account-service-not-respond) | Service busy. Possible causes: The target account is being operated. |
+| [12300008](../../apis-basic-services-kit/errorcode-account.md#12300008-restricted-account) | Restricted Account. |
+| [12300003](../../apis-basic-services-kit/errorcode-account.md#12300003-account-not-found) | Account not found. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system application. |
+| [12300001](../../apis-basic-services-kit/errorcode-account.md#12300001-system-service-abnormal) | The system service works abnormally. |
 
 ## getBundleIdForUid
 
@@ -677,7 +590,7 @@ ArkTS-Sta:
 getBundleIdForUid(uid: int, callback: AsyncCallback<int>): void
 ```
 
-通过uid查询对应的bundleId。使用callback异步回调。
+Obtains the bundle ID based on the specified UID. This API uses an asynchronous callback to return the result.
 
 **Since:** 9
 
@@ -693,17 +606,17 @@ getBundleIdForUid(uid: int, callback: AsyncCallback<int>): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| uid | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | 进程uid。 |
-| callback | ArkTS-Dyn: [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;number&gt;  <br>ArkTS-Sta：[AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;int&gt; | Yes | 回调函数。如果查询成功，err为null，data为与uid对应的bundleId；否则为错误对象。 |
+| uid | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | Process UID. |
+| callback | ArkTS-Dyn: [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;number&gt;  <br>ArkTS-Sta：[AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;int&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **null** and **data** is the bundle ID obtained. Otherwise, **data** is an error object. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameter types. |
-| 12300002 | Invalid uid. |
-| 202 | Not system application. |
-| 12300001 | The system service works abnormally. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameter types. |
+| [12300002](../../apis-basic-services-kit/errorcode-account.md#12300002-invalid-parameter) | Invalid uid. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system application. |
+| [12300001](../../apis-basic-services-kit/errorcode-account.md#12300001-system-service-abnormal) | The system service works abnormally. |
 
 ## Examples
 
@@ -711,7 +624,6 @@ getBundleIdForUid(uid: int, callback: AsyncCallback<int>): void
 import { BusinessError } from '@kit.BasicServicesKit';
 
 let accountManager: osAccount.AccountManager = osAccount.getAccountManager();
-// uid indicates the application process UID, which can be obtained from the application information.
 let testUid: number = 1000000;
 try {
   accountManager.getBundleIdForUid(testUid, (err: BusinessError, bundleId: number) => {
@@ -739,7 +651,7 @@ ArkTS-Sta:
 getBundleIdForUid(uid: int): Promise<int>
 ```
 
-通过uid查询对应的bundleId。使用Promise异步回调。
+Obtains the bundle ID based on the specified UID. This API uses a promise to return the result.
 
 **Since:** 9
 
@@ -755,22 +667,22 @@ getBundleIdForUid(uid: int): Promise<int>
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| uid | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | 进程uid。 |
+| uid | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | Process UID. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| ArkTS-Dyn: Promise&lt;number&gt;  <br>ArkTS-Sta：Promise&lt;int&gt; | Promise对象，返回与uid对应的bundleId。 |
+| ArkTS-Dyn: Promise&lt;number&gt;  <br>ArkTS-Sta：Promise&lt;int&gt; | Promise used to return the bundle ID obtained. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameter types. |
-| 12300002 | Invalid uid. |
-| 202 | Not system application. |
-| 12300001 | The system service works abnormally. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameter types. |
+| [12300002](../../apis-basic-services-kit/errorcode-account.md#12300002-invalid-parameter) | Invalid uid. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system application. |
+| [12300001](../../apis-basic-services-kit/errorcode-account.md#12300001-system-service-abnormal) | The system service works abnormally. |
 
 ## Examples
 
@@ -803,7 +715,7 @@ ArkTS-Sta:
 getBundleIdForUidSync(uid: int): int
 ```
 
-通过uid查询对应的bundleId。使用同步方式返回结果。
+Obtains the bundle ID based on the specified UID. The API returns the result synchronously.
 
 **Since:** 10
 
@@ -819,21 +731,21 @@ getBundleIdForUidSync(uid: int): int
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| uid | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | 进程uid。 |
+| uid | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | Process UID. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| ArkTS-Dyn: number  <br>ArkTS-Sta：int | 表示与进程uid对应的bundleId。 |
+| ArkTS-Dyn: number  <br>ArkTS-Sta：int | Bundle ID obtained. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameter types. |
-| 12300002 | Invalid uid. |
-| 202 | Not system application. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameter types. |
+| [12300002](../../apis-basic-services-kit/errorcode-account.md#12300002-invalid-parameter) | Invalid uid. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system application. |
 
 ## Examples
 
@@ -863,7 +775,7 @@ ArkTS-Sta:
 getEnabledOsAccountConstraints(localId: int): Promise<Array<string>>
 ```
 
-获取指定系统账号已使能的全部约束。使用Promise异步回调。
+Obtains all the enabled constraints of an OS account. This API uses a promise to return the result.
 
 **Since:** 11
 
@@ -881,44 +793,23 @@ getEnabledOsAccountConstraints(localId: int): Promise<Array<string>>
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| localId | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | 系统账号ID。 |
+| localId | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | ID of the target OS account. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;Array&lt;string&gt;&gt; | Promise对象，返回指定系统账号已使能的全部 [约束](../../../reference/apis-basic-services-kit/js-apis-osAccount.md#系统账号约束列表)。 |
+| Promise&lt;Array&lt;string&gt;&gt; | Promise used to return all the enabled [constraints](../../../reference/apis-basic-services-kit/js-apis-osAccount.md#constraints) of the OS account. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameter types. |
-| 12300003 | Account not found. |
-| 201 | Permission denied. |
-| 202 | Not system application. |
-| 12300001 | The system service works abnormally. |
-
-## Examples
-
-Obtain all constraints of OS account 100.
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let accountManager: osAccount.AccountManager = osAccount.getAccountManager();
-let localId: number = 100;
-try {
-  accountManager.getEnabledOsAccountConstraints(localId).then((constraints: string[]) => {
-    console.info('getEnabledOsAccountConstraints, constraints: ' + constraints);
-  }).catch((err: BusinessError) => {
-    console.error(`getEnabledOsAccountConstraints err: code is ${err.code}, message is ${err.message}`);
-  });
-} catch (e) {
-  const err = e as BusinessError;
-  console.error(`getEnabledOsAccountConstraints exception: code is ${err.code}, message is ${err.message}`);
-}
-```
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameter types. |
+| [12300003](../../apis-basic-services-kit/errorcode-account.md#12300003-account-not-found) | Account not found. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system application. |
+| [12300001](../../apis-basic-services-kit/errorcode-account.md#12300001-system-service-abnormal) | The system service works abnormally. |
 
 ## getForegroundOsAccountDisplayId
 
@@ -932,7 +823,7 @@ ArkTS-Sta:
 getForegroundOsAccountDisplayId(localId: int): Promise<long>
 ```
 
-获取指定前台系统账号所运行的逻辑屏ID。使用Promise异步回调。
+Obtains the logical display ID of the specified foreground OS account. This API uses a promise to return the result.
 
 **Since:** 23
 
@@ -950,22 +841,22 @@ getForegroundOsAccountDisplayId(localId: int): Promise<long>
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| localId | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | 系统账号ID。 |
+| localId | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | ID of the target OS account. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| ArkTS-Dyn: Promise&lt;number&gt;  <br>ArkTS-Sta：Promise&lt;long&gt; | Promise对象，返回逻辑屏ID。 |
+| ArkTS-Dyn: Promise&lt;number&gt;  <br>ArkTS-Sta：Promise&lt;long&gt; | Promise used to return the logical display ID. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 201 | Permission denied. |
-| 202 | Not system application. |
-| 12300001 | The system service works abnormally. |
-| 12300017 | The foreground OS account is not found. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system application. |
+| [12300001](../../apis-basic-services-kit/errorcode-account.md#12300001-system-service-abnormal) | The system service works abnormally. |
+| [12300017](../../apis-basic-services-kit/errorcode-account.md#12300017-foreground-os-account-not-found) | The foreground OS account is not found. |
 
 ## Examples
 
@@ -998,7 +889,7 @@ ArkTS-Sta:
 getForegroundOsAccountLocalId(displayId: long): Promise<int>
 ```
 
-获取指定逻辑屏上运行的前台系统账号ID。使用Promise异步回调。
+Obtains the ID of the foreground OS account running on a specified logical display. This API uses a promise to return the result.
 
 **Since:** 23
 
@@ -1016,22 +907,22 @@ getForegroundOsAccountLocalId(displayId: long): Promise<int>
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| displayId | ArkTS-Dyn: number  <br>ArkTS-Sta：long | Yes | 逻辑屏ID。 |
+| displayId | ArkTS-Dyn: number  <br>ArkTS-Sta：long | Yes | Logical display ID. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| ArkTS-Dyn: Promise&lt;number&gt;  <br>ArkTS-Sta：Promise&lt;int&gt; | Promise对象，返回系统账号ID。 |
+| ArkTS-Dyn: Promise&lt;number&gt;  <br>ArkTS-Sta：Promise&lt;int&gt; | Promise used to return the OS account ID. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 201 | Permission denied. |
-| 202 | Not system application. |
-| 12300001 | The system service works abnormally. |
-| 12300017 | The foreground OS account is not found. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system application. |
+| [12300001](../../apis-basic-services-kit/errorcode-account.md#12300001-system-service-abnormal) | The system service works abnormally. |
+| [12300017](../../apis-basic-services-kit/errorcode-account.md#12300017-foreground-os-account-not-found) | The foreground OS account is not found. |
 
 ## Examples
 
@@ -1064,7 +955,7 @@ ArkTS-Sta:
 getOsAccountConstraintSourceTypes(localId: int, constraint: string, callback: AsyncCallback<Array<ConstraintSourceTypeInfo>>): void
 ```
 
-查询指定系统账号的指定约束来源信息。使用callback异步回调。
+Obtains the constraint source information of an OS account. This API uses an asynchronous callback to return the result.
 
 **Since:** 9
 
@@ -1082,20 +973,20 @@ getOsAccountConstraintSourceTypes(localId: int, constraint: string, callback: As
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| localId | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | 要查询的系统账号ID。 |
-| constraint | string | Yes | 要查询的[约束](../../../reference/apis-basic-services-kit/js-apis-osAccount.md#系统账号约束列表)名称。 |
-| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;ConstraintSourceTypeInfo&gt;&gt; | Yes | 回调函数。如果成功，err为null，data为指定系统账号的指定 [约束](../../../reference/apis-basic-services-kit/js-apis-osAccount.md#系统账号约束列表)来源信息；否则为错误对象。 |
+| localId | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | ID of the target OS account. |
+| constraint | string | Yes | [Constraint](../../../reference/apis-basic-services-kit/js-apis-osAccount.md#constraints) whose source information is to be obtained. |
+| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;ConstraintSourceTypeInfo&gt;&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **null** and **data** is the [constraint](../../../reference/apis-basic-services-kit/js-apis-osAccount.md#constraints) source information obtained. Otherwise, **err** is an error object. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameter types. |
-| 12300003 | Account not found. |
-| 201 | Permission denied. |
-| 12300002 | Invalid name or constraint. |
-| 202 | Not system application. |
-| 12300001 | The system service works abnormally. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameter types. |
+| [12300003](../../apis-basic-services-kit/errorcode-account.md#12300003-account-not-found) | Account not found. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
+| [12300002](../../apis-basic-services-kit/errorcode-account.md#12300002-invalid-parameter) | Invalid name or constraint. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system application. |
+| [12300001](../../apis-basic-services-kit/errorcode-account.md#12300001-system-service-abnormal) | The system service works abnormally. |
 
 ## Examples
 
@@ -1130,7 +1021,7 @@ ArkTS-Sta:
 getOsAccountConstraintSourceTypes(localId: int, constraint: string): Promise<Array<ConstraintSourceTypeInfo>>
 ```
 
-查询指定系统账号的指定约束来源信息。使用Promise异步回调。
+Obtains the constraint source information of an OS account. This API uses a promise to return the result.
 
 **Since:** 9
 
@@ -1148,25 +1039,25 @@ getOsAccountConstraintSourceTypes(localId: int, constraint: string): Promise<Arr
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| localId | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | 要查询的系统账号ID。 |
-| constraint | string | Yes | 要查询的[约束](../../../reference/apis-basic-services-kit/js-apis-osAccount.md#系统账号约束列表)名称。 |
+| localId | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | ID of the target OS account. |
+| constraint | string | Yes | [Constraint](../../../reference/apis-basic-services-kit/js-apis-osAccount.md#constraints) whose source information is to be obtained. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;Array&lt;ConstraintSourceTypeInfo&gt;&gt; | Promise对象，返回指定系统账号的指定 [约束](../../../reference/apis-basic-services-kit/js-apis-osAccount.md#系统账号约束列表)来源信息。 |
+| Promise&lt;Array&lt;ConstraintSourceTypeInfo&gt;&gt; | Promise used to return the source information of the specified [constraint](../../../reference/apis-basic-services-kit/js-apis-osAccount.md#constraints). |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameter types. |
-| 12300003 | Account not found. |
-| 201 | Permission denied. |
-| 12300002 | Invalid name or constraint. |
-| 202 | Not system application. |
-| 12300001 | The system service works abnormally. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameter types. |
+| [12300003](../../apis-basic-services-kit/errorcode-account.md#12300003-account-not-found) | Account not found. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
+| [12300002](../../apis-basic-services-kit/errorcode-account.md#12300002-invalid-parameter) | Invalid name or constraint. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system application. |
+| [12300001](../../apis-basic-services-kit/errorcode-account.md#12300001-system-service-abnormal) | The system service works abnormally. |
 
 ## Examples
 
@@ -1199,7 +1090,7 @@ ArkTS-Sta:
 getOsAccountProfilePhoto(localId: int, callback: AsyncCallback<string>): void
 ```
 
-获取指定系统账号的头像信息。使用callback异步回调。
+Obtains the profile photo of an OS account. This API uses an asynchronous callback to return the result.
 
 **Since:** 7
 
@@ -1217,42 +1108,19 @@ getOsAccountProfilePhoto(localId: int, callback: AsyncCallback<string>): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| localId | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | 系统账号ID。 |
-| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;string&gt; | Yes | 回调函数。如果获取成功，err为null，data为指定系统账号的头像信息；否则为错误对象。 |
+| localId | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | ID of the target OS account. |
+| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;string&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **null** and **data** is the profile photo information obtained. Otherwise, **err** is an error object. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameter types. |
-| 12300003 | Account not found. |
-| 201 | Permission denied. |
-| 12300002 | Invalid localId. |
-| 202 | Not system application. |
-| 12300001 | The system service works abnormally. |
-
-## Examples
-
-Obtain the profile photo of OS account 100.
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let accountManager: osAccount.AccountManager = osAccount.getAccountManager();
-let localId: number = 100;
-try {
-  accountManager.getOsAccountProfilePhoto(localId, (err: BusinessError, photo: string)=>{
-    if (err) {
-      console.error(`getOsAccountProfilePhoto exception:code is ${err.code}, message is ${err.message}`);
-    } else {
-      console.info('get photo:' + photo + ' by localId: ' + localId);
-    }
-  });
-} catch (e) {
-  const err = e as BusinessError;
-  console.error(`getOsAccountProfilePhoto exception: code is ${err.code}, message is ${err.message}`);
-}
-```
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameter types. |
+| [12300003](../../apis-basic-services-kit/errorcode-account.md#12300003-account-not-found) | Account not found. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
+| [12300002](../../apis-basic-services-kit/errorcode-account.md#12300002-invalid-parameter) | Invalid localId. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system application. |
+| [12300001](../../apis-basic-services-kit/errorcode-account.md#12300001-system-service-abnormal) | The system service works abnormally. |
 
 ## getOsAccountProfilePhoto
 
@@ -1266,7 +1134,7 @@ ArkTS-Sta:
 getOsAccountProfilePhoto(localId: int): Promise<string>
 ```
 
-获取指定系统账号的头像信息。使用Promise异步回调。
+Obtains the profile photo of an OS account. This API uses a promise to return the result.
 
 **Since:** 7
 
@@ -1284,45 +1152,24 @@ getOsAccountProfilePhoto(localId: int): Promise<string>
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| localId | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | 系统账号ID。 |
+| localId | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | ID of the target OS account. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;string&gt; | Promise对象，返回指定系统账号的头像信息。 |
+| Promise&lt;string&gt; | Promise used to return the profile photo information obtained. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameter types. |
-| 12300003 | Account not found. |
-| 201 | Permission denied. |
-| 12300002 | Invalid localId. |
-| 202 | Not system application. |
-| 12300001 | The system service works abnormally. |
-
-## Examples
-
-Obtain the profile photo of OS account 100.
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let accountManager: osAccount.AccountManager = osAccount.getAccountManager();
-let localId: number = 100;
-try {
-  accountManager.getOsAccountProfilePhoto(localId).then((photo: string) => {
-    console.info('getOsAccountProfilePhoto: ' + photo);
-  }).catch((err: BusinessError) => {
-    console.error(`getOsAccountProfilePhoto err: code is ${err.code}, message is ${err.message}`);
-  });
-} catch (e) {
-  const err = e as BusinessError;
-  console.error(`getOsAccountProfilePhoto exception: code is ${err.code}, message is ${err.message}`);
-}
-```
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameter types. |
+| [12300003](../../apis-basic-services-kit/errorcode-account.md#12300003-account-not-found) | Account not found. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
+| [12300002](../../apis-basic-services-kit/errorcode-account.md#12300002-invalid-parameter) | Invalid localId. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system application. |
+| [12300001](../../apis-basic-services-kit/errorcode-account.md#12300001-system-service-abnormal) | The system service works abnormally. |
 
 ## getOsAccountType
 
@@ -1336,7 +1183,7 @@ ArkTS-Sta:
 getOsAccountType(localId: int): Promise<OsAccountType>
 ```
 
-查询指定系统账号的类型。使用Promise异步回调。
+Obtains the type of a specified OS account. This API uses a promise to return the result.
 
 **Since:** 12
 
@@ -1354,23 +1201,23 @@ getOsAccountType(localId: int): Promise<OsAccountType>
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| localId | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | 要查询的系统账号ID。 |
+| localId | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | ID of the target OS account. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;OsAccountType&gt; | Promise对象，返回指定系统账号的类型。 |
+| Promise&lt;OsAccountType&gt; | Promise used to return the type of the OS account obtained. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameter types. |
-| 12300003 | Account not found. |
-| 201 | Permission denied. |
-| 202 | Not system application. |
-| 12300001 | The system service works abnormally. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameter types. |
+| [12300003](../../apis-basic-services-kit/errorcode-account.md#12300003-account-not-found) | Account not found. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system application. |
+| [12300001](../../apis-basic-services-kit/errorcode-account.md#12300001-system-service-abnormal) | The system service works abnormally. |
 
 ## Examples
 
@@ -1397,7 +1244,7 @@ try {
 isMainOsAccount(callback: AsyncCallback<boolean>): void
 ```
 
-查询当前进程是否处于主用户。使用callback异步回调。
+Checks whether the current process belongs to the main OS account. This API uses an asynchronous callback to return the result.
 
 **Since:** 9
 
@@ -1415,16 +1262,16 @@ isMainOsAccount(callback: AsyncCallback<boolean>): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;boolean&gt; | Yes | 回调函数，返回true表示当前账号为主账号，返回false表示当前账号非主账号。 |
+| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;boolean&gt; | Yes | Callback used to return the result. If **true** is returned, the current process belongs to the main OS account. If **false** is returned, the current process does not belong to the main OS account. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameter types. |
-| 201 | Permission denied. |
-| 202 | Not system application. |
-| 12300001 | The system service works abnormally. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameter types. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system application. |
+| [12300001](../../apis-basic-services-kit/errorcode-account.md#12300001-system-service-abnormal) | The system service works abnormally. |
 
 ## Examples
 
@@ -1452,7 +1299,7 @@ try {
 isMainOsAccount(): Promise<boolean>
 ```
 
-查询当前进程是否处于主用户。使用Promise异步回调。
+Checks whether the current process belongs to the main OS account. This API uses a promise to return the result.
 
 **Since:** 9
 
@@ -1470,15 +1317,15 @@ isMainOsAccount(): Promise<boolean>
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;boolean&gt; | Promise对象，返回true表示当前账号为主账号，返回false表示当前账号非主账号。 |
+| Promise&lt;boolean&gt; | Promise used to return the result. If **true** is returned, the current process belongs to the main OS account. If **false** is returned, the current process does not belong to the main OS account. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 201 | Permission denied. |
-| 202 | Not system application. |
-| 12300001 | The system service works abnormally. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system application. |
+| [12300001](../../apis-basic-services-kit/errorcode-account.md#12300001-system-service-abnormal) | The system service works abnormally. |
 
 ## Examples
 
@@ -1510,7 +1357,7 @@ ArkTS-Sta:
 isOsAccountActivated(localId: int): Promise<boolean>
 ```
 
-判断指定系统账号是否处于激活状态。使用Promise异步回调。
+Checks whether an OS account is activated. This API uses a promise to return the result.
 
 **Since:** 11
 
@@ -1528,44 +1375,23 @@ isOsAccountActivated(localId: int): Promise<boolean>
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| localId | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | 系统账号ID。 |
+| localId | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | ID of the target OS account. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;boolean&gt; | Promise对象。返回true表示账号已激活；返回false表示账号未激活。 |
+| Promise&lt;boolean&gt; | Promise used to return the result. The value **true** means the account is activated; the value **false** means the opposite. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameter types. |
-| 12300003 | Account not found. |
-| 201 | Permission denied. |
-| 202 | Not system application. |
-| 12300001 | The system service works abnormally. |
-
-## Examples
-
-Check whether OS account 100 is activated.
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let accountManager: osAccount.AccountManager = osAccount.getAccountManager();
-let localId: number = 100;
-try {
-  accountManager.isOsAccountActivated(localId).then((isActivated: boolean) => {
-    console.info('isOsAccountActivated successfully, isActivated: ' + isActivated);
-  }).catch((err: BusinessError) => {
-    console.error(`isOsAccountActivated failed, code is ${err.code}, message is ${err.message}`);
-  });
-} catch (e) {
-  const err = e as BusinessError;
-  console.error(`isOsAccountActivated exception: code is ${err.code}, message is ${err.message}`);
-}
-```
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameter types. |
+| [12300003](../../apis-basic-services-kit/errorcode-account.md#12300003-account-not-found) | Account not found. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system application. |
+| [12300001](../../apis-basic-services-kit/errorcode-account.md#12300001-system-service-abnormal) | The system service works abnormally. |
 
 ## isOsAccountConstraintEnabled
 
@@ -1579,7 +1405,7 @@ ArkTS-Sta:
 isOsAccountConstraintEnabled(localId: int, constraint: string): Promise<boolean>
 ```
 
-判断指定系统账号是否使能指定约束。使用Promise异步回调。
+Checks whether a constraint is enabled for an OS account. This API uses a promise to return the result.
 
 **Since:** 11
 
@@ -1597,46 +1423,24 @@ isOsAccountConstraintEnabled(localId: int, constraint: string): Promise<boolean>
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| localId | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | 系统账号ID。 |
-| constraint | string | Yes | 指定的[约束](../../../reference/apis-basic-services-kit/js-apis-osAccount.md#系统账号约束列表)名称。 |
+| localId | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | ID of the target OS account. |
+| constraint | string | Yes | [Constraint](../../../reference/apis-basic-services-kit/js-apis-osAccount.md#constraints) to check. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;boolean&gt; | Promise对象。返回true表示已使能指定的约束；返回false表示未使能指定的约束。 |
+| Promise&lt;boolean&gt; | Promise used to return the result. The value **true** means the specified constraint is enabled; the value **false** means the opposite. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameter types. |
-| 12300003 | Account not found. |
-| 201 | Permission denied. |
-| 202 | Not system application. |
-| 12300001 | The system service works abnormally. |
-
-## Examples
-
-Check whether OS account 100 is forbidden to use Wi-Fi.
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let accountManager: osAccount.AccountManager = osAccount.getAccountManager();
-let localId: number = 100;
-let constraint: string = 'constraint.wifi';
-try {
-  accountManager.isOsAccountConstraintEnabled(localId, constraint).then((isEnabled: boolean) => {
-    console.info('isOsAccountConstraintEnabled successfully, isEnabled: ' + isEnabled);
-  }).catch((err: BusinessError) => {
-    console.error(`isOsAccountConstraintEnabled failed, code is ${err.code}, message is ${err.message}`);
-  });
-} catch (e) {
-  const err = e as BusinessError;
-  console.error(`isOsAccountConstraintEnabled exception: code is ${err.code}, message is ${err.message}`);
-}
-```
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameter types. |
+| [12300003](../../apis-basic-services-kit/errorcode-account.md#12300003-account-not-found) | Account not found. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system application. |
+| [12300001](../../apis-basic-services-kit/errorcode-account.md#12300001-system-service-abnormal) | The system service works abnormally. |
 
 ## isOsAccountUnlocked
 
@@ -1650,7 +1454,7 @@ ArkTS-Sta:
 isOsAccountUnlocked(localId: int): Promise<boolean>
 ```
 
-检查指定系统账号是否已验证。使用Promise异步回调。
+Checks whether an OS account has been verified. This API uses a promise to return the result.
 
 **Since:** 11
 
@@ -1668,23 +1472,23 @@ isOsAccountUnlocked(localId: int): Promise<boolean>
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| localId | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | 系统账号ID。不填则检查当前系统账号是否已验证。 |
+| localId | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | ID of the target OS account. If this parameter is not specified, this API checks whether the current OS account has been verified. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;boolean&gt; | Promise对象。返回true表示当前账号已认证解锁；返回false表示当前账号未认证解锁。 |
+| Promise&lt;boolean&gt; | Promise used to return the result. The value **true** means the OS account has been verified; the value **false** means the opposite. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameter types. |
-| 12300003 | Account not found. |
-| 201 | Permission denied. |
-| 202 | Not system application. |
-| 12300001 | The system service works abnormally. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameter types. |
+| [12300003](../../apis-basic-services-kit/errorcode-account.md#12300003-account-not-found) | Account not found. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system application. |
+| [12300001](../../apis-basic-services-kit/errorcode-account.md#12300001-system-service-abnormal) | The system service works abnormally. |
 
 ## Examples
 
@@ -1711,7 +1515,7 @@ try {
 off(type: 'activate' | 'activating', name: string, callback?: Callback<int>): void
 ```
 
-取消订阅系统账号的激活完成与激活中的事件。使用callback异步回调。
+Unsubscribes from the OS account activation states, including the states of the account being activated and the account with activation completed. This API uses an asynchronous callback to return the result.
 
 **Since:** 7
 
@@ -1729,19 +1533,19 @@ off(type: 'activate' | 'activating', name: string, callback?: Callback<int>): vo
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'activate' \| 'activating' | Yes | 取消订阅类型，activate表示取消订阅账号已激活完成的事件，activating取消订阅账号正在激活的事件。 |
-| name | string | Yes | 订阅名称，可自定义，要求非空且长度不超过1024字节，需要与订阅接口传入的值保持一致。 |
-| callback | [Callback](arkts-basicservices-base-callback-i.md)&lt;int&gt; | No | 取消订阅系统账号激活完成与激活中的事件回调，默认为空，表示取消该类型事件的所有回调。 |
+| type | 'activate' \| 'activating' | Yes | Type of the event to unsubscribe from. The value **activate** indicates that an OS account is activated, and **activating** indicates that an OS account is being activated. |
+| name | string | Yes | Subscription name, which can be customized. The value cannot be empty or exceed 1024 bytes, and must be the same as the value passed by **on()**. |
+| callback | [Callback](arkts-basicservices-base-callback-i.md)&lt;int&gt; | No | Callback to unregister. By default, this parameter is left empty, which unregisters all callbacks for the OS account activation states. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameter types. |
-| 201 | Permission denied. |
-| 12300002 | Invalid type or name. |
-| 202 | Not system application. |
-| 12300001 | The system service works abnormally. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameter types. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
+| [12300002](../../apis-basic-services-kit/errorcode-account.md#12300002-invalid-parameter) | Invalid type or name. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system application. |
+| [12300001](../../apis-basic-services-kit/errorcode-account.md#12300001-system-service-abnormal) | The system service works abnormally. |
 
 ## Examples
 
@@ -1768,7 +1572,7 @@ try {
 off(type: 'activate' | 'activating', name: string, callback?: Callback<int>): void
 ```
 
-取消订阅系统账号的激活完成与激活中的事件。使用callback异步回调。
+Unsubscribes from the OS account activation states, including the states of the account being activated and the account with activation completed. This API uses an asynchronous callback to return the result.
 
 **Since:** 7
 
@@ -1786,19 +1590,19 @@ off(type: 'activate' | 'activating', name: string, callback?: Callback<int>): vo
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'activate' \| 'activating' | Yes | 取消订阅类型，activate表示取消订阅账号已激活完成的事件，activating取消订阅账号正在激活的事件。 |
-| name | string | Yes | 订阅名称，可自定义，要求非空且长度不超过1024字节，需要与订阅接口传入的值保持一致。 |
-| callback | [Callback](arkts-basicservices-base-callback-i.md)&lt;int&gt; | No | 取消订阅系统账号激活完成与激活中的事件回调，默认为空，表示取消该类型事件的所有回调。 |
+| type | 'activate' \| 'activating' | Yes | Type of the event to unsubscribe from. The value **activate** indicates that an OS account is activated, and **activating** indicates that an OS account is being activated. |
+| name | string | Yes | Subscription name, which can be customized. The value cannot be empty or exceed 1024 bytes, and must be the same as the value passed by **on()**. |
+| callback | [Callback](arkts-basicservices-base-callback-i.md)&lt;int&gt; | No | Callback to unregister. By default, this parameter is left empty, which unregisters all callbacks for the OS account activation states. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameter types. |
-| 201 | Permission denied. |
-| 12300002 | Invalid type or name. |
-| 202 | Not system application. |
-| 12300001 | The system service works abnormally. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameter types. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
+| [12300002](../../apis-basic-services-kit/errorcode-account.md#12300002-invalid-parameter) | Invalid type or name. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system application. |
+| [12300001](../../apis-basic-services-kit/errorcode-account.md#12300001-system-service-abnormal) | The system service works abnormally. |
 
 ## Examples
 
@@ -1825,7 +1629,7 @@ try {
 off(type: 'switching', callback?: Callback<OsAccountSwitchEventData>): void
 ```
 
-取消订阅系统账号的前后台正在切换事件。使用callback异步回调。
+Unsubscribes from the switchover between a foreground OS account and a background OS account in progress. This API uses an asynchronous callback to return the result.
 
 **Since:** 12
 
@@ -1845,17 +1649,17 @@ off(type: 'switching', callback?: Callback<OsAccountSwitchEventData>): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'switching' | Yes | 取消订阅类型，switching表示取消订阅的是系统账号的前后台正在切换事件。 |
-| callback | [Callback](arkts-basicservices-base-callback-i.md)&lt;OsAccountSwitchEventData&gt; | No | 取消订阅系统账号的前后台正在切换事件回调，默认为空，表示取消该类型事件的所有回调。 |
+| type | 'switching' | Yes | Event type. The value **switching** indicates that the switchover between a foreground OS account and a background account is being performed. |
+| callback | [Callback](arkts-basicservices-base-callback-i.md)&lt;OsAccountSwitchEventData&gt; | No | Callback to unregister. By default, this parameter is left empty, which unregisters all callbacks for the **switching** event. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 201 | Permission denied. |
-| 12300002 | Invalid type. |
-| 202 | Not system application. |
-| 12300001 | The system service works abnormally. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
+| [12300002](../../apis-basic-services-kit/errorcode-account.md#12300002-invalid-parameter) | Invalid type. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system application. |
+| [12300001](../../apis-basic-services-kit/errorcode-account.md#12300001-system-service-abnormal) | The system service works abnormally. |
 
 ## Examples
 
@@ -1877,7 +1681,7 @@ try {
 off(type: 'switched', callback?: Callback<OsAccountSwitchEventData>): void
 ```
 
-取消订阅系统账号的前后台切换结束事件。使用callback异步回调。
+Unsubscribes from the end of a switchover between a foreground OS account and a background OS account.This API uses an asynchronous callback to return the result.
 
 **Since:** 12
 
@@ -1897,17 +1701,17 @@ off(type: 'switched', callback?: Callback<OsAccountSwitchEventData>): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'switched' | Yes | 取消订阅类型，switched表示取消订阅的是系统账号的前后台切换结束事件。 |
-| callback | [Callback](arkts-basicservices-base-callback-i.md)&lt;OsAccountSwitchEventData&gt; | No | 取消订阅系统账号的前后台切换结束事件回调，默认为空，表示取消该类型事件的所有回调。 |
+| type | 'switched' | Yes | Event type. The value **switched** indicates that the switchover between a foreground OS account and a background OS account is complete. |
+| callback | [Callback](arkts-basicservices-base-callback-i.md)&lt;OsAccountSwitchEventData&gt; | No | Callback to unregister. By default, this parameter is left empty, which unregisters all callbacks for the **switched** event. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 201 | Permission denied. |
-| 12300002 | Invalid type. |
-| 202 | Not system application. |
-| 12300001 | The system service works abnormally. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
+| [12300002](../../apis-basic-services-kit/errorcode-account.md#12300002-invalid-parameter) | Invalid type. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system application. |
+| [12300001](../../apis-basic-services-kit/errorcode-account.md#12300001-system-service-abnormal) | The system service works abnormally. |
 
 ## Examples
 
@@ -1929,7 +1733,7 @@ try {
 offActivate(name: string, callback?: Callback<int>): void
 ```
 
-取消订阅系统账号的激活完成的事件。使用callback异步回调。
+Unsubscribes from the event indicating the completion of an OS account activation.
 
 **Since:** 23
 
@@ -1947,17 +1751,17 @@ offActivate(name: string, callback?: Callback<int>): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| name | string | Yes | 订阅名称，可自定义，要求非空且长度不超过1024字节，需要与订阅接口传入的值保持一致。 |
-| callback | [Callback](arkts-basicservices-base-callback-i.md)&lt;int&gt; | No | 取消订阅系统账号激活完成的事件回调。默认为空，表示取消该类型事件的所有回调。 |
+| name | string | Yes | Indicates the name of subscriber. |
+| callback | [Callback](arkts-basicservices-base-callback-i.md)&lt;int&gt; | No | Asynchronous callback interface. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 201 | Permission denied. |
-| 12300002 | Invalid name. |
-| 202 | Not system application. |
-| 12300001 | The system service works abnormally. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
+| [12300002](../../apis-basic-services-kit/errorcode-account.md#12300002-invalid-parameter) | Invalid name. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system application. |
+| [12300001](../../apis-basic-services-kit/errorcode-account.md#12300001-system-service-abnormal) | The system service works abnormally. |
 
 ## offActivating
 
@@ -1965,7 +1769,7 @@ offActivate(name: string, callback?: Callback<int>): void
 offActivating(name: string, callback?: Callback<int>): void
 ```
 
-取消订阅系统账号的激活中的事件。使用callback异步回调。
+Unsubscribes from the event indicating that an OS account is being activated.
 
 **Since:** 23
 
@@ -1983,17 +1787,17 @@ offActivating(name: string, callback?: Callback<int>): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| name | string | Yes | 订阅名称，可自定义，要求非空且长度不超过1024字节，需要与订阅接口传入的值保持一致。 |
-| callback | [Callback](arkts-basicservices-base-callback-i.md)&lt;int&gt; | No | 取消订阅系统账号激活中的事件回调。默认为空，表示取消该类型事件的所有回调。 |
+| name | string | Yes | Indicates the name of subscriber. |
+| callback | [Callback](arkts-basicservices-base-callback-i.md)&lt;int&gt; | No | Asynchronous callback interface. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 201 | Permission denied. |
-| 12300002 | Invalid name. |
-| 202 | Not system application. |
-| 12300001 | The system service works abnormally. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
+| [12300002](../../apis-basic-services-kit/errorcode-account.md#12300002-invalid-parameter) | Invalid name. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system application. |
+| [12300001](../../apis-basic-services-kit/errorcode-account.md#12300001-system-service-abnormal) | The system service works abnormally. |
 
 ## offConstraintChanged
 
@@ -2001,7 +1805,7 @@ offActivating(name: string, callback?: Callback<int>): void
 offConstraintChanged(callback?: Callback<ConstraintChangeInfo>): void
 ```
 
-取消与指定回调关联的约束变更订阅记录。若未指定回调，则取消所有订阅记录。
+Unsubscribes from constraint change events associated with the specified callback. If no callback is specified,this API unsubscribes from all subscription records.
 
 **Since:** 23
 
@@ -2017,14 +1821,14 @@ offConstraintChanged(callback?: Callback<ConstraintChangeInfo>): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](arkts-basicservices-base-callback-i.md)&lt;ConstraintChangeInfo&gt; | No | 表示用于接收约束变更事件的回调函数。&lt;br&gt;默认为undefined，表示清除所有订阅记录。&lt;br&gt;非undefined时，表示清 除与该回调函数关联的订阅记录。 |
+| callback | [Callback](arkts-basicservices-base-callback-i.md)&lt;ConstraintChangeInfo&gt; | No | Callback for receiving constraint change information. - Callback used to listen for the constraint change events.&lt;br&gt;The default value is **undefined**, indicating that all subscription records are unsubscribed.&lt;br&gt;If this parameter is not **undefined**, the subscription records associated with the callback are unsubscribed. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 202 | Not system application. |
-| 12300001 | The system service works abnormally. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system application. |
+| [12300001](../../apis-basic-services-kit/errorcode-account.md#12300001-system-service-abnormal) | The system service works abnormally. |
 
 ## Examples
 
@@ -2058,7 +1862,7 @@ try {
 offSwitched(callback?: Callback<OsAccountSwitchEventData>): void
 ```
 
-取消订阅系统账号的前后台切换结束事件。使用callback异步回调。
+Unsubscribes from the OS account switched event.
 
 **Since:** 23
 
@@ -2076,15 +1880,15 @@ offSwitched(callback?: Callback<OsAccountSwitchEventData>): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](arkts-basicservices-base-callback-i.md)&lt;OsAccountSwitchEventData&gt; | No | 取消订阅系统账号的前后台切换结束事件回调，默认为空，表示取消该类型事件的所有回调。 |
+| callback | [Callback](arkts-basicservices-base-callback-i.md)&lt;OsAccountSwitchEventData&gt; | No | Indicates the callback for getting the event data. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 201 | Permission denied. |
-| 202 | Not system application. |
-| 12300001 | The system service works abnormally. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system application. |
+| [12300001](../../apis-basic-services-kit/errorcode-account.md#12300001-system-service-abnormal) | The system service works abnormally. |
 
 ## offSwitching
 
@@ -2092,7 +1896,7 @@ offSwitched(callback?: Callback<OsAccountSwitchEventData>): void
 offSwitching(callback?: Callback<OsAccountSwitchEventData>): void
 ```
 
-取消订阅系统账号的前后台正在切换事件。使用callback异步回调。
+Unsubscribes from the OS account switching event.
 
 **Since:** 23
 
@@ -2110,15 +1914,15 @@ offSwitching(callback?: Callback<OsAccountSwitchEventData>): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](arkts-basicservices-base-callback-i.md)&lt;OsAccountSwitchEventData&gt; | No | 取消订阅系统账号的前后台正在切换事件回调，默认为空，表示取消该类型事件的所有回调。 |
+| callback | [Callback](arkts-basicservices-base-callback-i.md)&lt;OsAccountSwitchEventData&gt; | No | Indicates the callback for getting the event data. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 201 | Permission denied. |
-| 202 | Not system application. |
-| 12300001 | The system service works abnormally. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system application. |
+| [12300001](../../apis-basic-services-kit/errorcode-account.md#12300001-system-service-abnormal) | The system service works abnormally. |
 
 ## on('activate' | 'activating')
 
@@ -2126,7 +1930,7 @@ offSwitching(callback?: Callback<OsAccountSwitchEventData>): void
 on(type: 'activate' | 'activating', name: string, callback: Callback<int>): void
 ```
 
-订阅系统账号的激活完成与激活中的事件。使用callback异步回调。
+Subscribes to the OS account activation states, including the states of the account being activated and the account with activation completed. This API uses an asynchronous callback to return the result.
 
 **Since:** 7
 
@@ -2144,19 +1948,19 @@ on(type: 'activate' | 'activating', name: string, callback: Callback<int>): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'activate' \| 'activating' | Yes | 订阅类型，activate表示订阅的是账号已激活完成的事件，activating表示订阅的是账号正在激活的事件。 |
-| name | string | Yes | 订阅名称，可自定义，要求非空且长度不超过1024字节。 |
-| callback | [Callback](arkts-basicservices-base-callback-i.md)&lt;int&gt; | Yes | 订阅系统账号激活完成与激活中的事件回调，表示激活完成后或正在激活中的系统账号ID。 |
+| type | 'activate' \| 'activating' | Yes | Type of the event to subscribe to. The value **activate** indicates that an OS account is activated, and **activating** indicates that an OS account is being activated. |
+| name | string | Yes | Subscription name, which can be customized. The value cannot be empty or exceed 1024 bytes. |
+| callback | [Callback](arkts-basicservices-base-callback-i.md)&lt;int&gt; | Yes | Callback used to return the ID of the OS account being activated or activated. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameter types. |
-| 201 | Permission denied. |
-| 12300002 | Invalid type or name. |
-| 202 | Not system application. |
-| 12300001 | The system service works abnormally. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameter types. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
+| [12300002](../../apis-basic-services-kit/errorcode-account.md#12300002-invalid-parameter) | Invalid type or name. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system application. |
+| [12300001](../../apis-basic-services-kit/errorcode-account.md#12300001-system-service-abnormal) | The system service works abnormally. |
 
 ## Examples
 
@@ -2183,7 +1987,7 @@ try {
 on(type: 'activate' | 'activating', name: string, callback: Callback<int>): void
 ```
 
-订阅系统账号的激活完成与激活中的事件。使用callback异步回调。
+Subscribes to the OS account activation states, including the states of the account being activated and the account with activation completed. This API uses an asynchronous callback to return the result.
 
 **Since:** 7
 
@@ -2201,19 +2005,19 @@ on(type: 'activate' | 'activating', name: string, callback: Callback<int>): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'activate' \| 'activating' | Yes | 订阅类型，activate表示订阅的是账号已激活完成的事件，activating表示订阅的是账号正在激活的事件。 |
-| name | string | Yes | 订阅名称，可自定义，要求非空且长度不超过1024字节。 |
-| callback | [Callback](arkts-basicservices-base-callback-i.md)&lt;int&gt; | Yes | 订阅系统账号激活完成与激活中的事件回调，表示激活完成后或正在激活中的系统账号ID。 |
+| type | 'activate' \| 'activating' | Yes | Type of the event to subscribe to. The value **activate** indicates that an OS account is activated, and **activating** indicates that an OS account is being activated. |
+| name | string | Yes | Subscription name, which can be customized. The value cannot be empty or exceed 1024 bytes. |
+| callback | [Callback](arkts-basicservices-base-callback-i.md)&lt;int&gt; | Yes | Callback used to return the ID of the OS account being activated or activated. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameter types. |
-| 201 | Permission denied. |
-| 12300002 | Invalid type or name. |
-| 202 | Not system application. |
-| 12300001 | The system service works abnormally. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameter types. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
+| [12300002](../../apis-basic-services-kit/errorcode-account.md#12300002-invalid-parameter) | Invalid type or name. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system application. |
+| [12300001](../../apis-basic-services-kit/errorcode-account.md#12300001-system-service-abnormal) | The system service works abnormally. |
 
 ## Examples
 
@@ -2240,7 +2044,7 @@ try {
 on(type: 'switching', callback: Callback<OsAccountSwitchEventData>): void
 ```
 
-订阅系统账号的前后台正在切换事件。使用callback异步回调。
+Subscribes to the switchover between a foreground OS account and a background OS account in progress.This API uses an asynchronous callback to return the result.
 
 **Since:** 12
 
@@ -2260,17 +2064,17 @@ on(type: 'switching', callback: Callback<OsAccountSwitchEventData>): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'switching' | Yes | 订阅类型，switching表示订阅的是系统账号的前后台正在切换事件。 |
-| callback | [Callback](arkts-basicservices-base-callback-i.md)&lt;OsAccountSwitchEventData&gt; | Yes | 订阅系统账号的前后台正在切换事件回调，包含切换来源和切换目标的系统账号ID。&lt;br/&gt;**说明：** 从API version 23开始，事件数据中新增可选字段displayId，表示发生切换事件的逻辑屏ID。 |
+| type | 'switching' | Yes | Event type. The value **switching** indicates that the switchover between a foreground OS account and a background account is being performed. |
+| callback | [Callback](arkts-basicservices-base-callback-i.md)&lt;OsAccountSwitchEventData&gt; | Yes | Callback to be invoked when an OS account is switching between the foreground and background. The source and target OS account IDs are subscribed to.&lt;br&gt;Note: Since API version 23, the optional field **displayId** is available, indicating the ID of the logical display where the switch event occurs. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 201 | Permission denied. |
-| 12300002 | Invalid type. |
-| 202 | Not system application. |
-| 12300001 | The system service works abnormally. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
+| [12300002](../../apis-basic-services-kit/errorcode-account.md#12300002-invalid-parameter) | Invalid type. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system application. |
+| [12300001](../../apis-basic-services-kit/errorcode-account.md#12300001-system-service-abnormal) | The system service works abnormally. |
 
 ## Examples
 
@@ -2297,7 +2101,7 @@ try {
 on(type: 'switched', callback: Callback<OsAccountSwitchEventData>): void
 ```
 
-订阅系统账号的前后台切换结束事件。使用callback异步回调。
+Subscribes to the end of a switchover between a foreground OS account and a background OS account. This API uses an asynchronous callback to return the result.
 
 **Since:** 12
 
@@ -2317,17 +2121,17 @@ on(type: 'switched', callback: Callback<OsAccountSwitchEventData>): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'switched' | Yes | 订阅类型，switched表示订阅的是系统账号的前后台切换结束事件。 |
-| callback | [Callback](arkts-basicservices-base-callback-i.md)&lt;OsAccountSwitchEventData&gt; | Yes | 订阅系统账号的前后台切换结束事件回调，包含切换来源和切换目标的系统账号ID。&lt;br/&gt;**说明：** 从API version 23开始，事件数据中新增可选字段displayId，表示发生切换事件的逻辑屏ID。 |
+| type | 'switched' | Yes | Event type. The value **switched** indicates that the switchover between a foreground OS account and a background OS account is complete. |
+| callback | [Callback](arkts-basicservices-base-callback-i.md)&lt;OsAccountSwitchEventData&gt; | Yes | Callback to be invoked when an OS account is switched between the foreground and background. The source and target OS account IDs are subscribed to. &lt;br&gt;Note: Since API version 23, the optional field **displayId** is available, indicating the ID of the logical display where the switch event occurs. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 201 | Permission denied. |
-| 12300002 | Invalid type. |
-| 202 | Not system application. |
-| 12300001 | The system service works abnormally. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
+| [12300002](../../apis-basic-services-kit/errorcode-account.md#12300002-invalid-parameter) | Invalid type. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system application. |
+| [12300001](../../apis-basic-services-kit/errorcode-account.md#12300001-system-service-abnormal) | The system service works abnormally. |
 
 ## Examples
 
@@ -2354,7 +2158,7 @@ try {
 onActivate(name: string, callback: Callback<int>): void
 ```
 
-订阅系统账号的激活完成的事件。使用callback异步回调。
+Subscribes to the event indicating the completion of an OS account activation.
 
 **Since:** 23
 
@@ -2372,17 +2176,17 @@ onActivate(name: string, callback: Callback<int>): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| name | string | Yes | 订阅名称，可自定义，要求非空且长度不超过1024字节。 |
-| callback | [Callback](arkts-basicservices-base-callback-i.md)&lt;int&gt; | Yes | 订阅系统账号激活完成的事件回调。表示激活完成后的系统账号ID。 |
+| name | string | Yes | Indicates the name of subscriber. |
+| callback | [Callback](arkts-basicservices-base-callback-i.md)&lt;int&gt; | Yes | Asynchronous callback interface. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 201 | Permission denied. |
-| 12300002 | Invalid name. |
-| 202 | Not system application. |
-| 12300001 | The system service works abnormally. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
+| [12300002](../../apis-basic-services-kit/errorcode-account.md#12300002-invalid-parameter) | Invalid name. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system application. |
+| [12300001](../../apis-basic-services-kit/errorcode-account.md#12300001-system-service-abnormal) | The system service works abnormally. |
 
 ## onActivating
 
@@ -2390,7 +2194,7 @@ onActivate(name: string, callback: Callback<int>): void
 onActivating(name: string, callback: Callback<int>): void
 ```
 
-订阅系统账号的激活中的事件。使用callback异步回调。
+Subscribes to the event indicating that an OS account is being activated.
 
 **Since:** 23
 
@@ -2408,17 +2212,17 @@ onActivating(name: string, callback: Callback<int>): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| name | string | Yes | 订阅名称，可自定义，要求非空且长度不超过1024字节。 |
-| callback | [Callback](arkts-basicservices-base-callback-i.md)&lt;int&gt; | Yes | 订阅系统账号激活中的事件回调，表示正在激活中的系统账号ID。 |
+| name | string | Yes | Indicates the name of subscriber. |
+| callback | [Callback](arkts-basicservices-base-callback-i.md)&lt;int&gt; | Yes | Asynchronous callback interface. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 201 | Permission denied. |
-| 12300002 | Invalid name. |
-| 202 | Not system application. |
-| 12300001 | The system service works abnormally. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
+| [12300002](../../apis-basic-services-kit/errorcode-account.md#12300002-invalid-parameter) | Invalid name. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system application. |
+| [12300001](../../apis-basic-services-kit/errorcode-account.md#12300001-system-service-abnormal) | The system service works abnormally. |
 
 ## onConstraintChanged
 
@@ -2426,7 +2230,7 @@ onActivating(name: string, callback: Callback<int>): void
 onConstraintChanged(constraints: string[], callback: Callback<ConstraintChangeInfo>): void
 ```
 
-订阅调用方所属系统账号的一种或多种约束变更事件。使用callback异步回调。
+Subscribes to one or more constraint change events of the OS account to which the caller belongs. This API uses an asynchronous callback to return the result.
 
 **Since:** 23
 
@@ -2442,16 +2246,16 @@ onConstraintChanged(constraints: string[], callback: Callback<ConstraintChangeIn
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| constraints | string[] | Yes | 表示待订阅的[约束](../../../reference/apis-basic-services-kit/js-apis-osAccount.md#系统账号约束列表)列 表。 |
-| callback | [Callback](arkts-basicservices-base-callback-i.md)&lt;ConstraintChangeInfo&gt; | Yes | 表示用于接收约束变更事件的回调函数。 |
+| constraints | string[] | Yes | List of [constraints](../../../reference/apis-basic-services-kit/js-apis-osAccount.md#constraints) to be subscribed to. |
+| callback | [Callback](arkts-basicservices-base-callback-i.md)&lt;ConstraintChangeInfo&gt; | Yes | Callback used to listen for the constraint change events. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 12300002 | One or more constraints are invalid. |
-| 202 | Not system application. |
-| 12300001 | The system service works abnormally. |
+| [12300002](../../apis-basic-services-kit/errorcode-account.md#12300002-invalid-parameter) | One or more constraints are invalid. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system application. |
+| [12300001](../../apis-basic-services-kit/errorcode-account.md#12300001-system-service-abnormal) | The system service works abnormally. |
 
 ## Examples
 
@@ -2478,7 +2282,7 @@ try {
 onSwitched(callback: Callback<OsAccountSwitchEventData>): void
 ```
 
-订阅系统账号的前后台切换结束事件。使用callback异步回调。
+Subscribes to the OS account switched event.
 
 **Since:** 23
 
@@ -2496,15 +2300,15 @@ onSwitched(callback: Callback<OsAccountSwitchEventData>): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](arkts-basicservices-base-callback-i.md)&lt;OsAccountSwitchEventData&gt; | Yes | 订阅系统账号的前后台切换结束事件回调，包含切换来源和切换目标的系统账号ID。 |
+| callback | [Callback](arkts-basicservices-base-callback-i.md)&lt;OsAccountSwitchEventData&gt; | Yes | Indicates the callback for getting the event data. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 201 | Permission denied. |
-| 202 | Not system application. |
-| 12300001 | The system service works abnormally. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system application. |
+| [12300001](../../apis-basic-services-kit/errorcode-account.md#12300001-system-service-abnormal) | The system service works abnormally. |
 
 ## onSwitching
 
@@ -2512,7 +2316,7 @@ onSwitched(callback: Callback<OsAccountSwitchEventData>): void
 onSwitching(callback: Callback<OsAccountSwitchEventData>): void
 ```
 
-订阅系统账号的前后台正在切换事件。使用callback异步回调。
+Subscribes to the OS account switching event.
 
 **Since:** 23
 
@@ -2530,15 +2334,15 @@ onSwitching(callback: Callback<OsAccountSwitchEventData>): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](arkts-basicservices-base-callback-i.md)&lt;OsAccountSwitchEventData&gt; | Yes | 订阅系统账号的前后台正在切换事件回调，包含切换来源和切换目标的系统账号ID。 |
+| callback | [Callback](arkts-basicservices-base-callback-i.md)&lt;OsAccountSwitchEventData&gt; | Yes | Indicates the callback for getting the event data. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 201 | Permission denied. |
-| 202 | Not system application. |
-| 12300001 | The system service works abnormally. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system application. |
+| [12300001](../../apis-basic-services-kit/errorcode-account.md#12300001-system-service-abnormal) | The system service works abnormally. |
 
 ## queryAllCreatedOsAccounts
 
@@ -2546,7 +2350,7 @@ onSwitching(callback: Callback<OsAccountSwitchEventData>): void
 queryAllCreatedOsAccounts(callback: AsyncCallback<Array<OsAccountInfo>>): void
 ```
 
-查询已创建的所有系统账号的信息列表。使用callback异步回调。
+Queries information about all the OS accounts created. This API uses an asynchronous callback to return the result.
 
 **Since:** 7
 
@@ -2564,16 +2368,16 @@ queryAllCreatedOsAccounts(callback: AsyncCallback<Array<OsAccountInfo>>): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;OsAccountInfo&gt;&gt; | Yes | 回调函数。如果查询成功，err为null，data为已创建的所有系统账号的信息列表；否则为错误对象。 |
+| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;OsAccountInfo&gt;&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **null** and **data** is a list of all created OS accounts. Otherwise, **data** is an error object. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameter types. |
-| 201 | Permission denied. |
-| 202 | Not system application. |
-| 12300001 | The system service works abnormally. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameter types. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system application. |
+| [12300001](../../apis-basic-services-kit/errorcode-account.md#12300001-system-service-abnormal) | The system service works abnormally. |
 
 ## Examples
 
@@ -2601,7 +2405,7 @@ try {
 queryAllCreatedOsAccounts(): Promise<Array<OsAccountInfo>>
 ```
 
-查询已创建的所有系统账号的信息列表。使用Promise异步回调。
+Queries information about all the OS accounts created. This API uses a promise to return the result.
 
 **Since:** 7
 
@@ -2619,15 +2423,15 @@ queryAllCreatedOsAccounts(): Promise<Array<OsAccountInfo>>
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;Array&lt;OsAccountInfo&gt;&gt; | Promise对象，返回已创建的所有系统账号的信息列表。 |
+| Promise&lt;Array&lt;OsAccountInfo&gt;&gt; | Promise used to return the information about all the OS accounts created. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 201 | Permission denied. |
-| 202 | Not system application. |
-| 12300001 | The system service works abnormally. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system application. |
+| [12300001](../../apis-basic-services-kit/errorcode-account.md#12300001-system-service-abnormal) | The system service works abnormally. |
 
 ## Examples
 
@@ -2659,7 +2463,7 @@ ArkTS-Sta:
 queryMaxLoggedInOsAccountNumber(): Promise<int>
 ```
 
-查询允许同时登录的系统账号的最大数量。使用Promise异步回调。
+Queries the maximum number of OS accounts allowed to log in to the system. This API uses a promise to return the result.
 
 **Since:** 12
 
@@ -2675,14 +2479,14 @@ queryMaxLoggedInOsAccountNumber(): Promise<int>
 
 | Type | Description |
 | --- | --- |
-| ArkTS-Dyn: Promise&lt;number&gt;  <br>ArkTS-Sta：Promise&lt;int&gt; | Promise对象，返回允许登录的系统账号的最大数量。 |
+| ArkTS-Dyn: Promise&lt;number&gt;  <br>ArkTS-Sta：Promise&lt;int&gt; | Promise used to return the result. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 202 | Not system application. |
-| 12300001 | The system service works abnormally. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system application. |
+| [12300001](../../apis-basic-services-kit/errorcode-account.md#12300001-system-service-abnormal) | The system service works abnormally. |
 
 ## Examples
 
@@ -2714,7 +2518,7 @@ ArkTS-Sta:
 queryMaxOsAccountNumber(callback: AsyncCallback<int>): void
 ```
 
-查询允许创建的系统账号的最大数量。使用callback异步回调。
+Queries the maximum number of OS accounts that can be created. This API uses an asynchronous callback to return the result.
 
 **Since:** 7
 
@@ -2730,15 +2534,15 @@ queryMaxOsAccountNumber(callback: AsyncCallback<int>): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | ArkTS-Dyn: [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;number&gt;  <br>ArkTS-Sta：[AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;int&gt; | Yes | 回调函数，如果查询成功，err为null，data为允许创建的系统账号的最大数量；否则为错误对象。 |
+| callback | ArkTS-Dyn: [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;number&gt;  <br>ArkTS-Sta：[AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;int&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **null** and **data** is the maximum number of OS accounts that can be created. Otherwise, **err** is an error object. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameter types. |
-| 202 | Not system application. |
-| 12300001 | The system service works abnormally. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameter types. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system application. |
+| [12300001](../../apis-basic-services-kit/errorcode-account.md#12300001-system-service-abnormal) | The system service works abnormally. |
 
 ## Examples
 
@@ -2772,7 +2576,7 @@ ArkTS-Sta:
 queryMaxOsAccountNumber(): Promise<int>
 ```
 
-查询允许创建的系统账号的最大数量。使用Promise异步回调。
+Queries the maximum number of OS accounts that can be created. This API uses a promise to return the result.
 
 **Since:** 7
 
@@ -2788,14 +2592,14 @@ queryMaxOsAccountNumber(): Promise<int>
 
 | Type | Description |
 | --- | --- |
-| ArkTS-Dyn: Promise&lt;number&gt;  <br>ArkTS-Sta：Promise&lt;int&gt; | Promise对象，返回允许创建的系统账号的最大数量。 |
+| ArkTS-Dyn: Promise&lt;number&gt;  <br>ArkTS-Sta：Promise&lt;int&gt; | Promise used to return the result. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 202 | Not system application. |
-| 12300001 | The system service works abnormally. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system application. |
+| [12300001](../../apis-basic-services-kit/errorcode-account.md#12300001-system-service-abnormal) | The system service works abnormally. |
 
 ## Examples
 
@@ -2821,7 +2625,7 @@ try {
 queryOsAccount(): Promise<OsAccountInfo>
 ```
 
-查询当前进程所属的系统账号的信息。使用Promise异步回调。
+Obtains information about the OS account to which the current process belongs. This API uses a promise to return the result.
 
 **Since:** 11
 
@@ -2839,15 +2643,15 @@ queryOsAccount(): Promise<OsAccountInfo>
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;OsAccountInfo&gt; | Promise对象，返回当前进程所属的系统账号信息。 |
+| Promise&lt;OsAccountInfo&gt; | Promise used to return the OS account information obtained. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 201 | Permission denied. |
-| 202 | Not system application. |
-| 12300001 | The system service works abnormally. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system application. |
+| [12300001](../../apis-basic-services-kit/errorcode-account.md#12300001-system-service-abnormal) | The system service works abnormally. |
 
 ## Examples
 
@@ -2879,7 +2683,7 @@ ArkTS-Sta:
 queryOsAccountById(localId: int, callback: AsyncCallback<OsAccountInfo>): void
 ```
 
-查询指定系统账号的信息。使用callback异步回调。
+Queries information about the OS account of the given ID. This API uses an asynchronous callback to return the result.
 
 **Since:** 7
 
@@ -2897,42 +2701,19 @@ queryOsAccountById(localId: int, callback: AsyncCallback<OsAccountInfo>): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| localId | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | 要查询的系统账号的ID。 |
-| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;OsAccountInfo&gt; | Yes | 回调函数。如果查询成功，err为null，data为查到的系统账号的信息；否则为错误对象。 |
+| localId | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | ID of the target OS account. |
+| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;OsAccountInfo&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **null** and **data** is the OS account information obtained. Otherwise, **data** is an error object. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameter types. |
-| 12300003 | Account not found. |
-| 201 | Permission denied. |
-| 12300002 | Invalid localId. |
-| 202 | Not system application. |
-| 12300001 | The system service works abnormally. |
-
-## Examples
-
-Query information about OS account 100.
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let accountManager: osAccount.AccountManager = osAccount.getAccountManager();
-let localId: number = 100;
-try {
-  accountManager.queryOsAccountById(localId, (err: BusinessError, accountInfo: osAccount.OsAccountInfo)=>{
-    if (err) {
-      console.error(`queryOsAccountById exception:code is ${err.code}, message is ${err.message}`);
-    } else {
-      console.info('queryOsAccountById accountInfo:' + JSON.stringify(accountInfo));
-    }
-  });
-} catch (e) {
-  const err = e as BusinessError;
-  console.error(`queryOsAccountById exception: code is ${err.code}, message is ${err.message}`);
-}
-```
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameter types. |
+| [12300003](../../apis-basic-services-kit/errorcode-account.md#12300003-account-not-found) | Account not found. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
+| [12300002](../../apis-basic-services-kit/errorcode-account.md#12300002-invalid-parameter) | Invalid localId. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system application. |
+| [12300001](../../apis-basic-services-kit/errorcode-account.md#12300001-system-service-abnormal) | The system service works abnormally. |
 
 ## queryOsAccountById
 
@@ -2946,7 +2727,7 @@ ArkTS-Sta:
 queryOsAccountById(localId: int): Promise<OsAccountInfo>
 ```
 
-查询指定系统账号的信息。使用Promise异步回调。
+Queries information about the OS account of the given ID. This API uses a promise to return the result.
 
 **Since:** 7
 
@@ -2964,45 +2745,24 @@ queryOsAccountById(localId: int): Promise<OsAccountInfo>
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| localId | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | 要查询的系统账号的ID。 |
+| localId | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | ID of the target OS account. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;OsAccountInfo&gt; | Promise对象，返回查到的系统账号的信息。 |
+| Promise&lt;OsAccountInfo&gt; | Promise used to return the OS account information obtained. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameter types. |
-| 12300003 | Account not found. |
-| 201 | Permission denied. |
-| 12300002 | Invalid localId. |
-| 202 | Not system application. |
-| 12300001 | The system service works abnormally. |
-
-## Examples
-
-Query information about OS account 100.
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let accountManager: osAccount.AccountManager = osAccount.getAccountManager();
-let localId: number = 100;
-try {
-  accountManager.queryOsAccountById(localId).then((accountInfo: osAccount.OsAccountInfo) => {
-    console.info('queryOsAccountById, accountInfo: ' + JSON.stringify(accountInfo));
-  }).catch((err: BusinessError) => {
-    console.error(`queryOsAccountById err: code is ${err.code}, message is ${err.message}`);
-  });
-} catch (e) {
-  const err = e as BusinessError;
-  console.error(`queryOsAccountById exception: code is ${err.code}, message is ${err.message}`);
-}
-```
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameter types. |
+| [12300003](../../apis-basic-services-kit/errorcode-account.md#12300003-account-not-found) | Account not found. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
+| [12300002](../../apis-basic-services-kit/errorcode-account.md#12300002-invalid-parameter) | Invalid localId. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system application. |
+| [12300001](../../apis-basic-services-kit/errorcode-account.md#12300001-system-service-abnormal) | The system service works abnormally. |
 
 ## removeOsAccount
 
@@ -3016,7 +2776,7 @@ ArkTS-Sta:
 removeOsAccount(localId: int, callback: AsyncCallback<void>): void
 ```
 
-删除指定系统账号。使用callback异步回调。
+Removes an OS account. This API uses an asynchronous callback to return the result.
 
 **Since:** 7
 
@@ -3034,21 +2794,21 @@ removeOsAccount(localId: int, callback: AsyncCallback<void>): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| localId | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | 系统账号ID。 |
-| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | 回调函数。如果删除账号成功，err为null，否则为错误对象。 |
+| localId | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | ID of the target OS account. |
+| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **null**. Otherwise, **err** is an error object. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 12300010 | Service busy. Possible causes: The target account is being operated on. |
-| 12300008 | Restricted Account. |
-| 12300003 | Account not found. |
-| 201 | Permission denied. |
-| 12300002 | Invalid localId. |
-| 202 | Not system application. |
-| 12300001 | The system service works abnormally. |
-| 204 | Access denied due to user access control policy. Possible causes: 1. The operation is restricted by the OS-account constraint. 2. The required privilege for the operation has not been granted.<br>**Applicable version:** 24 and later |
+| [12300010](../../apis-basic-services-kit/errorcode-account.md#12300010-account-service-not-respond) | Service busy. Possible causes: The target account is being operated on. |
+| [12300008](../../apis-basic-services-kit/errorcode-account.md#12300008-restricted-account) | Restricted Account. |
+| [12300003](../../apis-basic-services-kit/errorcode-account.md#12300003-account-not-found) | Account not found. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
+| [12300002](../../apis-basic-services-kit/errorcode-account.md#12300002-invalid-parameter) | Invalid localId. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system application. |
+| [12300001](../../apis-basic-services-kit/errorcode-account.md#12300001-system-service-abnormal) | The system service works abnormally. |
+| [204](../../errorcode-universal.md#204-access-denied-by-user-access-control-policy) | Access denied due to user access control policy. Possible causes: 1. The operation is restricted by the OS-account constraint. 2. The required privilege for the operation has not been granted.<br>**Applicable version:** 24 and later |
 
 ## Examples
 
@@ -3086,7 +2846,7 @@ ArkTS-Sta:
 removeOsAccount(localId: int): Promise<void>
 ```
 
-删除指定系统账号。使用Promise异步回调。
+Removes an OS account. This API uses a promise to return the result.
 
 **Since:** 7
 
@@ -3104,26 +2864,26 @@ removeOsAccount(localId: int): Promise<void>
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| localId | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | 系统账号ID。 |
+| localId | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | ID of the target OS account. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise对象，无返回结果的Promise对象。 |
+| Promise&lt;void&gt; | Promise that returns no value. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 12300010 | Service busy. Possible causes: The target account is being operated. |
-| 12300008 | Restricted Account. |
-| 12300003 | Account not found. |
-| 201 | Permission denied. |
-| 12300002 | Invalid localId. |
-| 202 | Not system application. |
-| 12300001 | The system service works abnormally. |
-| 204 | Access denied due to user access control policy. Possible causes: 1. The operation is restricted by the OS-account constraint. 2. The required privilege for the operation has not been granted.<br>**Applicable version:** 24 and later |
+| [12300010](../../apis-basic-services-kit/errorcode-account.md#12300010-account-service-not-respond) | Service busy. Possible causes: The target account is being operated. |
+| [12300008](../../apis-basic-services-kit/errorcode-account.md#12300008-restricted-account) | Restricted Account. |
+| [12300003](../../apis-basic-services-kit/errorcode-account.md#12300003-account-not-found) | Account not found. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
+| [12300002](../../apis-basic-services-kit/errorcode-account.md#12300002-invalid-parameter) | Invalid localId. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system application. |
+| [12300001](../../apis-basic-services-kit/errorcode-account.md#12300001-system-service-abnormal) | The system service works abnormally. |
+| [204](../../errorcode-universal.md#204-access-denied-by-user-access-control-policy) | Access denied due to user access control policy. Possible causes: 1. The operation is restricted by the OS-account constraint. 2. The required privilege for the operation has not been granted.<br>**Applicable version:** 24 and later |
 
 ## Examples
 
@@ -3159,7 +2919,7 @@ ArkTS-Sta:
 removeOsAccount(localId: int, options: RemoveOsAccountOptions): Promise<void>
 ```
 
-根据删除选项，删除指定系统账号。使用Promise异步回调。
+Removes a specified OS account based on the options. This API uses a promise to return the result.
 
 **Since:** 24
 
@@ -3177,27 +2937,27 @@ removeOsAccount(localId: int, options: RemoveOsAccountOptions): Promise<void>
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| localId | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | 系统账号ID。 |
-| options | [RemoveOsAccountOptions](arkts-basicservices-osaccount-removeosaccountoptions-i-sys.md) | Yes | 删除系统账号的选项。 |
+| localId | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | ID of the target OS account. &lt;br&gt;The value should be an integer. |
+| options | [RemoveOsAccountOptions](arkts-basicservices-osaccount-removeosaccountoptions-i-sys.md) | Yes | Options for removing an OS account. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise对象，无返回结果。 |
+| Promise&lt;void&gt; | Promise that returns no value. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 12300010 | Service busy. Possible causes: The target account is being operated on. |
-| 12300008 | Restricted Account. |
-| 12300003 | Account not found. |
-| 201 | Permission denied. |
-| 12300002 | Invalid localId or options. |
-| 202 | Not system application. |
-| 12300001 | The system service works abnormally. |
-| 204 | Access denied due to user access control policy. Possible causes: 1. The operation is restricted by the OS-account constraint. 2. The required privilege for the operation has not been granted. |
+| [12300010](../../apis-basic-services-kit/errorcode-account.md#12300010-account-service-not-respond) | Service busy. Possible causes: The target account is being operated on. |
+| [12300008](../../apis-basic-services-kit/errorcode-account.md#12300008-restricted-account) | Restricted Account. |
+| [12300003](../../apis-basic-services-kit/errorcode-account.md#12300003-account-not-found) | Account not found. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
+| [12300002](../../apis-basic-services-kit/errorcode-account.md#12300002-invalid-parameter) | Invalid localId or options. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system application. |
+| [12300001](../../apis-basic-services-kit/errorcode-account.md#12300001-system-service-abnormal) | The system service works abnormally. |
+| [204](../../errorcode-universal.md#204-access-denied-by-user-access-control-policy) | Access denied due to user access control policy. Possible causes: 1. The operation is restricted by the OS-account constraint. 2. The required privilege for the operation has not been granted. |
 
 ## Examples
 
@@ -3237,7 +2997,7 @@ ArkTS-Sta:
 setOsAccountConstraints(localId: int, constraints: Array<string>, enable: boolean, callback: AsyncCallback<void>): void
 ```
 
-为指定系统账号设置/删除约束。使用callback异步回调。
+Sets or removes constraints for an OS account. This API uses an asynchronous callback to return the result.
 
 **Since:** 7
 
@@ -3255,46 +3015,22 @@ setOsAccountConstraints(localId: int, constraints: Array<string>, enable: boolea
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| localId | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | 系统账号ID。 |
-| constraints | Array&lt;string&gt; | Yes | 待设置/删除的 [约束](../../../reference/apis-basic-services-kit/js-apis-osAccount.md#系统账号约束列表)列表。 |
-| enable | boolean | Yes | 设置(true)/删除(false) 。 |
-| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | 回调函数。如果设置成功，err为null，否则为错误对象。 |
+| localId | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | ID of the target OS account. |
+| constraints | Array&lt;string&gt; | Yes | [Constraints](../../../reference/apis-basic-services-kit/js-apis-osAccount.md#constraints) to set or remove. |
+| enable | boolean | Yes | Whether to set or remove constraints. The value **true** means to set constraints, and **false** means to remove constraints. |
+| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **null**. Otherwise, **err** is an error object. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameter types. |
-| 12300008 | Restricted Account. |
-| 12300003 | Account not found. |
-| 201 | Permission denied. |
-| 12300002 | Invalid localId or constraints. |
-| 202 | Not system application. |
-| 12300001 | The system service works abnormally. |
-
-## Examples
-
-Disable Wi-Fi for OS account 100.
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let accountManager: osAccount.AccountManager = osAccount.getAccountManager();
-let localId: number = 100;
-let constraint: string = 'constraint.wifi';
-try {
-  accountManager.setOsAccountConstraints(localId, [constraint], true, (err: BusinessError) => {
-    if (err) {
-      console.error(`setOsAccountConstraints failed, code is ${err.code}, message is ${err.message}`);
-    } else {
-      console.info('setOsAccountConstraints successfully');
-    }
-  });
-} catch (e) {
-  const err = e as BusinessError;
-  console.error(`setOsAccountConstraints exception: code is ${err.code}, message is ${err.message}`);
-}
-```
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameter types. |
+| [12300008](../../apis-basic-services-kit/errorcode-account.md#12300008-restricted-account) | Restricted Account. |
+| [12300003](../../apis-basic-services-kit/errorcode-account.md#12300003-account-not-found) | Account not found. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
+| [12300002](../../apis-basic-services-kit/errorcode-account.md#12300002-invalid-parameter) | Invalid localId or constraints. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system application. |
+| [12300001](../../apis-basic-services-kit/errorcode-account.md#12300001-system-service-abnormal) | The system service works abnormally. |
 
 ## setOsAccountConstraints
 
@@ -3308,7 +3044,7 @@ ArkTS-Sta:
 setOsAccountConstraints(localId: int, constraints: Array<string>, enable: boolean): Promise<void>
 ```
 
-为指定系统账号设置/删除约束。使用Promise异步回调。
+Sets or removes constraints for an OS account. This API uses a promise to return the result.
 
 **Since:** 7
 
@@ -3326,48 +3062,27 @@ setOsAccountConstraints(localId: int, constraints: Array<string>, enable: boolea
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| localId | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | 系统账号ID。 |
-| constraints | Array&lt;string&gt; | Yes | 待设置/删除的 [约束](../../../reference/apis-basic-services-kit/js-apis-osAccount.md#系统账号约束列表)列表。 |
-| enable | boolean | Yes | 设置(true)/删除(false)。 |
+| localId | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | ID of the target OS account. |
+| constraints | Array&lt;string&gt; | Yes | [Constraints](../../../reference/apis-basic-services-kit/js-apis-osAccount.md#constraints) to set or remove. |
+| enable | boolean | Yes | Set or remove constraints. The value **true** means to set constraints, and **false** means to remove constraints. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise对象，无返回结果的Promise对象。 |
+| Promise&lt;void&gt; | Promise that returns no value. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameter types. |
-| 12300008 | Restricted Account. |
-| 12300003 | Account not found. |
-| 201 | Permission denied. |
-| 12300002 | Invalid localId or constraints. |
-| 202 | Not system application. |
-| 12300001 | The system service works abnormally. |
-
-## Examples
-
-Remove the constraint on the use of Wi-Fi for OS account 100.
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let accountManager: osAccount.AccountManager = osAccount.getAccountManager();
-let localId: number = 100;
-try {
-  accountManager.setOsAccountConstraints(localId, ['constraint.location.set'], false).then(() => {
-    console.info('setOsAccountConstraints successfully');
-  }).catch((err: BusinessError) => {
-    console.error(`setOsAccountConstraints failed, code is ${err.code}, message is ${err.message}`);
-  });
-} catch (e) {
-  const err = e as BusinessError;
-  console.error(`setOsAccountConstraints exception: code is ${err.code}, message is ${err.message}`);
-}
-```
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameter types. |
+| [12300008](../../apis-basic-services-kit/errorcode-account.md#12300008-restricted-account) | Restricted Account. |
+| [12300003](../../apis-basic-services-kit/errorcode-account.md#12300003-account-not-found) | Account not found. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
+| [12300002](../../apis-basic-services-kit/errorcode-account.md#12300002-invalid-parameter) | Invalid localId or constraints. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system application. |
+| [12300001](../../apis-basic-services-kit/errorcode-account.md#12300001-system-service-abnormal) | The system service works abnormally. |
 
 ## setOsAccountName
 
@@ -3381,7 +3096,7 @@ ArkTS-Sta:
 setOsAccountName(localId: int, localName: string, callback: AsyncCallback<void>): void
 ```
 
-设置指定系统账号的账号名。使用callback异步回调。
+Sets the name of an OS account. This API uses an asynchronous callback to return the result.
 
 **Since:** 7
 
@@ -3399,45 +3114,21 @@ setOsAccountName(localId: int, localName: string, callback: AsyncCallback<void>)
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| localId | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | 系统账号ID。 |
-| localName | string | Yes | 账号名，最大长度为1024个字符。 |
-| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | 回调函数。如果设置成功，err为null，否则为错误对象。 |
+| localId | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | ID of the target OS account. |
+| localName | string | Yes | Account name to set. The value cannot exceed 1024 characters. |
+| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **null**. Otherwise, **err** is an error object. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameter types. |
-| 12300008 | Restricted Account. |
-| 12300003 | Account not found. |
-| 201 | Permission denied. |
-| 12300002 | Invalid localId or localName. |
-| 202 | Not system application. |
-| 12300001 | The system service works abnormally. |
-
-## Examples
-
-Set the name of OS account 100 to demoName.
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let accountManager: osAccount.AccountManager = osAccount.getAccountManager();
-let localId: number = 100;
-let name: string = 'demoName';
-try {
-  accountManager.setOsAccountName(localId, name, (err: BusinessError) => {
-    if (err) {
-      console.error(`setOsAccountName failed, code is ${err.code}, message is ${err.message}`);
-    } else {
-      console.info('setOsAccountName successfully');
-    }
-  });
-} catch (e) {
-  const err = e as BusinessError;
-  console.error(`setOsAccountName exception: code is ${err.code}, message is ${err.message}`);
-}
-```
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameter types. |
+| [12300008](../../apis-basic-services-kit/errorcode-account.md#12300008-restricted-account) | Restricted Account. |
+| [12300003](../../apis-basic-services-kit/errorcode-account.md#12300003-account-not-found) | Account not found. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
+| [12300002](../../apis-basic-services-kit/errorcode-account.md#12300002-invalid-parameter) | Invalid localId or localName. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system application. |
+| [12300001](../../apis-basic-services-kit/errorcode-account.md#12300001-system-service-abnormal) | The system service works abnormally. |
 
 ## setOsAccountName
 
@@ -3451,7 +3142,7 @@ ArkTS-Sta:
 setOsAccountName(localId: int, localName: string): Promise<void>
 ```
 
-设置指定系统账号的账号名。使用Promise异步回调。
+Sets the name of an OS account. This API uses a promise to return the result.
 
 **Since:** 7
 
@@ -3469,48 +3160,26 @@ setOsAccountName(localId: int, localName: string): Promise<void>
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| localId | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | 系统账号ID。 |
-| localName | string | Yes | 账号名，最大长度为1024个字符。 |
+| localId | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | ID of the target OS account. |
+| localName | string | Yes | Account name to set. The value cannot exceed 1024 characters. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise对象，无返回结果的Promise对象。 |
+| Promise&lt;void&gt; | Promise that returns no value. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameter types. |
-| 12300008 | Restricted Account. |
-| 12300003 | Account not found. |
-| 201 | Permission denied. |
-| 12300002 | Invalid localId or localName. |
-| 202 | Not system application. |
-| 12300001 | The system service works abnormally. |
-
-## Examples
-
-Set the name of OS account 100 to demoName.
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let accountManager: osAccount.AccountManager = osAccount.getAccountManager();
-let localId: number = 100;
-let name: string = 'testName';
-try {
-  accountManager.setOsAccountName(localId, name).then(() => {
-    console.info('setOsAccountName successfully');
-  }).catch((err: BusinessError) => {
-    console.error(`setOsAccountName failed, code is ${err.code}, message is ${err.message}`);
-  });
-} catch (e) {
-  const err = e as BusinessError;
-  console.error(`setOsAccountName exception: code is ${err.code}, message is ${err.message}`);
-}
-```
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameter types. |
+| [12300008](../../apis-basic-services-kit/errorcode-account.md#12300008-restricted-account) | Restricted Account. |
+| [12300003](../../apis-basic-services-kit/errorcode-account.md#12300003-account-not-found) | Account not found. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
+| [12300002](../../apis-basic-services-kit/errorcode-account.md#12300002-invalid-parameter) | Invalid localId or localName. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system application. |
+| [12300001](../../apis-basic-services-kit/errorcode-account.md#12300001-system-service-abnormal) | The system service works abnormally. |
 
 ## setOsAccountProfilePhoto
 
@@ -3524,7 +3193,7 @@ ArkTS-Sta:
 setOsAccountProfilePhoto(localId: int, photo: string, callback: AsyncCallback<void>): void
 ```
 
-为指定系统账号设置头像信息。使用callback异步回调。
+Sets a profile photo for an OS account. This API uses an asynchronous callback to return the result.
 
 **Since:** 7
 
@@ -3542,48 +3211,21 @@ setOsAccountProfilePhoto(localId: int, photo: string, callback: AsyncCallback<vo
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| localId | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | 系统账号ID。 |
-| photo | string | Yes | 头像信息。 |
-| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | 回调函数。如果设置成功，err为null，否则为错误对象。 |
+| localId | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | ID of the target OS account. |
+| photo | string | Yes | Profile photo information. |
+| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **null**. Otherwise, **err** is an error object. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameter types. |
-| 12300008 | Restricted Account. |
-| 12300003 | Account not found. |
-| 201 | Permission denied. |
-| 12300002 | Invalid localId or photo. |
-| 202 | Not system application. |
-| 12300001 | The system service works abnormally. |
-
-## Examples
-
-Set a profile photo for OS account 100.
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let accountManager: osAccount.AccountManager = osAccount.getAccountManager();
-let localId: number = 100;
-let photo: string = 'data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA0AAAAPCAYAAAA/I0V3AAAAAXNSR0IArs4c6QAAAARnQU1BAA'+
-'Cxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAACwSURBVDhPvZLBDYMwDEV/ugsXRjAT0EHCOuFIBwkbdIRewi6unbiAyoGgSn1SFH85+Y'+
-'q/4ljARW62X+LHS8uIzjm4dXUYF+utzBikB52Jo5e5iEPKqpACk7R9NM2RvWm5tIkD2czLCUFNKLD6IjdMHFHDzws285MgGrT0xCtp3WOKHo'+
-'+7q0mP0DZW9pNmoEFUzrQjp5cCnaen2kSJXLFD8ghbXyZCMQf/8e8Ns1XVAG/XAgqKzVnJFAAAAABJRU5ErkJggg=='
-try {
-  accountManager.setOsAccountProfilePhoto(localId, photo, (err: BusinessError)=>{
-    if (err) {
-      console.error(`setOsAccountProfilePhoto exception:code is ${err.code}, message is ${err.message}`);
-    } else {
-      console.info('setOsAccountProfilePhoto successful.');
-    }
-  });
-} catch (e) {
-  const err = e as BusinessError;
-  console.error(`setOsAccountProfilePhoto exception: code is ${err.code}, message is ${err.message}`);
-}
-```
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameter types. |
+| [12300008](../../apis-basic-services-kit/errorcode-account.md#12300008-restricted-account) | Restricted Account. |
+| [12300003](../../apis-basic-services-kit/errorcode-account.md#12300003-account-not-found) | Account not found. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
+| [12300002](../../apis-basic-services-kit/errorcode-account.md#12300002-invalid-parameter) | Invalid localId or photo. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system application. |
+| [12300001](../../apis-basic-services-kit/errorcode-account.md#12300001-system-service-abnormal) | The system service works abnormally. |
 
 ## setOsAccountProfilePhoto
 
@@ -3597,7 +3239,7 @@ ArkTS-Sta:
 setOsAccountProfilePhoto(localId: int, photo: string): Promise<void>
 ```
 
-为指定系统账号设置头像信息。使用Promise异步回调。
+Sets a profile photo for an OS account. This API uses a promise to return the result.
 
 **Since:** 7
 
@@ -3615,51 +3257,26 @@ setOsAccountProfilePhoto(localId: int, photo: string): Promise<void>
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| localId | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | 系统账号ID。 |
-| photo | string | Yes | 头像信息。 |
+| localId | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | ID of the target OS account. |
+| photo | string | Yes | Profile photo information. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise对象，无返回结果的Promise对象。 |
+| Promise&lt;void&gt; | Promise that returns no value. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameter types. |
-| 12300008 | Restricted Account. |
-| 12300003 | Account not found. |
-| 201 | Permission denied. |
-| 12300002 | Invalid localId or photo. |
-| 202 | Not system application. |
-| 12300001 | The system service works abnormally. |
-
-## Examples
-
-Set a profile photo for OS account 100.
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let accountManager: osAccount.AccountManager = osAccount.getAccountManager();
-let localId: number = 100;
-let photo: string = 'data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA0AAAAPCAYAAAA/I0V3AAAAAXNSR0IArs4c6QAAAARnQU1BAA'+
-'Cxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAACwSURBVDhPvZLBDYMwDEV/ugsXRjAT0EHCOuFIBwkbdIRewi6unbiAyoGgSn1SFH85+Y'+
-'q/4ljARW62X+LHS8uIzjm4dXUYF+utzBikB52Jo5e5iEPKqpACk7R9NM2RvWm5tIkD2czLCUFNKLD6IjdMHFHDzws285MgGrT0xCtp3WOKHo'+
-'+7q0mP0DZW9pNmoEFUzrQjp5cCnaen2kSJXLFD8ghbXyZCMQf/8e8Ns1XVAG/XAgqKzVnJFAAAAABJRU5ErkJggg=='
-try {
-  accountManager.setOsAccountProfilePhoto(localId, photo).then(() => {
-    console.info('setOsAccountProfilePhoto success');
-  }).catch((err: BusinessError) => {
-    console.error(`setOsAccountProfilePhoto err: code is ${err.code}, message is ${err.message}`);
-  });
-} catch (e) {
-  const err = e as BusinessError;
-  console.error(`setOsAccountProfilePhoto exception: code is ${err.code}, message is ${err.message}`);
-}
-```
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameter types. |
+| [12300008](../../apis-basic-services-kit/errorcode-account.md#12300008-restricted-account) | Restricted Account. |
+| [12300003](../../apis-basic-services-kit/errorcode-account.md#12300003-account-not-found) | Account not found. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
+| [12300002](../../apis-basic-services-kit/errorcode-account.md#12300002-invalid-parameter) | Invalid localId or photo. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system application. |
+| [12300001](../../apis-basic-services-kit/errorcode-account.md#12300001-system-service-abnormal) | The system service works abnormally. |
 
 ## setOsAccountType
 
@@ -3673,7 +3290,7 @@ ArkTS-Sta:
 setOsAccountType(localId: int, type: OsAccountType, options?: SetOsAccountTypeOptions): Promise<void>
 ```
 
-设置指定系统账号的账号类型。使用Promise异步回调。
+Sets the type of a specified OS account. This API uses a promise to return the result.
 
 **Since:** 24
 
@@ -3691,29 +3308,29 @@ setOsAccountType(localId: int, type: OsAccountType, options?: SetOsAccountTypeOp
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| localId | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | 系统账号ID。 |
-| type | [OsAccountType](arkts-basicservices-osaccount-osaccounttype-e-sys.md) | Yes | 系统账号类型。 |
-| options | [SetOsAccountTypeOptions](arkts-basicservices-osaccount-setosaccounttypeoptions-i-sys.md) | No | 设置系统账号类型的选项。默认为空。 |
+| localId | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | ID of the target OS account. &lt;br&gt;The value should be an integer. |
+| type | [OsAccountType](arkts-basicservices-osaccount-osaccounttype-e-sys.md) | Yes | Type of the OS account. |
+| options | [SetOsAccountTypeOptions](arkts-basicservices-osaccount-setosaccounttypeoptions-i-sys.md) | No | Options for setting the OS account type. This parameter is left empty by default. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise对象，无返回结果。 |
+| Promise&lt;void&gt; | Promise that returns no value. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 12300010 | Service busy. Possible causes: The target account is being operated. |
-| 12300008 | Restricted OS account. |
-| 12300003 | Account not found. |
-| 201 | Permission denied. |
-| 12300002 | Invalid type or options. |
-| 202 | Not system application. |
-| 12300001 | The system service works abnormally. |
-| 204 | Access denied due to user access control policy. Possible causes: 1. The operation is restricted by the OS-account constraint. 2. The required privilege for the operation has not been granted. |
-| 12300023 | The number of accounts of the specified type has reached the upper limit. |
+| [12300010](../../apis-basic-services-kit/errorcode-account.md#12300010-account-service-not-respond) | Service busy. Possible causes: The target account is being operated. |
+| [12300008](../../apis-basic-services-kit/errorcode-account.md#12300008-restricted-account) | Restricted OS account. |
+| [12300003](../../apis-basic-services-kit/errorcode-account.md#12300003-account-not-found) | Account not found. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
+| [12300002](../../apis-basic-services-kit/errorcode-account.md#12300002-invalid-parameter) | Invalid type or options. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system application. |
+| [12300001](../../apis-basic-services-kit/errorcode-account.md#12300001-system-service-abnormal) | The system service works abnormally. |
+| [204](../../errorcode-universal.md#204-access-denied-by-user-access-control-policy) | Access denied due to user access control policy. Possible causes: 1. The operation is restricted by the OS-account constraint. 2. The required privilege for the operation has not been granted. |
+| [12300023](../../apis-basic-services-kit/errorcode-account.md#12300023-accounts-of-a-specified-type-reached-the-limit) | The number of accounts of the specified type has reached the upper limit. |
 
 ## Examples
 

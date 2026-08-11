@@ -1,18 +1,12 @@
 # getPageContent（系统接口）
 
-## 导入模块
-
-```TypeScript
-import { onScreen } from 'kits/@kit.MultimodalAwarenessKit';
-```
-
 ## getPageContent
 
 ```TypeScript
 function getPageContent(options?: ContentOptions): Promise<PageContent>
 ```
 
-Obtains the onscreen content when a window is displayed on the screen.
+在需要抓取内容的窗口在桌面上时，调用该接口以获取屏上内容。
 
 **起始版本：** 20
 
@@ -30,24 +24,24 @@ Obtains the onscreen content when a window is displayed on the screen.
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| options | [ContentOptions](arkts-multimodalawareness-onscreen-contentoptions-i-sys.md) | 否 | Options for obtaining the onscreen screen content. By default, the window ID is not specified, and other options are **False**. |
+| options | [ContentOptions](arkts-multimodalawareness-onscreen-contentoptions-i-sys.md) | 否 | 获取屏上内容的选项，默认为不指定window ID，且其余选项均为false。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;PageContent&gt; | Indicates the promise which carries retrieved page content |
+| Promise&lt;PageContent&gt; | Promise对象，返回获取到的页面内容 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 34000006 | The request timed out. |
-| 801 | Capability not supported. Function can not work correctly due to limited &lt;br&gt; device capabilities. |
-| 34000004 | The page is not ready. |
-| 34000002 | The application or page is not supported. |
-| 34000003 | The window ID is invalid. Possible causes: 1. window id is not passed &lt;br&gt; when screen is splited. 2. passed window id is not on screen or floating. |
-| 34000001 | Service exception. |
-| 201 | Permission denied. An attempt was made to get page content forbidden by &lt;br&gt; permission: ohos.permission.GET_SCREEN_CONTENT. |
-| 202 | Permission check failed. A non-system application uses the system API. |
+| [34000006](../../apis-multimodalawareness-kit/errorcode-onScreen.md#34000006-请求超时) | The request timed out. |
+| [801](../../errorcode-universal.md#801-该设备不支持此api) | Capability not supported. Function can not work correctly due to limited &lt;br&gt; device capabilities. |
+| [34000004](../../apis-multimodalawareness-kit/errorcode-onScreen.md#34000004-页面未准备就绪) | The page is not ready. |
+| [34000002](../../apis-multimodalawareness-kit/errorcode-onScreen.md#34000002-应用或页面不支持) | The application or page is not supported. |
+| [34000003](../../apis-multimodalawareness-kit/errorcode-onScreen.md#34000003-窗口id无效) | The window ID is invalid. Possible causes: 1. window id is not passed &lt;br&gt; when screen is splited. 2. passed window id is not on screen or floating. |
+| [34000001](../../apis-multimodalawareness-kit/errorcode-onScreen.md#34000001-服务异常) | Service exception. |
+| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. An attempt was made to get page content forbidden by &lt;br&gt; permission: ohos.permission.GET_SCREEN_CONTENT. |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission check failed. A non-system application uses the system API. |
 

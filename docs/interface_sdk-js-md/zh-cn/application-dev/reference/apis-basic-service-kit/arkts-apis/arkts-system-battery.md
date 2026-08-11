@@ -1,11 +1,5 @@
 # @system.battery
 
-## 导入模块
-
-```TypeScript
-import { GetStatusOptions, BatteryResponse } from 'kits/@kit.BasicServicesKit';
-```
-
 ## 汇总
 
 ### 类

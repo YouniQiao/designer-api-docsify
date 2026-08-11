@@ -1,6 +1,6 @@
 # SerialPortInfo
 
-串口设备信息
+Serial port device information.
 
 **Since:** 26.0.0
 
@@ -22,7 +22,7 @@ import { serial } from 'kits/@kit.BasicServicesKit';
 manufacturer?: string
 ```
 
-USB虚拟串口设备的制造商名称。
+Manufacturer name of the USB virtual serial port device.
 
 **Type:** string
 
@@ -42,7 +42,7 @@ USB虚拟串口设备的制造商名称。
 portName: string
 ```
 
-端口名称
+Port name.
 
 **Type:** string
 
@@ -62,7 +62,7 @@ portName: string
 productId?: int
 ```
 
-USB虚拟串口设备的productId
+Product ID of the USB virtual serial port device.
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
@@ -82,7 +82,7 @@ USB虚拟串口设备的productId
 vendorId?: int
 ```
 
-USB虚拟串口的vendorId
+Vendor ID of the USB virtual serial port.
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 

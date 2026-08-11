@@ -12,7 +12,7 @@ import { hidebug } from 'kits/@kit.PerformanceAnalysisKit';
 function getGraphicsMemorySummary(interval?: int): Promise<GraphicsMemorySummary>
 ```
 
-��ȡӦ���Դ����ݣ�ʹ��Promise�����첽�ص���
+Obtains the size of the GPU memory summary. This API uses a promise to return the result.
 
 **Since:** 21
 
@@ -28,19 +28,19 @@ function getGraphicsMemorySummary(interval?: int): Promise<GraphicsMemorySummary
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| interval | ArkTS-Dyn: number  <br>ArkTS-Sta：int | No | �Դ����ݻ���ֵ��Чʱ�䣬��λΪ�롣Ĭ��ֵ��300��ȡֵ��ΧΪ[2-3600]��������ֵ����ȡֵ��Χʱ����ʹ��Ĭ��ֵ�� ���Դ����ݻ���ֵ����ʱ�䳬����ֵʱ����ȡ�����Դ����ݲ����»���ֵ������ֱ�ӻ�ȡ����ֵ�� ȡֵ��ΧΪȫ�������� |
+| interval | ArkTS-Dyn: number  <br>ArkTS-Sta：int | No | If the cache of graphics memory is older than interval (unit: second), the latest graphics memory data will be obtained. The interval value range is 2 seconds to 3600 seconds, If interval is an invalid value, the default value is 300 seconds. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;GraphicsMemorySummary&gt; | promise���󣬷���Ӧ���Դ����ݡ� |
+| Promise&lt;GraphicsMemorySummary&gt; | Returns the size of the GPU memory summary, in KB. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 11400104 | Failed to get the application memory due to a remote exception. |
+| [11400104](../errorcode-hiviewdfx-hidebug-cpuusage.md#11400104-abnormal-cpu-usage) | Failed to get the application memory due to a remote exception. |
 
 ## Examples
 

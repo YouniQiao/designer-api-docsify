@@ -18,7 +18,7 @@ controller?: VideoController
 
 设置视频控制器，可以控制视频的播放状态。
 
-**类型：** [VideoController](../arkts-components/arkts-arkui-videocontroller-c.md)
+**类型：** [VideoController](arkts-arkui-video-videocontroller-c.md)
 
 **起始版本：** 23
 
@@ -78,7 +78,7 @@ posterOptions?: PosterOptions
 
 设置视频播放的首帧送显选项，可以控制视频是否支持首帧送显。
 
-**类型：** [PosterOptions](../arkts-components/arkts-arkui-posteroptions-i.md)
+**类型：** [PosterOptions](arkts-arkui-video-posteroptions-i.md)
 
 **起始版本：** 23
 

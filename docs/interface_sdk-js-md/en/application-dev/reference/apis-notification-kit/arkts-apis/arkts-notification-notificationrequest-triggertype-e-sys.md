@@ -1,6 +1,6 @@
 # TriggerType (System API)
 
-表示触发条件的事件类型的枚举。
+Enumerates the trigger types.
 
 **Since:** 23
 
@@ -18,7 +18,7 @@
 TRIGGER_TYPE_GEOFENCE = 1
 ```
 
-地理围栏触发类型。
+Geofence.
 
 **Since:** 23
 

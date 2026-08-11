@@ -1,6 +1,6 @@
 # QueryMediaEntityParam
 
-查询媒体实例参数的定义。
+The definition of QueryMediaEntityParam.
 
 **Since:** 23
 
@@ -22,7 +22,7 @@ import { avMusicTemplate } from 'kits/@kit.AVSessionKit';
 entityId: string
 ```
 
-媒体实例的ID。
+entityId.
 
 **Type:** string
 
@@ -42,7 +42,7 @@ entityId: string
 episodeRange?: EpisodeRange
 ```
 
-要查询的剧集区间。
+episodeRange.
 
 **Type:** [EpisodeRange](arkts-avsession-avmusictemplate-episoderange-i.md)
 
@@ -62,7 +62,7 @@ episodeRange?: EpisodeRange
 pageIndex: int
 ```
 
-分页查询页码。
+pageIndex.
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
@@ -82,7 +82,7 @@ pageIndex: int
 sort?: Sort
 ```
 
-查询到的列表数据排序。
+sort.
 
 **Type:** [Sort](arkts-avsession-avmusictemplate-sort-e.md)
 
@@ -102,7 +102,7 @@ sort?: Sort
 subEntityType?: EntityType
 ```
 
-子节点的媒体资源类型。
+subEntityType.
 
 **Type:** [EntityType](arkts-avsession-avmusictemplate-entitytype-e.md)
 
@@ -122,7 +122,7 @@ subEntityType?: EntityType
 type: EntityType
 ```
 
-媒体资源类型。
+type.
 
 **Type:** [EntityType](arkts-avsession-avmusictemplate-entitytype-e.md)
 

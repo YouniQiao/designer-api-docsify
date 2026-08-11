@@ -1,6 +1,6 @@
 # ContinuousTaskActiveInfo
 
-长时任务激活信息。
+Describes the activation information of a continuous task.
 
 **Since:** 20
 
@@ -22,7 +22,7 @@ import { backgroundTaskManager } from 'kits/@kit.BackgroundTasksKit';
 id: int
 ```
 
-被激活的长时任务 Id。
+ID of the activated continuous task.
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 

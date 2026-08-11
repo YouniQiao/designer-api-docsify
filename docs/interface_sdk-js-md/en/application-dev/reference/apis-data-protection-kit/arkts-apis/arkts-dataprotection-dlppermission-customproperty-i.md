@@ -1,6 +1,6 @@
 # CustomProperty
 
-表示自定义策略。
+Represents a custom policy.
 
 **Since:** 21
 
@@ -22,7 +22,7 @@ import { dlpPermission } from 'kits/@kit.DataProtectionKit';
 enterprise: string
 ```
 
-表示企业定制策略的JSON字符串。长度不超过2&lt;sup&gt;22&lt;/sup&gt;字节，超出此范围抛出错误码401。
+JSON string of an enterprise custom policy. The value contains a maximum of 4,194,304 bytes. If the value is out of range, error code 401 is thrown.
 
 **Type:** string
 
@@ -40,7 +40,7 @@ enterprise: string
 options?: DlpFileQueryOptions
 ```
 
-企业DLP文件的查询选项，默认为空。
+Query options about an enterprise DLP file. This parameter is left blank by default. **Since**: 26.0.0
 
 **Type:** [DlpFileQueryOptions](arkts-dataprotection-dlppermission-dlpfilequeryoptions-i.md)
 

@@ -10,12 +10,6 @@
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
-## 导入模块
-
-```TypeScript
-import { WithEnvAttribute, WithEnv } from 'kits/@kit.ArkUI';
-```
-
 ## applyAttributesFinish
 
 ```TypeScript

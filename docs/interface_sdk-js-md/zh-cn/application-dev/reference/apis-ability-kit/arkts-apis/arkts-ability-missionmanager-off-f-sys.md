@@ -1,11 +1,5 @@
 # off（系统接口）
 
-## 导入模块
-
-```TypeScript
-import { missionManager } from 'kits/@kit.AbilityKit';
-```
-
 ## off('mission')
 
 ```TypeScript
@@ -32,16 +26,16 @@ function off(type: 'mission', listenerId: long, callback: AsyncCallback<void>): 
 | --- | --- | --- | --- |
 | type | 'mission' | 是 | 取消监听的任务名称。固定值：'mission'，表示系统任务状态监听器。 |
 | listenerId | long | 是 | 系统任务状态监器法的index值，和监听器一一对应，由on方法返回。 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | 是 | 执行结果回调函数。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 执行结果回调函数。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
-| 201 | Permission denied. |
-| 202 | Not system application. |
-| 16300002 | The specified mission listener does not exist. |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not system application. |
+| [16300002](../errorcode-ability.md#16300002-指定的任务监听器不存在) | The specified mission listener does not exist. |
 
 ## 示例
 
@@ -108,10 +102,9 @@ export default class EntryAbility extends UIAbility {
   }
 
   onWindowStageCreate(windowStage: window.WindowStage) {
-    // Main window is created, set main page for this ability
+    // 主窗口创建后，为此Ability设置主页面
     console.info('[Demo] EntryAbility onWindowStageCreate');
     try {
-      // 注册系统任务状态监听器
       listenerId = missionManager.on('mission', listener);
     } catch (paramError) {
       let code = (paramError as BusinessError).code;
@@ -168,10 +161,10 @@ function off(type: 'mission', listenerId: long): Promise<void>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
-| 201 | Permission denied. |
-| 202 | Not system application. |
-| 16300002 | The specified mission listener does not exist. |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not system application. |
+| [16300002](../errorcode-ability.md#16300002-指定的任务监听器不存在) | The specified mission listener does not exist. |
 
 ## 示例
 
@@ -232,7 +225,7 @@ export default class EntryAbility extends UIAbility {
   }
 
   onWindowStageCreate(windowStage: window.WindowStage) {
-    // Main window is created, set main page for this ability
+    // 主窗口创建后，为此Ability设置主页面
     console.info('[Demo] EntryAbility onWindowStageCreate');
     try {
       // 注册系统任务状态监听器

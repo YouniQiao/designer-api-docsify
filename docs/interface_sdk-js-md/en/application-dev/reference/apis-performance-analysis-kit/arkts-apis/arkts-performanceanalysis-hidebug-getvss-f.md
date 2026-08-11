@@ -12,7 +12,8 @@ import { hidebug } from 'kits/@kit.PerformanceAnalysisKit';
 function getVss(): bigint
 ```
 
-��ȡӦ�ý���ռ�õ������ڴ��С���ӿ�ʵ�ַ�ʽ����ȡ/proc/{pid}/statm�ڵ��е�sizeֵ���ڴ�ҳ������vss = size * ҳ��С��4KB/ҳ����
+Obtains the virtual set size used by the application process. This API is implemented by multiplying the value of  
+**size** (number of memory pages) in the **\/proc/{pid}/statm** node by the page size (4 KB per page).
 
 **Since:** 11
 
@@ -26,7 +27,7 @@ function getVss(): bigint
 
 | Type | Description |
 | --- | --- |
-| bigint | ����Ӧ�ý���ռ�õ������ڴ��С����λΪKB�� |
+| bigint | Virtual set size used by the application process, in KB. |
 
 ## Examples
 
@@ -34,6 +35,5 @@ function getVss(): bigint
 import { hidebug } from '@kit.PerformanceAnalysisKit';
 
 let vss: bigint = hidebug.getVss();
-console.info(`vss = ${vss}`);
 ```
 

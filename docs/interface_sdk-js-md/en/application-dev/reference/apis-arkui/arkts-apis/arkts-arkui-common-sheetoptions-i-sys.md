@@ -1,8 +1,6 @@
 # SheetOptions
 
-继承自[BindOptions](../arkts-components/arkts-arkui-bindoptions-i.md/arkts-arkui-bindoptions-i.md)。
-
-半模态页面内容选项。
+Component sheet options
 
 **Inheritance/Implementation:** SheetOptions extends [BindOptions](../arkts-components/arkts-arkui-bindoptions-i.md/arkts-arkui-bindoptions-i.md)
 
@@ -14,17 +12,37 @@
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
+## blurSnapshot
+
+```TypeScript
+blurSnapshot?: BlurSnapshotOptions
+```
+
+Options for blur snapshot optimization of the sheet.When this property is set, blur optimization is enabled and the sheet background will be rendered using a blur snapshot.This property cannot be dynamically switched after the sheet is presented.
+
+**Type:** [BlurSnapshotOptions](arkts-arkui-common-blursnapshotoptions-i-sys.md)
+
+**Default:** undefined
+
+**Since:** 26.0.0
+
+**ArkTS mode:** ArkTS-Sta only, since version 26.0.0.
+
+**Model restriction:** This API can be used only in the stage model.
+
+<!--Device-SheetOptions-blurSnapshot?: BlurSnapshotOptions--><!--Device-SheetOptions-blurSnapshot?: BlurSnapshotOptions-End-->
+
+**System capability:** SystemCapability.ArkUI.ArkUI.Full
+
+**System API:** This is a system API.
+
 ## edgeLightMode
 
 ```TypeScript
 edgeLightMode?: EdgeLightMode
 ```
 
-设置半模态弹窗边缘光效动画模式。
-
-默认值：EdgeLightMode.EDGELIGHT_DISABLED
-
-**系统接口：** 此接口为系统接口。
+Sets the edgeLight animation Mode of the bindSheet.
 
 **Type:** [EdgeLightMode](../arkts-components/arkts-arkui-edgelightmode-e-sys.md)
 
@@ -48,11 +66,7 @@ edgeLightMode?: EdgeLightMode
 offset?: Position
 ```
 
-设置半模态弹窗偏移量。当半模态为底部弹窗时，支持设置底部间距。不支持设置半模态的[SheetOptions](../arkts-components/arkts-arkui-sheetoptions-i.md/arkts-arkui-sheetoptions-i.md)中的detents属性。y轴设置为负数的时候不生效。
-
-默认值：x轴为0vp，y轴坐标为0vp。
-
-**系统接口：** 此接口为系统接口。
+Sets the position offset of the bindSheet.
 
 **Type:** [Position](arkts-arkui-position-i.md)
 

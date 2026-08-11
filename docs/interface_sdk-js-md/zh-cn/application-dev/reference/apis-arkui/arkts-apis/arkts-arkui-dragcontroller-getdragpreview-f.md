@@ -1,11 +1,5 @@
 # getDragPreview
 
-## 导入模块
-
-```TypeScript
-import { dragController } from 'kits/@kit.ArkUI';
-```
-
 ## getDragPreview
 
 ```TypeScript

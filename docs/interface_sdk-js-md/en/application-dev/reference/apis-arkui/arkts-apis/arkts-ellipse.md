@@ -6,6 +6,6 @@
 
 | Name | Description |
 | --- | --- |
-| [EllipseAttribute](arkts-arkui-ellipse-ellipseattribute-i.md) | 椭圆绘制组件属性。 |
-| [EllipseOptions](arkts-arkui-ellipse-ellipseoptions-i.md) | 用于描述Ellipse组件绘制属性。 |
+| [EllipseAttribute](arkts-arkui-ellipse-ellipseattribute-i.md) | Provides attribute for Ellipse. |
+| [EllipseOptions](arkts-arkui-ellipse-ellipseoptions-i.md) | Ellipse constructor options. |
 

@@ -12,13 +12,7 @@ import { zlib } from 'kits/@kit.BasicServicesKit';
 function zipFile(inFile: string, outFile: string, options: Options): Promise<void>
 ```
 
-压缩接口，压缩完成后返回执行结果。使用Promise异步回调。
-
-> **说明：**
-> 
-> 从API version 7开始支持，从API version 9开始废弃。建议使用
-> [zlib.compressFile](arkts-basicservices-zlib-compressfile-f.md#compressfile)
-> 替代。
+Zips a file. The execution result is returned after the compression is complete. This API uses a promise to return the result.
 
 **Since:** 7
 
@@ -36,15 +30,15 @@ function zipFile(inFile: string, outFile: string, options: Options): Promise<voi
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| inFile | string | Yes | 指定压缩的文件夹路径或者文件路径，路径必须为沙箱路径，沙箱路径可以通过context获取，可参考[FA模型](../../apis-ability-kit/arkts-apis/arkts-ability-context-t.md/arkts-ability-context-t.md)， [Stage模型](../../apis-ability-kit/arkts-apis/arkts-ability-context-t.md/arkts-ability-context-t.md)。 |
-| outFile | string | Yes | 指定压缩结果的文件路径（文件的扩展名zip）。 |
-| options | [Options](arkts-basicservices-zlib-options-i.md) | Yes | 压缩的可选参数。 |
+| inFile | string | Yes | Path of the folder or file to zip. The path must be an application sandbox path, which can be obtained from the context. For details about the context, see [FA Model](../../apis-ability-kit/arkts-apis/arkts-ability-context-t.md/arkts-ability-context-t.md) and [Stage Model](../../apis-ability-kit/arkts-apis/arkts-ability-context-t.md/arkts-ability-context-t.md). |
+| outFile | string | Yes | Path of the zipped file. The file name extension is .zip. |
+| options | [Options](arkts-basicservices-zlib-options-i.md) | Yes | Optional parameters for the zip operation. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise对象，无返回值。 |
+| Promise&lt;void&gt; | Promise that returns no value. |
 
 ## Examples
 

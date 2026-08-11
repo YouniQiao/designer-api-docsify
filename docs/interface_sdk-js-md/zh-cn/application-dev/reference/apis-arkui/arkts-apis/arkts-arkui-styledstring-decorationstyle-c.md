@@ -32,7 +32,7 @@ constructor(value: DecorationStyleInterface)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | [DecorationStyleInterface](arkts-arkui-decorationstyleinterface-i.md) | 是 | 文本装饰线设置项。&lt;br/&gt;默认值：&lt;br/&gt;{&lt;br/&gt; type: TextDecorationType.None,&lt;br/&gt; color: Color.Black,&lt;br/&gt; style: TextDecorationStyle.SOLID &lt;br/&gt;} |
+| value | [DecorationStyleInterface](arkts-arkui-styledstring-decorationstyleinterface-i.md) | 是 | 文本装饰线设置项。&lt;br/&gt;默认值：&lt;br/&gt;{&lt;br/&gt; type: TextDecorationType.None,&lt;br/&gt; color: Color.Black,&lt;br/&gt; style: TextDecorationStyle.SOLID &lt;br/&gt;} |
 
 ## constructor
 
@@ -56,7 +56,7 @@ constructor(value: DecorationStyleInterface, options?: DecorationOptions)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | [DecorationStyleInterface](arkts-arkui-decorationstyleinterface-i.md) | 是 | 文本装饰线设置项。&lt;br/&gt;默认值：&lt;br/&gt;{&lt;br/&gt; type: TextDecorationType.None,&lt;br/&gt; color: Color.Black,&lt;br/&gt; style: TextDecorationStyle.SOLID, &lt;br/&gt; thicknessScale: 1.0&lt;br/&gt;} |
+| value | [DecorationStyleInterface](arkts-arkui-styledstring-decorationstyleinterface-i.md) | 是 | 文本装饰线设置项。&lt;br/&gt;默认值：&lt;br/&gt;{&lt;br/&gt; type: TextDecorationType.None,&lt;br/&gt; color: Color.Black,&lt;br/&gt; style: TextDecorationStyle.SOLID, &lt;br/&gt; thicknessScale: 1.0&lt;br/&gt;} |
 | options | [DecorationOptions](arkts-arkui-styledstring-decorationoptions-i.md) | 否 | 文本装饰线额外配置选项。&lt;br/&gt;默认值：&lt;br/&gt;{&lt;br/&gt; enableMultiType: undefined&lt;br/&gt;} |
 
 ## color

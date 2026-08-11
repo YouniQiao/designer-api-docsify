@@ -4,7 +4,7 @@
 declare type OnDragEventCallback = (event: DragEvent, extraParams?: string) => void
 ```
 
-拖拽事件的回调函数。
+Defines a callback for drag events.
 
 **Since:** 15
 
@@ -22,6 +22,6 @@ declare type OnDragEventCallback = (event: DragEvent, extraParams?: string) => v
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| event | [DragEvent](arkts-arkui-dragevent-i.md) | Yes | event为拖拽事件信息，包括拖拽点坐标。 |
-| extraParams | string | No | extraParams为拖拽事件额外信息，需要解析为JSON格式。 |
+| event | [DragEvent](arkts-arkui-dragevent-i.md) | Yes | event**: drag event information, including the coordinates of the drag point. |
+| extraParams | string | No | extraParams**: additional information about the drag event. Its value must be parsed into JSON format. |
 

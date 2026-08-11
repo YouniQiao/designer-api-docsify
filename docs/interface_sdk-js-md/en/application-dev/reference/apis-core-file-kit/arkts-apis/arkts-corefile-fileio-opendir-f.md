@@ -6,7 +6,7 @@
 declare function opendir(path: string): Promise<Dir>
 ```
 
-打开文件目录，使用Promise异步回调。
+Opens a directory. This API uses a promise to return the result.
 
 **Since:** 6
 
@@ -24,13 +24,13 @@ declare function opendir(path: string): Promise<Dir>
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| path | string | Yes | 待打开文件目录的应用沙箱路径。 |
+| path | string | Yes | Application sandbox path of the directory to open. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;Dir&gt; | Promise对象。返回Dir对象。 |
+| Promise&lt;Dir&gt; | Promise that returns the **Dir** object opened. |
 
 
 ## opendir
@@ -39,7 +39,7 @@ declare function opendir(path: string): Promise<Dir>
 declare function opendir(path: string, callback: AsyncCallback<Dir>): void
 ```
 
-打开文件目录，使用callback异步回调。
+Opens a file directory. This API uses an asynchronous callback to return the result.
 
 **Since:** 6
 
@@ -57,6 +57,6 @@ declare function opendir(path: string, callback: AsyncCallback<Dir>): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| path | string | Yes | 待打开文件目录的应用沙箱路径。 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Dir&gt; | Yes | 异步打开文件目录之后的回调。 |
+| path | string | Yes | Application sandbox path of the directory to open. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Dir&gt; | Yes | Callback invoked when the directory is opened asynchronously. |
 

@@ -1,6 +1,6 @@
 # DataInfo
 
-存放接收的数据信息，包括通道Id和数据。
+Represents the received data, including the channel ID and data.
 
 **Since:** 20
 
@@ -22,7 +22,7 @@ import { proxyChannelManager } from 'kits/@kit.DistributedServiceKit';
 channelId: int
 ```
 
-代理通道的channelId。
+Proxy channel ID.
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
@@ -42,7 +42,7 @@ channelId: int
 data: ArrayBuffer
 ```
 
-接收到的字节数据。
+Received byte array.
 
 **Type:** ArrayBuffer
 

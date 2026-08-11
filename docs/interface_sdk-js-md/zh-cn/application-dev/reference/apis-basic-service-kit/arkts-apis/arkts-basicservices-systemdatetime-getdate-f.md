@@ -1,11 +1,5 @@
 # getDate
 
-## 导入模块
-
-```TypeScript
-import { systemDateTime } from 'kits/@kit.BasicServicesKit';
-```
-
 ## getDate
 
 ```TypeScript
@@ -36,7 +30,7 @@ function getDate(callback: AsyncCallback<Date>): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 401 | Parameter error. Possible causes: &lt;br&gt; 1. System error. |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: &lt;br&gt; 1. System error. |
 
 ## 示例
 
@@ -88,7 +82,7 @@ function getDate(): Promise<Date>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 401 | Parameter error. Possible causes: &lt;br&gt; 1. System error. |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: &lt;br&gt; 1. System error. |
 
 ## 示例
 

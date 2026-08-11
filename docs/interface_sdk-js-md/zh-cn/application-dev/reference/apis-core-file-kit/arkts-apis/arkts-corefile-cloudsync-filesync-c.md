@@ -10,12 +10,6 @@
 
 **系统能力：** SystemCapability.FileManagement.DistributedFileService.CloudSync.Core
 
-## 导入模块
-
-```TypeScript
-import { cloudSync } from 'kits/@kit.CoreFileKit';
-```
-
 ## constructor
 
 ```TypeScript
@@ -36,7 +30,7 @@ constructor()
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 401 | The input parameter is invalid.Possible causes:Incorrect parameter types. |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | The input parameter is invalid.Possible causes:Incorrect parameter types. |
 
 ## 示例
 
@@ -76,10 +70,12 @@ getLastSyncTime(): Promise<long>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 401 | The input parameter is invalid.Possible causes:Incorrect parameter types. |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | The input parameter is invalid.Possible causes:Incorrect parameter types. |
 | 13600001 | IPC error. |
 
 ## 示例
+
+ArkTS-Dyn示例：
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -90,6 +86,20 @@ fileSync.getLastSyncTime().then((timeStamp: number) => {
   let date = new Date(timeStamp);
   console.info("get last sync time successfully: "+ date);
 }).catch((err: BusinessError) => {
+  console.error("get last sync time failed with error message: " + err.message + ", error code: " + err.code);
+});
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let fileSync = new cloudSync.FileSync();
+fileSync.getLastSyncTime().then<long>((timeStamp: long): void => {
+  let date = new Date(timeStamp);
+  console.info("get last sync time successfully: "+ date);
+}).catch((err: BusinessError<void>): void => {
   console.error("get last sync time failed with error message: " + err.message + ", error code: " + err.code);
 });
 ```
@@ -126,10 +136,12 @@ getLastSyncTime(callback: AsyncCallback<long>): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 401 | The input parameter is invalid.Possible causes:1.Mandatory parameters are left unspecified; &lt;br&gt;2.Incorrect parameter types. |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | The input parameter is invalid.Possible causes:1.Mandatory parameters are left unspecified; &lt;br&gt;2.Incorrect parameter types. |
 | 13600001 | IPC error. |
 
 ## 示例
+
+ArkTS-Dyn示例：
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -140,6 +152,26 @@ fileSync.getLastSyncTime((err: BusinessError, timeStamp: number) => {
   if (err) {
     console.error("get last sync time with error message: " + err.message + ", error code: " + err.code);
   } else {
+    let date = new Date(timeStamp);
+    console.info("get last sync time successfully: "+ date);
+  }
+});
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let fileSync = new cloudSync.FileSync();
+fileSync.getLastSyncTime((err: BusinessError<void> | null, timeStamp: long | undefined): void => {
+  if (err && err.code) {
+    console.error("get last sync time with error message: " + err.message + ", error code: " + err.code);
+  } else {
+    if (timeStamp == undefined) {
+      console.error("get last sync time successfully, but timeStamp is undefined.");
+      return;
+    }
     let date = new Date(timeStamp);
     console.info("get last sync time successfully: "+ date);
   }
@@ -173,7 +205,7 @@ off(event: 'progress', callback?: Callback<SyncProgress>): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 401 | The input parameter is invalid.Possible causes:1.Mandatory parameters are left unspecified;2.Incorrect parameter types. |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | The input parameter is invalid.Possible causes:1.Mandatory parameters are left unspecified;2.Incorrect parameter types. |
 | 13600001 | IPC error |
 
 ## 示例
@@ -216,8 +248,19 @@ Unsubscribes from sync progress event.
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 401 | The input parameter is invalid.Possible causes:Incorrect parameter types. |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | The input parameter is invalid.Possible causes:Incorrect parameter types. |
 | 13600001 | IPC error |
+
+## 示例
+
+```TypeScript
+let fileSync = new cloudSync.FileSync();
+let callback = (pg: cloudSync.SyncProgress): void => {
+  console.info("file sync state: " + pg.state + "error type: " + pg.error);
+}
+fileSync.onProgress(callback);
+fileSync.offProgress(callback);
+```
 
 ## on
 
@@ -246,7 +289,7 @@ on(event: 'progress', callback: Callback<SyncProgress>): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 401 | The input parameter is invalid.Possible causes:1.Mandatory parameters are left unspecified; &lt;br&gt;2.Incorrect parameter types. |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | The input parameter is invalid.Possible causes:1.Mandatory parameters are left unspecified; &lt;br&gt;2.Incorrect parameter types. |
 | 13600001 | IPC error |
 
 ## 示例
@@ -286,8 +329,18 @@ Subscribes to sync progress change event. This method uses a callback to get syn
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 401 | The input parameter is invalid.Possible causes: &lt;br&gt;1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | The input parameter is invalid.Possible causes: &lt;br&gt;1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
 | 13600001 | IPC error |
+
+## 示例
+
+```TypeScript
+let fileSync = new cloudSync.FileSync();
+let callback = (pg: cloudSync.SyncProgress): void => {
+  console.info("file sync state: " + pg.state + "error type: " + pg.error);
+}
+fileSync.onProgress(callback);
+```
 
 ## start
 
@@ -315,13 +368,15 @@ start(): Promise<void>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 401 | The input parameter is invalid.Possible causes:Incorrect parameter types. |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | The input parameter is invalid.Possible causes:Incorrect parameter types. |
 | 22400001 | Cloud status not ready. |
 | 22400003 | Low battery level. |
 | 22400002 | Network unavailable. |
 | 13600001 | IPC error. |
 
 ## 示例
+
+ArkTS-Dyn示例：
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -337,6 +392,23 @@ fileSync.on('progress', callback);
 fileSync.start().then(() => {
   console.info("start sync successfully");
 }).catch((err: BusinessError) => {
+  console.error("start sync failed with error message: " + err.message + ", error code: " + err.code);
+});
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let fileSync = new cloudSync.FileSync();
+let callback = (pg: cloudSync.SyncProgress): void => {
+  console.info("file sync state: " + pg.state + "error type: " + pg.error);
+}
+fileSync.on('progress', callback);
+fileSync.start().then<void>((): void => {
+  console.info("start sync successfully");
+}).catch((err: BusinessError<void>): void => {
   console.error("start sync failed with error message: " + err.message + ", error code: " + err.code);
 });
 ```
@@ -367,13 +439,15 @@ start(callback: AsyncCallback<void>): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 401 | The input parameter is invalid.Possible causes:1.Mandatory parameters are left unspecified;2.Incorrect parameter types. |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | The input parameter is invalid.Possible causes:1.Mandatory parameters are left unspecified;2.Incorrect parameter types. |
 | 22400001 | Cloud status not ready. |
 | 22400003 | Low battery level. |
 | 22400002 | Network unavailable. |
 | 13600001 | IPC error. |
 
 ## 示例
+
+ArkTS-Dyn示例：
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -382,6 +456,21 @@ let fileSync = new cloudSync.FileSync();
 
 fileSync.start((err: BusinessError) => {
   if (err) {
+    console.error("start sync failed with error message: " + err.message + ", error code: " + err.code);
+  } else {
+    console.info("start sync successfully");
+  }
+});
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let fileSync = new cloudSync.FileSync();
+fileSync.start((err: BusinessError<void> | null): void => {
+  if (err && err.code) {
     console.error("start sync failed with error message: " + err.message + ", error code: " + err.code);
   } else {
     console.info("start sync successfully");
@@ -417,10 +506,12 @@ stop(): Promise<void>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 401 | The input parameter is invalid.Possible causes:Incorrect parameter types. |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | The input parameter is invalid.Possible causes:Incorrect parameter types. |
 | 13600001 | IPC error. |
 
 ## 示例
+
+ArkTS-Dyn示例：
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -430,6 +521,19 @@ let fileSync = new cloudSync.FileSync();
 fileSync.stop().then(() => {
   console.info("stop sync successfully");
 }).catch((err: BusinessError) => {
+  console.error("stop sync failed with error message: " + err.message + ", error code: " + err.code);
+});
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let fileSync = new cloudSync.FileSync();
+fileSync.stop().then<void>((): void => {
+  console.info("stop sync successfully");
+}).catch((err: BusinessError<void>): void => {
   console.error("stop sync failed with error message: " + err.message + ", error code: " + err.code);
 });
 ```
@@ -462,10 +566,12 @@ stop(callback: AsyncCallback<void>): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 401 | The input parameter is invalid.Possible causes:1.Mandatory parameters are left unspecified; &lt;br&gt;2.Incorrect parameter types. |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | The input parameter is invalid.Possible causes:1.Mandatory parameters are left unspecified; &lt;br&gt;2.Incorrect parameter types. |
 | 13600001 | IPC error. |
 
 ## 示例
+
+ArkTS-Dyn示例：
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -474,6 +580,21 @@ let fileSync = new cloudSync.FileSync();
 
 fileSync.stop((err: BusinessError) => {
   if (err) {
+    console.error("stop sync failed with error message: " + err.message + ", error code: " + err.code);
+  } else {
+    console.info("stop sync successfully");
+  }
+});
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let fileSync = new cloudSync.FileSync();
+fileSync.stop((err: BusinessError<void> | null): void => {
+  if (err && err.code) {
     console.error("stop sync failed with error message: " + err.message + ", error code: " + err.code);
   } else {
     console.info("stop sync successfully");

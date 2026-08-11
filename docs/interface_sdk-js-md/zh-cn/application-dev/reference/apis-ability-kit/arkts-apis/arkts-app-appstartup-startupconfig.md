@@ -1,11 +1,5 @@
 # @ohos.app.appstartup.StartupConfig
 
-## 导入模块
-
-```TypeScript
-import { StartupConfig } from 'kits/@kit.AbilityKit';
-```
-
 ## 汇总
 
 ### 接口

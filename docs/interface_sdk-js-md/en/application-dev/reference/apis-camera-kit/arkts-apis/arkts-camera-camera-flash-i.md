@@ -1,8 +1,8 @@
 # Flash
 
-Flash继承自[FlashQuery](arkts-camera-camera-flashquery-i.md)。
+**Flash** inherits from [FlashQuery](arkts-camera-camera-flashquery-i.md).
 
-闪光灯类，对设备闪光灯操作。
+It provides APIs related to the flash.
 
 **Inheritance/Implementation:** Flash extends [FlashQuery](arkts-camera-camera-flashquery-i.md)
 
@@ -26,7 +26,7 @@ import { camera } from 'kits/@kit.CameraKit';
 getFlashMode(): FlashMode
 ```
 
-获取当前设备的闪光灯模式。
+Obtains the flash mode in use.
 
 **Since:** 11
 
@@ -42,13 +42,13 @@ getFlashMode(): FlashMode
 
 | Type | Description |
 | --- | --- |
-| [FlashMode](arkts-camera-camera-flashmode-e.md) | 获取当前设备的闪光灯模式。接口调用失败会抛出相应错误码并返回undefined，错误码类型 [CameraErrorCode]{ |
+| [FlashMode](arkts-camera-camera-flashmode-e.md) | Flash mode obtained. If the operation fails, undefined is returned and an error code defined in [CameraErrorCode]{ |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 7400103 | Session not config. |
+| [7400103](../errorcode-camera.md#7400103-session-not-configured) | Session not config. |
 
 ## offFlashStateChange
 
@@ -56,7 +56,7 @@ getFlashMode(): FlashMode
 offFlashStateChange(callback?: Callback<FlashState>): void
 ```
 
-取消订阅闪光灯状态变化事件回调。
+Unsubscribes from flash light status change events.
 
 **Since:** 24
 
@@ -74,7 +74,7 @@ offFlashStateChange(callback?: Callback<FlashState>): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;FlashState&gt; | No | 回调函数，如果指定参数则取消对应callback（callback对象不可是匿名函数），否则取消所有callback。 |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;FlashState&gt; | No | Callback used to return the result. If this parameter is specified, the subscription to the specified event with the specified callback is canceled. (The callback object cannot be an anonymous function.) Otherwise, the subscriptions to the specified event with all the callbacks are canceled. |
 
 ## onFlashStateChange
 
@@ -82,7 +82,7 @@ offFlashStateChange(callback?: Callback<FlashState>): void
 onFlashStateChange(callback: Callback<FlashState>): void
 ```
 
-订阅闪光灯状态变化事件回调。
+Subscribes to flash light status change events.
 
 **Since:** 24
 
@@ -100,7 +100,7 @@ onFlashStateChange(callback: Callback<FlashState>): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;FlashState&gt; | Yes | 回调函数，用于获取闪光灯状态变化信息。 |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;FlashState&gt; | Yes | Callback used to return the flash light status. |
 
 ## setFlashMode
 
@@ -108,11 +108,11 @@ onFlashStateChange(callback: Callback<FlashState>): void
 setFlashMode(flashMode: FlashMode): void
 ```
 
-设置闪光灯模式。
+Sets a flash mode.
 
-进行设置之前，需要先检查：
+Before the setting, do the following checks:
 
-1. 设备是否支持闪光灯，可使用方法[hasFlash](arkts-camera-camera-flashquery-i.md#hasflash)。2. 设备是否支持指定的闪光灯模式，可使用方法[isFlashModeSupported](arkts-camera-camera-flashquery-i.md#isflashmodesupported)。
+1. Use [hasFlash](arkts-camera-camera-flashquery-i.md#hasflash) to check whether the camera device has flash.2. Use [isFlashModeSupported](arkts-camera-camera-flashquery-i.md#isflashmodesupported) to check whether the camera device supports the flash mode.
 
 **Since:** 11
 
@@ -128,11 +128,11 @@ setFlashMode(flashMode: FlashMode): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| flashMode | [FlashMode](arkts-camera-camera-flashmode-e.md) | Yes | 指定闪光灯模式。传参为null或者undefined，作为0处理，闪光灯关闭。 |
+| flashMode | [FlashMode](arkts-camera-camera-flashmode-e.md) | Yes | Flash mode. If the input parameter is null or undefined, it is treated as 0 and the flash is turned off. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 7400103 | Session not config. |
+| [7400103](../errorcode-camera.md#7400103-session-not-configured) | Session not config. |
 

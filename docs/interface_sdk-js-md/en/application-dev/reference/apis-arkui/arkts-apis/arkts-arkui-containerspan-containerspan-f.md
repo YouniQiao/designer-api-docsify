@@ -8,7 +8,7 @@ export declare function ContainerSpan(
 ): ContainerSpanAttribute
 ```
 
-定义ContainerSpan组件。
+Defines ContainerSpan Component.
 
 **Since:** 23
 
@@ -42,7 +42,7 @@ export declare function ContainerSpan(
 ): ContainerSpanAttribute
 ```
 
-定义ContainerSpan组件。
+Defines ContainerSpan Component.
 
 **Since:** 26.1.0
 
@@ -60,8 +60,8 @@ export declare function ContainerSpan(
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| style | [CustomBuilderT](../arkts-components/arkts-arkui-custombuildert-t.md)&lt;ContainerSpanAttribute&gt; | Yes | containerspan属性实例。 |
-| content_ | [CustomBuilder](../arkts-components/arkts-arkui-custombuilder-t.md) | No | 容器。 |
+| style | [CustomBuilderT](../arkts-components/arkts-arkui-custombuildert-t.md)&lt;ContainerSpanAttribute&gt; | Yes | containerspan attribute instance. |
+| content_ | [CustomBuilder](../arkts-components/arkts-arkui-custombuilder-t.md) | No | container. |
 
 **Return value:**
 

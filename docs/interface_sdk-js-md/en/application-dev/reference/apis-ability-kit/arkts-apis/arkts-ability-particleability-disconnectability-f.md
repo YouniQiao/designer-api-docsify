@@ -12,7 +12,7 @@ import { particleAbility } from 'kits/@kit.AbilityKit';
 function disconnectAbility(connection: number, callback: AsyncCallback<void>): void
 ```
 
-断开当前ability与指定ServiceAbility的连接。使用callback异步回调。
+Disconnects this ability from a specific ServiceAbility. This API uses an asynchronous callback to return the result.
 
 **Since:** 7
 
@@ -28,8 +28,8 @@ function disconnectAbility(connection: number, callback: AsyncCallback<void>): v
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| connection | number | Yes | 表示断开连接的ServiceAbility的ID。 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | 回调函数。当断开当前ability与指定ServiceAbility的连接成功，err为undefined，否则为错误对象。 |
+| connection | number | Yes | ID of the ServiceAbility to disconnect. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. If the disconnection is successful, **err** is **undefined**. Otherwise, **err** is an error object. |
 
 ## Examples
 
@@ -67,7 +67,7 @@ particleAbility.disconnectAbility(connId, (err) => {
 function disconnectAbility(connection: number): Promise<void>
 ```
 
-断开当前ability与指定ServiceAbility的连接。使用Promise异步回调。
+Disconnects this ability from a specific ServiceAbility. This API uses a promise to return the result.
 
 **Since:** 7
 
@@ -83,13 +83,13 @@ function disconnectAbility(connection: number): Promise<void>
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| connection | number | Yes | 表示断开连接的ServiceAbility的ID。 |
+| connection | number | Yes | ID of the ServiceAbility to disconnect. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise对象。无返回结果的Promise对象。 |
+| Promise&lt;void&gt; | Promise used to return the result. Promise that returns no value. |
 
 ## Examples
 

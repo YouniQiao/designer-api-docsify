@@ -12,7 +12,7 @@ import { i18n } from 'kits/@kit.LocalizationKit';
 export function is24HourClock(): boolean
 ```
 
-判断系统时间是否为24小时制。
+Checks whether the 24-hour clock is used.
 
 **Since:** 7
 
@@ -30,5 +30,5 @@ export function is24HourClock(): boolean
 
 | Type | Description |
 | --- | --- |
-| boolean | true表示系统24小时开关开启，false表示系统24小时开关关闭。 |
+| boolean | true** if the 24-hour clock is used, and **false** otherwise. |
 

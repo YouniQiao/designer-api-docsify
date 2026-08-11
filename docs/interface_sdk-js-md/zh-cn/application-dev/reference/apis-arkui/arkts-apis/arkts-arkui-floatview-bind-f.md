@@ -1,11 +1,5 @@
 # bind
 
-## 导入模块
-
-```TypeScript
-import { floatView } from 'kits/@kit.ArkUI';
-```
-
 ## bind
 
 ```TypeScript
@@ -58,18 +52,18 @@ function bind(floatViewController: FloatViewController, floatingBallController: 
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 1300019 | Wrong parameters for operating the floating ball. Possible cause: Invalid floating ball params. |
-| 801 | Capability not supported on this device. Possible cause: Call api on unsupported device. |
-| 201 | Permission verification failed. Possible cause: The application does not have the permission required to call the API. |
-| 1300025 | The floating ball state does not support this operation. Possible cause: 1. The floating ball has started but not stopped yet. 2. The floating ball controller has been bound. |
-| 1300031 | The floatView state does not support this operation. Possible cause: 1. The float view has started but not stopped yet. 2. The float view controller has been bound. |
+| [1300019](../errorcode-window.md#1300019-闪控球参数校验错误) | Wrong parameters for operating the floating ball. Possible cause: Invalid floating ball params. |
+| [801](../../errorcode-universal.md#801-该设备不支持此api) | Capability not supported on this device. Possible cause: Call api on unsupported device. |
+| [201](../../errorcode-universal.md#201-权限校验失败) | Permission verification failed. Possible cause: The application does not have the permission required to call the API. |
+| [1300025](../errorcode-window.md#1300025-闪控球状态不支持该操作) | The floating ball state does not support this operation. Possible cause: 1. The floating ball has started but not stopped yet. 2. The floating ball controller has been bound. |
+| [1300031](../errorcode-window.md#1300031-闪控窗状态不支持该操作) | The floatView state does not support this operation. Possible cause: 1. The float view has started but not stopped yet. 2. The float view controller has been bound. |
 
 ## 示例
 
 ```TypeScript
 // Entry.ets
 import { BusinessError } from '@kit.BasicServicesKit';
-import { floatingBall, floatView } from '@kit.ArkUI';
+import { floatingBall } from '@kit.ArkUI';
 
 @Entry
 @Component
@@ -87,14 +81,13 @@ struct Index {
 
     try {
       if (this.floatViewController && this.floatingBallController) {
-        // 绑定闪控窗和闪控球
         floatView.bind(this.floatViewController!, this.floatingBallController!, floatingBallParams).then(() => {
           console.info('Succeeded in binding float view and floating ball.');
         }).catch((err: BusinessError): void => {
           console.error(`Failed to bind float view and floating ball. Cause:${err.code}, message:${err.message}`);
         });
       }
-    } catch (e) {
+    } catch(e) {
       console.error(`Failed to bind float view and floating ball. Cause:${e.code}, message:${e.message}`);
     }
   }

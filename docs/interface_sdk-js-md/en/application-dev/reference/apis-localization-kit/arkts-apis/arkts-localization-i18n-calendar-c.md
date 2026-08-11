@@ -1,6 +1,6 @@
 # Calendar
 
-提供历法相关的能力，包括历法名称获取和日期计算等。
+Provides the API for accessing Calendar name, time and date related information.
 
 **Since:** 23
 
@@ -22,7 +22,7 @@ import { i18n } from 'kits/@kit.LocalizationKit';
 add(field: string, amount: int): void
 ```
 
-对日历对象中的表示时间日期的日历属性值进行加减操作。
+Performs addition or subtraction on the calendar attributes of this Calendar object.
 
 **Since:** 23
 
@@ -38,15 +38,15 @@ add(field: string, amount: int): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| field | string | Yes | 指定的日历属性，目前支持的属性值有 year, month, week_of_year, week_of_month, date, day_of_year,  day_of_week, day_of_week_in_month, hour, hour_of_day, minute, second, millisecond。 &lt;br&gt;各取值代表的含义请参考[get](arkts-localization-i18n-calendar-c.md#get)。 |
-| amount | int | Yes | 进行加减操作的具体数值。 |
+| field | string | Yes | Calendar attribute. The value can be any of the following: year, month, week_of_year, week_of_month, date, day_of_year, day_of_week, day_of_week_in_month, hour, hour_of_day, minute, second, millisecond. For details about the values, see get. |
+| amount | int | Yes | Addition or subtraction amount. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
-| 890001 | Invalid parameter. Possible causes: Parameter verification failed. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
+| [890001](../errorcode-i18n.md#890001-parameter-error) | Invalid parameter. Possible causes: Parameter verification failed. |
 
 ## compareDays
 
@@ -54,7 +54,7 @@ add(field: string, amount: int): void
 compareDays(date: Date): int
 ```
 
-比较日历对象当前日期和指定日期相差的天数。
+Compares the current date of this Calendar object with the specified date for the difference in the number of days.
 
 **Since:** 23
 
@@ -70,19 +70,19 @@ compareDays(date: Date): int
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| date | Date | Yes | 时间日期。 &lt;br&gt;**说明：** &lt;br&gt;月份从0开始计数，0表示一月。 |
+| date | Date | Yes | Date and time. Note: The month starts from 0. For example, 0 indicates January. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| int | 相差的天数，正数表示日历时间更早，负数表示指定时间更早。 &lt;br&gt;按毫秒级的精度，不足一天按一天计。 |
+| int | Difference in the number of days. A positive number indicates that the calendar date is earlier, and a negative number indicates the opposite. The value is accurate to milliseconds. If the value is less than one day, it is considered as one day. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
 
 ## get
 
@@ -90,7 +90,7 @@ compareDays(date: Date): int
 get(field: string): int
 ```
 
-获取日历对象中日历属性的值。
+Obtains the values of the calendar attributes in this Calendar object.
 
 **Since:** 23
 
@@ -106,13 +106,13 @@ get(field: string): int
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| field | string | Yes | 指定的日历属性，取值包括： &lt;br&gt;"era"：纪元，例如公历中的公元前或者公元后。 &lt;br&gt;"year"：年。 &lt;br&gt;"month"：月，从0开始计数，0表示一月。 &lt;br&gt;"date"：日。 &lt;br&gt;"hour"：挂钟小时数。 &lt;br&gt;"hour_of_day"：一天中的第几小时。 &lt;br&gt;"minute"：分。 &lt;br&gt;"second"：秒。 &lt;br&gt;"millisecond"：毫秒。 &lt;br&gt;"week_of_year"：一年中的第几周，按照星期计算周，第一周的归属各地有区别。 &lt;br&gt;"year_woy"：一年中的第几周，按照数值计算周，例如一年中前1~7日属于第一周。 &lt;br&gt;"week_of_month"：一个月中的第几周，按照星期计算周。 &lt;br&gt;"day_of_week_in_month"：一月中的第几周，按照数值计算周，例如1-7日属于第一周。 &lt;br&gt;"day_of_year"：一年中的第几天。 &lt;br&gt;"day_of_week"：一周中的第几天(星期)。 &lt;br&gt;"milliseconds_in_day"：一天中的第几毫秒。 &lt;br&gt;"zone_offset"：以毫秒计时的时区固定偏移量（不含夏令时）。 &lt;br&gt;"dst_offset"：以毫秒计时的夏令时偏移量。 &lt;br&gt;"dow_local"：本地星期。 &lt;br&gt;"extended_year"：扩展的年份数值，支持负数。 &lt;br&gt;"julian_day"：儒略日，与当前时区相关。 &lt;br&gt;"is_leap_month"：返回1表示是闰月，返回0表示不是闰月。 &lt;br&gt; |
+| field | string | Yes | Calendar attributes. The following table lists the supported attribute values. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| int | 日历属性的值，如当前Calendar对象的内部日期的年份为1990，get('year')返回1990。 |
+| int | Value of the calendar attribute. For example, if the year of the internal date of the current Calendar object is 1990, get('year') returns 1990. |
 
 ## getDisplayName
 
@@ -120,7 +120,7 @@ get(field: string): int
 getDisplayName(locale: string): string
 ```
 
-获取日历对象名称在指定语言下的翻译。
+Obtains calendar display name in the specified language.
 
 **Since:** 23
 
@@ -136,13 +136,13 @@ getDisplayName(locale: string): string
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| locale | string | Yes | [表示区域ID的字符串](../../../internationalization/i18n-locale-culture.md#实现原理)，由语言、脚本、国家地区组 成。 |
+| locale | string | Yes | System locale, which consists of the language, script, and country/region. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| string | 日历对象名称在指定语言下的翻译。如buddhist在en-US上显示的名称为“Buddhist Calendar”。 |
+| string | Calendar display name in the specified language. For example, buddhist is displayed as Buddhist Calendar if the locale is en-US. |
 
 ## getFirstDayOfWeek
 
@@ -150,7 +150,7 @@ getDisplayName(locale: string): string
 getFirstDayOfWeek(): int
 ```
 
-获取日历对象的周起始日。
+Obtains the first day of a week for this Calendar object.
 
 **Since:** 23
 
@@ -166,7 +166,7 @@ getFirstDayOfWeek(): int
 
 | Type | Description |
 | --- | --- |
-| int | 周起始日，1代表周日，7代表周六。 |
+| int | First day of a week. The value 1 indicates Sunday, and the value 7 indicates Saturday. |
 
 ## getMinimalDaysInFirstWeek
 
@@ -174,7 +174,7 @@ getFirstDayOfWeek(): int
 getMinimalDaysInFirstWeek(): int
 ```
 
-获取日历对象一年中第一周的最小天数。
+Obtains the minimum number of days in the first week for this Calendar object.
 
 **Since:** 23
 
@@ -190,7 +190,7 @@ getMinimalDaysInFirstWeek(): int
 
 | Type | Description |
 | --- | --- |
-| int | 一年中第一周的最小天数。 |
+| int | Minimum number of days in the first week of a year. |
 
 ## getTimeInMillis
 
@@ -198,7 +198,7 @@ getMinimalDaysInFirstWeek(): int
 getTimeInMillis(): long
 ```
 
-获取当前日历对象的时间戳。
+Obtains the timestamp of this Calendar object.
 
 **Since:** 23
 
@@ -214,7 +214,7 @@ getTimeInMillis(): long
 
 | Type | Description |
 | --- | --- |
-| long | Unix时间戳，表示从1970.1.1 00:00:00 GMT逝去的毫秒数。 |
+| long | Unix timestamp, which indicates the number of milliseconds that have elapsed since the Unix epoch. |
 
 ## getTimeZone
 
@@ -222,7 +222,7 @@ getTimeInMillis(): long
 getTimeZone(): string
 ```
 
-获取日历对象的时区ID。
+Obtains the time zone ID of this Calendar object.
 
 **Since:** 23
 
@@ -238,7 +238,7 @@ getTimeZone(): string
 
 | Type | Description |
 | --- | --- |
-| string | 表示时区ID的字符串。 |
+| string | Time zone ID. |
 
 ## isWeekend
 
@@ -246,7 +246,7 @@ getTimeZone(): string
 isWeekend(date?: Date): boolean
 ```
 
-判断指定的日期在日历对象中是否为周末。
+Checks whether a given date is a weekend in this Calendar object.
 
 **Since:** 23
 
@@ -262,13 +262,13 @@ isWeekend(date?: Date): boolean
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| date | Date | No | 时间日期。 &lt;br&gt;**说明：** &lt;br&gt;月份从0开始计数，0表示一月。 &lt;br&gt;默认值：日历对象的当前日期。 |
+| date | Date | No | Date and time. Note: The month starts from 0. For example, 0 indicates January. The default value is current date of the Calendar object. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| boolean | true表示指定的日期是周末，false表示指定的日期不是周末。 |
+| boolean | The value "true" indicates that the specified date is a weekend, and the value "false" indicates the opposite. |
 
 ## set
 
@@ -276,7 +276,7 @@ isWeekend(date?: Date): boolean
 set(year: int, month: int, date:int, hour?: int, minute?: int, second?: int): void
 ```
 
-设置日历对象的年、月、日、时、分、秒。
+Sets the year, month, day, hour, minute, and second for this Calendar object.
 
 **Since:** 23
 
@@ -292,12 +292,12 @@ set(year: int, month: int, date:int, hour?: int, minute?: int, second?: int): vo
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| year | int | Yes | 设置的年。 |
-| month | int | Yes | 设置的月。 &lt;br&gt;**说明：** &lt;br&gt;月份从0开始计数，0表示一月。 |
-| date | int | Yes | 设置的日。 |
-| hour | int | No | 设置的小时。默认值：系统时间。 |
-| minute | int | No | 设置的分钟。默认值：系统时间。 |
-| second | int | No | 设置的秒。默认值：系统时间。 |
+| year | int | Yes | Year to set. |
+| month | int | Yes | Month to set. Note: The month starts from 0. For example, 0 indicates January. |
+| date | int | Yes | Day to set. |
+| hour | int | No | Hour to set. The default value is the current system time. |
+| minute | int | No | Minute to set. The default value is the current system time. |
+| second | int | No | Second to set. The default value is the current system time. |
 
 ## setFirstDayOfWeek
 
@@ -305,7 +305,7 @@ set(year: int, month: int, date:int, hour?: int, minute?: int, second?: int): vo
 setFirstDayOfWeek(value: int): void
 ```
 
-设置日历对象的周起始日。
+Sets the first day of a week for this Calendar object.
 
 **Since:** 23
 
@@ -321,7 +321,7 @@ setFirstDayOfWeek(value: int): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | int | Yes | 一周的起始日，1代表周日，7代表周六。 |
+| value | int | Yes | Start day of a week. The value 1 indicates Sunday, and the value 7 indicates Saturday. |
 
 ## setMinimalDaysInFirstWeek
 
@@ -329,7 +329,7 @@ setFirstDayOfWeek(value: int): void
 setMinimalDaysInFirstWeek(value: int): void
 ```
 
-设置日历对象一年中第一周的最小天数。
+Sets the minimum number of days in the first week for this Calendar object.
 
 **Since:** 23
 
@@ -345,7 +345,7 @@ setMinimalDaysInFirstWeek(value: int): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | int | Yes | 一年中第一周的最小天数。 |
+| value | int | Yes | Minimum number of days in the first week of a year. |
 
 ## setTime
 
@@ -353,7 +353,7 @@ setMinimalDaysInFirstWeek(value: int): void
 setTime(date: Date): void
 ```
 
-基于传入的Date对象，设置日历对象内部的时间日期。
+Sets the date and time for a Calendar object.
 
 **Since:** 23
 
@@ -369,7 +369,7 @@ setTime(date: Date): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| date | Date | Yes | 时间日期。 &lt;br&gt;**说明：** &lt;br&gt;月份从0开始计数，0表示一月。 |
+| date | Date | Yes | Date and time. Note: The month starts from 0. For example, 0 indicates January. |
 
 ## setTime
 
@@ -377,7 +377,7 @@ setTime(date: Date): void
 setTime(time: double): void
 ```
 
-基于传入的时间戳，设置日历对象内部的时间日期。
+Sets the date and time for a Calendar object.
 
 **Since:** 23
 
@@ -393,7 +393,7 @@ setTime(time: double): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| time | double | Yes | Unix时间戳，表示从1970.1.1 00:00:00 GMT逝去的毫秒数。 |
+| time | double | Yes | Unix timestamp, which indicates the number of milliseconds that have elapsed since the Unix epoch. |
 
 ## setTimeZone
 
@@ -401,7 +401,7 @@ setTime(time: double): void
 setTimeZone(timezone: string): void
 ```
 
-设置日历对象的时区。
+Sets the time zone of this Calendar object.
 
 **Since:** 23
 
@@ -417,5 +417,5 @@ setTimeZone(timezone: string): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| timezone | string | Yes | 合法的时区ID，如“Asia/Shanghai”。 |
+| timezone | string | Yes | Valid time zone ID, for example, Asia/Shanghai. |
 

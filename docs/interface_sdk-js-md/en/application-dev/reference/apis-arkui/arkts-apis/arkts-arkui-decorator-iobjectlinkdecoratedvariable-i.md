@@ -18,7 +18,7 @@ Define ObjectLink decoration variable interface.
 resetOnReuse(newValue: T): void
 ```
 
-当@可重用组件实例时，重置ObjectLink变量。
+Reset ObjectLink variable when the @Reusable Component instance is reused.
 
 **Since:** 26.0.0
 
@@ -34,5 +34,5 @@ resetOnReuse(newValue: T): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| newValue | T | Yes | 默认值 |
+| newValue | T | Yes | default value |
 

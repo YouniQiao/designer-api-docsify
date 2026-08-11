@@ -18,12 +18,6 @@ SM2密文参数，使用SM2密文格式转换函数进行格式转换时，需�
 
 **系统能力：** SystemCapability.Security.CryptoFramework.Cipher
 
-## 导入模块
-
-```TypeScript
-import { cryptoFramework } from 'kits/@kit.CryptoArchitectureKit';
-```
-
 ## cipherTextData
 
 ```TypeScript

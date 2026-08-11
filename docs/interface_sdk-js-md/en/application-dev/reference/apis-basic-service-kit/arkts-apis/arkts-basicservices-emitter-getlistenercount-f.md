@@ -12,7 +12,7 @@ import { emitter } from 'kits/@kit.BasicServicesKit';
 function getListenerCount(eventId: long | string): long
 ```
 
-获取指定事件的订阅数。
+Obtains the number of subscriptions to a specified event.
 
 **Since:** 11
 
@@ -28,17 +28,25 @@ function getListenerCount(eventId: long | string): long
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| eventId | ArkTS-Dyn: number \| string  <br>ArkTS-Sta：long \| string | Yes | 事件ID，由开发者定义，用于辨别事件。 string类型：不可为空字符串，大小不超过10240字节，超出部分会被截断。 |
+| eventId | ArkTS-Dyn: number \| string  <br>ArkTS-Sta：long \| string | Yes | Event ID. The value is a string, which cannot be empty or exceed 10,240 bytes. Excess content will be truncated. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| ArkTS-Dyn: number  <br>ArkTS-Sta：long | 指定事件的订阅数。 |
+| ArkTS-Dyn: number  <br>ArkTS-Sta：long | Number of subscriptions to a specified event. |
 
 ## Examples
 
+ArkTS-Dyn example:
+
 ```TypeScript
-let count: number = emitter.getListenerCount('eventId');
+let count: number = emitter.getListenerCount("eventId");
+```
+
+ArkTS-Sta example:
+
+```TypeScript
+let count: long = emitter.getListenerCount("eventId");
 ```
 

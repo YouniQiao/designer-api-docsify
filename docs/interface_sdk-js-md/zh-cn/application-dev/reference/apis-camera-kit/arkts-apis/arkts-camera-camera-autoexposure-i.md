@@ -14,12 +14,6 @@ AutoExposure继承自[AutoExposureQuery](arkts-camera-camera-autoexposurequery-i
 
 **系统能力：** SystemCapability.Multimedia.Camera.Core
 
-## 导入模块
-
-```TypeScript
-import { camera } from 'kits/@kit.CameraKit';
-```
-
 ## getExposureMeteringMode
 
 ```TypeScript
@@ -48,9 +42,9 @@ getExposureMeteringMode(): ExposureMeteringMode
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 7400102 | Operation not allowed, the inputDevice or the session is abnormal.<br>**适用版本：** 24+ |
-| 7400103 | Session not config, only throw in session usage. |
-| 202 | Not System Application.<br>**适用版本：** 12 - 23 |
+| [7400102](../errorcode-camera.md#7400102-非法操作) | Operation not allowed, the inputDevice or the session is abnormal.<br>**适用版本：** 24+ |
+| [7400103](../errorcode-camera.md#7400103-会话未配置) | Session not config, only throw in session usage. |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not System Application.<br>**适用版本：** 12 - 23 |
 
 ## getExposureMode
 
@@ -84,7 +78,7 @@ getExposureMode(): ExposureMode
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 7400103 | Session not config. |
+| [7400103](../errorcode-camera.md#7400103-会话未配置) | Session not config. |
 
 ## getExposureValue
 
@@ -120,7 +114,7 @@ getExposureValue(): double
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 7400103 | Session not config. |
+| [7400103](../errorcode-camera.md#7400103-会话未配置) | Session not config. |
 
 ## getMeteringPoint
 
@@ -144,13 +138,13 @@ getMeteringPoint(): Point
 
 | 类型 | 说明 |
 | --- | --- |
-| [Point](arkts-camera-camera-point-i.md) | 获取当前曝光点。接口调用失败会返回相应错误码，错误码类型[CameraErrorCode]{ |
+| [Point](../../apis-test-kit/arkts-apis/arkts-test-uitest-point-i.md) | 获取当前曝光点。接口调用失败会返回相应错误码，错误码类型[CameraErrorCode]{ |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 7400103 | Session not config. |
+| [7400103](../errorcode-camera.md#7400103-会话未配置) | Session not config. |
 
 ## offExposureStateChange
 
@@ -240,8 +234,8 @@ setExposureBias(exposureBias: double): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 7400102 | Operation not allowed.<br>**适用版本：** 12+ |
-| 7400103 | Session not config. |
+| [7400102](../errorcode-camera.md#7400102-非法操作) | Operation not allowed.<br>**适用版本：** 12+ |
+| [7400103](../errorcode-camera.md#7400103-会话未配置) | Session not config. |
 
 ## setExposureMeteringMode
 
@@ -271,10 +265,10 @@ setExposureMeteringMode(aeMeteringMode: ExposureMeteringMode): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 7400101 | Parameter missing or parameter type incorrect.<br>**适用版本：** 12 - 23 |
-| 7400102 | Operation not allowed, the inputDevice or the session is abnormal.<br>**适用版本：** 24+ |
-| 7400103 | Session not config, only throw in session usage. |
-| 202 | Not System Application.<br>**适用版本：** 12 - 23 |
+| [7400101](../errorcode-camera.md#7400101-无效入参) | Parameter missing or parameter type incorrect.<br>**适用版本：** 12 - 23 |
+| [7400102](../errorcode-camera.md#7400102-非法操作) | Operation not allowed, the inputDevice or the session is abnormal.<br>**适用版本：** 24+ |
+| [7400103](../errorcode-camera.md#7400103-会话未配置) | Session not config, only throw in session usage. |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not System Application.<br>**适用版本：** 12 - 23 |
 
 ## setExposureMode
 
@@ -305,8 +299,8 @@ setExposureMode(aeMode: ExposureMode): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 7400102 | Operation not allowed.<br>**适用版本：** 19+ |
-| 7400103 | Session not config. |
+| [7400102](../errorcode-camera.md#7400102-非法操作) | Operation not allowed.<br>**适用版本：** 19+ |
+| [7400103](../errorcode-camera.md#7400103-会话未配置) | Session not config. |
 
 ## setMeteringPoint
 
@@ -332,11 +326,11 @@ setMeteringPoint(point: Point): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| point | [Point](arkts-camera-camera-point-i.md) | 是 | 曝光点，x、y设置范围应在[0，1]之内，超过范围，如果小于0设置0，大于1设置1。 |
+| point | [Point](../../apis-test-kit/arkts-apis/arkts-test-uitest-point-i.md) | 是 | 曝光点，x、y设置范围应在[0，1]之内，超过范围，如果小于0设置0，大于1设置1。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 7400103 | Session not config. |
+| [7400103](../errorcode-camera.md#7400103-会话未配置) | Session not config. |
 

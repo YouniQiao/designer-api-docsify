@@ -1,6 +1,6 @@
 # ScrollMotion (System API)
 
-滚动动画模型。可以根据初始位置、初始速度、边界位置和弹簧属性构建滚动动画。
+Rolling animation model: You can build rolling animation based on the initial position, initial speed, boundary position, and spring attributes.
 
 **Since:** 7
 
@@ -20,7 +20,7 @@
 constructor(position: number, velocity: number, min: number, max: number, prop: SpringProp)
 ```
 
-构造器参数。
+Constructor parameters
 
 **Since:** 7
 

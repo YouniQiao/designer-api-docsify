@@ -12,7 +12,7 @@ import { fontManager } from 'kits/@kit.LocalizationKit';
 function uninstallFont(fullName: string): Promise<int>
 ```
 
-根据字体名称从系统字体库中卸载已安装的字体文件。使用Promise异步回调。
+Uninstalls an installed font file from the system font library by font name. This API uses a promise to return the result.
 
 **Since:** 19
 
@@ -30,21 +30,21 @@ function uninstallFont(fullName: string): Promise<int>
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| fullName | string | Yes | 需要卸载的字体名称，可通过打开.ttf或.ttc字体文件获取。 &lt;br&gt;字体名称区分大小写，请确保与实际字体名称完全一致。 |
+| fullName | string | Yes | Name of the font to be uninstalled. You can open the .ttf or .ttc font file to obtain the name. &lt;br&gt;The font name is case-sensitive. Ensure that it exactly matches the actual font name. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| ArkTS-Dyn: Promise&lt;number&gt;  <br>ArkTS-Sta：Promise&lt;int&gt; | Promise对象，返回卸载结果。 &lt;br&gt;- 返回0：卸载成功，字体已从系统字体库中移除。 &lt;br&gt;- 返回其他值：卸载失败，请根据错误码排查原因。 |
+| ArkTS-Dyn: Promise&lt;number&gt;  <br>ArkTS-Sta：Promise&lt;int&gt; | Promise used to return the uninstallation result. &lt;br&gt;- The value **0** indicates that the uninstallation is successful and the font has been removed from the system font library. &lt;br&gt;- Any other value indicates that the uninstallation failed. Troubleshoot based on the error code. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 31100107 | Font file does not exist. |
-| 31100108 | Font file delete error. |
-| 31100109 | Other error. |
-| 201 | Permission denied. |
-| 202 | Non-system application. |
+| [31100107](../errorcode-font-manager.md#31100107-uninstalled-font-file-not-exist) | Font file does not exist. |
+| [31100108](../errorcode-font-manager.md#31100108-failed-to-delete-font-file) | Font file delete error. |
+| [31100109](../errorcode-font-manager.md#31100109-uninstallation-failed-due-to-other-errors) | Other error. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Non-system application. |
 

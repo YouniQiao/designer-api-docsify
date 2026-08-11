@@ -1,6 +1,6 @@
 # WindowChangeOptions
 
-窗口变化事件监听的扩展配置，用于指定监听过程配置及事件筛选条件。
+Describes the extended configuration of window change event listening,which is used to specify the listening process configuration and event filtering conditions.
 
 **Since:** 22
 
@@ -22,7 +22,7 @@ import { ResizeDirection, WindowMode, PenMode, PenKeyOperation, Driver, MatchPat
 bundleName?: string
 ```
 
-监听窗口对应包名，缺省时默认监听所有窗口。
+Bundle name of the window to be listened for. By default, all windows are listened for.
 
 **Type:** string
 
@@ -42,7 +42,7 @@ bundleName?: string
 timeout?: int
 ```
 
-监听超时时间，取值范围：大于等于500的整数，默认值为10000，单位：ms。传入不在范围内的值抛出错误码。
+Listening timeout interval, in milliseconds. The value is an integer greater than or equal to 500. The default value is **10000**. If the value is out of range, an error code is thrown.
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 

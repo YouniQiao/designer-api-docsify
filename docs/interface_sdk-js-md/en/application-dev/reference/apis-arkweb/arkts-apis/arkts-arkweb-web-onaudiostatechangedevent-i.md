@@ -1,6 +1,6 @@
 # OnAudioStateChangedEvent
 
-定义网页上的音频播放状态发生改变时的回调函数。
+Represents the callback invoked when the audio playback status on the web page changes.
 
 **Since:** 23
 
@@ -16,7 +16,7 @@
 playing: boolean
 ```
 
-当前页面的音频播放状态，true表示正在播放，false表示未播放。
+Audio playback status on the current page. The value **true** means that audio is being played, and **false**means the opposite.
 
 **Type:** boolean
 

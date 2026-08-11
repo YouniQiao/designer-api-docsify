@@ -12,12 +12,6 @@
 
 **系统能力：** SystemCapability.Multimedia.Camera.Core
 
-## 导入模块
-
-```TypeScript
-import { camera } from 'kits/@kit.CameraKit';
-```
-
 ## attachMetaSurface
 
 ```TypeScript
@@ -47,9 +41,9 @@ Attach a meta surface to VideoOutput.
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 7400101 | Parameter missing or parameter type incorrect. |
-| 7400201 | Camera service fatal error. |
-| 202 | Not System Application. |
+| [7400101](../errorcode-camera.md#7400101-无效入参) | Parameter missing or parameter type incorrect. |
+| [7400201](../errorcode-camera.md#7400201-相机服务异常) | Camera service fatal error. |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not System Application. |
 
 ## enableAutoDeferredVideoEnhancement
 
@@ -79,9 +73,9 @@ Enable auto deferred video enhancement if needed.
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 7400101 | Parameter missing or parameter type incorrect. |
-| 7400201 | Camera service fatal error. |
-| 202 | Not System Application. |
+| [7400101](../errorcode-camera.md#7400101-无效入参) | Parameter missing or parameter type incorrect. |
+| [7400201](../errorcode-camera.md#7400201-相机服务异常) | Camera service fatal error. |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not System Application. |
 
 ## enableAutoVideoFrameRate
 
@@ -111,8 +105,8 @@ Enable auto frame rate for video capture.
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 7400103 | Session not config. |
-| 202 | Not System Application. |
+| [7400103](../errorcode-camera.md#7400103-会话未配置) | Session not config. |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not System Application. |
 
 ## getSupportedRotations
 
@@ -142,7 +136,7 @@ Get supported video rotations.
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 202 | Not System Application. |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not System Application. |
 
 ## getSupportedVideoMetaTypes
 
@@ -172,8 +166,8 @@ Get supported video meta types.
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 7400201 | Camera service fatal error. |
-| 202 | Not System Application. |
+| [7400201](../errorcode-camera.md#7400201-相机服务异常) | Camera service fatal error. |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not System Application. |
 
 ## isAutoDeferredVideoEnhancementEnabled
 
@@ -203,8 +197,8 @@ Confirm if auto deferred video enhancement is enabled.
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 7400201 | Camera service fatal error. |
-| 202 | Not System Application. |
+| [7400201](../errorcode-camera.md#7400201-相机服务异常) | Camera service fatal error. |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not System Application. |
 
 ## isAutoDeferredVideoEnhancementSupported
 
@@ -234,8 +228,8 @@ Confirm if auto deferred video enhancement is supported in the specific device.
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 7400201 | Camera service fatal error. |
-| 202 | Not System Application. |
+| [7400201](../errorcode-camera.md#7400201-相机服务异常) | Camera service fatal error. |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not System Application. |
 
 ## isAutoVideoFrameRateSupported
 
@@ -265,7 +259,7 @@ Determine whether auto frame rate is supported.
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 202 | Not System Application. |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not System Application. |
 
 ## isRotationSupported
 
@@ -295,7 +289,7 @@ Determine whether video rotation is supported.
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 202 | Not System Application. |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not System Application. |
 
 ## off('deferredVideoEnhancementInfo')
 
@@ -326,7 +320,7 @@ Unsubscribes from deferred video enhancement info callback.
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 202 | Not System Application. |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not System Application. |
 
 ## offDeferredVideoEnhancementInfo
 
@@ -356,7 +350,7 @@ Unsubscribes from deferred video enhancement info callback.
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 202 | Not System Application. |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not System Application. |
 
 ## on('deferredVideoEnhancementInfo')
 
@@ -387,7 +381,7 @@ Subscribes deferred video enhancement info callback.
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 202 | Not System Application. |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not System Application. |
 
 ## onDeferredVideoEnhancementInfo
 
@@ -417,7 +411,7 @@ Subscribes deferred video enhancement info callback.
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 202 | Not System Application. |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not System Application. |
 
 ## setRotation
 
@@ -447,6 +441,6 @@ Set a video rotation.
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 7400101 | Parameter missing or parameter type incorrect. |
-| 202 | Not System Application. |
+| [7400101](../errorcode-camera.md#7400101-无效入参) | Parameter missing or parameter type incorrect. |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not System Application. |
 

@@ -10,12 +10,6 @@
 
 **系统能力：** SystemCapability.Print.PrintFramework
 
-## 导入模块
-
-```TypeScript
-import { print } from 'kits/@kit.BasicServicesKit';
-```
-
 ## options
 
 ```TypeScript

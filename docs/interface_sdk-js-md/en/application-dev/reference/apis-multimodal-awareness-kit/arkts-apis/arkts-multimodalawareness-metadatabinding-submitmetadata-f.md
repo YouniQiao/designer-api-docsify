@@ -34,12 +34,13 @@ Transfers the metadata to be encoded to the MSDP. The MSDP determines whether to
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 32100001 | Internal handling failed. |
+| [32100001](../../apis-multimodalawareness-kit/errorcode-metadataBinding.md#32100001-file-creation-failed) | Internal handling failed. |
 
 ## Examples
 
 ```TypeScript
 import { metadataBinding } from '@kit.MultimodalAwarenessKit';
+import { BusinessError } from '@kit.BasicServicesKit';
 
 let metadata: string = "";
 try {

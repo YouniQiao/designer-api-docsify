@@ -1,5 +1,7 @@
 # Trace
 
+Defining Trace annotation Trace is used to directly observe the property changes of nested objects
+
 **Since:** 23
 
 **ArkTS mode:** ArkTS-Sta only, since version 23.

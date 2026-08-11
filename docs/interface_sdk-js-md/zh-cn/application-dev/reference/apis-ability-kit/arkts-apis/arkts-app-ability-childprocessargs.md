@@ -1,11 +1,5 @@
 # @ohos.app.ability.ChildProcessArgs
 
-## 导入模块
-
-```TypeScript
-import { ChildProcessArgs } from 'kits/@kit.AbilityKit';
-```
-
 ## 汇总
 
 ### 接口

@@ -1,6 +1,6 @@
 # UserInfo
 
-用户信息的定义。
+The definition of User information.
 
 **Since:** 23
 
@@ -22,7 +22,7 @@ import { avMusicTemplate } from 'kits/@kit.AVSessionKit';
 isLogin: boolean
 ```
 
-用户是否登录。true表示已登录，false表示未登录。无默认值。
+User is login.
 
 **Type:** boolean
 
@@ -42,7 +42,7 @@ isLogin: boolean
 isVip: boolean
 ```
 
-用户是否是VIP。true表示是，false表示不是。无默认值。
+User is vip.
 
 **Type:** boolean
 
@@ -62,7 +62,7 @@ isVip: boolean
 nickName: string
 ```
 
-用户昵称。
+Nick name of the user.
 
 **Type:** string
 
@@ -82,7 +82,7 @@ nickName: string
 profilePicUrl: string
 ```
 
-用户的头像图片URL。
+Profile pic url of the user.
 
 **Type:** string
 
@@ -102,7 +102,7 @@ profilePicUrl: string
 tips: string
 ```
 
-其他关于用户的描述。
+Other descriptions of the user.
 
 **Type:** string
 
@@ -122,7 +122,7 @@ tips: string
 userInfoId: string
 ```
 
-用户的唯一ID。
+Unique id of the user.
 
 **Type:** string
 

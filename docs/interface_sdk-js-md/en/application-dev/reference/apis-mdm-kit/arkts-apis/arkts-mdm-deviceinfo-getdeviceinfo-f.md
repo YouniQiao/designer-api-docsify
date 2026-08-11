@@ -12,7 +12,7 @@ import { deviceInfo } from 'kits/@kit.MDMKit';
 function getDeviceInfo(admin: Want, label: string): string
 ```
 
-获取设备信息。
+Obtains device information.
 
 **Since:** 12
 
@@ -30,8 +30,8 @@ function getDeviceInfo(admin: Want, label: string): string
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| admin | [Want](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-want-want-c.md) | Yes | 企业设备管理扩展组件，用于指定具有设备管理能力的目标应用。Want对象中必须包含abilityName（扩展能力名称）和bundleName（应用包名）两个必填字段。 |
-| label | string | Yes | 支持获取的设备信息标签。&lt;br/&gt;- deviceName：设备名称。&lt;br/&gt;- deviceSerial：设备序列号。&lt;br/&gt;- simInfo：SIM卡信息。 |
+| admin | [Want](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-want-want-c.md) | Yes | Enterprise device management extension component, which is used to specify the target application that has the device management capability. The **Want** object must contain **abilityName** ( extended ability name) and **bundleName** (application bundle name) parameters. |
+| label | string | Yes | Device information label that can be obtained. &lt;br&gt;- **deviceName**: device name. &lt;br&gt;- **deviceSerial**: device serial number. &lt;br&gt;- **simInfo**: SIM card information. |
 
 **Return value:**
 
@@ -43,11 +43,11 @@ function getDeviceInfo(admin: Want, label: string): string
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
-| 201 | Permission verification failed. The application does not have the permission required to call the API. |
-| 9200007 | The system ability works abnormally. |
-| 9200001 | The application is not an administrator application of the device. |
-| 9200002 | The administrator application does not have permission to manage the device. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed. The application does not have the permission required to call the API. |
+| [9200007](../errorcode-enterpriseDeviceManager.md#9200007-system-ability-error) | The system ability works abnormally. |
+| [9200001](../errorcode-enterpriseDeviceManager.md#9200001-deviceadmin-not-enabled) | The application is not an administrator application of the device. |
+| [9200002](../errorcode-enterpriseDeviceManager.md#9200002-permission-denied) | The administrator application does not have permission to manage the device. |
 
 ## Examples
 

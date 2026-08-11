@@ -1,6 +1,6 @@
 # AccessibilityRoleType
 
-Enum for accessibility component type
+Enumerates the component role types used by screen readers.
 
 **Since:** 23
 
@@ -16,7 +16,7 @@ Enum for accessibility component type
 ACTION_SHEET = 0
 ```
 
-ActionSheet component type
+Action sheet.
 
 **Since:** 23
 
@@ -34,7 +34,7 @@ ActionSheet component type
 ALERT_DIALOG = 1
 ```
 
-AlertDialog component type
+Alert dialog box.
 
 **Since:** 23
 
@@ -52,7 +52,7 @@ AlertDialog component type
 INDEXER_COMPONENT = 2
 ```
 
-AlphabetIndexer component type
+Indexer component.
 
 **Since:** 23
 
@@ -70,7 +70,7 @@ AlphabetIndexer component type
 BADGE_COMPONENT = 3
 ```
 
-badge component type
+Badge component.
 
 **Since:** 23
 
@@ -88,7 +88,7 @@ badge component type
 BLANK = 4
 ```
 
-blank component type
+Blank placeholder component.
 
 **Since:** 23
 
@@ -106,7 +106,7 @@ blank component type
 BUTTON = 5
 ```
 
-button component type
+Button.
 
 **Since:** 23
 
@@ -124,7 +124,7 @@ button component type
 BACK_BUTTON = 6
 ```
 
-button component type
+Back button on a large image page.
 
 **Since:** 23
 
@@ -142,7 +142,7 @@ button component type
 SHEET_DRAG_BAR = 7
 ```
 
-sheet drag bar component type
+Drag bar for sheets.
 
 **Since:** 23
 
@@ -160,7 +160,7 @@ sheet drag bar component type
 CALENDAR_PICKER = 8
 ```
 
-calendar picker component type
+Calendar picker.
 
 **Since:** 23
 
@@ -178,7 +178,7 @@ calendar picker component type
 CALENDAR = 9
 ```
 
-calendar component type
+Calendar.
 
 **Since:** 23
 
@@ -196,7 +196,7 @@ calendar component type
 CANVAS = 10
 ```
 
-canvas component type
+Canvas component.
 
 **Since:** 23
 
@@ -214,7 +214,7 @@ canvas component type
 CANVAS_GRADIENT = 11
 ```
 
-canvas gradient component type
+Gradient object.
 
 **Since:** 23
 
@@ -232,7 +232,7 @@ canvas gradient component type
 CANVAS_PATTERN = 12
 ```
 
-canvas pattern component type
+Pattern for image filling based on a specified source image and repetition mode.
 
 **Since:** 23
 
@@ -250,7 +250,7 @@ canvas pattern component type
 CHECKBOX = 13
 ```
 
-checkbox component type
+Check box component.
 
 **Since:** 23
 
@@ -268,7 +268,7 @@ checkbox component type
 CHECKBOX_GROUP = 14
 ```
 
-checkbox group component type
+Check box group.
 
 **Since:** 23
 
@@ -286,7 +286,7 @@ checkbox group component type
 CIRCLE = 15
 ```
 
-circle component type
+Component for drawing circles.
 
 **Since:** 23
 
@@ -304,7 +304,7 @@ circle component type
 COLUMN_SPLIT = 16
 ```
 
-column split component type
+Vertical layout of child components with horizontal dividers.
 
 **Since:** 23
 
@@ -322,7 +322,7 @@ column split component type
 COLUMN = 17
 ```
 
-column component type
+Container that lays out child components vertically.
 
 **Since:** 23
 
@@ -340,7 +340,7 @@ column component type
 CANVAS_RENDERING_CONTEXT_2D = 18
 ```
 
-canvas rendering context 2d component type
+2D drawing object, which can be used to draw rectangles, images, and texts on a canvas component.
 
 **Since:** 23
 
@@ -358,7 +358,7 @@ canvas rendering context 2d component type
 CHART = 19
 ```
 
-chart component type
+Chart component.
 
 **Since:** 23
 
@@ -376,7 +376,7 @@ chart component type
 COUNTER = 20
 ```
 
-counter component type
+Counter component.
 
 **Since:** 23
 
@@ -394,7 +394,7 @@ counter component type
 CONTAINER_MODAL = 21
 ```
 
-counter modal component type
+Modal container.
 
 **Since:** 23
 
@@ -412,7 +412,7 @@ counter modal component type
 DATA_PANEL = 22
 ```
 
-data panel component type
+Data panel component.
 
 **Since:** 23
 
@@ -430,7 +430,7 @@ data panel component type
 DATE_PICKER = 23
 ```
 
-data picker component type
+Date picker.
 
 **Since:** 23
 
@@ -448,7 +448,7 @@ data picker component type
 DIALOG = 24
 ```
 
-dialog component type
+Dialog box.
 
 **Since:** 23
 
@@ -466,7 +466,7 @@ dialog component type
 DIVIDER = 25
 ```
 
-divider component type
+Divider component.
 
 **Since:** 23
 
@@ -484,7 +484,7 @@ divider component type
 DRAG_BAR = 26
 ```
 
-drag bar component type
+Drag bar.
 
 **Since:** 23
 
@@ -502,7 +502,7 @@ drag bar component type
 EFFECT_COMPONENT = 27
 ```
 
-effect component type
+Container component for special effects.
 
 **Since:** 23
 
@@ -520,7 +520,7 @@ effect component type
 ELLIPSE = 28
 ```
 
-ellipse component type
+Ellipse drawing component.
 
 **Since:** 23
 
@@ -538,7 +538,7 @@ ellipse component type
 FLEX = 29
 ```
 
-flex component type
+Container that allows for flexible layout of child components.
 
 **Since:** 23
 
@@ -556,7 +556,7 @@ flex component type
 FLOW_ITEM = 30
 ```
 
-flow item component type
+Child component of a waterfall layout container.
 
 **Since:** 23
 
@@ -574,7 +574,7 @@ flow item component type
 FORM_COMPONENT = 31
 ```
 
-form component type
+Widget component.
 
 **Since:** 23
 
@@ -592,7 +592,7 @@ form component type
 FORM_LINK = 32
 ```
 
-form link component type
+Static widget interaction component.
 
 **Since:** 23
 
@@ -610,7 +610,7 @@ form link component type
 GAUGE = 33
 ```
 
-gauge component type
+Gauge component.
 
 **Since:** 23
 
@@ -628,7 +628,7 @@ gauge component type
 GRID = 34
 ```
 
-grid component type
+Grid container.
 
 **Since:** 23
 
@@ -646,7 +646,7 @@ grid component type
 GRID_COL = 35
 ```
 
-grid col component type
+Grid column component.
 
 **Since:** 23
 
@@ -664,7 +664,7 @@ grid col component type
 GRID_CONTAINER = 36
 ```
 
-grid container component type
+Grid container that lays out child components vertically.
 
 **Since:** 23
 
@@ -682,7 +682,7 @@ grid container component type
 GRID_ITEM = 37
 ```
 
-grid item component type
+Single-item container within a grid container.
 
 **Since:** 23
 
@@ -700,7 +700,7 @@ grid item component type
 GRID_ROW = 38
 ```
 
-grid row component type
+Grid row component.
 
 **Since:** 23
 
@@ -718,7 +718,7 @@ grid row component type
 HYPERLINK = 39
 ```
 
-hyperlink component type
+Hyperlink component.
 
 **Since:** 23
 
@@ -736,7 +736,7 @@ hyperlink component type
 IMAGE = 40
 ```
 
-image component type
+Image component.
 
 **Since:** 23
 
@@ -754,7 +754,7 @@ image component type
 IMAGE_ANIMATOR = 41
 ```
 
-image animator component type
+Frame animation component.
 
 **Since:** 23
 
@@ -772,7 +772,7 @@ image animator component type
 IMAGE_BITMAP = 42
 ```
 
-image bitmap component type
+Pixel data for canvas rendering.
 
 **Since:** 23
 
@@ -790,7 +790,7 @@ image bitmap component type
 IMAGE_DATA = 43
 ```
 
-image data component type
+Pixel data for canvas rendering.
 
 **Since:** 23
 
@@ -808,7 +808,7 @@ image data component type
 IMAGE_SPAN = 44
 ```
 
-image span component type
+Component used to display inline images.
 
 **Since:** 23
 
@@ -826,7 +826,7 @@ image span component type
 LABEL = 45
 ```
 
-label component type
+Label.
 
 **Since:** 23
 
@@ -844,7 +844,7 @@ label component type
 LINE = 46
 ```
 
-line component type
+Line.
 
 **Since:** 23
 
@@ -862,7 +862,7 @@ line component type
 LIST = 47
 ```
 
-list component type
+List.
 
 **Since:** 23
 
@@ -880,7 +880,7 @@ list component type
 LIST_ITEM = 48
 ```
 
-list item component type
+Specific item in a list.
 
 **Since:** 23
 
@@ -898,7 +898,7 @@ list item component type
 LIST_ITEM_GROUP = 49
 ```
 
-list item group component type
+List item group.
 
 **Since:** 23
 
@@ -916,7 +916,7 @@ list item group component type
 LOADING_PROGRESS = 50
 ```
 
-loading progress component type
+Component for display loading animations.
 
 **Since:** 23
 
@@ -934,7 +934,7 @@ loading progress component type
 MARQUEE = 51
 ```
 
-marquee component type
+Marquee component.
 
 **Since:** 23
 
@@ -952,7 +952,7 @@ marquee component type
 MATRIX2D = 52
 ```
 
-matrix2d component type
+2D matrix object.
 
 **Since:** 23
 
@@ -970,7 +970,7 @@ matrix2d component type
 MENU = 53
 ```
 
-menu component type
+Menu.
 
 **Since:** 23
 
@@ -988,7 +988,7 @@ menu component type
 MENU_ITEM = 54
 ```
 
-menu item component type
+Menu item.
 
 **Since:** 23
 
@@ -1006,7 +1006,7 @@ menu item component type
 MENU_ITEM_GROUP = 55
 ```
 
-menu item group component type
+Menu item group.
 
 **Since:** 23
 
@@ -1024,7 +1024,7 @@ menu item group component type
 NAV_DESTINATION = 56
 ```
 
-navdestination component type
+Content area of the **Navigation** component.
 
 **Since:** 23
 
@@ -1060,7 +1060,7 @@ navrouter component type
 NAVIGATION = 58
 ```
 
-navigation component type
+Root view container for navigation routing.
 
 **Since:** 23
 
@@ -1078,7 +1078,7 @@ navigation component type
 NAVIGATION_BAR = 59
 ```
 
-navigation bar component type
+Navigation bar.
 
 **Since:** 23
 
@@ -1096,7 +1096,7 @@ navigation bar component type
 NAVIGATION_MENU = 60
 ```
 
-navigation menu component type
+Navigation menu.
 
 **Since:** 23
 
@@ -1114,7 +1114,7 @@ navigation menu component type
 NAVIGATOR = 61
 ```
 
-navigator component type
+Navigation container component.
 
 **Since:** 23
 
@@ -1132,7 +1132,7 @@ navigator component type
 OFFSCREEN_CANVAS = 62
 ```
 
-offscreen canvas component type
+Canvas for custom drawing of graphics.
 
 **Since:** 23
 
@@ -1150,7 +1150,7 @@ offscreen canvas component type
 OFFSCREEN_CANVAS_RENDERING_CONTEXT2D = 63
 ```
 
-offscreen canvas rendering context2d component type
+2D drawing object, which can be used to draw rectangles, images, and texts on a canvas component.
 
 **Since:** 23
 
@@ -1186,7 +1186,7 @@ option component type
 PANEL = 65
 ```
 
-panel component type
+Slidable panel.
 
 **Since:** 23
 
@@ -1222,7 +1222,7 @@ paper page component type
 PATH = 67
 ```
 
-path component type
+Path drawing component.
 
 **Since:** 23
 
@@ -1240,7 +1240,7 @@ path component type
 PATH2D = 68
 ```
 
-path 2d component type
+Path object.
 
 **Since:** 23
 
@@ -1258,7 +1258,7 @@ path 2d component type
 PATTERN_LOCK = 69
 ```
 
-pattern lock component type
+Pattern lock component.
 
 **Since:** 23
 
@@ -1276,7 +1276,7 @@ pattern lock component type
 PICKER = 70
 ```
 
-picker component type
+Picker.
 
 **Since:** 23
 
@@ -1294,7 +1294,7 @@ picker component type
 PICKER_VIEW = 71
 ```
 
-picker view component type
+Picker view.
 
 **Since:** 23
 
@@ -1312,7 +1312,7 @@ picker view component type
 PLUGIN_COMPONENT = 72
 ```
 
-plugin component type
+Plugin component.
 
 **Since:** 23
 
@@ -1330,7 +1330,7 @@ plugin component type
 POLYGON = 73
 ```
 
-polygon component type
+Component used to draw a polygon.
 
 **Since:** 23
 
@@ -1348,7 +1348,7 @@ polygon component type
 POLYLINE = 74
 ```
 
-polyline component type
+Component used to draw a polyline.
 
 **Since:** 23
 
@@ -1366,7 +1366,7 @@ polyline component type
 POPUP = 75
 ```
 
-pop up component type
+Popup with a specific style.
 
 **Since:** 23
 
@@ -1402,7 +1402,7 @@ progress component type
 QRCODE = 77
 ```
 
-qr code component type
+QR code.
 
 **Since:** 23
 
@@ -1420,7 +1420,7 @@ qr code component type
 RADIO = 78
 ```
 
-radio component type
+Radio button.
 
 **Since:** 23
 
@@ -1438,7 +1438,7 @@ radio component type
 RATING = 79
 ```
 
-rating component type
+Component for selecting a rating within a given range.
 
 **Since:** 23
 
@@ -1456,7 +1456,7 @@ rating component type
 RECT = 80
 ```
 
-rect component type
+Component used to draw a rectangle.
 
 **Since:** 23
 
@@ -1474,7 +1474,7 @@ rect component type
 REFRESH = 81
 ```
 
-refresh component type
+Pull-to-refresh container component.
 
 **Since:** 23
 
@@ -1492,7 +1492,7 @@ refresh component type
 RELATIVE_CONTAINER = 82
 ```
 
-relative container component type
+Relative layout component.
 
 **Since:** 23
 
@@ -1510,7 +1510,7 @@ relative container component type
 REMOTE_WINDOW = 83
 ```
 
-remote window component type
+Remote control window component.
 
 **Since:** 23
 
@@ -1528,7 +1528,7 @@ remote window component type
 RICH_EDITOR = 84
 ```
 
-rich editor component type
+Component that supports rich text editing and interactive text editing.
 
 **Since:** 23
 
@@ -1546,7 +1546,7 @@ rich editor component type
 RICH_TEXT = 85
 ```
 
-rich text component type
+Rich text component.
 
 **Since:** 23
 
@@ -1564,7 +1564,7 @@ rich text component type
 ROLE_PAGER = 86
 ```
 
-rolepager component type
+Pagination component.
 
 **Since:** 23
 
@@ -1582,7 +1582,7 @@ rolepager component type
 ROW = 87
 ```
 
-row component type
+Container that lays out child components horizontally.
 
 **Since:** 23
 
@@ -1600,7 +1600,7 @@ row component type
 ROW_SPLIT = 88
 ```
 
-row split component type
+Horizontal layout of child components with vertical dividers.
 
 **Since:** 23
 
@@ -1618,7 +1618,7 @@ row split component type
 SCROLL = 89
 ```
 
-scroll component type
+Scrollable container component.
 
 **Since:** 23
 
@@ -1636,7 +1636,7 @@ scroll component type
 SCROLL_BAR = 90
 ```
 
-scroll bar component type
+Scrollbar.
 
 **Since:** 23
 
@@ -1654,7 +1654,7 @@ scroll bar component type
 SEARCH = 91
 ```
 
-search component type
+Search box component.
 
 **Since:** 23
 
@@ -1672,7 +1672,7 @@ search component type
 SEARCH_FIELD = 92
 ```
 
-search field component type
+Search box.
 
 **Since:** 23
 
@@ -1690,7 +1690,7 @@ search field component type
 SELECT = 93
 ```
 
-select component type
+Drop-down list component.
 
 **Since:** 23
 
@@ -1708,7 +1708,7 @@ select component type
 SHAPE = 94
 ```
 
-shape component type
+Parent component of the drawing components.
 
 **Since:** 23
 
@@ -1726,7 +1726,7 @@ shape component type
 SIDEBAR_CONTAINER = 95
 ```
 
-sidebar container component type
+Sidebar container that can show and hide the sidebar.
 
 **Since:** 23
 
@@ -1762,7 +1762,7 @@ slider component type
 SPAN = 97
 ```
 
-span component type
+Component used to display inline text.
 
 **Since:** 23
 
@@ -1780,7 +1780,7 @@ span component type
 STACK = 98
 ```
 
-stack component type
+Stack container.
 
 **Since:** 23
 
@@ -1798,7 +1798,7 @@ stack component type
 STEPPER = 99
 ```
 
-stepper component type
+Stepper component.
 
 **Since:** 23
 
@@ -1816,7 +1816,7 @@ stepper component type
 STEPPER_ITEM = 100
 ```
 
-stepper item component type
+Page child component of the stepper component.
 
 **Since:** 23
 
@@ -1834,7 +1834,7 @@ stepper item component type
 SWIPER = 101
 ```
 
-swiper component type
+Swiper view container.
 
 **Since:** 23
 
@@ -1852,7 +1852,7 @@ swiper component type
 SWIPER_INDICATOR = 102
 ```
 
-swiper indicator component type
+Navigation indicator for the **Swiper** component.
 
 **Since:** 23
 
@@ -1870,7 +1870,7 @@ swiper indicator component type
 SWITCH = 103
 ```
 
-switch component type
+Switch.
 
 **Since:** 23
 
@@ -1888,7 +1888,7 @@ switch component type
 SYMBOL_GLYPH = 104
 ```
 
-symbol glyph component type
+Component for displaying a symbol glyph.
 
 **Since:** 23
 
@@ -1906,7 +1906,7 @@ symbol glyph component type
 TAB_CONTENT = 105
 ```
 
-tab content component type
+Content view for a tab in the **Tabs** component.
 
 **Since:** 23
 
@@ -1924,7 +1924,7 @@ tab content component type
 TAB_BAR = 106
 ```
 
-tab bar component type
+Tab bar.
 
 **Since:** 23
 
@@ -1942,7 +1942,7 @@ tab bar component type
 TABS = 107
 ```
 
-tabs component type
+Container that allows users to switch between content views through tabs.
 
 **Since:** 23
 
@@ -1960,7 +1960,7 @@ tabs component type
 TEXT = 108
 ```
 
-text component type
+Text.
 
 **Since:** 23
 
@@ -1978,7 +1978,7 @@ text component type
 TEXT_CLOCK = 109
 ```
 
-text clock component type
+Text clock component.
 
 **Since:** 23
 
@@ -2014,7 +2014,7 @@ text entry component type
 TEXT_INPUT = 111
 ```
 
-text input component type
+Text box component.
 
 **Since:** 23
 
@@ -2032,7 +2032,7 @@ text input component type
 TEXT_PICKER = 112
 ```
 
-text picker component type
+Text picker.
 
 **Since:** 23
 
@@ -2050,7 +2050,7 @@ text picker component type
 TEXT_TIMER = 113
 ```
 
-text timer component type
+Component that displays timing information and is controlled in text format.
 
 **Since:** 23
 
@@ -2068,7 +2068,7 @@ text timer component type
 TEXT_AREA = 114
 ```
 
-text area component type
+Text area component.
 
 **Since:** 23
 
@@ -2086,7 +2086,7 @@ text area component type
 TEXT_FIELD = 115
 ```
 
-text field component type
+Text box.
 
 **Since:** 23
 
@@ -2104,7 +2104,7 @@ text field component type
 TIME_PICKER = 116
 ```
 
-time picker component type
+Time picker.
 
 **Since:** 23
 
@@ -2122,7 +2122,7 @@ time picker component type
 TITLE_BAR = 117
 ```
 
-title bar component type
+Title bar.
 
 **Since:** 23
 
@@ -2158,7 +2158,7 @@ toggler component type
 UI_EXTENSION_COMPONENT = 119
 ```
 
-uiextensioncomponent component type
+UI extension component.
 
 **Since:** 23
 
@@ -2176,7 +2176,7 @@ uiextensioncomponent component type
 VIDEO = 120
 ```
 
-video component type
+Component for playing video files and controlling playback.
 
 **Since:** 23
 
@@ -2194,7 +2194,7 @@ video component type
 WATER_FLOW = 121
 ```
 
-water flow component type
+Waterfall layout container.
 
 **Since:** 23
 
@@ -2212,7 +2212,7 @@ water flow component type
 WEB = 122
 ```
 
-web component type
+Component for loading web pages.
 
 **Since:** 23
 
@@ -2230,7 +2230,7 @@ web component type
 XCOMPONENT = 123
 ```
 
-xcomponent component type
+Custom rendering component.
 
 **Since:** 23
 
@@ -2248,7 +2248,7 @@ xcomponent component type
 ROLE_NONE = 124
 ```
 
-none component type: screen reader will not broadcast the component type.
+Null.
 
 **Since:** 23
 

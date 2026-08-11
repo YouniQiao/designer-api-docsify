@@ -1,0 +1,43 @@
+# getTask
+
+## Modules to Import
+
+```TypeScript
+import { request } from 'kits/@kit.BasicServicesKit';
+```
+
+## getTask
+
+```TypeScript
+function getTask(context: BaseContext, id: string, token?: string): Promise<Task>
+```
+
+Obtains task information based on the task ID. This API uses a promise to return the result.
+
+**Since:** 11
+
+<!--Device-agent-function getTask(context: BaseContext, id: string, token?: string): Promise<Task>--><!--Device-agent-function getTask(context: BaseContext, id: string, token?: string): Promise<Task>-End-->
+
+**System capability:** SystemCapability.Request.FileTransferAgent
+
+**Parameters:**
+
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| context | [BaseContext](../../apis-ability-kit/arkts-apis/arkts-ability-basecontext-c.md) | Yes |
+| id | string | Yes |
+| token | string | No |
+
+**Return value:**
+
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| Promise&lt;Task&gt; |
+
+**Error codes:**
+
+| Error Code ID |
+| --- |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [21900006](../../apis-basic-services-kit/errorcode-request.md#21900006-task-not-found) |
+| [13400003](../../apis-basic-services-kit/errorcode-request.md#13400003-service-error) |

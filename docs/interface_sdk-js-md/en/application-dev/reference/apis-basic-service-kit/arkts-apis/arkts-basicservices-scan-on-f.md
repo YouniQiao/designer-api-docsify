@@ -12,7 +12,7 @@ import { scan } from 'kits/@kit.BasicServicesKit';
 function on(type: 'scanDeviceFound', callback: Callback<ScannerDevice>): void
 ```
 
-注册扫描仪设备发现事件回调。使用callback异步回调。
+Registers a callback used to listen for the scanner discovery event. This API uses an asynchronous callback to return the result.
 
 **Since:** 20
 
@@ -28,14 +28,14 @@ function on(type: 'scanDeviceFound', callback: Callback<ScannerDevice>): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'scanDeviceFound' | Yes | 事件类型。 |
-| callback | [Callback](arkts-basicservices-base-callback-i.md)&lt;ScannerDevice&gt; | Yes | 回调函数，返回扫描仪设备发现信息。 |
+| type | 'scanDeviceFound' | Yes | Event type. |
+| callback | [Callback](arkts-basicservices-base-callback-i.md)&lt;ScannerDevice&gt; | Yes | Callback used to return the discovered scanner. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 201 | Permission denied. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
 
 ## Examples
 
@@ -54,7 +54,7 @@ scan.on('scanDeviceFound', (device: scan.ScannerDevice) => {
 function on(type: 'scanDeviceSync', callback: Callback<ScannerSyncDevice>): void
 ```
 
-注册扫描仪设备同步事件回调。使用callback异步回调。
+Registers a callback used to listen for the scanner sync event. This API uses an asynchronous callback to return the result.
 
 **Since:** 20
 
@@ -70,14 +70,14 @@ function on(type: 'scanDeviceSync', callback: Callback<ScannerSyncDevice>): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'scanDeviceSync' | Yes | 事件类型。 |
-| callback | [Callback](arkts-basicservices-base-callback-i.md)&lt;ScannerSyncDevice&gt; | Yes | 回调函数，返回扫描仪设备同步信息。 |
+| type | 'scanDeviceSync' | Yes | Event type. |
+| callback | [Callback](arkts-basicservices-base-callback-i.md)&lt;ScannerSyncDevice&gt; | Yes | Callback used to return the synced scanner. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 201 | Permission denied. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
 
 ## Examples
 

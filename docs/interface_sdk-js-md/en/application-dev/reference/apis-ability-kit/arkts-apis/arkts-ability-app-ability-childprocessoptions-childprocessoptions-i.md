@@ -1,6 +1,7 @@
 # ChildProcessOptions
 
-子进程的启动配置选项。通过[childProcessManager](arkts-app-ability-childprocessmanager.md)启动子进程时，可以通过ChildProcessOptions配置子进程启动选项。
+The module describes the startup configuration of a child process. When starting a child process through  
+[childProcessManager](arkts-app-ability-childprocessmanager.md), you can configure the startup configuration of the child process through **ChildProcessOptions**.
 
 **Since:** 12
 
@@ -22,7 +23,7 @@ import { ChildProcessOptions } from 'kits/@kit.AbilityKit';
 isolationMode?: boolean
 ```
 
-控制子进程的沙箱隔离级别及网络访问权限。true表示子进程运行在独立沙箱环境中，且无法访问网络；false表示子进程与主进程共享沙箱和网络环境。默认为false。
+Controls the sandbox isolation level and network access permissions of the child process. **true** if the child process runs in an independent sandbox environment and cannot access the network; **false** if the child process shares the sandbox and network environment with the main process. The default value is **false**.
 
 **Type:** boolean
 
@@ -42,7 +43,7 @@ isolationMode?: boolean
 isolationUid?: boolean
 ```
 
-控制子进程是否使用独立的uid。true表示子进程运行拥有独立的uid；false表示子进程与主进程拥有相同uid。默认为false。仅在isolationMode为true时生效。
+Whether the child process uses an independent UID. **true** if the child process uses an independent UID; **false**if the child process and the main process share the same UID. The default value is **false**. This parameter is valid only when **isolationMode** is set to **true**.
 
 **Type:** boolean
 

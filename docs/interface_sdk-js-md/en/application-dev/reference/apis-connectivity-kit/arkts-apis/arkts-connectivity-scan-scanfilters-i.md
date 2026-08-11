@@ -1,6 +1,6 @@
 # ScanFilters
 
-扫描过滤器。
+Describes the scan filters.
 
 **Since:** 26.0.0
 
@@ -22,7 +22,7 @@ import { scan } from 'kits/@kit.ConnectivityKit';
 address?: string
 ```
 
-设备地址。长度必须为17，由16进制数字和冒号组成，形如 "11:22:33:AA:BB:FF"。
+Indicates the device address.The length must be 17, The value consists of hexadecimal digits and colons (:), for example, 11:22:33:AA:BB:FF.
 
 **Type:** string
 
@@ -42,7 +42,7 @@ address?: string
 deviceName?: string
 ```
 
-设备名称。
+Indicates the device name.
 
 **Type:** string
 
@@ -62,7 +62,7 @@ deviceName?: string
 manufacturerData?: ArrayBuffer
 ```
 
-制造商数据。
+Indicates the manufacturer data.
 
 **Type:** ArrayBuffer
 
@@ -82,7 +82,7 @@ manufacturerData?: ArrayBuffer
 manufacturerDataMask?: ArrayBuffer
 ```
 
-制造商数据掩码。
+Indicates the manufacturer data mask.If a manufacturer data mask is set in the scan filter, its length must match the manufacturer data length.
 
 **Type:** ArrayBuffer
 
@@ -102,7 +102,7 @@ manufacturerDataMask?: ArrayBuffer
 manufacturerId?: int
 ```
 
-厂商ID。取值范围为全体整数。
+Indicates the manufacturer ID.
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
@@ -122,7 +122,7 @@ manufacturerId?: int
 rssi?: int
 ```
 
-接收信号强度指示。单位为： 分贝毫瓦，取值应为[-128,127]内的整数。
+Indicates the RSSI.Unit: dBm, The value must be an integer within [-128,127].
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 

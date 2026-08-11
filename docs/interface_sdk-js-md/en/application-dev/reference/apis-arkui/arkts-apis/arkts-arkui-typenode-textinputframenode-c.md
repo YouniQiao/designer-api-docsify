@@ -1,6 +1,6 @@
 # TextInputFrameNode
 
-定义TextInput类型的FrameNode。
+Define the TextInput type of FrameNode.
 
 **Inheritance/Implementation:** TextInputFrameNode extends [TypedFrameNode<TextInputAttribute>](TypedFrameNode<TextInputAttribute>)
 
@@ -18,7 +18,7 @@
 abstract initialize(value?: TextInputOptions): TextInputAttribute
 ```
 
-初始化TextInput类型的FrameNode。
+Initialize TextInput FrameNode.
 
 **Since:** 23
 

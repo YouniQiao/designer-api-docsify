@@ -1,6 +1,6 @@
 # RevocationCheckParameter
 
-表示证书链校验证书吊销状态的参数。
+Represents the parameters for checking the certificate revocation status for a certificate chain.
 
 **Since:** 12
 
@@ -22,11 +22,11 @@ import { cert } from 'kits/@kit.DeviceCertificateKit';
 crlDownloadURI?: string
 ```
 
-表示用于CRL请求的备选下载地址。
+Address used to download the CRLs.
 
-> **说明：**
+> **NOTE：**
 > 
-> 当前URI只针对实体证书生效。
+> The URI takes effect only for the leaf certificate.
 
 **Type:** string
 
@@ -46,7 +46,8 @@ crlDownloadURI?: string
 ocspDigest?: string
 ```
 
-表示OCSP通信时创建证书ID使用的哈希算法。默认为SHA256，支持可配置MD5、SHA1、SHA224、SHA256、SHA384、SHA512算法。
+Hash algorithm used to create a certificate ID during OCSP communication. The options **MD5**, **SHA1**,  
+**SHA224**, **SHA256**, **SHA384**, and **SHA512** are supported. The default value is **SHA256**.
 
 **Type:** string
 
@@ -68,7 +69,7 @@ ocspDigest?: string
 ocspRequestExtension?: Array<Uint8Array>
 ```
 
-表示发送OCSP请求的扩展字段。
+OCSP request extensions.
 
 **Type:** Array&lt;Uint8Array&gt;
 
@@ -88,7 +89,7 @@ ocspRequestExtension?: Array<Uint8Array>
 ocspResponderCert?: X509Cert
 ```
 
-表示用于OCSP响应的签名校验的签名证书。
+Signing certificate used for verifying the signature of the OCSP response.
 
 **Type:** [X509Cert](../../apis-network-kit/arkts-apis/arkts-network-http-x509cert-t.md)
 
@@ -108,11 +109,11 @@ ocspResponderCert?: X509Cert
 ocspResponderURI?: string
 ```
 
-表示用于OCSP请求的备选服务器URI地址，支持HTTP/HTTPS，具体配置由与服务器协商决定。
+URI of the alternative server used to send OCSP requests. HTTP and HTTPS are supported. The specific configuration is determined via the negotiation with the server.
 
-> **说明：**
+> **NOTE：**
 > 
-> 当前URI只针对实体证书生效。
+> The URI takes effect only for the leaf certificate.
 
 **Type:** string
 
@@ -132,7 +133,7 @@ ocspResponderURI?: string
 ocspResponses?: Uint8Array
 ```
 
-表示用于OCSP服务器响应的备选数据。
+Alternative OCSP responses.
 
 **Type:** Uint8Array
 
@@ -152,7 +153,7 @@ ocspResponses?: Uint8Array
 options?: Array<RevocationCheckOptions>
 ```
 
-表示证书吊销状态查询的策略组合。
+A set of rules for obtaining the certificate revocation status.
 
 **Type:** Array&lt;RevocationCheckOptions&gt;
 

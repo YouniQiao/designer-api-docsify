@@ -9,7 +9,7 @@ export declare function LazyForEach<T = Any>(dataSource: IDataSource<T>,
 ): LazyForEachAttribute
 ```
 
-输入值以获取带有选项的LazyForEach。
+Enter the value to obtain the LazyForEach.
 
 **Since:** 23
 
@@ -25,15 +25,15 @@ export declare function LazyForEach<T = Any>(dataSource: IDataSource<T>,
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| dataSource | [IDataSource](arkts-arkui-lazyforeach-idatasource-i.md)&lt;T&gt; | Yes | 要在UI中使用的数组集合。 |
-| itemGenerator | [ItemGeneratorFunc](arkts-arkui-itemgeneratorfunc-t.md)&lt;T&gt; | Yes | item生成器函数。 |
-| keyGenerator | [KeyGeneratorFunc](arkts-arkui-keygeneratorfunc-t.md)&lt;T&gt; | No | 密钥生成器函数。 |
+| dataSource | [IDataSource](arkts-arkui-lazyforeach-idatasource-i.md)&lt;T&gt; | Yes | the array collection to be used in UI. |
+| itemGenerator | [ItemGeneratorFunc](arkts-arkui-itemgeneratorfunc-t.md)&lt;T&gt; | Yes | item generator function. |
+| keyGenerator | [KeyGeneratorFunc](arkts-arkui-keygeneratorfunc-t.md)&lt;T&gt; | No | key generator function |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [LazyForEachAttribute](../arkts-components/arkts-arkui-lazyforeach-attribute.md) | LazyForEach组件。 |
+| [LazyForEachAttribute](../arkts-components/arkts-arkui-lazyforeach-attribute.md) | LazyForEach attribute |
 
 
 ## LazyForEach
@@ -46,7 +46,7 @@ export declare function LazyForEach<T = Any>(dataSource: IDataSource<T>,
 ): LazyForEachAttribute
 ```
 
-输入值以获取带有选项的LazyForEach。
+Enter the value to obtain the LazyForEach.
 
 **Since:** 26.0.0
 
@@ -62,16 +62,16 @@ export declare function LazyForEach<T = Any>(dataSource: IDataSource<T>,
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| dataSource | [IDataSource](arkts-arkui-lazyforeach-idatasource-i.md)&lt;T&gt; | Yes | 要在UI中使用的数组集合。 |
-| itemGenerator | [ItemGeneratorFunc](arkts-arkui-itemgeneratorfunc-t.md)&lt;T&gt; | Yes | item生成器函数。 |
-| keyGenerator | [KeyGeneratorFunc](arkts-arkui-keygeneratorfunc-t.md)&lt;T&gt; | No | 密钥生成器函数。 |
-| options | [LazyForEachOptions](arkts-arkui-lazyforeach-lazyforeachoptions-i.md) | No | LazyForEach可选参数选项。 |
+| dataSource | [IDataSource](arkts-arkui-lazyforeach-idatasource-i.md)&lt;T&gt; | Yes | the array collection to be used in UI. |
+| itemGenerator | [ItemGeneratorFunc](arkts-arkui-itemgeneratorfunc-t.md)&lt;T&gt; | Yes | item generator function. |
+| keyGenerator | [KeyGeneratorFunc](arkts-arkui-keygeneratorfunc-t.md)&lt;T&gt; | No | key generator function. |
+| options | [LazyForEachOptions](arkts-arkui-lazyforeach-lazyforeachoptions-i.md) | No | options for LazyForEach behavior. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [LazyForEachAttribute](../arkts-components/arkts-arkui-lazyforeach-attribute.md) | LazyForEach组件 |
+| [LazyForEachAttribute](../arkts-components/arkts-arkui-lazyforeach-attribute.md) | LazyForEach attribute |
 
 
 ## LazyForEach
@@ -82,11 +82,11 @@ export declare function LazyForEach<T = Any>(
 ): LazyForEachAttribute
 ```
 
-定义LazyForEach组件。它需要在组件属性设置开始时调用setLazyForEachOptions。并且它需要在组件属性设置结束时调用applyAttributeFinish。
+Defines LazyForEach Component. It requires calling setLazyForEachOptions at start of component attribute set-up,and it requires calling applyAttributesFinish at end of component attribute set-up.
 
-**Since:** 26.0.0
+**Since:** 26.1.0
 
-**ArkTS mode:** ArkTS-Sta only, since version 26.0.0.
+**ArkTS mode:** ArkTS-Sta only, since version 26.1.0.
 
 **Decorator:** @Builder
 
@@ -100,11 +100,11 @@ export declare function LazyForEach<T = Any>(
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| style | [CustomBuilderT](../arkts-components/arkts-arkui-custombuildert-t.md)&lt;LazyForEachAttribute&gt; | Yes | 回调来设置LazyForEach的属性 |
+| style | [CustomBuilderT](../arkts-components/arkts-arkui-custombuildert-t.md)&lt;LazyForEachAttribute&gt; | Yes | callback to set up LazyForEach's attributes. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [LazyForEachAttribute](../arkts-components/arkts-arkui-lazyforeach-attribute.md) | LazyForEach的属性。 |
+| [LazyForEachAttribute](../arkts-components/arkts-arkui-lazyforeach-attribute.md) | The attribute of LazyForEach. |
 

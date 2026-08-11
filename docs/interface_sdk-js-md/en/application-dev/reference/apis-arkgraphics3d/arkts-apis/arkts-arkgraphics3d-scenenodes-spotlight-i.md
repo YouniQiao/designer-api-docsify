@@ -1,6 +1,14 @@
 # SpotLight
 
-定义聚光灯.
+Spotlight, which inherits from [Light](arkts-arkgraphics3d-scenenodes-light-i.md).
+
+A spotlight emits a conical beam of light in a specific direction,with the intensity of the light decaying according to the angles defined by the innerAngle and outerAngle parameters.Like a point light, a spotlight's intensity also diminishes with distance from the source.
+
+> **NOTE：**
+> 
+> Ensure that the innerAngle and outerAngle values are proper.
+> If the value set for outerAngle is greater than PI/2, it is forcibly set to PI/2 internally.
+> If the value set for outerAngle is less than innerAngle, it is forcibly set to innerAngle internally.
 
 **Inheritance/Implementation:** SpotLight extends [Light](arkts-arkgraphics3d-scenenodes-light-i.md)
 
@@ -18,7 +26,7 @@
 innerAngle?: double
 ```
 
-聚光灯的内角, 单位为弧度.
+The inner angle of the spot light, the unit is radian.
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：double
 
@@ -38,11 +46,11 @@ innerAngle?: double
 outerAngle?: double
 ```
 
-聚光灯的外角, 单位为弧度.
+The outer angle of the spot light, the unit is radian.
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：double
 
-**Default:** PI / 4.0 π/4 弧度
+**Default:** PI / 4.0
 
 **Since:** 23
 

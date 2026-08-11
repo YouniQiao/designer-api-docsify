@@ -1,6 +1,6 @@
 # ImageStream
 
-图像流资源.
+ImageStream resource.
 
 **Inheritance/Implementation:** ImageStream extends [Image](arkts-arkgraphics3d-sceneresources-image-i.md)
 
@@ -18,7 +18,7 @@
 readonly surfaceId: string
 ```
 
-图像流的surfaceId.
+The surfaceId of the imageStream.
 
 **Type:** string
 

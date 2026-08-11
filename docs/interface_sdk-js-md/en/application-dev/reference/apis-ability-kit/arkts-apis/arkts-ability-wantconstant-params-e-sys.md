@@ -1,6 +1,6 @@
 # Params
 
-want的Params操作的常量。
+Defines **Params** (specifying the action that can be performed) in the Want.
 
 **Since:** 9
 
@@ -16,7 +16,7 @@ want的Params操作的常量。
 DLP_PARAMS_SANDBOX = 'ohos.dlp.params.sandbox'
 ```
 
-指示沙盒标志的参数的操作。
+Action of obtaining the sandbox flag.
 
 **Since:** 9
 
@@ -34,7 +34,7 @@ DLP_PARAMS_SANDBOX = 'ohos.dlp.params.sandbox'
 DLP_PARAMS_BUNDLE_NAME = 'ohos.dlp.params.bundleName'
 ```
 
-指示DLP Bundle名称的参数的操作。
+Action of obtaining the DLP bundle name.
 
 **Since:** 9
 
@@ -52,7 +52,7 @@ DLP_PARAMS_BUNDLE_NAME = 'ohos.dlp.params.bundleName'
 DLP_PARAMS_MODULE_NAME = 'ohos.dlp.params.moduleName'
 ```
 
-指示DLP模块名称的参数的操作。
+Action of obtaining the DLP module name.
 
 **Since:** 9
 
@@ -70,7 +70,7 @@ DLP_PARAMS_MODULE_NAME = 'ohos.dlp.params.moduleName'
 DLP_PARAMS_ABILITY_NAME = 'ohos.dlp.params.abilityName'
 ```
 
-指示DLP能力名称的参数的操作。
+Action of obtaining the DLP ability name.
 
 **Since:** 9
 
@@ -88,7 +88,7 @@ DLP_PARAMS_ABILITY_NAME = 'ohos.dlp.params.abilityName'
 DLP_PARAMS_INDEX = 'ohos.dlp.params.index'
 ```
 
-指示DLP索引参数的操作。
+Action of obtaining the DLP index.
 
 **Since:** 9
 
@@ -106,7 +106,7 @@ DLP_PARAMS_INDEX = 'ohos.dlp.params.index'
 HIDE_SENSITIVE_TYPE = 'ohos.media.params.hideSensitiveType'
 ```
 
-指示隐藏敏感信息的类型。
+Indicates the type of hide sensitive information.
 
 **Since:** 15
 
@@ -124,7 +124,7 @@ HIDE_SENSITIVE_TYPE = 'ohos.media.params.hideSensitiveType'
 ASSERT_FAULT_SESSION_ID = 'ohos.ability.params.asssertFaultSessionId'
 ```
 
-指示AssertFault的会话ID。
+Session ID of the AssertFault.
 
 **Since:** 12
 
@@ -144,7 +144,7 @@ ASSERT_FAULT_SESSION_ID = 'ohos.ability.params.asssertFaultSessionId'
 UI_EXTENSION_ROOT_TOKEN = 'ohos.param.uiExtension.rootHostToken'
 ```
 
-指示UIExtensionAbility的原始宿主Token。
+Indicates the UIExtension root host token when connecting to a service extension ability.
 
 **Since:** 26.0.0
 

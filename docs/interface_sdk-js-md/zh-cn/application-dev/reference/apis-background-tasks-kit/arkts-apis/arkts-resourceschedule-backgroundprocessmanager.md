@@ -11,12 +11,6 @@
 
 **系统能力：** SystemCapability.Resourceschedule.BackgroundProcessManager
 
-## 导入模块
-
-```TypeScript
-import { backgroundProcessManager } from 'kits/@kit.BackgroundTasksKit';
-```
-
 ## 汇总
 
 ### 函数

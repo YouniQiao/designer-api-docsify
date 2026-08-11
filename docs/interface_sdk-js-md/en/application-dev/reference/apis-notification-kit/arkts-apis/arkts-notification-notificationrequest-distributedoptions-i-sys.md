@@ -1,6 +1,6 @@
 # DistributedOptions
 
-描述跨设备协同选项。预留能力，暂未支持。
+Describes options for cross-device notifications. Not supported currently.
 
 **Since:** 8
 
@@ -16,7 +16,7 @@
 readonly remindType?: int
 ```
 
-通知的提醒方式。
+Notification reminder type.
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 

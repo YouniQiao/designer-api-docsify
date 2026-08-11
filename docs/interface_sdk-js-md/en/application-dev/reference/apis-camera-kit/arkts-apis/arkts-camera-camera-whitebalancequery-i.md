@@ -1,6 +1,6 @@
 # WhiteBalanceQuery
 
-提供了查询设备对指定的白平衡模式是否支持，以及获取设备支持的白平衡模式范围的方法。
+WhiteBalanceQuery provides APIs to check whether a white balance mode is supported and obtain the white balance mode range supported.
 
 **Since:** 20
 
@@ -28,7 +28,7 @@ ArkTS-Sta:
 getColorTintRange(): Array<int>
 ```
 
-获取支持配置的白平衡色调调节范围。
+Obtains the supported white balance hue adjustment range.
 
 **Since:** 26.0.0
 
@@ -46,13 +46,13 @@ getColorTintRange(): Array<int>
 
 | Type | Description |
 | --- | --- |
-| ArkTS-Dyn: Array&lt;number&gt;  <br>ArkTS-Sta：Array&lt;int&gt; | 用于获取色调调节值的可调范围。若接口调用失败，返回undefined。 |
+| ArkTS-Dyn: Array&lt;number&gt;  <br>ArkTS-Sta：Array&lt;int&gt; | Hue adjustment range. If the API call fails, **undefined** is returned. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 7400103 | Session not config, only throw in session usage. |
+| [7400103](../errorcode-camera.md#7400103-session-not-configured) | Session not config, only throw in session usage. |
 
 ## getWhiteBalanceRange
 
@@ -66,7 +66,7 @@ ArkTS-Sta:
 getWhiteBalanceRange(): Array<int>
 ```
 
-获取手动白平衡模式下，白平衡值的范围。
+Obtains the range of white balance values in manual white balance mode.
 
 **Since:** 20
 
@@ -82,14 +82,14 @@ getWhiteBalanceRange(): Array<int>
 
 | Type | Description |
 | --- | --- |
-| ArkTS-Dyn: Array&lt;number&gt;  <br>ArkTS-Sta：Array&lt;int&gt; | 用于获取手动白平衡值的可调范围，如[2800，10000]，单位为K（Kelvin，温度单位），实际情况根据底层能力返回为准。若接口调用失败，返回undefined。 |
+| ArkTS-Dyn: Array&lt;number&gt;  <br>ArkTS-Sta：Array&lt;int&gt; | Range of white balance values, for example, [2800, ...,10000], in units of K (Kelvin). The actual value depends on the bottom-layer capability. If the API call fails, undefined is returned. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 7400103 | Session not config, only throw in session usage. |
-| 202 | Not System Application.<br>**Applicable version:** 12 - 19 |
+| [7400103](../errorcode-camera.md#7400103-session-not-configured) | Session not config, only throw in session usage. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not System Application.<br>**Applicable version:** 12 - 19 |
 
 ## isWhiteBalanceGainsSupported
 
@@ -119,8 +119,8 @@ Checks whether the RGB gain is supported.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 7400103 | Session not config. |
-| 202 | Not System Application. |
+| [7400103](../errorcode-camera.md#7400103-session-not-configured) | Session not config. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not System Application. |
 
 ## isWhiteBalanceModeSupported
 
@@ -128,7 +128,7 @@ Checks whether the RGB gain is supported.
 isWhiteBalanceModeSupported(mode: WhiteBalanceMode): boolean
 ```
 
-检测是否支持当前传入的白平衡模式。
+Checks whether a white balance mode is supported.
 
 **Since:** 20
 
@@ -144,19 +144,19 @@ isWhiteBalanceModeSupported(mode: WhiteBalanceMode): boolean
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| mode | [WhiteBalanceMode](arkts-camera-camera-whitebalancemode-e.md) | Yes | 白平衡模式。 |
+| mode | [WhiteBalanceMode](arkts-camera-camera-whitebalancemode-e.md) | Yes | White balance mode. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| boolean | 表示是否支持白平衡模式。true表示支持，false表示不支持。若接口调用失败，返回undefined。 |
+| boolean | Check result for the support of the white balance mode. **true** if supported, **false** otherwise. If the API call fails, undefined is returned. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 7400101 | Parameter missing or parameter type incorrect. |
-| 7400103 | Session not config, only throw in session usage. |
-| 202 | Not System Application.<br>**Applicable version:** 12 - 19 |
+| [7400101](../errorcode-camera.md#7400101-invalid-parameter) | Parameter missing or parameter type incorrect. |
+| [7400103](../errorcode-camera.md#7400103-session-not-configured) | Session not config, only throw in session usage. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not System Application.<br>**Applicable version:** 12 - 19 |
 

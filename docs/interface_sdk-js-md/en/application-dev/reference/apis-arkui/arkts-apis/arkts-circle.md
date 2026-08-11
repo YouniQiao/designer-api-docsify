@@ -6,6 +6,6 @@
 
 | Name | Description |
 | --- | --- |
-| [CircleAttribute](arkts-arkui-circle-circleattribute-i.md) | 圆形绘制组件属性。 |
-| [CircleOptions](arkts-arkui-circle-circleoptions-i.md) | 用于描述Circle组件绘制属性。 |
+| [CircleAttribute](arkts-arkui-circle-circleattribute-i.md) | Circle drawing component attribute functions. |
+| [CircleOptions](arkts-arkui-circle-circleoptions-i.md) | Defines circle options for Circle component. |
 

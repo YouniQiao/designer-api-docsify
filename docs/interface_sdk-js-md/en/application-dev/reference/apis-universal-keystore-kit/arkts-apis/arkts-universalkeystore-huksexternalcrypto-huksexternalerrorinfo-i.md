@@ -1,6 +1,6 @@
 # HuksExternalErrorInfo
 
-详细错误信息
+Defines detailed error information.
 
 **Since:** 26.0.0
 
@@ -22,7 +22,7 @@ import { huksExternalCrypto } from 'kits/@kit.UniversalKeystoreKit';
 errno: number
 ```
 
-详细错误码
+The detailed error code.
 
 **Type:** number
 
@@ -42,7 +42,7 @@ errno: number
 errorDesc: string
 ```
 
-错误描述
+The detailed error description.
 
 **Type:** string
 

@@ -41,7 +41,7 @@ Take a screenshot of the specified component in synchronous mode,this mode will 
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 100001 | Invalid ID. |
-| 160002 | Timeout. |
-| 160003 | Unsupported color space or dynamic range mode in snapshot options. |
+| [100001](../errorcode-internal.md#100001-internal-error) | Invalid ID. |
+| [160002](../errorcode-snapshot.md#160002-snapshot-timeout) | Timeout. |
+| [160003](../errorcode-snapshot.md#160003-provided-color-space-or-dynamic-range-mode-is-not-supported) | Unsupported color space or dynamic range mode in snapshot options. |
 

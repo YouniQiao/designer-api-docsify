@@ -12,13 +12,13 @@ import { BundleStatusCallback } from 'kits/@kit.AbilityKit';
 function getAllLauncherAbilityInfos(userId: number, callback: AsyncCallback<Array<LauncherAbilityInfo>>): void
 ```
 
-获取所有的LauncherAbilityInfos，使用callback异步回调。
+Obtains the information about all launcher abilities. This API uses an asynchronous callback to return the result.
 
-> **说明：**
+> **NOTE：**
 > 
-> 从API version 8开始支持，从API version 9开始废弃，建议使用
+> This API has been supported since API version 8 and deprecated since API version 9. You are advised to use
 > [getAllLauncherAbilityInfo](arkts-ability-launcherbundlemanager-getalllauncherabilityinfo-f-sys.md#getalllauncherabilityinfo)
-> 替代。
+> instead.
 
 **Since:** 8
 
@@ -40,8 +40,8 @@ function getAllLauncherAbilityInfos(userId: number, callback: AsyncCallback<Arra
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| userId | number | Yes | 用户ID。取值范围：大于等于0。 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;[LauncherAbilityInfo](arkts-ability-launcherabilityinfo-launcherabilityinfo-depr-i-sys.md)&gt;&gt; | Yes | 程序启动作为入参的回调函数，返回程序信息。 |
+| userId | number | Yes | User ID. The value must be greater than or equal to 0. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;[LauncherAbilityInfo](arkts-ability-launcherabilityinfo-launcherabilityinfo-depr-i-sys.md)&gt;&gt; | Yes | Callback used to return an array of the launcher ability information. |
 
 
 ## getAllLauncherAbilityInfos
@@ -50,13 +50,13 @@ function getAllLauncherAbilityInfos(userId: number, callback: AsyncCallback<Arra
 function getAllLauncherAbilityInfos(userId: number): Promise<Array<LauncherAbilityInfo>>
 ```
 
-获取LauncherAbilityInfos，使用Promise异步回调。
+Obtains the information about all launcher abilities. This API uses a promise to return the result.
 
-> **说明：**
+> **NOTE：**
 > 
-> 从API version 8开始支持，从API version 9开始废弃，建议使用
+> This API has been supported since API version 8 and deprecated since API version 9. You are advised to use
 > [getAllLauncherAbilityInfo](arkts-ability-launcherbundlemanager-getalllauncherabilityinfo-f-sys.md#getalllauncherabilityinfo)
-> 替代。
+> instead.
 
 **Since:** 8
 
@@ -78,11 +78,11 @@ function getAllLauncherAbilityInfos(userId: number): Promise<Array<LauncherAbili
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| userId | number | Yes | 用户ID。取值范围：大于等于0。 |
+| userId | number | Yes | User ID. The value must be greater than or equal to 0. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;Array&lt;[LauncherAbilityInfo](arkts-ability-launcherabilityinfo-launcherabilityinfo-depr-i-sys.md)&gt;&gt; | Promise形式返回程序信息。 |
+| Promise&lt;Array&lt;[LauncherAbilityInfo](arkts-ability-launcherabilityinfo-launcherabilityinfo-depr-i-sys.md)&gt;&gt; | Promise used to return an array of the launcher ability information. |
 

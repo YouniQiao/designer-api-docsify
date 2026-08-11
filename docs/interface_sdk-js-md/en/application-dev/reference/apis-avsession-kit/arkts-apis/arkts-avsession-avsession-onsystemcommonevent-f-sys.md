@@ -12,7 +12,7 @@ import { avSession } from 'kits/@kit.AVSessionKit';
 function onSystemCommonEvent(callback: EventProcess): void
 ```
 
-监听系统通用事件命令回调
+Register system common event callback
 
 **Since:** 24
 
@@ -30,12 +30,12 @@ function onSystemCommonEvent(callback: EventProcess): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [EventProcess](arkts-avsession-avsession-eventprocess-t.md) | Yes | 监听通用事件命令回调 |
+| callback | [EventProcess](arkts-avsession-avsession-eventprocess-t.md) | Yes | Used to handle event when the common command is received |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 6600101 | Session service exception. |
-| 202 | Not System App. |
+| [6600101](../errorcode-avsession.md#6600101-session-service-exception) | Session service exception. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not System App. |
 

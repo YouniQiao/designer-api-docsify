@@ -1,6 +1,6 @@
 # AuthResult
 
-表示认证结果信息。
+Defines the authentication result.
 
 **Since:** 9
 
@@ -22,7 +22,7 @@ import { appAccount } from 'kits/@kit.BasicServicesKit';
 account?: AppAccountInfo
 ```
 
-令牌所属的账号信息，默认为空。
+Information about the account to which the token belongs. By default, no value is passed in.
 
 **Type:** [AppAccountInfo](arkts-basicservices-appaccount-appaccountinfo-i.md)
 
@@ -40,7 +40,7 @@ account?: AppAccountInfo
 tokenInfo?: AuthTokenInfo
 ```
 
-令牌信息，默认为空。
+Token information. By default, no value is passed in.
 
 **Type:** [AuthTokenInfo](arkts-basicservices-appaccount-authtokeninfo-i.md)
 

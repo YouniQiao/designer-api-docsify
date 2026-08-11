@@ -1,6 +1,6 @@
 # ResourceImageAttachmentOptions
 
-ResourceStr类型图片设置项。
+Defines the ResourceImageAttachmentOptions.
 
 **Since:** 23
 
@@ -16,7 +16,7 @@ ResourceStr类型图片设置项。
 colorFilter?: ColorFilterType
 ```
 
-设置属性字符串的图片颜色滤镜效果。
+Sets the color filter effect on the image attachment.
 
 **Type:** [ColorFilterType](arkts-arkui-colorfiltertype-t.md)
 
@@ -36,7 +36,7 @@ colorFilter?: ColorFilterType
 layoutStyle?: ImageAttachmentLayoutStyle
 ```
 
-设置图片布局。
+The Image Layout Style of the Resource Image.
 
 **Type:** [ImageAttachmentLayoutStyle](arkts-arkui-imageattachmentlayoutstyle-i.md)
 
@@ -56,9 +56,7 @@ layoutStyle?: ImageAttachmentLayoutStyle
 objectFit?: ImageFit
 ```
 
-设置图片的缩放类型，当前枚举类型不支持ImageFit.MATRIX。
-
-默认值：ImageFit.Cover
+Sets the zoom type of the ImageAttachment.
 
 **Type:** [ImageFit](arkts-arkui-imagefit-e.md)
 
@@ -78,9 +76,7 @@ objectFit?: ImageFit
 resourceValue: ResourceStr | undefined
 ```
 
-设置图片数据源。
-
-取值为undefined时，按空处理。
+The content of the ResourceImageAttachment.
 
 **Type:** [ResourceStr](arkts-arkui-resourcestr-t.md) \| undefined
 
@@ -100,7 +96,7 @@ resourceValue: ResourceStr | undefined
 size?: SizeOptions
 ```
 
-设置图片大小。
+size of the ResourceImage.
 
 **Type:** [SizeOptions](arkts-arkui-sizeoptions-i.md)
 
@@ -120,11 +116,7 @@ size?: SizeOptions
 supportSvg2?: boolean
 ```
 
-控制是否开启[SVG标签解析能力增强功能](../../../reference/apis-arkui/arkui-ts/ts-image-svg2-capabilities.md)。
-
-true：支持SVG解析新能力；false：保持原有SVG解析能力。
-
-默认值：false
+Set the range of SVG parsing capabilities supported through enable switch.The default value is false.
 
 **Type:** boolean
 
@@ -144,11 +136,7 @@ true：支持SVG解析新能力；false：保持原有SVG解析能力。
 syncLoad?: boolean
 ```
 
-是否同步加载图片，默认是异步加载。同步加载时阻塞UI线程，不会显示占位图。
-
-true：同步加载；false：异步加载。
-
-默认值：false
+Sets the synchronous or asynchronous mode for image loading.The default parameter type is bool, and the default value is false.
 
 **Type:** boolean
 
@@ -168,9 +156,7 @@ true：同步加载；false：异步加载。
 verticalAlign?: ImageSpanAlignment
 ```
 
-设置图片基于文本的对齐方式。
-
-默认值：ImageSpanAlignment.BOTTOM
+Image vertical align.
 
 **Type:** [ImageSpanAlignment](arkts-arkui-imagespanalignment-e.md)
 

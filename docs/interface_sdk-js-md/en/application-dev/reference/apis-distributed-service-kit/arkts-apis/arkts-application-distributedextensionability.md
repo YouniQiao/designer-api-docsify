@@ -12,5 +12,5 @@ import { DistributedExtensionAbility } from 'kits/@kit.DistributedServiceKit';
 
 | Name | Description |
 | --- | --- |
-| [DistributedExtensionAbility](arkts-distributedservice-application-distributedextensionability-distributedextensionability-c.md) | DistributedExtensionAbility模块提供分布式相关扩展能力，提供分布式创建、销毁、连接的生命周期回调。 |
+| [DistributedExtensionAbility](arkts-distributedservice-application-distributedextensionability-distributedextensionability-c.md) | The **DistributedExtensionAbility** module provides distributed extension capabilities and lifecycle callbacks for distributed ability creation, destruction, and connection. |
 

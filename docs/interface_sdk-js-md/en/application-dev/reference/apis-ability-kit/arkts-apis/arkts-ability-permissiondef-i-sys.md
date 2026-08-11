@@ -1,11 +1,12 @@
 # PermissionDef (System API)
 
-[module.json5配置文件](../../../quick-start/module-configuration-file.md)中定义的权限详细信息，通过接口  
-[bundleManager.getPermissionDef](arkts-ability-bundlemanager-getpermissiondef-f-sys.md#getpermissiondef)获取。
+The module provides permission details defined in the  
+[module.json5](../../../quick-start/module-configuration-file.md) file. The information can be obtained using  
+[bundleManager.getPermissionDef](arkts-ability-bundlemanager-getpermissiondef-f-sys.md#getpermissiondef).
 
-> **说明：**
+> **NOTE：**
 > 
-> 本模块为系统接口。
+> The APIs provided by this module are system APIs.
 
 **Since:** 9
 
@@ -23,7 +24,7 @@
 readonly descriptionId: long
 ```
 
-描述权限的ID。
+ID of the permission description.
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：long
 
@@ -43,7 +44,7 @@ readonly descriptionId: long
 readonly grantMode: int
 ```
 
-[权限的授予方式](../../../security/AccessToken/app-permission-mgmt-overview.md#授权方式)。0：表示用户授权，1：表示系统授权。
+[Grant mode of the permission](../../../security/AccessToken/app-permission-mgmt-overview.md#authorization-mode).The value **0** means user authorization, and **1** means system authorization.
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
@@ -63,7 +64,7 @@ readonly grantMode: int
 readonly labelId: long
 ```
 
-权限的标签ID。
+ID of the permission label.
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：long
 
@@ -83,7 +84,7 @@ readonly labelId: long
 readonly permissionName: string
 ```
 
-用户权限名称。
+Name of the permission.
 
 **Type:** string
 

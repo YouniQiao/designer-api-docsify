@@ -1,6 +1,6 @@
 # PrintJob
 
-定义打印任务的接口。
+Defines a print job.
 
 **Since:** 24
 
@@ -22,7 +22,7 @@ import { print } from 'kits/@kit.BasicServicesKit';
 colorMode: int
 ```
 
-表示色彩模式。
+Color mode.
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
@@ -40,7 +40,7 @@ colorMode: int
 copyNumber: int
 ```
 
-表示文件列表副本。
+Copy of the file list.
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
@@ -58,7 +58,7 @@ copyNumber: int
 duplexMode: int
 ```
 
-表示单双面打印模式。
+Simplex or duplex mode.
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
@@ -76,7 +76,7 @@ duplexMode: int
 fdList: Array<int>
 ```
 
-表示待打印文件fd列表。
+FD list of files to print.
 
 **Type:** ArkTS-Dyn: Array&lt;number&gt;  <br>ArkTS-Sta：Array&lt;int&gt;
 
@@ -94,7 +94,7 @@ fdList: Array<int>
 isLandscape: boolean
 ```
 
-表示是否横向打印。true表示横向打印，false表示纵向打印。默认值为false。
+Whether pages are printed in landscape mode. The value **true** indicates that pages are printed in landscape mode, and **false** indicates that pages are printed in portrait mode. The default value is **false**.
 
 **Type:** boolean
 
@@ -112,7 +112,7 @@ isLandscape: boolean
 isSequential: boolean
 ```
 
-表示是否连续打印。true表示连续打印，false表示不连续打印。默认值为false。
+Whether the printing is sequential. The value **true** means that the printing is sequential, and **false** means the opposite. The default value is **false**.
 
 **Type:** boolean
 
@@ -130,7 +130,7 @@ isSequential: boolean
 jobId: string
 ```
 
-表示打印任务ID。
+ID of the print job.
 
 **Type:** string
 
@@ -148,7 +148,7 @@ jobId: string
 jobState: PrintJobState
 ```
 
-表示当前打印任务状态。
+State of the print job.
 
 **Type:** [PrintJobState](arkts-basicservices-print-printjobstate-e.md)
 
@@ -166,7 +166,7 @@ jobState: PrintJobState
 jobSubstate: PrintJobSubState
 ```
 
-表示当前打印任务子状态。
+Substate of the print job.
 
 **Type:** [PrintJobSubState](arkts-basicservices-print-printjobsubstate-e.md)
 
@@ -184,7 +184,7 @@ jobSubstate: PrintJobSubState
 margin?: PrintMargin
 ```
 
-表示当前页边距设置。
+Current page margin.
 
 **Type:** [PrintMargin](arkts-basicservices-print-printmargin-i.md)
 
@@ -202,7 +202,7 @@ margin?: PrintMargin
 options?: Object
 ```
 
-表示JSON对象字符串。
+Printer options. The value is a JSON object string.
 
 **Type:** Object
 
@@ -220,7 +220,7 @@ options?: Object
 pageRange: PrinterRange
 ```
 
-表示打印范围大小。
+Print range.
 
 **Type:** [PrinterRange](arkts-basicservices-print-printerrange-i.md)
 
@@ -238,7 +238,7 @@ pageRange: PrinterRange
 pageSize: PrintPageSize
 ```
 
-表示选定的页面尺寸。
+Selected page size.
 
 **Type:** [PrintPageSize](arkts-basicservices-print-printpagesize-i.md)
 
@@ -256,7 +256,7 @@ pageSize: PrintPageSize
 preview?: PreviewAttribute
 ```
 
-表示预览设置。
+Preview settings.
 
 **Type:** [PreviewAttribute](arkts-basicservices-print-previewattribute-i.md)
 
@@ -274,7 +274,7 @@ preview?: PreviewAttribute
 printerId: string
 ```
 
-表示负责打印的打印机ID。
+ID of the printer used for printing.
 
 **Type:** string
 
@@ -283,6 +283,26 @@ printerId: string
 **ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
 
 <!--Device-PrintJob-printerId: string--><!--Device-PrintJob-printerId: string-End-->
+
+**System capability:** SystemCapability.Print.PrintFramework
+
+## vendorOptions
+
+```TypeScript
+vendorOptions?: string
+```
+
+Vendor-specific job options in JSON format.
+
+**Type:** string
+
+**Since:** 26.0.0
+
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
+
+**Model restriction:** This API can be used only in the stage model.
+
+<!--Device-PrintJob-vendorOptions?: string--><!--Device-PrintJob-vendorOptions?: string-End-->
 
 **System capability:** SystemCapability.Print.PrintFramework
 

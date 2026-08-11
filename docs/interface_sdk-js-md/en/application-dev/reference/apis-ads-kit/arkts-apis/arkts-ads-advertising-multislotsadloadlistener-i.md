@@ -1,6 +1,6 @@
 # MultiSlotsAdLoadListener
 
-多广告位广告请求回调。
+Enumerates the callbacks used for the request for loading multiple ads.
 
 **Since:** 11
 
@@ -22,7 +22,7 @@ import { advertising } from 'kits/@kit.AdsKit';
 onAdLoadFailure(errorCode: number, errorMsg: string): void
 ```
 
-广告请求失败回调。
+Called when an ad request fails.
 
 **Since:** 11
 
@@ -38,8 +38,8 @@ onAdLoadFailure(errorCode: number, errorMsg: string): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| errorCode | number | Yes | 广告请求失败的错误码。 |
-| errorMsg | string | Yes | 广告请求失败的错误信息。 |
+| errorCode | number | Yes | Error code for the ad request failure. |
+| errorMsg | string | Yes | Error message for the ad request failure. |
 
 ## Examples
 
@@ -63,7 +63,7 @@ const multiSlotsAdLoadListener: advertising.MultiSlotsAdLoadListener = {
 onAdLoadSuccess(adsMap: Map<string, Array<Advertisement>>): void
 ```
 
-多广告位广告请求成功后回调。
+Called when a request for loading multiple ads is successful.
 
 **Since:** 11
 
@@ -79,7 +79,7 @@ onAdLoadSuccess(adsMap: Map<string, Array<Advertisement>>): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| adsMap | Map&lt;string, Array&lt;Advertisement&gt;&gt; | Yes | 广告数据，是以广告位ID为键，存储请求到的广告内容的映射集合。 |
+| adsMap | Map&lt;string, Array&lt;Advertisement&gt;&gt; | Yes | Ad data, which is a mapping set that uses ad slot IDs as keys to store the requested ad content. |
 
 ## Examples
 

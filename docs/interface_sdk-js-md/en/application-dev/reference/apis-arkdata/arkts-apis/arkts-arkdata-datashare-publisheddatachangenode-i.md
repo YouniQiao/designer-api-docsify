@@ -1,6 +1,6 @@
 # PublishedDataChangeNode
 
-订阅/取消订阅已发布数据变更的结果。
+Defines the subscription/unsubscription result of the changes in the published data.
 
 **Since:** 10
 
@@ -22,7 +22,7 @@ import { dataShare } from 'kits/@kit.ArkData';
 bundleName: string
 ```
 
-指定回调的bundleName。
+Bundle name of the callback.
 
 **Type:** string
 
@@ -42,7 +42,7 @@ bundleName: string
 data: Array<PublishedItem>
 ```
 
-指定回调的数据。
+Data of the callback.
 
 **Type:** Array&lt;PublishedItem&gt;
 

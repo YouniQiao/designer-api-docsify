@@ -12,7 +12,7 @@ import { proxyChannelManager } from 'kits/@kit.DistributedServiceKit';
 function off(type: 'receiveData', channelId: number, callback?: Callback<DataInfo>): void
 ```
 
-取消订阅数据接收事件，停止接收数据。
+Unsubscribes from data receiving events.
 
 **Since:** 20
 
@@ -30,19 +30,19 @@ function off(type: 'receiveData', channelId: number, callback?: Callback<DataInf
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'receiveData' | Yes | 设置订阅类型，固定取值为'receiveData'。 |
-| channelId | number | Yes | 打开代理通道时获取的channelId。 |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;DataInfo&gt; | No | 注册的回调函数。如果为空、undefined、null，则取消订阅所有的数据接收事件。 如果不为空，传入最后一次注册的回调函数。 |
+| type | 'receiveData' | Yes | Event type. The value **receiveData** indicates the data receiving event. |
+| channelId | number | Yes | Channel ID obtained when the proxy channel is opened. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;DataInfo&gt; | No | Registered callback, If the value is empty, **undefined**, or **null**, all callbacks of data receiving events are unregistered. If the value is not empty, the last registered callback is used. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 32390006 | Parameter error. |
-| 201 | Permission denied. |
-| 32390004 | ChannelId is invalid or unavailable. |
-| 32390100 | Internal error. |
-| 32390101 | Call is restricted. |
+| [32390006](../../apis-distributedservice-kit/errorcode-proxyChannelManager.md#32390006-parameter-verification-error) | Parameter error. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
+| [32390004](../../apis-distributedservice-kit/errorcode-proxyChannelManager.md#32390004-invalid-or-unavailable-channel-id) | ChannelId is invalid or unavailable. |
+| [32390100](../../apis-distributedservice-kit/errorcode-proxyChannelManager.md#32390100-internal-error) | Internal error. |
+| [32390101](../../apis-distributedservice-kit/errorcode-proxyChannelManager.md#32390101-call-restricted) | Call is restricted. |
 
 ## Examples
 
@@ -55,13 +55,13 @@ import { BusinessError } from '@kit.BasicServicesKit';
 struct Index {
   build() {
     RelativeContainer() {
-      Button('Test')
+      Button ('Test')
         .onClick(() => {
           try {
-            proxyChannelManager.off('receiveData', channelId); // Obtain channelId from the Promise return value of the openProxyChannel API.
+            proxyChannelManager.off('receiveData', 1); // Assume that the channel ID is 1.
           } catch (err) {
             let error = err as BusinessError;
-            console.error(`Failed to unregister receiveData callback. Code: ${error.code}, message: ${error.message}`);
+            console.error(`getErr: ${error.code} ${error.message}`);
           }
         })
     }
@@ -78,7 +78,7 @@ struct Index {
 function off(type: 'channelStateChange', channelId: number, callback?: Callback<ChannelStateInfo>): void
 ```
 
-取消订阅通道状态事件。
+Unsubscribes from channel state change events.
 
 **Since:** 20
 
@@ -96,19 +96,19 @@ function off(type: 'channelStateChange', channelId: number, callback?: Callback<
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'channelStateChange' | Yes | 设置订阅类型为'channelStateChange'。 |
-| channelId | number | Yes | 打开代理通道时获取的channelId。 |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;ChannelStateInfo&gt; | No | 注册的回调函数。如果为空、undefined、null， 则取消订阅所有的数据接收事件。如果不为空，传入最后一次注册的回调函数。 |
+| type | 'channelStateChange' | Yes | Event type. The value **channelStateChange** indicates the channel state change event. |
+| channelId | number | Yes | Channel ID obtained when the proxy channel is opened. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;ChannelStateInfo&gt; | No | Registered callback, If the value is empty, **undefined**, or **null**, all callbacks of data receiving events are unregistered. If the value is not empty, the last registered callback is used. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 32390006 | Parameter error. |
-| 201 | Permission denied. |
-| 32390004 | ChannelId is invalid or unavailable. |
-| 32390100 | Internal error. |
-| 32390101 | Call is restricted. |
+| [32390006](../../apis-distributedservice-kit/errorcode-proxyChannelManager.md#32390006-parameter-verification-error) | Parameter error. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
+| [32390004](../../apis-distributedservice-kit/errorcode-proxyChannelManager.md#32390004-invalid-or-unavailable-channel-id) | ChannelId is invalid or unavailable. |
+| [32390100](../../apis-distributedservice-kit/errorcode-proxyChannelManager.md#32390100-internal-error) | Internal error. |
+| [32390101](../../apis-distributedservice-kit/errorcode-proxyChannelManager.md#32390101-call-restricted) | Call is restricted. |
 
 ## Examples
 
@@ -121,13 +121,13 @@ import { BusinessError } from '@kit.BasicServicesKit';
 struct Index {
   build() {
     RelativeContainer() {
-      Button('Test')
+      Button ('Test')
         .onClick(() => {
           try {
-            proxyChannelManager.off('channelStateChange', channelId); // Obtain channelId from the promise return value of the openProxyChannel API.
+            proxyChannelManager.off('channelStateChange', 1); // Assume that the channel ID is 1.
           } catch (err) {
             let error = err as BusinessError;
-            console.error(`Failed to unregister channelStateChange callback. Code: ${error.code}, message: ${error.message}`);
+            console.error(`getErr: ${error.code} ${error.message}`);
           }
         })
     }

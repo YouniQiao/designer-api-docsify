@@ -4,7 +4,7 @@
 declare type ColorFilterType = ColorFilter | DrawingColorFilter
 ```
 
-图片颜色滤镜设置项类型。
+Defines the type for image color filter settings.
 
 **Since:** 15
 
@@ -20,6 +20,6 @@ declare type ColorFilterType = ColorFilter | DrawingColorFilter
 
 | Type | Description |
 | --- | --- |
-| ColorFilter | ColorFilter类型图片颜色滤镜设置项。 |
-| DrawingColorFilter | DrawingColorFilter类型图片颜色滤镜设置项。 |
+| ColorFilter | Color filter settings of the ColorFilter type. |
+| DrawingColorFilter | Color filter settings of the DrawingColorFilter type. |
 

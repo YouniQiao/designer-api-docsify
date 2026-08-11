@@ -1,6 +1,6 @@
 # FileReadTextResponse
 
-文本读取返回，包含读取到的文本内容。
+Returns the text read, including the text content.
 
 **Since:** 3
 
@@ -18,7 +18,7 @@
 text: string
 ```
 
-读取到的文本内容。
+Text read from the specified file.
 
 **Type:** string
 

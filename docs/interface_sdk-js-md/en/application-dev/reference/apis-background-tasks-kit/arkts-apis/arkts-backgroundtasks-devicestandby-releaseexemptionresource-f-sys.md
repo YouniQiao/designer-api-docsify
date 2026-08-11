@@ -12,7 +12,7 @@ import { deviceStandby } from 'kits/@kit.BackgroundTasksKit';
 function releaseExemptionResource(request: ResourceRequest): void
 ```
 
-取消应用订阅申请豁免。
+Releases exemption resources.
 
 **Since:** 10
 
@@ -30,20 +30,20 @@ function releaseExemptionResource(request: ResourceRequest): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| request | [ResourceRequest](arkts-backgroundtasks-devicestandby-resourcerequest-i-sys.md) | Yes | 资源请求 。 |
+| request | [ResourceRequest](arkts-backgroundtasks-devicestandby-resourcerequest-i-sys.md) | Yes | requesting or releasing resources. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. 3. Parameter verification failed. |
-| 9800004 | Failed to get device standby service. Possible cause: A necessary system service is not ready. |
-| 9800001 | Memory operation failed. |
-| 9800003 | Failed to complete inner transaction. |
-| 9800002 | Failed to write data into parcel. Possible reasons: 1. Invalid parameters. |
-| 201 | Permission denied. |
-| 202 | Not System App. |
-| 18700001 | Caller information verification failed. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. 3. Parameter verification failed. |
+| [9800004](../../apis-backgroundtasks-kit/errorcode-backgroundTaskMgr.md#9800004-system-service-failure) | Failed to get device standby service. Possible cause: A necessary system service is not ready. |
+| [9800001](../../apis-backgroundtasks-kit/errorcode-backgroundTaskMgr.md#9800001-memory-operation-failure) | Memory operation failed. |
+| [9800003](../../apis-backgroundtasks-kit/errorcode-backgroundTaskMgr.md#9800003-ipc-failure) | Failed to complete inner transaction. |
+| [9800002](../../apis-backgroundtasks-kit/errorcode-backgroundTaskMgr.md#9800002-parcel-operation-failure) | Failed to write data into parcel. Possible reasons: 1. Invalid parameters. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not System App. |
+| [18700001](../../apis-backgroundtasks-kit/errorcode-backgroundTaskMgr.md#18700001-caller-information-verification-failure-for-an-energy-resource-request) | Caller information verification failed. |
 
 ## Examples
 

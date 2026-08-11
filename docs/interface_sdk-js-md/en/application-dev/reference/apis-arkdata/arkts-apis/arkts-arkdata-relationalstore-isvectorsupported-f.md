@@ -12,7 +12,7 @@ import { relationalStore } from 'kits/@kit.ArkData';
 function isVectorSupported(): boolean
 ```
 
-判断系统是否提供向量数据库能力。
+Checks whether the system supports vector stores.
 
 **Since:** 18
 
@@ -26,7 +26,7 @@ function isVectorSupported(): boolean
 
 | Type | Description |
 | --- | --- |
-| boolean | 系统具备向量数据库能力时返回true，否则返回false。 |
+| boolean | Returns **true** if the system supports vector stores; returns **false** otherwise. |
 
 ## Examples
 

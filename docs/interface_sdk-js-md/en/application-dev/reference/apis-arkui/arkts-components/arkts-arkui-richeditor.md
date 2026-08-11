@@ -1,20 +1,19 @@
 # RichEditor
 
-支持图文混排和文本交互式编辑的组件。
+**RichEditor** is a component that supports interactive text editing and mixture of text and imagery.
 
-> **说明：**
+> **NOTE**
 >
-> - 该组件从API版本26.0.0开始支持[WithTheme]{@link ./with_theme}。
-
-## 子组件
-
-不包含子组件。
+> This component is supported since API version 10. Updates will be marked with a superscript to indicate their 
+> earliest API version.
 
 ## RichEditor
 
 ```TypeScript
 RichEditor(value: RichEditorOptions)
 ```
+
+Called when create RichEditor.
 
 **Since:** 10
 
@@ -32,7 +31,7 @@ RichEditor(value: RichEditorOptions)
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | [RichEditorOptions](arkts-arkui-richeditoroptions-i.md) | Yes | 富文本组件初始化选项。 |
+| value | [RichEditorOptions](arkts-arkui-richeditoroptions-i.md) | Yes | Options for initializing the component. |
 
 ## RichEditor
 
@@ -40,7 +39,7 @@ RichEditor(value: RichEditorOptions)
 RichEditor(options: RichEditorStyledStringOptions)
 ```
 
-创建富文本组件时调用。
+Called when create RichEditor.
 
 **Since:** 12
 
@@ -58,7 +57,7 @@ RichEditor(options: RichEditorStyledStringOptions)
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| options | [RichEditorStyledStringOptions](../arkts-apis/arkts-arkui-richeditor-richeditorstyledstringoptions-i.md) | Yes | 富文本组件初始化选项。 |
+| options | [RichEditorStyledStringOptions](../arkts-apis/arkts-arkui-richeditor-richeditorstyledstringoptions-i.md) | Yes | Options for initializing the component. |
 
 ## Summary
 

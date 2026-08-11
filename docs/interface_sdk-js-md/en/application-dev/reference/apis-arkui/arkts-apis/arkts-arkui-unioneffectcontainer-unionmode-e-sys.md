@@ -1,6 +1,6 @@
 # UnionMode (System API)
 
-融合效果枚举。
+Mode Enum for Union Effects
 
 **Since:** 26.0.0
 
@@ -18,7 +18,7 @@
 SMOOTH_UNION = 0
 ```
 
-平滑的融合形变效果。
+The effect of fusion deformation under smooth union.
 
 **Since:** 26.0.0
 
@@ -38,13 +38,7 @@ SMOOTH_UNION = 0
 GRAVITY_UNION = 1
 ```
 
-引力作用下的融合形变效果。
-
-**说明：**
-
-设置该类型时，需要结合  
-[useUnionEffect](arkts-arkui-common-commonmethod-i-sys.md#useunioneffect)并设置  
-[GravityCenterOptions](arkts-arkui-common-gravitycenteroptions-i-sys.md)的gravityCenter为true才能生效。
+The effect of fusion deformation under gravity.Need to use the useUnionEffect interface to specify the center of gravity.
 
 **Since:** 26.0.0
 

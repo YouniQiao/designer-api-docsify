@@ -1,6 +1,6 @@
 # HashSet
 
-HashSet是一种非线性容器，用于存储不重复的元素集合，支持高效的元素增删和存在性判断。HashSet基于HashMap实现，仅操作元素的值对象，不涉及键的概念。
+HashSet is implemented based on HashMap. In HashSet, only the value object is processed.
 
 **Since:** 8
 
@@ -22,7 +22,7 @@ import { HashSet } from 'kits/@kit.ArkTS';
 $_iterator(): IterableIterator<T>
 ```
 
-返回一个迭代器，迭代器的每一项为HashSet中的元素。
+returns an iterator.Each item of the iterator is a Javascript Object
 
 **Since:** 23
 
@@ -38,7 +38,7 @@ $_iterator(): IterableIterator<T>
 
 | Type | Description |
 | --- | --- |
-| [IterableIterator](arkts-arkts-iterator-iterableiterator-i.md)&lt;T&gt; | 返回一个迭代器。 |
+| [IterableIterator](arkts-arkts-iterator-iterableiterator-i.md)&lt;T&gt; | an iterator for the HashSet |
 
 ## [Symbol.iterator]
 
@@ -46,10 +46,7 @@ $_iterator(): IterableIterator<T>
 [Symbol.iterator](): IterableIterator<T>
 ```
 
-返回一个迭代器，迭代器的每一项为HashSet中的元素。  
-> **说明：**
-> 
-> 不建议在Symbol.iterator中使用add、remove方法，因其可能导致迭代过程中的状态异常，建议使用for循环来进行安全的插入与删除操作。
+returns an iterator.Each item of the iterator is a Javascript Object
 
 **Since:** 8
 
@@ -65,13 +62,13 @@ $_iterator(): IterableIterator<T>
 
 | Type | Description |
 | --- | --- |
-| [IterableIterator](arkts-arkts-iterator-iterableiterator-i.md)&lt;T&gt; | 返回包含此HashSet中所有元素的迭代器对象。 |
+| [IterableIterator](arkts-arkts-iterator-iterableiterator-i.md)&lt;T&gt; |  |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 10200011 | The Symbol.iterator method cannot be bound. |
+| [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) | The Symbol.iterator method cannot be bound. |
 
 ## Examples
 
@@ -115,7 +112,7 @@ for(let i = 0;i < 10;i++) {
 add(value: T): boolean
 ```
 
-向HashSet添加元素。成功添加后HashSet的length增加1；若待添加元素已存在则不会重复添加，返回false且length不变。
+Adds elements to this HashSet.
 
 **Since:** 8
 
@@ -131,19 +128,19 @@ add(value: T): boolean
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | T | Yes | 要添加的元素。 |
+| value | T | Yes | Target element. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| boolean | 成功添加元素返回true，若元素已存在则返回false。 |
+| boolean | Operation result. The value **true** is returned if the element is added; otherwise, **false** is returned. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 10200011 | The add method cannot be bound. |
+| [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) | The add method cannot be bound. |
 
 ## Examples
 
@@ -159,7 +156,7 @@ console.info("result:", result);  // result: true
 clear(): void
 ```
 
-清除HashSet中的所有元素，并将length置为0。
+Clears this HashSet and sets its length to **0**.
 
 **Since:** 8
 
@@ -175,7 +172,7 @@ clear(): void
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 10200011 | The clear method cannot be bound. |
+| [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) | The clear method cannot be bound. |
 
 ## Examples
 
@@ -194,7 +191,7 @@ console.info("result:", result);  // result: true
 constructor()
 ```
 
-HashSet的构造函数，用于创建一个空的HashSet实例。
+A constructor used to create a **HashSet** instance.
 
 **Since:** 8
 
@@ -210,7 +207,7 @@ HashSet的构造函数，用于创建一个空的HashSet实例。
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 10200012 | The HashSet's constructor cannot be directly invoked. |
+| [10200012](../errorcode-utils.md#10200012-constructor-calling-failure) | The HashSet's constructor cannot be directly invoked. |
 
 ## Examples
 
@@ -224,10 +221,7 @@ let hashSet = new HashSet<number>();
 entries(): IterableIterator<[T, T]>
 ```
 
-返回包含此HashSet中所有元素的新迭代器对象，每个元素以[value, value]形式返回。  
-> **说明：**
-> 
-> 不建议在entries迭代过程中使用add、remove方法，因其可能导致迭代过程中的状态异常，建议使用for循环来进行安全的插入与删除操作。
+Returns an iterator that contains all the elements in this HashSet.
 
 **Since:** 8
 
@@ -243,13 +237,13 @@ entries(): IterableIterator<[T, T]>
 
 | Type | Description |
 | --- | --- |
-| [IterableIterator](arkts-arkts-iterator-iterableiterator-i.md)&lt;[T, T]&gt; | 返回包含此HashSet中所有元素的迭代器对象。 |
+| [IterableIterator](arkts-arkts-iterator-iterableiterator-i.md)&lt;[T, T]&gt; | Iterator obtained. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 10200011 | The entries method cannot be bound. |
+| [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) | The entries method cannot be bound. |
 
 ## Examples
 
@@ -287,7 +281,7 @@ for(let i = 0; i < 10; i++) {
 forEach(callbackFn: (value?: T, key?: T, set?: HashSet<T>) => void, thisArg?: Object): void
 ```
 
-在遍历过程中对每个元素调用一次回调函数。不建议在forEach回调中使用add、remove方法修改HashSet，因其可能导致迭代过程中的状态异常。
+Uses a callback to traverse each element.
 
 **Since:** 8
 
@@ -303,14 +297,14 @@ forEach(callbackFn: (value?: T, key?: T, set?: HashSet<T>) => void, thisArg?: Ob
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callbackFn | (value?: T, key?: T, set?: HashSet&lt;T&gt;) =&gt; void | Yes | 回调函数，在遍历过程中对每个元素调用一次。回调参数包括value、key和set，详见callbackFn的参数说明。 |
-| thisArg | Object | No | callbackFn被调用时用作this值。当需要改变回调函数内this指向时传入此参数，不传入时默认值为当前实例对象。 |
+| callbackFn | (value?: T, key?: T, set?: HashSet&lt;T&gt;) =&gt; void | Yes | Callback invoked to traverse the elements in the HashSet. |
+| thisArg | Object | No | Value of **this** to use when **callbackFn** is invoked. The default value is this instance. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 10200011 | The forEach method cannot be bound. |
+| [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) | The forEach method cannot be bound. |
 
 ## Examples
 
@@ -342,7 +336,7 @@ for(let i = 0; i < 10; i++) {
 forEach(callbackFn: HashSetCbFn<T>): void
 ```
 
-遍历HashSet中的所有元素，并对每个元素执行回调函数。
+Iterates over all elements in the HashSet and executes a callback function for each element.
 
 **Since:** 23
 
@@ -358,7 +352,7 @@ forEach(callbackFn: HashSetCbFn<T>): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callbackFn | [HashSetCbFn](arkts-arkts-hashsetcbfn-t.md)&lt;T&gt; | Yes | 对每个元素执行的回调函数。 |
+| callbackFn | [HashSetCbFn](arkts-arkts-hashsetcbfn-t.md)&lt;T&gt; | Yes | A callback function to execute for each element. |
 
 ## has
 
@@ -366,7 +360,7 @@ forEach(callbackFn: HashSetCbFn<T>): void
 has(value: T): boolean
 ```
 
-判断HashSet是否包含指定元素，基于哈希值进行查找，具有O(1)的时间复杂度。
+Checks whether this HashSet has the specified element.
 
 **Since:** 8
 
@@ -382,19 +376,19 @@ has(value: T): boolean
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | T | Yes | 指定要查找的元素。 |
+| value | T | Yes | Target element. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| boolean | 包含指定元素返回true，不包含指定元素返回false。 |
+| boolean | Operation result. The value **true** is returned if the specified element is contained; otherwise, **false** is returned. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 10200011 | The has method cannot be bound. |
+| [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) | The has method cannot be bound. |
 
 ## Examples
 
@@ -411,7 +405,7 @@ console.info("result:", result);  // result: true
 isEmpty(): boolean
 ```
 
-判断HashSet是否为空。
+Checks whether this HashSet is empty (contains no element).
 
 **Since:** 8
 
@@ -427,13 +421,13 @@ isEmpty(): boolean
 
 | Type | Description |
 | --- | --- |
-| boolean | 为空返回true，不为空返回false。 |
+| boolean | Check result. The value **true** is returned if the HashSet is empty; otherwise, **false** is returned. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 10200011 | The isEmpty method cannot be bound. |
+| [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) | The isEmpty method cannot be bound. |
 
 ## Examples
 
@@ -449,7 +443,7 @@ console.info("result:", result);  // result: true
 remove(value: T): boolean
 ```
 
-从HashSet中删除指定的元素。成功删除后HashSet的length减少1；若指定元素不存在则集合不变，返回false。
+Removes an element from this HashSet.
 
 **Since:** 8
 
@@ -465,19 +459,19 @@ remove(value: T): boolean
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | T | Yes | 指定要删除的元素。 |
+| value | T | Yes | Target element. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| boolean | 成功删除指定元素返回true，若指定元素不存在则返回false。 |
+| boolean | Operation result. The value **true** is returned if the element is removed; otherwise, **false** is returned. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 10200011 | The remove method cannot be bound. |
+| [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) | The remove method cannot be bound. |
 
 ## Examples
 
@@ -495,10 +489,7 @@ console.info("result:", result);  // result: true
 values(): IterableIterator<T>
 ```
 
-返回包含此HashSet中所有值的新迭代器对象。  
-> **说明：**
-> 
-> 不建议在values迭代过程中使用add、remove方法，因其可能导致迭代过程中的状态异常，建议使用for循环来进行安全的插入与删除操作。
+Returns an iterator that contains all the values in this HashSet.
 
 **Since:** 8
 
@@ -514,13 +505,13 @@ values(): IterableIterator<T>
 
 | Type | Description |
 | --- | --- |
-| [IterableIterator](arkts-arkts-iterator-iterableiterator-i.md)&lt;T&gt; | 返回包含此HashSet中所有值的迭代器对象。 |
+| [IterableIterator](arkts-arkts-iterator-iterableiterator-i.md)&lt;T&gt; | Iterator obtained. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 10200011 | The values method cannot be bound. |
+| [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) | The values method cannot be bound. |
 
 ## Examples
 
@@ -542,7 +533,7 @@ for (let value of values) {
 length: number
 ```
 
-HashSet的元素个数。
+Number of elements in a HashSet.
 
 **Type:** number
 

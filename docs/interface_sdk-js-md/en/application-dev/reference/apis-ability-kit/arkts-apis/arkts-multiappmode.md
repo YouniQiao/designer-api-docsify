@@ -7,6 +7,6 @@
 
 | Name | Description |
 | --- | --- |
-| [MultiAppMode](arkts-ability-multiappmode-e-sys.md) | 定义应用是否支持多开模式。 |
+| [MultiAppMode](arkts-ability-multiappmode-e-sys.md) | The module defines whether an application supports the multi-app mode. |
 <!--DelEnd-->
 

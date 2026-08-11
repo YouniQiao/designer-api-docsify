@@ -4,7 +4,7 @@
 export type ListComparatorFn<T> = (firstValue: T, secondValue: T) => double
 ```
 
-List中sort方法的回调函数。
+This type specifies the comparator of sort in comparation.
 
 **Since:** 23
 
@@ -20,12 +20,12 @@ List中sort方法的回调函数。
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| firstValue | T | Yes | 需要排序的前一项元素。 |
-| secondValue | T | Yes | 需要排序的后一项元素。 |
+| firstValue | T | Yes | firstValue (required) previous element. |
+| secondValue | T | Yes | secondValue (required) next element. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| ArkTS-Dyn: number  <br>ArkTS-Sta：double | 通过回调函数返回的值，List能够根据自定义的比较规则维护元素的顺序。 |
+| ArkTS-Dyn: number  <br>ArkTS-Sta：double | the number type |
 

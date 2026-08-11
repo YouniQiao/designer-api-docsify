@@ -1,6 +1,6 @@
 # Querier (System API)
 
-系统事件查询者对象接口。
+Defines an event query instance.
 
 **Since:** 9
 
@@ -30,7 +30,7 @@ ArkTS-Sta:
 onComplete: (reason: int, total: int) => void
 ```
 
-查询结果统计的回调方法(reason: int, total: int) => void。
+Callback used to return the query result statistics: (reason: int, total: int) => void
 
 **Since:** 9
 
@@ -55,7 +55,7 @@ onComplete: (reason: int, total: int) => void
 onQuery: (infos: SysEventInfo[]) => void
 ```
 
-返回查询到的系统事件的回调方法(infos: [SysEventInfo](arkts-performanceanalysis-hisysevent-syseventinfo-i-sys.md)[]) => void。
+Callback used to return the queried system events: (infos: [SysEventInfo](arkts-performanceanalysis-hisysevent-syseventinfo-i-sys.md)[]) =>void.
 
 **Since:** 9
 

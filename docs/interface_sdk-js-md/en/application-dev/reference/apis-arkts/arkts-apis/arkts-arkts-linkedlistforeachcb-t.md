@@ -4,7 +4,7 @@
 export type LinkedListForEachCb<T> = (value: T, index: int, linkedList: LinkedList<T>) => void
 ```
 
-LinkedList的回调函数类型。
+The type of LinkedList callback function.
 
 **Since:** 23
 
@@ -22,7 +22,7 @@ LinkedList的回调函数类型。
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | T | Yes | 当前元素的值。 |
-| index | int | Yes | 当前元素的下标。 该值为整数。 |
-| linkedList | [LinkedList](arkts-arkts-util-linkedlist-linkedlist-c.md)&lt;T&gt; | Yes | 当前正在遍历的LinkedList实例。 |
+| value | T | Yes | The value of current element |
+| index | int | Yes | The index of current element The value should be an integer. |
+| linkedList | [LinkedList](arkts-arkts-util-linkedlist-linkedlist-c.md)&lt;T&gt; | Yes | The LinkedList instance being traversed |
 

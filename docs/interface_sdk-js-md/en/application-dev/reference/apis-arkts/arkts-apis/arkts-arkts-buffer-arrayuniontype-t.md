@@ -18,7 +18,7 @@ type ArrayUnionType =  Array<Int8Array>
     | Array<Blob>
 ```
 
-ArrayUnionType的特性与方法。
+ArrayUnionType features and methods
 
 **Since:** 23
 

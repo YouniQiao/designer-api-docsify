@@ -1,11 +1,5 @@
 # cancelReminder
 
-## 导入模块
-
-```TypeScript
-import { reminderAgentManager } from 'kits/@kit.BackgroundTasksKit';
-```
-
 ## cancelReminder
 
 ```TypeScript
@@ -33,11 +27,13 @@ function cancelReminder(reminderId: int, callback: AsyncCallback<void>): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 401 | If the input parameter is not valid parameter. |
-| 1700003 | The reminder does not exist. |
-| 1700004 | The bundle name does not exist. |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | If the input parameter is not valid parameter. |
+| [1700003](../../apis-backgroundtasks-kit/errorcode-reminderAgentManager.md#1700003-提醒不存在) | The reminder does not exist. |
+| [1700004](../../apis-backgroundtasks-kit/errorcode-reminderAgentManager.md#1700004-包名不存在) | The bundle name does not exist. |
 
 ## 示例
+
+ArkTS-Dyn示例：
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -51,6 +47,24 @@ reminderAgentManager.cancelReminder(reminderId, (err: BusinessError) => {
     console.info("cancelReminder callback");
   }
 });
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+import { reminderAgentManager } from '@kit.BackgroundTasksKit';
+
+let cancelCallback = (err: BusinessError | null): void => {
+  if (err) {
+    console.error(`Failed to cancel reminder. Code is ${err.code}, message is ${err.message}`);
+  } else {
+    console.info(`Succeeded in canceling reminder`);
+  }
+}
+
+let reminderId: int = 1;
+reminderAgentManager.cancelReminder(reminderId, cancelCallback);
 ```
 
 
@@ -86,11 +100,13 @@ function cancelReminder(reminderId: int): Promise<void>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 401 | If the input parameter is not valid parameter. |
-| 1700003 | The reminder does not exist. |
-| 1700004 | The bundle name does not exist. |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | If the input parameter is not valid parameter. |
+| [1700003](../../apis-backgroundtasks-kit/errorcode-reminderAgentManager.md#1700003-提醒不存在) | The reminder does not exist. |
+| [1700004](../../apis-backgroundtasks-kit/errorcode-reminderAgentManager.md#1700004-包名不存在) | The bundle name does not exist. |
 
 ## 示例
+
+ArkTS-Dyn示例：
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -101,6 +117,19 @@ reminderAgentManager.cancelReminder(reminderId).then(() => {
   console.info("cancelReminder promise");
 }).catch((err: BusinessError) => {
   console.error("promise err code:" + err.code + " message:" + err.message);
+});
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+import { reminderAgentManager } from '@kit.BackgroundTasksKit';
+
+let reminderId: int = 1;
+reminderAgentManager.cancelReminder(reminderId).then(() => {
+  console.info(`Succeeded in canceling reminder`);
+}).catch((err): void => {
+  console.error(`Failed to cancel reminder. Code is ${err.code}, message is ${err.message}`);
 });
 ```
 

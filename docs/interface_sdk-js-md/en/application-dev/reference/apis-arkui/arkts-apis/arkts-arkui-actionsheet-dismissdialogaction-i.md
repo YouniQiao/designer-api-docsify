@@ -1,6 +1,6 @@
 # DismissDialogAction
 
-Dialog关闭的信息。
+Provides information about the action to dismiss the dialog box.
 
 **Since:** 23
 
@@ -16,7 +16,7 @@ Dialog关闭的信息。
 dismiss(): void
 ```
 
-Dialog关闭回调函数。开发者需要退出时调用，不需要退出时无需调用此函数。
+Defines dialog dismiss function.
 
 **Since:** 23
 

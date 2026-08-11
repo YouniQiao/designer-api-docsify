@@ -1,11 +1,5 @@
 # on
 
-## 导入模块
-
-```TypeScript
-import { uiObserver } from 'kits/@kit.ArkUI';
-```
-
 ## on('navDestinationUpdate')
 
 ```TypeScript
@@ -119,61 +113,6 @@ export function on(type: 'navDestinationUpdate', callback: Callback<NavDestinati
 | type | 'navDestinationUpdate' | 是 | 监听事件，固定为'navDestinationUpdate'，即NavDestination组件的状态变化。 |
 | callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;NavDestinationInfo&gt; | 是 | 回调函数。返回当前的NavDestination组件状态。 |
 
-## 示例
-
-```TypeScript
-// Index.ets
-// 演示 uiObserver.on('navDestinationUpdate', callback)
-// uiObserver.off('navDestinationUpdate', callback)
-import { uiObserver } from '@kit.ArkUI';
-
-@Component
-struct PageOne {
-  build() {
-    NavDestination() {
-      Text("pageOne")
-    }.title("pageOne")
-  }
-}
-
-@Entry
-@Component
-struct Index {
-  private stack: NavPathStack = new NavPathStack();
-
-  @Builder
-  PageBuilder(name: string) {
-    PageOne()
-  }
-
-  aboutToAppear() {
-    // 注册监听
-    uiObserver.on('navDestinationUpdate', (info) => {
-      console.info(`NavDestination state update ${JSON.stringify(info)}`);
-    });
-  }
-
-  aboutToDisappear() {
-    // 注销监听
-    uiObserver.off('navDestinationUpdate');
-  }
-
-  build() {
-    Column() {
-      Navigation(this.stack) {
-        Button("push").onClick(() => {
-          this.stack.pushPath({ name: "pageOne" });
-        })
-      }
-      .title("Navigation")
-      .navDestination(this.PageBuilder)
-    }
-    .width('100%')
-    .height('100%')
-  }
-}
-```
-
 
 ## on('scrollEvent')
 
@@ -200,7 +139,7 @@ Registers a callback function to be called when the scroll event start or stop.
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'scrollEvent' | 是 | The type of event to listen for. Must be 'scrollEvent'. |
-| options | [ObserverOptions](../../apis-telephony-kit/arkts-apis/arkts-telephony-observer-observeroptions-i.md) | 是 | The options object. |
+| options | [ObserverOptions](arkts-arkui-uiobserver-observeroptions-i.md) | 是 | The options object. |
 | callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;ScrollEventInfo&gt; | 是 | The callback function to be called when the scroll event start or stop. |
 
 
@@ -259,42 +198,6 @@ export function on(type: 'routerPageUpdate', context: UIAbilityContext | UIConte
 | type | 'routerPageUpdate' | 是 | 监听事件，固定为'routerPageUpdate'，即router中page页面的状态变化。 |
 | context | [UIAbilityContext](../../apis-ability-kit/arkts-apis/arkts-ability-uiabilitycontext-c.md) \| UIContext | 是 | 上下文信息，用以指定监听页面的范围。 |
 | callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;RouterPageInfo&gt; | 是 | 回调函数。携带pageInfo，返回当前的page页面状态。 |
-
-## 示例
-
-```TypeScript
-// used in UIAbility
-import { AbilityConstant, UIAbility, Want } from '@kit.AbilityKit';
-import { UIContext, window, uiObserver } from '@kit.ArkUI';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-export default class EntryAbility extends UIAbility {
-  private uiContext: UIContext | null = null;
-
-  onCreate(want: Want, launchParam: AbilityConstant.LaunchParam): void {
-    // 注册监听，范围是abilityContext内的page
-    uiObserver.on('routerPageUpdate', this.context, (info: uiObserver.RouterPageInfo) => {
-      console.info(`[uiObserver][abilityContext] got info: ${JSON.stringify(info)}`)
-    })
-  }
-
-  onWindowStageCreate(windowStage: window.WindowStage): void {
-    windowStage.loadContent('pages/Index', (err) => {
-      windowStage.getMainWindow((err: BusinessError, data) => {
-        let windowInfo: window.Window = data;
-        // 获取UIContext实例
-        this.uiContext = windowInfo.getUIContext();
-        // 注册监听，范围是uiContext内的page
-        uiObserver.on('routerPageUpdate', this.uiContext, (info: uiObserver.RouterPageInfo)=>{
-          console.info(`[uiObserver][uiContext] got info: ${JSON.stringify(info)}`)
-        })
-      })
-    });
-  }
-
-  // ... other function in EntryAbility
-}
-```
 
 
 ## on('densityUpdate')
@@ -484,59 +387,8 @@ export function on(type: 'tabContentUpdate', options: ObserverOptions, callback:
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'tabContentUpdate' | 是 | 监听事件，固定为'tabContentUpdate'，即TabContent页面的切换事件。 |
-| options | [ObserverOptions](../../apis-telephony-kit/arkts-apis/arkts-telephony-observer-observeroptions-i.md) | 是 | 指定监听的Tabs组件的id。 |
+| options | [ObserverOptions](arkts-arkui-uiobserver-observeroptions-i.md) | 是 | 指定监听的Tabs组件的id。 |
 | callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;TabContentInfo&gt; | 是 | 回调函数。携带TabContentInfo，返回TabContent页面切换事件的信息。 |
-
-## 示例
-
-```TypeScript
-import { uiObserver } from '@kit.ArkUI';
-
-function callbackFunc(info: uiObserver.TabContentInfo) {
-  console.info(`tabContentUpdate ${JSON.stringify(info)}`);
-}
-
-@Entry
-@Component
-struct TabsExample {
-
-  aboutToAppear(): void {
-    // 注册监听，指定Tabs的id
-    uiObserver.on('tabContentUpdate', { id: 'tabsId' }, callbackFunc);
-  }
-
-  aboutToDisappear(): void {
-    // 注销监听
-    uiObserver.off('tabContentUpdate', { id: 'tabsId' }, callbackFunc);
-  }
-
-  build() {
-    Column() {
-      Tabs() {
-        TabContent() {
-          Column().width('100%').height('100%').backgroundColor('#00CB87')
-        }.tabBar('green').id('tabContentId0')
-
-        TabContent() {
-          Column().width('100%').height('100%').backgroundColor('#007DFF')
-        }.tabBar('blue').id('tabContentId1')
-
-        TabContent() {
-          Column().width('100%').height('100%').backgroundColor('#FFBF00')
-        }.tabBar('yellow').id('tabContentId2')
-
-        TabContent() {
-          Column().width('100%').height('100%').backgroundColor('#E67C92')
-        }.tabBar('pink').id('tabContentId3')
-      }
-      .width(360)
-      .height(296)
-      .backgroundColor('#F1F3F5')
-      .id('tabsId')
-    }.width('100%')
-  }
-}
-```
 
 
 ## on('tabContentUpdate')
@@ -565,57 +417,6 @@ export function on(type: 'tabContentUpdate', callback: Callback<TabContentInfo>)
 | --- | --- | --- | --- |
 | type | 'tabContentUpdate' | 是 | 监听事件，固定为'tabContentUpdate'，即TabContent页面的切换事件。 |
 | callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;TabContentInfo&gt; | 是 | 回调函数。携带TabContentInfo，返回TabContent页面切换事件的信息。 |
-
-## 示例
-
-```TypeScript
-import { uiObserver } from '@kit.ArkUI';
-
-function callbackFunc(info: uiObserver.TabContentInfo) {
-  console.info(`tabContentUpdate ${JSON.stringify(info)}`);
-}
-
-@Entry
-@Component
-struct TabsExample {
-
-  aboutToAppear(): void {
-    // 注册监听
-    uiObserver.on('tabContentUpdate', callbackFunc);
-  }
-
-  aboutToDisappear(): void {
-    // 注销监听
-    uiObserver.off('tabContentUpdate', callbackFunc);
-  }
-
-  build() {
-    Column() {
-      Tabs() {
-        TabContent() {
-          Column().width('100%').height('100%').backgroundColor('#00CB87')
-        }.tabBar('green').id('tabContentId0')
-
-        TabContent() {
-          Column().width('100%').height('100%').backgroundColor('#007DFF')
-        }.tabBar('blue').id('tabContentId1')
-
-        TabContent() {
-          Column().width('100%').height('100%').backgroundColor('#FFBF00')
-        }.tabBar('yellow').id('tabContentId2')
-
-        TabContent() {
-          Column().width('100%').height('100%').backgroundColor('#E67C92')
-        }.tabBar('pink').id('tabContentId3')
-      }
-      .width(360)
-      .height(296)
-      .backgroundColor('#F1F3F5')
-      .id('tabsId')
-    }.width('100%')
-  }
-}
-```
 
 
 ## on('navDestinationSwitch')
@@ -649,114 +450,6 @@ export function on(
 | type | 'navDestinationSwitch' | 是 | 监听事件，固定为'navDestinationSwitch'，即Navigation的页面切换事件。 |
 | context | [UIAbilityContext](../../apis-ability-kit/arkts-apis/arkts-ability-uiabilitycontext-c.md) \| UIContext | 是 | 上下文信息，用以指定监听页面切换事件的范围。 |
 | callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;NavDestinationSwitchInfo&gt; | 是 | 回调函数。携带NavDestinationSwitchInfo，返回页面切换事件的信息。 |
-
-## 示例
-
-```TypeScript
-// EntryAbility.ets
-// 演示 uiObserver.on('navDestinationSwitch', UIAbilityContext, callback)
-// uiObserver.off('navDestinationSwitch', UIAbilityContext, callback)
-import { AbilityConstant, UIAbility, Want } from '@kit.AbilityKit';
-import { uiObserver, window } from '@kit.ArkUI';
-import { hilog } from "@kit.PerformanceAnalysisKit";
-
-function callbackFunc(info: uiObserver.NavDestinationSwitchInfo) {
-  console.info(`testTag navDestinationSwitch from: ${JSON.stringify(info.from)} to: ${JSON.stringify(info.to)}`)
-}
-
-export default class EntryAbility extends UIAbility {
-  onCreate(want: Want, launchParam: AbilityConstant.LaunchParam): void {
-    hilog.info(0x0000, 'testTag', '%{public}s', 'Ability onCreate');
-    uiObserver.on('navDestinationSwitch', this.context, callbackFunc);
-  }
-
-  onDestroy(): void {
-    hilog.info(0x0000, 'testTag', '%{public}s', 'Ability onDestroy');
-    uiObserver.off('navDestinationSwitch', this.context, callbackFunc);
-  }
-
-  onWindowStageCreate(windowStage: window.WindowStage): void {
-    // Main window is created, set main page for this ability
-    hilog.info(0x0000, 'testTag', '%{public}s', 'Ability onWindowStageCreate');
-
-    windowStage.loadContent('pages/Index', (err, data) => {
-      if (err.code) {
-        hilog.error(0x0000, 'testTag', 'Failed to load the content. Cause: %{public}s', JSON.stringify(err) ?? '');
-        return;
-      }
-      hilog.info(0x0000, 'testTag', 'Succeeded in loading the content. Data: %{public}s', JSON.stringify(data) ?? '');
-    });
-  }
-
-  onWindowStageDestroy(): void {
-    // Main window is destroyed, release UI related resources
-    hilog.info(0x0000, 'testTag', '%{public}s', 'Ability onWindowStageDestroy');
-  }
-
-  onForeground(): void {
-    // Ability has brought to foreground
-    hilog.info(0x0000, 'testTag', '%{public}s', 'Ability onForeground');
-  }
-
-  onBackground(): void {
-    // Ability has back to background
-    hilog.info(0x0000, 'testTag', '%{public}s', 'Ability onBackground');
-  }
-}
-```
-
-```TypeScript
-// Index.ets
-// 演示 uiObserver.on('navDestinationSwitch', UIContext, callback)
-// uiObserver.off('navDestinationSwitch', UIContext, callback)
-import { uiObserver } from '@kit.ArkUI';
-
-@Component
-struct PageOne {
-  build() {
-    NavDestination() {
-      Text("pageOne")
-    }.title("pageOne")
-  }
-}
-
-function callbackFunc(info: uiObserver.NavDestinationSwitchInfo) {
-  console.info(`testTag navDestinationSwitch from: ${JSON.stringify(info.from)} to: ${JSON.stringify(info.to)}`)
-}
-
-@Entry
-@Component
-struct Index {
-  private stack: NavPathStack = new NavPathStack();
-
-  @Builder
-  PageBuilder(name: string) {
-    PageOne()
-  }
-
-  aboutToAppear() {
-    uiObserver.on('navDestinationSwitch', this.getUIContext(), callbackFunc)
-  }
-
-  aboutToDisappear() {
-    uiObserver.off('navDestinationSwitch', this.getUIContext(), callbackFunc)
-  }
-
-  build() {
-    Column() {
-      Navigation(this.stack) {
-        Button("push").onClick(() => {
-          this.stack.pushPath({ name: "pageOne" });
-        })
-      }
-      .title("Navigation")
-      .navDestination(this.PageBuilder)
-    }
-    .width('100%')
-    .height('100%')
-  }
-}
-```
 
 
 ## on('navDestinationSwitch')
@@ -792,117 +485,4 @@ export function on(
 | context | [UIAbilityContext](../../apis-ability-kit/arkts-apis/arkts-ability-uiabilitycontext-c.md) \| UIContext | 是 | 上下文信息，用以指定监听页面切换事件的范围。 |
 | observerOptions | [NavDestinationSwitchObserverOptions](arkts-arkui-uiobserver-navdestinationswitchobserveroptions-i.md) | 是 | 监听选项。 |
 | callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;NavDestinationSwitchInfo&gt; | 是 | 回调函数。携带NavDestinationSwitchInfo，返回页面切换事件的信息。 |
-
-## 示例
-
-```TypeScript
-// EntryAbility.ets
-// 演示 uiObserver.on('navDestinationSwitch', UIAbilityContext, NavDestinationSwitchObserverOptions, callback)
-// uiObserver.off('navDestinationSwitch', UIAbilityContext, NavDestinationSwitchObserverOptions, callback)
-import { AbilityConstant, UIAbility, Want } from '@kit.AbilityKit';
-import { uiObserver, window } from '@kit.ArkUI';
-import { hilog } from "@kit.PerformanceAnalysisKit"
-
-function callbackFunc(info: uiObserver.NavDestinationSwitchInfo) {
-  console.info(`testTag navDestinationSwitch from: ${JSON.stringify(info.from)} to: ${JSON.stringify(info.to)}`)
-}
-
-export default class EntryAbility extends UIAbility {
-  onCreate(want: Want, launchParam: AbilityConstant.LaunchParam): void {
-    hilog.info(0x0000, 'testTag', '%{public}s', 'Ability onCreate');
-    uiObserver.on('navDestinationSwitch', this.context, {
-      navigationId: "myNavId"
-    }, callbackFunc);
-  }
-
-  onDestroy(): void {
-    hilog.info(0x0000, 'testTag', '%{public}s', 'Ability onDestroy');
-    uiObserver.off('navDestinationSwitch', this.context, {
-      navigationId: "myNavId"
-    }, callbackFunc);
-  }
-
-  onWindowStageCreate(windowStage: window.WindowStage): void {
-    // Main window is created, set main page for this ability
-    hilog.info(0x0000, 'testTag', '%{public}s', 'Ability onWindowStageCreate');
-
-    windowStage.loadContent('pages/Index', (err, data) => {
-      if (err.code) {
-        hilog.error(0x0000, 'testTag', 'Failed to load the content. Cause: %{public}s', JSON.stringify(err) ?? '');
-        return;
-      }
-      hilog.info(0x0000, 'testTag', 'Succeeded in loading the content. Data: %{public}s', JSON.stringify(data) ?? '');
-    });
-  }
-
-  onWindowStageDestroy(): void {
-    // Main window is destroyed, release UI related resources
-    hilog.info(0x0000, 'testTag', '%{public}s', 'Ability onWindowStageDestroy');
-  }
-
-  onForeground(): void {
-    // Ability has brought to foreground
-    hilog.info(0x0000, 'testTag', '%{public}s', 'Ability onForeground');
-  }
-
-  onBackground(): void {
-    // Ability has back to background
-    hilog.info(0x0000, 'testTag', '%{public}s', 'Ability onBackground');
-  }
-}
-```
-
-```TypeScript
-// Index.ets
-// 演示 uiObserver.on('navDestinationSwitch', UIContext, NavDestinationSwitchObserverOptions, callback)
-// uiObserver.off('navDestinationSwitch', UIContext, NavDestinationSwitchObserverOptions, callback)
-import { uiObserver } from '@kit.ArkUI';
-
-@Component
-struct PageOne {
-  build() {
-    NavDestination() {
-      Text("pageOne")
-    }.title("pageOne")
-  }
-}
-
-function callbackFunc(info: uiObserver.NavDestinationSwitchInfo) {
-  console.info(`testTag navDestinationSwitch from: ${JSON.stringify(info.from)} to: ${JSON.stringify(info.to)}`)
-}
-
-@Entry
-@Component
-struct Index {
-  private stack: NavPathStack = new NavPathStack();
-
-  @Builder
-  PageBuilder(name: string) {
-    PageOne()
-  }
-
-  aboutToAppear() {
-    uiObserver.on('navDestinationSwitch', this.getUIContext(), { navigationId: "myNavId" }, callbackFunc)
-  }
-
-  aboutToDisappear() {
-    uiObserver.off('navDestinationSwitch', this.getUIContext(), { navigationId: "myNavId" }, callbackFunc)
-  }
-
-  build() {
-    Column() {
-      Navigation(this.stack) {
-        Button("push").onClick(() => {
-          this.stack.pushPath({ name: "pageOne" });
-        })
-      }
-      .id("myNavId")
-      .title("Navigation")
-      .navDestination(this.PageBuilder)
-    }
-    .width('100%')
-    .height('100%')
-  }
-}
-```
 

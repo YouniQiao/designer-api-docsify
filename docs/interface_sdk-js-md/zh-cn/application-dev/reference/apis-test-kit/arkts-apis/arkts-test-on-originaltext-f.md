@@ -1,11 +1,5 @@
 # originalText
 
-## 导入模块
-
-```TypeScript
-import { ResizeDirection, WindowMode, PenMode, PenKeyOperation, Driver, MatchPattern, UiDirection, TouchOptions, ComponentEventType, PointerMatrix, WindowChangeType, Component, ON, PenKey, Rect, InputTextMode, UIEventObserver, WindowFilter, WindowChangeOptions, UiWindow, TouchPadSwipeOptions, Point, KeyOptions, DisplayRotation, UIElementInfo, PenKeyOperationOptions, ComponentEventOptions, MouseButton, On } from 'kits/@kit.TestKit';
-```
-
 ## originalText
 
 ```TypeScript
@@ -39,5 +33,5 @@ Specifies the original text for the target Component.If the accessibility proper
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 17000007 | Parameter verification failed. |
+| [17000007](../errorcode-uitest.md#17000007-参数不合法) | Parameter verification failed. |
 

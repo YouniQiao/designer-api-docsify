@@ -12,7 +12,7 @@ import { inputMethodSystemPanelManager } from 'kits/@kit.IMEKit';
 function offSystemPanelStatusChange(callback?: Callback<SystemPanelStatus>): void
 ```
 
-取消订阅系统面板状态改变事件。
+Unsubscribe from the system panel status change event.
 
 **Since:** 26.0.0
 
@@ -30,11 +30,11 @@ function offSystemPanelStatusChange(callback?: Callback<SystemPanelStatus>): voi
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;SystemPanelStatus&gt; | No | 当系统面板状态改变时触发的回调。 |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;SystemPanelStatus&gt; | No | callback triggered when the system panel status changes. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 202 | not system application. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | not system application. |
 

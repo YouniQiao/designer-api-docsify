@@ -20,7 +20,7 @@ areaChangePlaceholder?: Record<string, ComponentContent>
 
 默认值：null，表示不设置尺寸变化占位符。
 
-**类型：** [Record](../../apis-default/arkts-apis/arkts-record-t.md)&lt;string, ComponentContent&gt;
+**类型：** Record&lt;string, ComponentContent&gt;
 
 **起始版本：** 26.0.0
 
@@ -44,7 +44,7 @@ dpiFollowStrategy?: EmbeddedDpiFollowStrategy
 
 默认值：FOLLOW_UI_EXTENSION_ABILITY_DPI，表示跟随EmbeddedUIExtensionAbility。
 
-**类型：** [EmbeddedDpiFollowStrategy](../arkts-apis/arkts-arkui-embeddedcomponent-embeddeddpifollowstrategy-e.md)
+**类型：** [EmbeddedDpiFollowStrategy](arkts-arkui-embeddeddpifollowstrategy-e.md)
 
 **默认值：** EmbeddedDpiFollowStrategy.FOLLOW_UI_EXTENSION_ABILITY_DPI
 
@@ -94,7 +94,7 @@ windowModeFollowStrategy?: EmbeddedWindowModeFollowStrategy
 
 默认值：FOLLOW_UI_EXTENSION_ABILITY_WINDOW_MODE，表示窗口模式跟随EmbeddedUIExtensionAbility。
 
-**类型：** [EmbeddedWindowModeFollowStrategy](../arkts-apis/arkts-arkui-embeddedcomponent-embeddedwindowmodefollowstrategy-e.md)
+**类型：** [EmbeddedWindowModeFollowStrategy](arkts-arkui-embeddedwindowmodefollowstrategy-e.md)
 
 **默认值：** EmbeddedWindowModeFollowStrategy.FOLLOW_UI_EXTENSION_ABILITY_WINDOW_MODE
 

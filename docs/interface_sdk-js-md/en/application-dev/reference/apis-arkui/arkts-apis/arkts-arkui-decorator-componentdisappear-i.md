@@ -1,6 +1,6 @@
 # ComponentDisappear
 
-定义ComponentDisappear方法装饰器。
+Define ComponentDisappear Method Decorator.
 
 **Since:** 24
 

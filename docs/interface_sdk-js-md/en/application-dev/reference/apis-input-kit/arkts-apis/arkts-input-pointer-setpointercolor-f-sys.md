@@ -12,11 +12,11 @@ import { pointer } from 'kits/@kit.InputKit';
 function setPointerColor(color: int, callback: AsyncCallback<void>): void
 ```
 
-设置鼠标光标颜色，使用callback异步回调。
+Sets the mouse pointer color. This API uses an asynchronous callback to return the result.
 
-> **说明：**
+> **NOTE：**
 > 
-> 设置和调试时，需连接外部设备，如鼠标、蓝牙等。
+> When performing this operation, you need to connect an external device, such as a mouse or Bluetooth device.
 
 **Since:** 10
 
@@ -32,15 +32,15 @@ function setPointerColor(color: int, callback: AsyncCallback<void>): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| color | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | 鼠标光标颜色，默认为黑色：0x000000。 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | 回调函数。当设置成功，err为undefined，否则为错误对象。 |
+| color | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | Pointer color. The default value is **black** (0x000000). |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined**. Otherwise, **err** is an error object. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; 3. Parameter verification failed. |
-| 202 | SystemAPI permission error. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; 3. Parameter verification failed. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | SystemAPI permission error. |
 
 ## Examples
 
@@ -56,16 +56,15 @@ struct Index {
       Text()
         .onClick(() => {
           try {
-            // Set the mouse pointer color.
             pointer.setPointerColor(0xF6C800, (error: BusinessError) => {
               if (error) {
-                console.error(`Failed to set pointer color, Code: ${(error as BusinessError).code}, message: ${(error as BusinessError).message}.`);
+                console.error(`setPointerColor failed, error: ${JSON.stringify(error, [`code`, `message`])}`);
                 return;
               }
-              console.info(`Succeeded in setting pointer color.`);
+              console.info(`setPointerColor success`);
             });
           } catch (error) {
-            console.error(`Failed to set pointer color, Code: ${(error as BusinessError).code}, message: ${(error as BusinessError).message}.`);
+            console.error(`setPointerColor failed, error: ${JSON.stringify(error, [`code`, `message`])}`);
           }
         })
     }
@@ -80,11 +79,11 @@ struct Index {
 function setPointerColor(color: int): Promise<void>
 ```
 
-设置鼠标光标颜色，使用Promise异步回调。
+Sets the mouse pointer color. This API uses a promise to return the result.
 
-> **说明：**
+> **NOTE：**
 > 
-> 设置和调试时，需连接外部设备，如鼠标、蓝牙等。
+> When performing this operation, you need to connect an external device, such as a mouse or Bluetooth device.
 
 **Since:** 10
 
@@ -100,20 +99,20 @@ function setPointerColor(color: int): Promise<void>
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| color | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | 鼠标光标颜色，默认为黑色：0x000000。 |
+| color | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | Pointer color. The default value is **black** (0x000000). |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise对象，无返回结果。 |
+| Promise&lt;void&gt; | Promise that returns no value. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; 3. Parameter verification failed. |
-| 202 | SystemAPI permission error. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; 3. Parameter verification failed. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | SystemAPI permission error. |
 
 ## Examples
 
@@ -129,14 +128,13 @@ struct Index {
       Text()
         .onClick(() => {
           try {
-            // Set the mouse pointer color.
             pointer.setPointerColor(0xF6C800).then(() => {
-              console.info(`Succeeded in setting pointer color.`);
+              console.info(`setPointerColor success`);
             }).catch((error: BusinessError) => {
-              console.error(`Failed to set pointer color, Code: ${(error as BusinessError).code}, message: ${(error as BusinessError).message}.`);
+              console.error(`Set pointer color failed, error: ${JSON.stringify(error, [`code`, `message`])}`);
             })
           } catch (error) {
-            console.error(`Failed to set pointer color, Code: ${(error as BusinessError).code}, message: ${(error as BusinessError).message}.`);
+            console.error(`setPointerColor failed, error: ${JSON.stringify(error, [`code`, `message`])}`);
           }
         })
     }

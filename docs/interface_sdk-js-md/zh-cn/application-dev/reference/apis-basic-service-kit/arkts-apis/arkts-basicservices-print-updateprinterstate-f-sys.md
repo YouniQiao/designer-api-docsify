@@ -1,11 +1,5 @@
 # updatePrinterState（系统接口）
 
-## 导入模块
-
-```TypeScript
-import { print } from 'kits/@kit.BasicServicesKit';
-```
-
 ## updatePrinterState
 
 ```TypeScript
@@ -38,25 +32,25 @@ function updatePrinterState(printerId: string, state: PrinterState, callback: As
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
-| 201 | the application does not have permission to call this function. |
-| 202 | not system application |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
+| [201](../../errorcode-universal.md#201-权限校验失败) | the application does not have permission to call this function. |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | not system application |
 
 ## 示例
 
 ```TypeScript
 import { print } from '@kit.BasicServicesKit';
-import { BusinessError } from '@kit.BasicServicesKit';
+import { BusinessError } from '@ohos.base';
 
 let printerId : string = '1212';
 let state : print.PrinterState = print.PrinterState.PRINTER_CONNECTED;
-print.updatePrinterState(printerId, state, (error: BusinessError) => {
-    if (error) {
-        console.error(`Failed to update printer state. Code: ${error.code}, message: ${error.message}`);
+print.updatePrinterState(printerId, state, (err: BusinessError) => {
+    if (err) {
+        console.error('updatePrinterState failed, because : ' + JSON.stringify(err));
     } else {
         console.info('updatePrinterState success');
     }
-});
+})
 ```
 
 
@@ -97,22 +91,22 @@ function updatePrinterState(printerId: string, state: PrinterState): Promise<voi
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
-| 201 | the application does not have permission to call this function. |
-| 202 | not system application |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
+| [201](../../errorcode-universal.md#201-权限校验失败) | the application does not have permission to call this function. |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | not system application |
 
 ## 示例
 
 ```TypeScript
 import { print } from '@kit.BasicServicesKit';
-import { BusinessError } from '@kit.BasicServicesKit';
+import { BusinessError } from '@ohos.base';
 
 let printerId : string = '1212';
 let state : print.PrinterState = print.PrinterState.PRINTER_CONNECTED;
 print.updatePrinterState(printerId, state).then(() => {
     console.info('update printer state success');
 }).catch((error: BusinessError) => {
-    console.error(`Failed to update printer state. Code: ${error.code}, message: ${error.message}`);
-});
+    console.error('update printer state error : ' + JSON.stringify(error));
+})
 ```
 

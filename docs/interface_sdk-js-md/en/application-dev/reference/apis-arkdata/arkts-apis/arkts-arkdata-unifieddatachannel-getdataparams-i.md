@@ -1,8 +1,9 @@
 # GetDataParams
 
-表示从UDMF获取数据时的参数，包含目标路径、文件冲突选项、进度条类型等。
+Represents the parameters for obtaining data from UDMF, including the destination directory, option for resolving file conflicts, and progress indicator type.
 
-具体使用示例可见[拖拽异步获取数据]。
+For details, see   
+[Obtaining Data Asynchronously Through Drag-and-Drop].
 
 **Since:** 15
 
@@ -24,7 +25,7 @@ import { unifiedDataChannel } from 'kits/@kit.ArkData';
 dataProgressListener: DataProgressListener
 ```
 
-表示获取统一数据时的进度和数据监听器。
+Indicates progress and data listener when getting unified data.
 
 **Since:** 15
 
@@ -44,7 +45,7 @@ dataProgressListener: DataProgressListener
 acceptableInfo?: DataLoadInfo
 ```
 
-定义接收方对数据类型和数据记录数量的接收能力。延迟加载场景下，发送方可根据此信息生成并返回更合适的数据内容。默认为空，不提供接收方数据接收能力。
+Indicates the supported data information.
 
 **Type:** [DataLoadInfo](arkts-arkdata-unifieddatachannel-dataloadinfo-i.md)
 
@@ -66,7 +67,7 @@ acceptableInfo?: DataLoadInfo
 destUri?: string
 ```
 
-拷贝文件的目标路径。若不支持文件处理，则不需要设置此参数，默认为空；若支持文件处理，须设置一个已经存在的目录。若应用涉及复杂文件处理策略或需要区分文件多路径存储，建议不设置此参数，由应用自行完成文件copy处理。不填写时获取到的uri为源端路径URI，填写后获取到的uri为目标路径uri。
+Indicates the dest path uri where copy file will be copied to sandbox of application.
 
 **Type:** string
 
@@ -88,7 +89,7 @@ destUri?: string
 fileConflictOptions?: FileConflictOptions
 ```
 
-定义文件拷贝冲突时的选项，默认为OVERWRITE。
+Indicates file conflict options when dest path has file with same name.
 
 **Type:** [FileConflictOptions](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-pasteboard-fileconflictoptions-e.md)
 
@@ -110,7 +111,7 @@ fileConflictOptions?: FileConflictOptions
 progressIndicator: ProgressIndicator
 ```
 
-定义进度条指示选项，可选择是否采用系统默认进度显示。
+Indicates whether to use default system progress indicator.
 
 **Type:** [ProgressIndicator](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-pasteboard-progressindicator-e.md)
 

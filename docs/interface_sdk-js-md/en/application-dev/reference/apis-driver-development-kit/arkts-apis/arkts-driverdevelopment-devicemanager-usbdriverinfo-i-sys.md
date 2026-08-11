@@ -1,6 +1,7 @@
 # USBDriverInfo (System API)
 
-USB设备驱动详细信息，继承自[DriverInfo](arkts-driverdevelopment-devicemanager-driverinfo-i-sys.md)。
+Defines detailed information about the USB device driver. It is inherited from  
+[DriverInfo](arkts-driverdevelopment-devicemanager-driverinfo-i-sys.md).
 
 **Inheritance/Implementation:** USBDriverInfo extends [DriverInfo](arkts-driverdevelopment-devicemanager-driverinfo-i-sys.md)
 
@@ -26,7 +27,7 @@ import { deviceManager } from 'kits/@kit.DriverDevelopmentKit';
 productIdList: Array<int>
 ```
 
-驱动支持的USB设备product ID列表。
+Product ID list of the USB devices supported by the driver.
 
 **Type:** ArkTS-Dyn: Array&lt;number&gt;  <br>ArkTS-Sta：Array&lt;int&gt;
 
@@ -46,7 +47,7 @@ productIdList: Array<int>
 vendorIdList: Array<int>
 ```
 
-驱动支持的USB设备vendor ID列表。
+Vendor ID list of the USB devices supported by the driver.
 
 **Type:** ArkTS-Dyn: Array&lt;number&gt;  <br>ArkTS-Sta：Array&lt;int&gt;
 

@@ -1,6 +1,6 @@
 # Matrix2D
 
-2D变换矩阵，支持X轴和Y轴的旋转、平移和缩放。
+2D transformation matrix, supporting rotation, translation, and scaling of the X-axis and Y-axis
 
 **Since:** 11
 
@@ -16,7 +16,7 @@
 constructor()
 ```
 
-构造二维变换矩阵对象，默认值是属性全为0的矩阵。
+Constructs a 2D change matrix object. The default value is the unit matrix.
 
 **Since:** 11
 
@@ -38,7 +38,7 @@ constructor()
 identity(): Matrix2D
 ```
 
-创建单位矩阵。
+Transforms the current 2D matrix back to the identity matrix (i.e., without any rotational translation scaling effect)
 
 **Since:** 11
 
@@ -66,7 +66,7 @@ identity(): Matrix2D
 invert(): Matrix2D
 ```
 
-获取当前矩阵的逆矩阵。
+Transform the current 2D matrix into an inverse matrix (that is, the transformation effect is the opposite effect of the original)
 
 **Since:** 11
 
@@ -94,7 +94,7 @@ invert(): Matrix2D
 multiply(other?: Matrix2D): Matrix2D
 ```
 
-当前矩阵与目标矩阵相乘。
+The matrix is superimposed in right multiplication mode. When the input parameter is empty,the matrix is superimposed.
 
 **Since:** 11
 
@@ -114,7 +114,7 @@ multiply(other?: Matrix2D): Matrix2D
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| other | [Matrix2D](arkts-arkui-matrix2d-c.md) | No | 目标矩阵。&lt;br/&gt;异常值undefined和null按无效值处理。&lt;br/&gt;默认值：null |
+| other | [Matrix2D](arkts-arkui-matrix2d-c.md) | No | Matrix to be superimposed |
 
 **Return value:**
 
@@ -128,7 +128,7 @@ multiply(other?: Matrix2D): Matrix2D
 rotate(rx?: number, ry?: number): Matrix2D
 ```
 
-对当前矩阵进行旋转运算。
+Adds the rotation effect of the X and Y axes to the current matrix.
 
 **Since:** 11
 
@@ -148,8 +148,8 @@ rotate(rx?: number, ry?: number): Matrix2D
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| rx | number | No | 旋转点的水平方向坐标，取值范围无限制。&lt;br/&gt;异常值undefined和null按无效值处理，NaN和Infinity会导致Matrix2D异常。&lt;br/&gt;默认单位：vp |
-| ry | number | No | 旋转点的垂直方向坐标，取值范围无限制。&lt;br/&gt;异常值undefined和null按无效值处理，NaN和Infinity会导致Matrix2D异常。&lt;br/&gt;默认单位：vp |
+| rx | number | No | Rotation effect of the X axis |
+| ry | number | No | Rotation effect of the Y-axis |
 
 **Return value:**
 
@@ -163,7 +163,7 @@ rotate(rx?: number, ry?: number): Matrix2D
 scale(sx?: number, sy?: number): Matrix2D
 ```
 
-对当前矩阵进行右乘缩放运算。
+Adds the scaling effect of the X and Y axes to the current matrix.
 
 **Since:** 11
 
@@ -183,8 +183,8 @@ scale(sx?: number, sy?: number): Matrix2D
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| sx | number | No | 水平缩放比例系数，取值范围无限制。&lt;br/&gt;异常值undefined和null按无效值处理，NaN和Infinity会导致Matrix2D异常。&lt;br/&gt;默认值：1.0 |
-| sy | number | No | 垂直缩放比例系数，取值范围无限制。&lt;br/&gt;异常值undefined和null按无效值处理，NaN和Infinity会导致Matrix2D异常。&lt;br/&gt;默认值：1.0 |
+| sx | number | No | X-axis scaling effect |
+| sy | number | No | Y-axis scaling effect |
 
 **Return value:**
 
@@ -198,7 +198,7 @@ scale(sx?: number, sy?: number): Matrix2D
 translate(tx?: number, ty?: number): Matrix2D
 ```
 
-对当前矩阵进行左乘平移运算。
+Adds the translation effect of the X and Y axes to the current matrix.
 
 **Since:** 11
 
@@ -218,8 +218,8 @@ translate(tx?: number, ty?: number): Matrix2D
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| tx | number | No | 水平方向平移距离，取值范围无限制。&lt;br/&gt;异常值undefined和null按无效值处理，NaN和Infinity会导致Matrix2D异常。&lt;br/&gt;默认单位：vp&lt;br/&gt;默认值：0 |
-| ty | number | No | 垂直方向平移距离，取值范围无限制。&lt;br/&gt;异常值undefined和null按无效值处理，NaN和Infinity会导致Matrix2D异常。&lt;br/&gt;默认单位：vp&lt;br/&gt;默认值：0 |
+| tx | number | No | X-axis translation effect |
+| ty | number | No | Y-axis translation effect |
 
 **Return value:**
 
@@ -233,7 +233,7 @@ translate(tx?: number, ty?: number): Matrix2D
 rotateX?: number
 ```
 
-水平倾斜系数，取值范围无限制。&lt;br/&gt;异常值undefined按无效值处理，NaN和Infinity会导致Matrix2D异常，设置后绘制内容不显示。
+Horizontal Tilt
 
 **Type:** number
 
@@ -257,7 +257,7 @@ rotateX?: number
 rotateY?: number
 ```
 
-垂直倾斜系数，取值范围无限制。&lt;br/&gt;异常值undefined按无效值处理，NaN和Infinity会导致Matrix2D异常，设置后绘制内容不显示。
+Vertical Tilt
 
 **Type:** number
 
@@ -281,7 +281,7 @@ rotateY?: number
 scaleX?: number
 ```
 
-水平缩放系数，取值范围无限制。&lt;br/&gt;异常值undefined按无效值处理，NaN和Infinity会导致Matrix2D异常，设置后绘制内容不显示。
+Horizontal Zoom
 
 **Type:** number
 
@@ -305,7 +305,7 @@ scaleX?: number
 scaleY?: number
 ```
 
-垂直缩放系数，取值范围无限制。&lt;br/&gt;异常值undefined按无效值处理，NaN和Infinity会导致Matrix2D异常，设置后绘制内容不显示。
+Vertical Zoom
 
 **Type:** number
 
@@ -329,7 +329,7 @@ scaleY?: number
 translateX?: number
 ```
 
-水平平移距离，取值范围无限制。&lt;br/&gt;异常值undefined按无效值处理，NaN和Infinity会导致Matrix2D异常，设置后绘制内容不显示。&lt;br/&gt;默认单位：vp
+Horizontal movement
 
 **Type:** number
 
@@ -353,7 +353,7 @@ translateX?: number
 translateY?: number
 ```
 
-垂直平移距离，取值范围无限制。&lt;br/&gt;异常值undefined按无效值处理，NaN和Infinity会导致Matrix2D异常，设置后绘制内容不显示。&lt;br/&gt;默认单位：vp
+Vertical movement
 
 **Type:** number
 

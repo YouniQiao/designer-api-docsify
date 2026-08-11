@@ -97,6 +97,7 @@ Enumerates the screen capture modes.
 | OH_CAPTURE_HOME_SCREEN = 0 | capture home screen |
 | OH_CAPTURE_SPECIFIED_SCREEN = 1 | capture a specified screen |
 | OH_CAPTURE_SPECIFIED_WINDOW = 2 | capture a specified window |
+| OH_CAPTURE_VIRTUAL_EXTENDED_SCREEN = 3 | Create a virtual extended screen and capture the contents of that screen<br>**Since**: 26.1.0 |
 
 ### OH_AudioCaptureSourceType
 

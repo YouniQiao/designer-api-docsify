@@ -49,7 +49,7 @@ Unsubscribes from depth data availability events.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 202 | Not System Application. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not System Application. |
 
 ## Examples
 
@@ -97,7 +97,7 @@ Unsubscribes from DepthDataOutput error events.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 202 | Not System Application. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not System Application. |
 
 ## Examples
 
@@ -135,7 +135,7 @@ Unsubscribes from depth data objects available event callback.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 202 | Not System Application. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not System Application. |
 
 ## offError
 
@@ -165,7 +165,7 @@ Unsubscribes from error events.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 202 | Not System Application. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not System Application. |
 
 ## on('depthDataAvailable')
 
@@ -200,7 +200,7 @@ Subscribes to depth data availability events. This API uses an asynchronous call
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 202 | Not System Application. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not System Application. |
 
 ## Examples
 
@@ -252,7 +252,7 @@ Subscribes to DepthDataOutput error events. This API uses an asynchronous callba
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 202 | Not System Application. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not System Application. |
 
 ## Examples
 
@@ -296,7 +296,7 @@ Subscribes to depth data objects available event callback.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 202 | Not System Application. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not System Application. |
 
 ## onError
 
@@ -326,7 +326,7 @@ Subscribes to error events.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 202 | Not System Application. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not System Application. |
 
 ## start
 
@@ -356,9 +356,9 @@ Starts depth data output. This API uses a promise to return the result.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 7400103 | Session not config. |
-| 7400201 | Camera service fatal error. |
-| 202 | Not System Application. |
+| [7400103](../errorcode-camera.md#7400103-session-not-configured) | Session not config. |
+| [7400201](../errorcode-camera.md#7400201-camera-service-error) | Camera service fatal error. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not System Application. |
 
 ## Examples
 
@@ -402,9 +402,9 @@ Stops depth data output. This API uses a promise to return the result.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 7400103 | Session not config. |
-| 7400201 | Camera service fatal error. |
-| 202 | Not System Application. |
+| [7400103](../errorcode-camera.md#7400103-session-not-configured) | Session not config. |
+| [7400201](../errorcode-camera.md#7400201-camera-service-error) | Camera service fatal error. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not System Application. |
 
 ## Examples
 

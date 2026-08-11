@@ -38,11 +38,11 @@ Updates the size of the widget.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 16501001 | The ID of the form to be operated does not exist. |
-| 16501000 | An internal functional error occurred. |
-| 201 | Permissions denied. |
-| 202 | caller is not system app. |
-| 16501012 | The dimension parameter is incorrect |
+| [16501001](../errorcode-form.md#16501001-widget-id-not-exist) | The ID of the form to be operated does not exist. |
+| [16501000](../errorcode-form.md#16501000-internal-function-error) | An internal functional error occurred. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permissions denied. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | caller is not system app. |
+| [16501012](../errorcode-form.md#16501012-incorrect-widget-dimension) | The dimension parameter is incorrect |
 
 ## Examples
 

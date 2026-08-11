@@ -1,11 +1,5 @@
 # unregister
 
-## 导入模块
-
-```TypeScript
-import { continuationManager } from 'kits/@kit.AbilityKit';
-```
-
 ## unregister
 
 ```TypeScript

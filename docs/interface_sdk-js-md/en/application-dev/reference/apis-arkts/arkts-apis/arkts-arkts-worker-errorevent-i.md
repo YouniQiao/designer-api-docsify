@@ -1,6 +1,6 @@
 # ErrorEvent
 
-错误事件类用于表示Worker执行过程中出现异常的详细信息，ErrorEvent类继承Event。
+Provides detailed information about the exception that occurs during worker execution. The ErrorEvent class inherits from Event.
 
 **Inheritance/Implementation:** ErrorEvent extends [Event](arkts-arkts-worker-event-i.md)
 
@@ -24,7 +24,7 @@ import { MessageEvents, PostMessageOptions, MessageEvent, Priority, WorkerEventT
 readonly colno: number
 ```
 
-异常所在的列数。
+Serial number of the column where the exception is located.
 
 **Type:** number
 
@@ -44,7 +44,7 @@ readonly colno: number
 readonly error: Object
 ```
 
-异常类型。
+Type of the exception.
 
 **Type:** Object
 
@@ -64,7 +64,7 @@ readonly error: Object
 readonly filename: string
 ```
 
-出现异常所在的文件。
+File where the exception is located.
 
 **Type:** string
 
@@ -84,7 +84,7 @@ readonly filename: string
 readonly lineno: number
 ```
 
-异常所在的行数。
+Serial number of the line where the exception is located.
 
 **Type:** number
 
@@ -104,7 +104,7 @@ readonly lineno: number
 readonly message: string
 ```
 
-异常发生的错误信息。
+Information about the exception.
 
 **Type:** string
 

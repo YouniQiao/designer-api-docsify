@@ -1,6 +1,6 @@
 # SceneOptions
 
-3D场景控制使用的场景选项
+Scene options used by 3D scene control
 
 **Since:** 23
 
@@ -16,11 +16,11 @@
 modelType?: ModelType
 ```
 
-3D渲染时的场景类型
+Scene type when 3D rendering
 
 **Type:** [ModelType](../arkts-components/arkts-arkui-modeltype-e.md)
 
-**Default:** ModelType.SURFACE 表面模型类型
+**Default:** ModelType.SURFACE
 
 **Since:** 23
 
@@ -36,7 +36,7 @@ modelType?: ModelType
 scene?: ResourceStr | Scene
 ```
 
-3D渲染时为ResourceStr类型，3D场景控制时为Scene类型
+ResourceStr type for 3D rendering, Scene type for 3d scene controlling
 
 **Type:** [ResourceStr](arkts-arkui-resourcestr-t.md) \| Scene
 

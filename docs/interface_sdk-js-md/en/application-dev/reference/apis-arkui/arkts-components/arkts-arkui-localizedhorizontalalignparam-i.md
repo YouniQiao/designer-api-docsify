@@ -16,7 +16,7 @@ Defines the localized horizontal align param of relative container.
 align: HorizontalAlign
 ```
 
-The align of localized align param.
+Horizontal alignment mode relative to the anchor component.
 
 **Type:** [HorizontalAlign](../arkts-apis/arkts-arkui-horizontalalign-e.md)
 
@@ -38,7 +38,7 @@ The align of localized align param.
 anchor: string
 ```
 
-The anchor of localized align param.
+ID of the component that serves as the anchor.
 
 **Type:** string
 

@@ -1,6 +1,6 @@
 # ParticlePropertyUpdaterConfigs
 
-设置粒子属性更新器配置。
+Defines the particle property updater configs.
 
 **Since:** 10
 
@@ -16,7 +16,7 @@
 [ParticleUpdater.CURVE]: Array<ParticlePropertyAnimation<T>>
 ```
 
-表示变化方式为曲线变化时，属性变化的配置。数组类型表示当前属性可以设置多段动画，如0ms-3000ms，3000ms-5000ms，5000ms-8000ms分别设置动画。T为number。
+The property changes with the animation curve. The array type indicates that multiple animation segments can be set for the current property, for example, 0-3000 ms, 3000-5000 ms, and 5000-8000 ms. **T** represents a number.
 
 **Type:** Array&lt;ParticlePropertyAnimation&lt;T&gt;&gt;
 
@@ -38,7 +38,7 @@
 [ParticleUpdater.NONE]: void
 ```
 
-无变化。
+No effect of particle updater.
 
 **Type:** void
 
@@ -60,19 +60,17 @@
 [ParticleUpdater.RANDOM]: ParticleTuple<T, T>
 ```
 
-表示变化方式为匀速变化时，每秒的变化差值为设置区间随机生成的值。
+The property changes randomly, with the per-second change difference being a value randomly generated from the range.
 
-目标属性值为当前属性值叠加变化差值。如当前属性值为0.2，config取[0.1,1.0]:
+The target property value is obtained by applying the change difference to the current property value. For example,if the current property value is **0.2** and **config** is set to **[0.1,1.0]**, then:
 
-1、如果变化差值在区间[0.1,1.0]取随机值0.5，则目标属性值为0.2+0.5 = 0.7；
+1. When the random change difference is 0.5, the target property value is 0.2 + 0.5 = 0.7.2. The change difference may also be a negative value. For example, if the current property value is **0.2** and **config** is set to **[-3.0,2.0]**, then when the random change difference is **-2.0**,the target property value is 0.2 - 2.0 = -1.8.
 
-2、变化差值也可以取负值。如当前属性值为0.2，config为 [-3.0,2.0],如果变化差值在区间[-3.0,2.0]取随机值-2.0，则目标属性值为0.2-2.0 = -1.8。
+**NOTE：**
 
-**说明：**
+**config** sets the value range of the change difference. While the change difference does not have a maximum or minimum value limit, the target property value does. Therefore, if the target property value is greater than the maximum property value, the maximum property value will be used instead; if the target property value is less than the minimum property value, the minimum property value will be used instead. **T** represents a number.
 
-config配置的是变化差值的取值范围，差值的最大最小值没有约束。但是如果当前属性值叠加差值大于属性最大值，目标属性值取属性最大值；如果当前属性值叠加差值小于属性最小值，目标属性值取属性最小值。T为number。
-
-例如：opacity的取值范围[0.0,1.0]则当当前属性值叠加差值超过1.0，则取1.0。
+For example, if the value range of **opacity** is **[0.0, 1.0]**, then if the target property value is greater than1.0, **1.0** will be used instead.
 
 **Type:** [ParticleTuple](../arkts-apis/arkts-arkui-particletuple-t.md)&lt;T, T&gt;
 

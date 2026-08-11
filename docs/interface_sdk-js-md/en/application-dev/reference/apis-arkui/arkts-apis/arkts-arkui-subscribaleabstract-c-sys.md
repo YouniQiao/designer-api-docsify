@@ -1,6 +1,6 @@
 # SubscribaleAbstract (System API)
 
-可订阅抽象类，用于管理所持有的属性集合，提供属性的添加、删除和变更通知能力。
+Defines the Subscribale base class.
 
 **Since:** 7
 
@@ -18,7 +18,7 @@
 public addOwningProperty(subscriber: IPropertySubscriber): void
 ```
 
-添加持有的属性。属性不再使用时，应调用[removeOwningProperty](arkts-arkui-subscribaleabstract-c-sys.md#removeowningproperty)或[removeOwningPropertyById](arkts-arkui-subscribaleabstract-c-sys.md#removeowningpropertybyid)移除。
+Adds a subscriber to the list of owned properties.
 
 **Since:** 7
 
@@ -34,7 +34,7 @@ public addOwningProperty(subscriber: IPropertySubscriber): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| subscriber | [IPropertySubscriber](arkts-arkui-ipropertysubscriber-i-sys.md) | Yes | 要添加的订阅者，该订阅者将接收属性变化通知。 |
+| subscriber | [IPropertySubscriber](arkts-arkui-ipropertysubscriber-i-sys.md) | Yes | Subscriber. |
 
 ## constructor
 
@@ -42,7 +42,7 @@ public addOwningProperty(subscriber: IPropertySubscriber): void
 constructor()
 ```
 
-构造函数。
+Constructor.
 
 **Since:** 7
 
@@ -60,7 +60,7 @@ constructor()
 protected notifyPropertyHasChanged(propName: string, newValue: any): void
 ```
 
-通知属性更改时调用。
+Notify subscribers that a property value has changed.
 
 **Since:** 7
 
@@ -76,8 +76,8 @@ protected notifyPropertyHasChanged(propName: string, newValue: any): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| propName | string | Yes | 要通知变更的属性名称。 |
-| newValue | any | Yes | 更改后的新值。 |
+| propName | string | Yes | Property name. |
+| newValue | any | Yes | New value after the change. |
 
 ## removeOwningProperty
 
@@ -85,7 +85,7 @@ protected notifyPropertyHasChanged(propName: string, newValue: any): void
 public removeOwningProperty(property: IPropertySubscriber): void
 ```
 
-使用ID删除持有的属性时调用。
+Removes a subscriber from the list of owned properties.
 
 **Since:** 7
 
@@ -101,7 +101,7 @@ public removeOwningProperty(property: IPropertySubscriber): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| property | [IPropertySubscriber](arkts-arkui-ipropertysubscriber-i-sys.md) | Yes | 要删除的订阅者， 需为已通过[addOwningProperty](arkts-arkui-subscribaleabstract-c-sys.md#addowningproperty)添加的订阅者。 |
+| property | [IPropertySubscriber](arkts-arkui-ipropertysubscriber-i-sys.md) | Yes | Subscriber to remove. |
 
 ## removeOwningPropertyById
 
@@ -109,7 +109,7 @@ public removeOwningProperty(property: IPropertySubscriber): void
 public removeOwningPropertyById(subscriberId: number): void
 ```
 
-使用ID删除持有的属性时调用。
+Removes a subscriber from the list of owned properties by ID.
 
 **Since:** 7
 
@@ -125,7 +125,7 @@ public removeOwningPropertyById(subscriberId: number): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| subscriberId | number | Yes | 要删除的订阅者ID， 需为已通过[addOwningProperty](arkts-arkui-subscribaleabstract-c-sys.md#addowningproperty)添加的订阅者ID， 通过[IPropertySubscriber](arkts-arkui-ipropertysubscriber-i-sys.md).[id()](arkts-arkui-ipropertysubscriber-i-sys.md#id)方法获取。 |
+| subscriberId | number | Yes | ID of the subscriber to remove. |
 
 ## owningProperties_
 
@@ -133,7 +133,7 @@ public removeOwningPropertyById(subscriberId: number): void
 private owningProperties_: Set<number>
 ```
 
-所持有的属性集合。
+A set of property IDs that this instance owns.
 
 **Type:** Set&lt;number&gt;
 

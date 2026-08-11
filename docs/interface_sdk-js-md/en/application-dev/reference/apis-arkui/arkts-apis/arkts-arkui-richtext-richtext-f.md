@@ -9,7 +9,7 @@ export declare function RichText(
 ): RichTextAttribute
 ```
 
-定义RichText组件。
+Defines RichText Component.
 
 **Since:** 23
 

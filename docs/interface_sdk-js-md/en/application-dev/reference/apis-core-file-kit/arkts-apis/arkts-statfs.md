@@ -1,6 +1,6 @@
 # @ohos.statfs
 
-该模块提供文件系统相关存储信息的功能，向应用程序提供获取文件系统总字节数、空闲字节数的JS接口。
+The **statfs** module provides APIs for obtaining file system information, including the total size and free size of a file system, in bytes.
 
 **Since:** 8
 
@@ -20,8 +20,8 @@
 
 | Name | Description |
 | --- | --- |
-| [getFreeBytes](arkts-corefile-statfs-getfreebytes-depr-f.md#getfreebytes) | 异步方法获取指定文件系统空闲字节数，使用callback形式返回结果。 |
-| [getFreeBytes](arkts-corefile-statfs-getfreebytes-depr-f.md#getfreebytes-1) | 异步方法获取指定文件系统空闲字节数，以Promise形式返回结果。 |
-| [getTotalBytes](arkts-corefile-statfs-gettotalbytes-depr-f.md#gettotalbytes) | 异步方法获取指定文件系统总字节数，使用callback形式返回结果。 |
-| [getTotalBytes](arkts-corefile-statfs-gettotalbytes-depr-f.md#gettotalbytes-1) | 异步方法获取指定文件系统总字节数，以Promise形式返回结果。 |
+| [getFreeBytes](arkts-corefile-statfs-getfreebytes-depr-f.md#getfreebytes) | Obtains the free size of the specified file system, in bytes. This API uses an asynchronous callback to return the result. |
+| [getFreeBytes](arkts-corefile-statfs-getfreebytes-depr-f.md#getfreebytes-1) | Obtains the free size of the specified file system, in bytes. This API uses a promise to return the result. |
+| [getTotalBytes](arkts-corefile-statfs-gettotalbytes-depr-f.md#gettotalbytes) | Obtains the total size of the specified file system, in bytes. This API uses an asynchronous callback to return the result. |
+| [getTotalBytes](arkts-corefile-statfs-gettotalbytes-depr-f.md#gettotalbytes-1) | Obtains the total size of the specified file system, in byte. This API uses a promise to return the result. |
 

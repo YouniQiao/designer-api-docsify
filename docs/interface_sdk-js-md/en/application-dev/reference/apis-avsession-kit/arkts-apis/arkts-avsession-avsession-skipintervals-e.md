@@ -1,12 +1,6 @@
 # SkipIntervals
 
-表示session支持的快进快退时间间隔的枚举。
-
-| 名称 | 值 | 说明 |  
-| ---------------------- | -- | ----------------------- |  
-| SECONDS_10 | 10 | 时间为10秒。 |  
-| SECONDS_15 | 15 | 时间为15秒。 |  
-| SECONDS_30 | 30 | 时间为30秒。 |
+Supported skip intervals definition
 
 **Since:** 11
 
@@ -22,6 +16,8 @@
 SECONDS_10 = 10
 ```
 
+10 seconds
+
 **Since:** 11
 
 **ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
@@ -36,6 +32,8 @@ SECONDS_10 = 10
 SECONDS_15 = 15
 ```
 
+15 seconds
+
 **Since:** 11
 
 **ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
@@ -49,6 +47,8 @@ SECONDS_15 = 15
 ```TypeScript
 SECONDS_30 = 30
 ```
+
+30 seconds
 
 **Since:** 11
 

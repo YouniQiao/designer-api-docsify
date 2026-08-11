@@ -1,14 +1,14 @@
 # Counter
 
-计数器组件，提供增加或减少的计数操作。适用于商品数量选择、参数调整等需要频繁修改数值的场景，帮助用户快速直观地调整数值。
+The **Counter** component provides an operation to increase or decrease the number.
 
-> **说明：**
+> **NOTE**
 >
-> - 该组件从API版本26.0.0开始支持[WithTheme]{@link ./with_theme}。
+> - This component supports [WithTheme]{@link ./with_theme} since API version 26.0.0.
 
-## 子组件
+## Child Components
 
-可以包含子组件。
+Supported
 
 ## Counter
 
@@ -16,7 +16,7 @@
 Counter()
 ```
 
-创建计数器组件。
+Create Counter component.
 
 **Since:** 7
 

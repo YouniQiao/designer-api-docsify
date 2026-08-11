@@ -1,11 +1,5 @@
 # debug
 
-## 导入模块
-
-```TypeScript
-import { hilog } from 'kits/@kit.PerformanceAnalysisKit';
-```
-
 ## debug
 
 ```TypeScript

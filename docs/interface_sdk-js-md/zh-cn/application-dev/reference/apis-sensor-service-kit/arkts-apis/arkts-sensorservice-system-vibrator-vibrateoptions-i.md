@@ -21,12 +21,6 @@
 
 **系统能力：** SystemCapability.Sensors.MiscDevice.Lite
 
-## 导入模块
-
-```TypeScript
-import { VibrateOptions } from 'kits/@kit.SensorServiceKit';
-```
-
 ## complete
 
 ```TypeScript

@@ -10,12 +10,6 @@
 
 **系统能力：** SystemCapability.Communication.IPC.Core
 
-## 导入模块
-
-```TypeScript
-import { rpc } from 'kits/@kit.IPCKit';
-```
-
 ## closeFileDescriptor
 
 ArkTS-Dyn:
@@ -53,7 +47,7 @@ static closeFileDescriptor(fd: int): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1.The number of parameters is incorrect; 2.The parameter type does not match. |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1.The number of parameters is incorrect; 2.The parameter type does not match. |
 
 ## 示例
 
@@ -64,7 +58,7 @@ import { hilog } from '@kit.PerformanceAnalysisKit';
 import { BusinessError } from '@kit.BasicServicesKit';
 
 try {
-  let filePath = "path/to/file"; 
+  let filePath = "path/to/file";
   let file = fileIo.openSync(filePath, fileIo.OpenMode.READ_WRITE | fileIo.OpenMode.CREATE);
   rpc.MessageSequence.closeFileDescriptor(file.fd);
 } catch (error) {
@@ -151,7 +145,6 @@ import { hilog } from '@kit.PerformanceAnalysisKit';
 import { BusinessError } from '@kit.BasicServicesKit';
 
 try {
-  // 创建MessageSequence对象，用于在IPC/RPC通信中封装请求和响应数据。
   let data = rpc.MessageSequence.create();
   hilog.info(0x0000, 'testTag', 'data is ' + data);
 
@@ -209,8 +202,8 @@ static dupFileDescriptor(fd: int): int
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1.The number of parameters is incorrect; 2.The parameter type does not match. |
-| 1900013 | Failed to call dup. |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1.The number of parameters is incorrect; 2.The parameter type does not match. |
+| [1900013](../errorcode-rpc.md#1900013-系统调用dup失败) | Failed to call dup. |
 
 ## 示例
 
@@ -221,7 +214,7 @@ import { hilog } from '@kit.PerformanceAnalysisKit';
 import { BusinessError } from '@kit.BasicServicesKit';
 
 try {
-  let filePath = "path/to/file"; 
+  let filePath = "path/to/file";
   let file = fileIo.openSync(filePath, fileIo.OpenMode.READ_WRITE | fileIo.OpenMode.CREATE);
   rpc.MessageSequence.dupFileDescriptor(file.fd);
 } catch (error) {
@@ -585,7 +578,7 @@ readArrayBuffer(typeCode: TypeCode): ArrayBuffer
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| typeCode | [TypeCode](arkts-ipc-rpc-typecode-e.md) | 是 | ArrayBuffer数据具体是以哪一种TypedArray来访问和操作(会根据业务传递的类型枚举值去决定底层的读取方式，需要业务正确传递枚举值，读写枚举值不匹配会 导致数据异常。) |
+| typeCode | [TypeCode](arkts-ipc-rpc-typecode-e.md) | 是 | ArrayBuffer数据具体是以哪一种TypedArray来访问和操作(会根据业务传递的类型枚举值去决定底层的读取方式，需要业务正确传递枚举值， 读写枚举值不匹配会导致数据异常。) |
 
 **返回值：**
 
@@ -597,8 +590,8 @@ readArrayBuffer(typeCode: TypeCode): ArrayBuffer
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1.The number of parameters is incorrect; 2.The parameter type does not match; 3.The obtained value of typeCode is incorrect; |
-| 1900010 | Failed to read data from the message sequence. |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1.The number of parameters is incorrect; 2.The parameter type does not match; 3.The obtained value of typeCode is incorrect; |
+| [1900010](../errorcode-rpc.md#1900010-读取messagesequence数据失败) | Failed to read data from the message sequence. |
 
 ## 示例
 
@@ -655,13 +648,13 @@ readAshmem(): Ashmem
 
 | 类型 | 说明 |
 | --- | --- |
-| [Ashmem](arkts-ipc-rpc-ashmem-c.md) | 返回匿名共享对象，用于跨进程共享内存数据。读取数据前需先调用[mapReadWriteAshmem]{ |
+| [Ashmem](arkts-ipc-rpc-ashmem-c.md) | 返回匿名共享对象，用于跨进程共享内存数据。 读取数据前需先调用[mapReadWriteAshmem]{ |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 1900010 | Failed to read data from the message sequence. |
+| [1900010](../errorcode-rpc.md#1900010-读取messagesequence数据失败) | Failed to read data from the message sequence. |
 
 ## 示例
 
@@ -729,7 +722,7 @@ readBoolean(): boolean
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 1900010 | Failed to read data from the message sequence. |
+| [1900010](../errorcode-rpc.md#1900010-读取messagesequence数据失败) | Failed to read data from the message sequence. |
 
 ## 示例
 
@@ -776,8 +769,8 @@ readBooleanArray(dataIn: boolean[]): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1.The parameter is an empty array; 2.The number of parameters is incorrect; 3.The parameter type does not match. |
-| 1900010 | Failed to read data from the message sequence. |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1.The parameter is an empty array; 2.The number of parameters is incorrect; 3.The parameter type does not match. |
+| [1900010](../errorcode-rpc.md#1900010-读取messagesequence数据失败) | Failed to read data from the message sequence. |
 
 ## 示例
 
@@ -828,7 +821,7 @@ readBooleanArray(): boolean[]
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 1900010 | Failed to read data from the message sequence. |
+| [1900010](../errorcode-rpc.md#1900010-读取messagesequence数据失败) | Failed to read data from the message sequence. |
 
 ## 示例
 
@@ -884,7 +877,7 @@ readByte(): int
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 1900010 | Failed to read data from the message sequence. |
+| [1900010](../errorcode-rpc.md#1900010-读取messagesequence数据失败) | Failed to read data from the message sequence. |
 
 ## 示例
 
@@ -937,10 +930,12 @@ readByteArray(dataIn: int[]): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1.The parameter is an empty array; 2.The number of parameters is incorrect; 3.The parameter type does not match. |
-| 1900010 | Failed to read data from the message sequence. |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1.The parameter is an empty array; 2.The number of parameters is incorrect; 3.The parameter type does not match. |
+| [1900010](../errorcode-rpc.md#1900010-读取messagesequence数据失败) | Failed to read data from the message sequence. |
 
 ## 示例
+
+ArkTS-Dyn示例：
 
 ```TypeScript
 import { rpc } from '@kit.IPCKit';
@@ -950,9 +945,29 @@ import { BusinessError } from '@kit.BasicServicesKit';
 try {
   let data = rpc.MessageSequence.create();
   let ByteArrayVar = [1, 2, 3, 4, 5];
-  // 将字节数组写入MessageSequence对象
   data.writeByteArray(ByteArrayVar);
   let array: Array<number> = new Array(5);
+  data.readByteArray(array);
+  hilog.info(0x0000, 'testTag', 'readByteArray is  ' + array);
+} catch (error) {
+  let e: BusinessError = error as BusinessError;
+  hilog.error(0x0000, 'testTag', 'errorCode ' + e.code);
+  hilog.error(0x0000, 'testTag', 'errorMessage ' + e.message);
+}
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+import rpc from '@ohos.rpc';
+import hilog from 'ohos.hilog';
+import { BusinessError } from '@ohos.base';
+
+try {
+  let data = rpc.MessageSequence.create();
+  let ByteArrayVar = [1, 2, 3, 4, 5];
+  data.writeByteArray(ByteArrayVar);
+  let array: Array<int> = new Array<int>(5);
   data.readByteArray(array);
   hilog.info(0x0000, 'testTag', 'readByteArray is  ' + array);
 } catch (error) {
@@ -994,7 +1009,7 @@ readByteArray(): int[]
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 1900010 | Failed to read data from the message sequence. |
+| [1900010](../errorcode-rpc.md#1900010-读取messagesequence数据失败) | Failed to read data from the message sequence. |
 
 ## 示例
 
@@ -1006,7 +1021,6 @@ import { BusinessError } from '@kit.BasicServicesKit';
 try {
   let data = rpc.MessageSequence.create();
   let ByteArrayVar = [1, 2, 3, 4, 5];
-  // 将字节数组写入MessageSequence对象
   data.writeByteArray(ByteArrayVar);
   let array = data.readByteArray();
   hilog.info(0x0000, 'testTag', 'readByteArray is  ' + array);
@@ -1049,7 +1063,7 @@ readChar(): int
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 1900010 | Failed to read data from the message sequence. |
+| [1900010](../errorcode-rpc.md#1900010-读取messagesequence数据失败) | Failed to read data from the message sequence. |
 
 ## 示例
 
@@ -1102,10 +1116,12 @@ readCharArray(dataIn: int[]): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1.The parameter is an empty array; 2.The number of parameters is incorrect; 3.The parameter type does not match. |
-| 1900010 | Failed to read data from the message sequence. |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1.The parameter is an empty array; 2.The number of parameters is incorrect; 3.The parameter type does not match. |
+| [1900010](../errorcode-rpc.md#1900010-读取messagesequence数据失败) | Failed to read data from the message sequence. |
 
 ## 示例
+
+ArkTS-Dyn示例：
 
 ```TypeScript
 import { rpc } from '@kit.IPCKit';
@@ -1116,6 +1132,26 @@ try {
   let data = rpc.MessageSequence.create();
   data.writeCharArray([97, 98, 88]);
   let array: Array<number> = new Array(3);
+  data.readCharArray(array);
+  hilog.info(0x0000, 'testTag', 'readCharArray is ' + array);
+} catch (error) {
+  let e: BusinessError = error as BusinessError;
+  hilog.error(0x0000, 'testTag', 'errorCode ' + e.code);
+  hilog.error(0x0000, 'testTag', 'errorMessage ' + e.message);
+}
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+import rpc from '@ohos.rpc';
+import hilog from 'ohos.hilog';
+import { BusinessError } from '@ohos.base';
+
+try {
+  let data = rpc.MessageSequence.create();
+  data.writeCharArray([97, 98, 88]);
+  let array: Array<int> = new Array<int>(3);
   data.readCharArray(array);
   hilog.info(0x0000, 'testTag', 'readCharArray is ' + array);
 } catch (error) {
@@ -1160,7 +1196,7 @@ readCharArray(): int[]
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 1900010 | Failed to read data from the message sequence. |
+| [1900010](../errorcode-rpc.md#1900010-读取messagesequence数据失败) | Failed to read data from the message sequence. |
 
 ## 示例
 
@@ -1216,7 +1252,7 @@ readDouble(): double
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 1900010 | Failed to read data from the message sequence. |
+| [1900010](../errorcode-rpc.md#1900010-读取messagesequence数据失败) | Failed to read data from the message sequence. |
 
 ## 示例
 
@@ -1269,10 +1305,12 @@ readDoubleArray(dataIn: double[]): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1.The parameter is an empty array; 2.The number of parameters is incorrect; 3.The parameter type does not match. |
-| 1900010 | Failed to read data from the message sequence. |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1.The parameter is an empty array; 2.The number of parameters is incorrect; 3.The parameter type does not match. |
+| [1900010](../errorcode-rpc.md#1900010-读取messagesequence数据失败) | Failed to read data from the message sequence. |
 
 ## 示例
+
+ArkTS-Dyn示例：
 
 ```TypeScript
 import { rpc } from '@kit.IPCKit';
@@ -1283,6 +1321,26 @@ try {
   let data = rpc.MessageSequence.create();
   data.writeDoubleArray([11.1, 12.2, 13.3]);
   let array: Array<number> = new Array(3);
+  data.readDoubleArray(array);
+  hilog.info(0x0000, 'testTag', 'readDoubleArray is ' + array);
+} catch (error) {
+  let e: BusinessError = error as BusinessError;
+  hilog.error(0x0000, 'testTag', 'errorCode ' + e.code);
+  hilog.error(0x0000, 'testTag', 'errorMessage ' + e.message);
+}
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+import rpc from '@ohos.rpc';
+import hilog from 'ohos.hilog';
+import { BusinessError } from '@ohos.base';
+
+try {
+  let data = rpc.MessageSequence.create();
+  data.writeDoubleArray([11.1, 12.2, 13.3]);
+  let array: Array<double> = new Array<double>(3);
   data.readDoubleArray(array);
   hilog.info(0x0000, 'testTag', 'readDoubleArray is ' + array);
 } catch (error) {
@@ -1324,7 +1382,7 @@ readDoubleArray(): double[]
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 1900010 | Failed to read data from the message sequence. |
+| [1900010](../errorcode-rpc.md#1900010-读取messagesequence数据失败) | Failed to read data from the message sequence. |
 
 ## 示例
 
@@ -1374,7 +1432,7 @@ readException(): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 1900010 | Failed to read data from the message sequence. |
+| [1900010](../errorcode-rpc.md#1900010-读取messagesequence数据失败) | Failed to read data from the message sequence. |
 
 ## 示例
 
@@ -1421,7 +1479,7 @@ let connectionId = context.connectServiceExtensionAbility(want, connect);
 import { rpc } from '@kit.IPCKit';
 import { BusinessError } from '@kit.BasicServicesKit';
 import { hilog } from '@kit.PerformanceAnalysisKit';
-  
+
 try {
   let option = new rpc.MessageOption();
   let data = rpc.MessageSequence.create();
@@ -1441,7 +1499,7 @@ try {
         }
       }).catch((e: Error) => {
         hilog.error(0x0000, 'testTag', 'sendMessageRequest got exception: ' + JSON.stringify(e));
-      }).finally(() => {
+      }).finally (() => {
         hilog.info(0x0000, 'testTag', 'sendMessageRequest ends, reclaim parcel');
         data.reclaim();
         reply.reclaim();
@@ -1492,7 +1550,7 @@ readFileDescriptor(): int
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 1900010 | Failed to read data from the message sequence. |
+| [1900010](../errorcode-rpc.md#1900010-读取messagesequence数据失败) | Failed to read data from the message sequence. |
 
 ## 示例
 
@@ -1548,7 +1606,7 @@ readFloat(): double
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 1900010 | Failed to read data from the message sequence. |
+| [1900010](../errorcode-rpc.md#1900010-读取messagesequence数据失败) | Failed to read data from the message sequence. |
 
 ## 示例
 
@@ -1595,16 +1653,18 @@ readFloatArray(dataIn: double[]): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| dataIn | ArkTS-Dyn: number[]  <br>ArkTS-Sta：double[] | 是 | 用于存储从MessageSequence读取的双精度浮点数组，需预先创建空数组且长度应与写入时的数组长度一致。由于系统内部对float类型的数据是按照double处理 的，使用时对于数组所占的总字节数应按照double类型来计算。 |
+| dataIn | ArkTS-Dyn: number[]  <br>ArkTS-Sta：double[] | 是 | 用于存储从MessageSequence读取的双精度浮点数组，需预先创建空数组且长度应与写入时的数组长度一致。 由于系统内部对float类型的数据是按照double处理的，使用时对于数组所占的总字节数应按照double类型来计算。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1.The parameter is an empty array; 2.The number of parameters is incorrect; 3.The parameter type does not match. |
-| 1900010 | Failed to read data from the message sequence. |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1.The parameter is an empty array; 2.The number of parameters is incorrect; 3.The parameter type does not match. |
+| [1900010](../errorcode-rpc.md#1900010-读取messagesequence数据失败) | Failed to read data from the message sequence. |
 
 ## 示例
+
+ArkTS-Dyn示例：
 
 ```TypeScript
 import { rpc } from '@kit.IPCKit';
@@ -1615,6 +1675,26 @@ try {
   let data = rpc.MessageSequence.create();
   data.writeFloatArray([1.2, 1.3, 1.4]);
   let array: Array<number> = new Array(3);
+  data.readFloatArray(array);
+  hilog.info(0x0000, 'testTag', 'readFloatArray is ' + array);
+} catch (error) {
+  let e: BusinessError = error as BusinessError;
+  hilog.error(0x0000, 'testTag', 'errorCode ' + e.code);
+  hilog.error(0x0000, 'testTag', 'errorMessage ' + e.message);
+}
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+import rpc from '@ohos.rpc';
+import hilog from 'ohos.hilog';
+import { BusinessError } from '@ohos.base';
+
+try {
+  let data = rpc.MessageSequence.create();
+  data.writeFloatArray([1.2, 1.3, 1.4]);
+  let array: Array<double> = new Array<double>(3);
   data.readFloatArray(array);
   hilog.info(0x0000, 'testTag', 'readFloatArray is ' + array);
 } catch (error) {
@@ -1656,7 +1736,7 @@ readFloatArray(): double[]
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 1900010 | Failed to read data from the message sequence. |
+| [1900010](../errorcode-rpc.md#1900010-读取messagesequence数据失败) | Failed to read data from the message sequence. |
 
 ## 示例
 
@@ -1692,7 +1772,7 @@ readInt(): int
 从MessageSequence实例中读取整数值。
 
 - 整数值占用4字节存储空间。  
-- 存储范围：-2^31到2^31-1。
+- 存储范围：[-2^31, 2^31-1]。
 
 **起始版本：** 9
 
@@ -1714,7 +1794,7 @@ readInt(): int
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 1900010 | Failed to read data from the message sequence. |
+| [1900010](../errorcode-rpc.md#1900010-读取messagesequence数据失败) | Failed to read data from the message sequence. |
 
 ## 示例
 
@@ -1771,10 +1851,12 @@ readIntArray(dataIn: int[]): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1.The parameter is an empty array; 2.The number of parameters is incorrect; 3.The parameter type does not match. |
-| 1900010 | Failed to read data from the message sequence. |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1.The parameter is an empty array; 2.The number of parameters is incorrect; 3.The parameter type does not match. |
+| [1900010](../errorcode-rpc.md#1900010-读取messagesequence数据失败) | Failed to read data from the message sequence. |
 
 ## 示例
+
+ArkTS-Dyn示例：
 
 ```TypeScript
 import { rpc } from '@kit.IPCKit';
@@ -1785,6 +1867,26 @@ try {
   let data = rpc.MessageSequence.create();
   data.writeIntArray([100, 111, 112]);
   let array: Array<number> = new Array(3);
+  data.readIntArray(array);
+  hilog.info(0x0000, 'testTag', 'readIntArray is  ' + array);
+} catch (error) {
+  let e: BusinessError = error as BusinessError;
+  hilog.error(0x0000, 'testTag', 'errorCode ' + e.code);
+  hilog.error(0x0000, 'testTag', 'errorMessage ' + e.message);
+}
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+import rpc from '@ohos.rpc';
+import hilog from 'ohos.hilog';
+import { BusinessError } from '@ohos.base';
+
+try {
+  let data = rpc.MessageSequence.create();
+  data.writeIntArray([100, 111, 112]);
+  let array: Array<int> = new Array<int>(3);
   data.readIntArray(array);
   hilog.info(0x0000, 'testTag', 'readIntArray is  ' + array);
 } catch (error) {
@@ -1826,7 +1928,7 @@ readIntArray(): int[]
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 1900010 | Failed to read data from the message sequence. |
+| [1900010](../errorcode-rpc.md#1900010-读取messagesequence数据失败) | Failed to read data from the message sequence. |
 
 ## 示例
 
@@ -1877,7 +1979,7 @@ readInterfaceToken(): string
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 1900010 | Failed to read data from the message sequence. |
+| [1900010](../errorcode-rpc.md#1900010-读取messagesequence数据失败) | Failed to read data from the message sequence. |
 
 ## 示例
 
@@ -1933,7 +2035,7 @@ readLong(): long
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 1900010 | Failed to read data from the message sequence. |
+| [1900010](../errorcode-rpc.md#1900010-读取messagesequence数据失败) | Failed to read data from the message sequence. |
 
 ## 示例
 
@@ -1986,10 +2088,12 @@ readLongArray(dataIn: long[]): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1.The parameter is an empty array; 2.The number of parameters is incorrect; 3.The parameter type does not match. |
-| 1900010 | Failed to read data from the message sequence. |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1.The parameter is an empty array; 2.The number of parameters is incorrect; 3.The parameter type does not match. |
+| [1900010](../errorcode-rpc.md#1900010-读取messagesequence数据失败) | Failed to read data from the message sequence. |
 
 ## 示例
+
+ArkTS-Dyn示例：
 
 ```TypeScript
 import { rpc } from '@kit.IPCKit';
@@ -2000,6 +2104,26 @@ try {
   let data = rpc.MessageSequence.create();
   data.writeLongArray([1111, 1112, 1113]);
   let array: Array<number> = new Array(3);
+  data.readLongArray(array);
+  hilog.info(0x0000, 'testTag', 'readLongArray is ' + array);
+} catch (error) {
+  let e: BusinessError = error as BusinessError;
+  hilog.error(0x0000, 'testTag', 'errorCode ' + e.code);
+  hilog.error(0x0000, 'testTag', 'errorMessage ' + e.message);
+}
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+import rpc from '@ohos.rpc';
+import hilog from 'ohos.hilog';
+import { BusinessError } from '@ohos.base';
+
+try {
+  let data = rpc.MessageSequence.create();
+  data.writeLongArray([1111, 1112, 1113]);
+  let array: Array<long> = new Array<long>(3);
   data.readLongArray(array);
   hilog.info(0x0000, 'testTag', 'readLongArray is ' + array);
 } catch (error) {
@@ -2041,7 +2165,7 @@ readLongArray(): long[]
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 1900010 | Failed to read data from the message sequence. |
+| [1900010](../errorcode-rpc.md#1900010-读取messagesequence数据失败) | Failed to read data from the message sequence. |
 
 ## 示例
 
@@ -2093,9 +2217,9 @@ readParcelable(dataIn: Parcelable): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 1900012 | Failed to call the JS callback function. |
-| 401 | Parameter error. Possible causes: 1.The number of parameters is incorrect. |
-| 1900010 | Failed to read data from the message sequence. |
+| [1900012](../errorcode-rpc.md#1900012-js回调方法执行失败) | Failed to call the JS callback function. |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1.The number of parameters is incorrect. |
+| [1900010](../errorcode-rpc.md#1900010-读取messagesequence数据失败) | Failed to read data from the message sequence. |
 
 ## 示例
 
@@ -2162,9 +2286,9 @@ readParcelableArray(parcelableArray: Parcelable[]): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 1900012 | Failed to call the JS callback function. |
-| 401 | Parameter error. Possible causes: 1.The parameter is an empty array; 2.The number of parameters is incorrect; 3.The parameter type does not match; 4.The length of the array passed when reading is not equal to the length passed when writing to the array; 5.The element does not exist in the array. |
-| 1900010 | Failed to read data from the message sequence. |
+| [1900012](../errorcode-rpc.md#1900012-js回调方法执行失败) | Failed to call the JS callback function. |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1.The parameter is an empty array; 2.The number of parameters is incorrect; 3.The parameter type does not match; 4.The length of the array passed when reading is not equal to the length passed when writing to the array; 5.The element does not exist in the array. |
+| [1900010](../errorcode-rpc.md#1900010-读取messagesequence数据失败) | Failed to read data from the message sequence. |
 
 ## 示例
 
@@ -2244,8 +2368,8 @@ readRawData(size: number): number[]
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1.The number of parameters is incorrect; 2.The parameter type does not match. |
-| 1900010 | Failed to read data from the message sequence. |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1.The number of parameters is incorrect; 2.The parameter type does not match. |
+| [1900010](../errorcode-rpc.md#1900010-读取messagesequence数据失败) | Failed to read data from the message sequence. |
 
 ## 示例
 
@@ -2311,8 +2435,8 @@ readRawDataBuffer(size: int): ArrayBuffer
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1.The number of parameters is incorrect; 2.The parameter type does not match. |
-| 1900010 | Failed to read data from the message sequence. |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1.The number of parameters is incorrect; 2.The parameter type does not match. |
+| [1900010](../errorcode-rpc.md#1900010-读取messagesequence数据失败) | Failed to read data from the message sequence. |
 
 ## 示例
 
@@ -2370,8 +2494,8 @@ readRemoteObject(): IRemoteObject
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 1900008 | The proxy or remote object is invalid. |
-| 1900010 | Failed to read data from the message sequence. |
+| [1900008](../errorcode-rpc.md#1900008-非法的ipc对象) | The proxy or remote object is invalid. |
+| [1900010](../errorcode-rpc.md#1900010-读取messagesequence数据失败) | Failed to read data from the message sequence. |
 
 ## 示例
 
@@ -2433,8 +2557,8 @@ readRemoteObjectArray(objects: IRemoteObject[]): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1.The parameter is an empty array; 2.The number of parameters is incorrect; 3.The parameter type does not match; 4.The length of the array passed when reading is not equal to the length passed when writing to the array. |
-| 1900010 | Failed to read data from the message sequence. |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1.The parameter is an empty array; 2.The number of parameters is incorrect; 3.The parameter type does not match; 4.The length of the array passed when reading is not equal to the length passed when writing to the array. |
+| [1900010](../errorcode-rpc.md#1900010-读取messagesequence数据失败) | Failed to read data from the message sequence. |
 
 ## 示例
 
@@ -2494,7 +2618,7 @@ readRemoteObjectArray(): IRemoteObject[]
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 1900010 | Failed to read data from the message sequence. |
+| [1900010](../errorcode-rpc.md#1900010-读取messagesequence数据失败) | Failed to read data from the message sequence. |
 
 ## 示例
 
@@ -2561,7 +2685,7 @@ readShort(): int
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 1900010 | Failed to read data from the message sequence. |
+| [1900010](../errorcode-rpc.md#1900010-读取messagesequence数据失败) | Failed to read data from the message sequence. |
 
 ## 示例
 
@@ -2614,10 +2738,12 @@ readShortArray(dataIn: int[]): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1.The parameter is an empty array; 2.The number of parameters is incorrect; 3.The parameter type does not match. |
-| 1900010 | Failed to read data from the message sequence. |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1.The parameter is an empty array; 2.The number of parameters is incorrect; 3.The parameter type does not match. |
+| [1900010](../errorcode-rpc.md#1900010-读取messagesequence数据失败) | Failed to read data from the message sequence. |
 
 ## 示例
+
+ArkTS-Dyn示例：
 
 ```TypeScript
 import { rpc } from '@kit.IPCKit';
@@ -2628,6 +2754,26 @@ try {
   let data = rpc.MessageSequence.create();
   data.writeShortArray([11, 12, 13]);
   let array: Array<number> = new Array(3);
+  data.readShortArray(array);
+  hilog.info(0x0000, 'testTag', 'readShortArray is  ' + array);
+} catch (error) {
+  let e: BusinessError = error as BusinessError;
+  hilog.error(0x0000, 'testTag', 'errorCode ' + e.code);
+  hilog.error(0x0000, 'testTag', 'errorMessage ' + e.message);
+}
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+import rpc from '@ohos.rpc';
+import hilog from 'ohos.hilog';
+import { BusinessError } from '@ohos.base';
+
+try {
+  let data = rpc.MessageSequence.create();
+  data.writeShortArray([11, 12, 13]);
+  let array: Array<int> = new Array<int>(3);
   data.readShortArray(array);
   hilog.info(0x0000, 'testTag', 'readShortArray is  ' + array);
 } catch (error) {
@@ -2669,7 +2815,7 @@ readShortArray(): int[]
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 1900010 | Failed to read data from the message sequence. |
+| [1900010](../errorcode-rpc.md#1900010-读取messagesequence数据失败) | Failed to read data from the message sequence. |
 
 ## 示例
 
@@ -2720,7 +2866,7 @@ readString(): string
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 1900010 | Failed to read data from the message sequence. |
+| [1900010](../errorcode-rpc.md#1900010-读取messagesequence数据失败) | Failed to read data from the message sequence. |
 
 ## 示例
 
@@ -2772,8 +2918,8 @@ readStringArray(dataIn: string[]): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1.The parameter is an empty array; 2.The number of parameters is incorrect; 3.The parameter type does not match. |
-| 1900010 | Failed to read data from the message sequence. |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1.The parameter is an empty array; 2.The number of parameters is incorrect; 3.The parameter type does not match. |
+| [1900010](../errorcode-rpc.md#1900010-读取messagesequence数据失败) | Failed to read data from the message sequence. |
 
 ## 示例
 
@@ -2824,7 +2970,7 @@ readStringArray(): string[]
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 1900010 | Failed to read data from the message sequence. |
+| [1900010](../errorcode-rpc.md#1900010-读取messagesequence数据失败) | Failed to read data from the message sequence. |
 
 ## 示例
 
@@ -2915,8 +3061,8 @@ rewindRead(pos: int): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1.The number of parameters is incorrect; 2.The parameter type does not match. |
-| 1900010 | Failed to read data from the message sequence. |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1.The number of parameters is incorrect; 2.The parameter type does not match. |
+| [1900010](../errorcode-rpc.md#1900010-读取messagesequence数据失败) | Failed to read data from the message sequence. |
 
 ## 示例
 
@@ -2973,8 +3119,8 @@ rewindWrite(pos: int): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1.The number of parameters is incorrect; 2.The parameter type does not match. |
-| 1900009 | Failed to write data to the message sequence. |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1.The number of parameters is incorrect; 2.The parameter type does not match. |
+| [1900009](../errorcode-rpc.md#1900009-向messagesequence写入数据失败) | Failed to write data to the message sequence. |
 
 ## 示例
 
@@ -3029,9 +3175,9 @@ setCapacity(size: int): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1.The number of parameters is incorrect; 2.The parameter type does not match. |
-| 1900009 | Failed to write data to the message sequence. |
-| 1900011 | Memory allocation failed. |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1.The number of parameters is incorrect; 2.The parameter type does not match. |
+| [1900009](../errorcode-rpc.md#1900009-向messagesequence写入数据失败) | Failed to write data to the message sequence. |
+| [1900011](../errorcode-rpc.md#1900011-内存分配失败) | Memory allocation failed. |
 
 ## 示例
 
@@ -3082,8 +3228,8 @@ setSize(size: int): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1.The number of parameters is incorrect; 2.The parameter type does not match. |
-| 1900009 | Failed to write data to the message sequence. |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1.The number of parameters is incorrect; 2.The parameter type does not match. |
+| [1900009](../errorcode-rpc.md#1900009-向messagesequence写入数据失败) | Failed to write data to the message sequence. |
 
 ## 示例
 
@@ -3137,8 +3283,8 @@ writeArrayBuffer(buf: ArrayBuffer, typeCode: TypeCode): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1.The parameter is an empty array; 2.The number of parameters is incorrect; 3.The parameter type does not match; 4.The obtained value of typeCode is incorrect; 5.Failed to obtain arrayBuffer information. |
-| 1900009 | Failed to write data to the message sequence. |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1.The parameter is an empty array; 2.The number of parameters is incorrect; 3.The parameter type does not match; 4.The obtained value of typeCode is incorrect; 5.Failed to obtain arrayBuffer information. |
+| [1900009](../errorcode-rpc.md#1900009-向messagesequence写入数据失败) | Failed to write data to the message sequence. |
 
 ## 示例
 
@@ -3201,8 +3347,8 @@ writeAshmem(ashmem: Ashmem): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1.The number of parameters is incorrect; 2.The parameter is not an instance of the Ashmem object. |
-| 1900009 | Failed to write data to the message sequence. |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1.The number of parameters is incorrect; 2.The parameter is not an instance of the Ashmem object. |
+| [1900009](../errorcode-rpc.md#1900009-向messagesequence写入数据失败) | Failed to write data to the message sequence. |
 
 ## 示例
 
@@ -3263,8 +3409,8 @@ writeBoolean(val: boolean): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1.The number of parameters is incorrect; 2.The parameter type does not match. |
-| 1900009 | Failed to write data to the message sequence. |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1.The number of parameters is incorrect; 2.The parameter type does not match. |
+| [1900009](../errorcode-rpc.md#1900009-向messagesequence写入数据失败) | Failed to write data to the message sequence. |
 
 ## 示例
 
@@ -3312,8 +3458,8 @@ writeBooleanArray(booleanArray: boolean[]): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1.The parameter is an empty array; 2.The number of parameters is incorrect; 3.The parameter type does not match; 4.The element does not exist in the array. |
-| 1900009 | Failed to write data to the message sequence. |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1.The parameter is an empty array; 2.The number of parameters is incorrect; 3.The parameter type does not match; 4.The element does not exist in the array. |
+| [1900009](../errorcode-rpc.md#1900009-向messagesequence写入数据失败) | Failed to write data to the message sequence. |
 
 ## 示例
 
@@ -3346,7 +3492,7 @@ writeByte(val: int): void
 
 将字节值写入MessageSequence实例。调用此方法后，字节值会被以8位无符号整数形式存入缓冲区当前写指针位置，并自动更新写指针。该方法适用于传输小范围整数或标志位数据。
 
-- 存储范围:0-255(无符号)或-128-127(有符号)。  
+- 存储范围:[0, 255](无符号)或[-128, 127](有符号)。  
 - 数据对齐方式为字节对齐。  
 - 数值必须在字节范围内，超出范围可能导致数据截断。  
 - 读取时必须使用[readByte](arkts-ipc-rpc-messagesequence-c.md#readbyte)方法配对读取。  
@@ -3371,8 +3517,8 @@ writeByte(val: int): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1.The number of parameters is incorrect; 2.The parameter type does not match. |
-| 1900009 | Failed to write data to the message sequence. |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1.The number of parameters is incorrect; 2.The parameter type does not match. |
+| [1900009](../errorcode-rpc.md#1900009-向messagesequence写入数据失败) | Failed to write data to the message sequence. |
 
 ## 示例
 
@@ -3426,8 +3572,8 @@ writeByteArray(byteArray: int[]): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1.The parameter is an empty array; 2.The number of parameters is incorrect; 3.The parameter type does not match; 4.The element does not exist in the array. 5.The type of the element in the array is incorrect. |
-| 1900009 | Failed to write data to the message sequence. |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1.The parameter is an empty array; 2.The number of parameters is incorrect; 3.The parameter type does not match; 4.The element does not exist in the array. 5.The type of the element in the array is incorrect. |
+| [1900009](../errorcode-rpc.md#1900009-向messagesequence写入数据失败) | Failed to write data to the message sequence. |
 
 ## 示例
 
@@ -3438,8 +3584,7 @@ import { BusinessError } from '@kit.BasicServicesKit';
 
 try {
   let data = rpc.MessageSequence.create();
-  let byteArrayVar = [1, 2, 3, 4, 5];
-  // 将字节数组写入MessageSequence对象
+  let ByteArrayVar = [1, 2, 3, 4, 5];
   data.writeByteArray(ByteArrayVar);
 } catch (error) {
   let e: BusinessError = error as BusinessError;
@@ -3483,8 +3628,8 @@ writeChar(val: int): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1.The number of parameters is incorrect; 2.The parameter type does not match. |
-| 1900009 | Failed to write data to the message sequence. |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1.The number of parameters is incorrect; 2.The parameter type does not match. |
+| [1900009](../errorcode-rpc.md#1900009-向messagesequence写入数据失败) | Failed to write data to the message sequence. |
 
 ## 示例
 
@@ -3538,8 +3683,8 @@ writeCharArray(charArray: int[]): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1.The parameter is an empty array; 2.The number of parameters is incorrect; 3.The parameter type does not match; 4.The element does not exist in the array. |
-| 1900009 | Failed to write data to the message sequence. |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1.The parameter is an empty array; 2.The number of parameters is incorrect; 3.The parameter type does not match; 4.The element does not exist in the array. |
+| [1900009](../errorcode-rpc.md#1900009-向messagesequence写入数据失败) | Failed to write data to the message sequence. |
 
 ## 示例
 
@@ -3593,8 +3738,8 @@ writeDouble(val: double): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1.The number of parameters is incorrect; 2.The parameter type does not match. |
-| 1900009 | Failed to write data to the message sequence. |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1.The number of parameters is incorrect; 2.The parameter type does not match. |
+| [1900009](../errorcode-rpc.md#1900009-向messagesequence写入数据失败) | Failed to write data to the message sequence. |
 
 ## 示例
 
@@ -3648,8 +3793,8 @@ writeDoubleArray(doubleArray: double[]): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1.The parameter is an empty array; 2.The number of parameters is incorrect; 3.The parameter type does not match; 4.The element does not exist in the array; 5.The type of the element in the array is incorrect. |
-| 1900009 | Failed to write data to the message sequence. |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1.The parameter is an empty array; 2.The number of parameters is incorrect; 3.The parameter type does not match; 4.The element does not exist in the array; 5.The type of the element in the array is incorrect. |
+| [1900009](../errorcode-rpc.md#1900009-向messagesequence写入数据失败) | Failed to write data to the message sequence. |
 
 ## 示例
 
@@ -3710,8 +3855,8 @@ writeFileDescriptor(fd: int): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1.The number of parameters is incorrect; 2.The parameter type does not match. |
-| 1900009 | Failed to write data to the message sequence. |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1.The number of parameters is incorrect; 2.The parameter type does not match. |
+| [1900009](../errorcode-rpc.md#1900009-向messagesequence写入数据失败) | Failed to write data to the message sequence. |
 
 ## 示例
 
@@ -3759,14 +3904,14 @@ writeFloat(val: double): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| val | ArkTS-Dyn: number  <br>ArkTS-Sta：double | 是 | 要写入的双精度浮点值。适用于传输浮点数据(如坐标、比例、测量值等)。必须与[readFloat](arkts-ipc-rpc-messagesequence-c.md#readfloat)配对使 用。 |
+| val | ArkTS-Dyn: number  <br>ArkTS-Sta：double | 是 | 要写入的双精度浮点值。适用于传输浮点数据(如坐标、比例、测量值等)。 必须与[readFloat](arkts-ipc-rpc-messagesequence-c.md#readfloat)配对使用。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1.The number of parameters is incorrect; 2.The parameter type does not match. |
-| 1900009 | Failed to write data to the message sequence. |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1.The number of parameters is incorrect; 2.The parameter type does not match. |
+| [1900009](../errorcode-rpc.md#1900009-向messagesequence写入数据失败) | Failed to write data to the message sequence. |
 
 ## 示例
 
@@ -3820,8 +3965,8 @@ writeFloatArray(floatArray: double[]): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1.The parameter is an empty array; 2.The number of parameters is incorrect; 3.The parameter type does not match; 4.The element does not exist in the array; 5.The type of the element in the array is incorrect. |
-| 1900009 | Failed to write data to the message sequence. |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1.The parameter is an empty array; 2.The number of parameters is incorrect; 3.The parameter type does not match; 4.The element does not exist in the array; 5.The type of the element in the array is incorrect. |
+| [1900009](../errorcode-rpc.md#1900009-向messagesequence写入数据失败) | Failed to write data to the message sequence. |
 
 ## 示例
 
@@ -3875,14 +4020,14 @@ writeInt(val: int): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| val | ArkTS-Dyn: number  <br>ArkTS-Sta：int | 是 | 要写入的整数值。取值范围：[-2^31, 2^31-1]。适用于传输标准整数数据(如计数器、索引值、配置参数等)。超出此范围会导致数据截断或写入失败。对于小范围数值(0-255或-12 8-127)建议使用writeByte提高效率，对于小范围整数(-32768-32767)建议使用writeShort，对于大整数建议使用writeLong。 |
+| val | ArkTS-Dyn: number  <br>ArkTS-Sta：int | 是 | 要写入的整数值。取值范围：[-2^31, 2^31-1]。适用于传输标准整数数据(如计数器、索引值、配置参数等)。超出此范围会导致数据截断或写入失败。 对于小范围数值(0-255或-128-127)建议使用writeByte提高效率，对于小范围整数(-32768-32767)建议使用writeShort，对于大整数建议使用writeLong。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1.The number of parameters is incorrect; 2.The parameter type does not match. |
-| 1900009 | Failed to write data to the message sequence. |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1.The number of parameters is incorrect; 2.The parameter type does not match. |
+| [1900009](../errorcode-rpc.md#1900009-向messagesequence写入数据失败) | Failed to write data to the message sequence. |
 
 ## 示例
 
@@ -3937,8 +4082,8 @@ writeIntArray(intArray: int[]): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1.The parameter is an empty array; 2.The number of parameters is incorrect; 3.The parameter type does not match; 4.The element does not exist in the array; 5.The type of the element in the array is incorrect. |
-| 1900009 | Failed to write data to the message sequence. |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1.The parameter is an empty array; 2.The number of parameters is incorrect; 3.The parameter type does not match; 4.The element does not exist in the array; 5.The type of the element in the array is incorrect. |
+| [1900009](../errorcode-rpc.md#1900009-向messagesequence写入数据失败) | Failed to write data to the message sequence. |
 
 ## 示例
 
@@ -3986,8 +4131,8 @@ writeInterfaceToken(token: string): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1.The number of parameters is incorrect; 2.The parameter type does not match; 3.The string length is greater than or equal to 40960; 4.The number of bytes copied to the buffer is different from the length of the obtained string. |
-| 1900009 | Failed to write data to the message sequence. |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1.The number of parameters is incorrect; 2.The parameter type does not match; 3.The string length is greater than or equal to 40960; 4.The number of bytes copied to the buffer is different from the length of the obtained string. |
+| [1900009](../errorcode-rpc.md#1900009-向messagesequence写入数据失败) | Failed to write data to the message sequence. |
 
 ## 示例
 
@@ -3998,7 +4143,6 @@ import { BusinessError } from '@kit.BasicServicesKit';
 
 try {
   let data = rpc.MessageSequence.create();
-  // 将接口描述符写入MessageSequence对象
   data.writeInterfaceToken("aaa");
 } catch (error) {
   let e: BusinessError = error as BusinessError;
@@ -4036,14 +4180,14 @@ writeLong(val: long): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| val | ArkTS-Dyn: number  <br>ArkTS-Sta：long | 是 | 要写入的长整数值。取值范围：[-2^63, 2^63-1]。超出此范围会导致数据截断或写入失败。建议根据数值范围选择合适的类型(writeByte/writeShort/ writeInt/writeLong)以提高传输效率。 |
+| val | ArkTS-Dyn: number  <br>ArkTS-Sta：long | 是 | 要写入的长整数值。取值范围：[-2^63, 2^63-1]。超出此范围会导致数据截断或写入失败。 建议根据数值范围选择合适的类型(writeByte/writeShort/writeInt/writeLong)以提高传输效率。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1.The number of parameters is incorrect; 2.The parameter type does not match. |
-| 1900009 | Failed to write data to the message sequence. |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1.The number of parameters is incorrect; 2.The parameter type does not match. |
+| [1900009](../errorcode-rpc.md#1900009-向messagesequence写入数据失败) | Failed to write data to the message sequence. |
 
 ## 示例
 
@@ -4097,8 +4241,8 @@ writeLongArray(longArray: long[]): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1.The parameter is an empty array; 2.The number of parameters is incorrect; 3.The parameter type does not match; 4.The element does not exist in the array; 5.The type of the element in the array is incorrect. |
-| 1900009 | Failed to write data to the message sequence. |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1.The parameter is an empty array; 2.The number of parameters is incorrect; 3.The parameter type does not match; 4.The element does not exist in the array; 5.The type of the element in the array is incorrect. |
+| [1900009](../errorcode-rpc.md#1900009-向messagesequence写入数据失败) | Failed to write data to the message sequence. |
 
 ## 示例
 
@@ -4142,7 +4286,7 @@ writeNoException(): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 1900009 | Failed to write data to the message sequence. |
+| [1900009](../errorcode-rpc.md#1900009-向messagesequence写入数据失败) | Failed to write data to the message sequence. |
 
 ## 示例
 
@@ -4211,8 +4355,8 @@ writeParcelable(val: Parcelable): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1.The number of parameters is incorrect; 2.The parameter type does not match. |
-| 1900009 | Failed to write data to the message sequence. |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1.The number of parameters is incorrect; 2.The parameter type does not match. |
+| [1900009](../errorcode-rpc.md#1900009-向messagesequence写入数据失败) | Failed to write data to the message sequence. |
 
 ## 示例
 
@@ -4224,7 +4368,7 @@ import { BusinessError } from '@kit.BasicServicesKit';
 class MyParcelable implements rpc.Parcelable {
   num: number = 0;
   str: string = '';
-  constructor(num: number, str: string) {
+  constructor( num: number, str: string) {
     this.num = num;
     this.str = str;
   }
@@ -4280,8 +4424,8 @@ writeParcelableArray(parcelableArray: Parcelable[]): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1.The parameter is an empty array; 2.The number of parameters is incorrect; 3.The parameter type does not match; 4.The element does not exist in the array. |
-| 1900009 | Failed to write data to the message sequence. |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1.The parameter is an empty array; 2.The number of parameters is incorrect; 3.The parameter type does not match; 4.The element does not exist in the array. |
+| [1900009](../errorcode-rpc.md#1900009-向messagesequence写入数据失败) | Failed to write data to the message sequence. |
 
 ## 示例
 
@@ -4360,8 +4504,8 @@ writeRawData(rawData: number[], size: number): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1.The parameter is an empty array; 2.The number of parameters is incorrect; 3.The parameter type does not match; 4.The transferred size cannot be obtained; 5.The transferred size is less than or equal to 0; 6.The element does not exist in the array; 7.Failed to obtain typedArray information; 8.The array is not of type int32; 9.The length of typedarray is smaller than the size of the original data sent. |
-| 1900009 | Failed to write data to the message sequence. |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1.The parameter is an empty array; 2.The number of parameters is incorrect; 3.The parameter type does not match; 4.The transferred size cannot be obtained; 5.The transferred size is less than or equal to 0; 6.The element does not exist in the array; 7.Failed to obtain typedArray information; 8.The array is not of type int32; 9.The length of typedarray is smaller than the size of the original data sent. |
+| [1900009](../errorcode-rpc.md#1900009-向messagesequence写入数据失败) | Failed to write data to the message sequence. |
 
 ## 示例
 
@@ -4420,8 +4564,8 @@ writeRawDataBuffer(rawData: ArrayBuffer, size: int): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1.The number of parameters is incorrect; 2.The parameter type does not match; 3.Failed to obtain arrayBuffer information; 4.The transferred size cannot be obtained; 5.The transferred size is less than or equal to 0; 6.The transferred size is greater than the byte length of ArrayBuffer. |
-| 1900009 | Failed to write data to the message sequence. |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1.The number of parameters is incorrect; 2.The parameter type does not match; 3.Failed to obtain arrayBuffer information; 4.The transferred size cannot be obtained; 5.The transferred size is less than or equal to 0; 6.The transferred size is greater than the byte length of ArrayBuffer. |
+| [1900009](../errorcode-rpc.md#1900009-向messagesequence写入数据失败) | Failed to write data to the message sequence. |
 
 ## 示例
 
@@ -4476,9 +4620,9 @@ writeRemoteObject(obj: IRemoteObject): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1.The number of parameters is incorrect; 2.The parameter type does not match. |
-| 1900008 | The proxy or remote object is invalid. |
-| 1900009 | Failed to write data to the message sequence. |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1.The number of parameters is incorrect; 2.The parameter type does not match. |
+| [1900008](../errorcode-rpc.md#1900008-非法的ipc对象) | The proxy or remote object is invalid. |
+| [1900009](../errorcode-rpc.md#1900009-向messagesequence写入数据失败) | Failed to write data to the message sequence. |
 
 ## 示例
 
@@ -4501,7 +4645,6 @@ class TestRemoteObject extends rpc.RemoteObject {
 try {
   let data = rpc.MessageSequence.create();
   let testRemoteObject = new TestRemoteObject("testObject");
-  // 将远程对象写入MessageSequence对象
   data.writeRemoteObject(testRemoteObject);
 } catch (error) {
   let e: BusinessError = error as BusinessError;
@@ -4539,8 +4682,8 @@ writeRemoteObjectArray(objectArray: IRemoteObject[]): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1.The parameter is an empty array; 2.The number of parameters is incorrect; 3.The parameter type does not match; 4.The element does not exist in the array; 5.The obtained remoteObject is null. |
-| 1900009 | Failed to write data to the message sequence. |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1.The parameter is an empty array; 2.The number of parameters is incorrect; 3.The parameter type does not match; 4.The element does not exist in the array; 5.The obtained remoteObject is null. |
+| [1900009](../errorcode-rpc.md#1900009-向messagesequence写入数据失败) | Failed to write data to the message sequence. |
 
 ## 示例
 
@@ -4607,8 +4750,8 @@ writeShort(val: int): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1.The number of parameters is incorrect; 2.The parameter type does not match. |
-| 1900009 | Failed to write data to the message sequence. |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1.The number of parameters is incorrect; 2.The parameter type does not match. |
+| [1900009](../errorcode-rpc.md#1900009-向messagesequence写入数据失败) | Failed to write data to the message sequence. |
 
 ## 示例
 
@@ -4662,8 +4805,8 @@ writeShortArray(shortArray: int[]): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1.The parameter is an empty array; 2.The number of parameters is incorrect; 3.The parameter type does not match; 4.The element does not exist in the array; 5.The type of the element in the array is incorrect. |
-| 1900009 | Failed to write data to the message sequence. |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1.The parameter is an empty array; 2.The number of parameters is incorrect; 3.The parameter type does not match; 4.The element does not exist in the array; 5.The type of the element in the array is incorrect. |
+| [1900009](../errorcode-rpc.md#1900009-向messagesequence写入数据失败) | Failed to write data to the message sequence. |
 
 ## 示例
 
@@ -4718,8 +4861,8 @@ writeString(val: string): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1.The number of parameters is incorrect; 2.The parameter type does not match; 3.The string length is greater than or equal to 40960; 4.The number of bytes copied to the buffer is different from the length of the obtained string. |
-| 1900009 | Failed to write data to the message sequence. |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1.The number of parameters is incorrect; 2.The parameter type does not match; 3.The string length is greater than or equal to 40960; 4.The number of bytes copied to the buffer is different from the length of the obtained string. |
+| [1900009](../errorcode-rpc.md#1900009-向messagesequence写入数据失败) | Failed to write data to the message sequence. |
 
 ## 示例
 
@@ -4768,8 +4911,8 @@ writeStringArray(stringArray: string[]): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1.The parameter is an empty array; 2.The number of parameters is incorrect; 3.The parameter type does not match; 4.The string length is greater than or equal to 40960; 5.The number of bytes copied to the buffer is different from the length of the obtained string. |
-| 1900009 | Failed to write data to the message sequence. |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1.The parameter is an empty array; 2.The number of parameters is incorrect; 3.The parameter type does not match; 4.The string length is greater than or equal to 40960; 5.The number of bytes copied to the buffer is different from the length of the obtained string. |
+| [1900009](../errorcode-rpc.md#1900009-向messagesequence写入数据失败) | Failed to write data to the message sequence. |
 
 ## 示例
 

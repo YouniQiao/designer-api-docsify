@@ -12,13 +12,7 @@ import { inputDeviceCooperate } from 'kits/@kit.InputKit';
 function start(sinkDeviceDescriptor: string, srcInputDeviceId: number, callback: AsyncCallback<void>): void
 ```
 
-启动键鼠穿越，使用callback异步回调。
-
-> **说明：**
-> 
-> 从 API version 9开始支持，从API version 23开始废弃。建议使用
-> [cooperate.activateCooperate](../../apis-distributed-service-kit/arkts-apis/arkts-distributedservice-cooperate-activatecooperate-f-sys.md/arkts-distributedservice-cooperate-activatecooperate-f-sys.md#activatecooperate)
-> 替代。
+Starts screen hopping. This API uses an asynchronous callback to return the result.
 
 **Since:** 9
 
@@ -38,18 +32,18 @@ function start(sinkDeviceDescriptor: string, srcInputDeviceId: number, callback:
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| sinkDeviceDescriptor | string | Yes | 键鼠穿越目标设备描述符。 |
-| srcInputDeviceId | number | Yes | 键鼠穿越待穿越外设标识符。 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | 回调函数。当启动键鼠穿越成功，err为undefined，否则为错误对象。 |
+| sinkDeviceDescriptor | string | Yes | Descriptor of the target device for screen hopping. |
+| srcInputDeviceId | number | Yes | ID of the target device for screen hopping. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback. If the operation is successful, **err** is **undefined**. Otherwise, **error** is an error object. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; 3. Parameter verification failed. |
-| 4400002 | Screen hop failed. |
-| 4400001 | Incorrect descriptor for the target device. |
-| 202 | Permission denied, non-system app called system api.<br>**Applicable version:** 12 and later |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; 3. Parameter verification failed. |
+| [4400002](../errorcode-cooperator.md#4400002-input-device-operation-failed) | Screen hop failed. |
+| [4400001](../errorcode-cooperator.md#4400001-incorrect-target-device-descriptor) | Incorrect descriptor for the target device. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission denied, non-system app called system api.<br>**Applicable version:** 12 and later |
 
 ## Examples
 
@@ -69,13 +63,13 @@ struct Index {
           try {
             inputDeviceCooperate.start(sinkDeviceDescriptor, srcInputDeviceId, (error: BusinessError) => {
               if (error) {
-                console.error(`Failed to start keyboard mouse crossing, Code: ${(error as BusinessError).code}, message: ${(error as BusinessError).message}.`);
+                console.error(`Start Keyboard mouse crossing failed, error: ${JSON.stringify(error, [`code`, `message`])}`);
                 return;
               }
-              console.info(`Succeeded in starting keyboard mouse crossing.`);
+              console.info(`Start Keyboard mouse crossing success.`);
             });
           } catch (error) {
-            console.error(`Failed to start keyboard mouse crossing, Code: ${(error as BusinessError).code}, message: ${(error as BusinessError).message}.`);
+            console.error(`Start Keyboard mouse crossing failed, error: ${JSON.stringify(error, [`code`, `message`])}`);
           }
         })
     }
@@ -90,13 +84,7 @@ struct Index {
 function start(sinkDeviceDescriptor: string, srcInputDeviceId: number): Promise<void>
 ```
 
-启动键鼠穿越，使用Promise异步回调。
-
-> **说明：**
-> 
-> 从 API version 9开始支持，从API version 23开始废弃。建议使用
-> [cooperate.activateCooperate](../../apis-distributed-service-kit/arkts-apis/arkts-distributedservice-cooperate-activatecooperate-f-sys.md/arkts-distributedservice-cooperate-activatecooperate-f-sys.md#activatecooperate)
-> 替代。
+Starts screen hopping. This API uses a promise to return the result.
 
 **Since:** 9
 
@@ -116,23 +104,23 @@ function start(sinkDeviceDescriptor: string, srcInputDeviceId: number): Promise<
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| sinkDeviceDescriptor | string | Yes | 键鼠穿越目标设备描述符。 |
-| srcInputDeviceId | number | Yes | 键鼠穿越待穿越外设标识符。 |
+| sinkDeviceDescriptor | string | Yes | Descriptor of the target device for screen hopping. |
+| srcInputDeviceId | number | Yes | ID of the target device for screen hopping. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise对象，无返回结果。 |
+| Promise&lt;void&gt; | Promise that returns no value. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; 3. Parameter verification failed. |
-| 4400002 | Screen hop failed. |
-| 4400001 | Incorrect descriptor for the target device. |
-| 202 | Permission denied, non-system app called system api.<br>**Applicable version:** 12 and later |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; 3. Parameter verification failed. |
+| [4400002](../errorcode-cooperator.md#4400002-input-device-operation-failed) | Screen hop failed. |
+| [4400001](../errorcode-cooperator.md#4400001-incorrect-target-device-descriptor) | Incorrect descriptor for the target device. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission denied, non-system app called system api.<br>**Applicable version:** 12 and later |
 
 ## Examples
 
@@ -149,11 +137,15 @@ struct Index {
         .onClick(() => {
           const sinkDeviceDescriptor = "descriptor";
           const srcInputDeviceId = 0;
-          inputDeviceCooperate.start(sinkDeviceDescriptor, srcInputDeviceId).then(() => {
-            console.info(`Succeeded in starting keyboard mouse crossing.`);
-          }).catch((error: BusinessError) => {
-            console.error(`Failed to start keyboard mouse crossing, Code: ${(error as BusinessError).code}, message: ${(error as BusinessError).message}.`);
-          });
+          try {
+            inputDeviceCooperate.start(sinkDeviceDescriptor, srcInputDeviceId).then(() => {
+              console.info(`Start Keyboard mouse crossing success.`);
+            }, (error: BusinessError) => {
+              console.error(`Start Keyboard mouse crossing failed, error: ${JSON.stringify(error, [`code`, `message`])}`);
+            });
+          } catch (error) {
+            console.error(`Start Keyboard mouse crossing failed, error: ${JSON.stringify(error, [`code`, `message`])}`);
+          }
         })
     }
   }

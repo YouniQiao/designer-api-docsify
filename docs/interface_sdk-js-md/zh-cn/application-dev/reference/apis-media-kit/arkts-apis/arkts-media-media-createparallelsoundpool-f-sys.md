@@ -1,11 +1,5 @@
 # createParallelSoundPool（系统接口）
 
-## 导入模块
-
-```TypeScript
-import { media } from 'kits/@kit.MediaKit';
-```
-
 ## createParallelSoundPool
 
 ```TypeScript
@@ -44,8 +38,8 @@ If a **SoundPool** instance created using [createSoundPool](#createSoundPool) is
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 5400101 | No memory. Return by promise. |
-| 202 | System API error. Return by promise. |
+| [5400101](../errorcode-media.md#5400101-内存分配失败) | No memory. Return by promise. |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | System API error. Return by promise. |
 
 ## 示例
 

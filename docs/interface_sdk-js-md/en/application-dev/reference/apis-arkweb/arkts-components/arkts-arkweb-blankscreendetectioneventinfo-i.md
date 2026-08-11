@@ -1,6 +1,6 @@
 # BlankScreenDetectionEventInfo
 
-定义检测到白屏时的事件信息。
+Defines the event information when a blank screen is detected.
 
 **Since:** 22
 
@@ -16,9 +16,7 @@
 blankScreenDetails?: BlankScreenDetails
 ```
 
-本次检测白屏的结果的细节。
-
-如当发现近似白屏的现象产生，这个细节就包含具体命中了多少点。否则没有该属性。
+Details of the blank screen issue detected.For example, if a near-blank screen issue is detected, the details contain the number of points that match the blank screen issue. Otherwise, this attribute does not exist.
 
 **Type:** [BlankScreenDetails](arkts-arkweb-blankscreendetails-i.md)
 
@@ -36,7 +34,7 @@ blankScreenDetails?: BlankScreenDetails
 blankScreenReason: DetectedBlankScreenReason
 ```
 
-本次检测到白屏时，具体原因与检测的方法相关。
+Reason for the blank screen issue, which depends on the detection method.
 
 **Type:** [DetectedBlankScreenReason](arkts-arkweb-detectedblankscreenreason-e.md)
 
@@ -54,7 +52,7 @@ blankScreenReason: DetectedBlankScreenReason
 url: string
 ```
 
-检测到白屏时，页面的url。
+URL of the page when a blank screen is detected.
 
 **Type:** string
 

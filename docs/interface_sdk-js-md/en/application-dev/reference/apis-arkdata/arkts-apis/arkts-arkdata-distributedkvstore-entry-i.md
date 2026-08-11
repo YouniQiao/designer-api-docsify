@@ -1,6 +1,6 @@
 # Entry
 
-存储在数据库中的键值对。
+Provides key-value pairs stored in the distributedKVStore.
 
 **Since:** 9
 
@@ -22,7 +22,7 @@ import { distributedKVStore } from 'kits/@kit.ArkData';
 key: string
 ```
 
-表示键名。
+Indicates the key
 
 **Type:** string
 
@@ -42,7 +42,7 @@ key: string
 value: Value
 ```
 
-值对象。
+Indicates the value
 
 **Type:** [Value](arkts-arkdata-distributeddata-value-i.md)
 

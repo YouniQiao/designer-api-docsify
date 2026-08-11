@@ -1,6 +1,6 @@
 # PlaceholderSpan
 
-描述占位符样式。
+Describes the placeholder style.
 
 **Since:** 12
 
@@ -22,7 +22,7 @@ import { text } from 'kits/@kit.ArkGraphics2D';
 align: PlaceholderAlignment
 ```
 
-相对于周围文本的纵向对齐方式。
+Vertical alignment of the placeholder relative to the surrounding text.
 
 **Type:** [PlaceholderAlignment](arkts-arkgraphics2d-text-placeholderalignment-e.md)
 
@@ -42,7 +42,7 @@ align: PlaceholderAlignment
 baseline: TextBaseline
 ```
 
-基线类型。
+Type of the text baseline.
 
 **Type:** [TextBaseline](arkts-arkgraphics2d-text-textbaseline-e.md)
 
@@ -62,7 +62,7 @@ baseline: TextBaseline
 baselineOffset: double
 ```
 
-基线偏移量，浮点数，单位为物理像素px。
+Offset to the text baseline, in units of px. The value is a floating point number.
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：double
 
@@ -82,7 +82,7 @@ baselineOffset: double
 height: double
 ```
 
-占位符的高度，浮点数，单位为物理像素px。
+Height of the placeholder, in units of px. The value is a floating point number.
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：double
 
@@ -102,7 +102,7 @@ height: double
 width: double
 ```
 
-占位符的宽度，浮点数，单位为物理像素px。
+Width of the placeholder, in units of px. The value is a floating point number.
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：double
 

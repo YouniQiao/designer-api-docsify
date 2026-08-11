@@ -5,7 +5,7 @@ type ArrayReduceCallback<AccType, ElementType, ArrayType> =
     (previousValue: AccType, currentValue: ElementType, currentIndex: number, array: ArrayType) => AccType
 ```
 
-ArkTS Array归约函数类型，被Array类的'reduceRight'接口使用。
+Defines the ArkTS Array reduction function, which is used by the 'reduceRight' API of the Array class.
 
 **Since:** 18
 
@@ -21,14 +21,14 @@ ArkTS Array归约函数类型，被Array类的'reduceRight'接口使用。
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| previousValue | AccType | Yes | 当前遍历所累积的值。 |
-| currentValue | ElementType | Yes | 当前遍历的ArkTS Array元素。 |
-| currentIndex | number | Yes | 当前遍历的ArkTS Array元素索引。 |
-| array | ArrayType | Yes | 当前遍历的ArkTS Array实例。 |
+| previousValue | AccType | Yes | Accumulated value of the current traversal. |
+| currentValue | ElementType | Yes | Element that is being traversed in the ArkTS array. |
+| currentIndex | number | Yes | Index of the element in the ArkTS array. |
+| array | ArrayType | Yes | ArkTS array that is being traversed. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| AccType | 归约函数的结果，该结果会作为下一次调用ArrayReduceCallback时的previousValue参数。 |
+| AccType | The result of the reduction. |
 

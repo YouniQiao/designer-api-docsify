@@ -4,9 +4,7 @@
 export type ImageMatrix = matrix4.Matrix4Transit
 ```
 
-type ImageMatrix = matrix4.Matrix4Transit
-
-当前的矩阵对象。
+Object matrix used for setting image transformations.
 
 **Since:** 23
 

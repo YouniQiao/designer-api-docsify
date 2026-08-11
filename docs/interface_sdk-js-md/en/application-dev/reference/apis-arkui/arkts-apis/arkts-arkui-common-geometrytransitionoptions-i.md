@@ -16,9 +16,7 @@ Defines the options of geometry transition.
 follow?: boolean
 ```
 
-仅用于if范式下标记始终在组件树上的组件是否跟随做共享动画。true代表跟随做共享动画，false代表不跟随做共享动画。
-
-默认值：false
+whether follow target for the component still in the hierarchy, default: false, stay current.
 
 **Type:** boolean
 

@@ -10,12 +10,6 @@ Buffer对象是处理二进制数据的缓冲区。
 
 **系统能力：** SystemCapability.Utils.Lang
 
-## 导入模块
-
-```TypeScript
-import { buffer } from 'kits/@kit.ArkTS';
-```
-
 ## compare
 
 ```TypeScript
@@ -28,7 +22,7 @@ compare(
     ): -1 | 0 | 1
 ```
 
-比较当前Buffer对象与目标Buffer对象，并返回Buffer在排序中的结果。
+比较当前Buffer对象与目标Buffer或Uint8Array对象，并返回在排序中的结果。
 
 **起始版本：** 9
 
@@ -60,7 +54,7 @@ compare(
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 10200001 | The value of "[targetStart/targetEnd/sourceStart/sourceEnd]" is out of range. It must be >= 0 and <= [right range]. Received value is: [targetStart/targetEnd/sourceStart/sourceEnd] |
+| [10200001](../errorcode-utils.md#10200001-参数范围越界错误) | The value of "[targetStart/targetEnd/sourceStart/sourceEnd]" is out of range. It must be >= 0 and <= [right range]. Received value is: [targetStart/targetEnd/sourceStart/sourceEnd] |
 
 ## 示例
 
@@ -90,7 +84,7 @@ compare(
     ): int
 ```
 
-比较当前Buffer对象与目标Buffer对象，并返回Buffer在排序中的结果。
+比较当前Buffer对象与目标Buffer或Uint8Array对象，并返回在排序中的结果。
 
 **起始版本：** 23
 
@@ -107,7 +101,7 @@ compare(
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | target | [Buffer](arkts-arkts-buffer-buffer-c.md) \| Uint8Array | 是 | 要比较的实例对象。 |
-| targetStart | int | 否 | `target`实例中开始的偏移量。默认值：0。 |
+| targetStart | int | 否 | `target`实例中开始的偏移量。取值范围：>= 0且<= target的字节长度。默认值：0。 |
 | targetEnd | int | 否 | `target`实例中结束的偏移量（不包含结束位置）。默认值：目标对象的字节长度。 |
 | sourceStart | int | 否 | `this`实例中开始的偏移量。默认值：0。 |
 | sourceEnd | int | 否 | `this`实例中结束的偏移量（不包含结束位置）。默认值：当前对象的字节长度。 |
@@ -122,7 +116,23 @@ compare(
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 10200001 | The value of "[targetStart/targetEnd/sourceStart/sourceEnd]" is out of range. It must be >= 0 and <= [right range]. Received value is: [targetStart/targetEnd/sourceStart/sourceEnd] |
+| [10200001](../errorcode-utils.md#10200001-参数范围越界错误) | The value of "[targetStart/targetEnd/sourceStart/sourceEnd]" is out of range. It must be >= 0 and <= [right range]. Received value is: [targetStart/targetEnd/sourceStart/sourceEnd] |
+
+## 示例
+
+```TypeScript
+import { buffer } from '@kit.ArkTS';
+
+let buf1 = buffer.from([1, 2, 3, 4, 5, 6, 7, 8, 9]);
+let buf2 = buffer.from([5, 6, 7, 8, 9, 1, 2, 3, 4]);
+
+console.info(buf1.compare(buf2, 5, 9, 0, 4).toString());
+// 输出结果：0
+console.info(buf1.compare(buf2, 0, 6, 4).toString());
+// 输出结果：-1
+console.info(buf1.compare(buf2, 5, 6, 5).toString());
+// 输出结果：1
+```
 
 ## copy
 
@@ -153,7 +163,7 @@ copy(target: Buffer | Uint8Array, targetStart?: int, sourceStart?: int, sourceEn
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | target | [Buffer](arkts-arkts-buffer-buffer-c.md) \| Uint8Array | 是 | 要复制到的Buffer或Uint8Array实例。 |
-| targetStart | ArkTS-Dyn: number  <br>ArkTS-Sta：int | 否 | `target`实例中开始写入的偏移量。默认值：0。 |
+| targetStart | ArkTS-Dyn: number  <br>ArkTS-Sta：int | 否 | `target`实例中开始写入的偏移量。取值范围：>= 0且<= target的字节长度。默认值：0。 |
 | sourceStart | ArkTS-Dyn: number  <br>ArkTS-Sta：int | 否 | `this`实例中开始复制的偏移量。默认值: 0。 |
 | sourceEnd | ArkTS-Dyn: number  <br>ArkTS-Sta：int | 否 | `this`实例中结束复制的偏移量（不包含结束位置）。默认值：当前对象的字节长度。 |
 
@@ -167,7 +177,7 @@ copy(target: Buffer | Uint8Array, targetStart?: int, sourceStart?: int, sourceEn
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 10200001 | The value of "[targetStart/sourceStart/sourceEnd]" is out of range. It must be >= 0. Received value is: [targetStart/sourceStart/sourceEnd] |
+| [10200001](../errorcode-utils.md#10200001-参数范围越界错误) | The value of "[targetStart/sourceStart/sourceEnd]" is out of range. It must be >= 0. Received value is: [targetStart/sourceStart/sourceEnd] |
 
 ## 示例
 
@@ -198,7 +208,7 @@ ArkTS-Sta:
 entries(): IterableIterator<[int, long]>
 ```
 
-返回一个包含key和value的迭代器。
+返回一个包含字节索引（key）和字节值（value）的迭代器。
 
 **起始版本：** 9
 
@@ -214,8 +224,8 @@ entries(): IterableIterator<[int, long]>
 
 | 类型 | 说明 |
 | --- | --- |
-| [IterableIterator](arkts-arkts-iterator-iterableiterator-i.md)&lt;[number, number]&gt; | 包含key和value的迭代器，同时两者皆为number类型。<br>**适用版本：** 9 - 10 |
-| ArkTS-Dyn: [IterableIterator](arkts-arkts-iterator-iterableiterator-i.md)&lt;[number, number]&gt;  <br>ArkTS-Sta：[IterableIterator](arkts-arkts-iterator-iterableiterator-i.md)&lt;[int, long]&gt; | <br>**适用版本：** 11+ |
+| IterableIterator&lt;[number, number]&gt; | 包含key和value的迭代器，同时两者皆为number类型。<br>**适用版本：** 9 - 10 |
+| ArkTS-Dyn: IterableIterator&lt;[number, number]&gt;  <br>ArkTS-Sta：IterableIterator&lt;[int, long]&gt; | <br>**适用版本：** 11+ |
 
 ## 示例
 
@@ -306,7 +316,7 @@ fill(
     ): Buffer
 ```
 
-使用value填充当前对象指定位置的数据，默认为循环填充，并返回填充后的Buffer对象。
+使用value填充当前对象指定位置的数据，当value的长度小于需要填充的范围时会重复value进行填充，并返回填充后的Buffer对象。
 
 **起始版本：** 9
 
@@ -323,7 +333,7 @@ fill(
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | value | ArkTS-Dyn: string \| Buffer \| Uint8Array \| number \| number \| number  <br>ArkTS-Sta：string \| Buffer \| Uint8Array \| int \| double \| long | 是 | 用于填充的值。<br>**起始版本：** 11 |
-| offset | ArkTS-Dyn: number  <br>ArkTS-Sta：int | 否 | 起始偏移量。默认值：0。 |
+| offset | ArkTS-Dyn: number  <br>ArkTS-Sta：int | 否 | 起始偏移量。取值范围：>= 0且<= Buffer.length。默认值：0。 |
 | end | ArkTS-Dyn: number  <br>ArkTS-Sta：int | 否 | 结束偏移量（不包含结束位置）。默认值：当前对象的字节长度。 |
 | encoding | [BufferEncoding](arkts-arkts-fastbuffer-bufferencoding-t.md) | 否 | 字符编码格式（value为string才有意义）。默认值：'utf8'。 |
 
@@ -337,7 +347,7 @@ fill(
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 10200001 | The value of "[offset/end]" is out of range. It must be >= 0 and <= [right range]. Received value is: [offset/end] |
+| [10200001](../errorcode-utils.md#10200001-参数范围越界错误) | The value of "[offset/end]" is out of range. It must be >= 0 and <= [right range]. Received value is: [offset/end] |
 
 ## includes
 
@@ -427,7 +437,7 @@ ArkTS-Sta:
 keys(): IterableIterator<int>
 ```
 
-返回包含key值的迭代器。
+返回一个包含字节索引（key）和字节值（value）的迭代器。
 
 **起始版本：** 9
 
@@ -443,7 +453,7 @@ keys(): IterableIterator<int>
 
 | 类型 | 说明 |
 | --- | --- |
-| ArkTS-Dyn: [IterableIterator](arkts-arkts-iterator-iterableiterator-i.md)&lt;number&gt;  <br>ArkTS-Sta：[IterableIterator](arkts-arkts-iterator-iterableiterator-i.md)&lt;int&gt; | 返回一个包含key值的迭代器。 |
+| ArkTS-Dyn: IterableIterator&lt;number&gt;  <br>ArkTS-Sta：IterableIterator&lt;int&gt; | 返回包含Buffer中每个字节值的迭代器。 |
 
 ## 示例
 
@@ -531,19 +541,19 @@ readBigInt64BE(offset?: int): bigint
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| offset | ArkTS-Dyn: number  <br>ArkTS-Sta：int | 否 | 偏移量。默认值：0。取值范围：0 <= offset <= Buffer.length - 8。 |
+| offset | ArkTS-Dyn: number  <br>ArkTS-Sta：int | 否 | 偏移量。默认值：0。取值范围：0 <= offset <= Buffer.length - 8。当Buffer长度小于8时无法使用此方法。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| bigint | 读取出的内容。 |
+| bigint | 读取的有符号大端序64位整数值。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 10200001 | The value of "offset" is out of range. It must be >= 0 and <= buf.length - 8 . Received value is: [offset] |
+| [10200001](../errorcode-utils.md#10200001-参数范围越界错误) | The value of "offset" is out of range. It must be >= 0 and <= buf.length - 8 . Received value is: [offset] |
 
 ## 示例
 
@@ -595,13 +605,13 @@ readBigInt64LE(offset?: int): bigint
 
 | 类型 | 说明 |
 | --- | --- |
-| bigint | 读取出的内容。 |
+| bigint | 从Buffer中读取的有符号小端序64位整数值，可用于高精度整数运算的二进制数据处理。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 10200001 | The value of "offset" is out of range. It must be >= 0 and <= buf.length - 8 . Received value is: [offset] |
+| [10200001](../errorcode-utils.md#10200001-参数范围越界错误) | The value of "offset" is out of range. It must be >= 0 and <= buf.length - 8 . Received value is: [offset] |
 
 ## 示例
 
@@ -653,13 +663,13 @@ readBigUInt64BE(offset?: int): bigint
 
 | 类型 | 说明 |
 | --- | --- |
-| bigint | 读取出的内容。 |
+| bigint | 从Buffer中读取的无符号大端序64位整数值。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 10200001 | The value of "offset" is out of range. It must be >= 0 and <= buf.length - 8 . Received value is: [offset] |
+| [10200001](../errorcode-utils.md#10200001-参数范围越界错误) | The value of "offset" is out of range. It must be >= 0 and <= buf.length - 8 . Received value is: [offset] |
 
 ## 示例
 
@@ -710,13 +720,13 @@ readBigUInt64LE(offset?: int): bigint
 
 | 类型 | 说明 |
 | --- | --- |
-| bigint | 读取出的内容。 |
+| bigint | 从Buffer中读取的无符号小端序64位整数值。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 10200001 | The value of "offset" is out of range. It must be >= 0 and <= buf.length - 8 . Received value is: [offset] |
+| [10200001](../errorcode-utils.md#10200001-参数范围越界错误) | The value of "offset" is out of range. It must be >= 0 and <= buf.length - 8 . Received value is: [offset] |
 
 ## 示例
 
@@ -774,7 +784,7 @@ readDoubleBE(offset?: int): double
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 10200001 | The value of "offset" is out of range. It must be >= 0 and <= buf.length - 8 . Received value is: [offset] |
+| [10200001](../errorcode-utils.md#10200001-参数范围越界错误) | The value of "offset" is out of range. It must be >= 0 and <= buf.length - 8 . Received value is: [offset] |
 
 ## 示例
 
@@ -830,7 +840,7 @@ readDoubleLE(offset?: int): double
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 10200001 | The value of "offset" is out of range. It must be >= 0 and <= buf.length - 8 . Received value is: [offset] |
+| [10200001](../errorcode-utils.md#10200001-参数范围越界错误) | The value of "offset" is out of range. It must be >= 0 and <= buf.length - 8 . Received value is: [offset] |
 
 ## 示例
 
@@ -886,7 +896,7 @@ readFloatBE(offset?: int): double
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 10200001 | The value of "offset" is out of range. It must be >= 0 and <= buf.length - 4 . Received value is: [offset] |
+| [10200001](../errorcode-utils.md#10200001-参数范围越界错误) | The value of "offset" is out of range. It must be >= 0 and <= buf.length - 4 . Received value is: [offset] |
 
 ## 示例
 
@@ -942,7 +952,7 @@ readFloatLE(offset?: int): double
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 10200001 | The value of "offset" is out of range. It must be >= 0 and <= buf.length - 4 . Received value is: [offset] |
+| [10200001](../errorcode-utils.md#10200001-参数范围越界错误) | The value of "offset" is out of range. It must be >= 0 and <= buf.length - 4 . Received value is: [offset] |
 
 ## 示例
 
@@ -998,7 +1008,7 @@ readInt16BE(offset?: int): long
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 10200001 | The value of "offset" is out of range. It must be >= 0 and <= buf.length - 2 . Received value is: [offset] |
+| [10200001](../errorcode-utils.md#10200001-参数范围越界错误) | The value of "offset" is out of range. It must be >= 0 and <= buf.length - 2 . Received value is: [offset] |
 
 ## 示例
 
@@ -1054,7 +1064,7 @@ readInt16LE(offset?: int): long
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 10200001 | The value of "offset" is out of range. It must be >= 0 and <= buf.length - 2 . Received value is: [offset] |
+| [10200001](../errorcode-utils.md#10200001-参数范围越界错误) | The value of "offset" is out of range. It must be >= 0 and <= buf.length - 2 . Received value is: [offset] |
 
 ## 示例
 
@@ -1110,7 +1120,7 @@ readInt32BE(offset?: int): long
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 10200001 | The value of "offset" is out of range. It must be >= 0 and <= buf.length - 4 . Received value is: [offset] |
+| [10200001](../errorcode-utils.md#10200001-参数范围越界错误) | The value of "offset" is out of range. It must be >= 0 and <= buf.length - 4 . Received value is: [offset] |
 
 ## 示例
 
@@ -1166,7 +1176,7 @@ readInt32LE(offset?: int): long
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 10200001 | The value of "offset" is out of range. It must be >= 0 and <= buf.length - 4 . Received value is: [offset] |
+| [10200001](../errorcode-utils.md#10200001-参数范围越界错误) | The value of "offset" is out of range. It must be >= 0 and <= buf.length - 4 . Received value is: [offset] |
 
 ## 示例
 
@@ -1222,7 +1232,7 @@ readInt8(offset?: int): long
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 10200001 | The value of "offset" is out of range. It must be >= 0 and <= buf.length - 1 . Received value is: [offset] |
+| [10200001](../errorcode-utils.md#10200001-参数范围越界错误) | The value of "offset" is out of range. It must be >= 0 and <= buf.length - 1 . Received value is: [offset] |
 
 ## 示例
 
@@ -1281,7 +1291,7 @@ readIntBE(offset: int, byteLength: int): long
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 10200001 | The value of "[param]" is out of range. It must be >= [left range] and <= [right range]. Received value is: [param] |
+| [10200001](../errorcode-utils.md#10200001-参数范围越界错误) | The value of "[param]" is out of range. It must be >= [left range] and <= [right range]. Received value is: [param] |
 
 ## 示例
 
@@ -1339,7 +1349,7 @@ readIntLE(offset: int, byteLength: int): long
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 10200001 | The value of "[param]" is out of range. It must be >= [left range] and <= [right range]. Received value is: [param] |
+| [10200001](../errorcode-utils.md#10200001-参数范围越界错误) | The value of "[param]" is out of range. It must be >= [left range] and <= [right range]. Received value is: [param] |
 
 ## 示例
 
@@ -1395,7 +1405,7 @@ readUInt16BE(offset?: int): long
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 10200001 | The value of "offset" is out of range. It must be >= 0 and <= buf.length - 2 . Received value is: [offset] |
+| [10200001](../errorcode-utils.md#10200001-参数范围越界错误) | The value of "offset" is out of range. It must be >= 0 and <= buf.length - 2 . Received value is: [offset] |
 
 ## 示例
 
@@ -1425,7 +1435,7 @@ ArkTS-Sta:
 readUInt16LE(offset?: int): long
 ```
 
-从指定的`offset`处的buf读取无符号的小端序16位整数。
+从指定的`offset`处读取无符号的小端序16位整数。
 
 **起始版本：** 9
 
@@ -1453,7 +1463,7 @@ readUInt16LE(offset?: int): long
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 10200001 | The value of "offset" is out of range. It must be >= 0 and <= buf.length - 2 . Received value is: [offset] |
+| [10200001](../errorcode-utils.md#10200001-参数范围越界错误) | The value of "offset" is out of range. It must be >= 0 and <= buf.length - 2 . Received value is: [offset] |
 
 ## 示例
 
@@ -1511,7 +1521,7 @@ readUInt32BE(offset?: int): long
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 10200001 | The value of "offset" is out of range. It must be >= 0 and <= buf.length - 4 . Received value is: [offset] |
+| [10200001](../errorcode-utils.md#10200001-参数范围越界错误) | The value of "offset" is out of range. It must be >= 0 and <= buf.length - 4 . Received value is: [offset] |
 
 ## 示例
 
@@ -1567,7 +1577,7 @@ readUInt32LE(offset?: int): long
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 10200001 | The value of "offset" is out of range. It must be >= 0 and <= buf.length - 4 . Received value is: [offset] |
+| [10200001](../errorcode-utils.md#10200001-参数范围越界错误) | The value of "offset" is out of range. It must be >= 0 and <= buf.length - 4 . Received value is: [offset] |
 
 ## 示例
 
@@ -1595,7 +1605,7 @@ ArkTS-Sta:
 readUInt8(offset?: int): long
 ```
 
-从`offset`处读取8位无符号整型数。
+从指定的`offset`处读取8位无符号整型数。
 
 **起始版本：** 9
 
@@ -1623,7 +1633,7 @@ readUInt8(offset?: int): long
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 10200001 | The value of "offset" is out of range. It must be >= 0 and <= buf.length - 1 . Received value is: [offset] |
+| [10200001](../errorcode-utils.md#10200001-参数范围越界错误) | The value of "offset" is out of range. It must be >= 0 and <= buf.length - 1 . Received value is: [offset] |
 
 ## 示例
 
@@ -1670,7 +1680,7 @@ readUIntBE(offset: int, byteLength: int): long
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | offset | ArkTS-Dyn: number  <br>ArkTS-Sta：int | 是 | 偏移量。取值范围：0 <= offset <= Buffer.length - byteLength，默认值：0。 |
-| byteLength | ArkTS-Dyn: number  <br>ArkTS-Sta：int | 是 | 要读取的字节数。读取的字节数。取值范围：1 <= byteLength <= 6。 |
+| byteLength | ArkTS-Dyn: number  <br>ArkTS-Sta：int | 是 | 要读取的字节数。取值范围：1 <= byteLength <= 6。 |
 
 **返回值：**
 
@@ -1682,7 +1692,7 @@ readUIntBE(offset: int, byteLength: int): long
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 10200001 | The value of "[param]" is out of range. It must be >= [left range] and <= [right range]. Received value is: [param] |
+| [10200001](../errorcode-utils.md#10200001-参数范围越界错误) | The value of "[param]" is out of range. It must be >= [left range] and <= [right range]. Received value is: [param] |
 
 ## 示例
 
@@ -1739,7 +1749,7 @@ readUIntLE(offset: int, byteLength: int): long
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 10200001 | The value of "[param]" is out of range. It must be >= [left range] and <= [right range]. Received value is: [param] |
+| [10200001](../errorcode-utils.md#10200001-参数范围越界错误) | The value of "[param]" is out of range. It must be >= [left range] and <= [right range]. Received value is: [param] |
 
 ## 示例
 
@@ -1813,7 +1823,7 @@ console.info(buf2.toString('ascii', 0, buf2.length));
 swap16(): Buffer
 ```
 
-将当前对象转换为无符号的16位整数数组，并交换字节顺序。
+将当前对象转换为无符号的16位整数数组，并交换字节顺序。适用于需要在大端序和小端序之间转换16位数据的场景。
 
 **起始版本：** 9
 
@@ -1835,7 +1845,7 @@ swap16(): Buffer
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 10200009 | The buffer size must be a multiple of 16-bits |
+| [10200009](../errorcode-utils.md#10200009-buffer的长度错误) | The buffer size must be a multiple of 16-bits |
 
 ## 示例
 
@@ -1856,7 +1866,7 @@ console.info(buf1.toString('hex'));
 swap32(): Buffer
 ```
 
-将当前对象转换为无符号的32位整数数组，并交换字节顺序。
+将当前对象转换为无符号的32位整数数组，并交换字节顺序。适用于需要在大端序和小端序之间转换32位数据的场景。
 
 **起始版本：** 9
 
@@ -1878,7 +1888,7 @@ swap32(): Buffer
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 10200009 | The buffer size must be a multiple of 32-bits |
+| [10200009](../errorcode-utils.md#10200009-buffer的长度错误) | The buffer size must be a multiple of 32-bits |
 
 ## 示例
 
@@ -1899,7 +1909,7 @@ console.info(buf1.toString('hex'));
 swap64(): Buffer
 ```
 
-将当前对象转换为无符号的64位整数数组，并交换字节顺序。
+将当前对象转换为无符号的64位整数数组，并交换字节顺序。适用于需要在大端序和小端序之间转换64位数据的场景。
 
 **起始版本：** 9
 
@@ -1921,7 +1931,7 @@ swap64(): Buffer
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 10200009 | The buffer size must be a multiple of 64-bits |
+| [10200009](../errorcode-utils.md#10200009-buffer的长度错误) | The buffer size must be a multiple of 64-bits |
 
 ## 示例
 
@@ -1942,7 +1952,7 @@ console.info(buf1.toString('hex'));
 toJSON(): Object
 ```
 
-将Buffer转为JSON并返回。
+将Buffer转为JSON对象并返回，该对象包含type属性（值为'Buffer'）和data属性（值为按字节顺序排列的数组）。
 
 **起始版本：** 9
 
@@ -1995,6 +2005,17 @@ toJSON(): jsonx.JsonElement
 | --- | --- |
 | jsonx.JsonElement | 新的JsonElement对象，包含此Buffer的内容。 |
 
+## 示例
+
+```TypeScript
+import { buffer } from '@kit.ArkTS';
+
+let buf1 = buffer.from([0x1, 0x2, 0x3, 0x4, 0x5]);
+let obj = buf1.toJSON();
+console.info(JSON.stringify(obj));
+// 输出结果: {"type":"Buffer","data":[1,2,3,4,5]}
+```
+
 ## toString
 
 ```TypeScript
@@ -2017,8 +2038,8 @@ toString(encoding?: string, start?: number, end?: number): string
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| encoding | string | 否 | 字符编码格式。默认值：'utf8'。 |
-| start | number | 否 | 开始位置。默认值：0。 |
+| encoding | string | 否 | 字符编码格式（`value`参数为string时才有意义）。默认值：'utf8'。 |
+| start | number | 否 | 开始位置，单位：字节。默认值：0。 |
 | end | number | 否 | 结束位置。默认值：Buffer.length。 |
 
 **返回值：**
@@ -2100,6 +2121,19 @@ toString(encoding?: BufferEncoding, start?: int, end?: int): string
 | --- | --- |
 | string | 解码后的字符串。 |
 
+## 示例
+
+```TypeScript
+import { buffer } from '@kit.ArkTS';
+
+let buf1 = buffer.allocUninitializedFromPool(26);
+for (let i = 0; i < 26; i++) {
+  buf1.writeInt8(i + 97, i);
+}
+console.info(buf1.toString('utf-8'));
+// 输出结果: abcdefghijklmnopqrstuvwxyz
+```
+
 ## values
 
 ArkTS-Dyn:
@@ -2128,7 +2162,7 @@ values(): IterableIterator<long>
 
 | 类型 | 说明 |
 | --- | --- |
-| ArkTS-Dyn: [IterableIterator](arkts-arkts-iterator-iterableiterator-i.md)&lt;number&gt;  <br>ArkTS-Sta：[IterableIterator](arkts-arkts-iterator-iterableiterator-i.md)&lt;long&gt; | 迭代器。 |
+| ArkTS-Dyn: IterableIterator&lt;number&gt;  <br>ArkTS-Sta：IterableIterator&lt;long&gt; | 迭代器。 |
 
 ## 示例
 
@@ -2181,9 +2215,9 @@ write(str: string, offset?: int, length?: int, encoding?: string): int
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | str | string | 是 | 要写入Buffer的字符串。 |
-| offset | ArkTS-Dyn: number  <br>ArkTS-Sta：int | 否 | 偏移量。默认值：0。 |
+| offset | ArkTS-Dyn: number  <br>ArkTS-Sta：int | 否 | 偏移量。取值范围：>= 0且<= Buffer.length。默认值：0。 |
 | length | ArkTS-Dyn: number  <br>ArkTS-Sta：int | 否 | 最大字节长度。默认值：（Buffer.length - offset）。 |
-| encoding | string | 否 | 字符编码。默认值：'utf8'。 |
+| encoding | string | 否 | 字符编码，支持的格式范围为BufferEncoding。默认值：'utf8'。 |
 
 **返回值：**
 
@@ -2195,7 +2229,7 @@ write(str: string, offset?: int, length?: int, encoding?: string): int
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 10200001 | The value of "[offset/length]" is out of range. It must be >= 0 and <= buf.length. Received value is: [offset/length] |
+| [10200001](../errorcode-utils.md#10200001-参数范围越界错误) | The value of "[offset/length]" is out of range. It must be >= 0 and <= buf.length. Received value is: [offset/length] |
 
 ## 示例
 
@@ -2254,7 +2288,7 @@ writeBigInt64BE(value: bigint, offset?: int): int
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 10200001 | The value of "[param]" is out of range. It must be >= [left range] and <= [right range]. Received value is: [param] |
+| [10200001](../errorcode-utils.md#10200001-参数范围越界错误) | The value of "[param]" is out of range. It must be >= [left range] and <= [right range]. Received value is: [param] |
 
 ## 示例
 
@@ -2308,7 +2342,7 @@ writeBigInt64LE(value: bigint, offset?: int): int
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 10200001 | The value of "[param]" is out of range. It must be >= [left range] and <= [right range]. Received value is: [param] |
+| [10200001](../errorcode-utils.md#10200001-参数范围越界错误) | The value of "[param]" is out of range. It must be >= [left range] and <= [right range]. Received value is: [param] |
 
 ## 示例
 
@@ -2362,7 +2396,7 @@ writeBigUInt64BE(value: bigint, offset?: int): int
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 10200001 | The value of "[param]" is out of range. It must be >= [left range] and <= [right range]. Received value is: [param] |
+| [10200001](../errorcode-utils.md#10200001-参数范围越界错误) | The value of "[param]" is out of range. It must be >= [left range] and <= [right range]. Received value is: [param] |
 
 ## 示例
 
@@ -2416,7 +2450,7 @@ writeBigUInt64LE(value: bigint, offset?: int): int
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 10200001 | The value of "[param]" is out of range. It must be >= [left range] and <= [right range]. Received value is: [param] |
+| [10200001](../errorcode-utils.md#10200001-参数范围越界错误) | The value of "[param]" is out of range. It must be >= [left range] and <= [right range]. Received value is: [param] |
 
 ## 示例
 
@@ -2470,7 +2504,7 @@ writeDoubleBE(value: double, offset?: int): int
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 10200001 | The value of "offset" is out of range. It must be >= 0 and <= buf.length - 8 . Received value is: [offset] |
+| [10200001](../errorcode-utils.md#10200001-参数范围越界错误) | The value of "offset" is out of range. It must be >= 0 and <= buf.length - 8 . Received value is: [offset] |
 
 ## 示例
 
@@ -2524,7 +2558,7 @@ writeDoubleLE(value: double, offset?: int): int
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 10200001 | The value of "offset" is out of range. It must be >= 0 and <= buf.length - 8 . Received value is: [offset] |
+| [10200001](../errorcode-utils.md#10200001-参数范围越界错误) | The value of "offset" is out of range. It must be >= 0 and <= buf.length - 8 . Received value is: [offset] |
 
 ## 示例
 
@@ -2578,7 +2612,7 @@ writeFloatBE(value: double, offset?: int): int
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 10200001 | The value of "offset" is out of range. It must be >= 0 and <= buf.length - 4 . Received value is: [offset] |
+| [10200001](../errorcode-utils.md#10200001-参数范围越界错误) | The value of "offset" is out of range. It must be >= 0 and <= buf.length - 4 . Received value is: [offset] |
 
 ## 示例
 
@@ -2632,7 +2666,7 @@ writeFloatLE(value: double, offset?: int): int
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 10200001 | The value of "offset" is out of range. It must be >= 0 and <= buf.length - 4 . Received value is: [offset] |
+| [10200001](../errorcode-utils.md#10200001-参数范围越界错误) | The value of "offset" is out of range. It must be >= 0 and <= buf.length - 4 . Received value is: [offset] |
 
 ## 示例
 
@@ -2686,7 +2720,7 @@ writeInt16BE(value: long, offset?: int): int
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 10200001 | The value of "[param]" is out of range. It must be >= [left range] and <= [right range]. Received value is: [param] |
+| [10200001](../errorcode-utils.md#10200001-参数范围越界错误) | The value of "[param]" is out of range. It must be >= [left range] and <= [right range]. Received value is: [param] |
 
 ## 示例
 
@@ -2740,7 +2774,7 @@ writeInt16LE(value: long, offset?: int): int
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 10200001 | The value of "[param]" is out of range. It must be >= [left range] and <= [right range]. Received value is: [param] |
+| [10200001](../errorcode-utils.md#10200001-参数范围越界错误) | The value of "[param]" is out of range. It must be >= [left range] and <= [right range]. Received value is: [param] |
 
 ## 示例
 
@@ -2794,7 +2828,7 @@ writeInt32BE(value: long, offset?: int): int
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 10200001 | The value of "[param]" is out of range. It must be >= [left range] and <= [right range]. Received value is: [param] |
+| [10200001](../errorcode-utils.md#10200001-参数范围越界错误) | The value of "[param]" is out of range. It must be >= [left range] and <= [right range]. Received value is: [param] |
 
 ## 示例
 
@@ -2848,7 +2882,7 @@ writeInt32LE(value: long, offset?: int): int
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 10200001 | The value of "[param]" is out of range. It must be >= [left range] and <= [right range]. Received value is: [param] |
+| [10200001](../errorcode-utils.md#10200001-参数范围越界错误) | The value of "[param]" is out of range. It must be >= [left range] and <= [right range]. Received value is: [param] |
 
 ## 示例
 
@@ -2889,7 +2923,7 @@ writeInt8(value: long, offset?: int): int
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | ArkTS-Dyn: number  <br>ArkTS-Sta：long | 是 | 写入Buffer的数据。 |
+| value | ArkTS-Dyn: number  <br>ArkTS-Sta：long | 是 | 写入Buffer的数据。取值范围：-128 <= value <= 127（8位有符号整数）。 |
 | offset | ArkTS-Dyn: number  <br>ArkTS-Sta：int | 否 | 偏移量。默认值：0。取值范围：0 <= offset <= Buffer.length - 1。 |
 
 **返回值：**
@@ -2902,7 +2936,7 @@ writeInt8(value: long, offset?: int): int
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 10200001 | The value of "[param]" is out of range. It must be >= [left range] and <= [right range]. Received value is: [param] |
+| [10200001](../errorcode-utils.md#10200001-参数范围越界错误) | The value of "[param]" is out of range. It must be >= [left range] and <= [right range]. Received value is: [param] |
 
 ## 示例
 
@@ -2960,7 +2994,7 @@ writeIntBE(value: long, offset: int, byteLength: int): int
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 10200001 | The value of "[param]" is out of range. It must be >= [left range] and <= [right range]. Received value is: [param] |
+| [10200001](../errorcode-utils.md#10200001-参数范围越界错误) | The value of "[param]" is out of range. It must be >= [left range] and <= [right range]. Received value is: [param] |
 
 ## 示例
 
@@ -3015,7 +3049,7 @@ writeIntLE(value: long, offset: int, byteLength: int): int
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 10200001 | The value of "[param]" is out of range. It must be >= [left range] and <= [right range]. Received value is: [param] |
+| [10200001](../errorcode-utils.md#10200001-参数范围越界错误) | The value of "[param]" is out of range. It must be >= [left range] and <= [right range]. Received value is: [param] |
 
 ## 示例
 
@@ -3069,7 +3103,7 @@ writeUInt16BE(value: long, offset?: int): int
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 10200001 | The value of "[param]" is out of range. It must be >= [left range] and <= [right range]. Received value is: [param] |
+| [10200001](../errorcode-utils.md#10200001-参数范围越界错误) | The value of "[param]" is out of range. It must be >= [left range] and <= [right range]. Received value is: [param] |
 
 ## 示例
 
@@ -3126,7 +3160,7 @@ writeUInt16LE(value: long, offset?: int): int
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 10200001 | The value of "[param]" is out of range. It must be >= [left range] and <= [right range]. Received value is: [param] |
+| [10200001](../errorcode-utils.md#10200001-参数范围越界错误) | The value of "[param]" is out of range. It must be >= [left range] and <= [right range]. Received value is: [param] |
 
 ## 示例
 
@@ -3183,7 +3217,7 @@ writeUInt32BE(value: long, offset?: int): int
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 10200001 | The value of "[param]" is out of range. It must be >= [left range] and <= [right range]. Received value is: [param] |
+| [10200001](../errorcode-utils.md#10200001-参数范围越界错误) | The value of "[param]" is out of range. It must be >= [left range] and <= [right range]. Received value is: [param] |
 
 ## 示例
 
@@ -3237,7 +3271,7 @@ writeUInt32LE(value: long, offset?: int): int
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 10200001 | The value of "[param]" is out of range. It must be >= [left range] and <= [right range]. Received value is: [param] |
+| [10200001](../errorcode-utils.md#10200001-参数范围越界错误) | The value of "[param]" is out of range. It must be >= [left range] and <= [right range]. Received value is: [param] |
 
 ## 示例
 
@@ -3278,7 +3312,7 @@ writeUInt8(value: long, offset?: int): int
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | ArkTS-Dyn: number  <br>ArkTS-Sta：long | 是 | 写入Buffer的数据。 |
+| value | ArkTS-Dyn: number  <br>ArkTS-Sta：long | 是 | 写入Buffer的数据。取值范围：0 <= value <= 255（8位无符号整数）。 |
 | offset | ArkTS-Dyn: number  <br>ArkTS-Sta：int | 否 | 偏移量。默认值：0。取值范围：0 <= offset <= Buffer.length - 1。 |
 
 **返回值：**
@@ -3291,7 +3325,7 @@ writeUInt8(value: long, offset?: int): int
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 10200001 | The value of "[param]" is out of range. It must be >= [left range] and <= [right range]. Received value is: [param] |
+| [10200001](../errorcode-utils.md#10200001-参数范围越界错误) | The value of "[param]" is out of range. It must be >= [left range] and <= [right range]. Received value is: [param] |
 
 ## 示例
 
@@ -3355,7 +3389,7 @@ writeUIntBE(value: long, offset: int, byteLength: int): int
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 10200001 | The value of "[param]" is out of range. It must be >= [left range] and <= [right range]. Received value is: [param] |
+| [10200001](../errorcode-utils.md#10200001-参数范围越界错误) | The value of "[param]" is out of range. It must be >= [left range] and <= [right range]. Received value is: [param] |
 
 ## 示例
 
@@ -3410,7 +3444,7 @@ writeUIntLE(value: long, offset: int, byteLength: int): int
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 10200001 | The value of "[param]" is out of range. It must be >= [left range] and <= [right range]. Received value is: [param] |
+| [10200001](../errorcode-utils.md#10200001-参数范围越界错误) | The value of "[param]" is out of range. It must be >= [left range] and <= [right range]. Received value is: [param] |
 
 ## 示例
 

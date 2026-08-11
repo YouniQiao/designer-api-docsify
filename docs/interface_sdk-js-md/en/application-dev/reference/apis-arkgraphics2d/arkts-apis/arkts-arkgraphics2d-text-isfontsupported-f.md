@@ -12,7 +12,7 @@ import { text } from 'kits/@kit.ArkGraphics2D';
 function isFontSupported(fontURL: string | Resource): boolean
 ```
 
-检查系统是否支持指定的字体文件。可在加载自定义字体前预先验证字体文件的可用性，避免因字体不支持导致文本渲染异常。
+Checks whether the system supports the specified font file. You can use this API to verify the availability of a font file before loading a custom font, preventing text rendering exceptions caused by unsupported fonts.
 
 **Since:** 23
 
@@ -28,13 +28,13 @@ function isFontSupported(fontURL: string | Resource): boolean
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| fontURL | string \| Resource | Yes | 需要检查的字体文件的路径，应为 "file:// + 字体文件绝对路径" 或 "rawfile/目录or文件名"。 |
+| fontURL | string \| Resource | Yes | Path of the font file to be checked. The path must be in the format of " **file://** + Absolute path of the font file" or **\\$rawfile** (a file path relative to the **resources/rawfile** directory in the project, which includes the font file name). |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| boolean | 系统是否支持指定的字体文件。返回true表示支持，返回false表示不支持。 |
+| boolean | Whether the system supports the specified font file. **true** means yes; **false** otherwise. |
 
 ## Examples
 

@@ -1,6 +1,6 @@
 # GzHeader
 
-传递从zlib例程中获取的Gzip头部信息。
+Gzip header information passed to and from zlib routines.
 
 **Since:** 12
 
@@ -22,7 +22,7 @@ import { zlib } from 'kits/@kit.BasicServicesKit';
 comment?: ArrayBuffer
 ```
 
-注释。
+Comment.
 
 **Type:** ArrayBuffer
 
@@ -42,7 +42,7 @@ comment?: ArrayBuffer
 done?: boolean
 ```
 
-读取gzip标头后为True。
+Returns **True** after reading the gzip file header.
 
 **Type:** boolean
 
@@ -62,7 +62,7 @@ done?: boolean
 extra?: ArrayBuffer
 ```
 
-额外字段。
+Extra field.
 
 **Type:** ArrayBuffer
 
@@ -82,7 +82,7 @@ extra?: ArrayBuffer
 extraLen?: int
 ```
 
-额外字段的长度。
+Length of the extra field.
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
@@ -102,7 +102,7 @@ extraLen?: int
 hcrc?: boolean
 ```
 
-如果存在crc标头，则为True。
+Returns **True** if the **crc** header exists.
 
 **Type:** boolean
 
@@ -122,7 +122,7 @@ hcrc?: boolean
 isText?: boolean
 ```
 
-如果压缩数据被认为是文本，则为True。
+Returns **True** if the compressed data is considered text.
 
 **Type:** boolean
 
@@ -142,7 +142,7 @@ isText?: boolean
 name?: ArrayBuffer
 ```
 
-文件名。
+File name.
 
 **Type:** ArrayBuffer
 
@@ -162,7 +162,7 @@ name?: ArrayBuffer
 os?: int
 ```
 
-操作系统。
+Operating system.
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
@@ -182,7 +182,7 @@ os?: int
 time?: long
 ```
 
-修改时间。
+Modification time.
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：long
 
@@ -202,7 +202,7 @@ time?: long
 xflags?: int
 ```
 
-额外标志。
+Extra flag.
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 

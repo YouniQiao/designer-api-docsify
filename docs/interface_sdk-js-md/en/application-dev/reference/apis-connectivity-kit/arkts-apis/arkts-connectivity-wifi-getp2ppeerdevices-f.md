@@ -73,11 +73,11 @@ wifi.getP2pPeerDevices((err, data:wifi.WifiP2pDevice) => {
        console.error("get P2P peer devices error");
        return;
    }
-  console.info("get P2P peer devices: " + JSON.stringify(data));
+	console.info("get P2P peer devices: " + JSON.stringify(data));
 });
 
 wifi.getP2pPeerDevices().then(data => {
-  console.info("get P2P peer devices: " + JSON.stringify(data));
+	console.info("get P2P peer devices: " + JSON.stringify(data));
 });
 ```
 

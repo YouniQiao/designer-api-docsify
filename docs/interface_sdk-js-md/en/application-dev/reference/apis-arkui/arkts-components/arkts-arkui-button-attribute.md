@@ -1,8 +1,8 @@
 # Button properties/events
 
-除支持[通用属性](../../apis-ability-kit/arkts-apis/arkts-app-ability-common.md/arkts-app-ability-common.md)外，还支持以下属性：
+In addition to the [universal attributes](../../apis-ability-kit/arkts-apis/arkts-app-ability-common.md/arkts-app-ability-common.md), the following attributes are supported.
 
-支持[通用事件](../../apis-ability-kit/arkts-apis/arkts-app-ability-common.md/arkts-app-ability-common.md)。
+The [universal events](../../apis-ability-kit/arkts-apis/arkts-app-ability-common.md/arkts-app-ability-common.md) are supported.
 
 **Inheritance/Implementation:** ButtonAttribute extends [CommonMethod<ButtonAttribute>](CommonMethod<ButtonAttribute>)
 
@@ -20,13 +20,13 @@
 buttonStyle(value: ButtonStyleMode)
 ```
 
-设置Button组件的样式和重要程度。根据设置枚举值的不同，系统自动调整按钮的背景色和文字颜色。背景色和文字颜色也支持开发者通过  
-[backgroundColor](../arkts-apis/arkts-arkui-common-commonmethod-i.md/arkts-arkui-common-commonmethod-i.md#backgroundcolor)、  
-[fontColor](ButtonAttribute#fontColor)和[role](ButtonAttribute#role)接口设置，实际显示效果以最后一次设置为准。
+Sets the style and primacy for the button. The system automatically adjusts the button background color and text color based on the enumerated value. You can also use the   
+[backgroundColor](../arkts-apis/arkts-arkui-common-commonmethod-i.md/arkts-arkui-common-commonmethod-i.md#backgroundcolor),   
+[fontColor](ButtonAttribute#fontColor), and [role](ButtonAttribute#role) APIs to set the background color and text color. The actual displayed effect will be determined by the last setting.
 
-> **说明：**
+> **NOTE：**
 > 
-> 从API version 12开始，该接口支持在[attributeModifier](arkts-arkui-commonmethod-c.md#attributemodifier)中调用。
+> This API can be called within [attributeModifier](arkts-arkui-commonmethod-c.md#attributemodifier) since API version 12.
 
 **Since:** 11
 
@@ -46,7 +46,7 @@ buttonStyle(value: ButtonStyleMode)
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | [ButtonStyleMode](../arkts-apis/arkts-arkui-button-buttonstylemode-e.md) | Yes | Button组件的样式和重要程度。&lt;br/&gt;默认值：ButtonStyleMode.EMPHASIZED |
+| value | [ButtonStyleMode](../arkts-apis/arkts-arkui-button-buttonstylemode-e.md) | Yes | Style and primacy of the button&lt;br&gt;Default value: **ButtonStyleMode.EMPHASIZED |
 
 ## contentModifier
 
@@ -54,7 +54,7 @@ buttonStyle(value: ButtonStyleMode)
 contentModifier(modifier: ContentModifier<ButtonConfiguration>)
 ```
 
-定制Button内容区的方法。
+Creates a content modifier.
 
 **Since:** 12
 
@@ -72,7 +72,7 @@ contentModifier(modifier: ContentModifier<ButtonConfiguration>)
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| modifier | [ContentModifier](arkts-arkui-contentmodifier-i.md)&lt;ButtonConfiguration&gt; | Yes | 在Button组件上，定制内容区的方法。&lt;br/&gt;modifier：内容修改器，开发者需要自定义class实现 ContentModifier接口。 |
+| modifier | [ContentModifier](arkts-arkui-contentmodifier-i.md)&lt;ButtonConfiguration&gt; | Yes | Content modifier to apply to the button.&lt;br&gt; **modifier**: content modifier. You need a custom class to implement the **ContentModifier** API. |
 
 ## controlSize
 
@@ -80,11 +80,11 @@ contentModifier(modifier: ContentModifier<ButtonConfiguration>)
 controlSize(value: ControlSize)
 ```
 
-设置Button组件的尺寸。
+Sets the size for the button.
 
-> **说明：**
+> **NOTE：**
 > 
-> 从API version 12开始，该接口支持在[attributeModifier](arkts-arkui-commonmethod-c.md#attributemodifier)中调用。
+> This API can be called within [attributeModifier](arkts-arkui-commonmethod-c.md#attributemodifier) since API version 12.
 
 **Since:** 11
 
@@ -104,7 +104,7 @@ controlSize(value: ControlSize)
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | [ControlSize](../arkts-apis/arkts-arkui-button-controlsize-e.md) | Yes | Button组件的尺寸。&lt;br/&gt;默认值：ControlSize.NORMAL |
+| value | [ControlSize](../arkts-apis/arkts-arkui-button-controlsize-e.md) | Yes | Size of the button.&lt;br&gt;Default value: **ControlSize.NORMAL |
 
 ## fontColor
 
@@ -112,7 +112,7 @@ controlSize(value: ControlSize)
 fontColor(value: ResourceColor)
 ```
 
-设置文本显示颜色。
+Sets the font color for the button.
 
 **Since:** 7
 
@@ -130,7 +130,7 @@ fontColor(value: ResourceColor)
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | [ResourceColor](../arkts-apis/arkts-arkui-resourcecolor-t.md) | Yes | 文本显示颜色。&lt;br/&gt;默认值：\\$r('sys.color.font_on_primary')，显示为白色字体。 |
+| value | [ResourceColor](../arkts-apis/arkts-arkui-resourcecolor-t.md) | Yes | Font color of the button.&lt;br&gt;Default value: **\\$r('sys.color.font_on_primary')**, which means white |
 
 ## fontFamily
 
@@ -138,7 +138,7 @@ fontColor(value: ResourceColor)
 fontFamily(value: string | Resource)
 ```
 
-设置字体列表。
+Sets the font family.
 
 **Since:** 8
 
@@ -156,7 +156,7 @@ fontFamily(value: string | Resource)
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | string \| Resource | Yes | 字体列表。默认字体'HarmonyOS Sans'，当前支持'HarmonyOS Sans'字体和 [注册自定义字体](../arkts-apis/arkts-font.md/arkts-font.md)。 |
+| value | string \| Resource | Yes | Font family. The 'HarmonyOS Sans' font and [registered custom fonts](../arkts-apis/arkts-font.md/arkts-font.md) are supported. |
 
 ## fontSize
 
@@ -164,7 +164,7 @@ fontFamily(value: string | Resource)
 fontSize(value: Length)
 ```
 
-设置文本显示字号。
+Sets the font size for the button.
 
 **Since:** 7
 
@@ -182,7 +182,7 @@ fontSize(value: Length)
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | [Length](../arkts-apis/arkts-arkui-length-t.md) | Yes | 设置文本显示字号。&lt;br/&gt;默认值：当controlSize为ControlSize.NORMAL时，默认值为`\\$r('sys.float.Body_L')`。&lt;br/&gt;当 controlSize为ControlSize.SMALL时，默认值为`\\$r('sys.float.Body_S')`。&lt;br/&gt;**说明：**设置string类型时，不支持百分比。 |
+| value | [Length](../arkts-apis/arkts-arkui-length-t.md) | Yes | Font size of the button.&lt;br&gt;Default value:&lt;br&gt;**\\$r('sys.float.Body_L')** when **controlSize** is set to **ControlSize.NORMAL**&lt;br&gt;**\\$r('sys.float.Body_S')** when **controlSize** is set to **ControlSize.SMALL**&lt;br&gt;Note: For the string type, percentage values are not supported. |
 
 ## fontStyle
 
@@ -190,7 +190,7 @@ fontSize(value: Length)
 fontStyle(value: FontStyle)
 ```
 
-设置文本的字体样式。
+Sets the font style for the button.
 
 **Since:** 8
 
@@ -208,7 +208,7 @@ fontStyle(value: FontStyle)
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | [FontStyle](../arkts-apis/arkts-arkui-fontstyle-e.md) | Yes | 文本的字体样式。&lt;br/&gt;默认值：FontStyle.Normal |
+| value | [FontStyle](../arkts-apis/arkts-arkui-fontstyle-e.md) | Yes | Font style of the button.&lt;br&gt;Default value: **FontStyle.Normal |
 
 ## fontWeight
 
@@ -216,7 +216,7 @@ fontStyle(value: FontStyle)
 fontWeight(value: number | FontWeight | string)
 ```
 
-设置文本的字体粗细。
+Sets the font weight for the button.
 
 **Since:** 7
 
@@ -234,7 +234,7 @@ fontWeight(value: number | FontWeight | string)
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | number \| FontWeight \| string | Yes | 文本的字体粗细，number类型取值[100, 900]，取值间隔为100，取值越大，字体越粗。&lt;br&gt;默认值：500&lt;br/&gt; string类型仅支持number类型取值的字符串形式，例如'400'，以及'bold'、'bolder'、'lighter'、'regular'、'medium'，分别对应FontWeight中相应的枚举值。&lt;br/&gt;当 值为异常值或非法值时，字体粗细取值为400。 |
+| value | number \| FontWeight \| string | Yes | Font weight of the button. For the number type, the value ranges from 100 to 900, at an interval of 100. A larger value indicates a thicker font.&lt;br&gt;Default value: **500**&lt;br&gt; For the string type, only strings that represent a number, for example, **'400'**, and the following enumerated values of **FontWeight** are supported: **'bold'**, **'bolder'**, **'lighter'**, **'regular'**, and **'medium'**.&lt;br&gt;If the value is abnormal or invalid, the font weight defaults to 400. |
 
 ## labelStyle
 
@@ -242,7 +242,7 @@ fontWeight(value: number | FontWeight | string)
 labelStyle(value: LabelStyle)
 ```
 
-设置Button组件label文本和字体的样式。
+Sets the label style for the button.
 
 **Since:** 10
 
@@ -260,7 +260,7 @@ labelStyle(value: LabelStyle)
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | [LabelStyle](arkts-arkui-labelstyle-i.md) | Yes | Button组件label文本和字体的样式。 |
+| value | [LabelStyle](arkts-arkui-labelstyle-i.md) | Yes | Label style of the button. |
 
 ## maxFontScale
 
@@ -268,7 +268,7 @@ labelStyle(value: LabelStyle)
 maxFontScale(scale: number | Resource)
 ```
 
-设置文本最大的字体缩放倍数。
+Sets the maximum font scale factor for text.
 
 **Since:** 18
 
@@ -286,7 +286,7 @@ maxFontScale(scale: number | Resource)
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| scale | number \| Resource | Yes | 文本最大的字体缩放倍数。&lt;br/&gt;取值范围： [1, +∞)&lt;br/&gt;**说明：** &lt;br/&gt;设置的值小于1时，按值为1处理，异常值默认不生效。&lt;br/&gt;未设置最大缩放倍数时，圆形按钮最大缩放倍数为1倍，胶囊型按钮、普通按钮、圆角矩形按钮最大缩放倍数跟随系统设置。 |
+| scale | number \| Resource | Yes | Maximum font scale factor for text.&lt;br&gt;Value range: [1, +∞)&lt;br&gt;**NOTE：**&lt;br&gt;A value less than 1 is handled as **1**. Abnormal values are ineffective by default.&lt;br&gt;If this parameter is not configured, the maximum scale for a circular button is 1x, while the maximum scale for capsule-type buttons, standard buttons, and rounded rectangle buttons defaults to the system-defined value. |
 
 ## minFontScale
 
@@ -294,7 +294,7 @@ maxFontScale(scale: number | Resource)
 minFontScale(scale: number | Resource)
 ```
 
-设置文本最小的字体缩放倍数。
+Sets the minimum font scale factor for text.
 
 **Since:** 18
 
@@ -312,7 +312,7 @@ minFontScale(scale: number | Resource)
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| scale | number \| Resource | Yes | 文本最小的字体缩放倍数。&lt;br/&gt;取值范围：[0, 1]&lt;br/&gt;**说明：** &lt;br/&gt;设置的值小于0时，按值为0处理，设置的值大于1，按值为1处理，异 常值默认不生效。 |
+| scale | number \| Resource | Yes | Minimum font scale factor for text.&lt;br&gt;Value range: [0, 1]&lt;br&gt;**NOTE：**&lt;br&gt;A value less than 0 is handled as **0**. A value greater than 1 is handled as **1**. Abnormal values are ineffective by default. |
 
 ## role
 
@@ -320,9 +320,9 @@ minFontScale(scale: number | Resource)
 role(value: ButtonRole)
 ```
 
-设置Button组件的角色。根据设置枚举值的不同，系统自动调整按钮的背景色和文字颜色。背景色和文字颜色也支持开发者通过  
-[backgroundColor](../arkts-apis/arkts-arkui-common-commonmethod-i.md/arkts-arkui-common-commonmethod-i.md#backgroundcolor)、  
-[fontColor](ButtonAttribute#fontColor)和[buttonStyle](ButtonAttribute#buttonStyle)接口设置，实际显示效果以最后一次设置为准。ERROR角色通常用于删除、清空等危险或警示性操作。
+Sets the role of the button. The system automatically adjusts the button background color and text color based on the enumerated value. You can also use the   
+[backgroundColor](../arkts-apis/arkts-arkui-common-commonmethod-i.md/arkts-arkui-common-commonmethod-i.md#backgroundcolor),   
+[fontColor](ButtonAttribute#fontColor), and [buttonStyle](ButtonAttribute#buttonStyle) APIs to set the background color and text color. The actual displayed effect will be determined by the last setting.
 
 **Since:** 12
 
@@ -342,7 +342,7 @@ role(value: ButtonRole)
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | [ButtonRole](arkts-arkui-buttonrole-e.md) | Yes | Button组件的角色。&lt;br/&gt;默认值：ButtonRole.NORMAL |
+| value | [ButtonRole](arkts-arkui-buttonrole-e.md) | Yes | Role of the button.&lt;br&gt;Default value: **ButtonRole.NORMAL |
 
 ## stateEffect
 
@@ -350,7 +350,7 @@ role(value: ButtonRole)
 stateEffect(value: boolean)
 ```
 
-设置是否开启按压态显示效果。
+Specifies whether to enable the pressed state effect when the button is clicked.
 
 **Since:** 7
 
@@ -368,7 +368,7 @@ stateEffect(value: boolean)
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | boolean | Yes | 按钮按下时是否开启按压态显示效果。&lt;br/&gt;true：开启按压效果；false：关闭按压效果。&lt;br/&gt;默认值：true |
+| value | boolean | Yes | Whether to enable the pressed state effect when the button is clicked.&lt;br&gt;**true**: The pressed state effect is enabled. **false**: The pressed state effect is disabled.&lt;br&gt;Default value: **true |
 
 ## type
 
@@ -376,7 +376,7 @@ stateEffect(value: boolean)
 type(value: ButtonType)
 ```
 
-设置Button样式。
+Sets the button type.
 
 **Since:** 7
 
@@ -394,5 +394,5 @@ type(value: ButtonType)
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | [ButtonType](../arkts-apis/arkts-arkui-button-buttontype-e.md) | Yes | Button样式。&lt;br/&gt;API version 18及之后，ButtonType的默认值从ButtonType.Capsule变更为 ButtonType.ROUNDED_RECTANGLE。 |
+| value | [ButtonType](../arkts-apis/arkts-arkui-button-buttontype-e.md) | Yes | Button type.&lt;br&gt;API version 18 and later: The default value is **ButtonType.ROUNDED_RECTANGLE**. |
 

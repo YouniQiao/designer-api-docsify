@@ -51,7 +51,7 @@ Mute the local MIC input stream.
 ## TTS_MUTE
 
 ```TypeScript
-TTS_MUTE  = 2
+TTS_MUTE = 2
 ```
 
 Send tts output stream to TX and mute the local output stream.
@@ -60,7 +60,7 @@ Send tts output stream to TX and mute the local output stream.
 
 **ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
-<!--Device-AsrVoiceMuteMode-TTS_MUTE  = 2--><!--Device-AsrVoiceMuteMode-TTS_MUTE  = 2-End-->
+<!--Device-AsrVoiceMuteMode-TTS_MUTE = 2--><!--Device-AsrVoiceMuteMode-TTS_MUTE = 2-End-->
 
 **System capability:** SystemCapability.Multimedia.Audio.Capturer
 

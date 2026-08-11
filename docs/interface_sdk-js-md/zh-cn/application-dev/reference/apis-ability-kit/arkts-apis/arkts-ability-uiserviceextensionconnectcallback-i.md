@@ -42,7 +42,7 @@ onData(data: Record<string, Object>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| data | [Record](../../apis-default/arkts-apis/arkts-record-t.md)&lt;string, Object&gt; | 是 | 接收UIServiceExtension连接回调数据。 |
+| data | Record&lt;string, Object&gt; | 是 | 接收UIServiceExtension连接回调数据。 |
 
 ## onData
 
@@ -66,7 +66,7 @@ Called back when data is sent.
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| data | [Record](../../apis-default/arkts-apis/arkts-record-t.md)&lt;string, RecordData&gt; | 是 | Indicates the received data. |
+| data | Record&lt;string, RecordData&gt; | 是 | Indicates the received data. |
 
 ## onDisconnect
 

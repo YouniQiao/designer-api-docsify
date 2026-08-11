@@ -1,35 +1,17 @@
 # DatePickerOptions
 
-日期选择器组件的参数说明。
+Describes the parameters of the date picker.
 
-> **说明：**
+> **NOTE：**
 > 
-> - Date的使用请参考[TimePickerOptions](../arkts-apis/arkts-arkui-timepicker-timepickeroptions-i.md/arkts-arkui-timepicker-timepickeroptions-i.md)。
+> - For details about how to use **Date**, see [TimePickerOptions](../arkts-apis/arkts-arkui-timepicker-timepickeroptions-i.md/arkts-arkui-timepicker-timepickeroptions-i.md).
 > 
-> - 在DatePicker组件滑动过程中修改DatePickerOptions中的属性，会导致这些属性无法生效。
-> 
-> - 如果需要设置的起止日期范围在\[Date('1900-01-31'), Date('2100-12-31')]之外，推荐使用
-> [DatePickerComponent](../arkts-apis/arkts-arkui-advanced-datepickercomponent.md/arkts-arkui-advanced-datepickercomponent.md)。
+> - Property modifications made to **DatePickerOptions** during the **DatePicker** scrolling process may not take
+> effect.
 
-> **起始日期、结束日期和选中日期的异常情形说明：**
+> **NOTE：**
 > 
-> - 起始日期晚于结束日期，选中日期未设置：起始日期、结束日期和选中日期都为默认值。
-> - 起始日期晚于结束日期，选中日期早于起始日期默认值：起始日期、结束日期都为默认值，选中日期为起始日期默认值。
-> - 起始日期晚于结束日期，选中日期晚于结束日期默认值：起始日期、结束日期都为默认值，选中日期为结束日期默认值。
-> - 起始日期晚于结束日期，选中日期在起始日期与结束日期默认值范围内：起始日期、结束日期都为默认值，选中日期为设置的值。
-> - 选中日期早于起始日期：选中日期为起始日期。
-> - 选中日期晚于结束日期：选中日期为结束日期。
-> - 起始日期晚于当前系统日期，选中日期未设置：选中日期为起始日期。
-> - 结束日期早于当前系统日期，选中日期未设置：选中日期为结束日期。
-> - 日期格式不符合规范，如'1999-13-32'：取默认值。
-> - 起始日期或结束日期早于系统有效范围：起始日期或结束日期取起始日期默认值。
-> - 起始日期或结束日期晚于系统有效范围：起始日期或结束日期取结束日期默认值。
-> - 起始日期与结束日期同时早于系统有效范围：起始日期与结束日期取系统有效范围最早日期。
-> - 起始日期与结束日期同时晚于系统有效范围：起始日期与结束日期取系统有效范围最晚日期。
-
-> **说明：**
-> 
-> 先处理起始日期与结束日期的异常情形，再处理选中日期的异常情形。
+> Handle exceptions for the start and end dates first, followed by exceptions for the selected date.
 
 **Since:** 8
 
@@ -45,15 +27,11 @@
 end?: Date
 ```
 
-指定选择器的结束日期。适用于需要限制可选日期上限的场景，如设置有效期截止日。
+End date of the picker.
 
-> 默认值：Date('2100-12-31')
+Default value: **Date('2100-12-31')**
 
-> 取值范围：[Date('1900-01-31'), Date('2100-12-31')]
-
-> **说明：**
-> 
-> 设置了start或end且为非默认值的场景下，canLoop不生效。
+Value range: [Date('1900-01-31'), Date('2100-12-31')].
 
 **Type:** Date
 
@@ -75,14 +53,12 @@ end?: Date
 mode?: DatePickerMode
 ```
 
-设置日期展示模式。适用于需要自定义日期展示列的场景，如仅需选择年月或月日。不传入时默认为DatePickerMode.DATE，显示年、月、日三列。
+Date display mode.
 
-在[DatePickerDialog](./date_picker)中，当  
-[DatePickerDialogOptions](arkts-arkui-datepickerdialogoptions-i.md)的showTime设置为true时，此参数不生效，默认显示年、月、日三列。这是为保证布局合理性，当showTime为true时会额外显示时间列。
+Default value: **DatePickerMode.DATE**, which means to display three columns: year, month, and day.
 
-> **说明：**
-> 
-> 上述DatePickerDialog相关限制仅适用于DatePickerDialog组件。
+In [DatePickerDialog](./date_picker), when **showTime** in  
+[DatePickerDialogOptions](arkts-arkui-datepickerdialogoptions-i.md) is **true**, this parameter is ignored and the year,month, day columns are always shown.
 
 **Type:** [DatePickerMode](../arkts-apis/arkts-arkui-datepicker-datepickermode-e.md)
 
@@ -106,14 +82,14 @@ mode?: DatePickerMode
 selected?: Date
 ```
 
-设置选中项的日期。适用于需要预设初始选中日期（如编辑已有记录、默认显示指定日期）的场景。
+Date of the selected item.
 
-> 默认值：当前系统日期（受start和end参数影响，详见下方异常情形说明）。
+Default value: current system date.
 
-> Date对象可配置的日期范围：[Date('1900-01-31'), Date('2100-12-31')]，selected参数的有效取值范围：必须在start和end参数设置的日
-> 期范围内。
+Value range: [Date('1900-01-31'), Date('2100-12-31')].
 
-> 从API version 10开始，该参数支持[\$\$](../../../ui/state-management/arkts-two-way-sync.md)双向绑定变量。
+Since API version 10, this parameter supports two-way binding through  
+[\$\$](../../../ui/state-management/arkts-two-way-sync.md).
 
 **Type:** Date
 
@@ -135,15 +111,11 @@ selected?: Date
 start?: Date
 ```
 
-指定选择器的起始日期。适用于需要限制可选日期下限的场景，如仅允许选择某一日期之后的日期。
+Start date of the picker.
 
-> 默认值：Date('1970-01-01')
+Default value: **Date('1970-1-1')**
 
-> 取值范围：[Date('1900-01-31'), Date('2100-12-31')]
-
-> **说明：**
-> 
-> 设置了start或end且为非默认值的场景下，canLoop不生效。
+Value range: [Date('1900-01-31'), Date('2100-12-31')].
 
 **Type:** Date
 

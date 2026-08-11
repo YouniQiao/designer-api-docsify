@@ -1,18 +1,18 @@
 # ArrayBuffer
 
-ArkTS TypedArray（[Int8Array](arkts-collections.md)、  
-[Uint8Array](arkts-collections.md)、  
-[Int16Array](arkts-collections.md)、  
-[Uint16Array](arkts-collections.md)、  
-[Int32Array](arkts-collections.md)、  
-[Uint32Array](arkts-collections.md)、  
-[Uint8ClampedArray](arkts-collections.md)、  
-[Float32Array](arkts-collections.md)）的底层数据结构。
+Underlying data structure of the ArkTS TypedArray ([Int8Array](arkts-collections.md),  
+[Uint8Array](arkts-collections.md),  
+[Int16Array](arkts-collections.md),  
+[Uint16Array](arkts-collections.md),  
+[Int32Array](arkts-collections.md),  
+[Uint32Array](arkts-collections.md),  
+[Uint8ClampedArray](arkts-collections.md), and  
+[Float32Array](arkts-collections.md)).
 
-> **说明：**
+> **NOTE：**
 > 
-> - 此模块仅支持在ArkTS文件（文件后缀为.ets）中导入使用。
-> **装饰器类型**：\@Sendable
+> - This module can be imported only to ArkTS files (with the file name extension .ets).
+> **Decorator**: \@Sendable
 
 **Since:** 12
 
@@ -36,7 +36,7 @@ import { collections } from 'kits/@kit.ArkTS';
 constructor(byteLength: number)
 ```
 
-构造函数，用于创建一个指定长度的ArkTS ArrayBuffer对象。
+A constructor used to create an ArkTS ArrayBuffer of a given length.
 
 **Since:** 12
 
@@ -52,13 +52,13 @@ constructor(byteLength: number)
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| byteLength | number | Yes | buffer所占的字节数，取值范围是[0, 2147483647]，否则会抛出异常。0代表构造的ArrayBuffer的长度为0，2147483647表示构造的ArrayBuffer的长度为2147483647。 |
+| byteLength | number | Yes | Number of bytes occupied by the buffer. The maximum value is **2147483647**. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 10200012 | The ArrayBuffer's constructor cannot be directly invoked. |
+| [10200012](../errorcode-utils.md#10200012-constructor-calling-failure) | The ArrayBuffer's constructor cannot be directly invoked. |
 
 ## slice
 
@@ -66,7 +66,7 @@ constructor(byteLength: number)
 slice(begin: number, end?: number): ArrayBuffer
 ```
 
-返回一个新的ArkTS ArrayBuffer对象，其包含原ArkTS ArrayBuffer指定范围的内容。
+Selects a range of elements in this ArkTS ArrayBuffer to create an ArkTS ArrayBuffer.
 
 **Since:** 12
 
@@ -82,21 +82,21 @@ slice(begin: number, end?: number): ArrayBuffer
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| begin | number | Yes | 开始索引，如果`begin < 0`，则会从`begin + arrayBuffer.byteLength`位置开始。 |
-| end | number | No | 结束索引（不包括该元素），如果`end < 0`，则会到`end + arrayBuffer.byteLength`位置结束。默认为原ArkTS ArrayBuffer的长度。 |
+| begin | number | Yes | Start index of the range. If a negative number is passed in, it refers to the index of `begin + arrayBuffer.byteLength`. |
+| end | number | No | End index of the range (exclusive). If a negative number is passed in, it refers to the index of `end + arrayBuffer.byteLength`. The default value is the length of the original ArkTS ArrayBuffer. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| ArrayBuffer | 新生成的ArkTS ArrayBuffer对象。 |
+| ArrayBuffer | New ArrayBuffer generated. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 10200011 | The slice method cannot be bound. |
-| 10200201 | Concurrent modification error. |
+| [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) | The slice method cannot be bound. |
+| [10200201](../errorcode-utils.md#10200201-concurrent-modification-error) | Concurrent modification error. |
 
 ## byteLength
 
@@ -104,7 +104,7 @@ slice(begin: number, end?: number): ArrayBuffer
 readonly byteLength: number
 ```
 
-buffer所占的字节数。
+Number of bytes occupied by the buffer.
 
 **Type:** number
 

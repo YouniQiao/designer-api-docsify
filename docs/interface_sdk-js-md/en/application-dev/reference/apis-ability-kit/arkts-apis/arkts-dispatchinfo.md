@@ -7,6 +7,6 @@
 
 | Name | Description |
 | --- | --- |
-| [DispatchInfo](arkts-ability-dispatchinfo-i-sys.md) | 免安装结构体和接口版本信息类，通过接口  [freeInstall.getDispatchInfo](arkts-ability-freeinstall-getdispatchinfo-f-sys.md#getdispatchinfo)获取。 |
+| [DispatchInfo](arkts-ability-dispatchinfo-i-sys.md) | The module provides version information about the dispatchInfo struct and dispatch API. The information can be obtained through  [freeInstall.getDispatchInfo](arkts-ability-freeinstall-getdispatchinfo-f-sys.md#getdispatchinfo).  > **NOTE：** >  > The APIs provided by this module are system APIs. |
 <!--DelEnd-->
 

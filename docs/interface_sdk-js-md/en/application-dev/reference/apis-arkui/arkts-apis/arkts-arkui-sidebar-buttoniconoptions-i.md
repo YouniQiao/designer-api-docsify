@@ -1,10 +1,6 @@
 # ButtonIconOptions
 
-设置侧边栏控制按钮的图标。
-
-> **说明：**
-> 
-> 为规范匿名对象的定义，API 18版本修改了此处的元素定义。其中，保留了历史匿名对象的起始版本信息，会出现外层元素@since版本号高于内层元素版本号的情况，但这不影响接口的使用。
+ButtonStyle icons.
 
 **Since:** 23
 
@@ -20,7 +16,9 @@
 hidden: string | PixelMap | Resource
 ```
 
-设置侧边栏隐藏时控制按钮的图标。
+Defines whether an icon is hidden.
+
+Anonymous Object Rectification.
 
 **Type:** string \| PixelMap \| Resource
 
@@ -40,7 +38,9 @@ hidden: string | PixelMap | Resource
 shown: string | PixelMap | Resource
 ```
 
-设置侧边栏显示时控制按钮的图标。
+Defines whether an icon is shown.
+
+Anonymous Object Rectification.
 
 **Type:** string \| PixelMap \| Resource
 
@@ -60,7 +60,9 @@ shown: string | PixelMap | Resource
 switching?: string | PixelMap | Resource
 ```
 
-设置侧边栏显示和隐藏状态切换时控制按钮的图标。
+Defines whether an icon is switching.
+
+Anonymous Object Rectification.
 
 **Type:** string \| PixelMap \| Resource
 

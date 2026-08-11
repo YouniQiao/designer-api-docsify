@@ -12,7 +12,7 @@ import { securityManager } from 'kits/@kit.MDMKit';
 function getSecurityStatus(admin: Want, item: string): string
 ```
 
-获取当前设备安全策略信息。适用于设备合规性检查、安全状态审计、策略执行效果验证等场景，帮助企业管理员确认设备是否符合安全要求。企业可通过此接口实时监控设备的安全补丁状态和文件加密状态，及时发现设备安全风险并采取相应措施，保障企业设备和数据安全。
+Obtains the security status of the current device. This API is applicable to scenarios such as device compliance check, security status audit, and policy execution effect verification, helping enterprise administrators determine whether devices meet security requirements. Enterprises can use this API to monitor the security patch status and file encryption status of devices in real time, enabling timely detection of device security risks and prompt action to protect enterprise devices and data.
 
 **Since:** 12
 
@@ -30,23 +30,23 @@ function getSecurityStatus(admin: Want, item: string): string
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| admin | [Want](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-want-want-c.md) | Yes | 企业设备管理扩展组件。Want中必须包含企业设备管理扩展能力的abilityName和所在应用的bundleName。 |
-| item | string | Yes | 安全策略名称。&lt;br/&gt;- patch：设备安全补丁。&lt;br/&gt;- encryption：设备文件系统加密。 |
+| admin | [Want](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-want-want-c.md) | Yes | EnterpriseAdminExtensionAbility. **Want** must contain the ability name of the EnterpriseAdminExtensionAbility and the bundle name of the application. |
+| item | string | Yes | Type of the security status to obtain. &lt;br&gt;- **patch**: device security patch. &lt;br&gt;- **encryption**: device file system encryption. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| string | 返回安全策略状态值。 |
+| string | Security status obtained. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
-| 201 | Permission verification failed. The application does not have the permission required to call the API. |
-| 9200001 | The application is not an administrator application of the device. |
-| 9200002 | The administrator application does not have permission to manage the device. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed. The application does not have the permission required to call the API. |
+| [9200001](../errorcode-enterpriseDeviceManager.md#9200001-deviceadmin-not-enabled) | The application is not an administrator application of the device. |
+| [9200002](../errorcode-enterpriseDeviceManager.md#9200002-permission-denied) | The administrator application does not have permission to manage the device. |
 
 ## Examples
 

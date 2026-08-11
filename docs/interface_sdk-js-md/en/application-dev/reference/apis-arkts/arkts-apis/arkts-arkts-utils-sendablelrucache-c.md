@@ -1,6 +1,6 @@
 # SendableLruCache
 
-SendableLruCache在缓存空间不足时，会用新数据替换近期最少使用的数据。此设计基于资源访问的考虑：近期访问的数据可能在不久的将来再次访问，因此最少访问的数据价值最小，应优先移出缓存。SendableLruCache支持Sendable（可跨线程安全共享的）特性，可保存Sendable对象，确保跨线程安全访问。
+Object used for store least recently used sendable Object.
 
 **Since:** 18
 
@@ -24,7 +24,7 @@ import { ArkTSUtils } from 'kits/@kit.ArkTS';
 clear(): void
 ```
 
-从当前缓存清除所有键值对。
+Clear all key-value pairs from the SendableLruCache.
 
 **Since:** 18
 
@@ -42,7 +42,7 @@ clear(): void
 constructor(capacity?: number)
 ```
 
-默认构造函数用于创建一个新的SendableLruCache实例，默认容量为64。
+Default constructor.
 
 **Since:** 18
 
@@ -58,7 +58,7 @@ constructor(capacity?: number)
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| capacity | number | No | 指示缓存的自定义容量。不传时，默认值为64，最大值不能超过2147483647；小于等于0时会抛出异常。 建议根据实际业务数据量设置合适的容量值，以平衡缓存命中率与内存占用。 |
+| capacity | number | No | The capacity of the SendableLruCache. |
 
 ## contains
 
@@ -66,7 +66,7 @@ constructor(capacity?: number)
 contains(key: K): boolean
 ```
 
-检查当前缓存是否包含指定的键，如果存在，返回true；否则，返回false。
+Check whether the given key exists in the SendableLruCache. If exists, returns true; otherwise, returns false.
 
 **Since:** 18
 
@@ -82,13 +82,13 @@ contains(key: K): boolean
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| key | K | Yes | 表示要检查的键。 |
+| key | K | Yes | The key to check. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| boolean | true：缓存包含指定的键；false：缓存不包含指定的键。 |
+| boolean | The result of the checked. |
 
 ## entries
 
@@ -96,7 +96,7 @@ contains(key: K): boolean
 entries(): IterableIterator<[K, V]>
 ```
 
-允许迭代包含在这个对象中的所有键值对，按从最近访问到最少访问的顺序排列。
+Returns an iterable of key-value pairs for each element in the SendableLruCache.
 
 **Since:** 18
 
@@ -112,7 +112,7 @@ entries(): IterableIterator<[K, V]>
 
 | Type | Description |
 | --- | --- |
-| [IterableIterator](arkts-arkts-iterator-iterableiterator-i.md)&lt;[K, V]&gt; | 返回键值对的迭代器。 |
+| [IterableIterator](arkts-arkts-iterator-iterableiterator-i.md)&lt;[K, V]&gt; | A new iterable iterator object. |
 
 ## get
 
@@ -120,7 +120,7 @@ entries(): IterableIterator<[K, V]>
 get(key: K): V | undefined
 ```
 
-返回键对应的值。如果指定的键不存在于缓存中，将调用createDefault方法；若createDefault返回非undefined值，则将该键值对添加到缓存并返回该值；若createDefault返回undefined，则返回undefined。
+Get the value associated with a specified key in the SendableLruCache.
 
 **Since:** 18
 
@@ -136,13 +136,13 @@ get(key: K): V | undefined
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| key | K | Yes | 要查询的键。 |
+| key | K | Yes | The key to query. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| V | 如果指定的键存在于缓存中，则返回与键关联的值；否则调用createDefault方法创建值。 若createDefault返回非undefined值，则将该键值对添加到缓存中，并返回该值；若createDefault返回undefined，则最终返回undefined。 当因添加新条目导致缓存中值的数量超过容量时，将淘汰最少使用的键值对。 |
+| V | The value associated with the key if the specified key is present; returns undefined otherwise. |
 
 ## getCapacity
 
@@ -150,7 +150,7 @@ get(key: K): V | undefined
 getCapacity(): number
 ```
 
-获取当前缓存的容量。
+Get the Capacity of the SendableLruCache.
 
 **Since:** 18
 
@@ -166,7 +166,7 @@ getCapacity(): number
 
 | Type | Description |
 | --- | --- |
-| number | 返回当前缓存的容量。 |
+| number | The Capacity of the SendableLruCache. |
 
 ## getCreateCount
 
@@ -174,7 +174,7 @@ getCapacity(): number
 getCreateCount(): number
 ```
 
-获取调用createDefault方法创建对象的次数。
+Get the number of times createDefault in the SendableLruCache.
 
 **Since:** 18
 
@@ -190,7 +190,7 @@ getCreateCount(): number
 
 | Type | Description |
 | --- | --- |
-| number | 返回使用createDefault方法创建对象的次数。 |
+| number | The number of times createDefault. |
 
 ## getMatchCount
 
@@ -198,7 +198,7 @@ getCreateCount(): number
 getMatchCount(): number
 ```
 
-获取查询值匹配成功的次数。
+Get the number of times that the queried values are matched in the SendableLruCache.
 
 **Since:** 18
 
@@ -214,7 +214,7 @@ getMatchCount(): number
 
 | Type | Description |
 | --- | --- |
-| number | 返回查询值匹配成功的次数。 |
+| number | The number of times that the queried values are matched. |
 
 ## getMissCount
 
@@ -222,7 +222,7 @@ getMatchCount(): number
 getMissCount(): number
 ```
 
-获取查询值不匹配的次数。
+Get the number of times that the queried values are not matched in the SendableLruCache.
 
 **Since:** 18
 
@@ -238,7 +238,7 @@ getMissCount(): number
 
 | Type | Description |
 | --- | --- |
-| number | 返回查询值不匹配的次数。 |
+| number | The number of times that the queried values are unmatched. |
 
 ## getPutCount
 
@@ -246,7 +246,7 @@ getMissCount(): number
 getPutCount(): number
 ```
 
-获取将值添加到缓存的次数。
+Get the number of times that values are added to SendableLruCache.
 
 **Since:** 18
 
@@ -262,7 +262,7 @@ getPutCount(): number
 
 | Type | Description |
 | --- | --- |
-| number | 返回向缓存中添加值的次数。 |
+| number | The number of times that values are added. |
 
 ## getRemoveCount
 
@@ -270,7 +270,7 @@ getPutCount(): number
 getRemoveCount(): number
 ```
 
-获取缓存键值对的淘汰次数。当缓存数量超过容量限制时，最少使用的键值对将被淘汰。
+Get the number of times that values are removed from the SendableLruCache.
 
 **Since:** 18
 
@@ -286,7 +286,7 @@ getRemoveCount(): number
 
 | Type | Description |
 | --- | --- |
-| number | 返回缓存键值对淘汰的次数。 |
+| number | The number of times that values are removed. |
 
 ## isEmpty
 
@@ -294,7 +294,7 @@ getRemoveCount(): number
 isEmpty(): boolean
 ```
 
-检查当前缓存是否为空。
+Checks whether the SendableLruCache is empty.
 
 **Since:** 18
 
@@ -310,7 +310,7 @@ isEmpty(): boolean
 
 | Type | Description |
 | --- | --- |
-| boolean | 返回true表示当前缓存为空，不包含任何键值对；返回false表示当前缓存不为空。 |
+| boolean | true if the SendableLruCache is empty, otherwise false. |
 
 ## keys
 
@@ -318,7 +318,7 @@ isEmpty(): boolean
 keys(): K[]
 ```
 
-获取当前缓存中所有键，按从最近访问到最少访问的顺序排列。
+Returns a list of all keys in the SendableLruCache.
 
 **Since:** 18
 
@@ -334,7 +334,7 @@ keys(): K[]
 
 | Type | Description |
 | --- | --- |
-| K[] | 返回当前缓存中所有键的列表，按从最近访问到最少访问的顺序排列。 |
+| K[] | An array of all keys. |
 
 ## put
 
@@ -342,7 +342,7 @@ keys(): K[]
 put(key: K, value: V): V
 ```
 
-将键值对添加到缓存中，并返回与添加的键关联的值。当缓存中值的数量超过容量时，将淘汰最少使用的键值对。
+Adds a key-value pair to the SendableLruCache.
 
 **Since:** 18
 
@@ -358,14 +358,14 @@ put(key: K, value: V): V
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| key | K | Yes | 要添加的键。 |
-| value | V | Yes | 与要添加的键关联的值。 |
+| key | K | Yes | The key to add. |
+| value | V | Yes | The value associated with the key to add. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| V | 返回与添加的键关联的值。 |
+| V | The value associated with the added key or the original value if the key to add already exists. |
 
 ## remove
 
@@ -373,7 +373,7 @@ put(key: K, value: V): V
 remove(key: K): V | undefined
 ```
 
-从当前缓存中删除指定键及其关联值，返回该键关联的值。若键不存在，则返回undefined。
+Remove a specified key and its associated value from the SendableLruCache.
 
 **Since:** 18
 
@@ -389,13 +389,13 @@ remove(key: K): V | undefined
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| key | K | Yes | 要删除的键。 |
+| key | K | Yes | The key to delete. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| V | 返回与key关联的值；若key不存在，则返回undefined。 |
+| V | The deleted value or undefined. |
 
 ## toString
 
@@ -403,7 +403,7 @@ remove(key: K): V | undefined
 toString(): string
 ```
 
-返回对象的字符串表示形式，包含缓存最大容量、查询匹配成功次数、查询匹配失败次数及匹配率等信息。返回字符串格式是：SendableLruCache[ maxSize = (maxSize), hits = (hitCount), misses = (missCount), hitRate = (hitRate) ]。(maxSize)表示缓存最大值，(hitCount)表示查询值匹配成功的次数，(missCount)表示查询值匹配失败的次数，(hitRate)表示查询值匹配率。
+Return the string representation of the object.The returned string format is: SendableLruCache[ maxSize = (maxSize), hits = (hitCount), misses = (missCount), hitRate = (hitRate) ].(maxSize) represents the maximum size of the cache,(hitCount) indicates the number of successful query matches,(missCount) denotes the number of failed query matches,(hitRate) signifies the query match rate.
 
 **Since:** 18
 
@@ -419,7 +419,7 @@ toString(): string
 
 | Type | Description |
 | --- | --- |
-| string | 返回对象的字符串表示形式。 |
+| string | A new string contains all elements. |
 
 ## updateCapacity
 
@@ -427,7 +427,7 @@ toString(): string
 updateCapacity(newCapacity: number): void
 ```
 
-将缓存容量设置为指定值。如果缓存中值的总数超过指定容量，将淘汰最少使用的键值对。
+Update the capacity of the SendableLruCache.
 
 **Since:** 18
 
@@ -443,7 +443,7 @@ updateCapacity(newCapacity: number): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| newCapacity | number | Yes | 指示要为缓存自定义的容量，最大值不能超过2147483647；小于等于0时会抛出异常。建议根据实际业务数据量设置合适的容量值，以平衡缓存命中率与内存占用。 |
+| newCapacity | number | Yes | The new capacity of the SendableLruCache. |
 
 ## values
 
@@ -451,7 +451,7 @@ updateCapacity(newCapacity: number): void
 values(): V[]
 ```
 
-获取当前缓存中所有值的列表，按从最近访问到最少访问的顺序排列。
+Returns a list of all values in the SendableLruCache.
 
 **Since:** 18
 
@@ -467,7 +467,7 @@ values(): V[]
 
 | Type | Description |
 | --- | --- |
-| V[] | 返回当前缓存中所有值的列表，按从最近访问到最少访问的顺序排列。 |
+| V[] | An array of all values. |
 
 ## length
 
@@ -475,7 +475,7 @@ values(): V[]
 readonly length: number
 ```
 
-当前缓存中值的总数。
+The length of the SendableLruCache.
 
 **Type:** number
 

@@ -1,6 +1,6 @@
 # AccessibilityAbilityInfo
 
-辅助应用信息。
+Provides information about an accessibility application.
 
 **Since:** 7
 
@@ -22,7 +22,7 @@ import { accessibility } from 'kits/@kit.AccessibilityKit';
 readonly abilityTypes: Array<AbilityType>
 ```
 
-辅助应用类型。
+Accessibility application type.
 
 **Type:** Array&lt;AbilityType&gt;
 
@@ -44,7 +44,7 @@ readonly abilityTypes: Array<AbilityType>
 readonly bundleName: string
 ```
 
-Bundle名称。
+Bundle name.
 
 **Type:** string
 
@@ -66,7 +66,7 @@ Bundle名称。
 readonly capabilities: Array<Capability>
 ```
 
-辅助应用能力列表。
+Capabilities list of the accessibility application.
 
 **Type:** Array&lt;Capability&gt;
 
@@ -88,7 +88,7 @@ readonly capabilities: Array<Capability>
 readonly description: string
 ```
 
-辅助应用描述。
+Description of the accessibility application.
 
 **Type:** string
 
@@ -110,7 +110,7 @@ readonly description: string
 readonly eventTypes: Array<EventType>
 ```
 
-辅助应用关注的无障碍事件列表。
+List of events that the accessibility application focuses on.
 
 **Type:** Array&lt;EventType&gt;
 
@@ -132,7 +132,7 @@ readonly eventTypes: Array<EventType>
 readonly id: string
 ```
 
-ability id。
+Ability ID.
 
 **Type:** string
 
@@ -154,7 +154,7 @@ ability id。
 readonly label: string
 ```
 
-扩展应用在扩展服务列表中的名称。
+Name of the application in the extended service list.
 
 **Type:** string
 
@@ -176,7 +176,7 @@ readonly label: string
 readonly name: string
 ```
 
-ability 名。
+Ability name.
 
 **Type:** string
 
@@ -198,7 +198,7 @@ ability 名。
 readonly needHide: boolean
 ```
 
-辅助应用是否在已安装的扩展服务列表中被隐藏，true表示隐藏服务，false表示显示服务。
+Whether the auxiliary application is hidden in the list of installed extended services. The value **true** means the auxiliary application is hidden, and the value **false** means the opposite.
 
 **Type:** boolean
 
@@ -220,7 +220,7 @@ readonly needHide: boolean
 readonly targetBundleNames: Array<string>
 ```
 
-关注的目标Bundle名称。
+Name of the target bundle.
 
 **Type:** Array&lt;string&gt;
 

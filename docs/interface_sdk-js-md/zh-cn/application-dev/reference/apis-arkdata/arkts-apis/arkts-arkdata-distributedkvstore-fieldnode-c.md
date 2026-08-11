@@ -10,12 +10,6 @@
 
 **系统能力：** SystemCapability.DistributedDataManager.KVStore.DistributedKVStore
 
-## 导入模块
-
-```TypeScript
-import { distributedKVStore } from 'kits/@kit.ArkData';
-```
-
 ## appendChild
 
 ```TypeScript
@@ -38,7 +32,7 @@ appendChild(child: FieldNode): boolean
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| child | [FieldNode](arkts-arkdata-distributedkvstore-fieldnode-c.md) | 是 | 要附加的子节点。 |
+| child | [FieldNode](arkts-arkdata-distributeddata-fieldnode-c.md) | 是 | 要附加的子节点。 |
 
 **返回值：**
 
@@ -50,7 +44,7 @@ appendChild(child: FieldNode): boolean
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 401 | Parameter error.Possible causes:1.Mandatory parameters are left unspecified; &lt;br&gt;2.Incorrect parameters types. |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error.Possible causes:1.Mandatory parameters are left unspecified; &lt;br&gt;2.Incorrect parameters types. |
 
 ## 示例
 
@@ -102,7 +96,7 @@ constructor(name: string)
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 401 | Parameter error.Possible causes:1.Mandatory parameters are left unspecified; &lt;br&gt;2.Parameter verification failed. |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error.Possible causes:1.Mandatory parameters are left unspecified; &lt;br&gt;2.Parameter verification failed. |
 
 ## default
 

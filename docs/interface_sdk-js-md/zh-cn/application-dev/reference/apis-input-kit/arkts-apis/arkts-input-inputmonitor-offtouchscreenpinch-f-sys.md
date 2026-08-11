@@ -1,11 +1,5 @@
 # offTouchscreenPinch（系统接口）
 
-## 导入模块
-
-```TypeScript
-import { inputMonitor } from 'kits/@kit.InputKit';
-```
-
 ## offTouchscreenPinch
 
 ```TypeScript
@@ -37,7 +31,44 @@ function offTouchscreenPinch(fingers: int, receiver?: Callback<TouchGestureEvent
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. 3.Parameter verification failed. |
-| 201 | Permission denied. |
-| 202 | Caller is not a system application. |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. 3.Parameter verification failed. |
+| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Caller is not a system application. |
+
+## 示例
+
+```TypeScript
+import { Entry, Text, RelativeContainer, Component } from '@kit.ArkUI';
+import { BusinessError } from '@kit.BasicServicesKit';
+import { inputMonitor } from '@kit.InputKit';
+import { TouchGestureEvent } from '@kit.InputKit';
+
+@Entry
+@Component
+struct Index {
+  build() {
+    RelativeContainer() {
+      Text()
+        .onClick(() => {
+          try {
+            let funCallback = (event: TouchGestureEvent) => {
+              console.info(`Succeeded in monitoring on ${JSON.stringify(event)}.`);
+            };
+            let fingers: int = 4;
+            inputMonitor.onTouchscreenPinch(fingers, funCallback);
+            // 取消监听单个回调函数
+            inputMonitor.offTouchscreenPinch(fingers, funCallback);
+            inputMonitor.onTouchscreenPinch(fingers, (event: TouchGestureEvent) => {
+              console.info(`Succeeded in monitoring on ${JSON.stringify(event)}.`);
+            });
+            // 取消监听所有回调函数
+            inputMonitor.offTouchscreenPinch(fingers);
+          } catch (error) {
+            console.error(`Failed to cancel monitor touch screen pinch, Code: ${(error as BusinessError).code}, message: ${(error as BusinessError).message}.`);
+          }
+        })
+    }
+  }
+}
+```
 

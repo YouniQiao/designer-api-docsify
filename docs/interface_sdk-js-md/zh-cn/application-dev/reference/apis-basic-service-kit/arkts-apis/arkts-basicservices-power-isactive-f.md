@@ -1,11 +1,5 @@
 # isActive
 
-## 导入模块
-
-```TypeScript
-import { power } from 'kits/@kit.BasicServicesKit';
-```
-
 ## isActive
 
 ```TypeScript

@@ -1,6 +1,6 @@
 # FaceAuthManager (System API)
 
-人脸认证管理器对象。用于提供人脸录入过程中的管理功能，目前支持设置人脸预览界面的Surface ID。
+Provides APIs for facial authentication management. It provides management features during face enrollment,including setting the surface ID of the face preview page.
 
 **Since:** 9
 
@@ -24,7 +24,7 @@ import { faceAuth } from 'kits/@kit.UserAuthenticationKit';
 constructor()
 ```
 
-用于创建人脸认证管理器对象。
+Creates a face authentication manager object.
 
 **Since:** 9
 
@@ -50,9 +50,9 @@ let faceAuthManager = new faceAuth.FaceAuthManager();
 setSurfaceId(surfaceId: string): void
 ```
 
-用于在录入人脸时设置人脸预览界面的Surface ID。该接口需要配合  
-[addCredential](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-osaccount-useridentitymanager-c-sys.md/arkts-basicservices-osaccount-useridentitymanager-c-sys.md#addcredential)使用，通过  
-[getXComponentSurfaceId](../../apis-arkui/arkts-apis/arkts-arkui-xcomponent-xcomponentcontroller-c.md/arkts-arkui-xcomponent-xcomponentcontroller-c.md#getxcomponentsurfaceid)组件的Surface来显示人脸预览画面。
+Sets the surface ID of the face preview page during face enrollment. This API must be used together with  
+[addCredential](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-osaccount-useridentitymanager-c-sys.md/arkts-basicservices-osaccount-useridentitymanager-c-sys.md#addcredential) to display the face preview page through the surface of the  
+[getXComponentSurfaceId](../../apis-arkui/arkts-apis/arkts-arkui-xcomponent-xcomponentcontroller-c.md/arkts-arkui-xcomponent-xcomponentcontroller-c.md#getxcomponentsurfaceid) component.
 
 **Since:** 9
 
@@ -70,15 +70,15 @@ setSurfaceId(surfaceId: string): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| surfaceId | string | Yes | [XComponent](../../apis-arkui/arkts-components/arkts-arkui-xcomponent-i)持有Surface的ID。用于在人脸录入过程中显示人脸 预览画面。 &lt;br&gt;**说明：**需在XComponent完成初始化后，通过[getXComponentSurfaceId](../../apis-arkui/arkts-apis/arkts-arkui-xcomponent-xcomponentcontroller-c.md/arkts-arkui-xcomponent-xcomponentcontroller-c.md#getxcomponentsurfaceid)方法 获取有效的surfaceId，若传入无效的surfaceId可能导致预览画面无法正常显示或接口调用失败。 |
+| surfaceId | string | Yes | ID of the surface held by [XComponent](../../apis-arkui/arkts-components/arkts-arkui-xcomponent-i). This ID is used to display the face preview page during face enrollment. &lt;br&gt;**Note:** A valid **surfaceId** must be obtained through the [getXComponentSurfaceId](../../apis-arkui/arkts-apis/arkts-arkui-xcomponent-xcomponentcontroller-c.md/arkts-arkui-xcomponent-xcomponentcontroller-c.md#getxcomponentsurfaceid) method after **XComponent** initialization. An invalid **surfaceId** may cause the preview page to fail to display or the API call to fail. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 12700001 | The service is unavailable. |
-| 201 | Permission denied. |
-| 202 | Permission denied. Called by non-system application. |
+| [12700001](../errorcode-useriam.md#12700001-facial-authentication-service-unavailable) | The service is unavailable. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission denied. Called by non-system application. |
 
 ## Examples
 
@@ -86,12 +86,12 @@ setSurfaceId(surfaceId: string): void
 import { faceAuth } from '@kit.UserAuthenticationKit';
 import { BusinessError } from '@kit.BasicServicesKit';
 
-// Obtain this surfaceId through the XComponentController.getXComponentSurfaceId() method from the XComponent component. This is only an example.
+// The surfaceId is obtained from the XComponent control. The surfaceId here is only an example.
 let surfaceId = '123456';
 let manager = new faceAuth.FaceAuthManager();
 try {
   manager.setSurfaceId(surfaceId);
-  console.info('set surface id successfully.');
+  console.info('set surface id success');
 } catch (error) {
   const err: BusinessError = error as BusinessError;
   console.error(`set surface id failed, Code is ${err?.code}, message is ${err?.message}`);

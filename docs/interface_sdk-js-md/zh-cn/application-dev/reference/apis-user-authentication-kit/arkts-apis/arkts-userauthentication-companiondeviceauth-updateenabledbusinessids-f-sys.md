@@ -1,11 +1,5 @@
 # updateEnabledBusinessIds（系统接口）
 
-## 导入模块
-
-```TypeScript
-import { companionDeviceAuth } from 'kits/@kit.UserAuthenticationKit';
-```
-
 ## updateEnabledBusinessIds
 
 ```TypeScript
@@ -47,13 +41,15 @@ function updateEnabledBusinessIds(templateId: Uint8Array, enabledBusinessIds: in
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 32600001 | The system service is not working properly. Please try again later. |
-| 32600003 | The business ID is invalid. |
-| 32600002 | The template is not found. |
-| 201 | Permission denied. |
-| 202 | Not system application. |
+| [32600001](../errorcode-useriam.md#32600001-系统服务工作异常) | The system service is not working properly. Please try again later. |
+| [32600003](../errorcode-useriam.md#32600003-业务id无效) | The business ID is invalid. |
+| [32600002](../errorcode-useriam.md#32600002-模板未找到) | The template is not found. |
+| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not system application. |
 
 ## 示例
+
+ArkTS-Dyn示例：
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -65,6 +61,19 @@ companionDeviceAuth.updateEnabledBusinessIds(templateId, [companionDeviceAuth.Bu
   })
   .catch((err: BusinessError) => {
     console.error(`error has been captured. Code: ${err.code}, message: ${err.message}`);
+  })
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+const templateId = new Uint8Array([1, 2, 3]);
+companionDeviceAuth.updateEnabledBusinessIds(templateId, [companionDeviceAuth.BusinessId.DEFAULT])
+  .then(() => {
+    console.info('business scope updated');
+  })
+  .catch((err) => {
+    console.error(`error has been captured: code: ${err.code}, message: ${err.message}`);
   })
 ```
 

@@ -1,6 +1,6 @@
 # Emotion
 
-枚举，人脸检测信息中的情绪类型。
+Enumerates the types of emotions in the detected human face information.
 
 **Since:** 26.0.0
 
@@ -16,7 +16,7 @@
 NEUTRAL = 0
 ```
 
-平静。
+Neutral.
 
 **Since:** 26.0.0
 
@@ -34,7 +34,7 @@ NEUTRAL = 0
 SADNESS = 1
 ```
 
-悲伤。
+Sad.
 
 **Since:** 26.0.0
 
@@ -52,7 +52,7 @@ SADNESS = 1
 SMILE = 2
 ```
 
-微笑。
+Smile.
 
 **Since:** 26.0.0
 
@@ -70,7 +70,7 @@ SMILE = 2
 SURPRISE = 3
 ```
 
-惊讶。
+Surprise.
 
 **Since:** 26.0.0
 

@@ -14,12 +14,6 @@ RestrictedWorker类继承[ThreadWorker](arkts-arkts-worker-threadworker-c.md)，
 
 **系统接口：** 此接口为系统接口。
 
-## 导入模块
-
-```TypeScript
-import { MessageEvents, PostMessageOptions, MessageEvent, Priority, WorkerEventTarget, ThreadWorkerPriority, ThreadWorkerGlobalScope, DedicatedWorkerGlobalScope, ErrorEvent, Event, EventListener, WorkerOptions, EventTarget, WorkerEventListener } from 'kits/@kit.ArkTS';
-```
-
 ## constructor
 
 ```TypeScript
@@ -49,6 +43,6 @@ RestrictedWorker构造函数。使用其他方法前，均需先构造Restricted
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 10200003 | Worker initialization failure. |
-| 10200007 | The worker file path is invalid. |
+| [10200003](../errorcode-utils.md#10200003-worker初始化失败) | Worker initialization failure. |
+| [10200007](../errorcode-utils.md#10200007-worker文件路径异常) | The worker file path is invalid. |
 

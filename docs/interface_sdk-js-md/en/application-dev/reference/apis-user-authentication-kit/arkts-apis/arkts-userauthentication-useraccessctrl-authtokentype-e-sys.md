@@ -1,6 +1,6 @@
 # AuthTokenType (System API)
 
-认证令牌类型枚举。该枚举定义了认证令牌的类型，用于标识令牌的签发来源。
+Enumerates the authentication token types. They are used to identify the source of the token.
 
 **Since:** 18
 
@@ -18,7 +18,7 @@
 TOKEN_TYPE_LOCAL_AUTH = 0
 ```
 
-本地认证令牌。基于本地认证结果签发的身份验证令牌，表示用户在本设备上完成了身份认证。
+Local authentication token. It is an authentication token issued based on the local authentication result,indicating that the user has been authenticated on the local device.
 
 **Since:** 18
 
@@ -36,7 +36,7 @@ TOKEN_TYPE_LOCAL_AUTH = 0
 TOKEN_TYPE_LOCAL_RESIGN = 1
 ```
 
-本地重签令牌。基于复用的身份认证结果重新签发的身份验证令牌，表示本次认证结果是从之前的认证结果复用而来。
+Local resigning token. It is an authentication token signed based on the reused authentication result, indicating that the current authentication result is reused from a previous authentication result.
 
 **Since:** 18
 
@@ -54,7 +54,7 @@ TOKEN_TYPE_LOCAL_RESIGN = 1
 TOKEN_TYPE_COAUTH = 2
 ```
 
-协同认证令牌。基于多个设备协同认证结果签发的身份验证令牌，表示用户通过多设备协同完成了身份认证。
+Collaborative authentication token. It is an authentication token issued based on multiple device collaboration authentication results, indicating that the user has completed authentication through multi-device collaboration.
 
 **Since:** 18
 

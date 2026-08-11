@@ -1,6 +1,6 @@
 # ListItemGroupOptions
 
-ListItemGroup组件参数。
+Defines the list item group options.
 
 **Since:** 23
 
@@ -16,7 +16,7 @@ ListItemGroup组件参数。
 footer?: CustomBuilder
 ```
 
-设置ListItemGroup尾部组件。
+Describes the ListItemGroup footer.
 
 **Type:** [CustomBuilder](../arkts-components/arkts-arkui-custombuilder-t.md)
 
@@ -36,7 +36,7 @@ footer?: CustomBuilder
 footerComponent?: ComponentContentBase
 ```
 
-使用ComponentContent类型参数设置ListItemGroup尾部组件。
+Describes the ListItemGroup footerComponent.
 
 **Type:** [ComponentContentBase](arkts-arkui-componentcontent-componentcontentbase-c.md)
 
@@ -56,7 +56,7 @@ footerComponent?: ComponentContentBase
 footerStyle?: ListItemGroupHeaderFooterStyle
 ```
 
-设置ListItemGroup尾部样式。
+Describes the ListItemGroup footer style.
 
 **Type:** [ListItemGroupHeaderFooterStyle](arkts-arkui-listitemgroup-listitemgroupheaderfooterstyle-e.md)
 
@@ -78,7 +78,7 @@ footerStyle?: ListItemGroupHeaderFooterStyle
 header?: CustomBuilder
 ```
 
-设置ListItemGroup头部组件。
+Describes the ListItemGroup header.
 
 **Type:** [CustomBuilder](../arkts-components/arkts-arkui-custombuilder-t.md)
 
@@ -98,7 +98,7 @@ header?: CustomBuilder
 headerComponent?: ComponentContentBase
 ```
 
-使用ComponentContent类型参数设置ListItemGroup头部组件。
+Describes the ListItemGroup headerComponent.
 
 **Type:** [ComponentContentBase](arkts-arkui-componentcontent-componentcontentbase-c.md)
 
@@ -118,7 +118,7 @@ headerComponent?: ComponentContentBase
 headerStyle?: ListItemGroupHeaderFooterStyle
 ```
 
-设置ListItemGroup头部样式。
+Describes the ListItemGroup header style.
 
 **Type:** [ListItemGroupHeaderFooterStyle](arkts-arkui-listitemgroup-listitemgroupheaderfooterstyle-e.md)
 
@@ -140,7 +140,7 @@ headerStyle?: ListItemGroupHeaderFooterStyle
 space?: double | string
 ```
 
-列表项间距。只作用于ListItem与ListItem之间，不作用于header与ListItem、footer与ListItem之间。
+Describes the ListItemGroup space.
 
 **Type:** double \| string
 
@@ -160,7 +160,7 @@ space?: double | string
 spaceWidth?: Dimension
 ```
 
-列表项间距。只作用于ListItem与ListItem之间，不作用于header与ListItem、footer与ListItem之间。&lt;p&gt;&lt;strong&gt;说明：&lt;/strong&gt;&lt;br/&gt;设置为负数或者大于等于List内容区长度时，按默认值显示。&lt;br/&gt;如果同时设置了spaceWidth和space，则spaceWidth优先生效。当spaceWidth为undefined或null时，space生效。&lt;/p&gt;。
+Spacing between list items along the main axis.&lt;p&gt;&lt;strong&gt;NOTE&lt;/strong&gt;.&lt;br&gt;If this parameter is set to a negative number or a value greater than or equal to the length of the list content area, the default value is used.&lt;br&gt;If this parameter is set to a value less than the width of the list divider, the width of the list divider is used as the spacing.&lt;br&gt; Child components of &lt;em&gt;ListItemGroup&lt;/em&gt; whose &lt;em&gt;visibility&lt;/em&gt; attribute is set to &lt;em&gt;None&lt;/em&gt;are not displayed, but the spacing above and below them still takes effect.&lt;br&gt; If both spaceWidth and space are set, spaceWidth will take precedence.&lt;/p&gt;
 
 **Type:** [Dimension](arkts-arkui-dimension-t.md)
 
@@ -180,7 +180,7 @@ spaceWidth?: Dimension
 style?: ListItemGroupStyle
 ```
 
-设置List组件卡片样式。
+Describes the ListItemGroup style.
 
 **Type:** [ListItemGroupStyle](arkts-arkui-listitemgroup-listitemgroupstyle-e.md)
 

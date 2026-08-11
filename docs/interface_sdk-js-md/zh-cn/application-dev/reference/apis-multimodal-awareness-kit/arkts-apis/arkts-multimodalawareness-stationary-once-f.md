@@ -1,18 +1,12 @@
 # once
 
-## 导入模块
-
-```TypeScript
-import { stationary } from 'kits/@kit.MultimodalAwarenessKit';
-```
-
 ## once
 
 ```TypeScript
 function once(activity: ActivityType, callback: Callback<ActivityResponse>): void
 ```
 
-Obtains the device status.
+设备状态管理，查询设备状态。仅执行一次回调，用于一次性查询当前状态。
 
 **起始版本：** 9
 
@@ -26,14 +20,14 @@ Obtains the device status.
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| activity | [ActivityType](arkts-multimodalawareness-stationary-activitytype-t.md) | 是 | Device status type. |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;ActivityResponse&gt; | 是 | Callback used to receive reported data. |
+| activity | [ActivityType](arkts-multimodalawareness-stationary-activitytype-t.md) | 是 | 设备状态能力类型。 |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;ActivityResponse&gt; | 是 | 回调函数，用于接收设备状态查询结果。 |
 
 ## 示例
 
 ```TypeScript
 stationary.once('still', (data) => {
     console.info('data=' + JSON.stringify(data));
-});
+})
 ```
 

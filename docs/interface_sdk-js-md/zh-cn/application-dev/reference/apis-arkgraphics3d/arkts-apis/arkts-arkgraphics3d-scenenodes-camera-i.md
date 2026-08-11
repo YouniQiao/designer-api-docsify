@@ -62,7 +62,7 @@ getViewMatrix(): Mat4x4
 raycast(viewPosition: Vec2, params: RaycastParameters): Promise<RaycastResult[]>
 ```
 
-向屏幕上的位置投射射线并列出射线击中的对象.
+从屏幕指定位置发射射线，检测并返回所有命中的3D物体信息。使用Promise异步回调。
 
 **起始版本：** 20
 
@@ -76,14 +76,14 @@ raycast(viewPosition: Vec2, params: RaycastParameters): Promise<RaycastResult[]>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| viewPosition | [Vec2](arkts-arkgraphics3d-scenetypes-vec2-i.md) | 是 | 在归一化设备坐标中投射的位置. |
-| params | [RaycastParameters](arkts-arkgraphics3d-scene-raycastparameters-i.md) | 是 | 执行射线检测使用的选项. |
+| viewPosition | [Vec2](arkts-arkgraphics3d-scenetypes-vec2-i.md) | 是 | 使用屏幕归一化坐标，取值范围为[0, 1]。 其中(0,0)表示Component3D控件的左上角，(1,1)表示Component3D控件的右下角。 |
+| params | [RaycastParameters](arkts-arkgraphics3d-scene-raycastparameters-i.md) | 是 | 射线检测的配置参数（如检测范围、过滤节点等）。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;[RaycastResult](arkts-arkgraphics3d-scene-raycastresult-i.md)[]&gt; | 返回命中结果数组的Promise，按从近到远排序. 数组可能为空. |
+| Promise&lt;[RaycastResult](arkts-arkgraphics3d-scene-raycastresult-i.md)[]&gt; | Promise对象，返回命中的结果数组（按距离从近到远排序），若无命中则返回空数组。 |
 
 ## clearColor
 

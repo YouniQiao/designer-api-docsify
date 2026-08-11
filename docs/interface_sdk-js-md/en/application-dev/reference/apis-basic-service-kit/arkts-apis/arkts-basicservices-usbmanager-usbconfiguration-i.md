@@ -1,6 +1,6 @@
 # USBConfiguration
 
-USB配置，一个[USBDevice](arkts-basicservices-usbmanager-usbdevice-i.md)中可以含有多个配置。
+Represents the USB configuration. One [USBDevice](arkts-basicservices-usbmanager-usbdevice-i.md) can contain multiple **USBConfig**instances.
 
 **Since:** 9
 
@@ -22,7 +22,7 @@ import { usbManager } from 'kits/@kit.BasicServicesKit';
 attributes: int
 ```
 
-配置的属性。
+Configuration attributes.
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
@@ -40,7 +40,7 @@ attributes: int
 id: int
 ```
 
-配置的唯一标识。
+Unique ID of the USB configuration.
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
@@ -58,7 +58,7 @@ id: int
 interfaces: Array<USBInterface>
 ```
 
-配置支持的接口属性。
+Supported interface attributes.
 
 **Type:** Array&lt;USBInterface&gt;
 
@@ -76,7 +76,8 @@ interfaces: Array<USBInterface>
 isRemoteWakeup: boolean
 ```
 
-检查当前配置是否支持远程唤醒。true表示支持，false表示不支持。
+Whether remote wakeup is supported. The value **true** indicates that the remote wakeup is supported, and **false  
+** indicates the opposite.
 
 **Type:** boolean
 
@@ -94,7 +95,7 @@ isRemoteWakeup: boolean
 isSelfPowered: boolean
 ```
 
-检查当前配置是否支持独立电源。true表示支持，false表示不支持。
+Whether an independent power supply is supported. The value **true** indicates that an independent power supply is supported, and **false** indicates the opposite.
 
 **Type:** boolean
 
@@ -112,7 +113,7 @@ isSelfPowered: boolean
 maxPower: int
 ```
 
-最大功耗。（单位：毫安）。
+Maximum power consumption.Unit: mA.
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
@@ -130,7 +131,7 @@ maxPower: int
 name: string
 ```
 
-配置的名称，可以为空。
+Configuration name, which can be left empty.
 
 **Type:** string
 

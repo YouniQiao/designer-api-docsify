@@ -6,7 +6,7 @@ typedef struct OH_Filter OH_Filter
 
 ## Overview
 
-Defines a struct for a filter used to generate a filter PixelMap.
+Defines a filter struct used with EffectKit module APIs to implement filter effect processing.
 
 **Since**: 12
 

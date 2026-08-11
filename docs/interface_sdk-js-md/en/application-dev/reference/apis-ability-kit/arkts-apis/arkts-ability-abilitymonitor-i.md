@@ -1,7 +1,8 @@
 # AbilityMonitor
 
-本模块提供监听指定[UIAbility](arkts-app-ability-uiability.md)生命周期状态变化的能力。开发者可以将AbilityMonitor作为  
-[abilityDelegator.addAbilityMonitor](arkts-ability-abilitydelegator-i.md#addabilitymonitor)的入参来注册监听。
+The module provides the capability of listening for lifecycle state changes of a specified  
+[UIAbility](arkts-app-ability-uiability.md). You can use AbilityMonitor as an input parameter of  
+[abilityDelegator.addAbilityMonitor](arkts-ability-abilitydelegator-i.md#addabilitymonitor) to register a listener.
 
 **Since:** 9
 
@@ -17,7 +18,7 @@
 onAbilityBackground?: (ability: UIAbility) => void
 ```
 
-UIAbility对象状态变成后台时，触发该回调函数。
+Callback invoked when the UIAbility object transitions to the background.
 
 **Since:** 9
 
@@ -41,7 +42,7 @@ UIAbility对象状态变成后台时，触发该回调函数。
 onAbilityCreate?: (ability: UIAbility) => void
 ```
 
-UIAbility对象被创建时，触发该回调函数。
+Callback invoked when the UIAbility object is created.
 
 **Since:** 9
 
@@ -65,7 +66,7 @@ UIAbility对象被创建时，触发该回调函数。
 onAbilityDestroy?: (ability: UIAbility) => void
 ```
 
-UIAbility对象被销毁前，触发该回调函数。
+Callback invoked when the UIAbility object is destroyed.
 
 **Since:** 9
 
@@ -89,7 +90,7 @@ UIAbility对象被销毁前，触发该回调函数。
 onAbilityForeground?: (ability: UIAbility) => void
 ```
 
-UIAbility对象状态变成前台时，触发该回调函数。
+Callback invoked when the UIAbility object transitions to the foreground.
 
 **Since:** 9
 
@@ -113,7 +114,7 @@ UIAbility对象状态变成前台时，触发该回调函数。
 onWindowStageCreate?: (ability: UIAbility) => void
 ```
 
-当WindowStage实例被创建时，触发该回调函数。
+Callback invoked when a WindowStage instance is created.
 
 **Since:** 9
 
@@ -137,7 +138,7 @@ onWindowStageCreate?: (ability: UIAbility) => void
 onWindowStageDestroy?: (ability: UIAbility) => void
 ```
 
-当WindowStage被销毁前，触发该回调函数。
+Callback invoked when the WindowStage instance is destroyed.
 
 **Since:** 9
 
@@ -161,7 +162,7 @@ onWindowStageDestroy?: (ability: UIAbility) => void
 onWindowStageRestore?: (ability: UIAbility) => void
 ```
 
-当UIAbility跨端迁移时，目标端UIAbility恢复页面栈时，触发该回调函数。
+Callback invoked when the page stack is restored for the target UIAbility during cross-device migration.
 
 **Since:** 9
 
@@ -185,7 +186,7 @@ onWindowStageRestore?: (ability: UIAbility) => void
 abilityName: string
 ```
 
-被监听的UIAbility对象名称。
+Name of the UIAbility object to be listened.
 
 **Type:** string
 
@@ -205,7 +206,7 @@ abilityName: string
 moduleName?: string
 ```
 
-被监听的UIAbility对象所属模块名称。
+Module name of the UIAbility object.
 
 **Type:** string
 

@@ -12,7 +12,7 @@ import { intelligence } from 'kits/@kit.ArkData';
 function getSupportedCloudModel(): Promise<Array<CloudModelInfo>>
 ```
 
-获取支持的云侧模型信息。使用Promise异步回调。
+Obtains the supported cloud embedding models.
 
 **Since:** 26.0.0
 
@@ -28,5 +28,5 @@ function getSupportedCloudModel(): Promise<Array<CloudModelInfo>>
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;Array&lt;CloudModelInfo&gt;&gt; | Promise对象，返回支持的云侧模型信息。 |
+| Promise&lt;Array&lt;CloudModelInfo&gt;&gt; | The promise returned by the function. |
 

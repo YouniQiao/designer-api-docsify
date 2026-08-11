@@ -1,6 +1,6 @@
 # RichEditorInsertValue
 
-插入文本的信息。
+Information about the text to be inserted.
 
 **Since:** 10
 
@@ -16,7 +16,7 @@
 insertOffset: number
 ```
 
-插入的文本偏移位置。
+Offset of the text to be inserted.
 
 **Type:** number
 
@@ -38,7 +38,7 @@ insertOffset: number
 insertValue: string
 ```
 
-插入的文本内容。
+Content of the text to be inserted.
 
 **Type:** string
 
@@ -60,9 +60,7 @@ insertValue: string
 previewText?: string
 ```
 
-插入的预上屏文本内容。
-
-默认值：空字符串。
+Content of the preview text to be inserted.
 
 **Type:** string
 

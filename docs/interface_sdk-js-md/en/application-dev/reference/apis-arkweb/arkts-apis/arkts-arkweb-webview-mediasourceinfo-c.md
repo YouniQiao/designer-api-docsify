@@ -1,14 +1,10 @@
 # MediaSourceInfo
 
-表示媒体源的信息。
+Implements a **MediaSourceInfo** object to provide the information about the media source.
 
-> **说明：**
+> **NOTE：**
 > 
-> - 本模块同时支持ArkTS-Dyn、ArkTS-Sta。
-> 
-> - 本Class首批接口从API version 12开始支持。
-> 
-> - 示例效果请以真机运行为准。
+> - The sample effect is subject to the actual device.
 
 **Since:** 23
 
@@ -30,7 +26,7 @@ import { webview } from 'kits/@kit.ArkWeb';
 format: string
 ```
 
-媒体源格式，可能为空，需要开发者自行判断格式。
+Format of the media source, which may be empty. You need to determine the format by yourself.
 
 **Type:** string
 
@@ -48,7 +44,7 @@ format: string
 source: string
 ```
 
-媒体源地址。
+Address of the media source.
 
 **Type:** string
 
@@ -66,7 +62,7 @@ source: string
 type: SourceType
 ```
 
-媒体源的类型。
+Type of the media source.
 
 **Type:** [SourceType](arkts-arkweb-webview-sourcetype-e.md)
 

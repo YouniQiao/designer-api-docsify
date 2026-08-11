@@ -1,32 +1,7 @@
 # Panel
 
-Panel是输入法面板对象，提供面板页面加载、显示/隐藏、尺寸调整、位置移动、模式切换等功能。Panel实例通过InputMethodAbility的  
-[createPanel](arkts-ime-inputmethodengine-inputmethodability-i.md#createpanel)接口获取，使用完毕后需调用  
-[destroyPanel](arkts-ime-inputmethodengine-inputmethodability-i.md#destroypanel)销毁以释放资源。createPanel与destroyPanel必须配对调用。  
-**核心功能概述：**
-
-- **页面加载**：通过  
-[setUiContent](arkts-ime-inputmethodengine-panel-i.md#setuicontent)为面板加载键盘页面内容，支持加载普通页面和与LocalStorage关联的页面。  
-- **显示与隐藏**：通过[show](arkts-ime-inputmethodengine-panel-i.md#show)显示面板，通过  
-[hide](arkts-ime-inputmethodengine-panel-i.md#hide)隐藏面板。面板的显示/隐藏也可通过订阅on('show')/on('hide')事件监听状态变化。  
-- **尺寸与位置调整**：通过  
-[resize](arkts-ime-inputmethodengine-panel-i.md#resize)调整面板尺寸，通过  
-[moveTo](arkts-ime-inputmethodengine-panel-i.md#moveto)移动面板位置，通过  
-[startMoving](arkts-ime-inputmethodengine-panel-i.md#startmoving)拖拽移动面板，通过  
-[adjustPanelRect](arkts-ime-inputmethodengine-panel-i.md#adjustpanelrect)/  
-[updatePanelRect](arkts-ime-inputmethodengine-panel-i.md#updatepanelrect)/  
-[updateRegion](arkts-ime-inputmethodengine-panel-i.md#updateregion)调整面板区域。  
-- **模式设置**：通过[changeFlag](arkts-ime-inputmethodengine-panel-i.md#changeflag)切换面板固定态/浮动态，通过  
-[setPrivacyMode](arkts-ime-inputmethodengine-panel-i.md#setprivacymode)设置隐私模式，通过  
-[setImmersiveMode](arkts-ime-inputmethodengine-panel-i.md#setimmersivemode)/  
-[getImmersiveMode](arkts-ime-inputmethodengine-panel-i.md#getimmersivemode)设置/获取沉浸模式。  
-- **事件监听**：通过on('show')/on('hide')/on('sizeChange')监听面板状态变化事件。  
-**面板生命周期：**
-
-1. 在InputMethodAbility的[createPanel](arkts-ime-inputmethodengine-inputmethodability-i.md#createpanel)中创建Panel实例并指定面板类型和标志位。2. 调用[setUiContent](arkts-ime-inputmethodengine-panel-i.md#setuicontent)加载键盘页面内容。3. 调用[show](arkts-ime-inputmethodengine-panel-i.md#show)显示面板，用户可交互。4. 根据需要调用resize、moveTo、changeFlag等接口动态调整面板。5. 使用完毕后调用[destroyPanel](arkts-ime-inputmethodengine-inputmethodability-i.md#destroypanel)销毁面板，释放资源。
-
-下列API均需使用  
-[createPanel](arkts-ime-inputmethodengine-inputmethodability-i.md#createpanel)获取到Panel实例后，通过实例调用。
+In the following API examples, you must first use   
+[createPanel](arkts-ime-inputmethodengine-inputmethodability-i.md#createpanel)to obtain a **Panel** instance, and then call the APIs using the obtained instance.
 
 **Since:** 10
 
@@ -48,7 +23,19 @@ import { inputMethodEngine } from 'kits/@kit.IMEKit';
 adjustPanelRect(flag: PanelFlag, rect: PanelRect): void
 ```
 
-预设置输入法应用横竖屏大小。接口调用完毕表示adjust请求已提交到输入法框架，不表示执行完毕。
+Adjusts the panel rectangle. After the API is called, the adjust request is submitted to the input method framework, but the execution is not complete.
+
+> **NOTE：**
+> 
+> This API applies only to the panels of the **SOFT_KEYBOARD** type in the **FLG_FIXED** or **FLG_FLOATING**
+> state.
+> 
+> This API returns the result synchronously. The return only indicates that the system receives the setting
+> request, not that the setting is complete.
+> 
+> When the **PanelFlag** of a smartphone is **FLG_FLOATING** and the panel width is between 0 and 288 vp, the
+> function buttons at the bottom of the panel will dynamically adjust their size according to the panel width. To
+> ensure the optimal user experience, it is recommended that the panel width be no less than 90 vp.
 
 **Since:** 12
 
@@ -62,15 +49,15 @@ adjustPanelRect(flag: PanelFlag, rect: PanelRect): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| flag | [PanelFlag](arkts-ime-inputmethodengine-panelflag-e.md) | Yes | 目标面板状态类型。类型为FLG_FIXED或FLG_FLOATING。 |
-| rect | [PanelRect](arkts-ime-inputmethodengine-panelrect-i.md) | Yes | 目标面板横屏状态及竖屏状态的横坐标，纵坐标，宽度以及高度。固定态：高度不能超过屏幕高度的70%，宽度不能超过屏幕宽度；悬浮态：高度不能超过屏幕高度，宽度不能超过屏幕宽度。 超出范围时返回错误码401。 |
+| flag | [PanelFlag](arkts-ime-inputmethodengine-panelflag-e.md) | Yes | Type of the state of the target panel. It can be **FLG_FIXED** or **FLG_FLOATING**. |
+| rect | [PanelRect](arkts-ime-inputmethodengine-panelrect-i.md) | Yes | Landscape rectangle and portrait rectangle of the target panel. For the panel of the fixed state, the height cannot exceed 70% of the screen height, and the width cannot exceed the screen width. For the panel of the floating state, the height cannot exceed the screen height, and the width cannot exceed the screen width. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types; 3.Parameter verification failed. |
-| 12800013 | window manager service error. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types; 3.Parameter verification failed. |
+| [12800013](../errorcode-inputmethod-framework.md#12800013-window-manager-service-error) | window manager service error. |
 
 ## Examples
 
@@ -91,9 +78,7 @@ let portraitRect: window.Rect = {
   height: 300
 };
 
-// Target panel status type.
 let panelFlag: inputMethodEngine.PanelFlag = inputMethodEngine.PanelFlag.FLG_FIXED;
-// X-coordinate, Y-coordinate, width, and height of the target panel in both landscape and portrait orientations.
 let panelRect: inputMethodEngine.PanelRect = {
   landscapeRect: landscapeRect,
   portraitRect: portraitRect
@@ -107,7 +92,23 @@ panel.adjustPanelRect(panelFlag, panelRect);
 adjustPanelRect(flag: PanelFlag, rect: EnhancedPanelRect): void
 ```
 
-预设置输入法应用横竖屏大小、位置、自定义避让区域以及热区。
+Adjusts the panel rectangle, and customizes the avoid area and touch area.
+
+> **NOTE：**
+> 
+> This API applies only to the panels of the **SOFT_KEYBOARD** type in the **FLG_FIXED** or **FLG_FLOATING**
+> state. This API is compatible with
+> [adjustPanelRect](arkts-ime-inputmethodengine-panel-i.md#adjustpanelrect). If the
+> input parameter **rect** contains only the **landscapeRect** and **portraitRect** attributes,
+> [adjustPanelRect](arkts-ime-inputmethodengine-panel-i.md#adjustpanelrect) is called by
+> default.
+> 
+> This API returns the result synchronously. The return only indicates that the system receives the setting
+> request, not that the setting is complete.
+> 
+> When the **PanelFlag** of a smartphone is **FLG_FLOATING** and the panel width is between 0 and 288 vp, the
+> function buttons at the bottom of the panel will dynamically adjust their size according to the panel width. To
+> ensure the optimal user experience, it is recommended that the panel width be no less than 90 vp.
 
 **Since:** 15
 
@@ -121,16 +122,16 @@ adjustPanelRect(flag: PanelFlag, rect: EnhancedPanelRect): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| flag | [PanelFlag](arkts-ime-inputmethodengine-panelflag-e.md) | Yes | 目标面板状态类型。类型为FLG_FIXED或FLG_FLOATING。 |
-| rect | [EnhancedPanelRect](arkts-ime-inputmethodengine-enhancedpanelrect-i.md) | Yes | 目标面板横屏状态及竖屏状态的位置、大小、避让区域以及热区。 |
+| flag | [PanelFlag](arkts-ime-inputmethodengine-panelflag-e.md) | Yes | Type of the state of the target panel. It can be **FLG_FIXED** or **FLG_FLOATING**. |
+| rect | [EnhancedPanelRect](arkts-ime-inputmethodengine-enhancedpanelrect-i.md) | Yes | The target panel rectangle, avoid area, and touch area. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types; 3.Parameter verification failed. |
-| 12800017 | invalid panel type or panel flag. |
-| 12800013 | window manager service error. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types; 3.Parameter verification failed. |
+| [12800017](../errorcode-inputmethod-framework.md#12800017-invalid-panel-type-or-panel-flag) | invalid panel type or panel flag. |
+| [12800013](../errorcode-inputmethod-framework.md#12800013-window-manager-service-error) | window manager service error. |
 
 ## Examples
 
@@ -152,9 +153,8 @@ let portraitRect1: window.Rect = {
   height: 800
 }
 let portraitInputRegion: Array<window.Rect> = [portraitRect1];
-// Target panel status type.
+
 let panelFlag: inputMethodEngine.PanelFlag = inputMethodEngine.PanelFlag.FLG_FIXED;
-// Location, size, avoid area, and hot zone of the target panel in both landscape and portrait orientations.
 let panelRect: inputMethodEngine.EnhancedPanelRect = {
   landscapeAvoidY: 650,
   landscapeInputRegion: landscapeInputRegion,
@@ -171,8 +171,7 @@ panel.adjustPanelRect(panelFlag, panelRect);
 changeFlag(flag: PanelFlag): void
 ```
 
-将输入法应用的面板状态改变为其他[PanelFlag](arkts-ime-inputmethodengine-panelflag-e.md)形态，仅对  
-[SOFT_KEYBOARD](arkts-ime-inputmethodengine-paneltype-e.md)生效。
+Changes the state type ([PanelFlag](arkts-ime-inputmethodengine-panelflag-e.md)) of this input method panel. This API only works for [SOFT_KEYBOARD](arkts-ime-inputmethodengine-paneltype-e.md) panels.
 
 **Since:** 10
 
@@ -186,13 +185,13 @@ changeFlag(flag: PanelFlag): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| flag | [PanelFlag](arkts-ime-inputmethodengine-panelflag-e.md) | Yes | 目标面板状态类型。 |
+| flag | [PanelFlag](arkts-ime-inputmethodengine-panelflag-e.md) | Yes | Type of the state of the target panel. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types; 3.Parameter verification failed. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types; 3.Parameter verification failed. |
 
 ## Examples
 
@@ -213,7 +212,7 @@ ArkTS-Sta:
 getDisplayId(): Promise<long>
 ```
 
-获取当前窗口的所在id，使用Promise异步回调。
+Obtains the window ID. This API uses a promise to return the result.
 
 **Since:** 15
 
@@ -227,14 +226,14 @@ getDisplayId(): Promise<long>
 
 | Type | Description |
 | --- | --- |
-| ArkTS-Dyn: Promise&lt;number&gt;  <br>ArkTS-Sta：Promise&lt;long&gt; | Promise对象。返回窗口的displayId。 |
+| ArkTS-Dyn: Promise&lt;number&gt;  <br>ArkTS-Sta：Promise&lt;long&gt; | Promise used to return the result. It returns **displayId** of the window. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 12800002 | input method engine error. Possible causes: 1.input method panel not created. 2.the input method application does not subscribe to related events. |
-| 12800013 | window manager service error. |
+| [12800002](../errorcode-inputmethod-framework.md#12800002-input-method-engine-error) | input method engine error. Possible causes: 1.input method panel not created. 2.the input method application does not subscribe to related events. |
+| [12800013](../errorcode-inputmethod-framework.md#12800013-window-manager-service-error) | window manager service error. |
 
 ## Examples
 
@@ -254,7 +253,7 @@ panel.getDisplayId().then((result: number) => {
 getImmersiveMode(): ImmersiveMode
 ```
 
-获取输入法应用的沉浸模式。
+Obtains the immersive mode of the input method application.
 
 **Since:** 15
 
@@ -268,7 +267,7 @@ getImmersiveMode(): ImmersiveMode
 
 | Type | Description |
 | --- | --- |
-| [ImmersiveMode](../../apis-arkui/arkts-apis/arkts-arkui-promptaction-immersivemode-e.md) | 沉浸模式。 |
+| [ImmersiveMode](../../apis-arkui/arkts-apis/arkts-arkui-promptaction-immersivemode-e.md) | Immersive mode. |
 
 ## Examples
 
@@ -282,7 +281,7 @@ let mode: inputMethodEngine.ImmersiveMode = panel.getImmersiveMode();
 getSystemPanelCurrentInsets(displayId: number): Promise<SystemPanelInsets>
 ```
 
-获取指定屏幕当前状态（例如：折叠或展开）下，当前输入法键盘状态（例如：悬浮或固定）下输入法软键盘相对系统面板的偏移区域。使用Promise异步回调。
+Obtains the offset area of the soft keyboard relative to the system panel under the current state of the specified screen (for example, folded or unfolded) and the current state of the input method keyboard (for example, floating or fixed). This API uses a promise to return the result.
 
 **Since:** 21
 
@@ -296,21 +295,21 @@ getSystemPanelCurrentInsets(displayId: number): Promise<SystemPanelInsets>
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| displayId | number | Yes | 输入法键盘所在屏幕的displayId，可通过[getDisplayId](arkts-ime-inputmethodengine-panel-i.md#getdisplayid)获取 |
+| displayId | number | Yes | Display ID of the screen where the input method keyboard is located. It can be obtained by calling [getDisplayId](arkts-ime-inputmethodengine-panel-i.md#getdisplayid). |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;SystemPanelInsets&gt; | Promise对象。输入法键盘与系统面板的偏移区域。 |
+| Promise&lt;SystemPanelInsets&gt; | Promise used to return the offset area between the input method keyboard and the system panel. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 12800017 | invalid panel type or panel flag. Possible causes: 1. Current panel's type is not SOFT_KEYBOARD. 2. Panel's flag is not FLG_FIXED or FLG_FLOATING. |
-| 12800022 | invalid displayId. |
-| 12800013 | window manager service error. |
+| [12800017](../errorcode-inputmethod-framework.md#12800017-invalid-panel-type-or-panel-flag) | invalid panel type or panel flag. Possible causes: 1. Current panel's type is not SOFT_KEYBOARD. 2. Panel's flag is not FLG_FIXED or FLG_FLOATING. |
+| [12800022](../errorcode-inputmethod-framework.md#12800022-invalid-displayid) | invalid displayId. |
+| [12800013](../errorcode-inputmethod-framework.md#12800013-window-manager-service-error) | window manager service error. |
 
 ## Examples
 
@@ -341,9 +340,9 @@ inputMethodAbility.createPanel(this.context, panelConfig).then( (panel: inputMet
 getSystemPanelCurrentInsets(displayId: long): Promise<SystemPanelInsets | null>
 ```
 
-获取指定屏幕当前状态（例如：折叠或展开）下，当前输入法键盘状态（例如：悬浮或固定）下输入法软键盘相对系统面板的偏移区域。使用Promise异步回调。
+Get the current insets of the system panel of a specified display.
 
-&lt;p&gt;仅支持悬浮或固定键盘.&lt;/p&gt;&lt;p&gt;获取指定屏幕当前状态（例如：折叠或展开）下，当前输入法键盘状态（例如：悬浮或固定）下输入法软键盘相对系统面板的偏移区域。&lt;/p&gt;&lt;p&gt;当屏幕状态发生变化，需要重新获取偏移区域。&lt;/p&gt;
+&lt;p&gt;It's only used for SOFT_KEYBOARD panel with FLG_FIXED or FLG_FLOATING.&lt;/p&gt;&lt;p&gt;This interface only supports obtaining the current insets values of a display.When the display undergoes orientation changes, or is folded or unfolded, it is necessary to reinvoke this interface to get the latest values.&lt;/p&gt;
 
 **Since:** 23
 
@@ -369,9 +368,9 @@ getSystemPanelCurrentInsets(displayId: long): Promise<SystemPanelInsets | null>
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 12800017 | invalid panel type or panel flag. Possible causes: 1. Current panel's type is not SOFT_KEYBOARD. 2. Panel's flag is not FLG_FIXED or FLG_FLOATING. |
-| 12800022 | invalid displayId. |
-| 12800013 | window manager service error. |
+| [12800017](../errorcode-inputmethod-framework.md#12800017-invalid-panel-type-or-panel-flag) | invalid panel type or panel flag. Possible causes: 1. Current panel's type is not SOFT_KEYBOARD. 2. Panel's flag is not FLG_FIXED or FLG_FLOATING. |
+| [12800022](../errorcode-inputmethod-framework.md#12800022-invalid-displayid) | invalid displayId. |
+| [12800013](../errorcode-inputmethod-framework.md#12800013-window-manager-service-error) | window manager service error. |
 
 ## hide
 
@@ -379,7 +378,7 @@ getSystemPanelCurrentInsets(displayId: long): Promise<SystemPanelInsets | null>
 hide(callback: AsyncCallback<void>): void
 ```
 
-隐藏当前输入法面板，使用callback异步回调。
+Hides this panel. This API uses an asynchronous callback to return the result.
 
 **Since:** 10
 
@@ -393,7 +392,7 @@ hide(callback: AsyncCallback<void>): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | 回调函数。当面板隐藏成功，err为undefined，否则err为错误对象。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined**. Otherwise, **err** is an error object. |
 
 ## Examples
 
@@ -415,7 +414,7 @@ panel.hide((err: BusinessError) => {
 hide(): Promise<void>
 ```
 
-隐藏当前输入法面板，使用promise异步回调。
+Hides this panel. This API uses a promise to return the result.
 
 **Since:** 10
 
@@ -429,7 +428,7 @@ hide(): Promise<void>
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | 无返回结果的Promise对象。 |
+| Promise&lt;void&gt; | Promise that returns no value. |
 
 ## Examples
 
@@ -455,7 +454,7 @@ ArkTS-Sta:
 moveTo(x: int, y: int, callback: AsyncCallback<void>): void
 ```
 
-移动面板位置，使用callback异步回调。[面板状态](arkts-ime-inputmethodengine-panelflag-e.md)为固定态时，不产生实际移动效果。
+Moves this input method panel to the specified position. This API uses an asynchronous callback to return the result. This API does not work on panels in the [FLG_FIXED](arkts-ime-inputmethodengine-panelflag-e.md) state.
 
 **Since:** 10
 
@@ -469,15 +468,15 @@ moveTo(x: int, y: int, callback: AsyncCallback<void>): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| x | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | 横轴方向移动的值，单位为px。该参数应为整数。值大于0表示右移，小于0表示左移。超出屏幕范围时返回错误码401。 |
-| y | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | 纵轴方向移动的值，单位为px。该参数应为整数。值大于0表示下移，小于0表示上移。超出屏幕范围时返回错误码401。 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | 回调函数。当面板位置移动成功，err为undefined，否则err为错误对象。 |
+| x | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | Distance to move along the horizontal axis, in px. A positive value indicates moving rightwards. The value must be an integer. |
+| y | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | Distance to move along the vertical axis, in px. A positive value indicates moving downwards. The value must be an integer. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined**. Otherwise, **err** is an error object. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
 
 ## Examples
 
@@ -505,7 +504,7 @@ ArkTS-Sta:
 moveTo(x: int, y: int): Promise<void>
 ```
 
-移动面板位置，使用promise异步回调。[面板状态](arkts-ime-inputmethodengine-panelflag-e.md)为固定态时，不产生实际移动效果。
+Moves this input method panel to the specified position. This API uses a promise to return the result. This API does not work on panels in the [FLG_FIXED](arkts-ime-inputmethodengine-panelflag-e.md) state.
 
 **Since:** 10
 
@@ -519,20 +518,20 @@ moveTo(x: int, y: int): Promise<void>
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| x | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | 横轴方向移动的值，值大于0表示右移，单位为px。该参数应为整数。 |
-| y | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | 纵轴方向移动的值，值大于0表示下移，单位为px。该参数应为整数。 |
+| x | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | Distance to move along the horizontal axis, in px. A positive value indicates moving rightwards. The value must be an integer. |
+| y | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | Distance to move along the vertical axis, in px. A positive value indicates moving downwards. The value must be an integer. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | 无返回结果的Promise对象。 |
+| Promise&lt;void&gt; | Promise that returns no value. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
 
 ## Examples
 
@@ -552,7 +551,7 @@ panel.moveTo(300, 300).then(() => {
 off(type: 'show', callback?: () => void): void
 ```
 
-取消监听当前面板的显示状态，使用callback异步回调。
+Disables listening for the show event of this panel. This API uses an asynchronous callback to return the result.
 
 **Since:** 10
 
@@ -566,14 +565,14 @@ off(type: 'show', callback?: () => void): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'show' | Yes | 取消监听当前面板的状态类型，固定取值为'show'。 |
-| callback | () =&gt; void | No | 取消订阅的回调函数。参数不填写时，取消订阅type对应的所有回调事件。 |
+| type | 'show' | Yes | Event type, which is **'show'**. |
+| callback | () =&gt; void | No | Callback to unregister. If this parameter is not specified, this API unregisters all callbacks for the specified type. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types; 3.Parameter verification failed. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types; 3.Parameter verification failed. |
 
 ## Examples
 
@@ -587,7 +586,7 @@ panel.off('show');
 off(type: 'hide', callback?: () => void): void
 ```
 
-取消监听当前面板的隐藏状态，使用callback异步回调。
+Disables listening for the hide event of this panel. This API uses an asynchronous callback to return the result.
 
 **Since:** 10
 
@@ -601,14 +600,14 @@ off(type: 'hide', callback?: () => void): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'hide' | Yes | 要取消监听的当前面板状态类型，固定取值为'hide'。 |
-| callback | () =&gt; void | No | 取消订阅的回调函数。参数不填写时，取消订阅type对应的所有回调事件。 |
+| type | 'hide' | Yes | Event type, which is **'hide'**. |
+| callback | () =&gt; void | No | Callback to unregister. If this parameter is not specified, this API unregisters all callbacks for the specified type. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types; 3.Parameter verification failed. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types; 3.Parameter verification failed. |
 
 ## Examples
 
@@ -622,7 +621,22 @@ panel.off('hide');
 off(type: 'sizeChange', callback?: SizeChangeCallback): void
 ```
 
-取消监听当前面板大小变化，使用callback异步回调。
+Disables listening for the panel size change. This API uses an asynchronous callback to return the result.
+
+> **NOTE：**
+> 
+> This API applies only to the panels of the **SOFT_KEYBOARD** type in the **FLG_FIXED** or **FLG_FLOATING**
+> state. When you call **adjustPanelRect** to adjust the panel size, the system calculates the final value based
+> on certain rules (for example, whether the panel size exceeds the screen). This callback can be used to obtain
+> the actual panel size to refresh the panel layout.
+> 
+> - This API is supported from API version 12 to 14. The callback function of this API contains only mandatory
+> parameters of the [window.Size](../../apis-arkui/arkts-apis/arkts-arkui-window-size-i.md/arkts-arkui-window-size-i.md) type.
+> 
+> - Since API version 15, after the
+> [adjustPanelRect](arkts-ime-inputmethodengine-panel-i.md#adjustpanelrect) API
+> is called, an optional parameter of the [KeyboardArea](arkts-ime-inputmethodengine-keyboardarea-i.md) type is added to
+> the callback function of this API.
 
 **Since:** 12
 
@@ -636,8 +650,8 @@ off(type: 'sizeChange', callback?: SizeChangeCallback): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'sizeChange' | Yes | 监听当前面板的大小是否产生变化，固定取值为'sizeChange'。 |
-| callback | [SizeChangeCallback](../../apis-arkui/arkts-components/arkts-arkui-sizechangecallback-t.md) | No | 回调函数。返回当前软键盘面板的大小，包含宽度和高度值。参数不填写时，取消订阅type对应的所有回调事件。<br>**Since:** 15 |
+| type | 'sizeChange' | Yes | Event type, which is **'sizeChange'**. |
+| callback | [SizeChangeCallback](../../apis-arkui/arkts-components/arkts-arkui-sizechangecallback-t.md) | No | Callback used to return the size of the soft keyboard panel, including the width and height.<br>**Since:** 15 |
 
 ## Examples
 
@@ -655,7 +669,7 @@ panel.off('sizeChange', (windowSize: window.Size) => {
 offHide(callback?: Callback<void>): void
 ```
 
-取消监听当前面板隐藏状态，使用callback异步回调。
+Unregisters panel hide event.
 
 **Since:** 23
 
@@ -669,7 +683,7 @@ offHide(callback?: Callback<void>): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;void&gt; | No | 取消订阅的回调函数。 参数不填写时，取消订阅type对应的所有回调事件。 |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;void&gt; | No | the callback to Unregister. |
 
 ## offShow
 
@@ -677,7 +691,7 @@ offHide(callback?: Callback<void>): void
 offShow(callback?: Callback<void>): void
 ```
 
-取消监听当前输入法面板的隐藏状态，使用callback异步回调。
+Unregisters panel show event.
 
 **Since:** 23
 
@@ -691,7 +705,7 @@ offShow(callback?: Callback<void>): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;void&gt; | No | 取消订阅的回调函数。 参数不填写时，取消订阅type对应的所有回调事件。 |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;void&gt; | No | optional, the callback called when the panel shows. |
 
 ## offSizeChange
 
@@ -699,9 +713,9 @@ offShow(callback?: Callback<void>): void
 offSizeChange(callback?: SizeChangeCallback): void
 ```
 
-取消监听当前面板大小变化，使用callback异步回调。
+Unsubscribe 'sizeChange' event.
 
-&lt;p&gt;此接口仅支持固定或悬浮态的软键盘类型Panel。&lt;/p&gt;
+&lt;p&gt;It's only used for SOFT_KEYBOARD panel with FLG_FIXED and FLG_FLOATING.&lt;/p&gt;
 
 **Since:** 23
 
@@ -715,7 +729,7 @@ offSizeChange(callback?: SizeChangeCallback): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [SizeChangeCallback](../../apis-arkui/arkts-components/arkts-arkui-sizechangecallback-t.md) | No | 回调函数。返回当前软键盘面板的大小，包含宽度和高度值。 参数不填写时，取消订阅type对应的所有回调事件。 |
+| callback | [SizeChangeCallback](../../apis-arkui/arkts-components/arkts-arkui-sizechangecallback-t.md) | No | optional, the callback called when the panel size changes. |
 
 ## on('show')
 
@@ -723,7 +737,7 @@ offSizeChange(callback?: SizeChangeCallback): void
 on(type: 'show', callback: () => void): void
 ```
 
-监听当前面板显示状态，使用 callback 异步回调。
+Enables listening for the show event of this panel. This API uses an asynchronous callback to return the result.
 
 **Since:** 10
 
@@ -737,8 +751,8 @@ on(type: 'show', callback: () => void): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'show' | Yes | 监听当前面板的状态类型，固定取值为'show'。 |
-| callback | () =&gt; void | Yes | 回调函数。 |
+| type | 'show' | Yes | Event type, which is **'show'**. |
+| callback | () =&gt; void | Yes | Callback used to return the result. |
 
 ## Examples
 
@@ -754,7 +768,7 @@ panel.on('show', () => {
 on(type: 'hide', callback: () => void): void
 ```
 
-监听当前面板隐藏状态，使用callback异步回调。
+Enables listening for the hide event of this panel. This API uses an asynchronous callback to return the result.
 
 **Since:** 10
 
@@ -768,8 +782,8 @@ on(type: 'hide', callback: () => void): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'hide' | Yes | 监听当前面板的状态类型，固定取值为'hide'。 |
-| callback | () =&gt; void | Yes | 回调函数。 |
+| type | 'hide' | Yes | Event type, which is **'hide'**. |
+| callback | () =&gt; void | Yes | Callback used to return the result. |
 
 ## Examples
 
@@ -785,7 +799,22 @@ panel.on('hide', () => {
 on(type: 'sizeChange', callback: SizeChangeCallback): void
 ```
 
-监听当前面板大小变化，使用callback异步回调。
+Enables listening for the panel size change. This API uses an asynchronous callback to return the result.
+
+> **NOTE：**
+> 
+> This API applies only to the panels of the **SOFT_KEYBOARD** type in the **FLG_FIXED** or **FLG_FLOATING**
+> state. When you call **adjustPanelRect** to adjust the panel size, the system calculates the final value based
+> on certain rules (for example, whether the panel size exceeds the screen). This callback can be used to obtain
+> the actual panel size to refresh the panel layout.
+> 
+> - This API is supported from API version 12 to 14. The callback function of this API contains only mandatory
+> parameters of the [window.Size](../../apis-arkui/arkts-apis/arkts-arkui-window-size-i.md/arkts-arkui-window-size-i.md) type.
+> 
+> - Since API version 15, after the
+> [adjustPanelRect](arkts-ime-inputmethodengine-panel-i.md#adjustpanelrect) API
+> is called, an optional parameter of the [KeyboardArea](arkts-ime-inputmethodengine-keyboardarea-i.md) type is added to
+> the callback function of this API.
 
 **Since:** 12
 
@@ -799,8 +828,8 @@ on(type: 'sizeChange', callback: SizeChangeCallback): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'sizeChange' | Yes | 监听当前面板的大小是否产生变化，固定值为'sizeChange'。 |
-| callback | [SizeChangeCallback](../../apis-arkui/arkts-components/arkts-arkui-sizechangecallback-t.md) | Yes | 回调函数。返回当前软键盘面板的大小，包含宽度和高度值。<br>**Since:** 15 |
+| type | 'sizeChange' | Yes | Event type, which is **'sizeChange'**. |
+| callback | [SizeChangeCallback](../../apis-arkui/arkts-components/arkts-arkui-sizechangecallback-t.md) | Yes | Callback used to return the size of the soft keyboard panel, including the width and height.<br>**Since:** 15 |
 
 ## Examples
 
@@ -823,9 +852,9 @@ panel.on('sizeChange', (windowSize: window.Size, keyboardArea: inputMethodEngine
 onHide(callback: Callback<void>): void
 ```
 
-监听当前面板隐藏状态，使用callback异步回调。
+Registers panel hide event.
 
-&lt;p&gt;“hide”事件在面板隐藏时触发。&lt;/p&gt;
+&lt;p&gt;The "hide" events are triggered when the panel is hidden.&lt;/p&gt;
 
 **Since:** 23
 
@@ -839,7 +868,7 @@ onHide(callback: Callback<void>): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;void&gt; | Yes | 回调函数。 |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;void&gt; | Yes | the callback called when the panel hides. |
 
 ## onShow
 
@@ -847,9 +876,9 @@ onHide(callback: Callback<void>): void
 onShow(callback: Callback<void>): void
 ```
 
-监听当前面板显示状态，使用callback异步回调。
+Registers panel show event.
 
-&lt;p&gt;“show”事件在面板显示时触发。&lt;/p&gt;
+&lt;p&gt;The "show" events are triggered when the panel is shown.&lt;/p&gt;
 
 **Since:** 23
 
@@ -863,7 +892,7 @@ onShow(callback: Callback<void>): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;void&gt; | Yes | 回调函数。 |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;void&gt; | Yes | the callback called when the panel shows. |
 
 ## onSizeChange
 
@@ -871,9 +900,9 @@ onShow(callback: Callback<void>): void
 onSizeChange(callback: SizeChangeCallback): void
 ```
 
-监听当前面板大小变化，使用callback异步回调。
+Subscribe 'sizeChange' event.
 
-&lt;p&gt;此接口仅支持固定或悬浮态的软键盘类型Panel。&lt;/p&gt;
+&lt;p&gt;It's only used for SOFT_KEYBOARD panel with FLG_FIXED and FLG_FLOATING.&lt;/p&gt;
 
 **Since:** 23
 
@@ -887,7 +916,7 @@ onSizeChange(callback: SizeChangeCallback): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [SizeChangeCallback](../../apis-arkui/arkts-components/arkts-arkui-sizechangecallback-t.md) | Yes | 回调函数。返回当前软键盘面板的大小，包含宽度和高度值。 |
+| callback | [SizeChangeCallback](../../apis-arkui/arkts-components/arkts-arkui-sizechangecallback-t.md) | Yes | the callback called when the panel size changes. |
 
 ## resize
 
@@ -901,7 +930,16 @@ ArkTS-Sta:
 resize(width: long, height: long, callback: AsyncCallback<void>): void
 ```
 
-改变当前输入法面板的大小，使用callback异步回调。
+Resizes this input method panel. This API uses an asynchronous callback to return the result.
+
+> **NOTE：**
+> 
+> The panel width cannot exceed the screen width, and the panel height cannot be 0.7 times higher than the screen
+> height.
+> 
+> When the **PanelFlag** of a smartphone is **FLG_FLOATING** and the panel width is between 0 and 288 vp, the
+> function buttons at the bottom of the panel will dynamically adjust their size according to the panel width. To
+> ensure the optimal user experience, it is recommended that the panel width be no less than 90 vp.
 
 **Since:** 10
 
@@ -915,15 +953,15 @@ resize(width: long, height: long, callback: AsyncCallback<void>): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| width | ArkTS-Dyn: number  <br>ArkTS-Sta：long | Yes | 目标面板的宽度，单位为vp。该参数应为大于或等于0的整数，不超出屏幕宽度。超出范围时返回错误码401。 |
-| height | ArkTS-Dyn: number  <br>ArkTS-Sta：long | Yes | 目标面板的高度，单位为vp。该参数应为大于或等于0的整数，不高于屏幕高度的0.7倍。超出范围时返回错误码401。 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | 回调函数。当面板大小改变成功，err为undefined，否则err为错误对象。 |
+| width | ArkTS-Dyn: number  <br>ArkTS-Sta：long | Yes | Target width of the panel, in px. The value is an integer greater than or equal to 0, and cannot be greater than the screen width. |
+| height | ArkTS-Dyn: number  <br>ArkTS-Sta：long | Yes | Target height of the panel, in px. The value is an integer greater than or equal to 0, and cannot be greater than 0.7 times the screen height. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined**. Otherwise, **err** is an error object. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types; 3.Parameter verification failed. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types; 3.Parameter verification failed. |
 
 ## Examples
 
@@ -951,7 +989,16 @@ ArkTS-Sta:
 resize(width: long, height: long): Promise<void>
 ```
 
-改变当前输入法面板的大小，使用Promise异步回调。
+Resizes this input method panel. This API uses a promise to return the result.
+
+> **NOTE：**
+> 
+> The panel width cannot exceed the screen width, and the panel height cannot be 0.7 times higher than the screen
+> height.
+> 
+> When the **PanelFlag** of a smartphone is **FLG_FLOATING** and the panel width is between 0 and 288 vp, the
+> function buttons at the bottom of the panel will dynamically adjust their size according to the panel width. To
+> ensure the optimal user experience, it is recommended that the panel width be no less than 90 vp.
 
 **Since:** 10
 
@@ -965,20 +1012,20 @@ resize(width: long, height: long): Promise<void>
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| width | ArkTS-Dyn: number  <br>ArkTS-Sta：long | Yes | 目标面板的宽度，单位为vp。该参数应为大于或等于0的整数，不超出屏幕宽度。超出范围时返回错误码401。 |
-| height | ArkTS-Dyn: number  <br>ArkTS-Sta：long | Yes | 目标面板的高度，单位为vp。该参数应为大于或等于0的整数，不高于屏幕高度的0.7倍。超出范围时返回错误码401。 |
+| width | ArkTS-Dyn: number  <br>ArkTS-Sta：long | Yes | Target width of the panel, in px. The value is an integer greater than or equal to 0, and cannot be greater than the screen width. |
+| height | ArkTS-Dyn: number  <br>ArkTS-Sta：long | Yes | Target height of the panel, in px. The value is an integer greater than or equal to 0, and cannot be greater than 0.7 times the screen height. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | 无返回结果的Promise对象。 |
+| Promise&lt;void&gt; | Promise that returns no value. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types; 3.Parameter verification failed. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types; 3.Parameter verification failed. |
 
 ## Examples
 
@@ -998,19 +1045,20 @@ panel.resize(500, 1000).then(() => {
 setImmersiveEffect(effect: ImmersiveEffect): void
 ```
 
-设置输入法应用的沉浸效果。
+Sets the immersive effect of the input method application.
 
-- 只有在[启用沉浸式模式](arkts-ime-inputmethodengine-panel-i.md#setimmersivemode)时，才能使用渐变模式和流光模式。  
-- 只有在启用渐变模式时，才能使用流光模式。  
-- 未启用渐变模式时，渐变高度必须为0px。  
-- 只有系统应用才能设置流光模式。  
-- 必须先调用以下任一接口，才能调用当前接口：  
- - [adjustPanelRect](arkts-ime-inputmethodengine-panel-i.md#adjustpanelrect)(支持API   
-version 12)  
- - [adjustPanelRect](arkts-ime-inputmethodengine-panel-i.md#adjustpanelrect)(支持  
-API version 15)  
- - [resize](arkts-ime-inputmethodengine-panel-i.md#resize)(支持API  
-version 10)
+- Gradient mode and fluid light mode can be used only when the   
+[immersive mode](arkts-ime-inputmethodengine-panel-i.md#setimmersivemode) is enabled.  
+- The fluid light mode can be used only when the gradient mode is enabled.  
+- If the gradient mode is disabled, the gradient height must be 0 px.  
+- Only system applications can set the fluid light mode.  
+- The current API can be called only after any of the following APIs is called:  
+ - [adjustPanelRect](arkts-ime-inputmethodengine-panel-i.md#adjustpanelrect) (available   
+since API version 12)  
+ - [adjustPanelRect](arkts-ime-inputmethodengine-panel-i.md#adjustpanelrect) (  
+available since API version 15)  
+ - [resize](arkts-ime-inputmethodengine-panel-i.md#resize) (  
+available since API version 10)
 
 **Since:** 20
 
@@ -1024,17 +1072,17 @@ version 10)
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| effect | [ImmersiveEffect](arkts-ime-inputmethodengine-immersiveeffect-i.md) | Yes | 沉浸效果。 |
+| effect | [ImmersiveEffect](arkts-ime-inputmethodengine-immersiveeffect-i.md) | Yes | Immersive effect. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 801 | capability not supported. |
-| 12800002 | input method engine error. Possible causes: 1. input method panel not created. 2. the input method application does not subscribe to related events. |
-| 12800021 | this operation is allowed only after adjustPanelRect or resize is called. |
-| 12800020 | invalid immersive effect. 1. The gradient mode and the fluid light mode can only be used when the immersive mode is enabled. 2. The fluid light mode can only be used when the gradient mode is enabled. 3. When the gradient mode is not enabled, the gradient height can only be 0. |
-| 12800013 | window manager service error. |
+| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | capability not supported. |
+| [12800002](../errorcode-inputmethod-framework.md#12800002-input-method-engine-error) | input method engine error. Possible causes: 1. input method panel not created. 2. the input method application does not subscribe to related events. |
+| [12800021](../errorcode-inputmethod-framework.md#12800021-unsupported-operation-by-default-input-method) | this operation is allowed only after adjustPanelRect or resize is called. |
+| [12800020](../errorcode-inputmethod-framework.md#12800020-invalid-immersive-effect) | invalid immersive effect. 1. The gradient mode and the fluid light mode can only be used when the immersive mode is enabled. 2. The fluid light mode can only be used when the gradient mode is enabled. 3. When the gradient mode is not enabled, the gradient height can only be 0. |
+| [12800013](../errorcode-inputmethod-framework.md#12800013-window-manager-service-error) | window manager service error. |
 
 ## Examples
 
@@ -1052,7 +1100,8 @@ panel.setImmersiveEffect(effect);
 setImmersiveMode(mode: ImmersiveMode): void
 ```
 
-设置输入法应用的沉浸模式。只能设置为不使用沉浸模式(NONE_IMMERSIVE)、浅色沉浸模式(LIGHT_IMMERSIVE)或深色沉浸模式(DARK_IMMERSIVE)。
+Sets the immersive mode of the input method application. You can only set the immersion mode to   
+**NONE_IMMERSIVE**, **LIGHT_IMMERSIVE**, or **DARK_IMMERSIVE**. **IMMERSIVE** cannot be set.
 
 **Since:** 15
 
@@ -1066,15 +1115,15 @@ setImmersiveMode(mode: ImmersiveMode): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| mode | [ImmersiveMode](../../apis-arkui/arkts-apis/arkts-arkui-promptaction-immersivemode-e.md) | Yes | 沉浸模式。 |
+| mode | [ImmersiveMode](../../apis-arkui/arkts-apis/arkts-arkui-promptaction-immersivemode-e.md) | Yes | Immersive mode. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1.Incorrect parameter types; 2.Parameter verification failed. |
-| 12800002 | input method engine error. Possible causes: 1.input method panel not created. 2.the input method application does not subscribe to related events. |
-| 12800013 | window manager service error. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.Incorrect parameter types; 2.Parameter verification failed. |
+| [12800002](../errorcode-inputmethod-framework.md#12800002-input-method-engine-error) | input method engine error. Possible causes: 1.input method panel not created. 2.the input method application does not subscribe to related events. |
+| [12800013](../errorcode-inputmethod-framework.md#12800013-window-manager-service-error) | window manager service error. |
 
 ## Examples
 
@@ -1088,7 +1137,15 @@ panel.setImmersiveMode(inputMethodEngine.ImmersiveMode.LIGHT_IMMERSIVE);
 setKeepScreenOn(isKeepScreenOn: boolean): Promise<void>
 ```
 
-设置屏幕常亮。使用Promise异步回调。
+Sets to keep the screen always on. This API uses a promise to return the result.
+
+> **NOTE：**
+> 
+> - When the keyboard is displayed, the screen stays on. When the keyboard is hidden, the screen turns off.
+> 
+> - You need to use this API properly. Set the attribute to **true** in necessary scenarios (for example, voice
+> input) and reset this attribute to **false** after exiting necessary scenarios. In other scenarios, do not use
+> this API.
 
 **Since:** 20
 
@@ -1102,19 +1159,19 @@ setKeepScreenOn(isKeepScreenOn: boolean): Promise<void>
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| isKeepScreenOn | boolean | Yes | 是否设置屏幕常亮。true表示打开屏幕常亮，false表示关闭屏幕常亮。 |
+| isKeepScreenOn | boolean | Yes | Whether to keep the screen always on. The value **true** means that the screen is always on; the value **false** means the opposite. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | 无返回结果的Promise对象。 |
+| Promise&lt;void&gt; | Promise that returns no value. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 12800013 | window manager service error. |
+| [12800013](../errorcode-inputmethod-framework.md#12800013-window-manager-service-error) | window manager service error. |
 
 ## Examples
 
@@ -1134,7 +1191,7 @@ panel.setKeepScreenOn(true).then(() => {
 setPrivacyMode(isPrivacyMode: boolean): void
 ```
 
-将输入法应用的面板设置为隐私模式，隐私模式不可被录屏、截屏。
+Sets the input method panel to privacy mode. In privacy mode, screenshot and screen recording are blocked.
 
 **Since:** 11
 
@@ -1150,14 +1207,14 @@ setPrivacyMode(isPrivacyMode: boolean): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| isPrivacyMode | boolean | Yes | 是否设置隐私模式。&lt;br/&gt;- 值为true，表示将设置为隐私模式。&lt;br/&gt;- 值为false，表示将设置为非隐私模式。 |
+| isPrivacyMode | boolean | Yes | Whether to set the input method panel to privacy mode. &lt;br&gt;- **true**: privacy mode. &lt;br&gt;- **false**: non-privacy mode. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
-| 201 | permissions check fails. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
+| [201](../../errorcode-universal.md#201-permission-denied) | permissions check fails. |
 
 ## Examples
 
@@ -1172,7 +1229,7 @@ panel.setPrivacyMode(isPrivacyMode);
 setSystemPanelButtonColor(fillColor: string | undefined, backgroundColor: string | undefined): Promise<void>
 ```
 
-设置当前面板功能键颜色和功能键的背景颜色。使用Promise异步回调。
+Sets the color of the function buttons and their background color on the current panel. This API uses a promise to return the result.
 
 **Since:** 22
 
@@ -1186,14 +1243,14 @@ setSystemPanelButtonColor(fillColor: string | undefined, backgroundColor: string
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| fillColor | string \| undefined | Yes | 功能键的颜色，取值范围为[#01000000, #FFFFFFFF] 或 [#000000, #FFFFFF]，不支持具有完全透明Alpha通 道（#00xxxxxx）的值。 |
-| backgroundColor | string \| undefined | Yes | 功能键的背景颜色，取值范围为[#01000000, #FFFFFFFF] 或 [#000000, #FFFFFF]，不支持具有完全 透明Alpha通道（#00xxxxxx）的值。 |
+| fillColor | string \| undefined | Yes | Color of the function buttons. The value can be [#01000000, #FFFFFFFF] or [#000000, #FFFFFF]. The value of the fully transparent alpha channel (**#00xxxxxx**) is not supported. |
+| backgroundColor | string \| undefined | Yes | Background color of the function buttons. The value can be [#01000000, #FFFFFFFF] or [#000000, #FFFFFF]. The value of the fully transparent alpha channel (#00xxxxxx) is not supported. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise对象。无返回结果。 |
+| Promise&lt;void&gt; | Promise that returns no result. |
 
 ## Examples
 
@@ -1220,7 +1277,7 @@ try {
 setUiContent(path: string, callback: AsyncCallback<void>): void
 ```
 
-为当前的输入法面板加载具体页面内容，使用callback异步回调。
+Loads content from a page to this input method panel. This API uses an asynchronous callback to return the result.
 
 **Since:** 10
 
@@ -1234,14 +1291,14 @@ setUiContent(path: string, callback: AsyncCallback<void>): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| path | string | Yes | 具体页面的路径。路径长度建议不超过1024字符。 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | 回调函数。当面板页面内容加载成功，err为undefined，否则err为错误对象。 |
+| path | string | Yes | Path of the page from which the content will be loaded. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined**. Otherwise, **err** is an error object. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types; 3.Parameter verification failed. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types; 3.Parameter verification failed. |
 
 ## Examples
 
@@ -1263,7 +1320,7 @@ panel.setUiContent('pages/page2/page2', (err: BusinessError) => {
 setUiContent(path: string): Promise<void>
 ```
 
-为当前的输入法面板加载具体页面内容，使用Promise异步回调。
+Loads content from a page to this input method panel. This API uses a promise to return the result.
 
 **Since:** 10
 
@@ -1277,19 +1334,19 @@ setUiContent(path: string): Promise<void>
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| path | string | Yes | 具体页面的路径。路径长度建议不超过1024字符。 |
+| path | string | Yes | Path of the page from which the content will be loaded. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | 无返回结果的Promise对象。 |
+| Promise&lt;void&gt; | Promise that returns no value. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types; 3.Parameter verification failed. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types; 3.Parameter verification failed. |
 
 ## Examples
 
@@ -1309,7 +1366,7 @@ panel.setUiContent('pages/page2/page2').then(() => {
 setUiContent(path: string, storage: LocalStorage, callback: AsyncCallback<void>): void
 ```
 
-为当前的输入法面板加载与LocalStorage相关联的具体页面内容，使用callback异步回调。
+Loads content from a page linked to LocalStorage to this input method panel. This API uses an asynchronous callback to return the result.
 
 **Since:** 10
 
@@ -1323,15 +1380,15 @@ setUiContent(path: string, storage: LocalStorage, callback: AsyncCallback<void>)
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| path | string | Yes | LocalStorage相关联的具体页面的路径。路径长度建议不超过1024字符。 |
-| storage | [LocalStorage](../../apis-arkui/arkts-apis/arkts-arkui-localstorage-c.md) | Yes | 存储单元，为应用程序范围内的可变和不可变状态属性提供存储。 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | 回调函数。当面板页面内容加载成功，err为undefined，否则err为错误对象。 |
+| path | string | Yes | Path of the page linked to LocalStorage. |
+| storage | [LocalStorage](../../apis-arkui/arkts-apis/arkts-arkui-localstorage-c.md) | Yes | Storage unit that provides storage for mutable and immutable state variables in the application. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined**. Otherwise, **err** is an error object. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types; 3.Parameter verification failed. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types; 3.Parameter verification failed. |
 
 ## Examples
 
@@ -1355,7 +1412,7 @@ panel.setUiContent('pages/page2/page2', storage, (err: BusinessError) => {
 setUiContent(path: string, storage: LocalStorage): Promise<void>
 ```
 
-为当前面板加载与LocalStorage相关联的具体页面内容，使用Promise异步回调。
+Loads content from a page linked to LocalStorage to this panel. This API uses a promise to return the result.
 
 **Since:** 10
 
@@ -1369,20 +1426,20 @@ setUiContent(path: string, storage: LocalStorage): Promise<void>
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| path | string | Yes | 具体页面的路径。路径长度建议不超过1024字符。 |
-| storage | [LocalStorage](../../apis-arkui/arkts-apis/arkts-arkui-localstorage-c.md) | Yes | 存储单元，为应用程序范围内的可变状态属性和非可变状态属性提供存储。 |
+| path | string | Yes | Path of the page from which the content will be loaded. |
+| storage | [LocalStorage](../../apis-arkui/arkts-apis/arkts-arkui-localstorage-c.md) | Yes | Storage unit that provides storage for mutable and immutable state variables in the application. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | 无返回结果的Promise对象。 |
+| Promise&lt;void&gt; | Promise that returns no value. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types; 3.Parameter verification failed. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types; 3.Parameter verification failed. |
 
 ## Examples
 
@@ -1404,7 +1461,7 @@ panel.setUiContent('pages/page2/page2', storage).then(() => {
 show(callback: AsyncCallback<void>): void
 ```
 
-显示当前输入法面板，使用callback异步回调。输入法应用与编辑框绑定成功后可正常调用。
+Shows this input method panel. This API uses an asynchronous callback to return the result. It can be called when the input method is bound to the edit box.
 
 **Since:** 10
 
@@ -1418,7 +1475,7 @@ show(callback: AsyncCallback<void>): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | 回调函数。当面板显示成功，err为undefined，否则err为错误对象。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined**. Otherwise, **err** is an error object. |
 
 ## Examples
 
@@ -1440,7 +1497,7 @@ panel.show((err: BusinessError) => {
 show(): Promise<void>
 ```
 
-显示当前输入法面板，使用promise异步回调。输入法应用与编辑框绑定成功后可正常调用。
+Shows this input method panel. This API uses a promise to return the result. It can be called when the input method is bound to the edit box.
 
 **Since:** 10
 
@@ -1454,7 +1511,7 @@ show(): Promise<void>
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | 无返回结果的Promise对象。 |
+| Promise&lt;void&gt; | Promise that returns no value. |
 
 ## Examples
 
@@ -1474,7 +1531,7 @@ panel.show().then(() => {
 startMoving(): void
 ```
 
-发送移动命令给窗口，不产生实际移动效果（仅在鼠标点击作用才可以移动）。
+Sends a command to start moving the window. The window can be moved only when the mouse is clicked.
 
 **Since:** 15
 
@@ -1488,10 +1545,10 @@ startMoving(): void
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 12800002 | input method engine error. Possible causes: 1.input method panel not created. 2.the input method application does not subscribe to related events. |
-| 801 | capability not supported.<br>**Applicable version:** 18 and later |
-| 12800017 | invalid panel type or panel flag. |
-| 12800013 | window manager service error. |
+| [12800002](../errorcode-inputmethod-framework.md#12800002-input-method-engine-error) | input method engine error. Possible causes: 1.input method panel not created. 2.the input method application does not subscribe to related events. |
+| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | capability not supported.<br>**Applicable version:** 18 and later |
+| [12800017](../errorcode-inputmethod-framework.md#12800017-invalid-panel-type-or-panel-flag) | invalid panel type or panel flag. |
+| [12800013](../errorcode-inputmethod-framework.md#12800013-window-manager-service-error) | window manager service error. |
 
 ## Examples
 
@@ -1505,7 +1562,15 @@ panel.startMoving();
 updatePanelRect(flag: PanelFlag, rect: PanelRect): Promise<void>
 ```
 
-预设置输入法应用横竖屏大小。使用Promise异步回调。
+Update the panel rectangle. This API uses a promise to return the result.  
+> **NOTE：**
+> 
+> This API applies only to the panels of the **SOFT_KEYBOARD** type in the **FLG_FIXED** or **FLG_FLOATING**
+> state.
+> 
+> When the **PanelFlag** of a smartphone is **FLG_FLOATING** and the panel width is between 0 and 288 vp, the
+> function buttons at the bottom of the panel will dynamically update their size according to the panel width. To
+> ensure the optimal user experience, it is recommended that the panel width be no less than 90 vp.
 
 **Since:** 26.0.0
 
@@ -1521,20 +1586,20 @@ updatePanelRect(flag: PanelFlag, rect: PanelRect): Promise<void>
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| flag | [PanelFlag](arkts-ime-inputmethodengine-panelflag-e.md) | Yes | 目标面板状态类型。类型为FLG_FIXED或FLG_FLOATING。 |
-| rect | [PanelRect](arkts-ime-inputmethodengine-panelrect-i.md) | Yes | 目标面板横屏状态及竖屏状态的横坐标，纵坐标，宽度以及高度。固定态：高度不能超过屏幕高度的70%，宽度不能超过屏幕宽度；悬浮态：高度不能超过屏幕高度，宽度不能超过屏幕宽度。 超出范围时返回错误码401。 |
+| flag | [PanelFlag](arkts-ime-inputmethodengine-panelflag-e.md) | Yes | Type of the state of the target panel. It can be **FLG_FIXED** or **FLG_FLOATING**. |
+| rect | [PanelRect](arkts-ime-inputmethodengine-panelrect-i.md) | Yes | Landscape rectangle and portrait rectangle of the target panel. For the panel of the fixed state, the height cannot exceed 70% of the screen height, and the width cannot exceed the screen width. For the panel of the floating state, the height cannot exceed the screen height, and the width cannot exceed the screen width. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise对象，无返回结果。 |
+| Promise&lt;void&gt; | Promise that returns no value. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 12800013 | window manager service error. |
+| [12800013](../errorcode-inputmethod-framework.md#12800013-window-manager-service-error) | window manager service error. |
 
 ## updatePanelRect
 
@@ -1542,7 +1607,19 @@ updatePanelRect(flag: PanelFlag, rect: PanelRect): Promise<void>
 updatePanelRect(flag: PanelFlag, rect: EnhancedPanelRect): Promise<void>
 ```
 
-预设置输入法应用横竖屏大小、位置、自定义避让区域以及热区。使用Promise异步回调。
+Update the panel rectangle, and customizes the avoid area and touch area. This API uses a promise to return the result.  
+> **NOTE：**
+> 
+> This API applies only to the panels of the **SOFT_KEYBOARD** type in the **FLG_FIXED** or **FLG_FLOATING**
+> state. This API is compatible with
+> [updatePanelRect](arkts-ime-inputmethodengine-panel-i.md#updatepanelrect).
+> If the input parameter **rect** contains only the **landscapeRect** and **portraitRect** attributes,
+> [updatePanelRect](arkts-ime-inputmethodengine-panel-i.md#updatepanelrect)
+> is called by default.
+> 
+> When the **PanelFlag** of a smartphone is **FLG_FLOATING** and the panel width is between 0 and 288 vp, the
+> function buttons at the bottom of the panel will dynamically update their size according to the panel width. To
+> ensure the optimal user experience, it is recommended that the panel width be no less than 90 vp.
 
 **Since:** 26.0.0
 
@@ -1558,21 +1635,21 @@ updatePanelRect(flag: PanelFlag, rect: EnhancedPanelRect): Promise<void>
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| flag | [PanelFlag](arkts-ime-inputmethodengine-panelflag-e.md) | Yes | 目标面板状态类型。类型为FLG_FIXED或FLG_FLOATING。 |
-| rect | [EnhancedPanelRect](arkts-ime-inputmethodengine-enhancedpanelrect-i.md) | Yes | 目标面板横屏状态及竖屏状态的位置、大小、避让区域以及热区。 |
+| flag | [PanelFlag](arkts-ime-inputmethodengine-panelflag-e.md) | Yes | Type of the state of the target panel. It can be **FLG_FIXED** or **FLG_FLOATING**. |
+| rect | [EnhancedPanelRect](arkts-ime-inputmethodengine-enhancedpanelrect-i.md) | Yes | The target panel rectangle, avoid area, and touch area. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise对象，无返回结果。 |
+| Promise&lt;void&gt; | Promise that returns no value. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 12800017 | invalid panel type or panel flag. |
-| 12800013 | window manager service error. |
+| [12800017](../errorcode-inputmethod-framework.md#12800017-invalid-panel-type-or-panel-flag) | invalid panel type or panel flag. |
+| [12800013](../errorcode-inputmethod-framework.md#12800013-window-manager-service-error) | window manager service error. |
 
 ## updatePanelRectSync
 
@@ -1580,7 +1657,15 @@ updatePanelRect(flag: PanelFlag, rect: EnhancedPanelRect): Promise<void>
 updatePanelRectSync(flag: PanelFlag, rect: PanelRect): void
 ```
 
-预设置输入法应用横竖屏大小。
+Update the panel rectangle.  
+> **NOTE：**
+> 
+> This API applies only to the panels of the **SOFT_KEYBOARD** type in the **FLG_FIXED** or **FLG_FLOATING**
+> state.
+> 
+> When the **PanelFlag** of a smartphone is **FLG_FLOATING** and the panel width is between 0 and 288 vp, the
+> function buttons at the bottom of the panel will dynamically update their size according to the panel width. To
+> ensure the optimal user experience, it is recommended that the panel width be no less than 90 vp.
 
 **Since:** 26.0.0
 
@@ -1596,14 +1681,14 @@ updatePanelRectSync(flag: PanelFlag, rect: PanelRect): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| flag | [PanelFlag](arkts-ime-inputmethodengine-panelflag-e.md) | Yes | 目标面板状态类型。类型为FLG_FIXED或FLG_FLOATING。 |
-| rect | [PanelRect](arkts-ime-inputmethodengine-panelrect-i.md) | Yes | 目标面板横屏状态及竖屏状态的横坐标，纵坐标，宽度以及高度。固定态：高度不能超过屏幕高度的70%，宽度不能超过屏幕宽度；悬浮态：高度不能超过屏幕高度，宽度不能超过屏幕宽度。 超出范围时返回错误码401。 |
+| flag | [PanelFlag](arkts-ime-inputmethodengine-panelflag-e.md) | Yes | Type of the state of the target panel. It can be **FLG_FIXED** or **FLG_FLOATING**. |
+| rect | [PanelRect](arkts-ime-inputmethodengine-panelrect-i.md) | Yes | Landscape rectangle and portrait rectangle of the target panel. For the panel of the fixed state, the height cannot exceed 70% of the screen height, and the width cannot exceed the screen width. For the panel of the floating state, the height cannot exceed the screen height, and the width cannot exceed the screen width. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 12800013 | window manager service error. |
+| [12800013](../errorcode-inputmethod-framework.md#12800013-window-manager-service-error) | window manager service error. |
 
 ## updatePanelRectSync
 
@@ -1611,7 +1696,19 @@ updatePanelRectSync(flag: PanelFlag, rect: PanelRect): void
 updatePanelRectSync(flag: PanelFlag, rect: EnhancedPanelRect): void
 ```
 
-预设置输入法应用横竖屏大小、位置、自定义避让区域以及热区。
+Update the panel rectangle, and customizes the avoid area and touch area.  
+> **NOTE：**
+> 
+> This API applies only to the panels of the **SOFT_KEYBOARD** type in the **FLG_FIXED** or **FLG_FLOATING**
+> state. This API is compatible with
+> [updatePanelRectSync](arkts-ime-inputmethodengine-panel-i.md#updatepanelrectsync).
+> If the input parameter **rect** contains only the **landscapeRect** and **portraitRect** attributes,
+> [updatePanelRectSync](arkts-ime-inputmethodengine-panel-i.md#updatepanelrectsync)
+> is called by default.
+> 
+> When the **PanelFlag** of a smartphone is **FLG_FLOATING** and the panel width is between 0 and 288 vp, the
+> function buttons at the bottom of the panel will dynamically update their size according to the panel width. To
+> ensure the optimal user experience, it is recommended that the panel width be no less than 90 vp.
 
 **Since:** 26.0.0
 
@@ -1627,15 +1724,15 @@ updatePanelRectSync(flag: PanelFlag, rect: EnhancedPanelRect): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| flag | [PanelFlag](arkts-ime-inputmethodengine-panelflag-e.md) | Yes | 目标面板状态类型。类型为FLG_FIXED或FLG_FLOATING。 |
-| rect | [EnhancedPanelRect](arkts-ime-inputmethodengine-enhancedpanelrect-i.md) | Yes | 目标面板横屏状态及竖屏状态的位置、大小、避让区域以及热区。 |
+| flag | [PanelFlag](arkts-ime-inputmethodengine-panelflag-e.md) | Yes | Type of the state of the target panel. It can be **FLG_FIXED** or **FLG_FLOATING**. |
+| rect | [EnhancedPanelRect](arkts-ime-inputmethodengine-enhancedpanelrect-i.md) | Yes | The target panel rectangle, avoid area, and touch area. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 12800017 | invalid panel type or panel flag. |
-| 12800013 | window manager service error. |
+| [12800017](../errorcode-inputmethod-framework.md#12800017-invalid-panel-type-or-panel-flag) | invalid panel type or panel flag. |
+| [12800013](../errorcode-inputmethod-framework.md#12800013-window-manager-service-error) | window manager service error. |
 
 ## updateRegion
 
@@ -1643,7 +1740,15 @@ updatePanelRectSync(flag: PanelFlag, rect: EnhancedPanelRect): void
 updateRegion(inputRegion: Array<window.Rect>): void
 ```
 
-更新当前状态下输入法面板内的热区。
+Updates the hot zone on the input method panel in the current state.
+
+> **NOTE：**
+> 
+> This API applies only to the panels of the **SOFT_KEYBOARD** type in the **FLG_FIXED** or **FLG_FLOATING**
+> state.
+> 
+> This API returns the result synchronously. The return only indicates that the system has received the request
+> for updating the hot zone, not that the hot zone has been updated.
 
 **Since:** 15
 
@@ -1657,15 +1762,15 @@ updateRegion(inputRegion: Array<window.Rect>): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| inputRegion | Array&lt;window.Rect&gt; | Yes | 面板内接收输入事件的区域。&lt;br/&gt;- 数组大小限制为[1, 4]。&lt;br/&gt;- 传入的热区位置是相对于输入法面板窗口左顶点的位置。 |
+| inputRegion | Array&lt;window.Rect&gt; | Yes | Region for receiving input events. &lt;br&gt;- The array size is limited to [1, 4]. &lt;br&gt;- The input hot zone is relative to the left vertex of the input method panel window. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types; 3.Parameter verification failed. |
-| 12800017 | invalid panel type or panel flag. |
-| 12800013 | window manager service error. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types; 3.Parameter verification failed. |
+| [12800017](../errorcode-inputmethod-framework.md#12800017-invalid-panel-type-or-panel-flag) | invalid panel type or panel flag. |
+| [12800013](../errorcode-inputmethod-framework.md#12800013-window-manager-service-error) | window manager service error. |
 
 ## Examples
 

@@ -28,7 +28,7 @@ data: Record<string, Object>
 - progressValue: 表示下载进度，值为数值类型。建议取值范围为0~100，  
  表示百分比进度。当`progressValue`取值小于或等于0时，进度为0； 当其取值大于或等于100时，进度环消失，代表下载完成。
 
-**类型：** [Record](../../apis-default/arkts-apis/arkts-record-t.md)&lt;string, Object&gt;
+**类型：** Record&lt;string, Object&gt;
 
 **起始版本：** 8
 

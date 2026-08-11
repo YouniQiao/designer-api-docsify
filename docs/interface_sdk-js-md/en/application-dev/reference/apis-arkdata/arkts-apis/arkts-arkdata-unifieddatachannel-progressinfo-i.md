@@ -1,6 +1,6 @@
 # ProgressInfo
 
-定义进度上报的数据。
+Represents the progress information.
 
 **Since:** 15
 
@@ -22,7 +22,9 @@ import { unifiedDataChannel } from 'kits/@kit.ArkData';
 progress: int
 ```
 
-系统上报拖拽任务进度百分比。取值范围为[-1-100]的整数，其中-1时代表本次获取数据失败，100时表示本次获取数据完成。
+Progress of the drag task, in percentage. 
+
+The value is an integer ranging from -1 to 100. The value **-1** indicates a failure to obtain data, and the value **100** indicates data is obtained.
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
@@ -44,7 +46,7 @@ progress: int
 status: ListenerStatus
 ```
 
-系统上报拖拽任务的状态码。
+Status code of the drag task reported by the system.
 
 **Type:** [ListenerStatus](arkts-arkdata-unifieddatachannel-listenerstatus-e.md)
 

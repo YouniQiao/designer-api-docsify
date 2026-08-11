@@ -1,4 +1,4 @@
-# advertisement(广告内容)
+# advertisement(Defines the advertisement data model)
 
 ## Summary
 
@@ -6,5 +6,5 @@
 
 | Name | Description |
 | --- | --- |
-| [Advertisement](arkts-ads-advertisement-advertisement-i.md) | 本模块为请求的广告内容。 |
+| [Advertisement](arkts-ads-advertisement-advertisement-i.md) | This module provides the requested ad content. |
 

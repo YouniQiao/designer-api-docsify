@@ -1,6 +1,6 @@
 # OptimizeState (System API)
 
-优化空间状态，为枚举类型。
+Enumerates the space optimization states.
 
 **Since:** 17
 
@@ -18,7 +18,7 @@
 RUNNING = 0
 ```
 
-正在优化空间。
+The space is being optimized.
 
 **Since:** 17
 
@@ -36,7 +36,7 @@ RUNNING = 0
 COMPLETED = 1
 ```
 
-优化空间成功结束。
+The space optimization is complete.
 
 **Since:** 17
 
@@ -54,7 +54,7 @@ COMPLETED = 1
 FAILED = 2
 ```
 
-优化空间失败。
+Space optimization failed.
 
 **Since:** 17
 
@@ -72,7 +72,7 @@ FAILED = 2
 STOPPED = 3
 ```
 
-优化空间停止。
+Space optimization stopped.
 
 **Since:** 17
 

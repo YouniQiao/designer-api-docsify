@@ -1,6 +1,6 @@
 # ScreenShape
 
-显示设备的屏幕形状枚举。
+Enumerates the screen shapes of a display.
 
 **Since:** 18
 
@@ -16,7 +16,7 @@
 ROUND = 1
 ```
 
-表示设备屏幕形状为圆形。
+The screen is in the shape of a circle.
 
 **Since:** 18
 
@@ -32,7 +32,7 @@ ROUND = 1
 RECTANGLE = 0
 ```
 
-表示设备屏幕形状为矩形。
+The screen is in the shape of a rectangle.
 
 **Since:** 18
 

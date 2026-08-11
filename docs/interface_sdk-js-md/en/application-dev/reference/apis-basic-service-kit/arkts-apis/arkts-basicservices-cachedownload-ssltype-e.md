@@ -1,6 +1,6 @@
 # SslType
 
-表示安全通信协议的枚举。
+Enumerates secure communication protocols.
 
 **Since:** 21
 
@@ -16,7 +16,7 @@
 TLS = 'TLS'
 ```
 
-使用TLS安全通信协议。
+TLS.
 
 **Since:** 21
 
@@ -32,7 +32,7 @@ TLS = 'TLS'
 TLCP = 'TLCP'
 ```
 
-使用TLCP安全通信协议。
+TLCP.
 
 **Since:** 21
 

@@ -12,8 +12,8 @@ import { reminderAgent } from 'kits/@kit.BackgroundTasksKit';
 function publishReminder(reminderReq: ReminderRequest, callback: AsyncCallback<number>): void
 ```
 
-发布一个后台代理提醒，使用回调的方式实现异步调用，该方法需要申请通知弹窗权限  
-[Notification.requestEnableNotification](../../apis-notification-kit/arkts-apis/arkts-notification-notification-requestenablenotification-depr-f.md/arkts-notification-notification-requestenablenotification-depr-f.md#requestenablenotification)后才能调用。
+Publishes a reminder through the reminder agent. This API uses an asynchronous callback to return the result. It can be called only when notification is enabled for the application through   
+[Notification.requestEnableNotification](../../apis-notification-kit/arkts-apis/arkts-notification-notification-requestenablenotification-depr-f.md/arkts-notification-notification-requestenablenotification-depr-f.md#requestenablenotification)
 
 **Since:** 7
 
@@ -33,14 +33,13 @@ function publishReminder(reminderReq: ReminderRequest, callback: AsyncCallback<n
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| reminderReq | [ReminderRequest](arkts-backgroundtasks-reminderagentmanager-reminderrequest-i.md) | Yes | 需要发布的提醒实例。 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;number&gt; | Yes | 异步回调，返回当前发布的提醒的id。 |
+| reminderReq | [ReminderRequest](arkts-backgroundtasks-reminderagentmanager-reminderrequest-i.md) | Yes | Reminder to be published. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;number&gt; | Yes | Callback used to return the published reminder's ID. |
 
 ## Examples
 
 ```TypeScript
 import { BusinessError } from '@ohos.base';
-import reminderAgent from '@ohos.reminderAgent';
 
 let timer:reminderAgent.ReminderRequestTimer = {
   reminderType: reminderAgent.ReminderType.REMINDER_TYPE_TIMER,
@@ -59,8 +58,8 @@ reminderAgent.publishReminder(timer, (err: BusinessError, reminderId: number) =>
 function publishReminder(reminderReq: ReminderRequest): Promise<number>
 ```
 
-发布一个后台代理提醒，使用Promise方式实现异步调用，该方法需要申请通知弹窗权限  
-[Notification.requestEnableNotification](../../apis-notification-kit/arkts-apis/arkts-notification-notification-requestenablenotification-depr-f.md/arkts-notification-notification-requestenablenotification-depr-f.md#requestenablenotification)后才能调用。
+Publishes a reminder through the reminder agent. This API uses a promise to return the result. It can be called only when notification is enabled for the application through   
+[Notification.requestEnableNotification](../../apis-notification-kit/arkts-apis/arkts-notification-notification-requestenablenotification-depr-f.md/arkts-notification-notification-requestenablenotification-depr-f.md#requestenablenotification)
 
 **Since:** 7
 
@@ -91,8 +90,6 @@ function publishReminder(reminderReq: ReminderRequest): Promise<number>
 ## Examples
 
 ```TypeScript
-import reminderAgent from '@ohos.reminderAgent';
-
 let timer:reminderAgent.ReminderRequestTimer = {
   reminderType: reminderAgent.ReminderType.REMINDER_TYPE_TIMER,
   triggerTimeInSeconds: 10

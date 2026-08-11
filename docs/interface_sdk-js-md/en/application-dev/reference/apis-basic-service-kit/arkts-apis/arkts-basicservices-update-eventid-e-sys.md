@@ -1,6 +1,6 @@
 # EventId (System API)
 
-事件ID。
+Enumerates event IDs.
 
 **Since:** 9
 
@@ -18,7 +18,7 @@
 EVENT_TASK_BASE = EventClassify.TASK
 ```
 
-任务事件。
+Task event.
 
 **Since:** 9
 
@@ -36,7 +36,7 @@ EVENT_TASK_BASE = EventClassify.TASK
 EVENT_TASK_RECEIVE = 0x01000001
 ```
 
-收到任务。
+Task received.
 
 **Since:** 9
 
@@ -54,7 +54,7 @@ EVENT_TASK_RECEIVE = 0x01000001
 EVENT_TASK_CANCEL = 0x01000002
 ```
 
-取消任务。
+Task cancelled.
 
 **Since:** 9
 
@@ -72,7 +72,7 @@ EVENT_TASK_CANCEL = 0x01000002
 EVENT_DOWNLOAD_WAIT = 0x01000003
 ```
 
-待下载。
+Waiting for download.
 
 **Since:** 9
 
@@ -90,7 +90,7 @@ EVENT_DOWNLOAD_WAIT = 0x01000003
 EVENT_DOWNLOAD_START = 0x01000004
 ```
 
-开始下载。
+Download started.
 
 **Since:** 9
 
@@ -108,7 +108,7 @@ EVENT_DOWNLOAD_START = 0x01000004
 EVENT_DOWNLOAD_UPDATE = 0x01000005
 ```
 
-下载进度更新。
+Download progress update.
 
 **Since:** 9
 
@@ -126,7 +126,7 @@ EVENT_DOWNLOAD_UPDATE = 0x01000005
 EVENT_DOWNLOAD_PAUSE = 0x01000006
 ```
 
-下载暂停。
+Download paused.
 
 **Since:** 9
 
@@ -144,7 +144,7 @@ EVENT_DOWNLOAD_PAUSE = 0x01000006
 EVENT_DOWNLOAD_RESUME = 0x01000007
 ```
 
-恢复下载。
+Download resumed.
 
 **Since:** 9
 
@@ -162,7 +162,7 @@ EVENT_DOWNLOAD_RESUME = 0x01000007
 EVENT_DOWNLOAD_SUCCESS = 0x01000008
 ```
 
-下载成功。
+Download succeeded.
 
 **Since:** 9
 
@@ -180,7 +180,7 @@ EVENT_DOWNLOAD_SUCCESS = 0x01000008
 EVENT_DOWNLOAD_FAIL = 0x01000009
 ```
 
-下载失败。
+Download failed.
 
 **Since:** 9
 
@@ -198,7 +198,7 @@ EVENT_DOWNLOAD_FAIL = 0x01000009
 EVENT_UPGRADE_WAIT = 0x0100000a
 ```
 
-待升级。
+Waiting for upgrade.
 
 **Since:** 9
 
@@ -216,7 +216,7 @@ EVENT_UPGRADE_WAIT = 0x0100000a
 EVENT_UPGRADE_START = 0x0100000b
 ```
 
-开始升级。
+Upgrade started.
 
 **Since:** 9
 
@@ -234,7 +234,7 @@ EVENT_UPGRADE_START = 0x0100000b
 EVENT_UPGRADE_UPDATE = 0x0100000c
 ```
 
-升级中。
+Upgrade in progress.
 
 **Since:** 9
 
@@ -252,7 +252,7 @@ EVENT_UPGRADE_UPDATE = 0x0100000c
 EVENT_APPLY_WAIT = 0x0100000d
 ```
 
-待生效。
+Waiting for applying the upgrade.
 
 **Since:** 9
 
@@ -270,7 +270,7 @@ EVENT_APPLY_WAIT = 0x0100000d
 EVENT_APPLY_START = 0x0100000e
 ```
 
-开始生效。
+Applying the upgrade.
 
 **Since:** 9
 
@@ -288,7 +288,7 @@ EVENT_APPLY_START = 0x0100000e
 EVENT_UPGRADE_SUCCESS = 0x0100000f
 ```
 
-升级成功。
+Upgrade succeeded.
 
 **Since:** 9
 
@@ -306,7 +306,7 @@ EVENT_UPGRADE_SUCCESS = 0x0100000f
 EVENT_UPGRADE_FAIL = 0x01000010
 ```
 
-升级失败。
+Update failed.
 
 **Since:** 9
 

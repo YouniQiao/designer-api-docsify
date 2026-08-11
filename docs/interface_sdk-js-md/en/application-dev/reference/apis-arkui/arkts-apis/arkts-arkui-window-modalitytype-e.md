@@ -1,6 +1,6 @@
 # ModalityType
 
-子窗口模态类型枚举。
+Enumerates the modality types of the child window.
 
 **Since:** 14
 
@@ -16,7 +16,7 @@
 WINDOW_MODALITY = 0
 ```
 
-当仅需要其父级窗口不响应用户操作时，可选此参数。
+Select this value when only the parent window should not respond to user operations.
 
 **Since:** 14
 
@@ -34,11 +34,10 @@ WINDOW_MODALITY = 0
 APPLICATION_MODALITY = 1
 ```
 
-除其父级窗口外还需要该应用其他实例的窗口不响应用户操作时，可选此参数。
+Select this value when other instances of the application should also not respond to user operations.
 
-该枚举在支持并处于[自由窗口](../../../windowmanager/window-terminology.md#自由窗口)状态的设备上可正常调用；在支持但不处于  
-[自由窗口](../../../windowmanager/window-terminology.md#自由窗口)状态的设备及不支持  
-[自由窗口](../../../windowmanager/window-terminology.md#自由窗口)状态的设备上调用返回801错误码。
+This enumeration can be called properly on a device that supports  
+[freeform windows](../../../windowmanager/window-terminology.md#freeform-window) and is in the freeform window state. If the device does not support freeform windows, or if the device supports freeform windows but is not in the freeform window state, error code 801 is returned.
 
 **Since:** 14
 

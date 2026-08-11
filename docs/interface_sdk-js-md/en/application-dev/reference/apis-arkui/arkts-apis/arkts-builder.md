@@ -12,7 +12,7 @@
 
 | Name | Description |
 | --- | --- |
-| [BuilderParam](arkts-arkui-builder-builderparam-i.md) | \@BuilderParam用于装饰指向[@Builder](./ts-universal-builder-static.md)方法的变量。开发指南见[\@BuilderParam装饰器：引用\@Builder函数](../../../ui/state-management/arkts-builderparam.md)。 |
+| [BuilderParam](arkts-arkui-builder-builderparam-i.md) | Defines BuilderParam Annotation. |
 | [ComponentBuilder](arkts-arkui-builder-componentbuilder-i.md) | Defines ComponentBuilder Annotation. |
 
 ### Types
@@ -20,5 +20,5 @@
 | Name | Description |
 | --- | --- |
 | [BuilderParameterCallback](arkts-arkui-builderparametercallback-t.md) | Type for property getter in Builder parameter proxy. |
-| [ConstructorT](arkts-arkui-constructort-t.md) | 定义对象构造器类型 |
+| [ConstructorT](arkts-arkui-constructort-t.md) | Defines the object constructor type. |
 

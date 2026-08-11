@@ -16,12 +16,6 @@
 
 **系统能力：** SystemCapability.BundleManager.BundleFramework
 
-## 导入模块
-
-```TypeScript
-import { CheckPackageHasInstalledResponse, CheckPackageHasInstalledOptions } from 'kits/@kit.AbilityKit';
-```
-
 ## hasInstalled
 
 ```TypeScript

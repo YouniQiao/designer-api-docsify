@@ -1,6 +1,6 @@
 # LineOptions
 
-用于描述Line组件绘制属性。
+Defines Line constructor options.
 
 **Since:** 23
 
@@ -16,7 +16,7 @@
 height?: Length
 ```
 
-高度。&lt;br/&gt;值为异常值或缺省时按照自身内容需要的高度处理。&lt;br/&gt;默认单位：vp
+Height of the rectangle where the line resides.
 
 **Type:** [Length](arkts-arkui-length-t.md)
 
@@ -36,7 +36,7 @@ height?: Length
 width?: Length
 ```
 
-宽度。&lt;br/&gt;值为异常值或缺省时按照自身内容需要的宽度处理。&lt;br/&gt;默认单位：vp
+Width of the rectangle where the line resides.
 
 **Type:** [Length](arkts-arkui-length-t.md)
 

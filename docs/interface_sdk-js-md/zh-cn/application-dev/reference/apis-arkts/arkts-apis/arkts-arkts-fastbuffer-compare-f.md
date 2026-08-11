@@ -1,11 +1,5 @@
 # compare
 
-## 导入模块
-
-```TypeScript
-import { fastbuffer } from 'kits/@kit.ArkTS';
-```
-
 ## compare
 
 ```TypeScript
@@ -41,7 +35,7 @@ function compare(buf1: FastBuffer | Uint8Array, buf2: FastBuffer | Uint8Array): 
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 10200068 | The underlying ArrayBuffer is null or detach. |
+| [10200068](../errorcode-utils.md#10200068-引用已释放或分离的arraybuffer) | The underlying ArrayBuffer is null or detach. |
 
 ## 示例
 

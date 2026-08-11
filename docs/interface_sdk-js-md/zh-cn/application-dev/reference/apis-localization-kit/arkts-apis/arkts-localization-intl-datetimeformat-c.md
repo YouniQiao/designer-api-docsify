@@ -8,17 +8,11 @@
 
 **废弃版本：** 20
 
-**替代接口：** [Intl.DateTimeFormat](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/DateTimeFormat)
+**替代接口：** [Intl.DateTimeFormat](arkts-intl.md#intl.datetimeformat)
 
 <!--Device-intl-export class DateTimeFormat--><!--Device-intl-export class DateTimeFormat-End-->
 
 **系统能力：** SystemCapability.Global.I18n
-
-## 导入模块
-
-```TypeScript
-import { intl } from 'kits/@kit.LocalizationKit';
-```
 
 ## constructor
 
@@ -110,7 +104,7 @@ format(date: Date): string
 
 **废弃版本：** 20
 
-**替代接口：** [Intl.DateTimeFormat.format](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/DateTimeFormat/format)
+**替代接口：** [Intl.DateTimeFormat.format](arkts-intl.md#intl.datetimeformat.format)
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 

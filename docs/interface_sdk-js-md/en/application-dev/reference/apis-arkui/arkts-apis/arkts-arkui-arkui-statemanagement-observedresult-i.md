@@ -1,6 +1,6 @@
 # ObservedResult
 
-对象是否可被观察的结果。
+Provides the result of whether the object can be observed.
 
 **Since:** 23
 
@@ -22,7 +22,7 @@ import { Binding, ComponentReuse, CustomComponentLifecycleState, ComponentInacti
 decoratorInfo: Array<DecoratorInfo>
 ```
 
-对象可被观察时，数组中内容为对象关联的装饰器和组件信息。对象不可被观察时，此数组为空。
+Decorator and component information associated with the observable object. If the object cannot be observed, the array is empty.
 
 **Type:** Array&lt;DecoratorInfo&gt;
 
@@ -44,11 +44,11 @@ decoratorInfo: Array<DecoratorInfo>
 isObserved: boolean
 ```
 
-对象是否可被观察。
+Whether an object can be observed.
 
-true：表示是可被观察对象。
+**true**: The object can be observed.
 
-false：表示不是可被观察对象。
+**false**: The object cannot be observed.
 
 **Type:** boolean
 
@@ -70,13 +70,15 @@ false：表示不是可被观察对象。
 reason: string
 ```
 
-对象是否可被观察的原因。
+Reason for the object's observability.
 
-不可被观察原因：对象本身是不可被观察的。
+For the object that cannot be observed: The object itself cannot be observed.
 
-可被观察原因或使用场景：
+For the object that can be observed:
 
-1. V1对象被[@Observed](../../../ui/state-management/arkts-observed-and-objectlink.md)装饰器装饰或对象是被[makeV1Observed](arkts-arkui-arkui-statemanagement-uiutils-c.md#makev1observed)方法转换的。 2. V1对象被[@Observed](../../../ui/state-management/arkts-observed-and-objectlink.md)装饰器装饰或对象是被[makeV1Observed](arkts-arkui-arkui-statemanagement-uiutils-c.md#makev1observed)方法转换的，但对象没有被UI组件使用。 3. V1对象被[enableV2Compatibility](arkts-arkui-arkui-statemanagement-uiutils-c.md#enablev2compatibility)方法转换后传入V2组件。 4. V1对象被[enableV2Compatibility](arkts-arkui-arkui-statemanagement-uiutils-c.md#enablev2compatibility)方法转换后传入V2组件，但没有被V2组件使用。 5. V2对象是被[@ObservedV2/@Trace](../../../ui/state-management/arkts-new-observedV2-and-trace.md)装饰的。6. V2对象是被[makeObserved](arkts-arkui-arkui-statemanagement-uiutils-c.md#makeobserved)方法转换的。 7. V2对象属于Array/Map/Set/Date类型。 8. V2对象是被[@ObservedV2/@Trace](../../../ui/state-management/arkts-new-observedV2-and-trace.md)装饰的，但对象没有被UI组件使用。 9. V2对象是被[makeObserved](arkts-arkui-arkui-statemanagement-uiutils-c.md#makeobserved)方法转换的，但没有被UI组件使用。 10. V2对象属于Array/Map/Set/Date类型，但没有被UI组件使用。
+1. The V1 object is decorated by the [@Observed](../../../ui/state-management/arkts-observed-and-objectlink.md) decorator or the object is converted by the [makeV1Observed](arkts-arkui-arkui-statemanagement-uiutils-c.md#makev1observed) method.2. The V1 object is decorated by the [@Observed](../../../ui/state-management/arkts-observed-and-objectlink.md) decorator or the object is converted by the [makeV1Observed](arkts-arkui-arkui-statemanagement-uiutils-c.md#makev1observed) method, but the object is not used by the UI component.3. The V1 object is converted by the [enableV2Compatibility](arkts-arkui-arkui-statemanagement-uiutils-c.md#enablev2compatibility) method  and then passed to the V2 component.4. The V1 object is converted by the [enableV2Compatibility](arkts-arkui-arkui-statemanagement-uiutils-c.md#enablev2compatibility) method  and then passed to the V2 component, but is not used by the V2 component.5. The V2 object is decorated by the  
+ [@ObservedV2 or @Trace](../../../ui/state-management/arkts-new-observedV2-and-trace.md) decorator.6. The V2 object is converted by the [makeObserved](arkts-arkui-arkui-statemanagement-uiutils-c.md#makeobserved) method.7. The V2 object is of the Array, Map, Set, or Date type.8. The V2 object is decorated by the  
+ [@ObservedV2 or @Trace](../../../ui/state-management/arkts-new-observedV2-and-trace.md) decorator, but is not used by the UI component.9. The V2 object is converted by the [makeObserved](arkts-arkui-arkui-statemanagement-uiutils-c.md#makeobserved) method, but the object is not  used by the UI component.10. The V2 object is of the Array, Map, Set, or Date type, but is not used by the UI component.
 
 **Type:** string
 

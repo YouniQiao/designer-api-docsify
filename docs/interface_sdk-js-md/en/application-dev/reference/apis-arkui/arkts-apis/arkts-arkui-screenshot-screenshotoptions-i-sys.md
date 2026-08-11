@@ -1,6 +1,6 @@
 # ScreenshotOptions (System API)
 
-设置截取图像的信息。
+Describes the screenshot options.
 
 **Since:** 7
 
@@ -24,7 +24,7 @@ import { screenshot } from 'kits/@kit.ArkUI';
 displayId?: long
 ```
 
-表示截取图像的显示设备[Display](arkts-arkui-display-displaystate-e.md)的ID号，该参数应为整数。
+ID of the [display](arkts-arkui-display-displaystate-e.md) device on which the screen region is to be captured. The value must be an integer.
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：long
 
@@ -44,7 +44,7 @@ displayId?: long
 imageSize?: Size
 ```
 
-表示截取图像的区域，不传值默认返回displayId所在逻辑屏的区域。
+Region of the screen to capture. If no value is passed, the region of the logical screen associated with the specified display ID is returned.
 
 **Type:** [Size](arkts-arkui-window-size-i.md)
 
@@ -64,7 +64,8 @@ imageSize?: Size
 isCaptureFullOfScreen?: boolean
 ```
 
-表示是否截取当前Screen上的所有display。对于一个Screen上有多个display的场景，为true表示截取整个Screen，false则只截取displayId所在逻辑屏的区域，默认值为false。
+Whether to capture all displays on the current screen. If the screen contains multiple displays, the value  
+**true** means that the entire screen is captured, and **false** means that only the region of the logical screen associated with the specified display ID is captured.
 
 **Type:** boolean
 
@@ -84,8 +85,8 @@ isCaptureFullOfScreen?: boolean
 isNotificationNeeded?: boolean
 ```
 
-表示截取图像之后是否发送截屏通知，true表示发送截屏通知，false表示不发送截屏通知，默认值为true。截屏通知可以通过  
-[captureStatusChange](@ohos.display:display.on(type: 'captureStatusChange', callback: Callback&lt;boolean&gt;))接口监听。
+Whether to send a notification after a snapshot is captured. **true** to send, **false** otherwise. The default value is **true**. Such a notification can be listened for through  
+[captureStatusChange](@ohos.display:display.on(type: 'captureStatusChange', callback: Callback&lt;boolean&gt;)).
 
 **Type:** boolean
 
@@ -105,7 +106,8 @@ isNotificationNeeded?: boolean
 rotation?: int
 ```
 
-表示截取图像后要旋转的角度，当前仅支持输入值为0，默认值为0。
+Angle by which the captured image should be rotated. Currently, the value can be **0** only. The default value is  
+**0**.
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
@@ -125,7 +127,7 @@ rotation?: int
 screenRect?: Rect
 ```
 
-表示截取图像的区域，不传值默认返回displayId所在逻辑屏的区域。
+Region of the screen to capture. If no value is passed, the region of the logical screen associated with the specified display ID is returned.
 
 **Type:** [Rect](../../apis-form-kit/arkts-apis/arkts-form-forminfo-rect-i.md)
 

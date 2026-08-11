@@ -43,23 +43,7 @@ Query a network probe result.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 2100001 | Invalid parameter value. |
-| 2100003 | Internal error. |
-| 201 | Permission denied. |
-
-## Examples
-
-```TypeScript
-import { connection } from '@kit.NetworkKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let dest: string = "www.example.com";
-let duration: number = 10;
-
-connection.queryProbeResult(dest, duration).then((data: connection.ProbeResultInfo) => {
-    console.info(`LossRate: ${data.lossRate}, RTT: ${data.rtt}`);
-}).catch((err: BusinessError) => {
-    console.error(JSON.stringify(err));
-});
-```
+| [2100001](../errorcode-net-connection.md#2100001-invalid-parameter-value) | Invalid parameter value. |
+| [2100003](../errorcode-net-connection.md#2100003-system-internal-error) | Internal error. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
 

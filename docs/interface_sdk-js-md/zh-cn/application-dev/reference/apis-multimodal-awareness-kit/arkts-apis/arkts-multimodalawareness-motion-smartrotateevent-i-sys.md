@@ -1,6 +1,6 @@
 # SmartRotateEvent（系统接口）
 
-The basic data structure of the smart rotate sensor event.
+智能旋转传感器事件的基础数据结构。
 
 **起始版本：** 26.0.0
 
@@ -12,19 +12,13 @@ The basic data structure of the smart rotate sensor event.
 
 **系统接口：** 此接口为系统接口。
 
-## 导入模块
-
-```TypeScript
-import { motion } from 'kits/@kit.MultimodalAwarenessKit';
-```
-
 ## logicalOrientation
 
 ```TypeScript
 logicalOrientation?: LogicalOrientation
 ```
 
-The logical orientation adjusted by smart algorithms.
+智能算法调整后的逻辑方向。
 
 **类型：** [LogicalOrientation](arkts-multimodalawareness-motion-logicalorientation-e-sys.md)
 
@@ -46,7 +40,7 @@ The logical orientation adjusted by smart algorithms.
 physicalOrientation: PhysicalOrientation
 ```
 
-The physical orientation reported by the gravity sensor.
+重力传感器上报的物理方向。
 
 **类型：** [PhysicalOrientation](arkts-multimodalawareness-motion-physicalorientation-e-sys.md)
 

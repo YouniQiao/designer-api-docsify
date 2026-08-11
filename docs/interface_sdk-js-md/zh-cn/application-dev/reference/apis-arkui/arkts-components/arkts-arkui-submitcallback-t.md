@@ -22,6 +22,6 @@ declare type SubmitCallback = (enterKey: EnterKeyType, event: SubmitEvent) => vo
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| enterKey | [EnterKeyType](../arkts-apis/arkts-arkui-textinput-enterkeytype-e.md) | 是 | 软键盘输入法回车键类型。具体类型见EnterKeyType枚举说明。 |
+| enterKey | [EnterKeyType](arkts-arkui-enterkeytype-e.md) | 是 | 软键盘输入法回车键类型。具体类型见EnterKeyType枚举说明。 |
 | event | [SubmitEvent](arkts-arkui-submitevent-i.md) | 是 | 当提交的时候，提供保持组件编辑状态的方法。EnterKeyType指定为NEW_LINE时，默认保持编辑态。 |
 

@@ -1,11 +1,5 @@
 # connectDevice
 
-## 导入模块
-
-```TypeScript
-import { usbManager } from 'kits/@kit.BasicServicesKit';
-```
-
 ## connectDevice
 
 ```TypeScript
@@ -28,23 +22,23 @@ function connectDevice(device: USBDevice): Readonly<USBDevicePipe>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| device | [USBDevice](arkts-basicservices-usb-usbdevice-i.md) | 是 | USB设备信息，用[usbManager.getDevices](arkts-basicservices-usbmanager-getdevices-f.md#getdevices)获取的busNum和devAddress确定设备，当前其他属性不做处理。 |
+| device | [USBDevice](arkts-basicservices-usbmanager-usbdevice-i.md) | 是 | USB设备信息，用[usbManager.getDevices](arkts-basicservices-usbmanager-getdevices-f.md#getdevices)获取的busNum和devAddress确定设备，当前其他属性不做处理。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| [Readonly](../../apis-default/arkts-apis/arkts-readonly-t.md)&lt;USBDevicePipe&gt; | 指定的传输通道对象。 |
+| Readonly&lt;USBDevicePipe&gt; | 指定的传输通道对象。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 401 | Parameter error. Possible causes:  &lt;br&gt;1.Mandatory parameters are left unspecified.  &lt;br&gt;2.Incorrect parameter types. |
-| 801 | Capability not supported.<br>**适用版本：** 18+ |
-| 14400012 | Transmission I/O error.<br>**适用版本：** 23+  **ArkTS模式：** 该错误码仅适用于ArkTS-Sta。 |
-| 14400001 | Access right denied. Call requestRight to get the USBDevicePipe access right first. |
-| 14400004 | Service exception. Possible causes:  &lt;br&gt;1. No accessory is plugged in.<br>**适用版本：** 23+  **ArkTS模式：** 该错误码仅适用于ArkTS-Sta。 |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes:  &lt;br&gt;1.Mandatory parameters are left unspecified.  &lt;br&gt;2.Incorrect parameter types. |
+| [801](../../errorcode-universal.md#801-该设备不支持此api) | Capability not supported.<br>**适用版本：** 18+ |
+| [14400012](../../apis-basic-services-kit/errorcode-usb.md#14400012-io错误) | Transmission I/O error.<br>**适用版本：** 23+  **ArkTS模式：** 该错误码仅适用于ArkTS-Sta。 |
+| [14400001](../../apis-basic-services-kit/errorcode-usb.md#14400001-usb设备访问权限被拒绝) | Access right denied. Call requestRight to get the USBDevicePipe access right first. |
+| [14400004](../../apis-basic-services-kit/errorcode-usb.md#14400004-服务异常) | Service exception. Possible causes:  &lt;br&gt;1. No accessory is plugged in.<br>**适用版本：** 23+  **ArkTS模式：** 该错误码仅适用于ArkTS-Sta。 |
 
 ## 示例
 

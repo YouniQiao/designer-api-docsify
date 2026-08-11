@@ -12,12 +12,6 @@ Provides the scene detection and query capabilities.
 
 **系统接口：** 此接口为系统接口。
 
-## 导入模块
-
-```TypeScript
-import { camera } from 'kits/@kit.CameraKit';
-```
-
 ## isSceneFeatureSupported
 
 ```TypeScript
@@ -52,8 +46,8 @@ Checks whether a scene feature is supported.
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 7400101 | Parameter missing or parameter type incorrect. |
-| 202 | Not System Application, only throw in session usage. |
+| [7400101](../errorcode-camera.md#7400101-无效入参) | Parameter missing or parameter type incorrect. |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not System Application, only throw in session usage. |
 
 ## 示例
 

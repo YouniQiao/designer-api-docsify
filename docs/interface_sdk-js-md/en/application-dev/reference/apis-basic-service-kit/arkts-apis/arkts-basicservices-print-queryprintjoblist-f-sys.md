@@ -12,7 +12,7 @@ import { print } from 'kits/@kit.BasicServicesKit';
 function queryPrintJobList(callback: AsyncCallback<Array<PrintJob>>): void
 ```
 
-查询所有打印任务，使用callback异步回调。
+Queries all print jobs. This API uses an asynchronous callback to return the result.
 
 **Since:** 11
 
@@ -30,14 +30,14 @@ function queryPrintJobList(callback: AsyncCallback<Array<PrintJob>>): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;PrintJob&gt;&gt; | Yes | 异步查询所有打印任务之后的回调。 |
+| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;PrintJob&gt;&gt; | Yes | Callback used to return the result. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 201 | the application does not have permission to call this function. |
-| 202 | not system application |
+| [201](../../errorcode-universal.md#201-permission-denied) | the application does not have permission to call this function. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | not system application |
 
 ## Examples
 
@@ -61,7 +61,7 @@ print.queryPrintJobList((err: BusinessError, printJobs : print.PrintJob[]) => {
 function queryPrintJobList(): Promise<Array<PrintJob>>
 ```
 
-查询所有打印任务，使用Promise异步回调。
+Queries all print jobs. This API uses a promise to return the result.
 
 **Since:** 11
 
@@ -79,14 +79,14 @@ function queryPrintJobList(): Promise<Array<PrintJob>>
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;Array&lt;PrintJob&gt;&gt; | Promise对象，返回包含所有打印任务的列表。 |
+| Promise&lt;Array&lt;PrintJob&gt;&gt; | Promise used to return a list of all print jobs. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 201 | the application does not have permission to call this function. |
-| 202 | not system application |
+| [201](../../errorcode-universal.md#201-permission-denied) | the application does not have permission to call this function. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | not system application |
 
 ## Examples
 

@@ -6,7 +6,7 @@
 export declare function getCompatibleState<T>(state: IDecoratedV1Variable<T>): ESValue
 ```
 
-为ArkTS-Sta的状态变量获取一个ArkTS-Dyn的@State代理对象，用于与ArkTS-Dyn的状态变量进行互操作。
+Obtains the compatible state.
 
 **Since:** 23
 
@@ -22,11 +22,11 @@ export declare function getCompatibleState<T>(state: IDecoratedV1Variable<T>): E
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| state | [IDecoratedV1Variable](arkts-arkui-decorator-idecoratedv1variable-i.md)&lt;T&gt; | Yes | ArkTS-Sta的状态变量。 |
+| state | [IDecoratedV1Variable](arkts-arkui-decorator-idecoratedv1variable-i.md)&lt;T&gt; | Yes | the source state |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| ESValue | ArkTS-Dyn的 |
+| ESValue | the compatible state |
 

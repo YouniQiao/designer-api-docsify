@@ -42,7 +42,7 @@ worker: RestrictedWorker
 
 运行Abc的受限Worker。
 
-**类型：** [RestrictedWorker](../../apis-arkts/arkts-apis/arkts-arkts-worker-restrictedworker-c-sys.md)
+**类型：** [RestrictedWorker](arkts-arkui-restrictedworker-t-sys.md)
 
 **起始版本：** 12
 

@@ -4,7 +4,7 @@
 export type AbilityStateData = _AbilityStateData.default
 ```
 
-AbilityStateData二级模块。
+Defines the level-2 module AbilityStateData.
 
 **Since:** 14
 

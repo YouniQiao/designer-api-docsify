@@ -1,6 +1,6 @@
 # ColorMetrics
 
-用于混合颜色。
+Defines the ColorMetrics class.
 
 **Since:** 23
 
@@ -16,7 +16,7 @@
 static createHDRColor(colorSpace: ColorSpace, red: double, green: double, blue: double, alpha?: double): ColorMetrics
 ```
 
-使用默认曝光的HDR颜色创建ColorMetrics类。使用默认曝光（0.0表示对数，1.0表示线性）创建HDR颜色值。当没有指定曝光值时，RGB通道值可以超过1.0以实现HDR亮度。这与iOS UIColor行为匹配，其中RGB值> 1.0启用HDR渲染。
+Create ColorMetrics class using HDR color with default exposure.Create an HDR color value with default exposure (0.0 for logarithmic, 1.0 for linear).When no exposure value is specified, RGB channel values can exceed 1.0 to achieve HDR brightness.This matches iOS UIColor behavior where RGB values > 1.0 enable HDR rendering.
 
 **Since:** 26.0.0
 
@@ -34,17 +34,17 @@ static createHDRColor(colorSpace: ColorSpace, red: double, green: double, blue: 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| colorSpace | [ColorSpace](arkts-arkui-colorspace-e-sys.md) | Yes | 颜色的颜色空间。 支持SRGB、Display_P3、BT2020颜色空间。 |
-| red | double | Yes | 红色分量值。有效范围：[0, +∞)。 大于1.0的值启用HDR亮度。 |
-| green | double | Yes | 绿色分量值。有效范围：[0, +∞)。 大于1.0的值启用HDR亮度。 |
-| blue | double | Yes | 蓝色分量值。有效范围：[0, +∞)。 大于1.0的值启用HDR亮度。 |
-| alpha | double | No | Alpha（不透明度）分量值。有效范围：【0,1】。 默认值为1.0（完全不透明）。 |
+| colorSpace | [ColorSpace](arkts-arkui-colorspace-e-sys.md) | Yes | Color space of color. Supports SRGB, DISPLAY_P3, and BT2020 color spaces. |
+| red | double | Yes | Red component value. Valid range: [0, +∞). Values greater than 1.0 enable HDR brightness. |
+| green | double | Yes | Green component value. Valid range: [0, +∞). Values greater than 1.0 enable HDR brightness. |
+| blue | double | Yes | Blue component value. Valid range: [0, +∞). Values greater than 1.0 enable HDR brightness. |
+| alpha | double | No | Alpha (opacity) component value. Valid range: [0, 1]. The default value is 1.0 (fully opaque). |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [ColorMetrics](arkts-arkui-graphics-colormetrics-c-sys.md) | 带有HDR颜色的ColorMetrics类实例。 |
+| [ColorMetrics](arkts-arkui-graphics-colormetrics-c-sys.md) | ColorMetrics class instance with HDR color. |
 
 ## createHDRColorWithLinearExposure
 
@@ -53,7 +53,7 @@ static createHDRColorWithLinearExposure(linearExposure: double, colorSpace: Colo
       red: double, green: double, blue: double, alpha?: double): ColorMetrics
 ```
 
-使用具有线性曝光的HDR颜色创建ColorMetrics类。创建具有指定线性曝光的HDR颜色值。曝光值控制线性色彩空间中颜色的亮度。使用线性曝光时，RGB通道值通常在【0,1】范围内。
+Create ColorMetrics class using HDR color with linear exposure.Create an HDR color value with specified linear exposure.The exposure value controls the brightness of the color in a linear color space.When using linear exposure, RGB channel values are typically in the range [0, 1].
 
 **Since:** 26.0.0
 
@@ -71,18 +71,18 @@ static createHDRColorWithLinearExposure(linearExposure: double, colorSpace: Colo
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| linearExposure | double | Yes | 曝光值中的线性曝光值。 有效范围：[1, +∞)。 值为1.0表示标准曝光。 大于1.0的值会线性增加亮度。 |
-| colorSpace | [ColorSpace](arkts-arkui-colorspace-e-sys.md) | Yes | 颜色的颜色空间。 支持SRGB、Display_P3、BT2020颜色空间。 |
-| red | double | Yes | 红色分量值。有效范围：【0,1】。 |
-| green | double | Yes | 绿色分量值。有效范围：【0,1】。 |
-| blue | double | Yes | 蓝色分量值。有效范围：【0,1】。 |
-| alpha | double | No | Alpha（不透明度）分量值。有效范围：【0,1】。 默认值为1.0（完全不透明）。 |
+| linearExposure | double | Yes | Linear exposure value in exposure value. Valid range: [1, +∞). A value of 1.0 represents standard exposure. Values greater than 1.0 increase brightness linearly. |
+| colorSpace | [ColorSpace](arkts-arkui-colorspace-e-sys.md) | Yes | Color space of color. Supports SRGB, DISPLAY_P3, and BT2020 color spaces. |
+| red | double | Yes | Red component value. Valid range: [0, 1]. |
+| green | double | Yes | Green component value. Valid range: [0, 1]. |
+| blue | double | Yes | Blue component value. Valid range: [0, 1]. |
+| alpha | double | No | Alpha (opacity) component value. Valid range: [0, 1]. The default value is 1.0 (fully opaque). |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [ColorMetrics](arkts-arkui-graphics-colormetrics-c-sys.md) | 带有HDR颜色的ColorMetrics类实例。 |
+| [ColorMetrics](arkts-arkui-graphics-colormetrics-c-sys.md) | ColorMetrics class instance with HDR color. |
 
 ## createHDRColorWithLogExposure
 
@@ -91,7 +91,7 @@ static createHDRColorWithLogExposure(exposure: double, colorSpace: ColorSpace,
       red: double, green: double, blue: double, alpha?: double): ColorMetrics
 ```
 
-使用具有对数曝光的HDR颜色创建ColorMetrics类。使用指定的对数曝光（色度）创建HDR颜色值。曝光值控制对数（感知）色彩空间中的亮度。使用对数曝光时，RGB通道值通常在【0,1】范围内。
+Create ColorMetrics class using HDR color with linear exposure.Create an HDR color value with specified logarithmic exposure (stops).The exposure value controls the brightness in a logarithmic (perceptual) color space.When using logarithmic exposure, RGB channel values are typically in the range [0, 1].
 
 **Since:** 26.0.0
 
@@ -109,18 +109,18 @@ static createHDRColorWithLogExposure(exposure: double, colorSpace: ColorSpace,
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| exposure | double | Yes | 对数曝光值，单位为秒。 有效范围：[0, +∞)。 值0.0表示标准曝光。 每增加1.0将使亮度加倍（一次停止）。 |
-| colorSpace | [ColorSpace](arkts-arkui-colorspace-e-sys.md) | Yes | 颜色的颜色空间。 支持SRGB、Display_P3、BT2020颜色空间。 |
-| red | double | Yes | 红色分量值。有效范围：【0,1】。 |
-| green | double | Yes | 绿色分量值。有效范围：【0,1】。 |
-| blue | double | Yes | 蓝色分量值。有效范围：【0,1】。 |
-| alpha | double | No | Alpha（不透明度）分量值。有效范围：【0,1】。 默认值为1.0（完全不透明）。 |
+| exposure | double | Yes | Logarithmic exposure value in stops. Valid range: [0, +∞). A value of 0.0 represents standard exposure. Each increment of 1.0 doubles the brightness (one stop). |
+| colorSpace | [ColorSpace](arkts-arkui-colorspace-e-sys.md) | Yes | Color space of color. Supports SRGB, DISPLAY_P3, and BT2020 color spaces. |
+| red | double | Yes | Red component value. Valid range: [0, 1]. |
+| green | double | Yes | Green component value. Valid range: [0, 1]. |
+| blue | double | Yes | Blue component value. Valid range: [0, 1]. |
+| alpha | double | No | Alpha (opacity) component value. Valid range: [0, 1]. The default value is 1.0 (fully opaque). |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [ColorMetrics](arkts-arkui-graphics-colormetrics-c-sys.md) | 带有HDR颜色的ColorMetrics类实例。 |
+| [ColorMetrics](arkts-arkui-graphics-colormetrics-c-sys.md) | ColorMetrics class instance with HDR color. |
 
 ## getBlueValue
 
@@ -128,7 +128,7 @@ static createHDRColorWithLogExposure(exposure: double, colorSpace: ColorSpace,
 getBlueValue(): double
 ```
 
-获取蓝色值。以浮点数形式返回蓝色通道值。对于SDR颜色，值在【0,1】范围内。对于HDR颜色，值可以大于1.0以表示扩展亮度。
+Get blue value.Returns blue channel value as a floating-point number.For SDR colors, value is in range [0, 1].For HDR colors, value can be greater than 1.0 to represent extended brightness.
 
 **Since:** 26.0.0
 
@@ -146,7 +146,7 @@ getBlueValue(): double
 
 | Type | Description |
 | --- | --- |
-| double | 蓝色值。 有效范围：[0, +∞)。 对于SDR颜色：【0,1】。 HDR颜色：[0,+∞),>1.0表示HDR亮度。 |
+| double | The blue value. Valid range: [0, +∞). For SDR colors: [0, 1]. Fro HDR colors: [0, +∞), values > 1.0 indicate HDR brightness. |
 
 ## getColorSpace
 
@@ -154,7 +154,7 @@ getBlueValue(): double
 getColorSpace(): ColorSpace
 ```
 
-获取ColorMetrics的颜色空间。返回创建此颜色时使用的颜色空间。
+Get color space of the ColorMetrics.Returns the color space used when creating this color.
 
 **Since:** 26.0.0
 
@@ -180,7 +180,7 @@ getColorSpace(): ColorSpace
 getGreenValue(): double
 ```
 
-获取绿色值。以浮点数形式返回绿色通道值。对于SDR颜色，值在【0,1】范围内。对于HDR颜色，值可以大于1.0以表示扩展亮度。
+Get green value.Returns green channel value as a floating-point number.For SDR colors, value is in range [0, 1].For HDR colors, value can be greater than 1.0 to represent extended brightness.
 
 **Since:** 26.0.0
 
@@ -198,7 +198,7 @@ getGreenValue(): double
 
 | Type | Description |
 | --- | --- |
-| double | 绿色的值。 有效范围：[0, +∞)。 对于SDR颜色：【0,1】。 HDR颜色：[0,+∞),>1.0表示HDR亮度。 |
+| double | The green value. Valid range: [0, +∞). For SDR colors: [0, 1]. Fro HDR colors: [0, +∞), values > 1.0 indicate HDR brightness. |
 
 ## getRedValue
 
@@ -206,7 +206,7 @@ getGreenValue(): double
 getRedValue(): double
 ```
 
-获取红色值。以浮点数形式返回红色通道值。对于SDR颜色，值在【0,1】范围内。对于HDR颜色，值可以大于1.0以表示扩展亮度。
+Get red value.Returns red channel value as a floating-point number.For SDR colors, value is in range [0, 1].For HDR colors, value can be greater than 1.0 to represent extended brightness.
 
 **Since:** 26.0.0
 
@@ -224,7 +224,7 @@ getRedValue(): double
 
 | Type | Description |
 | --- | --- |
-| double | 红色值。 有效范围：[0, +∞)。 对于SDR颜色：【0,1】。 HDR颜色：[0,+∞),>1.0表示HDR亮度。 |
+| double | The red value. Valid range: [0, +∞). For SDR colors: [0, 1]. Fro HDR colors: [0, +∞), values > 1.0 indicate HDR brightness. |
 
 ## isHDR
 
@@ -232,7 +232,7 @@ getRedValue(): double
 isHDR(): boolean
 ```
 
-检查ColorMetrics是否代表HDR颜色。如果颜色是使用createHDRColorWithXx()创建的，或者RGB值> 1.0，则返回true。
+Check if ColorMetrics represents an HDR color.Returns true if color was created using createHDRColorWithXx or has RGB values > 1.0.
 
 **Since:** 26.0.0
 
@@ -250,5 +250,5 @@ isHDR(): boolean
 
 | Type | Description |
 | --- | --- |
-| boolean | ColorMetrics是否是HDR颜色。 如果满足以下条件，则返回true： -颜色是使用createHDRColorWithXx()方法创建的。 -任何RGB通道值都大于1.0。 |
+| boolean | Whether ColorMetrics is an HDR color. Returns true if: - The color was created using createHDRColorWithXx() method. - Any RGB channel value is greater than 1.0. |
 

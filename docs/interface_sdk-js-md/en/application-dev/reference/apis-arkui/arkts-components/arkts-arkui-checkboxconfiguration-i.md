@@ -1,6 +1,7 @@
 # CheckBoxConfiguration
 
-开发者需要自定义class实现ContentModifier接口。继承自[CommonConfiguration](../arkts-apis/arkts-arkui-common-commonconfiguration-i.md/arkts-arkui-common-commonconfiguration-i.md)。
+You need a custom class to implement the **ContentModifier** API. Inherits from   
+[CommonConfiguration](../arkts-apis/arkts-arkui-common-commonconfiguration-i.md/arkts-arkui-common-commonconfiguration-i.md).
 
 **Inheritance/Implementation:** CheckBoxConfiguration extends [CommonConfiguration<CheckBoxConfiguration>](CommonConfiguration<CheckBoxConfiguration>)
 
@@ -18,7 +19,7 @@
 name: string
 ```
 
-当前多选框名称。
+Name of the check box.
 
 **Type:** string
 
@@ -40,7 +41,15 @@ name: string
 selected: boolean
 ```
 
-指示多选框是否被选中，值为true时，多选框被选中。值为false时，多选框未选中。&lt;/br&gt;如果select属性没有设置默认值是false。&lt;/br&gt;如果设置select属性，此值与设置select属性的值相同。
+Whether the check box is selected.
+
+**true**: The check box is selected. 
+
+**false**: The check box is not selected.
+
+If the **select** attribute is not set, the default value **false** is used.
+
+If the **select** attribute is set, the attribute value is used here.
 
 **Type:** boolean
 
@@ -62,7 +71,9 @@ selected: boolean
 triggerChange: Callback<boolean>
 ```
 
-触发多选框选中状态变化的回调函数。调用时传入true，多选框被设置为选中状态；传入false，多选框被设置为未选中状态。
+Triggers a change in the check box selection state. 
+
+The value **true** indicates a change from unselected to selected, and **false** indicates a change from selected to unselected.
 
 **Type:** [Callback](arkts-arkui-callback-i.md)&lt;boolean&gt;
 

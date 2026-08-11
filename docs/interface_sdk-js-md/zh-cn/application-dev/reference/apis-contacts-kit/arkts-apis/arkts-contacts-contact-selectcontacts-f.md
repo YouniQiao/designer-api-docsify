@@ -1,11 +1,5 @@
 # selectContacts
 
-## 导入模块
-
-```TypeScript
-import { contact } from 'kits/@kit.ContactsKit';
-```
-
 ## selectContacts
 
 ```TypeScript
@@ -34,7 +28,7 @@ function selectContacts(callback: AsyncCallback<Array<Contact>>): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 401 | Parameter error. Possible causes: Mandatory parameters are left unspecified. |
+| [401](../errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: Mandatory parameters are left unspecified. |
 
 ## 示例
 
@@ -119,7 +113,7 @@ function selectContacts(options: ContactSelectionOptions, callback: AsyncCallbac
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 401 | Parameter error. Possible causes: Mandatory parameters are left unspecified. |
+| [401](../errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: Mandatory parameters are left unspecified. |
 
 ## 示例
 
@@ -174,7 +168,7 @@ function selectContacts(options: ContactSelectionOptions): Promise<Array<Contact
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 401 | Parameter error. Possible causes: Mandatory parameters are left unspecified. |
+| [401](../errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: Mandatory parameters are left unspecified. |
 
 ## 示例
 

@@ -1,6 +1,6 @@
 # Sequenceable
 
-在进程间通信（IPC）期间，将类的对象写入MessageParcel并从MessageParcel中恢复它们。
+Writes objects of classes to a **MessageParcel** and reads them from the **MessageParcel** during IPC.
 
 **Since:** 7
 
@@ -26,7 +26,7 @@ import { rpc } from 'kits/@kit.IPCKit';
 marshalling(dataOut: MessageParcel): boolean
 ```
 
-将此可序列对象封送到MessageParcel中。
+Marshals the sequenceable object into a **MessageParcel** object.
 
 **Since:** 7
 
@@ -44,13 +44,13 @@ marshalling(dataOut: MessageParcel): boolean
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| dataOut | [MessageParcel](arkts-ipc-rpc-messageparcel-c.md) | Yes | 可序列对象将被封送到的MessageParcel对象。 |
+| dataOut | [MessageParcel](arkts-ipc-rpc-messageparcel-c.md) | Yes | MessageParcel** object to which the sequenceable object is to be marshaled. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| boolean | true：封送成功，false：封送失败。 |
+| boolean | Returns **true** if the operation is successful; returns **false** otherwise. |
 
 ## Examples
 
@@ -96,7 +96,7 @@ try {
 unmarshalling(dataIn: MessageParcel): boolean
 ```
 
-从MessageParcel中解封此可序列对象。
+Unmarshals this sequenceable object from a **MessageParcel** object.
 
 **Since:** 7
 
@@ -114,13 +114,13 @@ unmarshalling(dataIn: MessageParcel): boolean
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| dataIn | [MessageParcel](arkts-ipc-rpc-messageparcel-c.md) | Yes | 已将可序列对象封送到其中的MessageParcel对象。 |
+| dataIn | [MessageParcel](arkts-ipc-rpc-messageparcel-c.md) | Yes | MessageParcel** object in which the sequenceable object is to be unmarshaled. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| boolean | true：反序列化成功，false：反序列化失败。 |
+| boolean | Returns **true** if the operation is successful; returns **false** otherwise. |
 
 ## Examples
 

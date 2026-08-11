@@ -1,6 +1,6 @@
 # OperationType
 
-表示WantAgent支持的操作类型。
+Identifies the operation for using a WantAgent, such as starting an ability or sending a common event.
 
 **Since:** 7
 
@@ -20,7 +20,7 @@
 UNKNOWN_TYPE = 0
 ```
 
-不识别的类型。
+Unknown operation.
 
 **Since:** 7
 
@@ -42,7 +42,7 @@ UNKNOWN_TYPE = 0
 START_ABILITY
 ```
 
-开启一个有页面的Ability。
+Starts an ability with a UI.
 
 **Since:** 7
 
@@ -64,7 +64,7 @@ START_ABILITY
 START_ABILITIES
 ```
 
-开启多个有页面的Ability。
+Starts multiple abilities with a UI.
 
 **Since:** 7
 
@@ -86,7 +86,7 @@ START_ABILITIES
 START_SERVICE
 ```
 
-开启一个无页面的ability。
+Starts an ability without a UI.
 
 **Since:** 7
 
@@ -108,7 +108,7 @@ START_SERVICE
 SEND_COMMON_EVENT
 ```
 
-发送一个公共事件。
+Sends a common event.
 
 **Since:** 7
 

@@ -1,6 +1,6 @@
 # ScaleSymbolEffect
 
-ScaleSymbolEffect继承自父类SymbolEffect。
+Defines ScaleSymbolEffect class, which inherits from **SymbolEffect**.
 
 **Inheritance/Implementation:** ScaleSymbolEffect extends [SymbolEffect](arkts-arkui-symboleffect-c.md)
 
@@ -18,7 +18,7 @@ ScaleSymbolEffect继承自父类SymbolEffect。
 constructor(scope?: EffectScope, direction?: EffectDirection)
 ```
 
-ScaleSymbolEffect的构造函数，缩放动效。
+A constructor used to create a **ScaleSymbolEffect** instance, which comes with a scaling animation effect.
 
 **Since:** 12
 
@@ -38,8 +38,8 @@ ScaleSymbolEffect的构造函数，缩放动效。
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| scope | [EffectScope](arkts-arkui-effectscope-e.md) | No | 动效范围。具体枚举值及说明请参考EffectScope枚举说明。 &lt;br&gt;默认值：EffectScope.LAYER |
-| direction | [EffectDirection](../arkts-apis/arkts-arkui-symbolglyph-effectdirection-e.md) | No | 动效方向。具体枚举值及说明请参考EffectDirection枚举说明。 &lt;br&gt;默认值：EffectDirection.DOWN |
+| scope | [EffectScope](arkts-arkui-effectscope-e.md) | No | Effect scope.&lt;br&gt;Default value: **EffectScope.LAYER |
+| direction | [EffectDirection](../arkts-apis/arkts-arkui-symbolglyph-effectdirection-e.md) | No | Effect direction.&lt;br&gt;Default value: **EffectDirection.DOWN |
 
 ## direction
 
@@ -47,9 +47,9 @@ ScaleSymbolEffect的构造函数，缩放动效。
 direction?: EffectDirection
 ```
 
-动效方向。具体枚举值及说明请参考EffectDirection枚举说明。
+Effect direction.
 
-默认值：EffectDirection.DOWN
+Default value: **EffectDirection.DOWN**
 
 **Type:** [EffectDirection](../arkts-apis/arkts-arkui-symbolglyph-effectdirection-e.md)
 
@@ -73,9 +73,9 @@ direction?: EffectDirection
 scope?: EffectScope
 ```
 
-动效范围。具体枚举值及说明请参考EffectScope枚举说明。
+Effect scope.
 
-默认值：EffectScope.LAYER
+Default value: **EffectScope.LAYER**
 
 **Type:** [EffectScope](arkts-arkui-effectscope-e.md)
 

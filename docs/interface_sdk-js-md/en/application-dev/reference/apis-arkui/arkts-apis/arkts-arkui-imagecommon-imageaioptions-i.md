@@ -1,13 +1,16 @@
 # ImageAIOptions
 
-图像AI分析选项。
+Image AI analysis options.
 
-> **说明：**
+> **Description:**
 > 
-> 该特性中的参数types优先级高于[ImageAnalyzerConfig](arkts-arkui-imagecommon-imageanalyzerconfig-i.md)中的参数types，两者同时设置时以该特性设置的值为准。
+> The types parameter in this feature has higher priority than the types parameter in
+> [ImageAnalyzerConfig](arkts-arkui-imagecommon-imageanalyzerconfig-i.md). When both are set,
+> the value set in this feature takes precedence.
 > 
-> 该特性依赖设备能力，且需要和对应组件的[enableAnalyzer](arkts-arkui-image-imageattribute-i.md#enableanalyzer)接口
-> （例如[Image组件](../../apis-image-kit/arkts-apis/arkts-multimedia-image.md/arkts-multimedia-image.md)）搭配使用。
+> This feature depends on device capability and needs to be used with
+> the [enableAnalyzer](arkts-arkui-image-imageattribute-i.md#enableanalyzer) interface
+> of the corresponding component (for example, [Image component](../../apis-image-kit/arkts-apis/arkts-multimedia-image.md/arkts-multimedia-image.md)).
 
 **Since:** 23
 
@@ -23,7 +26,9 @@
 aiController?: ImageAnalyzerController | ESValue
 ```
 
-图像AI分析控制器，需要对应组件的enableAnalyzer接口（例如Image组件的[enableAnalyzer](arkts-arkui-image-imageattribute-i.md#enableanalyzer)接口）设置为true才能生效。目前只支持ESValue类型。
+Image AI analysis controller. The enableAnalyzer interface of the corresponding component (for example,the [enableAnalyzer](arkts-arkui-image-imageattribute-i.md#enableanalyzer)interface of the Image component) must be set to true for this to take effect.
+
+Currently, only ESValue type is supported.
 
 **Type:** [ImageAnalyzerController](arkts-arkui-imagecommon-imageanalyzercontroller-c.md) \| ESValue
 
@@ -43,7 +48,7 @@ aiController?: ImageAnalyzerController | ESValue
 types?: ImageAnalyzerType[]
 ```
 
-图像AI分析类型。
+Image AI analysis type.
 
 **Type:** [ImageAnalyzerType](arkts-arkui-imageanalyzertype-e.md)[]
 

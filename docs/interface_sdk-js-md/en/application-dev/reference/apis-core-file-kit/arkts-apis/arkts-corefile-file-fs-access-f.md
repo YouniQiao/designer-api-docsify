@@ -12,9 +12,9 @@ import { Options, ReaderIteratorResult, Watcher, ReadTextOptions, WatchEventList
 declare function access(path: string, mode?: AccessModeType): Promise<boolean>
 ```
 
-检查文件或目录是否存在，或校验操作权限，使用promise异步回调。
+Checks whether the file or directory exists or has the operation permission. This API uses a promise to return the result.
 
-校验读、写或读写权限不通过会抛出13900012（Permission denied）错误码。
+If the read, write, or read and write permission verification fails, the error code 13900012 (Permission denied) will be thrown.
 
 **Since:** 9
 
@@ -30,14 +30,14 @@ declare function access(path: string, mode?: AccessModeType): Promise<boolean>
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| path | string | Yes | 文件或目录应用沙箱路径。 |
-| mode | [AccessModeType](arkts-corefile-file-fs-accessmodetype-e.md) | No | 文件或目录校验的权限。不填该参数则默认校验文件是否存在。<br>**Since:** 12 |
+| path | string | Yes | Application sandbox path of the file or directory. |
+| mode | [AccessModeType](arkts-corefile-file-fs-accessmodetype-e.md) | No | Permission on the file or directory to check. If this parameter is left blank, the system checks whether the file exists.<br>**Since:** 12 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;boolean&gt; | Promise对象。返回布尔值。返回true，表示文件存在；返回false，表示文件不存在。 |
+| Promise&lt;boolean&gt; | Promise used to return a Boolean value. The value **true** means the file exists; the value **false** means the opposite. |
 
 **Error codes:**
 
@@ -63,7 +63,7 @@ declare function access(path: string, mode?: AccessModeType): Promise<boolean>
 declare function access(path: string, callback: AsyncCallback<boolean>): void
 ```
 
-检查文件或目录是否存在，使用callback异步回调。
+Checks whether a file or directory exists. This API uses an asynchronous callback to return the result.
 
 **Since:** 9
 
@@ -79,8 +79,8 @@ declare function access(path: string, callback: AsyncCallback<boolean>): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| path | string | Yes | 文件或目录应用沙箱路径。 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;boolean&gt; | Yes | 异步检查文件或目录是否存在的回调。如果存在，回调返回true；否则返回false。 |
+| path | string | Yes | Application sandbox path of the file or directory. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;boolean&gt; | Yes | Callback used to return the result. The value **true** means the file exists; the value **false** means the opposite. |
 
 **Error codes:**
 
@@ -106,9 +106,9 @@ declare function access(path: string, callback: AsyncCallback<boolean>): void
 declare function access(path: string, mode: AccessModeType, flag: AccessFlagType): Promise<boolean>
 ```
 
-检查文件或目录是否在本地，或校验操作权限，使用promise异步回调。
+Checks whether the file or directory is stored locally or has the operation permission. This API uses a promise to return the result.
 
-校验读、写或读写权限不通过会抛出13900012（Permission denied）错误码。
+If the read, write, or read and write permission verification fails, the error code 13900012 (Permission denied) will be thrown.
 
 **Since:** 12
 
@@ -122,22 +122,22 @@ declare function access(path: string, mode: AccessModeType, flag: AccessFlagType
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| path | string | Yes | 文件或目录应用沙箱路径。 |
-| mode | [AccessModeType](arkts-corefile-file-fs-accessmodetype-e.md) | Yes | 文件或目录校验的权限。 |
-| flag | [AccessFlagType](arkts-corefile-fileio-accessflagtype-e.md) | Yes | 文件或目录校验的位置。 |
+| path | string | Yes | Application sandbox path of the file or directory. |
+| mode | [AccessModeType](arkts-corefile-file-fs-accessmodetype-e.md) | Yes | Permission on the file or directory to check. |
+| flag | [AccessFlagType](arkts-corefile-fileio-accessflagtype-e.md) | Yes | Position of the file or directory to check. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;boolean&gt; | Promise对象。返回布尔值。返回true，表示文件或目录在本地且校验权限存在；返回false，表示文件或目录不存在或者文件或目录在云端或其他分布式设备上。 |
+| Promise&lt;boolean&gt; | Promise used to return a Boolean value. The value **true** means the file or directory is a local one and has the related permission. The value **false** means the file or directory does not exist or is on the cloud or a distributed device. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
 | 13900020 | Invalid argument |
-| 401 | Parameter error. Possible causes:1.Mandatory parameters are left unspecified; &lt;br&gt;2.Incorrect parameter types. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes:1.Mandatory parameters are left unspecified; &lt;br&gt;2.Incorrect parameter types. |
 | 13900005 | I/O error |
 | 13900023 | Text file busy |
 | 13900033 | Too many symbolic links encountered |

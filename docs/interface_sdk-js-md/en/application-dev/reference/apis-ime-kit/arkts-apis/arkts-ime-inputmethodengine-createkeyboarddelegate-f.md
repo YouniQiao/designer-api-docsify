@@ -12,7 +12,7 @@ import { inputMethodEngine } from 'kits/@kit.IMEKit';
 function createKeyboardDelegate(): KeyboardDelegate
 ```
 
-获取客户端编辑事件监听代理实例[KeyboardDelegate](arkts-ime-inputmethodengine-keyboarddelegate-i.md)。输入法应用获取该实例后，可订阅物理键盘按键事件、选中文本变化事件等。
+Obtains a [KeyboardDelegate](arkts-ime-inputmethodengine-keyboarddelegate-i.md) instance for the input method. The input method can use the obtained instance to subscribe to a physical keyboard event, text selection change event, and more.
 
 **Since:** 8
 
@@ -30,7 +30,7 @@ function createKeyboardDelegate(): KeyboardDelegate
 
 | Type | Description |
 | --- | --- |
-| [KeyboardDelegate](arkts-ime-inputmethodengine-keyboarddelegate-i.md) | 客户端编辑事件监听代理。 |
+| [KeyboardDelegate](arkts-ime-inputmethodengine-keyboarddelegate-i.md) | KeyboardDelegate** instance. |
 
 ## Examples
 

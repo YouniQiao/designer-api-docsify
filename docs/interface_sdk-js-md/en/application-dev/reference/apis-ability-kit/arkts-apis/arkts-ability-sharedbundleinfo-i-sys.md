@@ -1,6 +1,6 @@
 # SharedBundleInfo (System API)
 
-共享包信息。
+Defines the shared bundle information.
 
 **Since:** 10
 
@@ -18,7 +18,7 @@
 readonly compatiblePolicy: bundleManager.CompatiblePolicy
 ```
 
-共享包兼容策略的类型。
+Compatibility type of the shared bundle.
 
 **Type:** bundleManager.CompatiblePolicy
 
@@ -38,7 +38,7 @@ readonly compatiblePolicy: bundleManager.CompatiblePolicy
 readonly name: string
 ```
 
-应用共享包名称。
+Name of the shared bundle.
 
 **Type:** string
 
@@ -58,7 +58,7 @@ readonly name: string
 readonly sharedModuleInfo: Array<SharedModuleInfo>
 ```
 
-应用共享模块信息。
+Information about the shared module.
 
 **Type:** Array&lt;SharedModuleInfo&gt;
 

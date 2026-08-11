@@ -10,12 +10,6 @@
 
 **系统能力：** SystemCapability.Security.Cert
 
-## 导入模块
-
-```TypeScript
-import { cert } from 'kits/@kit.DeviceCertificateKit';
-```
-
 ## issuer
 
 ```TypeScript
@@ -104,7 +98,7 @@ x509Cert?: X509Cert
 
 指定具体的证书对象。
 
-**类型：** [X509Cert](../../apis-network-kit/arkts-apis/arkts-network-http-x509cert-t.md)
+**类型：** [X509Cert](arkts-devicecertificate-cert-x509cert-i.md)
 
 **起始版本：** 11
 

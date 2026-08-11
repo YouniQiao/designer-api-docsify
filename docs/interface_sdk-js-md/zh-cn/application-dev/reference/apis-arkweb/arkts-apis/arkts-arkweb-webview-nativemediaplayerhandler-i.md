@@ -16,12 +16,6 @@
 
 **系统能力：** SystemCapability.Web.Webview.Core
 
-## 导入模块
-
-```TypeScript
-import { webview } from 'kits/@kit.ArkWeb';
-```
-
 ## handleBufferedEndTimeChanged
 
 ```TypeScript
@@ -169,7 +163,7 @@ handleNetworkStateChanged(state: NetworkState): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| state | [NetworkState](../../apis-telephony-kit/arkts-apis/arkts-telephony-radio-networkstate-i.md) | 是 | 播放器的网络状态。 |
+| state | [NetworkState](arkts-arkweb-webview-networkstate-e.md) | 是 | 播放器的网络状态。 |
 
 ## handlePlaybackRateChanged
 

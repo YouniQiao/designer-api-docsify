@@ -1,6 +1,6 @@
 # NearlinkState
 
-星闪状态的枚举。
+The enum of NearLink state.
 
 **Since:** 26.0.0
 
@@ -16,7 +16,7 @@
 STATE_TURNING_ON = 0
 ```
 
-表示星闪正在开启。
+Indicates that NearLink is turning on.
 
 **Since:** 26.0.0
 
@@ -34,7 +34,7 @@ STATE_TURNING_ON = 0
 STATE_ON = 1
 ```
 
-表示星闪已开启，可供使用。
+Indicates that NearLink is on and ready for use.
 
 **Since:** 26.0.0
 
@@ -52,7 +52,7 @@ STATE_ON = 1
 STATE_TURNING_OFF = 2
 ```
 
-表示星闪正在关闭。
+Indicates that NearLink is turning off.
 
 **Since:** 26.0.0
 
@@ -70,7 +70,7 @@ STATE_TURNING_OFF = 2
 STATE_OFF = 3
 ```
 
-表示星闪已关闭。
+Indicates that NearLink has turned off.
 
 **Since:** 26.0.0
 

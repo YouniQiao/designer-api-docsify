@@ -1,6 +1,6 @@
 # GridRowDirection
 
-栅格元素排列方向。
+Defines the direction of grid-container component.
 
 **Since:** 23
 
@@ -16,7 +16,7 @@
 Row
 ```
 
-栅格元素按照行方向排列。
+The elements in the grid component are arranged in rows
 
 **Since:** 23
 
@@ -34,7 +34,7 @@ Row
 RowReverse
 ```
 
-栅格元素按照逆序行方向排列。
+The elements in the grid component are arranged in reverse order of rows
 
 **Since:** 23
 

@@ -1,14 +1,15 @@
 # SamplingOptions
 
-采样选项对象，用于配置图像采样时的过滤模式，控制图像缩放或变换过程中的像素采样方式。典型使用场景为在Canvas上绘制图像（如drawImage）时，以不同过滤模式决定图像的采样质量与渲染效果。
+Implements sampling options.
 
-> **说明：**
+> **NOTE：**
 > 
-> - 本Class首批接口从API version 12开始支持。
+> - The initial APIs of this class are supported since API version 12.
 > 
-> - 本模块使用屏幕物理像素单位px。
+> - This module uses the physical pixel unit, px.
 > 
-> - 本模块为单线程模型策略，需要调用方自行管理线程安全和上下文状态的切换。
+> - This module operates under a single-threaded model. The caller needs to manage thread safety and context state
+> transitions.
 
 **Since:** 12
 
@@ -30,7 +31,8 @@ import { drawing } from 'kits/@kit.ArkGraphics2D';
 constructor()
 ```
 
-构造一个新的采样选项对象，[FilterMode](arkts-arkgraphics2d-drawing-filtermode-e.md)的默认值为FILTER_MODE_NEAREST。
+Creates a **SamplingOptions** object, where the default value of  
+[FilterMode](arkts-arkgraphics2d-drawing-filtermode-e.md) is **FILTER_MODE_NEAREST**.
 
 **Since:** 12
 
@@ -46,7 +48,7 @@ constructor()
 constructor(filterMode: FilterMode)
 ```
 
-构造一个新的采样选项对象，可通过指定filterMode参数适配不同的图像采样场景。
+Creates a **SamplingOptions** object.
 
 **Since:** 12
 
@@ -60,11 +62,11 @@ constructor(filterMode: FilterMode)
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| filterMode | [FilterMode](arkts-arkgraphics2d-drawing-filtermode-e.md) | Yes | 过滤模式，用于指定图像采样时的过滤算法。 |
+| filterMode | [FilterMode](arkts-arkgraphics2d-drawing-filtermode-e.md) | Yes | Filter mode. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types. |
 

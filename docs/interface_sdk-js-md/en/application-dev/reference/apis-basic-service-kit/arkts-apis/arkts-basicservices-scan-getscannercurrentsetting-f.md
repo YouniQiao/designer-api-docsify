@@ -12,7 +12,7 @@ import { scan } from 'kits/@kit.BasicServicesKit';
 function getScannerCurrentSetting(scannerId: string, optionIndex: int): Promise<ScannerOptionValue>
 ```
 
-获取当前扫描仪设置。使用Promise异步回调。
+Obtains the current scanner settings. This API uses a promise to return the result.
 
 **Since:** 20
 
@@ -28,20 +28,20 @@ function getScannerCurrentSetting(scannerId: string, optionIndex: int): Promise<
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| scannerId | string | Yes | 扫描仪的ID。 |
-| optionIndex | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | 要获取的选项的索引。 |
+| scannerId | string | Yes | Scanner ID. |
+| optionIndex | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | Index of the option to be obtained. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;ScannerOptionValue&gt; | Promise对象，返回扫描仪选项值。 |
+| Promise&lt;ScannerOptionValue&gt; | Promise used to return the scanner option value. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 201 | Permission denied. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
 
 ## Examples
 

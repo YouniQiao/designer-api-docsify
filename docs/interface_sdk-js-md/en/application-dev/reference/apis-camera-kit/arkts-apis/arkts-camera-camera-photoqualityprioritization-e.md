@@ -1,6 +1,6 @@
 # PhotoQualityPrioritization
 
-枚举，拍照画质优先策略。
+Enumerates the photo quality prioritization strategies.
 
 **Since:** 21
 
@@ -16,7 +16,7 @@
 HIGH_QUALITY = 0
 ```
 
-画质优先，拍照需要较长的时间，以输出高画质的图片。
+Focuses on image quality, which may increase the time required for capturing photos to ensure high-quality output.
 
 **Since:** 21
 
@@ -34,7 +34,7 @@ HIGH_QUALITY = 0
 SPEED = 1
 ```
 
-性能优先，会降低画质来提升拍照的速度。
+Focuses on performance, trading off image quality for faster capture times.
 
 **Since:** 21
 

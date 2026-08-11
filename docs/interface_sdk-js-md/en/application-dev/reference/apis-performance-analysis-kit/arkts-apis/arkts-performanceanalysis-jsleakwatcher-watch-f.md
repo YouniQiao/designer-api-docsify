@@ -12,7 +12,7 @@ import { jsLeakWatcher } from 'kits/@kit.PerformanceAnalysisKit';
 function watch(obj: object, msg: string): void
 ```
 
-ע������й©�Ķ���
+Registers the object to be checked.
 
 **Since:** 12
 
@@ -26,8 +26,8 @@ function watch(obj: object, msg: string): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| obj | object | Yes | ��Ҫ���Ķ���&lt;br&gt;**˵��**���ɴ����κη�null��ArkTS���󣬲�֧��undefined�ͻ������͡� |
-| msg | string | Yes | �Զ��������Ϣ�� |
+| obj | object | Yes | Name of the object to be checked.&lt;br&gt;Note: You can pass objects of any type. |
+| msg | string | Yes | Custom object information. |
 
 ## Examples
 

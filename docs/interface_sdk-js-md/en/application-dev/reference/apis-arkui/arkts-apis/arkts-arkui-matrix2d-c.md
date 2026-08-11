@@ -1,10 +1,6 @@
 # Matrix2D
 
-用于画布绘制  
-[CanvasRenderingContext2D](../../../reference/apis-arkui/arkui-ts/ts-canvasrenderingcontext2d.md)、  
-[OffscreenCanvasRenderingContext2D](../../../reference/apis-arkui/arkui-ts/ts-offscreencanvasrenderingcontext2d.md)、  
-[CanvasPattern](../../../reference/apis-arkui/arkui-ts/ts-components-canvas-canvaspattern.md)和  
-[Path2D](../../../reference/apis-arkui/arkui-ts/ts-components-canvas-path2d.md)的矩阵对象，可以对矩阵进行缩放、旋转和平移等变换。
+**Matrix2D** allows you to perform matrix transformation, such as scaling, rotating, and translating.
 
 **Since:** 8
 
@@ -20,7 +16,7 @@
 constructor()
 ```
 
-构造二维变换矩阵对象，默认值是属性全为0的矩阵。
+Constructs a two-dimensional transformation matrix object.The default value is a matrix whose attributes are all 0.
 
 **Since:** 10
 
@@ -42,7 +38,7 @@ constructor()
 constructor(unit: LengthMetricsUnit)
 ```
 
-构造二维变换矩阵对象，默认值是属性全为0的矩阵，支持配置Matrix2D对象的单位模式。
+Constructs a two-dimensional transformation matrix object.The default value is a matrix whose attributes are all 0. The unit mode of the Matrix2D object can be configured.
 
 **Since:** 12
 
@@ -62,7 +58,7 @@ constructor(unit: LengthMetricsUnit)
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| unit | [LengthMetricsUnit](arkts-arkui-graphics-lengthmetricsunit-e.md) | Yes | 用来配置Matrix2D对象的单位模式，配置后无法动态更改， 配置方法同[CanvasRenderingContext2D](../../../reference/apis-arkui/arkui-ts/ts-canvasrenderingcontext2d.md)。 &lt;br&gt;异常值NaN和Infinity按默认值处理。&lt;br&gt;默认值：DEFAULT |
+| unit | [LengthMetricsUnit](arkts-arkui-graphics-lengthmetricsunit-e.md) | Yes | Unit mode of the **Matrix2D** object. The value cannot be dynamically changed once set. The configuration method is the same as that of CanvasRenderingContext2D.&lt;br&gt;For abnormal values NaN and Infinity, the default values are used.&lt;br&gt;Default value: DEFAULT. |
 
 ## identity
 
@@ -70,7 +66,7 @@ constructor(unit: LengthMetricsUnit)
 identity(): Matrix2D
 ```
 
-创建单位矩阵。
+Transforms the current 2D matrix back to the identity matrix (i.e., without any rotational translation scaling effect)
 
 **Since:** 8
 
@@ -88,7 +84,7 @@ identity(): Matrix2D
 
 | Type | Description |
 | --- | --- |
-| [Matrix2D](arkts-arkui-matrix2d-c.md) | 单位矩阵。 |
+| [Matrix2D](arkts-arkui-matrix2d-c.md) | Identity matrix. |
 
 ## invert
 
@@ -96,7 +92,7 @@ identity(): Matrix2D
 invert(): Matrix2D
 ```
 
-获取当前矩阵的逆矩阵。
+Transform the current 2D matrix into an inverse matrix (that is, the transformation effect is the opposite effect of the original)
 
 **Since:** 8
 
@@ -114,7 +110,7 @@ invert(): Matrix2D
 
 | Type | Description |
 | --- | --- |
-| [Matrix2D](arkts-arkui-matrix2d-c.md) | 逆矩阵结果。 |
+| [Matrix2D](arkts-arkui-matrix2d-c.md) | Inverse of the current matrix. |
 
 ## multiply
 
@@ -122,7 +118,7 @@ invert(): Matrix2D
 multiply(other?: Matrix2D): Matrix2D
 ```
 
-当前矩阵与目标矩阵相乘。
+The matrix is superimposed in right multiplication mode. When the input parameter is empty,the matrix is superimposed.
 
 **Since:** 8
 
@@ -140,13 +136,13 @@ multiply(other?: Matrix2D): Matrix2D
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| other | [Matrix2D](arkts-arkui-matrix2d-c.md) | No | 目标矩阵。 &lt;br&gt;异常值undefined和null按无效值处理。&lt;br&gt;默认值：null |
+| other | [Matrix2D](arkts-arkui-matrix2d-c.md) | No | Target matrix. &lt;br&gt;Invalid values **undefined** and **null** are treated as invalid inputs.&lt;br&gt;Default value: **null**. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [Matrix2D](arkts-arkui-matrix2d-c.md) | 相乘结果矩阵。 |
+| [Matrix2D](arkts-arkui-matrix2d-c.md) | Matrix of the multiplication result. |
 
 ## rotate
 
@@ -154,7 +150,7 @@ multiply(other?: Matrix2D): Matrix2D
 rotate(rx?: number, ry?: number): Matrix2D
 ```
 
-对当前矩阵进行旋转运算。
+Adds the rotation effect of the X and Y axes to the current matrix.
 
 **Since:** 8
 
@@ -174,8 +170,8 @@ rotate(rx?: number, ry?: number): Matrix2D
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| rx | number | No | 旋转点的水平方向坐标，取值范围无限制。&lt;br&gt;异常值undefined和null 按无效值处理，NaN和Infinity会导致Matrix2D异常。&lt;br&gt;默认单位：vp |
-| ry | number | No | 旋转点的垂直方向坐标，取值范围无限制。&lt;br&gt;异常值undefined和null 按无效值处理，NaN和Infinity会导致Matrix2D异常。&lt;br&gt;默认单位：vp |
+| rx | number | No | Horizontal coordinate of the rotation point. The value range is not limited.&lt;br&gt;Invalid values **undefined** and **null** are treated as invalid inputs. **NaN** and **Infinity** values will trigger **Matrix2D** exceptions.&lt;br&gt;Default unit: vp. |
+| ry | number | No | Vertical coordinate of the rotation point. The value range is not limited.&lt;br&gt;Invalid values **undefined** and **null** are treated as invalid inputs. **NaN** and **Infinity** values will trigger **Matrix2D** exceptions.&lt;br&gt;Default unit: vp. |
 
 **Return value:**
 
@@ -189,7 +185,7 @@ rotate(rx?: number, ry?: number): Matrix2D
 rotate(degree: number, rx?: number, ry?: number): Matrix2D
 ```
 
-以旋转点为中心，对当前矩阵进行右乘旋转运算。
+Adds the rotation effect of the X and Y axes to the current matrix.
 
 **Since:** 10
 
@@ -209,9 +205,9 @@ rotate(degree: number, rx?: number, ry?: number): Matrix2D
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| degree | number | Yes | 旋转角度，取值范围无限制。顺时针方向为正角度， 可以通过 degree Math.PI / 180 将角度转换为弧度值。 &lt;br&gt;异常值undefined和null按无效值处理，NaN和Infinity会导致Matrix2D异常。 &lt;br&gt;默认单位：弧度 |
-| rx | number | No | 旋转点的水平方向坐标，取值范围无限制。&lt;br&gt;默认单位：vp &lt;br&gt;异常值undefined和null按无效值处理，NaN和Infinity会导致Matrix2D异常。 &lt;br&gt;默认值：0 |
-| ry | number | No | 旋转点的垂直方向坐标，取值范围无限制。&lt;br&gt;默认单位：vp &lt;br&gt;异常值undefined和null按无效值处理，NaN和Infinity会导致Matrix2D异常。 &lt;br&gt;默认值：0 |
+| degree | number | Yes | Rotation angle. The value range is not limited. Positive angles represent clockwise rotation. You can convert the angle to radians using the following formula: degree Math.PI/180. &lt;br&gt;Invalid values **undefined** and **null** are treated as invalid inputs. **NaN** and **Infinity** values will trigger **Matrix2D** exceptions.&lt;br&gt;Default unit: radian. |
+| rx | number | No | Horizontal coordinate of the rotation point. The value range is not limited.&lt;br&gt;Default unit: vp.&lt;br&gt;Invalid values **undefined** and **null** are treated as invalid inputs. **NaN** and **Infinity** values will trigger **Matrix2D** exceptions.&lt;br&gt;Default value: **0**. |
+| ry | number | No | Vertical coordinate of the rotation point. The value range is not limited.&lt;br&gt;Default unit: vp.&lt;br&gt;Invalid values **undefined** and **null** are treated as invalid inputs. **NaN** and **Infinity** values will trigger **Matrix2D** exceptions.&lt;br&gt;Default value: **0**. |
 
 **Return value:**
 
@@ -225,7 +221,7 @@ rotate(degree: number, rx?: number, ry?: number): Matrix2D
 scale(sx?: number, sy?: number): Matrix2D
 ```
 
-对当前矩阵进行右乘缩放运算。
+Adds the scaling effect of the X and Y axes to the current matrix.
 
 **Since:** 8
 
@@ -243,8 +239,8 @@ scale(sx?: number, sy?: number): Matrix2D
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| sx | number | No | 水平缩放比例系数，取值范围无限制。&lt;br&gt;异常值undefined和null 按无效值处理，NaN和Infinity会导致Matrix2D异常。&lt;br&gt;默认值：1.0 |
-| sy | number | No | 垂直缩放比例系数，取值范围无限制。&lt;br&gt;异常值undefined和null 按无效值处理，NaN和Infinity会导致Matrix2D异常。&lt;br&gt;默认值：1.0 |
+| sx | number | No | Horizontal scaling ratio coefficient. The value range is not limited.&lt;br&gt;Invalid values **undefined** and **null** are treated as invalid inputs. **NaN** and **Infinity** values will trigger **Matrix2D** exceptions.&lt;br&gt;Default value: **1.0**. |
+| sy | number | No | Vertical scaling ratio coefficient. The value range is not limited.&lt;br&gt;Invalid values **undefined** and **null** are treated as invalid inputs. **NaN** and **Infinity** values will trigger **Matrix2D** exceptions.&lt;br&gt;Default value: **1.0**. |
 
 **Return value:**
 
@@ -258,7 +254,7 @@ scale(sx?: number, sy?: number): Matrix2D
 translate(tx?: number, ty?: number): Matrix2D
 ```
 
-对当前矩阵进行左乘平移运算。
+Performs a left multiplication translation operation on this matrix.
 
 **Since:** 8
 
@@ -276,14 +272,14 @@ translate(tx?: number, ty?: number): Matrix2D
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| tx | number | No | 水平方向平移距离，取值范围无限制。&lt;br&gt;异常值undefined和null 按无效值处理，NaN和Infinity会导致Matrix2D异常。&lt;br&gt;默认单位：vp&lt;br&gt;默认值：0 |
-| ty | number | No | 垂直方向平移距离，取值范围无限制。&lt;br&gt;异常值undefined和null 按无效值处理，NaN和Infinity会导致Matrix2D异常。&lt;br&gt;默认单位：vp&lt;br&gt;默认值：0 |
+| tx | number | No | Horizontal translation distance. The value range is not limited.&lt;br&gt;Invalid values **undefined** and **null** are treated as invalid inputs. **NaN** and **Infinity** values will trigger **Matrix2D** exceptions.&lt;br&gt;Default unit: vp.&lt;br&gt;Default value: **0**. |
+| ty | number | No | Vertical translation distance. The value range is not limited.&lt;br&gt;Invalid values **undefined** and **null** are treated as invalid inputs. **NaN** and **Infinity** values will trigger **Matrix2D** exceptions.&lt;br&gt;Default unit: vp.&lt;br&gt;Default value: **0**. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [Matrix2D](arkts-arkui-matrix2d-c.md) | 平移后结果矩阵对象。 |
+| [Matrix2D](arkts-arkui-matrix2d-c.md) | Matrix of the translation result. |
 
 ## rotateX
 
@@ -291,7 +287,7 @@ translate(tx?: number, ty?: number): Matrix2D
 rotateX?: number
 ```
 
-水平倾斜系数，取值范围无限制。&lt;br&gt;异常值undefined按无效值处理，NaN和Infinity会导致Matrix2D异常，设置后绘制内容不显示。
+Horizontal skew coefficient. The value range is not limited.&lt;br&gt;If the value is undefined, it is regarded as an invalid value. If the value is NaN or Infinity, the Matrix2D will be abnormal.
 
 **Type:** number
 
@@ -313,7 +309,7 @@ rotateX?: number
 rotateY?: number
 ```
 
-垂直倾斜系数，取值范围无限制。&lt;br&gt;异常值undefined按无效值处理，NaN和Infinity会导致Matrix2D异常，设置后绘制内容不显示。
+Vertical skew coefficient. The value range is not limited.&lt;br&gt;If the value is undefined, it is regarded as an invalid value. If the value is NaN or Infinity, the Matrix2D will be abnormal.
 
 **Type:** number
 
@@ -335,7 +331,7 @@ rotateY?: number
 scaleX?: number
 ```
 
-水平缩放系数，取值范围无限制。&lt;br&gt;异常值undefined按无效值处理，NaN和Infinity会导致Matrix2D异常，设置后绘制内容不显示。
+Horizontal scaling coefficient. The value range is not limited.&lt;br&gt;If the value is undefined, it is regarded as an invalid value. If the value is NaN or Infinity, the Matrix2D will be abnormal.
 
 **Type:** number
 
@@ -357,7 +353,7 @@ scaleX?: number
 scaleY?: number
 ```
 
-垂直缩放系数，取值范围无限制。&lt;br&gt;异常值undefined按无效值处理，NaN和Infinity会导致Matrix2D异常，设置后绘制内容不显示。
+Vertical scaling coefficient. The value range is not limited.&lt;br&gt;If the value is undefined, it is regarded as an invalid value. If the value is NaN or Infinity, the Matrix2D will be abnormal.
 
 **Type:** number
 
@@ -379,7 +375,7 @@ scaleY?: number
 translateX?: number
 ```
 
-水平平移距离，取值范围无限制。&lt;br&gt;异常值undefined按无效值处理，NaN和Infinity会导致Matrix2D异常，设置后绘制内容不显示。&lt;br&gt;默认单位：vp
+Horizontal translation distance. The value range is unlimited. &lt;br&gt;The abnormal value undefined is processed as an invalid value. NaN and Infinity will cause Matrix2D exceptions. After the setting, the drawn content is not displayed. &lt;br&gt;Default unit: vp.
 
 **Type:** number
 
@@ -401,7 +397,7 @@ translateX?: number
 translateY?: number
 ```
 
-垂直平移距离，取值范围无限制。&lt;br&gt;异常值undefined按无效值处理，NaN和Infinity会导致Matrix2D异常，设置后绘制内容不显示。&lt;br&gt;默认单位：vp
+Vertical translation distance. The value range is unlimited. &lt;br&gt;The abnormal value undefined is processed as an invalid value. NaN and Infinity will cause Matrix2D exceptions. After the setting, the drawn content is not displayed. &lt;br&gt;Default unit: vp.
 
 **Type:** number
 

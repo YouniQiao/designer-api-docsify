@@ -1,6 +1,6 @@
 # GridFrameNode
 
-定义Grid类型的FrameNode。
+Define the Grid type of FrameNode.
 
 **Inheritance/Implementation:** GridFrameNode extends [TypedFrameNode<GridAttribute>](TypedFrameNode<GridAttribute>)
 
@@ -18,7 +18,7 @@
 abstract initialize(scroller?: Scroller, layoutOptions?: GridLayoutOptions): GridAttribute
 ```
 
-初始化Grid类型的FrameNode。
+Initialize Grid FrameNode.
 
 **Since:** 23
 
@@ -34,8 +34,8 @@ abstract initialize(scroller?: Scroller, layoutOptions?: GridLayoutOptions): Gri
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| scroller | [Scroller](../arkts-components/arkts-arkui-scroller-c.md) | No | grid的控制器。 |
-| layoutOptions | [GridLayoutOptions](../arkts-components/arkts-arkui-gridlayoutoptions-i.md) | No | Grid布局选项。 |
+| scroller | [Scroller](../arkts-components/arkts-arkui-scroller-c.md) | No | The controller for grid. |
+| layoutOptions | [GridLayoutOptions](../arkts-components/arkts-arkui-gridlayoutoptions-i.md) | No | Grid layout options. |
 
 **Return value:**
 

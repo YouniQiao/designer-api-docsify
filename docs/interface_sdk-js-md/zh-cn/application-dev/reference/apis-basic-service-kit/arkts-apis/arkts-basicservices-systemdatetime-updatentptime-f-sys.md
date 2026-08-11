@@ -1,11 +1,5 @@
 # updateNtpTime（系统接口）
 
-## 导入模块
-
-```TypeScript
-import { systemDateTime } from 'kits/@kit.BasicServicesKit';
-```
-
 ## updateNtpTime
 
 ```TypeScript
@@ -34,10 +28,12 @@ function updateNtpTime(): Promise<void>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 13000001 | Network connection error or OS error. |
-| 202 | Permission verification failed. A non-system application calls a system API. |
+| [13000001](../../apis-basic-services-kit/errorcode-time.md#13000001-网络或操作系统异常) | Network connection error or OS error. |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed. A non-system application calls a system API. |
 
 ## 示例
+
+ArkTS-Dyn示例：
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -51,6 +47,22 @@ try {
 } catch (err) {
   let error = err as BusinessError;
   console.error(`Failed to update ntp time. Code: ${error.code}, message: ${error.message}`);
+}
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+import { BusinessError } from '@ohos.base';
+
+try {
+  systemDateTime.updateNtpTime().then(() => {
+    console.info(`Succeeded in update ntp time.`);
+  }).catch((error) => {
+    console.error(`Failed to update ntp time. message: ${error.message}, code: ${error.code}`);
+  });
+} catch(error: BusinessError) {
+  console.error(`Failed to update ntp time. message: ${error.message}, code: ${error.code}`);
 }
 ```
 

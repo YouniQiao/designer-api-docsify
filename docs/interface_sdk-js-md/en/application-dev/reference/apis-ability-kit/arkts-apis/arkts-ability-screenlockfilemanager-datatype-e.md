@@ -1,6 +1,6 @@
 # DataType
 
-表示锁屏下访问敏感数据类型的枚举。
+Enumerates the types of sensitive data that can be accessed under the lock screen.
 
 **Since:** 12
 
@@ -16,7 +16,7 @@
 MEDIA_DATA = 0x00000001
 ```
 
-媒体数据类型。
+Media data type.
 
 **Since:** 12
 
@@ -32,7 +32,7 @@ MEDIA_DATA = 0x00000001
 ALL_DATA = 0xffffffff
 ```
 
-所有敏感数据类型。
+All sensitive data types.
 
 **Since:** 12
 

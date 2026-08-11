@@ -1,6 +1,6 @@
 # Rotate
 
-旋转手势事件。
+Defines a rotation gesture event.
 
 **Since:** 11
 
@@ -22,7 +22,7 @@ import { SwipeInward, FourFingersSwipe, Pinch, ActionType, Rotate, ThreeFingersT
 angle: double
 ```
 
-旋转角度，单位为度。
+Rotation angle, in degrees.
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：double
 
@@ -40,7 +40,7 @@ angle: double
 type: ActionType
 ```
 
-手势事件类型。如：手势开始、手势更新、手势结束等。
+Gesture event type, for example, gesture start, gesture update, or gesture end.
 
 **Type:** [ActionType](../../apis-avsession-kit/arkts-apis/arkts-avsession-avmusictemplate-actiontype-t.md)
 

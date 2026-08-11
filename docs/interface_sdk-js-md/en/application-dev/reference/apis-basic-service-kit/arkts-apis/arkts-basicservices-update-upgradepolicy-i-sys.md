@@ -1,6 +1,6 @@
 # UpgradePolicy (System API)
 
-升级策略，用于控制升级行为。
+Sets the upgrade policy to control the upgrade behavior.
 
 **Since:** 9
 
@@ -24,7 +24,9 @@ import { update } from 'kits/@kit.BasicServicesKit';
 autoUpgradePeriods: Array<UpgradePeriod>
 ```
 
-自动升级时间段，当需要在特定时间段内自动升级时传入此参数(如夜间时段)，此参数为可选参数。不传入此参数时默认为空数组[]，表示不限制自动升级时间段，可在任意时间自动升级。
+Automatic update period.
+
+This parameter is optional and is used when the automatic upgrade needs to be performed in a specified period (for example, at night). If this parameter is not passed, the value is an empty array **[]** by default, indicating that the automatic upgrade period is not limited and the upgrade can be performed at any time.
 
 **Type:** Array&lt;UpgradePeriod&gt;
 
@@ -44,7 +46,9 @@ autoUpgradePeriods: Array<UpgradePeriod>
 autoUpgradeStrategy: boolean
 ```
 
-自动升级策略.true表示可自动升级(适用于希望系统自动完成升级流程的场景，提升用户体验)。false表示不可自动升级(适用于需要用户手动确认升级的场景，避免意外升级或确保用户知情)。根据用户体验需求和升级控制策略选择。
+Automatic upgrade policy.
+
+The value **true** indicates that automatic upgrade is enabled, which is applicable to scenarios where the system needs to automatically complete the upgrade process to improve user experience.The value **false** indicates that automatic upgrade is disabled, which is applicable to scenarios where users need to manually confirm the upgrade to prevent unexpected upgrade or ensure that users are informed. Select a value based on user experience requirements and the upgrade control policy.
 
 **Type:** boolean
 
@@ -64,7 +68,9 @@ autoUpgradeStrategy: boolean
 downloadStrategy: boolean
 ```
 
-自动下载策略。true表示可自动下载(适用于希望系统自动检测并下载新版本的场景，减少用户手动操作)。false表示不可自动下载(适用于需要用户手动确认下载的场景，避免后台消耗流量或存储空间)。根据用户偏好和流量策略选择。
+Automatic download policy.
+
+The value **true** indicates that automatic download is enabled, which is applicable to scenarios where the system is expected to automatically detect and download the new version to reduce manual operations.The value **false** indicates that automatic download is disabled, which is applicable to scenarios where users need to manually confirm the download, preventing using the mobile data or storage space in the background. Select a value based on user preferences and mobile data policies.
 
 **Type:** boolean
 

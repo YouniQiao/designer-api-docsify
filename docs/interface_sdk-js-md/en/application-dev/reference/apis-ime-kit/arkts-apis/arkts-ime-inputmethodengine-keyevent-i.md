@@ -1,6 +1,7 @@
 # KeyEvent
 
-按键属性值。
+In the following API examples, you must first use   
+[getKeyboardDelegate](arkts-ime-inputmethodengine-getkeyboarddelegate-f.md#getkeyboarddelegate) to obtain a **KeyboardDelegate** instance, and then call the APIs using the obtained instance.
 
 **Since:** 8
 
@@ -22,10 +23,10 @@ import { inputMethodEngine } from 'kits/@kit.IMEKit';
 readonly keyAction: int
 ```
 
-按键事件类型。
+Key event type.
 
-- 当值为2时，表示按下事件；  
-- 当值为3时，表示抬起事件。
+- **2**: keydown event.  
+- **3**: keyup event.
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
@@ -43,7 +44,7 @@ readonly keyAction: int
 readonly keyCode: int
 ```
 
-按键的键值。键码值说明参考[KeyCode](../../apis-input-kit/arkts-apis/arkts-input-multimodalinput-keycode-keycode-e.md/arkts-input-multimodalinput-keycode-keycode-e.md)。
+Key value. For details, see [KeyCode](../../apis-input-kit/arkts-apis/arkts-input-multimodalinput-keycode-keycode-e.md/arkts-input-multimodalinput-keycode-keycode-e.md).
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 

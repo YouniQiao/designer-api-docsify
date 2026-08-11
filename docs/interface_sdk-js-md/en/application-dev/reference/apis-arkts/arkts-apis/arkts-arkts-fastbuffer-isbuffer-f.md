@@ -12,7 +12,7 @@ import { fastbuffer } from 'kits/@kit.ArkTS';
 function isBuffer(obj: Object): boolean
 ```
 
-判断`obj`是否为FastBuffer。
+Returns true if obj is a FastBuffer, false otherwise
 
 **Since:** 20
 
@@ -28,13 +28,13 @@ function isBuffer(obj: Object): boolean
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| obj | Object | Yes | 要判断是否为FastBuffer的对象。 |
+| obj | Object | Yes | The object to check if it's a FastBuffer |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| boolean | 如果obj是FastBuffer，则返回true，否则返回false。 |
+| boolean | true or false |
 
 ## Examples
 

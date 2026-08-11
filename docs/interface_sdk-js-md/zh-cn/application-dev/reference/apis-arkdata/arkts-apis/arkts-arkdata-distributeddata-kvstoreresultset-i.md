@@ -84,7 +84,7 @@ getEntry(): Entry
 
 | 类型 | 说明 |
 | --- | --- |
-| [Entry](../../apis-arkui/arkts-apis/arkts-arkui-customcomponent-entry-i.md) | 返回键值对。 |
+| [Entry](arkts-arkdata-distributeddata-entry-i.md) | 返回键值对。 |
 
 ## 示例
 

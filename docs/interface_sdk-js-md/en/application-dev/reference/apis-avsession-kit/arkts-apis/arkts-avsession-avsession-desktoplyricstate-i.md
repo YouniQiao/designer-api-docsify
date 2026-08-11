@@ -1,6 +1,6 @@
 # DesktopLyricState
 
-桌面歌词状态。
+Desktop lyric state definition.
 
 **Since:** 23
 
@@ -22,7 +22,7 @@ import { avSession } from 'kits/@kit.AVSessionKit';
 isLocked: boolean
 ```
 
-桌面歌词位置是否锁定。true表示已锁定，false表示未锁定。若已锁定，桌面显示歌词后，固定当前位置，不可被拖拽。
+Desktop lyric lock state.
 
 **Type:** boolean
 

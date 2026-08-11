@@ -12,12 +12,15 @@ import { huks } from 'kits/@kit.UniversalKeystoreKit';
 function attestKeyItem(keyAlias: string, options: HuksOptions, callback: AsyncCallback<HuksReturnResult>): void
 ```
 
-获取密钥证书。使用callback异步回调。
+Attests a key. This API uses an asynchronous callback to return the result.
 
 &lt;!--RP6--&gt;  
-> **说明：**
+> **NOTE：**
 > 
-> 在使用非匿名证书密钥证明时生成的证书链可能包含设备标识符（具体实现需向厂商确认），如包含设备标识符，其使用、留存、销毁由开发者决定，建议开发者在其隐私声明中对其使用目的、留存策略和销毁方式进行说明。
+> The certificate chain generated during non-anonymous certificate key attestation may contain the device
+> identifier (confirm the specific implementation with the vendor). If the device identifier is included, you can
+> determine its use, retention, and destruction. It is recommended that you describe the use purpose, retention
+> policy, and destruction method in the privacy statement.
 &lt;!--RP6End--&gt;
 
 **Since:** 9
@@ -34,25 +37,25 @@ function attestKeyItem(keyAlias: string, options: HuksOptions, callback: AsyncCa
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| keyAlias | string | Yes | 密钥别名，存放待获取证书密钥的别名。 |
-| options | [HuksOptions](arkts-universalkeystore-huks-huksoptions-i.md) | Yes | 用于获取证书时指定所需参数与数据。 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;HuksReturnResult&gt; | Yes | 回调函数。当获取密钥证书成功时，err为undefined，data为获取到的HuksReturnResult；否则为错误 对象。 |
+| keyAlias | string | Yes | Alias of the key. The certificate to be obtained stores the key. |
+| options | [HuksOptions](arkts-universalkeystore-huks-huksoptions-i.md) | Yes | Parameters and data required for obtaining the certificate. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;HuksReturnResult&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined**, and **data** is the obtained **HuksReturnResult**. Otherwise, **err** is an error object. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. 3. Parameter verification failed. |
-| 801 | api is not supported |
-| 12000006 | error occurred in crypto engine |
-| 12000005 | IPC communication failed |
-| 12000004 | operating file failed |
-| 12000018 | the group id specified by the access group tag is invalid<br>**Applicable version:** 23 and later |
-| 12000001 | algorithm mode is not supported |
-| 201 | check permission failed |
-| 12000014 | memory is insufficient |
-| 12000012 | Device environment or input parameter abnormal |
-| 12000011 | queried entity does not exist |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. 3. Parameter verification failed. |
+| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | api is not supported |
+| [12000006](../errorcode-huks.md#12000006-algorithm-library-operation-failed) | error occurred in crypto engine |
+| [12000005](../errorcode-huks.md#12000005-ipc-error) | IPC communication failed |
+| [12000004](../errorcode-huks.md#12000004-file-error) | operating file failed |
+| [12000018](../errorcode-huks.md#12000018-invalid-input-parameter) | the group id specified by the access group tag is invalid<br>**Applicable version:** 23 and later |
+| [12000001](../errorcode-huks.md#12000001-feature-not-supported) | algorithm mode is not supported |
+| [201](../../errorcode-universal.md#201-permission-denied) | check permission failed |
+| [12000014](../errorcode-huks.md#12000014-insufficient-memory) | memory is insufficient |
+| [12000012](../errorcode-huks.md#12000012-external-error) | Device environment or input parameter abnormal |
+| [12000011](../errorcode-huks.md#12000011-the-entity-does-not-exist) | queried entity does not exist |
 
 ## Examples
 
@@ -130,12 +133,12 @@ async function generateKeyThenAttestKey() {
   let attestOptions: huks.HuksOptions = {
     properties: attestProperties
   };
-  huks.generateKeyItem(aliasString, generateOptions, (error) => {
+  huks.generateKeyItem(aliasString, generateOptions, (error, data) => {
     if (error) {
       console.error(`callback: generateKeyItem failed`);
     } else {
       console.info(`callback: generateKeyItem success`);
-      huks.attestKeyItem(aliasString, attestOptions, (error) => {
+      huks.attestKeyItem(aliasString, attestOptions, (error, data) => {
         if (error) {
           console.error(`callback: attestKeyItem failed`);
         } else {
@@ -154,12 +157,15 @@ async function generateKeyThenAttestKey() {
 function attestKeyItem(keyAlias: string, options: HuksOptions): Promise<HuksReturnResult>
 ```
 
-获取密钥证书。使用Promise异步回调。
+Attests a key. This API uses a promise to return the result.
 
 &lt;!--RP6--&gt;  
-> **说明：**
+> **NOTE：**
 > 
-> 在使用非匿名证书密钥证明时生成的证书链可能包含设备标识符（具体实现需向厂商确认），如包含设备标识符，其使用、留存、销毁由开发者决定，建议开发者在其隐私声明中对其使用目的、留存策略和销毁方式进行说明。
+> The certificate chain generated during non-anonymous certificate key attestation may contain the device
+> identifier (confirm the specific implementation with the vendor). If the device identifier is included, you can
+> determine its use, retention, and destruction. It is recommended that you describe the use purpose, retention
+> policy, and destruction method in the privacy statement.
 &lt;!--RP6End--&gt;
 
 **Since:** 9
@@ -176,30 +182,30 @@ function attestKeyItem(keyAlias: string, options: HuksOptions): Promise<HuksRetu
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| keyAlias | string | Yes | 密钥别名，存放待获取证书密钥的别名。 |
-| options | [HuksOptions](arkts-universalkeystore-huks-huksoptions-i.md) | Yes | 用于获取证书时指定所需参数与数据。 |
+| keyAlias | string | Yes | Alias of the key. The certificate to be obtained stores the key. |
+| options | [HuksOptions](arkts-universalkeystore-huks-huksoptions-i.md) | Yes | Parameters and data required for obtaining the certificate. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;HuksReturnResult&gt; | Promise对象，返回调用接口的结果。当调用成功时，HuksReturnResult的certChains成员为获取到的证书链。 |
+| Promise&lt;HuksReturnResult&gt; | Promise that returns the operation result. When the call is successful, the **certChains** member of **HuksReturnResult** is the obtained certificate chain. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. 3. Parameter verification failed. |
-| 801 | api is not supported |
-| 12000006 | error occurred in crypto engine |
-| 12000005 | IPC communication failed |
-| 12000004 | operating file failed |
-| 12000018 | the group id specified by the access group tag is invalid<br>**Applicable version:** 23 and later |
-| 12000001 | algorithm mode is not supported |
-| 201 | check permission failed |
-| 12000014 | memory is insufficient |
-| 12000012 | Device environment or input parameter abnormal |
-| 12000011 | queried entity does not exist |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. 3. Parameter verification failed. |
+| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | api is not supported |
+| [12000006](../errorcode-huks.md#12000006-algorithm-library-operation-failed) | error occurred in crypto engine |
+| [12000005](../errorcode-huks.md#12000005-ipc-error) | IPC communication failed |
+| [12000004](../errorcode-huks.md#12000004-file-error) | operating file failed |
+| [12000018](../errorcode-huks.md#12000018-invalid-input-parameter) | the group id specified by the access group tag is invalid<br>**Applicable version:** 23 and later |
+| [12000001](../errorcode-huks.md#12000001-feature-not-supported) | algorithm mode is not supported |
+| [201](../../errorcode-universal.md#201-permission-denied) | check permission failed |
+| [12000014](../errorcode-huks.md#12000014-insufficient-memory) | memory is insufficient |
+| [12000012](../errorcode-huks.md#12000012-external-error) | Device environment or input parameter abnormal |
+| [12000011](../errorcode-huks.md#12000011-the-entity-does-not-exist) | queried entity does not exist |
 
 ## Examples
 
@@ -255,7 +261,7 @@ async function generateKey(alias: string) {
     properties: properties
   };
   await huks.generateKeyItem(alias, options)
-    .then(() => {
+    .then((data) => {
       console.info(`promise: generateKeyItem success`);
     });
 }
@@ -286,7 +292,7 @@ async function attestKey() {
   };
   await generateKey(aliasString);
   await huks.attestKeyItem(aliasString, options)
-    .then(() => {
+    .then((data) => {
       console.info(`promise: attestKeyItem success`);
     });
 }

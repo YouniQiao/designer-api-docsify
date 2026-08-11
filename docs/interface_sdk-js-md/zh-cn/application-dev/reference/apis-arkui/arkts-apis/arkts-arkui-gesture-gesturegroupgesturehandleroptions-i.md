@@ -22,7 +22,7 @@ gestures: GestureHandler[]
 
 当需要为一个组件同时添加单击和双击手势时，可在[GestureGroup](../../apis-ability-kit/arkts-apis/arkts-app-ability-common.md/arkts-app-ability-common.md)中添加两个[TapGesture](../../apis-ability-kit/arkts-apis/arkts-app-ability-common.md/arkts-app-ability-common.md)，需要双击手势在前，单击手势在后，否则不生效。
 
-**类型：** [GestureHandler](arkts-arkui-gesturehandler-c.md)[]
+**类型：** [GestureHandler](arkts-arkui-gesture-gesturehandler-c.md)[]
 
 **起始版本：** 23
 

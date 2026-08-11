@@ -12,7 +12,7 @@ import { taskpool } from 'kits/@kit.ArkTS';
 function getTaskPoolInfo(): TaskPoolInfo
 ```
 
-获取任务池的线程信息和任务信息。
+Obtains the thread information and task information of the task pool.
 
 **Since:** 10
 
@@ -28,7 +28,7 @@ function getTaskPoolInfo(): TaskPoolInfo
 
 | Type | Description |
 | --- | --- |
-| [TaskPoolInfo](arkts-arkts-taskpool-taskpoolinfo-c.md) | 任务池的内部信息。 |
+| [TaskPoolInfo](arkts-arkts-taskpool-taskpoolinfo-c.md) | Internal information about the task pool. |
 
 ## Examples
 

@@ -10,12 +10,6 @@
 
 **系统能力：** SystemCapability.DistributedDataManager.RelationalStore.Core
 
-## 导入模块
-
-```TypeScript
-import { relationalStore } from 'kits/@kit.ArkData';
-```
-
 ## code
 
 ```TypeScript
@@ -44,7 +38,7 @@ details: Record<string, TableDetails>
 
 键表示表名，值表示该表的端云同步过程统计信息。
 
-**类型：** [Record](../../apis-default/arkts-apis/arkts-record-t.md)&lt;string, TableDetails&gt;
+**类型：** Record&lt;string, TableDetails&gt;
 
 **起始版本：** 10
 

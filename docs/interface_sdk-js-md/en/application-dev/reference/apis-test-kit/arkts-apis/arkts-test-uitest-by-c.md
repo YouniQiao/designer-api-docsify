@@ -1,21 +1,12 @@
 # By
 
-UiTest框架通过By类提供了丰富的控件特征描述API，用于进行控件筛选来匹配/查找出目标控件。
+The UiTest framework provides a wide range of UI component feature description APIs in the **By** class to filter and match components.
 
-By提供的API能力具有以下几个特点：
+The APIs provided by the **By** class exhibit the following features:
 
-1、支持单属性匹配和多属性组合匹配，例如同时指定目标控件text和id。
+1. Allow one or more attributes as the match conditions. For example, you can specify both the **text** and **id** attributes to find the target component.2. Provide multiple match patterns for component attributes.3. Support absolute positioning and relative positioning for components. APIs such as [By.isBefore&lt;sup&gt;(deprecated)&lt;/sup&gt;](arkts-test-uitest-by-c.md#isbefore) and [By.isAfter&lt;sup&gt;(deprecated)&lt;/sup&gt;](arkts-test-uitest-by-c.md#isafter) can be used to specify the features of adjacent components to assist positioning.
 
-2、控件属性支持多种匹配模式。
-
-3、支持控件绝对定位，相对定位，可通过[By.isBefore&lt;sup&gt;(deprecated)&lt;/sup&gt;](arkts-test-uitest-by-c.md#isbefore)和  
-[By.isAfter&lt;sup&gt;(deprecated)&lt;/sup&gt;](arkts-test-uitest-by-c.md#isafter)等API限定邻近控件特征进行辅助定位。
-
-By类提供的所有API均为同步接口，建议使用者通过静态构造器BY来链式创建By对象。
-
-> **说明：**
-> 
-> 从API version 8开始支持，从API version 9开始废弃，建议使用[On&lt;sup&gt;9+&lt;/sup&gt;](arkts-test-uitest-on-c.md)替代。
+All APIs provided in the **By** class are synchronous. You are advised to use the static constructor **BY** to create a **By** object in chain mode.
 
 **Since:** 8
 
@@ -41,11 +32,7 @@ import { ResizeDirection, WindowMode, PenMode, PenKeyOperation, Driver, MatchPat
 clickable(b?: boolean): By
 ```
 
-指定目标控件的可点击状态属性，返回By对象自身。
-
-> **说明：**
-> 
-> 从API version 8开始支持，从API version 9开始废弃，建议使用[clickable&lt;sup&gt;9+&lt;/sup&gt;](arkts-test-uitest-on-c.md#clickable)替代。
+Specifies the clickable attribute of the target component.
 
 **Since:** 8
 
@@ -63,13 +50,13 @@ clickable(b?: boolean): By
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| b | boolean | No | 指定控件可点击状态。true：可点击。false：不可点击。默认为true。 |
+| b | boolean | No | Clickable status of the component. The value **true** indicates that the component is clickable, and **false** indicates the opposite. Default value: **true |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [By](arkts-test-uitest-by-c.md) | 返回指定目标控件的可点击状态属性的By对象。 |
+| [By](arkts-test-uitest-by-c.md) | By** object that matches the clickable attribute of the target component. |
 
 ## Examples
 
@@ -86,11 +73,7 @@ let by: By = BY.clickable(true); // Use the static constructor BY to create a By
 enabled(b?: boolean): By
 ```
 
-指定目标控件的使能状态属性，返回By对象自身。
-
-> **说明：**
-> 
-> 从API version 8开始支持，从API version 9开始废弃，建议使用[enabled&lt;sup&gt;9+&lt;/sup&gt;](arkts-test-uitest-on-c.md#enabled)替代。
+Specifies the enabled attribute of the target component.
 
 **Since:** 8
 
@@ -108,13 +91,13 @@ enabled(b?: boolean): By
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| b | boolean | No | 指定控件使能状态。true：使能。false：未使能。默认为true。 |
+| b | boolean | No | Enabled status of the component. The value **true** indicates that the component is enabled, and **false** indicates the opposite. Default value: **true |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [By](arkts-test-uitest-by-c.md) | 返回指定目标控件的使能状态属性的By对象。 |
+| [By](arkts-test-uitest-by-c.md) | By** object that matches the enabled attribute of the target component. |
 
 ## Examples
 
@@ -131,11 +114,7 @@ let by: By = BY.enabled(true); // Use the static constructor BY to create a By o
 focused(b?: boolean): By
 ```
 
-指定目标控件的获焦状态属性，返回By对象自身。
-
-> **说明：**
-> 
-> 从API version 8开始支持，从API version 9开始废弃，建议使用[focused&lt;sup&gt;9+&lt;/sup&gt;](arkts-test-uitest-on-c.md#focused)替代。
+Specifies the focused attribute of the target component.
 
 **Since:** 8
 
@@ -153,13 +132,13 @@ focused(b?: boolean): By
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| b | boolean | No | 控件获焦状态。true：获焦。false：未获焦。默认为true。 |
+| b | boolean | No | Focused status of the component. The value **true** indicates that the component is focused, and **false** indicates the opposite. Default value: **true |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [By](arkts-test-uitest-by-c.md) | 返回指定目标控件的获焦状态属性的By对象。 |
+| [By](arkts-test-uitest-by-c.md) | By** object that matches the focused attribute of the target component. |
 
 ## Examples
 
@@ -176,11 +155,7 @@ let by: By = BY.focused(true); // Use the static constructor BY to create a By o
 id(id: number): By
 ```
 
-指定目标控件id属性，返回By对象自身。
-
-> **说明：**
-> 
-> 从API version 8开始支持，从API version 9开始废弃，建议使用[id&lt;sup&gt;9+&lt;/sup&gt;](arkts-test-uitest-on-c.md#id)替代。
+Specifies the ID attribute of the target component.
 
 **Since:** 8
 
@@ -198,13 +173,13 @@ id(id: number): By
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| id | number | Yes | 指定控件的id值。 |
+| id | number | Yes | Component ID. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [By](arkts-test-uitest-by-c.md) | 返回指定目标控件id属性的By对象。 |
+| [By](arkts-test-uitest-by-c.md) | By** object that matches the ID attribute of the target component. |
 
 ## Examples
 
@@ -221,11 +196,7 @@ let by: By = BY.id(123); // Use the static constructor BY to create a By object 
 isAfter(by: By): By
 ```
 
-指定目标控件位于给出的特征属性控件之后，返回By对象自身。
-
-> **说明：**
-> 
-> 从API version 8开始支持，从API version 9开始废弃，建议使用[isAfter&lt;sup&gt;9+&lt;/sup&gt;](arkts-test-uitest-on-c.md#isafter)替代。
+Specifies that the target component is located after the given attribute component.
 
 **Since:** 8
 
@@ -243,13 +214,13 @@ isAfter(by: By): By
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| by | [By](arkts-test-uitest-by-c.md) | Yes | 特征控件的属性。 |
+| by | [By](arkts-test-uitest-by-c.md) | Yes | Information about the attribute component. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [By](arkts-test-uitest-by-c.md) | 返回指定目标控件位于给出的特征属性控件之后的By对象。 |
+| [By](arkts-test-uitest-by-c.md) | By** object. |
 
 ## Examples
 
@@ -257,7 +228,7 @@ isAfter(by: By): By
 // xxx.test.ets
 import { By, BY } from '@kit.TestKit';
 
-// Use the static constructor BY to create a by object and specify that the target component is located before the given attribute component.
+// Use the static constructor BY to create a by object and specify that the target component is located after the given attribute component.
 let by: By = BY.type('Text').isAfter(BY.text('123')); // Search for the first Text component located after the component whose text is 123.
 ```
 
@@ -267,11 +238,7 @@ let by: By = BY.type('Text').isAfter(BY.text('123')); // Search for the first Te
 isBefore(by: By): By
 ```
 
-指定目标控件位于给出的特征属性控件之前，返回By对象自身。
-
-> **说明：**
-> 
-> 从API version 8开始支持，从API version 9开始废弃，建议使用[isBefore&lt;sup&gt;9+&lt;/sup&gt;](arkts-test-uitest-on-c.md#isbefore)替代。
+Specifies that the target component is located before the given attribute component.
 
 **Since:** 8
 
@@ -289,13 +256,13 @@ isBefore(by: By): By
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| by | [By](arkts-test-uitest-by-c.md) | Yes | 特征控件的属性。 |
+| by | [By](arkts-test-uitest-by-c.md) | Yes | Information about the attribute component. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [By](arkts-test-uitest-by-c.md) | 返回指定目标控件位于给出的特征属性控件之前的By对象。 |
+| [By](arkts-test-uitest-by-c.md) | By** object. |
 
 ## Examples
 
@@ -313,11 +280,7 @@ let by: By = BY.type('Button').isBefore(BY.text('123')); // Search for the first
 key(key: string): By
 ```
 
-指定目标控件key值属性，返回By对象自身。
-
-> **说明：**
-> 
-> 从API version 8开始支持，从API version 9开始废弃，建议使用[id&lt;sup&gt;9+&lt;/sup&gt;](arkts-test-uitest-on-c.md#id)替代。
+Specifies the key attribute of the target component.
 
 **Since:** 8
 
@@ -335,13 +298,13 @@ key(key: string): By
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| key | string | Yes | 指定控件的Key值。 |
+| key | string | Yes | Component key. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [By](arkts-test-uitest-by-c.md) | 返回指定目标控件key值属性的By对象。 |
+| [By](arkts-test-uitest-by-c.md) | By** object that matches the key attribute of the target component. |
 
 ## Examples
 
@@ -358,11 +321,7 @@ let by: By = BY.key('123'); // Use the static constructor BY to create a By obje
 scrollable(b?: boolean): By
 ```
 
-指定目标控件的可滑动状态属性，返回By对象自身。
-
-> **说明：**
-> 
-> 从API version 8开始支持，从API version 9开始废弃，建议使用[scrollable&lt;sup&gt;9+&lt;/sup&gt;](arkts-test-uitest-on-c.md#scrollable)替代。
+Specifies the scrollable attribute of the target component.
 
 **Since:** 8
 
@@ -380,13 +339,13 @@ scrollable(b?: boolean): By
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| b | boolean | No | 控件可滑动状态。true：可滑动。false：不可滑动。默认为true。 |
+| b | boolean | No | Scrollable status of the component. The value **true** indicates that the component is scrollable , and **false** indicates the opposite. Default value: **true |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [By](arkts-test-uitest-by-c.md) | 返回指定目标控件的可滑动状态属性的By对象。 |
+| [By](arkts-test-uitest-by-c.md) | By** object that matches the scrollable attribute of the target component. |
 
 ## Examples
 
@@ -403,11 +362,7 @@ let by: By = BY.scrollable(true); // Use the static constructor BY to create a B
 selected(b?: boolean): By
 ```
 
-指定目标控件的被选中状态属性，返回By对象自身。
-
-> **说明：**
-> 
-> 从API version 8开始支持，从API version 9开始废弃，建议使用[selected&lt;sup&gt;9+&lt;/sup&gt;](arkts-test-uitest-on-c.md#selected)替代。
+Specifies the selected status of the target component.
 
 **Since:** 8
 
@@ -425,13 +380,13 @@ selected(b?: boolean): By
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| b | boolean | No | 指定控件被选中状态。true：被选中。false：未被选中。默认为true。 |
+| b | boolean | No | Selected status of the component. The value **true** indicates that the component is selected, and **false** indicates the opposite. Default value: **true |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [By](arkts-test-uitest-by-c.md) | 返回指定目标控件的被选中状态属性的By对象。 |
+| [By](arkts-test-uitest-by-c.md) | By** object that matches the selected attribute of the target component. |
 
 ## Examples
 
@@ -448,11 +403,7 @@ let by: By = BY.selected(true); // Use the static constructor BY to create a By 
 text(txt: string, pattern?: MatchPattern): By
 ```
 
-指定目标控件文本属性，支持多种匹配模式，返回By对象自身。
-
-> **说明：**
-> 
-> 从API version 8开始支持，从API version 9开始废弃，建议使用[text&lt;sup&gt;9+&lt;/sup&gt;](arkts-test-uitest-on-c.md#text)替代。
+Specifies the text attribute of the target component. Multiple match patterns are supported.
 
 **Since:** 8
 
@@ -470,14 +421,14 @@ text(txt: string, pattern?: MatchPattern): By
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| txt | string | Yes | 指定控件文本，用于匹配目标控件文本。 |
-| pattern | [MatchPattern](arkts-test-uitest-matchpattern-e.md) | No | 指定的文本匹配模式，默认为[EQUALS](arkts-test-uitest-matchpattern-e.md)。 |
+| txt | string | Yes | Component text, used to match the target component. |
+| pattern | [MatchPattern](arkts-test-uitest-matchpattern-e.md) | No | Match pattern {@link MatchPattern}. &lt;br&gt;Default value: {@link MatchPattern.EQUALS} |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [By](arkts-test-uitest-by-c.md) | 返回指定目标控件文本属性的By对象。 |
+| [By](arkts-test-uitest-by-c.md) | By** object that matches the text attribute of the target component. |
 
 ## Examples
 
@@ -494,11 +445,7 @@ let by: By = BY.text('123'); // Use the static constructor BY to create a By obj
 type(tp: string): By
 ```
 
-指定目标控件的控件类型属性，返回By对象自身。
-
-> **说明：**
-> 
-> 从API version 8开始支持，从API version 9开始废弃，建议使用[type&lt;sup&gt;9+&lt;/sup&gt;](arkts-test-uitest-on-c.md#type)替代。
+Specifies the type attribute of the target component.
 
 **Since:** 8
 
@@ -516,13 +463,13 @@ type(tp: string): By
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| tp | string | Yes | 指定控件类型。 |
+| tp | string | Yes | Component type. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [By](arkts-test-uitest-by-c.md) | 返回指定目标控件的控件类型属性的By对象。 |
+| [By](arkts-test-uitest-by-c.md) | By** object that matches the type attribute of the target component. |
 
 ## Examples
 

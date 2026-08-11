@@ -12,7 +12,7 @@ import { media } from 'kits/@kit.MediaKit';
 function createMediaSourceWithFd(fdSrc: AVFileDescriptor): MediaSource | undefined
 ```
 
-通过文件描述符创建媒体源。
+Creates a media source from file descriptor.
 
 **Since:** 26.0.0
 
@@ -30,21 +30,11 @@ function createMediaSourceWithFd(fdSrc: AVFileDescriptor): MediaSource | undefin
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| fdSrc | [AVFileDescriptor](arkts-media-multimedia-media-avfiledescriptor-i.md) | Yes | 媒体文件描述符。 |
+| fdSrc | [AVFileDescriptor](arkts-media-media-avfiledescriptor-i.md) | Yes | file descriptor handler. &lt;br&gt;file descriptor handler. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [MediaSource](arkts-media-multimedia-media-mediasource-i.md) | 返回MediaSource，用于媒体资源设置。 |
-
-## Examples
-
-```TypeScript
-import { common } from '@kit.AbilityKit';
-
-let context = this.getUIContext().getHostContext() as common.UIAbilityContext;
-let fdSrc = await context.resourceManager.getRawFd('xxx.mp4');
-let mediaSource : media.MediaSource | undefined = media.createMediaSourceWithFd(fdSrc);
-```
+| [MediaSource](arkts-media-media-mediasource-i.md) | MediaSource instance if the operation is successful; returns undefined otherwise. |
 

@@ -1,11 +1,5 @@
 # getRemoteBundleVersionCode（系统接口）
 
-## 导入模块
-
-```TypeScript
-import { distributedBundleManager } from 'kits/@kit.AbilityKit';
-```
-
 ## getRemoteBundleVersionCode
 
 ```TypeScript
@@ -45,14 +39,16 @@ function getRemoteBundleVersionCode(deviceId: string, bundleName: string): Promi
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 801 | Capability not supported. |
-| 17700027 | The distributed service is not running. |
-| 201 | Permission denied. |
-| 17700007 | The specified device ID is not found. |
-| 202 | Permission denied, non-system app called system api. |
-| 17700001 | The specified bundle name is not found. |
+| [801](../../errorcode-universal.md#801-该设备不支持此api) | Capability not supported. |
+| [17700027](../errorcode-bundle.md#17700027-分布式服务未启动) | The distributed service is not running. |
+| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
+| [17700007](../errorcode-bundle.md#17700007-输入的设备id有误) | The specified device ID is not found. |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission denied, non-system app called system api. |
+| [17700001](../errorcode-bundle.md#17700001-指定的bundlename不存在) | The specified bundle name is not found. |
 
 ## 示例
+
+ArkTS-Dyn示例:
 
 ```TypeScript
 import { distributedBundleManager } from '@kit.AbilityKit';
@@ -63,6 +59,28 @@ try {
     console.info(`getRemoteBundleVersionCode succeed:` + data);
   }).catch((err: BusinessError) => {
     console.error(`getRemoteBundleVersionCode failed: error code is ${err.code}  and error msg is ${err.message}`);
+  });
+} catch (err) {
+  let code = (err as BusinessError).code;
+  let message = (err as BusinessError).message;
+  console.error(`getRemoteBundleVersionCode failed: error code is ${code}  and error msg is ${message}`);
+}
+```
+
+ArkTS-Sta示例:
+
+```TypeScript
+'use static'
+
+import { distributedBundleManager } from '@kit.AbilityKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+try {
+  distributedBundleManager.getRemoteBundleVersionCode('1111', 'com.hap.myapplication').then((data: long) => {
+    console.info(`getRemoteBundleVersionCode succeed:` + data);
+  }).catch((err: Error) => {
+    console.error(`getRemoteBundleVersionCode failed: error code is ${(err as BusinessError).code}` +
+      `  and error msg is ${(err as BusinessError).message}`);
   });
 } catch (err) {
   let code = (err as BusinessError).code;

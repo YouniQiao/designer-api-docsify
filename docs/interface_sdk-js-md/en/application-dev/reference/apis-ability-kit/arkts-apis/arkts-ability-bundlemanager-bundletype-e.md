@@ -1,6 +1,6 @@
 # BundleType
 
-标识应用的类型。
+Enumerates the bundle types.
 
 **Since:** 9
 
@@ -16,7 +16,7 @@
 APP = 0
 ```
 
-该Bundle是应用。
+The bundle is an application.
 
 **Since:** 9
 
@@ -34,7 +34,7 @@ APP = 0
 ATOMIC_SERVICE = 1
 ```
 
-该Bundle是原子化服务。
+The bundle is an atomic service.
 
 **Since:** 9
 

@@ -1,11 +1,5 @@
 # getBatteryConfig（系统接口）
 
-## 导入模块
-
-```TypeScript
-import { batteryInfo } from 'kits/@kit.BasicServicesKit';
-```
-
 ## getBatteryConfig
 
 ```TypeScript
@@ -40,17 +34,19 @@ function getBatteryConfig(sceneName: string): string
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 5100101 | Failed to connect to the service. |
-| 202 | Permission verification failed. A non-system application calls a system API. |
+| [5100101](../../apis-basic-services-kit/errorcode-battery-info.md#5100101-连接服务失败) | Failed to connect to the service. |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed. A non-system application calls a system API. |
 
 ## 示例
 
 ```TypeScript
-import { batteryInfo } from '@kit.BasicServicesKit';
+try {
+  let sceneName = 'xxx';
+  let result = batteryInfo.getBatteryConfig(sceneName);
 
-let sceneName = 'xxx';
-let result = batteryInfo.getBatteryConfig(sceneName);
-
-console.info('The result is: ' + result);
+  console.info("The result is: " + result);
+} catch(err) {
+  console.error('getBatteryConfig failed, err: ' + err);
+}
 ```
 

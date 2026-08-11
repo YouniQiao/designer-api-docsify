@@ -12,7 +12,7 @@ import { util } from 'kits/@kit.ArkTS';
 function generateRandomUUID(entropyCache?: boolean): string
 ```
 
-使用加密安全的随机数生成器生成随机的RFC 4122版本4 UUID。
+Generate a random RFC 4122 version 4 UUID using a cryptographically secure random number generator.
 
 **Since:** 23
 
@@ -26,17 +26,17 @@ function generateRandomUUID(entropyCache?: boolean): string
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| entropyCache | boolean | No | 是否使用缓存生成UUID。默认值：true。 |
+| entropyCache | boolean | No | Whether to generate the UUID with using the cache. Default: true. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| string | 返回表示此UUID的字符串。 |
+| string | Return a string representing this UUID. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | 参数错误。可能的原因：1.参数类型不正确。 |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.Incorrect parameter types. |
 

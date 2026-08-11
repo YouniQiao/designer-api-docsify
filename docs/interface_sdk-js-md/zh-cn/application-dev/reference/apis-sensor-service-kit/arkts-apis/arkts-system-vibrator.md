@@ -15,12 +15,6 @@
  > - 该功能使用需要对应硬件支持，仅支持真机调试。可通过系统设备信息或相关接口查询设备是否支持振动功能。
 
 
-## 导入模块
-
-```TypeScript
-import { VibrateOptions } from 'kits/@kit.SensorServiceKit';
-```
-
 ## 汇总
 
 ### 类

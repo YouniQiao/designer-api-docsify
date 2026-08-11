@@ -12,12 +12,6 @@
 
 **系统能力：** SystemCapability.Graphics.Drawing
 
-## 导入模块
-
-```TypeScript
-import { text } from 'kits/@kit.ArkGraphics2D';
-```
-
 ## getAdvances
 
 ```TypeScript
@@ -50,11 +44,21 @@ getAdvances(range: Range): Array<common2D.Point>
 
 ## 示例
 
+ArkTS-Dyn示例：
+
 ```TypeScript
 let advancesRange = runs[0].getAdvances({start:1, end:2}); // 获取渲染块从起始位置1开始, 长度为2范围内的字形宽度
 advancesRange = runs[0].getAdvances({start:-1, end:2}); // -1是非法参数，将返回undefined
 advancesRange = runs[0].getAdvances({start:0, end:-10}); // -10是非法参数，将返回undefined
 let advancesNull = runs[0].getAdvances(null); // null是非法参数，将返回undefined
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+let advancesRange = runs[0].getAdvances({start:1, end:2}); // 获取渲染块从起始位置1开始, 长度为2范围内的字形宽度
+advancesRange = runs[0].getAdvances({start:-1, end:2}); // -1是非法参数，将返回undefined
+advancesRange = runs[0].getAdvances({start:0, end:-10}); // -10是非法参数，将返回undefined
 ```
 
 ## getAdvances
@@ -219,6 +223,8 @@ getGlyphs(range: Range): Array<int>
 
 ## 示例
 
+ArkTS-Dyn示例：
+
 ```TypeScript
 import { text } from '@kit.ArkGraphics2D'
 
@@ -238,6 +244,48 @@ struct Index {
   build() {
     Column() {
       Button().onClick(() => {
+        this.fun();
+      })
+    }
+  }
+}
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+import { Entry, Component, Column, Button, ClickEvent } from '@ohos.arkui.component'
+import { text } from "@kit.ArkGraphics2D"
+
+function textFunc() {
+  let textStyle: text.TextStyle = {
+    color: { alpha: 255, red: 255, green: 0, blue: 0 },
+    fontSize: 33,
+  };
+  let paragraphStyle: text.ParagraphStyle = {
+    textStyle: textStyle,
+    align: text.TextAlign.END,
+  };
+  let fontCollection = new text.FontCollection();
+  let paragraphBuilder = new text.ParagraphBuilder(paragraphStyle, fontCollection);
+  paragraphBuilder.addText("Hello World");
+  let paragraph = paragraphBuilder.build();
+  let lines = paragraph.getTextLines();
+  let runs = lines[0].getGlyphRuns();
+  let glyphs = runs[0].getGlyphs({ start: 0, end: 0 }); // 获取渲染块全部字形序号
+  let glyphsRange = runs[0].getGlyphs({ start: 1, end: 2 }); // 获取渲染块从起始位置1开始, 长度为2范围内的字形序号
+  glyphsRange = runs[0].getGlyphs({ start: -1, end: 2 }); // -1是非法参数，将返回undefined
+  glyphsRange = runs[0].getGlyphs({ start: 0, end: -10 }); // -10是非法参数，将返回undefined
+}
+
+@Entry
+@Component
+struct Index {
+  fun: () => void = textFunc;
+
+  build() {
+    Column() {
+      Button("Click").onClick((e: ClickEvent) => {
         this.fun();
       })
     }
@@ -405,6 +453,8 @@ getPositions(range: Range): Array<common2D.Point>
 
 ## 示例
 
+ArkTS-Dyn示例：
+
 ```TypeScript
 import { text } from '@kit.ArkGraphics2D'
 
@@ -424,6 +474,49 @@ struct Index {
   build() {
     Column() {
       Button().onClick(() => {
+        this.fun();
+      })
+    }
+  }
+}
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+import { Entry, Component, Column, Button, ClickEvent} from '@ohos.arkui.component'
+import { text } from "@kit.ArkGraphics2D";
+
+function textFunc() {
+  let textStyle: text.TextStyle = {
+    color: { alpha: 255, red: 255, green: 0, blue: 0 },
+    fontSize: 33,
+  };
+  let paragraphStyle: text.ParagraphStyle = {
+    textStyle: textStyle,
+    align: text.TextAlign.END,
+  };
+  let fontCollection = new text.FontCollection();
+  let paragraphBuilder = new text.ParagraphBuilder(paragraphStyle, fontCollection);
+  paragraphBuilder.addText("Hello World");
+  let paragraph = paragraphBuilder.build();
+  let lines = paragraph.getTextLines();
+  let runs = lines[0].getGlyphRuns();
+  let positions = runs[0].getPositions({ start: 0, end: 0 }); // 获取渲染块全部字形位置
+  let positionsRange = runs[0].getPositions({ start: 1, end: 2 }); // 获取渲染块从起始位置1开始, 长度为2范围内的字形位置
+  positionsRange = runs[0].getPositions({ start: -1, end: 2 }); // -1是非法参数，将返回undefined
+  positionsRange = runs[0].getPositions({ start: 0, end: -10 }); // -10是非法参数，将返回undefined
+}
+
+
+@Entry
+@Component
+struct Index {
+  fun: () => void = textFunc;
+
+  build() {
+    Column() {
+      Button("Click").onClick((e: ClickEvent) => {
         this.fun();
       })
     }
@@ -491,6 +584,8 @@ getStringIndices(range?: Range): Array<int>
 
 ## 示例
 
+ArkTS-Dyn示例：
+
 ```TypeScript
 import { text } from '@kit.ArkGraphics2D'
 
@@ -510,6 +605,49 @@ struct Index {
   build() {
     Column() {
       Button().onClick(() => {
+        this.fun();
+      })
+    }
+  }
+}
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+import { Entry, Component, Column, Button, ClickEvent} from '@ohos.arkui.component'
+import { State } from '@ohos.arkui.stateManagement'
+import { text } from "@kit.ArkGraphics2D";
+
+function textFunc() {
+  let textStyle: text.TextStyle = {
+    color: { alpha: 255, red: 255, green: 0, blue: 0 },
+    fontSize: 33,
+  };
+  let paragraphStyle: text.ParagraphStyle = {
+    textStyle: textStyle,
+    align: text.TextAlign.END,
+  };
+  let fontCollection = new text.FontCollection();
+  let paragraphBuilder = new text.ParagraphBuilder(paragraphStyle, fontCollection);
+  paragraphBuilder.addText("Hello World");
+  let paragraph = paragraphBuilder.build();
+  let lines = paragraph.getTextLines();
+  let runs = lines[0].getGlyphRuns();
+  let indices = runs[0].getStringIndices({start:0, end:0}); // 获取渲染块全部字符索引
+  let indicesRange = runs[0].getStringIndices({start:1, end:2}); // 获取渲染块从起始位置1开始, 长度为2范围内的字符索引
+  indicesRange = runs[0].getStringIndices({start:-1, end:2}); // -1是非法参数，将返回undefined
+  indicesRange = runs[0].getStringIndices({start:0, end:-10}); // -10是非法参数，将返回undefined
+  let indicesUndefined = runs[0].getStringIndices(undefined); // undefined是非法参数，将返回undefined
+}
+
+@Entry
+@Component
+struct Index {
+  fun: () => void = textFunc;
+  build() {
+    Column() {
+      Button("Click").onClick((e: ClickEvent) => {
         this.fun();
       })
     }
@@ -635,6 +773,8 @@ getTextStyle(): TextStyle
 
 ## 示例
 
+ArkTS-Dyn示例：
+
 ```TypeScript
 // Index.ets
 import { text } from "@kit.ArkGraphics2D"
@@ -689,6 +829,57 @@ function numberToRGBA(colorNum: number): common2D.Color {
   const green = (colorNum >>> 8) & 0xFF;
   const blue = colorNum & 0xFF;
   return { alpha: alpha, red: red, green: green, blue: blue };
+}
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+// Index.ets
+import { Entry, Component, Column, Button, ClickEvent} from '@ohos.arkui.component'
+import { text } from "@kit.ArkGraphics2D"
+import { common2D } from '@kit.ArkGraphics2D'
+
+function textFunc() {
+  let textStyle: text.TextStyle = {
+    color: { alpha: 255, red: 255, green: 0, blue: 0 },
+    fontSize: 33,
+  };
+  let paragraphStyle: text.ParagraphStyle = {
+    textStyle: textStyle,
+    align: text.TextAlign.END,
+  };
+  let fontCollection = new text.FontCollection();
+  let paragraphBuilder = new text.ParagraphBuilder(paragraphStyle, fontCollection);
+  paragraphBuilder.addText("Hello World");
+  let paragraph = paragraphBuilder.build();
+  paragraph.layoutSync(50);
+  let lines = paragraph.getTextLines();
+  for (let i = 0; i < lines.length; i++) {
+    const line = lines[i];
+    let runs = line.getGlyphRuns();
+    for (let j = 0; j < runs.length; j++) {
+      const run = runs[j];
+      const runStyle = run.getTextStyle();
+      console.info(`print line [${i}] run [${j}] textStyle: ${JSON.stringify(runStyle)}`);
+      let textColor = runStyle?.color;
+      if (textColor != undefined) {
+        console.info(`Print text color ARGB: ${textColor.alpha}, ${textColor.red}, ${textColor.green}, ${textColor.blue}`);
+      }
+    }
+  }
+}
+
+@Entry
+@Component
+struct Index {
+  build() {
+    Column() {
+      Button("Click").onClick((e: ClickEvent) => {
+        textFunc();
+      })
+    }
+  }
 }
 ```
 
@@ -767,9 +958,12 @@ paint(canvas: drawing.Canvas, x: double, y: double): void
 
 ## 示例
 
+ArkTS-Dyn示例：
+
 ```TypeScript
 import { drawing } from '@kit.ArkGraphics2D'
 import { text } from '@kit.ArkGraphics2D'
+import { common2D } from '@kit.ArkGraphics2D'
 import { image } from '@kit.ImageKit'
 
 function textFunc(pixelmap: PixelMap) {
@@ -788,7 +982,60 @@ struct Index {
       Button().onClick(() => {
         if (this.pixelmap == undefined) {
           const color: ArrayBuffer = new ArrayBuffer(160000);
-          let opts: image.InitializationOptions = { editable: true, pixelFormat: 3, size: { height: 200, width: 200 } }
+          let opts: image.InitializationOptions =
+            { editable: true, pixelFormat: image.PixelMapFormat.RGBA_8888, size: { height: 200, width: 200 } }
+          this.pixelmap = image.createPixelMapSync(color, opts);
+        }
+        this.fun(this.pixelmap);
+      })
+    }
+  }
+}
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+import { Entry, Component, Column, Button, Image, ClickEvent} from '@ohos.arkui.component'
+import { State } from '@ohos.arkui.stateManagement'
+import { drawing } from '@kit.ArkGraphics2D'
+import { text } from "@kit.ArkGraphics2D"
+import { image } from '@kit.ImageKit';
+
+function textFunc(pixelmap?: image.PixelMap) {
+  if (pixelmap) {
+    let canvas = new drawing.Canvas(pixelmap);
+    let textStyle: text.TextStyle = {
+      color: { alpha: 255, red: 255, green: 0, blue: 0 },
+      fontSize: 33,
+    };
+    let paragraphStyle: text.ParagraphStyle = {
+      textStyle: textStyle,
+      align: text.TextAlign.END,
+    };
+    let fontCollection = new text.FontCollection();
+    let paragraphBuilder = new text.ParagraphBuilder(paragraphStyle, fontCollection);
+    paragraphBuilder.addText("Hello World");
+    let paragraph = paragraphBuilder.build();
+    let lines = paragraph.getTextLines();
+    let runs = lines[0].getGlyphRuns();
+    runs[0].paint(canvas, 0, 0);
+  }
+}
+
+@Entry
+@Component
+struct Index {
+  @State pixelmap?: image.PixelMap = undefined;
+  fun: (pixelmap?: image.PixelMap) => void = textFunc;
+  build() {
+    Column() {
+      Image(this.pixelmap).width(200).height(200);
+      Button("Click").onClick((e: ClickEvent) => {
+        if (this.pixelmap == undefined) {
+          const color: ArrayBuffer = new ArrayBuffer(160000);
+          let opts: image.InitializationOptions =
+            { editable: true, pixelFormat: image.PixelMapFormat.RGBA_8888, size: { height: 200, width: 200 } }
           this.pixelmap = image.createPixelMapSync(color, opts);
         }
         this.fun(this.pixelmap);

@@ -1,6 +1,6 @@
 # OperateItemV2Options
 
-声明接口OperateItemV2Options
+Declare interface OperateItemV2Options
 
 **Since:** 26.0.0
 
@@ -22,7 +22,7 @@ import { OperateCheckV2Options, ComposeListItemV2, IconTypeV2, OperateIconV2, Op
 arrow?: OperateIconV2
 ```
 
-设置箭头。
+Sets the arrow.
 
 **Type:** [OperateIconV2](arkts-arkui-arkui-advanced-composelistitemv2-operateiconv2-c.md)
 
@@ -42,7 +42,7 @@ arrow?: OperateIconV2
 button?: OperateButtonV2
 ```
 
-设置按钮。
+Sets the button.
 
 **Type:** [OperateButtonV2](arkts-arkui-arkui-advanced-composelistitemv2-operatebuttonv2-c.md)
 
@@ -62,7 +62,7 @@ button?: OperateButtonV2
 checkbox?: OperateCheckV2
 ```
 
-设置多选框。
+Sets the checkBox.
 
 **Type:** [OperateCheckV2](arkts-arkui-arkui-advanced-composelistitemv2-operatecheckv2-c.md)
 
@@ -82,7 +82,7 @@ checkbox?: OperateCheckV2
 icon?: OperateIconV2
 ```
 
-设置图标
+Sets the icon.
 
 **Type:** [OperateIconV2](arkts-arkui-arkui-advanced-composelistitemv2-operateiconv2-c.md)
 
@@ -102,7 +102,7 @@ icon?: OperateIconV2
 image?: ResourceStr
 ```
 
-设置图片。
+Sets the image.
 
 **Type:** [ResourceStr](arkts-arkui-resourcestr-t.md)
 
@@ -122,7 +122,7 @@ image?: ResourceStr
 radio?: OperateCheckV2
 ```
 
-设置单选框。
+Sets the radio.
 
 **Type:** [OperateCheckV2](arkts-arkui-arkui-advanced-composelistitemv2-operatecheckv2-c.md)
 
@@ -142,7 +142,7 @@ radio?: OperateCheckV2
 subIcon?: OperateIconV2
 ```
 
-设置子图标。
+Sets the subIcon.
 
 **Type:** [OperateIconV2](arkts-arkui-arkui-advanced-composelistitemv2-operateiconv2-c.md)
 
@@ -162,7 +162,7 @@ subIcon?: OperateIconV2
 symbolStyle?: SymbolGlyphModifier
 ```
 
-设置Symbol图标。
+Sets the symbolStyle.
 
 **Type:** [SymbolGlyphModifier](../arkts-components/arkts-arkui-symbolglyphmodifier-t.md)
 
@@ -182,7 +182,7 @@ symbolStyle?: SymbolGlyphModifier
 text?: ResourceStr
 ```
 
-设置文本。
+Sets the text.
 
 **Type:** [ResourceStr](arkts-arkui-resourcestr-t.md)
 
@@ -202,7 +202,7 @@ text?: ResourceStr
 toggle?: OperateCheckV2
 ```
 
-设置开关。
+Sets the toggle.
 
 **Type:** [OperateCheckV2](arkts-arkui-arkui-advanced-composelistitemv2-operatecheckv2-c.md)
 

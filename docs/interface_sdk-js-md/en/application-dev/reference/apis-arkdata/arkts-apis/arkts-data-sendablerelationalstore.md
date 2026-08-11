@@ -1,6 +1,6 @@
 # @ohos.data.sendableRelationalStore
 
-该模块针对关系型数据库（Relational Database，RDB）提供了sendable支持。支持从查询结果集中获取sendable类型ValuesBucket用于并发实例间传递。
+The **sendableRelationalStore** module provides APIs for obtaining **ValuesBucket** of the sendable type from the query result set and transferring it between concurrent instances.
 
 **Since:** 12
 
@@ -22,27 +22,27 @@ import { sendableRelationalStore } from 'kits/@kit.ArkData';
 
 | Name | Description |
 | --- | --- |
-| [fromSendableAsset](arkts-arkdata-sendablerelationalstore-fromsendableasset-f.md#fromsendableasset) | 将可跨线程传递的附件数据，转换为不可跨线程传递的附件数据。 |
-| [fromSendableValues](arkts-arkdata-sendablerelationalstore-fromsendablevalues-f.md#fromsendablevalues) | 将可跨线程传递的数组数据，转换为不可跨线程传递的数组数据。 |
-| [fromSendableValuesBucket](arkts-arkdata-sendablerelationalstore-fromsendablevaluesbucket-f.md#fromsendablevaluesbucket) | 将可用于跨线程传递的键值对数据，转换为不能用于跨线程传递的键值对数据。 |
-| [toSendableAsset](arkts-arkdata-sendablerelationalstore-tosendableasset-f.md#tosendableasset) | 将不可跨线程传递的附件数据，转换为可跨线程传递的附件数据。 |
-| [toSendableValues](arkts-arkdata-sendablerelationalstore-tosendablevalues-f.md#tosendablevalues) | 将不可跨线程传递的数组数据，转换为可跨线程传递的数组数据。 |
-| [toSendableValuesBucket](arkts-arkdata-sendablerelationalstore-tosendablevaluesbucket-f.md#tosendablevaluesbucket) | 将不能用于跨线程传递的键值对数据，转换为可用于跨线程传递的键值对数据。 |
+| [fromSendableAsset](arkts-arkdata-sendablerelationalstore-fromsendableasset-f.md#fromsendableasset) | Converts the asset data that can be passed across threads into the data that cannot be passed across threads. |
+| [fromSendableValues](arkts-arkdata-sendablerelationalstore-fromsendablevalues-f.md#fromsendablevalues) | Converts the array data that can be passed across threads into the data that cannot be passed across threads. |
+| [fromSendableValuesBucket](arkts-arkdata-sendablerelationalstore-fromsendablevaluesbucket-f.md#fromsendablevaluesbucket) | Converts a KV pair that can be passed across threads into the data that cannot be passed across threads. |
+| [toSendableAsset](arkts-arkdata-sendablerelationalstore-tosendableasset-f.md#tosendableasset) | Converts the asset data that cannot be passed across threads into the data that can be passed across threads. |
+| [toSendableValues](arkts-arkdata-sendablerelationalstore-tosendablevalues-f.md#tosendablevalues) | Converts the array data that cannot be passed across threads into the data that can be passed across threads. |
+| [toSendableValuesBucket](arkts-arkdata-sendablerelationalstore-tosendablevaluesbucket-f.md#tosendablevaluesbucket) | Converts a key-value (KV) pair that cannot be passed across threads into the data that can be passed across threads. |
 
 ### Interfaces
 
 | Name | Description |
 | --- | --- |
-| [Asset](arkts-arkdata-sendablerelationalstore-asset-i.md) | 记录资产附件（文件、图片、视频等类型文件）的相关信息。用于支持资产数据跨线程传递，继承自  [lang.ISendable](../../../reference/apis-arkts/js-apis-arkts-lang.md#langisendable)。资产类型的相关接口暂不支持Datashare。使用  [sendableRelationalStore.toSendableAsset](arkts-arkdata-sendablerelationalstore-tosendableasset-f.md#tosendableasset)方法创建。 |
+| [Asset](arkts-arkdata-sendablerelationalstore-asset-i.md) | Represent the asset (such as a document, image, or video). **Asset** inherits from  [lang.ISendable](../../apis-arkts/arkts-apis/arkts-arkts-lang-isendable-i.md/arkts-arkts-lang-isendable-i.md) and is used to implement cross-thread transfer of asset data.The asset data does not support **Datashare** APIs. Use  [sendableRelationalStore.toSendableAsset](arkts-arkdata-sendablerelationalstore-tosendableasset-f.md#tosendableasset) to create an **Asset**instance. |
 
 ### Types
 
 | Name | Description |
 | --- | --- |
-| [Assets](arkts-arkdata-sendablerelationalstore-assets-t.md) | 表示[Asset](arkts-arkdata-sendablerelationalstore-asset-i.md)类型数据的集合。用于支持Asset数据集合跨线程传递。 |
-| [NonSendableAsset](arkts-arkdata-sendablerelationalstore-nonsendableasset-t.md) | 记录资产附件（文件、图片、视频等类型文件）的相关信息。不支持跨线程传递。 |
-| [NonSendableBucket](arkts-arkdata-sendablerelationalstore-nonsendablebucket-t.md) | 用于存储键值对的类型。不支持跨线程传递。 |
-| [NonSendableValues](arkts-arkdata-sendablerelationalstore-nonsendablevalues-t.md) | 表示[ValueType](arkts-arkdata-relationalstore-valuetype-t.md)数据数组存储。不支持跨线程传递。 |
-| [ValueType](arkts-arkdata-sendablerelationalstore-valuetype-t.md) | 用于表示允许的数据字段类型，接口参数具体类型根据其功能而定。 |
-| [ValuesBucket](arkts-arkdata-sendablerelationalstore-valuesbucket-t.md) | 表示[ValueType](arkts-arkdata-sendablerelationalstore-valuetype-t.md)数据的键值对存储，用于支持ValueType数据跨线程传递。 |
+| [Assets](arkts-arkdata-sendablerelationalstore-assets-t.md) | Represent an array of [Assets](arkts-arkdata-sendablerelationalstore-asset-i.md), which allows assets to be passed across threads. |
+| [NonSendableAsset](arkts-arkdata-sendablerelationalstore-nonsendableasset-t.md) | Represents the asset (such as a document, image, or video) that cannot be passed across threads. |
+| [NonSendableBucket](arkts-arkdata-sendablerelationalstore-nonsendablebucket-t.md) | Represents the KV pair that cannot be passed across threads. |
+| [NonSendableValues](arkts-arkdata-sendablerelationalstore-nonsendablevalues-t.md) | Represents the [ValueType](arkts-arkdata-relationalstore-valuetype-t.md) array that cannot be passed across threads. |
+| [ValueType](arkts-arkdata-sendablerelationalstore-valuetype-t.md) | Defines the types of the value in a KV pair. The type varies with the parameter function. |
+| [ValuesBucket](arkts-arkdata-sendablerelationalstore-valuesbucket-t.md) | Represents the KV pair of the [ValueType](arkts-arkdata-sendablerelationalstore-valuetype-t.md) data that can be passed across threads. |
 

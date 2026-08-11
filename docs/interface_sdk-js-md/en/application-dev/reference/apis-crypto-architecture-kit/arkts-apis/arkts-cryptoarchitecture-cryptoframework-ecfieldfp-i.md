@@ -1,6 +1,6 @@
 # ECFieldFp
 
-指定椭圆曲线的素数域。是[ECField](arkts-cryptoarchitecture-cryptoframework-ecfield-i.md)的子类。
+Defines the prime field of the elliptic curve. It is a child class of [ECField](arkts-cryptoarchitecture-cryptoframework-ecfield-i.md).
 
 **Inheritance/Implementation:** ECFieldFp extends [ECField](arkts-cryptoarchitecture-cryptoframework-ecfield-i.md)
 
@@ -26,7 +26,7 @@ import { cryptoFramework } from 'kits/@kit.CryptoArchitectureKit';
 p: bigint
 ```
 
-指定素数p的值。
+Value of the prime number **p**.
 
 **Type:** bigint
 

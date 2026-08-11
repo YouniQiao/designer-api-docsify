@@ -1,6 +1,6 @@
 # AVErrorCode
 
-[Media错误码](../../../reference/apis-media-kit/errorcode-media.md)类型枚举。
+Enumerates the types of [Media error codes](../../../reference/apis-media-kit/errorcode-media.md).
 
 **Since:** 9
 
@@ -16,7 +16,7 @@
 AVERR_OK = 0
 ```
 
-表示操作成功。
+The operation is successful.
 
 **Since:** 9
 
@@ -34,7 +34,7 @@ AVERR_OK = 0
 AVERR_NO_PERMISSION = 201
 ```
 
-表示无权限执行此操作。
+No permission to perform the operation.
 
 **Since:** 9
 
@@ -52,7 +52,7 @@ AVERR_NO_PERMISSION = 201
 AVERR_INVALID_PARAMETER = 401
 ```
 
-表示传入参数无效。
+Invalid input parameter.
 
 **Since:** 9
 
@@ -70,7 +70,7 @@ AVERR_INVALID_PARAMETER = 401
 AVERR_UNSUPPORT_CAPABILITY = 801
 ```
 
-表示当前版本不支持该API能力。
+Unsupported API.
 
 **Since:** 9
 
@@ -88,7 +88,7 @@ AVERR_UNSUPPORT_CAPABILITY = 801
 AVERR_NO_MEMORY = 5400101
 ```
 
-表示系统内存不足或服务数量达到上限。
+The system memory is insufficient or the number of services reaches the upper limit.
 
 **Since:** 9
 
@@ -106,7 +106,7 @@ AVERR_NO_MEMORY = 5400101
 AVERR_OPERATE_NOT_PERMIT = 5400102
 ```
 
-表示当前状态不允许或无权执行此操作。
+The operation is not allowed in the current state or you do not have the permission to perform the operation.
 
 **Since:** 9
 
@@ -124,7 +124,7 @@ AVERR_OPERATE_NOT_PERMIT = 5400102
 AVERR_IO = 5400103
 ```
 
-表示数据流异常信息。
+The data stream is abnormal.
 
 **Since:** 9
 
@@ -142,7 +142,7 @@ AVERR_IO = 5400103
 AVERR_TIMEOUT = 5400104
 ```
 
-表示系统或网络响应超时。
+The system or network response times out.
 
 **Since:** 9
 
@@ -160,7 +160,7 @@ AVERR_TIMEOUT = 5400104
 AVERR_SERVICE_DIED = 5400105
 ```
 
-表示服务进程死亡。
+The service process is dead.
 
 **Since:** 9
 
@@ -178,7 +178,7 @@ AVERR_SERVICE_DIED = 5400105
 AVERR_UNSUPPORT_FORMAT = 5400106
 ```
 
-表示不支持当前媒体资源的格式。
+The format of the media asset is not supported.
 
 **Since:** 9
 
@@ -196,7 +196,7 @@ AVERR_UNSUPPORT_FORMAT = 5400106
 AVERR_AUDIO_INTERRUPTED = 5400107
 ```
 
-表示音频焦点被抢占。
+The audio focus is interrupted.
 
 **Since:** 11
 
@@ -214,7 +214,7 @@ AVERR_AUDIO_INTERRUPTED = 5400107
 AVERR_IO_HOST_NOT_FOUND = 5411001
 ```
 
-表示解析或链接服务端地址错误。
+Failed to parse the server address or connect to the server.
 
 **Since:** 14
 
@@ -232,7 +232,7 @@ AVERR_IO_HOST_NOT_FOUND = 5411001
 AVERR_IO_CONNECTION_TIMEOUT = 5411002
 ```
 
-表示网络连接超时。
+Network connection times out.
 
 **Since:** 14
 
@@ -250,7 +250,7 @@ AVERR_IO_CONNECTION_TIMEOUT = 5411002
 AVERR_IO_NETWORK_ABNORMAL = 5411003
 ```
 
-表示网络异常导致的数据或链路异常。
+Data or links are abnormal due to network exceptions.
 
 **Since:** 14
 
@@ -268,7 +268,7 @@ AVERR_IO_NETWORK_ABNORMAL = 5411003
 AVERR_IO_NETWORK_UNAVAILABLE = 5411004
 ```
 
-表示网络被禁用。
+The network is disabled.
 
 **Since:** 14
 
@@ -286,7 +286,7 @@ AVERR_IO_NETWORK_UNAVAILABLE = 5411004
 AVERR_IO_NO_PERMISSION = 5411005
 ```
 
-表示无访问权限。
+No access permission.
 
 **Since:** 14
 
@@ -304,7 +304,7 @@ AVERR_IO_NO_PERMISSION = 5411005
 AVERR_IO_REQUEST_DENIED = 5411006
 ```
 
-表示客户端请求参数错误或超出处理能力。
+The client request parameter is incorrect or exceeds the processing capability.
 
 **Since:** 14
 
@@ -322,7 +322,7 @@ AVERR_IO_REQUEST_DENIED = 5411006
 AVERR_IO_RESOURCE_NOT_FOUND = 5411007
 ```
 
-表示无可用网络资源。
+No network resource is available.
 
 **Since:** 14
 
@@ -340,7 +340,7 @@ AVERR_IO_RESOURCE_NOT_FOUND = 5411007
 AVERR_IO_SSL_CLIENT_CERT_NEEDED = 5411008
 ```
 
-表示服务端校验客户端证书失败。
+The server fails to verify the client certificate.
 
 **Since:** 14
 
@@ -358,7 +358,7 @@ AVERR_IO_SSL_CLIENT_CERT_NEEDED = 5411008
 AVERR_IO_SSL_CONNECTION_FAILED = 5411009
 ```
 
-表示SSL连接失败。
+The SSL connection fails.
 
 **Since:** 14
 
@@ -376,7 +376,7 @@ AVERR_IO_SSL_CONNECTION_FAILED = 5411009
 AVERR_IO_SSL_SERVER_CERT_UNTRUSTED = 5411010
 ```
 
-表示客户端校验服务端证书失败。
+The client fails to verify the server certificate.
 
 **Since:** 14
 
@@ -394,7 +394,7 @@ AVERR_IO_SSL_SERVER_CERT_UNTRUSTED = 5411010
 AVERR_IO_UNSUPPORTED_REQUEST = 5411011
 ```
 
-表示网络协议的原因导致请求不受支持。
+The request is not supported due to a network protocol error.
 
 **Since:** 14
 
@@ -412,7 +412,7 @@ AVERR_IO_UNSUPPORTED_REQUEST = 5411011
 AVERR_SEEK_CONTINUOUS_UNSUPPORTED = 5410002
 ```
 
-表示不支持SEEK_CONTINUOUS模式的seek。
+The seek operation in SEEK_CONTINUOUS mode is not supported.
 
 **Since:** 18
 
@@ -430,7 +430,7 @@ AVERR_SEEK_CONTINUOUS_UNSUPPORTED = 5410002
 AVERR_SUPER_RESOLUTION_UNSUPPORTED = 5410003
 ```
 
-表示不支持超分。
+Super resolution is not supported.
 
 **Since:** 18
 
@@ -448,7 +448,7 @@ AVERR_SUPER_RESOLUTION_UNSUPPORTED = 5410003
 AVERR_SUPER_RESOLUTION_NOT_ENABLED = 5410004
 ```
 
-表示未使能超分。
+Super resolution is not enabled.
 
 **Since:** 18
 
@@ -466,7 +466,7 @@ AVERR_SUPER_RESOLUTION_NOT_ENABLED = 5410004
 AVERR_IO_CLEARTEXT_NOT_PERMITTED = 5411012
 ```
 
-表示不允许HTTP明文访问。
+HTTP plaintext access is not allowed.
 
 **Since:** 23
 
@@ -484,7 +484,7 @@ AVERR_IO_CLEARTEXT_NOT_PERMITTED = 5411012
 AVERR_PARAMETER_OUT_OF_RANGE = 5400108
 ```
 
-表示参数超过取值范围。
+The parameter value is out of range.
 
 **Since:** 20
 

@@ -1,6 +1,6 @@
 # CircleStyleOptions
 
-圆环样式的参数说明。
+Defines the options of active circle style.
 
 **Since:** 23
 
@@ -16,7 +16,7 @@
 color?: ResourceColor
 ```
 
-背景圆环颜色。默认值：'# 33182431'。
+The circle color when cell is active state.Default value: '#33182431'.
 
 **Type:** [ResourceColor](arkts-arkui-resourcecolor-t.md)
 
@@ -36,7 +36,7 @@ color?: ResourceColor
 enableForeground?: boolean
 ```
 
-背景圆环是否显示在宫格圆点上层。true：背景圆环显示在宫格圆点上层，遮盖宫格圆点；false：背景圆环显示在宫格圆点下层，不遮盖宫格圆点。默认值：false。
+Enable the activity circle style displayed in the foreground.Default value: false.
 
 **Type:** boolean
 
@@ -56,7 +56,7 @@ enableForeground?: boolean
 enableWaveEffect?: boolean
 ```
 
-选中宫格圆点后的波浪效果开关。true：显示波浪效果；false：不显示波浪效果。默认值：true。
+Enable the wave effect when cell is active.Default value: true.
 
 **Type:** boolean
 
@@ -76,7 +76,7 @@ enableWaveEffect?: boolean
 radius?: LengthMetrics
 ```
 
-背景圆环的半径。默认值：circleRadius的1.833（即11/6）倍。
+The circle radius when cell is active state.Default value: 1.833 (11/6) times of circleRadius.
 
 **Type:** [LengthMetrics](arkts-arkui-graphics-lengthmetrics-c.md)
 

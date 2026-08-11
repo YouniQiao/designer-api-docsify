@@ -1,8 +1,7 @@
 # UploadTask
 
-上传任务，使用下列方法前，需要先获取UploadTask对象，promise形式通过  
-[request.uploadFile](arkts-basicservices-request-uploadfile-f.md#uploadfile)获取，callback形式通过  
-[request.uploadFile](arkts-basicservices-request-uploadfile-f.md#uploadfile)获取。
+Implements file uploads. Before using any APIs of this class, you must obtain an **UploadTask** object, from a promise through [request.uploadFile](arkts-basicservices-request-uploadfile-f.md#uploadfile) or from a callback through   
+[request.uploadFile](arkts-basicservices-request-uploadfile-f.md#uploadfile).
 
 **Since:** 6
 
@@ -24,11 +23,12 @@ import { request } from 'kits/@kit.BasicServicesKit';
 delete(callback: AsyncCallback<boolean>): void
 ```
 
-移除上传的任务，使用callback异步回调。
+Deletes the upload task. This API uses an asynchronous callback to return the result.
 
-> **说明：**
+> **NOTE：**
 > 
-> 由于不存在401报错场景，在api12中 `401 the parameters check fails` 这个错误码被移除。
+> The scenarios for triggering error code **401 the parameters check fails** do not exist. Therefore, this error
+> code is removed from API version 12.
 
 **Since:** 9
 
@@ -44,13 +44,13 @@ delete(callback: AsyncCallback<boolean>): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;boolean&gt; | Yes | 回调函数。返回true表示移除上传任务成功；返回false表示移除上传任务失败。 |
+| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;boolean&gt; | Yes | Callback used to return the result. The value **true** indicates that the operation is successful; **false** indicates the opposite. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 201 | The permissions check fails. |
+| [201](../../errorcode-universal.md#201-permission-denied) | The permissions check fails. |
 
 ## Examples
 
@@ -70,11 +70,12 @@ uploadTask.delete((err: BusinessError, result: boolean) => {
 delete(): Promise<boolean>
 ```
 
-移除上传的任务，使用Promise异步回调。
+Deletes the upload task. This API uses a promise to return the result.
 
-> **说明：**
+> **NOTE：**
 > 
-> 由于不存在401报错场景，在api12中 `401 the parameters check fails` 这个错误码被移除。
+> The scenarios for triggering error code **401 the parameters check fails** do not exist. Therefore, this error
+> code is removed from API version 12.
 
 **Since:** 9
 
@@ -90,13 +91,13 @@ delete(): Promise<boolean>
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;boolean&gt; | Promise对象。返回true表示移除上传任务成功；返回false表示移除上传任务失败。 |
+| Promise&lt;boolean&gt; | Promise used to return the result. The value **true** indicates that the operation is successful; **false** indicates the opposite. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 201 | The permissions check fails. |
+| [201](../../errorcode-universal.md#201-permission-denied) | The permissions check fails. |
 
 ## Examples
 
@@ -114,7 +115,7 @@ uploadTask.delete().then((result: boolean) => {
 off(type: 'progress', callback?: (uploadedSize: long, totalSize: long) => void): void
 ```
 
-取消订阅上传任务进度事件。
+Unsubscribes from upload progress events.
 
 **Since:** 6
 
@@ -128,14 +129,14 @@ off(type: 'progress', callback?: (uploadedSize: long, totalSize: long) => void):
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'progress' | Yes | 取消订阅的事件类型。&lt;br&gt;- 取值为'progress'，表示上传的进度信息。 |
-| callback | (uploadedSize: long, totalSize: long) =&gt; void | No | 需要取消订阅的回调函数。若无此参数，则取消订阅当前类型的所有回调函数。 |
+| type | 'progress' | Yes | Event type.&lt;br&gt;- **'progress'**: upload progress. |
+| callback | (uploadedSize: long, totalSize: long) =&gt; void | No | Callback to unregister. If this parameter is not specified, all callbacks of the current type will be unregistered. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | The parameters check fails. Possible causes: &lt;br&gt; 1. Missing mandatory parameters. &lt;br&gt; 2. Incorrect parameter type. &lt;br&gt; 3. Parameter verification failed.<br>**Applicable version:** 12 and later |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | The parameters check fails. Possible causes: &lt;br&gt; 1. Missing mandatory parameters. &lt;br&gt; 2. Incorrect parameter type. &lt;br&gt; 3. Parameter verification failed.<br>**Applicable version:** 12 and later |
 
 ## Examples
 
@@ -160,7 +161,7 @@ uploadTask.off('progress');
 off(type: 'headerReceive', callback?: (header: object) => void): void
 ```
 
-取消订阅上传任务HTTP响应事件。
+Unsubscribes from HTTP response events for the upload task.
 
 **Since:** 7
 
@@ -174,14 +175,14 @@ off(type: 'headerReceive', callback?: (header: object) => void): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'headerReceive' | Yes | 取消订阅的事件类型。&lt;br&gt;- 取值为'headerReceive'，表示HTTP请求接收到响应。 |
-| callback | (header: object) =&gt; void | No | 需要取消订阅的回调函数。若无此参数，则取消订阅当前类型的所有回调函数。 |
+| type | 'headerReceive' | Yes | Event type.&lt;br&gt;- **'headerReceive'**: The HTTP request receives a response. |
+| callback | (header: object) =&gt; void | No | Callback to unregister. If this parameter is not specified, all callbacks of the current type will be unregistered. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | The parameters check fails. Possible causes: &lt;br&gt; 1. Missing mandatory parameters. &lt;br&gt; 2. Incorrect parameter type. &lt;br&gt; 3. Parameter verification failed.<br>**Applicable version:** 12 and later |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | The parameters check fails. Possible causes: &lt;br&gt; 1. Missing mandatory parameters. &lt;br&gt; 2. Incorrect parameter type. &lt;br&gt; 3. Parameter verification failed.<br>**Applicable version:** 12 and later |
 
 ## Examples
 
@@ -206,7 +207,7 @@ uploadTask.off('headerReceive');
 off(type: 'complete' | 'fail', callback?: Callback<Array<TaskState>>): void
 ```
 
-取消订阅上传任务的完成或失败事件。
+Unsubscribes from upload completion or failure events.
 
 **Since:** 9
 
@@ -220,14 +221,14 @@ off(type: 'complete' | 'fail', callback?: Callback<Array<TaskState>>): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'complete' \| 'fail' | Yes | 取消订阅的事件类型。&lt;br&gt;- 取值为'complete'，表示上传任务完成。&lt;br&gt;- 取值为'fail'，表示上传任务失败。 |
-| callback | [Callback](arkts-basicservices-base-callback-i.md)&lt;Array&lt;TaskState&gt;&gt; | No | 需要取消订阅的回调函数。若无此参数，则取消订阅当前类型的所有回调函数。 |
+| type | 'complete' \| 'fail' | Yes | Event type.&lt;br&gt;- **'complete'**: upload task completion.&lt;br&gt;- **'fail'**: upload task failure. |
+| callback | [Callback](arkts-basicservices-base-callback-i.md)&lt;Array&lt;TaskState&gt;&gt; | No | Callback to unregister. If this parameter is not specified, all callbacks of the current type will be unregistered. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | the parameters check fails. Possible causes: &lt;br&gt; 1. Missing mandatory parameters. &lt;br&gt; 2. Incorrect parameter type. &lt;br&gt; 3. Parameter verification failed.<br>**Applicable version:** 12 and later |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | the parameters check fails. Possible causes: &lt;br&gt; 1. Missing mandatory parameters. &lt;br&gt; 2. Incorrect parameter type. &lt;br&gt; 3. Parameter verification failed.<br>**Applicable version:** 12 and later |
 
 ## Examples
 
@@ -277,7 +278,7 @@ uploadTask.off('fail');
 off(type: 'complete' | 'fail', callback?: Callback<Array<TaskState>>): void
 ```
 
-取消订阅上传任务的完成或失败事件。
+Unsubscribes from upload completion or failure events.
 
 **Since:** 9
 
@@ -291,14 +292,14 @@ off(type: 'complete' | 'fail', callback?: Callback<Array<TaskState>>): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'complete' \| 'fail' | Yes | 取消订阅的事件类型。&lt;br&gt;- 取值为'complete'，表示上传任务完成。&lt;br&gt;- 取值为'fail'，表示上传任务失败。 |
-| callback | [Callback](arkts-basicservices-base-callback-i.md)&lt;Array&lt;TaskState&gt;&gt; | No | 需要取消订阅的回调函数。若无此参数，则取消订阅当前类型的所有回调函数。 |
+| type | 'complete' \| 'fail' | Yes | Event type.&lt;br&gt;- **'complete'**: upload task completion.&lt;br&gt;- **'fail'**: upload task failure. |
+| callback | [Callback](arkts-basicservices-base-callback-i.md)&lt;Array&lt;TaskState&gt;&gt; | No | Callback to unregister. If this parameter is not specified, all callbacks of the current type will be unregistered. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | the parameters check fails. Possible causes: &lt;br&gt; 1. Missing mandatory parameters. &lt;br&gt; 2. Incorrect parameter type. &lt;br&gt; 3. Parameter verification failed.<br>**Applicable version:** 12 and later |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | the parameters check fails. Possible causes: &lt;br&gt; 1. Missing mandatory parameters. &lt;br&gt; 2. Incorrect parameter type. &lt;br&gt; 3. Parameter verification failed.<br>**Applicable version:** 12 and later |
 
 ## Examples
 
@@ -436,11 +437,12 @@ Called when the current upload session is in process.
 on(type: 'progress', callback: (uploadedSize: long, totalSize: long) => void): void
 ```
 
-订阅上传任务进度事件，使用callback异步回调。
+Subscribes to upload progress events. This API uses an asynchronous callback to return the result.
 
-> **说明：**
+> **NOTE：**
 > 
-> 应用处于后台时，为满足功耗性能要求，不支持调用此接口进行回调。
+> To maintain a balance between power consumption and performance, this API cannot be called when the application
+> is running in the background.
 
 **Since:** 6
 
@@ -454,14 +456,14 @@ on(type: 'progress', callback: (uploadedSize: long, totalSize: long) => void): v
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'progress' | Yes | 订阅的事件类型。取值为'progress'，表示上传的进度信息，任务进度有进展时触发该事件。 |
-| callback | (uploadedSize: long, totalSize: long) =&gt; void | Yes | 上传任务进度的回调函数，返回已上传文件大小和上传文件总大小，单位为字节（B）。 |
+| type | 'progress' | Yes | Event type. The value is fixed at **'progress'**, indicating upload progress. |
+| callback | (uploadedSize: long, totalSize: long) =&gt; void | Yes | Callback used to return the size of the uploaded file and the total size of the file to upload, in bytes. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | The parameters check fails. Possible causes: &lt;br&gt; 1. Missing mandatory parameters. &lt;br&gt; 2. Incorrect parameter type. &lt;br&gt; 3. Parameter verification failed.<br>**Applicable version:** 12 and later |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | The parameters check fails. Possible causes: &lt;br&gt; 1. Missing mandatory parameters. &lt;br&gt; 2. Incorrect parameter type. &lt;br&gt; 3. Parameter verification failed.<br>**Applicable version:** 12 and later |
 
 ## Examples
 
@@ -478,7 +480,7 @@ uploadTask.on('progress', upProgressCallback);
 on(type: 'headerReceive', callback: (header: object) => void): void
 ```
 
-订阅上传任务HTTP响应事件，使用callback异步回调。
+Subscribes to HTTP response events for the upload task.This API uses an asynchronous callback to return the result.
 
 **Since:** 7
 
@@ -492,14 +494,14 @@ on(type: 'headerReceive', callback: (header: object) => void): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'headerReceive' | Yes | 订阅的事件类型。&lt;br&gt;- 取值为'headerReceive'，HTTP请求接收到响应时触发该事件。 |
-| callback | (header: object) =&gt; void | Yes | HTTP Response事件的回调函数，返回响应请求内容。 |
+| type | 'headerReceive' | Yes | Event type.&lt;br&gt;- **'headerReceive'**: The HTTP request receives a response. |
+| callback | (header: object) =&gt; void | Yes | Callback used to return the response content. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | The parameters check fails. Possible causes: &lt;br&gt; 1. Missing mandatory parameters. &lt;br&gt; 2. Incorrect parameter type. &lt;br&gt; 3. Parameter verification failed.<br>**Applicable version:** 12 and later |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | The parameters check fails. Possible causes: &lt;br&gt; 1. Missing mandatory parameters. &lt;br&gt; 2. Incorrect parameter type. &lt;br&gt; 3. Parameter verification failed.<br>**Applicable version:** 12 and later |
 
 ## Examples
 
@@ -516,7 +518,7 @@ uploadTask.on('headerReceive', headerCallback);
 on(type: 'complete' | 'fail', callback: Callback<Array<TaskState>>): void
 ```
 
-订阅上传任务完成或失败事件，使用callback异步回调。
+Subscribes to upload completion or failure events. This API uses an asynchronous callback to return the result.
 
 **Since:** 9
 
@@ -530,14 +532,14 @@ on(type: 'complete' | 'fail', callback: Callback<Array<TaskState>>): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'complete' \| 'fail' | Yes | 订阅的事件类型，支持的事件包括：`'complete'`\|`'fail'`。&lt;br/&gt;- `'complete'`：表示上传任务完成，任务完成时触发该 事件。 &lt;br/&gt;- `'fail'`：表示上传任务失败，任务失败时触发该事件。 |
-| callback | [Callback](arkts-basicservices-base-callback-i.md)&lt;Array&lt;TaskState&gt;&gt; | Yes | 上传任务完成或失败的回调函数。返回上传任务的任务状态信息。 |
+| type | 'complete' \| 'fail' | Yes | Type of the event to subscribe to. |
+| callback | [Callback](arkts-basicservices-base-callback-i.md)&lt;Array&lt;TaskState&gt;&gt; | Yes | Callback used to return the state of the upload task. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | The parameters check fails. Possible causes: &lt;br&gt; 1. Missing mandatory parameters. &lt;br&gt; 2. Incorrect parameter type. &lt;br&gt; 3. Parameter verification failed.<br>**Applicable version:** 12 and later |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | The parameters check fails. Possible causes: &lt;br&gt; 1. Missing mandatory parameters. &lt;br&gt; 2. Incorrect parameter type. &lt;br&gt; 3. Parameter verification failed.<br>**Applicable version:** 12 and later |
 
 ## Examples
 
@@ -563,7 +565,7 @@ uploadTask.on('fail', upFailCallback);
 on(type: 'complete' | 'fail', callback: Callback<Array<TaskState>>): void
 ```
 
-订阅上传任务完成或失败事件，使用callback异步回调。
+Subscribes to upload completion or failure events. This API uses an asynchronous callback to return the result.
 
 **Since:** 9
 
@@ -577,14 +579,14 @@ on(type: 'complete' | 'fail', callback: Callback<Array<TaskState>>): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'complete' \| 'fail' | Yes | 订阅的事件类型，支持的事件包括：`'complete'`\|`'fail'`。&lt;br/&gt;- `'complete'`：表示上传任务完成，任务完成时触发该 事件。 &lt;br/&gt;- `'fail'`：表示上传任务失败，任务失败时触发该事件。 |
-| callback | [Callback](arkts-basicservices-base-callback-i.md)&lt;Array&lt;TaskState&gt;&gt; | Yes | 上传任务完成或失败的回调函数。返回上传任务的任务状态信息。 |
+| type | 'complete' \| 'fail' | Yes | Type of the event to subscribe to. |
+| callback | [Callback](arkts-basicservices-base-callback-i.md)&lt;Array&lt;TaskState&gt;&gt; | Yes | Callback used to return the state of the upload task. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | The parameters check fails. Possible causes: &lt;br&gt; 1. Missing mandatory parameters. &lt;br&gt; 2. Incorrect parameter type. &lt;br&gt; 3. Parameter verification failed.<br>**Applicable version:** 12 and later |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | The parameters check fails. Possible causes: &lt;br&gt; 1. Missing mandatory parameters. &lt;br&gt; 2. Incorrect parameter type. &lt;br&gt; 3. Parameter verification failed.<br>**Applicable version:** 12 and later |
 
 ## Examples
 
@@ -698,12 +700,7 @@ Called when the current upload session is in process.
 remove(callback: AsyncCallback<boolean>): void
 ```
 
-移除上传的任务，使用callback异步回调。
-
-> **说明：**
-> 
-> 从API version 6开始支持，从API version 9开始废弃，建议使用
-> [delete](arkts-basicservices-request-uploadtask-i.md#delete)替代。
+Deletes the upload task. This API uses an asynchronous callback to return the result.
 
 **Since:** 6
 
@@ -723,13 +720,13 @@ remove(callback: AsyncCallback<boolean>): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;boolean&gt; | Yes | 回调函数。返回true表示移除上传任务成功；返回false表示移除上传任务失败。 |
+| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;boolean&gt; | Yes | Callback used to return the result. The value **true** indicates that the operation is successful; **false** indicates the opposite. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 201 | The permissions check fails. |
+| [201](../../errorcode-universal.md#201-permission-denied) | The permissions check fails. |
 
 ## Examples
 
@@ -751,11 +748,7 @@ uploadTask.remove((err: BusinessError, result: boolean) => {
 remove(): Promise<boolean>
 ```
 
-移除上传的任务，使用Promise异步回调。
-
-> **说明：**
-> 
-> 从API version 6开始支持，从API version 9开始废弃，建议使用[delete](arkts-basicservices-request-uploadtask-i.md#delete)替代。
+Deletes the upload task. This API uses a promise to return the result.
 
 **Since:** 6
 
@@ -775,13 +768,13 @@ remove(): Promise<boolean>
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;boolean&gt; | 使用Promise方式异步回调，返回true表示移除上传任务成功；返回false表示移除上传任务失败。 |
+| Promise&lt;boolean&gt; | Promise used to return the result. The value **true** indicates that the operation is successful; **false** indicates the opposite. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 201 | The permissions check fails. |
+| [201](../../errorcode-universal.md#201-permission-denied) | The permissions check fails. |
 
 ## Examples
 

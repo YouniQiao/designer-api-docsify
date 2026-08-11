@@ -6,7 +6,7 @@
 function registerVsyncCallback(callback: (info: string) => void): void
 ```
 
-为profiler注册vsync回调。
+Registers vsync callback for profiler.
 
 **Since:** 8
 
@@ -22,5 +22,5 @@ function registerVsyncCallback(callback: (info: string) => void): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | (info: string) =&gt; void | Yes | 回调信息为带有ui更新信息的json字符串。 |
+| callback | (info: string) =&gt; void | Yes | the callback info is json string with ui update info. |
 

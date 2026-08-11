@@ -1,7 +1,6 @@
 # @ohos.distributedsched.abilityConnectionManager
 
-abilityConnectionManager模块提供了应用协同接口管理能力。设备组网成功（需登录同账号、双端打开蓝牙）后，系统应用和三方应用可以跨设备拉起同应用的一个  
-[UIAbility](../../apis-ability-kit/arkts-apis/arkts-app-ability-uiability.md/arkts-app-ability-uiability.md)，拉起并连接成功后可实现跨设备数据传输（文本信息）。
+The **abilityConnectionManager** module provides APIs for cross-device connection management. After successful networking between devices (login with the same account and enabling of Bluetooth on the devices), a system application and a third-party application can start a [UIAbility](../../apis-ability-kit/arkts-apis/arkts-app-ability-uiability.md/arkts-app-ability-uiability.md) of the same application across these devices to establish a Bluetooth connection. This way, data (specifically, text) can be transmitted across the devices over the connection.
 
 **Since:** 18
 
@@ -25,31 +24,32 @@ import { abilityConnectionManager } from 'kits/@kit.DistributedServiceKit';
 
 | Name | Description |
 | --- | --- |
-| [acceptConnect](arkts-distributedservice-abilityconnectionmanager-acceptconnect-f.md#acceptconnect) | 设备B上的应用，在创建协同会话成功并获得会话ID后，调用acceptConnect()方法接受连接。使用Promise异步回调。 |
-| [connect](arkts-distributedservice-abilityconnectionmanager-connect-f.md#connect) | 创建协同会话成功并获得会话ID后，设备A上可进行UIAbility的连接。使用Promise异步回调。 |
-| [createAbilityConnectionSession](arkts-distributedservice-abilityconnectionmanager-createabilityconnectionsession-f.md#createabilityconnectionsession) | 创建应用间的协同会话。 |
-| [destroyAbilityConnectionSession](arkts-distributedservice-abilityconnectionmanager-destroyabilityconnectionsession-f.md#destroyabilityconnectionsession) | 销毁应用间的协同会话。 |
-| [disconnect](arkts-distributedservice-abilityconnectionmanager-disconnect-f.md#disconnect) | 当协同业务执行完毕后，协同双端的任意一台设备，应断开UIAbility的连接，结束协同状态。 |
-| [getPeerInfoById](arkts-distributedservice-abilityconnectionmanager-getpeerinfobyid-f.md#getpeerinfobyid) | 获取指定会话中对端应用信息。 |
-| [off](arkts-distributedservice-abilityconnectionmanager-off-f.md#off) | 取消connect事件的回调监听。 |
-| [off](arkts-distributedservice-abilityconnectionmanager-off-f.md#off-1) | 取消disconnect事件的回调监听。 |
-| [off](arkts-distributedservice-abilityconnectionmanager-off-f.md#off-2) | 取消receiveMessage事件的回调监听。 |
-| [off](arkts-distributedservice-abilityconnectionmanager-off-f.md#off-3) | 取消receiveData事件的回调监听。 |
+| [acceptConnect](arkts-distributedservice-abilityconnectionmanager-acceptconnect-f.md#acceptconnect) | Accepts the UIAbility connection after a collaboration session is set up and the session ID is obtained. |
+| [connect](arkts-distributedservice-abilityconnectionmanager-connect-f.md#connect) | Sets up a UIAbility connection after a collaboration session is created and the session ID is obtained. This API uses a promise to return the result. |
+| [createAbilityConnectionSession](arkts-distributedservice-abilityconnectionmanager-createabilityconnectionsession-f.md#createabilityconnectionsession) | Creates a collaboration session between applications. |
+| [destroyAbilityConnectionSession](arkts-distributedservice-abilityconnectionmanager-destroyabilityconnectionsession-f.md#destroyabilityconnectionsession) | Destroys a collaboration session between applications. |
+| [disconnect](arkts-distributedservice-abilityconnectionmanager-disconnect-f.md#disconnect) | Disconnects the UIAbility connection to end the collaboration session. |
+| [getPeerInfoById](arkts-distributedservice-abilityconnectionmanager-getpeerinfobyid-f.md#getpeerinfobyid) | Obtains information about the peer application in the specified session. |
+| [getPeerInfoById](arkts-distributedservice-abilityconnectionmanager-getpeerinfobyid-f.md#getpeerinfobyid-1) | Get the application information in the ability connection session |
+| [off](arkts-distributedservice-abilityconnectionmanager-off-f.md#off) | Disables listening for **connect** events. |
+| [off](arkts-distributedservice-abilityconnectionmanager-off-f.md#off-1) | Disables listening for **disconnect** events. |
+| [off](arkts-distributedservice-abilityconnectionmanager-off-f.md#off-2) | Disables listening for **receiveMessage** events. |
+| [off](arkts-distributedservice-abilityconnectionmanager-off-f.md#off-3) | Disables listening for **receiveData** events. |
 | [offConnect](arkts-distributedservice-abilityconnectionmanager-offconnect-f.md#offconnect) | Unregisters connect event. |
 | [offDisconnect](arkts-distributedservice-abilityconnectionmanager-offdisconnect-f.md#offdisconnect) | Unregisters disconnect event. |
 | [offReceiveData](arkts-distributedservice-abilityconnectionmanager-offreceivedata-f.md#offreceivedata) | Unregisters receiveData event. |
 | [offReceiveMessage](arkts-distributedservice-abilityconnectionmanager-offreceivemessage-f.md#offreceivemessage) | Unregisters receiveMessage event. |
-| [on](arkts-distributedservice-abilityconnectionmanager-on-f.md#on) | 注册connect事件的回调监听。使用callback异步回调。 |
-| [on](arkts-distributedservice-abilityconnectionmanager-on-f.md#on-1) | 注册disconnect事件的回调监听。 |
-| [on](arkts-distributedservice-abilityconnectionmanager-on-f.md#on-2) | 注册receiveMessage事件的回调监听。 |
-| [on](arkts-distributedservice-abilityconnectionmanager-on-f.md#on-3) | 注册receiveData事件的回调监听。 |
+| [on](arkts-distributedservice-abilityconnectionmanager-on-f.md#on) | Enables listening for **connect** events. This API uses an asynchronous callback to return the result. |
+| [on](arkts-distributedservice-abilityconnectionmanager-on-f.md#on-1) | Enables listening for **disconnect** events. |
+| [on](arkts-distributedservice-abilityconnectionmanager-on-f.md#on-2) | Enables listening for **receiveMessage** events. |
+| [on](arkts-distributedservice-abilityconnectionmanager-on-f.md#on-3) | Enables listening for **receiveData** events. |
 | [onConnect](arkts-distributedservice-abilityconnectionmanager-onconnect-f.md#onconnect) | Registers connect event. |
 | [onDisconnect](arkts-distributedservice-abilityconnectionmanager-ondisconnect-f.md#ondisconnect) | Registers disconnect event. |
 | [onReceiveData](arkts-distributedservice-abilityconnectionmanager-onreceivedata-f.md#onreceivedata) | Registers receiveData event. |
 | [onReceiveMessage](arkts-distributedservice-abilityconnectionmanager-onreceivemessage-f.md#onreceivemessage) | Registers receiveMessage event. |
-| [reject](arkts-distributedservice-abilityconnectionmanager-reject-f.md#reject) | 在跨端应用协同过程中，在拒绝对端的连接请求后，向对端发送拒绝原因。 |
-| [sendData](arkts-distributedservice-abilityconnectionmanager-senddata-f.md#senddata) | 应用连接成功后，设备A或设备B可向对端设备发送[ArrayBuffer](../../../arkts-utils/arraybuffer-object.md)字节流。 |
-| [sendMessage](arkts-distributedservice-abilityconnectionmanager-sendmessage-f.md#sendmessage) | 应用连接成功后，设备A或设备B可向对端设备发送文本信息。 |
+| [reject](arkts-distributedservice-abilityconnectionmanager-reject-f.md#reject) | Rejects a connection request in a cross-device collaboration session. After a connection request sent from the peer application is rejected, a rejection reason is returned. |
+| [sendData](arkts-distributedservice-abilityconnectionmanager-senddata-f.md#senddata) | Sends [ArrayBuffer](../../../arkts-utils/arraybuffer-object.md) byte streams from one device to another after a connection is successfully established. |
+| [sendMessage](arkts-distributedservice-abilityconnectionmanager-sendmessage-f.md#sendmessage) | Sends text messages after a collaboration session is set up. |
 
 <!--Del-->
 ### Functions（系统接口）
@@ -59,12 +59,12 @@ import { abilityConnectionManager } from 'kits/@kit.DistributedServiceKit';
 | [createStream](arkts-distributedservice-abilityconnectionmanager-createstream-f-sys.md#createstream) | Creating a Stream. |
 | [destroyStream](arkts-distributedservice-abilityconnectionmanager-destroystream-f-sys.md#destroystream) | Destroy the Stream. |
 | [getSurfaceId](arkts-distributedservice-abilityconnectionmanager-getsurfaceid-f-sys.md#getsurfaceid) | Obtains the transmission surface. |
-| [off](arkts-distributedservice-abilityconnectionmanager-off-f-sys.md#off-4) | 取消receiveImage事件的回调监听。 |
-| [off](arkts-distributedservice-abilityconnectionmanager-off-f-sys.md#off-5) | 取消collaborateEvent事件的回调监听。 |
+| [off](arkts-distributedservice-abilityconnectionmanager-off-f-sys.md#off-4) | Unregisters receiveImage event. |
+| [off](arkts-distributedservice-abilityconnectionmanager-off-f-sys.md#off-5) | Unregisters collaborateEvent event. |
 | [offCollaborateEvent](arkts-distributedservice-abilityconnectionmanager-offcollaborateevent-f-sys.md#offcollaborateevent) | Unregisters collaborateEvent event. |
 | [offReceiveImage](arkts-distributedservice-abilityconnectionmanager-offreceiveimage-f-sys.md#offreceiveimage) | Unregisters receiveImage event. |
-| [on](arkts-distributedservice-abilityconnectionmanager-on-f-sys.md#on-4) | 注册receiveImage事件的回调监听。 |
-| [on](arkts-distributedservice-abilityconnectionmanager-on-f-sys.md#on-5) | 注册collaborateEvent事件的回调监听。 |
+| [on](arkts-distributedservice-abilityconnectionmanager-on-f-sys.md#on-4) | Registers receiveImage event. |
+| [on](arkts-distributedservice-abilityconnectionmanager-on-f-sys.md#on-5) | Registers collaborateEvent event. |
 | [onCollaborateEvent](arkts-distributedservice-abilityconnectionmanager-oncollaborateevent-f-sys.md#oncollaborateevent) | Registers collaborateEvent event. |
 | [onReceiveImage](arkts-distributedservice-abilityconnectionmanager-onreceiveimage-f-sys.md#onreceiveimage) | Registers receiveImage event. |
 | [sendImage](arkts-distributedservice-abilityconnectionmanager-sendimage-f-sys.md#sendimage) | Send image data. |
@@ -78,19 +78,19 @@ import { abilityConnectionManager } from 'kits/@kit.DistributedServiceKit';
 
 | Name | Description |
 | --- | --- |
-| [CollaborateEventInfo](arkts-distributedservice-abilityconnectionmanager-collaborateeventinfo-i.md) | 协同事件信息。 |
-| [ConnectOptions](arkts-distributedservice-abilityconnectionmanager-connectoptions-i.md) | 应用连接时所需的连接选项。 |
-| [ConnectResult](arkts-distributedservice-abilityconnectionmanager-connectresult-i.md) | 连接的结果。 |
-| [EventCallbackInfo](arkts-distributedservice-abilityconnectionmanager-eventcallbackinfo-i.md) | 回调方法的接收信息。 |
-| [PeerInfo](arkts-distributedservice-abilityconnectionmanager-peerinfo-i.md) | 应用协同信息。 |
+| [CollaborateEventInfo](arkts-distributedservice-abilityconnectionmanager-collaborateeventinfo-i.md) | Collaboration event information. |
+| [ConnectOptions](arkts-distributedservice-abilityconnectionmanager-connectoptions-i.md) | Connection options for the application. |
+| [ConnectResult](arkts-distributedservice-abilityconnectionmanager-connectresult-i.md) | Defines the connection result. |
+| [EventCallbackInfo](arkts-distributedservice-abilityconnectionmanager-eventcallbackinfo-i.md) | Defines the event callback information. |
+| [PeerInfo](arkts-distributedservice-abilityconnectionmanager-peerinfo-i.md) | Defines the application collaboration information. |
 
 <!--Del-->
 ### Interfaces（系统接口）
 
 | Name | Description |
 | --- | --- |
-| [ConnectOptions](arkts-distributedservice-abilityconnectionmanager-connectoptions-i-sys.md) | 应用连接时所需的连接选项。 |
-| [EventCallbackInfo](arkts-distributedservice-abilityconnectionmanager-eventcallbackinfo-i-sys.md) | 回调方法的接收信息。 |
+| [ConnectOptions](arkts-distributedservice-abilityconnectionmanager-connectoptions-i-sys.md) | Connection options for the application. |
+| [EventCallbackInfo](arkts-distributedservice-abilityconnectionmanager-eventcallbackinfo-i-sys.md) | Defines the event callback information. |
 | [StreamParam](arkts-distributedservice-abilityconnectionmanager-streamparam-i-sys.md) | Streaming configuration parameters. |
 | [SurfaceParam](arkts-distributedservice-abilityconnectionmanager-surfaceparam-i-sys.md) | Surface configuration parameters. |
 <!--DelEnd-->
@@ -99,21 +99,21 @@ import { abilityConnectionManager } from 'kits/@kit.DistributedServiceKit';
 
 | Name | Description |
 | --- | --- |
-| [CollaborateEventType](arkts-distributedservice-abilityconnectionmanager-collaborateeventtype-e.md) | 协同事件类型的枚举。 |
-| [CollaborationKeys](arkts-distributedservice-abilityconnectionmanager-collaborationkeys-e.md) | 应用协作键值的枚举。 |
-| [CollaborationValues](arkts-distributedservice-abilityconnectionmanager-collaborationvalues-e.md) | 应用协作键值的枚举。 |
-| [ConnectErrorCode](arkts-distributedservice-abilityconnectionmanager-connecterrorcode-e.md) | 连接的错误码。 |
-| [DisconnectReason](arkts-distributedservice-abilityconnectionmanager-disconnectreason-e.md) | 当前断连原因的枚举。 |
-| [StartOptionParams](arkts-distributedservice-abilityconnectionmanager-startoptionparams-e.md) | 启动选项参数的枚举。 |
+| [CollaborateEventType](arkts-distributedservice-abilityconnectionmanager-collaborateeventtype-e.md) | Enumerates collaboration event types. |
+| [CollaborationKeys](arkts-distributedservice-abilityconnectionmanager-collaborationkeys-e.md) | Enumerates application collaboration key values. |
+| [CollaborationValues](arkts-distributedservice-abilityconnectionmanager-collaborationvalues-e.md) | Enumerates application collaboration key values. |
+| [ConnectErrorCode](arkts-distributedservice-abilityconnectionmanager-connecterrorcode-e.md) | Enumerates connection error codes. |
+| [DisconnectReason](arkts-distributedservice-abilityconnectionmanager-disconnectreason-e.md) | Enumerates the disconnection reasons. |
+| [StartOptionParams](arkts-distributedservice-abilityconnectionmanager-startoptionparams-e.md) | Enumerates application start options. |
 
 <!--Del-->
 ### Enums（系统接口）
 
 | Name | Description |
 | --- | --- |
-| [FlipOptions](arkts-distributedservice-abilityconnectionmanager-flipoptions-e-sys.md) | 翻转选项。 |
-| [StartOptionParams](arkts-distributedservice-abilityconnectionmanager-startoptionparams-e-sys.md) | 启动选项参数的枚举。 |
-| [StreamRole](arkts-distributedservice-abilityconnectionmanager-streamrole-e-sys.md) | 流传输角色。 |
-| [VideoPixelFormat](arkts-distributedservice-abilityconnectionmanager-videopixelformat-e-sys.md) | 视频像素格式配置选项。 |
+| [FlipOptions](arkts-distributedservice-abilityconnectionmanager-flipoptions-e-sys.md) | Flip option. |
+| [StartOptionParams](arkts-distributedservice-abilityconnectionmanager-startoptionparams-e-sys.md) | Enumerates application start options. |
+| [StreamRole](arkts-distributedservice-abilityconnectionmanager-streamrole-e-sys.md) | Stream transmission role. |
+| [VideoPixelFormat](arkts-distributedservice-abilityconnectionmanager-videopixelformat-e-sys.md) | Video pixelFormat Configuration Options. |
 <!--DelEnd-->
 

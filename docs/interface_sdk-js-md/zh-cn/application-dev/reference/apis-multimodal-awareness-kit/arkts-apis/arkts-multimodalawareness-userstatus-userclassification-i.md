@@ -1,6 +1,6 @@
 # UserClassification
 
-Defines the user age group detection result.
+表示用户年龄群组分类检测结果。
 
 **起始版本：** 20
 
@@ -12,19 +12,13 @@ Defines the user age group detection result.
 
 **系统能力：** SystemCapability.MultimodalAwareness.UserStatus
 
-## 导入模块
-
-```TypeScript
-import { userStatus } from 'kits/@kit.MultimodalAwarenessKit';
-```
-
 ## ageGroup
 
 ```TypeScript
 ageGroup?: UserAgeGroup
 ```
 
-User age group, for example, child or adult.
+表示具体的年龄群组（例如，儿童、成人）。
 
 **类型：** [UserAgeGroup](arkts-multimodalawareness-userstatus-useragegroup-e.md)
 
@@ -44,7 +38,7 @@ User age group, for example, child or adult.
 confidence?: float
 ```
 
-Confidence of the detection result. The value is a floating point number ranging from 0 to 1. A larger value indicates a higher confidence.
+表示年龄群组检测结果的置信度，取值范围[0,1]的浮点数，数值越大代表置信度越高。
 
 **类型：** float
 

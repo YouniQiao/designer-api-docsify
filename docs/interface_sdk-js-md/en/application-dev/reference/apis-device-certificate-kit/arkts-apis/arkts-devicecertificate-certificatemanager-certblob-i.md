@@ -1,6 +1,6 @@
 # CertBlob
 
-表示证书文件数据。
+Indicates the certificate file data.
 
 **Since:** 26.0.0
 
@@ -22,7 +22,7 @@ import { certificateManager } from 'kits/@kit.DeviceCertificateKit';
 certData: Uint8Array
 ```
 
-表示证书文件数据。当certFormat传入PEM_DER，最大长度为8KB。当certFormat传入P7B，最大长度为300KB。
+Certificate file data. When certFormat is transferred to PEM_DER, the maximum length is 8 KB. When certFormat is set to P7B, the maximum length is 300 KB.
 
 **Type:** Uint8Array
 
@@ -42,7 +42,7 @@ certData: Uint8Array
 certFormat? : CertFileFormat
 ```
 
-表示证书文件格式。默认值：PEM_DER。
+Indicates the certificate file format.Default value: PEM_DER.
 
 **Type:** [CertFileFormat](arkts-devicecertificate-certificatemanager-certfileformat-e.md)
 
@@ -62,7 +62,7 @@ certFormat? : CertFileFormat
 certScope? : CertScope
 ```
 
-表示用户CA证书的存储位置。默认值：CURRENT_USER。
+Indicates the storage location of the user CA certificate.Default value: Current_USER.
 
 **Type:** [CertScope](arkts-devicecertificate-certificatemanager-certscope-e.md)
 

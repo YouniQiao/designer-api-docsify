@@ -1,11 +1,5 @@
 # offCaptureStatusChange
 
-## 导入模块
-
-```TypeScript
-import { display } from 'kits/@kit.ArkUI';
-```
-
 ## offCaptureStatusChange
 
 ```TypeScript
@@ -32,5 +26,18 @@ Unregister the callback for device capture, casting, or recording status changes
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 1400003 | This display manager service works abnormally. |
+| [1400003](../errorcode-display.md#1400003-系统服务工作异常) | This display manager service works abnormally. |
+
+## 示例
+
+```TypeScript
+// 如果通过on注册多个callback，同时关闭所有callback监听
+display.offCaptureStatusChange();
+
+let callback: Callback<boolean> = (captureStatus: boolean) => {
+  console.info(`Listening capture status: ${captureStatus}`);
+};
+// 关闭传入的callback监听
+display.offCaptureStatusChange(callback);
+```
 

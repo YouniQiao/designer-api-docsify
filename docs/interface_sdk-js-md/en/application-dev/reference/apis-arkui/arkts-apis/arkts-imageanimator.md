@@ -6,5 +6,5 @@
 
 | Name | Description |
 | --- | --- |
-| [ImageFrameInfo](arkts-arkui-imageanimator-imageframeinfo-i.md) | 图片帧信息集合。 |
+| [ImageFrameInfo](arkts-arkui-imageanimator-imageframeinfo-i.md) | Defines the ImageFrameInfo Interface. |
 

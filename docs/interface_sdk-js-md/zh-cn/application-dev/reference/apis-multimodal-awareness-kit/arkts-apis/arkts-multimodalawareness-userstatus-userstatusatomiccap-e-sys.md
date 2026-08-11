@@ -1,6 +1,6 @@
 # UserStatusAtomicCap（系统接口）
 
-Enumerates user status atomic capabilities.
+用户状态原子能力枚举。
 
 **起始版本：** 26.0.0
 
@@ -18,7 +18,7 @@ Enumerates user status atomic capabilities.
 ATOMIC_UNKNOWN = 0
 ```
 
-Unknown atomic capability.
+未知原子能力。
 
 **起始版本：** 26.0.0
 
@@ -38,7 +38,7 @@ Unknown atomic capability.
 FACE_RELATIVE_POSITION = 1
 ```
 
-Detects face position relative to screen.
+检测面部相对于屏幕的位置。
 
 **起始版本：** 26.0.0
 
@@ -58,7 +58,7 @@ Detects face position relative to screen.
 FACE_NUM_CHANGE = 2
 ```
 
-Detects face number changes.
+检测面部数量变化。
 
 **起始版本：** 26.0.0
 
@@ -78,7 +78,7 @@ Detects face number changes.
 GESTURE = 3
 ```
 
-Detects user hand gestures.
+检测用户手势。
 
 **起始版本：** 26.0.0
 
@@ -98,7 +98,7 @@ Detects user hand gestures.
 FACE_ANGLE = 4
 ```
 
-Detects face angle relative to screen.
+检测面部相对于屏幕的角度。
 
 **起始版本：** 26.0.0
 
@@ -118,7 +118,7 @@ Detects face angle relative to screen.
 SENSOR_GRAVITY = 5
 ```
 
-Detects sensor gravity data.
+检测传感器重力数据。
 
 **起始版本：** 26.0.0
 
@@ -138,7 +138,7 @@ Detects sensor gravity data.
 SENSOR_GYROSCOPE = 6
 ```
 
-Detects sensor gyroscope data.
+检测传感器陀螺仪数据。
 
 **起始版本：** 26.0.0
 
@@ -158,7 +158,7 @@ Detects sensor gyroscope data.
 SENSOR_ACCELEROMETER = 7
 ```
 
-Detects sensor accelerometer data.
+检测传感器加速度计数据。
 
 **起始版本：** 26.0.0
 
@@ -178,7 +178,7 @@ Detects sensor accelerometer data.
 SENSOR_LINEAR_ACCELERATION = 8
 ```
 
-Detects sensor linear acceleration data.
+检测传感器线性加速度数据。
 
 **起始版本：** 26.0.0
 
@@ -198,7 +198,7 @@ Detects sensor linear acceleration data.
 SENSOR_ROTATION_VECTOR = 9
 ```
 
-Detects sensor rotation vector data.
+检测传感器旋转矢量数据。
 
 **起始版本：** 26.0.0
 
@@ -218,7 +218,7 @@ Detects sensor rotation vector data.
 SENSOR_ORIENTATION = 10
 ```
 
-Detects sensor orientation data.
+检测传感器方向数据。
 
 **起始版本：** 26.0.0
 
@@ -238,7 +238,7 @@ Detects sensor orientation data.
 BLOWING_STATUS = 11
 ```
 
-Detects user blow data.
+检测用户吹气数据。
 
 **起始版本：** 26.0.0
 
@@ -258,7 +258,7 @@ Detects user blow data.
 MOOD_STATUS = 12
 ```
 
-Detects user emotion data.
+检测用户情绪数据。
 
 **起始版本：** 26.0.0
 
@@ -278,7 +278,7 @@ Detects user emotion data.
 ENV_SOUND = 13
 ```
 
-Detects user ambient sound intensity.
+检测用户环境声音强度。
 
 **起始版本：** 26.0.0
 
@@ -298,7 +298,7 @@ Detects user ambient sound intensity.
 NOISE_SOUND = 14
 ```
 
-Detects user noise intensity.
+检测用户噪声强度。
 
 **起始版本：** 26.0.0
 
@@ -318,7 +318,7 @@ Detects user noise intensity.
 EYE_GAZE_SCREEN = 15
 ```
 
-Detects whether user is gazing at screen.
+检测用户是否正在注视屏幕。
 
 **起始版本：** 26.0.0
 

@@ -1,6 +1,6 @@
 # OperateCheckV2
 
-列表右侧元素为Switch、CheckBox、Radio的类型。
+Declare type OperateCheckV2
 
 **Since:** 26.0.0
 
@@ -24,7 +24,7 @@ import { OperateCheckV2Options, ComposeListItemV2, IconTypeV2, OperateIconV2, Op
 constructor(options?: OperateCheckV2Options)
 ```
 
-OperateCheckV2的构造函数。
+The constructor of OperateCheckV2.
 
 **Since:** 26.0.0
 
@@ -40,7 +40,7 @@ OperateCheckV2的构造函数。
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| options | [OperateCheckV2Options](arkts-arkui-arkui-advanced-composelistitemv2-operatecheckv2options-i.md) | No | OperateCheckV2的可选项 |
+| options | [OperateCheckV2Options](arkts-arkui-arkui-advanced-composelistitemv2-operatecheckv2options-i.md) | No | The options of OperateCheckV2 |
 
 ## onChange
 
@@ -48,7 +48,7 @@ OperateCheckV2的构造函数。
 public onChange?: OnChangeCallback
 ```
 
-操作checkbox/switch/radio时的回调函数。
+Callback function when operate the checkbox/switch/radio.
 
 **Since:** 26.0.0
 
@@ -66,7 +66,7 @@ public onChange?: OnChangeCallback
 public accessibilityDescription?: ResourceStr
 ```
 
-Switch/CheckBox/Radio的无障碍描述。
+The accessibilityDescription of the checkbox/switch/radio.
 
 **Type:** [ResourceStr](arkts-arkui-resourcestr-t.md)
 
@@ -86,7 +86,7 @@ Switch/CheckBox/Radio的无障碍描述。
 public accessibilityLevel?: string
 ```
 
-Switch/CheckBox/Radio的无障碍重要性。
+The accessibilityLevel of the checkbox/switch/radio.
 
 **Type:** string
 
@@ -108,7 +108,7 @@ Switch/CheckBox/Radio的无障碍重要性。
 public accessibilityText?: ResourceStr
 ```
 
-Switch/CheckBox/Radio的无障碍文本属性。
+The accessibilityText of the checkbox/switch/radio.
 
 **Type:** [ResourceStr](arkts-arkui-resourcestr-t.md)
 
@@ -128,7 +128,7 @@ Switch/CheckBox/Radio的无障碍文本属性。
 public isCheck?: boolean
 ```
 
-是否默认选中。
+Whether is checked on default.
 
 **Type:** boolean
 

@@ -1,6 +1,6 @@
 # FieldNode
 
-表示 Schema 实例的节点，提供定义存储在数据库中的值的方法。
+Represents a **Schema** instance, which provides the APIs for defining the values stored in a KV store.
 
 **Since:** 8
 
@@ -20,7 +20,7 @@
 appendChild(child: FieldNode): boolean
 ```
 
-在当前 FieldNode 中添加一个子节点。
+Appends a child node to this **FieldNode**.
 
 **Since:** 8
 
@@ -38,13 +38,13 @@ appendChild(child: FieldNode): boolean
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| child | [FieldNode](arkts-arkdata-distributedkvstore-fieldnode-c.md) | Yes | 要附加的域节点。 |
+| child | [FieldNode](arkts-arkdata-distributedkvstore-fieldnode-c.md) | Yes | Child node to append. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| boolean | 返回true表示子节点成功添加到FieldNode；返回false则表示操作失败。 |
+| boolean | Returns **true** if the operation is successful; returns **false** otherwise. |
 
 ## Examples
 
@@ -74,7 +74,7 @@ try {
 constructor(name: string)
 ```
 
-用于创建带有string字段FieldNode实例的构造函数。
+A constructor used to create a **FieldNode** instance with a string field.
 
 **Since:** 8
 
@@ -92,7 +92,7 @@ constructor(name: string)
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| name | string | Yes | FieldNode的值。 |
+| name | string | Yes | Value of **FieldNode**. |
 
 ## default
 
@@ -100,7 +100,7 @@ constructor(name: string)
 default: string
 ```
 
-表示Fieldnode的默认值。
+Default value of a **FieldNode**.
 
 **Type:** string
 
@@ -122,7 +122,7 @@ default: string
 nullable: boolean
 ```
 
-表示数据库字段是否可以为空。
+Whether the database field can be null.
 
 **Type:** boolean
 
@@ -144,7 +144,7 @@ nullable: boolean
 type: number
 ```
 
-表示指定节点对应数据类型的值。
+Value of the data type corresponding to the specified node.
 
 **Type:** number
 

@@ -12,7 +12,7 @@ import { pointer } from 'kits/@kit.InputKit';
 function getTouchpadTapSwitch(callback: AsyncCallback<boolean>): void
 ```
 
-获取触控板轻触能力开启状态，使用callback异步回调。
+Obtains the touchpad tap switch state. This API uses an asynchronous callback to return the result.
 
 **Since:** 10
 
@@ -28,14 +28,14 @@ function getTouchpadTapSwitch(callback: AsyncCallback<boolean>): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;boolean&gt; | Yes | 回调函数。当获取触控板轻触功能开启状态成功，err为undefined，state是true代表开启，false代表关闭，默认开启；否则为错 误对象。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;boolean&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined**, and **state** indicates whether the touchpad tap switch is enabled (**true** indicates yes and **false** indicates no; default value: **true**). Otherwise, **err** is an error object. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; 3. Parameter verification failed. |
-| 202 | SystemAPI permission error. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; 3. Parameter verification failed. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | SystemAPI permission error. |
 
 ## Examples
 
@@ -51,16 +51,15 @@ struct Index {
       Text()
         .onClick(() => {
           try {
-            // Obtain the touchpad tap switch state.
             pointer.getTouchpadTapSwitch((error: BusinessError, state: boolean) => {
               if (error) {
-                console.error(`Failed to get touchpad tap switch, Code: ${(error as BusinessError).code}, message: ${(error as BusinessError).message}.`);
+                console.error(`getTouchpadTapSwitch error: ${JSON.stringify(error, [`code`, `message`])}`);
               } else {
-                console.info(`Succeeded in getting touchpad tap switch, state: ${JSON.stringify(state)}.`);
+                console.info(`getTouchpadTapSwitch success, state: ${JSON.stringify(state)}`);
               }
             });
           } catch (error) {
-            console.error(`Failed to get touchpad tap switch, Code: ${(error as BusinessError).code}, message: ${(error as BusinessError).message}.`);
+            console.error(`getTouchpadTapSwitch failed, error: ${JSON.stringify(error, [`code`, `message`])}`);
           }
         })
     }
@@ -75,7 +74,7 @@ struct Index {
 function getTouchpadTapSwitch(): Promise<boolean>
 ```
 
-获取触控板轻触功能开启状态，使用Promise异步回调。
+Obtains the touchpad tap switch state. This API uses a promise to return the result.
 
 **Since:** 10
 
@@ -91,14 +90,14 @@ function getTouchpadTapSwitch(): Promise<boolean>
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;boolean&gt; | Promise对象。返回true表示触控板轻触功能开启；返回false表示触控板轻触功能关闭。默认开启。 |
+| Promise&lt;boolean&gt; | Promise used to return the result. The value **true** indicates that the touchpad tap switch is enabled, and the value **false** indicates that the touchpad tap switch is disabled. The default value is **true**. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; 3. Parameter verification failed. |
-| 202 | SystemAPI permission error. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; 3. Parameter verification failed. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | SystemAPI permission error. |
 
 ## Examples
 
@@ -114,14 +113,13 @@ struct Index {
       Text()
         .onClick(() => {
           try {
-            // Obtain the touchpad tap switch state.
             pointer.getTouchpadTapSwitch().then((state: boolean) => {
-              console.info(`Succeeded in getting touchpad tap switch, state: ${JSON.stringify(state)}.`);
+              console.info(`getTouchpadTapSwitch success, state: ${JSON.stringify(state)}`);
             }).catch((error: BusinessError) => {
-              console.error(`Failed to get touchpad tap switch, Code: ${(error as BusinessError).code}, message: ${(error as BusinessError).message}.`);
+              console.error(`Get touchpad tap switch failed, error: ${JSON.stringify(error, [`code`, `message`])}`);
             })
           } catch (error) {
-            console.error(`Failed to get touchpad tap switch, Code: ${(error as BusinessError).code}, message: ${(error as BusinessError).message}.`);
+            console.error(`getTouchpadTapSwitch failed, error: ${JSON.stringify(error, [`code`, `message`])}`);
           }
         })
     }

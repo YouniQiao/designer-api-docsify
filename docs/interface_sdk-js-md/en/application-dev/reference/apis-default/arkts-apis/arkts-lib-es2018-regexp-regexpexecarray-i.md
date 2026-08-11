@@ -10,7 +10,7 @@ groups?: {
     }
 ```
 
-**Type:** {         [key: string]: string     }
+**Type:** {         [key: string]: string     }
 
 **ArkTS mode:** ArkTS-Dyn only
 

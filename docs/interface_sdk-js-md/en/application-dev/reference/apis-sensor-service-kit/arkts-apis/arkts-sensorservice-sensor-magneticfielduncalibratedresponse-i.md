@@ -1,6 +1,6 @@
 # MagneticFieldUncalibratedResponse
 
-未校准磁场传感器数据，继承于[Response](arkts-sensorservice-sensor-response-i.md)。
+Describes the uncalibrated magnetic field sensor data. It extends from [Response](arkts-sensorservice-sensor-response-i.md).
 
 **Inheritance/Implementation:** MagneticFieldUncalibratedResponse extends [Response](arkts-sensorservice-sensor-response-i.md)
 
@@ -24,7 +24,7 @@ import { sensor } from 'kits/@kit.SensorServiceKit';
 biasX: double
 ```
 
-x轴方向未校准的环境磁场强度偏量（估计的磁场偏差）。单位：μT（微特斯拉）。
+Bias of the uncalibrated magnetic field strength on the x-axis, in μT.
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：double
 
@@ -42,7 +42,7 @@ x轴方向未校准的环境磁场强度偏量（估计的磁场偏差）。单�
 biasY: double
 ```
 
-y轴方向未校准的环境磁场强度偏量（估计的磁场偏差）。单位：μT（微特斯拉）。
+Bias of the uncalibrated magnetic field strength on the y-axis, in μT.
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：double
 
@@ -60,7 +60,7 @@ y轴方向未校准的环境磁场强度偏量（估计的磁场偏差）。单�
 biasZ: double
 ```
 
-z轴方向未校准的环境磁场强度偏量（估计的磁场偏差）。单位：μT（微特斯拉）。
+Bias of the uncalibrated magnetic field strength on the z-axis, in μT.
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：double
 
@@ -78,7 +78,7 @@ z轴方向未校准的环境磁场强度偏量（估计的磁场偏差）。单�
 x: double
 ```
 
-x轴方向未校准的环境磁场强度。单位：μT（微特斯拉）。
+Uncalibrated magnetic field strength on the x-axis, in μT.
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：double
 
@@ -96,7 +96,7 @@ x轴方向未校准的环境磁场强度。单位：μT（微特斯拉）。
 y: double
 ```
 
-y轴方向未校准的环境磁场强度。单位：μT（微特斯拉）。
+Uncalibrated magnetic field strength on the y-axis, in μT.
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：double
 
@@ -114,7 +114,7 @@ y轴方向未校准的环境磁场强度。单位：μT（微特斯拉）。
 z: double
 ```
 
-z轴方向未校准的环境磁场强度。单位：μT（微特斯拉）。
+Uncalibrated magnetic field strength on the z-axis, in μT.
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：double
 

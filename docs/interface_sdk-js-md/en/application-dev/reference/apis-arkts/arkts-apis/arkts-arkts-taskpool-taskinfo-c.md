@@ -1,6 +1,6 @@
 # TaskInfo
 
-任务的内部信息。
+Describes the internal information about a task.
 
 **Since:** 10
 
@@ -22,7 +22,7 @@ import { taskpool } from 'kits/@kit.ArkTS';
 duration?: number
 ```
 
-任务执行至当前所用的时间，默认为0，单位为ms。当返回为0时，表示任务未执行；返回为空时，表示没有任务执行。不建议修改此值。&lt;br/&gt;从API version 11开始，该接口支持在原子化服务中使用。
+Duration that the task has been executed, in ms. The default value is **0**. If the return value is **0**, the task is not running. If the return value is empty, no task is running. You are advised not to change the value.&lt;br&gt;This API can be used in atomic services since API version 11.
 
 **Type:** number
 
@@ -42,7 +42,7 @@ duration?: number
 name: string
 ```
 
-任务的名字，不建议修改此值。&lt;br/&gt;从API version 12开始，该接口支持在原子化服务中使用。
+Task name. You are advised not to change the value.&lt;br&gt;This API can be used in atomic services since API version 12.
 
 **Type:** string
 
@@ -62,7 +62,7 @@ name: string
 state: State
 ```
 
-任务的状态。state标识任务的当前状态，不建议修改此值。&lt;br/&gt;从API version 11开始，该接口支持在原子化服务中使用。
+Task state. You are advised not to change the value.&lt;br&gt;This API can be used in atomic services since API version 11.
 
 **Type:** [State](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-agent-state-e.md)
 
@@ -84,7 +84,7 @@ state: State
 taskId: number
 ```
 
-任务的ID。任务的标识符，系统默认提供全局唯一值，不建议修改此值。&lt;br/&gt;从API version 11开始，该接口支持在原子化服务中使用。
+Task ID, which is globally unique by default. You are advised not to change the value.&lt;br&gt;This API can be used in atomic services since API version 11.
 
 **Type:** number
 

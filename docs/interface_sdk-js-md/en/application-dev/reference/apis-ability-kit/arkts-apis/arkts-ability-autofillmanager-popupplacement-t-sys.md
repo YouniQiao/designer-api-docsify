@@ -4,7 +4,7 @@
 export type PopupPlacement = _PopupPlacement
 ```
 
-气泡弹窗的位置。
+The popup placement of auto fill popup config.
 
 **Since:** 23
 

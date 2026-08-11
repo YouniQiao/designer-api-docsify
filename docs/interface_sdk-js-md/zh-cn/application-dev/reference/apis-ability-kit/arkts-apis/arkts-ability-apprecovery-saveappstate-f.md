@@ -1,11 +1,5 @@
 # saveAppState
 
-## 导入模块
-
-```TypeScript
-import { appRecovery } from 'kits/@kit.AbilityKit';
-```
-
 ## saveAppState
 
 ```TypeScript
@@ -94,7 +88,6 @@ import { BusinessError } from '@kit.BasicServicesKit';
 let observer: errorManager.ErrorObserver = {
   onUnhandledException(errorMsg) {
     console.error('onUnhandledException, errorMsg: ', errorMsg);
-    // context为UIAbility实例的context，需使用箭头函数或在回调外预先保存。
     appRecovery.saveAppState(this.context);
   }
 };

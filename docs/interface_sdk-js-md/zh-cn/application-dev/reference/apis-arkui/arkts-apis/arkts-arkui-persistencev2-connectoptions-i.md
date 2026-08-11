@@ -156,7 +156,7 @@ type: Class
 
 指定的类型。
 
-**类型：** [Class](../../apis-arkts/arkts-apis/arkts-arkts-class-c.md)
+**类型：** Class
 
 **起始版本：** 26.0.0
 

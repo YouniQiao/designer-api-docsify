@@ -1,6 +1,6 @@
 # AnimationPropertyType
 
-用于动画的属性类型。
+Define the property type enumeration used in animation.
 
 **Since:** 23
 
@@ -16,7 +16,7 @@
 ROTATION = 0
 ```
 
-x、y、z方向的旋转角属性。该属性对应参数个数为3，属性的单位为度（°）。
+Rotation angle in the x, y, z direction.
 
 **Since:** 23
 
@@ -34,7 +34,7 @@ x、y、z方向的旋转角属性。该属性对应参数个数为3，属性的�
 TRANSLATION = 1
 ```
 
-x、y方向的平移属性。该属性对应参数个数为2，属性的单位为px。
+Tranlation in the x and y direction.
 
 **Since:** 23
 
@@ -52,7 +52,7 @@ x、y方向的平移属性。该属性对应参数个数为2，属性的单位�
 SCALE = 2
 ```
 
-x、y方向的缩放属性。该属性对应参数个数为2，属性的取值范围为(-∞, +∞) 。
+Scale in the x and y direction.
 
 **Since:** 23
 
@@ -70,7 +70,7 @@ x、y方向的缩放属性。该属性对应参数个数为2，属性的取值�
 OPACITY = 3
 ```
 
-透明度属性。该属性对应参数个数为1，属性的取值范围为[0,1]。
+Opacity.
 
 **Since:** 23
 

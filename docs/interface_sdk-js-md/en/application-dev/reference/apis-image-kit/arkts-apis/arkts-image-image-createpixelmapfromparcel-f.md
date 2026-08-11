@@ -38,15 +38,15 @@ Creates a PixelMap object based on MessageSequence parameter.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 62980097 | IPC error. Possible cause: 1.IPC communication failed. 2. Image upload exception. 3. Decode process exception. 4. Insufficient memory. |
-| 62980177 | Abnormal API environment. |
-| 62980096 | The operation failed. Possible cause: 1.Image upload exception. 2. Decoding process exception. 3. Insufficient memory. |
-| 62980115 | Invalid input parameter. |
-| 62980179 | Abnormal buffer size. |
-| 62980178 | Failed to create the PixelMap. |
-| 62980180 | FD mapping failed. Possible cause: 1. Size and address does not match. 2. Memory map in memalloc failed. |
-| 62980246 | Failed to read the PixelMap. |
-| 62980105 | Failed to get the data. |
+| [62980097](../errorcode-image.md#62980097-pixelmap-serialization-failed) | IPC error. Possible cause: 1.IPC communication failed. 2. Image upload exception. 3. Decode process exception. 4. Insufficient memory. |
+| [62980177](../errorcode-image.md#62980177-abnormal-api-environment) | Abnormal API environment. |
+| [62980096](../errorcode-image.md#62980096-operation-failed) | The operation failed. Possible cause: 1.Image upload exception. 2. Decoding process exception. 3. Insufficient memory. |
+| [62980115](../errorcode-image.md#62980115-invalid-image-parameter) | Invalid input parameter. |
+| [62980179](../errorcode-image.md#62980179-abnormal-buffer-size) | Abnormal buffer size. |
+| [62980178](../errorcode-image.md#62980178-failure-in-creating-a-pixelmap) | Failed to create the PixelMap. |
+| [62980180](../errorcode-image.md#62980180-failure-in-mapping-the-file-descriptor) | FD mapping failed. Possible cause: 1. Size and address does not match. 2. Memory map in memalloc failed. |
+| [62980246](../errorcode-image.md#62980246-failure-in-reading-the-pixelmap) | Failed to read the PixelMap. |
+| [62980105](../errorcode-image.md#62980105-failure-in-obtaining-image-data) | Failed to get the data. |
 
 ## Examples
 
@@ -55,27 +55,26 @@ import { rpc } from '@kit.IPCKit';
 import { BusinessError } from '@kit.BasicServicesKit';
 
 class MySequence implements rpc.Parcelable {
-  pixelMap: image.PixelMap;
-  constructor(pixelMap: image.PixelMap) {
-    this.pixelMap = pixelMap;
+  pixel_map: image.PixelMap;
+  constructor(conPixelmap: image.PixelMap) {
+    this.pixel_map = conPixelmap;
   }
   marshalling(messageSequence: rpc.MessageSequence) {
-    this.pixelMap.marshalling(messageSequence);
+    this.pixel_map.marshalling(messageSequence);
     return true;
   }
   unmarshalling(messageSequence: rpc.MessageSequence) {
     try {
-      this.pixelMap = image.createPixelMapFromParcel(messageSequence);
-    } catch (e) {
-      const err = e as BusinessError;
-      console.error(`Failed to create the PixelMap from parcel. Code: ${err.code}, message: ${err.message}`);
+      this.pixel_map = image.createPixelMapFromParcel(messageSequence);
+    } catch(e) {
+      let error = e as BusinessError;
+      console.error(`createPixelMapFromParcel error. code is ${error.code}, message is ${error.message}`);
       return false;
     }
     return true;
   }
 }
-
-async function createPixelMapFromParcel() {
+async function CreatePixelMapFromParcel() {
   const color: ArrayBuffer = new ArrayBuffer(96);
   let bufferArr: Uint8Array = new Uint8Array(color);
   for (let i = 0; i < bufferArr.length; i++) {
@@ -86,8 +85,11 @@ async function createPixelMapFromParcel() {
     pixelFormat: image.PixelMapFormat.BGRA_8888,
     size: { height: 4, width: 6 },
     alphaType: image.AlphaType.UNPREMUL
-  };
-  const pixelMap: image.PixelMap | undefined = await image.createPixelMap(color, opts);
+  }
+  let pixelMap: image.PixelMap | undefined = undefined;
+  await image.createPixelMap(color, opts).then((srcPixelMap: image.PixelMap) => {
+    pixelMap = srcPixelMap;
+  })
   if (pixelMap != undefined) {
     // Implement serialization.
     let parcelable: MySequence = new MySequence(pixelMap);
@@ -95,14 +97,11 @@ async function createPixelMapFromParcel() {
     data.writeParcelable(parcelable);
 
     // Implement deserialization to obtain data through the RPC.
-    let seq: MySequence = new MySequence(pixelMap);
-    data.readParcelable(seq);
+    let ret: MySequence = new MySequence(pixelMap);
+    data.readParcelable(ret);
 
-    // Obtain the PixelMap.
-    let newPixelMap = seq.pixelMap;
-    if (newPixelMap != undefined) {
-      console.info('Succeeded in getting the PixelMap.');
-    }
+    // Obtain the PixelMap object.
+    let newPixelmap = ret.pixel_map;
   }
 }
 ```

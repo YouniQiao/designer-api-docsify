@@ -4,7 +4,7 @@
 export type SubmitCallback = (enterKey: EnterKeyType, event: SubmitEvent) => void
 ```
 
-软键盘按下回车键时的回调事件。
+callback of the listened enter key event.
 
 **Since:** 23
 
@@ -20,6 +20,6 @@ export type SubmitCallback = (enterKey: EnterKeyType, event: SubmitEvent) => voi
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| enterKey | [EnterKeyType](../arkts-components/arkts-arkui-enterkeytype-e.md) | Yes | 软键盘输入法回车键类型。具体类型见EnterKeyType枚举说明。 |
-| event | [SubmitEvent](../arkts-components/arkts-arkui-submitevent-i.md) | Yes | 当提交的时候，提供保持组件编辑状态的方法。EnterKeyType指定为NEW_LINE时，默认保持编辑态。 |
+| enterKey | [EnterKeyType](../arkts-components/arkts-arkui-enterkeytype-e.md) | Yes | the enter key type of soft keyboard. |
+| event | [SubmitEvent](../arkts-components/arkts-arkui-submitevent-i.md) | Yes | Provides the method of keeping RichEditor editable state when submitted. |
 

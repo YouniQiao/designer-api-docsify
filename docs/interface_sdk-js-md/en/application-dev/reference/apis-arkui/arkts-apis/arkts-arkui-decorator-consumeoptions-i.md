@@ -1,6 +1,6 @@
 # ConsumeOptions
 
-ConsumeOptions类
+Define ConsumeOptions interface.
 
 **Since:** 23
 
@@ -16,7 +16,7 @@ ConsumeOptions类
 defaultValue?: T
 ```
 
-开发者设置的初始值
+Default value set by developer.
 
 **Type:** T
 

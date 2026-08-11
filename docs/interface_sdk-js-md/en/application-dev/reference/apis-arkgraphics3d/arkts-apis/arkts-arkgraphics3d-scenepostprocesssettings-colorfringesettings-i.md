@@ -1,6 +1,6 @@
 # ColorFringeSettings
 
-定义色晕参数.
+Describes the settings for color fringing. It is unavailable when RenderingPipelineType is set to FORWARD_LIGHTWEIGHT.
 
 **Since:** 22
 
@@ -16,7 +16,7 @@
 intensity?: double
 ```
 
-控制色晕强度.
+Strength of the effect. The value ranges from 0 to 1. The default value is 0.2.
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：double
 

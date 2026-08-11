@@ -1,6 +1,6 @@
 # FontDescriptor
 
-字体描述符信息。
+Describes the font descriptor information.
 
 **Since:** 14
 
@@ -22,7 +22,7 @@ import { text } from 'kits/@kit.ArkGraphics2D';
 copyright?: string
 ```
 
-字体版权信息，可取任意字符串，默认为空字符串。
+Font copyright information. Any string is acceptable. The default value is an empty string.
 
 **Type:** string
 
@@ -42,7 +42,7 @@ copyright?: string
 fontFamily?: string
 ```
 
-字体家族，可取任意字符串，默认为空字符串。
+Family name of the font. Any string is acceptable. The default value is an empty string.
 
 **Type:** string
 
@@ -62,7 +62,7 @@ fontFamily?: string
 fontFeatures?: Array<string>
 ```
 
-字体支持的OpenType特性标签数组，默认为空数组。数组中每个元素为特性标签字符串（如'liga'表示标准连字、'kern'表示字距调整），表示该字体支持的字体特性。
+Array of OpenType feature tags supported by the font. The default value is an empty array. Each element in the array is a feature tag string (such as 'liga' for standard ligatures and 'kern' for kerning adjustment),indicating the font features supported by the font.
 
 **Type:** Array&lt;string&gt;
 
@@ -84,7 +84,7 @@ fontFeatures?: Array<string>
 fontSubfamily?: string
 ```
 
-子字体家族，可取任意字符串，默认为空字符串。
+Subfamily name of the font. Any string is acceptable. The default value is an empty string.
 
 **Type:** string
 
@@ -104,7 +104,7 @@ fontSubfamily?: string
 fullName?: string
 ```
 
-字体名称，可取任意字符串，默认为空字符串。
+Font name. Any string is acceptable. The default value is an empty string.
 
 **Type:** string
 
@@ -124,7 +124,7 @@ fullName?: string
 index?: int
 ```
 
-字体索引，字体文件为ttc类型时有效，ttf类型统一为0。
+Font index. This parameter is valid only when the font file is in TTC format. The value is **0** for the TTF format.
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
@@ -146,7 +146,7 @@ index?: int
 italic?: int
 ```
 
-是否是斜体字体，0表示非斜体，1表示斜体，默认值为0。
+Whether the font is italic. The value **0** means that the font is not italic, and **1** means the opposite. The default value is **0**.
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
@@ -166,7 +166,7 @@ italic?: int
 languages?: Array<string>
 ```
 
-字体支持的语言列表，默认为空数组。数组中每个元素为BCP 47格式的语言标签字符串（如'en'、'zh-Hans'），表示该字体支持的书写语言。
+List of languages supported by the font. The default value is an empty array. Each element in the array is a language tag string in BCP 47 format (such as 'en' and 'zh-Hans'), indicating the writing languages supported by the font.
 
 **Type:** Array&lt;string&gt;
 
@@ -188,7 +188,7 @@ languages?: Array<string>
 license?: string
 ```
 
-字体许可证信息，可取任意字符串，默认为空字符串。
+Font license information. Any string is acceptable. The default value is an empty string.
 
 **Type:** string
 
@@ -208,7 +208,7 @@ license?: string
 localFamilyName?: string
 ```
 
-根据系统语言配置提取字体家族名称，字体文件中若无当前语言对应配置则取“en”对应信息。
+Extracts the font family name based on the system language configuration. If the font file does not contain the configuration corresponding to the current language, the information corresponding to **en** is used.
 
 **Type:** string
 
@@ -228,7 +228,7 @@ localFamilyName?: string
 localFullName?: string
 ```
 
-根据系统语言配置提取字体全名，字体文件中若无当前语言对应配置则取“en”对应信息。
+Extracts the full font name based on the system language configuration. If the font file does not contain the configuration corresponding to the current language, the information corresponding to **en** is used.
 
 **Type:** string
 
@@ -248,7 +248,7 @@ localFullName?: string
 localPostscriptName?: string
 ```
 
-根据系统语言配置提取字体唯一标识，字体文件中若无当前语言对应配置则取“en”对应信息。
+Extracts the unique font ID based on the system language configuration. If the font file does not contain the configuration corresponding to the current language, the information corresponding to **en** is used.
 
 **Type:** string
 
@@ -268,7 +268,7 @@ localPostscriptName?: string
 localSubFamilyName?: string
 ```
 
-根据系统语言配置提取子字体家族名称，字体文件中若无当前语言对应配置则取“en”对应信息。
+Extracts the font subfamily name based on the system language configuration. If the font file does not contain the configuration corresponding to the current language, the information corresponding to **en** is used.
 
 **Type:** string
 
@@ -288,7 +288,7 @@ localSubFamilyName?: string
 manufacture?: string
 ```
 
-字体制造商信息，可取任意字符串，默认为空字符串。
+Font manufacturer information. Any string is acceptable. The default value is an empty string.
 
 **Type:** string
 
@@ -308,7 +308,7 @@ manufacture?: string
 monoSpace?: boolean
 ```
 
-是否是等宽字体，true表示等宽，false表示非等宽，默认值为false。
+Whether the font is monospaced. The value **true** means that the font is monospaced, and **false** means the opposite. The default value is **false**.
 
 **Type:** boolean
 
@@ -328,7 +328,7 @@ monoSpace?: boolean
 path?: string
 ```
 
-字体绝对路径，可取遵循系统限制的任意字符串，默认为空字符串。
+Absolute path of the font. Any string that complies with the system restrictions is acceptable. The default value is an empty string.
 
 **Type:** string
 
@@ -348,7 +348,7 @@ path?: string
 postScriptName?: string
 ```
 
-字体唯一标识名称，可取任意字符串，默认为空字符串。
+Unique name of the font. Any string is acceptable. The default value is an empty string.
 
 **Type:** string
 
@@ -368,7 +368,7 @@ postScriptName?: string
 symbolic?: boolean
 ```
 
-是否支持符号，true表示支持，false表示不支持，默认值为false。
+Whether the font is symbolic. The value **true** means that the font is symbolic, and **false** means the opposite.
 
 **Type:** boolean
 
@@ -388,7 +388,7 @@ symbolic?: boolean
 trademark?: string
 ```
 
-字体商标信息，可取任意字符串，默认为空字符串。
+Font trademark information. Any string is acceptable. The default value is an empty string.
 
 **Type:** string
 
@@ -408,7 +408,7 @@ trademark?: string
 variationAxisRecords?: Array<FontVariationAxis>
 ```
 
-字体可变轴记录数组，用于描述字体支持的可变轴信息。非可变字体此字段为undefined。
+Font variable axis record array, which is used to describe the variable axis information supported by the font.For non-variable fonts, this field is **undefined**.
 
 **Type:** Array&lt;FontVariationAxis&gt;
 
@@ -428,7 +428,7 @@ variationAxisRecords?: Array<FontVariationAxis>
 variationInstanceRecords?: Array<FontVariationInstance>
 ```
 
-字体可变实例记录数组，用于描述字体支持的可变实例信息。非可变字体此字段为undefined。
+Font variable instance record array, which is used to describe the variable instance information supported by the font. For non-variable fonts, this field is **undefined**.
 
 **Type:** Array&lt;FontVariationInstance&gt;
 
@@ -448,7 +448,7 @@ variationInstanceRecords?: Array<FontVariationInstance>
 version?: string
 ```
 
-字体版本，可取任意字符串，默认为空字符串。
+Font version. Any string is acceptable. The default value is an empty string.
 
 **Type:** string
 
@@ -468,7 +468,7 @@ version?: string
 weight?: FontWeight
 ```
 
-字体字重，默认值为0。
+Font weight. The default value is **0**.
 
 **Type:** [FontWeight](../../apis-arkui/arkts-apis/arkts-arkui-fontweight-e.md)
 
@@ -488,7 +488,7 @@ weight?: FontWeight
 width?: int
 ```
 
-字体宽度，取值范围1-9整数，默认值为0。
+Font width. The value is an integer ranging from 1 to 9. The default value is **0**.
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 

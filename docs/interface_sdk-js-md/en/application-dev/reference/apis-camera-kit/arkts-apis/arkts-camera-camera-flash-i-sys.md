@@ -1,8 +1,8 @@
 # Flash
 
-Flash继承自[FlashQuery](arkts-camera-camera-flashquery-i.md)。
+**Flash** inherits from [FlashQuery](arkts-camera-camera-flashquery-i.md).
 
-闪光灯类，对设备闪光灯操作。
+It provides APIs related to the flash.
 
 **Inheritance/Implementation:** Flash extends [FlashQuery](arkts-camera-camera-flashquery-i.md)
 
@@ -50,8 +50,8 @@ Before the setting, call [isLcdFlashSupported](arkts-camera-camera-flashquery-i-
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 7400103 | Session not config. |
-| 202 | Not System Application. |
+| [7400103](../errorcode-camera.md#7400103-session-not-configured) | Session not config. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not System Application. |
 
 ## Examples
 

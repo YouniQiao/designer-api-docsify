@@ -1,6 +1,6 @@
 # OnscreenAwarenessInfo（系统接口）
 
-Returns the list of onscreen awareness information.
+屏上感知返回信息列表。
 
 **起始版本：** 23
 
@@ -12,19 +12,13 @@ Returns the list of onscreen awareness information.
 
 **系统接口：** 此接口为系统接口。
 
-## 导入模块
-
-```TypeScript
-import { onScreen } from 'kits/@kit.MultimodalAwarenessKit';
-```
-
 ## appIndex
 
 ```TypeScript
 appIndex?: int
 ```
 
-Application index.
+应用索引。
 
 **类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
@@ -46,7 +40,7 @@ Application index.
 appName?: string
 ```
 
-Application name.
+应用名称。
 
 **类型：** string
 
@@ -68,7 +62,7 @@ Application name.
 bundleName?: string
 ```
 
-Application bundle name.
+应用包名。
 
 **类型：** string
 
@@ -90,7 +84,7 @@ Application bundle name.
 collectStrategy?: int
 ```
 
-Page collection policy, which is the bitwise OR operation combination of &lt;br&gt; [CollectStrategy](arkts-multimodalawareness-onscreen-collectstrategy-e-sys.md).
+页面采集策略，是 [CollectStrategy](arkts-multimodalawareness-onscreen-collectstrategy-e-sys.md) 的按位或运算组合。
 
 **类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
@@ -112,7 +106,7 @@ Page collection policy, which is the bitwise OR operation combination of &lt;br&
 displayId?: long
 ```
 
-Display ID.
+屏幕ID。
 
 **类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：long
 
@@ -134,7 +128,7 @@ Display ID.
 entityInfo?: EntityInfo[]
 ```
 
-Entity information.
+实体信息。
 
 **类型：** [EntityInfo](arkts-multimodalawareness-onscreen-entityinfo-i-sys.md)[]
 
@@ -156,7 +150,7 @@ Entity information.
 items?: AwarenessItem[]
 ```
 
-Data item information.
+数据项信息。
 
 **类型：** [AwarenessItem](arkts-multimodalawareness-onscreen-awarenessitem-i-sys.md)[]
 
@@ -178,7 +172,7 @@ Data item information.
 languageInfo?: string
 ```
 
-Page language information.
+页面语言信息。
 
 **类型：** string
 
@@ -200,7 +194,7 @@ Page language information.
 miniProgramId?: string
 ```
 
-Applet ID, for example, the ID of WeChat or Alipay.
+小程序ID，如微信、支付宝等三方应用小程序ID。
 
 **类型：** string
 
@@ -222,7 +216,7 @@ Applet ID, for example, the ID of WeChat or Alipay.
 miniProgramName?: string
 ```
 
-Name of a third-party mini program.
+小程序名称，三方应用小程序名称。
 
 **类型：** string
 
@@ -244,7 +238,7 @@ Name of a third-party mini program.
 pageId?: string
 ```
 
-Application page ID.
+应用页面ID。
 
 **类型：** string
 
@@ -266,7 +260,7 @@ Application page ID.
 pageTags?: string[]
 ```
 
-Page tag information.
+页面标签信息。
 
 **类型：** string[]
 
@@ -288,7 +282,7 @@ Page tag information.
 resultCode: int
 ```
 
-Return code. The default value **0** indicates success.
+返回码，默认0 表示成功。
 
 **类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
@@ -310,7 +304,7 @@ Return code. The default value **0** indicates success.
 sampleId?: string
 ```
 
-Collection record ID.
+采集记录ID。
 
 **类型：** string
 
@@ -332,7 +326,7 @@ Collection record ID.
 timestamp: long
 ```
 
-Timestamp for accessing a specified page, in milliseconds.
+表示进入特定页面的时间戳。
 
 **类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：long
 
@@ -354,7 +348,7 @@ Timestamp for accessing a specified page, in milliseconds.
 uid?: string
 ```
 
-Application UID.
+表示应用UID。
 
 **类型：** string
 
@@ -376,7 +370,7 @@ Application UID.
 windowId?: int
 ```
 
-Window ID.
+窗口ID。
 
 **类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 

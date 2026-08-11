@@ -1,10 +1,10 @@
 # AbilityDelegatorArgs
 
-AbilityDelegatorArgs模块提供在应用程序执行测试用例期间，获取测试用例参数AbilityDelegatorArgs对象的能力。
+The **AbilityDelegatorArgs** module provides APIs to obtain an **AbilityDelegatorArgs** object during the execution of test cases.
 
-> **说明：**
+> **NOTE：**
 > 
-> 本模块接口仅可在[单元测试框架](../../../application-test/unittest-guidelines.md)中使用。
+> The APIs of this module can be used only in [JsUnit](../../../application-test/unittest-guidelines.md).
 
 **Since:** 8
 
@@ -20,7 +20,7 @@ AbilityDelegatorArgs模块提供在应用程序执行测试用例期间，获取
 bundleName: string
 ```
 
-当前被测试应用的包名。
+Bundle name of the application to test.
 
 **Type:** string
 
@@ -40,7 +40,7 @@ bundleName: string
 parameters: Record<string, string>
 ```
 
-当前启动单元测试的参数。
+Parameters of the unit test that is started currently.
 
 **Type:** [Record](../../apis-default/arkts-apis/arkts-record-t.md)&lt;string, string&gt;
 
@@ -60,7 +60,7 @@ parameters: Record<string, string>
 testCaseNames: string
 ```
 
-测试用例名称。
+Test case name.
 
 **Type:** string
 
@@ -80,7 +80,7 @@ testCaseNames: string
 testRunnerClassName: string
 ```
 
-执行测试用例的测试执行器名称。
+Names of the test case executors.
 
 **Type:** string
 

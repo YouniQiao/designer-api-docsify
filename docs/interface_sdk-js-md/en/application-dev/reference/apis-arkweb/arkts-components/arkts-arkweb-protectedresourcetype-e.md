@@ -1,6 +1,6 @@
 # ProtectedResourceType
 
-定义可访问的资源类型，与 {@link onPermissionRequest} 方法相关。
+Defines the accessible resource type, related to {@link onPermissionRequest} method.
 
 **Since:** 9
 
@@ -16,9 +16,9 @@
 MidiSysex = "TYPE_MIDI_SYSEX"
 ```
 
-MIDI SYSEX资源。
+MIDI SYSEX resource.
 
-目前仅支持权限事件上报，MIDI设备的使用还未支持。
+Currently, only permission events can be reported. MIDI devices are not yet supported.
 
 **Since:** 9
 
@@ -36,7 +36,7 @@ MIDI SYSEX资源。
 VIDEO_CAPTURE = "TYPE_VIDEO_CAPTURE"
 ```
 
-视频捕获资源，例如相机。
+Video capture resource, such as a camera.
 
 **Since:** 10
 
@@ -54,7 +54,7 @@ VIDEO_CAPTURE = "TYPE_VIDEO_CAPTURE"
 AUDIO_CAPTURE = "TYPE_AUDIO_CAPTURE"
 ```
 
-音频捕获资源，例如麦克风。
+Audio capture resource, such as a microphone.
 
 **Since:** 10
 
@@ -72,7 +72,7 @@ AUDIO_CAPTURE = "TYPE_AUDIO_CAPTURE"
 SENSOR = 'TYPE_SENSOR'
 ```
 
-传感器资源，例如加速度传感器。
+Sensor resource, such as an acceleration sensor.
 
 **Since:** 12
 

@@ -1,6 +1,6 @@
 # LazyWaterFlowLayoutAttribute
 
-定义懒加载瀑布流布局属性。
+Defines the lazy waterflow layout attribute.
 
 **Inheritance/Implementation:** LazyWaterFlowLayoutAttribute extends [CommonMethod<T>](CommonMethod<T>)
 
@@ -24,7 +24,7 @@ import { LazyVWaterFlowLayout, LazyWaterFlowLayoutAttribute, LazyVWaterFlowLayou
 columnsGap(value: LengthMetrics | undefined): T
 ```
 
-列之间的间距。
+The spacing between columns.
 
 **Since:** 26.0.0
 
@@ -42,7 +42,7 @@ columnsGap(value: LengthMetrics | undefined): T
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | [LengthMetrics](arkts-arkui-graphics-lengthmetrics-c.md) \| undefined | Yes | 列之间的间距。 &lt;br&gt;默认值：LengthMetrics.vp(0) |
+| value | [LengthMetrics](arkts-arkui-graphics-lengthmetrics-c.md) \| undefined | Yes | The spacing between columns. &lt;br&gt;Default value: LengthMetrics.vp(0) |
 
 **Return value:**
 
@@ -56,7 +56,7 @@ columnsGap(value: LengthMetrics | undefined): T
 footer(builder: CustomBuilder | undefined): T
 ```
 
-设置懒加载瀑布流布局的footer。
+Sets the footer of the lazy waterflow layout.
 
 **Since:** 26.0.0
 
@@ -74,7 +74,7 @@ footer(builder: CustomBuilder | undefined): T
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| builder | [CustomBuilder](../arkts-components/arkts-arkui-custombuilder-t.md) \| undefined | Yes | footer生成器函数 &lt;br&gt;传递undefined将删除footer。 |
+| builder | [CustomBuilder](../arkts-components/arkts-arkui-custombuilder-t.md) \| undefined | Yes | The footer builder function. &lt;br&gt;Passing undefined will remove the footer. |
 
 **Return value:**
 
@@ -88,7 +88,7 @@ footer(builder: CustomBuilder | undefined): T
 header(builder: CustomBuilder | undefined): T
 ```
 
-设置懒加载瀑布流布局的header。
+Sets the header of the lazy waterflow layout.
 
 **Since:** 26.0.0
 
@@ -106,7 +106,7 @@ header(builder: CustomBuilder | undefined): T
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| builder | [CustomBuilder](../arkts-components/arkts-arkui-custombuilder-t.md) \| undefined | Yes | header生成器函数 &lt;br&gt;传递undefined将删除header。 |
+| builder | [CustomBuilder](../arkts-components/arkts-arkui-custombuilder-t.md) \| undefined | Yes | The header builder function. &lt;br&gt;Passing undefined will remove the header. |
 
 **Return value:**
 
@@ -120,7 +120,7 @@ header(builder: CustomBuilder | undefined): T
 onVisibleIndexesChange(callback: OnVisibleIndexesChangeCallback | undefined): T
 ```
 
-当组件中显示的第一个或最后一个项目更改时调用。它在组件初始化时会触发一次。
+Called when the first or last item displayed in the component changes.It is triggered once when the component is initialized.
 
 **Since:** 26.0.0
 
@@ -138,7 +138,7 @@ onVisibleIndexesChange(callback: OnVisibleIndexesChangeCallback | undefined): T
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [OnVisibleIndexesChangeCallback](../arkts-components/arkts-arkui-onvisibleindexeschangecallback-t.md) \| undefined | Yes | 回调函数，当可见区域中子组件的索引发生变化时触发。 &lt;br&gt;传递undefined将取消注册回调。 |
+| callback | [OnVisibleIndexesChangeCallback](../arkts-components/arkts-arkui-onvisibleindexeschangecallback-t.md) \| undefined | Yes | callback function, triggered when the index of child components in the visible area changes. &lt;br&gt;Passing undefined will unregister the callback. |
 
 **Return value:**
 
@@ -152,7 +152,7 @@ onVisibleIndexesChange(callback: OnVisibleIndexesChangeCallback | undefined): T
 rowsGap(value: LengthMetrics | undefined): T
 ```
 
-行之间的间距。
+The spacing between rows.
 
 **Since:** 26.0.0
 
@@ -170,7 +170,7 @@ rowsGap(value: LengthMetrics | undefined): T
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | [LengthMetrics](arkts-arkui-graphics-lengthmetrics-c.md) \| undefined | Yes | 行之间的间距。 &lt;br&gt;默认值：LengthMetrics.vp(0) |
+| value | [LengthMetrics](arkts-arkui-graphics-lengthmetrics-c.md) \| undefined | Yes | The spacing between rows. &lt;br&gt;Default value: LengthMetrics.vp(0) |
 
 **Return value:**
 
@@ -184,7 +184,7 @@ rowsGap(value: LengthMetrics | undefined): T
 sticky(sticky: StickyStyle | undefined): T
 ```
 
-设置header和footer的吸顶吸底样式。
+Sets the sticky style for header and footer.
 
 **Since:** 26.0.0
 
@@ -202,7 +202,7 @@ sticky(sticky: StickyStyle | undefined): T
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| sticky | [StickyStyle](../arkts-components/arkts-arkui-stickystyle-e.md) \| undefined | Yes | header和footer的吸顶吸底样式 |
+| sticky | [StickyStyle](../arkts-components/arkts-arkui-stickystyle-e.md) \| undefined | Yes | The sticky style for header and footer. |
 
 **Return value:**
 

@@ -1,11 +1,5 @@
 # byteLength
 
-## 导入模块
-
-```TypeScript
-import { fastbuffer } from 'kits/@kit.ArkTS';
-```
-
 ## byteLength
 
 ```TypeScript
@@ -29,7 +23,7 @@ function byteLength(value: string | FastBuffer | TypedArray | DataView | ArrayBu
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | value | string \| FastBuffer \| TypedArray \| DataView \| ArrayBuffer \| SharedArrayBuffer | 是 | 指定用于计算字节长度的内容。 |
-| encoding | [BufferEncoding](arkts-arkts-fastbuffer-bufferencoding-t.md) | 否 | 编码格式（当`value`为string时，才有意义）。默认值：'utf8'。传入无法识别的encoding会抛出TypeError。 |
+| encoding | [BufferEncoding](arkts-arkts-fastbuffer-bufferencoding-t.md) | 否 | 编码格式。默认值：'utf8'。传入无法识别的encoding会抛出TypeError。 |
 
 **返回值：**
 

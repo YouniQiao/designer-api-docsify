@@ -1,6 +1,6 @@
 # SwiperNestedScrollMode
 
-Swiper组件和父组件的嵌套滚动模式枚举。
+Swiper nested scroll nested mode
 
 **Since:** 23
 
@@ -16,7 +16,7 @@ Swiper组件和父组件的嵌套滚动模式枚举。
 SELF_ONLY = 0
 ```
 
-Swiper只自身滚动，不与父组件联动。
+Only Self response scrolling.
 
 **Since:** 23
 
@@ -34,7 +34,7 @@ Swiper只自身滚动，不与父组件联动。
 SELF_FIRST = 1
 ```
 
-Swiper自身先滚动，自身滚动到边缘以后父组件滚动。父组件滚动到边缘以后，如果父组件有边缘效果，则父组件触发边缘效果，否则Swiper触发边缘效果。
+Self priority response scrolling.
 
 **Since:** 23
 

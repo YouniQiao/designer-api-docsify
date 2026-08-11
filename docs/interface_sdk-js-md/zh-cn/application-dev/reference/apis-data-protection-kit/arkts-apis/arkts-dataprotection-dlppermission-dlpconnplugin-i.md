@@ -15,12 +15,6 @@
 
 **系统能力：** SystemCapability.Security.DataLossPrevention
 
-## 导入模块
-
-```TypeScript
-import { dlpPermission } from 'kits/@kit.DataProtectionKit';
-```
-
 ## connectServer
 
 ```TypeScript
@@ -59,8 +53,8 @@ connectServer(requestId: string, requestData: string, callback: Callback<string>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 19100011 | The system ability works abnormally. |
-| 201 | Permission denied. |
+| [19100011](../errorcode-dlp.md#19100011-系统服务工作异常) | The system ability works abnormally. |
+| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
 
 ## 示例
 

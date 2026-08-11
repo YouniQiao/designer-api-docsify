@@ -1,11 +1,6 @@
 # ImageSourceSize
 
-图片解码尺寸。
-
-> **说明：**
-> 
-> 为规范匿名对象的定义，API 18版本修改了此处的元素定义。其中，保留了历史匿名对象的起始版本信息，
-> 会出现外层元素@since版本号高于内层元素版本号的情况，但这不影响接口的使用。
+Defines source size of image.
 
 **Since:** 23
 
@@ -21,9 +16,7 @@
 height: double
 ```
 
-图片解码尺寸高度。
-
-单位：vp
+Set height.Anonymous Object Rectification.
 
 **Type:** double
 
@@ -43,9 +36,7 @@ height: double
 width: double
 ```
 
-图片解码尺寸宽度。
-
-单位：vp
+Set width.Anonymous Object Rectification.
 
 **Type:** double
 

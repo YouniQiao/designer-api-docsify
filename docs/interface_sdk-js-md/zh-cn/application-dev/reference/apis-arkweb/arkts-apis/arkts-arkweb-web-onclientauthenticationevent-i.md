@@ -18,7 +18,7 @@ handler: ClientAuthenticationHandler
 
 Notifies the user of the operation behavior of the web component.
 
-**类型：** [ClientAuthenticationHandler](../arkts-components/arkts-arkweb-clientauthenticationhandler-c.md)
+**类型：** [ClientAuthenticationHandler](arkts-arkweb-web-clientauthenticationhandler-c.md)
 
 **起始版本：** 23
 

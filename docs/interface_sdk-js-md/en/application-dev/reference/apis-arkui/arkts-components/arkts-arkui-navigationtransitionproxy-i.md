@@ -1,6 +1,6 @@
 # NavigationTransitionProxy
 
-自定义转场动画代理对象。
+Implements a custom transition animation proxy.
 
 **Since:** 11
 
@@ -16,7 +16,7 @@
 cancelTransition?(): void
 ```
 
-取消本次交互转场，恢复到页面跳转前的路由栈(不支持取消不可交互转场动画)。
+Cancels this interactive transition animation, restoring the routing stack to its state before page redirection. (Non-interactive transition animations cannot be canceled.)
 
 **Since:** 12
 
@@ -36,7 +36,7 @@ cancelTransition?(): void
 finishTransition(): void
 ```
 
-结束本次自定义转场动画，开发者需要主动触发该方法来结束本次转场，否则系统会在timeout的时间后结束本次转场。
+Finishes this custom transition animation. This API must be manually called to end the animation. Otherwise, the system ends the animation when the timeout expires.
 
 **Since:** 11
 
@@ -56,7 +56,13 @@ finishTransition(): void
 updateTransition?(progress: number): void
 ```
 
-更新交互转场动画进度(不可交互动画不支持动画进度设置)。
+Updates the progress of this interactive transition animation. (Non-interactive animations do not support setting the animation progress).
+
+> **NOTE：**
+> 
+> You are not advised to use stack operations in [aboutToAppear](arkts-arkui-basecustomcomponent-c.md#abouttoappear), as the
+> page has not yet finished building at this stage, which may lead to issues such as white screens or navigation
+> failures.
 
 **Since:** 12
 
@@ -74,7 +80,7 @@ updateTransition?(progress: number): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| progress | number | Yes | 设置交互转场动画进度值。取值范围：[0, 1] |
+| progress | number | Yes | Progress percentage of the interactive transition animation. Value range: [0, 1]. |
 
 ## from
 
@@ -82,7 +88,7 @@ updateTransition?(progress: number): void
 from: NavContentInfo
 ```
 
-退场页面信息。
+Information about the exit page.
 
 **Type:** [NavContentInfo](arkts-arkui-navcontentinfo-i.md)
 
@@ -104,11 +110,11 @@ from: NavContentInfo
 isInteractive?: boolean
 ```
 
-本次转场动画是否为可交互转场。
+Whether the transition animation is interactive.
 
-true：本次转场动画是可交互转场；false：本次转场动画不是可交互转场。
+**true**: yes; **false**: no
 
-默认值：false
+Default value: **false**
 
 **Type:** boolean
 
@@ -132,7 +138,7 @@ true：本次转场动画是可交互转场；false：本次转场动画不是�
 to: NavContentInfo
 ```
 
-进场页面信息。
+Information about the enter page.
 
 **Type:** [NavContentInfo](arkts-arkui-navcontentinfo-i.md)
 

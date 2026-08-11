@@ -1,6 +1,6 @@
 # OptimizeSpaceProgress (System API)
 
-立即优化空间状态和当前进度。
+Represents the space optimization states and optimization progress.
 
 **Since:** 17
 
@@ -24,7 +24,7 @@ import { cloudSync } from 'kits/@kit.CoreFileKit';
 progress: int
 ```
 
-优化进度百分比，范围[0,100]，单位：百分比。
+Optimization progress percentage. The value range is [0, 100].
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
@@ -46,7 +46,7 @@ progress: int
 state: OptimizeState
 ```
 
-枚举值，优化空间状态。
+Enumerates the space optimization states.
 
 **Type:** [OptimizeState](arkts-corefile-cloudsync-optimizestate-e-sys.md)
 

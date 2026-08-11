@@ -4,7 +4,7 @@
 export type GetTextCallback = (length: int) => string
 ```
 
-'getLeftTextOfCursor' 或 'getRightTextOfCursor' 事件的回调函数。
+The callback of 'getLeftTextOfCursor' or 'getRightTextOfCursor' event.
 
 **Since:** 23
 
@@ -18,7 +18,7 @@ export type GetTextCallback = (length: int) => string
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| length | int | Yes | 文本的长度。 |
+| length | int | Yes | the length of text. |
 
 **Return value:**
 

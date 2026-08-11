@@ -1,9 +1,10 @@
 # TextLine
 
-描述段落基础文本行结构的载体。
+Implements a carrier that describes the basic text line structure of a paragraph.
 
-下列API示例中都需先使用[Paragraph](arkts-arkgraphics2d-text-paragraph-c.md)类的[getTextLines()](arkts-arkgraphics2d-text-paragraph-c.md#gettextlines)接口或者  
-[LineTypeset](arkts-arkgraphics2d-text-linetypeset-c.md)类的[createLine()](arkts-arkgraphics2d-text-linetypeset-c.md#createline)接口获取到TextLine对象实例，再通过此实例调用对应方法。
+Before calling any of the following APIs, you must use [getTextLines()](arkts-arkgraphics2d-text-paragraph-c.md#gettextlines) of the  
+[Paragraph](arkts-arkgraphics2d-text-paragraph-c.md) class or [createLine()](arkts-arkgraphics2d-text-linetypeset-c.md#createline) of the  
+[LineTypeset](arkts-arkgraphics2d-text-linetypeset-c.md) class to create a **TextLine** object.
 
 **Since:** 12
 
@@ -25,7 +26,7 @@ import { text } from 'kits/@kit.ArkGraphics2D';
 createTruncatedLine(width: double, ellipsisMode: EllipsisMode, ellipsis: string): TextLine
 ```
 
-创建一个截断的文本行对象。
+Creates a truncated text line object.
 
 **Since:** 18
 
@@ -41,20 +42,20 @@ createTruncatedLine(width: double, ellipsisMode: EllipsisMode, ellipsis: string)
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| width | double | Yes | 截断后的行宽度，浮点数，单位为物理像素px。 |
-| ellipsisMode | [EllipsisMode](../../apis-arkui/arkts-apis/arkts-arkui-enums-ellipsismode-e.md) | Yes | 截断的类型，当前仅支持头部截断START和尾部截断END。 |
-| ellipsis | string | Yes | 截断的标记字符串。 |
+| width | double | Yes | Line width after truncation, which is a floating-point value in physical pixels (px). |
+| ellipsisMode | [EllipsisMode](../../apis-arkui/arkts-apis/arkts-arkui-enums-ellipsismode-e.md) | Yes | Ellipsis mode. Currently, only **START** and **END** are supported. |
+| ellipsis | string | Yes | String used to mark truncation. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [TextLine](arkts-arkgraphics2d-text-textline-c.md) | 截断的文本行对象。 |
+| [TextLine](arkts-arkgraphics2d-text-textline-c.md) | Truncated text line object. |
 
 ## Examples
 
 ```TypeScript
-import { drawing, text } from '@kit.ArkGraphics2D'
+import { drawing, text, common2D } from '@kit.ArkGraphics2D'
 import { image } from '@kit.ImageKit'
 
 function textFunc(pixelmap: PixelMap) {
@@ -90,7 +91,7 @@ struct Index {
 createTruncatedLine(width: double, ellipsisMode: EllipsisMode, ellipsis: string): TextLine | undefined
 ```
 
-创建一个截断的文本行对象。
+Creates a truncated text line object.
 
 **Since:** 23
 
@@ -104,15 +105,15 @@ createTruncatedLine(width: double, ellipsisMode: EllipsisMode, ellipsis: string)
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| width | double | Yes | 截断后的行宽度，浮点数，单位为物理像素px。 |
-| ellipsisMode | [EllipsisMode](../../apis-arkui/arkts-apis/arkts-arkui-enums-ellipsismode-e.md) | Yes | 截断的类型，当前仅支持头部截断START和尾部截断END。 |
-| ellipsis | string | Yes | 截断的标记字符串。 |
+| width | double | Yes | The width of the truncated line. |
+| ellipsisMode | [EllipsisMode](../../apis-arkui/arkts-apis/arkts-arkui-enums-ellipsismode-e.md) | Yes | Text ellipsis mode, EllipsisMode:MIDDLE is not supported. |
+| ellipsis | string | Yes | Text ellipsis. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [TextLine](arkts-arkgraphics2d-text-textline-c.md) | 截断的文本行对象。 |
+| [TextLine](arkts-arkgraphics2d-text-textline-c.md) | Truncated text line object. |
 
 ## enumerateCaretOffsets
 
@@ -120,7 +121,7 @@ createTruncatedLine(width: double, ellipsisMode: EllipsisMode, ellipsis: string)
 enumerateCaretOffsets(callback: CaretOffsetsCallback): void
 ```
 
-枚举文本行中每个字符的偏移量和索引值。
+Enumerates the offset and index of each character in a text line.
 
 **Since:** 18
 
@@ -136,15 +137,16 @@ enumerateCaretOffsets(callback: CaretOffsetsCallback): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [CaretOffsetsCallback](arkts-arkgraphics2d-text-caretoffsetscallback-t.md) | Yes | 用户自定义函数。回调方法参数包括文本行中每个字符的偏移量和索引值。 |
+| callback | [CaretOffsetsCallback](arkts-arkgraphics2d-text-caretoffsetscallback-t.md) | Yes | Custom function, which contains the offset and index of each character in the text line. |
 
 ## Examples
 
 ```TypeScript
-lines[0].enumerateCaretOffsets((offset: number, index: number, leadingEdge: boolean): boolean => {
+function callback(offset: number, index: number, leadingEdge: boolean): boolean {
   console.info('textLine: offset: ' + offset + ', index: ' + index + ', leadingEdge: ' + leadingEdge);
   return index > 50;
-});
+}
+lines[0].enumerateCaretOffsets(callback);
 ```
 
 ## getAlignmentOffset
@@ -159,7 +161,7 @@ ArkTS-Sta:
 getAlignmentOffset(alignmentFactor: double, alignmentWidth: double): double
 ```
 
-获取文本行根据对齐因子和对齐宽度计算的对齐所需偏移量。
+Obtains the offset of this text line after alignment based on the alignment factor and alignment width.
 
 **Since:** 18
 
@@ -175,14 +177,14 @@ getAlignmentOffset(alignmentFactor: double, alignmentWidth: double): double
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| alignmentFactor | ArkTS-Dyn: number  <br>ArkTS-Sta：double | Yes | 对齐因子，即对齐的程度，浮点数。小于等于0.0表示左对齐，大于0.0小于0.5表示偏左对齐，0.5表示居中对齐，大于0.5小于1.0表示偏右对齐，大于等于 1.0表示右对齐。 |
-| alignmentWidth | ArkTS-Dyn: number  <br>ArkTS-Sta：double | Yes | 对齐宽度，即文本行的宽度，浮点数，单位为物理像素px。小于文本行的实际宽度时，返回0。 |
+| alignmentFactor | ArkTS-Dyn: number  <br>ArkTS-Sta：double | Yes | Alignment factor, which determines how text is aligned. The value is a floating point number. A value less than or equal to 0.0 means that the text is left-aligned; a value between 0.0 and 0.5 means that the text is slightly left-aligned; the value 0.5 means that the text is centered; a value between 0.5 and 1 means that the text is slightly right-aligned; a value greater than or equal to 1.0 means that the text is right-aligned. |
+| alignmentWidth | ArkTS-Dyn: number  <br>ArkTS-Sta：double | Yes | Alignment width, namely the width of the text line, which is a floating-point value, in physical pixels (px). If the width is less than the actual width of the text line, **0** is returned. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| ArkTS-Dyn: number  <br>ArkTS-Sta：double | 计算得到的对齐所需偏移量，浮点数，单位为物理像素px。 |
+| ArkTS-Dyn: number  <br>ArkTS-Sta：double | Calculated offset required for alignment, which is a floating-point value, in physical pixels (px). |
 
 ## Examples
 
@@ -202,7 +204,7 @@ ArkTS-Sta:
 getGlyphCount(): int
 ```
 
-获取文本行中字形的数量。
+Obtains the number of glyphs in this text line.
 
 **Since:** 12
 
@@ -218,7 +220,7 @@ getGlyphCount(): int
 
 | Type | Description |
 | --- | --- |
-| ArkTS-Dyn: number  <br>ArkTS-Sta：int | 该文本行中字形数量，整数。 |
+| ArkTS-Dyn: number  <br>ArkTS-Sta：int | Number of glyphs. The value is an integer. |
 
 ## Examples
 
@@ -232,7 +234,7 @@ let glyphCount = lines[0].getGlyphCount();
 getGlyphRuns(): Array<Run>
 ```
 
-获取文本行的排版单元数组。
+Obtains the array of glyph runs in the text line.
 
 **Since:** 12
 
@@ -248,7 +250,7 @@ getGlyphRuns(): Array<Run>
 
 | Type | Description |
 | --- | --- |
-| Array&lt;Run&gt; | 该文本行中的文本排版单元数组。 |
+| Array&lt;Run&gt; | Array of the runs obtained. |
 
 ## Examples
 
@@ -262,15 +264,15 @@ let runs = lines[0].getGlyphRuns();
 getImageBounds(): common2D.Rect
 ```
 
-获取文本行的图像边界。文本行图像边界与排版字体、排版字号、字符本身都有关，相当于视觉边界。例如字符串为" a b "，'a'字符前面有1个空格，'b'字符后面有1个空格，用户在界面上只能看到"a b"，图像边界即为不包括带行首和末尾空格的边界。例如字符串为"j"或"E"，视觉边界不同，即与字符本身有关，"j"字符串的视觉边界宽度小于"E"字符串的视觉边界宽度，"j"字符串的视觉边界高度大于"E"字符串的视觉边界高度。
+Obtains the image boundaries of this text line. The image boundaries, equivalent to visual boundaries, depend on the font, font size, and characters. For example, for the string " a b " (which has a space before "a" and a space after "b"), only "a b" is visible to users, and therefore the image boundaries do not include these spaces at the beginning and end of the line. For the strings "j" and "E", their image boundaries are different.Specifically, the width of the boundary for "j" is narrower than that for "E", and the height of the boundary for"j" is taller than that for "E".
 
-> **说明：**
+> **NOTE：**
 > 
-> 示意图展示了字符串为" a b "的图像边界。
+> The figure shows the image boundaries for the string " a b ".
 > 
 > ![ImageBounds.png](../../../reference/apis-arkgraphics2d/figures/ImageBounds.png)
 > 
-> 示意图展示了字符串为"j"或"E"的图像边界。
+> The figure shows the image boundaries for the string "j" or "E".
 > 
 > ![ImageBounds-Character.png](../../../reference/apis-arkgraphics2d/figures/ImageBounds-Character.png)
 
@@ -288,7 +290,7 @@ getImageBounds(): common2D.Rect
 
 | Type | Description |
 | --- | --- |
-| common2D.Rect | 文本行的图像边界，单位为物理像素px。 |
+| common2D.Rect | Image boundary of a text line, in physical pixels (px). |
 
 ## Examples
 
@@ -308,7 +310,7 @@ ArkTS-Sta:
 getOffsetForStringIndex(index: int): double
 ```
 
-获取文本行中给定字符串索引处的偏移量。
+Obtains the offset of a character with the specified index in this text line.
 
 **Since:** 18
 
@@ -324,13 +326,13 @@ getOffsetForStringIndex(index: int): double
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| index | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | 要获取偏移量的字符串索引，整数。 |
+| index | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | Index of the character. The value is an integer. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| ArkTS-Dyn: number  <br>ArkTS-Sta：double | 给定字符串索引处的偏移量，浮点数，单位为物理像素px。 |
+| ArkTS-Dyn: number  <br>ArkTS-Sta：double | Offset at the given string index, which is a floating-point value, in physical pixels (px). |
 
 ## Examples
 
@@ -350,7 +352,7 @@ ArkTS-Sta:
 getStringIndexForPosition(point: common2D.Point): int
 ```
 
-获取给定位置在原始字符串中的字符索引。
+Obtains the index of a character at the specified position in the original string.
 
 **Since:** 18
 
@@ -366,13 +368,13 @@ getStringIndexForPosition(point: common2D.Point): int
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| point | common2D.Point | Yes | 要查找字符索引的坐标位置，坐标相对于文本行的左上角原点，单位为物理像素px。其中x为水平坐标，y为垂直坐标。 |
+| point | common2D.Point | Yes | Coordinate position for finding the character index. The coordinates are relative to the top-left origin of the text line, in physical pixels (px). x indicates the horizontal coordinate, and y indicates the vertical coordinate. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| ArkTS-Dyn: number  <br>ArkTS-Sta：int | 给定位置在文本行中对应的字符串索引，整数。 |
+| ArkTS-Dyn: number  <br>ArkTS-Sta：int | Index of the character in the text line. The value is an integer. |
 
 ## Examples
 
@@ -387,7 +389,7 @@ let index = lines[0].getStringIndexForPosition(point);
 getTextRange(): Range
 ```
 
-获取该行文本在整个段落文本中的索引区间。
+Obtains the range of the text in this text line in the entire paragraph.
 
 **Since:** 12
 
@@ -403,7 +405,7 @@ getTextRange(): Range
 
 | Type | Description |
 | --- | --- |
-| [Range](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-scan-range-i.md) | 该行文本在整个段落文本中的索引区间。 |
+| [Range](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-scan-range-i.md) | Range of the text in this text line in the entire paragraph. |
 
 ## Examples
 
@@ -423,7 +425,7 @@ ArkTS-Sta:
 getTrailingSpaceWidth(): double
 ```
 
-获取文本行尾部空白字符的宽度。
+Obtains the width of the spaces at the end of this text line.
 
 **Since:** 18
 
@@ -439,7 +441,7 @@ getTrailingSpaceWidth(): double
 
 | Type | Description |
 | --- | --- |
-| ArkTS-Dyn: number  <br>ArkTS-Sta：double | 文本行尾部空白字符的宽度，浮点数，单位为物理像素px。 |
+| ArkTS-Dyn: number  <br>ArkTS-Sta：double | Width of trailing whitespace characters in the text line, which is a floating-point value, in physical pixels (px). |
 
 ## Examples
 
@@ -453,15 +455,15 @@ let trailingSpaceWidth = lines[0].getTrailingSpaceWidth();
 getTypographicBounds(): TypographicBounds
 ```
 
-获取文本行的排版边界。文本行排版边界与排版字体、排版字号有关，与字符本身无关。例如字符串为" a b "，'a'字符前面有1个空格，'b'字符后面有1个空格，排版边界就包括行首和末尾空格的边界。例如字符串为"j"或"E"，排版边界相同，即与字符本身无关。
+Obtains the typographic boundaries of the text line. These boundaries depend on the typographic font and font size, but not on the characters themselves. For example, for the string " a b " (which has a space before "a" and a space after "b"), the typographic boundaries include the spaces at the beginning and end of the line.Similarly, the strings "j" and "E" have identical typographic boundaries, independent of the characters themselves.
 
-> **说明：**
+> **NOTE：**
 > 
-> 示意图展示了字符串为" a b "的排版边界。
+> The figure shows the typesetting boundaries for the string " a b ".
 > 
 > ![TypographicBounds.png](../../../reference/apis-arkgraphics2d/figures/TypographicBounds.png)
 > 
-> 示意图展示了字符串为"j"或"E"的排版边界。
+> The figure shows the typesetting boundaries for the string "j" or "E".
 > 
 > !
 > [TypographicBounds-Character.png](../../../reference/apis-arkgraphics2d/figures/TypographicBounds-Character.png)
@@ -480,7 +482,7 @@ getTypographicBounds(): TypographicBounds
 
 | Type | Description |
 | --- | --- |
-| [TypographicBounds](arkts-arkgraphics2d-text-typographicbounds-i.md) | 文本行的排版边界。 |
+| [TypographicBounds](arkts-arkgraphics2d-text-typographicbounds-i.md) | Describes the typographic boundaries of a text line. |
 
 ## Examples
 
@@ -501,7 +503,7 @@ ArkTS-Sta:
 paint(canvas: drawing.Canvas, x: double, y: double): void
 ```
 
-在画布上以坐标点(x, y)为左上角位置绘制该文本行。
+Paints this text line on the canvas with the coordinate point (x, y) as the upper left corner.
 
 **Since:** 12
 
@@ -517,14 +519,16 @@ paint(canvas: drawing.Canvas, x: double, y: double): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| canvas | drawing.Canvas | Yes | 绘制的目标canvas。 |
-| x | ArkTS-Dyn: number  <br>ArkTS-Sta：double | Yes | 绘制的左上角位置的横坐标，浮点数，单位为物理像素px。 |
-| y | ArkTS-Dyn: number  <br>ArkTS-Sta：double | Yes | 绘制的左上角位置的纵坐标，浮点数，单位为物理像素px。 |
+| canvas | drawing.Canvas | Yes | Target canvas. |
+| x | ArkTS-Dyn: number  <br>ArkTS-Sta：double | Yes | Horizontal coordinate of the upper left corner, which is a floating-point value, in physical pixels (px). |
+| y | ArkTS-Dyn: number  <br>ArkTS-Sta：double | Yes | Vertical coordinate of the upper left corner, which is a floating-point value, in physical pixels (px). |
 
 ## Examples
 
 ```TypeScript
 import { drawing } from '@kit.ArkGraphics2D'
+import { text } from '@kit.ArkGraphics2D'
+import { common2D } from '@kit.ArkGraphics2D'
 import { image } from '@kit.ImageKit'
 
 function textFunc(pixelmap: PixelMap) {

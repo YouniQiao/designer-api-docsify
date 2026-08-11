@@ -1,6 +1,6 @@
 # UpdateRequest (System API)
 
-自动填充更新信息。
+Defines the information about an auto-update request.
 
 **Since:** 12
 
@@ -18,7 +18,7 @@
 viewData: ViewData
 ```
 
-页面数据。
+Page data.
 
 **Type:** [ViewData](arkts-ability-viewdata-i.md)
 

@@ -4,7 +4,7 @@
 export type HashMapCbFn<K, V> = (value: V, key: K, map: HashMap<K, V>) => void
 ```
 
-HashMap中forEach方法的回调函数。
+The type of HashMap callback function.
 
 **Since:** 23
 
@@ -20,7 +20,7 @@ HashMap中forEach方法的回调函数。
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | V | Yes | 当前遍历到的元素键值对的值。 |
-| key | K | Yes | 当前遍历到的元素键值对的键。 |
-| map | [HashMap](arkts-arkts-util-hashmap-hashmap-c.md)&lt;K, V&gt; | Yes | 当前调用forEach方法的实例对象，默认值为当前实例对象。 |
+| value | V | Yes | The value of the current entry |
+| key | K | Yes | The key of the current entry |
+| map | [HashMap](arkts-arkts-util-hashmap-hashmap-c.md)&lt;K, V&gt; | Yes | The HashMap instance being traversed |
 

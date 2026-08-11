@@ -1,6 +1,6 @@
 # ScrollableTargetInfo
 
-手势识别器对应的滚动类容器组件的信息，继承于[EventTargetInfo](arkts-arkui-eventtargetinfo-c.md)。
+Defines the scrollable target information.
 
 **Inheritance/Implementation:** ScrollableTargetInfo extends [EventTargetInfo](arkts-arkui-eventtargetinfo-c.md)
 
@@ -18,7 +18,7 @@
 isBegin(): boolean
 ```
 
-返回当前滚动类容器组件是否在顶部，如果为Swiper组件且在循环模式下返回false。
+Returns whether the scrollable component is at begin.
 
 **Since:** 23
 
@@ -34,7 +34,7 @@ isBegin(): boolean
 
 | Type | Description |
 | --- | --- |
-| boolean | 当前滚动类容器组件是否在顶部。true表示组件在顶部，false表示组件不在顶部。 |
+| boolean | true is at begin, false is not at begin |
 
 ## isEnd
 
@@ -42,7 +42,7 @@ isBegin(): boolean
 isEnd(): boolean
 ```
 
-返回当前滚动类容器组件是否在底部，如果为Swiper组件且在循环模式下返回false。
+Returns whether the scrollable component is at end.
 
 **Since:** 23
 
@@ -58,5 +58,5 @@ isEnd(): boolean
 
 | Type | Description |
 | --- | --- |
-| boolean | 当前滚动类容器组件是否在底部。true表示组件在底部，false表示组件不在底部。 |
+| boolean | true is at end, false is not at end |
 

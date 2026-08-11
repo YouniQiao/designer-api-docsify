@@ -12,7 +12,7 @@ import { hidebug } from 'kits/@kit.PerformanceAnalysisKit';
 function getAppVMObjectUsedSize(): bigint
 ```
 
-��ȡ��ǰ�������ArkTS������ռ�õ��ڴ��С��
+Obtains the VM memory size occupied by ArkTS objects.
 
 **Since:** 21
 
@@ -26,7 +26,7 @@ function getAppVMObjectUsedSize(): bigint
 
 | Type | Description |
 | --- | --- |
-| bigint | ��ǰ�������ArkTS������ռ�õ��ڴ��С����λΪKB�� |
+| bigint | VM memory size occupied by ArkTS objects, in KB. |
 
 ## Examples
 

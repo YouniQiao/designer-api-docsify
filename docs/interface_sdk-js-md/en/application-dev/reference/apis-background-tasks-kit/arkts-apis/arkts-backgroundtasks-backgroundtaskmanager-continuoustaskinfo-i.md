@@ -1,6 +1,6 @@
 # ContinuousTaskInfo
 
-长时任务信息。
+Describes the continuous task information.
 
 **Since:** 20
 
@@ -40,7 +40,7 @@ UIAbility ID.
 abilityName: string
 ```
 
-UIAbility名称。
+UIAbility name.
 
 **Type:** string
 
@@ -58,7 +58,7 @@ UIAbility名称。
 appIndex?: int
 ```
 
-应用分身ID。取值范围为全体整数。
+Index of an application clone.
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
@@ -76,7 +76,7 @@ appIndex?: int
 backgroundModes: string[]
 ```
 
-[长时任务类型](arkts-backgroundtasks-backgroundtaskmanager-backgroundmode-e.md)。
+[Type of a continuous task](arkts-backgroundtasks-backgroundtaskmanager-backgroundmode-e.md).
 
 **Type:** string[]
 
@@ -94,7 +94,7 @@ backgroundModes: string[]
 backgroundSubModes: string[]
 ```
 
-[长时任务子类型](arkts-backgroundtasks-backgroundtaskmanager-backgroundsubmode-e.md)。
+[Subtype of a continuous task](arkts-backgroundtasks-backgroundtaskmanager-backgroundsubmode-e.md).
 
 **Type:** string[]
 
@@ -112,7 +112,7 @@ backgroundSubModes: string[]
 bundleName?: string
 ```
 
-应用包名。
+Application bundle name.
 
 **Type:** string
 
@@ -130,7 +130,7 @@ bundleName?: string
 continuousTaskId: int
 ```
 
-长时任务ID。
+Continuous task ID.
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
@@ -148,7 +148,7 @@ continuousTaskId: int
 isFromWebView: boolean
 ```
 
-是否通过Webview方式申请，即通过系统代理应用申请长时任务。true表示通过Webview方式申请，false表示不通过Webview方式申请。
+Whether to request a continuous task in WebView mode, that is, whether to request a continuous task through the system proxy application. The value **true** indicates that the Webview mode is used, and the value **false** indicates that the Webview mode is not used.
 
 **Type:** boolean
 
@@ -166,7 +166,7 @@ isFromWebView: boolean
 notificationId: int
 ```
 
-通知 Id。
+Notification ID.
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
@@ -184,7 +184,7 @@ notificationId: int
 pid: int
 ```
 
-应用进程的PID。
+Application PID.
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
@@ -202,7 +202,7 @@ pid: int
 suspendState: boolean
 ```
 
-申请的长时任务是否处于暂停状态。true表示处于暂停状态，false表示处于激活状态。
+Whether the requested continuous task is suspended. The value **true** indicates that the task is suspended, and the value **false** indicates that the task is activated.
 
 **Type:** boolean
 
@@ -220,7 +220,7 @@ suspendState: boolean
 uid: int
 ```
 
-应用的UID。
+Application UID.
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
@@ -238,7 +238,7 @@ uid: int
 wantAgentAbilityName: string
 ```
 
-[WantAgent](../../apis-ability-kit/arkts-apis/arkts-app-ability-wantagent.md/arkts-app-ability-wantagent.md) 配置的ability名称。WantAgent为通知参数，用于指定点击长时任务通知后跳转的界面，在申请长时任务时作为参数传入。
+Ability name configured in [WantAgent](../../apis-ability-kit/arkts-apis/arkts-app-ability-wantagent.md/arkts-app-ability-wantagent.md). **WantAgent** is a notification parameter used to specify the target page when a continuous task notification is tapped.
 
 **Type:** string
 
@@ -256,7 +256,7 @@ wantAgentAbilityName: string
 wantAgentBundleName: string
 ```
 
-[WantAgent](../../apis-ability-kit/arkts-apis/arkts-app-ability-wantagent.md/arkts-app-ability-wantagent.md) 配置的包名。WantAgent为通知参数，用于指定点击长时任务通知后跳转的界面，在申请长时任务时作为参数传入。
+Bundle name configured in [WantAgent](../../apis-ability-kit/arkts-apis/arkts-app-ability-wantagent.md/arkts-app-ability-wantagent.md). **WantAgent** is a notification parameter used to specify the target page when a continuous task notification is tapped.
 
 **Type:** string
 

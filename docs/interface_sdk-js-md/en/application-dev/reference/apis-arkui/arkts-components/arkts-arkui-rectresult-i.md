@@ -1,6 +1,6 @@
 # RectResult
 
-位置和尺寸类型，用于描述组件的位置和宽高。
+Describes the position, width, and height of a component.
 
 **Since:** 10
 
@@ -16,9 +16,9 @@
 height: number
 ```
 
-内容高度大小。
+Content height.
 
-单位：vp
+Unit: vp.
 
 **Type:** number
 
@@ -40,9 +40,9 @@ height: number
 width: number
 ```
 
-内容宽度大小。
+Content width.
 
-单位：vp
+Unit: vp.
 
 **Type:** number
 
@@ -64,9 +64,9 @@ width: number
 x: number
 ```
 
-水平方向横坐标。
+X-coordinate.
 
-单位：vp
+Unit: vp.
 
 **Type:** number
 
@@ -88,9 +88,9 @@ x: number
 y: number
 ```
 
-竖直方向纵坐标。
+Y-coordinate.
 
-单位：vp
+Unit: vp.
 
 **Type:** number
 

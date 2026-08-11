@@ -1,16 +1,20 @@
 # StorageType
 
-Preferences的存储模式枚举。
+Enumerates the storage types of preferences.
 
-> **说明：**
+> **NOTE：**
 > 
-> - 在选择存储模式前，建议调用[isStorageTypeSupported](arkts-arkdata-preferences-isstoragetypesupported-f.md#isstoragetypesupported)检查当前平台是否支持对应存储模式。
+> - Before using this mode, you are advised to call **isStorageTypeSupported** to check whether this storage type
+> is supported.
 > 
-> - 当选择某一模式通过[preferences.getPreferences](arkts-arkdata-preferences-getpreferences-f.md#getpreferences)接口获取实例后，不允许中途切换模式。
+> - Once the storage type is selected and data instances are obtained via **getPreferences()**, the storage type
+> cannot be changed.
 > 
-> - 首选项不支持不同模式间数据的迁移，若需将数据从一种模式切换至另一种模式，需通过读写首选项的形式进行数据迁移。
+> - Data cannot be directly migrated between the **Preferences** instances that use different storage types. To
+> migrate data between them, you need to read the data to be migrated and then write the data.
 > 
-> - 若需要变更首选项的存储路径，不能通过移动或覆盖文件的方式进行，需通过读写首选项的形式进行数据迁移。
+> - If you need to change the storage directory of preferences, you cannot move or overwrite files. Instead, you
+> need to read the data and then write the data.
 
 **Since:** 18
 
@@ -26,9 +30,11 @@ Preferences的存储模式枚举。
 XML = 0
 ```
 
-表示[XML存储模式](../../../database/data-persistence-by-preferences.md#xml存储)，这是Preferences的默认存储模式。
+[XML](../../../database/data-persistence-by-preferences.md#xml) format, which is the default storage type of   
+**Preferences**.
 
-**特点：** 数据以XML格式进行存储。对数据的操作发生在内存中，需要调用[flush](arkts-arkdata-preferences-preferences-i.md#flush)接口进行落盘。
+In this mode, data is stored in XML format. Data operations are performed in the memory. To persist data, call   
+**flush()**.
 
 **Since:** 18
 
@@ -46,10 +52,9 @@ XML = 0
 GSKV
 ```
 
-表示[GSKV存储模式](../../../database/data-persistence-by-preferences.md#gskv存储)。
+[GSKV](../../../database/data-persistence-by-preferences.md#gskv) format.
 
-**特点：** 数据以GSKV数据库模式进行存储。对数据的操作实时落盘，无需调用  
-[flush](arkts-arkdata-preferences-preferences-i.md#flush)接口对数据进行落盘。
+Data is stored in GSKV mode. Data operations are flushed on a real-time basis without calling **flush()**.
 
 **Since:** 18
 

@@ -1,6 +1,6 @@
 # Accessibility
 
-枚举，关键资产基于锁屏状态的访问控制类型。
+Enumerates the types of access control based on the lock screen status.
 
 **Since:** 11
 
@@ -16,7 +16,7 @@
 DEVICE_POWERED_ON = 0
 ```
 
-开机后可访问。
+The asset can be accessed after the device is powered on.
 
 **Since:** 11
 
@@ -34,9 +34,9 @@ DEVICE_POWERED_ON = 0
 DEVICE_FIRST_UNLOCKED = 1
 ```
 
-首次解锁后可访问
+The asset can be accessed only after the device is unlocked for the first time.
 
-**说明：** 未设置锁屏密码时，等同于开机后可访问。
+**Note：**: If no lock screen password is set, this option is equivalent to **DEVICE_POWERED_ON**.
 
 **Since:** 11
 
@@ -54,9 +54,9 @@ DEVICE_FIRST_UNLOCKED = 1
 DEVICE_UNLOCKED = 2
 ```
 
-解锁状态时可访问
+The asset can be accessed only when the device is unlocked.
 
-**说明：** 未设置锁屏密码时，等同于开机后可访问。
+**Note：**: If no lock screen password is set, this option is equivalent to **DEVICE_POWERED_ON**.
 
 **Since:** 11
 

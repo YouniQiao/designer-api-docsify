@@ -1,6 +1,6 @@
 # FloatingTabBarWidth
 
-提供了一个接口，用于设置不同断点处的tab宽度的浮动栏宽度。
+Provides an interface for the options for the floating bar width of the tab width at different breakpoints.
 
 **Since:** 26.0.0
 
@@ -16,7 +16,7 @@
 largeBarWidth?: Length
 ```
 
-大型设备的条形宽度。不能以百分比形式设置。
+The bar width of the large devices. It cannot be set in percentage.
 
 **Type:** [Length](../arkts-apis/arkts-arkui-length-t.md)
 
@@ -38,7 +38,7 @@ largeBarWidth?: Length
 mediumBarWidth?: Length
 ```
 
-介质设备的条形宽度。不能以百分比形式设置。
+The bar width of the medium devices. It cannot be set in percentage.
 
 **Type:** [Length](../arkts-apis/arkts-arkui-length-t.md)
 
@@ -60,7 +60,7 @@ mediumBarWidth?: Length
 smallBarWidth?: Length
 ```
 
-小设备的条形宽度。不能以百分比形式设置。
+The bar width of the small devices. It cannot be set in percentage.
 
 **Type:** [Length](../arkts-apis/arkts-arkui-length-t.md)
 

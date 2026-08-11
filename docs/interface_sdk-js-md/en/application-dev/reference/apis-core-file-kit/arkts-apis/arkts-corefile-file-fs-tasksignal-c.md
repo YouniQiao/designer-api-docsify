@@ -1,6 +1,6 @@
 # TaskSignal
 
-拷贝中断信号。
+Provides APIs for interrupting a copy task.
 
 **Since:** 12
 
@@ -22,7 +22,7 @@ import { Options, ReaderIteratorResult, Watcher, ReadTextOptions, WatchEventList
 cancel(): void
 ```
 
-取消拷贝任务。
+Cancels a copy task.
 
 **Since:** 12
 
@@ -44,6 +44,7 @@ cancel(): void
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
+import { fileIo as fs } from '@kit.CoreFileKit';
 import { fileUri } from '@kit.CoreFileKit';
 import { common } from '@kit.AbilityKit';
 
@@ -55,21 +56,21 @@ let srcDirPathLocal: string = pathDir + "/src";
 let dstDirPathLocal: string = pathDir + "/dest";
 let srcDirUriLocal: string = fileUri.getUriFromPath(srcDirPathLocal);
 let dstDirUriLocal: string = fileUri.getUriFromPath(dstDirPathLocal);
-let copySignal = new fileIo.TaskSignal;
-let progressListener: fileIo.ProgressListener = (progress: fileIo.Progress) => {
+let copySignal = new fs.TaskSignal;
+let progressListener: fs.ProgressListener = (progress: fs.Progress) => {
   console.info(`progressSize: ${progress.processedSize}, totalSize: ${progress.totalSize}`);
   if (progress.processedSize / progress.totalSize > 0.5) {
     copySignal.cancel();
     console.info("copy cancel.");
   }
 };
-let options: fileIo.CopyOptions = {
+let options: fs.CopyOptions = {
   "progressListener" : progressListener,
   "copySignal" : copySignal,
 }
 
 try {
-  fileIo.copy(srcDirUriLocal, dstDirUriLocal, options, (err: BusinessError) => {
+  fs.copy(srcDirUriLocal, dstDirUriLocal, options, (err: BusinessError) => {
     if (err) {
       console.error("copy fail, err: ", err.message);
       return;
@@ -87,11 +88,11 @@ try {
 onCancel(): Promise<string>
 ```
 
-> **说明：**
+> **NOTE：**
 > 
-> 从API version 12开始支持，从API version 24开始废弃。
+> This API is supported since API version 12 and deprecated since API version 24.
 
-取消拷贝事件监听。
+Subscribes to the event reported when a copy task is canceled.
 
 **Since:** 12
 
@@ -107,7 +108,7 @@ onCancel(): Promise<string>
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;string&gt; | Promise对象。最后一个拷贝的文件路径。 |
+| Promise&lt;string&gt; | Promise used to return the path of the last file copied. |
 
 **Error codes:**
 
@@ -120,9 +121,9 @@ onCancel(): Promise<string>
 ## Examples
 
 ```TypeScript
+import { fileIo as fs } from '@kit.CoreFileKit';
 import { TaskSignal } from '@kit.CoreFileKit';
-
-let copySignal: fileIo.TaskSignal = new TaskSignal();
+let copySignal: fs.TaskSignal = new TaskSignal();
 copySignal.onCancel();
 ```
 

@@ -12,7 +12,7 @@ import { startupManager } from 'kits/@kit.AbilityKit';
 function getStartupTaskResult(startupTask: string): Object
 ```
 
-获取指定启动任务或so预加载任务的执行结果。
+Obtains the execution result of a startup task or .so file preloading task.
 
 **Since:** 12
 
@@ -28,19 +28,19 @@ function getStartupTaskResult(startupTask: string): Object
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| startupTask | string | Yes | 启动任务[StartupTask](arkts-ability-app-appstartup-startuptask-startuptask-c.md)的名称或预加载so名称。 |
+| startupTask | string | Yes | Name of the [StartupTask](arkts-ability-app-appstartup-startuptask-startuptask-c.md) or name of the .so file to be preloaded. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Object | 输入为启动任务名时，返回指定的启动任务 [init]{ |
+| Object | Execution result of [init]{ |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types. |
 
 ## Examples
 
@@ -87,7 +87,7 @@ export default class EntryAbility extends UIAbility {
 function getStartupTaskResult(startupTask: string): Any
 ```
 
-获取指定启动任务或so预加载任务的执行结果。
+Obtains specific startup task result.
 
 **Since:** 23
 
@@ -103,7 +103,7 @@ function getStartupTaskResult(startupTask: string): Any
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| startupTask | string | Yes | 启动任务[StartupTask](arkts-ability-app-appstartup-startuptask-startuptask-c.md)的名称或预加载so名称。 |
+| startupTask | string | Yes | Indicates name of specific startup task. |
 
 **Return value:**
 

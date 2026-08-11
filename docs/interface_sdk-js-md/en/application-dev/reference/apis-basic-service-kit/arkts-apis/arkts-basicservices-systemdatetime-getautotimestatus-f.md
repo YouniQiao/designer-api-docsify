@@ -12,7 +12,7 @@ import { systemDateTime } from 'kits/@kit.BasicServicesKit';
 function getAutoTimeStatus(): boolean
 ```
 
-获取自动设置时间开关状态，使用同步方式。
+Obtains the switch status of the automatic time setting. This API returns the result synchronously.
 
 **Since:** 21
 
@@ -26,13 +26,13 @@ function getAutoTimeStatus(): boolean
 
 | Type | Description |
 | --- | --- |
-| boolean | 返回自动设置时间开关状态。&lt;br/&gt;- true：表示自动设置时间开关状态为打开。 &lt;br/&gt;- false：表示自动设置时间开关状态为关闭。 |
+| boolean | Switch status of the automatic time setting. &lt;br&gt;- **true**: The automatic time setting is on. &lt;br&gt;- **false**: The automatic time setting is off. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 13000001 | Network connection error or OS error. Possible causes: 1.System memory is insufficient; 2.Calls the underlying system interface failed. |
+| [13000001](../../apis-basic-services-kit/errorcode-time.md#13000001-network-or-os-error) | Network connection error or OS error. Possible causes: 1.System memory is insufficient; 2.Calls the underlying system interface failed. |
 
 ## Examples
 

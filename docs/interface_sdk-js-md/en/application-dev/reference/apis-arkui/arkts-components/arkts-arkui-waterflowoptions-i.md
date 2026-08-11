@@ -1,6 +1,6 @@
 # WaterFlowOptions
 
-瀑布流组件参数对象。
+Provides parameters of the **WaterFlow** component.
 
 **Since:** 9
 
@@ -16,7 +16,7 @@
 footer?: CustomBuilder
 ```
 
-设置WaterFlow尾部组件，用于在瀑布流末尾显示自定义内容（如加载提示、底部标识等）。不设置时不显示尾部组件。
+Footer component of the **WaterFlow** component, which is used to display custom content (such as loading prompts and bottom icons) at the end of the waterfall. If this parameter is not set, no footer component is displayed.
 
 **Type:** [CustomBuilder](arkts-arkui-custombuilder-t.md)
 
@@ -36,7 +36,8 @@ footer?: CustomBuilder
 footerContent?: ComponentContent
 ```
 
-设置WaterFlow尾部组件。该参数的优先级高于参数footer，即同时设置footer和footerContent时，以footerContent设置的组件为准。
+Footer of the **WaterFlow** component. This parameter has a higher priority than **footer**. If both  
+**footer** and **footerContent** are set, the component set by **footerContent** will be used.
 
 **Type:** [ComponentContent](../arkts-apis/arkts-arkui-componentcontent-c.md)
 
@@ -58,7 +59,7 @@ footerContent?: ComponentContent
 layoutMode?: WaterFlowLayoutMode
 ```
 
-设置WaterFlow的布局模式，根据使用场景选择更切合的模式。
+Layout mode of the &lt;em&gt;WaterFlow&lt;/em&gt; component.
 
 **Type:** [WaterFlowLayoutMode](../arkts-apis/arkts-arkui-waterflow-waterflowlayoutmode-e.md)
 
@@ -82,9 +83,9 @@ layoutMode?: WaterFlowLayoutMode
 scroller?: Scroller
 ```
 
-可滚动组件的控制器，与可滚动组件绑定。
+Controller of the scrollable component, bound to the scrollable component.
 
-&lt;p&gt;&lt;strong&gt;说明&lt;/strong&gt;&lt;br&gt;不允许和其他滚动类组件，如：ArcList、List、Grid、Scroll和WaterFlow绑定同一个滚动控制对象。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;NOTE&lt;/strong&gt;&lt;br&gt;The scroller cannot be bound to other scrollable components, such as ArcList, List, Grid, Scroll, or WaterFlow.&lt;/p&gt;
 
 **Type:** [Scroller](../arkts-apis/arkts-arkui-scroll-scroller-c.md)
 
@@ -104,9 +105,9 @@ scroller?: Scroller
 sections?: WaterFlowSections
 ```
 
-设置FlowItem分组，实现同一个瀑布流组件内部各分组使用不同列数混合布局。适用于需要在不同区域使用不同列数布局的场景。不设置时使用统一列数布局。
+Water flow item sections, used to implement mixed layouts with different column counts for each section within the same **WaterFlow** component. This is applicable to scenarios where different numbers of columns are required in different areas. If this parameter is not set, the layout with the same number of columns is used.
 
-&lt;p&gt;&lt;strong&gt;说明&lt;/strong&gt;&lt;br&gt;1. 使用分组混合布局时会忽略columnsTemplate和rowsTemplate属性。&lt;br&gt;2. 使用分组混合布局时不支持单独设置footer，可以使用最后一个分组作为尾部组件。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;NOTE&lt;/strong&gt;&lt;br&gt;1. When &lt;em&gt;sections&lt;/em&gt; is used, the &lt;em&gt;columnsTemplate&lt;/em&gt; and &lt;em&gt;rowsTemplate&lt;/em&gt; attributes are ignored.&lt;br&gt;2. When &lt;em&gt;sections&lt;/em&gt; is used, the footer cannot be set separately.The last section can function as the footer.&lt;/p&gt;
 
 **Type:** [WaterFlowSections](arkts-arkui-waterflowsections-c.md)
 

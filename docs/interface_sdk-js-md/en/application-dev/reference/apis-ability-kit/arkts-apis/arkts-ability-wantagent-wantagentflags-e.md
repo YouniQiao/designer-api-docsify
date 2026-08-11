@@ -1,6 +1,6 @@
 # WantAgentFlags
 
-表示WantAgent行为控制标志，用于配置WantAgent的创建和触发行为。
+Enumerates the flags used by the WantAgent objects.
 
 **Since:** 9
 
@@ -16,7 +16,7 @@
 ONE_TIME_FLAG = 0
 ```
 
-WantAgent仅能使用一次，trigger触发后自动cancel取消。
+The WantAgent object can be used only once.
 
 **Since:** 9
 
@@ -34,7 +34,7 @@ WantAgent仅能使用一次，trigger触发后自动cancel取消。
 NO_BUILD_FLAG
 ```
 
-如果描述WantAgent对象不存在，则不创建它，直接返回null。
+The WantAgent object does not exist and hence it is not created. In this case, &lt;code&gt;null&lt;/code&gt; is returned.
 
 **Since:** 9
 
@@ -52,7 +52,7 @@ NO_BUILD_FLAG
 CANCEL_PRESENT_FLAG
 ```
 
-在生成一个新的WantAgent对象前取消已存在的一个WantAgent对象。
+The existing WantAgent object should be canceled before a new object is generated.
 
 **Since:** 9
 
@@ -70,7 +70,7 @@ CANCEL_PRESENT_FLAG
 UPDATE_PRESENT_FLAG
 ```
 
-使用新的WantAgent的额外数据替换已存在的WantAgent中的额外数据。
+Extra information of the existing WantAgent object is replaced with that of the new object.
 
 **Since:** 9
 
@@ -88,7 +88,7 @@ UPDATE_PRESENT_FLAG
 CONSTANT_FLAG
 ```
 
-WantAgent是不可变的。
+The WantAgent object is immutable.
 
 **Since:** 9
 
@@ -106,7 +106,7 @@ WantAgent是不可变的。
 REPLACE_ELEMENT
 ```
 
-当前Want中的element属性可被WantAgent.trigger()中Want的element属性取代。当前版本暂不支持。
+The element property in the current Want can be replaced by the element property in the Want passed in WantAgent.trigger().This processing is not supported yet.
 
 **Since:** 9
 
@@ -124,7 +124,7 @@ REPLACE_ELEMENT
 REPLACE_ACTION
 ```
 
-当前Want中的action属性可被WantAgent.trigger()中Want的action属性取代。当前版本暂不支持。
+The action property in the current Want can be replaced by the action property in the Want passed in WantAgent.trigger().This processing is not supported yet.
 
 **Since:** 9
 
@@ -142,7 +142,7 @@ REPLACE_ACTION
 REPLACE_URI
 ```
 
-当前Want中的uri属性可被WantAgent.trigger()中Want的uri属性取代。当前版本暂不支持。
+The uri property in the current Want can be replaced by the uri property in the Want passed in WantAgent.trigger().This processing is not supported yet.
 
 **Since:** 9
 
@@ -160,7 +160,7 @@ REPLACE_URI
 REPLACE_ENTITIES
 ```
 
-当前Want中的entities属性可被WantAgent.trigger()中Want的entities属性取代。当前版本暂不支持。
+The &lt;code&gt;entities&lt;/code&gt; property in the current Want can be replaced by the &lt;code&gt;entities&lt;/code&gt; property in the Want passed in WantAgent.trigger().This processing is not supported yet.
 
 **Since:** 9
 
@@ -178,7 +178,7 @@ REPLACE_ENTITIES
 REPLACE_BUNDLE
 ```
 
-当前Want中的bundleName属性可被WantAgent.trigger()中Want的bundleName属性取代。当前版本暂不支持。
+The &lt;code&gt;bundleName&lt;/code&gt; property in the current Want can be replaced by the &lt;code&gt;bundleName&lt;/code&gt; property in the Want passed in WantAgent.trigger().This processing is not supported yet.
 
 **Since:** 9
 

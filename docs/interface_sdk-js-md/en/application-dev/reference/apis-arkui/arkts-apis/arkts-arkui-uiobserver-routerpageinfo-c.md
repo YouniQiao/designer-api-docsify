@@ -1,6 +1,6 @@
 # RouterPageInfo
 
-RouterPageInfo包含的信息。
+Router page info.
 
 **Since:** 23
 
@@ -22,7 +22,7 @@ import { uiObserver } from 'kits/@kit.ArkUI';
 context: UIAbilityContext | UIContext
 ```
 
-触发生命周期的routerPage页面对应的上下文信息。
+The context of the changed router page.
 
 **Type:** [UIAbilityContext](../../apis-ability-kit/arkts-apis/arkts-ability-uiabilitycontext-c.md) \| UIContext
 
@@ -42,7 +42,7 @@ context: UIAbilityContext | UIContext
 index: int
 ```
 
-触发生命周期的routerPage在栈中的位置。取值限定为整数。
+The index of the changed router page in router stack.The value should be an integer.
 
 **Type:** int
 
@@ -62,7 +62,7 @@ index: int
 name: string
 ```
 
-触发生命周期的routerPage页面的名称。
+The name of the changed router page.
 
 **Type:** string
 
@@ -82,7 +82,7 @@ name: string
 pageId: string
 ```
 
-触发生命周期的routerPage页面的唯一标识。
+The unique identifier of the router page.
 
 **Type:** string
 
@@ -102,7 +102,7 @@ pageId: string
 path: string
 ```
 
-触发生命周期的routerPage页面的路径。
+The path of the changed router page.
 
 **Type:** string
 
@@ -122,9 +122,9 @@ path: string
 size?: Size
 ```
 
-routerPage页面的大小，单位是vp。
+The size of the router page.
 
-**Type:** [Size](arkts-arkui-size-i.md)
+**Type:** [Size](../arkts-components/arkts-arkui-size-i.md)
 
 **Since:** 23
 
@@ -142,7 +142,7 @@ routerPage页面的大小，单位是vp。
 state: RouterPageState
 ```
 
-触发生命周期的routerPage页面的状态。
+The state of the changed router page.
 
 **Type:** [RouterPageState](arkts-arkui-uiobserver-routerpagestate-e.md)
 

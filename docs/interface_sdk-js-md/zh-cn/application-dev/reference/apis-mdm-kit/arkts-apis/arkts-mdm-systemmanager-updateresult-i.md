@@ -10,12 +10,6 @@
 
 **系统能力：** SystemCapability.Customization.EnterpriseDeviceManager
 
-## 导入模块
-
-```TypeScript
-import { systemManager } from 'kits/@kit.MDMKit';
-```
-
 ## errorInfo
 
 ```TypeScript
@@ -24,7 +18,7 @@ errorInfo: ErrorInfo
 
 系统更新错误信息。
 
-**类型：** [ErrorInfo](arkts-mdm-systemmanager-errorinfo-i.md)
+**类型：** [ErrorInfo](../../apis-media-kit/arkts-apis/arkts-media-soundpool-errorinfo-i.md)
 
 **起始版本：** 12
 

@@ -1,6 +1,6 @@
 # SliderShowStepOptions
 
-Slider刻度点的无障碍文本信息映射集。
+Provides accessibility text mapping for the slider step markers.
 
 **Since:** 20
 
@@ -16,11 +16,13 @@ Slider刻度点的无障碍文本信息映射集。
 stepsAccessibility?: Map<number, SliderStepItemAccessibility>
 ```
 
-刻度点无障碍文本映射集，供屏幕阅读器等工具读取，增强无障碍功能。 
+Step value-to-text mappings for assistive technologies (for example, screen readers).
 
-Key取值范围：[0, INT32_MAX]，当Key设定为负数和小数时，设定项不生效。 
+Value range for **Key**: [0, INT32_MAX].
 
-默认值：{}
+If **Key** is set to a negative number or a decimal, the setting does not take effect.
+
+Default value: **{}**
 
 **Type:** Map&lt;number, SliderStepItemAccessibility&gt;
 

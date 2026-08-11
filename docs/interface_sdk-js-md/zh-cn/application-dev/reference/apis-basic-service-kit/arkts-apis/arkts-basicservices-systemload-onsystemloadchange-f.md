@@ -1,11 +1,5 @@
 # onSystemLoadChange
 
-## 导入模块
-
-```TypeScript
-import { systemLoad } from 'kits/@kit.BasicServicesKit';
-```
-
 ## onSystemLoadChange
 
 ```TypeScript

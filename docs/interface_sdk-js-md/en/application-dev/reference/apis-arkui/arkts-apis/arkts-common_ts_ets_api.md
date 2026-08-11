@@ -6,38 +6,38 @@
 
 | Name | Description |
 | --- | --- |
-| [AppStorage](arkts-arkui-appstorage-c.md) | AppStorage是与应用进程绑定的全局UI状态存储中心，由UI框架在应用启动时创建，将UI状态数据存储于运行内存，实现应用级全局状态共享。具体UI使用说明，详见  [AppStorage：应用全局的UI状态存储](../../../ui/state-management/arkts-appstorage.md)。 |
-| [Environment](arkts-arkui-environment-c.md) | Environment提供设备环境状态的查询能力，可将系统环境变量（如深浅色模式、语言、字体缩放、布局方向等）注入AppStorage，使应用能够感知和响应设备环境变化。具体UI使用说明，详见  [Environment：设备环境查询](../../../ui/state-management/arkts-environment.md)。 |
-| [LocalStorage](arkts-arkui-localstorage-c.md) | LocalStorage是页面级的UI状态存储，通过[@Entry](../../../reference/apis-arkui/arkui-ts/ts-universal-entry.md#entry)装饰器接收的参数可以在页面内共享同一个LocalStorage实例。具体UI使用说明，详见[LocalStorage：页面级UI状态存储](../../../ui/state-management/arkts-localstorage.md)。 |
-| [PersistentStorage](arkts-arkui-persistentstorage-c.md) | PersistentStorage提供了UI状态的持久化存储能力，将选定的AppStorage属性持久化到文件中，在应用重启时从文件中恢复这些属性值并写入到AppStorage。具体UI使用说明，详见  [PersistentStorage：持久化存储UI状态](../../../ui/state-management/arkts-persiststorage.md)。 |
-| [SubscribedAbstractProperty](arkts-arkui-subscribedabstractproperty-c.md) | SubscribedAbstractProperty是[AppStorage](../../../ui/state-management/arkts-appstorage.md)/  [LocalStorage](../../../ui/state-management/arkts-localstorage.md)中属性的单/双向同步绑定对象，用于与AppStorage/LocalStorage中的属性建立数据同步关系。SubscribedAbstractProperty实例需要通过[aboutToBeDeleted](arkts-arkui-subscribedabstractproperty-c.md#abouttobedeleted)接口手动释放，以取消同步关系并无效化实例。 |
+| [AppStorage](arkts-arkui-appstorage-c.md) | For details about how to use AppStorage, see  [AppStorage: Storing Application-wide UI State](../../../ui/state-management/arkts-appstorage.md). |
+| [Environment](arkts-arkui-environment-c.md) | For details about how to use environment parameters, see  [Environment: Device Environment Query](../../../ui/state-management/arkts-environment.md). |
+| [LocalStorage](arkts-arkui-localstorage-c.md) | For details about how to use LocalStorage on the UI, see  [LocalStorage: UI State Storage](../../../ui/state-management/arkts-localstorage.md). |
+| [PersistentStorage](arkts-arkui-persistentstorage-c.md) | For details about how to use PersistentStorage on the UI, see  [PersistentStorage: Persisting Application State](../../../ui/state-management/arkts-persiststorage.md).  > **NOTE：**  > Since API version 12, PersistentStorage supports **null** and **undefined**. |
+| [SubscribedAbstractProperty](arkts-arkui-subscribedabstractproperty-c.md) | Represents a synchronized property from [AppStorage](../../../ui/state-management/arkts-appstorage.md) or  [LocalStorage](../../../ui/state-management/arkts-localstorage.md). |
 
 <!--Del-->
 ### Classes（系统接口）
 
 | Name | Description |
 | --- | --- |
-| [Environment](arkts-arkui-environment-c-sys.md) | Environment提供设备环境状态的查询能力，可将系统环境变量（如深浅色模式、语言、字体缩放、布局方向等）注入AppStorage，使应用能够感知和响应设备环境变化。具体UI使用说明，详见  [Environment：设备环境查询](../../../ui/state-management/arkts-environment.md)。 |
-| [PersistentStorage](arkts-arkui-persistentstorage-c-sys.md) | PersistentStorage提供了UI状态的持久化存储能力，将选定的AppStorage属性持久化到文件中，在应用重启时从文件中恢复这些属性值并写入到AppStorage。具体UI使用说明，详见  [PersistentStorage：持久化存储UI状态](../../../ui/state-management/arkts-persiststorage.md)。 |
-| [SubscribaleAbstract](arkts-arkui-subscribaleabstract-c-sys.md) | 可订阅抽象类，用于管理所持有的属性集合，提供属性的添加、删除和变更通知能力。 |
-| [SyncedPropertyOneWay](arkts-arkui-syncedpropertyoneway-c-sys.md) | 继承自[SubscribedAbstractProperty\&lt;T\&gt;](arkts-arkui-subscribedabstractproperty-c.md)。用于接收父组件状态值的单向同步，当父组件状态变化时更新自身值。 |
-| [SyncedPropertyTwoWay](arkts-arkui-syncedpropertytwoway-c-sys.md) | 继承自[SubscribedAbstractProperty\&lt;T\&gt;](arkts-arkui-subscribedabstractproperty-c.md)。用于实现父子组件之间的双向状态数据同步。 |
+| [Environment](arkts-arkui-environment-c-sys.md) | For details about how to use environment parameters, see  [Environment: Device Environment Query](../../../ui/state-management/arkts-environment.md). |
+| [PersistentStorage](arkts-arkui-persistentstorage-c-sys.md) | For details about how to use PersistentStorage on the UI, see  [PersistentStorage: Persisting Application State](../../../ui/state-management/arkts-persiststorage.md).  > **NOTE：**  > Since API version 12, PersistentStorage supports **null** and **undefined**. |
+| [SubscribaleAbstract](arkts-arkui-subscribaleabstract-c-sys.md) | Defines the Subscribale base class. |
+| [SyncedPropertyOneWay](arkts-arkui-syncedpropertyoneway-c-sys.md) | Inherits from [SubscribedAbstractProperty&lt;T&gt;](arkts-arkui-subscribedabstractproperty-c.md). Represents a property with one-way synchronization. |
+| [SyncedPropertyTwoWay](arkts-arkui-syncedpropertytwoway-c-sys.md) | Inherits from [SubscribedAbstractProperty&lt;T&gt;](arkts-arkui-subscribedabstractproperty-c.md). Represents a property with two-way synchronization. |
 <!--DelEnd-->
 
 ### Interfaces
 
 | Name | Description |
 | --- | --- |
-| [AbstractProperty](arkts-arkui-abstractproperty-i.md) | AbstractProperty是AppStorage/LocalStorage中属性的引用，提供读取、修改所引用属性数据及查询属性名的能力。与SubscribedAbstractProperty不同，AbstractProperty实例无需手动释放。 |
-| [EnvPropsOptions](arkts-arkui-envpropsoptions-i.md) | 用于指定环境变量名称及其默认值的键值对对象，作为[envProps](arkts-arkui-environment-c.md#envprops)参数传入。 |
-| [PersistPropsOptions](arkts-arkui-persistpropsoptions-i.md) | 用于指定持久化属性及其默认值的键值对对象，作为[persistProps](arkts-arkui-persistentstorage-c.md#persistprops)参数传入。 |
+| [AbstractProperty](arkts-arkui-abstractproperty-i.md) | Provides a reference to properties stored in [AppStorage](../../../ui/state-management/arkts-appstorage.md) or  [LocalStorage](../../../ui/state-management/arkts-localstorage.md). |
+| [EnvPropsOptions](arkts-arkui-envpropsoptions-i.md) | Defines a key-value pair object used to specify environment variable names and their default values, passed as a parameter to [envProps](arkts-arkui-environment-c.md#envprops). |
+| [PersistPropsOptions](arkts-arkui-persistpropsoptions-i.md) | Defines a key-value pair object used to specify persistent properties and their default values, passed as a parameter to [persistProps](arkts-arkui-persistentstorage-c.md#persistprops). |
 
 <!--Del-->
 ### Interfaces（系统接口）
 
 | Name | Description |
 | --- | --- |
-| [IPropertySubscriber](arkts-arkui-ipropertysubscriber-i-sys.md) | 属性订阅者接口，定义订阅者需要实现的方法，用于接收属性变化通知和生命周期回调。 |
-| [ISinglePropertyChangeSubscriber](arkts-arkui-isinglepropertychangesubscriber-i-sys.md) | 继承自[IPropertySubscriber](arkts-arkui-ipropertysubscriber-i-sys.md)。用于订阅单个属性值的变化，当被订阅的属性发生变化时接收通知。 |
+| [IPropertySubscriber](arkts-arkui-ipropertysubscriber-i-sys.md) | Provides an interface for attribute subscribers. |
+| [ISinglePropertyChangeSubscriber](arkts-arkui-isinglepropertychangesubscriber-i-sys.md) | Inherits from [IPropertySubscriber](arkts-arkui-ipropertysubscriber-i-sys.md). Represents a subscriber that subscribes to changes in a property value. |
 <!--DelEnd-->
 

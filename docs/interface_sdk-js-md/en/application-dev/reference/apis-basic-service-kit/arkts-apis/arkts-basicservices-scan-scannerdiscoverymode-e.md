@@ -1,6 +1,6 @@
 # ScannerDiscoveryMode
 
-定义扫描仪发现方式的枚举。
+Enumerates the scanner discovery modes.
 
 **Since:** 20
 
@@ -16,7 +16,7 @@
 TCP_STR = 'TCP'
 ```
 
-网络扫描仪的发现模式。
+Discovery mode of the network scanner.
 
 **Since:** 20
 
@@ -32,7 +32,7 @@ TCP_STR = 'TCP'
 USB_STR = 'USB'
 ```
 
-USB扫描仪的发现模式。
+Discovery mode of the USB scanner.
 
 **Since:** 20
 

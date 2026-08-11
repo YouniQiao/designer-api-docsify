@@ -1,6 +1,6 @@
 # UsbDataTransferParams
 
-作为通用USB数据传输接口，客户端需要填充这个对象中的参数，用以发起传输请求。
+As a USB data transfer interface, it is required for a client to initiate a transfer request.
 
 **Since:** 18
 
@@ -22,7 +22,7 @@ import { usbManager } from 'kits/@kit.BasicServicesKit';
 buffer: Uint8Array
 ```
 
-用于存储读或者写请求时的数据。
+Buffer, which is used to store data for read or write requests.
 
 **Type:** Uint8Array
 
@@ -40,7 +40,7 @@ buffer: Uint8Array
 callback: AsyncCallback<SubmitTransferCallback>
 ```
 
-传输完成时的回调信息。
+Information returned by the callback.
 
 **Type:** [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;SubmitTransferCallback&gt;
 
@@ -58,7 +58,8 @@ callback: AsyncCallback<SubmitTransferCallback>
 devPipe: USBDevicePipe
 ```
 
-用于确定总线地址和设备地址，需要调用[usbManager.connectDevice](arkts-basicservices-usbmanager-connectdevice-f.md#connectdevice)获取。
+USB device pipe, which is used to determine the bus number and device address. You need to call  
+[usbManager.connectDevice](arkts-basicservices-usbmanager-connectdevice-f.md#connectdevice)to obtain its value.
 
 **Type:** [USBDevicePipe](arkts-basicservices-usbmanager-usbdevicepipe-i.md)
 
@@ -76,7 +77,7 @@ devPipe: USBDevicePipe
 endpoint: int
 ```
 
-端点地址，正整数。
+Endpoint address, which is a positive integer.
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
@@ -94,7 +95,7 @@ endpoint: int
 flags: UsbTransferFlags
 ```
 
-USB传输标志。
+USB transfer flag.
 
 **Type:** [UsbTransferFlags](arkts-basicservices-usbmanager-usbtransferflags-e.md)
 
@@ -112,7 +113,7 @@ USB传输标志。
 isoPacketCount: int
 ```
 
-实时传输时数据包的数量，仅用于具有实时传输端点的I/O。必须是非负数，（单位：个数）。
+Number of data packets during real-time transfer, used only for I/Os with real-time transfer endpoints. The value  must be a non-negative number.
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
@@ -130,7 +131,7 @@ isoPacketCount: int
 length: int
 ```
 
-数据缓冲区的长度，必须是非负数（期望长度）。（单位：字节）。
+Length of the data buffer.Unit: bytes. The value must be a non-negative number (expected length).
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
@@ -148,7 +149,7 @@ length: int
 timeout: int
 ```
 
-超时时间。（单位：毫秒）。
+Timeout duration.Unit: milliseconds.
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
@@ -166,7 +167,7 @@ timeout: int
 type: UsbEndpointTransferType
 ```
 
-传输类型。
+Transfer type.
 
 **Type:** [UsbEndpointTransferType](arkts-basicservices-usbmanager-usbendpointtransfertype-e.md)
 
@@ -184,7 +185,7 @@ type: UsbEndpointTransferType
 userData: Uint8Array
 ```
 
-用户上下文数据。
+User data.
 
 **Type:** Uint8Array
 

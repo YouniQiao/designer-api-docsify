@@ -12,7 +12,7 @@ import { cooperate } from 'kits/@kit.DistributedServiceKit';
 function deactivateCooperate(isUnchained: boolean, callback: AsyncCallback<void>): void
 ```
 
-停止键鼠穿越，使用Callback异步回调。
+Stops screen hopping. This API uses an asynchronous callback to return the result.
 
 **Since:** 11
 
@@ -30,16 +30,16 @@ function deactivateCooperate(isUnchained: boolean, callback: AsyncCallback<void>
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| isUnchained | boolean | Yes | 是否关闭跨设备链路。 true表示关闭跨设备链路，false表示不关闭。 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | 回调函数，键鼠穿越停止成功时，err为undefined，否则为错误对象。 |
+| isUnchained | boolean | Yes | Whether to disable the cross-device link. The value **true** means to disable the cross-device link, and the value **false** means the opposite. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the operation result. If the operation is successful, **err** is **undefined**. Otherwise, **err** is an error object. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. Possible causes: &lt;br&gt;1. Mandatory parameters are left unspecified. &lt;br&gt;2. Incorrect parameter types. &lt;br&gt;3. Parameter verification failed.  **ArkTS mode:** This error code applies only to ArkTS-Dyn. |
-| 201 | Permission denied. |
-| 202 | Permission verification failed. A non-system application calls a system API. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: &lt;br&gt;1. Mandatory parameters are left unspecified. &lt;br&gt;2. Incorrect parameter types. &lt;br&gt;3. Parameter verification failed.  **ArkTS mode:** This error code applies only to ArkTS-Dyn. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
 
 ## Examples
 
@@ -66,7 +66,7 @@ try {
 function deactivateCooperate(isUnchained: boolean): Promise<void>
 ```
 
-停止键鼠穿越，使用Promise异步回调。
+Stops screen hopping. This API uses a promise to return the result.
 
 **Since:** 11
 
@@ -84,20 +84,20 @@ function deactivateCooperate(isUnchained: boolean): Promise<void>
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| isUnchained | boolean | Yes | 是否关闭跨设备链路。 true表示关闭跨设备链路，false表示不关闭。 |
+| isUnchained | boolean | Yes | Whether to disable the cross-device link. The value **true** means to disable the cross-device link, and the value **false** means the opposite. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | 无返回结果的Promise对象。 |
+| Promise&lt;void&gt; | Promise that returns no value. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 201 | Permission denied. |
-| 202 | Permission verification failed. A non-system application calls a system API. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
 
 ## Examples
 

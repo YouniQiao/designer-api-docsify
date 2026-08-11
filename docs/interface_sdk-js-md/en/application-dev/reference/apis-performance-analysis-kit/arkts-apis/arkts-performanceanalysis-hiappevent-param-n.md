@@ -1,12 +1,12 @@
 # param
 
-提供参数名常量。
+Provides parameter name constants.
 
-|名称|类型|只读|描述|  
+| Name | Type | Read Only | Description |  
 | ------------------------------- | ------ | ------ | ------------------ |  
-| USER_ID | string |是|自定义用户ID|  
-| DISTRIBUTED_SERVICE_NAME | string |是|分布式服务名称|  
-| DISTRIBUTED_SERVICE_INSTANCE_ID | string |是|分布式服务实例ID|
+| USER_ID | string | Yes| Custom user ID. |  
+| DISTRIBUTED_SERVICE_NAME | string | Yes| Distributed service name. |  
+| DISTRIBUTED_SERVICE_INSTANCE_ID | string | Yes| Distributed service instance ID.|
 
 **Since:** 9
 
@@ -28,7 +28,7 @@ import { hiAppEvent } from 'kits/@kit.PerformanceAnalysisKit';
 
 | Name | Description |
 | --- | --- |
-| [USER_ID](arkts-performanceanalysis-param-con.md#user_id) | 用户自定义ID。 |
-| [DISTRIBUTED_SERVICE_NAME](arkts-performanceanalysis-param-con.md#distributed_service_name) | 分布式服务名称。 |
-| [DISTRIBUTED_SERVICE_INSTANCE_ID](arkts-performanceanalysis-param-con.md#distributed_service_instance_id) | 分布式服务实例ID。 |
+| [USER_ID](arkts-performanceanalysis-param-con.md#user_id) | Custom user ID. |
+| [DISTRIBUTED_SERVICE_NAME](arkts-performanceanalysis-param-con.md#distributed_service_name) | Distributed service name. |
+| [DISTRIBUTED_SERVICE_INSTANCE_ID](arkts-performanceanalysis-param-con.md#distributed_service_instance_id) | Distributed service instance ID. |
 

@@ -2,9 +2,9 @@
 
 Line Join Style
 
-**Since:** 11
+**Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 11.
+**ArkTS mode:** ArkTS-Dyn only, since version 7.
 
 <!--Device-unnamed-declare enum LineJoinStyle--><!--Device-unnamed-declare enum LineJoinStyle-End-->
 
@@ -18,13 +18,13 @@ Miter
 
 Connect path segments using bevels.
 
-**Since:** 11
+**Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 11.
+**ArkTS mode:** ArkTS-Dyn only, since version 7.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
-**Widget capability:** This API can be used in ArkTS widgets since API version 11.
+**Widget capability:** This API can be used in ArkTS widgets since API version 9.
 
 <!--Device-LineJoinStyle-Miter--><!--Device-LineJoinStyle-Miter-End-->
 
@@ -38,13 +38,13 @@ Round
 
 Connect path segments using sharp corners.
 
-**Since:** 11
+**Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 11.
+**ArkTS mode:** ArkTS-Dyn only, since version 7.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
-**Widget capability:** This API can be used in ArkTS widgets since API version 11.
+**Widget capability:** This API can be used in ArkTS widgets since API version 9.
 
 <!--Device-LineJoinStyle-Round--><!--Device-LineJoinStyle-Round-End-->
 
@@ -58,13 +58,13 @@ Bevel
 
 Connect path segments using fillets.
 
-**Since:** 11
+**Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 11.
+**ArkTS mode:** ArkTS-Dyn only, since version 7.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
-**Widget capability:** This API can be used in ArkTS widgets since API version 11.
+**Widget capability:** This API can be used in ArkTS widgets since API version 9.
 
 <!--Device-LineJoinStyle-Bevel--><!--Device-LineJoinStyle-Bevel-End-->
 

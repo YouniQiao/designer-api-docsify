@@ -1,11 +1,5 @@
 # setDiscoverable（系统接口）
 
-## 导入模块
-
-```TypeScript
-import { avSession } from 'kits/@kit.AVSessionKit';
-```
-
 ## setDiscoverable
 
 ```TypeScript
@@ -35,14 +29,14 @@ function setDiscoverable(enable: boolean, callback: AsyncCallback<void>): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 401 | parameter check failed. 1.Mandatory parameters are left unspecified. 2.Parameter verification failed. |
-| 202 | Not System App. |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | parameter check failed. 1.Mandatory parameters are left unspecified. 2.Parameter verification failed. |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not System App. |
 
 ## 示例
 
 ```TypeScript
-avSession.setDiscoverable(true, () => {
-    console.info('Succeeded in setting discoverable.');
+avSession.setDiscoverable(true, (err) => {
+  console.info('setDiscoverable successfully');
 });
 ```
 
@@ -81,14 +75,14 @@ function setDiscoverable(enable: boolean): Promise<void>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 401 | parameter check failed. 1.Mandatory parameters are left unspecified. 2.Parameter verification failed. |
-| 202 | Not System App. |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | parameter check failed. 1.Mandatory parameters are left unspecified. 2.Parameter verification failed. |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not System App. |
 
 ## 示例
 
 ```TypeScript
 avSession.setDiscoverable(true).then(() => {
-  console.info('Succeeded in setting discoverable.');
+  console.info('setDiscoverable successfully');
 });
 ```
 

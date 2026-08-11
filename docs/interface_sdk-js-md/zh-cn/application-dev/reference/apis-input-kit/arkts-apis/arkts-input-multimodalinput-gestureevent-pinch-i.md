@@ -10,12 +10,6 @@
 
 **系统能力：** SystemCapability.MultimodalInput.Input.Core
 
-## 导入模块
-
-```TypeScript
-import { SwipeInward, FourFingersSwipe, Pinch, ActionType, Rotate, ThreeFingersTap, ThreeFingersSwipe, TouchGestureEvent } from 'kits/@kit.InputKit';
-```
-
 ## scale
 
 ```TypeScript
@@ -42,7 +36,7 @@ type: ActionType
 
 手势事件类型。如：手势开始、手势更新、手势结束等。
 
-**类型：** [ActionType](../../apis-avsession-kit/arkts-apis/arkts-avsession-avmusictemplate-actiontype-t.md)
+**类型：** [ActionType](../../apis-data-protection-kit/arkts-apis/arkts-dataprotection-dlppermission-actiontype-e.md)
 
 **起始版本：** 10
 

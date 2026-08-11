@@ -1,6 +1,6 @@
 # ColorMode
 
-用于表示当前设备颜色模式。
+Defines the color mode of the current device.
 
 **Since:** 12
 
@@ -16,7 +16,7 @@
 DARK = 0
 ```
 
-深色模式。
+Dark mode.
 
 **Since:** 12
 
@@ -34,7 +34,7 @@ DARK = 0
 LIGHT = 1
 ```
 
-浅色模式。
+Light mode.
 
 **Since:** 12
 

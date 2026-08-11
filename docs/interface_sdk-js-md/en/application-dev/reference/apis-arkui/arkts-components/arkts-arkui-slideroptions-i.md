@@ -1,6 +1,6 @@
 # SliderOptions
 
-滑动条的信息。
+Provides information about the slider.
 
 **Since:** 7
 
@@ -16,9 +16,9 @@
 direction?: Axis
 ```
 
-设置滑动条滑动方向为水平或竖直方向。
+Whether the slider moves horizontally or vertically.
 
-默认值：Axis.Horizontal
+Default value: **Axis.Horizontal**
 
 **Type:** [Axis](../arkts-apis/arkts-arkui-axis-e.md)
 
@@ -42,15 +42,15 @@ direction?: Axis
 max?: number
 ```
 
-设置最大值。
+Maximum value.
 
-默认值：100
+Default value: **100**
 
-**说明：**
+**NOTE：**
 
-min >= max异常情况，min取默认值0，max取默认值100。
+If the value of **min** is greater than or equal to the value of **max**, the **min** value defaults to **0**, and the **max** value defaults to **100**.
 
-value不在[min, max]范围之内，取min或者max，靠近min取min，靠近max取max。
+If the value is not within the [min, max] range, the value of **min** or **max** is used, whichever is closer.
 
 **Type:** number
 
@@ -74,9 +74,9 @@ value不在[min, max]范围之内，取min或者max，靠近min取min，靠近ma
 min?: number
 ```
 
-设置最小值。
+Minimum value.
 
-默认值：0
+Default value: **0**
 
 **Type:** number
 
@@ -100,11 +100,12 @@ min?: number
 reverse?: boolean
 ```
 
-设置滑动条取值范围是否反向。
+Whether the slider values are reversed.
 
-true：横向Slider从右往左滑动，竖向Slider从下往上滑动；false：横向Slider从左往右滑动，竖向Slider从上往下滑动。
+**true**: A horizontal slider slides from right to left, and a vertical slider slides from bottom to top.   
+**false**: A horizontal slider slides from left to right, and a vertical slider slides from top to bottom.
 
-默认值：false
+Default value: **false**
 
 **Type:** boolean
 
@@ -128,15 +129,15 @@ true：横向Slider从右往左滑动，竖向Slider从下往上滑动；false�
 step?: number
 ```
 
-设置Slider滑动步长。
+Step of the slider.
 
-默认值：1
+Default value: **1**
 
-取值范围：[0.01, max - min]
+Value range: [0.01, max - min]
 
-**说明：**
+**NOTE：**
 
-若设置的step值小于0或大于max值，则按默认值显示。
+If this parameter is set to a value less than 0 or greater than the value of **max**, the default value is used.
 
 **Type:** number
 
@@ -160,9 +161,9 @@ step?: number
 style?: SliderStyle
 ```
 
-设置Slider的滑块与滑轨显示样式。
+Style of the slider thumb and track.
 
-默认值：SliderStyle.OutSet
+Default value: **SliderStyle.OutSet**
 
 **Type:** [SliderStyle](arkts-arkui-sliderstyle-e.md)
 
@@ -186,20 +187,23 @@ style?: SliderStyle
 value?: number
 ```
 
-当前进度值。
+Current progress.
 
-默认值：与属性min的取值一致。
+Default value: same as the value of **min**.
 
-从API version 10开始，该属性支持[\$\$](../../../ui/state-management/arkts-two-way-sync.md)双向绑定变量。
+Since API version 10, this property supports two-way binding through   
+[\$\$](../../../ui/state-management/arkts-two-way-sync.md).
 
-该属性支持[!!](../../../ui/state-management/arkts-new-binding.md#系统组件参数双向绑定)双向绑定变量。
+This property supports two-way binding through   
+[!!](../../../ui/state-management/arkts-new-binding.md#two-way-binding-between-built-in-component-parameters).
 
-取值范围： [min, max]
+Value range: [min, max]
 
-小于min时取min，大于max时取max。
+Values less than the value of **min** are adjusted to the value of **min**, and values greater than the value of   
+**max** are capped at the value of **max**.
 
-\$\$运算符为系统组件提供TS变量的引用，使得TS变量和slider组件的value值保持同步。详细使用示例请参考  
-[示例7（设置滑动条的双向绑定）](../../../reference/apis-arkui/arkui-ts/ts-basic-components-slider.md#示例7设置滑动条的双向绑定)。
+The \$\$ operator enables two-way synchronization between the TS variable and the **Slider** component's **value**.For details, see   
+[Example 7: Setting Two-Way Binding for the Slider](../../../reference/apis-arkui/arkui-ts/ts-basic-components-slider.md#example-7-setting-two-way-binding-for-the-slider).
 
 **Type:** number
 

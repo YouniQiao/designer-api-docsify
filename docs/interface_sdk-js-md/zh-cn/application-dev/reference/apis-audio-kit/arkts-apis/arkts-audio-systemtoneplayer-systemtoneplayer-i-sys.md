@@ -47,7 +47,7 @@ getAudioVolumeScale(): double
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 202 | Caller is not a system application. |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Caller is not a system application. |
 
 ## getHapticsFeature
 
@@ -77,8 +77,8 @@ getHapticsFeature(): systemSoundManager.ToneHapticsFeature
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 20700003 | Unsupported operation. |
-| 202 | Caller is not a system application. |
+| [20700003](../errorcode-audio-ringtone-sys.md#20700003-操作不支持) | Unsupported operation. |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Caller is not a system application. |
 
 ## getSupportedHapticsFeatures
 
@@ -108,8 +108,8 @@ getSupportedHapticsFeatures(): Promise<Array<systemSoundManager.ToneHapticsFeatu
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 20700003 | Unsupported operation. |
-| 202 | Caller is not a system application. |
+| [20700003](../errorcode-audio-ringtone-sys.md#20700003-操作不支持) | Unsupported operation. |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Caller is not a system application. |
 
 ## getTitle
 
@@ -139,8 +139,8 @@ getTitle(): Promise<string>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 5400103 | I/O error. |
-| 202 | Caller is not a system application. |
+| [5400103](../../apis-media-kit/errorcode-media.md#5400103-出现io错误) | I/O error. |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Caller is not a system application. |
 
 ## off('playFinished')
 
@@ -171,8 +171,8 @@ off(type: 'playFinished', callback?: Callback<int>): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 20700002 | Parameter check error. |
-| 202 | Not system App. |
+| [20700002](../errorcode-audio-ringtone-sys.md#20700002-参数检查失败) | Parameter check error. |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not system App. |
 
 ## off('error')
 
@@ -203,8 +203,8 @@ off(type: 'error', callback?: ErrorCallback): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 20700002 | Parameter check error. |
-| 202 | Not system App. |
+| [20700002](../errorcode-audio-ringtone-sys.md#20700002-参数检查失败) | Parameter check error. |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not system App. |
 
 ## offError
 
@@ -234,8 +234,8 @@ offError(callback?: ErrorCallback): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 20700002 | Parameter check error. |
-| 202 | Not system App. |
+| [20700002](../errorcode-audio-ringtone-sys.md#20700002-参数检查失败) | Parameter check error. |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not system App. |
 
 ## offPlayFinished
 
@@ -265,8 +265,8 @@ offPlayFinished(callback?: Callback<int>): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 20700002 | Parameter check error. |
-| 202 | Not system App. |
+| [20700002](../errorcode-audio-ringtone-sys.md#20700002-参数检查失败) | Parameter check error. |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not system App. |
 
 ## on('playFinished')
 
@@ -300,8 +300,8 @@ on(type: 'playFinished', streamId: int, callback: Callback<int>): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 20700002 | Parameter check error. |
-| 202 | Not system App. |
+| [20700002](../errorcode-audio-ringtone-sys.md#20700002-参数检查失败) | Parameter check error. |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not system App. |
 
 ## on('error')
 
@@ -332,8 +332,8 @@ on(type: 'error', callback: ErrorCallback): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 20700002 | Parameter check error. |
-| 202 | Not system App. |
+| [20700002](../errorcode-audio-ringtone-sys.md#20700002-参数检查失败) | Parameter check error. |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not system App. |
 
 ## onError
 
@@ -363,8 +363,8 @@ onError(callback: ErrorCallback): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 20700002 | Parameter check error. |
-| 202 | Not system App. |
+| [20700002](../errorcode-audio-ringtone-sys.md#20700002-参数检查失败) | Parameter check error. |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not system App. |
 
 ## onPlayFinished
 
@@ -397,8 +397,8 @@ onPlayFinished(streamId: int, callback: Callback<int>): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 20700002 | Parameter check error. |
-| 202 | Not system App. |
+| [20700002](../errorcode-audio-ringtone-sys.md#20700002-参数检查失败) | Parameter check error. |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not system App. |
 
 ## prepare
 
@@ -428,9 +428,9 @@ prepare(): Promise<void>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 5400102 | Operation not allowed. |
-| 5400103 | I/O error. |
-| 202 | Caller is not a system application. |
+| [5400102](../../apis-media-kit/errorcode-media.md#5400102-当前状态不支持此操作) | Operation not allowed. |
+| [5400103](../../apis-media-kit/errorcode-media.md#5400103-出现io错误) | I/O error. |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Caller is not a system application. |
 
 ## release
 
@@ -460,7 +460,7 @@ release(): Promise<void>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 202 | Caller is not a system application. |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Caller is not a system application. |
 
 ## setAudioVolumeScale
 
@@ -496,10 +496,10 @@ setAudioVolumeScale(scale: double): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
-| 5400102 | Operation not allowed. |
-| 20700002 | Parameter check error. For example, value is outside [0,1]. |
-| 202 | Caller is not a system application. |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
+| [5400102](../../apis-media-kit/errorcode-media.md#5400102-当前状态不支持此操作) | Operation not allowed. |
+| [20700002](../errorcode-audio-ringtone-sys.md#20700002-参数检查失败) | Parameter check error. For example, value is outside [0,1]. |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Caller is not a system application. |
 
 ## setHapticsFeature
 
@@ -531,10 +531,10 @@ setHapticsFeature(hapticsFeature: systemSoundManager.ToneHapticsFeature): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
-| 5400102 | Operation not allowed. |
-| 20700003 | Unsupported operation. |
-| 202 | Caller is not a system application. |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
+| [5400102](../../apis-media-kit/errorcode-media.md#5400102-当前状态不支持此操作) | Operation not allowed. |
+| [20700003](../errorcode-audio-ringtone-sys.md#20700003-操作不支持) | Unsupported operation. |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Caller is not a system application. |
 
 ## start
 
@@ -578,10 +578,10 @@ start(toneOptions?: SystemToneOptions): Promise<int>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
-| 5400102 | Operation not allowed. |
-| 201 | Permission denied. |
-| 202 | Caller is not a system application. |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
+| [5400102](../../apis-media-kit/errorcode-media.md#5400102-当前状态不支持此操作) | Operation not allowed. |
+| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Caller is not a system application. |
 
 ## stop
 
@@ -623,7 +623,7 @@ stop(id: int): Promise<void>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
-| 5400102 | Operation not allowed. |
-| 202 | Caller is not a system application. |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
+| [5400102](../../apis-media-kit/errorcode-media.md#5400102-当前状态不支持此操作) | Operation not allowed. |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Caller is not a system application. |
 

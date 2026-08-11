@@ -1,6 +1,7 @@
 # VideoOutput
 
-录像会话中使用的输出信息，继承[CameraOutput](arkts-camera-camera-cameraoutput-i.md)。
+VideoOutput implements output information used in a video session. It inherits from   
+[CameraOutput](arkts-camera-camera-cameraoutput-i.md).
 
 **Inheritance/Implementation:** VideoOutput extends [CameraOutput](arkts-camera-camera-cameraoutput-i.md)
 
@@ -47,9 +48,9 @@ Attach a meta surface to VideoOutput.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 7400101 | Parameter missing or parameter type incorrect. |
-| 7400201 | Camera service fatal error. |
-| 202 | Not System Application. |
+| [7400101](../errorcode-camera.md#7400101-invalid-parameter) | Parameter missing or parameter type incorrect. |
+| [7400201](../errorcode-camera.md#7400201-camera-service-error) | Camera service fatal error. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not System Application. |
 
 ## enableAutoDeferredVideoEnhancement
 
@@ -79,9 +80,9 @@ Enable auto deferred video enhancement if needed.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 7400101 | Parameter missing or parameter type incorrect. |
-| 7400201 | Camera service fatal error. |
-| 202 | Not System Application. |
+| [7400101](../errorcode-camera.md#7400101-invalid-parameter) | Parameter missing or parameter type incorrect. |
+| [7400201](../errorcode-camera.md#7400201-camera-service-error) | Camera service fatal error. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not System Application. |
 
 ## enableAutoVideoFrameRate
 
@@ -111,8 +112,8 @@ Enable auto frame rate for video capture.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 7400103 | Session not config. |
-| 202 | Not System Application. |
+| [7400103](../errorcode-camera.md#7400103-session-not-configured) | Session not config. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not System Application. |
 
 ## getSupportedRotations
 
@@ -142,7 +143,7 @@ Get supported video rotations.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 202 | Not System Application. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not System Application. |
 
 ## getSupportedVideoMetaTypes
 
@@ -172,8 +173,8 @@ Get supported video meta types.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 7400201 | Camera service fatal error. |
-| 202 | Not System Application. |
+| [7400201](../errorcode-camera.md#7400201-camera-service-error) | Camera service fatal error. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not System Application. |
 
 ## isAutoDeferredVideoEnhancementEnabled
 
@@ -203,8 +204,8 @@ Confirm if auto deferred video enhancement is enabled.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 7400201 | Camera service fatal error. |
-| 202 | Not System Application. |
+| [7400201](../errorcode-camera.md#7400201-camera-service-error) | Camera service fatal error. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not System Application. |
 
 ## isAutoDeferredVideoEnhancementSupported
 
@@ -234,8 +235,8 @@ Confirm if auto deferred video enhancement is supported in the specific device.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 7400201 | Camera service fatal error. |
-| 202 | Not System Application. |
+| [7400201](../errorcode-camera.md#7400201-camera-service-error) | Camera service fatal error. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not System Application. |
 
 ## isAutoVideoFrameRateSupported
 
@@ -265,7 +266,7 @@ Determine whether auto frame rate is supported.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 202 | Not System Application. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not System Application. |
 
 ## isRotationSupported
 
@@ -295,7 +296,7 @@ Determine whether video rotation is supported.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 202 | Not System Application. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not System Application. |
 
 ## off('deferredVideoEnhancementInfo')
 
@@ -326,7 +327,7 @@ Unsubscribes from deferred video enhancement info callback.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 202 | Not System Application. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not System Application. |
 
 ## offDeferredVideoEnhancementInfo
 
@@ -356,7 +357,7 @@ Unsubscribes from deferred video enhancement info callback.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 202 | Not System Application. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not System Application. |
 
 ## on('deferredVideoEnhancementInfo')
 
@@ -387,7 +388,7 @@ Subscribes deferred video enhancement info callback.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 202 | Not System Application. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not System Application. |
 
 ## onDeferredVideoEnhancementInfo
 
@@ -417,7 +418,7 @@ Subscribes deferred video enhancement info callback.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 202 | Not System Application. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not System Application. |
 
 ## setRotation
 
@@ -447,6 +448,6 @@ Set a video rotation.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 7400101 | Parameter missing or parameter type incorrect. |
-| 202 | Not System Application. |
+| [7400101](../errorcode-camera.md#7400101-invalid-parameter) | Parameter missing or parameter type incorrect. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not System Application. |
 

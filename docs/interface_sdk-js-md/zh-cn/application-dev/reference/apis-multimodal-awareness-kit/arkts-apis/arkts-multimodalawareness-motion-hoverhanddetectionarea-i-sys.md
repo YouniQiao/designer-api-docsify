@@ -1,6 +1,6 @@
 # HoverHandDetectionArea（系统接口）
 
-The basic data structure of the hover hand detection area.
+悬停手势检测区域的基础数据结构。
 
 **起始版本：** 26.0.0
 
@@ -12,19 +12,13 @@ The basic data structure of the hover hand detection area.
 
 **系统接口：** 此接口为系统接口。
 
-## 导入模块
-
-```TypeScript
-import { motion } from 'kits/@kit.MultimodalAwarenessKit';
-```
-
 ## height
 
 ```TypeScript
 height: int
 ```
 
-Height of the rectangle.Unit: px. The value must be an integer within [1,2147483647].
+矩形高度。单位：px，取值范围为[1,2147483647]的整数。
 
 **类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
@@ -46,7 +40,7 @@ Height of the rectangle.Unit: px. The value must be an integer within [1,2147483
 left: int
 ```
 
-Left boundary of the rectangle.Unit: px. The value must be an integer within [-2147483648,2147483647].
+矩形左边界。单位：px，取值范围为[-2147483648,2147483647]的整数。
 
 **类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
@@ -68,7 +62,7 @@ Left boundary of the rectangle.Unit: px. The value must be an integer within [-2
 top: int
 ```
 
-Top boundary of the rectangle.Unit: px. The value must be an integer within [-2147483648,2147483647].
+矩形上边界。单位：px，取值范围为[-2147483648,2147483647]的整数。
 
 **类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
@@ -90,7 +84,7 @@ Top boundary of the rectangle.Unit: px. The value must be an integer within [-21
 width: int
 ```
 
-Width of the rectangle.Unit: px. The value must be an integer within [1,2147483647].
+矩形宽度。单位：px，取值范围为[1,2147483647]的整数。
 
 **类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 

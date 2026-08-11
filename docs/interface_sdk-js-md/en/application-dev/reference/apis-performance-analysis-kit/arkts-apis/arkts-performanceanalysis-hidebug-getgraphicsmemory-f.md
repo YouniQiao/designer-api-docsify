@@ -12,7 +12,7 @@ import { hidebug } from 'kits/@kit.PerformanceAnalysisKit';
 function getGraphicsMemory(): Promise<int>
 ```
 
-��ȡӦ���Դ��ܴ�С��gl + graph����ʹ��Promise�첽�ص���
+Obtains the total GPU memory size (**gl** + **graph**) of the application. This API uses a promise to return the result.
 
 **Since:** 14
 
@@ -28,18 +28,18 @@ function getGraphicsMemory(): Promise<int>
 
 | Type | Description |
 | --- | --- |
-| ArkTS-Dyn: Promise&lt;number&gt;  <br>ArkTS-Sta：Promise&lt;int&gt; | promise���󣬷���Ӧ���Դ��ܴ�С����λΪKB�� |
+| ArkTS-Dyn: Promise&lt;number&gt;  <br>ArkTS-Sta：Promise&lt;int&gt; | Promise used to return the total GPU memory size of the application, in KB. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 11400104 | Failed to get the application memory due to a remote exception. |
+| [11400104](../errorcode-hiviewdfx-hidebug-cpuusage.md#11400104-abnormal-cpu-usage) | Failed to get the application memory due to a remote exception. |
 
 ## Examples
 
 ```TypeScript
-import { hidebug } from '@kit.PerformanceAnalysisKit';
+import { hidebug, hilog } from '@kit.PerformanceAnalysisKit';
 import { BusinessError } from '@kit.BasicServicesKit';
 
 hidebug.getGraphicsMemory().then((ret: number) => {

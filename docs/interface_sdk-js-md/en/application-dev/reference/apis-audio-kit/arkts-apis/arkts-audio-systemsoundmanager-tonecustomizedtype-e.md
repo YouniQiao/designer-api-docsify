@@ -1,6 +1,6 @@
 # ToneCustomizedType
 
-枚举，铃声自定义类型。
+Enum for tone customized type.
 
 **Since:** 12
 
@@ -16,7 +16,7 @@
 PRE_INSTALLED = 0
 ```
 
-预安装铃声类型。
+Pre-installed tone type.
 
 **Since:** 12
 
@@ -32,7 +32,7 @@ PRE_INSTALLED = 0
 CUSTOMIZED = 1
 ```
 
-自定义铃声类型。
+Customized tone type.
 
 **Since:** 12
 

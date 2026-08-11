@@ -1,8 +1,6 @@
 # ArcButton
 
-ArcButton({ options: ArcButtonOptions })
-
-创建ArcButton实例，入参是弧形按钮配置选项。
+Declare Component ArcButton
 
 **Since:** 23
 
@@ -44,7 +42,7 @@ The method to build component.
 readonly options: ArcButtonOptions
 ```
 
-定义ArcButton组件的文本、背景色、阴影等参数。
+Describes the arc button options.
 
 **Type:** [ArcButtonOptions](arkts-arkui-arkui-advanced-arcbutton-arcbuttonoptions-c.md)
 

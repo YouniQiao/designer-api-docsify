@@ -12,11 +12,11 @@ import { backgroundLoader } from 'kits/@kit.BackgroundTasksKit';
 function getTaskInfo(taskId: int): Promise<TaskInfo>
 ```
 
-获取后台预取任务信息。
+Obtains the information of a background load task. This API returns the result via a promise.
 
-**Since:** 26.1.0
+**Since:** 26.0.0
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.1.0.
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
 **Required permissions:** ohos.permission.KEEP_BACKGROUND_RUNNING
 
@@ -30,19 +30,19 @@ function getTaskInfo(taskId: int): Promise<TaskInfo>
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| taskId | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | 后台加载任务id。 &lt;br&gt;取值范围为全体整数。 |
+| taskId | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | Id of the background load task. &lt;br&gt;The value range is all integers. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;TaskInfo&gt; | Promise对象， 返回任务信息。 |
+| Promise&lt;TaskInfo&gt; | Promise used to return the TaskInfo. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 9700004 | Check on taskId failed. |
-| 9700003 | System service operation failed. |
-| 201 | Permission denied. |
+| [9700004](../../apis-backgroundtasks-kit/errorcode-workScheduler.md#9700004-workinfo-verification-failure) | Check on taskInfo failed. |
+| [9700003](../../apis-backgroundtasks-kit/errorcode-workScheduler.md#9700003-system-service-failure) | System service operation failed. |
+| [201](../../errorcode-universal.md#201-permission-denied) | No permission. |
 

@@ -5,7 +5,7 @@ type DomainPluginGetAccessTokenFunc = (options: GetDomainAccessTokenOptions,
     callback: AsyncCallback<Uint8Array>) => void
 ```
 
-根据指定的选项获取域访问令牌。
+Gets the access token based on the specified options.
 
 **Since:** 23
 
@@ -21,6 +21,6 @@ type DomainPluginGetAccessTokenFunc = (options: GetDomainAccessTokenOptions,
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| options | [GetDomainAccessTokenOptions](arkts-basicservices-osaccount-getdomainaccesstokenoptions-i-sys.md) | Yes | 表示获取域访问令牌的选项。 |
-| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;Uint8Array&gt; | Yes | 表示结果回调。 |
+| options | [GetDomainAccessTokenOptions](arkts-basicservices-osaccount-getdomainaccesstokenoptions-i-sys.md) | Yes | Indicates the options for getting th access token. |
+| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;Uint8Array&gt; | Yes | Indicates the callback for returning the access token. |
 

@@ -11,12 +11,6 @@
 
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
-## 导入模块
-
-```TypeScript
-import { effectKit } from 'kits/@kit.ArkGraphics2D';
-```
-
 ## discriminatePictureLightDegree
 
 ```TypeScript
@@ -48,8 +42,8 @@ discriminatePictureLightDegree(): PictureLightDegree
 ## 示例
 
 ```TypeScript
-import { image } from '@kit.ImageKit';
-import { effectKit } from '@kit.ArkGraphics2D';
+import { image } from "@kit.ImageKit";
+import { effectKit } from "@kit.ArkGraphics2D";
 
 const color = new ArrayBuffer(96);
 let opts: image.InitializationOptions = {
@@ -59,7 +53,7 @@ let opts: image.InitializationOptions = {
     height: 4,
     width: 6
   }
-};
+}
 image.createPixelMap(color, opts).then((pixelMap) => {
   effectKit.createColorPicker(pixelMap, (error, colorPicker) => {
     if (error) {
@@ -69,8 +63,8 @@ image.createPixelMap(color, opts).then((pixelMap) => {
       let pictureLightDegree: effectKit.PictureLightDegree = colorPicker.discriminatePictureLightDegree();
       console.info('The color light degree of the image is ' + pictureLightDegree);
     }
-  });
-});
+  })
+})
 ```
 
 ## getAlphaZeroTransparentProportion
@@ -109,13 +103,13 @@ getAlphaZeroTransparentProportion(): double
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 202 | 权限校验失败，非系统应用调用系统接口。 |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | 权限校验失败，非系统应用调用系统接口。 |
 
 ## 示例
 
 ```TypeScript
-import { image } from '@kit.ImageKit';
-import { effectKit } from '@kit.ArkGraphics2D';
+import { image } from "@kit.ImageKit";
+import { effectKit } from "@kit.ArkGraphics2D";
 
 const color = new ArrayBuffer(96);
 let opts: image.InitializationOptions = {
@@ -125,7 +119,7 @@ let opts: image.InitializationOptions = {
     height: 4,
     width: 6
   }
-};
+}
 image.createPixelMap(color, opts).then((pixelMap) => {
   effectKit.createColorPicker(pixelMap, (error, colorPicker) => {
     if (error) {
@@ -135,8 +129,8 @@ image.createPixelMap(color, opts).then((pixelMap) => {
         let percentage: number = colorPicker.getAlphaZeroTransparentProportion();
       console.info('Get proportion of fully transparent pixels: ' + percentage);
     }
-  });
-});
+  })
+})
 ```
 
 ## getComplexityDegree
@@ -169,13 +163,13 @@ getComplexityDegree(): PictureComplexityDegree
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 202 | 权限校验失败，非系统应用调用系统接口。 |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | 权限校验失败，非系统应用调用系统接口。 |
 
 ## 示例
 
 ```TypeScript
-import { image } from '@kit.ImageKit';
-import { effectKit } from '@kit.ArkGraphics2D';
+import { image } from "@kit.ImageKit";
+import { effectKit } from "@kit.ArkGraphics2D";
 
 const color = new ArrayBuffer(96);
 let opts: image.InitializationOptions = {
@@ -185,7 +179,7 @@ let opts: image.InitializationOptions = {
     height: 4,
     width: 6
   }
-};
+}
 image.createPixelMap(color, opts).then((pixelMap) => {
   effectKit.createColorPicker(pixelMap, (error, colorPicker) => {
     if (error) {
@@ -195,8 +189,8 @@ image.createPixelMap(color, opts).then((pixelMap) => {
       let complexityDegree: effectKit.PictureComplexityDegree = colorPicker.getComplexityDegree();
       console.info('The complexity degree of the image is ' + complexityDegree);
     }
-  });
-});
+  })
+})
 ```
 
 ## getDeepenImmersionColor
@@ -225,23 +219,23 @@ getDeepenImmersionColor(): Color
 
 | 类型 | 说明 |
 | --- | --- |
-| [Color](../../apis-arkui/arkts-apis/arkts-arkui-enums-color-e.md) | Color实例，即图像强沉浸色对应的颜色值。当图像处理失败或无法生成沉浸色时返回null。 |
+| [Color](../../apis-arkgraphics3d/arkts-apis/arkts-arkgraphics3d-scenetypes-color-i.md) | Color实例，即图像强沉浸色对应的颜色值。当图像处理失败或无法生成沉浸色时返回null。 |
 
 ## 示例
 
 ```TypeScript
-import { image } from '@kit.ImageKit';
-import { effectKit } from '@kit.ArkGraphics2D';
+import { image } from "@kit.ImageKit";
+import { effectKit } from "@kit.ArkGraphics2D";
 
 const color = new ArrayBuffer(96);
-let opts: image.InitializationOptions = {
+let opts : image.InitializationOptions = {
   editable: true,
   pixelFormat: 3,
   size: {
     height: 4,
     width: 6
   }
-};
+}
 image.createPixelMap(color, opts).then((pixelMap) => {
   effectKit.createColorPicker(pixelMap, (error, colorPicker) => {
     if (error) {
@@ -251,8 +245,8 @@ image.createPixelMap(color, opts).then((pixelMap) => {
       let color = colorPicker.getDeepenImmersionColor();
       console.info('get deepen immersion color =' + color);
     }
-  });
-});
+  })
+})
 ```
 
 ## getImmersiveBackgroundColor
@@ -281,23 +275,23 @@ getImmersiveBackgroundColor(): Color
 
 | 类型 | 说明 |
 | --- | --- |
-| [Color](../../apis-arkui/arkts-apis/arkts-arkui-enums-color-e.md) | Color实例，即图像沉浸式背景色对应的颜色值。当图像处理失败或无法生成沉浸式背景色时返回null。 |
+| [Color](../../apis-arkgraphics3d/arkts-apis/arkts-arkgraphics3d-scenetypes-color-i.md) | Color实例，即图像沉浸式背景色对应的颜色值。当图像处理失败或无法生成沉浸式背景色时返回null。 |
 
 ## 示例
 
 ```TypeScript
-import { image } from '@kit.ImageKit';
-import { effectKit } from '@kit.ArkGraphics2D';
+import { image } from "@kit.ImageKit";
+import { effectKit } from "@kit.ArkGraphics2D";
 
 const color = new ArrayBuffer(96);
-let opts: image.InitializationOptions = {
+let opts : image.InitializationOptions = {
   editable: true,
   pixelFormat: 3,
   size: {
     height: 4,
     width: 6
   }
-};
+}
 image.createPixelMap(color, opts).then((pixelMap) => {
   effectKit.createColorPicker(pixelMap, (error, colorPicker) => {
     if (error) {
@@ -308,7 +302,7 @@ image.createPixelMap(color, opts).then((pixelMap) => {
       console.info('get immersive background color =' + color);
     }
   })
-});
+})
 ```
 
 ## getImmersiveForegroundColor
@@ -337,23 +331,23 @@ getImmersiveForegroundColor(): Color
 
 | 类型 | 说明 |
 | --- | --- |
-| [Color](../../apis-arkui/arkts-apis/arkts-arkui-enums-color-e.md) | Color实例，即图像沉浸式前景色对应的颜色值。当图像处理失败或无法生成沉浸式前景色时返回null。 |
+| [Color](../../apis-arkgraphics3d/arkts-apis/arkts-arkgraphics3d-scenetypes-color-i.md) | Color实例，即图像沉浸式前景色对应的颜色值。当图像处理失败或无法生成沉浸式前景色时返回null。 |
 
 ## 示例
 
 ```TypeScript
-import { image } from '@kit.ImageKit';
-import { effectKit } from '@kit.ArkGraphics2D';
+import { image } from "@kit.ImageKit";
+import { effectKit } from "@kit.ArkGraphics2D";
 
 const color = new ArrayBuffer(96);
-let opts: image.InitializationOptions = {
+let opts : image.InitializationOptions = {
   editable: true,
   pixelFormat: 3,
   size: {
     height: 4,
     width: 6
   }
-};
+}
 image.createPixelMap(color, opts).then((pixelMap) => {
   effectKit.createColorPicker(pixelMap, (error, colorPicker) => {
     if (error) {
@@ -363,8 +357,8 @@ image.createPixelMap(color, opts).then((pixelMap) => {
       let color = colorPicker.getImmersiveForegroundColor();
       console.info('get immersive foreground color =' + color);
     }
-  });
-});
+  })
+})
 ```
 
 ## getMorandiShadowColor
@@ -393,23 +387,23 @@ getMorandiShadowColor(): Color
 
 | 类型 | 说明 |
 | --- | --- |
-| [Color](../../apis-arkui/arkts-apis/arkts-arkui-enums-color-e.md) | Color实例，即图像莫兰迪阴影色对应的颜色值。当图像处理失败或无法获取莫兰迪阴影色时返回null。 |
+| [Color](../../apis-arkgraphics3d/arkts-apis/arkts-arkgraphics3d-scenetypes-color-i.md) | Color实例，即图像莫兰迪阴影色对应的颜色值。当图像处理失败或无法获取莫兰迪阴影色时返回null。 |
 
 ## 示例
 
 ```TypeScript
-import { image } from '@kit.ImageKit';
-import { effectKit } from '@kit.ArkGraphics2D';
+import { image } from "@kit.ImageKit";
+import { effectKit } from "@kit.ArkGraphics2D";
 
 const color = new ArrayBuffer(96);
-let opts: image.InitializationOptions = {
+let opts : image.InitializationOptions = {
   editable: true,
   pixelFormat: 3,
   size: {
     height: 4,
     width: 6
   }
-};
+}
 image.createPixelMap(color, opts).then((pixelMap) => {
   effectKit.createColorPicker(pixelMap, (error, colorPicker) => {
     if (error) {
@@ -419,8 +413,8 @@ image.createPixelMap(color, opts).then((pixelMap) => {
       let color = colorPicker.getMorandiShadowColor();
       console.info('get Morandi shadow color =' + color);
     }
-  });
-});
+  })
+})
 ```
 
 ## getReverseColor
@@ -450,23 +444,23 @@ getReverseColor(): Color
 
 | 类型 | 说明 |
 | --- | --- |
-| [Color](../../apis-arkui/arkts-apis/arkts-arkui-enums-color-e.md) | Color实例，即图像反向颜色对应的颜色值。当图像处理失败或无法生成反向颜色时返回null。 |
+| [Color](../../apis-arkgraphics3d/arkts-apis/arkts-arkgraphics3d-scenetypes-color-i.md) | Color实例，即图像反向颜色对应的颜色值。当图像处理失败或无法生成反向颜色时返回null。 |
 
 ## 示例
 
 ```TypeScript
-import { image } from '@kit.ImageKit';
-import { effectKit } from '@kit.ArkGraphics2D';
+import { image } from "@kit.ImageKit";
+import { effectKit } from "@kit.ArkGraphics2D";
 
 const color = new ArrayBuffer(96);
-let opts: image.InitializationOptions = {
+let opts : image.InitializationOptions = {
   editable: true,
   pixelFormat: 3,
   size: {
     height: 4,
     width: 6
   }
-};
+}
 image.createPixelMap(color, opts).then((pixelMap) => {
   effectKit.createColorPicker(pixelMap, (error, colorPicker) => {
     if (error) {
@@ -476,8 +470,8 @@ image.createPixelMap(color, opts).then((pixelMap) => {
       let color = colorPicker.getReverseColor();
       console.info('get reverse color =' + color);
     }
-  });
-});
+  })
+})
 ```
 
 ## getShadeDegree
@@ -510,13 +504,13 @@ getShadeDegree(): PictureShadeDegree
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 202 | 权限校验失败，非系统应用调用系统接口。 |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | 权限校验失败，非系统应用调用系统接口。 |
 
 ## 示例
 
 ```TypeScript
-import { image } from '@kit.ImageKit';
-import { effectKit } from '@kit.ArkGraphics2D';
+import { image } from "@kit.ImageKit";
+import { effectKit } from "@kit.ArkGraphics2D";
 
 const color = new ArrayBuffer(96);
 let opts: image.InitializationOptions = {
@@ -526,7 +520,7 @@ let opts: image.InitializationOptions = {
     height: 4,
     width: 6
   }
-};
+}
 image.createPixelMap(color, opts).then((pixelMap) => {
   effectKit.createColorPicker(pixelMap, (error, colorPicker) => {
     if (error) {
@@ -536,8 +530,8 @@ image.createPixelMap(color, opts).then((pixelMap) => {
       let shadeDegree: effectKit.PictureShadeDegree = colorPicker.getShadeDegree();
       console.info('The shade degree of the image is ' + shadeDegree);
     }
-  });
-});
+  })
+})
 ```
 
 ## getTopProportionColorsAndPercentage
@@ -582,13 +576,13 @@ getTopProportionColorsAndPercentage(colorCount: int): Map<Color | null, double |
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 202 | 权限校验失败，非系统应用调用系统接口。 |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | 权限校验失败，非系统应用调用系统接口。 |
 
 ## 示例
 
 ```TypeScript
-import { image } from '@kit.ImageKit';
-import { effectKit } from '@kit.ArkGraphics2D';
+import { image } from "@kit.ImageKit";
+import { effectKit } from "@kit.ArkGraphics2D";
 
 const color = new ArrayBuffer(96);
 let opts: image.InitializationOptions = {
@@ -598,7 +592,7 @@ let opts: image.InitializationOptions = {
     height: 4,
     width: 6
   }
-};
+}
 image.createPixelMap(color, opts).then((pixelMap) => {
   effectKit.createColorPicker(pixelMap, (error, colorPicker) => {
     if (error) {
@@ -610,7 +604,7 @@ image.createPixelMap(color, opts).then((pixelMap) => {
         console.info('get top proportion colors and percentages: color ' + key + ', percentage ' + value);
       })
     }
-  });
-});
+  })
+})
 ```
 

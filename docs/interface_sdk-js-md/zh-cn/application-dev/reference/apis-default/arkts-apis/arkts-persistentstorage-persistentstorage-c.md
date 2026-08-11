@@ -128,5 +128,5 @@ static persistProps(props: PersistPropsOptions<Any>[]): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| props | [PersistPropsOptions](../../apis-arkui/arkts-apis/arkts-arkui-persistpropsoptions-i.md)&lt;Any&gt;[] | 是 | 持久化数组。 |
+| props | [PersistPropsOptions](arkts-persistentstorage-persistpropsoptions-i.md)&lt;Any&gt;[] | 是 | 持久化数组。 |
 

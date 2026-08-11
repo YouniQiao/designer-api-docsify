@@ -1,6 +1,6 @@
 # ListItemOptions
 
-ListItem组件参数。
+Defines the list item options.
 
 **Since:** 23
 
@@ -16,7 +16,7 @@ ListItem组件参数。
 style?: ListItemStyle
 ```
 
-设置List组件卡片样式。
+Describes the ListItem style.
 
 **Type:** [ListItemStyle](../arkts-components/arkts-arkui-listitemstyle-e.md)
 

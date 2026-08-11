@@ -1,10 +1,13 @@
 # FlashQuery
 
-提供了查询设备的闪光灯状态和模式的能力。
+FlashQuery provides APIs to query the flash status and mode of a camera device.
 
-> **说明：**
+> **NOTE：**
 > 
-> - 本Interface的起始版本为API version 12。接口在API version 12发生兼容变更，保留了内层元素的起始版本信息，会出现外层元素@since版本号大于内层元素的情况，不影响接口使用。
+> - This interface was first introduced in API version 12. In this version, a compatibility change was made that
+> preserved the initial version information of inner elements. As a result, you might see outer element's @since
+> version number being higher than that of the inner elements. However, this discrepancy does not affect the
+> functionality of the interface.
 
 **Since:** 12
 
@@ -48,8 +51,8 @@ Checks whether the LCD flash is supported.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 7400103 | Session not config, only throw in session usage. |
-| 202 | Not System Application. |
+| [7400103](../errorcode-camera.md#7400103-session-not-configured) | Session not config, only throw in session usage. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not System Application. |
 
 ## Examples
 

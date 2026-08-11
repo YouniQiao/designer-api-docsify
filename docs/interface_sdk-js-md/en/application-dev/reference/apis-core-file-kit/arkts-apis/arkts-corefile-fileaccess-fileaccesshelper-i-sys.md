@@ -1,6 +1,6 @@
 # FileAccessHelper (System API)
 
-FileAccessHelper对象。
+Provides a **FileAccessHelper** object.
 
 **Since:** 9
 
@@ -26,7 +26,7 @@ import { fileAccess } from 'kits/@kit.CoreFileKit';
 access(sourceFileUri: string) : Promise<boolean>
 ```
 
-以异步方法判断文件(夹)是否存在。使用Promise异步回调。
+Checks whether a file or directory exists. This API uses a promise to return the result.
 
 **Since:** 9
 
@@ -128,7 +128,7 @@ async function accessFunc() {
 access(sourceFileUri: string, callback: AsyncCallback<boolean>): void
 ```
 
-以异步方法判断文件(夹)是否存在。使用callback异步回调。
+Checks whether a file or directory exists. This API uses an asynchronous callback to return the result.
 
 **Since:** 9
 
@@ -227,7 +227,7 @@ try {
 copy(sourceUri: string, destUri: string, force?: boolean): Promise<Array<CopyResult>>
 ```
 
-复制文件或目录，使用 Promise 异步回调。
+Copies a file or directory. This API uses a promise to return the result.
 
 **Since:** 10
 
@@ -249,15 +249,15 @@ copy(sourceUri: string, destUri: string, force?: boolean): Promise<Array<CopyRes
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| sourceUri | string | Yes | 待拷贝的源文件(夹)的 uri。例如：file://docs/storage/Users/currentUser/Download/1.txt。 |
-| destUri | string | Yes | 目标文件夹的 uri。例如：file://docs/storage/Users/currentUser/Download/test。 |
-| force | boolean | No | 含有同名文件时是否强制覆盖文件。force 为 true 时强制覆盖文件；force 为空或 false 时不强制覆盖文件。该参数不填，默认为false。 |
+| sourceUri | string | Yes | URI of the source file or directory to copy. For example, **file://docs/storage/Users/currentUser/Download/1.txt**. |
+| destUri | string | Yes | URI of the destination directory, to which the file or directory is moved. For example, **file://docs/storage/Users/currentUser/Download/test**. |
+| force | boolean | No | Whether to forcibly overwrite the file with the same name. If **force** is **true**, the file with the same name will be overwritten. If **force** is **false** or not specified, the file with the same name will not be overwritten. The default value is **false**. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;Array&lt;CopyResult&gt;&gt; | 返回 copyresult 数组。copyResult 为复制操作失败的返回信息；复制成功无返回信息。 |
+| Promise&lt;Array&lt;CopyResult&gt;&gt; | Promise used to return the result. If the file or directory is copied successfully, no information is returned. If the file copy fails, a **copyResult** array is returned. |
 
 ## copy
 
@@ -265,7 +265,7 @@ copy(sourceUri: string, destUri: string, force?: boolean): Promise<Array<CopyRes
 copy(sourceUri: string, destUri: string, callback: AsyncCallback<Array<CopyResult>>): void
 ```
 
-复制文件或目录，使用 callback 异步回调。
+Copies a file or directory. This API uses an asynchronous callback to return the result.
 
 **Since:** 10
 
@@ -287,9 +287,9 @@ copy(sourceUri: string, destUri: string, callback: AsyncCallback<Array<CopyResul
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| sourceUri | string | Yes | 待拷贝的源文件(夹)的 uri。例如：file://docs/storage/Users/currentUser/Download/1.txt。 |
-| destUri | string | Yes | 目标文件夹的 uri。例如：file://docs/storage/Users/currentUser/Download/test。 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;CopyResult&gt;&gt; | Yes | 返回 copyresult 数组。copyResult 为复制操作失败的返回信息；复制成功无返回信息。 |
+| sourceUri | string | Yes | URI of the source file or directory to copy. For example, **file://docs/storage/Users/currentUser/Download/1.txt**. |
+| destUri | string | Yes | URI of the destination directory, to which the file or directory is moved. For example, **file://docs/storage/Users/currentUser/Download/test**. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;CopyResult&gt;&gt; | Yes | Callback invoked to return the result. If the file or directory is copied successfully, no information is returned. If the copy fails, a **copyResult** array is returned. |
 
 ## Examples
 
@@ -332,7 +332,7 @@ try {
 copy(sourceUri: string, destUri: string, force: boolean, callback: AsyncCallback<Array<CopyResult>>): void
 ```
 
-复制文件或目录，含有同名文件时可以选择是否强制覆盖原文件，使用 callback 异步回调。
+Copies a file or directory. If a file with the same name already exists, you can choose whether to forcibly overwrite the original file. This API uses an asynchronous callback to return the result.
 
 **Since:** 10
 
@@ -354,10 +354,10 @@ copy(sourceUri: string, destUri: string, force: boolean, callback: AsyncCallback
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| sourceUri | string | Yes | 待拷贝的源文件(夹)的 uri。例如：file://docs/storage/Users/currentUser/Download/1.txt。 |
-| destUri | string | Yes | 目标文件夹的 uri。例如：file://docs/storage/Users/currentUser/Download/test。 |
-| force | boolean | Yes | 含有同名文件时是否强制覆盖原文件。force 为 true 时强制覆盖原文件；force 为空或 false 时不覆盖原文件。 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;CopyResult&gt;&gt; | Yes | 返回 copyresult 数组。copyResult 为复制操作失败的返回信息；复制成功无返回信息。 |
+| sourceUri | string | Yes | URI of the source file or directory to copy. For example, **file://docs/storage/Users/currentUser/Download/1.txt**. |
+| destUri | string | Yes | URI of the destination directory, to which the file or directory is moved. For example, **file://docs/storage/Users/currentUser/Download/test**. |
+| force | boolean | Yes | Whether to forcibly overwrite the original file with the same name. If **force** is set to **true**, the original file is forcibly overwritten. If **force** is left empty or set to **false**, the original file is not overwritten. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;CopyResult&gt;&gt; | Yes | Callback invoked to return the result. If the file or directory is copied successfully, no information is returned. If the copy fails, a **copyResult** array is returned. |
 
 ## Examples
 
@@ -400,7 +400,7 @@ try {
 copyFile(sourceUri: string, destUri: string, fileName: string): Promise<string>
 ```
 
-复制文件并传入备用文件名，使用Promise异步回调。
+Copies a file with an alternative file name. This API uses a promise to return the result.
 
 **Since:** 11
 
@@ -424,15 +424,15 @@ copyFile(sourceUri: string, destUri: string, fileName: string): Promise<string>
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| sourceUri | string | Yes | 待拷贝的源文件(夹)的 uri。例如：file://docs/storage/Users/currentUser/Download/1.txt。 |
-| destUri | string | Yes | 目标文件夹的 uri。例如：file://docs/storage/Users/currentUser/Download/test。 |
-| fileName | string | Yes | 如果目标目录中有1.txt文件，就是用fileName 作为文件名进行复制。 |
+| sourceUri | string | Yes | URI of the source file or directory to copy. For example, **file://docs/storage/Users/currentUser/Download/1.txt**. |
+| destUri | string | Yes | URI of the destination directory, to which the file or directory is moved. For example, **file://docs/storage/Users/currentUser/Download/test**. |
+| fileName | string | Yes | File name to use if there is a file with the same name as the source file in the destination directory. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;string&gt; | 返回一个复制成功的文件的uri。 |
+| Promise&lt;string&gt; | URI of the file generated. |
 
 **Error codes:**
 
@@ -443,8 +443,8 @@ copyFile(sourceUri: string, destUri: string, fileName: string): Promise<string>
 | 13900023 | Text file busy |
 | 13900018 | Not a directory |
 | 13900019 | Is a directory |
-| 201 | Permission verification failed, usually the result returned by VerifyAccessToken |
-| 202 | Permission verification failed, application which is not a system application uses system API |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed, usually the result returned by VerifyAccessToken |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed, application which is not a system application uses system API |
 | 13900030 | File name too long |
 | 13900024 | File too large |
 | 13900025 | No space left on device |
@@ -494,7 +494,7 @@ async function copyFunc01() {
 copyFile(sourceUri: string, destUri: string, fileName: string, callback: AsyncCallback<string>): void
 ```
 
-复制文件并传入备用文件名，使用callback异步回调。
+Copies a file with an alternative file name. This API uses an asynchronous callback to return the result.
 
 **Since:** 11
 
@@ -518,10 +518,10 @@ copyFile(sourceUri: string, destUri: string, fileName: string, callback: AsyncCa
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| sourceUri | string | Yes | 待拷贝的源文件(夹)的 uri。例如：file://docs/storage/Users/currentUser/Download/1.txt。 |
-| destUri | string | Yes | 目标文件夹的 uri。例如：file://docs/storage/Users/currentUser/Download/test。 |
-| fileName | string | Yes | 如果目标目录中有1.txt文件。就是用fileName 作为文件名进行复制。 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;string&gt; | Yes | 返回一个复制成功的文件的uri。 |
+| sourceUri | string | Yes | URI of the source file or directory to copy. For example, **file://docs/storage/Users/currentUser/Download/1.txt**. |
+| destUri | string | Yes | URI of the destination directory, to which the file or directory is moved. For example, **file://docs/storage/Users/currentUser/Download/test**. |
+| fileName | string | Yes | File name to use if there is a file with the same name as the source file in the destination directory. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;string&gt; | Yes | URI of the file generated. |
 
 **Error codes:**
 
@@ -532,8 +532,8 @@ copyFile(sourceUri: string, destUri: string, fileName: string, callback: AsyncCa
 | 13900023 | Text file busy |
 | 13900018 | Not a directory |
 | 13900019 | Is a directory |
-| 201 | Permission verification failed, usually the result returned by VerifyAccessToken |
-| 202 | Permission verification failed, application which is not a system application uses system API |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed, usually the result returned by VerifyAccessToken |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed, application which is not a system application uses system API |
 | 13900030 | File name too long |
 | 13900024 | File too large |
 | 13900025 | No space left on device |
@@ -582,7 +582,7 @@ try {
 createFile(uri: string, displayName: string) : Promise<string>
 ```
 
-以异步方法创建文件到指定目录，返回新文件uri。使用Promise异步回调。
+Creates a file in a directory. This API uses a promise to return the result.
 
 **Since:** 9
 
@@ -687,7 +687,7 @@ async function createFile() {
 createFile(uri: string, displayName: string, callback: AsyncCallback<string>): void
 ```
 
-以异步方法创建文件到指定目录，返回新文件uri。使用callback异步回调。
+Creates a file in a directory. This API uses an asynchronous callback to return the result.
 
 **Since:** 9
 
@@ -784,7 +784,7 @@ try {
 delete(uri: string) : Promise<number>
 ```
 
-以异步方法删除文件(夹)，返回错误码。使用Promise异步回调。
+Deletes a file or directory. This API uses a promise to return the result.
 
 **Since:** 9
 
@@ -883,7 +883,7 @@ async function deleteFile01() {
 delete(uri: string, callback: AsyncCallback<number>): void
 ```
 
-以异步方法删除文件(夹)，返回错误码。使用callback异步回调。
+Deletes a file or directory. This API uses an asynchronous callback to return the result.
 
 **Since:** 9
 
@@ -978,7 +978,7 @@ try {
 getFileInfoFromRelativePath(relativePath: string) : Promise<FileInfo>
 ```
 
-以异步方法获取relativePath对应的FileInfo对象。使用promise异步回调。
+Obtains a **FileInfo** object based on a relative path. This API uses a promise to return the result.
 
 **Since:** 10
 
@@ -1035,7 +1035,7 @@ async function getRelativePath() {
 getFileInfoFromRelativePath(relativePath: string, callback: AsyncCallback<FileInfo>) : void
 ```
 
-以异步方法获取relativePath对应的FileInfo对象。使用callback异步回调。
+Obtains a **FileInfo** object based on a relative path. This API uses an asynchronous callback to return the result.
 
 **Since:** 10
 
@@ -1091,7 +1091,7 @@ try {
 getFileInfoFromUri(uri: string) : Promise<FileInfo>
 ```
 
-以异步方法获取uri对应的FileInfo对象。使用promise异步回调。
+Obtains a **FileInfo** object based on a URI. This API uses a promise to return the result.
 
 **Since:** 10
 
@@ -1149,7 +1149,7 @@ async function getUri() {
 getFileInfoFromUri(uri: string, callback: AsyncCallback<FileInfo>) : void
 ```
 
-以异步方法获取uri对应的FileInfo对象。使用callback异步回调。
+Obtains a **FileInfo** object based on a URI. This API uses an asynchronous callback to return the result.
 
 **Since:** 10
 
@@ -1206,7 +1206,8 @@ try {
 getRoots(): Promise<RootIterator>
 ```
 
-以异步方法获取helper对象连接的文件管理服务类的设备根节点信息。使用Promise异步回调。该方法返回迭代器对象RootIterator，然后通过[next](arkts-corefile-fileaccess-fileiterator-i-sys.md#next)方法返回[RootInfo](arkts-corefile-fileaccess-rootinfo-i-sys.md)。
+Obtains information about the device root nodes of the file management services associated with the **Helper** object. This API uses a promise to return a **RootIterator** object. You can use   
+[next](arkts-corefile-fileaccess-fileiterator-i-sys.md#next) to return [RootInfo](arkts-corefile-fileaccess-rootinfo-i-sys.md).
 
 **Since:** 9
 
@@ -1304,8 +1305,8 @@ async function getRoots() {
 getRoots(callback: AsyncCallback<RootIterator>): void
 ```
 
-以异步方法获取helper对象连接的文件管理服务类的设备根节点信息。使用callback异步回调。callback带回迭代器对象RootIterator，然后通过[next](arkts-corefile-fileaccess-fileiterator-i-sys.md#next)方法返回  
-[RootInfo](arkts-corefile-fileaccess-rootinfo-i-sys.md)。
+Obtains information about the device root nodes of the file management services associated with the **Helper** object. This API uses an asynchronous callback to return a **RootIterator** object. You can use   
+[next](arkts-corefile-fileaccess-fileiterator-i-sys.md#next) to return [RootInfo](arkts-corefile-fileaccess-rootinfo-i-sys.md).
 
 **Since:** 9
 
@@ -1404,7 +1405,7 @@ async function getRoots() {
 mkDir(parentUri: string, displayName: string) : Promise<string>
 ```
 
-以异步方法创建文件夹到指定目录，返回文件夹uri。使用Promise异步回调。
+Creates a directory in a specified directory. This API uses a promise to return the result.
 
 **Since:** 9
 
@@ -1509,7 +1510,7 @@ async function createDirectory() {
 mkDir(parentUri: string, displayName: string, callback: AsyncCallback<string>): void
 ```
 
-以异步方法创建文件夹到指定目录，返回文件夹uri。使用callback异步回调。
+Creates a directory in a specified directory. This API uses an asynchronous callback to return the result.
 
 **Since:** 9
 
@@ -1606,7 +1607,7 @@ try {
 move(sourceFile: string, destFile: string) : Promise<string>
 ```
 
-以异步方法移动文件(夹)，返回移动后文件(夹)的uri。使用Promise异步回调。目前仅支持设备内移动，跨设备不支持移动。
+Moves a file or directory. This API uses a promise to return the result. Currently, this API does not support move of files or directories across devices.
 
 **Since:** 9
 
@@ -1635,7 +1636,7 @@ move(sourceFile: string, destFile: string) : Promise<string>
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;string&gt; | 新路径下的文件(夹)的uri。 |
+| Promise&lt;string&gt; | Promise used to return the URI of the file or directory in the destination directory. |
 
 **Error codes:**
 
@@ -1706,7 +1707,7 @@ async function moveFile01() {
 move(sourceFile: string, destFile: string, callback: AsyncCallback<string>): void
 ```
 
-以异步方法移动文件(夹)，返回移动后文件(夹)的uri。使用callback异步回调。目前仅支持设备内移动，跨设备不支持移动。
+Moves a file or directory. This API uses an asynchronous callback to return the result. Currently, this API does not support move of files or directories across devices.
 
 **Since:** 9
 
@@ -1803,7 +1804,7 @@ try {
 moveFile(sourceUri: string, destUri: string, fileName: string): Promise<string>
 ```
 
-以异步方法移动文件，返回移动后文件的uri。使用Promise异步回调。当存在同名文件时（即发生文件移动冲突时），可以重命名待移动的文件，再保存到目标文件夹。目前仅支持设备内移动，跨设备不支持移动。
+Moves a file, and renames it if a file with the same name already exists in the destination directory. This API uses a promise to return the result.If a file with the same name exists (that is, a file moving conflict occurs), you can rename the file to be moved and save it to the destination directory.Currently, this API does not support move of files across devices.
 
 **Since:** 11
 
@@ -1827,15 +1828,15 @@ moveFile(sourceUri: string, destUri: string, fileName: string): Promise<string>
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| sourceUri | string | Yes | 待移动源文件的uri。 |
-| destUri | string | Yes | 目标文件夹的uri。 |
-| fileName | string | Yes | 冲突文件的新名称。 |
+| sourceUri | string | Yes | URI of the source file to move. |
+| destUri | string | Yes | URI of the destination directory, to which the file is moved. |
+| fileName | string | Yes | New name of the file. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;string&gt; | 新路径下的文件uri。 |
+| Promise&lt;string&gt; | Promise used to return the URI of the file in the destination directory. |
 
 **Error codes:**
 
@@ -1846,8 +1847,8 @@ moveFile(sourceUri: string, destUri: string, fileName: string): Promise<string>
 | 13900023 | Text file busy |
 | 13900018 | Not a directory |
 | 13900019 | Is a directory |
-| 201 | Permission verification failed, usually the result returned by VerifyAccessToken. |
-| 202 | Permission verification failed, application which is not a system application uses system API. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed, usually the result returned by VerifyAccessToken. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed, application which is not a system application uses system API. |
 | 13900030 | File name too long |
 | 13900024 | File too large |
 | 13900025 | No space left on device |
@@ -1897,7 +1898,7 @@ async function moveFile01() {
 moveFile(sourceUri: string, destUri: string, fileName: string, callback: AsyncCallback<string>): void
 ```
 
-以异步方法移动文件，返回移动后文件的uri。使用callback异步回调。当存在同名文件时（即发生文件移动冲突时），可以重命名待移动的文件，再保存到目标文件夹。当前仅支持设备内移动，不支持跨设备移动。
+Moves a file, and renames it if a file with the same name already exists in the destination directory. This API uses an asynchronous callback to return the result.If a file with the same name exists (that is, a file moving conflict occurs), you can rename the file to be moved and save it to the destination directory.Currently, this API does not support move of files across devices.
 
 **Since:** 11
 
@@ -1921,10 +1922,10 @@ moveFile(sourceUri: string, destUri: string, fileName: string, callback: AsyncCa
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| sourceUri | string | Yes | 待移动的源文件的uri。 |
-| destUri | string | Yes | 目标文件夹的uri。 |
-| fileName | string | Yes | 冲突文件的新名称。 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;string&gt; | Yes | 新路径下的文件uri。 |
+| sourceUri | string | Yes | URI of the source file to move. |
+| destUri | string | Yes | URI of the destination directory, to which the file is moved. |
+| fileName | string | Yes | New name of the file. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;string&gt; | Yes | Callback invoked to return the URI of the file in the destination directory. |
 
 **Error codes:**
 
@@ -1935,8 +1936,8 @@ moveFile(sourceUri: string, destUri: string, fileName: string, callback: AsyncCa
 | 13900023 | Text file busy |
 | 13900018 | Not a directory |
 | 13900019 | Is a directory |
-| 201 | Permission verification failed, usually the result returned by VerifyAccessToken. |
-| 202 | Permission verification failed, application which is not a system application uses system API. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed, usually the result returned by VerifyAccessToken. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed, application which is not a system application uses system API. |
 | 13900030 | File name too long |
 | 13900024 | File too large |
 | 13900025 | No space left on device |
@@ -1988,7 +1989,7 @@ try {
 moveItem(sourceUri: string, destUri: string, force?: boolean): Promise<Array<MoveResult>>
 ```
 
-以异步方法移动文件(夹)，返回移动后文件(夹)的uri。使用Promise异步回调。当存在同名文件时，可以选择强制覆盖文件。目前仅支持设备内移动，跨设备不支持移动。
+Moves a file or directory. This API uses a promise to return the result.You can forcibly overwrite the file with the same name in the destination directory.Currently, this API does not support move of files or directories across devices.
 
 **Since:** 11
 
@@ -2012,15 +2013,15 @@ moveItem(sourceUri: string, destUri: string, force?: boolean): Promise<Array<Mov
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| sourceUri | string | Yes | 待移动的源文件(夹)的uri。 |
-| destUri | string | Yes | 目标文件夹的uri。 |
-| force | boolean | No | 选择当存在同名文件时，是否强制覆盖文件。当force为true时，强制覆盖文件；为false时不强制覆盖文件。该参数不填，默认为false。 |
+| sourceUri | string | Yes | URI of the source file or directory to move. |
+| destUri | string | Yes | URI of the destination directory, to which the file or directory is moved. |
+| force | boolean | No | Whether to forcibly overwrite the file with the same name. The value **true** means to overwrite the file forcibly; the value **false** means the opposite. The default value is **false**. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;Array&lt;MoveResult&gt;&gt; | 返回 moveresult 数组。moveResult 为移动操作失败的返回信息；复制成功无返回信息。 |
+| Promise&lt;Array&lt;MoveResult&gt;&gt; | Promise used to return the result. If the operation is successful, no information is returned. If the operation fails, a **MoveResult** array is returned. |
 
 **Error codes:**
 
@@ -2031,8 +2032,8 @@ moveItem(sourceUri: string, destUri: string, force?: boolean): Promise<Array<Mov
 | 13900023 | Text file busy |
 | 13900018 | Not a directory |
 | 13900019 | Is a directory |
-| 201 | Permission verification failed, usually the result returned by VerifyAccessToken. |
-| 202 | Permission verification failed, application which is not a system application uses system API. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed, usually the result returned by VerifyAccessToken. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed, application which is not a system application uses system API. |
 | 13900030 | File name too long |
 | 13900024 | File too large |
 | 13900025 | No space left on device |
@@ -2057,7 +2058,7 @@ moveItem(sourceUri: string, destUri: string, force?: boolean): Promise<Array<Mov
 moveItem(sourceUri: string, destUri: string, callback: AsyncCallback<Array<MoveResult>>): void
 ```
 
-以异步方法移动文件(夹)，返回移动后文件(夹)的uri。使用callback异步回调。当前仅支持设备内移动，不支持跨设备移动。
+Moves a file or directory. This API uses an asynchronous callback to return the result.Currently, this API does not support move of files or directories across devices.
 
 **Since:** 11
 
@@ -2081,9 +2082,9 @@ moveItem(sourceUri: string, destUri: string, callback: AsyncCallback<Array<MoveR
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| sourceUri | string | Yes | 待移动的源文件(夹)的uri。 |
-| destUri | string | Yes | 目标文件夹的uri。 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;MoveResult&gt;&gt; | Yes | 回调返回MoveResult数组。MoveResult为移动操作失败的返回信息；移动成功无返回信息。 |
+| sourceUri | string | Yes | URI of the source file or directory to move. |
+| destUri | string | Yes | URI of the destination directory, to which the file or directory is moved. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;MoveResult&gt;&gt; | Yes | Callback invoked to return the result. If the operation is successful, no information is returned. If the operation fails, a **MoveResult** array is returned. |
 
 **Error codes:**
 
@@ -2094,8 +2095,8 @@ moveItem(sourceUri: string, destUri: string, callback: AsyncCallback<Array<MoveR
 | 13900023 | Text file busy |
 | 13900018 | Not a directory |
 | 13900019 | Is a directory |
-| 201 | Permission verification failed, usually the result returned by VerifyAccessToken. |
-| 202 | Permission verification failed, application which is not a system application uses system API. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed, usually the result returned by VerifyAccessToken. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed, application which is not a system application uses system API. |
 | 13900030 | File name too long |
 | 13900024 | File too large |
 | 13900025 | No space left on device |
@@ -2155,7 +2156,7 @@ try {
 moveItem(sourceUri: string, destUri: string, force: boolean, callback: AsyncCallback<Array<MoveResult>>): void
 ```
 
-以异步方法移动文件(夹)，返回移动后文件(夹)的uri。使用callback异步回调。当存在同名文件时，可以选择强制覆盖文件。当前仅支持设备内移动，不支持跨设备移动。
+Moves a file or directory. This API uses an asynchronous callback to return the result.You can forcibly overwrite the file with the same name in the destination directory.Currently, this API does not support move of files or directories across devices.
 
 **Since:** 11
 
@@ -2179,10 +2180,10 @@ moveItem(sourceUri: string, destUri: string, force: boolean, callback: AsyncCall
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| sourceUri | string | Yes | 待移动的源文件(夹)的uri。 |
-| destUri | string | Yes | 目标文件夹的uri。 |
-| force | boolean | Yes | 选择当存在同名文件时，是否强制覆盖文件。当force为true时，强制覆盖文件；为false时不强制覆盖文件。该参数不填，默认为false。 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;MoveResult&gt;&gt; | Yes | 回调返回MoveResult数组。MoveResult为移动操作失败的返回信息；移动成功无返回信息。 |
+| sourceUri | string | Yes | URI of the source file or directory to move. |
+| destUri | string | Yes | URI of the destination directory, to which the file or directory is moved. |
+| force | boolean | Yes | Whether to forcibly overwrite the file with the same name. The value **true** means to overwrite the file forcibly; the value **false** means the opposite. The default value is **false**. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;MoveResult&gt;&gt; | Yes | Callback invoked to return the result. If the operation is successful, no information is returned. If the operation fails, a **MoveResult** array is returned. |
 
 **Error codes:**
 
@@ -2193,8 +2194,8 @@ moveItem(sourceUri: string, destUri: string, force: boolean, callback: AsyncCall
 | 13900023 | Text file busy |
 | 13900018 | Not a directory |
 | 13900019 | Is a directory |
-| 201 | Permission verification failed, usually the result returned by VerifyAccessToken. |
-| 202 | Permission verification failed, application which is not a system application uses system API. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed, usually the result returned by VerifyAccessToken. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed, application which is not a system application uses system API. |
 | 13900030 | File name too long |
 | 13900024 | File too large |
 | 13900025 | No space left on device |
@@ -2254,7 +2255,7 @@ try {
 openFile(uri: string, flags: OPENFLAGS) : Promise<number>
 ```
 
-以异步方法打开文件，返回文件描述符。使用Promise异步回调。
+Opens a file. This API uses a promise to return the result.
 
 **Since:** 9
 
@@ -2352,7 +2353,7 @@ async function openFile01() {
 openFile(uri: string, flags: OPENFLAGS, callback: AsyncCallback<number>): void
 ```
 
-以异步方法打开文件，返回文件描述符。使用callback异步回调。
+Opens a file. This API uses an asynchronous callback to return the result.
 
 **Since:** 9
 
@@ -2448,7 +2449,7 @@ try {
 query(uri: string, metaJson: string) : Promise<string>
 ```
 
-通过uri查询文件或目录的相关信息，使用Promise异步回调。
+Queries the attribute information about a file or directory based on a URI. This API uses a promise to return the result.
 
 **Since:** 10
 
@@ -2470,14 +2471,14 @@ query(uri: string, metaJson: string) : Promise<string>
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| uri | string | Yes | 所选文件或目录的uri（从[FileInfo](arkts-corefile-fileaccess-fileinfo-i-sys.md)中获取）。 |
-| metaJson | string | Yes | json字符串，包含查询属性[FILEKEY](arkts-corefile-fileaccess-filekey-e-sys.md) 。 |
+| uri | string | Yes | File or directory URI obtained from [FileInfo](arkts-corefile-fileaccess-fileinfo-i-sys.md). |
+| metaJson | string | Yes | Attribute [FILEKEY](arkts-corefile-fileaccess-filekey-e-sys.md) to query. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;string&gt; | 返回json字符串，包括查询属性和值。 |
+| Promise&lt;string&gt; | Promise used to return a JSON string that contains the file attribute and the value obtained. |
 
 ## Examples
 
@@ -2507,7 +2508,7 @@ async function getQuery01() {
 query(uri: string, metaJson: string, callback: AsyncCallback<string>) : void
 ```
 
-通过uri查询文件或目录的相关信息，使用callback异步回调。
+Queries the attribute information about a file or directory based on a URI. This API uses an asynchronous callback to return the result.
 
 **Since:** 10
 
@@ -2529,9 +2530,9 @@ query(uri: string, metaJson: string, callback: AsyncCallback<string>) : void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| uri | string | Yes | 所选文件或目录的uri（从[FileInfo](arkts-corefile-fileaccess-fileinfo-i-sys.md)中获取）。 |
-| metaJson | string | Yes | json字符串，包含查询属性[FILEKEY](arkts-corefile-fileaccess-filekey-e-sys.md)。 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;string&gt; | Yes | 返回json字符串，包括查询属性和值。 |
+| uri | string | Yes | File or directory URI obtained from [FileInfo](arkts-corefile-fileaccess-fileinfo-i-sys.md). |
+| metaJson | string | Yes | Attribute [FILEKEY](arkts-corefile-fileaccess-filekey-e-sys.md) to query. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;string&gt; | Yes | Callback used to return a JSON string that contains the file attribute and the value obtained. |
 
 ## Examples
 
@@ -2566,7 +2567,7 @@ async function getQuery02() {
 registerObserver(uri: string, notifyForDescendants: boolean, callback: Callback<NotifyMessage>): void
 ```
 
-注册指定uri的callback。uri与callback可以为多对多的关系，推荐使用一个callback监听一个uri。
+Registers a callback to listen for a URI. URIs and callbacks can be in many-to-many relationships. You are advised to use one callback to listen for one URI.
 
 **Since:** 10
 
@@ -2588,9 +2589,9 @@ registerObserver(uri: string, notifyForDescendants: boolean, callback: Callback<
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| uri | string | Yes | 文件或目录的uri。 |
-| notifyForDescendants | boolean | Yes | 监听目录时，是否监听子文件变化。true为监听；false为不监听。 |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;NotifyMessage&gt; | Yes | 返回通知信息。 |
+| uri | string | Yes | URI of the file or directory. |
+| notifyForDescendants | boolean | Yes | Whether to observe changes of the files in the directory. The value **true** means to observe changes of the files in the directory; the value **false** means the opposite. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;NotifyMessage&gt; | Yes | Callback invoked to return the notification. |
 
 **Error codes:**
 
@@ -2604,7 +2605,7 @@ registerObserver(uri: string, notifyForDescendants: boolean, callback: Callback<
 rename(uri: string, displayName: string) : Promise<string>
 ```
 
-以异步方法重命名文件(夹)，返回重命名后的文件(夹)的Uri。使用Promise异步回调。
+Renames a file or directory. This API uses a promise to return the result.
 
 **Since:** 9
 
@@ -2703,7 +2704,7 @@ async function renameFile01() {
 rename(uri: string, displayName: string, callback: AsyncCallback<string>): void
 ```
 
-以异步方法重命名文件(夹)，返回重命名后的文件(夹)的Uri。使用callback异步回调。
+Renames a file or directory. This API uses an asynchronous callback to return the result.
 
 **Since:** 9
 
@@ -2799,7 +2800,7 @@ try {
 unregisterObserver(uri: string, callback?: Callback<NotifyMessage>): void
 ```
 
-取消注册指定的uri和callback。
+Unregisters a callback that is used to listen for the specified URI.
 
 **Since:** 10
 
@@ -2819,8 +2820,8 @@ unregisterObserver(uri: string, callback?: Callback<NotifyMessage>): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| uri | string | Yes | 文件或目录的uri。 |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;NotifyMessage&gt; | No | 解注册uri下对应的callback。如果该参数不填，则解注册对应的所有callbackback。 |
+| uri | string | Yes | URI of the file or directory. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;NotifyMessage&gt; | No | Callback to unregister. If this parameter is not specified, all callbacks of the specified URI will be unregistered. |
 
 **Error codes:**
 

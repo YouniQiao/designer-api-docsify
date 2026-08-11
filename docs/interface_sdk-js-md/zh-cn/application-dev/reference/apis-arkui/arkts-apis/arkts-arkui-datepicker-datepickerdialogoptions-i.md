@@ -421,7 +421,7 @@ lunarSwitchStyle?: LunarSwitchStyle
 
 默认值：{ selectedColor: `\$r('sys.color.ohos_id_color_text_primary_actived')`, unselectedColor: `\$r('sys.color.ohos_id_color_switch_outline_off')`, strokeColor: Color.White }
 
-**类型：** [LunarSwitchStyle](../arkts-components/arkts-arkui-lunarswitchstyle-i.md)
+**类型：** [LunarSwitchStyle](arkts-arkui-datepicker-lunarswitchstyle-i.md)
 
 **默认值：** { selectedColor: $r('sys.color.ohos_id_color_text_primary_actived'), <br>unselectedColor: $r('sys.color.ohos_id_color_switch_outline_off'), strokeColor: Color.White }.
 
@@ -469,7 +469,7 @@ offset?: Offset
 
 默认值：{ dx: 0 , dy: 0 }
 
-**类型：** [Offset](arkts-arkui-componentutils-offset-i.md)
+**类型：** [Offset](arkts-arkui-units-offset-i.md)
 
 **默认值：** { dx: 0 , dy: 0 }
 

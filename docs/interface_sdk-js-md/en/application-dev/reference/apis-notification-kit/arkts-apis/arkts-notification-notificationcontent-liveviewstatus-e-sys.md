@@ -1,6 +1,6 @@
 # LiveViewStatus (System API)
 
-描述普通实况通知的状态。
+Enumerates the statuses of the common live view.
 
 **Since:** 11
 
@@ -18,7 +18,7 @@
 LIVE_VIEW_CREATE = 0
 ```
 
-创建
+The live view is created.
 
 **Since:** 11
 
@@ -36,7 +36,7 @@ LIVE_VIEW_CREATE = 0
 LIVE_VIEW_INCREMENTAL_UPDATE = 1
 ```
 
-增量更新
+The live view is updated in incremental mode.
 
 **Since:** 11
 
@@ -54,7 +54,7 @@ LIVE_VIEW_INCREMENTAL_UPDATE = 1
 LIVE_VIEW_END = 2
 ```
 
-结束
+The live view is ended.
 
 **Since:** 11
 
@@ -72,7 +72,7 @@ LIVE_VIEW_END = 2
 LIVE_VIEW_FULL_UPDATE = 3
 ```
 
-全量更新
+The live view is updated in full mode.
 
 **Since:** 11
 
@@ -90,7 +90,7 @@ LIVE_VIEW_FULL_UPDATE = 3
 LIVE_VIEW_PENDING_CREATE = 4
 ```
 
-条件触发创建
+The live view is created by condition.
 
 **Since:** 23
 
@@ -110,7 +110,7 @@ LIVE_VIEW_PENDING_CREATE = 4
 LIVE_VIEW_PENDING_END = 6
 ```
 
-条件触发结束
+The live view is terminated by condition.
 
 **Since:** 23
 

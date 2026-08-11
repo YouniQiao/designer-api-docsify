@@ -1,11 +1,5 @@
 # resetProcessPriority
 
-## 导入模块
-
-```TypeScript
-import { backgroundProcessManager } from 'kits/@kit.BackgroundTasksKit';
-```
-
 ## resetProcessPriority
 
 ```TypeScript

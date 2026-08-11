@@ -35,7 +35,7 @@ default attributeModifier(
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| modifier | [AttributeModifier](../arkts-components/arkts-arkui-attributemodifier-i.md)&lt;[CheckboxGroupAttribute](arkts-arkui-checkboxgroup-checkboxgroupattribute-i.md)&gt; \| AttributeModifier&lt;CommonMethod&gt; \| undefined | 是 | CheckboxGroup的属性修饰器。&lt;br/&gt;CheckboxGroupAttribute：当前组件的[属性](../arkts-components/arkts-arkui-checkboxgroup-attribute.md/arkts-arkui-checkboxgroup-attribute.md)&lt;br/&gt;CommonMethod： [通用属性](../../apis-ability-kit/arkts-apis/arkts-app-ability-common.md/arkts-app-ability-common.md) |
+| modifier | [AttributeModifier](../arkts-components/arkts-arkui-attributemodifier-i.md)&lt;CheckboxGroupAttribute&gt; \| AttributeModifier&lt;CommonMethod&gt; \| undefined | 是 | CheckboxGroup的属性修饰器。&lt;br/&gt;CheckboxGroupAttribute：当前组件的[属性](../arkts-components/arkts-arkui-checkboxgroup-attribute.md/arkts-arkui-checkboxgroup-attribute.md)&lt;br/&gt;CommonMethod： [通用属性](../../apis-ability-kit/arkts-apis/arkts-app-ability-common.md/arkts-app-ability-common.md) |
 
 **返回值：**
 

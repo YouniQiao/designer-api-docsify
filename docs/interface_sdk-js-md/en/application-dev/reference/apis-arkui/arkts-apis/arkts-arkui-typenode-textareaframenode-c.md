@@ -1,6 +1,6 @@
 # TextAreaFrameNode
 
-定义TextArea类型的FrameNode。
+Define the TextArea type of FrameNode.
 
 **Inheritance/Implementation:** TextAreaFrameNode extends [TypedFrameNode<TextAreaAttribute>](TypedFrameNode<TextAreaAttribute>)
 
@@ -18,7 +18,7 @@
 abstract initialize(value?: TextAreaOptions): TextAreaAttribute
 ```
 
-初始化TextArea类型的FrameNode。
+Initialize TextArea FrameNode.
 
 **Since:** 23
 

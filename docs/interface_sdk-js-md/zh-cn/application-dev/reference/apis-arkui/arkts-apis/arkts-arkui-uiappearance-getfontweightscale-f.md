@@ -1,11 +1,5 @@
 # getFontWeightScale
 
-## 导入模块
-
-```TypeScript
-import { uiAppearance } from 'kits/@kit.ArkUI';
-```
-
 ## getFontWeightScale
 
 ```TypeScript
@@ -32,5 +26,5 @@ Acquire the current font-weight-scale.
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 500001 | Internal error. |
+| [500001](../errorcode-uiappearance.md#500001-内部错误) | Internal error. |
 

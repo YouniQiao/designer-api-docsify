@@ -1,6 +1,6 @@
 # Sort
 
-表示查询到的列表数据排序类型的枚举。
+Enumeration of Sort type.
 
 **Since:** 23
 
@@ -16,7 +16,7 @@
 NONE = 0
 ```
 
-默认值，默认正序。
+NONE.
 
 **Since:** 23
 
@@ -34,7 +34,7 @@ NONE = 0
 ORDER = 1
 ```
 
-正序。
+ORDER.
 
 **Since:** 23
 
@@ -52,7 +52,7 @@ ORDER = 1
 REVERSE_ORDER = 2
 ```
 
-倒序。
+REVERSE_ORDER.
 
 **Since:** 23
 

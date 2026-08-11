@@ -1,12 +1,6 @@
 # PromptAction
 
-创建并显示即时反馈、对话框、操作菜单以及自定义弹窗。  
-> **说明：**
-> 
-> - 本Class首批接口从API version 10开始支持。
-> 
-> - 以下API需先使用UIContext中的[getPromptAction()](arkts-arkui-arkui-uicontext-uicontext-c.md#getpromptaction)方法获取到PromptAction对
-> 象，再通过该对象调用对应方法。
+class PromptAction
 
 **Since:** 23
 
@@ -28,7 +22,7 @@ import { OverlayManager, FrameCallback, ResolvedUIContext, NodeRenderStateChange
 closeCustomDialog<T extends Object>(dialogContent: ComponentContent<T>): Promise<void>
 ```
 
-关闭已弹出的dialogContent对应的自定义弹窗，使用Promise异步回调。
+Close the custom dialog with frameNode.
 
 **Since:** 23
 
@@ -44,21 +38,21 @@ closeCustomDialog<T extends Object>(dialogContent: ComponentContent<T>): Promise
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| dialogContent | [ComponentContent](../arkts-components/arkts-arkui-componentcontent-t.md)&lt;T&gt; | Yes | 自定义弹窗中显示的组件内容。 |
+| dialogContent | [ComponentContent](../arkts-components/arkts-arkui-componentcontent-t.md)&lt;T&gt; | Yes | the content of custom dialog. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise对象，无返回结果。 |
+| Promise&lt;void&gt; | the promise returned by the function. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. Possible causes: &lt;br&gt; 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameters types. &lt;br&gt; 3. Parameter verification failed. |
-| 103301 | The ComponentContent is incorrect. |
-| 103303 | The ComponentContent cannot be found. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: &lt;br&gt; 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameters types. &lt;br&gt; 3. Parameter verification failed. |
+| [103301](../errorcode-promptAction.md#103301-dialog-content-error) | The ComponentContent is incorrect. |
+| [103303](../errorcode-promptAction.md#103303-custom-dialog-box-not-found) | The ComponentContent cannot be found. |
 
 ## closeCustomDialog
 
@@ -66,7 +60,7 @@ closeCustomDialog<T extends Object>(dialogContent: ComponentContent<T>): Promise
 closeCustomDialog(dialogId: int): void
 ```
 
-关闭自定义弹窗。
+Close the custom dialog.
 
 **Since:** 23
 
@@ -82,14 +76,14 @@ closeCustomDialog(dialogId: int): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| dialogId | int | Yes | openCustomDialog返回的对话框id。 |
+| dialogId | int | Yes | the dialog id that returned by openCustomDialog. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 100001 | Internal error. |
-| 401 | Parameter error. Possible causes: &lt;br&gt; 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameters types. &lt;br&gt; 3. Parameter verification failed. |
+| [100001](../errorcode-internal.md#100001-internal-error) | Internal error. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: &lt;br&gt; 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameters types. &lt;br&gt; 3. Parameter verification failed. |
 
 ## closeMenu
 
@@ -97,7 +91,7 @@ closeCustomDialog(dialogId: int): void
 closeMenu<T extends Object>(content: ComponentContent<T>): Promise<void>
 ```
 
-关闭content对应的Menu弹窗。使用Promise异步回调。
+Close menu with frameNode.
 
 **Since:** 23
 
@@ -113,21 +107,21 @@ closeMenu<T extends Object>(content: ComponentContent<T>): Promise<void>
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| content | [ComponentContent](../arkts-components/arkts-arkui-componentcontent-t.md)&lt;T&gt; | Yes | menu弹窗中显示的组件内容。 |
+| content | [ComponentContent](../arkts-components/arkts-arkui-componentcontent-t.md)&lt;T&gt; | Yes | The content of menu. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise对象，无返回结果。 |
+| Promise&lt;void&gt; | the promise returned by the function. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. Possible causes: &lt;br&gt; 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameters types. &lt;br&gt; 3. Parameter verification failed. |
-| 103301 | The ComponentContent is incorrect. |
-| 103303 | The ComponentContent cannot be found. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: &lt;br&gt; 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameters types. &lt;br&gt; 3. Parameter verification failed. |
+| [103301](../errorcode-promptAction.md#103301-dialog-content-error) | The ComponentContent is incorrect. |
+| [103303](../errorcode-promptAction.md#103303-custom-dialog-box-not-found) | The ComponentContent cannot be found. |
 
 ## closePopup
 
@@ -135,7 +129,7 @@ closeMenu<T extends Object>(content: ComponentContent<T>): Promise<void>
 closePopup<T extends Object>(content: ComponentContent<T>): Promise<void>
 ```
 
-关闭content对应的Popup弹窗，使用Promise异步回调。
+Close popup with frameNode.
 
 **Since:** 23
 
@@ -151,21 +145,21 @@ closePopup<T extends Object>(content: ComponentContent<T>): Promise<void>
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| content | [ComponentContent](../arkts-components/arkts-arkui-componentcontent-t.md)&lt;T&gt; | Yes | popup弹窗中显示的组件内容。 |
+| content | [ComponentContent](../arkts-components/arkts-arkui-componentcontent-t.md)&lt;T&gt; | Yes | The content of popup. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise对象，无返回结果。 |
+| Promise&lt;void&gt; | the promise returned by the function. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. Possible causes: &lt;br&gt; 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameters types. &lt;br&gt; 3. Parameter verification failed. |
-| 103301 | The ComponentContent is incorrect. |
-| 103303 | The ComponentContent cannot be found. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: &lt;br&gt; 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameters types. &lt;br&gt; 3. Parameter verification failed. |
+| [103301](../errorcode-promptAction.md#103301-dialog-content-error) | The ComponentContent is incorrect. |
+| [103303](../errorcode-promptAction.md#103303-custom-dialog-box-not-found) | The ComponentContent cannot be found. |
 
 ## closeToast
 
@@ -173,7 +167,7 @@ closePopup<T extends Object>(content: ComponentContent<T>): Promise<void>
 closeToast(toastId: int): void
 ```
 
-关闭即时反馈。
+Close the notification text.
 
 **Since:** 23
 
@@ -189,15 +183,15 @@ closeToast(toastId: int): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| toastId | int | Yes | openToast返回的id。 |
+| toastId | int | Yes | the toast id that returned by openToast. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 100001 | Internal error. |
-| 401 | Parameter error. Possible causes: &lt;br&gt; 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameters types. &lt;br&gt; 3. Parameter verification failed. |
-| 103401 | Cannot find the toast. |
+| [100001](../errorcode-internal.md#100001-internal-error) | Internal error. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: &lt;br&gt; 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameters types. &lt;br&gt; 3. Parameter verification failed. |
+| [103401](../errorcode-promptAction.md#103401-toast-not-found) | Cannot find the toast. |
 
 ## getBottomOrder
 
@@ -205,7 +199,7 @@ closeToast(toastId: int): void
 getBottomOrder(): LevelOrder | undefined
 ```
 
-获取最底层显示的弹窗的顺序，可以在下一个弹窗时指定期望的顺序。
+Get order value of bottom dialog.
 
 **Since:** 23
 
@@ -221,7 +215,7 @@ getBottomOrder(): LevelOrder | undefined
 
 | Type | Description |
 | --- | --- |
-| [LevelOrder](arkts-arkui-promptaction-levelorder-c.md) | 返回弹窗层级信息。 |
+| [LevelOrder](arkts-arkui-promptaction-levelorder-c.md) | the display order, or undefined if there is no dialog. |
 
 ## getTopOrder
 
@@ -229,7 +223,7 @@ getBottomOrder(): LevelOrder | undefined
 getTopOrder(): LevelOrder | undefined
 ```
 
-返回最顶层显示的弹窗的顺序。获取最顶层显示的弹窗的顺序，可以在下一个弹窗时指定期望的顺序。
+Get order value of top dialog.
 
 **Since:** 23
 
@@ -245,15 +239,16 @@ getTopOrder(): LevelOrder | undefined
 
 | Type | Description |
 | --- | --- |
-| [LevelOrder](arkts-arkui-promptaction-levelorder-c.md) | 返回弹窗层级信息。 |
+| [LevelOrder](arkts-arkui-promptaction-levelorder-c.md) | the display order, or undefined if there is no dialog. |
 
 ## openCustomDialog
 
 ```TypeScript
-openCustomDialog<T extends Object>(dialogContent: ComponentContent<T>, options?: promptAction.BaseDialogOptions): Promise<void>
+openCustomDialog<T extends Object>(dialogContent: ComponentContent<T>,
+    options?: promptAction.BaseDialogOptions): Promise<void>
 ```
 
-创建并弹出dialogContent对应的自定义弹窗，使用Promise异步回调。通过该接口弹出的弹窗内容样式完全按照dialogContent中设置的样式显示，即相当于customDialog设置customStyle为true时的显示效果。
+Open the custom dialog with frameNode.
 
 **Since:** 23
 
@@ -261,7 +256,7 @@ openCustomDialog<T extends Object>(dialogContent: ComponentContent<T>, options?:
 
 **Model restriction:** This API can be used only in the stage model.
 
-<!--Device-PromptAction-openCustomDialog<T extends Object>(dialogContent: ComponentContent<T>, options?: promptAction.BaseDialogOptions): Promise<void>--><!--Device-PromptAction-openCustomDialog<T extends Object>(dialogContent: ComponentContent<T>, options?: promptAction.BaseDialogOptions): Promise<void>-End-->
+<!--Device-PromptAction-openCustomDialog<T extends Object>(dialogContent: ComponentContent<T>,    options?: promptAction.BaseDialogOptions): Promise<void>--><!--Device-PromptAction-openCustomDialog<T extends Object>(dialogContent: ComponentContent<T>,    options?: promptAction.BaseDialogOptions): Promise<void>-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -269,22 +264,22 @@ openCustomDialog<T extends Object>(dialogContent: ComponentContent<T>, options?:
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| dialogContent | [ComponentContent](../arkts-components/arkts-arkui-componentcontent-t.md)&lt;T&gt; | Yes | 自定义弹窗中显示的组件内容。 |
-| options | promptAction.BaseDialogOptions | No | 弹窗样式。 |
+| dialogContent | [ComponentContent](../arkts-components/arkts-arkui-componentcontent-t.md)&lt;T&gt; | Yes | the content of custom dialog. |
+| options | promptAction.BaseDialogOptions | No | Options. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise对象，无返回结果。 |
+| Promise&lt;void&gt; | the promise returned by the function. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. Possible causes: &lt;br&gt; 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameters types. &lt;br&gt; 3. Parameter verification failed. |
-| 103301 | The ComponentContent is incorrect. |
-| 103302 | Dialog content already exists. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: &lt;br&gt; 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameters types. &lt;br&gt; 3. Parameter verification failed. |
+| [103301](../errorcode-promptAction.md#103301-dialog-content-error) | The ComponentContent is incorrect. |
+| [103302](../errorcode-promptAction.md#103302-custom-dialog-box-already-exists) | Dialog content already exists. |
 
 ## openCustomDialog
 
@@ -292,7 +287,7 @@ openCustomDialog<T extends Object>(dialogContent: ComponentContent<T>, options?:
 openCustomDialog(options: promptAction.CustomDialogOptions): Promise<int>
 ```
 
-打开自定义对话框。
+Open the custom dialog.
 
 **Since:** 23
 
@@ -308,29 +303,30 @@ openCustomDialog(options: promptAction.CustomDialogOptions): Promise<int>
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| options | promptAction.CustomDialogOptions | Yes | 自定义弹窗的内容。 &lt;br&gt;**说明：** 如果BaseDialogOptions中的[isModal](../../../reference/apis-arkui/js-apis-promptAction.md#basedialogoptions11) 与[showInSubWindow](../../../reference/apis-arkui/js-apis-promptAction.md#basedialogoptions11)同时设置为true， 则只生效showInSubWindow = true，此时为非模态弹出框且不会显示蒙层，并在子窗口中显示。 |
+| options | promptAction.CustomDialogOptions | Yes | Options. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;int&gt; | Promise对象。返回对话框id，可供closeCustomDialog使用。 |
+| Promise&lt;int&gt; | return the dialog id that will be used by closeCustomDialog. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 100001 | Internal error. |
-| 401 | Parameter error. Possible causes: &lt;br&gt; 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameters types. &lt;br&gt; 3. Parameter verification failed. |
+| [100001](../errorcode-internal.md#100001-internal-error) | Internal error. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: &lt;br&gt; 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameters types. &lt;br&gt; 3. Parameter verification failed. |
 
 ## openCustomDialogWithController
 
 ```TypeScript
-openCustomDialogWithController<T extends Object>(dialogContent: ComponentContent<T>, controller: promptAction.DialogController,
+openCustomDialogWithController<T extends Object>(dialogContent: ComponentContent<T>,
+    controller: promptAction.DialogController,
     options?: promptAction.BaseDialogOptions): Promise<void>
 ```
 
-创建并弹出dialogContent对应的自定义弹窗，使用Promise异步回调。支持传入弹窗控制器与自定义弹窗绑定，后续可以通过控制器控制自定义弹窗。通过该接口弹出的弹窗内容样式完全按照dialogContent中设置的样式显示，即相当于customDialog设置customStyle为true时的显示效果。
+Open the custom dialog with frameNode and controller.
 
 **Since:** 23
 
@@ -338,7 +334,7 @@ openCustomDialogWithController<T extends Object>(dialogContent: ComponentContent
 
 **Model restriction:** This API can be used only in the stage model.
 
-<!--Device-PromptAction-openCustomDialogWithController<T extends Object>(dialogContent: ComponentContent<T>, controller: promptAction.DialogController,    options?: promptAction.BaseDialogOptions): Promise<void>--><!--Device-PromptAction-openCustomDialogWithController<T extends Object>(dialogContent: ComponentContent<T>, controller: promptAction.DialogController,    options?: promptAction.BaseDialogOptions): Promise<void>-End-->
+<!--Device-PromptAction-openCustomDialogWithController<T extends Object>(dialogContent: ComponentContent<T>,    controller: promptAction.DialogController,    options?: promptAction.BaseDialogOptions): Promise<void>--><!--Device-PromptAction-openCustomDialogWithController<T extends Object>(dialogContent: ComponentContent<T>,    controller: promptAction.DialogController,    options?: promptAction.BaseDialogOptions): Promise<void>-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -346,23 +342,23 @@ openCustomDialogWithController<T extends Object>(dialogContent: ComponentContent
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| dialogContent | [ComponentContent](../arkts-components/arkts-arkui-componentcontent-t.md)&lt;T&gt; | Yes | 自定义弹窗中显示的组件内容。 |
-| controller | promptAction.DialogController | Yes | 自定义弹窗的控制器。 |
-| options | promptAction.BaseDialogOptions | No | 自定义弹窗的样式。 |
+| dialogContent | [ComponentContent](../arkts-components/arkts-arkui-componentcontent-t.md)&lt;T&gt; | Yes | the content of custom dialog. |
+| controller | promptAction.DialogController | Yes | Dialog controller. |
+| options | promptAction.BaseDialogOptions | No | Options. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise对象，无返回结果。 |
+| Promise&lt;void&gt; | the promise returned by the function. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. Possible causes: &lt;br&gt; 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameters types. &lt;br&gt; 3. Parameter verification failed. |
-| 103301 | The ComponentContent is incorrect. |
-| 103302 | Dialog content already exists. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: &lt;br&gt; 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameters types. &lt;br&gt; 3. Parameter verification failed. |
+| [103301](../errorcode-promptAction.md#103301-dialog-content-error) | The ComponentContent is incorrect. |
+| [103302](../errorcode-promptAction.md#103302-custom-dialog-box-already-exists) | Dialog content already exists. |
 
 ## openMenu
 
@@ -370,21 +366,7 @@ openCustomDialogWithController<T extends Object>(dialogContent: ComponentContent
 openMenu<T extends Object>(content: ComponentContent<T>, target: TargetInfo, options?: MenuOptions): Promise<void>
 ```
 
-创建并弹出以content作为内容的Menu弹窗。使用Promise异步回调。  
-> **说明：**
-> 
-> - 使用该接口时，若未传入有效的target，则无法弹出menu弹窗。
-> 
-> - 由于[updateMenu](../../../reference/apis-arkui/arkts-apis-uicontext-promptaction copy.md#updatemenu18)和
-> [closeMenu](../../../reference/apis-arkui/arkts-apis-uicontext-promptaction copy.md#closemenu18)依赖content去更新或者关闭指定
-> 的menu弹窗，开发者需自行维护传入的content。
-> 
-> - 如果在wrapBuilder中包含其他组件（例如：[Popup](arkts-arkui-advanced-popup.md)、[Chip](arkts-arkui-advanced-chip.md)组件），则
-> [ComponentContent](arkts-arkui-componentcontent-c.md)应采用带有四个参数的构造函数constructor，其中options参数应传递{
-> nestingBuilderSupported: true }。
-> 
-> - 子窗弹窗里不能再弹出子窗弹窗，例如[openMenu](../../../reference/apis-arkui/arkts-apis-uicontext-promptaction copy.md#openmenu18)设
-> 置了showInSubWindow为true时，则不能再弹出另一个设置了showInSubWindow为true的弹窗。
+Open menu with frameNode.
 
 **Since:** 23
 
@@ -400,33 +382,34 @@ openMenu<T extends Object>(content: ComponentContent<T>, target: TargetInfo, opt
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| content | [ComponentContent](../arkts-components/arkts-arkui-componentcontent-t.md)&lt;T&gt; | Yes | menu弹窗中显示的组件内容。 |
-| target | [TargetInfo](arkts-arkui-arkui-uicontext-targetinfo-i.md) | Yes | 需要绑定组件的信息。 |
-| options | [MenuOptions](../arkts-components/arkts-arkui-menuoptions-i.md) | No | menu弹窗样式。&lt;br/&gt;**说明：**&lt;br/&gt;title属性不生效。&lt;br/&gt;preview参数仅支持设置MenuPreviewMode类型。 |
+| content | [ComponentContent](../arkts-components/arkts-arkui-componentcontent-t.md)&lt;T&gt; | Yes | The content of menu. |
+| target | [TargetInfo](arkts-arkui-arkui-uicontext-targetinfo-i.md) | Yes | The target of menu. |
+| options | [MenuOptions](../arkts-components/arkts-arkui-menuoptions-i.md) | No | Options. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise对象，无返回结果。 |
+| Promise&lt;void&gt; | the promise returned by the function. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. Possible causes: &lt;br&gt; 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameters types. &lt;br&gt; 3. Parameter verification failed. |
-| 103301 | The content is incorrect. |
-| 103302 | The content already exists. |
-| 103305 | The target node is not in the component tree. |
-| 103304 | The target does not exist. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: &lt;br&gt; 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameters types. &lt;br&gt; 3. Parameter verification failed. |
+| [103301](../errorcode-promptAction.md#103301-dialog-content-error) | The content is incorrect. |
+| [103302](../errorcode-promptAction.md#103302-custom-dialog-box-already-exists) | The content already exists. |
+| [103305](../errorcode-promptAction.md#103305-node-not-mounted) | The target node is not in the component tree. |
+| [103304](../errorcode-promptAction.md#103304-target-id-not-found) | The target does not exist. |
 
 ## openPopup
 
 ```TypeScript
-openPopup<T extends Object>(content: ComponentContent<T>, target: TargetInfo, options?: PopupCommonOptions): Promise<void>
+openPopup<T extends Object>(content: ComponentContent<T>, target: TargetInfo,
+    options?: PopupCommonOptions): Promise<void>
 ```
 
-创建并弹出以content作为内容的Popup弹窗，使用Promise异步回调。
+Open popup with frameNode.
 
 **Since:** 23
 
@@ -434,7 +417,7 @@ openPopup<T extends Object>(content: ComponentContent<T>, target: TargetInfo, op
 
 **Model restriction:** This API can be used only in the stage model.
 
-<!--Device-PromptAction-openPopup<T extends Object>(content: ComponentContent<T>, target: TargetInfo, options?: PopupCommonOptions): Promise<void>--><!--Device-PromptAction-openPopup<T extends Object>(content: ComponentContent<T>, target: TargetInfo, options?: PopupCommonOptions): Promise<void>-End-->
+<!--Device-PromptAction-openPopup<T extends Object>(content: ComponentContent<T>, target: TargetInfo,    options?: PopupCommonOptions): Promise<void>--><!--Device-PromptAction-openPopup<T extends Object>(content: ComponentContent<T>, target: TargetInfo,    options?: PopupCommonOptions): Promise<void>-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -442,25 +425,25 @@ openPopup<T extends Object>(content: ComponentContent<T>, target: TargetInfo, op
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| content | [ComponentContent](../arkts-components/arkts-arkui-componentcontent-t.md)&lt;T&gt; | Yes | popup弹窗中显示的组件内容。 |
-| target | [TargetInfo](arkts-arkui-arkui-uicontext-targetinfo-i.md) | Yes | 需要绑定组件的信息。 |
-| options | [PopupCommonOptions](../arkts-components/arkts-arkui-popupcommonoptions-i.md) | No | popup弹窗样式。 |
+| content | [ComponentContent](../arkts-components/arkts-arkui-componentcontent-t.md)&lt;T&gt; | Yes | The content of popup. |
+| target | [TargetInfo](arkts-arkui-arkui-uicontext-targetinfo-i.md) | Yes | The target of popup. |
+| options | [PopupCommonOptions](../arkts-components/arkts-arkui-popupcommonoptions-i.md) | No | Options. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise对象，无返回结果。 |
+| Promise&lt;void&gt; | the promise returned by the function. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. Possible causes: &lt;br&gt; 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameters types. &lt;br&gt; 3. Parameter verification failed. |
-| 103301 | The content is incorrect. |
-| 103302 | The content already exists. |
-| 103305 | The target node is not in the component tree. |
-| 103304 | The target does not exist. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: &lt;br&gt; 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameters types. &lt;br&gt; 3. Parameter verification failed. |
+| [103301](../errorcode-promptAction.md#103301-dialog-content-error) | The content is incorrect. |
+| [103302](../errorcode-promptAction.md#103302-custom-dialog-box-already-exists) | The content already exists. |
+| [103305](../errorcode-promptAction.md#103305-node-not-mounted) | The target node is not in the component tree. |
+| [103304](../errorcode-promptAction.md#103304-target-id-not-found) | The target does not exist. |
 
 ## openToast
 
@@ -468,7 +451,7 @@ openPopup<T extends Object>(content: ComponentContent<T>, target: TargetInfo, op
 openToast(options: promptAction.ShowToastOptions): Promise<int>
 ```
 
-显示即时反馈。使用Promise异步回调返回即时反馈的id，可供closeToast使用。
+Displays the notification text.
 
 **Since:** 23
 
@@ -484,28 +467,29 @@ openToast(options: promptAction.ShowToastOptions): Promise<int>
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| options | promptAction.ShowToastOptions | Yes | Toast选项。 |
+| options | promptAction.ShowToastOptions | Yes | Options. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;int&gt; | Promise对象。返回即时反馈的id，可供closeToast使用。 |
+| Promise&lt;int&gt; | return the toast id that can be used by closeToast. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 100001 | Internal error. |
-| 401 | Parameter error. Possible causes: &lt;br&gt; 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameters types. &lt;br&gt; 3. Parameter verification failed. |
+| [100001](../errorcode-internal.md#100001-internal-error) | Internal error. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: &lt;br&gt; 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameters types. &lt;br&gt; 3. Parameter verification failed. |
 
 ## presentCustomDialog
 
 ```TypeScript
-presentCustomDialog(builder: CustomBuilder | CustomBuilderT<int>, controller?: promptAction.DialogController, options?: promptAction.DialogOptions): Promise<int>
+presentCustomDialog(builder: CustomBuilder | CustomBuilderT<int>, controller?: promptAction.DialogController,
+    options?: promptAction.DialogOptions): Promise<int>
 ```
 
-创建并弹出自定义弹窗。使用Promise异步回调返回对话框的id，可供closeCustomDialog使用。支持在自定义弹窗内容中持有弹窗ID进行对应操作。支持传入弹窗控制器与自定义弹窗绑定，后续可以通过控制器控制自定义弹窗。
+Present the custom dialog with controller.
 
 **Since:** 23
 
@@ -513,7 +497,7 @@ presentCustomDialog(builder: CustomBuilder | CustomBuilderT<int>, controller?: p
 
 **Model restriction:** This API can be used only in the stage model.
 
-<!--Device-PromptAction-presentCustomDialog(builder: CustomBuilder | CustomBuilderT<int>, controller?: promptAction.DialogController, options?: promptAction.DialogOptions): Promise<int>--><!--Device-PromptAction-presentCustomDialog(builder: CustomBuilder | CustomBuilderT<int>, controller?: promptAction.DialogController, options?: promptAction.DialogOptions): Promise<int>-End-->
+<!--Device-PromptAction-presentCustomDialog(builder: CustomBuilder | CustomBuilderT<int>, controller?: promptAction.DialogController,    options?: promptAction.DialogOptions): Promise<int>--><!--Device-PromptAction-presentCustomDialog(builder: CustomBuilder | CustomBuilderT<int>, controller?: promptAction.DialogController,    options?: promptAction.DialogOptions): Promise<int>-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -521,30 +505,31 @@ presentCustomDialog(builder: CustomBuilder | CustomBuilderT<int>, controller?: p
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| builder | [CustomBuilder](../arkts-components/arkts-arkui-custombuilder-t.md) \| CustomBuilderT&lt;int&gt; | Yes | 自定义弹窗的内容。 |
-| controller | promptAction.DialogController | No | 自定义弹窗的控制器。 |
-| options | promptAction.DialogOptions | No | 自定义弹窗的样式。 |
+| builder | [CustomBuilder](../arkts-components/arkts-arkui-custombuilder-t.md) \| CustomBuilderT&lt;int&gt; | Yes | Dialog builder. |
+| controller | promptAction.DialogController | No | Dialog controller. |
+| options | promptAction.DialogOptions | No | Options. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;int&gt; | Promise对象。返回自定义弹窗ID。 |
+| Promise&lt;int&gt; | return the dialog id that will be used by closeCustomDialog. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 100001 | Internal error. |
-| 401 | Parameter error. Possible causes: &lt;br&gt; 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameters types. &lt;br&gt; 3. Parameter verification failed. |
+| [100001](../errorcode-internal.md#100001-internal-error) | Internal error. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: &lt;br&gt; 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameters types. &lt;br&gt; 3. Parameter verification failed. |
 
 ## showActionMenu
 
 ```TypeScript
-showActionMenu(options: promptAction.ActionMenuOptions, callback: AsyncCallback<promptAction.ActionMenuSuccessResponse>): void
+showActionMenu(options: promptAction.ActionMenuOptions,
+    callback: AsyncCallback<promptAction.ActionMenuSuccessResponse>): void
 ```
 
-创建并显示操作菜单，菜单响应结果使用callback异步回调返回。
+Displays the menu.
 
 **Since:** 23
 
@@ -552,7 +537,7 @@ showActionMenu(options: promptAction.ActionMenuOptions, callback: AsyncCallback<
 
 **Model restriction:** This API can be used only in the stage model.
 
-<!--Device-PromptAction-showActionMenu(options: promptAction.ActionMenuOptions, callback: AsyncCallback<promptAction.ActionMenuSuccessResponse>): void--><!--Device-PromptAction-showActionMenu(options: promptAction.ActionMenuOptions, callback: AsyncCallback<promptAction.ActionMenuSuccessResponse>): void-End-->
+<!--Device-PromptAction-showActionMenu(options: promptAction.ActionMenuOptions,    callback: AsyncCallback<promptAction.ActionMenuSuccessResponse>): void--><!--Device-PromptAction-showActionMenu(options: promptAction.ActionMenuOptions,    callback: AsyncCallback<promptAction.ActionMenuSuccessResponse>): void-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -560,15 +545,15 @@ showActionMenu(options: promptAction.ActionMenuOptions, callback: AsyncCallback<
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| options | promptAction.ActionMenuOptions | Yes | 操作菜单选项。 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;promptAction.ActionMenuSuccessResponse&gt; | Yes | 回调函数。 弹出操作菜单成功，err为undefined，data为获取到的操作菜单响应结果，否则为错误对象。 |
+| options | promptAction.ActionMenuOptions | Yes | Options. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;promptAction.ActionMenuSuccessResponse&gt; | Yes | the callback of showActionMenu. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 100001 | Internal error. |
-| 401 | Parameter error. Possible causes: &lt;br&gt; 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameters types. &lt;br&gt; 3. Parameter verification failed. |
+| [100001](../errorcode-internal.md#100001-internal-error) | Internal error. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: &lt;br&gt; 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameters types. &lt;br&gt; 3. Parameter verification failed. |
 
 ## showActionMenu
 
@@ -576,7 +561,7 @@ showActionMenu(options: promptAction.ActionMenuOptions, callback: AsyncCallback<
 showActionMenu(options: promptAction.ActionMenuOptions): Promise<promptAction.ActionMenuSuccessResponse>
 ```
 
-显示操作菜单。
+Displays the menu.
 
 **Since:** 23
 
@@ -592,28 +577,29 @@ showActionMenu(options: promptAction.ActionMenuOptions): Promise<promptAction.Ac
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| options | promptAction.ActionMenuOptions | Yes | 操作菜单选项。 |
+| options | promptAction.ActionMenuOptions | Yes | Options. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;promptAction.ActionMenuSuccessResponse&gt; | Promise对象，返回菜单的响应结果。 |
+| Promise&lt;promptAction.ActionMenuSuccessResponse&gt; | callback - the callback of showActionMenu. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 100001 | Internal error. |
-| 401 | Parameter error. Possible causes: &lt;br&gt; 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameters types. &lt;br&gt; 3. Parameter verification failed. |
+| [100001](../errorcode-internal.md#100001-internal-error) | Internal error. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: &lt;br&gt; 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameters types. &lt;br&gt; 3. Parameter verification failed. |
 
 ## showDialog
 
 ```TypeScript
-showDialog(options: promptAction.ShowDialogOptions, callback: AsyncCallback<promptAction.ShowDialogSuccessResponse>): void
+showDialog(options: promptAction.ShowDialogOptions,
+    callback: AsyncCallback<promptAction.ShowDialogSuccessResponse>): void
 ```
 
-创建并显示对话框，对话框响应结果使用callback异步回调返回。
+Displays the dialog box.
 
 **Since:** 23
 
@@ -621,7 +607,7 @@ showDialog(options: promptAction.ShowDialogOptions, callback: AsyncCallback<prom
 
 **Model restriction:** This API can be used only in the stage model.
 
-<!--Device-PromptAction-showDialog(options: promptAction.ShowDialogOptions, callback: AsyncCallback<promptAction.ShowDialogSuccessResponse>): void--><!--Device-PromptAction-showDialog(options: promptAction.ShowDialogOptions, callback: AsyncCallback<promptAction.ShowDialogSuccessResponse>): void-End-->
+<!--Device-PromptAction-showDialog(options: promptAction.ShowDialogOptions,    callback: AsyncCallback<promptAction.ShowDialogSuccessResponse>): void--><!--Device-PromptAction-showDialog(options: promptAction.ShowDialogOptions,    callback: AsyncCallback<promptAction.ShowDialogSuccessResponse>): void-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -629,15 +615,15 @@ showDialog(options: promptAction.ShowDialogOptions, callback: AsyncCallback<prom
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| options | promptAction.ShowDialogOptions | Yes | 页面显示对话框信息描述。 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;promptAction.ShowDialogSuccessResponse&gt; | Yes | 回调函数。 弹出对话框成功，err为undefined，data为获取到的对话框响应结果，否则为错误对象。 |
+| options | promptAction.ShowDialogOptions | Yes | Options. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;promptAction.ShowDialogSuccessResponse&gt; | Yes | the callback of showDialog. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 100001 | Internal error. |
-| 401 | Parameter error. Possible causes: &lt;br&gt; 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameters types. &lt;br&gt; 3. Parameter verification failed. |
+| [100001](../errorcode-internal.md#100001-internal-error) | Internal error. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: &lt;br&gt; 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameters types. &lt;br&gt; 3. Parameter verification failed. |
 
 ## showDialog
 
@@ -645,7 +631,7 @@ showDialog(options: promptAction.ShowDialogOptions, callback: AsyncCallback<prom
 showDialog(options: promptAction.ShowDialogOptions): Promise<promptAction.ShowDialogSuccessResponse>
 ```
 
-弹出对话框。
+Displays the dialog box.
 
 **Since:** 23
 
@@ -661,20 +647,20 @@ showDialog(options: promptAction.ShowDialogOptions): Promise<promptAction.ShowDi
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| options | promptAction.ShowDialogOptions | Yes | 对话框选项。 |
+| options | promptAction.ShowDialogOptions | Yes | Options. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;promptAction.ShowDialogSuccessResponse&gt; | Promise对象，返回对话框的响应结果。 |
+| Promise&lt;promptAction.ShowDialogSuccessResponse&gt; | the promise returned by the function. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 100001 | Internal error. |
-| 401 | Parameter error. Possible causes: &lt;br&gt; 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameters types. &lt;br&gt; 3. Parameter verification failed. |
+| [100001](../errorcode-internal.md#100001-internal-error) | Internal error. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: &lt;br&gt; 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameters types. &lt;br&gt; 3. Parameter verification failed. |
 
 ## showToast
 
@@ -682,7 +668,7 @@ showDialog(options: promptAction.ShowDialogOptions): Promise<promptAction.ShowDi
 showToast(options: promptAction.ShowToastOptions): void
 ```
 
-创建并显示即时反馈。
+Displays the notification text.
 
 **Since:** 23
 
@@ -698,22 +684,23 @@ showToast(options: promptAction.ShowToastOptions): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| options | promptAction.ShowToastOptions | Yes | Toast选项。 |
+| options | promptAction.ShowToastOptions | Yes | Options. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 100001 | Internal error. |
-| 401 | Parameter error. Possible causes: &lt;br&gt; 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameters types. &lt;br&gt; 3. Parameter verification failed. |
+| [100001](../errorcode-internal.md#100001-internal-error) | Internal error. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: &lt;br&gt; 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameters types. &lt;br&gt; 3. Parameter verification failed. |
 
 ## updateCustomDialog
 
 ```TypeScript
-updateCustomDialog<T extends Object>(dialogContent: ComponentContent<T>, options: promptAction.BaseDialogOptions): Promise<void>
+updateCustomDialog<T extends Object>(dialogContent: ComponentContent<T>,
+    options: promptAction.BaseDialogOptions): Promise<void>
 ```
 
-更新已弹出的dialogContent对应的自定义弹窗的样式，使用Promise异步回调。
+Update the custom dialog with frameNode.
 
 **Since:** 23
 
@@ -721,7 +708,7 @@ updateCustomDialog<T extends Object>(dialogContent: ComponentContent<T>, options
 
 **Model restriction:** This API can be used only in the stage model.
 
-<!--Device-PromptAction-updateCustomDialog<T extends Object>(dialogContent: ComponentContent<T>, options: promptAction.BaseDialogOptions): Promise<void>--><!--Device-PromptAction-updateCustomDialog<T extends Object>(dialogContent: ComponentContent<T>, options: promptAction.BaseDialogOptions): Promise<void>-End-->
+<!--Device-PromptAction-updateCustomDialog<T extends Object>(dialogContent: ComponentContent<T>,    options: promptAction.BaseDialogOptions): Promise<void>--><!--Device-PromptAction-updateCustomDialog<T extends Object>(dialogContent: ComponentContent<T>,    options: promptAction.BaseDialogOptions): Promise<void>-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -729,30 +716,31 @@ updateCustomDialog<T extends Object>(dialogContent: ComponentContent<T>, options
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| dialogContent | [ComponentContent](../arkts-components/arkts-arkui-componentcontent-t.md)&lt;T&gt; | Yes | 自定义弹窗中显示的组件内容。 |
-| options | promptAction.BaseDialogOptions | Yes | 弹窗样式，目前仅支持更新alignment、offset、autoCancel、maskColor。 |
+| dialogContent | [ComponentContent](../arkts-components/arkts-arkui-componentcontent-t.md)&lt;T&gt; | Yes | the content of custom dialog. |
+| options | promptAction.BaseDialogOptions | Yes | Options. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise对象，无返回结果。 |
+| Promise&lt;void&gt; | the promise returned by the function. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. Possible causes: &lt;br&gt; 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameters types. &lt;br&gt; 3. Parameter verification failed. |
-| 103301 | The ComponentContent is incorrect. |
-| 103303 | The ComponentContent cannot be found. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: &lt;br&gt; 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameters types. &lt;br&gt; 3. Parameter verification failed. |
+| [103301](../errorcode-promptAction.md#103301-dialog-content-error) | The ComponentContent is incorrect. |
+| [103303](../errorcode-promptAction.md#103303-custom-dialog-box-not-found) | The ComponentContent cannot be found. |
 
 ## updateMenu
 
 ```TypeScript
-updateMenu<T extends Object>(content: ComponentContent<T>, options: MenuOptions, partialUpdate?: boolean): Promise<void>
+updateMenu<T extends Object>(content: ComponentContent<T>, options: MenuOptions,
+    partialUpdate?: boolean): Promise<void>
 ```
 
-更新content对应的Menu弹窗的样式。使用Promise异步回调。
+Update menu with frameNode.
 
 **Since:** 23
 
@@ -760,7 +748,7 @@ updateMenu<T extends Object>(content: ComponentContent<T>, options: MenuOptions,
 
 **Model restriction:** This API can be used only in the stage model.
 
-<!--Device-PromptAction-updateMenu<T extends Object>(content: ComponentContent<T>, options: MenuOptions, partialUpdate?: boolean): Promise<void>--><!--Device-PromptAction-updateMenu<T extends Object>(content: ComponentContent<T>, options: MenuOptions, partialUpdate?: boolean): Promise<void>-End-->
+<!--Device-PromptAction-updateMenu<T extends Object>(content: ComponentContent<T>, options: MenuOptions,    partialUpdate?: boolean): Promise<void>--><!--Device-PromptAction-updateMenu<T extends Object>(content: ComponentContent<T>, options: MenuOptions,    partialUpdate?: boolean): Promise<void>-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -768,31 +756,32 @@ updateMenu<T extends Object>(content: ComponentContent<T>, options: MenuOptions,
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| content | [ComponentContent](../arkts-components/arkts-arkui-componentcontent-t.md)&lt;T&gt; | Yes | menu弹窗中显示的组件内容。 |
-| options | [MenuOptions](../arkts-components/arkts-arkui-menuoptions-i.md) | Yes | menu弹窗样式。 |
-| partialUpdate | boolean | No | menu弹窗更新方式，默认值为false。 true为增量更新，保留当前值，更新options中的指定属性。 false为全量更新，除options中的指定属性，其他属性恢复默认值。 |
+| content | [ComponentContent](../arkts-components/arkts-arkui-componentcontent-t.md)&lt;T&gt; | Yes | The content of menu. |
+| options | [MenuOptions](../arkts-components/arkts-arkui-menuoptions-i.md) | Yes | Options. |
+| partialUpdate | boolean | No | If true, only the specified properties in the MenuOptions are updated, otherwise the rest of the properties are overwritten with the default values. Default value is false. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise对象，无返回结果。 |
+| Promise&lt;void&gt; | the promise returned by the function. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. Possible causes: &lt;br&gt; 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameters types. &lt;br&gt; 3. Parameter verification failed. |
-| 103301 | The ComponentContent is incorrect. |
-| 103303 | The ComponentContent cannot be found. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: &lt;br&gt; 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameters types. &lt;br&gt; 3. Parameter verification failed. |
+| [103301](../errorcode-promptAction.md#103301-dialog-content-error) | The ComponentContent is incorrect. |
+| [103303](../errorcode-promptAction.md#103303-custom-dialog-box-not-found) | The ComponentContent cannot be found. |
 
 ## updatePopup
 
 ```TypeScript
-updatePopup<T extends Object>(content: ComponentContent<T>, options: PopupCommonOptions, partialUpdate?: boolean): Promise<void>
+updatePopup<T extends Object>(content: ComponentContent<T>, options: PopupCommonOptions,
+    partialUpdate?: boolean): Promise<void>
 ```
 
-更新content对应的Popup弹窗的样式，使用Promise异步回调。
+Update popup with frameNode.
 
 **Since:** 23
 
@@ -800,7 +789,7 @@ updatePopup<T extends Object>(content: ComponentContent<T>, options: PopupCommon
 
 **Model restriction:** This API can be used only in the stage model.
 
-<!--Device-PromptAction-updatePopup<T extends Object>(content: ComponentContent<T>, options: PopupCommonOptions, partialUpdate?: boolean): Promise<void>--><!--Device-PromptAction-updatePopup<T extends Object>(content: ComponentContent<T>, options: PopupCommonOptions, partialUpdate?: boolean): Promise<void>-End-->
+<!--Device-PromptAction-updatePopup<T extends Object>(content: ComponentContent<T>, options: PopupCommonOptions,    partialUpdate?: boolean): Promise<void>--><!--Device-PromptAction-updatePopup<T extends Object>(content: ComponentContent<T>, options: PopupCommonOptions,    partialUpdate?: boolean): Promise<void>-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -808,21 +797,21 @@ updatePopup<T extends Object>(content: ComponentContent<T>, options: PopupCommon
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| content | [ComponentContent](../arkts-components/arkts-arkui-componentcontent-t.md)&lt;T&gt; | Yes | popup弹窗中显示的组件内容。 |
-| options | [PopupCommonOptions](../arkts-components/arkts-arkui-popupcommonoptions-i.md) | Yes | popup弹窗样式。 |
-| partialUpdate | boolean | No | popup弹窗更新方式，默认值为false。 true：增量更新，此时更新options中的指定属性，其它属性保留当前值。 false：全量更新，此时更新options中的指定属性，并且其他属性恢复默认值。 |
+| content | [ComponentContent](../arkts-components/arkts-arkui-componentcontent-t.md)&lt;T&gt; | Yes | The content of popup. |
+| options | [PopupCommonOptions](../arkts-components/arkts-arkui-popupcommonoptions-i.md) | Yes | Options. |
+| partialUpdate | boolean | No | If true, only the specified properties in the options are updated, otherwise the rest of the properties are overwritten with the default values. Default value is false. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise对象，无返回结果。 |
+| Promise&lt;void&gt; | the promise returned by the function. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. Possible causes: &lt;br&gt; 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameters types. &lt;br&gt; 3. Parameter verification failed. |
-| 103301 | The ComponentContent is incorrect. |
-| 103303 | The ComponentContent cannot be found. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: &lt;br&gt; 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameters types. &lt;br&gt; 3. Parameter verification failed. |
+| [103301](../errorcode-promptAction.md#103301-dialog-content-error) | The ComponentContent is incorrect. |
+| [103303](../errorcode-promptAction.md#103303-custom-dialog-box-not-found) | The ComponentContent cannot be found. |
 

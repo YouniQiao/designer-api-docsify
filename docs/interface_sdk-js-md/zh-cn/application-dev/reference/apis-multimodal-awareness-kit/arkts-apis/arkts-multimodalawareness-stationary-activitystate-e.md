@@ -1,6 +1,6 @@
 # ActivityState
 
-Enumerates the device statuses.
+设备状态返回值。
 
 **起始版本：** 9
 
@@ -16,7 +16,7 @@ Enumerates the device statuses.
 ENTER = 1
 ```
 
-Enter state.
+进入状态，表示设备当前处于静止状态。
 
 **起始版本：** 9
 
@@ -32,7 +32,7 @@ Enter state.
 EXIT = 2
 ```
 
-Exit state.
+退出状态，表示设备当前未处于静止状态。
 
 **起始版本：** 9
 

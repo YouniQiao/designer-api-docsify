@@ -1,11 +1,5 @@
 # hasSimCardSync
 
-## 导入模块
-
-```TypeScript
-import { sim } from 'kits/@kit.TelephonyKit';
-```
-
 ## hasSimCardSync
 
 ```TypeScript

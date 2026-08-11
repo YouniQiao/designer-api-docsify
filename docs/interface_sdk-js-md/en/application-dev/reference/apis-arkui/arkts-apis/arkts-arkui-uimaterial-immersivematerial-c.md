@@ -1,11 +1,12 @@
 # ImmersiveMaterial
 
-沉浸式材质类，继承自[Material](arkts-arkui-uimaterial-materialtype-e.md)。
+Immersive material class, which inherits from [Material](arkts-arkui-uimaterial-materialtype-e.md).
 
-沉浸式材质根据设备算力有分档表现，设备算力的高、中、低档由设备厂商决定，定义在系统配置文件中。在高档和中档算力设备上，影响材质层滤镜效果和阴影  
-[shadow](arkts-arkui-common-commonmethod-i.md#shadow)效果。在低档算力设备上，影响背景色  
-[backgroundColor](../../../reference/apis-arkui/arkui-ts/ts-universal-attributes-background.md#backgroundcolor)、边框颜色[borderColor](arkts-arkui-common-commonmethod-i.md#bordercolor)、边框宽度[borderWidth](arkts-arkui-common-commonmethod-i.md#borderwidth)、阴影  
-[shadow](arkts-arkui-common-commonmethod-i.md#shadow)效果。且同一材质的效果，会受到设置应用中沉浸光感配置项的影响，不同强弱程度的沉浸光感配置下，材质的参数和效果存在差异。
+The performance of an immersive material varies based on device computing power. The high, medium, and low levels of device computing power are determined by device vendors and defined in the system configuration files. On devices with high- and mid-level computing power, the filter and   
+[shadow](arkts-arkui-common-commonmethod-i.md#shadow) effects of the material layer are affected.On devices with low-level computing power, the   
+[background color](arkts-arkui-common-commonmethod-i.md#backgroundcolor),   
+[border color](arkts-arkui-common-commonmethod-i.md#bordercolor), [border width](arkts-arkui-common-commonmethod-i.md#borderwidth), and   
+[shadow](arkts-arkui-common-commonmethod-i.md#shadow) effects are affected. In addition, the effect of the same material is affected by the immersive light configuration in the application. The material parameters and effects vary depending on the immersive light configuration.
 
 **Inheritance/Implementation:** ImmersiveMaterial extends [Material](arkts-arkui-uimaterial-material-c.md)
 
@@ -29,7 +30,7 @@ import { uiMaterial } from 'kits/@kit.ArkUI';
 constructor(options?: ImmersiveOptions)
 ```
 
-ImmersiveMaterial的构造函数。
+Constructs **ImmersiveMaterial**.
 
 **Since:** 26.0.0
 
@@ -45,5 +46,5 @@ ImmersiveMaterial的构造函数。
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| options | [ImmersiveOptions](arkts-arkui-uimaterial-immersiveoptions-i.md) | No | 系统材质配置选项，包括材质样式、材质层赋色等。&lt;br/&gt;默认值参考ImmersiveOptions接口各参数的默认值，即{style: ImmersiveStyle.REGULAR, materialColor:Color.Transparent, colorInvert:false, applyShadow:true, interactive: false, lightEffect:undefined}。 |
+| options | [ImmersiveOptions](arkts-arkui-uimaterial-immersiveoptions-i.md) | No | System material configuration options, including the material style and material layer coloring.&lt;br&gt;For details about the default values, see the default values of the parameters in the **ImmersiveOptions** API, that is, **{style:ImmersiveStyle.REGULAR, materialColor:Color.Transparent, colorInvert:false, applyShadow:true, interactive:false, lightEffect:undefined}**. |
 

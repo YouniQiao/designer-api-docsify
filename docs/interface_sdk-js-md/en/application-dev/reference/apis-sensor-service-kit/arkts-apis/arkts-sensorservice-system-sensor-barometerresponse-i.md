@@ -1,6 +1,6 @@
 # BarometerResponse
 
-气压计传感器数据改变后的回调函数的响应对象，包含气压值数据。
+Defines a **BarometerResponse** object.
 
 **Since:** 3
 
@@ -26,7 +26,7 @@ import { OnBodyStateResponse, subscribeAccelerometerOptions, ProximityResponse, 
 pressure: number
 ```
 
-气压值。单位：帕斯卡（Pa）。取值范围：取值为实际上报物理量，由硬件传感器决定。标准大气压约为101325 Pa。
+Pressure, in pascal.
 
 **Type:** number
 

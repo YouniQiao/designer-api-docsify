@@ -1,6 +1,6 @@
 # CliCommandPermissionResult (System API)
 
-表示单条CLI命令的权限信息。
+Represents the permission information of a single CLI command.
 
 **Since:** 26.0.0
 
@@ -24,7 +24,7 @@ import { Context, Permissions, PermissionRequestResult } from 'kits/@kit.Ability
 requiredCliPermissions: Array<CliPermissionDetail>
 ```
 
-当前CLI命令依赖的CLI权限信息列表。
+List of CLI permission information that the current CLI command depends on.
 
 **Type:** Array&lt;CliPermissionDetail&gt;
 

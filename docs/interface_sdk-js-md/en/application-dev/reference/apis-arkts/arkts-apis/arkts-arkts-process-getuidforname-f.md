@@ -12,7 +12,7 @@ import { process } from 'kits/@kit.ArkTS';
 function getUidForName(v: string): number
 ```
 
-根据指定的用户名，从系统的用户数据库中获取该用户的 uid。
+Obtains the UID of a user from the user database of the system based on the specified user name.
 
 **Since:** 8
 
@@ -30,13 +30,13 @@ function getUidForName(v: string): number
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| v | string | Yes | 用户名。 |
+| v | string | Yes | User name. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| number | 返回用户 uid。 |
+| number | UID of the user. |
 
 ## Examples
 

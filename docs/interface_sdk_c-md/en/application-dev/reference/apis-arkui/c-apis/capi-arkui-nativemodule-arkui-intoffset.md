@@ -12,7 +12,7 @@ Describes the position of a component.
 
 **Related module**: [ArkUI_NativeModule](capi-arkui-nativemodule.md)
 
-**Header file**: [native_type.h](capi-native-type-h.md)
+**Header file**: [common_type.h](capi-common-type-h.md)
 
 ## Summary
 
@@ -20,7 +20,7 @@ Describes the position of a component.
 
 | Name | Description |
 | -- | -- |
-| int32_t x | Horizontal coordinate, in px. |
-| int32_t y | Vertical coordinate, in px. |
+| int32_t x |  |
+| int32_t y |  |
 
 

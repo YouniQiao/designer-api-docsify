@@ -12,7 +12,7 @@ import { audio } from 'kits/@kit.AudioKit';
 function getAudioManager(): AudioManager
 ```
 
-获取音频管理器。
+Obtains an AudioManager instance.
 
 **Since:** 7
 
@@ -28,7 +28,7 @@ function getAudioManager(): AudioManager
 
 | Type | Description |
 | --- | --- |
-| [AudioManager](arkts-audio-audio-audiomanager-i.md) | 音频管理器对象。 |
+| [AudioManager](arkts-audio-audio-audiomanager-i.md) | AudioManager instance. |
 
 ## Examples
 

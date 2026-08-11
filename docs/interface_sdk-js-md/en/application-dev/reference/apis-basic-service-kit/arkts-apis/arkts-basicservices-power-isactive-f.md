@@ -12,10 +12,10 @@ import { power } from 'kits/@kit.BasicServicesKit';
 function isActive(): boolean
 ```
 
-检测当前设备是否处于活动状态。
+Checks whether the current device is active.
 
-- 有屏的设备亮屏时为活动状态，熄屏时为非活动状态。  
-- 无屏的设备非休眠时为活动状态，休眠时为非活动状态。
+- A device with a screen is active when the screen is on and inactive when the screen is off.  
+- A device without a screen is active when it exits the sleep mode and inactive when it enters the sleep mode.
 
 **Since:** 9
 
@@ -29,7 +29,7 @@ function isActive(): boolean
 
 | Type | Description |
 | --- | --- |
-| boolean | 活动状态返回true，非活动状态返回false。 |
+| boolean | Return value **true** if the device is active; returns **false** otherwise. |
 
 ## Examples
 

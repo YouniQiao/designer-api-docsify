@@ -10,12 +10,6 @@ This parameter is used to define the input of each filtering dimension.
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
-## 导入模块
-
-```TypeScript
-import { FilterType, Filter, FilterParams, FilterResult } from 'kits/@kit.ArkUI';
-```
-
 ## name
 
 ```TypeScript

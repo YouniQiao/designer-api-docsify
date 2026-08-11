@@ -12,7 +12,7 @@ import { hichecker } from 'kits/@kit.PerformanceAnalysisKit';
 function containsCheckRule(rule: bigint) : boolean
 ```
 
-��ǰ�����ӵĹ������Ƿ������ĳһ���ض��Ĺ����������Ĺ��򼶱�Ϊ�̼߳�������ڵ�ǰ�߳��н��в�ѯ��
+Checks whether the specified rule exists in the collection of added rules. If the rule is of the thread level, this operation is performed only on the current thread.
 
 **Since:** 9
 
@@ -26,19 +26,19 @@ function containsCheckRule(rule: bigint) : boolean
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| rule | bigint | Yes | ��Ҫ��ѯ�Ĺ��� |
+| rule | bigint | Yes | Rule to be checked. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| boolean | ��ѯ�����true ��ʾ���������ӣ�false ��ʾ����δ���ӡ� |
+| boolean | Check result. If the rule exists in the collection of added rules, **true** is returned; otherwise, **false** is returned. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | the parameter check failed, only one bigint type parameter is needed |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | the parameter check failed, only one bigint type parameter is needed |
 
 ## Examples
 

@@ -12,12 +12,6 @@ HashStream 类是用于创建数据的哈希摘要的实用工具。由 [createH
 
 **系统能力：** SystemCapability.FileManagement.File.FileIO
 
-## 导入模块
-
-```TypeScript
-import { hash } from 'kits/@kit.CoreFileKit';
-```
-
 ## digest
 
 ```TypeScript
@@ -44,7 +38,7 @@ digest(): string
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 401 | Parameter error |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error |
 | 13900042 | Unknown error |
 
 ## 示例
@@ -85,7 +79,7 @@ update(data: ArrayBuffer): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 401 | Parameter error |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error |
 | 13900042 | Unknown error |
 
 ## 示例

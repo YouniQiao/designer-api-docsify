@@ -1,6 +1,6 @@
 # Rect
 
-窗口矩形区域。
+Describes the rectangular area of the window.
 
 **Since:** 7
 
@@ -22,7 +22,7 @@ import { window } from 'kits/@kit.ArkUI';
 height: int
 ```
 
-矩形区域的高度，单位为px，该参数应为整数。
+Height of the rectangle, in px. The value must be an integer.
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
@@ -42,7 +42,7 @@ height: int
 left: int
 ```
 
-矩形区域的左边界，单位为px，该参数为整数。
+Left boundary of the rectangle, in px. The value must be an integer.
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
@@ -62,7 +62,7 @@ left: int
 top: int
 ```
 
-矩形区域的上边界，单位为px，该参数应为整数。
+Top boundary of the rectangle, in px. The value must be an integer.
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
@@ -82,7 +82,7 @@ top: int
 width: int
 ```
 
-矩形区域的宽度，单位为px，该参数应为整数。
+Width of the rectangle, in px. The value must be an integer.
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 

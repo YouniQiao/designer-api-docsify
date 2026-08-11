@@ -1,11 +1,5 @@
 # createHdrBrightnessBlender（系统接口）
 
-## 导入模块
-
-```TypeScript
-import { uiEffect } from 'kits/@kit.ArkGraphics2D';
-```
-
 ## createHdrBrightnessBlender
 
 ```TypeScript
@@ -40,26 +34,25 @@ function createHdrBrightnessBlender(param: BrightnessBlenderParam): HdrBrightnes
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 202 | 权限校验失败，非系统应用调用系统接口。 |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | 权限校验失败，非系统应用调用系统接口。 |
 
 ## 示例
 
 ```TypeScript
-import { uiEffect } from '@kit.ArkGraphics2D';
+import { uiEffect } from "@kit.ArkGraphics2D"
 
-// 创建支持HDR的BrightnessBlender实例
-let blender: uiEffect.HdrBrightnessBlender =
+let blender : uiEffect.HdrBrightnessBlender =
   uiEffect.createHdrBrightnessBlender({cubicRate:1.0, quadraticRate:1.0, linearRate:1.0, degree:1.0, saturation:1.0,
-    positiveCoefficient:[2.3, 4.5, 2.0], negativeCoefficient:[0.5, 2.0, 0.5], fraction:0.0});
+    positiveCoefficient:[2.3, 4.5, 2.0], negativeCoefficient:[0.5, 2.0, 0.5], fraction:0.0})
 
 @Entry
 @Component
-struct Example {
+struct example {
   build() {
     RelativeContainer() {
-      Image($r('app.media.screenshot'))
-        .width('100%')
-        .height('100%')
+      Image($r("app.media.screenshot"))
+        .width("100%")
+        .height("100%")
         .advancedBlendMode(blender)
     }
   }

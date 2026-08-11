@@ -12,7 +12,7 @@ import { bundleManager } from 'kits/@kit.AbilityKit';
 function getInstalledBundleList(bundleFlags: int): Promise<Array<BundleInfo>>
 ```
 
-根据给定的bundleFlags获取系统中所有的BundleInfo。使用Promise异步回调。
+Obtains all the bundle information in the system based on the given bundle flags.This API uses a promise to return the result.
 
 **Since:** 26.0.0
 
@@ -30,38 +30,17 @@ function getInstalledBundleList(bundleFlags: int): Promise<Array<BundleInfo>>
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| bundleFlags | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | 指定返回的BundleInfo所包含的信息，详情请参考 [BundleFlag](arkts-ability-bundlemanager-bundleflag-e.md)。 |
+| bundleFlags | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | Information contained in the returned BundleInfo. For details, see {@link BundleFlag}. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;Array&lt;BundleInfo&gt;&gt; | Promise对象，返回当前已安装应用的信息列表。 |
+| Promise&lt;Array&lt;BundleInfo&gt;&gt; | Promise used to return the list of installed applications. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 201 | Permission denied. |
-
-## Examples
-
-```TypeScript
-import { bundleManager } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-import { hilog } from '@kit.PerformanceAnalysisKit';
-
-let bundleFlags = bundleManager.BundleFlag.GET_BUNDLE_INFO_DEFAULT;
-
-try {
-  bundleManager.getInstalledBundleList(bundleFlags).then((data) => {
-    hilog.info(0x0000, 'testTag', 'getInstalledBundleList successfully. Data: %{public}s', JSON.stringify(data));
-  }).catch((err: BusinessError) => {
-    hilog.error(0x0000, 'testTag', 'getInstalledBundleList failed. Cause: %{public}s', err.message);
-  });
-} catch (err) {
-  let message = (err as BusinessError).message;
-  hilog.error(0x0000, 'testTag', 'getInstalledBundleList failed. Cause: %{public}s', message);
-}
-```
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
 

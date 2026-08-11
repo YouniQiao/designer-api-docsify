@@ -35,58 +35,31 @@ Binds a process to {@code NetHandle}.&lt;p&gt;All the sockets created from the p
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. |
-| 2100001 | Invalid parameter value. |
-| 2100002 | Failed to connect to the service. |
-| 2100003 | System internal error. |
-| 201 | Permission denied. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. |
+| [2100001](../errorcode-net-connection.md#2100001-invalid-parameter-value) | Invalid parameter value. |
+| [2100002](../errorcode-net-connection.md#2100002-service-connection-failure) | Failed to connect to the service. |
+| [2100003](../errorcode-net-connection.md#2100003-system-internal-error) | System internal error. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
 
 ## Examples
-
-The following example binds the application to a Wi-Fi network. It uses the [on('netAvailable')](#onnetavailable) API to bind the application when the Wi-Fi network is available, and the [on('netLost')](#onnetlost) API to unbind the application and switch to the default network when the Wi-Fi network is unavailable.
 
 ```TypeScript
 import { connection } from '@kit.NetworkKit';
 import { BusinessError } from '@kit.BasicServicesKit';
 
-// Create a NetConnection object. To bind only to the Wi-Fi network, set the network type to Wi-Fi.
-let netCon = connection.createNetConnection({
-  netCapabilities: {
-    bearerTypes: [connection.NetBearType.BEARER_WIFI]
+connection.getDefaultNet((error: BusinessError, netHandle: connection.NetHandle) => {
+  if (netHandle.netId == 0) {
+    // If no network is connected, the obtained netId of netHandle is 0, which is abnormal. You can add specific processing based on the service requirements.
+    return;
   }
-});
-
-// Use the on API to enable listening for netAvailable events.
-netCon.on('netAvailable', (netHandle: connection.NetHandle) => {
-  console.info("Succeeded to get data: " + JSON.stringify(netHandle));
+  // The application accesses the network using the default network.
   connection.setAppNet(netHandle, (error: BusinessError, data: void) => {
     if (error) {
-      console.error(`Failed to setAppNet. Code:${error.code}, message:${error.message}`);
+      console.error(`Failed to get default net. Code:${error.code}, message:${error.message}`);
       return;
     }
-    console.info("Succeeded to setAppNet, netid: " + JSON.stringify(netHandle.netId));
+    console.info("Succeeded to get data: " + JSON.stringify(data));
   });
-});
-
-// Use the on API to enable listening for netLost events.
-netCon.on('netLost', (netHandle: connection.NetHandle) => {
-  console.info("Succeeded to get data: " + JSON.stringify(netHandle));
-  // When the network is lost, proactively unbind the specified network.
-  netHandle.netId = 0;
-  connection.setAppNet(netHandle, (error: BusinessError, data: void) => {
-    if (error) {
-      console.error(`Failed to setAppNet. Code:${error.code}, message:${error.message}`);
-      return;
-    }
-    console.info("Succeeded to setAppNet, netid: " + JSON.stringify(netHandle.netId));
-  });
-});
-
-// Register a listener for network status change events. This API must be called after the on API.
-netCon.register((error: BusinessError) => {
-  if (error) {
-    console.error(JSON.stringify(error));
-  }
 });
 ```
 
@@ -125,54 +98,29 @@ Binds a process to {@code NetHandle}.&lt;p&gt;All the sockets created from the p
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. |
-| 2100001 | Invalid parameter value. |
-| 2100002 | Failed to connect to the service. |
-| 2100003 | System internal error. |
-| 201 | Permission denied. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. |
+| [2100001](../errorcode-net-connection.md#2100001-invalid-parameter-value) | Invalid parameter value. |
+| [2100002](../errorcode-net-connection.md#2100002-service-connection-failure) | Failed to connect to the service. |
+| [2100003](../errorcode-net-connection.md#2100003-system-internal-error) | System internal error. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
 
 ## Examples
-
-The following example binds the application to a Wi-Fi network. It uses the [on('netAvailable')](#onnetavailable) API to bind the application when the Wi-Fi network is available, and the [on('netLost')](#onnetlost) API to unbind the application and switch to the default network when the Wi-Fi network is unavailable.
 
 ```TypeScript
 import { connection } from '@kit.NetworkKit';
 import { BusinessError } from '@kit.BasicServicesKit';
 
-// Create a NetConnection object. To bind only to the Wi-Fi network, set the network type to Wi-Fi.
-let netCon = connection.createNetConnection({
-  netCapabilities: {
-    bearerTypes: [connection.NetBearType.BEARER_WIFI]
+connection.getDefaultNet().then((netHandle: connection.NetHandle) => {
+  if (netHandle.netId == 0) {
+    // If no network is connected, the obtained netId of netHandle is 0, which is abnormal. You can add specific processing based on the service requirements.
+    return;
   }
-});
 
-// Use the on API to enable listening for netAvailable events.
-netCon.on('netAvailable', (netHandle: connection.NetHandle) => {
-  console.info("Succeeded to get data: " + JSON.stringify(netHandle));
   connection.setAppNet(netHandle).then(() => {
-    console.info("setAppNet success, netid: " + JSON.stringify(netHandle.netId));
+    console.info("success");
   }).catch((error: BusinessError) => {
-    console.error(`Failed to setAppNet. Code:${error.code}, message:${error.message}`);
-  })
-});
-
-// Use the on API to enable listening for netLost events.
-netCon.on('netLost', (netHandle: connection.NetHandle) => {
-  console.info("Succeeded to get data: " + JSON.stringify(netHandle));
-  // When the network is lost, proactively unbind the specified network.
-  netHandle.netId = 0;
-  connection.setAppNet(netHandle).then(() => {
-    console.info("setAppNet success, netid: " + JSON.stringify(netHandle.netId));
-  }).catch((error: BusinessError) => {
-    console.error(`Failed to setAppNet. Code:${error.code}, message:${error.message}`);
-  })
-});
-
-// Register a listener for network status change events. This API must be called after the on API.
-netCon.register((error: BusinessError) => {
-  if (error) {
     console.error(JSON.stringify(error));
-  }
+  })
 });
 ```
 

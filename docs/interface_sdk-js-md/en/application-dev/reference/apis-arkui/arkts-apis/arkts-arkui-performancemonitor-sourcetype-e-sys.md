@@ -1,6 +1,6 @@
 # SourceType (System API)
 
-用户场景触发源类型枚举。
+Enumerates the input source type.
 
 **Since:** 23
 
@@ -18,7 +18,7 @@
 PERF_TOUCH_EVENT = 0
 ```
 
-触摸屏事件。
+The user touches the screen to trigger the scene.
 
 **Since:** 23
 
@@ -38,7 +38,7 @@ PERF_TOUCH_EVENT = 0
 PERF_MOUSE_EVENT = 1
 ```
 
-鼠标事件。
+TThe user uses the mouse to trigger the scene.
 
 **Since:** 23
 
@@ -58,7 +58,7 @@ PERF_MOUSE_EVENT = 1
 PERF_TOUCHPAD_EVENT = 2
 ```
 
-触摸板事件。
+The user uses the touchpad to trigger the scene.
 
 **Since:** 23
 
@@ -78,7 +78,7 @@ PERF_TOUCHPAD_EVENT = 2
 PERF_JOYSTICK_EVENT = 3
 ```
 
-摇杆事件。
+The user uses the joystick to trigger the scene.
 
 **Since:** 23
 
@@ -98,7 +98,7 @@ PERF_JOYSTICK_EVENT = 3
 PERF_KEY_EVENT = 4
 ```
 
-键盘事件。
+The user uses the keyboard to trigger the scene.
 
 **Since:** 23
 

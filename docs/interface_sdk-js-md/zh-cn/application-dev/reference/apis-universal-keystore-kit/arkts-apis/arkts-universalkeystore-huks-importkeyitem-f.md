@@ -1,11 +1,5 @@
 # importKeyItem
 
-## 导入模块
-
-```TypeScript
-import { huks } from 'kits/@kit.UniversalKeystoreKit';
-```
-
 ## importKeyItem
 
 ```TypeScript
@@ -38,21 +32,21 @@ Imports a key in plaintext. This API uses an asynchronous callback to return the
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 801 | api is not supported |
-| 12000018 | the group id specified by the access group tag is invalid<br>**适用版本：** 23+ |
-| 12000017 | The key with the same alias already exists<br>**适用版本：** 20+ |
-| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. 3. Parameter verification failed. |
-| 12000006 | error occurred in crypto engine |
-| 12000005 | IPC communication failed |
-| 12000004 | operating file failed |
-| 12000003 | algorithm param is invalid |
-| 12000002 | algorithm param is missing |
-| 12000001 | algorithm mode is not supported |
-| 12000015 | Failed to obtain the security information via UserIAM |
-| 12000014 | memory is insufficient |
-| 12000013 | queried credential does not exist |
-| 12000012 | Device environment or input parameter abnormal |
-| 12000011 | queried entity does not exist<br>**适用版本：** 9 - 19 |
+| [801](../../errorcode-universal.md#801-该设备不支持此api) | api is not supported |
+| [12000018](../errorcode-huks.md#12000018-输入参数非法) | the group id specified by the access group tag is invalid<br>**适用版本：** 23+ |
+| [12000017](../errorcode-huks.md#12000017-同名密钥已存在) | The key with the same alias already exists<br>**适用版本：** 20+ |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. 3. Parameter verification failed. |
+| [12000006](../errorcode-huks.md#12000006-算法库操作失败) | error occurred in crypto engine |
+| [12000005](../errorcode-huks.md#12000005-进程通信错误) | IPC communication failed |
+| [12000004](../errorcode-huks.md#12000004-文件错误) | operating file failed |
+| [12000003](../errorcode-huks.md#12000003-无效的密钥算法参数) | algorithm param is invalid |
+| [12000002](../errorcode-huks.md#12000002-缺少密钥算法参数) | algorithm param is missing |
+| [12000001](../errorcode-huks.md#12000001-该子功能不支持特性) | algorithm mode is not supported |
+| [12000015](../errorcode-huks.md#12000015-调用其他系统服务失败) | Failed to obtain the security information via UserIAM |
+| [12000014](../errorcode-huks.md#12000014-内存不足) | memory is insufficient |
+| [12000013](../errorcode-huks.md#12000013-密钥设置生物访问控制时待绑定的凭据不存在) | queried credential does not exist |
+| [12000012](../errorcode-huks.md#12000012-外部错误) | Device environment or input parameter abnormal |
+| [12000011](../errorcode-huks.md#12000011-目标对象不存在) | queried entity does not exist<br>**适用版本：** 9 - 19 |
 
 ## 示例
 
@@ -143,21 +137,21 @@ Imports a key in plaintext. This API uses a promise to return the result.
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 801 | api is not supported |
-| 12000018 | the group id specified by the access group tag is invalid<br>**适用版本：** 23+ |
-| 12000017 | The key with the same alias already exists<br>**适用版本：** 20+ |
-| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. 3. Parameter verification failed. |
-| 12000006 | error occurred in crypto engine |
-| 12000005 | IPC communication failed |
-| 12000004 | operating file failed |
-| 12000003 | algorithm param is invalid |
-| 12000002 | algorithm param is missing |
-| 12000001 | algorithm mode is not supported |
-| 12000015 | Failed to obtain the security information via UserIAM |
-| 12000014 | memory is insufficient |
-| 12000013 | queried credential does not exist |
-| 12000012 | Device environment or input parameter abnormal |
-| 12000011 | queried entity does not exist<br>**适用版本：** 9 - 19 |
+| [801](../../errorcode-universal.md#801-该设备不支持此api) | api is not supported |
+| [12000018](../errorcode-huks.md#12000018-输入参数非法) | the group id specified by the access group tag is invalid<br>**适用版本：** 23+ |
+| [12000017](../errorcode-huks.md#12000017-同名密钥已存在) | The key with the same alias already exists<br>**适用版本：** 20+ |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. 3. Parameter verification failed. |
+| [12000006](../errorcode-huks.md#12000006-算法库操作失败) | error occurred in crypto engine |
+| [12000005](../errorcode-huks.md#12000005-进程通信错误) | IPC communication failed |
+| [12000004](../errorcode-huks.md#12000004-文件错误) | operating file failed |
+| [12000003](../errorcode-huks.md#12000003-无效的密钥算法参数) | algorithm param is invalid |
+| [12000002](../errorcode-huks.md#12000002-缺少密钥算法参数) | algorithm param is missing |
+| [12000001](../errorcode-huks.md#12000001-该子功能不支持特性) | algorithm mode is not supported |
+| [12000015](../errorcode-huks.md#12000015-调用其他系统服务失败) | Failed to obtain the security information via UserIAM |
+| [12000014](../errorcode-huks.md#12000014-内存不足) | memory is insufficient |
+| [12000013](../errorcode-huks.md#12000013-密钥设置生物访问控制时待绑定的凭据不存在) | queried credential does not exist |
+| [12000012](../errorcode-huks.md#12000012-外部错误) | Device environment or input parameter abnormal |
+| [12000011](../errorcode-huks.md#12000011-目标对象不存在) | queried entity does not exist<br>**适用版本：** 9 - 19 |
 
 ## 示例
 

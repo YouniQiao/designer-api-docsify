@@ -1,6 +1,6 @@
 # HuksKeyClassType
 
-表示密钥的来源。
+Enumerates the sources of a key.
 
 **Since:** 22
 
@@ -16,7 +16,7 @@
 HUKS_KEY_CLASS_DEFAULT = 0
 ```
 
-表示HUKS本地管理的密钥。
+Key managed by HUKS locally.
 
 **Since:** 22
 
@@ -32,7 +32,7 @@ HUKS_KEY_CLASS_DEFAULT = 0
 HUKS_KEY_CLASS_EXTENSION = 1
 ```
 
-表示外部密钥管理扩展管理的密钥。
+Key managed by the external key management extension.
 
 **Since:** 22
 

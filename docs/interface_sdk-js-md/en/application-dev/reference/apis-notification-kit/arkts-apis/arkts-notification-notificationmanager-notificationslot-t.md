@@ -4,7 +4,7 @@
 export type NotificationSlot = _NotificationSlot
 ```
 
-通知渠道。
+Describes the notification slot.
 
 **Since:** 9
 

@@ -1,6 +1,6 @@
 # WebHeader
 
-Web组件返回的请求/响应头对象。
+Describes the request/response header returned by the **AtomicServiceWeb** component.
 
 **Since:** 12
 
@@ -22,7 +22,7 @@ import { AtomicServiceWeb, OnMessageEvent, OnPageEndEvent, OnHttpErrorReceiveEve
 headerKey: string
 ```
 
-请求/响应头的key。
+Key of the request/response header.
 
 **Type:** string
 
@@ -42,7 +42,7 @@ headerKey: string
 headerValue: string
 ```
 
-请求/响应头的value。
+Value of the request/response header.
 
 **Type:** string
 

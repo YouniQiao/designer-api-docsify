@@ -1,6 +1,6 @@
 # EdgeLightMode (System API)
 
-边缘光效动画模式枚举。
+Edge light animation mode enumeration.
 
 **Since:** 26.0.0
 
@@ -18,9 +18,9 @@
 EDGELIGHT_AUTO = 0
 ```
 
-自适应边缘光效动画。
+Adaptive edge light animation.
 
-根据设备运算能力，在低算力设备上关闭，在中高算力设备上开启。
+Turned off on low-performance devices and turned on on medium/high-performance devices.
 
 **Since:** 26.0.0
 
@@ -40,7 +40,7 @@ EDGELIGHT_AUTO = 0
 EDGELIGHT_ENABLED = 1
 ```
 
-开启边缘光效动画。
+Enable edge light animation.
 
 **Since:** 26.0.0
 
@@ -60,7 +60,7 @@ EDGELIGHT_ENABLED = 1
 EDGELIGHT_DISABLED = 2
 ```
 
-关闭边缘光效动画。
+Disable edge light animation.
 
 **Since:** 26.0.0
 

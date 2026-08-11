@@ -12,7 +12,7 @@ import { display } from 'kits/@kit.ArkUI';
 function getFoldStatus(): FoldStatus
 ```
 
-获取可折叠设备当前的折叠状态。
+Obtains the fold status of this foldable device.
 
 **Since:** 10
 
@@ -28,17 +28,19 @@ function getFoldStatus(): FoldStatus
 
 | Type | Description |
 | --- | --- |
-| [FoldStatus](arkts-arkui-enums-foldstatus-e.md) | FoldStatus对象，返回当前可折叠设备的折叠状态。 |
+| [FoldStatus](arkts-arkui-enums-foldstatus-e.md) | Fold status of the device. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 1400003 | This display manager service works abnormally. |
+| [1400003](../errorcode-display.md#1400003-abnormal-display-manager-service) | This display manager service works abnormally. |
 
 ## Examples
 
 ```TypeScript
+import { display } from '@kit.ArkUI';
+
 let data: display.FoldStatus = display.getFoldStatus();
 console.info(`Succeeded in obtaining fold status. Data: ${data}`);
 ```

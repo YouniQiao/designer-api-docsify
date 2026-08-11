@@ -12,12 +12,6 @@ FA模型的使用信息属性集合。
 
 **系统接口：** 此接口为系统接口。
 
-## 导入模块
-
-```TypeScript
-import { usageStatistics } from 'kits/@kit.BackgroundTasksKit';
-```
-
 ## abilityInFgTotalTime
 
 ```TypeScript

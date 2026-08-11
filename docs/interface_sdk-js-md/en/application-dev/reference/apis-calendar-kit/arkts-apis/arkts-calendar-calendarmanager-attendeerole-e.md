@@ -1,6 +1,6 @@
 # AttendeeRole
 
-会议日程参与者角色类型枚举。
+Enumerates the attendee role types in a conference event.
 
 **Since:** 12
 
@@ -16,7 +16,7 @@
 ORGANIZER = 'organizer'
 ```
 
-会议组织者。
+Conference organizer.
 
 **Since:** 12
 
@@ -34,7 +34,7 @@ ORGANIZER = 'organizer'
 PARTICIPANT = 'participant'
 ```
 
-会议参与者。
+Conference participant.
 
 **Since:** 12
 

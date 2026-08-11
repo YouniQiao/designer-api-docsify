@@ -4,7 +4,7 @@
 type OnSuccessFn = () => void
 ```
 
-当保存请求成功时，该回调被调用。
+Called when auto-save is successful.
 
 **Since:** 23
 

@@ -1,6 +1,6 @@
 # TriggerInfo
 
-作为[trigger](../../../reference/apis-ability-kit/js-apis-app-ability-wantAgent.md#wantagenttrigger)的入参定义触发WantAgent所需要的信息。
+The module defines the information required for triggering the WantAgent. The information is used as an input parameter of [trigger](../../../reference/apis-ability-kit/js-apis-app-ability-wantAgent.md#wantagenttrigger).
 
 **Since:** 7
 
@@ -16,7 +16,7 @@
 startOptions?: StartOptions
 ```
 
-触发启动Ability的wantAgent时，由该属性指定启动参数。
+Start options in wantAgent used to start an ability.
 
 **Type:** [StartOptions](arkts-ability-app-ability-startoptions-startoptions-c-sys.md)
 

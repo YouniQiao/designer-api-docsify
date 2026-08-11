@@ -1,13 +1,6 @@
 # DataReloadOperation
 
-重载所有数据操作，并配置是否允许在更新过程中复用旧的子组件。当onDatasetChange含有DataOperationType.RELOAD操作时，其余操作全部失效，框架会自己调用keyGenerator进行键值比对。
-
-配置允许在更新过程中复用旧的子组件，并和[@Reusable](../../../ui/state-management/arkts-reusable.md)/  
-[@ReusableV2](../../../ui/state-management/arkts-new-reusableV2.md)配合使用时，优先使用复用池中的组件，若复用池中无可复用的组件，而LazyForEach的旧子组件中有可复用的组件，该组件将被回收，并复用为新的子组件。当LazyForEach的旧子组件中也没有可复用的组件时，将创建新的子组件。
-
-配置允许在更新过程中复用旧的子组件，未使用@Reusable/@ReusableV2时，键值没有变化的数据项会使用原先的子组件，键值发生变化的会重建子组件。
-
-配置不允许在更新过程中复用旧的子组件，键值没有变化的数据项会使用原先的子组件，键值发生变化的数据项，若使用了@Reusable/@ReusableV2且复用池中有可用的组件，将复用旧组件，否则将创建新的子组件。
+Represents an operation for reloading data. If the **onDatasetChange** event contains a **DataOperationType.RELOAD**operation, all other operations in the event are ineffective. In such cases, the framework will call **keyGenerator**to perform a comparison of keys with their corresponding values.
 
 **Since:** 12
 
@@ -23,15 +16,9 @@
 reuseImmediately?: boolean
 ```
 
-是否允许在更新过程中复用旧的子组件。
-
-true：允许在更新过程中复用旧的子组件。
-
-false：不允许在更新过程中复用旧的子组件。
-
-默认值：false
-
-当值为undefined或null时，取默认值。
+Whether to enable the feature that reuse old child components when \@Reuseable or \@ReuseableV2 is used and recycle pool is empty.  
+**true**: Enable the feature.  
+**false**: Disable the feature.Default value: **false**.
 
 **Type:** boolean
 
@@ -53,7 +40,7 @@ false：不允许在更新过程中复用旧的子组件。
 type: DataOperationType.RELOAD
 ```
 
-数据全部重载类型。
+Type of data reloading.
 
 **Type:** DataOperationType.RELOAD
 

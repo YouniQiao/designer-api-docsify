@@ -1,6 +1,6 @@
 # RemoveFilterRule
 
-移除网络包过滤规则。
+Defines the network packet filtering rule to remove.
 
 **Since:** 10
 
@@ -22,7 +22,7 @@ import { networkManager } from 'kits/@kit.MDMKit';
 action?: Action
 ```
 
-接收或者丢弃数据包。
+Action to take, that is, receive or discard the data packets.
 
 **Type:** [Action](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-agent-action-e.md)
 
@@ -42,7 +42,7 @@ action?: Action
 destAddr?: string
 ```
 
-ip目标地址。
+Destination IP address.
 
 **Type:** string
 
@@ -62,7 +62,7 @@ ip目标地址。
 destPort?: string
 ```
 
-ip目标端口。
+Port of the destination IP address.
 
 **Type:** string
 
@@ -82,7 +82,7 @@ ip目标端口。
 direction: Direction
 ```
 
-规则链。
+Direction chains to which the rule applies.
 
 **Type:** [Direction](arkts-mdm-networkmanager-direction-e.md)
 
@@ -102,7 +102,7 @@ direction: Direction
 protocol?: Protocol
 ```
 
-网络协议。
+Network protocol.
 
 **Type:** [Protocol](../../apis-network-kit/arkts-apis/arkts-network-socket-protocol-e.md)
 
@@ -122,7 +122,7 @@ protocol?: Protocol
 srcAddr?: string
 ```
 
-ip源地址。
+Source IP address.
 
 **Type:** string
 
@@ -142,7 +142,7 @@ ip源地址。
 srcPort?: string
 ```
 
-ip源端口。
+Port of the source IP address.
 
 **Type:** string
 
@@ -162,7 +162,7 @@ ip源端口。
 uid?: string
 ```
 
-应用uid。
+UID of the application.
 
 **Type:** string
 

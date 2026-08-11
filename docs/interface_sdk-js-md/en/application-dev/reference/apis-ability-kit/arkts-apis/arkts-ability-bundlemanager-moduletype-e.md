@@ -1,6 +1,6 @@
 # ModuleType
 
-标识模块类型。
+Enumerates the module types.
 
 **Since:** 9
 
@@ -16,7 +16,7 @@
 ENTRY = 1
 ```
 
-应用的主模块，作为应用的入口，提供了应用的基础功能。
+Main module of and entry to the application, providing the basic application functionality.
 
 **Since:** 9
 
@@ -34,7 +34,7 @@ ENTRY = 1
 FEATURE = 2
 ```
 
-应用的动态特性模块，作为应用能力的扩展，可以根据用户的需求和设备类型进行选择性安装。
+Dynamic feature module of the application, extending the application functionality. This type of HAP can be installed based on user needs and device types.
 
 **Since:** 9
 
@@ -52,7 +52,7 @@ FEATURE = 2
 SHARED = 3
 ```
 
-应用的[动态共享库](../../../quick-start/in-app-hsp.md)模块。
+[Dynamic shared library](../../../quick-start/in-app-hsp.md) of the application.
 
 **Since:** 9
 

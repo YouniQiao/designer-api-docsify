@@ -1,11 +1,5 @@
 # offCooperateMessage（系统接口）
 
-## 导入模块
-
-```TypeScript
-import { cooperate } from 'kits/@kit.DistributedServiceKit';
-```
-
 ## offCooperateMessage
 
 ```TypeScript
@@ -36,6 +30,25 @@ Disables listening for screen hopping status change events.
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 201 | Permission denied. |
-| 202 | Permission verification failed. A non-system application calls a system API. &lt;br&gt; verification failed. |
+| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed. A non-system application calls a system API. &lt;br&gt; verification failed. |
+
+## 示例
+
+```TypeScript
+function callbackOn(msgOn: cooperate.CooperateMessage): void {
+  console.info(`Keyboard mouse crossing event: ${JSON.stringify(msgOn)}`);
+}
+
+function callbackOff(msgOff: cooperate.CooperateMessage): void {
+  console.info(`Keyboard mouse crossing event: ${JSON.stringify(msgOff)}`);
+}
+
+try {
+  cooperate.onCooperateMessage(callbackOn);
+  cooperate.offCooperateMessage(callbackOff);
+} catch (error) {
+  console.error(`Execute failed, error: ${JSON.stringify(error, [`code`, `message`])}`);
+}
+```
 

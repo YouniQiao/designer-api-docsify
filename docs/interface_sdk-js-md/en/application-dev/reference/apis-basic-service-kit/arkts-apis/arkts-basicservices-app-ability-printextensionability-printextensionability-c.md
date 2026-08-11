@@ -1,6 +1,6 @@
 # PrintExtensionAbility
 
-该模块提供打印扩展能力的调用接口。PrintExtensionAbility基于生命周期回调机制运行，系统在打印扩展连接、发现打印机、连接/断开打印机、查询打印机能力、启动/取消打印任务等场景下分别调用相应回调方法，开发者需在各回调中实现对应的打印扩展逻辑。
+class of print extension ability.
 
 **Since:** 14
 
@@ -22,7 +22,7 @@ import { PrintExtensionAbility } from 'kits/@kit.BasicServicesKit';
 public onCancelPrintJob(jobInfo: print.PrintJob): void
 ```
 
-取消已开始的打印任务时调用。开发者应在此回调中实现取消打印任务的逻辑，停止正在进行的打印操作并清理相关资源。
+Called once to remove the print job has been started.
 
 **Since:** 24
 
@@ -38,13 +38,13 @@ public onCancelPrintJob(jobInfo: print.PrintJob): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| jobInfo | print.PrintJob | Yes | 表示打印任务的信息，包含任务ID、打印机ID、文档信息等详细配置和状态，需为已通过onStartPrintJob启动的打印任务， 用于取消打印任务时定位目标任务。 |
+| jobInfo | print.PrintJob | Yes | Indicates the information of print job. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 202 | not system application<br>**Applicable version:** 10 - 23 |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | not system application<br>**Applicable version:** 10 - 23 |
 
 ## onConnectPrinter
 
@@ -58,7 +58,7 @@ ArkTS-Sta:
 onConnectPrinter(printerId: int): void
 ```
 
-连接到特定打印机时调用。开发者应在此回调中实现与指定打印机（通过printerId标识）的连接逻辑。
+Called once to connect to the specific printer.
 
 **Since:** 14
 
@@ -74,7 +74,7 @@ onConnectPrinter(printerId: int): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| printerId | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | 表示打印机ID，应为已发现的打印机，取值于打印机发现流程上报的有效打印机标识。 |
+| printerId | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | connect the printerId. |
 
 ## Examples
 
@@ -95,7 +95,7 @@ export default class HWPrintExtension extends PrintExtensionAbility {
 onCreate(want: Want): void
 ```
 
-系统首次连接打印扩展能力时调用。开发者可在此回调中完成打印扩展能力的初始化工作，如初始化必要的资源、状态等。
+Called once to initialize the extensionAbility.
 
 **Since:** 14
 
@@ -111,7 +111,7 @@ onCreate(want: Want): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| want | [Want](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-want-want-c.md) | Yes | 表示创建打印扩展时传入的Want意图信息，包含调用方指定的信息（如action、uri等），用于初始化打印扩展能力。 |
+| want | [Want](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-want-want-c.md) | Yes | call print page want params. |
 
 ## Examples
 
@@ -133,7 +133,7 @@ export default class HWPrintExtension extends PrintExtensionAbility {
 onDestroy(): void
 ```
 
-结束打印扩展能力时调用。开发者应在此回调中释放相关资源并完成必要的清理工作。
+Called once to finalize the extensionAbility.
 
 **Since:** 14
 
@@ -169,7 +169,7 @@ ArkTS-Sta:
 onDisconnectPrinter(printerId: int): void
 ```
 
-断开与特定打印机的连接时调用。开发者应在此回调中实现断开打印机连接的逻辑并释放相关资源。
+Called once to disconnect to the specific printer.
 
 **Since:** 14
 
@@ -185,7 +185,7 @@ onDisconnectPrinter(printerId: int): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| printerId | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | 表示打印机ID，应为已连接的打印机，取值于打印机发现流程上报的有效打印机标识。 |
+| printerId | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | connect the printerId. |
 
 ## Examples
 
@@ -206,7 +206,7 @@ export default class HWPrintExtension extends PrintExtensionAbility {
 onRequestPreview(jobInfo: print.PrintJob): string
 ```
 
-系统打印服务在请求预览时回调此方法，开发者需继承PrintExtensionAbility类并实现此方法，将预览结果返回到系统打印服务。
+Called once to request preview and send result to Print SA.
 
 **Since:** 10
 
@@ -222,19 +222,19 @@ onRequestPreview(jobInfo: print.PrintJob): string
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| jobInfo | print.PrintJob | Yes | 表示打印任务信息。 |
+| jobInfo | print.PrintJob | Yes | Indicates the information of job. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| string | 返回的预览结果 |
+| string | preview result. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 202 | not system application |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | not system application |
 
 ## Examples
 
@@ -263,7 +263,7 @@ ArkTS-Sta:
 public onRequestPrinterCapability(printerId: int): print.PrinterCapability
 ```
 
-请求打印机支持的能力特性（如色彩模式、双面打印模式、纸张尺寸等）时调用，例如在打印设置界面中用户选择打印机后，系统需要获取该打印机支持的能力信息时触发此回调。开发者应在此回调中根据printerId查询并返回对应打印机的能力信息（print.PrinterCapability）。
+Called once to request the printer's capabilities.
 
 **Since:** 24
 
@@ -279,7 +279,7 @@ public onRequestPrinterCapability(printerId: int): print.PrinterCapability
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| printerId | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | 表示打印机ID，应为已连接的打印机，取值于打印机发现流程上报的有效打印机标识。 |
+| printerId | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | Indicates the information of printer. |
 
 **Return value:**
 
@@ -291,7 +291,7 @@ public onRequestPrinterCapability(printerId: int): print.PrinterCapability
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 202 | not system application<br>**Applicable version:** 10 - 23 |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | not system application<br>**Applicable version:** 10 - 23 |
 
 ## onStartDiscoverPrinter
 
@@ -299,7 +299,7 @@ public onRequestPrinterCapability(printerId: int): print.PrinterCapability
 onStartDiscoverPrinter(): void
 ```
 
-开始发现打印机时调用。开发者可在此回调中实现自己的打印机发现逻辑，可通过 [addPrinterToDiscovery](arkts-basicservices-print-addprintertodiscovery-f.md#addprintertodiscovery) 将发现的打印机信息上报给系统。
+Called once to start to discover the printers connected with the device.
 
 **Since:** 14
 
@@ -330,7 +330,7 @@ export default class HWPrintExtension extends PrintExtensionAbility {
 public onStartPrintJob(jobInfo: print.PrintJob): void
 ```
 
-开始打印任务时调用。开发者应在此回调中根据jobInfo中的任务信息处理打印操作，如解析打印任务参数并执行相应的打印流程。
+Called once to start print job.
 
 **Since:** 24
 
@@ -346,13 +346,13 @@ public onStartPrintJob(jobInfo: print.PrintJob): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| jobInfo | print.PrintJob | Yes | 表示打印任务的信息，包含任务ID、打印机ID、文档信息等详细配置和状态，用于指定要开始的打印任务。 |
+| jobInfo | print.PrintJob | Yes | Indicates the information of print job. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 202 | not system application<br>**Applicable version:** 10 - 23 |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | not system application<br>**Applicable version:** 10 - 23 |
 
 ## onStopDiscoverPrinter
 
@@ -360,7 +360,7 @@ public onStartPrintJob(jobInfo: print.PrintJob): void
 onStopDiscoverPrinter(): void
 ```
 
-停止发现打印机时调用。开发者应在此回调中停止打印机发现流程并释放相关资源。
+Called once to stop discovering the printer.
 
 **Since:** 14
 
@@ -391,7 +391,7 @@ export default class HWPrintExtension extends PrintExtensionAbility {
 context: PrintExtensionContext
 ```
 
-打印扩展能力上下文。
+Indicates print service extension ability context.
 
 **Type:** [PrintExtensionContext](arkts-basicservices-printextensioncontext-c.md)
 

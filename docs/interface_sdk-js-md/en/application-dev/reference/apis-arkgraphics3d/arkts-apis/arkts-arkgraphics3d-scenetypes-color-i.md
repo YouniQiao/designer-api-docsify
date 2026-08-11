@@ -1,6 +1,6 @@
 # Color
 
-定义颜色.
+Color in RGBA format. It consists of four components: red, green, blue, and alpha.
 
 **Since:** 12
 
@@ -16,7 +16,7 @@
 a: double
 ```
 
-颜色的A分量.
+Alpha component. The value range is [0, 1].
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：double
 
@@ -34,7 +34,7 @@ a: double
 b: double
 ```
 
-颜色的B分量.
+Blue component. The value range is [0, 1].
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：double
 
@@ -52,7 +52,7 @@ b: double
 g: double
 ```
 
-颜色的G分量.
+Green component. The value range is [0, 1].
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：double
 
@@ -70,7 +70,7 @@ g: double
 r: double
 ```
 
-颜色的R分量.
+Red component. The value range is [0, 1].
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：double
 

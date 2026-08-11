@@ -1,11 +1,5 @@
 # ArcAlphabetIndexer
 
-## 导入模块
-
-```TypeScript
-import { ArcAlphabetIndexerAttribute, ArcAlphabetIndexer } from 'kits/@kit.ArkUI';
-```
-
 ## ArcAlphabetIndexer
 
 ```TypeScript
@@ -38,7 +32,7 @@ export declare function ArcAlphabetIndexer(
 
 | 类型 | 说明 |
 | --- | --- |
-| [ArcAlphabetIndexerAttribute](arkts-arkui-arkui-arcalphabetindexer-arcalphabetindexerattribute-c.md) | ArcAlphabetIndexer实例对象。 |
+| [ArcAlphabetIndexerAttribute](arkts-arkui-arkui-arcalphabetindexer-arcalphabetindexerattribute-i.md) | ArcAlphabetIndexer实例对象。 |
 
 
 ## ArcAlphabetIndexer
@@ -73,5 +67,5 @@ export declare function ArcAlphabetIndexer(
 
 | 类型 | 说明 |
 | --- | --- |
-| [ArcAlphabetIndexerAttribute](arkts-arkui-arkui-arcalphabetindexer-arcalphabetindexerattribute-c.md) |  |
+| [ArcAlphabetIndexerAttribute](arkts-arkui-arkui-arcalphabetindexer-arcalphabetindexerattribute-i.md) |  |
 

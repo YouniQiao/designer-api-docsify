@@ -1,11 +1,5 @@
 # getSystemLanguage
 
-## 导入模块
-
-```TypeScript
-import { i18n } from 'kits/@kit.LocalizationKit';
-```
-
 ## getSystemLanguage
 
 ```TypeScript

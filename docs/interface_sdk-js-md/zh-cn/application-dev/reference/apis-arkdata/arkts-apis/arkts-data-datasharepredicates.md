@@ -6,7 +6,9 @@
 
 > **说明：**
 > 谓词(DataSharePredicates)的使用场景如下：
-> - 用于在媒体文件管理服务作为检索条件使用，参考相册管理模块检索条件[FetchOptions](**起始版本：** 10
+> - 用于在媒体文件管理服务作为检索条件使用，参考相册管理模块检索条件[FetchOptions]{@link
+
+**起始版本：** 10
 
 **ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
 
@@ -15,12 +17,6 @@
 <!--Device-unnamed-declare namespace dataSharePredicates--><!--Device-unnamed-declare namespace dataSharePredicates-End-->
 
 **系统能力：** SystemCapability.DistributedDataManager.DataShare.Core
-
-## 导入模块
-
-```TypeScript
-import { dataSharePredicates ) from 'kits/@kit.ArkData';
-```
 
 ## 汇总
 

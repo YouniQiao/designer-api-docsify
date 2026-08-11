@@ -12,7 +12,7 @@ import { display } from 'kits/@kit.ArkUI';
 function on(type: 'privateModeChange', callback: Callback<boolean>): void
 ```
 
-开启屏幕隐私模式变化的监听。当屏幕前台有隐私窗口，则屏幕处于隐私模式，屏幕中的隐私窗口内容无法被截屏或录屏。
+Subscribes to privacy mode changes of this display. When there is a privacy window in the foreground of the display, the display is in privacy mode, and the content in the privacy window cannot be captured or recorded.
 
 **Since:** 10
 
@@ -28,15 +28,15 @@ function on(type: 'privateModeChange', callback: Callback<boolean>): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'privateModeChange' | Yes | 监听事件，固定为'privateModeChange'，表示屏幕隐私模式状态发生变化。 |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;boolean&gt; | Yes | 回调函数。表示屏幕隐私模式是否改变。true表示屏幕由非隐私窗口模式变为隐私模式，false表示屏幕由隐私模式变为非隐私模式。 |
+| type | 'privateModeChange' | Yes | Event type. The value is fixed at **'privateModeChange'**, indicating that the privacy mode of the display is changed. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;boolean&gt; | Yes | Callback used to return whether the privacy mode of the display is changed. **true** if changed, **false** otherwise. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. |
-| 202 | Permission verification failed. A non-system application calls a system API. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
 
 ## Examples
 
@@ -47,10 +47,9 @@ let callback: Callback<boolean> = (data: boolean) => {
   console.info(`Listening enabled. Data: ${data}`);
 };
 try {
-  // Register the callback for listening to privacy mode changes.
-  display.on('privateModeChange', callback);
+  display.on("privateModeChange", callback);
 } catch (exception) {
-  console.error(`Failed to register callback. Code: ${exception.code}, message: ${exception.message}`);
+  console.error(`Failed to register callback. Code: ${exception.code} , message : ${exception.message}`);
 }
 ```
 

@@ -1,6 +1,6 @@
 # Event
 
-事件类。
+Defines the event.
 
 **Since:** 7
 
@@ -22,7 +22,7 @@ import { MessageEvents, PostMessageOptions, MessageEvent, Priority, WorkerEventT
 readonly timeStamp: number
 ```
 
-事件创建时的时间戳（精度为毫秒），目前不支持。
+Timestamp (accurate to millisecond) when the event is created. This parameter is not supported yet.
 
 **Type:** number
 
@@ -42,7 +42,7 @@ readonly timeStamp: number
 readonly type: string
 ```
 
-指定事件的类型。
+Type of the Event.
 
 **Type:** string
 

@@ -18,7 +18,7 @@ readonly targets: Record<string, double>
 
 形变目标名称和权重
 
-**类型：** ArkTS-Dyn: [Record](../../apis-default/arkts-apis/arkts-record-t.md)&lt;string, number&gt;  <br>ArkTS-Sta：[Record](../../apis-default/arkts-apis/arkts-record-t.md)&lt;string, double&gt;
+**类型：** ArkTS-Dyn: Record&lt;string, number&gt;  <br>ArkTS-Sta：Record&lt;string, double&gt;
 
 **起始版本：** 20
 

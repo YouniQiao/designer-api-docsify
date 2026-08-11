@@ -1,6 +1,6 @@
 # LocaleItem (System API)
 
-语言或国家地区的组合信息。
+Represents the locale information, which consists of the language, script, and country/region.
 
 **Since:** 23
 
@@ -24,7 +24,7 @@ import { i18n } from 'kits/@kit.LocalizationKit';
 displayName: string
 ```
 
-id在SystemLocaleManager的指定区域下的表示。
+Representation of ID in the specified locale in SystemLocaleManager.
 
 **Type:** string
 
@@ -44,7 +44,7 @@ id在SystemLocaleManager的指定区域下的表示。
 id: string
 ```
 
-语言代码或国家地区代码，如"zh"、"CN"。
+Language code or country/region code, for example, "zh" or "CN".
 
 **Type:** string
 
@@ -64,7 +64,7 @@ id: string
 localName?: string
 ```
 
-id的本地名称。只有在表示语言相关信息时才存在该选项。
+Local name of the ID.
 
 **Type:** string
 
@@ -84,7 +84,7 @@ id的本地名称。只有在表示语言相关信息时才存在该选项。
 suggestionType: SuggestionType
 ```
 
-语言或国家地区推荐类型。
+Language or country/region suggestion type.
 
 **Type:** [SuggestionType](arkts-localization-i18n-suggestiontype-e-sys.md)
 

@@ -1,7 +1,9 @@
 # Calendar
 
-下列API示例中需先通过  
-[createCalendar()](arkts-calendar-calendarmanager-calendarmanager-i.md#createcalendar)、[getCalendar()](arkts-calendar-calendarmanager-calendarmanager-i.md#getcalendar)中任一方法获取Calendar对象，再通过此对象调用对应方法，对该Calendar下的日程进行创建、删除、修改、查询等操作。
+In the following API examples, you need to use   
+[createCalendar()](arkts-calendar-calendarmanager-calendarmanager-i.md#createcalendar) or [getCalendar()](arkts-calendar-calendarmanager-calendarmanager-i.md#getcalendar) to obtain 
+
+a **Calendar** object before calling related APIs.
 
 **Since:** 10
 
@@ -23,14 +25,15 @@ import { calendarManager } from 'kits/@kit.CalendarKit';
 addEvent(event: Event): Promise<number>
 ```
 
-创建日程，入参Event不填日程id、instanceStartTime和instanceEndTime，使用Promise异步回调。
+Adds an event, with no event ID, instanceStartTime, and instanceEndTime specified in Event.This API uses a promise to return the result.
 
 **Since:** 10
 
 **ArkTS mode:** ArkTS-Dyn only, since version 10.
 
 **Required permissions:** 
-- API version 23+: ohos.permission.WRITE_CALENDAR or ohos.permission.WRITE_WHOLE_CALENDAR
+- API version 21+: ohos.permission.WRITE_CALENDAR or ohos.permission.WRITE_WHOLE_CALENDAR
+- API version 10-20: ohos.permission.WRITE_CALENDAR
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -42,28 +45,26 @@ addEvent(event: Event): Promise<number>
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| event | [Event](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-event-c.md) | Yes | Event对象。 |
+| event | [Event](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-event-c.md) | Yes | Event object. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;number&gt; | Promise对象，返回日程的id，id大于0。 |
+| Promise&lt;number&gt; | Promise used to return the event ID. The ID is greater than 0. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 23900004 | 内部程序错误，可能原因: &lt;br&gt;1. dataShare数据库执行错误； &lt;br&gt;2. 空指针错误； &lt;br&gt;3. 数据解析错误。<br>**Applicable version:** 23 and later |
-| 201 | 权限校验失败。<br>**Applicable version:** 23 and later |
+| [23900004](../errorcode-calendarManager.md#23900004-internal-program-error) | Internal program errors. Possible causes: &lt;br&gt;1. dataShare database execution error; &lt;br&gt;2. null pointer error; &lt;br&gt;3. Data parsing error.<br>**Applicable version:** 23 and later |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied.<br>**Applicable version:** 23 and later |
 
 ## Examples
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
-// Configure the EntryAbility file based on the sample code in calendarManager.getCalendarManager.
 import { calendarMgr } from '../entryability/EntryAbility';
-import { calendarManager } from '@kit.CalendarKit';
 
 let calendar : calendarManager.Calendar | undefined = undefined;
 const date = new Date();
@@ -74,7 +75,6 @@ const event: calendarManager.Event = {
 };
 calendarMgr?.getCalendar((err: BusinessError, data:calendarManager.Calendar) => {
   if (err) {
-    // Check whether the permission has been successfully applied for.
     console.error(`Failed to get calendar. Code: ${err.code}, message: ${err.message}`);
   } else {
     console.info(`Succeeded in getting calendar, data -> ${JSON.stringify(data)}`);
@@ -82,7 +82,6 @@ calendarMgr?.getCalendar((err: BusinessError, data:calendarManager.Calendar) => 
     calendar.addEvent(event).then((data: number) => {
       console.info(`Succeeded in adding event, id -> ${data}`);
     }).catch((err: BusinessError) => {
-      // Check whether the permission is granted or whether the parameters are correct.
       console.error(`Failed to addEvent. Code: ${err.code}, message: ${err.message}`);
     });
   }
@@ -95,14 +94,15 @@ calendarMgr?.getCalendar((err: BusinessError, data:calendarManager.Calendar) => 
 addEvent(event: Event, callback: AsyncCallback<number>): void
 ```
 
-创建日程，入参Event不填日程id、instanceStartTime和instanceEndTime，使用callback异步回调。
+Adds an event, with no event ID, instanceStartTime, and instanceEndTime specified in Event.This API uses an asynchronous callback to return the result.
 
 **Since:** 10
 
 **ArkTS mode:** ArkTS-Dyn only, since version 10.
 
 **Required permissions:** 
-- API version 23+: ohos.permission.WRITE_CALENDAR or ohos.permission.WRITE_WHOLE_CALENDAR
+- API version 21+: ohos.permission.WRITE_CALENDAR or ohos.permission.WRITE_WHOLE_CALENDAR
+- API version 10-20: ohos.permission.WRITE_CALENDAR
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -114,23 +114,21 @@ addEvent(event: Event, callback: AsyncCallback<number>): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| event | [Event](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-event-c.md) | Yes | Event对象。 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;number&gt; | Yes | 回调函数，当添加日程成功时，err为undefined，data为日程id；否则为错误对象。 |
+| event | [Event](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-event-c.md) | Yes | Event object. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;number&gt; | Yes | Callback used to return the event ID. The event ID is the unique identifier of an event and is the auto-increment primary key of the database. If the value is less than 0, the event creation fails; if the value is greater than 0, the event creation succeeds. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 23900004 | 内部程序错误，可能原因: &lt;br&gt;1. dataShare数据库执行错误； &lt;br&gt;2. 空指针错误； &lt;br&gt;3. 数据解析错误。<br>**Applicable version:** 23 and later |
-| 201 | 权限校验失败。<br>**Applicable version:** 23 and later |
+| [23900004](../errorcode-calendarManager.md#23900004-internal-program-error) | Internal program errors. Possible causes: &lt;br&gt;1. dataShare database execution error; &lt;br&gt;2. null pointer error; &lt;br&gt;3. Data parsing error.<br>**Applicable version:** 23 and later |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied.<br>**Applicable version:** 23 and later |
 
 ## Examples
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
-// Configure the EntryAbility file based on the sample code in calendarManager.getCalendarManager.
 import { calendarMgr } from '../entryability/EntryAbility';
-import { calendarManager } from '@kit.CalendarKit';
 
 let calendar : calendarManager.Calendar | undefined = undefined;
 const date = new Date();
@@ -144,14 +142,12 @@ calendarMgr?.getCalendar().then((data: calendarManager.Calendar) => {
   calendar = data;
   calendar.addEvent(event, (err: BusinessError, data: number): void => {
     if (err) {
-      // Check whether the permission is granted or whether the parameters are correct.
       console.error(`Failed to addEvent. Code: ${err.code}, message: ${err.message}`);
     } else {
       console.info(`Succeeded in adding event, id -> ${data}`);
     }
   });
 }).catch((err: BusinessError) => {
-  // Check whether the permission has been successfully applied for.
   console.error(`Failed to get calendar. Code: ${err.code}, message: ${err.message}`);
 });
 ```
@@ -162,14 +158,15 @@ calendarMgr?.getCalendar().then((data: calendarManager.Calendar) => {
 addEvents(events: Event[]): Promise<void>
 ```
 
-批量创建日程，入参Event不填日程id、instanceStartTime和instanceEndTime，使用Promise异步回调。
+Adds events in batches, with no event ID, instanceStartTime, and instanceEndTime specified in Event.This API uses a promise to return the result.
 
 **Since:** 10
 
 **ArkTS mode:** ArkTS-Dyn only, since version 10.
 
 **Required permissions:** 
-- API version 23+: ohos.permission.WRITE_CALENDAR or ohos.permission.WRITE_WHOLE_CALENDAR
+- API version 21+: ohos.permission.WRITE_CALENDAR or ohos.permission.WRITE_WHOLE_CALENDAR
+- API version 10-20: ohos.permission.WRITE_CALENDAR
 
 <!--Device-Calendar-addEvents(events: Event[]): Promise<void>--><!--Device-Calendar-addEvents(events: Event[]): Promise<void>-End-->
 
@@ -179,28 +176,26 @@ addEvents(events: Event[]): Promise<void>
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| events | [Event](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-event-c.md)[] | Yes | Event对象数组。 |
+| events | [Event](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-event-c.md)[] | Yes | Array of Event objects. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise对象，无返回结果。 |
+| Promise&lt;void&gt; | Promise that returns no value. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 23900004 | 内部程序错误，可能原因: &lt;br&gt;1. dataShare数据库执行错误； &lt;br&gt;2. 空指针错误； &lt;br&gt;3. 数据解析错误。<br>**Applicable version:** 23 and later |
-| 201 | 权限校验失败。<br>**Applicable version:** 23 and later |
+| [23900004](../errorcode-calendarManager.md#23900004-internal-program-error) | Internal program errors. Possible causes: &lt;br&gt;1. dataShare database execution error; &lt;br&gt;2. null pointer error; &lt;br&gt;3. Data parsing error.<br>**Applicable version:** 23 and later |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied.<br>**Applicable version:** 23 and later |
 
 ## Examples
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
-// Configure the EntryAbility file based on the sample code in calendarManager.getCalendarManager.
 import { calendarMgr } from '../entryability/EntryAbility';
-import { calendarManager } from '@kit.CalendarKit';
 
 let calendar : calendarManager.Calendar | undefined = undefined;
 const date = new Date();
@@ -218,15 +213,13 @@ const events: calendarManager.Event[] = [
 ];
 calendarMgr?.getCalendar((err: BusinessError, data:calendarManager.Calendar) => {
   if (err) {
-    // Check whether the permission has been successfully applied for.
     console.error(`Failed to get calendar. Code: ${err.code}, message: ${err.message}`);
   } else {
     console.info(`Succeeded in getting calendar, data -> ${JSON.stringify(data)}`);
     calendar = data;
     calendar.addEvents(events).then(() => {
-      console.info('Succeeded in adding events');
+      console.info("Succeeded in adding events");
     }).catch((err: BusinessError) => {
-      // Check whether the permission is granted or whether the parameters are correct.
       console.error(`Failed to add event. Code: ${err.code}, message: ${err.message}`);
     });
   }
@@ -239,14 +232,15 @@ calendarMgr?.getCalendar((err: BusinessError, data:calendarManager.Calendar) => 
 addEvents(events: Event[], callback: AsyncCallback<void>): void
 ```
 
-批量创建日程，入参Event不填日程id、instanceStartTime和instanceEndTime，使用callback异步回调。
+Adds events in batches, with no event ID, instanceStartTime, and instanceEndTime specified in Event.This API uses an asynchronous callback to return the result.
 
 **Since:** 10
 
 **ArkTS mode:** ArkTS-Dyn only, since version 10.
 
 **Required permissions:** 
-- API version 23+: ohos.permission.WRITE_CALENDAR or ohos.permission.WRITE_WHOLE_CALENDAR
+- API version 21+: ohos.permission.WRITE_CALENDAR or ohos.permission.WRITE_WHOLE_CALENDAR
+- API version 10-20: ohos.permission.WRITE_CALENDAR
 
 <!--Device-Calendar-addEvents(events: Event[], callback: AsyncCallback<void>): void--><!--Device-Calendar-addEvents(events: Event[], callback: AsyncCallback<void>): void-End-->
 
@@ -256,23 +250,21 @@ addEvents(events: Event[], callback: AsyncCallback<void>): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| events | [Event](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-event-c.md)[] | Yes | Event对象数组。 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | 回调函数，当添加日程成功时，err为undefined；否则为错误对象。 |
+| events | [Event](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-event-c.md)[] | Yes | Array of Event objects. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 23900004 | 内部程序错误，可能原因: &lt;br&gt;1. dataShare数据库执行错误； &lt;br&gt;2. 空指针错误； &lt;br&gt;3. 数据解析错误。<br>**Applicable version:** 23 and later |
-| 201 | 权限校验失败。<br>**Applicable version:** 23 and later |
+| [23900004](../errorcode-calendarManager.md#23900004-internal-program-error) | Internal program errors. Possible causes: &lt;br&gt;1. dataShare database execution error; &lt;br&gt;2. null pointer error; &lt;br&gt;3. Data parsing error.<br>**Applicable version:** 23 and later |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied.<br>**Applicable version:** 23 and later |
 
 ## Examples
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
-// Configure the EntryAbility file based on the sample code in calendarManager.getCalendarManager.
 import { calendarMgr } from '../entryability/EntryAbility';
-import { calendarManager } from '@kit.CalendarKit';
 
 let calendar : calendarManager.Calendar | undefined = undefined;
 const date = new Date();
@@ -290,17 +282,15 @@ const events: calendarManager.Event[] = [
 ];
 calendarMgr?.getCalendar((err: BusinessError, data:calendarManager.Calendar) => {
   if (err) {
-    // Check whether the permission has been successfully applied for.
     console.error(`Failed to get calendar. Code: ${err.code}, message: ${err.message}`);
   } else {
     console.info(`Succeeded in getting calendar, data -> ${JSON.stringify(data)}`);
     calendar = data;
     calendar.addEvents(events, (err: BusinessError) => {
       if (err) {
-        // Check whether the permission is granted or whether the parameters are correct.
         console.error(`Failed to add events. Code: ${err.code}, message: ${err.message}`);
       } else {
-        console.info('Succeeded in adding events');
+        console.info("Succeeded in adding events");
       }
     });
   }
@@ -313,7 +303,7 @@ calendarMgr?.getCalendar((err: BusinessError, data:calendarManager.Calendar) => 
 deleteEvent(id: number): Promise<void>
 ```
 
-删除指定id的日程，使用Promise异步回调。
+Deletes an event with the specified ID. This API uses a promise to return the result.
 
 **Since:** 10
 
@@ -327,21 +317,19 @@ deleteEvent(id: number): Promise<void>
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| id | number | Yes | 日程id。 |
+| id | number | Yes | Event ID. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise对象，无返回结果。 |
+| Promise&lt;void&gt; | Promise that returns no value. |
 
 ## Examples
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
-// Configure the EntryAbility file based on the sample code in calendarManager.getCalendarManager.
 import { calendarMgr } from '../entryability/EntryAbility';
-import { calendarManager } from '@kit.CalendarKit';
 
 let calendar : calendarManager.Calendar | undefined = undefined;
 let id: number = 0;
@@ -353,7 +341,6 @@ const event: calendarManager.Event = {
 };
 calendarMgr?.getCalendar(async (err: BusinessError, data:calendarManager.Calendar) => {
   if (err) {
-    // Check whether the permission has been successfully applied for.
     console.error(`Failed to get calendar. Code: ${err.code}, message: ${err.message}`);
   } else {
     console.info(`Succeeded in getting calendar data->${JSON.stringify(data)}`);
@@ -362,13 +349,11 @@ calendarMgr?.getCalendar(async (err: BusinessError, data:calendarManager.Calenda
       console.info(`Succeeded in adding event, id -> ${data}`);
       id = data;
     }).catch((err: BusinessError) => {
-      // Check whether the permission is granted or whether the parameters are correct.
       console.error(`Failed to add event. Code: ${err.code}, message: ${err.message}`);
     });
     calendar.deleteEvent(id).then(() => {
-      console.info('Succeeded in deleting event');
+      console.info("Succeeded in deleting event");
     }).catch((err: BusinessError) => {
-      // Check whether the permission is granted or whether the parameters are correct.
       console.error(`Failed to delete event. Code: ${err.code}, message: ${err.message}`);
     });
   }
@@ -381,7 +366,7 @@ calendarMgr?.getCalendar(async (err: BusinessError, data:calendarManager.Calenda
 deleteEvent(id: number, callback: AsyncCallback<void>): void
 ```
 
-删除指定id的日程，使用callback异步回调。
+Deletes an event with the specified ID. This API uses an asynchronous callback to return the result.
 
 **Since:** 10
 
@@ -397,16 +382,14 @@ deleteEvent(id: number, callback: AsyncCallback<void>): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| id | number | Yes | 日程id，传入的日程id为整数，表示已创建日程的id，是日程的唯一标识符。 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | 回调函数，当删除日程成功时，err为undefined；否则为错误对象。 |
+| id | number | Yes | Event ID, which is the unique identifier of an event. If the input event ID is an integer, the event is created. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. |
 
 ## Examples
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
-// Configure the EntryAbility file based on the sample code in calendarManager.getCalendarManager.
 import { calendarMgr } from '../entryability/EntryAbility';
-import { calendarManager } from '@kit.CalendarKit';
 
 let calendar : calendarManager.Calendar | undefined = undefined;
 let id: number = 0;
@@ -418,7 +401,6 @@ const event: calendarManager.Event = {
 };
 calendarMgr?.getCalendar(async (err: BusinessError, data:calendarManager.Calendar) => {
   if (err) {
-    // Check whether the permission has been successfully applied for.
     console.error(`Failed to get calendar. Code: ${err.code}, message: ${err.message}`);
   } else {
     console.info(`Succeeded in getting calendar, data -> ${JSON.stringify(data)}`);
@@ -428,14 +410,12 @@ calendarMgr?.getCalendar(async (err: BusinessError, data:calendarManager.Calenda
       id = data;
       calendar?.deleteEvent(id, (err: BusinessError) => {
         if (err) {
-          // Check whether the parameters are correct.
           console.error(`Failed to delete event. Code: ${err.code}, message: ${err.message}`);
         } else {
-          console.info('Succeeded in deleting event');
+          console.info(`Succeeded in deleting event`);
         }
       });
     }).catch((err: BusinessError) => {
-      // Check whether the permission is granted or whether the parameters are correct.
       console.error(`Failed to add event. Code: ${err.code}, message: ${err.message}`);
     });
   }
@@ -448,7 +428,7 @@ calendarMgr?.getCalendar(async (err: BusinessError, data:calendarManager.Calenda
 deleteEvents(ids: number[]): Promise<void>
 ```
 
-根据日程id，批量删除日程，使用Promise异步回调。
+Deletes a batch of events with the specified IDs. This API uses a promise to return the result.
 
 **Since:** 10
 
@@ -462,21 +442,19 @@ deleteEvents(ids: number[]): Promise<void>
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| ids | number[] | Yes | 日程id数组。 |
+| ids | number[] | Yes | Array of event IDs. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise对象，无返回结果。 |
+| Promise&lt;void&gt; | Promise that returns no value. |
 
 ## Examples
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
-// Configure the EntryAbility file based on the sample code in calendarManager.getCalendarManager.
 import { calendarMgr } from '../entryability/EntryAbility';
-import { calendarManager } from '@kit.CalendarKit';
 
 let calendar : calendarManager.Calendar | undefined = undefined;
 let id1: number = 0;
@@ -494,7 +472,6 @@ const event2: calendarManager.Event = {
 };
 calendarMgr?.getCalendar(async (err: BusinessError, data:calendarManager.Calendar) => {
   if (err) {
-    // Check whether the permission has been successfully applied for.
     console.error(`Failed to get calendar. Code: ${err.code}, message: ${err.message}`);
   } else {
     console.info(`Succeeded in getting calendar, data -> ${JSON.stringify(data)}`);
@@ -503,20 +480,17 @@ calendarMgr?.getCalendar(async (err: BusinessError, data:calendarManager.Calenda
       console.info(`Succeeded in adding event, id -> ${data}`);
       id1 = data;
     }).catch((err: BusinessError) => {
-      // Check whether the permission is granted or whether the parameters are correct.
       console.error(`Failed to add event. Code: ${err.code}, message: ${err.message}`);
     });
     await calendar.addEvent(event2).then((data: number) => {
       console.info(`Succeeded in adding event, id -> ${data}`);
       id2 = data;
     }).catch((err: BusinessError) => {
-      // Check whether the parameters are correct.
       console.error(`Failed to add event. Code: ${err.code}, message: ${err.message}`);
     });
     calendar.deleteEvents([id1, id2]).then(() => {
-      console.info('Succeeded in deleting events');
+      console.info("Succeeded in deleting events");
     }).catch((err: BusinessError) => {
-      // Check whether the parameters are correct.
       console.error(`Failed to delete events. Code: ${err.code}, message: ${err.message}`);
     });
   }
@@ -529,7 +503,7 @@ calendarMgr?.getCalendar(async (err: BusinessError, data:calendarManager.Calenda
 deleteEvents(ids: number[], callback: AsyncCallback<void>): void
 ```
 
-根据日程id，批量删除日程，使用callback异步回调。
+Deletes a batch of events with the specified IDs. This API uses an asynchronous callback to return the result.
 
 **Since:** 10
 
@@ -545,16 +519,14 @@ deleteEvents(ids: number[], callback: AsyncCallback<void>): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| ids | number[] | Yes | 日程id数组。 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | 回调函数，当删除多个日程成功时，err为undefined；否则为错误对象。 |
+| ids | number[] | Yes | Array of event IDs. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. |
 
 ## Examples
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
-// Configure the EntryAbility file based on the sample code in calendarManager.getCalendarManager.
 import { calendarMgr } from '../entryability/EntryAbility';
-import { calendarManager } from '@kit.CalendarKit';
 
 let calendar : calendarManager.Calendar | undefined = undefined;
 let id1: number = 0;
@@ -572,7 +544,6 @@ const event2: calendarManager.Event = {
 };
 calendarMgr?.getCalendar(async (err: BusinessError, data:calendarManager.Calendar) => {
   if (err) {
-    // Check whether the permission has been successfully applied for.
     console.error(`Failed to get calendar. Code: ${err.code}, message: ${err.message}`);
   } else {
     console.info(`Succeeded in getting calendar, data -> ${JSON.stringify(data)}`);
@@ -581,22 +552,19 @@ calendarMgr?.getCalendar(async (err: BusinessError, data:calendarManager.Calenda
       console.info(`Succeeded in adding event, id -> ${data}`);
       id1 = data;
     }).catch((err: BusinessError) => {
-      // Check whether the permission is granted or whether the parameters are correct.
       console.error(`Failed to add event. Code: ${err.code}, message: ${err.message}`);
     });
     await calendar.addEvent(event2).then((data: number) => {
       console.info(`Succeeded in adding event, id -> ${data}`);
       id2 = data;
     }).catch((err: BusinessError) => {
-      // Check whether the parameters are correct.
       console.error(`Failed to add event. Code: ${err.code}, message: ${err.message}`);
     });
     calendar.deleteEvents([id1, id2], (err: BusinessError) => {
       if (err) {
-        // Check whether the parameters are correct.
         console.error(`Failed to delete events. Code: ${err.code}, message: ${err.message}`);
       } else {
-        console.info('Succeeded in deleting events');
+        console.info("Succeeded in deleting events");
       }
     });
   }
@@ -609,7 +577,7 @@ calendarMgr?.getCalendar(async (err: BusinessError, data:calendarManager.Calenda
 getAccount(): CalendarAccount
 ```
 
-获取日历账户信息。
+Obtains the calendar account information.
 
 **Since:** 10
 
@@ -623,20 +591,17 @@ getAccount(): CalendarAccount
 
 | Type | Description |
 | --- | --- |
-| [CalendarAccount](arkts-calendar-calendarmanager-calendaraccount-i.md) | 日历账户信息。 |
+| [CalendarAccount](arkts-calendar-calendarmanager-calendaraccount-i.md) | Calendar account information. |
 
 ## Examples
 
 ```TypeScript
-// Configure the EntryAbility file based on the sample code in calendarManager.getCalendarManager.
 import { calendarMgr } from '../entryability/EntryAbility';
 import { BusinessError } from '@kit.BasicServicesKit';
-import { calendarManager } from '@kit.CalendarKit';
 
 let calendar : calendarManager.Calendar | undefined = undefined;
 calendarMgr?.getCalendar((err: BusinessError, data:calendarManager.Calendar) => {
   if (err) {
-    // Check whether the permission has been successfully applied for.
     console.error(`Failed to get calendar. Code: ${err.code}, message: ${err.message}`);
   } else {
     console.info(`Succeeded in getting calendar, data -> ${JSON.stringify(data)}`);
@@ -653,7 +618,7 @@ calendarMgr?.getCalendar((err: BusinessError, data:calendarManager.Calendar) => 
 getConfig(): CalendarConfig
 ```
 
-获取日历配置信息。
+Obtains the calendar configuration information.
 
 **Since:** 10
 
@@ -667,20 +632,17 @@ getConfig(): CalendarConfig
 
 | Type | Description |
 | --- | --- |
-| [CalendarConfig](arkts-calendar-calendarmanager-calendarconfig-i.md) | 日历配置信息。 |
+| [CalendarConfig](arkts-calendar-calendarmanager-calendarconfig-i.md) | Calendar configuration information. |
 
 ## Examples
 
 ```TypeScript
-// Configure the EntryAbility file based on the sample code in calendarManager.getCalendarManager.
 import { calendarMgr } from '../entryability/EntryAbility';
 import { BusinessError } from '@kit.BasicServicesKit';
-import { calendarManager } from '@kit.CalendarKit';
 
 let calendar : calendarManager.Calendar | undefined = undefined;
 calendarMgr?.getCalendar((err: BusinessError, data:calendarManager.Calendar) => {
   if (err) {
-    // Check whether the permission has been successfully applied for.
     console.error(`Failed to get calendar. Code: ${err.code}, message: ${err.message}`);
   } else {
     console.info(`Succeeded in getting calendar, data -> ${JSON.stringify(data)}`);
@@ -697,14 +659,15 @@ calendarMgr?.getCalendar((err: BusinessError, data:calendarManager.Calendar) => 
 getEvents(eventFilter?: EventFilter, eventKey?: (keyof Event)[]): Promise<Event[]>
 ```
 
-获取Calendar下符合查询条件的Event，使用Promise异步回调。只有一个入参时，参数必须为查询条件，对应参数类型为EventFilter。当没有入参时，可查询指定日历账户下的所有日程。
+Obtains all events in a calendar that match the filter criteria. This API uses a promise to return the result.If there is only one input parameter, the filter criteria, corresponding to the type EventFilter, must be set as the parameter.If no input parameter is specified, all events under the specified calendar account can be queried.
 
 **Since:** 10
 
 **ArkTS mode:** ArkTS-Dyn only, since version 10.
 
 **Required permissions:** 
-- API version 23+: ohos.permission.READ_CALENDAR or ohos.permission.READ_WHOLE_CALENDAR
+- API version 21+: ohos.permission.READ_CALENDAR or ohos.permission.READ_WHOLE_CALENDAR
+- API version 10-20: ohos.permission.READ_CALENDAR
 
 <!--Device-Calendar-getEvents(eventFilter?: EventFilter, eventKey?: (keyof Event)[]): Promise<Event[]>--><!--Device-Calendar-getEvents(eventFilter?: EventFilter, eventKey?: (keyof Event)[]): Promise<Event[]>-End-->
 
@@ -714,29 +677,27 @@ getEvents(eventFilter?: EventFilter, eventKey?: (keyof Event)[]): Promise<Event[
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| eventFilter | [EventFilter](arkts-calendar-calendarmanager-eventfilter-c.md) | No | 查询条件。 |
-| eventKey | (keyof Event)[] | No | 查询字段。API version 20之前，不填时默认查询字段包括id、type、title、startTime、endTime、isAllDay、 description、timeZone、location、service、attendee、reminderTime；从API version 20开始，不填时默认查询字段包括id、type、title、startTime、 endTime、isAllDay、description、timeZone、location、service、attendee、reminderTime、identifier。若查询字段为空，则不返回该字段。 |
+| eventFilter | [EventFilter](arkts-calendar-calendarmanager-eventfilter-c.md) | No | Filter criteria. |
+| eventKey | (keyof Event)[] | No | Filter field. For versions earlier than API version 20, the default fields to be obtained include id, type, title, startTime, endTime, isAllDay, description, timeZone, location, service, attendee, and reminderTime if this parameter is left empty. Since API version 20, the default fields to be obtained include id, type, title, startTime, endTime, isAllDay, description, timeZone, location, service, attendee, reminderTime, and identifier if this parameter is left empty. The field is not returned if it is empty. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;Event[]&gt; | Promise对象，返回的是Event对象数组。 |
+| Promise&lt;Event[]&gt; | Promise used to return the result, which is an array of Event objects. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 23900004 | 内部程序错误，可能原因: &lt;br&gt;1. dataShare数据库执行错误； &lt;br&gt;2. 空指针错误； &lt;br&gt;3. 数据解析错误。<br>**Applicable version:** 23 and later |
-| 201 | 权限校验失败。<br>**Applicable version:** 23 and later |
+| [23900004](../errorcode-calendarManager.md#23900004-internal-program-error) | Internal program errors. Possible causes: &lt;br&gt;1. dataShare database execution error; &lt;br&gt;2. null pointer error; &lt;br&gt;3. Data parsing error.<br>**Applicable version:** 23 and later |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied.<br>**Applicable version:** 23 and later |
 
 ## Examples
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
-// Configure the EntryAbility file based on the sample code in calendarManager.getCalendarManager.
 import { calendarMgr } from '../entryability/EntryAbility';
-import { calendarManager } from '@kit.CalendarKit';
 
 let calendar : calendarManager.Calendar | undefined = undefined;
 const date = new Date();
@@ -748,7 +709,6 @@ const event: calendarManager.Event = {
 };
 calendarMgr?.getCalendar(async (err: BusinessError, data:calendarManager.Calendar) => {
   if (err) {
-    // Check whether the permission has been successfully applied for.
     console.error(`Failed to get calendar. Code: ${err.code}, message: ${err.message}`);
   } else {
     console.info(`Succeeded in getting calendar, data -> ${JSON.stringify(data)}`);
@@ -756,7 +716,6 @@ calendarMgr?.getCalendar(async (err: BusinessError, data:calendarManager.Calenda
     await calendar.addEvent(event).then((data: number) => {
       console.info(`Succeeded in adding event, id -> ${data}`);
     }).catch((err: BusinessError) => {
-      // Check whether the permission is granted or whether the parameters are correct.
       console.error(`Failed to add event. Code: ${err.code}, message: ${err.message}`);
     });
     // Perform fuzzy query based on MyEvent. If an event of the MyEvent1 type exists, the event can also be queried.
@@ -764,7 +723,6 @@ calendarMgr?.getCalendar(async (err: BusinessError, data:calendarManager.Calenda
     calendar.getEvents(filter).then((data: calendarManager.Event[]) => {
       console.info(`Succeeded in getting events, data -> ${JSON.stringify(data)}`);
     }).catch((err: BusinessError) => {
-      // Check whether the parameters are correct.
       console.error(`Failed to get events. Code: ${err.code}, message: ${err.message}`);
     });
   }
@@ -777,14 +735,15 @@ calendarMgr?.getCalendar(async (err: BusinessError, data:calendarManager.Calenda
 getEvents(eventFilter: EventFilter, eventKey: (keyof Event)[], callback: AsyncCallback<Event[]>):void
 ```
 
-获取Calendar下符合查询条件的Event，使用callback异步回调。
+Obtains all events in a calendar that match the filter criteria. This API uses an asynchronous callback to return the result.
 
 **Since:** 10
 
 **ArkTS mode:** ArkTS-Dyn only, since version 10.
 
 **Required permissions:** 
-- API version 23+: ohos.permission.READ_CALENDAR or ohos.permission.READ_WHOLE_CALENDAR
+- API version 21+: ohos.permission.READ_CALENDAR or ohos.permission.READ_WHOLE_CALENDAR
+- API version 10-20: ohos.permission.READ_CALENDAR
 
 <!--Device-Calendar-getEvents(eventFilter: EventFilter, eventKey: (keyof Event)[], callback: AsyncCallback<Event[]>):void--><!--Device-Calendar-getEvents(eventFilter: EventFilter, eventKey: (keyof Event)[], callback: AsyncCallback<Event[]>):void-End-->
 
@@ -794,24 +753,22 @@ getEvents(eventFilter: EventFilter, eventKey: (keyof Event)[], callback: AsyncCa
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| eventFilter | [EventFilter](arkts-calendar-calendarmanager-eventfilter-c.md) | Yes | 查询条件。 |
-| eventKey | (keyof Event)[] | Yes | 查询字段。 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Event[]&gt; | Yes | 回调函数，当查询日程成功时，err为undefined，data为查询到的Event数组；否则为错误对象。 |
+| eventFilter | [EventFilter](arkts-calendar-calendarmanager-eventfilter-c.md) | Yes | Filter criteria. |
+| eventKey | (keyof Event)[] | Yes | Filter field. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Event[]&gt; | Yes | Callback used to return an array of events. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 23900004 | 内部程序错误，可能原因: &lt;br&gt;1. dataShare数据库执行错误； &lt;br&gt;2. 空指针错误； &lt;br&gt;3. 数据解析错误。<br>**Applicable version:** 23 and later |
-| 201 | 权限校验失败。<br>**Applicable version:** 23 and later |
+| [23900004](../errorcode-calendarManager.md#23900004-internal-program-error) | Internal program errors. Possible causes: &lt;br&gt;1. dataShare database execution error; &lt;br&gt;2. null pointer error; &lt;br&gt;3. Data parsing error.<br>**Applicable version:** 23 and later |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied.<br>**Applicable version:** 23 and later |
 
 ## Examples
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
-// Configure the EntryAbility file based on the sample code in calendarManager.getCalendarManager.
 import { calendarMgr } from '../entryability/EntryAbility';
-import { calendarManager } from '@kit.CalendarKit';
 
 let calendar : calendarManager.Calendar | undefined = undefined;
 let id1: number = 0;
@@ -829,7 +786,6 @@ const event2: calendarManager.Event = {
 };
 calendarMgr?.getCalendar(async (err: BusinessError, data:calendarManager.Calendar) => {
   if (err) {
-    // Check whether the permission has been successfully applied for.
     console.error(`Failed to get calendar. Code: ${err.code}, message: ${err.message}`);
   } else {
     console.info(`Succeeded in getting calendar, data -> ${JSON.stringify(data)}`);
@@ -837,19 +793,16 @@ calendarMgr?.getCalendar(async (err: BusinessError, data:calendarManager.Calenda
     await calendar.addEvent(event1).then((data: number) => {
       console.info(`Succeeded in adding event, id -> ${data}`);
     }).catch((err: BusinessError) => {
-      // Check whether the permission is granted or whether the parameters are correct.
       console.error(`Failed to add event. Code: ${err.code}, message: ${err.message}`);
     });
     await calendar.addEvent(event2).then((data: number) => {
       console.info(`Succeeded in adding event, id -> ${data}`);
     }).catch((err: BusinessError) => {
-      // Check whether the parameters are correct.
       console.error(`Failed to add event. Code: ${err.code}, message: ${err.message}`);
     });
     const filter = calendarManager.EventFilter.filterById([id1, id2]);
     calendar.getEvents(filter, ['title', 'type', 'startTime', 'endTime'], (err: BusinessError, data: calendarManager.Event[]) => {
       if (err) {
-        // Check whether the parameters are correct.
         console.error(`Failed to get events. Code: ${err.code}, message: ${err.message}`);
       } else {
         console.info(`Succeeded in getting events, data -> ${JSON.stringify(data)}`);
@@ -865,14 +818,17 @@ calendarMgr?.getCalendar(async (err: BusinessError, data:calendarManager.Calenda
 getEvents(callback: AsyncCallback<Event[]>):void
 ```
 
-查询当前日历下所有日程，使用callback异步回调。API version 20之前，默认查询字段包括id、type、title、startTime、endTime、isAllDay、description、timeZone、location、service、attendee、reminderTime。从API version 20开始，默认查询字段包括id、type、title、startTime、endTime、isAllDay、description、timeZone、location、service、attendee、reminderTime、identifier。若查询字段为空，则不返回该字段。
+Obtains all events in the current calendar. This API uses an asynchronous callback to return the result.
+
+For versions earlier than API version 20, the default fields to be obtained include id, type, title, startTime,endTime, isAllDay, description, timeZone, location, service, attendee, and reminderTime. Since API version 20,the default fields to be obtained include id, type, title, startTime, endTime, isAllDay, description, timeZone,location, service, attendee, reminderTime, and identifier. The field is not returned if it is empty.
 
 **Since:** 10
 
 **ArkTS mode:** ArkTS-Dyn only, since version 10.
 
 **Required permissions:** 
-- API version 23+: ohos.permission.READ_CALENDAR or ohos.permission.READ_WHOLE_CALENDAR
+- API version 21+: ohos.permission.READ_CALENDAR or ohos.permission.READ_WHOLE_CALENDAR
+- API version 10-20: ohos.permission.READ_CALENDAR
 
 <!--Device-Calendar-getEvents(callback: AsyncCallback<Event[]>):void--><!--Device-Calendar-getEvents(callback: AsyncCallback<Event[]>):void-End-->
 
@@ -882,27 +838,24 @@ getEvents(callback: AsyncCallback<Event[]>):void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Event[]&gt; | Yes | 回调函数，当查询日程成功时，err为undefined，data为查询到的Event数组；否则为错误对象。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Event[]&gt; | Yes | Callback used to return an array of events. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 23900004 | 内部程序错误，可能原因: &lt;br&gt;1. dataShare数据库执行错误； &lt;br&gt;2. 空指针错误； &lt;br&gt;3. 数据解析错误。<br>**Applicable version:** 23 and later |
-| 201 | 权限校验失败。<br>**Applicable version:** 23 and later |
+| [23900004](../errorcode-calendarManager.md#23900004-internal-program-error) | Internal program errors. Possible causes: &lt;br&gt;1. dataShare database execution error; &lt;br&gt;2. null pointer error; &lt;br&gt;3. Data parsing error.<br>**Applicable version:** 23 and later |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied.<br>**Applicable version:** 23 and later |
 
 ## Examples
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
-// Configure the EntryAbility file based on the sample code in calendarManager.getCalendarManager.
 import { calendarMgr } from '../entryability/EntryAbility';
-import { calendarManager } from '@kit.CalendarKit';
 
 let calendar : calendarManager.Calendar | undefined = undefined;
 calendarMgr?.getCalendar((err: BusinessError, data:calendarManager.Calendar) => {
   if (err) {
-    // Check whether the permission has been successfully applied for.
     console.error(`Failed to get calendar. Code: ${err.code}, message: ${err.message}`);
   } else {
     console.info(`Succeeded in getting calendar data -> ${JSON.stringify(data)}`);
@@ -924,7 +877,9 @@ calendarMgr?.getCalendar((err: BusinessError, data:calendarManager.Calendar) => 
 openEventEditPage(id: number): Promise<void>
 ```
 
-Opens the event edit page.
+Obtains the event instance that meets the viewing or editing condition in a calendar based on the event ID. This API uses a promise to return the result.
+
+This API can be used to view and edit calendar events in the system calendar.
 
 **Since:** 26.0.0
 
@@ -942,71 +897,20 @@ Opens the event edit page.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| id | number | Yes | 传入的日程id为整数，表示日历中已存在的日程id，是日程的唯一标识符。 |
+| id | number | Yes | The ID of the event to be edited. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise对象，无返回结果。 |
+| Promise&lt;void&gt; | the promise returned by the function. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 23900005 | 该日程不支持编辑。 |
-| 23900001 | 参数值错误。 |
-
-## Examples
-
-```TypeScript
-// Configure the EntryAbility file based on the sample code in calendarManager.getCalendarManager.
-import { BusinessError } from '@kit.BasicServicesKit';
-import { calendarMgr } from '../entryability/EntryAbility';
-import { calendarManager } from '@kit.CalendarKit';
-
-let calendar: calendarManager.Calendar | undefined = undefined;
-const date = new Date();
-const event: calendarManager.Event = {
-    title: 'MyEvent',
-    type: calendarManager.EventType.NORMAL,
-    startTime: date.getTime(),
-    endTime: date.getTime() + 60 * 60 * 1000
-  };
-calendarMgr?.getCalendar(async (err: BusinessError, data: calendarManager.Calendar) => {
-    if (err) {
-      // Check whether the permission has been successfully applied for.
-      console.error(`Failed to get calendar, Code is ${err.code}, message is ${err.message}`);
-    } else {
-      console.info(`Succeeded in getting calendar, data -> ${JSON.stringify(data)}`);
-      calendar = data;
-      let eventId: number = 0;
-      await calendar?.addEvent(event).then((dataId: number) => {
-        console.info(`Succeeded in adding event id-> ${dataId}`);
-        eventId = dataId;
-      }).catch((err: BusinessError) => {
-        // Check whether the permission is granted or whether the parameters are correct.
-        console.error(`Failed to add event. Code: ${err.code}, message: ${err.message}`);
-        return;
-      });
-      // Query by ID.
-      const filterId = calendarManager.EventFilter.filterById([eventId]);
-      calendar?.getEvents(filterId).then((data: calendarManager.Event[]) => {
-        console.info(`Succeeded in getting event: ${JSON.stringify(data)}`);
-      }).catch((err: BusinessError) => {
-        // Check whether the parameters are correct, whether the passed ID exists, or whether there is any restriction on the permission.
-        console.error(`Failed to get event, Code is ${err.code}, message is ${err.message}`);
-        return;
-      });
-      calendar?.openEventEditPage(eventId).then(() => {
-        console.info(`Succeeded in opening EventEditPage`);
-      }).catch((err: BusinessError) => {
-        // Check whether the passed ID exists, whether there is any restriction on the permission, or whether the event can be edited.
-        console.error(`Failed to open eventeditpage, Code is ${err.code}, message is ${err.message}`);
-      });
-    }
- });
-```
+| [23900005](../errorcode-calendarManager.md#23900005-event-not-editable) | This event cannot be edited. |
+| [23900001](../errorcode-calendarManager.md#23900001-parameter-value-error) | Parameter value error. |
 
 ## queryEventInstances
 
@@ -1014,14 +918,15 @@ calendarMgr?.getCalendar(async (err: BusinessError, data: calendarManager.Calend
 queryEventInstances(start: number, end: number, ids?: number[], eventKey?: (keyof Event)[]): Promise<Event[]>
 ```
 
-获取Calendar下符合查询条件的日程实例，使用Promise异步回调。
+Queries the event instance with a specified event key in a calendar. This API uses a promise to return the result.
 
 **Since:** 18
 
 **ArkTS mode:** ArkTS-Dyn only, since version 18.
 
 **Required permissions:** 
-- API version 23+: ohos.permission.READ_CALENDAR or ohos.permission.READ_WHOLE_CALENDAR
+- API version 21+: ohos.permission.READ_CALENDAR or ohos.permission.READ_WHOLE_CALENDAR
+- API version 18-20: ohos.permission.READ_CALENDAR
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
@@ -1033,31 +938,29 @@ queryEventInstances(start: number, end: number, ids?: number[], eventKey?: (keyo
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| start | number | Yes | 日程开始时间，类型为13位时间戳。 |
-| end | number | Yes | 日程结束时间，类型为13位时间戳。 |
-| ids | number[] | No | 需要查询的日程id数组，可为空数组或undefined。 |
-| eventKey | (keyof Event)[] | No | 所有查询日程的字段。不填时，默认查询字段为：id、title、startTime、endTime、instanceStartTime、instanceEndTime、 isAllDay、description、timeZone、location、service。若查询字段为空，则不返回该字段。 |
+| start | number | Yes | Start time of an event. The value is a 13-digit timestamp. |
+| end | number | Yes | End time of an event. The value is a 13-digit timestamp. |
+| ids | number[] | No | Array of event IDs to be queried, which can be empty or undefined. |
+| eventKey | (keyof Event)[] | No | Event key for querying events. If this parameter is left empty, the default fields for filtering are id, title, startTime, endTime, instanceStartTime, instanceEndTime, isAllDay, description, timeZone, location, and service. The field is not returned if it is empty. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;Event[]&gt; | Promise对象，返回的是Event对象数组。 |
+| Promise&lt;Event[]&gt; | Promise used to return the result, which is an array of Event objects. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 23900004 | 内部程序错误，可能原因: &lt;br&gt;1. dataShare数据库执行错误； &lt;br&gt;2. 空指针错误； &lt;br&gt;3. 数据解析错误。<br>**Applicable version:** 23 and later |
-| 201 | 权限校验失败。<br>**Applicable version:** 23 and later |
+| [23900004](../errorcode-calendarManager.md#23900004-internal-program-error) | Internal program errors. Possible causes: &lt;br&gt;1. dataShare database execution error; &lt;br&gt;2. null pointer error; &lt;br&gt;3. Data parsing error.<br>**Applicable version:** 23 and later |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied.<br>**Applicable version:** 23 and later |
 
 ## Examples
 
 ```TypeScript
-// Configure the EntryAbility file based on the sample code in calendarManager.getCalendarManager.
 import { BusinessError } from '@kit.BasicServicesKit';
 import { calendarMgr } from '../entryability/EntryAbility';
-import { calendarManager } from '@kit.CalendarKit';
 
 let calendar : calendarManager.Calendar | undefined = undefined;
 const date = new Date();
@@ -1069,7 +972,6 @@ const event: calendarManager.Event = {
 };
 calendarMgr?.getCalendar(async (err: BusinessError, data:calendarManager.Calendar) => {
   if (err) {
-    // Check whether the permission has been successfully applied for.
     console.error(`Failed to get calendar. Code: ${err.code}, message: ${err.message}`);
   } else {
     console.info(`Succeeded in getting calendar, data -> ${JSON.stringify(data)}`);
@@ -1077,14 +979,12 @@ calendarMgr?.getCalendar(async (err: BusinessError, data:calendarManager.Calenda
     await calendar.addEvent(event).then((data: number) => {
       console.info(`Succeeded in adding event, id -> ${data}`);
     }).catch((err: BusinessError) => {
-      // Check whether the permission is granted or whether the parameters are correct.
       console.error(`Failed to add event. Code: ${err.code}, message: ${err.message}`);
     });
-    calendar?.queryEventInstances(date.getTime(), date.getTime() + 60 * 60 * 1000, undefined,
-      ['title', 'startTime', 'endTime', 'instanceStartTime', 'instanceEndTime']).then((data: calendarManager.Event[]) => {
+    calendar?.queryEventInstances(date.getTime(), date.getTime() + 60 * 60 * 1000, undefined, 
+      ["title", "startTime", "endTime", "instanceStartTime", "instanceEndTime",]).then((data: calendarManager.Event[]) => {
       console.info(`Succeeded in getting event instances, data -> ${JSON.stringify(data)}`);
     }).catch((err: BusinessError) => {
-      // Check whether the parameters are correct.
       console.error(`Failed to get event instances. Code: ${err.code}, message: ${err.message}`);
     });
   }
@@ -1097,7 +997,7 @@ calendarMgr?.getCalendar(async (err: BusinessError, data:calendarManager.Calenda
 setConfig(config: CalendarConfig): Promise<void>
 ```
 
-设置日历配置信息，使用Promise异步回调。
+Sets the calendar configuration information. This API uses a promise to return the result.
 
 **Since:** 10
 
@@ -1111,27 +1011,25 @@ setConfig(config: CalendarConfig): Promise<void>
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| config | [CalendarConfig](arkts-calendar-calendarmanager-calendarconfig-i.md) | Yes | 日历配置信息。 |
+| config | [CalendarConfig](arkts-calendar-calendarmanager-calendarconfig-i.md) | Yes | Calendar configuration information. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise对象，无返回结果。 |
+| Promise&lt;void&gt; | Promise that returns no value. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 23900001 | 参数值错误。<br>**Applicable version:** 23 and later |
+| [23900001](../errorcode-calendarManager.md#23900001-parameter-value-error) | Parameter value error.<br>**Applicable version:** 23 and later |
 
 ## Examples
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
-// Configure the EntryAbility file based on the sample code in calendarManager.getCalendarManager.
 import { calendarMgr } from '../entryability/EntryAbility';
-import { calendarManager } from '@kit.CalendarKit';
 
 let calendar : calendarManager.Calendar | undefined = undefined;
 const config: calendarManager.CalendarConfig = {
@@ -1140,7 +1038,6 @@ const config: calendarManager.CalendarConfig = {
 };
 calendarMgr?.getCalendar((err: BusinessError, data:calendarManager.Calendar) => {
   if (err) {
-    // Check whether the permission has been successfully applied for.
     console.error(`Failed to get calendar. Code: ${err.code}, message: ${err.message}`);
   } else {
     console.info(`Succeeded in getting calendar, data -> ${JSON.stringify(data)}`);
@@ -1148,7 +1045,6 @@ calendarMgr?.getCalendar((err: BusinessError, data:calendarManager.Calendar) => 
     calendar.setConfig(config).then(() => {
       console.info(`Succeeded in setting config, data->${JSON.stringify(config)}`);
     }).catch((err: BusinessError) => {
-      // Check whether the permission is granted or whether the parameters are correct.
       console.error(`Failed to set config. Code: ${err.code}, message: ${err.message}`);
     });
   }
@@ -1161,7 +1057,7 @@ calendarMgr?.getCalendar((err: BusinessError, data:calendarManager.Calendar) => 
 setConfig(config: CalendarConfig, callback: AsyncCallback<void>): void
 ```
 
-设置日历配置信息，使用callback异步回调。
+Sets the calendar configuration information. This API uses an asynchronous callback to return the result.
 
 **Since:** 10
 
@@ -1175,22 +1071,20 @@ setConfig(config: CalendarConfig, callback: AsyncCallback<void>): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| config | [CalendarConfig](arkts-calendar-calendarmanager-calendarconfig-i.md) | Yes | 日历配置信息。 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | 回调函数，当设置Config成功时，err为undefined；否则为错误对象。 |
+| config | [CalendarConfig](arkts-calendar-calendarmanager-calendarconfig-i.md) | Yes | Calendar configuration information. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 23900001 | 参数值错误。<br>**Applicable version:** 23 and later |
+| [23900001](../errorcode-calendarManager.md#23900001-parameter-value-error) | Parameter value error.<br>**Applicable version:** 23 and later |
 
 ## Examples
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
-// Configure the EntryAbility file based on the sample code in calendarManager.getCalendarManager.
 import { calendarMgr } from '../entryability/EntryAbility';
-import { calendarManager } from '@kit.CalendarKit';
 
 let calendar : calendarManager.Calendar | undefined = undefined;
 const config: calendarManager.CalendarConfig = {
@@ -1199,14 +1093,12 @@ const config: calendarManager.CalendarConfig = {
 };
 calendarMgr?.getCalendar((err: BusinessError, data:calendarManager.Calendar) => {
   if (err) {
-    // Check whether the permission has been successfully applied for.
     console.error(`Failed to get calendar. Code: ${err.code}, message: ${err.message}`);
   } else {
     console.info(`Succeeded in getting calendar, data -> ${JSON.stringify(data)}`);
     calendar = data;
     calendar.setConfig(config, (err: BusinessError) => {
       if (err) {
-        // Check whether the permission is granted or whether the parameters are correct.
         console.error(`Failed to set config. Code: ${err.code}, message: ${err.message}`);
       } else {
         console.info(`Succeeded in setting config, config -> ${JSON.stringify(config)}`);
@@ -1222,7 +1114,7 @@ calendarMgr?.getCalendar((err: BusinessError, data:calendarManager.Calendar) => 
 updateEvent(event: Event): Promise<void>
 ```
 
-更新日程，入参Event需要填写被修改日程的id，使用Promise异步回调。
+Updates an event, with the ID of the updated event specified in Event. This API uses a promise to return the result.
 
 **Since:** 10
 
@@ -1236,21 +1128,19 @@ updateEvent(event: Event): Promise<void>
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| event | [Event](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-event-c.md) | Yes | Event对象。 |
+| event | [Event](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-event-c.md) | Yes | Event object. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise对象，无返回结果。 |
+| Promise&lt;void&gt; | Promise that returns no value. |
 
 ## Examples
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
-// Configure the EntryAbility file based on the sample code in calendarManager.getCalendarManager.
 import { calendarMgr } from '../entryability/EntryAbility';
-import { calendarManager } from '@kit.CalendarKit';
 
 let calendar : calendarManager.Calendar | undefined = undefined;
 const date = new Date();
@@ -1263,7 +1153,6 @@ const oriEvent: calendarManager.Event = {
 };
 calendarMgr?.getCalendar(async (err: BusinessError, data:calendarManager.Calendar) => {
   if (err) {
-    // Check whether the permission has been successfully applied for.
     console.error(`Failed to get calendar. Code: ${err.code}, message: ${err.message}`);
   } else {
     console.info(`Succeeded in getting calendar, data -> ${JSON.stringify(data)}`);
@@ -1273,13 +1162,11 @@ calendarMgr?.getCalendar(async (err: BusinessError, data:calendarManager.Calenda
       oriEvent.id = data;
       oriEvent.title = 'newUpdate';
     }).catch((err: BusinessError) => {
-      // Check whether the permission is granted or whether the parameters are correct.
       console.error(`Failed to add event. Code: ${err.code}, message: ${err.message}`);
     });
     calendar.updateEvent(oriEvent).then(() => {
       console.info(`Succeeded in updating event`);
     }).catch((err: BusinessError) => {
-      // Check whether the parameters are correct.
       console.error(`Failed to update event. Code: ${err.code}, message: ${err.message}`);
     });
   }
@@ -1292,7 +1179,7 @@ calendarMgr?.getCalendar(async (err: BusinessError, data:calendarManager.Calenda
 updateEvent(event: Event, callback: AsyncCallback<void>): void
 ```
 
-更新日程，入参Event需要填写被修改日程的id，使用callback异步回调。
+Updates an event. The ID of the updated event must be specified in Event. If not, the event cannot be updated. This API uses an asynchronous callback to return the result.
 
 **Since:** 10
 
@@ -1306,16 +1193,14 @@ updateEvent(event: Event, callback: AsyncCallback<void>): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| event | [Event](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-event-c.md) | Yes | Event对象。 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | 回调函数，当更新日程成功时，err为undefined；否则为错误对象。 |
+| event | [Event](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-event-c.md) | Yes | Event object. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | The callback of updateEvent. |
 
 ## Examples
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
-// Configure the EntryAbility file based on the sample code in calendarManager.getCalendarManager.
 import { calendarMgr } from '../entryability/EntryAbility';
-import { calendarManager } from '@kit.CalendarKit';
 
 let calendar : calendarManager.Calendar | undefined = undefined;
 const date = new Date();
@@ -1328,7 +1213,6 @@ const oriEvent: calendarManager.Event = {
 };
 calendarMgr?.getCalendar(async (err: BusinessError, data:calendarManager.Calendar) => {
   if (err) {
-    // Check whether the permission has been successfully applied for.
     console.error(`Failed to get calendar. Code: ${err.code}, message: ${err.message}`);
   } else {
     console.info(`Succeeded in getting calendar, data -> ${JSON.stringify(data)}`);
@@ -1338,15 +1222,13 @@ calendarMgr?.getCalendar(async (err: BusinessError, data:calendarManager.Calenda
       oriEvent.id = data;
       oriEvent.title = 'newUpdate';
     }).catch((err: BusinessError) => {
-      // Check whether the permission is granted or whether the parameters are correct.
       console.error(`Failed to add event. Code: ${err.code}, message: ${err.message}`);
     });
     calendar.updateEvent(oriEvent, (err: BusinessError) => {
       if (err) {
-        // Check whether the parameters are correct.
         console.error(`Failed to update event. Code: ${err.code}, message: ${err.message}`);
       } else {
-        console.info('Succeeded in updating event');
+        console.info("Succeeded in updating event");
       }
     });
   }
@@ -1359,7 +1241,7 @@ calendarMgr?.getCalendar(async (err: BusinessError, data:calendarManager.Calenda
 readonly id: number
 ```
 
-日历账户id，日历账户id是日历账户的唯一标识符，是数据库的自增主键，小于0代表日历账户创建失败，大于0代表日历账户创建成功，没有等于0的情况。
+Calendar account ID, which is the unique identifier of a calendar account and is the auto-increment primary key of the database. If the value is less than 0, the account creation fails;if the value is greater than 0, the account creation succeeds.
 
 **Type:** number
 

@@ -1,6 +1,6 @@
 # ListItemGroupOptions
 
-ListItemGroup组件参数。
+Describes the **ListItemGroup** component parameter.
 
 **Since:** 9
 
@@ -16,11 +16,7 @@ ListItemGroup组件参数。
 footer?: CustomBuilder
 ```
 
-设置ListItemGroup尾部组件。
-
-**说明：**
-
-可以放单个子组件或不放子组件，不设置时无尾部组件。该参数的优先级低于参数footerComponent。即同时设置footer和footerComponent时，以footerComponent设置的值为准。
+Footer of the list item group.
 
 **Type:** [CustomBuilder](arkts-arkui-custombuilder-t.md)
 
@@ -40,13 +36,7 @@ footer?: CustomBuilder
 footerComponent?: ComponentContent
 ```
 
-使用ComponentContent类型参数设置ListItemGroup尾部组件。
-
-**说明：**
-
-可以放单个子组件或不放子组件，不设置时无尾部组件。该参数的优先级高于参数footer。即同时设置footer和footerComponent时，以footerComponent设置的值为准。
-
-同一个footerComponent不推荐同时给不同的ListItemGroup使用，否则会导致显示问题。
+Footer of the list item group, in the type of ComponentContent.This parameter takes precedence over the footer parameter. This means that, if both footer and footerComponent are set, the value of footerComponent is used.To avoid display issues, do not assign the same footerComponent to different ListItemGroup components.
 
 **Type:** [ComponentContent](../arkts-apis/arkts-arkui-componentcontent-c.md)
 
@@ -68,13 +58,7 @@ footerComponent?: ComponentContent
 footerStyle?: ListItemGroupHeaderFooterStyle
 ```
 
-设置ListItemGroup尾部样式。
-
-默认值：ListItemGroupHeaderFooterStyle.NONE
-
-设置为ListItemGroupHeaderFooterStyle.NONE时无样式。
-
-设置为ListItemGroupHeaderFooterStyle.FLOATING时，尾部组件在滚动时悬浮显示。
+Footer style of ListItemGroup.If this parameter is set to ListItemGroupHeaderFooterStyle.FLOATING, the footer component is displayed in floating mode during scrolling.
 
 **Type:** [ListItemGroupHeaderFooterStyle](../arkts-apis/arkts-arkui-listitemgroup-listitemgroupheaderfooterstyle-e.md)
 
@@ -98,11 +82,7 @@ footerStyle?: ListItemGroupHeaderFooterStyle
 header?: CustomBuilder
 ```
 
-设置ListItemGroup头部组件。
-
-**说明：**
-
-可以放单个子组件或不放子组件，不设置时无头部组件。该参数的优先级低于参数headerComponent。即同时设置header和headerComponent时，以headerComponent设置的值为准。
+Header of the list item group.
 
 **Type:** [CustomBuilder](arkts-arkui-custombuilder-t.md)
 
@@ -122,13 +102,7 @@ header?: CustomBuilder
 headerComponent?: ComponentContent
 ```
 
-使用ComponentContent类型参数设置ListItemGroup头部组件。
-
-**说明：**
-
-可以放单个子组件或不放子组件，不设置时无头部组件。该参数的优先级高于参数header。即同时设置header和headerComponent时，以headerComponent设置的值为准。
-
-同一个headerComponent不推荐同时给不同的ListItemGroup使用，否则会导致显示问题。
+Header of the list item group, in the type of ComponentContent.This parameter takes precedence over the header parameter. This means that, if both header and headerComponent are set, the value of headerComponent is used.To avoid display issues, do not assign the same headerComponent to different ListItemGroup components.
 
 **Type:** [ComponentContent](../arkts-apis/arkts-arkui-componentcontent-c.md)
 
@@ -150,13 +124,7 @@ headerComponent?: ComponentContent
 headerStyle?: ListItemGroupHeaderFooterStyle
 ```
 
-设置ListItemGroup头部样式。
-
-默认值：ListItemGroupHeaderFooterStyle.NONE
-
-设置为ListItemGroupHeaderFooterStyle.NONE时无样式。
-
-设置为ListItemGroupHeaderFooterStyle.FLOATING时，头部组件在滚动时悬浮显示。
+Header style of ListItemGroup.If this parameter is set to ListItemGroupHeaderFooterStyle.FLOATING, the header component is displayed in floating mode during scrolling.
 
 **Type:** [ListItemGroupHeaderFooterStyle](../arkts-apis/arkts-arkui-listitemgroup-listitemgroupheaderfooterstyle-e.md)
 
@@ -180,15 +148,7 @@ headerStyle?: ListItemGroupHeaderFooterStyle
 space?: number | string
 ```
 
-列表项间距。只作用于ListItem与ListItem之间，不作用于header与ListItem、footer与ListItem之间。
-
-默认值：0
-
-单位：vp
-
-**说明：**
-
-设置为负数或者大于等于List内容区长度时，按默认值显示。如果同时设置了spaceWidth和space，则spaceWidth优先生效。当spaceWidth为undefined或null时，space生效。
+Spacing between list items.This parameter only affects the spacing between list items,but not spacing between the header and list items or between the footer and list items.&lt;br&gt;Default value: **0**&lt;br&gt;Unit: vp
 
 **Type:** number \| string
 
@@ -210,15 +170,7 @@ space?: number | string
 spaceWidth?: Dimension
 ```
 
-列表项间距。只作用于ListItem与ListItem之间，不作用于header与ListItem、footer与ListItem之间。
-
-默认值：0
-
-单位：vp
-
-**说明：**
-
-设置为负数或者大于等于List内容区长度时，按默认值显示。如果同时设置了spaceWidth和space，则spaceWidth优先生效。当spaceWidth为undefined或null时，space生效。
+Spacing between list items.This parameter only affects the spacing between list items,but not spacing between the header and list items or between the footer and list items.&lt;br&gt;Default value: **0**&lt;br&gt;Unit: vp&lt;br&gt;**NOTE：**&lt;br&gt;If this parameter is set to a negative number or a value greater than or equal to the length of the list content area, the default value is used.If both **spaceWidth** and **space** are set, **spaceWidth** takes precedence.When **spaceWidth** is **undefined** or **null**, **space** takes effect.
 
 **Type:** [Dimension](../arkts-apis/arkts-arkui-dimension-t.md)
 
@@ -240,22 +192,7 @@ spaceWidth?: Dimension
 style?: ListItemGroupStyle
 ```
 
-设置ListItemGroup组件卡片样式。
-
-默认值：ListItemGroupStyle.NONE
-
-设置为ListItemGroupStyle.NONE时无样式。
-
-设置为ListItemGroupStyle.CARD时，建议配合[ListItem](./list_item)的ListItemStyle.CARD同时使用，显示默认卡片样式。
-
-卡片样式下，ListItemGroup默认规格：左右外边距12vp，上下左右内边距4vp。
-
-卡片样式下，为卡片内的列表选项提供了默认的focused、hover、pressed、selected和disabled样式。
-
-**说明：**
-
-当设置为ListItemGroupStyle.CARD时，List的listDirection属性值须为Axis.Vertical，如果设置为Axis.Horizontal，会导致显示混乱；List属性  
-[alignListItem](../arkts-apis/arkts-arkui-list-listattribute-i.md/arkts-arkui-list-listattribute-i.md#alignlistitem)默认为ListItemAlign.Center，居中对齐显示。
+Style of the list item.
 
 **Type:** [ListItemGroupStyle](../arkts-apis/arkts-arkui-listitemgroup-listitemgroupstyle-e.md)
 

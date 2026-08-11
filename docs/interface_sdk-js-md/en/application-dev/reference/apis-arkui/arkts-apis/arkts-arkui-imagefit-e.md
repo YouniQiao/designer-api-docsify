@@ -2,9 +2,9 @@
 
 Image display mode.
 
-**Since:** 11
+**Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 11.
+**ArkTS mode:** ArkTS-Dyn only, since version 7.
 
 <!--Device-unnamed-declare enum ImageFit--><!--Device-unnamed-declare enum ImageFit-End-->
 
@@ -18,13 +18,13 @@ Contain
 
 Keep the aspect ratio to zoom out or zoom in so that the image is completely displayed within the display boundary.
 
-**Since:** 11
+**Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 11.
+**ArkTS mode:** ArkTS-Dyn only, since version 7.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
-**Widget capability:** This API can be used in ArkTS widgets since API version 11.
+**Widget capability:** This API can be used in ArkTS widgets since API version 9.
 
 <!--Device-ImageFit-Contain--><!--Device-ImageFit-Contain-End-->
 
@@ -38,13 +38,13 @@ Cover
 
 Keep the aspect ratio to zoom out or zoom in so that both sides of the image are greater than or equal to the display boundary.
 
-**Since:** 11
+**Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 11.
+**ArkTS mode:** ArkTS-Dyn only, since version 7.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
-**Widget capability:** This API can be used in ArkTS widgets since API version 11.
+**Widget capability:** This API can be used in ArkTS widgets since API version 9.
 
 <!--Device-ImageFit-Cover--><!--Device-ImageFit-Cover-End-->
 
@@ -58,13 +58,13 @@ Auto
 
 Adaptive display
 
-**Since:** 11
+**Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 11.
+**ArkTS mode:** ArkTS-Dyn only, since version 7.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
-**Widget capability:** This API can be used in ArkTS widgets since API version 11.
+**Widget capability:** This API can be used in ArkTS widgets since API version 9.
 
 <!--Device-ImageFit-Auto--><!--Device-ImageFit-Auto-End-->
 
@@ -78,13 +78,13 @@ Fill
 
 Zoom in or out without maintaining the aspect ratio so that the image fills the display boundary.
 
-**Since:** 11
+**Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 11.
+**ArkTS mode:** ArkTS-Dyn only, since version 7.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
-**Widget capability:** This API can be used in ArkTS widgets since API version 11.
+**Widget capability:** This API can be used in ArkTS widgets since API version 9.
 
 <!--Device-ImageFit-Fill--><!--Device-ImageFit-Fill-End-->
 
@@ -98,13 +98,13 @@ ScaleDown
 
 Keep the aspect ratio displayed, and the image zooms out or remains unchanged.
 
-**Since:** 11
+**Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 11.
+**ArkTS mode:** ArkTS-Dyn only, since version 7.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
-**Widget capability:** This API can be used in ArkTS widgets since API version 11.
+**Widget capability:** This API can be used in ArkTS widgets since API version 9.
 
 <!--Device-ImageFit-ScaleDown--><!--Device-ImageFit-ScaleDown-End-->
 
@@ -118,13 +118,13 @@ None
 
 Keep the original size and display it in the center.
 
-**Since:** 11
+**Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 11.
+**ArkTS mode:** ArkTS-Dyn only, since version 7.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
-**Widget capability:** This API can be used in ArkTS widgets since API version 11.
+**Widget capability:** This API can be used in ArkTS widgets since API version 9.
 
 <!--Device-ImageFit-None--><!--Device-ImageFit-None-End-->
 

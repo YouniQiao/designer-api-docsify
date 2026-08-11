@@ -1,6 +1,6 @@
 # PhoneNumber
 
-联系人电话号码类。
+Defines a contact's phone number.
 
 **Since:** 7
 
@@ -22,7 +22,7 @@ import { contact } from 'kits/@kit.ContactsKit';
 static readonly CUSTOM_LABEL: 0
 ```
 
-自定义邮箱类型，默认值为0。
+Custom phone type, the default value is **0**.
 
 **Type:** 0
 
@@ -42,7 +42,7 @@ static readonly CUSTOM_LABEL: 0
 static readonly INVALID_LABEL_ID: -1
 ```
 
-无效邮箱类型，默认值为-1。
+Invalid phone type, the default value is **-1**.
 
 **Type:** -1
 
@@ -62,7 +62,7 @@ static readonly INVALID_LABEL_ID: -1
 static readonly NUM_ASSISTANT: 19
 ```
 
-助理电话类型，默认值是19。
+Assistant phone, the default value is **19**.
 
 **Type:** 19
 
@@ -82,7 +82,7 @@ static readonly NUM_ASSISTANT: 19
 static readonly NUM_CALLBACK: 8
 ```
 
-回呼电话类型，默认值是8。
+Callback phone, the default value is **8**.
 
 **Type:** 8
 
@@ -102,7 +102,7 @@ static readonly NUM_CALLBACK: 8
 static readonly NUM_CAR: 9
 ```
 
-车机电话类型，默认值是9。
+Car phone, the default value is **9**.
 
 **Type:** 9
 
@@ -122,7 +122,7 @@ static readonly NUM_CAR: 9
 static readonly NUM_COMPANY_MAIN: 10
 ```
 
-公司电话类型，默认值是10。
+Company phone, the default value is **10**.
 
 **Type:** 10
 
@@ -142,7 +142,7 @@ static readonly NUM_COMPANY_MAIN: 10
 static readonly NUM_FAX_HOME: 5
 ```
 
-家庭传真电话类型，默认值是5。
+Family fax, the default value is **5**.
 
 **Type:** 5
 
@@ -162,7 +162,7 @@ static readonly NUM_FAX_HOME: 5
 static readonly NUM_FAX_WORK: 4
 ```
 
-工作传真电话类型，默认值是4。
+Work fax, the default value is **4**.
 
 **Type:** 4
 
@@ -182,7 +182,7 @@ static readonly NUM_FAX_WORK: 4
 static readonly NUM_HOME: 1
 ```
 
-家庭电话类型，默认值是1。
+Home phone, the default value is **1**.
 
 **Type:** 1
 
@@ -202,7 +202,7 @@ static readonly NUM_HOME: 1
 static readonly NUM_ISDN: 11
 ```
 
-综合业务数字网(ISDN)电话类型，默认值是11。
+Integrated Services Digital Network (ISDN) phone, the default value is **11**.
 
 **Type:** 11
 
@@ -222,7 +222,7 @@ static readonly NUM_ISDN: 11
 static readonly NUM_MAIN: 12
 ```
 
-主电话类型，默认值是12。
+Main phone, the default value is **12**.
 
 **Type:** 12
 
@@ -242,7 +242,7 @@ static readonly NUM_MAIN: 12
 static readonly NUM_MMS: 20
 ```
 
-彩信电话类型，默认值是20。
+MMS phone, the default value is **20**.
 
 **Type:** 20
 
@@ -262,7 +262,7 @@ static readonly NUM_MMS: 20
 static readonly NUM_MOBILE: 2
 ```
 
-移动电话类型，默认值是2。
+Mobile phone, the default value is **2**.
 
 **Type:** 2
 
@@ -282,7 +282,7 @@ static readonly NUM_MOBILE: 2
 static readonly NUM_OTHER: 7
 ```
 
-其它电话类型，默认值是7。
+Other phone type, the default value is **7**.
 
 **Type:** 7
 
@@ -302,7 +302,7 @@ static readonly NUM_OTHER: 7
 static readonly NUM_OTHER_FAX: 13
 ```
 
-其它传真类型，默认值是13。
+Other fax phone, the default value is **13**.
 
 **Type:** 13
 
@@ -322,7 +322,7 @@ static readonly NUM_OTHER_FAX: 13
 static readonly NUM_PAGER: 6
 ```
 
-寻呼机电话类型，默认值是6。
+Pager, the default value is **6**.
 
 **Type:** 6
 
@@ -342,7 +342,7 @@ static readonly NUM_PAGER: 6
 static readonly NUM_RADIO: 14
 ```
 
-无线电话类型，默认值是14。
+Wireless phone, the default value is **14**.
 
 **Type:** 14
 
@@ -362,7 +362,7 @@ static readonly NUM_RADIO: 14
 static readonly NUM_TELEX: 15
 ```
 
-电传电话类型，默认值是15。
+Telex phone, the default value is **15**.
 
 **Type:** 15
 
@@ -382,7 +382,7 @@ static readonly NUM_TELEX: 15
 static readonly NUM_TTY_TDD: 16
 ```
 
-电传打字机(TTY)或测试驱动开发(TDD)电话类型，默认值是16。
+Teletypewriter (TTY) or Test Driven Development (TDD) phone, the default value is **16**.
 
 **Type:** 16
 
@@ -402,7 +402,7 @@ static readonly NUM_TTY_TDD: 16
 static readonly NUM_WORK: 3
 ```
 
-工作电话类型，默认值是3。
+Work phone, the default value is **3**.
 
 **Type:** 3
 
@@ -422,7 +422,7 @@ static readonly NUM_WORK: 3
 static readonly NUM_WORK_MOBILE: 17
 ```
 
-工作移动电话类型，默认值是17。
+Work mobile phone, the default value is **17**.
 
 **Type:** 17
 
@@ -442,7 +442,7 @@ static readonly NUM_WORK_MOBILE: 17
 static readonly NUM_WORK_PAGER: 18
 ```
 
-工作寻呼机电话类型，默认值是18。
+Work pager, the default value is **18**.
 
 **Type:** 18
 
@@ -462,7 +462,7 @@ static readonly NUM_WORK_PAGER: 18
 labelId?: number
 ```
 
-邮箱的类型。
+Phone number type.
 
 **Type:** number
 
@@ -482,7 +482,7 @@ labelId?: number
 labelName?: string
 ```
 
-邮箱的类型名称。
+Name of the phone number type.
 
 **Type:** string
 
@@ -502,7 +502,7 @@ labelName?: string
 phoneNumber: string
 ```
 
-电话号码。
+Phone number.
 
 **Type:** string
 

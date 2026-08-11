@@ -1,6 +1,6 @@
 # Priority
 
-表示发送消息时的优先级枚举，各优先级对应关系请参考EventHandler等级定义。
+Enumerates the priorities available for EventHandler.For details about the mappings between priorities and EventHandler levels, see EventHandler Level.
 
 **Since:** 26.0.0
 
@@ -16,7 +16,7 @@
 IMMEDIATE = 1
 ```
 
-立即执行优先级，对应EventHandler IMMEDIATE优先级。
+IMMEDIATE priority, corresponding to EventHandler IMMEDIATE priority.
 
 **Since:** 26.0.0
 
@@ -36,7 +36,7 @@ IMMEDIATE = 1
 HIGH = 2
 ```
 
-高优先级，对应EventHandler HIGH优先级。
+HIGH priority, corresponding to EventHandler HIGH priority.
 
 **Since:** 26.0.0
 
@@ -56,7 +56,7 @@ HIGH = 2
 LOW = 3
 ```
 
-低优先级，对应EventHandler LOW优先级。
+Low priority, corresponding to EventHandler LOW priority.
 
 **Since:** 26.0.0
 
@@ -76,7 +76,7 @@ LOW = 3
 IDLE = 4
 ```
 
-后台优先级，对应EventHandler IDLE优先级。
+IDLE priority, corresponding to EventHandler IDLE priority.
 
 **Since:** 26.0.0
 

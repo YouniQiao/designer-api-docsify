@@ -1,6 +1,6 @@
 # RemoteAuthOptions (System API)
 
-表示远程认证的可选参数集合。
+Represents a set of optional parameters for remote authentication.
 
 **Since:** 12
 
@@ -24,7 +24,7 @@ import { osAccount } from 'kits/@kit.BasicServicesKit';
 collectorNetworkId?: string
 ```
 
-凭据收集者的网络标识，默认为空。
+Network ID of the credential collector, which is left blank by default.
 
 **Type:** string
 
@@ -44,7 +44,7 @@ collectorNetworkId?: string
 collectorTokenId?: int
 ```
 
-凭据收集者的令牌标识，默认为undefined。
+Token ID of the credential collector, which is **undefined** by default.
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
@@ -64,7 +64,7 @@ collectorTokenId?: int
 verifierNetworkId?: string
 ```
 
-凭据验证者的网络标识，默认为空。
+Network ID of the credential verifier, which is left blank by default.
 
 **Type:** string
 

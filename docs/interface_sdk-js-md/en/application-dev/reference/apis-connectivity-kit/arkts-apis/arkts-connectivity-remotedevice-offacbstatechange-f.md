@@ -12,7 +12,7 @@ import { remoteDevice } from 'kits/@kit.ConnectivityKit';
 function offAcbStateChange(callback?: Callback<AcbStateParam>): void
 ```
 
-取消订阅星闪 ACB连接状态更改事件。
+Unsubscribes from the NearLink ACB connection status change event.
 
 **Since:** 26.0.0
 
@@ -28,12 +28,12 @@ function offAcbStateChange(callback?: Callback<AcbStateParam>): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;AcbStateParam&gt; | No | 要监听的事件的回调。 |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;AcbStateParam&gt; | No | Callback of the event to be listened to. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 801 | Capability not supported because the chip does not support it. |
+| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported because the chip does not support it. |
 | 36100099 | Operation failed. |
 

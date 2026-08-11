@@ -6,7 +6,7 @@
 function cancelGroup(groupName: string, callback: AsyncCallback<void>): void
 ```
 
-取消本应用指定组下的通知（Callback形式）。
+Cancels notifications under a notification group of this application. This API uses an asynchronous callback to return the result.
 
 **Since:** 8
 
@@ -24,8 +24,8 @@ function cancelGroup(groupName: string, callback: AsyncCallback<void>): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| groupName | string | Yes | 通知组名称，此名称需要在发布通知时通过 [NotificationRequest](arkts-notification-notification-requestenablenotification-depr-f.md#requestenablenotification)对象指定。 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | 取消本应用指定组下通知的回调函数。 |
+| groupName | string | Yes | Name of the notification group, which is specified through [NotificationRequest](arkts-notification-notification-requestenablenotification-depr-f.md#requestenablenotification) when the notification is published. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. |
 
 
 ## cancelGroup
@@ -34,7 +34,7 @@ function cancelGroup(groupName: string, callback: AsyncCallback<void>): void
 function cancelGroup(groupName: string): Promise<void>
 ```
 
-取消本应用指定组下的通知（Promise形式）。
+Cancels notifications under a notification group of this application. This API uses a promise to return the result.
 
 **Since:** 8
 
@@ -52,11 +52,11 @@ function cancelGroup(groupName: string): Promise<void>
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| groupName | string | Yes | 通知组名称。 |
+| groupName | string | Yes | Name of the notification group. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | 无返回结果的Promise对象。 |
+| Promise&lt;void&gt; | Promise that returns no value. |
 

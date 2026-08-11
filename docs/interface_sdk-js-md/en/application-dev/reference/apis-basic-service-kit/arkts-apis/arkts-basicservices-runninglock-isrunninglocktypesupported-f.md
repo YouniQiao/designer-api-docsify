@@ -12,7 +12,7 @@ import { runningLock } from 'kits/@kit.BasicServicesKit';
 function isRunningLockTypeSupported(type: RunningLockType, callback: AsyncCallback<boolean>): void
 ```
 
-查询系统是否支持该类型的锁。使用callback异步回调。
+Checks whether a specified type of {@link RunningLock} is supported. This API uses an asynchronous callback to return the result.
 
 **Since:** 7
 
@@ -30,8 +30,8 @@ function isRunningLockTypeSupported(type: RunningLockType, callback: AsyncCallba
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | [RunningLockType](arkts-basicservices-runninglock-runninglocktype-e.md) | Yes | 需要查询的锁的类型。 |
-| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;boolean&gt; | Yes | 回调函数。当查询成功，err为undefined，data为获取到的支持情况，返回true表示支持，返回false表示不支持；否则为错误对象 。 |
+| type | [RunningLockType](arkts-basicservices-runninglock-runninglocktype-e.md) | Yes | Type of the running lock. |
+| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;boolean&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined** and **data** is the query result obtained, where the value **true** indicates that the specified type of the running lock is supported and **false** indicates the opposite. Otherwise, **err** is an error object. |
 
 ## Examples
 
@@ -52,7 +52,7 @@ runningLock.isRunningLockTypeSupported(runningLock.RunningLockType.BACKGROUND, (
 function isRunningLockTypeSupported(type: RunningLockType): Promise<boolean>
 ```
 
-查询系统是否支持该类型的锁。使用Promise异步回调。
+Checks whether a specified type of {@link RunningLock} is supported. This API uses a promise to return the result.
 
 **Since:** 7
 
@@ -70,13 +70,13 @@ function isRunningLockTypeSupported(type: RunningLockType): Promise<boolean>
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | [RunningLockType](arkts-basicservices-runninglock-runninglocktype-e.md) | Yes | 需要查询的锁的类型。 |
+| type | [RunningLockType](arkts-basicservices-runninglock-runninglocktype-e.md) | Yes | Type of the running lock. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;boolean&gt; | Promise对象。返回true表示支持；返回false表示不支持。 |
+| Promise&lt;boolean&gt; | Promise used to return the result. The value **true** indicates that the specified type of the running lock is supported, and the value **false** indicates the opposite. |
 
 ## Examples
 

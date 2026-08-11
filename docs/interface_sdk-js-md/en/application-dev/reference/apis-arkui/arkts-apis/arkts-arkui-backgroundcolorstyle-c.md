@@ -1,6 +1,6 @@
 # BackgroundColorStyle
 
-文本背景颜色对象说明。
+Describes the text background color style.
 
 **Since:** 14
 
@@ -16,7 +16,7 @@
 constructor(textBackgroundStyle: TextBackgroundStyle)
 ```
 
-文本背景颜色的构造函数。未通过该接口设置时，默认背景颜色为Color.Transparent，圆角为0。
+A constructor used to create a text background style.
 
 **Since:** 14
 
@@ -34,7 +34,7 @@ constructor(textBackgroundStyle: TextBackgroundStyle)
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| textBackgroundStyle | [TextBackgroundStyle](arkts-arkui-span-textbackgroundstyle-i.md) | Yes | 文本背景色设置项。 |
+| textBackgroundStyle | [TextBackgroundStyle](arkts-arkui-span-textbackgroundstyle-i.md) | Yes | Options of the text background color.&lt;br&gt;Default value:&lt;br&gt;{&lt; br&gt; color: Color.Transparent,&lt;br&gt; radius: 0&lt;br&gt;} |
 
 ## textBackgroundStyle
 
@@ -42,9 +42,9 @@ constructor(textBackgroundStyle: TextBackgroundStyle)
 readonly textBackgroundStyle: TextBackgroundStyle
 ```
 
-获取属性字符串的文本背景颜色。
+Text background color of the styled string.
 
-默认值：
+Default value:
 
 {
 

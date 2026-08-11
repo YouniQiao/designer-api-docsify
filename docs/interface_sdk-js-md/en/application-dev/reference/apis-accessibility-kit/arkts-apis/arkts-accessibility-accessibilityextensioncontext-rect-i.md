@@ -1,6 +1,6 @@
 # Rect
 
-表示矩形区域。
+Defines a rectangle.
 
 **Since:** 9
 
@@ -16,7 +16,7 @@
 height: int
 ```
 
-矩形区域的高度，单位为像素（px）。
+Height of the rectangle, in pixels.
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
@@ -34,7 +34,7 @@ height: int
 left: int
 ```
 
-矩形区域的左边界，单位为像素（px）。
+Left boundary of the rectangle, in pixels.
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
@@ -52,7 +52,7 @@ left: int
 top: int
 ```
 
-矩形区域的上边界，单位为像素（px）。
+Top boundary of the rectangle, in pixels.
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
@@ -70,7 +70,7 @@ top: int
 width: int
 ```
 
-矩形区域的宽度，单位为像素（px）。
+Width of the rectangle, in pixels.
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 

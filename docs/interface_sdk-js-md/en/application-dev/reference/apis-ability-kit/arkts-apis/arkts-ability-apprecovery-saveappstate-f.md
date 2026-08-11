@@ -12,7 +12,8 @@ import { appRecovery } from 'kits/@kit.AbilityKit';
 function saveAppState(): boolean
 ```
 
-保存当前App状态，可以配合[errorManager](arkts-app-ability-errormanager.md)相关接口使用。
+Saves the application state. This API can be used together with the APIs of   
+[errorManager](arkts-app-ability-errormanager.md).
 
 **Since:** 9
 
@@ -30,7 +31,7 @@ function saveAppState(): boolean
 
 | Type | Description |
 | --- | --- |
-| boolean | 保存成功与否。true：保存成功，false：保存失败。 |
+| boolean | Whether the application state is saved. **true** if saved, **false** otherwise. |
 
 ## Examples
 
@@ -59,7 +60,8 @@ try {
 function saveAppState(context?: UIAbilityContext): boolean
 ```
 
-主动保存Ability的状态，这个状态将在下次恢复启动时使用。可以配合[errorManager](arkts-app-ability-errormanager.md)相关接口使用。
+Saves the ability state, which will be used for recovery. This API can be used together with the APIs of   
+[errorManager](arkts-app-ability-errormanager.md).
 
 **Since:** 10
 
@@ -77,13 +79,13 @@ function saveAppState(context?: UIAbilityContext): boolean
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| context | [UIAbilityContext](arkts-ability-uiabilitycontext-c.md) | No | 需要保存状态的UIAbility所对应的context。 |
+| context | [UIAbilityContext](arkts-ability-uiabilitycontext-c.md) | No | Context of the target ability. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| boolean | 保存成功与否。true：保存成功，false：保存失败。 |
+| boolean | Whether the application state is saved. **true** if saved, **false** otherwise. |
 
 ## Examples
 

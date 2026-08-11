@@ -18,12 +18,6 @@ ArcSwiper自定义切换动画执行过程中，返回给开发者的proxy对象
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Circle
 
-## 导入模块
-
-```TypeScript
-import { ArcSwiperAttribute, ArcSwiper, ArcDirection, ArcSwiperController, ArcDotIndicator } from 'kits/@kit.ArkUI';
-```
-
 ## finishTransition
 
 ```TypeScript

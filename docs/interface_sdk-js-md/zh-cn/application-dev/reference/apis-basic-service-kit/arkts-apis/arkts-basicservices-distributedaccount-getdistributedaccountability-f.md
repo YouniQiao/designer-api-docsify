@@ -1,11 +1,5 @@
 # getDistributedAccountAbility
 
-## 导入模块
-
-```TypeScript
-import { distributedAccount } from 'kits/@kit.BasicServicesKit';
-```
-
 ## getDistributedAccountAbility
 
 ```TypeScript

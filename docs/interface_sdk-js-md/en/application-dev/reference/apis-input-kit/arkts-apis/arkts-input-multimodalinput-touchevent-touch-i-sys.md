@@ -1,6 +1,6 @@
 # Touch
 
-触屏点信息。
+Defines the touch point information.
 
 **Since:** 9
 
@@ -22,7 +22,7 @@ import { SourceType, ToolType, TouchEvent, FixedMode, KeyAction, Touch } from 'k
 blobId?: int
 ```
 
-触摸点属性标识。当前仅支持单指触摸：左手触摸为1，右手触摸为2。
+Touch point attribute ID. Currently, only single-finger touch is supported. The value **1** indicates left-hand touch, and the value **2** indicates right-hand touch.
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
@@ -44,7 +44,7 @@ blobId?: int
 fixedDisplayX?: int
 ```
 
-适配单手模式下screenX坐标的修正值，单位为像素（px）。
+Corrected value of the screenX coordinate in one-hand mode, in px.
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
@@ -64,7 +64,7 @@ fixedDisplayX?: int
 fixedDisplayY?: int
 ```
 
-适配单手模式下screenY坐标的修正值，单位为像素（px）。
+Corrected value of the screenY coordinate in one-hand mode, in px.
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 

@@ -12,7 +12,7 @@ import { bundleManager } from 'kits/@kit.AbilityKit';
 function setAbilityEnabled(info: AbilityInfo, appIndex: int, isEnabled: boolean): Promise<void>
 ```
 
-设置指定应用或分身应用组件的禁用或使能状态。使用Promise异步回调。
+Enables or disables an ability of an application or an application clone. This API uses a promise to return the result.
 
 **Since:** 12
 
@@ -30,26 +30,26 @@ function setAbilityEnabled(info: AbilityInfo, appIndex: int, isEnabled: boolean)
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| info | [AbilityInfo](arkts-ability-abilityinfo-i.md) | Yes | 需要被设置的组件。 |
-| appIndex | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | 表示分身应用的索引。&lt;br&gt; appIndex为0时，表示设置主应用组件的禁用或使能状态。appIndex大于0时，表示设置指定分身应用组件的禁用或使能状态。 |
-| isEnabled | boolean | Yes | 值为true表示使能，值为false表示禁用。 |
+| info | [AbilityInfo](arkts-ability-abilityinfo-i.md) | Yes | Information about the target ability. |
+| appIndex | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | Index of the application clone.&lt;br&gt; The value **0** means to enable or disable the ability of the main application. A value greater than 0 means to enable or disable the ability of the application clone. |
+| isEnabled | boolean | Yes | Whether to enable the application. **true** to enable, **false** otherwise. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise对象，无返回结果。 |
+| Promise&lt;void&gt; | Promise that returns no value. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types. |
-| 17700061 | AppIndex not in valid range. |
-| 201 | Permission denied. |
-| 202 | Permission denied, non-system app called system api. |
-| 17700003 | The specified abilityInfo is not found. |
-| 17700001 | The specified bundleName is not found. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types. |
+| [17700061](../errorcode-bundle.md#17700061-appindex-for-a-clone-is-invalid) | AppIndex not in valid range. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission denied, non-system app called system api. |
+| [17700003](../errorcode-bundle.md#17700003-ability-name-does-not-exist) | The specified abilityInfo is not found. |
+| [17700001](../errorcode-bundle.md#17700001-bundle-name-does-not-exist) | The specified bundleName is not found. |
 
 ## Examples
 
@@ -92,7 +92,7 @@ try {
 function setAbilityEnabled(info: AbilityInfo, isEnabled: boolean, callback: AsyncCallback<void>): void
 ```
 
-设置指定组件的禁用或使能状态。使用callback异步回调。
+Enables or disables an ability. This API uses an asynchronous callback to return the result.
 
 **Since:** 9
 
@@ -110,19 +110,19 @@ function setAbilityEnabled(info: AbilityInfo, isEnabled: boolean, callback: Asyn
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| info | [AbilityInfo](arkts-ability-abilityinfo-i.md) | Yes | 需要被设置的组件。 |
-| isEnabled | boolean | Yes | 值为true表示使能，值为false表示禁用。 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md/arkts-basicservices-base-asynccallback-i.md)，当设置组件禁用或使能状态成功时，err为 undefined，否则为错误对象。 |
+| info | [AbilityInfo](arkts-ability-abilityinfo-i.md) | Yes | Information about the target ability. |
+| isEnabled | boolean | Yes | Whether to enable the application. **true** to enable, **false** otherwise. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md/arkts-basicservices-base-asynccallback-i.md) used to return the result. If the operation is successful, **err** is **null**. Otherwise, **err** is an error object. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types. |
-| 201 | Permission denied. |
-| 202 | Permission denied, non-system app called system api. |
-| 17700003 | The specified abilityInfo is not found. |
-| 17700001 | The specified bundleName is not found. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission denied, non-system app called system api. |
+| [17700003](../errorcode-bundle.md#17700003-ability-name-does-not-exist) | The specified abilityInfo is not found. |
+| [17700001](../errorcode-bundle.md#17700001-bundle-name-does-not-exist) | The specified bundleName is not found. |
 
 ## Examples
 
@@ -167,7 +167,7 @@ try {
 function setAbilityEnabled(info: AbilityInfo, isEnabled: boolean): Promise<void>
 ```
 
-设置指定组件的禁用或使能状态。使用Promise异步回调。
+Enables or disables an ability. This API uses a promise to return the result.
 
 **Since:** 9
 
@@ -185,24 +185,24 @@ function setAbilityEnabled(info: AbilityInfo, isEnabled: boolean): Promise<void>
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| info | [AbilityInfo](arkts-ability-abilityinfo-i.md) | Yes | 需要被设置的组件。 |
-| isEnabled | boolean | Yes | 值为true表示使能，值为false表示禁用。 |
+| info | [AbilityInfo](arkts-ability-abilityinfo-i.md) | Yes | Information about the target ability. |
+| isEnabled | boolean | Yes | Whether to enable the application. **true** to enable, **false** otherwise. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise对象，无返回结果。 |
+| Promise&lt;void&gt; | Promise that returns no value. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types. |
-| 201 | Permission denied. |
-| 202 | Permission denied, non-system app called system api. |
-| 17700003 | The specified abilityInfo is not found. |
-| 17700001 | The specified bundleName is not found. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission denied, non-system app called system api. |
+| [17700003](../errorcode-bundle.md#17700003-ability-name-does-not-exist) | The specified abilityInfo is not found. |
+| [17700001](../errorcode-bundle.md#17700001-bundle-name-does-not-exist) | The specified bundleName is not found. |
 
 ## Examples
 

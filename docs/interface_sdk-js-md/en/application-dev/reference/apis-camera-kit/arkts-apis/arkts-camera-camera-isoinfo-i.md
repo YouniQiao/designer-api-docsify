@@ -1,6 +1,6 @@
 # IsoInfo
 
-感光度（ISO）参数信息。
+Describes the information about the sensitivity (ISO) settings.
 
 **Since:** 22
 

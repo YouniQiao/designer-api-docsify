@@ -1,6 +1,6 @@
 # CertValidationResult
 
-证书验证的结果。
+Result of certificate validation.
 
 **Since:** 26.0.0
 
@@ -22,7 +22,7 @@ import { cert } from 'kits/@kit.DeviceCertificateKit';
 readonly certChain: Array<X509Cert>
 ```
 
-验证后的证书链。验证成功时返回完整的证书链，从终端实体证书到信任锚点。可用于后续的证书信息查询或其他验证操作。
+Indicates the authenticated certificate chain. Upon successful authentication, the complete certificate chain is returned, from the end-entity certificate to the trust anchor. It can be used for subsequent certificate information query or other verification operations.
 
 **Type:** Array&lt;X509Cert&gt;
 

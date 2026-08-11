@@ -1,6 +1,6 @@
 # WebKeyboardCallbackInfo
 
-Defines the web keyboard callback info related to the {@link onInterceptKeyboardAttach} event.
+Represents input parameters of the callback used to intercept the soft keyboard started from editable elements on a web page, including [WebKeyboardController](../arkts-apis/arkts-arkweb-web-web-f.md/arkts-arkweb-web-web-f.md#web) and editable element attributes.
 
 **Since:** 12
 
@@ -16,7 +16,7 @@ Defines the web keyboard callback info related to the {@link onInterceptKeyboard
 attributes: Record<string, string>
 ```
 
-The attributes of web input element.
+Attribute of the web page element that triggers the display of the soft keyboard.
 
 **Type:** [Record](../../apis-default/arkts-apis/arkts-record-t.md)&lt;string, string&gt;
 
@@ -36,7 +36,7 @@ The attributes of web input element.
 controller: WebKeyboardController
 ```
 
-The web keyboard controller.
+Controller used to control the input, deletion, and closure of the custom keyboard.
 
 **Type:** [WebKeyboardController](arkts-arkweb-webkeyboardcontroller-c.md)
 

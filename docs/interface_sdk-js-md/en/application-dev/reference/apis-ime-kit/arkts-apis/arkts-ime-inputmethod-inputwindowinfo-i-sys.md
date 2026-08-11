@@ -1,6 +1,6 @@
 # InputWindowInfo
 
-输入法软键盘的窗口信息。
+Information of input window.
 
 **Since:** 10
 
@@ -22,9 +22,7 @@ import { inputMethod } from 'kits/@kit.IMEKit';
 userId?: int
 ```
 
-显示输入法窗口的用户ID。
-
-该属性仅系统应用可以使用。
+Indicates the ID of the user whose input window is shown.
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 

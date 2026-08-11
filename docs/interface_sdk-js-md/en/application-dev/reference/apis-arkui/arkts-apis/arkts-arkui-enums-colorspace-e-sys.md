@@ -1,6 +1,6 @@
 # ColorSpace
 
-定义了颜色空间的类型，用于指定颜色显示的模式。
+Define ColorSpace enumeration.
 
 **Since:** 23
 
@@ -16,9 +16,7 @@
 BT2020 = 2
 ```
 
-BT2020颜色空间，具有更广的色域，适用于高端显示设备。 
-
-**系统接口：** 此接口为系统接口。
+BT2020 ColorSpace.
 
 **Since:** 26.0.0
 

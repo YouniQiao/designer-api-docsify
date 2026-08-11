@@ -12,14 +12,14 @@ import { dlpPermission } from 'kits/@kit.DataProtectionKit';
 function queryDlpPolicy(dlpFd: number): Promise<string>
 ```
 
-在DLP文件中解析文件头，获取DLP明文策略。返回的策略JSON字符串包含[DLPProperty](arkts-dataprotection-dlppermission-dlpproperty-i.md)和  
-[CustomProperty](arkts-dataprotection-dlppermission-customproperty-i.md)信息。使用Promise异步回调。
+Parses the file header in a DLP file to obtain the DLP plaintext policy. The returned JSON string of the DLP policy contains the [DLPProperty](arkts-dataprotection-dlppermission-dlpproperty-i.md) and   
+[CustomProperty](arkts-dataprotection-dlppermission-customproperty-i.md) information. This API uses a promise to return the result.
 
-该接口可用于在查看DLP文件权限配置等场景中，获取文件的策略信息以便进行分析。
+This API obtains the policy information of a DLP file for analysis in scenarios such as viewing the DLP file permission configuration.
 
-> **说明：**
+> **NOTE：**
 > 
-> 该接口仅支持企业账号调用。
+> This API can be called only by enterprise accounts.
 
 **Since:** 21
 
@@ -35,47 +35,51 @@ function queryDlpPolicy(dlpFd: number): Promise<string>
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| dlpFd | number | Yes | 待查询策略的DLP文件的fd。取值范围为[0, 2&lt;sup&gt;31&lt;/sup&gt;-1]。当fd小于0时，打印错误日志，函数停止运行；当fd大于2&lt;sup&gt;31&lt;/sup&gt;-1时， fd的值被截断。 |
+| dlpFd | number | Yes | FD of the DLP file to be queried. The value range is [0, 2&lt;sup&gt;31&lt;/sup&gt;-1]. If the value of **fd** is less than 0, an error log is generated, and the function stops running. If the value of **fd** is greater than 2&lt;sup&gt;31&lt;/sup&gt;-1, the excess part will be truncated. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;string&gt; | Promise对象，返回当前DLP策略的JSON字符串。长度不超过4194304字节。 |
+| Promise&lt;string&gt; | Promise used to return the JSON string of the DLP policy. The length cannot exceed 4,194,304 bytes. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 19100003 | Credential task time out. |
-| 19100002 | Credential service busy due to too many tasks or duplicate tasks. |
-| 19100001 | Invalid parameter value. |
-| 19100005 | Credential authentication server error. |
-| 19100004 | Credential service error. |
-| 19100011 | The system ability works abnormally. |
-| 201 | Permission denied. |
-| 202 | Non-system applications use system APIs.<br>**Applicable version:** 20 and later |
-| 19100009 | Failed to operate the DLP file. |
-| 19100008 | The file is not a DLP file. |
-| 19100013 | The user does not have the permission. |
+| [19100003](../errorcode-dlp.md#19100003-encryptiondecryption-timeout) | Credential task time out. |
+| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported because car not support DLP feature.<br>**Applicable version:** 26.1.0 and later |
+| [19100002](../errorcode-dlp.md#19100002-encryption-and-decryption-error) | Credential service busy due to too many tasks or duplicate tasks. |
+| [19100001](../errorcode-dlp.md#19100001-invalid-parameter) | Invalid parameter value. |
+| [19100005](../errorcode-dlp.md#19100005-credential-authentication-server-error) | Credential authentication server error. |
+| [19100004](../errorcode-dlp.md#19100004-credential-service-error) | Credential service error. |
+| [19100011](../errorcode-dlp.md#19100011-system-service-abnormal) | The system ability works abnormally. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Non-system applications use system APIs.<br>**Applicable version:** 20 and later |
+| [19100009](../errorcode-dlp.md#19100009-failed-to-operate-the-dlp-file) | Failed to operate the DLP file. |
+| [19100008](../errorcode-dlp.md#19100008-nondlp-file) | The file is not a DLP file. |
+| [19100013](../errorcode-dlp.md#19100013-user-access-denied) | The user does not have the permission. |
 
 ## Examples
 
 ```TypeScript
 import { dlpPermission } from '@kit.DataProtectionKit';
 import { fileIo } from '@kit.CoreFileKit';
+import { BusinessError } from '@kit.BasicServicesKit';
 
-let dlpFd : number | undefined = undefined; // FD of the DLP file to be queried.
-let dlpFilePath: string = "file://docs/storage/Users/currentUser/Documents/test.txt.dlp"; // Specify the DLP file path.
-dlpFd = fileIo.openSync(dlpFilePath, fileIo.OpenMode.READ_ONLY).fd; // Open the DLP file to obtain the descriptor.
-dlpPermission.queryDlpPolicy(dlpFd).then((policy) => {
-  console.info('DLP policy:' + policy);
-}).catch((error: BusinessError)=> {
-  console.error(JSON.stringify(error));
-}).finally(()=>{
-  if (dlpFd) {
-    fileIo.closeSync(dlpFd);
+async function ExampleFunction(dlpFilePath: string) {
+  let dlpFd : number | undefined = undefined;
+  try {
+    dlpFd = fileIo.openSync(dlpFilePath, fileIo.OpenMode.READ_ONLY).fd;
+    let policy: string = await dlpPermission.queryDlpPolicy(dlpFd);
+    console.info('DLP policy:' + policy);
+  } catch(err) {
+    console.error('error', (err as BusinessError).code, (err as BusinessError).message);
+  } finally {
+    if (dlpFd) {
+      fileIo.closeSync(dlpFd);
+    }
   }
-});
+}
 ```
 

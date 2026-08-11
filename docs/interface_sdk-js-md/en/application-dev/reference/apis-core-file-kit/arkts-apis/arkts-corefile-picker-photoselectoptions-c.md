@@ -1,6 +1,6 @@
 # PhotoSelectOptions
 
-图库选择选项。
+Defines the options for selecting images or videos.
 
 **Since:** 9
 
@@ -26,7 +26,9 @@ import { picker } from 'kits/@kit.CoreFileKit';
 MIMEType?: PhotoViewMIMETypes
 ```
 
-可选择的媒体文件类型。若无此参数，则默认为图片和视频类型。
+Media file types to select. If this parameter is not specified, **IMAGE_VIDEO_TYPE** is used by default.
+
+**Note：**: This API is supported since API version 9 and deprecated since API version 18.
 
 **Type:** [PhotoViewMIMETypes](arkts-corefile-picker-photoviewmimetypes-e.md)
 
@@ -50,7 +52,7 @@ MIMEType?: PhotoViewMIMETypes
 maxSelectNumber?: number
 ```
 
-选择媒体文件数量的最大值，默认值为50，最大值为500。
+Maximum number of media files that can be selected. The default value is **50**,and the maximum value is **500**.
 
 **Type:** number
 

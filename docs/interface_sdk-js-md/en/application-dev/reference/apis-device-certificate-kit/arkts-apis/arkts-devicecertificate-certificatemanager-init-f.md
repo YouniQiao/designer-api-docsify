@@ -12,7 +12,7 @@ import { certificateManager } from 'kits/@kit.DeviceCertificateKit';
 function init(authUri: string, spec: CMSignatureSpec, callback: AsyncCallback<CMHandle>): void
 ```
 
-使用凭据进行签名、验签的初始化操作，是签名验签流程的第一步，后续需依次调用update和finish接口完成操作。使用Callback异步回调。
+Indicates the initialization of signature and signature verification using credentials. This is the first step in the signature verification process. Later, the update and finish interfaces need to be invoked in sequence to complete the operations. Use Callback to return the result asynchronously.
 
 **Since:** 11
 
@@ -28,19 +28,19 @@ function init(authUri: string, spec: CMSignatureSpec, callback: AsyncCallback<CM
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| authUri | string | Yes | 表示使用凭据的唯一标识符，长度限制256字节以内。 |
-| spec | [CMSignatureSpec](arkts-devicecertificate-certificatemanager-cmsignaturespec-i.md) | Yes | 表示签名、验签的属性。 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;CMHandle&gt; | Yes | 回调函数。当签名、验签的初始化操作成功时，err为null，data为获取到的CMHandle；否则为错误对象。 |
+| authUri | string | Yes | Unique identifier of the credential to be used. The value contains up to 256 bytes. |
+| spec | [CMSignatureSpec](arkts-devicecertificate-certificatemanager-cmsignaturespec-i.md) | Yes | Parameters for the signing or signature verification operation. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;CMHandle&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **null** and **data** is the obtained **CMHandle**. Otherwise, **err** is an error object. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; 3. Parameter verification failed. |
-| 201 | Permission verification failed. The application does not have the permission required to call the API. |
-| 17500002 | The certificate does not exist. |
-| 17500001 | Internal error. Possible causes: 1. IPC communication failed; &lt;br&gt;2. Memory operation error; 3. File operation error. Please try again. |
-| 17500005 | The application is not authorized by the user. Please call [openAuthorizeDialog](arkts-devicecertificate-certificatemanagerdialog-openauthorizedialog-f.md#openauthorizedialog) method to request user authorization for the certificate or credential.<br>**Applicable version:** 12 and later |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; 3. Parameter verification failed. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed. The application does not have the permission required to call the API. |
+| [17500002](../errorcode-certManager.md#17500002-certificate-not-exist) | The certificate does not exist. |
+| [17500001](../errorcode-certManager.md#17500001-internal-error) | Internal error. Possible causes: 1. IPC communication failed; &lt;br&gt;2. Memory operation error; 3. File operation error. Please try again. |
+| [17500005](../errorcode-certManager.md#17500005-application-not-authorized) | The application is not authorized by the user. Please call [openAuthorizeDialog](arkts-devicecertificate-certificatemanagerdialog-openauthorizedialog-f.md#openauthorizedialog) method to request user authorization for the certificate or credential.<br>**Applicable version:** 12 and later |
 
 ## Examples
 
@@ -73,7 +73,7 @@ try {
 function init(authUri: string, spec: CMSignatureSpec): Promise<CMHandle>
 ```
 
-使用凭据进行签名、验签的初始化操作。使用Promise异步回调。
+Initializes the signing or signature verification operation using the specified credential. This API uses a promise to return the result.
 
 **Since:** 11
 
@@ -89,24 +89,24 @@ function init(authUri: string, spec: CMSignatureSpec): Promise<CMHandle>
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| authUri | string | Yes | 表示使用凭据的唯一标识符，长度限制256字节以内。 |
-| spec | [CMSignatureSpec](arkts-devicecertificate-certificatemanager-cmsignaturespec-i.md) | Yes | 表示签名、验签的属性。 |
+| authUri | string | Yes | Unique identifier of the credential to be used. The value contains up to 256 bytes. |
+| spec | [CMSignatureSpec](arkts-devicecertificate-certificatemanager-cmsignaturespec-i.md) | Yes | Parameters for the signing or signature verification operation. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;CMHandle&gt; | Promise对象，返回签名、验签的初始化操作结果，返回值为CMHandle对象。 |
+| Promise&lt;CMHandle&gt; | Promise used to return the operation result, that is, the **CMHandle** object. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; 3. Parameter verification failed. |
-| 201 | Permission verification failed. The application does not have the permission required to call the API. |
-| 17500002 | The certificate does not exist. |
-| 17500001 | Internal error. Possible causes: 1. IPC communication failed; &lt;br&gt;2. Memory operation error; 3. File operation error. Please try again. |
-| 17500005 | The application is not authorized by the user.<br>**Applicable version:** 12 and later |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; 3. Parameter verification failed. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed. The application does not have the permission required to call the API. |
+| [17500002](../errorcode-certManager.md#17500002-certificate-not-exist) | The certificate does not exist. |
+| [17500001](../errorcode-certManager.md#17500001-internal-error) | Internal error. Possible causes: 1. IPC communication failed; &lt;br&gt;2. Memory operation error; 3. File operation error. Please try again. |
+| [17500005](../errorcode-certManager.md#17500005-application-not-authorized) | The application is not authorized by the user.<br>**Applicable version:** 12 and later |
 
 ## Examples
 
@@ -123,8 +123,7 @@ const req: certificateManager.CMSignatureSpec = {
 try {
   certificateManager.init(uri, req).then((handle) => {
     console.info('Succeeded in initiating.');
-  }).catch((error: Error) => {
-    let err = error as BusinessError;
+  }).catch((err: BusinessError) => {
     console.error(`Failed to init. Code: ${err.code}, message: ${err.message}`);
   })
 } catch (error) {

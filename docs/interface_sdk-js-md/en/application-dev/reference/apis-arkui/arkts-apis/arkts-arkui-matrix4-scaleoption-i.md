@@ -1,6 +1,6 @@
 # ScaleOption
 
-缩放参数。
+Set scaling parameters
 
 **Since:** 23
 
@@ -22,13 +22,7 @@ import { matrix4 } from 'kits/@kit.ArkUI';
 centerX?: double
 ```
 
-变换中心点x轴坐标。
-
-单位：px
-
-默认值：组件中心点x轴坐标。
-
-取值范围 (-∞, +∞)
+Transform the x-axis coordinate of the center point.
 
 **Type:** double
 
@@ -48,13 +42,7 @@ centerX?: double
 centerY?: double
 ```
 
-变换中心点y轴坐标。
-
-单位：px
-
-默认值：组件中心点y轴坐标。
-
-取值范围 (-∞, +∞)
+Transform the y-axis coordinate of the center point.
 
 **Type:** double
 
@@ -74,11 +62,7 @@ centerY?: double
 x?: double
 ```
 
-x轴的缩放倍数。x>1时以x轴方向放大，0<x<1时以x轴方向缩小，x<0时沿x轴反向并缩放。
-
-默认值：1
-
-取值范围 (-∞, +∞)
+Zoom factor of the x-axis.
 
 **Type:** double
 
@@ -98,11 +82,7 @@ x轴的缩放倍数。x>1时以x轴方向放大，0<x<1时以x轴方向缩小，
 y?: double
 ```
 
-y轴的缩放倍数。y>1时以y轴方向放大，0<y<1时以y轴方向缩小，y<0时沿y轴反向并缩放。
-
-默认值：1
-
-取值范围 (-∞, +∞)
+Zoom factor of the y-axis.
 
 **Type:** double
 
@@ -122,11 +102,7 @@ y轴的缩放倍数。y>1时以y轴方向放大，0<y<1时以y轴方向缩小，
 z?: double
 ```
 
-z轴的缩放倍数。z>1时以z轴方向放大，0<z<1时以z轴方向缩小，z<0时沿z轴反向并缩放。
-
-默认值：1
-
-取值范围 (-∞, +∞)
+Zoom factor of the z-axis.
 
 **Type:** double
 

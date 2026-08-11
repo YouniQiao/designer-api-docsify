@@ -1,6 +1,6 @@
 # EmbeddedDpiFollowStrategy
 
-DPI跟随策略，用于设置DPI，使其能够跟随宿主或EmbeddedUIExtensionAbility。
+Enumeration of different types of EmbeddedDpiFollowStrategy.
 
 **Since:** 26.0.0
 
@@ -16,7 +16,7 @@ DPI跟随策略，用于设置DPI，使其能够跟随宿主或EmbeddedUIExtensi
 FOLLOW_HOST_DPI = 0
 ```
 
-表示DPI跟随宿主。
+Followed the host DPI.
 
 **Since:** 26.0.0
 
@@ -36,7 +36,7 @@ FOLLOW_HOST_DPI = 0
 FOLLOW_UI_EXTENSION_ABILITY_DPI = 1
 ```
 
-表示DPI跟随EmbeddedUIExtensionAbility。
+Followed the EmbeddedUIExtensionAbility.
 
 **Since:** 26.0.0
 

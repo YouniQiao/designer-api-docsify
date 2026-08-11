@@ -1,6 +1,6 @@
 # CrossLanguageOptions
 
-该接口用于配置或查询FrameNode的跨语言访问权限。例如，针对ArkTS语言创建的节点，可通过该接口控制是否允许通过非ArkTS语言进行属性访问或修改。
+Defines the cross-language options.
 
 **Since:** 23
 
@@ -16,7 +16,7 @@
 attributeSetting?: boolean
 ```
 
-FrameNode是否支持跨ArkTS语言进行属性设置。true表示支持跨ArkTS语言进行属性设置，false表示不支持跨ArkTS语言进行属性设置。默认值为false。
+Defines if it enables setting attributes cross-language. Default value is false.
 
 **Type:** boolean
 
@@ -36,7 +36,7 @@ FrameNode是否支持跨ArkTS语言进行属性设置。true表示支持跨ArkTS
 treeOperating?: boolean
 ```
 
-FrameNode是否支持跨ArkTS语言进行组件树操作。true表示支持跨ArkTS语言进行组件树操作，false表示不支持跨ArkTS语言进行组件树操作。默认值为false。
+Defines if it enables tree operations cross-language. Default value is false.Tree operations include appendChild, removeChild, insertChildAfter, etc.
 
 **Type:** boolean
 

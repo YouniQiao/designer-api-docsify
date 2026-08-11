@@ -1,6 +1,6 @@
 # Measurable
 
-子组件位置信息。
+Provides the child component position information.
 
 **Since:** 10
 
@@ -16,7 +16,7 @@
 getBorderWidth() : DirectionalEdgesT<number>
 ```
 
-调用此方法获取子组件的borderWidth信息。
+Obtains the border widths of the child component.
 
 **Since:** 12
 
@@ -34,7 +34,7 @@ getBorderWidth() : DirectionalEdgesT<number>
 
 | Type | Description |
 | --- | --- |
-| [DirectionalEdgesT](../arkts-apis/arkts-arkui-directionaledgest-i.md)&lt;number&gt; | 子组件的borderWidth信息。 |
+| [DirectionalEdgesT](../arkts-apis/arkts-arkui-directionaledgest-i.md)&lt;number&gt; | Border widths of the child component. |
 
 ## getMargin
 
@@ -42,7 +42,7 @@ getBorderWidth() : DirectionalEdgesT<number>
 getMargin() : DirectionalEdgesT<number>
 ```
 
-调用此方法获取子组件的margin信息。
+Obtains the margin values of the child component.
 
 **Since:** 12
 
@@ -60,7 +60,7 @@ getMargin() : DirectionalEdgesT<number>
 
 | Type | Description |
 | --- | --- |
-| [DirectionalEdgesT](../arkts-apis/arkts-arkui-directionaledgest-i.md)&lt;number&gt; | 子组件的margin信息。 |
+| [DirectionalEdgesT](../arkts-apis/arkts-arkui-directionaledgest-i.md)&lt;number&gt; | Margin values of the child component. |
 
 ## getPadding
 
@@ -68,7 +68,7 @@ getMargin() : DirectionalEdgesT<number>
 getPadding() : DirectionalEdgesT<number>
 ```
 
-调用此方法获取子组件的padding信息。
+Obtains the padding values of the child component.
 
 **Since:** 12
 
@@ -86,7 +86,7 @@ getPadding() : DirectionalEdgesT<number>
 
 | Type | Description |
 | --- | --- |
-| [DirectionalEdgesT](../arkts-apis/arkts-arkui-directionaledgest-i.md)&lt;number&gt; | 子组件的padding信息。 |
+| [DirectionalEdgesT](../arkts-apis/arkts-arkui-directionaledgest-i.md)&lt;number&gt; | Padding values of the child component. |
 
 ## measure
 
@@ -94,7 +94,7 @@ getPadding() : DirectionalEdgesT<number>
 measure(constraint: ConstraintSizeOptions) : MeasureResult
 ```
 
-调用此方法限制子组件的尺寸范围。
+Imposes size constraints on the child component.
 
 **Since:** 10
 
@@ -112,7 +112,7 @@ measure(constraint: ConstraintSizeOptions) : MeasureResult
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| constraint | [ConstraintSizeOptions](../arkts-apis/arkts-arkui-constraintsizeoptions-i.md) | Yes | 约束尺寸。 |
+| constraint | [ConstraintSizeOptions](../arkts-apis/arkts-arkui-constraintsizeoptions-i.md) | Yes | Size constraint. |
 
 **Return value:**
 
@@ -126,7 +126,7 @@ measure(constraint: ConstraintSizeOptions) : MeasureResult
 uniqueId?: number
 ```
 
-系统为子组件分配的唯一标识UniqueID。取值限定为整数。
+Unique ID that the system assigns to the child component.The value range is all integers.
 
 **Type:** number
 

@@ -12,7 +12,7 @@ import { vibrator } from 'kits/@kit.SensorServiceKit';
 function getEffectInfoSync(effectId: string, param?: VibratorInfoParam): EffectInfo
 ```
 
-通过设备ID和马达ID获取预置振动效果信息，用于判断该预置振动效果是否受指定设备的指定马达支持。用于多设备多马达场景下确认指定设备的指定马达是否支持某个预置振动效果，不传param时默认查询本地设备。适用于触发振动前确认效果可用性，避免在不支持的设备或马达上触发振动效果不佳。返回EffectInfo对象，isEffectSupported字段指示是否支持该预置振动效果：返回true时可直接用于startVibration (#vibratorstartvibration9)，返回false时使用该effectId触发振动可能效果不佳。
+Obtains the preset vibration effect based on the device ID and vibrator ID to determine whether the preset vibration effect is supported.
 
 **Since:** 19
 
@@ -26,20 +26,20 @@ function getEffectInfoSync(effectId: string, param?: VibratorInfoParam): EffectI
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| effectId | string | Yes | 待确认的预置振动效果ID。字符串最大长度64，超出部分截取前64个字符。使用场景：不同设备预置的振动效果可能不同，需传入具体的effectId查询是否支持。取值可参考 [EffectId](arkts-sensorservice-vibrator-effectid-e.md)和[HapticFeedback](arkts-sensorservice-vibrator-hapticfeedback-e.md)中定义的值。 |
-| param | [VibratorInfoParam](arkts-sensorservice-vibrator-vibratorinfoparam-i.md) | No | 指出需要查询的设备和马达信息。不传param时默认查询本地设备。deviceId默认值为-1（本地设备），vibratorId默认值为0（该设备的全部马达）。 deviceId和vibratorId可通过[vibrator.getVibratorInfoSync](arkts-sensorservice-vibrator-getvibratorinfosync-f.md#getvibratorinfosync)或 [vibrator.on](arkts-sensorservice-vibrator-on-f.md#on)查询获取。 |
+| effectId | string | Yes | Effect ID. The value is a string of a maximum of 64 characters. If the length exceeds 64 characters, the first 64 characters are used. |
+| param | [VibratorInfoParam](arkts-sensorservice-vibrator-vibratorinfoparam-i.md) | No | Device ID and vibrator ID. If this parameter is left unspecified, this API applies to the local device by default. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [EffectInfo](arkts-sensorservice-vibrator-effectinfo-i.md) | 预置振动效果信息。isEffectSupported为true表示支持该效果，可用于 [startVibration]{ |
+| [EffectInfo](arkts-sensorservice-vibrator-effectinfo-i.md) | Whether the preset vibration effect is supported. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 14600101 | Device operation failed. |
+| [14600101](../errorcode-vibrator.md#14600101-device-operation-failed) | Device operation failed. |
 
 ## Examples
 

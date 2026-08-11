@@ -1,6 +1,6 @@
 # OnLoadInterceptEvent
 
-定义Web组件加载url之前触发的加载拦截事件。
+Represents the event triggered when resource loading is intercepted.
 
 **Since:** 12
 
@@ -22,7 +22,7 @@ import { AtomicServiceWeb, OnMessageEvent, OnPageEndEvent, OnHttpErrorReceiveEve
 data: WebResourceRequest
 ```
 
-网页请求的封装信息。
+Web resource request of event.
 
 **Type:** [WebResourceRequest](../../apis-arkweb/arkts-apis/arkts-arkweb-web-webresourcerequest-c.md)
 

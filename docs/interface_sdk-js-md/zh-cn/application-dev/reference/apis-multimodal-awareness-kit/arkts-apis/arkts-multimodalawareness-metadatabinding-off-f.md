@@ -1,18 +1,12 @@
 # off
 
-## 导入模块
-
-```TypeScript
-import { metadataBinding } from 'kits/@kit.MultimodalAwarenessKit';
-```
-
 ## off('operationSubmitMetadata')
 
 ```TypeScript
 function off(type: 'operationSubmitMetadata', bundleName: string, callback?: Callback<int>): void
 ```
 
-Unsubscribes from system events that are used to obtain the encoded metadata. The respective callback will be unregistered.
+取消订阅系统获取编码内容的事件。
 
 **起始版本：** 18
 
@@ -28,29 +22,28 @@ Unsubscribes from system events that are used to obtain the encoded metadata. Th
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| type | 'operationSubmitMetadata' | 是 | Event type. This parameter has a fixed value of **operationSubmitMetadata**, indicating the system application's attempt to obtain the encoded metadata. |
-| bundleName | string | 是 | Application bundle name. |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;int&gt; | 否 | Callback used to return the encoded metadata. |
+| type | 'operationSubmitMetadata' | 是 | 事件类型，type为'operationSubmitMetadata'，表示系统应用获取编码内容。 |
+| bundleName | string | 是 | 应用包名，标识注册应用的包名，需与订阅时传入的包名一致。 |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;int&gt; | 否 | 回调函数，返回编码结果。需要取消监听的回调函数，需与订阅时传入的回调函数一致。建议在订阅时保存回调函数引用，在取消订阅时使用同一引用。若不填，则取消当前监 听该事件的所有回调函数。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 32100001 | Internal handling failed. |
-| 32100005 | Unsubscribe Failed. Possible causes: &lt;br&gt; 1. Abnormal system capability. &lt;br&gt; 2. IPC communication abnormality. |
+| [32100001](../../apis-multimodalawareness-kit/errorcode-metadataBinding.md#32100001-文件创建失败) | Internal handling failed. |
+| [32100005](../../apis-multimodalawareness-kit/errorcode-metadataBinding.md#32100005-取消订阅失败) | Unsubscribe Failed. Possible causes: &lt;br&gt; 1. Abnormal system capability. &lt;br&gt; 2. IPC communication abnormality. |
 
 ## 示例
 
 ```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
 import { metadataBinding } from '@kit.MultimodalAwarenessKit';
 
 let bundleName: string = '';
 try {
-  metadataBinding.off('operationSubmitMetadata', bundleName);
+  metadataBinding.off('operationSubmitMetadata', bundleName, (event: number) => {
+  });
 } catch (error) {
- const err = error as BusinessError;
- console.error(`Failed to unsubscribe operationSubmitMetadata event. Code: ${err.code}, message: ${err.message}`);
+  console.error("unsubscript screenshot event" + error);
 }
 ```
 

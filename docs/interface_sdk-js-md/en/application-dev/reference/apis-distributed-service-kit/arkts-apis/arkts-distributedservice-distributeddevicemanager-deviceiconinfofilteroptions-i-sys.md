@@ -1,6 +1,6 @@
 # DeviceIconInfoFilterOptions (System API)
 
-设备图标信息过滤选项。
+Defines the device icon information filter options.
 
 **Since:** 18
 
@@ -24,7 +24,7 @@ import { distributedDeviceManager } from 'kits/@kit.DistributedServiceKit';
 imageType: string
 ```
 
-图片类型。固定值为"ID"，表示产品实物图。
+Image type. This parameter has a fixed value of **ID**, indicating the product's physical image.
 
 **Type:** string
 
@@ -44,7 +44,7 @@ imageType: string
 internalModel?: string
 ```
 
-设备所属产品的内部型号。默认为空。
+Internal product model. This parameter is left unspecified by default.
 
 **Type:** string
 
@@ -64,7 +64,7 @@ internalModel?: string
 productId: string
 ```
 
-设备所属产品ID。
+Product ID.
 
 **Type:** string
 
@@ -84,10 +84,10 @@ productId: string
 specName: string
 ```
 
-图片规格名称。取值范围：
+Image specification name. Value:
 
-- lg：大图，尺寸为1016064px。  
-- sm：小图，尺寸为65536px。
+- **lg**: large image (size: 1016064 pixels)  
+- **sm**: small image (size: 65536 pixels)
 
 **Type:** string
 
@@ -107,7 +107,7 @@ specName: string
 subProductId?: string
 ```
 
-设备所属产品子ID。默认为空。
+Sub-product ID. This parameter is left unspecified by default.
 
 **Type:** string
 

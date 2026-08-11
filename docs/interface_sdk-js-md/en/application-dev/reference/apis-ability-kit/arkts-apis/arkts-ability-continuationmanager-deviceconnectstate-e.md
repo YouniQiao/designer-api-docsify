@@ -1,6 +1,6 @@
 # DeviceConnectState
 
-设备连接状态。
+Device connection state.
 
 **Since:** 8
 
@@ -18,7 +18,7 @@
 IDLE = 0
 ```
 
-设备连接初始状态。
+The device is in the initial state.
 
 **Since:** 8
 
@@ -40,7 +40,7 @@ IDLE = 0
 CONNECTING = 1
 ```
 
-设备连接中状态。
+The device is being connected.
 
 **Since:** 8
 
@@ -62,7 +62,7 @@ CONNECTING = 1
 CONNECTED = 2
 ```
 
-设备已连接状态。
+The device is connected.
 
 **Since:** 8
 
@@ -84,7 +84,7 @@ CONNECTED = 2
 DISCONNECTING = 3
 ```
 
-设备断开连接状态。
+The device is being disconnected.
 
 **Since:** 8
 

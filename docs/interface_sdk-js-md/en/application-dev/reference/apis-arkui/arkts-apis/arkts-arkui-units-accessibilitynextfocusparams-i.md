@@ -1,6 +1,6 @@
 # AccessibilityNextFocusParams
 
-定义无障碍自定义下一个焦点处理过程中可使用的详细参数对象。
+Defines struct of the parameters used to configure the next accessibility focus transition.
 
 **Since:** 26.0.0
 
@@ -16,11 +16,7 @@
 isConsiderDescendants?: boolean
 ```
 
-是否在无障碍自定义下一个焦点处理过程中查找后代节点中的焦点。
-
-true表示在无障碍自定义下一个焦点处理过程中查找后代节点中的焦点；false表示在无障碍自定义下一个焦点处理过程中不查找后代节点中的焦点。
-
-默认值：false
+isConsiderDescendants - Determines whether the focus search should consider focusable nodes within the  descendants of the target element during the next accessibility focus operation.
 
 **Type:** boolean
 

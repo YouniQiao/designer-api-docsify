@@ -1,6 +1,6 @@
 # UserGrantSetting
 
-描述用户授权的设置信息。
+Describes the user authorization settings.
 
 **Since:** 26.0.0
 
@@ -16,7 +16,7 @@
 readonly grantedBundleInfos?: Array<GrantedBundleInfo>
 ```
 
-“已获取的本机通知”通知开关开启的应用列表。
+List of apps for which the **Allow access to notifications on this device** switch is toggled on.
 
 **Type:** Array&lt;GrantedBundleInfo&gt;
 
@@ -36,7 +36,7 @@ readonly grantedBundleInfos?: Array<GrantedBundleInfo>
 readonly userGrantEnabled: boolean
 ```
 
-“允许获取本机通知”的开关状态。 true：表示功能已启用；false：表示功能未启用。
+Whether the **Allow access to notifications on this device** switch is toggled on. true: **yes**; false: **no**.
 
 **Type:** boolean
 

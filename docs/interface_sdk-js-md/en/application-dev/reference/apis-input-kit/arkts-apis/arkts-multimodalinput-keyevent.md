@@ -16,12 +16,12 @@ import { KeyEvent, Action, Key } from 'kits/@kit.InputKit';
 
 | Name | Description |
 | --- | --- |
-| [Key](arkts-input-multimodalinput-keyevent-key-i.md) | 按键。 |
-| [KeyEvent](arkts-input-multimodalinput-keyevent-keyevent-i.md) | 按键事件。 |
+| [Key](arkts-input-multimodalinput-keyevent-key-i.md) | Defines a key. |
+| [KeyEvent](arkts-input-multimodalinput-keyevent-keyevent-i.md) | Key event. |
 
 ### Enums
 
 | Name | Description |
 | --- | --- |
-| [Action](arkts-input-multimodalinput-keyevent-action-e.md) | 按键事件类型。 |
+| [Action](arkts-input-multimodalinput-keyevent-action-e.md) | Key event type. |
 

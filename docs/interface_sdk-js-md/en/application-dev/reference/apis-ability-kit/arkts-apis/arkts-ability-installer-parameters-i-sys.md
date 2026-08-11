@@ -1,6 +1,6 @@
 # Parameters (System API)
 
-扩展参数信息。
+Describes the extended parameter information.
 
 **Since:** 15
 
@@ -24,7 +24,7 @@ import { installer } from 'kits/@kit.AbilityKit';
 key: string
 ```
 
-扩展参数键。
+Key of an extended parameter.
 
 **Type:** string
 
@@ -44,7 +44,7 @@ key: string
 value: string
 ```
 
-扩展参数值。
+Value of the extended parameter.
 
 **Type:** string
 

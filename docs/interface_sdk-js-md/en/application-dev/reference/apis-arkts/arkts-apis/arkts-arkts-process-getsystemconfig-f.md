@@ -12,7 +12,7 @@ import { process } from 'kits/@kit.ArkTS';
 function getSystemConfig(name: number): number
 ```
 
-获取系统配置信息。
+Obtains the system configuration.
 
 **Since:** 8
 
@@ -30,13 +30,13 @@ function getSystemConfig(name: number): number
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| name | number | Yes | 指定系统配置参数名。 |
+| name | number | Yes | System configuration parameter name. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| number | 返回系统配置信息。 |
+| number | System configuration obtained. |
 
 ## Examples
 

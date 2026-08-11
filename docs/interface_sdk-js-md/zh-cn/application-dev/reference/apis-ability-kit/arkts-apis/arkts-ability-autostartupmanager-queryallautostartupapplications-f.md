@@ -1,11 +1,5 @@
 # queryAllAutoStartupApplications
 
-## 导入模块
-
-```TypeScript
-import { autoStartupManager } from 'kits/@kit.AbilityKit';
-```
-
 ## queryAllAutoStartupApplications
 
 ```TypeScript
@@ -36,10 +30,10 @@ function queryAllAutoStartupApplications(callback: AsyncCallback<Array<AutoStart
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 401 | The parameter check failed. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameters types. |
-| 16000050 | Failed to connect to the system service. |
-| 201 | Permission denied, interface caller does not have permission "ohos.permission.MANAGE_APP_BOOT". |
-| 202 | Permission denied, non-system app called system api. |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | The parameter check failed. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameters types. |
+| [16000050](../errorcode-ability.md#16000050-内部错误) | Failed to connect to the system service. |
+| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied, interface caller does not have permission "ohos.permission.MANAGE_APP_BOOT". |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission denied, non-system app called system api. |
 
 
 ## queryAllAutoStartupApplications
@@ -72,8 +66,8 @@ function queryAllAutoStartupApplications(): Promise<Array<AutoStartupInfo>>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 401 | The parameter check failed. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameters types. |
-| 16000050 | Failed to connect to the system service. |
-| 201 | Permission denied, interface caller does not have permission "ohos.permission.MANAGE_APP_BOOT". |
-| 202 | Permission denied, non-system app called system api. |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | The parameter check failed. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameters types. |
+| [16000050](../errorcode-ability.md#16000050-内部错误) | Failed to connect to the system service. |
+| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied, interface caller does not have permission "ohos.permission.MANAGE_APP_BOOT". |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission denied, non-system app called system api. |
 

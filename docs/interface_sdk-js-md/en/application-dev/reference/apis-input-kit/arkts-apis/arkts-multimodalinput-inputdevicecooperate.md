@@ -1,12 +1,6 @@
 # @ohos.multimodalInput.inputDeviceCooperate(Screen Hopping)
 
-键鼠穿越功能模块，提供两台或多台设备组网协同后键鼠共享能力，实现键鼠输入设备的跨设备协同操作。
-
-> **说明：**
-> 
-> - 本模块接口从API Version 10开始不再维护，从API version 23开始废弃，推荐使用新接口[@ohos.cooperate](../../apis-distributed-service-kit/arkts-apis/arkts-cooperate.md/arkts-cooperate.md) (键鼠穿越)。
-> 
-> - 本模块接口均为系统接口。
+The **inputDeviceCooperate** module implements screen hopping for two or more networked devices to share the keyboard and mouse for collaborative operations.
 
 **Since:** 9
 
@@ -33,16 +27,16 @@ import { inputDeviceCooperate } from 'kits/@kit.InputKit';
 
 | Name | Description |
 | --- | --- |
-| [enable](arkts-input-inputdevicecooperate-enable-f-sys.md#enable) | 开启、关闭键鼠穿越，使用callback异步回调。 |
-| [enable](arkts-input-inputdevicecooperate-enable-f-sys.md#enable-1) | 开启、关闭键鼠穿越，使用Promise异步回调。 |
-| [getState](arkts-input-inputdevicecooperate-getstate-f-sys.md#getstate) | 获取键鼠穿越开关的状态，使用callback异步回调。 |
-| [getState](arkts-input-inputdevicecooperate-getstate-f-sys.md#getstate-1) | 获取键鼠穿越开关的状态，使用Promise异步回调。 |
-| [off](arkts-input-inputdevicecooperate-off-f-sys.md#off) | 关闭监听键鼠穿越状态，使用callback异步回调。 |
-| [on](arkts-input-inputdevicecooperate-on-f-sys.md#on) | 注册监听键鼠穿越状态，使用callback异步回调。 |
-| [start](arkts-input-inputdevicecooperate-start-f-sys.md#start) | 启动键鼠穿越，使用callback异步回调。 |
-| [start](arkts-input-inputdevicecooperate-start-f-sys.md#start-1) | 启动键鼠穿越，使用Promise异步回调。 |
-| [stop](arkts-input-inputdevicecooperate-stop-f-sys.md#stop) | 停止键鼠穿越，使用callback异步回调。 |
-| [stop](arkts-input-inputdevicecooperate-stop-f-sys.md#stop-1) | 停止键鼠穿越，使用Promise异步回调。 |
+| [enable](arkts-input-inputdevicecooperate-enable-f-sys.md#enable) | Enables or disables screen hopping. This API uses an asynchronous callback to return the result. |
+| [enable](arkts-input-inputdevicecooperate-enable-f-sys.md#enable-1) | Specifies whether to enable screen hopping. This API uses a promise to return the result. |
+| [getState](arkts-input-inputdevicecooperate-getstate-f-sys.md#getstate) | Obtains the state of the screen hopping switch. This API uses an asynchronous callback to return the result. |
+| [getState](arkts-input-inputdevicecooperate-getstate-f-sys.md#getstate-1) | Checks whether screen hopping is enabled. This API uses a promise to return the result. |
+| [off](arkts-input-inputdevicecooperate-off-f-sys.md#off) | Deregisters the listener for screen hopping status changes. This API uses an asynchronous callback to return the result. |
+| [on](arkts-input-inputdevicecooperate-on-f-sys.md#on) | Registers a listener for screen hopping state changes. This API uses an asynchronous callback to return the result. |
+| [start](arkts-input-inputdevicecooperate-start-f-sys.md#start) | Starts screen hopping. This API uses an asynchronous callback to return the result. |
+| [start](arkts-input-inputdevicecooperate-start-f-sys.md#start-1) | Starts screen hopping. This API uses a promise to return the result. |
+| [stop](arkts-input-inputdevicecooperate-stop-f-sys.md#stop) | Stops screen hopping. This API uses an asynchronous callback to return the result. |
+| [stop](arkts-input-inputdevicecooperate-stop-f-sys.md#stop-1) | Stops screen hopping. This API uses a promise to return the result. |
 <!--DelEnd-->
 
 <!--Del-->
@@ -50,6 +44,6 @@ import { inputDeviceCooperate } from 'kits/@kit.InputKit';
 
 | Name | Description |
 | --- | --- |
-| [EventMsg](arkts-input-inputdevicecooperate-eventmsg-e-sys.md) | 键鼠穿越事件。 |
+| [EventMsg](arkts-input-inputdevicecooperate-eventmsg-e-sys.md) | Enumerates screen hopping events. |
 <!--DelEnd-->
 

@@ -1,6 +1,6 @@
 # MotionPathOptions
 
-设置组件的运动路径。
+Defines motion path configuration options of the component.
 
 **Since:** 7
 
@@ -16,13 +16,13 @@
 from?: number
 ```
 
-运动路径的起点。
+Start point of the motion path.
 
-默认值：0.0
+Default value: **0.0**
 
-取值范围：[0.0, 1.0]
+Value range: [0.0, 1.0].
 
-设置小于0.0或大于1.0的值时，按默认值0.0处理。
+Values less than 0.0 or greater than 1.0 are treated as the default value 0.0.
 
 **Type:** number
 
@@ -44,10 +44,12 @@ from?: number
 path: string
 ```
 
-位移动画的运动路径，使用[svg路径字符串](../../../reference/apis-arkui/arkui-ts/ts-drawing-components-path.md#svg路径描述规范)。path中支持使用start和end进行起点和终点的替代，如：'Mstart.x start.y L50 50 Lend.x end.y Z'，更多说明请参考  
-[绘制路径](../../../ui/ui-js-components-svg-path.md)。
+Motion path of the translation animation. The   
+[svg path string](../../../reference/apis-arkui/arkui-ts/ts-drawing-components-path.md#svg-path-syntax) is used. In the value, **start** and **end** can be used in place of the start point and end point, for example,   
+**'Mstart.x start.y L50 50 Lend.x end.y Z'**. For details, see   
+[Path Drawing](../../../ui/ui-js-components-svg-path.md).
 
-设置为空字符串时相当于不设置路径动画。
+If this parameter is set to an empty string, the path animation is not set.
 
 **Type:** string
 
@@ -67,9 +69,9 @@ path: string
 rotatable?: boolean
 ```
 
-是否跟随路径进行旋转。true代表跟随路径进行旋转，false代表不跟随路径进行旋转。
+Whether to rotate along the path. The value **true** means to rotate along the path, and **false** means the opposite.
 
-默认值：false
+Default value: **false**
 
 **Type:** boolean
 
@@ -91,13 +93,13 @@ rotatable?: boolean
 to?: number
 ```
 
-运动路径的终点。
+End point of the motion path.
 
-默认值：1.0
+Default value: **1.0**
 
-取值范围：[0.0, 1.0]
+Value range: [0.0, 1.0].
 
-设置小于0.0或大于1.0的值时，按默认值1.0处理，且满足to值 >= 异常值处理后的from值。
+Values less than 0.0 or greater than 1.0 are treated as the default value 1.0. After this normalization, the **to**value must be greater than or equal to the **from** value.
 
 **Type:** number
 

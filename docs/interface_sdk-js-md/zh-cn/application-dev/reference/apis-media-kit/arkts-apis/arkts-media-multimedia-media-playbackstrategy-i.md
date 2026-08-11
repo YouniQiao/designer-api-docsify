@@ -10,12 +10,6 @@ Provides preferred playback settings for player.
 
 **系统能力：** SystemCapability.Multimedia.Media.Core
 
-## 导入模块
-
-```TypeScript
-import { media } from 'kits/@kit.MediaKit';
-```
-
 ## enableSuperResolution
 
 ```TypeScript
@@ -64,7 +58,7 @@ mutedMediaType?: MediaType
 
 mute the specified media stream when playing.
 
-**类型：** [MediaType](../../apis-arkweb/arkts-apis/arkts-arkweb-webview-mediatype-e.md)
+**类型：** [MediaType](arkts-media-multimedia-media-mediatype-e.md)
 
 **起始版本：** 12
 

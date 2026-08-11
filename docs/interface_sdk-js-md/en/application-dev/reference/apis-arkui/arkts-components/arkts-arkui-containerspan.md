@@ -1,11 +1,8 @@
 # ContainerSpan
 
-[Text]{@link ./text}组件的子组件，用于统一管理多个[Span]{@link ./span}、[ImageSpan]{@link ./image_span}的背景色及圆角弧度，适用于需要为文本片段和图片组合设置统一背
-景样式的场景。
-
-## 子组件
-
-可以包含[Span]{@link ./span}、[ImageSpan]{@link ./image_span} 子组件。
+As a child of the [Text]{@link ./text} component, the **ContainerSpan** component is used to manage the background
+colors and rounded corners of multiple [Span]{@link ./span} and [ImageSpan]{@link ./image_span} components in a
+unified manner.
 
 ## ContainerSpan
 
@@ -13,7 +10,7 @@
 ContainerSpan()
 ```
 
-定义ContainerSpan组件构造函数。
+Defines the constructor of ContainerSpan.
 
 **Since:** 11
 

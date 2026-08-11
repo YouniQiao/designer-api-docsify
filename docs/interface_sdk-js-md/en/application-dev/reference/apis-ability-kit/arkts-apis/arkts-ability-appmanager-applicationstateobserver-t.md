@@ -4,7 +4,7 @@
 export type ApplicationStateObserver = _ApplicationStateObserver.default
 ```
 
-应用状态监听器。
+Defines the observer used to listen for application state changes.
 
 **Since:** 14
 

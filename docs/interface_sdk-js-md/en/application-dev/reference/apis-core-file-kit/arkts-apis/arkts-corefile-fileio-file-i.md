@@ -1,6 +1,6 @@
 # File
 
-由open接口打开的File对象，持有文件描述符fd，提供文件锁和获取父目录等能力。
+Represents a **File** object opened by **open()**. It contains the FD and provides capabilities such as locking a file and obtaining the parent directory.
 
 **Since:** 23
 
@@ -22,7 +22,7 @@ import { Options, ReaderIteratorResult, Watcher, ReadTextOptions, WatchEventList
 getParent(): string
 ```
 
-获取File对象对应文件的父目录路径。
+Obtains the parent directory of this file object.
 
 **Since:** 23
 
@@ -36,7 +36,7 @@ getParent(): string
 
 | Type | Description |
 | --- | --- |
-| string | 返回父目录路径。 |
+| string | Parent directory obtained. |
 
 **Error codes:**
 
@@ -52,7 +52,7 @@ getParent(): string
 lock(exclusive?: boolean): Promise<void>
 ```
 
-对文件阻塞式施加共享锁或独占锁。使用Promise异步回调。
+Applies an exclusive lock or a shared lock on a file in blocking mode. This API uses a promise to return the result.
 
 **Since:** 23
 
@@ -66,13 +66,13 @@ lock(exclusive?: boolean): Promise<void>
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| exclusive | boolean | No | 是否施加独占锁，默认false。true：施加独占锁；false：不施加独占锁。 |
+| exclusive | boolean | No | Lock to apply. &lt;br&gt; The value **true** means an exclusive lock, and the value **false** (default) means a shared lock. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise对象，无返回结果。 |
+| Promise&lt;void&gt; | Promise that returns no value. |
 
 **Error codes:**
 
@@ -91,7 +91,7 @@ lock(exclusive?: boolean): Promise<void>
 lock(callback: AsyncCallback<void>): void
 ```
 
-对文件阻塞式施加共享锁。使用callback异步回调。
+Applies a shared lock on a file in blocking mode. This API uses an asynchronous callback to return the result.
 
 **Since:** 23
 
@@ -105,7 +105,7 @@ lock(callback: AsyncCallback<void>): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | 回调函数。当文件上锁成功，err为undefined，否则为错误对象。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. If the file is locked successfully, **err** is **undefined**. Otherwise, **err** is an error object. |
 
 **Error codes:**
 
@@ -124,7 +124,7 @@ lock(callback: AsyncCallback<void>): void
 lock(exclusive: boolean, callback: AsyncCallback<void>): void
 ```
 
-对文件阻塞式施加共享锁或独占锁。使用callback异步回调。
+Applies an exclusive lock or a shared lock on a file in blocking mode. This API uses an asynchronous callback to return the result.
 
 **Since:** 23
 
@@ -138,8 +138,8 @@ lock(exclusive: boolean, callback: AsyncCallback<void>): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| exclusive | boolean | Yes | 是否施加独占锁。true：施加独占锁；false：不施加独占锁。 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | 回调函数。当文件上锁成功，err为undefined，否则为错误对象。 |
+| exclusive | boolean | Yes | Whether to apply an exclusive lock. The value **true** means an exclusive lock, and the value **false** (default) means a shared lock. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. If the file is locked successfully, **err** is **undefined**. Otherwise, **err** is an error object. |
 
 **Error codes:**
 
@@ -158,7 +158,7 @@ lock(exclusive: boolean, callback: AsyncCallback<void>): void
 tryLock(exclusive?: boolean): void
 ```
 
-文件非阻塞式施加共享锁或独占锁。
+Applies an exclusive lock or a shared lock on this file in non-blocking mode.
 
 **Since:** 23
 
@@ -172,7 +172,7 @@ tryLock(exclusive?: boolean): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| exclusive | boolean | No | 是否施加独占锁，默认false。true：施加独占锁；false：不施加独占锁。 |
+| exclusive | boolean | No | Lock to apply. &lt;br&gt; The value **true** means an exclusive lock, and the value **false** (default) means a shared lock. |
 
 **Error codes:**
 
@@ -191,7 +191,7 @@ tryLock(exclusive?: boolean): void
 unlock(): void
 ```
 
-以同步方式解锁文件。
+Unlocks a file. This API returns the result synchronously.
 
 **Since:** 23
 
@@ -218,7 +218,7 @@ unlock(): void
 readonly fd: int
 ```
 
-已打开的文件描述符fd。
+FD of the file.
 
 **Type:** int
 
@@ -236,7 +236,7 @@ readonly fd: int
 readonly name: string
 ```
 
-文件名。
+Name of the file.
 
 **Type:** string
 
@@ -254,7 +254,7 @@ readonly name: string
 readonly path: string
 ```
 
-文件路径。
+Path of the file.
 
 **Type:** string
 

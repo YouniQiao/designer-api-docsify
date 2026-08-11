@@ -1,6 +1,6 @@
 # TextInputStyle
 
-文本输入样式。
+Text input style.
 
 **Since:** 23
 
@@ -13,12 +13,12 @@
 ## Default
 
 ```TypeScript
-Default = 0
+Default
 ```
 
-默认风格
+Text input default style.
 
-光标宽1.5vp，光标高度与文本选中底板高度和字体大小相关。
+&lt;p&gt;&lt;strong&gt;NOTE&lt;/strong&gt;:&lt;br&gt;The caret width is fixed at 1.5 vp,and the caret height is subject to the background height and font size of the selected text.&lt;/p&gt;
 
 **Since:** 23
 
@@ -26,19 +26,19 @@ Default = 0
 
 **Model restriction:** This API can be used only in the stage model.
 
-<!--Device-TextInputStyle-Default = 0--><!--Device-TextInputStyle-Default = 0-End-->
+<!--Device-TextInputStyle-Default--><!--Device-TextInputStyle-Default-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## Inline
 
 ```TypeScript
-Inline = 1
+Inline
 ```
 
-内联输入风格，也称内联模式。文本选中底板高度与输入框高度相同。
+Text input inline style.
 
-&lt;br/&gt;内联输入是在有明显的编辑态/非编辑态的区分场景下使用，例如：文件列表视图中的重命名。&lt;br/&gt;不支持showError属性。&lt;br/&gt;内联模式下，不支持拖入文本。
+&lt;p&gt;&lt;strong&gt;NOTE&lt;/strong&gt;:&lt;br&gt;The background height of the selected text is the same as the height of the text box.&lt;br&gt;This style is used in scenarios where editing and non-editing states are obvious,for example, renaming in the file list view.&lt;br&gt;The showError attribute is not supported for this style.&lt;br&gt;This style does not allow for text dragging and dropping.&lt;/p&gt;
 
 **Since:** 23
 
@@ -46,7 +46,7 @@ Inline = 1
 
 **Model restriction:** This API can be used only in the stage model.
 
-<!--Device-TextInputStyle-Inline = 1--><!--Device-TextInputStyle-Inline = 1-End-->
+<!--Device-TextInputStyle-Inline--><!--Device-TextInputStyle-Inline-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 

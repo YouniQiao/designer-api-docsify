@@ -1,11 +1,5 @@
 # createReadStream
 
-## 导入模块
-
-```TypeScript
-import { Options, ReaderIteratorResult, Watcher, ReadTextOptions, WatchEventListener, TaskSignal, WriteOptions, ListFileExtOptions, DfsListeners, Filter, ReadOptions, ListFileOptions, WatchEvent, FileFilter, ConflictFiles } from 'kits/@kit.CoreFileKit';
-```
-
 ## createReadStream
 
 ```TypeScript
@@ -46,7 +40,7 @@ function createReadStream(path: string, options?: ReadStreamOptions): ReadStream
 | 13900030 | File name too long |
 | 13900024 | File too large |
 | 13900004 | Interrupted system call |
-| 401 | Parameter error |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error |
 | 13900038 | Value too large for defined data type |
 | 13900001 | Operation not permitted |
 | 13900002 | No such file or directory |

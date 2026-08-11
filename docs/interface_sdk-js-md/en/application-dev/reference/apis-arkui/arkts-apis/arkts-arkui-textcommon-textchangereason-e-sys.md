@@ -1,6 +1,6 @@
 # TextChangeReason (System API)
 
-组件内容变化原因。
+Defines the reason for text changes.
 
 **Since:** 24
 
@@ -18,7 +18,7 @@
 UNKNOWN = 0
 ```
 
-未知原因。
+Default value.
 
 **Since:** 24
 
@@ -38,7 +38,7 @@ UNKNOWN = 0
 INPUT = 1
 ```
 
-用户输入。
+Reason for input from input method.
 
 **Since:** 24
 
@@ -58,7 +58,7 @@ INPUT = 1
 PASTE = 2
 ```
 
-粘贴。
+Reason for paste.
 
 **Since:** 24
 
@@ -78,7 +78,7 @@ PASTE = 2
 CUT = 3
 ```
 
-剪切。
+Reason for cut.
 
 **Since:** 24
 
@@ -98,7 +98,7 @@ CUT = 3
 DRAG = 4
 ```
 
-拖拽。
+Reason for drag.
 
 **Since:** 24
 
@@ -118,7 +118,7 @@ DRAG = 4
 AUTO_FILL = 5
 ```
 
-自动填充。
+Reason for auto fill.
 
 **Since:** 24
 
@@ -138,7 +138,7 @@ AUTO_FILL = 5
 AI_WRITE = 6
 ```
 
-AI帮写。
+Reason for ai write.
 
 **Since:** 24
 
@@ -158,7 +158,7 @@ AI帮写。
 REDO = 7
 ```
 
-重做。
+Reason for redo.
 
 **Since:** 24
 
@@ -178,7 +178,7 @@ REDO = 7
 UNDO = 8
 ```
 
-撤销。
+Reason for undo.
 
 **Since:** 24
 
@@ -198,7 +198,7 @@ UNDO = 8
 CONTROLLER = 9
 ```
 
-开发者调用组件接口。
+Reason for controller methods.
 
 **Since:** 24
 
@@ -218,7 +218,7 @@ CONTROLLER = 9
 ACCESSIBILITY = 10
 ```
 
-无障碍接口。
+Reason for accessibilty methods.
 
 **Since:** 24
 
@@ -238,7 +238,7 @@ ACCESSIBILITY = 10
 COLLABORATION = 11
 ```
 
-跨端拍照。
+Reason for collarboration input.
 
 **Since:** 24
 
@@ -258,7 +258,7 @@ COLLABORATION = 11
 STYLUS = 12
 ```
 
-手写笔。
+Reason for stylus input.
 
 **Since:** 24
 

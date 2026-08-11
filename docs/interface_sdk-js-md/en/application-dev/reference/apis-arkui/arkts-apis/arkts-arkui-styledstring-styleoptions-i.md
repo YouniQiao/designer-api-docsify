@@ -1,6 +1,6 @@
 # StyleOptions
 
-属性字符串初始化选项。
+StyleOptions
 
 **Since:** 23
 
@@ -16,9 +16,7 @@
 length?: int
 ```
 
-设置属性字符串样式的长度。
-
-当length的值小于0或超出字符串长度与start的差值时，按字符串长度与start的差值处理。
+The length of the modifiedStyledString's characters.The value should be an integer.
 
 **Type:** int
 
@@ -38,9 +36,7 @@ length?: int
 start?: int
 ```
 
-设置属性字符串样式的开始位置。
-
-当start的值小于0或超出字符串长度时，按0处理。
+The start position of the StyleOptions.The value should be an integer.
 
 **Type:** int
 
@@ -60,7 +56,7 @@ start?: int
 styledKey: StyledStringKey
 ```
 
-样式类型的枚举值。
+The attribute key of the StyleOptions.
 
 **Type:** [StyledStringKey](arkts-arkui-styledstring-styledstringkey-e.md)
 
@@ -80,7 +76,7 @@ styledKey: StyledStringKey
 styledValue: StyledStringValue
 ```
 
-样式对象。
+The attribute value of the StyleOptions.
 
 **Type:** [StyledStringValue](arkts-arkui-styledstringvalue-t.md)
 

@@ -130,7 +130,7 @@ default controlSize(value: ControlSize | undefined): this
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | [ControlSize](arkts-arkui-button-controlsize-e.md) \| undefined | 是 | Button组件的尺寸。&lt;br/&gt;默认值：ControlSize.NORMAL &lt;br/&gt;设置undefined时与默认值保持一致。 |
+| value | [ControlSize](../arkts-components/arkts-arkui-controlsize-e.md) \| undefined | 是 | Button组件的尺寸。&lt;br/&gt;默认值：ControlSize.NORMAL &lt;br/&gt;设置undefined时与默认值保持一致。 |
 
 **返回值：**
 

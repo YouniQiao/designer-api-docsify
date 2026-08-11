@@ -1,7 +1,9 @@
 # ExtensionContext
 
-ExtensionContext是[ExtensionAbility](arkts-ability-app-ability-extensionability-extensionability-c.md)的上下文环境，继承自  
-[Context](../../../reference/apis-ability-kit/js-apis-inner-application-context.md#context)。ExtensionContext模块提供访问特定[ExtensionAbility](arkts-ability-app-ability-extensionability-extensionability-c.md)的资源的能力。
+ExtensionContext provides the context environment for an  
+[ExtensionAbility](arkts-ability-app-ability-extensionability-extensionability-c.md). It inherits from  
+[Context](../../../reference/apis-ability-kit/js-apis-inner-application-context.md#context).This module provides APIs for accessing resources of a specific  
+[ExtensionAbility](arkts-ability-app-ability-extensionability-extensionability-c.md).
 
 **Inheritance/Implementation:** ExtensionContext extends [Context](arkts-ability-context-t.md)
 
@@ -19,7 +21,7 @@ ExtensionContext是[ExtensionAbility](arkts-ability-app-ability-extensionability
 config: Configuration
 ```
 
-所属Module的配置信息。
+Indicates configuration information.
 
 **Type:** [Configuration](arkts-ability-app-ability-configuration-configuration-i.md)
 
@@ -41,7 +43,7 @@ config: Configuration
 currentHapModuleInfo: HapModuleInfo
 ```
 
-所属Hap包的信息。
+Indicates configuration information about an module.
 
 **Type:** [HapModuleInfo](arkts-ability-hapmoduleinfo-i.md)
 
@@ -63,7 +65,7 @@ currentHapModuleInfo: HapModuleInfo
 extensionAbilityInfo: ExtensionAbilityInfo
 ```
 
-所属[ExtensionAbility](arkts-ability-app-ability-extensionability-extensionability-c.md)的信息。
+Extension information.
 
 **Type:** [ExtensionAbilityInfo](arkts-ability-extensionabilityinfo-i.md)
 

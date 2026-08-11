@@ -1,0 +1,31 @@
+# ReusableOptions
+
+Defines the options for Reusable ClassDecorator.
+
+**Since:** 26.0.0
+
+<!--Device-unnamed-declare interface ReusableOptions--><!--Device-unnamed-declare interface ReusableOptions-End-->
+
+**System capability:** SystemCapability.ArkUI.ArkUI.Full
+
+## memoryOptimizationStrategy
+
+```TypeScript
+memoryOptimizationStrategy?: ReusableMemOptStrategy
+```
+
+Memory optimization strategy for CustomComponent reuse
+
+**Type:** [ReusableMemOptStrategy](arkts-arkui-reusablememoptstrategy-e.md)
+
+**Default:** ReusableMemOptStrategy.DEFAULT
+
+**Since:** 26.0.0
+
+**Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API:** This API can be used in atomic services since API version 26.0.0.
+
+<!--Device-ReusableOptions-memoryOptimizationStrategy?: ReusableMemOptStrategy--><!--Device-ReusableOptions-memoryOptimizationStrategy?: ReusableMemOptStrategy-End-->
+
+**System capability:** SystemCapability.ArkUI.ArkUI.Full

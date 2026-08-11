@@ -1,24 +1,15 @@
 # Matrix
 
-矩阵对象，用于图形的坐标变换，支持平移、旋转、缩放和倾斜等变换操作。通过矩阵变换可实现不同坐标系之间的映射。
+Implements a matrix.A 3 x 3 matrix is shown as below.![matrix_3x3](../../../reference/apis-arkgraphics2d/figures/matrix3X3.PNG)Elements in the matrix from left to right and from top to bottom respectively represent a horizontal scale coefficient, a horizontal skew coefficient, a horizontal translation coefficient, a vertical skew coefficient, a vertical scale coefficient, a vertical translation coefficient, an X-axis perspective coefficient, a Y-axis perspective coefficient, and a perspective scale coefficient.If (x&lt;sub&gt;1&lt;/sub&gt;, y&lt;sub&gt;1&lt;/sub&gt;) is the source coordinate point, (x&lt;sub&gt;2&lt;/sub&gt;, y&lt;sub&gt;2&lt;/sub&gt;) is the coordinate point obtained by transforming the source coordinate point using the matrix, then the relationship between the two coordinate points is as follows:![matrix_xy](../../../reference/apis-arkgraphics2d/figures/matrix_xy.PNG)
 
-表示为3×3的矩阵，如下图所示：
-
-![matrix_3x3](../../../reference/apis-arkgraphics2d/figures/matrix3X3.PNG)
-
-矩阵中的元素从左到右，从上到下分别表示水平缩放因子、水平倾斜系数、水平位移系数、垂直倾斜系数、垂直缩放因子、垂直位移系数、x轴透视系数、y轴透视系数、透视缩放因子。
-
-设(x&lt;sub&gt;1&lt;/sub&gt;, y&lt;sub&gt;1&lt;/sub&gt;)为源坐标点，(x&lt;sub&gt;2&lt;/sub&gt;, y&lt;sub&gt;2&lt;/sub&gt;)为源坐标点通过矩阵变换后的坐标点，则两个坐标点的关系如下：
-
-![matrix-xy](../../../reference/apis-arkgraphics2d/figures/matrix-xy.PNG)
-
-> **说明：**
+> **NOTE：**
 > 
-> - 本Class首批接口从API version 12开始支持。
+> - The initial APIs of this class are supported since API version 12.
 > 
-> - 本模块使用屏幕物理像素单位px。
+> - This module uses the physical pixel unit, px.
 > 
-> - 本模块为单线程模型策略，需要调用方自行管理线程安全和上下文状态的切换。
+> - The module operates under a single-threaded model. The caller needs to manage thread safety and context state
+> transitions.
 
 **Since:** 12
 
@@ -40,7 +31,7 @@ import { drawing } from 'kits/@kit.ArkGraphics2D';
 constructor()
 ```
 
-构造一个矩阵对象。
+Creates a **Matrix** object.
 
 **Since:** 12
 
@@ -56,7 +47,7 @@ constructor()
 constructor(matrix: Matrix)
 ```
 
-拷贝一个矩阵。
+Copies a matrix.
 
 **Since:** 20
 
@@ -70,7 +61,7 @@ constructor(matrix: Matrix)
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| matrix | [Matrix](arkts-arkgraphics2d-drawing-matrix-c.md) | Yes | 被拷贝的矩阵。 |
+| matrix | [Matrix](arkts-arkgraphics2d-drawing-matrix-c.md) | Yes | Matrix to be copied. |
 
 ## getAll
 
@@ -78,7 +69,7 @@ constructor(matrix: Matrix)
 getAll(): Array<number>
 ```
 
-获取矩阵的所有元素值。
+Obtains all element values of this matrix.
 
 **Since:** 12
 
@@ -92,7 +83,7 @@ getAll(): Array<number>
 
 | Type | Description |
 | --- | --- |
-| Array&lt;number&gt; | 存储矩阵元素值的浮点数组，长度为9。 |
+| Array&lt;number&gt; | Array of matrix values obtained. The length is 9. Each value is a floating point number. |
 
 ## getAll
 
@@ -100,7 +91,7 @@ getAll(): Array<number>
 getAll(): Array<double> | undefined
 ```
 
-获取矩阵的所有元素值。
+Obtains all element values of this matrix.
 
 **Since:** 23
 
@@ -114,7 +105,7 @@ getAll(): Array<double> | undefined
 
 | Type | Description |
 | --- | --- |
-| Array&lt;double&gt; | 存储矩阵元素值的浮点数组，长度为9。获取失败时返回undefined。 |
+| Array&lt;double&gt; | nine scalar values contained by Matrix. |
 
 ## getValue
 
@@ -128,7 +119,7 @@ ArkTS-Sta:
 getValue(index: int): double
 ```
 
-获取矩阵给定索引位的值。索引范围0-8。
+Obtains a matrix value of a given index, which ranges from 0 to 8.
 
 **Since:** 12
 
@@ -142,19 +133,19 @@ getValue(index: int): double
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| index | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | 索引位置，范围0-8，该参数为整数。 |
+| index | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | Index. The value is an integer ranging from 0 to 8. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| ArkTS-Dyn: number  <br>ArkTS-Sta：double | 函数返回矩阵给定索引位对应的值，该返回值为整数。 |
+| ArkTS-Dyn: number  <br>ArkTS-Sta：double | Value obtained, which is an integer. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; 3. Parameter verification failed. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; 3. Parameter verification failed. |
 
 ## invert
 
@@ -162,7 +153,7 @@ getValue(index: int): double
 invert(matrix: Matrix): boolean
 ```
 
-将矩阵matrix设置为当前矩阵的逆矩阵，并返回是否设置成功的结果。
+Inverts this matrix and returns the result.
 
 **Since:** 12
 
@@ -176,19 +167,19 @@ invert(matrix: Matrix): boolean
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| matrix | [Matrix](arkts-arkgraphics2d-drawing-matrix-c.md) | Yes | 矩阵对象，用于存储获取到的逆矩阵。 |
+| matrix | [Matrix](arkts-arkgraphics2d-drawing-matrix-c.md) | Yes | Matrix** object used to store the inverted matrix. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| boolean | 返回matrix是否被设置为逆矩阵的结果。true表示当前矩阵可逆，matrix被设置为逆矩阵，false表示当前矩阵不可逆，matrix不被设置。 |
+| boolean | Check result. The value **true** means that the matrix is revertible and the **matrix** object is set to its inverse, and **false** means that the matrix is not revertible and the **matrix** object remains unchanged. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types. |
 
 ## isAffine
 
@@ -196,7 +187,7 @@ invert(matrix: Matrix): boolean
 isAffine(): boolean
 ```
 
-判断当前矩阵是否为仿射矩阵。仿射矩阵是一种包括平移、旋转、缩放等变换的矩阵。
+Checks whether the existing matrix is an affine matrix, which includes transformations such as translation,rotation, and scaling.
 
 **Since:** 20
 
@@ -210,7 +201,7 @@ isAffine(): boolean
 
 | Type | Description |
 | --- | --- |
-| boolean | 返回当前矩阵是否为仿射矩阵。true表示是仿射矩阵，false表示不是仿射矩阵。 |
+| boolean | Whether the existing matrix is an affine matrix. **true** means yes; **false** otherwise. |
 
 ## isEqual
 
@@ -218,7 +209,7 @@ isAffine(): boolean
 isEqual(matrix: Matrix): boolean
 ```
 
-判断两个矩阵是否相等。
+Checks whether two **OH_Drawing_Matrix** objects are equal.
 
 **Since:** 12
 
@@ -232,19 +223,19 @@ isEqual(matrix: Matrix): boolean
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| matrix | [Matrix](arkts-arkgraphics2d-drawing-matrix-c.md) | Yes | 另一个矩阵，用来与当前矩阵比较是否相等。 |
+| matrix | [Matrix](arkts-arkgraphics2d-drawing-matrix-c.md) | Yes | Matrix to compare. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| boolean | 返回两个矩阵的比较结果。true表示两个矩阵相等，false表示两个矩阵不相等。 |
+| boolean | Comparison result of the two matrices. The value **true** means that the two matrices are equal, and **false** means the opposite. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types. |
 
 ## isIdentity
 
@@ -252,7 +243,7 @@ isEqual(matrix: Matrix): boolean
 isIdentity(): boolean
 ```
 
-判断矩阵是否是单位矩阵。
+Checks whether an **OH_Drawing_Matrix** object is an identity matrix:
 
 **Since:** 12
 
@@ -266,7 +257,7 @@ isIdentity(): boolean
 
 | Type | Description |
 | --- | --- |
-| boolean | 返回矩阵是否是单位矩阵。true表示矩阵是单位矩阵，false表示矩阵不是单位矩阵。 |
+| boolean | Check result. The value **true** means that the matrix is an identity matrix, and **false** means the opposite. |
 
 ## mapPoints
 
@@ -274,7 +265,7 @@ isIdentity(): boolean
 mapPoints(src: Array<common2D.Point>): Array<common2D.Point>
 ```
 
-通过矩阵变换将源点数组映射到目标点数组。
+Maps a source point array to a destination point array by means of matrix transformation.
 
 **Since:** 12
 
@@ -288,19 +279,19 @@ mapPoints(src: Array<common2D.Point>): Array<common2D.Point>
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| src | Array&lt;common2D.Point&gt; | Yes | 源点数组，作为矩阵变换的输入点。 |
+| src | Array&lt;common2D.Point&gt; | Yes | Array of source points. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Array&lt;common2D.Point&gt; | 源点数组经矩阵变换后的点数组。 |
+| Array&lt;common2D.Point&gt; | Array of points obtained. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types. |
 
 ## mapPoints
 
@@ -308,7 +299,7 @@ mapPoints(src: Array<common2D.Point>): Array<common2D.Point>
 mapPoints(src: Array<common2D.Point>): Array<common2D.Point> | undefined
 ```
 
-通过矩阵变换将源点数组映射到目标点数组。
+Maps a source point array to a destination point array by means of matrix transformation.
 
 **Since:** 23
 
@@ -322,19 +313,19 @@ mapPoints(src: Array<common2D.Point>): Array<common2D.Point> | undefined
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| src | Array&lt;common2D.Point&gt; | Yes | 源点数组，作为矩阵变换的输入点。 |
+| src | Array&lt;common2D.Point&gt; | Yes | Array of source points. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Array&lt;common2D.Point&gt; | 源点数组经矩阵变换后的点数组。创建对象失败时返回undefined。 |
+| Array&lt;common2D.Point&gt; | Return mapped points array. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types. |
 
 ## mapRadius
 
@@ -348,7 +339,7 @@ ArkTS-Sta:
 mapRadius(radius: double): double
 ```
 
-返回半径为radius的圆经过当前矩阵映射形成的椭圆的平均半径。平均半径的平方为椭圆长轴长度和短轴长度的乘积。若当前矩阵包含透视变换，则该结果无意义。
+Returns the average radius of the ellipse formed after a circle with the specified **radius** is mapped by the existing matrix. The square of the average radius is the product of the major axis length and minor axis length of the ellipse. If the matrix contains perspective transformation, the result is meaningless.
 
 **Since:** 20
 
@@ -362,13 +353,13 @@ mapRadius(radius: double): double
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| radius | ArkTS-Dyn: number  <br>ArkTS-Sta：double | Yes | 用于计算的圆的半径，浮点数。如果是负数，则按照绝对值进行计算。单位为物理像素px。 |
+| radius | ArkTS-Dyn: number  <br>ArkTS-Sta：double | Yes | Radius of the circle used for calculation. The value is a floating point number. The absolute value is used if the number is negative. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| ArkTS-Dyn: number  <br>ArkTS-Sta：double | 返回经过变换之后的平均半径。单位为物理像素px。 |
+| ArkTS-Dyn: number  <br>ArkTS-Sta：double | Average radius after transformation. |
 
 ## mapRect
 
@@ -376,9 +367,7 @@ mapRadius(radius: double): double
 mapRect(dst: common2D.Rect, src: common2D.Rect): boolean
 ```
 
-将目标矩形设置为源矩形通过矩阵变换后的图形的外接矩形。如下图所示，蓝色矩形为源矩形，假设黄色矩形为源矩形通过矩阵变换形成的图形，此时黄色矩形的边不与坐标轴平行，无法使用矩形对象表示，因此，将目标矩形设置为黄色矩形的外接矩形，即黑色矩形。
-
-![mapRect](../../../reference/apis-arkgraphics2d/figures/matrix-mapRect.png)
+Sets the destination rectangle to the bounding rectangle of the shape obtained after transforming the source rectangle with a matrix transformation. As shown in the figure below, the blue rectangle represents the source rectangle, and the yellow rectangle is the shape obtained after a matrix transformation is applied to the source rectangle. Since the edges of the yellow rectangle are not aligned with the coordinate axes, it cannot be represented by a rectangle object. To address this issue, a destination rectangle (black rectangle) is defined as the bounding rectangle.![mapRect](../../../reference/apis-arkgraphics2d/figures/zh-ch_matrix_mapRect.png)
 
 **Since:** 12
 
@@ -392,20 +381,20 @@ mapRect(dst: common2D.Rect, src: common2D.Rect): boolean
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| dst | common2D.Rect | Yes | 目标矩形对象，用于存储源矩形经矩阵变换后的图形的外接矩形。 |
-| src | common2D.Rect | Yes | 源矩形对象。 |
+| dst | common2D.Rect | Yes | Rectangle** object, which is used to store the bounding rectangle. |
+| src | common2D.Rect | Yes | Source rectangle. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| boolean | 返回源矩形经过矩阵变换后的图形是否仍然是矩形，true表示是矩形，false表示不是矩形。 |
+| boolean | Check result. The value **true** means that the shape retains a rectangular form, and **false** means the opposite. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types. |
 
 ## postConcat
 
@@ -413,7 +402,7 @@ mapRect(dst: common2D.Rect, src: common2D.Rect): boolean
 postConcat(matrix: Matrix): void
 ```
 
-将一个矩阵乘在当前矩阵的左侧，即新的变换在当前矩阵的变换之后应用。如果需要在当前矩阵的变换之前应用新变换，使用preConcat方法。
+Right-multiply the existing matrix by another matrix.
 
 **Since:** 20
 
@@ -427,7 +416,7 @@ postConcat(matrix: Matrix): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| matrix | [Matrix](arkts-arkgraphics2d-drawing-matrix-c.md) | Yes | 表示用于运算的矩阵，位于乘法表达式左侧。 |
+| matrix | [Matrix](arkts-arkgraphics2d-drawing-matrix-c.md) | Yes | Matrix used for calculation. |
 
 ## postRotate
 
@@ -441,7 +430,7 @@ ArkTS-Sta:
 postRotate(degree: double, px: double, py: double): void
 ```
 
-将矩阵设置为矩阵右乘围绕旋转中心点旋转degree角度的单位矩阵后得到的矩阵，即新的旋转变换在当前矩阵的变换之后应用。如果需要在当前矩阵的变换之前应用旋转变换，使用preRotate方法。
+Post multiplies this matrix by a matrix that is derived from an identity matrix after it has been rotated by a given degree around the rotation point (px, py).
 
 **Since:** 12
 
@@ -455,15 +444,15 @@ postRotate(degree: double, px: double, py: double): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| degree | ArkTS-Dyn: number  <br>ArkTS-Sta：double | Yes | 旋转角度，单位为度。正数表示顺时针旋转，负数表示逆时针旋转，该参数为浮点数。 |
-| px | ArkTS-Dyn: number  <br>ArkTS-Sta：double | Yes | 旋转中心点的x轴坐标，该参数为浮点数。单位为物理像素px。 |
-| py | ArkTS-Dyn: number  <br>ArkTS-Sta：double | Yes | 旋转中心点的y轴坐标，该参数为浮点数。单位为物理像素px。 |
+| degree | ArkTS-Dyn: number  <br>ArkTS-Sta：double | Yes | Angle to rotate, in degrees. A positive number indicates a clockwise rotation, and a negative number indicates a counterclockwise rotation. The value is a floating point number. |
+| px | ArkTS-Dyn: number  <br>ArkTS-Sta：double | Yes | X coordinate of the rotation point. The value is a floating point number. |
+| py | ArkTS-Dyn: number  <br>ArkTS-Sta：double | Yes | Y coordinate of the rotation point. The value is a floating point number. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types. |
 
 ## postScale
 
@@ -477,7 +466,7 @@ ArkTS-Sta:
 postScale(sx: double, sy: double, px: double, py: double): void
 ```
 
-将矩阵设置为矩阵右乘围绕缩放中心点按sx和sy缩放系数缩放后的单位矩阵后得到的矩阵，即新的缩放变换在当前矩阵的变换之后应用。如果需要在当前矩阵的变换之前应用缩放变换，使用preScale方法。
+Post multiplies this matrix by a matrix that is derived from an identity matrix after it has been scaled with the coefficient (sx, sy) at the scale point (px, py).
 
 **Since:** 12
 
@@ -491,16 +480,16 @@ postScale(sx: double, sy: double, px: double, py: double): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| sx | ArkTS-Dyn: number  <br>ArkTS-Sta：double | Yes | x轴方向缩放因子，负数表示先关于x = px作镜像翻转后再进行缩放，该参数为浮点数。 |
-| sy | ArkTS-Dyn: number  <br>ArkTS-Sta：double | Yes | y轴方向缩放因子，负数表示先关于y = py作镜像翻转后再进行缩放，该参数为浮点数。 |
-| px | ArkTS-Dyn: number  <br>ArkTS-Sta：double | Yes | 缩放中心点的x轴坐标，该参数为浮点数。单位为物理像素px。 |
-| py | ArkTS-Dyn: number  <br>ArkTS-Sta：double | Yes | 缩放中心点的y轴坐标，该参数为浮点数。单位为物理像素px。 |
+| sx | ArkTS-Dyn: number  <br>ArkTS-Sta：double | Yes | Scale coefficient along the X axis. If a negative number is passed in, the matrix is mirrored around y = px before being scaled. The value is a floating point number. |
+| sy | ArkTS-Dyn: number  <br>ArkTS-Sta：double | Yes | Scale coefficient along the Y axis. If a negative number is passed in, the matrix is mirrored around x = py before being scaled. The value is a floating point number. |
+| px | ArkTS-Dyn: number  <br>ArkTS-Sta：double | Yes | X coordinate of the scale point. The value is a floating point number. |
+| py | ArkTS-Dyn: number  <br>ArkTS-Sta：double | Yes | Y coordinate of the scale point. The value is a floating point number. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types. |
 
 ## postSkew
 
@@ -514,7 +503,7 @@ ArkTS-Sta:
 postSkew(kx: double, ky: double, px: double, py: double): void
 ```
 
-当前矩阵右乘一个倾斜变换矩阵。
+Right-multiply the existing matrix by a skew transformation matrix.
 
 **Since:** 20
 
@@ -528,10 +517,10 @@ postSkew(kx: double, ky: double, px: double, py: double): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| kx | ArkTS-Dyn: number  <br>ArkTS-Sta：double | Yes | x轴上的倾斜量，该参数为浮点数。正值会使绘制沿y轴增量方向向右倾斜；负值会使绘制沿y轴增量方向向左倾斜。 |
-| ky | ArkTS-Dyn: number  <br>ArkTS-Sta：double | Yes | y轴上的倾斜量，该参数为浮点数。正值会使绘制沿x轴增量方向向下倾斜；负值会使绘制沿x轴增量方向向上倾斜。 |
-| px | ArkTS-Dyn: number  <br>ArkTS-Sta：double | Yes | 倾斜中心点的x轴坐标，该参数为浮点数。0表示坐标原点，正数表示位于坐标原点右侧，负数表示位于坐标原点左侧。单位为物理像素px。 |
-| py | ArkTS-Dyn: number  <br>ArkTS-Sta：double | Yes | 倾斜中心点的y轴坐标，该参数为浮点数。0表示坐标原点，正数表示位于坐标原点下侧，负数表示位于坐标原点上侧。单位为物理像素px。 |
+| kx | ArkTS-Dyn: number  <br>ArkTS-Sta：double | Yes | Amount of tilt on the X axis. The value is a floating point number. A positive number tilts the drawing rightwards along the positive direction of the Y axis, and a negative number tilts the drawing leftwards along the positive direction of the Y axis. |
+| ky | ArkTS-Dyn: number  <br>ArkTS-Sta：double | Yes | Amount of tilt on the Y axis. The value is a floating point number. A positive number tilts the drawing downwards along the positive direction of the X axis, and a negative number tilts the drawing upwards along the positive direction of the X axis. |
+| px | ArkTS-Dyn: number  <br>ArkTS-Sta：double | Yes | X coordinate of the shear center. The value is a floating point number. **0** indicates the coordinate origin. A positive value places the center to the right of the coordinate origin, while a negative value places the center to the left. |
+| py | ArkTS-Dyn: number  <br>ArkTS-Sta：double | Yes | Y coordinate of the shear center. The value is a floating point number. **0** indicates the coordinate origin. A positive value places the center below the coordinate origin, while a negative value places the center above the coordinate origin. |
 
 ## postTranslate
 
@@ -545,7 +534,7 @@ ArkTS-Sta:
 postTranslate(dx: double, dy: double): void
 ```
 
-将矩阵设置为矩阵右乘平移dx和dy距离后的单位矩阵后得到的矩阵，即新的平移变换在当前矩阵的变换之后应用。如果需要在当前矩阵的变换之前应用平移变换，使用preTranslate方法。
+Post multiplies this matrix by a matrix that is derived from an identity matrix after it has been translated by a given distance (dx, dy).
 
 **Since:** 12
 
@@ -559,14 +548,14 @@ postTranslate(dx: double, dy: double): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| dx | ArkTS-Dyn: number  <br>ArkTS-Sta：double | Yes | x轴方向平移距离，正数表示往x轴正方向平移，负数表示往x轴负方向平移，该参数为浮点数。单位为物理像素px。 |
-| dy | ArkTS-Dyn: number  <br>ArkTS-Sta：double | Yes | y轴方向平移距离，正数表示往y轴正方向平移，负数表示往y轴负方向平移，该参数为浮点数。单位为物理像素px。 |
+| dx | ArkTS-Dyn: number  <br>ArkTS-Sta：double | Yes | Horizontal distance to translate. A positive number indicates a translation towards the positive direction of the X axis, and a negative number indicates a translation towards the negative direction of the X axis. The value is a floating point number. |
+| dy | ArkTS-Dyn: number  <br>ArkTS-Sta：double | Yes | Vertical distance to translate. A positive number indicates a translation towards the positive direction of the Y axis, and a negative number indicates a translation towards the negative direction of the Y axis. The value is a floating point number. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types. |
 
 ## preConcat
 
@@ -574,7 +563,7 @@ postTranslate(dx: double, dy: double): void
 preConcat(matrix: Matrix): void
 ```
 
-将一个矩阵乘在当前矩阵的右侧，即新的变换在当前矩阵的变换之前应用。如果需要在当前矩阵的变换之后应用新变换，使用postConcat方法。
+Preconcats the existing matrix with the passed-in matrix.
 
 **Since:** 12
 
@@ -588,13 +577,13 @@ preConcat(matrix: Matrix): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| matrix | [Matrix](arkts-arkgraphics2d-drawing-matrix-c.md) | Yes | 表示用于运算的矩阵，位于乘法表达式右侧。 |
+| matrix | [Matrix](arkts-arkgraphics2d-drawing-matrix-c.md) | Yes | Matrix** object, which is on the right of a multiplication expression. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types. |
 
 ## preRotate
 
@@ -608,7 +597,7 @@ ArkTS-Sta:
 preRotate(degree: double, px: double, py: double): void
 ```
 
-将矩阵设置为矩阵左乘围绕旋转中心点旋转degree角度的单位矩阵后得到的矩阵，即新的旋转变换在当前矩阵的变换之前应用。如果需要在当前矩阵的变换之后应用旋转变换，使用postRotate方法。
+Premultiplies this matrix by a matrix that is derived from an identity matrix after it has been rotated by a given degree around the rotation point (px, py).
 
 **Since:** 12
 
@@ -622,15 +611,15 @@ preRotate(degree: double, px: double, py: double): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| degree | ArkTS-Dyn: number  <br>ArkTS-Sta：double | Yes | 旋转角度，单位为度。正数表示顺时针旋转，负数表示逆时针旋转，该参数为浮点数。 |
-| px | ArkTS-Dyn: number  <br>ArkTS-Sta：double | Yes | 旋转中心点的x轴坐标，该参数为浮点数。单位为物理像素px。 |
-| py | ArkTS-Dyn: number  <br>ArkTS-Sta：double | Yes | 旋转中心点的y轴坐标，该参数为浮点数。单位为物理像素px。 |
+| degree | ArkTS-Dyn: number  <br>ArkTS-Sta：double | Yes | Angle to rotate, in degrees. A positive number indicates a clockwise rotation, and a negative number indicates a counterclockwise rotation. The value is a floating point number. |
+| px | ArkTS-Dyn: number  <br>ArkTS-Sta：double | Yes | X coordinate of the rotation point. The value is a floating point number. |
+| py | ArkTS-Dyn: number  <br>ArkTS-Sta：double | Yes | Y coordinate of the rotation point. The value is a floating point number. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types. |
 
 ## preScale
 
@@ -644,7 +633,7 @@ ArkTS-Sta:
 preScale(sx: double, sy: double, px: double, py: double): void
 ```
 
-将矩阵设置为矩阵左乘围绕缩放中心点按sx和sy缩放系数缩放后的单位矩阵后得到的矩阵，即新的缩放变换在当前矩阵的变换之前应用。如果需要在当前矩阵的变换之后应用缩放变换，使用postScale方法。
+Premultiplies this matrix by a matrix that is derived from an identity matrix after it has been scaled with the coefficient (sx, sy) at the scale point (px, py).
 
 **Since:** 12
 
@@ -658,16 +647,16 @@ preScale(sx: double, sy: double, px: double, py: double): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| sx | ArkTS-Dyn: number  <br>ArkTS-Sta：double | Yes | x轴方向缩放因子，为负数时可看作是先关于x = px作镜像翻转后再进行缩放，该参数为浮点数。 |
-| sy | ArkTS-Dyn: number  <br>ArkTS-Sta：double | Yes | y轴方向缩放因子，为负数时可看作是先关于y = py作镜像翻转后再进行缩放，该参数为浮点数。 |
-| px | ArkTS-Dyn: number  <br>ArkTS-Sta：double | Yes | 缩放中心点的x轴坐标，该参数为浮点数。单位为物理像素px。 |
-| py | ArkTS-Dyn: number  <br>ArkTS-Sta：double | Yes | 缩放中心点的y轴坐标，该参数为浮点数。单位为物理像素px。 |
+| sx | ArkTS-Dyn: number  <br>ArkTS-Sta：double | Yes | Scale coefficient along the X axis. If a negative number is passed in, the matrix is mirrored around y = px before being scaled. The value is a floating point number. |
+| sy | ArkTS-Dyn: number  <br>ArkTS-Sta：double | Yes | Scale coefficient along the Y axis. If a negative number is passed in, the matrix is mirrored around x = py before being scaled. The value is a floating point number. |
+| px | ArkTS-Dyn: number  <br>ArkTS-Sta：double | Yes | X coordinate of the scale point. The value is a floating point number. |
+| py | ArkTS-Dyn: number  <br>ArkTS-Sta：double | Yes | Y coordinate of the scale point. The value is a floating point number. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types. |
 
 ## preSkew
 
@@ -681,7 +670,7 @@ ArkTS-Sta:
 preSkew(kx: double, ky: double, px: double, py: double): void
 ```
 
-当前矩阵左乘一个倾斜变换矩阵。
+Left-multiply the existing matrix by a skew transformation matrix.
 
 **Since:** 20
 
@@ -695,10 +684,10 @@ preSkew(kx: double, ky: double, px: double, py: double): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| kx | ArkTS-Dyn: number  <br>ArkTS-Sta：double | Yes | x轴上的倾斜量，该参数为浮点数。正值会使绘制沿y轴增量方向向右倾斜；负值会使绘制沿y轴增量方向向左倾斜。 |
-| ky | ArkTS-Dyn: number  <br>ArkTS-Sta：double | Yes | y轴上的倾斜量，该参数为浮点数。正值会使绘制沿x轴增量方向向下倾斜；负值会使绘制沿x轴增量方向向上倾斜。 |
-| px | ArkTS-Dyn: number  <br>ArkTS-Sta：double | Yes | 倾斜中心点的x轴坐标，该参数为浮点数。0表示坐标原点，正数表示位于坐标原点右侧，负数表示位于坐标原点左侧。单位为物理像素px。 |
-| py | ArkTS-Dyn: number  <br>ArkTS-Sta：double | Yes | 倾斜中心点的y轴坐标，该参数为浮点数。0表示坐标原点，正数表示位于坐标原点下侧，负数表示位于坐标原点上侧。单位为物理像素px。 |
+| kx | ArkTS-Dyn: number  <br>ArkTS-Sta：double | Yes | Amount of tilt on the X axis. The value is a floating point number. A positive number tilts the drawing rightwards along the positive direction of the Y axis, and a negative number tilts the drawing leftwards along the positive direction of the Y axis. |
+| ky | ArkTS-Dyn: number  <br>ArkTS-Sta：double | Yes | Amount of tilt on the Y axis. The value is a floating point number. A positive number tilts the drawing downwards along the positive direction of the X axis, and a negative number tilts the drawing upwards along the positive direction of the X axis. |
+| px | ArkTS-Dyn: number  <br>ArkTS-Sta：double | Yes | X coordinate of the shear center. The value is a floating point number. **0** indicates the coordinate origin. A positive value places the center to the right of the coordinate origin, while a negative value places the center to the left. |
+| py | ArkTS-Dyn: number  <br>ArkTS-Sta：double | Yes | Y coordinate of the shear center. The value is a floating point number. **0** indicates the coordinate origin. A positive value places the center below the coordinate origin, while a negative value places the center above the coordinate origin. |
 
 ## preTranslate
 
@@ -712,7 +701,7 @@ ArkTS-Sta:
 preTranslate(dx: double, dy: double): void
 ```
 
-将矩阵设置为矩阵左乘平移dx和dy距离后的单位矩阵后得到的矩阵，即新的平移变换在当前矩阵的变换之前应用。如果需要在当前矩阵的变换之后应用平移变换，使用postTranslate方法。
+Premultiplies this matrix by a matrix that is derived from an identity matrix after it has been translated by a given distance (dx, dy).
 
 **Since:** 12
 
@@ -726,14 +715,14 @@ preTranslate(dx: double, dy: double): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| dx | ArkTS-Dyn: number  <br>ArkTS-Sta：double | Yes | x轴方向平移距离，正数表示往x轴正方向平移，负数表示往x轴负方向平移，该参数为浮点数。单位为物理像素px。 |
-| dy | ArkTS-Dyn: number  <br>ArkTS-Sta：double | Yes | y轴方向平移距离，正数表示往y轴正方向平移，负数表示往y轴负方向平移，该参数为浮点数。单位为物理像素px。 |
+| dx | ArkTS-Dyn: number  <br>ArkTS-Sta：double | Yes | Horizontal distance to translate. A positive number indicates a translation towards the positive direction of the X axis, and a negative number indicates a translation towards the negative direction of the X axis. The value is a floating point number. |
+| dy | ArkTS-Dyn: number  <br>ArkTS-Sta：double | Yes | Vertical distance to translate. A positive number indicates a translation towards the positive direction of the Y axis, and a negative number indicates a translation towards the negative direction of the Y axis. The value is a floating point number. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types. |
 
 ## rectStaysRect
 
@@ -741,7 +730,7 @@ preTranslate(dx: double, dy: double): void
 rectStaysRect(): boolean
 ```
 
-判断经过该矩阵映射后的矩形的形状是否仍为矩形。
+Checks whether a rectangle stays a rectangle after being mapped by a matrix.
 
 **Since:** 20
 
@@ -755,7 +744,7 @@ rectStaysRect(): boolean
 
 | Type | Description |
 | --- | --- |
-| boolean | 返回经过该矩阵映射后的矩形的形状是否仍为矩形。true表示仍是矩形，false表示不是矩形。 |
+| boolean | Whether a rectangle stays a rectangle after being mapped by a matrix. **true** means yes; false otherwise. |
 
 ## reset
 
@@ -763,7 +752,7 @@ rectStaysRect(): boolean
 reset(): void
 ```
 
-重置当前矩阵为单位矩阵。
+Resets this matrix to an identity matrix.
 
 **Since:** 12
 
@@ -779,7 +768,7 @@ reset(): void
 setConcat(matrixA: Matrix, matrixB: Matrix): void
 ```
 
-用两个矩阵的乘积更新当前矩阵，即当前矩阵 = matrixA × matrixB。
+Updates the existing matrix with the product of two matrices.
 
 **Since:** 20
 
@@ -793,8 +782,8 @@ setConcat(matrixA: Matrix, matrixB: Matrix): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| matrixA | [Matrix](arkts-arkgraphics2d-drawing-matrix-c.md) | Yes | 用于运算的矩阵A，位于乘法表达式左侧。 |
-| matrixB | [Matrix](arkts-arkgraphics2d-drawing-matrix-c.md) | Yes | 用于运算的矩阵B，位于乘法表达式右侧。 |
+| matrixA | [Matrix](arkts-arkgraphics2d-drawing-matrix-c.md) | Yes | Matrix A used for calculation. |
+| matrixB | [Matrix](arkts-arkgraphics2d-drawing-matrix-c.md) | Yes | Matrix B used for calculation. |
 
 ## setMatrix
 
@@ -808,7 +797,7 @@ ArkTS-Sta:
 setMatrix(values: Array<double>): void
 ```
 
-设置矩阵对象的各项参数。
+Sets parameters for this matrix.
 
 **Since:** 12
 
@@ -822,13 +811,13 @@ setMatrix(values: Array<double>): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| values | ArkTS-Dyn: Array&lt;number&gt;  <br>ArkTS-Sta：Array&lt;double&gt; | Yes | 长度为9的浮点数组，表示矩阵对象的各项参数。数组中的值按下标从小到大分别表示水平缩放因子、水平倾斜系数、水平位移系数（单位为物理像素px）、垂直倾斜系数、垂直 缩放因子、垂直位移系数（单位为物理像素px）、x轴透视系数、y轴透视系数和透视缩放因子。 |
+| values | ArkTS-Dyn: Array&lt;number&gt;  <br>ArkTS-Sta：Array&lt;double&gt; | Yes | Floating-point array that holds the parameter values, with the array length set to 9. The values in the array respectively represent a horizontal scale coefficient, a horizontal skew coefficient, a horizontal translation coefficient, a vertical skew coefficient, a vertical scale coefficient, a vertical translation coefficient, an X-axis perspective coefficient, a Y-axis perspective coefficient, and a perspective scale coefficient, in ascending order of indexes. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; 3. Parameter verification failed. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; 3. Parameter verification failed. |
 
 ## setMatrix
 
@@ -842,7 +831,7 @@ ArkTS-Sta:
 setMatrix(matrix: Array<double> | Matrix): void
 ```
 
-用一个矩阵对当前矩阵进行更新。
+Updates the existing matrix with another matrix.
 
 **Since:** 20
 
@@ -856,7 +845,7 @@ setMatrix(matrix: Array<double> | Matrix): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| matrix | ArkTS-Dyn: Array&lt;number&gt; \| Matrix  <br>ArkTS-Sta：Array&lt;double&gt; \| Matrix | Yes | 用于更新的数组或矩阵。当类型为数组时，长度固定为9。 |
+| matrix | ArkTS-Dyn: Array&lt;number&gt; \| Matrix  <br>ArkTS-Sta：Array&lt;double&gt; \| Matrix | Yes | Array or matrix for the update. |
 
 ## setPolyToPoly
 
@@ -870,7 +859,7 @@ ArkTS-Sta:
 setPolyToPoly(src: Array<common2D.Point>, dst: Array<common2D.Point>, count: int): boolean
 ```
 
-将当前矩阵设置为能够将源点数组映射到目标点数组的变换矩阵。源点和目标点的个数必须大于等于0，小于等于4。
+Sets this matrix to a transformation matrix that maps the source point array to the destination point array. Both the number of source points and that of destination points must be in the range [0, 4].
 
 **Since:** 12
 
@@ -884,21 +873,21 @@ setPolyToPoly(src: Array<common2D.Point>, dst: Array<common2D.Point>, count: int
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| src | Array&lt;common2D.Point&gt; | Yes | 源点数组，长度必须为count。 |
-| dst | Array&lt;common2D.Point&gt; | Yes | 目标点数组，长度必须为count。 |
-| count | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | src和dst中点的数量，取值范围为[0, 4]，该参数为整数。 |
+| src | Array&lt;common2D.Point&gt; | Yes | Array of source points. The array length must be the same as the value of **count**. |
+| dst | Array&lt;common2D.Point&gt; | Yes | Array of destination points. The array length must be the same as the value of **count**. |
+| count | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | Number of points in each array. The value is an integer. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| boolean | 返回设置矩阵是否成功的结果，true表示设置成功，false表示设置失败。 |
+| boolean | Check result. The value **true** means that the setting is successful, and **false** means the opposite. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types. |
 
 ## setRectToRect
 
@@ -906,7 +895,7 @@ setPolyToPoly(src: Array<common2D.Point>, dst: Array<common2D.Point>, count: int
 setRectToRect(src: common2D.Rect, dst: common2D.Rect, scaleToFit: ScaleToFit): boolean
 ```
 
-将当前矩阵设置为能使源矩形映射到目标矩形的变换矩阵。
+Sets this matrix to a transformation matrix that maps a source rectangle to a destination rectangle.
 
 **Since:** 12
 
@@ -920,21 +909,21 @@ setRectToRect(src: common2D.Rect, dst: common2D.Rect, scaleToFit: ScaleToFit): b
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| src | common2D.Rect | Yes | 源矩形，用于指定映射的源区域。 |
-| dst | common2D.Rect | Yes | 目标矩形，用于指定映射的目标区域。 |
-| scaleToFit | [ScaleToFit](arkts-arkgraphics2d-drawing-scaletofit-e.md) | Yes | 源矩形到目标矩形的映射方式。 |
+| src | common2D.Rect | Yes | Source rectangle. |
+| dst | common2D.Rect | Yes | Destination rectangle. |
+| scaleToFit | [ScaleToFit](arkts-arkgraphics2d-drawing-scaletofit-e.md) | Yes | Mapping mode from the source rectangle to the target rectangle. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| boolean | 返回矩阵是否可以表示矩形之间的映射，true表示可以，false表示不可以。如果源矩形的宽高任意一个小于等于0，则返回false，并将矩阵设置为单位矩阵；如果目标矩形的宽高任意一个小于 等于0，则返回true，并将矩阵设置为除透视缩放因子为1外其余值皆为0的矩阵。 |
+| boolean | Check result. The value **true** means that the matrix can represent the mapping, and **false** means the opposite. If either the width or the height of the source rectangle is less than or equal to 0, the API returns **false** and sets the matrix to an identity matrix. If either the width or height of the destination rectangle is less than or equal to 0, the API returns **true** and sets the matrix to a matrix with all values **0**, except for a perspective scaling coefficient of **1**. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; 3. Parameter verification failed. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; 3. Parameter verification failed. |
 
 ## setRotation
 
@@ -948,7 +937,7 @@ ArkTS-Sta:
 setRotation(degree: double, px: double, py: double): void
 ```
 
-设置矩阵为单位矩阵，并围绕旋转中心点(px, py)进行旋转。
+Sets this matrix as an identity matrix and rotates it by a given degree around the rotation point (px, py).
 
 **Since:** 12
 
@@ -962,15 +951,15 @@ setRotation(degree: double, px: double, py: double): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| degree | ArkTS-Dyn: number  <br>ArkTS-Sta：double | Yes | 角度，单位为度。正数表示顺时针旋转，负数表示逆时针旋转，该参数为浮点数。 |
-| px | ArkTS-Dyn: number  <br>ArkTS-Sta：double | Yes | 旋转中心点的x轴坐标，该参数为浮点数。单位为物理像素px。 |
-| py | ArkTS-Dyn: number  <br>ArkTS-Sta：double | Yes | 旋转中心点的y轴坐标，该参数为浮点数。单位为物理像素px。 |
+| degree | ArkTS-Dyn: number  <br>ArkTS-Sta：double | Yes | Angle to rotate, in degrees. A positive number indicates a clockwise rotation, and a negative number indicates a counterclockwise rotation. The value is a floating point number. |
+| px | ArkTS-Dyn: number  <br>ArkTS-Sta：double | Yes | X coordinate of the rotation point. The value is a floating point number. |
+| py | ArkTS-Dyn: number  <br>ArkTS-Sta：double | Yes | Y coordinate of the rotation point. The value is a floating point number. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types. |
 
 ## setScale
 
@@ -984,7 +973,7 @@ ArkTS-Sta:
 setScale(sx: double, sy: double, px: double, py: double): void
 ```
 
-设置矩阵为单位矩阵，并围绕缩放中心点(px, py)按sx和sy进行缩放。
+Sets this matrix as an identity matrix and scales it with the coefficients (sx, sy) at the scale point (px, py).
 
 **Since:** 12
 
@@ -998,16 +987,16 @@ setScale(sx: double, sy: double, px: double, py: double): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| sx | ArkTS-Dyn: number  <br>ArkTS-Sta：double | Yes | x轴方向缩放因子，为负数时可看作是先关于x = px作镜像翻转后再进行缩放，该参数为浮点数。 |
-| sy | ArkTS-Dyn: number  <br>ArkTS-Sta：double | Yes | y轴方向缩放因子，为负数时可看作是先关于y = py作镜像翻转后再进行缩放，该参数为浮点数。 |
-| px | ArkTS-Dyn: number  <br>ArkTS-Sta：double | Yes | 缩放中心点的x轴坐标，该参数为浮点数。单位为物理像素px。 |
-| py | ArkTS-Dyn: number  <br>ArkTS-Sta：double | Yes | 缩放中心点的y轴坐标，该参数为浮点数。单位为物理像素px。 |
+| sx | ArkTS-Dyn: number  <br>ArkTS-Sta：double | Yes | Scale coefficient along the X axis. If a negative number is passed in, the matrix is mirrored around y = px before being scaled. The value is a floating point number. |
+| sy | ArkTS-Dyn: number  <br>ArkTS-Sta：double | Yes | Scale coefficient along the Y axis. If a negative number is passed in, the matrix is mirrored around x = py before being scaled. The value is a floating point number. |
+| px | ArkTS-Dyn: number  <br>ArkTS-Sta：double | Yes | X coordinate of the scale point. The value is a floating point number. |
+| py | ArkTS-Dyn: number  <br>ArkTS-Sta：double | Yes | Y coordinate of the scale point. The value is a floating point number. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types. |
 
 ## setSinCos
 
@@ -1021,7 +1010,7 @@ ArkTS-Sta:
 setSinCos(sinValue: double, cosValue: double, px: double, py: double): void
 ```
 
-设置矩阵为单位矩阵，使其围绕旋转中心点(px, py)以指定的正弦值和余弦值旋转。与[setRotation](arkts-arkgraphics2d-drawing-matrix-c.md#setrotation)功能类似，但setRotation直接传入角度值，而本方法传入正弦值和余弦值。
+Sets the matrix to rotate around the rotation center (px, py) with the specified sine and cosine values.
 
 **Since:** 20
 
@@ -1035,10 +1024,10 @@ setSinCos(sinValue: double, cosValue: double, px: double, py: double): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| sinValue | ArkTS-Dyn: number  <br>ArkTS-Sta：double | Yes | 旋转角度的正弦值。仅当正弦值和余弦值的平方和为1时，为旋转变换，否则矩阵可能包含平移缩放等其他变换。 |
-| cosValue | ArkTS-Dyn: number  <br>ArkTS-Sta：double | Yes | 旋转角度的余弦值。仅当正弦值和余弦值的平方和为1时，为旋转变换，否则矩阵可能包含平移缩放等其他变换。 |
-| px | ArkTS-Dyn: number  <br>ArkTS-Sta：double | Yes | 旋转中心的x轴坐标，该参数为浮点数。0表示坐标原点，正数表示位于坐标原点右侧，负数表示位于坐标原点左侧。单位为物理像素px。 |
-| py | ArkTS-Dyn: number  <br>ArkTS-Sta：double | Yes | 旋转中心的y轴坐标，该参数为浮点数。0表示坐标原点，正数表示位于坐标原点下侧，负数表示位于坐标原点上侧。单位为物理像素px。 |
+| sinValue | ArkTS-Dyn: number  <br>ArkTS-Sta：double | Yes | Sine value of the rotation angle. Only if the sum of the squares of the sine and cosine values is **1**, the rotation transformation is performed. Otherwise, the matrix may contain other transformations such as translation and scaling. |
+| cosValue | ArkTS-Dyn: number  <br>ArkTS-Sta：double | Yes | Cosine value of the rotation angle. Only if the sum of the squares of the sine and cosine values is **1**, the rotation transformation is performed. Otherwise, the matrix may contain other transformations such as translation and scaling. |
+| px | ArkTS-Dyn: number  <br>ArkTS-Sta：double | Yes | X coordinate of the rotation center. The value is a floating point number. **0** indicates the coordinate origin. A positive value places the center to the right of the coordinate origin, while a negative value places the center to the left. |
+| py | ArkTS-Dyn: number  <br>ArkTS-Sta：double | Yes | Y coordinate of the rotation center. The value is a floating point number. **0** indicates the coordinate origin. A positive value places the center below the coordinate origin, while a negative value places the center above the coordinate origin. |
 
 ## setSkew
 
@@ -1052,8 +1041,7 @@ ArkTS-Sta:
 setSkew(kx: double, ky: double, px: double, py: double): void
 ```
 
-设置矩阵为单位矩阵，并围绕倾斜中心点(px, py)按(kx, ky)进行倾斜变换。与[setRotation](arkts-arkgraphics2d-drawing-matrix-c.md#setrotation)、  
-[setScale](arkts-arkgraphics2d-drawing-matrix-c.md#setscale)、[setTranslation](arkts-arkgraphics2d-drawing-matrix-c.md#settranslation)类似，均为重置矩阵后施加单一变换。
+Sets the skew coefficients of a matrix.
 
 **Since:** 20
 
@@ -1067,10 +1055,10 @@ setSkew(kx: double, ky: double, px: double, py: double): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| kx | ArkTS-Dyn: number  <br>ArkTS-Sta：double | Yes | x轴上的倾斜量，该参数为浮点数。正值会使绘制沿y轴增量方向向右倾斜；负值会使绘制沿y轴增量方向向左倾斜。 |
-| ky | ArkTS-Dyn: number  <br>ArkTS-Sta：double | Yes | y轴上的倾斜量，该参数为浮点数。正值会使绘制沿x轴增量方向向下倾斜；负值会使绘制沿x轴增量方向向上倾斜。 |
-| px | ArkTS-Dyn: number  <br>ArkTS-Sta：double | Yes | 倾斜中心点的x轴坐标，该参数为浮点数。0表示坐标原点，正数表示位于坐标原点右侧，负数表示位于坐标原点左侧。单位为物理像素px。 |
-| py | ArkTS-Dyn: number  <br>ArkTS-Sta：double | Yes | 倾斜中心点的y轴坐标，该参数为浮点数。0表示坐标原点，正数表示位于坐标原点下侧，负数表示位于坐标原点上侧。单位为物理像素px。 |
+| kx | ArkTS-Dyn: number  <br>ArkTS-Sta：double | Yes | Amount of tilt on the X axis. The value is a floating point number. A positive number tilts the drawing rightwards along the positive direction of the Y axis, and a negative number tilts the drawing leftwards along the positive direction of the Y axis. |
+| ky | ArkTS-Dyn: number  <br>ArkTS-Sta：double | Yes | Amount of tilt on the Y axis. The value is a floating point number. A positive number tilts the drawing downwards along the positive direction of the X axis, and a negative number tilts the drawing upwards along the positive direction of the X axis. |
+| px | ArkTS-Dyn: number  <br>ArkTS-Sta：double | Yes | X coordinate of the shear center. The value is a floating point number. **0** indicates the coordinate origin. A positive value places the center to the right of the coordinate origin, while a negative value places the center to the left. |
+| py | ArkTS-Dyn: number  <br>ArkTS-Sta：double | Yes | Y coordinate of the shear center. The value is a floating point number. **0** indicates the coordinate origin. A positive value places the center below the coordinate origin, while a negative value places the center above the coordinate origin. |
 
 ## setTranslation
 
@@ -1084,7 +1072,7 @@ ArkTS-Sta:
 setTranslation(dx: double, dy: double): void
 ```
 
-设置矩阵为单位矩阵，并平移(dx, dy)。
+Sets this matrix as an identity matrix and translates it by a given distance (dx, dy).
 
 **Since:** 12
 
@@ -1098,12 +1086,12 @@ setTranslation(dx: double, dy: double): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| dx | ArkTS-Dyn: number  <br>ArkTS-Sta：double | Yes | x轴方向平移距离，正数表示往x轴正方向平移，负数表示往x轴负方向平移，该参数为浮点数。单位为物理像素px。 |
-| dy | ArkTS-Dyn: number  <br>ArkTS-Sta：double | Yes | y轴方向平移距离，正数表示往y轴正方向平移，负数表示往y轴负方向平移，该参数为浮点数。单位为物理像素px。 |
+| dx | ArkTS-Dyn: number  <br>ArkTS-Sta：double | Yes | Horizontal distance to translate. A positive number indicates a translation towards the positive direction of the X axis, and a negative number indicates a translation towards the negative direction of the X axis. The value is a floating point number. |
+| dy | ArkTS-Dyn: number  <br>ArkTS-Sta：double | Yes | Vertical distance to translate. A positive number indicates a translation towards the positive direction of the Y axis, and a negative number indicates a translation towards the negative direction of the Y axis. The value is a floating point number. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types. |
 

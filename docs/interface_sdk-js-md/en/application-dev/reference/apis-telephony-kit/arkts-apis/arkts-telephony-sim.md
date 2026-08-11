@@ -44,7 +44,7 @@ import { sim } from 'kits/@kit.TelephonyKit';
 | [getSimAccountInfo](arkts-telephony-sim-getsimaccountinfo-f.md#getsimaccountinfo) | Get account information of SIM card. |
 | [getSimAccountInfo](arkts-telephony-sim-getsimaccountinfo-f.md#getsimaccountinfo-1) | Get account information of SIM card. |
 | [getSimLabel](arkts-telephony-sim-getsimlabel-f.md#getsimlabel) | Obtains the SIM card label. |
-| [getSimLabel](arkts-telephony-sim-getsimlabel-f.md#getsimlabel-1) | 获取SIM卡标签名称 |
+| [getSimLabel](arkts-telephony-sim-getsimlabel-f.md#getsimlabel-1) | Obtains the SIM card label. |
 | [getSimLabelSync](arkts-telephony-sim-getsimlabelsync-f.md#getsimlabelsync) | Obtains the SIM card label synchronously. |
 | [getSimOperatorNumeric](arkts-telephony-sim-getsimoperatornumeric-f.md#getsimoperatornumeric) | Obtains the home PLMN number of the SIM card in a specified slot.  &lt;p&gt;The value is recorded in the SIM card and is irrelevant to the network with which the SIM card is currently registered. |
 | [getSimOperatorNumeric](arkts-telephony-sim-getsimoperatornumeric-f.md#getsimoperatornumeric-1) | Obtains the home PLMN number of the SIM card in a specified slot.  &lt;p&gt;The value is recorded in the SIM card and is irrelevant to the network with which the SIM card is currently registered. |
@@ -121,7 +121,7 @@ import { sim } from 'kits/@kit.TelephonyKit';
 | [setShowName](arkts-telephony-sim-setshowname-f-sys.md#setshowname-1) | Set the SIM card display name of the specified card slot. |
 | [setShowNumber](arkts-telephony-sim-setshownumber-f-sys.md#setshownumber) | Set the SIM card number in the specified slot. |
 | [setShowNumber](arkts-telephony-sim-setshownumber-f-sys.md#setshownumber-1) | Set the SIM card number in the specified slot. |
-| [setSimLabelIndex](arkts-telephony-sim-setsimlabelindex-f-sys.md#setsimlabelindex) | 设置SIM卡标签索引。 |
+| [setSimLabelIndex](arkts-telephony-sim-setsimlabelindex-f-sys.md#setsimlabelindex) | Set the SIM card labelIndex. |
 | [setVoiceMailInfo](arkts-telephony-sim-setvoicemailinfo-f-sys.md#setvoicemailinfo) | Sets the voice mail information. |
 | [setVoiceMailInfo](arkts-telephony-sim-setvoicemailinfo-f-sys.md#setvoicemailinfo-1) | Sets the voice mail information. |
 | [unlockPin](arkts-telephony-sim-unlockpin-f-sys.md#unlockpin) | Unlock the SIM card password of the specified card slot. |
@@ -143,7 +143,7 @@ import { sim } from 'kits/@kit.TelephonyKit';
 | Name | Description |
 | --- | --- |
 | [IccAccountInfo](arkts-telephony-sim-iccaccountinfo-i.md) | Defines the ICC account information. |
-| [SimLabel](arkts-telephony-sim-simlabel-i.md) | 定义SIM卡标签信息。 |
+| [SimLabel](arkts-telephony-sim-simlabel-i.md) | Defines the SIM card label. |
 
 <!--Del-->
 ### Interfaces（系统接口）

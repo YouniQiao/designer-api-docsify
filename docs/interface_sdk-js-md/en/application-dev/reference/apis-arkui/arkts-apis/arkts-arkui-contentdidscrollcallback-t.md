@@ -5,7 +5,7 @@ export type ContentDidScrollCallback = (selectedIndex: int, index: int, position
   mainAxisLength: double) => void
 ```
 
-Swiper滑动时触发的回调，参数可参考[SwiperContentTransitionProxy](../arkts-components/arkts-arkui-swipercontenttransitionproxy-i.md/arkts-arkui-swipercontenttransitionproxy-i.md)中的说明。
+The callback of onContentDidScroll.
 
 **Since:** 23
 
@@ -21,8 +21,8 @@ Swiper滑动时触发的回调，参数可参考[SwiperContentTransitionProxy](.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| selectedIndex | int | Yes | 当前选中页面的索引。 取值范围为全体整数 取值限定为整数。 |
-| index | int | Yes | 视窗内页面的索引。 取值范围为全体整数 取值限定为整数。 |
-| position | double | Yes | index页面相对于Swiper主轴起始位置（selectedIndex对应页面的起始位置）的移动比例。 |
-| mainAxisLength | double | Yes | index页面相对于Swiper主轴起始位置（selectedIndex对应页面的起始位置）的移动比例。 |
+| selectedIndex | int | Yes | the index value of the swiper content selected before animation start. The value range is all integers The value should be an integer. |
+| index | int | Yes | the index value of the swiper content. The value range is all integers The value should be an integer. |
+| position | double | Yes | the moving ratio of the swiper content from the start position of the swiper main axis. |
+| mainAxisLength | double | Yes | the swiper main axis length for calculating position. |
 

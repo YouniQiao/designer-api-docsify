@@ -14,7 +14,7 @@ declare function readSync(
 ): number
 ```
 
-以同步方法从文件读取数据。
+Reads data from a file. This API returns the result synchronously.
 
 **Since:** 6
 
@@ -32,13 +32,13 @@ declare function readSync(
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| fd | number | Yes | 待读取文件的文件描述符。 |
-| buffer | ArrayBuffer | Yes | 用于保存读取到的文件数据的缓冲区。 |
-| options | {     offset?: number;     length?: number;     position?: number;   } | No | 支持如下选项：&lt;br/&gt;-?offset，number类型，表示将数据读取到缓冲区的位置，即相对于缓冲区首地址的偏移，单位为Byte。可选，默认为0。&lt;br/&gt;-? length，number类型，表示期望读取数据的长度。可选，默认缓冲区长度减去偏移长度，单位为Byte。&lt;br/&gt;-?position，number类型，表示期望读取文件的位置。可选，默认从当前位置开始读，单位为Byte。&lt; br/&gt;约束：offset+length<=buffer.size。 |
+| fd | number | Yes | File descriptor of the file to read. |
+| buffer | ArrayBuffer | Yes | Buffer used to store the file data read. |
+| options | {     offset?: number;     length?: number;     position?: number;   } | No | The options are as follows:&lt;br&gt;- **offset** (number): position to store the data read in the buffer relative to the start address of the buffer, in bytes. This parameter is optional. The default value is **0**.&lt;br&gt;- **length** (number): length of the data to read. This parameter is optional. The default value is the buffer length minus the offset, in bytes.&lt;br&gt;- **position** (number): position of the data to read in the file. This parameter is optional. By default, data is read from the current position, in bytes.&lt;br&gt; Constraints: offset + length <= Buffer size |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| number | 实际读取的长度，单位为Byte。 |
+| number | Length of the data read, in bytes. |
 

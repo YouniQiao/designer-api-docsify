@@ -8,17 +8,11 @@
 
 **废弃版本：** 12
 
-**替代接口：** [@ohos.file.photoAccessHelper:photoAccessHelper.PhotoSelectOptions](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-photoaccesshelper-photoselectoptions-c.md/arkts-medialibrary-photoaccesshelper-photoselectoptions-c.md)
+**替代接口：** @ohos.file.photoAccessHelper:photoAccessHelper.PhotoSelectOptions
 
 <!--Device-picker-class PhotoSelectOptions--><!--Device-picker-class PhotoSelectOptions-End-->
 
 **系统能力：** SystemCapability.FileManagement.UserFileService
-
-## 导入模块
-
-```TypeScript
-import { picker } from 'kits/@kit.CoreFileKit';
-```
 
 ## MIMEType
 

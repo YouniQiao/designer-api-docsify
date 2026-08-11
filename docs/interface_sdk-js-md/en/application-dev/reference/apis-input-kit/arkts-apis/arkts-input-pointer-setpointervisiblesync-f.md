@@ -12,7 +12,7 @@ import { pointer } from 'kits/@kit.InputKit';
 function setPointerVisibleSync(visible: boolean): void
 ```
 
-设置当前窗口鼠标光标的显示状态，使用同步方式。
+Sets whether the mouse pointer is visible in the current window. This API returns the result synchronously.
 
 **Since:** 10
 
@@ -26,13 +26,13 @@ function setPointerVisibleSync(visible: boolean): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| visible | boolean | Yes | 当前窗口鼠标光标是否显示。true表示显示，false表示不显示。 |
+| visible | boolean | Yes | Whether the mouse pointer is visible in the current window. The value **true** indicates that the mouse pointer is visible, and the value **false** indicates the opposite. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; 3. Parameter verification failed. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; 3. Parameter verification failed. |
 
 ## Examples
 
@@ -47,11 +47,10 @@ struct Index {
       Text()
         .onClick(() => {
           try {
-            // Synchronously sets the visibility of the mouse pointer
             pointer.setPointerVisibleSync(false);
-            console.info(`Succeeded in setting pointer cursor visible.`);
+            console.info(`Set pointer visible success`);
           } catch (error) {
-            console.error(`Failed to set pointer cursor visible, Code: ${(error as BusinessError).code}, message: ${(error as BusinessError).message}.`);
+            console.error(`Set pointer visible failed, error: ${JSON.stringify(error, [`code`, `message`])}`);
           }
         })
     }

@@ -1,10 +1,10 @@
 # MacSpec
 
-消息认证码参数，计算HMAC或CMAC时，需要构建子类对象并作为输入参数。
+Represents the message authentication code (MAC) parameters. You need to construct a child class object and use it as a parameter when computing an HMAC or a CMAC.
 
-> **说明：**
+> **NOTE：**
 > 
-> algName是必选参数，表示消息认证码算法。
+> **algName** specifies the MAC algorithm to use. It is mandatory.
 
 **Since:** 18
 
@@ -26,7 +26,7 @@ import { cryptoFramework } from 'kits/@kit.CryptoArchitectureKit';
 algName: string
 ```
 
-消息认证码算法名。
+Algorithm to use.
 
 **Type:** string
 

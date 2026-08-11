@@ -1,6 +1,6 @@
 # GuideLinePosition
 
-guideLine位置参数，用于定义guideLine的位置。
+Specifies the position of guideLine
 
 **Since:** 23
 
@@ -16,7 +16,7 @@ guideLine位置参数，用于定义guideLine的位置。
 end?: Dimension
 ```
 
-guideLine距离容器右侧或者底部的距离。
+Specifies the distance to end of container
 
 **Type:** [Dimension](arkts-arkui-dimension-t.md)
 
@@ -36,7 +36,7 @@ guideLine距离容器右侧或者底部的距离。
 start?: Dimension
 ```
 
-guideLine距离容器左侧或者顶部的距离。
+Specifies the distance to start of container
 
 **Type:** [Dimension](arkts-arkui-dimension-t.md)
 

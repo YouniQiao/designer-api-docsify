@@ -9,11 +9,7 @@ export declare function Column(
 ): ColumnAttribute
 ```
 
-沿垂直方向布局的容器。
-
-> **说明：**
-> 
-> Column未设置高度或宽度时，在主轴或交叉轴方向上自适应子组件大小。
+Defines Column Component.
 
 **Since:** 23
 
@@ -50,9 +46,9 @@ export declare function Column(
 
 Defines Column Component.
 
-**Since:** 26.0.0
+**Since:** 26.1.0
 
-**ArkTS mode:** ArkTS-Sta only, since version 26.0.0.
+**ArkTS mode:** ArkTS-Sta only, since version 26.1.0.
 
 **Decorator:** @Builder
 

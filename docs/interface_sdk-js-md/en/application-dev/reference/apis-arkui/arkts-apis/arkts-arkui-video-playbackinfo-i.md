@@ -1,6 +1,6 @@
 # PlaybackInfo
 
-用于描述当前视频播放的进度。
+Playback information of the video.
 
 **Since:** 23
 
@@ -16,7 +16,7 @@
 time: int
 ```
 
-当前视频播放的进度。单位：秒，取值范围：[0,+∞)
+The current video playback progress, expressed in seconds.
 
 **Type:** int
 

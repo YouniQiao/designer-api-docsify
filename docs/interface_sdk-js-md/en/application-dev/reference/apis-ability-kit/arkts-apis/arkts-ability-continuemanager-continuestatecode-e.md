@@ -1,6 +1,6 @@
 # ContinueStateCode
 
-快速拉起的结果状态码的枚举值。
+Enumerates the status codes of the quick start result.
 
 **Since:** 18
 
@@ -16,9 +16,9 @@
 SUCCESS = 0
 ```
 
-操作成功。
+Operation succeeded.
 
-此接口仅可在Stage模型下使用。
+This API can be used only in the stage model.
 
 **Since:** 18
 
@@ -36,9 +36,9 @@ SUCCESS = 0
 SYSTEM_ERROR = 1
 ```
 
-操作失败。
+Operation failed.
 
-此接口仅可在Stage模型下使用。
+This API can be used only in the stage model.
 
 **Since:** 18
 

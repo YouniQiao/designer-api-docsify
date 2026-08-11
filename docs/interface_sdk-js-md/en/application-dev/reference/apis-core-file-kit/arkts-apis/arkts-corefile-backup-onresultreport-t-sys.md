@@ -4,7 +4,7 @@
 type OnResultReport = (bundleName: string, result: string) => void
 ```
 
-备份服务返回结果信息时触发的回调。第一个字符串参数表示触发回调的应用名称。第二个字符串参数表示应用的处理结果。
+Callback called when the backup service return result information.The first return string parameter indicates the bundleName that triggers the callback.The second return string parameter indicates the result of the bundle.
 
 **Since:** 23
 
@@ -22,6 +22,6 @@ type OnResultReport = (bundleName: string, result: string) => void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| bundleName | string | Yes | 触发回调的应用名称。 |
-| result | string | Yes | 应用备份或恢复的结果信息。 |
+| bundleName | string | Yes | the bundleName that triggers the callback. |
+| result | string | Yes | the result of the bundle. |
 

@@ -10,12 +10,6 @@
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Circle
 
-## 导入模块
-
-```TypeScript
-import { ArcListItemAttribute, ArcList, ArcListItem, ArcListAttribute } from 'kits/@kit.ArkUI';
-```
-
 ## header
 
 ```TypeScript

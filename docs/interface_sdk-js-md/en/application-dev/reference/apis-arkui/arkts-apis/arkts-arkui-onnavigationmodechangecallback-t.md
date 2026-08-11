@@ -4,7 +4,7 @@
 declare type OnNavigationModeChangeCallback = (mode: NavigationMode) => void
 ```
 
-当MultiNavigation的mode变化时触发的回调函数。
+Callback function when NavigationMode changed.
 
 **Since:** 23
 
@@ -20,5 +20,5 @@ declare type OnNavigationModeChangeCallback = (mode: NavigationMode) => void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| mode | [NavigationMode](../arkts-components/arkts-arkui-navigationmode-e.md) | Yes | 当回调触发时的NavigationMode。 |
+| mode | [NavigationMode](../arkts-components/arkts-arkui-navigationmode-e.md) | Yes | current NavigationMode. |
 

@@ -10,12 +10,6 @@ appManager模块提供App管理的能力，包括查询当前是否处于稳定�
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 
-## 导入模块
-
-```TypeScript
-import { appManager } from 'kits/@kit.AbilityKit';
-```
-
 ## 汇总
 
 ### 函数

@@ -6,7 +6,7 @@
 export function getToggleAttribute(node: FrameNode): ToggleAttribute | undefined
 ```
 
-获取FrameNode的属性实例以设置属性。
+Get the attribute instance of FrameNode to set attributes.
 
 **Since:** 23
 
@@ -22,7 +22,7 @@ export function getToggleAttribute(node: FrameNode): ToggleAttribute | undefined
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| node | [FrameNode](arkts-arkui-framenode-c.md) | Yes | 目标FrameNode. |
+| node | [FrameNode](arkts-arkui-framenode-c.md) | Yes | the target FrameNode. |
 
 **Return value:**
 

@@ -1,6 +1,6 @@
 # CustomComponentLifecycleState
 
-自定义组件当前的生命周期状态。
+Enum for Lifecycle State type
 
 **Since:** 24
 
@@ -16,7 +16,7 @@
 INIT = 0
 ```
 
-初始化状态。
+Lifecycle init state. Custom components are in this state when they are created.The next state after the init state is the appear state, which will trigger aboutToAppear.
 
 **Since:** 24
 
@@ -34,7 +34,7 @@ INIT = 0
 APPEARED = 1
 ```
 
-准备展开状态。
+Lifecycle appeared state. Custom components are in this stage when they are about to be built.The next state after the appeared state is the built state, which will trigger onDidBuild.
 
 **Since:** 24
 
@@ -52,7 +52,7 @@ APPEARED = 1
 BUILT = 2
 ```
 
-已展开状态。
+Lifecycle built state. The next state after the built state could be the recycled state or disappeared state.
 
 **Since:** 24
 
@@ -70,7 +70,7 @@ BUILT = 2
 RECYCLED = 3
 ```
 
-回收状态。
+Lifecycle recycled state. Custom components are in the state of being recycled or reused.The next state after the recycle state could be the built state or the disappeared state.
 
 **Since:** 24
 
@@ -88,7 +88,7 @@ RECYCLED = 3
 DISAPPEARED = 4
 ```
 
-删除状态。
+Lifecycle disappeared state. The disappeared state is the end state of a custom component's lifecycle.The init, built and recycled states could transfer to the disappeared state.
 
 **Since:** 24
 

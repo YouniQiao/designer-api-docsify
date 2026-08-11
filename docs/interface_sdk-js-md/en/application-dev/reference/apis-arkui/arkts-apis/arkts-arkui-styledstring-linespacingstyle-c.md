@@ -1,6 +1,6 @@
 # LineSpacingStyle
 
-文本行间距对象说明。
+Defines LineSpacingStyle.
 
 **Since:** 26.0.0
 
@@ -16,7 +16,7 @@
 constructor(lineSpacing: LengthMetrics, options?: LineSpacingOptions)
 ```
 
-文本行间距的构造函数。
+constructor.
 
 **Since:** 26.0.0
 
@@ -32,8 +32,8 @@ constructor(lineSpacing: LengthMetrics, options?: LineSpacingOptions)
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| lineSpacing | [LengthMetrics](arkts-arkui-lengthmetrics-t.md) | Yes | 文本的行间距。&lt;br/&gt;默认值：0.0&lt;br/&gt;取值范围： [0, +∞)&lt;br/&gt;**说明：** LengthMetrics的value值小于0时，取默认值0.0。 |
-| options | [LineSpacingOptions](arkts-arkui-linespacingoptions-i.md) | No | 行间距的配置项。&lt;br/&gt;默认值：{ onlyBetweenLines: false } |
+| lineSpacing | [LengthMetrics](arkts-arkui-lengthmetrics-t.md) | Yes | line spacing value. |
+| options | [LineSpacingOptions](arkts-arkui-linespacingoptions-i.md) | No | line spacing options value. |
 
 ## lineSpacing
 
@@ -41,11 +41,7 @@ constructor(lineSpacing: LengthMetrics, options?: LineSpacingOptions)
 readonly lineSpacing: double
 ```
 
-文本行间距。
-
-取值范围：[0, +∞)
-
-单位：[vp](../../../reference/apis-arkui/arkui-ts/ts-pixel-units.md#基本像素单位)
+Get the lineSpacing value of the StyledString.The unit is vp.
 
 **Type:** double
 
@@ -65,7 +61,7 @@ readonly lineSpacing: double
 readonly options?: LineSpacingOptions
 ```
 
-行间距配置项。
+Get the lineSpacing options value of the StyledString.
 
 **Type:** [LineSpacingOptions](arkts-arkui-linespacingoptions-i.md)
 

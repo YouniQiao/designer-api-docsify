@@ -10,12 +10,6 @@
 
 **系统能力：** SystemCapability.Ability.AppStartup
 
-## 导入模块
-
-```TypeScript
-import { StartupConfig } from 'kits/@kit.AbilityKit';
-```
-
 ## startupListener
 
 ```TypeScript

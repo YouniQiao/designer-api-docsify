@@ -1,6 +1,6 @@
 # ContactSelectionFilter
 
-联系人查询过滤器。
+Defines the contact selection filter.
 
 **Since:** 15
 
@@ -22,7 +22,7 @@ import { contact } from 'kits/@kit.ContactsKit';
 filterClause: FilterClause
 ```
 
-过滤条件。
+Filter criteria.
 
 **Type:** [FilterClause](arkts-contacts-contact-filterclause-i.md)
 
@@ -42,7 +42,7 @@ filterClause: FilterClause
 filterType: FilterType
 ```
 
-过滤类型。
+Filter type.
 
 **Type:** [FilterType](../../apis-arkui/arkts-apis/arkts-arkui-arkui-advanced-filter-filtertype-e.md)
 

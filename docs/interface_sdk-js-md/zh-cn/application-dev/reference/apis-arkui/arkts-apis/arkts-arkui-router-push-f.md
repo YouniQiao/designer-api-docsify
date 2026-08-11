@@ -1,11 +1,5 @@
 # push
 
-## 导入模块
-
-```TypeScript
-import { router } from 'kits/@kit.ArkUI';
-```
-
 ## push
 
 ```TypeScript
@@ -42,7 +36,7 @@ function push(options: RouterOptions): void
 ```TypeScript
 import { router } from '@kit.ArkUI';
 
-class InnerParams {
+class innerParams {
   data3: number[];
 
   constructor(tuple: number[]) {
@@ -52,11 +46,11 @@ class InnerParams {
 
 class RouterParams {
   data1: string;
-  data2: InnerParams;
+  data2: innerParams;
 
   constructor(str: string, tuple: number[]) {
     this.data1 = str;
-    this.data2 = new InnerParams(tuple);
+    this.data2 = new innerParams(tuple);
   }
 }
 

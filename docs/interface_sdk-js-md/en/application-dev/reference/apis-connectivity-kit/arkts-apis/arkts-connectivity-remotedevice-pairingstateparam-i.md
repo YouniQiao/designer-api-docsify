@@ -1,6 +1,6 @@
 # PairingStateParam
 
-配对状态参数。
+Describes the pairing state parameters.
 
 **Since:** 26.0.0
 
@@ -22,7 +22,7 @@ import { remoteDevice } from 'kits/@kit.ConnectivityKit';
 address: string
 ```
 
-设备地址。长度必须为17，由16进制数字和冒号组成，形如 "11:22:33:AA:BB:FF"。
+Indicates the device address.The length must be 17, The value consists of hexadecimal digits and colons (:), for example, 11:22:33:AA:BB:FF.
 
 **Type:** string
 
@@ -42,7 +42,7 @@ address: string
 preState: PairingState
 ```
 
-上一个配对状态。
+Indicates the previous pairing state.
 
 **Type:** [PairingState](arkts-connectivity-nearlinkconstant-pairingstate-e.md)
 
@@ -62,7 +62,7 @@ preState: PairingState
 reason: PairingReason
 ```
 
-配对状态原因。
+Indicates the pairing state reason.
 
 **Type:** [PairingReason](arkts-connectivity-remotedevice-pairingreason-e.md)
 
@@ -82,7 +82,7 @@ reason: PairingReason
 reasonMsg?: string
 ```
 
-原因消息。此字段仅用于日志信息，不应该用于逻辑处理。
+Indicates reason message. This field is intended for log information only and should not be used for logic processing.
 
 **Type:** string
 
@@ -102,7 +102,7 @@ reasonMsg?: string
 state: PairingState
 ```
 
-当前配对状态。
+Indicates the current pairing state.
 
 **Type:** [PairingState](arkts-connectivity-nearlinkconstant-pairingstate-e.md)
 

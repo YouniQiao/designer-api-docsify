@@ -24,7 +24,7 @@ import { audio } from 'kits/@kit.AudioKit';
 isCollaborativePlaybackEnabledForDevice(deviceDescriptor: AudioDeviceDescriptor): boolean
 ```
 
-检查指定设备的协同播放状态
+Checks whether collaborative playback is enabled for the specified device.
 
 **Since:** 20
 
@@ -46,14 +46,14 @@ isCollaborativePlaybackEnabledForDevice(deviceDescriptor: AudioDeviceDescriptor)
 
 | Type | Description |
 | --- | --- |
-| boolean | 是否已经使能与指定的设备协同播放 |
+| boolean | Returns the check result. The value true means that collaborative playback is enabled for the specified device, and false means the opposite. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 6800101 | Parameter verification failed. |
-| 202 | Not system application. |
+| [6800101](../errorcode-audio.md#6800101-invalid-parameter) | Parameter verification failed. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system application. |
 
 ## Examples
 
@@ -113,7 +113,7 @@ Checks whether the collaborative playback is supported by system.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 202 | Not system application. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system application. |
 
 ## Examples
 
@@ -136,7 +136,7 @@ try {
 isCollaborativePlaybackSupportedForDevice(deviceDescriptor: AudioDeviceDescriptor): boolean
 ```
 
-检查指定设备是否支持协同播放。
+Checks whether the collaborative playback is supported for the specified device.
 
 **Since:** 24
 
@@ -154,7 +154,7 @@ isCollaborativePlaybackSupportedForDevice(deviceDescriptor: AudioDeviceDescripto
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| deviceDescriptor | [AudioDeviceDescriptor](arkts-audio-audio-audiodevicedescriptor-i-sys.md) | Yes | 用于查询的音频设备描述符。 |
+| deviceDescriptor | [AudioDeviceDescriptor](arkts-audio-audio-audiodevicedescriptor-i-sys.md) | Yes | Audio device descriptor to check. |
 
 **Return value:**
 
@@ -166,7 +166,7 @@ isCollaborativePlaybackSupportedForDevice(deviceDescriptor: AudioDeviceDescripto
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 202 | Not system application. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system application. |
 
 ## setCollaborativePlaybackEnabledForDevice
 
@@ -174,7 +174,7 @@ isCollaborativePlaybackSupportedForDevice(deviceDescriptor: AudioDeviceDescripto
 setCollaborativePlaybackEnabledForDevice(deviceDescriptor: AudioDeviceDescriptor, enabled: boolean): Promise<void>
 ```
 
-设置使能或者关闭与指定设备协同播放。当前仅A2DP音频设备支持协同播放。如果系统当前正在使用指定的设备发声，调用此接口后，声音将从本地speaker和指定的设备上协同播放出来。
+Enables or disables collaborative playback for the specified device.Currently, only A2DP audio devices support collaborative playback.If the system is using the specified device for audio output,the audio will be played from both the local speaker and the specified device after this API is called.
 
 **Since:** 20
 
@@ -197,15 +197,15 @@ setCollaborativePlaybackEnabledForDevice(deviceDescriptor: AudioDeviceDescriptor
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | 设置结果 |
+| Promise&lt;void&gt; | Promise used to return the result. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 801 | Capability not supported. |
-| 6800101 | Parameter verification failed. Possible causes: 1. The specified device is not an A2DP device. 2. The specified device is not connected. |
-| 202 | Not system application. |
+| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. |
+| [6800101](../errorcode-audio.md#6800101-invalid-parameter) | Parameter verification failed. Possible causes: 1. The specified device is not an A2DP device. 2. The specified device is not connected. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system application. |
 
 ## Examples
 

@@ -1,6 +1,6 @@
 # Database (System API)
 
-数据库结构信息。
+Represents the database information.
 
 **Since:** 11
 
@@ -24,7 +24,7 @@ import { cloudExtension } from 'kits/@kit.ArkData';
 alias: string
 ```
 
-该数据库在服务器中的别名。
+Alias of the database on the server.
 
 **Type:** string
 
@@ -44,7 +44,7 @@ alias: string
 name: string
 ```
 
-数据库名称。
+Name of the database.
 
 **Type:** string
 
@@ -64,7 +64,7 @@ name: string
 tables: Array<Table>
 ```
 
-数据库中的表，包含数据详细信息。
+Table in the database, including the detailed data information.
 
 **Type:** Array&lt;Table&gt;
 

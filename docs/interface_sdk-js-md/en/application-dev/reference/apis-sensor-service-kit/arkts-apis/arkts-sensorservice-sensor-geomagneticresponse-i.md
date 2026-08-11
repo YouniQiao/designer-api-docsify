@@ -1,6 +1,6 @@
 # GeomagneticResponse
 
-设置地磁响应对象，用于描述指定地理位置的地磁场信息。
+Describes a geomagnetic response object.
 
 **Since:** 8
 
@@ -22,7 +22,7 @@ import { sensor } from 'kits/@kit.SensorServiceKit';
 deflectionAngle: double
 ```
 
-磁偏角，即地磁北方向与正北方向在水平面上的角度。单位：degree（度）。
+Magnetic declination, which is the angle between true north (geographic north) and the magnetic north (the horizontal component of the field), in degrees.
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：double
 
@@ -40,7 +40,7 @@ deflectionAngle: double
 geomagneticDip: double
 ```
 
-磁倾角，即地球磁场线与水平面的夹角。单位：degree（度）。
+Magnetic dip, also called magnetic inclination, which is the angle measured from the horizontal plane to the magnetic field vector, in degrees.
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：double
 
@@ -58,7 +58,7 @@ geomagneticDip: double
 levelIntensity: double
 ```
 
-水平磁场强度，即地磁场在水平面上的总强度。单位：nT（纳特斯拉）。
+Horizontal intensity of the magnetic field vector field, in nT.
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：double
 
@@ -76,7 +76,7 @@ levelIntensity: double
 totalIntensity: double
 ```
 
-总磁场强度，即地磁场三维空间的总强度。单位：nT（纳特斯拉）。
+Total intensity of the magnetic field vector, in nT.
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：double
 
@@ -94,7 +94,7 @@ totalIntensity: double
 x: double
 ```
 
-地磁场X方向分量（北分量）。单位：nT（纳特斯拉）。
+North component of the geomagnetic field, in nT.
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：double
 
@@ -112,7 +112,7 @@ x: double
 y: double
 ```
 
-地磁场Y方向分量（东分量）。单位：nT（纳特斯拉）。
+East component of the geomagnetic field, in nT.
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：double
 
@@ -130,7 +130,7 @@ y: double
 z: double
 ```
 
-地磁场Z方向分量（垂直分量）。单位：nT（纳特斯拉）。
+Vertical component of the geomagnetic field, in nT.
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：double
 

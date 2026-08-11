@@ -1,11 +1,5 @@
 # isDefaultApplicationSync
 
-## 导入模块
-
-```TypeScript
-import { defaultAppManager } from 'kits/@kit.AbilityKit';
-```
-
 ## isDefaultApplicationSync
 
 ```TypeScript
@@ -38,8 +32,8 @@ function isDefaultApplicationSync(type: string): boolean
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types. |
-| 801 | Capability not supported. |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types. |
+| [801](../../errorcode-universal.md#801-该设备不支持此api) | Capability not supported. |
 
 ## 示例
 

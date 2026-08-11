@@ -1,7 +1,6 @@
 # ObservedSet
 
-继承自Set&lt;K&gt;，为可观察API操作的Set对象。详见  
-[ObservedArray/ObservedMap/ObservedSet/ObservedDate：具有观察能力的Built-in类型](../../../ui/state-management-static/arkts-static-new-observed-built-in-types.md)。
+Observable Set base class.
 
 **Inheritance/Implementation:** ObservedSet extends [Set<K>](Set<K>)
 
@@ -19,7 +18,7 @@
 public constructor()
 ```
 
-无参构造函数。
+No arg constructor for observable Set.
 
 **Since:** 26.0.0
 
@@ -37,7 +36,7 @@ public constructor()
 public constructor(bucketsCount: int)
 ```
 
-使用指定的容量创建ObservedSet实例。
+Constructor for observable Set.
 
 **Since:** 26.0.0
 
@@ -53,7 +52,7 @@ public constructor(bucketsCount: int)
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| bucketsCount | int | Yes | 指定的初始容量。 |
+| bucketsCount | int | Yes | buckets count |
 
 ## constructor
 
@@ -61,7 +60,7 @@ public constructor(bucketsCount: int)
 public constructor(values: K[])
 ```
 
-使用元素数组创建ObservedSet实例。
+Constructor for observable Set.
 
 **Since:** 26.0.0
 
@@ -77,7 +76,7 @@ public constructor(values: K[])
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| values | K[] | Yes | 初始元素数组。 |
+| values | K[] | Yes | initial entries. |
 
 ## constructor
 
@@ -85,7 +84,7 @@ public constructor(values: K[])
 public constructor(set: Set<K>)
 ```
 
-使用已有Set对象创建ObservedSet实例。
+Constructor for observable Set.
 
 **Since:** 26.0.0
 
@@ -101,5 +100,5 @@ public constructor(set: Set<K>)
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| set | Set&lt;K&gt; | Yes | 初始Set对象。 |
+| set | Set&lt;K&gt; | Yes | initial entries. |
 

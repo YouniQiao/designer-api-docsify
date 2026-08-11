@@ -1,6 +1,6 @@
 # AnimatorResult
 
-定义Animator结果接口。
+Defines the Animator result interface.
 
 **Since:** 23
 
@@ -22,7 +22,7 @@ import { AnimatorOptions, SimpleAnimatorOptions, AnimatorResult } from 'kits/@ki
 cancel(): void
 ```
 
-取消动画，会触发onCancel回调。
+Cancels the animation.
 
 **Since:** 23
 
@@ -40,7 +40,7 @@ cancel(): void
 finish(): void
 ```
 
-结束动画，会触发onFinish回调。
+Ends the animation.
 
 **Since:** 23
 
@@ -58,7 +58,7 @@ finish(): void
 onCancel: () => void
 ```
 
-动画被取消时回调。
+The animation is canceled.
 
 **Since:** 23
 
@@ -76,7 +76,7 @@ onCancel: () => void
 onFinish: () => void
 ```
 
-动画完成时回调。
+The animation is finished.
 
 **Since:** 23
 
@@ -94,7 +94,7 @@ onFinish: () => void
 onFrame: (progress: double) => void
 ```
 
-接收到帧时回调。
+Trigger when vSync callback.
 
 **Since:** 23
 
@@ -118,7 +118,7 @@ onFrame: (progress: double) => void
 onRepeat: () => void
 ```
 
-动画重复时回调。
+The animation is repeated.
 
 **Since:** 23
 
@@ -136,7 +136,7 @@ onRepeat: () => void
 pause(): void
 ```
 
-暂停动画。
+Pauses the animation.
 
 **Since:** 23
 
@@ -154,7 +154,7 @@ pause(): void
 play(): void
 ```
 
-启动动画。动画会保留上一次的播放状态，比如播放状态设置reverse后，再次播放会保留reverse的播放状态。
+Starts the animation.
 
 **Since:** 23
 
@@ -172,7 +172,7 @@ play(): void
 reset(options: AnimatorOptions | SimpleAnimatorOptions): void
 ```
 
-重置当前animator动画参数。
+Reset the options for current animator.
 
 **Since:** 23
 
@@ -188,14 +188,14 @@ reset(options: AnimatorOptions | SimpleAnimatorOptions): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| options | [AnimatorOptions](arkts-arkui-animator-animatoroptions-i.md) \| SimpleAnimatorOptions | Yes | 定义动画选项。 |
+| options | [AnimatorOptions](arkts-arkui-animator-animatoroptions-i.md) \| SimpleAnimatorOptions | Yes | Options. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 100001 | The specified page is not found or the object property list is not obtained. |
-| 401 | Parameter error. Possible causes: &lt;br&gt; 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameters types. &lt;br&gt; 3. Parameter verification failed. |
+| [100001](../errorcode-internal.md#100001-internal-error) | The specified page is not found or the object property list is not obtained. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: &lt;br&gt; 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameters types. &lt;br&gt; 3. Parameter verification failed. |
 
 ## reverse
 
@@ -203,7 +203,7 @@ reset(options: AnimatorOptions | SimpleAnimatorOptions): void
 reverse(): void
 ```
 
-以相反的顺序播放动画。使用interpolating-spring曲线时此接口无效。
+Plays the animation in reverse direction.Invalid when using interpolating-spring curve.
 
 **Since:** 23
 
@@ -221,7 +221,7 @@ reverse(): void
 setExpectedFrameRateRange(rateRange: ExpectedFrameRateRange): void
 ```
 
-设置期望的帧率范围。
+The expected frame rate of dynamical of rate range.
 
 **Since:** 23
 
@@ -237,5 +237,5 @@ setExpectedFrameRateRange(rateRange: ExpectedFrameRateRange): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| rateRange | [ExpectedFrameRateRange](../arkts-components/arkts-arkui-expectedframeraterange-i.md) | Yes | 设置期望的帧率范围。 |
+| rateRange | [ExpectedFrameRateRange](../arkts-components/arkts-arkui-expectedframeraterange-i.md) | Yes | Indicates ExpectedFrameRateRange. |
 

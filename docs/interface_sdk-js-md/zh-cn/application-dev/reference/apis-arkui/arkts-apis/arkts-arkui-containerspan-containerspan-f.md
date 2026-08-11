@@ -30,7 +30,7 @@ export declare function ContainerSpan(
 
 | 类型 | 说明 |
 | --- | --- |
-| [ContainerSpanAttribute](../arkts-components/arkts-arkui-containerspan-attribute.md) |  |
+| [ContainerSpanAttribute](arkts-arkui-containerspan-containerspanattribute-i.md) |  |
 
 
 ## ContainerSpan
@@ -67,5 +67,5 @@ export declare function ContainerSpan(
 
 | 类型 | 说明 |
 | --- | --- |
-| [ContainerSpanAttribute](../arkts-components/arkts-arkui-containerspan-attribute.md) |  |
+| [ContainerSpanAttribute](arkts-arkui-containerspan-containerspanattribute-i.md) |  |
 

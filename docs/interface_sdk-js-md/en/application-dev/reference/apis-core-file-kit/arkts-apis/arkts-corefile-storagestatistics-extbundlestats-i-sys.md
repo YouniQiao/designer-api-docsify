@@ -1,6 +1,6 @@
 # ExtBundleStats (System API)
 
-系统应用或系统服务的空间占用详情。
+Details the space usage of system applications or system services.
 
 **Since:** 23
 
@@ -24,7 +24,7 @@ import { storageStatistics } from 'kits/@kit.CoreFileKit';
 businessName: string
 ```
 
-系统应用包名或系统服务名称。
+System application bundle name or system service name.
 
 **Type:** string
 
@@ -46,7 +46,8 @@ businessName: string
 flag: boolean
 ```
 
-系统应用或系统服务的空间占用是否需要在“设置-存储”界面单独展示。true表示单独显示，false表示不单独显示。 该值为false时，空间占用会被归并到businessName指定的应用中。
+Whether the space occupied by system applications or system services needs to be displayed separately on the  
+**Settings** > **Storage** page. A value of **true** enables independent display; a value of **false** merges the usage data into the application specified by **businessName**.
 
 **Type:** boolean
 
@@ -68,7 +69,7 @@ flag: boolean
 size: long
 ```
 
-系统应用或系统服务的空间占用大小，单位Byte。
+The business size.&lt;br&gt;Unit: Byte.
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：long
 

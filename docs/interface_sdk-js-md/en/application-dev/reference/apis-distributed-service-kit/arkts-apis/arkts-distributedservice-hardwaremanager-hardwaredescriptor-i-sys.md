@@ -1,6 +1,6 @@
 # HardwareDescriptor (System API)
 
-表示分布式硬件的描述信息。
+Represents the distributed hardware information.
 
 **Since:** 11
 
@@ -24,7 +24,7 @@ import { hardwareManager } from 'kits/@kit.DistributedServiceKit';
 srcNetworkId?: string
 ```
 
-表示源端设备，缺省时表示所有源端设备。
+Source device. If this parameter is not specified, it indicates all source devices.
 
 **Type:** string
 
@@ -46,7 +46,7 @@ srcNetworkId?: string
 type: DistributedHardwareType
 ```
 
-分布式硬件类型。
+Type of the distributed hardware.
 
 **Type:** [DistributedHardwareType](arkts-distributedservice-hardwaremanager-distributedhardwaretype-e-sys.md)
 

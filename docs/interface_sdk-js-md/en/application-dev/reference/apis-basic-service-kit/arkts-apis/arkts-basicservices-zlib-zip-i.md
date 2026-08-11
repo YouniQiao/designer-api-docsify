@@ -1,6 +1,6 @@
 # Zip
 
-压缩解压缩对象实例，支持以zlib、deflate、gzip格式对数据进行压缩与解压。
+Defines the **Zip** instance. It provides APIs to zip or unzip data in Zlib, Deflate, or Gzip format.
 
 **Since:** 12
 
@@ -28,7 +28,7 @@ ArkTS-Sta:
 compress(dest: ArrayBuffer, source: ArrayBuffer, sourceLen?: long): Promise<ZipOutputInfo>
 ```
 
-将源缓冲区压缩到目标缓冲区。使用Promise异步回调。
+Compresses the source buffer into the destination buffer. This API uses a promise to return the result.
 
 **Since:** 12
 
@@ -44,22 +44,22 @@ compress(dest: ArrayBuffer, source: ArrayBuffer, sourceLen?: long): Promise<ZipO
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| dest | ArrayBuffer | Yes | 目标缓冲区。 |
-| source | ArrayBuffer | Yes | 源数据缓冲区。 |
-| sourceLen | ArkTS-Dyn: number  <br>ArkTS-Sta：long | No | 源数据长度。默认值为0。 |
+| dest | ArrayBuffer | Yes | Destination buffer. |
+| source | ArrayBuffer | Yes | Source buffer. |
+| sourceLen | ArkTS-Dyn: number  <br>ArkTS-Sta：long | No | Length of the source data. The default value is **0**. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;ZipOutputInfo&gt; | Promise对象。返回结果状态和目标缓冲区的总大小。 |
+| Promise&lt;ZipOutputInfo&gt; | Promise used to return the result status and the total size of the destination buffer. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | The parameter check failed. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
-| 17800007 | The input buffer is incorrect, and the output buffer is too small to accommodate the compressed or decompressed data. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | The parameter check failed. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| [17800007](../../apis-basic-services-kit/errorcode-zlib.md#17800007-incorrect-input-buffer) | The input buffer is incorrect, and the output buffer is too small to accommodate the compressed or decompressed data. |
 
 ## Examples
 
@@ -94,7 +94,7 @@ ArkTS-Sta:
 compress2(dest: ArrayBuffer, source: ArrayBuffer, level: CompressLevel, sourceLen?: long,): Promise<ZipOutputInfo>
 ```
 
-将源缓冲区压缩到目标缓冲区。使用Promise异步回调。
+Compresses the source buffer into the destination buffer. This API uses a promise to return the result.
 
 **Since:** 12
 
@@ -110,24 +110,24 @@ compress2(dest: ArrayBuffer, source: ArrayBuffer, level: CompressLevel, sourceLe
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| dest | ArrayBuffer | Yes | 目标缓冲区。 |
-| source | ArrayBuffer | Yes | 源数据缓冲区。 |
-| level | [CompressLevel](arkts-basicservices-zlib-compresslevel-e.md) | Yes | 参考[CompressLevel枚举定义](arkts-basicservices-zlib-compresslevel-e.md)。 |
-| sourceLen | ArkTS-Dyn: number  <br>ArkTS-Sta：long | No | 源数据长度。默认值为0。 |
+| dest | ArrayBuffer | Yes | Destination buffer. |
+| source | ArrayBuffer | Yes | Source buffer. |
+| level | [CompressLevel](arkts-basicservices-zlib-compresslevel-e.md) | Yes | For details, see [CompressLevel](arkts-basicservices-zlib-compresslevel-e.md). |
+| sourceLen | ArkTS-Dyn: number  <br>ArkTS-Sta：long | No | Length of the source data. The default value is **0**. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;ZipOutputInfo&gt; | Promise对象。返回结果状态和目标缓冲区的总大小。 |
+| Promise&lt;ZipOutputInfo&gt; | Promise used to return the result status and the total size of the destination buffer. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | The parameter check failed. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
-| 17800007 | The input buffer is incorrect, and the output buffer is too small to accommodate the compressed or decompressed data. |
-| 17800004 | Compression or decompression stream error, which may be caused by an initialization error in the zlib stream structure or a modified structure. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | The parameter check failed. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| [17800007](../../apis-basic-services-kit/errorcode-zlib.md#17800007-incorrect-input-buffer) | The input buffer is incorrect, and the output buffer is too small to accommodate the compressed or decompressed data. |
+| [17800004](../../apis-basic-services-kit/errorcode-zlib.md#17800004-compressed-or-decompressed-flow-error) | Compression or decompression stream error, which may be caused by an initialization error in the zlib stream structure or a modified structure. |
 
 ## compressBound
 
@@ -141,7 +141,7 @@ ArkTS-Sta:
 compressBound(sourceLen: int): Promise<int>
 ```
 
-计算返回压缩大小的上限。使用Promise异步回调。
+Calculates the maximum size of the compressed data to be returned. This API uses a promise to return the result.
 
 **Since:** 12
 
@@ -157,19 +157,19 @@ compressBound(sourceLen: int): Promise<int>
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| sourceLen | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | 源数据长度。 |
+| sourceLen | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | Length of the source data. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| ArkTS-Dyn: Promise&lt;number&gt;  <br>ArkTS-Sta：Promise&lt;int&gt; | Promise对象。返回压缩大小的上限。 |
+| ArkTS-Dyn: Promise&lt;number&gt;  <br>ArkTS-Sta：Promise&lt;int&gt; | Promise used to return the maximum size of the compressed data. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | The parameter check failed. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | The parameter check failed. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
 
 ## Examples
 
@@ -199,7 +199,7 @@ zip.compressBound(str.length).then((data) => {
 deflate(strm: ZStream, flush: CompressFlushMode): Promise<ReturnStatus>
 ```
 
-压缩数据。使用Promise异步回调。
+Deflates data. This API uses a promise to return the result.
 
 **Since:** 12
 
@@ -215,22 +215,22 @@ deflate(strm: ZStream, flush: CompressFlushMode): Promise<ReturnStatus>
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| strm | [ZStream](arkts-basicservices-zlib-zstream-i.md) | Yes | 参考[ZStream定义](arkts-basicservices-zlib-zstream-i.md)。 |
-| flush | [CompressFlushMode](arkts-basicservices-zlib-compressflushmode-e.md) | Yes | 参考[CompressFlushMode定义](arkts-basicservices-zlib-compressflushmode-e.md)。 |
+| strm | [ZStream](arkts-basicservices-zlib-zstream-i.md) | Yes | For details, see [ZStream&lt;sup&gt;12+&lt;/sup&gt;](arkts-basicservices-zlib-zstream-i.md). |
+| flush | [CompressFlushMode](arkts-basicservices-zlib-compressflushmode-e.md) | Yes | For details, see [CompressFlushMode](arkts-basicservices-zlib-compressflushmode-e.md). |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;ReturnStatus&gt; | Promise对象。返回结果状态。 |
+| Promise&lt;ReturnStatus&gt; | Promise used to return the result status. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | The parameter check failed. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
-| 17800007 | The input buffer is incorrect, and the output buffer is too small to accommodate the compressed or decompressed data. |
-| 17800004 | Compression or decompression stream error, which may be caused by an initialization error in the zlib stream structure or a modified structure. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | The parameter check failed. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| [17800007](../../apis-basic-services-kit/errorcode-zlib.md#17800007-incorrect-input-buffer) | The input buffer is incorrect, and the output buffer is too small to accommodate the compressed or decompressed data. |
+| [17800004](../../apis-basic-services-kit/errorcode-zlib.md#17800004-compressed-or-decompressed-flow-error) | Compression or decompression stream error, which may be caused by an initialization error in the zlib stream structure or a modified structure. |
 
 ## Examples
 
@@ -277,7 +277,7 @@ ArkTS-Sta:
 deflateBound(strm: ZStream, sourceLength: long): Promise<int>
 ```
 
-计算压缩大小的上限。使用Promise异步回调。
+Calculates the maximum size of the compressed data. This API uses a promise to return the result.
 
 **Since:** 12
 
@@ -293,20 +293,20 @@ deflateBound(strm: ZStream, sourceLength: long): Promise<int>
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| strm | [ZStream](arkts-basicservices-zlib-zstream-i.md) | Yes | 参考[ZStream定义](arkts-basicservices-zlib-zstream-i.md)。 |
-| sourceLength | ArkTS-Dyn: number  <br>ArkTS-Sta：long | Yes | 源数据长度。 |
+| strm | [ZStream](arkts-basicservices-zlib-zstream-i.md) | Yes | For details, see [ZStream&lt;sup&gt;12+&lt;/sup&gt;](arkts-basicservices-zlib-zstream-i.md). |
+| sourceLength | ArkTS-Dyn: number  <br>ArkTS-Sta：long | Yes | Length of the source data. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| ArkTS-Dyn: Promise&lt;number&gt;  <br>ArkTS-Sta：Promise&lt;int&gt; | Promise对象。返回压缩大小的上限。 |
+| ArkTS-Dyn: Promise&lt;number&gt;  <br>ArkTS-Sta：Promise&lt;int&gt; | Promise used to return the maximum size of the compressed data. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | The parameter check failed. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | The parameter check failed. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
 
 ## Examples
 
@@ -347,7 +347,7 @@ async function demo() {
 deflateCopy(source: Zip): Promise<ReturnStatus>
 ```
 
-复制压缩流。使用Promise异步回调。
+Copies a compression stream. This API uses a promise to return the result.
 
 **Since:** 12
 
@@ -363,20 +363,20 @@ deflateCopy(source: Zip): Promise<ReturnStatus>
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| source | [Zip](arkts-basicservices-zlib-zip-i.md) | Yes | 参考[Zip定义](arkts-basicservices-zlib-zip-i.md)。 |
+| source | [Zip](arkts-basicservices-zlib-zip-i.md) | Yes | For details, see [Zip&lt;sup&gt;12+&lt;/sup&gt;](arkts-basicservices-zlib-zip-i.md). |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;ReturnStatus&gt; | Promise对象。返回结果状态。 |
+| Promise&lt;ReturnStatus&gt; | Promise used to return the result status. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | The parameter check failed. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
-| 17800004 | Compression or decompression stream error, which may be caused by an initialization error in the zlib stream structure or a modified structure. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | The parameter check failed. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| [17800004](../../apis-basic-services-kit/errorcode-zlib.md#17800004-compressed-or-decompressed-flow-error) | Compression or decompression stream error, which may be caused by an initialization error in the zlib stream structure or a modified structure. |
 
 ## Examples
 
@@ -417,7 +417,7 @@ async function demo() {
 deflateEnd(strm: ZStream): Promise<ReturnStatus>
 ```
 
-解压流的所有动态分配的数据结构都被释放。使用Promise异步回调。
+Releases all dynamically allocated data structs of a decompression stream. This API uses a promise to return the result.
 
 **Since:** 12
 
@@ -433,20 +433,20 @@ deflateEnd(strm: ZStream): Promise<ReturnStatus>
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| strm | [ZStream](arkts-basicservices-zlib-zstream-i.md) | Yes | 参考[ZStream定义](arkts-basicservices-zlib-zstream-i.md)。 |
+| strm | [ZStream](arkts-basicservices-zlib-zstream-i.md) | Yes | For details, see [ZStream&lt;sup&gt;12+&lt;/sup&gt;](arkts-basicservices-zlib-zstream-i.md). |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;ReturnStatus&gt; | Promise对象。返回结果状态。 |
+| Promise&lt;ReturnStatus&gt; | Promise used to return the result status. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | The parameter check failed. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
-| 17800004 | Compression or decompression stream error, which may be caused by an initialization error in the zlib stream structure or a modified structure. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | The parameter check failed. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| [17800004](../../apis-basic-services-kit/errorcode-zlib.md#17800004-compressed-or-decompressed-flow-error) | Compression or decompression stream error, which may be caused by an initialization error in the zlib stream structure or a modified structure. |
 
 ## Examples
 
@@ -492,7 +492,7 @@ async function demo() {
 deflateGetDictionary(strm: ZStream, dictionary: ArrayBuffer): Promise<DictionaryOutputInfo>
 ```
 
-获取当前压缩流中使用的解压缩字典内容及其长度。使用Promise异步回调。
+Obtains the content and length of the decompression dictionary used in a compression stream. This API uses a promise to return the result.
 
 **Since:** 12
 
@@ -508,21 +508,21 @@ deflateGetDictionary(strm: ZStream, dictionary: ArrayBuffer): Promise<Dictionary
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| strm | [ZStream](arkts-basicservices-zlib-zstream-i.md) | Yes | 参考[ZStream定义](arkts-basicservices-zlib-zstream-i.md)。 |
-| dictionary | ArrayBuffer | Yes | 接收压缩字典的实际内容。 |
+| strm | [ZStream](arkts-basicservices-zlib-zstream-i.md) | Yes | For details, see [ZStream&lt;sup&gt;12+&lt;/sup&gt;](arkts-basicservices-zlib-zstream-i.md). |
+| dictionary | ArrayBuffer | Yes | Buffer that receives the actual contents of the decompression dictionary. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;DictionaryOutputInfo&gt; | Promise对象。返回结果状态和字典的长度。 |
+| Promise&lt;DictionaryOutputInfo&gt; | Promise used to return the result status and length of the dictionary. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | The parameter check failed. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
-| 17800004 | Compression or decompression stream error, which may be caused by an initialization error in the zlib stream structure or a modified structure. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | The parameter check failed. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| [17800004](../../apis-basic-services-kit/errorcode-zlib.md#17800004-compressed-or-decompressed-flow-error) | Compression or decompression stream error, which may be caused by an initialization error in the zlib stream structure or a modified structure. |
 
 ## Examples
 
@@ -568,7 +568,7 @@ async function demo() {
 deflateInit(strm: ZStream, level: CompressLevel): Promise<ReturnStatus>
 ```
 
-初始化压缩流并设置指定压缩级别。使用Promise异步回调。
+Initializes a compression stream with a specified compression level. This API uses a promise to return the result.
 
 **Since:** 12
 
@@ -584,21 +584,21 @@ deflateInit(strm: ZStream, level: CompressLevel): Promise<ReturnStatus>
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| strm | [ZStream](arkts-basicservices-zlib-zstream-i.md) | Yes | 参考[ZStream定义](arkts-basicservices-zlib-zstream-i.md)。 |
-| level | [CompressLevel](arkts-basicservices-zlib-compresslevel-e.md) | Yes | 参考[CompressLevel枚举定义](arkts-basicservices-zlib-compresslevel-e.md)。 |
+| strm | [ZStream](arkts-basicservices-zlib-zstream-i.md) | Yes | For details, see [ZStream&lt;sup&gt;12+&lt;/sup&gt;](arkts-basicservices-zlib-zstream-i.md). |
+| level | [CompressLevel](arkts-basicservices-zlib-compresslevel-e.md) | Yes | For details, see [CompressLevel](arkts-basicservices-zlib-compresslevel-e.md). |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;ReturnStatus&gt; | Promise对象。返回结果状态。 |
+| Promise&lt;ReturnStatus&gt; | Promise used to return the result status. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | The parameter check failed. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
-| 17800004 | Compression or decompression stream error, which may be caused by an initialization error in the zlib stream structure or a modified structure. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | The parameter check failed. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| [17800004](../../apis-basic-services-kit/errorcode-zlib.md#17800004-compressed-or-decompressed-flow-error) | Compression or decompression stream error, which may be caused by an initialization error in the zlib stream structure or a modified structure. |
 
 ## Examples
 
@@ -642,7 +642,7 @@ deflateInit2(strm: ZStream, level: CompressLevel, method: CompressMethod, window
         memLevel: MemLevel, strategy: CompressStrategy): Promise<ReturnStatus>
 ```
 
-初始化压缩流并设置压缩级别、压缩方法、窗口大小、内存级别和压缩策略。使用Promise异步回调。
+Initializes a compression stream with the specified compression level, compression method, window size, memory level, and compression strategy. This API uses a promise to return the result.
 
 **Since:** 12
 
@@ -658,25 +658,25 @@ deflateInit2(strm: ZStream, level: CompressLevel, method: CompressMethod, window
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| strm | [ZStream](arkts-basicservices-zlib-zstream-i.md) | Yes | 参考[ZStream定义](arkts-basicservices-zlib-zstream-i.md)。 |
-| level | [CompressLevel](arkts-basicservices-zlib-compresslevel-e.md) | Yes | 参考[CompressLevel枚举定义](arkts-basicservices-zlib-compresslevel-e.md)。 |
-| method | [CompressMethod](arkts-basicservices-zlib-compressmethod-e.md) | Yes | 参考[CompressMethod枚举定义](arkts-basicservices-zlib-compressmethod-e.md)。 |
-| windowBits | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | 控制内存窗口的大小，并指定数据的格式（zlib、gzip、raw deflate）。取值如下：&lt;br /&gt;zlib格式：[1, 15]。&lt;br /&gt;gzip格式：大于15 。&lt;br /&gt;raw deflate格式：[-15, -1]。 |
-| memLevel | [MemLevel](arkts-basicservices-zlib-memlevel-e.md) | Yes | 参考[MemLevel枚举定义](arkts-basicservices-zlib-memlevel-e.md)。 |
-| strategy | [CompressStrategy](arkts-basicservices-zlib-compressstrategy-e.md) | Yes | 参考[CompressStrategy枚举定义](arkts-basicservices-zlib-compressstrategy-e.md)。 |
+| strm | [ZStream](arkts-basicservices-zlib-zstream-i.md) | Yes | For details, see [ZStream&lt;sup&gt;12+&lt;/sup&gt;](arkts-basicservices-zlib-zstream-i.md). |
+| level | [CompressLevel](arkts-basicservices-zlib-compresslevel-e.md) | Yes | For details, see [CompressLevel](arkts-basicservices-zlib-compresslevel-e.md). |
+| method | [CompressMethod](arkts-basicservices-zlib-compressmethod-e.md) | Yes | For details, see [CompressMethod](arkts-basicservices-zlib-compressmethod-e.md). |
+| windowBits | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | Memory window size. The value is restricted in certain range based on the data formats. The options are as follows:&lt;br&gt;Zlib: [1, 15]&lt;br&gt;Gzip: (15, +∞)&lt;br&gt;Raw Deflate: [-15, -1] |
+| memLevel | [MemLevel](arkts-basicservices-zlib-memlevel-e.md) | Yes | For details, see [MemLevel](arkts-basicservices-zlib-memlevel-e.md). |
+| strategy | [CompressStrategy](arkts-basicservices-zlib-compressstrategy-e.md) | Yes | For details, see [CompressStrategy](arkts-basicservices-zlib-compressstrategy-e.md). |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;ReturnStatus&gt; | Promise对象。返回结果状态。 |
+| Promise&lt;ReturnStatus&gt; | Promise used to return the result status. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
-| 17800004 | Compression or decompression stream error, which may be caused by an initialization error in the zlib stream structure or a modified structure. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | The parameter check failed. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| [17800004](../../apis-basic-services-kit/errorcode-zlib.md#17800004-compressed-or-decompressed-flow-error) | Compression or decompression stream error, which may be caused by an initialization error in the zlib stream structure or a modified structure. |
 
 ## Examples
 
@@ -713,7 +713,7 @@ async function demo() {
 deflateParams(strm: ZStream, level: CompressLevel, strategy: CompressStrategy): Promise<ReturnStatus>
 ```
 
-动态更新压缩级别和压缩策略。使用Promise异步回调。
+Dynamically updates the compression level and compression strategy. This API uses a promise to return the result.
 
 **Since:** 12
 
@@ -729,22 +729,22 @@ deflateParams(strm: ZStream, level: CompressLevel, strategy: CompressStrategy): 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| strm | [ZStream](arkts-basicservices-zlib-zstream-i.md) | Yes | 参考[ZStream定义](arkts-basicservices-zlib-zstream-i.md)。 |
-| level | [CompressLevel](arkts-basicservices-zlib-compresslevel-e.md) | Yes | 参考[CompressLevel枚举定义](arkts-basicservices-zlib-compresslevel-e.md)。 |
-| strategy | [CompressStrategy](arkts-basicservices-zlib-compressstrategy-e.md) | Yes | 参考[CompressStrategy枚举定义](arkts-basicservices-zlib-compressstrategy-e.md)。 |
+| strm | [ZStream](arkts-basicservices-zlib-zstream-i.md) | Yes | For details, see [ZStream&lt;sup&gt;12+&lt;/sup&gt;](arkts-basicservices-zlib-zstream-i.md). |
+| level | [CompressLevel](arkts-basicservices-zlib-compresslevel-e.md) | Yes | For details, see [CompressLevel](arkts-basicservices-zlib-compresslevel-e.md). |
+| strategy | [CompressStrategy](arkts-basicservices-zlib-compressstrategy-e.md) | Yes | For details, see [CompressStrategy](arkts-basicservices-zlib-compressstrategy-e.md). |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;ReturnStatus&gt; | Promise对象。返回结果状态。 |
+| Promise&lt;ReturnStatus&gt; | Promise used to return the result status. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | The parameter check failed. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
-| 17800004 | Compression or decompression stream error, which may be caused by an initialization error in the zlib stream structure or a modified structure. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | The parameter check failed. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| [17800004](../../apis-basic-services-kit/errorcode-zlib.md#17800004-compressed-or-decompressed-flow-error) | Compression or decompression stream error, which may be caused by an initialization error in the zlib stream structure or a modified structure. |
 
 ## Examples
 
@@ -785,7 +785,7 @@ async function demo() {
 deflatePending(strm: ZStream): Promise<DeflatePendingOutputInfo>
 ```
 
-返回已生成但尚未在可用输出中提供的输出的字节数和位数。使用Promise异步回调。
+Returns the number of bytes and bits of output that has been generated but not yet provided in the available output. This API uses a promise to return the result.
 
 **Since:** 12
 
@@ -801,20 +801,20 @@ deflatePending(strm: ZStream): Promise<DeflatePendingOutputInfo>
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| strm | [ZStream](arkts-basicservices-zlib-zstream-i.md) | Yes | 参考[ZStream定义](arkts-basicservices-zlib-zstream-i.md)。 |
+| strm | [ZStream](arkts-basicservices-zlib-zstream-i.md) | Yes | For details, see [ZStream&lt;sup&gt;12+&lt;/sup&gt;](arkts-basicservices-zlib-zstream-i.md). |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;DeflatePendingOutputInfo&gt; | Promise对象。返回结果状态、输出位数和输出字节数。 |
+| Promise&lt;DeflatePendingOutputInfo&gt; | Promise used to return the result status, and number of bits and bytes for output. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | The parameter check failed. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
-| 17800004 | Compression or decompression stream error, which may be caused by an initialization error in the zlib stream structure or a modified structure. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | The parameter check failed. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| [17800004](../../apis-basic-services-kit/errorcode-zlib.md#17800004-compressed-or-decompressed-flow-error) | Compression or decompression stream error, which may be caused by an initialization error in the zlib stream structure or a modified structure. |
 
 ## Examples
 
@@ -861,7 +861,7 @@ ArkTS-Sta:
 deflatePrime(strm: ZStream, bits: int, value: int): Promise<ReturnStatus>
 ```
 
-在压缩流中插入位和值。使用Promise异步回调。
+Inserts bits and values into the compression stream. This API uses a promise to return the result.
 
 **Since:** 12
 
@@ -877,22 +877,22 @@ deflatePrime(strm: ZStream, bits: int, value: int): Promise<ReturnStatus>
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| strm | [ZStream](arkts-basicservices-zlib-zstream-i.md) | Yes | 参考[ZStream定义](arkts-basicservices-zlib-zstream-i.md)。 |
-| bits | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | 要插入的位数，取值范围在0~16。 |
-| value | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | 与位数相对应的位值。 |
+| strm | [ZStream](arkts-basicservices-zlib-zstream-i.md) | Yes | For details, see [ZStream&lt;sup&gt;12+&lt;/sup&gt;](arkts-basicservices-zlib-zstream-i.md). |
+| bits | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | Number of bits to be inserted. The value ranges from 0 to 16. |
+| value | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | Bit value corresponding to the number of bits. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;ReturnStatus&gt; | Promise对象。返回结果状态。 |
+| Promise&lt;ReturnStatus&gt; | Promise used to return the result status. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | The parameter check failed. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
-| 17800004 | Compression or decompression stream error, which may be caused by an initialization error in the zlib stream structure or a modified structure. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | The parameter check failed. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| [17800004](../../apis-basic-services-kit/errorcode-zlib.md#17800004-compressed-or-decompressed-flow-error) | Compression or decompression stream error, which may be caused by an initialization error in the zlib stream structure or a modified structure. |
 
 ## Examples
 
@@ -933,7 +933,7 @@ async function demo() {
 deflateReset(strm: ZStream): Promise<ReturnStatus>
 ```
 
-这个函数相当于先调用deflateEnd再调用deflateInit，但是并不会释放和重新分配内部解压缩状态。使用Promise异步回调。
+Equivalent to call the **deflateEnd** API and then the **deflateInit** API. However, this API does not release or reallocate the internal decompression state. This API uses a promise to return the result.
 
 **Since:** 12
 
@@ -949,20 +949,20 @@ deflateReset(strm: ZStream): Promise<ReturnStatus>
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| strm | [ZStream](arkts-basicservices-zlib-zstream-i.md) | Yes | 参考[ZStream定义](arkts-basicservices-zlib-zstream-i.md)。 |
+| strm | [ZStream](arkts-basicservices-zlib-zstream-i.md) | Yes | For details, see [ZStream&lt;sup&gt;12+&lt;/sup&gt;](arkts-basicservices-zlib-zstream-i.md). |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;ReturnStatus&gt; | Promise对象。返回结果状态。 |
+| Promise&lt;ReturnStatus&gt; | Promise used to return the result status. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | The parameter check failed. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
-| 17800004 | Compression or decompression stream error, which may be caused by an initialization error in the zlib stream structure or a modified structure. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | The parameter check failed. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| [17800004](../../apis-basic-services-kit/errorcode-zlib.md#17800004-compressed-or-decompressed-flow-error) | Compression or decompression stream error, which may be caused by an initialization error in the zlib stream structure or a modified structure. |
 
 ## Examples
 
@@ -1003,7 +1003,7 @@ async function demo() {
 deflateResetKeep(strm: ZStream): Promise<ReturnStatus>
 ```
 
-重置初始化的deflate压缩流，但保留其设置的压缩参数和字典。使用Promise异步回调。
+Resets the initialized compression stream, but retains the compression parameters and dictionaries set by it.This API uses a promise to return the result.
 
 **Since:** 12
 
@@ -1019,20 +1019,20 @@ deflateResetKeep(strm: ZStream): Promise<ReturnStatus>
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| strm | [ZStream](arkts-basicservices-zlib-zstream-i.md) | Yes | 参考[ZStream定义](arkts-basicservices-zlib-zstream-i.md)。 |
+| strm | [ZStream](arkts-basicservices-zlib-zstream-i.md) | Yes | For details, see [ZStream&lt;sup&gt;12+&lt;/sup&gt;](arkts-basicservices-zlib-zstream-i.md). |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;ReturnStatus&gt; | Promise对象。返回结果状态。 |
+| Promise&lt;ReturnStatus&gt; | Promise used to return the result status. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | The parameter check failed. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
-| 17800004 | Compression or decompression stream error, which may be caused by an initialization error in the zlib stream structure or a modified structure. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | The parameter check failed. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| [17800004](../../apis-basic-services-kit/errorcode-zlib.md#17800004-compressed-or-decompressed-flow-error) | Compression or decompression stream error, which may be caused by an initialization error in the zlib stream structure or a modified structure. |
 
 ## Examples
 
@@ -1073,7 +1073,7 @@ async function demo() {
 deflateSetDictionary(strm: ZStream, dictionary: ArrayBuffer): Promise<ReturnStatus>
 ```
 
-从给定的字节序列初始化压缩字典。使用Promise异步回调。
+Initializes the compression dictionary from a given sequence of bytes. This API uses a promise to return the result.
 
 **Since:** 12
 
@@ -1089,21 +1089,21 @@ deflateSetDictionary(strm: ZStream, dictionary: ArrayBuffer): Promise<ReturnStat
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| strm | [ZStream](arkts-basicservices-zlib-zstream-i.md) | Yes | 参考[ZStream定义](arkts-basicservices-zlib-zstream-i.md)。 |
-| dictionary | ArrayBuffer | Yes | 字典数据。 |
+| strm | [ZStream](arkts-basicservices-zlib-zstream-i.md) | Yes | For details, see [ZStream&lt;sup&gt;12+&lt;/sup&gt;](arkts-basicservices-zlib-zstream-i.md). |
+| dictionary | ArrayBuffer | Yes | Dictionary data. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;ReturnStatus&gt; | Promise对象。返回结果状态。 |
+| Promise&lt;ReturnStatus&gt; | Promise used to return the result status. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | The parameter check failed. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
-| 17800004 | Compression or decompression stream error, which may be caused by an initialization error in the zlib stream structure or a modified structure. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | The parameter check failed. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| [17800004](../../apis-basic-services-kit/errorcode-zlib.md#17800004-compressed-or-decompressed-flow-error) | Compression or decompression stream error, which may be caused by an initialization error in the zlib stream structure or a modified structure. |
 
 ## Examples
 
@@ -1144,7 +1144,7 @@ async function demo() {
 deflateSetHeader(strm: ZStream, head: GzHeader): Promise<ReturnStatus>
 ```
 
-当deflateInit2()请求gzip流时，提供gzip标头信息。使用Promise异步回调。
+Provides the header information of a gzip file when **deflateInit2()** requests a gzip stream. This API uses a promise to return the result.
 
 **Since:** 12
 
@@ -1160,21 +1160,21 @@ deflateSetHeader(strm: ZStream, head: GzHeader): Promise<ReturnStatus>
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| strm | [ZStream](arkts-basicservices-zlib-zstream-i.md) | Yes | 参考[ZStream定义](arkts-basicservices-zlib-zstream-i.md)。 |
-| head | [GzHeader](arkts-basicservices-zlib-gzheader-i.md) | Yes | 从压缩数据流中提取的gzip头信息。 |
+| strm | [ZStream](arkts-basicservices-zlib-zstream-i.md) | Yes | For details, see [ZStream&lt;sup&gt;12+&lt;/sup&gt;](arkts-basicservices-zlib-zstream-i.md). |
+| head | [GzHeader](arkts-basicservices-zlib-gzheader-i.md) | Yes | Header information of a gzip file extracted from the compressed data stream. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;ReturnStatus&gt; | Promise对象。返回结果状态。 |
+| Promise&lt;ReturnStatus&gt; | Promise used to return the result status. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | The parameter check failed. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
-| 17800004 | Compression or decompression stream error, which may be caused by an initialization error in the zlib stream structure or a modified structure. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | The parameter check failed. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| [17800004](../../apis-basic-services-kit/errorcode-zlib.md#17800004-compressed-or-decompressed-flow-error) | Compression or decompression stream error, which may be caused by an initialization error in the zlib stream structure or a modified structure. |
 
 ## Examples
 
@@ -1222,7 +1222,7 @@ ArkTS-Sta:
 deflateTune(strm: ZStream, goodLength: int, maxLazy: int, niceLength: int, maxChain: int): Promise<ReturnStatus>
 ```
 
-微调deflate的内部压缩参数。使用Promise异步回调。
+Fine-tunes the internal compression parameters of **deflate**. This API uses a promise to return the result.
 
 **Since:** 12
 
@@ -1238,24 +1238,24 @@ deflateTune(strm: ZStream, goodLength: int, maxLazy: int, niceLength: int, maxCh
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| strm | [ZStream](arkts-basicservices-zlib-zstream-i.md) | Yes | 参考[ZStream定义](arkts-basicservices-zlib-zstream-i.md)。 |
-| goodLength | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | 匹配的长度阈值。 |
-| maxLazy | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | 压缩算法在构建哈夫曼树时的延迟匹配策略，取值范围为0到4的整数。1到4，值越大，算法越‘懒’，匹配过程越慢，但可能生成更优的压缩结果。0：禁用懒惰匹配， 算法会尽快构建哈夫曼树，压缩速度快，但压缩率低。 |
-| niceLength | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | 适合的延迟长度阈值。 |
-| maxChain | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | 最大链条长度。 |
+| strm | [ZStream](arkts-basicservices-zlib-zstream-i.md) | Yes | For details, see [ZStream&lt;sup&gt;12+&lt;/sup&gt;](arkts-basicservices-zlib-zstream-i.md). |
+| goodLength | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | Matched length threshold. |
+| maxLazy | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | Delay matching strategy used when the compression algorithm builds a Huffman tree. The value is an integer ranging from 0 to 4. **1**–**4**: A larger value indicates a lazier algorithm, which performs a slower matching process but generates a better compression result. **0**: Lazy matching is disabled. The algorithm builds a Huffman tree as soon as possible. The compression speed is fast, but the compression ratio is low. |
+| niceLength | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | Appropriate delay length threshold. |
+| maxChain | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | Maximum chain length. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;ReturnStatus&gt; | Promise对象。返回结果状态。 |
+| Promise&lt;ReturnStatus&gt; | Promise used to return the result status. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | The parameter check failed. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
-| 17800004 | Compression or decompression stream error, which may be caused by an initialization error in the zlib stream structure or a modified structure. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | The parameter check failed. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| [17800004](../../apis-basic-services-kit/errorcode-zlib.md#17800004-compressed-or-decompressed-flow-error) | Compression or decompression stream error, which may be caused by an initialization error in the zlib stream structure or a modified structure. |
 
 ## Examples
 
@@ -1296,7 +1296,7 @@ async function demo() {
 getZStream(): Promise<ZStream>
 ```
 
-输出流。使用Promise异步回调。
+Obtains this stream. This API uses a promise to return the result.
 
 **Since:** 12
 
@@ -1312,7 +1312,7 @@ getZStream(): Promise<ZStream>
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;ZStream&gt; | Promise对象。返回ZStream流。 |
+| Promise&lt;ZStream&gt; | Promise used to return the **ZStream** object. |
 
 ## Examples
 
@@ -1332,7 +1332,7 @@ zip.getZStream().then(data => {
 getZStream(): Promise<ZStream | undefined>
 ```
 
-输出流，使用Promise异步返回。
+Get ZStream.
 
 **Since:** 23
 
@@ -1348,7 +1348,7 @@ getZStream(): Promise<ZStream | undefined>
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;ZStream \| undefined&gt; | Promise对象。返回ZStream流。 |
+| Promise&lt;ZStream \| undefined&gt; | Return the required ZStream for compression or decompression. |
 
 ## inflate
 
@@ -1356,7 +1356,7 @@ getZStream(): Promise<ZStream | undefined>
 inflate(strm: ZStream, flush: CompressFlushMode): Promise<ReturnStatus>
 ```
 
-解压数据。使用Promise异步回调。
+Inflates data. This API uses a promise to return the result.
 
 **Since:** 12
 
@@ -1372,22 +1372,22 @@ inflate(strm: ZStream, flush: CompressFlushMode): Promise<ReturnStatus>
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| strm | [ZStream](arkts-basicservices-zlib-zstream-i.md) | Yes | 参考[ZStream定义](arkts-basicservices-zlib-zstream-i.md)。 |
-| flush | [CompressFlushMode](arkts-basicservices-zlib-compressflushmode-e.md) | Yes | 参考[CompressFlushMode定义](arkts-basicservices-zlib-compressflushmode-e.md)。 |
+| strm | [ZStream](arkts-basicservices-zlib-zstream-i.md) | Yes | For details, see [ZStream&lt;sup&gt;12+&lt;/sup&gt;](arkts-basicservices-zlib-zstream-i.md). |
+| flush | [CompressFlushMode](arkts-basicservices-zlib-compressflushmode-e.md) | Yes | For details, see [CompressFlushMode](arkts-basicservices-zlib-compressflushmode-e.md). |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;ReturnStatus&gt; | Promise对象。返回结果状态。 |
+| Promise&lt;ReturnStatus&gt; | Promise used to return the result status. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | The parameter check failed. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
-| 17800005 | The input data is incorrect. For example, the data does not conform to the zlib compression format, the compressed data is corrupted, or the data is not compressed. |
-| 17800004 | Compression or decompression stream error, which may be caused by an initialization error in the zlib stream structure or a modified structure. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | The parameter check failed. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| [17800005](../../apis-basic-services-kit/errorcode-zlib.md#17800005-incorrect-input-data) | The input data is incorrect. For example, the data does not conform to the zlib compression format, the compressed data is corrupted, or the data is not compressed. |
+| [17800004](../../apis-basic-services-kit/errorcode-zlib.md#17800004-compressed-or-decompressed-flow-error) | Compression or decompression stream error, which may be caused by an initialization error in the zlib stream structure or a modified structure. |
 
 ## Examples
 
@@ -1449,7 +1449,7 @@ async function demo() {
 inflateBack(strm: ZStream, backIn: InflateBackInputCallback, inDesc: object, backOut: InflateBackOutputCallback, outDesc: object): Promise<ReturnStatus>
 ```
 
-实现原始解压缩，采用回调接口来处理输入和输出。使用Promise异步回调。
+Implements decompression and uses callbacks to process input and output data. This API uses a promise to return the result.
 
 **Since:** 12
 
@@ -1465,24 +1465,24 @@ inflateBack(strm: ZStream, backIn: InflateBackInputCallback, inDesc: object, bac
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| strm | [ZStream](arkts-basicservices-zlib-zstream-i.md) | Yes | 参考[ZStream定义](arkts-basicservices-zlib-zstream-i.md)。 |
-| backIn | [InflateBackInputCallback](arkts-basicservices-zlib-inflatebackinputcallback-t.md) | Yes | 一种函数，用于从末尾解压缩数据，以从输入源读取原始压缩数据。 |
-| inDesc | object | Yes | 通用对象。 |
-| backOut | [InflateBackOutputCallback](arkts-basicservices-zlib-inflatebackoutputcallback-t.md) | Yes | 将解压缩的数据写入目标输出。 |
-| outDesc | object | Yes | 通用对象。 |
+| strm | [ZStream](arkts-basicservices-zlib-zstream-i.md) | Yes | For details, see [ZStream&lt;sup&gt;12+&lt;/sup&gt;](arkts-basicservices-zlib-zstream-i.md). |
+| backIn | [InflateBackInputCallback](arkts-basicservices-zlib-inflatebackinputcallback-t.md) | Yes | A function used to decompress data from the end of the array to read the original compressed data from the input source. |
+| inDesc | object | Yes | Common object. |
+| backOut | [InflateBackOutputCallback](arkts-basicservices-zlib-inflatebackoutputcallback-t.md) | Yes | Writes the decompressed data to the destination buffer. |
+| outDesc | object | Yes | Common object. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;ReturnStatus&gt; | Promise对象。返回结果状态。 |
+| Promise&lt;ReturnStatus&gt; | Promise used to return the result status. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | The parameter check failed. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
-| 17800004 | Compression or decompression stream error, which may be caused by an initialization error in the zlib stream structure or a modified structure. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | The parameter check failed. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| [17800004](../../apis-basic-services-kit/errorcode-zlib.md#17800004-compressed-or-decompressed-flow-error) | Compression or decompression stream error, which may be caused by an initialization error in the zlib stream structure or a modified structure. |
 
 ## Examples
 
@@ -1627,7 +1627,7 @@ async function demo() {
 inflateBack(strm: ZStream, backIn: InflateBackInputCallback, inDesc: RecordData, backOut: InflateBackOutputCallback, outDesc: RecordData): Promise<ReturnStatus>
 ```
 
-实现原始解压缩，采用回调接口来处理输入和输出，使用Promise异步返回。成功时返回结果状态。
+Does a raw inflate with a single call using a call-back interface for input and output.
 
 **Since:** 23
 
@@ -1643,24 +1643,23 @@ inflateBack(strm: ZStream, backIn: InflateBackInputCallback, inDesc: RecordData,
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| strm | [ZStream](arkts-basicservices-zlib-zstream-i.md) | Yes | 参考[ZStream定义](arkts-basicservices-zlib-zstream-i.md)。 |
-| backIn | [InflateBackInputCallback](arkts-basicservices-zlib-inflatebackinputcallback-t.md) | Yes | 一种函数，用于从末尾解压缩数据，以从输入源读取原始压缩数据。 |
-| inDesc | [RecordData](arkts-basicservices-recorddata-t.md) | Yes | 通用对象。 |
-| backOut | [InflateBackOutputCallback](arkts-basicservices-zlib-inflatebackoutputcallback-t.md) | Yes | 将解压缩的数据写入目标输出。 |
-| outDesc | [RecordData](arkts-basicservices-recorddata-t.md) | Yes | 通用对象。 |
+| strm | [ZStream](arkts-basicservices-zlib-zstream-i.md) | Yes | Object to structure z_stream. |
+| backIn | [InflateBackInputCallback](arkts-basicservices-zlib-inflatebackinputcallback-t.md) | Yes | A function that decompresses data from the end to read the raw compressed data from the input source. |
+| inDesc | [RecordData](arkts-basicservices-recorddata-t.md) | Yes | Universal object. |
+| backOut | [InflateBackOutputCallback](arkts-basicservices-zlib-inflatebackoutputcallback-t.md) | Yes | Write the decompressed data to the target output. |
+| outDesc | [RecordData](arkts-basicservices-recorddata-t.md) | Yes | Universal object. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;ReturnStatus&gt; | Promise对象。返回结果状态。 |
+| Promise&lt;ReturnStatus&gt; | Return ReturnStatus the specific meaning is defined as enum. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | The parameter check failed. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
-| 17800004 | Compression or decompression stream error, which may be caused by an initialization error in the zlib stream structure or a modified structure. |
+| [17800004](../../apis-basic-services-kit/errorcode-zlib.md#17800004-compressed-or-decompressed-flow-error) | Compression or decompression stream error, which may be caused by an initialization error in the zlib stream structure or a modified structure. |
 
 ## inflateBackEnd
 
@@ -1668,7 +1667,7 @@ inflateBack(strm: ZStream, backIn: InflateBackInputCallback, inDesc: RecordData,
 inflateBackEnd(strm: ZStream): Promise<ReturnStatus>
 ```
 
-inflateBackInit()函数分配的所有内存都被释放。使用Promise异步回调。
+Releases all memory allocated by the **inflateBackInit()** function. This API uses a promise to return the result.
 
 **Since:** 12
 
@@ -1684,20 +1683,20 @@ inflateBackInit()函数分配的所有内存都被释放。使用Promise异步�
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| strm | [ZStream](arkts-basicservices-zlib-zstream-i.md) | Yes | 参考[ZStream定义](arkts-basicservices-zlib-zstream-i.md)。 |
+| strm | [ZStream](arkts-basicservices-zlib-zstream-i.md) | Yes | For details, see [ZStream&lt;sup&gt;12+&lt;/sup&gt;](arkts-basicservices-zlib-zstream-i.md). |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;ReturnStatus&gt; | Promise对象。返回结果状态。 |
+| Promise&lt;ReturnStatus&gt; | Promise used to return the result status. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | The parameter check failed. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
-| 17800004 | Compression or decompression stream error, which may be caused by an initialization error in the zlib stream structure or a modified structure. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | The parameter check failed. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| [17800004](../../apis-basic-services-kit/errorcode-zlib.md#17800004-compressed-or-decompressed-flow-error) | Compression or decompression stream error, which may be caused by an initialization error in the zlib stream structure or a modified structure. |
 
 ## Examples
 
@@ -1715,7 +1714,7 @@ ArkTS-Sta:
 inflateBackInit(strm: ZStream, windowBits: long, window: ArrayBuffer): Promise<ReturnStatus>
 ```
 
-使用inflateBack()函数前初始化内部流状态以进行解压缩。使用Promise异步回调。
+Initializes the internal stream state for decompression before using the **inflateBack()** function. This API uses a promise to return the result.
 
 **Since:** 12
 
@@ -1731,22 +1730,22 @@ inflateBackInit(strm: ZStream, windowBits: long, window: ArrayBuffer): Promise<R
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| strm | [ZStream](arkts-basicservices-zlib-zstream-i.md) | Yes | 参考[ZStream定义](arkts-basicservices-zlib-zstream-i.md)。 |
-| windowBits | ArkTS-Dyn: number  <br>ArkTS-Sta：long | Yes | 控制内存窗口的大小，并指定数据的格式（zlib、gzip、raw deflate）。取值如下：&lt;br /&gt;zlib格式：[1, 15]。&lt;br /&gt;gzip格式：大于1 5。&lt;br /&gt;raw deflate格式：[-15, -1]。 |
-| window | ArrayBuffer | Yes | 预设的窗口缓冲区。 |
+| strm | [ZStream](arkts-basicservices-zlib-zstream-i.md) | Yes | For details, see [ZStream&lt;sup&gt;12+&lt;/sup&gt;](arkts-basicservices-zlib-zstream-i.md). |
+| windowBits | ArkTS-Dyn: number  <br>ArkTS-Sta：long | Yes | Memory window size. The value is restricted in certain range based on the data formats. The options are as follows:&lt;br&gt;Zlib: [1, 15]&lt;br&gt;Gzip: (15, +∞)&lt;br&gt;Raw Deflate: [-15, -1] |
+| window | ArrayBuffer | Yes | Preset window buffer. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;ReturnStatus&gt; | Promise对象。返回结果状态。 |
+| Promise&lt;ReturnStatus&gt; | Promise used to return the result status. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | The parameter check failed. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
-| 17800004 | Compression or decompression stream error, which may be caused by an initialization error in the zlib stream structure or a modified structure. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | The parameter check failed. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| [17800004](../../apis-basic-services-kit/errorcode-zlib.md#17800004-compressed-or-decompressed-flow-error) | Compression or decompression stream error, which may be caused by an initialization error in the zlib stream structure or a modified structure. |
 
 ## Examples
 
@@ -1764,7 +1763,7 @@ ArkTS-Sta:
 inflateCodesUsed(strm: ZStream): Promise<long>
 ```
 
-当前解压缩流中使用的霍夫曼编码树的数量。使用Promise异步回调。
+Describes the number of Huffman trees used in a decompression stream. This API uses a promise to return the result.
 
 **Since:** 12
 
@@ -1780,19 +1779,19 @@ inflateCodesUsed(strm: ZStream): Promise<long>
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| strm | [ZStream](arkts-basicservices-zlib-zstream-i.md) | Yes | 参考[ZStream定义](arkts-basicservices-zlib-zstream-i.md)。 |
+| strm | [ZStream](arkts-basicservices-zlib-zstream-i.md) | Yes | For details, see [ZStream&lt;sup&gt;12+&lt;/sup&gt;](arkts-basicservices-zlib-zstream-i.md). |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| ArkTS-Dyn: Promise&lt;number&gt;  <br>ArkTS-Sta：Promise&lt;long&gt; | Promise对象。返回已使用的霍夫曼编码树的数量。 |
+| ArkTS-Dyn: Promise&lt;number&gt;  <br>ArkTS-Sta：Promise&lt;long&gt; | Promise used to return the number of Huffman trees that have been used. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | The parameter check failed. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | The parameter check failed. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
 
 ## Examples
 
@@ -1828,7 +1827,7 @@ async function demo() {
 inflateCopy(source: Zip): Promise<ReturnStatus>
 ```
 
-复制解压流。使用Promise异步回调。
+Copies a decompression stream. This API uses a promise to return the result.
 
 **Since:** 12
 
@@ -1844,20 +1843,20 @@ inflateCopy(source: Zip): Promise<ReturnStatus>
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| source | [Zip](arkts-basicservices-zlib-zip-i.md) | Yes | 参考[Zip定义](arkts-basicservices-zlib-zip-i.md)。 |
+| source | [Zip](arkts-basicservices-zlib-zip-i.md) | Yes | For details, see [Zip&lt;sup&gt;12+&lt;/sup&gt;](arkts-basicservices-zlib-zip-i.md). |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;ReturnStatus&gt; | Promise对象。返回结果状态。 |
+| Promise&lt;ReturnStatus&gt; | Promise used to return the result status. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | The parameter check failed. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
-| 17800004 | Compression or decompression stream error, which may be caused by an initialization error in the zlib stream structure or a modified structure. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | The parameter check failed. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| [17800004](../../apis-basic-services-kit/errorcode-zlib.md#17800004-compressed-or-decompressed-flow-error) | Compression or decompression stream error, which may be caused by an initialization error in the zlib stream structure or a modified structure. |
 
 ## Examples
 
@@ -1894,7 +1893,7 @@ async function demo() {
 inflateEnd(strm: ZStream): Promise<ReturnStatus>
 ```
 
-解压流的所有动态分配的数据结构都被释放。使用Promise异步回调。
+Releases all dynamically allocated data structs of a decompression stream. This API uses a promise to return the result.
 
 **Since:** 12
 
@@ -1910,20 +1909,20 @@ inflateEnd(strm: ZStream): Promise<ReturnStatus>
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| strm | [ZStream](arkts-basicservices-zlib-zstream-i.md) | Yes | 参考[ZStream定义](arkts-basicservices-zlib-zstream-i.md)。 |
+| strm | [ZStream](arkts-basicservices-zlib-zstream-i.md) | Yes | For details, see [ZStream&lt;sup&gt;12+&lt;/sup&gt;](arkts-basicservices-zlib-zstream-i.md). |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;ReturnStatus&gt; | Promise对象。返回结果状态。 |
+| Promise&lt;ReturnStatus&gt; | Promise used to return the result status. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | The parameter check failed. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
-| 17800004 | Compression or decompression stream error, which may be caused by an initialization error in the zlib stream structure or a modified structure. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | The parameter check failed. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| [17800004](../../apis-basic-services-kit/errorcode-zlib.md#17800004-compressed-or-decompressed-flow-error) | Compression or decompression stream error, which may be caused by an initialization error in the zlib stream structure or a modified structure. |
 
 ## Examples
 
@@ -1964,7 +1963,7 @@ async function demo() {
 inflateGetDictionary(strm: ZStream, dictionary: ArrayBuffer): Promise<DictionaryOutputInfo>
 ```
 
-获取当前解压缩流中使用的解压缩字典内容及其长度。使用Promise异步回调。
+Obtains the content and length of the decompression dictionary used in a decompression stream. This API uses a promise to return the result.
 
 **Since:** 12
 
@@ -1980,21 +1979,21 @@ inflateGetDictionary(strm: ZStream, dictionary: ArrayBuffer): Promise<Dictionary
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| strm | [ZStream](arkts-basicservices-zlib-zstream-i.md) | Yes | 参考[ZStream定义](arkts-basicservices-zlib-zstream-i.md)。 |
-| dictionary | ArrayBuffer | Yes | 接收解压缩字典的实际内容。 |
+| strm | [ZStream](arkts-basicservices-zlib-zstream-i.md) | Yes | For details, see [ZStream&lt;sup&gt;12+&lt;/sup&gt;](arkts-basicservices-zlib-zstream-i.md). |
+| dictionary | ArrayBuffer | Yes | Receives the actual contents of the decompression dictionary. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;DictionaryOutputInfo&gt; | Promise对象。返回结果状态和字典的长度。 |
+| Promise&lt;DictionaryOutputInfo&gt; | Promise used to return the result status and length of the dictionary. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | The parameter check failed. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
-| 17800004 | Compression or decompression stream error, which may be caused by an initialization error in the zlib stream structure or a modified structure. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | The parameter check failed. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| [17800004](../../apis-basic-services-kit/errorcode-zlib.md#17800004-compressed-or-decompressed-flow-error) | Compression or decompression stream error, which may be caused by an initialization error in the zlib stream structure or a modified structure. |
 
 ## Examples
 
@@ -2030,7 +2029,7 @@ async function demo() {
 inflateGetHeader(strm: ZStream, header: GzHeader): Promise<ReturnStatus>
 ```
 
-用于在解压缩数据前设置gzip文件头部信息。使用Promise异步回调。
+Obtains the header information of a gzip file before decompressing data. This API uses a promise to return the result.
 
 **Since:** 12
 
@@ -2046,21 +2045,21 @@ inflateGetHeader(strm: ZStream, header: GzHeader): Promise<ReturnStatus>
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| strm | [ZStream](arkts-basicservices-zlib-zstream-i.md) | Yes | 参考[ZStream定义](arkts-basicservices-zlib-zstream-i.md)。 |
-| header | [GzHeader](arkts-basicservices-zlib-gzheader-i.md) | Yes | 从压缩数据流中提取的gzip头信息。 |
+| strm | [ZStream](arkts-basicservices-zlib-zstream-i.md) | Yes | For details, see [ZStream&lt;sup&gt;12+&lt;/sup&gt;](arkts-basicservices-zlib-zstream-i.md). |
+| header | [GzHeader](arkts-basicservices-zlib-gzheader-i.md) | Yes | Header information of a gzip file extracted from the compressed data stream. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;ReturnStatus&gt; | Promise对象。返回结果状态。 |
+| Promise&lt;ReturnStatus&gt; | Promise used to return the result status. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | The parameter check failed. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
-| 17800004 | Compression or decompression stream error, which may be caused by an initialization error in the zlib stream structure or a modified structure. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | The parameter check failed. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| [17800004](../../apis-basic-services-kit/errorcode-zlib.md#17800004-compressed-or-decompressed-flow-error) | Compression or decompression stream error, which may be caused by an initialization error in the zlib stream structure or a modified structure. |
 
 ## Examples
 
@@ -2096,7 +2095,7 @@ async function demo() {
 inflateInit(strm: ZStream): Promise<ReturnStatus>
 ```
 
-初始化解压缩流。使用Promise异步回调。
+Initializes a decompression stream. This API uses a promise to return the result.
 
 **Since:** 12
 
@@ -2112,19 +2111,19 @@ inflateInit(strm: ZStream): Promise<ReturnStatus>
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| strm | [ZStream](arkts-basicservices-zlib-zstream-i.md) | Yes | 参考[ZStream定义](arkts-basicservices-zlib-zstream-i.md)。 |
+| strm | [ZStream](arkts-basicservices-zlib-zstream-i.md) | Yes | For details, see [ZStream&lt;sup&gt;12+&lt;/sup&gt;](arkts-basicservices-zlib-zstream-i.md). |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;ReturnStatus&gt; | Promise对象。返回结果状态。 |
+| Promise&lt;ReturnStatus&gt; | Promise used to return the result status. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | The parameter check failed. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | The parameter check failed. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
 
 ## Examples
 
@@ -2162,7 +2161,7 @@ ArkTS-Sta:
 inflateInit2(strm: ZStream, windowBits: int): Promise<ReturnStatus>
 ```
 
-初始化解压缩流并设置指定的 windowBits 参数。使用Promise异步回调。
+Initializes a decompression stream with the specified **windowBits**. This API uses a promise to return the result.
 
 **Since:** 12
 
@@ -2178,21 +2177,21 @@ inflateInit2(strm: ZStream, windowBits: int): Promise<ReturnStatus>
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| strm | [ZStream](arkts-basicservices-zlib-zstream-i.md) | Yes | 参考[ZStream定义](arkts-basicservices-zlib-zstream-i.md)。 |
-| windowBits | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | 控制内存窗口的大小，并指定数据的格式（zlib、gzip、raw deflate）。取值如下：&lt;br /&gt;zlib格式：[1, 15]。&lt;br /&gt;gzip格式：大于15 。&lt;br /&gt;raw deflate格式：[-15, -1]。 |
+| strm | [ZStream](arkts-basicservices-zlib-zstream-i.md) | Yes | For details, see [ZStream&lt;sup&gt;12+&lt;/sup&gt;](arkts-basicservices-zlib-zstream-i.md). |
+| windowBits | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | Memory window size. The value is restricted in certain range based on the data formats. The options are as follows:&lt;br&gt;Zlib: [1, 15]&lt;br&gt;Gzip: (15, +∞)&lt;br&gt;Raw Deflate: [-15, -1] |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;ReturnStatus&gt; | Promise对象。返回结果状态。 |
+| Promise&lt;ReturnStatus&gt; | Promise used to return the result status. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | The parameter check failed. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
-| 17800004 | Compression or decompression stream error, which may be caused by an initialization error in the zlib stream structure or a modified structure. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | The parameter check failed. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| [17800004](../../apis-basic-services-kit/errorcode-zlib.md#17800004-compressed-or-decompressed-flow-error) | Compression or decompression stream error, which may be caused by an initialization error in the zlib stream structure or a modified structure. |
 
 ## Examples
 
@@ -2230,7 +2229,7 @@ ArkTS-Sta:
 inflateMark(strm: ZStream): Promise<int>
 ```
 
-用于标记输入数据中的位置以供随机访问。使用Promise异步回调。
+Marks the location of the input data for random access. This API uses a promise to return the result.
 
 **Since:** 12
 
@@ -2246,19 +2245,19 @@ inflateMark(strm: ZStream): Promise<int>
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| strm | [ZStream](arkts-basicservices-zlib-zstream-i.md) | Yes | 参考[ZStream定义](arkts-basicservices-zlib-zstream-i.md)。 |
+| strm | [ZStream](arkts-basicservices-zlib-zstream-i.md) | Yes | For details, see [ZStream&lt;sup&gt;12+&lt;/sup&gt;](arkts-basicservices-zlib-zstream-i.md). |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| ArkTS-Dyn: Promise&lt;number&gt;  <br>ArkTS-Sta：Promise&lt;int&gt; | Promise对象。返回位置信息。 |
+| ArkTS-Dyn: Promise&lt;number&gt;  <br>ArkTS-Sta：Promise&lt;int&gt; | Promise used to return the current location. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | The parameter check failed. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | The parameter check failed. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
 
 ## Examples
 
@@ -2300,7 +2299,7 @@ ArkTS-Sta:
 inflatePrime(strm: ZStream, bits: int, value: int): Promise<ReturnStatus>
 ```
 
-在指定解压缩流中设置初始比特数和比特值，用于在解压流开始时预填充比特缓冲区，以正确处理流起始位置的数据。使用Promise异步回调。
+Sets the initial number of bits and bit value in the specified decompression stream to pre-fill the bit buffer at the beginning of the decompression stream to correctly process the data. This API uses a promise to return the result.
 
 **Since:** 12
 
@@ -2316,22 +2315,22 @@ inflatePrime(strm: ZStream, bits: int, value: int): Promise<ReturnStatus>
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| strm | [ZStream](arkts-basicservices-zlib-zstream-i.md) | Yes | 参考[ZStream定义](arkts-basicservices-zlib-zstream-i.md)。 |
-| bits | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | 指定要写入比特缓冲区的比特数。 |
-| value | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | 用于填充比特缓冲区的比特值。 |
+| strm | [ZStream](arkts-basicservices-zlib-zstream-i.md) | Yes | For details, see [ZStream&lt;sup&gt;12+&lt;/sup&gt;](arkts-basicservices-zlib-zstream-i.md). |
+| bits | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | Number of bits to be written to the bit buffer. |
+| value | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | Bit value used to fill the bit buffer. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;ReturnStatus&gt; | Promise对象。返回结果状态。 |
+| Promise&lt;ReturnStatus&gt; | Promise used to return the result status. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | The parameter check failed. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
-| 17800004 | Compression or decompression stream error, which may be caused by an initialization error in the zlib stream structure or a modified structure. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | The parameter check failed. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| [17800004](../../apis-basic-services-kit/errorcode-zlib.md#17800004-compressed-or-decompressed-flow-error) | Compression or decompression stream error, which may be caused by an initialization error in the zlib stream structure or a modified structure. |
 
 ## Examples
 
@@ -2367,7 +2366,7 @@ async function demo() {
 inflateReset(strm: ZStream): Promise<ReturnStatus>
 ```
 
-重置指定解压缩流的状态，使其恢复到初始化状态以重新开始新的解压操作。不会释放或重新分配内部缓冲区。使用Promise异步回调。
+Resets the status of the specified decompression stream to the initial state to start a new decompression operation. The internal buffer is not released or reallocated. This API uses a promise to return the result.
 
 **Since:** 12
 
@@ -2383,20 +2382,20 @@ inflateReset(strm: ZStream): Promise<ReturnStatus>
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| strm | [ZStream](arkts-basicservices-zlib-zstream-i.md) | Yes | 参考[ZStream定义](arkts-basicservices-zlib-zstream-i.md)。 |
+| strm | [ZStream](arkts-basicservices-zlib-zstream-i.md) | Yes | For details, see [ZStream&lt;sup&gt;12+&lt;/sup&gt;](arkts-basicservices-zlib-zstream-i.md). |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;ReturnStatus&gt; | Promise对象。返回结果状态。 |
+| Promise&lt;ReturnStatus&gt; | Promise used to return the result status. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | The parameter check failed. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
-| 17800004 | Compression or decompression stream error, which may be caused by an initialization error in the zlib stream structure or a modified structure. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | The parameter check failed. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| [17800004](../../apis-basic-services-kit/errorcode-zlib.md#17800004-compressed-or-decompressed-flow-error) | Compression or decompression stream error, which may be caused by an initialization error in the zlib stream structure or a modified structure. |
 
 ## Examples
 
@@ -2438,7 +2437,7 @@ ArkTS-Sta:
 inflateReset2(strm: ZStream, windowBits: int): Promise<ReturnStatus>
 ```
 
-重置指定解压缩流的状态并更新窗口大小配置，以重新开始新的解压操作。不会释放或重新分配内部缓冲区。使用Promise异步回调。
+Resets the status of the specified decompression stream and updates the window size to start a new decompression operation. The internal buffer is not released or reallocated. This API uses a promise to return the result.
 
 **Since:** 12
 
@@ -2454,21 +2453,21 @@ inflateReset2(strm: ZStream, windowBits: int): Promise<ReturnStatus>
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| strm | [ZStream](arkts-basicservices-zlib-zstream-i.md) | Yes | 参考[ZStream定义](arkts-basicservices-zlib-zstream-i.md)。 |
-| windowBits | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | 控制内存窗口的大小，并指定数据的格式（zlib、gzip、raw deflate）。取值如下：&lt;br /&gt;zlib格式：[1, 15]。&lt;br /&gt;gzip格式：大于15 。&lt;br /&gt;raw deflate格式：[-15, -1]。 |
+| strm | [ZStream](arkts-basicservices-zlib-zstream-i.md) | Yes | For details, see [ZStream&lt;sup&gt;12+&lt;/sup&gt;](arkts-basicservices-zlib-zstream-i.md). |
+| windowBits | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | Memory window size. The value is restricted in certain range based on the data formats. The options are as follows:&lt;br&gt;Zlib: [1, 15]&lt;br&gt;Gzip: (15, +∞)&lt;br&gt;Raw Deflate: [-15, -1] |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;ReturnStatus&gt; | Promise对象。返回结果状态。 |
+| Promise&lt;ReturnStatus&gt; | Promise used to return the result status. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | The parameter check failed. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
-| 17800004 | Compression or decompression stream error, which may be caused by an initialization error in the zlib stream structure or a modified structure. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | The parameter check failed. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| [17800004](../../apis-basic-services-kit/errorcode-zlib.md#17800004-compressed-or-decompressed-flow-error) | Compression or decompression stream error, which may be caused by an initialization error in the zlib stream structure or a modified structure. |
 
 ## Examples
 
@@ -2504,7 +2503,7 @@ async function demo() {
 inflateResetKeep(strm: ZStream): Promise<ReturnStatus>
 ```
 
-重置解压缩流的状态，以保留分配的霍夫曼解码树和预设字典。使用Promise异步回调。
+Resets the state of the decompression stream to retain the allocated Huffman tree and preset dictionary. This API uses a promise to return the result.
 
 **Since:** 12
 
@@ -2520,20 +2519,20 @@ inflateResetKeep(strm: ZStream): Promise<ReturnStatus>
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| strm | [ZStream](arkts-basicservices-zlib-zstream-i.md) | Yes | 参考[ZStream定义](arkts-basicservices-zlib-zstream-i.md)。 |
+| strm | [ZStream](arkts-basicservices-zlib-zstream-i.md) | Yes | For details, see [ZStream&lt;sup&gt;12+&lt;/sup&gt;](arkts-basicservices-zlib-zstream-i.md). |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;ReturnStatus&gt; | Promise对象。返回结果状态。 |
+| Promise&lt;ReturnStatus&gt; | Promise used to return the result status. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | The parameter check failed. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
-| 17800004 | Compression or decompression stream error, which may be caused by an initialization error in the zlib stream structure or a modified structure. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | The parameter check failed. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| [17800004](../../apis-basic-services-kit/errorcode-zlib.md#17800004-compressed-or-decompressed-flow-error) | Compression or decompression stream error, which may be caused by an initialization error in the zlib stream structure or a modified structure. |
 
 ## Examples
 
@@ -2569,7 +2568,7 @@ async function demo() {
 inflateSetDictionary(strm: ZStream, dictionary: ArrayBuffer): Promise<ReturnStatus>
 ```
 
-使用给定的字典数据初始化当前解压缩流的字典内容。使用Promise异步回调。
+Initializes the dictionary content of a decompression stream based on the given dictionary data. This API uses a promise to return the result.
 
 **Since:** 12
 
@@ -2585,22 +2584,22 @@ inflateSetDictionary(strm: ZStream, dictionary: ArrayBuffer): Promise<ReturnStat
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| strm | [ZStream](arkts-basicservices-zlib-zstream-i.md) | Yes | 参考[ZStream定义](arkts-basicservices-zlib-zstream-i.md)。 |
-| dictionary | ArrayBuffer | Yes | 字典数据。 |
+| strm | [ZStream](arkts-basicservices-zlib-zstream-i.md) | Yes | For details, see [ZStream&lt;sup&gt;12+&lt;/sup&gt;](arkts-basicservices-zlib-zstream-i.md). |
+| dictionary | ArrayBuffer | Yes | Dictionary data. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;ReturnStatus&gt; | Promise对象。返回结果状态。 |
+| Promise&lt;ReturnStatus&gt; | Promise used to return the result status. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | The parameter check failed. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
-| 17800005 | The input data is incorrect. For example, the data does not conform to the zlib compression format, the compressed data is corrupted, or the data is not compressed. |
-| 17800004 | Compression or decompression stream error, which may be caused by an initialization error in the zlib stream structure or a modified structure. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | The parameter check failed. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| [17800005](../../apis-basic-services-kit/errorcode-zlib.md#17800005-incorrect-input-data) | The input data is incorrect. For example, the data does not conform to the zlib compression format, the compressed data is corrupted, or the data is not compressed. |
+| [17800004](../../apis-basic-services-kit/errorcode-zlib.md#17800004-compressed-or-decompressed-flow-error) | Compression or decompression stream error, which may be caused by an initialization error in the zlib stream structure or a modified structure. |
 
 ## Examples
 
@@ -2673,7 +2672,7 @@ async function demo() {
 inflateSync(strm: ZStream): Promise<ReturnStatus>
 ```
 
-跳过无效的压缩数据，直到找到一个可能的完整刷新点为止。使用Promise异步回调。
+Skips invalid compressed data until a possible complete refresh point is found. This API uses a promise to return the result.
 
 **Since:** 12
 
@@ -2689,22 +2688,22 @@ inflateSync(strm: ZStream): Promise<ReturnStatus>
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| strm | [ZStream](arkts-basicservices-zlib-zstream-i.md) | Yes | 参考[ZStream定义](arkts-basicservices-zlib-zstream-i.md)。 |
+| strm | [ZStream](arkts-basicservices-zlib-zstream-i.md) | Yes | For details, see [ZStream&lt;sup&gt;12+&lt;/sup&gt;](arkts-basicservices-zlib-zstream-i.md). |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;ReturnStatus&gt; | Promise对象。返回结果状态。 |
+| Promise&lt;ReturnStatus&gt; | Promise used to return the result status. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | The parameter check failed. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
-| 17800007 | The input buffer is incorrect, and the output buffer is too small to accommodate the compressed or decompressed data. |
-| 17800005 | The input data is incorrect. For example, the data does not conform to the zlib compression format, the compressed data is corrupted, or the data is not compressed. |
-| 17800004 | Compression or decompression stream error, which may be caused by an initialization error in the zlib stream structure or a modified structure. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | The parameter check failed. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| [17800007](../../apis-basic-services-kit/errorcode-zlib.md#17800007-incorrect-input-buffer) | The input buffer is incorrect, and the output buffer is too small to accommodate the compressed or decompressed data. |
+| [17800005](../../apis-basic-services-kit/errorcode-zlib.md#17800005-incorrect-input-data) | The input data is incorrect. For example, the data does not conform to the zlib compression format, the compressed data is corrupted, or the data is not compressed. |
+| [17800004](../../apis-basic-services-kit/errorcode-zlib.md#17800004-compressed-or-decompressed-flow-error) | Compression or decompression stream error, which may be caused by an initialization error in the zlib stream structure or a modified structure. |
 
 ## Examples
 
@@ -2771,7 +2770,7 @@ async function demo() {
 inflateSyncPoint(strm: ZStream): Promise<ReturnStatus>
 ```
 
-查找当前解压缩流的同步点。使用Promise异步回调。
+Finds the synchronization point of a decompression stream. This API uses a promise to return the result.
 
 **Since:** 12
 
@@ -2787,20 +2786,20 @@ inflateSyncPoint(strm: ZStream): Promise<ReturnStatus>
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| strm | [ZStream](arkts-basicservices-zlib-zstream-i.md) | Yes | 参考[ZStream定义](arkts-basicservices-zlib-zstream-i.md)。 |
+| strm | [ZStream](arkts-basicservices-zlib-zstream-i.md) | Yes | For details, see [ZStream&lt;sup&gt;12+&lt;/sup&gt;](arkts-basicservices-zlib-zstream-i.md). |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;ReturnStatus&gt; | Promise对象。返回结果状态。 |
+| Promise&lt;ReturnStatus&gt; | Promise used to return the result status. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | The parameter check failed. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
-| 17800004 | Compression or decompression stream error, which may be caused by an initialization error in the zlib stream structure or a modified structure. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | The parameter check failed. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| [17800004](../../apis-basic-services-kit/errorcode-zlib.md#17800004-compressed-or-decompressed-flow-error) | Compression or decompression stream error, which may be caused by an initialization error in the zlib stream structure or a modified structure. |
 
 ## Examples
 
@@ -2842,7 +2841,7 @@ ArkTS-Sta:
 inflateValidate(strm: ZStream, check: int): Promise<ReturnStatus>
 ```
 
-验证压缩流结构内部的校验和。使用Promise异步回调。
+Validates the checksum inside the compression stream. This API uses a promise to return the result.
 
 **Since:** 12
 
@@ -2858,21 +2857,21 @@ inflateValidate(strm: ZStream, check: int): Promise<ReturnStatus>
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| strm | [ZStream](arkts-basicservices-zlib-zstream-i.md) | Yes | 参考[ZStream定义](arkts-basicservices-zlib-zstream-i.md)。 |
-| check | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | 预期的校验和。 |
+| strm | [ZStream](arkts-basicservices-zlib-zstream-i.md) | Yes | For details, see [ZStream&lt;sup&gt;12+&lt;/sup&gt;](arkts-basicservices-zlib-zstream-i.md). |
+| check | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | Expected checksum. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;ReturnStatus&gt; | Promise对象。返回结果状态。 |
+| Promise&lt;ReturnStatus&gt; | Promise used to return the result status. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | The parameter check failed. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
-| 17800004 | Compression or decompression stream error, which may be caused by an initialization error in the zlib stream structure or a modified structure. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | The parameter check failed. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| [17800004](../../apis-basic-services-kit/errorcode-zlib.md#17800004-compressed-or-decompressed-flow-error) | Compression or decompression stream error, which may be caused by an initialization error in the zlib stream structure or a modified structure. |
 
 ## Examples
 
@@ -2914,7 +2913,7 @@ ArkTS-Sta:
 uncompress(dest:ArrayBuffer, source: ArrayBuffer, sourceLen?: long): Promise<ZipOutputInfo>
 ```
 
-将压缩后的数据解压缩为原始的未压缩形式。使用Promise异步回调。
+Decompresses the compressed data into the raw data. This API uses a promise to return the result.
 
 **Since:** 12
 
@@ -2930,23 +2929,23 @@ uncompress(dest:ArrayBuffer, source: ArrayBuffer, sourceLen?: long): Promise<Zip
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| dest | ArrayBuffer | Yes | 目标缓冲区。 |
-| source | ArrayBuffer | Yes | 源数据缓冲区。 |
-| sourceLen | ArkTS-Dyn: number  <br>ArkTS-Sta：long | No | 源数据长度。默认值为0。 |
+| dest | ArrayBuffer | Yes | Destination buffer. |
+| source | ArrayBuffer | Yes | Source buffer. |
+| sourceLen | ArkTS-Dyn: number  <br>ArkTS-Sta：long | No | Length of the source data. The default value is **0**. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;ZipOutputInfo&gt; | Promise对象。返回结果状态和目标缓冲区的总大小。 |
+| Promise&lt;ZipOutputInfo&gt; | Promise used to return the result status and the total size of the destination buffer. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | The parameter check failed. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
-| 17800007 | The input buffer is incorrect, and the output buffer is too small to accommodate the compressed or decompressed data. |
-| 17800005 | The input data is incorrect. For example, the data does not conform to the zlib compression format, the compressed data is corrupted, or the data is not compressed. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | The parameter check failed. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| [17800007](../../apis-basic-services-kit/errorcode-zlib.md#17800007-incorrect-input-buffer) | The input buffer is incorrect, and the output buffer is too small to accommodate the compressed or decompressed data. |
+| [17800005](../../apis-basic-services-kit/errorcode-zlib.md#17800005-incorrect-input-data) | The input data is incorrect. For example, the data does not conform to the zlib compression format, the compressed data is corrupted, or the data is not compressed. |
 
 ## Examples
 
@@ -2987,7 +2986,7 @@ ArkTS-Sta:
 uncompress2(dest: ArrayBuffer, source: ArrayBuffer, sourceLen?: long): Promise<DecompressionOutputInfo>
 ```
 
-将压缩后的数据解压缩为原始的未压缩形式。使用Promise异步回调。
+Decompresses the compressed data into the raw data. This API uses a promise to return the result.
 
 **Since:** 12
 
@@ -3003,23 +3002,23 @@ uncompress2(dest: ArrayBuffer, source: ArrayBuffer, sourceLen?: long): Promise<D
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| dest | ArrayBuffer | Yes | 目标缓冲区。 |
-| source | ArrayBuffer | Yes | 源数据缓冲区。 |
-| sourceLen | ArkTS-Dyn: number  <br>ArkTS-Sta：long | No | 源数据长度。默认值为0。 |
+| dest | ArrayBuffer | Yes | Destination buffer. |
+| source | ArrayBuffer | Yes | Source buffer. |
+| sourceLen | ArkTS-Dyn: number  <br>ArkTS-Sta：long | No | Length of the source data. The default value is **0**. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;DecompressionOutputInfo&gt; | Promise对象。返回结果状态、目标缓冲区的总大小和源数据长度。 |
+| Promise&lt;DecompressionOutputInfo&gt; | Promise used to return the result status, total size of the destination buffer, and the length of the source data. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | The parameter check failed. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
-| 17800007 | The input buffer is incorrect, and the output buffer is too small to accommodate the compressed or decompressed data. |
-| 17800005 | The input data is incorrect. For example, the data does not conform to the zlib compression format, the compressed data is corrupted, or the data is not compressed. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | The parameter check failed. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| [17800007](../../apis-basic-services-kit/errorcode-zlib.md#17800007-incorrect-input-buffer) | The input buffer is incorrect, and the output buffer is too small to accommodate the compressed or decompressed data. |
+| [17800005](../../apis-basic-services-kit/errorcode-zlib.md#17800005-incorrect-input-data) | The input data is incorrect. For example, the data does not conform to the zlib compression format, the compressed data is corrupted, or the data is not compressed. |
 
 ## Examples
 
@@ -3060,7 +3059,7 @@ ArkTS-Sta:
 zlibCompileFlags(): Promise<int>
 ```
 
-返回指示编译时选项的标志。使用Promise异步回调。
+Returns the flags indicating compile-time options. This API uses a promise to return the result.
 
 **Since:** 12
 
@@ -3076,7 +3075,7 @@ zlibCompileFlags(): Promise<int>
 
 | Type | Description |
 | --- | --- |
-| ArkTS-Dyn: Promise&lt;number&gt;  <br>ArkTS-Sta：Promise&lt;int&gt; | Promise对象。返回指示编译时选项的标志。 |
+| ArkTS-Dyn: Promise&lt;number&gt;  <br>ArkTS-Sta：Promise&lt;int&gt; | Promise used to return the flags indicating compile-time options. |
 
 ## Examples
 
@@ -3096,7 +3095,7 @@ zip.zlibCompileFlags().then((data) => {
 zlibVersion(): Promise<string>
 ```
 
-获取当前链接的zlib库的版本信息。使用Promise异步回调。
+Obtains the version information of this zlib library connected. This API uses a promise to return the result.
 
 **Since:** 12
 
@@ -3112,7 +3111,7 @@ zlibVersion(): Promise<string>
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;string&gt; | Promise对象。返回当前zlib库的版本信息。 |
+| Promise&lt;string&gt; | Promise used to return the version of the current zlib library. |
 
 ## Examples
 

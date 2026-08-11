@@ -26,7 +26,7 @@ Specifies the longClickable status of the target Component.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| b | boolean | No | the longClickable status.Set it default true if null or undefined. |
+| b | boolean | No | the longClickable status. &lt;br&gt;Default value: true |
 
 **Return value:**
 

@@ -94,7 +94,7 @@ transition?: TransitionEffect
 
 全屏模态页面的自定义转场方式。
 
-**类型：** [TransitionEffect](arkts-arkui-common-transitioneffect-c.md)
+**类型：** [TransitionEffect](../arkts-components/arkts-arkui-transitioneffect-c.md)
 
 **起始版本：** 23
 

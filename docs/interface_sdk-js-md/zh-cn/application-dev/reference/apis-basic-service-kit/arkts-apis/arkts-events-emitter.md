@@ -25,12 +25,6 @@
 
 **系统能力：** SystemCapability.Notification.Emitter
 
-## 导入模块
-
-```TypeScript
-import { emitter } from 'kits/@kit.BasicServicesKit';
-```
-
 ## 汇总
 
 ### 函数

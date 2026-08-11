@@ -12,7 +12,7 @@ import { zlib } from 'kits/@kit.BasicServicesKit';
 function createChecksumSync(): Checksum
 ```
 
-创建校验对象。成功时返回Checksum对象实例。
+Creates this checksum object. A checksum instance is returned upon a success.
 
 **Since:** 12
 
@@ -28,7 +28,7 @@ function createChecksumSync(): Checksum
 
 | Type | Description |
 | --- | --- |
-| [Checksum](arkts-basicservices-zlib-checksum-i.md) | 校验对象实例。 |
+| [Checksum](arkts-basicservices-zlib-checksum-i.md) | Checksum object instance. |
 
 ## Examples
 

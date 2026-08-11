@@ -1,6 +1,6 @@
 # ConnectionChangeState
 
-描述SSAP连接状态。
+Describes SSAP connection state.
 
 **Since:** 26.0.0
 
@@ -22,7 +22,7 @@ import { ssap } from 'kits/@kit.ConnectivityKit';
 address: string
 ```
 
-设备地址。长度必须为17，由16进制数字和冒号组成，形如 "11:22:33:AA:BB:FF"。
+Indicates the device address.The length must be 17, The value consists of hexadecimal digits and colons (:), for example, 11:22:33:AA:BB:FF.
 
 **Type:** string
 
@@ -42,7 +42,7 @@ address: string
 state: ConnectionState
 ```
 
-连接状态。
+Connection state.
 
 **Type:** [ConnectionState](arkts-connectivity-ssap-connectionstate-t.md)
 

@@ -1,6 +1,6 @@
 # BindOptions
 
-半模态、全模态的公共配置接口。
+Overlay module options
 
 **Since:** 23
 
@@ -16,9 +16,7 @@
 backgroundColor?: ResourceColor
 ```
 
-半模态页面的背板颜色。
-
-默认值：Color.White。
+Background color of the sheet.&lt;br&gt;Default value: **Color.White**.
 
 **Type:** [ResourceColor](arkts-arkui-resourcecolor-t.md)
 
@@ -38,7 +36,7 @@ backgroundColor?: ResourceColor
 onAppear?: VoidCallback
 ```
 
-半模态页面显示（动画结束后）回调函数。
+Callback for when the sheet is displayed (after the animation ends).
 
 **Type:** [VoidCallback](arkts-arkui-voidcallback-t.md)
 
@@ -58,7 +56,7 @@ onAppear?: VoidCallback
 onDisappear?: VoidCallback
 ```
 
-半模态页面回退（动画结束后）回调函数。
+Callback for when the sheet disappears (after the animation ends).
 
 **Type:** [VoidCallback](arkts-arkui-voidcallback-t.md)
 
@@ -78,7 +76,7 @@ onDisappear?: VoidCallback
 onWillAppear?: VoidCallback
 ```
 
-半模态页面显示（动画开始前）回调函数。
+Callback for when the sheet is about to be displayed (before the animation starts).
 
 **Type:** [VoidCallback](arkts-arkui-voidcallback-t.md)
 
@@ -98,11 +96,7 @@ onWillAppear?: VoidCallback
 onWillDisappear?: VoidCallback
 ```
 
-半模态页面回退（动画开始前）回调函数。
-
-**说明：**
-
-不允许在onWillDisappear函数中修改状态变量，可能会导致组件行为不稳定。
+Callback function before overlay popAnimation starts.
 
 **Type:** [VoidCallback](arkts-arkui-voidcallback-t.md)
 

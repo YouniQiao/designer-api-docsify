@@ -32,5 +32,5 @@ Register a callback function to be called when a vibrator plugin or unplug event
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 14600101 | Device operation failed. |
+| [14600101](../errorcode-vibrator.md#14600101-device-operation-failed) | Device operation failed. |
 

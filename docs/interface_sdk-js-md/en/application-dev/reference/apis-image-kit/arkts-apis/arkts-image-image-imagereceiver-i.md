@@ -1,18 +1,11 @@
 # ImageReceiver
 
-ImageReceiver类，用于获取组件surface id、接收最新的图片和读取下一张图片以及释放ImageReceiver实例。ImageReceiver作为图片的接收方和消费者，其参数属性实际上不会对接收到的图片产生影响。图片属性的配置应在发送方和生产者上进行，如相机预览流  
-[createPreviewOutput](../../apis-camera-kit/arkts-apis/arkts-camera-camera-cameramanager-i.md/arkts-camera-camera-cameramanager-i.md#createpreviewoutput)。
-
-在调用以下方法前需要先通过[image.createImageReceiver](arkts-image-image-createimagereceiver-f.md#createimagereceiver)创建ImageReceiver实例。
-
-从API version 23开始，更推荐使用[image.createImageReceiver](arkts-image-image-createimagereceiver-f.md#createimagereceiver)，通过传入  
-[ImageReceiverOptions](arkts-image-image-imagereceiveroptions-i.md)创建ImageReceiver实例。
-
-由于图片占用内存较大，所以当ImageReceiver实例使用完成后，应主动调用[release](arkts-image-image-imagereceiver-i.md#release)方法及时释放内存。释放时应确保该实例的所有异步方法均执行完成，且后续不再使用该实例。
-
-> **说明：**
-> 
-> - 本Interface首批接口从API version 9开始支持。
+The **ImageReceiver** class provides APIs to obtain the surface ID of a component, read the latest image, read the next image, and release the ImageReceiver instance. The ImageReceiver acts as the receiver and consumer of images. Its parameter properties do not actually affect the received images. The configuration of image properties should be done on the sending side (the producer), such as when creating a camera preview stream with   
+[createPreviewOutput](../../apis-camera-kit/arkts-apis/arkts-camera-camera-cameramanager-i.md/arkts-camera-camera-cameramanager-i.md#createpreviewoutput).Before calling any APIs in ImageReceiver, you must use   
+[image.createImageReceiver](arkts-image-image-createimagereceiver-f.md#createimagereceiver)to create an ImageReceiver instance.Since API version 23, you are advised to use   
+[image.createImageReceiver](arkts-image-image-createimagereceiver-f.md#createimagereceiver) to create an **ImageReceiver** instance based on the passed   
+[ImageReceiverOptions](arkts-image-image-imagereceiveroptions-i.md). Images occupy a large amount of memory. When you finish using an ImageReceiver instance, call   
+[release](arkts-image-image-imagereceiver-i.md#release) to free the memory promptly. Before releasing the instance, ensure that all asynchronous operations associated with the instance have finished and the instance is no longer needed.
 
 **Since:** 9
 
@@ -34,7 +27,7 @@ import { image } from 'kits/@kit.ImageKit';
 getReceivingSurfaceId(callback: AsyncCallback<string>): void
 ```
 
-用于获取一个surface id供Camera或其他组件使用。使用callback异步回调。
+Obtains a surface ID for the camera or other components. This API uses an asynchronous callback to return the result.
 
 **Since:** 9
 
@@ -48,7 +41,7 @@ getReceivingSurfaceId(callback: AsyncCallback<string>): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;string&gt; | Yes | 回调函数，当获取surface id成功，err为undefined，data为获取到的surface id；否则为错误对象。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;string&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined** and **data** is the surface ID obtained. Otherwise, **err** is an error object. |
 
 ## getReceivingSurfaceId
 
@@ -56,7 +49,7 @@ getReceivingSurfaceId(callback: AsyncCallback<string>): void
 getReceivingSurfaceId(): Promise<string>
 ```
 
-用于获取一个surface id供Camera或其他组件使用。使用Promise异步回调。
+Obtains a surface ID for the camera or other components. This API uses a promise to return the result.
 
 **Since:** 9
 
@@ -70,7 +63,7 @@ getReceivingSurfaceId(): Promise<string>
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;string&gt; | Promise对象，返回surface id。 |
+| Promise&lt;string&gt; | Promise used to return the surface ID. |
 
 ## off('imageArrival')
 
@@ -78,7 +71,7 @@ getReceivingSurfaceId(): Promise<string>
 off(type: 'imageArrival', callback?: AsyncCallback<void>): void
 ```
 
-释放buffer时移除注册回调。使用callback异步回调。
+Unregisters the callback function that is triggered when the buffer is released. This API uses an asynchronous callback to return the result.
 
 **Since:** 13
 
@@ -92,8 +85,8 @@ off(type: 'imageArrival', callback?: AsyncCallback<void>): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'imageArrival' | Yes | 注册事件的类型，固定为'imageArrival'，释放buffer时触发。 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | No | 移除的回调函数。 |
+| type | 'imageArrival' | Yes | Type of event, which is **'imageArrival'**. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | No | Callback to unregister. |
 
 ## offImageArrival
 
@@ -123,7 +116,7 @@ Remove callback subscriptions when releasing buffer.
 on(type: 'imageArrival', callback: AsyncCallback<void>): void
 ```
 
-接收图片时注册回调。使用callback异步回调。
+Listens for image arrival events. This API uses an asynchronous callback to return the result.
 
 **Since:** 9
 
@@ -137,8 +130,8 @@ on(type: 'imageArrival', callback: AsyncCallback<void>): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'imageArrival' | Yes | 注册事件的类型，固定为'imageArrival'，接收图片到达时触发。 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | 回调函数，当注册事件触发成功，err为undefined，否则为错误对象。 |
+| type | 'imageArrival' | Yes | Type of event to listen for. The value is fixed at **'imageArrival'**, which is triggered when an image is received. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined**; otherwise, **err** is an error object. |
 
 ## onImageArrival
 
@@ -168,13 +161,15 @@ Subscribe callback when receiving an image.
 readLatestImage(callback: AsyncCallback<Image>): void
 ```
 
-从ImageReceiver读取最新的图片。使用callback异步回调。
+Reads the latest image from the ImageReceiver instance. This API uses an asynchronous callback to return the result.
 
-> **注意**：
+> **NOTE：**
 > 
-> 此接口需要在[on](image.ImageReceiver.on(type: 'imageArrival', callback: AsyncCallback&lt;void&gt;))回调触发后调用，才能正常的接收到数
-> 据。且此接口返回的[Image](arkts-image-image-image-i.md)对象使用完毕后需要调用
-> [release](arkts-image-image-image-i.md#release)方法释放，释放后才可以继续接收新的数据。
+> This API can be called to receive data only after the
+> [on](image.ImageReceiver.on(type: 'imageArrival', callback: AsyncCallback&lt;void&gt;)) callback is triggered.
+> When the [Image](arkts-image-image-image-i.md) object returned by this API is no longer needed, call
+> [release](arkts-image-image-image-i.md#release) to release the
+> object. New data can be received only after the release.
 
 **Since:** 9
 
@@ -188,7 +183,7 @@ readLatestImage(callback: AsyncCallback<Image>): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Image&gt; | Yes | 回调函数，当读取最新图片成功，err为undefined，data为获取到的最新图片；否则为错误对象。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Image&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined** and **data** is the latest image obtained; otherwise, **err** is an error object. |
 
 ## readLatestImage
 
@@ -196,13 +191,15 @@ readLatestImage(callback: AsyncCallback<Image>): void
 readLatestImage(): Promise<Image>
 ```
 
-从ImageReceiver读取最新的图片。使用Promise异步回调。
+Reads the latest image from the ImageReceiver instance. This API uses a promise to return the result.
 
-> **注意**：
+> **NOTE：**
 > 
-> 此接口需要在[on](image.ImageReceiver.on(type: 'imageArrival', callback: AsyncCallback&lt;void&gt;))回调触发后调用，才能正常的接收到数
-> 据。且此接口返回的[Image](arkts-image-image-image-i.md)对象使用完毕后需要调用
-> [release](arkts-image-image-image-i.md#release)方法释放，释放后才可以继续接收新的数据。
+> This API can be called to receive data only after the
+> [on](image.ImageReceiver.on(type: 'imageArrival', callback: AsyncCallback&lt;void&gt;)) callback is triggered.
+> When the [Image](arkts-image-image-image-i.md) object returned by this API is no longer needed, call
+> [release](arkts-image-image-image-i.md#release) to release the
+> object. New data can be received only after the release.
 
 **Since:** 9
 
@@ -216,7 +213,7 @@ readLatestImage(): Promise<Image>
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;Image&gt; | Promise对象，返回最新图片。 |
+| Promise&lt;Image&gt; | Promise used to return the latest image. |
 
 ## readNextImage
 
@@ -224,13 +221,15 @@ readLatestImage(): Promise<Image>
 readNextImage(callback: AsyncCallback<Image>): void
 ```
 
-从ImageReceiver读取下一张图片。使用callback异步回调。
+Reads the next image from the ImageReceiver instance. This API uses an asynchronous callback to return the result.
 
-> **注意**：
+> **NOTE：**
 > 
-> 此接口需要在[on](image.ImageReceiver.on(type: 'imageArrival', callback: AsyncCallback&lt;void&gt;))回调触发后调用，才能正常的接收到数
-> 据。且此接口返回的[Image](arkts-image-image-image-i.md)对象使用完毕后需要调用
-> [release](arkts-image-image-image-i.md#release)方法释放，释放后才可以继续接收新的数据。
+> This API can be called to receive data only after the
+> [on](image.ImageReceiver.on(type: 'imageArrival', callback: AsyncCallback&lt;void&gt;)) callback is triggered.
+> When the [Image](arkts-image-image-image-i.md) object returned by this API is no longer needed, call
+> [release](arkts-image-image-image-i.md#release) to release the
+> object. New data can be received only after the release.
 
 **Since:** 9
 
@@ -244,7 +243,7 @@ readNextImage(callback: AsyncCallback<Image>): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Image&gt; | Yes | 回调函数，当获取下一张图片成功，err为undefined，data为获取到的下一张图片；否则为错误对象。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Image&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined** and **data** is the next image obtained. Otherwise, **err** is an error object. |
 
 ## readNextImage
 
@@ -252,13 +251,15 @@ readNextImage(callback: AsyncCallback<Image>): void
 readNextImage(): Promise<Image>
 ```
 
-从ImageReceiver读取下一张图片。使用Promise异步回调。
+Reads the next image from the ImageReceiver instance. This API uses a promise to return the result.
 
-> **注意**：
+> **NOTE：**
 > 
-> 此接口需要在[on](image.ImageReceiver.on(type: 'imageArrival', callback: AsyncCallback&lt;void&gt;))回调触发后调用，才能正常的接收到数
-> 据。且此接口返回的[Image](arkts-image-image-image-i.md)对象使用完毕后需要调用
-> [release](arkts-image-image-image-i.md#release)方法释放，释放后才可以继续接收新的数据。
+> This API can be called to receive data only after the
+> [on](image.ImageReceiver.on(type: 'imageArrival', callback: AsyncCallback&lt;void&gt;)) callback is triggered.
+> When the [Image](arkts-image-image-image-i.md) object returned by this API is no longer needed, call
+> [release](arkts-image-image-image-i.md#release) to release the
+> object. New data can be received only after the release.
 
 **Since:** 9
 
@@ -272,7 +273,7 @@ readNextImage(): Promise<Image>
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;Image&gt; | Promise对象，返回下一张图片。 |
+| Promise&lt;Image&gt; | Promise used to return the next image. |
 
 ## release
 
@@ -280,11 +281,11 @@ readNextImage(): Promise<Image>
 release(callback: AsyncCallback<void>): void
 ```
 
-释放ImageReceiver实例。使用callback异步回调。
+Releases this ImageReceiver instance. This API uses an asynchronous callback to return the result.
 
-由于图片占用内存较大，所以当ImageReceiver实例使用完成后，应主动调用该方法，及时释放内存。
+Images occupy a large amount of memory. When you finish using an ImageReceiver instance, call this API to free the memory promptly.
 
-释放时应确保该实例的所有异步方法均执行完成，且后续不再使用该实例。
+Before releasing the instance, ensure that all asynchronous operations associated with the instance have finished and the instance is no longer needed.
 
 **Since:** 9
 
@@ -298,7 +299,7 @@ release(callback: AsyncCallback<void>): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | 回调函数，当释放ImageReceiver实例成功，err为undefined，否则为错误对象。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined**; otherwise, **err** is an error object. |
 
 ## release
 
@@ -306,11 +307,11 @@ release(callback: AsyncCallback<void>): void
 release(): Promise<void>
 ```
 
-释放ImageReceiver实例。使用Promise异步回调。
+Releases this ImageReceiver instance. This API uses a promise to return the result.
 
-由于图片占用内存较大，所以当ImageReceiver实例使用完成后，应主动调用该方法，及时释放内存。
+Images occupy a large amount of memory. When you finish using an ImageReceiver instance, call this API to free the memory promptly.
 
-释放时应确保该实例的所有异步方法均执行完成，且后续不再使用该实例。
+Before releasing the instance, ensure that all asynchronous operations associated with the instance have finished and the instance is no longer needed.
 
 **Since:** 9
 
@@ -324,7 +325,7 @@ release(): Promise<void>
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise对象，无返回结果。 |
+| Promise&lt;void&gt; | Promise that returns no value. |
 
 ## capacity
 
@@ -332,7 +333,7 @@ release(): Promise<void>
 readonly capacity: int
 ```
 
-同时访问的图像数。该参数仅作为期望值，实际capacity由设备硬件决定。
+Maximum number of images that can be accessed at the same time. This parameter is used only as an expected value.The actual capacity is determined by the device hardware.
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
@@ -350,7 +351,7 @@ readonly capacity: int
 readonly format: ImageFormat
 ```
 
-图像格式，取值为[ImageFormat](arkts-image-image-imageformat-e.md)常量（目前仅支持 ImageFormat:JPEG，实际返回格式由生产者决定，如相机）。
+Image format. The value is an enum value of [ImageFormat](arkts-image-image-imageformat-e.md). (Currently, only **ImageFormat:JPEG** is supported. The format actually returned depends on the producer, for example, camera.)
 
 **Type:** [ImageFormat](arkts-image-image-imageformat-e.md)
 
@@ -368,7 +369,7 @@ readonly format: ImageFormat
 readonly size: Size
 ```
 
-图片大小。该参数不会影响接收到的图片大小，实际返回大小由生产者决定，如相机。
+Image size. This parameter does not affect the size of the received image. The actual returned size is determined by the producer, for example, the camera.
 
 **Type:** [Size](../../apis-arkui/arkts-apis/arkts-arkui-window-size-i.md)
 

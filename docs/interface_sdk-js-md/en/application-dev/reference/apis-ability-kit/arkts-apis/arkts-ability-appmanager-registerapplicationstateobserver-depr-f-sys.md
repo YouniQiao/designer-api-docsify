@@ -6,7 +6,7 @@
 function registerApplicationStateObserver(observer: ApplicationStateObserver): number
 ```
 
-注册全部应用程序状态观测器。
+Register application state observer.
 
 **Since:** 8
 
@@ -28,13 +28,13 @@ function registerApplicationStateObserver(observer: ApplicationStateObserver): n
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| observer | [ApplicationStateObserver](arkts-ability-applicationstateobserver-c.md) | Yes | 表示程序状态观测器，用于观测应用的生命周期变化。 |
+| observer | [ApplicationStateObserver](arkts-ability-applicationstateobserver-c.md) | Yes | The application state observer. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| number | 已注册观测器的数字代码。 |
+| number | Returns the number code of the observer. |
 
 ## Examples
 

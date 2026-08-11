@@ -1,6 +1,6 @@
 # UnitInfo
 
-度量衡单位信息。
+Defines the measurement unit information.
 
 **Since:** 23
 
@@ -22,7 +22,7 @@ import { i18n } from 'kits/@kit.LocalizationKit';
 measureSystem: string
 ```
 
-单位的度量体系，取值包括：'SI', 'US', 'UK'。
+Measurement system. The value can be "SI", "US", or "UK".
 
 **Type:** string
 
@@ -42,7 +42,7 @@ measureSystem: string
 unit: string
 ```
 
-单位的名称，如：'meter', 'inch', 'cup'等。
+Name of the measurement unit, for example, "meter", "inch", or "cup".
 
 **Type:** string
 

@@ -10,12 +10,6 @@
 
 **系统能力：** SystemCapability.Base
 
-## 导入模块
-
-```TypeScript
-import { Callback, BusinessError, ErrorCallback, AsyncCallback } from 'kits/@kit.BasicServicesKit';
-```
-
 ## [[Call]]
 
 ```TypeScript

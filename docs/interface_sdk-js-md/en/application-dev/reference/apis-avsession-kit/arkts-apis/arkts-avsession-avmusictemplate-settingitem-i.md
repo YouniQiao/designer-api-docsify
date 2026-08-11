@@ -1,6 +1,6 @@
 # SettingItem
 
-设置项的定义。
+The definition of setting Information.
 
 **Since:** 23
 
@@ -22,7 +22,7 @@ import { avMusicTemplate } from 'kits/@kit.AVSessionKit';
 desc: string
 ```
 
-设置项的描述。
+Description of the setting item.
 
 **Type:** string
 
@@ -42,7 +42,7 @@ desc: string
 id: string
 ```
 
-设置项的唯一ID。
+Unique ID of the setting item.
 
 **Type:** string
 
@@ -62,9 +62,7 @@ id: string
 mediaId: string
 ```
 
-与当前设置关联的媒体ID。
-
-如果设置与当前媒体信息相关联，需要设置mediaId；否则，不需要设置mediaId。
+Media id associated with the current settings.If the settings are associated with the current media information,you need to set the mediaId; otherwise,it is not required to set the mediaId.
 
 **Type:** string
 
@@ -84,7 +82,7 @@ mediaId: string
 settingType?: SettingType
 ```
 
-设置项的类型。
+Type of the setting item.
 
 **Type:** [SettingType](arkts-avsession-avmusictemplate-settingtype-e.md)
 
@@ -104,11 +102,7 @@ settingType?: SettingType
 settingValue?: string | boolean | SettingContent[] | WantAgent
 ```
 
-设置项的值。
-
-- 当settingType为SettingType.SWITCH时，该值为boolean类型。  
-- 当settingType为SettingType.LIST时，该值为SettingContent数组。  
-- 当settingType为SettingType.JUMP时，该值为string类型。
+Value of the setting item.SWITCH: bool, LIST: SettingContent, JUMP: string.
 
 **Type:** string \| boolean \| SettingContent[] \| WantAgent
 
@@ -128,7 +122,7 @@ settingValue?: string | boolean | SettingContent[] | WantAgent
 title: string
 ```
 
-设置项的标题。
+Title of the setting item.
 
 **Type:** string
 

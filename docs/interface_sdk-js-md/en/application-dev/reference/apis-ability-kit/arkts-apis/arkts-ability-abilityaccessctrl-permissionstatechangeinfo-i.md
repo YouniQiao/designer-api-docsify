@@ -1,6 +1,6 @@
 # PermissionStateChangeInfo
 
-表示某次权限授权状态变化的详情。
+Represents the permission state change details.
 
 **Since:** 18
 
@@ -22,7 +22,7 @@ import { Context, Permissions, PermissionRequestResult } from 'kits/@kit.Ability
 change: PermissionStateChangeType
 ```
 
-权限授权状态变化类型。
+Operation that triggers the permission state change.
 
 **Type:** [PermissionStateChangeType](arkts-ability-abilityaccessctrl-permissionstatechangetype-e.md)
 
@@ -42,7 +42,8 @@ change: PermissionStateChangeType
 permissionName: Permissions
 ```
 
-当前授权状态发生变化的权限名，合法的权限名取值可在[应用权限列表](../../../security/AccessToken/app-permissions.md)中查询。
+Permissions whose authorization state changes. For details about the permissions, see  
+[Application Permissions](../../../security/AccessToken/app-permissions.md).
 
 **Type:** [Permissions](arkts-ability-permissions-t.md)
 
@@ -62,7 +63,9 @@ permissionName: Permissions
 tokenID: int
 ```
 
-被订阅的应用身份标识。该参数必须为大于0的整数，传入0时返回错误码12100001。BundleInfo获取可参考：[bundleManager.getBundleInfoSync](arkts-ability-bundlemanager-getbundleinfosync-f.md#getbundleinfosync)。获取。
+ID of the subscribed application, which can be obtained through the  
+[accessTokenId](arkts-ability-applicationinfo-i.md#accesstokenid) field in ApplicationInfo of BundleInfo. &lt;br&gt;For BundleInfo acquisition, please refer to:  
+[bundleManager.getBundleInfoSync](arkts-ability-bundlemanager-getbundleinfosync-f.md#getbundleinfosync).
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 

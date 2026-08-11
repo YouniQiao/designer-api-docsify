@@ -4,7 +4,7 @@
 declare type TextPickerEnterSelectedAreaCallback = (value: string | string[], index: number | number[]) => void
 ```
 
-定义触发onEnterSelectedArea事件的回调类型。
+Defines the **onEnterSelectedArea** event callback signature.
 
 **Since:** 18
 
@@ -22,6 +22,6 @@ declare type TextPickerEnterSelectedAreaCallback = (value: string | string[], in
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | string \| string[] | Yes | 当前选中项的文本。多列数据选择器的value为数组类型。 <br>**说明：** <br>当选择器内容为文本或图文混排时，value值为选中项中的文本值；当选择器内容为图片时，value值为空。 |
-| index | number \| number[] | Yes | 当前选中项的索引值，索引从0开始。多列数据选择器的index为数组类型。 |
+| value | string \| string[] | Yes | Text of the selected item. Use the array type for multi-column pickers.<br> **NOTE**<br>The return value is a text value for text or mixed content, and an empty string for image-only content. |
+| index | number \| number[] | Yes | Index of the selected item. The index is zero-based. Use the array type for multi-column pickers. |
 

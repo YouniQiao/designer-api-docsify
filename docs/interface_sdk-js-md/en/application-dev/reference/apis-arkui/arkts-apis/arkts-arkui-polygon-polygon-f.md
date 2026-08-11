@@ -8,7 +8,7 @@ export declare function Polygon(
 ): PolygonAttribute
 ```
 
-用于绘制多边形的构造函数。
+Polygon is returned when the parameter is transferred.
 
 **Since:** 23
 
@@ -24,13 +24,13 @@ export declare function Polygon(
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| options | [PolygonOptions](../arkts-components/arkts-arkui-polygonoptions-i.md) | No | Polygon绘制区域。&lt;br/&gt;异常值undefined和null按照无效值处理，本次设置不生效。 |
+| options | [PolygonOptions](../arkts-components/arkts-arkui-polygonoptions-i.md) | No | The options to create a Polygon. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [PolygonAttribute](../arkts-components/arkts-arkui-polygon-attribute.md) | 多边形的属性。 |
+| [PolygonAttribute](../arkts-components/arkts-arkui-polygon-attribute.md) | The attribute of the Polygon. |
 
 
 ## Polygon
@@ -41,11 +41,11 @@ export declare function Polygon(
 ): PolygonAttribute
 ```
 
-定义Polygon组件。
+Defines Polygon Component.
 
-**Since:** 26.0.0
+**Since:** 26.1.0
 
-**ArkTS mode:** ArkTS-Sta only, since version 26.0.0.
+**ArkTS mode:** ArkTS-Sta only, since version 26.1.0.
 
 **Decorator:** @Builder
 
@@ -59,7 +59,7 @@ export declare function Polygon(
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| style | [CustomBuilderT](../arkts-components/arkts-arkui-custombuildert-t.md)&lt;PolygonAttribute&gt; | Yes | 设置组件属性的回调。 |
+| style | [CustomBuilderT](../arkts-components/arkts-arkui-custombuildert-t.md)&lt;PolygonAttribute&gt; | Yes | the callback to set up component's attributes. |
 
 **Return value:**
 

@@ -1,6 +1,6 @@
 # ResultCode
 
-模态弹框请求结果码。
+Enumerates the result codes of the request for the modal dialog box.
 
 **Since:** 9
 
@@ -16,7 +16,7 @@
 RESULT_OK = 0
 ```
 
-表示成功。
+The request succeeds.
 
 **Since:** 9
 
@@ -32,7 +32,7 @@ RESULT_OK = 0
 RESULT_CANCEL = 1
 ```
 
-表示失败。
+The request fails.
 
 **Since:** 9
 

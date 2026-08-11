@@ -1,13 +1,10 @@
 # AVImageGenerator
 
-视频缩略图获取类，用于从视频资源中获取缩略图。在调用AVImageGenerator的方法前，需要先通过  
-[createAVImageGenerator()](arkts-media-media-createavimagegenerator-f.md#createavimagegenerator)构建一个AVImageGenerator实例。
+AVImageGenerator is a class for video thumbnail retrieval. It provides APIs to obtain a thumbnail from a video. Before calling any API in AVImageGenerator, you must use   
+[createAVImageGenerator()](arkts-media-media-createavimagegenerator-f.md#createavimagegenerator)to create an AVImageGenerator instance.
 
-获取视频缩略图的demo可参考：[获取视频缩略图开发指导](../../../media/media/avimagegenerator.md)。
-
-> **说明：**
-> 
-> - 本Interface首批接口从API version 12开始支持。
+For details about the demo for obtaining video thumbnails, see   
+[Obtaining Video Thumbnails](../../../media/media/avimagegenerator.md).
 
 **Since:** 12
 
@@ -30,7 +27,7 @@ fetchFrameByTime(timeUs: number, options: AVImageQueryOptions, param: PixelMapPa
       callback: AsyncCallback<image.PixelMap>): void
 ```
 
-获取视频缩略图。使用callback异步回调。
+Obtains a video thumbnail. This API uses an asynchronous callback to return the result.
 
 **Since:** 12
 
@@ -44,17 +41,17 @@ fetchFrameByTime(timeUs: number, options: AVImageQueryOptions, param: PixelMapPa
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| timeUs | number | Yes | 需要获取的缩略图在视频中的时间点，单位为微秒（μs）。 |
-| options | [AVImageQueryOptions](arkts-media-media-avimagequeryoptions-e.md) | Yes | 需要获取的缩略图时间点与视频帧的对应关系。 |
-| param | [PixelMapParams](arkts-media-media-pixelmapparams-i.md) | Yes | 需要获取的缩略图的格式参数。 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;image.PixelMap&gt; | Yes | 回调函数。获取缩略图成功时，err为undefined，data为PixelMap实例，否则为错误对象。 |
+| timeUs | number | Yes | Time of the video for which a thumbnail is to be obtained, in μs. |
+| options | [AVImageQueryOptions](arkts-media-media-avimagequeryoptions-e.md) | Yes | Relationship between the thumbnail timestamp in and the video frame. |
+| param | [PixelMapParams](arkts-media-media-pixelmapparams-i.md) | Yes | Format parameters of the thumbnail to be obtained. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;image.PixelMap&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined** and **data** is the PixelMap instance obtained; otherwise, **err** is an error object. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 5400102 | Operation not allowed. Returned by callback. |
-| 5400106 | Unsupported format. Returned by callback. |
+| [5400102](../errorcode-media.md#5400102-unsupported-operation) | Operation not allowed. Returned by callback. |
+| [5400106](../errorcode-media.md#5400106-format-not-supported) | Unsupported format. Returned by callback. |
 
 ## fetchFrameByTime
 
@@ -86,8 +83,8 @@ Obtains a video thumbnail. This API uses an asynchronous callback to return the 
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 5400102 | Operation not allowed. Returned by callback. |
-| 5400106 | Unsupported format. Returned by callback. |
+| [5400102](../errorcode-media.md#5400102-unsupported-operation) | Operation not allowed. Returned by callback. |
+| [5400106](../errorcode-media.md#5400106-format-not-supported) | Unsupported format. Returned by callback. |
 
 ## fetchFrameByTime
 
@@ -95,7 +92,7 @@ Obtains a video thumbnail. This API uses an asynchronous callback to return the 
 fetchFrameByTime(timeUs: number, options: AVImageQueryOptions, param: PixelMapParams): Promise<image.PixelMap>
 ```
 
-获取视频缩略图。使用Promise异步回调。
+Obtains a video thumbnail. This API uses a promise to return the result.
 
 **Since:** 12
 
@@ -109,22 +106,22 @@ fetchFrameByTime(timeUs: number, options: AVImageQueryOptions, param: PixelMapPa
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| timeUs | number | Yes | 需要获取的缩略图在视频中的时间点，单位为微秒（μs）。 |
-| options | [AVImageQueryOptions](arkts-media-media-avimagequeryoptions-e.md) | Yes | 需要获取的缩略图时间点与视频帧的对应关系。 |
-| param | [PixelMapParams](arkts-media-media-pixelmapparams-i.md) | Yes | 需要获取的缩略图的格式参数。 |
+| timeUs | number | Yes | Time of the video for which a thumbnail is to be obtained, in μs. |
+| options | [AVImageQueryOptions](arkts-media-media-avimagequeryoptions-e.md) | Yes | Relationship between the thumbnail timestamp in and the video frame. |
+| param | [PixelMapParams](arkts-media-media-pixelmapparams-i.md) | Yes | Format parameters of the thumbnail to be obtained. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;image.PixelMap&gt; | Promise对象，返回视频缩略图对象。 |
+| Promise&lt;image.PixelMap&gt; | Promise used to return the video thumbnail. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 5400102 | Operation not allowed. Returned by promise. |
-| 5400106 | Unsupported format. Returned by promise. |
+| [5400102](../errorcode-media.md#5400102-unsupported-operation) | Operation not allowed. Returned by promise. |
+| [5400106](../errorcode-media.md#5400106-format-not-supported) | Unsupported format. Returned by promise. |
 
 ## fetchFrameByTime
 
@@ -160,8 +157,8 @@ Obtains a video thumbnail. This API uses a promise to return the result.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 5400102 | Operation not allowed. Returned by promise. |
-| 5400106 | Unsupported format. Returned by promise. |
+| [5400102](../errorcode-media.md#5400102-unsupported-operation) | Operation not allowed. Returned by promise. |
+| [5400106](../errorcode-media.md#5400106-format-not-supported) | Unsupported format. Returned by promise. |
 
 ## fetchScaledFrameByTime
 
@@ -170,7 +167,7 @@ fetchScaledFrameByTime(timeUs: number, queryMode: AVImageQueryOptions, outputSiz
       Promise<image.PixelMap>
 ```
 
-支持按比例缩放提取视频缩略图。使用Promise异步回调。
+Fetches a scaled thumbnail from the video at a particular timestamp. This API uses a promise to return the result.
 
 **Since:** 20
 
@@ -184,22 +181,22 @@ fetchScaledFrameByTime(timeUs: number, queryMode: AVImageQueryOptions, outputSiz
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| timeUs | number | Yes | 在视频中需要获取的缩略图的时间点，单位为微秒（μs）。 |
-| queryMode | [AVImageQueryOptions](arkts-media-media-avimagequeryoptions-e.md) | Yes | 需要获取的缩略图时间点与视频帧的对应关系。 |
-| outputSize | [OutputSize](arkts-media-media-outputsize-i.md) | No | 定义帧的输出大小。默认按原图大小显示。 |
+| timeUs | number | Yes | Timestamp, in microseconds (μs), at which the thumbnail is to be fetched from the video. |
+| queryMode | [AVImageQueryOptions](arkts-media-media-avimagequeryoptions-e.md) | Yes | Relationship between the thumbnail timestamp in and the video frame. |
+| outputSize | [OutputSize](arkts-media-media-outputsize-i.md) | No | Output size of the thumbnail. By default, the original image size is used. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;image.PixelMap&gt; | Promise对象。返回视频缩略图对象。 |
+| Promise&lt;image.PixelMap&gt; | Promise used to return the video thumbnail. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 5400102 | Operation not allowed. Returned by promise. |
-| 5400106 | Unsupported format. Returned by promise. |
+| [5400102](../errorcode-media.md#5400102-unsupported-operation) | Operation not allowed. Returned by promise. |
+| [5400106](../errorcode-media.md#5400106-format-not-supported) | Unsupported format. Returned by promise. |
 
 ## fetchScaledFrameByTime
 
@@ -236,8 +233,8 @@ Supports extracting video thumbnails by proportional scaling
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 5400102 | Operation not allowed. Returned by promise. |
-| 5400106 | Unsupported format. Returned by promise. |
+| [5400102](../errorcode-media.md#5400102-unsupported-operation) | Operation not allowed. Returned by promise. |
+| [5400106](../errorcode-media.md#5400106-format-not-supported) | Unsupported format. Returned by promise. |
 
 ## release
 
@@ -245,7 +242,7 @@ Supports extracting video thumbnails by proportional scaling
 release(callback: AsyncCallback<void>): void
 ```
 
-释放资源。使用callback异步回调。
+Releases this AVImageGenerator instance. This API uses an asynchronous callback to return the result.
 
 **Since:** 12
 
@@ -259,13 +256,13 @@ release(callback: AsyncCallback<void>): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | 回调函数。当释放资源成功，err为undefined，否则为错误对象。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined**; otherwise, **err** is an error object. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 5400102 | Operation not allowed. Returned by callback. |
+| [5400102](../errorcode-media.md#5400102-unsupported-operation) | Operation not allowed. Returned by callback. |
 
 ## release
 
@@ -273,7 +270,7 @@ release(callback: AsyncCallback<void>): void
 release(): Promise<void>
 ```
 
-释放资源。使用Promise异步回调。
+Releases this AVImageGenerator instance. This API uses a promise to return the result.
 
 **Since:** 12
 
@@ -287,13 +284,13 @@ release(): Promise<void>
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | 异步方式释放资源release方法的Promise返回值。 |
+| Promise&lt;void&gt; | Promise that returns no value. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 5400102 | Operation not allowed. Returned by promise. |
+| [5400102](../errorcode-media.md#5400102-unsupported-operation) | Operation not allowed. Returned by promise. |
 
 ## fdSrc
 
@@ -301,17 +298,15 @@ release(): Promise<void>
 fdSrc ?: AVFileDescriptor
 ```
 
-媒体文件描述，通过该属性设置数据源。
+Media file descriptor, which specifies the data source.
 
-**使用示例**：
+There is a media file that stores continuous assets, the address offset is 0, and the byte length is 100. Its file descriptor is **AVFileDescriptor { fd = resourceHandle; offset = 0; length = 100; }**.
 
-假设一个连续存储的媒体文件，地址偏移：0，字节长度：100。其文件描述为AVFileDescriptor { fd = 资源句柄; offset = 0; length = 100; }。
+**NOTE：**
 
-**说明：**
+After the resource handle (FD) is transferred to an AVImageGenerator instance, do not use the resource handle to perform other read and write operations, including but not limited to transferring this handle to other AVPlayer,AVMetadataExtractor, AVImageGenerator, or AVTranscoder instance. Competition occurs when multiple AVImageGenerator use the same resource handle to read and write files at the same time, resulting in errors in obtaining data.
 
-将资源句柄（fd）传递给AVImageGenerator实例之后，不允许通过该资源句柄做其他读写操作，包括但不限于将同一个资源句柄传递给多个AVPlayer/AVMetadataExtractor/AVImageGenerator/AVTranscoder。同一时间通过同一个资源句柄读写文件时存在竞争关系，将导致视频缩略图数据获取异常。
-
-**Type:** [AVFileDescriptor](arkts-media-multimedia-media-avfiledescriptor-i.md)
+**Type:** [AVFileDescriptor](arkts-media-media-avfiledescriptor-i.md)
 
 **Since:** 12
 

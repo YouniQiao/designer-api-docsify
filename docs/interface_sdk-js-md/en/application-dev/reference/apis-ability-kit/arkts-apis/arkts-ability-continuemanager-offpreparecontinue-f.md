@@ -35,5 +35,5 @@ Unregister prepareContinue event.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 16300501 | the system ability work abnormally. |
+| [16300501](../errorcode-DistributedSchedule.md#16300501-the-system-ability-works-abnormally) | the system ability work abnormally. |
 

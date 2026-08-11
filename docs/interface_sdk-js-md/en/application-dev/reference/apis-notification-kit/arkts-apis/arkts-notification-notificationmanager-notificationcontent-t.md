@@ -4,7 +4,7 @@
 export type NotificationContent = _NotificationContent
 ```
 
-通知内容。
+Describes the notification content.
 
 **Since:** 9
 

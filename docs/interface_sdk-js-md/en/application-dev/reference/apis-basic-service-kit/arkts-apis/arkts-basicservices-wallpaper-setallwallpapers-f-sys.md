@@ -12,7 +12,7 @@ import { wallpaper } from 'kits/@kit.BasicServicesKit';
 function setAllWallpapers(wallpaperInfos: Array<WallpaperInfo>, wallpaperType: WallpaperType): Promise<void>
 ```
 
-设置设备所有形态的壁纸。使用promise异步回调。（包括折展状态、横竖屏状态、资源路径，其中NORMAL-PORT为必选）
+Set wallpapers for all forms of devices.
 
 **Since:** 14
 
@@ -30,22 +30,22 @@ function setAllWallpapers(wallpaperInfos: Array<WallpaperInfo>, wallpaperType: W
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| wallpaperInfos | Array&lt;WallpaperInfo&gt; | Yes | 所有壁纸的信息结构。 |
-| wallpaperType | [WallpaperType](arkts-basicservices-wallpaper-wallpapertype-e.md) | Yes | 壁纸类型。 |
+| wallpaperInfos | Array&lt;WallpaperInfo&gt; | Yes | indicates the current device wallpaper type object. among them, NORMAL and PORTRAIT are mandatory. |
+| wallpaperType | [WallpaperType](arkts-basicservices-wallpaper-wallpapertype-e.md) | Yes | indicates the wallpaper type. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | 无返回结果的Promise对象。 |
+| Promise&lt;void&gt; | the promise returned by the function. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | parameter error. Possible causes: 1.Mandatory parameters are left unspecified. 2.The first parameter type must be Array&lt;WallpaperInfo&gt;. The second type must be WallpaperType. 3.The first parameter type must be Array&lt;WallpaperInfo&gt;, must include wallpaper with FoldState NORMAL and RotateState PORTRAIT. |
-| 201 | permission denied. |
-| 202 | permission verification failed, application which is not a system application uses system API. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | parameter error. Possible causes: 1.Mandatory parameters are left unspecified. 2.The first parameter type must be Array&lt;WallpaperInfo&gt;. The second type must be WallpaperType. 3.The first parameter type must be Array&lt;WallpaperInfo&gt;, must include wallpaper with FoldState NORMAL and RotateState PORTRAIT. |
+| [201](../../errorcode-universal.md#201-permission-denied) | permission denied. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | permission verification failed, application which is not a system application uses system API. |
 
 ## Examples
 

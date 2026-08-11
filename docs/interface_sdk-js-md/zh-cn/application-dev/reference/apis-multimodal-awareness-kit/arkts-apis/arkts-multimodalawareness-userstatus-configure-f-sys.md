@@ -1,18 +1,12 @@
 # configure（系统接口）
 
-## 导入模块
-
-```TypeScript
-import { userStatus } from 'kits/@kit.MultimodalAwarenessKit';
-```
-
 ## configure
 
 ```TypeScript
 function configure(featureId: UserStatusFeature, detail: string): int
 ```
 
-Configures feature parameters.
+配置特性参数。
 
 **起始版本：** 26.0.0
 
@@ -30,19 +24,19 @@ Configures feature parameters.
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| featureId | [UserStatusFeature](arkts-multimodalawareness-userstatus-userstatusfeature-e-sys.md) | 是 | Feature to configure. |
-| detail | string | 是 | Detailed feature parameters in JSON format. |
+| featureId | [UserStatusFeature](arkts-multimodalawareness-userstatus-userstatusfeature-e-sys.md) | 是 | 要配置的特性。 |
+| detail | string | 是 | JSON格式的详细特性参数。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| ArkTS-Dyn: number  <br>ArkTS-Sta：int | Returns 0 if the operation succeeds; otherwise, returns a non-zero value. |
+| ArkTS-Dyn: number  <br>ArkTS-Sta：int | 操作成功返回0，否则返回非0值。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 33900001 | Service exception. Possible causes: &lt;br&gt;1. System error, such as a null pointer and container-related exception. &lt;br&gt;2. Node-API invocation exception, such as invalid Node-API status. |
-| 202 | Permission verification failed. A non-system application calls a system API. |
+| [33900001](../../apis-multimodalawareness-kit/errorcode-userStatus.md#33900001-服务异常) | Service exception. Possible causes: &lt;br&gt;1. System error, such as a null pointer and container-related exception. &lt;br&gt;2. Node-API invocation exception, such as invalid Node-API status. |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed. A non-system application calls a system API. |
 

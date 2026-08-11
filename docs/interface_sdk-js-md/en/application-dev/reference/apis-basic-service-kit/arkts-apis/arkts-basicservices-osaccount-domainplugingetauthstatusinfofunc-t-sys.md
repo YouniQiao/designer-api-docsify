@@ -5,7 +5,7 @@ type DomainPluginGetAuthStatusInfoFunc = (domainAccountInfo: DomainAccountInfo,
     callback: AsyncCallback<AuthStatusInfo>) => void
 ```
 
-查询指定域账号的认证状态信息。
+Gets the domain authentication property for the specified domain account.
 
 **Since:** 23
 
@@ -21,6 +21,6 @@ type DomainPluginGetAuthStatusInfoFunc = (domainAccountInfo: DomainAccountInfo,
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| domainAccountInfo | [DomainAccountInfo](arkts-basicservices-osaccount-domainaccountinfo-i-sys.md) | Yes | 表示域账号信息。 |
-| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;AuthStatusInfo&gt; | Yes | 表示查询结果回调。 |
+| domainAccountInfo | [DomainAccountInfo](arkts-basicservices-osaccount-domainaccountinfo-i-sys.md) | Yes | Indicates the domain account information for authentication. |
+| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;AuthStatusInfo&gt; | Yes | Indicates the callback for notifying the domain authentication status information. |
 

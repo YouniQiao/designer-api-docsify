@@ -4,7 +4,7 @@
 declare type SaveStateCallback = () => Record<string, Object> | null
 ```
 
-自定义页面状态保存回调。
+Custom page state save callback.
 
 **Since:** 26.0.0
 

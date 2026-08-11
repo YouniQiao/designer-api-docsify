@@ -1,6 +1,6 @@
 # Rect
 
-矩形区域。
+Describes a rectangle on the display.
 
 **Since:** 9
 
@@ -22,7 +22,7 @@ import { display } from 'kits/@kit.ArkUI';
 height: long
 ```
 
-矩形区域的高度，单位为px，该参数为整数。
+Height of the rectangle, in px. The value is an integer.
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：long
 
@@ -42,7 +42,7 @@ height: long
 left: long
 ```
 
-矩形区域的左边界，单位为px，该参数为整数。
+Left boundary of the rectangle, in px. The value is an integer.
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：long
 
@@ -62,7 +62,7 @@ left: long
 top: long
 ```
 
-矩形区域的上边界，单位为px，该参数为整数。
+Top boundary of the rectangle, in px. The value is an integer.
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：long
 
@@ -82,7 +82,7 @@ top: long
 width: long
 ```
 
-矩形区域的宽度，单位为px，该参数为整数。
+Width of the rectangle, in px. The value is an integer.
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：long
 

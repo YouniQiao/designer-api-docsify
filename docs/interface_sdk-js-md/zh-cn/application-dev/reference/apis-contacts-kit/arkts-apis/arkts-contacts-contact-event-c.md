@@ -10,19 +10,13 @@
 
 **系统能力：** SystemCapability.Applications.ContactsData
 
-## 导入模块
-
-```TypeScript
-import { contact } from 'kits/@kit.ContactsKit';
-```
-
 ## CUSTOM_LABEL
 
 ```TypeScript
 static readonly CUSTOM_LABEL: 0
 ```
 
-自定义邮箱类型，默认值为0。
+自定义事件类型，默认值为0。
 
 **类型：** 0
 
@@ -42,7 +36,7 @@ static readonly CUSTOM_LABEL: 0
 static readonly EVENT_ANNIVERSARY: 1
 ```
 
-自定义邮箱类型，默认值为0。
+周年纪念事件类型，默认值为1。
 
 **类型：** 1
 
@@ -82,7 +76,7 @@ static readonly EVENT_BIRTHDAY: 3
 static readonly EVENT_OTHER: 2
 ```
 
-自定义邮箱类型，默认值为0。
+其它事件类型，默认值为2。
 
 **类型：** 2
 
@@ -102,7 +96,7 @@ static readonly EVENT_OTHER: 2
 static readonly INVALID_LABEL_ID: -1
 ```
 
-无效邮箱类型，默认值为-1。
+无效事件类型，默认值为-1。
 
 **类型：** -1
 
@@ -142,7 +136,7 @@ eventDate: string
 labelId?: number
 ```
 
-邮箱的类型。
+事件的类型。
 
 **类型：** number
 
@@ -162,7 +156,7 @@ labelId?: number
 labelName?: string
 ```
 
-邮箱的类型名称。
+事件的类型名称。
 
 **类型：** string
 

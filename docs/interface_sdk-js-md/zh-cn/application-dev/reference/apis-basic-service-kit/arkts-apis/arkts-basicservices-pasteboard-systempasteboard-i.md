@@ -10,12 +10,6 @@
 
 **系统能力：** SystemCapability.MiscServices.Pasteboard
 
-## 导入模块
-
-```TypeScript
-import { pasteboard } from 'kits/@kit.BasicServicesKit';
-```
-
 ## clear
 
 ```TypeScript
@@ -46,7 +40,7 @@ clear(callback: AsyncCallback<void>): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 401 | Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameters types. |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameters types. |
 
 ## 示例
 
@@ -54,7 +48,7 @@ clear(callback: AsyncCallback<void>): void
 const systemPasteboard: pasteboard.SystemPasteboard = pasteboard.getSystemPasteboard();
 systemPasteboard.clear((err, data) => {
     if (err) {
-        console.error(`Failed to clear the PasteData. errorCode: ${err.code}, errorMessage: ${err.message}.`);
+        console.error(`Failed to clear the PasteData. Cause: ${err.message}`);
         return;
     }
     console.info('Succeeded in clearing the PasteData.');
@@ -96,7 +90,7 @@ const systemPasteboard: pasteboard.SystemPasteboard = pasteboard.getSystemPasteb
 systemPasteboard.clear().then((data) => {
     console.info('Succeeded in clearing the PasteData.');
 }).catch((err: BusinessError) => {
-    console.error(`Failed to clear the PasteData. errorCode: ${err.code}, errorMessage: ${err.message}.`);
+    console.error(`Failed to clear the PasteData. Cause: ${err.message}`);
 });
 ```
 
@@ -128,17 +122,15 @@ clearData(callback: AsyncCallback<void>): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 401 | Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameters types. |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameters types. |
 
 ## 示例
 
 ```TypeScript
-// 获取系统剪贴板对象
 const systemPasteboard: pasteboard.SystemPasteboard = pasteboard.getSystemPasteboard();
-// 清空系统剪贴板内容
 systemPasteboard.clearData((err, data) => {
     if (err) {
-        console.error(`Failed to clear the pasteboard. errorCode: ${err.code}, errorMessage: ${err.message}.`);
+        console.error(`Failed to clear the pasteboard. Cause: ${err.message}`);
         return;
     }
     console.info('Succeeded in clearing the pasteboard.');
@@ -178,7 +170,7 @@ const systemPasteboard: pasteboard.SystemPasteboard = pasteboard.getSystemPasteb
 systemPasteboard.clearData().then((data: void) => {
     console.info('Succeeded in clearing the pasteboard.');
 }).catch((err: BusinessError) => {
-    console.error(`Failed to clear the pasteboard. errorCode: ${err.code}, errorMessage: ${err.message}.`);
+    console.error(`Failed to clear the pasteboard. Cause: ${err.message}`);
 });
 ```
 
@@ -204,7 +196,7 @@ clearDataSync(): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 12900005 | Excessive processing time for internal data. |
+| [12900005](../../apis-basic-services-kit/errorcode-pasteboard.md#12900005-请求超时) | Excessive processing time for internal data. |
 
 ## 示例
 
@@ -214,7 +206,7 @@ try {
     systemPasteboard.clearDataSync();
     console.info('Succeeded in clearing the pasteboard.');
 } catch (err) {
-    console.error(`Failed to clear the pasteboard. errorCode: ${err.code}, errorMessage: ${err.message}.`);
+    console.error('Failed to clear the pasteboard. Cause:' + err.message);
 };
 ```
 
@@ -250,9 +242,11 @@ detectPatterns(patterns: Array<Pattern>): Promise<Array<Pattern>>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
 
 ## 示例
+
+ArkTS-Dyn示例：
 
 ```TypeScript
 import { pasteboard } from '@kit.BasicServicesKit'
@@ -261,16 +255,40 @@ const systemPasteboard: pasteboard.SystemPasteboard = pasteboard.getSystemPasteb
 let patterns: Array<pasteboard.Pattern> = [pasteboard.Pattern.URL, pasteboard.Pattern.EMAIL_ADDRESS];
 
 systemPasteboard.detectPatterns(patterns).then((data: Array<pasteboard.Pattern>) => {
-    if (patterns.sort().join('') == data.sort().join('')) {
+    if (patterns.sort().join('')==data.sort().join('')) {
       console.info('All needed patterns detected, next get data');
       try {
         let result: pasteboard.PasteData = systemPasteboard.getDataSync();
         console.info('Succeeded in getting PasteData.');
       } catch (err) {
-        console.error(`Failed to get PasteData. errorCode: ${err.code}, errorMessage: ${err.message}.`);
+        console.error('Failed to get PasteData. Cause:' + err.message);
       };
     } else {
       console.info("Not all needed patterns detected, no need to get data.");
+    }
+});
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+import { pasteboard } from '@kit.BasicServicesKit'
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let systemPasteboard: pasteboard.SystemPasteboard = pasteboard.getSystemPasteboard();
+let patterns: Array<pasteboard.Pattern> = [pasteboard.Pattern.URL, pasteboard.Pattern.EMAIL_ADDRESS];
+
+systemPasteboard.detectPatterns(patterns).then((data: Array<pasteboard.Pattern>) => {
+    if (patterns.sort().join('')==data.sort().join('')) {
+        console.info('All needed patterns detected, next get data');
+        try {
+            let result: pasteboard.PasteData = systemPasteboard.getDataSync();
+            console.info('Succeeded in getting PasteData.');
+        } catch (err: BusinessError) {
+            console.error('Failed to get PasteData. Cause:' + err.message);
+        };
+    } else {
+        console.info("Not all needed patterns detected, no need to get data.");
     }
 });
 ```
@@ -307,6 +325,8 @@ getChangeCount(): long
 
 ## 示例
 
+ArkTS-Dyn示例：
+
 ```TypeScript
 import { BusinessError, pasteboard } from '@kit.BasicServicesKit';
 
@@ -315,7 +335,21 @@ try {
     let result : number = systemPasteboard.getChangeCount();
     console.info(`Succeeded in getting the ChangeCount. Result: ${result}`);
 } catch (err) {
-    console.error(`Failed to get the ChangeCount. errorCode: ${err.code}, errorMessage: ${err.message}.`);
+    console.error(`Failed to get the ChangeCount. Cause: ${err.message}`);
+};
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+import { BusinessError, pasteboard } from '@kit.BasicServicesKit';
+
+let systemPasteboard: pasteboard.SystemPasteboard = pasteboard.getSystemPasteboard();
+try {
+    let result : long = systemPasteboard.getChangeCount();
+    console.info(`Succeeded in getting the ChangeCount. Result: ${result}`);
+} catch (err) {
+    console.error(`Failed to get the ChangeCount. Cause: ${err.message}`);
 };
 ```
 
@@ -350,24 +384,21 @@ getData(callback: AsyncCallback<PasteData>): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 401 | Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameters types. |
-| 27787277 | Another copy or paste operation is in progress. |
-| 201 | Permission verification failed. The application does not have the permission required to call the API.<br>**适用版本：** 12+ |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameters types. |
+| [27787277](../../apis-basic-services-kit/errorcode-pasteboard.md#27787277-另外一个复制或粘贴正在进行) | Another copy or paste operation is in progress. |
+| [201](../../errorcode-universal.md#201-权限校验失败) | Permission verification failed. The application does not have the permission required to call the API.<br>**适用版本：** 12+ |
 
 ## 示例
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
 
-// 获取系统剪贴板对象
 const systemPasteboard: pasteboard.SystemPasteboard = pasteboard.getSystemPasteboard();
-// 读取系统剪贴板内容
 systemPasteboard.getData((err: BusinessError, pasteData: pasteboard.PasteData) => {
     if (err) {
-        console.error(`Failed to get PasteData. errorCode: ${err.code}, errorMessage: ${err.message}.`);
+        console.error('Failed to get PasteData. Cause: ' + err.message);
         return;
     }
-    // 获取剪贴板中的纯文本内容
     let text: string = pasteData.getPrimaryText();
 });
 ```
@@ -403,22 +434,19 @@ getData(): Promise<PasteData>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 27787277 | Another copy or paste operation is in progress. |
-| 201 | Permission verification failed. The application does not have the permission required to call the API.<br>**适用版本：** 12+ |
+| [27787277](../../apis-basic-services-kit/errorcode-pasteboard.md#27787277-另外一个复制或粘贴正在进行) | Another copy or paste operation is in progress. |
+| [201](../../errorcode-universal.md#201-权限校验失败) | Permission verification failed. The application does not have the permission required to call the API.<br>**适用版本：** 12+ |
 
 ## 示例
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
 
-// 获取系统剪贴板对象
 const systemPasteboard: pasteboard.SystemPasteboard = pasteboard.getSystemPasteboard();
-// 读取系统剪贴板内容
 systemPasteboard.getData().then((pasteData: pasteboard.PasteData) => {
-    // 获取剪贴板中的纯文本内容
     let text: string = pasteData.getPrimaryText();
 }).catch((err: BusinessError) => {
-    console.error(`Failed to get PasteData. errorCode: ${err.code}, errorMessage: ${err.message}.`);
+    console.error('Failed to get PasteData. Cause: ' + err.message);
 });
 ```
 
@@ -450,7 +478,7 @@ getDataSource(): string
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 12900005 | Excessive processing time for internal data. |
+| [12900005](../../apis-basic-services-kit/errorcode-pasteboard.md#12900005-请求超时) | Excessive processing time for internal data. |
 
 ## 示例
 
@@ -460,7 +488,7 @@ try {
     let result: string = systemPasteboard.getDataSource();
     console.info(`Succeeded in getting DataSource. Result: ${result}`);
 } catch (err) { 
-    console.error(`Failed to get DataSource. errorCode: ${err.code}, errorMessage: ${err.message}.`);
+    console.error('Failed to get DataSource. Cause:' + err.message);
 };
 ```
 
@@ -495,8 +523,8 @@ getDataSync(): PasteData
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 12900005 | Excessive processing time for internal data. |
-| 201 | Permission verification failed. The application does not have the permission required to call the API.<br>**适用版本：** 12+ |
+| [12900005](../../apis-basic-services-kit/errorcode-pasteboard.md#12900005-请求超时) | Excessive processing time for internal data. |
+| [201](../../errorcode-universal.md#201-权限校验失败) | Permission verification failed. The application does not have the permission required to call the API.<br>**适用版本：** 12+ |
 
 ## 示例
 
@@ -506,7 +534,7 @@ try {
     let result: pasteboard.PasteData = systemPasteboard.getDataSync();
     console.info('Succeeded in getting PasteData.');
 } catch (err) {
-    console.error(`Failed to get PasteData. errorCode: ${err.code}, errorMessage: ${err.message}.`);
+    console.error('Failed to get PasteData. Cause:' + err.message);
 };
 ```
 
@@ -546,15 +574,17 @@ getDataWithProgress(params: GetDataParams): Promise<PasteData>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 401 | Parameter error. |
-| 12900007 | Invalid destUri or file system error. |
-| 12900003 | Another copy or paste operation is in progress. |
-| 201 | Permission verification failed. The application does not have the permission required to call the API. |
-| 12900008 | Failed to start progress. |
-| 12900009 | Progress exits abnormally. |
-| 12900010 | System error occurred during paste execution. |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. |
+| [12900007](../../apis-basic-services-kit/errorcode-pasteboard.md#12900007-文件拷贝失败) | Invalid destUri or file system error. |
+| [12900003](../../apis-basic-services-kit/errorcode-pasteboard.md#12900003-另外一个复制或粘贴正在进行) | Another copy or paste operation is in progress. |
+| [201](../../errorcode-universal.md#201-权限校验失败) | Permission verification failed. The application does not have the permission required to call the API. |
+| [12900008](../../apis-basic-services-kit/errorcode-pasteboard.md#12900008-启动进度条hap失败) | Failed to start progress. |
+| [12900009](../../apis-basic-services-kit/errorcode-pasteboard.md#12900009-进度上报异常) | Progress exits abnormally. |
+| [12900010](../../apis-basic-services-kit/errorcode-pasteboard.md#12900010-获取粘贴数据失败) | System error occurred during paste execution. |
 
 ## 示例
+
+ArkTS-Dyn示例：
 
 ```TypeScript
 import { BusinessError, pasteboard } from '@kit.BasicServicesKit';
@@ -573,7 +603,7 @@ struct PasteboardTest {
               let systemPasteboard = pasteboard.getSystemPasteboard();
               await systemPasteboard.setData(pasteData);
               let progressListenerInfo = (progress: pasteboard.ProgressInfo) => {
-                console.info(`progressListener success, progress: ${progress.progress}`);
+                console.info('progressListener success, progress:' + progress.progress);
               };
               let destPath: string = '/data/storage/el2/base/files/';
               let destUri : string = fileUri.getUriFromPath(destPath);
@@ -586,7 +616,46 @@ struct PasteboardTest {
               systemPasteboard.getDataWithProgress(params).then((pasteData: pasteboard.PasteData) => {
                 console.info('getDataWithProgress success');
               }).catch((err: BusinessError) => {
-                console.error(`Failed to get PasteData. CerrorCode: ${err.code}, errorMessage: ${err.message}.`);
+                console.error('Failed to get PasteData. Cause: ' + err.message);
+              })
+          })
+        }
+      }
+    }
+  }
+}
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+import { BusinessError, pasteboard } from '@kit.BasicServicesKit';
+@Entry
+@Component
+struct PasteboardTest {
+ build() {
+   RelativeContainer() {
+     Column() {
+       Column() {
+         Button("Copy txt")
+           .onClick(async ()=>{
+              let text = "test";
+              let pasteData = pasteboard.createData(pasteboard.MIMETYPE_TEXT_PLAIN, text);
+              let systemPasteboard = pasteboard.getSystemPasteboard();
+              await systemPasteboard.setData(pasteData);
+              let ProgressListener = (progress: pasteboard.ProgressInfo) => {
+                console.info('progressListener success, progress:' + progress.progress);
+              }
+              let params: pasteboard.GetDataParams = {
+                destUri: '/data/storage/el2/base/haps/entry/files/dstFile.txt',
+                fileConflictOptions: pasteboard.FileConflictOptions.OVERWRITE,
+                progressIndicator: pasteboard.ProgressIndicator.DEFAULT,
+                progressListener: ProgressListener
+              };
+              systemPasteboard.getDataWithProgress(params).then((pasteData: pasteboard.PasteData) => {
+                console.info('getDataWithProgress success');
+              }).catch((err: BusinessError): void => {
+                console.error('Failed to get PasteData. Cause: ' + err.message);
               })
           })
         }
@@ -629,7 +698,7 @@ const systemPasteboard: pasteboard.SystemPasteboard = pasteboard.getSystemPasteb
 systemPasteboard.getMimeTypes().then((data: Array<string>) => {
     console.info('Succeeded in getting mimeTypes. mimeTypes: ' + data.sort().join(','));
 }).catch((err: BusinessError) => {
-    console.error(`Failed to get mimeTypes. errorCode: ${err.code}, errorMessage: ${err.message}.`);
+    console.error('Failed to get mimeTypes. Cause:' + err.message);
 });
 ```
 
@@ -663,22 +732,19 @@ getPasteData(callback: AsyncCallback<PasteData>): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 401 | Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameters types. |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameters types. |
 
 ## 示例
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
 
-// 获取系统剪贴板对象
 const systemPasteboard: pasteboard.SystemPasteboard = pasteboard.getSystemPasteboard();
-// 读取系统剪贴板内容
 systemPasteboard.getPasteData((err: BusinessError, pasteData: pasteboard.PasteData) => {
     if (err) {
-        console.error(`Failed to get PasteData. errorCode: ${err.code}, errorMessage: ${err.message}.`);
+        console.error('Failed to get PasteData. Cause: ' + err.message);
         return;
     }
-    // 获取剪贴板中的纯文本内容
     let text: string = pasteData.getPrimaryText();
 });
 ```
@@ -714,14 +780,11 @@ getPasteData(): Promise<PasteData>
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
 
-// 获取系统剪贴板对象
 const systemPasteboard: pasteboard.SystemPasteboard = pasteboard.getSystemPasteboard();
-// 读取系统剪贴板内容
 systemPasteboard.getPasteData().then((pasteData: pasteboard.PasteData) => {
-    // 获取剪贴板中的纯文本内容
     let text: string = pasteData.getPrimaryText();
 }).catch((err: BusinessError) => {
-    console.error(`Failed to get PasteData. errorCode: ${err.code}, errorMessage: ${err.message}.`);
+    console.error('Failed to get PasteData. Cause: ' + err.message);
 });
 ```
 
@@ -755,10 +818,12 @@ getUnifiedData(): Promise<unifiedDataChannel.UnifiedData>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 27787277 | Another copy or paste operation is in progress. |
-| 201 | Permission verification failed. The application does not have the permission required to call the API. |
+| [27787277](../../apis-basic-services-kit/errorcode-pasteboard.md#27787277-另外一个复制或粘贴正在进行) | Another copy or paste operation is in progress. |
+| [201](../../errorcode-universal.md#201-权限校验失败) | Permission verification failed. The application does not have the permission required to call the API. |
 
 ## 示例
+
+ArkTS-Dyn示例：
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -774,7 +839,27 @@ systemPasteboard.getUnifiedData().then((data) => {
         }
     }
 }).catch((err: BusinessError) => {
-    console.error(`Failed to get UnifiedData. errorCode: ${err.code}, errorMessage: ${err.message}.`);
+    console.error('Failed to get UnifiedData. Cause: ' + err.message);
+});
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+import { unifiedDataChannel, uniformDataStruct, uniformTypeDescriptor } from '@kit.ArkData';
+
+let systemPasteboard: pasteboard.SystemPasteboard = pasteboard.getSystemPasteboard();
+systemPasteboard.getUnifiedData().then((data) => {
+  let records: Array<unifiedDataChannel.UnifiedRecord> = data.getRecords();
+  for (let j = 0; j < records.length; j++) {
+    if (records[j].getType() === uniformTypeDescriptor.UniformDataType.PLAIN_TEXT.toString()) {
+      let text = records[j].getValue() as uniformDataStruct.PlainText;
+      console.info(`${j + 1}.${text.textContent}`);
+    }
+  }
+}).catch((err: BusinessError): void => {
+  console.error('Failed to get UnifiedData. Cause: ' + err.message);
 });
 ```
 
@@ -808,8 +893,8 @@ getUnifiedDataSync(): unifiedDataChannel.UnifiedData
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 12900005 | Excessive processing time for internal data. |
-| 201 | Permission verification failed. The application does not have the permission required to call the API. |
+| [12900005](../../apis-basic-services-kit/errorcode-pasteboard.md#12900005-请求超时) | Excessive processing time for internal data. |
+| [201](../../errorcode-universal.md#201-权限校验失败) | Permission verification failed. The application does not have the permission required to call the API. |
 
 ## 示例
 
@@ -821,7 +906,7 @@ try {
     let result: unifiedDataChannel.UnifiedData = systemPasteboard.getUnifiedDataSync();
     console.info('Succeeded in getting UnifiedData.');
 } catch (err) {
-    console.error(`Failed to get UnifiedData. errorCode: ${err.code}, errorMessage: ${err.message}.`);
+    console.error('Failed to get UnifiedData. Cause:' + err.message);
 };
 ```
 
@@ -853,7 +938,7 @@ hasData(callback: AsyncCallback<boolean>): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 401 | Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameters types. |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameters types. |
 
 ## 示例
 
@@ -863,7 +948,7 @@ import { BusinessError } from '@kit.BasicServicesKit';
 const systemPasteboard: pasteboard.SystemPasteboard = pasteboard.getSystemPasteboard();
 systemPasteboard.hasData((err: BusinessError, data: boolean) => {
     if (err) {
-        console.error(`Failed to check the PasteData. errorCode: ${err.code}, errorMessage: ${err.message}.`);
+        console.error(`Failed to check the PasteData. Cause: ${err.message}`);
         return;
     }
     console.info(`Succeeded in checking the PasteData. Data: ${data}`);
@@ -903,7 +988,7 @@ const systemPasteboard: pasteboard.SystemPasteboard = pasteboard.getSystemPasteb
 systemPasteboard.hasData().then((data: boolean) => {
     console.info(`Succeeded in checking the PasteData. Data: ${data}`);
 }).catch((err: BusinessError) => {
-    console.error(`Failed to check the PasteData. errorCode: ${err.code}, errorMessage: ${err.message}.`);
+    console.error(`Failed to check the PasteData. Cause: ${err.message}`);
 });
 ```
 
@@ -935,7 +1020,7 @@ hasDataSync(): boolean
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 12900005 | Excessive processing time for internal data. |
+| [12900005](../../apis-basic-services-kit/errorcode-pasteboard.md#12900005-请求超时) | Excessive processing time for internal data. |
 
 ## 示例
 
@@ -945,7 +1030,7 @@ try {
     let result: boolean = systemPasteboard.hasDataSync();
     console.info(`Succeeded in checking the PasteData. Result: ${result}`);
 } catch (err) {
-    console.error(`Failed to check the PasteData. errorCode: ${err.code}, errorMessage: ${err.message}.`);
+    console.error('Failed to check the PasteData. Cause:' + err.message);
 };
 ```
 
@@ -983,8 +1068,8 @@ hasDataType(mimeType: string): boolean
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 401 | Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameters types. |
-| 12900005 | Excessive processing time for internal data. |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameters types. |
+| [12900005](../../apis-basic-services-kit/errorcode-pasteboard.md#12900005-请求超时) | Excessive processing time for internal data. |
 
 ## 示例
 
@@ -994,7 +1079,7 @@ try {
     let result: boolean = systemPasteboard.hasDataType(pasteboard.MIMETYPE_TEXT_PLAIN);
     console.info(`Succeeded in checking the DataType. Result: ${result}`);
 } catch (err) {
-    console.error(`Failed to check the DataType. errorCode: ${err.code}, errorMessage: ${err.message}.`);
+    console.error('Failed to check the DataType. Cause:' + err.message);
 };
 ```
 
@@ -1028,7 +1113,7 @@ hasPasteData(callback: AsyncCallback<boolean>): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 401 | Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameters types. |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameters types. |
 
 ## 示例
 
@@ -1038,7 +1123,7 @@ import { BusinessError } from '@kit.BasicServicesKit';
 const systemPasteboard: pasteboard.SystemPasteboard = pasteboard.getSystemPasteboard();
 systemPasteboard.hasPasteData((err: BusinessError, data: boolean) => {
     if (err) {
-        console.error(`Failed to check the PasteData. errorCode: ${err.code}, errorMessage: ${err.message}.`);
+        console.error(`Failed to check the PasteData. Cause: ${err.message}`);
         return;
     }
     console.info(`Succeeded in checking the PasteData. Data: ${data}`);
@@ -1080,7 +1165,7 @@ const systemPasteboard: pasteboard.SystemPasteboard = pasteboard.getSystemPasteb
 systemPasteboard.hasPasteData().then((data: boolean) => {
     console.info(`Succeeded in checking the PasteData. Data: ${data}`);
 }).catch((err: BusinessError) => {
-    console.error(`Failed to check the PasteData. errorCode: ${err.code}, errorMessage: ${err.message}.`);
+    console.error(`Failed to check the PasteData. Cause: ${err.message}`);
 });
 ```
 
@@ -1145,9 +1230,11 @@ isRemoteData(): boolean
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 12900005 | Excessive processing time for internal data. |
+| [12900005](../../apis-basic-services-kit/errorcode-pasteboard.md#12900005-请求超时) | Excessive processing time for internal data. |
 
 ## 示例
+
+ArkTS-Dyn示例：
 
 ```TypeScript
 const systemPasteboard: pasteboard.SystemPasteboard = pasteboard.getSystemPasteboard();
@@ -1155,7 +1242,20 @@ try {
     let result: boolean = systemPasteboard.isRemoteData();
     console.info(`Succeeded in checking the RemoteData. Result: ${result}`);
 } catch (err) {
-    console.error(`Failed to check the RemoteData. errorCode: ${err.code}, errorMessage: ${err.message}.`);
+    console.error('Failed to check the RemoteData. Cause:' + err.message);
+};
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+let systemPasteboard: pasteboard.SystemPasteboard = pasteboard.getSystemPasteboard();
+try {
+    let result: boolean = systemPasteboard.isRemoteData();
+    console.info(`Succeeded in checking the RemoteData. Result: ${result}`);
+} catch (err: BusinessError ) {
+    console.error('Failed to check the RemoteData. Cause:' + err.message);
 };
 ```
 
@@ -1190,18 +1290,15 @@ off(type: 'update', callback?: () => void): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 401 | Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameters types. |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameters types. |
 
 ## 示例
 
 ```TypeScript
-// 获取系统剪贴板对象
 const systemPasteboard: pasteboard.SystemPasteboard = pasteboard.getSystemPasteboard();
-// 定义剪贴板内容变化回调函数 
 let listener = () => {
     console.info('The system pasteboard has changed.');
 };
-// 取消订阅剪贴板内容变化事件
 systemPasteboard.off('update', listener);
 ```
 
@@ -1263,6 +1360,16 @@ offUpdate(callback?: UpdateCallback): void
 | --- | --- | --- | --- |
 | callback | [UpdateCallback](arkts-basicservices-pasteboard-updatecallback-t.md) | 否 | 剪贴板中内容变化时触发的用户程序的回调。如果此参数未填，表明清除本应用的所有监听回调，否则表示清除指定监听回调。 |
 
+## 示例
+
+```TypeScript
+let systemPasteboard: pasteboard.SystemPasteboard = pasteboard.getSystemPasteboard();
+let listener = () => {
+    console.info('The system pasteboard has changed.');
+};
+systemPasteboard.offUpdate(listener);
+```
+
 ## on('update')
 
 ```TypeScript
@@ -1294,18 +1401,15 @@ on(type: 'update', callback: () => void): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 401 | Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameters types. |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameters types. |
 
 ## 示例
 
 ```TypeScript
-// 获取系统剪贴板对象
 const systemPasteboard: pasteboard.SystemPasteboard = pasteboard.getSystemPasteboard();
-// 定义剪贴板内容变化回调函数 
 let listener = () => {
     console.info('The system pasteboard has changed.');
 };
-// 订阅剪贴板内容变化事件
 systemPasteboard.on('update', listener);
 ```
 
@@ -1368,6 +1472,16 @@ onUpdate(callback: UpdateCallback): void
 | --- | --- | --- | --- |
 | callback | [UpdateCallback](arkts-basicservices-pasteboard-updatecallback-t.md) | 是 | 剪贴板中内容变化时触发的用户程序的回调。 |
 
+## 示例
+
+```TypeScript
+let systemPasteboard: pasteboard.SystemPasteboard = pasteboard.getSystemPasteboard();
+let listener = () => {
+    console.info('The system pasteboard has changed.');
+};
+systemPasteboard.onUpdate(listener);
+```
+
 ## removeAppShareOptions
 
 ```TypeScript
@@ -1395,8 +1509,8 @@ removeAppShareOptions(): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 201 | Permission verification failed. The application does not have the permission required to call the API.<br>**适用版本：** 14+ |
-| 202 | Permission verification failed. A non-system application calls a system API.<br>**适用版本：** 12 - 13 |
+| [201](../../errorcode-universal.md#201-权限校验失败) | Permission verification failed. The application does not have the permission required to call the API.<br>**适用版本：** 14+ |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed. A non-system application calls a system API.<br>**适用版本：** 12 - 13 |
 
 ## 示例
 
@@ -1443,10 +1557,10 @@ setAppShareOptions(shareOptions: ShareOption): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
-| 12900006 | Settings already exist. |
-| 201 | Permission verification failed. The application does not have the permission required to call the API.<br>**适用版本：** 14+ |
-| 202 | Permission verification failed. A non-system application calls a system API.<br>**适用版本：** 12 - 13 |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| [12900006](../../apis-basic-services-kit/errorcode-pasteboard.md#12900006-设置已存在) | Settings already exist. |
+| [201](../../errorcode-universal.md#201-权限校验失败) | Permission verification failed. The application does not have the permission required to call the API.<br>**适用版本：** 14+ |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed. A non-system application calls a system API.<br>**适用版本：** 12 - 13 |
 
 ## 示例
 
@@ -1489,21 +1603,18 @@ setData(data: PasteData, callback: AsyncCallback<void>): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 401 | Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameters types. |
-| 27787277 | Another copy or paste operation is in progress. |
-| 27787278 | Replication is prohibited. |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameters types. |
+| [27787277](../../apis-basic-services-kit/errorcode-pasteboard.md#27787277-另外一个复制或粘贴正在进行) | Another copy or paste operation is in progress. |
+| [27787278](../../apis-basic-services-kit/errorcode-pasteboard.md#27787278-禁止复制) | Replication is prohibited. |
 
 ## 示例
 
 ```TypeScript
-// 创建纯文本剪贴板内容对象
 let pasteData: pasteboard.PasteData = pasteboard.createData(pasteboard.MIMETYPE_TEXT_PLAIN, 'content');
-// 获取系统剪贴板对象
 const systemPasteboard: pasteboard.SystemPasteboard = pasteboard.getSystemPasteboard();
-// 将数据写入系统剪贴板
 systemPasteboard.setData(pasteData, (err, data) => {
     if (err) {
-        console.error(`Failed to set PasteData. errorCode: ${err.code}, errorMessage: ${err.message}.`);
+        console.error('Failed to set PasteData. Cause: ' + err.message);
         return;
     }
     console.info('Succeeded in setting PasteData.');
@@ -1544,24 +1655,21 @@ setData(data: PasteData): Promise<void>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 401 | Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameters types. |
-| 27787277 | Another copy or paste operation is in progress. |
-| 27787278 | Replication is prohibited. |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameters types. |
+| [27787277](../../apis-basic-services-kit/errorcode-pasteboard.md#27787277-另外一个复制或粘贴正在进行) | Another copy or paste operation is in progress. |
+| [27787278](../../apis-basic-services-kit/errorcode-pasteboard.md#27787278-禁止复制) | Replication is prohibited. |
 
 ## 示例
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
 
-// 创建纯文本剪贴板内容对象
 let pasteData: pasteboard.PasteData = pasteboard.createData(pasteboard.MIMETYPE_TEXT_PLAIN, 'content');
-// 获取系统剪贴板对象
 const systemPasteboard: pasteboard.SystemPasteboard = pasteboard.getSystemPasteboard();
-// 将数据写入系统剪贴板
 systemPasteboard.setData(pasteData).then((data: void) => {
     console.info('Succeeded in setting PasteData.');
 }).catch((err: BusinessError) => {
-    console.error(`Failed to set PasteData. errorCode: ${err.code}, errorMessage: ${err.message}.`);
+    console.error('Failed to set PasteData. Cause: ' + err.message);
 });
 ```
 
@@ -1593,10 +1701,12 @@ setDataSync(data: PasteData): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 401 | Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameters types. |
-| 12900005 | Excessive processing time for internal data. |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameters types. |
+| [12900005](../../apis-basic-services-kit/errorcode-pasteboard.md#12900005-请求超时) | Excessive processing time for internal data. |
 
 ## 示例
+
+ArkTS-Dyn示例：
 
 ```TypeScript
 let pasteData: pasteboard.PasteData = pasteboard.createData(pasteboard.MIMETYPE_TEXT_PLAIN, 'hello');
@@ -1605,7 +1715,21 @@ try {
     systemPasteboard.setDataSync(pasteData);
     console.info('Succeeded in setting PasteData.');
 } catch (err) {
-    console.error(`Failed to set PasteData. errorCode: ${err.code}, errorMessage: ${err.message}.`);
+    console.error('Failed to set PasteData. Cause:' + err.message);
+};
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+let pasteData: pasteboard.PasteData = pasteboard.createData(pasteboard.MIMETYPE_TEXT_PLAIN, 'hello');
+let systemPasteboard: pasteboard.SystemPasteboard = pasteboard.getSystemPasteboard();
+try {
+    systemPasteboard.setDataSync(pasteData);
+    console.info('Succeeded in setting PasteData.');
+} catch (err: BusinessError) {
+    console.error('Failed to set PasteData. Cause:' + err.message);
 };
 ```
 
@@ -1640,7 +1764,7 @@ setPasteData(data: PasteData, callback: AsyncCallback<void>): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 401 | Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameters types. |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameters types. |
 
 ## 示例
 
@@ -1649,7 +1773,7 @@ let pasteData: pasteboard.PasteData = pasteboard.createPlainTextData('content');
 const systemPasteboard: pasteboard.SystemPasteboard = pasteboard.getSystemPasteboard();
 systemPasteboard.setPasteData(pasteData, (err, data) => {
     if (err) {
-        console.error(`Failed to set PasteData. errorCode: ${err.code}, errorMessage: ${err.message}.`);
+        console.error('Failed to set PasteData. Cause: ' + err.message);
         return;
     }
     console.info('Succeeded in setting PasteData.');
@@ -1698,7 +1822,7 @@ const systemPasteboard: pasteboard.SystemPasteboard = pasteboard.getSystemPasteb
 systemPasteboard.setPasteData(pasteData).then((data: void) => {
     console.info('Succeeded in setting PasteData.');
 }).catch((err: BusinessError) => {
-    console.error(`Failed to set PasteData. errorCode: ${err.code}, errorMessage: ${err.message}.`);
+    console.error('Failed to set PasteData. Cause: ' + err.message);
 });
 ```
 
@@ -1736,34 +1860,54 @@ setUnifiedData(data: unifiedDataChannel.UnifiedData): Promise<void>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 401 | Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameters types. |
-| 27787277 | Another copy or paste operation is in progress. |
-| 27787278 | Replication is prohibited. |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameters types. |
+| [27787277](../../apis-basic-services-kit/errorcode-pasteboard.md#27787277-另外一个复制或粘贴正在进行) | Another copy or paste operation is in progress. |
+| [27787278](../../apis-basic-services-kit/errorcode-pasteboard.md#27787278-禁止复制) | Replication is prohibited. |
 
 ## 示例
+
+ArkTS-Dyn示例：
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
 import { unifiedDataChannel, uniformDataStruct, uniformTypeDescriptor } from '@kit.ArkData';
 
-// 创建纯文本数据结构对象
 let plainText : uniformDataStruct.PlainText = {
     uniformDataType: uniformTypeDescriptor.UniformDataType.PLAIN_TEXT,
     textContent : 'PLAINTEXT_CONTENT',
     abstract : 'PLAINTEXT_ABSTRACT',
 }
-// 创建统一数据记录对象
 let record = new unifiedDataChannel.UnifiedRecord(uniformTypeDescriptor.UniformDataType.PLAIN_TEXT, plainText);
-// 创建统一数据对象
 let data = new unifiedDataChannel.UnifiedData();
-// 添加数据记录到统一数据对象
 data.addRecord(record);
 
 const systemPasteboard: pasteboard.SystemPasteboard = pasteboard.getSystemPasteboard();
 systemPasteboard.setUnifiedData(data).then((data: void) => {
     console.info('Succeeded in setting UnifiedData.');
 }).catch((err: BusinessError) => {
-    console.error(`Failed to setUnifiedData. errorCode: ${err.code}, errorMessage: ${err.message}.`);
+    console.error('Failed to setUnifiedData. Cause: ' + err.message);
+});
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+import { unifiedDataChannel, uniformDataStruct, uniformTypeDescriptor } from '@kit.ArkData';
+
+let plainText : uniformDataStruct.PlainText = {
+  uniformDataType: uniformTypeDescriptor.UniformDataType.PLAIN_TEXT,
+  textContent : 'PLAINTEXT_CONTENT',
+}
+let record = new unifiedDataChannel.UnifiedRecord(uniformTypeDescriptor.UniformDataType.PLAIN_TEXT, plainText);
+let data = new unifiedDataChannel.UnifiedData();
+data.addRecord(record);
+
+const systemPasteboard: pasteboard.SystemPasteboard = pasteboard.getSystemPasteboard();
+systemPasteboard.setUnifiedData(data).then(() => {
+  console.info('Succeeded in setting UnifiedData.');
+}).catch((err: BusinessError): void => {
+  console.error('Failed to setUnifiedData. Cause: ' + err.message);
 });
 ```
 
@@ -1795,28 +1939,24 @@ setUnifiedDataSync(data: unifiedDataChannel.UnifiedData): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 401 | Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameters types. |
-| 12900005 | Excessive processing time for internal data. |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameters types. |
+| [12900005](../../apis-basic-services-kit/errorcode-pasteboard.md#12900005-请求超时) | Excessive processing time for internal data. |
 
 ## 示例
+
+ArkTS-Dyn示例：
 
 ```TypeScript
 import { unifiedDataChannel } from '@kit.ArkData';
 
-// 创建统一数据对象
 let plainTextData = new unifiedDataChannel.UnifiedData();
-// 创建纯文本数据对象
 let plainText = new unifiedDataChannel.PlainText();
-// 设置纯文本的详细信息
 plainText.details = {
     Key: 'delayPlaintext',
     Value: 'delayPlaintext',
 };
-// 设置文本内容
 plainText.textContent = 'delayTextContent';
-// 设置摘要内容
 plainText.abstract = 'delayTextContent';
-// 添加数据记录到统一数据对象
 plainTextData.addRecord(plainText);
 
 const systemPasteboard: pasteboard.SystemPasteboard = pasteboard.getSystemPasteboard();
@@ -1824,7 +1964,28 @@ try {
     systemPasteboard.setUnifiedDataSync(plainTextData);
     console.info('Succeeded in setting UnifiedData.');
 } catch (err) {
-    console.error(`Failed to set UnifiedData. errorCode: ${err.code}, errorMessage: ${err.message}.`);
+    console.error('Failed to set UnifiedData. Cause:' + err.message);
+};
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+import { unifiedDataChannel } from '@kit.ArkData';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let plainTextData = new unifiedDataChannel.UnifiedData();
+let plainText = new unifiedDataChannel.PlainText();
+
+plainText.textContent = 'delayTextContent';
+plainTextData.addRecord(plainText);
+
+const systemPasteboard: pasteboard.SystemPasteboard = pasteboard.getSystemPasteboard();
+try {
+  systemPasteboard.setUnifiedDataSync(plainTextData);
+  console.info('Succeeded in setting UnifiedData.');
+} catch (err: BusinessError) {
+  console.error('Failed to set UnifiedData. Cause:' + err.message);
 };
 ```
 

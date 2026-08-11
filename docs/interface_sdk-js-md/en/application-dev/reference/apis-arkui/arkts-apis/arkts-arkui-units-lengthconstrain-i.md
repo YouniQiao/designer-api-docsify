@@ -1,8 +1,6 @@
 # LengthConstrain
 
-type LengthConstrain = { minLength: Length; maxLength: Length; }
-
-长度约束，用于对组件最大、最小长度做限制。
+Defines the length constrain property.
 
 **Since:** 23
 
@@ -18,7 +16,7 @@ type LengthConstrain = { minLength: Length; maxLength: Length; }
 maxLength: Length
 ```
 
-组件最大长度。
+maximum length.
 
 **Type:** [Length](arkts-arkui-length-t.md)
 
@@ -38,7 +36,7 @@ maxLength: Length
 minLength: Length
 ```
 
-组件最小长度。
+minimum length.
 
 **Type:** [Length](arkts-arkui-length-t.md)
 

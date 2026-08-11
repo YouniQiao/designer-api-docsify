@@ -1,6 +1,6 @@
 # SubmitEvent
 
-定义用户提交事件。
+Provides the method of keeping TextInput editable state when submitted.
 
 **Since:** 23
 
@@ -16,7 +16,7 @@
 keepEditableState(): void
 ```
 
-用户自定义输入框编辑状态，调用时保持编辑态。
+Keeps TextInput editable state when submitted
 
 **Since:** 23
 
@@ -34,7 +34,7 @@ keepEditableState(): void
 text: string
 ```
 
-输入框文本内容。
+Sets the current value of TextInput.
 
 **Type:** string
 

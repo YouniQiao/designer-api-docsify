@@ -1,22 +1,31 @@
 # SecurityComponentMethod
 
-安全控件通用属性模块，提供安全控件的布局、尺寸、文字、图标、颜色、边框和交互等通用属性的统一配置能力。  
-- 为[PasteButton](./paste_button)、[SaveButton](./save_button)等安全控件统一设置布局、尺寸、文字、图标、颜色、边框和交互相关属性。  
-- 在满足安全控件规范的前提下，调整安全控件显示效果和交互体验。具体约束请参见[约束与限制](../../../security/AccessToken/security-component-overview.md#约束与限制)。  
-- 通过链式调用方式复用安全控件通用属性能力。
+The universal attributes module for security components enables unified configuration of universal attributes such as layout, size, text, icon, color, border, and interaction behaviors.
 
-## 核心枚举类型
+This module is mainly used in the following scenarios:  
+- Set layout, size, text, icon, color, border, and interaction-related attributes for security components  
+such as [PasteButton](./paste_button) and [SaveButton](./save_button).  
+- Adjust the display effect and interaction experience of security components while ensuring compliance with  
+the security component specifications. For specific constraints,see [Constraints](../../../security/AccessToken/security-component-overview.md#constraints).  
+- Reuse the universal attribute capabilities of security components through chained calls.
 
-- **[SecurityComponentLayoutDirection](arkts-arkui-securitycomponentlayoutdirection-e.md)：** 安全控件图标和文字排列方向枚举，用于指定横向或纵向布局。  
-- **[ButtonType](arkts-arkui-button-buttontype-e.md)：** 安全控件按钮样式枚举，用于指定胶囊、圆形、圆角矩形或普通按钮样式。
+## Key Enums
 
-## 核心接口类型
+- [SecurityComponentLayoutDirection](arkts-arkui-securitycomponentlayoutdirection-e.md): Enumeration of icon and text  
+layout directions for the security component. Specifies horizontal or vertical layout.  
+- [ButtonType](arkts-arkui-button-buttontype-e.md): Enumeration of button styles for the security component.  
+Specifies capsule, circle, rounded rectangle, or normal button style.
 
-- **[SecurityComponentMethod](arkts-arkui-securitycomponentmethod-c.md)：** 安全控件通用属性方法集合，用于为具体安全控件配置布局、尺寸、文字、图标、颜色、边框和交互属性。
+## Key APIs
 
-## 子组件
+- [SecurityComponentMethod](arkts-arkui-securitycomponentmethod-c.md): A collection of universal attribute methods for  
+security components. Configures layout, size, text, icon, color, border, and interaction attributes for specific security components.
 
-不支持
+## Child Components
+
+- Not supported
+
+Defines the method of a security component.
 
 **Since:** 10
 
@@ -32,7 +41,7 @@
 accessibilityDefaultFocus(focus: boolean): T
 ```
 
-设置页面的屏幕朗读初始焦点，用于指定页面加载后屏幕朗读首次播报的焦点组件。
+Sets the initial focus for the screen reader on the page, specifying the component that the screen reader announces first after the page loads.
 
 **Since:** 26.0.0
 
@@ -50,13 +59,13 @@ accessibilityDefaultFocus(focus: boolean): T
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| focus | boolean | Yes | 为页面设置屏幕朗读初始焦点。值为true则表示该组件为当前页默认首焦点，值为false或其他值无效。 |
+| focus | boolean | Yes | Sets the initial focus of the screen reader on the page. **true** means the component is the default first focus on the current page; **false** or any other value is invalid. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| T | 当前对象。 |
+| T | Current object. |
 
 ## accessibilityDescription
 
@@ -64,7 +73,7 @@ accessibilityDefaultFocus(focus: boolean): T
 accessibilityDescription(description: string | Resource): T
 ```
 
-该属性用于为控件提供无障碍描述。开发人员可通过设置详细的文字说明，帮助用户理解组件的功能及即将执行的操作。
+Provides an accessibility description for the component. You can set detailed text descriptions to help users understand the component's functionality and the actions it will perform.
 
 **Since:** 26.0.0
 
@@ -82,13 +91,13 @@ accessibilityDescription(description: string | Resource): T
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| description | string \| Resource | Yes | 控件的无障碍说明。用于补充组件的详细操作解释，帮助用户理解当前操作的具体内容及其潜在后果。控件被选中时， 若组件同时包含文本属性和无障碍说明，优先播报文本内容，再播报无障碍说明。 &lt;br&gt;该参数的默认值为空字符串。 |
+| description | string \| Resource | Yes | Accessibility description for the component. Provides details about the component's operation, helping users understand what the current action does and its potential consequences. When the component is selected, if it has both text attributes and an accessibility description, the text content is announced first, followed by the accessibility description. &lt;br&gt;The default value is an empty string. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| T | 当前对象。 |
+| T | Current object. |
 
 ## accessibilityNextFocusId
 
@@ -96,7 +105,7 @@ accessibilityDescription(description: string | Resource): T
 accessibilityNextFocusId(nextId: string): T
 ```
 
-支持在屏幕朗读过程中，指定朗读的下一个焦点组件。
+Specifies the next focus component for the screen reader.
 
 **Since:** 26.0.0
 
@@ -114,13 +123,13 @@ accessibilityNextFocusId(nextId: string): T
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| nextId | string | Yes | 下一个被指定聚焦组件的 [唯一标识 ID](arkts-arkui-securitycomponentmethod-c.md#id)。若唯一标识id无对应组件，则设置无效。 |
+| nextId | string | Yes | The [unique ID](arkts-arkui-securitycomponentmethod-c.md#id) of the next component to be focused. If the unique ID does not correspond to any component, the setting is invalid. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| T | 当前对象。 |
+| T | Current object. |
 
 ## accessibilityRole
 
@@ -128,7 +137,7 @@ accessibilityNextFocusId(nextId: string): T
 accessibilityRole(role: SecurityComponentRoleType): T
 ```
 
-设置无障碍组件类型，特定组件类型有特定的朗读方式，可以根据应用诉求，修改组件类型，用于控制无障碍模式下对组件的朗读方式和朗读内容。
+Sets the accessibility component type. Each component type is announced in a specific way. You can modify the component type based on your app's requirements to control how the component is announced and what content is announced in accessibility mode.
 
 **Since:** 26.0.0
 
@@ -146,13 +155,13 @@ accessibilityRole(role: SecurityComponentRoleType): T
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| role | [SecurityComponentRoleType](arkts-arkui-securitycomponentroletype-e.md) | Yes | 屏幕朗读播报的组件类型，如按钮、图表。具体类型可由开发者自定义。 |
+| role | [SecurityComponentRoleType](arkts-arkui-securitycomponentroletype-e.md) | Yes | The component type, such as button or chart, that determines how the component is announced by the screen reader. The specific type can be customized. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| T | 当前对象。 |
+| T | Current object. |
 
 ## align
 
@@ -160,7 +169,7 @@ accessibilityRole(role: SecurityComponentRoleType): T
 align(alignType: Alignment): T
 ```
 
-设置安全控件图标文本的对齐方式。
+Sets the alignment of the icon and text on the security component.
 
 **Since:** 15
 
@@ -178,13 +187,13 @@ align(alignType: Alignment): T
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| alignType | [Alignment](arkts-arkui-alignment-e.md) | Yes | 安全控件图标文本的对齐方式。图标文本作为整体在控件背景范围内进行对齐，显示效果受 [padding](arkts-arkui-securitycomponentmethod-c.md#padding)影响，在padding生效的基础上按照alignType参数指定的对齐方式进行对齐。 &lt;br&gt;默认值：Alignment.Center。 |
+| alignType | [Alignment](arkts-arkui-alignment-e.md) | Yes | Alignment of the icon and text within the security component. The icon and text are aligned as a unit within the component's background area. The alignment is applied based on the **alignType** value after [padding](arkts-arkui-securitycomponentmethod-c.md#padding) takes effect, which also affects the visual result. &lt;br&gt;Default value: Alignment.Center. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| T | 安全控件的属性。 |
+| T | Attribute of the security component. |
 
 ## alignRules
 
@@ -192,7 +201,7 @@ align(alignType: Alignment): T
 alignRules(alignRule: AlignRuleOption): T
 ```
 
-设置在相对容器中子组件的对齐规则，仅当父容器为[RelativeContainer](./relative_container)时生效。
+Sets the alignment rules for child components within a relative container. This API takes effect only when the parent container is [RelativeContainer](./relative_container).
 
 **Since:** 15
 
@@ -210,13 +219,13 @@ alignRules(alignRule: AlignRuleOption): T
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| alignRule | [AlignRuleOption](arkts-arkui-common-alignruleoption-i.md) | Yes | 对齐规则配置对象，包含top、bottom、left、right、center等锚点对齐配置， 用于指定安全控件在[RelativeContainer](./relative_container)中的对齐位置和方式。 |
+| alignRule | [AlignRuleOption](arkts-arkui-common-alignruleoption-i.md) | Yes | Alignment rule configuration object that defines anchor alignment options ( **top**, **bottom**, **left**, **right**, and **center**). Specifies the alignment position and method of the security component in [RelativeContainer](./relative_container). |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| T | 安全控件的属性。 |
+| T | Attribute of the security component. |
 
 ## alignRules
 
@@ -224,7 +233,7 @@ alignRules(alignRule: AlignRuleOption): T
 alignRules(alignRule: LocalizedAlignRuleOptions): T
 ```
 
-设置在相对容器中子组件的对齐规则，仅当父容器为[RelativeContainer](./relative_container)时生效。该方法水平方向上以start和end分别替代上述[alignRules](arkts-arkui-securitycomponentmethod-c.md#alignrules)的left和right，以便在RTL模式下能镜像显示，建议优先使用该方法。
+Sets the alignment rules for child components within a relative container. This API takes effect only when the parent container is [RelativeContainer](./relative_container). In the horizontal direction, this method replaces **left** and **right** in the [alignRules](arkts-arkui-securitycomponentmethod-c.md#alignrules) above with **start**and **end**, respectively, allowing the layout to be mirrored in RTL mode. You are advised to use this method preferentially.
 
 **Since:** 15
 
@@ -242,13 +251,13 @@ alignRules(alignRule: LocalizedAlignRuleOptions): T
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| alignRule | [LocalizedAlignRuleOptions](../arkts-components/arkts-arkui-localizedalignruleoptions-i.md) | Yes | 对齐规则配置对象，使用start和end替代left和right以支持RTL布局镜像。包含top、bottom、start、end、center等 锚点对齐配置，用于指定安全控件在[RelativeContainer](./relative_container)中的对齐位置和方式。 |
+| alignRule | [LocalizedAlignRuleOptions](../arkts-components/arkts-arkui-localizedalignruleoptions-i.md) | Yes | Alignment rule configuration object that uses **start** and **end** in place of **left** and **right** to support RTL layout mirroring. Includes anchor alignment settings for **top**, **bottom**, **start**, **end**, and **center**, specifying the alignment position and method of the security component within [RelativeContainer](./relative_container). |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| T | 安全控件的属性。 |
+| T | Attribute of the security component. |
 
 ## backgroundColor
 
@@ -256,7 +265,7 @@ alignRules(alignRule: LocalizedAlignRuleOptions): T
 backgroundColor(value: ResourceColor): T
 ```
 
-设置安全控件的背景颜色。
+Sets the background color of the security component.
 
 **Since:** 10
 
@@ -274,13 +283,13 @@ backgroundColor(value: ResourceColor): T
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | [ResourceColor](arkts-arkui-resourcecolor-t.md) | Yes | 安全控件的背景颜色。 &lt;br&gt;默认值：\\$r('sys.color.icon_emphasize')。 &lt;br&gt;安全控件按钮背景色高八位的α值低于**0x1a**（例如**0x1800ff00**）时，会被系统强制调整为**0xff**。以确保安全控件具有足够的可见性， 防止因控件过度透明导致用户在不知情的情况下触发授权。 |
+| value | [ResourceColor](arkts-arkui-resourcecolor-t.md) | Yes | Background color of the security component. &lt;br&gt;Default value: \\$r('sys.color.icon_emphasize'). &lt;br&gt;If the alpha value of the upper eight bits of the security component's background color is less than **0x1a** (for example, **0x1800ff00**), the system will forcibly adjust this alpha value to **0xff**. This ensures the security component remains sufficiently visible and prevents users from inadvertently triggering authorization due to an overly transparent component. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| T | 安全控件的属性。 |
+| T | Attribute of the security component. |
 
 ## borderColor
 
@@ -288,7 +297,7 @@ backgroundColor(value: ResourceColor): T
 borderColor(value: ResourceColor): T
 ```
 
-设置安全控件的边框颜色。
+Sets the border color of the security component.
 
 **Since:** 10
 
@@ -306,13 +315,13 @@ borderColor(value: ResourceColor): T
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | [ResourceColor](arkts-arkui-resourcecolor-t.md) | Yes | 安全控件的边框颜色。&lt;br&gt;默认不设置边框颜色。 |
+| value | [ResourceColor](arkts-arkui-resourcecolor-t.md) | Yes | Border color of the security component.&lt;br&gt;No border color is set by default. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| T | 安全控件的属性。 |
+| T | Attribute of the security component. |
 
 ## borderRadius
 
@@ -320,9 +329,9 @@ borderColor(value: ResourceColor): T
 borderRadius(value: Dimension): T
 ```
 
-设置安全控件的边框圆角半径。
+Sets the border radius of the security component.
 
-borderRadius的设置效果受ButtonType影响。当按钮类型为Capsule或Circle时，borderRadius设置不生效，按钮圆角半径由按钮类型自动确定；当按钮类型为Normal或ROUNDED_RECTANGLE时，borderRadius设置生效。具体影响请参见[ButtonType](arkts-arkui-button-buttontype-e.md)。
+The effect of **borderRadius** is influenced by **ButtonType**. When **ButtonType** is **Capsule** or **Circle**,the **borderRadius** setting does not take effect, and the corner radius is automatically determined by the button type. When the **ButtonType** is **Normal** or **ROUNDED_RECTANGLE**, the **borderRadius** setting takes effect.For details, see [ButtonType](arkts-arkui-button-buttontype-e.md).
 
 **Since:** 10
 
@@ -340,13 +349,13 @@ borderRadius的设置效果受ButtonType影响。当按钮类型为Capsule或Cir
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | [Dimension](arkts-arkui-dimension-t.md) | Yes | 安全控件的边框圆角半径。 &lt;br&gt;默认值：**0vp**。 &lt;br&gt;未显式指定单位时，单位为vp。&lt;br/&gt;不支持设置百分比字符串。圆角半径受组件尺寸限制，最小值为0，最大值为宽高中较小值的一半。设置异常值时该属性不生效。 |
+| value | [Dimension](arkts-arkui-dimension-t.md) | Yes | Border radius of the security component. &lt;br&gt;Default value: **0vp**. &lt;br&gt;If no unit is explicitly specified, the unit is vp. &lt;br&gt;Percentage strings are not supported.&lt;br&gt;The border radius is constrained by the component size, with a minimum of **0** and a maximum of half the smaller of the width and height. If an invalid value is set, this attribute does not take effect. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| T | 安全控件的属性。 |
+| T | Attribute of the security component. |
 
 ## borderRadius
 
@@ -354,9 +363,9 @@ borderRadius的设置效果受ButtonType影响。当按钮类型为Capsule或Cir
 borderRadius(radius: Dimension | BorderRadiuses): T
 ```
 
-设置安全控件的边框圆角半径，支持分别设置四个圆角的半径。
+Sets the border radius of the security component, allowing individual setting of the four corner radii.
 
-borderRadius的设置效果受ButtonType影响。当按钮类型为Capsule或Circle时，borderRadius设置不生效，按钮圆角半径由按钮类型自动确定；当按钮类型为Normal或ROUNDED_RECTANGLE时，borderRadius设置生效。具体影响请参见[ButtonType](arkts-arkui-button-buttontype-e.md)。
+The effect of **borderRadius** is influenced by **ButtonType**. When **ButtonType** is **Capsule** or **Circle**,the **borderRadius** setting does not take effect, and the corner radius is automatically determined by the button type. When the **ButtonType** is **Normal** or **ROUNDED_RECTANGLE**, the **borderRadius** setting takes effect.For details, see [ButtonType](arkts-arkui-button-buttontype-e.md).
 
 **Since:** 15
 
@@ -374,13 +383,13 @@ borderRadius的设置效果受ButtonType影响。当按钮类型为Capsule或Cir
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| radius | [Dimension](arkts-arkui-dimension-t.md) \| BorderRadiuses | Yes | 安全控件的边框圆角半径。 &lt;br&gt;默认值：**0vp**。 &lt;br&gt;未显式指定单位时，单位为vp。&lt;br&gt;Dimension类型不支持设置百分比字符串。圆角半径受组件尺寸限制，最小值为0，最大值为宽高中较小值的一半。设置异常值时该属性不生效。 |
+| radius | [Dimension](arkts-arkui-dimension-t.md) \| BorderRadiuses | Yes | Border radius of the security component. &lt;br&gt;Default value: **0vp**. &lt;br&gt;When the unit is not explicitly specified, the unit is vp.&lt;br&gt;The Dimension type does not support setting percentage strings. The border radius is constrained by the component size, with a minimum value of **0** and a maximum value of half the smaller dimension of width and height. When an invalid value is set, this attribute does not take effect. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| T | 安全控件的属性。 |
+| T | Attribute of the security component. |
 
 ## borderStyle
 
@@ -388,7 +397,7 @@ borderRadius的设置效果受ButtonType影响。当按钮类型为Capsule或Cir
 borderStyle(value: BorderStyle): T
 ```
 
-设置安全控件边框的样式。
+Sets the border style of the security component.
 
 **Since:** 10
 
@@ -406,13 +415,13 @@ borderStyle(value: BorderStyle): T
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | [BorderStyle](arkts-arkui-enums-borderstyle-e.md) | Yes | 安全控件边框的样式。 &lt;br&gt;默认不设置边框样式。 |
+| value | [BorderStyle](arkts-arkui-enums-borderstyle-e.md) | Yes | Border style of the security component. &lt;br&gt;No border style is set by default. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| T | 安全组件的属性。 |
+| T | Attribute of the security component. |
 
 ## borderWidth
 
@@ -420,7 +429,7 @@ borderStyle(value: BorderStyle): T
 borderWidth(value: Dimension): T
 ```
 
-设置安全控件的边框宽度。
+Sets the border width of the security component.
 
 **Since:** 10
 
@@ -438,13 +447,13 @@ borderWidth(value: Dimension): T
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | [Dimension](arkts-arkui-dimension-t.md) | Yes | 安全控件的边框宽度。 &lt;br&gt;默认值：**0vp**。 &lt;br&gt;未显式指定单位时，单位为vp。&lt;br/&gt;不支持设置百分比字符串。设置异常值时该属性不生效。 |
+| value | [Dimension](arkts-arkui-dimension-t.md) | Yes | Border width of the security component. &lt;br&gt;Default value: **0vp**. &lt;br&gt;When the unit is not explicitly specified, the unit is vp.&lt;br/&gt;Percentage strings are not supported. This attribute does not take effect when it is set to an invalid value. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| T | 安全控件的属性。 |
+| T | Attribute of the security component. |
 
 ## chainMode
 
@@ -452,7 +461,7 @@ borderWidth(value: Dimension): T
 chainMode(direction: Axis, style: ChainStyle): T
 ```
 
-设置以该组件为链头所构成的链式布局的参数（包括链的方向和样式），仅当父容器为[RelativeContainer](./relative_container)时生效。
+Sets the parameters of the chain in which the component is the head. This API takes effect only when the parent container is [RelativeContainer](./relative_container).
 
 **Since:** 15
 
@@ -470,14 +479,14 @@ chainMode(direction: Axis, style: ChainStyle): T
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| direction | [Axis](arkts-arkui-enums-axis-e.md) | Yes | 链式布局的方向，用于指定以该组件为链头的链在[RelativeContainer](./relative_container)中的排列方向。 |
-| style | [ChainStyle](../arkts-components/arkts-arkui-chainstyle-e.md) | Yes | 链式布局的样式，用于控制链内子组件的分布方式，如均匀分布、两端对齐或紧凑排列等，具体取值及效果请参考[ChainStyle](arkts-arkui-common-chainstyle-e.md)。 |
+| direction | [Axis](arkts-arkui-enums-axis-e.md) | Yes | Direction of the chain layout. Specifies the arrangement direction of the chain headed by this component in the [RelativeContainer](./relative_container). |
+| style | [ChainStyle](../arkts-components/arkts-arkui-chainstyle-e.md) | Yes | Style of the chain layout. Controls how child components are distributed within the chain, such as evenly distributed, aligned at both ends, or compactly arranged. For specific values and effects, see [ChainStyle](arkts-arkui-common-chainstyle-e.md). |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| T | 安全控件的属性。 |
+| T | Attribute of the security component. |
 
 ## constraintSize
 
@@ -485,7 +494,7 @@ chainMode(direction: Axis, style: ChainStyle): T
 constraintSize(value: ConstraintSizeOptions): T
 ```
 
-设置约束尺寸，组件布局时限制尺寸范围。
+Sets the constraint size, limiting the size range during component layout.
 
 **Since:** 11
 
@@ -503,13 +512,13 @@ constraintSize(value: ConstraintSizeOptions): T
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | [ConstraintSizeOptions](arkts-arkui-constraintsizeoptions-i.md) | Yes | 约束尺寸，组件布局时进行尺寸范围限制。 &lt;br&gt;未显式指定单位时，单位为vp。&lt;br&gt;constraintSize的优先级高于width和height。 &lt;br&gt;使用自适应字号相关属性时，安全控件文本未完全显示将导致点击不授权。constraintSize的设置会影响文本 是否能完整显示。&lt;br&gt;取值结果参考[constraintSize取值对width/height影响](arkts-arkui-securitycomponentmethod-c.md#constraintsize)。 &lt;br&gt;默认值：&lt;br&gt;{&lt;br&gt;minWidth: 0,&lt;br&gt;maxWidth: Infinity,&lt;br&gt;minHeight: 0,&lt;br&gt;maxHeight: Infinity&lt;br&gt;}。 |
+| value | [ConstraintSizeOptions](arkts-arkui-constraintsizeoptions-i.md) | Yes | Constraint size, limiting the size range during component layout. &lt;br&gt;When the unit is not explicitly specified, the unit is vp.&lt;br&gt;**constraintSize** takes precedence over **width** and **height**. When used in conjunction with adaptive font size attributes, if the text on the security component is truncated, clicking the component does not perform authorization. The **constraintSize** setting affects whether the text is fully displayed.&lt;br&gt;For the value results, see [impact of constraintSize values on width/height](arkts-arkui-securitycomponentmethod-c.md#constraintsize). &lt;br&gt;Default value:&lt;br&gt;{&lt;br&gt;minWidth: 0,&lt;br&gt;maxWidth: Infinity,&lt;br&gt;minHeight: 0,&lt;br&gt;maxHeight: Infinity&lt;br&gt;}. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| T | 安全控件的属性。 |
+| T | Attribute of the security component. |
 
 ## enabled
 
@@ -517,7 +526,7 @@ constraintSize(value: ConstraintSizeOptions): T
 enabled(respond: boolean): T
 ```
 
-设置安全控件是否可交互。
+Sets whether the security component is interactive.
 
 **Since:** 18
 
@@ -535,7 +544,7 @@ enabled(respond: boolean): T
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| respond | boolean | Yes | 安全控件是否可交互的值。 &lt;br&gt;默认值：true。 &lt;br&gt;值为true表示组件可交互，响应点击等操作。&lt;br&gt;值为false表示组件不可交互，不响应点击等操作。 |
+| respond | boolean | Yes | Whether the security component is interactive. &lt;br&gt;Default value: **true** &lt;br&gt;**true**: The component is interactive and responds to operations such as clicks. &lt;br&gt;**false**: The component is non-interactive and does not respond to operations such as clicks. |
 
 **Return value:**
 
@@ -549,9 +558,10 @@ enabled(respond: boolean): T
 fallbackLineSpacing(enabled: boolean): T
 ```
 
-针对多行文字叠加，支持行高基于文字实际高度自适应。
+Enables adaptive line height based on the actual text height for multi-line text.
 
-fallbackLineSpacing属性和[RichEditorTextStyle](arkts-arkui-richeditor-richeditortextstyle-i.md)的lineHeight属性强相关。当设置的 lineHeight值小于文本在当前字号下的实际渲染高度时，将根据fallbackLineSpacing 属性值来确定行高是否要基于文字实际高度自适应。
+The **fallbackLineSpacing** attribute is closely coupled with the **lineHeight** attribute of  
+[RichEditorTextStyle](arkts-arkui-richeditor-richeditortextstyle-i.md). When the **lineHeight** value is less than the actual rendering height of the text at the current font size, the **fallbackLineSpacing** value determines whether the line height should adapt based on the actual text height.
 
 **Since:** 26.0.0
 
@@ -569,13 +579,13 @@ fallbackLineSpacing属性和[RichEditorTextStyle](arkts-arkui-richeditor-richedi
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| enabled | boolean | Yes | 行高是否基于文字实际高度自适应。&lt;br/&gt;true表示行高基于文字实际高度自适应；false表示行高不基于文字实际高度自适应。 |
+| enabled | boolean | Yes | Whether the line height adapts based on the actual text height.&lt;br/&gt;**true**: The line height adapts based on the actual text height. **false**: The line height does not adapt based on the actual text height. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| T | 安全控件的属性。 |
+| T | Attribute of the security component. |
 
 ## focusBox
 
@@ -583,7 +593,7 @@ fallbackLineSpacing属性和[RichEditorTextStyle](arkts-arkui-richeditor-richedi
 focusBox(style: FocusBoxStyle): T
 ```
 
-设置安全控件系统焦点框样式。
+Sets the style of the system focus box for the security component.
 
 **Since:** 22
 
@@ -601,13 +611,13 @@ focusBox(style: FocusBoxStyle): T
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| style | [FocusBoxStyle](arkts-arkui-focusboxstyle-i.md) | Yes | 焦点框样式配置对象，包含margin（焦点框与控件的间距）和strokeColor（焦点框边框颜色）等属性，用于自定义系统焦点框的外观样式。 |
+| style | [FocusBoxStyle](arkts-arkui-focusboxstyle-i.md) | Yes | Configuration object for the focus box style. Contains properties such as **margin** (the spacing between the focus box and the component) and **strokeColor** (the stroke color of the focus box) to customize the appearance of the system focus box. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| T | 安全组件的属性。 |
+| T | Attribute of the security component. |
 
 ## fontColor
 
@@ -615,7 +625,7 @@ focusBox(style: FocusBoxStyle): T
 fontColor(value: ResourceColor): T
 ```
 
-设置安全控件文字的颜色。
+Sets the font color of the text on the security component.
 
 **Since:** 10
 
@@ -633,13 +643,13 @@ fontColor(value: ResourceColor): T
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | [ResourceColor](arkts-arkui-resourcecolor-t.md) | Yes | 安全控件上文字的颜色。 &lt;br&gt;默认值：\\$r('sys.color.font_on_primary')。 |
+| value | [ResourceColor](arkts-arkui-resourcecolor-t.md) | Yes | Font color of the text on the security component. &lt;br&gt;Default value: \\$r('sys.color.font_on_primary'). |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| T | 安全控件的属性。 |
+| T | Attribute of the security component. |
 
 ## fontFamily
 
@@ -647,7 +657,7 @@ fontColor(value: ResourceColor): T
 fontFamily(value: string | Resource): T
 ```
 
-设置安全控件文字的字体。
+Sets the font family of the text on the security component.
 
 **Since:** 10
 
@@ -665,13 +675,13 @@ fontFamily(value: string | Resource): T
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | string \| Resource | Yes | 安全控件上文字的字体。 &lt;br&gt;默认字体：'HarmonyOS Sans'。 |
+| value | string \| Resource | Yes | Font family of the text on the security component. &lt;br&gt;Default font:**'HarmonyOS Sans'**. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| T | 安全控件的属性。 |
+| T | Attribute of the security component. |
 
 ## fontSize
 
@@ -679,7 +689,7 @@ fontFamily(value: string | Resource): T
 fontSize(value: Dimension): T
 ```
 
-设置安全控件文字的尺寸。
+Sets the font size of the text for the security component.
 
 **Since:** 10
 
@@ -697,13 +707,13 @@ fontSize(value: Dimension): T
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | [Dimension](arkts-arkui-dimension-t.md) | Yes | 安全控件上文字的尺寸。 &lt;br&gt;未显式指定单位时，单位为fp。&lt;br&gt;默认值：\\$r('sys.float.ohos_id_text_size_button1')。&lt;br&gt;该参数不支持百分比字符串。 &lt;br&gt;设置异常值时该属性不生效。&lt;br&gt;**说明：** 安全控件文本未完全显示时，点击不授权。fontSize的设置会影响文本是否能完整显示，进而影响安全控件的授权行为。 |
+| value | [Dimension](arkts-arkui-dimension-t.md) | Yes | Font size of the text on the security component. &lt;br&gt;When the unit is not explicitly specified, the unit is fp. &lt;br&gt;Default value: \\$r('sys.float.ohos_id_text_size_button1')&lt;br&gt;Percentage strings are not supported.&lt;br&gt;This attribute does not take effect when it is set to an invalid value.&lt;br&gt; Note: When the security component text is not fully displayed, clicking it does not perform authorization. The **fontSize** setting determines whether the text can be fully displayed and thereby affects the authorization behavior of the security component. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| T | 安全控件的属性。 |
+| T | Attribute of the security component. |
 
 ## fontStyle
 
@@ -711,7 +721,7 @@ fontSize(value: Dimension): T
 fontStyle(value: FontStyle): T
 ```
 
-设置安全控件文字的样式。
+Sets the font style of the text on the security component.
 
 **Since:** 10
 
@@ -729,13 +739,13 @@ fontStyle(value: FontStyle): T
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | [FontStyle](../../apis-arkgraphics2d/arkts-apis/arkts-arkgraphics2d-text-fontstyle-e.md) | Yes | 安全控件上文字的样式。 &lt;br&gt;默认值：FontStyle.Normal。 |
+| value | [FontStyle](../../apis-arkgraphics2d/arkts-apis/arkts-arkgraphics2d-text-fontstyle-e.md) | Yes | Font style of the text on the security component. &lt;br&gt;Default value: FontStyle.Normal. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| T | 安全控件的属性。 |
+| T | Attribute of the security component. |
 
 ## fontWeight
 
@@ -743,7 +753,7 @@ fontStyle(value: FontStyle): T
 fontWeight(value: number | FontWeight | string | Resource): T
 ```
 
-设置安全控件文字的粗细。
+Sets the font weight of the text on the security component.
 
 **Since:** 10
 
@@ -761,13 +771,13 @@ fontWeight(value: number | FontWeight | string | Resource): T
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | number \| FontWeight \| string \| Resource | Yes | 安全控件上文字粗细。 &lt;br&gt;number类型取值[100, 900]，取值间隔为100，取值越大，字体越粗。&lt;br&gt;string类型支持使用数字字符串（如'400'），以及FontWeight中的枚举值对应的字符串 （如'bold'、'bolder'、'lighter'、'regular'、'medium'）。&lt;br&gt;从API version 20开始，支持Resource类型。Resource类型仅支持'integer'和'string'。 类型为'integer'时，取值参考前述number类型；类型为'string'时，取值参考前述string类型。&lt;br&gt;如果控件未设置fontWeight，文字粗细将默认设置为FontWeight.Medium。 value入参为undefined、null，或number类型不在[100, 900]范围内，或string类型不符合FontWeight枚举值对应的字符串格式时，文字粗细将被设置为FontWeight.Normal。<br>**Since:** 20 |
+| value | number \| FontWeight \| string \| Resource | Yes | Font weight of the text on the security component. &lt;br&gt;For the number type, the value ranges from 100 to 900, at an interval of 100. A larger value indicates a heavier font weight. &lt;br&gt;For the string type, only numeric strings, for example, **'400'**, and the enumerated values of **FontWeight** are supported, including **'bold'**, **'bolder'**, **'lighter'**, **'regular'**, and **'medium'**. &lt;br&gt;The Resource type is supported since API version 20. The Resource type supports only **'integer'** and **'string'** formats. Values follow the number type specifications for the **'integer'** type and the string type specifications for the **'string'** type, both described earlier. &lt;br&gt;If **fontWeight** is not set for the component, the font weight is set to **FontWeight.Medium** by default. If **value** is **undefined** or **null**, a number outside the [100, 900] range, or a string that does not match the string format of **FontWeight** enums, the font weight is set to **FontWeight.Normal**.<br>**Since:** 20 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| T | 安全控件的属性。 |
+| T | Attribute of the security component. |
 
 ## height
 
@@ -775,7 +785,7 @@ fontWeight(value: number | FontWeight | string | Resource): T
 height(value: Length): T
 ```
 
-设置安全控件自身的高度，缺省时将根据元素内容自适配高度。配合自适应字号相关属性使用时，height的设置会影响文本是否能完整显示。
+Sets the height of the security component. If not set, the height adapts to the element content. When used in conjunction with adaptive font size attributes, the height setting affects whether the text is fully displayed.
 
 **Since:** 11
 
@@ -793,13 +803,13 @@ height(value: Length): T
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | [Length](arkts-arkui-length-t.md) | Yes | 安全控件自身的高度，缺省时将根据元素内容自适配高度。 &lt;br&gt;未显式指定单位时，单位为vp。 &lt;br&gt;配合[minFontSize](arkts-arkui-securitycomponentmethod-c.md#minfontsize)、[maxFontSize](arkts-arkui-securitycomponentmethod-c.md#maxfontsize)、 [maxLines](arkts-arkui-securitycomponentmethod-c.md#maxlines)以及[heightAdaptivePolicy](arkts-arkui-securitycomponentmethod-c.md#heightadaptivepolicy) 使用实现自适应字号时，安全控件文本未完全显示将导致点击不授权。设置异常值时该属性不生效。 |
+| value | [Length](arkts-arkui-length-t.md) | Yes | Height of the security component. If not set, the height adapts to the element content. &lt;br&gt;If no unit is explicitly specified, the unit is vp.&lt;br&gt;When used in conjunction with [minFontSize](arkts-arkui-securitycomponentmethod-c.md#minfontsize), [maxFontSize](arkts-arkui-securitycomponentmethod-c.md#maxfontsize), [maxLines](arkts-arkui-securitycomponentmethod-c.md#maxlines), and [heightAdaptivePolicy](arkts-arkui-securitycomponentmethod-c.md#heightadaptivepolicy) for adaptive font sizing, if the text on the security component is truncated, clicking the component does not perform authorization. If an invalid value is set, this attribute does not take effect. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| T | 安全控件的属性。 |
+| T | Attribute of the security component. |
 
 ## heightAdaptivePolicy
 
@@ -807,21 +817,16 @@ height(value: Length): T
 heightAdaptivePolicy(policy: TextHeightAdaptivePolicy): T
 ```
 
-设置文字自适应高度的方式。适用于安全控件在不同尺寸或不同语言环境下，需要动态调整文本显示以保证文本完整显示的场景。
+Sets the method for text height adaptation. This is applicable to scenarios where the text display of a security component needs to be dynamically adjusted to ensure complete text visibility under different sizes or language environments.
 
-安全控件文本以[maxFontSize](arkts-arkui-securitycomponentmethod-c.md#maxfontsize)的值进行布局，如果可以完整显示文本，则无需进行自适应调节，该接口设置不生效，否则按指定文本自适应高度的方式进行调节，具体自适应调节规格如下：
-
-当设置为TextHeightAdaptivePolicy.MAX_LINES_FIRST时，优先使用[maxLines](arkts-arkui-securitycomponentmethod-c.md#maxlines)属性来调整文本高度。如果使用maxLines属性的布局大小超过了布局约束，则尝试在[minFontSize](arkts-arkui-securitycomponentmethod-c.md#minfontsize)和  
-[maxFontSize](arkts-arkui-securitycomponentmethod-c.md#maxfontsize)的范围内缩小字体以显示更多文本，如果此时仍不能完整显示文本信息，安全控件会自适应调整高度以使得文本完整显示。
-
-当设置为TextHeightAdaptivePolicy.MIN_FONT_SIZE_FIRST时，优先使用[minFontSize](arkts-arkui-securitycomponentmethod-c.md#minfontsize)属性来调整文本高度。如果使用minFontSize属性可以将文本布局在一行中，则尝试在minFontSize和[maxFontSize](arkts-arkui-securitycomponentmethod-c.md#maxfontsize)的范围内增大字体并使用最大可能的字体大小；如果使用minFontSize属性无法将文本布局在一行中，则尝试使用[maxLines]{@linkSecurityComponentMethod.maxLines}属性进行布局，如果此时仍不能完整显示文本信息，安全控件会自适应调整高度以使得文本完整显示。
-
-当设置为TextHeightAdaptivePolicy.LAYOUT_CONSTRAINT_FIRST时，优先使用布局约束来调整文本高度。如果布局大小超过布局约束，则尝试在  
-[minFontSize](arkts-arkui-securitycomponentmethod-c.md#minfontsize)和[maxFontSize](arkts-arkui-securitycomponentmethod-c.md#maxfontsize)的范围内缩小字体以满足布局约束。如果将字体大小缩小到minFontSize后，布局大小仍然超过布局约束，则删除超过布局约束的行；如果设置了[maxLines](arkts-arkui-securitycomponentmethod-c.md#maxlines)属性，布局后行数不超过maxLines值（可能存在横向截断）；如果未设置maxLines属性值，布局后的行数不限制。
-
-安全控件文本未完全显示时，点击不授权。文本是否完全显示受heightAdaptivePolicy、minFontSize、maxFontSize、maxLines、width和height等属性影响。
-
-具体效果请见[示例](../../../reference/apis-arkui/arkui-ts/ts-securitycomponent-attributes.md#示例3)。
+The security component text is laid out at [maxFontSize](arkts-arkui-securitycomponentmethod-c.md#maxfontsize). If the text can be completely displayed and no adaptive adjustment is needed, this API does not take effect. Otherwise,adaptation proceeds according to the specified policy, as follows:&lt;br&gt;**TextHeightAdaptivePolicy.MAX_LINES_FIRST**: prioritizes the [maxLines](arkts-arkui-securitycomponentmethod-c.md#maxlines) attribute for adjusting the text height. If the layout size with **maxLines**exceeds the layout constraints, the security component attempts to reduce the font size within the range of  
+[minFontSize](arkts-arkui-securitycomponentmethod-c.md#minfontsize) and  
+[maxFontSize](arkts-arkui-securitycomponentmethod-c.md#maxfontsize) to fit more text. If the text still cannot be fully displayed, the security component adaptively adjusts its height to show all text.&lt;br&gt;**TextHeightAdaptivePolicy.MIN_FONT_SIZE_FIRST**: prioritizes the  
+[minFontSize](arkts-arkui-securitycomponentmethod-c.md#minfontsize) attribute for adjusting the text height. If the text can be laid out in a single line using **minFontSize**, the security component attempts to increase the font size within the range of **minFontSize** and [maxFontSize](arkts-arkui-securitycomponentmethod-c.md#maxfontsize) to use the largest possible font size. If the text cannot be laid out in a single line using **minFontSize**, the security component attempts to use the [maxLines](arkts-arkui-securitycomponentmethod-c.md#maxlines) attribute for layout. If the text still cannot be fully displayed, the security component adaptively adjusts its height to fully display the text.&lt;br&gt;**TextHeightAdaptivePolicy.LAYOUT_CONSTRAINT_FIRST**: prioritizes layout constraints for adjusting the text height.&lt;br&gt;If the layout size exceeds the constraints, the security component attempts to reduce the font size within the range of [minFontSize](arkts-arkui-securitycomponentmethod-c.md#minfontsize) and  
+[maxFontSize](arkts-arkui-securitycomponentmethod-c.md#maxfontsize). If the layout size still exceeds the constraints after the font size is reduced to **minFontSize**, the security component truncates the excess lines. If the  
+[maxLines](arkts-arkui-securitycomponentmethod-c.md#maxlines) attribute is set, the number of lines does not exceed the  
+**maxLines** value (horizontal truncation may occur). If **maxLines** is not set, there is no limit on the number of lines.If the security component text is not fully displayed, clicking does not trigger authorization. Whether the text is fully displayed depends on attributes such as **heightAdaptivePolicy**, **minFontSize**, **maxFontSize**,  
+**maxLines**, **width**, and **height**.For details, see [Example](../../../reference/apis-arkui/arkui-ts/ts-securitycomponent-attributes.md#example-3)
 
 **Since:** 18
 
@@ -839,13 +844,13 @@ heightAdaptivePolicy(policy: TextHeightAdaptivePolicy): T
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| policy | [TextHeightAdaptivePolicy](arkts-arkui-enums-textheightadaptivepolicy-e.md) | Yes | 文本自适应高度的方式。 &lt;br&gt;默认值：TextHeightAdaptivePolicy.MAX_LINES_FIRST。 |
+| policy | [TextHeightAdaptivePolicy](arkts-arkui-enums-textheightadaptivepolicy-e.md) | Yes | Policy for text height adaptation. &lt;br&gt;Default value: TextHeightAdaptivePolicy.MAX_LINES_FIRST. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| T | 安全控件的属性。 |
+| T | Attribute of the security component. |
 
 ## iconColor
 
@@ -853,7 +858,7 @@ heightAdaptivePolicy(policy: TextHeightAdaptivePolicy): T
 iconColor(value: ResourceColor): T
 ```
 
-设置安全控件图标的颜色。
+Sets the icon color of the security component.
 
 **Since:** 10
 
@@ -871,13 +876,13 @@ iconColor(value: ResourceColor): T
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | [ResourceColor](arkts-arkui-resourcecolor-t.md) | Yes | 安全控件上图标的颜色。 &lt;br&gt;默认值：\\$r('sys.color.icon_on_primary')。 |
+| value | [ResourceColor](arkts-arkui-resourcecolor-t.md) | Yes | Icon color of the security component. &lt;br&gt;Default value: \\$r('sys.color.icon_on_primary'). |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| T | 安全控件的属性。 |
+| T | Attribute of the security component. |
 
 ## iconSize
 
@@ -885,7 +890,7 @@ iconColor(value: ResourceColor): T
 iconSize(value: Dimension): T
 ```
 
-设置安全控件图标的尺寸。
+Sets the icon size of the security component.
 
 **Since:** 10
 
@@ -903,13 +908,13 @@ iconSize(value: Dimension): T
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | [Dimension](arkts-arkui-dimension-t.md) | Yes | 安全控件上图标的尺寸。未显式指定单位时，单位为vp。 &lt;br&gt;默认值：**16vp**。 &lt;br&gt;该参数不支持百分比字符串。&lt;br/&gt;若传入异常值或无效单位，属性不生效，控件按照默认值显示。 |
+| value | [Dimension](arkts-arkui-dimension-t.md) | Yes | Icon size of the security component, in vp by default when no unit is specified. &lt;br&gt;Default value: **16vp**. &lt;br&gt;Percentage strings are not supported.&lt;br/&gt;If an invalid value or unit is passed, the attribute does not take effect, and the component is displayed according to the default value. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| T | 安全控件的属性。 |
+| T | Attribute of the security component. |
 
 ## id
 
@@ -917,7 +922,7 @@ iconSize(value: Dimension): T
 id(id: string): T
 ```
 
-组件的唯一标识，唯一性由使用者保证。
+Unique ID you assigned for the component.
 
 **Since:** 15
 
@@ -935,13 +940,13 @@ id(id: string): T
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| id | string | Yes | 组件的唯一标识，唯一性由使用者保证。 &lt;br&gt;默认值：''。 |
+| id | string | Yes | Unique ID you assigned for the component. &lt;br&gt;Default value: ''. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| T | 安全控件的属性。 |
+| T | Attribute of the security component. |
 
 ## layoutDirection
 
@@ -949,7 +954,7 @@ id(id: string): T
 layoutDirection(value: SecurityComponentLayoutDirection): T
 ```
 
-设置安全控件图标和文字分布的方向。
+Sets the layout direction of the icon and text on the security component.
 
 **Since:** 10
 
@@ -967,13 +972,13 @@ layoutDirection(value: SecurityComponentLayoutDirection): T
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | [SecurityComponentLayoutDirection](arkts-arkui-securitycomponentlayoutdirection-e.md) | Yes | 安全控件上图标和文字分布的方向。 &lt;br&gt;默认值：SecurityComponentLayoutDirection.HORIZONTAL。 |
+| value | [SecurityComponentLayoutDirection](arkts-arkui-securitycomponentlayoutdirection-e.md) | Yes | Indicates the layout direction of the icon and text. &lt;br&gt;Default value:SecurityComponentLayoutDirection.HORIZONTAL. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| T | 安全控件的属性。 |
+| T | Attribute of the security component. |
 
 ## markAnchor
 
@@ -981,7 +986,7 @@ layoutDirection(value: SecurityComponentLayoutDirection): T
 markAnchor(value: Position): T
 ```
 
-设置安全控件在位置定位时的锚点，以控件左上角作为基准点进行偏移。
+Sets the anchor of the security component for moving the component with its top-left corner as the reference point.
 
 **Since:** 10
 
@@ -999,13 +1004,13 @@ markAnchor(value: Position): T
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | [Position](arkts-arkui-display-position-i.md) | Yes | 安全控件在位置定位时的锚点，以控件左上角作为基准点进行偏移。通常与position()、offset()配合使用，用于更精细地设置控件展示位置。 &lt;br&gt;未显式指定单位时，单位为vp。&lt;br/&gt;无默认值。&lt;br/&gt;传入异常值时该属性不生效。 |
+| value | [Position](arkts-arkui-display-position-i.md) | Yes | Anchor of the security component for moving the component with its top-left corner as the reference point. Generally, this attribute is used in conjunction with **position()** and **offset()** for more precise positioning. &lt;br&gt;No default value. &lt;br&gt;This attribute does not take effect when it is set to an invalid value. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| T | 安全控件的属性。 |
+| T | Attribute of the security component. |
 
 ## maxFontScale
 
@@ -1013,9 +1018,10 @@ markAnchor(value: Position): T
 maxFontScale(scale: number | Resource): T
 ```
 
-设置文本最大的字体放大倍数。调用后，当系统字体缩放使文本放大时，文本放大倍数不会超过设定的最大放大倍数。
+Sets the maximum font scale factor. When this API is invoked and the system font scaling causes the text to enlarge, the font scale factor will not exceed the set maximum scale factor.
 
-与[minFontScale](arkts-arkui-securitycomponentmethod-c.md#minfontscale)可配合使用，maxFontScale控制放大倍数的上限，minFontScale控制缩小倍数的下限。两者可独立设置，也可同时设置以精确控制字体缩放范围。
+This API can be used in conjunction with [minFontScale](arkts-arkui-securitycomponentmethod-c.md#minfontscale).  
+**maxFontScale** controls the upper limit of the scale factor, and **minFontScale** controls the lower limit. They can be set independently or together to precisely control font scaling.
 
 **Since:** 18
 
@@ -1033,13 +1039,13 @@ maxFontScale(scale: number | Resource): T
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| scale | number \| Resource | Yes | 文本最大的字体放大倍数。 &lt;br&gt;取值应≥1。 &lt;br&gt;**说明：** &lt;br&gt;设置的值小于1时，按值为1处理；设置的值为undefined或null等非法值时，属性不生效。 |
+| scale | number \| Resource | Yes | Maximum font scale factor for the text. &lt;br&gt;The value must be greater than or equal to 1. &lt;br&gt; **NOTE：**&lt;br&gt;If the set value is less than 1, the value **1** is used. If the value is **undefined**, **null**, or another invalid value, the attribute has no effect. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| T | 安全控件的属性。 |
+| T | Attribute of the security component. |
 
 ## maxFontSize
 
@@ -1047,13 +1053,15 @@ maxFontScale(scale: number | Resource): T
 maxFontSize(maxSize: number | string | Resource): T
 ```
 
-设置文本最大显示字号。
+Sets the maximum font size for text display.
 
-- 配合[minFontSize](arkts-arkui-securitycomponentmethod-c.md#minfontsize)以及[maxLines]{@linkSecurityComponentMethod.maxLines}或布局  
-大小限制使用，可实现自适应字号，单独设置不生效。  
-- maxFontSize应大于minFontSize，若maxFontSize小于minFontSize，minFontSize将按maxFontSize处理。  
-- 当自适应字号生效时，设置的fontSize将不生效。  
-- 安全控件文本未完全显示时，点击不授权。maxFontSize的设置会影响文本是否能完整显示，进而影响安全控件的授权行为。
+- When used in conjunction with [minFontSize](arkts-arkui-securitycomponentmethod-c.md#minfontsize) and  
+[maxLines](arkts-arkui-securitycomponentmethod-c.md#maxlines), or in combination with layout size constraints, this attribute enables font size adaptation. Using this attribute alone will not take effect.  
+- **maxFontSize** must be greater than **minFontSize**. If **maxFontSize** is less than **minFontSize**,  
+**minFontSize** will be treated as **maxFontSize**.  
+- When adaptive font size is effective, the **fontSize** setting does not take effect.  
+- If the security component text is not fully displayed, clicking does not trigger authorization. The  
+**maxFontSize** setting affects text visibility, which in turn affects authorization behavior.
 
 **Since:** 18
 
@@ -1071,13 +1079,13 @@ maxFontSize(maxSize: number | string | Resource): T
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| maxSize | number \| string \| Resource | Yes | 文本最大显示字号。 &lt;br&gt;取值应>0。 &lt;br&gt;未显式指定单位时，单位为fp。 &lt;br&gt;**说明：**&lt;br&gt;设置的值小于或等于0时，自适应字号不生效；设置异常值时该属性不生效。 |
+| maxSize | number \| string \| Resource | Yes | Maximum display font size of the text. &lt;br&gt;The value must be greater than 0. &lt;br&gt;When the unit is not explicitly specified, the unit is fp. &lt;br&gt;**NOTE：**&lt;br&gt;When the set value is less than or equal to 0, the adaptive font size does not take effect. When an invalid value is set, this attribute does not take effect. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| T | 安全控件的属性。 |
+| T | Attribute of the security component. |
 
 ## maxLines
 
@@ -1085,9 +1093,10 @@ maxFontSize(maxSize: number | string | Resource): T
 maxLines(line: number | Resource): T
 ```
 
-设置文本的最大行数。默认情况下，文本自动换行，指定此属性后，文本的最大显示行数不会超过指定值。可独立使用限制文本行数，也可配合  
-[minFontSize](arkts-arkui-securitycomponentmethod-c.md#minfontsize)、[maxFontSize](arkts-arkui-securitycomponentmethod-c.md#maxfontsize)以及  
-[heightAdaptivePolicy](arkts-arkui-securitycomponentmethod-c.md#heightadaptivepolicy)使用。配合自适应字号相关属性使用时，安全控件文本未完全显示将导致点击不授权。maxLines的设置会影响文本是否能完整显示，进而影响安全控件的授权行为。
+Sets the maximum number of lines for text. By default, text wraps automatically. When this attribute is specified,the text will display at most the specified number of lines. It can be used independently to limit text lines, or in conjunction with [minFontSize](arkts-arkui-securitycomponentmethod-c.md#minfontsize),  
+[maxFontSize](arkts-arkui-securitycomponentmethod-c.md#maxfontsize), and  
+[heightAdaptivePolicy](arkts-arkui-securitycomponentmethod-c.md#heightadaptivepolicy). When used with adaptive font size attributes, if the security component text is not fully displayed, the click will not trigger authorization. The  
+**maxLines** setting affects whether the text can be fully displayed, thereby affecting the authorization behavior of the security component.
 
 **Since:** 18
 
@@ -1105,13 +1114,13 @@ maxLines(line: number | Resource): T
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| line | number \| Resource | Yes | 文本的最大行数。 &lt;br&gt;number类型入参的取值范围： [1, +∞)。从API version 20开始，支持Resource类型。Resource类型仅支持'integer'，取值范围为[1, +∞)。 **说明：** &lt;br&gt;设置的值小于1时，按默认值1000000处理。<br>**Since:** 18 - 19 |
+| line | number \| Resource | Yes | Maximum number of lines for the text. &lt;br&gt;The number type accepts values in [1, +∞). The Resource type is supported since API version 20. The parameter of the Resource type supports only integers in the range [1, +∞). &lt;br&gt;**NOTE：**&lt;br&gt;A value less than 1 is handled as the default value **1000000**.<br>**Since:** 20 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| T | 安全控件的属性。 |
+| T | Attribute of the security component. |
 
 ## minFontScale
 
@@ -1119,9 +1128,10 @@ maxLines(line: number | Resource): T
 minFontScale(scale: number | Resource): T
 ```
 
-设置文本最小的字体缩小倍数。调用后，当系统字体缩放使文本缩小时，文本缩小倍数不会低于设定的最小缩小倍数。
+Sets the minimum font scale factor for the text. When this API is invoked and the system font scaling causes the text to shrink, the font scale factor will not fall below the set minimum scale factor.
 
-与[maxFontScale](arkts-arkui-securitycomponentmethod-c.md#maxfontscale)可配合使用，minFontScale控制缩小倍数的下限，maxFontScale控制放大倍数的上限。两者可独立设置，也可同时设置以精确控制字体缩放范围。
+This API can be used in conjunction with [maxFontScale](arkts-arkui-securitycomponentmethod-c.md#maxfontscale).  
+**minFontScale** controls the lower limit of the scale factor and **maxFontScale** controls the upper limit. They can be set independently or together to precisely control font scaling.
 
 **Since:** 18
 
@@ -1139,13 +1149,13 @@ minFontScale(scale: number | Resource): T
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| scale | number \| Resource | Yes | 文本最小的字体缩小倍数。 &lt;br&gt;取值范围：[0,1]。 &lt;br&gt;**说明：** &lt;br&gt;设置的值小于0时，按值为0处理，即允许缩小到任意倍数；设置的值大于1时，按值为1处理，即不允许缩小字体；设置的值为undefined或null等非法值时，属性不生效。 |
+| scale | number \| Resource | Yes | Minimum font scale factor for the text. &lt;br&gt;Value range: [0,1]. &lt;br&gt;**NOTE：**&lt;br&gt;If the set value is less than 0, the value **0** is used, meaning scaling down to any factor is allowed. If the set value is greater than 1, the value **1** is used, meaning font scaling is not allowed. If the value is **undefined**, **null**, or another invalid value, the attribute has no effect. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| T | 安全控件的属性。 |
+| T | Attribute of the security component. |
 
 ## minFontSize
 
@@ -1153,14 +1163,16 @@ minFontScale(scale: number | Resource): T
 minFontSize(minSize: number | string | Resource): T
 ```
 
-设置文本最小显示字号。
+Sets the minimum font size for text display.
 
-- 配合[maxFontSize](arkts-arkui-securitycomponentmethod-c.md#maxfontsize)以及[maxLines]{@linkSecurityComponentMethod.maxLines}或布局  
-大小限制使用，可实现自适应字号，单独设置不生效。  
-- minFontSize应小于maxFontSize，若设置值大于maxFontSize，将按maxFontSize处理。  
-- minFontSize小于或等于0时，自适应字号不生效。  
-- 自适应字号生效时，fontSize设置不生效。  
-- 安全控件文本未完全显示时，点击不授权。minFontSize的设置会影响文本是否能完整显示，进而影响安全控件的授权行为。
+- When used in conjunction with [maxFontSize](arkts-arkui-securitycomponentmethod-c.md#maxfontsize) and  
+[maxLines](arkts-arkui-securitycomponentmethod-c.md#maxlines), or in combination with layout size constraints, this attribute enables font size adaptation. Using this attribute alone will not take effect.  
+- **minFontSize** must be smaller than **maxFontSize**. If the set value is greater than **maxFontSize**,  
+**maxFontSize** is used instead.  
+- When **minFontSize** is less than or equal to 0, adaptive font size does not take effect.  
+- When adaptive font size is effective, the **fontSize** setting does not take effect.  
+- If the security component text is not fully displayed, clicking does not trigger authorization. The  
+**minFontSize** setting affects text visibility, which in turn affects authorization behavior.
 
 **Since:** 18
 
@@ -1178,13 +1190,13 @@ minFontSize(minSize: number | string | Resource): T
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| minSize | number \| string \| Resource | Yes | 文本最小显示字号。 &lt;br&gt;取值应>0。 &lt;br&gt;未显式指定单位时，单位为fp。&lt;br&gt; minFontSize应小于maxFontSize，若设置值大于maxFontSize，将按maxFontSize处理；小于或等于0时，自适应字号不生效。 |
+| minSize | number \| string \| Resource | Yes | Minimum display font size of the text. &lt;br&gt;The value must be greater than 0. &lt;br&gt;When the unit is not explicitly specified, the unit is fp.&lt;br&gt; **minFontSize** must be less than **maxFontSize**. If the set value is greater than **maxFontSize**, **maxFontSize** is used instead. If this parameter is less than or equal to 0, the adaptive font size does not take effect. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| T | 安全控件的属性。 |
+| T | Attribute of the security component. |
 
 ## offset
 
@@ -1192,7 +1204,7 @@ minFontSize(minSize: number | string | Resource): T
 offset(value: Position | Edges | LocalizedEdges): T
 ```
 
-设置安全控件相对于自身布局位置的坐标偏移。
+Sets the coordinate offset of the security component relative to its own layout position.
 
 **Since:** 10
 
@@ -1210,13 +1222,13 @@ offset(value: Position | Edges | LocalizedEdges): T
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | [Position](arkts-arkui-display-position-i.md) \| Edges \| LocalizedEdges | Yes | 安全控件相对于自身布局位置的坐标偏移。设置后不会影响父容器布局，仅在绘制阶段调整控件显示位置。 &lt;br&gt;未显式指定单位时，单位为vp。&lt;br/&gt;无默认值。&lt;br&gt;当入参异常时，该属性不生效。<br>**Since:** 12 |
+| value | [Position](arkts-arkui-display-position-i.md) \| Edges \| LocalizedEdges | Yes | Coordinate offset of the security component relative to its own layout position. This attribute does not affect the layout in the parent container. The offset is used only during drawing. &lt;br&gt;When the unit is not explicitly specified, the unit is vp. &lt;br&gt;No default value. &lt;br&gt;This attribute does not take effect when it is set to an invalid value.<br>**Since:** 12 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| T | 安全控件的属性。 |
+| T | Attribute of the security component. |
 
 ## padding
 
@@ -1224,7 +1236,7 @@ offset(value: Position | Edges | LocalizedEdges): T
 padding(value: Padding | Dimension): T
 ```
 
-设置安全控件的内边距。
+Sets the padding of the security component.
 
 **Since:** 10
 
@@ -1242,13 +1254,13 @@ padding(value: Padding | Dimension): T
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | [Padding](arkts-arkui-units-padding-i.md) \| Dimension | Yes | 安全控件的内边距。 &lt;br&gt;默认值：上下8vp，左右16vp。 &lt;br&gt;未显式指定单位时，单位为vp。&lt;br/&gt;**说明：** 本参数不支持设置百分比字符串数据类型。若设置百分比字符串，则对应内边距显示为0。 |
+| value | [Padding](arkts-arkui-units-padding-i.md) \| Dimension | Yes | Padding of the security component. &lt;br&gt;Default value: 8 vp for the top and bottom and 16 vp for the left and right. &lt;br&gt;When the unit is not explicitly specified, the unit is vp. &lt;br&gt;Note: Percentage strings are not supported. If a percentage string is set, the corresponding padding is **0**. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| T | 安全控件的属性。 |
+| T | Attribute of the security component. |
 
 ## position
 
@@ -1256,7 +1268,7 @@ padding(value: Padding | Dimension): T
 position(value: Position): T
 ```
 
-设置绝对定位，即安全控件的左上角相对于父容器左上角的偏移位置。
+Sets the absolute position, which is the offset of the top-left corner of the security component relative to the top-left corner of the parent container.
 
 **Since:** 10
 
@@ -1274,13 +1286,13 @@ position(value: Position): T
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | [Position](arkts-arkui-display-position-i.md) | Yes | 安全控件左上角相对于父容器左上角的偏移位置。适用于通过绝对定位将安全控件放置到页面固定区域的场景。 &lt;br&gt;未显式指定单位时，单位为vp。&lt;br/&gt;x和y建议均传入数值型坐标。&lt;br/&gt;若参数为undefined、null，或x、y为非数字类型时，该属性不生效，异常坐标会按0处理。 |
+| value | [Position](arkts-arkui-display-position-i.md) | Yes | Offset position of the security component's top-left corner relative to the parent container's top-left corner. Applicable to scenarios where the security component is placed in a fixed area of the page through absolute positioning. &lt;br&gt;When the unit is not explicitly specified, the unit is vp. &lt;br/&gt;It is recommended that you pass numeric coordinates for both **x** and **y**.&lt;br/&gt;If the parameter is **undefined** or **null**, or **x** and **y** are non-numeric types, this attribute does not take effect, and invalid coordinates are treated as **0**. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| T | 安全控件的属性。 |
+| T | Attribute of the security component. |
 
 ## size
 
@@ -1288,7 +1300,8 @@ position(value: Position): T
 size(value: SizeOptions): T
 ```
 
-设置宽度和高度，缺省时将根据元素内容自适配宽高尺寸。size方法用于同时设置宽度和高度，如需单独设置宽度或高度，可使用[width](arkts-arkui-securitycomponentmethod-c.md#width)或[height](arkts-arkui-securitycomponentmethod-c.md#height)方法。
+Sets the width and height. If not set, the width and height adapt to the element content. The **size** method is used to set both width and height at the same time. To set the width or height individually, use the  
+[width](arkts-arkui-securitycomponentmethod-c.md#width) or [height](arkts-arkui-securitycomponentmethod-c.md#height) method.
 
 **Since:** 11
 
@@ -1306,13 +1319,13 @@ size(value: SizeOptions): T
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | [SizeOptions](arkts-arkui-units-sizeoptions-i.md) | Yes | 宽度和高度，缺省时将根据元素内容自适配宽高尺寸。 &lt;br&gt;未显式指定单位时，单位为vp。&lt;br&gt;配合 [minFontSize](arkts-arkui-securitycomponentmethod-c.md#minfontsize)、 [maxFontSize](arkts-arkui-securitycomponentmethod-c.md#maxfontsize)、[maxLines](arkts-arkui-securitycomponentmethod-c.md#maxlines)以及 [heightAdaptivePolicy](arkts-arkui-securitycomponentmethod-c.md#heightadaptivepolicy)使用实现自适应字号时，安全控件文本未完全显示将导致点击不授权。 size的设置会影响文本是否能完整显示。 |
+| value | [SizeOptions](arkts-arkui-units-sizeoptions-i.md) | Yes | Width and height of the security component. When this parameter is not specified, the security component automatically adapts its size to the element content. &lt;br&gt;If no unit is explicitly specified, the unit is vp. &lt;br&gt;When used in conjunction with [minFontSize](arkts-arkui-securitycomponentmethod-c.md#minfontsize), [maxFontSize](arkts-arkui-securitycomponentmethod-c.md#maxfontsize), [maxLines](arkts-arkui-securitycomponentmethod-c.md#maxlines), and [heightAdaptivePolicy](arkts-arkui-securitycomponentmethod-c.md#heightadaptivepolicy) for adaptive font sizing, if the text on the security component is truncated, clicking the component does not perform authorization. If an invalid value is set, this attribute does not take effect. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| T | 安全控件的属性。 |
+| T | Attribute of the security component. |
 
 ## textIconSpace
 
@@ -1320,7 +1333,7 @@ size(value: SizeOptions): T
 textIconSpace(value: Dimension): T
 ```
 
-设置安全控件中图标和文字的间距。
+Sets the spacing between the icon and text in the security component.
 
 **Since:** 10
 
@@ -1338,13 +1351,13 @@ textIconSpace(value: Dimension): T
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | [Dimension](arkts-arkui-dimension-t.md) | Yes | 安全控件中图标和文字的间距。 &lt;br&gt;默认值：**4vp**。&lt;br/&gt; &lt;br&gt;未显式指定单位时，单位为vp。&lt;br/&gt;**说明：** 本参数不支持设置百分比字符串数据类型，若设置百分比字符串，则图标和文字的间距显示为0； 从API version 14开始，若设置值为负值，则使用默认值。 |
+| value | [Dimension](arkts-arkui-dimension-t.md) | Yes | Spacing between the icon and text in the security component. &lt;br&gt;Default value: **4vp**. &lt;br&gt;When the unit is not explicitly specified, the unit is vp. &lt;br&gt;Note: Percentage strings are not supported. If a percentage string is set, the corresponding spacing between the icon and text is **0**. Since API version 14, negative values are treated as the default value. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| T | 安全控件的属性。 |
+| T | Attribute of the security component. |
 
 ## width
 
@@ -1352,7 +1365,7 @@ textIconSpace(value: Dimension): T
 width(value: Length): T
 ```
 
-设置安全控件自身的宽度，缺省时将根据元素内容自适配宽度。配合自适应字号相关属性使用时，width的设置会影响文本是否能完整显示。
+Sets the width of the security component. If not set, the width adapts to the element content. When used in conjunction with adaptive font size attributes, the width setting affects whether the text is fully displayed.
 
 **Since:** 11
 
@@ -1370,11 +1383,11 @@ width(value: Length): T
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | [Length](arkts-arkui-length-t.md) | Yes | 安全控件自身的宽度，缺省时将根据元素内容自适配宽度。 &lt;br&gt;未显式指定单位时，单位为vp。&lt;br&gt;配合 [minFontSize](arkts-arkui-securitycomponentmethod-c.md#minfontsize)、 [maxFontSize](arkts-arkui-securitycomponentmethod-c.md#maxfontsize)、[maxLines](arkts-arkui-securitycomponentmethod-c.md#maxlines)以及 [heightAdaptivePolicy](arkts-arkui-securitycomponentmethod-c.md#heightadaptivepolicy)使用实现自适应字号时，安全控件文本未完全显示将导致点击不授权。 设置异常值时该属性不生效。 |
+| value | [Length](arkts-arkui-length-t.md) | Yes | Width of the security component itself. If not set, the width adapts to the element content. &lt;br&gt;When the unit is not explicitly specified, the unit is vp.&lt;br&gt;When used in conjunction with [minFontSize](arkts-arkui-securitycomponentmethod-c.md#minfontsize), [maxFontSize](arkts-arkui-securitycomponentmethod-c.md#maxfontsize), [maxLines](arkts-arkui-securitycomponentmethod-c.md#maxlines), and [heightAdaptivePolicy](arkts-arkui-securitycomponentmethod-c.md#heightadaptivepolicy) for adaptive font sizing, if the text on the security component is truncated, clicking the component does not perform authorization. If an invalid value is set, this attribute does not take effect. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| T | 安全控件的属性。 |
+| T | Attribute of the security component. |
 

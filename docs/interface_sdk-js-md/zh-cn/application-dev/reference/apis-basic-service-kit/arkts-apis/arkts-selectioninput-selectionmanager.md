@@ -1,6 +1,6 @@
 # @ohos.selectionInput.selectionManager(划词管理)
 
-本模块提供划词管理能力，包括创建面板、显示面板、移动面板、隐藏面板、销毁面板、监听鼠标/触控板划词事件、获取选中文本等。典型使用流程如下：1. 调用on('selectionCompleted')订阅划词完成事件。2. 在回调中调用getSelectionContent获取选中文本。3. 调用createPanel创建划词面板。4. 调用setUiContent加载页面内容。5. 调用moveToGlobalDisplay移动面板到指定位置。6. 调用show显示面板。7. 调用destroyPanel销毁面板。8. 调用off('selectionCompleted')取消订阅划词完成事件。
+本模块提供划词管理能力，包括创建面板、显示面板、移动面板、隐藏面板、销毁面板、监听鼠标/触控板划词事件、获取选中文本等。典型使用流程如下：1. 调用[on('selectionCompleted')](selectionManager.on)订阅划词完成事件。2. 在回调中调用[getSelectionContent](arkts-basicservices-selectionmanager-getselectioncontent-f.md#getselectioncontent)获取选中文本。3. 调用[createPanel](arkts-basicservices-selectionmanager-createpanel-f.md#createpanel)创建划词面板。4. 调用[setUiContent](arkts-basicservices-selectionmanager-panel-i.md#setuicontent)加载页面内容。5. 调用[moveToGlobalDisplay](arkts-basicservices-selectionmanager-panel-i.md#movetoglobaldisplay)移动面板到指定位置。6. 调用[show](arkts-basicservices-selectionmanager-panel-i.md#show)显示面板。7. 调用[destroyPanel](arkts-basicservices-selectionmanager-destroypanel-f.md#destroypanel)销毁面板。8. 调用[off('selectionCompleted')](selectionManager.off)取消订阅划词完成事件。
 
 > **说明：**
 > 
@@ -17,12 +17,6 @@
 <!--Device-unnamed-declare namespace selectionManager--><!--Device-unnamed-declare namespace selectionManager-End-->
 
 **系统能力：** SystemCapability.SelectionInput.Selection
-
-## 导入模块
-
-```TypeScript
-import { selectionManager } from 'kits/@kit.BasicServicesKit';
-```
 
 ## 汇总
 

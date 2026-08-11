@@ -1,6 +1,6 @@
 # XMPTag
 
-表示XMP标签信息。
+Describes XMP Tag parameters.
 
 **Since:** 26.0.0
 
@@ -22,7 +22,7 @@ import { image } from 'kits/@kit.ImageKit';
 name: string
 ```
 
-XMP标签名称。
+The name of XMP tag.
 
 **Type:** string
 
@@ -42,7 +42,7 @@ XMP标签名称。
 type: XMPTagType
 ```
 
-XMP标签类型。
+The type of XMP tag.
 
 **Type:** [XMPTagType](arkts-image-image-xmptagtype-e.md)
 
@@ -62,7 +62,7 @@ XMP标签类型。
 value?: string
 ```
 
-XMP标签值。
+The value of XMP tag.
 
 **Type:** string
 
@@ -82,7 +82,7 @@ XMP标签值。
 xmpNamespace: XMPNamespace
 ```
 
-XMP命名空间。
+The namespace of XMP tag.
 
 **Type:** [XMPNamespace](arkts-image-image-xmpnamespace-i.md)
 

@@ -4,6 +4,8 @@
 export type ParticleConfigs = PointParticleParameters | ImageParticleParameters
 ```
 
+Defines the particle configs.
+
 **Since:** 23
 
 **ArkTS mode:** ArkTS-Sta only, since version 23.
@@ -16,6 +18,6 @@ export type ParticleConfigs = PointParticleParameters | ImageParticleParameters
 
 | Type | Description |
 | --- | --- |
-| PointParticleParameters | 点状粒子配置。 |
-| ImageParticleParameters | 图片粒子配置。 |
+| PointParticleParameters |  |
+| ImageParticleParameters |  |
 

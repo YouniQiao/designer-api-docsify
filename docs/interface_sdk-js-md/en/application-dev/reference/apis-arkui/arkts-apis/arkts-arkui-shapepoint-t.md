@@ -7,7 +7,7 @@ export type ShapePoint = [
 ]
 ```
 
-坐标类型，第一个元素为x轴偏移量，第二个元素为y轴偏移量。
+Defines the Shape Point, the first element is the x-axis offset and the second is the y-axis.
 
 **Since:** 23
 

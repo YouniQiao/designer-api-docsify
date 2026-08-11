@@ -12,7 +12,7 @@ import { accessibility } from 'kits/@kit.AccessibilityKit';
 function isAudioMonoEnabled(): Promise<boolean>
 ```
 
-判断单声道音频模式是否开启。使用Promise异步回调。
+Checks whether mono audio mode is enabled. This API uses a promise to return the result.
 
 **Since:** 23
 
@@ -28,7 +28,7 @@ function isAudioMonoEnabled(): Promise<boolean>
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;boolean&gt; | Promise对象。返回true表示单声道音频模式已开启；返回false表示单声道音频模式已关闭。 |
+| Promise&lt;boolean&gt; | Promise used to return the result. Returns **true** if mono audio mode is enabled; returns **false** otherwise. |
 
 ## Examples
 

@@ -16,7 +16,7 @@ declare function write(
 ): Promise<number>
 ```
 
-将数据写入文件，使用promise异步回调。
+Writes data into a file. This API uses a promise to return the result.
 
 **Since:** 9
 
@@ -32,15 +32,15 @@ declare function write(
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| fd | number | Yes | 已打开的文件描述符。 |
-| buffer | ArrayBuffer \| string | Yes | 待写入文件的数据，可来自缓冲区或字符串。 |
-| options | [WriteOptions](arkts-corefile-file-fs-writeoptions-i.md) | No | 支持如下选项：&lt;br/&gt;- offset，number类型，表示期望写入文件的位置，单位为Byte。可选，默认从当前位置开始写入。&lt;br/&gt;- length， number类型，表示期望写入数据的长度，单位为Byte。可选，默认缓冲区长度。&lt;br/&gt;- encoding，string类型，当数据是string类型时有效，表示数据的编码方式，默认'utf-8'。当前仅支持?'utf- 8'。<br>**Since:** 11 |
+| fd | number | Yes | FD of the file. |
+| buffer | ArrayBuffer \| string | Yes | Data to write. It can be a string or data from a buffer. |
+| options | [WriteOptions](arkts-corefile-file-fs-writeoptions-i.md) | No | The options are as follows:&lt;br&gt;- **offset** (number): start position to write the data in the file, in bytes. This parameter is optional. By default, data is written from the current position.&lt;br &gt;- **length** (number): length of the data to write, in bytes. This parameter is optional. The default value is the buffer length.&lt;br&gt;- **encoding** (string): format of the data to be encoded when the data is a string. The default value is **'utf-8'**, which is the only value supported currently.<br>**Since:** 11 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;number&gt; | Promise对象。返回实际写入的数据长度，单位为Byte。 |
+| Promise&lt;number&gt; | Promise used to return the length of the data written, in bytes. |
 
 **Error codes:**
 
@@ -66,7 +66,7 @@ declare function write(
 declare function write(fd: number, buffer: ArrayBuffer | string, callback: AsyncCallback<number>): void
 ```
 
-将数据写入文件，使用callback异步回调。
+Writes data to a file. This API uses an asynchronous callback to return the result.
 
 **Since:** 9
 
@@ -82,9 +82,9 @@ declare function write(fd: number, buffer: ArrayBuffer | string, callback: Async
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| fd | number | Yes | 已打开的文件描述符。 |
-| buffer | ArrayBuffer \| string | Yes | 待写入文件的数据，可来自缓冲区或字符串。 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;number&gt; | Yes | 异步将数据写入完成后执行的回调函数。返回实际写入的数据长度，单位为Byte。 |
+| fd | number | Yes | FD of the file. |
+| buffer | ArrayBuffer \| string | Yes | Data to write. It can be a string or data from a buffer. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;number&gt; | Yes | Callback used to return the result. The callback returns the length of the data written, in bytes. |
 
 **Error codes:**
 
@@ -115,7 +115,7 @@ declare function write(
 ): void
 ```
 
-将数据写入文件，使用callback异步回调。
+Writes data to a file. This API uses an asynchronous callback to return the result.
 
 **Since:** 9
 
@@ -131,10 +131,10 @@ declare function write(
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| fd | number | Yes | 已打开的文件描述符。 |
-| buffer | ArrayBuffer \| string | Yes | 待写入文件的数据，可来自缓冲区或字符串。 |
-| options | [WriteOptions](arkts-corefile-file-fs-writeoptions-i.md) | Yes | 支持如下选项：&lt;br/&gt;- offset，number类型，表示期望写入文件的位置，单位为Byte。可选，默认从当前位置开始写。&lt;br/&gt;- length， number类型，表示期望写入数据的长度，单位为Byte。可选，默认缓冲区长度。&lt;br/&gt;- encoding，string类型，当数据是string类型时有效，表示数据的编码方式，默认'utf-8'。当前仅支持?'utf- 8'。<br>**Since:** 11 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;number&gt; | Yes | 异步将数据写入完成后执行的回调函数。返回实际写入的数据长度，单位为Byte。 |
+| fd | number | Yes | FD of the file. |
+| buffer | ArrayBuffer \| string | Yes | Data to write. It can be a string or data from a buffer. |
+| options | [WriteOptions](arkts-corefile-file-fs-writeoptions-i.md) | Yes | The options are as follows:&lt;br&gt;- **offset** (number): start position to write the data in the file, in bytes. This parameter is optional. By default, data is written from the current position.&lt;br &gt;- **length** (number): length of the data to write, in bytes. This parameter is optional. The default value is the buffer length.&lt;br&gt;- **encoding** (string): format of the data to be encoded when the data is a string. The default value is **'utf-8'**, which is the only value supported currently.<br>**Since:** 11 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;number&gt; | Yes | Callback used to return the result. The callback returns the length of the data written, in bytes. |
 
 **Error codes:**
 

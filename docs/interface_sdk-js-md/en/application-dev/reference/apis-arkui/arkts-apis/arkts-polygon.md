@@ -6,6 +6,6 @@
 
 | Name | Description |
 | --- | --- |
-| [PolygonAttribute](arkts-arkui-polygon-polygonattribute-i.md) | 多边形绘制组件属性。 |
-| [PolygonOptions](arkts-arkui-polygon-polygonoptions-i.md) | 用于描述Polygon组件绘制属性。 |
+| [PolygonAttribute](arkts-arkui-polygon-polygonattribute-i.md) | Provides attribute for Polygon. |
+| [PolygonOptions](arkts-arkui-polygon-polygonoptions-i.md) | Define options used to construct a polygon. |
 

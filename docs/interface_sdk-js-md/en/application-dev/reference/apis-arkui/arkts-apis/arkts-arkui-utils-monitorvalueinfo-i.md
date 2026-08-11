@@ -1,6 +1,6 @@
 # MonitorValueInfo
 
-监听变量信息。
+Define MonitorValueInfo.
 
 **Since:** 26.0.0
 
@@ -16,11 +16,7 @@
 observeProps?: boolean
 ```
 
-是否开启属性观察。
-
-true：开启属性观察；false：不开启属性观察。
-
-默认值：false。
+Enable property observation.Set to true to enable property observation, and set to false to disable it.Default value is false.
 
 **Type:** boolean
 
@@ -40,7 +36,7 @@ true：开启属性观察；false：不开启属性观察。
 path?: string
 ```
 
-路径信息。未传入将使用自动生成的默认值。
+Override path.
 
 **Type:** string
 
@@ -60,7 +56,7 @@ path?: string
 valueCallback: MonitorValueCallback
 ```
 
-获取变量的回调。
+the function triggered when state variable changes.
 
 **Type:** [MonitorValueCallback](arkts-arkui-monitorvaluecallback-t.md)
 

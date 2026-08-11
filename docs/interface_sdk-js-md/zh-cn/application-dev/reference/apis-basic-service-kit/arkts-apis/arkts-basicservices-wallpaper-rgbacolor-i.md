@@ -12,12 +12,6 @@
 
 **系统能力：** SystemCapability.MiscServices.Wallpaper
 
-## 导入模块
-
-```TypeScript
-import { wallpaper } from 'kits/@kit.BasicServicesKit';
-```
-
 ## alpha
 
 ```TypeScript

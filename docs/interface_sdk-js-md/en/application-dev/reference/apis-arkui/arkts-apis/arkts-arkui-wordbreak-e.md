@@ -1,6 +1,6 @@
 # WordBreak
 
-Enum of word break
+The word break rule.
 
 **Since:** 11
 
@@ -16,7 +16,7 @@ Enum of word break
 NORMAL = 0
 ```
 
-By default, CJK text can be wrapped between any 2 characters, and non-CJK text can only be wrapped in spaces.
+Word breaks can occur between any two characters for Chinese, Japanese, and Korean (CJK) text, but can occur only at a space character for non-CJK text (such as English).
 
 **Since:** 11
 
@@ -36,7 +36,8 @@ By default, CJK text can be wrapped between any 2 characters, and non-CJK text c
 BREAK_ALL = 1
 ```
 
-Non-CJK text be wrapped at any character
+Line breaks can occur between any two characters for non-CJK text. For CJK text, the effect is the same as that of  
+**NORMAL**.
 
 **Since:** 11
 
@@ -56,7 +57,7 @@ Non-CJK text be wrapped at any character
 BREAK_WORD = 2
 ```
 
-Non-CJK text can be wrapped at any character and if a complete word can be preserved in space breaks, the word must be kept on the line.
+This option has the same effect as **BREAK_ALL** for non-CJK text, except that it preferentially wraps lines at appropriate characters (for example, spaces). If no breakpoints are found, it breaks between any two characters.For CJK text, the effect is the same as that of **NORMAL**.
 
 **Since:** 11
 
@@ -76,7 +77,7 @@ Non-CJK text can be wrapped at any character and if a complete word can be prese
 HYPHENATION = 3
 ```
 
-For supported languages, line breaks can be performed by syllables.
+This option has the same effect as **BREAK_ALL** for non-CJK text, except that it preferentially wraps lines at appropriate characters (for example, spaces). If no breakpoints are found, it breaks between any two characters.For CJK text, the effect is the same as that of **NORMAL**.
 
 **Since:** 18
 

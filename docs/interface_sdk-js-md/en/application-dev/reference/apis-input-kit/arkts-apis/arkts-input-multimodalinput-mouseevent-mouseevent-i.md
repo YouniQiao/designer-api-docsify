@@ -1,6 +1,6 @@
 # MouseEvent
 
-鼠标事件。
+Defines the mouse event.
 
 **Inheritance/Implementation:** MouseEvent extends [InputEvent](arkts-input-multimodalinput-inputevent-inputevent-i.md)
 
@@ -24,7 +24,7 @@ import { MouseAction, AxisValue, MouseEvent, Button, MouseToolType, Axis } from 
 action: Action
 ```
 
-鼠标事件类型。
+Enumerates mouse event types.
 
 **Type:** [Action](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-agent-action-e.md)
 
@@ -42,9 +42,9 @@ action: Action
 altKey: boolean
 ```
 
-当前altKey是否处于按下状态。 
+Whether altKey is being pressed.
 
-true表示处于按下状态，false表示处于抬起状态。
+The value **true** indicates that the key is pressed, and the value **false** indicates the opposite.
 
 **Type:** boolean
 
@@ -62,7 +62,7 @@ true表示处于按下状态，false表示处于抬起状态。
 axes: AxisValue[]
 ```
 
-鼠标轴类型和轴的值。
+Defines the mouse axis type and axis value.
 
 **Type:** [AxisValue](arkts-input-multimodalinput-mouseevent-axisvalue-i.md)[]
 
@@ -80,7 +80,7 @@ axes: AxisValue[]
 button: Button
 ```
 
-鼠标按键。
+Enumerates mouse buttons.
 
 **Type:** [Button](arkts-input-multimodalinput-mouseevent-button-e.md)
 
@@ -98,9 +98,9 @@ button: Button
 capsLock: boolean
 ```
 
-当前capsLock是否处于使能状态。 
+Whether capsLock is enabled.
 
-true表示使能状态，false表示处于未使能状态。
+The value **true** indicates that capsLock is enabled, and the value **false** indicates the opposite.
 
 **Type:** boolean
 
@@ -118,9 +118,9 @@ true表示使能状态，false表示处于未使能状态。
 ctrlKey: boolean
 ```
 
-当前ctrlKey是否处于按下状态。 
+Whether ctrlKey is being pressed.
 
-true表示处于按下状态，false表示处于抬起状态。
+The value **true** indicates that the key is pressed, and the value **false** indicates the opposite.
 
 **Type:** boolean
 
@@ -138,9 +138,9 @@ true表示处于按下状态，false表示处于抬起状态。
 fnKey: boolean
 ```
 
-当前fnKey是否处于按下状态。 
+Whether fnKey is being pressed.
 
-true表示处于按下状态，false表示处于抬起状态。
+The value **true** indicates that the key is pressed, and the value **false** indicates the opposite.
 
 **Type:** boolean
 
@@ -158,8 +158,8 @@ true表示处于按下状态，false表示处于抬起状态。
 globalX?: int
 ```
 
-该鼠标事件以主屏左上角为原点的全局坐标系的X坐标，单位为像素（px）。&lt;!--Del--&gt;作为入参时，若接口参数中的  
-[MouseEventData.useGlobalCoordinate](arkts-input-inputeventclient-mouseeventdata-i.md)为true，该值必填，当前仅支持整数。若为false，该值无需填写，使用指定屏幕左上角为原点的相对坐标系的X坐标计算注入事件。&lt;!--DelEnd--&gt;作为出参时，由系统上报。
+X coordinate of the mouse event in the global coordinate system with the upper left corner of the primary screen as the origin, in px. When this parameter is used as an input parameter, it is mandatory and supports only integers if  
+[MouseEventData.useGlobalCoordinate](arkts-input-inputeventclient-mouseeventdata-i.md)is set to **true**. If **MouseEventData.useGlobalCoordinate** is set to **false**, this parameter is optional, and the X coordinate in the relative coordinate system with the upper left corner of the specified screen as the origin is used to calculate the injected event. When this parameter is used as an output parameter, it is reported by the system.
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
@@ -177,8 +177,8 @@ globalX?: int
 globalY?: int
 ```
 
-该鼠标事件以主屏左上角为原点的全局坐标系的Y坐标，单位为像素（px）。&lt;!--Del--&gt;作为入参时，若接口参数中的  
-[MouseEventData.useGlobalCoordinate](arkts-input-inputeventclient-mouseeventdata-i.md)为true，该值必填，当前仅支持整数。若为false，该值无需填写，使用指定屏幕左上角为原点的相对坐标系的Y坐标计算注入事件。&lt;!--DelEnd--&gt;作为出参时，由系统上报。
+Y coordinate of the mouse event in the global coordinate system with the upper left corner of the primary screen as the origin, in px. When this parameter is used as an input parameter, it is mandatory and supports only integers if  
+[MouseEventData.useGlobalCoordinate](arkts-input-inputeventclient-mouseeventdata-i.md)is set to **true**. If **MouseEventData.useGlobalCoordinate** is set to **false**, this parameter is optional, and the Y coordinate in the relative coordinate system with the upper left corner of the specified screen as the origin is used to calculate the injected event. When this parameter is used as an output parameter, it is reported by the system.
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
@@ -196,9 +196,9 @@ globalY?: int
 logoKey: boolean
 ```
 
-当前logoKey是否处于按下状态。 
+Whether logoKey is being pressed.
 
-true表示处于按下状态，false表示处于抬起状态。
+The value **true** indicates that the key is pressed, and the value **false** indicates the opposite.
 
 **Type:** boolean
 
@@ -216,9 +216,9 @@ true表示处于按下状态，false表示处于抬起状态。
 numLock: boolean
 ```
 
-当前numLock是否处于使能状态。 
+Whether numLock is enabled.
 
-true表示使能状态，false表示处于未使能状态。
+The value **true** indicates that numLock is enabled, and the value **false** indicates the opposite.
 
 **Type:** boolean
 
@@ -236,7 +236,7 @@ true表示使能状态，false表示处于未使能状态。
 pressedButtons: Button[]
 ```
 
-当前处于按下状态的鼠标按键。
+Button being pressed.
 
 **Type:** [Button](arkts-input-multimodalinput-mouseevent-button-e.md)[]
 
@@ -254,7 +254,7 @@ pressedButtons: Button[]
 pressedKeys: KeyCode[]
 ```
 
-当前处于按下状态的键值列表。
+List of pressed keys.
 
 **Type:** [KeyCode](arkts-input-multimodalinput-keycode-keycode-e.md)[]
 
@@ -272,7 +272,7 @@ pressedKeys: KeyCode[]
 rawDeltaX: int
 ```
 
-鼠标当前事件相对于上次事件的X坐标偏移值。当前仅支持整数，单位为像素（px）。
+X coordinate offset of the current mouse event relative to the previous event, in px. Currently, the value can only be an integer.
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
@@ -290,7 +290,7 @@ rawDeltaX: int
 rawDeltaY: int
 ```
 
-鼠标当前事件相对于上次事件的Y坐标偏移值。当前仅支持整数，单位为像素（px）。
+Y coordinate offset of the current mouse event relative to the previous event, in px. Currently, the value can only be an integer.
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
@@ -308,7 +308,7 @@ rawDeltaY: int
 screenX: int
 ```
 
-该鼠标事件以指定屏幕左上角为原点的相对坐标系的X坐标。当前仅支持整数，单位为像素（px）。
+X coordinate of the mouse event in the relative coordinate system with the upper left corner of the specified screen as the origin, in px. Currently, the value can only be an integer.
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
@@ -326,7 +326,7 @@ screenX: int
 screenY: int
 ```
 
-该鼠标事件以指定屏幕左上角为原点的相对坐标系的Y坐标。当前仅支持整数，单位为像素（px）。
+Y coordinate of the mouse event in the relative coordinate system with the upper left corner of the specified screen as the origin, in px. Currently, the value can only be an integer.
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
@@ -344,9 +344,9 @@ screenY: int
 scrollLock: boolean
 ```
 
-当前scrollLock是否处于使能状态。 
+Whether scrollLock is enabled.
 
-true表示使能状态，false表示处于未使能状态。
+The value **true** indicates that scrollLock is enabled, and the value **false** indicates the opposite.
 
 **Type:** boolean
 
@@ -364,9 +364,9 @@ true表示使能状态，false表示处于未使能状态。
 shiftKey: boolean
 ```
 
-当前shiftKey是否处于按下状态。 
+Whether shiftKey is being pressed.
 
-true表示处于按下状态，false表示处于抬起状态。
+The value **true** indicates that the key is pressed, and the value **false** indicates the opposite.
 
 **Type:** boolean
 
@@ -384,7 +384,7 @@ true表示处于按下状态，false表示处于抬起状态。
 toolType: ToolType
 ```
 
-工具类型。
+Tool type.
 
 **Type:** [ToolType](arkts-input-multimodalinput-touchevent-tooltype-e.md)
 
@@ -402,7 +402,7 @@ toolType: ToolType
 windowX: int
 ```
 
-鼠标所在窗口左上角为原点的相对坐标系的X坐标。当前仅支持整数，单位为像素（px）。
+X coordinate in the relative coordinate system with the upper left corner of the window where the mouse is located as the origin, in px. Currently, the value can only be an integer.
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
@@ -420,7 +420,7 @@ windowX: int
 windowY: int
 ```
 
-鼠标所在窗口左上角为原点的相对坐标系的Y坐标。当前仅支持整数，单位为像素（px）。
+Y coordinate in the relative coordinate system with the upper left corner of the window where the mouse is located as the origin, in px. Currently, the value can only be an integer.
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 

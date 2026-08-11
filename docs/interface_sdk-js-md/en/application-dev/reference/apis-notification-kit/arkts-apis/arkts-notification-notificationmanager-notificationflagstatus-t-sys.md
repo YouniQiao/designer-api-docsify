@@ -4,7 +4,7 @@
 export type NotificationFlagStatus = _NotificationFlagStatus
 ```
 
-描述通知标志状态。
+Enumerates the notification flag states.
 
 **Since:** 9
 

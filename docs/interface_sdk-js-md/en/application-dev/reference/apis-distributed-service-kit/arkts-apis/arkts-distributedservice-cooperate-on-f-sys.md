@@ -12,7 +12,7 @@ import { cooperate } from 'kits/@kit.DistributedServiceKit';
 function on(type: 'cooperate', callback: Callback<{ networkId: string, msg: CooperateMsg }>): void
 ```
 
-注册监听键鼠穿越状态。
+Enables listening for screen hopping status change events.
 
 **Since:** 10
 
@@ -32,15 +32,15 @@ function on(type: 'cooperate', callback: Callback<{ networkId: string, msg: Coop
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'cooperate' | Yes | 监听类型，取值为'cooperate' |
+| type | 'cooperate' | Yes | Event type. The value is **cooperate**. |
 | callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;{ networkId: string, msg: CooperateMsg }&gt; | Yes |  |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. Possible causes: &lt;br&gt;1. Mandatory parameters are left unspecified. &lt;br&gt;2. Incorrect parameter types. &lt;br&gt;3. Parameter verification failed. |
-| 202 | Permission verification failed. A non-system application calls a system API. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: &lt;br&gt;1. Mandatory parameters are left unspecified. &lt;br&gt;2. Incorrect parameter types. &lt;br&gt;3. Parameter verification failed. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
 
 
 ## on('cooperateMessage')
@@ -49,7 +49,7 @@ function on(type: 'cooperate', callback: Callback<{ networkId: string, msg: Coop
 function on(type: 'cooperateMessage', callback: Callback<CooperateMessage>): void
 ```
 
-注册监听键鼠穿越状态。
+Enables listening for screen hopping status change events.
 
 **Since:** 11
 
@@ -67,16 +67,16 @@ function on(type: 'cooperateMessage', callback: Callback<CooperateMessage>): voi
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'cooperateMessage' | Yes | 监听类型，取值为'cooperateMessage' |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;CooperateMessage&gt; | Yes | 回调函数，异步返回键鼠穿越状态消息。 |
+| type | 'cooperateMessage' | Yes | Event type. The value is **cooperateMessage**. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;CooperateMessage&gt; | Yes | Callback used to return the result. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. Possible causes: &lt;br&gt;1. Mandatory parameters are left unspecified. &lt;br&gt;2. Incorrect parameter types. &lt;br&gt;3. Parameter verification failed. |
-| 201 | Permission denied. |
-| 202 | Permission verification failed. A non-system application calls a system API. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: &lt;br&gt;1. Mandatory parameters are left unspecified. &lt;br&gt;2. Incorrect parameter types. &lt;br&gt;3. Parameter verification failed. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
 
 
 ## on('cooperateMouse')
@@ -85,7 +85,7 @@ function on(type: 'cooperateMessage', callback: Callback<CooperateMessage>): voi
 function on(type: 'cooperateMouse', networkId: string, callback: Callback<MouseLocation>): void
 ```
 
-注册监听指定设备鼠标光标位置。
+Registers a listener for the mouse cursor position of a device.
 
 **Since:** 12
 
@@ -103,15 +103,15 @@ function on(type: 'cooperateMouse', networkId: string, callback: Callback<MouseL
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'cooperateMouse' | Yes | 监听类型，取值为'cooperateMouse' |
-| networkId | string | Yes | 目标设备描述符 |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;MouseLocation&gt; | Yes | 回调函数，异步返回指定监听设备鼠标光标位置信息。 |
+| type | 'cooperateMouse' | Yes | Event type, which is **'cooperateMouse'**. |
+| networkId | string | Yes | Descriptor of the target device. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;MouseLocation&gt; | Yes | Callback used to return the mouse cursor position of the device. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. Possible causes: &lt;br&gt;1. Mandatory parameters are left unspecified. &lt;br&gt;2.Incorrect parameter types. &lt;br&gt;3.Parameter verification failed. |
-| 201 | Permission denied. |
-| 202 | Permission verification failed. A non-system application calls a system API. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: &lt;br&gt;1. Mandatory parameters are left unspecified. &lt;br&gt;2.Incorrect parameter types. &lt;br&gt;3.Parameter verification failed. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
 

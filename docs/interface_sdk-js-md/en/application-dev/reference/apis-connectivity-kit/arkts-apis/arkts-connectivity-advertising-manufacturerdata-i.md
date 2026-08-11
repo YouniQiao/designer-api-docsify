@@ -1,6 +1,6 @@
 # ManufacturerData
 
-描述制造商数据。
+Describes the manufacturer data.
 
 **Since:** 26.0.0
 
@@ -22,7 +22,7 @@ import { advertising } from 'kits/@kit.ConnectivityKit';
 manufacturerData: ArrayBuffer
 ```
 
-制造商数据。
+Indicates the manufacturer data.
 
 **Type:** ArrayBuffer
 
@@ -42,7 +42,7 @@ manufacturerData: ArrayBuffer
 manufacturerId: int
 ```
 
-厂商ID。取值范围为全体整数。
+Indicates the manufacturer ID.
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 

@@ -12,12 +12,6 @@
 
 **系统接口：** 此接口为系统接口。
 
-## 导入模块
-
-```TypeScript
-import { insightIntentDriver } from 'kits/@kit.AbilityKit';
-```
-
 ## bundleName
 
 ```TypeScript
@@ -317,7 +311,7 @@ readonly parameters: Record<string, Object>
 
 表示意图参数的数据格式声明，用于意图调用时定义入参的数据格式。
 
-**类型：** [Record](../../apis-default/arkts-apis/arkts-record-t.md)&lt;string, Object&gt;
+**类型：** Record&lt;string, Object&gt;
 
 **起始版本：** 20
 
@@ -339,7 +333,7 @@ readonly result: Record<string, Object>
 
 表示意图调用返回的结果。
 
-**类型：** [Record](../../apis-default/arkts-apis/arkts-record-t.md)&lt;string, Object&gt;
+**类型：** Record&lt;string, Object&gt;
 
 **起始版本：** 20
 

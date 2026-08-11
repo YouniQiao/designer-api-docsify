@@ -12,13 +12,14 @@ import { huks } from 'kits/@kit.UniversalKeystoreKit';
 function wrapKeyItem(keyAlias: string, params: HuksOptions): Promise<HuksReturnResult>
 ```
 
-加密导出密钥。使用Promise异步回调。
+Wraps a key. This API uses a promise to return the result.
 
-> **说明：**
+> **NOTE：**
 > 
-> 加密导出[HuksKeySecurityLevel](arkts-universalkeystore-huks-hukskeysecuritylevel-e.md)中定义的SE安全级别密钥需要ohos.permission.ACCESS_SE_KEY权限。
+> Wrapping SE security level keys that defined in [HuksKeySecurityLevel](arkts-universalkeystore-huks-hukskeysecuritylevel-e.md)
+> requires the ohos.permission.ACCESS_SE_KEY permission.
 
-&lt;!--Del--&gt;该功能暂不支持。&lt;!--DelEnd--&gt;
+&lt;!--Del--&gt;This feature is not supported currently.&lt;!--DelEnd--&gt;
 
 **Since:** 20
 
@@ -34,26 +35,26 @@ function wrapKeyItem(keyAlias: string, params: HuksOptions): Promise<HuksReturnR
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| keyAlias | string | Yes | 密钥别名，应与所用密钥生成时使用的别名相同。 |
-| params | [HuksOptions](arkts-universalkeystore-huks-huksoptions-i.md) | Yes | 用于指定导出密钥时的加密类型。 |
+| keyAlias | string | Yes | Key alias, which must be the same as the alias used when the key was generated. |
+| params | [HuksOptions](arkts-universalkeystore-huks-huksoptions-i.md) | Yes | Encryption type of the key to be exported. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;HuksReturnResult&gt; | Promise对象，返回调用接口的结果。当调用成功时，HuksReturnResult的outData成员为导出的密钥密文。 |
+| Promise&lt;HuksReturnResult&gt; | Promise that returns the operation result. If the operation is successful, **outData** in **HuksReturnResult** is the exported key ciphertext. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 801 | api is not supported |
-| 12000005 | IPC communication failed |
-| 12000004 | operating file failed |
-| 12000018 | the input parameter is invalid |
-| 201 | The application permissions are insufficient, possibly because the ohos.permission.ACCESS_SE_KEY permission is missing.<br>**Applicable version:** 26.0.0 and later |
-| 12000014 | memory is insufficient |
-| 12000012 | Device environment or input parameter abnormal |
-| 12000011 | queried entity does not exist |
-| 12000026 | the secure element is not available<br>**Applicable version:** 26.0.0 and later |
+| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | api is not supported |
+| [12000005](../errorcode-huks.md#12000005-ipc-error) | IPC communication failed |
+| [12000004](../errorcode-huks.md#12000004-file-error) | operating file failed |
+| [12000018](../errorcode-huks.md#12000018-invalid-input-parameter) | the input parameter is invalid |
+| [201](../../errorcode-universal.md#201-permission-denied) | The application permissions are insufficient, possibly because the ohos.permission.ACCESS_SE_KEY permission is missing.<br>**Applicable version:** 26.0.0 and later |
+| [12000014](../errorcode-huks.md#12000014-insufficient-memory) | memory is insufficient |
+| [12000012](../errorcode-huks.md#12000012-external-error) | Device environment or input parameter abnormal |
+| [12000011](../errorcode-huks.md#12000011-the-entity-does-not-exist) | queried entity does not exist |
+| [12000026](../errorcode-huks.md#12000026-secure-element-fault) | the secure element is not available<br>**Applicable version:** 26.0.0 and later |
 

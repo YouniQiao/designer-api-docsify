@@ -1,6 +1,6 @@
 # PairingRequestParam
 
-配对请求参数说明。
+Describes pairing request parameters.
 
 **Since:** 26.0.0
 
@@ -22,7 +22,7 @@ import { remoteDevice } from 'kits/@kit.ConnectivityKit';
 address: string
 ```
 
-设备地址。长度必须为17，由16进制数字和冒号组成，形如 "11:22:33:AA:BB:FF"。
+Indicates the device address.The length must be 17, The value consists of hexadecimal digits and colons (:), for example, 11:22:33:AA:BB:FF.
 
 **Type:** string
 
@@ -42,7 +42,7 @@ address: string
 pairingType: PairingType
 ```
 
-配对类型。
+Indicates the pairing type.
 
 **Type:** [PairingType](arkts-connectivity-remotedevice-pairingtype-e.md)
 
@@ -62,7 +62,7 @@ pairingType: PairingType
 passkey: string
 ```
 
-设备配对的密钥。
+Key for the device pairing.
 
 **Type:** string
 

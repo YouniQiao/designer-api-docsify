@@ -1,6 +1,6 @@
 # FunctionType (System API)
 
-USB设备侧功能。
+Enumerates USB device function types.
 
 **Since:** 9
 
@@ -22,7 +22,7 @@ USB设备侧功能。
 NONE = 0
 ```
 
-没有功能。
+No function.
 
 **Since:** 9
 
@@ -44,7 +44,7 @@ NONE = 0
 ACM = 1
 ```
 
-acm功能。
+ACM function.
 
 **Since:** 9
 
@@ -66,7 +66,7 @@ acm功能。
 ECM = 2
 ```
 
-ecm功能。
+ECM function.
 
 **Since:** 9
 
@@ -88,7 +88,7 @@ ecm功能。
 HDC = 4
 ```
 
-hdc功能。
+HDC function.
 
 **Since:** 9
 
@@ -110,7 +110,7 @@ hdc功能。
 MTP = 8
 ```
 
-媒体传输。
+Media transmission.
 
 **Since:** 9
 
@@ -132,7 +132,7 @@ MTP = 8
 PTP = 16
 ```
 
-图片传输。
+Image transmission.
 
 **Since:** 9
 
@@ -154,7 +154,7 @@ PTP = 16
 RNDIS = 32
 ```
 
-网络共享。
+Network sharing.
 
 **Since:** 9
 
@@ -176,7 +176,7 @@ RNDIS = 32
 MIDI = 64
 ```
 
-midi功能。
+MIDI function.
 
 **Since:** 9
 
@@ -198,7 +198,7 @@ midi功能。
 AUDIO_SOURCE = 128
 ```
 
-音频功能。
+Audio function.
 
 **Since:** 9
 
@@ -220,7 +220,7 @@ AUDIO_SOURCE = 128
 NCM = 256
 ```
 
-ncm传输。
+NCM transmission.
 
 **Since:** 9
 

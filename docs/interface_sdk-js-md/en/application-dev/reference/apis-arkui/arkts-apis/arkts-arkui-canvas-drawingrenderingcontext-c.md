@@ -1,6 +1,6 @@
 # DrawingRenderingContext
 
-DrawingRenderingContext对象与Canvas组件绑定后，可在Canvas组件上进行绘制，绘制对象可以是形状、文本、图片等。
+Defines DrawingRenderingContext.
 
 **Since:** 23
 
@@ -16,7 +16,7 @@ DrawingRenderingContext对象与Canvas组件绑定后，可在Canvas组件上进
 constructor(unit?: LengthMetricsUnit)
 ```
 
-构造使用drawing接口进行绘制的Canvas画布对象，支持配置DrawingRenderingContext对象的单位模式。
+Create DrawingRenderingContext with setting LengthMetricsUnit.
 
 **Since:** 23
 
@@ -32,7 +32,7 @@ constructor(unit?: LengthMetricsUnit)
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| unit | [LengthMetricsUnit](arkts-arkui-lengthmetricsunit-t.md) | No | 用来配置DrawingRenderingContext对象的单位模式， 配置后无法更改。异常值undefined、NaN和Infinity按默认值处理。默认值：DEFAULT。 |
+| unit | [LengthMetricsUnit](arkts-arkui-lengthmetricsunit-t.md) | No | the unit mode |
 
 ## invalidate
 
@@ -40,7 +40,7 @@ constructor(unit?: LengthMetricsUnit)
 invalidate(): void
 ```
 
-使组件无效，触发组件的重新渲染。
+Invalidate the component, which will cause a re-render of the component.
 
 **Since:** 23
 
@@ -58,9 +58,9 @@ invalidate(): void
 get canvas(): DrawingCanvas | undefined
 ```
 
-获取绘制内容的画布对象。
+Get canvas of the DrawingRenderingContext.
 
-**Type:** [DrawingCanvas](arkts-arkui-drawingcanvas-t.md)
+**Type:** [DrawingCanvas](../arkts-components/arkts-arkui-drawingcanvas-t.md)
 
 **Since:** 23
 
@@ -78,7 +78,7 @@ get canvas(): DrawingCanvas | undefined
 get size(): Size
 ```
 
-获取DrawingRenderingContext的大小。
+Get size of the DrawingRenderingContext.
 
 **Type:** [Size](arkts-arkui-graphics-size-i.md)
 

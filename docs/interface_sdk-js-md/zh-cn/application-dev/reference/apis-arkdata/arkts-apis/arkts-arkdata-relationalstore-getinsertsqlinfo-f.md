@@ -1,11 +1,5 @@
 # getInsertSqlInfo
 
-## 导入模块
-
-```TypeScript
-import { relationalStore } from 'kits/@kit.ArkData';
-```
-
 ## getInsertSqlInfo
 
 ```TypeScript
@@ -40,9 +34,11 @@ function getInsertSqlInfo(table: string, values: ValuesBucket, conflict?: Confli
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 14800001 | Invalid arguments. Possible causes: 1. Parameter is out of valid range. |
+| [14800001](../errorcode-data-rdb.md#14800001-无效的参数) | Invalid arguments. Possible causes: 1. Parameter is out of valid range. |
 
 ## 示例
+
+ArkTS-Dyn示例：
 
 ```TypeScript
 const bucket: relationalStore.ValuesBucket = {
@@ -50,6 +46,22 @@ const bucket: relationalStore.ValuesBucket = {
   age: 18,
   sex: "man",
   desc: "asserter"
+};
+const sqlInfo: relationalStore.SqlInfo = relationalStore.getInsertSqlInfo(
+  "USER",
+  bucket,
+  relationalStore.ConflictResolution.ON_CONFLICT_NONE
+);
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+const bucket: relationalStore.ValuesBucket = {
+  'name': "Logitech",
+  'age': 18 as long,
+  'sex': "man",
+  'desc': "asserter"
 };
 const sqlInfo: relationalStore.SqlInfo = relationalStore.getInsertSqlInfo(
   "USER",

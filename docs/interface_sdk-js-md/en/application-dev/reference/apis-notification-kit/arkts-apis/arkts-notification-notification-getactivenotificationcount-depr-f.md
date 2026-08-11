@@ -6,7 +6,7 @@
 function getActiveNotificationCount(callback: AsyncCallback<number>): void
 ```
 
-获取当前应用未删除的通知数（Callback形式）。
+Obtains the number of active notifications of this application. This API uses an asynchronous callback to return the result.
 
 **Since:** 7
 
@@ -24,7 +24,7 @@ function getActiveNotificationCount(callback: AsyncCallback<number>): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;number&gt; | Yes | 获取未删除通知数回调函数。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;number&gt; | Yes | Callback used to return the result. |
 
 
 ## getActiveNotificationCount
@@ -33,7 +33,7 @@ function getActiveNotificationCount(callback: AsyncCallback<number>): void
 function getActiveNotificationCount(): Promise<number>
 ```
 
-获取当前应用未删除的通知数（Promise形式）。
+Obtains the number of active notifications of this application. This API uses a promise to return the result.
 
 **Since:** 7
 
@@ -51,5 +51,5 @@ function getActiveNotificationCount(): Promise<number>
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;number&gt; | 以Promise形式返回获取当前应用未删除通知数。 |
+| Promise&lt;number&gt; | Promise used to return the result. |
 

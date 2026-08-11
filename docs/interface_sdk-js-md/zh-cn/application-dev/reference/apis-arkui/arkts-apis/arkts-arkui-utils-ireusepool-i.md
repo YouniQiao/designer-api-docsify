@@ -33,7 +33,7 @@ getReusableInfo(componentConstructor : Class,
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| componentConstructor | [Class](../../apis-arkts/arkts-apis/arkts-arkts-class-c.md) | 是 | 要查询的可复用自定义组件的类型。 |
+| componentConstructor | Class | 是 | 要查询的可复用自定义组件的类型。 |
 | reuseId | string | 否 | 可选的reuseId用于过滤结果。如果指定，则仅返回此特定reuseId复用池的信息。默认值是undefined，返回所有reuseId复用池信息。 |
 
 **返回值：**

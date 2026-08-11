@@ -1,11 +1,5 @@
 # recoverBackupBundleData（系统接口）
 
-## 导入模块
-
-```TypeScript
-import { bundleManager } from 'kits/@kit.AbilityKit';
-```
-
 ## recoverBackupBundleData
 
 ```TypeScript
@@ -44,13 +38,15 @@ function recoverBackupBundleData(bundleName: string, userId: int, appIndex: int)
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 17700061 | AppIndex not in valid range. |
-| 201 | Permission denied. |
-| 202 | Permission denied, non-system app called system api. |
-| 17700004 | The specified user ID is not found. |
-| 17700001 | The specified bundleName is not found. |
+| [17700061](../errorcode-bundle.md#17700061-指定的应用分身索引无效) | AppIndex not in valid range. |
+| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission denied, non-system app called system api. |
+| [17700004](../errorcode-bundle.md#17700004-指定的用户不存在) | The specified user ID is not found. |
+| [17700001](../errorcode-bundle.md#17700001-指定的bundlename不存在) | The specified bundleName is not found. |
 
 ## 示例
+
+ArkTS-Dyn示例:
 
 ```TypeScript
 import { bundleManager } from '@kit.AbilityKit';
@@ -67,6 +63,32 @@ try {
     hilog.info(0x0000, 'testTag', 'recoverBackupBundleData successfully');
   }).catch((err: BusinessError) => {
     hilog.error(0x0000, 'testTag', 'recoverBackupBundleData failed. Cause: %{public}s', err.message);
+  });
+} catch (err) {
+  let message = (err as BusinessError).message;
+  hilog.error(0x0000, 'testTag', 'recoverBackupBundleData failed. Cause: %{public}s', message);
+}
+```
+
+ArkTS-Sta示例:
+
+```TypeScript
+'use static'
+
+import { bundleManager } from '@kit.AbilityKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+import { hilog } from '@kit.PerformanceAnalysisKit';
+
+// 请开发者替换为实际的包名、用户ID和应用索引
+let bundleName: string = 'com.ohos.demo';
+let userId: int = 100;
+let appIndex: int = 0;
+
+try {
+  bundleManager.recoverBackupBundleData(bundleName, userId, appIndex).then(() => {
+    hilog.info(0x0000, 'testTag', 'recoverBackupBundleData successfully');
+  }).catch((err: Error) => {
+    hilog.error(0x0000, 'testTag', 'recoverBackupBundleData failed. Cause: %{public}s', (err as BusinessError).message);
   });
 } catch (err) {
   let message = (err as BusinessError).message;

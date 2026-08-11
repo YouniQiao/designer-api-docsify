@@ -12,7 +12,7 @@ import { systemDateTime } from 'kits/@kit.BasicServicesKit';
 function setAutoTimeStatus(status: boolean): Promise<void>
 ```
 
-设置自动设置时间开关状态，使用Promise异步回调。
+Sets the status of the automatic time setting. This API uses a promise to return the result.
 
 **Since:** 21
 
@@ -30,22 +30,22 @@ function setAutoTimeStatus(status: boolean): Promise<void>
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| status | boolean | Yes | 设置自动设置时间开关状态。&lt;br/&gt;- true：表示打开自动设置时间开关。 &lt;br/&gt;- false：表示关闭自动设置时间开关。 |
+| status | boolean | Yes | Whether to enable the automatic time setting.&lt;br&gt;- **true**: Enable the automatic time setting.&lt;br&gt;- **false**: Disable the automatic time setting. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | 无返回结果的Promise对象。 |
+| Promise&lt;void&gt; | Promise that returns no value. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 13000001 | Network connection error or OS error. Possible causes: 1. System memory is insufficient; 2. Calls the underlying system interface failed. |
-| 201 | Permission denied |
-| 202 | Permission verification failed. A non-system application calls a system API. |
-| 204 | Access denied due to user access control policy. Possible causes: 1. The operation is restricted by the OS-account constraint. 2. The required privilege for the operation has not been granted.<br>**Applicable version:** 24 and later |
+| [13000001](../../apis-basic-services-kit/errorcode-time.md#13000001-network-or-os-error) | Network connection error or OS error. Possible causes: 1. System memory is insufficient; 2. Calls the underlying system interface failed. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
+| [204](../../errorcode-universal.md#204-access-denied-by-user-access-control-policy) | Access denied due to user access control policy. Possible causes: 1. The operation is restricted by the OS-account constraint. 2. The required privilege for the operation has not been granted.<br>**Applicable version:** 26.0.0 and later |
 
 ## Examples
 

@@ -1,6 +1,6 @@
 # SimpleNumberFormat
 
-基于框架字符串提供数字格式化的能力。
+Provide a simple number formatting interface.
 
 **Since:** 23
 
@@ -22,7 +22,7 @@ import { i18n } from 'kits/@kit.LocalizationKit';
 format(value: double): string
 ```
 
-对数字进行格式化。
+Formats a number.
 
 **Since:** 23
 
@@ -38,11 +38,11 @@ format(value: double): string
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | double | Yes | 数字对象。 |
+| value | double | Yes | Number to be formatted. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| string | 格式化后的数字字符串。 |
+| string | Formatted number. |
 

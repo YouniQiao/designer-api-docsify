@@ -4,7 +4,7 @@
 export type AbilityStageMonitor = _AbilityStageMonitor
 ```
 
-AbilityStageMonitor模块。
+Represents the **AbilityStageMonitor** module.
 
 **Since:** 14
 

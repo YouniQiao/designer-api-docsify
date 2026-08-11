@@ -1,18 +1,23 @@
 # LocalUpdater (System API)
 
-提供校验本地升级包签名和完整性、安装本地升级包、监听本地升级事件等本地固件更新功能的工具类。
+Defines a tool class for updating the local firmware, such as verifying the signature and integrity of the local upgrade package, installing the local upgrade package, and listening for local upgrade events.
 
-使用场景：离线环境系统升级、网络不稳定场景升级、自主可控升级流程。
+Use scenarios: offline system upgrade, upgrade with poor network connection, and controllable upgrade.
 
-**收益说明**：
+**Benefits**
 
-解决无法联网自动升级的问题，适合离线环境或网络不稳定场景，无需依赖升级包管理服务器，降低升级成本，自主可控升级时间，确保系统完整性。
+This upgrade mode applies to offline system upgrade or upgrade with poor network connection when automatic upgrade cannot be implemented. This mode does not depend on the upgrade package management server, reducing the update cost. The upgrade time can be controlled, ensuring system integrity.
 
-**实现机制**：
+**Local upgrade**
 
-- 校验机制：验证升级包是否为官方发布且未被篡改，检查签名、完整性和版本兼容性。  
-- 安装机制：解压并写入升级包内容到系统分区，准备重启应用新版本。  
-- 安全保证：必须先校验升级包，确保来源可信后方可安装。
+**Implementation mechanism**
+
+- Verification mechanism: Verify that the upgrade package is officially released and has not been tampered with by   
+checking the signature, integrity, and version compatibility.  
+- Installation mechanism: Decompress the upgrade package and and write its content to the system partition. Prepare  
+for the device restart to apply the new version.  
+- Security assurance: The upgrade package must be verified first to ensure that the source is trusted before   
+installation.
 
 **Since:** 9
 
@@ -36,20 +41,23 @@ import { update } from 'kits/@kit.BasicServicesKit';
 applyNewVersion(upgradeFiles: Array<UpgradeFile>, callback: AsyncCallback<void>): void
 ```
 
-安装升级包。升级过程中设备会重启，应用需做好状态保存。使用callback异步回调。
+Installs the upgrade package. During the upgrade, the device automatically restarts. The app status needs to be saved. This API uses an asynchronous callback to return the result.
 
-**原理说明**：
+**Overview**
 
-该方法执行本地升级包安装流程：读取升级包文件 → 解压升级包内容 → 验证包完整性（校验签名和版本兼容性，依赖verifyUpgradePackage的校验结果） → 写入系统分区（覆盖或更新系统文件） → 更新版本标识 → 准备重启环境 → 设备重启应用新版本。安装过程中维护任务状态，可通过on方法监听安装进度和状态变化。安装成功后，设备重启并加载新版本系统，升级完成。
+The process is as follows: Read the upgrade package. Decompress the upgrade package. Verify the package integrity by verifying the signature and version compatibility based on the result of **verifyUpgradePackage**. Write the package to the system partition by overwriting or updating system files. Update the version ID. Prepare the environment for restart. The device restarts to apply the new version. Maintain the task status during the installation process. You can call **on** to monitor the installation progress and status changes. After the installation is successful, the device restarts and loads the new system version. The upgrade is complete.
 
-调用顺序说明：
+**Calling sequence**
 
-- 必须先调用verifyUpgradePackage校验升级包并校验通过后，才能调用本方法安装升级包。  
-- 未校验直接调用本方法可能导致安装失败或系统损坏，必须先调用verifyUpgradePackage校验升级包。  
-- 调用成功后，系统将解压并写入升级包内容到系统分区，准备重启以应用新版本，开发者可通过监听事件跟踪安装进度。  
-- 通过安装升级包可以完成系统版本更新。
+- You must call **verifyUpgradePackage** to verify the upgrade package and pass the verification before calling   
+this method to install the upgrade package.  
+- You must call **verifyUpgradePackage** to verify the upgrade package first. Failing to do so may cause   
+installation failure or system damage.  
+- After the API is successfully called, the system decompresses the upgrade package, writes its content to the   
+system partition, and prepares for device restart to apply the new version. An event listener can be registered to track the installation progress.  
+- You can install the upgrade package to update the system version.
 
-使用场景：从本地存储设备(如SD卡)进行系统升级、完成本地升级流程。
+Use scenarios: This method is used to upgrade the system from a local storage device (such as an SD card).
 
 **Since:** 9
 
@@ -67,43 +75,17 @@ applyNewVersion(upgradeFiles: Array<UpgradeFile>, callback: AsyncCallback<void>)
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| upgradeFiles | Array&lt;UpgradeFile&gt; | Yes | 升级文件数组，用于指定要安装的本地升级包列表。必须先调用verifyUpgradePackage校验升级包并校验通过后才能使用此参数安 装。每个元素包含fileType(文件类型)和filePath(文件路径)字段，filePath长度范围[1，255]，单位：字符。超出范围时抛出异常，由开发者提供升级包文件路径。 |
-| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | 回调函数，用于接收安装升级包结果。回调参数包括： err(错误对象，成功时为null，失败时为错误对象)。 |
+| upgradeFiles | Array&lt;UpgradeFile&gt; | Yes | An array of upgrade files, which is used to specify the local upgrade files to be installed. You must call **verifyUpgradePackage** to verify the upgrade package and pass the verification before using this parameter to install the upgrade package. The parameter contains the **fileType** and **filePath** fields. The value of **filePath** is a string of 1 to 255 characters. If the value is out of range, an exception is thrown, and you need to provide the path of the upgrade package. |
+| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback function used to receive the result of installing the upgrade package. The callback parameter is **err**. If the operation is successful, **err** is **null**; if the operation fails, **err** is an error object. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter verification failed. |
-| 11500104 | IPC error. |
-| 201 | Permission denied. |
-| 202 | Permission verification failed. A non-system application calls a system API. |
-
-## Examples
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-const upgradeFiles: Array<update.UpgradeFile> = [{
-  fileType: update.ComponentType.OTA, // OTA package
-  filePath: '/data/local/tmp/updater.zip' // Local update package path. The user needs to download the upgrade package from the official website of the vendor or an official channel and save it to an accessible storage path of the device, for example, /data/local/tmp/updater.zip.
-}];
-
-try {
-  // Obtain a LocalUpdater object.
-  let localUpdater = update.getLocalUpdater();
-  // Install the new version.
-  localUpdater.applyNewVersion(upgradeFiles, (applyNewVersionError: BusinessError) => {
-    if (applyNewVersionError) {
-      console.error(`applyNewVersion error, code:${applyNewVersionError.code}, message:${applyNewVersionError.message}.`);
-      return;
-    }
-    console.info(`applyNewVersion success`);
-  });
-} catch (error) {
-  console.error(`Fail to get localUpdater error: ${error}`);
-}
-```
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter verification failed. |
+| [11500104](../../apis-basic-services-kit/errorcode-update.md#11500104-ipc-error) | IPC error. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
 
 ## applyNewVersion
 
@@ -111,20 +93,23 @@ try {
 applyNewVersion(upgradeFiles: Array<UpgradeFile>): Promise<void>
 ```
 
-安装升级包。升级过程中设备会重启，应用需做好状态保存。使用Promise异步回调。
+Installs the upgrade package. During the upgrade, the device automatically restarts. The app status needs to be saved. This API uses a promise to return the result.
 
-**原理说明**：
+**Overview**
 
-该方法执行本地升级包安装流程：读取升级包文件 → 解压升级包内容 → 验证包完整性（校验签名和版本兼容性，依赖verifyUpgradePackage的校验结果） → 写入系统分区（覆盖或更新系统文件） → 更新版本标识 → 准备重启环境 → 设备重启应用新版本。安装过程中维护任务状态，可通过on方法监听安装进度和状态变化。安装成功后，设备重启并加载新版本系统，升级完成。
+The process is as follows: Read the upgrade package. Decompress the upgrade package. Verify the package integrity by verifying the signature and version compatibility based on the result of **verifyUpgradePackage**. Write the package to the system partition by overwriting or updating system files. Update the version ID. Prepare the environment for restart. The device restarts to apply the new version. Maintain the task status during the installation process. You can call **on** to monitor the installation progress and status changes. After the installation is successful, the device restarts and loads the new system version. The upgrade is complete.
 
-调用顺序说明：
+**Calling sequence**
 
-- 必须先调用verifyUpgradePackage校验升级包并校验通过后，才能调用本方法安装升级包。  
-- 未校验直接调用本方法可能导致安装失败或系统损坏，必须先调用verifyUpgradePackage校验升级包。  
-- 调用成功后，系统将解压并写入升级包内容到系统分区，准备重启以应用新版本，可通过监听事件跟踪安装进度。  
-- 通过安装升级包可以完成系统版本更新。
+- You must call **verifyUpgradePackage** to verify the upgrade package and pass the verification before calling   
+this method to install the upgrade package.  
+- You must call **verifyUpgradePackage** to verify the upgrade package first. Failing to do so may cause   
+installation failure or system damage.  
+- After the API is successfully called, the system decompresses the upgrade package, writes its content to the   
+system partition, and prepares for device restart to apply the new version. An event listener can be registered to track the installation progress.  
+- You can install the upgrade package to update the system version.
 
-使用场景：从本地存储设备(如SD卡)进行系统升级、完成本地升级流程。
+Use scenarios: This method is used to upgrade the system from a local storage device (such as an SD card).
 
 **Since:** 9
 
@@ -142,46 +127,22 @@ applyNewVersion(upgradeFiles: Array<UpgradeFile>): Promise<void>
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| upgradeFiles | Array&lt;UpgradeFile&gt; | Yes | 升级文件数组，用于指定要安装的本地升级包列表。必须先调用verifyUpgradePackage校验升级包并校验通过后才能使用此参数安 装。每个元素包含fileType(文件类型)和filePath(文件路径)字段，filePath长度范围[1，255], 单位：字符。超出范围时抛出异常，由开发者提供升级包文件路径。 |
+| upgradeFiles | Array&lt;UpgradeFile&gt; | Yes | An array of upgrade files, which is used to specify the local upgrade files to be installed. You must call **verifyUpgradePackage** to verify the upgrade package and pass the verification before using this parameter to install the upgrade package. The parameter contains the **fileType** and **filePath** fields. The value of **filePath** is a string of 1 to 255 characters. If the value is out of range, an exception is thrown, and you need to provide the path of the upgrade package. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise对象。成功时resolve无返回结果，失败时reject返回错误信息。 |
+| Promise&lt;void&gt; | Promise used to return the result. If the operation is successful, **resolve** returns no value. If the operation fails, the return value of **reject** is an error message. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter verification failed. |
-| 11500104 | IPC error. |
-| 201 | Permission denied. |
-| 202 | Permission verification failed. A non-system application calls a system API. |
-
-## Examples
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-const upgradeFiles: Array<update.UpgradeFile> = [{
-  fileType: update.ComponentType.OTA, // OTA package
-  filePath: '/data/local/tmp/updater.zip' // Local update package path. The user needs to download the upgrade package from the official website of the vendor or an official channel and save it to an accessible storage path of the device, for example, /data/local/tmp/updater.zip.
-}];
-
-try {
-  // Obtain a LocalUpdater object.
-  let localUpdater = update.getLocalUpdater();
-  // Install the new version.
-  localUpdater.applyNewVersion(upgradeFiles).then(() => {
-    console.info(`applyNewVersion success`);
-  }).catch((applyNewVersionError: BusinessError) => {
-    console.error(`applyNewVersion error, code:${applyNewVersionError.code}, message:${applyNewVersionError.message}.`);
-  });
-} catch (error) {
-  console.error(`Fail to get localUpdater error: ${error}`);
-}
-```
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter verification failed. |
+| [11500104](../../apis-basic-services-kit/errorcode-update.md#11500104-ipc-error) | IPC error. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
 
 ## off
 
@@ -189,19 +150,20 @@ try {
 off(eventClassifyInfo: EventClassifyInfo, taskCallback?: UpgradeTaskCallback): void
 ```
 
-取消注册事件监听。调用成功后，不再接收对应类型的升级事件通知，避免内存泄漏。
+Disables listening for update events. After the API is successfully called, no more notifications for the upgrade events of the corresponding type will be received, preventing memory leak.
 
-使用场景：本地升级流程结束、不再需要监听升级事件。
+Use scenarios: The local upgrade process is complete and the upgrade event does not need to be monitored.
 
-**原理说明**：
+**Overview**
 
-该方法执行事件监听取消流程：验证eventClassifyInfo参数（确认事件类型）→ 从升级服务的事件监听列表中移除对应的回调函数（若传入taskCallback则移除特定回调，否则移除该事件类型的所有监听）→ 释放监听占用的系统资源 → 断开事件传递通道。取消监听后，升级服务不再向该应用发送该类型的事件通知，应用进程不再接收相关事件回调，释放监听占用的内存和IPC通道资源。
+The process is as follows: Confirm the event type based on **eventClassifyInfo**. Remove the corresponding callback from the event listening list of the upgrade service. (If **taskCallback** is passed, remove the specific callback; otherwise, remove all listeners for the event type.) Release the system resources occupied by the listener. Disconnect the event transfer channel. After the listener is unregistered, the update service no longer sends event notifications of this type to the app, and the app process no longer receives related event callbacks. The memory and IPC channel occupied by the listener are released.
 
-**配对调用说明**：
+**API called in pairs**
 
-- 与on()配对使用，用于取消已注册的事件监听。  
-- 须在已通过on()注册监听后，才能调用本方法取消监听。  
-- 建议在升级流程结束后或页面销毁时调用，及时释放资源。
+- This API must be used in pairs with **on()** to unregister a registered event listener.  
+- This API can be called only after a listener is registered using **on()**.  
+- You are advised to call this method after the upgrade process is complete or when the page is destroyed to   
+release resources in a timely manner.
 
 **Since:** 9
 
@@ -217,35 +179,28 @@ off(eventClassifyInfo: EventClassifyInfo, taskCallback?: UpgradeTaskCallback): v
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| eventClassifyInfo | [EventClassifyInfo](arkts-basicservices-update-eventclassifyinfo-i-sys.md) | Yes | 事件信息对象（EventClassifyInfo），用于指定要取消监听的升级事件类型。必须先通过on方法注册监听后才能使用此参数 取消监听。 |
-| taskCallback | [UpgradeTaskCallback](arkts-basicservices-update-upgradetaskcallback-t-sys.md) | No | 事件回调，用于取消指定回调监听。回调签名：(eventInfo: EventInfo) => void，其中eventInfo为事件信 息对象，包含eventId和taskBody字段。当需要取消特定回调监听时传入此参数；不传入此参数时默认为undefined，表示取消该事件类型的所有监听。 |
+| eventClassifyInfo | [EventClassifyInfo](arkts-basicservices-update-eventclassifyinfo-i-sys.md) | Yes | EventClassifyInfo** object, which is used to specify the type of the upgrade event whose listener needs to be unregistered. You must use **on** to register a listener before using this method to unregister the listener. |
+| taskCallback | [UpgradeTaskCallback](arkts-basicservices-update-upgradetaskcallback-t-sys.md) | No | Task callback, which is used to cancel a specified callback listener. Callback signature. In the signature, **eventInfo** is an **EventInfo** object, whose value is **void**. **eventInfo** contains the **eventId** and **taskBody** fields. Pass this parameter when a specific callback listener needs to be unregistered. If this parameter is not passed, the default value is **undefined**, indicating that all listeners for the event type are canceled. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 202 | Permission verification failed. A non-system application calls a system API. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
 
 ## Examples
 
 ```TypeScript
 const eventClassifyInfo: update.EventClassifyInfo = {
-  eventClassify: update.EventClassify.TASK, // Task event type
-  extraInfo: ''
+  eventClassify: update.EventClassify.TASK, // Listening for update events
+  extraInfo: ""
 };
-// Define the callback for task updates, which is used to process the upgrade task event.
+
 let onTaskUpdate: update.UpgradeTaskCallback = (eventInfo: update.EventInfo) => {
   console.info(`on eventInfo id `, eventInfo.eventId);
 };
 
-try {
-  // Obtain a LocalUpdater object.
-  let localUpdater = update.getLocalUpdater();
-  // Unregister the local upgrade event listener.
-  localUpdater.off(eventClassifyInfo, onTaskUpdate);
-} catch (error) {
-  console.error(`Fail to get localUpdater error: ${error}`);
-}
+localUpdater.off(eventClassifyInfo, onTaskUpdate);
 ```
 
 ## on
@@ -254,24 +209,26 @@ try {
 on(eventClassifyInfo: EventClassifyInfo, taskCallback: UpgradeTaskCallback): void
 ```
 
-注册事件监听，用于实时监控升级状态。调用成功后，监听对应类型的升级事件，事件发生时通过回调函数传递事件信息，包括事件ID、任务状态、进度等。通过事件监听可以实时获取升级进度和状态变化，及时发现升级异常并处理，提升用户体验和升级流程的可控性。
+Registers an event listener to monitor the upgrade status in real time. After the API is successfully called, the upgrade event of the corresponding type is listened for. When an event occurs, the event information is transferred using a callback, including the event ID, task status, and progress. The event listener can be used to obtain the upgrade progress and status changes in real time, detect and handle upgrade exceptions promptly, thereby improving user experience and the controllability of the upgrade process.
 
-使用场景：OTA升级客户端显示升级进度条和百分比、设备管理系统批量设备升级状态监控、后台自动升级任务进度跟踪。
+Use scenarios: Display the upgrade progress bar and percentage on the OTA upgrade client, monitor the batch device upgrade status in the device management system, and track the progress of automatic upgrade in the background.
 
-**原理说明**：
+**Overview**
 
-该方法通过系统事件机制注册本地升级事件监听：构造eventClassifyInfo指定事件类型（如TASK）→ 将回调函数注册到本地升级服务的事件监听列表 → 本地升级服务在安装状态变化时触发事件（如安装开始、安装进度更新、安装成功等）→ 事件通过IPC通道传递到应用进程 → 调用注册的回调函数传递EventInfo对象。事件监听采用异步回调机制，不影响本地升级流程执行，建议在升级流程结束后调用off取消监听避免内存泄漏。
+This method registers a local upgrade event listener. The process is as follows: Construct **eventClassifyInfo** to specify the event type, for example, **TASK**. Register the callback function with the local event listening list of the upgrade service. The local upgrade service triggers an event upon installation status changes, for example, when the installation starts, the installation progress is updated, or the installation succeeds. The event is transferred to the app process through the IPC channel. Call the registered callback to transfer the   
+**EventInfo** object. This API uses an asynchronous callback to return the result, which does not affect the local upgrade process. You are advised to call **off** to unregister the listener after the upgrade process is complete to prevent memory leak.
 
-**配对调用**：
+**API called in pairs**
 
-- 调用on()注册监听后，必须在不再需要监听时调用off()取消监听。  
-- 未调用off()取消监听会导致内存泄漏，影响系统性能。  
-- 建议在升级流程结束后或页面销毁时调用off()。
+- After a listener is registered by calling **on()**, you are advised to call **off()** to unregister the   
+listener when it is no longer needed.  
+- If **off()** is not called to unregister the listener, memory leak occurs, affecting system performance.  
+- You are advised to call **off()** after the upgrade process is complete or when the page is destroyed.
 
-**使用建议**：
+**Suggestions**
 
-- 在调用applyNewVersion等长时间操作前注册监听。  
-- 在操作完成或收到最终事件后取消监听。
+- Register a listener before performing long-time operations such as calling **applyNewVersion**.  
+- Unregister the listener after the operation is complete or the final event is received.
 
 **Since:** 9
 
@@ -287,35 +244,28 @@ on(eventClassifyInfo: EventClassifyInfo, taskCallback: UpgradeTaskCallback): voi
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| eventClassifyInfo | [EventClassifyInfo](arkts-basicservices-update-eventclassifyinfo-i-sys.md) | Yes | 事件信息对象(EventClassifyInfo)，用于指定要注册监听的升级事件类型。 |
-| taskCallback | [UpgradeTaskCallback](arkts-basicservices-update-upgradetaskcallback-t-sys.md) | Yes | 事件回调，用于接收升级任务事件通知。回调签名：(eventInfo: EventInfo) => void，其中eventInfo为事 件信息对象，包含eventId（事件ID）和taskBody（任务数据）字段。 |
+| eventClassifyInfo | [EventClassifyInfo](arkts-basicservices-update-eventclassifyinfo-i-sys.md) | Yes | EventClassifyInfo** object, which is used to specify the type of the upgrade event to be listened for. |
+| taskCallback | [UpgradeTaskCallback](arkts-basicservices-update-upgradetaskcallback-t-sys.md) | Yes | Task callback, which is used to receive upgrade task event notifications. Callback signature. In the signature, **eventInfo** is an **EventInfo** object, whose value is **void**. **eventInfo** contains the **eventId** (event ID) and **taskBody** (task data) fields. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 202 | Permission verification failed. A non-system application calls a system API. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
 
 ## Examples
 
 ```TypeScript
 const eventClassifyInfo: update.EventClassifyInfo = {
-  eventClassify: update.EventClassify.TASK, // Task event type
-  extraInfo: ''
+  eventClassify: update.EventClassify.TASK, // Listening for update events
+  extraInfo: ""
 };
-// Define the callback for task updates, which is used to process the upgrade task event.
+
 let onTaskUpdate: update.UpgradeTaskCallback = (eventInfo: update.EventInfo) => {
   console.info(`on eventInfo id `, eventInfo.eventId);
 };
 
-try {
-  // Obtain a LocalUpdater object.
-  let localUpdater = update.getLocalUpdater();
-  // Register a local upgrade event listener.
-  localUpdater.on(eventClassifyInfo, onTaskUpdate);
-} catch (error) {
-  console.error(`Fail to get localUpdater error: ${error}`);
-}
+localUpdater.on(eventClassifyInfo, onTaskUpdate);
 ```
 
 ## verifyUpgradePackage
@@ -324,24 +274,28 @@ try {
 verifyUpgradePackage(upgradeFile: UpgradeFile, certsFile: string, callback: AsyncCallback<void>): void
 ```
 
-校验升级包的数字签名、文件完整性和版本兼容性，验证升级包是否为官方发布且未被篡改。调用成功且校验通过后，升级包被视为可信，可用于后续安装；若校验失败，将返回错误信息并阻止安装。使用callback异步回调。
+Verifies the upgrade package, including its digital signature, file integrity, and version compatibility, to ensure that the upgrade package is officially released and has not been tampered with. If the API is called successfully and the verification is passed, the upgrade package is considered trusted and can be used for subsequent installation. If the verification fails, an error message is returned and the installation is blocked.This API uses an asynchronous callback to return the result.
 
-使用场景：用户从本地存储设备获取升级包、需要验证来源可信，以及确保完整性、防止恶意包攻击。
+Use scenarios: When a user obtains an upgrade package from a local storage device, the source needs to be verified to ensure integrity and prevent malicious packet attacks.
 
-**原理说明**：
+**Overview**
 
-该方法执行升级包安全校验流程：读取升级包文件和证书文件 → 使用证书验证升级包的数字签名（验证签名算法、签名值、证书有效性）→ 计算升级包的哈希值并与包内哈希校验值比对验证文件完整性 → 检查升级包版本号与当前系统版本兼容性 → 返回校验结果。数字签名验证确保升级包来源可信（由官方签名），完整性验证确保升级包未被篡改，版本兼容性验证确保升级包适用于当前设备。校验通过后升级包标记为可信状态，方可用于后续安装流程。
+The process is as follows: Read the upgrade package and certificate file. Use the certificate to verify the digital signature of the upgrade package, including the signature algorithm, signature value, and certificate validity. Calculate the hash value of the upgrade package and compare it with the hash value in the package to verify the file integrity. Check the compatibility between the upgrade package version and the current system version. Return the verification result. Digital signature verification ensures that the upgrade package is from a trusted source signed using the official signature. Integrity verification ensures that the upgrade package has not been tampered with. Version compatibility verification ensures that the upgrade package is applicable to the current device. After the verification is successful, the upgrade package is marked as trusted and can be used in the subsequent installation process.
 
-**调用顺序说明**：
+**Calling sequence**
 
-- 升级包必须从设备厂商官网或官方渠道下载，确保来源可信。使用非官方渠道下载的升级包可能存在安全风险。  
-- 必须先调用verifyUpgradePackage校验升级包并校验通过后，才能调用applyNewVersion安装升级包。  
-- 未校验直接调用applyNewVersion会导致安装失败，可能造成系统损坏。  
-- 校验通过后的升级包可用于后续安装流程。
+- The upgrade package must be downloaded from the official website of the vendor or from an official channel to   
+ensure that the source is trusted. Using update packages downloaded from non-official channels may pose security risks.  
+- You must call **verifyUpgradePackage** to verify the upgrade package and pass the verification before calling   
+**applyNewVersion** to install the upgrade package.  
+- If you call **applyNewVersion** without verifying the upgrade package first, the installation may fail and the   
+system may be damaged.  
+- The upgrade package that passes the verification can be used in the subsequent installation process.
 
-**相关方法**：
+**Related methods**
 
-- applyNewVersion()：安装升级包（校验通过后调用）。
+- **applyNewVersion()**: installs the upgrade package. This method can be called after the verification is   
+successful.
 
 **Since:** 9
 
@@ -359,46 +313,30 @@ verifyUpgradePackage(upgradeFile: UpgradeFile, certsFile: string, callback: Asyn
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| upgradeFile | [UpgradeFile](arkts-basicservices-update-upgradefile-i-sys.md) | Yes | 升级文件（UpgradeFile），包含文件类型和文件路径，用于指定要校验的本地升级包。 |
-| certsFile | string | Yes | 证书文件路径，用于校验升级包签名。证书文件必须从设备厂商官网下载，确保来源可信。支持绝对路径或相对路径，路径长度范围[1，255]，单位：字符。仅支持字母、数字、下划 线、连字符、点号和斜杠等路径合法字符。超出长度范围或包含无效字符时抛出异常。 |
-| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | 回调函数，用于接收校验结果。回调参数包括： err(错误对象，成功时为null，失败时为错误对象)。 |
+| upgradeFile | [UpgradeFile](arkts-basicservices-update-upgradefile-i-sys.md) | Yes | Upgrade file, including the file type and file path, which are used to specify the local upgrade package to be verified. |
+| certsFile | string | Yes | Certificate file path, which is used to verify the upgrade package signature. The certificate file must be downloaded from the official website of the vendor to ensure that the source is trusted. The value can be an absolute path or a relative path. The path length ranges from 1 to 255 characters. Only letters, digits, underscores (_), hyphens (-), dots (.), and slashes (/) are allowed. An exception is thrown if the value is out of range or contains invalid characters. |
+| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to receive the verification result. The callback parameter is **err**. If the operation is successful, **err** is **null**; if the operation fails, **err** is an error object. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter verification failed. |
-| 11500104 | IPC error. |
-| 201 | Permission denied. |
-| 202 | Permission verification failed. A non-system application calls a system API. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter verification failed. |
+| [11500104](../../apis-basic-services-kit/errorcode-update.md#11500104-ipc-error) | IPC error. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
 
 ## Examples
 
 ```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
 const upgradeFile: update.UpgradeFile = {
   fileType: update.ComponentType.OTA, // OTA package
-  filePath: '/data/local/tmp/updater.zip' // Local update package path. The user needs to download the upgrade package from the official website of the vendor or an official channel and save it to an accessible storage path of the device, for example, /data/local/tmp/updater.zip.
+  filePath: "path" // Path of the local update package
 };
-// certsFile is the certificate file path, which needs to be downloaded from the official website of the vendor and saved to an accessible path on the device.
-const certsFile = '/path/to/certificate.cert'; // Certificate file path, which needs to be downloaded from the official website of the vendor.
 
-try {
-  // Obtain a LocalUpdater object.
-  let localUpdater = update.getLocalUpdater();
-  // Verify the upgrade package.
-  localUpdater.verifyUpgradePackage(upgradeFile, certsFile, (verifyUpgradePackageError: BusinessError) => {
-    if (verifyUpgradePackageError) {
-      console.error(`verifyUpgradePackage error, code:${verifyUpgradePackageError.code}, message:${verifyUpgradePackageError.message}.`);
-      return;
-    }
-    console.info(`verifyUpgradePackage success`);
-  });
-} catch (error) {
-  let err: BusinessError = error as BusinessError;
-  console.error(`Fail to get localUpdater. Code: ${err.code}, message: ${err.message}.`);
-}
+localUpdater.verifyUpgradePackage(upgradeFile, "cerstFilePath", (err) => {
+  console.info(`factoryReset error ${JSON.stringify(err)}`);
+});
 ```
 
 ## verifyUpgradePackage
@@ -407,20 +345,23 @@ try {
 verifyUpgradePackage(upgradeFile: UpgradeFile, certsFile: string): Promise<void>
 ```
 
-校验升级包的数字签名、文件完整性和版本兼容性，验证升级包是否为官方发布且未被篡改。调用成功且校验通过后，升级包被视为可信，可用于后续安装；若校验失败，将返回错误信息并阻止安装。使用Promise异步回调。
+Verifies the upgrade package, including its digital signature, file integrity, and version compatibility, to ensure that the upgrade package is officially released and has not been tampered with. If the API is called successfully and the verification is passed, the upgrade package is considered trusted and can be used for subsequent installation. If the verification fails, an error message is returned and the installation is blocked.This API uses a promise to return the result.
 
-使用场景：用户从本地存储设备获取升级包、需要验证来源可信，以及确保完整性、防止恶意包攻击。
+Use scenarios: When a user obtains an upgrade package from a local storage device, the source needs to be verified to ensure integrity and prevent malicious packet attacks.
 
-**原理说明**：
+**Overview**
 
-该方法执行升级包安全校验流程：读取升级包文件和证书文件 → 使用证书验证升级包的数字签名（验证签名算法、签名值、证书有效性）→ 计算升级包的哈希值并与包内哈希校验值比对验证文件完整性 → 检查升级包版本号与当前系统版本兼容性 → 返回校验结果。数字签名验证确保升级包来源可信（由官方签名），完整性验证确保升级包未被篡改，版本兼容性验证确保升级包适用于当前设备。校验通过后升级包标记为可信状态，方可用于后续安装流程。
+The process is as follows: Read the upgrade package and certificate file. Use the certificate to verify the digital signature of the upgrade package, including the signature algorithm, signature value, and certificate validity. Calculate the hash value of the upgrade package and compare it with the hash value in the package to verify the file integrity. Check the compatibility between the upgrade package version and the current system version. Return the verification result. Digital signature verification ensures that the upgrade package is from a trusted source signed using the official signature. Integrity verification ensures that the upgrade package has not been tampered with. Version compatibility verification ensures that the upgrade package is applicable to the current device. After the verification is successful, the upgrade package is marked as trusted and can be used in the subsequent installation process.
 
-**调用顺序说明**：
+**Calling sequence**
 
-- 升级包必须从设备厂商官网或官方渠道下载，确保来源可信。使用非官方渠道下载的升级包可能存在安全风险。  
-- 必须先调用verifyUpgradePackage校验升级包并校验通过后，才能调用applyNewVersion安装升级包。  
-- 未校验直接调用applyNewVersion会导致安装失败，可能造成系统损坏。  
-- 校验通过后的升级包可用于后续安装流程。
+- The upgrade package must be downloaded from the official website of the vendor or from an official channel to   
+ensure that the source is trusted. Using update packages downloaded from non-official channels may pose security risks.  
+- You must call **verifyUpgradePackage** to verify the upgrade package and pass the verification before calling   
+**applyNewVersion** to install the upgrade package.  
+- If you call **applyNewVersion** without verifying the upgrade package first, the installation may fail and the   
+system may be damaged.  
+- The upgrade package that passes the verification can be used in the subsequent installation process.
 
 **Since:** 9
 
@@ -438,23 +379,23 @@ verifyUpgradePackage(upgradeFile: UpgradeFile, certsFile: string): Promise<void>
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| upgradeFile | [UpgradeFile](arkts-basicservices-update-upgradefile-i-sys.md) | Yes | 升级文件（UpgradeFile），包含文件类型和文件路径，用于指定要校验的本地升级包。 |
-| certsFile | string | Yes | 证书文件路径，用于校验升级包签名。证书文件必须从设备厂商官网下载，确保来源可信。支持绝对路径或相对路径，路径长度范围[1，255]，单位：字符。仅支持字母、数字、下划 线、连字符、点号和斜杠等路径合法字符。超出长度范围或包含无效字符时抛出异常。 |
+| upgradeFile | [UpgradeFile](arkts-basicservices-update-upgradefile-i-sys.md) | Yes | Upgrade file, including the file type and file path, which are used to specify the local upgrade package to be verified. |
+| certsFile | string | Yes | Certificate file path, which is used to verify the upgrade package signature. The certificate file must be downloaded from the official website of the vendor to ensure that the source is trusted. The value can be an absolute path or a relative path. The path length ranges from 1 to 255 characters. Only letters, digits, underscores (_), hyphens (-), dots (.), and slashes (/) are allowed. An exception is thrown if the value is out of range or contains invalid characters. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise对象。成功时resolve无返回结果，失败时reject返回错误信息。 |
+| Promise&lt;void&gt; | Promise used to return the result. If the operation is successful, **resolve** returns no value. If the operation fails, the return value of **reject** is an error message. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter verification failed. |
-| 11500104 | IPC error. |
-| 201 | Permission denied. |
-| 202 | Permission verification failed. A non-system application calls a system API. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter verification failed. |
+| [11500104](../../apis-basic-services-kit/errorcode-update.md#11500104-ipc-error) | IPC error. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
 
 ## Examples
 
@@ -463,23 +404,12 @@ import { BusinessError } from '@kit.BasicServicesKit';
 
 const upgradeFile: update.UpgradeFile = {
   fileType: update.ComponentType.OTA, // OTA package
-  filePath: '/data/local/tmp/updater.zip' // Local update package path. The user needs to download the upgrade package from the official website of the vendor or an official channel and save it to an accessible storage path of the device, for example, /data/local/tmp/updater.zip.
+  filePath: "path" // Path of the local update package
 };
-
-// certsFile is the certificate file path, which needs to be downloaded from the official website of the vendor and saved to an accessible path on the device.
-const certsFile = '/path/to/certificate.cert'; // Certificate file path, which needs to be downloaded from the official website of the vendor.
-
-try {
-  // Obtain a LocalUpdater object.
-  let localUpdater = update.getLocalUpdater();
-  // Verify the upgrade package.
-  localUpdater.verifyUpgradePackage(upgradeFile, certsFile).then(() => {
-    console.info(`verifyUpgradePackage success`);
-  }).catch((verifyUpgradePackageError: BusinessError) => {
-    console.error(`verifyUpgradePackage error, code:${verifyUpgradePackageError.code}, message:${verifyUpgradePackageError.message}.`);
-  });
-} catch (error) {
-  console.error(`Fail to get localUpdater error: ${error}`);
-}
+localUpdater.verifyUpgradePackage(upgradeFile, "cerstFilePath").then(() => {
+  console.info(`verifyUpgradePackage success`);
+}).catch((err: BusinessError) => {
+  console.error(`verifyUpgradePackage error ${JSON.stringify(err)}`);
+});
 ```
 

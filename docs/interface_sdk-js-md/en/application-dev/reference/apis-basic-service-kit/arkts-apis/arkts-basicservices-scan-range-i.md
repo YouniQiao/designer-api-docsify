@@ -1,6 +1,6 @@
 # Range
 
-定义范围的接口。
+Defines the range.
 
 **Since:** 20
 
@@ -22,7 +22,7 @@ import { scan } from 'kits/@kit.BasicServicesKit';
 maxValue: int
 ```
 
-范围的最大值。
+Maximum value.
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
@@ -40,7 +40,7 @@ maxValue: int
 minValue: int
 ```
 
-范围的最小值。
+Minimum value.
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
@@ -58,7 +58,7 @@ minValue: int
 quantValue: int
 ```
 
-范围的量化值。
+Quantized value.
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 

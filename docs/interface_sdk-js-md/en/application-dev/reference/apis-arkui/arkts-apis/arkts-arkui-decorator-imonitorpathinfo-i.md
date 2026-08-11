@@ -34,7 +34,7 @@ Callback function to access monitored value.
 enableWildcard?: boolean
 ```
 
-启用通配符功能。设置为true可启用通配符功能，设置为false可禁用通配符功能。默认值为false。
+Enables the wildcard feature.Set to true to enable wildcard feature, and set to false to disable it.The default value is false.
 
 **Type:** boolean
 

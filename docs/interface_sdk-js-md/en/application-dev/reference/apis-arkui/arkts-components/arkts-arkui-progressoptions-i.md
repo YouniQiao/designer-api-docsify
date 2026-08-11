@@ -1,6 +1,6 @@
 # ProgressOptions
 
-进度条选项。
+Defines progress bar options.
 
 **Since:** 7
 
@@ -16,11 +16,11 @@
 style?: ProgressStyle
 ```
 
-指定进度条样式。
+Style of the progress indicator.
 
-从API version 7开始支持，从API version 8开始废弃。建议使用[type](arkts-arkui-progresstype-e.md)替代。
+This parameter is deprecated since API version 8. You are advised to use **type** instead.
 
-默认值：ProgressStyle.Linear
+Default value: **ProgressStyle.Linear**
 
 **Type:** [ProgressStyle](arkts-arkui-progressstyle-e.md)
 
@@ -42,11 +42,9 @@ style?: ProgressStyle
 total?: number
 ```
 
-指定进度总长。设置小于0的数值时置为100。
+Total progress. If this parameter is set to a value less than or equal to 0, the value **100** is used.
 
-默认值：100
-
-取值范围：(0, +∞)。
+Default value: **100**
 
 **Type:** number
 
@@ -68,12 +66,9 @@ total?: number
 type?: Type
 ```
 
-指定进度条类型。
+Style of the progress indicator.
 
-默认值：ProgressType.Linear
-
-**说明：** 不同的type需分别对应相应的[style](ProgressAttribute#style)属性设置，详细映射关系参考
-[ProgressStyleMap](../../../reference/apis-arkui/arkui-ts/ts-basic-components-progress.md#progressstylemap10)。
+Default value: **ProgressType.Linear**
 
 **Type:** [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md)
 
@@ -95,11 +90,11 @@ type?: Type
 value: number
 ```
 
-指定当前进度值。
+Current progress. Values less than 0 are adjusted to **0**, and values greater than the **total** value are capped at the **total** value.
 
-默认值：0
+Default value: **0**
 
-取值范围：[0, total]，设置小于0的数值时置为0，设置大于total的数值时置为total，设置非法值时按默认值处理。
+Value range: [0, total]
 
 **Type:** number
 

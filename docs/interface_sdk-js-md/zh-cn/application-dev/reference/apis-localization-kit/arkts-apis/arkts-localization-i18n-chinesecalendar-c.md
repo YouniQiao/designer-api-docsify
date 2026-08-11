@@ -12,12 +12,6 @@
 
 **系统能力：** SystemCapability.Global.I18n
 
-## 导入模块
-
-```TypeScript
-import { i18n } from 'kits/@kit.LocalizationKit';
-```
-
 ## checkLeapMonth
 
 ```TypeScript
@@ -56,7 +50,7 @@ public static checkLeapMonth(gregorianYear: int, cyclicalYear: int, month: int):
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 8900001 | Invalid parameter. Possible causes: Parameter verification failed. |
+| [8900001](../errorcode-i18n.md#8900001-参数校验错误) | Invalid parameter. Possible causes: Parameter verification failed. |
 
 ## setChineseCalendarTime
 

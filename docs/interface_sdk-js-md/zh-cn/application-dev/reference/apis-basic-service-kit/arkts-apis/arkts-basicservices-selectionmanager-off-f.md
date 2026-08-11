@@ -1,11 +1,5 @@
 # off
 
-## 导入模块
-
-```TypeScript
-import { selectionManager } from 'kits/@kit.BasicServicesKit';
-```
-
 ## off('selectionCompleted')
 
 ```TypeScript

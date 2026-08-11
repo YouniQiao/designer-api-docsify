@@ -1,6 +1,7 @@
 # FilterAbilityStateType (System API)
 
-表示要监听的Ability状态，该类型为枚举。可配合[AppStateFilter](arkts-ability-appmanager-appstatefilter-i-sys.md)过滤想要监听的Ability状态。
+Enumerates the types of ability states to filter. It can be used with  
+[AppStateFilter](arkts-ability-appmanager-appstatefilter-i-sys.md) to filter the ability state types you want to listen for.
 
 **Since:** 21
 
@@ -18,8 +19,8 @@
 CREATE = 1 << 0
 ```
 
-Ability正在创建中，对应  
-[Ability状态](../../../reference/apis-ability-kit/js-apis-inner-application-abilityStateData.md#ability状态)中的ABILITY_STATE_CREATE。
+The ability is being created. It corresponds to the state **ABILITY_STATE_CREATE** in  
+[Ability States](../../../reference/apis-ability-kit/js-apis-inner-application-abilityStateData.md#ability-states).
 
 **Since:** 21
 
@@ -37,8 +38,8 @@ Ability正在创建中，对应
 FOREGROUND = 1 << 1
 ```
 
-Ability处于前台，对应  
-[Ability状态](../../../reference/apis-ability-kit/js-apis-inner-application-abilityStateData.md#ability状态)中的ABILITY_STATE_FOREGROUND。
+The ability is running in the foreground. It corresponds to the state **ABILITY_STATE_FOREGROUND** in  
+[Ability States](../../../reference/apis-ability-kit/js-apis-inner-application-abilityStateData.md#ability-states).
 
 **Since:** 21
 
@@ -56,8 +57,8 @@ Ability处于前台，对应
 BACKGROUND = 1 << 2
 ```
 
-Ability处于后台，对应  
-[Ability状态](../../../reference/apis-ability-kit/js-apis-inner-application-abilityStateData.md#ability状态)中的ABILITY_STATE_BACKGROUND。
+The ability is running in the background. It corresponds to the state **ABILITY_STATE_BACKGROUND** in  
+[Ability States](../../../reference/apis-ability-kit/js-apis-inner-application-abilityStateData.md#ability-states).
 
 **Since:** 21
 
@@ -75,8 +76,8 @@ Ability处于后台，对应
 DESTROY = 1 << 3
 ```
 
-Ability已经销毁，对应  
-[Ability状态](../../../reference/apis-ability-kit/js-apis-inner-application-abilityStateData.md#ability状态)中的ABILITY_STATE_TERMINATED。
+The ability has been destroyed. It corresponds to the state **ABILITY_STATE_TERMINATED** in  
+[Ability States](../../../reference/apis-ability-kit/js-apis-inner-application-abilityStateData.md#ability-states).
 
 **Since:** 21
 

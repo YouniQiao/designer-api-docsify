@@ -1,11 +1,5 @@
 # setKeepAliveForBundle（系统接口）
 
-## 导入模块
-
-```TypeScript
-import { appManager } from 'kits/@kit.AbilityKit';
-```
-
 ## setKeepAliveForBundle
 
 ```TypeScript
@@ -53,15 +47,15 @@ function setKeepAliveForBundle(bundleName: string, userId: int, enable: boolean)
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 16300008 | The target bundle has no MainAbility. |
-| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
-| 801 | Capability not supported. |
-| 16300009 | The target bundle has no status-bar ability. |
-| 16300010 | The target application is not attached to the status bar. |
-| 16000050 | Internal error. |
-| 201 | Permission denied. |
-| 202 | Not system application. |
-| 16300005 | The target bundle does not exist. |
+| [16300008](../errorcode-ability.md#16300008-指定的包不存在主uiability) | The target bundle has no MainAbility. |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| [801](../../errorcode-universal.md#801-该设备不支持此api) | Capability not supported. |
+| [16300009](../errorcode-ability.md#16300009-指定的包不存在状态栏) | The target bundle has no status-bar ability. |
+| [16300010](../errorcode-ability.md#16300010-指定的应用在运行中但没有绑定状态栏) | The target application is not attached to the status bar. |
+| [16000050](../errorcode-ability.md#16000050-内部错误) | Internal error. |
+| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not system application. |
+| [16300005](../errorcode-ability.md#16300005-指定的包信息不存在) | The target bundle does not exist. |
 
 ## 示例
 
@@ -74,8 +68,9 @@ try {
   let userId = 100;
   appManager.setKeepAliveForBundle(bundleName, userId, true).then(() => {
     console.info(`setKeepAliveForBundle success`);
-  }).catch((err: BusinessError) => {
-    console.error(`setKeepAliveForBundle fail, err: ${JSON.stringify(err)}`);
+  }).catch((e: Error) => {
+    let err = e as BusinessError;
+    console.error(`setKeepAliveForBundle fail, err: ${err.code}, ${err.message}`);
   });
 } catch (paramError) {
   let code = (paramError as BusinessError).code;

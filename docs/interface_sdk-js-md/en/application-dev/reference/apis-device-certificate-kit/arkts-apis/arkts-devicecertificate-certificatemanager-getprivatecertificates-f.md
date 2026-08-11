@@ -12,7 +12,7 @@ import { certificateManager } from 'kits/@kit.DeviceCertificateKit';
 function getPrivateCertificates(): Promise<CMResult>
 ```
 
-表示获取应用安装的凭据列表。使用Promise异步回调。
+Obtains the credentials for installing the application. This API uses a promise to return the result asynchronously.
 
 **Since:** 13
 
@@ -28,14 +28,14 @@ function getPrivateCertificates(): Promise<CMResult>
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;CMResult&gt; | Promise对象，返回获取应用安装的凭据列表的结果，返回值为[CMResult]{ |
+| Promise&lt;CMResult&gt; | Promise used to return credentials obtained, which is **credentialList** in [CMResult]{ |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 201 | Permission verification failed. The application does not have the permission required to call the API. |
-| 17500001 | Internal error. Possible causes: 1. IPC communication failed; &lt;br&gt;2. Memory operation error; 3. File operation error. Please try again. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed. The application does not have the permission required to call the API. |
+| [17500001](../errorcode-certManager.md#17500001-internal-error) | Internal error. Possible causes: 1. IPC communication failed; &lt;br&gt;2. Memory operation error; 3. File operation error. Please try again. |
 
 ## Examples
 
@@ -53,8 +53,7 @@ try {
       let list = cmResult.credentialList;
       console.info('Succeeded in getting all private certificates installed by the application.');
     }
-  }).catch((error: Error) => {
-    let err = error as BusinessError;
+  }).catch((err: BusinessError) => {
     console.error(`Failed to get all private certificates installed by the application. Code: ${err.code}, message: ${err.message}`);
   })
 } catch (error) {

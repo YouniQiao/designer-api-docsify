@@ -1,6 +1,6 @@
 # NodeType
 
-节点类型枚举.
+The enum of node type.
 
 **Since:** 12
 
@@ -16,7 +16,7 @@
 NODE = 1
 ```
 
-节点是空节点.
+The node is an empty node.
 
 **Since:** 12
 
@@ -32,7 +32,7 @@ NODE = 1
 GEOMETRY = 2
 ```
 
-节点是几何节点.
+The node is a geometry node.
 
 **Since:** 12
 
@@ -48,7 +48,7 @@ GEOMETRY = 2
 CAMERA = 3
 ```
 
-节点是相机节点.
+The node is a camera node.
 
 **Since:** 12
 
@@ -64,7 +64,7 @@ CAMERA = 3
 LIGHT = 4
 ```
 
-节点是光源节点.
+The node is a light node.
 
 **Since:** 12
 
@@ -80,7 +80,7 @@ LIGHT = 4
 CUSTOM = 255
 ```
 
-节点是自定义类型.通常这意味着该节点是在扩展插件中定义的类型.
+The node is of custom type.Usually this means that the node is of a type defined in an extension plugin.
 
 **Since:** 21
 

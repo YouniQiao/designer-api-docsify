@@ -1,6 +1,6 @@
 # FileSyncState (System API)
 
-端云文件同步状态，为枚举类型。
+Enumerates the device-cloud file sync states.
 
 **Since:** 11
 
@@ -18,7 +18,7 @@
 UPLOADING = 0
 ```
 
-上行同步中。
+The file is being uploaded.
 
 **Since:** 11
 
@@ -36,7 +36,7 @@ UPLOADING = 0
 DOWNLOADING = 1
 ```
 
-下行同步中。
+The file is being downloaded.
 
 **Since:** 11
 
@@ -54,7 +54,7 @@ DOWNLOADING = 1
 COMPLETED = 2
 ```
 
-同步成功。
+Sync completed.
 
 **Since:** 11
 
@@ -72,7 +72,7 @@ COMPLETED = 2
 STOPPED = 3
 ```
 
-同步已停止。
+Sync stopped.
 
 **Since:** 11
 
@@ -90,7 +90,7 @@ STOPPED = 3
 TO_BE_UPLOADED = 4
 ```
 
-正在等待上行。
+The file is going to be uploaded.
 
 **Since:** 12
 
@@ -108,7 +108,7 @@ TO_BE_UPLOADED = 4
 UPLOAD_SUCCESS = 5
 ```
 
-文件已成功上行。
+The file has been successfully uploaded.
 
 **Since:** 12
 
@@ -126,7 +126,7 @@ UPLOAD_SUCCESS = 5
 UPLOAD_FAILURE = 6
 ```
 
-文件上行失败。
+The file fails to be uploaded.
 
 **Since:** 12
 

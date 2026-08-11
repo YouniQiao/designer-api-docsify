@@ -16,7 +16,7 @@ An enumeration type that identifies the current node's rendering state. The UI c
 ABOUT_TO_RENDER_IN = 0
 ```
 
-节点已挂载到渲染树上，即将被渲染。通常在下一帧后，the user will be able to see this node. However, this is not always the case, as in reality, the node may be occluded by other nodes, meaning it is rendered but not be visible.When registering a listener for the render state using the UIObserver interface, the system will immediately trigger the callback once, and the state notified at this time typically represents the current state.
+The node has been mount on to the render tree and will soon be rendered. Generally, after the next frame,the user will be able to see this node. However, this is not always the case, as in reality, the node may be occluded by other nodes, meaning it is rendered but not be visible.When registering a listener for the render state using the UIObserver interface, the system will immediately trigger the callback once, and the state notified at this time typically represents the current state.
 
 **Since:** 26.0.0
 
@@ -34,7 +34,7 @@ ABOUT_TO_RENDER_IN = 0
 ABOUT_TO_RENDER_OUT = 1
 ```
 
-节点已从渲染树移除，即将停止渲染。通常在下一帧后，after the next frame, the user will no longer be able to see this node.When registering a listener for the render state using the UIObserver interface, the system will immediately trigger the callback once, and the state notified at this time typically represents the current state.
+The node has been removed from the render tree and will no longer be rendered shortly. Generally speaking,after the next frame, the user will no longer be able to see this node.When registering a listener for the render state using the UIObserver interface, the system will immediately trigger the callback once, and the state notified at this time typically represents the current state.
 
 **Since:** 26.0.0
 

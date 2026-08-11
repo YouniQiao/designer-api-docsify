@@ -1,10 +1,6 @@
 # UiComponent
 
-UiTest中，UiComponent类代表了UI界面上的一个控件，提供控件属性获取，控件点击，滑动查找，文本注入等API。该类提供的所有方法都使用Promise方式作为异步方法，需使用await调用。
-
-> **说明：**
-> 
-> 从API version 8开始支持，从API version 9开始废弃，建议使用[Component&lt;sup&gt;9+&lt;/sup&gt;](arkts-test-uitest-component-c.md)替代。
+In **UiTest**, the **UiComponent** class represents a component on the UI and provides APIs for obtaining component attributes, clicking a component, scrolling to search for a component, and text injection.All APIs provided in this class use a promise to return the result and must be invoked using **await**.
 
 **Since:** 8
 
@@ -30,11 +26,7 @@ import { ResizeDirection, WindowMode, PenMode, PenKeyOperation, Driver, MatchPat
 click(): Promise<void>
 ```
 
-控件对象进行点击操作。使用Promise异步回调。
-
-> **说明：**
-> 
-> 从API version 8开始支持，从API version 9开始废弃，建议使用[click&lt;sup&gt;9+&lt;/sup&gt;](arkts-test-uitest-component-c.md#click)替代。
+Clicks this component. This API uses a promise to return the result.
 
 **Since:** 8
 
@@ -52,13 +44,13 @@ click(): Promise<void>
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise对象。无返回结果的Promise对象。 |
+| Promise&lt;void&gt; | Promise that returns no value. |
 
 ## Examples
 
 ```TypeScript
 // xxx.test.ets
-import { UiDriver, BY, UiComponent } from '@kit.TestKit';
+import { UiDriver, BY, Driver, UiComponent } from '@kit.TestKit';
 
 async function demo() {
   let driver: UiDriver = UiDriver.create();
@@ -73,11 +65,7 @@ async function demo() {
 doubleClick(): Promise<void>
 ```
 
-控件对象进行双击操作。使用Promise异步回调。
-
-> **说明：**
-> 
-> 从API version 8开始支持，从API version 9开始废弃，建议使用[doubleClick&lt;sup&gt;9+&lt;/sup&gt;](arkts-test-uitest-component-c.md#doubleclick)替代。
+Double-clicks this component. This API uses a promise to return the result.
 
 **Since:** 8
 
@@ -95,7 +83,7 @@ doubleClick(): Promise<void>
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise对象。无返回结果的Promise对象。 |
+| Promise&lt;void&gt; | Promise that returns no value. |
 
 ## Examples
 
@@ -116,11 +104,7 @@ async function demo() {
 getId(): Promise<number>
 ```
 
-获取控件对象的id值。使用Promise异步回调。
-
-> **说明：**
-> 
-> 从API version 8开始支持，从API version 9开始废弃，建议使用[getId&lt;sup&gt;9+&lt;/sup&gt;](arkts-test-uitest-component-c.md#getid)替代。
+Obtains the ID of this component. This API uses a promise to return the result.
 
 **Since:** 8
 
@@ -138,7 +122,7 @@ getId(): Promise<number>
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;number&gt; | Promise对象，返回控件的id值。 |
+| Promise&lt;number&gt; | Promise used to return the component ID. |
 
 ## Examples
 
@@ -159,11 +143,7 @@ async function demo() {
 getKey(): Promise<string>
 ```
 
-获取控件对象的key值。使用Promise异步回调。
-
-> **说明：**
-> 
-> 从API version 8开始支持，从API version 9开始废弃，建议使用[getId&lt;sup&gt;9+&lt;/sup&gt;](arkts-test-uitest-component-c.md#getid)替代。
+Obtains the key of this component. This API uses a promise to return the result.
 
 **Since:** 8
 
@@ -181,7 +161,7 @@ getKey(): Promise<string>
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;string&gt; | Promise对象，返回控件的key值。 |
+| Promise&lt;string&gt; | Promise used to return the key value. |
 
 ## Examples
 
@@ -202,11 +182,7 @@ async function demo() {
 getText(): Promise<string>
 ```
 
-获取控件对象的文本信息。使用Promise异步回调。
-
-> **说明：**
-> 
-> 从API version 8开始支持，从API version 9开始废弃，建议使用[getText&lt;sup&gt;9+&lt;/sup&gt;](arkts-test-uitest-component-c.md#gettext)替代。
+Obtains the text information of this component. This API uses a promise to return the result.
 
 **Since:** 8
 
@@ -224,7 +200,7 @@ getText(): Promise<string>
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;string&gt; | Promise对象，返回控件的文本信息。 |
+| Promise&lt;string&gt; | Promise used to return the text information of the component. |
 
 ## Examples
 
@@ -245,11 +221,7 @@ async function demo() {
 getType(): Promise<string>
 ```
 
-获取控件对象的控件类型。使用Promise异步回调。
-
-> **说明：**
-> 
-> 从API version 8开始支持，从API version 9开始废弃，建议使用[getType&lt;sup&gt;9+&lt;/sup&gt;](arkts-test-uitest-component-c.md#gettype)替代。
+Obtains the type of this component. This API uses a promise to return the result.
 
 **Since:** 8
 
@@ -267,7 +239,7 @@ getType(): Promise<string>
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;string&gt; | Promise对象，返回控件的类型。 |
+| Promise&lt;string&gt; | Promise used to return the component type. |
 
 ## Examples
 
@@ -288,11 +260,7 @@ async function demo() {
 inputText(text: string): Promise<void>
 ```
 
-向控件中输入文本，仅针对可编辑的文本组件生效。使用Promise异步回调。
-
-> **说明：**
-> 
-> 从API version 8开始支持，从API version 9开始废弃，建议使用[inputText&lt;sup&gt;9+&lt;/sup&gt;](arkts-test-uitest-component-c.md#inputtext)替代。
+Inputs text to a component. This API takes effect only for editable text components. This API uses a promise to return the result.
 
 **Since:** 8
 
@@ -310,13 +278,13 @@ inputText(text: string): Promise<void>
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| text | string | Yes | 输入的文本信息。 |
+| text | string | Yes | Text to enter. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise对象。无返回结果的Promise对象。 |
+| Promise&lt;void&gt; | Promise that returns no value. |
 
 ## Examples
 
@@ -337,11 +305,7 @@ async function demo() {
 isClickable(): Promise<boolean>
 ```
 
-获取控件对象可点击状态。使用Promise异步回调。
-
-> **说明：**
-> 
-> 从API version 8开始支持，从API version 9开始废弃，建议使用[isClickable&lt;sup&gt;9+&lt;/sup&gt;](arkts-test-uitest-component-c.md#isclickable)替代。
+Obtains the clickable status of this component. This API uses a promise to return the result.
 
 **Since:** 8
 
@@ -359,7 +323,7 @@ isClickable(): Promise<boolean>
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;boolean&gt; | Promise对象，返回控件对象可点击状态。true：可点击。false：不可点击。 |
+| Promise&lt;boolean&gt; | Promise used to return whether the component is clickable. The value **true** indicates that the component is clickable, and **false** indicates the opposite. |
 
 ## Examples
 
@@ -373,7 +337,7 @@ async function demo() {
   if (await button.isClickable()) {
     console.info('This button can be Clicked');
   } else {
-    console.info('This button cannot be Clicked');
+    console.info('This button can not be Clicked');
   }
 }
 ```
@@ -384,11 +348,7 @@ async function demo() {
 isEnabled(): Promise<boolean>
 ```
 
-获取控件使能状态。使用Promise异步回调。
-
-> **说明：**
-> 
-> 从API version 8开始支持，从API version 9开始废弃，建议使用[isEnabled&lt;sup&gt;9+&lt;/sup&gt;](arkts-test-uitest-component-c.md#isenabled)替代。
+Obtains the enabled status of this component. This API uses a promise to return the result.
 
 **Since:** 8
 
@@ -406,7 +366,7 @@ isEnabled(): Promise<boolean>
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;boolean&gt; | Promise对象，返回控件使能状态。true：使能。false：未使能。 |
+| Promise&lt;boolean&gt; | Promise used to return whether the component is enabled. The value **true** indicates that the component is enabled, and **false** indicates the opposite. |
 
 ## Examples
 
@@ -420,7 +380,7 @@ async function demo() {
   if (await button.isEnabled()) {
     console.info('This button can be operated');
   } else {
-    console.info('This button cannot be operated');
+    console.info('This button can not be operated');
   }
 }
 ```
@@ -431,11 +391,7 @@ async function demo() {
 isFocused(): Promise<boolean>
 ```
 
-判断控件对象是否获焦。使用Promise异步回调。
-
-> **说明：**
-> 
-> 从API version 8开始支持，从API version 9开始废弃，建议使用[isFocused&lt;sup&gt;9+&lt;/sup&gt;](arkts-test-uitest-component-c.md#isfocused)替代。
+Obtains the focused status of this component. This API uses a promise to return the result.
 
 **Since:** 8
 
@@ -453,7 +409,7 @@ isFocused(): Promise<boolean>
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;boolean&gt; | Promise对象，返回控件对象是否获焦。true：获焦。false：未获焦。 |
+| Promise&lt;boolean&gt; | Promise used to return whether the component is focused. The value **true** indicates that the component is focused, and **false** indicates the opposite. |
 
 ## Examples
 
@@ -478,11 +434,7 @@ async function demo() {
 isScrollable(): Promise<boolean>
 ```
 
-获取控件对象可滑动状态。使用Promise异步回调。
-
-> **说明：**
-> 
-> 从API version 8开始支持，从API version 9开始废弃，建议使用[isScrollable&lt;sup&gt;9+&lt;/sup&gt;](arkts-test-uitest-component-c.md#isscrollable)替代。
+Obtains the scrollable status of this component. This API uses a promise to return the result.
 
 **Since:** 8
 
@@ -500,7 +452,7 @@ isScrollable(): Promise<boolean>
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;boolean&gt; | Promise对象，返回控件对象可滑动状态。true：可滑动。false：不可滑动。 |
+| Promise&lt;boolean&gt; | Promise used to return whether the component is scrollable. The value **true** indicates that the component is scrollable, and **false** indicates the opposite. |
 
 ## Examples
 
@@ -514,7 +466,7 @@ async function demo() {
   if (await scrollBar.isScrollable()) {
     console.info('This scrollBar can be operated');
   } else {
-    console.info('This scrollBar cannot be operated');
+    console.info('This scrollBar can not be operated');
   }
 }
 ```
@@ -525,11 +477,7 @@ async function demo() {
 isSelected(): Promise<boolean>
 ```
 
-获取控件对象被选中状态。使用Promise异步回调。
-
-> **说明：**
-> 
-> 从API version 8开始支持，从API version 9开始废弃，建议使用[isSelected&lt;sup&gt;9+&lt;/sup&gt;](arkts-test-uitest-component-c.md#isselected)替代。
+Obtains the selected status of this component. This API uses a promise to return the result.
 
 **Since:** 8
 
@@ -547,7 +495,7 @@ isSelected(): Promise<boolean>
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;boolean&gt; | Promise对象，返回控件对象被选中的状态。true：被选中。false：未被选中。 |
+| Promise&lt;boolean&gt; | Promise used to return whether the component is selected. The value **true** indicates that the component is selected, and **false** indicates the opposite. |
 
 ## Examples
 
@@ -572,11 +520,7 @@ async function demo() {
 longClick(): Promise<void>
 ```
 
-控件对象进行长按操作。使用Promise异步回调。
-
-> **说明：**
-> 
-> 从API version 8开始支持，从API version 9开始废弃，建议使用[longClick&lt;sup&gt;9+&lt;/sup&gt;](arkts-test-uitest-component-c.md#longclick)替代。
+Long-clicks this component. This API uses a promise to return the result.
 
 **Since:** 8
 
@@ -594,7 +538,7 @@ longClick(): Promise<void>
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise对象。无返回结果的Promise对象。 |
+| Promise&lt;void&gt; | Promise that returns no value. |
 
 ## Examples
 
@@ -615,11 +559,7 @@ async function demo() {
 scrollSearch(by: By): Promise<UiComponent>
 ```
 
-在控件上滑动查找目标控件（适用于List等支持滑动的控件）。使用Promise异步回调。
-
-> **说明：**
-> 
-> 从API version 8开始支持，从API version 9开始废弃，建议使用[scrollSearch&lt;sup&gt;9+&lt;/sup&gt;](arkts-test-uitest-component-c.md#scrollsearch)替代。
+Scrolls on this component to search for the target component (applicable to components that support scrolling, such as **List**). This API uses a promise to return the result.
 
 **Since:** 8
 
@@ -637,13 +577,13 @@ scrollSearch(by: By): Promise<UiComponent>
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| by | [By](arkts-test-uitest-by-c.md) | Yes | 目标控件的属性要求。 |
+| by | [By](arkts-test-uitest-by-c.md) | Yes | Attributes of the target component. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;[UiComponent](arkts-test-uitest-uicomponent-c.md)&gt; | Promise对象，返回目标控件对象。 |
+| Promise&lt;[UiComponent](arkts-test-uitest-uicomponent-c.md)&gt; | Promise used to return the target component. |
 
 ## Examples
 

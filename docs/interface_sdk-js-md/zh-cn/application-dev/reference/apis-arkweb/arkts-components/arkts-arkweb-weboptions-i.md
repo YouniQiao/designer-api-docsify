@@ -78,7 +78,7 @@ renderMode? : RenderMode
 
 Sets the render mode of the web.
 
-**类型：** [RenderMode](../arkts-apis/arkts-arkweb-web-rendermode-e.md)
+**类型：** [RenderMode](arkts-arkweb-rendermode-e.md)
 
 **起始版本：** 12
 

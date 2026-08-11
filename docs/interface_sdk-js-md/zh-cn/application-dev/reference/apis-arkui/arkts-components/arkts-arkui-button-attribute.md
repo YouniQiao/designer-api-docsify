@@ -104,7 +104,7 @@ controlSize(value: ControlSize)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | [ControlSize](../arkts-apis/arkts-arkui-button-controlsize-e.md) | 是 | Button组件的尺寸。&lt;br/&gt;默认值：ControlSize.NORMAL |
+| value | [ControlSize](arkts-arkui-controlsize-e.md) | 是 | Button组件的尺寸。&lt;br/&gt;默认值：ControlSize.NORMAL |
 
 ## fontColor
 

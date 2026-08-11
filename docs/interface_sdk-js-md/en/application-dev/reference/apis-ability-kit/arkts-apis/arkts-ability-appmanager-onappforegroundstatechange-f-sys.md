@@ -12,7 +12,7 @@ import { appManager } from 'kits/@kit.AbilityKit';
 function onAppForegroundStateChange(observer: AppForegroundStateObserver): void
 ```
 
-注册应用启动和退出的监听器，可用于系统应用监听所有应用的启动和退出。
+Register app foreground or background state observer.
 
 **Since:** 23
 
@@ -30,13 +30,13 @@ function onAppForegroundStateChange(observer: AppForegroundStateObserver): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| observer | [AppForegroundStateObserver](arkts-ability-appforegroundstateobserver-i-sys.md) | Yes | 应用状态监听器，用于监听应用的启动和退出。 |
+| observer | [AppForegroundStateObserver](arkts-ability-appforegroundstateobserver-i-sys.md) | Yes | The app foreground state observer. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 16000050 | Internal error. |
-| 201 | Permission denied. |
-| 202 | Not system application. |
+| [16000050](../errorcode-ability.md#16000050-internal-error) | Internal error. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system application. |
 

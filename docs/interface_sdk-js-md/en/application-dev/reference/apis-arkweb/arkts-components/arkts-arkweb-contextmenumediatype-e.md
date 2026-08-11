@@ -1,6 +1,6 @@
 # ContextMenuMediaType
 
-触发上下文菜单的网页元素类型。
+Enumerates the media types that trigger the context menu.
 
 **Since:** 9
 
@@ -16,7 +16,7 @@
 None = 0
 ```
 
-其他非图片媒体类型。
+Other non-image media types.
 
 **Since:** 9
 
@@ -34,7 +34,7 @@ None = 0
 Image = 1
 ```
 
-图片类型。
+Image.
 
 **Since:** 9
 

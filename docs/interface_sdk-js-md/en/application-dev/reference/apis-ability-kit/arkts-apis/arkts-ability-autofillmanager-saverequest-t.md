@@ -4,9 +4,9 @@
 export type SaveRequest = _AutoFillRequest.SaveRequest
 ```
 
-自动保存的请求信息。
+Defines the information about an auto-save request.
 
-**Since:** 11
+**Since:** 26.0.0
 
 **ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 

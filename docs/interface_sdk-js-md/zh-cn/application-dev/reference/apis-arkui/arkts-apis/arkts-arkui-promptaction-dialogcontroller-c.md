@@ -17,9 +17,3 @@ DialogController可作为UIContext弹出自定义弹窗的成员变量，具体�
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
-## 导入模块
-
-```TypeScript
-import { LevelMode, ImmersiveMode, LevelOrder } from 'kits/@kit.ArkUI';
-```
-

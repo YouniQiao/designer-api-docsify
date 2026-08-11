@@ -1,6 +1,6 @@
 # ColorFilter
 
-创建具有4*5矩阵的颜色过滤器。
+Defines the ColorFilter object.
 
 **Since:** 23
 
@@ -16,7 +16,7 @@
 constructor(value: double[])
 ```
 
-构造函数。
+Creates ColorFilter with 4*5 matrix.
 
 **Since:** 23
 
@@ -32,5 +32,5 @@ constructor(value: double[])
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | double[] | Yes | 创建具有4*5矩阵的颜色过滤器，入参为[m*n]位于m行和n列中矩阵值，矩阵是行优先的。 |
+| value | double[] | Yes | 4*5 color matrix values. The value[m*n] is located in the m row and n column. The matrix is row-first. |
 

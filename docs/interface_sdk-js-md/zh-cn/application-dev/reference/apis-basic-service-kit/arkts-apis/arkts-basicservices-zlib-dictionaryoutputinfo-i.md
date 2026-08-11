@@ -10,12 +10,6 @@ InflateGetDictionary和deflateGetDictionary这两个函数会返回值的相关�
 
 **系统能力：** SystemCapability.BundleManager.Zlib
 
-## 导入模块
-
-```TypeScript
-import { zlib } from 'kits/@kit.BasicServicesKit';
-```
-
 ## dictionaryLength
 
 ```TypeScript

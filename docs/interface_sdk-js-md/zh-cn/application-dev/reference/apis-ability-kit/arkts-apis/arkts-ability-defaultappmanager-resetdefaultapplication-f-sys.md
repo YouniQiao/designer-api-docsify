@@ -1,11 +1,5 @@
 # resetDefaultApplication（系统接口）
 
-## 导入模块
-
-```TypeScript
-import { defaultAppManager } from 'kits/@kit.AbilityKit';
-```
-
 ## resetDefaultApplication
 
 ```TypeScript
@@ -39,14 +33,16 @@ function resetDefaultApplication(type: string, userId: int, callback: AsyncCallb
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types. |
-| 801 | Capability not supported. |
-| 17700025 | The specified type is invalid. |
-| 201 | Permission denied. |
-| 202 | Permission denied, non-system app called system api. |
-| 17700004 | The specified user ID is not found. |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types. |
+| [801](../../errorcode-universal.md#801-该设备不支持此api) | Capability not supported. |
+| [17700025](../errorcode-bundle.md#17700025-输入的type无效) | The specified type is invalid. |
+| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission denied, non-system app called system api. |
+| [17700004](../errorcode-bundle.md#17700004-指定的用户不存在) | The specified user ID is not found. |
 
 ## 示例
+
+ArkTS-Dyn示例:
 
 ```TypeScript
 import { defaultAppManager } from '@kit.AbilityKit';
@@ -79,6 +75,42 @@ defaultAppManager.resetDefaultApplication(uniformTypeDescriptor.UniformDataType.
     }
     console.info('Operation successful.');
   });
+```
+
+ArkTS-Sta示例:
+
+```TypeScript
+'use static'
+
+import { defaultAppManager } from '@kit.AbilityKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+import { uniformTypeDescriptor } from '@kit.ArkData';
+
+// 代码中使用的useId需为应用实际的用户ID。
+let userId = 100;
+defaultAppManager.resetDefaultApplication(defaultAppManager.ApplicationType.BROWSER, userId, (err, data) => {
+  if (err) {
+    console.error('resetDefaultApplication failed. Cause: ' + JSON.stringify(err));
+    return;
+  }
+  console.info('resetDefaultApplication successful.');
+});
+
+defaultAppManager.resetDefaultApplication("image/png", userId, (err, data) => {
+  if (err) {
+    console.error('resetDefaultApplication failed. Cause: ' + JSON.stringify(err));
+    return;
+  }
+  console.info('resetDefaultApplication successful.');
+});
+
+defaultAppManager.resetDefaultApplication(uniformTypeDescriptor.UniformDataType.AVI, userId, (err, data) => {
+  if (err) {
+    console.error('resetDefaultApplication failed. Cause: ' + JSON.stringify(err));
+    return;
+  }
+  console.info('resetDefaultApplication successful.');
+});
 ```
 
 
@@ -114,13 +146,15 @@ function resetDefaultApplication(type: string, callback: AsyncCallback<void>) : 
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types. |
-| 801 | Capability not supported. |
-| 17700025 | The specified type is invalid. |
-| 201 | Permission denied. |
-| 202 | Permission denied, non-system app called system api. |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types. |
+| [801](../../errorcode-universal.md#801-该设备不支持此api) | Capability not supported. |
+| [17700025](../errorcode-bundle.md#17700025-输入的type无效) | The specified type is invalid. |
+| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission denied, non-system app called system api. |
 
 ## 示例
+
+ArkTS-Dyn示例:
 
 ```TypeScript
 import { defaultAppManager } from '@kit.AbilityKit';
@@ -144,6 +178,40 @@ defaultAppManager.resetDefaultApplication("image/png", (err: BusinessError, data
 });
 
 defaultAppManager.resetDefaultApplication(uniformTypeDescriptor.UniformDataType.AVI, (err: BusinessError, data) => {
+  if (err) {
+    console.error('Operation failed. Cause: ' + JSON.stringify(err));
+    return;
+  }
+  console.info('Operation successful.');
+});
+```
+
+ArkTS-Sta示例:
+
+```TypeScript
+'use static'
+
+import { defaultAppManager } from '@kit.AbilityKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+import { uniformTypeDescriptor } from '@kit.ArkData';
+
+defaultAppManager.resetDefaultApplication(defaultAppManager.ApplicationType.BROWSER, (err: BusinessError | null, data) => {
+  if (err) {
+    console.error('Operation failed. Cause: ' + JSON.stringify(err));
+    return;
+  }
+  console.info('Operation successful.');
+});
+
+defaultAppManager.resetDefaultApplication("image/png", (err: BusinessError | null, data) => {
+  if (err) {
+    console.error('Operation failed. Cause: ' + JSON.stringify(err));
+    return;
+  }
+  console.info('Operation successful.');
+});
+
+defaultAppManager.resetDefaultApplication(uniformTypeDescriptor.UniformDataType.AVI, (err: BusinessError | null, data) => {
   if (err) {
     console.error('Operation failed. Cause: ' + JSON.stringify(err));
     return;
@@ -191,14 +259,16 @@ function resetDefaultApplication(type: string, userId?: int) : Promise<void>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types. |
-| 801 | Capability not supported. |
-| 17700025 | The specified type is invalid. |
-| 201 | Permission denied. |
-| 202 | Permission denied, non-system app called system api. |
-| 17700004 | The specified user ID is not found. |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types. |
+| [801](../../errorcode-universal.md#801-该设备不支持此api) | Capability not supported. |
+| [17700025](../errorcode-bundle.md#17700025-输入的type无效) | The specified type is invalid. |
+| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission denied, non-system app called system api. |
+| [17700004](../errorcode-bundle.md#17700004-指定的用户不存在) | The specified user ID is not found. |
 
 ## 示例
+
+ArkTS-Dyn示例:
 
 ```TypeScript
 import { defaultAppManager } from '@kit.AbilityKit';
@@ -228,6 +298,42 @@ defaultAppManager.resetDefaultApplication(uniformTypeDescriptor.UniformDataType.
   })
   .catch((error: BusinessError) => {
     console.error('Operation failed. Cause: ' + JSON.stringify(error));
+  });
+```
+
+ArkTS-Sta示例:
+
+```TypeScript
+'use static'
+
+import { defaultAppManager } from '@kit.AbilityKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+import { uniformTypeDescriptor } from '@kit.ArkData';
+
+// 代码中使用的useId需为应用实际的用户ID。
+let userId = 100;
+defaultAppManager.resetDefaultApplication(defaultAppManager.ApplicationType.BROWSER, userId)
+  .then((data) => {
+    console.info('resetDefaultApplication successful.');
+  })
+  .catch((error: Error) => {
+    console.error('resetDefaultApplication failed. Cause: ' + JSON.stringify(error));
+  });
+
+defaultAppManager.resetDefaultApplication("image/png", userId)
+  .then((data) => {
+    console.info('resetDefaultApplication successful.');
+  })
+  .catch((error: Error) => {
+    console.error('resetDefaultApplication failed. Cause: ' + JSON.stringify(error));
+  });
+
+defaultAppManager.resetDefaultApplication(uniformTypeDescriptor.UniformDataType.AVI, userId)
+  .then((data) => {
+    console.info('resetDefaultApplication successful.');
+  })
+  .catch((error: Error) => {
+    console.error('resetDefaultApplication failed. Cause: ' + JSON.stringify(error));
   });
 ```
 

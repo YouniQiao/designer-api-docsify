@@ -12,7 +12,7 @@ import { hiTraceMeter } from 'kits/@kit.PerformanceAnalysisKit';
 function isTraceEnabled(): boolean
 ```
 
-判断当前是否开启应用trace捕获。
+Checks whether application trace capture is enabled.
 
 **Since:** 19
 
@@ -28,15 +28,15 @@ function isTraceEnabled(): boolean
 
 | Type | Description |
 | --- | --- |
-| boolean | 使用[hitrace](../../../dfx/hitrace.md)命令行工具等方式开启采集时返回true。未开启采集或停止采集后返回 false，此时调用HiTraceMeter性能跟踪打点接口无效。 |
+| boolean | true** is returned when the trace capture is enabled using [hitrace](../../../dfx/hitrace.md). **false** is returned when it is disabled or stopped. In this case, calling the HiTraceMeter API does not take effect. |
 
 ## Examples
 
 ```TypeScript
 if (hiTraceMeter.isTraceEnabled()) {
-  // Service flow...
+    // Service flow...
 } else {
-  // Service flow...
+    // Service flow...
 }
 ```
 

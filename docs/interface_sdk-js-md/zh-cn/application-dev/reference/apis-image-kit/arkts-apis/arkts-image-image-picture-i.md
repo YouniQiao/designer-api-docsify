@@ -16,12 +16,6 @@ Picture类，一些包含特殊信息的图片可以解码为Picture（也可以
 
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
-## 导入模块
-
-```TypeScript
-import { image } from 'kits/@kit.ImageKit';
-```
-
 ## getAuxiliaryPicture
 
 ```TypeScript
@@ -54,7 +48,7 @@ getAuxiliaryPicture(type: AuxiliaryPictureType): AuxiliaryPicture | null
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. 3.Parameter verification failed. |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. 3.Parameter verification failed. |
 
 ## getGainmapPixelmap
 
@@ -76,7 +70,7 @@ getGainmapPixelmap(): PixelMap | null
 
 | 类型 | 说明 |
 | --- | --- |
-| [PixelMap](arkts-image-image-pixelmap-i.md) | 返回Pixelmap对象，如果没有则返回null。 |
+| [PixelMap](../../apis-arkui/arkts-apis/arkts-arkui-pixelmap-t.md) | 返回Pixelmap对象，如果没有则返回null。 |
 
 ## getHdrComposedPixelmap
 
@@ -104,8 +98,8 @@ getHdrComposedPixelmap(): Promise<PixelMap>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 7600901 | Inner unknown error. Please check the logs for detailed information. |
-| 7600201 | Unsupported operation. e.g.,1. The picture does not has a gainmap. 2. MainPixelMap's allocator type is not DMA. |
+| [7600901](../errorcode-image.md#7600901-未知错误) | Inner unknown error. Please check the logs for detailed information. |
+| [7600201](../errorcode-image.md#7600201-不支持的操作) | Unsupported operation. e.g.,1. The picture does not has a gainmap. 2. MainPixelMap's allocator type is not DMA. |
 
 ## getHdrComposedPixelmap
 
@@ -133,8 +127,8 @@ Obtains the hdr pixel map. This method uses a promise to return the PixelMap obj
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 7600901 | Unknown error. |
-| 7600201 | Unsupported operation. |
+| [7600901](../errorcode-image.md#7600901-未知错误) | Unknown error. |
+| [7600201](../errorcode-image.md#7600201-不支持的操作) | Unsupported operation. |
 
 ## getHdrComposedPixelmapWithOptions
 
@@ -172,7 +166,7 @@ getHdrComposedPixelmapWithOptions(options?: HdrComposeOptions): Promise<PixelMap
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 7600201 | Unsupported operation. |
+| [7600201](../errorcode-image.md#7600201-不支持的操作) | Unsupported operation. |
 
 ## getMainPixelmap
 
@@ -194,7 +188,7 @@ getMainPixelmap(): PixelMap
 
 | 类型 | 说明 |
 | --- | --- |
-| [PixelMap](arkts-image-image-pixelmap-i.md) | 同步返回PixelMap对象。 |
+| [PixelMap](../../apis-arkui/arkts-apis/arkts-arkui-pixelmap-t.md) | 同步返回PixelMap对象。 |
 
 ## getMainPixelmap
 
@@ -216,7 +210,7 @@ Obtains the pixel map of the main image.
 
 | 类型 | 说明 |
 | --- | --- |
-| [PixelMap](arkts-image-image-pixelmap-i.md) | Returns the pixel map. |
+| [PixelMap](../../apis-arkui/arkts-apis/arkts-arkui-pixelmap-t.md) | Returns the pixel map. |
 
 ## getMetadata
 
@@ -250,8 +244,8 @@ getMetadata(metadataType: MetadataType): Promise<Metadata>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. 3.Parameter verification failed. |
-| 7600202 | Unsupported metadata. Possible causes: 1. Unsupported metadata type. 2. The metadata type does not match the auxiliary picture type. |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. 3.Parameter verification failed. |
+| [7600202](../errorcode-image.md#7600202-不支持的元数据读写) | Unsupported metadata. Possible causes: 1. Unsupported metadata type. 2. The metadata type does not match the auxiliary picture type. |
 
 ## getMetadata
 
@@ -285,7 +279,7 @@ Obtains the metadata of main picture.
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 7600202 | Unsupported metadata. Possible causes: Unsupported metadata type. |
+| [7600202](../errorcode-image.md#7600202-不支持的元数据读写) | Unsupported metadata. Possible causes: Unsupported metadata type. |
 
 ## hdrComposeToMainPixelmap
 
@@ -317,7 +311,7 @@ hdrComposeToMainPixelmap(): Promise<void>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 7600201 | Unsupported operation. e.g.,1. The picture does not have a gainmap. 2. pixelMap's allocator type is not DMA. |
+| [7600201](../errorcode-image.md#7600201-不支持的操作) | Unsupported operation. e.g.,1. The picture does not have a gainmap. 2. pixelMap's allocator type is not DMA. |
 
 ## marshalling
 
@@ -345,8 +339,8 @@ marshalling(sequence: rpc.MessageSequence): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 62980097 | IPC error. Possible cause: 1.IPC communication failed. 2. Image upload exception. 3. Decode process exception. 4. Insufficient memory. |
-| 401 | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. 3.Parameter verification failed. |
+| [62980097](../errorcode-image.md#62980097-pixelmap序列化传输失败) | IPC error. Possible cause: 1.IPC communication failed. 2. Image upload exception. 3. Decode process exception. 4. Insufficient memory. |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. 3.Parameter verification failed. |
 
 ## release
 
@@ -395,7 +389,7 @@ setAuxiliaryPicture(type: AuxiliaryPictureType, auxiliaryPicture: AuxiliaryPictu
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. 3.Parameter verification failed. |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. 3.Parameter verification failed. |
 
 ## setMainPixelmap
 
@@ -419,13 +413,13 @@ setMainPixelmap(pixelmap: PixelMap): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| pixelmap | [PixelMap](arkts-image-image-pixelmap-i.md) | 是 | PixelMap对象。 |
+| pixelmap | [PixelMap](../../apis-arkui/arkts-apis/arkts-arkui-pixelmap-t.md) | 是 | PixelMap对象。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 7700204 | 参数错误。 |
+| [7700204](../errorcode-image.md#7700204-无效参数) | 参数错误。 |
 
 ## setMetadata
 
@@ -460,6 +454,6 @@ setMetadata(metadataType: MetadataType, metadata: Metadata): Promise<void>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. 3.Parameter verification failed. |
-| 7600202 | Unsupported metadata. Possible causes: 1. Unsupported metadata type. 2. The metadata type does not match the auxiliary picture type. |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. 3.Parameter verification failed. |
+| [7600202](../errorcode-image.md#7600202-不支持的元数据读写) | Unsupported metadata. Possible causes: 1. Unsupported metadata type. 2. The metadata type does not match the auxiliary picture type. |
 

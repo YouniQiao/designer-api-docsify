@@ -1,8 +1,8 @@
 # ProcessData
 
-进程数据的对象定义。使用接口  
-[appManager.on('applicationState')](@ohos.app.ability.appManager:appManager.on(type: 'applicationState', observer: ApplicationStateObserver))注册生命周期变化监听后，当应用或组件的生命周期变化时，系统通过[ApplicationStateObserver](arkts-ability-applicationstateobserver-c.md)的  
-[onProcessCreated](../../../reference/apis-ability-kit/js-apis-inner-application-applicationStateObserver.md#applicationstateobserveronprocesscreated)等方法回调给开发者。
+The module defines process data. If a lifecycle change listener is registered by calling  
+[appManager.on('applicationState')](@ohos.app.ability.appManager:appManager.on(type: 'applicationState', observer: ApplicationStateObserver)), the  
+[onProcessCreated](../../../reference/apis-ability-kit/js-apis-inner-application-applicationStateObserver.md#applicationstateobserveronprocesscreated) callback in [ApplicationStateObserver](arkts-ability-applicationstateobserver-c.md) is invoked when the lifecycle of an application or ability changes.
 
 **Since:** 14
 
@@ -18,7 +18,7 @@
 bundleName: string
 ```
 
-应用包名。
+Bundle name of the application.
 
 **Type:** string
 
@@ -36,7 +36,7 @@ bundleName: string
 isContinuousTask: boolean
 ```
 
-是否为长时任务，true表示是，false表示不是。
+Whether the task is a continuous task. **true** if yes, **false** otherwise.
 
 **Type:** boolean
 
@@ -54,7 +54,7 @@ isContinuousTask: boolean
 isKeepAlive: boolean
 ```
 
-是否为常驻进程，true表示是，false表示不是
+Whether the process is a resident task. **true** if yes, **false** otherwise.
 
 **Type:** boolean
 
@@ -72,7 +72,7 @@ isKeepAlive: boolean
 pid: int
 ```
 
-进程ID。
+Process ID.
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
@@ -90,17 +90,17 @@ pid: int
 state: int
 ```
 
-应用的状态，取值及对应的状态为：
+Application state. The options are as follows:
 
-0 - 初始化状态，进程正在初始化，
+**0**: The application process is being initialized.
 
-1 - 就绪状态，进程已初始化完毕，
+**1**: The application process has been initialized and is ready.
 
-2 - 前台，
+**2**: The application is running in the foreground.
 
-4 - 后台，
+**4**: The application is running in the background.
 
-5 - 已终止。
+**5**: The application process is terminated.
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
@@ -118,7 +118,7 @@ state: int
 uid: int
 ```
 
-应用的uid。
+UID of the application.
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 

@@ -1,6 +1,6 @@
 # SecurityMode
 
-输入法的安全模式，如BASIC或FULL。
+Describes the security mode.
 
 **Since:** 11
 
@@ -16,7 +16,7 @@
 BASIC = 0
 ```
 
-基础访问模式，基础打字模式，会限制网络访问。
+Basic access mode, where network access is restricted.
 
 **Since:** 11
 
@@ -32,7 +32,7 @@ BASIC = 0
 FULL
 ```
 
-完全访问模式，不做限制，可以访问网络。
+Full access mode, where network access is not restricted.
 
 **Since:** 11
 

@@ -4,7 +4,7 @@
 declare type RichEditorSpan = RichEditorImageSpanResult | RichEditorTextSpanResult
 ```
 
-RichEditor span信息。
+Provides the span information of the **RichEditor** component.
 
 **Since:** 12
 
@@ -20,6 +20,6 @@ RichEditor span信息。
 
 | Type | Description |
 | --- | --- |
-| RichEditorImageSpanResult | 后端返回的图片信息。 |
-| RichEditorTextSpanResult | 后端返回的文本信息。 |
+| RichEditorImageSpanResult | Returned image information. |
+| RichEditorTextSpanResult | Describes the returned text information. |
 

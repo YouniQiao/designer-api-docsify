@@ -4,7 +4,7 @@
 export type CustomData = _CustomData.default
 ```
 
-自定义数据。
+Defines the custom data.
 
 **Since:** 13
 

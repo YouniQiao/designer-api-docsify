@@ -12,7 +12,7 @@ import { backup } from 'kits/@kit.CoreFileKit';
 function getLocalCapabilities(): Promise<FileData>
 ```
 
-获取描述本地能力的JSON文件。
+Obtain a Json file that describes local capabilities.
 
 **Since:** 10
 
@@ -30,7 +30,7 @@ function getLocalCapabilities(): Promise<FileData>
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;FileData&gt; | Promise对象，返回包含本地能力文件描述符的FileData。返回的文件为临时文件，关闭后将 自动删除。 |
+| Promise&lt;FileData&gt; | A FileData holding all the local capabilities. The returned file is a temporal file that will be deleted automatically when closed. |
 
 **Error codes:**
 
@@ -46,14 +46,14 @@ function getLocalCapabilities(): Promise<FileData>
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
-import { fileIo, backup } from '@kit.CoreFileKit';
+import { fileIo as fs, backup } from '@kit.CoreFileKit';
 
 async function getLocalCapabilities() {
   try {
     let fileData = await backup.getLocalCapabilities();
     console.info('getLocalCapabilities success');
     console.info('fileData info:' + fileData.fd);
-    fileIo.closeSync(fileData.fd);
+    fs.closeSync(fileData.fd);
   } catch (error) {
     let err: BusinessError = error as BusinessError;
     console.error(`getLocalCapabilities failed. Code: ${err.code}, message: ${err.message}`);
@@ -87,7 +87,7 @@ The capability file can be obtained by using [fileIo.stat](js-apis-file-fs.md#fi
 function getLocalCapabilities(callback: AsyncCallback<FileData>): void
 ```
 
-获取描述本地能力的JSON文件。
+Obtain a Json file that describes local capabilities.
 
 **Since:** 10
 
@@ -105,7 +105,7 @@ function getLocalCapabilities(callback: AsyncCallback<FileData>): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;FileData&gt; | Yes | 回调函数，返回包含本地能力文件描述符的FileData。 返回的文件为临时文件，关闭后将自动删除。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;FileData&gt; | Yes | A callback method, the argument FileData will holding all the local capabilities. The returned file is a temporal file that will be deleted automatically when closed. |
 
 **Error codes:**
 
@@ -121,7 +121,7 @@ function getLocalCapabilities(callback: AsyncCallback<FileData>): void
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
-import { fileIo, backup } from '@kit.CoreFileKit';
+import { fileIo as fs, backup } from '@kit.CoreFileKit';
 
 try {
   backup.getLocalCapabilities((err: BusinessError, fileData: backup.FileData) => {
@@ -131,7 +131,7 @@ try {
     }
     console.info('getLocalCapabilities success');
     console.info('fileData info:' + fileData.fd);
-    fileIo.closeSync(fileData.fd);
+    fs.closeSync(fileData.fd);
   });
 } catch (error) {
   let err: BusinessError = error as BusinessError;
@@ -165,7 +165,7 @@ The capability file can be obtained by using [fileIo.stat](js-apis-file-fs.md#fi
 function getLocalCapabilities(dataList: Array<IncrementalBackupTime>): Promise<FileData>
 ```
 
-获取描述本地能力的JSON文件。
+Obtain a json file that describes local capabilities.
 
 **Since:** 12
 
@@ -183,22 +183,22 @@ function getLocalCapabilities(dataList: Array<IncrementalBackupTime>): Promise<F
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| dataList | Array&lt;IncrementalBackupTime&gt; | Yes | 增量备份数据列表，包含待查询应用及其最后一次增量备份时间。 |
+| dataList | Array&lt;IncrementalBackupTime&gt; | Yes |  |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;FileData&gt; | Promise对象，返回包含本地能力文件描述符的FileData。返回的文件为临时文件，关闭后将 自动删除。 |
+| Promise&lt;FileData&gt; | A FileData holding all the local capabilities. The returned file is a temporal file that will be deleted automatically when closed. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt;2. Incorrect parameter types. 3.Parameter verification failed. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt;2. Incorrect parameter types. 3.Parameter verification failed. |
 | 13900005 | I/O error |
-| 201 | Permission verification failed, usually the result returned by VerifyAccessToken. |
-| 202 | Permission verification failed, application which is not a system application uses system API. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed, usually the result returned by VerifyAccessToken. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed, application which is not a system application uses system API. |
 | 13900025 | No space left on device |
 | 13600001 | IPC error |
 | 13900042 | Unknown error |
@@ -208,7 +208,7 @@ function getLocalCapabilities(dataList: Array<IncrementalBackupTime>): Promise<F
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
-import { fileIo, backup } from '@kit.CoreFileKit';
+import { fileIo as fs, backup } from '@kit.CoreFileKit';
 
 async function getLocalCapabilities() {
   try {
@@ -219,7 +219,7 @@ async function getLocalCapabilities() {
     let fileData = await backup.getLocalCapabilities(backupApps);
     console.info('getLocalCapabilities success');
     console.info('fileData info:' + fileData.fd);
-    fileIo.closeSync(fileData.fd);
+    fs.closeSync(fileData.fd);
   } catch (error) {
     let err: BusinessError = error as BusinessError;
     console.error(`getLocalCapabilities failed. Code: ${err.code}, message: ${err.message}`);

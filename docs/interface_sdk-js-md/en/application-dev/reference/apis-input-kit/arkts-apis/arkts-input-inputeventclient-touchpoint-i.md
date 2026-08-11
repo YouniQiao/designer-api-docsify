@@ -1,6 +1,6 @@
 # TouchPoint
 
-表示屏幕上的单个触点信息。
+Represents information about a single touch point on the display.
 
 **Since:** 26.0.0
 
@@ -22,7 +22,7 @@ import { inputEventClient } from 'kits/@kit.InputKit';
 displayId: int
 ```
 
-触点所在屏幕的唯一标识，必须为整数。
+Unique ID of the display where the touch point is located. The value must be an integer.
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
@@ -42,7 +42,7 @@ displayId: int
 displayX: int
 ```
 
-触点相对于屏幕左边缘的X坐标，单位为像素（px），必须为整数。
+X coordinate of the touch point relative to the left edge of the display, in pixels. The value must be an integer.
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
@@ -62,7 +62,7 @@ displayX: int
 displayY: int
 ```
 
-触点相对于屏幕上边缘的Y坐标，单位为像素（px），必须为整数。
+Y coordinate of the touch point relative to the top edge of the display, in pixels. The value must be an integer.
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
@@ -82,7 +82,7 @@ displayY: int
 id: int
 ```
 
-触点唯一标识。取值范围为[0, 9]，且必须为整数。
+Unique ID of a touch point. The value must be an integer in the range of [0, 9].
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 

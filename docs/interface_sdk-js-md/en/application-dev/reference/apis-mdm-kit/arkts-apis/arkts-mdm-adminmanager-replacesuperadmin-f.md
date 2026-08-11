@@ -12,7 +12,7 @@ import { adminManager } from 'kits/@kit.MDMKit';
 function replaceSuperAdmin(oldAdmin: Want, newAdmin: Want, isKeepPolicy: boolean): void
 ```
 
-将指定应用替换成超级设备管理应用。
+Replaces a specified application with a super device administrator application.
 
 **Since:** 18
 
@@ -30,19 +30,19 @@ function replaceSuperAdmin(oldAdmin: Want, newAdmin: Want, isKeepPolicy: boolean
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| oldAdmin | [Want](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-want-want-c.md) | Yes | 原有企业设备管理扩展组件。Want中必须包含原有企业设备管理扩展能力的abilityName和所在应用的bundleName。 |
-| newAdmin | [Want](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-want-want-c.md) | Yes | 新企业设备管理扩展组件。Want中必须包含新的企业设备管理扩展能力的abilityName和所在应用的bundleName。 |
-| isKeepPolicy | boolean | Yes | 是否保留原有企业设备管理扩展组件的策略，取值为true表示保留，取值为false表示不保留。 |
+| oldAdmin | [Want](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-want-want-c.md) | Yes | Old EnterpriseAdminExtensionAbility. **Want** must contain the ability name of the old EnterpriseAdminExtensionAbility and the bundle name of the application. |
+| newAdmin | [Want](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-want-want-c.md) | Yes | New EnterpriseAdminExtensionAbility. **Want** must contain the ability name of the new EnterpriseAdminExtensionAbility and the bundle name of the application. |
+| isKeepPolicy | boolean | Yes | A Boolean value indicates whether to retain the policy of the old **EnterpriseAdminExtensionAbility**. The value **true** means that the policy is retained, and the value **false** means the opposite. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 9200011 | Failed to replace the administrator application of the device. |
-| 201 | Permission verification failed. The application does not have the permission required to call the API. |
-| 202 | Permission verification failed. A non-system application calls a system API. |
-| 9200001 | The application is not an administrator application of the device. |
-| 9200003 | The administrator ability component is invalid. |
+| [9200011](../errorcode-enterpriseDeviceManager.md#9200011-failed-to-replace-the-device-administrator-application) | Failed to replace the administrator application of the device. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed. The application does not have the permission required to call the API. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
+| [9200001](../errorcode-enterpriseDeviceManager.md#9200001-deviceadmin-not-enabled) | The application is not an administrator application of the device. |
+| [9200003](../errorcode-enterpriseDeviceManager.md#9200003-invalid-administrator-ability-component) | The administrator ability component is invalid. |
 
 ## Examples
 

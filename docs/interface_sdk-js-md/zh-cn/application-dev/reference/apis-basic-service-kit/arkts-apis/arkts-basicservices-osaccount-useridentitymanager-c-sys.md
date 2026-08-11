@@ -12,12 +12,6 @@
 
 **系统接口：** 此接口为系统接口。
 
-## 导入模块
-
-```TypeScript
-import { osAccount } from 'kits/@kit.BasicServicesKit';
-```
-
 ## addCredential
 
 ```TypeScript
@@ -51,23 +45,26 @@ addCredential(credentialInfo: CredentialInfo, callback: IIdmCallback): void
 | --- | --- |
 | 12300091 | Cross-device communication failed.<br>**适用版本：** 23+ |
 | 12300090 | Cross-device capability not supported.<br>**适用版本：** 23+ |
-| 12300115 | The number of credentials reaches the upper limit. |
-| 201 | Permission denied. |
-| 202 | Not system application. |
+| [12300115](../../apis-basic-services-kit/errorcode-account.md#12300115-用户认证密码个数达到上限) | The number of credentials reaches the upper limit. |
+| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not system application. |
 | 12300020 | Device hardware abnormal.<br>**适用版本：** 23+ |
-| 12300116 | Credential complexity verification failed.<br>**适用版本：** 12+ |
-| 12300106 | The authentication type is not supported. |
-| 12300008 | Restricted account.<br>**适用版本：** 12+ |
-| 12300111 | The operation timeout. |
-| 12300109 | The authentication, enrollment, or update operation is canceled. |
-| 12300003 | Account not found.<br>**适用版本：** 12+ |
-| 12300002 | Invalid credentialInfo, i.e. authType or authSubType. |
-| 12300001 | The system service works abnormally. |
-| 12300101 | The token is invalid. |
+| [12300116](../../apis-basic-services-kit/errorcode-account.md#12300116-凭证复杂度验证失败) | Credential complexity verification failed.<br>**适用版本：** 12+ |
+| [12300106](../../apis-basic-services-kit/errorcode-account.md#12300106-认证类型不支持) | The authentication type is not supported. |
+| [12300008](../../apis-basic-services-kit/errorcode-account.md#12300008-受限的账号) | Restricted account.<br>**适用版本：** 12+ |
+| [12300111](../../apis-basic-services-kit/errorcode-account.md#12300111-认证超时) | The operation timeout. |
+| [12300109](../../apis-basic-services-kit/errorcode-account.md#12300109-认证凭据录入更新等操作被取消) | The authentication, enrollment, or update operation is canceled. |
+| [12300003](../../apis-basic-services-kit/errorcode-account.md#12300003-账号不存在) | Account not found.<br>**适用版本：** 12+ |
+| [12300002](../../apis-basic-services-kit/errorcode-account.md#12300002-无效参数) | Invalid credentialInfo, i.e. authType or authSubType. |
+| [12300001](../../apis-basic-services-kit/errorcode-account.md#12300001-系统服务异常) | The system service works abnormally. |
+| [12300101](../../apis-basic-services-kit/errorcode-account.md#12300101-凭据不正确) | The token is invalid. |
 
 ## 示例
 
+ArkTS-Dyn示例：
+
 ```TypeScript
+import { osAccount } from '@kit.BasicServicesKit';
 import { BusinessError } from '@kit.BasicServicesKit';
 
 let password: Uint8Array = new Uint8Array([0, 0, 0, 0, 0, 0]);
@@ -93,6 +90,47 @@ userIDM.openSession((err: BusinessError, challenge: Uint8Array) => {
     }
   });
   } catch (e) {
+    const err = e as BusinessError;
+    console.error(`addCredential exception = code is ${err.code}, message is ${err.message}`);
+  }
+});
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+import osAccount from '@ohos.account.osAccount';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let password: Uint8Array = new Uint8Array([0, 0, 0, 0, 0, 0]);
+let pinAuth: osAccount.PINAuth = new osAccount.PINAuth();
+
+try {
+  pinAuth.registerInputer({
+    onGetData: (authSubType: osAccount.AuthSubType, callback: osAccount.IInputData) => {
+      callback.onSetData(authSubType, password);
+    }
+  });
+} catch(e: Error) {
+  const err = e as BusinessError;
+  console.error(`registerInputer code is ${err.code}, message is ${err.message}`);
+}
+
+let credentialInfo: osAccount.CredentialInfo = {
+  credType: osAccount.AuthType.PIN,
+  credSubType: osAccount.AuthSubType.PIN_SIX,
+  token: new Uint8Array(0),
+};
+let userIDM = new osAccount.UserIdentityManager();
+userIDM.openSession((err: BusinessError |null, challenge: Uint8Array | undefined) => {
+  try {
+    userIDM.addCredential(credentialInfo, {
+      onResult: (result: int, extraInfo: osAccount.RequestResult) => {
+        console.info('addCredential result = ' + result);
+        console.info('addCredential extraInfo = ' + extraInfo);
+      }
+    });
+  } catch (e: Error) {
     const err = e as BusinessError;
     console.error(`addCredential exception = code is ${err.code}, message is ${err.message}`);
   }
@@ -129,13 +167,15 @@ cancel(challenge: Uint8Array): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameter types. |
-| 201 | Permission denied. |
-| 12300002 | Invalid challenge. |
-| 202 | Not system application. |
-| 12300001 | The system service works abnormally. |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameter types. |
+| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
+| [12300002](../../apis-basic-services-kit/errorcode-account.md#12300002-无效参数) | Invalid challenge. |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not system application. |
+| [12300001](../../apis-basic-services-kit/errorcode-account.md#12300001-系统服务异常) | The system service works abnormally. |
 
 ## 示例
+
+ArkTS-Dyn示例：
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -144,7 +184,19 @@ let userIDM = new osAccount.UserIdentityManager();
 let challenge: Uint8Array = new Uint8Array([0]);
 try {
   userIDM.cancel(challenge);
-} catch (e) {
+} catch(err) {
+  console.error(`cancel code is ${err.code}, message is ${err.message}`);
+}
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+let userIDM = new osAccount.UserIdentityManager();
+let challenge: Uint8Array = new Uint8Array([0]);
+try {
+  userIDM.cancel(challenge);
+} catch(e: Error) {
   const err = e as BusinessError;
   console.error(`cancel code is ${err.code}, message is ${err.message}`);
 }
@@ -186,12 +238,12 @@ closeSession(accountId?: int): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 401 | Parameter error. Possible causes: Incorrect parameter types.<br>**适用版本：** 12+ |
-| 12300008 | Restricted account.<br>**适用版本：** 12+ |
-| 12300003 | Account not found.<br>**适用版本：** 12+ |
-| 201 | Permission denied. |
-| 202 | Not system application. |
-| 12300001 | The system service works abnormally.<br>**适用版本：** 12+ |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: Incorrect parameter types.<br>**适用版本：** 12+ |
+| [12300008](../../apis-basic-services-kit/errorcode-account.md#12300008-受限的账号) | Restricted account.<br>**适用版本：** 12+ |
+| [12300003](../../apis-basic-services-kit/errorcode-account.md#12300003-账号不存在) | Account not found.<br>**适用版本：** 12+ |
+| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not system application. |
+| [12300001](../../apis-basic-services-kit/errorcode-account.md#12300001-系统服务异常) | The system service works abnormally.<br>**适用版本：** 12+ |
 
 ## 示例
 
@@ -223,7 +275,7 @@ constructor()
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 202 | Not system application. |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not system application. |
 
 ## 示例
 
@@ -263,15 +315,17 @@ delCred(credentialId: Uint8Array, token: Uint8Array, callback: IIdmCallback): vo
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameter types. |
-| 201 | Permission denied. |
-| 12300002 | Invalid credentialId. |
-| 202 | Not system application. |
-| 12300001 | The system service works abnormally. |
-| 12300102 | The credential does not exist. |
-| 12300101 | The token is invalid. |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameter types. |
+| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
+| [12300002](../../apis-basic-services-kit/errorcode-account.md#12300002-无效参数) | Invalid credentialId. |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not system application. |
+| [12300001](../../apis-basic-services-kit/errorcode-account.md#12300001-系统服务异常) | The system service works abnormally. |
+| [12300102](../../apis-basic-services-kit/errorcode-account.md#12300102-凭据不存在) | The credential does not exist. |
+| [12300101](../../apis-basic-services-kit/errorcode-account.md#12300101-凭据不正确) | The token is invalid. |
 
 ## 示例
+
+ArkTS-Dyn示例：
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -287,6 +341,25 @@ try {
     }
   });
 } catch (e) {
+  const err = e as BusinessError;
+  console.error(`delCred exception = code is ${err.code}, message is ${err.message}`);
+}
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+let userIDM = new osAccount.UserIdentityManager();
+let credentialId: Uint8Array = new Uint8Array([0, 0, 0, 0, 0, 0, 0, 0]);
+let token: Uint8Array = new Uint8Array([0]);
+try {
+  userIDM.delCred(credentialId, token, {
+    onResult: (result: int, extraInfo: osAccount.RequestResult) => {
+      console.info('delCred result = ' + result);
+      console.info('delCred extraInfo = ' + JSON.stringify(extraInfo));
+    }
+  });
+} catch (e: Error) {
   const err = e as BusinessError;
   console.error(`delCred exception = code is ${err.code}, message is ${err.message}`);
 }
@@ -323,13 +396,15 @@ delUser(token: Uint8Array, callback: IIdmCallback): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameter types. |
-| 201 | Permission denied. |
-| 202 | Not system application. |
-| 12300001 | The system service works abnormally. |
-| 12300101 | The token is invalid. |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameter types. |
+| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not system application. |
+| [12300001](../../apis-basic-services-kit/errorcode-account.md#12300001-系统服务异常) | The system service works abnormally. |
+| [12300101](../../apis-basic-services-kit/errorcode-account.md#12300101-凭据不正确) | The token is invalid. |
 
 ## 示例
+
+ArkTS-Dyn示例：
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -344,6 +419,24 @@ try {
     }
   });
 } catch (e) {
+  const err = e as BusinessError;
+  console.error(`delUser exception = code is ${err.code}, message is ${err.message}`);
+}
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+let userIDM = new osAccount.UserIdentityManager();
+let token: Uint8Array = new Uint8Array([0]);
+try {
+  userIDM.delUser(token, {
+    onResult: (result: int, extraInfo: osAccount.RequestResult) => {
+      console.info('delUser result = ' + result);
+      console.info('delUser extraInfo = ' + JSON.stringify(extraInfo));
+    }
+  });
+} catch (e: Error) {
   const err = e as BusinessError;
   console.error(`delUser exception = code is ${err.code}, message is ${err.message}`);
 }
@@ -379,14 +472,17 @@ getAuthInfo(callback: AsyncCallback<Array<EnrolledCredInfo>>): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 201 | Permission denied. |
-| 202 | Not system application. |
-| 12300001 | The system service works abnormally. |
+| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not system application. |
+| [12300001](../../apis-basic-services-kit/errorcode-account.md#12300001-系统服务异常) | The system service works abnormally. |
 | 12300020 | Device hardware abnormal.<br>**适用版本：** 23+ |
 
 ## 示例
 
+ArkTS-Dyn示例：
+
 ```TypeScript
+import { osAccount } from '@kit.BasicServicesKit';
 import { BusinessError } from '@kit.BasicServicesKit';
 
 let userIDM = new osAccount.UserIdentityManager();
@@ -399,6 +495,27 @@ try {
     }
   });
 } catch (e) {
+  const err = e as BusinessError;
+  console.error(`getAuthInfo exception = code is ${err.code}, message is ${err.message}`);
+}
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+import osAccount from '@ohos.account.osAccount';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let userIDM = new osAccount.UserIdentityManager();
+try {
+  userIDM.getAuthInfo((err: BusinessError | null, result: osAccount.EnrolledCredInfo[] | undefined) => {
+    if (err) {
+      console.error(`getAuthInfo exception = code is ${err.code}, message is ${err.message}`);
+    } else {
+      console.info('getAuthInfo result = ' + JSON.stringify(result));
+    }
+  });
+} catch (e: Error) {
   const err = e as BusinessError;
   console.error(`getAuthInfo exception = code is ${err.code}, message is ${err.message}`);
 }
@@ -435,15 +552,18 @@ getAuthInfo(authType: AuthType, callback: AsyncCallback<Array<EnrolledCredInfo>>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 201 | Permission denied. |
-| 12300002 | Invalid authType. |
-| 202 | Not system application. |
-| 12300001 | The system service works abnormally. |
+| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
+| [12300002](../../apis-basic-services-kit/errorcode-account.md#12300002-无效参数) | Invalid authType. |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not system application. |
+| [12300001](../../apis-basic-services-kit/errorcode-account.md#12300001-系统服务异常) | The system service works abnormally. |
 | 12300020 | Device hardware abnormal.<br>**适用版本：** 23+ |
 
 ## 示例
 
+ArkTS-Dyn示例：
+
 ```TypeScript
+import { osAccount } from '@kit.BasicServicesKit';
 import { BusinessError } from '@kit.BasicServicesKit';
 
 let userIDM = new osAccount.UserIdentityManager();
@@ -457,6 +577,28 @@ try {
     }
   });
 } catch (e) {
+  const err = e as BusinessError;
+  console.error(`getAuthInfo exception = code is ${err.code}, message is ${err.message}`);
+}
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+import osAccount from '@ohos.account.osAccount';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let userIDM = new osAccount.UserIdentityManager();
+try {
+  userIDM.getAuthInfo(osAccount.AuthType.PIN,
+    (err: BusinessError | null, result: osAccount.EnrolledCredInfo[] | undefined) => {
+      if (err) {
+        console.error(`getAuthInfo exception = code is ${err.code}, message is ${err.message}`);
+      } else {
+        console.info('getAuthInfo result = ' + JSON.stringify(result));
+      }
+    });
+} catch (e: Error) {
   const err = e as BusinessError;
   console.error(`getAuthInfo exception = code is ${err.code}, message is ${err.message}`);
 }
@@ -498,15 +640,18 @@ getAuthInfo(authType: AuthType): Promise<Array<EnrolledCredInfo>>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 201 | Permission denied. |
-| 12300002 | Invalid authType. |
-| 202 | Not system application. |
-| 12300001 | The system service works abnormally. |
+| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
+| [12300002](../../apis-basic-services-kit/errorcode-account.md#12300002-无效参数) | Invalid authType. |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not system application. |
+| [12300001](../../apis-basic-services-kit/errorcode-account.md#12300001-系统服务异常) | The system service works abnormally. |
 | 12300020 | Device hardware abnormal.<br>**适用版本：** 23+ |
 
 ## 示例
 
+ArkTS-Dyn示例：
+
 ```TypeScript
+import { osAccount } from '@kit.BasicServicesKit';
 import { BusinessError } from '@kit.BasicServicesKit';
 
 let userIDM = new osAccount.UserIdentityManager();
@@ -517,6 +662,26 @@ try {
     console.error(`getAuthInfo error = code is ${err.code}, message is ${err.message}`);
   });
 } catch (e) {
+  const err = e as BusinessError;
+  console.error(`getAuthInfo exception = code is ${err.code}, message is ${err.message}`);
+}
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+import osAccount from '@ohos.account.osAccount';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let userIDM = new osAccount.UserIdentityManager();
+try {
+  userIDM.getAuthInfo(osAccount.AuthType.PIN).then((result: osAccount.EnrolledCredInfo[]) => {
+    console.info('getAuthInfo result = ' + JSON.stringify(result))
+  }).catch((e: Error) => {
+    const err = e as BusinessError;
+    console.error(`getAuthInfo error = code is ${err.code}, message is ${err.message}`);
+  });
+} catch (e: Error) {
   const err = e as BusinessError;
   console.error(`getAuthInfo exception = code is ${err.code}, message is ${err.message}`);
 }
@@ -558,16 +723,19 @@ getAuthInfo(options?: GetAuthInfoOptions): Promise<Array<EnrolledCredInfo>>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 12300003 | Account not found. |
-| 201 | Permission denied. |
-| 12300002 | Invalid options. |
-| 202 | Not system application. |
-| 12300001 | The system service works abnormally. |
+| [12300003](../../apis-basic-services-kit/errorcode-account.md#12300003-账号不存在) | Account not found. |
+| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
+| [12300002](../../apis-basic-services-kit/errorcode-account.md#12300002-无效参数) | Invalid options. |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not system application. |
+| [12300001](../../apis-basic-services-kit/errorcode-account.md#12300001-系统服务异常) | The system service works abnormally. |
 | 12300020 | Device hardware abnormal.<br>**适用版本：** 23+ |
 
 ## 示例
 
+ArkTS-Dyn示例：
+
 ```TypeScript
+import { osAccount } from '@kit.BasicServicesKit';
 import { BusinessError } from '@kit.BasicServicesKit';
 
 let userIDM = new osAccount.UserIdentityManager();
@@ -582,6 +750,30 @@ try {
     console.error(`getAuthInfo error = code is ${err.code}, message is ${err.message}`);
   });
 } catch (e) {
+  const err = e as BusinessError;
+  console.error(`getAuthInfo exception = code is ${err.code}, message is ${err.message}`);
+}
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+import osAccount from '@ohos.account.osAccount';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let userIDM = new osAccount.UserIdentityManager();
+let options: osAccount.GetAuthInfoOptions = {
+  authType: osAccount.AuthType.PIN,
+  accountId: 100,
+};
+try {
+  userIDM.getAuthInfo(options).then((result: osAccount.EnrolledCredInfo[]) => {
+    console.info('getAuthInfo result = ' + JSON.stringify(result))
+  }).catch((e: Error) => {
+    const err = e as BusinessError;
+    console.error(`getAuthInfo error = code is ${err.code}, message is ${err.message}`);
+  });
+} catch (e: Error) {
   const err = e as BusinessError;
   console.error(`getAuthInfo exception = code is ${err.code}, message is ${err.message}`);
 }
@@ -630,18 +822,42 @@ getEnrolledId(authType: AuthType, accountId?: int): Promise<Uint8Array>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 12300106 | The authentication type is not supported. |
-| 12300003 | Account not found. |
-| 201 | Permission denied. |
-| 12300002 | Invalid authType. |
-| 202 | Not system application. |
-| 12300001 | The system service works abnormally. |
-| 12300102 | The credential does not exist. |
+| [12300106](../../apis-basic-services-kit/errorcode-account.md#12300106-认证类型不支持) | The authentication type is not supported. |
+| [12300003](../../apis-basic-services-kit/errorcode-account.md#12300003-账号不存在) | Account not found. |
+| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
+| [12300002](../../apis-basic-services-kit/errorcode-account.md#12300002-无效参数) | Invalid authType. |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not system application. |
+| [12300001](../../apis-basic-services-kit/errorcode-account.md#12300001-系统服务异常) | The system service works abnormally. |
+| [12300102](../../apis-basic-services-kit/errorcode-account.md#12300102-凭据不存在) | The credential does not exist. |
 | 12300020 | Device hardware abnormal.<br>**适用版本：** 23+ |
 
 ## 示例
 
+ArkTS-Dyn示例：
+
 ```TypeScript
+import { osAccount } from '@kit.BasicServicesKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let userIDM = new osAccount.UserIdentityManager();
+let authType: osAccount.AuthType = osAccount.AuthType.PIN;
+let accountId = 100;
+try {
+  userIDM.getEnrolledId(authType, accountId).then((enrolledId: Uint8Array) => {
+      console.info('getEnrolledId enrolledId = ' + JSON.stringify(enrolledId));
+  }).catch((err: BusinessError) => {
+      console.error(`getEnrolledId error = code is ${err.code}, message is ${err.message}`);
+  });
+} catch (e) {
+  const err = e as BusinessError;
+  console.error(`getEnrolledId exception = code is ${err.code}, message is ${err.message}`);
+}
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+import osAccount from '@ohos.account.osAccount';
 import { BusinessError } from '@kit.BasicServicesKit';
 
 let userIDM = new osAccount.UserIdentityManager();
@@ -650,10 +866,11 @@ let accountId = 100;
 try {
   userIDM.getEnrolledId(authType, accountId).then((enrolledId: Uint8Array) => {
     console.info('getEnrolledId enrolledId = ' + JSON.stringify(enrolledId));
-  }).catch((err: BusinessError) => {
+  }).catch((e: Error) => {
+    const err = e as BusinessError;
     console.error(`getEnrolledId error = code is ${err.code}, message is ${err.message}`);
   });
-} catch (e) {
+} catch (e: Error) {
   const err = e as BusinessError;
   console.error(`getEnrolledId exception = code is ${err.code}, message is ${err.message}`);
 }
@@ -689,9 +906,9 @@ offCredentialChanged(callback?: Callback<CredentialChangeInfo>): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 201 | Permission denied. |
-| 202 | Not system application. |
-| 12300001 | The system service works abnormally. |
+| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not system application. |
+| [12300001](../../apis-basic-services-kit/errorcode-account.md#12300001-系统服务异常) | The system service works abnormally. |
 
 ## 示例
 
@@ -758,11 +975,11 @@ onCredentialChanged(credentialTypes: AuthType[], callback: Callback<CredentialCh
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 12300106 | One or more credential types are not supported. |
-| 201 | Permission denied. |
-| 12300002 | One or more credential types are invalid. |
-| 202 | Not system application. |
-| 12300001 | The system service works abnormally. |
+| [12300106](../../apis-basic-services-kit/errorcode-account.md#12300106-认证类型不支持) | One or more credential types are not supported. |
+| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
+| [12300002](../../apis-basic-services-kit/errorcode-account.md#12300002-无效参数) | One or more credential types are invalid. |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not system application. |
+| [12300001](../../apis-basic-services-kit/errorcode-account.md#12300001-系统服务异常) | The system service works abnormally. |
 
 ## 示例
 
@@ -820,14 +1037,17 @@ openSession(callback: AsyncCallback<Uint8Array>): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameter types. |
-| 201 | Permission denied. |
-| 202 | Not system application. |
-| 12300001 | The system service works abnormally. |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameter types. |
+| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not system application. |
+| [12300001](../../apis-basic-services-kit/errorcode-account.md#12300001-系统服务异常) | The system service works abnormally. |
 
 ## 示例
 
+ArkTS-Dyn示例：
+
 ```TypeScript
+import { osAccount } from '@kit.BasicServicesKit';
 import { BusinessError } from '@kit.BasicServicesKit';
 
 let userIDM = new osAccount.UserIdentityManager();
@@ -840,6 +1060,27 @@ try {
     }
   });
 } catch (e) {
+  const err = e as BusinessError;
+  console.error(`openSession exception = code is ${err.code}, message is ${err.message}`);
+}
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+import osAccount from '@ohos.account.osAccount';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let userIDM = new osAccount.UserIdentityManager();
+try {
+  userIDM.openSession((err: BusinessError | null, challenge: Uint8Array | undefined) => {
+    if (err) {
+      console.error(`openSession exception = code is ${err.code}, message is ${err.message}`);
+    } else {
+      console.info('openSession challenge = ' + JSON.stringify(challenge));
+    }
+  });
+} catch (e: Error) {
   const err = e as BusinessError;
   console.error(`openSession exception = code is ${err.code}, message is ${err.message}`);
 }
@@ -887,15 +1128,38 @@ openSession(accountId?: int): Promise<Uint8Array>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 12300008 | Restricted account.<br>**适用版本：** 12+ |
-| 12300003 | Account not found.<br>**适用版本：** 12+ |
-| 201 | Permission denied. |
-| 202 | Not system application. |
-| 12300001 | The system service works abnormally. |
+| [12300008](../../apis-basic-services-kit/errorcode-account.md#12300008-受限的账号) | Restricted account.<br>**适用版本：** 12+ |
+| [12300003](../../apis-basic-services-kit/errorcode-account.md#12300003-账号不存在) | Account not found.<br>**适用版本：** 12+ |
+| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not system application. |
+| [12300001](../../apis-basic-services-kit/errorcode-account.md#12300001-系统服务异常) | The system service works abnormally. |
 
 ## 示例
 
+ArkTS-Dyn示例：
+
 ```TypeScript
+import { osAccount } from '@kit.BasicServicesKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let userIDM = new osAccount.UserIdentityManager();
+let accountId = 100;
+try {
+  userIDM.openSession(accountId).then((challenge: Uint8Array) => {
+      console.info('openSession challenge = ' + JSON.stringify(challenge));
+  }).catch((err: BusinessError) => {
+      console.error(`openSession error = code is ${err.code}, message is ${err.message}`);
+  });
+} catch (e) {
+  const err = e as BusinessError;
+  console.error(`openSession exception = code is ${err.code}, message is ${err.message}`);
+}
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+import osAccount from '@ohos.account.osAccount';
 import { BusinessError } from '@kit.BasicServicesKit';
 
 let userIDM = new osAccount.UserIdentityManager();
@@ -903,10 +1167,11 @@ let accountId = 100;
 try {
   userIDM.openSession(accountId).then((challenge: Uint8Array) => {
     console.info('openSession challenge = ' + JSON.stringify(challenge));
-  }).catch((err: BusinessError) => {
+  }).catch((e: Error) => {
+    const err = e as BusinessError;
     console.error(`openSession error = code is ${err.code}, message is ${err.message}`);
   });
-} catch (e) {
+} catch (e: Error) {
   const err = e as BusinessError;
   console.error(`openSession exception = code is ${err.code}, message is ${err.message}`);
 }
@@ -943,21 +1208,24 @@ updateCredential(credentialInfo: CredentialInfo, callback: IIdmCallback): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 12300106 | The authentication type is not supported. |
-| 12300111 | The operation time out. |
-| 12300109 | The authentication, enrollment, or update operation is canceled. |
-| 12300003 | Account not found.<br>**适用版本：** 12+ |
-| 201 | Permission denied. |
-| 12300002 | Invalid credentialInfo, i.e. authType or authSubType. |
-| 202 | Not system application. |
-| 12300001 | The system service works abnormally. |
-| 12300102 | The credential does not exist. |
-| 12300101 | The token is invalid. |
-| 12300116 | Credential complexity verification failed.<br>**适用版本：** 12+ |
+| [12300106](../../apis-basic-services-kit/errorcode-account.md#12300106-认证类型不支持) | The authentication type is not supported. |
+| [12300111](../../apis-basic-services-kit/errorcode-account.md#12300111-认证超时) | The operation time out. |
+| [12300109](../../apis-basic-services-kit/errorcode-account.md#12300109-认证凭据录入更新等操作被取消) | The authentication, enrollment, or update operation is canceled. |
+| [12300003](../../apis-basic-services-kit/errorcode-account.md#12300003-账号不存在) | Account not found.<br>**适用版本：** 12+ |
+| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
+| [12300002](../../apis-basic-services-kit/errorcode-account.md#12300002-无效参数) | Invalid credentialInfo, i.e. authType or authSubType. |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not system application. |
+| [12300001](../../apis-basic-services-kit/errorcode-account.md#12300001-系统服务异常) | The system service works abnormally. |
+| [12300102](../../apis-basic-services-kit/errorcode-account.md#12300102-凭据不存在) | The credential does not exist. |
+| [12300101](../../apis-basic-services-kit/errorcode-account.md#12300101-凭据不正确) | The token is invalid. |
+| [12300116](../../apis-basic-services-kit/errorcode-account.md#12300116-凭证复杂度验证失败) | Credential complexity verification failed.<br>**适用版本：** 12+ |
 
 ## 示例
 
+ArkTS-Dyn示例：
+
 ```TypeScript
+import { osAccount } from '@kit.BasicServicesKit';
 import { BusinessError } from '@kit.BasicServicesKit';
 
 let userIDM = new osAccount.UserIdentityManager();
@@ -986,11 +1254,68 @@ userIDM.openSession((err: BusinessError, challenge: Uint8Array) => {
       try {
         userIDM.updateCredential(credentialInfo, {
           onResult: (result: number, extraInfo: osAccount.RequestResult) => {
+              console.info('updateCredential result = ' + result);
+              console.info('updateCredential extraInfo = ' + extraInfo);
+          }
+        });
+      } catch (e) {
+        const err = e as BusinessError;
+        console.error(`updateCredential exception = code is ${err.code}, message is ${err.message}`);
+      }
+    }
+  });
+});
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+import osAccount from '@ohos.account.osAccount';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let userIDM = new osAccount.UserIdentityManager();
+let userAuth: osAccount.UserAuth = new osAccount.UserAuth();
+let pinAuth: osAccount.PINAuth = new osAccount.PINAuth();
+let password: Uint8Array = new Uint8Array([0, 0, 0, 0, 0, 0]);
+let credentialInfo: osAccount.CredentialInfo = {
+  credType: osAccount.AuthType.PIN,
+  credSubType: osAccount.AuthSubType.PIN_SIX,
+  token: new Uint8Array(0),
+};
+
+try {
+  pinAuth.registerInputer({
+    onGetData: (authSubType: osAccount.AuthSubType, callback: osAccount.IInputData) => {
+      callback.onSetData(authSubType, password);
+    }
+  });
+} catch(e: Error) {
+  const err = e as BusinessError;
+  console.error(`registerInputer code is ${err.code}, message is ${err.message}`);
+}
+
+userIDM.openSession((err: BusinessError | null, challenge: Uint8Array | undefined) => {
+  if (err || !challenge){
+    console.error(`openSession failed: ${err?.code || 'challenge is undefined'}`);
+    return;
+  }
+  userAuth.auth(challenge, credentialInfo.credType, osAccount.AuthTrustLevel.ATL1, {
+    onResult: (result: int, extraInfo: osAccount.AuthResult) => {
+      if (result != osAccount.ResultCode.SUCCESS) {
+        return;
+      }
+      if (extraInfo.token != null && extraInfo.token !== undefined) {
+        credentialInfo.token = extraInfo.token!; // 使用!断言非空
+      }
+      //credentialInfo.token = extraInfo.token ?? new Uint8Array();
+      try {
+        userIDM.updateCredential(credentialInfo, {
+          onResult: (result: int, extraInfo: osAccount.RequestResult) => {
             console.info('updateCredential result = ' + result);
             console.info('updateCredential extraInfo = ' + extraInfo);
           }
         });
-      } catch (e) {
+      } catch (e: Error) {
         const err = e as BusinessError;
         console.error(`updateCredential exception = code is ${err.code}, message is ${err.message}`);
       }

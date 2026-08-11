@@ -1,6 +1,6 @@
 # Vector3
 
-用于表示包含x、y、z三个值的向量。
+Defines a vector with three values.
 
 **Since:** 23
 
@@ -16,7 +16,7 @@
 x: double
 ```
 
-向量x轴方向的值。取值范围：(-∞, +∞)。
+Value for x-axis of the vector.
 
 **Type:** double
 
@@ -36,7 +36,7 @@ x: double
 y: double
 ```
 
-向量y轴方向的值。取值范围：(-∞, +∞)。
+Value for y-axis of the vector.
 
 **Type:** double
 
@@ -56,7 +56,7 @@ y: double
 z: double
 ```
 
-z轴方向的旋转角度。取值范围：(-∞, +∞)。
+Value for z-axis of the vector.
 
 **Type:** double
 

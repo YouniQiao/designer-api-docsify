@@ -10,12 +10,6 @@
 
 **系统能力：** SystemCapability.MultimodalInput.Input.Core
 
-## 导入模块
-
-```TypeScript
-import { MouseAction, AxisValue, MouseEvent, Button, MouseToolType, Axis } from 'kits/@kit.InputKit';
-```
-
 ## axis
 
 ```TypeScript

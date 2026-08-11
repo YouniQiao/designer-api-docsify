@@ -1,6 +1,6 @@
 # RichEditorRange
 
-定义RichEditor的范围。
+Defines the range of the **RichEditor**.
 
 **Since:** 10
 
@@ -16,7 +16,7 @@
 end?: number
 ```
 
-文本的结束位置，省略或者超出文本范围时表示无穷大。
+End position of the span whose style needs to be updated. If this parameter is left empty or set to a value beyond the range, it indicates infinity.
 
 **Type:** number
 
@@ -40,7 +40,7 @@ end?: number
 start?: number
 ```
 
-文本的起始位置，省略或者设置负值时表示从0开始。
+Start position of the span whose style needs to be updated. If this parameter is left empty or set to a negative value, the value **0** will be used.
 
 **Type:** number
 

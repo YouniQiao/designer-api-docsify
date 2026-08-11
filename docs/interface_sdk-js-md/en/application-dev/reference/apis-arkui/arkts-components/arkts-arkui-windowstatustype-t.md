@@ -4,7 +4,7 @@
 declare type WindowStatusType = import('../api/@ohos.window').default.WindowStatusType
 ```
 
-窗口模式枚举。
+Enumerates the window modes.
 
 **Since:** 12
 

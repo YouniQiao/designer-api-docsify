@@ -12,7 +12,7 @@ import { userAuth } from 'kits/@kit.UserAuthenticationKit';
 function getAuthenticator(): Authenticator
 ```
 
-获取Authenticator对象，用于执行用户身份认证。
+Obtains an **Authenticator** instance for user authentication.
 
 **Since:** 6
 
@@ -30,7 +30,7 @@ function getAuthenticator(): Authenticator
 
 | Type | Description |
 | --- | --- |
-| [Authenticator](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-appaccount-authenticator-c.md) | 认证器对象。 |
+| [Authenticator](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-appaccount-authenticator-c.md) | Authenticator** instance obtained. |
 
 ## Examples
 

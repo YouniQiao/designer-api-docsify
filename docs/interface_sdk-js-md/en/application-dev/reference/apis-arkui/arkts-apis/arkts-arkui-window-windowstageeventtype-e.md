@@ -1,6 +1,6 @@
 # WindowStageEventType
 
-WindowStage生命周期状态枚举。
+Enumerates the lifecycle event types of a WindowStage.
 
 **Since:** 9
 
@@ -16,7 +16,7 @@ WindowStage生命周期状态枚举。
 SHOWN = 1
 ```
 
-前台状态，例如点击应用图标启动，无论是首次启动还是从后台启动均会触发。
+The WindowStage is shown in the foreground, for example, when launching from the application icon, triggered whether it is the first launch or resuming from the background.
 
 **Since:** 9
 
@@ -36,7 +36,7 @@ SHOWN = 1
 ACTIVE = 2
 ```
 
-获焦状态，例如应用窗口处理点击事件后的状态、应用启动后的状态。
+The WindowStage gains focus, for example, the state of the application window after handling a click event, or the state after the application is launched.
 
 **Since:** 9
 
@@ -56,7 +56,7 @@ ACTIVE = 2
 INACTIVE = 3
 ```
 
-失焦状态，例如打开新应用或点击其他窗口后，原获焦窗口的状态。
+The WindowStage loses focus, for example, the state of the window that was in focus when a new application is opened or another window is clicked.
 
 **Since:** 9
 
@@ -76,7 +76,7 @@ INACTIVE = 3
 HIDDEN = 4
 ```
 
-后台状态，例如应用上滑退出、应用窗口关闭。
+The WindowStage is running in the background, for example, when the application exists after swiping up or the application window is closed.
 
 **Since:** 9
 
@@ -96,7 +96,7 @@ HIDDEN = 4
 RESUMED = 5
 ```
 
-前台可交互状态，例如打开应用后，应用处于前台，且可以与用户交互的状态。
+The WindowStage is in the foreground and interactive, for example, when the application is open and can interact with the user.
 
 **Since:** 11
 
@@ -116,7 +116,7 @@ RESUMED = 5
 PAUSED = 6
 ```
 
-前台不可交互状态，例如应用在前台时，进入多任务界面，应用依然处于前台但不可以与用户交互的状态。
+The WindowStage is in the foreground but not interactive, for example, when the application is in the foreground and is entering the multitasking screen.
 
 **Since:** 11
 

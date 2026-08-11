@@ -1,6 +1,6 @@
 # ExtendableListItem
 
-可扩展的ListItem组件。
+Defines the Extendable ListItem.
 
 **Inheritance/Implementation:** ExtendableListItem implements [ListItemAttribute](arkts-arkui-listitem-listitemattribute-i.md)
 
@@ -22,7 +22,7 @@ static $_instantiate<T extends ExtendableListItem>(
   ): T
 ```
 
-可扩展的ListItem组件的构造函数。
+Constructor of Extendable ListItem.
 
 **Since:** 26.0.0
 
@@ -58,7 +58,7 @@ static _instantiateImpl<T extends ExtendableListItem>(
   ): void
 ```
 
-扩展列表项组件入口
+Entry of Extendable ListItem.
 
 **Since:** 26.0.0
 
@@ -86,7 +86,7 @@ static _instantiateImpl<T extends ExtendableListItem>(
 public setListItemOptions(value?: ListItemOptions): this
 ```
 
-设置ListItem组件参数。
+Set the ListItem Options.
 
 **Since:** 26.0.0
 

@@ -46,7 +46,8 @@ getNodeByPath(path: string): Node | null
 readonly children: Container<Node>
 ```
 
-节点的子节点，不存在则为空值。为只读属性，表示不能替换整个children容器，但可以通过容器方法操作子节点（如append()、insertAfter()、remove()或clear()）。如果append或insertAfter的节点已存在于容器中，容器会先移除该节点再插入，因此数量不会增加，看似“无效”；添加新节点才会真正增加子节点数量。
+节点的子节点，不存在则为空值。为只读属性，表示不能替换整个children容器，但可以通过容器方法操作子节点（如[append](arkts-arkgraphics3d-scenenodes-container-i.md#append)、[insertAfter](arkts-arkgraphics3d-scenenodes-container-i.md#insertafter)、  
+[remove](arkts-arkgraphics3d-scenenodes-container-i.md#remove)或[clear](arkts-arkgraphics3d-scenenodes-container-i.md#clear)）。如果append或insertAfter的节点已存在于容器中，容器会先移除该节点再插入，因此数量不会增加，看似“无效”；添加新节点才会真正增加子节点数量。
 
 **类型：** [Container](arkts-arkgraphics3d-scenenodes-container-i.md)&lt;[Node](arkts-arkgraphics3d-scenenodes-node-i.md)&gt;
 

@@ -1,6 +1,6 @@
 # LongPressRecognizer
 
-长按手势识别器对象，继承于[GestureRecognizer](arkts-arkui-gesturerecognizer-c.md)。
+Implements a long press gesture recognizer. Inherits from [GestureRecognizer](arkts-arkui-gesturerecognizer-c.md).
 
 **Inheritance/Implementation:** LongPressRecognizer extends [GestureRecognizer](arkts-arkui-gesturerecognizer-c.md)
 
@@ -18,7 +18,7 @@
 getAllowableMovement(): number
 ```
 
-获取长按手势识别器识别的手势的最大移动距离。
+Obtains the maximum movement distance allowed for gesture recognition by the long press gesture recognizer.
 
 **Since:** 22
 
@@ -36,7 +36,7 @@ getAllowableMovement(): number
 
 | Type | Description |
 | --- | --- |
-| number | 长按手势识别器识别的手势的最大移动距离，单位为px。&lt;br/&gt;取值范围：(0, +∞) |
+| number | Maximum movement distance recognized by the long press gesture recognizer, in px. &lt;br&gt;Value range: (0, +∞) |
 
 ## getDuration
 
@@ -44,7 +44,7 @@ getAllowableMovement(): number
 getDuration(): number
 ```
 
-返回预设长按手势识别器触发长按最短时间阈值。
+Obtains the minimum duration required for the long press gesture to be recognized.
 
 **Since:** 18
 
@@ -62,7 +62,7 @@ getDuration(): number
 
 | Type | Description |
 | --- | --- |
-| number | 返回预设长按手势识别器触发长按最短时间阈值，单位为ms。&lt;br/&gt;取值范围：[0, +∞) |
+| number | Minimum duration, in ms. &lt;br&gt;Value range: [0, +∞) |
 
 ## isRepeat
 
@@ -70,7 +70,7 @@ getDuration(): number
 isRepeat(): boolean
 ```
 
-返回预设长按手势识别器是否连续触发事件回调。
+Checks whether the long press gesture recognizer is set to trigger repeated callbacks.
 
 **Since:** 18
 
@@ -88,5 +88,5 @@ isRepeat(): boolean
 
 | Type | Description |
 | --- | --- |
-| boolean | 预设长按手势识别器是否连续触发事件回调。当绑定长按手势且不会连续触发回调时，返回false。当绑定长按手势且会连续触发回调时，返回true。 |
+| boolean | Whether the long press gesture recognizer is set to trigger repeated callbacks. **false**: Repeated callbacks are not triggered. **true**: Repeated callbacks are triggered. |
 

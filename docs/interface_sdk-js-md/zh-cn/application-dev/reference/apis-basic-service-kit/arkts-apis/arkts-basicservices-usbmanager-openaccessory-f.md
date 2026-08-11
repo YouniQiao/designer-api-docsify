@@ -1,11 +1,5 @@
 # openAccessory
 
-## 导入模块
-
-```TypeScript
-import { usbManager } from 'kits/@kit.BasicServicesKit';
-```
-
 ## openAccessory
 
 ```TypeScript
@@ -39,13 +33,13 @@ function openAccessory(accessory: USBAccessory): USBAccessoryHandle
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 14401003 | Cannot reopen the accessory. |
-| 401 | Parameter error. Possible causes:  &lt;br&gt;1. Mandatory parameters are left unspecified.  &lt;br&gt;2. Incorrect parameter types. |
-| 801 | Capability not supported.<br>**适用版本：** 18+ |
-| 14401002 | Failed to open the native accessory node. |
-| 14401001 | The target USBAccessory not matched. |
-| 14400001 | Access right denied. Call requestRight to get the USBDevicePipe access right first. |
-| 14400004 | Service exception. Possible causes:  &lt;br&gt;1. No accessory is plugged in. |
+| [14401003](../../apis-basic-services-kit/errorcode-usb.md#14401003-不能重复打开配件) | Cannot reopen the accessory. |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes:  &lt;br&gt;1. Mandatory parameters are left unspecified.  &lt;br&gt;2. Incorrect parameter types. |
+| [801](../../errorcode-universal.md#801-该设备不支持此api) | Capability not supported.<br>**适用版本：** 18+ |
+| [14401002](../../apis-basic-services-kit/errorcode-usb.md#14401002-打开配件节点失败) | Failed to open the native accessory node. |
+| [14401001](../../apis-basic-services-kit/errorcode-usb.md#14401001-目标usb配件未匹配) | The target USBAccessory not matched. |
+| [14400001](../../apis-basic-services-kit/errorcode-usb.md#14400001-usb设备访问权限被拒绝) | Access right denied. Call requestRight to get the USBDevicePipe access right first. |
+| [14400004](../../apis-basic-services-kit/errorcode-usb.md#14400004-服务异常) | Service exception. Possible causes:  &lt;br&gt;1. No accessory is plugged in. |
 
 ## 示例
 
@@ -63,7 +57,6 @@ async function openAccessory() {
     let arrayBuffer = new ArrayBuffer(4096);
     let readLength = fileIo.readSync(handle.accessoryFd, arrayBuffer, {offset: 0, length: 4096});
     console.info('readSync ret: ' + readLength.toString(10));
-    usbManager.closeAccessory(handle);
   } catch (error) {
     console.error(`openAccessory error ${error.code}, message is ${error.message}`);
   }

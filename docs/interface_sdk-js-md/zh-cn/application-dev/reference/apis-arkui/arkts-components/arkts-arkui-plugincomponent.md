@@ -28,7 +28,7 @@ PluginComponent(options: PluginComponentOptions)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| options | [PluginComponentOptions](arkts-arkui-plugincomponentoptions-i-sys.md) | 是 | 插件组件选项 |
+| options | [PluginComponentOptions](../arkts-apis/arkts-arkui-plugincomponent-plugincomponentoptions-i-sys.md) | 是 | 插件组件选项 |
 
 ## 汇总
 

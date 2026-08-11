@@ -1,6 +1,6 @@
 # PanGestureHandlerOptions
 
-滑动手势处理器配置参数。继承自[BaseHandlerOptions](arkts-arkui-basehandleroptions-i.md)。
+Provides the parameters of the pan gesture handler. Inherits from [BaseHandlerOptions](arkts-arkui-basehandleroptions-i.md).
 
 **Inheritance/Implementation:** PanGestureHandlerOptions extends [BaseHandlerOptions](arkts-arkui-basehandleroptions-i.md)
 
@@ -18,9 +18,9 @@
 direction?: PanDirection
 ```
 
-用于指定触发拖动的手势方向，此枚举值支持逻辑与(&)和逻辑或（|）运算。
+Pan direction. The value supports the AND (&) and OR (|) operations.
 
-默认值：PanDirection.All
+Default value: **PanDirection.All**
 
 **Type:** [PanDirection](arkts-arkui-gesture-pandirection-e.md)
 
@@ -42,19 +42,19 @@ direction?: PanDirection
 distance?: number
 ```
 
-用于指定触发滑动手势事件的最小拖动距离，单位为vp。
+Minimum pan distance to trigger the gesture, in vp.
 
-手写笔默认值：8，其余输入源默认值：5
+Default value: **8** for the stylus and **5** for other input sources
 
-**说明：**
+**NOTE：**
 
-[Tabs组件](arkts-arkui-tabs-tabs-f.md#tabs)滑动与该滑动手势事件同时存在时，可将distance值设为1，使拖动更灵敏，避免造成事件错乱。
+If a pan gesture and a [tab](arkts-arkui-tabs-tabs-f.md#tabs) swipe occur at the same time, set **distance** to **1** to make the gesture more easily recognizable.
 
-取值范围：[0, +∞)，当设定的值小于0时，按默认值处理。
+Value range: [0, +∞). If the value specified is less than 0, the default value is used.
 
-从API version 19开始，手写笔默认值为8，单位为vp。
+Since API version 19, the default value is **8**, in vp, for the stylus.
 
-使用[gestureModifier](arkts-arkui-common-commonmethod-i.md#gesturemodifier)配置该字段时，单位为px。
+When configuring this field with [gestureModifier](arkts-arkui-common-commonmethod-i.md#gesturemodifier), the unit is px.
 
 **Type:** number
 
@@ -76,11 +76,11 @@ distance?: number
 distanceMap?: Map<SourceTool, number>
 ```
 
-用于指定不同输入源触发滑动手势事件的最小拖动距离，单位为vp。
+Minimum pan distance for different input sources to trigger the gesture, in vp.
 
-手写笔默认值：8，其余输入源默认值：5
+Default value: **8** for the stylus and **5** for other input sources
 
-取值范围：[0, +∞)，当设定的值小于0时，按默认值处理。
+Value range: [0, +∞). If the value specified is less than 0, the default value is used.
 
 **Type:** Map&lt;[SourceTool](../arkts-components/arkts-arkui-sourcetool-e.md), number&gt;
 
@@ -102,15 +102,15 @@ distanceMap?: Map<SourceTool, number>
 fingers?: number
 ```
 
-用于指定触发拖动的最少手指数，最小为1指， 最大取值为10指。
+Minimum number of fingers to trigger a pan gesture. The value ranges from 1 to 10.
 
-默认值：1
+Default value: **1**
 
-取值范围：[1, 10]
+Value range: [1, 10]
 
-**说明：**
+**NOTE：**
 
-当设置的值小于1或不设置时，会被转化为默认值。
+If the value is less than 1 or is not set, the default value is used.
 
 **Type:** number
 

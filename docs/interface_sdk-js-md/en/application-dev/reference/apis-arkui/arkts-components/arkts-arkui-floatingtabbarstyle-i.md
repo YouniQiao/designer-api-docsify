@@ -1,6 +1,6 @@
 # FloatingTabBarStyle
 
-提供浮动条模式选项的接口。
+Provides an interface for the options for the floating bar mode.
 
 **Since:** 26.0.0
 
@@ -16,7 +16,7 @@
 adaptToHandedness?: boolean
 ```
 
-是否适应手感。
+Whether to adapt to the handedness.
 
 **Type:** boolean
 
@@ -40,7 +40,7 @@ adaptToHandedness?: boolean
 barBottomMargin?: Length
 ```
 
-栏与选项卡底部之间的距离。不能以百分比形式设置。
+The distance between the bar and the bottom of tab. It cannot be set in percentage.
 
 **Type:** [Length](../arkts-apis/arkts-arkui-length-t.md)
 
@@ -62,7 +62,7 @@ barBottomMargin?: Length
 barSideMargin?: Length
 ```
 
-条形的左右边距的宽度。不能以百分比形式设置。
+The width of the left and right margins of the bar. It cannot be set in percentage.
 
 **Type:** [Length](../arkts-apis/arkts-arkui-length-t.md)
 
@@ -84,7 +84,7 @@ barSideMargin?: Length
 barWidth?: FloatingTabBarWidth
 ```
 
-不同断点处的tab宽度的条形宽度。
+The bar width of the tab width at different breakpoints.
 
 **Type:** [FloatingTabBarWidth](arkts-arkui-floatingtabbarwidth-i.md)
 
@@ -106,7 +106,7 @@ barWidth?: FloatingTabBarWidth
 maskColor?: ResourceColor
 ```
 
-蒙版的颜色。
+The color of the mask.
 
 **Type:** [ResourceColor](../arkts-apis/arkts-arkui-resourcecolor-t.md)
 
@@ -128,7 +128,7 @@ maskColor?: ResourceColor
 maskHeight?: Length
 ```
 
-遮罩的高度。不能以百分比形式设置。
+The height of the mask. It cannot be set in percentage.
 
 **Type:** [Length](../arkts-apis/arkts-arkui-length-t.md)
 
@@ -150,7 +150,7 @@ maskHeight?: Length
 systemMaterial?: UIMaterial.ImmersiveMaterial
 ```
 
-材质的样式。
+The style of the material.
 
 **Type:** UIMaterial.ImmersiveMaterial
 

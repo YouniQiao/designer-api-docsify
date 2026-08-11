@@ -10,12 +10,6 @@
 
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
-## 导入模块
-
-```TypeScript
-import { image } from 'kits/@kit.ImageKit';
-```
-
 ## auxiliaryPictureType
 
 ```TypeScript
@@ -60,7 +54,7 @@ pixelFormat: PixelMapFormat
 
 像素格式。
 
-**类型：** [PixelMapFormat](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-multimedia-movingphotoview-pixelmapformat-e.md)
+**类型：** [PixelMapFormat](arkts-image-image-pixelmapformat-e.md)
 
 **起始版本：** 13
 

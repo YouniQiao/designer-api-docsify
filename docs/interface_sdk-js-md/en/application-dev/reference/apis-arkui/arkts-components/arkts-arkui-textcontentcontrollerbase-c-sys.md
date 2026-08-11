@@ -1,10 +1,10 @@
 # TextContentControllerBase
 
-TextContentControllerBase
+Represents the base controller for **TextInput**, **TextArea**, and **Search** components.
 
-**Since:** 11
+**Since:** 10
 
-**ArkTS mode:** ArkTS-Dyn only, since version 11.
+**ArkTS mode:** ArkTS-Dyn only, since version 10.
 
 <!--Device-unnamed-declare abstract class TextContentControllerBase--><!--Device-unnamed-declare abstract class TextContentControllerBase-End-->
 
@@ -16,7 +16,7 @@ TextContentControllerBase
 getText(range?: TextRange): string
 ```
 
-Gets the text content of the selected range.
+Obtains the text content within a specified range.
 
 **Since:** 19
 
@@ -36,11 +36,11 @@ Gets the text content of the selected range.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| range | [TextRange](../arkts-apis/arkts-arkui-textrange-i.md) | No | selected range. |
+| range | [TextRange](../arkts-apis/arkts-arkui-textrange-i.md) | No | Range of the text content to obtain, defined by start and end positions.&lt;br&gt;If the range is not specified, the entire text is obtained by default. If the start position is not specified, it defaults to index 0. If the end position is not specified, it defaults to the end of the text. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| string | text content of the selected range. |
+| string | Text content within the specified range. |
 

@@ -110,7 +110,7 @@ Applies the size constraint to the child component.
 
 | 类型 | 说明 |
 | --- | --- |
-| [MeasureResult](arkts-arkui-common-measureresult-i.md) | Provides the measurement result of the component. If some errors occur in the internal runtime environment, returns undefined. |
+| [MeasureResult](../arkts-components/arkts-arkui-measureresult-i.md) | Provides the measurement result of the component. If some errors occur in the internal runtime environment, returns undefined. |
 
 ## uniqueId
 

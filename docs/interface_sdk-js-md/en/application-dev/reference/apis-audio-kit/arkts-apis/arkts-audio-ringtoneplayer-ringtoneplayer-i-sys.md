@@ -1,7 +1,7 @@
 # RingtonePlayer (System API)
 
-系统铃声播放器，提供系统铃声的参数设置、参数获取、播放、停止等功能。在调用RingtonePlayer的接口前，需要先通过  
-[getRingtonePlayer](arkts-audio-systemsoundmanager-systemsoundmanager-i.md#getringtoneplayer)创建实例。
+Provides APIs for setting and obtaining ringtone parameters as well as playing and stopping ringtones. Before calling any API in RingtonePlayer, you must use   
+[getRingtonePlayer](arkts-audio-systemsoundmanager-systemsoundmanager-i.md#getringtoneplayer)to obtain a RingtonePlayer instance.
 
 **Since:** 10
 
@@ -19,7 +19,7 @@
 configure(options: RingtoneOptions, callback: AsyncCallback<void>): void
 ```
 
-配置铃声播放参数。使用callback异步回调。
+Sets ringtone parameters. This API uses an asynchronous callback to return the result.
 
 **Since:** 10
 
@@ -35,8 +35,8 @@ configure(options: RingtoneOptions, callback: AsyncCallback<void>): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| options | [RingtoneOptions](arkts-audio-systemsoundmanager-ringtoneoptions-t.md) | Yes | 指定铃声参数。 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | 回调函数。当配置铃声播放参数成功，err为undefined，否则为错误对象。 |
+| options | [RingtoneOptions](arkts-audio-systemsoundmanager-ringtoneoptions-t.md) | Yes | Ringtone parameters. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined**; otherwise, **err** is an error object. |
 
 ## configure
 
@@ -44,7 +44,7 @@ configure(options: RingtoneOptions, callback: AsyncCallback<void>): void
 configure(options: RingtoneOptions): Promise<void>
 ```
 
-配置铃声播放参数。使用Promise异步回调。
+Sets ringtone parameters. This API uses a promise to return the result.
 
 **Since:** 10
 
@@ -60,13 +60,13 @@ configure(options: RingtoneOptions): Promise<void>
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| options | [RingtoneOptions](arkts-audio-systemsoundmanager-ringtoneoptions-t.md) | Yes | 指定铃声参数。 |
+| options | [RingtoneOptions](arkts-audio-systemsoundmanager-ringtoneoptions-t.md) | Yes | Ringtone parameters. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise对象。无返回结果的Promise对象。 |
+| Promise&lt;void&gt; | Promise that returns no value. |
 
 ## getAudioRendererInfo
 
@@ -74,7 +74,7 @@ configure(options: RingtoneOptions): Promise<void>
 getAudioRendererInfo(callback: AsyncCallback<audio.AudioRendererInfo>): void
 ```
 
-获取铃声使用的AudioRendererInfo。使用callback异步回调。
+Obtains the information about the audio renderer used by the ringtone. This API uses an asynchronous callback to return the result.
 
 **Since:** 10
 
@@ -90,7 +90,7 @@ getAudioRendererInfo(callback: AsyncCallback<audio.AudioRendererInfo>): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;audio.AudioRendererInfo&gt; | Yes | 回调函数。当获取音频渲染器信息成功，err为 undefined data为获取到的音频渲染器信息；否则为错误对象。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;audio.AudioRendererInfo&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined** and **data** is the renderer information obtained; otherwise, **err** is an error object. |
 
 ## getAudioRendererInfo
 
@@ -98,7 +98,7 @@ getAudioRendererInfo(callback: AsyncCallback<audio.AudioRendererInfo>): void
 getAudioRendererInfo(): Promise<audio.AudioRendererInfo>
 ```
 
-获取铃声使用的AudioRendererInfo。使用Promise异步回调。
+Obtains the information about the audio renderer used by the ringtone. This API uses a promise to return the result.
 
 **Since:** 10
 
@@ -114,7 +114,7 @@ getAudioRendererInfo(): Promise<audio.AudioRendererInfo>
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;audio.AudioRendererInfo&gt; | Promise对象，返回获取的音频渲染器信息。 |
+| Promise&lt;audio.AudioRendererInfo&gt; | Promise used to return the renderer information. |
 
 ## getTitle
 
@@ -122,7 +122,7 @@ getAudioRendererInfo(): Promise<audio.AudioRendererInfo>
 getTitle(callback: AsyncCallback<string>): void
 ```
 
-获取铃声标题。使用callback异步回调。
+Obtains the title of the ringtone. This API uses an asynchronous callback to return the result.
 
 **Since:** 10
 
@@ -138,7 +138,7 @@ getTitle(callback: AsyncCallback<string>): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;string&gt; | Yes | 回调函数。当获取铃声标题成功，err为undefined，data为获取到的铃声标题； 否则为错误对象。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;string&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined** and **data** is the title obtained; otherwise, **err** is an error object. |
 
 ## getTitle
 
@@ -146,7 +146,7 @@ getTitle(callback: AsyncCallback<string>): void
 getTitle(): Promise<string>
 ```
 
-获取铃声标题。使用Promise异步回调。
+Obtains the title of the ringtone. This API uses a promise to return the result.
 
 **Since:** 10
 
@@ -162,7 +162,7 @@ getTitle(): Promise<string>
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;string&gt; | Promise对象，返回获取的系统铃声标题。 |
+| Promise&lt;string&gt; | Promise used to return the title obtained. |
 
 ## off('audioInterrupt')
 
@@ -170,7 +170,7 @@ getTitle(): Promise<string>
 off(type: 'audioInterrupt'): void
 ```
 
-取消监听音频中断事件。
+Unsubscribes from the audio interruption event.
 
 **Since:** 10
 
@@ -186,14 +186,14 @@ off(type: 'audioInterrupt'): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'audioInterrupt' | Yes | 事件回调类型，支持的事件为'audioInterrupt'，当取消监听音频中断事件时，触发该事件。 |
+| type | 'audioInterrupt' | Yes | Event type. The event **'audioInterrupt'** is triggered when the audio focus is changed. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
-| 6800101 | Parameter verification failed. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
+| [6800101](../errorcode-audio.md#6800101-invalid-parameter) | Parameter verification failed. |
 
 ## offAudioInterrupt
 
@@ -201,7 +201,7 @@ off(type: 'audioInterrupt'): void
 offAudioInterrupt(): void
 ```
 
-取消监听音频中断事件。
+Unsubscribes to audio interrupt events.
 
 **Since:** 23
 
@@ -217,7 +217,7 @@ offAudioInterrupt(): void
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 202 | Not system application. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system application. |
 
 ## on('audioInterrupt')
 
@@ -225,7 +225,7 @@ offAudioInterrupt(): void
 on(type: 'audioInterrupt', callback: Callback<audio.InterruptEvent>): void
 ```
 
-监听音频中断事件（当音频焦点发生变化时触发）。使用callback异步回调。
+Subscribes to the audio interruption event, which is triggered when the audio focus is changed. This API uses an asynchronous callback to return the result.
 
 **Since:** 10
 
@@ -241,15 +241,15 @@ on(type: 'audioInterrupt', callback: Callback<audio.InterruptEvent>): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'audioInterrupt' | Yes | 事件回调类型，支持的事件为'audioInterrupt'，当音频焦点状态发生变化时，触发该事件。 |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;audio.InterruptEvent&gt; | Yes | 回调函数，返回中断事件信息。 |
+| type | 'audioInterrupt' | Yes | Event type. The event **'audioInterrupt'** is triggered when the audio focus is changed. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;audio.InterruptEvent&gt; | Yes | Callback used to return the event information. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
-| 6800101 | Parameter verification failed. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
+| [6800101](../errorcode-audio.md#6800101-invalid-parameter) | Parameter verification failed. |
 
 ## onAudioInterrupt
 
@@ -257,7 +257,7 @@ on(type: 'audioInterrupt', callback: Callback<audio.InterruptEvent>): void
 onAudioInterrupt(callback: Callback<audio.InterruptEvent>): void
 ```
 
-监听音频中断事件（当音频焦点发生变化时触发）。使用callback异步回调。
+Listens for audio interrupt events. This method uses a callback to get interrupt events. The interrupt event is triggered when audio playback is interrupted.
 
 **Since:** 23
 
@@ -279,8 +279,8 @@ onAudioInterrupt(callback: Callback<audio.InterruptEvent>): void
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 6800101 | Parameter verification failed. |
-| 202 | Not system application. |
+| [6800101](../errorcode-audio.md#6800101-invalid-parameter) | Parameter verification failed. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system application. |
 
 ## release
 
@@ -288,7 +288,7 @@ onAudioInterrupt(callback: Callback<audio.InterruptEvent>): void
 release(callback: AsyncCallback<void>): void
 ```
 
-释放铃声播放器。使用callback异步回调。
+Releases the ringtone player. This API uses an asynchronous callback to return the result.
 
 **Since:** 10
 
@@ -304,7 +304,7 @@ release(callback: AsyncCallback<void>): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | 回调函数。当释放铃声播放器成功，err为undefined，否则为错误对象。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined**; otherwise, **err** is an error object. |
 
 ## release
 
@@ -312,7 +312,7 @@ release(callback: AsyncCallback<void>): void
 release(): Promise<void>
 ```
 
-释放铃声播放器。使用Promise异步回调。
+Releases the ringtone player. This API uses a promise to return the result.
 
 **Since:** 10
 
@@ -328,7 +328,7 @@ release(): Promise<void>
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise对象。无返回结果的Promise对象。 |
+| Promise&lt;void&gt; | Promise that returns no value. |
 
 ## start
 
@@ -336,7 +336,7 @@ release(): Promise<void>
 start(callback: AsyncCallback<void>): void
 ```
 
-开始播放铃声。使用callback异步回调。
+Starts playing the ringtone. This API uses an asynchronous callback to return the result.
 
 **Since:** 10
 
@@ -352,7 +352,7 @@ start(callback: AsyncCallback<void>): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | 回调函数。当开始播放铃声成功，err为undefined，否则为错误对象。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined**; otherwise, **err** is an error object. |
 
 ## start
 
@@ -360,7 +360,7 @@ start(callback: AsyncCallback<void>): void
 start(): Promise<void>
 ```
 
-开始播放铃声。使用Promise异步回调。
+Starts playing the ringtone. This API uses a promise to return the result.
 
 **Since:** 10
 
@@ -376,7 +376,7 @@ start(): Promise<void>
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise对象。无返回结果的Promise对象。 |
+| Promise&lt;void&gt; | Promise that returns no value. |
 
 ## stop
 
@@ -384,7 +384,7 @@ start(): Promise<void>
 stop(callback: AsyncCallback<void>): void
 ```
 
-停止播放铃声。使用callback异步回调。
+Stops playing the ringtone. This API uses an asynchronous callback to return the result.
 
 **Since:** 10
 
@@ -400,7 +400,7 @@ stop(callback: AsyncCallback<void>): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | 回调函数。当停止播放铃声成功，err为undefined，否则为错误对象。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined**; otherwise, **err** is an error object. |
 
 ## stop
 
@@ -408,7 +408,7 @@ stop(callback: AsyncCallback<void>): void
 stop(): Promise<void>
 ```
 
-停止播放铃声。使用Promise异步回调。
+Stops playing the ringtone. This API uses a promise to return the result.
 
 **Since:** 10
 
@@ -424,7 +424,7 @@ stop(): Promise<void>
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise对象。无返回结果的Promise对象。 |
+| Promise&lt;void&gt; | Promise that returns no value. |
 
 ## state
 
@@ -432,7 +432,7 @@ stop(): Promise<void>
 readonly state: media.AVPlayerState
 ```
 
-音频渲染器的状态。
+Gets player state.
 
 **Type:** media.AVPlayerState
 

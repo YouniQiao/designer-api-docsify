@@ -1,6 +1,6 @@
 # ImmersiveEffect
 
-沉浸效果。
+Describes the immersive effect.
 
 **Since:** 20
 
@@ -22,7 +22,7 @@ import { inputMethodEngine } from 'kits/@kit.IMEKit';
 gradientHeight: int
 ```
 
-渐变高度，不能超过屏幕高度的15%。
+Gradient height, which cannot exceed 15% of the screen height.
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
@@ -40,7 +40,7 @@ gradientHeight: int
 gradientMode: GradientMode
 ```
 
-渐变模式。
+Gradient mode. If this attribute is not specified or is set to an invalid value, the gradient mode is not used by default.
 
 **Type:** [GradientMode](arkts-ime-inputmethodengine-gradientmode-e.md)
 

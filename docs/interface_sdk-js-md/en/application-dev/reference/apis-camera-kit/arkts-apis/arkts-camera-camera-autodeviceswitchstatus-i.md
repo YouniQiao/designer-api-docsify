@@ -1,6 +1,6 @@
 # AutoDeviceSwitchStatus
 
-自动切换镜头状态信息。
+Describes the information about the automatic camera switch status.
 
 **Since:** 13
 
@@ -22,7 +22,8 @@ import { camera } from 'kits/@kit.CameraKit';
 readonly isDeviceCapabilityChanged: boolean
 ```
 
-自动切换镜头成功后，其镜头能力值是否发生改变。true表示发生变化，false表示未发生变化。
+Whether the camera capability is changed after the camera is automatically switched. **true** if changed,   
+**false** otherwise.
 
 **Type:** boolean
 
@@ -42,7 +43,7 @@ readonly isDeviceCapabilityChanged: boolean
 readonly isDeviceSwitched: boolean
 ```
 
-自动切换镜头是否成功。true表示成功，false表示失败。
+Whether the camera is automatically switched. **true** if auto-switched, **false** otherwise.
 
 **Type:** boolean
 

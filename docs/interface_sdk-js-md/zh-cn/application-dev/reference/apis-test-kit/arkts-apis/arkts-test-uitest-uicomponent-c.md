@@ -18,12 +18,6 @@ UiTest中，UiComponent类代表了UI界面上的一个控件，提供控件属�
 
 **系统能力：** SystemCapability.Test.UiTest
 
-## 导入模块
-
-```TypeScript
-import { ResizeDirection, WindowMode, PenMode, PenKeyOperation, Driver, MatchPattern, UiDirection, TouchOptions, ComponentEventType, PointerMatrix, WindowChangeType, Component, ON, PenKey, Rect, InputTextMode, UIEventObserver, WindowFilter, WindowChangeOptions, UiWindow, TouchPadSwipeOptions, Point, KeyOptions, DisplayRotation, UIElementInfo, PenKeyOperationOptions, ComponentEventOptions, MouseButton, On } from 'kits/@kit.TestKit';
-```
-
 ## click
 
 ```TypeScript
@@ -369,11 +363,13 @@ import { UiDriver, BY, UiComponent } from '@kit.TestKit';
 
 async function demo() {
   let driver: UiDriver = UiDriver.create();
-  let button: UiComponent = await driver.findComponent(BY.type('Button'));
-  if (await button.isClickable()) {
-    console.info('This button can be Clicked');
-  } else {
-    console.info('This button cannot be Clicked');
+  let button: UiComponent | null = await driver.findComponent(BY.type('Button'));
+  if (button) {
+    if (await button.isLongClickable()) {
+      console.info('This button supports long click');
+    } else {
+      console.info('This button can not support long click');
+    }
   }
 }
 ```
@@ -420,7 +416,7 @@ async function demo() {
   if (await button.isEnabled()) {
     console.info('This button can be operated');
   } else {
-    console.info('This button cannot be operated');
+    console.info('This button can not be operated');
   }
 }
 ```
@@ -464,10 +460,17 @@ import { UiDriver, BY, UiComponent } from '@kit.TestKit';
 async function demo() {
   let driver: UiDriver = UiDriver.create();
   let button: UiComponent = await driver.findComponent(BY.type('Button'));
-  if (await button.isFocused()) {
-    console.info('This button is focused');
-  } else {
-    console.info('This button is not focused');
+  if (button) {
+    if (await button.isFocused()) {
+      console.info('This button is focused');
+    } else {
+      console.info('This button is not focused');
+    }
+    if (await button.isSelected()) {
+      console.info('This button is selected');
+    } else {
+      console.info('This button is not selected');
+    }
   }
 }
 ```
@@ -510,11 +513,13 @@ import { UiDriver, BY, UiComponent } from '@kit.TestKit';
 
 async function demo() {
   let driver: UiDriver = UiDriver.create();
-  let scrollBar: UiComponent = await driver.findComponent(BY.scrollable(true));
-  if (await scrollBar.isScrollable()) {
-    console.info('This scrollBar can be operated');
-  } else {
-    console.info('This scrollBar cannot be operated');
+  let scrollBar: UiComponent | null = await driver.findComponent(BY.scrollable(true));
+  if (scrollBar) {
+    if (await scrollBar.isScrollable()) {
+      console.info('This scrollBar can be operated');
+    } else {
+      console.info('This scrollBar can not be operated');
+    }
   }
 }
 ```

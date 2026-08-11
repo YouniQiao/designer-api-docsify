@@ -1,6 +1,6 @@
 # DeviceType（系统接口）
 
-Enumerates device types.
+设备类型枚举。
 
 **起始版本：** 26.0.0
 
@@ -18,7 +18,7 @@ Enumerates device types.
 UNKNOWN_TYPE = 0
 ```
 
-Unknown device type.
+未知设备类型。
 
 **起始版本：** 26.0.0
 
@@ -38,7 +38,7 @@ Unknown device type.
 PC = 0x0C
 ```
 
-PC device.
+PC设备。
 
 **起始版本：** 26.0.0
 
@@ -58,7 +58,7 @@ PC device.
 PHONE = 0x0E
 ```
 
-Phone device.
+手机设备。
 
 **起始版本：** 26.0.0
 
@@ -78,7 +78,7 @@ Phone device.
 TABLET = 0x11
 ```
 
-Tablet device.
+平板设备。
 
 **起始版本：** 26.0.0
 

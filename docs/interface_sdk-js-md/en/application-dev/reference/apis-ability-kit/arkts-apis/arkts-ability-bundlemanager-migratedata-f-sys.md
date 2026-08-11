@@ -12,7 +12,7 @@ import { bundleManager } from 'kits/@kit.AbilityKit';
 function migrateData(sourcePaths: Array<string>, destinationPath: string): Promise<void>
 ```
 
-拷贝文件，将文件从源路径拷贝到目标路径。使用Promise异步回调。
+Migrates files from the source path to the destination path. This API uses a promise to return the result.
 
 **Since:** 18
 
@@ -30,35 +30,34 @@ function migrateData(sourcePaths: Array<string>, destinationPath: string): Promi
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| sourcePaths | Array&lt;string&gt; | Yes | 需要迁移的源路径数组，支持传入如/example1/test.txt的单文件路径，或/example2/test的目录路径。 |
-| destinationPath | string | Yes | 目标路径，仅支持传入一个目录路径，例如：/example2/test。 |
+| sourcePaths | Array&lt;string&gt; | Yes | Array of source paths. The value can be a single file path such as **\/example1/test.txt** or a directory path such as **\/example2/test**. |
+| destinationPath | string | Yes | Destination path. Only one directory path is supported, for example, **\/example2/test**. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise对象，无返回结果。 |
+| Promise&lt;void&gt; | Promise that returns no value. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 17700086 | System error occurred during copy execution. |
-| 201 | Permission denied. |
-| 202 | Permission denied, non-system app called system api. |
-| 17700084 | There are inaccessible path in the source paths. |
-| 17700085 | The destination path cannot be accessed. |
-| 17700082 | User authentication failed. |
-| 17700083 | Waiting for user authentication timeout. |
-| 17700080 | The source paths are invalid. |
-| 17700081 | The destination path is invalid. |
+| [17700086](../errorcode-bundle.md#17700086-system-error) | System error occurred during copy execution. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission denied, non-system app called system api. |
+| [17700084](../errorcode-bundle.md#17700084-no-read-permissions-for-source-paths) | There are inaccessible path in the source paths. |
+| [17700085](../errorcode-bundle.md#17700085-no-write-permissions-for-the-destination-path) | The destination path cannot be accessed. |
+| [17700082](../errorcode-bundle.md#17700082-user-authentication-failed) | User authentication failed. |
+| [17700083](../errorcode-bundle.md#17700083-user-authentication-times-out) | Waiting for user authentication timeout. |
+| [17700080](../errorcode-bundle.md#17700080-invalid-source-paths) | The source paths are invalid. |
+| [17700081](../errorcode-bundle.md#17700081-invalid-destination-path) | The destination path is invalid. |
 
 ## Examples
 
 ```TypeScript
 import { bundleManager } from '@kit.AbilityKit';
 import { BusinessError } from '@kit.BasicServicesKit';
-import { hilog } from '@kit.PerformanceAnalysisKit';
 
 try {
   // Change the values of source1, source2, and dest to the actual file or directory paths.
@@ -69,13 +68,13 @@ try {
 
   bundleManager.migrateData(sourcePaths, dest)
     .then(() => {
-      hilog.info(0x0000, 'testTag', 'migrateData succeed');
+      console.info(`migrateData succeed`);
     })
     .catch((err: BusinessError) => {
-      hilog.error(0x0000, 'testTag', 'migrateData err: %{public}s', JSON.stringify(err));
+      console.error(`migrateData err : `, JSON.stringify(err));
     })
 } catch (err) {
-  hilog.error(0x0000, 'testTag', 'migrateData call err: %{public}s', JSON.stringify(err));
+  console.error(`migrateData call err : `, JSON.stringify(err));
 }
 ```
 

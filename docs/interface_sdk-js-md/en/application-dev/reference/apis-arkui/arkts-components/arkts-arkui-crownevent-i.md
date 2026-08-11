@@ -1,6 +1,6 @@
 # CrownEvent
 
-组件接收表冠事件的数据结构。内容包括时间戳、旋转角速度、旋转角度、表冠动作和阻止事件冒泡。
+Defines a data structure for the crown event received by a component. It includes the timestamp, angular velocity,rotation angle, crown action, and event propagation disabling.
 
 **Since:** 18
 
@@ -16,7 +16,7 @@
 action: CrownAction
 ```
 
-表冠动作。
+Crown action.
 
 **Type:** [CrownAction](../arkts-apis/arkts-arkui-crownaction-e.md)
 
@@ -38,9 +38,9 @@ action: CrownAction
 angularVelocity: number
 ```
 
-旋转角速度。
+Angular velocity.
 
-单位：deg/s
+Unit: deg/s
 
 **Type:** number
 
@@ -62,11 +62,11 @@ angularVelocity: number
 degree: number
 ```
 
-相对旋转角度。
+Relative rotation angle.
 
-单位：deg 
+Unit: deg
 
-取值范围:[-360, 360]。
+Value range: [-360, 360]
 
 **Type:** number
 
@@ -88,7 +88,7 @@ degree: number
 stopPropagation: Callback<void>
 ```
 
-阻止[事件冒泡](../../../ui/arkts-interaction-basic-principles.md#事件冒泡)。
+Disables [event bubbling](../../../ui/arkts-interaction-basic-principles.md#event-bubbling) propagation.
 
 **Type:** [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;void&gt;
 
@@ -110,9 +110,9 @@ stopPropagation: Callback<void>
 timestamp: number
 ```
 
-时间戳。触发事件时距离系统启动的时间间隔。
+Timestamp.
 
-单位：ns
+Unit: ns
 
 **Type:** number
 

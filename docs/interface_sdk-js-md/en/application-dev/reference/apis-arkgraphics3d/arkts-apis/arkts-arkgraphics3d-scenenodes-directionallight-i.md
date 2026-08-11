@@ -1,6 +1,6 @@
 # DirectionalLight
 
-定义平行光.
+Defines directional light.
 
 **Inheritance/Implementation:** DirectionalLight extends [Light](arkts-arkgraphics3d-scenenodes-light-i.md)
 

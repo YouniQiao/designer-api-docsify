@@ -1,11 +1,5 @@
 # createVideoRecorder（系统接口）
 
-## 导入模块
-
-```TypeScript
-import { media } from 'kits/@kit.MediaKit';
-```
-
 ## createVideoRecorder
 
 ```TypeScript
@@ -34,8 +28,8 @@ function createVideoRecorder(callback: AsyncCallback<VideoRecorder>): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 5400101 | No memory. Return by callback. |
-| 202 | Not System App.<br>**适用版本：** 12+ |
+| [5400101](../errorcode-media.md#5400101-内存分配失败) | No memory. Return by callback. |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not System App.<br>**适用版本：** 12+ |
 
 ## 示例
 
@@ -82,8 +76,8 @@ function createVideoRecorder(callback: AsyncCallback<VideoRecorder | undefined>)
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 5400101 | No memory. Return by callback. |
-| 202 | Not System App. |
+| [5400101](../errorcode-media.md#5400101-内存分配失败) | No memory. Return by callback. |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not System App. |
 
 
 ## createVideoRecorder
@@ -114,8 +108,8 @@ function createVideoRecorder(): Promise<VideoRecorder>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 5400101 | No memory. Return by promise. |
-| 202 | Not System App.<br>**适用版本：** 12+ |
+| [5400101](../errorcode-media.md#5400101-内存分配失败) | No memory. Return by promise. |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not System App.<br>**适用版本：** 12+ |
 
 ## 示例
 
@@ -164,6 +158,6 @@ function createVideoRecorder(): Promise<VideoRecorder | undefined>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 5400101 | No memory. Return by promise. |
-| 202 | Not System App. |
+| [5400101](../errorcode-media.md#5400101-内存分配失败) | No memory. Return by promise. |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not System App. |
 

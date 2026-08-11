@@ -12,12 +12,6 @@ Indicates the senior mode information of an application.
 
 **系统接口：** 此接口为系统接口。
 
-## 导入模块
-
-```TypeScript
-import { config } from 'kits/@kit.AccessibilityKit';
-```
-
 ## appIndex
 
 ```TypeScript

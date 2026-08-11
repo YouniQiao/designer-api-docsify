@@ -16,7 +16,7 @@ Defines the align rule options of relative container.
 bias?: Bias
 ```
 
-设置组件在锚点约束下的偏移参数，其值为到左/上侧锚点的距离与锚点间总距离的比值。
+Offset of the component under the anchor constraints.The value is the ratio of the distance to the left/upper anchor to the total distance between anchors.
 
 **Type:** [Bias](../arkts-apis/arkts-arkui-bias-i.md)
 
@@ -42,7 +42,7 @@ bias?: Bias
 bottom?: VerticalAlignParam
 ```
 
-设置底部对齐的参数。&lt;br/&gt;API version 23之前，入参类型为{ anchor: string, align: VerticalAlign}
+Top alignment.In versions earlier than API version 23, the input parameter type is { anchor: string, align: VerticalAlign }.
 
 **Type:** [VerticalAlignParam](arkts-arkui-verticalalignparam-i.md)
 
@@ -64,7 +64,7 @@ bottom?: VerticalAlignParam
 center?: VerticalAlignParam
 ```
 
-设置纵向居中对齐方式的参数。&lt;br/&gt;API version 23，之前入参类型为{ anchor: string, align: VerticalAlign }
+Center alignment in the vertical direction.In versions earlier than API version 23, the input parameter type is { anchor: string, align: VerticalAlign }.
 
 **Type:** [VerticalAlignParam](arkts-arkui-verticalalignparam-i.md)
 
@@ -86,7 +86,7 @@ center?: VerticalAlignParam
 left?: HorizontalAlignParam
 ```
 
-设置左对齐参数。&lt;br/&gt;API version 23之前，入参类型为{ anchor: string, align: HorizontalAlign }
+Left alignment.In versions earlier than API version 23, the input parameter type is { anchor: string, align: HorizontalAlign }.
 
 **Type:** [HorizontalAlignParam](../arkts-apis/arkts-arkui-common-horizontalalignparam-i.md)
 
@@ -108,7 +108,7 @@ left?: HorizontalAlignParam
 middle?: HorizontalAlignParam
 ```
 
-设置横向居中对齐方式的参数。&lt;br/&gt;API version 23之前，入参类型为{ anchor: string, align: HorizontalAlign }
+Center alignment in the horizontal direction.In versions earlier than API version 23, the input parameter type is { anchor: string, align: HorizontalAlign }.
 
 **Type:** [HorizontalAlignParam](../arkts-apis/arkts-arkui-common-horizontalalignparam-i.md)
 
@@ -130,7 +130,7 @@ middle?: HorizontalAlignParam
 right?: HorizontalAlignParam
 ```
 
-设置右对齐参数。&lt;br/&gt;API version 23之前，入参类型为{ anchor: string, align: HorizontalAlign}
+Right alignment.In versions earlier than API version 23, the input parameter type is { anchor: string, align:HorizontalAlign }.
 
 **Type:** [HorizontalAlignParam](../arkts-apis/arkts-arkui-common-horizontalalignparam-i.md)
 
@@ -152,7 +152,7 @@ right?: HorizontalAlignParam
 top?: VerticalAlignParam
 ```
 
-设置顶部对齐的参数。&lt;br/&gt;API version 23之前，入参类型为{ anchor: string, align: VerticalAlign}
+Top alignment.In versions earlier than API version 23, the input parameter type is { anchor: string, align: VerticalAlign }.
 
 **Type:** [VerticalAlignParam](arkts-arkui-verticalalignparam-i.md)
 

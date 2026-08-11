@@ -1,6 +1,6 @@
 # CipherAesOptions
 
-调用cipher aes方法时，传入的参数。
+Defines the input parameters of **cipher.aes()**.
 
 **Since:** 3
 
@@ -26,7 +26,7 @@ import { CipherAesOptions, CipherResponse, CipherRsaOptions } from 'kits/@kit.Cr
 complete: () => void
 ```
 
-接口调用结束的回调函数。
+Called when the execution is complete.
 
 **Since:** 3
 
@@ -46,7 +46,7 @@ complete: () => void
 fail: (data: string, code: number) => void
 ```
 
-接口调用失败的回调函数。
+Called when data fails to be encrypted or decrypted.
 
 **Since:** 3
 
@@ -73,7 +73,7 @@ fail: (data: string, code: number) => void
 success: (data: CipherResponse) => void
 ```
 
-接口调用成功的回调函数。
+Called when data is encrypted or decrypted successfully.
 
 **Since:** 3
 
@@ -99,9 +99,9 @@ success: (data: CipherResponse) => void
 action: string
 ```
 
-加解密操作类型，可选项有：
+Action to perform. The options are as follows:
 
-1. encrypt 加密；2. decrypt 解密。
+1. **encrypt**: Encrypts data.2. **decrypt**: Decrypts data.
 
 **Type:** string
 
@@ -123,7 +123,7 @@ action: string
 iv?: string
 ```
 
-AES加解密的初始向量，经过base64编码后的字符串，默认值为key值。
+Initialization vector (IV) for AES-based encryption and decryption. The value is a string encoded in Base64. The default value is the key value.
 
 **Type:** string
 
@@ -145,7 +145,7 @@ AES加解密的初始向量，经过base64编码后的字符串，默认值为ke
 ivLen?: string
 ```
 
-AES加解密的初始向量字节长度，当前为预留字段，默认值16，仅支持16。
+Length of the IV, in bytes. This field is reserved. The default value is **16**, which is the only value supported.
 
 **Type:** string
 
@@ -167,7 +167,7 @@ AES加解密的初始向量字节长度，当前为预留字段，默认值16，
 ivOffset?: string
 ```
 
-AES加解密的初始向量偏移，默认值0，仅支持0。
+Offset of the IV for AES-based encryption and decryption. The default value is **0**, which is the only value supported.
 
 **Type:** string
 
@@ -189,7 +189,7 @@ AES加解密的初始向量偏移，默认值0，仅支持0。
 key: string
 ```
 
-加密或解密使用到的密钥，经过 base64 编码后生成的字符串。
+Key used for encryption or decryption. It is a Base64 encoded string.
 
 **Type:** string
 
@@ -211,7 +211,9 @@ key: string
 text: string
 ```
 
-待加密或解密的文本内容。待加密的文本内容应该是一段普通文本。待解密的文本内容应该是经过 base64 编码的一段二进制值。base64 编码使用默认风格。
+Text to be encrypted or decrypted.
+
+The text to be encrypted must be common text. The text to be decrypted must be a binary value encoded in Base64.The default format is used for Base64 encoding.
 
 **Type:** string
 
@@ -233,7 +235,7 @@ text: string
 transformation?: string
 ```
 
-AES算法的加密模式和填充项，默认AES/CBC/PKCS5Padding。
+Encryption mode and padding of the AES algorithm. The default value is **AES/CBC/PKCS5Padding**.
 
 **Type:** string
 

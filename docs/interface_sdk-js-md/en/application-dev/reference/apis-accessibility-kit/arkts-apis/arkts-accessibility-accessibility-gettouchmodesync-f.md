@@ -12,7 +12,7 @@ import { accessibility } from 'kits/@kit.AccessibilityKit';
 function getTouchModeSync(): string
 ```
 
-查询触摸浏览功能下的单击/双击操作模式。
+Queries single- or double-touch mode.
 
 **Since:** 20
 
@@ -30,5 +30,5 @@ function getTouchModeSync(): string
 
 | Type | Description |
 | --- | --- |
-| string | 表示当前操作模式。 &lt;br&gt;- singleTouchMode：表示单击操作模式。 &lt;br&gt;- doubleTouchMode：表示双击操作模式。 &lt;br&gt;- none：表示未开启触摸浏览功能。 |
+| string | Touch mode. &lt;br&gt;- **singleTouchMode**: Single-touch mode. &lt;br&gt;- **doubleTouchMode**: Double-touch mode. &lt;br&gt;- **none**: Touch guide mode is disabled. |
 

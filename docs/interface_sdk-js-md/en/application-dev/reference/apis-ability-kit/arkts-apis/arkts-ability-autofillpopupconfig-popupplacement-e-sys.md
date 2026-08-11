@@ -1,6 +1,6 @@
 # PopupPlacement (System API)
 
-表示气泡弹窗位置的枚举。
+Enumerates the positions of an auto-fill pop-up.
 
 **Since:** 12
 
@@ -18,7 +18,7 @@
 LEFT = 0
 ```
 
-气泡弹窗位于组件左侧，与组件左侧中心对齐。
+The popup is on the left of the component and aligned with the left center of the component.
 
 **Since:** 12
 
@@ -38,7 +38,7 @@ LEFT = 0
 RIGHT = 1
 ```
 
-气泡弹窗位于组件右侧，与组件右侧中心对齐。
+The popup is on the right of the component and aligned with the right center of the component.
 
 **Since:** 12
 
@@ -58,7 +58,7 @@ RIGHT = 1
 TOP = 2
 ```
 
-气泡弹窗位于组件上侧，与组件上侧中心对齐。
+The popup is at the top of the component and aligned with the top center of the component.
 
 **Since:** 12
 
@@ -78,7 +78,7 @@ TOP = 2
 BOTTOM = 3
 ```
 
-气泡弹窗位于组件下侧，与组件下侧中心对齐。
+The popup is at the bottom of the component and aligned with the bottom center of the component.
 
 **Since:** 12
 
@@ -98,7 +98,7 @@ BOTTOM = 3
 TOP_LEFT = 4
 ```
 
-气泡弹窗位于组件上侧，与组件左侧边缘对齐。
+The popup is at the top of the component and aligned with the left edge of the component.
 
 **Since:** 12
 
@@ -118,7 +118,7 @@ TOP_LEFT = 4
 TOP_RIGHT = 5
 ```
 
-气泡弹窗位于组件上侧，与组件右侧边缘对齐。
+The popup is at the top of the component and aligned with the right edge of the component.
 
 **Since:** 12
 
@@ -138,7 +138,7 @@ TOP_RIGHT = 5
 BOTTOM_LEFT = 6
 ```
 
-气泡弹窗位于组件下侧，与组件左侧边缘对齐。
+The popup is at the bottom of the component and aligned with the left edge of the component.
 
 **Since:** 12
 
@@ -158,7 +158,7 @@ BOTTOM_LEFT = 6
 BOTTOM_RIGHT = 7
 ```
 
-气泡弹窗位于组件下侧，与组件右侧边缘对齐。
+The popup is at the bottom of the component and aligned with the right edge of the component.
 
 **Since:** 12
 
@@ -178,7 +178,7 @@ BOTTOM_RIGHT = 7
 LEFT_TOP = 8
 ```
 
-气泡弹窗位于组件左侧，与组件上侧边缘对齐。
+The popup is on the left of the component and aligned with the top edge of the component.
 
 **Since:** 12
 
@@ -198,7 +198,7 @@ LEFT_TOP = 8
 LEFT_BOTTOM = 9
 ```
 
-气泡弹窗位于组件左侧，与组件下侧边缘对齐。
+The popup is on the left of the component and aligned with the bottom edge of the component.
 
 **Since:** 12
 
@@ -218,7 +218,7 @@ LEFT_BOTTOM = 9
 RIGHT_TOP = 10
 ```
 
-气泡弹窗位于组件右侧，与组件上侧边缘对齐。
+The popup is on the right of the component and aligned with the top edge of the component.
 
 **Since:** 12
 
@@ -238,7 +238,7 @@ RIGHT_TOP = 10
 RIGHT_BOTTOM = 11
 ```
 
-气泡弹窗位于组件右侧，与组件下侧边缘对齐。
+The popup is on the right of the component and aligned with the bottom edge of the component.
 
 **Since:** 12
 
@@ -258,7 +258,7 @@ RIGHT_BOTTOM = 11
 NONE = 12
 ```
 
-不设置。
+The position is unspecified.
 
 **Since:** 12
 

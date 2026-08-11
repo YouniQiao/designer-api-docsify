@@ -1,6 +1,6 @@
 # ChainWeightOptions
 
-链中组件的布局权重。
+Defines the ChainWeightOptions interface.
 
 **Since:** 23
 
@@ -16,11 +16,7 @@
 horizontal?: double
 ```
 
-组件在水平方向的布局权重，设置大于0的数字时生效。 
-
-默认值：0 
-
-异常值：0
+Horizontal ChainWeight.
 
 **Type:** double
 
@@ -40,11 +36,7 @@ horizontal?: double
 vertical?: double
 ```
 
-组件在竖直方向的布局权重，设置大于0的数字时生效。 
-
-默认值：0 
-
-异常值：0
+Vertical ChainWeight.
 
 **Type:** double
 

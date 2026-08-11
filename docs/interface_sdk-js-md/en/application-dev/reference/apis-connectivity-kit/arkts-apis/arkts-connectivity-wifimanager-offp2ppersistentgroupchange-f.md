@@ -34,7 +34,7 @@ Unsubscribe P2P persistent group change events.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 801 | Capability not supported. |
-| 2801000 | Operation failed. |
-| 201 | Permission denied. |
+| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. |
+| [2801000](../errorcode-wifi.md#2801000-p2p-module-error) | Operation failed. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
 

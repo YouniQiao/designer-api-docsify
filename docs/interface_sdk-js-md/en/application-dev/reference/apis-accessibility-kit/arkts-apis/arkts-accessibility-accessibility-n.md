@@ -1,6 +1,6 @@
 # accessibility
 
-辅助功能
+Accessibility
 
 **Since:** 7
 
@@ -22,55 +22,55 @@ import { accessibility } from 'kits/@kit.AccessibilityKit';
 
 | Name | Description |
 | --- | --- |
-| [isOpenAccessibility](arkts-accessibility-accessibility-isopenaccessibility-f.md#isopenaccessibility) | 判断是否启用了辅助应用，使用callback异步回调。 |
-| [isOpenAccessibility](arkts-accessibility-accessibility-isopenaccessibility-f.md#isopenaccessibility-1) | 判断是否启用了辅助应用，使用Promise异步回调。 |
-| [isOpenAccessibilitySync](arkts-accessibility-accessibility-isopenaccessibilitysync-f.md#isopenaccessibilitysync) | 查询当前系统内是否存在已开启的辅助应用。如需获取系统内辅助应用信息，推荐使用  [accessibility.getAccessibilityExtensionListSync](arkts-accessibility-accessibility-getaccessibilityextensionlistsync-f.md#getaccessibilityextensionlistsync)。 |
-| [isOpenTouchGuide](arkts-accessibility-accessibility-isopentouchguide-f.md#isopentouchguide) | 判断触摸浏览模式是否开启，使用callback异步回调。 |
-| [isOpenTouchGuide](arkts-accessibility-accessibility-isopentouchguide-f.md#isopentouchguide-1) | 判断触摸浏览模式是否开启，使用Promise异步回调。 |
-| [isOpenTouchGuideSync](arkts-accessibility-accessibility-isopentouchguidesync-f.md#isopentouchguidesync) | 是否开启了触摸浏览模式。 |
-| [getAbilityLists](arkts-accessibility-accessibility-getabilitylists-f.md#getabilitylists) | 查询辅助应用列表，使用callback异步回调。 |
-| [getAbilityLists](arkts-accessibility-accessibility-getabilitylists-f.md#getabilitylists-1) | 查询辅助应用列表，使用Promise异步回调。 |
-| [getAccessibilityExtensionList](arkts-accessibility-accessibility-getaccessibilityextensionlist-f.md#getaccessibilityextensionlist) | 查询辅助应用列表，使用Promise异步回调。 |
-| [getAccessibilityExtensionList](arkts-accessibility-accessibility-getaccessibilityextensionlist-f.md#getaccessibilityextensionlist-1) | 查询辅助应用列表，使用callback异步回调。 |
-| [getAccessibilityExtensionListSync](arkts-accessibility-accessibility-getaccessibilityextensionlistsync-f.md#getaccessibilityextensionlistsync) | 查询当前系统内辅助应用列表，支持按条件查询。 |
-| [sendEvent](arkts-accessibility-accessibility-sendevent-f.md#sendevent) | 发送无障碍事件，使用callback异步回调。 |
-| [sendEvent](arkts-accessibility-accessibility-sendevent-f.md#sendevent-1) | 发送无障碍事件，使用Promise异步回调。 |
-| [sendAccessibilityEvent](arkts-accessibility-accessibility-sendaccessibilityevent-f.md#sendaccessibilityevent) | 发送无障碍事件，使用callback异步回调。 |
-| [sendAccessibilityEvent](arkts-accessibility-accessibility-sendaccessibilityevent-f.md#sendaccessibilityevent-1) | 发送无障碍事件，使用Promise异步回调。 |
-| [on](arkts-accessibility-accessibility-on-f.md#on) | 监听辅助应用启用状态变化事件，使用callback异步回调。如需获取系统内辅助应用信息，推荐使用  [accessibility.getAccessibilityExtensionListSync](arkts-accessibility-accessibility-getaccessibilityextensionlistsync-f.md#getaccessibilityextensionlistsync)。 |
+| [isOpenAccessibility](arkts-accessibility-accessibility-isopenaccessibility-f.md#isopenaccessibility) | Checks whether an accessibility application is enabled. This API uses an asynchronous callback to return the result. |
+| [isOpenAccessibility](arkts-accessibility-accessibility-isopenaccessibility-f.md#isopenaccessibility-1) | Checks whether an accessibility application is enabled. This API uses a promise to return the result. |
+| [isOpenAccessibilitySync](arkts-accessibility-accessibility-isopenaccessibilitysync-f.md#isopenaccessibilitysync) | Checks whether any accessibility application has been enabled in the system. To obtain information about accessibility applications in the system, use  [accessibility.getAccessibilityExtensionListSync](arkts-accessibility-accessibility-getaccessibilityextensionlistsync-f.md#getaccessibilityextensionlistsync). |
+| [isOpenTouchGuide](arkts-accessibility-accessibility-isopentouchguide-f.md#isopentouchguide) | Checks whether touch guide mode is enabled. This API uses an asynchronous callback to return the result. |
+| [isOpenTouchGuide](arkts-accessibility-accessibility-isopentouchguide-f.md#isopentouchguide-1) | Checks whether touch guide mode is enabled. This API uses a promise to return the result. |
+| [isOpenTouchGuideSync](arkts-accessibility-accessibility-isopentouchguidesync-f.md#isopentouchguidesync) | Checks whether touch guide mode is enabled. |
+| [isScreenReaderOpenSync](arkts-accessibility-accessibility-isscreenreaderopensync-f.md#isscreenreaderopensync) | Checks whether screen reader mode is enabled. |
+| [getAbilityLists](arkts-accessibility-accessibility-getabilitylists-f.md#getabilitylists) | Obtains the accessibility application list. This API uses an asynchronous callback to return the result. |
+| [getAbilityLists](arkts-accessibility-accessibility-getabilitylists-f.md#getabilitylists-1) | Obtains the accessibility application list. This API uses a promise to return the result. |
+| [getAccessibilityExtensionList](arkts-accessibility-accessibility-getaccessibilityextensionlist-f.md#getaccessibilityextensionlist) | Obtains the accessibility application list. This API uses a promise to return the result. |
+| [getAccessibilityExtensionList](arkts-accessibility-accessibility-getaccessibilityextensionlist-f.md#getaccessibilityextensionlist-1) | Obtains the accessibility application list. This API uses an asynchronous callback to return the result. |
+| [getAccessibilityExtensionListSync](arkts-accessibility-accessibility-getaccessibilityextensionlistsync-f.md#getaccessibilityextensionlistsync) | Query the list of accessibility applications in the current system, which can be queried by criteria. |
+| [sendEvent](arkts-accessibility-accessibility-sendevent-f.md#sendevent) | Sends an accessibility event. This API uses an asynchronous callback to return the result. |
+| [sendEvent](arkts-accessibility-accessibility-sendevent-f.md#sendevent-1) | Sends an accessibility event. This API uses a promise to return the result. |
+| [sendAccessibilityEvent](arkts-accessibility-accessibility-sendaccessibilityevent-f.md#sendaccessibilityevent) | Sends an accessibility event. This API uses an asynchronous callback to return the result. |
+| [sendAccessibilityEvent](arkts-accessibility-accessibility-sendaccessibilityevent-f.md#sendaccessibilityevent-1) | Sends an accessibility event. This API uses a promise to return the result. |
+| [getTouchModeSync](arkts-accessibility-accessibility-gettouchmodesync-f.md#gettouchmodesync) | Queries single- or double-touch mode. |
+| [on](arkts-accessibility-accessibility-on-f.md#on) | Subscribes to the state changes of the accessibility application. This API uses an asynchronous callback to return the result. To obtain information about accessibility applications in the system, use  [accessibility.getAccessibilityExtensionListSync](arkts-accessibility-accessibility-getaccessibilityextensionlistsync-f.md#getaccessibilityextensionlistsync).  > **NOTE：** >  > - The callback parameter for registering a listener must use a named function instead of an anonymous function. > Otherwise, a new underlying object is created each time the function is called, causing memory leakage. >  > - After calling this method, you must use > [accessibility.off('accessibilityStateChange')](accessibility.off(type: 'accessibilityStateChange', callback?: Callback&lt;boolean&gt;)) > to cancel the listener before the object's lifecycle ends. Otherwise, a crash may occur. |
 | [onAccessibilityStateChange](arkts-accessibility-accessibility-onaccessibilitystatechange-f.md#onaccessibilitystatechange) | Register the observe of the accessibility state changed. |
-| [on](arkts-accessibility-accessibility-on-f.md#on-1) | 监听触摸浏览功能启用状态变化事件，使用callback异步回调。如需获取系统内辅助应用信息，推荐使用  [accessibility.getAccessibilityExtensionListSync](arkts-accessibility-accessibility-getaccessibilityextensionlistsync-f.md#getaccessibilityextensionlistsync)。 |
+| [on](arkts-accessibility-accessibility-on-f.md#on-1) | Subscribes to the state changes in touch guide mode. This API uses an asynchronous callback to return the result. To obtain information about accessibility applications in the system, use  [accessibility.getAccessibilityExtensionListSync](arkts-accessibility-accessibility-getaccessibilityextensionlistsync-f.md#getaccessibilityextensionlistsync).  > **NOTE：** >  > - The callback parameter for registering a listener must use a named function instead of an anonymous function. > Otherwise, a new underlying object is created each time the function is called, causing memory leakage. >  > - After calling this method, you must use > [accessibility.off('touchGuideStateChange')](accessibility.off(type: 'touchGuideStateChange', callback?: Callback&lt;boolean&gt;)) > to cancel the listener before the object's lifecycle ends. Otherwise, a crash may occur. |
 | [onTouchGuideStateChange](arkts-accessibility-accessibility-ontouchguidestatechange-f.md#ontouchguidestatechange) | Register the observe of the touchGuide state changed. |
-| [off](arkts-accessibility-accessibility-off-f.md#off) | 取消监听辅助应用启用状态变化事件，使用callback异步回调。 |
-| [offAccessibilityStateChange](arkts-accessibility-accessibility-offaccessibilitystatechange-f.md#offaccessibilitystatechange) | Unregister the observe of the accessibility state changed. |
-| [off](arkts-accessibility-accessibility-off-f.md#off-1) | 取消监听触摸浏览启用状态变化事件，使用callback异步回调。 |
-| [offTouchGuideStateChange](arkts-accessibility-accessibility-offtouchguidestatechange-f.md#offtouchguidestatechange) | Unregister the observe of the touchGuide state changed. |
-| [getCaptionsManager](arkts-accessibility-accessibility-getcaptionsmanager-f.md#getcaptionsmanager) | 获取无障碍字幕配置管理实例。 |
-| [isScreenReaderOpenSync](arkts-accessibility-accessibility-isscreenreaderopensync-f.md#isscreenreaderopensync) | 是否开启了屏幕朗读模式。 |
-| [on](arkts-accessibility-accessibility-on-f.md#on-2) | 监听屏幕朗读功能启用状态变化事件，使用callback异步回调。 |
+| [on](arkts-accessibility-accessibility-on-f.md#on-2) | Subscribes to the state changes of the screen reader. This API uses an asynchronous callback to return the result.  > **NOTE：** >  > - The callback parameter for registering a listener must use a named function instead of an anonymous function. > Otherwise, a new underlying object is created each time the function is called, causing memory leakage. >  > - After calling this method, you must use > [accessibility.off('screenReaderStateChange')](accessibility.off(type: 'screenReaderStateChange', callback?: Callback&lt;boolean&gt;)) > to cancel the listener before the object's lifecycle ends. Otherwise, a crash may occur. |
 | [onScreenReaderStateChange](arkts-accessibility-accessibility-onscreenreaderstatechange-f.md#onscreenreaderstatechange) | Register the observe of the screen reader state changed. |
-| [off](arkts-accessibility-accessibility-off-f.md#off-2) | 取消监听屏幕朗读启用状态变化事件，使用callback异步回调。 |
-| [offScreenReaderStateChange](arkts-accessibility-accessibility-offscreenreaderstatechange-f.md#offscreenreaderstatechange) | Unregister the observe of the screen reader state changed. |
-| [on](arkts-accessibility-accessibility-on-f.md#on-3) | 监听触摸浏览功能下的单击/双击操作模式变化事件，使用callback异步回调。 |
+| [on](arkts-accessibility-accessibility-on-f.md#on-3) | Subscribes to the single- or double-touch event changes in touch guide mode. This API uses an asynchronous callback to return the result.  > **NOTE：** >  > - The callback parameter for registering a listener must use a named function instead of an anonymous function. > Otherwise, a new underlying object is created each time the function is called, causing memory leakage. >  > - After calling this method, you must use > [accessibility.off('touchModeChange')](accessibility.off(type: 'touchModeChange', callback?: Callback&lt;string&gt;)) > to cancel the listener before the object's lifecycle ends. Otherwise, a crash may occur. |
 | [onTouchModeChange](arkts-accessibility-accessibility-ontouchmodechange-f.md#ontouchmodechange) | Register the observe of the touch mode changed. |
-| [off](arkts-accessibility-accessibility-off-f.md#off-3) | 取消监听触摸浏览功能下的单击/双击操作模式变化事件，使用callback异步回调。 |
+| [off](arkts-accessibility-accessibility-off-f.md#off) | Unsubscribes from the state changes of the accessibility application. This API uses an asynchronous callback to return the result. |
+| [offAccessibilityStateChange](arkts-accessibility-accessibility-offaccessibilitystatechange-f.md#offaccessibilitystatechange) | Unregister the observe of the accessibility state changed. |
+| [off](arkts-accessibility-accessibility-off-f.md#off-1) | Unsubscribes from the state changes in touch guide mode. This API uses an asynchronous callback to return the result. |
+| [offTouchGuideStateChange](arkts-accessibility-accessibility-offtouchguidestatechange-f.md#offtouchguidestatechange) | Unregister the observe of the touchGuide state changed. |
+| [off](arkts-accessibility-accessibility-off-f.md#off-2) | Unsubscribes from the state changes of the screen reader. This API uses an asynchronous callback to return the result. |
+| [offScreenReaderStateChange](arkts-accessibility-accessibility-offscreenreaderstatechange-f.md#offscreenreaderstatechange) | Unregister the observe of the screen reader state changed. |
+| [off](arkts-accessibility-accessibility-off-f.md#off-3) | Unsubscribes from the single- or double-touch event changes in touch guide mode. This API uses an asynchronous callback to return the result. |
 | [offTouchModeChange](arkts-accessibility-accessibility-offtouchmodechange-f.md#offtouchmodechange) | Unregister the observe of the touch mode changed. |
-| [getTouchModeSync](arkts-accessibility-accessibility-gettouchmodesync-f.md#gettouchmodesync) | 查询触摸浏览功能下的单击/双击操作模式。 |
-| [onAnimationReduceStateChange](arkts-accessibility-accessibility-onanimationreducestatechange-f.md#onanimationreducestatechange) | 监听减弱动效功能启用状态变化事件。使用callback异步回调。 |
-| [offAnimationReduceStateChange](arkts-accessibility-accessibility-offanimationreducestatechange-f.md#offanimationreducestatechange) | 取消监听减弱动效模式变化事件。使用callback异步回调。 |
-| [isAnimationReduceEnabledSync](arkts-accessibility-accessibility-isanimationreduceenabledsync-f.md#isanimationreduceenabledsync) | 使用同步方法判断减弱动效模式是否开启。 |
-| [isAnimationReduceEnabled](arkts-accessibility-accessibility-isanimationreduceenabled-f.md#isanimationreduceenabled) | 判断减弱动效模式是否开启。使用Promise异步回调。 |
-| [onFlashReminderStateChange](arkts-accessibility-accessibility-onflashreminderstatechange-f.md#onflashreminderstatechange) | 监听闪烁提醒功能启用状态变化事件。使用callback异步回调。 |
-| [offFlashReminderStateChange](arkts-accessibility-accessibility-offflashreminderstatechange-f.md#offflashreminderstatechange) | 取消监听闪烁提醒模式变化事件。使用callback异步回调。 |
-| [isFlashReminderEnabledSync](arkts-accessibility-accessibility-isflashreminderenabledsync-f.md#isflashreminderenabledsync) | 使用同步方法判断闪烁提醒模式是否开启。 |
-| [isFlashReminderEnabled](arkts-accessibility-accessibility-isflashreminderenabled-f.md#isflashreminderenabled) | 判断闪烁提醒模式是否开启。使用Promise异步回调。 |
-| [onAudioMonoStateChange](arkts-accessibility-accessibility-onaudiomonostatechange-f.md#onaudiomonostatechange) | 监听单声道音频功能启用状态变化事件。使用callback异步回调。 |
-| [offAudioMonoStateChange](arkts-accessibility-accessibility-offaudiomonostatechange-f.md#offaudiomonostatechange) | 取消监听单声道音频模式变化事件。使用callback异步回调。 |
-| [isAudioMonoEnabledSync](arkts-accessibility-accessibility-isaudiomonoenabledsync-f.md#isaudiomonoenabledsync) | 使用同步方法判断单声道音频模式是否开启。 |
-| [isAudioMonoEnabled](arkts-accessibility-accessibility-isaudiomonoenabled-f.md#isaudiomonoenabled) | 判断单声道音频模式是否开启。使用Promise异步回调。 |
-| [onSeniorModeStateChange](arkts-accessibility-accessibility-onseniormodestatechange-f.md#onseniormodestatechange) | 监听关怀模式启用状态变化事件。使用callback异步回调。 |
-| [offSeniorModeStateChange](arkts-accessibility-accessibility-offseniormodestatechange-f.md#offseniormodestatechange) | 取消监听关怀模式变化事件。使用callback异步回调。 |
-| [isSeniorModeEnabled](arkts-accessibility-accessibility-isseniormodeenabled-f.md#isseniormodeenabled) | 判断关怀模式是否开启。使用Promise异步回调。 |
+| [getCaptionsManager](arkts-accessibility-accessibility-getcaptionsmanager-f.md#getcaptionsmanager) | Obtains a **CaptionsManager** instance. |
+| [onAnimationReduceStateChange](arkts-accessibility-accessibility-onanimationreducestatechange-f.md#onanimationreducestatechange) | Subscribes to the state changes in animation reduction mode. This API uses an asynchronous callback to return the result.  > **NOTE：** >  > - The callback parameter for registering a listener must use a named function instead of an anonymous function. > Otherwise, a new underlying object is created each time the function is called, causing memory leakage. >  > - After calling this method, you must use > [accessibility.offAnimationReduceStateChange](accessibility.offAnimationReduceStateChange(callback?: Callback&lt;boolean&gt;)) > to cancel the listener before the object's lifecycle ends. Otherwise, a crash may occur. |
+| [offAnimationReduceStateChange](arkts-accessibility-accessibility-offanimationreducestatechange-f.md#offanimationreducestatechange) | Unsubscribes from the state changes in animation reduction mode. This API uses an asynchronous callback to return the result. |
+| [isAnimationReduceEnabledSync](arkts-accessibility-accessibility-isanimationreduceenabledsync-f.md#isanimationreduceenabledsync) | Checks whether animation reduction mode is enabled with a synchronous method. |
+| [isAnimationReduceEnabled](arkts-accessibility-accessibility-isanimationreduceenabled-f.md#isanimationreduceenabled) | Checks whether animation reduction mode is enabled. This API uses a promise to return the result. |
+| [onFlashReminderStateChange](arkts-accessibility-accessibility-onflashreminderstatechange-f.md#onflashreminderstatechange) | Subscribes to the state changes in flash alerts mode. This API uses an asynchronous callback to return the result.  > **NOTE：** >  > - The callback parameter for registering a listener must use a named function instead of an anonymous function. > Otherwise, a new underlying object is created each time the function is called, causing memory leakage. >  > - After calling this method, you must use > [accessibility.offFlashReminderStateChange](accessibility.offFlashReminderStateChange(callback?: Callback&lt;boolean&gt;)) > to cancel the listener before the object's lifecycle ends. Otherwise, a crash may occur. |
+| [offFlashReminderStateChange](arkts-accessibility-accessibility-offflashreminderstatechange-f.md#offflashreminderstatechange) | Unsubscribes from the state changes in flash alerts mode. This API uses an asynchronous callback to return the result. |
+| [isFlashReminderEnabledSync](arkts-accessibility-accessibility-isflashreminderenabledsync-f.md#isflashreminderenabledsync) | Checks whether flash alerts mode is enabled with a synchronous method. |
+| [isFlashReminderEnabled](arkts-accessibility-accessibility-isflashreminderenabled-f.md#isflashreminderenabled) | Checks whether flash alerts mode is enabled. This API uses a promise to return the result. |
+| [onAudioMonoStateChange](arkts-accessibility-accessibility-onaudiomonostatechange-f.md#onaudiomonostatechange) | Subscribes to the state changes in mono audio mode. This API uses an asynchronous callback to return the result.  > **NOTE：** >  > - The callback parameter for registering a listener must use a named function instead of an anonymous function. > Otherwise, a new underlying object is created each time the function is called, causing memory leakage. >  > - After calling this method, you must use > [accessibility.offAudioMonoStateChange](accessibility.offAudioMonoStateChange(callback?: Callback&lt;boolean&gt;)) > to cancel the listener before the object's lifecycle ends. Otherwise, a crash may occur. |
+| [offAudioMonoStateChange](arkts-accessibility-accessibility-offaudiomonostatechange-f.md#offaudiomonostatechange) | Unsubscribes from the state changes in mono audio mode. This API uses an asynchronous callback to return the result. |
+| [isAudioMonoEnabledSync](arkts-accessibility-accessibility-isaudiomonoenabledsync-f.md#isaudiomonoenabledsync) | Checks whether mono audio mode is enabled with a synchronous mode. |
+| [isAudioMonoEnabled](arkts-accessibility-accessibility-isaudiomonoenabled-f.md#isaudiomonoenabled) | Checks whether mono audio mode is enabled. This API uses a promise to return the result. |
+| [isSeniorModeEnabled](arkts-accessibility-accessibility-isseniormodeenabled-f.md#isseniormodeenabled) | Checks whether the senior mode is enabled. This API uses a promise to return the result. |
+| [onSeniorModeStateChange](arkts-accessibility-accessibility-onseniormodestatechange-f.md#onseniormodestatechange) | Listens for enabling status changes of the senior mode. This API uses an asynchronous callback to return the result.  > **NOTE：** >  > - The callback parameter for registering a listener must use a named function instead of an anonymous function. > Otherwise, a new underlying object is created each time the function is called, causing memory leakage. >  > - After calling this method, you must use > [accessibility.offSeniorModeStateChange](accessibility.offSeniorModeStateChange(callback?: Callback&lt;boolean&gt;)) > to cancel the listener before the object's lifecycle ends. Otherwise, a crash may occur. |
+| [offSeniorModeStateChange](arkts-accessibility-accessibility-offseniormodestatechange-f.md#offseniormodestatechange) | Cancels listening for the senior mode change event. This API uses an asynchronous callback to return the result. |
 | [onSeniorModeStateChangeForSelf](arkts-accessibility-accessibility-onseniormodestatechangeforself-f.md#onseniormodestatechangeforself) | Register an observer for this application's senior mode state changes. |
 | [offSeniorModeStateChangeForSelf](arkts-accessibility-accessibility-offseniormodestatechangeforself-f.md#offseniormodestatechangeforself) | Unregister the observer for this application's senior mode state changes. |
 | [getSeniorModeStateForSelf](arkts-accessibility-accessibility-getseniormodestateforself-f.md#getseniormodestateforself) | Check if this application's senior mode is enabled. |
@@ -80,27 +80,27 @@ import { accessibility } from 'kits/@kit.AccessibilityKit';
 
 | Name | Description |
 | --- | --- |
-| [EventInfo](arkts-accessibility-accessibility-eventinfo-c.md) | 界面变更事件。 |
+| [EventInfo](arkts-accessibility-accessibility-eventinfo-c.md) | Describes a GUI change event. |
 
 ### Interfaces
 
 | Name | Description |
 | --- | --- |
-| [CaptionsManager](arkts-accessibility-accessibility-captionsmanager-i.md) | 字幕配置管理，在调用CaptionsManager的方法前，需要先通过 [accessibility.getCaptionsManager()](arkts-accessibility-accessibility-getcaptionsmanager-f.md#getcaptionsmanager)获取 CaptionsManager实例。 |
-| [CaptionsStyle](arkts-accessibility-accessibility-captionsstyle-i.md) | 字幕风格。 |
-| [AccessibilityAbilityInfo](arkts-accessibility-accessibility-accessibilityabilityinfo-i.md) | 辅助应用信息。 |
+| [CaptionsManager](arkts-accessibility-accessibility-captionsmanager-i.md) | Implements configuration management for captions. Before calling any API of **CaptionsManager**, you must use the  [accessibility.getCaptionsManager()](arkts-accessibility-accessibility-getcaptionsmanager-f.md#getcaptionsmanager) API to obtain a **CaptionsManager** instance. |
+| [CaptionsStyle](arkts-accessibility-accessibility-captionsstyle-i.md) | Describes the style of captions. |
+| [AccessibilityAbilityInfo](arkts-accessibility-accessibility-accessibilityabilityinfo-i.md) | Provides information about an accessibility application. |
 
 ### Types
 
 | Name | Description |
 | --- | --- |
-| [AbilityType](arkts-accessibility-accessibility-abilitytype-t.md) | 无障碍辅助应用类型。 |
-| [Action](arkts-accessibility-accessibility-action-t.md) | 应用所支持的目标动作，需要配置参数的目标动作已在描述中标明。 |
-| [EventType](arkts-accessibility-accessibility-eventtype-t.md) | 无障碍事件类型。 |
-| [WindowUpdateType](arkts-accessibility-accessibility-windowupdatetype-t.md) | 窗口变化类型。 |
-| [AbilityState](arkts-accessibility-accessibility-abilitystate-t.md) | 辅助应用状态类型。 |
-| [Capability](arkts-accessibility-accessibility-capability-t.md) | 辅助应用能力类型。 |
-| [TextMoveUnit](arkts-accessibility-accessibility-textmoveunit-t.md) | 文本无障碍导航移动粒度。 |
-| [CaptionsFontEdgeType](arkts-accessibility-accessibility-captionsfontedgetype-t.md) | 字幕字体边缘类型。 |
-| [CaptionsFontFamily](arkts-accessibility-accessibility-captionsfontfamily-t.md) | 字幕字体。 |
+| [AbilityType](arkts-accessibility-accessibility-abilitytype-t.md) | Enumerates the types of accessibility applications. |
+| [Action](arkts-accessibility-accessibility-action-t.md) | Target actions supported by the application. The target actions for which parameters need to be set have been specified in the description of the following table. |
+| [EventType](arkts-accessibility-accessibility-eventtype-t.md) | Accessibility event types. |
+| [WindowUpdateType](arkts-accessibility-accessibility-windowupdatetype-t.md) | Window update type. |
+| [AbilityState](arkts-accessibility-accessibility-abilitystate-t.md) | Enumerates the states of an accessibility application. |
+| [Capability](arkts-accessibility-accessibility-capability-t.md) | Enumerates the capabilities of an accessibility application. |
+| [TextMoveUnit](arkts-accessibility-accessibility-textmoveunit-t.md) | Enumerates the movement units for traversing the node text. |
+| [CaptionsFontEdgeType](arkts-accessibility-accessibility-captionsfontedgetype-t.md) | Enumerates the font edge types of captions. |
+| [CaptionsFontFamily](arkts-accessibility-accessibility-captionsfontfamily-t.md) | Enumerates the font families of captions. |
 

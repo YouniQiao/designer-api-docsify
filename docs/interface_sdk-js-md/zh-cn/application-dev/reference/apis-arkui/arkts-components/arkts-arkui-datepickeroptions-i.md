@@ -84,7 +84,7 @@ mode?: DatePickerMode
 > 
 > 上述DatePickerDialog相关限制仅适用于DatePickerDialog组件。
 
-**类型：** [DatePickerMode](../arkts-apis/arkts-arkui-datepicker-datepickermode-e.md)
+**类型：** [DatePickerMode](arkts-arkui-datepickermode-e.md)
 
 **默认值：** DatePickerMode.DATE - which means to display three columns: year, month, and day. <br>Decimal values are rounded off.
 

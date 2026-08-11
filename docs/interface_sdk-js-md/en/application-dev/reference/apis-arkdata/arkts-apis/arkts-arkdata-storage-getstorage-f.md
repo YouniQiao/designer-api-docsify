@@ -6,7 +6,7 @@
 function getStorage(path: string, callback: AsyncCallback<Storage>): void
 ```
 
-读取指定文件，将数据加载到Storage实例，用于数据操作，使用callback方式返回结果，此方法为异步方法。
+Reads the specified file and loads its data to the **Storage** instance for data operations. This API uses an asynchronous callback to return the result.
 
 **Since:** 6
 
@@ -22,8 +22,8 @@ function getStorage(path: string, callback: AsyncCallback<Storage>): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| path | string | Yes | 应用程序内部数据存储路径。 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Storage&gt; | Yes | 回调函数。 |
+| path | string | Yes | Path of the target file. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Storage&gt; | Yes | Callback used to return the result. |
 
 
 ## getStorage
@@ -32,7 +32,7 @@ function getStorage(path: string, callback: AsyncCallback<Storage>): void
 function getStorage(path: string): Promise<Storage>
 ```
 
-读取指定文件，将数据加载到Storage实例，用于数据操作，使用Promise方式返回结果，此方法为异步方法。
+Reads the specified file and loads its data to the **Storage** instance for data operations. This API uses a promise to return the result.
 
 **Since:** 6
 
@@ -48,11 +48,11 @@ function getStorage(path: string): Promise<Storage>
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| path | string | Yes | 应用程序内部数据存储路径。 |
+| path | string | Yes | Path of the target file. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;Storage&gt; | Promise实例，用于异步获取结果。 |
+| Promise&lt;Storage&gt; | Promise used to return the result. |
 

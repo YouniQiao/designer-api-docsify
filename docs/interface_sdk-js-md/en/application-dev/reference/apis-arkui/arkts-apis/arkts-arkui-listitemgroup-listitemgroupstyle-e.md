@@ -1,6 +1,6 @@
 # ListItemGroupStyle
 
-ListItemGroup组件卡片样式枚举。
+Defines the list item group style.
 
 **Since:** 23
 
@@ -16,7 +16,7 @@ ListItemGroup组件卡片样式枚举。
 NONE = 0
 ```
 
-无样式。
+Show custom style.
 
 **Since:** 23
 

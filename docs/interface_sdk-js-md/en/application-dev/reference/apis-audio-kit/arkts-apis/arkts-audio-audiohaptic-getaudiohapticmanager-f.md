@@ -12,7 +12,7 @@ import { audioHaptic } from 'kits/@kit.AudioKit';
 function getAudioHapticManager(): AudioHapticManager
 ```
 
-获取音振管理器。
+Obtains an {@link AudioHapticManager} instance. This object is singleton in one process.
 
 **Since:** 11
 
@@ -26,7 +26,7 @@ function getAudioHapticManager(): AudioHapticManager
 
 | Type | Description |
 | --- | --- |
-| [AudioHapticManager](arkts-audio-audiohaptic-audiohapticmanager-i.md) | 音振管理器。 |
+| [AudioHapticManager](arkts-audio-audiohaptic-audiohapticmanager-i.md) | AudioHapticManager instance. |
 
 ## Examples
 

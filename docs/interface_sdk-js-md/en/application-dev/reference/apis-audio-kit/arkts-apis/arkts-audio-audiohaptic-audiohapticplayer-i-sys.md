@@ -1,7 +1,7 @@
 # AudioHapticPlayer
 
-音振播放器，提供音振协同播放功能。在调用AudioHapticPlayer的接口前，需要先通过  
-[createPlayer](arkts-audio-audiohaptic-audiohapticmanager-i.md#createplayer)创建实例。
+Implements audio-haptic playback. Before calling any API in AudioHapticPlayer, you must use   
+[createPlayer](arkts-audio-audiohaptic-audiohapticmanager-i.md#createplayer) to create an AudioHapticPlayer instance.
 
 **Since:** 11
 
@@ -23,7 +23,7 @@ import { audioHaptic } from 'kits/@kit.AudioKit';
 enableHapticsInSilentMode(enable: boolean): void
 ```
 
-Enable haptics when the ringer mode is silent mode.这个方法只能在播放器start前，或stop后release前调用
+Enable haptics when the ringer mode is silent mode.This function should be called before player start or after stop, and before release.
 
 **Since:** 20
 
@@ -39,14 +39,14 @@ Enable haptics when the ringer mode is silent mode.这个方法只能在播放�
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| enable | boolean | Yes | use { |
+| enable | boolean | Yes | use {@code true} if application want to enable this feature. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 5400102 | Operate not permit in current state. |
-| 202 | Caller is not a system application. |
+| [5400102](../../apis-media-kit/errorcode-media.md#5400102-unsupported-operation) | Operate not permit in current state. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Caller is not a system application. |
 
 ## isHapticsIntensityAdjustmentSupported
 
@@ -76,7 +76,7 @@ Check whether the device supports haptics intensity adjustment.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 202 | Caller is not a system application. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Caller is not a system application. |
 
 ## isHapticsRampSupported
 
@@ -106,7 +106,7 @@ Check whether the device supports haptics intensity ramp effect.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 202 | Caller is not a system application. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Caller is not a system application. |
 
 ## setHapticsIntensity
 
@@ -120,7 +120,7 @@ ArkTS-Sta:
 setHapticsIntensity(intensity: double): Promise<void>
 ```
 
-Set haptics intensity for this player. This method uses a promise to return the result.这个方法只能在播放器释放前调用，并且每次播放过程只能设置一次。
+Set haptics intensity for this player. This method uses a promise to return the result.This function should be called before player release, and can only set once for each starting process.
 
 **Since:** 20
 
@@ -136,22 +136,22 @@ Set haptics intensity for this player. This method uses a promise to return the 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| intensity | ArkTS-Dyn: number  <br>ArkTS-Sta：double | Yes | Target Haptics intensity. The value ranges from 0.00 to 1.00, where 1.00 indicates the maximum intensity (100%). |
+| intensity | ArkTS-Dyn: number  <br>ArkTS-Sta：double | Yes | Target Haptics intensity value. The value ranges from 0.00 to 1.00. 1.00 indicates the maximum intensity (100%). |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| Promise&lt;void&gt; | Promise used to return the result. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 801 | Function is not supported in current device. |
-| 5400102 | Operate not permit in current state. |
-| 202 | Caller is not a system application. |
-| 5400108 | Parameter out of range. |
+| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Function is not supported in current device. |
+| [5400102](../../apis-media-kit/errorcode-media.md#5400102-unsupported-operation) | Operate not permit in current state. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Caller is not a system application. |
+| [5400108](../../apis-media-kit/errorcode-media.md#5400108-parameter-value-out-of-range) | Parameter out of range. |
 
 ## setHapticsRamp
 
@@ -165,7 +165,7 @@ ArkTS-Sta:
 setHapticsRamp(duration: int, startIntensity: double, endIntensity: double): Promise<void>
 ```
 
-Set haptics intensity ramp effect for this player. This method uses a promise to return the result.这个方法只能在播放器start前，或stop后release前调用
+Set haptics intensity ramp effect for this player. This method uses a promise to return the result.This function should be called before player start or after stop, and before release.
 
 **Since:** 20
 
@@ -195,8 +195,8 @@ Set haptics intensity ramp effect for this player. This method uses a promise to
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 801 | Function is not supported in current device. |
-| 5400102 | Operate not permit in current state. |
-| 202 | Caller is not a system application. |
-| 5400108 | Parameter out of range. |
+| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Function is not supported in current device. |
+| [5400102](../../apis-media-kit/errorcode-media.md#5400102-unsupported-operation) | Operate not permit in current state. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Caller is not a system application. |
+| [5400108](../../apis-media-kit/errorcode-media.md#5400108-parameter-value-out-of-range) | Parameter out of range. |
 

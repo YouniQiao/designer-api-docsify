@@ -16,7 +16,7 @@
 static clear(options?: ClearStorageOptions): void
 ```
 
-清空缓存中存储的键值对。
+Clears the stored content.
 
 **Since:** 3
 
@@ -44,7 +44,7 @@ static clear(options?: ClearStorageOptions): void
 static delete(options: DeleteStorageOptions): void
 ```
 
-删除缓存中索引对应的键值对。
+Deletes the stored content.
 
 **Since:** 3
 
@@ -72,7 +72,7 @@ static delete(options: DeleteStorageOptions): void
 static get(options: GetStorageOptions): void
 ```
 
-通过索引读取缓存中存储的值。
+Reads the stored content.
 
 **Since:** 3
 
@@ -100,7 +100,7 @@ static get(options: GetStorageOptions): void
 static set(options: SetStorageOptions): void
 ```
 
-修改缓存中索引对应的值。
+Modifies the stored content.
 
 **Since:** 3
 

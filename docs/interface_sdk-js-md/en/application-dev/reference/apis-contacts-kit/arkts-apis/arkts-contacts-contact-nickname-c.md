@@ -1,6 +1,6 @@
 # NickName
 
-联系人的昵称类。
+Defines a contact's nickname.
 
 **Since:** 7
 
@@ -22,7 +22,7 @@ import { contact } from 'kits/@kit.ContactsKit';
 nickName: string
 ```
 
-联系人的昵称。
+Contact nickname.
 
 **Type:** string
 

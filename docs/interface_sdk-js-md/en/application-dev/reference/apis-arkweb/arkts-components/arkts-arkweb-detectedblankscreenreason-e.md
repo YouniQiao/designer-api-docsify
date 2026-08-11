@@ -1,6 +1,6 @@
 # DetectedBlankScreenReason
 
-白屏的具体原因。
+Enumerates the reasons for the blank screen.
 
 **Since:** 22
 
@@ -16,9 +16,9 @@
 NO_CONTENTFUL_NODES = 0
 ```
 
-没有命中任何有内容的节点。
+No contentful node is detected.
 
-当检测策略为DETECTION_CONTENTFUL_NODES_SEVENTEEN时可能触发。
+This may be triggered when the detection policy is **DETECTION_CONTENTFUL_NODES_SEVENTEEN**.
 
 **Since:** 22
 
@@ -34,9 +34,10 @@ NO_CONTENTFUL_NODES = 0
 SUB_THRESHOLD_CONTENTFUL_NODES = 1
 ```
 
-命中有内容节点的数量小于等于阈值。
+The number of contentful nodes detected is less than or equal to the threshold.
 
-当检测策略为DETECTION_CONTENTFUL_NODES_SEVENTEEN，且开发者设置了节点数量阈值contentfulNodesCountThreshold时可能触发。
+This may be triggered when the detection policy is **DETECTION_CONTENTFUL_NODES_SEVENTEEN** and  
+**contentfulNodesCountThreshold** is set.
 
 **Since:** 22
 

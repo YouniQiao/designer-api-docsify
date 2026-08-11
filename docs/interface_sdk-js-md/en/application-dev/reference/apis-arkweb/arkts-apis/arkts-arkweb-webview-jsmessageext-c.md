@@ -42,7 +42,7 @@ Get the array value of the the JavaScript code execution result.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 17100014 | The type and value of the message do not match. |
+| [17100014](../errorcode-webview.md#17100014-type-and-value-mismatch) | The type and value of the message do not match. |
 
 ## getArrayBuffer
 
@@ -70,7 +70,7 @@ Get the array buffer value of the JavaScript code execution result.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 17100014 | The type and value of the message do not match. |
+| [17100014](../errorcode-webview.md#17100014-type-and-value-mismatch) | The type and value of the message do not match. |
 
 ## getBoolean
 
@@ -98,7 +98,7 @@ Get the boolean value of the JavaScript code execution result.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 17100014 | The type and value of the message do not match. |
+| [17100014](../errorcode-webview.md#17100014-type-and-value-mismatch) | The type and value of the message do not match. |
 
 ## getErrorDescription
 
@@ -148,7 +148,7 @@ Get the number value of the JavaScript code execution result.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 17100014 | The type and value of the message do not match. |
+| [17100014](../errorcode-webview.md#17100014-type-and-value-mismatch) | The type and value of the message do not match. |
 
 ## getString
 
@@ -176,7 +176,7 @@ Get the string value of the JavaScript code execution result.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 17100014 | The type and value of the message do not match. |
+| [17100014](../errorcode-webview.md#17100014-type-and-value-mismatch) | The type and value of the message do not match. |
 
 ## getType
 

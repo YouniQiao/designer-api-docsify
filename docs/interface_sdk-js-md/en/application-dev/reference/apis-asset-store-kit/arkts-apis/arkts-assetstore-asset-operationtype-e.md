@@ -1,6 +1,6 @@
 # OperationType
 
-枚举，附属的操作类型。
+Enumerates the types of additional operation to perform.
 
 **Since:** 12
 
@@ -16,7 +16,7 @@
 NEED_SYNC = 0
 ```
 
-需要进行同步操作。
+Sync.
 
 **Since:** 12
 
@@ -32,7 +32,7 @@ NEED_SYNC = 0
 NEED_LOGOUT = 1
 ```
 
-需要进行登出操作。
+Logout.
 
 **Since:** 12
 

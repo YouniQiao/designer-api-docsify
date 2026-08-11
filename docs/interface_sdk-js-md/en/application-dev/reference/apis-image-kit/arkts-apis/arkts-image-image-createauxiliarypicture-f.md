@@ -12,9 +12,10 @@ import { image } from 'kits/@kit.ImageKit';
 function createAuxiliaryPicture(buffer: ArrayBuffer, size: Size, type: AuxiliaryPictureType): AuxiliaryPicture
 ```
 
-通过ArrayBuffer图片数据、辅助图尺寸、辅助图类型创建AuxiliaryPicture实例。该接口仅支持传入BGRA的连续像素数据，会创建出RGBA的辅助图。
+Creates an AuxiliaryPicture instance based on the ArrayBuffer image data, auxiliary picture size, and auxiliary picture type. This API accepts only continuous pixel data in BGRA format and will create an auxiliary picture in RGBA format.
 
-由于图片占用内存较大，所以当AuxiliaryPicture实例使用完成后，应主动调用[release](arkts-image-image-auxiliarypicture-i.md#release)方法及时释放内存。释放时应确保该实例的所有异步方法均执行完成，且后续不再使用该实例。
+Images occupy a large amount of memory. When you finish using an AuxiliaryPicture instance, call   
+[release](arkts-image-image-auxiliarypicture-i.md#release) to free the memory promptly. Before releasing the instance, ensure that all asynchronous operations associated with the instance have finished and the instance is no longer needed.
 
 **Since:** 13
 
@@ -28,21 +29,21 @@ function createAuxiliaryPicture(buffer: ArrayBuffer, size: Size, type: Auxiliary
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| buffer | ArrayBuffer | Yes | 以buffer形式存放的图像数据。 |
-| size | [Size](../../apis-arkui/arkts-apis/arkts-arkui-window-size-i.md) | Yes | 辅助图的尺寸。单位：像素（px）。 |
-| type | [AuxiliaryPictureType](arkts-image-image-auxiliarypicturetype-e.md) | Yes | 辅助图类型。 |
+| buffer | ArrayBuffer | Yes | Image data stored in the buffer. |
+| size | [Size](../../apis-arkui/arkts-apis/arkts-arkui-window-size-i.md) | Yes | Size of the auxiliary picture, in px. |
+| type | [AuxiliaryPictureType](arkts-image-image-auxiliarypicturetype-e.md) | Yes | Type of the auxiliary picture. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [AuxiliaryPicture](arkts-image-image-auxiliarypicture-i.md) | 如果操作成功，则返回AuxiliaryPicture实例。 |
+| [AuxiliaryPicture](arkts-image-image-auxiliarypicture-i.md) | AuxiliaryPicture instance. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error.Possible causes: 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types; 3.Parameter verification failed. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error.Possible causes: 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types; 3.Parameter verification failed. |
 
 ## Examples
 
@@ -50,9 +51,9 @@ function createAuxiliaryPicture(buffer: ArrayBuffer, size: Size, type: Auxiliary
 async function CreateAuxiliaryPicture(context: Context) {
   let funcName = "CreateAuxiliaryPicture";
   const resourceMgr = context.resourceManager;
-  const rawFile = await resourceMgr.getRawFileContent("hdr.jpg"); // An HDR-compatible image is required.
+  const rawFile = await resourceMgr.getRawFileContent("hdr.jpg"); // Support for HDR images is required.
   let auxBuffer: ArrayBuffer = rawFile.buffer as ArrayBuffer;
-  let auxSize: image.Size = {
+  let auxSize: Size = {
     height: 180,
     width: 240
   };

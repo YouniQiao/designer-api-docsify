@@ -12,7 +12,8 @@ import { bundleManager } from 'kits/@kit.AbilityKit';
 function getDeveloperIds(appDistributionType?: int): Array<string>
 ```
 
-根据给定的应用[appDistributionType](arkts-ability-bundlemanager-appdistributiontype-e-sys.md)获取当前用户下的所有开发者ID列表。
+Obtains all the developer IDs of the current user based on the given application  
+[distribution type](arkts-ability-bundlemanager-appdistributiontype-e-sys.md).
 
 **Since:** 12
 
@@ -30,21 +31,21 @@ function getDeveloperIds(appDistributionType?: int): Array<string>
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| appDistributionType | ArkTS-Dyn: number  <br>ArkTS-Sta：int | No | 表示应用的分发类型，当该参数缺省时，会返回所有应用的开发者ID列表。 |
+| appDistributionType | ArkTS-Dyn: number  <br>ArkTS-Sta：int | No | Application distribution type. If this parameter is not specified, a list of developer IDs of all applications is returned. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Array&lt;string&gt; | 同步返回Array&lt;string&gt;。 |
+| Array&lt;string&gt; | An array of strings. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types. |
-| 201 | Permission denied. |
-| 202 | Permission denied, non-system app called system api. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission denied, non-system app called system api. |
 
 ## Examples
 

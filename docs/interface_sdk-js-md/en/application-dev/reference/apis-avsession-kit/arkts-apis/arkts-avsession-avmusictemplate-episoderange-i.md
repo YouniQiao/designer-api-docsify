@@ -1,6 +1,6 @@
 # EpisodeRange
 
-剧集的范围的定义。
+The definition of EpisodeRange.
 
 **Since:** 23
 
@@ -22,7 +22,7 @@ import { avMusicTemplate } from 'kits/@kit.AVSessionKit';
 end: int
 ```
 
-结束的索引。
+End Index.
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
@@ -42,7 +42,7 @@ end: int
 start: int
 ```
 
-开始的索引。
+Start Index.
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 

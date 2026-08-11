@@ -13,7 +13,7 @@ function on(type: 'receiveImage', sessionId: number,
         callback: Callback<EventCallbackInfo>): void
 ```
 
-注册receiveImage事件的回调监听。
+Registers receiveImage event.
 
 **Since:** 18
 
@@ -31,16 +31,16 @@ function on(type: 'receiveImage', sessionId: number,
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'receiveImage' | Yes | 事件注册类型，'receiveImage'。 |
-| sessionId | number | Yes | 协同会话ID。 |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;EventCallbackInfo&gt; | Yes | 用于处理('receiveImage')事件的回调函数。 |
+| type | 'receiveImage' | Yes | Registration Type, 'receiveImage'. |
+| sessionId | number | Yes | Ability connection Session id. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;EventCallbackInfo&gt; | Yes | Used to handle ('receiveImage') command. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. |
-| 202 | Not system App. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system App. |
 
 ## Examples
 
@@ -61,7 +61,7 @@ function on(type: 'collaborateEvent', sessionId: number,
         callback: Callback<CollaborateEventInfo>): void
 ```
 
-注册collaborateEvent事件的回调监听。
+Registers collaborateEvent event.
 
 **Since:** 18
 
@@ -79,16 +79,16 @@ function on(type: 'collaborateEvent', sessionId: number,
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'collaborateEvent' | Yes | 事件注册类型，'collaborateEvent'。 |
-| sessionId | number | Yes | 协同会话ID。 |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;CollaborateEventInfo&gt; | Yes | 错误事件回调函数。 |
+| type | 'collaborateEvent' | Yes | Registration Type, 'collaborateEvent'. |
+| sessionId | number | Yes | Ability connection Session id. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;CollaborateEventInfo&gt; | Yes | Called when an error event comes. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. |
-| 202 | Not system App. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system App. |
 
 ## Examples
 

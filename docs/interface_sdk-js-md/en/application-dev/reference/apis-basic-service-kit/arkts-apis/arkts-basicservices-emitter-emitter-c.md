@@ -1,6 +1,7 @@
 # Emitter
 
-该功能支持在同一进程的同一Emitter类实例中，跨不同线程或同一线程内发送和处理事件。它能够实现持续订阅事件、单次订阅事件、取消订阅事件以及将事件发送到事件队列，适用于需要基于独立实例进行线程间通信和事件管理的场景，不同Emitter实例类之间相互隔离，互不影响。
+This module provides the capabilities of sending and processing inter- or intra-thread events in a process of the same **Emitter** instance. You can use the following APIs to subscribe to an event in persistent or one-shot manner, cancel the subscription, or emit an event to the event queue. This module is applicable when inter-thread communication and event management are required based on independent instances. Different   
+**Emitter** instances are isolated from each other.
 
 **Since:** 22
 
@@ -22,7 +23,7 @@ import { emitter } from 'kits/@kit.BasicServicesKit';
 constructor()
 ```
 
-构造函数。
+Defines a constructor.
 
 **Since:** 22
 
@@ -37,7 +38,7 @@ constructor()
 ## Examples
 
 ```TypeScript
-let emitter1: emitter.Emitter = new emitter.Emitter();
+let emitter1 = new emitter.Emitter();
 ```
 
 ## emit
@@ -46,13 +47,12 @@ let emitter1: emitter.Emitter = new emitter.Emitter();
 emit(eventId: string, data?: EventData): void
 ```
 
-发送指定事件到当前Emitter类实例。
+Emits a specified event to the Emitter class instance.
 
-该接口支持跨线程传输数据对象，需要遵循数据跨线程传输的规格约束，详见[线程间通信对象](../../../arkts-utils/serializable-overview.md)。目前不支持使用  
-[@State装饰器](../../../ui/state-management/arkts-state.md)、  
-[@Observed装饰器](../../../ui/state-management/arkts-observed-and-objectlink.md)等装饰器修饰的复杂类型数据。
+This API can be used to emit data objects across threads. The data objects must meet the specifications specified in [Overview of Inter-Thread Communication Objects](../../../arkts-utils/serializable-overview.md). Currently, complex data decorated by decorators such as [@State](../../../ui/state-management/arkts-state.md) and   
+[@Observed](../../../ui/state-management/arkts-observed-and-objectlink.md) is not supported.
 
-该接口发布某个事件后，不保证该事件立刻执行，执行时间取决于事件队列里面的事件数量以及各事件的执行效率。
+After an event is published using this API, the event may not be executed immediately. When the execution starts depends on the number of events in the event queue and the execution efficiency of each event.
 
 **Since:** 22
 
@@ -68,21 +68,41 @@ emit(eventId: string, data?: EventData): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| eventId | string | Yes | 发送的事件ID。 不可为空字符串，大小不超过10240字节，超出部分会被截断。 |
-| data | [EventData](arkts-basicservices-emitter-eventdata-i.md) | No | 事件携带的数据，默认为空。 |
+| eventId | string | Yes | Event ID, which cannot be empty or exceed 10,240 bytes. Excess content will be truncated. |
+| data | [EventData](arkts-basicservices-emitter-eventdata-i.md) | No | Data carried by the event. This parameter is left empty by default. |
 
 ## Examples
+
+ArkTS-Dyn example:
 
 ```TypeScript
 let emitter1: emitter.Emitter = new emitter.Emitter();
 let eventData: emitter.EventData = {
   data: {
-    "content": "content",
-    "id": 1,
+  "content": "content",
+  "id": 1,
   }
 };
 
-emitter1.emit('eventId', eventData);
+emitter1.emit("eventId", eventData);
+```
+
+ArkTS-Sta example:
+
+```TypeScript
+import { RecordData } from '@ohos.base';
+
+let emitter1 = new emitter.Emitter();
+let record: Record<string, RecordData> = {
+  "content": "content",
+  "id": 1,
+};
+
+let eventData: emitter.EventData = {
+  data: record // The types are now compatible.
+};
+
+emitter1.emit("eventId", eventData);
 ```
 
 ## emit
@@ -91,13 +111,12 @@ emitter1.emit('eventId', eventData);
 emit<T>(eventId: string, data?: GenericEventData<T>): void
 ```
 
-发送指定事件到当前Emitter类实例。
+Emits a specified event to the Emitter class instance.
 
-该接口支持跨线程传输数据对象，需要遵循数据跨线程传输的规格约束，详见[线程间通信对象](../../../arkts-utils/serializable-overview.md)。目前不支持使用  
-[@State装饰器](../../../ui/state-management/arkts-state.md)、  
-[@Observed装饰器](../../../ui/state-management/arkts-observed-and-objectlink.md)等装饰器修饰的复杂类型数据。
+This API can be used to emit data objects across threads. The data objects must meet the specifications specified in [Overview of Inter-Thread Communication Objects](../../../arkts-utils/serializable-overview.md). Currently, complex data decorated by decorators such as [@State](../../../ui/state-management/arkts-state.md) and   
+[@Observed](../../../ui/state-management/arkts-observed-and-objectlink.md) is not supported.
 
-该接口发布某个事件后，不保证该事件立刻执行，执行时间取决于事件队列里面的事件数量以及各事件的执行效率。
+After an event is published using this API, the event may not be executed immediately. When the execution starts depends on the number of events in the event queue and the execution efficiency of each event.
 
 **Since:** 22
 
@@ -113,8 +132,8 @@ emit<T>(eventId: string, data?: GenericEventData<T>): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| eventId | string | Yes | 发送的事件ID。 不可为空字符串，大小不超过10240字节，超出部分会被截断。 |
-| data | [GenericEventData](arkts-basicservices-emitter-genericeventdata-i.md)&lt;T&gt; | No | 事件携带的数据，默认为空。 |
+| eventId | string | Yes | Event ID, which cannot be empty or exceed 10,240 bytes. Excess content will be truncated. |
+| data | [GenericEventData](arkts-basicservices-emitter-genericeventdata-i.md)&lt;T&gt; | No | Data carried by the event. This parameter is left empty by default. |
 
 ## Examples
 
@@ -136,7 +155,7 @@ let eventData: emitter.GenericEventData<Sample> = {
   data: new Sample()
 };
 
-emitter1.emit('eventId', eventData);
+emitter1.emit("eventId", eventData);
 ```
 
 ## emit
@@ -145,13 +164,12 @@ emitter1.emit('eventId', eventData);
 emit(eventId: string, options: Options, data?: EventData): void
 ```
 
-发送指定优先级事件到当前Emitter类实例。
+Emits an event of a specified priority to the Emitter instance.
 
-该接口支持跨线程传输数据对象，需要遵循数据跨线程传输的规格约束，详见[线程间通信对象](../../../arkts-utils/serializable-overview.md)。目前不支持使用  
-[@State装饰器](../../../ui/state-management/arkts-state.md)、  
-[@Observed装饰器](../../../ui/state-management/arkts-observed-and-objectlink.md)等装饰器修饰的复杂类型数据。
+This API can be used to emit data objects across threads. The data objects must meet the specifications specified in [Overview of Inter-Thread Communication Objects](../../../arkts-utils/serializable-overview.md). Currently, complex data decorated by decorators such as [@State](../../../ui/state-management/arkts-state.md) and   
+[@Observed](../../../ui/state-management/arkts-observed-and-objectlink.md) is not supported.
 
-该接口发布某个事件后，不保证该事件立刻执行，执行时间取决于事件队列里面的事件数量以及各事件的执行效率。
+After an event is published using this API, the event may not be executed immediately. When the execution starts depends on the number of events in the event queue and the execution efficiency of each event.
 
 **Since:** 22
 
@@ -167,11 +185,13 @@ emit(eventId: string, options: Options, data?: EventData): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| eventId | string | Yes | 发送的事件ID。 不可为空字符串，大小不超过10240字节，超出部分会被截断。 |
-| options | [Options](arkts-basicservices-zlib-options-i.md) | Yes | 事件优先级。 |
-| data | [EventData](arkts-basicservices-emitter-eventdata-i.md) | No | 事件携带的数据，默认为空。 |
+| eventId | string | Yes | Event ID, which cannot be empty or exceed 10,240 bytes. Excess content will be truncated. |
+| options | [Options](arkts-basicservices-zlib-options-i.md) | Yes | Event emit priority. |
+| data | [EventData](arkts-basicservices-emitter-eventdata-i.md) | No | Data carried by the event. This parameter is left empty by default. |
 
 ## Examples
+
+ArkTS-Dyn example:
 
 ```TypeScript
 let emitter1: emitter.Emitter = new emitter.Emitter();
@@ -181,12 +201,32 @@ let options: emitter.Options = {
 };
 let eventData: emitter.EventData = {
   data: {
-    "content": "content",
-    "id": 1,
+  "content": "content",
+  "id": 1,
   }
 };
 
-emitter1.emit('eventId', options, eventData);
+emitter1.emit("eventId", options, eventData);
+```
+
+ArkTS-Sta example:
+
+```TypeScript
+import { RecordData } from '@ohos.base';
+
+let emitter1 = new emitter.Emitter();
+let options: emitter.Options = {
+  priority: emitter.EventPriority.HIGH
+};
+let record: Record<string, RecordData> = {
+  "content": "content",
+  "id": 1,
+};
+let eventData: emitter.EventData = {
+  data: record
+};
+
+emitter1.emit("eventId", options, eventData);
 ```
 
 ## emit
@@ -195,13 +235,12 @@ emitter1.emit('eventId', options, eventData);
 emit<T>(eventId: string, options: Options, data?: GenericEventData<T>): void
 ```
 
-发送指定优先级事件到当前Emitter类实例。
+Emits an event of a specified priority to the Emitter instance.
 
-该接口支持跨线程传输数据对象，需要遵循数据跨线程传输的规格约束，详见[线程间通信对象](../../../arkts-utils/serializable-overview.md)。目前不支持使用  
-[@State装饰器](../../../ui/state-management/arkts-state.md)、  
-[@Observed装饰器](../../../ui/state-management/arkts-observed-and-objectlink.md)等装饰器修饰的复杂类型数据。
+This API can be used to emit data objects across threads. The data objects must meet the specifications specified in [Overview of Inter-Thread Communication Objects](../../../arkts-utils/serializable-overview.md). Currently, complex data decorated by decorators such as [@State](../../../ui/state-management/arkts-state.md) and   
+[@Observed](../../../ui/state-management/arkts-observed-and-objectlink.md) is not supported.
 
-该接口发布某个事件后，不保证该事件立刻执行，执行时间取决于事件队列里面的事件数量以及各事件的执行效率。
+After an event is published using this API, the event may not be executed immediately. When the execution starts depends on the number of events in the event queue and the execution efficiency of each event.
 
 **Since:** 22
 
@@ -217,14 +256,13 @@ emit<T>(eventId: string, options: Options, data?: GenericEventData<T>): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| eventId | string | Yes | 发送的事件ID。 不可为空字符串，大小不超过10240字节，超出部分会被截断。 |
-| options | [Options](arkts-basicservices-zlib-options-i.md) | Yes | 事件优先级。 |
-| data | [GenericEventData](arkts-basicservices-emitter-genericeventdata-i.md)&lt;T&gt; | No | 事件携带的数据，默认为空。 |
+| eventId | string | Yes | Event ID, which cannot be empty or exceed 10,240 bytes. Excess content will be truncated. |
+| options | [Options](arkts-basicservices-zlib-options-i.md) | Yes | Event emit priority. |
+| data | [GenericEventData](arkts-basicservices-emitter-genericeventdata-i.md)&lt;T&gt; | No | Data carried by the event. This parameter is left empty by default. |
 
 ## Examples
 
 ```TypeScript
-@Sendable
 class Sample {
   constructor() {
     this.count = 100;
@@ -235,7 +273,7 @@ class Sample {
   count: number;
 }
 
-let emitter1: emitter.Emitter = new emitter.Emitter();
+let emitter1 = new emitter.Emitter();
 
 let options: emitter.Options = {
   priority: emitter.EventPriority.HIGH
@@ -244,7 +282,7 @@ let eventData: emitter.GenericEventData<Sample> = {
   data: new Sample()
 };
 
-emitter1.emit('eventId', options, eventData);
+emitter1.emit("eventId", options, eventData);
 ```
 
 ## getListenerCount
@@ -259,7 +297,7 @@ ArkTS-Sta:
 getListenerCount(eventId: string): long
 ```
 
-获取当前Emitter类实例指定事件的订阅数。
+Obtains the number of subscriptions to a specified event of the Emitter instance.
 
 **Since:** 22
 
@@ -275,19 +313,19 @@ getListenerCount(eventId: string): long
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| eventId | string | Yes | 事件ID。 不可为空字符串，大小不超过10240字节，超出部分会被截断。。 |
+| eventId | string | Yes | Event ID, which cannot be empty or exceed 10,240 bytes. Excess content will be truncated. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| ArkTS-Dyn: number  <br>ArkTS-Sta：long | 指定事件的订阅数。 |
+| ArkTS-Dyn: number  <br>ArkTS-Sta：long | Number of subscriptions to a specified event. |
 
 ## Examples
 
 ```TypeScript
 let emitter1: emitter.Emitter = new emitter.Emitter();
-let count: number = emitter1.getListenerCount('eventId');
+let count = emitter1.getListenerCount("eventId");
 ```
 
 ## off
@@ -296,9 +334,10 @@ let count: number = emitter1.getListenerCount('eventId');
 off(eventId: string): void
 ```
 
-取消当前Emitter类实例事件ID为eventId的所有订阅。
+Unsubscribes from all events with the specified event ID of the Emitter instance.
 
-使用该接口取消某个事件订阅后，已通过[emit](emitter.Emitter#emit(eventId: string, data?: EventData))接口发布但尚未被执行的事件将被取消。
+After this API is used to unsubscribe from an event, the event that has been published through the   
+[emit](emitter.Emitter#emit(eventId: string, data?: EventData)) API but has not been executed will be unsubscribed.
 
 **Since:** 22
 
@@ -314,14 +353,14 @@ off(eventId: string): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| eventId | string | Yes | 事件ID。 不可为空字符串，大小不超过10240字节，超出部分会被截断。 |
+| eventId | string | Yes | Event ID, which cannot be empty or exceed 10,240 bytes. Excess content will be truncated. |
 
 ## Examples
 
 ```TypeScript
 let emitter1: emitter.Emitter = new emitter.Emitter();
 
-emitter1.off('eventId');
+emitter1.off("eventId");
 ```
 
 ## off
@@ -330,10 +369,12 @@ emitter1.off('eventId');
 off(eventId: string, callback: Callback<EventData>): void
 ```
 
-取消订阅当前Emitter类实例的事件。仅当已使用[on](emitter.Emitter#on(eventId: string, callback: Callback&lt;EventData&gt;))或  
-[once](emitter.Emitter#once(eventId: string, callback: Callback&lt;EventData&gt;))接口订阅了事件ID为eventId且回调处理函数为callback的事件时，该接口才生效。
+Unsubscribes from an event of the Emitter instance. This API takes effect only when the   
+[on](emitter.Emitter#on(eventId: string, callback: Callback&lt;EventData&gt;)) or   
+[once](emitter.Emitter#once(eventId: string, callback: Callback&lt;EventData&gt;)) API is used to subscribe to the event with specified event ID and a callback is used to process the event.
 
-使用该接口取消事件订阅后，已通过[emit](emitter.Emitter#emit(eventId: string, data?: EventData))接口发布但尚未被执行的事件将被取消。
+After this API is used to unsubscribe from an event, the event that has been published through the   
+[emit](emitter.Emitter#emit(eventId: string, data?: EventData)) API but has not been executed will be unsubscribed.
 
 **Since:** 22
 
@@ -349,8 +390,8 @@ off(eventId: string, callback: Callback<EventData>): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| eventId | string | Yes | 事件ID。 不可为空字符串，大小不超过10240字节，超出部分会被截断。 |
-| callback | [Callback](arkts-basicservices-base-callback-i.md)&lt;EventData&gt; | Yes | 回调函数，指定要取消订阅的事件处理函数。 |
+| eventId | string | Yes | Event ID, which cannot be empty or exceed 10,240 bytes. Excess content will be truncated. |
+| callback | [Callback](arkts-basicservices-base-callback-i.md)&lt;EventData&gt; | Yes | Callback to unregister. |
 
 ## Examples
 
@@ -361,9 +402,9 @@ let emitter1: emitter.Emitter = new emitter.Emitter();
 
 let callback: Callback<emitter.EventData> = (eventData: emitter.EventData) => {
   console.info(`eventData: ${JSON.stringify(eventData)}`);
-};
+}
 
-emitter1.off('eventId', callback);
+emitter1.off("eventId", callback);
 ```
 
 ## off
@@ -372,11 +413,12 @@ emitter1.off('eventId', callback);
 off<T>(eventId: string, callback: Callback<GenericEventData<T>>): void
 ```
 
-取消订阅当前Emitter类实例的事件。仅当已使用  
-[on](emitter.Emitter#on&lt;T&gt;(eventId: string, callback: Callback&lt;GenericEventData<T>&gt;&lt;T&gt;>))或  
-[once](emitter.Emitter#once&lt;T&gt;(eventId: string, callback: Callback&lt;GenericEventData<T>&gt;&lt;T&gt;>))接口订阅了事件ID为eventId且回调处理函数为callback的事件时，该接口才生效。
+Unsubscribes from an event of the Emitter instance. This API takes effect only when the   
+[on](emitter.Emitter#on&lt;T&gt;(eventId: string, callback: Callback&lt;GenericEventData<T>&gt;&lt;T&gt;>)) or   
+[once](emitter.Emitter#once&lt;T&gt;(eventId: string, callback: Callback&lt;GenericEventData<T>&gt;&lt;T&gt;>)) API is used to subscribe to the event with specified event ID and a callback is used to process the event.
 
-使用该接口取消事件订阅后，已通过[emit](arkts-basicservices-emitter-emitter-c.md#emit)接口发布但尚未被执行的事件将被取消。
+After this API is used to unsubscribe from an event, the event that has been published through the   
+[emit](arkts-basicservices-emitter-emitter-c.md#emit) API but has not been executed will be unsubscribed.
 
 **Since:** 22
 
@@ -392,8 +434,8 @@ off<T>(eventId: string, callback: Callback<GenericEventData<T>>): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| eventId | string | Yes | 事件ID。 不可为空字符串，大小不超过10240字节，超出部分会被截断。 |
-| callback | [Callback](arkts-basicservices-base-callback-i.md)&lt;GenericEventData&lt;T&gt;&gt; | Yes | 回调函数，指定要取消订阅的事件处理函数。 |
+| eventId | string | Yes | Event ID, which cannot be empty or exceed 10,240 bytes. Excess content will be truncated. |
+| callback | [Callback](arkts-basicservices-base-callback-i.md)&lt;GenericEventData&lt;T&gt;&gt; | Yes | Callback to unregister. |
 
 ## Examples
 
@@ -418,9 +460,9 @@ let callback: Callback<emitter.GenericEventData<Sample>> = (eventData: emitter.G
   if (eventData?.data instanceof Sample) {
     eventData?.data?.printCount();
   }
-};
+}
 
-emitter1.off('eventId', callback);
+emitter1.off("eventId", callback);
 ```
 
 ## offEventData
@@ -429,11 +471,7 @@ emitter1.off('eventId', callback);
 offEventData(eventId: string, callback: Callback<EventData>): void
 ```
 
-取消事件ID为eventId且回调处理函数为callback的订阅。仅当已使用  
-[onEventData](emitter.onEventData(eventId: string, callback: Callback&lt;EventData&gt;))或  
-[onceEventData](emitter.onceEventData(eventId: string, callback: Callback&lt;EventData&gt;))接口订阅callback时，该接口才生效。
-
-使用该接口取消某个事件订阅后，已通过[emit](emitter.emit(eventId: string))接口发布但尚未被执行的事件将被取消。
+Unsubscribes from an event with the specified event ID and processed by the specified callback.
 
 **Since:** 23
 
@@ -447,8 +485,22 @@ offEventData(eventId: string, callback: Callback<EventData>): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| eventId | string | Yes | 事件ID。取值为长度不超过10240字节的自定义字符串，且不可为空字符。 |
-| callback | [Callback](arkts-basicservices-base-callback-i.md)&lt;EventData&gt; | Yes | 事件的回调处理函数。 |
+| eventId | string | Yes | Event ID. The value cannot be an empty string and exceed 10240 bytes. |
+| callback | [Callback](arkts-basicservices-base-callback-i.md)&lt;EventData&gt; | Yes | Callback to unregister. |
+
+## Examples
+
+```TypeScript
+import { Callback } from '@kit.BasicServicesKit';
+
+let emitter1 = new emitter.Emitter();
+
+let callback: Callback<emitter.EventData> = (eventData: emitter.EventData) => {
+  console.info(`eventData: ${JSON.stringify(eventData)}`);
+}
+
+emitter1.offEventData("eventId", callback);
+```
 
 ## offGenericEventData
 
@@ -456,11 +508,7 @@ offEventData(eventId: string, callback: Callback<EventData>): void
 offGenericEventData<T>(eventId: string, callback: Callback<GenericEventData<T>>): void
 ```
 
-取消订阅当前Emitter类实例的事件。仅当已使用  
-[onGenericEventData](emitter.onGenericEventData&lt;T&gt;(eventId: string, callback: Callback&lt;GenericEventData<T>&gt;&lt;T&gt;>))或  
-[onceGenericEventData](emitter.onceGenericEventData&lt;T&gt;(eventId: string, callback: Callback&lt;GenericEventData<T>&gt;&lt;T&gt;>))接口订阅了事件ID为eventId且回调处理函数为callback的事件时，该接口才生效。
-
-使用该接口取消事件订阅后，已通过[emit](emitter.emit(eventId: string))接口发布但尚未执行的事件将被取消。
+Unsubscribes from an event with the specified event ID and processed by the specified callback.
 
 **Since:** 23
 
@@ -474,8 +522,36 @@ offGenericEventData<T>(eventId: string, callback: Callback<GenericEventData<T>>)
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| eventId | string | Yes | 事件ID。取值为长度不超过10240字节的自定义字符串，且不可为空字符。 |
-| callback | [Callback](arkts-basicservices-base-callback-i.md)&lt;GenericEventData&lt;T&gt;&gt; | Yes | 事件的回调处理函数。 |
+| eventId | string | Yes | Event ID. The value cannot be an empty string and exceed 10240 bytes. |
+| callback | [Callback](arkts-basicservices-base-callback-i.md)&lt;GenericEventData&lt;T&gt;&gt; | Yes | Callback to unregister. |
+
+## Examples
+
+```TypeScript
+import { Callback } from '@kit.BasicServicesKit';
+
+class Sample {
+  constructor() {
+    this.count = 100;
+  }
+  printCount() {
+    console.info('Print count : ' + this.count);
+  }
+  count: number;
+}
+
+let emitter1 = new emitter.Emitter();
+
+let callback: Callback<emitter.GenericEventData<Sample>> = (eventData: emitter.GenericEventData<Sample>): void => {
+  console.info(`eventData: ${JSON.stringify(eventData?.data)}`);
+  if (eventData?.data instanceof Sample) {
+    const sampleData = eventData.data as Sample;
+    sampleData.printCount();
+  }
+}
+
+emitter1.offGenericEventData("eventId", callback);
+```
 
 ## on
 
@@ -483,7 +559,7 @@ offGenericEventData<T>(eventId: string, callback: Callback<GenericEventData<T>>)
 on(eventId: string, callback: Callback<EventData>): void
 ```
 
-持续订阅当前Emitter类实例指定的事件，并在接收到该事件时，使用callback异步回调。
+Subscribes to an event specified by the Emitter instance in persistent manner and executes a callback after the event is received.
 
 **Since:** 22
 
@@ -499,8 +575,8 @@ on(eventId: string, callback: Callback<EventData>): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| eventId | string | Yes | 持续订阅的事件ID。 不可为空字符串，大小不超过10240字节，超出部分会被截断。 |
-| callback | [Callback](arkts-basicservices-base-callback-i.md)&lt;EventData&gt; | Yes | 回调函数，在接收到该事件时被调用。 |
+| eventId | string | Yes | Event ID, which cannot be empty or exceed 10,240 bytes. Excess content will be truncated. |
+| callback | [Callback](arkts-basicservices-base-callback-i.md)&lt;EventData&gt; | Yes | Callback to be invoked when the event is received. |
 
 ## Examples
 
@@ -511,9 +587,9 @@ let emitter1: emitter.Emitter = new emitter.Emitter();
 
 let callback: Callback<emitter.EventData> = (eventData: emitter.EventData) => {
   console.info(`eventData: ${JSON.stringify(eventData)}`);
-};
+}
 
-emitter1.on('eventId', callback);
+emitter1.on(`eventId`, callback);
 ```
 
 ## on
@@ -522,7 +598,7 @@ emitter1.on('eventId', callback);
 on<T>(eventId: string, callback: Callback<GenericEventData<T>>): void
 ```
 
-持续订阅当前Emitter类实例指定的事件，并在接收到该事件时，使用callback异步回调。
+Subscribes to an event specified by the Emitter instance in persistent manner and executes a callback after the event is received.
 
 **Since:** 22
 
@@ -538,8 +614,8 @@ on<T>(eventId: string, callback: Callback<GenericEventData<T>>): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| eventId | string | Yes | 持续订阅的事件ID。 不可为空字符串，大小不超过10240字节，超出部分会被截断。 |
-| callback | [Callback](arkts-basicservices-base-callback-i.md)&lt;GenericEventData&lt;T&gt;&gt; | Yes | 回调函数，在接收到该事件时被调用。 |
+| eventId | string | Yes | Event ID, which cannot be empty or exceed 10,240 bytes. Excess content will be truncated. |
+| callback | [Callback](arkts-basicservices-base-callback-i.md)&lt;GenericEventData&lt;T&gt;&gt; | Yes | Callback to be invoked when the event is received. |
 
 ## Examples
 
@@ -564,9 +640,9 @@ let callback: Callback<emitter.GenericEventData<Sample>> = (eventData: emitter.G
   if (eventData?.data instanceof Sample) {
     eventData?.data?.printCount();
   }
-};
+}
 
-emitter1.on('eventId', callback);
+emitter1.on("eventId", callback);
 ```
 
 ## onEventData
@@ -575,7 +651,7 @@ emitter1.on('eventId', callback);
 onEventData(eventId: string, callback: Callback<EventData>): void
 ```
 
-持续订阅当前Emitter类实例指定的事件，并在接收到该事件时，使用callback异步回调。
+Subscribes to an event in persistent manner and executes a callback after the event is received.
 
 **Since:** 23
 
@@ -589,8 +665,22 @@ onEventData(eventId: string, callback: Callback<EventData>): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| eventId | string | Yes | 持续订阅的事件。取值为长度不超过10240字节的自定义字符串，且不可为空字符。 |
-| callback | [Callback](arkts-basicservices-base-callback-i.md)&lt;EventData&gt; | Yes | 接收到该事件时需要执行的回调处理函数。 |
+| eventId | string | Yes | Event to subscribe to in persistent manner. The value cannot be an empty string and exceed 10240 bytes. |
+| callback | [Callback](arkts-basicservices-base-callback-i.md)&lt;EventData&gt; | Yes | Callback to be executed when the event is received. |
+
+## Examples
+
+```TypeScript
+import { Callback } from '@kit.BasicServicesKit';
+
+let emitter1 = new emitter.Emitter();
+
+let callback: Callback<emitter.EventData> = (eventData: emitter.EventData) => {
+  console.info(`eventData: ${JSON.stringify(eventData)}`);
+}
+
+emitter1.onEventData(`eventId`, callback);
+```
 
 ## onGenericEventData
 
@@ -598,7 +688,7 @@ onEventData(eventId: string, callback: Callback<EventData>): void
 onGenericEventData<T>(eventId: string, callback: Callback<GenericEventData<T>>): void
 ```
 
-持续订阅当前Emitter类实例指定的事件，并在接收到该事件时，使用callback异步回调。
+Subscribes to an event in persistent manner and executes a callback after the event is received.
 
 **Since:** 23
 
@@ -612,8 +702,36 @@ onGenericEventData<T>(eventId: string, callback: Callback<GenericEventData<T>>):
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| eventId | string | Yes | 持续订阅的事件。取值为长度不超过10240字节的自定义字符串，且不可为空字符。 |
-| callback | [Callback](arkts-basicservices-base-callback-i.md)&lt;GenericEventData&lt;T&gt;&gt; | Yes | 接收到该事件时需要执行的回调处理函数。 |
+| eventId | string | Yes | Event to subscribe to in persistent manner. The value cannot be an empty string and exceed 10240 bytes. |
+| callback | [Callback](arkts-basicservices-base-callback-i.md)&lt;GenericEventData&lt;T&gt;&gt; | Yes | Callback to be executed when the event is received. |
+
+## Examples
+
+```TypeScript
+import { Callback } from '@kit.BasicServicesKit';
+
+let emitter1 = new emitter.Emitter();
+
+class Sample {
+  constructor() {
+    this.count = 100;
+  }
+  printCount() {
+    console.info('Print count : ' + this.count);
+  }
+  count: number;
+}
+
+let callback: Callback<emitter.GenericEventData<Sample>> = (eventData: emitter.GenericEventData<Sample>): void => {
+  console.info(`eventData: ${JSON.stringify(eventData?.data)}`);
+  if (eventData?.data instanceof Sample) {
+    const sampleData = eventData.data as Sample;
+    sampleData.printCount();
+  }
+}
+
+emitter1.onGenericEventData("eventId", callback);
+```
 
 ## once
 
@@ -621,7 +739,7 @@ onGenericEventData<T>(eventId: string, callback: Callback<GenericEventData<T>>):
 once(eventId: string, callback: Callback<EventData>): void
 ```
 
-单次订阅当前Emitter类实例指定的事件，在接收到该事件且执行完对应的回调处理函数后，自动取消订阅。使用callback异步回调。
+Subscribes to an event specified by the Emitter instance in one-shot manner and unsubscribes from it after the event callback is executed. This API uses an asynchronous callback to return the result.
 
 **Since:** 22
 
@@ -637,8 +755,8 @@ once(eventId: string, callback: Callback<EventData>): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| eventId | string | Yes | 单次订阅的事件ID。 不可为空字符串，大小不超过10240字节，超出部分会被截断。 |
-| callback | [Callback](arkts-basicservices-base-callback-i.md)&lt;EventData&gt; | Yes | 回调函数，在接收到该事件时被调用。 |
+| eventId | string | Yes | Event ID, which cannot be empty or exceed 10,240 bytes. Excess content will be truncated. |
+| callback | [Callback](arkts-basicservices-base-callback-i.md)&lt;EventData&gt; | Yes | Callback to be invoked when the event is received. |
 
 ## Examples
 
@@ -649,9 +767,9 @@ let emitter1: emitter.Emitter = new emitter.Emitter();
 
 let callback: Callback<emitter.EventData> = (eventData: emitter.EventData) => {
   console.info(`eventData: ${JSON.stringify(eventData)}`);
-};
+}
 
-emitter1.once('eventId', callback);
+emitter1.once("eventId", callback);
 ```
 
 ## once
@@ -660,7 +778,7 @@ emitter1.once('eventId', callback);
 once<T>(eventId: string, callback: Callback<GenericEventData<T>>): void
 ```
 
-单次订阅当前Emitter类实例指定的事件，在接收到该事件且执行完对应的回调处理函数后，自动取消订阅。使用callback异步回调。
+Subscribes to an event specified by the Emitter instance in one-shot manner and unsubscribes from it after the event callback is executed. This API uses an asynchronous callback to return the result.
 
 **Since:** 22
 
@@ -676,8 +794,8 @@ once<T>(eventId: string, callback: Callback<GenericEventData<T>>): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| eventId | string | Yes | 单次订阅的事件ID。 不可为空字符串，大小不超过10240字节，超出部分会被截断。 |
-| callback | [Callback](arkts-basicservices-base-callback-i.md)&lt;GenericEventData&lt;T&gt;&gt; | Yes | 回调函数，在接收到该事件时被调用。 |
+| eventId | string | Yes | Event ID, which cannot be empty or exceed 10,240 bytes. Excess content will be truncated. |
+| callback | [Callback](arkts-basicservices-base-callback-i.md)&lt;GenericEventData&lt;T&gt;&gt; | Yes | Callback to be invoked when the event is received. |
 
 ## Examples
 
@@ -702,9 +820,9 @@ let callback: Callback<emitter.GenericEventData<Sample>> = (eventData: emitter.G
   if (eventData?.data instanceof Sample) {
     eventData?.data?.printCount();
   }
-};
+}
 
-emitter1.once('eventId', callback);
+emitter1.once("eventId", callback);
 ```
 
 ## onceEventData
@@ -713,7 +831,7 @@ emitter1.once('eventId', callback);
 onceEventData(eventId: string, callback: Callback<EventData>): void
 ```
 
-单次订阅当前Emitter类实例指定的事件，在接收到该事件且执行完对应的回调函数后，自动取消订阅。使用callback异步回调。
+Subscribes to an event in one-shot manner and unsubscribes from it after the event callback is executed.
 
 **Since:** 23
 
@@ -727,8 +845,22 @@ onceEventData(eventId: string, callback: Callback<EventData>): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| eventId | string | Yes | 单次订阅的事件。取值为长度不超过10240字节的自定义字符串，且不可为空字符。 |
-| callback | [Callback](arkts-basicservices-base-callback-i.md)&lt;EventData&gt; | Yes | 接收到该事件时需要执行的回调处理函数。 |
+| eventId | string | Yes | Event to subscribe to in one-shot manner. The value cannot be an empty string and exceed 10240 bytes. |
+| callback | [Callback](arkts-basicservices-base-callback-i.md)&lt;EventData&gt; | Yes | Callback to be executed when the event is received. |
+
+## Examples
+
+```TypeScript
+import { Callback } from '@kit.BasicServicesKit';
+
+let emitter1 = new emitter.Emitter();
+
+let callback: Callback<emitter.EventData> = (eventData: emitter.EventData) => {
+  console.info(`eventData: ${JSON.stringify(eventData)}`);
+}
+
+emitter1.onceEventData("eventId", callback);
+```
 
 ## onceGenericEventData
 
@@ -736,7 +868,7 @@ onceEventData(eventId: string, callback: Callback<EventData>): void
 onceGenericEventData<T>(eventId: string, callback: Callback<GenericEventData<T>>): void
 ```
 
-单次订阅当前Emitter类实例指定的事件，在接收到该事件且执行完相应的回调函数后，自动取消订阅。使用callback异步回调。
+Subscribes to an event in one-shot manner and unsubscribes from it after the event callback is executed.
 
 **Since:** 23
 
@@ -750,6 +882,34 @@ onceGenericEventData<T>(eventId: string, callback: Callback<GenericEventData<T>>
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| eventId | string | Yes | 单次订阅的事件。取值为长度不超过10240字节的自定义字符串，且不可为空字符。 |
-| callback | [Callback](arkts-basicservices-base-callback-i.md)&lt;GenericEventData&lt;T&gt;&gt; | Yes | 接收到该事件时需要执行的回调处理函数。 |
+| eventId | string | Yes | Event to subscribe to in one-shot manner. The value cannot be an empty string and exceed 10240 bytes. |
+| callback | [Callback](arkts-basicservices-base-callback-i.md)&lt;GenericEventData&lt;T&gt;&gt; | Yes | Callback to be executed when the event is received. |
+
+## Examples
+
+```TypeScript
+import { Callback } from '@kit.BasicServicesKit';
+
+let emitter1 = new emitter.Emitter();
+
+class Sample {
+  constructor() {
+    this.count = 100;
+  }
+  printCount() {
+    console.info('Print count : ' + this.count);
+  }
+  count: number;
+}
+
+let callback: Callback<emitter.GenericEventData<Sample>> = (eventData: emitter.GenericEventData<Sample>): void => {
+  console.info(`eventData: ${JSON.stringify(eventData?.data)}`);
+  if (eventData?.data instanceof Sample) {
+    const sampleData = eventData.data as Sample;
+    sampleData.printCount();
+  }
+}
+
+emitter1.onceGenericEventData("eventId", callback);
+```
 

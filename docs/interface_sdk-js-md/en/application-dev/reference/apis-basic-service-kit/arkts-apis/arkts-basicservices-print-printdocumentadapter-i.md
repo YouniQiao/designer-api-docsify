@@ -1,6 +1,6 @@
 # PrintDocumentAdapter
 
-第三方应用程序实现此接口来渲染要打印的文件。
+Provides information about the document to print. This API must be implemented by a third-party application.
 
 **Since:** 11
 
@@ -22,7 +22,7 @@ import { print } from 'kits/@kit.BasicServicesKit';
 onJobStateChanged(jobId: string, state: PrintDocumentAdapterState): void
 ```
 
-实现这个接口来监听打印任务状态的改变。
+Registers a listener for print job state changes.
 
 **Since:** 11
 
@@ -38,15 +38,15 @@ onJobStateChanged(jobId: string, state: PrintDocumentAdapterState): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| jobId | string | Yes | 表示打印任务ID。 |
-| state | [PrintDocumentAdapterState](arkts-basicservices-print-printdocumentadapterstate-e.md) | Yes | 表示打印任务更改为该状态。 |
+| jobId | string | Yes | ID of the print job. |
+| state | [PrintDocumentAdapterState](arkts-basicservices-print-printdocumentadapterstate-e.md) | Yes | New state of the print job. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
-| 201 | the application does not have permission to call this function. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
+| [201](../../errorcode-universal.md#201-permission-denied) | the application does not have permission to call this function. |
 
 ## Examples
 
@@ -89,7 +89,7 @@ onStartLayoutWrite(jobId: string, oldAttrs: PrintAttributes, newAttrs: PrintAttr
       writeResultCallback: (jobId: string, writeResult: PrintFileCreationState) => void): void
 ```
 
-打印服务会通过本接口将一个空的pdf文件的文件描述符传给三方应用，由三方应用使用新的打印参数更新待打印文件，更新文件完成后通过本接口的回调方法writeResultCallback通知打印服务。
+Sends an empty PDF file descriptor to a third-party application. The third-party application updates the file with the new print attributes and then calls **writeResultCallback** to print the file.
 
 **Since:** 11
 
@@ -105,18 +105,18 @@ onStartLayoutWrite(jobId: string, oldAttrs: PrintAttributes, newAttrs: PrintAttr
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| jobId | string | Yes | 表示打印任务ID。 |
-| oldAttrs | [PrintAttributes](arkts-basicservices-print-printattributes-i.md) | Yes | 表示旧打印参数。 |
-| newAttrs | [PrintAttributes](arkts-basicservices-print-printattributes-i.md) | Yes | 表示新打印参数。 |
-| fd | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | 表示打印文件传给接口调用方的pdf文件的文件描述符。 |
-| writeResultCallback | (jobId: string, writeResult: PrintFileCreationState) =&gt; void | Yes | 表示三方应用使用新的打印参数更新待打印文件完成后的回调。 |
+| jobId | string | Yes | ID of the print job. |
+| oldAttrs | [PrintAttributes](arkts-basicservices-print-printattributes-i.md) | Yes | Old print attributes. |
+| newAttrs | [PrintAttributes](arkts-basicservices-print-printattributes-i.md) | Yes | New print attributes. |
+| fd | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | PDF file descriptor sent to the API caller. |
+| writeResultCallback | (jobId: string, writeResult: PrintFileCreationState) =&gt; void | Yes | Callback used to print the updated file. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
-| 201 | the application does not have permission to call this function. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
+| [201](../../errorcode-universal.md#201-permission-denied) | the application does not have permission to call this function. |
 
 ## Examples
 

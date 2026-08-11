@@ -1,6 +1,6 @@
 # ImageLoadResult
 
-图片数据加载成功和解码成功触发回调时返回的对象。
+Describes the object returned after the callback is triggered when an image is successfully loaded or decoded.
 
 **Since:** 12
 
@@ -16,9 +16,9 @@
 componentHeight: number
 ```
 
-组件的高。
+Height of the component.
 
-单位：[px](../../../reference/apis-arkui/arkui-ts/ts-pixel-units.md#基本像素单位)
+Unit: [px](../../apis-ability-kit/arkts-apis/arkts-app-ability-common.md/arkts-app-ability-common.md)
 
 **Type:** number
 
@@ -40,9 +40,9 @@ componentHeight: number
 componentWidth: number
 ```
 
-组件的宽。
+Width of the component.
 
-单位：[px](../../../reference/apis-arkui/arkui-ts/ts-pixel-units.md#基本像素单位)
+Unit: [px](../../apis-ability-kit/arkts-apis/arkts-app-ability-common.md/arkts-app-ability-common.md)
 
 **Type:** number
 
@@ -64,13 +64,13 @@ componentWidth: number
 contentHeight: number
 ```
 
-图片实际绘制的高度。
+Actual rendered height of the image.
 
-单位：[px](../../../reference/apis-arkui/arkui-ts/ts-pixel-units.md#基本像素单位)
+Unit: [px](../../apis-ability-kit/arkts-apis/arkts-app-ability-common.md/arkts-app-ability-common.md)
 
-**说明：**
+**NOTE：**
 
-仅在loadingStatus返回1时有效。
+This parameter is valid only when the return value of **loadingStatus** is **1**.
 
 **Type:** number
 
@@ -92,13 +92,13 @@ contentHeight: number
 contentOffsetX: number
 ```
 
-实际绘制内容相对于组件自身的x轴偏移。
+Offset of the rendered content relative to the component on the x-axis.
 
-单位：[px](../../../reference/apis-arkui/arkui-ts/ts-pixel-units.md#基本像素单位)
+Unit: [px](../../apis-ability-kit/arkts-apis/arkts-app-ability-common.md/arkts-app-ability-common.md)
 
-**说明：**
+**NOTE：**
 
-仅在loadingStatus返回1时有效。
+This parameter is valid only when the return value of **loadingStatus** is **1**.
 
 **Type:** number
 
@@ -120,13 +120,13 @@ contentOffsetX: number
 contentOffsetY: number
 ```
 
-实际绘制内容相对于组件自身的y轴偏移。
+Offset of the rendered content relative to the component on the y-axis
 
-单位：[px](../../../reference/apis-arkui/arkui-ts/ts-pixel-units.md#基本像素单位)
+Unit: [px](../../apis-ability-kit/arkts-apis/arkts-app-ability-common.md/arkts-app-ability-common.md)
 
-**说明：**
+**NOTE：**
 
-仅在loadingStatus返回1时有效。
+This parameter is valid only when the return value of **loadingStatus** is **1**.
 
 **Type:** number
 
@@ -148,13 +148,13 @@ contentOffsetY: number
 contentWidth: number
 ```
 
-图片实际绘制的宽度。
+Actual rendered width of the image.
 
-单位：[px](../../../reference/apis-arkui/arkui-ts/ts-pixel-units.md#基本像素单位)
+Unit: [px](../../apis-ability-kit/arkts-apis/arkts-app-ability-common.md/arkts-app-ability-common.md)
 
-**说明：**
+**NOTE：**
 
-仅在loadingStatus返回1时有效。
+This parameter is valid only when the return value of **loadingStatus** is **1**.
 
 **Type:** number
 
@@ -176,9 +176,9 @@ contentWidth: number
 height: number
 ```
 
-图片的高。
+Height of the image.
 
-单位：[px](../../../reference/apis-arkui/arkui-ts/ts-pixel-units.md#基本像素单位)
+Unit: [px](../../apis-ability-kit/arkts-apis/arkts-app-ability-common.md/arkts-app-ability-common.md)
 
 **Type:** number
 
@@ -200,11 +200,11 @@ height: number
 loadingStatus: number
 ```
 
-图片加载成功的状态值。
+Loading status of the image.
 
-**说明：**
+**NOTE：**
 
-返回的状态值为0时，表示图片数据加载成功。返回的状态值为1时，表示图片解码成功。
+If the return value is **0**, the image is successfully loaded. If the return value is **1**, the image is successfully decoded.
 
 **Type:** number
 
@@ -226,9 +226,9 @@ loadingStatus: number
 width: number
 ```
 
-图片的宽。
+Width of the image.
 
-单位：[px](../../../reference/apis-arkui/arkui-ts/ts-pixel-units.md#基本像素单位)
+Unit: [px](../../apis-ability-kit/arkts-apis/arkts-app-ability-common.md/arkts-app-ability-common.md)
 
 **Type:** number
 

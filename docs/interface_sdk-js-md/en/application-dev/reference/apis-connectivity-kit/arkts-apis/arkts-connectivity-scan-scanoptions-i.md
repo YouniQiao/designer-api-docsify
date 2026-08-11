@@ -1,6 +1,6 @@
 # ScanOptions
 
-扫描参数。
+Describes the parameters for scan.
 
 **Since:** 26.0.0
 
@@ -22,7 +22,7 @@ import { scan } from 'kits/@kit.ConnectivityKit';
 duration?: int
 ```
 
-扫描时长。“持续时间”，单位为秒，有效范围为10s~60s。如果不设置“持续时间”，则会一直扫描。单位为： 秒，取值应为[10,60]内的整数。
+Indicates the scan duration.If the "duration" is not set, the scanning is performed all the time.Unit: Seconds, The value must be an integer within [10,60].
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
@@ -42,7 +42,7 @@ duration?: int
 scanMode?: ScanMode
 ```
 
-扫描模式。如果未设置“scanMode”，则默认值为“SCAN_MODE_LOW_POWER”。默认值： SCAN_MODE_LOW_POWER。
+Indicates the scan mode.If the "scanMode" is not set, the default value is "SCAN_MODE_LOW_POWER".Default value: SCAN_MODE_LOW_POWER.
 
 **Type:** [ScanMode](arkts-connectivity-bluetooth-scanmode-e.md)
 

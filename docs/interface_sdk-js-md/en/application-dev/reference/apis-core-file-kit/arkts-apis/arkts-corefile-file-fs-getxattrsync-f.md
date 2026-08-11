@@ -12,7 +12,7 @@ import { Options, ReaderIteratorResult, Watcher, ReadTextOptions, WatchEventList
 declare function getxattrSync(path: string, key: string): string
 ```
 
-使用同步接口获取文件或目录的扩展属性。
+Obtains an extended attribute of a file or directory. This API returns the result synchronously.
 
 **Since:** 12
 
@@ -26,20 +26,20 @@ declare function getxattrSync(path: string, key: string): string
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| path | string | Yes | 文件或目录的应用沙箱路径。 |
-| key | string | Yes | 扩展属性的key。 |
+| path | string | Yes | Application sandbox path of the file or directory. |
+| key | string | Yes | Key of the extended attribute to obtain. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| string | 返回扩展属性的value。 |
+| string | Value of the extended attribute obtained. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. Possible causes:1.Mandatory parameters are left unspecified; &lt;br&gt;2.Incorrect parameter types. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes:1.Mandatory parameters are left unspecified; &lt;br&gt;2.Incorrect parameter types. |
 | 13900037 | No data available |
 | 13900038 | Value too large for defined data type |
 | 13900007 | Arg list too long |

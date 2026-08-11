@@ -1,11 +1,5 @@
 # createSubWindowAndBindParent（系统接口）
 
-## 导入模块
-
-```TypeScript
-import { window } from 'kits/@kit.ArkUI';
-```
-
 ## createSubWindowAndBindParent
 
 ```TypeScript
@@ -50,14 +44,16 @@ function createSubWindowAndBindParent(name: string, parentId: int, ctx: BaseCont
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 1300003 | This window manager service works abnormally. |
-| 801 | Capability not supported. This cannot work correctly due to limited device capabilities. |
-| 1300002 | This window state is abnormal. Possible cause: 1. Internal task error. 2. The number of windows has reached the limit. |
-| 1300001 | Repeated operation. Possible cause: The window has been created and cannot be created again. |
-| 202 | Permission verification failed. A non-system application calls a system API. |
-| 1300009 | The parent window is invalid. Possible cause: 1. The parent window does not exist or has been destroyed. 2. Invalid window type. Only main windows are supported. |
+| [1300003](../errorcode-window.md#1300003-系统服务工作异常) | This window manager service works abnormally. |
+| [801](../../errorcode-universal.md#801-该设备不支持此api) | Capability not supported. This cannot work correctly due to limited device capabilities. |
+| [1300002](../errorcode-window.md#1300002-窗口状态异常) | This window state is abnormal. Possible cause: 1. Internal task error. 2. The number of windows has reached the limit. |
+| [1300001](../errorcode-window.md#1300001-重复操作) | Repeated operation. Possible cause: The window has been created and cannot be created again. |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed. A non-system application calls a system API. |
+| [1300009](../errorcode-window.md#1300009-父窗口无效) | The parent window is invalid. Possible cause: 1. The parent window does not exist or has been destroyed. 2. Invalid window type. Only main windows are supported. |
 
 ## 示例
+
+ArkTS-Dyn示例：
 
 ```TypeScript
 import { UIAbility } from '@kit.AbilityKit';
@@ -77,6 +73,35 @@ export default class EntryAbility extends UIAbility {
         console.info('Succeeded in creating the window. Data:' + JSON.stringify(data));
         windowClass = data;
       }).catch((err: BusinessError) => {
+        console.error(`Failed to create the Window. Cause code: ${err.code}, message: ${err.message}`);
+      });
+    } catch (exception) {
+      console.error(`Failed to create the window. Cause code: ${exception.code}, message: ${exception.message}`);
+    }
+  }
+}
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+import { UIAbility } from '@kit.AbilityKit';
+import { window } from '@kit.ArkUI';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+export default class EntryAbility extends UIAbility {
+  // ...
+  onWindowStageCreate(windowStage: window.WindowStage): void {
+    let windowClass: window.Window | undefined = undefined;
+    const parentWindowEventListener = (windowId: int, event: window.WindowEventType) => {
+      // ...
+    }
+    try {
+      let promise = window.createSubWindowAndBindParent('test', 100, this.context, parentWindowEventListener);
+      promise.then((data) => {
+        console.info('Succeeded in creating the window. Data:' + JSON.stringify(data));
+        windowClass = data;
+      }).catch((err: BusinessError): void => {
         console.error(`Failed to create the Window. Cause code: ${err.code}, message: ${err.message}`);
       });
     } catch (exception) {

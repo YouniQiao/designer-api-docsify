@@ -1,10 +1,6 @@
 # SizeType
 
-设备宽度类型枚举，用于在栅格布局中区分不同宽度的设备类型，实现响应式布局。
-
-> **说明：**
-> 
-> 从API version 7开始支持，从API version 9开始废弃。
+Defines the size type.
 
 **Since:** 7
 
@@ -21,10 +17,10 @@
 ## Auto
 
 ```TypeScript
-Auto = 0
+Auto
 ```
 
-根据设备宽度自动匹配合适的尺寸类型。
+Select a value based on the device type.
 
 **Since:** 7
 
@@ -34,7 +30,7 @@ Auto = 0
 
 **Substitutes:** grid_col/GridColColumnOption
 
-<!--Device-SizeType-Auto = 0--><!--Device-SizeType-Auto = 0-End-->
+<!--Device-SizeType-Auto--><!--Device-SizeType-Auto-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -44,7 +40,7 @@ Auto = 0
 XS
 ```
 
-最小宽度类型设备，宽度≤320vp。
+Extra Small width type device.
 
 **Since:** 7
 
@@ -64,7 +60,7 @@ XS
 SM
 ```
 
-小宽度类型设备，宽度320vp-600vp。
+Small width type device.
 
 **Since:** 7
 
@@ -84,7 +80,7 @@ SM
 MD
 ```
 
-中等宽度类型设备，宽度600vp-840vp。
+Medium width type device.
 
 **Since:** 7
 
@@ -104,7 +100,7 @@ MD
 LG
 ```
 
-大宽度类型设备，宽度≥840vp。
+Large width type device.
 
 **Since:** 7
 

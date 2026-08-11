@@ -1,6 +1,6 @@
 # NetworkState
 
-播放器的网络状态。
+Enumerates the network statuses of the player.
 
 **Since:** 23
 
@@ -16,7 +16,7 @@
 EMPTY = 0
 ```
 
-播放器还没有开始下载数据。
+The player has not started downloading data.
 
 **Since:** 23
 
@@ -32,7 +32,7 @@ EMPTY = 0
 IDLE = 1
 ```
 
-播放器网络状态空闲，比如媒体分片下载完成，下一个分片还没有开始下载。
+The player's network activity is idle. This could mean that the download of a media segment is complete, and the player is waiting to start downloading the next segment.
 
 **Since:** 23
 
@@ -48,7 +48,7 @@ IDLE = 1
 LOADING = 2
 ```
 
-播放器正在下载媒体数据。
+The player is downloading media data.
 
 **Since:** 23
 
@@ -64,7 +64,7 @@ LOADING = 2
 NETWORK_ERROR = 3
 ```
 
-发生了网络错误。
+A network error occurs.
 
 **Since:** 23
 

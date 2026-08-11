@@ -1,11 +1,11 @@
 # DisplayOrientation
 
-> **说明：**
+> **NOTE：**
 > 
-> 从API version 7开始支持，从API version 9开始废弃，建议使用
-> [bundleManager.DisplayOrientation](arkts-ability-bundlemanager-displayorientation-e.md)替代。
+> This API has been supported since API version 7 and deprecated since API version 9. You are advised to use
+> [bundleManager.DisplayOrientation](arkts-ability-bundlemanager-displayorientation-e.md) instead.
 
-屏幕显示方向。
+Enumerates display orientations.
 
 **Since:** 7
 
@@ -25,7 +25,7 @@
 UNSPECIFIED = 0
 ```
 
-屏幕方向--不指定。
+Unspecified display orientation.
 
 **Since:** 7
 
@@ -45,6 +45,8 @@ UNSPECIFIED = 0
 LANDSCAPE = 1
 ```
 
+Landscape orientation.
+
 **Since:** 7
 
 **ArkTS mode:** ArkTS-Dyn only, since version 7.
@@ -63,6 +65,8 @@ LANDSCAPE = 1
 PORTRAIT = 2
 ```
 
+Portrait orientation.
+
 **Since:** 7
 
 **ArkTS mode:** ArkTS-Dyn only, since version 7.
@@ -80,6 +84,8 @@ PORTRAIT = 2
 ```TypeScript
 FOLLOW_RECENT = 3
 ```
+
+Orientation same as that of the nearest ability in the stack.
 
 **Since:** 7
 

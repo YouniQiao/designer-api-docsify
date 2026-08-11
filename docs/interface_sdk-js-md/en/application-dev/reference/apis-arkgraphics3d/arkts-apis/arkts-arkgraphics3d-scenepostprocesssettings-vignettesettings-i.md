@@ -1,6 +1,6 @@
 # VignetteSettings
 
-定义暗角参数.
+Describes the settings for vignette effects.
 
 **Since:** 22
 
@@ -16,7 +16,7 @@
 intensity?: double
 ```
 
-控制暗边或亮边的强度.当intensity > 0时，边缘变暗且中心变亮，创建经典暗角效果.当intensity < 0时，中心变暗且边缘变亮，产生反向暗角效果.
+Effect strength. The value range is [0, 1].The value 0 indicates no vignetting effect, and the value 1 indicates maximum vignetting intensity.The default value is 0.4.
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：double
 
@@ -36,7 +36,7 @@ intensity?: double
 roundness?: double
 ```
 
-控制暗角在[0, 1]之间的圆度.较低的值将使暗角效果更接近方形.
+Application scope. The value range is [0, 1].When the value is 0, the application scope is minimized.When the value is 1, the application scope is global.The default value is sqrt(0.5).
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：double
 

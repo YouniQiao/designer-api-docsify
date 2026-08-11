@@ -1,11 +1,5 @@
 # getAuthorizationManager（系统接口）
 
-## 导入模块
-
-```TypeScript
-import { osAccount } from 'kits/@kit.BasicServicesKit';
-```
-
 ## getAuthorizationManager
 
 ```TypeScript
@@ -36,7 +30,7 @@ function getAuthorizationManager(): AuthorizationManager
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 202 | Not system application. |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not system application. |
 
 ## 示例
 

@@ -1,6 +1,6 @@
 # PolicyErrorResult
 
-授予或激活权限失败的URI策略结果。
+Failed policy result on URI.
 
 **Since:** 11
 
@@ -22,7 +22,7 @@ import { fileShare } from 'kits/@kit.CoreFileKit';
 code: PolicyErrorCode
 ```
 
-授权策略失败的URI对应的错误码。
+Indicates the error code of the failure in the policy information.
 
 **Type:** [PolicyErrorCode](arkts-corefile-fileshare-policyerrorcode-e.md)
 
@@ -40,7 +40,7 @@ code: PolicyErrorCode
 message: string
 ```
 
-授权策略失败的URI对应的原因。
+Indicates the reason of the failure in the policy information.
 
 **Type:** string
 
@@ -58,7 +58,7 @@ message: string
 uri: string
 ```
 
-授予或激活权限失败的URI。
+Indicates the failed uri of the policy information.
 
 **Type:** string
 

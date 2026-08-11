@@ -1,6 +1,6 @@
 # CreateOsAccountOptions (System API)
 
-表示用于创建系统账号的可选参数。
+Represents the optional parameter used to create an OS account.
 
 **Since:** 12
 
@@ -24,7 +24,7 @@ import { osAccount } from 'kits/@kit.BasicServicesKit';
 allowedPreinstalledBundles?: Array<string>
 ```
 
-表示预置应用允许名单，仅名单中的应用可以被安装在设备上，默认为std::nullopt。
+Trustlist of the preinstalled applications, which can be installed on the device. The default value is **std::nullopt**.
 
 **Type:** Array&lt;string&gt;
 
@@ -44,7 +44,7 @@ allowedPreinstalledBundles?: Array<string>
 disallowedPreinstalledBundles?: Array<string>
 ```
 
-表示预置应用禁止名单，名单中的应用不可被安装在设备上，默认为空列表。
+Forbidden list of the preinstalled applications, which cannot be installed on the device. The value is left empty  by default.
 
 **Type:** Array&lt;string&gt;
 
@@ -64,11 +64,11 @@ disallowedPreinstalledBundles?: Array<string>
 shortName: string
 ```
 
-表示账号短名称（用作个人文件夹目录）。 
+Short name of the account (used as the name of the personal folder).
 
-**约束：** 
+**The short name cannot**:
 
-1. 不允许出现的字符：&lt; &gt; | : " * ? / \2. 不允许独立出现的字符串：.或..3. 长度不超过255个字符。
+1. Contain any of the following characters: &lt; &gt;| : " * ? / \2. Contain any of the following: . or ..3. Exceed 255 characters.
 
 **Type:** string
 
@@ -88,7 +88,7 @@ shortName: string
 token?: Uint8Array
 ```
 
-表示从认证管理接口获取的token，默认为空。
+Token obtained from the authentication management API. The value is left empty by default.
 
 **Type:** Uint8Array
 

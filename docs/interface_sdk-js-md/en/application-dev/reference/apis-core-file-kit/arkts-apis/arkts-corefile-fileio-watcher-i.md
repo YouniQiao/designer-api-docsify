@@ -1,6 +1,6 @@
 # Watcher
 
-文件目录变化监听对象。由createWatcher接口获得。
+Provides APIs for observing the changes of files or directories.Before using the APIs of Watcher, call createWatcher() to create a Watcher object.
 
 **Since:** 23
 
@@ -22,7 +22,7 @@ import { Options, ReaderIteratorResult, Watcher, ReadTextOptions, WatchEventList
 start(): void
 ```
 
-开启监听文件或目录变动事件。
+Starts listening.
 
 **Since:** 23
 
@@ -56,7 +56,7 @@ start(): void
 stop(): void
 ```
 
-停止监听文件或目录变动事件并移除Watcher对象。
+Stops listening and removes the Watcher object.
 
 **Since:** 23
 

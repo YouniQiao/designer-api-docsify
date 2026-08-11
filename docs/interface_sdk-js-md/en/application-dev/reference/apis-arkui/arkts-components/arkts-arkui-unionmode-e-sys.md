@@ -1,6 +1,6 @@
 # UnionMode (System API)
 
-融合效果枚举。
+Enumerates the union modes.
 
 **Since:** 26.0.0
 
@@ -18,7 +18,7 @@
 SMOOTH_UNION = 0
 ```
 
-平滑的融合形变效果。
+Smooth union mode.
 
 **Since:** 26.0.0
 
@@ -38,13 +38,13 @@ SMOOTH_UNION = 0
 GRAVITY_UNION = 1
 ```
 
-引力作用下的融合形变效果。
+Gravity union mode.
 
-**说明：**
+**NOTE：**
 
-设置该类型时，需要结合  
-[useUnionEffect](../arkts-apis/arkts-arkui-common-commonmethod-i-sys.md/arkts-arkui-common-commonmethod-i-sys.md#useunioneffect)并设置  
-[GravityCenterOptions](../arkts-apis/arkts-arkui-common-gravitycenteroptions-i-sys.md/arkts-arkui-common-gravitycenteroptions-i-sys.md)的gravityCenter为true才能生效。
+This mode takes effect only when   
+[useUnionEffect](../../../reference/apis-arkui/arkui-ts/ts-universal-attributes-use-union-effect-sys.md#useunioneffect-1)is used and **gravityCenter** of   
+[GravityCenterOptions](../../../reference/apis-arkui/arkui-ts/ts-universal-attributes-use-union-effect-sys.md#gravitycenteroptions)is set to **true**.
 
 **Since:** 26.0.0
 

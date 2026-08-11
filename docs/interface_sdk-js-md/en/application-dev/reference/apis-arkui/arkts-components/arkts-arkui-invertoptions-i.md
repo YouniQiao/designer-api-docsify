@@ -1,10 +1,10 @@
 # InvertOptions
 
-前景智能取反色。
+Describes the options for inverting the foreground color.
 
-**Since:** 12
+**Since:** 11
 
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
+**ArkTS mode:** ArkTS-Dyn only, since version 11.
 
 <!--Device-unnamed-declare interface InvertOptions--><!--Device-unnamed-declare interface InvertOptions-End-->
 
@@ -16,15 +16,15 @@
 high: number
 ```
 
-背景颜色灰度值小于阈值区间时的取值。
+Value when the background color is less than the grayscale threshold.
 
-取值范围：[0, 1]
+Value range: [0, 1].
 
 **Type:** number
 
-**Since:** 12
+**Since:** 11
 
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
+**ArkTS mode:** ArkTS-Dyn only, since version 11.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -40,15 +40,15 @@ high: number
 low: number
 ```
 
-背景颜色灰度值大于阈值区间时的取值。
+Value when the background color is greater than the grayscale threshold.
 
-取值范围：[0, 1]
+Value range: [0, 1].
 
 **Type:** number
 
-**Since:** 12
+**Since:** 11
 
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
+**ArkTS mode:** ArkTS-Dyn only, since version 11.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -64,15 +64,15 @@ low: number
 threshold: number
 ```
 
-灰度阈值。
+Grayscale threshold.
 
-取值范围：[0, 1]
+Value range: [0, 1].
 
 **Type:** number
 
-**Since:** 12
+**Since:** 11
 
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
+**ArkTS mode:** ArkTS-Dyn only, since version 11.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -88,19 +88,19 @@ threshold: number
 thresholdRange: number
 ```
 
-阈值范围。
+Threshold value range.
 
-取值范围：[0, 1]
+Value range: [0, 1].
 
-**说明：**
+**NOTE：**
 
-灰度阈值上下偏移thresholdRange构成阈值区间，背景颜色灰度值在区间内取值由high线性渐变到low。
+This range defines the upper and lower bounds of the grayscale threshold. The grayscale value changes linearly from high to low within the range.
 
 **Type:** number
 
-**Since:** 12
+**Since:** 11
 
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
+**ArkTS mode:** ArkTS-Dyn only, since version 11.
 
 **Model restriction:** This API can be used only in the stage model.
 

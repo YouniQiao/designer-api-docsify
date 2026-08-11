@@ -10,12 +10,6 @@
 
 **系统能力：** SystemCapability.DistributedSched.AppCollaboration
 
-## 导入模块
-
-```TypeScript
-import { linkEnhance } from 'kits/@kit.DistributedServiceKit';
-```
-
 ## close
 
 ```TypeScript
@@ -40,7 +34,7 @@ close(): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 201 | Permission denied. |
+| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
 
 ## 示例
 
@@ -92,9 +86,9 @@ connect(): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 32390204 | The number of connection exceeds the limit. |
-| 32390300 | Internal error. |
-| 201 | Permission denied. |
+| [32390204](../../apis-distributedservice-kit/errorcode-link-enhance.md#32390204-连接个数超出限制) | The number of connection exceeds the limit. |
+| [32390300](../../apis-distributedservice-kit/errorcode-link-enhance.md#32390300-内部错误) | Internal error. |
+| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
 
 ## 示例
 
@@ -147,7 +141,7 @@ disconnect(): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 201 | Permission denied. |
+| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
 
 ## 示例
 
@@ -205,7 +199,7 @@ getPeerDeviceId(): string
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 201 | Permission denied. |
+| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
 
 ## 示例
 
@@ -258,8 +252,8 @@ off(type: 'connectResult', callback?: Callback<ConnectResult>): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 32390206 | Invalid parameter. |
-| 201 | Permission denied. |
+| [32390206](../../apis-distributedservice-kit/errorcode-link-enhance.md#32390206-参数非法) | Invalid parameter. |
+| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
 
 ## 示例
 
@@ -318,8 +312,8 @@ off(type: 'disconnected', callback?: Callback<number>): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 32390206 | Invalid parameter. |
-| 201 | Permission denied. |
+| [32390206](../../apis-distributedservice-kit/errorcode-link-enhance.md#32390206-参数非法) | Invalid parameter. |
+| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
 
 ## 示例
 
@@ -378,8 +372,8 @@ off(type: 'dataReceived', callback?: Callback<ArrayBuffer>): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 32390206 | Invalid parameter. |
-| 201 | Permission denied. |
+| [32390206](../../apis-distributedservice-kit/errorcode-link-enhance.md#32390206-参数非法) | Invalid parameter. |
+| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
 
 ## 示例
 
@@ -394,6 +388,7 @@ try {
   let peerDeviceId: string = "00:11:22:33:44:55";
   hilog.info(0x0000, TAG, 'connection server deviceId = ' + peerDeviceId);
   let connection: linkEnhance.Connection = linkEnhance.createConnection(peerDeviceId, "demo");
+  connection.connect();
   // 订阅数据接收通知
   connection.on('dataReceived', (data: ArrayBuffer) => {
     hilog.info(0x0000, TAG, 'recv dataLen = ' + data.byteLength);
@@ -402,6 +397,7 @@ try {
   connection.off('dataReceived', (data: ArrayBuffer) => {
     hilog.info(0x0000, TAG, 'recv dataLen = ' + data.byteLength);
   });
+  connection.disconnect();
 } catch (err) {
   hilog.error(0x0000, TAG, 'errCode: ' + (err as BusinessError).code + ', errMessage: ' +
   (err as BusinessError).message);
@@ -438,8 +434,34 @@ offConnectResult(callback?: Callback<ConnectResult>): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 32390206 | Invalid parameter. |
-| 201 | Permission denied. |
+| [32390206](../../apis-distributedservice-kit/errorcode-link-enhance.md#32390206-参数非法) | Invalid parameter. |
+| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
+
+## 示例
+
+```TypeScript
+import { linkEnhance } from '@kit.DistributedServiceKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+import { hilog } from '@kit.PerformanceAnalysisKit';
+
+const TAG = "testDemo";
+
+try {
+  let peerDeviceId: string = "00:11:22:33:44:55";
+  hilog.info(0x0000, TAG, 'connection server deviceId = ' + peerDeviceId);
+  let connection: linkEnhance.Connection = linkEnhance.createConnection(peerDeviceId, "demo");
+  connection.onConnectResult((result: linkEnhance.ConnectResult): void => {
+    hilog.info(0x0000, TAG, 'clientConnectResultCallback result = ' + result.success);
+  });
+  // 取消订阅连接结果
+  connection.offConnectResult((result: linkEnhance.ConnectResult): void => {
+    hilog.info(0x0000, TAG, 'clientConnectResultCallback result = ' + result.success);
+  });
+} catch (err) {
+  hilog.error(0x0000, TAG, 'errCode: ' + (err as BusinessError).code + ', errMessage: ' +
+  (err as BusinessError).message);
+}
+```
 
 ## offDataReceived
 
@@ -471,8 +493,33 @@ offDataReceived(callback?: Callback<ArrayBuffer>): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 32390206 | Invalid parameter. |
-| 201 | Permission denied. |
+| [32390206](../../apis-distributedservice-kit/errorcode-link-enhance.md#32390206-参数非法) | Invalid parameter. |
+| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
+
+## 示例
+
+```TypeScript
+import { linkEnhance } from '@kit.DistributedServiceKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+import { hilog } from '@kit.PerformanceAnalysisKit';
+
+const TAG = "testDemo";
+
+try {
+  let peerDeviceId: string = "00:11:22:33:44:55";
+  hilog.info(0x0000, TAG, 'connection server deviceId = ' + peerDeviceId);
+  let connection: linkEnhance.Connection = linkEnhance.createConnection(peerDeviceId, "demo");
+  connection.onDataReceived((data: ArrayBuffer) => {
+    hilog.info(0x0000, TAG, 'recv dataLen = ' + data.byteLength);
+  });
+  connection.offDataReceived((data: ArrayBuffer) => {
+    hilog.info(0x0000, TAG, 'recv dataLen = ' + data.byteLength);
+  });
+} catch (err) {
+  hilog.error(0x0000, TAG, 'errCode: ' + (err as BusinessError).code + ', errMessage: ' +
+  (err as BusinessError).message);
+}
+```
 
 ## offDisconnected
 
@@ -504,8 +551,34 @@ offDisconnected(callback?: Callback<int>): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 32390206 | Invalid parameter. |
-| 201 | Permission denied. |
+| [32390206](../../apis-distributedservice-kit/errorcode-link-enhance.md#32390206-参数非法) | Invalid parameter. |
+| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
+
+## 示例
+
+```TypeScript
+import { linkEnhance } from '@kit.DistributedServiceKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+import { hilog } from '@kit.PerformanceAnalysisKit';
+
+const TAG = "testDemo";
+
+try {
+  let peerDeviceId: string = "00:11:22:33:44:55";
+  hilog.info(0x0000, TAG, 'connection server deviceId = ' + peerDeviceId);
+  let connection: linkEnhance.Connection = linkEnhance.createConnection(peerDeviceId, "demo");
+  connection.onDisconnected((number: int) => {
+    hilog.info(0x0000, TAG, 'connection disconnected reason = ' + number);
+  });
+  // 取消订阅断连通知
+  connection.offDisconnected((number: int) => {
+    hilog.info(0x0000, TAG, 'connection disconnected reason = ' + number);
+  });
+} catch (err) {
+  hilog.error(0x0000, TAG, 'errCode: ' + (err as BusinessError).code + ', errMessage: ' +
+  (err as BusinessError).message);
+}
+```
 
 ## on('connectResult')
 
@@ -538,8 +611,8 @@ on(type: 'connectResult', callback: Callback<ConnectResult>): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 32390206 | Invalid parameter. |
-| 201 | Permission denied. |
+| [32390206](../../apis-distributedservice-kit/errorcode-link-enhance.md#32390206-参数非法) | Invalid parameter. |
+| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
 
 ## 示例
 
@@ -598,8 +671,8 @@ on(type: 'disconnected', callback: Callback<number>): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 32390206 | Invalid parameter. |
-| 201 | Permission denied. |
+| [32390206](../../apis-distributedservice-kit/errorcode-link-enhance.md#32390206-参数非法) | Invalid parameter. |
+| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
 
 ## 示例
 
@@ -655,8 +728,8 @@ on(type: 'dataReceived', callback: Callback<ArrayBuffer>): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 32390206 | Invalid parameter. |
-| 201 | Permission denied. |
+| [32390206](../../apis-distributedservice-kit/errorcode-link-enhance.md#32390206-参数非法) | Invalid parameter. |
+| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
 
 ## 示例
 
@@ -713,8 +786,34 @@ onConnectResult(callback: Callback<ConnectResult>): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 32390206 | Invalid parameter. |
-| 201 | Permission denied. |
+| [32390206](../../apis-distributedservice-kit/errorcode-link-enhance.md#32390206-参数非法) | Invalid parameter. |
+| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
+
+## 示例
+
+```TypeScript
+import { linkEnhance } from '@kit.DistributedServiceKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+import { hilog } from '@kit.PerformanceAnalysisKit';
+
+const TAG = "testDemo";
+
+try {
+  let peerDeviceId: string = "00:11:22:33:44:55";
+  hilog.info(0x0000, TAG, 'connection server deviceId = ' + peerDeviceId);
+  let connection: linkEnhance.Connection = linkEnhance.createConnection(peerDeviceId, "demo");
+  // 订阅连接结果
+  connection.onConnectResult((result: linkEnhance.ConnectResult): void => {
+    hilog.info(0x0000, TAG, 'clientConnectResultCallback result = ' + result.success);
+  });
+
+  // 发起连接
+  connection.connect();
+} catch (err) {
+  hilog.error(0x0000, TAG, 'errCode: ' + (err as BusinessError).code + ', errMessage: ' +
+  (err as BusinessError).message);
+}
+```
 
 ## onDataReceived
 
@@ -746,8 +845,31 @@ onDataReceived(callback: Callback<ArrayBuffer>): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 32390206 | Invalid parameter. |
-| 201 | Permission denied. |
+| [32390206](../../apis-distributedservice-kit/errorcode-link-enhance.md#32390206-参数非法) | Invalid parameter. |
+| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
+
+## 示例
+
+```TypeScript
+import { linkEnhance } from '@kit.DistributedServiceKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+import { hilog } from '@kit.PerformanceAnalysisKit';
+
+const TAG = "testDemo";
+
+try {
+  let peerDeviceId: string = "00:11:22:33:44:55";
+  hilog.info(0x0000, TAG, 'connection server deviceId = ' + peerDeviceId);
+  let connection: linkEnhance.Connection = linkEnhance.createConnection(peerDeviceId, "demo");
+  connection.connect();
+  connection.onDataReceived((data: ArrayBuffer) => {
+    hilog.info(0x0000, TAG, 'recv dataLen = ' + data.byteLength);
+  });
+} catch (err) {
+  hilog.error(0x0000, TAG, 'errCode: ' + (err as BusinessError).code + ', errMessage: ' +
+  (err as BusinessError).message);
+}
+```
 
 ## onDisconnected
 
@@ -779,8 +901,31 @@ onDisconnected(callback: Callback<int>): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 32390206 | Invalid parameter. |
-| 201 | Permission denied. |
+| [32390206](../../apis-distributedservice-kit/errorcode-link-enhance.md#32390206-参数非法) | Invalid parameter. |
+| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
+
+## 示例
+
+```TypeScript
+import { linkEnhance } from '@kit.DistributedServiceKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+import { hilog } from '@kit.PerformanceAnalysisKit';
+
+const TAG = "testDemo";
+
+try {
+  let peerDeviceId: string = "00:11:22:33:44:55";
+  hilog.info(0x0000, TAG, 'connection server deviceId = ' + peerDeviceId);
+  let connection: linkEnhance.Connection = linkEnhance.createConnection(peerDeviceId, "demo");
+  // 订阅断连通知
+  connection.onDisconnected((reason: int) => {
+    hilog.info(0x0000, TAG, 'connection disconnected reason = ' + reason);
+  });
+} catch (err) {
+  hilog.error(0x0000, TAG, 'errCode: ' + (err as BusinessError).code + ', errMessage: ' +
+  (err as BusinessError).message);
+}
+```
 
 ## sendData
 
@@ -812,10 +957,10 @@ sendData(data: ArrayBuffer): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 32390206 | Invalid parameter. |
-| 32390300 | Internal error. |
-| 32390205 | Connection is not ready. |
-| 201 | Permission denied. |
+| [32390206](../../apis-distributedservice-kit/errorcode-link-enhance.md#32390206-参数非法) | Invalid parameter. |
+| [32390300](../../apis-distributedservice-kit/errorcode-link-enhance.md#32390300-内部错误) | Internal error. |
+| [32390205](../../apis-distributedservice-kit/errorcode-link-enhance.md#32390205-连接状态不可用) | Connection is not ready. |
+| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
 
 ## 示例
 

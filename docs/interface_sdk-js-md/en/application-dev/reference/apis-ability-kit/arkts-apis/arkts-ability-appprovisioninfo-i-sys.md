@@ -1,6 +1,7 @@
 # AppProvisionInfo (System API)
 
-应用[HarmonyAppProvision配置文件](../../../security/app-provision-structure.md)中的信息。
+The module provides information in the  
+[HarmonyAppProvision configuration file](../../../security/app-provision-structure.md).
 
 **Since:** 10
 
@@ -18,7 +19,7 @@
 readonly apl: string
 ```
 
-配置文件中的apl字段，为normal、system_basic和system_core其中之一。
+APL in the configuration file, which can be **normal**, **system_basic**, or **system_core**.
 
 **Type:** string
 
@@ -38,7 +39,7 @@ readonly apl: string
 readonly appDistributionType: string
 ```
 
-配置文件中的[分发类型](../../../security/app-provision-structure.md)。
+[Distribution type](../../../security/app-provision-structure.md) in the configuration file.
 
 **Type:** string
 
@@ -58,7 +59,8 @@ readonly appDistributionType: string
 readonly appIdentifier: string
 ```
 
-应用的唯一标识，详情信息可参考[什么是appIdentifier](../../../quick-start/common-problem-of-application.md#什么是appidentifier)。
+Unique ID of the application. For details, see  
+[What Is appIdentifier](../../../quick-start/common_problem_of_application.md#what-is-appidentifier).
 
 **Type:** string
 
@@ -78,7 +80,7 @@ readonly appIdentifier: string
 readonly bundleName?: string
 ```
 
-应用的包名。
+Bundle name of the application.
 
 **Type:** string
 
@@ -98,7 +100,7 @@ readonly bundleName?: string
 readonly certificate: string
 ```
 
-配置文件中的证书信息。
+Certificate information in the configuration file.
 
 **Type:** string
 
@@ -118,7 +120,7 @@ readonly certificate: string
 readonly developerId: string
 ```
 
-配置文件中的开发者ID。
+Developer ID in the configuration file.
 
 **Type:** string
 
@@ -138,7 +140,7 @@ readonly developerId: string
 readonly issuer: string
 ```
 
-配置文件中的发行者名称。
+Issuer name in the configuration file.
 
 **Type:** string
 
@@ -158,7 +160,7 @@ readonly issuer: string
 readonly organization: string
 ```
 
-应用的组织信息。
+Organization of the application.
 
 **Type:** string
 
@@ -178,7 +180,7 @@ readonly organization: string
 readonly type: string
 ```
 
-配置文件的类型，为debug或release。
+Type of the configuration file, which can be **debug** or **release**.
 
 **Type:** string
 
@@ -198,7 +200,7 @@ readonly type: string
 readonly uuid: string
 ```
 
-配置文件中的uuid。
+UUID in the configuration file.
 
 **Type:** string
 
@@ -218,7 +220,7 @@ readonly uuid: string
 readonly validity: Validity
 ```
 
-配置文件中的有效期。
+Validity period in the configuration file.
 
 **Type:** [Validity](arkts-ability-bundlemanager-validity-t-sys.md)
 
@@ -238,7 +240,7 @@ readonly validity: Validity
 readonly versionCode: long
 ```
 
-配置文件的版本号。
+Version number of the configuration file.
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：long
 
@@ -258,7 +260,7 @@ readonly versionCode: long
 readonly versionName: string
 ```
 
-配置文件的版本名称。
+Version name of the configuration file.
 
 **Type:** string
 

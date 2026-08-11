@@ -12,7 +12,7 @@ import { deviceManager } from 'kits/@kit.DriverDevelopmentKit';
 function queryDriverInfo(driverUid?: string): Array<Readonly<DriverInfo>>
 ```
 
-查询扩展外设驱动详细信息列表。如果没有设备接入，那么将会返回一个空的列表。
+Obtains the list of detailed information about peripheral drivers. If the device has no peripheral device connected, an empty list is returned.
 
 **Since:** 12
 
@@ -30,22 +30,22 @@ function queryDriverInfo(driverUid?: string): Array<Readonly<DriverInfo>>
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| driverUid | string | No | 驱动UID，通过queryDeviceInfo获得。 |
+| driverUid | string | No | Driver UID, which can be obtained by using **queryDeviceInfo**. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Array&lt;Readonly&lt;DriverInfo&gt;&gt; | 扩展外设驱动详细信息列表。 |
+| Array&lt;Readonly&lt;DriverInfo&gt;&gt; | List of detailed information about peripheral drivers. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 26300001 | ExternalDeviceManager service exception. |
-| 401 | Parameter error. Possible causes: 1.Incorrect parameter types. |
-| 201 | The permission check failed. |
-| 202 | Permission denied. A non-system application cannot call a system API. |
+| [26300001](../../apis-driverdevelopment-kit/errorcode-deviceManager.md#26300001-externaldevicemanager-service-exception) | ExternalDeviceManager service exception. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.Incorrect parameter types. |
+| [201](../../errorcode-universal.md#201-permission-denied) | The permission check failed. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission denied. A non-system application cannot call a system API. |
 
 ## Examples
 

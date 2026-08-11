@@ -1,6 +1,6 @@
 # LayoutMode
 
-页签内容排布方式枚举。
+Enumerates the layout modes of the images and texts on the bottom tabs.
 
 **Since:** 10
 
@@ -16,7 +16,7 @@
 AUTO = 0
 ```
 
-若页签宽度大于104vp，页签内容为左右排布（图标在左，文字在右），否则页签内容为上下排布（图标在上，文字在下）。仅TabBar为垂直模式或Fixed水平模式时有效。
+When the tab width is greater than 104 vp, the tab content is arranged from left to right. Otherwise,the tab content is arranged from top to bottom. This parameter is valid only when the tab bar is in  vertical mode or fixed horizontal mode.
 
 **Since:** 10
 
@@ -36,7 +36,7 @@ AUTO = 0
 VERTICAL = 1
 ```
 
-页签内容上下排布，图标在上，文字在下。适用于页签宽度有限、需要节省空间的场景。
+The tab content is arranged from top to bottom.
 
 **Since:** 10
 
@@ -56,7 +56,7 @@ VERTICAL = 1
 HORIZONTAL = 2
 ```
 
-页签内容左右排布，图标在左，文字在右。适用于页签宽度充足、需要展示更多内容的场景。
+The tab content is arranged from left to right.
 
 **Since:** 10
 

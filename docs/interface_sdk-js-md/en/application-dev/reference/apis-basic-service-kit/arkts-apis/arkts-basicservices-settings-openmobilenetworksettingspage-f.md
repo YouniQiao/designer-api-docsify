@@ -34,21 +34,6 @@ Open the mobile network settings page.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 16900020 | Failed to open the settings page via redirection. |
-| 16900010 | Parameter error. |
-
-## Examples
-
-```TypeScript
-import { settings } from '@kit.BasicServicesKit';
-import { common } from '@kit.AbilityKit';
-
-// Obtain the context from the component and ensure that the return value of this.getUIContext().getHostContext() is UIAbilityContext.
-const context: Context = this.getUIContext().getHostContext() as common.UIAbilityContext;
-try {
-  settings.openMobileNetworkSettingsPage(context);
-} catch (err) {
-  console.error(`Failed to open the mobile network settings page. code: ${err?.code}, message: ${err?.message}`);
-}
-```
+| [16900020](../../apis-basic-services-kit/errorcode-settings.md#16900020-failed-to-open-the-settings-page) | Failed to open the settings page via redirection. |
+| [16900010](../../apis-basic-services-kit/errorcode-settings.md#16900010-parameter-check-failed) | Parameter error. |
 

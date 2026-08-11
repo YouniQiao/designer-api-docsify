@@ -41,7 +41,7 @@ size: [
 
 图片大小，不支持设置百分比。
 
-**类型：** [         Dimension,         Dimension     ]
+**类型：** [         Dimension,         Dimension     ]
 
 **起始版本：** 23
 

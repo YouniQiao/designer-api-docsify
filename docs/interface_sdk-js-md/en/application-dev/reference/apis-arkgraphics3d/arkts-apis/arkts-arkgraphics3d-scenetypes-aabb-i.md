@@ -1,6 +1,6 @@
 # Aabb
 
-轴对齐边界盒.
+Axis aligned boundary box used to determine whether two objects in space are overlapping.
 
 **Since:** 12
 
@@ -16,7 +16,7 @@
 aabbMax: Vec3
 ```
 
-AABB最大角点的坐标, 单位为世界坐标系下的场景单位（例如cm、m、km等）.
+Maximum point of the axis-aligned bounding box, in scene units of the world coordinate system (such as cm, m, km, etc.).
 
 **Type:** [Vec3](arkts-arkgraphics3d-scenetypes-vec3-i.md)
 
@@ -34,7 +34,7 @@ AABB最大角点的坐标, 单位为世界坐标系下的场景单位（例如cm
 aabbMin: Vec3
 ```
 
-AABB最小角点的坐标, 单位为世界坐标系下的场景单位（例如cm、m、km等）.
+Minimum point of the axis-aligned bounding box, in scene units of the world coordinate system (such as cm, m, km, etc.).
 
 **Type:** [Vec3](arkts-arkgraphics3d-scenetypes-vec3-i.md)
 

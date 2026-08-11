@@ -1,6 +1,6 @@
 # MenuKeyboardAvoidMode
 
-菜单避让软键盘的模式。
+Enumerates the modes in which the menu avoids the soft keyboard.
 
 **Since:** 23
 
@@ -16,7 +16,7 @@
 NONE = 0
 ```
 
-菜单不避让软键盘。
+The menu does not avoid the soft keyboard.
 
 **Since:** 23
 
@@ -36,7 +36,7 @@ NONE = 0
 TRANSLATE_AND_RESIZE = 1
 ```
 
-菜单避让软键盘。如果空间不足，会平移或重新调整菜单大小避让软键盘。
+The menu avoids the soft keyboard. If the space is insufficient, the menu will be translated or resized to avoid the soft keyboard.
 
 **Since:** 23
 

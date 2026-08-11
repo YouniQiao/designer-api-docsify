@@ -4,7 +4,8 @@
 declare type OnAlphabetIndexerRequestPopupDataCallback  = (index: number) => Array<string>
 ```
 
-[usingPopup](AlphabetIndexerAttribute#usingPopup)设置值为true，索引项被选中时触发的事件。
+Represents the callback invoked when an index item is selected and  
+[usingPopup](AlphabetIndexerAttribute#usingPopup) is set to **true**.
 
 **Since:** 18
 

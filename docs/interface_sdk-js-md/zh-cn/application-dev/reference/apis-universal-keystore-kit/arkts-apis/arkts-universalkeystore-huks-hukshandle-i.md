@@ -18,12 +18,6 @@ huks Handle结构体。
 
 **系统能力：** SystemCapability.Security.Huks.Extension
 
-## 导入模块
-
-```TypeScript
-import { huks } from 'kits/@kit.UniversalKeystoreKit';
-```
-
 ## errorCode
 
 ```TypeScript

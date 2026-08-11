@@ -1,11 +1,5 @@
 # getSystemCpuUsage
 
-## 导入模块
-
-```TypeScript
-import { hidebug } from 'kits/@kit.PerformanceAnalysisKit';
-```
-
 ## getSystemCpuUsage
 
 ```TypeScript
@@ -36,7 +30,7 @@ function getSystemCpuUsage(): double
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 11400104 | The status of the system CPU usage is abnormal. |
+| [11400104](../errorcode-hiviewdfx-hidebug-cpuusage.md#11400104-cpuusage统计异常) | The status of the system CPU usage is abnormal. |
 
 ## 示例
 

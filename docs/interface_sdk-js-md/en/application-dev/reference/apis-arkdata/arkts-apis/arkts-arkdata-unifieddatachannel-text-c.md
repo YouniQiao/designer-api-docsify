@@ -1,8 +1,8 @@
 # Text
 
-文本类型数据，是[UnifiedRecord](arkts-arkdata-unifieddatachannel-unifiedrecord-c.md)的子类，也是文本类型数据的基类，用于描述文本类数据，推荐开发者优先使用Text的子类描述数据，如  
-[PlainText](arkts-arkdata-unifieddatachannel-plaintext-c.md)、[Hyperlink](arkts-arkdata-unifieddatachannel-hyperlink-c.md)、  
-[HTML](arkts-arkdata-unifieddatachannel-html-c.md)等具体子类。
+Represents the text data. It is a child class of [UnifiedRecord](arkts-arkdata-unifieddatachannel-unifiedrecord-c.md) and a base class of text data. You are advised to use the child class of **Text**, for example,   
+[PlainText](arkts-arkdata-unifieddatachannel-plaintext-c.md), [Hyperlink](arkts-arkdata-unifieddatachannel-hyperlink-c.md), and   
+[HTML](arkts-arkdata-unifieddatachannel-html-c.md), to describe data.
 
 **Inheritance/Implementation:** Text extends [UnifiedRecord](arkts-arkdata-unifieddatachannel-unifiedrecord-c.md)
 
@@ -26,17 +26,17 @@ import { unifiedDataChannel } from 'kits/@kit.ArkData';
 details?: Record<string, string>
 ```
 
-是一个字典类型对象，key和value都是string类型，用于描述文本内容。例如，可生成一个details内容为
+A dictionary type object, where both the key and value are of the string type and are used to describe the text content. For example, a data object with the following content can be created to describe a text file:
 
 {
 
-"title":"标题",
+"title":"Title of the file",
 
-"content":"内容"
+"content":"Content of the file"
 
 }
 
-的数据对象，用于描述一篇文章。非必填字段，默认值为空字典对象。
+The default value is an empty dictionary object.
 
 **Type:** [Record](../../apis-default/arkts-apis/arkts-record-t.md)&lt;string, string&gt;
 

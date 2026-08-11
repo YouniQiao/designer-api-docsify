@@ -1,6 +1,6 @@
 # RatingConfiguration
 
-开发者需要自定义class实现ContentModifier接口。继承自[CommonConfiguration](arkts-arkui-common-commonconfiguration-i.md)。
+RatingConfiguration used by rating content modifier.
 
 **Inheritance/Implementation:** RatingConfiguration extends [CommonConfiguration<RatingConfiguration>](CommonConfiguration<RatingConfiguration>)
 
@@ -18,9 +18,7 @@
 indicator: boolean
 ```
 
-评分条是否作为指示器使用。当值为true时，表示作为指示器；当值为false时，表示不作为指示器。
-
-默认值：false
+Indicates whether Rating is used as an indicator.
 
 **Type:** boolean
 
@@ -40,17 +38,7 @@ indicator: boolean
 rating: double
 ```
 
-设置并接收评分值。
-
-默认值：0
-
-取值范围： [0, stars]
-
-小于0取0，大于[stars](arkts-arkui-rating-ratingconfiguration-i.md#stars)取最大值stars。
-
-该参数支持[\$\$](../../../ui/state-management/arkts-two-way-sync.md)双向绑定变量。
-
-该参数支持[!!](../../../ui/state-management/arkts-new-binding.md#系统组件参数双向绑定)双向绑定变量。
+Current number of Rating.
 
 **Type:** double
 
@@ -70,9 +58,7 @@ rating: double
 stars: int
 ```
 
-评分条的星级总数。
-
-默认值：5
+Total stars of Rating.
 
 **Type:** int
 
@@ -92,9 +78,7 @@ stars: int
 stepSize: double
 ```
 
-评分条的评分步长。
-
-默认值：0.5
+The step size of the Rating.
 
 **Type:** double
 
@@ -114,7 +98,7 @@ stepSize: double
 triggerChange: Callback<double>
 ```
 
-触发评分数量变化。
+Trigger Rating select change.
 
 **Type:** [Callback](../arkts-components/arkts-arkui-callback-i.md)&lt;double&gt;
 

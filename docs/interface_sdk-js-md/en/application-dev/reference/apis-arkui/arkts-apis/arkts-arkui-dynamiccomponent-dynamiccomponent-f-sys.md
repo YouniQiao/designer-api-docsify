@@ -8,7 +8,7 @@ export declare function DynamicComponent(
 ): DynamicComponentAttribute
 ```
 
-创建DynamicComponent组件，用于显示Worker线程中运行的Abc UI。
+Defines DynamicComponent Component.
 
 **Since:** 26.0.0
 
@@ -26,7 +26,7 @@ export declare function DynamicComponent(
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| options | [DynamicOptions](../arkts-components/arkts-arkui-dynamicoptions-i-sys.md) | Yes | DynamicComponent的构造配置参数，用于配置要加载的Abc页面入口、运行Worker及显示选项。 |
+| options | [DynamicOptions](../arkts-components/arkts-arkui-dynamicoptions-i-sys.md) | Yes | The options |
 
 **Return value:**
 
@@ -43,11 +43,11 @@ export declare function DynamicComponent(
 ): DynamicComponentAttribute
 ```
 
-定义DynamicComponent组件。要求在组件属性设置开始时调用setDynamicComponentOptions，在组件属性设置结束时调用applyAttributeFinish。
+Defines DynamicComponent Component.It requires call setDynamicComponentOptions at start of the component attribute set-up and it requires call applyAttributeFinish at the end of the component attribute set-up.
 
-**Since:** 26.0.0
+**Since:** 26.1.0
 
-**ArkTS mode:** ArkTS-Sta only, since version 26.0.0.
+**ArkTS mode:** ArkTS-Sta only, since version 26.1.0.
 
 **Decorator:** @Builder
 
@@ -63,11 +63,11 @@ export declare function DynamicComponent(
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| style | [CustomBuilderT](../arkts-components/arkts-arkui-custombuildert-t.md)&lt;DynamicComponentAttribute&gt; | Yes | 用于设置DynamicComponent属性的回调。 |
+| style | [CustomBuilderT](../arkts-components/arkts-arkui-custombuildert-t.md)&lt;DynamicComponentAttribute&gt; | Yes | the callback to set up DynamicComponent's attributes. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [DynamicComponentAttribute](../arkts-components/arkts-arkui-dynamiccomponent-attribute.md) | DynamicComponent的属性。 |
+| [DynamicComponentAttribute](../arkts-components/arkts-arkui-dynamiccomponent-attribute.md) | The attribute of the DynamicComponent. |
 

@@ -1,11 +1,5 @@
 # off
 
-## 导入模块
-
-```TypeScript
-import { mechanicManager } from 'kits/@kit.MechanicKit';
-```
-
 ## off('attachStateChange')
 
 ```TypeScript
@@ -33,7 +27,7 @@ Unsubscribes from device attachment state change events.
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 33300001 | Service exception. |
+| [33300001](../errorcode-mechanic.md#33300001-系统错误) | Service exception. |
 
 ## 示例
 
@@ -77,7 +71,7 @@ function off(type: 'trackingStateChange', callback?: Callback<TrackingEventInfo>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 33300001 | Service exception. |
+| [33300001](../errorcode-mechanic.md#33300001-系统错误) | Service exception. |
 
 ## 示例
 

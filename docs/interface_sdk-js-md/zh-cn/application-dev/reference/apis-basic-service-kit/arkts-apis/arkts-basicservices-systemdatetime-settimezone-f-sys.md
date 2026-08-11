@@ -1,11 +1,5 @@
 # setTimezone（系统接口）
 
-## 导入模块
-
-```TypeScript
-import { systemDateTime } from 'kits/@kit.BasicServicesKit';
-```
-
 ## setTimezone
 
 ```TypeScript
@@ -37,12 +31,14 @@ function setTimezone(timezone: string, callback: AsyncCallback<void>): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 401 | Parameter error. Possible causes: &lt;br&gt; 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameter types. |
-| 201 | Permission denied |
-| 202 | Permission verification failed. A non-system application calls a system API. |
-| 204 | Access denied due to user access control policy. Possible causes: 1. The operation is restricted by the OS-account constraint. 2. The required privilege for the operation has not been granted.<br>**适用版本：** 24+ |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: &lt;br&gt; 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameter types. |
+| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed. A non-system application calls a system API. |
+| [204](../../errorcode-universal.md#204-用户访问控制策略拒绝此访问) | Access denied due to user access control policy. Possible causes: 1. The operation is restricted by the OS-account constraint. 2. The required privilege for the operation has not been granted.<br>**适用版本：** 24+ |
 
 ## 示例
+
+ArkTS-Dyn示例：
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -58,6 +54,24 @@ try {
 } catch (err) {
   let error = err as BusinessError;
   console.error(`Failed to set timezone. Code: ${error.code}, message: ${error.message}`);
+}
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+import { BusinessError } from '@ohos.base';
+
+try {
+  systemDateTime.setTimezone('Asia/Jakarta', (error: BusinessError | null) => {
+    if (error) {
+      console.error(`Failed to set timezone. message: ${error.message}, code: ${error.code}`);
+      return;
+    }
+    console.error(`Succeeded in setting timezone.`);
+  });
+} catch(error: BusinessError) {
+  console.error(`setTimezone error: ${error.message}, code: ${error.code}`);
 }
 ```
 
@@ -98,12 +112,14 @@ function setTimezone(timezone: string): Promise<void>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 401 | Parameter error. Possible causes: &lt;br&gt; 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameter types. |
-| 201 | Permission denied |
-| 202 | Permission verification failed. A non-system application calls a system API. |
-| 204 | Access denied due to user access control policy. Possible causes: 1. The operation is restricted by the OS-account constraint. 2. The required privilege for the operation has not been granted.<br>**适用版本：** 24+ |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: &lt;br&gt; 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameter types. |
+| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed. A non-system application calls a system API. |
+| [204](../../errorcode-universal.md#204-用户访问控制策略拒绝此访问) | Access denied due to user access control policy. Possible causes: 1. The operation is restricted by the OS-account constraint. 2. The required privilege for the operation has not been granted.<br>**适用版本：** 24+ |
 
 ## 示例
+
+ArkTS-Dyn示例：
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -117,6 +133,25 @@ try {
 } catch (err) {
   let error = err as BusinessError;
   console.error(`Failed to set timezone. Code: ${error.code}, message: ${error.message}`);
+}
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+import { BusinessError } from '@ohos.base';
+
+try {
+  await systemDateTime.setTimezone('Europe/Moscow');
+  systemDateTime.getTimezone((error: BusinessError | null, data: string | undefined) => {
+    if (error) {
+      console.error(`Failed to set timezone. message: ${error.message}, code: ${error.code}`);
+      return;
+    }
+    console.error(`Succeeded in getting timezone : ${data}`);
+  });
+} catch(error: BusinessError) {
+  console.error(`setTimezone error: ${error.message}, code: ${error.code}`);
 }
 ```
 

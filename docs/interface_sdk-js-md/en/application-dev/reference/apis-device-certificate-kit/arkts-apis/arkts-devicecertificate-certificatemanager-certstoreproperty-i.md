@@ -1,6 +1,6 @@
 # CertStoreProperty
 
-表示获取证书存储位置的参数集合，包括证书的类型及证书的位置。
+Represents the storage information about a certificate, including the certificate type and location.
 
 **Since:** 18
 
@@ -22,7 +22,7 @@ import { certificateManager } from 'kits/@kit.DeviceCertificateKit';
 certAlg?: CertAlgorithm
 ```
 
-表示证书算法类型。仅当certType为CA_CERT_SYSTEM时有效，默认值为INTERNATIONAL。海外设备不支持SM算法。
+Certificate algorithm. This parameter is valid only when **certType** is set to **CA_CERT_SYSTEM**. The default value is **INTERNATIONAL**.Devices outside China do not support the SM algorithm.
 
 **Type:** [CertAlgorithm](arkts-devicecertificate-certificatemanager-certalgorithm-e.md)
 
@@ -40,7 +40,7 @@ certAlg?: CertAlgorithm
 certScope?: CertScope
 ```
 
-表示证书的存储位置。当证书类型为CA_CERT_USER时，此项为必选项。
+Scope of the certificate. This parameter is mandatory when **certType** is **CA_CERT_USER**.
 
 **Type:** [CertScope](arkts-devicecertificate-certificatemanager-certscope-e.md)
 
@@ -58,7 +58,7 @@ certScope?: CertScope
 certType: CertType
 ```
 
-表示证书的类型。
+Type of the certificate.
 
 **Type:** [CertType](../../apis-network-kit/arkts-apis/arkts-network-http-certtype-e.md)
 

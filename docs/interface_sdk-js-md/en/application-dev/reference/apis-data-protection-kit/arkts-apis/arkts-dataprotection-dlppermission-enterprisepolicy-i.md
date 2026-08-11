@@ -1,6 +1,6 @@
 # EnterprisePolicy
 
-表示企业定制策略。
+Represents an enterprise custom policy.
 
 **Since:** 21
 
@@ -22,7 +22,7 @@ import { dlpPermission } from 'kits/@kit.DataProtectionKit';
 policyString: string
 ```
 
-表示企业定制策略的JSON字符串。长度不超过2&lt;sup&gt;22&lt;/sup&gt;字节，超出此范围输出错误日志。
+JSON string of an enterprise custom policy. The value contains a maximum of 4,194,304 bytes. If the value is out of range, an error log is generated.
 
 **Type:** string
 

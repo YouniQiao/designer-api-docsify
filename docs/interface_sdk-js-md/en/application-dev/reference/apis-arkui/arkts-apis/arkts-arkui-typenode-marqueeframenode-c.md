@@ -1,6 +1,6 @@
 # MarqueeFrameNode
 
-定义Marquee类型的FrameNode。
+Define the Marquee type of FrameNode.
 
 **Inheritance/Implementation:** MarqueeFrameNode extends [TypedFrameNode<MarqueeAttribute>](TypedFrameNode<MarqueeAttribute>)
 
@@ -18,7 +18,7 @@
 abstract initialize(value: MarqueeOptions): MarqueeAttribute
 ```
 
-初始化Marquee类型的FrameNode。
+Initialize Marquee FrameNode.
 
 **Since:** 23
 

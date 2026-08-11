@@ -1,11 +1,5 @@
 # getDeleteSqlInfo
 
-## 导入模块
-
-```TypeScript
-import { relationalStore } from 'kits/@kit.ArkData';
-```
-
 ## getDeleteSqlInfo
 
 ```TypeScript
@@ -26,7 +20,7 @@ function getDeleteSqlInfo(predicates: RdbPredicates):SqlInfo
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| predicates | [RdbPredicates](arkts-arkdata-relationalstore-rdbpredicates-c.md) | 是 | 与指定字段匹配的谓词。 |
+| predicates | [RdbPredicates](arkts-arkdata-rdb-rdbpredicates-c.md) | 是 | 与指定字段匹配的谓词。 |
 
 **返回值：**
 
@@ -38,14 +32,25 @@ function getDeleteSqlInfo(predicates: RdbPredicates):SqlInfo
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 14800001 | Invalid arguments. Possible causes: 1. Parameter is out of valid range. |
+| [14800001](../errorcode-data-rdb.md#14800001-无效的参数) | Invalid arguments. Possible causes: 1. Parameter is out of valid range. |
 
 ## 示例
+
+ArkTS-Dyn示例：
 
 ```TypeScript
 const predicates = new relationalStore.RdbPredicates("users");
 predicates.equalTo("tableName", "a");
 predicates.notEqualTo("age", 18);
+const sqlInfo: relationalStore.SqlInfo = relationalStore.getDeleteSqlInfo(predicates);
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+const predicates = new relationalStore.RdbPredicates("users");
+predicates.equalTo("tableName", "a");
+predicates.notEqualTo("age", 18 as long);
 const sqlInfo: relationalStore.SqlInfo = relationalStore.getDeleteSqlInfo(predicates);
 ```
 

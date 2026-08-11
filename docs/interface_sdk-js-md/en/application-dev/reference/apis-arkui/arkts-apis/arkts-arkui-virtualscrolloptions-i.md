@@ -1,6 +1,6 @@
 # VirtualScrollOptions
 
-配置懒加载模式下期望加载的数据项总数、复用能力、数据精准懒加载能力。从API版本26.0.0开始，支持配置内存优化策略。
+Configures the expected total number of data items to be loaded in lazy loading mode, the reuse capability, and the precise data lazy loading capability.
 
 **Since:** 12
 
@@ -16,17 +16,21 @@
 onLazyLoading?(index: number): void
 ```
 
-可选方法，懒加载指定索引的数据。需要开发者给定数据加载方法。
+(Optional) Lazily loads data at a specified index. You need to provide a data loading method.
 
-onLazyLoading方法需在懒加载场景下使用。开发者可设置自定义方法，用于向指定的数据源index中写入数据。以下为onLazyLoading的处理规则：
+The **onLazyLoading** method must be used in lazy loading scenarios. You can implement a custom method to write data to a specified index in the data source. The processing rules for **onLazyLoading** are as follows:
 
-- Repeat读取数据源中index对应的数据之前，会先检查index处是否存在数据。  
-- 如果不存在数据，但开发者提供了onLazyLoading方法，Repeat将调用此方法。  
-- 在onLazyLoading方法中，开发者需要向Repeat指定的index中写入数据，方式如下：`arr[index] = ...`，其中`arr`表示传入Repeat的数组。不允许使用除`[]`以外的数组操作，且不允许写入  
-指定index以外的元素，否则系统将抛出异常。  
-- onLazyLoading方法执行完成后，若指定index中仍无数据，将导致当前index和后续索引对应的组件无法加载。  
-- 精准懒加载能力为可选配置项。当onLazyLoading缺省，并且totalCount或onTotalCount的返回值大于数据源长度时，Repeat不会渲染列表滚动到数据源末尾时缺失的后续数据。  
-- onLazyLoading方法中应避免阻塞式耗时操作（如同步网络请求、复杂计算）。若数据加载耗时可能影响滚动流畅度，建议先在onLazyLoading方法中为此数据创建占位符，再创建异步任务加载数据。
+- Before reading the data corresponding to an index in the data source, the **Repeat** component checks whether  
+data exists at the index.  
+- If no data exists but the **onLazyLoading** method is implemented, **Repeat** calls this method.  
+- In the **onLazyLoading** method, you need to write data to the index specified by **Repeat** in the following  
+format: arr[index] =..., where **arr** indicates the array passed to **Repeat**. Array operations except **[]** are not allowed, and elements except the specified index cannot be written. Otherwise, the system throws an exception.  
+- After the **onLazyLoading** method is executed, if no data exists in the specified index, the components  
+corresponding to the current index and subsequent indexes cannot be loaded.  
+- The precise lazy loading capability is optional. If **onLazyLoading** is not specified and the return value of  
+**totalCount** or **onTotalCount** is greater than the data source length, **Repeat** does not render the list scrolling to the bottom.  
+- Avoid using the **onLazyLoading** method to execute time-consuming operations. If data loading takes a long time,  
+you are advised to create a placeholder for the data in the **onLazyLoading** method and then create an asynchronous task to load the data.
 
 **Since:** 19
 
@@ -44,7 +48,7 @@ onLazyLoading方法需在懒加载场景下使用。开发者可设置自定义�
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| index | number | Yes | 需要加载的数据项对应的索引。 &lt;br&gt;取值范围：自然数。 |
+| index | number | Yes | Index of the data item to be loaded. &lt;br&gt;Value range: natural numbers |
 
 ## onTotalCount
 
@@ -52,18 +56,20 @@ onLazyLoading方法需在懒加载场景下使用。开发者可设置自定义�
 onTotalCount?(): number
 ```
 
-可选方法，计算期望加载的数据项总数。需要开发者给定计算方法，其返回值可以不等于数据源长度（实际传入Repeat的数组的长度）。
+(Optional) Calculates the expected total number of data items to be loaded. You need to provide a calculation method, and its return value may not be equal to the data source length (length of the array passed to **Repeat**).
 
-[totalCount](arkts-arkui-virtualscrolloptions-i.md#totalcount)和onTotalCount()的返回值都表示期望加载的数据项总数。开发者可直接设置totalCount属性，给出期望加载的数据项总数，也可以通过onTotalCount()设定自定义方法，计算期望加载的数据项总数。totalCount与onTotalCount()最多设置一个。如果均未设置，则采用默认值：数据源长度；如果同时设置，则忽略totalCount。
+Both the return values of [totalCount](arkts-arkui-virtualscrolloptions-i.md) and **onTotalCount()** indicate the expected total number of data items to be loaded. You can directly set the **totalCount** attribute to specify the expected total number of data items to be loaded, or use **onTotalCount()** to set a custom method to calculate the expected total number of data items to be loaded. Use either **totalCount** or **onTotalCount**. If neither is set, the default value is used. If both are set, **totalCount** is ignored.
 
-onTotalCount()不同返回值的数据加载处理规则与totalCount一致，具体如下：
+The data loading rules for different return values of **onTotalCount()** are the same as those for **totalCount**.The details are as follows:
 
-- onTotalCount()返回值 = 0时，不加载数据。  
-- 0 < onTotalCount()返回值 &lt;= 数据源长度时，只加载区间[0, onTotalCount()返回值 - 1]索引范围内的数据。  
-- onTotalCount()返回值 &gt; 数据源长度时，代表Repeat期望加载区间[0, onTotalCount()返回值 - 1]索引范围内的数据，容器组件滚动条样式根据onTotalCount()返回值变化。在容器组件滚  
-动过程中，应用需要保证在列表即将滑动到数据源末尾时请求后续数据。开发者需要对数据请求的错误场景（如网络延迟）进行保护操作，直到数据源全部加载完成，否则列表滑动过程中会出现滚动效果异常。建议配合使用  
-[onLazyLoading](arkts-arkui-virtualscrolloptions-i.md#onlazyloading)实现数据懒加载。  
-- onTotalCount()返回值是非自然数时，由数据源长度取代其返回值。
+- If the return value of **onTotalCount()** is **0**, no data is loaded.  
+- If the return value of **onTotalCount()** is in the range (0, Data source length], only data in the index range  
+[0, Return value – 1] is loaded.  
+- If the return value of **onTotalCount()** is greater than the data source length, the **Repeat** component  
+expects to load data in the index range [0, Return value – 1]. The scrollbar style of the container component changes according to the value of **totalCount**. During the scrolling of the container component, the application must ensure that subsequent data is requested before the list is about to reach the end of the data source. You need to handle error scenarios (such as network delays) for data requests until all data sources are loaded;otherwise, scrolling exceptions may occur during list scrolling. You are advised to use  
+[onLazyLoading](arkts-arkui-virtualscrolloptions-i.md#onlazyloading) to implement lazy loading.  
+- If the return value of **onTotalCount()** is not a natural number, the data source length will be used as the  
+return value.
 
 **Since:** 19
 
@@ -81,7 +87,7 @@ onTotalCount()不同返回值的数据加载处理规则与totalCount一致，�
 
 | Type | Description |
 | --- | --- |
-| number | 期望加载的数据项总数。 &lt;br&gt;取值范围：自然数。 |
+| number | Expected total number of data items to be loaded. &lt;br&gt;Value range: natural numbers |
 
 ## memoryOptimizationStrategy
 
@@ -89,9 +95,7 @@ onTotalCount()不同返回值的数据加载处理规则与totalCount一致，�
 memoryOptimizationStrategy?: RepeatMemOptStrategy
 ```
 
-Repeat的内存优化策略。该参数在创建Repeat时设定，不支持动态修改。
-
-默认值：[DEFAULT](arkts-arkui-repeatmemoptstrategy-e.md)
+Memory optimization strategy for Repeat VirtualScroll.
 
 **Type:** [RepeatMemOptStrategy](arkts-arkui-repeat-repeatmemoptstrategy-e.md)
 
@@ -113,7 +117,13 @@ Repeat的内存优化策略。该参数在创建Repeat时设定，不支持动�
 reusable?: boolean
 ```
 
-是否开启复用功能。当Repeat的子组件为[@ReusableV2](../../../ui/state-management/arkts-new-reusableV2.md)装饰的自定义组件时，Repeat自身的复用能力优先于
+Whether to enable the reuse feature.
+
+**true**: Enable the reuse feature.
+
+**false**: Disable the reuse feature.
+
+Default value: **true**.
 
 **Type:** boolean
 
@@ -135,22 +145,22 @@ reusable?: boolean
 totalCount?: number
 ```
 
-期望加载的数据项总数，可以不等于数据源长度（实际传入Repeat的数组的长度）。
+Expected total number of data items to be loaded, which may not be equal to the data source length (length of the array passed to **Repeat**).
 
-取值范围：自然数。
+Value range: natural numbers
 
-totalCount与onTotalCount()最多设置一个；如果均未设置，则采用默认值：数据源长度；如果同时设置，则忽略totalCount。
+If **totalCount** is not specified or exceeds the value range, **totalCount** takes the value of the data source length, and the list scrolls normally.
 
-totalCount缺省或超出取值范围时，totalCount取值为数据源长度，列表正常滚动。
+If **totalCount** is set to **0**, no data is loaded.
 
-totalCount = 0时，不加载数据。
+If the value of **totalCount** is in the range (0, Data source length], only data in the range  
+[0, **totalCount** – 1] is rendered on the GUI.
 
-0 < totalCount &lt;= 数据源长度时，界面中只渲染区间[0, totalCount - 1]范围内的数据。
+If the value of **totalCount** is greater than the data source length, the **Repeat** component renders data in the range [0, **totalCount** – 1], and the scrollbar style of the container component changes according to the value of  
+**totalCount**. During the scrolling of the container component, the application must ensure that subsequent data is requested before the list is about to reach the end of the data source. You need to handle error scenarios (such as network delays) for data requests until all data sources are loaded; otherwise, scrolling exceptions may occur during list scrolling. You are advised to use [onLazyLoading](arkts-arkui-virtualscrolloptions-i.md#onlazyloading) to implement lazy loading.
 
-totalCount &gt; 数据源长度时，Repeat将渲染区间[0, totalCount - 1]范围内的数据，容器组件滚动条样式根据totalCount值变化。在容器组件滚动过程中，应用需要保证在列表即将滑动到数据源末尾时请求后续数据。开发者需要对数据请求的错误场景（如网络延迟）进行保护操作，直到数据源全部加载完成，否则列表滑动过程中会出现滚动效果异常。建议配合使用  
-[onLazyLoading](arkts-arkui-virtualscrolloptions-i.md#onlazyloading)实现数据懒加载。
-
-除totalCount属性外，开发者也可以通过[onTotalCount](arkts-arkui-virtualscrolloptions-i.md#ontotalcount)方法设置自定义方法，计算期望加载的数据项总数。
+In addition to the **totalCount** attribute, you can also use the  
+[onTotalCount](arkts-arkui-virtualscrolloptions-i.md#ontotalcount) method to set a custom method to calculate the expected total number of data items to be loaded.
 
 **Type:** number
 

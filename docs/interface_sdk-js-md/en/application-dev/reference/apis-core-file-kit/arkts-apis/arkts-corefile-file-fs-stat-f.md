@@ -12,7 +12,7 @@ import { Options, ReaderIteratorResult, Watcher, ReadTextOptions, WatchEventList
 declare function stat(file: string | number): Promise<Stat>
 ```
 
-获取文件或目录详细属性信息，使用promise异步回调。
+Obtains detailed attribute information of a file or directory. This API uses a promise to return the result.
 
 **Since:** 9
 
@@ -28,13 +28,13 @@ declare function stat(file: string | number): Promise<Stat>
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| file | string \| number | Yes | 文件或目录的应用沙箱路径path、URI或已打开的文件描述符fd。&lt;br&gt;**说明：**从API version 22开始，支持传入URI。 |
+| file | string \| number | Yes | Application sandbox path, URI, or FD of the file or directory.&lt;br&gt;**Note：**: URIs can be passed since API version 22. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;Stat&gt; | Promise对象。返回文件或目录的具体信息。 |
+| Promise&lt;Stat&gt; | Promise used to return the file or directory information. |
 
 **Error codes:**
 
@@ -61,7 +61,7 @@ declare function stat(file: string | number): Promise<Stat>
 declare function stat(file: string | number, callback: AsyncCallback<Stat>): void
 ```
 
-获取文件或目录的详细属性信息，使用callback异步回调。
+Obtains detailed attribute information of a file or directory. This API uses an asynchronous callback to return the result.
 
 **Since:** 9
 
@@ -77,8 +77,8 @@ declare function stat(file: string | number, callback: AsyncCallback<Stat>): voi
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| file | string \| number | Yes | 文件或目录的应用沙箱路径path、URI或已打开的文件描述符fd。&lt;br&gt;**说明：**从API version 22开始，支持传入URI。 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Stat&gt; | Yes | 异步获取文件或目录的信息之后的回调。 |
+| file | string \| number | Yes | Application sandbox path, URI, or FD of the file or directory.&lt;br&gt;**Note：**: URIs can be passed since API version 22. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Stat&gt; | Yes | Callback used to return the file or directory information obtained. |
 
 **Error codes:**
 

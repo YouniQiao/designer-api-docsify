@@ -12,8 +12,8 @@ import { EditorMenuOptions, SelectionMenuOptions, EditorEventInfo, SelectionMenu
 
 | Name | Description |
 | --- | --- |
-| [SelectionMenuOnCopyCallback](arkts-arkui-selectionmenuoncopycallback-t.md) | 替代内置系统菜单复制项的事件回调。 |
-| [SelectionMenuOnCutCallback](arkts-arkui-selectionmenuoncutcallback-t.md) | 替代内置系统菜单剪切项的事件回调。 |
-| [SelectionMenuOnPasteCallback](arkts-arkui-selectionmenuonpastecallback-t.md) | 替代内置系统菜单粘贴项的事件回调。 |
-| [SelectionMenuOnSelectAllCallback](arkts-arkui-selectionmenuonselectallcallback-t.md) | 替代内置系统菜单全选项的事件回调。 |
+| [SelectionMenuOnCopyCallback](arkts-arkui-selectionmenuoncopycallback-t.md) | Defines a SelectionMenu callback when onCopy. |
+| [SelectionMenuOnCutCallback](arkts-arkui-selectionmenuoncutcallback-t.md) | Defines a SelectionMenu callback when onCut. |
+| [SelectionMenuOnPasteCallback](arkts-arkui-selectionmenuonpastecallback-t.md) | Defines a SelectionMenu callback when onPaste. |
+| [SelectionMenuOnSelectAllCallback](arkts-arkui-selectionmenuonselectallcallback-t.md) | Defines a SelectionMenu callback when onSelectAll. |
 

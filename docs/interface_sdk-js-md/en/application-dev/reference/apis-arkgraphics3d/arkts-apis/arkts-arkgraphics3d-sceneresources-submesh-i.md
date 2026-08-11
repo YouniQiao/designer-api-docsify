@@ -1,6 +1,6 @@
 # SubMesh
 
-子网格资源.
+Sub mesh resource.
 
 **Since:** 12
 
@@ -16,7 +16,7 @@
 readonly aabb: Aabb
 ```
 
-子网格的轴对齐包围盒.
+The axis aligned bounding box of the sub mesh.
 
 **Type:** [Aabb](arkts-arkgraphics3d-scenetypes-aabb-i.md)
 
@@ -34,7 +34,7 @@ readonly aabb: Aabb
 material: Material
 ```
 
-子网格的材质.
+The material of the sub mesh.
 
 **Type:** [Material](arkts-arkgraphics3d-sceneresources-material-i.md)
 
@@ -52,7 +52,7 @@ material: Material
 name: string
 ```
 
-子网格的名称.
+The name of the sub mesh.
 
 **Type:** string
 

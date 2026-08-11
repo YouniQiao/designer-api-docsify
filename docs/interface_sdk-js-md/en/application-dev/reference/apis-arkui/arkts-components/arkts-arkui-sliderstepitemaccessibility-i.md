@@ -1,6 +1,6 @@
 # SliderStepItemAccessibility
 
-Slider刻度点的无障碍文本信息。
+Provides accessibility configuration of the slider step markers.
 
 **Since:** 20
 
@@ -16,9 +16,9 @@ Slider刻度点的无障碍文本信息。
 text?: ResourceStr
 ```
 
-无障碍文本，供屏幕阅读器等工具读取，增强无障碍功能。 
+Text for assistive technologies (for example, screen readers).
 
-默认值：""
+Default value: **""**
 
 **Type:** [ResourceStr](../arkts-apis/arkts-arkui-resourcestr-t.md)
 

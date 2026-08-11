@@ -4,7 +4,7 @@
 export declare type DepthComponentErrorCallback = (error: DepthComponentErrorEvent) => void
 ```
 
-背景资源加载失败的回调函数。使用callback异步回调。
+Callback invoked when an error occurs during background resource loading.
 
 **Since:** 26.0.0
 
@@ -22,5 +22,5 @@ export declare type DepthComponentErrorCallback = (error: DepthComponentErrorEve
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| error | [DepthComponentErrorEvent](../arkts-components/arkts-arkui-depthcomponenterrorevent-i-sys.md) | Yes | 背景资源加载失败的事件信息。 |
+| error | [DepthComponentErrorEvent](../arkts-components/arkts-arkui-depthcomponenterrorevent-i-sys.md) | Yes |  |
 

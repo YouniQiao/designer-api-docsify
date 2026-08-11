@@ -12,12 +12,6 @@
 
 **系统接口：** 此接口为系统接口。
 
-## 导入模块
-
-```TypeScript
-import { cloudData } from 'kits/@kit.ArkData';
-```
-
 ## batchQueryLastSyncInfo
 
 ```TypeScript
@@ -60,10 +54,10 @@ static batchQueryLastSyncInfo(
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 14800001 | Invalid arguments. Possible causes: 1. the accountId is empty; 2. the bundlename is null; 3. the number of bundleInfos exceeds the upper limit or the number is 0. |
-| 801 | Capability not supported because the device does not support the device-cloud capability. |
-| 201 | Permission verification failed, usually the result returned by VerifyAccessToken. |
-| 202 | Permission verification failed, application which is not a system application uses system API. |
+| [14800001](../errorcode-data-rdb.md#14800001-无效的参数) | Invalid arguments. Possible causes: 1. the accountId is empty; 2. the bundlename is null; 3. the number of bundleInfos exceeds the upper limit or the number is 0. |
+| [801](../../errorcode-universal.md#801-该设备不支持此api) | Capability not supported because the device does not support the device-cloud capability. |
+| [201](../../errorcode-universal.md#201-权限校验失败) | Permission verification failed, usually the result returned by VerifyAccessToken. |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed, application which is not a system application uses system API. |
 
 ## 示例
 
@@ -79,11 +73,11 @@ const bundleInfos: Array<cloudData.BundleInfo> = [
 try {
   cloudData.Config.batchQueryLastSyncInfo(accountId, bundleInfos).then((result) => {
     console.info(`Succeeded in querying last sync info. Result is ${JSON.stringify(result)}`);
-  }).catch((err: BusinessError) => {
+  }).catch((err) => {
     console.error(`Failed to query last sync info. Error code is ${err.code}, message is ${err.message}`);
   });
-} catch(err) {
-  let error = err as BusinessError;
+} catch(e) {
+  let error = e as BusinessError;
   console.error(`An unexpected error occurred. Code: ${error.code}, message: ${error.message}`);
 }
 ```
@@ -126,28 +120,28 @@ static changeAppCloudSwitch(
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2 . Incorrect parameter types; 3. Parameter verification failed. |
-| 801 | Capability not supported. |
-| 201 | Permission verification failed, usually the result returned by VerifyAccessToken. |
-| 202 | Permission verification failed, application which is not a system application uses system API. |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2 . Incorrect parameter types; 3. Parameter verification failed. |
+| [801](../../errorcode-universal.md#801-该设备不支持此api) | Capability not supported. |
+| [201](../../errorcode-universal.md#201-权限校验失败) | Permission verification failed, usually the result returned by VerifyAccessToken. |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed, application which is not a system application uses system API. |
 
 ## 示例
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
 
-let account: string = "test_id";
-let bundleName: string = "test_bundleName";
+let account: string = 'test_id';
+let bundleName: string = 'test_bundleName';
 try {
-  cloudData.Config.changeAppCloudSwitch(account, bundleName, true, (err: BusinessError) => {
+  cloudData.Config.changeAppCloudSwitch(account, bundleName, true, (err: BusinessError|null) => {
     if (err === undefined) {
       console.info('Succeeded in changing App cloud switch');
     } else {
       console.error(`Failed to change App cloud switch. Code: ${err.code}, message: ${err.message}`);
     }
   });
-} catch (err) {
-  let error = err as BusinessError;
+} catch (e) {
+  let error = e as BusinessError;
   console.error(`An unexpected error occurred. Code: ${error.code}, message: ${error.message}`);
 }
 ```
@@ -190,26 +184,26 @@ static changeAppCloudSwitch(accountId: string, bundleName: string, status: boole
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2 . Incorrect parameter types; 3. Parameter verification failed. |
-| 801 | Capability not supported. |
-| 201 | Permission verification failed, usually the result returned by VerifyAccessToken. |
-| 202 | Permission verification failed, application which is not a system application uses system API. |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2 . Incorrect parameter types; 3. Parameter verification failed. |
+| [801](../../errorcode-universal.md#801-该设备不支持此api) | Capability not supported. |
+| [201](../../errorcode-universal.md#201-权限校验失败) | Permission verification failed, usually the result returned by VerifyAccessToken. |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed, application which is not a system application uses system API. |
 
 ## 示例
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
 
-let account: string = "test_id";
-let bundleName: string = "test_bundleName";
+let account: string = 'test_id';
+let bundleName: string = 'test_bundleName';
 try {
   cloudData.Config.changeAppCloudSwitch(account, bundleName, true).then(() => {
     console.info('Succeeded in changing App cloud switch');
-  }).catch((err: BusinessError) => {
+  }).catch((err) => {
     console.error(`Failed to change App cloud switch. Code is ${err.code}, message is ${err.message}`);
   });
-} catch (err) {
-  let error = err as BusinessError;
+} catch (e) {
+  let error = e as BusinessError;
   console.error(`An unexpected error occurred. Code: ${error.code}, message: ${error.message}`);
 }
 ```
@@ -260,17 +254,17 @@ static changeAppCloudSwitch(
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 801 | Capability not supported. |
-| 201 | Permission verification failed, usually the result returned by VerifyAccessToken. |
-| 202 | Permission verification failed, application which is not a system application uses system API. |
+| [801](../../errorcode-universal.md#801-该设备不支持此api) | Capability not supported. |
+| [201](../../errorcode-universal.md#201-权限校验失败) | Permission verification failed, usually the result returned by VerifyAccessToken. |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed, application which is not a system application uses system API. |
 
 ## 示例
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
 
-let account: string = "test_id";
-let bundleName: string = "test_bundleName";
+let account: string = 'test_id';
+let bundleName: string = 'test_bundleName';
 let config: cloudData.SwitchConfig = {
   dbInfo: {
     'test_storeName1': {
@@ -281,15 +275,15 @@ let config: cloudData.SwitchConfig = {
       }
     }
   }
-};
+}
 try {
   cloudData.Config.changeAppCloudSwitch(account, bundleName, true, config).then(() => {
     console.info('Succeeded in changing App cloud switch');
-  }).catch((err: BusinessError) => {
+  }).catch((err) => {
     console.error(`Failed to change App cloud switch. Code is ${err.code}, message is ${err.message}`);
   });
-} catch (err) {
-  let error = err as BusinessError;
+} catch (e) {
+  let error = e as BusinessError;
   console.error(`An unexpected error occurred. Code: ${error.code}, message: ${error.message}`);
 }
 ```
@@ -323,17 +317,17 @@ static clear(
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | accountId | string | 是 | 已登录的云账号ID。 |
-| appActions | [Record](../../apis-default/arkts-apis/arkts-record-t.md)&lt;string, ClearAction&gt; | 是 | 要清除数据的应用信息及清除规则。<br>**起始版本：** 10 |
+| appActions | Record&lt;string, ClearAction&gt; | 是 | 要清除数据的应用信息及清除规则。<br>**起始版本：** 10 |
 | callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数。当清除本地下载的云端数据成功，err为undefined，否则为错误对象。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2 . Incorrect parameter types; 3. Parameter verification failed. |
-| 801 | Capability not supported. |
-| 201 | Permission verification failed, usually the result returned by VerifyAccessToken. |
-| 202 | Permission verification failed, application which is not a system application uses system API. |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2 . Incorrect parameter types; 3. Parameter verification failed. |
+| [801](../../errorcode-universal.md#801-该设备不支持此api) | Capability not supported. |
+| [201](../../errorcode-universal.md#201-权限校验失败) | Permission verification failed, usually the result returned by VerifyAccessToken. |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed, application which is not a system application uses system API. |
 
 ## 示例
 
@@ -341,21 +335,21 @@ static clear(
 import { BusinessError } from '@kit.BasicServicesKit';
 
 let account: string = "test_id";
-type dataType = Record<string, cloudData.ClearAction>;
+type dataType = Record<string, cloudData.ClearAction>
 let appActions: dataType = {
   'test_bundleName1': cloudData.ClearAction.CLEAR_CLOUD_INFO,
   'test_bundleName2': cloudData.ClearAction.CLEAR_CLOUD_DATA_AND_INFO
 };
 try {
-  cloudData.Config.clear(account, appActions, (err: BusinessError) => {
+  cloudData.Config.clear(account, appActions, (err: BusinessError|null) => {
     if (err === undefined) {
-      console.info('Succeeded in clearing cloud data');
+      console.info('Succeeding in clearing cloud data');
     } else {
       console.error(`Failed to clear cloud data. Code: ${err.code}, message: ${err.message}`);
     }
   });
-} catch (err) {
-  let error = err as BusinessError;
+} catch (e) {
+  let error = e as BusinessError;
   console.error(`An unexpected error occurred. Code: ${error.code}, message: ${error.message}`);
 }
 ```
@@ -385,7 +379,7 @@ static clear(accountId: string, appActions: Record<string, ClearAction>): Promis
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | accountId | string | 是 | 已登录的云账号ID。 |
-| appActions | [Record](../../apis-default/arkts-apis/arkts-record-t.md)&lt;string, ClearAction&gt; | 是 | 要清除数据的应用信息及清除规则。<br>**起始版本：** 11 |
+| appActions | Record&lt;string, ClearAction&gt; | 是 | 要清除数据的应用信息及清除规则。<br>**起始版本：** 11 |
 
 **返回值：**
 
@@ -397,10 +391,10 @@ static clear(accountId: string, appActions: Record<string, ClearAction>): Promis
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
-| 801 | Capability not supported. |
-| 201 | Permission verification failed, usually the result returned by VerifyAccessToken. |
-| 202 | Permission verification failed, application which is not a system application uses system API. |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| [801](../../errorcode-universal.md#801-该设备不支持此api) | Capability not supported. |
+| [201](../../errorcode-universal.md#201-权限校验失败) | Permission verification failed, usually the result returned by VerifyAccessToken. |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed, application which is not a system application uses system API. |
 
 ## 示例
 
@@ -415,12 +409,12 @@ let appActions: dataType = {
 };
 try {
   cloudData.Config.clear(account, appActions).then(() => {
-    console.info('Succeeded in clearing cloud data');
-  }).catch((err: BusinessError) => {
+    console.info('Succeeding in clearing cloud data');
+  }).catch((err) => {
     console.error(`Failed to clear cloud data. Code: ${err.code}, message: ${err.message}`);
   });
-} catch (err) {
-  let error = err as BusinessError;
+} catch (e) {
+  let error = e as BusinessError;
   console.error(`An unexpected error occurred. Code: ${error.code}, message: ${error.message}`);
 }
 ```
@@ -456,8 +450,8 @@ static clear(
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | accountId | string | 是 | 已登录的云账号ID。 |
-| appActions | [Record](../../apis-default/arkts-apis/arkts-record-t.md)&lt;string, ClearAction&gt; | 是 | 要清除数据的应用信息及清除规则。 |
-| config | [Record](../../apis-default/arkts-apis/arkts-record-t.md)&lt;string, ClearConfig&gt; | 否 | 端云协同数据库级清除配置信息。键为应用包名，值为该应用数据库清除规则。清除规则优先级：表级 > 数据库级 > 应用级。当未配置 该参数时，默认使用应用级的数据清除方式。 |
+| appActions | Record&lt;string, ClearAction&gt; | 是 | 要清除数据的应用信息及清除规则。 |
+| config | Record&lt;string, ClearConfig&gt; | 否 | 端云协同数据库级清除配置信息。键为应用包名，值为该应用数据库清除规则。清除规则优先级：表级 > 数据库级 > 应用级。当未配置 该参数时，默认使用应用级的数据清除方式。 |
 
 **返回值：**
 
@@ -469,9 +463,9 @@ static clear(
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 801 | Capability not supported. |
-| 201 | Permission verification failed, usually the result returned by VerifyAccessToken. |
-| 202 | Permission verification failed, application which is not a system application uses system API. |
+| [801](../../errorcode-universal.md#801-该设备不支持此api) | Capability not supported. |
+| [201](../../errorcode-universal.md#201-权限校验失败) | Permission verification failed, usually the result returned by VerifyAccessToken. |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed, application which is not a system application uses system API. |
 
 ## 示例
 
@@ -496,17 +490,16 @@ let config: Record<string, cloudData.ClearConfig> = {
       }
     }
   }
-};
+}
 try {
   cloudData.Config.clear(account, appActions, config).then(() => {
-    console.info('Succeeded in clearing cloud data');
-  }).catch((err: BusinessError) => {
+    console.info('Succeeding in clearing cloud data');
+  }).catch((err) => {
     console.error(`Failed to clear cloud data. Code: ${err.code}, message: ${err.message}`);
   });
-} catch (err) {
-  let error = err as BusinessError;
+} catch (e) {
+  let error = e as BusinessError;
   console.error(`An unexpected error occurred. Code: ${error.code}, message: ${error.message}`);
-}
 ```
 
 ## cloudSync
@@ -553,10 +546,10 @@ static cloudSync(
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 14800001 | Invalid arguments. Possible causes: 1. Empty conditions; &lt;br&gt;2. Missing GROUP BY clause. |
-| 801 | Capability not supported. |
-| 201 | Permission verification failed, &lt;br&gt;usually the result returned by VerifyAccessToken. |
-| 202 | Permission verification failed, &lt;br&gt;application which is not a system application uses system API. |
+| [14800001](../errorcode-data-rdb.md#14800001-无效的参数) | Invalid arguments. Possible causes: 1. Empty conditions; &lt;br&gt;2. Missing GROUP BY clause. |
+| [801](../../errorcode-universal.md#801-该设备不支持此api) | Capability not supported. |
+| [201](../../errorcode-universal.md#201-权限校验失败) | Permission verification failed, &lt;br&gt;usually the result returned by VerifyAccessToken. |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed, &lt;br&gt;application which is not a system application uses system API. |
 
 ## 示例
 
@@ -564,17 +557,17 @@ static cloudSync(
 import { BusinessError } from '@kit.BasicServicesKit';
 import { relationalStore } from '@kit.ArkData';
 
-try {
+try{
   cloudData.Config.cloudSync("bundleName", "storeId", relationalStore.SyncMode.SYNC_MODE_TIME_FIRST, (progress)=>{
     console.info('Succeeded in getting progress details.');
   }).then(() => {
-    console.info('Succeeded in syncing cloud data.');
-  }).catch((err: BusinessError) => {
-    console.error(`Failed to sync cloud data. Code: ${err.code}, message: ${err.message}`);
+      console.info('Succeeded in syncing cloud data.');
+  }).catch((err) => {
+      console.error(`Failed to sync cloud data. Code: ${err.code}, message: ${err.message}`);
   });
-} catch (err) {
-  let error = err as BusinessError;
-  console.error(`Failed to sync cloud data. Code: ${error.code}, message: ${error.message}`);
+} catch (e) {
+  let error = e as BusinessError;
+  console.error(`Failed to sync cloud data. Code: ${e.code}, message: ${e.message}`);
 }
 ```
 
@@ -623,19 +616,21 @@ static cloudSyncEx(
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 14800001 | Invalid arguments. Possible causes: 1. Empty conditions. |
-| 801 | Capability not supported because the device does not support the device-cloud capability. |
-| 201 | Permission verification failed, &lt;br&gt;usually the result returned by VerifyAccessToken. |
-| 202 | Permission verification failed, application is not a system application. |
+| [14800001](../errorcode-data-rdb.md#14800001-无效的参数) | Invalid arguments. Possible causes: 1. Empty conditions. |
+| [801](../../errorcode-universal.md#801-该设备不支持此api) | Capability not supported because the device does not support the device-cloud capability. |
+| [201](../../errorcode-universal.md#201-权限校验失败) | Permission verification failed, &lt;br&gt;usually the result returned by VerifyAccessToken. |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed, application is not a system application. |
 
 ## 示例
 
 ```TypeScript
+import { cloudData } from '@kit.ArkData';
 import { relationalStore } from '@kit.ArkData';
 import { BusinessError } from '@kit.BasicServicesKit';
+import { bundleManager } from '@kit.AbilityKit';
 
-let bundleInfo: cloudData.BundleInfo = {
-  bundleName: 'com.example.myapplication',
+let bundleInfo: bundleManager.BundleInfo = {
+  name: 'com.example.myapplication',
   // 其他BundleInfo字段...
 };
 
@@ -649,11 +644,11 @@ try {
     console.info(`Cloud sync progress: ${progressDetails.schedule}, code: ${progressDetails.code}`);
   }).then(() => {
     console.info('Succeeded in cloud sync');
-  }).catch((err: BusinessError) => {
+  }).catch((err) => {
     console.error(`Failed to cloud sync. Code: ${err.code}, message: ${err.message}`);
   });
-} catch (err) {
-  let error = err as BusinessError;
+} catch (e) {
+  let error = e as BusinessError;
   console.error(`An unexpected error occurred. Code: ${error.code}, message: ${error.message}`);
 }
 ```
@@ -689,27 +684,27 @@ static disableCloud(accountId: string, callback: AsyncCallback<void>): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2 . Incorrect parameter types; 3. Parameter verification failed. |
-| 801 | Capability not supported. |
-| 201 | Permission verification failed, usually the result returned by VerifyAccessToken. |
-| 202 | Permission verification failed, application which is not a system application uses system API. |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2 . Incorrect parameter types; 3. Parameter verification failed. |
+| [801](../../errorcode-universal.md#801-该设备不支持此api) | Capability not supported. |
+| [201](../../errorcode-universal.md#201-权限校验失败) | Permission verification failed, usually the result returned by VerifyAccessToken. |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed, application which is not a system application uses system API. |
 
 ## 示例
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
 
-let account: string = "test_id";
+let account: string = 'test_id';
 try {
-  cloudData.Config.disableCloud(account, (err: BusinessError) => {
+  cloudData.Config.disableCloud(account, (err: BusinessError|null) => {
     if (err === undefined) {
       console.info('Succeeded in disabling cloud');
     } else {
       console.error(`Failed to disableCloud. Code: ${err.code}, message: ${err.message}`);
     }
   });
-} catch (err) {
-  let error = err as BusinessError;
+} catch (e) {
+  let error = e as BusinessError;
   console.error(`An unexpected error occurred. Code: ${error.code}, message: ${error.message}`);
 }
 ```
@@ -750,25 +745,25 @@ static disableCloud(accountId: string): Promise<void>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2 . Incorrect parameter types; 3. Parameter verification failed. |
-| 801 | Capability not supported. |
-| 201 | Permission verification failed, usually the result returned by VerifyAccessToken. |
-| 202 | Permission verification failed, application which is not a system application uses system API. |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2 . Incorrect parameter types; 3. Parameter verification failed. |
+| [801](../../errorcode-universal.md#801-该设备不支持此api) | Capability not supported. |
+| [201](../../errorcode-universal.md#201-权限校验失败) | Permission verification failed, usually the result returned by VerifyAccessToken. |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed, application which is not a system application uses system API. |
 
 ## 示例
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
 
-let account: string = "test_id";
+let account: string = 'test_id';
 try {
   cloudData.Config.disableCloud(account).then(() => {
     console.info('Succeeded in disabling cloud');
-  }).catch((err: BusinessError) => {
+  }).catch((err) => {
     console.error(`Failed to disableCloud. Code: ${err.code}, message: ${err.message}`);
   });
-} catch (err) {
-  let error = err as BusinessError;
+} catch (e) {
+  let error = e as BusinessError;
   console.error(`An unexpected error occurred. Code: ${error.code}, message: ${error.message}`);
 }
 ```
@@ -802,35 +797,35 @@ static enableCloud(
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | accountId | string | 是 | 已登录的云账号ID。 |
-| switches | [Record](../../apis-default/arkts-apis/arkts-record-t.md)&lt;string, boolean&gt; | 是 | 各应用的端云协同开关信息。true为打开该应用端云开关，false为关闭该应用端云开关。<br>**起始版本：** 11 |
+| switches | Record&lt;string, boolean&gt; | 是 | 各应用的端云协同开关信息。true为打开该应用端云开关，false为关闭该应用端云开关。<br>**起始版本：** 11 |
 | callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数。当打开端云协同功能成功，err为undefined，否则为错误对象。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2 . Incorrect parameter types; 3. Parameter verification failed. |
-| 801 | Capability not supported. |
-| 201 | Permission verification failed, usually the result returned by VerifyAccessToken. |
-| 202 | Permission verification failed, application which is not a system application uses system API. |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2 . Incorrect parameter types; 3. Parameter verification failed. |
+| [801](../../errorcode-universal.md#801-该设备不支持此api) | Capability not supported. |
+| [201](../../errorcode-universal.md#201-权限校验失败) | Permission verification failed, usually the result returned by VerifyAccessToken. |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed, application which is not a system application uses system API. |
 
 ## 示例
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
 
-let account: string = "test_id";
+let account: string = 'test_id';
 let switches: Record<string, boolean> = { 'test_bundleName1': true, 'test_bundleName2': false };
 try {
-  cloudData.Config.enableCloud(account, switches, (err: BusinessError) => {
+  cloudData.Config.enableCloud(account, switches, (err: BusinessError|null) => {
     if (err === undefined) {
       console.info('Succeeded in enabling cloud');
     } else {
       console.error(`Failed to enable.Code: ${err.code}, message: ${err.message}`);
     }
   });
-} catch (err) {
-  let error = err as BusinessError;
+} catch (e) {
+  let error = e as BusinessError;
   console.error(`An unexpected error occurred. Code: ${error.code}, message: ${error.message}`);
 }
 ```
@@ -860,7 +855,7 @@ static enableCloud(accountId: string, switches: Record<string, boolean>): Promis
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | accountId | string | 是 | 已登录的云账号ID。 |
-| switches | [Record](../../apis-default/arkts-apis/arkts-record-t.md)&lt;string, boolean&gt; | 是 | 各应用的端云协同开关信息。true为打开该应用端云开关，false为关闭该应用端云开关。<br>**起始版本：** 11 |
+| switches | Record&lt;string, boolean&gt; | 是 | 各应用的端云协同开关信息。true为打开该应用端云开关，false为关闭该应用端云开关。<br>**起始版本：** 11 |
 
 **返回值：**
 
@@ -872,26 +867,26 @@ static enableCloud(accountId: string, switches: Record<string, boolean>): Promis
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
-| 801 | Capability not supported. |
-| 201 | Permission verification failed, usually the result returned by VerifyAccessToken. |
-| 202 | Permission verification failed, application which is not a system application uses system API. |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| [801](../../errorcode-universal.md#801-该设备不支持此api) | Capability not supported. |
+| [201](../../errorcode-universal.md#201-权限校验失败) | Permission verification failed, usually the result returned by VerifyAccessToken. |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed, application which is not a system application uses system API. |
 
 ## 示例
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
 
-let account: string = "test_id";
+let account: string = 'test_id';
 let switches: Record<string, boolean> = { 'test_bundleName1': true, 'test_bundleName2': false };
 try {
   cloudData.Config.enableCloud(account, switches).then(() => {
     console.info('Succeeded in enabling cloud');
-  }).catch((err: BusinessError) => {
+  }).catch((err) => {
     console.error(`Failed to enable.Code: ${err.code}, message: ${err.message}`);
   });
-} catch (err) {
-  let error = err as BusinessError;
+} catch (e) {
+  let error = e as BusinessError;
   console.error(`An unexpected error occurred. Code: ${error.code}, message: ${error.message}`);
 }
 ```
@@ -939,12 +934,14 @@ static notifyDataChange(extInfo: ExtraData, userId?: int): Promise<void>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2 . Incorrect parameter types; 3. Parameter verification failed. |
-| 801 | Capability not supported. |
-| 201 | Permission verification failed, which is usually returned by &lt;b&gt;VerifyAccessToken&lt;/b&gt;. |
-| 202 | Permission verification failed, application which is not a system application uses system API. |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2 . Incorrect parameter types; 3. Parameter verification failed. |
+| [801](../../errorcode-universal.md#801-该设备不支持此api) | Capability not supported. |
+| [201](../../errorcode-universal.md#201-权限校验失败) | Permission verification failed, which is usually returned by &lt;b&gt;VerifyAccessToken&lt;/b&gt;. |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed, application which is not a system application uses system API. |
 
 ## 示例
+
+ArkTS-Dyn示例:
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -957,11 +954,33 @@ try {
     eventId: eventId, extraData: extraData
   }, userId).then(() => {
     console.info('Succeeded in notifying the change of data');
-  }).catch((err: BusinessError) => {
+  }).catch((err) => {
     console.error(`Failed to notify the change of data. Code: ${err.code}, message: ${err.message}`);
   });
-} catch (err) {
-  let error = err as BusinessError;
+} catch (e) {
+  let error = e as BusinessError;
+  console.error(`An unexpected error occurred. Code: ${error.code}, message: ${error.message}`);
+}
+```
+
+ArkTs-Sta示例:
+
+```TypeScript
+import { BusinessError } from '@ohos.base;
+
+let eventId: string = "cloud_data_change";
+let extraData: string = '{"data":"{"accountId":"aaa","bundleName":"com.bbb.xxx","containerName":"alias", "databaseScopes": ["private", "shared"],"recordTypes":"["xxx","yyy","zzz"]"}"}';
+let userId: int = 100;
+try {
+  cloudData.Config.notifyDataChange({
+    eventId: eventId, extraData: extraData
+  }, userId).then(() => {
+    console.info('Succeeded in notifying the change of data');
+  }).catch((err) => {
+    console.error(`Failed to notify the change of data. Code: ${err.code}, message: ${err.message}`);
+  });
+} catch (e) {
+  let error = e as BusinessError;
   console.error(`An unexpected error occurred. Code: ${error.code}, message: ${error.message}`);
 }
 ```
@@ -997,10 +1016,10 @@ static notifyDataChange(extInfo: ExtraData, callback: AsyncCallback<void>): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2 . Incorrect parameter types; 3. Parameter verification failed. |
-| 801 | Capability not supported. |
-| 201 | Permission verification failed, which is usually returned by &lt;b&gt;VerifyAccessToken&lt;/b&gt;. |
-| 202 | Permission verification failed, application which is not a system application uses system API. |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2 . Incorrect parameter types; 3. Parameter verification failed. |
+| [801](../../errorcode-universal.md#801-该设备不支持此api) | Capability not supported. |
+| [201](../../errorcode-universal.md#201-权限校验失败) | Permission verification failed, which is usually returned by &lt;b&gt;VerifyAccessToken&lt;/b&gt;. |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed, application which is not a system application uses system API. |
 
 ## 示例
 
@@ -1012,15 +1031,15 @@ let extraData: string = '{"data":"{"accountId":"aaa","bundleName":"com.bbb.xxx",
 try {
   cloudData.Config.notifyDataChange({
     eventId: eventId, extraData: extraData
-  }, (err: BusinessError) => {
+  }, (err: BusinessError|null) => {
     if (err === undefined) {
       console.info('Succeeded in notifying the change of data');
     } else {
       console.error(`Failed to notify the change of data. Code: ${err.code}, message: ${err.message}`);
     }
   });
-} catch (err) {
-  let error = err as BusinessError;
+} catch (e) {
+  let error = e as BusinessError;
   console.error(`An unexpected error occurred. Code: ${error.code}, message: ${error.message}`);
 }
 ```
@@ -1063,12 +1082,14 @@ static notifyDataChange(extInfo: ExtraData, userId: int, callback: AsyncCallback
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2 . Incorrect parameter types; 3. Parameter verification failed. |
-| 801 | Capability not supported. |
-| 201 | Permission verification failed, which is usually returned by &lt;b&gt;VerifyAccessToken&lt;/b&gt;. |
-| 202 | Permission verification failed, application which is not a system application uses system API. |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2 . Incorrect parameter types; 3. Parameter verification failed. |
+| [801](../../errorcode-universal.md#801-该设备不支持此api) | Capability not supported. |
+| [201](../../errorcode-universal.md#201-权限校验失败) | Permission verification failed, which is usually returned by &lt;b&gt;VerifyAccessToken&lt;/b&gt;. |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed, application which is not a system application uses system API. |
 
 ## 示例
+
+ArkTS-Dyn示例:
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -1079,15 +1100,39 @@ let userId: number = 100;
 try {
   cloudData.Config.notifyDataChange({
     eventId: eventId, extraData: extraData
-  }, userId, (err: BusinessError) => {
+  }, userId, (err: BusinessError|null) => {
     if (err === undefined) {
       console.info('Succeeded in notifying the change of data');
     } else {
       console.error(`Failed to notify the change of data. Code: ${err.code}, message: ${err.message}`);
     }
   });
-} catch (err) {
-  let error = err as BusinessError;
+} catch (e) {
+  let error = e as BusinessError;
+  console.error(`An unexpected error occurred. Code: ${error.code}, message: ${error.message}`);
+}
+```
+
+ArkTs-Sta示例:
+
+```TypeScript
+import { BusinessError } from '@ohos.base;
+
+let eventId: string = "cloud_data_change";
+let extraData: string = '{"data":"{"accountId":"aaa","bundleName":"com.bbb.xxx","containerName":"alias", "databaseScopes": ["private", "shared"],"recordTypes":"["xxx","yyy","zzz"]"}"}';
+let userId: int = 100;
+try {
+  cloudData.Config.notifyDataChange({
+    eventId: eventId, extraData: extraData
+  }, userId, (err: BusinessError|null, data) => {
+    if (err === undefined || null) {
+      console.info('Succeeded in notifying the change of data');
+    } else {
+      console.error(`Failed to notify the change of data. Code: ${err?.code}, message: ${err?.message}`);
+    }
+  });
+} catch (e) {
+  let error = e as BusinessError;
   console.error(`An unexpected error occurred. Code: ${error.code}, message: ${error.message}`);
 }
 ```
@@ -1129,26 +1174,26 @@ static notifyDataChange(accountId: string, bundleName: string): Promise<void>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2 . Incorrect parameter types; 3. Parameter verification failed. |
-| 801 | Capability not supported. |
-| 201 | Permission verification failed, usually the result returned by VerifyAccessToken. |
-| 202 | Permission verification failed, application which is not a system application uses system API. |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2 . Incorrect parameter types; 3. Parameter verification failed. |
+| [801](../../errorcode-universal.md#801-该设备不支持此api) | Capability not supported. |
+| [201](../../errorcode-universal.md#201-权限校验失败) | Permission verification failed, usually the result returned by VerifyAccessToken. |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed, application which is not a system application uses system API. |
 
 ## 示例
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
 
-let account: string = "test_id";
-let bundleName: string = "test_bundleName";
+let account: string = 'test_id';
+let bundleName: string = 'test_bundleName';
 try {
   cloudData.Config.notifyDataChange(account, bundleName).then(() => {
     console.info('Succeeded in notifying the change of data');
-  }).catch((err: BusinessError) => {
+  }).catch((err) => {
     console.error(`Failed to notify the change of data. Code: ${err.code}, message: ${err.message}`);
   });
-} catch (err) {
-  let error = err as BusinessError;
+} catch (e) {
+  let error = e as BusinessError;
   console.error(`An unexpected error occurred. Code: ${error.code}, message: ${error.message}`);
 }
 ```
@@ -1185,28 +1230,28 @@ static notifyDataChange(accountId: string, bundleName: string, callback: AsyncCa
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2 . Incorrect parameter types; 3. Parameter verification failed. |
-| 801 | Capability not supported. |
-| 201 | Permission verification failed, usually the result returned by VerifyAccessToken. |
-| 202 | Permission verification failed, application which is not a system application uses system API. |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2 . Incorrect parameter types; 3. Parameter verification failed. |
+| [801](../../errorcode-universal.md#801-该设备不支持此api) | Capability not supported. |
+| [201](../../errorcode-universal.md#201-权限校验失败) | Permission verification failed, usually the result returned by VerifyAccessToken. |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed, application which is not a system application uses system API. |
 
 ## 示例
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
 
-let account: string = "test_id";
-let bundleName: string = "test_bundleName";
+let account: string = 'test_id';
+let bundleName: string = 'test_bundleName';
 try {
-  cloudData.Config.notifyDataChange(account, bundleName, (err: BusinessError) => {
+  cloudData.Config.notifyDataChange(account, bundleName, (err: BusinessError|null) => {
     if (err === undefined) {
       console.info('Succeeded in notifying the change of data');
     } else {
       console.error(`Failed to notify the change of data. Code: ${err.code}, message: ${err.message}`);
     }
   });
-} catch (err) {
-  let error = err as BusinessError;
+} catch (e) {
+  let error = e as BusinessError;
   console.error(`An unexpected error occurred. Code: ${error.code}, message: ${error.message}`);
 }
 ```
@@ -1247,10 +1292,10 @@ static offSyncInfoChanged(
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 14800001 | Invalid arguments. Possible causes: 1. bundlename is null; &lt;br&gt;2. the number of bundleInfos exceeds the upper limit or the number is 0. |
-| 801 | Capability not supported because the device does not support the device-cloud capability. |
-| 201 | Permission verification failed, usually the result returned by VerifyAccessToken. |
-| 202 | Permission verification failed, application which is not a system application uses system API. |
+| [14800001](../errorcode-data-rdb.md#14800001-无效的参数) | Invalid arguments. Possible causes: 1. bundlename is null; &lt;br&gt;2. the number of bundleInfos exceeds the upper limit or the number is 0. |
+| [801](../../errorcode-universal.md#801-该设备不支持此api) | Capability not supported because the device does not support the device-cloud capability. |
+| [201](../../errorcode-universal.md#201-权限校验失败) | Permission verification failed, usually the result returned by VerifyAccessToken. |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed, application which is not a system application uses system API. |
 
 ## 示例
 
@@ -1269,24 +1314,24 @@ const progressCallback = (result: Record<string, Record<string, cloudData.SyncIn
 // 订阅同步信息变化
 try {
   cloudData.Config.onSyncInfoChanged(bundleInfos, progressCallback);
-} catch(err) {
-  let error = err as BusinessError;
+} catch(e) {
+  let error = e as BusinessError;
   console.error(`An unexpected error occurred. Code: ${error.code}, message: ${error.message}`);
 }
 
 // 取消订阅指定的回调
 try {
   cloudData.Config.offSyncInfoChanged(bundleInfos, progressCallback);
-} catch(err) {
-  let error = err as BusinessError;
+} catch(e) {
+  let error = e as BusinessError;
   console.error(`An unexpected error occurred. Code: ${error.code}, message: ${error.message}`);
 }
 
 // 取消所有订阅
 try {
   cloudData.Config.offSyncInfoChanged(bundleInfos);
-} catch(err) {
-  let error = err as BusinessError;
+} catch(e) {
+  let error = e as BusinessError;
   console.error(`An unexpected error occurred. Code: ${error.code}, message: ${error.message}`);
 }
 ```
@@ -1327,10 +1372,10 @@ static onSyncInfoChanged(
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 14800001 | Invalid arguments. Possible causes: 1. bundlename is null; &lt;br&gt;2. the number of bundleInfos exceeds the upper limit or the number is 0. |
-| 801 | Capability not supported because the device does not support the device-cloud capability. |
-| 201 | Permission verification failed, usually the result returned by VerifyAccessToken. |
-| 202 | Permission verification failed, application which is not a system application uses system API. |
+| [14800001](../errorcode-data-rdb.md#14800001-无效的参数) | Invalid arguments. Possible causes: 1. bundlename is null; &lt;br&gt;2. the number of bundleInfos exceeds the upper limit or the number is 0. |
+| [801](../../errorcode-universal.md#801-该设备不支持此api) | Capability not supported because the device does not support the device-cloud capability. |
+| [201](../../errorcode-universal.md#201-权限校验失败) | Permission verification failed, usually the result returned by VerifyAccessToken. |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed, application which is not a system application uses system API. |
 
 ## 示例
 
@@ -1346,8 +1391,8 @@ try {
   cloudData.Config.onSyncInfoChanged(bundleInfos, (result) => {
     console.info(`Sync info changed. Result is ${JSON.stringify(result)}`);
   });
-} catch(err) {
-  let error = err as BusinessError;
+} catch(e) {
+  let error = e as BusinessError;
   console.error(`An unexpected error occurred. Code: ${error.code}, message: ${error.message}`);
 }
 ```
@@ -1394,28 +1439,28 @@ static queryLastSyncInfo(
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2 . Incorrect parameter types; 3. Parameter verification failed. |
-| 801 | Capability not supported. |
-| 201 | Permission verification failed, usually the result returned by VerifyAccessToken. |
-| 202 | Permission verification failed, application which is not a system application uses system API. |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2 . Incorrect parameter types; 3. Parameter verification failed. |
+| [801](../../errorcode-universal.md#801-该设备不支持此api) | Capability not supported. |
+| [201](../../errorcode-universal.md#201-权限校验失败) | Permission verification failed, usually the result returned by VerifyAccessToken. |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed, application which is not a system application uses system API. |
 
 ## 示例
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
 
-const accountId: string = "accountId";
-const bundleName: string = "bundleName";
-const storeId: string = "storeId";
+const accountId:string = "accountId";
+const bundleName:string = "bundleName";
+const storeId:string = "storeId";
 try {
-  cloudData.Config.queryLastSyncInfo(accountId, bundleName, storeId).then((result) => {
-    console.info(`Succeeded in querying last syncinfo. Info is ${JSON.stringify(result)}`);
-  }).catch((err: BusinessError) => {
-    console.error(`Failed to query last syncinfo. Error code is ${err.code}, message is ${err.message}`);
-  });
-} catch(err) {
-  let error = err as BusinessError;
-  console.error(`An unexpected error occurred. Code: ${error.code}, message: ${error.message}`);
+    cloudData.Config.queryLastSyncInfo(accountId, bundleName, storeId).then((result) => {
+    	console.info(`Succeeded in querying last syncinfo. Info is ${JSON.stringify(result)}`);
+	}).catch((err) => {
+    	console.error(`Failed to query last syncinfo. Error code is ${err.code}, message is ${err.message}`);
+	});
+} catch(e) {
+    let error = e as BusinessError;
+  	console.error(`An unexpected error occurred. Code: ${error.code}, message: ${error.message}`);
 }
 ```
 
@@ -1461,24 +1506,24 @@ static queryStatistics(
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2 . Incorrect parameter types; 3. Parameter verification failed. |
-| 801 | Capability not supported. |
-| 201 | Permission verification failed, usually the result returned by VerifyAccessToken. |
-| 202 | Permission verification failed, application which is not a system application uses system API. |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2 . Incorrect parameter types; 3. Parameter verification failed. |
+| [801](../../errorcode-universal.md#801-该设备不支持此api) | Capability not supported. |
+| [201](../../errorcode-universal.md#201-权限校验失败) | Permission verification failed, usually the result returned by VerifyAccessToken. |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed, application which is not a system application uses system API. |
 
 ## 示例
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
 
-const accountId: string = "accountId";
-const bundleName: string = "bundleName";
-const storeId: string = "storeId";
+const accountId:string = "accountId";
+const bundleName:string = "bundleName";
+const storeId:string = "storeId";
 
 cloudData.Config.queryStatistics(accountId, bundleName, storeId).then((result) => {
-  console.info(`Succeeded in querying statistics. Info is ${JSON.stringify(result)}`);
-}).catch((err: BusinessError) => {
-  console.error(`Failed to query statistics. Error code is ${err.code}, message is ${err.message}`);
+    console.info(`Succeeded in querying statistics. Info is ${JSON.stringify(result)}`);
+}).catch((err) => {
+    console.error(`Failed to query statistics. Error code is ${err.code}, message is ${err.message}`);
 });
 ```
 
@@ -1519,10 +1564,10 @@ static setGlobalCloudStrategy(strategy: StrategyType, param?: Array<commonType.V
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2 . Incorrect parameter types; 3. Parameter verification failed. |
-| 801 | Capability not supported. |
-| 201 | Permission verification failed, usually the result returned by VerifyAccessToken. |
-| 202 | Permission verification failed, application which is not a system application uses system API. |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2 . Incorrect parameter types; 3. Parameter verification failed. |
+| [801](../../errorcode-universal.md#801-该设备不支持此api) | Capability not supported. |
+| [201](../../errorcode-universal.md#201-权限校验失败) | Permission verification failed, usually the result returned by VerifyAccessToken. |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed, application which is not a system application uses system API. |
 
 ## 示例
 
@@ -1530,9 +1575,9 @@ static setGlobalCloudStrategy(strategy: StrategyType, param?: Array<commonType.V
 import { BusinessError } from '@kit.BasicServicesKit';
 
 cloudData.Config.setGlobalCloudStrategy(cloudData.StrategyType.NETWORK, [cloudData.NetWorkStrategy.WIFI]).then(() => {
-  console.info('Succeeded in setting the global cloud strategy');
-}).catch((err: BusinessError) => {
-  console.error(`Failed to set global cloud strategy. Code: ${err.code}, message: ${err.message}`);
+    console.info('Succeeded in setting the global cloud strategy');
+}).catch((err) => {
+    console.error(`Failed to set global cloud strategy. Code: ${err.code}, message: ${err.message}`);
 });
 ```
 
@@ -1574,29 +1619,31 @@ static stopCloudSync(bundleInfos: Array<BundleInfo>): Promise<void>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 14800001 | Invalid arguments. Possible causes: 1. bundlename is null; &lt;br&gt;2. the number of bundleInfos exceeds the upper limit or the number is 0. |
-| 801 | Capability not supported because the device does not support the device-cloud capability. |
-| 201 | Permission verification failed, &lt;br&gt;usually the result returned by VerifyAccessToken. |
-| 202 | if permission verification failed, application which is not a system application uses system API. |
+| [14800001](../errorcode-data-rdb.md#14800001-无效的参数) | Invalid arguments. Possible causes: 1. bundlename is null; &lt;br&gt;2. the number of bundleInfos exceeds the upper limit or the number is 0. |
+| [801](../../errorcode-universal.md#801-该设备不支持此api) | Capability not supported because the device does not support the device-cloud capability. |
+| [201](../../errorcode-universal.md#201-权限校验失败) | Permission verification failed, &lt;br&gt;usually the result returned by VerifyAccessToken. |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | if permission verification failed, application which is not a system application uses system API. |
 
 ## 示例
 
 ```TypeScript
+import { cloudData } from '@kit.ArkData';
 import { BusinessError } from '@kit.BasicServicesKit';
+import { bundleManager } from '@kit.AbilityKit';
 
-let bundleInfos: Array<cloudData.BundleInfo> = [
-  { bundleName: 'com.example.myapplication1' },
-  { bundleName: 'com.example.myapplication2' }
+let bundleInfos: Array<bundleManager.BundleInfo> = [
+  { name: 'com.example.myapplication1' },
+  { name: 'com.example.myapplication2' }
 ];
 
 try {
   cloudData.Config.stopCloudSync(bundleInfos).then(() => {
     console.info('Succeeded in stopping cloud sync');
-  }).catch((err: BusinessError) => {
+  }).catch((err) => {
     console.error(`Failed to stop cloud sync. Code: ${err.code}, message: ${err.message}`);
   });
-} catch (err) {
-  let error = err as BusinessError;
+} catch (e) {
+  let error = e as BusinessError;
   console.error(`An unexpected error occurred. Code: ${error.code}, message: ${error.message}`);
 }
 ```

@@ -1,6 +1,6 @@
 # RichEditorBaseController
 
-RichEditor组件控制器基类。
+Provides Base Controller for RichEditor.
 
 **Inheritance/Implementation:** RichEditorBaseController implements [TextEditControllerEx](arkts-arkui-textcommon-texteditcontrollerex-i.md)
 
@@ -18,7 +18,7 @@ RichEditor组件控制器基类。
 closeSelectionMenu(): void
 ```
 
-关闭自定义选择菜单或系统默认选择菜单。
+close the select menu when menu is on.
 
 **Since:** 23
 
@@ -36,9 +36,7 @@ closeSelectionMenu(): void
 deleteBackward(): void
 ```
 
-提供删除字符能力。没有内容被选中时，删除当前光标位置前的1个字符。有内容被选中时，删除选中内容。
-
-该接口不支持预上屏场景使用。
+Delete the last character of the input field component.
 
 **Since:** 23
 
@@ -56,9 +54,7 @@ deleteBackward(): void
 getCaretOffset(): int | undefined
 ```
 
-返回当前光标所在位置。
-
-当无法获取光标位置时（例如controller未与组件绑定时），该接口返回-1。
+Get caret offset from controller.
 
 **Since:** 23
 
@@ -74,7 +70,7 @@ getCaretOffset(): int | undefined
 
 | Type | Description |
 | --- | --- |
-| int | 当前光标所在位置。&lt;br/&gt;返回undefined时表示controller未与组件绑定。 |
+| int |  |
 
 ## getCaretRect
 
@@ -82,7 +78,7 @@ getCaretOffset(): int | undefined
 getCaretRect(): RectResult | undefined
 ```
 
-返回当前光标与RichEditor组件的相对位置。如果光标不闪烁，返回undefined。
+Get CaretRect.
 
 **Since:** 23
 
@@ -98,7 +94,7 @@ getCaretRect(): RectResult | undefined
 
 | Type | Description |
 | --- | --- |
-| [RectResult](../arkts-components/arkts-arkui-rectresult-i.md) | 当前光标与RichEditor的相对位置。 |
+| [RectResult](../arkts-components/arkts-arkui-rectresult-i.md) | Return the caret rect or undefined value. |
 
 ## getLayoutManager
 
@@ -106,7 +102,7 @@ getCaretRect(): RectResult | undefined
 getLayoutManager(): LayoutManager | undefined
 ```
 
-获取布局管理器对象。
+Get LayoutManager.
 
 **Since:** 23
 
@@ -122,7 +118,7 @@ getLayoutManager(): LayoutManager | undefined
 
 | Type | Description |
 | --- | --- |
-| [LayoutManager](arkts-arkui-layoutmanager-i.md) | 布局管理器对象。&lt;br/&gt;返回undefined时表示controller未与组件绑定。 |
+| [LayoutManager](arkts-arkui-layoutmanager-i.md) | Return the LayoutManager. |
 
 ## getPreviewText
 
@@ -130,7 +126,7 @@ getLayoutManager(): LayoutManager | undefined
 getPreviewText(): PreviewText | undefined
 ```
 
-获取预上屏信息。
+Get PreviewText.
 
 **Since:** 23
 
@@ -146,7 +142,7 @@ getPreviewText(): PreviewText | undefined
 
 | Type | Description |
 | --- | --- |
-| [PreviewText](arkts-arkui-previewtext-i.md) | 预上屏信息。&lt;br/&gt;返回undefined时表示controller未与组件绑定。 |
+| [PreviewText](arkts-arkui-previewtext-i.md) | Return the PreviewText. |
 
 ## getTypingStyle
 
@@ -154,7 +150,7 @@ getPreviewText(): PreviewText | undefined
 getTypingStyle(): RichEditorTextStyle | undefined
 ```
 
-获取用户预设的文本样式。
+Get the typing text style.
 
 **Since:** 23
 
@@ -170,7 +166,7 @@ getTypingStyle(): RichEditorTextStyle | undefined
 
 | Type | Description |
 | --- | --- |
-| [RichEditorTextStyle](../arkts-components/arkts-arkui-richeditortextstyle-i.md) | 用户预设样式。&lt;br/&gt;返回undefined时表示controller未与组件绑定。 |
+| [RichEditorTextStyle](../arkts-components/arkts-arkui-richeditortextstyle-i.md) |  |
 
 ## isEditing
 
@@ -178,7 +174,7 @@ getTypingStyle(): RichEditorTextStyle | undefined
 isEditing(): boolean | undefined
 ```
 
-获取当前富文本的编辑状态。
+Judge whether is in editing state
 
 **Since:** 23
 
@@ -194,7 +190,7 @@ isEditing(): boolean | undefined
 
 | Type | Description |
 | --- | --- |
-| boolean | true为编辑态，false为非编辑态。&lt;br/&gt;返回undefined时表示controller未与组件绑定。 |
+| boolean | true is editing state, false is non editing status |
 
 ## scrollToVisible
 
@@ -202,7 +198,7 @@ isEditing(): boolean | undefined
 scrollToVisible(range?: TextRange): void
 ```
 
-将可视区外的文本滚动到可视区内。
+Scroll the input field component to make the specified content visible.
 
 **Since:** 26.0.0
 
@@ -216,7 +212,7 @@ scrollToVisible(range?: TextRange): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| range | [TextRange](arkts-arkui-textrange-i.md) | No | 可视范围。 如果参数无效，该方法将不产生效果。 |
+| range | [TextRange](arkts-arkui-textrange-i.md) | No | The visible range. If the parameter is invalid, this method will have no effect. |
 
 ## setCaretOffset
 
@@ -224,7 +220,7 @@ scrollToVisible(range?: TextRange): void
 setCaretOffset(offset: int): boolean | undefined
 ```
 
-设置光标位置。
+Set caret offset.
 
 **Since:** 23
 
@@ -240,13 +236,13 @@ setCaretOffset(offset: int): boolean | undefined
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| offset | int | Yes | 光标偏移位置。超出所有内容范围时，设置失败。 |
+| offset | int | Yes | caret offset. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| boolean | 光标是否设置成功。&lt;br/&gt;true表示光标位置设置成功，false表示未成功。&lt;br/&gt;返回undefined时表示controller未与组件绑定。 |
+| boolean |  |
 
 ## setSelection
 
@@ -254,21 +250,7 @@ setCaretOffset(offset: int): boolean | undefined
 setSelection(selectionStart: int, selectionEnd: int, options?: SelectionOptions): void
 ```
 
-支持设置组件内的内容选中，选中部分背板高亮。
-
-selectionStart和selectionEnd均为-1时表示全选，均为0时可以清空选中区。
-
-未获焦时调用该接口不产生选中效果。
-
-从API version 12开始，在2in1设备中，无论options取何值，调用setSelection接口都不会弹出菜单，此外，如果组件中已经存在菜单，调用setSelection接口会关闭菜单。
-
-在非2in1设备中，options取值为MenuPolicy.DEFAULT时，遵循以下规则：
-
-1. 组件内有手柄菜单时，接口调用后不关闭菜单，并且调整菜单位置。
-
-2. 组件内有不带手柄的菜单时，接口调用后不关闭菜单，并且菜单位置不变。
-
-3. 组件内无菜单时，接口调用后也无菜单显示。
+Specify the start and end positions to select a range of content.
 
 **Since:** 23
 
@@ -284,9 +266,9 @@ selectionStart和selectionEnd均为-1时表示全选，均为0时可以清空选
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| selectionStart | int | Yes | 选中开始位置。 |
-| selectionEnd | int | Yes | 选中结束位置。 |
-| options | [SelectionOptions](../arkts-components/arkts-arkui-selectionoptions-i.md) | No | 选择项配置。&lt;br/&gt;缺省时，按照 [SelectionOptions](arkts-arkui-common-selectionoptions-i.md)中的默认值处理。 |
+| selectionStart | int | Yes | The start position of the selected text. |
+| selectionEnd | int | Yes | The end position of the selected text. |
+| options | [SelectionOptions](../arkts-components/arkts-arkui-selectionoptions-i.md) | No | Indicates the options of selection. |
 
 ## setStyledPlaceholder
 
@@ -294,7 +276,7 @@ selectionStart和selectionEnd均为-1时表示全选，均为0时可以清空选
 setStyledPlaceholder(styledString: StyledString): void
 ```
 
-设置无输入时的属性字符串样式的提示文本。
+Set the styledString placeholder.
 
 **Since:** 24
 
@@ -310,7 +292,7 @@ setStyledPlaceholder(styledString: StyledString): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| styledString | [StyledString](arkts-arkui-styledstring-c.md) | Yes | 设置属性字符串样式的提示文本，其优先级高于[placeholder](arkts-arkui-richeditor-richeditorattribute-i.md#placeholder)属 性设置的提示文本。&lt;br&gt;提示文本不支持触发属性字符串[GestureStyle](arkts-arkui-styledstring-gesturestyle-c.md)样式 绑定的手势事件，以及[UrlStyle](arkts-arkui-styledstring-urlstyle-c.md)样式的超链接跳转能力。 |
+| styledString | [StyledString](arkts-arkui-styledstring-c.md) | Yes | The styledString for placeholder. If the parameter is invalid, this method will have no effect. |
 
 ## setTypingParagraphStyle
 
@@ -318,7 +300,7 @@ setStyledPlaceholder(styledString: StyledString): void
 setTypingParagraphStyle(style: RichEditorParagraphStyle | undefined): void
 ```
 
-设置用户预设的段落样式。仅在组件内容为空或组件末尾换行后，输入文本生效。
+Set the typing paragraph style.
 
 **Since:** 24
 
@@ -334,7 +316,7 @@ setTypingParagraphStyle(style: RichEditorParagraphStyle | undefined): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| style | [RichEditorParagraphStyle](arkts-arkui-richeditor-richeditorparagraphstyle-i.md) \| undefined | Yes | 预设段落样式。&lt;br/&gt;取值为undefined时，与上一段落的段落样式一致。 |
+| style | [RichEditorParagraphStyle](arkts-arkui-richeditor-richeditorparagraphstyle-i.md) \| undefined | Yes | set the typing paragraph style. |
 
 ## setTypingStyle
 
@@ -342,7 +324,7 @@ setTypingParagraphStyle(style: RichEditorParagraphStyle | undefined): void
 setTypingStyle(value: RichEditorTextStyle): void
 ```
 
-设置用户预设的文本样式。
+Set the typing text style.
 
 **Since:** 23
 
@@ -358,7 +340,7 @@ setTypingStyle(value: RichEditorTextStyle): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | [RichEditorTextStyle](../arkts-components/arkts-arkui-richeditortextstyle-i.md) | Yes | 预设样式。 |
+| value | [RichEditorTextStyle](../arkts-components/arkts-arkui-richeditortextstyle-i.md) | Yes | set the typing text style. |
 
 ## stopEditing
 
@@ -366,7 +348,7 @@ setTypingStyle(value: RichEditorTextStyle): void
 stopEditing(): void
 ```
 
-退出编辑态。
+Stop editing state.
 
 **Since:** 23
 

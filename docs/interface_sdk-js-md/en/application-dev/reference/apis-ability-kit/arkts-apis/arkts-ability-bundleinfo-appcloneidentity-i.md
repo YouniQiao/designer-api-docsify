@@ -1,6 +1,6 @@
 # AppCloneIdentity
 
-描述应用包的身份信息。
+Describes the identity information of an application clone.
 
 **Since:** 14
 
@@ -16,7 +16,7 @@
 readonly appIndex: int
 ```
 
-应用包的分身索引信息。
+Clone index information of the app package. The value is an integer ranging from [0-5],where 0 indicates the main app and 1-5 indicate clone apps.
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
@@ -34,7 +34,7 @@ readonly appIndex: int
 readonly bundleName: string
 ```
 
-应用的bundleName。
+Bundle name of the application.
 
 **Type:** string
 

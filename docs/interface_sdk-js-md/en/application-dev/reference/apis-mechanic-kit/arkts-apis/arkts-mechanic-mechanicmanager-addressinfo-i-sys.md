@@ -1,6 +1,6 @@
 # AddressInfo (System API)
 
-配件设备信息定义
+Definition of device adress information.
 
 **Since:** 26.0.0
 
@@ -24,7 +24,7 @@ import { mechanicManager } from 'kits/@kit.MechanicKit';
 address: string
 ```
 
-配件设备地址。
+Address of device.
 
 **Type:** string
 
@@ -46,7 +46,7 @@ address: string
 addressType: AddressType
 ```
 
-地址类型。
+Type of address.
 
 **Type:** [AddressType](arkts-mechanic-mechanicmanager-addresstype-e-sys.md)
 

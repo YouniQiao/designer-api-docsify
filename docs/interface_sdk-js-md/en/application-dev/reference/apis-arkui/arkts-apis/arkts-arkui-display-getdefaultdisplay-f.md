@@ -12,7 +12,7 @@ import { display } from 'kits/@kit.ArkUI';
 function getDefaultDisplay(callback: AsyncCallback<Display>): void
 ```
 
-获取当前默认的Display对象，使用callback异步回调。
+Obtains the default Display object. This API uses an asynchronous callback to return the result.
 
 **Since:** 7
 
@@ -30,7 +30,7 @@ function getDefaultDisplay(callback: AsyncCallback<Display>): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Display&gt; | Yes | 回调函数。返回当前默认的Display对象。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Display&gt; | Yes | Callback used to return the default Display object. |
 
 ## Examples
 
@@ -56,7 +56,7 @@ display.getDefaultDisplay((err: BusinessError, data: display.Display) => {
 function getDefaultDisplay(): Promise<Display>
 ```
 
-获取当前默认的Display对象，使用Promise异步回调。
+Obtains the default Display object. This API uses a promise to return the result.
 
 **Since:** 7
 
@@ -74,7 +74,7 @@ function getDefaultDisplay(): Promise<Display>
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;Display&gt; | Promise对象。返回当前默认的Display对象。 |
+| Promise&lt;Display&gt; | Promise used to return the default Display object. |
 
 ## Examples
 

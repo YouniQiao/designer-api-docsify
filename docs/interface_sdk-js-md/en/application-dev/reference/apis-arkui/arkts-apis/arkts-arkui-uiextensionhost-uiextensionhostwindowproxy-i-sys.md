@@ -24,7 +24,7 @@ import { uiExtensionHost } from 'kits/@kit.ArkUI';
 createSubWindowWithOptions(name: string, subWindowOptions: window.SubWindowOptions): Promise<window.Window>
 ```
 
-创建该UIExtensionHostWindowProxy实例下的子窗口，使用Promise异步回调。
+Creates a subwindow for this **UIExtensionHostWindowProxy** instance. This API uses a promise to return the result.
 
 **Since:** 12
 
@@ -42,8 +42,8 @@ createSubWindowWithOptions(name: string, subWindowOptions: window.SubWindowOptio
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| name | string | Yes | 子窗口的名字。 |
-| subWindowOptions | window.SubWindowOptions | Yes | 子窗口参数。 |
+| name | string | Yes | Name of the subwindow. |
+| subWindowOptions | window.SubWindowOptions | Yes | Parameters used for creating the subwindow. |
 
 **Return value:**
 
@@ -56,14 +56,14 @@ createSubWindowWithOptions(name: string, subWindowOptions: window.SubWindowOptio
 | Error Code ID | Error Message |
 | --- | --- |
 | 1300035 | Creating a subwindow is not allowed in the current context. Possible cause: 1. An AgentUIExtensionAbility cannot create a subwindow. |
-| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameters types. 3. Parameter verification failed. |
-| 801 | Capability not supported. Failed to call the API due to limited device capabilities. |
-| 1300002 | This window state is abnormal. Possible causes: 1. The window is not created or destroyed. 2. Internal task error. 3. The subWindow has been created and cannot be created again. 4. It is not allowed to create non-secure window when secure extension exists. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameters types. 3. Parameter verification failed. |
+| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. Failed to call the API due to limited device capabilities. |
+| [1300002](../errorcode-window.md#1300002-abnormal-window-state) | This window state is abnormal. Possible causes: 1. The window is not created or destroyed. 2. Internal task error. 3. The subWindow has been created and cannot be created again. 4. It is not allowed to create non-secure window when secure extension exists. |
 
 ## Examples
 
 ```TypeScript
-// ExtensionProvider.ets
+// ExtensionProvider.ts
 import { UIExtensionAbility, UIExtensionContentSession, Want } from '@kit.AbilityKit';
 import { BusinessError } from '@kit.BasicServicesKit';
 import { window } from '@kit.ArkUI';
@@ -114,7 +114,7 @@ createSubWindowWithOptions(name: string, subWindowConfig: window.SubWindowOption
         followCreatorLifecycle: boolean): Promise<window.Window>
 ```
 
-创建该UIExtensionHostWindowProxy实例下的子窗口，可通过设置followCreatorLifecycle，决定子窗是否跟随组件（EmbeddedComponent或UIExtensionComponent）的生命周期，使用Promise异步回调。
+Create subwindow.
 
 **Since:** 22
 
@@ -132,9 +132,9 @@ createSubWindowWithOptions(name: string, subWindowConfig: window.SubWindowOption
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| name | string | Yes | 子窗口的名字。 |
-| subWindowConfig | window.SubWindowOptions | Yes | 子窗口参数。 |
-| followCreatorLifecycle | boolean | Yes | 子窗生命周期是否跟组件（EmbeddedComponent或UIExtensionComponent）保持同步。true表示该组件隐藏时， 子窗隐藏，该组件显示时子窗显示，false表示子窗的显隐不跟随该组件变化。 |
+| name | string | Yes | Name of the subwindow. |
+| subWindowConfig | window.SubWindowOptions | Yes | Configuration parameters for creating the subwindow. |
+| followCreatorLifecycle | boolean | Yes | Whether the lifecycle of the subwindow follows creator of subwindow. If true, when the creator goes to background, the subwindow will also go to background, when the creator returns to foreground, the subwindow will also return to foreground. If false, the subwindow will not change when the creator goes to background or returns to foreground. |
 
 **Return value:**
 
@@ -147,13 +147,13 @@ createSubWindowWithOptions(name: string, subWindowConfig: window.SubWindowOption
 | Error Code ID | Error Message |
 | --- | --- |
 | 1300035 | Creating a subwindow is not allowed in the current context. Possible cause: 1. An AgentUIExtensionAbility cannot create a subwindow. |
-| 801 | Capability not supported. Failed to call the API due to limited device capabilities. |
-| 1300002 | This window state is abnormal. Possible causes: 1. The window is not created or destroyed. 2. Internal task error. 3. The subWindow has been created and cannot be created again. 4. It is not allowed to create non-secure window when secure extension exists. |
+| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. Failed to call the API due to limited device capabilities. |
+| [1300002](../errorcode-window.md#1300002-abnormal-window-state) | This window state is abnormal. Possible causes: 1. The window is not created or destroyed. 2. Internal task error. 3. The subWindow has been created and cannot be created again. 4. It is not allowed to create non-secure window when secure extension exists. |
 
 ## Examples
 
 ```TypeScript
-// ExtensionProvider.ets
+// ExtensionProvider.ts
 import { UIExtensionAbility, UIExtensionContentSession, Want } from '@kit.AbilityKit';
 import { BusinessError } from '@kit.BasicServicesKit';
 import { window } from '@kit.ArkUI';
@@ -203,7 +203,7 @@ export default class EntryAbility extends UIExtensionAbility {
 getWindowAvoidArea(type: window.AvoidAreaType): window.AvoidArea
 ```
 
-获取宿主应用窗口内容规避的区域；如系统栏区域、刘海屏区域、手势区域、软键盘区域等与宿主窗口内容重叠时，需要宿主窗口内容避让的区域。
+Obtains the area where this window cannot be displayed, for example, the system bar area, notch, gesture area,and soft keyboard area.
 
 **Since:** 11
 
@@ -221,7 +221,7 @@ getWindowAvoidArea(type: window.AvoidAreaType): window.AvoidArea
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | window.AvoidAreaType | Yes | 表示避让区类型。 |
+| type | window.AvoidAreaType | Yes | Type of the avoidance area. |
 
 **Return value:**
 
@@ -233,12 +233,12 @@ getWindowAvoidArea(type: window.AvoidAreaType): window.AvoidArea
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. |
 
 ## Examples
 
 ```TypeScript
-// ExtensionProvider.ets
+// ExtensionProvider.ts
 
 import { UIExtensionAbility, UIExtensionContentSession, Want } from '@kit.AbilityKit';
 import { window } from '@kit.ArkUI';
@@ -259,18 +259,22 @@ export default class EntryAbility extends UIExtensionAbility {
 hideNonSecureWindows(shouldHide: boolean): Promise<void>
 ```
 
-设置是否隐藏不安全窗口，使用Promise异步回调。
+Sets whether to hide non-secure windows. This API uses a promise to return the result.
 
-> **说明：**
+> **NOTE：**
 > 
-> - 不安全窗口是指可能遮挡[EmbeddedComponent](../../apis-arkui/arkts-components/arkts-arkui-embedded_component-i)（或
-> [UIExtensionComponent](../../apis-arkui/arkts-components/arkts-arkui-ui_extension_component-i)）组件的窗口，如全局悬浮窗、宿主子窗口和宿主创建的Dialog窗口
-> （不包括系统应用创建的上述类型窗口）。
+> - A non-secure window refers to any window that may obstruct the
+> [EmbeddedComponent](../../apis-arkui/arkts-components/arkts-arkui-embedded_component-i) or
+> [UIExtensionComponent](../../apis-arkui/arkts-components/arkts-arkui-ui_extension_component-i), such as global floating windows
+> , host subwindows, and dialog box windows created by the host application (excluding windows of these types
+> created by system applications).
 > 
-> - 当EmbeddedComponent（或UIExtensionComponent）组件被用来显示敏感操作提示内容时，可以选择隐藏不安全窗口，保护敏感操作提示内容不会被遮挡。当EmbeddedComponent（或
-> UIExtensionComponent）组件不显示或销毁时，不安全窗口会重新显示。
+> - When using the **EmbeddedComponent** or **UIExtensionComponent** to display sensitive information, call this
+> API to hide non-secure windows and prevent information obstruction. Hidden non-secure windows will reappear
+> when the **EmbeddedComponent** or **UIExtensionComponent** is hidden or destroyed.
 > 
-> - 针对PC/2in1设备，当调用hideNonSecureWindows(true)时，不安全窗口中的全局悬浮窗不会被隐藏。
+> - On PCs/2-in-1 devices, global floating windows within non-secure windows remain visible when
+> **hideNonSecureWindows(true)** is called.
 
 **Since:** 11
 
@@ -291,27 +295,27 @@ hideNonSecureWindows(shouldHide: boolean): Promise<void>
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| shouldHide | boolean | Yes | 指示是否隐藏不安全窗口，true表示隐藏，false表示不隐藏。 |
+| shouldHide | boolean | Yes | Whether to hide insecure windows. The value **true** means to hide insecure windows, and **false** means the opposite. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | 无返回结果的Promise对象。、 |
+| Promise&lt;void&gt; | Promise that returns no value. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 1300003 | This window manager service works abnormally.<br>**Applicable version:** 12 and later |
-| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameters types. 3. Parameter verification failed. |
-| 1300002 | Abnormal state. Possible causes: 1. Permission denied. Interface caller does not have permission "ohos.permission.ALLOW_SHOW_NON_SECURE_WINDOWS". 2. The UIExtension window proxy is abnormal.<br>**Applicable version:** 12 and later |
-| 202 | Permission verification failed. A non-system application calls a system API.<br>**Applicable version:** 12 and later |
+| [1300003](../errorcode-window.md#1300003-abnormal-window-manager-service) | This window manager service works abnormally.<br>**Applicable version:** 12 and later |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameters types. 3. Parameter verification failed. |
+| [1300002](../errorcode-window.md#1300002-abnormal-window-state) | Abnormal state. Possible causes: 1. Permission denied. Interface caller does not have permission "ohos.permission.ALLOW_SHOW_NON_SECURE_WINDOWS". 2. The UIExtension window proxy is abnormal.<br>**Applicable version:** 12 and later |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API.<br>**Applicable version:** 12 and later |
 
 ## Examples
 
 ```TypeScript
-// ExtensionProvider.ets
+// ExtensionProvider.ts
 
 import { UIExtensionAbility, UIExtensionContentSession, Want } from '@kit.AbilityKit';
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -344,13 +348,14 @@ export default class EntryAbility extends UIExtensionAbility {
 hidePrivacyContentForHost(shouldHide: boolean): Promise<void>
 ```
 
-设置UIExtension组件在非系统截图时的隐私内容保护开关，使用Promise异步回调。
+Sets whether to enable privacy protection for the UIExtension component during non-system screenshots. This API uses a promise to return the result.
 
-> **说明：**
+> **NOTE：**
 > 
-> 开启截图隐私内容保护后，使用窗口截图[window.snapshot](../../../reference/apis-arkui/arkts-apis-window-Window.md#snapshot9)或者组件截图
+> When privacy protection is enabled, neither
+> [window.snapshot](@ohos.window:window.snapshot) nor
 > [UIContext.getComponentSnapshot](../../../reference/apis-arkui/arkts-apis-uicontext-uicontext.md#getcomponentsnapshot12)
-> 将无法截取到当前组件的内容（不包括该组件下创建的子窗）。
+> will capture the content of the current component (excluding subwindows created under this component).
 
 **Since:** 13
 
@@ -368,26 +373,26 @@ hidePrivacyContentForHost(shouldHide: boolean): Promise<void>
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| shouldHide | boolean | Yes | 是否开启截图隐私保护。true表示开启，false表示不开启。 |
+| shouldHide | boolean | Yes | Whether to enable privacy protection for screenshots. The value **true** means to enable privacy protection for screenshots, and **false** means the opposite. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | 无返回结果的Promise对象。 |
+| Promise&lt;void&gt; | Promise that returns no value. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameters types. 3. Parameter verification failed. |
-| 1300002 | Abnormal state. Possible causes: 1. The UIExtension window proxy is abnormal. 2. Not the UIExtensionAbility process calling. |
-| 202 | Permission verification failed. A non-system application calls a system API. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameters types. 3. Parameter verification failed. |
+| [1300002](../errorcode-window.md#1300002-abnormal-window-state) | Abnormal state. Possible causes: 1. The UIExtension window proxy is abnormal. 2. Not the UIExtensionAbility process calling. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
 
 ## Examples
 
 ```TypeScript
-// ExtensionProvider.ets
+// ExtensionProvider.ts
 import { UIExtensionAbility, UIExtensionContentSession, Want } from '@kit.AbilityKit';
 import { BusinessError } from '@kit.BasicServicesKit';
 
@@ -410,7 +415,7 @@ export default class EntryAbility extends UIExtensionAbility {
 off(type: 'avoidAreaChange', callback?: Callback<{ type: window.AvoidAreaType, area: window.AvoidArea }>): void
 ```
 
-注销系统避让区变化的监听。
+Unsubscribes from events of system avoidance area changes.
 
 **Since:** 11
 
@@ -428,20 +433,20 @@ off(type: 'avoidAreaChange', callback?: Callback<{ type: window.AvoidAreaType, a
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'avoidAreaChange' | Yes | 注销的事件类型，固定为'avoidAreaChange'，即系统避让区变化事件。 |
+| type | 'avoidAreaChange' | Yes | Event type. The value is fixed at **'avoidAreaChange'**, indicating the event of changes to the area where the window cannot be displayed. |
 | callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;{ type: window.AvoidAreaType, area: window.AvoidArea }&gt; | No |  |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameters types. 3. Parameter verification failed. |
-| 1300002 | Abnormal state. Possible causes: 1. The listening type is not supported. 2. The listening type is not registered. 3. The listener has not been registered. 4. The UIExtension window proxy is abnormal. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameters types. 3. Parameter verification failed. |
+| [1300002](../errorcode-window.md#1300002-abnormal-window-state) | Abnormal state. Possible causes: 1. The listening type is not supported. 2. The listening type is not registered. 3. The listener has not been registered. 4. The UIExtension window proxy is abnormal. |
 
 ## Examples
 
 ```TypeScript
-// ExtensionProvider.ets
+// ExtensionProvider.ts
 import { UIExtensionAbility, UIExtensionContentSession} from '@kit.AbilityKit';
 
 export default class EntryAbility extends UIExtensionAbility {
@@ -459,7 +464,7 @@ export default class EntryAbility extends UIExtensionAbility {
 off(type: 'windowSizeChange', callback?: Callback<window.Size>): void
 ```
 
-注销组件（EmbeddedComponent或UIExtensionComponent）尺寸变化的监听。
+Unsubscribes from size change events of the component (**EmbeddedComponent** or **UIExtensionComponent**).
 
 **Since:** 11
 
@@ -477,20 +482,20 @@ off(type: 'windowSizeChange', callback?: Callback<window.Size>): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'windowSizeChange' | Yes | 注销的事件类型，固定值：'windowSizeChange'，即组件（EmbeddedComponent或UIExtensionComponent）尺寸 变化事件。 |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;window.Size&gt; | No | 回调函数。返回当前的组件（EmbeddedComponent或UIExtensionComponent）尺寸。如果传入该参数，则关闭该 监听。如果未传入参数，则关闭组件（EmbeddedComponent或UIExtensionComponent）尺寸变化的监听。 |
+| type | 'windowSizeChange' | Yes | Event type. The value is fixed at **'windowSizeChange'**, indicating the component (**EmbeddedComponent** or **UIExtensionComponent**) size change events. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;window.Size&gt; | No | Callback used to return the size of the current component ( **EmbeddedComponent** or **UIExtensionComponent**). If a value is passed in, the corresponding subscription is canceled. If no value is passed in, all subscriptions to the specified event are canceled. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameters types. 3. Parameter verification failed. |
-| 1300002 | Abnormal state. Possible causes: 1. The listening type is not supported. 2. The listening type is not registered. 3. The listener has not been registered. 4. The UIExtension window proxy is abnormal. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameters types. 3. Parameter verification failed. |
+| [1300002](../errorcode-window.md#1300002-abnormal-window-state) | Abnormal state. Possible causes: 1. The listening type is not supported. 2. The listening type is not registered. 3. The listener has not been registered. 4. The UIExtension window proxy is abnormal. |
 
 ## Examples
 
 ```TypeScript
-// ExtensionProvider.ets
+// ExtensionProvider.ts
 import { UIExtensionAbility, UIExtensionContentSession } from '@kit.AbilityKit';
 
 export default class EntryAbility extends UIExtensionAbility {
@@ -532,7 +537,7 @@ Unregister the callback of avoidAreaChange
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 1300002 | Abnormal state. Possible causes: 1. The listening type is not supported. 2. The listening type is not registered. 3. The listener has not been registered. 4. The UIExtension window proxy is abnormal. |
+| [1300002](../errorcode-window.md#1300002-abnormal-window-state) | Abnormal state. Possible causes: 1. The listening type is not supported. 2. The listening type is not registered. 3. The listener has not been registered. 4. The UIExtension window proxy is abnormal. |
 
 ## offWindowSizeChange
 
@@ -564,7 +569,7 @@ Unsubscribes from the component (EmbeddedComponent or UIExtensionComponent) size
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 1300002 | Abnormal state. Possible causes: 1. The listening type is not supported. 2. The listening type is not registered. 3. The listener has not been registered. 4. The UIExtension window proxy is abnormal. |
+| [1300002](../errorcode-window.md#1300002-abnormal-window-state) | Abnormal state. Possible causes: 1. The listening type is not supported. 2. The listening type is not registered. 3. The listener has not been registered. 4. The UIExtension window proxy is abnormal. |
 
 ## on('avoidAreaChange')
 
@@ -572,7 +577,7 @@ Unsubscribes from the component (EmbeddedComponent or UIExtensionComponent) size
 on(type: 'avoidAreaChange', callback: Callback<{ type: window.AvoidAreaType, area: window.AvoidArea }>): void
 ```
 
-注册系统避让区变化的监听。
+Subscribes to events of system avoidance area changes.
 
 **Since:** 11
 
@@ -590,20 +595,20 @@ on(type: 'avoidAreaChange', callback: Callback<{ type: window.AvoidAreaType, are
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'avoidAreaChange' | Yes | 监听的事件类型，固定为'avoidAreaChange'，即系统避让区变化事件。 |
+| type | 'avoidAreaChange' | Yes | Event type. The value is fixed at **'avoidAreaChange'**, indicating the event of changes to the area where the window cannot be displayed. |
 | callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;{ type: window.AvoidAreaType, area: window.AvoidArea }&gt; | Yes |  |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameters types. 3. Parameter verification failed. |
-| 1300002 | Abnormal state. Possible causes: 1. The listening type is not supported. 2. The listener has been registered. 3. The UIExtension window proxy is abnormal. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameters types. 3. Parameter verification failed. |
+| [1300002](../errorcode-window.md#1300002-abnormal-window-state) | Abnormal state. Possible causes: 1. The listening type is not supported. 2. The listener has been registered. 3. The UIExtension window proxy is abnormal. |
 
 ## Examples
 
 ```TypeScript
-// ExtensionProvider.ets
+// ExtensionProvider.ts
 import { UIExtensionAbility, UIExtensionContentSession, Want } from '@kit.AbilityKit';
 
 export default class EntryAbility extends UIExtensionAbility {
@@ -623,7 +628,7 @@ export default class EntryAbility extends UIExtensionAbility {
 on(type: 'windowSizeChange', callback: Callback<window.Size>): void
 ```
 
-注册组件（EmbeddedComponent或UIExtensionComponent）尺寸变化的监听。
+Subscribes to size change events of the component (**EmbeddedComponent** or **UIExtensionComponent**).
 
 **Since:** 11
 
@@ -641,20 +646,20 @@ on(type: 'windowSizeChange', callback: Callback<window.Size>): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'windowSizeChange' | Yes | 监听的事件类型，固定为'windowSizeChange'，即组件（EmbeddedComponent或UIExtensionComponent）尺寸变 化事件。 |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;window.Size&gt; | Yes | 回调函数：入参用于接收当前组件（EmbeddedComponent或UIExtensionComponent）的尺寸。 |
+| type | 'windowSizeChange' | Yes | Event type. The value is fixed at **'windowSizeChange'**, indicating the component (**EmbeddedComponent** or **UIExtensionComponent**) size change events. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;window.Size&gt; | Yes | Callback function that receives the current component size as the input parameter. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameters types. 3. Parameter verification failed. |
-| 1300002 | Abnormal state. Possible causes: 1. The listening type is not supported. 2. The listener has been registered. 3. The UIExtension window proxy is abnormal. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameters types. 3. Parameter verification failed. |
+| [1300002](../errorcode-window.md#1300002-abnormal-window-state) | Abnormal state. Possible causes: 1. The listening type is not supported. 2. The listener has been registered. 3. The UIExtension window proxy is abnormal. |
 
 ## Examples
 
 ```TypeScript
-// ExtensionProvider.ets
+// ExtensionProvider.ts
 import { UIExtensionAbility, UIExtensionContentSession, Want } from '@kit.AbilityKit';
 
 export default class EntryAbility extends UIExtensionAbility {
@@ -662,7 +667,7 @@ export default class EntryAbility extends UIExtensionAbility {
     const extensionHostWindow = session.getUIExtensionHostWindowProxy();
     // Subscribe to size change events of the component (EmbeddedComponent or UIExtensionComponent).
     extensionHostWindow.on('windowSizeChange', (size) => {
-      console.info(`The size of the component is: ${JSON.stringify(size)}.`);
+      console.info(`The avoid area of the host window is: ${JSON.stringify(size)}.`);
     });
   }
 }
@@ -698,7 +703,7 @@ Register the callback of avoidAreaChange
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 1300002 | Abnormal state. Possible causes: 1. The listening type is not supported. 2. The listener has been registered. 3. The UIExtension window proxy is abnormal. |
+| [1300002](../errorcode-window.md#1300002-abnormal-window-state) | Abnormal state. Possible causes: 1. The listening type is not supported. 2. The listener has been registered. 3. The UIExtension window proxy is abnormal. |
 
 ## onWindowSizeChange
 
@@ -730,7 +735,7 @@ Subscribes to the component (EmbeddedComponent or UIExtensionComponent) size cha
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 1300002 | Abnormal state. Possible causes: 1. The listening type is not supported. 2. The listener has been registered. 3. The UIExtension window proxy is abnormal. |
+| [1300002](../errorcode-window.md#1300002-abnormal-window-state) | Abnormal state. Possible causes: 1. The listening type is not supported. 2. The listener has been registered. 3. The UIExtension window proxy is abnormal. |
 
 ## setWaterMarkFlag
 
@@ -738,11 +743,12 @@ Subscribes to the component (EmbeddedComponent or UIExtensionComponent) size cha
 setWaterMarkFlag(enable: boolean): Promise<void>
 ```
 
-为当前窗口添加或删除安全水印标志，使用Promise异步回调。
+Adds or deletes the watermark flag for this window. This API uses a promise to return the result.
 
-> **说明：**
+> **NOTE：**
 > 
-> 添加安全水印标志后，窗口在前台时会将当前全屏幕覆盖水印。全屏、悬浮窗、分屏等场景下只要有添加了安全水印标志的窗口在前台，就会显示全屏水印。
+> With the watermark flag added, the watermark is applied on the full screen when the window is in the foreground
+> , regardless of whether the window is displayed in full screen, floating, and split screen mode.
 
 **Since:** 12
 
@@ -760,26 +766,26 @@ setWaterMarkFlag(enable: boolean): Promise<void>
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| enable | boolean | Yes | 是否对窗口添加标志位。true表示添加，false表示删除。 |
+| enable | boolean | Yes | Whether to add or delete the flag. The value **true** means to add the watermark flag , and **false** means to delete the watermark flag. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | 无返回结果的Promise对象。 |
+| Promise&lt;void&gt; | Promise that returns no value. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 1300003 | This window manager service works abnormally. |
-| 1300002 | The UIExtension window proxy is abnormal. |
-| 1300008 | The display device is abnormal. |
+| [1300003](../errorcode-window.md#1300003-abnormal-window-manager-service) | This window manager service works abnormally. |
+| [1300002](../errorcode-window.md#1300002-abnormal-window-state) | The UIExtension window proxy is abnormal. |
+| [1300008](../errorcode-window.md#1300008-display-device-exception) | The display device is abnormal. |
 
 ## Examples
 
 ```TypeScript
-// ExtensionProvider.ets
+// ExtensionProvider.ts
 import { UIExtensionAbility, UIExtensionContentSession, Want } from '@kit.AbilityKit';
 import { BusinessError } from '@kit.BasicServicesKit';
 
@@ -811,11 +817,11 @@ export default class EntryAbility extends UIExtensionAbility {
 properties: UIExtensionHostWindowProxyProperties
 ```
 
-UIExtensionComponent组件以及宿主窗口的信息。
+Information about the host application window and the **UIExtensionComponent**.
 
-**约束：** 由于架构约束，不建议在  
-[onSessionCreate](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-uiextensionability-uiextensionability-c.md/arkts-ability-app-ability-uiextensionability-uiextensionability-c.md#onsessioncreate)阶段同步获取该值，建议在收到  
-[on('windowSizeChange')](@ohos.uiExtensionHost:uiExtensionHost.UIExtensionHostWindowProxy.on(type: 'windowSizeChange', callback: Callback&lt;window.Size&gt;))回调之后获取。
+Note: Due to architecture restrictions, avoid obtaining the value in  
+[onSessionCreate](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-uiextensionability-uiextensionability-c.md/arkts-ability-app-ability-uiextensionability-uiextensionability-c.md#onsessioncreate). Instead, when possible, obtain the value after receiving the  
+[on('windowSizeChange')](@ohos.uiExtensionHost:uiExtensionHost.UIExtensionHostWindowProxy.on(type: 'windowSizeChange', callback: Callback&lt;window.Size&gt;))callback.
 
 **Type:** [UIExtensionHostWindowProxyProperties](arkts-arkui-uiextensionhost-uiextensionhostwindowproxyproperties-i-sys.md)
 

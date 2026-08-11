@@ -1,6 +1,6 @@
 # GainmapChannel
 
-Gainmap图单个通道的数据内容，参考ISO 21496-1。
+Describes the data content of a single channel of the gain map. For details, see ISO 21496-1.
 
 **Since:** 12
 

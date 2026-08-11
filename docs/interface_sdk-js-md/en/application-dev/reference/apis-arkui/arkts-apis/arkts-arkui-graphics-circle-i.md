@@ -1,6 +1,6 @@
 # Circle
 
-用于设置圆形的属性。
+Defines the Circle.
 
 **Since:** 23
 
@@ -16,7 +16,7 @@
 centerX: double
 ```
 
-圆心x轴的位置，单位为px。
+The x-coordinate of the center of the Circle.
 
 **Type:** double
 
@@ -36,7 +36,7 @@ centerX: double
 centerY: double
 ```
 
-圆心y轴的位置，单位为px。
+The y-coordinate of the center of the Circle.
 
 **Type:** double
 
@@ -56,7 +56,7 @@ centerY: double
 radius: double
 ```
 
-圆形的半径，单位为px。取值范围：[0, +∞)。
+The radius of the Circle.
 
 **Type:** double
 

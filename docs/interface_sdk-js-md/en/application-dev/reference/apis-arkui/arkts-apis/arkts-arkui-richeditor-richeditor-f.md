@@ -8,7 +8,7 @@ export declare function RichEditor(
 ): RichEditorAttribute
 ```
 
-创建富文本组件。
+Defines RichEditor Component.
 
 **Since:** 23
 
@@ -41,11 +41,11 @@ export declare function RichEditor(
 ): RichEditorAttribute
 ```
 
-创建富文本组件。
+Defines RichEditor Component.
 
-**Since:** 26.0.0
+**Since:** 26.1.0
 
-**ArkTS mode:** ArkTS-Sta only, since version 26.0.0.
+**ArkTS mode:** ArkTS-Sta only, since version 26.1.0.
 
 **Decorator:** @Builder
 

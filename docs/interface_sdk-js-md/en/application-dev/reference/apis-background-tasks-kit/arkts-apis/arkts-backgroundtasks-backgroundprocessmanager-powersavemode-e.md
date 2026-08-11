@@ -1,6 +1,6 @@
 # PowerSaveMode
 
-能效模式。
+Specifies the power saving mode.
 
 **Since:** 20
 
@@ -16,7 +16,7 @@
 EFFICIENCY_MODE = 1
 ```
 
-效率模式，不会跟随系统进入能效模式，进入能效模式后获取到的CPU资源更少。
+Efficiency mode. Applications set to this mode will not enter the power saving mode, where fewer CPU resources are available.
 
 **Since:** 20
 
@@ -32,7 +32,7 @@ EFFICIENCY_MODE = 1
 DEFAULT_MODE = 2
 ```
 
-跟随系统，可能会进入能效模式。
+Default mode. Applications set to this mode may follow the system to enter the power saving mode.
 
 **Since:** 20
 

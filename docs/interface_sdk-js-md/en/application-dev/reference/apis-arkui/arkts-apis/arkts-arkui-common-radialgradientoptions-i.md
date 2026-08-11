@@ -23,7 +23,7 @@ Defines center point for radial gradient.
 
 Anonymous Object Rectification.
 
-**Type:** [         Length,         Length     ]
+**Type:** [         Length,         Length     ]
 
 **Since:** 23
 
@@ -48,7 +48,7 @@ Defines color description for gradients.
 
 Anonymous Object Rectification.
 
-**Type:** Array&lt;[         ResourceColor, double     ]&gt;
+**Type:** Array&lt;[         ResourceColor, double     ]&gt;
 
 **Since:** 23
 

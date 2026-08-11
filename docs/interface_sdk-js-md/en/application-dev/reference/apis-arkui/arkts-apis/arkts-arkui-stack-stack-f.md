@@ -9,7 +9,7 @@ export declare function Stack(
 ): StackAttribute
 ```
 
-堆叠容器，子组件按照顺序依次入栈，后一个子组件覆盖前一个子组件。
+Defines Stack Component.
 
 **Since:** 23
 
@@ -25,7 +25,7 @@ export declare function Stack(
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| options | [StackOptions](../arkts-components/arkts-arkui-stackoptions-i.md) | No | 设置子组件在容器内的对齐方式。 |
+| options | [StackOptions](../arkts-components/arkts-arkui-stackoptions-i.md) | No | Stack options. |
 | content_ | [CustomBuilder](../arkts-components/arkts-arkui-custombuilder-t.md) | No | container |
 
 **Return value:**
@@ -46,9 +46,9 @@ export declare function Stack(
 
 Defines Stack Component.
 
-**Since:** 26.0.0
+**Since:** 26.1.0
 
-**ArkTS mode:** ArkTS-Sta only, since version 26.0.0.
+**ArkTS mode:** ArkTS-Sta only, since version 26.1.0.
 
 **Decorator:** @Builder
 
@@ -63,7 +63,7 @@ Defines Stack Component.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | style | [CustomBuilderT](../arkts-components/arkts-arkui-custombuildert-t.md)&lt;StackAttribute&gt; | Yes | the callback to set up component's attributes. |
-| content_ | [CustomBuilder](../arkts-components/arkts-arkui-custombuilder-t.md) | No | container |
+| content_ | [CustomBuilder](../arkts-components/arkts-arkui-custombuilder-t.md) | No | container. |
 
 **Return value:**
 

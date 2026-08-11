@@ -6,11 +6,11 @@ typedef struct ArkUI_ListChildrenMainSize ArkUI_ListChildrenMainSize
 
 ## 概述
 
-Define the ChildrenMainSize class information for a List.
+定义List组件子组件的主轴尺寸信息。
 
 **起始版本：** 12
 
 **相关模块：** [ArkUI_NativeModule](capi-arkui-nativemodule.md)
 
-**所在头文件：** [native_type.h](capi-native-type-h.md)
+**所在头文件：** [node_list.h](capi-node-list-h.md)
 

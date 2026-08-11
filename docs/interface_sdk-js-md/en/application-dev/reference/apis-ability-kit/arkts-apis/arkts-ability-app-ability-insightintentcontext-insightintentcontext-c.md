@@ -1,7 +1,9 @@
 # InsightIntentContext
 
-本模块提供意图执行上下文，是[意图执行基类](arkts-ability-app-ability-insightintentexecutor-insightintentexecutor-c.md)和  
-[@InsightIntentEntry的意图执行基类](arkts-ability-app-ability-insightintententryexecutor-insightintententryexecutor-c.md)的属性，为意图执行提供基础能力，例如启动本应用内的[UIAbility组件](arkts-app-ability-uiability.md)。
+The module provides the context for intent execution. It is used as a property in both the  
+[intent execution base class](arkts-ability-app-ability-insightintentexecutor-insightintentexecutor-c.md) and  
+[base class decorated with @InsightIntentEntry](arkts-ability-app-ability-insightintententryexecutor-insightintententryexecutor-c.md), offering essential capabilities for intent implementation, for example, starting  
+[UIAbility components](arkts-app-ability-uiability.md) within the same application.
 
 **Since:** 11
 
@@ -23,7 +25,7 @@ import { InsightIntentContext } from 'kits/@kit.AbilityKit';
 setReturnModeForUIAbilityForeground(returnMode: insightIntent.ReturnMode): void
 ```
 
-设置意图执行结果的返回形式，适用于执行模式为[UI_ABILITY_FOREGROUND](arkts-ability-insightintent-executemode-e.md)的意图。
+Sets the return mode of the intent execution result. This API is applicable to intents with the execution mode set to [UI_ABILITY_FOREGROUND](arkts-ability-insightintent-executemode-e.md).
 
 **Since:** 23
 
@@ -41,13 +43,13 @@ setReturnModeForUIAbilityForeground(returnMode: insightIntent.ReturnMode): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| returnMode | insightIntent.ReturnMode | Yes | 意图执行结果的返回形式。 |
+| returnMode | insightIntent.ReturnMode | Yes | Return mode of the intent execution result. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 16000011 | The context does not exist. Possible causes: 1.The context is not insightIntentContext; 2.The context is not for UIAbility foreground insight intent execute mode. |
+| [16000011](../errorcode-ability.md#16000011-context-does-not-exist) | The context does not exist. Possible causes: 1.The context is not insightIntentContext; 2.The context is not for UIAbility foreground insight intent execute mode. |
 
 ## Examples
 
@@ -98,7 +100,7 @@ export default class InsightIntentExecutorUI extends InsightIntentExecutor {
 setReturnModeForUIExtensionAbility(returnMode: insightIntent.ReturnMode): void
 ```
 
-设置意图执行结果的返回形式，适用于执行模式为[UI_EXTENSION_ABILITY](arkts-ability-insightintent-executemode-e.md)的意图。
+Sets the return mode of the intent execution result. This API is applicable to intents with the execution mode set to [UI_EXTENSION_ABILITY](arkts-ability-insightintent-executemode-e.md).
 
 **Since:** 23
 
@@ -116,13 +118,13 @@ setReturnModeForUIExtensionAbility(returnMode: insightIntent.ReturnMode): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| returnMode | insightIntent.ReturnMode | Yes | 意图执行结果的返回形式。 |
+| returnMode | insightIntent.ReturnMode | Yes | Return mode of the intent execution result. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 16000011 | The context does not exist. Possible causes: 1.The context is not insightIntentContext; 2.The context is not for UIExtensionAbility insight intent execute mode. |
+| [16000011](../errorcode-ability.md#16000011-context-does-not-exist) | The context does not exist. Possible causes: 1.The context is not insightIntentContext; 2.The context is not for UIExtensionAbility insight intent execute mode. |
 
 ## Examples
 
@@ -172,7 +174,7 @@ export default class InsightIntentExecutorUI extends InsightIntentExecutor {
 startAbility(want: Want, callback: AsyncCallback<void>): void
 ```
 
-启动UIAbility组件，仅支持启动本应用内的UIAbility组件。使用callback异步回调。
+Starts a UIAbility. This API can only be used to start UIAbility components within the same application. This API uses an asynchronous callback to return the result.
 
 **Since:** 11
 
@@ -190,28 +192,28 @@ startAbility(want: Want, callback: AsyncCallback<void>): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| want | [Want](arkts-ability-app-ability-want-want-c.md) | Yes | 启动UIAbility组件的want信息。 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | 回调函数。当接口调用成功，err为undefined，否则为错误对象。 |
+| want | [Want](arkts-ability-app-ability-want-want-c.md) | Yes | Want information for starting the UIAbility. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined**. Otherwise, **err** is an error object. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 16000053 | The ability is not on the top of the UI. |
-| 16000055 | Installation-free timed out. |
-| 16000050 | Internal error. |
-| 16000061 | Operation not supported. |
-| 16000004 | Cannot start an invisible component. |
-| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types. |
-| 16000005 | The specified process does not have the permission. |
-| 16000006 | Cross-user operations are not allowed. |
-| 16000001 | The specified ability does not exist. |
-| 16200001 | The caller has been released. |
-| 16000012 | The application is controlled. |
-| 16000013 | The application is controlled by EDM. |
-| 16000008 | The crowdtesting application expires. |
-| 16000009 | An ability cannot be started or stopped in Wukong mode. |
-| 16000011 | The context does not exist. |
+| [16000053](../errorcode-ability.md#16000053-ability-is-not-on-top-of-ui) | The ability is not on the top of the UI. |
+| [16000055](../errorcode-ability.md#16000055-installationfree-timeout) | Installation-free timed out. |
+| [16000050](../errorcode-ability.md#16000050-internal-error) | Internal error. |
+| [16000061](../errorcode-ability.md#16000061-unsupported-operation) | Operation not supported. |
+| [16000004](../errorcode-ability.md#16000004-visibility-verification-failure) | Cannot start an invisible component. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types. |
+| [16000005](../errorcode-ability.md#16000005-process-permission-verification-failure) | The specified process does not have the permission. |
+| [16000006](../errorcode-ability.md#16000006-crossuser-operation-is-not-allowed) | Cross-user operations are not allowed. |
+| [16000001](../errorcode-ability.md#16000001-ability-name-does-not-exist) | The specified ability does not exist. |
+| [16200001](../errorcode-ability.md#16200001-caller-released) | The caller has been released. |
+| [16000012](../errorcode-ability.md#16000012-application-under-control) | The application is controlled. |
+| [16000013](../errorcode-ability.md#16000013-application-controlled-by-edm) | The application is controlled by EDM. |
+| [16000008](../errorcode-ability.md#16000008-crowdtesting-application-expires) | The crowdtesting application expires. |
+| [16000009](../errorcode-ability.md#16000009-ability-start-or-stop-failure-in-wukong-mode) | An ability cannot be started or stopped in Wukong mode. |
+| [16000011](../errorcode-ability.md#16000011-context-does-not-exist) | The context does not exist. |
 
 ## Examples
 
@@ -258,7 +260,7 @@ export default class IntentExecutorImpl extends InsightIntentExecutor {
 startAbility(want: Want): Promise<void>
 ```
 
-启动UIAbility组件，仅支持启动本应用内的UIAbility组件。使用Promise异步回调。
+Starts a UIAbility. This API can only be used to start UIAbility components within the same application. This API uses a promise to return the result.
 
 **Since:** 11
 
@@ -276,33 +278,33 @@ startAbility(want: Want): Promise<void>
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| want | [Want](arkts-ability-app-ability-want-want-c.md) | Yes | 启动UIAbility组件的want信息。 |
+| want | [Want](arkts-ability-app-ability-want-want-c.md) | Yes | Want information for starting the UIAbility. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise对象，无返回结果。 |
+| Promise&lt;void&gt; | Promise that returns no value. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 16000053 | The ability is not on the top of the UI. |
-| 16000055 | Installation-free timed out. |
-| 16000050 | Internal error. |
-| 16000061 | Operation not supported. |
-| 16000004 | Cannot start an invisible component. |
-| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types. |
-| 16000005 | The specified process does not have the permission. |
-| 16000006 | Cross-user operations are not allowed. |
-| 16000001 | The specified ability does not exist. |
-| 16200001 | The caller has been released. |
-| 16000012 | The application is controlled. |
-| 16000013 | The application is controlled by EDM. |
-| 16000008 | The crowdtesting application expires. |
-| 16000009 | An ability cannot be started or stopped in Wukong mode. |
-| 16000011 | The context does not exist. |
+| [16000053](../errorcode-ability.md#16000053-ability-is-not-on-top-of-ui) | The ability is not on the top of the UI. |
+| [16000055](../errorcode-ability.md#16000055-installationfree-timeout) | Installation-free timed out. |
+| [16000050](../errorcode-ability.md#16000050-internal-error) | Internal error. |
+| [16000061](../errorcode-ability.md#16000061-unsupported-operation) | Operation not supported. |
+| [16000004](../errorcode-ability.md#16000004-visibility-verification-failure) | Cannot start an invisible component. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types. |
+| [16000005](../errorcode-ability.md#16000005-process-permission-verification-failure) | The specified process does not have the permission. |
+| [16000006](../errorcode-ability.md#16000006-crossuser-operation-is-not-allowed) | Cross-user operations are not allowed. |
+| [16000001](../errorcode-ability.md#16000001-ability-name-does-not-exist) | The specified ability does not exist. |
+| [16200001](../errorcode-ability.md#16200001-caller-released) | The caller has been released. |
+| [16000012](../errorcode-ability.md#16000012-application-under-control) | The application is controlled. |
+| [16000013](../errorcode-ability.md#16000013-application-controlled-by-edm) | The application is controlled by EDM. |
+| [16000008](../errorcode-ability.md#16000008-crowdtesting-application-expires) | The crowdtesting application expires. |
+| [16000009](../errorcode-ability.md#16000009-ability-start-or-stop-failure-in-wukong-mode) | An ability cannot be started or stopped in Wukong mode. |
+| [16000011](../errorcode-ability.md#16000011-context-does-not-exist) | The context does not exist. |
 
 ## Examples
 
@@ -344,9 +346,9 @@ export default class IntentExecutorImpl extends InsightIntentExecutor {
 instanceId: int
 ```
 
-意图实例唯一ID。用于通过  
-[insightIntentProvider.sendExecuteResult接口](arkts-ability-insightintentprovider-sendexecuteresult-f.md#sendexecuteresult) 和  
-[insightIntentProvider.sendIntentResult接口](arkts-ability-insightintentprovider-sendintentresult-f.md#sendintentresult)返回指定意图的执行结果。
+Unique ID of an intent instance. Its execution result can be returned through  
+[insightIntentProvider.sendExecuteResult](arkts-ability-insightintentprovider-sendexecuteresult-f.md#sendexecuteresult) and  
+[insightIntentProvider.sendIntentResult](arkts-ability-insightintentprovider-sendintentresult-f.md#sendintentresult).
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 

@@ -1,10 +1,10 @@
 # UIServiceProxy
 
-UIServiceProxy提供代理能力，可以从UIServiceExtension客户端发送数据到服务端。
+UIServiceProxy functions as a proxy to send data from the UIServiceExtensionAbility client to the server.
 
-> **说明：**
+> **NOTE：**
 > 
-> - 本模块接口需要在主线程中使用，不要在Worker、TaskPool等子线程中使用。
+> - The APIs of this module must be used in the main thread, but not in child threads such as Worker and TaskPool.
 
 **Since:** 14
 
@@ -20,11 +20,12 @@ UIServiceProxy提供代理能力，可以从UIServiceExtension客户端发送数
 sendData(data: Record<string, Object>): void
 ```
 
-给UIServiceExtension服务端发送数据。
+Sends data to the UIServiceExtensionAbility server.
 
-> **说明：**
+> **NOTE：**
 > 
-> 组件启动规则详见：[组件启动规则（Stage模型）](../../../application-models/component-startup-rules.md)。
+> For details about the startup rules for the components in the stage model, see
+> [Component Startup Rules (Stage Model)](../../../application-models/component-startup-rules.md).
 
 **Since:** 14
 
@@ -42,14 +43,14 @@ sendData(data: Record<string, Object>): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| data | [Record](../../apis-default/arkts-apis/arkts-record-t.md)&lt;string, Object&gt; | Yes | 待发送给UIServiceExtension服务端的数据。 |
+| data | [Record](../../apis-default/arkts-apis/arkts-record-t.md)&lt;string, Object&gt; | Yes | Data to be sent to the UIServiceExtensionAbility server. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
-| 16000050 | Internal error. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| [16000050](../errorcode-ability.md#16000050-internal-error) | Internal error. |
 
 ## sendData
 
@@ -57,11 +58,12 @@ sendData(data: Record<string, Object>): void
 sendData(data: Record<string, RecordData>): void
 ```
 
-给UIServiceExtension服务端发送数据。
+Sends data to the UIServiceExtensionAbility server.
 
-> **说明：**
+> **NOTE：**
 > 
-> 组件启动规则详见：[组件启动规则（Stage模型）](../../../application-models/component-startup-rules.md)。
+> For details about the startup rules for the components in the stage model, see
+> [Component Startup Rules (Stage Model)](../../../application-models/component-startup-rules.md).
 
 **Since:** 23
 
@@ -77,11 +79,11 @@ sendData(data: Record<string, RecordData>): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| data | [Record](../../apis-default/arkts-apis/arkts-record-t.md)&lt;string, RecordData&gt; | Yes | 待发送给UIServiceExtension服务端的数据。 |
+| data | [Record](../../apis-default/arkts-apis/arkts-record-t.md)&lt;string, RecordData&gt; | Yes | Data to be sent to the UIServiceExtensionAbility server. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 16000050 | Internal error. Possible cause: Connect to stub failed. |
+| [16000050](../errorcode-ability.md#16000050-internal-error) | Internal error. Possible cause: Connect to stub failed. |
 

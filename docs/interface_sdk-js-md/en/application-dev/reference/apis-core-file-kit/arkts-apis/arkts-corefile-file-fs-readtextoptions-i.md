@@ -1,6 +1,6 @@
 # ReadTextOptions
 
-可选项类型，支持readText接口使用，ReadTextOptions继承自[ReadOptions](arkts-corefile-file-fs-readoptions-i.md)。
+Defines the options used in **readText()**. It inherits from [ReadOptions](arkts-corefile-file-fs-readoptions-i.md).
 
 **Inheritance/Implementation:** ReadTextOptions extends [ReadOptions](arkts-corefile-file-fs-readoptions-i.md)
 
@@ -24,7 +24,7 @@ import { Options, ReaderIteratorResult, Watcher, ReadTextOptions, WatchEventList
 encoding?: string
 ```
 
-当数据是 string 类型时有效，表示数据的编码方式，默认 'utf-8'，仅支持 'utf-8'。
+Format of the data to be encoded. This parameter is valid only when the data type is string.The default value is 'utf-8', which is the only value supported.
 
 **Type:** string
 

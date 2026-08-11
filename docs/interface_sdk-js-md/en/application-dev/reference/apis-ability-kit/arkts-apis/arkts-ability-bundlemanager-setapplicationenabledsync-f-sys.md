@@ -12,7 +12,7 @@ import { bundleManager } from 'kits/@kit.AbilityKit';
 function setApplicationEnabledSync(bundleName: string, isEnabled: boolean): void
 ```
 
-以同步方法设置指定应用的禁用或使能状态。
+Enables or disables an application. This API returns the result synchronously.
 
 **Since:** 10
 
@@ -30,17 +30,17 @@ function setApplicationEnabledSync(bundleName: string, isEnabled: boolean): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| bundleName | string | Yes | 指定应用的bundleName。 |
-| isEnabled | boolean | Yes | 值为true表示使能，值为false表示禁用。 |
+| bundleName | string | Yes | Bundle name. |
+| isEnabled | boolean | Yes | Whether to enable the application. **true** to enable, **false** otherwise. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types. |
-| 201 | Permission denied. |
-| 202 | Permission denied, non-system app called system api. |
-| 17700001 | The specified bundleName is not found. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission denied, non-system app called system api. |
+| [17700001](../errorcode-bundle.md#17700001-bundle-name-does-not-exist) | The specified bundleName is not found. |
 
 ## Examples
 
@@ -67,7 +67,7 @@ try {
 function setApplicationEnabledSync(bundleName: string, appIndex: int, isEnabled: boolean, killProcess: boolean): void
 ```
 
-设置应用程序是启用还是禁用，并控制在禁用时是否杀死进程。
+Set whether an application is enabled or disabled, with control over whether the process is killed when disabled.
 
 **Since:** 26.0.0
 
@@ -87,39 +87,17 @@ function setApplicationEnabledSync(bundleName: string, appIndex: int, isEnabled:
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| bundleName | string | Yes | 应用包名 |
-| appIndex | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | 应用的分身索引 &lt;br&gt;取值范围为全体整数。 |
-| isEnabled | boolean | Yes | true表示启用应用程序，false表示启用应用程序。 |
-| killProcess | boolean | Yes | true表示应用进程在禁用时杀死应用程序进程，而值为false表示禁用时不会杀死应用程序进程 |
+| bundleName | string | Yes | Indicates the bundle name. |
+| appIndex | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | Indicates the index of clone app. |
+| isEnabled | boolean | Yes | The value true means to enable the application, and the value false means to disable the application. |
+| killProcess | boolean | Yes | The value true indicates that the application process will be killed when disabled, while the value false indicates that the application process will not be killed when disabled. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 17700061 | The specified app index is invalid. |
-| 201 | Permission denied. |
-| 202 | Permission denied. Non-system APP calling system API. |
-| 17700001 | The specified bundle is not found. |
-
-## Examples
-
-```TypeScript
-import { bundleManager } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-import { hilog } from '@kit.PerformanceAnalysisKit';
-
-// Replace with the application bundle name, application index, and whether to enable the application and whether to exit the application process when the application is disabled.
-let bundleName: string = 'com.example.myapplication';
-let appIndex: number = 0;
-let isEnabled: boolean = true;
-let killProcess: boolean = false;
-
-try {
-  bundleManager.setApplicationEnabledSync(bundleName, appIndex, isEnabled, killProcess);
-  hilog.info(0x0000, 'testTag', 'setApplicationEnabledSync successfully');
-} catch (err) {
-  let message = (err as BusinessError).message;
-  hilog.error(0x0000, 'testTag', 'setApplicationEnabledSync failed: %{public}s', message);
-}
-```
+| [17700061](../errorcode-bundle.md#17700061-appindex-for-a-clone-is-invalid) | The specified app index is invalid. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission denied. Non-system APP calling system API. |
+| [17700001](../errorcode-bundle.md#17700001-bundle-name-does-not-exist) | The specified bundle is not found. |
 

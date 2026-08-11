@@ -12,9 +12,10 @@ import { hiTraceMeter } from 'kits/@kit.PerformanceAnalysisKit';
 function finishSyncTrace(level: HiTraceOutputLevel): void
 ```
 
-标记一个同步跟踪耗时任务的结束，分级控制跟踪输出。
+Stops a synchronous trace with the trace output level specified.
 
-finishSyncTrace的level必须与流程开始的[startSyncTrace()](arkts-performanceanalysis-hitracemeter-startsynctrace-f.md#startsynctrace)对应参数值一致。
+The **level** used in **finishSyncTrace** must be the same as that of  
+[startSyncTrace()](arkts-performanceanalysis-hitracemeter-startsynctrace-f.md#startsynctrace).
 
 **Since:** 19
 
@@ -30,7 +31,7 @@ finishSyncTrace的level必须与流程开始的[startSyncTrace()](arkts-performa
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| level | [HiTraceOutputLevel](arkts-performanceanalysis-hitracemeter-hitraceoutputlevel-e.md) | Yes | 跟踪输出级别。 |
+| level | [HiTraceOutputLevel](arkts-performanceanalysis-hitracemeter-hitraceoutputlevel-e.md) | Yes | Trace output level. |
 
 ## Examples
 

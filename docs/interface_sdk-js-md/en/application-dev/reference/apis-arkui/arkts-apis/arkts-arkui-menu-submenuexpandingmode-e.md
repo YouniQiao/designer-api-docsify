@@ -1,6 +1,6 @@
 # SubMenuExpandingMode
 
-Menu子菜单展开样式枚举。
+Declare SubMenuExpandingMode
 
 **Since:** 23
 
@@ -16,7 +16,7 @@ Menu子菜单展开样式枚举。
 SIDE_EXPAND = 0
 ```
 
-默认展开样式，子菜单位于同一平面侧边展开。
+Sub-menu will expand besides main menu
 
 **Since:** 23
 
@@ -34,7 +34,7 @@ SIDE_EXPAND = 0
 EMBEDDED_EXPAND = 1
 ```
 
-直接展开样式，子菜单嵌于主菜单内展开。
+Sub-menu will expand embedded in main menu
 
 **Since:** 23
 
@@ -52,7 +52,7 @@ EMBEDDED_EXPAND = 1
 STACK_EXPAND = 2
 ```
 
-堆叠样式，子菜单浮于主菜单上方展开。
+Sub-menu will expand over main menu
 
 **Since:** 23
 

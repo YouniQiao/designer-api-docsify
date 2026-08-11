@@ -1,7 +1,7 @@
 # WriteStream
 
-文件可写流，需要先通过  
-[fileIo.createWriteStream](../../../reference/apis-core-file-kit/js-apis-file-fs.md#fileiocreatewritestream12)方法来构建一个WriteStream实例。WriteStream继承自数据流基类[stream.Writable](../../apis-arkts/arkts-apis/arkts-arkts-stream-writable-c.md/arkts-arkts-stream-writable-c.md)。
+Defines a writeable stream. You need to use  
+[fileIo.createWriteStream](../../../reference/apis-core-file-kit/js-apis-file-fs.md#fileiocreatewritestream12) to create a **WriteStream** instance, which is inherited from [stream.Writable](../../apis-arkts/arkts-apis/arkts-arkts-stream-writable-c.md/arkts-arkts-stream-writable-c.md).
 
 **Inheritance/Implementation:** WriteStream extends [stream.Writable](../../apis-arkts/arkts-apis/arkts-arkts-stream-writable-c.md/arkts-arkts-stream-writable-c.md)
 
@@ -25,7 +25,7 @@ import { Options, ReaderIteratorResult, Watcher, ReadTextOptions, WatchEventList
 close(): void
 ```
 
-关闭可写流。
+Closes this writeable stream.
 
 **Since:** 12
 
@@ -50,7 +50,7 @@ close(): void
 
 ```TypeScript
 const filePath = pathDir + "/test.txt";
-const ws = fileIo.createWriteStream(filePath);
+const ws = fs.createWriteStream(filePath);
 ws.close();
 ```
 
@@ -76,7 +76,7 @@ The WriteStream constructor.
 seek(offset: number, whence?: WhenceType): number
 ```
 
-调整可写流的偏移指针位置。
+Adjusts the position of the writeable stream offset pointer.
 
 **Since:** 12
 
@@ -90,21 +90,21 @@ seek(offset: number, whence?: WhenceType): number
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| offset | number | Yes | 相对偏移位置，单位为Byte。 |
-| whence | [WhenceType](arkts-corefile-fileio-whencetype-e.md) | No | 偏移指针相对位置类型。默认值：SEEK_SET，文件起始位置处。 |
+| offset | number | Yes | Relative offset, in bytes. |
+| whence | [WhenceType](arkts-corefile-fileio-whencetype-e.md) | No | Where to start the offset. The default value is **SEEK_SET**, which indicates the beginning of the file. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| number | 当前可写流偏移指针位置（相对于文件头的偏移量，单位为Byte）。 |
+| number | Position of the current offset pointer (offset relative to the file header, in bytes). |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
 | 13900020 | Invalid argument |
-| 401 | Parameter error |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error |
 | 13900026 | Illegal seek |
 | 13900042 | Unknown error |
 
@@ -112,9 +112,9 @@ seek(offset: number, whence?: WhenceType): number
 
 ```TypeScript
 const filePath = pathDir + "/test.txt";
-const ws = fileIo.createWriteStream(filePath);
-const curOff = ws.seek(5, fileIo.WhenceType.SEEK_SET);
-console.info(`Succeeded in seeking, current offset is ${curOff}`);
+const ws = fs.createWriteStream(filePath);
+const curOff = ws.seek(5, fs.WhenceType.SEEK_SET);
+console.info(`current offset is ${curOff}`);
 ws.close();
 ```
 
@@ -124,7 +124,7 @@ ws.close();
 readonly bytesWritten: number
 ```
 
-可写流已经写入的字节数。
+Number of bytes written to the writable stream.
 
 **Type:** number
 
@@ -142,7 +142,7 @@ readonly bytesWritten: number
 readonly path: string
 ```
 
-当前可写流对应的文件路径。
+Path of the file corresponding to the writeable stream.
 
 **Type:** string
 

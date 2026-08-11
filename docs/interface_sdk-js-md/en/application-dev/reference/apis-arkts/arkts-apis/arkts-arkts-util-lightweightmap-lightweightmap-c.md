@@ -1,6 +1,6 @@
 # LightWeightMap
 
-LightWeightMap可用于存储具有关联关系的key-value键值对，其中key值唯一，每个key对应一个value。
+LightWeightMap stores key-value (KV) pairs. Each key must be unique and have only one value.
 
 **Since:** 8
 
@@ -22,7 +22,7 @@ import { LightWeightMap } from 'kits/@kit.ArkTS';
 $_iterator(): IterableIterator<[K, V]>
 ```
 
-返回一个迭代器，迭代器的每一项都是一个包含键和值的[K, V]数组。
+returns an ES6 iterator.Each item of the iterator is a Javascript Object
 
 **Since:** 23
 
@@ -38,7 +38,7 @@ $_iterator(): IterableIterator<[K, V]>
 
 | Type | Description |
 | --- | --- |
-| [IterableIterator](arkts-arkts-iterator-iterableiterator-i.md)&lt;[K, V]&gt; | LightWeightMap的迭代器。 |
+| [IterableIterator](arkts-arkts-iterator-iterableiterator-i.md)&lt;[K, V]&gt; | an iterator for the LightWeightMap |
 
 ## [Symbol.iterator]
 
@@ -46,7 +46,7 @@ $_iterator(): IterableIterator<[K, V]>
 [Symbol.iterator](): IterableIterator<[K, V]>
 ```
 
-返回一个迭代器，迭代器的每一项都是一个包含键和值的[K, V]数组。
+returns an ES6 iterator.Each item of the iterator is a Javascript Object
 
 **Since:** 8
 
@@ -62,13 +62,13 @@ $_iterator(): IterableIterator<[K, V]>
 
 | Type | Description |
 | --- | --- |
-| [IterableIterator](arkts-arkts-iterator-iterableiterator-i.md)&lt;[K, V]&gt; | 返回一个迭代器。 |
+| [IterableIterator](arkts-arkts-iterator-iterableiterator-i.md)&lt;[K, V]&gt; |  |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 10200011 | The Symbol.iterator method cannot be bound. |
+| [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) | The Symbol.iterator method cannot be bound. |
 
 ## Examples
 
@@ -118,7 +118,7 @@ for(let i = 0; i < 10; i++) {
 clear(): void
 ```
 
-清除LightWeightMap中的所有元素，并将length置为0。
+Clears this LightWeightMap and sets its length to **0**.
 
 **Since:** 8
 
@@ -134,7 +134,7 @@ clear(): void
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 10200011 | The clear method cannot be bound. |
+| [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) | The clear method cannot be bound. |
 
 ## Examples
 
@@ -153,7 +153,7 @@ console.info("result:", result);  // result: true
 constructor()
 ```
 
-LightWeightMap的构造函数，创建一个空的LightWeightMap实例。
+A constructor used to create a **LightWeightMap** instance.
 
 **Since:** 8
 
@@ -169,7 +169,7 @@ LightWeightMap的构造函数，创建一个空的LightWeightMap实例。
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 10200012 | The LightWeightMap's constructor cannot be directly invoked. |
+| [10200012](../errorcode-utils.md#10200012-constructor-calling-failure) | The LightWeightMap's constructor cannot be directly invoked. |
 
 ## Examples
 
@@ -183,7 +183,7 @@ let lightWeightMap = new LightWeightMap<string, number>();
 entries(): IterableIterator<[K, V]>
 ```
 
-返回包含此映射中所有键值对的新迭代器对象。
+Returns an iterator that contains all the elements in this LightWeightMap.
 
 **Since:** 8
 
@@ -199,13 +199,13 @@ entries(): IterableIterator<[K, V]>
 
 | Type | Description |
 | --- | --- |
-| [IterableIterator](arkts-arkts-iterator-iterableiterator-i.md)&lt;[K, V]&gt; | 返回包含此映射中所有键值对的迭代器对象。 |
+| [IterableIterator](arkts-arkts-iterator-iterableiterator-i.md)&lt;[K, V]&gt; | Iterator obtained. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 10200011 | The entries method cannot be bound. |
+| [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) | The entries method cannot be bound. |
 
 ## Examples
 
@@ -239,7 +239,7 @@ for(let i = 0; i < 10; i++) {
 forEach(callbackFn: (value?: V, key?: K, map?: LightWeightMap<K, V>) => void, thisArg?: Object): void
 ```
 
-通过回调函数来遍历实例对象上的元素及其键值对信息。
+Uses a callback to traverse the elements in this LightWeightMap and obtain their indexes.
 
 **Since:** 8
 
@@ -255,14 +255,14 @@ forEach(callbackFn: (value?: V, key?: K, map?: LightWeightMap<K, V>) => void, th
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callbackFn | (value?: V, key?: K, map?: LightWeightMap&lt;K, V&gt;) =&gt; void | Yes | 回调函数，用于遍历LightWeightMap实例中的元素及下标。 |
-| thisArg | Object | No | callbackFn被调用时用作this值。当需要回调函数中的this指向非当前实例对象时传入此参数，当不需要改变this指向时可不传入。不传入时，默认值为当前实例对象。 |
+| callbackFn | (value?: V, key?: K, map?: LightWeightMap&lt;K, V&gt;) =&gt; void | Yes | Callback invoked to traverse the elements in the LightWeightMap. |
+| thisArg | Object | No | Value of **this** to use when **callbackFn** is invoked. The default value is this instance. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 10200011 | The forEach method cannot be bound. |
+| [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) | The forEach method cannot be bound. |
 
 ## Examples
 
@@ -294,7 +294,7 @@ for(let i = 0; i < 10; i++) {
 forEach(callbackFn: LightWeightMapCbFn<K, V>): void
 ```
 
-通过回调函数来遍历实例对象上的元素及其下标。
+Iterates over all key-value pairs in the LightWeightMap and executes a callback function for each entry.
 
 **Since:** 23
 
@@ -310,7 +310,7 @@ forEach(callbackFn: LightWeightMapCbFn<K, V>): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callbackFn | [LightWeightMapCbFn](arkts-arkts-lightweightmapcbfn-t.md)&lt;K, V&gt; | Yes | 回调函数。 |
+| callbackFn | [LightWeightMapCbFn](arkts-arkts-lightweightmapcbfn-t.md)&lt;K, V&gt; | Yes | A callback function that will be executed for each key-value pair. |
 
 ## get
 
@@ -318,7 +318,7 @@ forEach(callbackFn: LightWeightMapCbFn<K, V>): void
 get(key: K): V
 ```
 
-获取指定key所对应的value。当key为number类型且值大于INT32_MAX或小于INT32_MIN时，结果可能与预期不一致。
+Obtains the value of the specified key in this LightWeightMap.
 
 **Since:** 8
 
@@ -334,19 +334,19 @@ get(key: K): V
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| key | K | Yes | 指定key。 |
+| key | K | Yes | Target key. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| V | 返回key映射的value值。 |
+| V | Value of the key. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 10200011 | The get method cannot be bound. |
+| [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) | The get method cannot be bound. |
 
 ## Examples
 
@@ -364,7 +364,7 @@ console.info("result:", result);  // result: 356
 get(key: K): V | undefined
 ```
 
-获取指定key所对应的value。
+Returns the value to which the specified key is mapped, or undefined if this map contains no mapping for the key
 
 **Since:** 23
 
@@ -380,13 +380,13 @@ get(key: K): V | undefined
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| key | K | Yes | 指定key。 |
+| key | K | Yes | The key to look up in the LightWeightMap |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| V | 如果存在与key关联的值则返回该值，否则返回undefined。 |
+| V | value if associated with key presents, undefined otherwise |
 
 ## getIndexOfKey
 
@@ -400,7 +400,7 @@ ArkTS-Sta:
 getIndexOfKey(key: K): int
 ```
 
-查找key元素首次出现的下标值，如果未找到返回-1。当key为number类型且值大于INT32_MAX或小于INT32_MIN时，结果可能与预期不一致。
+Obtains the index of the first occurrence of an element with the specified key in this LightWeightMap.
 
 **Since:** 8
 
@@ -416,19 +416,19 @@ getIndexOfKey(key: K): int
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| key | K | Yes | 被查找的元素。 |
+| key | K | Yes | Key of the element. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| ArkTS-Dyn: number  <br>ArkTS-Sta：int | 返回key元素首次出现的下标值，查找失败返回-1。 |
+| ArkTS-Dyn: number  <br>ArkTS-Sta：int | Index of the element. If no match is found, **-1** is returned. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 10200011 | The getIndexOfKey method cannot be bound. |
+| [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) | The getIndexOfKey method cannot be bound. |
 
 ## Examples
 
@@ -452,7 +452,7 @@ ArkTS-Sta:
 getIndexOfValue(value: V): int
 ```
 
-查找指定value元素首次出现的下标值，如果未找到则返回-1。
+Obtains the index of the first occurrence of an element with the specified value in this LightWeightMap.
 
 **Since:** 8
 
@@ -468,19 +468,19 @@ getIndexOfValue(value: V): int
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | V | Yes | 要查找首次出现下标位置的值。 |
+| value | V | Yes | Key of the element. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| ArkTS-Dyn: number  <br>ArkTS-Sta：int | 返回value元素首次出现的下标值，查找失败返回-1。 |
+| ArkTS-Dyn: number  <br>ArkTS-Sta：int | Index of the element. If no match is found, **-1** is returned. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 10200011 | The getIndexOfValue method cannot be bound. |
+| [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) | The getIndexOfValue method cannot be bound. |
 
 ## Examples
 
@@ -498,7 +498,7 @@ console.info("result:", result);  // result: 1
 getKeyAt(index: number): K
 ```
 
-查找指定下标的元素键值对中key值，如果未找到则返回undefined。
+Obtains the key of an element at the specified position in this LightWeightMap.
 
 **Since:** 8
 
@@ -514,20 +514,20 @@ getKeyAt(index: number): K
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| index | number | Yes | 所查找的下标。需要小于等于INT32_MAX即2147483647。 |
+| index | number | Yes | Position index of the element. The value must be less than or equal to int32_max, that is , 2147483647. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| K | 返回该下标对应的元素键值对中key值，如果未找到则返回undefined。 |
+| K | Key obtained. If the key is not found, **undefined** is returned. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 10200011 | The getKeyAt method cannot be bound. |
-| 10200001 | The value of index is out of range. |
+| [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) | The getKeyAt method cannot be bound. |
+| [10200001](../errorcode-utils.md#10200001-value-out-of-range) | The value of index is out of range. |
 
 ## Examples
 
@@ -545,7 +545,7 @@ console.info("result:", result);  // result: squirrel
 getKeyAt(index: int): K | undefined
 ```
 
-查找指定下标的元素键值对中key值，如果未找到则返回undefined。
+Obtains the key at the location identified by index in an LightWeightMap container
 
 **Since:** 23
 
@@ -561,19 +561,19 @@ getKeyAt(index: int): K | undefined
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| index | int | Yes | 所查找的下标。需要小于等于int32_max即2147483647。 取值限定为整数。 |
+| index | int | Yes | The index to look up in the LightWeightMap The value should be an integer. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| K | 返回指定下标对应的key，如果下标超出范围则返回undefined。 |
+| K | the key of key-value pairs or undefined |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 10200001 | The value of index is out of range. |
+| [10200001](../errorcode-utils.md#10200001-value-out-of-range) | The value of index is out of range. |
 
 ## getValueAt
 
@@ -581,7 +581,7 @@ getKeyAt(index: int): K | undefined
 getValueAt(index: number): V
 ```
 
-获取指定下标对应键值对中的值。
+Obtains the value of an element at the specified position in this LightWeightMap.
 
 **Since:** 8
 
@@ -597,20 +597,20 @@ getValueAt(index: number): V
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| index | number | Yes | 指定下标。需要小于等于INT32_MAX即2147483647。 |
+| index | number | Yes | Position index of the element. The value must be less than or equal to int32_max, that is , 2147483647. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| V | 返回指定下标对应键值对中的值。 |
+| V | Value obtained. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 10200011 | The getValueAt method cannot be bound. |
-| 10200001 | The value of index is out of range. |
+| [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) | The getValueAt method cannot be bound. |
+| [10200001](../errorcode-utils.md#10200001-value-out-of-range) | The value of index is out of range. |
 
 ## Examples
 
@@ -628,7 +628,7 @@ console.info("result:", result);  // result: 123
 getValueAt(index: int): V | undefined
 ```
 
-获取指定下标对应键值对中的值。
+Obtains the value identified by index in an LightWeightMap container
 
 **Since:** 23
 
@@ -644,19 +644,19 @@ getValueAt(index: int): V | undefined
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| index | int | Yes | 指定下标。需要小于等于int32_max即2147483647。 取值限定为整数。 |
+| index | int | Yes | The index to look up in the map The value should be an integer. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| V | 返回指定下标对应的值，如果下标超出范围则返回undefined。 |
+| V | the value of key-value pairs or undefined |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 10200001 | The value of index is out of range. |
+| [10200001](../errorcode-utils.md#10200001-value-out-of-range) | The value of index is out of range. |
 
 ## hasAll
 
@@ -664,7 +664,7 @@ getValueAt(index: int): V | undefined
 hasAll(map: LightWeightMap<K, V>): boolean
 ```
 
-判断LightWeightMap中是否包含指定map中的所有元素。
+Checks whether this LightWeightMap contains all elements of the specified **LightWeightMap** instance.
 
 **Since:** 8
 
@@ -680,19 +680,19 @@ hasAll(map: LightWeightMap<K, V>): boolean
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| map | [LightWeightMap](arkts-arkts-util-lightweightmap-lightweightmap-c.md)&lt;K, V&gt; | Yes | 用于比较的LightWeightMap对象，判断当前实例是否包含此map中的所有元素。 |
+| map | [LightWeightMap](arkts-arkts-util-lightweightmap-lightweightmap-c.md)&lt;K, V&gt; | Yes | LightWeightMap** instance to be used for comparison. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| boolean | 包含所有元素返回true，否则返回false。 |
+| boolean | Check result. The value **true** is returned if all the elements in the specified LightWeightMap are contained; otherwise, **false** is returned. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 10200011 | The hasAll method cannot be bound. |
+| [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) | The hasAll method cannot be bound. |
 
 ## Examples
 
@@ -712,7 +712,7 @@ console.info("result = ", result); // result = true
 hasKey(key: K): boolean
 ```
 
-判断LightWeightMap中是否包含指定key。当key为number类型且值大于INT32_MAX或小于INT32_MIN时，结果可能与预期不一致，详见规格限制。
+Checks whether this LightWeightMap has the specified key.
 
 **Since:** 8
 
@@ -728,19 +728,19 @@ hasKey(key: K): boolean
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| key | K | Yes | 指定key。当key为number类型且值大于INT32_MAX或小于INT32_MIN时，结果可能与预期不一致。 |
+| key | K | Yes | Target key. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| boolean | 包含指定key返回true，否则返回false。 |
+| boolean | Check result. The value **true** is returned if the specified key is contained; otherwise, **false** is returned. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 10200011 | The hasKey method cannot be bound. |
+| [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) | The hasKey method cannot be bound. |
 
 ## Examples
 
@@ -757,7 +757,7 @@ console.info("result:", result);  // result: true
 hasValue(value: V): boolean
 ```
 
-判断LightWeightMap中是否包含指定value。
+Checks whether this LightWeightMap has the specified value.
 
 **Since:** 8
 
@@ -773,19 +773,19 @@ hasValue(value: V): boolean
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | V | Yes | 要判断是否包含的value。 |
+| value | V | Yes | Target value. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| boolean | 包含指定元素返回true，否则返回false。 |
+| boolean | Operation result. The value **true** is returned if the specified value is contained; otherwise, **false** is returned. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 10200011 | The hasValue method cannot be bound. |
+| [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) | The hasValue method cannot be bound. |
 
 ## Examples
 
@@ -808,7 +808,7 @@ ArkTS-Sta:
 increaseCapacityTo(minimumCapacity: int): void
 ```
 
-将当前LightWeightMap扩容至指定容量。如果传入的容量值大于或等于当前LightWeightMap中的元素个数，将容量扩容至新容量，小于则不会变更。
+Increases the capacity of this LightWeightMap. If the passed-in capacity is greater than or equal to the number of elements in this LightWeightMap, the capacity is changed to the new capacity. If the passed-in capacity is less than the number of elements in this LightWeightMap, the capacity is not changed.
 
 **Since:** 8
 
@@ -824,13 +824,13 @@ increaseCapacityTo(minimumCapacity: int): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| minimumCapacity | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | 需要容纳的元素数量。取值需大于等于0，大于等于当前元素个数时扩容生效，否则不变更容量。 |
+| minimumCapacity | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | Minimum number of elements to accommodate in this LightWeightMap. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 10200011 | The increaseCapacityTo method cannot be bound. |
+| [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) | The increaseCapacityTo method cannot be bound. |
 
 ## Examples
 
@@ -845,7 +845,7 @@ lightWeightMap.increaseCapacityTo(10);
 isEmpty(): boolean
 ```
 
-判断LightWeightMap是否为空。
+Checks whether this LightWeightMap is empty (contains no element).
 
 **Since:** 8
 
@@ -861,13 +861,13 @@ isEmpty(): boolean
 
 | Type | Description |
 | --- | --- |
-| boolean | 为空返回true，不为空返回false。 |
+| boolean | Check result. The value **true** is returned if the LightWeightMap is empty; otherwise, **false** is returned. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 10200011 | The isEmpty method cannot be bound. |
+| [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) | The isEmpty method cannot be bound. |
 
 ## Examples
 
@@ -883,7 +883,7 @@ console.info("result:", result);  // result: true
 keys(): IterableIterator<K>
 ```
 
-返回包含此映射中所有的键的新迭代器对象。
+Returns an iterator that contains all the keys in this LightWeightMap.
 
 **Since:** 8
 
@@ -899,13 +899,13 @@ keys(): IterableIterator<K>
 
 | Type | Description |
 | --- | --- |
-| [IterableIterator](arkts-arkts-iterator-iterableiterator-i.md)&lt;K&gt; | 返回一个迭代器。 |
+| [IterableIterator](arkts-arkts-iterator-iterableiterator-i.md)&lt;K&gt; | Iterator obtained. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 10200011 | The keys method cannot be bound. |
+| [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) | The keys method cannot be bound. |
 
 ## Examples
 
@@ -927,7 +927,7 @@ for (let key of keys) {
 remove(key: K): V
 ```
 
-删除指定key映射的元素。当key为number类型且值大于INT32_MAX或小于INT32_MIN时，结果可能与预期不一致。
+Removes an element with the specified key from this LightWeightMap.
 
 **Since:** 8
 
@@ -943,19 +943,19 @@ remove(key: K): V
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| key | K | Yes | 指定key。 |
+| key | K | Yes | Target key. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| V | 返回删除元素的值。 |
+| V | Value of the element removed. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 10200011 | The remove method cannot be bound. |
+| [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) | The remove method cannot be bound. |
 
 ## Examples
 
@@ -972,7 +972,7 @@ console.info("result:", result);  // result: 356
 remove(key: K): V | undefined
 ```
 
-删除指定key映射的元素。
+Remove the mapping for this key from this map if present
 
 **Since:** 23
 
@@ -988,13 +988,13 @@ remove(key: K): V | undefined
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| key | K | Yes | 指定key。 |
+| key | K | Yes | The key to remove from the map |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| V | 如果删除了元素则返回该元素的值，否则返回undefined。 |
+| V | the value associated with the key if it was removed, undefined otherwise |
 
 ## removeAt
 
@@ -1008,7 +1008,7 @@ ArkTS-Sta:
 removeAt(index: int): boolean
 ```
 
-删除指定下标对应的元素。调用成功后，若下标有效则该位置的键值对从LightWeightMap中移除且length减少。
+Removes an element at the specified position from this LightWeightMap.
 
 **Since:** 8
 
@@ -1024,19 +1024,19 @@ removeAt(index: int): boolean
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| index | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | 要删除的元素的下标位置。取值范围：[0, length-1]，需小于等于INT32_MAX即2147483647。 |
+| index | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | Position index of the element. The value must be less than or equal to int32_max, that is, 2 147483647. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| boolean | 成功删除元素返回true，否则返回false。 |
+| boolean | Operation result. The value **true** is returned if the element is removed; otherwise, **false** is returned. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 10200011 | The removeAt method cannot be bound. |
+| [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) | The removeAt method cannot be bound. |
 
 ## Examples
 
@@ -1054,7 +1054,7 @@ console.info("result:", result);  // result: true
 set(key: K, value: V): Object
 ```
 
-向LightWeightMap中添加或更新一组数据。调用成功后，若key不存在则新增键值对且length增加，若key已存在则更新对应value值。
+Adds or updates an element in this LightWeightMap.
 
 **Since:** 8
 
@@ -1070,20 +1070,20 @@ set(key: K, value: V): Object
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| key | K | Yes | 添加或更新成员数据的键名。当key为number类型且值大于INT32_MAX或小于INT32_MIN时，结果可能与预期不一致。 |
-| value | V | Yes | 添加或更新成员数据的值。 |
+| key | K | Yes | Key of the target element. |
+| value | V | Yes | Value of the target element. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Object | 返回添加或更新后的LightWeightMap实例对象。 |
+| Object | LightWeightMap that contains the new element. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 10200011 | The set method cannot be bound. |
+| [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) | The set method cannot be bound. |
 
 ## Examples
 
@@ -1099,7 +1099,7 @@ console.info("result:", result);  // result: squirrel:123
 setAll(map: LightWeightMap<K, V>): void
 ```
 
-将一个LightWeightMap中的所有元素添加到另一个LightWeightMap中，如果目标LightWeightMap中已存在相同的key，则会更新其对应的value。
+Adds all elements in a LightWeightMap to this LightWeightMap.
 
 **Since:** 8
 
@@ -1115,13 +1115,13 @@ setAll(map: LightWeightMap<K, V>): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| map | [LightWeightMap](arkts-arkts-util-lightweightmap-lightweightmap-c.md)&lt;K, V&gt; | Yes | 提供添加元素的LightWeightMap。 |
+| map | [LightWeightMap](arkts-arkts-util-lightweightmap-lightweightmap-c.md)&lt;K, V&gt; | Yes | LightWeightMap whose elements are to be added to the current LightWeightMap. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 10200011 | The setAll method cannot be bound. |
+| [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) | The setAll method cannot be bound. |
 
 ## Examples
 
@@ -1147,7 +1147,7 @@ ArkTS-Sta:
 setValueAt(index: int, newValue: V): boolean
 ```
 
-替换指定下标对应键值对中的值。调用成功后，指定下标处键值对的值将被替换为newValue。
+Sets a value for an element at the specified position in this LightWeightMap.
 
 **Since:** 8
 
@@ -1163,21 +1163,21 @@ setValueAt(index: int, newValue: V): boolean
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| index | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | 指定下标。需要小于等于INT32_MAX即2147483647。 |
-| newValue | V | Yes | 替换键值对中的值。 |
+| index | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | Position index of the element. The value must be less than or equal to int32_max, that is, 2 147483647. |
+| newValue | V | Yes | Value of the target element to set. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| boolean | 成功替换返回true，否则返回false。 |
+| boolean | Operation result. The value **true** is returned if the value is set successfully; otherwise, **false** is returned. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 10200011 | The setValueAt method cannot be bound. |
-| 10200001 | The value of index is out of range. |
+| [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) | The setValueAt method cannot be bound. |
+| [10200001](../errorcode-utils.md#10200001-value-out-of-range) | The value of index is out of range. |
 
 ## Examples
 
@@ -1195,7 +1195,7 @@ console.info("result:", lightWeightMap.get("squirrel"));  // result: 3546
 toString(): String
 ```
 
-将此映射中包含的键值对拼接成字符串并返回。
+Concatenates the elements in this LightWeightMap into a string and returns the string.
 
 **Since:** 8
 
@@ -1211,13 +1211,13 @@ toString(): String
 
 | Type | Description |
 | --- | --- |
-| String | 返回将此映射中键值对拼接而成的字符串。 |
+| String | String obtained. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 10200011 | The toString method cannot be bound. |
+| [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) | The toString method cannot be bound. |
 
 ## Examples
 
@@ -1235,7 +1235,7 @@ console.info("result:", result);  // result: sparrow:356,squirrel:123
 values(): IterableIterator<V>
 ```
 
-返回包含此映射中所有值的新迭代器对象。
+Returns an iterator that contains all the values in this LightWeightMap.
 
 **Since:** 8
 
@@ -1251,13 +1251,13 @@ values(): IterableIterator<V>
 
 | Type | Description |
 | --- | --- |
-| [IterableIterator](arkts-arkts-iterator-iterableiterator-i.md)&lt;V&gt; | 返回一个迭代器。 |
+| [IterableIterator](arkts-arkts-iterator-iterableiterator-i.md)&lt;V&gt; | Iterator obtained. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 10200011 | The values method cannot be bound. |
+| [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) | The values method cannot be bound. |
 
 ## Examples
 
@@ -1279,7 +1279,7 @@ for (let value of values) {
 length: number
 ```
 
-LightWeightMap的元素个数。
+Number of elements in a LightWeightMap.
 
 **Type:** number
 

@@ -1,6 +1,6 @@
 # ContinueCallbackInfo (System API)
 
-当前任务流转状态监听的回调信息，包含流转状态和流转信息。
+Defines the information about the callback that is triggered for mission continuation state changes.
 
 **Since:** 11
 
@@ -24,7 +24,7 @@ import { distributedMissionManager } from 'kits/@kit.AbilityKit';
 info: ContinuableInfo
 ```
 
-表示当前任务的流转信息。
+Continuation information of the mission.
 
 **Type:** [ContinuableInfo](arkts-ability-distributedmissionmanager-continuableinfo-t-sys.md)
 
@@ -46,7 +46,7 @@ info: ContinuableInfo
 state: ContinueState
 ```
 
-表示当前任务的流转状态。
+Continuation state of the mission.
 
 **Type:** [ContinueState](arkts-ability-abilityconstant-continuestate-e.md)
 

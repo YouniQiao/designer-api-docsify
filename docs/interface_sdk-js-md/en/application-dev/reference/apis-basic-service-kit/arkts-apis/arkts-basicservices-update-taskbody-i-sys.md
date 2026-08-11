@@ -1,6 +1,6 @@
 # TaskBody (System API)
 
-任务数据。
+Represents task data.
 
 **Since:** 9
 
@@ -24,7 +24,7 @@ import { update } from 'kits/@kit.BasicServicesKit';
 errorMessages: Array<ErrorMessage>
 ```
 
-错误信息。
+Error message.
 
 **Type:** Array&lt;ErrorMessage&gt;
 
@@ -44,7 +44,7 @@ errorMessages: Array<ErrorMessage>
 installMode: int
 ```
 
-安装模式，取值范围[0, 2]。取值原则：0为正常升级，适用于用户主动触发升级的场景；1为夜间升级，适用于设置夜间时段自动升级的场景；2为自动升级，适用于系统自动检测并执行升级的场景。应根据升级策略和用户体验需求选择。超出范围时抛出异常。
+Install mode. The value range is [0, 2]. The value **0** indicates the regular upgrade, which is applicable to scenarios where users proactively trigger the upgrade. **1** indicates the upgrade at night, which is applicable to scenarios where automatic upgrade is performed at night. **2** indicates the automatic upgrade, which is applicable to scenarios where the system automatically detects and performs the upgrade. Select a value based on the upgrade policy and user experience requirements. An exception is thrown if the value is out of range.
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
@@ -64,7 +64,7 @@ installMode: int
 progress: int
 ```
 
-进度，单位为%，取值范围[0, 100]，超出范围时抛出异常。
+Progress, in percentage. The value range is [0, 100]. If the value is out of the range, an exception is thrown.
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
@@ -84,7 +84,9 @@ progress: int
 status: UpgradeStatus
 ```
 
-升级状态。用于标识升级任务的当前执行阶段。包含下载状态（WAITING_DOWNLOAD到DOWNLOAD_FAIL）、安装状态（WAITING_INSTALL到UPDATING）、生效状态（WAITING_APPLY到APPLYING）和最终结果（UPGRADE_SUCCESS或UPGRADE_FAIL），用于任务状态监控、进度展示和异常处理等场景。
+Upgrade status, which indicates the current execution phase of the upgrade task. The value can be a download status (from **WAITING_DOWNLOAD** to **DOWNLOAD_FAIL**), installation status (from **WAITING_INSTALL** to   
+**UPDATING**), effective status (from **WAITING_APPLY** to **APPLYING**), or the final result (  
+**UPGRADE_SUCCESS** or **UPGRADE_FAIL**). This parameter is used for status monitoring, progress display, and exception handling.
 
 **Type:** [UpgradeStatus](arkts-basicservices-update-upgradestatus-e-sys.md)
 
@@ -104,7 +106,7 @@ status: UpgradeStatus
 subStatus: int
 ```
 
-子状态，取值范围参考[UpgradeStatus](arkts-basicservices-update-upgradestatus-e-sys.md)状态码。
+Sub-status. For details about the value range, see [UpgradeStatus](arkts-basicservices-update-upgradestatus-e-sys.md).
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
@@ -124,7 +126,7 @@ subStatus: int
 versionComponents: Array<VersionComponent>
 ```
 
-版本组件。
+Version components.
 
 **Type:** Array&lt;VersionComponent&gt;
 
@@ -144,7 +146,7 @@ versionComponents: Array<VersionComponent>
 versionDigestInfo: VersionDigestInfo
 ```
 
-版本摘要。
+Version digest information.
 
 **Type:** [VersionDigestInfo](arkts-basicservices-update-versiondigestinfo-i-sys.md)
 

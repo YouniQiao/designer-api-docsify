@@ -1,6 +1,6 @@
 # RichEditorStyledStringOptions
 
-RichEditor初始化参数。
+Defines the options of RichEditor with StyledString.
 
 **Since:** 23
 
@@ -16,7 +16,7 @@ RichEditor初始化参数。
 controller: RichEditorStyledStringController
 ```
 
-富文本控制器。
+RichEditor controller.
 
 **Type:** [RichEditorStyledStringController](arkts-arkui-richeditor-richeditorstyledstringcontroller-c.md)
 

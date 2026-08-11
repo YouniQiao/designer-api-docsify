@@ -1,0 +1,114 @@
+# CameraInput
+
+相机设备输入对象。
+
+会话中[Session](arkts-camera-camera-session-i.md)使用的相机信息。
+
+**起始版本：** 10
+
+<!--Device-camera-interface CameraInput--><!--Device-camera-interface CameraInput-End-->
+
+**系统能力：** SystemCapability.Multimedia.Camera.Core
+
+## closeDelayed
+
+```TypeScript
+closeDelayed(time: number): Promise<void>
+```
+
+Delay close camera.
+
+**起始版本：** 18
+
+<!--Device-CameraInput-closeDelayed(time: int): Promise<void>--><!--Device-CameraInput-closeDelayed(time: int): Promise<void>-End-->
+
+**系统能力：** SystemCapability.Multimedia.Camera.Core
+
+**系统接口：** 此接口为系统接口。
+
+**参数：**
+
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| time | number | 是 |
+
+**返回值：**
+
+| 类型 |
+| --- |
+| Promise&lt;void&gt; |
+
+**错误码：**
+
+| 错误码ID |
+| --- |
+| [7400101](../errorcode-camera.md#7400101-无效入参) |
+| [7400201](../errorcode-camera.md#7400201-相机服务异常) |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
+
+## controlAuxiliary
+
+```TypeScript
+controlAuxiliary(auxiliaryType: AuxiliaryType, auxiliaryStatus: AuxiliaryStatus): Promise<void>
+```
+
+Control auxiliary.
+
+**起始版本：** 18
+
+<!--Device-CameraInput-controlAuxiliary(auxiliaryType: AuxiliaryType, auxiliaryStatus: AuxiliaryStatus): Promise<void>--><!--Device-CameraInput-controlAuxiliary(auxiliaryType: AuxiliaryType, auxiliaryStatus: AuxiliaryStatus): Promise<void>-End-->
+
+**系统能力：** SystemCapability.Multimedia.Camera.Core
+
+**系统接口：** 此接口为系统接口。
+
+**参数：**
+
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| auxiliaryType | [AuxiliaryType](arkts-camera-camera-auxiliarytype-e-sys.md) | 是 |
+| auxiliaryStatus | [AuxiliaryStatus](arkts-camera-camera-auxiliarystatus-e-sys.md) | 是 |
+
+**返回值：**
+
+| 类型 |
+| --- |
+| Promise&lt;void&gt; |
+
+**错误码：**
+
+| 错误码ID |
+| --- |
+| [7400102](../errorcode-camera.md#7400102-非法操作) |
+| [7400201](../errorcode-camera.md#7400201-相机服务异常) |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
+
+## usedAsPosition
+
+```TypeScript
+usedAsPosition(position: CameraPosition): void
+```
+
+Sets the camera to be used as a camera at the specified position.
+
+**起始版本：** 19
+
+<!--Device-CameraInput-usedAsPosition(position: CameraPosition): void--><!--Device-CameraInput-usedAsPosition(position: CameraPosition): void-End-->
+
+**系统能力：** SystemCapability.Multimedia.Camera.Core
+
+**系统接口：** 此接口为系统接口。
+
+**参数：**
+
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| position | [CameraPosition](arkts-camera-camera-cameraposition-e.md) | 是 |
+
+**错误码：**
+
+| 错误码ID |
+| --- |
+| [7400101](../errorcode-camera.md#7400101-无效入参) |
+| [7400201](../errorcode-camera.md#7400201-相机服务异常) |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) |

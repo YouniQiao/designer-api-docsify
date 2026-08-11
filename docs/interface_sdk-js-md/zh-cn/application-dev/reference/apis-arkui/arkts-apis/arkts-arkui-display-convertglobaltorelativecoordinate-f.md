@@ -1,11 +1,5 @@
 # convertGlobalToRelativeCoordinate
 
-## 导入模块
-
-```TypeScript
-import { display } from 'kits/@kit.ArkUI';
-```
-
 ## convertGlobalToRelativeCoordinate
 
 ```TypeScript
@@ -41,10 +35,12 @@ function convertGlobalToRelativeCoordinate(position: Position, displayId?: long)
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 1400004 | Parameter error. Possible cause: 1. Invalid parameter range. |
-| 1400003 | This display manager service works abnormally. |
+| [1400004](../errorcode-display.md#1400004-参数异常) | Parameter error. Possible cause: 1. Invalid parameter range. |
+| [1400003](../errorcode-display.md#1400003-系统服务工作异常) | This display manager service works abnormally. |
 
 ## 示例
+
+ArkTS-Dyn示例：
 
 ```TypeScript
 // 定义需要转换的全局坐标
@@ -59,6 +55,25 @@ try {
   console.info(`The relative coordinate is ${relPos.displayId}, ${relPos.position.x}, ${relPos.position.y}`);
 } catch (exception) {
   console.error(`Failed to convert the global coordinate to the relative coordinate. Code: ${exception.code}, message: ${exception.message}`);
+}
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+import { display } from '@kit.ArkUI';
+
+let position: display.Position = {
+    x: 100,
+    y: 200
+};
+
+try {
+  let relPos: display.RelativePosition = display.convertGlobalToRelativeCoordinate(position, 0);
+  console.info(`The relative coordinate is ${relPos.displayId}, ${relPos.position.x}, ${relPos.position.y}`)
+} catch (exception) {
+  let error = exception as BusinessError;
+  console.error(`Failed to convert the global coordinate to the relative coordinate. Code: ${error.code}, message: ${error.message}`);
 }
 ```
 

@@ -1,6 +1,6 @@
 # MarqueeState
 
-Marquee状态回调的返回值。
+Defines marquee state.
 
 **Since:** 23
 
@@ -16,7 +16,7 @@ Marquee状态回调的返回值。
 START = 0
 ```
 
-跑马灯滚动开始。
+The marquee started.
 
 **Since:** 23
 
@@ -34,7 +34,7 @@ START = 0
 BOUNCE = 1
 ```
 
-完成一次跑马灯滚动，如果循环次数不是1，将会多次返回。
+The marquee a round finished and start next round.
 
 **Since:** 23
 
@@ -52,7 +52,7 @@ BOUNCE = 1
 FINISH = 2
 ```
 
-跑马灯全部循环次数完成。
+The marquee all finished.
 
 **Since:** 23
 

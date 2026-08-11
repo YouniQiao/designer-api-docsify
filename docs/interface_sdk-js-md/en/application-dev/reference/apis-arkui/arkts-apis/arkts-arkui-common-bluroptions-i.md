@@ -21,7 +21,7 @@ grayscale: [
 
 Fuzzy gray scale parameter. Undefined value means no grayscale.
 
-**Type:** [         double,         double     ] \| undefined
+**Type:** [         double,         double     ] \| undefined
 
 **Since:** 23
 

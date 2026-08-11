@@ -1,18 +1,20 @@
 # NotificationPictureContent
 
-描述附有图片的通知。继承自[NotificationBasicContent](arkts-notification-notificationcontent-notificationbasiccontent-i.md)。
+Describes the picture-attached notification. This API is inherited from NotificationBasicContent.
 
-> **说明：**
+> **NOTE：**
 > 
-> - 当该类型通知与其他通知形成组通知时，该通知类型的展示效果默认为折叠态，
-> 显示的标题与正文为该类型继承的NotificationBasicContent中的`title`与`text`。
-> 当该类型通知单独展示，没有与其他通知形成组通知时，该通知类型的展示效果
-> 默认为展开态，显示的标题为展开时的标题`expandedTitle`，
-> 显示的正文为该类型继承的NotificationBasicContent中的`text`+该类型的图片内容`picture`。
+> - When this notification type forms a group notification with other notifications, its display effect defaults
+> to the collapsed state, and the displayed title and body are the **title** and **text** inherited from
+> NotificationBasicContent. When this notification type is displayed alone and does not form a group notification
+> with other notifications, its display effect defaults to the expanded state, where the displayed title is the
+> expanded title **expandedTitle**, and the displayed body is the **text** inherited from
+> NotificationBasicContent and the picture content **picture** of this type.
 > 
-> - 用户点击成组展示的通知，查看各个通知详情时，该通知的展示效果变化为展开态。
+> - When a user taps a group notification to view the notification details, the display effect of this
+> notification changes to the expanded state.
 > 
-> - 实际显示效果依赖于设备能力和通知中心UI样式。
+> - The actual display effect depends on the device capabilities and the notification center UI style.
 
 **Inheritance/Implementation:** NotificationPictureContent extends [NotificationBasicContent](arkts-notification-notificationcontent-notificationbasiccontent-i.md)
 
@@ -30,7 +32,7 @@
 briefText: string
 ```
 
-通知概要内容，是对通知内容的总结，不在通知中心中显示。不可为空字符串，大小不超过1024字节，超出部分会被截断。
+Notification summary content, which is a summary of the notification content and is not displayed in the notification center. It cannot be an empty string. The size does not exceed 1024 bytes, and the excess part will be truncated.
 
 **Type:** string
 
@@ -48,7 +50,7 @@ briefText: string
 expandedTitle: string
 ```
 
-通知展开时的标题。不可为空字符串，大小不超过1024字节，超出部分会被截断。
+Title when the notification is expanded. It cannot be an empty string. The size does not exceed 1024 bytes,and the excess part will be truncated.
 
 **Type:** string
 
@@ -66,8 +68,7 @@ expandedTitle: string
 picture: image.PixelMap
 ```
 
-通知展开后显示的图片内容。图标像素的总字节数不能超过2MB（图标像素的总字节数通过  
-[getPixelBytesNumber](../../apis-image-kit/arkts-apis/arkts-image-image-pixelmap-i.md/arkts-image-image-pixelmap-i.md#getpixelbytesnumber)获取）。
+Picture content displayed after the notification is expanded. The total bytes of the image pixels (obtained through getPixelBytesNumber) cannot exceed 2 MB.
 
 **Type:** image.PixelMap
 

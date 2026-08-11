@@ -1,6 +1,6 @@
 # LoadingProgressConfiguration
 
-开发者需要自定义class实现ContentModifier接口。继承自[CommonConfiguration](arkts-arkui-common-commonconfiguration-i.md)。
+LoadingProgressConfiguration used by LoadingProgress contentModifier
 
 **Inheritance/Implementation:** LoadingProgressConfiguration extends [CommonConfiguration<LoadingProgressConfiguration>](CommonConfiguration<LoadingProgressConfiguration>)
 
@@ -18,9 +18,7 @@
 enableLoading: boolean
 ```
 
-LoadingProgress动画是否显示。
-
-默认值：true，true表示显示LoadingProgress动画，false表示不显示LoadingProgress动画。
+Whether to enable the LoadingProgress content.
 
 **Type:** boolean
 

@@ -1,11 +1,5 @@
 # parse
 
-## 导入模块
-
-```TypeScript
-import { JSON } from 'kits/@kit.ArkTS';
-```
-
 ## parse
 
 ```TypeScript

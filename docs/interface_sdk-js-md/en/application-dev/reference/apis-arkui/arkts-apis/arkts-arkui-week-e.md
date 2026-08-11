@@ -1,10 +1,10 @@
 # Week
 
-定义星期枚举值。
+Week Enum value
 
-**Since:** 11
+**Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 11.
+**ArkTS mode:** ArkTS-Dyn only, since version 7.
 
 <!--Device-unnamed-declare enum Week--><!--Device-unnamed-declare enum Week-End-->
 
@@ -18,9 +18,9 @@ Mon
 
 Monday.
 
-**Since:** 11
+**Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 11.
+**ArkTS mode:** ArkTS-Dyn only, since version 7.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -36,9 +36,9 @@ Tue
 
 Tuesday.
 
-**Since:** 11
+**Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 11.
+**ArkTS mode:** ArkTS-Dyn only, since version 7.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -54,9 +54,9 @@ Wed
 
 Wednesday.
 
-**Since:** 11
+**Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 11.
+**ArkTS mode:** ArkTS-Dyn only, since version 7.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -72,9 +72,9 @@ Thur
 
 Thursday.
 
-**Since:** 11
+**Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 11.
+**ArkTS mode:** ArkTS-Dyn only, since version 7.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -90,9 +90,9 @@ Fri
 
 Friday.
 
-**Since:** 11
+**Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 11.
+**ArkTS mode:** ArkTS-Dyn only, since version 7.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -108,9 +108,9 @@ Sat
 
 Saturday.
 
-**Since:** 11
+**Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 11.
+**ArkTS mode:** ArkTS-Dyn only, since version 7.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -126,9 +126,9 @@ Sun
 
 Sunday.
 
-**Since:** 11
+**Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 11.
+**ArkTS mode:** ArkTS-Dyn only, since version 7.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 

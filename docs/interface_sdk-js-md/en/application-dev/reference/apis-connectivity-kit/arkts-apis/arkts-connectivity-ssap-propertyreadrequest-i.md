@@ -1,6 +1,6 @@
 # PropertyReadRequest
 
-SSAP客户端属性读请求参数说明。
+Describes the parameters of the SSAP client's property read request.
 
 **Since:** 26.0.0
 
@@ -22,7 +22,7 @@ import { ssap } from 'kits/@kit.ConnectivityKit';
 address: string
 ```
 
-设备地址。长度必须为17，由16进制数字和冒号组成，形如 "11:22:33:AA:BB:FF"。
+Indicates the device address.The length must be 17, The value consists of hexadecimal digits and colons (:), for example, 11:22:33:AA:BB:FF.
 
 **Type:** string
 
@@ -42,7 +42,7 @@ address: string
 propertyUuid: string
 ```
 
-客户端请求读取的属性实例的UUID。长度必须为36，由16进制数字字符和连字符共36个字符组成，形如“FFFFFFFF-1234-5678-ABCD-000000001234”，代表128比特标识。&lt;br&gt;禁止使用星闪标准服务UUID。
+The UUID of the Property instance which client request to read.The length must be 36, The value consists of 36 hexadecimal digits and hyphens (-),for example, FFFFFFFF-1234-5678-ABCD-000000001234, indicating a 128-bit identifier.&lt;br&gt;NearLink standard UUIDs are not allowed.
 
 **Type:** string
 
@@ -62,7 +62,7 @@ propertyUuid: string
 requestId: int
 ```
 
-请求ID。取值范围为全体整数。
+The request ID.
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
@@ -82,7 +82,7 @@ requestId: int
 serviceUuid: string
 ```
 
-属性所属的{@link Service}实例的UUID长度必须为32，禁止使用星闪标准服务UUID。&lt;br&gt;不允许使用NearLink标准UUID。
+The UUID of the {@link Service} instance which the property belongs to.The length must be 36, The value consists of 36 hexadecimal digits and hyphens (-),for example, FFFFFFFF-1234-5678-ABCD-000000001234, indicating a 128-bit identifier.&lt;br&gt;NearLink standard UUIDs are not allowed.
 
 **Type:** string
 

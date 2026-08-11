@@ -12,7 +12,7 @@ import { deviceManager } from 'kits/@kit.DriverDevelopmentKit';
 function unbindDevice(deviceId: number, callback: AsyncCallback<number>): void
 ```
 
-解除设备绑定。
+Unbinds a peripheral device.
 
 **Since:** 10
 
@@ -32,16 +32,16 @@ function unbindDevice(deviceId: number, callback: AsyncCallback<number>): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| deviceId | number | Yes | 设备ID，通过queryDevices获得。 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;number&gt; | Yes | 回调函数。当解绑设备成功时，err为undefined，data为设备ID；否则为错误对象。 |
+| deviceId | number | Yes | Device ID, which can be obtained via **queryDevices()**. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;number&gt; | Yes | Callback used to return the result. When the bound device is disconnected, the value of **err** is **undefined** and the value of **data** is the ID of the unbound device. Otherwise, **err** is an error object. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. |
-| 201 | The permission check failed. |
-| 22900001 | ExternalDeviceManager service exception. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. |
+| [201](../../errorcode-universal.md#201-permission-denied) | The permission check failed. |
+| [22900001](../../apis-driverdevelopment-kit/errorcode-deviceManager.md#22900001-externaldevicemanager-service-exception-or-bustype-parameter-error) | ExternalDeviceManager service exception. |
 
 ## Examples
 
@@ -70,7 +70,7 @@ try {
 function unbindDevice(deviceId: number): Promise<number>
 ```
 
-解除设备绑定。
+Unbinds a peripheral device. This API uses a promise to return the result.
 
 **Since:** 10
 
@@ -90,21 +90,21 @@ function unbindDevice(deviceId: number): Promise<number>
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| deviceId | number | Yes | 设备ID，通过queryDevices获得。 |
+| deviceId | number | Yes | Device ID, which can be obtained via **queryDevices()**. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;number&gt; | Promise对象，返回解除绑定的设备ID。 |
+| Promise&lt;number&gt; | Promise used to return the ID of the unbound device. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. 3.Parameter verification failed. |
-| 201 | The permission check failed. |
-| 22900001 | ExternalDeviceManager service exception. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. 3.Parameter verification failed. |
+| [201](../../errorcode-universal.md#201-permission-denied) | The permission check failed. |
+| [22900001](../../apis-driverdevelopment-kit/errorcode-deviceManager.md#22900001-externaldevicemanager-service-exception-or-bustype-parameter-error) | ExternalDeviceManager service exception. |
 
 ## Examples
 

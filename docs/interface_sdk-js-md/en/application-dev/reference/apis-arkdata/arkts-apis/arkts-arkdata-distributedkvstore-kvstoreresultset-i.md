@@ -1,15 +1,12 @@
 # KVStoreResultSet
 
-提供获取数据库结果集的相关方法，包括查询和移动数据读取位置等。同时允许打开的结果集的最大数量为8个。
+Provides APIs for obtaining the distributed KV store result sets. A maximum of eight result sets can be opened at a  time.The **KVStoreResultSet** instance is not refreshed in real time. After using the result set, if the data in the database is changed (by being added, deleted, or modified), you need to query the result set again to obtain the latest data.Before calling any API in **KVStoreResultSet**, you must use **  
+[getKVStore](arkts-arkdata-distributedkvstore-kvmanager-i.md#getkvstore)  
+** to construct a **SingleKVStore** or **DeviceKVStore** instance.
 
-KVStoreResultSet实例不会实时刷新。使用结果集后，如果数据库中的数据发生变化（如增删改操作），需要重新查询才能获取到最新的数据。
-
-在调用KVStoreResultSet的方法前，需要先通过  
-[getKVStore](arkts-arkdata-distributedkvstore-kvmanager-i.md#getkvstore)构建一个SingleKVStore或者DeviceKVStore实例。
-
-> **说明：**
+> **NOTE：**
 > 
-> KVStoreResultSet的游标起始位置为-1。
+> The cursor start position of **KVStoreResultSet** is **-1**.
 
 **Since:** 9
 
@@ -37,7 +34,7 @@ ArkTS-Sta:
 getCount(): int
 ```
 
-获取结果集中的总行数。
+Obtains the total number of rows in the result set.
 
 **Since:** 9
 
@@ -53,7 +50,7 @@ getCount(): int
 
 | Type | Description |
 | --- | --- |
-| ArkTS-Dyn: number  <br>ArkTS-Sta：int | 返回数据的总行数。 |
+| ArkTS-Dyn: number  <br>ArkTS-Sta：int | Total number of rows obtained. |
 
 ## Examples
 
@@ -67,13 +64,12 @@ try {
     console.info('getResultSet succeed.');
     resultSet = result;
     count = resultSet.getCount();
-    console.info('getCount succeed:' + count);
+    console.info("getCount succeed:" + count);
   }).catch((err: BusinessError) => {
-    console.error(`Failed to get resultset. Code: ${err.code}, message: ${err.message}`);
+    console.error('getResultSet failed: ' + err);
   });
-} catch (err) {
-  let error = err as BusinessError;
-  console.error(`Failed to get count. Code: ${error.code}, message: ${error.message}`);
+} catch (e) {
+  console.error("getCount failed: " + e);
 }
 ```
 
@@ -83,7 +79,7 @@ try {
 getEntry(): Entry
 ```
 
-从当前位置获取对应的键值对。
+Obtains the KV pair from the current position.
 
 **Since:** 9
 
@@ -99,7 +95,7 @@ getEntry(): Entry
 
 | Type | Description |
 | --- | --- |
-| [Entry](../../apis-arkui/arkts-apis/arkts-arkui-customcomponent-entry-i.md) | 返回键值对。 |
+| [Entry](../../apis-arkui/arkts-apis/arkts-arkui-customcomponent-entry-i.md) | KV pair obtained. |
 
 ## Examples
 
@@ -112,13 +108,12 @@ try {
     console.info('getResultSet succeed.');
     resultSet = result;
     let entry = resultSet.getEntry();
-    console.info('getEntry succeed:' + JSON.stringify(entry));
+    console.info("getEntry succeed:" + JSON.stringify(entry));
   }).catch((err: BusinessError) => {
-    console.error(`Failed to get resultset. Code: ${err.code}, message: ${err.message}`);
+    console.error('getResultSet failed: ' + err);
   });
-} catch (err) {
-  let error = err as BusinessError;
-  console.error(`Failed to get entry. Code: ${error.code}, message: ${error.message}`);
+} catch (e) {
+  console.error("getEntry failed: " + e);
 }
 ```
 
@@ -134,8 +129,8 @@ ArkTS-Sta:
 getPosition(): int
 ```
 
-获取结果集中当前的读取位置。读取位置会因[moveToFirst](arkts-arkdata-distributedkvstore-kvstoreresultset-i.md#movetofirst)、  
-[moveToLast](arkts-arkdata-distributedkvstore-kvstoreresultset-i.md#movetolast)等操作而发生变化。
+Obtains the current data read position (position from which data is read) in the result set. The read position changes with the operations, such as [moveToFirst](arkts-arkdata-distributedkvstore-kvstoreresultset-i.md#movetofirst) and  
+[moveToLast](arkts-arkdata-distributedkvstore-kvstoreresultset-i.md#movetolast).
 
 **Since:** 9
 
@@ -151,7 +146,7 @@ getPosition(): int
 
 | Type | Description |
 | --- | --- |
-| ArkTS-Dyn: number  <br>ArkTS-Sta：int | 返回当前读取位置。取值范围>= -1，值为 -1 时表示还未开始读取，值为 0 时表示第一行。 |
+| ArkTS-Dyn: number  <br>ArkTS-Sta：int | Current data read position obtained. The value must be greater than or equal to **-1**. The value **-1 ** means no data is read; the value **0** indicates the first row. |
 
 ## Examples
 
@@ -165,13 +160,12 @@ try {
     console.info('getResultSet succeeded.');
     resultSet = result;
     position = resultSet.getPosition();
-    console.info('getPosition succeed:' + position);
+    console.info("getPosition succeed:" + position);
   }).catch((err: BusinessError) => {
-    console.error(`Failed to get resultset. Code: ${err.code}, message: ${err.message}`);
+    console.error('getResultSet failed: ' + err);
   });
-} catch (err) {
-  let error = err as BusinessError;
-  console.error(`Failed to get position. Code: ${error.code}, message: ${error.message}`);
+} catch (e) {
+  console.error("getPosition failed: " + e);
 }
 ```
 
@@ -181,7 +175,7 @@ try {
 isAfterLast(): boolean
 ```
 
-检查读取位置是否在最后一行之后。
+Checks whether the data read position is after the last row.
 
 **Since:** 9
 
@@ -197,7 +191,7 @@ isAfterLast(): boolean
 
 | Type | Description |
 | --- | --- |
-| boolean | 返回true表示读取位置在最后一行之后；返回false表示读取位置不在最后一行之后。 |
+| boolean | Returns **true** if the data read position is after the last row; returns **false** otherwise. |
 
 ## Examples
 
@@ -210,13 +204,12 @@ try {
     console.info('getResultSet succeed.');
     resultSet = result;
     let isAfterLast = resultSet.isAfterLast();
-    console.info('Check isAfterLast succeed:' + isAfterLast);
+    console.info("Check isAfterLast succeed:" + isAfterLast);
   }).catch((err: BusinessError) => {
-    console.error(`Failed to get resultset. Code: ${err.code}, message: ${err.message}`);
+    console.error('getResultSet failed: ' + err);
   });
-} catch (err) {
-  let error = err as BusinessError;
-  console.error(`Failed to check isAfterLast. Code: ${error.code}, message: ${error.message}`);
+} catch (e) {
+  console.error("Check isAfterLast failed: " + e);
 }
 ```
 
@@ -226,7 +219,7 @@ try {
 isBeforeFirst(): boolean
 ```
 
-检查读取位置是否在第一行之前。
+Checks whether the data read position is before the first row.
 
 **Since:** 9
 
@@ -242,7 +235,7 @@ isBeforeFirst(): boolean
 
 | Type | Description |
 | --- | --- |
-| boolean | 返回true表示读取位置在第一行之前；返回false表示读取位置不在第一行之前。 |
+| boolean | Returns **true** if the data read position is before the first row; returns **false** otherwise. |
 
 ## Examples
 
@@ -255,13 +248,12 @@ try {
     console.info('getResultSet succeed.');
     resultSet = result;
     let isBeforeFirst = resultSet.isBeforeFirst();
-    console.info('Check isBeforeFirst succeed: ' + isBeforeFirst);
+    console.info("Check isBeforeFirst succeed: " + isBeforeFirst);
   }).catch((err: BusinessError) => {
-    console.error(`Failed to get resultset. Code: ${err.code}, message: ${err.message}`);
+    console.error('getResultSet failed: ' + err);
   });
-} catch (err) {
-  let error = err as BusinessError;
-  console.error(`Failed to check isBeforeFirst. Code: ${error.code}, message: ${error.message}`);
+} catch (e) {
+  console.error("Check isBeforeFirst failed: " + e);
 }
 ```
 
@@ -271,7 +263,7 @@ try {
 isFirst(): boolean
 ```
 
-检查读取位置是否为第一行。
+Checks whether the data read position is the first row.
 
 **Since:** 9
 
@@ -287,7 +279,7 @@ isFirst(): boolean
 
 | Type | Description |
 | --- | --- |
-| boolean | 返回true表示读取位置为第一行；返回false表示读取位置不是第一行。 |
+| boolean | Returns **true** if the first row is being read; returns **false** otherwise. |
 
 ## Examples
 
@@ -301,13 +293,12 @@ try {
     console.info('getResultSet succeed.');
     resultSet = result;
     isFirst = resultSet.isFirst();
-    console.info('Check isFirst succeed:' + isFirst);
+    console.info("Check isFirst succeed:" + isFirst);
   }).catch((err: BusinessError) => {
-    console.error(`Failed to get resultset. Code: ${err.code}, message: ${err.message}`);
+    console.error('getResultSet failed: ' + err);
   });
-} catch (err) {
-  let error = err as BusinessError;
-  console.error(`Failed to check isFirst. Code: ${error.code}, message: ${error.message}`);
+} catch (e) {
+  console.error("Check isFirst failed: " + e);
 }
 ```
 
@@ -317,7 +308,7 @@ try {
 isLast(): boolean
 ```
 
-检查读取位置是否为最后一行。
+Checks whether the data read position is the last row.
 
 **Since:** 9
 
@@ -333,7 +324,7 @@ isLast(): boolean
 
 | Type | Description |
 | --- | --- |
-| boolean | 返回true表示读取位置为最后一行；返回false表示读取位置不是最后一行。 |
+| boolean | Returns **true** if the last row is being read; returns **false** otherwise. |
 
 ## Examples
 
@@ -347,13 +338,12 @@ try {
     console.info('getResultSet succeed.');
     resultSet = result;
     isLast = resultSet.isLast();
-    console.info('Check isLast succeed: ' + isLast);
+    console.info("Check isLast succeed: " + isLast);
   }).catch((err: BusinessError) => {
-    console.error(`Failed to get resultset. Code: ${err.code}, message: ${err.message}`);
+    console.error('getResultSet failed: ' + err);
   });
-} catch (err) {
-  let error = err as BusinessError;
-  console.error(`Failed to check isLast. Code: ${error.code}, message: ${error.message}`);
+} catch (e) {
+  console.error("Check isLast failed: " + e);
 }
 ```
 
@@ -369,7 +359,7 @@ ArkTS-Sta:
 move(offset: int): boolean
 ```
 
-将读取位置移动到当前位置的相对偏移量。即当前游标位置向下偏移 offset 行。
+Moves the data read position with the specified offset from the current position. That is, moves the number of rows specified by **offset** from the current position.
 
 **Since:** 9
 
@@ -385,19 +375,19 @@ move(offset: int): boolean
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| offset | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | 表示与当前位置的相对偏移量，正偏移表示向结果集末尾方向移动（行号增大），负偏移表示向结果集起始方向移动（行号减小）。当游标超出结果集最前或者最后的位置时，接口返回false。 |
+| offset | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | Offset to move the data read position. A positive value means to move forward; a negative value means to move backward. If the cursor is beyond the start or end position of the result set, **false** is returned. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| boolean | 返回true表示操作成功；返回false则表示操作失败。 |
+| boolean | Returns **true** if the operation is successful; returns **false** otherwise. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error.Possible causes:1.Mandatory parameters are left unspecified; &lt;br&gt;2.Incorrect parameters types. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error.Possible causes:1.Mandatory parameters are left unspecified; &lt;br&gt;2.Incorrect parameters types. |
 
 ## Examples
 
@@ -413,11 +403,11 @@ try {
     moved = resultSet.move(2); // If the current position is 0, move the read position forward by two rows, that is, move to row 3.
     console.info(`Succeeded in moving.moved = ${moved}`);
   }).catch((err: BusinessError) => {
-    console.error(`Failed to get resultSet. Code: ${err.code}, message: ${err.message}`);
+    console.error(`Failed to get resultSet.code is ${err.code},message is ${err.message}`);
   });
-} catch (err) {
-  let error = err as BusinessError;
-  console.error(`Failed to move. Code: ${error.code}, message: ${error.message}`);
+} catch (e) {
+  let error = e as BusinessError;
+  console.error(`Failed to move.code is ${error.code},message is ${error.message}`);
 }
 ```
 
@@ -427,7 +417,7 @@ try {
 moveToFirst(): boolean
 ```
 
-将读取位置移动到第一行。如果结果集为空，则返回false。
+Moves the data read position to the first row. If the result set is empty, **false** will be returned.
 
 **Since:** 9
 
@@ -443,7 +433,7 @@ moveToFirst(): boolean
 
 | Type | Description |
 | --- | --- |
-| boolean | 返回true表示操作成功；返回false则表示操作失败。 |
+| boolean | Returns **true** if the operation is successful; returns **false** otherwise. |
 
 ## Examples
 
@@ -457,13 +447,12 @@ try {
     console.info('getResultSet succeed.');
     resultSet = result;
     moved = resultSet.moveToFirst();
-    console.info('moveToFirst succeed: ' + moved);
+    console.info("moveToFirst succeed: " + moved);
   }).catch((err: BusinessError) => {
-    console.error(`Failed to get resultset. Code: ${err.code}, message: ${err.message}`);
+    console.error('getResultSet failed: ' + err);
   });
-} catch (err) {
-  let error = err as BusinessError;
-  console.error(`Failed to move to first. Code: ${error.code}, message: ${error.message}`);
+} catch (e) {
+  console.error("moveToFirst failed " + e);
 }
 ```
 
@@ -473,7 +462,7 @@ try {
 moveToLast(): boolean
 ```
 
-将读取位置移动到最后一行。如果结果集为空，则返回false。
+Moves the data read position to the last row. If the result set is empty, **false** will be returned.
 
 **Since:** 9
 
@@ -489,7 +478,7 @@ moveToLast(): boolean
 
 | Type | Description |
 | --- | --- |
-| boolean | 返回true表示操作成功；返回false则表示操作失败。 |
+| boolean | Returns **true** if the operation is successful; returns **false** otherwise. |
 
 ## Examples
 
@@ -503,13 +492,12 @@ try {
     console.info('getResultSet succeed.');
     resultSet = result;
     moved = resultSet.moveToLast();
-    console.info('moveToLast succeed:' + moved);
+    console.info("moveToLast succeed:" + moved);
   }).catch((err: BusinessError) => {
-    console.error(`Failed to get resultset. Code: ${err.code}, message: ${err.message}`);
+    console.error('getResultSet failed: ' + err);
   });
-} catch (err) {
-  let error = err as BusinessError;
-  console.error(`Failed to move to last. Code: ${error.code}, message: ${error.message}`);
+} catch (e) {
+  console.error("moveToLast failed: " + e);
 }
 ```
 
@@ -519,7 +507,7 @@ try {
 moveToNext(): boolean
 ```
 
-将读取位置移动到下一行。如果结果集为空，则返回false。适用于全量获取数据库结果集的场景。
+Moves the data read position to the next row. If the result set is empty, **false** will be returned. This API applies when the whole result set is obtained.
 
 **Since:** 9
 
@@ -535,7 +523,7 @@ moveToNext(): boolean
 
 | Type | Description |
 | --- | --- |
-| boolean | 返回true表示操作成功；返回false则表示操作失败。 |
+| boolean | Returns **true** if the operation is successful; returns **false** otherwise. |
 
 ## Examples
 
@@ -550,14 +538,13 @@ try {
     resultSet = result;
     do {
       moved = resultSet.moveToNext();
-      console.info('moveToNext succeed: ' + moved);
-    } while (moved);
+      console.info("moveToNext succeed: " + moved);
+    } while (moved)
   }).catch((err: BusinessError) => {
-    console.error(`Failed to get resultset. Code: ${err.code}, message: ${err.message}`);
+    console.error('getResultSet failed: ' + err);
   });
-} catch (err) {
-  let error = err as BusinessError;
-  console.error(`Failed to move to next. Code: ${error.code}, message: ${error.message}`);
+} catch (e) {
+  console.error("moveToNext failed: " + e);
 }
 ```
 
@@ -573,7 +560,7 @@ ArkTS-Sta:
 moveToPosition(position: int): boolean
 ```
 
-将读取位置从 0 移动到绝对位置。
+Moves the data read position from 0 to an absolute position.
 
 **Since:** 9
 
@@ -589,19 +576,19 @@ moveToPosition(position: int): boolean
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| position | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | 表示绝对位置。当绝对位置超出结果集最前或者最后的位置时，接口返回false。 |
+| position | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | Absolute position to move to. If the absolute position exceeds the start or end position of the result set, **false** is returned. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| boolean | 返回true表示操作成功；返回false则表示操作失败。 |
+| boolean | Returns **true** if the operation is successful; returns **false** otherwise. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error.Possible causes:1.Mandatory parameters are left unspecified; &lt;br&gt;2.Incorrect parameters types. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error.Possible causes:1.Mandatory parameters are left unspecified; &lt;br&gt;2.Incorrect parameters types. |
 
 ## Examples
 
@@ -617,11 +604,11 @@ try {
     moved = resultSet.moveToPosition(1);
     console.info(`Succeeded in moving to position.moved=${moved}`);
   }).catch((err: BusinessError) => {
-    console.error(`Failed to get resultSet. Code: ${err.code}, message: ${err.message}`);
+    console.error(`Failed to get resultSet.code is ${err.code},message is ${err.message}`);
   });
-} catch (err) {
-  let error = err as BusinessError;
-  console.error(`Failed to move to position. Code: ${error.code}, message: ${error.message}`);
+} catch (e) {
+  let error = e as BusinessError;
+  console.error(`Failed to move to position.code is ${error.code},message is ${error.message}`);
 }
 ```
 
@@ -631,7 +618,7 @@ try {
 moveToPrevious(): boolean
 ```
 
-将读取位置移动到上一行。如果结果集为空，则返回false。适用于全量获取数据库结果集的场景。
+Moves the data read position to the previous row. If the result set is empty, **false** will be returned. This API applies when the whole result set is obtained.
 
 **Since:** 9
 
@@ -647,7 +634,7 @@ moveToPrevious(): boolean
 
 | Type | Description |
 | --- | --- |
-| boolean | 返回true表示操作成功；返回false则表示操作失败。 |
+| boolean | Returns **true** if the operation is successful; returns **false** otherwise. |
 
 ## Examples
 
@@ -662,13 +649,12 @@ try {
     resultSet = result;
     moved = resultSet.moveToLast();
     moved = resultSet.moveToPrevious();
-    console.info('moveToPrevious succeed:' + moved);
+    console.info("moveToPrevious succeed:" + moved);
   }).catch((err: BusinessError) => {
-    console.error(`Failed to get resultset. Code: ${err.code}, message: ${err.message}`);
+    console.error('getResultSet failed: ' + err);
   });
-} catch (err) {
-  let error = err as BusinessError;
-  console.error(`Failed to move to previous. Code: ${error.code}, message: ${error.message}`);
+} catch (e) {
+  console.error("moveToPrevious failed: " + e);
 }
 ```
 

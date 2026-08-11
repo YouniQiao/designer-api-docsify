@@ -1,6 +1,6 @@
 # ImageAlt
 
-设置图片占位图。
+Sets the placeholder image.
 
 **Since:** 22
 
@@ -16,7 +16,7 @@
 error?: ResourceStr | PixelMap
 ```
 
-加载失败的占位图。
+Placeholder image displayed when loading fails.
 
 **Type:** [ResourceStr](../arkts-apis/arkts-arkui-resourcestr-t.md) \| PixelMap
 
@@ -40,7 +40,7 @@ error?: ResourceStr | PixelMap
 placeholder?: ResourceStr | PixelMap
 ```
 
-加载过程中的占位图。
+Placeholder image displayed during loading.
 
 **Type:** [ResourceStr](../arkts-apis/arkts-arkui-resourcestr-t.md) \| PixelMap
 

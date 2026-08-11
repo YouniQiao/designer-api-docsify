@@ -1,6 +1,6 @@
 # OnTitleReceiveEvent
 
-定义网页document标题更改时触发该回调。
+Defines the triggered function when the title of the main application document changes.
 
 **Since:** 12
 
@@ -16,7 +16,7 @@
 isRealTitle?: boolean
 ```
 
-document标题来源，true表示来自网页的title标签，false表示该title是根据url自动生成。默认值：false
+Mark the source of the title. If it is true, the title is derived from the H5 title element;If it is false, it is calculated from the URL. By default, it is calculated from the URL.
 
 **Type:** boolean
 
@@ -34,7 +34,7 @@ document标题来源，true表示来自网页的title标签，false表示该titl
 title: string
 ```
 
-document标题内容。
+The title of the page.
 
 **Type:** string
 

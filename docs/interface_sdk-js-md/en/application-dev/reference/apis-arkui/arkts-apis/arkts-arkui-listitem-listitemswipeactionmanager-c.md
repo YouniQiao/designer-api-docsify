@@ -1,6 +1,6 @@
 # ListItemSwipeActionManager
 
-ListItem划出菜单的管理器。
+The swipe action manager.
 
 **Since:** 26.0.0
 
@@ -16,7 +16,7 @@ ListItem划出菜单的管理器。
 static collapse(node: FrameNode): void
 ```
 
-收起指定ListItem的划出菜单。
+Collapse the swipe action
 
 **Since:** 26.0.0
 
@@ -32,14 +32,14 @@ static collapse(node: FrameNode): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| node | [FrameNode](arkts-arkui-framenode-c.md) | Yes | ListItem节点对象。 |
+| node | [FrameNode](arkts-arkui-framenode-c.md) | Yes | The ListItem FrameNode. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 100023 | The component type of the node is incorrect. |
-| 106203 | The node not mounted to component tree. |
+| [100023](../errorcode-node.md#100023-parameter-error) | The component type of the node is incorrect. |
+| [106203](../errorcode-node.md#106203-passed-node-not-mounted-to-component-tree) | The node not mounted to component tree. |
 
 ## expand
 
@@ -47,7 +47,7 @@ static collapse(node: FrameNode): void
 static expand(node: FrameNode, direction: ListItemSwipeActionDirection): void
 ```
 
-展开指定ListItem的划出菜单。
+Expand the swipe action
 
 **Since:** 26.0.0
 
@@ -63,13 +63,13 @@ static expand(node: FrameNode, direction: ListItemSwipeActionDirection): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| node | [FrameNode](arkts-arkui-framenode-c.md) | Yes | ListItem节点对象。 |
-| direction | [ListItemSwipeActionDirection](arkts-arkui-listitem-listitemswipeactiondirection-e.md) | Yes | ListItem划出菜单的展开方向。 |
+| node | [FrameNode](arkts-arkui-framenode-c.md) | Yes | The ListItem FrameNode. |
+| direction | [ListItemSwipeActionDirection](arkts-arkui-listitem-listitemswipeactiondirection-e.md) | Yes | The direction to expand. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 100023 | The component type of the node is incorrect. |
-| 106203 | The node not mounted to component tree. |
+| [100023](../errorcode-node.md#100023-parameter-error) | The component type of the node is incorrect. |
+| [106203](../errorcode-node.md#106203-passed-node-not-mounted-to-component-tree) | The node not mounted to component tree. |
 

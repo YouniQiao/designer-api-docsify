@@ -1,6 +1,6 @@
 # IComputedDecoratedVariable
 
-定义@Computed状态变量的接口
+Defines computed decoration variable interface.
 
 **Inheritance/Implementation:** IComputedDecoratedVariable extends [IDecoratedReadableVariable<T>](IDecoratedReadableVariable<T>)
 
@@ -18,7 +18,7 @@
 resetOnReuse(): void
 ```
 
-ComponentV2被重用时重置Computed变量。
+Reset Computed when the ComponentV2 instance is reused.
 
 **Since:** 23
 
@@ -36,7 +36,7 @@ ComponentV2被重用时重置Computed变量。
 setOwner(owner: IVariableOwner): void
 ```
 
-设置状态变量的所有者，用于检测所在自定义组件是否冻结
+Set owner for the computed variable. Used to detect component freezing.
 
 **Since:** 23
 
@@ -52,5 +52,5 @@ setOwner(owner: IVariableOwner): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| owner | [IVariableOwner](arkts-arkui-decorator-ivariableowner-i.md) | Yes | 状态变量的所有者 |
+| owner | [IVariableOwner](arkts-arkui-decorator-ivariableowner-i.md) | Yes | owner of this variable |
 

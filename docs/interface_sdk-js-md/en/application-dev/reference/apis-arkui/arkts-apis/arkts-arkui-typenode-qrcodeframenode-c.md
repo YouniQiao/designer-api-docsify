@@ -1,6 +1,6 @@
 # QRCodeFrameNode
 
-定义QRCode类型的FrameNode。
+Define the QRCode type of FrameNode.
 
 **Inheritance/Implementation:** QRCodeFrameNode extends [TypedFrameNode<QRCodeAttribute>](TypedFrameNode<QRCodeAttribute>)
 
@@ -18,7 +18,7 @@
 abstract initialize(value: string): QRCodeAttribute
 ```
 
-初始化QRCode类型的FrameNode。
+Initialize QRCode FrameNode.
 
 **Since:** 23
 

@@ -1,11 +1,5 @@
 # getNativeHeapSize
 
-## 导入模块
-
-```TypeScript
-import { hidebug } from 'kits/@kit.PerformanceAnalysisKit';
-```
-
 ## getNativeHeapSize
 
 ```TypeScript

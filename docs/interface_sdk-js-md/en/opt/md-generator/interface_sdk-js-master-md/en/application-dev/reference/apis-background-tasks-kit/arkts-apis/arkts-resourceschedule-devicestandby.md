@@ -1,0 +1,45 @@
+# @ohos.resourceschedule.deviceStandby
+
+Provides methods for managing device standby,including the methods for querying standby status and exemption list.
+
+**Since:** 10
+
+<!--Device-unnamed-declare namespace deviceStandby--><!--Device-unnamed-declare namespace deviceStandby-End-->
+
+**System capability:** SystemCapability.ResourceSchedule.DeviceStandby
+
+## Modules to Import
+
+```TypeScript
+import { deviceStandby } from 'kits/@kit.BackgroundTasksKit';
+```
+
+## Summary
+
+<!--Del-->
+### Functions（系统接口）
+
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
+| --- |
+| [getExemptedApps](arkts-backgroundtasks-devicestandby-getexemptedapps-f-sys.md#getexemptedapps) |
+| [getExemptedApps](arkts-backgroundtasks-devicestandby-getexemptedapps-f-sys.md#getexemptedapps-1) |
+| [releaseExemptionResource](arkts-backgroundtasks-devicestandby-releaseexemptionresource-f-sys.md#releaseexemptionresource) |
+| [requestExemptionResource](arkts-backgroundtasks-devicestandby-requestexemptionresource-f-sys.md#requestexemptionresource) |
+<!--DelEnd-->
+
+<!--Del-->
+### Interfaces（系统接口）
+
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
+| --- |
+| [ExemptedAppInfo](arkts-backgroundtasks-devicestandby-exemptedappinfo-i-sys.md) |
+| [ResourceRequest](arkts-backgroundtasks-devicestandby-resourcerequest-i-sys.md) |
+<!--DelEnd-->
+
+<!--Del-->
+### Enums（系统接口）
+
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
+| --- |
+| [ResourceType](arkts-backgroundtasks-devicestandby-resourcetype-e-sys.md) |
+<!--DelEnd-->

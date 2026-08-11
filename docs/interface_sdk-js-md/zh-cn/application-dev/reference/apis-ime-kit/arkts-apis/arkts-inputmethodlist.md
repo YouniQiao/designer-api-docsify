@@ -26,12 +26,6 @@
  不支持[通用事件](../../apis-arkui/arkts-components/arkts-arkui-common-attribute.md)
 
 
-## 导入模块
-
-```TypeScript
-import { Pattern, InputMethodListDialog, PatternOptions } from 'kits/@kit.IMEKit';
-```
-
 ## 汇总
 
 ### 结构体

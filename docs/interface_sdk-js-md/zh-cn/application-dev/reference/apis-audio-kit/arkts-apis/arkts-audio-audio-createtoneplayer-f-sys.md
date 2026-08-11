@@ -1,11 +1,5 @@
 # createTonePlayer（系统接口）
 
-## 导入模块
-
-```TypeScript
-import { audio } from 'kits/@kit.AudioKit';
-```
-
 ## createTonePlayer
 
 ```TypeScript
@@ -83,7 +77,29 @@ Obtains a {@link TonePlayer} instance. This method uses an asynchronous callback
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 202 | Not system App. |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not system App. |
+
+## 示例
+
+```TypeScript
+import { audio } from '@kit.AudioKit';
+
+let audioRendererInfo: audio.AudioRendererInfo = {
+  usage : audio.StreamUsage.STREAM_USAGE_DTMF,
+  rendererFlags : 0
+};
+let tonePlayer: audio.TonePlayer;
+
+audio.createTonePlayer(audioRendererInfo, (err, data) => {
+  console.info(`callback call createTonePlayer: audioRendererInfo: ${audioRendererInfo}`);
+  if (err) {
+    console.error(`callback call createTonePlayer return error: ${err.message}`);
+  } else {
+    console.info(`callback call createTonePlayer return data: ${data}`);
+    tonePlayer = data;
+  }
+});
+```
 
 
 ## createTonePlayer
@@ -166,5 +182,20 @@ Obtains a {@link TonePlayer} instance. This method uses a promise to return the 
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 202 | Not system App. |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not system App. |
+
+## 示例
+
+```TypeScript
+import { audio } from '@kit.AudioKit';
+
+let tonePlayer: audio.TonePlayer;
+async function createTonePlayerBefore(){
+  let audioRendererInfo: audio.AudioRendererInfo = {
+    usage : audio.StreamUsage.STREAM_USAGE_DTMF,
+    rendererFlags : 0
+  };
+  tonePlayer = await audio.createTonePlayer(audioRendererInfo);
+}
+```
 

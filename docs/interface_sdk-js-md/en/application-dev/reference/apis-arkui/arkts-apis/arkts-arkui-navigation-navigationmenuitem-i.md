@@ -1,6 +1,6 @@
 # NavigationMenuItem
 
-导航菜单项，包括菜单图标和菜单信息。
+Navigation menu item, include menu icon and menu info
 
 **Since:** 23
 
@@ -16,7 +16,7 @@
 action?: () => void
 ```
 
-当前选项被选中的事件回调。
+Trigger by navigation menu item click.
 
 **Since:** 23
 
@@ -34,9 +34,7 @@ action?: () => void
 icon?: string | Resource
 ```
 
-API version 9：显示菜单栏单个选项的文本。
-
-从API version 10开始，不显示菜单栏单个选项的文本。
+The value of navigation menu item.
 
 **Type:** string \| Resource
 
@@ -56,7 +54,7 @@ API version 9：显示菜单栏单个选项的文本。
 isEnabled?: boolean
 ```
 
-使能状态，默认使能（false未使能，true使能）。
+Whether to enable this menu item.
 
 **Type:** boolean
 
@@ -76,10 +74,7 @@ isEnabled?: boolean
 symbolIcon?: SymbolGlyphModifier
 ```
 
-菜单栏单个选项的symbol资源（优先级高于icon）。  
-**说明：**不支持通过[SymbolGlyphModifier](../arkts-components/arkts-arkui-symbolglyphmodifier-t.md/arkts-arkui-symbolglyphmodifier-t.md)对象的
-[fontSize](../../../reference/apis-arkui/arkui-ts/ts-basic-components-symbolGlyph.md#fontsize)属性修改图标大小、  
-[effectStrategy](../../../reference/apis-arkui/arkui-ts/ts-basic-components-symbolGlyph.md#effectstrategy)属性修改动效、[symbolEffect](../../../reference/apis-arkui/arkui-ts/ts-basic-components-symbolGlyph.md#symboleffect12)属性修改动效类型。
+The symbol of navigation menu item.
 
 **Type:** [SymbolGlyphModifier](../arkts-components/arkts-arkui-symbolglyphmodifier-t.md)
 
@@ -99,9 +94,7 @@ symbolIcon?: SymbolGlyphModifier
 value: string | Resource
 ```
 
-API version 9：显示菜单栏单个选项的文本。
-
-从API version 10开始，不显示菜单栏单个选项的文本。
+The value of navigation menu item.
 
 **Type:** string \| Resource
 

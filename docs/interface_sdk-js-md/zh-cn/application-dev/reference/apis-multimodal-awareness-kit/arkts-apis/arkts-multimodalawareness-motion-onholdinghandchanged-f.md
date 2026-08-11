@@ -1,18 +1,12 @@
 # onHoldingHandChanged
 
-## 导入模块
-
-```TypeScript
-import { motion } from 'kits/@kit.MultimodalAwarenessKit';
-```
-
 ## onHoldingHandChanged
 
 ```TypeScript
 function onHoldingHandChanged(callback: Callback<HoldingHandStatus>): void
 ```
 
-Subscribe to detect the holding hand changed event.
+订阅握持手状态变化事件。
 
 **起始版本：** 23
 
@@ -28,14 +22,32 @@ Subscribe to detect the holding hand changed event.
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-arkui/arkts-components/arkts-arkui-callback-i.md)&lt;HoldingHandStatus&gt; | 是 | Indicates the callback for getting the event data. |
+| callback | [Callback](../../apis-arkui/arkts-components/arkts-arkui-callback-i.md)&lt;HoldingHandStatus&gt; | 是 | 回调函数，返回握持手状态信息。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 801 | Capability not supported. Function can not work correctly due to limited &lt;br&gt; device capabilities. |
-| 31500001 | Service exception. |
-| 31500002 | Subscribe Failed. |
-| 201 | Permission denied. An attempt was made to subscribe holdingHandChanged &lt;br&gt; event forbidden by permission: ohos.permission.DETECT_GESTURE. |
+| [801](../../errorcode-universal.md#801-该设备不支持此api) | Capability not supported. Function can not work correctly due to limited &lt;br&gt; device capabilities. |
+| [31500001](../../apis-multimodalawareness-kit/errorcode-motion.md#31500001-服务异常) | Service exception. |
+| [31500002](../../apis-multimodalawareness-kit/errorcode-motion.md#31500002-订阅失败) | Subscribe Failed. |
+| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. An attempt was made to subscribe holdingHandChanged &lt;br&gt; event forbidden by permission: ohos.permission.DETECT_GESTURE. |
+
+## 示例
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+function callback(data: motion.HoldingHandStatus) {
+  console.info('callback success: ' + data);
+};
+
+try {
+  motion.onHoldingHandChanged(callback);
+  console.info('on succeeded');
+} catch (err) {
+  let error = err as BusinessError;
+  console.error('Failed on; err code = ' + error.code);
+}
+```
 

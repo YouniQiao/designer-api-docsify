@@ -1,6 +1,6 @@
 # RawInputEventType
 
-原始输入事件类型。
+Define the type of raw input event.
 
 **Since:** 26.0.0
 
@@ -16,7 +16,7 @@
 TOUCH = 0
 ```
 
-触摸事件。
+Touch events.
 
 **Since:** 26.0.0
 
@@ -34,7 +34,7 @@ TOUCH = 0
 MOUSE = 1
 ```
 
-鼠标事件。
+Mouse events.
 
 **Since:** 26.0.0
 

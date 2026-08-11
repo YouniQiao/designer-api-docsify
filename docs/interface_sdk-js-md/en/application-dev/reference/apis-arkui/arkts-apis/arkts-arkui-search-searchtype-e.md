@@ -1,6 +1,6 @@
 # SearchType
 
-搜索输入框类型。
+Declare the type of search input box
 
 **Since:** 23
 
@@ -16,7 +16,7 @@
 NORMAL = 0
 ```
 
-基本输入模式，无特殊限制。
+Basic input mode.The value can contain digits, letters, underscores (_), spaces, and special characters.
 
 **Since:** 23
 
@@ -34,7 +34,7 @@ NORMAL = 0
 NUMBER = 2
 ```
 
-纯数字输入模式。
+Pure digital input mode.
 
 **Since:** 23
 
@@ -52,9 +52,7 @@ NUMBER = 2
 PHONE_NUMBER = 3
 ```
 
-电话号码输入模式。
-
-支持输入数字、空格、+ 、-、*、#、(、)，长度不限。
+Phone number entry mode.In this mode, the following are allowed: digits, spaces, plus signs (+), hyphens (-), asterisks (*), and number signs (#);the length is not limited.
 
 **Since:** 23
 
@@ -72,9 +70,7 @@ PHONE_NUMBER = 3
 EMAIL = 5
 ```
 
-邮箱地址输入模式。
-
-支持数字，字母，下划线、小数点、!、#、\$、%、&、'、*、+、-、/、=、?、^、`、{、|、}、~，以及@字符（只能存在一个@字符）。
+E-mail address input mode.This mode accepts only digits, letters, underscores (_), dots (.),and the following special characters: ! # \$ % & ' * + - / = ? ^ ` { | } ~ @ (which can only appear once)
 
 **Since:** 23
 
@@ -92,9 +88,7 @@ EMAIL = 5
 NUMBER_DECIMAL = 12
 ```
 
-带小数点的数字输入模式。
-
-支持数字，小数点（只能存在一个小数点）。
+Number decimal entry mode.The value can contain digits and one decimal point.
 
 **Since:** 23
 
@@ -112,7 +106,7 @@ NUMBER_DECIMAL = 12
 URL = 13
 ```
 
-带URL的输入模式，无特殊限制。
+URL entry mode.
 
 **Since:** 23
 
@@ -130,7 +124,7 @@ URL = 13
 ONE_TIME_CODE = 14
 ```
 
-验证码输入模式，无特殊限制。
+One time code mode.
 
 **Since:** 24
 

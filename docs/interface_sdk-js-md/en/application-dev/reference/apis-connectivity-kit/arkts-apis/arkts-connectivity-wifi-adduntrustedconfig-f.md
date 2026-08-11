@@ -48,30 +48,30 @@ Adds a specified untrusted hotspot configuration.
 import wifi from '@ohos.wifi';
 
 try {
-  let config:wifi.WifiDeviceConfig = {
-    ssid : "****",
-    bssid:  "****",
-    preSharedKey: "****",
-    isHiddenSsid: false,
-    securityType: 0,
-    creatorUid: 0,
-    disableReason: 0,
-    netId: 0,
-    randomMacType: 0,
-    randomMacAddr:  "****",
-    ipType: 0,
-    staticIp: {
-      ipAddress: 0,
-      gateway: 0,
-      dnsServers: [],
-      domains: []
-    }
-  }
-  wifi.addUntrustedConfig(config).then(result => {
-    console.info("result:" + JSON.stringify(result));
-  });  
+	let config:wifi.WifiDeviceConfig = {
+		ssid : "****",
+		bssid:  "****",
+		preSharedKey: "****",
+		isHiddenSsid: false,
+		securityType: 0,
+		creatorUid: 0,
+		disableReason: 0,
+		netId: 0,
+		randomMacType: 0,
+		randomMacAddr:  "****",
+		ipType: 0,
+		staticIp: {
+			ipAddress: 0,
+			gateway: 0,
+			dnsServers: [],
+			domains: []
+		}
+	}
+	wifi.addUntrustedConfig(config).then(result => {
+		console.info("result:" + JSON.stringify(result));
+	});	
 }catch(error){
-  console.error("failed:" + JSON.stringify(error));
+	console.error("failed:" + JSON.stringify(error));
 }
 ```
 
@@ -113,30 +113,30 @@ Adds a specified untrusted hotspot configuration.
 import wifi from '@ohos.wifi';
 
 try {
-  let config:wifi.WifiDeviceConfig = {
-    ssid : "****",
-    bssid:  "****",
-    preSharedKey: "****",
-    isHiddenSsid: false,
-    securityType: 0,
-    creatorUid: 0,
-    disableReason: 0,
-    netId: 0,
-    randomMacType: 0,
-    randomMacAddr:  "****",
-    ipType: 0,
-    staticIp: {
-      ipAddress: 0,
-      gateway: 0,
-      dnsServers: [],
-      domains: []
-    }
-  }
-  wifi.addUntrustedConfig(config,(error,result) => {
-    console.info("result:" + JSON.stringify(result));
-  });  
+	let config:wifi.WifiDeviceConfig = {
+		ssid : "****",
+		bssid:  "****",
+		preSharedKey: "****",
+		isHiddenSsid: false,
+		securityType: 0,
+		creatorUid: 0,
+		disableReason: 0,
+		netId: 0,
+		randomMacType: 0,
+		randomMacAddr:  "****",
+		ipType: 0,
+		staticIp: {
+			ipAddress: 0,
+			gateway: 0,
+			dnsServers: [],
+			domains: []
+		}
+	}
+	wifi.addUntrustedConfig(config,(error,result) => {
+		console.info("result:" + JSON.stringify(result));
+	});	
 }catch(error){
-  console.error("failed:" + JSON.stringify(error));
+	console.error("failed:" + JSON.stringify(error));
 }
 ```
 

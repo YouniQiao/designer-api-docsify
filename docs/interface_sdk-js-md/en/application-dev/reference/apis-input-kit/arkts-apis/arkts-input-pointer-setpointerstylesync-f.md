@@ -12,8 +12,8 @@ import { pointer } from 'kits/@kit.InputKit';
 function setPointerStyleSync(windowId: int, pointerStyle: PointerStyle): void
 ```
 
-设置指定窗口的鼠标样式类型，使用同步方式返回结果。此接口仅支持设置本应用进程内窗口的鼠标样式类型，如需通过UIExtensionAbility进程设置宿主窗口的鼠标样式类型，请参阅  
-[setCursor](../../../reference/apis-arkui/arkts-apis-uicontext-cursorcontroller.md#setcursor12)。
+Sets the mouse pointer style type for a specified window and returns the result synchronously. This API can set only the mouse pointer style type of windows within the current application process. For details about how to set the mouse pointer style type of the host window through the **UIExtensionAbility** process, see  
+[setCursor](../../apis-arkui/arkts-apis/arkts-arkui-arkui-uicontext-cursorcontroller-c.md/arkts-arkui-arkui-uicontext-cursorcontroller-c.md#setcursor).
 
 **Since:** 10
 
@@ -27,15 +27,15 @@ function setPointerStyleSync(windowId: int, pointerStyle: PointerStyle): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| windowId | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | 窗口ID。取值范围为大于等于0的整数。&lt;br&gt;窗口ID合法并且对应窗口存在时，可以设置窗口的鼠标光标样式。&lt;br&gt;窗口ID合法但窗口不存在时，也可以设置鼠标光标样式。&lt;br&gt;设置 结果可通过[getPointerStyleSync](arkts-input-pointer-getpointerstylesync-f.md#getpointerstylesync)获取。 |
-| pointerStyle | [PointerStyle](../../apis-arkui/arkts-components/arkts-arkui-pointerstyle-t.md) | Yes | 鼠标样式。 |
+| windowId | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | Window ID. The value is an integer greater than or equal to 0. &lt;br&gt;If the window ID is valid and the corresponding window exists, the mouse pointer style of the window can be set properly. &lt;br&gt;If the window ID is valid but the window does not exist, the mouse pointer style can also be set properly. &lt;br&gt;The result can be obtained through [getPointerStyleSync](arkts-input-pointer-getpointerstylesync-f.md#getpointerstylesync). |
+| pointerStyle | [PointerStyle](../../apis-arkui/arkts-components/arkts-arkui-pointerstyle-t.md) | Yes | Pointer style. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; 3. Parameter verification failed. |
-| 202 | Permission denied, non-system app called system api. &lt;br&gt; When the windowId value is -1, the system permission is required to set the global style.  **ArkTS mode:** This error code applies only to ArkTS-Sta. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; 3. Parameter verification failed. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission denied, non-system app called system api. &lt;br&gt; When the windowId value is -1, the system permission is required to set the global style.  **ArkTS mode:** This error code applies only to ArkTS-Sta. |
 
 ## Examples
 
@@ -51,23 +51,21 @@ struct Index {
     RelativeContainer() {
       Text()
         .onClick(() => {
-          // Obtains the most recent window within the application.
           window.getLastWindow(this.getUIContext().getHostContext(), (error: BusinessError, win: window.Window) => {
             if (error.code) {
-              console.error(`Failed to obtain the top window, Code: ${(error as BusinessError).code}, message: ${(error as BusinessError).message}.`);
+              console.error('Failed to obtain the top window. Cause: ' + JSON.stringify(error));
               return;
             }
             let windowId = win.getWindowProperties().id;
             if (windowId < 0) {
-              console.info(`Invalid windowId.`);
+              console.info(`Invalid windowId`);
               return;
             }
             try {
-              // Synchronously sets the mouse pointer style.
               pointer.setPointerStyleSync(windowId, pointer.PointerStyle.CROSS);
-              console.info(`Succeeded in setting pointer style.`);
+              console.info(`Set pointer style success`);
             } catch (error) {
-              console.error(`Failed to get pointer size, Code: ${(error as BusinessError).code}, message: ${(error as BusinessError).message}.`);
+              console.error(`getPointerSize failed, error: ${JSON.stringify(error, [`code`, `message`])}`);
             }
           });
         })

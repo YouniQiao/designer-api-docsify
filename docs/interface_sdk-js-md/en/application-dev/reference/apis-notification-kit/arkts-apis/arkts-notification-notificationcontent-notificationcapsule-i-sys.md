@@ -1,10 +1,10 @@
 # NotificationCapsule
 
-描述通知胶囊，用于在实况窗中展示胶囊形态。
+Describes the notification capsule, which is used to display the capsule form in the live view.
 
-> **说明：**
+> **NOTE：**
 > 
-> 实际显示效果依赖于设备能力和通知中心UI样式。
+> The actual display effect depends on the device capabilities and the notification center UI style.
 
 **Since:** 11
 
@@ -20,7 +20,7 @@
 capsuleButtons?: Array<NotificationIconButton>
 ```
 
-即时任务类实况胶囊的按钮（最多支持2个）。默认为空。
+Buttons of the notification capsule of an instant task. A maximum of two buttons are supported. This parameter is left empty by default.
 
 **Type:** Array&lt;NotificationIconButton&gt;
 
@@ -40,7 +40,7 @@ capsuleButtons?: Array<NotificationIconButton>
 content?: string
 ```
 
-胶囊的拓展文本。默认为空。
+Extended text of the capsule. This parameter is left empty by default.
 
 **Type:** string
 
@@ -60,7 +60,7 @@ content?: string
 time?: int
 ```
 
-即时任务类实况胶囊展示时长。默认值为0。单位：秒。
+Display duration of the notification capsule of an instant task. The default value is **0**. Unit: second.
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 

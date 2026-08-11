@@ -9,7 +9,7 @@ type UpdateFn = (
 ) => void
 ```
 
-更新操作的属性类型。
+Callback function called when updating one or more data records in the database.
 
 **Since:** 23
 

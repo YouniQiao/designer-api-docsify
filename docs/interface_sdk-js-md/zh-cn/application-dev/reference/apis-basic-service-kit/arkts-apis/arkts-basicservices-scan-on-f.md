@@ -1,11 +1,5 @@
 # on
 
-## 导入模块
-
-```TypeScript
-import { scan } from 'kits/@kit.BasicServicesKit';
-```
-
 ## on('scanDeviceFound')
 
 ```TypeScript
@@ -35,7 +29,7 @@ function on(type: 'scanDeviceFound', callback: Callback<ScannerDevice>): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 201 | Permission denied. |
+| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
 
 ## 示例
 
@@ -44,7 +38,7 @@ import { scan } from '@kit.BasicServicesKit';
 
 scan.on('scanDeviceFound', (device: scan.ScannerDevice) => {
     console.info('scan device found: ' + JSON.stringify(device));
-});
+})
 ```
 
 
@@ -77,7 +71,7 @@ function on(type: 'scanDeviceSync', callback: Callback<ScannerSyncDevice>): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 201 | Permission denied. |
+| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
 
 ## 示例
 
@@ -86,6 +80,6 @@ import { scan } from '@kit.BasicServicesKit';
 
 scan.on('scanDeviceSync', (device: scan.ScannerSyncDevice) => {
     console.info('scan device sync: ' + JSON.stringify(device));
-});
+})
 ```
 

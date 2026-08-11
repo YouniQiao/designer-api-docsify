@@ -1,6 +1,6 @@
 # SelectedMode
 
-选中子页签的显示模式枚举。
+Enumerates the display modes of selected subtabs.
 
 **Since:** 10
 
@@ -16,7 +16,7 @@
 INDICATOR
 ```
 
-使用下划线模式。适用于需要明确指示选中状态的场景，如新闻资讯类应用。
+Indicator mode.
 
 **Since:** 10
 
@@ -36,7 +36,7 @@ INDICATOR
 BOARD
 ```
 
-使用背板模式。适用于需要明确区分选中页签的场景，如功能导航类应用。
+Board mode.
 
 **Since:** 10
 

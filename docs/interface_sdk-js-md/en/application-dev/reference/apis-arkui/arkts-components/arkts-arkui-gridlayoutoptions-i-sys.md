@@ -1,11 +1,11 @@
 # GridLayoutOptions
 
-Grid布局选项。其中，irregularIndexes和onGetIrregularSizeByIndex可对仅设置rowsTemplate或columnsTemplate的Grid使用，可以指定一个index数组，并为其中的index对应的GridItem设置其占据的行数与列数，使用方法参见  
-[示例3](../../../reference/apis-arkui/arkui-ts/ts-container-grid.md#示例3可滚动grid设置跨行跨列节点)；onGetRectByIndex可对同时设置rowsTemplate和columnsTemplate的Grid使用，为指定的index对应的GridItem设置位置和大小，使用方法参见  
-[示例1](../../../reference/apis-arkui/arkui-ts/ts-container-grid.md#示例1固定行列grid)。
+Defines the grid layout options. In this API, **irregularIndexes** and **onGetIrregularSizeByIndex** can be used for grids where either **rowsTemplate** or **columnsTemplate** is set. These properties allow you to specify an index array and set the number of rows and columns to be occupied by a grid item at the specified index. For details about the usage, see  
+[Example 3](../../../reference/apis-arkui/arkui-ts/ts-container-grid.md#example-3-implementing-a-scrollable-grid-with-grid-items-spanning-rows-and-columns).On the other hand, **onGetRectByIndex** can be used for grids where both **rowsTemplate** and **columnsTemplate** are set. It allows you to specify the position and size for the grid item at the specified index. For details about the usage, see  
+[Example 1](../../../reference/apis-arkui/arkui-ts/ts-container-grid.md#example-1-creating-a-fixed-row-and-column-grid-layout).
 
-为提高Grid在跳转、列数变化等场景的性能，应该尽量使用GridLayoutOptions。即使Grid中没有任何特殊的跨行跨列节点，也可以通过使用'Grid(this.scroller, {regularSize: [1, 1]})'的方式提高跳转性能。参考&lt;!--RP1--&gt;  
-[使用GridLayoutOptions提升Grid性能](../../../performance/grid_optimization.md#使用gridlayoutoptions提升grid性能)&lt;!--RP1End--&gt;。
+To improve the performance of **Grid** in scenarios such as jumps and column quantity changes, you are advised to use  
+**GridLayoutOptions** whenever possible. Even if there are no special cross-row or cross-column nodes in **Grid**,performance during jumps can still be enhanced by using 'Grid(this.scroller, {regularSize: [1, 1]})'.
 
 **Since:** 10
 
@@ -21,9 +21,7 @@ Grid布局选项。其中，irregularIndexes和onGetIrregularSizeByIndex可对�
 onGetStartIndexByIndex?: OnGetStartIndexByIndexCallback
 ```
 
-根据指定的目标索引，计算Grid滚动到该位置时页面内的起始行，用于支持[scrollToIndex](../arkts-apis/arkts-arkui-scroll-scroller-c.md/arkts-arkui-scroll-scroller-c.md#scrolltoindex)等操作。不设置时不启用该回调，需与onGetStartIndexByOffset同时设置才能生效。
-
-**系统接口：** 此接口为系统接口。
+Called to return the StartLineInfo based on target index for the scrollToIndex operation.
 
 **Since:** 23
 
@@ -43,9 +41,7 @@ onGetStartIndexByIndex?: OnGetStartIndexByIndexCallback
 onGetStartIndexByOffset?: OnGetStartIndexByOffsetCallback
 ```
 
-根据Grid滚动的总偏移量，计算Grid当前页面起始行位置，用于快速滑动或反向滑动场景。不设置时不启用该回调，需与onGetStartIndexByIndex同时设置才能生效。
-
-**系统接口：** 此接口为系统接口。
+Called to return the StartLineInfo based on total offset for the fast or reverse sliding.
 
 **Since:** 23
 

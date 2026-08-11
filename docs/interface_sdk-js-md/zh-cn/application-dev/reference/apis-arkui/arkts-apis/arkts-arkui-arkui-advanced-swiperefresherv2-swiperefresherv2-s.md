@@ -24,12 +24,6 @@ SwipeRefresherV2组件用于内容加载，内容加载指获取内容并加载�
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
-## 导入模块
-
-```TypeScript
-import { SwipeRefresherV2 } from 'kits/@kit.ArkUI';
-```
-
 ## build
 
 ```TypeScript

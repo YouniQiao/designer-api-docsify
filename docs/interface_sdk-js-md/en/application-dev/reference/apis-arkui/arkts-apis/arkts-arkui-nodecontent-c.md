@@ -1,6 +1,6 @@
 # NodeContent
 
-NodeContent是节点内容的实体封装。
+NodeContent is the entity encapsulation of the node content.
 
 **Inheritance/Implementation:** NodeContent extends [Content](arkts-arkui-content-c.md)
 
@@ -18,7 +18,7 @@ NodeContent是节点内容的实体封装。
 addFrameNode(node: FrameNode): void
 ```
 
-根据参数将 FrameNode 添加到 NodeContent 中。
+Add FrameNode to NodeContent based on parameters.
 
 **Since:** 23
 
@@ -34,13 +34,13 @@ addFrameNode(node: FrameNode): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| node | [FrameNode](arkts-arkui-framenode-c.md) | Yes | 待添加的 FrameNode。 |
+| node | [FrameNode](arkts-arkui-framenode-c.md) | Yes | Newly added FrameNode. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 100025 | The parameter is invalid. Details about the invalid parameter and the reason are included in the error message. For example: "The parameter 'node' is invalid: it cannot be adopted." |
+| [100025](../errorcode-node.md#100025-invalid-parameter-value) | The parameter is invalid. Details about the invalid parameter and the reason are included in the error message. For example: "The parameter 'node' is invalid: it cannot be adopted." |
 
 ## constructor
 
@@ -48,7 +48,7 @@ addFrameNode(node: FrameNode): void
 constructor()
 ```
 
-构造函数
+constructor
 
 **Since:** 23
 
@@ -66,7 +66,7 @@ constructor()
 removeFrameNode(node: FrameNode): void
 ```
 
-移除目标FrameNode。
+Delete the target FrameNode.
 
 **Since:** 23
 
@@ -82,5 +82,5 @@ removeFrameNode(node: FrameNode): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| node | [FrameNode](arkts-arkui-framenode-c.md) | Yes | 被移除的FrameNode。 |
+| node | [FrameNode](arkts-arkui-framenode-c.md) | Yes | FrameNode deleted. |
 

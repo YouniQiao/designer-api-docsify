@@ -170,7 +170,7 @@ textVerticalAlign?: TextVerticalAlign
 
 默认值：TextVerticalAlign.BASELINE
 
-**类型：** [TextVerticalAlign](../arkts-apis/arkts-arkui-textverticalalign-e.md)
+**类型：** [TextVerticalAlign](../arkts-apis/arkts-arkui-textcommon-textverticalalign-e.md)
 
 **起始版本：** 20
 

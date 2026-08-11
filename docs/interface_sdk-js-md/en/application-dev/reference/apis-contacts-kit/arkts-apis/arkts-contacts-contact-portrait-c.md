@@ -1,19 +1,20 @@
 # Portrait
 
-联系人的头像类。
+Defines a contact's portrait.
 
-> **说明：**
+> **NOTE：**
 > 
-> 从API version 22开始，支持通过uri和[PixelMap](../../apis-image-kit/arkts-apis/arkts-image-image-pixelmap-i.md/arkts-image-image-pixelmap-i.md)格式设置联系人头像资源(暂不支持通过
-> [addContactViaUI](arkts-contacts-contact-addcontactviaui-f.md#addcontactviaui)、
-> [saveToExistingContactViaUI](arkts-contacts-contact-savetoexistingcontactviaui-f.md#savetoexistingcontactviaui)接口设置)。
+> Since API version 22, contact portraits can be set in URI or [PixelMap](../../apis-image-kit/arkts-apis/arkts-image-image-pixelmap-i.md/arkts-image-image-pixelmap-i.md)
+> format. (Currently, contact avatars cannot be set through the [addContactViaUI](arkts-contacts-contact-addcontactviaui-f.md#addcontactviaui) or
+> [saveToExistingContactViaUI](arkts-contacts-contact-savetoexistingcontactviaui-f.md#savetoexistingcontactviaui) API.)
 > 
-> uri为可访问的联系人头像文件地址，[PixelMap](../../apis-image-kit/arkts-apis/arkts-image-image-pixelmap-i.md/arkts-image-image-pixelmap-i.md)为通过联系人头像资源生成的
-> [PixelMap](../../apis-image-kit/arkts-apis/arkts-image-image-pixelmap-i.md/arkts-image-image-pixelmap-i.md)对象。
+> URI indicates the address of the contact portrait file that can be accessed, and
+> [PixelMap](../../apis-image-kit/arkts-apis/arkts-image-image-pixelmap-i.md/arkts-image-image-pixelmap-i.md) indicates the [PixelMap](../../apis-image-kit/arkts-apis/arkts-image-image-pixelmap-i.md/arkts-image-image-pixelmap-i.md)
+> object generated based on the contact portrait resource.
 > 
-> 从API version 22开始，支持通过uri格式读取联系人头像资源，该格式仅支持以
-> [fs.open](../../apis-core-file-kit/arkts-apis/arkts-corefile-file-fs-open-f.md/arkts-corefile-file-fs-open-f.md#open)方式打开，无法直接在Image组件内显示，需读取后转换为
-> [PixelMap](../../apis-image-kit/arkts-apis/arkts-image-image-pixelmap-i.md/arkts-image-image-pixelmap-i.md)格式显示。
+> Since API version 22, the profile picture resource can be read through URI. The resource can be opened only in
+> [fs.open](../../apis-core-file-kit/arkts-apis/arkts-corefile-file-fs-open-f.md/arkts-corefile-file-fs-open-f.md#open) mode and cannot be directly displayed in the **Image** component using a URI. You need to read
+> the resource and display it in [PixelMap](../../apis-image-kit/arkts-apis/arkts-image-image-pixelmap-i.md/arkts-image-image-pixelmap-i.md) format.
 
 **Since:** 7
 
@@ -35,7 +36,7 @@ import { contact } from 'kits/@kit.ContactsKit';
 photo?: image.PixelMap
 ```
 
-PixelMap格式的联系人头像。
+Contact portrait in PixelMap format.
 
 **Type:** image.PixelMap
 
@@ -55,7 +56,7 @@ PixelMap格式的联系人头像。
 uri: string
 ```
 
-uri格式联系人头像。
+Contact portrait in URI format.
 
 **Type:** string
 

@@ -12,7 +12,7 @@ import { batteryInfo } from 'kits/@kit.BasicServicesKit';
 function nowCurrent(): int
 ```
 
-表示当前设备电池的电流，单位毫安。
+Battery current of the device, in unit of mA.
 
 **Since:** 23
 
@@ -26,5 +26,5 @@ function nowCurrent(): int
 
 | Type | Description |
 | --- | --- |
-| int | 返回当前设备电池的电流，单位毫安。 |
+| int | Returns the battery current of the device, in mA. |
 

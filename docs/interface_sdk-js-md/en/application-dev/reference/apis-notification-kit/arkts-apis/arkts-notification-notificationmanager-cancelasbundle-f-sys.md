@@ -17,7 +17,7 @@ function cancelAsBundle(
   ): void
 ```
 
-取消代理通知。使用callback异步回调。
+Cancels a notification published through the reminder agent. This API uses an asynchronous callback to return the result.
 
 **Since:** 9
 
@@ -35,24 +35,24 @@ function cancelAsBundle(
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| id | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | 通知ID。 |
-| representativeBundle | string | Yes | 被代理应用的包名。 |
-| userId | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | 用户ID。 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | 取消代理通知的回调方法。 |
+| id | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | Notification ID. |
+| representativeBundle | string | Yes | Bundle name of the application whose notification function is taken over by the reminder agent. |
+| userId | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | User ID. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 1600008 | The user does not exist. |
-| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. 3. Parameter verification failed. |
-| 201 | Permission denied. |
-| 1600001 | Internal error. |
-| 202 | Not system application to call the interface. |
-| 1600002 | Marshalling or unmarshalling error. |
-| 1600003 | Failed to connect to the service. |
-| 1600007 | The notification does not exist. |
-| 17700001 | The specified bundle name was not found. |
+| [1600008](../errorcode-notification.md#1600008-user-not-found) | The user does not exist. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. 3. Parameter verification failed. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
+| [1600001](../errorcode-notification.md#1600001-internal-error) | Internal error. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system application to call the interface. |
+| [1600002](../errorcode-notification.md#1600002-marshalling-or-unmarshalling-error) | Marshalling or unmarshalling error. |
+| [1600003](../errorcode-notification.md#1600003-failed-to-connect-to-the-notification-service) | Failed to connect to the service. |
+| [1600007](../errorcode-notification.md#1600007-notification-not-found) | The notification does not exist. |
+| [17700001](../../apis-ability-kit/errorcode-bundle.md#17700001-bundle-name-does-not-exist) | The specified bundle name was not found. |
 
 ## Examples
 
@@ -81,7 +81,7 @@ notificationManager.cancelAsBundle(0, representativeBundle, userId, cancelAsBund
 function cancelAsBundle(id: int, representativeBundle: string, userId: int): Promise<void>
 ```
 
-取消代理通知。使用Promise异步回调。
+Cancels a notification published through the reminder agent. This API uses a promise to return the result.
 
 **Since:** 9
 
@@ -99,29 +99,29 @@ function cancelAsBundle(id: int, representativeBundle: string, userId: int): Pro
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| id | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | 通知ID。 |
-| representativeBundle | string | Yes | 被代理应用的包名。 |
-| userId | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | 用户ID。 |
+| id | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | Notification ID. |
+| representativeBundle | string | Yes | Bundle name of the application whose notification function is taken over by the reminder agent. |
+| userId | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | User ID. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise对象。无返回结果的Promise对象。 |
+| Promise&lt;void&gt; | Promise that returns no value. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 1600008 | The user does not exist. |
-| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. 3. Parameter verification failed. |
-| 201 | Permission denied. |
-| 1600001 | Internal error. |
-| 202 | Not system application to call the interface. |
-| 1600002 | Marshalling or unmarshalling error. |
-| 1600003 | Failed to connect to the service. |
-| 1600007 | The notification does not exist. |
-| 17700001 | The specified bundle name was not found. |
+| [1600008](../errorcode-notification.md#1600008-user-not-found) | The user does not exist. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. 3. Parameter verification failed. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
+| [1600001](../errorcode-notification.md#1600001-internal-error) | Internal error. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system application to call the interface. |
+| [1600002](../errorcode-notification.md#1600002-marshalling-or-unmarshalling-error) | Marshalling or unmarshalling error. |
+| [1600003](../errorcode-notification.md#1600003-failed-to-connect-to-the-notification-service) | Failed to connect to the service. |
+| [1600007](../errorcode-notification.md#1600007-notification-not-found) | The notification does not exist. |
+| [17700001](../../apis-ability-kit/errorcode-bundle.md#17700001-bundle-name-does-not-exist) | The specified bundle name was not found. |
 
 ## Examples
 
@@ -146,7 +146,7 @@ notificationManager.cancelAsBundle(0, representativeBundle, userId).then(() => {
 function cancelAsBundle(representativeBundle: BundleOption, id: int): Promise<void>
 ```
 
-取消代理通知。使用Promise异步回调。
+Cancels a notification published through the reminder agent. This API uses a promise to return the result.
 
 **Since:** 12
 
@@ -164,29 +164,29 @@ function cancelAsBundle(representativeBundle: BundleOption, id: int): Promise<vo
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| representativeBundle | [BundleOption](arkts-notification-notificationextensionsubscription-bundleoption-t.md) | Yes | 被代理应用的包信息。 |
-| id | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | 通知ID。 |
+| representativeBundle | [BundleOption](arkts-notification-notificationextensionsubscription-bundleoption-t.md) | Yes | Bundle information of the application whose notification function is taken over by the reminder agent. |
+| id | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | Notification ID. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise对象。无返回结果的Promise对象。 |
+| Promise&lt;void&gt; | Promise that returns no value. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 1600008 | The user does not exist. |
-| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. 3. Parameter verification failed. |
-| 1600012 | No memory space. |
-| 201 | Permission denied. |
-| 1600001 | Internal error. |
-| 202 | Not system application to call the interface. |
-| 1600002 | Marshalling or unmarshalling error. |
-| 1600003 | Failed to connect to the service. |
-| 1600007 | The notification does not exist. |
-| 17700001 | The specified bundle name was not found. |
+| [1600008](../errorcode-notification.md#1600008-user-not-found) | The user does not exist. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. 3. Parameter verification failed. |
+| [1600012](../errorcode-notification.md#1600012-insufficient-memory-space) | No memory space. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
+| [1600001](../errorcode-notification.md#1600001-internal-error) | Internal error. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system application to call the interface. |
+| [1600002](../errorcode-notification.md#1600002-marshalling-or-unmarshalling-error) | Marshalling or unmarshalling error. |
+| [1600003](../errorcode-notification.md#1600003-failed-to-connect-to-the-notification-service) | Failed to connect to the service. |
+| [1600007](../errorcode-notification.md#1600007-notification-not-found) | The notification does not exist. |
+| [17700001](../../apis-ability-kit/errorcode-bundle.md#17700001-bundle-name-does-not-exist) | The specified bundle name was not found. |
 
 ## Examples
 

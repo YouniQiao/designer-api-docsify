@@ -1,6 +1,6 @@
 # AudioStreamInfo
 
-音频流信息。
+Describes audio stream information.
 
 **Since:** 8
 
@@ -22,7 +22,7 @@ import { audio } from 'kits/@kit.AudioKit';
 channelLayout?: AudioChannelLayout
 ```
 
-音频声道布局，默认值为0x0。
+Audio channel layout. The default value is **0x0**.
 
 **Type:** [AudioChannelLayout](arkts-audio-audio-audiochannellayout-e.md)
 
@@ -40,7 +40,7 @@ channelLayout?: AudioChannelLayout
 channels: AudioChannel
 ```
 
-音频文件的通道数。
+Number of audio channels.
 
 **Type:** [AudioChannel](arkts-audio-audio-audiochannel-e.md)
 
@@ -58,7 +58,7 @@ channels: AudioChannel
 encodingType: AudioEncodingType
 ```
 
-音频编码格式。
+Audio encoding type.
 
 **Type:** [AudioEncodingType](arkts-audio-audio-audioencodingtype-e.md)
 
@@ -76,7 +76,7 @@ encodingType: AudioEncodingType
 sampleFormat: AudioSampleFormat
 ```
 
-音频采样格式。
+Audio sample format.
 
 **Type:** [AudioSampleFormat](arkts-audio-audio-audiosampleformat-e.md)
 
@@ -94,12 +94,7 @@ sampleFormat: AudioSampleFormat
 samplingRate: AudioSamplingRate | int
 ```
 
-音频文件的采样率，单位为赫兹（Hz）。支持传入[AudioSamplingRate](arkts-audio-audio-audiosamplingrate-e.md)。
-
-从API版本26.0.0开始：
-
-- 参数samplingRate支持number类型。  
-- 音频渲染扩展支持8000Hz到384000Hz范围内以10Hz为步长的采样率值。具体设备支持的采样率规格会存在差异。
+Audio sampling rate.
 
 **Type:** ArkTS-Dyn: [AudioSamplingRate](arkts-audio-audio-audiosamplingrate-e.md) \| number  <br>ArkTS-Sta：[AudioSamplingRate](arkts-audio-audio-audiosamplingrate-e.md) \| int
 

@@ -1,11 +1,5 @@
 # compressFiles
 
-## 导入模块
-
-```TypeScript
-import { zlib } from 'kits/@kit.BasicServicesKit';
-```
-
 ## compressFiles
 
 ```TypeScript
@@ -42,9 +36,9 @@ function compressFiles(inFiles: Array<string>, outFile: string, options: Options
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types. |
-| 900001 | The input source file is invalid. |
-| 900002 | The input destination file is invalid. |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types. |
+| [900001](../../apis-basic-services-kit/errorcode-zlib.md#900001-传入的源文件错误) | The input source file is invalid. |
+| [900002](../../apis-basic-services-kit/errorcode-zlib.md#900002-传入的目标文件错误) | The input destination file is invalid. |
 
 ## 示例
 
@@ -53,7 +47,7 @@ function compressFiles(inFiles: Array<string>, outFile: string, options: Options
 import { zlib, BusinessError } from '@kit.BasicServicesKit';
 
 let inFile = '/data/storage/el2/base/temp/filename.xxx';
-let pathDir = '/data/storage/el2/base/temp/xxx';
+let pathDir = 'data/storage/el2/base/temp/xxx';
 let outFile = '/data/storage/el2/base/temp/xxx.zip';
 let options: zlib.Options = {
   level: zlib.CompressLevel.COMPRESS_LEVEL_DEFAULT_COMPRESSION,

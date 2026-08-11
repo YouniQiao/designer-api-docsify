@@ -18,12 +18,6 @@
 
 **系统能力：** SystemCapability.Window.SessionManager
 
-## 导入模块
-
-```TypeScript
-import { PiPWindow } from 'kits/@kit.ArkUI';
-```
-
 ## 汇总
 
 ### 函数

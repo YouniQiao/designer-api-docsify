@@ -1,11 +1,5 @@
 # @arkts.math.Decimal(定义ArkTS的Decimal类型。Decimal支持任意精度的十进制运算。)
 
-## 导入模块
-
-```TypeScript
-import { Decimal } from 'kits/@kit.ArkTS';
-```
-
 ## 汇总
 
 ### 类

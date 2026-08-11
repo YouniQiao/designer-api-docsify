@@ -1,6 +1,6 @@
 # CloseSwipeActionOptions
 
-定义收起滑动操作选项。
+Defines the close swipe action options.
 
 **Since:** 23
 
@@ -16,7 +16,7 @@
 onFinish?: () => void
 ```
 
-在收起动画完成后触发。
+Triggered after the collapse animation is complete.
 
 **Since:** 23
 

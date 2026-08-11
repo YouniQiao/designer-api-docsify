@@ -1,6 +1,6 @@
 # SlotLevel
 
-通知级别。
+Enumerates the notification level.
 
 **Since:** 7
 
@@ -20,7 +20,7 @@
 LEVEL_NONE = 0
 ```
 
-表示关闭通知功能。
+The notification function is disabled.
 
 **Since:** 7
 
@@ -40,7 +40,7 @@ LEVEL_NONE = 0
 LEVEL_MIN = 1
 ```
 
-表示通知功能已启用，但状态栏中不显示通知图标，且没有横幅或提示音。
+The notification function is enabled, but the notification icon is not displayed in the status bar, with no banner or alert tone.
 
 **Since:** 7
 
@@ -60,7 +60,7 @@ LEVEL_MIN = 1
 LEVEL_LOW = 2
 ```
 
-表示通知功能已启用，且状态栏中显示通知图标，但没有横幅或提示音。
+The notification function is enabled, and the notification icon is displayed in the status bar, with no banner or alert tone.
 
 **Since:** 7
 
@@ -80,7 +80,7 @@ LEVEL_LOW = 2
 LEVEL_DEFAULT = 3
 ```
 
-表示通知功能已启用，状态栏中显示通知图标，没有横幅但有提示音。
+The notification feature is enabled, and the notification icon is displayed in the status bar, with an alert tone but no banner.
 
 **Since:** 7
 
@@ -100,7 +100,7 @@ LEVEL_DEFAULT = 3
 LEVEL_HIGH = 4
 ```
 
-表示通知功能已启用，状态栏中显示通知图标，有横幅和提示音。
+The notification feature is enabled, and the notification icon is displayed in the status bar, with an alert tone and banner.
 
 **Since:** 7
 

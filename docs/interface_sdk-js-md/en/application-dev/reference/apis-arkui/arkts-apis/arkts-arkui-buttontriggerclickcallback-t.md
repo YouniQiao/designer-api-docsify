@@ -4,7 +4,7 @@
 export type ButtonTriggerClickCallback = (xPos: double, yPos: double) => void
 ```
 
-定义ButtonConfiguration中使用的回调类型。
+Defines the callback type used in ButtonConfiguration.
 
 **Since:** 23
 
@@ -20,6 +20,6 @@ export type ButtonTriggerClickCallback = (xPos: double, yPos: double) => void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| xPos | double | Yes | 点击位置x的坐标。<br/>单位：vp |
-| yPos | double | Yes | 点击位置y的坐标。<br/>单位：vp |
+| xPos | double | Yes | The value of xPos is x coordinate. |
+| yPos | double | Yes | The value of yPos is y coordinate. |
 

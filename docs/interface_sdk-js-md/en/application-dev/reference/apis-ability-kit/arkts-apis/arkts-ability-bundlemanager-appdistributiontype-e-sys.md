@@ -1,6 +1,6 @@
 # AppDistributionType (System API)
 
-标识应用[HarmonyAppProvision配置文件说明](../../../security/app-provision-structure.md)。
+Enumerates the application [distribution types](../../../security/app-provision-structure.md).
 
 **Since:** 12
 
@@ -18,7 +18,7 @@
 APP_GALLERY = 1
 ```
 
-应用市场安装的应用。
+Application installed from AppGallery.
 
 **Since:** 12
 
@@ -36,7 +36,7 @@ APP_GALLERY = 1
 ENTERPRISE = 2
 ```
 
-企业应用，可以安装到个人设备上。
+Enterprise application that can be installed on personal devices.
 
 **Since:** 12
 
@@ -54,7 +54,7 @@ ENTERPRISE = 2
 ENTERPRISE_NORMAL = 3
 ```
 
-普通企业应用，只能通过企业MDM应用安装在企业设备上。
+Common enterprise application that can be installed on enterprise devices only through an enterprise mobile device management (MDM) application.
 
 **Since:** 12
 
@@ -72,8 +72,8 @@ ENTERPRISE_NORMAL = 3
 ENTERPRISE_MDM = 4
 ```
 
-企业MDM应用，只能安装在企业设备上。需要被激活  
-[adminManager.enableAdmin](../../apis-mdm-kit/arkts-apis/arkts-mdm-adminmanager-enableadmin-f.md/arkts-mdm-adminmanager-enableadmin-f.md#enableadmin)后，才能安装普通企业应用。
+Enterprise MDM application that can be installed only on enterprise devices. To install a common enterprise application, you must have  
+[administrator privileges](../../apis-mdm-kit/arkts-apis/arkts-mdm-adminmanager-enableadmin-f.md/arkts-mdm-adminmanager-enableadmin-f.md#enableadmin).
 
 **Since:** 12
 
@@ -91,7 +91,7 @@ ENTERPRISE_MDM = 4
 OS_INTEGRATION = 5
 ```
 
-系统预置应用。
+Preinstalled system application.
 
 **Since:** 12
 
@@ -109,7 +109,7 @@ OS_INTEGRATION = 5
 CROWDTESTING = 6
 ```
 
-众包测试应用，是由应用市场分发给部分用户，有一定的有效期的特定应用，系统检测到应用的有效期到期后，会通知用户到应用市场更新release版本的应用。
+Application under crowdtesting, which is distributed by AppGallery to a limited number of users and come with a set expiration date. When the system detects that the validity period of the application expires, it prompts the user to update to the release version available on AppGallery.
 
 **Since:** 12
 
@@ -127,7 +127,7 @@ CROWDTESTING = 6
 NONE = 7
 ```
 
-其他。
+Other.
 
 **Since:** 12
 

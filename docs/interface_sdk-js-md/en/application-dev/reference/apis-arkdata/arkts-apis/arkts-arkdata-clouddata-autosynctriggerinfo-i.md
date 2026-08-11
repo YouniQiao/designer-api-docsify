@@ -1,6 +1,6 @@
 # AutoSyncTriggerInfo
 
-自动同步触发信息。
+Describes information about the automatic synchronization trigger mode.
 
 **Since:** 26.0.0
 
@@ -22,7 +22,7 @@ import { cloudData } from 'kits/@kit.ArkData';
 mode: AutoSyncTriggerMode
 ```
 
-自动同步触发模式。
+Describes the automatic synchronization triggering mode.
 
 **Type:** [AutoSyncTriggerMode](arkts-arkdata-clouddata-autosynctriggermode-e.md)
 

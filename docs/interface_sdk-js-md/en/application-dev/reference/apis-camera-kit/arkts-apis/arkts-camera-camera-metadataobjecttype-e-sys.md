@@ -1,6 +1,6 @@
 # MetadataObjectType
 
-枚举，metadata元数据检测类型。
+Enumerates the types of metadata objects used for camera detection.
 
 **Since:** 10
 

@@ -1,15 +1,14 @@
 # AuxiliaryPicture
 
-AuxiliaryPicture类，用于读取或写入图像的辅助图数据以及获取图像的辅助图信息。目前支持的辅助图类型可参考[AuxiliaryPictureType](arkts-image-image-auxiliarypicturetype-e.md)。
+The **AuxiliaryPicture** class is used to read or write auxiliary picture data of an image and obtain auxiliary picture information of an image. The supported types of auxiliary pictures can be found in   
+[AuxiliaryPictureType](arkts-image-image-auxiliarypicturetype-e.md).
 
-在调用AuxiliaryPicture的方法前，需要通过[image.createAuxiliaryPicture](arkts-image-image-createauxiliarypicture-f.md#createauxiliarypicture)或Picture的  
-[getAuxiliaryPicture](arkts-image-image-picture-i.md#getauxiliarypicture)创建一个AuxiliaryPicture实例。
+Before calling any API in AuxiliaryPicture, you must create an AuxiliaryPicture instance using   
+[image.createAuxiliaryPicture](arkts-image-image-createauxiliarypicture-f.md#createauxiliarypicture) or   
+[getAuxiliaryPicture](arkts-image-image-picture-i.md#getauxiliarypicture) in Picture.
 
-由于图片占用内存较大，所以当AuxiliaryPicture对象使用完成后，应主动调用[release](arkts-image-image-auxiliarypicture-i.md#release)方法及时释放对象。释放时应确保该实例的所有异步方法均执行完成，且后续不再使用该对象。
-
-> **说明：**
-> 
-> - 本Interface首批接口从API version 13开始支持。
+Images occupy a large amount of memory. When you finish using an AuxiliaryPicture instance, call   
+[release](arkts-image-image-auxiliarypicture-i.md#release) to free the memory promptly. Before releasing the instance, ensure that all asynchronous operations associated with the instance have finished and the instance is no longer needed.
 
 **Since:** 13
 
@@ -31,7 +30,7 @@ import { image } from 'kits/@kit.ImageKit';
 getAuxiliaryPictureInfo(): AuxiliaryPictureInfo
 ```
 
-获取有关此辅助图的图像信息。
+Obtains the auxiliary picture information.
 
 **Since:** 13
 
@@ -45,7 +44,7 @@ getAuxiliaryPictureInfo(): AuxiliaryPictureInfo
 
 | Type | Description |
 | --- | --- |
-| [AuxiliaryPictureInfo](arkts-image-image-auxiliarypictureinfo-i.md) | 返回辅助图图像信息。 |
+| [AuxiliaryPictureInfo](arkts-image-image-auxiliarypictureinfo-i.md) | Auxiliary picture information. |
 
 ## getAuxiliaryPictureInfo
 
@@ -75,7 +74,7 @@ Obtains the information about this auxiliary picture.
 getMetadata(metadataType: MetadataType): Promise<Metadata>
 ```
 
-从辅助图中获取元数据。使用Promise异步回调。
+Obtains the metadata of this auxiliary picture. This API uses a promise to return the result.
 
 **Since:** 13
 
@@ -89,20 +88,20 @@ getMetadata(metadataType: MetadataType): Promise<Metadata>
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| metadataType | [MetadataType](arkts-image-image-metadatatype-e.md) | Yes | 元数据类型，用于获取对应类型的元数据。 |
+| metadataType | [MetadataType](arkts-image-image-metadatatype-e.md) | Yes | Metadata type, which is used to obtain metadata of the corresponding type. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;Metadata&gt; | Promise对象，返回元数据的Promise对象。 |
+| Promise&lt;Metadata&gt; | Promise that returns the metadata. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. 3.Parameter verification failed. |
-| 7600202 | Unsupported metadata. Possible causes: 1. Unsupported metadata type. 2. The metadata type does not match the auxiliary picture type. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. 3.Parameter verification failed. |
+| [7600202](../errorcode-image.md#7600202-unsupported-metadata-readwrite-operation) | Unsupported metadata. Possible causes: 1. Unsupported metadata type. 2. The metadata type does not match the auxiliary picture type. |
 
 ## getMetadata
 
@@ -136,7 +135,7 @@ Obtains the metadata of auxiliary picture.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 7600202 | Unsupported metadata. Possible causes: 1. Unsupported metadata type. 2. The metadata type does not match the auxiliary picture type. |
+| [7600202](../errorcode-image.md#7600202-unsupported-metadata-readwrite-operation) | Unsupported metadata. Possible causes: 1. Unsupported metadata type. 2. The metadata type does not match the auxiliary picture type. |
 
 ## getType
 
@@ -144,7 +143,7 @@ Obtains the metadata of auxiliary picture.
 getType(): AuxiliaryPictureType
 ```
 
-获取辅助图的类型。
+Obtains the type of this auxiliary picture.
 
 **Since:** 13
 
@@ -158,7 +157,7 @@ getType(): AuxiliaryPictureType
 
 | Type | Description |
 | --- | --- |
-| [AuxiliaryPictureType](arkts-image-image-auxiliarypicturetype-e.md) | 操作成功，返回辅助图的类型。 |
+| [AuxiliaryPictureType](arkts-image-image-auxiliarypicturetype-e.md) | Type of the auxiliary picture. |
 
 ## getType
 
@@ -188,7 +187,7 @@ Obtains the type of auxiliary picture.
 readPixelsToBuffer(): Promise<ArrayBuffer>
 ```
 
-读取图像像素映射数据并将数据写入ArrayBuffer。使用Promise异步回调。
+Reads pixels of this auxiliary picture and writes the data to an ArrayBuffer. This API uses a promise to return the result.
 
 **Since:** 13
 
@@ -202,7 +201,7 @@ readPixelsToBuffer(): Promise<ArrayBuffer>
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;ArrayBuffer&gt; | Promise对象。返回辅助图像素数据。 |
+| Promise&lt;ArrayBuffer&gt; | Promise used to return the pixels of the auxiliary picture. |
 
 ## readPixelsToBuffer
 
@@ -232,11 +231,11 @@ Reads image pixel map data and writes the data to an ArrayBuffer. This method us
 release():void
 ```
 
-释放辅助图对象，无返回值。
+Releases this AuxiliaryPicture object. No value is returned.
 
-由于图片占用内存较大，所以当AuxiliaryPicture对象使用完成后，应主动调用该方法，及时释放内存。
+Images occupy a large amount of memory. When you finish using an AuxiliaryPicture instance, call this API to free the memory promptly.
 
-释放时应确保该对象的所有异步方法均执行完成，且后续不再使用该对象。
+Before releasing the instance, ensure that all asynchronous operations associated with the instance have finished and the instance is no longer needed.
 
 **Since:** 13
 
@@ -252,7 +251,7 @@ release():void
 setAuxiliaryPictureInfo(info: AuxiliaryPictureInfo): void
 ```
 
-设置辅助图的图像信息。
+Sets the auxiliary picture information.
 
 **Since:** 13
 
@@ -266,13 +265,13 @@ setAuxiliaryPictureInfo(info: AuxiliaryPictureInfo): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| info | [AuxiliaryPictureInfo](arkts-image-image-auxiliarypictureinfo-i.md) | Yes | 辅助图的图像信息。 |
+| info | [AuxiliaryPictureInfo](arkts-image-image-auxiliarypictureinfo-i.md) | Yes | Auxiliary picture information. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. 3.Parameter verification failed. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. 3.Parameter verification failed. |
 
 ## setMetadata
 
@@ -280,7 +279,7 @@ setAuxiliaryPictureInfo(info: AuxiliaryPictureInfo): void
 setMetadata(metadataType: MetadataType, metadata: Metadata): Promise<void>
 ```
 
-设置辅助图元数据。使用Promise异步回调。
+Sets the metadata for this auxiliary picture. This API uses a promise to return the result.
 
 **Since:** 13
 
@@ -294,21 +293,21 @@ setMetadata(metadataType: MetadataType, metadata: Metadata): Promise<void>
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| metadataType | [MetadataType](arkts-image-image-metadatatype-e.md) | Yes | 元数据的类型，用于设置对应的元数据。 |
-| metadata | [Metadata](../../apis-ability-kit/arkts-apis/arkts-ability-bundlemanager-metadata-t.md) | Yes | 元数据对象。 |
+| metadataType | [MetadataType](arkts-image-image-metadatatype-e.md) | Yes | Metadata type, which is used to set the corresponding metadata. |
+| metadata | [Metadata](../../apis-ability-kit/arkts-apis/arkts-ability-bundlemanager-metadata-t.md) | Yes | Metadata object. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise对象，无返回结果。 |
+| Promise&lt;void&gt; | Promise that returns no value. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. 3.Parameter verification failed. |
-| 7600202 | Unsupported metadata. Possible causes: 1. Unsupported metadata type. 2. The metadata type does not match the auxiliary picture type. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. 3.Parameter verification failed. |
+| [7600202](../errorcode-image.md#7600202-unsupported-metadata-readwrite-operation) | Unsupported metadata. Possible causes: 1. Unsupported metadata type. 2. The metadata type does not match the auxiliary picture type. |
 
 ## writePixelsFromBuffer
 
@@ -316,7 +315,7 @@ setMetadata(metadataType: MetadataType, metadata: Metadata): Promise<void>
 writePixelsFromBuffer(data: ArrayBuffer): Promise<void>
 ```
 
-读取ArrayBuffer中的辅助图片数据，并将数据写入AuxiliaryPicture对象。使用Promise异步回调。
+Reads pixels from an ArrayBuffer and writes the data to this AuxiliaryPicture object. This API uses a promise to return the result.
 
 **Since:** 13
 
@@ -330,17 +329,17 @@ writePixelsFromBuffer(data: ArrayBuffer): Promise<void>
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| data | ArrayBuffer | Yes | 辅助图像素数据。 |
+| data | ArrayBuffer | Yes | Pixels of the auxiliary picture. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise对象，无返回结果。 |
+| Promise&lt;void&gt; | Promise that returns no value. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error.Possible causes: 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. 3.Parameter verification failed. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error.Possible causes: 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. 3.Parameter verification failed. |
 

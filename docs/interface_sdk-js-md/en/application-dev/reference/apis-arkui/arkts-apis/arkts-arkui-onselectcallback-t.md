@@ -4,7 +4,7 @@
 export type OnSelectCallback = (index: int, selectStr: string) => void
 ```
 
-Select组件选择项的回调函数类型。
+Callback of selecting an item from the select event.
 
 **Since:** 23
 
@@ -20,6 +20,6 @@ Select组件选择项的回调函数类型。
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| index | int | Yes | 选中的项的索引。 |
-| selectStr | string | Yes | 选中的项的文本内容。 |
+| index | int | Yes | The index of the selected item. |
+| selectStr | string | Yes | The value of the selected item. |
 

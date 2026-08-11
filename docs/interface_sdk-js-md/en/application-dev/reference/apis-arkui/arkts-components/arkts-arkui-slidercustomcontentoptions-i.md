@@ -1,6 +1,6 @@
 # SliderCustomContentOptions
 
-Slider前后缀组件无障碍信息参数。
+Provides accessibility configuration of the slider prefix and suffix.
 
 **Since:** 20
 
@@ -16,9 +16,9 @@ Slider前后缀组件无障碍信息参数。
 accessibilityDescription?: ResourceStr
 ```
 
-无障碍功能详细描述，描述滑块前缀或后缀的功能或用途，供屏幕阅读器等工具使用。 
+Detailed functional description for assistive technologies.
 
-默认值为“单指双击即可执行”。
+Default value: **"Double-tap to activate"**
 
 **Type:** [ResourceStr](../arkts-apis/arkts-arkui-resourcestr-t.md)
 
@@ -40,11 +40,11 @@ accessibilityDescription?: ResourceStr
 accessibilityGroup?: boolean
 ```
 
-标识元素是否属于无障碍组，帮助屏幕阅读器等工具分组相关元素。
+Whether to enable accessibility grouping.
 
-true：该组件及其所有子组件为一整个可以选中的组件，无障碍服务将不再关注其子组件内容；false：不启用无障碍分组。
+The value **true** means to enable accessibility grouping, and **false** means the opposite. When accessibility grouping is enabled, the component and all its children are treated as a single selectable unit, and the accessibility service will no longer focus on the individual child components.
 
-默认值：false
+Default value: **false**
 
 **Type:** boolean
 
@@ -66,19 +66,19 @@ true：该组件及其所有子组件为一整个可以选中的组件，无障�
 accessibilityLevel?: string
 ```
 
-控制组件是否可被无障碍辅助服务识别。
+Whether the component can be recognized by accessibility services.
 
-支持的值为:
+The options are as follows:
 
-"auto"：当前组件会转换为“yes”。
+**"auto"**: It is treated as "yes" by the system.
 
-"yes"：当前组件可被无障碍辅助服务所识别。
+**"yes"**: The component can be recognized by accessibility services.
 
-"no"：当前组件不可被无障碍辅助服务所识别。
+**"no"**: The component cannot be recognized by accessibility services.
 
-"no-hide-descendants"：当前组件及其所有子组件不可被无障碍辅助服务所识别。
+**"no-hide-descendants"**: Neither the component nor its child components can be recognized by accessibility services.
 
-默认值："auto"。
+Default value: **"auto"**
 
 **Type:** string
 
@@ -100,9 +100,9 @@ accessibilityLevel?: string
 accessibilityText?: ResourceStr
 ```
 
-无障碍文本，供屏幕阅读器等工具读取，增强无障碍功能。 
+Text for assistive technologies (for example, screen readers).
 
-默认值：""
+Default value: **""**
 
 **Type:** [ResourceStr](../arkts-apis/arkts-arkui-resourcestr-t.md)
 

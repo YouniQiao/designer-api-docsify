@@ -1,8 +1,8 @@
 # EclipseStyleOptions
 
-圆形样式选项。圆形样式的显示类似月圆月缺的进度展示效果，从月牙逐渐变化至满月。
+Options of the eclipse style. The eclipse style visualizes the progress in a way similar to the moon waxing from new to full.
 
-继承自[CommonProgressStyleOptions](arkts-arkui-commonprogressstyleoptions-i.md)。
+Inherits from [CommonProgressStyleOptions](arkts-arkui-commonprogressstyleoptions-i.md).
 
 **Inheritance/Implementation:** EclipseStyleOptions extends [CommonProgressStyleOptions](arkts-arkui-commonprogressstyleoptions-i.md)
 

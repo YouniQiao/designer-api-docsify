@@ -1,6 +1,6 @@
 # TaskPoolInfo
 
-任务池的内部信息。
+Describes the internal information about a task pool.
 
 **Since:** 10
 
@@ -22,7 +22,7 @@ import { taskpool } from 'kits/@kit.ArkTS';
 taskInfos: TaskInfo[]
 ```
 
-任务的内部信息。不建议修改此值。
+Internal information about the tasks. You are advised not to change the value.
 
 **Type:** [TaskInfo](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-agent-taskinfo-i.md)[]
 
@@ -42,7 +42,7 @@ taskInfos: TaskInfo[]
 threadInfos: ThreadInfo[]
 ```
 
-工作线程的内部信息。不建议修改此值。
+Internal information about the worker threads. You are advised not to change the value.
 
 **Type:** [ThreadInfo](arkts-arkts-taskpool-threadinfo-c.md)[]
 

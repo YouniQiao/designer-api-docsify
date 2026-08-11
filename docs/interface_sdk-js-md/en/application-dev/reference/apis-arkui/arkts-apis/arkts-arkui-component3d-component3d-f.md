@@ -9,7 +9,7 @@ export declare function Component3D(
 ): Component3DAttribute
 ```
 
-定义Component3D。
+Defines Component3D.
 
 **Since:** 23
 
@@ -23,8 +23,8 @@ export declare function Component3D(
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| sceneOptions | [SceneOptions](arkts-arkui-component3d-sceneoptions-i.md) | No | 3D场景控制器 |
-| content_ | [CustomBuilder](../arkts-components/arkts-arkui-custombuilder-t.md) | No | 容器 |
+| sceneOptions | [SceneOptions](arkts-arkui-component3d-sceneoptions-i.md) | No | The 3D scene controller |
+| content_ | [CustomBuilder](../arkts-components/arkts-arkui-custombuilder-t.md) | No | container |
 
 **Return value:**
 

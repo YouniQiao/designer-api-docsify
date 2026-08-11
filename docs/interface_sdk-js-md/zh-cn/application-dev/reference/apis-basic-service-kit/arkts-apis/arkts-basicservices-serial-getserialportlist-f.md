@@ -1,11 +1,5 @@
 # getSerialPortList
 
-## 导入模块
-
-```TypeScript
-import { serial } from 'kits/@kit.BasicServicesKit';
-```
-
 ## getSerialPortList
 
 ```TypeScript
@@ -34,6 +28,6 @@ function getSerialPortList(): Promise<SerialPort[]>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 35700001 | Service error. |
-| 203 | This function is prohibited by enterprise management policies. |
+| [35700001](../../apis-basic-services-kit/errorcode-busmanager-serial.md#35700001-服务异常) | Service error. |
+| [203](../../errorcode-universal.md#203-企业管理策略禁止使用此系统功能) | This function is prohibited by enterprise management policies. |
 

@@ -12,7 +12,7 @@ import { inspector } from 'kits/@kit.ArkUI';
 function createComponentObserver(id: string): ComponentObserver
 ```
 
-绑定指定组件，返回对应的监听句柄。
+Sets the component after layout or draw criteria and returns the corresponding listening handle
 
 **Since:** 10
 
@@ -34,17 +34,17 @@ function createComponentObserver(id: string): ComponentObserver
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| id | string | Yes | 指定组件id，该id通过通用属性id或者key设置。 |
+| id | string | Yes | component id. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [ComponentObserver](arkts-arkui-inspector-componentobserver-i.md) | 组件回调事件监听句柄，用于注册和取消注册监听回调。 |
+| [ComponentObserver](arkts-arkui-inspector-componentobserver-i.md) | create listener for observer component event. |
 
 ## Examples
 
 ```TypeScript
-let listener: inspector.ComponentObserver = inspector.createComponentObserver('COMPONENT_ID'); // Listen for callback events for the component whose ID is COMPONENT_ID.
+let listener:inspector.ComponentObserver = inspector.createComponentObserver('COMPONENT_ID'); // Listen for callback events for the component whose ID is COMPONENT_ID.
 ```
 

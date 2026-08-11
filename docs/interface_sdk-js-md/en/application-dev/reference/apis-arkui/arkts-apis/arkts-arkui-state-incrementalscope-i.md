@@ -16,7 +16,7 @@ Define the IncrementalScope interface to manage state management.
 param<T>(index: int, value: T): ReadableState<T>
 ```
 
-创建状态变量参数
+Internal state for parameter.
 
 **Since:** 23
 
@@ -32,8 +32,8 @@ param<T>(index: int, value: T): ReadableState<T>
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| index | int | Yes |  |
-| value | T | Yes | 初始值 |
+| index | int | Yes | index |
+| value | T | Yes | the value to be updated |
 
 **Return value:**
 

@@ -1,8 +1,8 @@
 # AVImageQueryOptions
 
-需要获取的缩略图时间点与视频帧的对应关系。
+Enumerates the relationship between the video frame and the time at which the video thumbnail is obtained.
 
-在获取视频缩略图时，传入的时间点与实际取得的视频帧所在时间点不一定相等，需要指定传入的时间点与实际取得的视频帧的时间关系。
+The time passed in for obtaining the thumbnail may be different from the time of the video frame for which the thumbnail is actually obtained. Therefore, you need to specify their relationship.
 
 **Since:** 12
 
@@ -18,7 +18,7 @@
 AV_IMAGE_QUERY_NEXT_SYNC = 0
 ```
 
-表示选取传入时间点或之后的关键帧。
+The key frame at or next to the specified time is selected.
 
 **Since:** 12
 
@@ -34,7 +34,7 @@ AV_IMAGE_QUERY_NEXT_SYNC = 0
 AV_IMAGE_QUERY_PREVIOUS_SYNC
 ```
 
-表示选取传入时间点或之前的关键帧。
+The key frame at or prior to the specified time is selected.
 
 **Since:** 12
 
@@ -50,7 +50,7 @@ AV_IMAGE_QUERY_PREVIOUS_SYNC
 AV_IMAGE_QUERY_CLOSEST_SYNC
 ```
 
-表示选取离传入时间点最近的关键帧。
+The key frame closest to the specified time is selected.
 
 **Since:** 12
 
@@ -66,7 +66,7 @@ AV_IMAGE_QUERY_CLOSEST_SYNC
 AV_IMAGE_QUERY_CLOSEST
 ```
 
-表示选取离传入时间点最近的帧，该帧不一定是关键帧。
+The frame (not necessarily a key frame) closest to the specified time is selected.
 
 **Since:** 12
 

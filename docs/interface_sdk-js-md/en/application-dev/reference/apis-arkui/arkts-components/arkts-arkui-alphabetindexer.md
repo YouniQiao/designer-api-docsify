@@ -1,14 +1,12 @@
 # AlphabetIndexer
 
-可以与容器组件联动，用于按逻辑结构快速定位容器显示区域，适用于通讯录、城市列表、分类列表等需要快速定位内容的场景。
+The **AlphabetIndexer** component can create a logically indexed array of items in a container for instant location.
 
-> **说明：**
->
-> > 从API version 12开始，触控反馈默认开启；使用前请按[enableHapticFeedback](#enablehapticfeedback12)的说明配置振动权限。
+> **NOTE**
 
-## 子组件
+## Child Components
 
-无
+Not supported
 
 ## AlphabetIndexer
 
@@ -16,7 +14,7 @@
 AlphabetIndexer(options: AlphabetIndexerOptions)
 ```
 
-创建索引条组件。
+Creates an **AlphabetIndexer** component.
 
 **Since:** 7
 
@@ -32,7 +30,7 @@ AlphabetIndexer(options: AlphabetIndexerOptions)
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| options | [AlphabetIndexerOptions](../arkts-apis/arkts-arkui-alphabetindexer-alphabetindexeroptions-i.md) | Yes | 设置索引条组件参数。 |
+| options | [AlphabetIndexerOptions](../arkts-apis/arkts-arkui-alphabetindexer-alphabetindexeroptions-i.md) | Yes | Options of the **AlphabetIndexer** component. |
 
 ## Summary
 

@@ -12,9 +12,7 @@ import { matrix4 } from 'kits/@kit.ArkUI';
 function combine(options: Matrix4Transit): Matrix4Transit
 ```
 
-Matrix的叠加函数，可以将两个矩阵的效果叠加起来生成一个新的矩阵对象。
-
-> **说明：**
+Combines the effects of two matrices to generate a new matrix object.
 
 **Since:** 7
 
@@ -22,7 +20,7 @@ Matrix的叠加函数，可以将两个矩阵的效果叠加起来生成一个�
 
 **Deprecated since:** 10
 
-**Substitutes:** [matrix4.Matrix4Transit.combine](arkts-arkui-matrix4-matrix4transit-i.md#combine)
+**Substitutes:** [Matrix4Transit.combine](arkts-arkui-matrix4-matrix4transit-i.md#combine)
 
 <!--Device-matrix4-function combine(options: Matrix4Transit): Matrix4Transit--><!--Device-matrix4-function combine(options: Matrix4Transit): Matrix4Transit-End-->
 
@@ -32,11 +30,11 @@ Matrix的叠加函数，可以将两个矩阵的效果叠加起来生成一个�
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| options | [Matrix4Transit](arkts-arkui-matrix4-matrix4transit-i.md) | Yes | 待叠加的矩阵对象。 |
+| options | [Matrix4Transit](arkts-arkui-matrix4-matrix4transit-i.md) | Yes | Matrix object to be combined. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [Matrix4Transit](arkts-arkui-matrix4-matrix4transit-i.md) | 叠加后的矩阵对象。 |
+| [Matrix4Transit](arkts-arkui-matrix4-matrix4transit-i.md) | Matrix object after combination. |
 

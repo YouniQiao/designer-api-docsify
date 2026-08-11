@@ -1,6 +1,6 @@
 # RemoteProxy
 
-实现IRemoteObject代理对象。
+Provides APIs to implement **IRemoteObject**.
 
 **Inheritance/Implementation:** RemoteProxy extends [IRemoteObject](arkts-ipc-rpc-iremoteobject-c.md)
 
@@ -24,7 +24,7 @@ import { rpc } from 'kits/@kit.IPCKit';
 addDeathRecipient(recipient: DeathRecipient, flags: number): boolean
 ```
 
-注册用于接收远程对象死亡通知的回调。
+Adds a callback for receiving death notifications of the remote object.
 
 **Since:** 7
 
@@ -42,14 +42,14 @@ addDeathRecipient(recipient: DeathRecipient, flags: number): boolean
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| recipient | [DeathRecipient](arkts-ipc-rpc-deathrecipient-i.md) | Yes | 收件人表示要注册的回调。 |
-| flags | number | Yes | 死亡通知标志。保留参数。设置为0。 |
+| recipient | [DeathRecipient](arkts-ipc-rpc-deathrecipient-i.md) | Yes | Callback to add. |
+| flags | number | Yes | Flag of the death notification. This parameter is reserved. It is set to **0**. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| boolean | true：回调注册成功，false：回调注册失败。 |
+| boolean | Returns **true** if the callback is added successfully; returns **false** otherwise. |
 
 ## Examples
 
@@ -113,7 +113,7 @@ if (proxy != undefined) {
 getDescriptor(): string
 ```
 
-获取对象的接口描述符，接口描述符为字符串。
+Obtains the interface descriptor (which is a string) of this object.
 
 **Since:** 9
 
@@ -127,14 +127,14 @@ getDescriptor(): string
 
 | Type | Description |
 | --- | --- |
-| string | 返回接口描述符。 |
+| string | Interface descriptor obtained. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 1900008 | The proxy or remote object is invalid. |
-| 1900007 | communication failed. |
+| [1900008](../errorcode-rpc.md#1900008-invalid-ipc-object) | The proxy or remote object is invalid. |
+| [1900007](../errorcode-rpc.md#1900007-failed-to-communicate-with-the-remote-object) | communication failed. |
 
 ## Examples
 
@@ -200,7 +200,7 @@ if (proxy != undefined) {
 getInterfaceDescriptor(): string
 ```
 
-查询当前代理对象接口的描述符。
+Obtains the interface descriptor of this proxy object.
 
 **Since:** 7
 
@@ -218,7 +218,7 @@ getInterfaceDescriptor(): string
 
 | Type | Description |
 | --- | --- |
-| string | 当前的接口描述符。 |
+| string | Interface descriptor obtained. |
 
 ## Examples
 
@@ -277,7 +277,7 @@ if (proxy != undefined) {
 getLocalInterface(interfaceDes: string): IRemoteBroker
 ```
 
-查询并获取当前接口描述符对应的本地接口对象。
+Obtains the **LocalInterface** object of an interface token.
 
 **Since:** 9
 
@@ -291,20 +291,20 @@ getLocalInterface(interfaceDes: string): IRemoteBroker
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| interfaceDes | string | Yes | 需要查询的接口描述符，其长度应小于40960。 |
+| interfaceDes | string | Yes | Interface descriptor. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [IRemoteBroker](arkts-ipc-rpc-iremotebroker-i.md) | 默认返回Null，标识该接口是一个代理侧接口。 |
+| [IRemoteBroker](arkts-ipc-rpc-iremotebroker-i.md) | Returns **Null** by default, which indicates a proxy interface. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | check param failed |
-| 1900006 | Operation allowed only for the remote object. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | check param failed |
+| [1900006](../errorcode-rpc.md#1900006-ipc-object-permission-error) | Operation allowed only for the remote object. |
 
 ## Examples
 
@@ -370,7 +370,7 @@ if (proxy != undefined) {
 isObjectDead(): boolean
 ```
 
-指示对应的RemoteObject是否死亡。
+Checks whether the **RemoteObject** is dead.
 
 **Since:** 7
 
@@ -384,7 +384,7 @@ isObjectDead(): boolean
 
 | Type | Description |
 | --- | --- |
-| boolean | true：对应的对象已经死亡，false：对应的对象未死亡。 |
+| boolean | Returns **true** if **RemoteObject** is dead; returns **false** otherwise. |
 
 ## Examples
 
@@ -443,7 +443,7 @@ if (proxy != undefined) {
 queryLocalInterface(interface: string): IRemoteBroker
 ```
 
-查询并获取当前接口描述符对应的本地接口对象。
+Obtains the **LocalInterface** object of an interface token.
 
 **Since:** 7
 
@@ -461,13 +461,13 @@ queryLocalInterface(interface: string): IRemoteBroker
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| interface | string | Yes | 需要查询的接口描述符。 |
+| interface | string | Yes | Interface descriptor. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [IRemoteBroker](arkts-ipc-rpc-iremotebroker-i.md) | 默认返回Null，标识该接口是一个代理侧接口。 |
+| [IRemoteBroker](arkts-ipc-rpc-iremotebroker-i.md) | Returns **Null** by default, which indicates a proxy interface. |
 
 ## Examples
 
@@ -532,7 +532,7 @@ ArkTS-Sta:
 registerDeathRecipient(recipient: DeathRecipient, flags: int): void
 ```
 
-注册用于接收远程对象死亡通知的回调。
+Registers a callback for receiving death notifications of the remote object.
 
 **Since:** 9
 
@@ -546,15 +546,15 @@ registerDeathRecipient(recipient: DeathRecipient, flags: int): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| recipient | [DeathRecipient](arkts-ipc-rpc-deathrecipient-i.md) | Yes | 要注册的回调。 |
-| flags | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | 死亡通知标志。 |
+| recipient | [DeathRecipient](arkts-ipc-rpc-deathrecipient-i.md) | Yes | Callback to register. |
+| flags | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | Flag of the death notification. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1.The number of parameters is incorrect; 2.The parameter type does not match; 3.The callback used to receive remote object death notifications is empty. |
-| 1900008 | The proxy or remote object is invalid. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.The number of parameters is incorrect; 2.The parameter type does not match; 3.The callback used to receive remote object death notifications is empty. |
+| [1900008](../errorcode-rpc.md#1900008-invalid-ipc-object) | The proxy or remote object is invalid. |
 
 ## Examples
 
@@ -625,7 +625,7 @@ if (proxy != undefined) {
 removeDeathRecipient(recipient: DeathRecipient, flags: number): boolean
 ```
 
-注销用于接收远程对象死亡通知的回调。
+Removes the callback used to receive death notifications of the remote object.
 
 **Since:** 7
 
@@ -643,14 +643,14 @@ removeDeathRecipient(recipient: DeathRecipient, flags: number): boolean
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| recipient | [DeathRecipient](arkts-ipc-rpc-deathrecipient-i.md) | Yes | 要注销的死亡回调。 |
-| flags | number | Yes | 死亡通知标志。保留参数。设置为0。 |
+| recipient | [DeathRecipient](arkts-ipc-rpc-deathrecipient-i.md) | Yes | Callback to remove. |
+| flags | number | Yes | Flag of the death notification. This parameter is reserved. It is set to **0**. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| boolean | true：回调注销成功，false：回调注销失败。 |
+| boolean | Returns **true** if the callback is removed; returns **false** otherwise. |
 
 ## Examples
 
@@ -731,7 +731,8 @@ sendMessageRequest(
     ): Promise<RequestResult>
 ```
 
-以同步或异步方式向对端进程发送MessageSequence消息。如果为选项设置了异步模式，则发送请求的响应结果立即返回，reply报文里没有内容，具体回复需要在业务侧的回调中获取。如果为选项设置了同步模式，则发送请求的响应结果将在sendMessageRequest返回时返回，回复内容在reply报文里。使用Promise异步回调。
+Sends a **MessageSequence** message to the remote process in synchronous or asynchronous mode. If asynchronous  mode is set in **options**, a promise will be fulfilled immediately and the reply message is empty. The  specific reply needs to be obtained from the callback on the service side. If synchronous mode is set in  
+ **options**, a promise will be fulfilled when the response to **sendMessageRequest** is returned, and the  reply message contains the returned information.
 
 **Since:** 9
 
@@ -745,22 +746,22 @@ sendMessageRequest(
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| code | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | 本次请求调用的消息码[1-16777215]，由通信双方确定。如果接口由IDL工具生成，则消息代码由IDL自动生成。 |
-| data | [MessageSequence](arkts-ipc-rpc-messagesequence-c.md) | Yes | 保存待发送数据的MessageSequence对象。 |
-| reply | [MessageSequence](arkts-ipc-rpc-messagesequence-c.md) | Yes | 接收应答数据的MessageSequence对象。 |
-| options | [MessageOption](arkts-ipc-rpc-messageoption-c.md) | Yes | 本次请求的同异步模式，默认同步调用。 |
+| code | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | Message code [1-16777215] called by the request, which is determined by the communication parties. If the method is generated by an IDL tool, the message code is automatically generated by the IDL tool. |
+| data | [MessageSequence](arkts-ipc-rpc-messagesequence-c.md) | Yes | MessageSequence** object holding the data to send. |
+| reply | [MessageSequence](arkts-ipc-rpc-messagesequence-c.md) | Yes | MessageSequence** object that receives the response. |
+| options | [MessageOption](arkts-ipc-rpc-messageoption-c.md) | Yes | Request sending mode, which can be synchronous (default) or asynchronous. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;RequestResult&gt; | Promise对象，返回发送请求的响应结果。 |
+| Promise&lt;RequestResult&gt; | Promise used to return a **requestResult** instance. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1.The number of parameters is incorrect; 2.The parameter type does not match; 3.Failed to obtain the passed object instance. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.The number of parameters is incorrect; 2.The parameter type does not match; 3.Failed to obtain the passed object instance. |
 
 ## Examples
 
@@ -862,8 +863,8 @@ sendMessageRequest(
     ): void
 ```
 
-以同步或异步方式向对端进程发送MessageSequence消息。使用callback异步回调。如果为选项设置了异步模式，则立即收到回调，reply报文里没有内容，具体回复需要在业务侧的回调中获取。如果为选项设置了同步模式，将在  
- [sendMessageRequest](arkts-ipc-rpc-iremoteobject-c.md#sendmessagerequest)返回后、服务端处理请求完成时执行回调，回调中可读取[RequestResult](arkts-ipc-rpc-requestresult-i.md)获取服务端返回的数据。
+Sends a **MessageSequence** message to the remote process in synchronous or asynchronous mode. If asynchronous  mode is set in **options**, a callback will be called immediately, and the reply message is empty. The  specific reply needs to be obtained from the callback on the service side. If synchronous mode is set in  
+ **options**, a callback will be invoked at certain time after the response to **RequestResult** is returned, and the reply contains the returned information.
 
 **Since:** 9
 
@@ -877,17 +878,17 @@ sendMessageRequest(
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| code | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | 本次请求调用的消息码[1-16777215]，由通信双方确定。如果接口由IDL工具生成，则消息代码由IDL自动生成。 |
-| data | [MessageSequence](arkts-ipc-rpc-messagesequence-c.md) | Yes | 保存待发送数据的MessageSequence对象。 |
-| reply | [MessageSequence](arkts-ipc-rpc-messagesequence-c.md) | Yes | 接收应答数据的MessageSequence对象。 |
-| options | [MessageOption](arkts-ipc-rpc-messageoption-c.md) | Yes | 本次请求的同异步模式，默认同步调用。 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;RequestResult&gt; | Yes | 回调函数。当消息发送成功时，可从RequestResult中读取服务端返回的数据。 |
+| code | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | Message code [1-16777215] called by the request, which is determined by the communication parties. If the method is generated by an IDL tool, the message code is automatically generated by the IDL tool. |
+| data | [MessageSequence](arkts-ipc-rpc-messagesequence-c.md) | Yes | MessageSequence** object holding the data to send. |
+| reply | [MessageSequence](arkts-ipc-rpc-messagesequence-c.md) | Yes | MessageSequence** object that receives the response. |
+| options | [MessageOption](arkts-ipc-rpc-messageoption-c.md) | Yes | Request sending mode, which can be synchronous (default) or asynchronous. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;RequestResult&gt; | Yes | Callback for receiving the sending result. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1.The number of parameters is incorrect; 2.The parameter type does not match; 3.Failed to obtain the passed object instance. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.The number of parameters is incorrect; 2.The parameter type does not match; 3.Failed to obtain the passed object instance. |
 
 ## sendRequest
 
@@ -895,7 +896,7 @@ sendMessageRequest(
 sendRequest(code: number, data: MessageParcel, reply: MessageParcel, options: MessageOption): boolean
 ```
 
-以同步或异步方式向对端进程发送MessageParcel消息。如果为选项设置了异步模式，则立即返回，reply报文里没有内容，具体回复需要在业务侧的回调中获取。如果为选项设置了同步模式，则将在sendRequest返回时收到回复，回复内容在reply报文里。
+Sends a **MessageParcel** message to the remote process in synchronous or asynchronous mode. If asynchronous mode  is set in **options**, a promise will be fulfilled immediately and the reply message is empty. The specific  reply needs to be obtained from the callback on the service side. If synchronous mode is set in **options**, a promise will be fulfilled when the response to **sendRequest** is returned, and the reply message contains  the returned information.
 
 **Since:** 7
 
@@ -913,16 +914,16 @@ sendRequest(code: number, data: MessageParcel, reply: MessageParcel, options: Me
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| code | number | Yes | 本次请求调用的消息码[1-16777215]，由通信双方确定。如果接口由IDL工具生成，则消息代码由IDL自动生成。 |
-| data | [MessageParcel](arkts-ipc-rpc-messageparcel-c.md) | Yes | 保存待发送数据的MessageParcel对象。 |
-| reply | [MessageParcel](arkts-ipc-rpc-messageparcel-c.md) | Yes | 接收应答数据的MessageParcel对象。 |
-| options | [MessageOption](arkts-ipc-rpc-messageoption-c.md) | Yes | 本次请求的同异步模式，默认同步调用。 |
+| code | number | Yes | Message code [1-16777215] called by the request, which is determined by the communication parties. If the method is generated by an IDL tool, the message code is automatically generated by the IDL tool. |
+| data | [MessageParcel](arkts-ipc-rpc-messageparcel-c.md) | Yes | MessageParcel** object holding the data to send. |
+| reply | [MessageParcel](arkts-ipc-rpc-messageparcel-c.md) | Yes | MessageParcel** object that receives the response. |
+| options | [MessageOption](arkts-ipc-rpc-messageoption-c.md) | Yes | Request sending mode, which can be synchronous (default) or asynchronous. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| boolean | true：发送成功，false：发送失败。 |
+| boolean | Returns **true** if the message is sent successfully; returns **false** otherwise. |
 
 ## Examples
 
@@ -1004,7 +1005,7 @@ sendRequest(
     ): Promise<SendRequestResult>
 ```
 
-以同步或异步方式向对端进程发送MessageParcel消息。如果为选项设置了异步模式，则发送请求的响应结果立即返回，reply报文里没有内容，具体回复需要在业务侧的回调中获取。如果为选项设置了同步模式，则发送请求的响应结果将在sendRequest返回时返回，回复内容在reply报文里。使用Promise异步回调。
+Sends a **MessageParcel** message to the remote process in synchronous or asynchronous mode. If asynchronous mode  is set in **options**, a promise will be fulfilled immediately and the reply message is empty. The specific  reply needs to be obtained from the callback on the service side. If synchronous mode is set in **options**, a promise will be fulfilled when the response to **sendRequest** is returned, and the reply message contains  the returned information.
 
 **Since:** 8
 
@@ -1022,16 +1023,16 @@ sendRequest(
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| code | number | Yes | 本次请求调用的消息码[1-16777215]，由通信双方确定。如果接口由IDL工具生成，则消息代码由IDL自动生成。 |
-| data | [MessageParcel](arkts-ipc-rpc-messageparcel-c.md) | Yes | 保存待发送数据的MessageParcel对象。 |
-| reply | [MessageParcel](arkts-ipc-rpc-messageparcel-c.md) | Yes | 接收应答数据的MessageParcel对象。 |
-| options | [MessageOption](arkts-ipc-rpc-messageoption-c.md) | Yes | 本次请求的同异步模式，默认同步调用。 |
+| code | number | Yes | Message code [1-16777215] called by the request, which is determined by the communication parties. If the method is generated by an IDL tool, the message code is automatically generated by the IDL tool. |
+| data | [MessageParcel](arkts-ipc-rpc-messageparcel-c.md) | Yes | MessageParcel** object holding the data to send. |
+| reply | [MessageParcel](arkts-ipc-rpc-messageparcel-c.md) | Yes | MessageParcel** object that receives the response. |
+| options | [MessageOption](arkts-ipc-rpc-messageoption-c.md) | Yes | Request sending mode, which can be synchronous (default) or asynchronous. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;SendRequestResult&gt; | Promise对象，返回发送请求的响应结果。 |
+| Promise&lt;SendRequestResult&gt; | Promise used to return a **sendRequestResult** instance. |
 
 ## Examples
 
@@ -1122,7 +1123,7 @@ sendRequest(
     ): void
 ```
 
-以同步或异步方式向对端进程发送MessageParcel消息。如果为选项设置了异步模式，则立即收到回调，reply报文里没有内容，具体回复需要在业务侧的回调中获取。如果为选项设置了同步模式，则将在sendRequest返回时收到回调，回复内容在reply报文里。
+Sends a **MessageParcel** message to the remote process in synchronous or asynchronous mode. If asynchronous mode  is set in **options**, a callback will be called immediately, and the reply message is empty. The specific  reply needs to be obtained from the callback on the service side. If synchronous mode is set in **options**, a callback will be invoked when the response to **sendRequest** is returned, and the reply message contains  the returned information.
 
 **Since:** 8
 
@@ -1140,11 +1141,11 @@ sendRequest(
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| code | number | Yes | 本次请求调用的消息码[1-16777215]，由通信双方确定。如果接口由IDL工具生成，则消息代码由IDL自动生成。 |
-| data | [MessageParcel](arkts-ipc-rpc-messageparcel-c.md) | Yes | 保存待发送数据的MessageParcel对象。 |
-| reply | [MessageParcel](arkts-ipc-rpc-messageparcel-c.md) | Yes | 接收应答数据的MessageParcel对象。 |
-| options | [MessageOption](arkts-ipc-rpc-messageoption-c.md) | Yes | 本次请求的同异步模式，默认同步调用。 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;SendRequestResult&gt; | Yes | 接收发送结果的回调。 |
+| code | number | Yes | Message code [1-16777215] called by the request, which is determined by the communication parties. If the method is generated by an IDL tool, the message code is automatically generated by the IDL tool. |
+| data | [MessageParcel](arkts-ipc-rpc-messageparcel-c.md) | Yes | MessageParcel** object holding the data to send. |
+| reply | [MessageParcel](arkts-ipc-rpc-messageparcel-c.md) | Yes | MessageParcel** object that receives the response. |
+| options | [MessageOption](arkts-ipc-rpc-messageoption-c.md) | Yes | Request sending mode, which can be synchronous (default) or asynchronous. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;SendRequestResult&gt; | Yes | Callback for receiving the sending result. |
 
 ## unregisterDeathRecipient
 
@@ -1158,7 +1159,7 @@ ArkTS-Sta:
 unregisterDeathRecipient(recipient: DeathRecipient, flags: int): void
 ```
 
-注销用于接收远程对象死亡通知的回调。
+Unregisters from the callback used to receive death notifications of the remote object.
 
 **Since:** 9
 
@@ -1172,15 +1173,15 @@ unregisterDeathRecipient(recipient: DeathRecipient, flags: int): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| recipient | [DeathRecipient](arkts-ipc-rpc-deathrecipient-i.md) | Yes | 要注销的回调。 |
-| flags | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | 死亡通知标志。 |
+| recipient | [DeathRecipient](arkts-ipc-rpc-deathrecipient-i.md) | Yes | Callback to unregister. |
+| flags | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | Flag of the death notification. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1.The number of parameters is incorrect; 2.The parameter type does not match; 3.The callback used to receive remote object death notifications is empty. |
-| 1900008 | The proxy or remote object is invalid. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.The number of parameters is incorrect; 2.The parameter type does not match; 3.The callback used to receive remote object death notifications is empty. |
+| [1900008](../errorcode-rpc.md#1900008-invalid-ipc-object) | The proxy or remote object is invalid. |
 
 ## Examples
 
@@ -1252,7 +1253,7 @@ if (proxy != undefined) {
 static readonly DUMP_TRANSACTION: number
 ```
 
-内部指令码，获取IPC服务相关的状态信息。
+Internal instruction code used to obtain IPC service status information.
 
 **Type:** number
 
@@ -1272,7 +1273,7 @@ static readonly DUMP_TRANSACTION: number
 static readonly INTERFACE_TRANSACTION: number
 ```
 
-内部指令码，获取对端接口描述符。
+Internal instruction code used to obtain the remote interface token.
 
 **Type:** number
 
@@ -1292,7 +1293,7 @@ static readonly INTERFACE_TRANSACTION: number
 static readonly MAX_TRANSACTION_ID: number
 ```
 
-最大有效指令码。
+Maximum valid instruction code.
 
 **Type:** number
 
@@ -1312,7 +1313,7 @@ static readonly MAX_TRANSACTION_ID: number
 static readonly MIN_TRANSACTION_ID: number
 ```
 
-最小有效指令码。
+Minimum valid instruction code.
 
 **Type:** number
 
@@ -1332,7 +1333,7 @@ static readonly MIN_TRANSACTION_ID: number
 static readonly PING_TRANSACTION: number
 ```
 
-内部指令码，用于测试IPC服务是否正常。
+Internal instruction code used to test whether the IPC service is normal.
 
 **Type:** number
 

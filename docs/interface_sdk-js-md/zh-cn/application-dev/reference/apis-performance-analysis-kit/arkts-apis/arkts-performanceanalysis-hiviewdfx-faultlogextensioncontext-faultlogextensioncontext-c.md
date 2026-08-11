@@ -22,9 +22,3 @@ FaultLogExtensionContext模块提供访问
 
 **系统能力：** SystemCapability.HiviewDFX.Hiview.FaultLogger
 
-## 导入模块
-
-```TypeScript
-import { FaultLogExtensionContext } from 'kits/@kit.PerformanceAnalysisKit';
-```
-

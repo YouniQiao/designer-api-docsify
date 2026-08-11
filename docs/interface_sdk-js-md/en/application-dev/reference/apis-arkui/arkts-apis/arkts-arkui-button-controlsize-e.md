@@ -1,6 +1,6 @@
 # ControlSize
 
-按钮的尺寸。
+Enum for Control Size.
 
 **Since:** 23
 
@@ -16,7 +16,7 @@
 SMALL = 'small'
 ```
 
-小尺寸按钮。
+The component size is small.
 
 **Since:** 23
 
@@ -34,7 +34,7 @@ SMALL = 'small'
 NORMAL = 'normal'
 ```
 
-正常尺寸按钮。
+The component size is normal.
 
 **Since:** 23
 

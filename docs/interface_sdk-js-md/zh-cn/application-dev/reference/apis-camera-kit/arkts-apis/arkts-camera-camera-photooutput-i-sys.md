@@ -12,12 +12,6 @@
 
 **系统能力：** SystemCapability.Multimedia.Camera.Core
 
-## 导入模块
-
-```TypeScript
-import { camera } from 'kits/@kit.CameraKit';
-```
-
 ## burstCapture
 
 ```TypeScript
@@ -53,10 +47,10 @@ Starts the burst mode, in which users can capture a series of photos in quick su
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 7400101 | Parameter missing or parameter type incorrect. |
-| 7400104 | Session not running. |
-| 7400201 | Camera service fatal error. |
-| 202 | Not System Application. |
+| [7400101](../errorcode-camera.md#7400101-无效入参) | Parameter missing or parameter type incorrect. |
+| [7400104](../errorcode-camera.md#7400104-会话未运行) | Session not running. |
+| [7400201](../errorcode-camera.md#7400201-相机服务异常) | Camera service fatal error. |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not System Application. |
 
 ## 示例
 
@@ -106,9 +100,9 @@ Confirms photo capture. This API is generally used in night photo mode when user
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 7400104 | Session not running. |
-| 7400201 | Camera service fatal error. |
-| 202 | Not System Application. |
+| [7400104](../errorcode-camera.md#7400104-会话未运行) | Session not running. |
+| [7400201](../errorcode-camera.md#7400201-相机服务异常) | Camera service fatal error. |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not System Application. |
 
 ## 示例
 
@@ -153,10 +147,10 @@ Enables deferred delivery of a certain type.
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 7400101 | Parameter missing or parameter type incorrect. |
-| 7400104 | Session not running. |
-| 7400201 | Camera service fatal error. |
-| 202 | Not System Application. |
+| [7400101](../errorcode-camera.md#7400101-无效入参) | Parameter missing or parameter type incorrect. |
+| [7400104](../errorcode-camera.md#7400104-会话未运行) | Session not running. |
+| [7400201](../errorcode-camera.md#7400201-相机服务异常) | Camera service fatal error. |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not System Application. |
 
 ## 示例
 
@@ -194,9 +188,9 @@ Enable auto cloud image enhancement
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 7400101 | Parameter missing or parameter type incorrect. |
-| 7400201 | Camera service fatal error. |
-| 202 | Not System Application. |
+| [7400101](../errorcode-camera.md#7400101-无效入参) | Parameter missing or parameter type incorrect. |
+| [7400201](../errorcode-camera.md#7400201-相机服务异常) | Camera service fatal error. |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not System Application. |
 
 ## enableAutoHighQualityPhoto
 
@@ -227,10 +221,10 @@ Enables automatic high quality for photos. Before using this API, call
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 7400101 | Parameter missing or parameter type incorrect. |
-| 7400104 | session is not running. |
-| 7400201 | Camera service fatal error. |
-| 202 | Not System Application. |
+| [7400101](../errorcode-camera.md#7400101-无效入参) | Parameter missing or parameter type incorrect. |
+| [7400104](../errorcode-camera.md#7400104-会话未运行) | session is not running. |
+| [7400201](../errorcode-camera.md#7400201-相机服务异常) | Camera service fatal error. |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not System Application. |
 
 ## 示例
 
@@ -270,10 +264,10 @@ Enable depth data delivery.
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 7400101 | Parameter missing or parameter type incorrect. |
-| 7400104 | Session not running. |
-| 7400201 | Camera service fatal error. |
-| 202 | Not System Application. |
+| [7400101](../errorcode-camera.md#7400101-无效入参) | Parameter missing or parameter type incorrect. |
+| [7400104](../errorcode-camera.md#7400104-会话未运行) | Session not running. |
+| [7400201](../errorcode-camera.md#7400201-相机服务异常) | Camera service fatal error. |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not System Application. |
 
 ## enableOffline
 
@@ -297,9 +291,9 @@ Enable offline processing.
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 7400104 | session is not running. |
-| 7400201 | Camera service fatal error. |
-| 202 | Not System Application. |
+| [7400104](../errorcode-camera.md#7400104-会话未运行) | session is not running. |
+| [7400201](../errorcode-camera.md#7400201-相机服务异常) | Camera service fatal error. |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not System Application. |
 
 ## enableOriginalImageGeneration
 
@@ -331,8 +325,8 @@ Enable original image generation.
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 7400201 | Camera service fatal error. |
-| 202 | Not System Application. |
+| [7400201](../errorcode-camera.md#7400201-相机服务异常) | Camera service fatal error. |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not System Application. |
 
 ## enableQuickThumbnail
 
@@ -364,10 +358,10 @@ Enables or disables the quick thumbnail feature.This API takes effect after [add
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 7400101 | Parameter missing or parameter type incorrect.<br>**适用版本：** 12+ |
-| 7400104 | session is not running. |
-| 7400201 | Camera service fatal error.<br>**适用版本：** 12+ |
-| 202 | Not System Application.<br>**适用版本：** 12+ |
+| [7400101](../errorcode-camera.md#7400101-无效入参) | Parameter missing or parameter type incorrect.<br>**适用版本：** 12+ |
+| [7400104](../errorcode-camera.md#7400104-会话未运行) | session is not running. |
+| [7400201](../errorcode-camera.md#7400201-相机服务异常) | Camera service fatal error.<br>**适用版本：** 12+ |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not System Application.<br>**适用版本：** 12+ |
 
 ## 示例
 
@@ -432,10 +426,10 @@ Enable raw image image delivery.
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 7400101 | Parameter missing or parameter type incorrect. |
-| 7400104 | Session not running. |
-| 7400201 | Camera service fatal error. |
-| 202 | Not System Application. |
+| [7400101](../errorcode-camera.md#7400101-无效入参) | Parameter missing or parameter type incorrect. |
+| [7400104](../errorcode-camera.md#7400104-会话未运行) | Session not running. |
+| [7400201](../errorcode-camera.md#7400201-相机服务异常) | Camera service fatal error. |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not System Application. |
 
 ## isAutoCloudImageEnhancementSupported
 
@@ -465,8 +459,8 @@ Confirm if the auto cloud image enhancement is supported.
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 7400201 | Camera service fatal error. |
-| 202 | Not System Application. |
+| [7400201](../errorcode-camera.md#7400201-相机服务异常) | Camera service fatal error. |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not System Application. |
 
 ## isAutoHighQualityPhotoSupported
 
@@ -496,9 +490,9 @@ Checks whether automatic high quality is supported for photos.
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 7400104 | session is not running. |
-| 7400201 | Camera service fatal error. |
-| 202 | Not System Application. |
+| [7400104](../errorcode-camera.md#7400104-会话未运行) | session is not running. |
+| [7400201](../errorcode-camera.md#7400201-相机服务异常) | Camera service fatal error. |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not System Application. |
 
 ## 示例
 
@@ -544,10 +538,10 @@ Checks whether deferred delivery of a certain type is enabled.
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 7400101 | Parameter missing or parameter type incorrect. |
-| 7400104 | Session not running. |
-| 7400201 | Camera service fatal error. |
-| 202 | Not System Application. |
+| [7400101](../errorcode-camera.md#7400101-无效入参) | Parameter missing or parameter type incorrect. |
+| [7400104](../errorcode-camera.md#7400104-会话未运行) | Session not running. |
+| [7400201](../errorcode-camera.md#7400201-相机服务异常) | Camera service fatal error. |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not System Application. |
 
 ## 示例
 
@@ -593,10 +587,10 @@ Checks whether deferred delivery of a certain type is supported.
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 7400101 | Parameter missing or parameter type incorrect. |
-| 7400104 | Session not running. |
-| 7400201 | Camera service fatal error. |
-| 202 | Not System Application. |
+| [7400101](../errorcode-camera.md#7400101-无效入参) | Parameter missing or parameter type incorrect. |
+| [7400104](../errorcode-camera.md#7400104-会话未运行) | Session not running. |
+| [7400201](../errorcode-camera.md#7400201-相机服务异常) | Camera service fatal error. |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not System Application. |
 
 ## 示例
 
@@ -636,9 +630,9 @@ Check if the depth data delivery is supported.
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 7400104 | Session not running. |
-| 7400201 | Camera service fatal error. |
-| 202 | Not System Application. |
+| [7400104](../errorcode-camera.md#7400104-会话未运行) | Session not running. |
+| [7400201](../errorcode-camera.md#7400201-相机服务异常) | Camera service fatal error. |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not System Application. |
 
 ## isOfflineSupported
 
@@ -668,8 +662,8 @@ Confirm if offline processing is supported.
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 7400201 | Camera service fatal error. |
-| 202 | Not System Application. |
+| [7400201](../errorcode-camera.md#7400201-相机服务异常) | Camera service fatal error. |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not System Application. |
 
 ## isOriginalImageGenerationSupported
 
@@ -701,8 +695,8 @@ Confirm if original image generation supported.
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 7400201 | Camera service fatal error. |
-| 202 | Not System Application. |
+| [7400201](../errorcode-camera.md#7400201-相机服务异常) | Camera service fatal error. |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not System Application. |
 
 ## isQuickThumbnailSupported
 
@@ -734,8 +728,8 @@ Checks whether the quick thumbnail feature is supported.This API takes effect af
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 7400104 | session is not running. |
-| 202 | Not System Application.<br>**适用版本：** 12+ |
+| [7400104](../errorcode-camera.md#7400104-会话未运行) | session is not running. |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not System Application.<br>**适用版本：** 12+ |
 
 ## 示例
 
@@ -800,9 +794,9 @@ Confirm if the raw image delivery is supported
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 7400104 | Session not running. |
-| 7400201 | Camera service fatal error. |
-| 202 | Not System Application. |
+| [7400104](../errorcode-camera.md#7400104-会话未运行) | Session not running. |
+| [7400201](../errorcode-camera.md#7400201-相机服务异常) | Camera service fatal error. |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not System Application. |
 
 ## off('deferredPhotoProxyAvailable')
 
@@ -833,7 +827,7 @@ Unsubscribes from events indicating available thumbnail proxies.
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 202 | Not System Application. |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not System Application. |
 
 ## 示例
 
@@ -918,7 +912,7 @@ Unsubscribes offline Delivery finished events.This method is valid only after en
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 202 | Not System Application. |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not System Application. |
 
 ## offDeferredPhotoProxyAvailable
 
@@ -948,7 +942,7 @@ Unsubscribes deferred photo proxy available event callback.
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 202 | Not System Application. |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not System Application. |
 
 ## offOfflineDeliveryFinished
 
@@ -978,7 +972,7 @@ Unsubscribes offline Delivery finished events.This method is valid only after en
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 202 | Not System Application. |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not System Application. |
 
 ## offQuickThumbnail
 
@@ -1033,7 +1027,7 @@ Subscribes to events indicating available thumbnail proxies. This API uses an as
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 202 | Not System Application. |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not System Application. |
 
 ## 示例
 
@@ -1157,7 +1151,7 @@ Subscribes offline Delivery finished events.This method is valid only after enab
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 202 | Not System Application. |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not System Application. |
 
 ## onDeferredPhotoProxyAvailable
 
@@ -1187,7 +1181,7 @@ Subscribes deferred photo proxy available event callback.
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 202 | Not System Application. |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not System Application. |
 
 ## onOfflineDeliveryFinished
 
@@ -1217,7 +1211,7 @@ Subscribes offline Delivery finished events.This method is valid only after enab
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 202 | Not System Application. |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not System Application. |
 
 ## onQuickThumbnail
 
@@ -1273,6 +1267,6 @@ Set edit data.
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 7400201 | Camera service fatal error. |
-| 202 | Not System Application. |
+| [7400201](../errorcode-camera.md#7400201-相机服务异常) | Camera service fatal error. |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not System Application. |
 

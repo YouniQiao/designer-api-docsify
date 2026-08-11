@@ -1,6 +1,6 @@
 # ContentClipMode
 
-表示滚动容器的内容裁剪模式。
+Enum of scrollable containers' content clip mode.
 
 **Since:** 14
 
@@ -16,7 +16,7 @@
 CONTENT_ONLY = 0
 ```
 
-按内容区裁剪，对应图中的绿色区域。
+Clip to content rect inside margin & padding.
 
 **Since:** 14
 
@@ -36,7 +36,7 @@ CONTENT_ONLY = 0
 BOUNDARY = 1
 ```
 
-按组件区域裁剪，对应图中的整个蓝色区域。
+Clip to scrollable's outer rect, including padding but inside margin.
 
 **Since:** 14
 
@@ -56,7 +56,7 @@ BOUNDARY = 1
 SAFE_AREA = 2
 ```
 
-按组件配置的SafeArea区域裁剪，对应图中的整个黄色区域。
+Clip to the safeArea of scrollable container.
 
 **Since:** 14
 

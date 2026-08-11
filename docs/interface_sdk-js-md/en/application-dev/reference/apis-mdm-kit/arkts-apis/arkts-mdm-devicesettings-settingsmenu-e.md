@@ -1,6 +1,6 @@
 # SettingsMenu
 
-设置项列表。
+Describes the setting item list.
 
 **Since:** 24
 
@@ -16,7 +16,7 @@
 ACCOUNT_ID = 0
 ```
 
-账号。
+Account.
 
 **Since:** 24
 
@@ -34,7 +34,7 @@ ACCOUNT_ID = 0
 WIFI = 1
 ```
 
-WLAN菜单
+Wi-Fi.
 
 **Since:** 24
 
@@ -52,7 +52,7 @@ WLAN菜单
 WIFI_PROXY_SETTINGS = 2
 ```
 
-WLAN 代理。
+WLAN proxy.
 
 **Since:** 24
 
@@ -70,7 +70,7 @@ WLAN 代理。
 WIFI_IP_SETTINGS = 3
 ```
 
-WALN IP设置
+WLAN IP.
 
 **Since:** 24
 
@@ -88,7 +88,7 @@ WALN IP设置
 BLUETOOTH = 4
 ```
 
-星闪和蓝牙/蓝牙。
+Bluetooth/NearLink & Bluetooth.
 
 **Since:** 24
 
@@ -106,7 +106,7 @@ BLUETOOTH = 4
 NETWORK = 5
 ```
 
-网络。
+Network.
 
 **Since:** 24
 
@@ -124,7 +124,7 @@ NETWORK = 5
 MOBILE_NETWORK = 6
 ```
 
-移动网络。
+Mobile network.
 
 **Since:** 24
 
@@ -142,7 +142,7 @@ MOBILE_NETWORK = 6
 SUPER_DEVICE = 7
 ```
 
-多设备协同-超级终端。
+More connectivity options - Super Device.
 
 **Since:** 24
 
@@ -160,7 +160,7 @@ SUPER_DEVICE = 7
 MORE_CONNECTIVITY_OPTIONS = 8
 ```
 
-多设备协同。
+More connectivity options.
 
 **Since:** 24
 
@@ -178,7 +178,7 @@ MORE_CONNECTIVITY_OPTIONS = 8
 HOME_SCREEN_STYLE = 9
 ```
 
-桌面和个性化。
+Home screen & style.
 
 **Since:** 24
 
@@ -196,7 +196,7 @@ HOME_SCREEN_STYLE = 9
 DISPLAY_BRIGHTNESS = 10
 ```
 
-显示和亮度。
+Display & brightness.
 
 **Since:** 24
 
@@ -214,7 +214,7 @@ DISPLAY_BRIGHTNESS = 10
 SOUND_VIBRATION = 11
 ```
 
-声音和振动。
+Sounds & vibration.
 
 **Since:** 24
 
@@ -232,7 +232,7 @@ SOUND_VIBRATION = 11
 NOTIFICATIONS = 12
 ```
 
-通知和状态栏。
+Notifications & status bar.
 
 **Since:** 24
 
@@ -250,7 +250,7 @@ NOTIFICATIONS = 12
 BIOMETRICS_PASSWORD = 13
 ```
 
-生物识别和密码。
+Biometrics & screen lock.
 
 **Since:** 24
 
@@ -268,7 +268,7 @@ BIOMETRICS_PASSWORD = 13
 APPS_AND_SERVICES = 14
 ```
 
-应用和元服务。
+Apps & services.
 
 **Since:** 24
 
@@ -286,7 +286,7 @@ APPS_AND_SERVICES = 14
 BATTERY = 15
 ```
 
-电池。
+Battery.
 
 **Since:** 24
 
@@ -304,7 +304,7 @@ BATTERY = 15
 STORAGE = 16
 ```
 
-存储。
+Storage.
 
 **Since:** 24
 
@@ -322,7 +322,7 @@ STORAGE = 16
 PRIVACY_AND_SECURITY = 17
 ```
 
-隐私和安全。
+Privacy & security.
 
 **Since:** 24
 
@@ -340,7 +340,7 @@ PRIVACY_AND_SECURITY = 17
 DIGITAL_BALANCE = 18
 ```
 
-健康使用设备。
+Digital Balance.
 
 **Since:** 24
 
@@ -358,7 +358,7 @@ DIGITAL_BALANCE = 18
 SMART_ASSISTANT = 19
 ```
 
-智能助手。
+Smart assistant.
 
 **Since:** 24
 
@@ -376,7 +376,7 @@ SMART_ASSISTANT = 19
 ACCESSIBILITY = 20
 ```
 
-关怀和无障碍。
+Accessibility.
 
 **Since:** 24
 
@@ -394,7 +394,7 @@ ACCESSIBILITY = 20
 SYSTEM = 21
 ```
 
-系统。
+System.
 
 **Since:** 24
 
@@ -412,7 +412,7 @@ SYSTEM = 21
 ABOUT_DEVICE = 22
 ```
 
-关于本机。
+About.
 
 **Since:** 24
 
@@ -430,7 +430,7 @@ ABOUT_DEVICE = 22
 SYSTEM_NAVIGATION = 23
 ```
 
-系统-系统导航。
+System - system navigation.
 
 **Since:** 24
 
@@ -448,7 +448,7 @@ SYSTEM_NAVIGATION = 23
 LANGUAGE_REGION = 24
 ```
 
-系统-语言和地区。
+System - Language & region.
 
 **Since:** 24
 
@@ -466,7 +466,7 @@ LANGUAGE_REGION = 24
 INPUT_METHODS = 25
 ```
 
-系统-输入法。
+System - Input method.
 
 **Since:** 24
 
@@ -484,7 +484,7 @@ INPUT_METHODS = 25
 DATE_TIME = 26
 ```
 
-系统-日期和时间。
+System - Date & time.
 
 **Since:** 24
 
@@ -502,7 +502,7 @@ DATE_TIME = 26
 DATA_CLONE = 27
 ```
 
-系统-数据克隆。
+System - Data Clone.
 
 **Since:** 24
 
@@ -520,7 +520,7 @@ DATA_CLONE = 27
 BACKUP_SETTINGS = 28
 ```
 
-系统-备份和恢复。
+System - Backup & Restore.
 
 **Since:** 24
 
@@ -538,7 +538,7 @@ BACKUP_SETTINGS = 28
 RESET = 29
 ```
 
-系统-重置。
+System - Reset.
 
 **Since:** 24
 
@@ -556,7 +556,7 @@ RESET = 29
 SUPERHUB = 30
 ```
 
-系统-中转站。
+System - SuperHub.
 
 **Since:** 24
 
@@ -574,7 +574,7 @@ SUPERHUB = 30
 USER_EXPERIENCE = 31
 ```
 
-系统-用户体验改进计划。
+System - User Experience Improvement Program.
 
 **Since:** 24
 
@@ -592,7 +592,7 @@ USER_EXPERIENCE = 31
 SCREEN_CAST = 32
 ```
 
-多设备协同-无线投屏。
+More connectivity options - ScreenCast.
 
 **Since:** 24
 
@@ -610,7 +610,7 @@ SCREEN_CAST = 32
 PRINTERS_SCANNERS = 33
 ```
 
-打印机和扫描仪。
+Printers & scanners.
 
 **Since:** 24
 
@@ -628,7 +628,7 @@ PRINTERS_SCANNERS = 33
 MOBILE_DATA = 34
 ```
 
-移动网络-移动数据。
+Mobile network - Mobile data.
 
 **Since:** 24
 
@@ -646,7 +646,7 @@ MOBILE_DATA = 34
 PERSONAL_HOTSPOT = 35
 ```
 
-移动网络-个人热点。
+Mobile network - Personal hotspot.
 
 **Since:** 24
 
@@ -664,7 +664,7 @@ PERSONAL_HOTSPOT = 35
 SIM_MANAGEMENT = 36
 ```
 
-移动网络-SIM卡管理。
+Mobile network - SIM management.
 
 **Since:** 24
 
@@ -682,7 +682,7 @@ SIM_MANAGEMENT = 36
 AIRPLANE_MODE = 37
 ```
 
-移动网络-飞行模式。
+Mobile network - Airplane mode.
 
 **Since:** 24
 
@@ -700,7 +700,7 @@ AIRPLANE_MODE = 37
 MANAGE_DATA_USAGE = 38
 ```
 
-移动网络-流量管理。
+Mobile network - Management data usage.
 
 **Since:** 24
 
@@ -718,7 +718,7 @@ MANAGE_DATA_USAGE = 38
 VPN_SETTINGS = 39
 ```
 
-移动网络-VPN。
+Mobile network - VPN.
 
 **Since:** 24
 
@@ -736,7 +736,7 @@ VPN_SETTINGS = 39
 TEXT_DISPLAY_SIZE = 40
 ```
 
-显示和亮度-字体大小和界面缩放。
+Display & brightness - Text & display size.
 
 **Since:** 24
 
@@ -754,7 +754,7 @@ TEXT_DISPLAY_SIZE = 40
 APP_DUPLICATOR = 41
 ```
 
-系统-应用分身。
+System - App duplicator.
 
 **Since:** 24
 
@@ -772,7 +772,7 @@ APP_DUPLICATOR = 41
 SEARCH = 42
 ```
 
-搜索。
+Search.
 
 **Since:** 24
 

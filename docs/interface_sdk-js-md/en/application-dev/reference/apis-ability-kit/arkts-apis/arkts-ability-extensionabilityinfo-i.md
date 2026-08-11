@@ -1,7 +1,8 @@
 # ExtensionAbilityInfo
 
-ExtensionAbility信息，可以通过  
-[bundleManager.getBundleInfoForSelf](arkts-ability-bundlemanager-getbundleinfoforself-f.md#getbundleinfoforself)获取自身的ExtensionAbility信息，其中参数[bundleFlags](arkts-ability-bundlemanager-bundleflag-e.md)至少包含GET_BUNDLE_INFO_WITH_HAP_MODULE和GET_BUNDLE_INFO_WITH_EXTENSION_ABILITY。
+The module defines the ExtensionAbility information. An application can obtain its own ExtensionAbility information through  
+[bundleManager.getBundleInfoForSelf](arkts-ability-bundlemanager-getbundleinfoforself-f.md#getbundleinfoforself), with **GET_BUNDLE_INFO_WITH_HAP_MODULE** and **GET_BUNDLE_INFO_WITH_EXTENSION_ABILITY** passed in to  
+[bundleFlags](arkts-ability-bundlemanager-bundleflag-e.md).
 
 **Since:** 9
 
@@ -17,7 +18,7 @@ ExtensionAbility信息，可以通过
 readonly appIndex: int
 ```
 
-应用包的分身索引标识，仅在分身应用中生效。
+Index of an application clone. It takes effect only for cloned applications.
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
@@ -35,11 +36,14 @@ readonly appIndex: int
 readonly applicationInfo: ApplicationInfo
 ```
 
-应用程序的配置信息&lt;!--Del--&gt;，可以通过调用  
-[queryExtensionAbilityInfo](arkts-ability-bundlemanager-queryextensionabilityinfo-f-sys.md#queryextensionabilityinfo)接口，extensionAbilityFlags参数传入GET_EXTENSION_ABILITY_INFO_WITH_APPLICATION获取&lt;!--DelEnd--&gt;。
+Application configuration information &lt;!--Del--&gt;. The information can be obtained by passing in  
+**GET_EXTENSION_ABILITY_INFO_WITH_APPLICATION** to the **extensionAbilityFlags** parameter of  
+[queryExtensionAbilityInfo](arkts-ability-bundlemanager-queryextensionabilityinfo-f-sys.md#queryextensionabilityinfo)&lt;!--DelEnd--&gt;.
 
-[getBundleInfoForSelf](arkts-ability-bundlemanager-getbundleinfoforself-f.md#getbundleinfoforself)或者  
-[getBundleInfo](arkts-ability-bundlemanager-getbundleinfo-f.md#getbundleinfo)接口获取ExtensionAbilityInfo信息时不会返回该字段内容，可以通过获取[bundleInfo](arkts-ability-bundleinfo-i.md).appInfo对象来获取相关信息。
+This field is not returned when the  
+[getBundleInfoForSelf](arkts-ability-bundlemanager-getbundleinfoforself-f.md#getbundleinfoforself)or  
+[getBundleInfo](arkts-ability-bundlemanager-getbundleinfo-f.md#getbundleinfo)is used to obtain ExtensionAbilityInfo information. You can obtain the related information by obtaining the  
+[bundleInfo](arkts-ability-bundleinfo-i.md).appInfo object.
 
 **Type:** [ApplicationInfo](arkts-ability-applicationinfo-i.md)
 
@@ -59,7 +63,7 @@ readonly applicationInfo: ApplicationInfo
 readonly bundleName: string
 ```
 
-应用Bundle名称。
+Bundle name.
 
 **Type:** string
 
@@ -79,7 +83,7 @@ readonly bundleName: string
 readonly descriptionId: long
 ```
 
-ExtensionAbility的描述资源ID。
+ID of the ExtensionAbility description.
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：long
 
@@ -99,7 +103,7 @@ ExtensionAbility的描述资源ID。
 readonly enabled: boolean
 ```
 
-ExtensionAbility是否可用，取值为true表示ExtensionAbility可用，取值为false表示ExtensionAbility不可用。
+Whether the ExtensionAbility is enabled. **true** if enabled, **false** otherwise.
 
 **Type:** boolean
 
@@ -119,7 +123,7 @@ ExtensionAbility是否可用，取值为true表示ExtensionAbility可用，取�
 readonly exported: boolean
 ```
 
-判断ExtensionAbility是否可以被其他应用调用，取值为true表示ExtensionAbility可以被其他应用调用，取值为false表示ExtensionAbility不可以被其他应用调用。
+Whether the ExtensionAbility can be called by other applications. **true** if the ExtensionAbility can be called by other applications, **false** otherwise.
 
 **Type:** boolean
 
@@ -139,7 +143,7 @@ readonly exported: boolean
 readonly extensionAbilityType: bundleManager.ExtensionAbilityType
 ```
 
-ExtensionAbility类型。
+Type of the ExtensionAbility.
 
 **Type:** bundleManager.ExtensionAbilityType
 
@@ -159,8 +163,8 @@ ExtensionAbility类型。
 readonly extensionAbilityTypeName: string
 ```
 
-ExtensionAbility的类型名称，取值请参考  
-[extensionabilities标签下的type字段](../../../quick-start/module-configuration-file.md#extensionabilities标签)。
+Type of the ExtensionAbility. For details about available values, see  
+[the type field under the extensionabilities tag](../../../quick-start/module-configuration-file.md#extensionabilities).
 
 **Type:** string
 
@@ -180,7 +184,7 @@ ExtensionAbility的类型名称，取值请参考
 readonly iconId: long
 ```
 
-ExtensionAbility的图标资源ID。
+ID of the ExtensionAbility icon.
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：long
 
@@ -200,7 +204,7 @@ ExtensionAbility的图标资源ID。
 readonly labelId: long
 ```
 
-ExtensionAbility的标签资源ID。
+ID of the ExtensionAbility label.
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：long
 
@@ -220,8 +224,8 @@ ExtensionAbility的标签资源ID。
 readonly metadata: Array<Metadata>
 ```
 
-ExtensionAbility的元信息。通过调用  
-[getBundleInfoForSelf](arkts-ability-bundlemanager-getbundleinfoforself-f.md#getbundleinfoforself)接口，bundleFlags参数传入GET_BUNDLE_INFO_WITH_HAP_MODULE、GET_BUNDLE_INFO_WITH_EXTENSION_ABILITY和GET_BUNDLE_INFO_WITH_METADATA获取。
+Metadata of the ExtensionAbility. The information can be obtained by passing in **GET_BUNDLE_INFO_WITH_HAP_MODULE**, **GET_BUNDLE_INFO_WITH_EXTENSION_ABILITY**, and **GET_BUNDLE_INFO_WITH_METADATA** to the **bundleFlags**parameter of  
+[getBundleInfoForSelf](arkts-ability-bundlemanager-getbundleinfoforself-f.md#getbundleinfoforself).
 
 **Type:** Array&lt;[Metadata](arkts-ability-metadata-i.md)&gt;
 
@@ -241,7 +245,7 @@ ExtensionAbility的元信息。通过调用
 readonly moduleName: string
 ```
 
-ExtensionAbility所属的HAP的名称。
+Name of the HAP file to which the ExtensionAbility belongs.
 
 **Type:** string
 
@@ -261,7 +265,7 @@ ExtensionAbility所属的HAP的名称。
 readonly name: string
 ```
 
-ExtensionAbility名称。
+Name of the ExtensionAbility.
 
 **Type:** string
 
@@ -281,7 +285,7 @@ ExtensionAbility名称。
 readonly permissions: Array<string>
 ```
 
-被其他应用ExtensionAbility调用时需要申请的权限集合。
+Permissions required for other bundles to call the ExtensionAbility.
 
 **Type:** Array&lt;string&gt;
 
@@ -301,7 +305,7 @@ readonly permissions: Array<string>
 readonly readPermission: string
 ```
 
-读取ExtensionAbility数据所需的权限。
+Permission required for reading data from the ExtensionAbility.
 
 **Type:** string
 
@@ -321,7 +325,7 @@ readonly readPermission: string
 readonly skills: Array<Skill>
 ```
 
-ExtensionAbility的Skills信息。
+Skills of the ExtensionAbility.
 
 **Type:** Array&lt;[Skill](arkts-ability-skill-i.md)&gt;
 
@@ -341,7 +345,7 @@ ExtensionAbility的Skills信息。
 readonly writePermission: string
 ```
 
-向ExtensionAbility写数据所需的权限。
+Permission required for writing data to the ExtensionAbility.
 
 **Type:** string
 

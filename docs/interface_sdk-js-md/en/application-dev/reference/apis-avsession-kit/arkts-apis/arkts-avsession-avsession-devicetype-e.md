@@ -1,6 +1,6 @@
 # DeviceType
 
-播放设备的类型枚举。
+Device type definition
 
 **Since:** 10
 
@@ -16,7 +16,7 @@
 DEVICE_TYPE_LOCAL = 0
 ```
 
-本地播放类型设备。
+A device type indicating the route is on internal speakers or audio jack on the device itself.
 
 **Since:** 10
 
@@ -34,7 +34,7 @@ DEVICE_TYPE_LOCAL = 0
 DEVICE_TYPE_TV = 2
 ```
 
-电视设备。
+A device type indicating the route is on a TV.
 
 **Since:** 10
 
@@ -52,7 +52,7 @@ DEVICE_TYPE_TV = 2
 DEVICE_TYPE_SMART_SPEAKER = 3
 ```
 
-音箱设备。
+A device type indicating the route is on a smart speaker.
 
 **Since:** 10
 
@@ -64,31 +64,13 @@ DEVICE_TYPE_SMART_SPEAKER = 3
 
 **System capability:** SystemCapability.Multimedia.AVSession.AVCast
 
-## DEVICE_TYPE_BLUETOOTH
-
-```TypeScript
-DEVICE_TYPE_BLUETOOTH = 10
-```
-
-蓝牙设备。
-
-**Since:** 10
-
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
-
-**Atomic service API:** This API can be used in atomic services since API version 12.
-
-<!--Device-DeviceType-DEVICE_TYPE_BLUETOOTH = 10--><!--Device-DeviceType-DEVICE_TYPE_BLUETOOTH = 10-End-->
-
-**System capability:** SystemCapability.Multimedia.AVSession.Core
-
 ## DEVICE_TYPE_CAR
 
 ```TypeScript
 DEVICE_TYPE_CAR = 4
 ```
 
-车载设备。
+The device type is a car.
 
 **Since:** 26.0.0
 
@@ -108,7 +90,7 @@ DEVICE_TYPE_CAR = 4
 DEVICE_TYPE_PAD = 6
 ```
 
-平板设备。
+The device type is a pad.
 
 **Since:** 26.0.0
 
@@ -128,7 +110,7 @@ DEVICE_TYPE_PAD = 6
 DEVICE_TYPE_DEFAULT_CAST_PLUS_STREAM = 7
 ```
 
-支持Cast+协议的默认设备。
+A default device which supports Cast+ Stream protocol.
 
 **Since:** 26.0.0
 
@@ -148,7 +130,7 @@ DEVICE_TYPE_DEFAULT_CAST_PLUS_STREAM = 7
 DEVICE_TYPE_2IN1 = 8
 ```
 
-PC/2in1设备。
+The device type is a 2in1.
 
 **Since:** 26.0.0
 
@@ -162,13 +144,31 @@ PC/2in1设备。
 
 **System capability:** SystemCapability.Multimedia.AVSession.AVCast
 
+## DEVICE_TYPE_BLUETOOTH
+
+```TypeScript
+DEVICE_TYPE_BLUETOOTH = 10
+```
+
+A device type indicating the route is on a bluetooth device.
+
+**Since:** 10
+
+**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
+
+**Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-DeviceType-DEVICE_TYPE_BLUETOOTH = 10--><!--Device-DeviceType-DEVICE_TYPE_BLUETOOTH = 10-End-->
+
+**System capability:** SystemCapability.Multimedia.AVSession.Core
+
 ## DEVICE_TYPE_HIPLAY
 
 ```TypeScript
 DEVICE_TYPE_HIPLAY = 15
 ```
 
-HiPlay设备。
+The device which supports HiPlay protocol.
 
 **Since:** 26.0.0
 

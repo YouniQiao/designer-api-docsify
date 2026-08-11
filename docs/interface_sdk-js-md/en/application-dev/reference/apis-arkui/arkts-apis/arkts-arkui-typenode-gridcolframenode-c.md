@@ -1,6 +1,6 @@
 # GridColFrameNode
 
-定义GridCol类型的FrameNode。
+Define the GridCol type of FrameNode.
 
 **Inheritance/Implementation:** GridColFrameNode extends [TypedFrameNode<GridColAttribute>](TypedFrameNode<GridColAttribute>)
 
@@ -18,7 +18,7 @@
 abstract initialize(options?: GridColOptions): GridColAttribute
 ```
 
-初始化GridCol类型的FrameNode。
+Initialize GridCol FrameNode.
 
 **Since:** 23
 
@@ -34,7 +34,7 @@ abstract initialize(options?: GridColOptions): GridColAttribute
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| options | [GridColOptions](../arkts-components/arkts-arkui-gridcoloptions-i.md) | No | GridCol节点的选项。 |
+| options | [GridColOptions](../arkts-components/arkts-arkui-gridcoloptions-i.md) | No | GridCol options. |
 
 **Return value:**
 

@@ -1,6 +1,6 @@
 # MakeMonitorOptions
 
-定义makeMonitor可选配置
+Defines makeMonitor options to create Monitor variables.
 
 **Since:** 24
 
@@ -16,7 +16,7 @@
 functionName?: string
 ```
 
-Monitor回调函数的名称
+Name of this monitor.
 
 **Type:** string
 
@@ -36,7 +36,7 @@ Monitor回调函数的名称
 owner?: IVariableOwner
 ```
 
-Monitor变量的父struct节点。
+Owner of this monitor.
 
 **Type:** [IVariableOwner](arkts-arkui-decorator-ivariableowner-i.md)
 

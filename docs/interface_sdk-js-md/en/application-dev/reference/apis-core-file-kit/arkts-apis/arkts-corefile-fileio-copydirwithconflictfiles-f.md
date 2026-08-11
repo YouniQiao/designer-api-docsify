@@ -10,18 +10,18 @@ import { Options, ReaderIteratorResult, Watcher, ReadTextOptions, WatchEventList
 
 ```TypeScript
 function copyDirWithConflictFiles(src: string, dest: string, callback: AsyncCallback<void,
-   Array<ConflictFiles>>): void
+  Array<ConflictFiles>>): void
 ```
 
-复制源目录及其内容至目标路径下，可设置冲突处理模式。使用callback异步回调。
+Copies the source directory to the destination path. This API uses an asynchronous callback to return the result.
 
-如果目标目录下有与源目录名冲突的目录，且冲突目录下有同名文件，则抛出异常。源目录下未冲突的文件全部移动至目标目录下，目标目录下冲突文件将继续保留，且冲突文件信息将在抛出异常的data属性中以Array&lt;ConflictFiles&gt;形式提供。
+An exception will be thrown if the destination directory contains a directory with the same name as the source directory and there are files with the same name in the conflicting directory. All the non-conflicting files in the source directory will be copied to the destination directory, and the non-conflicting files in the destination directory will be retained. The data attribute in the error returned provides information about the conflicting files in the Array&lt;ConflictFiles&gt; format.
 
 **Since:** 23
 
 **ArkTS mode:** ArkTS-Sta only, since version 23.
 
-<!--Device-fileIo-function copyDirWithConflictFiles(src: string, dest: string, callback: AsyncCallback<void,   Array<ConflictFiles>>): void--><!--Device-fileIo-function copyDirWithConflictFiles(src: string, dest: string, callback: AsyncCallback<void,   Array<ConflictFiles>>): void-End-->
+<!--Device-fileIo-function copyDirWithConflictFiles(src: string, dest: string, callback: AsyncCallback<void,  Array<ConflictFiles>>): void--><!--Device-fileIo-function copyDirWithConflictFiles(src: string, dest: string, callback: AsyncCallback<void,  Array<ConflictFiles>>): void-End-->
 
 **System capability:** SystemCapability.FileManagement.File.FileIO
 
@@ -29,9 +29,9 @@ function copyDirWithConflictFiles(src: string, dest: string, callback: AsyncCall
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| src | string | Yes | 源目录的应用沙箱路径。 |
-| dest | string | Yes | 目标目录的应用沙箱路径。 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void, Array&lt;ConflictFiles&gt;&gt; | Yes | 回调函数。当复制目录成功，err为undefined；否则为错误对象。 |
+| src | string | Yes | Application sandbox path of the source directory. |
+| dest | string | Yes | Application sandbox path of the destination directory. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void, Array&lt;ConflictFiles&gt;&gt; | Yes | Callback used to return the result. |
 
 **Error codes:**
 
@@ -47,7 +47,7 @@ function copyDirWithConflictFiles(src: string, dest: string, mode: int,
   callback: AsyncCallback<void, Array<ConflictFiles>>): void
 ```
 
-复制源目录及其内容至目标路径下，可设置冲突处理模式。使用callback异步回调。
+Copies the source directory to the destination directory. You can set the copy mode.This API uses an asynchronous callback to return the result.
 
 **Since:** 23
 
@@ -61,10 +61,10 @@ function copyDirWithConflictFiles(src: string, dest: string, mode: int,
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| src | string | Yes | 源目录的应用沙箱路径。 |
-| dest | string | Yes | 目标目录的应用沙箱路径。 |
-| mode | int | Yes | 复制模式。&lt;br/&gt; - mode为0，文件级别抛异常。目标目录下存在与源目录名冲突的目录，若冲突目录下存在同名文件，则抛出异常。源目录下未冲突的文件全部拷贝至目标目录下，目标目录下未冲突文 件将继续保留。&lt;br/&gt;- mode为1，文件级别强制覆盖。目标目录下存在与源目录名冲突的目录，若冲突目录下存在同名文件，则强制覆盖冲突目录下所有同名文件，未冲突文件将继续保留。 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void, Array&lt;ConflictFiles&gt;&gt; | Yes | 回调函数。当复制目录成功，err为undefined；否则为错误对象。 |
+| src | string | Yes | Application sandbox path of the source directory. |
+| dest | string | Yes | Application sandbox path of the destination directory. |
+| mode | int | Yes | Copy mode. The default value is **0**. &lt;br&gt;- **0**: Throw an exception if a file conflict occurs. &lt;br&gt; An exception will be thrown if the destination directory contains a directory with the same name as the source directory, and a file with the same name exists in the conflict directory. All the non-conflicting files in the source directory will be copied to the destination directory, and the non-conflicting files in the destination directory will be retained. The **data** attribute in the error returned provides information about the conflicting files in the Array&lt;[ConflictFiles](arkts-corefile-file-fs-conflictfiles-i.md)&gt; format. &lt;br&gt;- **1**: Forcibly overwrite the files with the same name in the destination directory. &lt;br&gt; When the destination directory contains a directory with the same name as the source directory, the files with the same names in the destination directory are overwritten forcibly; the files without conflicts in the destination directory are retained. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void, Array&lt;ConflictFiles&gt;&gt; | Yes | Callback used to return the result. |
 
 **Error codes:**
 

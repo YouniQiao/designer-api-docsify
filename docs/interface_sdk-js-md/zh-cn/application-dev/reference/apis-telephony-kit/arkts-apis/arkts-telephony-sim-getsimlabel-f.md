@@ -1,11 +1,5 @@
 # getSimLabel
 
-## 导入模块
-
-```TypeScript
-import { sim } from 'kits/@kit.TelephonyKit';
-```
-
 ## getSimLabel
 
 ```TypeScript
@@ -33,10 +27,10 @@ Obtains the SIM card label.
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 8300999 | Unknown error code. |
-| 8300002 | Operation failed. Cannot connect to service. |
-| 8300003 | System internal error. |
-| 8300001 | Invalid parameter value. |
+| [8300999](../errorcode-telephony.md#8300999-内部错误) | Unknown error code. |
+| [8300002](../errorcode-telephony.md#8300002-服务连接失败) | Operation failed. Cannot connect to service. |
+| [8300003](../errorcode-telephony.md#8300003-系统内部错误) | System internal error. |
+| [8300001](../errorcode-telephony.md#8300001-输入参数不在处理范围内) | Invalid parameter value. |
 
 ## 示例
 
@@ -82,10 +76,10 @@ function getSimLabel(slotId: int): Promise<SimLabel>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 8300999 | Unknown error code. |
-| 8300002 | Operation failed. Cannot connect to service. |
-| 8300003 | System internal error. |
-| 8300001 | Invalid parameter value. |
+| [8300999](../errorcode-telephony.md#8300999-内部错误) | Unknown error code. |
+| [8300002](../errorcode-telephony.md#8300002-服务连接失败) | Operation failed. Cannot connect to service. |
+| [8300003](../errorcode-telephony.md#8300003-系统内部错误) | System internal error. |
+| [8300001](../errorcode-telephony.md#8300001-输入参数不在处理范围内) | Invalid parameter value. |
 
 ## 示例
 

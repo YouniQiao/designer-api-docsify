@@ -1,6 +1,6 @@
 # URL
 
-用于解析和构造完整URL。
+The interface of URL is used to parse, construct, normalize, and encode URLs.
 
 **Since:** 7
 
@@ -22,7 +22,7 @@ import { url } from 'kits/@kit.ArkTS';
 constructor(url: string, base?: string | URL)
 ```
 
-URL的构造函数。
+URL constructor, which is used to instantiate a URL object.url: Absolute or relative input URL to resolve. Base is required if input is relative.If input is an absolute value, base ignores the value.base: Base URL to parse if input is not absolute.
 
 **Since:** 7
 
@@ -40,8 +40,8 @@ URL的构造函数。
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| url | string | Yes | 一个表示绝对URL或相对URL的字符串。 &lt;br/&gt;如果 url 是相对URL，则需要指定 base，用于解析最终的URL。 &lt;br/&gt;如果 url 是绝对URL，则给定的 base 将不会生效。 |
-| base | string \| URL | No | 入参字符串或者对象，默认值是undefined。&lt;br/&gt;- string：字符串。&lt;br/&gt;- URL：URL对象。 |
+| url | string | Yes | url url |
+| base | string \| URL | No | base base |
 
 ## constructor
 
@@ -49,7 +49,7 @@ URL的构造函数。
 constructor()
 ```
 
-URL的无参构造函数。parseURL调用后返回一个URL对象，不单独使用。
+A no-argument constructor used to create a URL. It returns a URL object after parseURL is called.It is not used independently.
 
 **Since:** 9
 
@@ -67,7 +67,7 @@ URL的无参构造函数。parseURL调用后返回一个URL对象，不单独使
 static parseURL(url: string, base?: string | URL): URL
 ```
 
-解析URL字符串，返回解析后的URL对象。该对象包含协议、主机、端口、路径和查询参数等URL组成部分。
+Parses a URL.
 
 **Since:** 9
 
@@ -83,20 +83,20 @@ static parseURL(url: string, base?: string | URL): URL
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| url | string | Yes | 一个表示绝对URL或相对URL的字符串。 &lt;br/&gt;如果 url 是相对URL，则需要指定 base，用于解析最终的URL。 &lt;br/&gt;如果 url 是绝对URL，则给定的 base 将不会生效。 |
-| base | string \| URL | No | 入参字符串或者对象，默认值是undefined。&lt;br/&gt;- string：字符串。当第一个参数是相对URL时，该参数需符合URL标准。&lt;br/&gt;- URL：URL对象。&lt;br/&gt;- 在url是相对URL时使用，url为绝对URL时此参数不会生效。 |
+| url | string | Yes | A string representing an absolute or a relative URL. In the case of a relative URL, you must specify base to parse the final URL. In the case of an absolute URL, the passed base will be ignored. |
+| base | string \| URL | No | Either a string or an object. The default value is undefined. - string: string. - URL: URL object. This parameter is used when url is a relative URL. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [URL](arkts-arkts-url-url-c.md) | 返回解析后的URL对象，包含URL的各组成部分（如协议、主机和路径等属性）。 |
+| [URL](arkts-arkts-url-url-c.md) |  |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 10200002 | Invalid url string. |
+| [10200002](../errorcode-utils.md#10200002-parameter-parsing-error) | Invalid url string. |
 
 ## Examples
 
@@ -121,7 +121,7 @@ url.URL.parseURL('https://www.example.com', urlObject); // Output 'https://www.e
 toJSON(): string
 ```
 
-将解析过后的URL转化为JSON字符串。
+Converts the parsed URL into a JSON string.
 
 **Since:** 7
 
@@ -137,7 +137,7 @@ toJSON(): string
 
 | Type | Description |
 | --- | --- |
-| string | URL对象的JSON序列化字符串。 |
+| string | Returns the serialized URL as a string. |
 
 ## Examples
 
@@ -152,7 +152,7 @@ let result = urlObject.toJSON();
 toString(): string
 ```
 
-将解析过后的URL转化为字符串，返回值与URL的href属性值相同。
+Converts the parsed URL into a string.
 
 **Since:** 7
 
@@ -168,7 +168,7 @@ toString(): string
 
 | Type | Description |
 | --- | --- |
-| string | 解析后的URL序列化字符串。 |
+| string | Returns the serialized URL as a string. |
 
 ## Examples
 
@@ -183,7 +183,7 @@ let result = urlObject.toString(); // Output 'https://username:password@host:808
 hash: string
 ```
 
-获取和设置URL的片段部分。
+Gets and sets the fragment portion of the URL.
 
 **Type:** string
 
@@ -203,7 +203,7 @@ hash: string
 host: string
 ```
 
-获取和设置URL的主机部分。
+Gets and sets the host portion of the URL.
 
 **Type:** string
 
@@ -223,7 +223,7 @@ host: string
 hostname: string
 ```
 
-获取和设置URL的主机名部分，不带端口。
+Gets and sets the host name portion of the URL，not include the port.
 
 **Type:** string
 
@@ -243,7 +243,7 @@ hostname: string
 href: string
 ```
 
-获取和设置序列化的URL。
+Gets and sets the serialized URL.
 
 **Type:** string
 
@@ -263,7 +263,7 @@ href: string
 readonly origin: string
 ```
 
-获取URL源的只读序列化。
+Gets the read-only serialization of the URL's origin.
 
 **Type:** string
 
@@ -283,7 +283,7 @@ readonly origin: string
 readonly params: URLParams
 ```
 
-获取URLParams表示URL查询参数的对象。
+Gets the URLParams object that represents the URL query parameter.This property is read-only, but URLParams provides an object that can be used to change the URL instance. To replace the entire query parameter for a URL, use url.searchsetter.
 
 **Type:** [URLParams](arkts-arkts-url-urlparams-c.md)
 
@@ -303,7 +303,7 @@ readonly params: URLParams
 password: string
 ```
 
-获取和设置URL的密码部分。
+Gets and sets the password portion of the URL.
 
 **Type:** string
 
@@ -323,7 +323,7 @@ password: string
 pathname: string
 ```
 
-获取和设置URL的路径部分。
+Gets and sets the path portion of the URL.
 
 **Type:** string
 
@@ -343,7 +343,7 @@ pathname: string
 port: string
 ```
 
-获取和设置URL的端口部分。
+Gets and sets the port portion of the URL.
 
 **Type:** string
 
@@ -363,7 +363,7 @@ port: string
 protocol: string
 ```
 
-获取和设置URL的协议部分。
+Gets and sets the protocol portion of the URL.
 
 **Type:** string
 
@@ -383,7 +383,7 @@ protocol: string
 search: string
 ```
 
-获取和设置URL的序列化查询部分。
+Gets and sets the serialized query portion of the URL.
 
 **Type:** string
 
@@ -403,7 +403,7 @@ search: string
 readonly searchParams: URLSearchParams
 ```
 
-获取URLSearchParams表示URL查询参数的对象。
+Gets the URLSearchParams object that represents the URL query parameter.This property is read-only, but URLSearchParams provides an object that can be used to change the URL instance. To replace the entire query parameter for a URL, use url.searchsetter.
 
 **Type:** [URLSearchParams](arkts-arkts-url-urlsearchparams-c.md)
 
@@ -413,7 +413,7 @@ readonly searchParams: URLSearchParams
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.url.URLParams
+**Substitutes:** ohos.url.URL.params
 
 <!--Device-URL-readonly searchParams: URLSearchParams--><!--Device-URL-readonly searchParams: URLSearchParams-End-->
 
@@ -425,7 +425,7 @@ readonly searchParams: URLSearchParams
 username: string
 ```
 
-获取和设置URL的用户名部分。
+Gets and sets the username portion of the URL.
 
 **Type:** string
 

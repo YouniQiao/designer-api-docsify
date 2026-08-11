@@ -1,6 +1,6 @@
 # SceneResourceFactory
 
-场景资源工厂.
+The scene resource factory.
 
 **Inheritance/Implementation:** SceneResourceFactory extends [RenderResourceFactory](arkts-arkgraphics3d-scene-renderresourcefactory-i.md)
 
@@ -32,13 +32,13 @@ Create a camera.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| params | [SceneNodeParameters](arkts-arkgraphics3d-scene-scenenodeparameters-i.md) | Yes | 创建相机的参数 |
+| params | [SceneNodeParameters](arkts-arkgraphics3d-scene-scenenodeparameters-i.md) | Yes | the param of creating a camera |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;[Camera](arkts-arkgraphics3d-scenenodes-camera-i.md)&gt; | 返回创建的相机 |
+| Promise&lt;[Camera](arkts-arkgraphics3d-scenenodes-camera-i.md)&gt; | promise a camera |
 
 ## createCamera
 
@@ -60,14 +60,14 @@ Create a camera.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| params | [SceneNodeParameters](arkts-arkgraphics3d-scene-scenenodeparameters-i.md) | Yes | 创建相机的参数 |
-| cameraParams | [CameraParameters](arkts-arkgraphics3d-scene-cameraparameters-i.md) | Yes | 相机特定的额外参数 |
+| params | [SceneNodeParameters](arkts-arkgraphics3d-scene-scenenodeparameters-i.md) | Yes | the param of creating a camera |
+| cameraParams | [CameraParameters](arkts-arkgraphics3d-scene-cameraparameters-i.md) | Yes | camera specific extra parameters |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;[Camera](arkts-arkgraphics3d-scenenodes-camera-i.md)&gt; | 返回创建的相机 |
+| Promise&lt;[Camera](arkts-arkgraphics3d-scenenodes-camera-i.md)&gt; | promise a camera |
 
 ## createEffect
 
@@ -75,7 +75,7 @@ Create a camera.
 createEffect(params: EffectParameters): Promise<Effect>
 ```
 
-创建特效.
+Create an effect.
 
 **Since:** 21
 
@@ -89,13 +89,13 @@ createEffect(params: EffectParameters): Promise<Effect>
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| params | [EffectParameters](arkts-arkgraphics3d-scene-effectparameters-i.md) | Yes | 创建特效的参数. |
+| params | [EffectParameters](arkts-arkgraphics3d-scene-effectparameters-i.md) | Yes | the params of creating an effect. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;[Effect](arkts-arkgraphics3d-sceneresources-effect-i.md)&gt; | 返回创建的特效. |
+| Promise&lt;[Effect](arkts-arkgraphics3d-sceneresources-effect-i.md)&gt; | promise an effect. |
 
 ## createEnvironment
 
@@ -117,13 +117,13 @@ Create an environment.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| params | [SceneResourceParameters](arkts-arkgraphics3d-scene-sceneresourceparameters-i.md) | Yes | 创建环境对象的参数 |
+| params | [SceneResourceParameters](arkts-arkgraphics3d-scene-sceneresourceparameters-i.md) | Yes | the param of creating an environment object |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;[Environment](arkts-arkgraphics3d-sceneresources-environment-i.md)&gt; | 返回创建的环境 |
+| Promise&lt;[Environment](arkts-arkgraphics3d-sceneresources-environment-i.md)&gt; | promise an environment |
 
 ## createGeometry
 
@@ -131,7 +131,7 @@ Create an environment.
 createGeometry(params: SceneNodeParameters, mesh:MeshResource): Promise<Geometry>
 ```
 
-创建几何节点.
+Create a geometry node.
 
 **Since:** 18
 
@@ -145,14 +145,14 @@ createGeometry(params: SceneNodeParameters, mesh:MeshResource): Promise<Geometry
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| params | [SceneNodeParameters](arkts-arkgraphics3d-scene-scenenodeparameters-i.md) | Yes | 创建几何体的参数 |
-| mesh | [MeshResource](arkts-arkgraphics3d-sceneresources-meshresource-i.md) | Yes | resource - 几何体的网格数据 |
+| params | [SceneNodeParameters](arkts-arkgraphics3d-scene-scenenodeparameters-i.md) | Yes | the param of creating a geometry |
+| mesh | [MeshResource](arkts-arkgraphics3d-sceneresources-meshresource-i.md) | Yes | resource - The mesh data for the geometry |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;[Geometry](arkts-arkgraphics3d-scenenodes-geometry-i.md)&gt; | 返回创建的几何体 |
+| Promise&lt;[Geometry](arkts-arkgraphics3d-scenenodes-geometry-i.md)&gt; | promise a geometry |
 
 ## createLight
 
@@ -175,13 +175,13 @@ Create a light.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | params | [SceneNodeParameters](arkts-arkgraphics3d-scene-scenenodeparameters-i.md) | Yes | the param of creating a light |
-| lightType | [LightType](arkts-arkgraphics3d-scenenodes-lighttype-e.md) | Yes | 光源类型 |
+| lightType | [LightType](arkts-arkgraphics3d-scenenodes-lighttype-e.md) | Yes | the type of the light |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;[Light](arkts-arkgraphics3d-scenenodes-light-i.md)&gt; | 返回创建的光源 |
+| Promise&lt;[Light](arkts-arkgraphics3d-scenenodes-light-i.md)&gt; | promise a light |
 
 ## createMaterial
 
@@ -204,13 +204,13 @@ Create a material.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | params | [SceneResourceParameters](arkts-arkgraphics3d-scene-sceneresourceparameters-i.md) | Yes | the param of creating a material |
-| materialType | [MaterialType](arkts-arkgraphics3d-sceneresources-materialtype-e.md) | Yes | 材质类型 |
+| materialType | [MaterialType](arkts-arkgraphics3d-sceneresources-materialtype-e.md) | Yes | the type of the material |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;[Material](arkts-arkgraphics3d-sceneresources-material-i.md)&gt; | 返回创建的材质 |
+| Promise&lt;[Material](arkts-arkgraphics3d-sceneresources-material-i.md)&gt; | promise a material |
 
 ## createNode
 
@@ -232,11 +232,11 @@ Create a node.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| params | [SceneNodeParameters](arkts-arkgraphics3d-scene-scenenodeparameters-i.md) | Yes | 创建节点的参数 |
+| params | [SceneNodeParameters](arkts-arkgraphics3d-scene-scenenodeparameters-i.md) | Yes | the param of creating a node |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;[Node](arkts-arkgraphics3d-scenenodes-node-i.md)&gt; | 返回创建的节点 |
+| Promise&lt;[Node](arkts-arkgraphics3d-scenenodes-node-i.md)&gt; | promise a node |
 

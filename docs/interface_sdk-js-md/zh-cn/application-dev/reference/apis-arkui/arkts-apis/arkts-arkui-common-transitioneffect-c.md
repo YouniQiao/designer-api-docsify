@@ -38,7 +38,7 @@ animation(value: AnimateParam): TransitionEffect
 
 | 类型 | 说明 |
 | --- | --- |
-| [TransitionEffect](arkts-arkui-common-transitioneffect-c.md) | 当前动画效果。 |
+| [TransitionEffect](../arkts-components/arkts-arkui-transitioneffect-c.md) | 当前动画效果。 |
 
 ## asymmetric
 
@@ -62,14 +62,14 @@ static asymmetric(appear: TransitionEffect, disappear: TransitionEffect): Transi
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| appear | [TransitionEffect](arkts-arkui-common-transitioneffect-c.md) | 是 | 指定出现的转场效果。&lt;br/&gt;如不通过asymmetric函数构造TransitionEffect，则表明该效果在组件出现和消失时均生效。 |
-| disappear | [TransitionEffect](arkts-arkui-common-transitioneffect-c.md) | 是 | 指定消失的转场效果。&lt;br/&gt;如不通过asymmetric函数构造TransitionEffect，则表明该效果在组件出现和消失时均生效。 |
+| appear | [TransitionEffect](../arkts-components/arkts-arkui-transitioneffect-c.md) | 是 | 指定出现的转场效果。&lt;br/&gt;如不通过asymmetric函数构造TransitionEffect，则表明该效果在组件出现和消失时均生效。 |
+| disappear | [TransitionEffect](../arkts-components/arkts-arkui-transitioneffect-c.md) | 是 | 指定消失的转场效果。&lt;br/&gt;如不通过asymmetric函数构造TransitionEffect，则表明该效果在组件出现和消失时均生效。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| [TransitionEffect](arkts-arkui-common-transitioneffect-c.md) | 当前动画非对称的转场效果。 |
+| [TransitionEffect](../arkts-components/arkts-arkui-transitioneffect-c.md) | 当前动画非对称的转场效果。 |
 
 ## combine
 
@@ -93,13 +93,13 @@ combine(transitionEffect: TransitionEffect): TransitionEffect
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| transitionEffect | [TransitionEffect](arkts-arkui-common-transitioneffect-c.md) | 是 | 被组合的过渡效果。 |
+| transitionEffect | [TransitionEffect](../arkts-components/arkts-arkui-transitioneffect-c.md) | 是 | 被组合的过渡效果。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| [TransitionEffect](arkts-arkui-common-transitioneffect-c.md) | 组合过渡效应。 |
+| [TransitionEffect](../arkts-components/arkts-arkui-transitioneffect-c.md) | 组合过渡效应。 |
 
 ## constructor
 
@@ -304,7 +304,7 @@ static move(edge: TransitionEdge): TransitionEffect
 
 | 类型 | 说明 |
 | --- | --- |
-| [TransitionEffect](arkts-arkui-common-transitioneffect-c.md) | 当前动画从屏幕边缘滑入和滑出的效果。 |
+| [TransitionEffect](../arkts-components/arkts-arkui-transitioneffect-c.md) | 当前动画从屏幕边缘滑入和滑出的效果。 |
 
 ## opacity
 
@@ -334,7 +334,7 @@ static opacity(alpha: double): TransitionEffect
 
 | 类型 | 说明 |
 | --- | --- |
-| [TransitionEffect](arkts-arkui-common-transitioneffect-c.md) | 当前动画透明度效果。 |
+| [TransitionEffect](../arkts-components/arkts-arkui-transitioneffect-c.md) | 当前动画透明度效果。 |
 
 ## rotate
 
@@ -364,7 +364,7 @@ static rotate(options: RotateOptions): TransitionEffect
 
 | 类型 | 说明 |
 | --- | --- |
-| [TransitionEffect](arkts-arkui-common-transitioneffect-c.md) | 当前动画旋转效果。 |
+| [TransitionEffect](../arkts-components/arkts-arkui-transitioneffect-c.md) | 当前动画旋转效果。 |
 
 ## scale
 
@@ -394,7 +394,7 @@ static scale(options: ScaleOptions): TransitionEffect
 
 | 类型 | 说明 |
 | --- | --- |
-| [TransitionEffect](arkts-arkui-common-transitioneffect-c.md) | 当前动画缩放效果。 |
+| [TransitionEffect](../arkts-components/arkts-arkui-transitioneffect-c.md) | 当前动画缩放效果。 |
 
 ## translate
 
@@ -424,7 +424,7 @@ static translate(options: TranslateOptions): TransitionEffect
 
 | 类型 | 说明 |
 | --- | --- |
-| [TransitionEffect](arkts-arkui-common-transitioneffect-c.md) | 当前动画平移效果。 |
+| [TransitionEffect](../arkts-components/arkts-arkui-transitioneffect-c.md) | 当前动画平移效果。 |
 
 ## IDENTITY
 

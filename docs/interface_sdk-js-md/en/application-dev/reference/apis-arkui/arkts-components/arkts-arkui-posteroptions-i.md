@@ -1,6 +1,6 @@
 # PosterOptions
 
-用于描述当前视频是否配置首帧送显。
+Defines display options for the first frame of the video.
 
 **Since:** 18
 
@@ -16,12 +16,12 @@
 contentTransitionEffect?: ContentTransitionEffect
 ```
 
-当前视频的预览图内容变化时的转场动效。配置showFirstFrame为true（即配置开启首帧送显时），或未配置有效的  
-[VideoOptions对象](../../../reference/apis-arkui/arkui-ts/ts-media-components-video.md#videooptions对象说明)的previewUri时，该字段不生效。
+Transition effect to apply when the video preview image changes. This parameter does not take effect if   
+**showFirstFrame** is **true**, or if a valid **previewUri** in [VideoOptions](arkts-arkui-videooptions-i.md) is not provided.
 
-默认值：ContentTransitionEffect.IDENTITY
+Default value: **ContentTransitionEffect.IDENTITY**.
 
-设置为undefined或null时，取值为ContentTransitionEffect.IDENTITY。
+If this parameter is set to **undefined** or **null**, it defaults to **ContentTransitionEffect.IDENTITY**.
 
 **Type:** [ContentTransitionEffect](arkts-arkui-contenttransitioneffect-c.md)
 
@@ -45,12 +45,13 @@ contentTransitionEffect?: ContentTransitionEffect
 showFirstFrame?: boolean
 ```
 
-当前视频是否配置首帧送显，当开启首帧送显时，  
-[VideoOptions对象](../../../reference/apis-arkui/arkui-ts/ts-media-components-video.md#videooptions对象说明)中的previewUri字段不生效。
+Whether to enable first frame display, showing the first frame of the video as a preview. When first frame display is enabled, the previewUri field in [VideoOptions](arkts-arkui-videooptions-i.md) has no effect.
 
-true：开启首帧送显；false：关闭首帧送显。
+**true**: Enable first frame display.
 
-默认值：false
+**false**: Disable first frame display.
+
+Default value: **false**.
 
 **Type:** boolean
 

@@ -12,7 +12,7 @@ import { adminManager } from 'kits/@kit.MDMKit';
 function unsubscribeManagedEventSync(admin: Want, managedEvents: Array<ManagedEvent>): void
 ```
 
-取消订阅系统管理事件。调用成功后，将不再收到已取消订阅的系统管理事件通知。
+Unsubscribes from system management events. After the API is successfully called, no notifications for the unsubscribed system management events will be received.
 
 **Since:** 12
 
@@ -30,17 +30,17 @@ function unsubscribeManagedEventSync(admin: Want, managedEvents: Array<ManagedEv
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| admin | [Want](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-want-want-c.md) | Yes | 企业设备管理扩展组件。Want中必须包含企业设备管理扩展能力的abilityName和所在应用的bundleName。 |
-| managedEvents | Array&lt;ManagedEvent&gt; | Yes | 取消订阅事件数组，用于指定需要取消订阅的系统管理事件。数组元素为 [ManagedEvent](arkts-mdm-adminmanager-managedevent-e.md)枚举值，应与订阅时传入的事件类型一致。 |
+| admin | [Want](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-want-want-c.md) | Yes | EnterpriseAdminExtensionAbility. **Want** must contain the ability name of the EnterpriseAdminExtensionAbility and the bundle name of the application. |
+| managedEvents | Array&lt;ManagedEvent&gt; | Yes | Array of system management events to be unsubscribed from. Each element in the array is a value from the [ManagedEvent](arkts-mdm-adminmanager-managedevent-e.md) enumeration. The input event types must be the same as those passed during subscription. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
-| 9200008 | The specified system event is invalid. |
-| 201 | Permission verification failed. The application does not have the permission required to call the API. |
-| 9200001 | The application is not an administrator application of the device. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| [9200008](../errorcode-enterpriseDeviceManager.md#9200008-invalid-system-subscription-event) | The specified system event is invalid. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed. The application does not have the permission required to call the API. |
+| [9200001](../errorcode-enterpriseDeviceManager.md#9200001-deviceadmin-not-enabled) | The application is not an administrator application of the device. |
 
 ## Examples
 

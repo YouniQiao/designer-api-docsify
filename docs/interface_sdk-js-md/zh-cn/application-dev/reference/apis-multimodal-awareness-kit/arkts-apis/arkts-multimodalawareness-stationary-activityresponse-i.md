@@ -1,6 +1,6 @@
 # ActivityResponse
 
-Defines the response interface to receive the device status.
+服务响应抽象接口。
 
 **起始版本：** 9
 
@@ -10,19 +10,13 @@ Defines the response interface to receive the device status.
 
 **系统能力：** SystemCapability.Msdp.DeviceStatus.Stationary
 
-## 导入模块
-
-```TypeScript
-import { stationary } from 'kits/@kit.MultimodalAwarenessKit';
-```
-
 ## state
 
 ```TypeScript
 state: ActivityState
 ```
 
-New device status.
+设备状态变化返回值。
 
 **类型：** [ActivityState](arkts-multimodalawareness-stationary-activitystate-e.md)
 

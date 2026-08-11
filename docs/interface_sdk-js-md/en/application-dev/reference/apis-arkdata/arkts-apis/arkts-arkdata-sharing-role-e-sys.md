@@ -1,6 +1,6 @@
 # Role (System API)
 
-端云共享参与者的角色。
+Enumerates the roles of the participants in a device-cloud share.
 
 **Since:** 11
 
@@ -18,7 +18,7 @@
 ROLE_INVITER = 0
 ```
 
-端云共享邀请者。请使用枚举名称而非枚举值。
+Inviter, the one who shares data. Use the enum name rather than the enum value.
 
 **Since:** 11
 
@@ -36,7 +36,7 @@ ROLE_INVITER = 0
 ROLE_INVITEE = 1
 ```
 
-端云共享被邀请者。请使用枚举名称而非枚举值。
+Invitee, the one who can use the shared data. Use the enum name rather than the enum value.
 
 **Since:** 11
 

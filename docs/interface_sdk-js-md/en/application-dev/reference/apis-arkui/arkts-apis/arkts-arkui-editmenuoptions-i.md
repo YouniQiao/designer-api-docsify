@@ -1,6 +1,6 @@
 # EditMenuOptions
 
-编辑菜单选项
+EditMenuOptions
 
 **Since:** 12
 
@@ -16,7 +16,7 @@
 onCreateMenu(menuItems: Array<TextMenuItem>): Array<TextMenuItem>
 ```
 
-在菜单创建时触发该回调，可在该回调中进行菜单数据设置。入参和返回值只包含一级菜单项，不包含二级菜单项。
+Triggered when the menu is being created. Menu data can be configured within this callback. Both the input parameter and return value contain only level-1 menu items; level-2 menu items are not included.
 
 **Since:** 12
 
@@ -34,13 +34,13 @@ onCreateMenu(menuItems: Array<TextMenuItem>): Array<TextMenuItem>
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| menuItems | Array&lt;TextMenuItem&gt; | Yes | 将要显示的菜单项。 &lt;br&gt;**说明：** &lt;br&gt;对默认菜单项的名称、图标、快捷键提示修改不生效。 |
+| menuItems | Array&lt;TextMenuItem&gt; | Yes | Menu items to be displayed.&lt;br&gt;**NOTE：**&lt;br&gt;Modifications to the name, icon, or shortcut hint of default menu items do not take effect. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Array&lt;TextMenuItem&gt; | 处理后的菜单项。 |
+| Array&lt;TextMenuItem&gt; | Menu items after the processing. |
 
 ## onMenuItemClick
 
@@ -48,7 +48,7 @@ onCreateMenu(menuItems: Array<TextMenuItem>): Array<TextMenuItem>
 onMenuItemClick(menuItem: TextMenuItem, range: TextRange): boolean
 ```
 
-在菜单项被点击时触发该回调，用于处理菜单项的点击行为。
+Triggered when the specified menu item is clicked.
 
 **Since:** 12
 
@@ -66,14 +66,14 @@ onMenuItemClick(menuItem: TextMenuItem, range: TextRange): boolean
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| menuItem | [TextMenuItem](arkts-arkui-textmenuitem-i.md) | Yes | 菜单项。 &lt;br&gt;**说明：** &lt;br&gt;从API version 23开始，对于具备可展开二级菜单能力的一级菜单项，例如自动填充，仅执行系统默认逻辑，不会执行用户自定义逻辑。 |
-| range | [TextRange](arkts-arkui-textrange-i.md) | Yes | 选中的文本信息。 |
+| menuItem | [TextMenuItem](arkts-arkui-textmenuitem-i.md) | Yes | Menu item.&lt;br&gt;**NOTE：**&lt;br&gt;Since API version 23, for level-1 menu items that support expandable level-2 menus (such as autofill), only the system default logic is executed and custom logic is not executed. |
+| range | [TextRange](arkts-arkui-textrange-i.md) | Yes | Selected text. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| boolean | 菜单项的执行逻辑。 &lt;br&gt;返回为true，拦截系统默认逻辑，仅执行自定义逻辑。 &lt;br&gt;返回为false，先执行自定义逻辑，再执行系统逻辑。 |
+| boolean | Execution logic of the menu item. &lt;br&gt;Returns **true** if the default system logic is intercepted and only the custom logic is executed. &lt;br&gt;Returns **false** if the custom logic is executed before the default system logic. |
 
 ## onPrepareMenu
 
@@ -81,9 +81,7 @@ onMenuItemClick(menuItem: TextMenuItem, range: TextRange): boolean
 onPrepareMenu?: OnPrepareMenuCallback
 ```
 
-当文本选择区域变化后显示菜单之前触发该回调，可在该回调中进行菜单数据设置。
-
-与[onCreateMenu](arkts-arkui-editmenuoptions-i.md#oncreatemenu)功能相似但触发时机不同：onCreateMenu在菜单创建时触发，适用于初始化菜单项；本接口在每次选择区域变化后、菜单显示前触发，适用于根据选择内容动态调整菜单。两者可同时使用。
+Callback invoked before the menu is displayed after the text selection area changes. Menu data can be configured within this callback.
 
 **Since:** 20
 

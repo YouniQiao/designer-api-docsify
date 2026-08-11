@@ -1,14 +1,10 @@
 # Prompt
 
-创建并显示文本提示框、对话框和操作菜单。
+Defines the prompt interface.
 
-> **说明：**
-> 
-> - 从API version 8 开始，该接口不再维护，推荐使用新接口[@ohos.promptAction (弹窗)](arkts-promptaction.md)。
+**Since:** 11
 
-**Since:** 3
-
-**ArkTS mode:** ArkTS-Dyn only, since version 3.
+**ArkTS mode:** ArkTS-Dyn only, since version 11.
 
 <!--Device-unnamed-export default class Prompt--><!--Device-unnamed-export default class Prompt-End-->
 
@@ -26,11 +22,11 @@ import { ShowActionMenuOptions, Button, ShowToastOptions, ShowDialogOptions, Sho
 static showActionMenu(options: ShowActionMenuOptions): void
 ```
 
-显示操作菜单。
+Displays the menu.
 
-**Since:** 6
+**Since:** 11
 
-**ArkTS mode:** ArkTS-Dyn only, since version 6.
+**ArkTS mode:** ArkTS-Dyn only, since version 11.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -42,7 +38,7 @@ static showActionMenu(options: ShowActionMenuOptions): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| options | [ShowActionMenuOptions](arkts-arkui-system-prompt-showactionmenuoptions-i.md) | Yes | 定义ShowActionMenu的选项。 |
+| options | [ShowActionMenuOptions](arkts-arkui-system-prompt-showactionmenuoptions-i.md) | Yes | Options. |
 
 ## showDialog
 
@@ -50,11 +46,11 @@ static showActionMenu(options: ShowActionMenuOptions): void
 static showDialog(options: ShowDialogOptions): void
 ```
 
-显示对话框。
+Displays the dialog box.
 
-**Since:** 3
+**Since:** 11
 
-**ArkTS mode:** ArkTS-Dyn only, since version 3.
+**ArkTS mode:** ArkTS-Dyn only, since version 11.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -66,7 +62,7 @@ static showDialog(options: ShowDialogOptions): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| options | [ShowDialogOptions](arkts-arkui-promptaction-showdialogoptions-i.md) | Yes | 定义显示对话框的选项。 |
+| options | [ShowDialogOptions](arkts-arkui-promptaction-showdialogoptions-i.md) | Yes | Options. |
 
 ## showToast
 
@@ -74,11 +70,11 @@ static showDialog(options: ShowDialogOptions): void
 static showToast(options: ShowToastOptions): void
 ```
 
-显示文本弹窗。
+Displays the notification text.
 
-**Since:** 3
+**Since:** 11
 
-**ArkTS mode:** ArkTS-Dyn only, since version 3.
+**ArkTS mode:** ArkTS-Dyn only, since version 11.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -90,5 +86,5 @@ static showToast(options: ShowToastOptions): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| options | [ShowToastOptions](arkts-arkui-system-prompt-showtoastoptions-i.md) | Yes | 定义ShowToast的选项。 |
+| options | [ShowToastOptions](arkts-arkui-system-prompt-showtoastoptions-i.md) | Yes | Options. |
 

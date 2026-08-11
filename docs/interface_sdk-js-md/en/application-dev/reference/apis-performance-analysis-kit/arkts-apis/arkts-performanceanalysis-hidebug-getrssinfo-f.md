@@ -12,11 +12,7 @@ import { hidebug } from 'kits/@kit.PerformanceAnalysisKit';
 function getRssInfo(): RssInfo
 ```
 
-��ȡӦ�ó�����̵������ڴ�ʹ����Ϣ����ȡ/proc/{pid}/status�ڵ�����ݡ�
-
-> **ע��**
-> 
-> ��ȡ/proc/{pid}/status��ʱ�̣ܶ���hidebug.getAppNativeMemInfo�ӿ��л�ȡ��`rss`ֵ��ȴ���һ�������ýӿڸ���������Ϊ����Ӧ�ö�֡�򿨶��Ƽ�ʹ�øýӿڡ�
+Obtains the physical memory information of application process. This API is implemented by reading data from the/proc/{pid}/status node.
 
 **Since:** 24
 
@@ -32,7 +28,7 @@ function getRssInfo(): RssInfo
 
 | Type | Description |
 | --- | --- |
-| [RssInfo](arkts-performanceanalysis-hidebug-rssinfo-i.md) | Ӧ�ý��̵������ڴ���Ϣ�� |
+| [RssInfo](arkts-performanceanalysis-hidebug-rssinfo-i.md) | Returns the Rss information. |
 
 ## Examples
 

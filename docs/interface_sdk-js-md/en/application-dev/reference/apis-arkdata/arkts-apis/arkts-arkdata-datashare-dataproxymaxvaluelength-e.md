@@ -1,6 +1,6 @@
 # DataProxyMaxValueLength
 
-[共享配置](arkts-arkdata-datashare-proxydata-i.md)的值允许的最大长度的枚举值。
+The maximum length of {@link ProxyData#value}, {@link DataProxyChangeInfo#value}, {@link DataProxyGetResult#value}.
 
 **Since:** 26.0.0
 
@@ -16,7 +16,7 @@
 MAX_LENGTH_4K = 4096
 ```
 
-表示共享配置的值允许的最大长度为4096字节。
+The maximum length of value is 4096 bytes.
 
 **Since:** 26.0.0
 
@@ -34,7 +34,7 @@ MAX_LENGTH_4K = 4096
 MAX_LENGTH_100K = 102400
 ```
 
-表示共享配置的值允许的最大长度为102400字节。
+The maximum length of value is 102400 bytes.
 
 **Since:** 26.0.0
 

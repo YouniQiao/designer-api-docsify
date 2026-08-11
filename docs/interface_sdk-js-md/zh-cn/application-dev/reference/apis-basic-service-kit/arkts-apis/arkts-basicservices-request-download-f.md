@@ -1,11 +1,5 @@
 # download
 
-## 导入模块
-
-```TypeScript
-import { request } from 'kits/@kit.BasicServicesKit';
-```
-
 ## download
 
 ```TypeScript
@@ -41,7 +35,7 @@ function download(config: DownloadConfig, callback: AsyncCallback<DownloadTask>)
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 201 | The permissions check fails. |
+| [201](../../errorcode-universal.md#201-权限校验失败) | The permissions check fails. |
 
 ## 示例
 
@@ -99,7 +93,7 @@ function download(config: DownloadConfig): Promise<DownloadTask>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 201 | The permissions check fails. |
+| [201](../../errorcode-universal.md#201-权限校验失败) | The permissions check fails. |
 
 ## 示例
 

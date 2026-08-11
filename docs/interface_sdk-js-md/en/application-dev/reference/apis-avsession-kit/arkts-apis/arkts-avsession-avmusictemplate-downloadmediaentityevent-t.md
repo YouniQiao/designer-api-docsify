@@ -4,7 +4,7 @@
 type DownloadMediaEntityEvent = (controlType: DownloadControlType, mediaEntity: MediaEntity) => Promise<OperResult>
 ```
 
-媒体实体下载事件。使用Promise异步回调。
+The download media entity event.
 
 **Since:** 23
 
@@ -20,12 +20,12 @@ type DownloadMediaEntityEvent = (controlType: DownloadControlType, mediaEntity: 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| controlType | [DownloadControlType](arkts-avsession-avmusictemplate-downloadcontroltype-t.md) | Yes | controlType的可选项包括：开始下载、删除下载、恢复下载、暂停下载。 |
-| mediaEntity | [MediaEntity](arkts-avsession-avmusictemplate-mediaentity-i.md) | Yes | 媒体实体。 |
+| controlType | [DownloadControlType](arkts-avsession-avmusictemplate-downloadcontroltype-t.md) | Yes | control type |
+| mediaEntity | [MediaEntity](arkts-avsession-avmusictemplate-mediaentity-i.md) | Yes | media entity |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;OperResult&gt; | Promise对象，返回下载媒体实体的操作结果对象。 |
+| Promise&lt;OperResult&gt; | (OperResult) returned through promise |
 

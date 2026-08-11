@@ -1,6 +1,6 @@
 # PriorityStrategyStatus (System API)
 
-描述应用通知的优先策略。
+Describes the application notification strategy.
 
 **Since:** 23
 
@@ -18,7 +18,7 @@
 STATUS_SYSTEM_DEFAULT = 1 << 0
 ```
 
-默认优先策略。
+Default priority strategy.
 
 **Since:** 23
 
@@ -38,7 +38,7 @@ STATUS_SYSTEM_DEFAULT = 1 << 0
 STATUS_SYSTEM_RULE = 1 << 1
 ```
 
-仅优先规则。
+Only system rule.
 
 **Since:** 23
 
@@ -58,7 +58,7 @@ STATUS_SYSTEM_RULE = 1 << 1
 STATUS_INTELLIGENT = 1 << 2
 ```
 
-仅智能识别。
+Only intelligent recognition.
 
 **Since:** 23
 
@@ -78,7 +78,7 @@ STATUS_INTELLIGENT = 1 << 2
 STATUS_USER_DEFINED = 1 << 3
 ```
 
-仅用户自定义。
+Only user-defined.
 
 **Since:** 23
 
@@ -98,7 +98,7 @@ STATUS_USER_DEFINED = 1 << 3
 STATUS_APPLICATION_DEFINED = 1 << 4
 ```
 
-仅应用自定义。
+Only application-defined.
 
 **Since:** 23
 
@@ -118,7 +118,7 @@ STATUS_APPLICATION_DEFINED = 1 << 4
 STATUS_ALL_PRIORITY = 1 << 5
 ```
 
-全部通知优先。
+All.
 
 **Since:** 23
 

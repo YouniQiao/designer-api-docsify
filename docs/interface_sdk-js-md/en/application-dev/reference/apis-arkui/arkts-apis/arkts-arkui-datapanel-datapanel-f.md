@@ -8,7 +8,7 @@ export declare function DataPanel(
 ): DataPanelAttribute
 ```
 
-创建数据面板组件。
+Defines the DataPanel component.
 
 **Since:** 23
 
@@ -24,7 +24,7 @@ export declare function DataPanel(
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| options | [DataPanelOptions](../arkts-components/arkts-arkui-datapaneloptions-i.md) | Yes | 数据面板组件参数。 |
+| options | [DataPanelOptions](../arkts-components/arkts-arkui-datapaneloptions-i.md) | Yes | data panel options. |
 
 **Return value:**
 
@@ -41,11 +41,11 @@ export declare function DataPanel(
 ): DataPanelAttribute
 ```
 
-定义DataPanel组件。
+Defines DataPanel Component.
 
-**Since:** 26.0.0
+**Since:** 26.1.0
 
-**ArkTS mode:** ArkTS-Sta only, since version 26.0.0.
+**ArkTS mode:** ArkTS-Sta only, since version 26.1.0.
 
 **Decorator:** @Builder
 
@@ -59,7 +59,7 @@ export declare function DataPanel(
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| style | [CustomBuilderT](../arkts-components/arkts-arkui-custombuildert-t.md)&lt;DataPanelAttribute&gt; | Yes | DataPanel属性实例。 |
+| style | [CustomBuilderT](../arkts-components/arkts-arkui-custombuildert-t.md)&lt;DataPanelAttribute&gt; | Yes | DataPanel attribute instance |
 
 **Return value:**
 

@@ -1,11 +1,5 @@
 # setMemoryCacheSize
 
-## 导入模块
-
-```TypeScript
-import { cacheDownload } from 'kits/@kit.BasicServicesKit';
-```
-
 ## setMemoryCacheSize
 
 ```TypeScript
@@ -35,15 +29,31 @@ function setMemoryCacheSize(bytes: long): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 401 | parameter error. Possible causes: &lt;br&gt; 1. Missing mandatory parameters. &lt;br&gt; 2. Incorrect parameter type. &lt;br&gt; 3. Parameter verification failed. |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | parameter error. Possible causes: &lt;br&gt; 1. Missing mandatory parameters. &lt;br&gt; 2. Incorrect parameter type. &lt;br&gt; 3. Parameter verification failed. |
 
 ## 示例
 
+ArkTS-Dyn示例：
+
 ```TypeScript
-import { cacheDownload, BusinessError } from '@kit.BasicServicesKit';
+import { BusinessError } from '@kit.BasicServicesKit';
 
 try {
   // 设置内存缓存大小上限。  
+  cacheDownload.setMemoryCacheSize(10 * 1024 * 1024);
+} catch (error) {
+  let err: BusinessError = error as BusinessError;
+  console.error(`Failed to set memory cache size. err code: ${err.code}, err message: ${err.message}`);
+}
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+try {
+  // 设置内存缓存大小上限。
   cacheDownload.setMemoryCacheSize(10 * 1024 * 1024);
 } catch (error) {
   let err: BusinessError = error as BusinessError;

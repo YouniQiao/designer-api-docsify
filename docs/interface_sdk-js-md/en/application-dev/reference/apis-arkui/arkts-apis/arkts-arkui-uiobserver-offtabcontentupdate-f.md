@@ -12,7 +12,7 @@ import { uiObserver } from 'kits/@kit.ArkUI';
 export function offTabContentUpdate(options: ObserverOptions, callback?: Callback<TabContentInfo>): void
 ```
 
-取消监听TabContent页面的切换事件。
+Removes a callback function that was previously registered with `on()`.
 
 **Since:** 23
 
@@ -28,8 +28,8 @@ export function offTabContentUpdate(options: ObserverOptions, callback?: Callbac
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| options | [ObserverOptions](../../apis-telephony-kit/arkts-apis/arkts-telephony-observer-observeroptions-i.md) | Yes | 指定监听的Tabs组件的id。 |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;TabContentInfo&gt; | No | 需要被注销的回调函数。 |
+| options | [ObserverOptions](../../apis-telephony-kit/arkts-apis/arkts-telephony-observer-observeroptions-i.md) | Yes | The options object. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;TabContentInfo&gt; | No | The callback function to remove. If not provided, all callbacks for the given event type and Tabs ID will be removed. |
 
 
 ## offTabContentUpdate
@@ -38,7 +38,7 @@ export function offTabContentUpdate(options: ObserverOptions, callback?: Callbac
 export function offTabContentUpdate(callback?: Callback<TabContentInfo>): void
 ```
 
-取消监听TabContent页面的切换事件。
+Removes a callback function that was previously registered with `on()`.
 
 **Since:** 23
 
@@ -54,5 +54,5 @@ export function offTabContentUpdate(callback?: Callback<TabContentInfo>): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;TabContentInfo&gt; | No | 需要被注销的回调函数。 |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;TabContentInfo&gt; | No | The callback function to remove. If not provided, all callbacks for the given event type will be removed. |
 

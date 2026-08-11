@@ -6,7 +6,7 @@ typedef struct ArkUI_CustomProperty ArkUI_CustomProperty
 
 ## Overview
 
-Define the information of the Custom Property class for custom properties.
+Defines custom property information.
 
 **Since**: 14
 

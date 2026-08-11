@@ -10,12 +10,6 @@
 
 **系统能力：** SystemCapability.Security.Huks.CryptoExtension
 
-## 导入模块
-
-```TypeScript
-import { HuksCryptoExtensionCertInfo, HuksCryptoExtensionResultCode, HuksCryptoExtensionParams, HuksCryptoExtensionParam, HuksCryptoExtensionResult } from 'kits/@kit.UniversalKeystoreKit';
-```
-
 ## inData
 
 ```TypeScript

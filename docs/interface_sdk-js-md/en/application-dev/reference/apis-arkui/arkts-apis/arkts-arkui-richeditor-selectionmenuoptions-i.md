@@ -1,6 +1,6 @@
 # SelectionMenuOptions
 
-菜单的选项。
+Defines the selection menu options.
 
 **Since:** 23
 
@@ -16,7 +16,7 @@
 onAppear?: MenuOnAppearCallback
 ```
 
-自定义选择菜单弹出时回调。
+Callback function when the selection menu appears.
 
 **Since:** 23
 
@@ -34,7 +34,7 @@ onAppear?: MenuOnAppearCallback
 onMenuHide?: MenuCallback
 ```
 
-自定义选择菜单隐藏时回调。
+Callback function when the selection menu is hidden.
 
 **Since:** 23
 
@@ -52,7 +52,7 @@ onMenuHide?: MenuCallback
 onMenuShow?: MenuCallback
 ```
 
-自定义选择菜单显示时回调。
+Callback function when the selection menu is displayed.
 
 **Since:** 23
 
@@ -70,7 +70,7 @@ onMenuShow?: MenuCallback
 menuType?: MenuType
 ```
 
-自定义选择菜单类型。
+Menu type, default value is MenuType.SELECTION_MENU.
 
 **Type:** [MenuType](arkts-arkui-menutype-e.md)
 
@@ -90,7 +90,7 @@ menuType?: MenuType
 onDisappear?: VoidCallback
 ```
 
-自定义选择菜单关闭时回调。
+Callback function when the selection menu disappears.
 
 **Type:** [VoidCallback](arkts-arkui-voidcallback-t.md)
 
@@ -110,7 +110,7 @@ onDisappear?: VoidCallback
 previewMenuOptions?: PreviewMenuOptions
 ```
 
-预览菜单的选项。
+Defines the preview menu options.
 
 **Type:** [PreviewMenuOptions](../arkts-components/arkts-arkui-previewmenuoptions-i.md)
 

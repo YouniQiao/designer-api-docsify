@@ -1,6 +1,6 @@
 # TriggerCondition
 
-提供设置[Watcher](arkts-performanceanalysis-hiappevent-watcher-i.md)的onTrigger回调触发条件的参数选项。
+Defines the triggering condition parameters of the **onTrigger** callback of a [Watcher](arkts-performanceanalysis-hiappevent-watcher-i.md).
 
 **Since:** 9
 
@@ -22,7 +22,7 @@ import { hiAppEvent } from 'kits/@kit.PerformanceAnalysisKit';
 row?: int
 ```
 
-满足触发回调的事件总数量，正整数。默认值0，不触发回调。传入负值时，会被置为默认值。
+Total number of events that trigger callback. The value is a positive integer. The default value is 0, indicating that no callback is triggered. If this parameter is set to a negative value, the default value is used.
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
@@ -42,7 +42,7 @@ row?: int
 size?: int
 ```
 
-满足触发回调的事件总大小，正整数，单位为byte。默认值0，不触发回调。传入负值时，会被置为默认值。
+Total size of events that trigger callback. The value is a positive integer, in bytes. The default value is 0,indicating that no callback is triggered. If this parameter is set to a negative value, the default value is used.
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
@@ -62,7 +62,7 @@ size?: int
 timeOut?: int
 ```
 
-满足触发回调的超时时长，正整数，单位为s，值为timeOut * 30。默认值0，不触发回调。传入负值时，会被置为默认值。
+Timeout interval for triggering callback. The value is a positive integer, in unit of 30s. The default value is0, indicating that no callback is triggered. If this parameter is set to a negative value, the default value is used.
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 

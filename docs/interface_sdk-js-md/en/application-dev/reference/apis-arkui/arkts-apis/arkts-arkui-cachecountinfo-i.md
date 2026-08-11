@@ -1,6 +1,6 @@
 # CacheCountInfo
 
-定义缓存计数信息。
+Define cache count information.
 
 **Since:** 22
 
@@ -16,7 +16,7 @@
 maxCount: number
 ```
 
-最大缓存数量。
+max cache count.
 
 **Type:** number
 
@@ -38,7 +38,7 @@ maxCount: number
 minCount: number
 ```
 
-最小缓存数量。
+min cache count.
 
 **Type:** number
 

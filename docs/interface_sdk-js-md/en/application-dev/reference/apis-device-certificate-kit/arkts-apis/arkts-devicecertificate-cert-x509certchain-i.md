@@ -1,6 +1,6 @@
 # X509CertChain
 
-X.509证书链对象。
+Provides APIs for managing the X.509 certificate chain.
 
 **Since:** 11
 
@@ -22,7 +22,7 @@ import { cert } from 'kits/@kit.DeviceCertificateKit';
 getCertList(): Array<X509Cert>
 ```
 
-获取X.509证书列表。
+Obtains the X.509 certificate list.
 
 **Since:** 11
 
@@ -38,15 +38,15 @@ getCertList(): Array<X509Cert>
 
 | Type | Description |
 | --- | --- |
-| Array&lt;X509Cert&gt; | X.509证书数组。 |
+| Array&lt;X509Cert&gt; | X.509 certificate list obtained. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | 参数错误。可能的原因： &lt;br&gt;1. 必填参数未指定； &lt;br&gt;2. 参数类型不正确； &lt;br&gt;3. 参数校验失败。 |
-| 19020001 | 内存错误。 |
-| 19030001 | 调用三方算法库API出错。 |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Invalid parameters. Possible causes: &lt;br&gt;1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; &lt;br&gt;3. Parameter verification failed. |
+| [19020001](../errorcode-cert.md#19020001-memory-error) | Memory malloc failed. |
+| [19030001](../errorcode-cert.md#19030001-crypto-operation-error) | Crypto operation error. |
 
 ## hashCode
 
@@ -54,7 +54,7 @@ getCertList(): Array<X509Cert>
 hashCode(): Uint8Array
 ```
 
-获取DER格式数据的哈希值。
+Obtains the hash value of the data in DER format.
 
 **Since:** 12
 
@@ -70,15 +70,15 @@ hashCode(): Uint8Array
 
 | Type | Description |
 | --- | --- |
-| Uint8Array | DER格式数据的哈希值。 |
+| Uint8Array | Hash value obtained. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 19020002 | 运行时外部错误。可能的原因： &lt;br&gt;1. 内存拷贝失败； &lt;br&gt;2. 系统内部出现空指针； &lt;br&gt;3. 获取Native对象失败或参数转换失败。 |
-| 19020001 | 内存错误。 |
-| 19030001 | 调用三方算法库API出错。 |
+| [19020002](../errorcode-cert.md#19020002-runtime-error) | Runtime error. Possible causes: &lt;br&gt;1. Memory copy failed; &lt;br&gt;2. A null pointer occurs inside the system; &lt;br&gt;3. Failed to obtain the native object or convert parameters. |
+| [19020001](../errorcode-cert.md#19020001-memory-error) | Memory malloc failed. |
+| [19030001](../errorcode-cert.md#19030001-crypto-operation-error) | Crypto operation error. |
 
 ## toString
 
@@ -86,7 +86,7 @@ hashCode(): Uint8Array
 toString(): string
 ```
 
-获取对象的字符串类型数据。
+Converts the object data into a string.
 
 **Since:** 12
 
@@ -102,15 +102,15 @@ toString(): string
 
 | Type | Description |
 | --- | --- |
-| string | 对象的字符串类型数据。 |
+| string | String obtained. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 19020002 | 运行时外部错误。可能的原因： &lt;br&gt;1. 内存拷贝失败； &lt;br&gt;2. 系统内部出现空指针； &lt;br&gt;3. 获取Native对象失败或参数转换失败。 |
-| 19020001 | 内存错误。 |
-| 19030001 | 调用三方算法库API出错。 |
+| [19020002](../errorcode-cert.md#19020002-runtime-error) | Runtime error. Possible causes: &lt;br&gt;1. Memory copy failed; &lt;br&gt;2. A null pointer occurs inside the system; &lt;br&gt;3. Failed to obtain the native object or convert parameters. |
+| [19020001](../errorcode-cert.md#19020001-memory-error) | Memory malloc failed. |
+| [19030001](../errorcode-cert.md#19030001-crypto-operation-error) | Crypto operation error. |
 
 ## validate
 
@@ -118,7 +118,7 @@ toString(): string
 validate(param: CertChainValidationParameters): Promise<CertChainValidationResult>
 ```
 
-校验证书链。使用Promise方式返回结果。
+Validates a certificate chain. This API uses a promise to return the result.
 
 **Since:** 11
 
@@ -134,28 +134,28 @@ validate(param: CertChainValidationParameters): Promise<CertChainValidationResul
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| param | [CertChainValidationParameters](arkts-devicecertificate-cert-certchainvalidationparameters-i.md) | Yes | 表示校验X.509证书链的参数。 |
+| param | [CertChainValidationParameters](arkts-devicecertificate-cert-certchainvalidationparameters-i.md) | Yes | Parameters for validating the X.509 certificate chain. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;CertChainValidationResult&gt; | Promise对象，返回证书链校验结果。 |
+| Promise&lt;CertChainValidationResult&gt; | Promise used to return the certificate chain validation result. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 19020002 | 运行时外部错误。可能的原因： &lt;br&gt;1. 内存拷贝失败； &lt;br&gt;2. 系统内部出现空指针； &lt;br&gt;3. 获取Native对象失败或参数转换失败。 |
-| 19030002 | 证书签名验证错误。 |
-| 401 | 参数错误。可能的原因： &lt;br&gt;1. 必填参数未指定； &lt;br&gt;2. 参数类型不正确； &lt;br&gt;3. 参数校验失败。 |
-| 19030003 | 证书尚未生效。 |
-| 19020001 | 内存错误。 |
-| 19030001 | 调用三方算法库API出错。 |
-| 19030006 | 证书的密钥用途不含证书签名。 |
-| 19030007 | 证书的密钥用途不含数字签名。 |
-| 19030004 | 证书过期。 |
-| 19030005 | 无法获取证书的颁发者。 |
+| [19020002](../errorcode-cert.md#19020002-runtime-error) | Runtime error. Possible causes: &lt;br&gt;1. Memory copy failed; &lt;br&gt;2. A null pointer occurs inside the system; &lt;br&gt;3. Failed to obtain the native object or convert parameters. |
+| [19030002](../errorcode-cert.md#19030002-certificate-signature-verification-failed) | The certificate signature verification failed. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Invalid parameters. Possible causes: &lt;br&gt;1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; &lt;br&gt;3. Parameter verification failed. |
+| [19030003](../errorcode-cert.md#19030003-certificate-has-not-taken-effect) | The certificate has not taken effect. |
+| [19020001](../errorcode-cert.md#19020001-memory-error) | Memory malloc failed. |
+| [19030001](../errorcode-cert.md#19030001-crypto-operation-error) | Crypto operation error. |
+| [19030006](../errorcode-cert.md#19030006-key-cannot-be-used-for-signing-a-certificate) | The key cannot be used for signing a certificate. |
+| [19030007](../errorcode-cert.md#19030007-key-cannot-be-used-for-digital-signature) | The key cannot be used for a digital signature. |
+| [19030004](../errorcode-cert.md#19030004-certificate-expired) | The certificate has expired. |
+| [19030005](../errorcode-cert.md#19030005-failed-to-obtain-the-certificate-issuer) | Failed to obtain the certificate issuer. |
 
 ## validate
 
@@ -163,7 +163,7 @@ validate(param: CertChainValidationParameters): Promise<CertChainValidationResul
 validate(param: CertChainValidationParameters, callback: AsyncCallback<CertChainValidationResult>): void
 ```
 
-使用校验参数校验证书链。使用Callback异步回调。
+Validates a certificate chain. This API uses an asynchronous callback to return the result.
 
 **Since:** 11
 
@@ -179,21 +179,21 @@ validate(param: CertChainValidationParameters, callback: AsyncCallback<CertChain
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| param | [CertChainValidationParameters](arkts-devicecertificate-cert-certchainvalidationparameters-i.md) | Yes | 表示校验X.509证书链的参数。 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;CertChainValidationResult&gt; | Yes | 回调函数。当校验证书链成功时，err为undefined， data为获取到的证书链校验结果；否则为错误对象。 |
+| param | [CertChainValidationParameters](arkts-devicecertificate-cert-certchainvalidationparameters-i.md) | Yes | Parameters for validating the X.509 certificate chain. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;CertChainValidationResult&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined**, and **data** is the certificate chain validation result obtained. Otherwise, **err** is an error object. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 19020002 | 运行时外部错误。可能的原因： &lt;br&gt;1. 内存拷贝失败； &lt;br&gt;2. 系统内部出现空指针； &lt;br&gt;3. 获取Native对象失败或参数转换失败。 |
-| 19030002 | 证书签名验证错误。 |
-| 401 | 参数错误。可能的原因： &lt;br&gt;1. 必填参数未指定； &lt;br&gt;2. 参数类型不正确； &lt;br&gt;3. 参数校验失败。 |
-| 19030003 | 证书尚未生效。 |
-| 19020001 | 内存错误。 |
-| 19030001 | 调用三方算法库API出错。 |
-| 19030006 | 证书的密钥用途不含证书签名。 |
-| 19030007 | 证书的密钥用途不含数字签名。 |
-| 19030004 | 证书过期。 |
-| 19030005 | 无法获取证书的颁发者。 |
+| [19020002](../errorcode-cert.md#19020002-runtime-error) | Runtime error. Possible causes: &lt;br&gt;1. Memory copy failed; &lt;br&gt;2. A null pointer occurs inside the system; &lt;br&gt;3. Failed to obtain the native object or convert parameters. |
+| [19030002](../errorcode-cert.md#19030002-certificate-signature-verification-failed) | The certificate signature verification failed. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Invalid parameters. Possible causes: &lt;br&gt;1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; &lt;br&gt;3. Parameter verification failed. |
+| [19030003](../errorcode-cert.md#19030003-certificate-has-not-taken-effect) | The certificate has not taken effect. |
+| [19020001](../errorcode-cert.md#19020001-memory-error) | Memory malloc failed. |
+| [19030001](../errorcode-cert.md#19030001-crypto-operation-error) | Crypto operation error. |
+| [19030006](../errorcode-cert.md#19030006-key-cannot-be-used-for-signing-a-certificate) | The key cannot be used for signing a certificate. |
+| [19030007](../errorcode-cert.md#19030007-key-cannot-be-used-for-digital-signature) | The key cannot be used for a digital signature. |
+| [19030004](../errorcode-cert.md#19030004-certificate-expired) | The certificate has expired. |
+| [19030005](../errorcode-cert.md#19030005-failed-to-obtain-the-certificate-issuer) | Failed to obtain the certificate issuer. |
 

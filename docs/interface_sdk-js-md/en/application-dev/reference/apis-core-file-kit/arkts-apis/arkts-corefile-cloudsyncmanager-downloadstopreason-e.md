@@ -1,6 +1,6 @@
 # DownloadStopReason
 
-全量下载停止原因的枚举，默认值为NO_STOP。
+Enumerates the reasons why the full download stops. The default value is **NO_STOP**.
 
 **Since:** 20
 
@@ -16,7 +16,7 @@
 NO_STOP = 0
 ```
 
-下载中未停止。
+Downloading.
 
 **Since:** 20
 
@@ -32,7 +32,7 @@ NO_STOP = 0
 NETWORK_UNAVAILABLE = 1
 ```
 
-下载过程中，移动数据网络和WIFI均不可用。
+Downloading. Mobile network and Wi-Fi are unavailable.
 
 **Since:** 20
 
@@ -48,7 +48,7 @@ NETWORK_UNAVAILABLE = 1
 LOCAL_STORAGE_FULL = 2
 ```
 
-下载过程中，当前设备空间不足。
+Downloading. The device storage is full.
 
 **Since:** 20
 
@@ -64,7 +64,7 @@ LOCAL_STORAGE_FULL = 2
 TEMPERATURE_LIMIT = 3
 ```
 
-下载过程中，设备温度过高。
+Downloading. The device temperature exceeds the upper limit.
 
 **Since:** 20
 
@@ -80,7 +80,7 @@ TEMPERATURE_LIMIT = 3
 USER_STOPPED = 4
 ```
 
-下载过程中，客户端主动停止下载。
+Downloading. The user stops the download.
 
 **Since:** 20
 
@@ -96,7 +96,7 @@ USER_STOPPED = 4
 APP_UNLOAD = 5
 ```
 
-下载过程中，云文件所属应用被卸载。
+Downloading. The application is uninstalled.
 
 **Since:** 20
 
@@ -112,7 +112,7 @@ APP_UNLOAD = 5
 OTHER_REASON = 6
 ```
 
-下载过程中，因其他原因停止下载，如：云服务器未响应等。
+Downloading. The download stops due to other reasons, for example, the cloud server does not respond.
 
 **Since:** 20
 

@@ -12,17 +12,20 @@ import { mediaquery } from 'kits/@kit.ArkUI';
 function matchMediaSync(condition: string): MediaQueryListener
 ```
 
-设置媒体查询的查询条件，并返回对应的监听句柄。
+Sets the media query condition. This API returns the corresponding media query listener.
 
-> **说明：**
+> **NOTE：**
 > 
-> -matchMediaSync需先通过[UIContext](arkts-arkui-uicontext.md)中的
-> [getMediaQuery](../../../reference/apis-arkui/arkts-apis-uicontext-uicontext.md#getmediaquery)方法获取
-> [MediaQuery](arkts-arkui-uicontext.md)对象，然后通过该对象进行调用。
+> - This API is supported since API version 7 and deprecated since API version 18. You are advised to use
+> [matchMediaSync](arkts-arkui-arkui-uicontext-mediaquery-c.md#matchmediasync) instead. Before calling this API, you
+> need to obtain the [MediaQuery](arkts-arkui-arkui-uicontext-mediaquery-c.md) object using the
+> [getMediaQuery](arkts-arkui-arkui-uicontext-uicontext-c.md#getmediaquery) method in
+> [UIContext](arkts-arkui-uicontext.md).
 > 
-> - 从API version 10开始，可以通过使用[UIContext](arkts-arkui-uicontext.md)中的
-> [getMediaQuery](../../../reference/apis-arkui/arkts-apis-uicontext-uicontext.md#getmediaquery)方法获取当前UI上下文关联的
-> [MediaQuery](arkts-arkui-uicontext.md)对象。
+> - Since API version 10, you can use the
+> [getMediaQuery](arkts-arkui-arkui-uicontext-uicontext-c.md#getmediaquery) API in
+> [UIContext](arkts-arkui-arkui-uicontext-uicontext-c.md) to obtain the
+> [MediaQuery](arkts-arkui-arkui-uicontext-mediaquery-c.md) object associated with the current UI context.
 
 **Since:** 7
 
@@ -44,13 +47,13 @@ function matchMediaSync(condition: string): MediaQueryListener
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| condition | string | Yes | 媒体事件的匹配条件，具体可参考[媒体查询语法规则](../../../ui/arkts-layout-development-media-query.md#语法规则)。 |
+| condition | string | Yes | Media query condition. For details, see [Syntax](../../../ui/arkts-layout-development-media-query.md#syntax). |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [MediaQueryListener](arkts-arkui-mediaquery-mediaquerylistener-i.md) | 媒体事件监听句柄，用于注册和注销监听回调。 |
+| [MediaQueryListener](arkts-arkui-mediaquery-mediaquerylistener-i.md) | Media query listener, which is used to register or deregister the listening callback. |
 
 ## Examples
 

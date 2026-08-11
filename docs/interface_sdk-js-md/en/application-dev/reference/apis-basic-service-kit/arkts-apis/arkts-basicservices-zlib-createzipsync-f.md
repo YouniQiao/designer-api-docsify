@@ -12,7 +12,7 @@ import { zlib } from 'kits/@kit.BasicServicesKit';
 function createZipSync(): Zip
 ```
 
-创建压缩解压缩对象实例，成功时返回压缩解压缩对象实例。
+Creates this **Zip** instance. A **Zip** instance is returned upon a success.
 
 **Since:** 12
 
@@ -28,7 +28,7 @@ function createZipSync(): Zip
 
 | Type | Description |
 | --- | --- |
-| [Zip](arkts-basicservices-zlib-zip-i.md) | 返回压缩解压缩对象实例。 |
+| [Zip](arkts-basicservices-zlib-zip-i.md) | The **Zip** instance created. |
 
 ## Examples
 

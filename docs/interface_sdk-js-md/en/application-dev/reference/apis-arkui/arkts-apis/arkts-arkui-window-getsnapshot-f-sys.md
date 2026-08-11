@@ -12,8 +12,8 @@ import { window } from 'kits/@kit.ArkUI';
 function getSnapshot(windowId: int): Promise<image.PixelMap>
 ```
 
-获取指定窗口相同尺寸截图，使用Promise异步回调。若当前窗口设置为隐私模式（可通过  
-[setWindowPrivacyMode](arkts-arkui-window-window-i.md#setwindowprivacymode)接口设置），截图结果为白屏。
+Obtains a snapshot of the same size as the specified window. This API uses a promise to return the result. If privacy mode is enabled for the current window (using  
+[setWindowPrivacyMode](arkts-arkui-window-window-i.md#setwindowprivacymode)), taking a screenshot will result in a blank screen.
 
 **Since:** 12
 
@@ -29,7 +29,7 @@ function getSnapshot(windowId: int): Promise<image.PixelMap>
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| windowId | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | 窗口Id。可通过[getWindowProperties](arkts-arkui-window-window-i.md#getwindowproperties) 接口获取到相关窗口属性，其中属性id即对应为窗口ID。 |
+| windowId | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | Indicates target window id. |
 
 **Return value:**
 
@@ -41,10 +41,10 @@ function getSnapshot(windowId: int): Promise<image.PixelMap>
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 1300003 | This window manager service works abnormally. |
-| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt;2. Incorrect parameter types. 3.Parameter verification failed. |
-| 1300002 | This window state is abnormal. Possible cause: Internal task error. |
-| 202 | Permission verification failed. A non-system application calls a system API. |
+| [1300003](../errorcode-window.md#1300003-abnormal-window-manager-service) | This window manager service works abnormally. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt;2. Incorrect parameter types. 3.Parameter verification failed. |
+| [1300002](../errorcode-window.md#1300002-abnormal-window-state) | This window state is abnormal. Possible cause: Internal task error. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
 
 ## Examples
 

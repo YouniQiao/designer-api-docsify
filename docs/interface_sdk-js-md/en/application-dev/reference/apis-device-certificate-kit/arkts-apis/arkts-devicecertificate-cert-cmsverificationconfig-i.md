@@ -1,6 +1,6 @@
 # CmsVerificationConfig
 
-CMS验签的配置。
+Represents CMS verification configuration.
 
 **Since:** 22
 
@@ -22,7 +22,7 @@ import { cert } from 'kits/@kit.DeviceCertificateKit';
 contentData?: Uint8Array
 ```
 
-内容数据，如果是detached模式，则需要指定明文数据。attached模式可以不传。
+Content data. If the detached mode is used, you need to specify the plaintext data. This parameter can be left empty in attached mode.
 
 **Type:** Uint8Array
 
@@ -42,7 +42,7 @@ contentData?: Uint8Array
 contentDataFormat?: CmsContentDataFormat
 ```
 
-内容数据的格式。默认为CmsContentDataFormat.BINARY。
+Format of the content. The default value is **CmsContentDataFormat.BINARY**.
 
 **Type:** [CmsContentDataFormat](arkts-devicecertificate-cert-cmscontentdataformat-e.md)
 
@@ -64,7 +64,7 @@ contentDataFormat?: CmsContentDataFormat
 signerCerts?: Array<X509Cert>
 ```
 
-签名者证书。
+Signer certificates.
 
 **Type:** Array&lt;X509Cert&gt;
 
@@ -84,11 +84,11 @@ signerCerts?: Array<X509Cert>
 trustCerts: Array<X509Cert>
 ```
 
-信任证书。
+Trusted certificates.
 
-> **说明：**
+> **NOTE：**
 > 
-> 需要配置所有签名者的信任证书。
+> You need to configure the trust certificates of all signers.
 
 **Type:** Array&lt;X509Cert&gt;
 

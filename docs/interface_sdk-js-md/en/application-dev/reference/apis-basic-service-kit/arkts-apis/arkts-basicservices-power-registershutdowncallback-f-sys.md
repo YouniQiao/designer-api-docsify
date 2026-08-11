@@ -12,7 +12,7 @@ import { power } from 'kits/@kit.BasicServicesKit';
 function registerShutdownCallback(callback: Callback<boolean>): void
 ```
 
-订阅电源关机或重启的回调提醒。使用callback异步回调。
+Registers a callback to be invoked when the device is shut down or rebooted. This API uses an asynchronous callback to return the result.
 
 **Since:** 23
 
@@ -30,15 +30,15 @@ function registerShutdownCallback(callback: Callback<boolean>): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](arkts-basicservices-base-callback-i.md)&lt;boolean&gt; | Yes | 回调函数，返回true表示重启；返回false表示关机。 |
+| callback | [Callback](arkts-basicservices-base-callback-i.md)&lt;boolean&gt; | Yes | Callback used to return the result. The value **true** indicates that the device is rebooted, and **false** indicates that the device is shut down. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 201 | Permission verification failed. The application does not have the permission required to call the API. |
-| 202 | Permission verification failed. A non-system application calls a system API. |
-| 4900101 | Failed to connect to the service. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed. The application does not have the permission required to call the API. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
+| [4900101](../../apis-basic-services-kit/errorcode-power.md#4900101-service-connection-failure) | Failed to connect to the service. |
 
 ## Examples
 

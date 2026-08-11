@@ -1,6 +1,6 @@
 # SphereGeometry
 
-定义球体.
+Define a sphere.
 
 **Inheritance/Implementation:** SphereGeometry extends [GeometryDefinition](arkts-arkgraphics3d-scenetypes-geometrydefinition-c.md)
 
@@ -18,7 +18,7 @@
 set radius(value: double)
 ```
 
-球体的半径, 单位为世界坐标系下的场景单位（例如cm、m、km等）.
+The radius of the sphere, the unit is the scene unit in the world coordinate system (e.g., cm, m, km).
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：double
 
@@ -36,7 +36,7 @@ set radius(value: double)
 set segmentCount(value: int)
 ```
 
-将球体按经纬度分割成若干圈和段.
+Divide the sphere latitudinally into this many circles and each circle longitudinally into this many segments.
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 

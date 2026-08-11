@@ -1,6 +1,6 @@
 # StyledDateTimeFormat
 
-提供富文本时间日期格式化的能力。
+Provide a DateTime formatting interface which could format DateTime to StyleString.
 
 **Since:** 23
 
@@ -23,7 +23,7 @@ constructor(dateTimeFormat: Intl.DateTimeFormat | SimpleDateTimeFormat,
         options?: StyledDateTimeFormatOptions)
 ```
 
-创建需要富文本显示的时间日期格式化的对象。
+A constructor used to create a StyledDateTimeFormat object.
 
 **Since:** 23
 
@@ -39,8 +39,8 @@ constructor(dateTimeFormat: Intl.DateTimeFormat | SimpleDateTimeFormat,
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| dateTimeFormat | Intl.DateTimeFormat \| SimpleDateTimeFormat | Yes | 用于格式化时间日期的对象。 |
-| options | [StyledDateTimeFormatOptions](arkts-localization-i18n-styleddatetimeformatoptions-i.md) | No | 指定时间日期格式化对象的配置项。默认值：默认的文本样式。 |
+| dateTimeFormat | Intl.DateTimeFormat \| SimpleDateTimeFormat | Yes | Indicates the date and time format object that used to format date. |
+| options | [StyledDateTimeFormatOptions](arkts-localization-i18n-styleddatetimeformatoptions-i.md) | No | Indicates the options used to format the date. |
 
 ## format
 
@@ -48,7 +48,7 @@ constructor(dateTimeFormat: Intl.DateTimeFormat | SimpleDateTimeFormat,
 format(date: Date): StyledString
 ```
 
-对时间日期进行格式化，返回富文本对象。
+Formats a date as a rich text object.
 
 **Since:** 23
 
@@ -64,11 +64,11 @@ format(date: Date): StyledString
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| date | Date | Yes | 时间日期。 &lt;br&gt;**说明：** &lt;br&gt;月份从0开始计数，0表示一月。 |
+| date | Date | Yes | date to be formatted. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [StyledString](../../apis-arkui/arkts-apis/arkts-arkui-styledstring-c.md) | 格式化后的富文本对象。 |
+| [StyledString](../../apis-arkui/arkts-apis/arkts-arkui-styledstring-c.md) | Rich text object after formatting. |
 

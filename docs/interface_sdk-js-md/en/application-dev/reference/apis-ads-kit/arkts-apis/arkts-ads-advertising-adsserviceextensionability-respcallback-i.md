@@ -1,6 +1,6 @@
 # RespCallback
 
-广告请求回调。
+Ad request callback.
 
 **Since:** 11
 
@@ -22,7 +22,7 @@ import { RespCallback } from 'kits/@kit.AdsKit';
 (respData: Map<string, Array<advertising.Advertisement>>): void
 ```
 
-广告请求回调。
+Data in the ad request callback.
 
 **Since:** 11
 
@@ -36,5 +36,5 @@ import { RespCallback } from 'kits/@kit.AdsKit';
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| respData | Map&lt;string, Array&lt;advertising.Advertisement&gt;&gt; | Yes | 广告请求回调数据，是以广告位ID为键， 存储请求到的广告内容的映射集合。 |
+| respData | Map&lt;string, Array&lt;advertising.Advertisement&gt;&gt; | Yes | Callback data of ad requests. It is a mapping collection that takes ad unit ID as the key and stores acquired ad content. |
 

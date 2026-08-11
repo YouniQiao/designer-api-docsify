@@ -1,6 +1,6 @@
 # HistoricalPoint
 
-历史点信息。
+Provides historical touch point information.
 
 **Since:** 10
 
@@ -16,11 +16,11 @@
 force: number
 ```
 
-历史点对应触摸事件的压力大小。
+Touch pressure value of the historical point.
 
-默认值：0
+Default value: **0**
 
-取值范围：[0,65535)，压力越大，值越大。
+Value range: [0, 65535), where higher values indicate stronger pressure.
 
 **Type:** number
 
@@ -42,9 +42,9 @@ force: number
 size: number
 ```
 
-历史点对应触摸事件中手指与屏幕的触摸区域大小。
+Size of the contact area size between the finger and screen in the touch event corresponding to the historical point.
 
-默认值：0
+Default value: **0**
 
 **Type:** number
 
@@ -66,9 +66,9 @@ size: number
 timestamp: number
 ```
 
-历史点对应触摸事件的时间戳，表示触发事件时距离系统启动的时间间隔。
+Timestamp of the touch event corresponding to the historical point, representing the time interval from system boot when the event is triggered.
 
-单位：ns
+Unit: ns
 
 **Type:** number
 
@@ -90,7 +90,7 @@ timestamp: number
 touchObject: TouchObject
 ```
 
-历史点对应触摸事件的基础信息。
+Basic touch event information for the historical point.
 
 **Type:** [TouchObject](../arkts-apis/arkts-arkui-common-touchobject-i.md)
 

@@ -22,7 +22,7 @@ import { webview } from 'kits/@kit.ArkWeb';
 height: double
 ```
 
-Number of the height.
+Number of the height. Unit: in.
 
 **Type:** double
 
@@ -40,7 +40,7 @@ Number of the height.
 marginBottom: double
 ```
 
-Number of the marginBottom.
+Number of the marginBottom. Unit: in.
 
 **Type:** double
 
@@ -58,7 +58,7 @@ Number of the marginBottom.
 marginLeft: double
 ```
 
-Number of the marginLeft.
+Number of the marginLeft. Unit: in.
 
 **Type:** double
 
@@ -76,7 +76,7 @@ Number of the marginLeft.
 marginRight: double
 ```
 
-Number of the marginRight.
+Number of the marginRight. Unit: in.
 
 **Type:** double
 
@@ -94,7 +94,7 @@ Number of the marginRight.
 marginTop: double
 ```
 
-Number of the marginTop.
+Number of the marginTop. Unit: in.
 
 **Type:** double
 
@@ -148,7 +148,7 @@ Whether background should be printed when creating pdf.
 width: double
 ```
 
-Number of the width.
+Number of the width. Unit: in.
 
 **Type:** double
 

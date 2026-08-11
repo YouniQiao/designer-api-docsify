@@ -30,13 +30,3 @@ function isDoubleClickAppForSelf(): Promise<boolean>
 | --- | --- |
 | Promise&lt;boolean&gt; | Check result. { |
 
-## Examples
-
-```TypeScript
-import { settings } from '@kit.BasicServicesKit';
-
-settings.isDoubleClickAppForSelf().then((result: boolean) => {
-  console.info(`isDoubleClickAppForSelf result: ${result}`);
-})
-```
-

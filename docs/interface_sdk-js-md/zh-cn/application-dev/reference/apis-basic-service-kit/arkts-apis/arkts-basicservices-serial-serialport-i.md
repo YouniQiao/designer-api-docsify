@@ -10,12 +10,6 @@
 
 **系统能力：** SystemCapability.BusManager.Serial
 
-## 导入模块
-
-```TypeScript
-import { serial } from 'kits/@kit.BasicServicesKit';
-```
-
 ## close
 
 ```TypeScript
@@ -44,8 +38,8 @@ close(): Promise<void>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 35700001 | Service error. |
-| 35700005 | Port not open. |
+| [35700001](../../apis-basic-services-kit/errorcode-busmanager-serial.md#35700001-服务异常) | Service error. |
+| [35700005](../../apis-basic-services-kit/errorcode-busmanager-serial.md#35700005-端口未打开) | Port not open. |
 
 ## drain
 
@@ -75,9 +69,9 @@ drain(): Promise<void>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 35700001 | Service error. |
-| 35700003 | Virtual serial port disconnected. |
-| 35700005 | Port not open. |
+| [35700001](../../apis-basic-services-kit/errorcode-busmanager-serial.md#35700001-服务异常) | Service error. |
+| [35700003](../../apis-basic-services-kit/errorcode-busmanager-serial.md#35700003-虚拟串口断开) | Virtual serial port disconnected. |
+| [35700005](../../apis-basic-services-kit/errorcode-busmanager-serial.md#35700005-端口未打开) | Port not open. |
 
 ## flush
 
@@ -107,9 +101,9 @@ flush串口缓冲区。使用Promise异步回调。
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 35700001 | Service error. |
-| 35700003 | Virtual serial port disconnected. |
-| 35700005 | Port not open. |
+| [35700001](../../apis-basic-services-kit/errorcode-busmanager-serial.md#35700001-服务异常) | Service error. |
+| [35700003](../../apis-basic-services-kit/errorcode-busmanager-serial.md#35700003-虚拟串口断开) | Virtual serial port disconnected. |
+| [35700005](../../apis-basic-services-kit/errorcode-busmanager-serial.md#35700005-端口未打开) | Port not open. |
 
 ## getCts
 
@@ -139,9 +133,9 @@ getCts(): Promise<boolean>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 35700001 | Service error. |
-| 35700003 | Virtual serial port disconnected. |
-| 35700005 | Port not open. |
+| [35700001](../../apis-basic-services-kit/errorcode-busmanager-serial.md#35700001-服务异常) | Service error. |
+| [35700003](../../apis-basic-services-kit/errorcode-busmanager-serial.md#35700003-虚拟串口断开) | Virtual serial port disconnected. |
+| [35700005](../../apis-basic-services-kit/errorcode-busmanager-serial.md#35700005-端口未打开) | Port not open. |
 
 ## getDsr
 
@@ -171,9 +165,9 @@ getDsr(): Promise<boolean>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 35700001 | Service error. |
-| 35700003 | Virtual serial port disconnected. |
-| 35700005 | Port not open. |
+| [35700001](../../apis-basic-services-kit/errorcode-busmanager-serial.md#35700001-服务异常) | Service error. |
+| [35700003](../../apis-basic-services-kit/errorcode-busmanager-serial.md#35700003-虚拟串口断开) | Virtual serial port disconnected. |
+| [35700005](../../apis-basic-services-kit/errorcode-busmanager-serial.md#35700005-端口未打开) | Port not open. |
 
 ## offDataRead
 
@@ -203,8 +197,8 @@ offDataRead(callback?: Callback<Uint8Array>): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 35700001 | Service error. |
-| 35700005 | Port not open. |
+| [35700001](../../apis-basic-services-kit/errorcode-busmanager-serial.md#35700001-服务异常) | Service error. |
+| [35700005](../../apis-basic-services-kit/errorcode-busmanager-serial.md#35700005-端口未打开) | Port not open. |
 
 ## offDisconnect
 
@@ -234,8 +228,8 @@ offDisconnect(callback?: Callback<void>): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 35700001 | Service error. |
-| 35700005 | Port not open. |
+| [35700001](../../apis-basic-services-kit/errorcode-busmanager-serial.md#35700001-服务异常) | Service error. |
+| [35700005](../../apis-basic-services-kit/errorcode-busmanager-serial.md#35700005-端口未打开) | Port not open. |
 
 ## onDataRead
 
@@ -265,9 +259,9 @@ onDataRead(callback: Callback<Uint8Array>): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 35700001 | Service error. |
-| 35700003 | Virtual serial port disconnected. |
-| 35700005 | Port not open. |
+| [35700001](../../apis-basic-services-kit/errorcode-busmanager-serial.md#35700001-服务异常) | Service error. |
+| [35700003](../../apis-basic-services-kit/errorcode-busmanager-serial.md#35700003-虚拟串口断开) | Virtual serial port disconnected. |
+| [35700005](../../apis-basic-services-kit/errorcode-busmanager-serial.md#35700005-端口未打开) | Port not open. |
 
 ## onDisconnect
 
@@ -297,8 +291,8 @@ onDisconnect(callback: Callback<void>): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 35700001 | Service error. |
-| 35700005 | Port not open. |
+| [35700001](../../apis-basic-services-kit/errorcode-busmanager-serial.md#35700001-服务异常) | Service error. |
+| [35700005](../../apis-basic-services-kit/errorcode-busmanager-serial.md#35700005-端口未打开) | Port not open. |
 
 ## open
 
@@ -334,11 +328,11 @@ open(config?: SerialConfigs): Promise<void>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 35700001 | Service error. |
-| 35700002 | Invalid parameter. |
-| 35700003 | Virtual serial port disconnected. |
-| 35700004 | Port already in use. |
-| 35700007 | User authorization required. |
+| [35700001](../../apis-basic-services-kit/errorcode-busmanager-serial.md#35700001-服务异常) | Service error. |
+| [35700002](../../apis-basic-services-kit/errorcode-busmanager-serial.md#35700002-参数错误) | Invalid parameter. |
+| [35700003](../../apis-basic-services-kit/errorcode-busmanager-serial.md#35700003-虚拟串口断开) | Virtual serial port disconnected. |
+| [35700004](../../apis-basic-services-kit/errorcode-busmanager-serial.md#35700004-端口已被占用) | Port already in use. |
+| [35700007](../../apis-basic-services-kit/errorcode-busmanager-serial.md#35700007-需要用户授权) | User authorization required. |
 
 ## sendBrk
 
@@ -368,9 +362,9 @@ sendBrk(): Promise<void>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 35700001 | Service error. |
-| 35700003 | Virtual serial port disconnected. |
-| 35700005 | Port not open. |
+| [35700001](../../apis-basic-services-kit/errorcode-busmanager-serial.md#35700001-服务异常) | Service error. |
+| [35700003](../../apis-basic-services-kit/errorcode-busmanager-serial.md#35700003-虚拟串口断开) | Virtual serial port disconnected. |
+| [35700005](../../apis-basic-services-kit/errorcode-busmanager-serial.md#35700005-端口未打开) | Port not open. |
 
 ## setDtr
 
@@ -406,9 +400,9 @@ setDtr(enable: boolean): Promise<void>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 35700001 | Service error. |
-| 35700003 | Virtual serial port disconnected. |
-| 35700005 | Port not open. |
+| [35700001](../../apis-basic-services-kit/errorcode-busmanager-serial.md#35700001-服务异常) | Service error. |
+| [35700003](../../apis-basic-services-kit/errorcode-busmanager-serial.md#35700003-虚拟串口断开) | Virtual serial port disconnected. |
+| [35700005](../../apis-basic-services-kit/errorcode-busmanager-serial.md#35700005-端口未打开) | Port not open. |
 
 ## setRts
 
@@ -444,9 +438,9 @@ setRts(enable: boolean): Promise<void>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 35700001 | Service error. |
-| 35700003 | Virtual serial port disconnected. |
-| 35700005 | Port not open. |
+| [35700001](../../apis-basic-services-kit/errorcode-busmanager-serial.md#35700001-服务异常) | Service error. |
+| [35700003](../../apis-basic-services-kit/errorcode-busmanager-serial.md#35700003-虚拟串口断开) | Virtual serial port disconnected. |
+| [35700005](../../apis-basic-services-kit/errorcode-busmanager-serial.md#35700005-端口未打开) | Port not open. |
 
 ## write
 
@@ -489,11 +483,11 @@ write(data: Uint8Array, timeout?: int): Promise<int>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 35700001 | Service error. |
-| 35700002 | Invalid parameter. |
-| 35700003 | Virtual serial port disconnected. |
-| 35700005 | Port not open. |
-| 35700006 | Transmission timeout. |
+| [35700001](../../apis-basic-services-kit/errorcode-busmanager-serial.md#35700001-服务异常) | Service error. |
+| [35700002](../../apis-basic-services-kit/errorcode-busmanager-serial.md#35700002-参数错误) | Invalid parameter. |
+| [35700003](../../apis-basic-services-kit/errorcode-busmanager-serial.md#35700003-虚拟串口断开) | Virtual serial port disconnected. |
+| [35700005](../../apis-basic-services-kit/errorcode-busmanager-serial.md#35700005-端口未打开) | Port not open. |
+| [35700006](../../apis-basic-services-kit/errorcode-busmanager-serial.md#35700006-传输超时) | Transmission timeout. |
 
 ## portInfo
 

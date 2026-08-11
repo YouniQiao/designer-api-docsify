@@ -1,11 +1,5 @@
 # getUniformDataTypesByMIMEType
 
-## 导入模块
-
-```TypeScript
-import { uniformTypeDescriptor } from 'kits/@kit.ArkData';
-```
-
 ## getUniformDataTypesByMIMEType
 
 ```TypeScript
@@ -41,7 +35,7 @@ function getUniformDataTypesByMIMEType(mimeType: string, belongsTo?: string): Ar
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 401 | Parameter error. Possible causes:1.Mandatory parameters are left unspecified; &lt;br&gt;2.Incorrect parameter types; &lt;br&gt;3. Parameter verification failed. |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes:1.Mandatory parameters are left unspecified; &lt;br&gt;2.Incorrect parameter types; &lt;br&gt;3. Parameter verification failed. |
 
 ## 示例
 
@@ -59,7 +53,7 @@ try {
   console.error(`getUniformDataTypesByMIMEType throws an exception. code is ${error.code}, message is ${error.message} `);
 }
 
-// 根据“image/myimage”, “general.image”查不到预置数据类型则返回根据入参信息生成的动态类型列表。
+// 根据“image/myimage”, “general.image”查不到预置数据类型则按返回根据入参信息生成的动态类型列表。
 try {
   let flexTypeIds = uniformTypeDescriptor.getUniformDataTypesByMIMEType('image/myimage', 'general.image');
   for (let flexTypeId of flexTypeIds) {

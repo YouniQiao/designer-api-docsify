@@ -1,6 +1,6 @@
 # DHKeyUtil
 
-根据素数P的长度和私钥长度（bit位数）生成DH公共密钥参数。
+Generates common parameters for a DH key based on the prime **p** length and the private key length.
 
 **Since:** 11
 
@@ -30,8 +30,7 @@ ArkTS-Sta:
 static genDHCommonParamsSpec(pLen: int, skLen?: int): DHCommonParamsSpec
 ```
 
-根据素数P的长度和私钥长度（单位为bit）生成DH公共密钥参数。详见  
-[DH密钥生成规格](../../../security/CryptoArchitectureKit/crypto-key-generation-conversion.md#dh)。
+Generates common parameters for a DH key based on the prime **p** length and the private key length, in bits. For details, see [DH](../../../security/CryptoArchitectureKit/crypto-key-generation-conversion.md#dh).
 
 **Since:** 11
 
@@ -49,23 +48,23 @@ static genDHCommonParamsSpec(pLen: int, skLen?: int): DHCommonParamsSpec
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| pLen | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | 用于指定DH公共密钥参数中素数P的长度，单位为bits。 |
-| skLen | ArkTS-Dyn: number  <br>ArkTS-Sta：int | No | 用于指定生成DH私钥的最大长度，单位为bits，默认值为0。&lt;br&gt;当参数值设置为0时，生成DH私钥的最大长度为： &lt;br&gt;ffdhe2048：255 bits。&lt;br&gt;ffdhe3072：275 bits。&lt;br&gt;ffdhe4096：325 bits。&lt;br&gt;ffdhe6144：375 bits。 &lt;br&gt;ffdhe8192：400 bits。 |
+| pLen | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | Length of the prime **p**, in bits. |
+| skLen | ArkTS-Dyn: number  <br>ArkTS-Sta：int | No | Maximum length of the generated DH private key, in bits. The default value is **0**.&lt;br&gt; When this parameter is set to **0**, the maximum length of the generated DH private key is as follows:&lt;br&gt; ffdhe2048: 255 bits.&lt;br&gt;ffdhe3072: 275 bits.&lt;br&gt;ffdhe4096: 325 bits.&lt;br&gt;ffdhe6144: 375 bits.&lt;br&gt;ffdhe8192: 400 bits. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [DHCommonParamsSpec](arkts-cryptoarchitecture-cryptoframework-dhcommonparamsspec-i.md) | 返回DH公共密钥参数。 |
+| [DHCommonParamsSpec](arkts-cryptoarchitecture-cryptoframework-dhcommonparamsspec-i.md) | DH common parameters generated. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | 非法入参。可能的原因： &lt;br&gt;1. 必填参数未指定； &lt;br&gt;2. 参数类型不正确； &lt;br&gt;3. 参数验证失败。 |
-| 801 | 该操作不支持。 |
-| 17630001 | 密码操作错误。 |
-| 17620001 | 内存操作失败。 |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Invalid parameters. Possible causes: &lt;br&gt;1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; &lt;br&gt;3. Parameter verification failed. |
+| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | This operation is not supported. |
+| [17630001](../errorcode-crypto-framework.md#17630001-cryptographic-operation-error) | Crypto operation error. |
+| [17620001](../errorcode-crypto-framework.md#17620001-memory-operation-failed) | Memory operation failed. |
 
 ## Examples
 
@@ -73,11 +72,11 @@ static genDHCommonParamsSpec(pLen: int, skLen?: int): DHCommonParamsSpec
 import { cryptoFramework } from '@kit.CryptoArchitectureKit';
 import { BusinessError } from '@kit.BasicServicesKit';
 try {
-  let DHCommonParamsSpec = cryptoFramework.DHKeyUtil.genDHCommonParamsSpec(2048);
-  console.info('genDHCommonParamsSpec result: success.');
+    let DHCommonParamsSpec = cryptoFramework.DHKeyUtil.genDHCommonParamsSpec(2048);
+    console.info('genDHCommonParamsSpec result: success.');
 } catch (err) {
-  let e: BusinessError = err as BusinessError;
-  console.error(`genDHCommonParamsSpec failed: errCode: ${e.code}, errMsg: ${e.message}`);
+    let e: BusinessError = err as BusinessError;
+    console.error(`genDHCommonParamsSpec failed: errCode: ${e.code}, errMsg: ${e.message}`);
 }
 ```
 

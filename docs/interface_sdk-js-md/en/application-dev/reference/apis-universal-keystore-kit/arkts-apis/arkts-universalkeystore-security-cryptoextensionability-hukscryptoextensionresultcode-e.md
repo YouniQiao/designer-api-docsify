@@ -1,6 +1,6 @@
 # HuksCryptoExtensionResultCode
 
-[HuksCryptoExtensionResult](arkts-universalkeystore-security-cryptoextensionability-hukscryptoextensionresultcode-e.md)中的resultCode枚举值。
+Enum for crypto extension ability result code, used by HuksCryptoExtensionResult.resultCode.
 
 **Since:** 22
 
@@ -16,9 +16,9 @@
 HUKS_CRYPTO_EXTENSION_ERR_EXTENSION_FAIL = 34800000
 ```
 
-密钥扩展错误。可能的原因：
+An error occurred in the crypto extension. Possible causes:
 
-1. 输入参数无效。2. 密钥扩展出现无法解决的错误状态。
+1. The input parameter is invalid.2. The crypto extension encountered an unresolvable error state.
 
 **Since:** 22
 
@@ -36,9 +36,9 @@ HUKS_CRYPTO_EXTENSION_ERR_EXTENSION_FAIL = 34800000
 HUKS_CRYPTO_EXTENSION_ERR_UKEY_NOT_EXIST = 34800001
 ```
 
-UKey不存在。可能的原因：
+The UKey does not exist. Possible causes:
 
-1. UKey已被移除。2. 密钥扩展陷入错误的UKey状态。
+1. The UKey has been removed.2. The crypto extension maintained an error UKey state.
 
 **Since:** 22
 
@@ -56,7 +56,7 @@ UKey不存在。可能的原因：
 HUKS_CRYPTO_EXTENSION_ERR_UKEY_DRIVER_FAIL = 34800002
 ```
 
-UKey驱动出现未知错误。
+The UKey driver error. This means an unknown error has occurred in the UKey driver.
 
 **Since:** 22
 
@@ -74,7 +74,7 @@ UKey驱动出现未知错误。
 HUKS_CRYPTO_EXTENSION_ERR_PIN_NO_AUTH = 34800003
 ```
 
-UKey PIN码未认证，需要先认证Ukey PIN码。
+The UKey PIN is not authenticated. Please verify the UKey PIN first.
 
 **Since:** 22
 
@@ -92,9 +92,9 @@ UKey PIN码未认证，需要先认证Ukey PIN码。
 HUKS_CRYPTO_EXTENSION_ERR_HANDLE_NOT_EXIST = 34800004
 ```
 
-句柄不存在。可能的原因：
+The handle does not exist. Possible causes:
 
-1. 句柄无效。2. HUKS服务和密钥扩展的状态不一致。由于异常情况，HUKS服务持有的句柄未能释放。
+1. The handle you entered is invalid.2. The states of huks service and crypto extension are inconsistent. Due to an exception,the handle held by huks service was not released.
 
 **Since:** 22
 
@@ -112,9 +112,7 @@ HUKS_CRYPTO_EXTENSION_ERR_HANDLE_NOT_EXIST = 34800004
 HUKS_CRYPTO_EXTENSION_ERR_HANDLE_UNAVAILABLE = 34800005
 ```
 
-句柄不可用。可能的原因：
-
-密钥扩展和Ukey的状态不一致。
+The handle is unavailable, possibly due to an inconsistent state between the crypto extension and the UKey.
 
 **Since:** 22
 
@@ -132,7 +130,7 @@ HUKS_CRYPTO_EXTENSION_ERR_HANDLE_UNAVAILABLE = 34800005
 HUKS_CRYPTO_EXTENSION_ERR_PIN_INCORRECT = 34800006
 ```
 
-UKey PIN码错误，需要检查输入的PIN码。
+The UKey PIN is not correct. Please check the PIN you entered.
 
 **Since:** 22
 
@@ -150,9 +148,7 @@ UKey PIN码错误，需要检查输入的PIN码。
 HUKS_CRYPTO_EXTENSION_ERR_PIN_LOCKED = 34800007
 ```
 
-UKey PIN码被锁。可能的原因：
-
-PIN码输入错误次数过多。
+The UKey PIN is locked because the maximum allowed number of attempts has been exceeded.
 
 **Since:** 22
 

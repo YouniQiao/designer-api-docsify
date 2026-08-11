@@ -10,12 +10,6 @@ UiWindow代表了UI界面上的一个窗口，提供窗口属性获取，窗口�
 
 **系统能力：** SystemCapability.Test.UiTest
 
-## 导入模块
-
-```TypeScript
-import { ResizeDirection, WindowMode, PenMode, PenKeyOperation, Driver, MatchPattern, UiDirection, TouchOptions, ComponentEventType, PointerMatrix, WindowChangeType, Component, ON, PenKey, Rect, InputTextMode, UIEventObserver, WindowFilter, WindowChangeOptions, UiWindow, TouchPadSwipeOptions, Point, KeyOptions, DisplayRotation, UIElementInfo, PenKeyOperationOptions, ComponentEventOptions, MouseButton, On } from 'kits/@kit.TestKit';
-```
-
 ## close
 
 ```TypeScript
@@ -44,9 +38,9 @@ close(): Promise<void>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 17000002 | The API does not support concurrent calls. |
-| 17000005 | This operation is not supported. |
-| 17000004 | The window or component is invisible or destroyed. |
+| [17000002](../errorcode-uitest.md#17000002-接口不支持并发调用) | The API does not support concurrent calls. |
+| [17000005](../errorcode-uitest.md#17000005-操作不支持) | This operation is not supported. |
+| [17000004](../errorcode-uitest.md#17000004-目标控件窗口不可见或已销毁) | The window or component is invisible or destroyed. |
 
 ## 示例
 
@@ -56,8 +50,10 @@ import { Driver, UiWindow } from '@kit.TestKit';
 
 async function demo() {
   let driver: Driver = Driver.create();
-  let window: UiWindow = await driver.findWindow({ active: true });
-  await window.close();
+  let window: UiWindow | null = await driver.findWindow({ active: true });
+  if (window) {
+    await window.close();
+  }
 }
 ```
 
@@ -89,8 +85,8 @@ focus(): Promise<void>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 17000002 | The API does not support concurrent calls. |
-| 17000004 | The window or component is invisible or destroyed. |
+| [17000002](../errorcode-uitest.md#17000002-接口不支持并发调用) | The API does not support concurrent calls. |
+| [17000004](../errorcode-uitest.md#17000004-目标控件窗口不可见或已销毁) | The window or component is invisible or destroyed. |
 
 ## 示例
 
@@ -100,8 +96,10 @@ import { Driver, UiWindow } from '@kit.TestKit';
 
 async function demo() {
   let driver: Driver = Driver.create();
-  let window: UiWindow = await driver.findWindow({ active: true });
-  await window.focus();
+  let window: UiWindow | null = await driver.findWindow({ active: true });
+  if (window) {
+    await window.focus();
+  }
 }
 ```
 
@@ -133,8 +131,8 @@ getBounds(): Promise<Rect>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 17000002 | The API does not support concurrent calls. |
-| 17000004 | The window or component is invisible or destroyed. |
+| [17000002](../errorcode-uitest.md#17000002-接口不支持并发调用) | The API does not support concurrent calls. |
+| [17000004](../errorcode-uitest.md#17000004-目标控件窗口不可见或已销毁) | The window or component is invisible or destroyed. |
 
 ## 示例
 
@@ -143,12 +141,11 @@ getBounds(): Promise<Rect>
 import { Driver, UiWindow } from '@kit.TestKit';
 
 async function demo() {
-  // 创建Driver对象。
   let driver: Driver = Driver.create();
-  // 查找当前活跃窗口。
-  let window: UiWindow = await driver.findWindow({ active: true });
-  // 获取窗口的边框信息。
-  let rect = await window.getBounds();
+  let window: UiWindow | null = await driver.findWindow({ active: true });
+  if (window) {
+    let rect = await window.getBounds();
+  }
 }
 ```
 
@@ -180,8 +177,8 @@ getBundleName(): Promise<string>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 17000002 | The API does not support concurrent calls. |
-| 17000004 | The window or component is invisible or destroyed. |
+| [17000002](../errorcode-uitest.md#17000002-接口不支持并发调用) | The API does not support concurrent calls. |
+| [17000004](../errorcode-uitest.md#17000004-目标控件窗口不可见或已销毁) | The window or component is invisible or destroyed. |
 
 ## 示例
 
@@ -190,12 +187,11 @@ getBundleName(): Promise<string>
 import { Driver, UiWindow } from '@kit.TestKit';
 
 async function demo() {
-  // 创建Driver对象。
   let driver: Driver = Driver.create();
-  // 查找当前活跃窗口。
-  let window: UiWindow = await driver.findWindow({ active: true });
-  // 获取窗口归属应用的包名。
-  let name: string = await window.getBundleName();
+  let window: UiWindow | null = await driver.findWindow({ active: true });
+  if (window) {
+    let name: string = await window.getBundleName();
+  }
 }
 ```
 
@@ -233,8 +229,8 @@ getDisplayId(): Promise<int>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 17000002 | The API does not support concurrent calls. |
-| 17000004 | The window or component is invisible or destroyed. |
+| [17000002](../errorcode-uitest.md#17000002-接口不支持并发调用) | The API does not support concurrent calls. |
+| [17000004](../errorcode-uitest.md#17000004-目标控件窗口不可见或已销毁) | The window or component is invisible or destroyed. |
 
 ## 示例
 
@@ -244,8 +240,10 @@ import { UiWindow, Driver } from '@kit.TestKit';
 
 async function demo() {
   let driver: Driver = Driver.create();
-  let window: UiWindow = await driver.findWindow({ active: true });
-  let id = await window.getDisplayId();
+  let window: UiWindow | null = await driver.findWindow({ active: true });
+  if (window) {
+    let id = await window.getDisplayId();
+  }
 }
 ```
 
@@ -277,8 +275,8 @@ getTitle(): Promise<string>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 17000002 | The API does not support concurrent calls. |
-| 17000004 | The window or component is invisible or destroyed. |
+| [17000002](../errorcode-uitest.md#17000002-接口不支持并发调用) | The API does not support concurrent calls. |
+| [17000004](../errorcode-uitest.md#17000004-目标控件窗口不可见或已销毁) | The window or component is invisible or destroyed. |
 
 ## 示例
 
@@ -288,8 +286,10 @@ import { Driver, UiWindow } from '@kit.TestKit';
 
 async function demo() {
   let driver: Driver = Driver.create();
-  let window: UiWindow = await driver.findWindow({ active: true });
-  let title = await window.getTitle();
+  let window: UiWindow | null = await driver.findWindow({ active: true });
+  if (window) {
+    let title = await window.getTitle();
+  }
 }
 ```
 
@@ -321,8 +321,8 @@ getWindowMode(): Promise<WindowMode>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 17000002 | The API does not support concurrent calls. |
-| 17000004 | The window or component is invisible or destroyed. |
+| [17000002](../errorcode-uitest.md#17000002-接口不支持并发调用) | The API does not support concurrent calls. |
+| [17000004](../errorcode-uitest.md#17000004-目标控件窗口不可见或已销毁) | The window or component is invisible or destroyed. |
 
 ## 示例
 
@@ -332,8 +332,10 @@ import { Driver, UiWindow } from '@kit.TestKit';
 
 async function demo() {
   let driver: Driver = Driver.create();
-  let window: UiWindow = await driver.findWindow({ active: true });
-  let mode = await window.getWindowMode();
+  let window: UiWindow | null = await driver.findWindow({ active: true });
+  if (window) {
+    let mode = await window.getWindowMode();
+  }
 }
 ```
 
@@ -365,8 +367,8 @@ isActive(): Promise<boolean>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 17000002 | The API does not support concurrent calls. |
-| 17000004 | The window or component is invisible or destroyed. |
+| [17000002](../errorcode-uitest.md#17000002-接口不支持并发调用) | The API does not support concurrent calls. |
+| [17000004](../errorcode-uitest.md#17000004-目标控件窗口不可见或已销毁) | The window or component is invisible or destroyed. |
 
 ## 示例
 
@@ -376,8 +378,10 @@ import { Driver, UiWindow } from '@kit.TestKit';
 
 async function demo() {
   let driver: Driver = Driver.create();
-  let window: UiWindow = await driver.findWindow({ active: true });
-  let focused = await window.isActive();
+  let window: UiWindow | null = await driver.findWindow({ active: true });
+  if (window) {
+    let focused = await window.isActive();
+  }
 }
 ```
 
@@ -415,8 +419,8 @@ isActived(): Promise<boolean>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 17000002 | The API does not support concurrent calls. |
-| 17000004 | The window or component is invisible or destroyed. |
+| [17000002](../errorcode-uitest.md#17000002-接口不支持并发调用) | The API does not support concurrent calls. |
+| [17000004](../errorcode-uitest.md#17000004-目标控件窗口不可见或已销毁) | The window or component is invisible or destroyed. |
 
 ## 示例
 
@@ -426,8 +430,10 @@ import { Driver, UiWindow } from '@kit.TestKit';
 
 async function demo() {
   let driver: Driver = Driver.create();
-  let window: UiWindow = await driver.findWindow({ active: true });
-  let focused = await window.isActived();
+  let window: UiWindow | null = await driver.findWindow({ active: true });
+  if (window) {
+    let focused = await window.isActived();
+  }
 }
 ```
 
@@ -459,8 +465,8 @@ isFocused(): Promise<boolean>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 17000002 | The API does not support concurrent calls. |
-| 17000004 | The window or component is invisible or destroyed. |
+| [17000002](../errorcode-uitest.md#17000002-接口不支持并发调用) | The API does not support concurrent calls. |
+| [17000004](../errorcode-uitest.md#17000004-目标控件窗口不可见或已销毁) | The window or component is invisible or destroyed. |
 
 ## 示例
 
@@ -470,8 +476,10 @@ import { Driver, UiWindow } from '@kit.TestKit';
 
 async function demo() {
   let driver: Driver = Driver.create();
-  let window: UiWindow = await driver.findWindow({ active: true });
-  let focused = await window.isFocused();
+  let window: UiWindow | null = await driver.findWindow({ active: true });
+  if (window) {
+    let focused = await window.isFocused();
+  }
 }
 ```
 
@@ -503,9 +511,9 @@ maximize(): Promise<void>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 17000002 | The API does not support concurrent calls. |
-| 17000005 | This operation is not supported. |
-| 17000004 | The window or component is invisible or destroyed. |
+| [17000002](../errorcode-uitest.md#17000002-接口不支持并发调用) | The API does not support concurrent calls. |
+| [17000005](../errorcode-uitest.md#17000005-操作不支持) | This operation is not supported. |
+| [17000004](../errorcode-uitest.md#17000004-目标控件窗口不可见或已销毁) | The window or component is invisible or destroyed. |
 
 ## 示例
 
@@ -515,8 +523,10 @@ import { Driver, UiWindow } from '@kit.TestKit';
 
 async function demo() {
   let driver: Driver = Driver.create();
-  let window: UiWindow = await driver.findWindow({ active: true });
-  await window.maximize();
+  let window: UiWindow | null = await driver.findWindow({ active: true });
+  if (window) {
+    await window.maximize();
+  }
 }
 ```
 
@@ -548,9 +558,9 @@ minimize(): Promise<void>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 17000002 | The API does not support concurrent calls. |
-| 17000005 | This operation is not supported. |
-| 17000004 | The window or component is invisible or destroyed. |
+| [17000002](../errorcode-uitest.md#17000002-接口不支持并发调用) | The API does not support concurrent calls. |
+| [17000005](../errorcode-uitest.md#17000005-操作不支持) | This operation is not supported. |
+| [17000004](../errorcode-uitest.md#17000004-目标控件窗口不可见或已销毁) | The window or component is invisible or destroyed. |
 
 ## 示例
 
@@ -560,8 +570,10 @@ import { Driver, UiWindow } from '@kit.TestKit';
 
 async function demo() {
   let driver: Driver = Driver.create();
-  let window: UiWindow = await driver.findWindow({ active: true });
-  await window.minimize();
+  let window: UiWindow | null = await driver.findWindow({ active: true });
+  if (window) {
+    await window.minimize();
+  }
 }
 ```
 
@@ -606,10 +618,10 @@ moveTo(x: int, y: int): Promise<void>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
-| 17000002 | The API does not support concurrent calls. |
-| 17000005 | This operation is not supported. |
-| 17000004 | The window or component is invisible or destroyed. |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| [17000002](../errorcode-uitest.md#17000002-接口不支持并发调用) | The API does not support concurrent calls. |
+| [17000005](../errorcode-uitest.md#17000005-操作不支持) | This operation is not supported. |
+| [17000004](../errorcode-uitest.md#17000004-目标控件窗口不可见或已销毁) | The window or component is invisible or destroyed. |
 
 ## 示例
 
@@ -619,8 +631,10 @@ import { Driver, UiWindow } from '@kit.TestKit';
 
 async function demo() {
   let driver: Driver = Driver.create();
-  let window: UiWindow = await driver.findWindow({ active: true });
-  await window.moveTo(100, 100);
+  let window: UiWindow | null = await driver.findWindow({ active: true });
+  if (window) {
+    await window.moveTo(100, 100);
+  }
 }
 ```
 
@@ -666,10 +680,10 @@ resize(wide: int, height: int, direction: ResizeDirection): Promise<void>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
-| 17000002 | The API does not support concurrent calls. |
-| 17000005 | This operation is not supported. |
-| 17000004 | The window or component is invisible or destroyed. |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| [17000002](../errorcode-uitest.md#17000002-接口不支持并发调用) | The API does not support concurrent calls. |
+| [17000005](../errorcode-uitest.md#17000005-操作不支持) | This operation is not supported. |
+| [17000004](../errorcode-uitest.md#17000004-目标控件窗口不可见或已销毁) | The window or component is invisible or destroyed. |
 
 ## resume
 
@@ -699,9 +713,9 @@ resume(): Promise<void>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 17000002 | The API does not support concurrent calls. |
-| 17000005 | This operation is not supported. |
-| 17000004 | The window or component is invisible or destroyed. |
+| [17000002](../errorcode-uitest.md#17000002-接口不支持并发调用) | The API does not support concurrent calls. |
+| [17000005](../errorcode-uitest.md#17000005-操作不支持) | This operation is not supported. |
+| [17000004](../errorcode-uitest.md#17000004-目标控件窗口不可见或已销毁) | The window or component is invisible or destroyed. |
 
 ## 示例
 
@@ -711,8 +725,10 @@ import { Driver, UiWindow } from '@kit.TestKit';
 
 async function demo() {
   let driver: Driver = Driver.create();
-  let window: UiWindow = await driver.findWindow({ active: true });
-  await window.resume();
+  let window: UiWindow | null = await driver.findWindow({ active: true });
+  if (window) {
+    await window.resume();
+  }
 }
 ```
 
@@ -744,9 +760,9 @@ split(): Promise<void>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 17000002 | The API does not support concurrent calls. |
-| 17000005 | This operation is not supported. |
-| 17000004 | The window or component is invisible or destroyed. |
+| [17000002](../errorcode-uitest.md#17000002-接口不支持并发调用) | The API does not support concurrent calls. |
+| [17000005](../errorcode-uitest.md#17000005-操作不支持) | This operation is not supported. |
+| [17000004](../errorcode-uitest.md#17000004-目标控件窗口不可见或已销毁) | The window or component is invisible or destroyed. |
 
 ## 示例
 
@@ -756,8 +772,10 @@ import { Driver, UiWindow } from '@kit.TestKit';
 
 async function demo() {
   let driver: Driver = Driver.create();
-  let window: UiWindow = await driver.findWindow({ active: true });
-  await window.split();
+  let window: UiWindow | null = await driver.findWindow({ active: true });
+  if (window) {
+    await window.split();
+  }
 }
 ```
 

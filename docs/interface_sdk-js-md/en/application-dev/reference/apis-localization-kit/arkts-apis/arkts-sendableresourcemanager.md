@@ -1,8 +1,8 @@
 # @ohos.sendableResourceManager
 
-本模块提供[Resource](arkts-localization-sendableresourcemanager-resource-t.md)对象与  
-[SendableResource](arkts-localization-sendableresourcemanager-sendableresource-t.md)对象之间的相互转换功能。SendableResource实现了  
-[ISendable](../../../arkts-utils/arkts-sendable.md#isendable)接口，支持跨线程传输。跨线程传输后，SendableResource对象可以再转换为Resource对象，作为参数传递给[资源管理](arkts-resourcemanager.md)接口以获取资源。
+This module provides the mutual conversion between [Resource](arkts-localization-sendableresourcemanager-resource-t.md) objects and   
+[SendableResource](arkts-localization-sendableresourcemanager-sendableresource-t.md) objects. `SendableResource` implements the   
+[ISendable](../../../arkts-utils/arkts-sendable.md#isendable) API and supports cross-thread transmission. After cross-thread transmission, the `SendableResource` object can be converted back to a `Resource` object and passed as a parameter to the [resource management](arkts-resourcemanager.md) APIs to obtain resources.
 
 **Since:** 12
 
@@ -24,13 +24,13 @@ import { sendableResourceManager } from 'kits/@kit.LocalizationKit';
 
 | Name | Description |
 | --- | --- |
-| [resourceToSendableResource](arkts-localization-sendableresourcemanager-resourcetosendableresource-f.md#resourcetosendableresource) | 将Resource对象转换为可用于跨线程传输的SendableResource对象。 |
-| [sendableResourceToResource](arkts-localization-sendableresourcemanager-sendableresourcetoresource-f.md#sendableresourcetoresource) | 将跨线程传输的SendableResource对象转换为Resource对象。 |
+| [resourceToSendableResource](arkts-localization-sendableresourcemanager-resourcetosendableresource-f.md#resourcetosendableresource) | Converts a `Resource` object to a `SendableResource` object that can be used for cross-thread transmission. |
+| [sendableResourceToResource](arkts-localization-sendableresourcemanager-sendableresourcetoresource-f.md#sendableresourcetoresource) | Converts a `SendableResource` object transmitted across threads to a `Resource` object. |
 
 ### Types
 
 | Name | Description |
 | --- | --- |
-| [Resource](arkts-localization-sendableresourcemanager-resource-t.md) | 表示资源相关信息，包括应用包名、应用模块名、资源ID、资源类型和其他资源参数。 |
-| [SendableResource](arkts-localization-sendableresourcemanager-sendableresource-t.md) | 表示跨线程传输的Sendable资源相关信息，包括应用包名、应用模块名、资源ID、资源类型和其他资源参数。 |
+| [Resource](arkts-localization-sendableresourcemanager-resource-t.md) | Represents resource-related information, including the application bundle name, application module name, resource ID, resource type, and other resource parameters. |
+| [SendableResource](arkts-localization-sendableresourcemanager-sendableresource-t.md) | Represents Sendable resource-related information for cross-thread transmission, including the application bundle name, application module name, resource ID, resource type, and other resource parameters. |
 

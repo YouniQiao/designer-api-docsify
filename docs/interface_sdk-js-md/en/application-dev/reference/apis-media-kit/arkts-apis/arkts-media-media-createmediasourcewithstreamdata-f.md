@@ -12,7 +12,7 @@ import { media } from 'kits/@kit.MediaKit';
 function createMediaSourceWithStreamData(streams: Array<MediaStream>): MediaSource
 ```
 
-创建流媒体多码率媒体来源实例方法，当前仅支持HTTP-FLV协议格式多码率。
+Creates a multi-bitrate media source for streaming media. Currently, only the HTTP-FLV multi-bitrate media source is supported.
 
 **Since:** 19
 
@@ -28,13 +28,13 @@ function createMediaSourceWithStreamData(streams: Array<MediaStream>): MediaSour
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| streams | Array&lt;MediaStream&gt; | Yes | 可设置MediaStream数组，支持的流媒体格式：HTTP-FLV。 |
+| streams | Array&lt;MediaStream&gt; | Yes | Array of MediaStream objects. The supported streaming media format is HTTP- FLV. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [MediaSource](arkts-media-multimedia-media-mediasource-i.md) | 返回MediaSource，用于媒体资源设置。 |
+| [MediaSource](arkts-media-media-mediasource-i.md) | MediaSource instance. |
 
 ## Examples
 
@@ -73,5 +73,5 @@ Creates a multi-bitrate media source for streaming media. Currently, only the HT
 
 | Type | Description |
 | --- | --- |
-| [MediaSource](arkts-media-multimedia-media-mediasource-i.md) | MediaSource instance if the operation is successful; returns null otherwise. |
+| [MediaSource](arkts-media-media-mediasource-i.md) | MediaSource instance if the operation is successful; returns undefined otherwise. |
 

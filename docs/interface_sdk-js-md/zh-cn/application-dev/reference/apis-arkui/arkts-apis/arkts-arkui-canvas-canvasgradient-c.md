@@ -40,5 +40,5 @@ addColorStop(offset: double, color: string | ColorMetrics): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 103701 | The color's ColorSpace is not the same as the last color's. |
+| [103701](../errorcode-canvas.md#103701-参数错误) | The color's ColorSpace is not the same as the last color's. |
 

@@ -1,6 +1,6 @@
 # BarrierDirection
 
-定义屏障线的方向。
+Specifies the direction value of Barrier.
 
 **Since:** 23
 
@@ -16,7 +16,7 @@
 LEFT
 ```
 
-屏障在其所有referencedId的最左侧。
+Barrier will be positioned to the far left of all referenced components.
 
 **Since:** 23
 
@@ -34,7 +34,7 @@ LEFT
 RIGHT
 ```
 
-屏障在其所有referencedId的最右侧。
+Barrier will be positioned to the far right of all referenced components.
 
 **Since:** 23
 
@@ -52,7 +52,7 @@ RIGHT
 TOP
 ```
 
-屏障在其所有referencedId的最上方。
+Barrier will be positioned to the top of all referenced components.
 
 **Since:** 23
 
@@ -70,7 +70,7 @@ TOP
 BOTTOM
 ```
 
-屏障在其所有referencedId的最下方。
+Barrier will be positioned to the bottom of all referenced components.
 
 **Since:** 23
 

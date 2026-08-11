@@ -1,6 +1,6 @@
 # PropertyDescriptor
 
-属性的SSAP描述符。
+Describes the SSAP descriptor for property.
 
 **Since:** 26.0.0
 
@@ -22,7 +22,7 @@ import { ssap } from 'kits/@kit.ConnectivityKit';
 descriptorType: PropertyDescriptorType
 ```
 
-属性描述符实例的类型。
+The type of the propertyDescriptor instance.
 
 **Type:** [PropertyDescriptorType](arkts-connectivity-ssap-propertydescriptortype-e.md)
 
@@ -42,7 +42,7 @@ descriptorType: PropertyDescriptorType
 isWriteable?: boolean
 ```
 
-描述符是否可写。默认值： 默认值：false。
+Indicates whether the descriptor is writable.Default value: true.
 
 **Type:** boolean
 
@@ -62,7 +62,7 @@ isWriteable?: boolean
 propertyUuid: string
 ```
 
-描述符所属的属性实例的UUID。长度必须为36，由16进制数字字符和连字符共36个字符组成，形如“FFFFFFFF-1234-5678-ABCD-000000001234”，代表128比特标识。&lt;br&gt;禁止使用星闪标准服务UUID。
+The UUID of the {@link Property} instance which the propertyDescriptor belongs to.The length must be 36, The value consists of 36 hexadecimal digits and hyphens (-),for example, FFFFFFFF-1234-5678-ABCD-000000001234, indicating a 128-bit identifier.&lt;br&gt;NearLink standard UUIDs are not allowed.
 
 **Type:** string
 
@@ -82,7 +82,7 @@ propertyUuid: string
 serviceUuid: string
 ```
 
-描述符所属属性所属的服务实例的UUID。长度必须为36，由16进制数字字符和连字符共36个字符组成，形如“FFFFFFFF-1234-5678-ABCD-000000001234”，代表128比特标识。&lt;br&gt;不允许使用NearLink标准UUID。
+The UUID of the {@link Service} instance which the master property of descriptor belongs to.The length must be 36, The value consists of 36 hexadecimal digits and hyphens (-),for example, FFFFFFFF-1234-5678-ABCD-000000001234, indicating a 128-bit identifier.&lt;br&gt;NearLink standard UUIDs are not allowed.
 
 **Type:** string
 
@@ -102,7 +102,7 @@ serviceUuid: string
 value: ArrayBuffer
 ```
 
-属性描述符实例的值。
+The value of the propertyDescriptor instance.
 
 **Type:** ArrayBuffer
 

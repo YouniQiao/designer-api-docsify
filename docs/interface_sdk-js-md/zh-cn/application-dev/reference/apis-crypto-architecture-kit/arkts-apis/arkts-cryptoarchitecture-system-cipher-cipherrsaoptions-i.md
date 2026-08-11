@@ -14,12 +14,6 @@
 
 **系统能力：** SystemCapability.Security.Cipher
 
-## 导入模块
-
-```TypeScript
-import { CipherAesOptions, CipherResponse, CipherRsaOptions } from 'kits/@kit.CryptoArchitectureKit';
-```
-
 ## complete
 
 ```TypeScript

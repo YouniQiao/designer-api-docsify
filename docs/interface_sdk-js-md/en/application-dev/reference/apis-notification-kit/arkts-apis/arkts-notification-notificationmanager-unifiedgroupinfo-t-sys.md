@@ -4,7 +4,7 @@
 export type UnifiedGroupInfo = _UnifiedGroupInfo
 ```
 
-描述通知智能聚合信息字段。
+Describes the fields of notification intelligent unification information.
 
 **Since:** 12
 

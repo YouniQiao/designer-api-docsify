@@ -1,11 +1,5 @@
 # createImagePacker
 
-## 导入模块
-
-```TypeScript
-import { image } from 'kits/@kit.ImageKit';
-```
-
 ## createImagePacker
 
 ```TypeScript
@@ -34,9 +28,17 @@ function createImagePacker(): ImagePacker
 
 ## 示例
 
+ArkTS-Dyn示例:
+
 ```TypeScript
 async function CreateImagePacker() {
   const imagePackerObj: image.ImagePacker = image.createImagePacker();
 }
+```
+
+ArkTS-Sta示例:
+
+```TypeScript
+const imagePacker: image.ImagePacker = image.createImagePacker();
 ```
 

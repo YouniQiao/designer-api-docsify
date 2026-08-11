@@ -4,7 +4,7 @@
 export declare type TypeDecorator = <T>(type: TypeConstructor<T>) => PropertyDecorator
 ```
 
-属性装饰器，用于装饰嵌套类中属于自定义class类的属性。
+Defines the attribute decorator, which is used to decorate attributes of the custom class in a nested class.
 
 **Since:** 12
 
@@ -22,11 +22,11 @@ export declare type TypeDecorator = <T>(type: TypeConstructor<T>) => PropertyDec
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | [TypeConstructor](arkts-arkui-arkui-statemanagement-typeconstructor-i.md)&lt;T&gt; | Yes | 标记类属性的类型，仅支持自定义class类型，传入其他类型会导致持久化失败。 |
+| type | [TypeConstructor](arkts-arkui-arkui-statemanagement-typeconstructor-i.md)&lt;T&gt; | Yes | Type of the class property. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| PropertyDecorator | 属性装饰器，用于装饰嵌套类中属于自定义class类的属性。 |
+| PropertyDecorator | Property decorator. |
 

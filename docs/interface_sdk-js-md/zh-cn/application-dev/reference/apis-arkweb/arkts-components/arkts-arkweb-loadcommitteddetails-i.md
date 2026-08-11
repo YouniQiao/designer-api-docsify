@@ -78,7 +78,7 @@ navigationType: WebNavigationType
 
 网页跳转的类型。
 
-**类型：** [WebNavigationType](arkts-arkweb-webnavigationtype-e.md)
+**类型：** [WebNavigationType](../arkts-apis/arkts-arkweb-web-webnavigationtype-e.md)
 
 **起始版本：** 11
 

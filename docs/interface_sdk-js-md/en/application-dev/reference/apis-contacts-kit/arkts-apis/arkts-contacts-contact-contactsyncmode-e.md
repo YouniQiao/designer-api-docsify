@@ -1,6 +1,6 @@
 # ContactSyncMode
 
-同步模式的类型。
+The type of contact synchronization mode.
 
 **Since:** 26.0.0
 
@@ -16,7 +16,7 @@
 MODE_INCREMENTAL = 1
 ```
 
-表示将在数据库中插入或更新云端和本地之间不同的联系人。
+Indicates that contacts differing between cloud and local will be inserted or updated in the database.
 
 **Since:** 26.0.0
 
@@ -36,9 +36,9 @@ MODE_INCREMENTAL = 1
 MODE_CLOUD_BASED = 2
 ```
 
-表示所有本地联系人将被云联系人替换。
+Indicates that all local contacts will be replaced by cloud contacts.
 
-当使用云覆盖本地模式进行批量同步时，在第一次批量同步期间会删除所有本地联系人（第三方联系人除外）。
+When the cloud overwrite local mode is used for batch synchronization, all local contacts (excluding third-party contacts) are deleted during the first batch synchronization.
 
 **Since:** 26.0.0
 

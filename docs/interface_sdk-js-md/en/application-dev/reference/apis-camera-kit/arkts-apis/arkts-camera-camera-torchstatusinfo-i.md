@@ -1,6 +1,6 @@
 # TorchStatusInfo
 
-手电筒回调返回的接口实例，表示手电筒状态信息。
+Describes the flashlight status information.
 
 **Since:** 11
 
@@ -22,7 +22,7 @@ import { camera } from 'kits/@kit.CameraKit';
 readonly isTorchActive: boolean
 ```
 
-手电筒是否被激活。true表示手电筒被激活，false表示手电筒未被激活。
+Whether the flashlight is activated. **true** if activated, **false** otherwise.
 
 **Type:** boolean
 
@@ -42,7 +42,7 @@ readonly isTorchActive: boolean
 readonly isTorchAvailable: boolean
 ```
 
-手电筒是否可用。true表示手电筒可用，false表示手电筒不可用。
+Whether the flashlight is available. **true** if available, **false** otherwise.
 
 **Type:** boolean
 
@@ -62,7 +62,7 @@ readonly isTorchAvailable: boolean
 readonly torchLevel: double
 ```
 
-手电筒亮度等级，取值范围为[0,1]，越靠近1，亮度越大。
+Flashlight brightness level. The value range is [0, 1]. A larger value indicates a greater luminance.
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：double
 

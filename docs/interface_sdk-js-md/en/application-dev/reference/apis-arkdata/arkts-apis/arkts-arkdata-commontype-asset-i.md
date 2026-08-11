@@ -1,6 +1,6 @@
 # Asset
 
-记录资产附件（文件、图片、视频等类型文件）的相关信息。
+Represents asset (such as a file, image, or video) information.
 
 **Since:** 11
 
@@ -22,7 +22,7 @@ import { commonType } from 'kits/@kit.ArkData';
 createTime: string
 ```
 
-资产被创建出来的时间。
+Time when the asset was created.
 
 **Type:** string
 
@@ -40,7 +40,7 @@ createTime: string
 modifyTime: string
 ```
 
-资产最后一次被修改的时间。
+Time when the asset was last modified.
 
 **Type:** string
 
@@ -58,7 +58,7 @@ modifyTime: string
 name: string
 ```
 
-资产的名称。
+Asset name.
 
 **Type:** string
 
@@ -76,7 +76,7 @@ name: string
 path: string
 ```
 
-资产在应用沙箱里的路径。
+Application sandbox path of the asset.
 
 **Type:** string
 
@@ -94,7 +94,7 @@ path: string
 size: string
 ```
 
-资产占用空间的大小。确保在全链路中保持统一、一致的存储格式与取值逻辑。建议所有系统节点均采用标准化处理方式（单位为字节（Byte），取值为非负整数）。
+Size of the asset. If this field changes, the asset is considered to have changed.
 
 **Type:** string
 
@@ -112,7 +112,7 @@ size: string
 status?: AssetStatus
 ```
 
-资产的状态，默认值为ASSET_NORMAL。
+Asset status. The default value is ASSET_NORMAL.
 
 **Type:** [AssetStatus](arkts-arkdata-relationalstore-assetstatus-e.md)
 
@@ -130,7 +130,7 @@ status?: AssetStatus
 uri: string
 ```
 
-资产的uri，在系统里的绝对路径。
+Asset URI, which is an absolute path in the system.
 
 **Type:** string
 

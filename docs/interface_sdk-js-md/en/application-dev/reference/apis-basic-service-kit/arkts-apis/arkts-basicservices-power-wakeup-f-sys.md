@@ -12,7 +12,7 @@ import { power } from 'kits/@kit.BasicServicesKit';
 function wakeup(detail: string): void
 ```
 
-唤醒设备。
+Wakes up a device.
 
 **Since:** 9
 
@@ -31,16 +31,16 @@ function wakeup(detail: string): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| detail | string | Yes | 唤醒原因；该参数必须为字符串类型。 |
+| detail | string | Yes | Wakeup reason. The value must be a string. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1. Incorrect parameter types; |
-| 201 | Permission verification failed. The application does not have the permission required to call the API.<br>**Applicable version:** 19 and later |
-| 202 | Permission verification failed. A non-system application calls a system API. |
-| 4900101 | Failed to connect to the service. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Incorrect parameter types; |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed. The application does not have the permission required to call the API.<br>**Applicable version:** 19 and later |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
+| [4900101](../../apis-basic-services-kit/errorcode-power.md#4900101-service-connection-failure) | Failed to connect to the service. |
 
 ## Examples
 

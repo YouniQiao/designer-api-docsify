@@ -1,6 +1,6 @@
 # RadioStyle
 
-单选框的样式。
+Radio button color.
 
 **Since:** 10
 
@@ -16,9 +16,9 @@
 checkedBackgroundColor?: ResourceColor
 ```
 
-开启状态底板颜色。
+Color of the background when the radio button is selected.
 
-默认值：`\$r('sys.color.ohos_id_color_text_primary_activated')`
+Default value: **\$r('sys.color.ohos_id_color_text_primary_activated')**
 
 **Type:** [ResourceColor](../arkts-apis/arkts-arkui-resourcecolor-t.md)
 
@@ -42,9 +42,9 @@ checkedBackgroundColor?: ResourceColor
 indicatorColor?: ResourceColor
 ```
 
-开启状态内部圆饼颜色。从API version 12开始，indicatorType设置为RadioIndicatorType.TICK和RadioIndicatorType.DOT时，支持修改内部颜色。indicatorType设置为RadioIndicatorType.CUSTOM时，不支持修改内部颜色。
+Color of the indicator when the radio button is selected. Since API version 12, this parameter takes effect only when **indicatorType** is set to **RadioIndicatorType.TICK** or **RadioIndicatorType.DOT**. 
 
-默认值：`\$r('sys.color.ohos_id_color_foreground_contrary')`
+Default value: **\$r('sys.color.ohos_id_color_foreground_contrary')**
 
 **Type:** [ResourceColor](../arkts-apis/arkts-arkui-resourcecolor-t.md)
 
@@ -68,9 +68,9 @@ indicatorColor?: ResourceColor
 uncheckedBorderColor?: ResourceColor
 ```
 
-关闭状态描边颜色。
+Color of the border when the radio button is deselected.
 
-默认值：`\$r('sys.color.ohos_id_color_switch_outline_off')`
+Default value: **\$r('sys.color.ohos_id_color_switch_outline_off')**
 
 **Type:** [ResourceColor](../arkts-apis/arkts-arkui-resourcecolor-t.md)
 

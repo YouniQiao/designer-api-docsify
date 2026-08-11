@@ -1,6 +1,6 @@
 # TabsAnimationEvent
 
-Tabs组件动画相关信息集合。
+Provides an interface for tabs animation.
 
 **Since:** 23
 
@@ -16,7 +16,7 @@ Tabs组件动画相关信息集合。
 currentOffset: double
 ```
 
-Tabs当前显示元素在主轴方向上，相对于Tabs起始位置的位移。单位为： vp。
+Offset of the current page to the start position of the tabs main axis.Unit: vp.
 
 **Type:** double
 
@@ -38,7 +38,7 @@ Tabs当前显示元素在主轴方向上，相对于Tabs起始位置的位移。
 targetOffset: double
 ```
 
-Tabs动画目标元素在主轴方向上，相对于Tabs起始位置的位移。单位为： vp。
+Offset of the target page to the start position of the tabs main axis.Unit: vp.
 
 **Type:** double
 
@@ -60,7 +60,7 @@ Tabs动画目标元素在主轴方向上，相对于Tabs起始位置的位移。
 velocity: double
 ```
 
-Tabs离手动画开始时的离手速度。，默认值为0。单位为： vp/s。
+Start speed of the page-turning animation.Unit: vp/s.
 
 **Type:** double
 

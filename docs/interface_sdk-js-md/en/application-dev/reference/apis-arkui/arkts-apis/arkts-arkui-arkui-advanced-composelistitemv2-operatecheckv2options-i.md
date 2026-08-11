@@ -1,6 +1,6 @@
 # OperateCheckV2Options
 
-声明接口OperateCheckV2Options
+Declare interface OperateCheckV2Options
 
 **Since:** 26.0.0
 
@@ -22,7 +22,7 @@ import { OperateCheckV2Options, ComposeListItemV2, IconTypeV2, OperateIconV2, Op
 onChange?: OnChangeCallback
 ```
 
-操作checkbox/switch/radio时的回调函数。
+Callback function when operate the checkbox/switch/radio.
 
 **Since:** 26.0.0
 
@@ -40,7 +40,7 @@ onChange?: OnChangeCallback
 accessibilityDescription?: ResourceStr
 ```
 
-Switch/CheckBox/Radio的无障碍描述。
+The accessibilityDescription of the checkbox/switch/radio.
 
 **Type:** [ResourceStr](arkts-arkui-resourcestr-t.md)
 
@@ -60,7 +60,7 @@ Switch/CheckBox/Radio的无障碍描述。
 accessibilityLevel?: string
 ```
 
-Switch/CheckBox/Radio的无障碍重要性。
+The accessibilityLevel of the checkbox/switch/radio.
 
 **Type:** string
 
@@ -82,7 +82,7 @@ Switch/CheckBox/Radio的无障碍重要性。
 accessibilityText?: ResourceStr
 ```
 
-Switch/CheckBox/Radio的无障碍文本属性。
+The accessibilityText of the checkbox/switch/radio.
 
 **Type:** [ResourceStr](arkts-arkui-resourcestr-t.md)
 
@@ -102,7 +102,7 @@ Switch/CheckBox/Radio的无障碍文本属性。
 isCheck?: boolean
 ```
 
-是否默认选中。
+Whether is checked on default.
 
 **Type:** boolean
 

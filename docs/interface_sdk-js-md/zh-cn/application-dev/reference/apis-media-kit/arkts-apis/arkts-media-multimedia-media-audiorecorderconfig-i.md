@@ -14,12 +14,6 @@
 
 **系统能力：** SystemCapability.Multimedia.Media.AudioRecorder
 
-## 导入模块
-
-```TypeScript
-import { media } from 'kits/@kit.MediaKit';
-```
-
 ## audioEncodeBitRate
 
 ```TypeScript
@@ -160,7 +154,7 @@ location?: Location
 
 地理位置信息。
 
-**类型：** [Location](../../apis-location-kit/arkts-apis/arkts-location-geolocationmanager-location-i.md)
+**类型：** [Location](../../apis-camera-kit/arkts-apis/arkts-camera-camera-location-i.md)
 
 **起始版本：** 6
 

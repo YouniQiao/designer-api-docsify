@@ -1,6 +1,6 @@
 # DynamicComponentAttribute (System API)
 
-定义DynamicComponent的属性方法。
+Define the attribute functions of DynamicComponent.
 
 **Inheritance/Implementation:** DynamicComponentAttribute extends [CommonMethod](arkts-arkui-common-commonmethod-i.md)
 
@@ -20,7 +20,7 @@
 default onError(callback: ErrorCallback<BusinessError> | undefined): this
 ```
 
-DynamicComponent运行过程中发生异常时触发该回调。
+Called when the dynamic component is error.
 
 **Since:** 26.0.0
 
@@ -38,7 +38,7 @@ DynamicComponent运行过程中发生异常时触发该回调。
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [ErrorCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-errorcallback-i.md)&lt;[BusinessError](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-businesserror-i.md)&gt; \| undefined | Yes | 回调函数，入参用于接收异常信息。 &lt;br/&gt;ArkTS-Sta模式下，可传入undefined，表示取消回调函数。 |
+| callback | [ErrorCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-errorcallback-i.md)&lt;[BusinessError](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-businesserror-i.md)&gt; \| undefined | Yes | called when some error occurred&lt;br/&gt; except disconnected from DynamicAbility. |
 
 **Return value:**
 
@@ -52,11 +52,11 @@ DynamicComponent运行过程中发生异常时触发该回调。
 default setDynamicComponentOptions(options: DynamicOptions): this
 ```
 
-设置动态组件选项。
+Sets dynamic component options.
 
-**Since:** 26.0.0
+**Since:** 26.1.0
 
-**ArkTS mode:** ArkTS-Sta only, since version 26.0.0.
+**ArkTS mode:** ArkTS-Sta only, since version 26.1.0.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -70,11 +70,11 @@ default setDynamicComponentOptions(options: DynamicOptions): this
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| options | [DynamicOptions](../arkts-components/arkts-arkui-dynamicoptions-i-sys.md) | Yes | 选项。 |
+| options | [DynamicOptions](../arkts-components/arkts-arkui-dynamicoptions-i-sys.md) | Yes | The options |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| this | DynamicComponentAttribute实例 |
+| this | DynamicComponentAttribute instance |
 

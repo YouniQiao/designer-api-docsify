@@ -12,7 +12,7 @@ import { Options, ReaderIteratorResult, Watcher, ReadTextOptions, WatchEventList
 declare function open(path: string, mode?: number): Promise<File>
 ```
 
-打开文件或目录，使用promise异步回调。支持使用URI打开文件。
+Opens a file or directory. This API uses a promise to return the result. This API supports the use of a URI.
 
 **Since:** 9
 
@@ -28,14 +28,14 @@ declare function open(path: string, mode?: number): Promise<File>
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| path | string | Yes | 文件或目录的应用沙箱路径或文件URI。 |
-| mode | number | No | 打开文件或目录的[选项](../../../reference/apis-core-file-kit/js-apis-file-fs.md#openmode)，必须指定如下选项中 的一个，默认以只读方式打开：&lt;br/&gt;- OpenMode.READ_ONLY(0o0)：只读打开。&lt;br/&gt;- OpenMode.WRITE_ONLY(0o1)：只写打开。&lt;br/&gt;- OpenMode.READ_WRITE (0o2)：读写打开。&lt;br/&gt;给定如下功能选项，以按位或的方式追加，默认不给定任何额外选项：&lt;br/&gt;- OpenMode.CREATE(0o100)：若文件不存在，则创建文件。&lt;br/&gt;- OpenMode.TRUNC(0 o1000)：如果文件存在且文件具有写权限，则将其长度裁剪为零。&lt;br/&gt;- OpenMode.APPEND(0o2000)：以追加方式打开，后续写将追加到文件末尾。&lt;br/&gt;- OpenMode.NONBLOCK(0o400 0)：如果path指向FIFO、块特殊文件或字符特殊文件，则本次打开及后续IO进行非阻塞操作。&lt;br/&gt;- OpenMode.DIR(0o200000)：如果path不指向目录，则出错。不允许附加写权限。&lt;br/&gt;- OpenMode.NOFOLLOW(0o400000)：如果path指向符号链接，则出错。&lt;br/&gt;- OpenMode.SYNC(0o4010000)：以同步IO的方式打开文件。&lt;br/&gt;- OpenMode.UNCACHE(0o10000000000)： 读写文件不进行页缓存，从API版本26.0.0开始支持此选项。 |
+| path | string | Yes | Application sandbox path or URI of the file or directory. |
+| mode | number | No | [Mode](../../../reference/apis-core-file-kit/js-apis-file-fs.md#openmode) for opening the file or directory. You must specify one of the following options. By default, the file is opened in read-only mode.&lt;br&gt;- **OpenMode.READ_ONLY(0o0)**: Open the file in read-only mode.&lt;br&gt;- **OpenMode.WRITE_ONLY(0o1)**: Open the file in write-only mode.&lt;br&gt;- **OpenMode.READ_WRITE(0o2)**: Open the file in read/write mode.&lt;br&gt;You can also specify the following options, separated by a bitwise OR operator (\|). By default, no additional options are given.&lt;br&gt;- **OpenMode.CREATE(0o100)**: If the file does not exist, create it.&lt;br&gt;- **OpenMode.TRUNC(0o1000)**: If the file exists and is opened in write mode, truncate the file length to 0.&lt;br&gt;- **OpenMode.APPEND(0o2000)**: Open the file in append mode. New data will be added to the end of the file.&lt;br&gt;- **OpenMode.NONBLOCK(0o4000)**: If **path** points to a named pipe (also known as a FIFO), block special file, or character special file, perform non-blocking operations on the opened file and in subsequent I/Os.&lt;br&gt;- **OpenMode.DIR(0o200000)**: If **path** does not point to a directory, throw an exception. The write permission is not allowed.&lt;br&gt;- **OpenMode.NOFOLLOW(0o400000)**: If **path** points to a symbolic link, throw an exception.&lt;br&gt;- **OpenMode.SYNC(0o4010000)**: Open the file in synchronous I/O mode.&lt;br&gt;- **OpenMode.UNCACHE(0o10000000000)**: Open the file in uncache I/O mode, This option is supported starting from API version 26.0.0. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;File&gt; | Promise对象。返回File对象。 |
+| Promise&lt;File&gt; | Promise used to return the **File** object. |
 
 **Error codes:**
 
@@ -76,7 +76,7 @@ declare function open(path: string, mode?: number): Promise<File>
 declare function open(path: string, callback: AsyncCallback<File>): void
 ```
 
-打开文件或目录，使用callback异步回调。支持使用URI打开文件。
+Opens a file or directory. This API uses an asynchronous callback to return the result. This API supports the use of a URI.
 
 **Since:** 9
 
@@ -92,8 +92,8 @@ declare function open(path: string, callback: AsyncCallback<File>): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| path | string | Yes | 文件或目录的应用沙箱路径或URI。 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;File&gt; | Yes | 异步打开文件之后的回调。 |
+| path | string | Yes | Application sandbox path or URI of a file or directory. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;File&gt; | Yes | Callback used to return the result. |
 
 **Error codes:**
 
@@ -133,9 +133,9 @@ declare function open(path: string, callback: AsyncCallback<File>): void
 declare function open(path: string, mode: number, callback: AsyncCallback<File>): void
 ```
 
-打开文件或目录，可设置打开文件的选项。使用callback异步回调。
+Opens a file or directory with the specified mode. This API uses an asynchronous callback to return the result.
 
-支持使用URI打开文件。
+This API supports the use of a URI.
 
 **Since:** 9
 
@@ -151,9 +151,9 @@ declare function open(path: string, mode: number, callback: AsyncCallback<File>)
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| path | string | Yes | 文件或目录的应用沙箱路径或URI。 |
-| mode | number | Yes | 打开文件或目录的[选项](../../../reference/apis-core-file-kit/js-apis-file-fs.md#openmode)，必须指定如下选项中 的一个，默认以只读方式打开：&lt;br/&gt;- OpenMode.READ_ONLY(0o0)：只读打开。&lt;br/&gt;- OpenMode.WRITE_ONLY(0o1)：只写打开。&lt;br/&gt;- OpenMode.READ_WRITE (0o2)：读写打开。&lt;br/&gt;给定如下功能选项，以按位或的方式追加，默认不给定任何额外选项：&lt;br/&gt;- OpenMode.CREATE(0o100)：若文件不存在，则创建文件。&lt;br/&gt;- OpenMode.TRUNC(0 o1000)：如果文件存在且文件具有写权限，则将其长度裁剪为零。&lt;br/&gt;- OpenMode.APPEND(0o2000)：以追加方式打开，后续写将追加到文件末尾。&lt;br/&gt;- OpenMode.NONBLOCK(0o400 0)：如果path指向FIFO、块特殊文件或字符特殊文件，则本次打开及后续IO进行非阻塞操作。&lt;br/&gt;- OpenMode.DIR(0o200000)：如果path不指向目录，则出错。不允许附加写权限。&lt;br/&gt;- OpenMode.NOFOLLOW(0o400000)：如果path指向符号链接，则出错。&lt;br/&gt;- OpenMode.SYNC(0o4010000)：以同步IO的方式打开文件。&lt;br/&gt;- OpenMode.UNCACHE(0o10000000000)： 读写文件不进行页缓存，从API版本26.0.0开始支持此选项。 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;File&gt; | Yes | 异步打开文件之后的回调。 |
+| path | string | Yes | Application sandbox path or URI of a file or directory. |
+| mode | number | Yes | [Mode](../../../reference/apis-core-file-kit/js-apis-file-fs.md#openmode) for opening the file or directory. You must specify one of the following options. By default, the file is opened in read-only mode.&lt;br&gt;- **OpenMode.READ_ONLY(0o0)**: Open the file in read-only mode.&lt;br&gt;- **OpenMode.WRITE_ONLY(0o1)**: Open the file in write-only mode.&lt;br&gt;- **OpenMode.READ_WRITE(0o2)**: Open the file in read/write mode.&lt;br&gt;You can also specify the following options, separated by a bitwise OR operator (\|). By default, no additional options are given.&lt;br&gt;- **OpenMode.CREATE(0o100)**: If the file does not exist, create it.&lt;br&gt;- **OpenMode.TRUNC(0o1000)**: If the file exists and is opened in write mode, truncate the file length to 0.&lt;br&gt;- **OpenMode.APPEND(0o2000)**: Open the file in append mode. New data will be added to the end of the file.&lt;br&gt;- **OpenMode.NONBLOCK(0o4000)**: If **path** points to a named pipe (also known as a FIFO), block special file, or character special file, perform non-blocking operations on the opened file and in subsequent I/Os.&lt;br&gt;- **OpenMode.DIR(0o200000)**: If **path** does not point to a directory, throw an exception. The write permission is not allowed.&lt;br&gt;- **OpenMode.NOFOLLOW(0o400000)**: If **path** points to a symbolic link, throw an exception.&lt;br&gt;- **OpenMode.SYNC(0o4010000)**: Open the file in synchronous I/O mode.&lt;br&gt;- **OpenMode.UNCACHE(0o10000000000)**: Open the file in uncache I/O mode, This option is supported starting from API version 26.0.0. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;File&gt; | Yes | Callback used to return the result. |
 
 **Error codes:**
 

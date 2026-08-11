@@ -1,12 +1,15 @@
 # PropertyKey
 
-表示Exif（Exchangeable image file format）图像信息的枚举。
+Enumerates the types of Exchangeable Image File Format (Exif) data of an image.
 
-- 格式示例中的key为：image.PropertyKey.XXX（XXX为枚举的名称，如：image.PropertyKey.NEW_SUBFILE_TYPE） 。  
-- 格式示例仅用于说明修改传值和读取结果的格式。具体接口使用方法请参考：  
-[modifyImageProperty](arkts-image-image-imagesource-i.md#modifyimageproperty)（修改单个Exif字段）、  
-[modifyImageProperties](arkts-image-image-imagesource-i.md#modifyimageproperties)（修改多个Exif字段）、  
-[getImageProperty](arkts-image-image-imagesource-i.md#getimageproperty)（读取单个Exif字段）、[getImageProperties](arkts-image-image-imagesource-i.md#getimageproperties)（读取多个Exif字段）。
+- The key in the format example is **image.PropertyKey.*XXX*** (where *XXX* is the name of an enumeration name, for  
+example, **image.PropertyKey.NEW_SUBFILE_TYPE**).  
+- The format example is used only to show how to modify values and read results. For details about how to use them,  
+see   
+[modifyImageProperty](arkts-image-image-imagesource-i.md#modifyimageproperty)(to modify a single Exif field),   
+[modifyImageProperties](arkts-image-image-imagesource-i.md#modifyimageproperties)(to modify multiple Exif fields),   
+[getImageProperty](arkts-image-image-imagesource-i.md#getimageproperty)(to read a single Exif field), and   
+[getImageProperties](arkts-image-image-imagesource-i.md#getimageproperties) (to read multiple Exif fields).
 
 **Since:** 7
 
@@ -22,9 +25,9 @@
 BITS_PER_SAMPLE = 'BitsPerSample'
 ```
 
-像素各分量的位数，如RGB，3分量，格式是8,8,8。
+Number of bits per sample. For example, for RGB, which has three components, the format is 8,8,8.
 
-**读写能力：** 可读写。
+**Read/Write capability**: readable and writable.
 
 **Since:** 7
 
@@ -40,29 +43,30 @@ BITS_PER_SAMPLE = 'BitsPerSample'
 ORIENTATION = 'Orientation'
 ```
 
-图片方向。
+Image orientation.
 
-1："Top-left"，图像未旋转。
+1: **Top-left**: The image is not rotated.
 
-2："Top-right"，镜像水平翻转。
+2: **Top-right**: The image is flipped horizontally.
 
-3："Bottom-right"，图像旋转180°。
+3: **Bottom-right**: The image is rotated by 180°.
 
-4："Bottom-left"，镜像垂直翻转。
+4: **Bottom-left**: The image is flipped vertically.
 
-5："Left-top"，镜像水平翻转再顺时针旋转270°。
+5: **Left-top**: The image is flipped horizontally and then rotated clockwise by 270°.
 
-6："Right-top"，顺时针旋转90°。
+6: **Right-top**: The image is rotated clockwise by 90°.
 
-7："Right-bottom"，镜像水平翻转再顺时针旋转90°。
+7: **Right-bottom**: The image is vertically flipped and then rotated clockwise by 90°.
 
-8："Left-bottom"，顺时针旋转270°。
+8: **Left-bottom**: The image is rotated clockwise by 270°.
 
-如果读到未定义值x会返回"Unknown Value x"。获取该属性时会以字符串的形式返回。修改该属性时既可以以数字形式指定，也可以以字符串形式指定。
+If an undefined value x is read, **Unknown Value x** is returned. The value of the property obtained is returned as a string. When modifying the property, you can specify the property either in the form of a number or a string.
 
-更多关于图片旋转角度的说明可参考：[如何获取图片的旋转角度信息](../../../media/image/image-faqs/image-rotate-faq.md)。
+For details about the image rotation angle, see   
+[Obtaining the Rotation Angle of an Image](../../../media/image/image-faqs/image-rotate-faq.md).
 
-**读写能力：** 可读写。
+**Read/Write capability**: readable and writable.
 
 **Since:** 7
 
@@ -78,9 +82,9 @@ ORIENTATION = 'Orientation'
 IMAGE_LENGTH = 'ImageLength'
 ```
 
-图片长度。单位：像素（px）。
+Image length.
 
-**读写能力：** 可读写。
+**Read/Write capability**: readable and writable.
 
 **Since:** 7
 
@@ -96,9 +100,9 @@ IMAGE_LENGTH = 'ImageLength'
 IMAGE_WIDTH = 'ImageWidth'
 ```
 
-图片宽度。单位：像素（px）。
+Image width.
 
-**读写能力：** 可读写。
+**Read/Write capability**: readable and writable.
 
 **Since:** 7
 
@@ -114,9 +118,9 @@ IMAGE_WIDTH = 'ImageWidth'
 GPS_LATITUDE = 'GPSLatitude'
 ```
 
-图片纬度。修改时应按"度，分，秒"格式传入，如"39，54，7.542"
+Image latitude. The value must be in the format of degree,minute,second, for example, 39,54,7.542.
 
-**读写能力：** 可读写。
+**Read/Write capability**: readable and writable.
 
 **Since:** 7
 
@@ -132,9 +136,9 @@ GPS_LATITUDE = 'GPSLatitude'
 GPS_LONGITUDE = 'GPSLongitude'
 ```
 
-图片经度。修改时应按"度，分，秒"格式传入，如"116，19，42.16"
+Image longitude. The value must be in the format of degree,minute,second, for example, 116,19,42.16.
 
-**读写能力：** 可读写。
+**Read/Write capability**: readable and writable.
 
 **Since:** 7
 
@@ -150,13 +154,13 @@ GPS_LONGITUDE = 'GPSLongitude'
 GPS_LATITUDE_REF = 'GPSLatitudeRef'
 ```
 
-用于标识图像拍摄地点的纬度方向（北半球或南半球）。
+Latitude reference (Northern or Southern Hemisphere) of the image capture location.
 
-78："North"。
+78: "North".
 
-83："South"。
+83: "South".
 
-**读写能力：** 可读写。
+**Read/Write capability**: readable and writable.
 
 **Since:** 7
 
@@ -172,13 +176,13 @@ GPS_LATITUDE_REF = 'GPSLatitudeRef'
 GPS_LONGITUDE_REF = 'GPSLongitudeRef'
 ```
 
-经度引用，例如W或E， 用于标识图像拍摄地点的经度方向（东半球或西半球）。
+Longitude reference (Eastern or Western Hemisphere) of the image capture location.
 
-69："East"。
+69: "East".
 
-87："West"。
+87: "West".
 
-**读写能力：** 可读写。
+**Read/Write capability**: readable and writable.
 
 **Since:** 7
 
@@ -194,9 +198,9 @@ GPS_LONGITUDE_REF = 'GPSLongitudeRef'
 DATE_TIME_ORIGINAL = 'DateTimeOriginal'
 ```
 
-拍摄时间，例如2022:09:06 15:48:00。
+Time when the original image data was generated, for example, 2022:09:06 15:48:00.
 
-**读写能力：** 可读写。
+**Read/Write capability**: readable and writable.
 
 **Since:** 9
 
@@ -212,9 +216,9 @@ DATE_TIME_ORIGINAL = 'DateTimeOriginal'
 EXPOSURE_TIME = 'ExposureTime'
 ```
 
-曝光时间。单位：秒（s）。
+Exposure time, for example, 1/33 seconds.
 
-**读写能力：** 可读写。
+**Read/Write capability**: readable and writable.
 
 **Since:** 9
 
@@ -230,11 +234,11 @@ EXPOSURE_TIME = 'ExposureTime'
 SCENE_TYPE = 'SceneType'
 ```
 
-拍摄场景模式，例如人像、风光、运动、夜景等。
+Type of the scene, for example, portrait, scenery, motion, and night.
 
-1："Directly photographed"，图像传感器直接拍摄。
+1: "Directly photographed", indicating that the image is directly captured by the image sensor.
 
-**读写能力：** 可读写。
+**Read/Write capability**: readable and writable.
 
 **Since:** 9
 
@@ -250,9 +254,9 @@ SCENE_TYPE = 'SceneType'
 ISO_SPEED_RATINGS = 'ISOSpeedRatings'
 ```
 
-ISO感光度，例如400。
+ISO sensitivity or ISO speed, for example, 400.
 
-**读写能力：** 可读写。
+**Read/Write capability**: readable and writable.
 
 **Since:** 9
 
@@ -268,9 +272,9 @@ ISO感光度，例如400。
 F_NUMBER = 'FNumber'
 ```
 
-光圈值，例如f/1.8。
+F number, for example, f/1.8.
 
-**读写能力：** 可读写。
+**Read/Write capability**: readable and writable.
 
 **Since:** 9
 
@@ -286,9 +290,9 @@ F_NUMBER = 'FNumber'
 DATE_TIME = 'DateTime'
 ```
 
-日期时间。
+Date and time of image creation.
 
-**读写能力：** 可读写。
+**Read/Write capability**: readable and writable.
 
 **Since:** 10
 
@@ -304,9 +308,9 @@ DATE_TIME = 'DateTime'
 GPS_TIME_STAMP = 'GPSTimeStamp'
 ```
 
-GPS时间戳。
+GPS timestamp.
 
-**读写能力：** 可读写。
+**Read/Write capability**: readable and writable.
 
 **Since:** 10
 
@@ -322,9 +326,9 @@ GPS时间戳。
 GPS_DATE_STAMP = 'GPSDateStamp'
 ```
 
-GPS日期戳。
+GPS date stamp.
 
-**读写能力：** 可读写。
+**Read/Write capability**: readable and writable.
 
 **Since:** 10
 
@@ -340,9 +344,9 @@ GPS日期戳。
 IMAGE_DESCRIPTION = 'ImageDescription'
 ```
 
-图像信息描述。
+Image description.
 
-**读写能力：** 可读写。
+**Read/Write capability**: readable and writable.
 
 **Since:** 10
 
@@ -358,9 +362,9 @@ IMAGE_DESCRIPTION = 'ImageDescription'
 MAKE = 'Make'
 ```
 
-生产商。
+Manufacturer.
 
-**读写能力：** 可读写。
+**Read/Write capability**: readable and writable.
 
 **Since:** 10
 
@@ -376,9 +380,9 @@ MAKE = 'Make'
 MODEL = 'Model'
 ```
 
-设备型号。
+Device model.
 
-**读写能力：** 可读写。
+**Read/Write capability**: readable and writable.
 
 **Since:** 10
 
@@ -394,9 +398,9 @@ MODEL = 'Model'
 PHOTO_MODE = 'PhotoMode'
 ```
 
-拍照模式。
+Photographing mode.
 
-**读写能力：** 可读写。
+**Read/Write capability**: readable and writable.
 
 **Since:** 10
 
@@ -412,9 +416,9 @@ PHOTO_MODE = 'PhotoMode'
 SENSITIVITY_TYPE = 'SensitivityType'
 ```
 
-灵敏度类型。
+Sensitivity type.
 
-**读写能力：** 可读写。
+**Read/Write capability**: readable and writable.
 
 **Since:** 10
 
@@ -430,9 +434,9 @@ SENSITIVITY_TYPE = 'SensitivityType'
 STANDARD_OUTPUT_SENSITIVITY = 'StandardOutputSensitivity'
 ```
 
-标准输出灵敏度。
+Standard output sensitivity.
 
-**读写能力：** 可读写。
+**Read/Write capability**: readable and writable.
 
 **Since:** 10
 
@@ -448,9 +452,9 @@ STANDARD_OUTPUT_SENSITIVITY = 'StandardOutputSensitivity'
 RECOMMENDED_EXPOSURE_INDEX = 'RecommendedExposureIndex'
 ```
 
-推荐曝光指数。
+Recommended exposure index.
 
-**读写能力：** 可读写。
+**Read/Write capability**: readable and writable.
 
 **Since:** 10
 
@@ -466,9 +470,9 @@ RECOMMENDED_EXPOSURE_INDEX = 'RecommendedExposureIndex'
 ISO_SPEED = 'ISOSpeedRatings'
 ```
 
-ISO速度等级。
+ISO speed.
 
-**读写能力：** 可读写。
+**Read/Write capability**: readable and writable.
 
 **Since:** 10
 
@@ -484,9 +488,9 @@ ISO速度等级。
 APERTURE_VALUE = 'ApertureValue'
 ```
 
-光圈值。格式如4/1。
+Lens aperture. An example in the correct format is 4/1.
 
-**读写能力：** 可读写。
+**Read/Write capability**: readable and writable.
 
 **Since:** 10
 
@@ -502,9 +506,9 @@ APERTURE_VALUE = 'ApertureValue'
 EXPOSURE_BIAS_VALUE = 'ExposureBiasValue'
 ```
 
-曝光偏差值。
+Exposure bias.
 
-**读写能力：** 可读写。
+**Read/Write capability**: readable and writable.
 
 **Since:** 10
 
@@ -520,9 +524,9 @@ EXPOSURE_BIAS_VALUE = 'ExposureBiasValue'
 METERING_MODE = 'MeteringMode'
 ```
 
-测光模式。
+Metering mode.
 
-**读写能力：** 可读写。
+**Read/Write capability**: readable and writable.
 
 **Since:** 10
 
@@ -538,9 +542,9 @@ METERING_MODE = 'MeteringMode'
 LIGHT_SOURCE = 'LightSource'
 ```
 
-光源。例如Fluorescent。
+Light source. An example value is **Fluorescent**.
 
-**读写能力：** 可读写。
+**Read/Write capability**: readable and writable.
 
 **Since:** 10
 
@@ -556,9 +560,9 @@ LIGHT_SOURCE = 'LightSource'
 FLASH = 'Flash'
 ```
 
-闪光灯，记录闪光灯状态。
+Flash status.
 
-**读写能力：** 可读写。
+**Read/Write capability**: readable and writable.
 
 **Since:** 10
 
@@ -574,9 +578,9 @@ FLASH = 'Flash'
 FOCAL_LENGTH = 'FocalLength'
 ```
 
-焦距。单位：毫米（mm）。
+Focal length of the lens.
 
-**读写能力：** 可读写。
+**Read/Write capability**: readable and writable.
 
 **Since:** 10
 
@@ -592,9 +596,9 @@ FOCAL_LENGTH = 'FocalLength'
 USER_COMMENT = 'UserComment'
 ```
 
-用户注释。
+User comments.
 
-**读写能力：** 可读写。
+**Read/Write capability**: readable and writable.
 
 **Since:** 10
 
@@ -610,9 +614,9 @@ USER_COMMENT = 'UserComment'
 PIXEL_X_DIMENSION = 'PixelXDimension'
 ```
 
-像素X尺寸。单位：像素（px）。
+Pixel X dimension.
 
-**读写能力：** 可读写。
+**Read/Write capability**: readable and writable.
 
 **Since:** 10
 
@@ -628,9 +632,9 @@ PIXEL_X_DIMENSION = 'PixelXDimension'
 PIXEL_Y_DIMENSION = 'PixelYDimension'
 ```
 
-像素Y尺寸。单位：像素（px）。
+Pixel Y dimension.
 
-**读写能力：** 可读写。
+**Read/Write capability**: readable and writable.
 
 **Since:** 10
 
@@ -646,13 +650,13 @@ PIXEL_Y_DIMENSION = 'PixelYDimension'
 WHITE_BALANCE = 'WhiteBalance'
 ```
 
-白平衡。
+White balance.
 
-0："Auto white balance"，自动白平衡。
+0: "Auto white balance."
 
-1："Manual white balance"，手动白平衡。
+1: "Manual white balance."
 
-**读写能力：** 可读写。
+**Read/Write capability**: readable and writable.
 
 **Since:** 10
 
@@ -668,9 +672,9 @@ WHITE_BALANCE = 'WhiteBalance'
 FOCAL_LENGTH_IN_35_MM_FILM = 'FocalLengthIn35mmFilm'
 ```
 
-换算成35mm等效焦距。单位：毫米（mm）。
+Focal length in 35mm film.
 
-**读写能力：** 可读写。
+**Read/Write capability**: readable and writable.
 
 **Since:** 10
 
@@ -686,9 +690,9 @@ FOCAL_LENGTH_IN_35_MM_FILM = 'FocalLengthIn35mmFilm'
 CAPTURE_MODE = 'HwMnoteCaptureMode'
 ```
 
-捕获模式。
+Capture mode.
 
-**读写能力：** 可读写。
+**Read/Write capability**: readable and writable.
 
 **Since:** 10
 
@@ -704,9 +708,9 @@ CAPTURE_MODE = 'HwMnoteCaptureMode'
 PHYSICAL_APERTURE = 'HwMnotePhysicalAperture'
 ```
 
-物理孔径，光圈大小。单位：毫米（mm）。
+Physical aperture.
 
-**读写能力：** 只读。
+**Read/Write capability**: read-only
 
 **Since:** 10
 
@@ -722,9 +726,9 @@ PHYSICAL_APERTURE = 'HwMnotePhysicalAperture'
 ROLL_ANGLE = 'HwMnoteRollAngle'
 ```
 
-滚动角度。
+Roll angle.
 
-**读写能力：** 只读。
+**Read/Write capability**: read-only
 
 **Since:** 11
 
@@ -740,9 +744,9 @@ ROLL_ANGLE = 'HwMnoteRollAngle'
 PITCH_ANGLE = 'HwMnotePitchAngle'
 ```
 
-俯仰角度。
+Pitch angle.
 
-**读写能力：** 只读。
+**Read/Write capability**: read-only
 
 **Since:** 11
 
@@ -758,9 +762,9 @@ PITCH_ANGLE = 'HwMnotePitchAngle'
 SCENE_FOOD_CONF = 'HwMnoteSceneFoodConf'
 ```
 
-拍照场景：食物。
+Photographing scene: food.
 
-**读写能力：** 只读。
+**Read/Write capability**: read-only
 
 **Since:** 11
 
@@ -776,9 +780,9 @@ SCENE_FOOD_CONF = 'HwMnoteSceneFoodConf'
 SCENE_STAGE_CONF = 'HwMnoteSceneStageConf'
 ```
 
-拍照场景：舞台。
+Photographing scene: stage.
 
-**读写能力：** 只读。
+**Read/Write capability**: read-only
 
 **Since:** 11
 
@@ -794,9 +798,9 @@ SCENE_STAGE_CONF = 'HwMnoteSceneStageConf'
 SCENE_BLUE_SKY_CONF = 'HwMnoteSceneBlueSkyConf'
 ```
 
-拍照场景：蓝天。
+Photographing scene: blue sky.
 
-**读写能力：** 只读。
+**Read/Write capability**: read-only
 
 **Since:** 11
 
@@ -812,9 +816,9 @@ SCENE_BLUE_SKY_CONF = 'HwMnoteSceneBlueSkyConf'
 SCENE_GREEN_PLANT_CONF = 'HwMnoteSceneGreenPlantConf'
 ```
 
-拍照场景：绿植。
+Photographing scene: green plant.
 
-**读写能力：** 只读。
+**Read/Write capability**: read-only
 
 **Since:** 11
 
@@ -830,9 +834,9 @@ SCENE_GREEN_PLANT_CONF = 'HwMnoteSceneGreenPlantConf'
 SCENE_BEACH_CONF = 'HwMnoteSceneBeachConf'
 ```
 
-拍照场景：沙滩。
+Photographing scene: beach.
 
-**读写能力：** 只读。
+**Read/Write capability**: read-only
 
 **Since:** 11
 
@@ -848,9 +852,9 @@ SCENE_BEACH_CONF = 'HwMnoteSceneBeachConf'
 SCENE_SNOW_CONF = 'HwMnoteSceneSnowConf'
 ```
 
-拍照场景：下雪。
+Photographing scene: snow.
 
-**读写能力：** 只读。
+**Read/Write capability**: read-only
 
 **Since:** 11
 
@@ -866,9 +870,9 @@ SCENE_SNOW_CONF = 'HwMnoteSceneSnowConf'
 SCENE_SUNSET_CONF = 'HwMnoteSceneSunsetConf'
 ```
 
-拍照场景：日落。
+Photographing scene: sunset.
 
-**读写能力：** 只读。
+**Read/Write capability**: read-only
 
 **Since:** 11
 
@@ -884,9 +888,9 @@ SCENE_SUNSET_CONF = 'HwMnoteSceneSunsetConf'
 SCENE_FLOWERS_CONF = 'HwMnoteSceneFlowersConf'
 ```
 
-拍照场景：花。
+Photographing scene: flowers.
 
-**读写能力：** 只读。
+**Read/Write capability**: read-only
 
 **Since:** 11
 
@@ -902,9 +906,9 @@ SCENE_FLOWERS_CONF = 'HwMnoteSceneFlowersConf'
 SCENE_NIGHT_CONF = 'HwMnoteSceneNightConf'
 ```
 
-拍照场景：夜晚。
+Photographing scene: night.
 
-**读写能力：** 只读。
+**Read/Write capability**: read-only
 
 **Since:** 11
 
@@ -920,9 +924,9 @@ SCENE_NIGHT_CONF = 'HwMnoteSceneNightConf'
 SCENE_TEXT_CONF = 'HwMnoteSceneTextConf'
 ```
 
-拍照场景：文本。
+Photographing scene: text.
 
-**读写能力：** 只读。
+**Read/Write capability**: read-only
 
 **Since:** 11
 
@@ -938,9 +942,9 @@ SCENE_TEXT_CONF = 'HwMnoteSceneTextConf'
 FACE_COUNT = 'HwMnoteFaceCount'
 ```
 
-人脸数量。
+Number of faces.
 
-**读写能力：** 只读。
+**Read/Write capability**: read-only
 
 **Since:** 11
 
@@ -956,9 +960,9 @@ FACE_COUNT = 'HwMnoteFaceCount'
 FOCUS_MODE = 'HwMnoteFocusMode'
 ```
 
-对焦模式。
+Focus mode.
 
-**读写能力：** 只读。
+**Read/Write capability**: read-only
 
 **Since:** 11
 
@@ -974,15 +978,15 @@ FOCUS_MODE = 'HwMnoteFocusMode'
 COMPRESSION = 'Compression'
 ```
 
-图像压缩方案。
+Compression scheme used on the image data.
 
-1："Uncompressed"。
+1: "Uncompressed".
 
-2："CCITT RLE"。
+2: "CCITT RLE".
 
-3："T4/Group 3 Fax"。
+3: "T4/Group 3 Fax".
 
-**读写能力：** 可读写。
+**Read/Write capability**: readable and writable.
 
 **Since:** 12
 
@@ -998,23 +1002,23 @@ COMPRESSION = 'Compression'
 PHOTOMETRIC_INTERPRETATION = 'PhotometricInterpretation'
 ```
 
-像素构成，例如RGB或YCbCr。
+Color space of the image data, for example, RGB or YCbCr.
 
-0："Reversed mono"。
+0: "Reversed mono".
 
-1："Normal mono"。
+1: "Normal mono".
 
-2："RGB"。
+2: "RGB".
 
-3："Palette"。
+3: "Palette".
 
-5："CMYK"。
+5: "CMYK".
 
-6："YCbCr"。
+6: "YCbCr".
 
-8："CieLAB"。
+8: "CieLAB".
 
-**读写能力：** 可读写。
+**Read/Write capability**: readable and writable.
 
 **Since:** 12
 
@@ -1030,9 +1034,9 @@ PHOTOMETRIC_INTERPRETATION = 'PhotometricInterpretation'
 STRIP_OFFSETS = 'StripOffsets'
 ```
 
-每个strip的字节偏移量。
+Byte offset of each strip.
 
-**读写能力：** 可读写。
+**Read/Write capability**: readable and writable.
 
 **Since:** 12
 
@@ -1048,9 +1052,9 @@ STRIP_OFFSETS = 'StripOffsets'
 SAMPLES_PER_PIXEL = 'SamplesPerPixel'
 ```
 
-每个像素的分量数。由于该标准适用于RGB和YCbCr图像，因此该标签的值设置为 3。在JPEG压缩数据中，使用JPEG标记代替该标签。
+Number of components per pixel. The value is **3** for RGB and YCbCr images. The **JPEG** key is used in JPEG compressed data.
 
-**读写能力：** 可读写。
+**Read/Write capability**: readable and writable.
 
 **Since:** 12
 
@@ -1066,9 +1070,9 @@ SAMPLES_PER_PIXEL = 'SamplesPerPixel'
 ROWS_PER_STRIP = 'RowsPerStrip'
 ```
 
-每个strip的图像数据行数。
+Number of rows per strip.
 
-**读写能力：** 可读写。
+**Read/Write capability**: readable and writable.
 
 **Since:** 12
 
@@ -1084,9 +1088,9 @@ ROWS_PER_STRIP = 'RowsPerStrip'
 STRIP_BYTE_COUNTS = 'StripByteCounts'
 ```
 
-每个图像数据带的总字节数。
+Number of bytes in each strip after compression.
 
-**读写能力：** 可读写。
+**Read/Write capability**: readable and writable.
 
 **Since:** 12
 
@@ -1102,9 +1106,9 @@ STRIP_BYTE_COUNTS = 'StripByteCounts'
 X_RESOLUTION = 'XResolution'
 ```
 
-图像宽度方向的分辨率。
+Number of pixels per ResolutionUnit in the image width (X) direction.
 
-**读写能力：** 可读写。
+**Read/Write capability**: readable and writable.
 
 **Since:** 12
 
@@ -1120,9 +1124,9 @@ X_RESOLUTION = 'XResolution'
 Y_RESOLUTION = 'YResolution'
 ```
 
-图像高度方向的分辨率。
+Number of pixels per ResolutionUnit in the image height (Y) direction.
 
-**读写能力：** 可读写。
+**Read/Write capability**: readable and writable.
 
 **Since:** 12
 
@@ -1138,13 +1142,13 @@ Y_RESOLUTION = 'YResolution'
 PLANAR_CONFIGURATION = 'PlanarConfiguration'
 ```
 
-表示像素组件的记录格式，chunky格式或是planar格式。
+Storage format of components of each pixel, which can be chunky or planar.
 
-1："Chunky format"，chunky格式。
+1: "Chunky format": chunky format.
 
-2："Planar format"，planar格式。
+2: "Planar format": planar format.
 
-**读写能力：** 可读写。
+**Read/Write capability**: readable and writable.
 
 **Since:** 12
 
@@ -1160,13 +1164,13 @@ PLANAR_CONFIGURATION = 'PlanarConfiguration'
 RESOLUTION_UNIT = 'ResolutionUnit'
 ```
 
-用于测量XResolution和YResolution的单位，英寸或者厘米。
+Unit of measurement for XResolution and YResolution, in inches or centimeters.
 
-2："Inch"，英寸。
+2: "Inch": measured in inches.
 
-3："Centimeter"，厘米。
+3: "Centimeter": measured in centimeters.
 
-**读写能力：** 可读写。
+**Read/Write capability**: readable and writable.
 
 **Since:** 12
 
@@ -1182,9 +1186,9 @@ RESOLUTION_UNIT = 'ResolutionUnit'
 TRANSFER_FUNCTION = 'TransferFunction'
 ```
 
-图像的传递函数，通常用于颜色校正。
+Transfer function for the image, which is usually used for color correction.
 
-**读写能力：** 可读写。
+**Read/Write capability**: readable and writable.
 
 **Since:** 12
 
@@ -1200,9 +1204,9 @@ TRANSFER_FUNCTION = 'TransferFunction'
 SOFTWARE = 'Software'
 ```
 
-用于生成图像的软件名称和版本。
+Name and version number of the software used to create the image.
 
-**读写能力：** 可读写。
+**Read/Write capability**: readable and writable.
 
 **Since:** 12
 
@@ -1218,9 +1222,9 @@ SOFTWARE = 'Software'
 ARTIST = 'Artist'
 ```
 
-创建图像的用户名称。
+Person who created the image.
 
-**读写能力：** 可读写。
+**Read/Write capability**: readable and writable.
 
 **Since:** 12
 
@@ -1236,9 +1240,9 @@ ARTIST = 'Artist'
 WHITE_POINT = 'WhitePoint'
 ```
 
-用于指定图像的白点（white point）色度坐标，即图像颜色空间中被认为是“白色”的参考点。
+Chromaticity coordinates of the white point, the reference for "white", in the color space of the image.
 
-**读写能力：** 可读写。
+**Read/Write capability**: readable and writable.
 
 **Since:** 12
 
@@ -1254,9 +1258,9 @@ WHITE_POINT = 'WhitePoint'
 PRIMARY_CHROMATICITIES = 'PrimaryChromaticities'
 ```
 
-图像的主要颜色的色度。
+Chromaticities of the primaries of the image.
 
-**读写能力：** 可读写。
+**Read/Write capability**: readable and writable.
 
 **Since:** 12
 
@@ -1272,9 +1276,9 @@ PRIMARY_CHROMATICITIES = 'PrimaryChromaticities'
 YCBCR_COEFFICIENTS = 'YCbCrCoefficients'
 ```
 
-从RGB到YCbCr图像数据的转换矩阵系数，RGB→YCbCr转换时的加权系数。
+Coefficients for the conversion matrix that transforms image data from RGB to YCbCr.
 
-**读写能力：** 可读写。
+**Read/Write capability**: readable and writable.
 
 **Since:** 12
 
@@ -1290,9 +1294,9 @@ YCBCR_COEFFICIENTS = 'YCbCrCoefficients'
 YCBCR_SUB_SAMPLING = 'YCbCrSubSampling'
 ```
 
-色度分量与亮度分量的采样比率。
+Subsampling factors used for the chrominance components of a YCbCr image.
 
-**读写能力：** 可读写。
+**Read/Write capability**: readable and writable.
 
 **Since:** 12
 
@@ -1308,13 +1312,13 @@ YCBCR_SUB_SAMPLING = 'YCbCrSubSampling'
 YCBCR_POSITIONING = 'YCbCrPositioning'
 ```
 
-色度分量相对于亮度分量的位置。
+Positioning of subsampled chrominance components relative to luminance samples.
 
-1："Centered"，中心对齐（Centered），Cb/Cr分量的采样点相对于亮度像素点是居中对齐（常见）。
+1: "Centered": Cb/Cr chrominance components are centered relative to the luminance pixels (common practice).
 
-2："Co-sited"，左上对齐（Co-sited）Cb/Cr分量和 Y 分量的采样点对齐在左上角。
+2: "Co-sited": Cb/Cr and Y sampling points align at the top-left corner.
 
-**读写能力：** 可读写。
+**Read/Write capability**: readable and writable.
 
 **Since:** 12
 
@@ -1330,9 +1334,9 @@ YCBCR_POSITIONING = 'YCbCrPositioning'
 REFERENCE_BLACK_WHITE = 'ReferenceBlackWhite'
 ```
 
-参考黑点值和白点值。
+Reference values for black and white points.
 
-**读写能力：** 可读写。
+**Read/Write capability**: readable and writable.
 
 **Since:** 12
 
@@ -1348,9 +1352,9 @@ REFERENCE_BLACK_WHITE = 'ReferenceBlackWhite'
 COPYRIGHT = 'Copyright'
 ```
 
-图像的版权信息。
+Copyright notice of the image.
 
-**读写能力：** 可读写。
+**Read/Write capability**: readable and writable.
 
 **Since:** 12
 
@@ -1366,9 +1370,9 @@ COPYRIGHT = 'Copyright'
 JPEG_INTERCHANGE_FORMAT = 'JPEGInterchangeFormat'
 ```
 
-JPEG压缩缩略图数据开始字节（SOI）的偏移。
+Offset of the SOI marker of a JPEG interchange format bitstream.
 
-**读写能力：** 只读。
+**Read/Write capability**: read-only
 
 **Since:** 12
 
@@ -1384,9 +1388,9 @@ JPEG压缩缩略图数据开始字节（SOI）的偏移。
 JPEG_INTERCHANGE_FORMAT_LENGTH = 'JPEGInterchangeFormatLength'
 ```
 
-JPEG压缩缩略图数据的字节数。
+Number of bytes of the JPEG stream.
 
-**读写能力：** 只读。
+**Read/Write capability**: read-only
 
 **Since:** 12
 
@@ -1402,27 +1406,27 @@ JPEG压缩缩略图数据的字节数。
 EXPOSURE_PROGRAM = 'ExposureProgram'
 ```
 
-拍照时相机用来设置曝光的程序的类别。
+Class of the program used by the camera to set exposure when the image was captured.
 
-0："Not defined"。
+0: "Not defined".
 
-1："Manual"。 
+1: "Manual".
 
-2："Normal program"。
+2: "Normal program".
 
-3："Aperture priority"。
+3: "Aperture priority".
 
-4："Shutter priority"。
+4: "Shutter priority".
 
-5："Creative program (biased toward depth of field)"。
+5: "Creative program (biased toward depth of field)".
 
-6："Creative program (biased toward fast shutter speed)"。
+6: "Creative program (biased toward fast shutter speed)".
 
-7："Portrait mode (for closeup photos with the background out of focus)"。
+7: "Portrait mode (for closeup photos with the background out of focus)".
 
-8："Landscape mode (for landscape photos with the background in focus)"。
+8: "Landscape mode (for landscape photos with the background in focus)".
 
-**读写能力：** 可读写。
+**Read/Write capability**: readable and writable.
 
 **Since:** 12
 
@@ -1438,9 +1442,9 @@ EXPOSURE_PROGRAM = 'ExposureProgram'
 SPECTRAL_SENSITIVITY = 'SpectralSensitivity'
 ```
 
-表示所用相机的每个通道的光谱灵敏度。
+Spectral sensitivity of each channel of the camera.
 
-**读写能力：** 可读写。
+**Read/Write capability**: readable and writable.
 
 **Since:** 12
 
@@ -1456,9 +1460,9 @@ SPECTRAL_SENSITIVITY = 'SpectralSensitivity'
 OECF = 'OECF'
 ```
 
-表示ISO 14524中规定的光电转换函数（OECF）。
+Opto-Electric Conversion Function (OECF) specified in ISO 14524.
 
-**读写能力：** 可读写。
+**Read/Write capability**: readable and writable.
 
 **Since:** 12
 
@@ -1474,9 +1478,9 @@ OECF = 'OECF'
 EXIF_VERSION = 'ExifVersion'
 ```
 
-支持的Exif标准版本。
+Version of the supported Exif standard.
 
-**读写能力：** 可读写。
+**Read/Write capability**: readable and writable.
 
 **Since:** 12
 
@@ -1492,9 +1496,9 @@ EXIF_VERSION = 'ExifVersion'
 DATE_TIME_DIGITIZED = 'DateTimeDigitized'
 ```
 
-图像作为数字数据存储的日期和时间，格式为YYYY:MM:DD HH:mm:ss。
+Date and time when the image was stored as digital data, in the format of YYYY:MM:DD HH:mm:ss.
 
-**读写能力：** 可读写。
+**Read/Write capability**: readable and writable.
 
 **Since:** 12
 
@@ -1510,9 +1514,9 @@ DATE_TIME_DIGITIZED = 'DateTimeDigitized'
 COMPONENTS_CONFIGURATION = 'ComponentsConfiguration'
 ```
 
-压缩数据的特定信息。
+Specific information about compressed data.
 
-**读写能力：** 可读写。
+**Read/Write capability**: readable and writable.
 
 **Since:** 12
 
@@ -1528,9 +1532,9 @@ COMPONENTS_CONFIGURATION = 'ComponentsConfiguration'
 SHUTTER_SPEED = 'ShutterSpeedValue'
 ```
 
-快门速度，以APEX（摄影曝光的加法系统）值表示。
+Shutter speed, expressed in Additive System of Photographic Exposure (APEX) values.
 
-**读写能力：** 可读写。
+**Read/Write capability**: readable and writable.
 
 **Since:** 12
 
@@ -1546,9 +1550,9 @@ SHUTTER_SPEED = 'ShutterSpeedValue'
 BRIGHTNESS_VALUE = 'BrightnessValue'
 ```
 
-图像的亮度值，以APEX单位表示。
+Value of brightness, expressed in APEX values.
 
-**读写能力：** 可读写。
+**Read/Write capability**: readable and writable.
 
 **Since:** 12
 
@@ -1564,9 +1568,9 @@ BRIGHTNESS_VALUE = 'BrightnessValue'
 MAX_APERTURE_VALUE = 'MaxApertureValue'
 ```
 
-最小F数镜头。
+Smallest F number of the lens.
 
-**读写能力：** 可读写。
+**Read/Write capability**: readable and writable.
 
 **Since:** 12
 
@@ -1582,9 +1586,9 @@ MAX_APERTURE_VALUE = 'MaxApertureValue'
 SUBJECT_DISTANCE = 'SubjectDistance'
 ```
 
-测量单位为米的主体距离。
+Distance to the subject, in meters.
 
-**读写能力：** 可读写。
+**Read/Write capability**: readable and writable.
 
 **Since:** 12
 
@@ -1600,9 +1604,9 @@ SUBJECT_DISTANCE = 'SubjectDistance'
 SUBJECT_AREA = 'SubjectArea'
 ```
 
-该标签指示整个场景中主要主体的位置和区域。
+Location and area of the main subject in the entire scene.
 
-**读写能力：** 可读写。
+**Read/Write capability**: readable and writable.
 
 **Since:** 12
 
@@ -1618,11 +1622,11 @@ SUBJECT_AREA = 'SubjectArea'
 MAKER_NOTE = 'MakerNote'
 ```
 
-Exif/DCF制造商使用的标签，用于记录任何所需信息。
+Marker used by Exif/DCF manufacturers to record any required information.
 
-在API version 12-19，该字段为只读；从API version 20开始，该字段可读写。
+This field is read-only in API versions 12 to 19 and is readable and writable in API version 20 and later.
 
-**读写能力：** 可读写。
+**Read/Write capability**: readable and writable.
 
 **Since:** 12
 
@@ -1638,9 +1642,9 @@ Exif/DCF制造商使用的标签，用于记录任何所需信息。
 SUBSEC_TIME = 'SubsecTime'
 ```
 
-用于为DateTime标签记录秒的分数的标签。
+Tag used to record fractions of seconds for the **DateTime** tag.
 
-**读写能力：** 可读写。
+**Read/Write capability**: readable and writable.
 
 **Since:** 12
 
@@ -1656,9 +1660,9 @@ SUBSEC_TIME = 'SubsecTime'
 SUBSEC_TIME_ORIGINAL = 'SubsecTimeOriginal'
 ```
 
-用于为DateTimeOriginal标签记录秒的分数的标签。
+Tag used to record fractions of seconds for the **DateTimeOriginal** tag.
 
-**读写能力：** 可读写。
+**Read/Write capability**: readable and writable.
 
 **Since:** 12
 
@@ -1674,9 +1678,9 @@ SUBSEC_TIME_ORIGINAL = 'SubsecTimeOriginal'
 SUBSEC_TIME_DIGITIZED = 'SubsecTimeDigitized'
 ```
 
-用于为DateTimeDigitized标签记录秒的分数的标签。
+Tag used to record fractions of seconds for the **DateTimeDigitized** tag.
 
-**读写能力：** 可读写。
+**Read/Write capability**: readable and writable.
 
 **Since:** 12
 
@@ -1692,9 +1696,9 @@ SUBSEC_TIME_DIGITIZED = 'SubsecTimeDigitized'
 FLASHPIX_VERSION = 'FlashpixVersion'
 ```
 
-该标签表示FPXR文件支持的Flashpix格式版本，增强了设备兼容性。
+FlashPix format version supported by an FPXR file. It is used to enhance device compatibility.
 
-**读写能力：** 可读写。
+**Read/Write capability**: readable and writable.
 
 **Since:** 12
 
@@ -1710,15 +1714,15 @@ FLASHPIX_VERSION = 'FlashpixVersion'
 COLOR_SPACE = 'ColorSpace'
 ```
 
-色彩空间信息标签，通常记录为色彩空间指定符。
+Color space information, which is usually recorded as a color space specifier.
 
-1："sRGB"，sRGB标准色彩空间（常见默认值）。
+1: "sRGB", indicating the standard sRGB color space. It is the typical default value.
 
-2："Adobe RGB"，exif中未定义，但大量相机使用。
+2: "Adobe RGB", indicating the Adobe RGB color space. It is not formally defined in Exif, but commonly used in practice.
 
-0xffff："Uncalibrated"，表示未校准，颜色空间不明确。
+0xffff: "Uncalibrated", indicating that the color space is uncalibrated and unknown.
 
-**读写能力：** 可读写。
+**Read/Write capability**: readable and writable.
 
 **Since:** 12
 
@@ -1734,9 +1738,9 @@ COLOR_SPACE = 'ColorSpace'
 RELATED_SOUND_FILE = 'RelatedSoundFile'
 ```
 
-与图像数据相关的音频文件的名称。
+Name of an audio file related to the image data.
 
-**读写能力：** 可读写。
+**Read/Write capability**: readable and writable.
 
 **Since:** 12
 
@@ -1752,9 +1756,9 @@ RELATED_SOUND_FILE = 'RelatedSoundFile'
 FLASH_ENERGY = 'FlashEnergy'
 ```
 
-图像捕获时的闪光能量，以BCPS表示。
+Strobe energy at the time the image was captured, in Beam Candle Power Seconds (BCPS).
 
-**读写能力：** 可读写。
+**Read/Write capability**: readable and writable.
 
 **Since:** 12
 
@@ -1770,9 +1774,9 @@ FLASH_ENERGY = 'FlashEnergy'
 SPATIAL_FREQUENCY_RESPONSE = 'SpatialFrequencyResponse'
 ```
 
-相机或输入设备的空间频率表。
+Spatial frequency table of the camera or input device.
 
-**读写能力：** 可读写。
+**Read/Write capability**: readable and writable.
 
 **Since:** 12
 
@@ -1788,9 +1792,9 @@ SPATIAL_FREQUENCY_RESPONSE = 'SpatialFrequencyResponse'
 FOCAL_PLANE_X_RESOLUTION = 'FocalPlaneXResolution'
 ```
 
-图像宽度中每FocalPlaneResolutionUnit的像素。
+Number of pixels in the image width (X) direction per FocalPlaneResolutionUnit.
 
-**读写能力：** 可读写。
+**Read/Write capability**: readable and writable.
 
 **Since:** 12
 
@@ -1806,9 +1810,9 @@ FOCAL_PLANE_X_RESOLUTION = 'FocalPlaneXResolution'
 FOCAL_PLANE_Y_RESOLUTION = 'FocalPlaneYResolution'
 ```
 
-图像高度中每FocalPlaneResolutionUnit的像素。
+Number of pixels in the image height (Y) direction per FocalPlaneResolutionUnit.
 
-**读写能力：** 可读写。
+**Read/Write capability**: readable and writable.
 
 **Since:** 12
 
@@ -1824,13 +1828,13 @@ FOCAL_PLANE_Y_RESOLUTION = 'FocalPlaneYResolution'
 FOCAL_PLANE_RESOLUTION_UNIT = 'FocalPlaneResolutionUnit'
 ```
 
-测量FocalPlaneXResolution和FocalPlaneYResolution的单位。
+Unit for measuring FocalPlaneXResolution and FocalPlaneYResolution.
 
-2："Inch"，英寸。
+2: "Inch": measured in inches.
 
-3："Centimeter"，厘米。
+3: "Centimeter": measured in centimeters.
 
-**读写能力：** 可读写。
+**Read/Write capability**: readable and writable.
 
 **Since:** 12
 
@@ -1846,9 +1850,9 @@ FOCAL_PLANE_RESOLUTION_UNIT = 'FocalPlaneResolutionUnit'
 SUBJECT_LOCATION = 'SubjectLocation'
 ```
 
-主要对象相对于左边缘的位置。
+Location of the main subject relative to the left edge.
 
-**读写能力：** 可读写。
+**Read/Write capability**: readable and writable.
 
 **Since:** 12
 
@@ -1864,9 +1868,9 @@ SUBJECT_LOCATION = 'SubjectLocation'
 EXPOSURE_INDEX = 'ExposureIndex'
 ```
 
-捕获时选定的曝光指数。
+Exposure index selected at the time the image is captured.
 
-**读写能力：** 可读写。
+**Read/Write capability**: readable and writable.
 
 **Since:** 12
 
@@ -1882,9 +1886,9 @@ EXPOSURE_INDEX = 'ExposureIndex'
 SENSING_METHOD = 'SensingMethod'
 ```
 
-相机上的图像传感器类型。
+Type of the image sensor on the camera.
 
-**读写能力：** 可读写。
+**Read/Write capability**: readable and writable.
 
 **Since:** 12
 
@@ -1900,9 +1904,9 @@ SENSING_METHOD = 'SensingMethod'
 FILE_SOURCE = 'FileSource'
 ```
 
-表明图像来源。
+Image source.
 
-**读写能力：** 可读写。
+**Read/Write capability**: readable and writable.
 
 **Since:** 12
 
@@ -1918,9 +1922,9 @@ FILE_SOURCE = 'FileSource'
 CFA_PATTERN = 'CFAPattern'
 ```
 
-图像传感器的色彩滤光片（CFA）几何图案。
+Color Filter Array (CFA) geometric pattern of the image sensor.
 
-**读写能力：** 可读写。
+**Read/Write capability**: readable and writable.
 
 **Since:** 12
 
@@ -1936,13 +1940,13 @@ CFA_PATTERN = 'CFAPattern'
 CUSTOM_RENDERED = 'CustomRendered'
 ```
 
-指示图像数据上的特殊处理。
+Special processing on image data.
 
-0："Normal process"，正常处理（未自定义渲染）。
+0: "Normal process", indicating normal processing (no custom rendering).
 
-1："Custom process"，自定义处理（如艺术效果、美颜、HDR）。
+1: "Custom process", indicating custom processing (such as artistic effect, beauty, and HDR).
 
-**读写能力：** 可读写。
+**Read/Write capability**: readable and writable.
 
 **Since:** 12
 
@@ -1958,15 +1962,15 @@ CUSTOM_RENDERED = 'CustomRendered'
 EXPOSURE_MODE = 'ExposureMode'
 ```
 
-拍摄时设置的曝光模式。
+Exposure mode set when the image was captured.
 
-0："Auto exposure"，自动曝光（Auto）。
+0: "Auto exposure."
 
-1："Manual exposure"，手动曝光（Manual）。
+1: "Manual exposure."
 
-2："Auto bracket"，自动曝光优先（Auto bracket）。
+2: "Auto bracket."
 
-**读写能力：** 可读写。
+**Read/Write capability**: readable and writable.
 
 **Since:** 12
 
@@ -1982,9 +1986,9 @@ EXPOSURE_MODE = 'ExposureMode'
 DIGITAL_ZOOM_RATIO = 'DigitalZoomRatio'
 ```
 
-捕获时的数字变焦比率。
+Digital zoom ratio when the image was captured.
 
-**读写能力：** 可读写。
+**Read/Write capability**: readable and writable.
 
 **Since:** 12
 
@@ -2000,17 +2004,17 @@ DIGITAL_ZOOM_RATIO = 'DigitalZoomRatio'
 SCENE_CAPTURE_TYPE = 'SceneCaptureType'
 ```
 
-捕获的场景类型。
+Type of the scene that was captured.
 
-0："Standard"，标准。
+0: "Standard."
 
-1："Landscape"，风景。
+1: "Landscape."
 
-2："Portrait"，人像。
+2: "Portrait."
 
-3："Night scene"，夜景。
+3: "Night scene."
 
-**读写能力：** 可读写。
+**Read/Write capability**: readable and writable.
 
 **Since:** 12
 
@@ -2026,19 +2030,19 @@ SCENE_CAPTURE_TYPE = 'SceneCaptureType'
 GAIN_CONTROL = 'GainControl'
 ```
 
-整体图像增益调整的程度。
+Degree of overall image gain adjustment.
 
-0："Normal"，无增益控制。
+0: "Normal", no gain control.
 
-1："Low gain up"，低增益提升。
+1: "Low gain up."
 
-2："High gain up"，高增益提升。
+2: "High gain up."
 
-3："Low gain down"， 低增益降低。
+3: "Low gain down."
 
-4："High gain down"，高增益降低。
+4: "High gain down."
 
-**读写能力：** 可读写。
+**Read/Write capability**: readable and writable.
 
 **Since:** 12
 
@@ -2054,15 +2058,15 @@ GAIN_CONTROL = 'GainControl'
 CONTRAST = 'Contrast'
 ```
 
-相机应用的对比度处理方向。
+Direction of contrast processing used by the camera.
 
-0："Normal"，正常对比度。
+0: "Normal", normal contrast.
 
-1："Soft"，软对比度。
+1: "Soft", soft contrast.
 
-2："Hard"，硬对比度。
+2: "Hard", hard contrast.
 
-**读写能力：** 可读写。
+**Read/Write capability**: readable and writable.
 
 **Since:** 12
 
@@ -2078,15 +2082,15 @@ CONTRAST = 'Contrast'
 SATURATION = 'Saturation'
 ```
 
-相机应用的饱和度处理方向。
+Direction of saturation processing used by the camera.
 
-0："Normal"，正常。
+0:"Normal": normal saturation.
 
-1："Low saturation"，低饱和度。
+1: "Low saturation."
 
-2："High saturation"，高饱和度。
+2: "High saturation."
 
-**读写能力：** 可读写。
+**Read/Write capability**: readable and writable.
 
 **Since:** 12
 
@@ -2102,15 +2106,15 @@ SATURATION = 'Saturation'
 SHARPNESS = 'Sharpness'
 ```
 
-相机应用的锐度处理方向。
+Direction of sharpness processing used by the camera.
 
-0："Normal"，正常（Normal）。
+0:"Normal": normal sharpness.
 
-1："Soft"，柔和（Soft）。
+1: "Soft."
 
-2："Hard"，硬（Hard）。
+2: "Hard."
 
-**读写能力：** 可读写。
+**Read/Write capability**: readable and writable.
 
 **Since:** 12
 
@@ -2126,9 +2130,9 @@ SHARPNESS = 'Sharpness'
 DEVICE_SETTING_DESCRIPTION = 'DeviceSettingDescription'
 ```
 
-特定相机模型的拍照条件信息。
+Information about the photographing conditions of a specific camera model.
 
-**读写能力：** 可读写。
+**Read/Write capability**: readable and writable.
 
 **Since:** 12
 
@@ -2144,17 +2148,17 @@ DEVICE_SETTING_DESCRIPTION = 'DeviceSettingDescription'
 SUBJECT_DISTANCE_RANGE = 'SubjectDistanceRange'
 ```
 
-表示主体到相机的距离范围。
+Distance to the subject.
 
-0："Unknown"，未知。
+0: "Unknown."
 
-1："Macro"，宏观。
+1: "Macro."
 
-2："Close view"，近景。
+2: "Close view."
 
-3："Distant view"，远景。
+3: "Distant view."
 
-**读写能力：** 可读写。
+**Read/Write capability**: readable and writable.
 
 **Since:** 12
 
@@ -2170,9 +2174,9 @@ SUBJECT_DISTANCE_RANGE = 'SubjectDistanceRange'
 IMAGE_UNIQUE_ID = 'ImageUniqueID'
 ```
 
-为每张图片唯一分配的标识符。
+Unique identifier assigned to each image.
 
-**读写能力：** 可读写。
+**Read/Write capability**: readable and writable.
 
 **Since:** 12
 
@@ -2188,9 +2192,9 @@ IMAGE_UNIQUE_ID = 'ImageUniqueID'
 GPS_VERSION_ID = 'GPSVersionID'
 ```
 
-GPS信息版本号。
+GPS information version.
 
-**读写能力：** 可读写。
+**Read/Write capability**: readable and writable.
 
 **Since:** 12
 
@@ -2206,13 +2210,13 @@ GPS信息版本号。
 GPS_ALTITUDE_REF = 'GPSAltitudeRef'
 ```
 
-用于GPS高度的参照高度。
+Whether the latitude is north or south latitude.
 
-0："Sea level"，海平面以上（Above Sea Level）。
+0: Sea level, which is above sea level.
 
-1："Sea level reference"，海平面以下（Below Sea Level）。
+1: "Sea level reference," which is below the sea level.
 
-**读写能力：** 可读写。
+**Read/Write capability**: readable and writable.
 
 **Since:** 12
 
@@ -2228,9 +2232,9 @@ GPS_ALTITUDE_REF = 'GPSAltitudeRef'
 GPS_ALTITUDE = 'GPSAltitude'
 ```
 
-基于GPSAltitudeRef的高度。
+Altitude based on the reference in GPSAltitudeRef.
 
-**读写能力：** 可读写。
+**Read/Write capability**: readable and writable.
 
 **Since:** 12
 
@@ -2246,9 +2250,9 @@ GPS_ALTITUDE = 'GPSAltitude'
 GPS_SATELLITES = 'GPSSatellites'
 ```
 
-用于测量的GPS卫星。
+GPS satellites used for measurement.
 
-**读写能力：** 可读写。
+**Read/Write capability**: readable and writable.
 
 **Since:** 12
 
@@ -2264,13 +2268,13 @@ GPS_SATELLITES = 'GPSSatellites'
 GPS_STATUS = 'GPSStatus'
 ```
 
-录制图像时GPS接收器的状态。
+Status of the GPS receiver when the image was recorded.
 
-'A'："Measurement in progress"，GPS有效，已成功锁定卫星信号，位置数据可信；
+'A': "Measurement in progress", GPS is working, satellite signals are locked, and location data is trustworthy.
 
-'V'："Measurement interrupted，GPS无效，当前未能定位，位置数据可能为空或不准。
+'V': "Measurement interrupted", GPS is not working, current positioning is unavailable, and location data may be missing or incorrect.
 
-**读写能力：** 可读写。
+**Read/Write capability**: readable and writable.
 
 **Since:** 12
 
@@ -2286,13 +2290,13 @@ GPS_STATUS = 'GPSStatus'
 GPS_MEASURE_MODE = 'GPSMeasureMode'
 ```
 
-GPS测量模式。用于表示图像拍摄时GPS定位使用的测量模式，即是使用2D（平面）定位还是3D（含高度）定位。
+GPS measurement pmode. Whether the 2D (planar) or 3D (with height) measurement mode is used for GPS positioning.
 
-2："2-dimensional measurement"，2D测量（纬度+经度）。
+2: "2-dimensional measurement", (latitude+longitude).
 
-3："3-dimensional measurement"，3D测量（纬度+经度+高度）。
+3: "3-dimensional measurement", (latitude + longitude + height).
 
-**读写能力：** 可读写。
+**Read/Write capability**: readable and writable.
 
 **Since:** 12
 
@@ -2308,9 +2312,9 @@ GPS测量模式。用于表示图像拍摄时GPS定位使用的测量模式，�
 GPS_DOP = 'GPSDOP'
 ```
 
-GPS DOP（数据精度等级），用于表示拍摄时GPS测量结果的定位精度水平。
+GPS Dilution of Precision (DOP), which reflects the precision of GPS measurements taken when the photo was captured.
 
-**读写能力：** 可读写。
+**Read/Write capability**: readable and writable.
 
 **Since:** 12
 
@@ -2326,15 +2330,15 @@ GPS DOP（数据精度等级），用于表示拍摄时GPS测量结果的定位�
 GPS_SPEED_REF = 'GPSSpeedRef'
 ```
 
-用来表示GPS接收器移动速度的单位。
+Unit used to express the movement speed of the GPS receiver.
 
-'K'："km/h"。
+'K': "km/h".
 
-'M'："mph"。
+'M': "mph".
 
-'N'："knots"。
+'N': "knots".
 
-**读写能力：** 可读写。
+**Read/Write capability**: readable and writable.
 
 **Since:** 12
 
@@ -2350,9 +2354,9 @@ GPS_SPEED_REF = 'GPSSpeedRef'
 GPS_SPEED = 'GPSSpeed'
 ```
 
-GPS接收器的移动速度。
+Movement speed of the GPS receiver.
 
-**读写能力：** 可读写。
+**Read/Write capability**: readable and writable.
 
 **Since:** 12
 
@@ -2368,13 +2372,13 @@ GPS接收器的移动速度。
 GPS_TRACK_REF = 'GPSTrackRef'
 ```
 
-GPS接收机移动方向的参照，用于说明这个角度是以哪个“北”为参考。
+Which type of "North" is used as the reference for the direction angle.
 
-'T'："True direction"，真北：地理极点方向，适合地图、导航。
+'T': "True direction", which is the geographic North Pole direction. This is the standard used for maps and navigation systems.
 
-'M'："Magnetic direction"， 磁北：受地磁影响，磁偏角因地区和时间不同而变化。
+'M': "Magnetic direction", which is the direction pointed to by the Earth's magnetic field. Note that magnetic declination varies by location and changes over time.
 
-**读写能力：** 可读写。
+**Read/Write capability**: readable and writable.
 
 **Since:** 12
 
@@ -2390,9 +2394,9 @@ GPS接收机移动方向的参照，用于说明这个角度是以哪个“北�
 GPS_TRACK = 'GPSTrack'
 ```
 
-GPS接收机的移动方向。用于记录拍摄设备在拍照时的移动方向（行进方向），单位是角度（deg）
+Movement direction of the GPS receiver. Direction of movement (heading) of the camera at the moment the photo was taken, measured in degrees.
 
-**读写能力：** 可读写。
+**Read/Write capability**: readable and writable.
 
 **Since:** 12
 
@@ -2408,13 +2412,13 @@ GPS接收机的移动方向。用于记录拍摄设备在拍照时的移动方�
 GPS_IMG_DIRECTION_REF = 'GPSImgDirectionRef'
 ```
 
-图像方向的参照。
+Reference of the direction of the image when it was captured.
 
-'T'："True direction"，真北：地理极点方向，适合地图、导航。
+'T': "True direction", which is the geographic North Pole direction. This is the standard used for maps and navigation systems.
 
-'M'："Magnetic direction"， 磁北：受地磁影响，磁偏角因地区和时间不同而变化。
+'M': "Magnetic direction", which is the direction pointed to by the Earth's magnetic field. Note that magnetic declination varies by location and changes over time.
 
-**读写能力：** 可读写。
+**Read/Write capability**: readable and writable.
 
 **Since:** 12
 
@@ -2430,9 +2434,9 @@ GPS_IMG_DIRECTION_REF = 'GPSImgDirectionRef'
 GPS_IMG_DIRECTION = 'GPSImgDirection'
 ```
 
-拍摄时图像的方向。
+Direction of the image when it was captured.
 
-**读写能力：** 可读写。
+**Read/Write capability**: readable and writable.
 
 **Since:** 12
 
@@ -2448,9 +2452,9 @@ GPS_IMG_DIRECTION = 'GPSImgDirection'
 GPS_MAP_DATUM = 'GPSMapDatum'
 ```
 
-GPS接收器使用的大地测量数据。
+Geodetic survey data used by the GPS receiver.
 
-**读写能力：** 可读写。
+**Read/Write capability**: readable and writable.
 
 **Since:** 12
 
@@ -2466,13 +2470,13 @@ GPS接收器使用的大地测量数据。
 GPS_DEST_LATITUDE_REF = 'GPSDestLatitudeRef'
 ```
 
-目的地点的纬度参照。
+Whether the latitude of the destination point is north or south latitude.
 
-78："North"。
+78: "North".
 
-83："South"。
+83: "South".
 
-**读写能力：** 可读写。
+**Read/Write capability**: readable and writable.
 
 **Since:** 12
 
@@ -2488,9 +2492,9 @@ GPS_DEST_LATITUDE_REF = 'GPSDestLatitudeRef'
 GPS_DEST_LATITUDE = 'GPSDestLatitude'
 ```
 
-目的地点的纬度。
+Latitude of the destination point.
 
-**读写能力：** 可读写。
+**Read/Write capability**: readable and writable.
 
 **Since:** 12
 
@@ -2506,13 +2510,13 @@ GPS_DEST_LATITUDE = 'GPSDestLatitude'
 GPS_DEST_LONGITUDE_REF = 'GPSDestLongitudeRef'
 ```
 
-目的地点的经度参照。
+Whether the longitude of the destination point is east or west longitude.
 
-69："East"。
+69: "East".
 
-87："West"。
+87: "West".
 
-**读写能力：** 可读写。
+**Read/Write capability**: readable and writable.
 
 **Since:** 12
 
@@ -2528,9 +2532,9 @@ GPS_DEST_LONGITUDE_REF = 'GPSDestLongitudeRef'
 GPS_DEST_LONGITUDE = 'GPSDestLongitude'
 ```
 
-目的地点的经度。
+Longitude of the destination point.
 
-**读写能力：** 可读写。
+**Read/Write capability**: readable and writable.
 
 **Since:** 12
 
@@ -2546,13 +2550,13 @@ GPS_DEST_LONGITUDE = 'GPSDestLongitude'
 GPS_DEST_BEARING_REF = 'GPSDestBearingRef'
 ```
 
-指向目的地点的方位参照。
+Reference of the bearing to the destination point.
 
-'T'："True direction"，真北：地理极点方向，适合地图、导航。
+'T': "True direction", which is the geographic North Pole direction. This is the standard used for maps and navigation systems.
 
-'M'："Magnetic direction"，磁北：受地磁影响，磁偏角因地区和时间不同而变化。
+'M': "Magnetic direction", which is the direction pointed to by the Earth's magnetic field. Note that magnetic declination varies by location and changes over time.
 
-**读写能力：** 可读写。
+**Read/Write capability**: readable and writable.
 
 **Since:** 12
 
@@ -2568,9 +2572,9 @@ GPS_DEST_BEARING_REF = 'GPSDestBearingRef'
 GPS_DEST_BEARING = 'GPSDestBearing'
 ```
 
-目的地方位。
+Bearing to the destination point.
 
-**读写能力：** 可读写。
+**Read/Write capability**: readable and writable.
 
 **Since:** 12
 
@@ -2586,15 +2590,15 @@ GPS_DEST_BEARING = 'GPSDestBearing'
 GPS_DEST_DISTANCE_REF = 'GPSDestDistanceRef'
 ```
 
-目标点距离的测量单位。
+Unit used to express the distance to the destination point.
 
-'K'："km"，公里。
+'K': "km."
 
-'M'："miles"，英里。
+'M': "miles."
 
-'N'："nautical miles"，海里。
+'N': "nautical miles."
 
-**读写能力：** 可读写。
+**Read/Write capability**: readable and writable.
 
 **Since:** 12
 
@@ -2610,9 +2614,9 @@ GPS_DEST_DISTANCE_REF = 'GPSDestDistanceRef'
 GPS_DEST_DISTANCE = 'GPSDestDistance'
 ```
 
-到目的地点的距离。
+Distance to the destination point.
 
-**读写能力：** 可读写。
+**Read/Write capability**: readable and writable.
 
 **Since:** 12
 
@@ -2628,9 +2632,9 @@ GPS_DEST_DISTANCE = 'GPSDestDistance'
 GPS_PROCESSING_METHOD = 'GPSProcessingMethod'
 ```
 
-记录定位方法名的字符串。
+String that records the name of the method used for positioning.
 
-**读写能力：** 可读写。
+**Read/Write capability**: readable and writable.
 
 **Since:** 12
 
@@ -2646,9 +2650,9 @@ GPS_PROCESSING_METHOD = 'GPSProcessingMethod'
 GPS_AREA_INFORMATION = 'GPSAreaInformation'
 ```
 
-记录GPS区域名的字符串。
+String that records the name of the GPS area.
 
-**读写能力：** 可读写。
+**Read/Write capability**: readable and writable.
 
 **Since:** 12
 
@@ -2664,13 +2668,13 @@ GPS_AREA_INFORMATION = 'GPSAreaInformation'
 GPS_DIFFERENTIAL = 'GPSDifferential'
 ```
 
-此字段表示GPS数据是否应用了差分校正，对于精确的位置准确性至关重要。
+Whether differential correction is applied to the GPS receiver. It is critical to accurate location accuracy.
 
-0："Without correction"，没有使用差分校正。
+0: "Without correction", which indicates that no differential correction is used.
 
-1："Correction applied"，使用差分校正。
+1:"Correction applied", which indicates that differential correction is used.
 
-**读写能力：** 可读写。
+**Read/Write capability**: readable and writable.
 
 **Since:** 12
 
@@ -2686,9 +2690,9 @@ GPS_DIFFERENTIAL = 'GPSDifferential'
 BODY_SERIAL_NUMBER = 'BodySerialNumber'
 ```
 
-相机机身的序列号。
+Serial number of the camera body.
 
-**读写能力：** 可读写。
+**Read/Write capability**: readable and writable.
 
 **Since:** 12
 
@@ -2704,9 +2708,9 @@ BODY_SERIAL_NUMBER = 'BodySerialNumber'
 CAMERA_OWNER_NAME = 'CameraOwnerName'
 ```
 
-相机所有者的姓名。
+Name of the camera owner.
 
-**读写能力：** 可读写。
+**Read/Write capability**: readable and writable.
 
 **Since:** 12
 
@@ -2722,9 +2726,9 @@ CAMERA_OWNER_NAME = 'CameraOwnerName'
 COMPOSITE_IMAGE = 'CompositeImage'
 ```
 
-表示图像是否为合成图像。
+Whether the image is a composite image.
 
-**读写能力：** 可读写。
+**Read/Write capability**: readable and writable.
 
 **Since:** 12
 
@@ -2740,9 +2744,9 @@ COMPOSITE_IMAGE = 'CompositeImage'
 COMPRESSED_BITS_PER_PIXEL = 'CompressedBitsPerPixel'
 ```
 
-用于压缩图像的压缩模式。单位：每像素位数（bit/px）。
+Number of bits per pixel. It is specific to compressed data.
 
-**读写能力：** 可读写。
+**Read/Write capability**: readable and writable.
 
 **Since:** 12
 
@@ -2758,9 +2762,9 @@ COMPRESSED_BITS_PER_PIXEL = 'CompressedBitsPerPixel'
 DNG_VERSION = 'DNGVersion'
 ```
 
-DNG版本标签编码了符合DNG规范的四级版本号。
+DNG version. It encodes the DNG 4-tier version number.
 
-**读写能力：** 可读写。
+**Read/Write capability**: readable and writable.
 
 **Since:** 12
 
@@ -2776,9 +2780,9 @@ DNG版本标签编码了符合DNG规范的四级版本号。
 DEFAULT_CROP_SIZE = 'DefaultCropSize'
 ```
 
-DefaultCropSize指定了原始坐标中的最终图像大小，考虑了额外的边缘像素。单位：像素（px）。
+Size of the final image area, in raw image coordinates, taking into account extra pixels around the edges of the final image.
 
-**读写能力：** 可读写。
+**Read/Write capability**: readable and writable.
 
 **Since:** 12
 
@@ -2794,9 +2798,9 @@ DefaultCropSize指定了原始坐标中的最终图像大小，考虑了额外�
 GAMMA = 'Gamma'
 ```
 
-表示系数伽马的值。
+Gamma value.
 
-**读写能力：** 可读写。
+**Read/Write capability**: readable and writable.
 
 **Since:** 12
 
@@ -2812,9 +2816,9 @@ GAMMA = 'Gamma'
 ISO_SPEED_LATITUDE_YYY = 'ISOSpeedLatitudeyyy'
 ```
 
-该标签指示摄像机或输入设备的ISO速度纬度yyy值，该值在ISO 12232中定义。
+ISO speed latitude yyy value of the camera or input device, which is defined in ISO 12232.
 
-**读写能力：** 可读写。
+**Read/Write capability**: readable and writable.
 
 **Since:** 12
 
@@ -2830,9 +2834,9 @@ ISO_SPEED_LATITUDE_YYY = 'ISOSpeedLatitudeyyy'
 ISO_SPEED_LATITUDE_ZZZ = 'ISOSpeedLatitudezzz'
 ```
 
-该标签指示摄像机或输入设备的ISO速度纬度zzz值，该值在ISO 12232中定义。
+ISO speed latitude zzz value of the camera or input device, which is defined in ISO 12232.
 
-**读写能力：** 可读写。
+**Read/Write capability**: readable and writable.
 
 **Since:** 12
 
@@ -2848,9 +2852,9 @@ ISO_SPEED_LATITUDE_ZZZ = 'ISOSpeedLatitudezzz'
 LENS_MAKE = 'LensMake'
 ```
 
-镜头的制造商。
+Manufacturer of the lens.
 
-**读写能力：** 可读写。
+**Read/Write capability**: readable and writable.
 
 **Since:** 12
 
@@ -2866,9 +2870,9 @@ LENS_MAKE = 'LensMake'
 LENS_MODEL = 'LensModel'
 ```
 
-镜头的型号名称。
+Model of the lens.
 
-**读写能力：** 可读写。
+**Read/Write capability**: readable and writable.
 
 **Since:** 12
 
@@ -2884,9 +2888,9 @@ LENS_MODEL = 'LensModel'
 LENS_SERIAL_NUMBER = 'LensSerialNumber'
 ```
 
-镜头的序列号。
+Serial number of the lens.
 
-**读写能力：** 可读写。
+**Read/Write capability**: readable and writable.
 
 **Since:** 12
 
@@ -2902,9 +2906,9 @@ LENS_SERIAL_NUMBER = 'LensSerialNumber'
 LENS_SPECIFICATION = 'LensSpecification'
 ```
 
-使用的镜头规格。
+Specifications of the lens.
 
-**读写能力：** 可读写。
+**Read/Write capability**: readable and writable.
 
 **Since:** 12
 
@@ -2920,9 +2924,9 @@ LENS_SPECIFICATION = 'LensSpecification'
 NEW_SUBFILE_TYPE = 'NewSubfileType'
 ```
 
-在Exif中，"NewSubfileType"字段用于标识子文件的数据类型，如全分辨率图像、缩略图或多帧图像的一部分。其值是位掩码，0代表全分辨率图像，1代表缩略图，2代表多帧图像的一部分。
+Data type of a subfile, such as a full-resolution image, a thumbnail, or a part of a multi-frame image. The value is a bit mask. The value 0 indicates a full-resolution image, **1** indicates a thumbnail, and **2** indicates a part of a multi-frame image.
 
-**读写能力：** 可读写。
+**Read/Write capability**: readable and writable.
 
 **Since:** 12
 
@@ -2938,9 +2942,9 @@ NEW_SUBFILE_TYPE = 'NewSubfileType'
 OFFSET_TIME = 'OffsetTime'
 ```
 
-在Exif中，OffsetTime字段表示与UTC（协调世界时）的时间偏移，用于确定照片拍摄的本地时间。
+Time with an offset from UTC when the image was captured.
 
-**读写能力：** 可读写。
+**Read/Write capability**: readable and writable.
 
 **Since:** 12
 
@@ -2956,9 +2960,9 @@ OFFSET_TIME = 'OffsetTime'
 OFFSET_TIME_DIGITIZED = 'OffsetTimeDigitized'
 ```
 
-此标签记录图像数字化时的UTC偏移量，有助于准确调整时间戳。
+Time with an offset from UTC when the image was digitized. It helps to accurately adjust the timestamp.
 
-**读写能力：** 可读写。
+**Read/Write capability**: readable and writable.
 
 **Since:** 12
 
@@ -2974,9 +2978,9 @@ OFFSET_TIME_DIGITIZED = 'OffsetTimeDigitized'
 OFFSET_TIME_ORIGINAL = 'OffsetTimeOriginal'
 ```
 
-此标签记录原始图像创建时的UTC偏移量，对于时间敏感的应用至关重要。
+Time with an offset from UTC when the original image was created. It is critical for time-sensitive applications.
 
-**读写能力：** 可读写。
+**Read/Write capability**: readable and writable.
 
 **Since:** 12
 
@@ -2992,9 +2996,9 @@ OFFSET_TIME_ORIGINAL = 'OffsetTimeOriginal'
 SOURCE_EXPOSURE_TIMES_OF_COMPOSITE_IMAGE = 'SourceExposureTimesOfCompositeImage'
 ```
 
-合成图像的源图像曝光时间。
+Exposure time of source images of the composite image.
 
-**读写能力：** 可读写。
+**Read/Write capability**: readable and writable.
 
 **Since:** 12
 
@@ -3010,9 +3014,9 @@ SOURCE_EXPOSURE_TIMES_OF_COMPOSITE_IMAGE = 'SourceExposureTimesOfCompositeImage'
 SOURCE_IMAGE_NUMBER_OF_COMPOSITE_IMAGE = 'SourceImageNumberOfCompositeImage'
 ```
 
-用于合成图像的源图像数量。
+Number of source images of the composite image.
 
-**读写能力：** 可读写。
+**Read/Write capability**: readable and writable.
 
 **Since:** 12
 
@@ -3028,9 +3032,9 @@ SOURCE_IMAGE_NUMBER_OF_COMPOSITE_IMAGE = 'SourceImageNumberOfCompositeImage'
 SUBFILE_TYPE = 'SubfileType'
 ```
 
-此标签指示此子文件中的数据类型。标签已弃用，请使用NewSubfileType替代。
+Type of data contained in this subfile. This tag has been deprecated. Use **NewSubfileType** instead.
 
-**读写能力：** 可读写。
+**Read/Write capability**: readable and writable.
 
 **Since:** 12
 
@@ -3046,9 +3050,9 @@ SUBFILE_TYPE = 'SubfileType'
 GPS_H_POSITIONING_ERROR = 'GPSHPositioningError'
 ```
 
-此标签指示水平定位误差。单位：米（m）。
+Horizontal positioning error, in meters.
 
-**读写能力：** 可读写。
+**Read/Write capability**: readable and writable.
 
 **Since:** 12
 
@@ -3064,9 +3068,9 @@ GPS_H_POSITIONING_ERROR = 'GPSHPositioningError'
 PHOTOGRAPHIC_SENSITIVITY = 'PhotographicSensitivity'
 ```
 
-用于表示图像拍摄时所用的感光度值（ISO 值），也叫ISO Speed。该字段是Exif 2.3后的推荐字段，ISOSpeedRatings（Tag 0x8827）是早期使用的字段，类型和含义相同，若两个字段都存在，以`PhotographicSensitivity` 为主。
+ISO sensitivity (ISO speed) used when the image was captured. It is the recommended field in Exif 2.3 and later. The earlier field, ISOSpeedRatings (Tag 0x8827), has the same data type and meaning. However, if both fields are present, the **PhotographicSensitivity** value should be used.
 
-**读写能力：** 可读写。
+**Read/Write capability**: readable and writable.
 
 **Since:** 12
 
@@ -3082,9 +3086,9 @@ PHOTOGRAPHIC_SENSITIVITY = 'PhotographicSensitivity'
 BURST_NUMBER = 'HwMnoteBurstNumber'
 ```
 
-连拍次数。
+Number of burst shooting times.
 
-**读写能力：** 只读。
+**Read/Write capability**: read-only
 
 **Since:** 12
 
@@ -3100,9 +3104,9 @@ BURST_NUMBER = 'HwMnoteBurstNumber'
 FACE_CONF = 'HwMnoteFaceConf'
 ```
 
-人脸置信度。
+Face confidence.
 
-**读写能力：** 只读。
+**Read/Write capability**: read-only
 
 **Since:** 12
 
@@ -3118,9 +3122,9 @@ FACE_CONF = 'HwMnoteFaceConf'
 FACE_LEYE_CENTER = 'HwMnoteFaceLeyeCenter'
 ```
 
-左眼中心。
+Left eye centered.
 
-**读写能力：** 只读。
+**Read/Write capability**: read-only
 
 **Since:** 12
 
@@ -3136,9 +3140,9 @@ FACE_LEYE_CENTER = 'HwMnoteFaceLeyeCenter'
 FACE_MOUTH_CENTER = 'HwMnoteFaceMouthCenter'
 ```
 
-嘴中心。
+Mouth centered.
 
-**读写能力：** 只读。
+**Read/Write capability**: read-only
 
 **Since:** 12
 
@@ -3154,9 +3158,9 @@ FACE_MOUTH_CENTER = 'HwMnoteFaceMouthCenter'
 FACE_POINTER = 'HwMnoteFacePointer'
 ```
 
-脸部指针。
+Face pointer.
 
-**读写能力：** 只读。
+**Read/Write capability**: read-only
 
 **Since:** 12
 
@@ -3172,9 +3176,9 @@ FACE_POINTER = 'HwMnoteFacePointer'
 FACE_RECT = 'HwMnoteFaceRect'
 ```
 
-脸部矩形。
+Face rectangle.
 
-**读写能力：** 只读。
+**Read/Write capability**: read-only
 
 **Since:** 12
 
@@ -3190,9 +3194,9 @@ FACE_RECT = 'HwMnoteFaceRect'
 FACE_REYE_CENTER = 'HwMnoteFaceReyeCenter'
 ```
 
-右眼中心。
+Right eye centered.
 
-**读写能力：** 只读。
+**Read/Write capability**: read-only
 
 **Since:** 12
 
@@ -3208,9 +3212,9 @@ FACE_REYE_CENTER = 'HwMnoteFaceReyeCenter'
 FACE_SMILE_SCORE = 'HwMnoteFaceSmileScore'
 ```
 
-FaceCount张人脸的笑脸分数。
+Smile score of for faces.
 
-**读写能力：** 只读。
+**Read/Write capability**: read-only
 
 **Since:** 12
 
@@ -3226,9 +3230,9 @@ FaceCount张人脸的笑脸分数。
 FACE_VERSION = 'HwMnoteFaceVersion'
 ```
 
-人脸算法版本信息。
+Facial recognition algorithm version.
 
-**读写能力：** 只读。
+**Read/Write capability**: read-only
 
 **Since:** 12
 
@@ -3244,9 +3248,9 @@ FACE_VERSION = 'HwMnoteFaceVersion'
 FRONT_CAMERA = 'HwMnoteFrontCamera'
 ```
 
-是否是前置相机自拍。
+Whether the front camera is used to take a selfie.
 
-**读写能力：** 只读。
+**Read/Write capability**: read-only
 
 **Since:** 12
 
@@ -3262,9 +3266,9 @@ FRONT_CAMERA = 'HwMnoteFrontCamera'
 SCENE_POINTER = 'HwMnoteScenePointer'
 ```
 
-场景指针。
+Pointer to the scene.
 
-**读写能力：** 只读。
+**Read/Write capability**: read-only
 
 **Since:** 12
 
@@ -3280,9 +3284,9 @@ SCENE_POINTER = 'HwMnoteScenePointer'
 SCENE_VERSION = 'HwMnoteSceneVersion'
 ```
 
-场景算法版本信息。
+Scene algorithm version.
 
-**读写能力：** 只读。
+**Read/Write capability**: read-only
 
 **Since:** 12
 
@@ -3298,9 +3302,9 @@ SCENE_VERSION = 'HwMnoteSceneVersion'
 IS_XMAGE_SUPPORTED = 'HwMnoteIsXmageSupported'
 ```
 
-是否支持XMAGE。
+Whether XMAGE is supported.
 
-**读写能力：** 可读写。
+**Read/Write capability**: readable and writable.
 
 **Since:** 12
 
@@ -3316,9 +3320,9 @@ IS_XMAGE_SUPPORTED = 'HwMnoteIsXmageSupported'
 XMAGE_MODE = 'HwMnoteXmageMode'
 ```
 
-XMAGE水印模式。
+XMAGE watermark mode.
 
-**读写能力：** 可读写。
+**Read/Write capability**: readable and writable.
 
 **Since:** 12
 
@@ -3334,9 +3338,9 @@ XMAGE水印模式。
 XMAGE_LEFT = 'HwMnoteXmageLeft'
 ```
 
-水印区域X1坐标。
+X1 coordinate of the watermark region.
 
-**读写能力：** 可读写。
+**Read/Write capability**: readable and writable.
 
 **Since:** 12
 
@@ -3352,9 +3356,9 @@ XMAGE_LEFT = 'HwMnoteXmageLeft'
 XMAGE_TOP = 'HwMnoteXmageTop'
 ```
 
-水印区域Y1坐标。
+Y1 coordinate of the watermark region.
 
-**读写能力：** 可读写。
+**Read/Write capability**: readable and writable.
 
 **Since:** 12
 
@@ -3370,9 +3374,9 @@ XMAGE_TOP = 'HwMnoteXmageTop'
 XMAGE_RIGHT = 'HwMnoteXmageRight'
 ```
 
-水印区域X2坐标。
+X2 coordinate of the watermark region.
 
-**读写能力：** 可读写。
+**Read/Write capability**: readable and writable.
 
 **Since:** 12
 
@@ -3388,9 +3392,9 @@ XMAGE_RIGHT = 'HwMnoteXmageRight'
 XMAGE_BOTTOM = 'HwMnoteXmageBottom'
 ```
 
-水印区域Y2坐标。
+Y2 coordinate of the watermark region.
 
-**读写能力：** 可读写。
+**Read/Write capability**: readable and writable.
 
 **Since:** 12
 
@@ -3406,9 +3410,9 @@ XMAGE_BOTTOM = 'HwMnoteXmageBottom'
 CLOUD_ENHANCEMENT_MODE = 'HwMnoteCloudEnhancementMode'
 ```
 
-云增强模式。
+Cloud enhancement mode.
 
-**读写能力：** 可读写。
+**Read/Write capability**: readable and writable.
 
 **Since:** 12
 
@@ -3424,9 +3428,9 @@ CLOUD_ENHANCEMENT_MODE = 'HwMnoteCloudEnhancementMode'
 WIND_SNAPSHOT_MODE = 'HwMnoteWindSnapshotMode'
 ```
 
-运动快拍模式。
+Motion snapshot mode.
 
-**读写能力：** 只读。
+**Read/Write capability**: read-only
 
 **Since:** 12
 
@@ -3442,9 +3446,9 @@ WIND_SNAPSHOT_MODE = 'HwMnoteWindSnapshotMode'
 GIF_LOOP_COUNT = 'GIFLoopCount'
 ```
 
-GIF图片循环次数。0表示无限循环，其他值表示循环次数。
+Number of GIF loops. The value **0** means an infinite loop, and other values means the number of loops.
 
-**读写能力：** 只读。
+**Read/Write capability**: read-only
 
 **Since:** 12
 

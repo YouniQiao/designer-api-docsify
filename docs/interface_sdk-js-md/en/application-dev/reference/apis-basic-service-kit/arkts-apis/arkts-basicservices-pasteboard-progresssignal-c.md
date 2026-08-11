@@ -1,6 +1,7 @@
 # ProgressSignal
 
-定义进度取消的函数，在粘贴过程中可选择取消任务，且仅当进度指示选项[ProgressIndicator](arkts-basicservices-pasteboard-progressindicator-e.md)设置为NONE时此参数才生效。
+Defines a function for canceling the paste task. This parameter is valid only when  
+[ProgressIndicator](arkts-basicservices-pasteboard-progressindicator-e.md) is set to **NONE**.
 
 **Since:** 15
 
@@ -22,7 +23,7 @@ import { pasteboard } from 'kits/@kit.BasicServicesKit';
 cancel(): void
 ```
 
-取消正在进行的拷贝粘贴任务。
+Cancels an ongoing paste task.
 
 **Since:** 15
 

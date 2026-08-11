@@ -1,6 +1,6 @@
 # BundleStats
 
-获取捆绑包统计信息。
+Get the bundle statistics.
 
 **Since:** 9
 
@@ -22,7 +22,7 @@ import { storageStatistics } from 'kits/@kit.CoreFileKit';
 appSize: long
 ```
 
-应用安装文件大小（单位为Byte）。
+The size of application installation data.&lt;br&gt;Unit: Byte.
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：long
 
@@ -40,7 +40,7 @@ appSize: long
 cacheSize: long
 ```
 
-应用缓存文件大小（单位为Byte）。
+The size of application cache data.&lt;br&gt;Unit: Byte.
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：long
 
@@ -58,7 +58,7 @@ cacheSize: long
 dataSize: long
 ```
 
-应用文件存储大小（除应用安装文件）（单位为Byte）。
+The size of application local data, distributed data and database data.&lt;br&gt;Unit: Byte.
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：long
 

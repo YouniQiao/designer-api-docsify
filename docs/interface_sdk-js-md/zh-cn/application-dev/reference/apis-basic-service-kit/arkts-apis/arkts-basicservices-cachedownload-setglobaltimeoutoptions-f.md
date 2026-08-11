@@ -1,11 +1,5 @@
 # setGlobalTimeoutOptions
 
-## 导入模块
-
-```TypeScript
-import { cacheDownload } from 'kits/@kit.BasicServicesKit';
-```
-
 ## setGlobalTimeoutOptions
 
 ```TypeScript
@@ -32,9 +26,25 @@ Sets timeout configuration for all tasks.Used when task-specific timeout configu
 
 ## 示例
 
-```TypeScript
-import { cacheDownload, BusinessError } from '@kit.BasicServicesKit';
+ArkTS-Dyn示例：
 
+```TypeScript
+try {
+  // 设置全局任务超时配置
+  cacheDownload.setGlobalTimeoutOptions({
+    networkCheckTimeout: 20,
+    httpTotalTimeout: 60,
+  });
+  cacheDownload.download("https://www.example.com", {});
+} catch (error) {
+  let err: BusinessError = error as BusinessError;
+  console.error(`Failed to download the resource. err code: ${err.code}, err message: ${err.message}`);
+}
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
 try {
   // 设置全局任务超时配置
   cacheDownload.setGlobalTimeoutOptions({

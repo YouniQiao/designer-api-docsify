@@ -1,10 +1,6 @@
 # AlphabetIndexerOptions
 
-用于设置索引条参数。
-
-> **说明：**
-> 
-> 为规范匿名对象的定义，API 18版本修改了此处的元素定义。其中，保留了历史匿名对象的起始版本信息，会出现外层元素@since版本号高于内层元素版本号的情况，但这不影响接口的使用。
+AlphabetIndexer constructor options.
 
 **Since:** 23
 
@@ -20,7 +16,7 @@
 arrayValue: Array<string>
 ```
 
-字符串数组，每个字符串代表一个索引项。
+Alphabetical index string array.Anonymous Object Rectification.
 
 **Type:** Array&lt;string&gt;
 
@@ -40,11 +36,7 @@ arrayValue: Array<string>
 selected: int | Bindable<int>
 ```
 
-初始选中项索引值，若超出索引值范围，则取默认值0。与[selected](arkts-arkui-alphabetindexer-alphabetindexerattribute-i.md#selected)属性同时设置时，selected属性的优先级较高。
-
-取值范围：[0, arrayValue.length-1]
-
-该属性支持[\$\$](../../../ui/state-management/arkts-two-way-sync.md)双向绑定变量。
+ID of the selected item.
 
 **Type:** int \| Bindable&lt;int&gt;
 

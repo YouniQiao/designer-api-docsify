@@ -1,6 +1,6 @@
 # LazyColumnLayoutAttribute
 
-定义懒列布局属性。
+Defines the lazy column layout attribute.
 
 **Inheritance/Implementation:** LazyColumnLayoutAttribute extends [CommonMethod](arkts-arkui-common-commonmethod-i.md)
 
@@ -24,7 +24,7 @@ import { LazyColumnLayoutAttribute, LazyColumnLayout } from 'kits/@kit.ArkUI';
 default alignItems(value: HorizontalAlign | undefined): this
 ```
 
-设置行内容的水平对齐方式。
+Sets the horizontal alignment of the row content.
 
 **Since:** 26.0.0
 
@@ -40,7 +40,7 @@ default alignItems(value: HorizontalAlign | undefined): this
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | [HorizontalAlign](arkts-arkui-horizontalalign-e.md) \| undefined | Yes | 行内容的水平对齐。 &lt;br&gt;默认值：HorizontalAlign.Center。 |
+| value | [HorizontalAlign](arkts-arkui-horizontalalign-e.md) \| undefined | Yes | the horizontal alignment of the row content. &lt;br&gt;Default value: HorizontalAlign.Center. |
 
 **Return value:**
 
@@ -54,7 +54,7 @@ default alignItems(value: HorizontalAlign | undefined): this
 default attributeModifier(modifier: AttributeModifier<LazyColumnLayoutAttribute> | AttributeModifier<CommonMethod> | undefined): this
 ```
 
-设置属性修饰符。
+Sets the attribute modifier.
 
 **Since:** 26.0.0
 
@@ -84,7 +84,7 @@ default attributeModifier(modifier: AttributeModifier<LazyColumnLayoutAttribute>
 default footer(builder: CustomBuilder | undefined): this
 ```
 
-设置懒加载列布局的footer。
+Sets the footer of the lazy column layout.
 
 **Since:** 26.0.0
 
@@ -100,7 +100,7 @@ default footer(builder: CustomBuilder | undefined): this
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| builder | [CustomBuilder](../arkts-components/arkts-arkui-custombuilder-t.md) \| undefined | Yes | footer生成器函数 &lt;br&gt;传递undefined将移除footer。 |
+| builder | [CustomBuilder](../arkts-components/arkts-arkui-custombuilder-t.md) \| undefined | Yes | The footer builder function &lt;br&gt;Passing undefined will remove the footer. |
 
 **Return value:**
 
@@ -114,7 +114,7 @@ default footer(builder: CustomBuilder | undefined): this
 default header(builder: CustomBuilder | undefined): this
 ```
 
-设置懒加载列布局的header。
+Sets the header of the lazy column layout.
 
 **Since:** 26.0.0
 
@@ -130,7 +130,7 @@ default header(builder: CustomBuilder | undefined): this
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| builder | [CustomBuilder](../arkts-components/arkts-arkui-custombuilder-t.md) \| undefined | Yes | header生成器函数 &lt;br&gt;传递undefined将移除header。 |
+| builder | [CustomBuilder](../arkts-components/arkts-arkui-custombuilder-t.md) \| undefined | Yes | The header builder function &lt;br&gt;Passing undefined will remove the header. |
 
 **Return value:**
 
@@ -144,7 +144,7 @@ default header(builder: CustomBuilder | undefined): this
 default onVisibleIndexesChange(callback: OnVisibleIndexesChangeCallback | undefined): this
 ```
 
-当子组件在可见区域的索引发生变化时触发。
+Triggered when the index of child components in the visible area changes.
 
 **Since:** 26.0.0
 
@@ -160,7 +160,7 @@ default onVisibleIndexesChange(callback: OnVisibleIndexesChangeCallback | undefi
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [OnVisibleIndexesChangeCallback](../arkts-components/arkts-arkui-onvisibleindexeschangecallback-t.md) \| undefined | Yes | 回调函数，当可见区域中子组件的索引发生变化时触发. &lt;br&gt;传递undefined将取消注册回调。 |
+| callback | [OnVisibleIndexesChangeCallback](../arkts-components/arkts-arkui-onvisibleindexeschangecallback-t.md) \| undefined | Yes | callback function, triggered when the index of child components in the visible area changes. &lt;br&gt;Passing undefined will unregister the callback. |
 
 **Return value:**
 
@@ -174,11 +174,11 @@ default onVisibleIndexesChange(callback: OnVisibleIndexesChangeCallback | undefi
 default setLazyColumnLayoutOptions(): this
 ```
 
-设置LazyColumnLayout选项。
+Set LazyColumnLayout options.
 
-**Since:** 26.0.0
+**Since:** 26.1.0
 
-**ArkTS mode:** ArkTS-Sta only, since version 26.0.0.
+**ArkTS mode:** ArkTS-Sta only, since version 26.1.0.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -198,7 +198,7 @@ default setLazyColumnLayoutOptions(): this
 default space(space: LengthMetrics | undefined): this
 ```
 
-行之间的间距。
+The spacing between rows.
 
 **Since:** 26.0.0
 
@@ -214,7 +214,7 @@ default space(space: LengthMetrics | undefined): this
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| space | [LengthMetrics](arkts-arkui-graphics-lengthmetrics-c.md) \| undefined | Yes | 行之间的间距。 &lt;br&gt;默认值为0。&lt;br&gt;范围：[0, +∞)。 |
+| space | [LengthMetrics](arkts-arkui-graphics-lengthmetrics-c.md) \| undefined | Yes | the spacing between rows. &lt;br&gt;Default value: 0. &lt;br&gt;Range: [0, +∞). |
 
 **Return value:**
 
@@ -228,7 +228,7 @@ default space(space: LengthMetrics | undefined): this
 default sticky(sticky: StickyStyle | undefined): this
 ```
 
-设置header和footer的吸顶吸底样式。
+Sets sticky style for header and footer.
 
 **Since:** 26.0.0
 
@@ -244,7 +244,7 @@ default sticky(sticky: StickyStyle | undefined): this
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| sticky | [StickyStyle](../arkts-components/arkts-arkui-stickystyle-e.md) \| undefined | Yes | header和footer的吸顶吸底样式。 |
+| sticky | [StickyStyle](../arkts-components/arkts-arkui-stickystyle-e.md) \| undefined | Yes | The sticky style for header and footer. |
 
 **Return value:**
 

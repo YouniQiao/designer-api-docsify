@@ -1,6 +1,6 @@
 # TextProcessState
 
-文本处理状态的枚举。
+Enumerates text processing states.
 
 **Since:** 26.0.0
 
@@ -16,7 +16,7 @@
 INIT = 0
 ```
 
-初始状态，文本处理尚未开始。
+Initial state, indicating that text processing has not started.
 
 **Since:** 26.0.0
 
@@ -36,7 +36,7 @@ INIT = 0
 INDEXED = 1
 ```
 
-已生成索引状态，文本索引已生成。
+Index generated state, indicating that the text index has been generated.
 
 **Since:** 26.0.0
 
@@ -56,7 +56,7 @@ INDEXED = 1
 SHAPED = 2
 ```
 
-已塑形状态，文本已完成塑形。
+Shaped state, indicating that the text has been shaped.
 
 **Since:** 26.0.0
 
@@ -76,7 +76,7 @@ SHAPED = 2
 LINE_BROKEN = 3
 ```
 
-已换行状态，文本已换行。
+Line-wrapped state. The text has been line-wrapped.
 
 **Since:** 26.0.0
 
@@ -96,7 +96,7 @@ LINE_BROKEN = 3
 FORMATTED = 4
 ```
 
-已格式化状态，文本已完成格式化。
+Formatted state, indicating that the text has been formatted.
 
 **Since:** 26.0.0
 
@@ -116,7 +116,7 @@ FORMATTED = 4
 PAINT = 5
 ```
 
-已绘制状态，文本已完成绘制。
+Drawn state, indicating that the text has been drawn.
 
 **Since:** 26.0.0
 
@@ -136,7 +136,7 @@ PAINT = 5
 UPDATE_ATTRIBUTE = 6
 ```
 
-已更新属性状态，文本属性已更新。
+Updated property state. The text properties have been updated.
 
 **Since:** 26.0.0
 

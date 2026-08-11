@@ -1,4 +1,4 @@
-# @ohos.graphics.scene(导出3D接口)
+# @ohos.graphics.scene(ArkGraphics 3D)
 
 ## Modules to Import
 

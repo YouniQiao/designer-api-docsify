@@ -1,6 +1,6 @@
 # DataMigrationCallback (System API)
 
-数据迁移时使用的回调接口类型，定义了数据迁移过程中的回调方法。开发者需实现该接口的所有方法，以接收迁移过程中的心跳通知、进度更新和最终结果。
+Callback API type used during data migration, defining the callback methods for the data migration process. You must implement all methods of this API to receive heartbeat notifications, progress updates, and the final result during migration.
 
 **Since:** 23
 
@@ -24,7 +24,7 @@ import { fontManager } from 'kits/@kit.LocalizationKit';
 onHeartBeat(): void
 ```
 
-回调函数，在数据迁移任务执行期间定期调用，用于通知开发者迁移任务仍在正常运行，开发者可据此更新UI提示或执行其他业务逻辑。
+Callback function that is periodically invoked during the execution of the data migration task to notify you that the migration task is still running normally. You can use it to update UI prompts or execute other business logic.
 
 **Since:** 23
 
@@ -41,15 +41,15 @@ onHeartBeat(): void
 ```TypeScript
 import { fontManager } from '@kit.LocalizationKit';
 
-async function dataMigration() {
+dataMigration() {
   const callback: fontManager.DataMigrationCallback = {
     onHeartBeat: () => {
       console.info('onHeartBeat callback');
     },
-    onProgress: (progress : fontManager.DataMigrationProgress) => {
+    onProgress(progress : fontManager.DataMigrationProgress) => {
       console.info('onProgress callback');
     },
-    onResult: (result : number) => {
+    onResult(result : int) => {
       console.info('onResult callback');
     }
   }
@@ -59,6 +59,7 @@ async function dataMigration() {
   } catch (error) {
     console.error('dataMigration err.' + error.code);
   }
+  return;
 }
 ```
 
@@ -68,7 +69,7 @@ async function dataMigration() {
 onProgress(progress : DataMigrationProgress): void
 ```
 
-回调函数，在数据迁移任务执行过程中定期调用，用于通知开发者当前的迁移进度和预估剩余时间。当需要在UI上展示进度条、剩余时间等信息时使用此回调。
+Callback function that is periodically invoked during the execution of the data migration task to notify you of the current migration progress and estimated remaining time. This callback can be used when progress bars, remaining time, and other information need to be displayed on the UI.
 
 **Since:** 23
 
@@ -84,22 +85,22 @@ onProgress(progress : DataMigrationProgress): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| progress | [DataMigrationProgress](arkts-localization-fontmanager-datamigrationprogress-i-sys.md) | Yes | 数据迁移进度信息。 |
+| progress | [DataMigrationProgress](arkts-localization-fontmanager-datamigrationprogress-i-sys.md) | Yes | Data migration progress. |
 
 ## Examples
 
 ```TypeScript
 import { fontManager } from '@kit.LocalizationKit';
 
-async function dataMigration() {
+dataMigration() {
   const callback: fontManager.DataMigrationCallback = {
     onHeartBeat: () => {
       console.info('onHeartBeat callback');
     },
-    onProgress: (progress : fontManager.DataMigrationProgress) => {
+    onProgress(progress : fontManager.DataMigrationProgress) => {
       console.info('onProgress callback');
     },
-    onResult: (result : number) => {
+    onResult(result : int) => {
       console.info('onResult callback');
     }
   }
@@ -109,6 +110,7 @@ async function dataMigration() {
   } catch (error) {
     console.error('dataMigration err.' + error.code);
   }
+  return;
 }
 ```
 
@@ -124,7 +126,7 @@ ArkTS-Sta:
 onResult(result : int): void
 ```
 
-回调函数，在数据迁移任务完成（无论成功或失败）后调用，用于通知开发者迁移的最终结果。当需要在迁移完成后执行后续操作（如更新UI、记录日志、通知用户等）时使用此回调。
+Callback function that is invoked after the data migration task is completed (whether successful or failed) to notify you of the final migration result. This callback can be used when subsequent operations (such as updating the UI, logging, notifying users, etc.) need to be performed after migration is complete.
 
 **Since:** 23
 
@@ -140,22 +142,22 @@ onResult(result : int): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| result | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | 数据迁移结果。 &lt;br&gt;0：数据迁移成功。 &lt;br&gt;1：无需进行数据迁移。 &lt;br&gt;2：获取用户ID失败。 &lt;br&gt;3：检查目录失败。 &lt;br&gt;4：初始化缓存目录失败。 &lt;br&gt;5：打开源文件失败。 &lt;br&gt;6：拷贝失败。 &lt;br&gt;7：文件重命名失败。 &lt;br&gt;8：文件删除失败。 |
+| result | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | Data migration result. &lt;br&gt;**0**: Data migration succeeded. &lt;br&gt;**1**: No data migration is required. &lt;br&gt;**2**: Failed to obtain the user ID. &lt;br&gt;**3**: Failed to check the directory. &lt;br&gt;**4**: Failed to initialize the cache directory. &lt;br&gt;**5**: Failed to open the source file. &lt;br&gt;**6**: Failed to copy the file. &lt;br&gt;**7**: Failed to rename the file. &lt;br&gt;**8**: Failed to delete the file. |
 
 ## Examples
 
 ```TypeScript
 import { fontManager } from '@kit.LocalizationKit';
 
-async function dataMigration() {
+dataMigration() {
   const callback: fontManager.DataMigrationCallback = {
     onHeartBeat: () => {
       console.info('onHeartBeat callback');
     },
-    onProgress: (progress : fontManager.DataMigrationProgress) => {
+    onProgress(progress : fontManager.DataMigrationProgress) => {
       console.info('onProgress callback');
     },
-    onResult: (result : number) => {
+    onResult(result : int) => {
       console.info('onResult callback');
     }
   }
@@ -165,6 +167,7 @@ async function dataMigration() {
   } catch (error) {
     console.error('dataMigration err.' + error.code);
   }
+  return;
 }
 ```
 

@@ -1,6 +1,6 @@
 # InstallParam (System API)
 
-安装、恢复或卸载时需要指定的参数。
+Describes the parameters required for bundle installation, recovery, or uninstall.
 
 **Since:** 7
 
@@ -22,7 +22,13 @@
 installFlag: number
 ```
 
-指示安装标志, 默认值：1。 &lt;/br&gt;取值范围：&lt;/br&gt;1: 覆盖安装。&lt;/br&gt;16: 免安装。
+Installation flag.
+
+The value can be:
+
+**1** (default): overwrite installation.
+
+**16**: installation-free.
 
 **Type:** number
 
@@ -48,7 +54,7 @@ installFlag: number
 isKeepData: boolean
 ```
 
-指示应用卸载时是否保留包数据，默认值：false，true表示保留，false表示不保留。
+Whether to retain the bundle data when the application is uninstalled. The default value is **false**. **true** to retain, **false** otherwise.
 
 **Type:** boolean
 
@@ -74,7 +80,7 @@ isKeepData: boolean
 userId: number
 ```
 
-指示用户id, 默认值：调用方的userId。
+User ID. The default value is the user ID of the caller.
 
 **Type:** number
 

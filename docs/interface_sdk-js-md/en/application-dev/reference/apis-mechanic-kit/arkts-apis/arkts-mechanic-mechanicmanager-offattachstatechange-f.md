@@ -32,5 +32,5 @@ Unsubscribes from device attachment state change events.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 33300001 | Service exception. |
+| [33300001](../errorcode-mechanic.md#33300001-system-error) | Service exception. |
 

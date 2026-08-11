@@ -1,6 +1,6 @@
 # DisturbanceFieldShape
 
-粒子形状。
+Defines particle disturbance shape.
 
 **Since:** 12
 
@@ -16,7 +16,7 @@
 RECT = 0
 ```
 
-长方形。
+Rectangle.
 
 **Since:** 12
 
@@ -36,7 +36,7 @@ RECT = 0
 CIRCLE = 1
 ```
 
-圆。
+Circle.
 
 **Since:** 12
 
@@ -56,7 +56,7 @@ CIRCLE = 1
 ELLIPSE = 2
 ```
 
-椭圆。
+Ellipse.
 
 **Since:** 12
 

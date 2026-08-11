@@ -10,12 +10,6 @@ ConvertXML类提供将XML文本转换为JavaScript对象的能力。推荐使用
 
 **系统能力：** SystemCapability.Utils.Lang
 
-## 导入模块
-
-```TypeScript
-import { convertxml } from 'kits/@kit.ArkTS';
-```
-
 ## convert
 
 ```TypeScript
@@ -28,6 +22,8 @@ convert(xml: string, options?: ConvertOptions): Object
 > 
 > 从API version 8开始支持，从API version 9开始废弃，建议使用
 > [fastConvertToJSObject&lt;sup&gt;14+&lt;/sup&gt;](arkts-arkts-xml-convertxml-c.md#fastconverttojsobject)替代。
+> 
+> 在Windows环境中，通常以回车符（CR）和换行符（LF）一对字符来表示换行。本接口转换后的对象以换行符（LF）表示换行。
 
 **起始版本：** 8
 
@@ -100,6 +96,8 @@ convertToJSObject(xml: string, options?: ConvertOptions): Object
 > 
 > 从API version 9开始支持，从API version 14开始废弃，建议使用
 > [fastConvertToJSObject&lt;sup&gt;14+&lt;/sup&gt;](arkts-arkts-xml-convertxml-c.md#fastconverttojsobject)替代。
+> 
+> 在Windows环境中，通常以回车符（CR）和换行符（LF）一对字符来表示换行。本接口转换后的对象以换行符（LF）表示换行。
 
 **起始版本：** 9
 
@@ -132,7 +130,7 @@ convertToJSObject(xml: string, options?: ConvertOptions): Object
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 10200002 | Invalid xml string. |
+| [10200002](../errorcode-utils.md#10200002-参数解析错误) | Invalid xml string. |
 
 ## 示例
 
@@ -218,7 +216,7 @@ fastConvertToJSObject(xml: string, options?: ConvertOptions): Object
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 10200002 | Invalid xml string. |
+| [10200002](../errorcode-utils.md#10200002-参数解析错误) | Invalid xml string. |
 
 ## 示例
 
@@ -303,7 +301,7 @@ largeConvertToJSObject(xml: string, options?: ConvertOptions): Object
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 10200002 | Invalid xml string. |
+| [10200002](../errorcode-utils.md#10200002-参数解析错误) | Invalid xml string. |
 
 ## 示例
 

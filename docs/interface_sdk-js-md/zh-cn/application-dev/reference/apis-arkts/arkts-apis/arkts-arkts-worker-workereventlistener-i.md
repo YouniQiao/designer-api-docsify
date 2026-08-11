@@ -10,12 +10,6 @@
 
 **系统能力：** SystemCapability.Utils.Lang
 
-## 导入模块
-
-```TypeScript
-import { MessageEvents, PostMessageOptions, MessageEvent, Priority, WorkerEventTarget, ThreadWorkerPriority, ThreadWorkerGlobalScope, DedicatedWorkerGlobalScope, ErrorEvent, Event, EventListener, WorkerOptions, EventTarget, WorkerEventListener } from 'kits/@kit.ArkTS';
-```
-
 ## [[Call]]
 
 ```TypeScript
@@ -44,8 +38,8 @@ import { MessageEvents, PostMessageOptions, MessageEvent, Priority, WorkerEventT
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 10200005 | The called API is not supported in the worker thread. |
-| 10200004 | The Worker instance is not running. |
+| [10200005](../errorcode-utils.md#10200005-worker不支持某api) | The called API is not supported in the worker thread. |
+| [10200004](../errorcode-utils.md#10200004-worker处于非运行状态) | The Worker instance is not running. |
 
 ## 示例
 

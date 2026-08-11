@@ -1,6 +1,6 @@
 # SmoothZoomInfo
 
-平滑变焦参数信息。
+Describes the smooth zoom information.
 
 **Since:** 11
 
@@ -22,7 +22,7 @@ import { camera } from 'kits/@kit.CameraKit';
 duration: int
 ```
 
-平滑变焦总时长。单位ms。
+Total duration of smooth zoom, in milliseconds.
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 

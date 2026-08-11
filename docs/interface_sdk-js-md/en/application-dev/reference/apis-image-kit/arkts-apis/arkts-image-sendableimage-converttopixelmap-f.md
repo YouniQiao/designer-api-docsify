@@ -38,8 +38,8 @@ Creates a image PixelMap from sendable image PixelMap.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | If the image parameter invalid. Possible causes: 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. 3.Parameter verification failed. |
-| 62980104 | Failed to initialize the internal object. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | If the image parameter invalid. Possible causes: 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. 3.Parameter verification failed. |
+| [62980104](../errorcode-image.md#62980104-image-initialization-error) | Failed to initialize the internal object. |
 
 ## Examples
 
@@ -47,7 +47,7 @@ Creates a image PixelMap from sendable image PixelMap.
 import { sendableImage } from '@kit.ImageKit';
 import { image } from '@kit.ImageKit';
 
-async function ConvertToPixelMap() {
+async function Demo() {
   const color: ArrayBuffer = new ArrayBuffer(96); // 96 is the size of the pixel buffer to create. The value is calculated as follows: height * width *4.
   let opts: image.InitializationOptions = { editable: true, pixelFormat: 3, size: { height: 4, width: 6 } }
   let sendablePixelMap : sendableImage.PixelMap = sendableImage.createPixelMapSync(color, opts);

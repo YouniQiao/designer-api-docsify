@@ -10,12 +10,6 @@
 
 **系统能力：** SystemCapability.Driver.ExternalDevice
 
-## 导入模块
-
-```TypeScript
-import { deviceManager } from 'kits/@kit.DriverDevelopmentKit';
-```
-
 ## busType
 
 ```TypeScript

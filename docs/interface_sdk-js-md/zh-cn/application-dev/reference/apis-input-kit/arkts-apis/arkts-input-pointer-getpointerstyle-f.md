@@ -1,11 +1,5 @@
 # getPointerStyle
 
-## 导入模块
-
-```TypeScript
-import { pointer } from 'kits/@kit.InputKit';
-```
-
 ## getPointerStyle
 
 ```TypeScript
@@ -33,9 +27,11 @@ function getPointerStyle(windowId: int, callback: AsyncCallback<PointerStyle>): 
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; 3. Parameter verification failed. |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; 3. Parameter verification failed. |
 
 ## 示例
+
+ArkTS-Dyn示例:
 
 ```TypeScript
 import { pointer } from '@kit.InputKit';
@@ -79,6 +75,36 @@ struct Index {
 }
 ```
 
+ArkTS-Sta示例:
+
+```TypeScript
+import { Entry, Text, RelativeContainer, Component } from '@kit.ArkUI';
+import { pointer } from '@kit.InputKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+@Entry
+@Component
+struct Index {
+  build() {
+    RelativeContainer() {
+      Text()
+        .onClick(() => {
+          // 此次根据实际获取窗口id
+          let windowId: int = 100;
+          try {
+            // 获取鼠标指针样式
+            pointer.getPointerStyle(windowId, (error: BusinessError<void> | null, style: pointer.PointerStyle | undefined) => {
+              console.info(`Succeeded in getting pointer style, style: ${JSON.stringify(style)}.`);
+            });
+          } catch (error) {
+            console.error(`Failed to get pointer style, Code: ${(error as BusinessError).code}, message: ${(error as BusinessError).message}.`);
+          }
+        })
+    }
+  }
+}
+```
+
 
 ## getPointerStyle
 
@@ -112,9 +138,11 @@ function getPointerStyle(windowId: int): Promise<PointerStyle>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; 3. Parameter verification failed. |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; 3. Parameter verification failed. |
 
 ## 示例
+
+ArkTS-Dyn示例:
 
 ```TypeScript
 import { pointer } from '@kit.InputKit';
@@ -150,6 +178,36 @@ struct Index {
               console.error(`Failed to get pointer style, Code: ${(error as BusinessError).code}, message: ${(error as BusinessError).message}.`);
             }
           });
+        })
+    }
+  }
+}
+```
+
+ArkTS-Sta示例:
+
+```TypeScript
+import { Entry, Text, RelativeContainer, Component } from '@kit.ArkUI';
+import { pointer } from '@kit.InputKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+@Entry
+@Component
+struct Index {
+  build() {
+    RelativeContainer() {
+      Text()
+        .onClick(() => {
+          // 此次根据实际获取窗口id
+          let windowId: int = 100;
+          try {
+            // 获取鼠标指针样式
+            pointer.getPointerStyle(windowId).then((style: pointer.PointerStyle) => {
+              console.info(`Succeeded in getting pointer style, style: ${JSON.stringify(style)}.`);
+            });
+          } catch (error) {
+            console.error(`Failed to get pointer style, Code: ${(error as BusinessError).code}, message: ${(error as BusinessError).message}.`);
+          }
         })
     }
   }

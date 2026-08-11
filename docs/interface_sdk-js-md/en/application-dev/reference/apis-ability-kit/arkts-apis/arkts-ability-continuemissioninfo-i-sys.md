@@ -1,7 +1,7 @@
 # ContinueMissionInfo (System API)
 
-表示发起按照包名迁移时所需参数的枚举，迁移Mission详见：  
-[continueMission接口](arkts-ability-distributedmissionmanager-continuemission-f-sys.md#continuemission)
+The module defines the parameters required for initiating mission continuation with the bundle name specified. For details about mission continuation, see  
+[continueMission](arkts-ability-distributedmissionmanager-continuemission-f-sys.md#continuemission)
 
 **Since:** 10
 
@@ -19,7 +19,7 @@
 bundleName: string
 ```
 
-表示任务所属目标端应用包名。
+Bundle name of the target application to which the mission belongs.
 
 **Type:** string
 
@@ -41,7 +41,7 @@ bundleName: string
 continueType?: string
 ```
 
-表示任务所属应用迁移类型。
+Continuation type of the application to which the mission belongs.
 
 **Type:** string
 
@@ -63,7 +63,7 @@ continueType?: string
 dstDeviceId: string
 ```
 
-表示任务迁移目标设备ID。
+ID of the target device.
 
 **Type:** string
 
@@ -85,7 +85,7 @@ dstDeviceId: string
 srcBundleName?: string
 ```
 
-表示任务所属源端应用包名，默认与bundleName相同。
+Bundle name of the source application to which the mission belongs. The value is the same as that of **bundleName** by default.
 
 **Type:** string
 
@@ -107,7 +107,7 @@ srcBundleName?: string
 srcDeviceId: string
 ```
 
-表示任务迁移源设备ID。
+ID of the source device.
 
 **Type:** string
 
@@ -129,7 +129,7 @@ srcDeviceId: string
 wantParam: Record<string, Object>
 ```
 
-表示扩展参数。
+Extended parameters.
 
 **Type:** [Record](../../apis-default/arkts-apis/arkts-record-t.md)&lt;string, Object&gt;
 

@@ -1,6 +1,6 @@
 # ModalMode
 
-子窗菜单的模态模式。
+Enumerates modal modes of the sub-window menu.
 
 **Since:** 20
 
@@ -16,7 +16,7 @@
 AUTO = 0
 ```
 
-自动模式，菜单组件在当前设备的默认行为。当前版本在所有设备上的效果等同于ModalMode.NONE。
+Automatic mode, which is the default behavior of the menu component on the current device. In the current version, the effect on all devices is the same as that of **ModalMode.NONE**.
 
 **Since:** 20
 
@@ -36,7 +36,7 @@ AUTO = 0
 NONE = 1
 ```
 
-除菜单自身区域外，其他区域均可传递事件，下层控件可响应事件。
+Events can be passed through areas other than the menu itself, allowing underlying controls to respond to events.
 
 **Since:** 20
 
@@ -56,7 +56,7 @@ NONE = 1
 TARGET_WINDOW = 2
 ```
 
-菜单所在应用的窗口与菜单区域不可传递事件，其他区域可传递事件。
+Events cannot be passed through the application window where the menu is located and the menu area, but can be passed through other areas.
 
 **Since:** 20
 

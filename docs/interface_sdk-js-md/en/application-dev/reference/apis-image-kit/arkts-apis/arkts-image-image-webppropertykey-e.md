@@ -1,6 +1,6 @@
 # WebPPropertyKey
 
-表示WebP图片信息的枚举。
+Enumerates the properties available for the metadata of a WebP image.
 
 **Since:** 24
 
@@ -16,9 +16,7 @@
 CANVAS_WIDTH = 'WebPCanvasWidth'
 ```
 
-WebP图片的画布像素宽度。
-
-单位：像素（px）。
+Canvas Width.
 
 **Since:** 24
 
@@ -36,9 +34,7 @@ WebP图片的画布像素宽度。
 CANVAS_HEIGHT = 'WebPCanvasHeight'
 ```
 
-WebP图片的画布像素高度。
-
-单位：像素（px）。
+Canvas Height.
 
 **Since:** 24
 
@@ -56,9 +52,7 @@ WebP图片的画布像素高度。
 DELAY_TIME = 'WebPDelayTime'
 ```
 
-WebP图片钳制后的帧延迟时长。钳制范围为[100, 65535]。
-
-单位：毫秒（ms）。
+Delay of each frame in milliseconds.
 
 **Since:** 24
 
@@ -76,9 +70,7 @@ WebP图片钳制后的帧延迟时长。钳制范围为[100, 65535]。
 UNCLAMPED_DELAY_TIME = 'WebPUnclampedDelayTime'
 ```
 
-WebP图片未钳制的帧延迟时长。
-
-单位：毫秒（ms）。
+Unclamped delay of each frame in milliseconds.
 
 **Since:** 24
 
@@ -96,7 +88,7 @@ WebP图片未钳制的帧延迟时长。
 LOOP_COUNT = 'WebPLoopCount'
 ```
 
-WebP图片动画循环的次数。如果取值为0，则表示不限次数。
+Loop count.
 
 **Since:** 24
 

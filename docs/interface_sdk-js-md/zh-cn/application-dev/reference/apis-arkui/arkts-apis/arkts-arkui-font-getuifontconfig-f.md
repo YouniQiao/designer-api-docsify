@@ -1,11 +1,5 @@
 # getUIFontConfig
 
-## 导入模块
-
-```TypeScript
-import { font } from 'kits/@kit.ArkUI';
-```
-
 ## getUIFontConfig
 
 ```TypeScript

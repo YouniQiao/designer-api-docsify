@@ -1,6 +1,6 @@
 # ExposureMode
 
-枚举，曝光模式。
+Enumerates the exposure modes.
 
 **Since:** 10
 
@@ -16,7 +16,7 @@
 EXPOSURE_MODE_UNSPECIFIED = -1
 ```
 
-曝光模式未指定。
+Unspecified exposure.
 
 **Since:** 24
 
@@ -36,9 +36,9 @@ EXPOSURE_MODE_UNSPECIFIED = -1
 EXPOSURE_MODE_LOCKED = 0
 ```
 
-锁定曝光模式。不支持曝光区域中心点设置。
+Exposure locked. The metering point cannot be set.
 
-设置该模式后，每次拍照时曝光都会默认锁定。
+After this mode is used, the exposure will be locked by default for each photo capture.
 
 **Since:** 10
 
@@ -56,9 +56,10 @@ EXPOSURE_MODE_LOCKED = 0
 EXPOSURE_MODE_AUTO = 1
 ```
 
-自动曝光模式。支持曝光区域中心点设置，可以使用[AutoExposure.setMeteringPoint](arkts-camera-camera-autoexposure-i.md#setmeteringpoint)接口设置曝光区域中心点。
+Auto exposure. The metering point can be set by calling   
+[AutoExposure.setMeteringPoint](arkts-camera-camera-autoexposure-i.md#setmeteringpoint).
 
-设置该模式后，仅设置后的首次拍照生效。
+After this mode is used, it takes effect only for the first photo capture.
 
 **Since:** 10
 
@@ -76,9 +77,9 @@ EXPOSURE_MODE_AUTO = 1
 EXPOSURE_MODE_CONTINUOUS_AUTO = 2
 ```
 
-连续自动曝光。不支持曝光区域中心点设置。
+Continuous auto exposure. The metering point cannot be set.
 
-设置该模式后，拍照系统会根据每次的环境变化自动调整曝光。
+After this mode is used, the camera system automatically adjusts the exposure based on the environment changes each time.
 
 **Since:** 10
 
@@ -96,10 +97,10 @@ EXPOSURE_MODE_CONTINUOUS_AUTO = 2
 EXPOSURE_MODE_MANUAL = 3
 ```
 
-手动曝光。支持设置曝光时长。
+Manual exposure. The exposure duration can be set.
 
-设置该模式后，用户可通过  
-[ManualExposure.setExposureDuration](../../../reference/apis-camera-kit/arkts-apis-camera-ManualExposure.md#setexposureduration24)设置曝光时长。
+In this mode, you can set the exposure duration by calling   
+[ManualExposure.setExposureDuration](../../../reference/apis-camera-kit/arkts-apis-camera-ManualExposure.md#setexposureduration24).
 
 **Since:** 24
 

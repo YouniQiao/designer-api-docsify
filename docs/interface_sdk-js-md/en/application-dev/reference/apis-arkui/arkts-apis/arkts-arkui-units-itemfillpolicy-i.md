@@ -1,8 +1,6 @@
 # ItemFillPolicy
 
-定义一个适用于[WaterFlow](../../apis-arkui/arkts-components/arkts-arkui-water_flow-i)、[Grid](../../apis-arkui/arkts-components/arkts-arkui-grid-i)、  
-[List](../../apis-arkui/arkts-components/arkts-arkui-list-i)、[Swiper](../../apis-arkui/arkts-components/arkts-arkui-swiper-i)和  
-[LazyVWaterFlowLayout](../../../reference/apis-arkui/arkui-ts/ts-container-lazyvwaterflowlayout.md)组件的响应式布局策略。LazyVWaterFlowLayout组件从API版本26.0.0开始支持。
+Define a responsive item layout suitable for WaterFlow, Grid, List, and Swiper components.
 
 **Since:** 23
 
@@ -18,7 +16,7 @@
 fillType?: ResponsiveFillType
 ```
 
-为不同的响应式断点指定列数。默认值为BREAKPOINT_DEFAULT。
+Specify the number of columns for different responsive breakpoints.
 
 **Type:** [ResponsiveFillType](arkts-arkui-responsivefilltype-t.md)
 

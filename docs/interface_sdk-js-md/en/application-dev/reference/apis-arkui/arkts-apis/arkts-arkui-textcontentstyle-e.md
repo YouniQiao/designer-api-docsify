@@ -1,6 +1,6 @@
 # TextContentStyle
 
-Text content style.
+The polymorphic style of the text box.
 
 **Since:** 10
 
@@ -13,10 +13,10 @@ Text content style.
 ## DEFAULT
 
 ```TypeScript
-DEFAULT = 0
+DEFAULT
 ```
 
-Text content default style.
+Default style. The caret width is fixed at 1.5 vp, and the caret height is subject to the background height and font size of the selected text.
 
 **Since:** 10
 
@@ -26,17 +26,23 @@ Text content default style.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
-<!--Device-TextContentStyle-DEFAULT = 0--><!--Device-TextContentStyle-DEFAULT = 0-End-->
+<!--Device-TextContentStyle-DEFAULT--><!--Device-TextContentStyle-DEFAULT-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## INLINE
 
 ```TypeScript
-INLINE = 1
+INLINE
 ```
 
-Text content inline style.
+Inline input style. The background height of the selected text is the same as the height of the text box.
+
+This style is used in scenarios where editing and non-editing states are obvious, for example, renaming in the file list view.
+
+The **showError** attribute is not supported for this style.
+
+This style does not allow for text dragging and dropping.
 
 **Since:** 10
 
@@ -46,7 +52,7 @@ Text content inline style.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
-<!--Device-TextContentStyle-INLINE = 1--><!--Device-TextContentStyle-INLINE = 1-End-->
+<!--Device-TextContentStyle-INLINE--><!--Device-TextContentStyle-INLINE-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 

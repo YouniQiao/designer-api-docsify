@@ -12,13 +12,7 @@ import { vibrator } from 'kits/@kit.SensorServiceKit';
 function vibrate(duration: number, callback?: AsyncCallback<void>): void
 ```
 
-按照指定持续时间触发马达振动。
-
-> **说明：**
-> 
-> 从API version 8 开始支持，从API version 9 开始废弃，建议使用
-> [vibrator.startVibration](arkts-sensorservice-vibrator-startvibration-f.md#startvibration)
-> 替代。
+Triggers vibration based on a specified duration. This API uses an asynchronous callback to return the result.
 
 **Since:** 8
 
@@ -38,8 +32,8 @@ function vibrate(duration: number, callback?: AsyncCallback<void>): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| duration | number | Yes | 马达振动时长。单位：ms。取值范围：(0,1800000]区间的所有整数。由于实际产品厂商驱动对器件保护设计规格不同，不同设备实际最大振动时长会有差异。建议值：单次触发长振动一般建议 不超过10000（10秒），以最大化用户体验。 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | No | 回调函数，当马达振动成功，err为undefined，否则为错误对象。使用场景：不填写时仅触发振动不获取回调结果。 |
+| duration | number | Yes | Vibration duration, in ms. The value range is (0,1800000]. The maximum vibration duration varies with devices due to different component protection design specifications of drivers provided by different vendors. It is recommended that a single vibration duration be less than or equal to 10s to maximize user experience. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | No | Callback used to return the result. If the vibration starts, **err** is **undefined**; otherwise, **err** is an error object. |
 
 ## Examples
 
@@ -63,12 +57,7 @@ vibrator.vibrate(1000, (error: BusinessError) => {
 function vibrate(duration: number): Promise<void>
 ```
 
-按照指定持续时间触发马达振动。
-
-> **说明：**
-> 
-> 从API version 8 开始支持，从API version 9 开始废弃，建议使用
-> [vibrator.startVibration](arkts-sensorservice-vibrator-startvibration-f.md#startvibration)替代。
+Triggers vibration based on a specified duration. This API uses a promise to return the result.
 
 **Since:** 8
 
@@ -88,13 +77,13 @@ function vibrate(duration: number): Promise<void>
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| duration | number | Yes | 马达振动时长。单位：ms。取值范围：(0,1800000]区间的所有整数。由于实际产品厂商驱动对器件保护设计规格不同，不同设备实际最大振动时长会有差异。建议值：单次触发长振动一般建议 不超过10000（10秒），以最大化用户体验。 |
+| duration | number | Yes | Vibration duration, in ms. The value range is (0,1800000]. The maximum vibration duration varies with devices due to different component protection design specifications of drivers provided by different vendors. It is recommended that a single vibration duration be less than or equal to 10s to maximize user experience. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise对象。调用成功时Promise resolve，表示振动成功启动；调用失败时Promise reject，返回错误对象包含错误码和错误信息。 |
+| Promise&lt;void&gt; | Promise that returns the result. |
 
 ## Examples
 
@@ -116,12 +105,7 @@ vibrator.vibrate(1000).then(() => {
 function vibrate(effectId: EffectId): Promise<void>
 ```
 
-按照预置振动效果触发马达振动。
-
-> **说明：**
-> 
-> 从API version 8 开始支持，从API version 9 开始废弃，建议使用
-> [vibrator.startVibration](arkts-sensorservice-vibrator-startvibration-f.md#startvibration)替代。
+Triggers vibration based on a specified effect. This API uses a promise to return the result.
 
 **Since:** 8
 
@@ -141,13 +125,13 @@ function vibrate(effectId: EffectId): Promise<void>
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| effectId | [EffectId](arkts-sensorservice-vibrator-effectid-e.md) | Yes | 预置的振动效果ID。字符串最大长度64，超出部分截取前64个字符。建议先通过 [vibrator.isSupportEffect](arkts-sensorservice-vibrator-issupporteffect-f.md#issupporteffect)或 [vibrator.isSupportEffectSync](arkts-sensorservice-vibrator-issupporteffectsync-f.md#issupporteffectsync)查询是否支持。 |
+| effectId | [EffectId](arkts-sensorservice-vibrator-effectid-e.md) | Yes | Effect ID. The value is a string of a maximum of 64 characters. If the length exceeds 64 characters, the first 64 characters are used. You are advised to check whether the effect ID is supported. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise对象。调用成功时Promise resolve，表示振动成功启动；调用失败时Promise reject，返回错误对象包含错误码和错误信息。 |
+| Promise&lt;void&gt; | Promise that returns the result. |
 
 ## Examples
 
@@ -169,13 +153,7 @@ vibrator.vibrate(vibrator.EffectId.EFFECT_CLOCK_TIMER).then(() => {
 function vibrate(effectId: EffectId, callback?: AsyncCallback<void>): void
 ```
 
-按照指定振动效果触发马达振动。
-
-> **说明：**
-> 
-> 从API version 8 开始支持，从API version 9 开始废弃，建议使用
-> [vibrator.startVibration](arkts-sensorservice-vibrator-startvibration-f.md#startvibration)
-> 替代。
+Triggers vibration based on a specified effect. This API uses an asynchronous callback to return the result.
 
 **Since:** 8
 
@@ -195,8 +173,8 @@ function vibrate(effectId: EffectId, callback?: AsyncCallback<void>): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| effectId | [EffectId](arkts-sensorservice-vibrator-effectid-e.md) | Yes | 预置的振动效果ID。字符串最大长度64，超出部分截取前64个字符。建议先通过 [vibrator.isSupportEffect](arkts-sensorservice-vibrator-issupporteffect-f.md#issupporteffect)或 [vibrator.isSupportEffectSync](arkts-sensorservice-vibrator-issupporteffectsync-f.md#issupporteffectsync)查询是否支持。 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | No | 回调函数，当马达振动成功，err为undefined，否则为错误对象。使用场景：不填写时仅触发振动不获取回调结果。 |
+| effectId | [EffectId](arkts-sensorservice-vibrator-effectid-e.md) | Yes | Effect ID. The value is a string of a maximum of 64 characters. If the length exceeds 64 characters, the first 64 characters are used. You are advised to check whether the effect ID is supported. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | No | Callback used to return the result. If the vibration starts, **err** is **undefined**; otherwise, **err** is an error object. |
 
 ## Examples
 

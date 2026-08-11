@@ -36,22 +36,9 @@ Returns the remaining storage space in KB for the eUICC hardware.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 801 | Capability not supported. |
-| 201 | Permission denied. |
-| 202 | Nonsystem applications use system APIs. |
-| 3120002 | System internal error. |
-| 3120001 | Service connection failed. |
-
-## Examples
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-import { eSIM } from '@kit.TelephonyKit';
-
-eSIM.getEsimFreeStorage().then((data) => {
-    console.info(`getEsimFreeStorage invoking succeeded.freeStorage: ${data}`);
-}).catch((err: BusinessError<void>) => {
-    console.error(`getEsimFreeStorage , promise: err->${JSON.stringify(err)}`);
-});
-```
+| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Nonsystem applications use system APIs. |
+| [3120002](../errorcode-telephony.md#3120002-system-internal-error) | System internal error. |
+| [3120001](../errorcode-telephony.md#3120001-service-connection-error) | Service connection failed. |
 

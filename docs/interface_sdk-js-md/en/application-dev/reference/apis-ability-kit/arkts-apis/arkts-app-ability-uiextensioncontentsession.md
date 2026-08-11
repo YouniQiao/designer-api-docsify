@@ -1,9 +1,13 @@
 # @ohos.app.ability.UIExtensionContentSession
 
-UIExtensionContentSession是[UIExtensionAbility](arkts-ability-app-ability-uiextensionability-uiextensionability-c.md)组件的界面
- 操作类，提供页面加载、设置宿主应用（UIExtensionAbility组件的拉起方）窗口隐私模式等功能。当宿主应用拉起指定的UIExtensionAbility组件时，系统创建UIExtensionContentSession对象
- ，并通过[onSessionCreate](arkts-ability-app-ability-uiextensionability-uiextensionability-c.md#onsessioncreate)回调传递给开发者。一个
- UIExtensionAbility组件对应一个UIExtensionContentSession对象，每个UIExtensionAbility组件的UIExtensionContentSession对象之间互不影响。
+UIExtensionContentSession is the UI operation class for the
+ [UIExtensionAbility](arkts-ability-app-ability-uiextensionability-uiextensionability-c.md). It provides control over page
+ loading and allows configuration of the window privacy mode of the host application (application that starts the
+ UIExtensionAbility). When the host application starts a specific UIExtensionAbility, the system creates a
+ UIExtensionContentSession object and passes it back via the
+ [onSessionCreate](arkts-ability-app-ability-uiextensionability-uiextensionability-c.md#onsessioncreate) callback. Each
+ UIExtensionAbility corresponds to one UIExtensionContentSession object, and these objects operate independently
+ without interfering with each other.
 
 
 ## Modules to Import
@@ -18,14 +22,14 @@ import { UIExtensionContentSession } from 'kits/@kit.AbilityKit';
 
 | Name | Description |
 | --- | --- |
-| [UIExtensionContentSession](arkts-ability-app-ability-uiextensioncontentsession-uiextensioncontentsession-c.md) | UIExtensionAbility组件的界面操作类，提供页面加载、设置宿主应用窗口隐私模式等功能。 |
+| [UIExtensionContentSession](arkts-ability-app-ability-uiextensioncontentsession-uiextensioncontentsession-c.md) | UIExtensionContentSession is the UI operation class for the UIExtensionAbility. It provides control over page loading and allows configuration of the window privacy mode of the host application. |
 
 <!--Del-->
 ### Classes（系统接口）
 
 | Name | Description |
 | --- | --- |
-| [UIExtensionContentSession](arkts-ability-app-ability-uiextensioncontentsession-uiextensioncontentsession-c-sys.md) | UIExtensionAbility组件的界面操作类，提供页面加载、设置宿主应用窗口隐私模式等功能。 |
+| [UIExtensionContentSession](arkts-ability-app-ability-uiextensioncontentsession-uiextensioncontentsession-c-sys.md) | UIExtensionContentSession is the UI operation class for the UIExtensionAbility. It provides control over page loading and allows configuration of the window privacy mode of the host application. |
 <!--DelEnd-->
 
 <!--Del-->
@@ -33,7 +37,7 @@ import { UIExtensionContentSession } from 'kits/@kit.AbilityKit';
 
 | Name | Description |
 | --- | --- |
-| [OnReceiveDataCallback](arkts-ability-onreceivedatacallback-t-sys.md) | 从UIExtensionComponent控件接收数据的回调方法。 |
-| [OnReceiveDataForResultCallback](arkts-ability-onreceivedataforresultcallback-t-sys.md) | 从UIExtensionComponent控件接收数据带返回值的回调方法。 |
+| [OnReceiveDataCallback](arkts-ability-onreceivedatacallback-t-sys.md) | Sets the callback for the ui extension to receive data from an ui extension component. |
+| [OnReceiveDataForResultCallback](arkts-ability-onreceivedataforresultcallback-t-sys.md) | Sets the callback with return value for the ui extension to receive data from an ui extension component. |
 <!--DelEnd-->
 

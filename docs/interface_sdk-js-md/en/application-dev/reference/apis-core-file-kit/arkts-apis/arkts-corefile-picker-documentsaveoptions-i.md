@@ -1,6 +1,6 @@
 # DocumentSaveOptions
 
-文档保存选项。
+Defines the options for saving documents.
 
 **Since:** 23
 

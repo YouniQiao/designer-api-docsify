@@ -4,12 +4,12 @@
 
 ```TypeScript
 export declare function Grid(
-    scroller?: Scroller, layoutOptions?: GridLayoutOptions, 
+    scroller?: Scroller, layoutOptions?: GridLayoutOptions,
     content_?: CustomBuilder,
 ): GridAttribute
 ```
 
-创建网格容器。
+Grid is returned when the parameter is transferred.
 
 **Since:** 23
 
@@ -17,7 +17,7 @@ export declare function Grid(
 
 **Model restriction:** This API can be used only in the stage model.
 
-<!--Device-unnamed-export declare function Grid(    scroller?: Scroller, layoutOptions?: GridLayoutOptions,     content_?: CustomBuilder,): GridAttribute--><!--Device-unnamed-export declare function Grid(    scroller?: Scroller, layoutOptions?: GridLayoutOptions,     content_?: CustomBuilder,): GridAttribute-End-->
+<!--Device-unnamed-export declare function Grid(    scroller?: Scroller, layoutOptions?: GridLayoutOptions,    content_?: CustomBuilder,): GridAttribute--><!--Device-unnamed-export declare function Grid(    scroller?: Scroller, layoutOptions?: GridLayoutOptions,    content_?: CustomBuilder,): GridAttribute-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -25,9 +25,9 @@ export declare function Grid(
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| scroller | [Scroller](../arkts-components/arkts-arkui-scroller-c.md) | No | 可滚动组件的控制器，与可滚动组件进行绑定。 |
-| layoutOptions | [GridLayoutOptions](arkts-arkui-grid-gridlayoutoptions-i.md) | No | Grid布局选项。 |
-| content_ | [CustomBuilder](../arkts-components/arkts-arkui-custombuilder-t.md) | No | Grid子组件。 |
+| scroller | [Scroller](../arkts-components/arkts-arkui-scroller-c.md) | No | Controller bound to the grid |
+| layoutOptions | [GridLayoutOptions](arkts-arkui-grid-gridlayoutoptions-i.md) | No | The options to help grid layout |
+| content_ | [CustomBuilder](../arkts-components/arkts-arkui-custombuilder-t.md) | No | container |
 
 **Return value:**
 
@@ -45,11 +45,11 @@ export declare function Grid(
 ): GridAttribute
 ```
 
-可扩展Grid组件入口。
+Grid is returned when the parameter is transferred.
 
-**Since:** 26.0.0
+**Since:** 26.1.0
 
-**ArkTS mode:** ArkTS-Sta only, since version 26.0.0.
+**ArkTS mode:** ArkTS-Sta only, since version 26.1.0.
 
 **Decorator:** @Builder
 

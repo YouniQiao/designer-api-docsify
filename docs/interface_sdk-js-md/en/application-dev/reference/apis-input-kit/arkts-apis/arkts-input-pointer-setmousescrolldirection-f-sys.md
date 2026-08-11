@@ -12,7 +12,7 @@ import { pointer } from 'kits/@kit.InputKit';
 function setMouseScrollDirection(inverted: boolean): Promise<void>
 ```
 
-设置鼠标滚轮滚动的方向，使用Promise异步回调。
+Sets the scroll direction of the mouse wheel. This API uses a promise to return the result asynchronously.
 
 **Since:** 24
 
@@ -30,21 +30,21 @@ function setMouseScrollDirection(inverted: boolean): Promise<void>
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| inverted | boolean | Yes | inverted为鼠标滚轮滚动的方向。&lt;br&gt;true与鼠标滚轮滚动的手指方向一致，false与鼠标滚轮滚动的手指方向相反。&lt;br&gt;默认为true。 |
+| inverted | boolean | Yes | Scroll direction of the mouse wheel. &lt;br&gt;The value **true** indicates that scroll direction matches the finger movement on the wheel, and the value **false** indicates that the scroll direction is opposite to the finger movement. &lt;br&gt;The default value is **true**. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise对象，无返回结果。 |
+| Promise&lt;void&gt; | Promise that returns no value. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 3800001 | Input service exception. |
-| 201 | permission denied. |
-| 202 | SystemAPI permission error. |
+| [3800001](../errorcode-infraredemitter.md#3800001-multimodal-input-service-internal-error) | Input service exception. |
+| [201](../../errorcode-universal.md#201-permission-denied) | permission denied. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | SystemAPI permission error. |
 
 ## Examples
 
@@ -60,14 +60,13 @@ struct Index {
       Button("setMouseScrollDirection")
         .onClick(() => {
           try {
-            // Set the mouse scroll direction.
             pointer.setMouseScrollDirection(false).then(() => {
-              console.info(`Succeeded in setting mouse scroll direction.`);
+              console.info(`setMouseScrollDirection success`);
             }).catch((error: BusinessError) => {
-              console.error(`Failed to set mouse scroll direction, Code: ${(error as BusinessError).code}, message: ${(error as BusinessError).message}.`);
+              console.error(`Set mouse scroll direction failed, error: ${JSON.stringify(error, [`code`, `message`])}`);
             })
           } catch (error) {
-            console.error(`Failed to set mouse scroll direction, Code: ${(error as BusinessError).code}, message: ${(error as BusinessError).message}.`);
+            console.error(`setMouseScrollDirection failed, error: ${JSON.stringify(error, [`code`, `message`])}`);
           }
         })
     }

@@ -12,7 +12,7 @@ import { storageStatistics } from 'kits/@kit.CoreFileKit';
 function getBundleStats(packageName: string, callback: AsyncCallback<BundleStats>, index?: int): void
 ```
 
-异步获取应用存储数据的空间大小（单位为Byte），以callback方式返回。
+Obtains the storage space of an application, in bytes. This API uses an asynchronous callback to return the result.
 
 **Since:** 9
 
@@ -30,18 +30,18 @@ function getBundleStats(packageName: string, callback: AsyncCallback<BundleStats
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| packageName | string | Yes | 应用包名。 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;BundleStats&gt; | Yes | 获取指定卷上的应用存储数据的空间大小之后的回调。 |
-| index | ArkTS-Dyn: number  <br>ArkTS-Sta：int | No | 分身应用的索引号，默认值为0（表示未分身的主应用）。分身应用索引号在分身创建时默认 占用从1开始且当前未被占用的最小索引号，并赋值给该应用的 [BundleResourceInfo](../../apis-ability-kit/arkts-apis/arkts-ability-bundleresourceinfo-i-sys.md/arkts-ability-bundleresourceinfo-i-sys.md)的appIndex属性，后续可以通过调用 [getBundleResourceInfo](../../apis-ability-kit/arkts-apis/arkts-ability-bundleresourcemanager-getbundleresourceinfo-f-sys.md/arkts-ability-bundleresourcemanager-getbundleresourceinfo-f-sys.md#getbundleresourceinfo) 接口获得。<br>**Since:** 12 |
+| packageName | string | Yes | Package name of the application. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;BundleStats&gt; | Yes | Callback used to return the application storage space obtained. |
+| index | ArkTS-Dyn: number  <br>ArkTS-Sta：int | No | Index of an application clone. The default value is **0**, which indicates the application itself. When an application clone is created, an index is assigned from 1 sequentially to **appIndex** of [BundleResourceInfo](../../apis-ability-kit/arkts-apis/arkts-ability-bundleresourceinfo-i-sys.md/arkts-ability-bundleresourceinfo-i-sys.md) The index can be obtained by [getBundleResourceInfo](../../apis-ability-kit/arkts-apis/arkts-ability-bundleresourcemanager-getbundleresourceinfo-f-sys.md/arkts-ability-bundleresourcemanager-getbundleresourceinfo-f-sys.md#getbundleresourceinfo)<br>**Since:** 12 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | The input parameter is invalid. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | The input parameter is invalid. |
 | 13600008 | No such object. |
-| 201 | Permission verification failed. |
-| 202 | The caller is not a system application. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | The caller is not a system application. |
 | 13600001 | IPC error. |
 | 13900042 | Unknown error. |
 
@@ -82,7 +82,7 @@ try {
 function getBundleStats(packageName: string, index?: int): Promise<BundleStats>
 ```
 
-异步获取应用存储数据的空间大小（单位为Byte），以Promise方式返回。
+Obtains the storage space of an application, in bytes. This API uses a promise to return the result.
 
 **Since:** 9
 
@@ -100,23 +100,23 @@ function getBundleStats(packageName: string, index?: int): Promise<BundleStats>
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| packageName | string | Yes | 应用包名。 |
-| index | ArkTS-Dyn: number  <br>ArkTS-Sta：int | No | 分身应用的索引号，默认值为0（表示未分身的主应用）。分身应用索引号在分身创建时默认占用 从1开始且当前未被占用的最小索引号，并赋值给该应用的 [BundleResourceInfo](../../apis-ability-kit/arkts-apis/arkts-ability-bundleresourceinfo-i-sys.md/arkts-ability-bundleresourceinfo-i-sys.md)的appIndex属性，后续可以通过调用 [getBundleResourceInfo] {@link @ohos.bundle.bundleResourceManager:bundleResourceManager.getBundleResourceInfo(bundleName: string, resourceFlags?: int, appIndex?: int)} 接口获得。<br>**Since:** 12 |
+| packageName | string | Yes | Package name of the application. |
+| index | ArkTS-Dyn: number  <br>ArkTS-Sta：int | No | Index of an application clone. The default value is **0**, which indicates the application itself. When an application clone is created, an index is assigned from 1 sequentially to **appIndex** of [BundleResourceInfo](../../apis-ability-kit/arkts-apis/arkts-ability-bundleresourceinfo-i-sys.md/arkts-ability-bundleresourceinfo-i-sys.md) The index can be obtained by [getBundleResourceInfo](../../apis-ability-kit/arkts-apis/arkts-ability-bundleresourcemanager-getbundleresourceinfo-f-sys.md/arkts-ability-bundleresourcemanager-getbundleresourceinfo-f-sys.md#getbundleresourceinfo)<br>**Since:** 12 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;BundleStats&gt; | Promise对象，返回指定卷上的应用存储数据的空间大小（单位为Byte）。 |
+| Promise&lt;BundleStats&gt; | Promise used to return the application storage space (in bytes) obtained. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | The input parameter is invalid. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | The input parameter is invalid. |
 | 13600008 | No such object. |
-| 201 | Permission verification failed. |
-| 202 | The caller is not a system application. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | The caller is not a system application. |
 | 13600001 | IPC error. |
 | 13900042 | Unknown error. |
 

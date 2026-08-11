@@ -1,6 +1,6 @@
 # IVariableOwner
 
-定义一个提供变量相关功能的自定义组件API。
+Define a custom component API that provides variables-related functionality.
 
 **Since:** 23
 

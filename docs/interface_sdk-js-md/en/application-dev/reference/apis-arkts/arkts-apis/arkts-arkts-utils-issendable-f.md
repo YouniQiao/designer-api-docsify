@@ -12,7 +12,7 @@ import { ArkTSUtils } from 'kits/@kit.ArkTS';
 function isSendable(value: Object | null | undefined): boolean
 ```
 
-检查ArkTS值是否为Sendable。
+Checks whether an ArkTS value is sendable.
 
 **Since:** 12
 
@@ -30,11 +30,11 @@ function isSendable(value: Object | null | undefined): boolean
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | Object \| null \| undefined | Yes | 要检查的值。 |
+| value | Object \| null \| undefined | Yes | The value to check. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| boolean | 如果值为Sendable则返回true，否则返回false。 |
+| boolean | True if the value is sendable, false otherwise. |
 

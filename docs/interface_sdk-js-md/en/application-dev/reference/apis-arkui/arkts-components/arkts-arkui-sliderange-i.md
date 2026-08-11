@@ -1,23 +1,23 @@
 # SlideRange
 
-定义有效滑动区间。
+Defines the callback type used in **SlideRange**.
 
-> **说明：**
+> **NOTE：**
 > 
-> - 当前仅当min&lt;=from<=to<=max时该接口生效(min和max不依赖于其设置的值，而取决于其实际生效的值)。
+> - Currently, this API takes effect only when **min** ≤ **from** ≤ **to** ≤ **max** (the values of **min** and
+> **max** do not depend on the values set, but on the actual values that take effect).
 > 
-> - 可只设置from或者to，也可以同时设置from和to。
-&gt;&lt;=to<=max时该接口生效(min和max不依赖于其设置的值，而取决于其实际生效的值)。
+> - You can set either **from** or **to**, or you can set both **from** and **to**.
 > 
-&gt;&lt;=max时该接口生效(min和max不依赖于其设置的值，而取决于其实际生效的值)。
-&gt; 
-> - 可只设置from或者to，也可以同时设置from和to。
+> - When the API is effective, if the set **from** value is between the adjacent multiples of **step**, then **from**
+> takes the value of the left interval multiple of **step** or **min** as the corrected value.
 > 
-> - 当接口生效且设置的from处于紧邻的step整数倍的值之间，则from实际取左区间step整数倍的那个值或者min作为修正后的值。
+> - When the API is effective, if the set **to** value is between the adjacent multiples of **step**, then **to**
+> takes the value of the right interval multiple of **step** or **MAX** as the corrected value.
 > 
-> - 当接口生效且设置的to处于紧邻的step整数倍的值之间，则to实际取右区间step整数倍的那个值或者MAX作为修正后的值。
-> 
-> - 在from和to取修正值后， 当value是undefined或null时，其取值与from一致; 当value是数值型且value &lt;= from，则取from; 当value &gt; to，则取to。
+> - After **from** and **to** have taken their corrected values, when **value** is **undefined** or **null**, it
+> takes the same value as **from**; when **value** is a number type, and if **value** ≤ **from**, then it takes
+> **from**; if **value** > **to**, then it takes **to**.
 
 **Since:** 12
 
@@ -33,7 +33,7 @@
 from?: number
 ```
 
-设置有效滑动区间的开始。
+Start of the slide range.
 
 **Type:** number
 
@@ -55,7 +55,7 @@ from?: number
 to?: number
 ```
 
-设置有效滑动区间的结束。
+End of the slide range.
 
 **Type:** number
 

@@ -1,6 +1,6 @@
 # CustomComponentContext
 
-自定义组件的上下文信息。
+CustomComponentContext is a state management tool for operating the observed data.
 
 **Since:** 26.0.0
 
@@ -16,7 +16,7 @@
 getReusePool(): IReusePool | undefined
 ```
 
-从当前自定义组件获取全局重用池。
+Get global reuse pool from current custom component.
 
 **Since:** 26.0.0
 
@@ -41,7 +41,7 @@ registerActiveAndInactiveCallback(active?: ActiveAndInactiveCallbackType,
     inactive?: ActiveAndInactiveCallbackType): void
 ```
 
-注册激活和非激活回调。
+Register active and inactive callback.
 
 **Since:** 26.0.0
 
@@ -57,6 +57,6 @@ registerActiveAndInactiveCallback(active?: ActiveAndInactiveCallbackType,
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| active | [ActiveAndInactiveCallbackType](arkts-arkui-activeandinactivecallbacktype-t.md) | No | 激活函数回调 默认值： 默认值：undefined。 |
-| inactive | [ActiveAndInactiveCallbackType](arkts-arkui-activeandinactivecallbacktype-t.md) | No | in激活函数回调 默认值： 默认值：undefined。 |
+| active | [ActiveAndInactiveCallbackType](arkts-arkui-activeandinactivecallbacktype-t.md) | No | active function callback. |
+| inactive | [ActiveAndInactiveCallbackType](arkts-arkui-activeandinactivecallbacktype-t.md) | No | inactive function callback. |
 

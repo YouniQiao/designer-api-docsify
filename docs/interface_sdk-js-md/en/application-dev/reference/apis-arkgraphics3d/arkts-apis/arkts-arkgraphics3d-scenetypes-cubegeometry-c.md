@@ -1,6 +1,6 @@
 # CubeGeometry
 
-定义长方体.
+Define a rectangular cuboid.
 
 **Inheritance/Implementation:** CubeGeometry extends [GeometryDefinition](arkts-arkgraphics3d-scenetypes-geometrydefinition-c.md)
 
@@ -18,7 +18,7 @@
 set size(value: Vec3)
 ```
 
-立方体的宽高深, 单位为世界坐标系下的场景单位（例如cm、m、km等）.
+The width, height and depth of the cube, the unit is the scene unit in the world coordinate system (e.g., cm, m, km).
 
 **Type:** [Vec3](arkts-arkgraphics3d-scenetypes-vec3-i.md)
 

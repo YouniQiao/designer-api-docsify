@@ -6,7 +6,7 @@
 function restoreDefault(): void
 ```
 
-方法语句中可使用的全局接口，调用此接口可将鼠标光标恢复成默认箭头样式。
+Restores the mouse cursor to the default arrow style. This API can be used globally in method statements.
 
 **Since:** 11
 

@@ -43,10 +43,12 @@ function setDistributedEnabled(enable: boolean, deviceType: string): Promise<voi
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 201 | Permission denied. |
-| 202 | Not system application to call the interface. |
+| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not system application to call the interface. |
 
 ## 示例
+
+ArkTS-Dyn示例：
 
 ```TypeScript
 import { AbilityConstant, UIAbility, Want } from '@kit.AbilityKit';
@@ -64,6 +66,33 @@ export default class EntryAbility extends UIAbility {
         console.info('setDistributedEnabled succeeded.');
       }).catch((err: BusinessError) => {
         console.error(`setDistributedEnabled failed. Code is ${err.code}, message is ${err.message}`);
+      });
+    } catch (err) {
+      console.error(`setDistributedEnabled failed. Code is ${err.code}, message is ${err.message}`);
+    }
+  }
+}
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+import { AbilityConstant, UIAbility, Want } from '@kit.AbilityKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+export default class EntryAbility extends UIAbility {
+  onCreate(want: Want, launchParam: AbilityConstant.LaunchParam): void {
+  }
+
+  onForeground(): void {
+    try {
+      let isEnable: boolean = true;
+      let deviceType: string = 'wearable';
+      notificationManager.setDistributedEnabled(isEnable, deviceType).then(() => {
+        console.info('setDistributedEnabled succeeded.');
+      }).catch((err: Error) => {
+        let error: BusinessError = err as BusinessError;
+        console.error(`setDistributedEnabled failed. Code is ${error.code}, message is ${error.message}`);
       });
     } catch (err) {
       console.error(`setDistributedEnabled failed. Code is ${err.code}, message is ${err.message}`);

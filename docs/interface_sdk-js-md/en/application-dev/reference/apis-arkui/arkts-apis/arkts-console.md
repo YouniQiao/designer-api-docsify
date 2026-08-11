@@ -6,5 +6,5 @@
 
 | Name | Description |
 | --- | --- |
-| [console](arkts-arkui-console-c.md) | 提供控制台。 |
+| [console](arkts-arkui-console-c.md) | Provide console |
 

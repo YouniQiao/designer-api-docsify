@@ -18,7 +18,7 @@ footer?: CustomBuilder
 
 设置WaterFlow尾部组件，用于在瀑布流末尾显示自定义内容（如加载提示、底部标识等）。不设置时不显示尾部组件。
 
-**类型：** [CustomBuilder](arkts-arkui-custombuilder-t.md)
+**类型：** [CustomBuilder](../arkts-apis/arkts-arkui-custombuilder-t.md)
 
 **起始版本：** 9
 

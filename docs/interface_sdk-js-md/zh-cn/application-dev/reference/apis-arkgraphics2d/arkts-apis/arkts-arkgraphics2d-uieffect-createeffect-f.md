@@ -1,11 +1,5 @@
 # createEffect
 
-## 导入模块
-
-```TypeScript
-import { uiEffect } from 'kits/@kit.ArkGraphics2D';
-```
-
 ## createEffect
 
 ```TypeScript
@@ -33,7 +27,6 @@ function createEffect(): VisualEffect
 ## 示例
 
 ```TypeScript
-// 创建VisualEffect实例
-let visualEffect: uiEffect.VisualEffect = uiEffect.createEffect();
+let visualEffect : uiEffect.VisualEffect = uiEffect.createEffect()
 ```
 

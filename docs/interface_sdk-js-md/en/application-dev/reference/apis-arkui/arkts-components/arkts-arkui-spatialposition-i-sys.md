@@ -1,6 +1,6 @@
 # SpatialPosition (System API)
 
-三维空间中的空间角位置。
+Spatial corner positions in 3D space.
 
 **Since:** 26.0.0
 
@@ -18,7 +18,7 @@
 leftBottom: DepthVector3
 ```
 
-三维空间中的左下角角位置。
+Left-bottom corner position in 3D space.
 
 **Type:** [DepthVector3](../arkts-apis/arkts-arkui-common-depthvector3-i-sys.md)
 
@@ -42,7 +42,7 @@ leftBottom: DepthVector3
 leftTop: DepthVector3
 ```
 
-三维空间中的左上角位置。
+Left-top corner position in 3D space.
 
 **Type:** [DepthVector3](../arkts-apis/arkts-arkui-common-depthvector3-i-sys.md)
 
@@ -60,13 +60,39 @@ leftTop: DepthVector3
 
 **System API:** This is a system API.
 
+## positionMode
+
+```TypeScript
+positionMode?: SpatialPositionMode
+```
+
+Coordinate mode of the corner positions.
+
+**Type:** [SpatialPositionMode](../arkts-apis/arkts-arkui-common-spatialpositionmode-e-sys.md)
+
+**Default:** SpatialPositionMode.WORLD_XYZ
+
+**Since:** 26.0.0
+
+**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
+
+**Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API:** This API can be used in atomic services since API version 26.0.0.
+
+<!--Device-SpatialPosition-positionMode?: SpatialPositionMode--><!--Device-SpatialPosition-positionMode?: SpatialPositionMode-End-->
+
+**System capability:** SystemCapability.ArkUI.ArkUI.Full
+
+**System API:** This is a system API.
+
 ## rightBottom
 
 ```TypeScript
 rightBottom: DepthVector3
 ```
 
-三维空间中的右下角位置。
+Right-bottom corner position in 3D space.
 
 **Type:** [DepthVector3](../arkts-apis/arkts-arkui-common-depthvector3-i-sys.md)
 
@@ -90,7 +116,7 @@ rightBottom: DepthVector3
 rightTop: DepthVector3
 ```
 
-3D空间中的右上角位置。
+Right-top corner position in 3D space.
 
 **Type:** [DepthVector3](../arkts-apis/arkts-arkui-common-depthvector3-i-sys.md)
 

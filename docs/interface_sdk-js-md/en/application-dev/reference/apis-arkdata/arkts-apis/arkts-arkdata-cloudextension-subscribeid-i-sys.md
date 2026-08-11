@@ -1,6 +1,6 @@
 # SubscribeId (System API)
 
-订阅ID。
+Represents the subscription ID information.
 
 **Since:** 11
 
@@ -24,7 +24,7 @@ import { cloudExtension } from 'kits/@kit.ArkData';
 databaseAlias: string
 ```
 
-服务器上数据库的名称。
+Name of the database on the server.
 
 **Type:** string
 
@@ -44,7 +44,7 @@ databaseAlias: string
 id: string
 ```
 
-订阅ID。
+Subscription ID.
 
 **Type:** string
 

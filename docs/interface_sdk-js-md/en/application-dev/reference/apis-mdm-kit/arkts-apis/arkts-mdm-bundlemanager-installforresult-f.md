@@ -12,15 +12,17 @@ import { bundleManager } from 'kits/@kit.MDMKit';
 function installForResult(admin: Want, hapFilePaths: Array<string>, installParam?: InstallParam): Promise<void>
 ```
 
-安装指定路径下的应用包，并返回安装结果。使用Promise异步回调。
+Installs the application bundle in the specified path and returns the installation result. This API uses a promise to return the result.
 
-此接口只能安装分发类型为enterprise_mdm（MDM应用）和enterprise_normal（普通企业应用）类型的应用，可以通过  
-[getBundleInfoForSelf](../../apis-ability-kit/arkts-apis/arkts-ability-bundlemanager-getbundleinfoforself-f.md/arkts-ability-bundlemanager-getbundleinfoforself-f.md#getbundleinfoforself)接口查询应用自身的  
-[BundleInfo](arkts-mdm-bundlemanager-bundleinfo-i.md)，其中BundleInfo.appInfo.appDistributionType为应用的分发类型。
+This API can be used to install only applications of the **enterprise_mdm** (MDM application) or  
+**enterprise_normal** (common enterprise application) distribution type. You can call the  
+[getBundleInfoForSelf](../../apis-ability-kit/arkts-apis/arkts-ability-bundlemanager-getbundleinfoforself-f.md/arkts-ability-bundlemanager-getbundleinfoforself-f.md#getbundleinfoforself) API to query the  
+[BundleInfo](arkts-mdm-bundlemanager-bundleinfo-i.md) of an application, where **BundleInfo.appInfo.appDistributionType**indicates the distribution type.
 
-> **说明：**
+> **NOTE：**
 > 
-> 该接口比较耗时，当调用此接口后，后续如果在应用主线程调用其他同步接口时需要等待该接口异步返回。
+> This API is time-consuming. Subsequent calls to other synchronous APIs in the application main thread must wait
+> for the asynchronous return of this API.
 
 **Since:** 26.0.0
 
@@ -38,40 +40,40 @@ function installForResult(admin: Want, hapFilePaths: Array<string>, installParam
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| admin | [Want](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-want-want-c.md) | Yes | 企业设备管理扩展组件。Want中必须包含企业设备管理扩展能力的abilityName和所在应用的bundleName。 |
-| hapFilePaths | Array&lt;string&gt; | Yes | 待安装应用包路径数组。应用包路径为应用沙箱路径(应用沙箱路径和真实路径的对应关系可参见： [应用沙箱路径和真实物理路径的对应关系](../../../file-management/app-sandbox-directory.md#应用沙箱路径和真实物理路径的对应关系))等应用有权限访问的路径。 |
-| installParam | [InstallParam](arkts-mdm-bundlemanager-installparam-i.md) | No | 应用包安装参数。 |
+| admin | [Want](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-want-want-c.md) | Yes | EnterpriseAdminExtensionAbility. **Want** must contain the ability name of the EnterpriseAdminExtensionAbility and the bundle name of the application. |
+| hapFilePaths | Array&lt;string&gt; | Yes | Applications to install. The app bundle must be stored in the path that the app has the permission to access, such as the app sandbox path. For details about the mapping between the app sandbox path and the actual physical path, see [Mappings Between App Sandbox Paths and Physical Paths](../../../file-management/app-sandbox-directory.md#mappings-between-application-sandbox-paths-and-physical-paths). |
+| installParam | [InstallParam](arkts-mdm-bundlemanager-installparam-i.md) | No | Application installation parameters. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | 无返回结果的Promise对象。当应用程序包安装失败时，抛出错误对象。 |
+| Promise&lt;void&gt; | Promise that returns no value. If the operation fails, an error object will be thrown. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 9201036 | Failed to install the HAP due to incorrect URI in the data proxy. |
-| 9201037 | Failed to install the HAP due to incorrect permission configuration in the data proxy. |
-| 9201038 | Failed to install the HAP due to code signature verification failure. |
-| 9201039 | Failed to install the HAP due to enterprise device verification failure. |
-| 9201032 | The specified user ID is not found. |
-| 9201033 | Failed to install the HAP because the overlay check failed. |
-| 9201002 | Failed to install the application. |
-| 9201034 | Failed to install the HSP due to missing required permissions. |
-| 9201035 | Installation failed because the installation of cross-app shared libraries is not allowed. |
-| 9201028 | Failed to install the HAP because the isolationMode configured is not supported. |
-| 9201029 | Failed to install the HAP since the version of the HAP to install is too early. |
-| 201 | Permission verification failed. The application does not have the permission required to call the API. |
-| 9201030 | Failed to install the HAP because the VersionCode to be updated is not greater than the current VersionCode. |
-| 9201031 | Installation failed because the dependent module does not exist. |
-| 9201024 | Failed to install the HAP because the HAP fails to be parsed. |
-| 9200001 | The application is not an administrator application of the device. |
-| 9201025 | Failed to install the HAP because the HAP signature fails to be verified. |
-| 9200002 | The administrator application does not have permission to manage the device. |
-| 9201026 | Failed to install the HAP because the HAP path is invalid or the HAP is too large. |
-| 9201027 | Failed to install the HAPs because they have different configuration information. |
-| 9201022 | Failed to install the HAP because of insufficient system disk space. |
-| 9201023 | Failed to install the HAP because enterprise device management disallows the installation. |
+| [9201036](../errorcode-enterpriseDeviceManager.md#9201036-app-installation-failed-due-to-incorrect-data-proxy-uri) | Failed to install the HAP due to incorrect URI in the data proxy. |
+| [9201037](../errorcode-enterpriseDeviceManager.md#9201037-app-installation-failed-due-to-incorrect-data-proxy-permission-configuration) | Failed to install the HAP due to incorrect permission configuration in the data proxy. |
+| [9201038](../errorcode-enterpriseDeviceManager.md#9201038-application-installation-failed-due-to-code-signature-verification-failure) | Failed to install the HAP due to code signature verification failure. |
+| [9201039](../errorcode-enterpriseDeviceManager.md#9201039-application-installation-failed-due-to-enterprise-device-verification-failure) | Failed to install the HAP due to enterprise device verification failure. |
+| [9201032](../errorcode-enterpriseDeviceManager.md#9201032-specified-user-does-not-exist) | The specified user ID is not found. |
+| [9201033](../errorcode-enterpriseDeviceManager.md#9201033-application-installation-failed-due-to-overlay-check-failure) | Failed to install the HAP because the overlay check failed. |
+| [9201002](../errorcode-enterpriseDeviceManager.md#9201002-failed-to-install-the-enterprise-application) | Failed to install the application. |
+| [9201034](../errorcode-enterpriseDeviceManager.md#9201034-application-installation-failed-due-to-lack-of-required-permissions-in-the-hsp) | Failed to install the HSP due to missing required permissions. |
+| [9201035](../errorcode-enterpriseDeviceManager.md#9201035-application-installation-failed-because-crossapplication-shared-library-installation-is-not-allowed) | Installation failed because the installation of cross-app shared libraries is not allowed. |
+| [9201028](../errorcode-enterpriseDeviceManager.md#9201028-application-installation-failed-due-to-unsupported-isolationmode-configuration) | Failed to install the HAP because the isolationMode configured is not supported. |
+| [9201029](../errorcode-enterpriseDeviceManager.md#9201029-application-installation-failed-due-to-outdated-hap-version) | Failed to install the HAP since the version of the HAP to install is too early. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed. The application does not have the permission required to call the API. |
+| [9201030](../errorcode-enterpriseDeviceManager.md#9201030-application-installation-failed-because-versioncode-is-not-greater-than-the-current-version) | Failed to install the HAP because the VersionCode to be updated is not greater than the current VersionCode. |
+| [9201031](../errorcode-enterpriseDeviceManager.md#9201031-application-installation-failed-because-the-dependent-module-does-not-exist) | Installation failed because the dependent module does not exist. |
+| [9201024](../errorcode-enterpriseDeviceManager.md#9201024-application-installation-failed-due-to-hap-parsing-failure) | Failed to install the HAP because the HAP fails to be parsed. |
+| [9200001](../errorcode-enterpriseDeviceManager.md#9200001-deviceadmin-not-enabled) | The application is not an administrator application of the device. |
+| [9201025](../errorcode-enterpriseDeviceManager.md#9201025-application-installation-failed-due-to-hap-signature-verification-failure) | Failed to install the HAP because the HAP signature fails to be verified. |
+| [9200002](../errorcode-enterpriseDeviceManager.md#9200002-permission-denied) | The administrator application does not have permission to manage the device. |
+| [9201026](../errorcode-enterpriseDeviceManager.md#9201026-application-installation-failed-due-to-an-invalid-hap-path-or-an-extralarge-hap) | Failed to install the HAP because the HAP path is invalid or the HAP is too large. |
+| [9201027](../errorcode-enterpriseDeviceManager.md#9201027-installation-failed-due-to-inconsistent-hap-configuration-information) | Failed to install the HAPs because they have different configuration information. |
+| [9201022](../errorcode-enterpriseDeviceManager.md#9201022-application-installation-failure-due-to-insufficient-system-disk-space) | Failed to install the HAP because of insufficient system disk space. |
+| [9201023](../errorcode-enterpriseDeviceManager.md#9201023-application-installation-failure-due-to-prohibition-by-enterprise-device-management) | Failed to install the HAP because enterprise device management disallows the installation. |
 

@@ -12,7 +12,7 @@ import { WantAgent } from 'kits/@kit.AbilityKit';
 function triggerAsync(agent: WantAgent, triggerInfo: TriggerInfo, context: Context): Promise<CompleteData>
 ```
 
-主动触发WantAgent实例，即按照WantAgent实例中已封装的指定操作和参数等信息执行。使用Promise异步回调。仅当入参agent为本地WantAgent实例时需要申请: ohos.permission.TRIGGER_LOCAL_WANTAGENT permission.
+Asynchronously triggers a predefined operation encration encapsulated in a Wantagent with specified trigger information.If the specified wantAgent is local, you need to apply for permission:ohos.permission.TRIGGER_LOCAL_WANTAGENT permission.
 
 **Since:** 20
 
@@ -30,25 +30,25 @@ function triggerAsync(agent: WantAgent, triggerInfo: TriggerInfo, context: Conte
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| agent | [WantAgent](arkts-ability-wantagent-t.md) | Yes | WantAgent对象。 |
-| triggerInfo | [TriggerInfo](arkts-ability-triggerinfo-triggerinfo-i-sys.md) | Yes | TriggerInfo对象。 |
-| context | [Context](arkts-ability-context-c-sys.md) | Yes | 请求触发WantAgent的UIAbility/ExtensionAbility的Context。 |
+| agent | [WantAgent](arkts-ability-wantagent-t.md) | Yes | Indicates the WantAgent. |
+| triggerInfo | [TriggerInfo](arkts-ability-triggerinfo-triggerinfo-i-sys.md) | Yes | Indicates the information required for triggering a WantAgent. |
+| context | [Context](arkts-ability-context-c-sys.md) | Yes | Indicates current context. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;CompleteData&gt; | Promise对象，返回主动激发WantAgent获得的数据。 |
+| Promise&lt;CompleteData&gt; | Returns the CompleteData. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 16000020 | The context is not ability context. |
-| 16000151 | Invalid wantagent object. |
-| 201 | The application does not have permission to call the interface. |
-| 202 | The application is not system-app, can not use system-api. |
-| 16000153 | The Wantagent has been canceled. |
+| [16000020](../errorcode-ability.md#16000020-context-is-not-an-abilitylevel-context) | The context is not ability context. |
+| [16000151](../errorcode-ability.md#16000151-invalid-wantagent-object) | Invalid wantAgent object. |
+| [201](../../errorcode-universal.md#201-permission-denied) | The application does not have permission to call the interface. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | The application is not system-app, can not use system-api. |
+| [16000153](../errorcode-ability.md#16000153-wantagent-object-is-canceled) | The WantAgent has been canceled. |
 
 ## Examples
 

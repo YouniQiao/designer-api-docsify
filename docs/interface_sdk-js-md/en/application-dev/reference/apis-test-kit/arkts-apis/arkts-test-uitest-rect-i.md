@@ -1,6 +1,6 @@
 # Rect
 
-控件的边框信息。
+Represents the rectangle area on the device screen.
 
 **Since:** 9
 
@@ -22,11 +22,7 @@ import { ResizeDirection, WindowMode, PenMode, PenKeyOperation, Driver, MatchPat
 bottom: int
 ```
 
-控件边框的右下角的Y坐标，取值大于等于0的整数，单位：px。
-
-**说明：** 从API version 20开始，该属性不再为只读属性。
-
-从API version 11开始，该接口支持在原子化服务中使用。
+Y coordinate of the lower right corner of the component border, in pixels. The value is an integer greater than or equal to 0.
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
@@ -46,9 +42,7 @@ bottom: int
 displayId?: int
 ```
 
-控件边框所属的屏幕ID，取值大于或等于0的整数。默认值为设备默认屏幕ID。
-
-从API version 20开始，该接口支持在原子化服务中使用。
+ID of the display to which the component border belongs. The value is an integer greater than or equal to 0. &lt;br&gt;Default value: the default screen ID of the device.
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
@@ -68,11 +62,7 @@ displayId?: int
 left: int
 ```
 
-控件边框的左上角的X坐标，取值大于等于0的整数，单位：px。
-
-**说明：** 从API version 20开始，该属性不再为只读属性。
-
-从API version 11开始，该接口支持在原子化服务中使用。
+X coordinate of the upper left corner of the component border, in pixels. The value is an integer greater than or equal to 0.
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
@@ -92,11 +82,7 @@ left: int
 right: int
 ```
 
-控件边框的右下角的X坐标，取值大于等于0的整数，单位：px。
-
-**说明：** 从API version 20开始，该属性不再为只读属性。
-
-从API version 11开始，该接口支持在原子化服务中使用。
+X coordinate of the lower right corner of the component border, in pixels. The value is an integer greater than or equal to 0.
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
@@ -116,11 +102,7 @@ right: int
 top: int
 ```
 
-控件边框的左上角的Y坐标，取值大于等于0的整数，单位：px。
-
-**说明：** 从API version 20开始，该属性不再为只读属性。
-
-从API version 11开始，该接口支持在原子化服务中使用。
+Y coordinate of the upper left corner of the component border, in pixels. The value is an integer greater than or equal to 0.
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 

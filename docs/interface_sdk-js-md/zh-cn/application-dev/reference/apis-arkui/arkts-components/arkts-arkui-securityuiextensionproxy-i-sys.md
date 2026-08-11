@@ -144,7 +144,7 @@ send(data: Record<string, Object>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| data | [Record](../../apis-default/arkts-apis/arkts-record-t.md)&lt;string, Object&gt; | 是 | 异步发送给被拉起的Ability的数据。 |
+| data | Record&lt;string, Object&gt; | 是 | 异步发送给被拉起的Ability的数据。 |
 
 ## sendSync
 
@@ -170,18 +170,18 @@ sendSync(data: Record<string, Object>): Record<string, Object>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| data | [Record](../../apis-default/arkts-apis/arkts-record-t.md)&lt;string, Object&gt; | 是 | 同步发送给被拉起的Ability的数据。 |
+| data | Record&lt;string, Object&gt; | 是 | 同步发送给被拉起的Ability的数据。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| [Record](../../apis-default/arkts-apis/arkts-record-t.md)&lt;string, Object&gt; | 被拉起的Ability对同步发送请求处理后返回的响应数据。 |
+| Record&lt;string, Object&gt; | 被拉起的Ability对同步发送请求处理后返回的响应数据。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 100011 | 没有注册响应该请求的回调。 |
-| 100012 | 传输数据失败。 |
+| [100011](../errorcode-uiextension.md#100011-未注册同步回调) | 没有注册响应该请求的回调。 |
+| [100012](../errorcode-uiextension.md#100012-数据发送失败) | 传输数据失败。 |
 

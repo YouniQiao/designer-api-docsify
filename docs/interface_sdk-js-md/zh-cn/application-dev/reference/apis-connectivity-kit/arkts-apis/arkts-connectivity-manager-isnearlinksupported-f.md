@@ -1,11 +1,5 @@
 # isNearLinkSupported
 
-## 导入模块
-
-```TypeScript
-import { manager } from 'kits/@kit.ConnectivityKit';
-```
-
 ## isNearLinkSupported
 
 ```TypeScript

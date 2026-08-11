@@ -1,6 +1,6 @@
 # PairingReason
 
-配对原因的枚举。
+Enum for the pairing reason.
 
 **Since:** 26.0.0
 
@@ -16,7 +16,7 @@
 PAIRING_REASON_SUCCESS = 0
 ```
 
-配对成功。
+Pairing succeed.
 
 **Since:** 26.0.0
 
@@ -34,7 +34,7 @@ PAIRING_REASON_SUCCESS = 0
 PAIRING_REASON_FAILURE = 1
 ```
 
-配对失败。
+Pairing failed.
 
 **Since:** 26.0.0
 
@@ -52,7 +52,7 @@ PAIRING_REASON_FAILURE = 1
 PAIRING_REASON_ACB_CONNECTION_FAIL = 2
 ```
 
-配对失败：ACB连接失败。远端设备可能已关机或超出范围。
+Pairing failed: ACB connection failed. The remote device may be powered off or out of range.
 
 **Since:** 26.0.0
 
@@ -70,7 +70,7 @@ PAIRING_REASON_ACB_CONNECTION_FAIL = 2
 PAIRING_REASON_EXCEED_ACB_MAX = 3
 ```
 
-配对失败：超过ACB连接限制。
+Pairing failed: ACB connection limit exceeded.
 
 **Since:** 26.0.0
 
@@ -88,7 +88,7 @@ PAIRING_REASON_EXCEED_ACB_MAX = 3
 PAIRING_REASON_REMOTE_CANCELED = 4
 ```
 
-配对失败：被远端设备取消。
+Pairing failed: Cancelled by remote device.
 
 **Since:** 26.0.0
 
@@ -106,7 +106,7 @@ PAIRING_REASON_REMOTE_CANCELED = 4
 PAIRING_REASON_LOCAL_CANCELED = 5
 ```
 
-配对失败：被本端设备取消。
+Pairing failed: Cancelled by local device.
 
 **Since:** 26.0.0
 
@@ -124,7 +124,7 @@ PAIRING_REASON_LOCAL_CANCELED = 5
 PAIRING_REASON_AUTH_FAIL = 6
 ```
 
-配对失败：认证失败。
+Pairing failed: Authentication failed.
 
 **Since:** 26.0.0
 

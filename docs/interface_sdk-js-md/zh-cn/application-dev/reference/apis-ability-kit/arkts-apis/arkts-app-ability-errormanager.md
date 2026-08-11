@@ -10,12 +10,6 @@ ErrorManager模块提供对错误观测器的注册和注销的能力，主要�
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 
-## 导入模块
-
-```TypeScript
-import { errorManager } from 'kits/@kit.AbilityKit';
-```
-
 ## 汇总
 
 ### 函数

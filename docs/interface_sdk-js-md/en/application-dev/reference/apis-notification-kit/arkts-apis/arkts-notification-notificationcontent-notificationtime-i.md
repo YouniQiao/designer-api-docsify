@@ -1,10 +1,10 @@
 # NotificationTime
 
-描述通知计时信息。
+Describes the notification timing information.
 
-> **说明：**
+> **NOTE：**
 > 
-> 实际显示效果依赖于设备能力和通知中心UI样式。
+> The actual display effect depends on the device capabilities and the notification center UI style.
 
 **Since:** 11
 
@@ -20,7 +20,7 @@
 initialTime?: int
 ```
 
-计时起始时间，用于设置实况窗中的计时起点。默认值为0。单位：毫秒。
+Initial time for the timer, which is used to set the starting point of the timer in the live view. The default value is **0**. Unit: ms.
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
@@ -38,10 +38,10 @@ initialTime?: int
 isCountDown?: boolean
 ```
 
-是否为倒计时模式。默认为false。
+Whether it is countdown mode. The default value is **false**.
 
-- true：时间从initialTime开始递减显示。  
-- false：时间从initialTime开始递增显示。
+- **true**: The time is displayed decreasing from initialTime.  
+- **false**: The time is displayed increasing from initialTime.
 
 **Type:** boolean
 
@@ -59,10 +59,10 @@ isCountDown?: boolean
 isInTitle?: boolean
 ```
 
-时间信息是否展示在通知标题中。默认为false。
+Whether the time information is displayed in the notification title. The default value is **false**.
 
-- true：计时信息将嵌入标题区域展示。  
-- false：计时信息在独立区域展示。
+- **true**: The timer information will be embedded in the title area.  
+- **false**: The timer information is displayed in a separate area.
 
 **Type:** boolean
 
@@ -80,10 +80,10 @@ isInTitle?: boolean
 isPaused?: boolean
 ```
 
-计时是否暂停。默认为false。
+Whether the timer is paused. The default value is **false**.
 
-- true：计时暂停在当前值。  
-- false：计时正常运行。
+- **true**: The timer is paused at the current value.  
+- **false**: The timer runs normally.
 
 **Type:** boolean
 

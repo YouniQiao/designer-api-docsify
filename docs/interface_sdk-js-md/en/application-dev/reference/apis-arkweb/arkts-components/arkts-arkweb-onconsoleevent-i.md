@@ -16,7 +16,7 @@ Defines the triggered function when the web page receives a JavaScript console m
 message: ConsoleMessage
 ```
 
-触发的控制台信息。
+Console message information of the event.
 
 **Type:** [ConsoleMessage](arkts-arkweb-consolemessage-c.md)
 

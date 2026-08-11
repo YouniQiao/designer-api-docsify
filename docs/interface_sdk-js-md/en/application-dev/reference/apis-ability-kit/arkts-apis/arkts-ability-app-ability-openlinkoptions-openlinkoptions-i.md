@@ -1,6 +1,7 @@
 # OpenLinkOptions
 
-OpenLinkOptions可以作为[openLink()](arkts-ability-uiabilitycontext-c.md#openlink)的入参，用于标识是否仅打开AppLinking和传递键值对可选参数。
+**OpenLinkOptions** can be used as an input parameter of  
+[openLink()](arkts-ability-uiabilitycontext-c.md#openlink) to indicate whether to enable only App Linking and pass in optional parameters in the form of key-value pairs.
 
 **Since:** 12
 
@@ -22,13 +23,16 @@ import { OpenLinkOptions } from 'kits/@kit.AbilityKit';
 appLinkingOnly?: boolean
 ```
 
-表示是否必须以&lt;!--RP1--&gt;[AppLinking](../../../application-models/app-linking-startup.md)&lt;!--RP1End--&gt;的方式启动UIAbility。
+Whether the UIAbility must be started using &lt;!--RP1--&gt;  
+[App Linking](../../../application-models/app-linking-startup.md)&lt;!--RP1End--&gt;.
 
-- 取值为true时，如果不存在与AppLinking相匹配的UIAbility，直接返回。  
-- 取值为false时，如果不存在与AppLinking相匹配的UIAbility，AppLinking会退化为  
-[DeepLinking](../../../application-models/deep-linking-startup.md)。默认值为false。
+- If this parameter is set to **true** and no UIAbility matches the URL in App Linking, the result is returned  
+directly.  
+- If this parameter is set to **false** and no UIAbility matches the URL in App Linking, App Linking falls back to  
+[Deep Linking](../../../application-models/deep-linking-startup.md). The default value is **false**.
 
-aa命令隐式拉起Ability时可以通过设置"--pb appLinkingOnly true/false"以AppLinking的方式进行启动。
+When the aa command is used to implicitly start an ability, you can set **--pb appLinkingOnly true** or  
+**--pb appLinkingOnly false** to start the ability in App Linking mode.
 
 **Type:** boolean
 
@@ -50,7 +54,7 @@ aa命令隐式拉起Ability时可以通过设置"--pb appLinkingOnly true/false"
 completionHandler?: CompletionHandler
 ```
 
-拉起应用结果的操作类，用于处理拉起应用的结果。
+Operation class used to handle the result of an application launch request.
 
 **Type:** [CompletionHandler](arkts-ability-app-ability-completionhandler-completionhandler-c.md)
 
@@ -72,12 +76,13 @@ completionHandler?: CompletionHandler
 hideFailureTipDialog?: boolean
 ```
 
-表示[Deep Linking](../../../application-models/deep-linking-startup.md)找不到应用时是否显示“暂无可用打开方式”的弹窗。
+Whether to display a "No app available" dialog box when a suitable application is not found using  
+[Deep Linking](../../../application-models/deep-linking-startup.md).
 
-- 取值为true时，不显示“暂无可用打开方式”的弹窗。  
-- 取值为false时，显示“暂无可用打开方式”的弹窗。默认值为false。
+- **true**: The "No app available" dialog box is not displayed.  
+- **false**: The "No app available" dialog box is displayed. The default value is **false**.
 
-**说明：**appLinkingOnly字段为true时不会触发Deep Linking流程，该字段不会生效。
+Note: If **appLinkingOnly** is set to **true**, the Deep Linking process is not triggered, and this field does not take effect.
 
 **Type:** boolean
 
@@ -101,9 +106,9 @@ hideFailureTipDialog?: boolean
 parameters?: Record<string, Object>
 ```
 
-表示WantParams参数。
+List of parameters in Want.
 
-**说明：**具体使用规则请参考[want](arkts-ability-app-ability-want-want-c.md)中的parameters属性。
+Note: For details about the usage rules, see **parameters** in [want](arkts-ability-app-ability-want-want-c.md).
 
 **Type:** [Record](../../apis-default/arkts-apis/arkts-record-t.md)&lt;string, Object&gt;
 

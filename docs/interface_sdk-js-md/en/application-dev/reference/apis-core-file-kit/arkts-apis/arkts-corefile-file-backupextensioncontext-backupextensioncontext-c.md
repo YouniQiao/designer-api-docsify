@@ -1,6 +1,6 @@
 # BackupExtensionContext
 
-BackupExtensionAbility的上下文环境，继承自ExtensionContext。用于在备份恢复过程中获取EL1（设备级加密区）或EL2（用户级加密区）对应的临时目录。
+The context of an ability or an application. It allows access to application-specific resources.Can only be obtained through the ability.
 
 **Inheritance/Implementation:** BackupExtensionContext extends [ExtensionContext](../../apis-ability-kit/arkts-apis/arkts-ability-extensioncontext-c.md/arkts-ability-extensioncontext-c.md)
 
@@ -24,7 +24,7 @@ import { BackupExtensionContext } from 'kits/@kit.CoreFileKit';
 readonly backupDir: string
 ```
 
-获取备份恢复时的临时路径。该路径仅允许在备份恢复过程中临时使用，目前仅支持EL1、EL2路径。
+Indicates backup dir.
 
 **Type:** string
 

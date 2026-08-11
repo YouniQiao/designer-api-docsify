@@ -1,6 +1,6 @@
 # SystemMemInfo
 
-����ϵͳ�ڴ���Ϣ���������ڴ桢�����ڴ�Ϳ����ڴ档
+Describes the system memory information, including the total memory, free memory, and available memory.
 
 **Since:** 12
 
@@ -22,7 +22,8 @@ import { hidebug } from 'kits/@kit.PerformanceAnalysisKit';
 availableMem: bigint
 ```
 
-ϵͳ���õ��ڴ棬��KBΪ��λ�����㷽ʽ��/proc/meminfo: MemAvailable��
+Available memory of the system, in KB. The value of this parameter is obtained by reading the value of  
+**MemAvailable** in the **\/proc/meminfo** node.
 
 **Type:** bigint
 
@@ -40,7 +41,7 @@ availableMem: bigint
 freeMem: bigint
 ```
 
-ϵͳ���е��ڴ棬��KBΪ��λ�����㷽ʽ��/proc/meminfo: MemFree��
+Free memory of the system, in KB. The value of this parameter is obtained by reading the value of **MemFree** in the **\/proc/meminfo** node.
 
 **Type:** bigint
 
@@ -58,7 +59,7 @@ freeMem: bigint
 totalMem: bigint
 ```
 
-ϵͳ�ܵ��ڴ棬��KBΪ��λ�����㷽ʽ��/proc/meminfo: MemTotal��
+Total memory of the system, in KB. The value of this parameter is obtained by reading the value of **MemTotal**in the **\/proc/meminfo** node.
 
 **Type:** bigint
 

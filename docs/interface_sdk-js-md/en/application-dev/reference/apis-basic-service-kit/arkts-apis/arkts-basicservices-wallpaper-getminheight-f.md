@@ -12,7 +12,7 @@ import { wallpaper } from 'kits/@kit.BasicServicesKit';
 function getMinHeight(callback: AsyncCallback<number>): void
 ```
 
-获取壁纸的最小高度值。
+Obtains the minimum height of the wallpaper. in pixels. returns 0 if no wallpaper has been set.
 
 **Since:** 7
 
@@ -28,7 +28,7 @@ function getMinHeight(callback: AsyncCallback<number>): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;number&gt; | Yes |  |
+| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;number&gt; | Yes | the callback of getMinHeight. |
 
 ## Examples
 
@@ -51,7 +51,7 @@ wallpaper.getMinHeight((error: BusinessError, data: Number) => {
 function getMinHeight(): Promise<number>
 ```
 
-获取壁纸的最小高度值。
+Obtains the minimum height of the wallpaper. in pixels. returns 0 if no wallpaper has been set.
 
 **Since:** 7
 
@@ -67,7 +67,7 @@ function getMinHeight(): Promise<number>
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;number&gt; | 返回壁纸的最小高度值，单位是像素。如果返回值等于0，说明没有设置壁纸，调用者应该使用默认显示的高度值代替。 |
+| Promise&lt;number&gt; | the promise returned by the function. |
 
 ## Examples
 

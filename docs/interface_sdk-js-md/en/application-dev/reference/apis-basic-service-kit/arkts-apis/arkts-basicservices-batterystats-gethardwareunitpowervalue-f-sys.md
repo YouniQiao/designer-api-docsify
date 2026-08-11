@@ -12,7 +12,7 @@ import { batteryStats } from 'kits/@kit.BasicServicesKit';
 function getHardwareUnitPowerValue(type: ConsumptionType): double
 ```
 
-根据耗电类型获取硬件单元的耗电量，单位毫安时。
+Obtains the power consumption of a hardware unit according to the consumption type, in unit of mAh.
 
 **Since:** 8
 
@@ -28,21 +28,21 @@ function getHardwareUnitPowerValue(type: ConsumptionType): double
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | [ConsumptionType](arkts-basicservices-batterystats-consumptiontype-e-sys.md) | Yes | 电量消耗类型；该参数类型是枚举类。 |
+| type | [ConsumptionType](arkts-basicservices-batterystats-consumptiontype-e-sys.md) | Yes | Power consumption type. The value must be an enum. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| ArkTS-Dyn: number  <br>ArkTS-Sta：double | 电量消耗类型对应硬件的耗电量，单位毫安时。 |
+| ArkTS-Dyn: number  <br>ArkTS-Sta：double | Power consumption of the hardware unit corresponding to the power consumption type, in unit of mAh. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1. Parameter verification failed. |
-| 4600101 | Failed to connect to the service. |
-| 202 | Permission verification failed. A non-system application calls a system API. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Parameter verification failed. |
+| [4600101](../../apis-basic-services-kit/errorcode-batteryStatistics.md#4600101-service-connection-failure) | Failed to connect to the service. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
 
 ## Examples
 

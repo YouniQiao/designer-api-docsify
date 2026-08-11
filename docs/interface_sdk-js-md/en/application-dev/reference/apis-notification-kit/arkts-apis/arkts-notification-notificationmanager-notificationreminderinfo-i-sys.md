@@ -1,6 +1,6 @@
 # NotificationReminderInfo (System API)
 
-描述指定应用提醒方式信息。
+Describes the information about the application reminder.
 
 **Since:** 21
 
@@ -24,7 +24,7 @@ import { notificationManager } from 'kits/@kit.NotificationKit';
 bundle: BundleOption
 ```
 
-指定应用的包信息。
+Bundle information of the application.
 
 **Type:** [BundleOption](arkts-notification-notificationextensionsubscription-bundleoption-t.md)
 
@@ -44,7 +44,7 @@ bundle: BundleOption
 reminderFlags: long
 ```
 
-表示通知提醒方式的标志位。
+Notification reminder mode flags.&lt;br&gt;- bit0: sound prompt. The value **0** indicates disabled, and **1**indicates enabled. &lt;br&gt;- bit1: lock screen. The value **0** indicates disabled, and **1** indicates enabled. &lt;br&gt;- bit2: banner. The value **0** indicates disabled, and **1** indicates enabled. &lt;br&gt;- bit3:screen on. The value **0** indicates disabled, and **1** indicates enabled. &lt;br&gt;- bit4: vibration. The value **0** indicates disabled, and **1** indicates enabled. &lt;br&gt;- bit5: status bar notification icon. The value **0** indicates disabled, and **1** indicates enabled.
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：long
 
@@ -64,7 +64,7 @@ reminderFlags: long
 silentReminderEnabled: boolean
 ```
 
-表示静默提醒开关使能状态（true：使能，false：禁止）。
+Whether the silent reminder is enabled. The value **true** indicates that the silent reminder is enabled, and the value **false** indicates the opposite.
 
 **Type:** boolean
 

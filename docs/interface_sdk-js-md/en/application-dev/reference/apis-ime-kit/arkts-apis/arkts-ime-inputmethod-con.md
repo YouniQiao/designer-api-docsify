@@ -6,7 +6,7 @@
 const MAX_TYPE_NUM: int
 ```
 
-可支持的最大输入法个数。
+Keyboard max number. Max value is 128.
 
 **Since:** 8
 

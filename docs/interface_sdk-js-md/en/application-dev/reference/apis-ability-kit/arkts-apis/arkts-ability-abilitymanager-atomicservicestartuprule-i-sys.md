@@ -1,6 +1,6 @@
 # AtomicServiceStartupRule (System API)
 
-嵌入式拉起原子化服务的规则。
+Describes the rule for launching an embedded atomic service.
 
 **Since:** 18
 
@@ -24,7 +24,7 @@ import { abilityManager } from 'kits/@kit.AbilityKit';
 isEmbeddedAllowed: boolean
 ```
 
-是否允许嵌入式拉起原子化服务。true表示允许嵌入式拉起原子化服务，false表示不允许嵌入式拉起原子化服务。
+Whether launching the embedded atomic service is allowed. **true** if allowed, **false** otherwise.
 
 **Type:** boolean
 
@@ -44,7 +44,7 @@ isEmbeddedAllowed: boolean
 isOpenAllowed: boolean
 ```
 
-是否允许拉起原子化服务。true表示允许拉起原子化服务，false表示不允许拉起原子化服务。
+Whether launching the atomic service is allowed. **true** if allowed, **false** otherwise.
 
 **Type:** boolean
 

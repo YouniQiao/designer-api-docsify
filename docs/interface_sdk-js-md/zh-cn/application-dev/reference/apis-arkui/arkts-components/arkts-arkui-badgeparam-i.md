@@ -26,7 +26,7 @@ Position作为入参，不支持设置百分比；设置为非法值时，按(0,
 
 BadgePosition作为入参时，会跟随[Direction](../arkts-apis/arkts-arkui-enums-direction-e.md/arkts-arkui-enums-direction-e.md)属性控制镜像显示。
 
-**类型：** [BadgePosition](../arkts-apis/arkts-arkui-badge-badgeposition-e.md) \| Position
+**类型：** [BadgePosition](arkts-arkui-badgeposition-e.md) \| Position
 
 **默认值：** BadgePosition.RightTop
 

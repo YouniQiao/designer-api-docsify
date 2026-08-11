@@ -1,6 +1,6 @@
 # HttpResponse
 
-任务响应头的数据结构。
+Describes the data structure of the task response header.
 
 **Since:** 12
 
@@ -22,7 +22,7 @@ import { request } from 'kits/@kit.BasicServicesKit';
 readonly headers: Map<string, Array<string>>
 ```
 
-Http响应头部。
+HTTP response header.
 
 **Type:** Map&lt;string, Array&lt;string&gt;&gt;
 
@@ -42,7 +42,7 @@ Http响应头部。
 readonly reason: string
 ```
 
-Http响应原因。
+HTTP response cause.
 
 **Type:** string
 
@@ -62,7 +62,7 @@ Http响应原因。
 readonly statusCode: int
 ```
 
-Http响应状态码。
+HTTP response status code.
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
@@ -82,7 +82,7 @@ Http响应状态码。
 readonly version: string
 ```
 
-Http版本。
+HTTP version.
 
 **Type:** string
 

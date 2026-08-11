@@ -12,7 +12,7 @@ import { hidebug } from 'kits/@kit.PerformanceAnalysisKit';
 function getAppMemoryLimit(): MemoryLimit
 ```
 
-��ȡӦ�ó�����̵��ڴ����ơ�
+Obtains the memory limit of an application process.
 
 **Since:** 12
 
@@ -26,7 +26,7 @@ function getAppMemoryLimit(): MemoryLimit
 
 | Type | Description |
 | --- | --- |
-| [MemoryLimit](arkts-performanceanalysis-hidebug-memorylimit-i.md) | Ӧ�ó�������ڴ����ơ� |
+| [MemoryLimit](arkts-performanceanalysis-hidebug-memorylimit-i.md) | Memory limit of the application process. |
 
 ## Examples
 
@@ -34,7 +34,5 @@ function getAppMemoryLimit(): MemoryLimit
 import { hidebug } from '@kit.PerformanceAnalysisKit';
 
 let appMemoryLimit:hidebug.MemoryLimit = hidebug.getAppMemoryLimit();
-console.info(`rssLimit: ${appMemoryLimit.rssLimit}, vssLimit: ${appMemoryLimit.vssLimit},` +
-  `vmHeapLimit: ${appMemoryLimit.vmHeapLimit}, vmTotalHeapSize: ${appMemoryLimit.vmTotalHeapSize}`);
 ```
 

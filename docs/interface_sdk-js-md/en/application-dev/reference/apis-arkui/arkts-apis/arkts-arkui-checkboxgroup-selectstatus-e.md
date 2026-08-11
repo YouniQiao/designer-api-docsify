@@ -1,6 +1,6 @@
 # SelectStatus
 
-多选框群组的选中状态。
+CheckboxGroup SelectStatus
 
 **Since:** 23
 
@@ -16,7 +16,7 @@
 All
 ```
 
-群组多选择框全部选择。
+All checkboxes are selected.
 
 **Since:** 23
 
@@ -34,7 +34,7 @@ All
 Part
 ```
 
-群组多选择框部分选择。
+Part of the checkbox is selected.
 
 **Since:** 23
 
@@ -52,7 +52,7 @@ Part
 None
 ```
 
-群组多选择框全部没有选择。
+None of the checkbox is selected.
 
 **Since:** 23
 

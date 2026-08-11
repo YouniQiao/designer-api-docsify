@@ -12,7 +12,7 @@ import { text } from 'kits/@kit.ArkGraphics2D';
 function getSystemFontFullNamesByType(fontType: SystemFontType): Promise<Array<string>>
 ```
 
-根据字体类型返回该类型对应的所有字体的字体名称，使用Promise异步回调。
+Obtains the full names of all fonts of the specified type. This API uses a promise to return the result.
 
 **Since:** 14
 
@@ -28,19 +28,19 @@ function getSystemFontFullNamesByType(fontType: SystemFontType): Promise<Array<s
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| fontType | [SystemFontType](arkts-arkgraphics2d-text-systemfonttype-e.md) | Yes | 指定的字体类型。 |
+| fontType | [SystemFontType](arkts-arkgraphics2d-text-systemfonttype-e.md) | Yes | Font type. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;Array&lt;string&gt;&gt; | Promise对象，返回相应字体类型的所有字体的fullName。 |
+| Promise&lt;Array&lt;string&gt;&gt; | Promise used to return the full names of all fonts of the specified type. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
 
 ## Examples
 

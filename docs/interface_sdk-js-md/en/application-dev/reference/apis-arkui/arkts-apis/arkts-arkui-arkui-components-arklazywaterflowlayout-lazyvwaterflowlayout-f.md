@@ -14,7 +14,7 @@ export declare function LazyVWaterFlowLayout (
 ): LazyVWaterFlowLayoutAttribute
 ```
 
-定义LazyVWaterFlowLayout组件。
+Defines LazyVWaterFlowLayout Component.
 
 **Since:** 26.0.0
 
@@ -48,11 +48,11 @@ export declare function LazyVWaterFlowLayout(
 ): LazyVWaterFlowLayoutAttribute
 ```
 
-定义LazyVWaterFlowLayout组件。
+Defines LazyVWaterFlowLayout Component.
 
-**Since:** 26.0.0
+**Since:** 26.1.0
 
-**ArkTS mode:** ArkTS-Sta only, since version 26.0.0.
+**ArkTS mode:** ArkTS-Sta only, since version 26.1.0.
 
 **Decorator:** @Builder
 
@@ -73,5 +73,5 @@ export declare function LazyVWaterFlowLayout(
 
 | Type | Description |
 | --- | --- |
-| [LazyVWaterFlowLayoutAttribute](arkts-arkui-arkui-components-arklazywaterflowlayout-lazyvwaterflowlayoutattribute-i.md) | LazyVWaterFlowLayout的属性。 |
+| [LazyVWaterFlowLayoutAttribute](arkts-arkui-arkui-components-arklazywaterflowlayout-lazyvwaterflowlayoutattribute-i.md) | The attribute of the LazyVWaterFlowLayout. |
 

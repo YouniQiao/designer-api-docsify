@@ -10,12 +10,6 @@
 
 **系统能力：** SystemCapability.Print.PrintFramework
 
-## 导入模块
-
-```TypeScript
-import { scan } from 'kits/@kit.BasicServicesKit';
-```
-
 ## boolValue
 
 ```TypeScript

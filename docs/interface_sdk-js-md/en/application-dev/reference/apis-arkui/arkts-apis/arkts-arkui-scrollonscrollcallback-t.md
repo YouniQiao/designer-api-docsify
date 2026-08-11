@@ -4,11 +4,7 @@
 export type ScrollOnScrollCallback = (xOffset: double, yOffset: double, scrollState: ScrollState) => void
 ```
 
-Scroll滚动时触发的回调。  
-> **说明：**
-> 若通过[onScrollFrameBegin](onScrollFrameBegin)事件和[scrollBy](../arkts-components/arkts-arkui-scroller-c.md/arkts-arkui-scroller-c.md#scrollby)方法实现容器嵌套滚动，需设置子滚动节点的
-> EdgeEffect为None。如Scroll嵌套List滚动时，List组件的[edgeEffect](../../../reference/apis-arkui/arkui-ts/ts-container-list.md#edgeeffect)
-> 属性需设置为EdgeEffect.None。
+Represents the callback triggered when the &lt;em&gt;Scroll&lt;/em&gt; component scrolls.&lt;p&gt;&lt;strong&gt;NOTE&lt;/strong&gt;.&lt;br&gt;If the &lt;em&gt;onScrollFrameBegin&lt;/em&gt; event and &lt;em&gt;scrollBy&lt;/em&gt; method are used to implement nested scrolling,set the &lt;em&gt;edgeEffect&lt;/em&gt; attribute of the scrollable child component to &lt;em&gt;None&lt;/em&gt;. For example,if a &lt;em&gt;List&lt;/em&gt; is nested in the &lt;em&gt;Scroll&lt;/em&gt; component, &lt;em&gt;edgeEffect&lt;/em&gt; of the &lt;em&gt;List&lt;/em&gt; must be set to &lt;em&gt;EdgeEffect.None&lt;/em&gt;.&lt;/p&gt;
 
 **Since:** 23
 
@@ -24,7 +20,7 @@ Scroll滚动时触发的回调。
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| xOffset | double | Yes | 相对于上一帧水平方向的偏移量，Scroll中的内容向左滚动时偏移量为正，向右滚动时偏移量为负。<br/>单位vp。 <br>单位:vp。 <br>单位:vp。 |
-| yOffset | double | Yes | 相对于上一帧竖直方向的偏移量，Scroll中的内容向上滚动时偏移量为正，向下滚动时偏移量为负。<br/>单位vp。 <br>单位:vp。 <br>单位:vp。 |
-| scrollState | [ScrollState](../arkts-components/arkts-arkui-scrollstate-e.md) | Yes | 当前滚动状态。 |
+| xOffset | double | Yes | Horizontal offset per frame during scrolling. A positive offset indicates scrolling to the left, and a negative offset indicates scrolling to the right. <br>Unit: vp. |
+| yOffset | double | Yes | Vertical offset per frame during scrolling. A positive offset indicates scrolling upward, and a negative offset indicates scrolling downward. <br>Unit: vp. |
+| scrollState | [ScrollState](../arkts-components/arkts-arkui-scrollstate-e.md) | Yes | Current scrolling state. |
 

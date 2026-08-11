@@ -1,6 +1,6 @@
 # CertChainValidator
 
-证书链校验器对象。
+Provides APIs for certificate chain validator operations.
 
 **Since:** 9
 
@@ -22,11 +22,11 @@ import { cert } from 'kits/@kit.DeviceCertificateKit';
 validate(certChain: CertChainData, callback: AsyncCallback<void>): void
 ```
 
-表示校验X.509证书链。使用Callback异步回调。
+Validates an X.509 certificate chain. This API uses an asynchronous callback to return the result.
 
-&lt;br&gt;由于端侧系统时间不可信，证书链校验不包含对证书有效时间的校验。如果需要检查证书的时间有效性，可使用X.509证书的  
-[checkValidityWithDate](arkts-devicecertificate-cert-x509cert-i.md#checkvaliditywithdate)方法进行检查。详见  
-[证书规格](../../../security/DeviceCertificateKit/certificate-framework-overview.md#certificate-specifications)。
+&lt;br&gt;Because the system time on the device is untrusted, the certificate chain validator does not verify the certificate validity period. To check the validity period of a certificate, use the  
+[checkValidityWithDate()](arkts-devicecertificate-cert-x509cert-i.md#checkvaliditywithdate) API of the **X509Cert** class. For details about certificate specifications, see  
+[Certificate Specifications](../../../security/DeviceCertificateKit/certificate-framework-overview.md#certificate-specifications).
 
 **Since:** 9
 
@@ -42,23 +42,23 @@ validate(certChain: CertChainData, callback: AsyncCallback<void>): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| certChain | [CertChainData](arkts-devicecertificate-cert-certchaindata-i.md) | Yes | 表示X.509证书链序列化数据。 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | 回调函数。当校验成功时，err为undefined，否则为错误对象。 |
+| certChain | [CertChainData](arkts-devicecertificate-cert-certchaindata-i.md) | Yes | Serialized X.509 certificate chain data. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined**. Otherwise, **err** is an error object. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 19020002 | 运行时外部错误。可能的原因： &lt;br&gt;1. 内存拷贝失败； &lt;br&gt;2. 系统内部出现空指针； &lt;br&gt;3. 获取Native对象失败或参数转换失败。 |
-| 19030002 | 证书签名验证错误。 |
-| 401 | 参数错误。可能的原因： &lt;br&gt;1. 必填参数未指定； &lt;br&gt;2. 参数类型不正确； &lt;br&gt;3. 参数校验失败。 |
-| 19030003 | 证书尚未生效。 |
-| 19020001 | 内存错误。 |
-| 19030001 | 调用三方算法库API出错。 |
-| 19030006 | 证书的密钥用途不含证书签名。 |
-| 19030007 | 证书的密钥用途不含数字签名。 |
-| 19030004 | 证书过期。 |
-| 19030005 | 无法获取证书的颁发者。 |
+| [19020002](../errorcode-cert.md#19020002-runtime-error) | Runtime error. Possible causes: &lt;br&gt;1. Memory copy failed; &lt;br&gt;2. A null pointer occurs inside the system; &lt;br&gt;3. Failed to obtain the native object or convert parameters. |
+| [19030002](../errorcode-cert.md#19030002-certificate-signature-verification-failed) | The certificate signature verification failed. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Invalid parameters. Possible causes: &lt;br&gt;1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; &lt;br&gt;3. Parameter verification failed. |
+| [19030003](../errorcode-cert.md#19030003-certificate-has-not-taken-effect) | The certificate has not taken effect. |
+| [19020001](../errorcode-cert.md#19020001-memory-error) | Memory malloc failed. |
+| [19030001](../errorcode-cert.md#19030001-crypto-operation-error) | Crypto operation error. |
+| [19030006](../errorcode-cert.md#19030006-key-cannot-be-used-for-signing-a-certificate) | The key cannot be used for signing a certificate. |
+| [19030007](../errorcode-cert.md#19030007-key-cannot-be-used-for-digital-signature) | The key cannot be used for a digital signature. |
+| [19030004](../errorcode-cert.md#19030004-certificate-expired) | The certificate has expired. |
+| [19030005](../errorcode-cert.md#19030005-failed-to-obtain-the-certificate-issuer) | Failed to obtain the certificate issuer. |
 
 ## Examples
 
@@ -159,11 +159,11 @@ try {
 validate(certChain: CertChainData): Promise<void>
 ```
 
-表示校验X.509证书链。使用Promise方式返回结果。
+Validates an X.509 certificate chain. This API uses a promise to return the result.
 
-&lt;br&gt;由于端侧系统时间不可信，证书链校验不包含对证书有效时间的校验。如果需要检查证书的时间有效性，可使用X.509证书的  
-[checkValidityWithDate](arkts-devicecertificate-cert-x509cert-i.md#checkvaliditywithdate)方法进行检查。详见  
-[证书规格](../../../security/DeviceCertificateKit/certificate-framework-overview.md#certificate-specifications)。
+&lt;br&gt;Because the system time on the device is untrusted, the certificate chain validator does not verify the certificate validity period. To check the validity period of a certificate, use the  
+[checkValidityWithDate()](arkts-devicecertificate-cert-x509cert-i.md#checkvaliditywithdate) API of the **X509Cert** class. For details about certificate specifications, see  
+[Certificate Specifications](../../../security/DeviceCertificateKit/certificate-framework-overview.md#certificate-specifications).
 
 **Since:** 9
 
@@ -179,28 +179,28 @@ validate(certChain: CertChainData): Promise<void>
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| certChain | [CertChainData](arkts-devicecertificate-cert-certchaindata-i.md) | Yes | 表示X.509证书链序列化数据。 |
+| certChain | [CertChainData](arkts-devicecertificate-cert-certchaindata-i.md) | Yes | Serialized X.509 certificate chain data. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise对象，无返回结果。 |
+| Promise&lt;void&gt; | Promise that returns no value. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 19020002 | 运行时外部错误。可能的原因： &lt;br&gt;1. 内存拷贝失败； &lt;br&gt;2. 系统内部出现空指针； &lt;br&gt;3. 获取Native对象失败或参数转换失败。 |
-| 19030002 | 证书签名验证错误。 |
-| 401 | 参数错误。可能的原因： &lt;br&gt;1. 必填参数未指定； &lt;br&gt;2. 参数类型不正确； &lt;br&gt;3. 参数校验失败。 |
-| 19030003 | 证书尚未生效。 |
-| 19020001 | 内存错误。 |
-| 19030001 | 调用三方算法库API出错。 |
-| 19030006 | 证书的密钥用途不含证书签名。 |
-| 19030007 | 证书的密钥用途不含数字签名。 |
-| 19030004 | 证书过期。 |
-| 19030005 | 无法获取证书的颁发者。 |
+| [19020002](../errorcode-cert.md#19020002-runtime-error) | Runtime error. Possible causes: &lt;br&gt;1. Memory copy failed; &lt;br&gt;2. A null pointer occurs inside the system; &lt;br&gt;3. Failed to obtain the native object or convert parameters. |
+| [19030002](../errorcode-cert.md#19030002-certificate-signature-verification-failed) | The certificate signature verification failed. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Invalid parameters. Possible causes: &lt;br&gt;1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; &lt;br&gt;3. Parameter verification failed. |
+| [19030003](../errorcode-cert.md#19030003-certificate-has-not-taken-effect) | The certificate has not taken effect. |
+| [19020001](../errorcode-cert.md#19020001-memory-error) | Memory malloc failed. |
+| [19030001](../errorcode-cert.md#19030001-crypto-operation-error) | Crypto operation error. |
+| [19030006](../errorcode-cert.md#19030006-key-cannot-be-used-for-signing-a-certificate) | The key cannot be used for signing a certificate. |
+| [19030007](../errorcode-cert.md#19030007-key-cannot-be-used-for-digital-signature) | The key cannot be used for a digital signature. |
+| [19030004](../errorcode-cert.md#19030004-certificate-expired) | The certificate has expired. |
+| [19030005](../errorcode-cert.md#19030005-failed-to-obtain-the-certificate-issuer) | Failed to obtain the certificate issuer. |
 
 ## Examples
 
@@ -299,9 +299,9 @@ try {
 validateCert(cert: X509Cert, params: CertValidationParams): Promise<CertValidationResult>
 ```
 
-通过构建和验证证书链来验证证书。该接口使用Promise返回结果。
+Validates a certificate by building and verifying its certificate chain. This API uses a promise to return the result.
 
-&lt;br&gt;证书链构建过程遵循以下规则：1. 信任锚来源：始终以信任证书列表（trustedCerts）作为信任锚源。仅当trustSystemCa设置为true时，才使用预配置证书作为信任锚源。2. 颁发者搜索顺序：系统首先从信任锚来源中搜索颁发者，若未找到，则继续在非信任证书列表（untrustedCerts）中查找。在线下载的中间CA证书属于非受信任证书。3. 信任锚锁定：一旦在信任锚来源中找到颁发者，后续查找过程将不会再回至非信任证书，即后续证书必须来自信任锚来源。4. 构建完成条件：若partialChain为false（默认值），则仅在找到根证书（自签名证书）时构建完成。若partialChain为true，则在首次在信任锚来源中找到颁发者时构建完成。5. 后续验证：证书链构建完成后，执行其他验证操作，如证书签名验证和证书吊销检查。
+&lt;br&gt;The certificate chain construction process complies with the following rules:1. Trusted anchor source: The trusted certificate list (trustedCerts) is always used as the trust anchor source.The preconfigured certificate is used as the trust anchor source only when trustSystemCa is set to true.2. Issuer search sequence: The system searches for the issuer from the trust anchor source first. If the issuer cannot be found, the system searches for the issuer in the untrusted certificate list (untrustedCerts). The intermediate CA certificate downloaded online is an untrusted certificate.3. Trust anchor locking: Once the issuer is found in the trust anchor source, the subsequent lookup process does not roll back to the untrusted certificate, that is, the subsequent certificates must come from the trust anchor source.4. Construction completion conditions:If partialChain is false (default value), the build is complete only when the root certificate (self-signed certificate) is found.If partialChain is true, the first time the issuer is found in the trust anchor source, the build is complete.5. Follow-up verification: After the certificate chain is constructed, perform other verification operations,such as certificate signature verification and certificate revocation check.
 
 **Since:** 26.0.0
 
@@ -319,161 +319,45 @@ validateCert(cert: X509Cert, params: CertValidationParams): Promise<CertValidati
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| cert | [X509Cert](../../apis-network-kit/arkts-apis/arkts-network-http-x509cert-t.md) | Yes | 待验证的证书。 |
-| params | [CertValidationParams](arkts-devicecertificate-cert-certvalidationparams-i.md) | Yes | 证书验证参数。 |
+| cert | [X509Cert](../../apis-network-kit/arkts-apis/arkts-network-http-x509cert-t.md) | Yes | Certificate to verify. |
+| params | [CertValidationParams](arkts-devicecertificate-cert-certvalidationparams-i.md) | Yes | Certificate validation parameters. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;CertValidationResult&gt; | Promise对象，返回验证结果。 |
+| Promise&lt;CertValidationResult&gt; | Promise used to return the result of certificate validation. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 19020002 | 运行时外部错误。可能的原因： &lt;br&gt;1. 内存拷贝失败； &lt;br&gt;2. 系统内部出现空指针； &lt;br&gt;3. 获取Native对象失败或参数转换失败。 |
-| 19020003 | 参数检查失败。 |
-| 19020001 | 内存错误。 |
-| 19030002 | 证书签名验证错误。 |
-| 19030003 | 证书尚未生效。 |
-| 19030001 | 调用三方算法库API出错。 |
-| 19030006 | 证书的密钥用途不含证书签名。 |
-| 19030007 | 证书的密钥用途不含数字签名。 |
-| 19030004 | 证书过期。 |
-| 19030005 | 无法获取证书的颁发者。 |
-| 19030010 | 证书已被吊销。 |
-| 19030011 | 未知的关键扩展。 |
-| 19030009 | 证书不受信任。 |
-| 19030014 | 证书密钥用途不匹配。 |
-| 19030015 | 无法获取证书吊销列表。 |
-| 19030012 | 证书主机名不匹配。 |
-| 19030013 | 证书邮箱地址不匹配。 |
-| 19030018 | 证书吊销列表签名验证失败。 |
-| 19030019 | 无法获取证书吊销列表颁发者。 |
-| 19030016 | 证书吊销列表尚未生效。 |
-| 19030017 | 证书吊销列表已过期。 |
-| 19030022 | OCSP签名验证失败。 |
-| 19030023 | OCSP证书状态未知。 |
-| 19030020 | 无法获取在线证书状态协议（OCSP）响应。 |
-| 19030021 | OCSP响应无效。 |
-| 19030024 | 网络连接超时。 |
-
-## Examples
-
-```TypeScript
-import { cert } from '@kit.DeviceCertificateKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-// EC P-256 certificate chain data
-const endEntityCertPem = '-----BEGIN CERTIFICATE-----\n' +
-    'MIICwzCCAmmgAwIBAgIUIThWddD/8p7w5QyXOoRY05O61FMwCgYIKoZIzj0EAwIw\n' +
-    'gYsxCzAJBgNVBAYTAkNOMRAwDgYDVQQIDAdCZWlqaW5nMRAwDgYDVQQHDAdCZWlq\n' +
-    'aW5nMRowGAYDVQQKDBFUZXN0IE9yZ2FuaXphdGlvbjEdMBsGA1UECwwUVGVzdCBJ\n' +
-    'bnRlcm1lZGlhdGUgQ0ExHTAbBgNVBAMMFFRlc3QgSW50ZXJtZWRpYXRlIENBMB4X\n' +
-    'DTI2MDMzMTA4MjY1OFoXDTI3MDMzMTA4MjY1OFowgYIxCzAJBgNVBAYTAkNOMRAw\n' +
-    'DgYDVQQIDAdCZWlqaW5nMRAwDgYDVQQHDAdCZWlqaW5nMRowGAYDVQQKDBFUZXN0\n' +
-    'IE9yZ2FuaXphdGlvbjEYMBYGA1UECwwPVGVzdCBEZXBhcnRtZW50MRkwFwYDVQQD\n' +
-    'DBB0ZXN0LmV4YW1wbGUuY29tMFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAEspH8\n' +
-    'JVcqNrg7oP4PYHADsW8tc1kIF86JG5SSjh1fz4ja3dF98PMMrsbQtcBZiwp8rD5e\n' +
-    'Gp2Nv/C2ymnjJfrig6OBsTCBrjAJBgNVHRMEAjAAMA4GA1UdDwEB/wQEAwIFoDAd\n' +
-    'BgNVHSUEFjAUBggrBgEFBQcDAQYIKwYBBQUHAwIwHQYDVR0OBBYEFH6aJ7ZQayEZ\n' +
-    'LeenLt7zowBoafRpMB8GA1UdIwQYMBaAFI2lMRV2YgzF/DBP92jUzOLdzSDdMDIG\n' +
-    'A1UdEQQrMCmCEHRlc3QuZXhhbXBsZS5jb22CD3d3dy5leGFtcGxlLmNvbYcEfwAA\n' +
-    'ATAKBggqhkjOPQQDAgNIADBFAiEAidnsForpQc9qTBpa68YEYS0TQRUySHaUB/pr\n' +
-    'PNfAYqECIGGKM44mqQgSvZyYQHnlnu3jkbHpFJTaQBAvz9B1jFuc\n' +
-    '-----END CERTIFICATE-----\n';
-
-const intermediateCaPem = '-----BEGIN CERTIFICATE-----\n' +
-    'MIICbzCCAhWgAwIBAgIUI8/xor2S98OupuBX6hWevxhvK+wwCgYIKoZIzj0EAwIw\n' +
-    'ezELMAkGA1UEBhMCQ04xEDAOBgNVBAgMB0JlaWppbmcxEDAOBgNVBAcMB0JlaWpp\n' +
-    'bmcxGjAYBgNVBAoMEVRlc3QgT3JnYW5pemF0aW9uMRUwEwYDVQQLDAxUZXN0IFJv\n' +
-    'b3QgQ0ExFTATBgNVBAMMDFRlc3QgUm9vdCBDQTAeFw0yNjAzMzEwODI2NThaFw0z\n' +
-    'MTAzMzAwODI2NThaMIGLMQswCQYDVQQGEwJDTjEQMA4GA1UECAwHQmVpamluZzEQ\n' +
-    'MA4GA1UEBwwHQmVpamluZzEaMBgGA1UECgwRVGVzdCBPcmdhbml6YXRpb24xHTAb\n' +
-    'BgNVBAsMFFRlc3QgSW50ZXJtZWRpYXRlIENBMR0wGwYDVQQDDBRUZXN0IEludGVy\n' +
-    'bWVkaWF0ZSBDQTBZMBMGByqGSM49AgEGCCqGSM49AwEHA0IABER6WRsCn7Bh3v8c\n' +
-    'k6PIkLeM+ot5l0A46XJdfvuJco58ifzBHjtu4kFOkZTA9F0Hb6JefG590CK5ddiD\n' +
-    'g5lOHwKjZjBkMBIGA1UdEwEB/wQIMAYBAf8CAQAwDgYDVR0PAQH/BAQDAgEGMB0G\n' +
-    'A1UdDgQWBBSNpTEVdmIMxfwwT/do1Mzi3c0g3TAfBgNVHSMEGDAWgBS/nd4dYdW3\n' +
-    'zFxQ1pl2U8I/bfUA3zAKBggqhkjOPQQDAgNIADBFAiEA87NkGCv47e5RWc8DsFd/\n' +
-    'zL6/2Xn2EoveC+HoUYpxhZMCIAG+ZuTLmUsjalUGbWyR101hxHfvr4ImbEMeYSaA\n' +
-    'sVBn\n' +
-    '-----END CERTIFICATE-----\n';
-
-const rootCaPem = '-----BEGIN CERTIFICATE-----\n' +
-    'MIICWzCCAgGgAwIBAgIUd/I1bFJJw/xQtPEJP6C1E4Fj9jswCgYIKoZIzj0EAwIw\n' +
-    'ezELMAkGA1UEBhMCQ04xEDAOBgNVBAgMB0JlaWppbmcxEDAOBgNVBAcMB0JlaWpp\n' +
-    'bmcxGjAYBgNVBAoMEVRlc3QgT3JnYW5pemF0aW9uMRUwEwYDVQQLDAxUZXN0IFJv\n' +
-    'b3QgQ0ExFTATBgNVBAMMDFRlc3QgUm9vdCBDQTAeFw0yNjAzMzEwODI2NTdaFw0z\n' +
-    'NjAzMjgwODI2NTdaMHsxCzAJBgNVBAYTAkNOMRAwDgYDVQQIDAdCZWlqaW5nMRAw\n' +
-    'DgYDVQQHDAdCZWlqaW5nMRowGAYDVQQKDBFUZXN0IE9yZ2FuaXphdGlvbjEVMBMG\n' +
-    'A1UECwwMVGVzdCBSb290IENBMRUwEwYDVQQDDAxUZXN0IFJvb3QgQ0EwWTATBgcq\n' +
-    'hkjOPQIBBggqhkjOPQMBBwNCAASFeWawqQET+c6EowNooKYiTw1KPzJBgssxQXo7\n' +
-    'UEXSQnLHh8sBwVvNN4oFVFImT31DyJVKwxBXpwbrEN1s8J1Io2MwYTAPBgNVHRMB\n' +
-    'Af8EBTADAQH/MA4GA1UdDwEB/wQEAwIBBjAdBgNVHQ4EFgQUv53eHWHVt8xcUNaZ\n' +
-    'dlPCP231AN8wHwYDVR0jBBgwFoAUv53eHWHVt8xcUNaZdlPCP231AN8wCgYIKoZI\n' +
-    'zj0EAwIDSAAwRQIhAIbyIrOZL1GhkRiI2i4IhKmFa4AoXJftTEA5wev99QpkAiA3\n' +
-    'khFrJ4rRSpHqbfGN1U14HkFKiCXBalaIe+NISxgC3Q==\n' +
-    '-----END CERTIFICATE-----\n';
-
-// Convert the string into a Uint8Array.
-function stringToUint8Array(str: string): Uint8Array {
-  let arr: Array<number> = [];
-  for (let i = 0, j = str.length; i < j; i++) {
-    arr.push(str.charCodeAt(i));
-  }
-  return new Uint8Array(arr);
-}
-
-async function validateCert(): Promise<void> {
-  try {
-    // Create an endEntityCertPem object.
-    let certEncodingBlob: cert.EncodingBlob = {
-      data: stringToUint8Array(endEntityCertPem),
-      encodingFormat: cert.EncodingFormat.FORMAT_PEM
-    };
-    let x509Cert = await cert.createX509Cert(certEncodingBlob);
-
-    // Create a trust anchor certificate (root CA).
-    let rootCaEncodingBlob: cert.EncodingBlob = {
-      data: stringToUint8Array(rootCaPem),
-      encodingFormat: cert.EncodingFormat.FORMAT_PEM
-    };
-    let rootCaCert = await cert.createX509Cert(rootCaEncodingBlob);
-
-    // Create an intermediate certificate.
-    let intermediateCaEncodingBlob: cert.EncodingBlob = {
-      data: stringToUint8Array(intermediateCaPem),
-      encodingFormat: cert.EncodingFormat.FORMAT_PEM
-    };
-    let intermediateCaCert = await cert.createX509Cert(intermediateCaEncodingBlob);
-
-    // Set verification parameters.
-    let params: cert.CertValidationParams = {
-      trustedCerts: [rootCaCert],
-      untrustedCerts: [intermediateCaCert],
-      validateDate: false
-    };
-
-    // Create a validator and verify the certificate.
-    let validator = cert.createCertChainValidator('PKIX');
-    let result = await validator.validateCert(x509Cert, params);
-
-    console.info('Certificate validation succeeded!');
-    console.info(`Verified chain length: ${result.certChain.length}`);
-    for (let i = 0; i < result.certChain.length; i++) {
-      let subject = result.certChain[i].getSubjectX500DistinguishedName().getName(cert.EncodingType.ENCODING_UTF8);
-      console.info(`Cert ${i}: ${subject}`);
-    }
-  } catch (error) {
-    let e: BusinessError = error as BusinessError;
-    console.error(`validate failed, errCode: ${e.code}, errMsg: ${e.message}`);
-  }
-}
-
-validateCert();
-```
+| [19020002](../errorcode-cert.md#19020002-runtime-error) | Runtime error. Possible causes: &lt;br&gt;1. Memory copy failed; &lt;br&gt;2. A null pointer occurs inside the system; &lt;br&gt;3. Failed to obtain the native object or convert parameters. |
+| [19020003](../errorcode-cert.md#19020003-parameter-check-failure) | Parameter check failed. |
+| [19020001](../errorcode-cert.md#19020001-memory-error) | Memory malloc failed. |
+| [19030002](../errorcode-cert.md#19030002-certificate-signature-verification-failed) | The certificate signature verification failed. |
+| [19030003](../errorcode-cert.md#19030003-certificate-has-not-taken-effect) | The certificate has not taken effect. |
+| [19030001](../errorcode-cert.md#19030001-crypto-operation-error) | Crypto operation error. |
+| [19030006](../errorcode-cert.md#19030006-key-cannot-be-used-for-signing-a-certificate) | The key cannot be used for signing a certificate. |
+| [19030007](../errorcode-cert.md#19030007-key-cannot-be-used-for-digital-signature) | The key cannot be used for a digital signature. |
+| [19030004](../errorcode-cert.md#19030004-certificate-expired) | The certificate has expired. |
+| [19030005](../errorcode-cert.md#19030005-failed-to-obtain-the-certificate-issuer) | Failed to obtain the certificate issuer. |
+| [19030010](../errorcode-cert.md#19030010-certificate-revoked) | The certificate has been revoked. |
+| [19030011](../errorcode-cert.md#19030011-unsupported-key-extensions) | Unsupported critical extension. |
+| [19030009](../errorcode-cert.md#19030009-untrusted-certificate) | Untrusted certificate. |
+| [19030014](../errorcode-cert.md#19030014-key-usage-mismatch) | Key usage mismatch in the certificate. |
+| [19030015](../errorcode-cert.md#19030015-crl-not-found) | Failed to obtain the certificate revocation list. |
+| [19030012](../errorcode-cert.md#19030012-host-name-mismatch) | Hostname mismatch in the certificate. |
+| [19030013](../errorcode-cert.md#19030013-email-address-mismatch) | Email address mismatch in the certificate. |
+| [19030018](../errorcode-cert.md#19030018-crl-signature-verification-failure) | Failed to verify the signature of the certificate revocation list. |
+| [19030019](../errorcode-cert.md#19030019-crl-issuer-not-found) | Failed to find the issuer of the certificate revocation list. |
+| [19030016](../errorcode-cert.md#19030016-invalid-crl) | The certificate revocation list has not taken effect. |
+| [19030017](../errorcode-cert.md#19030017-crl-expired) | The certificate revocation list has expired. |
+| [19030022](../errorcode-cert.md#19030022-ocsp-signature-verification-failure) | Failed to verify the OCSP signature. |
+| [19030023](../errorcode-cert.md#19030023-unknown-ocsp-certificate-status) | Unknown OCSP certificate status. |
+| [19030020](../errorcode-cert.md#19030020-ocsp-response-not-found) | Failed to obtain the OCSP response. |
+| [19030021](../errorcode-cert.md#19030021-invalid-ocsp-response) | Invalid OCSP response. |
+| [19030024](../errorcode-cert.md#19030024-network-connection-timeout) | Network connection timed out. |
 
 ## algorithm
 
@@ -481,7 +365,7 @@ validateCert();
 readonly algorithm: string
 ```
 
-X.509证书链校验器算法名称。
+Algorithm used by the X.509 certificate chain validator.
 
 **Type:** string
 

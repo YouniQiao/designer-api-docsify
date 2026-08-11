@@ -12,7 +12,7 @@ import { inputDevice } from 'kits/@kit.InputKit';
 function getKeyboardTypeSync(deviceId: int): KeyboardType
 ```
 
-获取输入设备的键盘类型。
+Obtains the keyboard type of the input device.
 
 **Since:** 10
 
@@ -26,19 +26,19 @@ function getKeyboardTypeSync(deviceId: int): KeyboardType
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| deviceId | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | 输入设备的唯一标识，同一个物理设备反复插拔或重启，设备ID可能会发生变化。 |
+| deviceId | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | Unique ID of the input device. If a physical device is repeatedly reinstalled or restarted, its ID may change. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [KeyboardType](arkts-input-inputdevice-keyboardtype-e.md) | 返回查询结果。 |
+| [KeyboardType](arkts-input-inputdevice-keyboardtype-e.md) | Keyboard type. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; 3. Parameter verification failed. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; 3. Parameter verification failed. |
 
 ## Examples
 
@@ -54,10 +54,10 @@ struct Index {
         .onClick(() => {
           // Query the keyboard type of the input device whose ID is 1.
           try {
-            let type: inputDevice.KeyboardType = inputDevice.getKeyboardTypeSync(1)
-            console.info(`Succeeded in getting keyboard type: ${JSON.stringify(type)}.`)
+            let type: number = inputDevice.getKeyboardTypeSync(1)
+            console.info(`Keyboard type: ${JSON.stringify(type)}`)
           } catch (error) {
-            console.error(`Failed to get keyboard type, Code: ${(error as BusinessError).code}, message: ${(error as BusinessError).message}.`)
+            console.error(`Failed to get keyboard type, error: ${JSON.stringify(error, [`code`, `message`])}`)
           }
         })
     }

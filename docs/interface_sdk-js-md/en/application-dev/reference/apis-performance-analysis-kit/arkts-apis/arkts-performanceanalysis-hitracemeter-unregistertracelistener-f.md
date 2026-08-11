@@ -12,7 +12,8 @@ import { hiTraceMeter } from 'kits/@kit.PerformanceAnalysisKit';
 function unregisterTraceListener(index: int): int
 ```
 
-注销通过registerTraceListener()注册的trace捕获开关通知回调函数。
+Unregisters the callback function used to notify whether the trace capture is enabled, which is registered using  
+**registerTraceListener()**.
 
 **Since:** 22
 
@@ -28,13 +29,13 @@ function unregisterTraceListener(index: int): int
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| index | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | 已注册回调函数索引，取值范围[0, 9]，即 [registerTraceListener()](arkts-performanceanalysis-hitracemeter-registertracelistener-f.md#registertracelistener)调用成功时的返回值。 |
+| index | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | Index of the registered callback function, that is, the return value when [registerTraceListener()](arkts-performanceanalysis-hitracemeter-registertracelistener-f.md#registertracelistener) is successfully called. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| ArkTS-Dyn: number  <br>ArkTS-Sta：int | 回调注销状态。 0：注销成功； -1：目标索引的回调函数未注册； -2：无效索引，参数index值不在[0, 9]范围内。 |
+| ArkTS-Dyn: number  <br>ArkTS-Sta：int | Callback deregistration status. **0**: Deregistration succeeded. **-1**: The callback corresponding to the index is not registered. **-2**: Invalid index. The index value is not within the range of 0 to 9. |
 
 ## Examples
 
@@ -42,7 +43,7 @@ function unregisterTraceListener(index: int): int
 // Deregister the callback used to notify whether the application trace capture is enabled. index is the callback index returned by hiTraceMeter.registerTraceListener.
 let ret = hiTraceMeter.unregisterTraceListener(index);
 if (ret < 0) {
-  // Handle exceptions.
+    // Handle exceptions.
 }
 ```
 

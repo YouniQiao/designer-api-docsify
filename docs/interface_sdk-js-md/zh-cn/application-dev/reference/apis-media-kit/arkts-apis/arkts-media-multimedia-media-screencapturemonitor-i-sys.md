@@ -12,12 +12,6 @@ A class that provides APIs to query and monitor the system screen recorder statu
 
 **系统接口：** 此接口为系统接口。
 
-## 导入模块
-
-```TypeScript
-import { media } from 'kits/@kit.MediaKit';
-```
-
 ## off('systemScreenRecorder')
 
 ```TypeScript
@@ -47,7 +41,7 @@ Unsubscribes from state change events of the system screen recorder.
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 202 | Not System App. |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not System App. |
 
 ## 示例
 
@@ -83,7 +77,7 @@ Unsubscribes from state change events of the system screen recorder.This event i
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 202 | Not System App. |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not System App. |
 
 ## on('systemScreenRecorder')
 
@@ -112,7 +106,7 @@ Subscribes to state change events of the system screen recorder. From the Screen
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 202 | Not System App. |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not System App. |
 
 ## 示例
 
@@ -152,7 +146,7 @@ Subscribes to state change events of the system screen recorder. From the Screen
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 202 | Not System App. |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not System App. |
 
 ## isSystemScreenRecorderWorking
 

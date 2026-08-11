@@ -1,6 +1,6 @@
 # EventInfo
 
-界面变更事件。
+Describes a GUI change event.
 
 **Since:** 7
 
@@ -22,7 +22,7 @@ import { accessibility } from 'kits/@kit.AccessibilityKit';
 constructor(jsonObject: Object)
 ```
 
-构造函数，通过JSON对象构造EventInfo实例。
+Constructor, which is used to construct an EventInfo instance using a JSON object.
 
 **Since:** 7
 
@@ -40,7 +40,7 @@ constructor(jsonObject: Object)
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| jsonObject | Object | Yes | 包含 type、bundleName 和 triggerAction 三个字段的 JSON对象，详见示例。 |
+| jsonObject | Object | Yes | JSON object that contains the **type**, **bundleName**, and **triggerAction** fields. |
 
 ## Examples
 
@@ -80,7 +80,7 @@ A constructor used to create a EventInfo object.
 constructor(type: EventType, bundleName: string, triggerAction: Action)
 ```
 
-构造函数，通过独立参数构造EventInfo实例。
+Constructor, which is used to construct an EventInfo instance using independent parameters.
 
 **Since:** 11
 
@@ -98,9 +98,9 @@ constructor(type: EventType, bundleName: string, triggerAction: Action)
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | [EventType](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-screenlock-eventtype-t-sys.md) | Yes | 无障碍事件类型。 |
-| bundleName | string | Yes | 目标应用名。 |
-| triggerAction | [Action](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-agent-action-e.md) | Yes | 触发事件的 Action。 |
+| type | [EventType](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-screenlock-eventtype-t-sys.md) | Yes | Accessibility event types. |
+| bundleName | string | Yes | Target application name. |
+| triggerAction | [Action](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-agent-action-e.md) | Yes | Action that triggers the event. |
 
 ## Examples
 
@@ -116,7 +116,7 @@ let eventInfo = new accessibility.EventInfo('click', 'com.example.MyApplication'
 beginIndex?: int
 ```
 
-画面显示条目的开始序号，默认值为0。
+Start index. The default value is **0**.
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
@@ -138,7 +138,7 @@ beginIndex?: int
 bundleName: string
 ```
 
-目标应用名；不可缺省。
+Name of the target application (mandatory).
 
 **Type:** string
 
@@ -160,12 +160,12 @@ bundleName: string
 componentType?: string
 ```
 
-应与事件源组件类型对应，默认值为空。
+It should correspond to the event source component type, and the default value is empty.
 
-例如：
+Example:
 
-- 按钮Button类型->'Button'。  
-- 图片Image类型->'Image'。
+- Button type - > 'Button'  
+- Image type - > 'Image'
 
 **Type:** string
 
@@ -187,7 +187,7 @@ componentType?: string
 contents?: Array<string>
 ```
 
-内容列表，根据实际场景设置，无特殊限制，默认值为空。
+Content list, which is set according to the actual scenario with no special restrictions. The default value is empty.
 
 **Type:** Array&lt;string&gt;
 
@@ -209,7 +209,7 @@ contents?: Array<string>
 currentIndex?: int
 ```
 
-当前条目序号，默认值为0。
+Current index. The default value is **0**.
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
@@ -231,7 +231,7 @@ currentIndex?: int
 customId?: string
 ```
 
-主动聚焦的组件ID，默认值为空。
+Component ID for active focusing, and the default value is empty.
 
 **Type:** string
 
@@ -253,7 +253,7 @@ customId?: string
 description?: string
 ```
 
-事件描述，根据实际场景设置，无特殊限制，默认值为空。
+Event description, which is set according to the actual scenario with no special restrictions, and the default value is empty.
 
 **Type:** string
 
@@ -275,7 +275,7 @@ description?: string
 elementId?: int
 ```
 
-组件elementId，默认值为0。
+Element ID of the component. The default value is **0**.
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
@@ -297,7 +297,7 @@ elementId?: int
 endIndex?: int
 ```
 
-画面显示条目的结束序号，默认值为0。
+End index. The default value is **0**.
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
@@ -319,7 +319,7 @@ endIndex?: int
 itemCount?: int
 ```
 
-条目总数，默认值为0。
+Total number of items. The default value is **0**.
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
@@ -341,7 +341,7 @@ itemCount?: int
 lastContent?: string
 ```
 
-最新内容，根据实际场景设置，无特殊限制，默认值为空。
+Latest content, which is set according to the actual scenario with no special restrictions. The default value is empty.
 
 **Type:** string
 
@@ -363,7 +363,7 @@ lastContent?: string
 pageId ?: int
 ```
 
-事件源的页面ID，默认值为0。
+ID of the page where the event occurs. The default value is **0**.
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
@@ -385,7 +385,7 @@ pageId ?: int
 textAnnouncedForAccessibility?: string
 ```
 
-主动播报的内容。当应用需要主动播报时，根据实际场景设置播报内容，无特殊限制，默认值为空。
+Content for auto-broadcasting. When the application needs to proactively broadcast, set the broadcast content according to the actual scenario with no special restrictions, and the default value is empty.
 
 **Type:** string
 
@@ -407,7 +407,7 @@ textAnnouncedForAccessibility?: string
 textMoveUnit?: TextMoveUnit
 ```
 
-文本移动粒度，默认值为char。
+Text moving granularity. The default value is char.
 
 **Type:** [TextMoveUnit](arkts-accessibility-accessibility-textmoveunit-t.md)
 
@@ -429,7 +429,7 @@ textMoveUnit?: TextMoveUnit
 textResourceAnnouncedForAccessibility?: Resource
 ```
 
-主动播报的内容支持传入Resource类型，且只能传入string。
+Content for auto-broadcasting. The value is a string of the **Resource** type.
 
 **Type:** [Resource](../../apis-localization-kit/arkts-apis/arkts-localization-resource-resource-i.md)
 
@@ -451,7 +451,7 @@ textResourceAnnouncedForAccessibility?: Resource
 triggerAction: Action
 ```
 
-触发事件的Action，不可缺省。
+Action that triggers the event (mandatory).
 
 **Type:** [Action](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-agent-action-e.md)
 
@@ -473,7 +473,7 @@ triggerAction: Action
 type: EventType
 ```
 
-无障碍事件类型，不可缺省。
+Accessibility event type (mandatory).
 
 **Type:** [EventType](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-screenlock-eventtype-t-sys.md)
 
@@ -495,7 +495,7 @@ type: EventType
 windowUpdateType?: WindowUpdateType
 ```
 
-窗口变化类型。
+Window update type.
 
 **Type:** [WindowUpdateType](arkts-accessibility-accessibility-windowupdatetype-t.md)
 

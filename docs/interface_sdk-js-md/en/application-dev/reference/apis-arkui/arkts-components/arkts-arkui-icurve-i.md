@@ -1,6 +1,6 @@
 # ICurve
 
-曲线对象。
+Interface for curve object.
 
 **Since:** 9
 
@@ -16,7 +16,7 @@
 interpolate(fraction : number) : number
 ```
 
-插值曲线的插值计算函数，可以通过传入的归一化时间参数返回当前的插值
+Calculates the interpolated value along the curve at the specified normalized time point.
 
 **Since:** 9
 
@@ -34,11 +34,11 @@ interpolate(fraction : number) : number
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| fraction | number | Yes | 当前的归一化时间参数。&lt;br/&gt;取值范围：[0,1]&lt;br/&gt;**说明：** &lt;br/&gt;设置的值小于0时，按0处理；设置的值大于1时，按1处理。 |
+| fraction | number | Yes | Current normalized time.&lt;br&gt;Value range: [0, 1].&lt;br&gt;**NOTE：**&lt;br&gt;A value less than 0 is treated as **0**. A value greater than 1 is treated as **1**. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| number | 返回归一化time时间点对应的曲线插值。 |
+| number | Curve interpolation corresponding to the normalized time point. |
 

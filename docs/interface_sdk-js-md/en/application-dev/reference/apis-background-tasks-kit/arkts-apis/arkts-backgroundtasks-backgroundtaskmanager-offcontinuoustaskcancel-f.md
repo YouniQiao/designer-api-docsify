@@ -12,7 +12,7 @@ import { backgroundTaskManager } from 'kits/@kit.BackgroundTasksKit';
 function offContinuousTaskCancel(callback?: Callback<ContinuousTaskCancelInfo>): void
 ```
 
-解除长时任务取消的监听，使用callback异步回调。
+Unregister continuous task cancel callback.
 
 **Since:** 23
 
@@ -34,6 +34,6 @@ function offContinuousTaskCancel(callback?: Callback<ContinuousTaskCancelInfo>):
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. Possible cause: 1. Callback parameter error; 2. Unregister type has not register; 3. Parameter verification failed. |
-| 201 | Permission denied. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible cause: 1. Callback parameter error; 2. Unregister type has not register; 3. Parameter verification failed. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
 

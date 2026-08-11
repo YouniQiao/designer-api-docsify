@@ -1,6 +1,7 @@
 # Priority
 
-表示所创建任务（Task）执行时的优先级。工作线程优先级跟随任务优先级更新，对应关系参考[QoS等级定义](../../../napi/qos-guidelines.md#qos等级定义)。
+Enumerates the priorities available for created tasks. The task priority applies during task execution. The worker thread priority is updated with the task priority. For details about the mappings, see  
+[QoS Level](../../../napi/qos-guidelines.md#qos-level).
 
 **Since:** 9
 
@@ -16,9 +17,9 @@
 HIGH = 0
 ```
 
-任务为高优先级。
+The task has a high priority.
 
-从API version 11开始，该接口支持在原子化服务中使用。
+This API can be used in atomic services since API version 11.
 
 **Since:** 9
 
@@ -36,9 +37,9 @@ HIGH = 0
 MEDIUM = 1
 ```
 
-任务为中优先级。
+The task has a medium priority.
 
-从API version 11开始，该接口支持在原子化服务中使用。
+This API can be used in atomic services since API version 11.
 
 **Since:** 9
 
@@ -56,9 +57,9 @@ MEDIUM = 1
 LOW = 2
 ```
 
-任务为低优先级。
+The task has a low priority.
 
-从API version 11开始，该接口支持在原子化服务中使用。
+This API can be used in atomic services since API version 11.
 
 **Since:** 9
 
@@ -76,9 +77,9 @@ LOW = 2
 IDLE = 3
 ```
 
-任务为后台任务。
+The task is a background task.
 
-从API version 12开始，该接口支持在原子化服务中使用。
+This API can be used in atomic services since API version 12.
 
 **Since:** 12
 

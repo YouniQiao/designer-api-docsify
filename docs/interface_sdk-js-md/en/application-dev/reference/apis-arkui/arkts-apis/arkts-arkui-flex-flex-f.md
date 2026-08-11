@@ -9,7 +9,7 @@ export declare function Flex(
 ): FlexAttribute
 ```
 
-Flex布局容器。
+Defines Flex Component.
 
 **Since:** 23
 
@@ -25,7 +25,7 @@ Flex布局容器。
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | [FlexOptions](../arkts-components/arkts-arkui-flexoptions-i.md) | No | 弹性布局子组件参数。 |
+| value | [FlexOptions](../arkts-components/arkts-arkui-flexoptions-i.md) | No | Flex options. |
 | content_ | [CustomBuilder](../arkts-components/arkts-arkui-custombuilder-t.md) | No | container |
 
 **Return value:**
@@ -46,9 +46,9 @@ export declare function Flex(
 
 Defines Flex Component.
 
-**Since:** 26.0.0
+**Since:** 26.1.0
 
-**ArkTS mode:** ArkTS-Sta only, since version 26.0.0.
+**ArkTS mode:** ArkTS-Sta only, since version 26.1.0.
 
 **Decorator:** @Builder
 
@@ -63,7 +63,7 @@ Defines Flex Component.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | style | [CustomBuilderT](../arkts-components/arkts-arkui-custombuildert-t.md)&lt;FlexAttribute&gt; | Yes | the callback to set up component's attributes. |
-| content_ | [CustomBuilder](../arkts-components/arkts-arkui-custombuilder-t.md) | No | container |
+| content_ | [CustomBuilder](../arkts-components/arkts-arkui-custombuilder-t.md) | No | container. |
 
 **Return value:**
 

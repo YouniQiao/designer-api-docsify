@@ -1,11 +1,5 @@
 # setCustomCursorSync
 
-## 导入模块
-
-```TypeScript
-import { pointer } from 'kits/@kit.InputKit';
-```
-
 ## setCustomCursorSync
 
 ```TypeScript
@@ -36,9 +30,11 @@ function setCustomCursorSync(windowId: int, pixelMap: image.PixelMap, focusX?: i
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; 3. Parameter verification failed. |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; 3. Parameter verification failed. |
 
 ## 示例
+
+ArkTS-Dyn示例:
 
 ```TypeScript
 import { pointer } from '@kit.InputKit';
@@ -79,6 +75,51 @@ struct Index {
           });
         }
       )
+    }
+  }
+}
+```
+
+ArkTS-Sta示例:
+
+```TypeScript
+import { Entry, Text, RelativeContainer, Component } from '@kit.ArkUI';
+import { pointer } from '@kit.InputKit';
+import { image } from '@kit.ImageKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+@Entry
+@Component
+struct Index {
+  build() {
+    RelativeContainer() {
+      Text()
+        .onClick(() => {
+          let width: int = 64;
+          let height: int = 64;
+          const buffer = new ArrayBuffer(width * height * 4); // RGBA_8888
+          const pixelView = new Uint8Array(buffer);
+          for (let i = 0; i < pixelView.length; i += 4) {
+            pixelView[i] = 0xFF;  // Set the RGBA channel values
+            pixelView[i+1] = 0x00;
+            pixelView[i+2] = 0x00;
+            pixelView[i+3] = 0xFF; // opaque
+          }
+          const opts: image.InitializationOptions = {
+            editable: true,
+            pixelFormat: image.PixelMapFormat.RGBA_8888,
+            size: { width: width, height: height }
+          };
+          let img = image.createPixelMapSync(buffer, opts);
+          // 此次根据实际获取窗口id
+          let windowId: int = 100;
+          try {
+            // 同步设置自定义光标
+            pointer.setCustomCursorSync(windowId, img, 25, 25);
+          } catch (error) {
+            console.error(`Failed to set custom cursor sync, Code: ${(error as BusinessError).code}, message: ${(error as BusinessError).message}.`);
+          }
+        })
     }
   }
 }

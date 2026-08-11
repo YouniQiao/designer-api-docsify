@@ -5,7 +5,7 @@ type DomainPluginAuthFunc = (domainAccountInfo: DomainAccountInfo,
     credential: Uint8Array, callback: IUserAuthCallback) => void
 ```
 
-认证指定的域账号。
+Authenticates the specified domain account.
 
 **Since:** 23
 
@@ -21,7 +21,7 @@ type DomainPluginAuthFunc = (domainAccountInfo: DomainAccountInfo,
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| domainAccountInfo | [DomainAccountInfo](arkts-basicservices-osaccount-domainaccountinfo-i-sys.md) | Yes | 表示域账号信息。 |
-| credential | Uint8Array | Yes | 表示域账号的凭据。 |
-| callback | [IUserAuthCallback](arkts-basicservices-osaccount-iuserauthcallback-i-sys.md) | Yes | 表示认证结果回调。 |
+| domainAccountInfo | [DomainAccountInfo](arkts-basicservices-osaccount-domainaccountinfo-i-sys.md) | Yes | Indicates the domain account information for authentication. |
+| credential | Uint8Array | Yes | Indicates the credential for authentication. |
+| callback | [IUserAuthCallback](arkts-basicservices-osaccount-iuserauthcallback-i-sys.md) | Yes | Indicates the authentication callback. |
 

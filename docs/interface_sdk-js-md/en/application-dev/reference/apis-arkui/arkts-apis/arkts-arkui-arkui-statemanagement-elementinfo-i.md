@@ -1,6 +1,6 @@
 # ElementInfo
 
-可被观察对象关联的组件信息，包含系统组件和自定义组件。
+Defines information about the components associated with the observable object, including system components and custom components.
 
 **Since:** 23
 
@@ -22,7 +22,7 @@ import { Binding, ComponentReuse, CustomComponentLifecycleState, ComponentInacti
 elementId: number
 ```
 
-组件的ID。
+Component ID.
 
 **Type:** number
 
@@ -44,7 +44,7 @@ elementId: number
 elementName: string
 ```
 
-组件的名称。
+Component name.
 
 **Type:** string
 

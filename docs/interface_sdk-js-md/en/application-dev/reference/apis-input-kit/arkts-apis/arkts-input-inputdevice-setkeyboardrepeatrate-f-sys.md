@@ -12,7 +12,7 @@ import { inputDevice } from 'kits/@kit.InputKit';
 function setKeyboardRepeatRate(rate: int, callback: AsyncCallback<void>): void
 ```
 
-设置键盘按键的重复速率，使用callback异步回调。
+Sets the keyboard repeat rate. This API uses an asynchronous callback to return the result.
 
 **Since:** 10
 
@@ -28,15 +28,15 @@ function setKeyboardRepeatRate(rate: int, callback: AsyncCallback<void>): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| rate | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | 键盘按键重复速率，默认值50ms/次，调节范围[36ms/次，100ms/次]。 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | 回调函数。当设置键盘按键重复速率成功，err为undefined，否则为错误对象。 |
+| rate | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | Keyboard repeat rate, in ms/time. The value range is [36, 100] and the default value is 50. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined**. Otherwise, **err** is an error object. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; 3. Parameter verification failed. |
-| 202 | SystemAPI permission error. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; 3. Parameter verification failed. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | SystemAPI permission error. |
 
 ## Examples
 
@@ -52,16 +52,15 @@ struct Index {
       Text()
         .onClick(() => {
           try {
-            // Key repeat rate 60ms/time
             inputDevice.setKeyboardRepeatRate(60, (error: BusinessError) => {
               if (error) {
-                console.error(`Failed to set keyboard repeat rate, Code: ${(error as BusinessError).code}, message: ${(error as BusinessError).message}.`);
+                console.error(`Set keyboard repeat rate failed, error: ${JSON.stringify(error, [`code`, `message`])}`);
                 return;
               }
-              console.info(`Succeeded in setting keyboard repeat rate.`);
+              console.info(`Set keyboard repeat rate success`);
             });
           } catch (error) {
-            console.error(`Failed to set keyboard repeat rate, Code: ${(error as BusinessError).code}, message: ${(error as BusinessError).message}.`);
+            console.error(`Set keyboard repeat rate failed, error: ${JSON.stringify(error, [`code`, `message`])}`);
           }
         })
     }
@@ -76,7 +75,7 @@ struct Index {
 function setKeyboardRepeatRate(rate: int): Promise<void>
 ```
 
-设置键盘按键的重复速率，使用Promise异步回调。
+Sets the keyboard repeat rate. This API uses a promise to return the result.
 
 **Since:** 10
 
@@ -92,20 +91,20 @@ function setKeyboardRepeatRate(rate: int): Promise<void>
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| rate | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | 键盘按键重复速率，默认值50ms/次，调节范围[36ms/次，100ms/次]。 |
+| rate | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | Keyboard repeat rate, in ms/time. The value range is [36, 100] and the default value is 50. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise对象，无返回结果。 |
+| Promise&lt;void&gt; | Promise that returns no value. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; 3. Parameter verification failed. |
-| 202 | SystemAPI permission error. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; 3. Parameter verification failed. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | SystemAPI permission error. |
 
 ## Examples
 
@@ -121,14 +120,13 @@ struct Index {
       Text()
         .onClick(() => {
           try {
-            // Key repeat rate 60ms/time
             inputDevice.setKeyboardRepeatRate(60).then(() => {
-              console.info(`Succeeded in setting keyboard repeat rate.`);
+              console.info(`Set keyboard repeat rate success`);
             }).catch((error: BusinessError) => {
-              console.error(`Failed to set keyboard, Code: ${(error as BusinessError).code}, message: ${(error as BusinessError).message}.`);
+              console.error(`Set keyboard failed, error: ${JSON.stringify(error, [`code`, `message`])}`);
             })
           } catch (error) {
-            console.error(`Failed to set keyboard repeat rate, Code: ${(error as BusinessError).code}, message: ${(error as BusinessError).message}.`);
+            console.error(`Set keyboard repeat rate failed, error: ${JSON.stringify(error, [`code`, `message`])}`);
           }
         })
     }

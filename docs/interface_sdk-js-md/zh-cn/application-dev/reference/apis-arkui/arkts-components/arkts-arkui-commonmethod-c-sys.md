@@ -35,7 +35,7 @@ advancedBlendMode(effect: BlendMode | Blender, type?: BlendApplyType): T
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| effect | [BlendMode](../arkts-apis/arkts-arkui-common-blendmode-e.md) \| Blender | 是 | 入参类型为BlendMode时表示混合模式。&lt;br/&gt;默认值：BlendMode.NONE &lt;br/&gt;入参类型为Blender时表示混合器类型，用于描 述混合效果。&lt;br/&gt;需要使用uiEffect模块中的方法创建Blender实例。例如： [uiEffect.createBrightnessBlender](../../../reference/apis-arkgraphics2d/js-apis-uiEffect-sys.md#uieffectcreatebrightnessblender)。 使用自定义object作为入参不会生效。 |
+| effect | [BlendMode](arkts-arkui-blendmode-e.md) \| Blender | 是 | 入参类型为BlendMode时表示混合模式。&lt;br/&gt;默认值：BlendMode.NONE &lt;br/&gt;入参类型为Blender时表示混合器类型，用于描 述混合效果。&lt;br/&gt;需要使用uiEffect模块中的方法创建Blender实例。例如： [uiEffect.createBrightnessBlender](../../../reference/apis-arkgraphics2d/js-apis-uiEffect-sys.md#uieffectcreatebrightnessblender)。 使用自定义object作为入参不会生效。 |
 | type | [BlendApplyType](arkts-arkui-blendapplytype-e-sys.md) | 否 | blendMode实现方式是否离屏。&lt;br/&gt;默认值：BlendApplyType.FAST&lt;br/&gt;**说明：**&lt;br/&gt;1. 设置为 BlendApplyType.FAST，不离屏。&lt;br/&gt;2. 设置为BlendApplyType.OFFSCREEN，会创建当前组件大小的离屏画布，再将当前组件（含子组件）的内容绘制到离屏画布上，再用指定的混合模式与下方 画布已有内容进行混合。&lt;br/&gt;3. 不离屏情况下对文字类组件中emoji表情不生效。&lt;br/&gt;4. 相比BlendApplyType.OFFSCREEN，设置为 BlendApplyType.OFFSCREEN_WITH_BACKGROUND，系统在创建与当前组件大小一致的离屏画布时，会先复制一份带有背景的画布作为初始化底色（BlendApplyType.OFFSCREEN类型的画 布初始为透明背景），随后在此基础上进行混合操作。两者在其他功能特性上保持一致。 |
 
 **返回值：**
@@ -95,7 +95,7 @@ edgeLight(params: EdgeLightParams | undefined): T
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| params | [EdgeLightParams](../arkts-apis/arkts-arkui-common-edgelightparams-i-sys.md) \| undefined | 是 | 定义边缘流光效果的位置、长度、强度、颜色和厚度。&lt;br/&gt;当params的值为undefined时，移除边缘流光效果。 |
+| params | [EdgeLightParams](arkts-arkui-edgelightparams-i-sys.md) \| undefined | 是 | 定义边缘流光效果的位置、长度、强度、颜色和厚度。&lt;br/&gt;当params的值为undefined时，移除边缘流光效果。 |
 
 **返回值：**
 

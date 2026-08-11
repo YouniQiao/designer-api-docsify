@@ -1,6 +1,6 @@
 # ConnectResult
 
-客户端调用connect()后，返回的连接结果。
+Represents the connection result, which is returned after the client calls **connect()**.
 
 **Since:** 20
 
@@ -22,7 +22,7 @@ import { linkEnhance } from 'kits/@kit.DistributedServiceKit';
 deviceId: string
 ```
 
-对端设备ID，成功返回对端设备的deviceId，失败返回空字符串。
+ID of the peer device. If the connection is successful, the device ID of the peer device is returned. If the connection fails, an empty string is returned.
 
 **Type:** string
 
@@ -42,13 +42,14 @@ deviceId: string
 reason: int
 ```
 
-连接成功返回0，连接失败返回错误码：
+Number indicating the result code. If the connection is successful, **0** is returned. If the connection fails,an error code is returned:
 
-- 32390200：表示客户端连接超时。  
-- 32390201：表示服务端服务未启动。  
-- 32390300：表示内部错误。
+- 32390200: The client connection times out.  
+- 32390201: The server service is not started.  
+- 32390300: Internal error.
 
-更多关于错误码的详细介绍请参考[增强连接错误码](../../../reference/apis-distributedservice-kit/errorcode-link-enhance.md)。
+For details about the error codes, see  
+[Link Enhancement Error Codes](../../../reference/apis-distributedservice-kit/errorcode-link-enhance.md).
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
@@ -68,7 +69,7 @@ reason: int
 success: boolean
 ```
 
-连接结果，true表示连接成功，false表示连接失败。
+Connection result. The value **true** indicates that the connection is successful, and the value **false**indicates the opposite.
 
 **Type:** boolean
 

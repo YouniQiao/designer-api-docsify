@@ -8,7 +8,7 @@ export declare function Video(
 ): VideoAttribute
 ```
 
-用于播放视频文件并控制其播放状态的组件。
+Video is returned when the parameter is transferred.
 
 **Since:** 23
 
@@ -24,7 +24,7 @@ export declare function Video(
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | [VideoOptions](../arkts-components/arkts-arkui-videooptions-i.md) | Yes | 视频信息。 |
+| value | [VideoOptions](../arkts-components/arkts-arkui-videooptions-i.md) | Yes | The options to create a Video. |
 
 **Return value:**
 
@@ -43,9 +43,9 @@ export declare function Video(
 
 Defines Video Component.
 
-**Since:** 26.0.0
+**Since:** 26.1.0
 
-**ArkTS mode:** ArkTS-Sta only, since version 26.0.0.
+**ArkTS mode:** ArkTS-Sta only, since version 26.1.0.
 
 **Decorator:** @Builder
 

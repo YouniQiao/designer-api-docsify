@@ -12,7 +12,7 @@ import { inputMethod } from 'kits/@kit.IMEKit';
 function onAttachmentDidFail(callback: Callback<AttachFailureReason>): void
 ```
 
-订阅绑定失败事件。使用callback异步回调。
+Subscribe the attachment failure event.
 
 **Since:** 22
 
@@ -26,7 +26,7 @@ function onAttachmentDidFail(callback: Callback<AttachFailureReason>): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;AttachFailureReason&gt; | Yes | 回调函数，返回绑定失败的原因，仅当注册者进程触发的绑定失败时，调用该回调函数。 |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;AttachFailureReason&gt; | Yes | the callback is invoked only when the attachment triggered by the registrant's process fails. |
 
 ## Examples
 

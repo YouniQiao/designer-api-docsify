@@ -1,6 +1,6 @@
 # Color (System API)
 
-RGBA格式的颜色描述。
+RGBA color description.
 
 **Since:** 20
 
@@ -24,7 +24,7 @@ import { uiEffect } from 'kits/@kit.ArkGraphics2D';
 alpha: double
 ```
 
-颜色的A分量（透明度）。
+Alpha component of the color (transparency).
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：double
 
@@ -44,7 +44,7 @@ alpha: double
 blue: double
 ```
 
-颜色的B分量（蓝色）。
+Blue component of the color.
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：double
 
@@ -64,7 +64,7 @@ blue: double
 green: double
 ```
 
-颜色的G分量（绿色）。
+Green component of the color.
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：double
 
@@ -84,7 +84,7 @@ green: double
 red: double
 ```
 
-颜色的R分量（红色）。
+Red component of the color.
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：double
 

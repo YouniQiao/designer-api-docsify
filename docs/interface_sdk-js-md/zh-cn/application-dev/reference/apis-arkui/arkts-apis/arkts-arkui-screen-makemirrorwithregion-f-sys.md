@@ -1,11 +1,5 @@
 # makeMirrorWithRegion（系统接口）
 
-## 导入模块
-
-```TypeScript
-import { screen } from 'kits/@kit.ArkUI';
-```
-
 ## makeMirrorWithRegion
 
 ```TypeScript
@@ -30,7 +24,7 @@ function makeMirrorWithRegion(mainScreen: long, mirrorScreen: Array<long>, mainS
 | --- | --- | --- | --- |
 | mainScreen | ArkTS-Dyn: number  <br>ArkTS-Sta：long | 是 | 主屏幕ID，该参数仅支持正整数输入。 |
 | mirrorScreen | ArkTS-Dyn: Array&lt;number&gt;  <br>ArkTS-Sta：Array&lt;long&gt; | 是 | 镜像屏幕ID集合。其中ID应为正整数。 |
-| mainScreenRegion | [Rect](../../apis-form-kit/arkts-apis/arkts-form-forminfo-rect-i.md) | 是 | 主屏创建镜像的矩形区域。 |
+| mainScreenRegion | [Rect](../../apis-test-kit/arkts-apis/arkts-test-uitest-rect-i.md) | 是 | 主屏创建镜像的矩形区域。 |
 
 **返回值：**
 
@@ -42,10 +36,12 @@ function makeMirrorWithRegion(mainScreen: long, mirrorScreen: Array<long>, mainS
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 1400001 | Invalid display or screen. |
-| 202 | Permission verification failed. A non-system application calls a system API. |
+| [1400001](../errorcode-display.md#1400001-无效的显示设备) | Invalid display or screen. |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed. A non-system application calls a system API. |
 
 ## 示例
+
+ArkTS-Dyn示例：
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -65,6 +61,26 @@ screen.makeMirrorWithRegion(mainScreenId, mirrorScreenIds, mainScreenRegion).the
   console.info(`Succeeded in setting screen mirroring. Data: ${data}`);
 }).catch((err: BusinessError) => {
   console.error(`Failed to set screen area mirroring. Code: ${err.code}, message: ${err.message}`);
+});
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let mainScreenId: long = 0;
+let mirrorScreenIds: Array<long> = [1, 2, 3];
+let mainScreenRegion: screen.Rect = {
+  left : 0,
+  top : 0,
+  width : 1920,
+  height : 1080
+};
+screen.makeMirrorWithRegion(mainScreenId, mirrorScreenIds, mainScreenRegion).then((data: long) => {
+  console.info(`Succeeded in setting screen mirroring. Data: ${data}`);
+}).catch((err: Error) => {
+  console.error(`Failed to set screen area mirroring. Code: ${err?.code}, message: ${err?.message}`);
 });
 ```
 

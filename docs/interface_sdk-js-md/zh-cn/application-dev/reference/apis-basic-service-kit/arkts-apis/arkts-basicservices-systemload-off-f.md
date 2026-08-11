@@ -1,11 +1,5 @@
 # off
 
-## 导入模块
-
-```TypeScript
-import { systemLoad } from 'kits/@kit.BasicServicesKit';
-```
-
 ## off('systemLoadChange')
 
 ```TypeScript
@@ -33,7 +27,7 @@ function off(type: 'systemLoadChange', callback?: Callback<SystemLoadLevel>): vo
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 401 | Parameter error. Possible cause: 1. Callback parameter error; &lt;br&gt; 2. Unregister type has not register; 3. Parameter verification failed. |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible cause: 1. Callback parameter error; &lt;br&gt; 2. Unregister type has not register; 3. Parameter verification failed. |
 
 ## 示例
 

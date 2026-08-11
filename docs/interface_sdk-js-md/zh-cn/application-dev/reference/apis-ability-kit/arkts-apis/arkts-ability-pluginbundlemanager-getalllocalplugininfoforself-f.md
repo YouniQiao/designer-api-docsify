@@ -1,11 +1,5 @@
 # getAllLocalPluginInfoForSelf
 
-## 导入模块
-
-```TypeScript
-import { pluginBundleManager } from 'kits/@kit.AbilityKit';
-```
-
 ## getAllLocalPluginInfoForSelf
 
 ```TypeScript
@@ -36,5 +30,5 @@ function getAllLocalPluginInfoForSelf(): Promise<Array<PluginBundleInfo>>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 201 | Calling interface without permission 'ohos.permission.kernel.SUPPORT_LOCAL_PLUGIN'. |
+| [201](../../errorcode-universal.md#201-权限校验失败) | Calling interface without permission 'ohos.permission.kernel.SUPPORT_LOCAL_PLUGIN'. |
 

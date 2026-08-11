@@ -1,6 +1,6 @@
 # EffectiveMode (System API)
 
-生效模式。
+Enumerates effective modes.
 
 **Since:** 9
 
@@ -18,7 +18,7 @@
 COLD = 1
 ```
 
-冷升级，需重启设备生效，适用于需要完整系统重置或固件升级的场景。详见[术语](../../../basic-services/update/update-kit-term.md)。
+Cold upgrade, which takes effect after the device is restarted. This mode applies to scenarios where a complete system reset or firmware upgrade is required. For details, see [Upgrading Service Terms](../../../basic-services/update/update-kit-term.md)
 
 **Since:** 9
 
@@ -36,7 +36,9 @@ COLD = 1
 LIVE = 2
 ```
 
-热升级，无需重启即可生效，适用于应用层组件升级或需要保持设备运行的场景。详见[术语](../../../basic-services/update/update-kit-term.md)。
+Hot upgrade, which takes effect without requiring restarting the device. This mode applies to scenarios where app  
+-layer components need to be upgraded or the device needs to keep running. For details, see  
+[Upgrading Service Terms](../../../basic-services/update/update-kit-term.md)
 
 **Since:** 9
 
@@ -54,7 +56,7 @@ LIVE = 2
 LIVE_AND_COLD = 3
 ```
 
-融合升级，结合两者特性，适用于同时包含热升级和冷升级组件的场景。详见[术语](../../../basic-services/update/update-kit-term.md)。
+Integrated upgrade, which combines the characteristics of both hot and cold upgrades. This mode applies to scenarios where both hot and cold upgrade components are involved. For details, see [Upgrading Service Terms](../../../basic-services/update/update-kit-term.md)
 
 **Since:** 9
 

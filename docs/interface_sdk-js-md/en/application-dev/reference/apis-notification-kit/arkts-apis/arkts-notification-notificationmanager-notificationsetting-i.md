@@ -1,6 +1,6 @@
 # NotificationSetting
 
-通知提醒方式开关的设置状态。
+Describes the setting status of the notification mode switch.
 
 **Since:** 20
 
@@ -22,10 +22,10 @@ import { notificationManager } from 'kits/@kit.NotificationKit';
 badgeNumberEnabled?: boolean
 ```
 
-表示是否开启通知角标数字展示。
+Whether to enable the display of notification badges.
 
-- true：开启。  
-- false：关闭。
+- **true**: enable.  
+- **false**: disable.
 
 **Type:** boolean
 
@@ -45,10 +45,10 @@ badgeNumberEnabled?: boolean
 bannerEnabled?: boolean
 ```
 
-表示是否开启横幅通知。
+Whether to enable banner notification.
 
-- true：开启。  
-- false：关闭。
+- **true**: enable.  
+- **false**: disable.
 
 **Type:** boolean
 
@@ -68,10 +68,10 @@ bannerEnabled?: boolean
 lockScreenEnabled?: boolean
 ```
 
-表示是否开启锁屏通知。
+Whether to enable lock screen notification.
 
-- true：开启。  
-- false：关闭。
+- **true**: enable.  
+- **false**: disable.
 
 **Type:** boolean
 
@@ -91,10 +91,10 @@ lockScreenEnabled?: boolean
 notificationEnabled?: boolean
 ```
 
-表示应用通知使能状态。
+Whether to enable the application notification.
 
-- true：开启。  
-- false：关闭。
+- **true**: enable.  
+- **false**: disable.
 
 **Type:** boolean
 
@@ -114,10 +114,10 @@ notificationEnabled?: boolean
 soundEnabled: boolean
 ```
 
-表示是否开启响铃。
+Whether to enable ringtone.
 
-- true：开启。  
-- false：关闭。
+- **true**: enable.  
+- **false**: disable.
 
 **Type:** boolean
 
@@ -135,10 +135,10 @@ soundEnabled: boolean
 vibrationEnabled: boolean
 ```
 
-表示是否开启振动。
+Whether to enable vibration.
 
-- true：开启。  
-- false：关闭。
+- **true**: enable.  
+- **false**: disable.
 
 **Type:** boolean
 

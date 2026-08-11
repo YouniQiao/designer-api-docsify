@@ -1,6 +1,6 @@
 # WithEnvAttribute
 
-定义WithEnv组件的属性功能。
+Define the WithEnv attribute functions.
 
 **Since:** 26.0.0
 
@@ -22,11 +22,11 @@ import { WithEnvAttribute, WithEnv } from 'kits/@kit.ArkUI';
 applyAttributesFinish(): void
 ```
 
-通知WithEnv属性设置完成。
+Notify WithEnv has finished setting up its attributes.
 
-**Since:** 26.0.0
+**Since:** 26.1.0
 
-**ArkTS mode:** ArkTS-Sta only, since version 26.0.0.
+**ArkTS mode:** ArkTS-Sta only, since version 26.1.0.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -40,7 +40,7 @@ applyAttributesFinish(): void
 customEnv<T>(key: CustomEnvKey<T>,  value: T): this
 ```
 
-设置作用域内可被后代自定义组件读取的自定义环境变量。
+Defining Custom Environment Variables
 
 **Since:** 26.0.0
 
@@ -56,14 +56,14 @@ customEnv<T>(key: CustomEnvKey<T>,  value: T): this
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| key | [CustomEnvKey](../arkts-components/arkts-arkui-customenvkey-c.md)&lt;T&gt; | Yes | 自定义环境变量的键。 |
-| value | T | Yes | 自定义环境变量的值。value的类型T对应CustomEnvKey&lt;T&gt;的类型T。 |
+| key | [CustomEnvKey](../arkts-components/arkts-arkui-customenvkey-c.md)&lt;T&gt; | Yes | Keys for custom environment variables. |
+| value | T | Yes | Values of custom environment variables. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| this | WithEnvAttribute对象。 |
+| this | WithEnvAttribute object. |
 
 ## env
 
@@ -71,7 +71,7 @@ customEnv<T>(key: CustomEnvKey<T>,  value: T): this
 env<T>(key: WritableSystemEnvKey<T>, value: T): this
 ```
 
-设置作用域内的系统环境变量。当前正式支持的系统环境变量键为WritableEnvKey.FONT_SCALE、WritableEnvKey.DIRECTION。
+Defining System Environment Variables
 
 **Since:** 26.0.0
 
@@ -87,14 +87,14 @@ env<T>(key: WritableSystemEnvKey<T>, value: T): this
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| key | [WritableSystemEnvKey](../arkts-components/arkts-arkui-writablesystemenvkey-c.md)&lt;T&gt; | Yes | 系统环境变量键。当前正式支持WritableEnvKey.FONT_SCALE和WritableEnvKey.DIRECTION。 |
-| value | T | Yes | 系统环境变量值。value的类型T对应WritableSystemEnvKey&lt;T&gt;中的类型T。当key为WritableEnvKey.FONT_SCALE时，value类型为number；当key为WritableEnvKey.DIRECTION时，value类型为Direction。 |
+| key | [WritableSystemEnvKey](../arkts-components/arkts-arkui-writablesystemenvkey-c.md)&lt;T&gt; | Yes | Keys for system environment variables. |
+| value | T | Yes | Values of system environment variables. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| this | WithEnvAttribute对象。 |
+| this | WithEnvAttribute object. |
 
 ## setWithEnvOptions
 
@@ -102,11 +102,11 @@ env<T>(key: WritableSystemEnvKey<T>, value: T): this
 setWithEnvOptions(): this
 ```
 
-设置WithEnv选项。
+Sets WithEnv options.
 
-**Since:** 26.0.0
+**Since:** 26.1.0
 
-**ArkTS mode:** ArkTS-Sta only, since version 26.0.0.
+**ArkTS mode:** ArkTS-Sta only, since version 26.1.0.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -118,5 +118,5 @@ setWithEnvOptions(): this
 
 | Type | Description |
 | --- | --- |
-| this | WithEnvAttribute实例。 |
+| this | WithEnvAttribute instance |
 

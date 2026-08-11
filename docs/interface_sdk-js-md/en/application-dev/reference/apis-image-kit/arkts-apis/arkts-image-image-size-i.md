@@ -1,6 +1,6 @@
 # Size
 
-表示图片尺寸。
+Describes the size of an image.
 
 **Since:** 6
 

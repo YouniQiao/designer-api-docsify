@@ -1,14 +1,15 @@
 # RoundRect
 
-圆角矩形对象。支持设置和获取指定圆角位置的圆角半径，以及对圆角矩形进行平移操作。
+Rounded rectangle.
 
-> **说明：**
+> **NOTE：**
 > 
-> - 本Class首批接口从API version 12开始支持。
+> - The initial APIs of this class are supported since API version 12.
 > 
-> - 本模块使用屏幕物理像素单位px。
+> - This module uses the physical pixel unit, px.
 > 
-> - 本模块为单线程模型策略，需要调用方自行管理线程安全和上下文状态的切换。
+> - This module operates under a single-threaded model. The caller needs to manage thread safety and context state
+> transitions.
 
 **Since:** 12
 
@@ -30,7 +31,7 @@ import { drawing } from 'kits/@kit.ArkGraphics2D';
 constructor(roundRect: RoundRect)
 ```
 
-拷贝一个圆角矩形。
+Copies a rounded rectangle.
 
 **Since:** 20
 
@@ -44,7 +45,7 @@ constructor(roundRect: RoundRect)
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| roundRect | [RoundRect](arkts-arkgraphics2d-drawing-roundrect-c.md) | Yes | 用于拷贝的圆角矩形。 |
+| roundRect | [RoundRect](arkts-arkgraphics2d-drawing-roundrect-c.md) | Yes | Rounded rectangle to be copied. |
 
 ## constructor
 
@@ -58,7 +59,8 @@ ArkTS-Sta:
 constructor(rect: common2D.Rect, xRadii: double, yRadii: double)
 ```
 
-构造一个圆角矩形对象，当且仅当xRadii和yRadii均大于0时，圆角生效，否则只会构造一个矩形。
+A constructor used to create a **RoundRect** object. A rounded rectangle is created when both **xRadii** and  
+**yRadii** are greater than 0. Otherwise, only a rectangle is created.
 
 **Since:** 12
 
@@ -72,15 +74,15 @@ constructor(rect: common2D.Rect, xRadii: double, yRadii: double)
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| rect | common2D.Rect | Yes | 需要创建的圆角矩形区域。 |
-| xRadii | ArkTS-Dyn: number  <br>ArkTS-Sta：double | Yes | x轴方向的圆角半径，该参数为浮点数，取值大于0时圆角生效，小于等于0时圆角不生效。 单位为物理像素px。 |
-| yRadii | ArkTS-Dyn: number  <br>ArkTS-Sta：double | Yes | y轴方向的圆角半径，该参数为浮点数，取值大于0时圆角生效，小于等于0时圆角不生效。 单位为物理像素px。 |
+| rect | common2D.Rect | Yes | Rectangle that encloses the rounded rectangle to create. |
+| xRadii | ArkTS-Dyn: number  <br>ArkTS-Sta：double | Yes | Radius of the rounded corner on the X axis. The value is a floating point number. A negative number is invalid. |
+| yRadii | ArkTS-Dyn: number  <br>ArkTS-Sta：double | Yes | Radius of the rounded corner on the Y axis. The value is a floating point number. A negative number is invalid. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types. |
 
 ## getCorner
 
@@ -88,7 +90,7 @@ constructor(rect: common2D.Rect, xRadii: double, yRadii: double)
 getCorner(pos: CornerPos): common2D.Point
 ```
 
-获取圆角矩形中指定圆角位置的圆角半径。
+Obtains the radii of the specified rounded corner in this rounded rectangle.
 
 **Since:** 12
 
@@ -102,19 +104,19 @@ getCorner(pos: CornerPos): common2D.Point
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| pos | [CornerPos](arkts-arkgraphics2d-drawing-cornerpos-e.md) | Yes | 圆角位置。 |
+| pos | [CornerPos](arkts-arkgraphics2d-drawing-cornerpos-e.md) | Yes | Position of the rounded corner. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| common2D.Point | 返回一个点，其横坐标表示圆角x轴方向上的半径，纵坐标表示y轴方向上的半径。 |
+| common2D.Point | Point. The horizontal coordinate indicates the radius of the rounded corner on the X axis, and the vertical coordinate indicates the radius on the Y axis. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; 3. Parameter verification failed. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; 3. Parameter verification failed. |
 
 ## getCorner
 
@@ -122,7 +124,7 @@ getCorner(pos: CornerPos): common2D.Point
 getCorner(pos: CornerPos): common2D.Point | undefined
 ```
 
-获取圆角矩形中指定圆角位置的圆角半径。
+Obtains the radii of the specified rounded corner in this rounded rectangle.
 
 **Since:** 23
 
@@ -136,19 +138,19 @@ getCorner(pos: CornerPos): common2D.Point | undefined
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| pos | [CornerPos](arkts-arkgraphics2d-drawing-cornerpos-e.md) | Yes | 圆角位置。 |
+| pos | [CornerPos](arkts-arkgraphics2d-drawing-cornerpos-e.md) | Yes | Position of the rounded corner. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| common2D.Point | 返回一个点，其横坐标表示圆角x轴方向上的半径，纵坐标表示y轴方向上的半径。 获取失败时返回undefined。 |
+| common2D.Point | Point. The horizontal coordinate indicates the radius of the rounded corner on the X axis, and the vertical coordinate indicates the radius on the Y axis. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; 3. Parameter verification failed. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; 3. Parameter verification failed. |
 
 ## offset
 
@@ -162,7 +164,7 @@ ArkTS-Sta:
 offset(dx: double, dy: double): void
 ```
 
-将圆角矩形沿x轴方向平移dx、沿y轴方向平移dy。
+Translates this rounded rectangle by an offset along the X axis and Y axis.
 
 **Since:** 12
 
@@ -176,14 +178,14 @@ offset(dx: double, dy: double): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| dx | ArkTS-Dyn: number  <br>ArkTS-Sta：double | Yes | 表示x轴方向上的偏移量。正数表示向x轴正方向平移，负数表示向x轴负方向平移，该参数为浮点数。单位为物理像素px。 |
-| dy | ArkTS-Dyn: number  <br>ArkTS-Sta：double | Yes | 表示y轴方向上的偏移量。正数表示向y轴正方向平移，负数表示向y轴负方向平移，该参数为浮点数。单位为物理像素px。 |
+| dx | ArkTS-Dyn: number  <br>ArkTS-Sta：double | Yes | Horizontal distance to translate. A positive number indicates a translation towards the positive direction of the X axis, and a negative number indicates a translation towards the negative direction of the X axis. The value is a floating point number. |
+| dy | ArkTS-Dyn: number  <br>ArkTS-Sta：double | Yes | Vertical distance to translate. A positive number indicates a translation towards the positive direction of the Y axis, and a negative number indicates a translation towards the negative direction of the Y axis. The value is a floating point number. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types. |
 
 ## setCorner
 
@@ -197,7 +199,7 @@ ArkTS-Sta:
 setCorner(pos: CornerPos, x: double, y: double): void
 ```
 
-设置圆角矩形中指定圆角位置的圆角半径。
+Sets the radii of the specified rounded corner in this rounded rectangle.
 
 **Since:** 12
 
@@ -211,13 +213,13 @@ setCorner(pos: CornerPos, x: double, y: double): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| pos | [CornerPos](arkts-arkgraphics2d-drawing-cornerpos-e.md) | Yes | 圆角位置。 |
-| x | ArkTS-Dyn: number  <br>ArkTS-Sta：double | Yes | x轴方向的圆角半径，该参数为浮点数，取值大于0时该圆角半径设置生效，小于等于0时该圆角半径设置不生效。 单位为物理像素px。 |
-| y | ArkTS-Dyn: number  <br>ArkTS-Sta：double | Yes | y轴方向的圆角半径，该参数为浮点数，取值大于0时该圆角半径设置生效，小于等于0时该圆角半径设置不生效。 单位为物理像素px。 |
+| pos | [CornerPos](arkts-arkgraphics2d-drawing-cornerpos-e.md) | Yes | Position of the rounded corner. |
+| x | ArkTS-Dyn: number  <br>ArkTS-Sta：double | Yes | Radius of the rounded corner on the X axis. The value is a floating point number. A negative number is invalid. |
+| y | ArkTS-Dyn: number  <br>ArkTS-Sta：double | Yes | Radius of the rounded corner on the Y axis. The value is a floating point number. A negative number is invalid. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; 3. Parameter verification failed. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; 3. Parameter verification failed. |
 

@@ -1,6 +1,6 @@
 # EdgeOutlineWidths
 
-引入该对象时，至少传入一个参数。
+Defines the outline width property.
 
 **Since:** 23
 
@@ -16,7 +16,7 @@
 bottom?: Dimension
 ```
 
-下侧外描边宽度。
+bottom outline width property.
 
 **Type:** [Dimension](arkts-arkui-dimension-t.md)
 
@@ -36,7 +36,7 @@ bottom?: Dimension
 left?: Dimension
 ```
 
-左侧外描边宽度。
+left outline width property.
 
 **Type:** [Dimension](arkts-arkui-dimension-t.md)
 
@@ -56,7 +56,7 @@ left?: Dimension
 right?: Dimension
 ```
 
-右侧外描边宽度。
+right outline width property.
 
 **Type:** [Dimension](arkts-arkui-dimension-t.md)
 
@@ -76,7 +76,7 @@ right?: Dimension
 top?: Dimension
 ```
 
-上侧外描边宽度。
+top outline width property.
 
 **Type:** [Dimension](arkts-arkui-dimension-t.md)
 

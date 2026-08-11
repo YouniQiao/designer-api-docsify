@@ -1,6 +1,6 @@
 # MechEvent (System API)
 
-具身设备事件定义
+Definition of Mechanic device event.
 
 **Since:** 26.0.0
 
@@ -24,7 +24,7 @@ import { mechanicManager } from 'kits/@kit.MechanicKit';
 event: MechEventType
 ```
 
-事件类型
+Event type of this event.
 
 **Type:** [MechEventType](arkts-mechanic-mechanicmanager-mecheventtype-e-sys.md)
 
@@ -44,7 +44,7 @@ event: MechEventType
 mechId: int
 ```
 
-具身设备ID。取值限定为整数。
+ID of the mechanical device.The value should be an integer.
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 

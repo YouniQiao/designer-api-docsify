@@ -12,7 +12,7 @@ import { cloudData } from 'kits/@kit.ArkData';
 function setCloudStrategy(strategy: StrategyType, param?: Array<commonType.ValueType>): Promise<void>
 ```
 
-设置应用自身的云同步策略，使用Promise异步回调。
+Sets the cloud sync strategy of an application. This API uses a promise to return the result.
 
 **Since:** 12
 
@@ -26,21 +26,21 @@ function setCloudStrategy(strategy: StrategyType, param?: Array<commonType.Value
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| strategy | [StrategyType](arkts-arkdata-clouddata-strategytype-e.md) | Yes | 配置的策略类型。 |
-| param | Array&lt;commonType.ValueType&gt; | No | 策略参数，类型为Array&lt;commonType.ValueType&gt;，实际传入值为 [NetWorkStrategy](arkts-arkdata-clouddata-networkstrategy-e.md)枚举值，取值范围为WIFI和CELLULAR，默认支持WIFI和蜂窝网络策略。 |
+| strategy | [StrategyType](arkts-arkdata-clouddata-strategytype-e.md) | Yes | Type of the strategy to set. |
+| param | Array&lt;commonType.ValueType&gt; | No | Strategy parameters to set. Currently, only network strategies can be set. By default, Wi-Fi and cellular network are supported. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise对象，无返回结果。 |
+| Promise&lt;void&gt; | Promise that returns no value. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
-| 801 | Capability not supported. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. |
 
 ## Examples
 
@@ -49,9 +49,9 @@ import { BusinessError } from '@kit.BasicServicesKit';
 
 // Sync data over Wi-Fi only.
 cloudData.setCloudStrategy(cloudData.StrategyType.NETWORK, [cloudData.NetWorkStrategy.WIFI]).then(() => {
-  console.info('Succeeded in setting the cloud strategy');
+    console.info('Succeeded in setting the cloud strategy');
 }).catch((err: BusinessError) => {
-  console.error(`Failed to set cloud strategy. Code: ${err.code}, message: ${err.message}`);
+    console.error(`Failed to set cloud strategy. Code: ${err.code}, message: ${err.message}`);
 });
 ```
 

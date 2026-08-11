@@ -43,14 +43,16 @@ function disableNotificationFeature(disabled:boolean, bundleList: Array<string>)
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. 3. Parameter verification failed. |
-| 801 | Capability not supported. |
-| 201 | Permission denied. |
-| 1600001 | Internal error. |
-| 202 | Not system application to call the interface. |
-| 1600002 | Marshalling or unmarshalling error. |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. 3. Parameter verification failed. |
+| [801](../../errorcode-universal.md#801-该设备不支持此api) | Capability not supported. |
+| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
+| [1600001](../errorcode-notification.md#1600001-内部错误) | Internal error. |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not system application to call the interface. |
+| [1600002](../errorcode-notification.md#1600002-序列化或反序列化错误) | Marshalling or unmarshalling error. |
 
 ## 示例
+
+ArkTS-Dyn示例：
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -67,6 +69,21 @@ try {
 } catch (err) {
   hilog.error(0x0000, 'testTag', '%{public}s', `testTag failed, code is ${err.code}, message is ${err.message}`);
 }
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let disabled: boolean = true;
+let bundleList: Array<string> = ['com.example.myapplication'];
+notificationManager.disableNotificationFeature(disabled, bundleList).then(() => {
+  console.info('disableNotificationFeature success.');
+}).catch((err: Error): void => {
+  let error: BusinessError = err as BusinessError;
+  console.error(`disableNotificationFeature failed, code is ${error.code}, message is ${error.message}`);
+});
 ```
 
 
@@ -108,12 +125,14 @@ function disableNotificationFeature(disabled: boolean, bundleList: Array<string>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 201 | Permission verification failed. The application does not have the permission required to call the API. |
-| 1600001 | Internal error. |
-| 202 | Permission verification failed. A non-system application calls a system API. |
-| 1600002 | Marshalling or unmarshalling error. |
+| [201](../../errorcode-universal.md#201-权限校验失败) | Permission verification failed. The application does not have the permission required to call the API. |
+| [1600001](../errorcode-notification.md#1600001-内部错误) | Internal error. |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed. A non-system application calls a system API. |
+| [1600002](../errorcode-notification.md#1600002-序列化或反序列化错误) | Marshalling or unmarshalling error. |
 
 ## 示例
+
+ArkTS-Dyn示例：
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -131,5 +150,21 @@ try {
 } catch (err) {
   hilog.error(0x0000, 'testTag', '%{public}s', `testTag failed, code is ${err.code}, message is ${err.message}`);
 }
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let disabled: boolean = true;
+let bundleList: Array<string> = ['com.example.myapplication'];
+let userId: int = 1;
+notificationManager.disableNotificationFeature(disabled, bundleList, userId).then(() => {
+  console.info(`DisableNotificationFeature success.`);
+}).catch((err: Error) => {
+  let error: BusinessError = err as BusinessError;
+  console.error(`DisableNotificationFeature failed, code is ${error.code}, message is ${error.message}`);
+});
 ```
 

@@ -53,5 +53,5 @@ Data is dynamiconlyally added to an existing data sequence.The target sequence i
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| params | {     /**      * Set the data subscript of the line chart to be updated.      *      * @type { number }      * @syscap SystemCapability.ArkUI.ArkUI.Full      * @famodelonly      * @since 4 dynamiconly      */     serial: number;     /**      * Set the new data.      *      * @type { Array&lt;number&gt; }      * @syscap SystemCapability.ArkUI.ArkUI.Full      * @famodelonly      * @since 4 dynamiconly      */     data: Array&lt;number&gt;;   } | Yes |  |
+| params | {     /**      * Set the data subscript of the line chart to be updated.      *      * @type { number }      * @syscap SystemCapability.ArkUI.ArkUI.Full      * @famodelonly      * @since 4 dynamiconly      */     serial: number;     /**      * Set the new data.      *      * @type { Array&lt;number&gt; }      * @syscap SystemCapability.ArkUI.ArkUI.Full      * @famodelonly      * @since 4 dynamiconly      */     data: Array&lt;number&gt;;   } | Yes |  |
 

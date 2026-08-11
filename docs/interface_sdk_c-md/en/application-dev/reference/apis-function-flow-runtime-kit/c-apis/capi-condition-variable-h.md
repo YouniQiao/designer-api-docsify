@@ -18,12 +18,12 @@ Declares the condition variable interfaces in C.
 
 | Name | Description |
 | -- | -- |
-| [FFRT_C_API int ffrt_cond_init(ffrt_cond_t* cond, const ffrt_condattr_t* attr)](#ffrt_cond_init) | Initializes a condition variable. |
+| [FFRT_C_API int ffrt_cond_init(ffrt_cond_t* cond, const ffrt_condattr_t* attr)](#ffrt_cond_init) | Initializes a condition variable.The condition variable must later be destroyed by [ffrt_cond_destroy](capi-condition-variable-h.md#ffrt_cond_destroy) when no longer in use. |
 | [FFRT_C_API int ffrt_cond_signal(ffrt_cond_t* cond)](#ffrt_cond_signal) | Unblocks at least one of the threads that are blocked on a condition variable. |
 | [FFRT_C_API int ffrt_cond_broadcast(ffrt_cond_t* cond)](#ffrt_cond_broadcast) | Unblocks all threads currently blocked on a condition variable. |
-| [FFRT_C_API int ffrt_cond_wait(ffrt_cond_t* cond, ffrt_mutex_t* mutex)](#ffrt_cond_wait) | Blocks the calling thread. |
-| [FFRT_C_API int ffrt_cond_timedwait(ffrt_cond_t* cond, ffrt_mutex_t* mutex, const struct timespec* time_point)](#ffrt_cond_timedwait) | Blocks the calling thread for a given duration.If <b>ffrt_cond_signal</b> or <b>ffrt_cond_broadcast</b> is not called to unblock the threadwhen the maximum duration reaches, the thread is automatically unblocked. |
-| [FFRT_C_API int ffrt_cond_destroy(ffrt_cond_t* cond)](#ffrt_cond_destroy) | Destroys a condition variable, the user needs to invoke this interface. |
+| [FFRT_C_API int ffrt_cond_wait(ffrt_cond_t* cond, ffrt_mutex_t* mutex)](#ffrt_cond_wait) | Blocks the calling thread on a condition variable.The mutex must be held by the calling thread on entry. It is atomically releasedwhile the thread is blocked, and re-acquired before the function returns, so thecaller regains ownership of the mutex on wakeup. The thread is unblocked by acall to [ffrt_cond_signal](capi-condition-variable-h.md#ffrt_cond_signal) or [ffrt_cond_broadcast](capi-condition-variable-h.md#ffrt_cond_broadcast) from another thread.The caller is responsible for re-checking the predicate after wakeup to guardagainst spurious wakeups. |
+| [FFRT_C_API int ffrt_cond_timedwait(ffrt_cond_t* cond, ffrt_mutex_t* mutex, const struct timespec* time_point)](#ffrt_cond_timedwait) | Blocks the calling thread until a given time point.If [ffrt_cond_signal](capi-condition-variable-h.md#ffrt_cond_signal) or [ffrt_cond_broadcast](capi-condition-variable-h.md#ffrt_cond_broadcast) is not called to unblock the threadbefore `time_point` is reached, the thread is automatically unblocked. |
+| [FFRT_C_API int ffrt_cond_destroy(ffrt_cond_t* cond)](#ffrt_cond_destroy) | Destroys a condition variable.The condition variable must have been initialized by [ffrt_cond_init](capi-condition-variable-h.md#ffrt_cond_init) andmust not be referenced by any thread on entry. |
 
 ## Function description
 
@@ -35,7 +35,7 @@ FFRT_C_API int ffrt_cond_init(ffrt_cond_t* cond, const ffrt_condattr_t* attr)
 
 **Description**
 
-Initializes a condition variable.
+Initializes a condition variable.The condition variable must later be destroyed by [ffrt_cond_destroy](capi-condition-variable-h.md#ffrt_cond_destroy) when no longer in use.
 
 **Since**: 10
 
@@ -50,7 +50,7 @@ Initializes a condition variable.
 
 | Type | Description |
 | -- | -- |
-| FFRT_C_API int | <b>ffrt_success</b> if the condition variable is initialized;<br>         <b>ffrt_error_inval</b> otherwise. |
+| FFRT_C_API int | `ffrt_success` if the condition variable is initialized;<br>         `ffrt_error_inval` otherwise. |
 
 ### ffrt_cond_signal()
 
@@ -74,7 +74,12 @@ Unblocks at least one of the threads that are blocked on a condition variable.
 
 | Type | Description |
 | -- | -- |
-| FFRT_C_API int | <b>ffrt_success</b> if the thread is unblocked;<br>         <b>ffrt_error_inval</b> otherwise. |
+| FFRT_C_API int | `ffrt_success` if the thread is unblocked;<br>         `ffrt_error_inval` otherwise. |
+
+**Reference**:
+
+[ffrt_cond_wait](capi-condition-variable-h.md#ffrt_cond_wait)
+
 
 ### ffrt_cond_broadcast()
 
@@ -98,7 +103,12 @@ Unblocks all threads currently blocked on a condition variable.
 
 | Type | Description |
 | -- | -- |
-| FFRT_C_API int | <b>ffrt_success</b> if the threads are unblocked;<br>         <b>ffrt_error_inval</b> otherwise. |
+| FFRT_C_API int | `ffrt_success` if the threads are unblocked;<br>         `ffrt_error_inval` otherwise. |
+
+**Reference**:
+
+[ffrt_cond_wait](capi-condition-variable-h.md#ffrt_cond_wait)
+
 
 ### ffrt_cond_wait()
 
@@ -108,7 +118,7 @@ FFRT_C_API int ffrt_cond_wait(ffrt_cond_t* cond, ffrt_mutex_t* mutex)
 
 **Description**
 
-Blocks the calling thread.
+Blocks the calling thread on a condition variable.The mutex must be held by the calling thread on entry. It is atomically releasedwhile the thread is blocked, and re-acquired before the function returns, so thecaller regains ownership of the mutex on wakeup. The thread is unblocked by acall to [ffrt_cond_signal](capi-condition-variable-h.md#ffrt_cond_signal) or [ffrt_cond_broadcast](capi-condition-variable-h.md#ffrt_cond_broadcast) from another thread.The caller is responsible for re-checking the predicate after wakeup to guardagainst spurious wakeups.
 
 **Since**: 10
 
@@ -117,13 +127,20 @@ Blocks the calling thread.
 | Parameter | Description |
 | -- | -- |
 | [ffrt_cond_t](capi-ffrt-ffrt-cond-t.md)* cond | Indicates a pointer to the condition variable. |
-| [ffrt_mutex_t](capi-ffrt-ffrt-mutex-t.md)* mutex | Indicates a pointer to the mutex. |
+| [ffrt_mutex_t](capi-ffrt-ffrt-mutex-t.md)* mutex | Indicates a pointer to the mutex held by the calling thread. |
 
 **Returns**:
 
 | Type | Description |
 | -- | -- |
-| FFRT_C_API int | <b>ffrt_success</b> if the thread is unblocked after being blocked;<br>         <b>ffrt_error_inval</b> otherwise. |
+| FFRT_C_API int | `ffrt_success` if the thread is unblocked after being blocked;<br>         `ffrt_error_inval` otherwise. |
+
+**Reference**:
+
+[ffrt_cond_timedwait](capi-condition-variable-h.md#ffrt_cond_timedwait)
+[ffrt_cond_signal](capi-condition-variable-h.md#ffrt_cond_signal)
+[ffrt_cond_broadcast](capi-condition-variable-h.md#ffrt_cond_broadcast)
+
 
 ### ffrt_cond_timedwait()
 
@@ -133,7 +150,7 @@ FFRT_C_API int ffrt_cond_timedwait(ffrt_cond_t* cond, ffrt_mutex_t* mutex, const
 
 **Description**
 
-Blocks the calling thread for a given duration.If <b>ffrt_cond_signal</b> or <b>ffrt_cond_broadcast</b> is not called to unblock the threadwhen the maximum duration reaches, the thread is automatically unblocked.
+Blocks the calling thread until a given time point.If [ffrt_cond_signal](capi-condition-variable-h.md#ffrt_cond_signal) or [ffrt_cond_broadcast](capi-condition-variable-h.md#ffrt_cond_broadcast) is not called to unblock the threadbefore `time_point` is reached, the thread is automatically unblocked.
 
 **Since**: 10
 
@@ -143,13 +160,20 @@ Blocks the calling thread for a given duration.If <b>ffrt_cond_signal</b> or <b>
 | -- | -- |
 | [ffrt_cond_t](capi-ffrt-ffrt-cond-t.md)* cond | Indicates a pointer to the condition variable. |
 | [ffrt_mutex_t](capi-ffrt-ffrt-mutex-t.md)* mutex | Indicates a pointer to the mutex. |
-| const struct timespec* time_point | Indicates the maximum duration that the thread is blocked. |
+| const struct timespec* time_point | Indicates the absolute time point at which the wait expires. |
 
 **Returns**:
 
 | Type | Description |
 | -- | -- |
-| FFRT_C_API int | <b>ffrt_success</b> if the thread is unblocked after being blocked;<br>         <b>ffrt_error_timedout</b> if the maximum duration reaches;<br>         <b>ffrt_error_inval</b> if the blocking fails. |
+| FFRT_C_API int | `ffrt_success` if the thread is unblocked after being blocked;<br>         `ffrt_error_timedout` if `time_point` is reached without being signaled;<br>         `ffrt_error_inval` if any of `cond`, `mutex`, or `time_point` is null. |
+
+**Reference**:
+
+[ffrt_cond_wait](capi-condition-variable-h.md#ffrt_cond_wait)
+[ffrt_cond_signal](capi-condition-variable-h.md#ffrt_cond_signal)
+[ffrt_cond_broadcast](capi-condition-variable-h.md#ffrt_cond_broadcast)
+
 
 ### ffrt_cond_destroy()
 
@@ -159,7 +183,7 @@ FFRT_C_API int ffrt_cond_destroy(ffrt_cond_t* cond)
 
 **Description**
 
-Destroys a condition variable, the user needs to invoke this interface.
+Destroys a condition variable.The condition variable must have been initialized by [ffrt_cond_init](capi-condition-variable-h.md#ffrt_cond_init) andmust not be referenced by any thread on entry.
 
 **Since**: 10
 
@@ -173,6 +197,6 @@ Destroys a condition variable, the user needs to invoke this interface.
 
 | Type | Description |
 | -- | -- |
-| FFRT_C_API int | <b>ffrt_success</b> if the condition variable is destroyed;<br>         <b>ffrt_error_inval</b> otherwise. |
+| FFRT_C_API int | `ffrt_success` if the condition variable is destroyed;<br>         `ffrt_error_inval` otherwise. |
 
 

@@ -1,6 +1,6 @@
 # SyncMode
 
-同步模式枚举。
+Enumerates the sync modes.
 
 **Since:** 7
 
@@ -20,7 +20,7 @@
 PULL_ONLY = 0
 ```
 
-表示只能从远端拉取数据到本端。
+Pull data from the peer end to the local end only.
 
 **Since:** 7
 
@@ -40,7 +40,7 @@ PULL_ONLY = 0
 PUSH_ONLY = 1
 ```
 
-表示只能从本端推送数据到远端。
+Push data from the local end to the peer end only.
 
 **Since:** 7
 
@@ -60,7 +60,7 @@ PUSH_ONLY = 1
 PUSH_PULL = 2
 ```
 
-表示从本端推送数据到远端，然后从远端拉取数据到本端。
+Push data from the local end to the peer end and then pull data from the peer end to the local end.
 
 **Since:** 7
 

@@ -1,12 +1,6 @@
 # PanelFlag
 
-输入法面板状态类型枚举。
-
-| 名称 | 值 | 说明 |  
-| ------------ | -- | ------------------ |  
-| FLG_FIXED | 0 | 固定态面板类型。 |  
-| FLG_FLOATING | 1 | 悬浮态面板类型。 |  
-| FLAG_CANDIDATE&lt;sup&gt;15+&lt;/sup&gt; | 2 | 候选词态面板类型。 |
+Enumerates the state types of the input method panel.
 
 **Since:** 10
 
@@ -22,9 +16,9 @@
 FLG_FIXED = 0
 ```
 
-固定态面板类型。
+Fixed style.
 
-&lt;p&gt;该功能是为SOFT_KEYBOARD类型的面板提供的。当该标志被设置时，软键盘将固定在屏幕底部。&lt;/p&gt;
+&lt;p&gt;It's provided for the panel with type of SOFT_KEYBOARD.When the flag is set, the soft keyboard is fixed at the bottom of the screen.&lt;/p&gt;
 
 **Since:** 10
 
@@ -40,9 +34,9 @@ FLG_FIXED = 0
 FLG_FLOATING
 ```
 
-悬浮态面板类型。
+Floating style.
 
-&lt;p&gt;该功能是为SOFT_KEYBOARD类型的面板提供的。当该标志被设置时，软键盘将是悬浮态的。&lt;/p&gt;
+&lt;p&gt;It's provided for the panel with type of SOFT_KEYBOARD.When the flag is set, the soft keyboard is floating.&lt;/p&gt;
 
 **Since:** 10
 
@@ -58,9 +52,9 @@ FLG_FLOATING
 FLAG_CANDIDATE
 ```
 
-候选词态面板类型。
+Candidate style.
 
-&lt;p&gt;它为类型为SOFT_KEYBOARD的面板提供支持。当该标志被设置时，软键盘将作为一个候选窗口，当用户输入代码时，该窗口会显示可能的字符。具有候选样式的面板不会由输入法服务自动显示或隐藏。输入法应用程序开发者应自行控制面板的状态。&lt;/p&gt;
+&lt;p&gt;It's provided for the panel with type of SOFT_KEYBOARD.When the flag is set, the soft keyboard is a candidate window which will show the possible characters when user types a input code.Panel with candidate style will not be automatically shown or hidden by input method service.Input method application developers are supposed to control the panel status on their own.&lt;/p&gt;
 
 **Since:** 15
 

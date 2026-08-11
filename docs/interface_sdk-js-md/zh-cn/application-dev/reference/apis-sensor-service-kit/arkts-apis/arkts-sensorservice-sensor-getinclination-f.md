@@ -1,11 +1,5 @@
 # getInclination
 
-## 导入模块
-
-```TypeScript
-import { sensor } from 'kits/@kit.SensorServiceKit';
-```
-
 ## getInclination
 
 ```TypeScript
@@ -33,14 +27,16 @@ function getInclination(inclinationMatrix: Array<double>, callback: AsyncCallbac
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt; 2. Incorrect parameter types; 3. Parameter verification failed. |
-| 14500101 | Service exception. Possible causes: 1. Sensor hdf service exception; &lt;br&gt; 2. Sensor service ipc exception;3. Sensor data channel exception. |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| [14500101](../errorcode-sensor.md#14500101-传感器服务异常) | Service exception. Possible causes: 1. Sensor hdf service exception; &lt;br&gt; 2. Sensor service ipc exception;3. Sensor data channel exception. |
 
 ## 示例
 
+ArkTS-Dyn示例：
+
 ```TypeScript
-import { sensor } from '@kit.SensorServiceKit';
 import { BusinessError } from '@kit.BasicServicesKit';
+import { sensor } from '@kit.SensorServiceKit';
 
 // 使用try catch对可能出现的异常进行捕获
 try {
@@ -50,12 +46,43 @@ try {
     0, 1, 0,
     0, 0, 1
   ]
-  sensor.getInclination(inclinationMatrix, (err: BusinessError, data: number) => {
-    if (err) {
-      console.error(`Failed to get inclination. Code: ${err.code}, message: ${err.message}`);
+  sensor.getInclination(inclinationMatrix, (err, data) => {
+    let error = err as BusinessError;
+    let dataValue = data as number;
+    if (error) {
+      console.error(`Failed to get inclination. Code: ${error.code}, message: ${error.message}`);
       return;
     }
-    console.info('Succeeded in getting inclination: ' + data);
+    console.info('Succeeded in getting inclination: ' + dataValue);
+  })
+} catch (error) {
+  let e: BusinessError = error as BusinessError;
+  console.error(`Failed to get inclination. Code: ${e.code}, message: ${e.message}`);
+}
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+import { sensor } from '@kit.SensorServiceKit';
+
+// 使用try catch对可能出现的异常进行捕获
+try {
+  // inclinationMatrix可以为3*3，或者4*4
+  let inclinationMatrix = [
+    1, 0, 0,
+    0, 1, 0,
+    0, 0, 1
+  ]
+  sensor.getInclination(inclinationMatrix, (err, data) => {
+    let error = err as BusinessError;
+    let dataValue = data as double;
+    if (error) {
+      console.error(`Failed to get inclination. Code: ${error.code}, message: ${error.message}`);
+      return;
+    }
+    console.info('Succeeded in getting inclination: ' + dataValue);
   })
 } catch (error) {
   let e: BusinessError = error as BusinessError;
@@ -96,14 +123,16 @@ function getInclination(inclinationMatrix: Array<double>): Promise<double>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt; 2. Incorrect parameter types; 3. Parameter verification failed. |
-| 14500101 | Service exception. Possible causes: 1. Sensor hdf service exception; &lt;br&gt; 2. Sensor service ipc exception;3. Sensor data channel exception. |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| [14500101](../errorcode-sensor.md#14500101-传感器服务异常) | Service exception. Possible causes: 1. Sensor hdf service exception; &lt;br&gt; 2. Sensor service ipc exception;3. Sensor data channel exception. |
 
 ## 示例
 
+ArkTS-Dyn示例：
+
 ```TypeScript
-import { sensor } from '@kit.SensorServiceKit';
 import { BusinessError } from '@kit.BasicServicesKit';
+import { sensor } from '@kit.SensorServiceKit';
 
 // 使用try catch对可能出现的异常进行捕获
 try {
@@ -115,6 +144,32 @@ try {
   ]
   const promise = sensor.getInclination(inclinationMatrix);
   promise.then((data: number) => {
+    console.info('Succeeded in getting inclination: ' + data);
+  }, (err: BusinessError) => {
+    console.error(`Failed to get inclination. Code: ${err.code}, message: ${err.message}`);
+  });
+} catch (error) {
+  let e: BusinessError = error as BusinessError;
+  console.error(`Failed to get inclination. Code: ${e.code}, message: ${e.message}`);
+}
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+import { sensor } from '@kit.SensorServiceKit';
+
+// 使用try catch对可能出现的异常进行捕获
+try {
+  // inclinationMatrix可以为3*3，或者4*4
+  let inclinationMatrix = [
+    1, 0, 0,
+    0, 1, 0,
+    0, 0, 1
+  ]
+  const promise = sensor.getInclination(inclinationMatrix);
+  promise.then((data: double) => {
     console.info('Succeeded in getting inclination: ' + data);
   }, (err: BusinessError) => {
     console.error(`Failed to get inclination. Code: ${err.code}, message: ${err.message}`);

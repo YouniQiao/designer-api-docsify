@@ -1,6 +1,6 @@
 # BluetoothAndNearlinkPreferredRecordCategory
 
-表示在使用蓝牙或星闪进行录音时，应用程序的设备偏好分类枚举。
+Enumerates the preferred device categories available for recording with Bluetooth or NearLink.
 
 **Since:** 21
 
@@ -16,7 +16,7 @@
 PREFERRED_NONE = 0
 ```
 
-无指定设备偏好。
+No specific device preference.
 
 **Since:** 21
 
@@ -32,7 +32,7 @@ PREFERRED_NONE = 0
 PREFERRED_DEFAULT = 1
 ```
 
-更偏好使用蓝牙或星闪录音，是否使用低延迟或高质量录音取决于系统。
+Prefers using Bluetooth or NearLink devices for recording; whether to use low-latency or high-quality recording depends on the system.
 
 **Since:** 21
 
@@ -48,7 +48,7 @@ PREFERRED_DEFAULT = 1
 PREFERRED_LOW_LATENCY = 2
 ```
 
-更偏好使用蓝牙或星闪低延迟模式进行录音。
+Prefers using Bluetooth or NearLink devices in low-latency mode for recording.
 
 **Since:** 21
 
@@ -64,7 +64,7 @@ PREFERRED_LOW_LATENCY = 2
 PREFERRED_HIGH_QUALITY = 3
 ```
 
-更偏好使用蓝牙或星闪高质量模式进行录音。
+Prefers using Bluetooth or NearLink devices in high-quality mode for recording.
 
 **Since:** 21
 

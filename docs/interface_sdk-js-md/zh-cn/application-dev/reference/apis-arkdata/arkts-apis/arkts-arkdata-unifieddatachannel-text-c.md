@@ -14,12 +14,6 @@
 
 **系统能力：** SystemCapability.DistributedDataManager.UDMF.Core
 
-## 导入模块
-
-```TypeScript
-import { unifiedDataChannel } from 'kits/@kit.ArkData';
-```
-
 ## details
 
 ```TypeScript
@@ -38,7 +32,7 @@ details?: Record<string, string>
 
 的数据对象，用于描述一篇文章。非必填字段，默认值为空字典对象。
 
-**类型：** [Record](../../apis-default/arkts-apis/arkts-record-t.md)&lt;string, string&gt;
+**类型：** Record&lt;string, string&gt;
 
 **起始版本：** 10
 

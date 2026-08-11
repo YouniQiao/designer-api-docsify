@@ -1,6 +1,6 @@
 # ModuleAbilityInfo (System API)
 
-module包含的ability组件信息。
+ModuleAbilityInfo: the ability info of a module.
 
 **Since:** 9
 
@@ -18,7 +18,8 @@ module包含的ability组件信息。
 readonly exported: boolean
 ```
 
-表示ability是否可以被其它应用调用。true表示可以被其它应用调用，false表示不可以被其它应用调用。
+Whether the ability can be invoked by other applications. **true** if it can be invoked by other applications,  
+**false** otherwise.
 
 **Type:** boolean
 
@@ -38,7 +39,7 @@ readonly exported: boolean
 readonly forms: Array<AbilityFormInfo>
 ```
 
-卡片信息。
+Widget information.
 
 **Type:** Array&lt;AbilityFormInfo&gt;
 
@@ -58,7 +59,7 @@ readonly forms: Array<AbilityFormInfo>
 readonly label: string
 ```
 
-表示ability对用户显示的名称，标签值配置为该名称的资源索引以支持多语言。
+Name of the ability displayed to users. The value is a resource index to names in multiple languages.
 
 **Type:** string
 
@@ -78,7 +79,7 @@ readonly label: string
 readonly name: string
 ```
 
-表示当前ability的名称，该名称在整个应用要唯一。
+Name of the ability. The name must be unique in the bundle.
 
 **Type:** string
 

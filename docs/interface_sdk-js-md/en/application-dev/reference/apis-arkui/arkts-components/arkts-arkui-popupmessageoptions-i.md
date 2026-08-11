@@ -1,10 +1,10 @@
 # PopupMessageOptions
 
-气泡文本的样式。
+Describes the popup message text style.
 
-**Since:** 11
+**Since:** 10
 
-**ArkTS mode:** ArkTS-Dyn only, since version 11.
+**ArkTS mode:** ArkTS-Dyn only, since version 10.
 
 <!--Device-unnamed-declare interface PopupMessageOptions--><!--Device-unnamed-declare interface PopupMessageOptions-End-->
 
@@ -16,11 +16,11 @@
 font?: Font
 ```
 
-设置气泡信息字体属性。
+Font settings of the popup message.
 
-**说明：**
+**NOTE：**
 
-1. 不支持设置family。2. Font中的weight属性不支持传入number类型。
+1. Setting **family** is not supported.2. The **weight** attribute in **Font** does not support the number type.
 
 **Type:** [Font](../arkts-apis/arkts-arkui-font-i.md)
 
@@ -42,7 +42,7 @@ font?: Font
 textColor?: ResourceColor
 ```
 
-设置气泡信息文本颜色。
+Text color of the popup message.
 
 **Type:** [ResourceColor](../arkts-apis/arkts-arkui-resourcecolor-t.md)
 

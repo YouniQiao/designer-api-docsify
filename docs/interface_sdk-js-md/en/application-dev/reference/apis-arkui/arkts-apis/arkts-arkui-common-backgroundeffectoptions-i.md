@@ -1,6 +1,6 @@
 # BackgroundEffectOptions
 
-背景效果参数。
+Defines the options of BackgroundEffect
 
 **Since:** 23
 
@@ -16,7 +16,7 @@
 adaptiveColor?: AdaptiveColor
 ```
 
-背景模糊效果使用的取色模式，默认为DEFAULT。使用AVERAGE时color必须带有透明度，取色模式才生效。
+Define the adaptiveColor of BackgroundEffect.
 
 **Type:** [AdaptiveColor](arkts-arkui-common-adaptivecolor-e.md)
 
@@ -38,7 +38,7 @@ adaptiveColor?: AdaptiveColor
 blurOptions?: BlurOptions
 ```
 
-灰阶模糊参数，默认为[0,0]。
+Define the blurOptions of BackgroundEffect.
 
 **Type:** [BlurOptions](../arkts-components/arkts-arkui-bluroptions-i.md)
 
@@ -60,7 +60,7 @@ blurOptions?: BlurOptions
 brightness?: double
 ```
 
-亮度，取值范围：[0, +∞)，默认为1。推荐取值范围：[0, 2]。
+Brightness.&lt;br&gt;Value range: [0, +∞).&lt;br&gt;Default value: **1** Recommended value range: [0, 2].
 
 **Type:** double
 
@@ -82,7 +82,7 @@ brightness?: double
 color?: ResourceColor
 ```
 
-颜色，默认透明色。
+Color.
 
 **Type:** [ResourceColor](arkts-arkui-resourcecolor-t.md)
 
@@ -104,7 +104,7 @@ color?: ResourceColor
 inactiveColor?: ResourceColor
 ```
 
-模糊不生效时使用的背景色。该参数需配合policy参数使用。当policy使模糊失效时，控件模糊效果会被移除，如果设置了inactiveColor会使用inactiveColor作为控件背景色。
+Color of the background effect when the window is not focused.
 
 **Type:** [ResourceColor](arkts-arkui-resourcecolor-t.md)
 
@@ -126,9 +126,7 @@ inactiveColor?: ResourceColor
 policy?: BlurStyleActivePolicy
 ```
 
-模糊激活策略。
-
-默认值：BlurStyleActivePolicy.ALWAYS_ACTIVE
+Defines the policy for activating the blur style.
 
 **Type:** [BlurStyleActivePolicy](../arkts-components/arkts-arkui-blurstyleactivepolicy-e.md)
 
@@ -150,7 +148,7 @@ policy?: BlurStyleActivePolicy
 radius: double | undefined
 ```
 
-模糊半径，取值范围：[0, +∞)，默认为0。
+Blur radius. Undefined value means 0.Value range: [0, +∞).Default value: **0**.
 
 **Type:** double \| undefined
 
@@ -170,7 +168,7 @@ radius: double | undefined
 saturation?: double
 ```
 
-饱和度，取值范围：[0, +∞)，默认为1。推荐取值范围：[0, 50]。
+Saturation.Value range: [0, +∞).Recommended value range: [0, 50].
 
 **Type:** double
 

@@ -18,7 +18,7 @@ Component is an Annotation to define a custom component using state management V
 poolAccepts: string[] = []
 ```
 
-要重用的自定义组件的集合。
+Collection of custom components to be reused.
 
 **Type:** string[]
 
@@ -38,7 +38,7 @@ poolAccepts: string[] = []
 reusePool: ReusePoolOwnership = ReusePoolOwnership.OFF
 ```
 
-自定义组件的重用类型。默认值为OFF。
+the reuse type of a custom component. Default value is OFF.
 
 **Type:** [ReusePoolOwnership](arkts-arkui-customcomponent-reusepoolownership-e.md)
 

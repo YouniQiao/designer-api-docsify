@@ -6,26 +6,26 @@
 
 | Name | Description |
 | --- | --- |
-| [SectionOptions](arkts-arkui-waterflow-sectionoptions-c.md) | 描述瀑布流项分组的配置信息。 |
-| [WaterFlowSections](arkts-arkui-waterflow-waterflowsections-c.md) | 瀑布流分组信息。 |
+| [SectionOptions](arkts-arkui-waterflow-sectionoptions-c.md) | Describes the configuration of the water flow item section. |
+| [WaterFlowSections](arkts-arkui-waterflow-waterflowsections-c.md) | Describes the water flow item sections. |
 
 ### Interfaces
 
 | Name | Description |
 | --- | --- |
-| [UIWaterFlowEvent](arkts-arkui-waterflow-uiwaterflowevent-i.md) | frameNode中[getEvent('WaterFlow')](../../../reference/apis-arkui/js-apis-arkui-frameNode.md#geteventwaterflow19)方法的返回值，可用于给WaterFlow节点设置滚动事件。  UIWaterFlowEvent继承于[UIScrollableCommonEvent](arkts-arkui-common-uiscrollablecommonevent-i.md)。 |
-| [WaterFlowOptions](arkts-arkui-waterflow-waterflowoptions-i.md) | 提供瀑布流组件的参数。 |
+| [UIWaterFlowEvent](arkts-arkui-waterflow-uiwaterflowevent-i.md) | Defines a UIWaterFlowEvent which is used to set event to target component. |
+| [WaterFlowOptions](arkts-arkui-waterflow-waterflowoptions-i.md) | Provides parameters of the &lt;em&gt;WaterFlow&lt;/em&gt; component. |
 
 ### Enums
 
 | Name | Description |
 | --- | --- |
-| [WaterFlowLayoutMode](arkts-arkui-waterflow-waterflowlayoutmode-e.md) | 声明瀑布流的布局模式。 |
+| [WaterFlowLayoutMode](arkts-arkui-waterflow-waterflowlayoutmode-e.md) | Declare layout modes of WaterFlow. |
 
 ### Types
 
 | Name | Description |
 | --- | --- |
-| [GetItemMainSizeByIndex](arkts-arkui-getitemmainsizebyindex-t.md) | 根据index获取指定Item的主轴大小。 |
-| [OnWaterFlowScrollIndexCallback](arkts-arkui-onwaterflowscrollindexcallback-t.md) | WaterFlow组件可见区域item变化事件的回调类型。 |
+| [GetItemMainSizeByIndex](arkts-arkui-getitemmainsizebyindex-t.md) | function that returns item main size by index. |
+| [OnWaterFlowScrollIndexCallback](arkts-arkui-onwaterflowscrollindexcallback-t.md) | Defines the callback type used in onScrollIndex. |
 

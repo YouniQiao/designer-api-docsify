@@ -1,6 +1,6 @@
 # FontWeightConfigs
 
-字体粗细配置项。当传入该配置对象时（包括空对象{}），未显式设置的属性将使用默认值。当传入null或undefined时，不应用默认值，字体粗细行为与父组件文本保持一致。
+Defines font weight configurations. When the configuration object (including an empty object **{}**) is passed, the default values are used for properties that are not explicitly set. When **null** or **undefined** is passed, default values are not applied, and the font weight behavior is consistent with that of the parent component text.
 
 **Since:** 24
 
@@ -16,13 +16,13 @@
 enableDeviceFontWeightCategory?: boolean
 ```
 
-是否随设备的字体粗细级别自动更新字重。
+Whether to automatically synchronize the font weight with the device's font weight setting.
 
-默认值：true 
+Default value: **true**
 
-true：当设备的字体粗细级别发生变化时，字重会自动更新。
+**true**: The font weight is automatically synchronized when the device's font weight setting changes.
 
-false：当设备的字体粗细级别发生变化时，字重不会自动更新。
+**false**: The font weight is not automatically synchronized when the device's font weight setting changes.
 
 **Type:** boolean
 
@@ -44,13 +44,15 @@ false：当设备的字体粗细级别发生变化时，字重不会自动更新
 enableVariableFontWeight?: boolean
 ```
 
-是否启用可变字重调节。当设置字体粗细的值weight为[100, 900]内非整百数值时，enableVariableFontWeight用于设置weight的值是否生效。
+Whether to enable variable font weight adjustment. When **weight** is set to a non-multiple of 100 within  
+[100, 900], **enableVariableFontWeight** is used to set whether the **weight** value takes effect.
 
-默认值：false 
+Default value: **false**
 
-true：启用可变字重调节。此时如果weight取值为[100, 900]范围内任意整数，字重取值为weight，否则取默认值400。
+**true**: Enable variable font weight adjustment. If the value of **weight** is any integer within [100, 900],the value is used. Otherwise, the default value **400** is used.
 
-false：禁用可变字重调节。此时如果weight取值为[100, 900]范围内的整百数值，字重取值为weight；weight是非整百数值时，字重取默认值400。
+**false**: Disable variable font weight adjustment. If the value of **weight** is a multiple of 100 within  
+[100, 900], the value is used. If **weight** is a non-multiple of 100, the default value **400** is used.
 
 **Type:** boolean
 

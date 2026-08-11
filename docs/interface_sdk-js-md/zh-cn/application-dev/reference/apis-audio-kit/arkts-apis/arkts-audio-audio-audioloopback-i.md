@@ -21,12 +21,6 @@
 
 **系统能力：** SystemCapability.Multimedia.Audio.Capturer
 
-## 导入模块
-
-```TypeScript
-import { audio } from 'kits/@kit.AudioKit';
-```
-
 ## enable
 
 ```TypeScript
@@ -61,8 +55,8 @@ enable(enable: boolean): Promise<boolean>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 6800101 | Parameter verification failed. |
-| 201 | Permission denied. |
+| [6800101](../errorcode-audio.md#6800101-无效入参) | Parameter verification failed. |
+| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
 
 ## getEqualizerPreset
 
@@ -235,7 +229,7 @@ off(type: 'statusChange', callback?: Callback<AudioLoopbackStatus>): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 6800101 | Parameter verification failed. |
+| [6800101](../errorcode-audio.md#6800101-无效入参) | Parameter verification failed. |
 
 ## offStatusChange
 
@@ -263,7 +257,7 @@ Unsubscribes audio loopback status change event callback.
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 6800101 | Parameter verification failed. |
+| [6800101](../errorcode-audio.md#6800101-无效入参) | Parameter verification failed. |
 
 ## on('statusChange')
 
@@ -292,7 +286,7 @@ on(type: 'statusChange', callback: Callback<AudioLoopbackStatus>): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 6800101 | Parameter verification failed. |
+| [6800101](../errorcode-audio.md#6800101-无效入参) | Parameter verification failed. |
 
 ## onStatusChange
 
@@ -320,7 +314,7 @@ Subscribes to audio loopback status changes.
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 6800101 | Parameter verification failed. |
+| [6800101](../errorcode-audio.md#6800101-无效入参) | Parameter verification failed. |
 
 ## setEqualizerPreset
 
@@ -354,7 +348,7 @@ setEqualizerPreset(preset: AudioLoopbackEqualizerPreset): boolean
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 6800101 | Parameter verification failed. |
+| [6800101](../errorcode-audio.md#6800101-无效入参) | Parameter verification failed. |
 
 ## setReverbPreset
 
@@ -388,7 +382,7 @@ setReverbPreset(preset: AudioLoopbackReverbPreset): boolean
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 6800101 | Parameter verification failed. |
+| [6800101](../errorcode-audio.md#6800101-无效入参) | Parameter verification failed. |
 
 ## setVolume
 
@@ -428,5 +422,5 @@ setVolume(volume: double): Promise<void>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 6800101 | Parameter verification failed, form 0.0 to 1.0. |
+| [6800101](../errorcode-audio.md#6800101-无效入参) | Parameter verification failed, form 0.0 to 1.0. |
 

@@ -118,7 +118,7 @@ transition?: TransitionEffect
 
 详细描述见[TransitionEffect](arkts-arkui-transitioneffect-c.md)对象说明。
 
-**类型：** [TransitionEffect](../arkts-apis/arkts-arkui-common-transitioneffect-c.md)
+**类型：** [TransitionEffect](arkts-arkui-transitioneffect-c.md)
 
 **起始版本：** 12
 

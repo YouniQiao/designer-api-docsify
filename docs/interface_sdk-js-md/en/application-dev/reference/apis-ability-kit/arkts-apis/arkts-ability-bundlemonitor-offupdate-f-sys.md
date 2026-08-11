@@ -12,7 +12,7 @@ import { bundleMonitor } from 'kits/@kit.AbilityKit';
 function offUpdate(callback?: Callback<BundleChangedInfo>): void
 ```
 
-注销监听应用的更新。
+Unregister update listener.
 
 **Since:** 23
 
@@ -30,12 +30,12 @@ function offUpdate(callback?: Callback<BundleChangedInfo>): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;BundleChangedInfo&gt; | No | 注销监听的AsyncCallback，默认值：注销当前事件的所有callback。 |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;BundleChangedInfo&gt; | No | Indicates the callback to be unregistered. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 201 | Permission denied. |
-| 202 | Permission denied, non-system app called system api. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission denied, non-system app called system api. |
 

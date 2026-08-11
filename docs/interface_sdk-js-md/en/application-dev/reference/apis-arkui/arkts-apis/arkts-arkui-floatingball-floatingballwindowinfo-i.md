@@ -1,6 +1,6 @@
 # FloatingBallWindowInfo
 
-闪控球窗口信息。
+Describes the floating ball window information.
 
 **Since:** 20
 
@@ -22,7 +22,7 @@ import { floatingBall } from 'kits/@kit.ArkUI';
 readonly windowId: int
 ```
 
-闪控球窗口ID。取值范围为全体整数。
+ID of the floating ball window.The value range is all integers.
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 

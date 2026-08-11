@@ -6,7 +6,7 @@
 function setInterval(func: Function, delayMs: int | null | undefined, ...args: FixedArray<Any>): int
 ```
 
-按照delayMs间隔重复调用回调函数。首次调用将在delayMs之后执行。
+Repeatedly call the function with delayMs interval between calls. The first call will be after delayMs.
 
 **Since:** 24
 
@@ -22,13 +22,13 @@ function setInterval(func: Function, delayMs: int | null | undefined, ...args: F
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| func | Function | Yes | 要执行的回调函数。 |
-| delayMs | int \| null \| undefined | Yes | 超时时间，单位为毫秒（ms）， 如果传入null或undefined，将视为0毫秒。 |
-| args | FixedArray&lt;Any&gt; | Yes | 传递给func的参数。 |
+| func | Function | Yes | The function to be executed. |
+| delayMs | int \| null \| undefined | Yes | Timeout in milliseconds (ms), if pass null or undefined will be treated as 0 milliseconds. |
+| args | FixedArray&lt;Any&gt; | Yes | Parameters passed to func. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| int | 返回定时器ID。 |
+| int | Returns the timer ID. |
 

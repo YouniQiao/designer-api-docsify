@@ -4,7 +4,7 @@
 export type ListForEachCb<T> = (value: T, index: int, list: List<T>) => void
 ```
 
-List的回调函数类型。
+The type of List callback function.
 
 **Since:** 23
 
@@ -20,7 +20,7 @@ List的回调函数类型。
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | T | Yes | 当前元素的值。 |
-| index | int | Yes | 当前元素的下标。 该值为整数。 |
-| list | [List](arkts-arkts-util-list-list-c.md)&lt;T&gt; | Yes | 当前正在遍历的List实例。 |
+| value | T | Yes | The value of current element |
+| index | int | Yes | The index of current element The value should be an integer. |
+| list | [List](arkts-arkts-util-list-list-c.md)&lt;T&gt; | Yes | The List instance being traversed |
 

@@ -1,6 +1,6 @@
 # KeyEvent
 
-按键注入描述信息。
+Defines the key event to inject.
 
 **Since:** 8
 
@@ -22,9 +22,9 @@ import { inputEventClient } from 'kits/@kit.InputKit';
 isIntercepted: boolean
 ```
 
-按键是否可以被拦截。
+Whether the key event can be intercepted.
 
-true表示可以被拦截，false表示不可被拦截。
+The value **true** indicates that the key event can be intercepted, and the value **false** indicates the opposite.
 
 **Type:** boolean
 
@@ -42,9 +42,9 @@ true表示可以被拦截，false表示不可被拦截。
 isPressed: boolean
 ```
 
-按键是否按下。
+Whether the key is pressed.
 
-true表示按键按下，false表示按键抬起。
+The value **true** indicates that the key is pressed, and the value **false** indicates that the key is released.
 
 **Type:** boolean
 
@@ -62,7 +62,7 @@ true表示按键按下，false表示按键抬起。
 keyCode: int
 ```
 
-按键键值。当前仅支持返回键/KEYCODE_BACK键。
+Key code. Currently, only the **KEYCODE_BACK** key is supported.
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
@@ -80,7 +80,7 @@ keyCode: int
 keyDownDuration: int
 ```
 
-按键按下持续时间，单位为微秒（μs）。
+Duration of key press, in microseconds (μs).
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 

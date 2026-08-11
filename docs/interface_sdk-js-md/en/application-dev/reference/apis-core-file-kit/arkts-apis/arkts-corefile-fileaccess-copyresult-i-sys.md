@@ -1,6 +1,6 @@
 # CopyResult (System API)
 
-表示复制操作失败时的返回信息，复制成功时则没有返回信息。
+Defines the information returned when the file copy operation fails. If the copy operation is successful, no information is returned.
 
 **Since:** 10
 
@@ -26,7 +26,7 @@ import { fileAccess } from 'kits/@kit.CoreFileKit';
 destUri: string
 ```
 
-产生冲突的目标文件的 uri。如果非冲突导致的错误，则为空。
+URI of the conflicting file. If the error is not caused by a file conflict, **destUri** is empty.
 
 **Type:** string
 
@@ -52,7 +52,7 @@ destUri: string
 errCode: number
 ```
 
-错误码。
+Error code.
 
 **Type:** number
 
@@ -78,7 +78,7 @@ errCode: number
 errMsg: string
 ```
 
-错误信息。
+Error message.
 
 **Type:** string
 
@@ -104,7 +104,7 @@ errMsg: string
 sourceUri: string
 ```
 
-源文件(夹) uri。
+URI of the source file or directory.
 
 **Type:** string
 

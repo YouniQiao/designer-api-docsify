@@ -1,7 +1,8 @@
 # CustomData (System API)
 
-拉起模态页面时，开发者可通过[reloadInModal](arkts-ability-autofillextensioncontext-c-sys.md#reloadinmodal)接口将自定义数据传递给自动填充服务，并可通过自动填充服务的  
-[onFillRequest](./../@ohos.app.ability.AutoFillExtensionAbility:AutoFillExtensionAbility.onFillRequest)获取到该数据。
+When starting a modal page, you can transfer custom data to the autofill service through  
+[reloadInModal](arkts-ability-autofillextensioncontext-c-sys.md#reloadinmodal) and obtain the data through  
+[onFillRequest](./../@ohos.app.ability.AutoFillExtensionAbility:AutoFillExtensionAbility.onFillRequest) of the service.
 
 **Since:** 13
 
@@ -19,7 +20,7 @@
 data: Record<string, Object>
 ```
 
-拉起模态页面时传递的自定义数据，该数据为Record类型。
+Custom data transferred for starting the modal page. The data is of the Record type.
 
 **Type:** [Record](../../apis-default/arkts-apis/arkts-record-t.md)&lt;string, Object&gt;
 

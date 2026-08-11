@@ -30,7 +30,7 @@ export declare function Span(
 
 | 类型 | 说明 |
 | --- | --- |
-| [SpanAttribute](../arkts-components/arkts-arkui-span-attribute.md) |  |
+| [SpanAttribute](arkts-arkui-span-spanattribute-i.md) |  |
 
 
 ## Span
@@ -65,5 +65,5 @@ export declare function Span(
 
 | 类型 | 说明 |
 | --- | --- |
-| [SpanAttribute](../arkts-components/arkts-arkui-span-attribute.md) |  |
+| [SpanAttribute](arkts-arkui-span-spanattribute-i.md) |  |
 

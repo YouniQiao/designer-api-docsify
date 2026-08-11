@@ -1,7 +1,6 @@
 # ColorPicker
 
-取色类，用于从一张图像数据中获取它的主要颜色，适用于UI主题色提取、图片配色分析、智能配色推荐等场景，可帮助开发者基于图片内容动态生成和谐的配色方案。在调用ColorPicker的方法前，需要先通过  
-[createColorPicker](arkts-arkgraphics2d-effectkit-createcolorpicker-f.md#createcolorpicker)创建一个ColorPicker实例。
+A color picker class used to obtain the main color from image data. It is suitable for scenarios such as UI theme color extraction, image color scheme analysis, and intelligent color scheme recommendation, helping developers dynamically generate harmonious color schemes based on image content. Before calling the methods of ColorPicker, you need to create a ColorPicker instance via createColorPicker.
 
 **Since:** 9
 
@@ -23,7 +22,7 @@ import { effectKit } from 'kits/@kit.ArkGraphics2D';
 discriminatePictureLightDegree(): PictureLightDegree
 ```
 
-获取图片的明亮程度。当无法判别图片明亮程度时，返回UNKNOWN_LIGHT_COLOR_DEGREE_PICTURE。
+Discriminates the light and dark degree of the picture. When the light and dark degree cannot be determined,UNKNOWN_LIGHT_COLOR_DEGREE_PICTURE is returned.
 
 **Since:** 26.0.0
 
@@ -43,35 +42,7 @@ discriminatePictureLightDegree(): PictureLightDegree
 
 | Type | Description |
 | --- | --- |
-| [PictureLightDegree](arkts-arkgraphics2d-effectkit-picturelightdegree-e-sys.md) | 图像颜色明亮程度。 |
-
-## Examples
-
-```TypeScript
-import { image } from "@kit.ImageKit";
-import { effectKit } from "@kit.ArkGraphics2D";
-
-const color = new ArrayBuffer(96);
-let opts: image.InitializationOptions = {
-  editable: true,
-  pixelFormat: 3,
-  size: {
-    height: 4,
-    width: 6
-  }
-};
-image.createPixelMap(color, opts).then((pixelMap) => {
-  effectKit.createColorPicker(pixelMap, (error, colorPicker) => {
-    if (error) {
-      console.error('Failed to create color picker.');
-    } else {
-      console.info('Succeeded in creating color picker.');
-      let pictureLightDegree: effectKit.PictureLightDegree = colorPicker.discriminatePictureLightDegree();
-      console.info('The color light degree of the image is ' + pictureLightDegree);
-    }
-  })
-});
-```
+| [PictureLightDegree](arkts-arkgraphics2d-effectkit-picturelightdegree-e-sys.md) | Light and dark degree of the image. |
 
 ## getAlphaZeroTransparentProportion
 
@@ -85,7 +56,7 @@ ArkTS-Sta:
 getAlphaZeroTransparentProportion(): double
 ```
 
-获取图像中完全透明的像素占比。
+Obtains the proportion of fully transparent pixels with alpha=0 in the image.
 
 **Since:** 23
 
@@ -103,13 +74,13 @@ getAlphaZeroTransparentProportion(): double
 
 | Type | Description |
 | --- | --- |
-| ArkTS-Dyn: number  <br>ArkTS-Sta：double | 完全透明的像素占比，比例的取值范围为[0, 1]。 |
+| ArkTS-Dyn: number  <br>ArkTS-Sta：double | Proportion of fully transparent pixels with alpha=0. The value range is [0, 1]. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 202 | 权限校验失败，非系统应用调用系统接口。 |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
 
 ## Examples
 
@@ -125,7 +96,7 @@ let opts: image.InitializationOptions = {
     height: 4,
     width: 6
   }
-};
+}
 image.createPixelMap(color, opts).then((pixelMap) => {
   effectKit.createColorPicker(pixelMap, (error, colorPicker) => {
     if (error) {
@@ -136,7 +107,7 @@ image.createPixelMap(color, opts).then((pixelMap) => {
       console.info('Get proportion of fully transparent pixels: ' + percentage);
     }
   })
-});
+})
 ```
 
 ## getComplexityDegree
@@ -145,7 +116,7 @@ image.createPixelMap(color, opts).then((pixelMap) => {
 getComplexityDegree(): PictureComplexityDegree
 ```
 
-获取图像内容复杂度。当无法判别图像内容复杂度时，返回默认值UNKNOWN_COMPLEXITY_DEGREE_PICTURE。
+Obtains the complexity degree of the image. When the complexity degree cannot be determined, the default value UNKNOWN_COMPLEXITY_DEGREE_PICTURE is returned.
 
 **Since:** 22
 
@@ -163,13 +134,13 @@ getComplexityDegree(): PictureComplexityDegree
 
 | Type | Description |
 | --- | --- |
-| [PictureComplexityDegree](arkts-arkgraphics2d-effectkit-picturecomplexitydegree-e-sys.md) | 图像内容复杂度。 |
+| [PictureComplexityDegree](arkts-arkgraphics2d-effectkit-picturecomplexitydegree-e-sys.md) | Complexity degree of the image. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 202 | 权限校验失败，非系统应用调用系统接口。 |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
 
 ## Examples
 
@@ -185,7 +156,7 @@ let opts: image.InitializationOptions = {
     height: 4,
     width: 6
   }
-};
+}
 image.createPixelMap(color, opts).then((pixelMap) => {
   effectKit.createColorPicker(pixelMap, (error, colorPicker) => {
     if (error) {
@@ -196,7 +167,7 @@ image.createPixelMap(color, opts).then((pixelMap) => {
       console.info('The complexity degree of the image is ' + complexityDegree);
     }
   })
-});
+})
 ```
 
 ## getDeepenImmersionColor
@@ -205,7 +176,7 @@ image.createPixelMap(color, opts).then((pixelMap) => {
 getDeepenImmersionColor(): Color
 ```
 
-生成与背景色融合且比背景色更深的强沉浸感颜色，并将结果写入[Color](arkts-arkgraphics2d-effectkit-color-i.md)里。该接口通过颜色混合算法，创建一种既与背景色协调又具有更强沉浸感的颜色效果。
+Generates a stronger immersion color that merges with the background color and is deeper than the background color, and writes the result to a Color instance. This API uses a color mixing algorithm to create a color that is both harmonious with the background color and has a stronger immersive effect.
 
 **Since:** 26.0.0
 
@@ -225,35 +196,7 @@ getDeepenImmersionColor(): Color
 
 | Type | Description |
 | --- | --- |
-| [Color](../../apis-arkui/arkts-apis/arkts-arkui-enums-color-e.md) | Color实例，即图像强沉浸色对应的颜色值。当图像处理失败或无法生成沉浸色时返回null。 |
-
-## Examples
-
-```TypeScript
-import { image } from "@kit.ImageKit";
-import { effectKit } from "@kit.ArkGraphics2D";
-
-const color = new ArrayBuffer(96);
-let opts : image.InitializationOptions = {
-  editable: true,
-  pixelFormat: 3,
-  size: {
-    height: 4,
-    width: 6
-  }
-}
-image.createPixelMap(color, opts).then((pixelMap) => {
-  effectKit.createColorPicker(pixelMap, (error, colorPicker) => {
-    if (error) {
-      console.error('Failed to create color picker.');
-    } else {
-      console.info('Succeeded in creating color picker.');
-      let color = colorPicker.getDeepenImmersionColor();
-      console.info('get deepen immersion color =' + color);
-    }
-  })
-});
-```
+| [Color](../../apis-arkui/arkts-apis/arkts-arkui-enums-color-e.md) | Color value of the deepened immersion color. If the image processing fails or the immersion color cannot be generated, null is returned. |
 
 ## getImmersiveBackgroundColor
 
@@ -261,7 +204,7 @@ image.createPixelMap(color, opts).then((pixelMap) => {
 getImmersiveBackgroundColor(): Color
 ```
 
-生成能够创造沉浸式视觉效果的沉浸式背景色，并将结果写入[Color](arkts-arkgraphics2d-effectkit-color-i.md)里。该接口基于主色生成适合作为沉浸式背景的颜色值。
+Generates an immersive background color that creates an immersive visual effect, and writes the result to a Color instance. This API generates a color value suitable for use as an immersive background based on the dominant color.
 
 **Since:** 26.0.0
 
@@ -281,35 +224,7 @@ getImmersiveBackgroundColor(): Color
 
 | Type | Description |
 | --- | --- |
-| [Color](../../apis-arkui/arkts-apis/arkts-arkui-enums-color-e.md) | Color实例，即图像沉浸式背景色对应的颜色值。当图像处理失败或无法生成沉浸式背景色时返回null。 |
-
-## Examples
-
-```TypeScript
-import { image } from "@kit.ImageKit";
-import { effectKit } from "@kit.ArkGraphics2D";
-
-const color = new ArrayBuffer(96);
-let opts : image.InitializationOptions = {
-  editable: true,
-  pixelFormat: 3,
-  size: {
-    height: 4,
-    width: 6
-  }
-}
-image.createPixelMap(color, opts).then((pixelMap) => {
-  effectKit.createColorPicker(pixelMap, (error, colorPicker) => {
-    if (error) {
-      console.error('Failed to create color picker.');
-    } else {
-      console.info('Succeeded in creating color picker.');
-      let color = colorPicker.getImmersiveBackgroundColor();
-      console.info('get immersive background color =' + color);
-    }
-  })
-});
-```
+| [Color](../../apis-arkui/arkts-apis/arkts-arkui-enums-color-e.md) | Color value of the immersive background color. If the image processing fails or the immersive background color cannot be generated, null is returned. |
 
 ## getImmersiveForegroundColor
 
@@ -317,7 +232,7 @@ image.createPixelMap(color, opts).then((pixelMap) => {
 getImmersiveForegroundColor(): Color
 ```
 
-生成能够创造沉浸式视觉效果的沉浸式前景色，并将结果写入[Color](arkts-arkgraphics2d-effectkit-color-i.md)里。该接口基于主色生成适合作为沉浸式前景的颜色值。
+Generates an immersive foreground color that creates an immersive visual effect for text and content, and writes the result to a Color instance. This API generates a color value suitable for use as an immersive foreground based on the dominant color.
 
 **Since:** 26.0.0
 
@@ -337,35 +252,7 @@ getImmersiveForegroundColor(): Color
 
 | Type | Description |
 | --- | --- |
-| [Color](../../apis-arkui/arkts-apis/arkts-arkui-enums-color-e.md) | Color实例，即图像沉浸式前景色对应的颜色值。当图像处理失败或无法生成沉浸式前景色时返回null。 |
-
-## Examples
-
-```TypeScript
-import { image } from "@kit.ImageKit";
-import { effectKit } from "@kit.ArkGraphics2D";
-
-const color = new ArrayBuffer(96);
-let opts : image.InitializationOptions = {
-  editable: true,
-  pixelFormat: 3,
-  size: {
-    height: 4,
-    width: 6
-  }
-}
-image.createPixelMap(color, opts).then((pixelMap) => {
-  effectKit.createColorPicker(pixelMap, (error, colorPicker) => {
-    if (error) {
-      console.error('Failed to create color picker.');
-    } else {
-      console.info('Succeeded in creating color picker.');
-      let color = colorPicker.getImmersiveForegroundColor();
-      console.info('get immersive foreground color =' + color);
-    }
-  })
-});
-```
+| [Color](../../apis-arkui/arkts-apis/arkts-arkui-enums-color-e.md) | Color value of the immersive foreground color. If the image processing fails or the immersive foreground color cannot be generated, null is returned. |
 
 ## getMorandiShadowColor
 
@@ -373,7 +260,7 @@ image.createPixelMap(color, opts).then((pixelMap) => {
 getMorandiShadowColor(): Color
 ```
 
-从图像的主色中获取莫兰迪阴影色，并将结果写入[Color](arkts-arkgraphics2d-effectkit-color-i.md)。该接口通过特定的颜色转换算法，将主色调转换为具有莫兰迪风格的阴影色调。
+Obtains the Morandi shadow color from the dominant color of the image and writes the result to a Color instance. This API uses a specific color conversion algorithm to convert the dominant color into a Morandi style shadow tone.
 
 **Since:** 26.0.0
 
@@ -393,35 +280,7 @@ getMorandiShadowColor(): Color
 
 | Type | Description |
 | --- | --- |
-| [Color](../../apis-arkui/arkts-apis/arkts-arkui-enums-color-e.md) | Color实例，即图像莫兰迪阴影色对应的颜色值。当图像处理失败或无法获取莫兰迪阴影色时返回null。 |
-
-## Examples
-
-```TypeScript
-import { image } from "@kit.ImageKit";
-import { effectKit } from "@kit.ArkGraphics2D";
-
-const color = new ArrayBuffer(96);
-let opts : image.InitializationOptions = {
-  editable: true,
-  pixelFormat: 3,
-  size: {
-    height: 4,
-    width: 6
-  }
-}
-image.createPixelMap(color, opts).then((pixelMap) => {
-  effectKit.createColorPicker(pixelMap, (error, colorPicker) => {
-    if (error) {
-      console.error('Failed to create color picker.');
-    } else {
-      console.info('Succeeded in creating color picker.');
-      let color = colorPicker.getMorandiShadowColor();
-      console.info('get Morandi shadow color =' + color);
-    }
-  })
-});
-```
+| [Color](../../apis-arkui/arkts-apis/arkts-arkui-enums-color-e.md) | Color value of the Morandi shadow color. If the image processing fails or the Morandi shadow color cannot be obtained, null is returned. |
 
 ## getReverseColor
 
@@ -429,8 +288,7 @@ image.createPixelMap(color, opts).then((pixelMap) => {
 getReverseColor(): Color
 ```
 
-基于图像亮度判别结果生成反向颜色，并将结果写入[Color](arkts-arkgraphics2d-effectkit-color-i.md)里。根据  
-[discriminatePictureLightDegree](arkts-arkgraphics2d-effectkit-colorpicker-i-sys.md#discriminatepicturelightdegree)接口获取的图片明亮类型得到一个反色，仅极亮色图片（EXTREMELY_LIGHT_COLOR_PICTURE）类型返回黑色，其他类型返回白色。用于界面主题或对比度计算。
+Generates a reverse color based on the image brightness discrimination result, and writes the result to a Color instance. Based on the image light degree type obtained from the discriminatePictureLightDegree API,a reverse color is generated. Only the extremely light color picture (EXTREMELY_LIGHT_COLOR_PICTURE) type returns black; other types return white. It is used for UI themes or contrast calculations.
 
 **Since:** 26.0.0
 
@@ -450,35 +308,7 @@ getReverseColor(): Color
 
 | Type | Description |
 | --- | --- |
-| [Color](../../apis-arkui/arkts-apis/arkts-arkui-enums-color-e.md) | Color实例，即图像反向颜色对应的颜色值。当图像处理失败或无法生成反向颜色时返回null。 |
-
-## Examples
-
-```TypeScript
-import { image } from "@kit.ImageKit";
-import { effectKit } from "@kit.ArkGraphics2D";
-
-const color = new ArrayBuffer(96);
-let opts : image.InitializationOptions = {
-  editable: true,
-  pixelFormat: 3,
-  size: {
-    height: 4,
-    width: 6
-  }
-}
-image.createPixelMap(color, opts).then((pixelMap) => {
-  effectKit.createColorPicker(pixelMap, (error, colorPicker) => {
-    if (error) {
-      console.error('Failed to create color picker.');
-    } else {
-      console.info('Succeeded in creating color picker.');
-      let color = colorPicker.getReverseColor();
-      console.info('get reverse color =' + color);
-    }
-  })
-});
-```
+| [Color](../../apis-arkui/arkts-apis/arkts-arkui-enums-color-e.md) | Color value of the reverse color. If the image processing fails or the reverse color cannot be generated, null is returned. |
 
 ## getShadeDegree
 
@@ -486,7 +316,7 @@ image.createPixelMap(color, opts).then((pixelMap) => {
 getShadeDegree(): PictureShadeDegree
 ```
 
-获取图像颜色深浅度。当无法判别图像颜色深浅度时，返回默认值UNKNOWN_SHADE_DEGREE_PICTURE。
+Obtains the shade degree of the image. When the shade degree cannot be determined, the default value UNKNOWN_SHADE_DEGREE_PICTURE is returned.
 
 **Since:** 22
 
@@ -504,13 +334,13 @@ getShadeDegree(): PictureShadeDegree
 
 | Type | Description |
 | --- | --- |
-| [PictureShadeDegree](arkts-arkgraphics2d-effectkit-pictureshadedegree-e-sys.md) | 图像颜色深浅度。 |
+| [PictureShadeDegree](arkts-arkgraphics2d-effectkit-pictureshadedegree-e-sys.md) | Shade degree of the image. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 202 | 权限校验失败，非系统应用调用系统接口。 |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
 
 ## Examples
 
@@ -526,7 +356,7 @@ let opts: image.InitializationOptions = {
     height: 4,
     width: 6
   }
-};
+}
 image.createPixelMap(color, opts).then((pixelMap) => {
   effectKit.createColorPicker(pixelMap, (error, colorPicker) => {
     if (error) {
@@ -537,7 +367,7 @@ image.createPixelMap(color, opts).then((pixelMap) => {
       console.info('The shade degree of the image is ' + shadeDegree);
     }
   })
-});
+})
 ```
 
 ## getTopProportionColorsAndPercentage
@@ -552,7 +382,7 @@ ArkTS-Sta:
 getTopProportionColorsAndPercentage(colorCount: int): Map<Color | null, double | null>
 ```
 
-同步返回图像占比靠前的颜色值及其对应比例，个数由`colorCount`指定。
+Synchronously returns the top proportion colors and their corresponding percentages from the image, with the number specified by colorCount.
 
 **Since:** 22
 
@@ -570,19 +400,19 @@ getTopProportionColorsAndPercentage(colorCount: int): Map<Color | null, double |
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| colorCount | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | 颜色值及对应比例的个数，向下取整。在OpenHarmony 6.1之前，取值范围为[1, 10]， 取色个数大于10视为取前10个；从OpenHarmony 6.1开始，取值范围为[1, 20]，取色个数大于20视为取前20个。 |
+| colorCount | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | Number of color values and their corresponding percentages, rounded down. Before OpenHarmony 6.1, the value range is [1, 10]. If the number of colors to extract is greater than 10, the top 10 are taken. Since OpenHarmony 6.1, the value range is [1, 20]. If the number of colors to extract is greater than 20, the top 20 are taken. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| ArkTS-Dyn: Map&lt;Color \| null, number \| null&gt;  <br>ArkTS-Sta：Map&lt;Color \| null, double \| null&gt; | 图像占比前`colorCount`的颜色值与对应比例的字典，比例的取值范围为[0,1]。 - 当实际读取的特征色个数小于`colorCount`时，字典大小为实际特征色个数。 - 取色失败或取色个数小于1返回`Map()`。 |
+| ArkTS-Dyn: Map&lt;Color \| null, number \| null&gt;  <br>ArkTS-Sta：Map&lt;Color \| null, double \| null&gt; | Map of the top colorCount color values and their corresponding percentages by proportion in the image. The percentage value range is [0, 1]. - If the number of colors obtained is less than the value of colorCount, the map size is the actual number obtained. - If the colors fail to be obtained or the number of colors obtained is less than 1, Map() is returned. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 202 | 权限校验失败，非系统应用调用系统接口。 |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
 
 ## Examples
 
@@ -598,7 +428,7 @@ let opts: image.InitializationOptions = {
     height: 4,
     width: 6
   }
-};
+}
 image.createPixelMap(color, opts).then((pixelMap) => {
   effectKit.createColorPicker(pixelMap, (error, colorPicker) => {
     if (error) {
@@ -611,6 +441,6 @@ image.createPixelMap(color, opts).then((pixelMap) => {
       })
     }
   })
-});
+})
 ```
 

@@ -45,7 +45,7 @@ export declare function Image(
 ): ImageAttribute
 ```
 
-定义Image组件。
+Defines the Image component.
 
 **Since:** 26.0.0
 
@@ -61,15 +61,15 @@ export declare function Image(
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| src | [PixelMap](../arkts-components/arkts-arkui-pixelmap-t.md) \| ResourceStr \| DrawableDescriptor \| ImageContent \| undefined | Yes | 图片资源类型。 |
-| imageAIOptions | [ImageAIOptions](arkts-arkui-imageaioptions-i.md) | No | AI分析器的参数。 |
-| reloadKey | string | No | 用于图像重新加载的选项。 |
+| src | [PixelMap](../arkts-components/arkts-arkui-pixelmap-t.md) \| ResourceStr \| DrawableDescriptor \| ImageContent \| undefined | Yes | image resource type. |
+| imageAIOptions | [ImageAIOptions](arkts-arkui-imageaioptions-i.md) | No | Options for AI analyzer. |
+| reloadKey | string | No | Options for image reload. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [ImageAttribute](../arkts-components/arkts-arkui-image-attribute.md) | Image的属性。 |
+| [ImageAttribute](../arkts-components/arkts-arkui-image-attribute.md) | The attribute of the Image. |
 
 
 ## Image
@@ -81,7 +81,7 @@ export declare function Image(
 ): ImageAttribute
 ```
 
-定义Image组件。
+Defines the Image component.
 
 **Since:** 26.0.0
 
@@ -97,8 +97,8 @@ export declare function Image(
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| src | [PixelMap](../arkts-components/arkts-arkui-pixelmap-t.md) \| ResourceStr \| DrawableDescriptor \| ImageContent \| undefined | Yes | 图片资源类型。 |
-| reloadKey | string | No | 用于图像重新加载的选项。 |
+| src | [PixelMap](../arkts-components/arkts-arkui-pixelmap-t.md) \| ResourceStr \| DrawableDescriptor \| ImageContent \| undefined | Yes | image resource type. |
+| reloadKey | string | No | Options for image reload. |
 
 **Return value:**
 
@@ -113,11 +113,11 @@ export declare function Image(
 export declare function Image(style: CustomBuilderT<ImageAttribute>): ImageAttribute
 ```
 
-定义Image组件。它需要在组件属性设置开始时调用setImageOptions。它需要在组件属性设置结束时调用applyAttributeFinish。
+Defines the Image component. It requires call setImageOptions at start of the component attribute set-up.ant it requires call applyAttributeFinish at the end of the component attribute set-up.
 
-**Since:** 26.0.0
+**Since:** 26.1.0
 
-**ArkTS mode:** ArkTS-Sta only, since version 26.0.0.
+**ArkTS mode:** ArkTS-Sta only, since version 26.1.0.
 
 **Decorator:** @Builder
 
@@ -131,11 +131,11 @@ export declare function Image(style: CustomBuilderT<ImageAttribute>): ImageAttri
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| style | [CustomBuilderT](../arkts-components/arkts-arkui-custombuildert-t.md)&lt;ImageAttribute&gt; | Yes | 设置组件属性的回调。 |
+| style | [CustomBuilderT](../arkts-components/arkts-arkui-custombuildert-t.md)&lt;ImageAttribute&gt; | Yes | the callback to set up component's attribute. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [ImageAttribute](../arkts-components/arkts-arkui-image-attribute.md) | Image的属性。 |
+| [ImageAttribute](../arkts-components/arkts-arkui-image-attribute.md) | The attribute of the Image. |
 

@@ -1,6 +1,6 @@
 # HolidayManager
 
-提供解析节假日数据的能力，包括节假日判断和指定年份节假日列表获取等。
+Provide some functions to manage holidays in a country or region. Partly follows the RFC2445 standard.
 
 **Since:** 23
 
@@ -22,7 +22,7 @@ import { i18n } from 'kits/@kit.LocalizationKit';
 constructor(icsPath: String)
 ```
 
-创建HolidayManager对象，用于解析节假日数据。
+Creates a HolidayManager object for parsing holiday data.
 
 **Since:** 23
 
@@ -38,14 +38,14 @@ constructor(icsPath: String)
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| icsPath | String | Yes | 在设备上有应用读取权限的iCalendar格式的ics文件路径。iCalendar格式是一种标准的互联网日历格式，用于存储日历数据。 |
+| icsPath | String | Yes | Path of the .ics file with the read permission granted for applications. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
-| 890001 | Invalid parameter. Possible causes: Parameter verification failed. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
+| [890001](../errorcode-i18n.md#890001-parameter-error) | Invalid parameter. Possible causes: Parameter verification failed. |
 
 ## getHolidayInfoItemArray
 
@@ -53,7 +53,7 @@ constructor(icsPath: String)
 getHolidayInfoItemArray(year?: int): Array<HolidayInfoItem>
 ```
 
-获取指定年的节假日信息列表。
+Obtains the holiday information list of the specified year.
 
 **Since:** 23
 
@@ -69,20 +69,20 @@ getHolidayInfoItemArray(year?: int): Array<HolidayInfoItem>
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| year | int | No | 年，例如2023。 &lt;br&gt;默认值：当前年份。 |
+| year | int | No | &lt;br&gt;The value should be an integer. - Specified year, for example, 2023.&lt;br&gt;The default value is the current year. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Array&lt;HolidayInfoItem&gt; | 返回节假日信息列表。 |
+| Array&lt;HolidayInfoItem&gt; | Holiday information list. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
-| 890001 | Invalid parameter. Possible causes: Parameter verification failed. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
+| [890001](../errorcode-i18n.md#890001-parameter-error) | Invalid parameter. Possible causes: Parameter verification failed. |
 
 ## isHoliday
 
@@ -90,7 +90,7 @@ getHolidayInfoItemArray(year?: int): Array<HolidayInfoItem>
 isHoliday(date?: Date): boolean
 ```
 
-判断指定的日期是否是节假日。
+Determines whether the specified date is a holiday.
 
 **Since:** 23
 
@@ -106,17 +106,17 @@ isHoliday(date?: Date): boolean
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| date | Date | No | 时间日期。 &lt;br&gt;**说明：** &lt;br&gt;月份从0开始计数，0表示一月。 &lt;br&gt;默认值：当前日期。 |
+| date | Date | No | Date and time. Note: The month starts from 0. For example, 0 indicates January. The default value is the current date. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| boolean | true表示指定的日期是节假日，false表示指定的日期不是节假日。 |
+| boolean | true if the specified date is a holiday, and false otherwise. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
 

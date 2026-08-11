@@ -1,0 +1,34 @@
+# AudioSessionBehaviorFlags
+
+Enumerates audio session behavior flags.
+
+**Since:** 24
+
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 24.
+
+<!--Device-audio-enum AudioSessionBehaviorFlags--><!--Device-audio-enum AudioSessionBehaviorFlags-End-->
+
+**System capability:** SystemCapability.Multimedia.Audio.Core
+
+## VOIP_CAPTURE_MIX_WITH_OTHERS
+
+```TypeScript
+VOIP_CAPTURE_MIX_WITH_OTHERS = 0x20000000
+```
+
+Allows the VoIP capture stream of the current application to run concurrently with other existing VoIP capture streams. When a later VoIP capture stream arrives, it can interrupt the current stream.
+
+This flag only takes effect when used in{@link #AudioCapturer.setIndependentAudioSessionStrategy}.When using this flag, the permission ohos.permission.VOIP_CAPTURE_CONCURRENCY must be verified.
+
+**Since:** 26.0.0
+
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
+
+**Model restriction:** This API can be used only in the stage model.
+
+<!--Device-AudioSessionBehaviorFlags-VOIP_CAPTURE_MIX_WITH_OTHERS = 0x20000000--><!--Device-AudioSessionBehaviorFlags-VOIP_CAPTURE_MIX_WITH_OTHERS = 0x20000000-End-->
+
+**System capability:** SystemCapability.Multimedia.Audio.Core
+
+**System API:** This is a system API.
+

@@ -38,12 +38,6 @@
 
 **系统接口：** 此接口为系统接口。
 
-## 导入模块
-
-```TypeScript
-import { Context, Permissions, PermissionRequestResult } from 'kits/@kit.AbilityKit';
-```
-
 ## authorizationResults
 
 ```TypeScript
@@ -96,7 +90,7 @@ permissionNames: Array<Permissions>
 
 权限名称列表。每个元素不能为空，且长度不能超过256个字符。
 
-**类型：** Array&lt;[Permissions](arkts-ability-permissions-t.md)&gt;
+**类型：** Array&lt;Permissions&gt;
 
 **起始版本：** 26.0.0
 

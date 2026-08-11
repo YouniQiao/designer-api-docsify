@@ -1,6 +1,6 @@
 # DistortionComponentOptions (System API)
 
-空间扭曲形变选项。
+Defines the DistortionComponent constructor options.
 
 **Since:** 26.0.0
 
@@ -18,7 +18,7 @@
 distortion?: DistortionParam
 ```
 
-空间扭曲形变参数。通过指定四个角的位置关系和四条边的桶形变程度产生空间扭曲效果。
+Use spatial distortion effects.
 
 **Type:** [DistortionParam](arkts-arkui-distortioncomponent-distortionparam-i-sys.md)
 

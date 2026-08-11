@@ -10,12 +10,6 @@
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.AbilityCore
 
-## 导入模块
-
-```TypeScript
-import { AbilityLifecycleCallback } from 'kits/@kit.AbilityKit';
-```
-
 ## onAbilityBackground
 
 ```TypeScript

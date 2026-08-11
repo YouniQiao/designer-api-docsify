@@ -1,10 +1,12 @@
 # GridColOptions
 
-设置栅格列布局组件布局选项。
+Defines the options of the **GridCol** component.
 
-`span`、`offset`、`order`属性按照`xs`、`sm`、`md`、`lg`、`xl`、`xxl`的顺序具有“继承性”，未设置值的断点将会从前一个断点取值。
+The values of `span`, `offset`, and `order` attributes are inherited in the sequence of **xs**, **sm**, **md**,   
+**lg**, **xl**, and **xxl**. If no value is set for a breakpoint, the value is obtained from the previous breakpoint.
 
-API version 20之后，`span`的继承规则见[GridColColumnOption](arkts-arkui-gridcolcolumnoption-i.md)，`offset`和`order`的继承规则保持不变。
+Since API version 20, inheritance of the **span** property follows rules detailed in   
+[GridColColumnOption](arkts-arkui-gridcolcolumnoption-i.md).
 
 **Since:** 9
 
@@ -20,11 +22,11 @@ API version 20之后，`span`的继承规则见[GridColColumnOption](arkts-arkui
 offset?: number | GridColColumnOption
 ```
 
-栅格子组件相对于原本位置偏移的列数。offset为0表示不偏移。
+Number of offset columns relative to the original position of the component.
 
-取值为非负整数，默认值为0。
+The value must be a non-negative integer. Default value: **0**.
 
-非法值：按默认值处理。
+Invalid values are treated as the default value.
 
 **Type:** number \| GridColColumnOption
 
@@ -46,17 +48,17 @@ offset?: number | GridColColumnOption
 order?: number | GridColColumnOption
 ```
 
-元素的序号，根据栅格子组件的序号，从小到大对栅格子组件做排序。
+Sequence number of the component. Child components of the grid are sorted in ascending order based on their sequence numbers.
 
-取值为非负整数，默认值为0。
+The value must be a non-negative integer. Default value: **0**.
 
-非法值：按默认值处理。
+Invalid values are treated as the default value.
 
-**说明：**
+**NOTE：**
 
-当子组件不设置order或者设置相同的order，子组件按照代码顺序展示。
+If a child component shares an **order** value with another child component or does not have **order** set, it is displayed based on its code sequence number.
 
-当子组件部分设置order，部分不设置order时，未设置order的子组件依次排序靠前，设置了order的子组件按照数值从小到大排列。
+If **order** is not set for all child components, those that have **order** set are displayed after those that do not and are sorted in ascending order based on the value.
 
 **Type:** number \| GridColColumnOption
 
@@ -78,11 +80,11 @@ order?: number | GridColColumnOption
 span?: number | GridColColumnOption
 ```
 
-栅格子组件占用栅格容器组件的列数。span为0表示该元素不参与布局计算，即不会被渲染。
+Number of columns occupied by the component. If it is set to **0**, the component is not involved in layout calculation, that is, the component is not rendered.
 
-取值为非负整数，默认值为1。
+The value must be a non-negative integer. Default value: **1**.
 
-非法值：按默认值处理。
+Invalid values are treated as the default value.
 
 **Type:** number \| GridColColumnOption
 

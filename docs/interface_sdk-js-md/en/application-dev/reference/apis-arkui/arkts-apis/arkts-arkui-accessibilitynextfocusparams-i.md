@@ -1,6 +1,6 @@
 # AccessibilityNextFocusParams
 
-定义用于配置下一个可访问性焦点转换的参数的结构。
+Defines struct of the parameters used to configure the next accessibility focus transition.
 
 **Since:** 26.0.0
 
@@ -16,7 +16,7 @@
 isConsiderDescendants?: boolean
 ```
 
-descendantMode -确定焦点搜索是否应考虑在下一个可访问性焦点操作。
+isConsiderDescendants - Determines whether the focus search should consider focusable nodes within the  descendants of the target element during the next accessibility focus operation.
 
 **Type:** boolean
 

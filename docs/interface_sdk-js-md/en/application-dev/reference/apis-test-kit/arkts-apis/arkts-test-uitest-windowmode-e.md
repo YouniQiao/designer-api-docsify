@@ -1,6 +1,6 @@
 # WindowMode
 
-窗口的窗口模式。
+Enumerates the window modes.
 
 **Since:** 9
 
@@ -16,7 +16,7 @@
 FULLSCREEN = 0
 ```
 
-全屏模式。
+Full-screen mode.
 
 **Since:** 9
 
@@ -34,7 +34,7 @@ FULLSCREEN = 0
 PRIMARY = 1
 ```
 
-主窗口。
+Primary window mode.
 
 **Since:** 9
 
@@ -52,7 +52,7 @@ PRIMARY = 1
 SECONDARY = 2
 ```
 
-第二窗口。
+Secondary window mode.
 
 **Since:** 9
 
@@ -70,7 +70,7 @@ SECONDARY = 2
 FLOATING = 3
 ```
 
-浮动窗口。
+Floating window mode.
 
 **Since:** 9
 

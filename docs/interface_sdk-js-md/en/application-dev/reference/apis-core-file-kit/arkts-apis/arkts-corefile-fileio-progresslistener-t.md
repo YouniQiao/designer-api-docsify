@@ -4,7 +4,7 @@
 type ProgressListener = (progress: Progress) => void
 ```
 
-拷贝进度监听。
+Listener used to observe the copy progress.
 
 **Since:** 23
 

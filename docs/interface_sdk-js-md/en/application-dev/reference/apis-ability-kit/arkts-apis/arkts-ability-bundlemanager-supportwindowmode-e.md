@@ -1,6 +1,6 @@
 # SupportWindowMode
 
-标识该组件所支持的窗口模式。
+Enumerates the window modes supported by the ability.
 
 **Since:** 9
 
@@ -16,7 +16,7 @@
 FULL_SCREEN = 0
 ```
 
-窗口支持全屏显示。
+A window in full-screen mode is supported.
 
 **Since:** 9
 
@@ -34,7 +34,7 @@ FULL_SCREEN = 0
 SPLIT = 1
 ```
 
-窗口支持分屏显示。
+A window in split-screen mode is supported.
 
 **Since:** 9
 
@@ -52,7 +52,7 @@ SPLIT = 1
 FLOATING = 2
 ```
 
-支持窗口化显示，即显示悬浮窗口。
+A floating window is supported.
 
 **Since:** 9
 

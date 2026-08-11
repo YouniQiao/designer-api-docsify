@@ -1,7 +1,5 @@
 # PermissionOptions
 
-权限选项。
-
 **Since:** 7
 
 **ArkTS mode:** ArkTS-Dyn only, since version 7.
@@ -16,7 +14,7 @@
 pid?: number
 ```
 
-进程id。
+Process ID.
 
 **Type:** number
 
@@ -38,7 +36,7 @@ pid?: number
 uid?: number
 ```
 
-用户id。
+User ID.
 
 **Type:** number
 

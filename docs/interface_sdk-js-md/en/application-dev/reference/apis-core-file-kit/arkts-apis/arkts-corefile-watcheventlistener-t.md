@@ -4,7 +4,7 @@
 export type WatchEventListener = (event: WatchEvent) => void
 ```
 
-事件监听类，当监听的文件或目录发生变动事件时触发回调。
+Defines a watch event listener. When the monitored file or directory changes, a callback is triggered.
 
 **Since:** 23
 
@@ -18,5 +18,5 @@ export type WatchEventListener = (event: WatchEvent) => void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| event | [WatchEvent](arkts-corefile-file-fs-watchevent-i.md) | Yes | 回调的事件类。 |
+| event | [WatchEvent](arkts-corefile-file-fs-watchevent-i.md) | Yes | Event for the callback to invoke. |
 

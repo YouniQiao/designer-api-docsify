@@ -1,6 +1,6 @@
 # CommonEventSubscriber
 
-表示公共事件的订阅者。CommonEventSubscriber提供了对有序公共事件的处理能力，包括获取和设置事件传递的Code和Data数据、查询当前公共事件是否为有序或粘性公共事件、中止或清理有序公共事件的中止状态、结束对当前有序公共事件的处理，以及获取订阅者的订阅信息等，适用于订阅者需要对接收到的公共事件进行数据处理和流程控制的场景。
+Represents the subscriber of a common event. The **CommonEventSubscriber** module provides the capabilities for processing ordered common events, including obtaining and setting the data and code transferred by events, checking whether the current common event is an ordered or sticky event, terminating an ordered common event or clearing the termination status, ending the processing of the current ordered common event, and obtaining subscription information of a subscriber. This module is applicable to data processing and process control of the received common event by the subscriber.
 
 **Since:** 7
 
@@ -16,8 +16,8 @@
 abortCommonEvent(callback: AsyncCallback<void>): void
 ```
 
-添加有序公共事件的中止状态。当该接口与  
-[finishCommonEvent](arkts-basicservices-commoneventsubscriber-commoneventsubscriber-i.md#finishcommonevent)配合使用时，可以中止当前的有序公共事件，使该公共事件不再向下一个订阅者传递。使用callback异步回调。
+Aborts an ordered common event. This API is used with   
+[finishCommonEvent](arkts-basicservices-commoneventsubscriber-commoneventsubscriber-i.md#finishcommonevent). After the abort,the common event is not sent to the next subscriber. This API uses an asynchronous callback to return the result.
 
 **Since:** 7
 
@@ -31,13 +31,13 @@ abortCommonEvent(callback: AsyncCallback<void>): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | 回调函数。当添加有序公共事件中止状态成功时，err为undefined，否则为错误对象。 |
+| callback | [AsyncCallback](arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined**; otherwise, **err** is an error object. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
 
 ## abortCommonEvent
 
@@ -45,8 +45,8 @@ abortCommonEvent(callback: AsyncCallback<void>): void
 abortCommonEvent(): Promise<void>
 ```
 
-添加有序公共事件的中止状态。当该接口与  
-[finishCommonEvent](arkts-basicservices-commoneventsubscriber-commoneventsubscriber-i.md#finishcommonevent)配合使用时，可以中止当前的有序公共事件，使该公共事件不再向下一个订阅者传递。使用Promise异步回调。
+Aborts an ordered common event. This API is used with  
+[finishCommonEvent](arkts-basicservices-commoneventsubscriber-commoneventsubscriber-i.md#finishcommonevent). After the abort,the common event is not sent to the next subscriber. This API uses a promise to return the result.
 
 **Since:** 7
 
@@ -60,7 +60,7 @@ abortCommonEvent(): Promise<void>
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise对象。无返回结果的Promise对象。 |
+| Promise&lt;void&gt; | Promise that returns no value. |
 
 ## abortCommonEventSync
 
@@ -68,8 +68,8 @@ abortCommonEvent(): Promise<void>
 abortCommonEventSync(): void
 ```
 
-同步添加有序公共事件的中止状态。当该接口与  
-[finishCommonEvent](arkts-basicservices-commoneventsubscriber-commoneventsubscriber-i.md#finishcommonevent)配合使用时，可以中止当前的有序公共事件，使该公共事件不再向下一个订阅者传递。
+Aborts an ordered common event when used with  
+[finishCommonEvent](arkts-basicservices-commoneventsubscriber-commoneventsubscriber-i.md#finishcommonevent). With the abort state, the common event is not sent to the next subscriber. This API returns the result synchronously.
 
 **Since:** 10
 
@@ -85,8 +85,8 @@ abortCommonEventSync(): void
 clearAbortCommonEvent(callback: AsyncCallback<void>): void
 ```
 
-清理有序公共事件的中止状态。当该接口与  
-[finishCommonEvent](arkts-basicservices-commoneventsubscriber-commoneventsubscriber-i.md#finishcommonevent)配合使用时，可以使该公共事件继续向下一个订阅者传递。使用callback异步回调。
+Clears the abort state of an ordered common event. Use this API together with   
+[finishCommonEvent](arkts-basicservices-commoneventsubscriber-commoneventsubscriber-i.md#finishcommonevent), and the common event can be passed to the next subscriber. This API uses an asynchronous callback to return the result.
 
 **Since:** 7
 
@@ -100,13 +100,13 @@ clearAbortCommonEvent(callback: AsyncCallback<void>): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | 回调函数。当清理有序公共事件中止状态成功时，err为undefined，否则为错误对象。 |
+| callback | [AsyncCallback](arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined**; otherwise, **err** is an error object. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
 
 ## clearAbortCommonEvent
 
@@ -114,8 +114,8 @@ clearAbortCommonEvent(callback: AsyncCallback<void>): void
 clearAbortCommonEvent(): Promise<void>
 ```
 
-清理有序公共事件的中止状态。当该接口与  
-[finishCommonEvent](arkts-basicservices-commoneventsubscriber-commoneventsubscriber-i.md#finishcommonevent)配合使用时，可以使该公共事件继续向下一个订阅者传递。使用Promise异步回调。
+Clears the abort state of this ordered common event. Use this API together with   
+[finishCommonEvent](arkts-basicservices-commoneventsubscriber-commoneventsubscriber-i.md#finishcommonevent), and the common event can be passed to the next subscriber. This API uses a promise to return the result.
 
 **Since:** 7
 
@@ -129,7 +129,7 @@ clearAbortCommonEvent(): Promise<void>
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise对象。无返回结果的Promise对象。 |
+| Promise&lt;void&gt; | Promise that returns no value. |
 
 ## clearAbortCommonEventSync
 
@@ -137,8 +137,8 @@ clearAbortCommonEvent(): Promise<void>
 clearAbortCommonEventSync(): void
 ```
 
-同步清理有序公共事件的中止状态。当该接口与  
-[finishCommonEvent](arkts-basicservices-commoneventsubscriber-commoneventsubscriber-i.md#finishcommonevent)配合使用时，可以使该公共事件继续向下一个订阅者传递。
+Clears the abort state of an ordered common event when used with  
+[finishCommonEvent](arkts-basicservices-commoneventsubscriber-commoneventsubscriber-i.md#finishcommonevent). After the clearance, the common event is sent to the next subscriber. This API returns the result synchronously.
 
 **Since:** 10
 
@@ -154,7 +154,7 @@ clearAbortCommonEventSync(): void
 finishCommonEvent(callback: AsyncCallback<void>): void
 ```
 
-用于订阅者结束对当前有序公共事件的处理。使用callback异步回调。
+Finishes this ordered common event. This API uses an asynchronous callback to return the result.
 
 **Since:** 9
 
@@ -168,13 +168,13 @@ finishCommonEvent(callback: AsyncCallback<void>): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | 回调函数。当订阅者结束当前有序公共事件成功时，err为undefined，否则为错误对象。 |
+| callback | [AsyncCallback](arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback used to return the result. If the subscriber successfully finishes this ordered common event, **err** is **undefined**; otherwise, **err** is an error object. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
 
 ## finishCommonEvent
 
@@ -182,7 +182,7 @@ finishCommonEvent(callback: AsyncCallback<void>): void
 finishCommonEvent(): Promise<void>
 ```
 
-用于订阅者结束对当前有序公共事件的处理。使用Promise异步回调。
+Finishes this ordered common event. This API uses a promise to return the result.
 
 **Since:** 9
 
@@ -196,7 +196,7 @@ finishCommonEvent(): Promise<void>
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise对象。无返回结果的Promise对象。 |
+| Promise&lt;void&gt; | Promise that returns no value. |
 
 ## getAbortCommonEvent
 
@@ -204,7 +204,7 @@ finishCommonEvent(): Promise<void>
 getAbortCommonEvent(callback: AsyncCallback<boolean>): void
 ```
 
-获取当前有序公共事件是否处于中止状态。使用callback异步回调。
+Checks whether this ordered common event should be aborted. This API uses an asynchronous callback to return the result.
 
 **Since:** 7
 
@@ -218,13 +218,13 @@ getAbortCommonEvent(callback: AsyncCallback<boolean>): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](arkts-basicservices-asynccallback-t.md)&lt;boolean&gt; | Yes | 当查询成功时，err为undefined，data为true表示当前有序公共事件处于中止状态，data为false表示当前有序公共事件没有处于中止状态；否则err为错误对象。 |
+| callback | [AsyncCallback](arkts-basicservices-asynccallback-t.md)&lt;boolean&gt; | Yes | Callback used to return the result. If the query is successful, **err** is **undefined** and **data** is **true** if the current ordered common event is in the abort state, or **false** if the current ordered common event is not in the abort state. If the operation fails, **err** is an error object. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
 
 ## getAbortCommonEvent
 
@@ -232,7 +232,7 @@ getAbortCommonEvent(callback: AsyncCallback<boolean>): void
 getAbortCommonEvent(): Promise<boolean>
 ```
 
-获取当前有序公共事件是否处于中止状态。使用Promise异步回调。
+Checks whether this ordered common event should be aborted. This API uses a promise to return the result.
 
 **Since:** 7
 
@@ -246,7 +246,7 @@ getAbortCommonEvent(): Promise<boolean>
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;boolean&gt; | Promise对象。返回true表示当前有序公共事件处于中止状态；返回false表示当前有序公共事件未处于中止状态。 |
+| Promise&lt;boolean&gt; | Promise used to return the result. The **true** indicates that the ordered common event is in the abort state; the value **false** indicates otherwise. |
 
 ## getAbortCommonEventSync
 
@@ -254,7 +254,7 @@ getAbortCommonEvent(): Promise<boolean>
 getAbortCommonEventSync(): boolean
 ```
 
-同步获取当前有序公共事件是否处于中止状态。
+Checks whether an ordered common event is aborted. This API returns the result synchronously.
 
 **Since:** 10
 
@@ -268,7 +268,7 @@ getAbortCommonEventSync(): boolean
 
 | Type | Description |
 | --- | --- |
-| boolean | 返回true表示当前有序公共事件处于中止状态；返回false表示当前有序公共事件未处于中止状态。 |
+| boolean | The value **true** indicates that the ordered common event is in the abort state; the value **false** indicates otherwise. |
 
 ## getCode
 
@@ -282,7 +282,7 @@ ArkTS-Sta:
 getCode(callback: AsyncCallback<int>): void
 ```
 
-获取有序公共事件传递的数据。使用callback异步回调。
+Obtains the result code of an ordered common event. This API uses an asynchronous callback to return the result.
 
 **Since:** 7
 
@@ -298,13 +298,13 @@ getCode(callback: AsyncCallback<int>): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | ArkTS-Dyn: [AsyncCallback](arkts-basicservices-asynccallback-t.md)&lt;number&gt;  <br>ArkTS-Sta：[AsyncCallback](arkts-basicservices-asynccallback-t.md)&lt;int&gt; | Yes | 回调函数。当获取有序公共事件传递的数据成功时，err为undefined，data为获取到的数据；否则err为错误对象。 |
+| callback | ArkTS-Dyn: [AsyncCallback](arkts-basicservices-asynccallback-t.md)&lt;number&gt;  <br>ArkTS-Sta：[AsyncCallback](arkts-basicservices-asynccallback-t.md)&lt;int&gt; | Yes | Callback used to return the result. If the result code (number type) of an ordered common event is successfully obtained, **err** is **undefined**, and **data** is the code obtained; otherwise, **err** is an error object. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
 
 ## getCode
 
@@ -318,7 +318,7 @@ ArkTS-Sta:
 getCode(): Promise<int>
 ```
 
-获取有序公共事件传递的数据。使用Promise异步回调。
+Obtains the result code of an ordered common event. This API uses a promise to return the result.
 
 **Since:** 7
 
@@ -334,7 +334,7 @@ getCode(): Promise<int>
 
 | Type | Description |
 | --- | --- |
-| ArkTS-Dyn: Promise&lt;number&gt;  <br>ArkTS-Sta：Promise&lt;int&gt; | Promise对象。返回有序公共事件传递的数据。 |
+| ArkTS-Dyn: Promise&lt;number&gt;  <br>ArkTS-Sta：Promise&lt;int&gt; | Promise used to return the result code. |
 
 ## getCodeSync
 
@@ -348,7 +348,7 @@ ArkTS-Sta:
 getCodeSync(): int
 ```
 
-同步获取有序公共事件传递的数据。
+Obtains the result code of an ordered common event. This API returns the result synchronously.
 
 **Since:** 10
 
@@ -364,7 +364,7 @@ getCodeSync(): int
 
 | Type | Description |
 | --- | --- |
-| ArkTS-Dyn: number  <br>ArkTS-Sta：int | 表示有序公共事件传递的数据。 |
+| ArkTS-Dyn: number  <br>ArkTS-Sta：int | Code delivered by the ordered common event. |
 
 ## getData
 
@@ -372,7 +372,7 @@ getCodeSync(): int
 getData(callback: AsyncCallback<string>): void
 ```
 
-获取有序公共事件传递的数据。使用callback异步回调。
+Obtains the data of an ordered common event. This API uses an asynchronous callback to return the result.
 
 **Since:** 7
 
@@ -388,13 +388,13 @@ getData(callback: AsyncCallback<string>): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](arkts-basicservices-asynccallback-t.md)&lt;string&gt; | Yes | 回调函数。当获取有序公共事件传递的数据成功时，err为undefined，data为获取到的数据；否则err为错误对象。 |
+| callback | [AsyncCallback](arkts-basicservices-asynccallback-t.md)&lt;string&gt; | Yes | Callback used to return the result. If the result data (string type) of an ordered common event is successfully obtained, **err** is **undefined**, and **data** is the data obtained; otherwise, **err** is an error object. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
 
 ## getData
 
@@ -402,7 +402,7 @@ getData(callback: AsyncCallback<string>): void
 getData(): Promise<string>
 ```
 
-获取有序公共事件传递的数据。使用Promise异步回调。
+Obtains the data of an ordered common event. This API uses a promise to return the result.
 
 **Since:** 7
 
@@ -418,7 +418,7 @@ getData(): Promise<string>
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;string&gt; | Promise对象。返回有序公共事件传递的数据。 |
+| Promise&lt;string&gt; | Promise used to return the result data (string type) of an ordered common event. |
 
 ## getDataSync
 
@@ -426,7 +426,7 @@ getData(): Promise<string>
 getDataSync(): string
 ```
 
-同步获取有序公共事件传递的数据。
+Obtains the data of an ordered common event. This API returns the result synchronously.
 
 **Since:** 10
 
@@ -442,7 +442,7 @@ getDataSync(): string
 
 | Type | Description |
 | --- | --- |
-| string | 有序公共事件传递的数据。 |
+| string | Data delivered by the ordered common event. |
 
 ## getSubscribeInfo
 
@@ -450,7 +450,7 @@ getDataSync(): string
 getSubscribeInfo(callback: AsyncCallback<CommonEventSubscribeInfo>): void
 ```
 
-获取订阅者的订阅信息。使用callback异步回调。
+Obtains the subscriber information. This API uses an asynchronous callback to return the result.
 
 **Since:** 7
 
@@ -466,13 +466,13 @@ getSubscribeInfo(callback: AsyncCallback<CommonEventSubscribeInfo>): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](arkts-basicservices-asynccallback-t.md)&lt;[CommonEventSubscribeInfo](arkts-basicservices-commoneventsubscribeinfo-commoneventsubscribeinfo-i.md)&gt; | Yes | 回调函数。当获取成功时，err为undefined，data为订阅者的订阅信息；否则err为错误对象。 |
+| callback | [AsyncCallback](arkts-basicservices-asynccallback-t.md)&lt;[CommonEventSubscribeInfo](arkts-basicservices-commoneventsubscribeinfo-commoneventsubscribeinfo-i.md)&gt; | Yes | Callback used to return the result. If the subscriber information is successfully obtained, **err** is **undefined** and **data** is the subscription information of the subscriber. Otherwise, **err** is an error object. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
 
 ## getSubscribeInfo
 
@@ -480,7 +480,7 @@ getSubscribeInfo(callback: AsyncCallback<CommonEventSubscribeInfo>): void
 getSubscribeInfo(callback: AsyncCallback<CommonEventSubscribeInfo|null>): void
 ```
 
-获取订阅者的订阅信息。使用callback异步回调。
+Obtains the subscriber information. This API uses an asynchronous callback to return the result.
 
 **Since:** 23
 
@@ -494,13 +494,13 @@ getSubscribeInfo(callback: AsyncCallback<CommonEventSubscribeInfo|null>): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](arkts-basicservices-asynccallback-t.md)&lt;[CommonEventSubscribeInfo](arkts-basicservices-commoneventsubscribeinfo-commoneventsubscribeinfo-i.md) \| null&gt; | Yes | 回调函数。返回订阅者的订阅信息。 |
+| callback | [AsyncCallback](arkts-basicservices-asynccallback-t.md)&lt;[CommonEventSubscribeInfo](arkts-basicservices-commoneventsubscribeinfo-commoneventsubscribeinfo-i.md) \| null&gt; | Yes | Callback used to return the result. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
 
 ## getSubscribeInfo
 
@@ -508,7 +508,7 @@ getSubscribeInfo(callback: AsyncCallback<CommonEventSubscribeInfo|null>): void
 getSubscribeInfo(): Promise<CommonEventSubscribeInfo>
 ```
 
-获取订阅者的订阅信息。使用Promise异步回调。
+Obtains the subscriber information. This API uses a promise to return the result.
 
 **Since:** 7
 
@@ -524,7 +524,7 @@ getSubscribeInfo(): Promise<CommonEventSubscribeInfo>
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;[CommonEventSubscribeInfo](arkts-basicservices-commoneventsubscribeinfo-commoneventsubscribeinfo-i.md)&gt; | Promise对象。返回订阅者的订阅信息。 |
+| Promise&lt;[CommonEventSubscribeInfo](arkts-basicservices-commoneventsubscribeinfo-commoneventsubscribeinfo-i.md)&gt; | Promise used to return the result. |
 
 ## getSubscribeInfo
 
@@ -532,7 +532,7 @@ getSubscribeInfo(): Promise<CommonEventSubscribeInfo>
 getSubscribeInfo(): Promise<CommonEventSubscribeInfo|null>
 ```
 
-获取订阅者的订阅信息。使用Promise异步回调。
+Obtains the subscriber information. This API uses a promise to return the result.
 
 **Since:** 23
 
@@ -546,7 +546,7 @@ getSubscribeInfo(): Promise<CommonEventSubscribeInfo|null>
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;[CommonEventSubscribeInfo](arkts-basicservices-commoneventsubscribeinfo-commoneventsubscribeinfo-i.md) \| null&gt; | Promise对象。返回订阅者的订阅信息。 |
+| Promise&lt;[CommonEventSubscribeInfo](arkts-basicservices-commoneventsubscribeinfo-commoneventsubscribeinfo-i.md) \| null&gt; | Promise used to return the result. |
 
 ## getSubscribeInfoSync
 
@@ -554,7 +554,7 @@ getSubscribeInfo(): Promise<CommonEventSubscribeInfo|null>
 getSubscribeInfoSync(): CommonEventSubscribeInfo
 ```
 
-同步获取订阅者的订阅信息。
+Obtains the subscriber information. This API returns the result synchronously.
 
 **Since:** 10
 
@@ -570,7 +570,7 @@ getSubscribeInfoSync(): CommonEventSubscribeInfo
 
 | Type | Description |
 | --- | --- |
-| [CommonEventSubscribeInfo](arkts-basicservices-commoneventsubscribeinfo-commoneventsubscribeinfo-i.md) | 表示订阅者的订阅信息。 |
+| [CommonEventSubscribeInfo](arkts-basicservices-commoneventsubscribeinfo-commoneventsubscribeinfo-i.md) | Subscriber information. |
 
 ## getSubscribeInfoSync
 
@@ -578,7 +578,7 @@ getSubscribeInfoSync(): CommonEventSubscribeInfo
 getSubscribeInfoSync(): CommonEventSubscribeInfo|null
 ```
 
-同步获取订阅者的订阅信息。
+Obtains the subscriber information. This API returns the result synchronously.
 
 **Since:** 23
 
@@ -592,7 +592,7 @@ getSubscribeInfoSync(): CommonEventSubscribeInfo|null
 
 | Type | Description |
 | --- | --- |
-| [CommonEventSubscribeInfo](arkts-basicservices-commoneventsubscribeinfo-commoneventsubscribeinfo-i.md) | 表示订阅者的订阅信息。 |
+| [CommonEventSubscribeInfo](arkts-basicservices-commoneventsubscribeinfo-commoneventsubscribeinfo-i.md) | Subscriber information. |
 
 ## isOrderedCommonEvent
 
@@ -600,7 +600,7 @@ getSubscribeInfoSync(): CommonEventSubscribeInfo|null
 isOrderedCommonEvent(callback: AsyncCallback<boolean>): void
 ```
 
-查询当前公共事件是否为有序公共事件。使用callback异步回调。
+Checks whether the current common event is an ordered common event. This API uses an asynchronous callback to return the result.
 
 **Since:** 7
 
@@ -614,13 +614,13 @@ isOrderedCommonEvent(callback: AsyncCallback<boolean>): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](arkts-basicservices-asynccallback-t.md)&lt;boolean&gt; | Yes | 回调函数。当查询成功时，err为undefined，data为true表示有序公共事件，data为false表示不是有序公共事件；否则err为错误对象。 |
+| callback | [AsyncCallback](arkts-basicservices-asynccallback-t.md)&lt;boolean&gt; | Yes | Callback used to return the result. If the query is successful, **err** is **undefined**. If **data** is **true**, the common event is ordered; if **data** is **false**, the common event is not ordered. Otherwise, **err** is an error object. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
 
 ## isOrderedCommonEvent
 
@@ -628,7 +628,7 @@ isOrderedCommonEvent(callback: AsyncCallback<boolean>): void
 isOrderedCommonEvent(): Promise<boolean>
 ```
 
-查询当前公共事件是否为有序公共事件。使用Promise异步回调。
+Checks whether the current common event is an ordered common event. This API uses a promise to return the result.
 
 **Since:** 7
 
@@ -642,7 +642,7 @@ isOrderedCommonEvent(): Promise<boolean>
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;boolean&gt; | Promise对象。返回true表示有序公共事件；返回false表示无序公共事件。 |
+| Promise&lt;boolean&gt; | Promise used to return the result. Returns **true** if the common event is an ordered one; returns **false** if the common event is an unordered one. |
 
 ## isOrderedCommonEventSync
 
@@ -650,7 +650,7 @@ isOrderedCommonEvent(): Promise<boolean>
 isOrderedCommonEventSync(): boolean
 ```
 
-同步查询当前公共事件是否为有序公共事件。
+Checks whether a common event is an ordered one. This API returns the result synchronously.
 
 **Since:** 10
 
@@ -664,7 +664,7 @@ isOrderedCommonEventSync(): boolean
 
 | Type | Description |
 | --- | --- |
-| boolean | 返回true表示有序公共事件；返回false表示无序公共事件。 |
+| boolean | Returns **true** if the common event is an ordered one; returns **false** if the common event is an unordered one. |
 
 ## isStickyCommonEvent
 
@@ -672,7 +672,7 @@ isOrderedCommonEventSync(): boolean
 isStickyCommonEvent(callback: AsyncCallback<boolean>): void
 ```
 
-查询当前公共事件是否为一个粘性公共事件。使用callback异步回调。
+Checks whether the current common event is a sticky common event. This API uses an asynchronous callback to return the result.
 
 **Since:** 7
 
@@ -686,13 +686,13 @@ isStickyCommonEvent(callback: AsyncCallback<boolean>): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](arkts-basicservices-asynccallback-t.md)&lt;boolean&gt; | Yes | 回调函数。当查询成功时，err为undefined，data为true表示是粘性公共事件，data为false表示不是粘性公共事件；否则err为错误对象。 |
+| callback | [AsyncCallback](arkts-basicservices-asynccallback-t.md)&lt;boolean&gt; | Yes | Callback used to return the result. If the query is successful, **err** is **undefined**. If **data** is **true**, the common event is sticky; if **data** is **false**, the common event is not sticky. Otherwise, **err** is an error object. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
 
 ## isStickyCommonEvent
 
@@ -700,7 +700,7 @@ isStickyCommonEvent(callback: AsyncCallback<boolean>): void
 isStickyCommonEvent(): Promise<boolean>
 ```
 
-查询当前公共事件是否为一个粘性公共事件。使用Promise异步回调。
+Checks whether the current common event is a sticky common event. This API uses a promise to return the result.
 
 **Since:** 7
 
@@ -714,7 +714,7 @@ isStickyCommonEvent(): Promise<boolean>
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;boolean&gt; | Promise对象。返回true表示是粘性公共事件；返回false表示不是粘性公共事件。 |
+| Promise&lt;boolean&gt; | Promise used to return the result. Returns **true** if the common event is a sticky one; returns **false** otherwise. |
 
 ## isStickyCommonEventSync
 
@@ -722,7 +722,7 @@ isStickyCommonEvent(): Promise<boolean>
 isStickyCommonEventSync(): boolean
 ```
 
-同步检查当前公共事件是否为一个粘性公共事件。
+Checks whether the current common event is a sticky common event. This API returns the result synchronously.
 
 **Since:** 10
 
@@ -736,7 +736,7 @@ isStickyCommonEventSync(): boolean
 
 | Type | Description |
 | --- | --- |
-| boolean | 返回true表示是粘性公共事件；返回false表示不是粘性公共事件。 |
+| boolean | Returns **true** if the common event is a sticky one; returns **false** otherwise. |
 
 ## setCode
 
@@ -750,7 +750,7 @@ ArkTS-Sta:
 setCode(code: int, callback: AsyncCallback<void>): void
 ```
 
-设置有序公共事件传递的数据。使用callback异步回调。
+Sets the code of an ordered common event. This API uses an asynchronous callback to return the result.
 
 **Since:** 7
 
@@ -766,14 +766,14 @@ setCode(code: int, callback: AsyncCallback<void>): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| code | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | 有序公共事件传递的数据。 |
-| callback | [AsyncCallback](arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | 回调函数。当设置有序公共事件传递的数据成功时，err为undefined，否则为错误对象。 |
+| code | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | Code delivered by the ordered common event. |
+| callback | [AsyncCallback](arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined**; otherwise, **err** is an error object. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
 
 ## setCode
 
@@ -787,7 +787,7 @@ ArkTS-Sta:
 setCode(code: int): Promise<void>
 ```
 
-设置有序公共事件传递的数据。使用Promise异步回调。
+Sets the result code of an ordered common event. This API uses a promise to return the result.
 
 **Since:** 7
 
@@ -803,19 +803,19 @@ setCode(code: int): Promise<void>
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| code | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | 有序公共事件传递的数据。 |
+| code | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | Code delivered by the ordered common event. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise对象。无返回结果的Promise对象。 |
+| Promise&lt;void&gt; | Promise that returns no value. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
 
 ## setCodeAndData
 
@@ -829,7 +829,7 @@ ArkTS-Sta:
 setCodeAndData(code: int, data: string, callback: AsyncCallback<void>): void
 ```
 
-设置有序公共事件传递的数据。使用callback异步回调。
+Sets the result code and data of an ordered common event. This API uses an asynchronous callback to return the result.
 
 **Since:** 7
 
@@ -845,15 +845,15 @@ setCodeAndData(code: int, data: string, callback: AsyncCallback<void>): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| code | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | 有序公共事件传递的数据。 |
-| data | string | Yes | 有序公共事件传递的数据，长度不超过65536字符，若超过限制，接口设置失效。 |
-| callback | [AsyncCallback](arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | 回调函数。当设置有序公共事件传递的数据成功时，err为undefined，否则为错误对象。 |
+| code | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | Code delivered by the ordered common event. |
+| data | string | Yes | Data delivered by the ordered common event. The value is a string containing a maximum of 65,536 characters. If the length exceeds the limit, the API setting becomes invalid. |
+| callback | [AsyncCallback](arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined**; otherwise, **err** is an error object. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
 
 ## setCodeAndData
 
@@ -867,7 +867,7 @@ ArkTS-Sta:
 setCodeAndData(code: int, data: string): Promise<void>
 ```
 
-设置有序公共事件传递的数据。使用Promise异步回调。
+Sets the result code and data of an ordered common event. This API uses a promise to return the result.
 
 **Since:** 7
 
@@ -883,20 +883,20 @@ setCodeAndData(code: int, data: string): Promise<void>
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| code | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | 有序公共事件传递的数据。 |
-| data | string | Yes | 有序公共事件传递的数据，长度不超过65536字符，若超过限制，接口设置失效。 |
+| code | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | Code delivered by the ordered common event. |
+| data | string | Yes | Data delivered by the ordered common event. The value is a string containing a maximum of 65,536 characters. If the length exceeds the limit, the API setting becomes invalid. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise对象。无返回结果的Promise对象。 |
+| Promise&lt;void&gt; | Promise that returns no value. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
 
 ## setCodeAndDataSync
 
@@ -910,7 +910,7 @@ ArkTS-Sta:
 setCodeAndDataSync(code: int, data: string): void
 ```
 
-同步设置有序公共事件传递的数据。
+Sets the code and data of an ordered common event. This API returns the result synchronously.
 
 **Since:** 10
 
@@ -926,14 +926,14 @@ setCodeAndDataSync(code: int, data: string): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| code | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | 有序公共事件传递的数据。 |
-| data | string | Yes | 有序公共事件传递的数据，长度不超过65536字符，若超过限制，接口设置失效。 |
+| code | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | Code delivered by the ordered common event. |
+| data | string | Yes | Data delivered by the ordered common event. The value is a string containing a maximum of 65,536 characters. If the length exceeds the limit, the API setting becomes invalid. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
 
 ## setCodeSync
 
@@ -947,7 +947,7 @@ ArkTS-Sta:
 setCodeSync(code: int): void
 ```
 
-同步设置有序公共事件传递的数据。
+Sets the result code of an ordered common event. This API returns the result synchronously.
 
 **Since:** 10
 
@@ -963,13 +963,13 @@ setCodeSync(code: int): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| code | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | 有序公共事件传递的数据。 |
+| code | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | Code delivered by the ordered common event. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
 
 ## setData
 
@@ -977,7 +977,7 @@ setCodeSync(code: int): void
 setData(data: string, callback: AsyncCallback<void>): void
 ```
 
-设置有序公共事件传递的数据。使用callback异步回调。
+Sets the data of an ordered common event. This API uses an asynchronous callback to return the result.
 
 **Since:** 7
 
@@ -993,14 +993,14 @@ setData(data: string, callback: AsyncCallback<void>): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| data | string | Yes | 有序公共事件传递的数据，长度不超过65536字符，若超过限制，接口设置失效。 |
-| callback | [AsyncCallback](arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | 回调函数。当设置有序公共事件传递的数据成功时，err为undefined，否则为错误对象。 |
+| data | string | Yes | Data delivered by the ordered common event. The value is a string containing a maximum of 65,536 characters. If the length exceeds the limit, the API setting becomes invalid. |
+| callback | [AsyncCallback](arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined**; otherwise, **err** is an error object. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
 
 ## setData
 
@@ -1008,7 +1008,7 @@ setData(data: string, callback: AsyncCallback<void>): void
 setData(data: string): Promise<void>
 ```
 
-设置有序公共事件传递的数据。使用Promise异步回调。
+Sets the result data of an ordered common event. This API uses a promise to return the result.
 
 **Since:** 7
 
@@ -1024,19 +1024,19 @@ setData(data: string): Promise<void>
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| data | string | Yes | 有序公共事件传递的数据，长度不超过65536字符，若超过限制，接口设置失效。 |
+| data | string | Yes | Data delivered by the ordered common event. The value is a string containing a maximum of 65,536 characters. If the length exceeds the limit, the API setting becomes invalid. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise对象。无返回结果的Promise对象。 |
+| Promise&lt;void&gt; | Promise that returns no value. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
 
 ## setDataSync
 
@@ -1044,7 +1044,7 @@ setData(data: string): Promise<void>
 setDataSync(data: string): void
 ```
 
-同步设置有序公共事件传递的数据。
+Sets the result data of an ordered common event. This API returns the result synchronously.
 
 **Since:** 10
 
@@ -1060,11 +1060,11 @@ setDataSync(data: string): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| data | string | Yes | 有序公共事件传递的数据，长度不超过65536字符，若超过限制，接口设置失效。 |
+| data | string | Yes | Data delivered by the ordered common event. The value is a string containing a maximum of 65,536 characters. If the length exceeds the limit, the API setting becomes invalid. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
 

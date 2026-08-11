@@ -1,8 +1,8 @@
 # Macro
 
-Macro继承自[MacroQuery](arkts-camera-camera-macroquery-i.md)。
+**Macro** inherits from [MacroQuery](arkts-camera-camera-macroquery-i.md).
 
-提供使能微距能力的接口。
+It provides the API to enable macro photography.
 
 **Inheritance/Implementation:** Macro extends [MacroQuery](arkts-camera-camera-macroquery-i.md)
 
@@ -26,11 +26,12 @@ import { camera } from 'kits/@kit.CameraKit';
 enableMacro(enabled: boolean): void
 ```
 
-使能当前的微距能力。
+Enables or disables macro photography.
 
-> **说明：**
+> **NOTE：**
 > 
-> 使用该接口前，需要先通过[isMacroSupported](arkts-camera-camera-macroquery-i.md#ismacrosupported)接口查询当前设备是否支持微距能力。
+> Before calling this API, call [isMacroSupported](arkts-camera-camera-macroquery-i.md#ismacrosupported) to check whether the
+> current device supports macro photography.
 
 **Since:** 19
 
@@ -46,13 +47,13 @@ enableMacro(enabled: boolean): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| enabled | boolean | Yes | 是否开启微距能力。true表示开启微距能力，false表示关闭微距能力。 |
+| enabled | boolean | Yes | Whether to enable macro photography. **true** to enable, **false** otherwise. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 7400102 | Operation not allowed.<br>**Applicable version:** 12 and later |
-| 7400103 | Session not config. |
-| 202 | Not System Application.<br>**Applicable version:** 11 - 18 |
+| [7400102](../errorcode-camera.md#7400102-invalid-operation) | Operation not allowed.<br>**Applicable version:** 12 and later |
+| [7400103](../errorcode-camera.md#7400103-session-not-configured) | Session not config. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not System Application.<br>**Applicable version:** 11 - 18 |
 

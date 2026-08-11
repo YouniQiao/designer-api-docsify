@@ -1,6 +1,6 @@
 # Filter
 
-文件过滤配置项，支持listFile接口使用。
+Defines the file filtering configuration used by **listFile()**.
 
 **Since:** 23
 
@@ -22,7 +22,7 @@ import { Options, ReaderIteratorResult, Watcher, ReadTextOptions, WatchEventList
 displayName?: Array<string>
 ```
 
-文件名模糊匹配，各个关键词OR关系。当前仅支持通配符*。
+Locate files that fuzzy match the specified file names, which are of the OR relationship. Currently, only the wildcard * is supported.
 
 **Type:** Array&lt;string&gt;
 
@@ -40,7 +40,9 @@ displayName?: Array<string>
 excludeMedia?: boolean
 ```
 
-是否排除Media中已有的文件。true：排除Media中已有的文件；false：不排除Media中已有的文件。预留字段，暂不支持使用。
+Whether to exclude the files already in **Media**.
+
+The value **true** means to exclude the files already in **Media**; the value **false** means not to exclude the files already in **Media**. This parameter is reserved.
 
 **Type:** boolean
 
@@ -58,7 +60,7 @@ excludeMedia?: boolean
 fileSizeOver?: long
 ```
 
-文件大小匹配，大于指定大小的文件，单位为Byte。
+Locate files that are greater than the specified size, in bytes.
 
 **Type:** long
 
@@ -76,7 +78,7 @@ fileSizeOver?: long
 lastModifiedAfter?: double
 ```
 
-文件最近修改时间匹配，在指定时间点及之后的文件。
+Locate files whose last modification time is the same or later than the specified time.
 
 **Type:** double
 
@@ -94,7 +96,7 @@ lastModifiedAfter?: double
 mimeType?: Array<string>
 ```
 
-mime类型完全匹配，各个关键词OR关系。预留字段，暂不支持使用。
+Locate files that fully match the specified MIME types, which are of the OR relationship. This parameter is reserved.
 
 **Type:** Array&lt;string&gt;
 
@@ -112,7 +114,7 @@ mime类型完全匹配，各个关键词OR关系。预留字段，暂不支持�
 suffix?: Array<string>
 ```
 
-文件后缀名完全匹配，各个关键词OR关系。
+Locate files that fully match the specified file name extensions, which are of the OR relationship.
 
 **Type:** Array&lt;string&gt;
 

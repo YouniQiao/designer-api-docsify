@@ -1,6 +1,6 @@
 # ExtendableImage
 
-扩展图像组件定义
+Defines the Extendable Image.
 
 **Inheritance/Implementation:** ExtendableImage implements [ImageAttribute](../arkts-components/arkts-arkui-image-attribute.md/arkts-arkui-image-attribute.md)
 
@@ -22,7 +22,7 @@ static $_instantiate<T extends ExtendableImage>(
   ): T
 ```
 
-扩展图像组件构造器
+Constructor of Extendable Image.
 
 **Since:** 26.0.0
 
@@ -59,7 +59,7 @@ static $_instantiate<T extends ExtendableImage>(
   ): T
 ```
 
-扩展图像组件构造器
+Constructor of Extendable Image.
 
 **Since:** 26.0.0
 
@@ -96,7 +96,7 @@ static $_instantiate<T extends ExtendableImage>(
   ): T
 ```
 
-扩展图像组件
+Constructor of Extendable Image.
 
 **Since:** 26.0.0
 
@@ -131,7 +131,7 @@ static _instantiateImpl<T extends ExtendableImage>(
   ): void
 ```
 
-扩展图像组件构入口
+Entry of Extendable Image.
 
 **Since:** 26.0.0
 
@@ -161,7 +161,7 @@ public setImageOptions(
   ): this
 ```
 
-设置图像组件选项
+Set the Image Options.
 
 **Since:** 26.0.0
 
@@ -196,7 +196,7 @@ public setImageOptions(
   ): this
 ```
 
-设置图像组件选项
+Set the Image Options.
 
 **Since:** 26.0.0
 
@@ -231,7 +231,7 @@ public setImageOptions(
   ): this
 ```
 
-设置图像组件选项
+Set the Image Options.
 
 **Since:** 26.0.0
 

@@ -12,7 +12,7 @@ import { usb } from 'kits/@kit.BasicServicesKit';
 function requestRight(deviceName: string): Promise<boolean>
 ```
 
-请求软件包的临时权限以访问设备。使用Promise异步回调。系统应用默认拥有访问设备权限，无需调用此接口申请。
+Requests the temporary permission for the application to access a USB device. This API uses a promise to return the result. System applications are granted the device access permission by default, and you do not need to apply for the permission separately.
 
 **Since:** 8
 
@@ -30,13 +30,13 @@ function requestRight(deviceName: string): Promise<boolean>
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| deviceName | string | Yes | 设备名称。 |
+| deviceName | string | Yes | Device name. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;boolean&gt; | Promise对象，返回临时权限的申请结果。返回true表示临时权限申请成功；返回false则表示临时权限申请失败。 |
+| Promise&lt;boolean&gt; | Promise used to return the result. The value **true** indicates that the temporary device access permissions are granted; and the value **false** indicates the opposite. |
 
 ## Examples
 

@@ -1,11 +1,5 @@
 # onWillDraw
 
-## 导入模块
-
-```TypeScript
-import { uiObserver } from 'kits/@kit.ArkUI';
-```
-
 ## onWillDraw
 
 ```TypeScript

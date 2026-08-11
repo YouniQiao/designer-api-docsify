@@ -12,7 +12,7 @@ import { inputDevice } from 'kits/@kit.InputKit';
 function getDeviceList(callback: AsyncCallback<Array<int>>): void
 ```
 
-获取所有输入设备的ID列表，使用callback异步回调。
+Obtains the IDs of all input devices. This API uses an asynchronous callback to return the result.
 
 **Since:** 9
 
@@ -26,13 +26,13 @@ function getDeviceList(callback: AsyncCallback<Array<int>>): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | ArkTS-Dyn: [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;number&gt;&gt;  <br>ArkTS-Sta：[AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;int&gt;&gt; | Yes | 回调函数。当获取成功，err为undefined，data为所有输入设备的ID列表（ID是输入设备的唯一标识）；否则为错误对象。 |
+| callback | ArkTS-Dyn: [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;number&gt;&gt;  <br>ArkTS-Sta：[AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;int&gt;&gt; | Yes | Callback function. If the operation is successful, **err** is **undefined**, and **data** is the ID list of all input devices (the ID is the unique identifier of an input device). Otherwise, **err** is an error object. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; 3. Parameter verification failed. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; 3. Parameter verification failed. |
 
 ## Examples
 
@@ -48,16 +48,15 @@ struct Index {
       Text()
         .onClick(() => {
           try {
-            // Obtaining the Input Device List
             inputDevice.getDeviceList((error: BusinessError, ids: Array<number>) => {
               if (error) {
-                console.error(`Failed to get device id list, Code: ${(error as BusinessError).code}, message: ${(error as BusinessError).message}.`);
+                console.error(`Failed to get device id list, error: ${JSON.stringify(error, [`code`, `message`])}`);
                 return;
               }
-              console.info(`Succeeded in getting device id list: ${JSON.stringify(ids)}.`);
+              console.info(`Device id list: ${JSON.stringify(ids)}`);
             });
           } catch (error) {
-            console.error(`Failed to get device id list, Code: ${(error as BusinessError).code}, message: ${(error as BusinessError).message}.`);
+            console.error(`Failed to get device id list, error: ${JSON.stringify(error, [`code`, `message`])}`);
           }
         })
     }
@@ -72,7 +71,7 @@ struct Index {
 function getDeviceList(): Promise<Array<int>>
 ```
 
-获取所有输入设备的ID列表，使用Promise异步回调。
+Obtains the IDs of all input devices. This API uses a promise to return the result.
 
 **Since:** 9
 
@@ -86,7 +85,7 @@ function getDeviceList(): Promise<Array<int>>
 
 | Type | Description |
 | --- | --- |
-| ArkTS-Dyn: Promise&lt;Array&lt;number&gt;&gt;  <br>ArkTS-Sta：Promise&lt;Array&lt;int&gt;&gt; | Promise对象，返回所有输入设备的ID列表。ID是输入设备的唯一标识。 |
+| ArkTS-Dyn: Promise&lt;Array&lt;number&gt;&gt;  <br>ArkTS-Sta：Promise&lt;Array&lt;int&gt;&gt; | Promise used to return the IDs of all input devices. The ID is the unique ID of an input device. |
 
 ## Examples
 
@@ -102,14 +101,13 @@ struct Index {
       Text()
         .onClick(() => {
           try {
-            // Obtaining the Input Device List
             inputDevice.getDeviceList().then((ids: Array<number>) => {
-              console.info(`Succeeded in getting device id list: ${JSON.stringify(ids)}.`);
+              console.info(`Device id list: ${JSON.stringify(ids)}`);
             }).catch((error: BusinessError) => {
-              console.error(`Failed to get device id list, Code: ${(error as BusinessError).code}, message: ${(error as BusinessError).message}.`);
+              console.error(`Failed to get device id list, error: ${JSON.stringify(error, [`code`, `message`])}`);
             });
           } catch (error) {
-            console.error(`Failed to get device id list, Code: ${(error as BusinessError).code}, message: ${(error as BusinessError).message}.`);
+            console.error(`Failed to get device id list, error: ${JSON.stringify(error, [`code`, `message`])}`);
           }
         })
     }

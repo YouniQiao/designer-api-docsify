@@ -4,7 +4,7 @@
 type SystemSoundPlayer = _SystemSoundPlayer
 ```
 
-系统音效播放器对象。
+Represents the system sound effect player object.
 
 **Since:** 23
 

@@ -1,6 +1,6 @@
 # GainmapParams (System API)
 
-Gainmap（增益图）参数设置选项。
+Describes gainmap generation parameters.
 
 **Since:** 26.0.0
 
@@ -24,9 +24,7 @@ import { image } from 'kits/@kit.ImageKit';
 isFullSizeGainmap: boolean
 ```
 
-返回Picture中的Gainmap（增益图）是否使用全尺寸图。
-
-true表示使用全尺寸图，宽高和主图一致；false表示不使用全尺寸图，宽高均为主图的一半。默认值为false。
+Indicates generating a full-size gainmap or a 1/2 downscaled gainmap.
 
 **Type:** boolean
 

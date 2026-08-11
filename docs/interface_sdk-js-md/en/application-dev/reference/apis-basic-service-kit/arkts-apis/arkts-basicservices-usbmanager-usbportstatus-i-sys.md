@@ -1,6 +1,6 @@
 # USBPortStatus (System API)
 
-USB设备端口角色信息。
+Enumerates USB port roles.
 
 **Since:** 9
 
@@ -24,7 +24,7 @@ import { usbManager } from 'kits/@kit.BasicServicesKit';
 currentDataRole: int
 ```
 
-当前设备数据传输模式。
+Current data role.
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
@@ -44,7 +44,7 @@ currentDataRole: int
 currentMode: int
 ```
 
-当前的USB模式。
+Current USB mode.
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
@@ -64,7 +64,7 @@ currentMode: int
 currentPowerRole: int
 ```
 
-当前设备充电模式。
+Current power role.
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 

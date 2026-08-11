@@ -1,6 +1,6 @@
 # GwpAsanOptions
 
-GWP-ASan����������������Ƿ�ʹ�ܡ�����Ƶ�ʣ��Լ�������Ĳ������
+GwpAsan Options.
 
 **Since:** 20
 
@@ -22,7 +22,7 @@ import { hidebug } from 'kits/@kit.PerformanceAnalysisKit';
 alwaysEnabled?: boolean
 ```
 
-�����Ƿ�ÿ��������ʹ��GWP-ASan��true��100%ʹ��GWP-ASan��false��1/128����ʹ��GWP-ASan��Ĭ��ֵ��false��
+Control whether to enable GWP-ASan every time
 
 **Type:** boolean
 
@@ -40,7 +40,7 @@ alwaysEnabled?: boolean
 isRecover?: boolean
 ```
 
-���ڿ���Ӧ����100%���ʿ���GWP-ASanʱ���Ƿ��Կɻָ�ģʽ���С�true����GWP-ASan��100%���ʿ���ʱ��Ӧ���Կɻָ�ģʽ���С�false����GWP-ASan��100%���ʿ���ʱ��Ӧ���Բ��ɻָ�ģʽ���С�Ĭ��ֵ��false��ע�⣺�ò���ֻ��"��100%���ʿ���GWP-ASan"��������Ч��1/128���ʿ���������Ĭ��Ϊ�ɻָ�������isRecover���ơ�
+the Recoverable mode of GWP-ASAN.
 
 **Type:** boolean
 
@@ -60,7 +60,7 @@ isRecover?: boolean
 maxSimutaneousAllocations?: int
 ```
 
-������Ĳ������Ĭ��ֵΪ1000����Ҫ�������0����������������С��������ȡ����������þ�ʱ���·�����ڴ潫�����ܼ�ء��ͷ���ʹ�õ��ڴ����ռ�õĲ�۽��Զ����á�����ֵ��<=20000���������ܵ���VMA���ޱ�����
+the max simutaneous allocations of GWP-ASAN
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
@@ -78,7 +78,7 @@ maxSimutaneousAllocations?: int
 sampleRate?: int
 ```
 
-GWP-ASan����Ƶ�ʣ�Ĭ��ֵΪ2500����Ҫ�������0����������������С��������ȡ����1/sampleRate�ĸ��ʶԷ�����ڴ���в���������ֵ��>=1000����С������Ӱ�����ܡ�
+sample rate of GWP-ASAN
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 

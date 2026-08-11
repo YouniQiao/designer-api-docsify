@@ -1,6 +1,6 @@
 # RelativeTimeFormat
 
-提供相对时间格式化的能力。
+Provides the relative time formatting capability.
 
 **Since:** 8
 
@@ -8,7 +8,7 @@
 
 **Deprecated since:** 20
 
-**Substitutes:** [Intl.RelativeTimeFormat](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/RelativeTimeFormat)
+**Substitutes:** [Intl.RelativeTimeFormat](arkts-intl.md#intl.relativetimeformat)
 
 <!--Device-intl-export class RelativeTimeFormat--><!--Device-intl-export class RelativeTimeFormat-End-->
 
@@ -26,7 +26,7 @@ import { intl } from 'kits/@kit.LocalizationKit';
 constructor()
 ```
 
-创建相对时间格式化对象。
+Creates a **RelativeTimeFormat** object.
 
 **Since:** 8
 
@@ -57,7 +57,7 @@ let formatter: intl.RelativeTimeFormat = new intl.RelativeTimeFormat();
 constructor(locale: string | Array<string>, options?: RelativeTimeFormatInputOptions)
 ```
 
-创建相对时间格式化对象。
+Creates a **RelativeTimeFormat** object.
 
 **Since:** 8
 
@@ -77,15 +77,15 @@ constructor(locale: string | Array<string>, options?: RelativeTimeFormatInputOpt
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| locale | string \| Array&lt;string&gt; | Yes | 区域ID或区域ID数组。输入是区域ID数组时，使用第一个有效的区域ID。 |
-| options | [RelativeTimeFormatInputOptions](arkts-localization-intl-relativetimeformatinputoptions-i.md) | No | 创建相对时间格式化对象时的配置项。 &lt;br&gt;默认值：所有属性都取默认值时的配置项。 |
+| locale | string \| Array&lt;string&gt; | Yes | Locale ID or locale ID array. If the input is a locale ID array, the first valid locale ID is used. |
+| options | [RelativeTimeFormatInputOptions](arkts-localization-intl-relativetimeformatinputoptions-i.md) | No | Options for creating a **RelativeTimeFormat** object. |
 
 ## Examples
 
 ```TypeScript
 import { intl } from '@kit.LocalizationKit';
 
-// Use locale ID zh-CN to create a RelativeTimeFormat object with the localeMatcher set to lookup, numeric set to always, and style set to long.
+// Create a RelativeTimeFormat object with the locale ID being zh-CN, localeMatcher being lookup, and style being long.
 let formatter: intl.RelativeTimeFormat = new intl.RelativeTimeFormat('zh-CN', {
   localeMatcher: 'lookup',
   numeric: 'always',
@@ -99,7 +99,7 @@ let formatter: intl.RelativeTimeFormat = new intl.RelativeTimeFormat('zh-CN', {
 format(value: double, unit: string): string
 ```
 
-对相对时间进行格式化，返回相对时间字符串。
+Formats a relative time.
 
 **Since:** 8
 
@@ -107,7 +107,7 @@ format(value: double, unit: string): string
 
 **Deprecated since:** 20
 
-**Substitutes:** [Intl.RelativeTimeFormat.format](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/RelativeTimeFormat/format)
+**Substitutes:** [Intl.RelativeTimeFormat.format](arkts-intl.md#intl.relativetimeformat.format)
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -119,14 +119,14 @@ format(value: double, unit: string): string
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | double | Yes | 相对时间格式化的数值。 |
-| unit | string | Yes | 相对时间格式化的单位， &lt;br&gt;取值包括："year", "quarter", "month", "week", "day", "hour", "minute", "second"。 |
+| value | double | Yes | Value to format. |
+| unit | string | Yes | Unit of the relative time. The value can be any of the following: **year**, **quarter**, **month**, **week**, **day**, **hour**, **minute**, or **second**. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| string | 格式化后的相对时间。 |
+| string | Relative time after formatting. |
 
 ## Examples
 
@@ -145,7 +145,7 @@ let formatResult: string = formatter.format(3, 'quarter'); // formatResult = '3 
 formatToParts(value: double, unit: string): Array<object>
 ```
 
-对相对时间进行格式化，获取格式化结果中各个部分的对象数组。
+Formats the relative time
 
 **Since:** 8
 
@@ -165,14 +165,14 @@ formatToParts(value: double, unit: string): Array<object>
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | double | Yes | 相对时间格式化的数值。 |
-| unit | string | Yes | 相对时间格式化的单位， &lt;br&gt;取值包括："year", "quarter", "month", "week", "day", "hour", "minute", "second"。 |
+| value | double | Yes | Value to format. |
+| unit | string | Yes | Unit of the relative time. The value can be any of the following: **year**, **quarter**, **month**, **week**, **day**, **hour**, **minute**, or **second**. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Array&lt;object&gt; | 格式化结果中各个部分的对象数组。 |
+| Array&lt;object&gt; | Components of the formatted result. |
 
 ## Examples
 
@@ -190,7 +190,7 @@ let parts: Array<object> = formatter.formatToParts(10, 'seconds'); // parts = [ 
 resolvedOptions(): RelativeTimeFormatResolvedOptions
 ```
 
-获取相对时间格式化对象的格式化配置项。
+Defines the formatting options for a **RelativeTimeFormat** object.
 
 **Since:** 8
 
@@ -210,7 +210,7 @@ resolvedOptions(): RelativeTimeFormatResolvedOptions
 
 | Type | Description |
 | --- | --- |
-| [RelativeTimeFormatResolvedOptions](arkts-localization-intl-relativetimeformatresolvedoptions-i.md) | 相对时间格式化对象的格式化配置项。 |
+| [RelativeTimeFormatResolvedOptions](arkts-localization-intl-relativetimeformatresolvedoptions-i.md) | Options for the **RelativeTimeFormat** object. |
 
 ## Examples
 

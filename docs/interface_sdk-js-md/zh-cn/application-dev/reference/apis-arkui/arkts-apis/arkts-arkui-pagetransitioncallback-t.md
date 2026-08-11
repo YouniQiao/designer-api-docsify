@@ -20,6 +20,6 @@ export type PageTransitionCallback = (type: RouteType, progress: double) => void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| type | [RouteType](../arkts-components/arkts-arkui-routetype-e.md) | 是 | transition route type |
+| type | [RouteType](arkts-arkui-pagetransition-routetype-e.md) | 是 | transition route type |
 | progress | double | 是 | transition progess |
 

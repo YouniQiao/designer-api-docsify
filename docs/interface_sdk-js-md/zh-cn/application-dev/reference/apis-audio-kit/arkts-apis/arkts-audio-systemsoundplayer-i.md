@@ -47,9 +47,9 @@ load(soundType: systemSoundManager.SystemSoundType): Promise<void>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 5400103 | I/O error. |
-| 5400105 | Crash or blocking occurs in system process. |
-| 5400108 | Parameter check failed. Returned by promise. |
+| [5400103](../../apis-media-kit/errorcode-media.md#5400103-出现io错误) | I/O error. |
+| [5400105](../../apis-media-kit/errorcode-media.md#5400105-播放服务死亡) | Crash or blocking occurs in system process. |
+| [5400108](../../apis-media-kit/errorcode-media.md#5400108-参数超过取值范围) | Parameter check failed. Returned by promise. |
 
 ## play
 
@@ -85,9 +85,9 @@ play(soundType: systemSoundManager.SystemSoundType): Promise<void>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 5400103 | I/O error. |
-| 5400105 | Crash or blocking occurs in system process. |
-| 5400108 | Parameter check failed. Returned by promise. |
+| [5400103](../../apis-media-kit/errorcode-media.md#5400103-出现io错误) | I/O error. |
+| [5400105](../../apis-media-kit/errorcode-media.md#5400105-播放服务死亡) | Crash or blocking occurs in system process. |
+| [5400108](../../apis-media-kit/errorcode-media.md#5400108-参数超过取值范围) | Parameter check failed. Returned by promise. |
 
 ## release
 
@@ -117,7 +117,7 @@ release(): Promise<void>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 5400105 | Crash or blocking occurs in system process. |
+| [5400105](../../apis-media-kit/errorcode-media.md#5400105-播放服务死亡) | Crash or blocking occurs in system process. |
 
 ## unload
 
@@ -153,6 +153,6 @@ unload(soundType: systemSoundManager.SystemSoundType): Promise<void>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 5400105 | Crash or blocking occurs in system process. |
-| 5400108 | Parameter check failed. Returned by promise. |
+| [5400105](../../apis-media-kit/errorcode-media.md#5400105-播放服务死亡) | Crash or blocking occurs in system process. |
+| [5400108](../../apis-media-kit/errorcode-media.md#5400108-参数超过取值范围) | Parameter check failed. Returned by promise. |
 

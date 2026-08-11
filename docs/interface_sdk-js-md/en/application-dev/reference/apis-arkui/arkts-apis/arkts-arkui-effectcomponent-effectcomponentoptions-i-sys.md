@@ -1,6 +1,6 @@
 # EffectComponentOptions (System API)
 
-设置当前EffectComponent构造参数，包含EffectComponent的渲染层级。
+Defines the Effect Component constructor options.
 
 **Since:** 23
 
@@ -18,9 +18,7 @@
 effectLayer?: EffectLayer
 ```
 
-EffectComponent的渲染层级。
-
-默认值：EffectLayer.NONE
+Use this to determine the component layer 1evel. Default value is none.
 
 **Type:** [EffectLayer](../arkts-components/arkts-arkui-effectlayer-e-sys.md)
 

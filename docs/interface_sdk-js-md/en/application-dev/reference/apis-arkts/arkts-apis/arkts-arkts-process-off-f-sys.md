@@ -12,7 +12,7 @@ import { process } from 'kits/@kit.ArkTS';
 function off(type: string): boolean
 ```
 
-移除已注册的事件。
+Remove registered event
 
 **Since:** 7
 
@@ -28,11 +28,11 @@ function off(type: string): boolean
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | string | Yes | 要移除的已注册事件类型。 |
+| type | string | Yes | Remove the type of registered event. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| boolean | 返回移除结果。 |
+| boolean | Return removed result. |
 

@@ -1,6 +1,6 @@
 # TextPickerTextStyle
 
-文本样式选项，继承自[PickerTextStyle](arkts-arkui-common-pickertextstyle-i.md)。
+Defines the text style options.
 
 **Inheritance/Implementation:** TextPickerTextStyle extends [PickerTextStyle](arkts-arkui-common-pickertextstyle-i.md)
 
@@ -18,7 +18,7 @@
 maxFontSize?: double | string | Resource
 ```
 
-文本最大显示字号。详细规则请参考Text组件的[maxFontSize](arkts-arkui-text-textattribute-i.md#maxfontsize)属性。
+Maximum font size.
 
 **Type:** double \| string \| Resource
 
@@ -38,7 +38,7 @@ maxFontSize?: double | string | Resource
 minFontSize?: double | string | Resource
 ```
 
-文本最小显示字号，与maxFontSize配合使用。当设置minFontSize和maxFontSize时，font中的size将不生效。默认最大行数为1，自适应高度方式为MIN_FONT_SIZE_FIRST。详细规则请参考Text组件的[minFontSize](arkts-arkui-text-textattribute-i.md#minfontsize)属性。
+Minimum font size, used in conjunction with maxFontSize.When minFontSize and maxFontSize are set,the size setting in font is ineffective.The default maximum number of lines is 1,and the default height adaptation mode is MIN_FONT_SIZE_FIRST.
 
 **Type:** double \| string \| Resource
 
@@ -58,7 +58,9 @@ minFontSize?: double | string | Resource
 overflow?: TextOverflow
 ```
 
-文本截断方式。当设置为MARQUEE时，该属性不生效。详细规则请参考Text组件的[textOverflow](arkts-arkui-text-textattribute-i.md#textoverflow)属性。
+Display mode when the text is too long.
+
+&lt;p&gt;&lt;strong&gt;NOTE&lt;/strong&gt;:Ineffective when set to MARQUEE.&lt;/p&gt;
 
 **Type:** [TextOverflow](arkts-arkui-textoverflow-e.md)
 

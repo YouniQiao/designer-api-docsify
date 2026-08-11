@@ -12,7 +12,7 @@ import { print } from 'kits/@kit.BasicServicesKit';
 function savePdfFileJob(jobId: string, fd: int): Promise<void>
 ```
 
-保存打印作业的pdf文件。
+Save the pdf file for a print job.
 
 **Since:** 24
 
@@ -32,8 +32,8 @@ function savePdfFileJob(jobId: string, fd: int): Promise<void>
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| jobId | string | Yes | 打印作业ID。 |
-| fd | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | 文件描述符。 |
+| jobId | string | Yes | Indicates the print job ID. &lt;br&gt;The print job ID to which the file to be saved belongs. |
+| fd | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | Indicates the fd. &lt;br&gt;Fd of the file to be saved. |
 
 **Return value:**
 
@@ -46,7 +46,7 @@ function savePdfFileJob(jobId: string, fd: int): Promise<void>
 | Error Code ID | Error Message |
 | --- | --- |
 | 13100007 | Save file failed. |
-| 13100006 | Invalid job ID. |
-| 201 | the application does not have permission to call this function. |
-| 202 | not system application. |
+| [13100006](../../apis-basic-services-kit/errorcode-print.md#13100006-invalid-print-job) | Invalid job ID. |
+| [201](../../errorcode-universal.md#201-permission-denied) | the application does not have permission to call this function. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | not system application. |
 

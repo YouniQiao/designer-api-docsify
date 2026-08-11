@@ -1,6 +1,6 @@
 # InterruptAction
 
-音频打断/获取焦点事件的回调方法。
+Describes the callback invoked for audio interruption or focus gain events.When the audio of an application is interrupted by another application, the callback is invoked to notify the former application.
 
 **Since:** 7
 
@@ -26,7 +26,7 @@ import { audio } from 'kits/@kit.AudioKit';
 actionType: InterruptActionType
 ```
 
-事件返回类型。TYPE_ACTIVATED为焦点触发事件，TYPE_INTERRUPT为音频打断事件。
+Event type.The value TYPE_ACTIVATED means the focus gain event, and TYPE_INTERRUPT means the audio interruption event.
 
 **Type:** [InterruptActionType](arkts-audio-audio-interruptactiontype-e.md)
 
@@ -48,7 +48,7 @@ actionType: InterruptActionType
 activated?: boolean
 ```
 
-焦点获取/释放是否成功。true表示焦点获取/释放成功，false表示焦点获得/释放失败。
+Whether the focus is gained or released. **true** if the focus is gained or released, **false** if the focus fails to be gained or released.
 
 **Type:** boolean
 
@@ -70,7 +70,7 @@ activated?: boolean
 hint?: InterruptHint
 ```
 
-打断事件提示。
+Hint provided along with the audio interruption event.
 
 **Type:** [InterruptHint](arkts-audio-audio-interrupthint-e.md)
 
@@ -92,7 +92,7 @@ hint?: InterruptHint
 type?: InterruptType
 ```
 
-打断事件类型。
+Type of the audio interruption event.
 
 **Type:** [InterruptType](arkts-audio-audio-interrupttype-e.md)
 

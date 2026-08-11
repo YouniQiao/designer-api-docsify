@@ -4,7 +4,7 @@
 type OnSslErrorEventCallback = (sslErrorEvent: SslErrorEvent) => void
 ```
 
-SSL错误事件的回调函数。
+The callback of ssl error event.
 
 **Since:** 12
 

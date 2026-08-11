@@ -1,9 +1,9 @@
 # InstallationResult
 
-应用安装结果。
+An object that holds the application installation result.
 
-该对象目前在  
-[EnterpriseAdminExtensionAbility.onMarketAppInstallResult](../../apis-default/arkts-apis/arkts-enterprise-enterpriseadminextensionability-enterpriseadminextensionability-c.md/arkts-enterprise-enterpriseadminextensionability-enterpriseadminextensionability-c.md#onmarketappinstallresult)作为回调入参使用。
+This object is used as a callback parameter in  
+[EnterpriseAdminExtensionAbility.onMarketAppInstallResult](arkts-mdm-enterprise-enterpriseadminextensionability-enterpriseadminextensionability-c.md#onmarketappinstallresult).
 
 **Since:** 22
 
@@ -25,7 +25,7 @@ import { common } from 'kits/@kit.MDMKit';
 message: string
 ```
 
-应用安装结果消息。
+Application installation result message.
 
 **Type:** string
 
@@ -45,7 +45,7 @@ message: string
 result: Result
 ```
 
-应用安装结果码。SUCCESS表示应用安装成功，应用可正常使用；FAIL表示应用安装失败，应用不可用。
+Application installation result. **SUCCESS** indicates that the application is successfully installed and can be properly used. **FAIL** indicates that the application fails to be installed and is unavailable.
 
 **Type:** [Result](../../apis-arkdata/arkts-apis/arkts-arkdata-relationalstore-result-i.md)
 

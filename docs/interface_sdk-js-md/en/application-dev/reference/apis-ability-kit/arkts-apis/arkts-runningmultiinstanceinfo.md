@@ -7,6 +7,6 @@
 
 | Name | Description |
 | --- | --- |
-| [RunningMultiInstanceInfo](arkts-ability-runningmultiinstanceinfo-i-sys.md) | 定义多实例应用在运行态的结构信息，通过appManager的  [getRunningMultiAppInfo](arkts-ability-appmanager-getrunningmultiappinfo-f-sys.md#getrunningmultiappinfo)来获取。 |
+| [RunningMultiInstanceInfo](arkts-ability-runningmultiinstanceinfo-i-sys.md) | The module defines the information of a multi-instance application in the running state. The information can be obtained through [getRunningMultiAppInfo](arkts-ability-appmanager-getrunningmultiappinfo-f-sys.md#getrunningmultiappinfo)of appManager. |
 <!--DelEnd-->
 

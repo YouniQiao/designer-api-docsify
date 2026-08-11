@@ -12,7 +12,7 @@ import { notificationExtensionSubscription } from 'kits/@kit.NotificationKit';
 function unsubscribe(): Promise<void>
 ```
 
-取消通知扩展的订阅。使用Promise异步回调。
+Unsubscribes from the notification extension. This API uses a promise to return the result.
 
 **Since:** 22
 
@@ -28,23 +28,23 @@ function unsubscribe(): Promise<void>
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise对象，无返回结果。 |
+| Promise&lt;void&gt; | Promise that returns no value. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 201 | Permission denied or current device not supported. |
-| 1600001 | Internal error. |
-| 1600003 | Failed to connect to the service. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied or current device not supported. |
+| [1600001](../errorcode-notification.md#1600001-internal-error) | Internal error. |
+| [1600003](../errorcode-notification.md#1600003-failed-to-connect-to-the-notification-service) | Failed to connect to the service. |
 
 ## Examples
 
 ```TypeScript
 notificationExtensionSubscription.unsubscribe().then(() => {
-  console.info(`unsubscribe success`);
+  console.info("unsubscribe success");
 }).catch((err: BusinessError) => {
-  console.error(`unsubscribe fail, code is ${err.code}, message is ${err.message}`);
+  console.error(`unsubscribe fail: ${JSON.stringify(err)}`);
 });
 ```
 

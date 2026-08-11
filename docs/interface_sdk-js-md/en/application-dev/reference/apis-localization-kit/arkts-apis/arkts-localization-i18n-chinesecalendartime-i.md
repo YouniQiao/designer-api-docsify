@@ -1,6 +1,6 @@
 # ChineseCalendarTime
 
-农历时间对象。
+Represents chinese calendar time element for the ChineseCalendar object.
 
 **Since:** 26.0.0
 
@@ -22,9 +22,7 @@ import { i18n } from 'kits/@kit.LocalizationKit';
 cyclicalYear: int
 ```
 
-农历的干支年。
-
-取值范围：[1, 60]。
+The cyclical year of date.If you need to convert between the chinese calendar and the Gregorian calendar,the year range must be set from 1 to 60.The value range is all integers.
 
 **Type:** int
 
@@ -46,7 +44,7 @@ cyclicalYear: int
 date: int
 ```
 
-农历的日。
+Date of the chinese calendar time.
 
 **Type:** int
 
@@ -68,9 +66,7 @@ date: int
 gregorianYear: int
 ```
 
-公历的年。
-
-取值范围：[1900, 2100]。
+The gregorian year of date.If you need to convert between the chinese calendar and the Gregorian calendar,the year range must be set from 1900 to 2100.
 
 **Type:** int
 
@@ -92,7 +88,7 @@ gregorianYear: int
 hour?: int
 ```
 
-农历的时。默认值：0。
+Hour of the chinese calendar time.
 
 **Type:** int
 
@@ -114,7 +110,7 @@ hour?: int
 isLeapMonth?: boolean
 ```
 
-是否是闰月。默认值：false。
+Determines whether the input month is a leap month.
 
 **Type:** boolean
 
@@ -136,7 +132,7 @@ isLeapMonth?: boolean
 minute?: int
 ```
 
-农历的分。默认值：0。
+Minute of the chinese calendar time.
 
 **Type:** int
 
@@ -158,11 +154,7 @@ minute?: int
 month: int
 ```
 
-农历的月。
-
-**说明：**
-
-月份从0开始计数，0表示一月。
+Month of the chinese calendar time. Note: The month starts from 0. For example, 0 indicates January.
 
 **Type:** int
 
@@ -184,7 +176,7 @@ month: int
 second?: int
 ```
 
-农历的秒。默认值：0。
+Second of the chinese calendar time.
 
 **Type:** int
 

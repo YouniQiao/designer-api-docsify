@@ -1,11 +1,5 @@
 # createModuleContextSync
 
-## 导入模块
-
-```TypeScript
-import { application } from 'kits/@kit.AbilityKit';
-```
-
 ## createModuleContextSync
 
 ```TypeScript
@@ -47,6 +41,6 @@ export function createModuleContextSync(context: Context, moduleName: string): C
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 16000021 | 模块不存在。 |
-| 16000011 | 上下文不存在。 |
+| [16000021](../errorcode-ability.md#16000021-模块名不存在) | 模块不存在。 |
+| [16000011](../errorcode-ability.md#16000011-上下文对象不存在) | 上下文不存在。 |
 

@@ -1,11 +1,5 @@
 # getAudioHapticManager
 
-## 导入模块
-
-```TypeScript
-import { audioHaptic } from 'kits/@kit.AudioKit';
-```
-
 ## getAudioHapticManager
 
 ```TypeScript

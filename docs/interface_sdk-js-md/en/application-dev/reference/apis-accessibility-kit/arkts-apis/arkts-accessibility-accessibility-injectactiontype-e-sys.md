@@ -1,6 +1,6 @@
 # InjectActionType (System API)
 
-表示注入动作的枚举。
+Enumerates injection actions.
 
 **Since:** 26.0.0
 
@@ -18,7 +18,7 @@
 CLICK = 1
 ```
 
-表示注入单击动作。
+Injects a click action.
 
 **Since:** 26.0.0
 
@@ -38,7 +38,7 @@ CLICK = 1
 DOUBLE_CLICK = 2
 ```
 
-表示注入双击动作。
+Injects a double-click action.
 
 **Since:** 26.0.0
 
@@ -58,7 +58,7 @@ DOUBLE_CLICK = 2
 LONG_CLICK = 3
 ```
 
-表示注入长按动作。
+Injects a long-click action.
 
 **Since:** 26.0.0
 

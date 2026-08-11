@@ -4,7 +4,7 @@
 type OnAbilityWillContinueFn = (ability: UIAbility) => void
 ```
 
-注册监听应用上下文的生命周期后，在Ability迁移前触发回调。
+Defines a onAbilityWillContinue function.
 
 **Since:** 23
 
@@ -18,5 +18,5 @@ type OnAbilityWillContinueFn = (ability: UIAbility) => void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| ability | [UIAbility](arkts-ability-app-ability-uiability-uiability-c.md) | Yes | 当前Ability对象。 |
+| ability | [UIAbility](arkts-ability-app-ability-uiability-uiability-c.md) | Yes | Indicates the ability to register for listening. |
 

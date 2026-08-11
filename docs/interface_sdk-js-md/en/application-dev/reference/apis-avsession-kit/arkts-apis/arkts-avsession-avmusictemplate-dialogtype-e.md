@@ -1,6 +1,6 @@
 # DialogType
 
-表示对话框类型的枚举。
+Enumeration of dialog type.
 
 **Since:** 23
 
@@ -16,7 +16,7 @@
 NORMAL = 0
 ```
 
-普通对话框。
+Normal dialog box.
 
 **Since:** 23
 
@@ -34,7 +34,7 @@ NORMAL = 0
 INTERNET = 1
 ```
 
-联网对话框。
+Internet dialog box.
 
 **Since:** 23
 
@@ -52,7 +52,7 @@ INTERNET = 1
 FLOW = 2
 ```
 
-流程对话框。
+Flow dialog box.
 
 **Since:** 23
 
@@ -70,7 +70,7 @@ FLOW = 2
 PAID = 3
 ```
 
-付费对话框。
+Paid dialog box.
 
 **Since:** 23
 
@@ -88,7 +88,7 @@ PAID = 3
 VIP = 4
 ```
 
-VIP对话框。
+Vip dialog box.
 
 **Since:** 23
 
@@ -106,7 +106,7 @@ VIP对话框。
 LOGIN = 5
 ```
 
-登录对话框。
+Login dialog box.
 
 **Since:** 23
 
@@ -124,7 +124,7 @@ LOGIN = 5
 ERROR = 6
 ```
 
-错误对话框。
+Error dialog box.
 
 **Since:** 23
 
@@ -142,7 +142,7 @@ ERROR = 6
 UNKNOWN = 7
 ```
 
-未知对话框。
+Unknown dialog box.
 
 **Since:** 23
 

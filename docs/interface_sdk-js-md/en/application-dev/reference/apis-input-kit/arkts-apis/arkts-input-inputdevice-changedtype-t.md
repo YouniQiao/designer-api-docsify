@@ -4,7 +4,7 @@
 type ChangedType = 'add' | 'remove'
 ```
 
-监听设备热插拔事件类型。
+Enumerates hot swap events.
 
 **Since:** 9
 
@@ -16,6 +16,6 @@ type ChangedType = 'add' | 'remove'
 
 | Type | Description |
 | --- | --- |
-| 'add' | 插入输入设备。 |
-| 'remove' | 移除输入设备。 |
+| 'add' | Device insertion. |
+| 'remove' | Device removal. |
 

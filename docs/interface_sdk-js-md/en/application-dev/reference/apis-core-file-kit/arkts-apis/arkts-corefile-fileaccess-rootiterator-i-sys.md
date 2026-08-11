@@ -1,6 +1,6 @@
 # RootIterator (System API)
 
-表示设备根目录的迭代器对象。
+Provides an iterator object of the device root directory.
 
 **Since:** 9
 
@@ -26,7 +26,7 @@ import { fileAccess } from 'kits/@kit.CoreFileKit';
 next(): { value: RootInfo, done: boolean }
 ```
 
-通过next同步方法获取下一级设备根目录。
+Obtains the next-level root directory.
 
 **Since:** 9
 

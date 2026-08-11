@@ -1,6 +1,6 @@
 # SystemRecordControllerChangeInfo (System API)
 
-定义系统录像控制器状态改变时携带的信息。它包括启用状态、应用程序UID和预期的音频源类型。
+Defines the information carried when the system recording controller state changes.It includes the enable status, application UID and expected audio source type.
 
 **Since:** 26.0.0
 
@@ -24,7 +24,7 @@ import { audio } from 'kits/@kit.AudioKit';
 enabled: boolean
 ```
 
-是否启用系统录像控制器面板。true表示启用面板，false表示禁用面板。
+Whether the system recording controller panel is enabled.The value true means the panel is enabled, and false means disabled.
 
 **Type:** boolean
 
@@ -46,7 +46,7 @@ enabled: boolean
 sourceType?: SourceType
 ```
 
-启用录制控制器时由应用程序配置的预期音频源类型。用于匹配对应的录制场景和降噪模式。
+The expected audio source type configured by the application when enabling the recording controller.It is used to match the corresponding recording scenario and noise reduction mode.
 
 **Type:** [SourceType](../../apis-arkweb/arkts-apis/arkts-arkweb-webview-sourcetype-e.md)
 
@@ -68,7 +68,7 @@ sourceType?: SourceType
 uid?: int
 ```
 
-触发系统记录控制器状态更改的应用程序的UID。取值限定为整数。
+The UID of the application that triggers the system recording controller state change.The value range is all integers.
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 

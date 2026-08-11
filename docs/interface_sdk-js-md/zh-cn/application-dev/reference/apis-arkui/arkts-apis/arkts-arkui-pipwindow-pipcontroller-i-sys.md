@@ -12,12 +12,6 @@
 
 **系统能力：** SystemCapability.Window.SessionManager
 
-## 导入模块
-
-```TypeScript
-import { PiPWindow } from 'kits/@kit.ArkUI';
-```
-
 ## isPiPSupported
 
 ```TypeScript
@@ -46,6 +40,6 @@ isPiPSupported(): boolean
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 202 | Not System App. Interface caller is not a system app. |
-| 1300014 | PiP internal error. |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not System App. Interface caller is not a system app. |
+| [1300014](../errorcode-window.md#1300014-画中画内部错误) | PiP internal error. |
 

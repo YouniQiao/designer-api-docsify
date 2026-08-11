@@ -1,11 +1,5 @@
 # onScanDeviceDel（系统接口）
 
-## 导入模块
-
-```TypeScript
-import { scan } from 'kits/@kit.BasicServicesKit';
-```
-
 ## onScanDeviceDel
 
 ```TypeScript
@@ -36,6 +30,6 @@ Register event callback for scanner device delete (system API).
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 201 | Permission denied. |
-| 202 | Not system application. |
+| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not system application. |
 

@@ -10,12 +10,6 @@ This class is used to intercept requests for a specified scheme.
 
 **系统能力：** SystemCapability.Web.Webview.Core
 
-## 导入模块
-
-```TypeScript
-import { webview } from 'kits/@kit.ArkWeb';
-```
-
 ## onRequestStart
 
 ```TypeScript
@@ -43,7 +37,7 @@ Callback for handling the request.
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt;2. Incorrect parameter types. |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt;2. Incorrect parameter types. |
 
 ## onRequestStop
 
@@ -71,5 +65,5 @@ Callback when the request is completed.
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 401 | Invalid input parameter. |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Invalid input parameter. |
 

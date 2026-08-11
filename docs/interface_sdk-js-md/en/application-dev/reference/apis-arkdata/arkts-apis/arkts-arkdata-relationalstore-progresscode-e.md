@@ -1,6 +1,6 @@
 # ProgressCode
 
-表示端云同步过程的状态码。请使用枚举名称而非枚举值。
+Describes the status of {@code Progress}.
 
 **Since:** 10
 
@@ -16,7 +16,7 @@
 SUCCESS = 0
 ```
 
-表示端云同步过程成功。
+The device-cloud sync is successful.
 
 **Since:** 10
 
@@ -32,7 +32,7 @@ SUCCESS = 0
 UNKNOWN_ERROR = 1
 ```
 
-表示端云同步过程遇到未知错误。
+An unknown error occurs during the device-cloud sync.
 
 **Since:** 10
 
@@ -48,7 +48,7 @@ UNKNOWN_ERROR = 1
 NETWORK_ERROR = 2
 ```
 
-表示端云同步过程遇到网络错误。
+A network error occurs during the device-cloud sync.
 
 **Since:** 10
 
@@ -64,7 +64,7 @@ NETWORK_ERROR = 2
 CLOUD_DISABLED = 3
 ```
 
-表示云端不可用。
+The cloud is unavailable.
 
 **Since:** 10
 
@@ -80,9 +80,9 @@ CLOUD_DISABLED = 3
 LOCKED_BY_OTHERS = 4
 ```
 
-表示有其他设备正在端云同步，本设备无法进行端云同步。
+The device-cloud sync of another device is being performed.
 
-请确保无其他设备占用云端资源后，再使用本设备进行端云同步任务。
+The sync of the local device can be performed only when the cloud resources are available.
 
 **Since:** 10
 
@@ -98,7 +98,7 @@ LOCKED_BY_OTHERS = 4
 RECORD_LIMIT_EXCEEDED = 5
 ```
 
-表示本次端云同步需要同步的条目或大小超出最大值。由云端配置最大值。
+The number of records or size of the data to be synced exceeds the maximum. The maximum value is configured on the cloud.
 
 **Since:** 10
 
@@ -114,7 +114,7 @@ RECORD_LIMIT_EXCEEDED = 5
 NO_SPACE_FOR_ASSET = 6
 ```
 
-表示云空间剩余空间小于待同步的资产大小。
+The remaining cloud space is less than the size of the data to be synced.
 
 **Since:** 10
 
@@ -130,7 +130,7 @@ NO_SPACE_FOR_ASSET = 6
 BLOCKED_BY_NETWORK_STRATEGY = 7
 ```
 
-表示端云同步被网络策略限制。
+The device-cloud sync is blocked due to the network strategy.
 
 **Since:** 12
 
@@ -146,7 +146,7 @@ BLOCKED_BY_NETWORK_STRATEGY = 7
 STOP_CLOUD_SYNC = 8
 ```
 
-表示端云同步被停止。
+STOP_CLOUD_SYNC: means cloud synchronization has been stopped.
 
 **Since:** 26.0.0
 

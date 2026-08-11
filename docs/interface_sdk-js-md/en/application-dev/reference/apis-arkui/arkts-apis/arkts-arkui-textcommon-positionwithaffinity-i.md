@@ -1,6 +1,6 @@
 # PositionWithAffinity
 
-位置以及亲和度。
+Position and affinity.
 
 **Since:** 23
 
@@ -16,7 +16,7 @@
 affinity: Affinity
 ```
 
-位置亲和度。
+Affinity of the position.
 
 **Type:** [Affinity](arkts-arkui-affinity-t.md)
 
@@ -36,7 +36,7 @@ affinity: Affinity
 position: int
 ```
 
-字形或字符相对于组件内容的索引，整数。
+Position of text.The value should be an integer.
 
 **Type:** int
 

@@ -12,7 +12,7 @@ import { fileUri } from 'kits/@kit.CoreFileKit';
 function getUriFromPath(path: string): string
 ```
 
-通过应用沙箱内的文件路径生成URI。路径中的中文及非数字字母的特殊字符会进行百分号编码。
+Get the uri from the path of file in app sandbox
 
 **Since:** 15
 
@@ -28,19 +28,19 @@ function getUriFromPath(path: string): string
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| path | string | Yes | 应用沙箱内的文件路径。 |
+| path | string | Yes | the path of file in app sandbox |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| string | 返回通过文件路径生成的URI。 |
+| string | Return the file uri |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | The input parameter is invalidPossible causes:1.Mandatory parameters are left unspecified; &lt;br&gt;2.Incorrect parameter types. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | The input parameter is invalidPossible causes:1.Mandatory parameters are left unspecified; &lt;br&gt;2.Incorrect parameter types. |
 
 ## Examples
 

@@ -1,6 +1,6 @@
 # Size
 
-窗口大小，单位为px。
+Describes the window size, in px.
 
 **Since:** 7
 
@@ -22,7 +22,7 @@ import { window } from 'kits/@kit.ArkUI';
 height: int
 ```
 
-窗口高度，单位为px，该参数应为整数。
+Window height, in px. The value must be an integer.
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
@@ -42,7 +42,7 @@ height: int
 width: int
 ```
 
-窗口宽度，单位为px，该参数应为整数。
+Window width, in px. The value must be an integer.
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 

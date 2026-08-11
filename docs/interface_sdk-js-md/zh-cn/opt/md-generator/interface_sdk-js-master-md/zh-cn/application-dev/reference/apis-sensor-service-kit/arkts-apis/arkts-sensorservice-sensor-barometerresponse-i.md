@@ -1,0 +1,27 @@
+# BarometerResponse
+
+气压计传感器数据，继承于[Response](arkts-sensorservice-sensor-response-i.md)。
+
+**继承/实现关系：** BarometerResponse extends [Response](arkts-sensorservice-sensor-response-i.md)
+
+**起始版本：** 8
+
+<!--Device-sensor-interface BarometerResponse extends Response--><!--Device-sensor-interface BarometerResponse extends Response-End-->
+
+**系统能力：** SystemCapability.Sensors.Sensor
+
+## pressure
+
+```TypeScript
+pressure: number
+```
+
+大气压力值。单位：hPa（百帕）。
+
+**类型：** number
+
+**起始版本：** 8
+
+<!--Device-BarometerResponse-pressure: double--><!--Device-BarometerResponse-pressure: double-End-->
+
+**系统能力：** SystemCapability.Sensors.Sensor

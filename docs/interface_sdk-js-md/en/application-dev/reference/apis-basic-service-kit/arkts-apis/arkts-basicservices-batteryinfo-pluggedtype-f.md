@@ -12,7 +12,7 @@ import { batteryInfo } from 'kits/@kit.BasicServicesKit';
 function pluggedType(): BatteryPluggedType
 ```
 
-表示当前设备连接的充电器类型。
+Charger type of the device.
 
 **Since:** 23
 
@@ -26,5 +26,5 @@ function pluggedType(): BatteryPluggedType
 
 | Type | Description |
 | --- | --- |
-| [BatteryPluggedType](arkts-basicservices-batteryinfo-batterypluggedtype-e.md) | 返回当前设备连接的充电器类型。 |
+| [BatteryPluggedType](arkts-basicservices-batteryinfo-batterypluggedtype-e.md) | Returns the charger type of the device. |
 

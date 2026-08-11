@@ -4,7 +4,7 @@
 export declare type LaunchAtomicServiceCallback = (appId: string, options?: AtomicServiceOptions) => void
 ```
 
-拉起原子化服务触发的回调。
+Triggered when an atomic service is launched.
 
 **Since:** 12
 
@@ -20,6 +20,6 @@ export declare type LaunchAtomicServiceCallback = (appId: string, options?: Atom
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| appId | string | Yes | 原子化服务的appId。 |
-| options | [AtomicServiceOptions](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-atomicserviceoptions-atomicserviceoptions-c.md) | No | 拉起原子化服务的参数。不填时使用默认参数拉起原子化服务。 |
+| appId | string | Yes | App ID for the atomic service. |
+| options | [AtomicServiceOptions](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-atomicserviceoptions-atomicserviceoptions-c.md) | No | Parameters for launching the atomic service. |
 

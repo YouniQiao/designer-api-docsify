@@ -1,6 +1,6 @@
 # FocusWrapMode
 
-交叉轴方向键走焦模式枚举。
+Enumerates focus wrapping modes for cross-axis directional navigation.
 
 **Since:** 20
 
@@ -16,7 +16,7 @@
 DEFAULT = 0
 ```
 
-交叉轴方向键不允许换行。
+Cross-axis directional navigation does not wrap focus.
 
 **Since:** 20
 
@@ -36,9 +36,9 @@ DEFAULT = 0
 WRAP_WITH_ARROW = 1
 ```
 
-交叉轴方向键允许换行。
+Cross-axis directional navigation wraps focus.
 
-不规则单元格场景下，交叉轴方向键走焦时优先走到同一行的可获焦item。
+In irregular grid layouts, when moving focus along the cross axis, the system prioritizes focusable items within the same row.
 
 **Since:** 20
 

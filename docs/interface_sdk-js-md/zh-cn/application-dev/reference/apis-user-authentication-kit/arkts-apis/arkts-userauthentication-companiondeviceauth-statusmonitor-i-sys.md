@@ -12,12 +12,6 @@
 
 **系统接口：** 此接口为系统接口。
 
-## 导入模块
-
-```TypeScript
-import { companionDeviceAuth } from 'kits/@kit.UserAuthenticationKit';
-```
-
 ## getTemplateStatus
 
 ```TypeScript
@@ -54,9 +48,11 @@ getTemplateStatus(): Promise<TemplateStatus[]>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 32600001 | The system service is not working properly. Please try again later. |
+| [32600001](../errorcode-useriam.md#32600001-系统服务工作异常) | The system service is not working properly. Please try again later. |
 
 ## 示例
+
+ArkTS-Dyn示例：
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -69,6 +65,20 @@ statusMonitor.getTemplateStatus()
   })
   .catch((error: BusinessError) => {
     console.error(`error has been captured. Code: ${error.code}, message: ${error.message}`);
+  })
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+const localUserId = 100;
+const statusMonitor = companionDeviceAuth.getStatusMonitor(localUserId);
+statusMonitor.getTemplateStatus()
+  .then((templateStatus) => {
+    console.info(`templateStatus: ${JSON.stringify(templateStatus)}`);
+  })
+  .catch((error) => {
+    console.error(`error has been captured: message:${error.message}`);
   })
 ```
 
@@ -104,7 +114,7 @@ offAvailableDeviceChange(callback?: AvailableDeviceStatusCallback): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 32600001 | The system service is not working properly. Please try again later. |
+| [32600001](../errorcode-useriam.md#32600001-系统服务工作异常) | The system service is not working properly. Please try again later. |
 
 ## 示例
 
@@ -157,7 +167,7 @@ offContinuousAuthChange(callback?: ContinuousAuthStatusCallback): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 32600001 | The system service is not working properly. Please try again later. |
+| [32600001](../errorcode-useriam.md#32600001-系统服务工作异常) | The system service is not working properly. Please try again later. |
 
 ## 示例
 
@@ -219,7 +229,7 @@ offTemplateChange(callback?: TemplateStatusCallback): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 32600001 | The system service is not working properly. Please try again later. |
+| [32600001](../errorcode-useriam.md#32600001-系统服务工作异常) | The system service is not working properly. Please try again later. |
 
 ## 示例
 
@@ -274,7 +284,7 @@ onAvailableDeviceChange(callback: AvailableDeviceStatusCallback): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 32600001 | The system service is not working properly. Please try again later. |
+| [32600001](../errorcode-useriam.md#32600001-系统服务工作异常) | The system service is not working properly. Please try again later. |
 
 ## 示例
 
@@ -329,8 +339,8 @@ onContinuousAuthChange(param: ContinuousAuthParam, callback: ContinuousAuthStatu
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 32600001 | The system service is not working properly. Please try again later. |
-| 32600002 | The template is not found. |
+| [32600001](../errorcode-useriam.md#32600001-系统服务工作异常) | The system service is not working properly. Please try again later. |
+| [32600002](../errorcode-useriam.md#32600002-模板未找到) | The template is not found. |
 
 ## 示例
 
@@ -393,7 +403,7 @@ onTemplateChange(callback: TemplateStatusCallback): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 32600001 | The system service is not working properly. Please try again later. |
+| [32600001](../errorcode-useriam.md#32600001-系统服务工作异常) | The system service is not working properly. Please try again later. |
 
 ## 示例
 

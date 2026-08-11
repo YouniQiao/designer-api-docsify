@@ -10,12 +10,6 @@
 
 **系统能力：** SystemCapability.USB.USBManager.Serial
 
-## 导入模块
-
-```TypeScript
-import { serialManager } from 'kits/@kit.BasicServicesKit';
-```
-
 ## baudRate
 
 ```TypeScript
@@ -82,7 +76,7 @@ stopBits?: StopBits
 
 串口停止位，默认值为1位。
 
-**类型：** [StopBits](arkts-basicservices-serial-stopbits-e.md)
+**类型：** [StopBits](arkts-basicservices-serialmanager-stopbits-e.md)
 
 **默认值：** STOPBIT_1
 

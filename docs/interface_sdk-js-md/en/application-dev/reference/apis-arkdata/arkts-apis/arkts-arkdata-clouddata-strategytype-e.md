@@ -1,6 +1,6 @@
 # StrategyType
 
-云同步策略类型枚举。
+Enumerates the types of the cloud-device sync strategy.
 
 **Since:** 12
 
@@ -16,7 +16,7 @@
 NETWORK
 ```
 
-通过网络同步策略。
+Sync over the network.
 
 **Since:** 12
 

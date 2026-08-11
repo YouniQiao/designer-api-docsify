@@ -12,7 +12,7 @@ import { accessibility } from 'kits/@kit.AccessibilityKit';
 function isAnimationReduceEnabled(): Promise<boolean>
 ```
 
-判断减弱动效模式是否开启。使用Promise异步回调。
+Checks whether animation reduction mode is enabled. This API uses a promise to return the result.
 
 **Since:** 23
 
@@ -28,7 +28,7 @@ function isAnimationReduceEnabled(): Promise<boolean>
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;boolean&gt; | Promise对象。返回true表示减弱动效模式已开启；返回false表示减弱动效模式已关闭。 |
+| Promise&lt;boolean&gt; | Promise used to return the result. Returns **true** if animation reduction mode is enabled; returns **false** otherwise. |
 
 ## Examples
 

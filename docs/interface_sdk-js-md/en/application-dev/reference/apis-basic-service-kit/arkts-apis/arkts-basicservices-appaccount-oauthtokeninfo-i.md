@@ -1,10 +1,11 @@
 # OAuthTokenInfo
 
-表示OAuth令牌信息。
+Defines authorization token information.
 
-> **说明：**
+> **NOTE：**
 > 
-> 从API version 8开始支持，从API version 9开始废弃。建议使用[AuthTokenInfo](arkts-basicservices-appaccount-authtokeninfo-i.md)替代。
+> This API is supported since API version 8 and deprecated since API version 9. You are advised to use
+> [AuthTokenInfo](arkts-basicservices-appaccount-authtokeninfo-i.md) instead.
 
 **Since:** 8
 
@@ -30,7 +31,7 @@ import { appAccount } from 'kits/@kit.BasicServicesKit';
 authType: string
 ```
 
-令牌的鉴权类型。
+Authentication type.
 
 **Type:** string
 
@@ -52,7 +53,7 @@ authType: string
 token: string
 ```
 
-令牌的取值。
+Value of the authorization token.
 
 **Type:** string
 

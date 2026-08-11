@@ -10,12 +10,6 @@ Describes the video transcoding parameters.
 
 **系统能力：** SystemCapability.Multimedia.Media.AVTranscoder
 
-## 导入模块
-
-```TypeScript
-import { media } from 'kits/@kit.MediaKit';
-```
-
 ## audioBitrate
 
 ```TypeScript

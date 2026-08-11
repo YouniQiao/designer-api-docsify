@@ -4,7 +4,7 @@
 type AbilityType = 'audible' | 'generic' | 'haptic' | 'spoken' | 'visual' | 'all'
 ```
 
-无障碍辅助应用类型。
+Enumerates the types of accessibility applications.
 
 **Since:** 7
 
@@ -20,10 +20,10 @@ type AbilityType = 'audible' | 'generic' | 'haptic' | 'spoken' | 'visual' | 'all
 
 | Type | Description |
 | --- | --- |
-| 'audible' | 表示具有听觉反馈。 |
-| 'generic' | 表示具有通用反馈。 |
-| 'haptic' | 表示具有触觉反馈。 |
-| 'spoken' | 表示具有语音反馈。 |
-| 'visual' | 表示具有视觉反馈。 |
-| 'all' | 表示以上所有类别。 [since 9] |
+| 'audible' | The accessibility application provides audible feedback. |
+| 'generic' | The accessibility application provides generic feedback. |
+| 'haptic' | The accessibility application provides haptic feedback. |
+| 'spoken' | The accessibility application provides spoken feedback. |
+| 'visual' | The accessibility application provides visual feedback. |
+| 'all' | All the preceding types. [since 9] |
 

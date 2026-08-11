@@ -1,6 +1,6 @@
 # NativeEmbedParamStatus
 
-定义同层渲染object标签内嵌param元素的状态变化类型，当添加param元素时触发ADD，修改param元素属性触发UPDATE，删除param元素触发DELETE。
+Enum type supplied to {@link NativeEmbedParamItem} when onNativeEmbedObjectParamChange being called.
 
 **Since:** 21
 
@@ -16,7 +16,7 @@
 ADD = 0
 ```
 
-添加param元素。
+Triggered when a **param** element is added.
 
 **Since:** 21
 
@@ -32,7 +32,7 @@ ADD = 0
 UPDATE = 1
 ```
 
-更改param元素属性。
+Triggered when a **param** element is modified.
 
 **Since:** 21
 
@@ -48,7 +48,7 @@ UPDATE = 1
 DELETE = 2
 ```
 
-删除param元素。
+Triggered when a **param** element is deleted.
 
 **Since:** 21
 

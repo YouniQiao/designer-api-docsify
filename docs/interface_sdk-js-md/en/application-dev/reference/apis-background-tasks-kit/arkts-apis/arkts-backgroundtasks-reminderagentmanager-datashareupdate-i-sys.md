@@ -1,9 +1,9 @@
 # DataShareUpdate (System API)
 
-更新数据库需要的参数信息。
+Defines the parameter information used to update the database.
 
-数据提供方需要在module.json5中的proxyData节点定义要共享的表的标识，读写权限和基本信息。配置方式请见  
-[数据提供方应用的开发](../../../database/share-data-by-silent-access-sys.md#数据提供方应用的开发)。
+The data provider needs to set the ID, read/write permissions, and basic information of the table to be shared under **proxyData** in the **module.json5** file. For details about the configuration method, see   
+[Data Provider Application Development](../../../database/share-data-by-silent-access-sys.md#data-provider-application-development)
 
 **Since:** 11
 
@@ -27,7 +27,7 @@ import { reminderAgentManager } from 'kits/@kit.BackgroundTasksKit';
 equalTo: Record<string, double | string | boolean>
 ```
 
-指示筛选条件，当前仅支持通过等于筛选。
+Filter criteria. Currently, only **equalTo** is supported.
 
 **Type:** ArkTS-Dyn: [Record](../../apis-default/arkts-apis/arkts-record-t.md)&lt;string, number \| string \| boolean&gt;  <br>ArkTS-Sta：[Record](../../apis-default/arkts-apis/arkts-record-t.md)&lt;string, double \| string \| boolean&gt;
 
@@ -47,7 +47,7 @@ equalTo: Record<string, double | string | boolean>
 uri: string
 ```
 
-数据使用的URI，是跨应用数据访问的唯一标识。
+URI of the data, which is the unique identifier for cross-application data access.
 
 **Type:** string
 
@@ -67,7 +67,7 @@ uri: string
 value: ValuesBucket
 ```
 
-指示要更新的数据。
+New data.
 
 **Type:** [ValuesBucket](../../apis-arkdata/arkts-apis/arkts-arkdata-valuesbucket-t.md)
 

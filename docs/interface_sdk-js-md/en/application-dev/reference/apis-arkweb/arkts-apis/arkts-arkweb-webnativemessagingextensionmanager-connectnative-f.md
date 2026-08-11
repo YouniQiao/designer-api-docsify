@@ -12,7 +12,7 @@ import { webNativeMessagingExtensionManager } from 'kits/@kit.ArkWeb';
 function connectNative(context: UIAbilityContext, want: Want, callback: WebExtensionConnectionCallback): int
 ```
 
-将当前Ability连接到指定的Web原生消息扩展Ability。
+Connects the current ability to the specified web native message extension ability.
 
 **Since:** 23
 
@@ -30,19 +30,19 @@ function connectNative(context: UIAbilityContext, want: Want, callback: WebExten
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| context | [UIAbilityContext](../../apis-ability-kit/arkts-apis/arkts-ability-uiabilitycontext-c.md) | Yes | 调用方UIAbility的上下文。 |
-| want | [Want](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-want-want-c.md) | Yes | 启动Ability的want信息，其parameters中需包含'ohos.arkweb.messageReadPipe'（读管道FD）、' ohos.arkweb.messageWritePipe'（写管道FD）和'ohos.arkweb.extensionOrigin'（插件URI）。 |
-| callback | [WebExtensionConnectionCallback](arkts-arkweb-webnativemessagingextensionmanager-webextensionconnectioncallback-i.md) | Yes | WebExtensionConnection状态的回调对象。 |
+| context | [UIAbilityContext](../../apis-ability-kit/arkts-apis/arkts-ability-uiabilitycontext-c.md) | Yes | Context of the web native message extension. |
+| want | [Want](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-want-want-c.md) | Yes | The element name of the web native messaging ability |
+| callback | [WebExtensionConnectionCallback](arkts-arkweb-webnativemessagingextensionmanager-webextensionconnectioncallback-i.md) | Yes | The remote object instance |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| int | 连接的标识ID，由[connectNative]{ |
+| int | Returns the number code of the ability connected |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 801 | Capability not supported. |
+| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. |
 

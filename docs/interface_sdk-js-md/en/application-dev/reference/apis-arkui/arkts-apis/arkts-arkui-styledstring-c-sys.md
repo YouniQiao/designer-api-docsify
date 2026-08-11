@@ -1,6 +1,6 @@
 # StyledString
 
-属性字符串。
+StyledString
 
 **Since:** 12
 
@@ -16,9 +16,8 @@
 static marshalling(styledString: StyledString, callback: StyledStringMarshallCallback): ArrayBuffer
 ```
 
-序列化属性字符串，通过定义回调来序列化属性字符串的[StyledStringMarshallingValue](arkts-arkui-styledstringmarshallingvalue-t-sys.md)。
-
-当属性字符串包含UserDataSpan等自定义样式，需要自定义序列化逻辑时使用此方法；不包含自定义样式时使用基础版marshalling方法即可。
+Marshals a styled string by defining a callback to marshal  
+[StyledStringMarshallingValue](arkts-arkui-styledstringmarshallingvalue-t-sys.md).
 
 **Since:** 19
 
@@ -36,14 +35,14 @@ static marshalling(styledString: StyledString, callback: StyledStringMarshallCal
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| styledString | [StyledString](arkts-arkui-styledstring-c-sys.md) | Yes | 待序列化的属性字符串对象，包含文本内容及样式信息。 |
-| callback | [StyledStringMarshallCallback](arkts-arkui-styledstringmarshallcallback-t-sys.md) | Yes | 用于序列化[StyledStringMarshallingValue](arkts-arkui-styledstringmarshallingvalue-t-sys.md)的回调函数。回调函数签名： (marshallableVal: StyledStringMarshallingValue) => ArrayBuffer，其中marshallableVal为需要序列化的对象，返回值为序列化后的ArrayBuffer数 据。 |
+| styledString | [StyledString](arkts-arkui-styledstring-c-sys.md) | Yes | Styled string to marshal. |
+| callback | [StyledStringMarshallCallback](arkts-arkui-styledstringmarshallcallback-t-sys.md) | Yes | Callback defining how to marshal [StyledStringMarshallingValue](arkts-arkui-styledstringmarshallingvalue-t-sys.md). |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| ArrayBuffer | 序列化后的buffer信息。 &lt;br&gt;**说明：** &lt;br&gt;目前支持文本和图片。 |
+| ArrayBuffer | Buffer information after marshalling. &lt;br&gt;**NOTE：**&lt;br&gt;Currently, text and images are supported. |
 
 ## marshalling
 
@@ -51,7 +50,7 @@ static marshalling(styledString: StyledString, callback: StyledStringMarshallCal
 static marshalling(styledString: StyledString): ArrayBuffer
 ```
 
-序列化属性字符串。适用于将属性字符串持久化存储或跨进程、跨组件传递时使用。
+Marshals a styled string.
 
 **Since:** 13
 
@@ -69,13 +68,13 @@ static marshalling(styledString: StyledString): ArrayBuffer
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| styledString | [StyledString](arkts-arkui-styledstring-c-sys.md) | Yes | 要序列化的属性字符串对象，包含文本内容及样式信息。 |
+| styledString | [StyledString](arkts-arkui-styledstring-c-sys.md) | Yes | Styled string to marshal. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| ArrayBuffer | 序列化后的buffer信息。 &lt;br&gt;**说明：** &lt;br&gt;目前支持文本和图片。 |
+| ArrayBuffer | Buffer information after marshalling. &lt;br&gt;**NOTE：**&lt;br&gt;Currently, text and images are supported. |
 
 ## unmarshalling
 
@@ -83,9 +82,8 @@ static marshalling(styledString: StyledString): ArrayBuffer
 static unmarshalling(buffer: ArrayBuffer, callback: StyledStringUnmarshallCallback): Promise<StyledString>
 ```
 
-反序列化后得到属性字符串，通过定义回调来反序列化[StyledStringMarshallingValue](arkts-arkui-styledstringmarshallingvalue-t-sys.md)。
-
-当需要从序列化数据中恢复包含UserDataSpan等自定义样式的属性字符串时使用此方法；恢复不含自定义样式的属性字符串时使用基础版unmarshalling方法即可。
+Unmarshals a styled string by defining a callback to  
+[StyledStringMarshallingValue](arkts-arkui-styledstringmarshallingvalue-t-sys.md).
 
 **Since:** 19
 
@@ -103,21 +101,21 @@ static unmarshalling(buffer: ArrayBuffer, callback: StyledStringUnmarshallCallba
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| buffer | ArrayBuffer | Yes | 属性字符串序列化后的数据。 |
-| callback | [StyledStringUnmarshallCallback](arkts-arkui-styledstringunmarshallcallback-t-sys.md) | Yes | 用于反序列化ArrayBuffer的回调函数。回调函数签名：(buf: ArrayBuffer) => StyledStringMarshallingValue，其中 buf为序列化后的数据，返回值为反序列化得到的StyledStringMarshallingValue对象。 |
+| buffer | ArrayBuffer | Yes | Data marshaled from a styled string. |
+| callback | [StyledStringUnmarshallCallback](arkts-arkui-styledstringunmarshallcallback-t-sys.md) | Yes | Callback defining how to marshal **ArrayBuffer**. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;[StyledString](arkts-arkui-styledstring-c-sys.md)&gt; | Promise对象，成功时返回属性字符串，失败时返回错误码，详见错误码部分。 &lt;br&gt;**说明：** &lt;br&gt;目前支持文本和图片。 |
+| Promise&lt;[StyledString](arkts-arkui-styledstring-c-sys.md)&gt; | Promise used to return the result. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 170002 | Styled string decode error. |
-| 401 | Parameter error. Possible causes: &lt;br&gt; 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameters types. &lt;br&gt; 3. Parameter verification failed. |
+| [170002](../errorcode-styled-string.md#170002-styled-string-decoding-error) | Styled string decode error. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: &lt;br&gt; 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameters types. &lt;br&gt; 3. Parameter verification failed. |
 
 ## unmarshalling
 
@@ -125,9 +123,7 @@ static unmarshalling(buffer: ArrayBuffer, callback: StyledStringUnmarshallCallba
 static unmarshalling(buffer: ArrayBuffer): Promise<StyledString>
 ```
 
-反序列化后得到属性字符串。
-
-适用于从已序列化的数据中恢复属性字符串时使用，如从本地存储读取或接收跨进程传递的数据后恢复属性字符串。
+Unmarshals a buffer to obtain a styled string.
 
 **Since:** 13
 
@@ -145,18 +141,18 @@ static unmarshalling(buffer: ArrayBuffer): Promise<StyledString>
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| buffer | ArrayBuffer | Yes | 属性字符串序列化后的数据。 |
+| buffer | ArrayBuffer | Yes | Data marshaled from a styled string. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;[StyledString](arkts-arkui-styledstring-c-sys.md)&gt; | Promise对象，成功时返回属性字符串，失败时返回错误码，详见错误码部分。 &lt;br&gt;**说明：** &lt;br&gt;目前支持文本和图片。 |
+| Promise&lt;[StyledString](arkts-arkui-styledstring-c-sys.md)&gt; | Promise used to return the result. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 170002 | Styled string decode error. |
-| 401 | Parameter error. Possible causes: &lt;br&gt; 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameters types. &lt;br&gt; 3. Parameter verification failed. |
+| [170002](../errorcode-styled-string.md#170002-styled-string-decoding-error) | Styled string decode error. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: &lt;br&gt; 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameters types. &lt;br&gt; 3. Parameter verification failed. |
 

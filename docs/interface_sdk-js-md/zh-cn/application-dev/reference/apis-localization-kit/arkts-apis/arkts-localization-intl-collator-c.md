@@ -10,12 +10,6 @@
 
 **系统能力：** SystemCapability.Global.I18n
 
-## 导入模块
-
-```TypeScript
-import { intl } from 'kits/@kit.LocalizationKit';
-```
-
 ## compare
 
 ```TypeScript
@@ -108,7 +102,7 @@ constructor(locale: string | Array<string>, options?: CollatorOptions)
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | locale | string \| Array&lt;string&gt; | 是 | 区域ID或区域ID数组。输入是区域ID数组时，使用第一个有效的区域ID。 |
-| options | [CollatorOptions](../../apis-arkts/arkts-apis/arkts-arkts-intl-collatoroptions-i.md) | 否 | 创建排序对象时可设置的配置项。 &lt;br&gt;默认值：所有属性都取默认值时的配置项。 |
+| options | [CollatorOptions](arkts-localization-intl-collatoroptions-i.md) | 否 | 创建排序对象时可设置的配置项。 &lt;br&gt;默认值：所有属性都取默认值时的配置项。 |
 
 ## 示例
 
@@ -141,7 +135,7 @@ resolvedOptions(): CollatorOptions
 
 | 类型 | 说明 |
 | --- | --- |
-| [CollatorOptions](../../apis-arkts/arkts-apis/arkts-arkts-intl-collatoroptions-i.md) | 返回排序对象的属性。 |
+| [CollatorOptions](arkts-localization-intl-collatoroptions-i.md) | 返回排序对象的属性。 |
 
 ## 示例
 

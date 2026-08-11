@@ -1,6 +1,6 @@
-# @ohos.animation.windowAnimationManager(窗口动画管理)
+# @ohos.animation.windowAnimationManager
 
-窗口动画管理器，可以监听应用启动退出时应用的动画窗口，提供启动退出过程中控件动画和应用窗口联动动画能力。
+Window animation manager.
 
 **Since:** 9
 
@@ -25,9 +25,9 @@ import { windowAnimationManager } from 'kits/@kit.ArkUI';
 
 | Name | Description |
 | --- | --- |
-| [minimizeWindowWithAnimation](arkts-arkui-windowanimationmanager-minimizewindowwithanimation-f-sys.md#minimizewindowwithanimation) | 最小化动画目标窗口，并返回动画完成的回调。使用callback异步回调。 |
-| [minimizeWindowWithAnimation](arkts-arkui-windowanimationmanager-minimizewindowwithanimation-f-sys.md#minimizewindowwithanimation-1) | 最小化动画目标窗口，并返回动画完成的回调。使用Promise异步回调。 |
-| [setController](arkts-arkui-windowanimationmanager-setcontroller-f-sys.md#setcontroller) | 设置窗口动画控制器。窗口动画控制器的说明请参考[WindowAnimationController](arkts-arkui-windowanimationmanager-windowanimationcontroller-i-sys.md)。  在使用windowAnimationManager的其他接口前，需要预先调用本接口设置窗口动画控制器。 |
+| [minimizeWindowWithAnimation](arkts-arkui-windowanimationmanager-minimizewindowwithanimation-f-sys.md#minimizewindowwithanimation) | Minimize the window target with animation. |
+| [minimizeWindowWithAnimation](arkts-arkui-windowanimationmanager-minimizewindowwithanimation-f-sys.md#minimizewindowwithanimation-1) | Minimize the window target with animation. |
+| [setController](arkts-arkui-windowanimationmanager-setcontroller-f-sys.md#setcontroller) | Set the window animation controller. |
 <!--DelEnd-->
 
 <!--Del-->
@@ -35,10 +35,10 @@ import { windowAnimationManager } from 'kits/@kit.ArkUI';
 
 | Name | Description |
 | --- | --- |
-| [RRect](arkts-arkui-windowanimationmanager-rrect-i-sys.md) | 圆角矩形。 |
-| [WindowAnimationController](arkts-arkui-windowanimationmanager-windowanimationcontroller-i-sys.md) | 窗口动画控制器。在创建一个WindowAnimationController对象时，需要实现其中的所有回调函数。 |
-| [WindowAnimationFinishedCallback](arkts-arkui-windowanimationmanager-windowanimationfinishedcallback-i-sys.md) | 动画完成后的回调。 |
-| [WindowAnimationTarget](arkts-arkui-windowanimationmanager-windowanimationtarget-i-sys.md) | 动画目标窗口，用来实现动画。 |
+| [RRect](arkts-arkui-windowanimationmanager-rrect-i-sys.md) | Round rect. |
+| [WindowAnimationController](arkts-arkui-windowanimationmanager-windowanimationcontroller-i-sys.md) | Window animation controller. |
+| [WindowAnimationFinishedCallback](arkts-arkui-windowanimationmanager-windowanimationfinishedcallback-i-sys.md) | Window animation finished callback. |
+| [WindowAnimationTarget](arkts-arkui-windowanimationmanager-windowanimationtarget-i-sys.md) | Window animation target. |
 <!--DelEnd-->
 
 <!--Del-->
@@ -46,11 +46,11 @@ import { windowAnimationManager } from 'kits/@kit.ArkUI';
 
 | Name | Description |
 | --- | --- |
-| [AppStartCallback](arkts-arkui-windowanimationmanager-appstartcallback-t-sys.md) | 应用启动时的回调。 |
-| [AppTransitionCallback](arkts-arkui-windowanimationmanager-apptransitioncallback-t-sys.md) | 应用转场时的回调。 |
-| [ScreenUnlockCallback](arkts-arkui-windowanimationmanager-screenunlockcallback-t-sys.md) | 屏幕解锁时的回调。 |
-| [WindowAnimationTargetsUpdationCallback](arkts-arkui-windowanimationmanager-windowanimationtargetsupdationcallback-t-sys.md) | 动画目标窗口更新时的回调。 |
-| [WindowCloseCallback](arkts-arkui-windowanimationmanager-windowclosecallback-t-sys.md) | 关闭窗口时的回调。 |
-| [WindowMinimizationCallback](arkts-arkui-windowanimationmanager-windowminimizationcallback-t-sys.md) | 最小化窗口时的回调。 |
+| [AppStartCallback](arkts-arkui-windowanimationmanager-appstartcallback-t-sys.md) | Callback function on starting an application. |
+| [AppTransitionCallback](arkts-arkui-windowanimationmanager-apptransitioncallback-t-sys.md) | Callback function on application transition. |
+| [ScreenUnlockCallback](arkts-arkui-windowanimationmanager-screenunlockcallback-t-sys.md) | Callback function on unlocking the screen. |
+| [WindowAnimationTargetsUpdationCallback](arkts-arkui-windowanimationmanager-windowanimationtargetsupdationcallback-t-sys.md) | Callback function on window animation targets update. |
+| [WindowCloseCallback](arkts-arkui-windowanimationmanager-windowclosecallback-t-sys.md) | Callback function on closing a window. |
+| [WindowMinimizationCallback](arkts-arkui-windowanimationmanager-windowminimizationcallback-t-sys.md) | Callback function on minimizing a window. |
 <!--DelEnd-->
 

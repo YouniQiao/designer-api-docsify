@@ -1,11 +1,5 @@
 # offFoldStatusChange
 
-## 导入模块
-
-```TypeScript
-import { display } from 'kits/@kit.ArkUI';
-```
-
 ## offFoldStatusChange
 
 ```TypeScript
@@ -32,5 +26,18 @@ Unregister the callback for fold status changes.
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 1400003 | This display manager service works abnormally. |
+| [1400003](../errorcode-display.md#1400003-系统服务工作异常) | This display manager service works abnormally. |
+
+## 示例
+
+```TypeScript
+// 如果通过on注册多个callback，同时关闭所有callback监听
+display.offFoldStatusChange();
+
+let callback: Callback<display.FoldStatus> = (data: display.FoldStatus) => {
+  console.info(`unregistering FoldStatus changes callback. Data: ${data}`);
+};
+// 关闭传入的callback监听
+display.offFoldStatusChange(callback);
+```
 

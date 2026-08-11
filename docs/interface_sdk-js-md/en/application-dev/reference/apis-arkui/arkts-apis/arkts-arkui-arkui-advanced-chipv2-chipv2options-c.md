@@ -1,6 +1,6 @@
 # ChipV2Options
 
-定义Chip选项类。
+Defines chip options class.
 
 **Since:** 26.0.0
 
@@ -24,7 +24,7 @@ import { ChipV2SuffixSymbolIconConfig, ChipV2Label, ChipV2PrefixSymbolIconConfig
 constructor(config: IChipV2OptionsConfig)
 ```
 
-ChipV2Options的构造函数
+The constructor of ChipV2Options
 
 **Since:** 26.0.0
 
@@ -40,5 +40,5 @@ ChipV2Options的构造函数
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| config | [IChipV2OptionsConfig](arkts-arkui-arkui-advanced-chipv2-ichipv2optionsconfig-i.md) | Yes | Chip的选项 |
+| config | [IChipV2OptionsConfig](arkts-arkui-arkui-advanced-chipv2-ichipv2optionsconfig-i.md) | Yes | config of the ChipV2Options |
 

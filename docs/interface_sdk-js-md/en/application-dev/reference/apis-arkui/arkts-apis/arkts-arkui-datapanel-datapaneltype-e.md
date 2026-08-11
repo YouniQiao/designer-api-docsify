@@ -1,6 +1,6 @@
 # DataPanelType
 
-数据面板的类型。
+DataPanelType enum
 
 **Since:** 23
 
@@ -16,7 +16,7 @@
 Line
 ```
 
-Line Type
+Line data panel.
 
 **Since:** 23
 
@@ -34,7 +34,7 @@ Line Type
 Circle
 ```
 
-Line Rainbow
+Circle data panel.
 
 **Since:** 23
 

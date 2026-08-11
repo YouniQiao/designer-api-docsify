@@ -1,6 +1,6 @@
 # ArrowPosition
 
-箭头的位置。
+The enum for arrow position in the select
 
 **Since:** 23
 
@@ -16,7 +16,7 @@
 END = 0
 ```
 
-文字在前，箭头在后。
+The value of arrow position end
 
 **Since:** 23
 
@@ -34,7 +34,7 @@ END = 0
 START = 1
 ```
 
-箭头在前，文字在后。
+The value of arrow position start
 
 **Since:** 23
 

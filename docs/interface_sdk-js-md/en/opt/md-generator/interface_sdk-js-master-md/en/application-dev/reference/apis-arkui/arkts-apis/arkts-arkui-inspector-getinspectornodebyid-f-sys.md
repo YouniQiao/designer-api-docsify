@@ -1,0 +1,33 @@
+# getInspectorNodeById (System API)
+
+## getInspectorNodeById
+
+```TypeScript
+declare function getInspectorNodeById(id: number): object
+```
+
+Get inspector node info by node id.
+
+**Since:** 7
+
+**Deprecated since:** 9
+
+**Substitutes:** getInspectorByKey
+
+<!--Device-unnamed-declare function getInspectorNodeById(id: number): object--><!--Device-unnamed-declare function getInspectorNodeById(id: number): object-End-->
+
+**System capability:** SystemCapability.ArkUI.ArkUI.Full
+
+**System API:** This is a system API.
+
+**Parameters:**
+
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| id | number | Yes |
+
+**Return value:**
+
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| object |

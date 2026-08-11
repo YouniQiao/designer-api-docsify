@@ -1,11 +1,5 @@
 # onWaterMarkFlagChange（系统接口）
 
-## 导入模块
-
-```TypeScript
-import { window } from 'kits/@kit.ArkUI';
-```
-
 ## onWaterMarkFlagChange
 
 ```TypeScript
@@ -34,7 +28,20 @@ function onWaterMarkFlagChange(callback: Callback<boolean>): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 1300003 | This window manager service works abnormally. |
-| 1300002 | This window state is abnormal. |
-| 202 | Permission verification failed. A non-system application calls a system API. |
+| [1300003](../errorcode-window.md#1300003-系统服务工作异常) | This window manager service works abnormally. |
+| [1300002](../errorcode-window.md#1300002-窗口状态异常) | This window state is abnormal. |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed. A non-system application calls a system API. |
+
+## 示例
+
+```TypeScript
+try {
+  window.onWaterMarkFlagChange((data) => {
+    console.info(`Succeeded in enabling the listener for watermark flag changes. Data: ${data}`);
+  });
+} catch (exception) {
+  let error = exception as BusinessError;
+  console.error(`Failed to enable the listener for watermark flag changes. Cause code: ${error.code}, message: ${error.message}`);
+}
+```
 

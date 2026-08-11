@@ -4,7 +4,7 @@
 type MessageType = 'message' | 'messageerror'
 ```
 
-表示消息类型。预留数据类型，暂未实现。
+Type of message, only "message" and "messageerror".
 
 **Since:** 7
 

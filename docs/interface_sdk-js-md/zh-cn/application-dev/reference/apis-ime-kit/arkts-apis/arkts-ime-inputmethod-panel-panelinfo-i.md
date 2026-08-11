@@ -14,12 +14,6 @@
 
 **系统能力：** SystemCapability.MiscServices.InputMethodFramework
 
-## 导入模块
-
-```TypeScript
-import { PanelInfo, PanelType, PanelFlag } from 'kits/@kit.IMEKit';
-```
-
 ## flag
 
 ```TypeScript

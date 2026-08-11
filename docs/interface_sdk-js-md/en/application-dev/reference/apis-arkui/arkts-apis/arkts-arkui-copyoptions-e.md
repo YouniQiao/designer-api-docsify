@@ -1,6 +1,6 @@
 # CopyOptions
 
-Indicates the share option.
+Copy options.
 
 **Since:** 9
 
@@ -16,7 +16,7 @@ Indicates the share option.
 None = 0
 ```
 
-Not allow share.
+Copy disabled.
 
 **Since:** 9
 
@@ -36,7 +36,7 @@ Not allow share.
 InApp = 1
 ```
 
-Share in app.
+Copy and paste within the current application only.
 
 **Since:** 9
 
@@ -56,7 +56,7 @@ Share in app.
 LocalDevice = 2
 ```
 
-Share in local device.
+Copy and paste across all applications on the device.
 
 **Since:** 9
 
@@ -76,7 +76,7 @@ Share in local device.
 CROSS_DEVICE = 3
 ```
 
-跨设备共享。
+Cross-device copy.
 
 **Since:** 11
 

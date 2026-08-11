@@ -1,6 +1,6 @@
 # ProgressInfo
 
-通知进度信息。
+Notify progress data.
 
 **Since:** 26.1.0
 
@@ -22,7 +22,7 @@ import { backgroundTaskManager } from 'kits/@kit.BackgroundTasksKit';
 fileName: string
 ```
 
-通知内容。
+Notification content.
 
 **Type:** string
 
@@ -42,7 +42,7 @@ fileName: string
 isMute?: boolean
 ```
 
-下载进度达到100%时是否静音。
+Whether to ring when the download progress reaches 100%.
 
 **Type:** boolean
 
@@ -62,7 +62,7 @@ isMute?: boolean
 progressValue?: int
 ```
 
-通知进度。如果该字段不存在，则不显示通知进度环，显示为普通通知。取值限定为整数。
+Download progress. If this field does not exist, the progress ring will not be displayed.The value should be an integer.
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
@@ -82,7 +82,7 @@ progressValue?: int
 title: string
 ```
 
-通知标题。
+Notification title.
 
 **Type:** string
 

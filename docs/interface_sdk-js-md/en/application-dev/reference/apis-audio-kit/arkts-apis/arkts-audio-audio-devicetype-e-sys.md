@@ -1,6 +1,6 @@
 # DeviceType
 
-表示设备类型的枚举。
+Enumerates the device types.
 
 **Since:** 7
 

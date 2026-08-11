@@ -12,7 +12,7 @@ import { cooperate } from 'kits/@kit.DistributedServiceKit';
 function activate(targetNetworkId: string, inputDeviceId: number, callback: AsyncCallback<void>): void
 ```
 
-启动键鼠穿越，使用Callback异步回调。
+Starts screen hopping. This API uses an asynchronous callback to return the result.
 
 **Since:** 10
 
@@ -32,17 +32,17 @@ function activate(targetNetworkId: string, inputDeviceId: number, callback: Asyn
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| targetNetworkId | string | Yes | 键鼠穿越目标设备描述符。 |
-| inputDeviceId | number | Yes | 待穿越输入设备标识符。 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | 回调函数，键鼠穿越启动成功时，err为undefined，否则为错误对象。 |
+| targetNetworkId | string | Yes | Descriptor of the target device for screen hopping. |
+| inputDeviceId | number | Yes | Identifier of the input device for screen hopping. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the operation result. If the operation is successful, **err** is **undefined**. Otherwise, **err** is an error object. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. Possible causes: &lt;br&gt;1. Mandatory parameters are left unspecified. &lt;br&gt;2. Incorrect parameter types. &lt;br&gt;3. Parameter verification failed. |
-| 202 | Permission verification failed. A non-system application calls a system API. |
-| 20900001 | Service exception. Possible causes: &lt;br&gt;1. A system error, such as null pointer, container-related exception, or IPC exception. &lt;br&gt;2. N-API invocation exception or invalid N-API status. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: &lt;br&gt;1. Mandatory parameters are left unspecified. &lt;br&gt;2. Incorrect parameter types. &lt;br&gt;3. Parameter verification failed. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
+| [20900001](../../apis-input-kit/errorcode-cooperator.md#20900001-service-exception) | Service exception. Possible causes: &lt;br&gt;1. A system error, such as null pointer, container-related exception, or IPC exception. &lt;br&gt;2. N-API invocation exception or invalid N-API status. |
 
 ## Examples
 
@@ -71,7 +71,7 @@ try {
 function activate(targetNetworkId: string, inputDeviceId: number): Promise<void>
 ```
 
-启动键鼠穿越，使用Promise异步回调。
+Starts screen hopping. This API uses a promise to return the result.
 
 **Since:** 10
 
@@ -91,22 +91,22 @@ function activate(targetNetworkId: string, inputDeviceId: number): Promise<void>
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| targetNetworkId | string | Yes | 键鼠穿越目标设备描述符。 |
+| targetNetworkId | string | Yes | Descriptor of the target device for screen hopping. |
 | inputDeviceId | number | Yes |  |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | 无返回结果的Promise对象。 |
+| Promise&lt;void&gt; | Promise that returns no value. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. Possible causes: &lt;br&gt;1. Mandatory parameters are left unspecified. &lt;br&gt;2. Incorrect parameter types. &lt;br&gt;3. Parameter verification failed. |
-| 202 | Permission verification failed. A non-system application calls a system API. |
-| 20900001 | Service exception. Possible causes: &lt;br&gt;1. A system error, such as null pointer, container-related exception, or IPC exception. &lt;br&gt;2. N-API invocation exception or invalid N-API status. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: &lt;br&gt;1. Mandatory parameters are left unspecified. &lt;br&gt;2. Incorrect parameter types. &lt;br&gt;3. Parameter verification failed. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
+| [20900001](../../apis-input-kit/errorcode-cooperator.md#20900001-service-exception) | Service exception. Possible causes: &lt;br&gt;1. A system error, such as null pointer, container-related exception, or IPC exception. &lt;br&gt;2. N-API invocation exception or invalid N-API status. |
 
 ## Examples
 

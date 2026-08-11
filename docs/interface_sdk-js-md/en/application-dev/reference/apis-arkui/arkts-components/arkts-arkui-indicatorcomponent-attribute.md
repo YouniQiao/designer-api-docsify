@@ -1,6 +1,6 @@
 # IndicatorComponent properties/events
 
-除支持[通用属性](../../apis-ability-kit/arkts-apis/arkts-app-ability-common.md/arkts-app-ability-common.md)外，还支持以下属性。
+Defines the IndicatorComponent attribute functions.
 
 **Inheritance/Implementation:** IndicatorComponentAttribute extends [CommonMethod<IndicatorComponentAttribute>](CommonMethod<IndicatorComponentAttribute>)
 
@@ -18,9 +18,7 @@
 count(totalCount: number)
 ```
 
-设置导航点总数量。
-
-单独导航点组件和Swiper绑定的时候，以Swiper的页面数量为准。
+Sets the total number of indicator.
 
 **Since:** 15
 
@@ -48,9 +46,7 @@ count(totalCount: number)
 initialIndex(index: number)
 ```
 
-设置首次显示时当前导航点的索引值。传入值小于0或大于等于导航点数量时，按照默认值0处理。
-
-单独导航点组件和Swiper绑定的时候，该属性不生效。
+Called when the index value of the displayed subcomponent is set in the container.
 
 **Since:** 15
 
@@ -78,9 +74,7 @@ initialIndex(index: number)
 loop(isLoop: boolean)
 ```
 
-设置是否开启循环。
-
-单独导航点组件和Swiper绑定的时候，该属性不生效。
+Called when setting whether to turn on cyclic sliding.
 
 **Since:** 15
 
@@ -136,7 +130,7 @@ Called when the index value changes.
 style(indicatorStyle: DotIndicator | DigitIndicator)
 ```
 
-设置可选导航点指示器样式。
+Sets the indicator style.
 
 **Since:** 15
 
@@ -156,7 +150,7 @@ style(indicatorStyle: DotIndicator | DigitIndicator)
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| indicatorStyle | [DotIndicator](arkts-arkui-dotindicator-c.md) \| DigitIndicator | Yes | 可选导航点指示器样式。&lt;br/&gt; - DotIndicator：圆点指示器样式。&lt;br/&gt; - DigitIndicator：数字指示器样式。&lt;br/&gt;  默认类型：DotIndicator。 |
+| indicatorStyle | [DotIndicator](arkts-arkui-dotindicator-c.md) \| DigitIndicator | Yes | the style value |
 
 ## vertical
 
@@ -164,9 +158,7 @@ style(indicatorStyle: DotIndicator | DigitIndicator)
 vertical(isVertical: boolean)
 ```
 
-设置是否为纵向滑动。
-
-单独导航点组件和Swiper绑定的时候，该属性不生效。
+Called when setting whether to slide vertically.
 
 **Since:** 15
 

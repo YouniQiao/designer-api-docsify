@@ -42,10 +42,10 @@ Obtains the IP information of a Wi-Fi connection.
 import wifi from '@ohos.wifi';
 
 try {
-  let info = wifi.getIpInfo();
-  console.info("info:" + JSON.stringify(info));
+	let info = wifi.getIpInfo();
+	console.info("info:" + JSON.stringify(info));
 }catch(error){
-  console.error("failed:" + JSON.stringify(error));
+	console.error("failed:" + JSON.stringify(error));
 }
 ```
 

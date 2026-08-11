@@ -12,7 +12,7 @@ import { quickFixManager } from 'kits/@kit.AbilityKit';
 function revokeQuickFix(bundleName: string, callback: AsyncCallback<void>): void
 ```
 
-撤销快速修复的接口，使用callback方式返回结果。
+Revokes quick fix. This API uses an asynchronous callback to return the result.
 
 **Since:** 10
 
@@ -30,18 +30,18 @@ function revokeQuickFix(bundleName: string, callback: AsyncCallback<void>): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| bundleName | string | Yes | 需要撤销补丁的应用Bundle名称。 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | 回调函数。当撤销快速修复成功时，err为undefined，否则为错误对象。 |
+| bundleName | string | Yes | Name of the bundle for which the patch needs to be revoked. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. If quick fix is revoked, **err** is **undefined**. Otherwise, **err** is an error object. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types. |
-| 18500009 | The application has an ongoing quick fix task. |
-| 201 | The application does not have permission to call the interface. |
-| 202 | The application is not system-app, can not use system-api. |
-| 18500001 | The bundle does not exist or no patch has been applied. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types. |
+| [18500009](../errorcode-ability.md#18500009-application-has-a-quick-fix-task-being-processed) | The application has an ongoing quick fix task. |
+| [201](../../errorcode-universal.md#201-permission-denied) | The application does not have permission to call the interface. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | The application is not system-app, can not use system-api. |
+| [18500001](../errorcode-ability.md#18500001-invalid-bundle-name) | The bundle does not exist or no patch has been applied. |
 
 ## Examples
 
@@ -64,7 +64,7 @@ quickFixManager.revokeQuickFix(bundleName, (err) => {
 function revokeQuickFix(bundleName: string): Promise<void>
 ```
 
-撤销快速修复的接口。使用Promise异步回调。
+Revokes quick fix. This API uses a promise to return the result.
 
 **Since:** 10
 
@@ -82,23 +82,23 @@ function revokeQuickFix(bundleName: string): Promise<void>
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| bundleName | string | Yes | 需要撤销补丁的应用Bundle名称。 |
+| bundleName | string | Yes | Name of the bundle for which the patch needs to be revoked. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise对象。无返回结果的Promise对象。 |
+| Promise&lt;void&gt; | Promise that returns no value. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types. |
-| 18500009 | The application has an ongoing quick fix task. |
-| 201 | The application does not have permission to call the interface. |
-| 202 | The application is not system-app, can not use system-api. |
-| 18500001 | The bundle does not exist or no patch has been applied. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types. |
+| [18500009](../errorcode-ability.md#18500009-application-has-a-quick-fix-task-being-processed) | The application has an ongoing quick fix task. |
+| [201](../../errorcode-universal.md#201-permission-denied) | The application does not have permission to call the interface. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | The application is not system-app, can not use system-api. |
+| [18500001](../errorcode-ability.md#18500001-invalid-bundle-name) | The bundle does not exist or no patch has been applied. |
 
 ## Examples
 

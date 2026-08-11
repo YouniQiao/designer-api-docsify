@@ -1,10 +1,6 @@
 # Particles
 
-粒子动画的集合。
-
-> **说明：**
-> 
-> 为规范匿名对象的定义，API 18版本修改了此处的元素定义。其中，保留了历史匿名对象的起始版本信息，会出现外层元素@since版本号高于内层元素版本号的情况，但这不影响接口的使用。
+Defines the Particles interface.
 
 **Since:** 23
 
@@ -20,10 +16,7 @@
 particles: Array<ParticleOptions>
 ```
 
-粒子动画的集合。每一个的粒子动画（[ParticleOptions](../arkts-components/arkts-arkui-particleoptions-i.md/arkts-arkui-particleoptions-i.md)）包含粒子发射，同时可配置粒子的颜色、透明度、大小、速度、加速度与旋转速度，详见  
-[ParticleOptions](../arkts-components/arkts-arkui-particleoptions-i.md/arkts-arkui-particleoptions-i.md)属性说明。 
-
-**原子化服务API（仅ArkTS-Dyn）：** 从API version 11开始，该接口支持在原子化服务中使用。
+Array of particles.
 
 **Type:** Array&lt;ParticleOptions&gt;
 

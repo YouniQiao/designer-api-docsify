@@ -1,6 +1,6 @@
 # PrintFileCreationState
 
-打印文件创建状态的枚举。
+Enumerates the print file creation status.
 
 **Since:** 11
 
@@ -16,7 +16,7 @@
 PRINT_FILE_CREATED = 0
 ```
 
-表示打印文件创建成功。
+The print file is created successfully.
 
 **Since:** 11
 
@@ -32,7 +32,7 @@ PRINT_FILE_CREATED = 0
 PRINT_FILE_CREATION_FAILED = 1
 ```
 
-表示打印文件创建失败。
+The print file fails to be created.
 
 **Since:** 11
 
@@ -48,7 +48,7 @@ PRINT_FILE_CREATION_FAILED = 1
 PRINT_FILE_CREATED_UNRENDERED = 2
 ```
 
-表示打印文件创建成功但未渲染。
+The print file is successfully created but not rendered.
 
 **Since:** 11
 

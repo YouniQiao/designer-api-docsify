@@ -12,7 +12,7 @@ import { workScheduler } from 'kits/@kit.BackgroundTasksKit';
 function getWorkStatus(workId: int, callback: AsyncCallback<WorkInfo>): void
 ```
 
-通过workId获取延迟任务，使用Callback异步回调。
+Obtains the information a deferred task. This API uses an asynchronous callback to return the result.
 
 **Since:** 9
 
@@ -28,18 +28,18 @@ function getWorkStatus(workId: int, callback: AsyncCallback<WorkInfo>): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| workId | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | 延迟任务Id。 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;WorkInfo&gt; | Yes | 回调函数。如果workId有效，则返回从WorkSchedulerService获取的任务，否则抛出异常。 |
+| workId | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | ID of the deferred task. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;WorkInfo&gt; | Yes | Callback used to return the result. If **workId** is valid, the task information obtained from WorkSchedulerService is returned. Otherwise, an exception is thrown. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 9700004 | Check on workInfo failed. |
-| 401 | Parameter error. Possible causes: Parameter verification failed. |
-| 9700001 | Memory operation failed. |
-| 9700002 | Failed to write data into parcel. Possible reasons: 1. Invalid parameters; 2. Failed to apply for memory. |
-| 9700003 | System service operation failed. |
+| [9700004](../../apis-backgroundtasks-kit/errorcode-workScheduler.md#9700004-workinfo-verification-failure) | Check on workInfo failed. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: Parameter verification failed. |
+| [9700001](../../apis-backgroundtasks-kit/errorcode-workScheduler.md#9700001-memory-operation-failure) | Memory operation failed. |
+| [9700002](../../apis-backgroundtasks-kit/errorcode-workScheduler.md#9700002-parcel-operation-failure) | Failed to write data into parcel. Possible reasons: 1. Invalid parameters; 2. Failed to apply for memory. |
+| [9700003](../../apis-backgroundtasks-kit/errorcode-workScheduler.md#9700003-system-service-failure) | System service operation failed. |
 
 ## Examples
 
@@ -63,7 +63,7 @@ import { BusinessError } from '@kit.BasicServicesKit';
 function getWorkStatus(workId: int): Promise<WorkInfo>
 ```
 
-通过workId获取延迟任务，使用Promise异步回调。
+Obtains the information a deferred task. This API uses a promise to return the result.
 
 **Since:** 9
 
@@ -79,23 +79,23 @@ function getWorkStatus(workId: int): Promise<WorkInfo>
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| workId | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | 延迟任务Id。 |
+| workId | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | ID of the deferred task. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;WorkInfo&gt; | Promise对象，如果workId有效，则返回从WorkSchedulerService获取的任务，否则抛出异常。 |
+| Promise&lt;WorkInfo&gt; | Promise used to return the result. If **workId** is valid, the task information obtained from WorkSchedulerService is returned. Otherwise, an exception is thrown. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 9700004 | Check on workInfo failed. |
-| 401 | Parameter error. Possible causes: Parameter verification failed. |
-| 9700001 | Memory operation failed. |
-| 9700002 | Failed to write data into parcel. Possible reasons: 1. Invalid parameters; 2. Failed to apply for memory. |
-| 9700003 | System service operation failed. |
+| [9700004](../../apis-backgroundtasks-kit/errorcode-workScheduler.md#9700004-workinfo-verification-failure) | Check on workInfo failed. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: Parameter verification failed. |
+| [9700001](../../apis-backgroundtasks-kit/errorcode-workScheduler.md#9700001-memory-operation-failure) | Memory operation failed. |
+| [9700002](../../apis-backgroundtasks-kit/errorcode-workScheduler.md#9700002-parcel-operation-failure) | Failed to write data into parcel. Possible reasons: 1. Invalid parameters; 2. Failed to apply for memory. |
+| [9700003](../../apis-backgroundtasks-kit/errorcode-workScheduler.md#9700003-system-service-failure) | System service operation failed. |
 
 ## Examples
 

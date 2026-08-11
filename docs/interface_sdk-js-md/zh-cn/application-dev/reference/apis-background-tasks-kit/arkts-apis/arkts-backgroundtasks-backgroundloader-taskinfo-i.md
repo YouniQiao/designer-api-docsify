@@ -10,12 +10,6 @@
 
 **系统能力：** SystemCapability.ResourceSchedule.WorkScheduler
 
-## 导入模块
-
-```TypeScript
-import { backgroundLoader } from 'kits/@kit.BackgroundTasksKit';
-```
-
 ## abilityName
 
 ```TypeScript

@@ -1,6 +1,6 @@
 # QueryRule (System API)
 
-系统事件查询规则对象接口。
+Defines event query rules.
 
 **Since:** 9
 
@@ -24,13 +24,14 @@ import { hiSysEvent } from 'kits/@kit.PerformanceAnalysisKit';
 condition?: string
 ```
 
-事件的额外参数条件，格式：{"version":"V1","condition":{"and":[{"param":"参数","op":"操作符","value":"比较值"}]}}。
+Additional event conditions. The value of this parameter is in the format of  
+**{"version":"V1","condition":{"and":[{"param":"*Parameter*","op":"*Operator*","value":"*Comparison value*"}]}}**.
 
-参数：指定事件参数的键值。
+Parameter: key value of the specified event parameter.
 
-操作符支持：=、!=、&lt;、<=、>和&gt;&lt;=、&gt;和>=。
+Supported operators: **=**, **!=**, **&lt;**, **<=**, **>** and **&gt;&lt;=**, **&gt;** and **>=**.
 
-支持在“and”数组中配置多个条件，查询结果取交集。
+Multiple conditions can be configured in the **"and"** array, and the intersection of the query results is used.
 
 **Type:** string
 
@@ -50,7 +51,7 @@ condition?: string
 domain: string
 ```
 
-查询包含的事件领域。
+Event domain.
 
 **Type:** string
 
@@ -70,7 +71,7 @@ domain: string
 names: string[]
 ```
 
-查询所包含的多个事件名称，每个查询规则对象包含多个系统事件名称。
+Array of event names. A **QueryRule** object contains multiple system event names.
 
 **Type:** string[]
 

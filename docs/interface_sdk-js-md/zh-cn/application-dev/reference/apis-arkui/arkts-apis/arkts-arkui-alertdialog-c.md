@@ -45,5 +45,5 @@ showAlertDialog需先获取[UIContext](arkts-arkui-uicontext.md)实例后再进�
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | [AlertDialogParamWithConfirm](arkts-arkui-alertdialogparamwithconfirm-i.md) \| AlertDialogParamWithButtons \| AlertDialogParamWithOptions | 是 | 定义并显示 AlertDialog组件。<br>**起始版本：** 10 |
+| value | [AlertDialogParamWithConfirm](arkts-arkui-alertdialog-alertdialogparamwithconfirm-i.md) \| AlertDialogParamWithButtons \| AlertDialogParamWithOptions | 是 | 定义并显示 AlertDialog组件。<br>**起始版本：** 10 |
 

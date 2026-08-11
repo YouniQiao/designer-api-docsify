@@ -12,7 +12,7 @@ import { cert } from 'kits/@kit.DeviceCertificateKit';
 function createCmsParser(): CmsParser
 ```
 
-表示创建CmsParser对象。
+Creates a **CmsParser** object.
 
 **Since:** 22
 
@@ -28,15 +28,15 @@ function createCmsParser(): CmsParser
 
 | Type | Description |
 | --- | --- |
-| [CmsParser](arkts-devicecertificate-cert-cmsparser-i.md) | CmsParser对象。 |
+| [CmsParser](arkts-devicecertificate-cert-cmsparser-i.md) | CmsParser object. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 19020002 | 运行时外部错误。可能的原因： &lt;br&gt;1. 内存拷贝失败； &lt;br&gt;2. 系统内部出现空指针； &lt;br&gt;3. 获取Native对象失败或参数转换失败。 |
-| 19020001 | 内存错误。 |
-| 19030001 | 调用三方算法库API出错。 |
+| [19020002](../errorcode-cert.md#19020002-runtime-error) | Runtime error. Possible causes: &lt;br&gt;1. Memory copy failed; &lt;br&gt;2. A null pointer occurs inside the system; &lt;br&gt;3. Failed to obtain the native object or convert parameters. |
+| [19020001](../errorcode-cert.md#19020001-memory-error) | Memory malloc failed. |
+| [19030001](../errorcode-cert.md#19030001-crypto-operation-error) | Crypto operation error. |
 
 ## Examples
 

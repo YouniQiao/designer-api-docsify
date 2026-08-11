@@ -19,12 +19,6 @@
 
 **系统能力：** SystemCapability.Multimedia.Media.VideoPlayer
 
-## 导入模块
-
-```TypeScript
-import { media } from 'kits/@kit.MediaKit';
-```
-
 ## getTrackDescription
 
 ```TypeScript
@@ -656,7 +650,7 @@ seek(timeMs: number, mode: SeekMode, callback: AsyncCallback<number>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | timeMs | number | 是 | 指定的跳转时间节点，单位毫秒（ms），取值范围为[0, duration]。 |
-| mode | [SeekMode](../../apis-arkui/arkts-components/arkts-arkui-seekmode-e.md) | 是 | 跳转模式。 |
+| mode | [SeekMode](../../apis-arkui/arkts-apis/arkts-arkui-video-seekmode-e.md) | 是 | 跳转模式。 |
 | callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;number&gt; | 是 | 回调函数。跳转到指定播放位置成功时，err为undefined，data为获取到的跳转到的播放位置，否则为错误对象。 |
 
 ## seek
@@ -688,7 +682,7 @@ seek(timeMs: number, mode?: SeekMode): Promise<number>
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | timeMs | number | 是 | 指定的跳转时间节点，单位毫秒（ms），取值范围为[0, duration]。 |
-| mode | [SeekMode](../../apis-arkui/arkts-components/arkts-arkui-seekmode-e.md) | 否 | 基于视频I帧的跳转模式，默认为SEEK_PREV_SYNC模式。 |
+| mode | [SeekMode](../../apis-arkui/arkts-apis/arkts-arkui-video-seekmode-e.md) | 否 | 基于视频I帧的跳转模式，默认为SEEK_PREV_SYNC模式。 |
 
 **返回值：**
 

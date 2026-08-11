@@ -12,7 +12,7 @@ import { appRecovery } from 'kits/@kit.AbilityKit';
 function setRestartWant(want: Want): void
 ```
 
-设置下次恢复主动拉起场景下的Ability。该Ability必须为当前包下的UIAbility。
+Sets an ability that will be recovered. The ability must be a UIAbility in the current bundle.
 
 **Since:** 10
 
@@ -30,7 +30,7 @@ function setRestartWant(want: Want): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| want | [Want](arkts-ability-app-ability-want-want-c.md) | Yes | 通过设置Want中"bundleName"和"abilityName"字段来指定恢复重启的Ability。 |
+| want | [Want](arkts-ability-app-ability-want-want-c.md) | Yes | Want of the target ability. You can set the **bundleName** and **abilityName** fields in **Want** to specify the ability. |
 
 ## Examples
 

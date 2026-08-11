@@ -4,7 +4,7 @@
 type PanListenerCallback = (event: GestureEvent, current: GestureRecognizer, node?: FrameNode) => void
 ```
 
-定义UIObserver监听拖拽事件时使用的回调类型。event表示拖拽事件的信息。node表示接收事件的frameNode。
+Defines the callback type used in UIObserver watch pan event.The value of event indicates the information of pan event.The value of node indicates the frameNode which will receive the event.
 
 **Since:** 26.0.0
 
@@ -22,5 +22,5 @@ type PanListenerCallback = (event: GestureEvent, current: GestureRecognizer, nod
 | --- | --- | --- | --- |
 | event | [GestureEvent](arkts-arkui-gestureevent-i.md) | Yes | the information of pan event |
 | current | [GestureRecognizer](arkts-arkui-gesturerecognizer-c.md) | Yes | the information of panRecognizer |
-| node | [FrameNode](arkts-arkui-framenode-t.md) | No | the information of frameNode |
+| node | [FrameNode](../arkts-components/arkts-arkui-framenode-t.md) | No | the information of frameNode |
 

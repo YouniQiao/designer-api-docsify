@@ -10,12 +10,6 @@
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Lite
 
-## 导入模块
-
-```TypeScript
-import { router } from 'kits/@kit.ArkUI';
-```
-
 ## params
 
 ```TypeScript

@@ -1,11 +1,5 @@
 # bulkTransfer
 
-## 导入模块
-
-```TypeScript
-import { usb } from 'kits/@kit.BasicServicesKit';
-```
-
 ## bulkTransfer
 
 ```TypeScript

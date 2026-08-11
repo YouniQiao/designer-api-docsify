@@ -12,7 +12,7 @@ import { dataUriUtils } from 'kits/@kit.AbilityKit';
 function updateId(uri: string, id: double): string
 ```
 
-更新指定uri中的ID。
+Updates the ID in a given URI.
 
 **Since:** 9
 
@@ -26,20 +26,20 @@ function updateId(uri: string, id: double): string
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| uri | string | Yes | 表示uri对象 |
-| id | ArkTS-Dyn: number  <br>ArkTS-Sta：double | Yes | 表示要更新的ID |
+| uri | string | Yes | Target URI object. |
+| id | ArkTS-Dyn: number  <br>ArkTS-Sta：double | Yes | New ID. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| string | 返回更新ID之后的uri对象。 |
+| string | URI object with the new ID. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
 
 ## Examples
 

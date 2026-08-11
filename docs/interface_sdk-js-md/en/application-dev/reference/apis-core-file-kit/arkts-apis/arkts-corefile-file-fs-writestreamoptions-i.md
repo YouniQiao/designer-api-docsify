@@ -1,6 +1,6 @@
 # WriteStreamOptions
 
-可选项类型，支持 createWriteStream 接口使用。
+Defines the options used in **createWriteStream()**.
 
 **Since:** 23
 
@@ -22,29 +22,23 @@ import { Options, ReaderIteratorResult, Watcher, ReadTextOptions, WatchEventList
 mode?: int
 ```
 
-创建文件可写流的[OpenMode](arkts-corefile-fileio-openmode-n.md#openmode)，必须指定如下选项中的一个，默认只写方式创建：
+[OpenMode](arkts-corefile-fileio-openmode-n.md#openmode) for creating the writeable stream. You must specify one of the following options.
 
-- OpenMode.READ_ONLY(0o0)：只读。
+- **OpenMode.READ_ONLY(0o0)**: read-only, which is the default value.  
+- **OpenMode.WRITE_ONLY(0o1)**: write-only.  
+- **OpenMode.READ_WRITE(0o2)**: read/write.
 
-- OpenMode.WRITE_ONLY(0o1)：只写。
+You can also specify the following options, separated by a bitwise OR operator (|). By default, no additional options are given.
 
-- OpenMode.READ_WRITE(0o2)：读写。
-
-给定如下功能选项，以按位或的方式追加，默认不给定任何额外选项：
-
-- OpenMode.CREATE(0o100)：若文件不存在，则创建文件。
-
-- OpenMode.TRUNC(0o1000)：如果文件存在且文件具有写权限，则将其长度裁剪为零。
-
-- OpenMode.APPEND(0o2000)：以追加方式打开，后续写将追加到文件末尾。
-
-- OpenMode.NONBLOCK(0o4000)：如果path指向FIFO、块特殊文件或字符特殊文件，则本次打开及后续 IO 进行非阻塞操作。
-
-- OpenMode.DIR(0o200000)：如果path不指向目录，则出错。不允许附加写权限。
-
-- OpenMode.NOFOLLOW(0o400000)：如果path指向符号链接，则出错。
-
-- OpenMode.SYNC(0o4010000)：以同步IO的方式打开文件。
+- **OpenMode.CREATE(0o100)**: If the file does not exist, create it.  
+- **OpenMode.TRUNC(0o1000)**: If the file exists and is opened in write mode, truncate the file length to 0.  
+- **OpenMode.APPEND(0o2000)**: Open the file in append mode. New data will be added to the end of the file.  
+- **OpenMode.NONBLOCK(0o4000)**: If **path** points to a named pipe (also known as a FIFO), block special file, or  
+character special file, perform non-blocking operations on the opened file and in subsequent I/Os.  
+- **OpenMode.DIR(0o200000)**: If **path** does not point to a directory, throw an exception. The write permission  
+is not allowed.  
+- **OpenMode.NOFOLLOW(0o400000)**: If **path** points to a symbolic link, throw an exception.  
+- **OpenMode.SYNC(0o4010000)**: Open the file in synchronous I/O mode.
 
 **Type:** int
 
@@ -62,7 +56,7 @@ mode?: int
 start?: long
 ```
 
-表示期望写入文件的位置，单位为Byte。可选，默认从当前位置开始写。
+Start position to write the data, in bytes. This parameter is optional. By default, data is written from the current position.
 
 **Type:** long
 

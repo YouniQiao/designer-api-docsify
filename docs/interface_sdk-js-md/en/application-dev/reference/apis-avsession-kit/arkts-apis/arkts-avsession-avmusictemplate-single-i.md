@@ -1,6 +1,6 @@
 # Single
 
-单曲的定义。继承自[MediaEntity](arkts-avsession-avmusictemplate-mediaentity-i.md)。
+The definition of Single song.
 
 **Inheritance/Implementation:** Single extends [MediaEntity](arkts-avsession-avmusictemplate-mediaentity-i.md)
 
@@ -24,7 +24,7 @@ import { avMusicTemplate } from 'kits/@kit.AVSessionKit';
 downloadProgress?: int
 ```
 
-歌曲下载进度。
+DownloadProgress of the song.
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
@@ -44,7 +44,7 @@ downloadProgress?: int
 downloadStatus?: DownloadStatus
 ```
 
-歌曲下载状态。
+DownloadStatus of the song.
 
 **Type:** [DownloadStatus](arkts-avsession-avmusictemplate-downloadstatus-e.md)
 
@@ -64,7 +64,7 @@ downloadStatus?: DownloadStatus
 favSubscribeData: FavoriteData
 ```
 
-收藏或订阅的信息。
+Favorite/Subscribe information.
 
 **Type:** [FavoriteData](arkts-avsession-avmusictemplate-favoritedata-i.md)
 
@@ -84,7 +84,7 @@ favSubscribeData: FavoriteData
 isVip: boolean
 ```
 
-是否是VIP歌曲。true表示是，false表示不是。无默认值。
+Is vip song.
 
 **Type:** boolean
 
@@ -104,7 +104,7 @@ isVip: boolean
 playInfo: PlayInfo
 ```
 
-播放歌曲信息。
+Play information.
 
 **Type:** [PlayInfo](arkts-avsession-avmusictemplate-playinfo-i.md)
 
@@ -124,7 +124,7 @@ playInfo: PlayInfo
 settings?: SettingItem[]
 ```
 
-歌曲设置项的数组。
+Settings of the song.
 
 **Type:** [SettingItem](arkts-avsession-avmusictemplate-settingitem-i.md)[]
 
@@ -144,7 +144,7 @@ settings?: SettingItem[]
 singer: string
 ```
 
-歌手名。
+Singer name.
 
 **Type:** string
 
@@ -164,7 +164,7 @@ singer: string
 tags?: string[]
 ```
 
-歌曲标签信息的数组。
+Tags of the song.
 
 **Type:** string[]
 

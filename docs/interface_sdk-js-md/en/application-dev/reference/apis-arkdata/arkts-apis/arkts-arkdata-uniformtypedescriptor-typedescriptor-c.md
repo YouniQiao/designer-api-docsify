@@ -1,6 +1,6 @@
 # TypeDescriptor
 
-标准化数据类型的描述类，它包含了一些属性和方法用于描述标准化数据类型自身以及和其他标准化数据类型之间的归属与层级关系，例如通过typeId与belongingToTypes维护类型映射关系，并提供层级判断等方法。详细属性与方法参见下文说明。
+Represents a class for defining a uniform data type. It provides properties and methods for describing a uniform data type and its relationship with other uniform data types.
 
 **Since:** 11
 
@@ -22,7 +22,7 @@ import { uniformTypeDescriptor } from 'kits/@kit.ArkData';
 belongsTo(type: string): boolean
 ```
 
-判断当前标准化数据类型是否归属于指定的标准化数据类型。
+Checks whether this data type belongs to the specified uniform data type.
 
 **Since:** 11
 
@@ -38,19 +38,19 @@ belongsTo(type: string): boolean
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | string | Yes | 所指定的标准化数据类型（即[UTD预置列表](../../../database/uniform-data-type-list.md)中各类型对应的UTD-ID或自定义UTD-ID）。 |
+| type | string | Yes | Uniform data type specified, which is a value of [UniformDataType](arkts-arkdata-uniformtypedescriptor-uniformdatatype-e.md). |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| boolean | 返回true表示当前的标准化数据类型归属于所指定的标准化数据类型，包括所指定类型与当前类型相同的情况；返回false则表示无归属关系。 |
+| boolean | Returns **true** if the data type belongs to or is the same as the specified uniform data type; returns **false** if they are not related. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. Possible causes:1.Mandatory parameters are left unspecified; &lt;br&gt;2.Incorrect parameter types; &lt;br&gt;3. Parameter verification failed. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes:1.Mandatory parameters are left unspecified; &lt;br&gt;2.Incorrect parameter types; &lt;br&gt;3. Parameter verification failed. |
 
 ## Examples
 
@@ -76,7 +76,7 @@ try{
 equals(typeDescriptor: TypeDescriptor): boolean
 ```
 
-判断指定的标准化数据类型描述类对象的类型ID和当前标准化数据类型描述类对象的类型ID是否相同，即[TypeDescriptor](arkts-arkdata-uniformtypedescriptor-typedescriptor-c.md)对象的typeId。
+Checks whether this data type is the same as the specified uniform data type. That is, compares **typeId**s of two [TypeDescriptor](arkts-arkdata-uniformtypedescriptor-typedescriptor-c.md) objects.
 
 **Since:** 11
 
@@ -92,19 +92,19 @@ equals(typeDescriptor: TypeDescriptor): boolean
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| typeDescriptor | [TypeDescriptor](arkts-arkdata-uniformtypedescriptor-typedescriptor-c.md) | Yes | 待比较的标准化数据类型描述类对象。 |
+| typeDescriptor | [TypeDescriptor](arkts-arkdata-uniformtypedescriptor-typedescriptor-c.md) | Yes | Uniform data type to compare. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| boolean | 返回true表示所比较的两个TypeDescriptor相同；返回false则表示不同。 |
+| boolean | Returns **true** if the type IDs are the same; returns **false** otherwise. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. Possible causes:1.Mandatory parameters are left unspecified; &lt;br&gt;2.Incorrect parameter types; &lt;br&gt;3. Parameter verification failed. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes:1.Mandatory parameters are left unspecified; &lt;br&gt;2.Incorrect parameter types; &lt;br&gt;3. Parameter verification failed. |
 
 ## Examples
 
@@ -130,7 +130,8 @@ try{
 isHigherLevelType(type: string): boolean
 ```
 
-判断当前标准化数据类型是否是指定标准化数据类型的高层级类型。例如SOURCE_CODE为TYPE_SCRIPT的高层级类型，TEXT为SOURCE_CODE和TYPE_SCRIPT的高层级类型。
+Checks whether this data type is a higher-level type of the specified uniform data type. For example,   
+**SOURCE_CODE** is a higher-level type of **TYPE_SCRIPT**, and **TEXT** is a higher-level type of **SOURCE_CODE**and **TYPE_SCRIPT**.
 
 **Since:** 11
 
@@ -146,19 +147,19 @@ isHigherLevelType(type: string): boolean
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | string | Yes | 所指定的标准化数据类型（即[UTD预置列表](../../../database/uniform-data-type-list.md)中各类型对应的UTD-ID或自定义UTD-ID）。 |
+| type | string | Yes | Uniform data type specified, which is a value of [UniformDataType](arkts-arkdata-uniformtypedescriptor-uniformdatatype-e.md). |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| boolean | 返回true表示当前的标准化数据类型是所指定标准化数据类型的高层级类型，否则返回false。 |
+| boolean | Returns **true** if the data type is a higher-level type of the specified uniform data type; returns **false** otherwise. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. Possible causes:1.Mandatory parameters are left unspecified; &lt;br&gt;2.Incorrect parameter types; &lt;br&gt;3. Parameter verification failed. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes:1.Mandatory parameters are left unspecified; &lt;br&gt;2.Incorrect parameter types; &lt;br&gt;3. Parameter verification failed. |
 
 ## Examples
 
@@ -184,7 +185,8 @@ try{
 isLowerLevelType(type: string): boolean
 ```
 
-判断当前标准化数据类型是否是指定标准化数据类型的低层级类型。例如TYPE_SCRIPT为SOURCE_CODE的低层级类型，TYPE_SCRIPT和SOURCE_CODE为TEXT的低层级类型。
+Checks whether this data type is a lower-level type of the specified uniform data type. For example,   
+**TYPE_SCRIPT** is a lower-level type of **SOURCE_CODE**, and **TYPE_SCRIPT** and **SOURCE_CODE** are lower-level types of **TEXT**.
 
 **Since:** 11
 
@@ -200,19 +202,19 @@ isLowerLevelType(type: string): boolean
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | string | Yes | 所指定的标准化数据类型（即[UTD预置列表](../../../database/uniform-data-type-list.md)中各类型对应的UTD-ID或自定义UTD-ID）。 |
+| type | string | Yes | Uniform data type specified, which is a value of [UniformDataType](arkts-arkdata-uniformtypedescriptor-uniformdatatype-e.md). |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| boolean | 返回true表示当前的标准化数据类型是所指定标准化数据类型的低层级类型，否则返回false。 |
+| boolean | Returns **true** if the data type is a lower-level type of the specified uniform data type; returns **false** otherwise. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. Possible causes:1.Mandatory parameters are left unspecified; &lt;br&gt;2.Incorrect parameter types; &lt;br&gt;3. Parameter verification failed. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes:1.Mandatory parameters are left unspecified; &lt;br&gt;2.Incorrect parameter types; &lt;br&gt;3. Parameter verification failed. |
 
 ## Examples
 
@@ -238,7 +240,7 @@ try{
 set belongingToTypes(value: Array<string>)
 ```
 
-标准化数据类型所归属的类型typeId列表。
+Uniform data type IDs that the uniform data type belongs to.
 
 **Type:** Array&lt;string&gt;
 
@@ -258,7 +260,7 @@ set belongingToTypes(value: Array<string>)
 set description(value: string)
 ```
 
-标准化数据类型的简要说明。
+A textual description for the uniform data type.
 
 **Type:** string
 
@@ -278,7 +280,7 @@ set description(value: string)
 set filenameExtensions(value: Array<string>)
 ```
 
-标准化数据类型所关联的文件名后缀列表。
+File name extensions for the uniform data type.
 
 **Type:** Array&lt;string&gt;
 
@@ -298,7 +300,7 @@ set filenameExtensions(value: Array<string>)
 set iconFile(value: string)
 ```
 
-标准化数据类型的默认图标文件路径，可能为空字符串（即没有默认图标），应用可以自行决定是否使用该默认图标。
+Default icon file path for the uniform data type.
 
 **Type:** string
 
@@ -318,7 +320,7 @@ set iconFile(value: string)
 set mimeTypes(value: Array<string>)
 ```
 
-标准化数据类型所关联的多用途互联网邮件扩展类型列表。
+MIMETypes of the uniform data type.
 
 **Type:** Array&lt;string&gt;
 
@@ -338,7 +340,7 @@ set mimeTypes(value: Array<string>)
 set referenceURL(value: string)
 ```
 
-标准化数据类型的参考链接URL，用于描述类型的详细信息。
+Reference URL for the uniform data type, which describes the detail information of the type.
 
 **Type:** string
 
@@ -358,7 +360,7 @@ set referenceURL(value: string)
 set typeId(value: string)
 ```
 
-标准化数据类型的ID（即{@code UniformDataType}中各类型对应的UTD-ID），也可以是自定义UTD。自定义UTD建议使用反向域名格式（如'com.example.mytype'）。
+Type ID of the uniform data type, which corresponds to the enum string in the {@code UniformDataType}.
 
 **Type:** string
 

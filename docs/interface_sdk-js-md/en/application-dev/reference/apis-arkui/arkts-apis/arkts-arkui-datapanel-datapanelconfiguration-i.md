@@ -1,6 +1,6 @@
 # DataPanelConfiguration
 
-开发者需要自定义class实现ContentModifier接口。继承自[CommonConfiguration](arkts-arkui-common-commonconfiguration-i.md)。
+DataPanelConfiguration used by dataPanel content modifier
 
 **Inheritance/Implementation:** DataPanelConfiguration extends [CommonConfiguration<DataPanelConfiguration>](CommonConfiguration<DataPanelConfiguration>)
 
@@ -18,13 +18,7 @@
 maxValue: double
 ```
 
-DataPanel显示的最大值。
-
-默认值：100。
-
-**说明：**
-
-如果小于或等于0，maxValue将被设为values数组中所有项的总和，并按比例显示。
+Maximum value of the current data.
 
 **Type:** double
 
@@ -44,7 +38,7 @@ DataPanel显示的最大值。
 values: double[]
 ```
 
-数据值列表，最多包含9个数据，大于9个数据则取前9个数据。若数据值小于0则置为0。
+Current data value. the max length is 9.
 
 **Type:** double[]
 

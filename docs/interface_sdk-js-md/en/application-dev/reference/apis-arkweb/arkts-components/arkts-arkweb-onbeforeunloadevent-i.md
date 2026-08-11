@@ -16,7 +16,7 @@ Defines the triggered function when the web page wants to confirm navigation fro
 isReload?: boolean
 ```
 
-页面是否刷新。&lt;br&gt;当页面因刷新即将离开时，isReload参数被设置为true；当页面因关闭即将离开时，isReload参数被设置为false。
+The isReload parameter is set to true when the page is refreshed;otherwise, it remains false. Default is false.
 
 **Type:** boolean
 
@@ -34,7 +34,7 @@ isReload?: boolean
 message: string
 ```
 
-弹窗中显示的信息。
+The message of confirm dialog.
 
 **Type:** string
 
@@ -54,7 +54,7 @@ message: string
 result: JsResult
 ```
 
-通知Web组件用户操作行为。
+Handle the user's JavaScript result.
 
 **Type:** [JsResult](../arkts-apis/arkts-arkweb-web-jsresult-c.md)
 
@@ -74,7 +74,7 @@ result: JsResult
 url: string
 ```
 
-当前显示弹窗所在网页的URL。
+The url of the page.
 
 **Type:** string
 

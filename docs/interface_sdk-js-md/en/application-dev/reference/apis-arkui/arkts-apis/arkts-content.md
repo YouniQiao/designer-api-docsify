@@ -6,5 +6,5 @@
 
 | Name | Description |
 | --- | --- |
-| [Content](arkts-arkui-content-c.md) | 定义ComponentContent和NodeContent基类。 |
+| [Content](arkts-arkui-content-c.md) | Defines the base class for ComponentContent and NodeContent. |
 

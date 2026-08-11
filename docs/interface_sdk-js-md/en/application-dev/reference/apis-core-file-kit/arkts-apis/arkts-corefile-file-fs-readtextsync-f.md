@@ -15,7 +15,7 @@ declare function readTextSync(
 ): string
 ```
 
-以同步方法基于文本方式读取文件（即直接读取文件的文本内容）。
+Reads the text content of a file. This API returns the result synchronously.
 
 **Since:** 9
 
@@ -31,14 +31,14 @@ declare function readTextSync(
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| filePath | string | Yes | 文件的应用沙箱路径。 |
-| options | [ReadTextOptions](arkts-corefile-file-fs-readtextoptions-i.md) | No | 支持如下选项：&lt;br/&gt;- offset，number类型，表示期望读取文件的位置，单位为Byte。可选，默认从当前位置开始读取。&lt;br/&gt;- length ，number类型，表示期望读取数据，单位为Byte。可选，默认文件长度。&lt;br/&gt;- encoding，string类型，当数据是string类型时有效，表示数据的编码方式，默认'utf-8'，仅支持'utf-8' 。<br>**Since:** 11 |
+| filePath | string | Yes | Application sandbox path of the file. |
+| options | [ReadTextOptions](arkts-corefile-file-fs-readtextoptions-i.md) | No | The options are as follows:&lt;br&gt;- **offset** (number): position of the data to read in the file, in bytes. This parameter is optional. By default, data is read from the current position.&lt;br&gt;- **length** (number): length of the data to read, in bytes. This parameter is optional. The default value is the file length.&lt;br&gt;- **encoding** (string): format of the data to be encoded.&lt;br&gt;It is valid only when the data is of the string type. The default value is **'utf-8'**, which is the only value supported.<br>**Since:** 11 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| string | 返回读取文件的内容。 |
+| string | File content read. |
 
 **Error codes:**
 

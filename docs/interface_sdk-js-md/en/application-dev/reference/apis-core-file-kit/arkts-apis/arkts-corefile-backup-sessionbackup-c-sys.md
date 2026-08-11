@@ -1,6 +1,6 @@
 # SessionBackup (System API)
 
-备份流程对象，用于支撑应用全量备份流程。
+Control class for backup procedure.
 
 **Since:** 10
 
@@ -24,7 +24,7 @@ import { backup } from 'kits/@kit.CoreFileKit';
 appendBundles(bundlesToBackup: string[], infos?: string[]): Promise<void>
 ```
 
-添加需要备份的应用及其扩展信息。
+Append new bundles and backupInfos to backup.
 
 **Since:** 12
 
@@ -42,14 +42,14 @@ appendBundles(bundlesToBackup: string[], infos?: string[]): Promise<void>
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| bundlesToBackup | string[] | Yes | 需要备份的应用名称数组。 |
-| infos | string[] | No | 备份时各应用所需扩展信息的数组。 |
+| bundlesToBackup | string[] | Yes | Bundles to backup. |
+| infos | string[] | No | Infos to backup. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise对象，无返回结果。 |
+| Promise&lt;void&gt; | The promise returned by the function. |
 
 **Error codes:**
 
@@ -67,7 +67,7 @@ appendBundles(bundlesToBackup: string[], infos?: string[]): Promise<void>
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
-import { fileIo, backup } from '@kit.CoreFileKit';
+import { fileIo as fs, backup } from '@kit.CoreFileKit';
 
 let generalCallbacks: backup.GeneralCallbacks = {
   onFileReady: (err: BusinessError, file: backup.File) => {
@@ -76,7 +76,7 @@ let generalCallbacks: backup.GeneralCallbacks = {
       return;
     }
     console.info('onFileReady success');
-    fileIo.closeSync(file.fd);
+    fs.closeSync(file.fd);
   },
   onBundleBegin: (err: BusinessError<string|void>, bundleName: string) => {
     if (err) {
@@ -174,7 +174,7 @@ async function appendBundles() {
 appendBundles(bundlesToBackup: string[], callback: AsyncCallback<void>): void
 ```
 
-添加需要备份的应用。
+Append new bundles to backup.
 
 **Since:** 10
 
@@ -192,8 +192,8 @@ appendBundles(bundlesToBackup: string[], callback: AsyncCallback<void>): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| bundlesToBackup | string[] | Yes | 需要备份的应用名称数组。 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | 添加备份应用完成后的异步回调。 |
+| bundlesToBackup | string[] | Yes | Bundles to backup. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Asynchronous callback to be called when appendBundles has finished. |
 
 **Error codes:**
 
@@ -211,7 +211,7 @@ appendBundles(bundlesToBackup: string[], callback: AsyncCallback<void>): void
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
-import { fileIo, backup } from '@kit.CoreFileKit';
+import { fileIo as fs, backup } from '@kit.CoreFileKit';
 
 let generalCallbacks: backup.GeneralCallbacks = {
   onFileReady: (err: BusinessError, file: backup.File) => {
@@ -220,7 +220,7 @@ let generalCallbacks: backup.GeneralCallbacks = {
       return;
     }
     console.info('onFileReady success');
-    fileIo.closeSync(file.fd);
+    fs.closeSync(file.fd);
   },
   onBundleBegin: (err: BusinessError<string|void>, bundleName: string) => {
     if (err) {
@@ -283,7 +283,7 @@ ArkTS-Sta:
 cancel(bundleName: string): int
 ```
 
-取消指定应用的备份任务。
+cancel the application being backup.
 
 **Since:** 18
 
@@ -301,27 +301,27 @@ cancel(bundleName: string): int
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| bundleName | string | Yes | 需要取消任务的应用名称。 |
+| bundleName | string | Yes | Set the bundleName of the application to be canceled. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| ArkTS-Dyn: number  <br>ArkTS-Sta：int | 取消结果，0表示成功，13500011表示失败，13500012表示没有对应任务。 |
+| ArkTS-Dyn: number  <br>ArkTS-Sta：int | Return cancel result, 0 is success, 13500011 is fail, 13500012 is not have task. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt;2. Incorrect parameter types. 3.Parameter verification failed. |
-| 201 | Permission verification failed, usually the result returned by VerifyAccessToken. |
-| 202 | Permission verification failed, application which is not a system application uses system API. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt;2. Incorrect parameter types. 3.Parameter verification failed. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed, usually the result returned by VerifyAccessToken. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed, application which is not a system application uses system API. |
 
 ## Examples
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
-import { fileIo, backup } from '@kit.CoreFileKit';
+import { fileIo as fs, backup } from '@kit.CoreFileKit';
 
 let generalCallbacks: backup.GeneralCallbacks = {
   onFileReady: (err: BusinessError, file: backup.File) => {
@@ -333,7 +333,7 @@ let generalCallbacks: backup.GeneralCallbacks = {
       return;
     }
     console.info('onFileReady success');
-    fileIo.closeSync(file.fd);
+    fs.closeSync(file.fd);
   },
   onBundleBegin: (err: BusinessError<string|void>, bundleName: string) => {
     if (err) {
@@ -377,7 +377,7 @@ sessionBackup.appendBundles(backupBundles);
 cleanBundleTempDir(bundleName: string): Promise<boolean>
 ```
 
-清理指定应用的临时目录。
+Provides an interface for the tool to clear temporary directories
 
 **Since:** 20
 
@@ -395,20 +395,20 @@ cleanBundleTempDir(bundleName: string): Promise<boolean>
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| bundleName | string | Yes | 需要清理临时目录的应用名称。 |
+| bundleName | string | Yes | Set the bundleName of the application to be cleaned. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;boolean&gt; | 清理结果，true表示成功，false表示失败。 |
+| Promise&lt;boolean&gt; | Return clean result, true is success, false is fail. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 201 | Permission verification failed, usually the result returned by VerifyAccessToken. |
-| 202 | Permission verification failed, application which is not a system application uses system API. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed, usually the result returned by VerifyAccessToken. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed, application which is not a system application uses system API. |
 
 ## Examples
 
@@ -482,7 +482,7 @@ let sessionBackup = new backup.SessionBackup(generalCallbacks); // Create a back
 constructor(callbacks: GeneralCallbacks)
 ```
 
-构造SessionBackup实例。
+Constructor for obtaining the instance of the SessionBackup class.
 
 **Since:** 10
 
@@ -500,13 +500,13 @@ constructor(callbacks: GeneralCallbacks)
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callbacks | [GeneralCallbacks](arkts-corefile-backup-generalcallbacks-i-sys.md) | Yes | 备份流程所需的回调。 |
+| callbacks | [GeneralCallbacks](arkts-corefile-backup-generalcallbacks-i-sys.md) | Yes | Callbacks to be registered for the backup. |
 
 ## Examples
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
-import { fileIo, backup } from '@kit.CoreFileKit';
+import { fileIo as fs, backup } from '@kit.CoreFileKit';
 
 let generalCallbacks: backup.GeneralCallbacks = {
   onFileReady: (err: BusinessError, file: backup.File) => {
@@ -515,7 +515,7 @@ let generalCallbacks: backup.GeneralCallbacks = {
       return;
     }
     console.info('onFileReady success');
-    fileIo.closeSync(file.fd);
+    fs.closeSync(file.fd);
   },
   onBundleBegin: (err: BusinessError<string|void>, bundleName: string) => {
     if (err) {
@@ -557,7 +557,7 @@ let sessionBackup = new backup.SessionBackup(generalCallbacks); // Create a back
 getBackupDataSize(isPreciseScan: boolean, dataList: Array<IncrementalBackupTime>): Promise<void>
 ```
 
-获取应用待备份数据量。
+Obtain application data size to be backed up.
 
 **Since:** 18
 
@@ -575,24 +575,24 @@ getBackupDataSize(isPreciseScan: boolean, dataList: Array<IncrementalBackupTime>
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| isPreciseScan | boolean | Yes | 是否精确扫描，true表示精确扫描，false表示非精确扫描。 |
-| dataList | Array&lt;IncrementalBackupTime&gt; | Yes | 备份应用列表及其最后一次增量备份时间。 |
+| isPreciseScan | boolean | Yes | Indicates whether to obtain the exact data size. |
+| dataList | Array&lt;IncrementalBackupTime&gt; | Yes | Application list. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise对象，无返回结果。 |
+| Promise&lt;void&gt; | The promise returned by the function. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
 | 13900020 | Invalid argument |
-| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt;2. Incorrect parameter types. 3.Parameter verification failed. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt;2. Incorrect parameter types. 3.Parameter verification failed. |
 | 13900001 | Operation not permitted |
-| 201 | Permission verification failed, usually the result returned by VerifyAccessToken. |
-| 202 | Permission verification failed, application which is not a system application uses system API. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed, usually the result returned by VerifyAccessToken. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed, application which is not a system application uses system API. |
 | 13600001 | IPC error |
 | 13900042 | Internal error |
 
@@ -600,7 +600,7 @@ getBackupDataSize(isPreciseScan: boolean, dataList: Array<IncrementalBackupTime>
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
-import { fileIo, backup } from '@kit.CoreFileKit';
+import { fileIo as fs, backup } from '@kit.CoreFileKit';
 
 interface scannedInfos { // Parse the scanning result.
   scanned: [];
@@ -620,7 +620,7 @@ let generalCallbacks: backup.GeneralCallbacks = { // Define general callbacks to
       return;
     }
     console.info('onFileReady success');
-    fileIo.closeSync(file.fd);
+    fs.closeSync(file.fd);
   },
   onBundleBegin: (err: BusinessError<string|void>, bundleName: string) => {
     if (err) {
@@ -707,7 +707,7 @@ Example of a JSON string returned asynchronously:
 getCompatibilityInfo(bundleName: string, extInfo: string): Promise<string>
 ```
 
-获取指定应用的兼容性信息。
+Provides an interface for the tool to get compatibility info.
 
 **Since:** 20
 
@@ -725,21 +725,21 @@ getCompatibilityInfo(bundleName: string, extInfo: string): Promise<string>
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| bundleName | string | Yes | 需要获取兼容性信息的应用名称。 |
-| extInfo | string | Yes | 传递给应用的额外信息，由应用自行处理。 |
+| bundleName | string | Yes | Set the bundleName of the application that need to get compatibilityInfo. |
+| extInfo | string | Yes | Indicates the extension information of application. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;string&gt; | Promise对象，返回应用的兼容性信息。 |
+| Promise&lt;string&gt; | Return compatibility info. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 201 | Permission verification failed, usually the result returned by VerifyAccessToken. |
-| 202 | Permission verification failed, application which is not a system application uses system API. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed, usually the result returned by VerifyAccessToken. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed, application which is not a system application uses system API. |
 
 ## Examples
 
@@ -812,7 +812,7 @@ async function getBackupCompatibilityInfo() {
 getLocalCapabilities(): Promise<FileData>
 ```
 
-获取描述本地能力的JSON文件。
+Obtain a Json file that describes local capabilities.
 
 **Since:** 18
 
@@ -830,7 +830,7 @@ getLocalCapabilities(): Promise<FileData>
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;FileData&gt; | Promise对象，返回包含本地能力文件描述符的FileData。返回的文件为临时文件，关闭后将 自动删除。 |
+| Promise&lt;FileData&gt; | A FileData holding all the local capabilities. The returned file is a temporal file that will be deleted automatically when closed. |
 
 **Error codes:**
 
@@ -838,8 +838,8 @@ getLocalCapabilities(): Promise<FileData>
 | --- | --- |
 | 13900020 | Invalid argument |
 | 13900001 | Operation not permitted |
-| 201 | Permission verification failed, usually the result returned by VerifyAccessToken. |
-| 202 | Permission verification failed, application which is not a system application uses system API. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed, usually the result returned by VerifyAccessToken. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed, application which is not a system application uses system API. |
 | 13600001 | IPC error |
 | 13900042 | Internal error |
 
@@ -847,7 +847,7 @@ getLocalCapabilities(): Promise<FileData>
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
-import { fileIo, backup } from '@kit.CoreFileKit';
+import { fileIo as fs, backup } from '@kit.CoreFileKit';
 
 interface test { // Parse the capability file.
   bundleInfos: [];
@@ -877,7 +877,7 @@ let generalCallbacks: backup.GeneralCallbacks = { // Define general callbacks to
       return;
     }
     console.info('onFileReady success');
-    fileIo.closeSync(file.fd);
+    fs.closeSync(file.fd);
   },
   onBundleBegin: (err: BusinessError<string|void>, bundleName: string) => {
     if (err) {
@@ -919,18 +919,18 @@ async function getLocalCapabilitiesTest() {
     if (fileData) {
       console.info('getLocalCapabilities success');
       console.info('fileData info:' + fileData.fd);
-      if (!fileIo.accessSync(basePath)) {
-        fileIo.mkdirSync(basePath);
+      if (!fs.accessSync(basePath)) {
+        fs.mkdirSync(basePath);
         console.info('create success' + basePath);
       }
-      fileIo.copyFileSync(fileData.fd, path); // Save the obtained local capability file to the local host.
-      fileIo.closeSync(fileData.fd);
+      fs.copyFileSync(fileData.fd, path); // Save the obtained local capability file to the local host.
+      fs.closeSync(fileData.fd);
     }
   } catch (error) {
     let err: BusinessError = error as BusinessError;
     console.error(`getLocalCapabilities failed. Code: ${err.code}, message: ${err.message}`);
   }
-  let data = fileIo.readTextSync(path, 'utf8'); // Obtain information from the local capability file.
+  let data = fs.readTextSync(path, 'utf8'); // Obtain information from the local capability file.
   try {
     const jsonsObj: test | null = JSON.parse(data); // Parse the local capability file and print some information.
     if (jsonsObj) {
@@ -976,7 +976,7 @@ The capability file can be obtained by using [fileIo.stat](js-apis-file-fs.md#fi
 release(): Promise<void>
 ```
 
-结束备份流程，断开应用与备份恢复服务的连接。
+End Backup process
 
 **Since:** 12
 
@@ -994,17 +994,17 @@ release(): Promise<void>
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise对象，无返回结果。 |
+| Promise&lt;void&gt; | The promise returned by the function. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt;2. Incorrect parameter types. 3.Parameter verification failed. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt;2. Incorrect parameter types. 3.Parameter verification failed. |
 | 13900005 | I/O error |
 | 13900001 | Operation not permitted |
-| 201 | Permission verification failed, usually the result returned by VerifyAccessToken. |
-| 202 | Permission verification failed, application which is not a system application uses system API. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed, usually the result returned by VerifyAccessToken. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed, application which is not a system application uses system API. |
 | 13600001 | IPC error |
 | 13900042 | Unknown error |
 
@@ -1012,7 +1012,7 @@ release(): Promise<void>
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
-import { fileIo, backup } from '@kit.CoreFileKit';
+import { fileIo as fs, backup } from '@kit.CoreFileKit';
 
 let generalCallbacks: backup.GeneralCallbacks = {
   onFileReady: (err: BusinessError, file: backup.File) => {
@@ -1021,7 +1021,7 @@ let generalCallbacks: backup.GeneralCallbacks = {
       return;
     }
     console.info('onFileReady success');
-    fileIo.closeSync(file.fd);
+    fs.closeSync(file.fd);
   },
   onBundleBegin: (err: BusinessError<string|void>, bundleName: string) => {
     if (err) {

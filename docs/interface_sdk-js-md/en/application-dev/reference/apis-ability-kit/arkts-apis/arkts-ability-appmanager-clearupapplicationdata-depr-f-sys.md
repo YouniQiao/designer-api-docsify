@@ -6,7 +6,7 @@
 function clearUpApplicationData(bundleName: string): Promise<void>
 ```
 
-通过Bundle名称清除应用数据。使用Promise异步回调。
+Clear up application data by bundle name
 
 **Since:** 8
 
@@ -28,13 +28,13 @@ function clearUpApplicationData(bundleName: string): Promise<void>
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| bundleName | string | Yes | 表示Bundle名称。 |
+| bundleName | string | Yes | bundle name. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise对象。无返回结果的Promise对象。 |
+| Promise&lt;void&gt; | The promise returned by the function. |
 
 ## Examples
 
@@ -59,7 +59,7 @@ appManager.clearUpApplicationData(bundleName)
 function clearUpApplicationData(bundleName: string, callback: AsyncCallback<void>)
 ```
 
-通过Bundle名称清除应用数据。使用callback异步回调。
+Clear up application data by bundle name
 
 **Since:** 8
 
@@ -81,8 +81,8 @@ function clearUpApplicationData(bundleName: string, callback: AsyncCallback<void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| bundleName | string | Yes | 表示Bundle名称。 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | 回调函数，当通过Bundle名称清除应用数据成功，err为undefined，否则为错误对象。 |
+| bundleName | string | Yes | bundle name. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Represents the specified callback method. |
 
 ## Examples
 

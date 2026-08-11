@@ -1,8 +1,9 @@
 # Run
 
-文本排版单元，表示一段具有相同样式属性的连续文本片段。Run由[TextLine](arkts-arkgraphics2d-text-textline-c.md)类的[getGlyphRuns()](arkts-arkgraphics2d-text-textline-c.md#getglyphruns)接口获取。
+Represents a text typesetting unit, which is a continuous text segment with the same style attributes. Run is obtained through the [getGlyphRuns()](arkts-arkgraphics2d-text-textline-c.md#getglyphruns) API of the [TextLine](arkts-arkgraphics2d-text-textline-c.md)class.
 
-下列API示例中都需先使用[TextLine](arkts-arkgraphics2d-text-textline-c.md)类的[getGlyphRuns()](arkts-arkgraphics2d-text-textline-c.md#getglyphruns)接口获取Run对象实例，再通过此实例调用对应方法。
+Before calling any of the following APIs, you must use [getGlyphRuns()](arkts-arkgraphics2d-text-textline-c.md#getglyphruns) of the  
+[TextLine](arkts-arkgraphics2d-text-textline-c.md) class to create a **Run** object.
 
 **Since:** 12
 
@@ -24,7 +25,7 @@ import { text } from 'kits/@kit.ArkGraphics2D';
 getAdvances(range: Range): Array<common2D.Point>
 ```
 
-获取该排版单元指定范围内每个字形的字形宽度数组。
+Obtains the glyph width array of each glyph within the specified range of the run.
 
 **Since:** 20
 
@@ -40,13 +41,13 @@ getAdvances(range: Range): Array<common2D.Point>
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| range | [Range](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-scan-range-i.md) | Yes | 要获取的字形位置范围。range.start表示范围开始的位置，range.end表示范围的长度。如果长度是0表示从range.start开始获取到渲染块结束。当 range.end、range.start为负数，或者传入null、undefined时，该方法将返回undefined。 |
+| range | [Range](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-scan-range-i.md) | Yes | Range of the glyph position to be obtained. **range.start** indicates the start position of the range, and **range.end** indicates the range length. If the length is **0**, the range starts from **range.start** and ends at the end of the run. If **range.end** or **range.start** is set to a negative value, **null**, or **undefined**, **undefined** is returned. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Array&lt;common2D.Point&gt; | 返回该排版单元中每个字形相对于水平方向的字形宽度数组。其中， [common2D.Point]{ |
+| Array&lt;common2D.Point&gt; | Returns the glyph width array of each glyph in the run unit relative to the horizontal direction. In [common2D.Point]{ |
 
 ## Examples
 
@@ -63,7 +64,7 @@ let advancesNull = runs[0].getAdvances(null); // null is an invalid value, and u
 getAdvances(range: Range): Array<common2D.Point> | undefined
 ```
 
-获取该排版单元指定范围内每个字形的字形宽度数组。
+Gets the glyph width array within the range.
 
 **Since:** 23
 
@@ -77,13 +78,13 @@ getAdvances(range: Range): Array<common2D.Point> | undefined
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| range | [Range](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-scan-range-i.md) | Yes | 要获取的字形位置范围。range.start表示范围开始的位置，range.end表示范围的长度。如果长度是0表示从range.start开始获取到渲染块结束。当 range.end、range.start为负数，或者传入null、undefined时，该方法将返回undefined。 |
+| range | [Range](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-scan-range-i.md) | Yes | Range of the glyphs, where range.start indicates the start position of the range, and range.end indicates the length of the range. If the length is 0, the range is from range.start to the end of the run. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Array&lt;common2D.Point&gt; | 返回该排版单元中每个字形相对于水平方向的字形宽度数组。其中， [common2D.Point]{ |
+| Array&lt;common2D.Point&gt; | Array holding the advance width and height of each glyph. |
 
 ## getFont
 
@@ -91,7 +92,7 @@ getAdvances(range: Range): Array<common2D.Point> | undefined
 getFont(): drawing.Font
 ```
 
-获取排版单元的字体属性对象。
+Obtains the **Font** object of this run.
 
 **Since:** 12
 
@@ -107,7 +108,7 @@ getFont(): drawing.Font
 
 | Type | Description |
 | --- | --- |
-| drawing.Font | 该排版单元的字体属性对象实例。 |
+| drawing.Font | Font** object of this run. |
 
 ## Examples
 
@@ -127,7 +128,7 @@ ArkTS-Sta:
 getGlyphCount(): int
 ```
 
-获取该排版单元中字形的数量。
+Obtains the number of glyphs in this run.
 
 **Since:** 12
 
@@ -143,7 +144,7 @@ getGlyphCount(): int
 
 | Type | Description |
 | --- | --- |
-| ArkTS-Dyn: number  <br>ArkTS-Sta：int | 该排版单元中字形数量，整数。 |
+| ArkTS-Dyn: number  <br>ArkTS-Sta：int | Number of glyphs. The value is an integer. |
 
 ## Examples
 
@@ -163,7 +164,7 @@ ArkTS-Sta:
 getGlyphs(): Array<int>
 ```
 
-获取该排版单元中每个字符的字形序号。
+Obtains the index of each glyph in this run.
 
 **Since:** 12
 
@@ -179,7 +180,7 @@ getGlyphs(): Array<int>
 
 | Type | Description |
 | --- | --- |
-| ArkTS-Dyn: Array&lt;number&gt;  <br>ArkTS-Sta：Array&lt;int&gt; | 该排版单元中每个字符对应的字形序号。 |
+| ArkTS-Dyn: Array&lt;number&gt;  <br>ArkTS-Sta：Array&lt;int&gt; | Array holding the index of each glyph in the run. |
 
 ## Examples
 
@@ -193,7 +194,7 @@ let glyph = runs[0].getGlyphs();
 getGlyphs(range: Range): Array<int>
 ```
 
-获取该排版单元指定范围内每个字符的字形序号。
+Obtains the index of each glyph in the specified range of this run.
 
 **Since:** 18
 
@@ -209,13 +210,13 @@ getGlyphs(range: Range): Array<int>
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| range | [Range](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-scan-range-i.md) | Yes | 要获取的字形序号范围，range.start表示范围开始的位置，range.end表示范围的长度，当range.end为0时表示从range.start开始获取到渲染块结束。当 range.end、range.start为负数，或者传入null、undefined时，该方法将返回undefined。 |
+| range | [Range](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-scan-range-i.md) | Yes | Range of glyph indices to obtain. **range.start** indicates the starting position of the range, and **range.end** indicates the length of the range. When **range.end** is **0**, glyphs are fetched from **range.start** to the end of the rendered block. If **range.end** or **range.start** is set to a negative value, **null**, or **undefined**, **undefined** is returned. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Array&lt;int&gt; | 该排版单元中每个字符对应的字形序号。 |
+| Array&lt;int&gt; | Array holding the index of each glyph in the run. |
 
 ## Examples
 
@@ -224,7 +225,7 @@ import { text } from '@kit.ArkGraphics2D'
 
 function textFunc() {
   let glyphs = runs[0].getGlyphs(); // Obtain the index of all glyphs of the run.
-  let glyphsRange = runs[0].getGlyphs({start:1, end:2}); // Obtain the glyph indices within the range starting at position 1 with a length of 2 from the rendered block.
+  let glyphsRange = runs[0].getGlyphs ({start:1, end:2}); // Obtain the indices of glyphs in the range starting from position 1, with a length of 2.
   glyphsRange = runs[0].getGlyphs({start:-1, end:2}); // -1 is an invalid value, and undefined is returned.
   glyphsRange = runs[0].getGlyphs({start:0, end:-10}); // -10 is an invalid value, and undefined is returned.
   let glyphsNull = runs[0].getGlyphs(null); // null is an invalid value, and undefined is returned.
@@ -251,7 +252,7 @@ struct Index {
 getGlyphs(range: Range): Array<int> | undefined
 ```
 
-获取该排版单元指定范围内每个字符的字形序号。
+Gets the range glyph identifier for each character.
 
 **Since:** 23
 
@@ -265,13 +266,13 @@ getGlyphs(range: Range): Array<int> | undefined
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| range | [Range](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-scan-range-i.md) | Yes | 要获取的字形序号范围，range.start表示范围开始的位置，range.end表示范围的长度，当range.end为0时表示从range.start开始获取到渲染块结束。当 range.end、range.start为负数，或者传入null、undefined时，该方法将返回undefined。 |
+| range | [Range](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-scan-range-i.md) | Yes | of run, range.start is the starting index of the run block, starting from 0. range.end is run length, if range.start and range.end are set to 0, then get all of the current run. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Array&lt;int&gt; | 该排版单元中每个字符对应的字形序号。 |
+| Array&lt;int&gt; | Glyph identifier or undefined. |
 
 ## getImageBounds
 
@@ -279,15 +280,15 @@ getGlyphs(range: Range): Array<int> | undefined
 getImageBounds(): common2D.Rect
 ```
 
-获取该排版单元的图像边界，图像边界与排版字体、排版字号、字符本身都有关，相当于视觉边界，例如字符串为" a b "，'a'字符前面有1个空格，'b'字符后面有1个空格，用户在界面上只能看到"a b"，图像边界即为不包括带行首和末尾空格的边界。
+Obtains the image boundaries of the typographic unit. Equivalent to visual boundaries, these boundaries are associated with the typographic font, font size, and characters. For example, for the string " a b " (which has a space before "a" and a space after "b"), only "a b" is visible to users, and therefore the image boundaries do not include these spaces at the beginning and end of the line.
 
-> **说明：**
+> **NOTE：**
 > 
-> 示意图展示了字符串为" a b "的图像边界。
+> The figure shows the image boundaries for the string " a b ".
 > 
 > ![ImageBounds.png](../../../reference/apis-arkgraphics2d/figures/ImageBounds.png)
 > 
-> 示意图展示了字符串为"j"或"E"的图像边界。
+> The figure shows the image boundaries for the string "j" or "E".
 > 
 > ![ImageBounds-Character.png](../../../reference/apis-arkgraphics2d/figures/ImageBounds-Character.png)
 
@@ -305,7 +306,7 @@ getImageBounds(): common2D.Rect
 
 | Type | Description |
 | --- | --- |
-| common2D.Rect | 该排版单元的图像边界，单位为物理像素px。 |
+| common2D.Rect | Image boundary of the layout unit, in physical pixels (px). |
 
 ## Examples
 
@@ -319,7 +320,7 @@ let bounds = runs[0].getImageBounds();
 getOffsets(): Array<common2D.Point>
 ```
 
-获取该排版单元中每个字形的索引偏移量。
+Obtains the offset of each glyph in this run relative to its index.
 
 **Since:** 12
 
@@ -335,7 +336,7 @@ getOffsets(): Array<common2D.Point>
 
 | Type | Description |
 | --- | --- |
-| Array&lt;common2D.Point&gt; | 该排版单元中每个字形相对于其索引的偏移量。 |
+| Array&lt;common2D.Point&gt; | Array holding the offset of each glyph in the run relative to its index. |
 
 ## Examples
 
@@ -349,7 +350,7 @@ let offsets = runs[0].getOffsets();
 getPositions(): Array<common2D.Point>
 ```
 
-获取该排版单元中每个字形相对于每行的字形位置。
+Obtains the position of each glyph relative to the respective line in this run.
 
 **Since:** 12
 
@@ -365,7 +366,7 @@ getPositions(): Array<common2D.Point>
 
 | Type | Description |
 | --- | --- |
-| Array&lt;common2D.Point&gt; | 该排版单元中每个字形相对于每行的字形位置。 |
+| Array&lt;common2D.Point&gt; | Array holding the position of each glyph relative to the respective line in the run. |
 
 ## Examples
 
@@ -379,7 +380,7 @@ let positions = runs[0].getPositions();
 getPositions(range: Range): Array<common2D.Point>
 ```
 
-获取该排版单元指定范围内每个字形相对于每行的字形位置数组。
+Obtains the position array of each glyph relative to the respective line within the specified range of this run.
 
 **Since:** 18
 
@@ -395,13 +396,13 @@ getPositions(range: Range): Array<common2D.Point>
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| range | [Range](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-scan-range-i.md) | Yes | 要获取的字形位置范围，range.start表示范围开始的位置，range.end表示范围的长度，如果长度是0表示从范围range.start开始获取到渲染块结束。当 range.end、range.start为负数，或者传入null、undefined时，该方法将返回undefined。 |
+| range | [Range](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-scan-range-i.md) | Yes | Range of the glyphs, where **range.start** indicates the start position of the range, and **range.end** indicates the length of the range. If the length is **0**, the range is from **range.start** to the end of the run. If **range.end** or **range.start** is set to a negative value, **null**, or **undefined**, **undefined** is returned. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Array&lt;common2D.Point&gt; | 该排版单元中每个字形相对于每行的字形位置。 |
+| Array&lt;common2D.Point&gt; | Array holding the position of each glyph relative to the respective line in the run. |
 
 ## Examples
 
@@ -437,7 +438,7 @@ struct Index {
 getPositions(range: Range): Array<common2D.Point> | undefined
 ```
 
-获取该排版单元指定范围内每个字形相对于每行的字形位置数组。
+Gets the range font position offset.
 
 **Since:** 23
 
@@ -451,13 +452,13 @@ getPositions(range: Range): Array<common2D.Point> | undefined
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| range | [Range](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-scan-range-i.md) | Yes | 要获取的字形位置范围，range.start表示范围开始的位置，range.end表示范围的长度，如果长度是0表示从范围range.start开始获取到渲染块结束。当 range.end、range.start为负数，或者传入null、undefined时，该方法将返回undefined。 |
+| range | [Range](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-scan-range-i.md) | Yes | of run, range.start is the starting index of the run block, starting from 0. range.end is run length, if range.start and range.end are set to 0, then get all of the current run. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Array&lt;common2D.Point&gt; | 该排版单元中每个字形相对于每行的字形位置。 |
+| Array&lt;common2D.Point&gt; | The position of the font in the layout or undefined. |
 
 ## getStringIndices
 
@@ -465,7 +466,7 @@ getPositions(range: Range): Array<common2D.Point> | undefined
 getStringIndices(range?: Range): Array<int>
 ```
 
-获取排版单元指定范围内字形的字符索引，该索引是相对于整个段落的偏移。
+Obtains an array of character indices for glyphs within a specified range of this run, where the indices are offsets relative to the entire paragraph.
 
 **Since:** 18
 
@@ -481,13 +482,13 @@ getStringIndices(range?: Range): Array<int>
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| range | [Range](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-scan-range-i.md) | No | 要获取的字符索引范围，range.start表示范围开始的位置，range.end表示范围的长度，如果长度是0表示从范围range.start开始获取到渲染块结束。当 range.end、range.start为负数，或者传入null、undefined时，该方法将返回undefined。不传该参数时，默认获取整个渲染块。 |
+| range | [Range](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-scan-range-i.md) | No | Range of character indices to be obtained. **range.start** indicates the starting position of the range, and **range.end** indicates the range length. If the length is 0, characters are retrieved from **range.start** to the end of the rendered block. If **range.end** or **range.start** is set to a negative value, **null**, or **undefined**, **undefined** is returned. If this parameter is not passed, the entire run is obtained. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Array&lt;int&gt; | 返回每个字符的索引。 |
+| Array&lt;int&gt; | Array of character indices. |
 
 ## Examples
 
@@ -523,7 +524,7 @@ struct Index {
 getStringIndices(range?: Range): Array<int> | undefined
 ```
 
-获取排版单元指定范围内字形的字符索引，该索引是相对于整个段落的偏移。
+Gets the range of run glyph indices, the offset of the indices relative to the entire paragraph.
 
 **Since:** 23
 
@@ -537,13 +538,13 @@ getStringIndices(range?: Range): Array<int> | undefined
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| range | [Range](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-scan-range-i.md) | No | 要获取的字符索引范围，range.start表示范围开始的位置，range.end表示范围的长度，如果长度是0表示从范围range.start开始获取到渲染块结束。当 range.end、range.start为负数，或者传入null、undefined时，该方法将返回undefined。不传该参数时，默认获取整个渲染块。 |
+| range | [Range](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-scan-range-i.md) | No | range of run, range.start is the starting index of the run block, starting from 0. range.end is run length, if range.start range.and end are set to 0, then get all of the current run. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Array&lt;int&gt; | 返回每个字符的索引。 |
+| Array&lt;int&gt; | The glyph indices or undefined. |
 
 ## getStringRange
 
@@ -551,7 +552,7 @@ getStringIndices(range?: Range): Array<int> | undefined
 getStringRange(): Range
 ```
 
-获取排版单元生成字形的字符范围。
+Obtains the range of glyphs generated by this run.
 
 **Since:** 18
 
@@ -567,7 +568,7 @@ getStringRange(): Range
 
 | Type | Description |
 | --- | --- |
-| [Range](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-scan-range-i.md) | 排版单元生成字形的字符范围，Range类型中的start表示字符范围的开始位置，该位置是相对于整个段落的索引，Range类型中的end表示字符范围的长度。 |
+| [Range](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-scan-range-i.md) | Range of the glyphs, where **start** indicates the start position of the range, which is the index relative to the entire paragraph, and **end** indicates the length of the range. |
 
 ## Examples
 
@@ -583,7 +584,7 @@ let length = runStringRange.end;
 getTextDirection(): TextDirection
 ```
 
-获取该排版单元的文本方向。
+Obtains the text direction of the run.
 
 **Since:** 20
 
@@ -599,7 +600,7 @@ getTextDirection(): TextDirection
 
 | Type | Description |
 | --- | --- |
-| [TextDirection](arkts-arkgraphics2d-text-textdirection-e.md) | 返回该排版单元的文本方向。 |
+| [TextDirection](arkts-arkgraphics2d-text-textdirection-e.md) | Obtains the text direction of the run. |
 
 ## Examples
 
@@ -613,7 +614,7 @@ let textDirection = runs[0].getTextDirection();
 getTextStyle(): TextStyle
 ```
 
-获取该排版单元的文本样式。
+Obtains the text style of this typesetting unit.
 
 **Since:** 26.0.0
 
@@ -631,66 +632,7 @@ getTextStyle(): TextStyle
 
 | Type | Description |
 | --- | --- |
-| [TextStyle](../../apis-arkui/arkts-apis/arkts-arkui-styledstring-textstyle-c.md) | 该排版单元的文本样式。 &lt;br&gt;**说明：** &lt;br&gt;1.`textStyle.color`、`textStyle.textShadows.color`、`textStyle.backgroundRect.color`、 `textStyle.decoration.color`属性：返回32位无符号整型颜色数值。示例：返回值`4278190080`，对应纯黑色十六进制颜色值`0xFF000000`，等价于 [common2D.Color]{ |
-
-## Examples
-
-```TypeScript
-// Index.ets
-import { text } from "@kit.ArkGraphics2D"
-import { common2D } from '@kit.ArkGraphics2D'
-import { JSON } from "@kit.ArkTS";
-
-function textFunc() {
-  let textStyle: text.TextStyle = {
-    color: { alpha: 255, red: 255, green: 0, blue: 0 },
-    fontSize: 33,
-  };
-  let paragraphStyle: text.ParagraphStyle = {
-    textStyle: textStyle,
-    align: text.TextAlign.END,
-  };
-  let fontCollection = new text.FontCollection();
-  let paragraphBuilder = new text.ParagraphBuilder(paragraphStyle, fontCollection);
-  paragraphBuilder.addText("Hello World");
-  let paragraph = paragraphBuilder.build();
-  paragraph.layoutSync(50);
-  let lines = paragraph.getTextLines();
-  for (let i = 0; i < lines.length; i++) {
-    const line = lines[i];
-    let runs = line.getGlyphRuns();
-    for (let j = 0; j < runs.length; j++) {
-      const run = runs[j];
-      const runStyle = run.getTextStyle();
-      console.info(`print line [${i}] run [${j}] textStyle: ${JSON.stringify(runStyle)}`);
-      if (runStyle?.color != undefined && typeof runStyle?.color == 'number') {
-        let textColor: common2D.Color = numberToRGBA(runStyle?.color);
-        console.info(`Print text color ARGB: ${textColor.alpha}, ${textColor.red}, ${textColor.green}, ${textColor.blue}`);
-      }
-    }
-  }
-}
-
-@Entry
-@Component
-struct Index {
-  build() {
-    Column() {
-      Button("Click").onClick((e: ClickEvent) => {
-        textFunc();
-      })
-    }
-  }
-}
-
-function numberToRGBA(colorNum: number): common2D.Color {
-  const alpha = (colorNum >>> 24) & 0xFF;
-  const red = (colorNum >>> 16) & 0xFF;
-  const green = (colorNum >>> 8) & 0xFF;
-  const blue = colorNum & 0xFF;
-  return { alpha: alpha, red: red, green: green, blue: blue };
-}
-```
+| [TextStyle](../../apis-arkui/arkts-apis/arkts-arkui-styledstring-textstyle-c.md) | Text style of this typesetting unit. &lt;br&gt;**Note:** &lt;br&gt;1. The `textStyle.color`, `textStyle.textShadows.color`, `textStyle.backgroundRect.color`, and `textStyle.decoration.color` attributes: return a 32-bit unsigned integer color value. Example: The return value `4278190080` corresponds to the solid black hexadecimal color value `0xFF000000`, which is equivalent to the [common2D.Color]{ |
 
 ## getTypographicBounds
 
@@ -698,15 +640,15 @@ function numberToRGBA(colorNum: number): common2D.Color {
 getTypographicBounds(): TypographicBounds
 ```
 
-获取该排版单元的排版边界，排版边界与排版字体、排版字号有关，与字符本身无关，例如字符串为" a b "，'a'字符前面有1个空格，'b'字符后面有1个空格，排版边界就包括行首和末尾空格的边界。
+Obtains the typographic boundaries of the typographic unit. These boundaries are associated with the typographic font and font size, but not with the characters. For example, for the string " a b " (which has a space before "a" and a space after "b"), the typographic boundaries include the spaces at the beginning and end of the line.
 
-> **说明：**
+> **NOTE：**
 > 
-> 示意图展示了字符串为" a b "的排版边界。
+> The figure shows the typesetting boundaries for the string " a b ".
 > 
 > ![TypographicBounds.png](../../../reference/apis-arkgraphics2d/figures/TypographicBounds.png)
 > 
-> 示意图展示了字符串为"j"或"E"的排版边界。
+> The figure shows the typesetting boundaries for the string "j" or "E".
 > 
 > !
 > [TypographicBounds-Character.png](../../../reference/apis-arkgraphics2d/figures/TypographicBounds-Character.png)
@@ -725,7 +667,7 @@ getTypographicBounds(): TypographicBounds
 
 | Type | Description |
 | --- | --- |
-| [TypographicBounds](arkts-arkgraphics2d-text-typographicbounds-i.md) | 该排版单元的排版边界。 |
+| [TypographicBounds](arkts-arkgraphics2d-text-typographicbounds-i.md) | Typographic boundaries of the run. |
 
 ## Examples
 
@@ -745,7 +687,7 @@ ArkTS-Sta:
 paint(canvas: drawing.Canvas, x: double, y: double): void
 ```
 
-在画布上以(x, y)为左上角位置绘制排版单元。
+Paints this run on the canvas with the coordinate point (x, y) as the upper left corner.
 
 **Since:** 12
 
@@ -761,15 +703,16 @@ paint(canvas: drawing.Canvas, x: double, y: double): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| canvas | drawing.Canvas | Yes | 绘制的目标 canvas。 |
-| x | ArkTS-Dyn: number  <br>ArkTS-Sta：double | Yes | 绘制的左上角位置的横坐标，浮点数，单位为物理像素px。 |
-| y | ArkTS-Dyn: number  <br>ArkTS-Sta：double | Yes | 绘制的左上角位置的纵坐标，浮点数，单位为物理像素px。 |
+| canvas | drawing.Canvas | Yes | Target canvas. |
+| x | ArkTS-Dyn: number  <br>ArkTS-Sta：double | Yes | Horizontal coordinate of the upper left corner, which is a floating-point value, in physical pixels (px). |
+| y | ArkTS-Dyn: number  <br>ArkTS-Sta：double | Yes | Vertical coordinate of the upper left corner, which is a floating-point value, in physical pixels (px). |
 
 ## Examples
 
 ```TypeScript
 import { drawing } from '@kit.ArkGraphics2D'
 import { text } from '@kit.ArkGraphics2D'
+import { common2D } from '@kit.ArkGraphics2D'
 import { image } from '@kit.ImageKit'
 
 function textFunc(pixelmap: PixelMap) {

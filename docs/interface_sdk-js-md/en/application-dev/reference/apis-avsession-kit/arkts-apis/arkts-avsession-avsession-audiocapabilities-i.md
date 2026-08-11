@@ -1,6 +1,6 @@
 # AudioCapabilities
 
-表示投播设备支持的音频能力。
+Audio capabilities.
 
 **Since:** 20
 
@@ -22,7 +22,7 @@ import { avSession } from 'kits/@kit.AVSessionKit';
 readonly streamInfos: Array<audio.AudioStreamInfo>
 ```
 
-音频能力参数的列表。
+Audio stream information.
 
 **Type:** Array&lt;audio.AudioStreamInfo&gt;
 

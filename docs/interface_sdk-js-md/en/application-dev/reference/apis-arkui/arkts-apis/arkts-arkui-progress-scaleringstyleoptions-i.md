@@ -1,8 +1,6 @@
 # ScaleRingStyleOptions
 
-环形有刻度样式选项。
-
-继承自[CommonProgressStyleOptions](../arkts-components/arkts-arkui-commonprogressstyleoptions-i.md/arkts-arkui-commonprogressstyleoptions-i.md)。
+Defines the ScaleRing style Options.
 
 **Inheritance/Implementation:** ScaleRingStyleOptions extends [CommonProgressStyleOptions](../arkts-components/arkts-arkui-commonprogressstyleoptions-i.md/arkts-arkui-commonprogressstyleoptions-i.md)
 
@@ -20,7 +18,7 @@
 scaleCount?: int
 ```
 
-设置环形进度条总刻度数。取值范围：[2, min(width, height)/scaleWidth/2/π]。默认值：120。&lt;br&gt;超出取值范围时，样式显示为环形无刻度进度条。
+Defines the scaleCount property.The value should be an integer. Default value: 120.
 
 **Type:** int
 
@@ -40,7 +38,7 @@ scaleCount?: int
 scaleWidth?: Length
 ```
 
-设置环形进度条刻度粗细（不支持百分比设置）。刻度粗细大于进度条宽度时，为系统默认粗细。默认值：2vp。
+Defines the scaleWidth property.Default value: 2vp.
 
 **Type:** [Length](arkts-arkui-length-t.md)
 
@@ -60,7 +58,7 @@ scaleWidth?: Length
 strokeWidth?: Length
 ```
 
-设置进度条宽度（不支持百分比设置）。默认值：4vp。
+Defines the strokeWidth property.Default value: 4vp.
 
 **Type:** [Length](arkts-arkui-length-t.md)
 

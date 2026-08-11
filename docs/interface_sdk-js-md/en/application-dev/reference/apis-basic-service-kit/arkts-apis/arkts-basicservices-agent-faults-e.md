@@ -1,10 +1,12 @@
 # Faults
 
-定义任务失败的原因。
+Defines the cause of a task failure.
 
-> **说明：**
+> **NOTE：**
 > 
-> API version 12及以下版本，只支持串行的尝试连接域名相关ip，且不支持单个ip的连接时间控制，如果DNS返回的首个ip是阻塞的，可能会导致握手超时，进而引发TIMEOUT错误。
+> In API version 12 or earlier, only serial connection to the IP addresses associated with the specified domain
+> name is supported, and the connection time for a single IP address is not controllable. If the first IP address
+> returned by the DNS is blocked, a handshake timeout may occur, leading to a **TIMEOUT** error.
 
 **Since:** 10
 
@@ -20,7 +22,7 @@
 OTHERS = 0xFF
 ```
 
-表示其他故障。
+Other fault.
 
 **Since:** 10
 
@@ -38,7 +40,7 @@ OTHERS = 0xFF
 DISCONNECTED = 0x00
 ```
 
-表示网络断开连接。
+Network disconnection.
 
 **Since:** 10
 
@@ -56,7 +58,7 @@ DISCONNECTED = 0x00
 TIMEOUT = 0x10
 ```
 
-表示任务超时。
+Timeout.
 
 **Since:** 10
 
@@ -74,7 +76,7 @@ TIMEOUT = 0x10
 PROTOCOL = 0x20
 ```
 
-表示协议错误，例如：服务器内部错误（500）、无法处理的数据区间（416）等。
+Protocol error, for example, an internal server error (500) or a data range that cannot be processed (416).
 
 **Since:** 10
 
@@ -92,7 +94,7 @@ PROTOCOL = 0x20
 PARAM = 0x30
 ```
 
-表示参数错误，例如：url格式错误等。
+Parameter error, for example, incorrect URL format.
 
 **Since:** 12
 
@@ -110,7 +112,7 @@ PARAM = 0x30
 FSIO = 0x40
 ```
 
-表示文件系统io错误，例如：打开/查找/读取/写入/关闭。
+File system I/O error, for example, an error that occurs during the open, search, read, write, or close operation.
 
 **Since:** 10
 
@@ -128,7 +130,7 @@ FSIO = 0x40
 DNS = 0x50
 ```
 
-表示DNS解析错误。
+DNS resolution error.
 
 **Since:** 12
 
@@ -146,7 +148,7 @@ DNS = 0x50
 TCP = 0x60
 ```
 
-表示TCP连接错误。
+TCP connection error.
 
 **Since:** 12
 
@@ -164,7 +166,7 @@ TCP = 0x60
 SSL = 0x70
 ```
 
-表示SSL连接错误，例如：证书错误、证书校验失败错误等。
+SSL connection error, for example, a certificate error or certificate verification failure.
 
 **Since:** 12
 
@@ -182,7 +184,7 @@ SSL = 0x70
 REDIRECT = 0x80
 ```
 
-表示重定向错误。
+Redirection error.
 
 **Since:** 12
 
@@ -200,7 +202,7 @@ REDIRECT = 0x80
 LOW_SPEED = 0x90
 ```
 
-表示任务速度过低。
+Low speed.
 
 **Since:** 20
 

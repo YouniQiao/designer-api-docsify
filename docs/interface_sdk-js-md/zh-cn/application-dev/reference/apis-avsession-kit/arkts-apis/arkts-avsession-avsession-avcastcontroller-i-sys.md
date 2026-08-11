@@ -14,12 +14,6 @@
 
 **系统能力：** SystemCapability.Multimedia.AVSession.AVCast
 
-## 导入模块
-
-```TypeScript
-import { avSession } from 'kits/@kit.AVSessionKit';
-```
-
 ## setDisplaySurface
 
 ```TypeScript
@@ -49,9 +43,9 @@ setDisplaySurface(surfaceId: string, callback: AsyncCallback<void>): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 401 | parameter check failed. 1.Mandatory parameters are left unspecified. 2.Parameter verification failed. |
-| 6600109 | The remote connection is not established |
-| 202 | Not System App. |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | parameter check failed. 1.Mandatory parameters are left unspecified. 2.Parameter verification failed. |
+| [6600109](../errorcode-avsession.md#6600109-远端会话不存在) | The remote connection is not established |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not System App. |
 
 ## 示例
 
@@ -106,9 +100,9 @@ setDisplaySurface(surfaceId: string): Promise<void>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 401 | parameter check failed. 1.Mandatory parameters are left unspecified. 2.Parameter verification failed. |
-| 6600109 | The remote connection is not established |
-| 202 | Not System App. |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | parameter check failed. 1.Mandatory parameters are left unspecified. 2.Parameter verification failed. |
+| [6600109](../errorcode-avsession.md#6600109-远端会话不存在) | The remote connection is not established |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not System App. |
 
 ## 示例
 

@@ -1,6 +1,6 @@
 # USBDeviceRequestParams
 
-控制传输参数。
+Represents control transfer parameters.
 
 **Since:** 12
 
@@ -22,7 +22,7 @@ import { usbManager } from 'kits/@kit.BasicServicesKit';
 bRequest: int
 ```
 
-请求类型。
+Request type.
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
@@ -40,7 +40,7 @@ bRequest: int
 bmRequestType: int
 ```
 
-请求控制类型。
+Control request type.
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
@@ -58,7 +58,7 @@ bmRequestType: int
 data: Uint8Array
 ```
 
-用于写入或读取的缓冲区。
+Buffer for writing or reading data.
 
 **Type:** Uint8Array
 
@@ -76,7 +76,7 @@ data: Uint8Array
 wIndex: int
 ```
 
-请求参数value对应的索引值。
+Index of the request parameter.
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
@@ -94,7 +94,7 @@ wIndex: int
 wLength: int
 ```
 
-请求数据的长度。（单位：字节）。
+Length of the requested data.Unit: bytes.
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
@@ -112,7 +112,7 @@ wLength: int
 wValue: int
 ```
 
-请求参数。
+Request parameter.
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 

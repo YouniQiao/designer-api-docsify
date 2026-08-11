@@ -10,12 +10,6 @@
 
 **系统能力：** SystemCapability.MultimodalInput.Input.InfraredEmitter
 
-## 导入模块
-
-```TypeScript
-import { infraredEmitter } from 'kits/@kit.InputKit';
-```
-
 ## max
 
 ```TypeScript

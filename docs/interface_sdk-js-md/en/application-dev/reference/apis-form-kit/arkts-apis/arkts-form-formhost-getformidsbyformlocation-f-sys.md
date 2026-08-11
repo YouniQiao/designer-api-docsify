@@ -44,10 +44,10 @@ Obtains the list of widget IDs at a specified location on the device. This API u
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 16501016 | The location of the widget is invalid. |
-| 201 | Permissions denied. |
-| 16500050 | IPC connection error. |
-| 202 | The application is not a system application. |
+| [16501016](../errorcode-form.md#16501016-invalid-widget-location-information) | The location of the widget is invalid. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permissions denied. |
+| [16500050](../errorcode-form.md#16500050-ipc-failure) | IPC connection error. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | The application is not a system application. |
 
 ## Examples
 

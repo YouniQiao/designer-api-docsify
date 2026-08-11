@@ -4,7 +4,7 @@
 export type PreloadItem = _HapModuleInfo.PreloadItem
 ```
 
-原子化服务中模块的预加载模块信息。
+Defines the preloaded module information in the atomic service.
 
 **Since:** 9
 

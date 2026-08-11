@@ -12,7 +12,8 @@ import { securityLabel } from 'kits/@kit.CoreFileKit';
 function getSecurityLabelSync(path: string): string
 ```
 
-以同步方法获取文件或目录的数据安全等级。若未设置过数据安全等级则默认返回“s3”。
+Obtains the data security level of a file or directory in synchronous mode. If no data security level has been set,  
+**s3** is returned by default.
 
 **Since:** 9
 
@@ -26,13 +27,13 @@ function getSecurityLabelSync(path: string): string
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| path | string | Yes | 文件路径。 |
+| path | string | Yes | File path. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| string | 返回数据安全等级。 |
+| string | Promise used to return the data security level. |
 
 **Error codes:**
 

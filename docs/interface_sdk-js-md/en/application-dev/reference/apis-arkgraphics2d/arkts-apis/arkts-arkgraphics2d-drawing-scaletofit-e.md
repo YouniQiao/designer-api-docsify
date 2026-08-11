@@ -1,6 +1,6 @@
 # ScaleToFit
 
-源矩形到目标矩形的缩放方式枚举。
+Enumerates the modes of scaling a source rectangle into a destination rectangle.
 
 **Since:** 12
 
@@ -16,7 +16,7 @@
 FILL_SCALE_TO_FIT = 0
 ```
 
-将源矩形缩放以填充满整个目标矩形，可能会改变源矩形的长宽比。
+Scales the source rectangle to completely fill the destination rectangle, potentially changing the aspect ratio of the source rectangle.
 
 **Since:** 12
 
@@ -32,7 +32,7 @@ FILL_SCALE_TO_FIT = 0
 START_SCALE_TO_FIT = 1
 ```
 
-保持源矩形的长宽比进行缩放，并对齐到目标矩形的左上方。
+Scales the source rectangle, preserving its aspect ratio, to align it to the upper left corner of the destination rectangle.
 
 **Since:** 12
 
@@ -48,7 +48,7 @@ START_SCALE_TO_FIT = 1
 CENTER_SCALE_TO_FIT = 2
 ```
 
-保持源矩形的长宽比进行缩放，并居中对齐到目标矩形。
+Scales the source rectangle, preserving its aspect ratio, to align it to the center of the destination rectangle.
 
 **Since:** 12
 
@@ -64,7 +64,7 @@ CENTER_SCALE_TO_FIT = 2
 END_SCALE_TO_FIT = 3
 ```
 
-保持源矩形的长宽比进行缩放，并对齐到目标矩形的右下方。
+Scales the source rectangle, preserving its aspect ratio, to align it to the lower right corner of the destination rectangle.
 
 **Since:** 12
 

@@ -12,7 +12,7 @@ import { appManager } from 'kits/@kit.AbilityKit';
 function offApplicationStateChange(observerId: int, callback: AsyncCallback<void>): void
 ```
 
-注销应用状态监听器。使用callback异步回调。
+Unregister application state observer.
 
 **Since:** 23
 
@@ -28,15 +28,15 @@ function offApplicationStateChange(observerId: int, callback: AsyncCallback<void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| observerId | int | Yes | 注册的应用状态监听器ID。 |
+| observerId | int | Yes | Indicates the number code of the observer. |
 | callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | The callback of off. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 16000050 | Internal error. |
-| 201 | Permission denied. |
+| [16000050](../errorcode-ability.md#16000050-internal-error) | Internal error. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
 
 
 ## offApplicationStateChange
@@ -45,7 +45,7 @@ function offApplicationStateChange(observerId: int, callback: AsyncCallback<void
 function offApplicationStateChange(observerId: int): Promise<void>
 ```
 
-注销应用状态监听器。使用Promise异步回调。
+Unregister application state observer.
 
 **Since:** 23
 
@@ -61,7 +61,7 @@ function offApplicationStateChange(observerId: int): Promise<void>
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| observerId | int | Yes | 注册的应用状态监听器ID。 |
+| observerId | int | Yes | Indicates the number code of the observer. |
 
 **Return value:**
 
@@ -73,6 +73,6 @@ function offApplicationStateChange(observerId: int): Promise<void>
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 16000050 | Internal error. |
-| 201 | Permission denied. |
+| [16000050](../errorcode-ability.md#16000050-internal-error) | Internal error. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
 

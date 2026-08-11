@@ -1,6 +1,6 @@
 # BindTargetResult
 
-认证设备结果信息。
+Bind target result.
 
 **Since:** 23
 
@@ -22,7 +22,7 @@ import { distributedDeviceManager } from 'kits/@kit.DistributedServiceKit';
 deviceId: string
 ```
 
-设备Id。
+Device identifier. The actual value is udid-hash confused with appid and salt value based on sha256.This id remains unchanged after application installation. If the application is uninstalled and reinstalled,the obtained ID will change.
 
 **Type:** string
 

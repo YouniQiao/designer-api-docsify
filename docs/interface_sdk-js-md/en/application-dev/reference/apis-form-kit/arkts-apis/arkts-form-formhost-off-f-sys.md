@@ -40,8 +40,8 @@ Unsubscribes from widget uninstall events. This API uses an asynchronous callbac
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types; 3.Parameter verification failed. |
-| 202 | The application is not a system application. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types; 3.Parameter verification failed. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | The application is not a system application. |
 
 
 ## off('formOverflow')
@@ -73,7 +73,7 @@ Unsubscribes from the interactive widget animation request event. This API uses 
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 202 | The application is not a system application. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | The application is not a system application. |
 
 ## Examples
 
@@ -121,7 +121,7 @@ Unsubscribes from the event of switching the interactive widget state. An intera
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 202 | The application is not a system application. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | The application is not a system application. |
 
 ## Examples
 
@@ -168,7 +168,7 @@ Unsubscribes from the event of requesting widget position and dimension. This AP
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 202 | The application is not a system application. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | The application is not a system application. |
 
 ## Examples
 
@@ -214,5 +214,5 @@ Cancels Listening to the event of get live form status.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 202 | The application is not a system application. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | The application is not a system application. |
 

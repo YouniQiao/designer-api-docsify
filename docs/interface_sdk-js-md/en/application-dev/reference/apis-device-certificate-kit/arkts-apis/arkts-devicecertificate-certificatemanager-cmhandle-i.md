@@ -1,6 +1,6 @@
 # CMHandle
 
-表示签名、验签的初始化操作句柄。
+Represents the handle to a signing or signature verification operation.
 
 **Since:** 11
 
@@ -22,7 +22,7 @@ import { certificateManager } from 'kits/@kit.DeviceCertificateKit';
 handle: Uint8Array
 ```
 
-签名、验签的初始化操作句柄，最大长度为8字节。
+Handle of the initialization for signing and signature verification. The value contains up to 8 bytes.
 
 **Type:** Uint8Array
 

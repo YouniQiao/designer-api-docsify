@@ -12,32 +12,22 @@ import { securityManager } from 'kits/@kit.MDMKit';
 function installEnterpriseReSignatureCertificate(admin: Want, certificateAlias: string, fd: int, accountId: int): void
 ```
 
-安装企业应用重签名证书。安装成功后，企业可使用该证书对应用进行重签名。
+Installs the enterprise application re-signing certificate. After the installation is successful, the enterprise can use the certificate to re-sign applications.
 
-同一用户下最多可下发10本不同证书。证书别名作为证书的唯一标识，不支持重复下发相同别名的证书。如需更新同一别名的证书，需先调用  
-[uninstallEnterpriseReSignatureCertificate](arkts-mdm-securitymanager-uninstallenterpriseresignaturecertificate-f.md#uninstallenterpriseresignaturecertificate)进行卸载。
+A maximum of 10 distinct certificates can be deployed per user. The certificate alias serves as a unique identifier for each certificate and cannot be duplicated during deployment. To update a certificate with an existing alias,you must first uninstall the old certificate by calling  
+[uninstallEnterpriseReSignatureCertificate](arkts-mdm-securitymanager-uninstallenterpriseresignaturecertificate-f.md#uninstallenterpriseresignaturecertificate).
 
-在MDM应用卸载或admin取消激活场景下，已安装的证书会保留在设备上，不会被移除。
+The installed certificates are retained on the device and will not be removed when the MDM app is uninstalled or the admin privilege is deactivated.
 
-在企业应用分发场景下，开发者可以使用重签名证书对企业应用进行二次签名，签名完成后将应用包提供给企业管理员。企业管理员可以将重签名后的应用安装在已部署重签名证书的企业设备上。
+In the enterprise app distribution scenario, you can use the re-signing certificate to re-sign enterprise apps. After re-signing, the app package is provided to enterprise administrators, who can then install the re-signed app on enterprise devices where the corresponding re-signing certificate has been deployed.
 
-企业应用重签名证书使用流程：
+Process of using the enterprise application re-signing certificate:
 
-1.通过MDM应用安装企业应用重签名证书；
+1. Install the enterprise application re-signing certificate through the MDM application.2. Re-sign the original HAP package using a signing tool (**ohos-signer** or the DevEco Studio signing plugin).3. Install the re-signed app (through the enterprise private app store).4. Launch and run the app.
 
-2.开发者利用签名工具（如ohos-signer或DevEco Studio签名插件），对原始HAP包进行二次签名；
+Specifications:
 
-3.安装重签名应用（可以通过企业私有应用市场安装）；
-
-4.运行应用。
-
-规格约束：
-
-1.安装新的签名证书之后，使用旧签名证书的应用可以继续运行；
-
-2.已经安装的企业应用，安装了新的企业签名证书后，已安装的应用如需更新，可以直接覆盖安装，无需先卸载原应用；
-
-3.企业场景下，特别是在涉及信息安全的场景中，企业需要确保员工使用的移动设备中仅安装并运行特定的内部软件和工具。企业应用重签名证书通过统一的应用身份标识，与系统的应用管理与权限控制机制配合使用，可支持企业应用的静默安装、受控的系统能力调用及运行范围限制，从而实现企业软件在受控终端上的准入控制与安全管理。
+1. Apps signed with the old certificate will continue to run normally after a new re-signing certificate is installed.2. After a new enterprise signing certificate is installed for an installed enterprise app, if the installed app needs to be updated, you can directly overwrite the original app without uninstalling it.3. In enterprise scenarios (especially those involving information security), enterprises need to ensure that only designated internal software and tools are installed and run on employees' mobile devices. The enterprise application re-signing certificate, in conjunction with the system's application management and permission control mechanisms (via a unified application ID), supports silent installation of enterprise applications, controlled invocation of system capabilities, and restriction of application running scopes. This enables admission control and security governance for enterprise software on managed devices.
 
 **Since:** 24
 
@@ -55,21 +45,21 @@ function installEnterpriseReSignatureCertificate(admin: Want, certificateAlias: 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| admin | [Want](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-want-want-c.md) | Yes | 企业设备管理扩展组件。Want中必须包含企业设备管理扩展能力的abilityName和所在应用的bundleName。 |
-| certificateAlias | string | Yes | 证书别名，必须以'.cer'结尾。 |
-| fd | int | Yes | 表示已存在的重签名证书文件描述符，证书文件需要放置于[应用沙箱目录](../../../file-management/app-sandbox-directory.md)。 |
-| accountId | int | Yes | 用户ID，指定具体用户，取值范围：大于等于0。accountId可以通过@ohos.account.osAccount中的 [getOsAccountLocalId](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-osaccount-accountmanager-i.md/arkts-basicservices-osaccount-accountmanager-i.md#getosaccountlocalid)等接口来获取。*@ohos.account.osAccount** to obtain the user ID. |
+| admin | [Want](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-want-want-c.md) | Yes | EnterpriseAdminExtensionAbility. **Want** must contain the ability name of the EnterpriseAdminExtensionAbility and the bundle name of the application. |
+| certificateAlias | string | Yes | Certificate alias, which must end with **.cer**. |
+| fd | int | Yes | Descriptor of an existing re-signing certificate file. The certificate file must be stored in the [app sandbox directory](../../../file-management/app-sandbox-directory.md). |
+| accountId | int | Yes | User ID, which must be greater than or equal to 0. You can call [getOsAccountLocalId](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-osaccount-accountmanager-i.md/arkts-basicservices-osaccount-accountmanager-i.md#getosaccountlocalid) of **@ohos.account.osAccount** to obtain the user ID. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 9200012 | Parameter verification failed. |
-| 9201006 | The number of certificates has reached the limit. |
-| 9201007 | The certificate is invalid. |
-| 201 | Permission verification failed. The application does not have the permission required to call the API. |
-| 9200001 | The application is not an administrator application of the device. |
-| 9200002 | The administrator application does not have permission to manage the device. |
+| [9200012](../errorcode-enterpriseDeviceManager.md#9200012-parameter-verification-failed) | Parameter verification failed. |
+| [9201006](../errorcode-enterpriseDeviceManager.md#9201006-installed-enterprise-resigning-certificate-exceeding-the-limit) | The number of certificates has reached the limit. |
+| [9201007](../errorcode-enterpriseDeviceManager.md#9201007-invalid-enterprise-resigning-certificate) | The certificate is invalid. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed. The application does not have the permission required to call the API. |
+| [9200001](../errorcode-enterpriseDeviceManager.md#9200001-deviceadmin-not-enabled) | The application is not an administrator application of the device. |
+| [9200002](../errorcode-enterpriseDeviceManager.md#9200002-permission-denied) | The administrator application does not have permission to manage the device. |
 
 ## Examples
 
@@ -83,7 +73,7 @@ let wantTemp: Want = {
   bundleName: 'com.example.myapplication',
   abilityName: 'EnterpriseAdminAbility'
 };
-// The test.cer certificate file must be placed in the application sandbox and be a valid enterprise application re-signing certificate.
+// The test.cer certificate file must be placed in the app sandbox and be a valid enterprise re-signing certificate.
 // Replace with actual values.
 const filePath = '/test.cer';
 // Replace with actual values.

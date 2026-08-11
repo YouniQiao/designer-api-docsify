@@ -1,6 +1,6 @@
 # BoardStyle
 
-背板风格对象。
+Provide an interface for the style of an indicator including border radius
 
 **Since:** 23
 
@@ -16,13 +16,7 @@
 borderRadius?: Length
 ```
 
-背板的圆角半径（不支持百分比设置）。
-
-默认值：8.0
-
-单位：vp
-
-取值范围：[0, +∞)。
+Define the border radius of the board
 
 **Type:** [Length](arkts-arkui-length-t.md)
 

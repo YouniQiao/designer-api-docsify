@@ -34,6 +34,6 @@ Register a listener for axis state changes.The status of the rotation axis chang
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 202 | Not system application. |
-| 33300001 | Service exception. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system application. |
+| [33300001](../errorcode-mechanic.md#33300001-system-error) | Service exception. |
 

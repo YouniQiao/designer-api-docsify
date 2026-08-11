@@ -1,6 +1,6 @@
 # ShowDialogSuccessResponse
 
-对话框的响应结果。
+Defines the response of ShowDialog.
 
 **Since:** 8
 
@@ -26,7 +26,7 @@ import { prompt } from 'kits/@kit.ArkUI';
 index: number
 ```
 
-选中按钮在buttons数组中的索引。
+Defines the index of data.
 
 **Type:** number
 

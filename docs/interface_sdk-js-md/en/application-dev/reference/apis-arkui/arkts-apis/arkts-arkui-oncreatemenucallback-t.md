@@ -4,7 +4,7 @@
 type OnCreateMenuCallback = (menuItems: Array<TextMenuItem>) => Array<TextMenuItem>
 ```
 
-菜单创建时触发。
+Callback function when the selection menu create.
 
 **Since:** 26.0.0
 
@@ -22,11 +22,11 @@ type OnCreateMenuCallback = (menuItems: Array<TextMenuItem>) => Array<TextMenuIt
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| menuItems | Array&lt;TextMenuItem&gt; | Yes | 当前显示的菜单项。<br/>**说明：**<br/>对默认菜单项的名称、图标、快捷键提示修改不生效。 |
+| menuItems | Array&lt;TextMenuItem&gt; | Yes | currently displayed menu items. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Array&lt;TextMenuItem&gt; | 处理后的菜单项。 |
+| Array&lt;TextMenuItem&gt; | Return the menu items will displayed after operations. |
 

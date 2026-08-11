@@ -1,6 +1,6 @@
 # PickerBackgroundStyle
 
-选择器选中项的背景样式，包括选中项的背景颜色和边框圆角半径。
+Provide an interface to set the background style of selected items.
 
 **Since:** 23
 
@@ -16,13 +16,7 @@
 borderRadius?: LengthMetrics | BorderRadiuses | LocalizedBorderRadiuses
 ```
 
-选中项的边框圆角半径。
-
-默认值：{ value:24, unit:LengthUnit.VP }，即四个圆角半径均为24VP。
-
-**说明：**
-
-1. [LengthMetrics](arkts-arkui-graphics-lengthmetrics-c.md)类型的value参数同时作用于四个圆角半径大小，unit参数用于设置单位。2. [BorderRadiuses](arkts-arkui-borderradiuses-t.md)类型可以设置四个不同值的圆角半径，所有单位固定为VP。3. [LocalizedBorderRadiuses](arkts-arkui-units-localizedborderradiuses-i.md)类型可以设置四个不同值的圆角半径，并且可以单独设置每个圆角的单位。
+Defines the border radius of selected items.
 
 **Type:** [LengthMetrics](arkts-arkui-lengthmetrics-t.md) \| BorderRadiuses \| LocalizedBorderRadiuses
 
@@ -42,9 +36,7 @@ borderRadius?: LengthMetrics | BorderRadiuses | LocalizedBorderRadiuses
 color?: ResourceColor
 ```
 
-选中项的背景颜色。
-
-默认值： 'sys.color.comp_background_tertiary'
+Define the background color of selected item.
 
 **Type:** [ResourceColor](arkts-arkui-resourcecolor-t.md)
 

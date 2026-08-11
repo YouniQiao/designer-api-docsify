@@ -12,7 +12,7 @@ import { Options, ReaderIteratorResult, Watcher, ReadTextOptions, WatchEventList
 function setxattrSync(path: string, key: string, value: string): void
 ```
 
-设置文件或目录的扩展属性。
+Sets an extended attribute of a file or directory.
 
 **Since:** 23
 
@@ -26,16 +26,16 @@ function setxattrSync(path: string, key: string, value: string): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| path | string | Yes | 文件或目录的应用沙箱路径。 |
-| key | string | Yes | 扩展属性的key。仅支持前缀为“user.”的字符串，且长度需小于256字节。 |
-| value | string | Yes | 扩展属性的value。 |
+| path | string | Yes | Application sandbox path of the file or directory. |
+| key | string | Yes | Key of the extended attribute to obtain. The value is a string of less than 256 bytes and can contain only the **user.** prefix. |
+| value | string | Yes | Value of the extended attribute to set. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
 | 13900020 | Invalid argument |
-| 401 | Parameter error. Possible causes:1.Mandatory parameters are left unspecified; &lt;br&gt;2.Incorrect parameter types. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes:1.Mandatory parameters are left unspecified; &lt;br&gt;2.Incorrect parameter types. |
 | 13900038 | Value too large for defined data type |
 | 13900002 | No such file or directory |
 | 13900012 | Permission denied |

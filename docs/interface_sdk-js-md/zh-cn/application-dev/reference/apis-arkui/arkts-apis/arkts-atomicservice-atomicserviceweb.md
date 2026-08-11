@@ -11,12 +11,6 @@
  不支持[通用事件](../../apis-arkui/arkts-components/arkts-arkui-common-attribute.md)。
 
 
-## 导入模块
-
-```TypeScript
-import { AtomicServiceWeb, OnMessageEvent, OnPageEndEvent, OnHttpErrorReceiveEvent, OnLoadInterceptEvent, WebHeader, OnProgressChangeEvent, OnErrorReceiveEvent, OnPageBeginEvent, OnLoadInterceptCallback, AtomicServiceWebController } from 'kits/@kit.ArkUI';
-```
-
 ## 汇总
 
 ### 类

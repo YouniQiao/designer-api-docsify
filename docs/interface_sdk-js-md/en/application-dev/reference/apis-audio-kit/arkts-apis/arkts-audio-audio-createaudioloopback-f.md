@@ -12,9 +12,7 @@ import { audio } from 'kits/@kit.AudioKit';
 function createAudioLoopback(mode: AudioLoopbackMode): Promise<AudioLoopback>
 ```
 
-创建音频返听器。使用Promise异步回调。
-
-在使用createAudioLoopback接口之前，需先通过[isAudioLoopbackSupported](arkts-audio-audio-audiostreammanager-i.md#isaudioloopbacksupported)查询系统返听能力。
+Creates an &lt;b&gt;AudioLoopback&lt;/b&gt; instance, which provides low-latency in-ear monitoring using a fast capturer and renderer.
 
 **Since:** 26.0.0
 
@@ -28,20 +26,20 @@ function createAudioLoopback(mode: AudioLoopbackMode): Promise<AudioLoopback>
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| mode | [AudioLoopbackMode](arkts-audio-audio-audioloopbackmode-e.md) | Yes | 音频返听模式。 |
+| mode | [AudioLoopbackMode](arkts-audio-audio-audioloopbackmode-e.md) | Yes | Audio loopback mode. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;AudioLoopback&gt; | Promise对象，成功将返回音频返听器对象，异常将返回error对象。 |
+| Promise&lt;AudioLoopback&gt; | Promise used to return the &lt;b&gt;AudioLoopback&lt;/b&gt; instance. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 6800101 | Parameter verification failed. |
-| 6800104 | Loopback mode is unsupported. |
+| [6800101](../errorcode-audio.md#6800101-invalid-parameter) | Parameter verification failed. |
+| [6800104](../errorcode-audio.md#6800104-unsupported-parameter-value) | Loopback mode is unsupported. |
 
 ## Examples
 
@@ -92,6 +90,6 @@ Creates an &lt;b&gt;AudioLoopback&lt;/b&gt; instance, which provides low-latency
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 6800101 | Parameter verification failed. |
-| 6800104 | Loopback mode is unsupported. |
+| [6800101](../errorcode-audio.md#6800101-invalid-parameter) | Parameter verification failed. |
+| [6800104](../errorcode-audio.md#6800104-unsupported-parameter-value) | Loopback mode is unsupported. |
 

@@ -102,7 +102,7 @@ type: TextDecorationType
 
 默认值：TextDecorationType.None。
 
-**类型：** [TextDecorationType](arkts-arkui-textdecorationtype-e.md)
+**类型：** [TextDecorationType](../../apis-arkgraphics2d/arkts-apis/arkts-arkgraphics2d-text-textdecorationtype-e.md)
 
 **起始版本：** 12
 

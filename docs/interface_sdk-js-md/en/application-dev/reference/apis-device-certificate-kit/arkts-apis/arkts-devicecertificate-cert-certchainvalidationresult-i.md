@@ -1,6 +1,6 @@
 # CertChainValidationResult
 
-表示证书链校验的返回值。
+Represents the return value of certificate chain validation.
 
 **Since:** 11
 
@@ -22,7 +22,7 @@ import { cert } from 'kits/@kit.DeviceCertificateKit';
 readonly entityCert: X509Cert
 ```
 
-表示实体证书。
+Entity certificate.
 
 **Type:** [X509Cert](../../apis-network-kit/arkts-apis/arkts-network-http-x509cert-t.md)
 
@@ -42,7 +42,7 @@ readonly entityCert: X509Cert
 readonly trustAnchor: X509TrustAnchor
 ```
 
-表示信任锚。
+Trust anchor.
 
 **Type:** [X509TrustAnchor](arkts-devicecertificate-cert-x509trustanchor-i.md)
 

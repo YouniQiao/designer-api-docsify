@@ -1,6 +1,6 @@
 # RunningAppClone (System API)
 
-定义分身应用在运行态的结构信息。
+The RunningAppClone module defines the information of an application clone in the running state.
 
 **Since:** 12
 
@@ -18,7 +18,7 @@
 appCloneIndex: int
 ```
 
-分身应用的索引。
+Index of an application clone.
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
@@ -38,7 +38,7 @@ appCloneIndex: int
 pids: Array<int>
 ```
 
-应用的进程ID集合。
+Process ID set of the application.
 
 **Type:** ArkTS-Dyn: Array&lt;number&gt;  <br>ArkTS-Sta：Array&lt;int&gt;
 
@@ -58,7 +58,7 @@ pids: Array<int>
 uid: int
 ```
 
-表示应用程序的UID。
+UID of the application.
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 

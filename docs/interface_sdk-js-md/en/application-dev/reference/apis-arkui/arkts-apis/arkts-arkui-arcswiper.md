@@ -12,30 +12,30 @@ import { ArcSwiperAttribute, ArcSwiper, ArcDirection, ArcSwiperController, ArcDo
 
 | Name | Description |
 | --- | --- |
-| [ArcDotIndicator](arkts-arkui-arkui-arcswiper-arcdotindicator-c.md) | 提供弧形圆点指示器属性及功能。 |
-| [ArcSwiperController](arkts-arkui-arkui-arcswiper-arcswipercontroller-c.md) | ArcSwiper容器组件的控制器，可以将此对象绑定至ArcSwiper组件，实现控制ArcSwiper翻页等功能。 |
+| [ArcDotIndicator](arkts-arkui-arkui-arcswiper-arcdotindicator-c.md) | Define ArcDotIndicator, the indicator type is arc dot. |
+| [ArcSwiperController](arkts-arkui-arkui-arcswiper-arcswipercontroller-c.md) | Provide methods for controlling ArcSwiper component. |
 
 ### Interfaces
 
 | Name | Description |
 | --- | --- |
-| [ArcSwiperAttribute](arkts-arkui-arkui-arcswiper-arcswiperattribute-i.md) | 除支持[通用属性](../../apis-arkui/arkts-components/arkts-arkui-common-attribute.md)外，还支持以下属性，不支持[Menu控制](../../apis-arkui/arkts-components/arkts-arkui-common-attribute.md)。 |
-| [ArcSwiperContentAnimatedTransition](arkts-arkui-arkui-arcswiper-arcswipercontentanimatedtransition-i.md) | ArcSwiper自定义切换动画相关信息。 |
-| [ArcSwiperContentTransitionProxy](arkts-arkui-arkui-arcswiper-arcswipercontenttransitionproxy-i.md) | ArcSwiper自定义切换动画执行过程中，返回给开发者的proxy对象。开发者可通过该对象获取自定义动画视窗内的页面信息，同时，也可以通过调用该对象的finishTransition接口通知ArcSwiper组件页面自定义动画已结束。 |
+| [ArcSwiperAttribute](arkts-arkui-arkui-arcswiper-arcswiperattribute-i.md) | Defines the Arc swiper attribute functions. |
+| [ArcSwiperContentAnimatedTransition](arkts-arkui-arkui-arcswiper-arcswipercontentanimatedtransition-i.md) | Defines the swiper content animated transition options. |
+| [ArcSwiperContentTransitionProxy](arkts-arkui-arkui-arcswiper-arcswipercontenttransitionproxy-i.md) | The proxy object returned to the developer during the execution of the Swiper custom content transition animation. |
 
 ### Enums
 
 | Name | Description |
 | --- | --- |
-| [ArcDirection](arkts-arkui-arkui-arcswiper-arcdirection-e.md) | 弧形方向。 |
+| [ArcDirection](arkts-arkui-arkui-arcswiper-arcdirection-e.md) | Declare the direction of arc indicator. |
 
 ### Types
 
 | Name | Description |
 | --- | --- |
-| [AnimationEndHandler](arkts-arkui-animationendhandler-t.md) | 切换动画结束时的回调。 |
-| [AnimationStartHandler](arkts-arkui-animationstarthandler-t.md) | 切换动画开始时的回调。 |
-| [FinishAnimationHandler](arkts-arkui-finishanimationhandler-t.md) | 停止播放动画时，告知应用。 |
-| [GestureSwipeHandler](arkts-arkui-gestureswipehandler-t.md) | 在页面跟手滑动过程中，逐帧触发的回调。 |
-| [IndexChangedHandler](arkts-arkui-indexchangedhandler-t.md) | 当前显示元素的索引变化时，告知应用。 |
+| [AnimationEndHandler](arkts-arkui-animationendhandler-t.md) | Handler of swiper, used in OnAnimationEnd. |
+| [AnimationStartHandler](arkts-arkui-animationstarthandler-t.md) | Handler of swiper, used in OnAnimationStart. |
+| [FinishAnimationHandler](arkts-arkui-finishanimationhandler-t.md) | Handler of swiper controller, used in finishAnimation. |
+| [GestureSwipeHandler](arkts-arkui-gestureswipehandler-t.md) | Handler of swiper, used in OnGestureSwipe. |
+| [IndexChangedHandler](arkts-arkui-indexchangedhandler-t.md) | Handler of swiper, used in OnChange. |
 

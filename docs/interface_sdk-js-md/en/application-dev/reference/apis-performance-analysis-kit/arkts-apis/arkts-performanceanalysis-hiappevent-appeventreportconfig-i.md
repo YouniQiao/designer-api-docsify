@@ -1,6 +1,6 @@
 # AppEventReportConfig
 
-数据处理者可以上报事件的描述配置。
+Defines the event configuration for the data processor to report.
 
 **Since:** 11
 
@@ -22,7 +22,7 @@ import { hiAppEvent } from 'kits/@kit.PerformanceAnalysisKit';
 domain?: string
 ```
 
-事件领域。默认为空字符串，事件领域名称支持数字、字母、下划线字符，需要以字母开头且不能以下划线结尾，长度非空且不超过32个字符。
+Event domain. The value is a string that contains a maximum of 32 characters, including digits (0 to 9), letters(a to z)(A to Z), and underscore (_). It must start with a letter and cannot end with an underscore (_). The default value is an empty string.
 
 **Type:** string
 
@@ -42,7 +42,7 @@ domain?: string
 isRealTime?: boolean
 ```
 
-是否实时上报事件。默认值为false，配置值为true表示实时上报事件，false表示不实时上报事件。
+Whether to report events in real time. The value **true** indicates that events are reported in real time, and the value **false** indicates the opposite. The default value is **false**.
 
 **Type:** boolean
 
@@ -62,7 +62,7 @@ isRealTime?: boolean
 name?: string
 ```
 
-事件名称。默认为空字符串，首字符必须为字母字符或\$字符，中间字符必须为数字字符、字母字符或下划线字符，结尾字符必须为数字字符或字母字符，长度非空且不超过48个字符。
+Event name. The value is string that contains a maximum of 48 characters, including digits (0 to 9), letters (a to z)(A to Z), underscore (_), and dollar sign (\$). It must start with a letter or dollar sign (\$) and end with a digit or letter. The default value is an empty string.
 
 **Type:** string
 

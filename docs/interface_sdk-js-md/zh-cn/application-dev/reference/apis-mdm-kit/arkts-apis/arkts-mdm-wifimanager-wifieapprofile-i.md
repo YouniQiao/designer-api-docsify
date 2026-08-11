@@ -10,12 +10,6 @@
 
 **系统能力：** SystemCapability.Customization.EnterpriseDeviceManager
 
-## 导入模块
-
-```TypeScript
-import { wifiManager } from 'kits/@kit.MDMKit';
-```
-
 ## altSubjectMatch
 
 ```TypeScript
@@ -184,7 +178,7 @@ eapMethod: EapMethod
 
 EAP认证方式。
 
-**类型：** [EapMethod](../../apis-connectivity-kit/arkts-apis/arkts-connectivity-wifimanager-eapmethod-e.md)
+**类型：** [EapMethod](arkts-mdm-wifimanager-eapmethod-e.md)
 
 **起始版本：** 12
 
@@ -264,7 +258,7 @@ phase2Method: Phase2Method
 
 第二阶段认证方式。只有eapMethod为EAP_PEAP或EAP_TTLS时需要填写。
 
-**类型：** [Phase2Method](../../apis-network-kit/arkts-apis/arkts-network-eap-phase2method-e.md)
+**类型：** [Phase2Method](arkts-mdm-wifimanager-phase2method-e.md)
 
 **起始版本：** 12
 

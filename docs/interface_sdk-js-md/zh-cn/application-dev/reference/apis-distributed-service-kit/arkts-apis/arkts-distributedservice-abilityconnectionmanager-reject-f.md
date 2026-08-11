@@ -1,11 +1,5 @@
 # reject
 
-## 导入模块
-
-```TypeScript
-import { abilityConnectionManager } from 'kits/@kit.DistributedServiceKit';
-```
-
 ## reject
 
 ```TypeScript
@@ -35,12 +29,14 @@ function reject(token: string, reason: string): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. |
 
 ## 示例
 
+ArkTS-Dyn示例：
+
 ```TypeScript
-import { AbilityConstant, UIAbility, Want } from '@kit.AbilityKit';
+import { AbilityConstant, UIAbility, Want} from '@kit.AbilityKit';
 import { abilityConnectionManager } from '@kit.DistributedServiceKit';
 import { hilog } from '@kit.PerformanceAnalysisKit';
 
@@ -49,11 +45,31 @@ export default class EntryAbility extends UIAbility {
       hilog.info(0x0000, 'testTag', '%{public}s', 'on collaborate');
       let collabParam = wantParam["ohos.extra.param.key.supportCollaborateIndex"] as Record<string, Object>;
       const collabToken = collabParam["ohos.dms.collabToken"] as string;
-      const reason = 'test';
+      const reason = "test";
       hilog.info(0x0000, 'testTag', 'reject begin');
       abilityConnectionManager.reject(collabToken, reason);
       return AbilityConstant.CollaborateResult.REJECT;
     }
+}
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+import AbilityConstant from '@ohos.app.ability.AbilityConstant';
+import { UIAbility, Want } from '@kit.AbilityKit';
+import abilityConnectionManager from '@ohos.distributedsched.abilityConnectionManager';
+import hilog from '@ohos.hilog';
+export default class EntryAbility extends UIAbility {
+  onCollaborate(wantParam: Record<string, Object>): AbilityConstant.CollaborateResult {
+    hilog.info(0x0000, 'testTag', '%{public}s', 'on collaborate');
+    let collabParam = wantParam["ohos.extra.param.key.supportCollaborateIndex"] as Record<string, Object>;
+    const collabToken = collabParam["ohos.dms.collabToken"] as string;
+    const reason = "test";
+    hilog.info(0x0000, 'testTag', 'reject begin');
+    abilityConnectionManager.reject(collabToken, reason);
+    return AbilityConstant.CollaborateResult.REJECT;
+  }
 }
 ```
 

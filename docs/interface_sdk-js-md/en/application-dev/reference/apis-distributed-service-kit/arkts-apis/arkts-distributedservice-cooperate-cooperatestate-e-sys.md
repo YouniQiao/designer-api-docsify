@@ -1,6 +1,6 @@
 # CooperateState (System API)
 
-键鼠穿越状态的枚举。
+Enumerates the screen hopping states.
 
 **Since:** 11
 
@@ -18,7 +18,7 @@
 COOPERATE_PREPARE = 0
 ```
 
-表示准备键鼠穿越。
+The preparation for screen hopping is finished.
 
 **Since:** 11
 
@@ -36,7 +36,7 @@ COOPERATE_PREPARE = 0
 COOPERATE_UNPREPARE = 1
 ```
 
-表示取消键鼠穿越准备。
+The preparation for screen hopping is cancelled.
 
 **Since:** 11
 
@@ -54,7 +54,7 @@ COOPERATE_UNPREPARE = 1
 COOPERATE_ACTIVATE = 2
 ```
 
-表示启动键鼠穿越。
+Screen hopping starts.
 
 **Since:** 11
 
@@ -72,7 +72,7 @@ COOPERATE_ACTIVATE = 2
 COOPERATE_ACTIVATE_SUCCESS = 3
 ```
 
-表示键鼠穿越启动成功。
+Starting screen hopping succeeds.
 
 **Since:** 11
 
@@ -90,7 +90,7 @@ COOPERATE_ACTIVATE_SUCCESS = 3
 COOPERATE_ACTIVATE_FAILURE = 4
 ```
 
-表示键鼠穿越无法启动。
+Screen hopping fails to start.
 
 **Since:** 11
 
@@ -108,7 +108,7 @@ COOPERATE_ACTIVATE_FAILURE = 4
 COOPERATE_DEACTIVATE_SUCCESS = 5
 ```
 
-表示键鼠穿越停止成功。
+Stopping screen hopping succeeds.
 
 **Since:** 11
 
@@ -126,7 +126,7 @@ COOPERATE_DEACTIVATE_SUCCESS = 5
 COOPERATE_DEACTIVATE_FAILURE = 6
 ```
 
-表示键鼠穿越无法停止。
+Screen hopping fails to stop.
 
 **Since:** 11
 
@@ -144,7 +144,7 @@ COOPERATE_DEACTIVATE_FAILURE = 6
 COOPERATE_SESSION_DISCONNECTED = 7
 ```
 
-表示键鼠穿越会话断开。
+The screen hopping session is disconnected.
 
 **Since:** 11
 

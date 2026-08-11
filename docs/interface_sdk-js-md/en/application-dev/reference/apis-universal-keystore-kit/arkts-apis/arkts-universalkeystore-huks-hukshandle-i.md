@@ -1,10 +1,11 @@
 # HuksHandle
 
-huks Handle结构体。
+Defines the struct for a HUKS handle.
 
-> **说明：**
+> **NOTE：**
 > 
-> 从API version 9开始废弃，建议使用[HuksSessionHandle&lt;sup&gt;9+&lt;/sup&gt;](arkts-universalkeystore-huks-hukssessionhandle-i.md)替代。
+> This API is deprecated since API version 9. You are advised to use
+> [HuksSessionHandle&lt;sup&gt;9+&lt;/sup&gt;](arkts-universalkeystore-huks-hukssessionhandle-i.md).
 
 **Since:** 8
 
@@ -30,9 +31,9 @@ import { huks } from 'kits/@kit.UniversalKeystoreKit';
 errorCode: number
 ```
 
-原为预留字段。
+Reserved field.
 
-**说明：** 从API version 9开始废弃，无替代接口。
+Note: This API is deprecated since API version 9. No substitute API is provided.
 
 **Type:** number
 
@@ -52,9 +53,9 @@ errorCode: number
 handle: number
 ```
 
-原为预留字段。
+Reserved field.
 
-**说明：** 从API version 9开始废弃，无替代接口。
+Note: This API is deprecated since API version 9. No substitute API is provided.
 
 **Type:** number
 
@@ -74,9 +75,9 @@ handle: number
 token?: Uint8Array
 ```
 
-原为预留字段。
+Reserved field.
 
-**说明：** 从API version 9开始废弃，无替代接口。
+Note: This API is deprecated since API version 9. No substitute API is provided.
 
 **Type:** Uint8Array
 

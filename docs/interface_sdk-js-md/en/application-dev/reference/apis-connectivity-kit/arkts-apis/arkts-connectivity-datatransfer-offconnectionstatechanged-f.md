@@ -12,7 +12,7 @@ import { dataTransfer } from 'kits/@kit.ConnectivityKit';
 function offConnectionStateChanged(callback?: Callback<ConnectionResult>): void
 ```
 
-取消订阅连接状态变更事件。
+Unsubscribes from the connection state change event.
 
 **Since:** 26.0.0
 
@@ -28,12 +28,12 @@ function offConnectionStateChanged(callback?: Callback<ConnectionResult>): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;ConnectionResult&gt; | No | 用于监听状态改变事件的回调。 |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;ConnectionResult&gt; | No | Callback used to listen for the state change event. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 801 | Capability not supported because the chip does not support it. |
+| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported because the chip does not support it. |
 | 36100099 | Operation failed. |
 

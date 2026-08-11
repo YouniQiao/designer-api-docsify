@@ -4,7 +4,7 @@
 export type ErrorHandler = (errObject: Error) => void
 ```
 
-当ArkTS运行时抛出用户未捕获异常时，将调用ErrorHandler。
+The ErrorHandler will be called when the ArkTS runtime throws an exception that is not caught by the user.
 
 **Since:** 21
 
@@ -20,5 +20,5 @@ export type ErrorHandler = (errObject: Error) => void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| errObject | Error | Yes | 有关异常事件名字、消息、错误堆栈信息的对象。 |
+| errObject | Error | Yes | Event name, message, and error stack of the exception. |
 

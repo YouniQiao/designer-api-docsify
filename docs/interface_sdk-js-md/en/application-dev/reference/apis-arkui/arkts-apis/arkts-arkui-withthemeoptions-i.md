@@ -1,6 +1,6 @@
 # WithThemeOptions
 
-设置WithTheme作用域内组件默认配色及深浅色模式。
+Defines the default theme and color mode for components within the **WithTheme** scope.
 
 **Since:** 12
 
@@ -16,9 +16,9 @@
 colorMode?: ThemeColorMode
 ```
 
-用于指定WithTheme作用域内组件配色的深浅色模式。
+Color mode for components in the **WithTheme** scope.
 
-默认值：ThemeColorMode.SYSTEM
+Default value: **ThemeColorMode.SYSTEM**
 
 **Type:** [ThemeColorMode](../arkts-components/arkts-arkui-themecolormode-e.md)
 
@@ -40,9 +40,10 @@ colorMode?: ThemeColorMode
 theme?: CustomTheme
 ```
 
-用于设置WithTheme作用域内组件的自定义主题配色。
+Default theme for components in the **WithTheme** scope.
 
-默认值：undefined，默认配色跟随系统[token默认样式](../../../ui/theme_skinning.md#系统缺省token色值)。
+Default value: **undefined**. The default style follows the  
+[default token style](../../../ui/theme_skinning.md#system-default-token-color-values).
 
 **Type:** [CustomTheme](arkts-arkui-arkui-theme-customtheme-i.md)
 

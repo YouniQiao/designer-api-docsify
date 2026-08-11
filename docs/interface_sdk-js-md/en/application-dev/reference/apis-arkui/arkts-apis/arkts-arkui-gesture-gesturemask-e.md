@@ -1,6 +1,6 @@
 # GestureMask
 
-定义是否屏蔽子组件手势。
+Creating an Object
 
 **Since:** 23
 
@@ -16,7 +16,7 @@
 Normal
 ```
 
-不屏蔽子组件的手势，按照默认手势识别顺序进行识别。
+High-priority response to the current gesture.When the current gesture fails to be recognized,other gesture responses are triggered.For gestures with the same priority,responses are performed based on the recognition sequence.
 
 **Since:** 23
 
@@ -34,7 +34,7 @@ Normal
 IgnoreInternal
 ```
 
-屏蔽子组件的手势，包括子组件上系统内置的手势，如子组件为List组件时，内置的滑动手势同样会被屏蔽。 若父子组件区域存在部分重叠，则只会屏蔽父子组件重叠的部分。
+Ignore internal gestures and recognize the current gesture first.
 
 **Since:** 23
 

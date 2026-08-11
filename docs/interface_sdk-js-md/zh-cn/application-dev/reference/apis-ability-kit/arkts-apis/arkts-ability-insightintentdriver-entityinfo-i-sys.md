@@ -13,12 +13,6 @@ EntityInfo继承自[IntentEntityDecoratorInfo](arkts-ability-app-ability-insight
 
 **系统接口：** 此接口为系统接口。
 
-## 导入模块
-
-```TypeScript
-import { insightIntentDriver } from 'kits/@kit.AbilityKit';
-```
-
 ## className
 
 ```TypeScript
@@ -116,7 +110,7 @@ readonly parameters: Record<string, Object>
 
 表示意图实体参数的数据格式声明，用于意图调用时定义实体参数的数据格式。
 
-**类型：** [Record](../../apis-default/arkts-apis/arkts-record-t.md)&lt;string, Object&gt;
+**类型：** Record&lt;string, Object&gt;
 
 **起始版本：** 20
 

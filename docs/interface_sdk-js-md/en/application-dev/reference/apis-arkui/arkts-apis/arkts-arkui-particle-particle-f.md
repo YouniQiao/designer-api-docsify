@@ -10,22 +10,21 @@ export declare function Particle(
 
 Defines Particle Component
 
-**Since:** 23
+**Since:** 24
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Sta only, since version 24.
 
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-unnamed-export declare function Particle(    particles: Particles, ): ParticleAttribute--><!--Device-unnamed-export declare function Particle(    particles: Particles, ): ParticleAttribute-End-->
 
-**System capability:** 
-- API version 23 and later: SystemCapability.ArkUI.ArkUI.Full
+**System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| particles | [Particles](../arkts-components/arkts-arkui-particles-i.md) | Yes | particle constructor options<br>**Since:** 23 |
+| particles | [Particles](../arkts-components/arkts-arkui-particles-i.md) | Yes | particle constructor options |
 
 **Return value:**
 
@@ -44,9 +43,9 @@ export declare function Particle(
 
 Defines Particle
 
-**Since:** 26.0.0
+**Since:** 26.1.0
 
-**ArkTS mode:** ArkTS-Sta only, since version 26.0.0.
+**ArkTS mode:** ArkTS-Sta only, since version 26.1.0.
 
 **Decorator:** @Builder
 

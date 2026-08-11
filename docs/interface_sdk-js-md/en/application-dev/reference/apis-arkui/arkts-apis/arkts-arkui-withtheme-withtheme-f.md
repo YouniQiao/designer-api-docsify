@@ -9,7 +9,7 @@ export declare function WithTheme(
 ): WithThemeAttribute
 ```
 
-设置应用局部页面自定义主题风格。
+Defines WithTheme Component
 
 **Since:** 23
 
@@ -25,8 +25,8 @@ export declare function WithTheme(
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| options | [WithThemeOptions](arkts-arkui-withthemeoptions-i.md) \| undefined | Yes | 设置作用域内组件配色。 |
-| content_ | [CustomBuilder](../arkts-components/arkts-arkui-custombuilder-t.md) | No | 支持单个子组件。 |
+| options | [WithThemeOptions](arkts-arkui-withthemeoptions-i.md) \| undefined | Yes | options of WithTheme. |
+| content_ | [CustomBuilder](../arkts-components/arkts-arkui-custombuilder-t.md) | No | the content of the component |
 
 **Return value:**
 
@@ -44,11 +44,11 @@ export declare function WithTheme(
 ): WithThemeAttribute
 ```
 
-用于WithTheme定义
+Defines the WithTheme component
 
-**Since:** 26.0.0
+**Since:** 26.1.0
 
-**ArkTS mode:** ArkTS-Sta only, since version 26.0.0.
+**ArkTS mode:** ArkTS-Sta only, since version 26.1.0.
 
 **Decorator:** @Builder
 
@@ -62,12 +62,12 @@ export declare function WithTheme(
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| style_ | [CustomBuilderT](../arkts-components/arkts-arkui-custombuildert-t.md)&lt;WithThemeAttribute&gt; | Yes | WithTheme属性实例 |
-| content_ | [CustomBuilder](../arkts-components/arkts-arkui-custombuilder-t.md) | No | 容器 |
+| style_ | [CustomBuilderT](../arkts-components/arkts-arkui-custombuildert-t.md)&lt;WithThemeAttribute&gt; | Yes | WithTheme attribute instance |
+| content_ | [CustomBuilder](../arkts-components/arkts-arkui-custombuilder-t.md) | No | container |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [WithThemeAttribute](arkts-arkui-withthemeattribute-c.md) | WithTheme属性 |
+| [WithThemeAttribute](arkts-arkui-withthemeattribute-c.md) | WithThemeAttribute |
 

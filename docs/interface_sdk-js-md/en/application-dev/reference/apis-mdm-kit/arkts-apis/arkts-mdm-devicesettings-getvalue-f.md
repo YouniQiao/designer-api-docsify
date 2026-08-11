@@ -12,7 +12,7 @@ import { deviceSettings } from 'kits/@kit.MDMKit';
 function getValue(admin: Want, item: string): string
 ```
 
-获取设备设置策略。
+Obtains a device setting policy.
 
 **Since:** 12
 
@@ -30,23 +30,23 @@ function getValue(admin: Want, item: string): string
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| admin | [Want](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-want-want-c.md) | Yes | 企业设备管理扩展组件。Want中必须包含企业设备管理扩展能力的abilityName和所在应用的bundleName。 |
-| item | string | Yes | 设备设置策略类型。&lt;br/&gt;- screenOff：设备息屏策略，对于PC/2in1设备，支持查询电池供电下的设备息屏策略。&lt;br/&gt;- powerPolicy：设备电源策略，仅对 PC/2in1设备生效，仅支持查询电池供电下的设备电源策略。&lt;br/&gt;- eyeComfort：从API version 23开始支持，护眼模式开关状态。 |
+| admin | [Want](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-want-want-c.md) | Yes | EnterpriseAdminExtensionAbility. **Want** must contain the ability name of the EnterpriseAdminExtensionAbility and the bundle name of the application. |
+| item | string | Yes | Type of the policy to set. &lt;br&gt;- **screenOff**: device screen-off policy. For PCs/2-in-1 devices, the screen-off policy for battery supply can be queried. &lt;br&gt;- **powerPolicy**: device power policy, which takes effect only for PCs/2-in-1 devices. Only the power policy for battery supply can be queried. &lt;br&gt;- **eyeComfort**: eye comfort mode. This parameter is supported since API version 23. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| string | 策略类型值。&lt;br/&gt;当item为screenOff时，返回设备息屏时间（单位：毫秒），对于PC/2in1设备，返回设备电池供电下的息屏时间（单位：毫秒）。&lt;br/&gt;当item为 powerPolicy时，返回电源策略，对于PC/2in1设备，返回设备电池供电下的电源策略，格式为JSON字符串:{"powerScene":xx,"powerPolicy":{"powerPolicyAction": xx,"delayTime":xx}}。powerScene为电源策略场景；delayTime为延迟时间（单位：毫秒）；powerPolicyAction为休眠策略。&lt;br/&gt;电源策略场景：&lt;br/&gt;- 0：超时场景。&lt; br/&gt;休眠策略：&lt;br/&gt;- 0：不执行动作。&lt;br/&gt;- 1：自动进入睡眠。&lt;br/&gt;- 2：强制进入睡眠。&lt;br/&gt;- 3：进入休眠，该策略暂不生效。&lt;br/&gt;- 4：关机。&lt;br/&gt;当item为eyeComfort 时，返回的value为护眼模式开关状态的字符串。&lt;br/&gt;- on：全天开启护眼模式。&lt;br/&gt;- off：关闭护眼模式。&lt;br/&gt;- unknown：其他模式。 |
+| string | Policy type value. &lt;br&gt;If **item** is **screenOff**, the device screen-off time (in ms) is returned. For PCs/2-in-1 devices, the device screen-off time (in ms) in battery mode is returned. &lt;br&gt;If **item** is **powerPolicy**, the power policy is returned. For PCs/2-in-1 devices, the power policy in battery mode is returned. The power policy a JSON string in {"powerScene":xx,"powerPolicy":{"powerPolicyAction" :xx,"delayTime":xx}} format. **powerScene** indicates the power policy scenario, **delayTime** indicates the delay time (in milliseconds), and **powerPolicyAction** indicates the sleep policy. &lt;br&gt;The value of **powerScene** can be: &lt;br&gt;- **0**: timeout. &lt;br&gt;The value of **powerPolicyAction** can be: &lt;br&gt;- **0**: No action is performed. &lt;br&gt;- **1**: enter sleep mode automatically. &lt;br&gt;- **2**: forcibly enter sleep mode. &lt;br&gt;- **3**: enter sleep mode. This policy does not take effect currently. &lt;br&gt;- **4**: power off. &lt;br&gt;If **item** is **eyeComfort**, **value** is a string indicating the status of the eye comfort mode. &lt;br&gt;- **on**: The eye comfort mode is enabled all day. &lt;br&gt;- **off**: The eye comfort mode is disabled. &lt;br&gt;- **unknown**: other modes. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
-| 201 | Permission verification failed. The application does not have the permission required to call the API. |
-| 9200001 | The application is not an administrator application of the device. |
-| 9200002 | The administrator application does not have permission to manage the device. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed. The application does not have the permission required to call the API. |
+| [9200001](../errorcode-enterpriseDeviceManager.md#9200001-deviceadmin-not-enabled) | The application is not an administrator application of the device. |
+| [9200002](../errorcode-enterpriseDeviceManager.md#9200002-permission-denied) | The administrator application does not have permission to manage the device. |
 
 ## Examples
 

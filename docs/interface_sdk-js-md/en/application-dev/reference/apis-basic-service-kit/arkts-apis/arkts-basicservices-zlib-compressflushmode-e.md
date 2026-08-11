@@ -1,6 +1,6 @@
 # CompressFlushMode
 
-压缩刷新模式。
+CompressFlushMode
 
 **Since:** 12
 
@@ -16,7 +16,7 @@
 NO_FLUSH = 0
 ```
 
-默认值，表示正常操作。
+Default value, indicating a normal operation.
 
 **Since:** 12
 
@@ -34,7 +34,7 @@ NO_FLUSH = 0
 PARTIAL_FLUSH = 1
 ```
 
-在流中生成部分刷新点。
+Generates some refresh points in the stream.
 
 **Since:** 12
 
@@ -52,7 +52,7 @@ PARTIAL_FLUSH = 1
 SYNC_FLUSH = 2
 ```
 
-在保持压缩流状态的同时强制输出所有压缩数据。
+Forcibly outputs all compressed data while maintaining the compression stream state.
 
 **Since:** 12
 
@@ -70,7 +70,7 @@ SYNC_FLUSH = 2
 FULL_FLUSH = 3
 ```
 
-重置压缩状态。
+Resets the compression state.
 
 **Since:** 12
 
@@ -88,7 +88,7 @@ FULL_FLUSH = 3
 FINISH = 4
 ```
 
-压缩或解压缩过程结束。
+Ends the compression or decompression process.
 
 **Since:** 12
 
@@ -106,7 +106,7 @@ FINISH = 4
 BLOCK = 5
 ```
 
-允许更精确的控制。
+Allows more precise control.
 
 **Since:** 12
 
@@ -124,7 +124,7 @@ BLOCK = 5
 TREES = 6
 ```
 
-实施过程中有特殊目的。
+Implements special purposes.
 
 **Since:** 12
 

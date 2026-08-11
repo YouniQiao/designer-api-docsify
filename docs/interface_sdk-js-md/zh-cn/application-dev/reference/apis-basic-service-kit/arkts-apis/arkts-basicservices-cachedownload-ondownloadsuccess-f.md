@@ -1,11 +1,5 @@
 # onDownloadSuccess
 
-## 导入模块
-
-```TypeScript
-import { cacheDownload } from 'kits/@kit.BasicServicesKit';
-```
-
 ## onDownloadSuccess
 
 ```TypeScript
@@ -31,9 +25,9 @@ function onDownloadSuccess(url: string, callback: Callback<void>): void
 
 ## 示例
 
-```TypeScript
-import { cacheDownload, BusinessError } from '@kit.BasicServicesKit';
+ArkTS-Dyn示例：
 
+```TypeScript
 try {
   const successCallback = () => {
     console.info("Succeeded in getting callback from cacheDownload");
@@ -44,6 +38,22 @@ try {
   cacheDownload.download("https://www.example.com", {});
 } catch (error) {
   let err: BusinessError = error as BusinessError;
+  console.error(`Failed to download the resource. err code: ${err.code}, err message: ${err.message}`);
+}
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+try {
+  const successCallback = () => {
+    console.info("Success callback from cacheDownload");
+  };
+  // 订阅预下载的完成事件，当下载完成时执行回调
+  cacheDownload.onDownloadSuccess("https://www.example.com", successCallback);
+  // 进行缓存下载，资源若下载成功会被缓存到应用内存或应用沙箱目录的特定文件中。
+  cacheDownload.download("https://www.example.com", {});
+} catch (err: Error) {
   console.error(`Failed to download the resource. err code: ${err.code}, err message: ${err.message}`);
 }
 ```

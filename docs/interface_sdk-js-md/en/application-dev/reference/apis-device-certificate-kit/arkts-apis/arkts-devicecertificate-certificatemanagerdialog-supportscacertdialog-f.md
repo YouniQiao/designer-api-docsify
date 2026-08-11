@@ -12,7 +12,7 @@ import { certificateManagerDialog } from 'kits/@kit.DeviceCertificateKit';
 function supportsCACertDialog(): boolean
 ```
 
-判断设备是否支持[openCertificateDetailDialog](arkts-devicecertificate-certificatemanagerdialog-opencertificatedetaildialog-f.md#opencertificatedetaildialog)，[openInstallCertificateDialog](arkts-devicecertificate-certificatemanagerdialog-openinstallcertificatedialog-f.md#openinstallcertificatedialog)和[openUninstallCertificateDialog](arkts-devicecertificate-certificatemanagerdialog-openuninstallcertificatedialog-f.md#openuninstallcertificatedialog)接口打开管理CA证书的对话框。
+Check whether the device supports the [openCertificateDetailDialog](arkts-devicecertificate-certificatemanagerdialog-opencertificatedetaildialog-f.md#opencertificatedetaildialog), [openInstallCertificateDialog](arkts-devicecertificate-certificatemanagerdialog-openinstallcertificatedialog-f.md#openinstallcertificatedialog), and [openUninstallCertificateDialog](arkts-devicecertificate-certificatemanagerdialog-openuninstallcertificatedialog-f.md#openuninstallcertificatedialog) interfaces to open the dialog box for managing CA certificates.
 
 **Since:** 26.0.0
 
@@ -28,13 +28,13 @@ function supportsCACertDialog(): boolean
 
 | Type | Description |
 | --- | --- |
-| boolean | 设备是否支持打开CA证书管理对话框。true：支持，false：不支持。 |
+| boolean | Whether the CA certificate management dialog box can be opened. **true**: supported; **false** : not supported |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 29700001 | Internal error. Possible causes: 1. IPC communication failed; &lt;br&gt;2. Memory operation error; 3. File operation error. Please try again. |
+| [29700001](../errorcode-certManagerDialog.md#29700001-internal-error) | Internal error. Possible causes: 1. IPC communication failed; &lt;br&gt;2. Memory operation error; 3. File operation error. Please try again. |
 
 ## Examples
 
@@ -44,10 +44,10 @@ import { BusinessError } from '@kit.BasicServicesKit';
 
 try {
   let isSupport: boolean = certificateManagerDialog.supportsCACertDialog();
-  console.info(`Succeeded in checking whether the device supports CA dialog.`)
+  console.info(`Success to check whether the device supports CA dialog.`)
 } catch (err) {
-  let error = err as BusinessError;
-  console.error(`Failed to check whether the device supports CA dialog. Code: ${error.code}, message: ${error.message}`);
+    let error = err as BusinessError;
+    console.error(`Failed to check whether the device supports CA dialog. Code: ${error.code}, message: ${error.message}`);
 }
 ```
 

@@ -12,7 +12,7 @@ import { prompt } from 'kits/@kit.ArkUI';
 function showActionMenu(options: ActionMenuOptions, callback: AsyncCallback<ActionMenuSuccessResponse>): void
 ```
 
-创建并显示操作菜单，菜单响应结果异步返回。
+Displays the menu.
 
 **Since:** 8
 
@@ -30,8 +30,8 @@ function showActionMenu(options: ActionMenuOptions, callback: AsyncCallback<Acti
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| options | [ActionMenuOptions](arkts-arkui-prompt-actionmenuoptions-i.md) | Yes | 操作菜单选项。 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;ActionMenuSuccessResponse&gt; | Yes | 菜单响应结果回调。 |
+| options | [ActionMenuOptions](arkts-arkui-prompt-actionmenuoptions-i.md) | Yes | Options. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;ActionMenuSuccessResponse&gt; | Yes |  |
 
 ## Examples
 
@@ -65,7 +65,7 @@ prompt.showActionMenu({
 function showActionMenu(options: ActionMenuOptions): Promise<ActionMenuSuccessResponse>
 ```
 
-创建并显示操作菜单，菜单响应后同步返回结果。
+Displays the menu.
 
 **Since:** 8
 
@@ -83,13 +83,13 @@ function showActionMenu(options: ActionMenuOptions): Promise<ActionMenuSuccessRe
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| options | [ActionMenuOptions](arkts-arkui-prompt-actionmenuoptions-i.md) | Yes | 操作菜单选项。 |
+| options | [ActionMenuOptions](arkts-arkui-prompt-actionmenuoptions-i.md) | Yes | Options. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;ActionMenuSuccessResponse&gt; | 菜单响应结果。 |
+| Promise&lt;ActionMenuSuccessResponse&gt; |  |
 
 ## Examples
 

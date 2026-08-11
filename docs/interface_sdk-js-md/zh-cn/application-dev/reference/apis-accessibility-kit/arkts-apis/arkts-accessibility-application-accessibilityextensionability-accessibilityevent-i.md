@@ -10,12 +10,6 @@
 
 **系统能力：** SystemCapability.BarrierFree.Accessibility.Core
 
-## 导入模块
-
-```TypeScript
-import { Rect, TouchPosition, AccessibilityVirtualNode, ElementAttributeKeys, FocusCondition, AccessibilityExtensionContext, ElementAttributeValues, AccessibilityEventInfo, AccessibilityEvent, AccessibilityElement, FocusRule, FocusMoveResult, FocusType, Parameter, FocusDirection, WindowType } from 'kits/@kit.AccessibilityKit';
-```
-
 ## elementId
 
 ```TypeScript

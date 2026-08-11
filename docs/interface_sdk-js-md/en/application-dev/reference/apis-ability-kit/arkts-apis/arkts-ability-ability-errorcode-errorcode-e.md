@@ -1,6 +1,6 @@
 # ErrorCode
 
-ErrorCode定义启动Ability时返回的错误码，包括无效的参数、权限拒绝等。
+Enumerates the error codes that may be returned when an ability is started.
 
 **Since:** 6
 
@@ -16,7 +16,7 @@ ErrorCode定义启动Ability时返回的错误码，包括无效的参数、权�
 PERMISSION_DENY = -3
 ```
 
-权限拒绝。
+Permission denied.
 
 **Since:** 6
 
@@ -32,7 +32,7 @@ PERMISSION_DENY = -3
 ABILITY_NOT_FOUND = -2
 ```
 
-找不到Ability。
+The ability is not found.
 
 **Since:** 6
 
@@ -48,7 +48,7 @@ ABILITY_NOT_FOUND = -2
 INVALID_PARAMETER = -1
 ```
 
-无效的参数。
+Invalid parameter.
 
 **Since:** 6
 
@@ -64,7 +64,7 @@ INVALID_PARAMETER = -1
 NO_ERROR = 0
 ```
 
-启动成功，无错误。
+No error.
 
 **Since:** 6
 

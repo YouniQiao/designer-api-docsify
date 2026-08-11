@@ -1,6 +1,6 @@
 # WebKeyboardAvoidMode
 
-Enum type supplied to {@link keyboardAvoidMode} for setting the web keyboard avoid mode.
+Enumerates the soft keyboard avoidance modes.
 
 **Since:** 12
 
@@ -16,7 +16,7 @@ Enum type supplied to {@link keyboardAvoidMode} for setting the web keyboard avo
 RESIZE_VISUAL = 0
 ```
 
-Resize the visual viewport when keyboard avoidance occurs.
+For soft keyboard avoidance, the visual viewport is resized, but not the layout viewport.
 
 **Since:** 12
 
@@ -34,7 +34,7 @@ Resize the visual viewport when keyboard avoidance occurs.
 RESIZE_CONTENT = 1
 ```
 
-Resize the visual and layout viewport when keyboard avoidance occurs.
+For soft keyboard avoidance, both the visual viewport and layout viewport are resized.
 
 **Since:** 12
 
@@ -52,7 +52,7 @@ Resize the visual and layout viewport when keyboard avoidance occurs.
 OVERLAYS_CONTENT = 2
 ```
 
-Do not resize any viewport when keyboard avoidance occurs.
+No viewport is resized, and soft keyboard avoidance is not triggered.
 
 **Since:** 12
 
@@ -70,7 +70,8 @@ Do not resize any viewport when keyboard avoidance occurs.
 RETURN_TO_UICONTEXT = 3
 ```
 
-When the soft keyboard avoids, follow the avoid result of UIContext.
+The soft keyboard avoidance behavior of the **Web** component follows the  
+[KeyboardAvoidMode](../../apis-arkui/arkts-apis/arkts-arkui-arkui-uicontext-keyboardavoidmode-e.md/arkts-arkui-arkui-uicontext-keyboardavoidmode-e.md) set by UIcontext. The **Web** component does not process the avoidance behavior of the component.
 
 **Since:** 22
 

@@ -12,7 +12,7 @@ import { pasteboard } from 'kits/@kit.BasicServicesKit';
 function createPlainTextRecord(text: string): PasteDataRecord
 ```
 
-创建一条纯文本内容条目。
+Creates a **PasteDataRecord** object of the plain text type.
 
 **Since:** 7
 
@@ -30,13 +30,13 @@ function createPlainTextRecord(text: string): PasteDataRecord
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| text | string | Yes | 纯文本内容。 |
+| text | string | Yes | Plain text. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [PasteDataRecord](arkts-basicservices-pasteboard-pastedatarecord-i.md) | 一条新建的纯文本内容条目。 |
+| [PasteDataRecord](arkts-basicservices-pasteboard-pastedatarecord-i.md) | New **PasteDataRecord** object of the plain text type. |
 
 ## Examples
 

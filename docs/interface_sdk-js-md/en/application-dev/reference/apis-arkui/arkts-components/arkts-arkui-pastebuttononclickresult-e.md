@@ -1,6 +1,6 @@
 # PasteButtonOnClickResult
 
-粘贴控件点击后的授权结果。
+Enumerates the authorization results after the **PasteButton** component is tapped.
 
 **Since:** 10
 
@@ -16,7 +16,7 @@
 SUCCESS = 0
 ```
 
-粘贴控件点击后权限授权成功。
+Authorization is successful.
 
 **Since:** 10
 
@@ -36,7 +36,7 @@ SUCCESS = 0
 TEMPORARY_AUTHORIZATION_FAILED = 1
 ```
 
-粘贴控件点击后权限授权失败。
+Authorization fails.
 
 **Since:** 10
 

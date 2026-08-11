@@ -1,6 +1,6 @@
 # ResourceType
 
-应用资源超基线的类型。
+Define the resource types of the application.
 
 **Since:** 24
 
@@ -16,7 +16,7 @@
 PSS_MEMORY = 1
 ```
 
-表示应用当前超基线的资源是PSS的内存。
+Indicates that it is an pss resource.
 
 **Since:** 24
 
@@ -36,7 +36,7 @@ PSS_MEMORY = 1
 ION_MEMORY = 2
 ```
 
-表示应用当前超基线的资源是ION的内存。
+Indicates that it is a ion resource.
 
 **Since:** 24
 
@@ -56,7 +56,7 @@ ION_MEMORY = 2
 ASHMEM_MEMORY = 3
 ```
 
-表示应用当前超基线的资源是ASHMEM的内存。
+Indicates that it is a ashmem resource.
 
 **Since:** 24
 
@@ -76,7 +76,7 @@ ASHMEM_MEMORY = 3
 GPU_MEMORY = 4
 ```
 
-表示应用当前超基线的资源是GPU的内存。
+Indicates that it is an GPU resource.
 
 **Since:** 24
 
@@ -96,7 +96,7 @@ GPU_MEMORY = 4
 FD = 5
 ```
 
-表示应用当前超基线的资源是FD的数量。
+Indicates that it is an FD resource.
 
 **Since:** 24
 
@@ -116,7 +116,7 @@ FD = 5
 THREAD = 6
 ```
 
-表示应用当前超基线的资源是THREAD的数量。
+Indicates that it is a thread resource.
 
 **Since:** 24
 

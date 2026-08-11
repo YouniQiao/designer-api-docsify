@@ -1,11 +1,5 @@
 # addDockApp
 
-## 导入模块
-
-```TypeScript
-import { applicationManager } from 'kits/@kit.MDMKit';
-```
-
 ## addDockApp
 
 ```TypeScript
@@ -55,17 +49,17 @@ function addDockApp(admin: Want, bundleName: string, abilityName: string, index?
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 9200012 | Parameter verification failed. |
-| 801 | Capability not supported. Failed to call the API due to limited device capabilities. |
-| 9200015 | The ability does not exist. |
-| 9201018 | The application is inoperable. |
-| 9201019 | The location is inoperable. |
-| 9201013 | The number of applications in the Dock has reached the maximum. |
-| 201 | Permission verification failed. The application does not have the permission required to call the API. |
-| 9201014 | The application is already in the Dock. |
-| 9201015 | The application is not installed. |
-| 9200001 | The application is not an administrator application of the device. |
-| 9200002 | The administrator application does not have permission to manage the device. |
+| [9200012](../errorcode-enterpriseDeviceManager.md#9200012-参数校验失败) | Parameter verification failed. |
+| [801](../../errorcode-universal.md#801-该设备不支持此api) | Capability not supported. Failed to call the API due to limited device capabilities. |
+| [9200015](../errorcode-enterpriseDeviceManager.md#9200015-组件不存在) | The ability does not exist. |
+| [9201018](../errorcode-enterpriseDeviceManager.md#9201018-指定应用不支持操作) | The application is inoperable. |
+| [9201019](../errorcode-enterpriseDeviceManager.md#9201019-指定位置不支持操作) | The location is inoperable. |
+| [9201013](../errorcode-enterpriseDeviceManager.md#9201013-快捷栏中的应用数量已到最大值) | The number of applications in the Dock has reached the maximum. |
+| [201](../../errorcode-universal.md#201-权限校验失败) | Permission verification failed. The application does not have the permission required to call the API. |
+| [9201014](../errorcode-enterpriseDeviceManager.md#9201014-指定应用已经在快捷栏中) | The application is already in the Dock. |
+| [9201015](../errorcode-enterpriseDeviceManager.md#9201015-指定应用未安装) | The application is not installed. |
+| [9200001](../errorcode-enterpriseDeviceManager.md#9200001-应用没有激活成设备管理器) | The application is not an administrator application of the device. |
+| [9200002](../errorcode-enterpriseDeviceManager.md#9200002-设备管理器权限不够) | The administrator application does not have permission to manage the device. |
 
 ## 示例
 

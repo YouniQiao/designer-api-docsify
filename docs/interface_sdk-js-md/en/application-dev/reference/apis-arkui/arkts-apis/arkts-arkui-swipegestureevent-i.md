@@ -1,6 +1,7 @@
 # SwipeGestureEvent
 
-继承自[BaseGestureEvent](arkts-arkui-basegestureevent-i.md)。可将该对象作为[onGestureJudgeBegin](arkts-arkui-common-commonmethod-i.md#ongesturejudgebegin)的event参数来传递。
+Inherits from [BaseGestureEvent](arkts-arkui-basegestureevent-i.md). This object can be passed as the **event** parameter of   
+[onGestureJudgeBegin](arkts-arkui-common-commonmethod-i.md#ongesturejudgebegin).
 
 **Inheritance/Implementation:** SwipeGestureEvent extends [BaseGestureEvent](arkts-arkui-basegestureevent-i.md)
 
@@ -18,11 +19,11 @@
 angle: number
 ```
 
-表示快滑手势的角度，即手指滑动的瞬时方向与水平正方向的夹角，单位为deg。
+Angle of the swipe gesture, that is, the angle between the instantaneous direction of finger sliding and the positive horizontal direction. The unit is deg.
 
-**说明：**
+**NOTE：**
 
-以水平正方向为基准，滑动方向位于水平正方向顺时针侧时，角度范围为0到180度；位于水平正方向逆时针侧时，角度范围为0到-180度。
+With the positive horizontal direction as the reference, when the sliding direction is on the clockwise side of the positive horizontal direction, the angle ranges from 0 to 180 degrees; when on the counterclockwise side, the angle ranges from 0 to –180 degrees.
 
 **Type:** number
 
@@ -44,7 +45,7 @@ angle: number
 speed: number
 ```
 
-快滑手势速度，即所有手指相对当前组件元素原始区域滑动的平均速度，单位为vp/s。
+Swipe gesture speed, defined as the average swipe speed of all fingers relative to the original area of the current component. The unit is vp/s.
 
 **Type:** number
 

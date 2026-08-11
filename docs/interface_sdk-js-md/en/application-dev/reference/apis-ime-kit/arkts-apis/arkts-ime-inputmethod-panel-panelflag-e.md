@@ -1,6 +1,10 @@
 # PanelFlag
 
-输入法面板状态类型枚举。定义面板的显示状态形态，决定面板是固定态、悬浮态还是候选词态。
+Enumerates the state types of the input method panel.
+
+> **NOTE：**
+> 
+> Currently, only the **SOFT_KEYBOARD** panel is supported.
 
 **Since:** 11
 
@@ -16,7 +20,7 @@
 FLAG_FIXED = 0
 ```
 
-固定态面板类型。
+Fixed state type.
 
 **Since:** 11
 
@@ -32,7 +36,7 @@ FLAG_FIXED = 0
 FLAG_FLOATING
 ```
 
-悬浮态面板类型。
+Floating state type.
 
 **Since:** 11
 
@@ -48,10 +52,11 @@ FLAG_FLOATING
 FLAG_CANDIDATE
 ```
 
-候选词态面板类型。
+Candidate state type.
 
-- 当输入面板为候选词态时，面板为显示用户输入候选词的窗口。  
-- 输入法服务不会主动控制候选词态面板的显示和隐藏，需要开发者根据应用场景自行控制候选词态面板的显示和隐藏。
+- When in the candidate state type, the input method panel is a window displaying candidates based on user input.  
+- The input method service does not proactively control the visibility of the candidate panel. You need to control   
+the visibility on your own.
 
 **Since:** 11
 

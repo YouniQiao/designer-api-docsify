@@ -1,6 +1,6 @@
 # TextTimerController
 
-TextTimer组件的控制器，用于控制文本计时器。一个TextTimer组件仅支持绑定一个控制器，组件创建完成后相关指令才能被调用。一个TextTimerController只能控制最后一个绑定此TextTimerController的TextTimer组件。
+Provides a way to control the process.
 
 **Since:** 23
 
@@ -16,7 +16,7 @@ TextTimer组件的控制器，用于控制文本计时器。一个TextTimer组�
 constructor()
 ```
 
-TextTimerController的构造函数。
+constructor.A constructor used to create a TextTimerController object.
 
 **Since:** 23
 
@@ -34,7 +34,7 @@ TextTimerController的构造函数。
 pause(): void
 ```
 
-计时暂停。
+Provides a pause event for timer.
 
 **Since:** 23
 
@@ -52,7 +52,7 @@ pause(): void
 reset(): void
 ```
 
-重置计时器。
+Provides an event to reset timer.
 
 **Since:** 23
 
@@ -70,7 +70,7 @@ reset(): void
 start(): void
 ```
 
-计时开始。
+Provides a start event for timer.
 
 **Since:** 23
 

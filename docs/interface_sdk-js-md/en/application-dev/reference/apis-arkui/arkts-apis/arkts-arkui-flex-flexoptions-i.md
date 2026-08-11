@@ -1,6 +1,6 @@
 # FlexOptions
 
-设置Flex子组件的排列对齐方式。
+Describes the layout and alignment of child components within the Flex component.
 
 **Since:** 23
 
@@ -16,7 +16,7 @@
 alignContent?: FlexAlign
 ```
 
-当交叉轴存在额外空间时，多行内容之间的对齐方式。仅在wrap为Wrap或WrapReverse下生效。
+Alignment mode of the child components in a multi-row Flex component along the cross axis.This parameter is valid only when wrap is set to Wrap or WrapReverse.
 
 **Type:** [FlexAlign](arkts-arkui-flexalign-e.md)
 
@@ -38,7 +38,7 @@ alignContent?: FlexAlign
 alignItems?: ItemAlign
 ```
 
-所有子组件在Flex容器交叉轴上的对齐格式。
+Alignment mode of the child components in the Flex component along the cross axis.
 
 **Type:** [ItemAlign](arkts-arkui-itemalign-e.md)
 
@@ -60,7 +60,7 @@ alignItems?: ItemAlign
 direction?: FlexDirection
 ```
 
-子组件在Flex容器上排列的方向，即主轴的方向。
+Direction in which child components are arranged in the Flex component.
 
 **Type:** [FlexDirection](arkts-arkui-flexdirection-e.md)
 
@@ -82,7 +82,7 @@ direction?: FlexDirection
 justifyContent?: FlexAlign
 ```
 
-所有子组件在Flex容器主轴上的对齐格式。
+Alignment mode of the child components in the Flex component along the main axis.
 
 **Type:** [FlexAlign](arkts-arkui-flexalign-e.md)
 
@@ -104,7 +104,7 @@ justifyContent?: FlexAlign
 space?: FlexSpaceOptions
 ```
 
-所有子组件在Flex容器主轴或交叉轴的间距。
+Spacing between child components along the main axis or cross axis of the Flex component.
 
 **Type:** [FlexSpaceOptions](../arkts-components/arkts-arkui-flexspaceoptions-i.md)
 
@@ -126,7 +126,7 @@ space?: FlexSpaceOptions
 wrap?: FlexWrap
 ```
 
-Flex容器是单行/列还是多行/列排列。
+Whether the Flex component has a single line or multiple lines.
 
 **Type:** [FlexWrap](arkts-arkui-flexwrap-e.md)
 

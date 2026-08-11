@@ -54,7 +54,7 @@ status: NativeEmbedParamStatus
 
 The status of the param.
 
-**类型：** [NativeEmbedParamStatus](arkts-arkweb-web-nativeembedparamstatus-e.md)
+**类型：** [NativeEmbedParamStatus](../arkts-components/arkts-arkweb-nativeembedparamstatus-e.md)
 
 **起始版本：** 23
 

@@ -1,7 +1,7 @@
 # OH_Huks_KeyMaterial25519
 
 ```c
-struct OH_Huks_KeyMaterial25519 {...}
+typedef struct OH_Huks_KeyMaterial25519 {...} OH_Huks_KeyMaterial25519
 ```
 
 ## Overview
@@ -24,6 +24,6 @@ Defines a struct of a 25519 key.
 | uint32_t keySize | Length of the 25519 key. |
 | uint32_t pubKeySize | Length of the public key. |
 | uint32_t priKeySize | Length of the private key. |
-| uint32_t reserved | Reserved. |
+| uint32_t reserved | Reserved field. |
 
 

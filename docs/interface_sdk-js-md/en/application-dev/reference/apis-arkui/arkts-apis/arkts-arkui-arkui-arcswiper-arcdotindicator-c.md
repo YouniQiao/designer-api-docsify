@@ -1,6 +1,6 @@
 # ArcDotIndicator
 
-提供弧形圆点指示器属性及功能。
+Define ArcDotIndicator, the indicator type is arc dot.
 
 **Since:** 26.0.0
 
@@ -22,7 +22,7 @@ import { ArcSwiperAttribute, ArcSwiper, ArcDirection, ArcSwiperController, ArcDo
 arcDirection(direction: ArcDirection | undefined): ArcDotIndicator
 ```
 
-设置弧形指示器的方向。未通过该接口设置时，形指示器的方向默认为6点钟方向。
+Set the direction of arc indicator.
 
 **Since:** 26.0.0
 
@@ -32,17 +32,19 @@ arcDirection(direction: ArcDirection | undefined): ArcDotIndicator
 
 <!--Device-ArcDotIndicator-arcDirection(direction: ArcDirection | undefined): ArcDotIndicator--><!--Device-ArcDotIndicator-arcDirection(direction: ArcDirection | undefined): ArcDotIndicator-End-->
 
+**System capability:** SystemCapability.ArkUI.ArkUI.Circle
+
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| direction | [ArcDirection](arkts-arkui-arkui-arcswiper-arcdirection-e.md) \| undefined | Yes | 设置弧形指示器的方向。&lt;br/&gt;取值为undefined时，弧形指示器的方向为6点钟方向。 |
+| direction | [ArcDirection](arkts-arkui-arkui-arcswiper-arcdirection-e.md) \| undefined | Yes | the direction of arc indicator, default value is { ArcDirection.SIX_CLOCK_DIRECTION }, undefined means setting to default value. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [ArcDotIndicator](arkts-arkui-arkui-arcswiper-arcdotindicator-c.md) | 提供弧形圆点指示器属性及功能。 |
+| [ArcDotIndicator](arkts-arkui-arkui-arcswiper-arcdotindicator-c.md) |  |
 
 ## backgroundColor
 
@@ -50,7 +52,7 @@ arcDirection(direction: ArcDirection | undefined): ArcDotIndicator
 backgroundColor(color: ResourceColor | undefined): ArcDotIndicator
 ```
 
-设置弧形指示器被长按时，弧形指示器的颜色。未通过该接口设置时，弧形指示器被长按时，弧形指示器的颜色默认为'#FF404040'。
+Set the background color.
 
 **Since:** 26.0.0
 
@@ -60,17 +62,19 @@ backgroundColor(color: ResourceColor | undefined): ArcDotIndicator
 
 <!--Device-ArcDotIndicator-backgroundColor(color: ResourceColor | undefined): ArcDotIndicator--><!--Device-ArcDotIndicator-backgroundColor(color: ResourceColor | undefined): ArcDotIndicator-End-->
 
+**System capability:** SystemCapability.ArkUI.ArkUI.Circle
+
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| color | [ResourceColor](arkts-arkui-resourcecolor-t.md) \| undefined | Yes | 设置弧形指示器被长按时，弧形指示器的颜色。&lt;br/&gt;取值为undefined时，弧形指示器被长按时，弧形指示器的颜色为'#FF404040' 。 |
+| color | [ResourceColor](arkts-arkui-resourcecolor-t.md) \| undefined | Yes | the background color, default value is { #FF404040 }, undefined means setting to default value. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [ArcDotIndicator](arkts-arkui-arkui-arcswiper-arcdotindicator-c.md) | 提供弧形圆点指示器属性及功能。 |
+| [ArcDotIndicator](arkts-arkui-arkui-arcswiper-arcdotindicator-c.md) |  |
 
 ## constructor
 
@@ -78,7 +82,7 @@ backgroundColor(color: ResourceColor | undefined): ArcDotIndicator
 constructor()
 ```
 
-ArcDotIndicator的构造函数。
+A constructor used to create a ArcDotIndicator object.
 
 **Since:** 26.0.0
 
@@ -96,7 +100,7 @@ ArcDotIndicator的构造函数。
 itemColor(color: ResourceColor | undefined): ArcDotIndicator
 ```
 
-设置弧形指示器中，未选中导航点的颜色。未通过该接口设置时，未选中导航点的颜色默认为'#A9FFFFFF'。
+Set the navigation point color.
 
 **Since:** 26.0.0
 
@@ -106,17 +110,19 @@ itemColor(color: ResourceColor | undefined): ArcDotIndicator
 
 <!--Device-ArcDotIndicator-itemColor(color: ResourceColor | undefined): ArcDotIndicator--><!--Device-ArcDotIndicator-itemColor(color: ResourceColor | undefined): ArcDotIndicator-End-->
 
+**System capability:** SystemCapability.ArkUI.ArkUI.Circle
+
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| color | [ResourceColor](arkts-arkui-resourcecolor-t.md) \| undefined | Yes | 设置弧形指示器中，未选中导航点的颜色。&lt;br/&gt;取值为undefined时，未选中导航点的颜色为'#A9FFFFFF'。 |
+| color | [ResourceColor](arkts-arkui-resourcecolor-t.md) \| undefined | Yes | the indicator item color, default value is { #A9FFFFFF }, undefined means setting to default value. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [ArcDotIndicator](arkts-arkui-arkui-arcswiper-arcdotindicator-c.md) | 提供弧形圆点指示器属性及功能。 |
+| [ArcDotIndicator](arkts-arkui-arkui-arcswiper-arcdotindicator-c.md) |  |
 
 ## maskColor
 
@@ -124,7 +130,7 @@ itemColor(color: ResourceColor | undefined): ArcDotIndicator
 maskColor(color: LinearGradient | undefined): ArcDotIndicator
 ```
 
-设置弧形指示器的遮罩渐变色。未通过该接口设置时，弧形指示器的遮罩渐变色起始颜色默认为'#00000000'，结束颜色默认为'#FF000000'。
+Set the gradient color for the mask.
 
 **Since:** 26.0.0
 
@@ -134,17 +140,19 @@ maskColor(color: LinearGradient | undefined): ArcDotIndicator
 
 <!--Device-ArcDotIndicator-maskColor(color: LinearGradient | undefined): ArcDotIndicator--><!--Device-ArcDotIndicator-maskColor(color: LinearGradient | undefined): ArcDotIndicator-End-->
 
+**System capability:** SystemCapability.ArkUI.ArkUI.Circle
+
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| color | [LinearGradient](../arkts-components/arkts-arkui-lineargradient-i.md) \| undefined | Yes | 设置弧形指示器的遮罩渐变色。&lt;br/&gt;取值为undefined时，弧形指示器的遮罩渐变色起始颜色为'#00000000'，结束颜色为'# FF000000'。 |
+| color | [LinearGradient](../arkts-components/arkts-arkui-lineargradient-i.md) \| undefined | Yes | the gradient color, default start color is { #00000000 }, default end color is { #FF000000 }, undefined means setting to default value. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [ArcDotIndicator](arkts-arkui-arkui-arcswiper-arcdotindicator-c.md) | 提供弧形圆点指示器属性及功能。 |
+| [ArcDotIndicator](arkts-arkui-arkui-arcswiper-arcdotindicator-c.md) |  |
 
 ## selectedItemColor
 
@@ -152,7 +160,7 @@ maskColor(color: LinearGradient | undefined): ArcDotIndicator
 selectedItemColor(color: ResourceColor | undefined): ArcDotIndicator
 ```
 
-设置弧形指示器中，选中导航点的颜色。未通过该接口设置时，选中导航点的颜色默认为'#FF5EA1FF'。
+Set the selected navigation point color.
 
 **Since:** 26.0.0
 
@@ -162,15 +170,17 @@ selectedItemColor(color: ResourceColor | undefined): ArcDotIndicator
 
 <!--Device-ArcDotIndicator-selectedItemColor(color: ResourceColor | undefined): ArcDotIndicator--><!--Device-ArcDotIndicator-selectedItemColor(color: ResourceColor | undefined): ArcDotIndicator-End-->
 
+**System capability:** SystemCapability.ArkUI.ArkUI.Circle
+
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| color | [ResourceColor](arkts-arkui-resourcecolor-t.md) \| undefined | Yes | 设置弧形指示器中，选中导航点的颜色。&lt;br/&gt;取值为undefined时，选中导航点的颜色为'#FF5EA1FF'。 |
+| color | [ResourceColor](arkts-arkui-resourcecolor-t.md) \| undefined | Yes | the indicator item when selected, default value is { #FF5EA1FF }, undefined means setting to default value. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [ArcDotIndicator](arkts-arkui-arkui-arcswiper-arcdotindicator-c.md) | 提供弧形圆点指示器属性及功能。 |
+| [ArcDotIndicator](arkts-arkui-arkui-arcswiper-arcdotindicator-c.md) |  |
 

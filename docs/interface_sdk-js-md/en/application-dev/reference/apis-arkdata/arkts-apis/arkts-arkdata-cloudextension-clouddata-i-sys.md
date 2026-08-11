@@ -1,6 +1,6 @@
 # CloudData (System API)
 
-云数据。
+Represents the cloud data.
 
 **Since:** 11
 
@@ -24,7 +24,7 @@ import { cloudExtension } from 'kits/@kit.ArkData';
 hasMore: boolean
 ```
 
-服务器是否存在更多数据可供查询。true表示服务器上还有数据等待查询，false表示服务器上不存在可查询的数据。
+Whether there is data to be queried on the server.The value true means there is data to be queried on the server; the value false means the opposite.
 
 **Type:** boolean
 
@@ -44,7 +44,7 @@ hasMore: boolean
 nextCursor: string
 ```
 
-查询游标。
+Cursor for data query.
 
 **Type:** string
 
@@ -64,7 +64,7 @@ nextCursor: string
 values: Array<Record<string, CloudType>>
 ```
 
-需要查询数据的数组，包括数据记录的实际值和ExtensionValue（扩展值）。
+Array of data to be queried, which consists of the data value and ExtensionValue.
 
 **Type:** Array&lt;Record&lt;string, CloudType&gt;&gt;
 

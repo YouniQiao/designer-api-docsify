@@ -20,12 +20,6 @@
 
 **系统能力：** SystemCapability.Multimedia.Media.AVRecorder
 
-## 导入模块
-
-```TypeScript
-import { media } from 'kits/@kit.MediaKit';
-```
-
 ## getInputMetaSurface
 
 ```TypeScript
@@ -60,11 +54,11 @@ getInputMetaSurface(type: MetaSourceType): Promise<string>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt;2. Incorrect parameter types. 3.Parameter verification failed. |
-| 5400102 | Operate not permit. Return by promise. |
-| 5400103 | IO error. Return by promise. |
-| 202 | Called from Non-System applications. Return by promise. |
-| 5400105 | Service died. Return by promise. |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt;2. Incorrect parameter types. 3.Parameter verification failed. |
+| [5400102](../errorcode-media.md#5400102-当前状态不支持此操作) | Operate not permit. Return by promise. |
+| [5400103](../errorcode-media.md#5400103-出现io错误) | IO error. Return by promise. |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Called from Non-System applications. Return by promise. |
+| [5400105](../errorcode-media.md#5400105-播放服务死亡) | Service died. Return by promise. |
 
 ## getInputMetaSurface
 
@@ -100,11 +94,11 @@ getInputMetaSurface(type: MetaSourceType): Promise<string | undefined>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt;2. Incorrect parameter types. 3.Parameter verification failed. |
-| 5400102 | Operate not permit. Return by promise. |
-| 5400103 | IO error. Return by promise. |
-| 202 | Called from Non-System applications. Return by promise. |
-| 5400105 | Service died. Return by promise. |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt;2. Incorrect parameter types. 3.Parameter verification failed. |
+| [5400102](../errorcode-media.md#5400102-当前状态不支持此操作) | Operate not permit. Return by promise. |
+| [5400103](../errorcode-media.md#5400103-出现io错误) | IO error. Return by promise. |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Called from Non-System applications. Return by promise. |
+| [5400105](../errorcode-media.md#5400105-播放服务死亡) | Service died. Return by promise. |
 
 ## isWatermarkSupported
 
@@ -181,8 +175,8 @@ setWatermark(watermark: image.PixelMap, config: WatermarkConfig): Promise<void>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 401 | The parameter check failed. |
-| 801 | Capability not supported. |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | The parameter check failed. |
+| [801](../../errorcode-universal.md#801-该设备不支持此api) | Capability not supported. |
 
 ## 示例
 

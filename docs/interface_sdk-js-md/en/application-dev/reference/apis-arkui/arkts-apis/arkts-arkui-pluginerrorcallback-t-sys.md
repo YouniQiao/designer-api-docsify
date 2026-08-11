@@ -4,7 +4,7 @@
 export type PluginErrorCallback = (info: PluginErrorData) => void
 ```
 
-发生错误时触发事件回调。AnonyMous Object Rectification
+Callback invoked when an error occurs.AnonyMous Object Rectification
 
 **Since:** 23
 
@@ -22,5 +22,5 @@ export type PluginErrorCallback = (info: PluginErrorData) => void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| info | [PluginErrorData](arkts-arkui-plugincomponent-pluginerrordata-i-sys.md) | Yes | 发生错误时提供的数据。 |
+| info | [PluginErrorData](arkts-arkui-plugincomponent-pluginerrordata-i-sys.md) | Yes | Plugin error data |
 

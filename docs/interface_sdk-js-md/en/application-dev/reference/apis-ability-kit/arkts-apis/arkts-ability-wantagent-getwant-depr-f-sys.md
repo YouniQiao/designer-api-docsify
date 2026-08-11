@@ -6,7 +6,7 @@
 function getWant(agent: WantAgent, callback: AsyncCallback<Want>): void
 ```
 
-获取WantAgent中的Want(callback形式)。
+Obtains the {@link Want} of an {@link WantAgent}.
 
 **Since:** 7
 
@@ -26,8 +26,8 @@ function getWant(agent: WantAgent, callback: AsyncCallback<Want>): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| agent | [WantAgent](arkts-ability-wantagent-t.md) | Yes | Indicates the {@link WantAgent} WantAgent信息。 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[Want](arkts-ability-app-ability-want-want-c.md)&gt; | Yes | 获取WantAgent中的Want的回调方法。 |
+| agent | [WantAgent](arkts-ability-wantagent-t.md) | Yes | Indicates the {@link WantAgent} whose UID is to be obtained. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[Want](arkts-ability-app-ability-want-want-c.md)&gt; | Yes | Obtain the callback method for Want in WantAgent. |
 
 
 ## getWant
@@ -36,7 +36,7 @@ function getWant(agent: WantAgent, callback: AsyncCallback<Want>): void
 function getWant(agent: WantAgent): Promise<Want>
 ```
 
-获取WantAgent中的Want(Promise形式)。
+Obtains the {@link Want} of an {@link WantAgent}.
 
 **Since:** 7
 
@@ -56,11 +56,11 @@ function getWant(agent: WantAgent): Promise<Want>
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| agent | [WantAgent](arkts-ability-wantagent-t.md) | Yes | WantAgent信息。 |
+| agent | [WantAgent](arkts-ability-wantagent-t.md) | Yes | Indicates the {@link WantAgent} whose UID is to be obtained. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;[Want](arkts-ability-app-ability-want-want-c.md)&gt; | 以Promise形式返回Want。 |
+| Promise&lt;[Want](arkts-ability-app-ability-want-want-c.md)&gt; | Returns the { |
 

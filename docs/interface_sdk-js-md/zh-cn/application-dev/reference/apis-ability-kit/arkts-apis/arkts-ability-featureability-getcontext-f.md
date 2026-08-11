@@ -1,11 +1,5 @@
 # getContext
 
-## 导入模块
-
-```TypeScript
-import { featureAbility } from 'kits/@kit.AbilityKit';
-```
-
 ## getContext
 
 ```TypeScript
@@ -28,7 +22,7 @@ function getContext(): Context
 
 | 类型 | 说明 |
 | --- | --- |
-| [Context](../../apis-mind-spore-lite-kit/arkts-apis/arkts-mindsporelite-mindsporelite-context-i.md) | 返回应用程序上下文。 |
+| [Context](../../apis-arkui/arkts-components/arkts-arkui-context-t.md) | 返回应用程序上下文。 |
 
 ## 示例
 

@@ -1,6 +1,6 @@
 # FillResponse (System API)
 
-自动填充响应。
+Defines the information about the response to an auto-fill request.
 
 **Since:** 11
 
@@ -18,7 +18,7 @@
 viewData: ViewData
 ```
 
-查看数据。填充请求的页面基本信息。
+Page data.
 
 **Type:** [ViewData](arkts-ability-viewdata-i.md)
 

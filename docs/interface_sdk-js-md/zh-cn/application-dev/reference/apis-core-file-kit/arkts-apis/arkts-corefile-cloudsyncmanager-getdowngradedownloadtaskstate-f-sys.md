@@ -1,11 +1,5 @@
 # getDowngradeDownloadTaskState（系统接口）
 
-## 导入模块
-
-```TypeScript
-import { cloudSyncManager } from 'kits/@kit.CoreFileKit';
-```
-
 ## getDowngradeDownloadTaskState
 
 ```TypeScript
@@ -47,11 +41,13 @@ function getDowngradeDownloadTaskState(bundleNames: Array<string>): Promise<Arra
 | 错误码ID | 错误信息 |
 | --- | --- |
 | 13900020 | Invalid argument. Possible causes: &lt;br&gt;1.Mandatory parameter are left unspecified. 2.The length of the input parameter exceeds the upper limit. &lt;br&gt;3.The input parameter contains an invalid bundleName. |
-| 201 | Permission verification failed. |
-| 202 | The caller is not a system application. |
+| [201](../../errorcode-universal.md#201-权限校验失败) | Permission verification failed. |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | The caller is not a system application. |
 | 13900010 | Try again. |
 
 ## 示例
+
+ArkTS-Dyn示例：
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -66,6 +62,26 @@ cloudSyncManager.getDowngradeDownloadTaskState(bundles).then((results: Array<clo
     }
   });
 }).catch((err: BusinessError) => {
+  console.error(`getDowngradeDownloadTaskState failed, code: ${err.code}, message: ${err.message}`);
+});
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let bundles: Array<string> = ['com.example.app1', 'com.example.app2'];
+cloudSyncManager.getDowngradeDownloadTaskState(bundles).then((results: Array<cloudSyncManager.DownloadProgress>) => {
+  results.forEach((item) => {
+    console.info(`state: ${item.state}, downloadedSize: ${item.downloadedSize}, totalSize: ${item.totalSize}`);
+    console.info(`successfulCount: ${item.successfulCount}, failedCount: ${item.failedCount}, totalCount: ${item.totalCount}`);
+    if (item.state == cloudSyncManager.DownloadState.STOPPED) {
+      console.info(`stopReason: ${item.stopReason}`);
+    }
+  });
+}).catch((err: Error) => {
+  let err: BusinessError = error as BusinessError;
   console.error(`getDowngradeDownloadTaskState failed, code: ${err.code}, message: ${err.message}`);
 });
 ```

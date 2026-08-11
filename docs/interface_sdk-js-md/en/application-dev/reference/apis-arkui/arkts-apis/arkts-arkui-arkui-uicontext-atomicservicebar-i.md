@@ -1,6 +1,6 @@
 # AtomicServiceBar
 
-原子化服务栏
+interface AtomicServiceBar
 
 **Since:** 23
 
@@ -22,7 +22,7 @@ import { OverlayManager, FrameCallback, ResolvedUIContext, NodeRenderStateChange
 getBarRect(): Frame
 ```
 
-获取bar的尺寸和位置。
+Get size and position of the bar.
 
 **Since:** 23
 
@@ -46,7 +46,7 @@ getBarRect(): Frame
 setBackgroundColor(color: Nullable< Color | int | string>): void
 ```
 
-设置bar的背景色。
+Set the background color of the bar.
 
 **Since:** 23
 
@@ -70,7 +70,7 @@ setBackgroundColor(color: Nullable< Color | int | string>): void
 setIconColor(color: Nullable< Color | int | string>): void
 ```
 
-设置bar上图标的颜色。
+Set the color of the icon on the bar.
 
 **Since:** 23
 
@@ -94,7 +94,7 @@ setIconColor(color: Nullable< Color | int | string>): void
 setTitleContent(content: string): void
 ```
 
-设置bar的标题。
+Set the title of the bar.
 
 **Since:** 23
 
@@ -118,7 +118,7 @@ setTitleContent(content: string): void
 setTitleFontStyle(font: FontStyle): void
 ```
 
-设置bar标题的字体样式。
+Set the font style of the bar's title.
 
 **Since:** 23
 
@@ -142,7 +142,7 @@ setTitleFontStyle(font: FontStyle): void
 setVisible(visible: boolean): void
 ```
 
-设置bar的可见性，不包括icon。
+Set the visibility of the bar, except the icon.
 
 **Since:** 23
 

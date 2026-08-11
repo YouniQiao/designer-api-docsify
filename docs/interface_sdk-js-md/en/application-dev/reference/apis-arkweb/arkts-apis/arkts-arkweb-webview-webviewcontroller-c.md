@@ -42,7 +42,7 @@ Checks whether the web page can go back.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 17100001 | Init error. The WebviewController must be associated with a Web component. |
+| [17100001](../errorcode-webview.md#17100001-webviewcontroller-not-associated-with-a-web-component) | Init error. The WebviewController must be associated with a Web component. |
 
 ## accessForward
 
@@ -70,7 +70,7 @@ Checks whether the web page can go forward.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 17100001 | Init error. The WebviewController must be associated with a Web component. |
+| [17100001](../errorcode-webview.md#17100001-webviewcontroller-not-associated-with-a-web-component) | Init error. The WebviewController must be associated with a Web component. |
 
 ## accessStep
 
@@ -104,8 +104,8 @@ Checks whether the web page can go back or forward the given number of steps.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt;2. Incorrect parameter types. 3.Parameter verification failed. |
-| 17100001 | Init error. The WebviewController must be associated with a Web component. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt;2. Incorrect parameter types. 3.Parameter verification failed. |
+| [17100001](../errorcode-webview.md#17100001-webviewcontroller-not-associated-with-a-web-component) | Init error. The WebviewController must be associated with a Web component. |
 
 ## addIntelligentTrackingPreventionBypassingList
 
@@ -133,8 +133,8 @@ Add bypassing hosts for Intelligent Tracking Prevention.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt;2. Incorrect parameter types. |
-| 801 | Capability not supported. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt;2. Incorrect parameter types. |
+| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. |
 
 ## avoidVisibleViewportBottom
 
@@ -162,8 +162,8 @@ Sets the bottom avoidance height of the web visible viewport.When setting non-ze
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 801 | Capability not supported. |
-| 17100001 | Init error. The WebviewController must be associated with a Web component. |
+| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. |
+| [17100001](../errorcode-webview.md#17100001-webviewcontroller-not-associated-with-a-web-component) | Init error. The WebviewController must be associated with a Web component. |
 
 ## backOrForward
 
@@ -191,8 +191,8 @@ Goes forward or back backOrForward in the history of the web page.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt;2. Incorrect parameter types. 3.Parameter verification failed. |
-| 17100001 | Init error. The WebviewController must be associated with a Web component. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt;2. Incorrect parameter types. 3.Parameter verification failed. |
+| [17100001](../errorcode-webview.md#17100001-webviewcontroller-not-associated-with-a-web-component) | Init error. The WebviewController must be associated with a Web component. |
 
 ## backward
 
@@ -214,7 +214,7 @@ Goes back in the history of the web page.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 17100001 | Init error. The WebviewController must be associated with a Web component. |
+| [17100001](../errorcode-webview.md#17100001-webviewcontroller-not-associated-with-a-web-component) | Init error. The WebviewController must be associated with a Web component. |
 
 ## clearBlanklessLoadingCache
 
@@ -242,7 +242,7 @@ Clears the blankless loading cache of the page with a specified key value.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 801 | Capability not supported. @static |
+| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. @static |
 
 ## clearClientAuthenticationCache
 
@@ -264,7 +264,7 @@ Clears the client authentication certificate cache in the Web.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 17100001 | Init error. The WebviewController must be associated with a Web component. |
+| [17100001](../errorcode-webview.md#17100001-webviewcontroller-not-associated-with-a-web-component) | Init error. The WebviewController must be associated with a Web component. |
 
 ## clearHistory
 
@@ -286,7 +286,7 @@ Clears the history in the Web.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 17100001 | Init error. The WebviewController must be associated with a Web component. |
+| [17100001](../errorcode-webview.md#17100001-webviewcontroller-not-associated-with-a-web-component) | Init error. The WebviewController must be associated with a Web component. |
 
 ## clearHostIP
 
@@ -314,7 +314,7 @@ Clear the host name IP address.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt;2. Incorrect parameter types. 3.Parameter verification failed. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt;2. Incorrect parameter types. 3.Parameter verification failed. |
 
 ## clearIntelligentTrackingPreventionBypassingList
 
@@ -336,7 +336,7 @@ Clear bypassing hosts for Intelligent Tracking Prevention.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 801 | Capability not supported. |
+| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. |
 
 ## clearMatches
 
@@ -358,7 +358,7 @@ Clears the highlighting surrounding text matches created by searchAllAsync.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 17100001 | Init error. The WebviewController must be associated with a Web component. |
+| [17100001](../errorcode-webview.md#17100001-webviewcontroller-not-associated-with-a-web-component) | Init error. The WebviewController must be associated with a Web component. |
 
 ## clearPrefetchedResource
 
@@ -418,7 +418,7 @@ Clears the ssl cache in the Web.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 17100001 | Init error. The WebviewController must be associated with a Web component. |
+| [17100001](../errorcode-webview.md#17100001-webviewcontroller-not-associated-with-a-web-component) | Init error. The WebviewController must be associated with a Web component. |
 
 ## clearWebSchemeHandler
 
@@ -440,7 +440,7 @@ Clear all web scheme handlers for related web component.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 17100001 | Init error. The WebviewController must be associated with a Web component. |
+| [17100001](../errorcode-webview.md#17100001-webviewcontroller-not-associated-with-a-web-component) | Init error. The WebviewController must be associated with a Web component. |
 
 ## closeAllMediaPresentations
 
@@ -448,7 +448,7 @@ Clear all web scheme handlers for related web component.
 closeAllMediaPresentations(): void
 ```
 
-控制网页所有全屏视频关闭。
+Closes all full-screen videos on a web page.
 
 **Since:** 23
 
@@ -462,7 +462,7 @@ closeAllMediaPresentations(): void
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 17100001 | Init error. The WebviewController must be associated with a Web component. |
+| [17100001](../errorcode-webview.md#17100001-webviewcontroller-not-associated-with-a-web-component) | Init error. The WebviewController must be associated with a Web component. |
 
 ## closeCamera
 
@@ -470,7 +470,7 @@ closeAllMediaPresentations(): void
 closeCamera(): void
 ```
 
-关闭当前网页摄像头捕获。
+Disables the camera capture of the current web page.
 
 **Since:** 23
 
@@ -484,7 +484,7 @@ closeCamera(): void
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 17100001 | Init error. The WebviewController must be associated with a Web component. |
+| [17100001](../errorcode-webview.md#17100001-webviewcontroller-not-associated-with-a-web-component) | Init error. The WebviewController must be associated with a Web component. |
 
 ## constructor
 
@@ -535,8 +535,8 @@ Rendering current Web page into Pdf data, return the result in async mode.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Invalid input parameter. |
-| 17100001 | Init error. The WebviewController must be associated with a Web component. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Invalid input parameter. |
+| [17100001](../errorcode-webview.md#17100001-webviewcontroller-not-associated-with-a-web-component) | Init error. The WebviewController must be associated with a Web component. |
 
 ## createPdf
 
@@ -570,8 +570,8 @@ Rendering current Web page into Pdf data, return the result in promise mode.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Invalid input parameter. |
-| 17100001 | Init error. The WebviewController must be associated with a Web component. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Invalid input parameter. |
+| [17100001](../errorcode-webview.md#17100001-webviewcontroller-not-associated-with-a-web-component) | Init error. The WebviewController must be associated with a Web component. |
 
 ## createWebMessagePorts
 
@@ -605,8 +605,8 @@ Create web message ports
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt;2. Incorrect parameter types. 3.Parameter verification failed. |
-| 17100001 | Init error. The WebviewController must be associated with a Web component. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt;2. Incorrect parameter types. 3.Parameter verification failed. |
+| [17100001](../errorcode-webview.md#17100001-webviewcontroller-not-associated-with-a-web-component) | Init error. The WebviewController must be associated with a Web component. |
 
 ## createWebPrintDocumentAdapter
 
@@ -640,8 +640,8 @@ Creates a PrintDocumentAdapter instance to provide content for printing.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt;2. Incorrect parameter types. 3.Parameter verification failed. |
-| 17100001 | Init error. The WebviewController must be associated with a Web component. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt;2. Incorrect parameter types. 3.Parameter verification failed. |
+| [17100001](../errorcode-webview.md#17100001-webviewcontroller-not-associated-with-a-web-component) | Init error. The WebviewController must be associated with a Web component. |
 
 ## customizeSchemes
 
@@ -669,8 +669,8 @@ Register Web custom schemes.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 17100020 | Failed to register custom schemes. |
-| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt;2. Incorrect parameter types. |
+| [17100020](../errorcode-webview.md#17100020-failed-to-register-custom-schemes) | Failed to register custom schemes. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt;2. Incorrect parameter types. |
 
 ## customizeSchemes
 
@@ -699,8 +699,8 @@ Register Web custom schemes.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 17100020 | Failed to register custom schemes. |
-| 401 | Parameter error. Possible causes: 1. The length of the schemes array is greater than 10. 2. The character length of the scheme is greater than 32. 3. The character in the scheme is not within the allowed range of lowercase English letters, numbers, and the symbols ".", "+", "-". @static |
+| [17100020](../errorcode-webview.md#17100020-failed-to-register-custom-schemes) | Failed to register custom schemes. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. The length of the schemes array is greater than 10. 2. The character length of the scheme is greater than 32. 3. The character in the scheme is not within the allowed range of lowercase English letters, numbers, and the symbols ".", "+", "-". @static |
 
 ## deleteJavaScriptRegister
 
@@ -728,9 +728,9 @@ Deletes a registered JavaScript object with given name.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt;2. Incorrect parameter types. 3.Parameter verification failed. |
-| 17100001 | Init error. The WebviewController must be associated with a Web component. |
-| 17100008 | Failed to delete JavaScriptProxy because it does not exist. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt;2. Incorrect parameter types. 3.Parameter verification failed. |
+| [17100001](../errorcode-webview.md#17100001-webviewcontroller-not-associated-with-a-web-component) | Init error. The WebviewController must be associated with a Web component. |
+| [17100008](../errorcode-webview.md#17100008-deleting-a-javascriptproxy-that-does-not-exist) | Failed to delete JavaScriptProxy because it does not exist. |
 
 ## enableAdsBlock
 
@@ -758,9 +758,9 @@ Enable the ability to block Ads, disabled by default.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt;2. Parameter string is too long. 3.Parameter verification failed. |
-| 801 | Capability not supported. |
-| 17100001 | Init error. The WebviewController must be associated with a Web component. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt;2. Parameter string is too long. 3.Parameter verification failed. |
+| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. |
+| [17100001](../errorcode-webview.md#17100001-webviewcontroller-not-associated-with-a-web-component) | Init error. The WebviewController must be associated with a Web component. |
 
 ## enableAdvancedSecurityMode
 
@@ -834,9 +834,9 @@ Enable the ability to use Intelligent Tracking Prevention; default is disabled.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt;2. Incorrect parameter types. |
-| 801 | Capability not supported. |
-| 17100001 | Init error. The WebviewController must be associated with a Web component. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt;2. Incorrect parameter types. |
+| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. |
+| [17100001](../errorcode-webview.md#17100001-webviewcontroller-not-associated-with-a-web-component) | Init error. The WebviewController must be associated with a Web component. |
 
 ## enablePrivateNetworkAccess
 
@@ -886,7 +886,7 @@ Enable the ability to check website security risks.Illegal and fraudulent websit
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt;2. Incorrect parameter types. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt;2. Incorrect parameter types. |
 
 ## enableWholeWebPageDrawing
 
@@ -903,6 +903,43 @@ Enables the full drawing capability for the web page.This API works only during 
 <!--Device-WebviewController-static enableWholeWebPageDrawing(): void--><!--Device-WebviewController-static enableWholeWebPageDrawing(): void-End-->
 
 **System capability:** SystemCapability.Web.Webview.Core
+
+## executeAIPageCommand
+
+```TypeScript
+executeAIPageCommand(command: string): Promise<string>
+```
+
+Asynchronously executes AI page command operations.
+
+**Since:** 26.0.0
+
+**ArkTS mode:** ArkTS-Sta only, since version 26.0.0.
+
+**Model restriction:** This API can be used only in the stage model.
+
+<!--Device-WebviewController-executeAIPageCommand(command: string): Promise<string>--><!--Device-WebviewController-executeAIPageCommand(command: string): Promise<string>-End-->
+
+**System capability:** SystemCapability.Web.Webview.Core
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| command | string | Yes | JSON-formatted command parameter. |
+
+**Return value:**
+
+| Type | Description |
+| --- | --- |
+| Promise&lt;string&gt; | A promise that resolves after the command is executed. This JSON-formatted value will be the result of command execution. |
+
+**Error codes:**
+
+| Error Code ID | Error Message |
+| --- | --- |
+| [17100001](../errorcode-webview.md#17100001-webviewcontroller-not-associated-with-a-web-component) | Init error. The WebviewController must be associated with a Web component. |
+| [17100024](../errorcode-webview.md#17100024-aipagecommand-format-error) | Command format error. The command parameter does not conform to the JSON format requirements. |
 
 ## forward
 
@@ -924,7 +961,7 @@ Goes forward in the history of the web page.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 17100001 | Init error. The WebviewController must be associated with a Web component. |
+| [17100001](../errorcode-webview.md#17100001-webviewcontroller-not-associated-with-a-web-component) | Init error. The WebviewController must be associated with a Web component. |
 
 ## getActiveWebEngineVersion
 
@@ -932,7 +969,7 @@ Goes forward in the history of the web page.
 static getActiveWebEngineVersion(): ArkWebEngineVersion
 ```
 
-获取当前ArkWeb内核版本。
+Obtains the current ArkWeb kernel version.
 
 **Since:** 23
 
@@ -946,7 +983,7 @@ static getActiveWebEngineVersion(): ArkWebEngineVersion
 
 | Type | Description |
 | --- | --- |
-| [ArkWebEngineVersion](arkts-arkweb-webview-arkwebengineversion-e.md) | 返回由[ArkWebEngineVersion]{ |
+| [ArkWebEngineVersion](arkts-arkweb-webview-arkwebengineversion-e.md) | The ArkWeb kernel version defined by [ArkWebEngineVersion]{ |
 
 ## getAttachState
 
@@ -996,7 +1033,7 @@ Get back forward stack list from current webview.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 17100001 | Init error. The WebviewController must be associated with a Web component. |
+| [17100001](../errorcode-webview.md#17100001-webviewcontroller-not-associated-with-a-web-component) | Init error. The WebviewController must be associated with a Web component. |
 
 ## getBlanklessInfoWithKey
 
@@ -1030,7 +1067,7 @@ Obtains the prediction information about the blankless loading solution and enab
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 801 | Capability not supported. |
+| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. |
 
 ## getCertificate
 
@@ -1058,7 +1095,7 @@ Get certificate for the current website.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 17100001 | Init error. The WebviewController must be associated with a web component. |
+| [17100001](../errorcode-webview.md#17100001-webviewcontroller-not-associated-with-a-web-component) | Init error. The WebviewController must be associated with a web component. |
 
 ## getCertificate
 
@@ -1086,8 +1123,8 @@ Get certificate for the current website.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt;2. Incorrect parameter types. 3.Parameter verification failed. |
-| 17100001 | Init error. The WebviewController must be associated with a web component. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt;2. Incorrect parameter types. 3.Parameter verification failed. |
+| [17100001](../errorcode-webview.md#17100001-webviewcontroller-not-associated-with-a-web-component) | Init error. The WebviewController must be associated with a web component. |
 
 ## getCustomUserAgent
 
@@ -1115,7 +1152,7 @@ Get custom user agent.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 17100001 | Init error. The WebviewController must be associated with a Web component. |
+| [17100001](../errorcode-webview.md#17100001-webviewcontroller-not-associated-with-a-web-component) | Init error. The WebviewController must be associated with a Web component. |
 
 ## getDefaultUserAgent
 
@@ -1165,7 +1202,7 @@ Get whether default error page feature is enabled.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 17100001 | Init error. The WebviewController must be associated with a Web component. |
+| [17100001](../errorcode-webview.md#17100001-webviewcontroller-not-associated-with-a-web-component) | Init error. The WebviewController must be associated with a Web component. |
 
 ## getFavicon
 
@@ -1193,7 +1230,7 @@ Gets the favicon of current Web page.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 17100001 | Init error. The WebviewController must be associated with a Web component. |
+| [17100001](../errorcode-webview.md#17100001-webviewcontroller-not-associated-with-a-web-component) | Init error. The WebviewController must be associated with a Web component. |
 
 ## getLastHitTest
 
@@ -1221,7 +1258,7 @@ Gets the last hit test value of HitTest.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 17100001 | Init error. The WebviewController must be associated with a Web component. |
+| [17100001](../errorcode-webview.md#17100001-webviewcontroller-not-associated-with-a-web-component) | Init error. The WebviewController must be associated with a Web component. |
 
 ## getLastJavascriptProxyCallingFrameUrl
 
@@ -1249,7 +1286,7 @@ Get the url of the last frame that calls the JavaScriptProxy.This should be call
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 17100001 | Init error. The WebviewController must be associated with a Web component. |
+| [17100001](../errorcode-webview.md#17100001-webviewcontroller-not-associated-with-a-web-component) | Init error. The WebviewController must be associated with a Web component. |
 
 ## getLastPostMessageURL
 
@@ -1279,7 +1316,7 @@ Gets URL of frame that sent the last postMessage to native application.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 17100001 | Init error. The WebviewController must be associated with a Web component. |
+| [17100001](../errorcode-webview.md#17100001-webviewcontroller-not-associated-with-a-web-component) | Init error. The WebviewController must be associated with a Web component. |
 
 ## getMediaPlaybackState
 
@@ -1287,7 +1324,7 @@ Gets URL of frame that sent the last postMessage to native application.
 getMediaPlaybackState(): MediaPlaybackState
 ```
 
-查询当前网页音视频播放状态。
+Queries the audio and video playback status of the current web page.
 
 **Since:** 23
 
@@ -1301,13 +1338,13 @@ getMediaPlaybackState(): MediaPlaybackState
 
 | Type | Description |
 | --- | --- |
-| [MediaPlaybackState](arkts-arkweb-webview-mediaplaybackstate-e.md) | 当前网页的播放状态，具体值为NONE、PLAYING、PAUSED、STOPPED。 |
+| [MediaPlaybackState](arkts-arkweb-webview-mediaplaybackstate-e.md) | Playback control status of the current web page. The options are **NONE**, **PLAYING**, **PAUSED**, and **STOPPED**. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 17100001 | Init error. The WebviewController must be associated with a Web component. |
+| [17100001](../errorcode-webview.md#17100001-webviewcontroller-not-associated-with-a-web-component) | Init error. The WebviewController must be associated with a Web component. |
 
 ## getOriginalUrl
 
@@ -1335,7 +1372,7 @@ Gets the original url of current Web page.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 17100001 | Init error. The WebviewController must be associated with a Web component. |
+| [17100001](../errorcode-webview.md#17100001-webviewcontroller-not-associated-with-a-web-component) | Init error. The WebviewController must be associated with a Web component. |
 
 ## getPageHeight
 
@@ -1363,7 +1400,7 @@ Obtains the height of this web page.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 17100001 | Init error. The WebviewController must be associated with a Web component. |
+| [17100001](../errorcode-webview.md#17100001-webviewcontroller-not-associated-with-a-web-component) | Init error. The WebviewController must be associated with a Web component. |
 
 ## getPageOffset
 
@@ -1391,7 +1428,7 @@ Get the page offset. And the unit is virtual pixel.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 801 | This functionality is not supported. |
+| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | This functionality is not supported. |
 
 ## getPrintBackground
 
@@ -1419,7 +1456,7 @@ Get whether print web page background.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 17100001 | Init error. The WebviewController must be associated with a Web component. |
+| [17100001](../errorcode-webview.md#17100001-webviewcontroller-not-associated-with-a-web-component) | Init error. The WebviewController must be associated with a Web component. |
 
 ## getProgress
 
@@ -1447,7 +1484,7 @@ Gets the loading progress for the current page.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 801 | Capability not supported. |
+| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. |
 
 ## getRenderProcessMode
 
@@ -1519,7 +1556,7 @@ Get whether scrolling is allowed.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 17100001 | Init error. The WebviewController must be associated with a Web component. |
+| [17100001](../errorcode-webview.md#17100001-webviewcontroller-not-associated-with-a-web-component) | Init error. The WebviewController must be associated with a Web component. |
 
 ## getSecurityLevel
 
@@ -1547,7 +1584,7 @@ Get the security level of the current page.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 17100001 | Init error. The WebviewController must be associated with a Web component. |
+| [17100001](../errorcode-webview.md#17100001-webviewcontroller-not-associated-with-a-web-component) | Init error. The WebviewController must be associated with a Web component. |
 
 ## getSiteIsolationMode
 
@@ -1570,6 +1607,36 @@ Get the site isolation mode.
 | Type | Description |
 | --- | --- |
 | [SiteIsolationMode](arkts-arkweb-webview-siteisolationmode-e.md) | The site isolation mode of the application. |
+
+## getSubframeErrorPageEnabled
+
+```TypeScript
+getSubframeErrorPageEnabled(): boolean
+```
+
+Get whether default error page feature is enabled for subframes.
+
+**Since:** 26.0.0
+
+**ArkTS mode:** ArkTS-Sta only, since version 26.0.0.
+
+**Model restriction:** This API can be used only in the stage model.
+
+<!--Device-WebviewController-getSubframeErrorPageEnabled(): boolean--><!--Device-WebviewController-getSubframeErrorPageEnabled(): boolean-End-->
+
+**System capability:** SystemCapability.Web.Webview.Core
+
+**Return value:**
+
+| Type | Description |
+| --- | --- |
+| boolean | True if the default error page function of the subframe is enabled; Otherwise, the value is false. |
+
+**Error codes:**
+
+| Error Code ID | Error Message |
+| --- | --- |
+| [17100001](../errorcode-webview.md#17100001-webviewcontroller-not-associated-with-a-web-component) | Init error. The WebviewController must be associated with a Web component. |
 
 ## getSurfaceId
 
@@ -1619,7 +1686,7 @@ Gets the title of current Web page.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 17100001 | Init error. The WebviewController must be associated with a Web component. |
+| [17100001](../errorcode-webview.md#17100001-webviewcontroller-not-associated-with-a-web-component) | Init error. The WebviewController must be associated with a Web component. |
 
 ## getUrl
 
@@ -1647,7 +1714,7 @@ Gets the url of current Web page.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 17100001 | Init error. The WebviewController must be associated with a Web component. |
+| [17100001](../errorcode-webview.md#17100001-webviewcontroller-not-associated-with-a-web-component) | Init error. The WebviewController must be associated with a Web component. |
 
 ## getUserAgent
 
@@ -1675,7 +1742,7 @@ Gets the default user agent.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 17100001 | Init error. The WebviewController must be associated with a Web component. |
+| [17100001](../errorcode-webview.md#17100001-webviewcontroller-not-associated-with-a-web-component) | Init error. The WebviewController must be associated with a Web component. |
 
 ## getUserAgentClientHintsEnabled
 
@@ -1757,7 +1824,7 @@ Gets the index value of the current Web component for the management of multiple
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 17100001 | Init error. The WebviewController must be associated with a Web component. |
+| [17100001](../errorcode-webview.md#17100001-webviewcontroller-not-associated-with-a-web-component) | Init error. The WebviewController must be associated with a Web component. |
 
 ## hasImage
 
@@ -1765,7 +1832,7 @@ Gets the index value of the current Web component for the management of multiple
 hasImage(): Promise<boolean>
 ```
 
-通过Promise方式异步查找当前页面是否存在图像。
+Checks whether this page contains images. This API uses a promise to return the result.
 
 **Since:** 23
 
@@ -1779,14 +1846,14 @@ hasImage(): Promise<boolean>
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;boolean&gt; | Promise实例，返回查找页面是否存在图像。 &lt;br&gt; true表示页面存在图像；false表示页面不存在图像。 |
+| Promise&lt;boolean&gt; | Promise used to return the result. &lt;br&gt; The value **true** indicates that this page contains images, and the value **false** indicates the opposite. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. |
-| 17100001 | Init error. The WebviewController must be associated with a Web component. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. |
+| [17100001](../errorcode-webview.md#17100001-webviewcontroller-not-associated-with-a-web-component) | Init error. The WebviewController must be associated with a Web component. |
 
 ## hasImage
 
@@ -1794,7 +1861,7 @@ hasImage(): Promise<boolean>
 hasImage(callback: AsyncCallback<boolean>): void
 ```
 
-通过Callback方式异步查找当前页面是否存在图像。
+Checks whether this page contains images. This API uses an asynchronous callback to return the result.
 
 **Since:** 23
 
@@ -1808,14 +1875,14 @@ hasImage(callback: AsyncCallback<boolean>): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;boolean&gt; | Yes | 返回查找页面是否存在图像。&lt;br&gt; true表示页面存在图像；false表示页面不存在图像。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;boolean&gt; | Yes | Callback used to return the result.&lt;br&gt; The value **true** indicates that this page contains images, and the value **false** indicates the opposite. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. |
-| 17100001 | Init error. The WebviewController must be associated with a Web component. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. |
+| [17100001](../errorcode-webview.md#17100001-webviewcontroller-not-associated-with-a-web-component) | Init error. The WebviewController must be associated with a Web component. |
 
 ## initializeWebEngine
 
@@ -1859,8 +1926,8 @@ Inject offline resources into cache.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 17100001 | Init error. The WebviewController must be associated with a Web component. |
-| 17100002 | URL error. The webpage corresponding to the URL is invalid, or the URL length exceeds 2 *1024 *1024. |
+| [17100001](../errorcode-webview.md#17100001-webviewcontroller-not-associated-with-a-web-component) | Init error. The WebviewController must be associated with a Web component. |
+| [17100002](../errorcode-webview.md#17100002-incorrect-url-format) | URL error. The webpage corresponding to the URL is invalid, or the URL length exceeds 2 *1024 *1024. |
 
 ## isActiveWebEngineEvergreen
 
@@ -1868,7 +1935,7 @@ Inject offline resources into cache.
 static isActiveWebEngineEvergreen(): boolean
 ```
 
-判断当前系统是否正在使用常青内核，即系统的最新内核。
+Checks whether the system is using the evergreen kernel, that is, the latest kernel.
 
 **Since:** 23
 
@@ -1882,7 +1949,7 @@ static isActiveWebEngineEvergreen(): boolean
 
 | Type | Description |
 | --- | --- |
-| boolean | 表示是否正在使用常青内核。正在使用返回true，否则返回false。 |
+| boolean | Whether the system is using the evergreen kernel. If the system is using the evergreen kernel, **true** is returned. Otherwise, **false** is returned. |
 
 ## isAdsBlockEnabled
 
@@ -1910,7 +1977,7 @@ Get whether Ads block is enabled.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 801 | Capability not supported. |
+| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. |
 
 ## isAdsBlockEnabledForCurPage
 
@@ -1938,7 +2005,7 @@ Get whether Ads block is enabled for current Webpage.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 801 | Capability not supported. |
+| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. |
 
 ## isAutoPreconnectEnabled
 
@@ -1988,7 +2055,7 @@ Whether the incognito mode is set.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 17100001 | Init error. The WebviewController must be associated with a Web component. |
+| [17100001](../errorcode-webview.md#17100001-webviewcontroller-not-associated-with-a-web-component) | Init error. The WebviewController must be associated with a Web component. |
 
 ## isIntelligentTrackingPreventionEnabled
 
@@ -2016,8 +2083,8 @@ Get whether Intelligent Tracking Prevention is enabled.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 801 | Capability not supported. |
-| 17100001 | Init error. The WebviewController must be associated with a Web component. |
+| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. |
+| [17100001](../errorcode-webview.md#17100001-webviewcontroller-not-associated-with-a-web-component) | Init error. The WebviewController must be associated with a Web component. |
 
 ## isPrivateNetworkAccessEnabled
 
@@ -2093,8 +2160,8 @@ Loads the data or URL.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt;2. Incorrect parameter types. 3.Parameter verification failed. |
-| 17100001 | Init error. The WebviewController must be associated with a Web component. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt;2. Incorrect parameter types. 3.Parameter verification failed. |
+| [17100001](../errorcode-webview.md#17100001-webviewcontroller-not-associated-with-a-web-component) | Init error. The WebviewController must be associated with a Web component. |
 
 ## loadUrl
 
@@ -2123,10 +2190,10 @@ Loads the data or URL.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt;2. Incorrect parameter types. 3.Parameter verification failed. |
-| 17100001 | Init error. The WebviewController must be associated with a Web component. |
-| 17100002 | URL error. The webpage corresponding to the URL is invalid. |
-| 17100003 | Invalid resource path or file type. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt;2. Incorrect parameter types. 3.Parameter verification failed. |
+| [17100001](../errorcode-webview.md#17100001-webviewcontroller-not-associated-with-a-web-component) | Init error. The WebviewController must be associated with a Web component. |
+| [17100002](../errorcode-webview.md#17100002-incorrect-url-format) | URL error. The webpage corresponding to the URL is invalid. |
+| [17100003](../errorcode-webview.md#17100003-incorrect-resource-path) | Invalid resource path or file type. |
 
 ## offControllerAttachStateChange
 
@@ -2170,7 +2237,7 @@ Call this interface to notify the Web component to enter the foreground activati
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 17100001 | Init error. The WebviewController must be associated with a Web component. |
+| [17100001](../errorcode-webview.md#17100001-webviewcontroller-not-associated-with-a-web-component) | Init error. The WebviewController must be associated with a Web component. |
 
 ## onControllerAttachStateChange
 
@@ -2200,10 +2267,10 @@ Register the callback for controller attach state change.
 onCreateNativeMediaPlayer(callback: CreateNativeMediaPlayerCallback): void
 ```
 
-注册回调函数，开启  
-[应用接管网页媒体播放功能](../../../reference/apis-arkweb/arkts-basic-components-web-attributes.md#enablenativemediaplayer12)后，当网页中有播放媒体时，触发注册的回调函数。
+Called when the  
+[application takes over media playback of the web page](../../../reference/apis-arkweb/arkts-basic-components-web-attributes.md#enablenativemediaplayer12)and a media file is played on the web page.
 
-如果应用接管网页媒体播放功能未开启，则注册的回调函数不会被触发。
+If the application does not take over media playback on the web page, this callback is not invoked.
 
 **Since:** 23
 
@@ -2217,7 +2284,7 @@ onCreateNativeMediaPlayer(callback: CreateNativeMediaPlayerCallback): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [CreateNativeMediaPlayerCallback](arkts-arkweb-webview-createnativemediaplayercallback-t.md) | Yes | 接管网页媒体播放的回调函数。 |
+| callback | [CreateNativeMediaPlayerCallback](arkts-arkweb-webview-createnativemediaplayercallback-t.md) | Yes | Callback when the application takes over media playback on the web page. |
 
 ## onInactive
 
@@ -2239,7 +2306,7 @@ Call this interface to notify the Web component to enter the inactive state.In t
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 17100001 | Init error. The WebviewController must be associated with a Web component. |
+| [17100001](../errorcode-webview.md#17100001-webviewcontroller-not-associated-with-a-web-component) | Init error. The WebviewController must be associated with a Web component. |
 
 ## pageDown
 
@@ -2267,8 +2334,8 @@ Scroll the contents of this Webview down by half the view size.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt;2. Incorrect parameter types. |
-| 17100001 | Init error. The WebviewController must be associated with a Web component. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt;2. Incorrect parameter types. |
+| [17100001](../errorcode-webview.md#17100001-webviewcontroller-not-associated-with-a-web-component) | Init error. The WebviewController must be associated with a Web component. |
 
 ## pageUp
 
@@ -2296,8 +2363,8 @@ Scroll the contents of this Webview up by half the view size.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt;2. Incorrect parameter types. |
-| 17100001 | Init error. The WebviewController must be associated with a Web component. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt;2. Incorrect parameter types. |
+| [17100001](../errorcode-webview.md#17100001-webviewcontroller-not-associated-with-a-web-component) | Init error. The WebviewController must be associated with a Web component. |
 
 ## pauseAllMedia
 
@@ -2305,7 +2372,7 @@ Scroll the contents of this Webview up by half the view size.
 pauseAllMedia(): void
 ```
 
-控制网页所有音视频暂停。
+Pauses all audio and video on a web page.
 
 **Since:** 23
 
@@ -2319,7 +2386,7 @@ pauseAllMedia(): void
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 17100001 | Init error. The WebviewController must be associated with a Web component. |
+| [17100001](../errorcode-webview.md#17100001-webviewcontroller-not-associated-with-a-web-component) | Init error. The WebviewController must be associated with a Web component. |
 
 ## pauseAllTimers
 
@@ -2341,7 +2408,7 @@ Pause all WebView timers.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 17100001 | Init error. The WebviewController must be associated with a Web component. |
+| [17100001](../errorcode-webview.md#17100001-webviewcontroller-not-associated-with-a-web-component) | Init error. The WebviewController must be associated with a Web component. |
 
 ## pauseMicrophone
 
@@ -2349,7 +2416,7 @@ Pause all WebView timers.
 pauseMicrophone(): void
 ```
 
-暂停当前网页麦克风捕获。
+Pauses microphone capture on the current web page.
 
 **Since:** 23
 
@@ -2363,7 +2430,7 @@ pauseMicrophone(): void
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 17100001 | Init error. The WebviewController must be associated with a Web component. |
+| [17100001](../errorcode-webview.md#17100001-webviewcontroller-not-associated-with-a-web-component) | Init error. The WebviewController must be associated with a Web component. |
 
 ## postMessage
 
@@ -2393,8 +2460,8 @@ Post web message port to html
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt;2. Incorrect parameter types. 3.Parameter verification failed. |
-| 17100001 | Init error. The WebviewController must be associated with a Web component. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt;2. Incorrect parameter types. 3.Parameter verification failed. |
+| [17100001](../errorcode-webview.md#17100001-webviewcontroller-not-associated-with-a-web-component) | Init error. The WebviewController must be associated with a Web component. |
 
 ## postUrl
 
@@ -2423,9 +2490,9 @@ Loads the URL use "POST" method with post data.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt;2. Incorrect parameter types. |
-| 17100001 | Init error. The WebviewController must be associated with a Web component. |
-| 17100002 | URL error. The webpage corresponding to the URL is invalid. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt;2. Incorrect parameter types. |
+| [17100001](../errorcode-webview.md#17100001-webviewcontroller-not-associated-with-a-web-component) | Init error. The WebviewController must be associated with a Web component. |
+| [17100002](../errorcode-webview.md#17100002-incorrect-url-format) | URL error. The webpage corresponding to the URL is invalid. |
 
 ## precompileJavaScript
 
@@ -2461,8 +2528,8 @@ Compile javascript and generate code cache.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Invalid input parameter. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. 3. Parameter verification failed. |
-| 17100001 | Init error. The WebviewController must be associated with a Web component. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Invalid input parameter. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. 3. Parameter verification failed. |
+| [17100001](../errorcode-webview.md#17100001-webviewcontroller-not-associated-with-a-web-component) | Init error. The WebviewController must be associated with a Web component. |
 
 ## prefetchPage
 
@@ -2491,8 +2558,8 @@ Prefetch the resources required by the page, but will not execute js or render t
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 17100001 | Init error. The WebviewController must be associated with a Web component. |
-| 17100002 | URL error. The webpage corresponding to the URL is invalid, or the URL length exceeds 2*1024*1024. |
+| [17100001](../errorcode-webview.md#17100001-webviewcontroller-not-associated-with-a-web-component) | Init error. The WebviewController must be associated with a Web component. |
+| [17100002](../errorcode-webview.md#17100002-incorrect-url-format) | URL error. The webpage corresponding to the URL is invalid, or the URL length exceeds 2*1024*1024. |
 
 ## prefetchPage
 
@@ -2522,8 +2589,8 @@ Prefetch the resources required by the page, but will not execute js or render t
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 17100001 | Init error. The WebviewController must be associated with a Web component. |
-| 17100002 | URL error. The webpage corresponding to the URL is invalid, or the URL length exceeds 2*1024*1024. |
+| [17100001](../errorcode-webview.md#17100001-webviewcontroller-not-associated-with-a-web-component) | Init error. The WebviewController must be associated with a Web component. |
+| [17100002](../errorcode-webview.md#17100002-incorrect-url-format) | URL error. The webpage corresponding to the URL is invalid, or the URL length exceeds 2*1024*1024. |
 
 ## prefetchResource
 
@@ -2555,7 +2622,7 @@ Prefetches resource requests based on specified request information and addition
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 17100002 | URL error. The webpage corresponding to the URL is invalid, or the URL length exceeds 2 *1024 *1024. |
+| [17100002](../errorcode-webview.md#17100002-incorrect-url-format) | URL error. The webpage corresponding to the URL is invalid, or the URL length exceeds 2 *1024 *1024. |
 
 ## prepareForPageLoad
 
@@ -2585,8 +2652,8 @@ Preresolve or Preconnect the url. This API can be called before loading the url 
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 17100002 | URL error. The webpage corresponding to the URL is invalid, or the URL length exceeds 2048. |
-| 17100013 | The number of preconnect sockets is invalid. |
+| [17100002](../errorcode-webview.md#17100002-incorrect-url-format) | URL error. The webpage corresponding to the URL is invalid, or the URL length exceeds 2048. |
+| [17100013](../errorcode-webview.md#17100013-invalid-number-of-sockets-during-preconnection) | The number of preconnect sockets is invalid. |
 
 ## refresh
 
@@ -2608,7 +2675,7 @@ Refreshes the current URL.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 17100001 | Init error. The WebviewController must be associated with a Web component. |
+| [17100001](../errorcode-webview.md#17100001-webviewcontroller-not-associated-with-a-web-component) | Init error. The WebviewController must be associated with a Web component. |
 
 ## refresh
 
@@ -2638,7 +2705,7 @@ Refreshes the current URL.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 17100001 | Init error. The WebviewController must be associated with a Web component. |
+| [17100001](../errorcode-webview.md#17100001-webviewcontroller-not-associated-with-a-web-component) | Init error. The WebviewController must be associated with a Web component. |
 
 ## registerJavaScriptProxy
 
@@ -2671,8 +2738,8 @@ Registers the supplied ArkTS object into this Web component.The object is regist
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt;2. Incorrect parameter types. 3.Parameter verification failed. |
-| 17100001 | Init error. The WebviewController must be associated with a Web component. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt;2. Incorrect parameter types. 3.Parameter verification failed. |
+| [17100001](../errorcode-webview.md#17100001-webviewcontroller-not-associated-with-a-web-component) | Init error. The WebviewController must be associated with a Web component. |
 
 ## removeAllCache
 
@@ -2700,7 +2767,7 @@ Remove resource cache in application. So this method will remove all cache for a
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt;2. Incorrect parameter types. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt;2. Incorrect parameter types. |
 
 ## removeCache
 
@@ -2730,8 +2797,8 @@ Clears the cache in the application. This API will clear the cache for all webvi
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt;2. Incorrect parameter types. |
-| 17100001 | Init error. The WebviewController must be associated with a Web component. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt;2. Incorrect parameter types. |
+| [17100001](../errorcode-webview.md#17100001-webviewcontroller-not-associated-with-a-web-component) | Init error. The WebviewController must be associated with a Web component. |
 
 ## removeIntelligentTrackingPreventionBypassingList
 
@@ -2759,8 +2826,8 @@ Remove bypassing hosts for Intelligent Tracking Prevention.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt;2. Incorrect parameter types. |
-| 801 | Capability not supported. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt;2. Incorrect parameter types. |
+| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. |
 
 ## requestFocus
 
@@ -2782,7 +2849,7 @@ Gets the request focus.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 17100001 | Init error. The WebviewController must be associated with a Web component. |
+| [17100001](../errorcode-webview.md#17100001-webviewcontroller-not-associated-with-a-web-component) | Init error. The WebviewController must be associated with a Web component. |
 
 ## restoreWebState
 
@@ -2810,8 +2877,8 @@ Restoring the web access stack, that is, the history of access.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt;2. Incorrect parameter types. 3.Parameter verification failed. |
-| 17100001 | Init error. The WebviewController must be associated with a Web component. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt;2. Incorrect parameter types. 3.Parameter verification failed. |
+| [17100001](../errorcode-webview.md#17100001-webviewcontroller-not-associated-with-a-web-component) | Init error. The WebviewController must be associated with a Web component. |
 
 ## resumeAllMedia
 
@@ -2819,7 +2886,7 @@ Restoring the web access stack, that is, the history of access.
 resumeAllMedia(): void
 ```
 
-控制网页被pauseAllMedia接口暂停的音视频继续播放。
+Resumes the playback of the audio and video that are paused by the pauseAllMedia interface.
 
 **Since:** 23
 
@@ -2833,7 +2900,7 @@ resumeAllMedia(): void
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 17100001 | Init error. The WebviewController must be associated with a Web component. |
+| [17100001](../errorcode-webview.md#17100001-webviewcontroller-not-associated-with-a-web-component) | Init error. The WebviewController must be associated with a Web component. |
 
 ## resumeAllTimers
 
@@ -2855,7 +2922,7 @@ Resume all timers suspended from the pauseAllTimers() interface.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 17100001 | Init error. The WebviewController must be associated with a Web component. |
+| [17100001](../errorcode-webview.md#17100001-webviewcontroller-not-associated-with-a-web-component) | Init error. The WebviewController must be associated with a Web component. |
 
 ## resumeMicrophone
 
@@ -2863,8 +2930,8 @@ Resume all timers suspended from the pauseAllTimers() interface.
 resumeMicrophone(): void
 ```
 
-恢复当前网页麦克风捕获。使用麦克风功能前请在module.json5中添加权限: ohos.permission.MICROPHONE，具体权限的添加方法请参考  
-[在配置文件中声明权限](../../../security/AccessToken/declare-permissions.md#在配置文件中声明权限)。
+Resumes microphone capture on the current web page. Before using the microphone , add the  
+**ohos.permission.MICROPHONE** permission to **module.json5**. For details about how to add the permission,see [Declaring Permissions in the Configuration File](../../../security/AccessToken/declare-permissions.md).
 
 **Since:** 23
 
@@ -2878,7 +2945,7 @@ resumeMicrophone(): void
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 17100001 | Init error. The WebviewController must be associated with a Web component. |
+| [17100001](../errorcode-webview.md#17100001-webviewcontroller-not-associated-with-a-web-component) | Init error. The WebviewController must be associated with a Web component. |
 
 ## runJavaScript
 
@@ -2912,9 +2979,9 @@ Asynchronously execute JavaScript in the context of the currently displayed page
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt;2. Incorrect parameter types. 3.Parameter verification failed. |
-| 17100001 | Init error. The WebviewController must be associated with a Web component. |
-| 17100003 | Calling a JS method that returns an empty ArrayBuffer via runJavaScript. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt;2. Incorrect parameter types. 3.Parameter verification failed. |
+| [17100001](../errorcode-webview.md#17100001-webviewcontroller-not-associated-with-a-web-component) | Init error. The WebviewController must be associated with a Web component. |
+| [17100003](../errorcode-webview.md#17100003-incorrect-resource-path) | Calling a JS method that returns an empty ArrayBuffer via runJavaScript. |
 
 ## runJavaScript
 
@@ -2943,9 +3010,9 @@ Asynchronously execute JavaScript in the context of the currently displayed page
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt;2. Incorrect parameter types. 3.Parameter verification failed. |
-| 17100001 | Init error. The WebviewController must be associated with a Web component. |
-| 17100003 | Calling a JS method that returns an empty ArrayBuffer via runJavaScript. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt;2. Incorrect parameter types. 3.Parameter verification failed. |
+| [17100001](../errorcode-webview.md#17100001-webviewcontroller-not-associated-with-a-web-component) | Init error. The WebviewController must be associated with a Web component. |
+| [17100003](../errorcode-webview.md#17100003-incorrect-resource-path) | Calling a JS method that returns an empty ArrayBuffer via runJavaScript. |
 
 ## runJavaScriptExt
 
@@ -2979,8 +3046,8 @@ Execute JavaScript code in the context of the currently displayed page, and retu
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt;2. Incorrect parameter types. 3.Parameter verification failed. |
-| 17100001 | Init error. The WebviewController must be associated with a Web component. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt;2. Incorrect parameter types. 3.Parameter verification failed. |
+| [17100001](../errorcode-webview.md#17100001-webviewcontroller-not-associated-with-a-web-component) | Init error. The WebviewController must be associated with a Web component. |
 
 ## runJavaScriptExt
 
@@ -3009,8 +3076,8 @@ Execute JavaScript code in the context of the currently displayed page, and retu
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt;2. Incorrect parameter types. 3.Parameter verification failed. |
-| 17100001 | Init error. The WebviewController must be associated with a Web component. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt;2. Incorrect parameter types. 3.Parameter verification failed. |
+| [17100001](../errorcode-webview.md#17100001-webviewcontroller-not-associated-with-a-web-component) | Init error. The WebviewController must be associated with a Web component. |
 
 ## scrollBy
 
@@ -3040,8 +3107,8 @@ Scroll by the delta position within specified time.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt;2. Incorrect parameter types. 3.Parameter verification failed. |
-| 17100001 | Init error. The WebviewController must be associated with a Web component. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt;2. Incorrect parameter types. 3.Parameter verification failed. |
+| [17100001](../errorcode-webview.md#17100001-webviewcontroller-not-associated-with-a-web-component) | Init error. The WebviewController must be associated with a Web component. |
 
 ## scrollByWithResult
 
@@ -3076,8 +3143,8 @@ Scrolls by the specified delta position and returns a result indicating whether 
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt;2. Incorrect parameter types. 3.Parameter verification failed. |
-| 17100001 | Init error. The WebviewController must be associated with a Web component. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt;2. Incorrect parameter types. 3.Parameter verification failed. |
+| [17100001](../errorcode-webview.md#17100001-webviewcontroller-not-associated-with-a-web-component) | Init error. The WebviewController must be associated with a Web component. |
 
 ## scrollTo
 
@@ -3107,8 +3174,8 @@ Scroll to the position within specified time.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt;2. Incorrect parameter types. 3.Parameter verification failed. |
-| 17100001 | Init error. The WebviewController must be associated with a Web component. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt;2. Incorrect parameter types. 3.Parameter verification failed. |
+| [17100001](../errorcode-webview.md#17100001-webviewcontroller-not-associated-with-a-web-component) | Init error. The WebviewController must be associated with a Web component. |
 
 ## searchAllAsync
 
@@ -3136,8 +3203,8 @@ Search all instances of 'searchString' on the page and highlights them,result wi
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt;2. Incorrect parameter types. 3.Parameter verification failed. |
-| 17100001 | Init error. The WebviewController must be associated with a Web component. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt;2. Incorrect parameter types. 3.Parameter verification failed. |
+| [17100001](../errorcode-webview.md#17100001-webviewcontroller-not-associated-with-a-web-component) | Init error. The WebviewController must be associated with a Web component. |
 
 ## searchNext
 
@@ -3165,8 +3232,8 @@ Highlights and scrolls to the next match search.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt;2. Incorrect parameter types. 3.Parameter verification failed. |
-| 17100001 | Init error. The WebviewController must be associated with a Web component. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt;2. Incorrect parameter types. 3.Parameter verification failed. |
+| [17100001](../errorcode-webview.md#17100001-webviewcontroller-not-associated-with-a-web-component) | Init error. The WebviewController must be associated with a Web component. |
 
 ## serializeWebState
 
@@ -3194,7 +3261,7 @@ Serialize the access stack of the web, that is, the history of access.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 17100001 | Init error. The WebviewController must be associated with a Web component. |
+| [17100001](../errorcode-webview.md#17100001-webviewcontroller-not-associated-with-a-web-component) | Init error. The WebviewController must be associated with a Web component. |
 
 ## setActiveWebEngineVersion
 
@@ -3202,13 +3269,14 @@ Serialize the access stack of the web, that is, the history of access.
 static setActiveWebEngineVersion(engineVersion: ArkWebEngineVersion): void
 ```
 
-设置ArkWeb内核版本。若系统不支持指定版本，则设置无效。该接口为全局静态API，须在调用initializeWebEngine前执行，若已加载任何Web组件，则该设置无效。
+Sets the ArkWeb kernel version. If the system does not support the specified version, the setting is invalid.This API is a global static API and must be called before **initializeWebEngine** is called. If any **Web**component has been loaded, the setting of this API is invalid.
 
-> **说明：**
+> **NOTE：**
 > 
-> - setActiveWebEngineVersion不支持在异步线程中调用。
-> 
-> - setActiveWebEngineVersion全局生效，在整个APP生命周期中调用一次即可，不需要重复调用。
+> - **setActiveWebEngineVersion** cannot be called in an asynchronous thread.
+
+> - **setActiveWebEngineVersion** takes effect globally and needs to be called only once in an application
+> lifecycle.
 
 **Since:** 23
 
@@ -3222,7 +3290,7 @@ static setActiveWebEngineVersion(engineVersion: ArkWebEngineVersion): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| engineVersion | [ArkWebEngineVersion](arkts-arkweb-webview-arkwebengineversion-e.md) | Yes | ArkWeb内核版本。 |
+| engineVersion | [ArkWebEngineVersion](arkts-arkweb-webview-arkwebengineversion-e.md) | Yes | ArkWeb kernel version. |
 
 ## setAppCustomUserAgent
 
@@ -3254,7 +3322,7 @@ Set the default User-Agent for the application.
 setAudioMuted(mute: boolean): void
 ```
 
-设置网页静音。
+Mutes this web page.
 
 **Since:** 23
 
@@ -3268,14 +3336,14 @@ setAudioMuted(mute: boolean): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| mute | boolean | Yes | 表示是否将网页设置为静音状态。&lt;br&gt;true表示将网页设置为静音状态，false表示将网页取消静音状态。 |
+| mute | boolean | Yes | Whether to mute the web page.&lt;br&gt;The value **true** means to mute the web page, and **false** means the opposite. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. |
-| 17100001 | Init error. The WebviewController must be associated with a Web component. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. |
+| [17100001](../errorcode-webview.md#17100001-webviewcontroller-not-associated-with-a-web-component) | Init error. The WebviewController must be associated with a Web component. |
 
 ## setAutoPreconnect
 
@@ -3325,7 +3393,7 @@ Configure the BackForwardCache.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 17100001 | Init error. The WebviewController must be associated with a Web component. |
+| [17100001](../errorcode-webview.md#17100001-webviewcontroller-not-associated-with-a-web-component) | Init error. The WebviewController must be associated with a Web component. |
 
 ## setBlanklessLoadingCacheCapacity
 
@@ -3359,7 +3427,7 @@ Sets the cache capacity of the blankless loading solution and returns the value 
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 801 | Capability not supported. @static |
+| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. @static |
 
 ## setBlanklessLoadingWithKey
 
@@ -3394,7 +3462,7 @@ Sets whether to enable blankless page loading. This API must be used in pair wit
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 801 | Capability not supported. |
+| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. |
 
 ## setBlanklessLoadingWithParams
 
@@ -3434,7 +3502,7 @@ Device behavior differences: Only the mobile phone is supported. For other devic
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 801 | Capability not supported. |
+| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. |
 
 ## setConnectionTimeout
 
@@ -3462,7 +3530,7 @@ Set web engine socket connection timeout. Unit: seconds.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt;2. Incorrect parameter types. 3. Parameter verification failed. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt;2. Incorrect parameter types. 3. Parameter verification failed. |
 
 ## setCustomUserAgent
 
@@ -3490,8 +3558,8 @@ Set custom user agent.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt;2. Incorrect parameter types. |
-| 17100001 | Init error. The WebviewController must be associated with a Web component. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt;2. Incorrect parameter types. |
+| [17100001](../errorcode-webview.md#17100001-webviewcontroller-not-associated-with-a-web-component) | Init error. The WebviewController must be associated with a Web component. |
 
 ## setDownloadDelegate
 
@@ -3519,7 +3587,7 @@ Set delegate for download.Used to notify the progress of the download triggered 
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 17100001 | Init error. The WebviewController must be associated with a Web component. |
+| [17100001](../errorcode-webview.md#17100001-webviewcontroller-not-associated-with-a-web-component) | Init error. The WebviewController must be associated with a Web component. |
 
 ## setErrorPageEnabled
 
@@ -3547,7 +3615,38 @@ Set whether enable the error page. onOverrideErrorPage will be triggered when th
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 17100001 | Init error. The WebviewController must be associated with a Web component. |
+| [17100001](../errorcode-webview.md#17100001-webviewcontroller-not-associated-with-a-web-component) | Init error. The WebviewController must be associated with a Web component. |
+
+## setErrorPageEnabled
+
+```TypeScript
+setErrorPageEnabled(enable: boolean, includeSubframe: boolean): void
+```
+
+Set whether to enable error page. onOverrideErrorPage will be triggered when the page error.
+
+**Since:** 26.0.0
+
+**ArkTS mode:** ArkTS-Sta only, since version 26.0.0.
+
+**Model restriction:** This API can be used only in the stage model.
+
+<!--Device-WebviewController-setErrorPageEnabled(enable: boolean, includeSubframe: boolean): void--><!--Device-WebviewController-setErrorPageEnabled(enable: boolean, includeSubframe: boolean): void-End-->
+
+**System capability:** SystemCapability.Web.Webview.Core
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| enable | boolean | Yes | Whether enable error page. |
+| includeSubframe | boolean | Yes | If true, error page is displayed in iframe when a subframe fails to load. |
+
+**Error codes:**
+
+| Error Code ID | Error Message |
+| --- | --- |
+| [17100001](../errorcode-webview.md#17100001-webviewcontroller-not-associated-with-a-web-component) | Init error. The WebviewController must be associated with a Web component. |
 
 ## setHostIP
 
@@ -3577,7 +3676,7 @@ Set IP address for host name.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt;2. Incorrect parameter types. 3.Parameter verification failed. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt;2. Incorrect parameter types. 3.Parameter verification failed. |
 
 ## setHttpDns
 
@@ -3606,7 +3705,7 @@ Set web engine to use HttpDns server to resolve dns.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt;2. Incorrect parameter types. 3. Parameter verification failed. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt;2. Incorrect parameter types. 3. Parameter verification failed. |
 
 ## setNetworkAvailable
 
@@ -3634,8 +3733,8 @@ Put network state for web. Which is used to set window.navigator.onLine property
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt;2. Incorrect parameter types. |
-| 17100001 | Init error. The WebviewController must be associated with a Web component. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt;2. Incorrect parameter types. |
+| [17100001](../errorcode-webview.md#17100001-webviewcontroller-not-associated-with-a-web-component) | Init error. The WebviewController must be associated with a Web component. |
 
 ## setPathAllowingUniversalAccess
 
@@ -3643,13 +3742,36 @@ Put network state for web. Which is used to set window.navigator.onLine property
 setPathAllowingUniversalAccess(pathList: Array<string>): void
 ```
 
-Sets a path list. When a file protocol accesses resources in the path list, it can access the local files across domains. In addition, when a path list is set, the file protocol can access only the resources in the path list.The behavior of {@link fileAccess} will be overwritten by that of this API.
+Sets a path list. When the file protocol accesses resources in the path list, cross-origin access to local files and other online resources is allowed. In addition, when a path list is set, the file protocol can access only the resources in the path list. The behavior of  
+[fileAccess](arkts-arkweb-web-webattribute-i.md#fileaccess) will be overwritten by that of this API. The paths in the list must be any of the following:
 
-The paths in the list must be any of the following(sub path and module name must be provided):
+1. The path of subdirectory of the application file directory.(The application file directory is obtained using  
+[Context.filesDir](../../apis-ability-kit/arkts-apis/arkts-ability-context-c.md/arkts-ability-context-c.md#filesdir)in the Ability Kit.) For example:
 
-1. The path of subdirectory of the application file directory, like "/data/storage/el2/base/files/example" or "/data/storage/el2/base/haps/entry/files/example". The application file directory is obtained using Context.filesDir in the Ability Kit.2. The path of application resource directory or its subdirectory, like "/data/storage/el1/bundle/entry/resource/resfile" or "/data/storage/el1/bundle/entry/resource/resfile/example". The application resource directory is obtained from Context.resourceDir in the Ability Kit.
+* /data/storage/el2/base/files/example  
+* /data/storage/el2/base/haps/entry/files/example
 
-If a path in the list is not of the preceding paths, error code 401 is reported and the path list fails to be set. When the path list is set to empty, the accessible files for the file protocol are subject to the behavior of the {@link fileAccess}.
+2. The path of application resource directory or its subdirectory.(The application resource directory is obtained from  
+[Context.resourceDir](../../apis-ability-kit/arkts-apis/arkts-ability-context-c.md/arkts-ability-context-c.md#resourcedir)in the Ability Kit.) For example:
+
+* /data/storage/el1/bundle/entry/resources/resfile  
+* /data/storage/el1/bundle/entry/resources/resfile/example
+
+3. Since API version 21, the application cache directory and its subdirectories are also supported.(The application cache directory is obtained through  
+[Context.cacheDir](../../apis-ability-kit/arkts-apis/arkts-ability-context-c.md/arkts-ability-context-c.md#cachedir)in Ability Kit). For example:
+
+* /data/storage/el2/base/cache  
+* /data/storage/el2/base/haps/entry/cache/example  
+* The **cache/web** directory is not allowed. If it is included, an exception with the code **401** will be thrown. If the **cache** directory is set, **cache/web** cannot be accessed.
+
+4. Since API version 21, the temporary application directory and its subdirectories are also supported.(The temporary application directory is obtained through  
+[Context.tempDir](../../apis-ability-kit/arkts-apis/arkts-ability-context-c.md/arkts-ability-context-c.md#tempdir)in Ability Kit). For example:
+
+* /data/storage/el2/base/temp  
+* /data/storage/el2/base/haps/entry/temp/example
+
+If a path in the list is not of the preceding paths, error code 401 is reported and the path list fails to be set. When the path list is set to empty, the accessible files for the file protocol are subject to the behavior of the  
+[fileAccess](arkts-arkweb-web-webattribute-i.md#fileaccess).
 
 **Since:** 23
 
@@ -3663,14 +3785,14 @@ If a path in the list is not of the preceding paths, error code 401 is reported 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| pathList | Array&lt;string&gt; | Yes | The path list allow universal access. |
+| pathList | Array&lt;string&gt; | Yes | The path list. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt;2. Parameter string is too long. 3.Parameter verification failed. |
-| 17100001 | Init error. The WebviewController must be associated with a Web component. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. 2. Parameter string is too long. 3. Parameter verification failed. |
+| [17100001](../errorcode-webview.md#17100001-webviewcontroller-not-associated-with-a-web-component) | Init error. The WebviewController must be associated with a Web component. |
 
 ## setPrintBackground
 
@@ -3698,8 +3820,8 @@ Set whether print web page background.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt;2. Incorrect parameter types. 3.Parameter verification failed. |
-| 17100001 | Init error. The WebviewController must be associated with a Web component. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt;2. Incorrect parameter types. 3.Parameter verification failed. |
+| [17100001](../errorcode-webview.md#17100001-webviewcontroller-not-associated-with-a-web-component) | Init error. The WebviewController must be associated with a Web component. |
 
 ## setRenderProcessMode
 
@@ -3727,7 +3849,7 @@ Set render process mode of the ArkWeb.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt;2. Incorrect parameter types. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt;2. Incorrect parameter types. |
 
 ## setScrollable
 
@@ -3756,8 +3878,8 @@ Set whether scroll is allowed; default is true.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. Possible causes: &lt;br&gt;1. Mandatory parameters are left unspecified. &lt;br&gt;2. Incorrect parameter types. 3.Parameter verification failed. |
-| 17100001 | Init error. The WebviewController must be associated with a Web component. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: &lt;br&gt;1. Mandatory parameters are left unspecified. &lt;br&gt;2. Incorrect parameter types. 3.Parameter verification failed. |
+| [17100001](../errorcode-webview.md#17100001-webviewcontroller-not-associated-with-a-web-component) | Init error. The WebviewController must be associated with a Web component. |
 
 ## setScrollbarMode
 
@@ -3808,7 +3930,7 @@ Set web scheme handler for specific scheme. This is used for service worker.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1. Incorrect parameter types. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Incorrect parameter types. |
 
 ## setSiteIsolationMode
 
@@ -3836,7 +3958,7 @@ Set the site isolation mode.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 17100001 | Init error. Possible causes: 1. Site Isolation mode is already set by the developer. 2. Site Isolation mode cannot be strict in single-render-process mode. 3. Site Isolation mode cannot be changed while Secure Shield mode is active. @static |
+| [17100001](../errorcode-webview.md#17100001-webviewcontroller-not-associated-with-a-web-component) | Init error. Possible causes: 1. Site Isolation mode is already set by the developer. 2. Site Isolation mode cannot be strict in single-render-process mode. 3. Site Isolation mode cannot be changed while Secure Shield mode is active. @static |
 
 ## setSocketIdleTimeout
 
@@ -3886,7 +4008,7 @@ Set the WebSoftKeyboardBehaviorMode to decide whether the keyboard will be shown
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 17100001 | Init error. The WebviewController must be associated with a Web component. |
+| [17100001](../errorcode-webview.md#17100001-webviewcontroller-not-associated-with-a-web-component) | Init error. The WebviewController must be associated with a Web component. |
 
 ## setUrlTrustList
 
@@ -3922,8 +4044,8 @@ Example of the urlTrustList:
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error, possible causes: 1. Mandatory parameters are left unspecified 2. JSON string exceeds 10MB limit 3. JSON parsing failed (syntax errors, etc.) 4. UrlPermissionList field is missing 5. URL rule validation failed: - scheme must be http or https - host cannot be empty - port must be between 0-65535 - path length cannot exceed 65536 characters |
-| 17100001 | Initialization error. The WebviewController must be associated with a Web component. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error, possible causes: 1. Mandatory parameters are left unspecified 2. JSON string exceeds 10MB limit 3. JSON parsing failed (syntax errors, etc.) 4. UrlPermissionList field is missing 5. URL rule validation failed: - scheme must be http or https - host cannot be empty - port must be between 0-65535 - path length cannot exceed 65536 characters |
+| [17100001](../errorcode-webview.md#17100001-webviewcontroller-not-associated-with-a-web-component) | Initialization error. The WebviewController must be associated with a Web component. |
 
 ## setUrlTrustList
 
@@ -3951,8 +4073,8 @@ Set the URL trust list for the ArkWeb.When the URL trust list has been set, only
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt;2. Parameter string is too long. 3.Parameter verification failed. |
-| 17100001 | Init error. The WebviewController must be associated with a Web component. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt;2. Parameter string is too long. 3.Parameter verification failed. |
+| [17100001](../errorcode-webview.md#17100001-webviewcontroller-not-associated-with-a-web-component) | Init error. The WebviewController must be associated with a Web component. |
 
 ## setUserAgentClientHintsEnabled
 
@@ -4062,7 +4184,7 @@ Sets whether to enable web debugging. By default, web debugging is disabled.For 
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt;2. Incorrect parameter types. 3.Parameter verification failed. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt;2. Incorrect parameter types. 3.Parameter verification failed. |
 
 ## setWebDebuggingAccess
 
@@ -4091,7 +4213,7 @@ Enables debugging of web contents.&lt;p&gt;&lt;strong&gt;API Note&lt;/strong&gt;
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 17100023 | The port number is not within the allowed range. @static |
+| [17100023](../errorcode-webview.md#17100023-port-number-not-allowed) | The port number is not within the allowed range. @static |
 
 ## setWebDestroyMode
 
@@ -4142,8 +4264,8 @@ Set web scheme handler for specific scheme. This is only used for related web co
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1. Incorrect parameter types. |
-| 17100001 | Init error. The WebviewController must be associated with a Web component. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Incorrect parameter types. |
+| [17100001](../errorcode-webview.md#17100001-webviewcontroller-not-associated-with-a-web-component) | Init error. The WebviewController must be associated with a Web component. |
 
 ## slideScroll
 
@@ -4172,8 +4294,8 @@ Slide by the speed.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt;2. Incorrect parameter types. 3.Parameter verification failed. |
-| 17100001 | Init error. The WebviewController must be associated with a Web component. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt;2. Incorrect parameter types. 3.Parameter verification failed. |
+| [17100001](../errorcode-webview.md#17100001-webviewcontroller-not-associated-with-a-web-component) | Init error. The WebviewController must be associated with a Web component. |
 
 ## startCamera
 
@@ -4181,8 +4303,9 @@ Slide by the speed.
 startCamera(): void
 ```
 
-开启当前网页摄像头捕获。使用摄像头功能前请在module.json5中添加权限: ohos.permission.CAMERA，具体权限的添加方法请参考  
-[在配置文件中声明权限](../../../security/AccessToken/declare-permissions.md#在配置文件中声明权限)。
+Enables the camera capture of the current web page. Before using the camera, add the  
+**ohos.permission.CAMERA** permission to **module.json5**. For details about how to add the permission, see  
+[Declaring Permissions in the Configuration File](../../../security/AccessToken/declare-permissions.md).
 
 **Since:** 23
 
@@ -4196,7 +4319,7 @@ startCamera(): void
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 17100001 | Init error. The WebviewController must be associated with a Web component. |
+| [17100001](../errorcode-webview.md#17100001-webviewcontroller-not-associated-with-a-web-component) | Init error. The WebviewController must be associated with a Web component. |
 
 ## startDownload
 
@@ -4224,8 +4347,8 @@ Start a download.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 17100001 | Init error. The WebviewController must be associated with a Web component. |
-| 17100002 | URL error. The webpage corresponding to the URL is invalid, or the URL length exceeds 2 *1024 *1024. |
+| [17100001](../errorcode-webview.md#17100001-webviewcontroller-not-associated-with-a-web-component) | Init error. The WebviewController must be associated with a Web component. |
+| [17100002](../errorcode-webview.md#17100002-incorrect-url-format) | URL error. The webpage corresponding to the URL is invalid, or the URL length exceeds 2 *1024 *1024. |
 
 ## stop
 
@@ -4247,7 +4370,7 @@ Stops the current load.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 17100001 | Init error. The WebviewController must be associated with a Web component. |
+| [17100001](../errorcode-webview.md#17100001-webviewcontroller-not-associated-with-a-web-component) | Init error. The WebviewController must be associated with a Web component. |
 
 ## stopAllMedia
 
@@ -4255,7 +4378,7 @@ Stops the current load.
 stopAllMedia(): void
 ```
 
-控制网页所有音视频停止。
+Stops all audio and video on a web page.
 
 **Since:** 23
 
@@ -4269,7 +4392,7 @@ stopAllMedia(): void
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 17100001 | Init error. The WebviewController must be associated with a Web component. |
+| [17100001](../errorcode-webview.md#17100001-webviewcontroller-not-associated-with-a-web-component) | Init error. The WebviewController must be associated with a Web component. |
 
 ## stopCamera
 
@@ -4277,7 +4400,7 @@ stopAllMedia(): void
 stopCamera(): void
 ```
 
-停止当前网页摄像头捕获。
+Stops the camera capture of the current web page.
 
 **Since:** 23
 
@@ -4291,7 +4414,7 @@ stopCamera(): void
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 17100001 | Init error. The WebviewController must be associated with a Web component. |
+| [17100001](../errorcode-webview.md#17100001-webviewcontroller-not-associated-with-a-web-component) | Init error. The WebviewController must be associated with a Web component. |
 
 ## stopMicrophone
 
@@ -4299,7 +4422,7 @@ stopCamera(): void
 stopMicrophone(): void
 ```
 
-停止当前网页麦克风捕获。
+Stops microphone capture on the current web page.
 
 **Since:** 23
 
@@ -4313,7 +4436,7 @@ stopMicrophone(): void
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 17100001 | Init error. The WebviewController must be associated with a Web component. |
+| [17100001](../errorcode-webview.md#17100001-webviewcontroller-not-associated-with-a-web-component) | Init error. The WebviewController must be associated with a Web component. |
 
 ## storeWebArchive
 
@@ -4348,9 +4471,9 @@ Stores the current page as a web archive.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt;2. Incorrect parameter types. 3. Parameter verification failed. |
-| 17100001 | Init error. The WebviewController must be associated with a Web component. |
-| 17100003 | Invalid resource path or file type. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt;2. Incorrect parameter types. 3. Parameter verification failed. |
+| [17100001](../errorcode-webview.md#17100001-webviewcontroller-not-associated-with-a-web-component) | Init error. The WebviewController must be associated with a Web component. |
+| [17100003](../errorcode-webview.md#17100003-incorrect-resource-path) | Invalid resource path or file type. |
 
 ## storeWebArchive
 
@@ -4380,9 +4503,9 @@ Stores the current page as a web archive.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt;2. Incorrect parameter types. 3. Parameter verification failed. |
-| 17100001 | Init error. The WebviewController must be associated with a Web component. |
-| 17100003 | Invalid resource path or file type. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt;2. Incorrect parameter types. 3. Parameter verification failed. |
+| [17100001](../errorcode-webview.md#17100001-webviewcontroller-not-associated-with-a-web-component) | Init error. The WebviewController must be associated with a Web component. |
+| [17100003](../errorcode-webview.md#17100003-incorrect-resource-path) | Invalid resource path or file type. |
 
 ## terminateRenderProcess
 
@@ -4410,7 +4533,7 @@ Destroy the rendering process.Calling this interface will actively destroy the a
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 17100001 | Init error. The WebviewController must be associated with a Web component. |
+| [17100001](../errorcode-webview.md#17100001-webviewcontroller-not-associated-with-a-web-component) | Init error. The WebviewController must be associated with a Web component. |
 
 ## trimMemoryByPressureLevel
 
@@ -4418,7 +4541,7 @@ Destroy the rendering process.Calling this interface will actively destroy the a
 static trimMemoryByPressureLevel(level: PressureLevel): void
 ```
 
-Trim memory by different memory pressure level.
+Clears the cache occupied by **Web** component based on the specified memory pressure level.
 
 **Since:** 23
 
@@ -4432,13 +4555,13 @@ Trim memory by different memory pressure level.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| level | [PressureLevel](arkts-arkweb-webview-pressurelevel-e.md) | Yes | The memory pressure level for the ArkWeb. |
+| level | [PressureLevel](arkts-arkweb-webview-pressurelevel-e.md) | Yes | Pressure level of the memory to be cleared. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt;2. Parameter string is too long. 3.Parameter verification failed. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. 2. Parameter string is too long. 3. Parameter verification failed. |
 
 ## waitForAttached
 
@@ -4494,7 +4617,7 @@ Warmup the registered service worker associated the url.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 17100002 | URL error. The webpage corresponding to the URL is invalid, or the URL length exceeds 2048. |
+| [17100002](../errorcode-webview.md#17100002-incorrect-url-format) | URL error. The webpage corresponding to the URL is invalid, or the URL length exceeds 2048. |
 
 ## webPageSnapshot
 
@@ -4547,9 +4670,9 @@ Zooms in or out of this web page. This API is effective only when zoomAccess is 
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 17100004 | Function not enabled. |
-| 401 | Parameter error. Possible causes: &lt;br&gt;1. Mandatory parameters are left unspecified. &lt;br&gt;2. Incorrect parameter types. 3.Parameter verification failed. |
-| 17100001 | Init error. The WebviewController must be associated with a Web component. |
+| [17100004](../errorcode-webview.md#17100004-function-not-enabled) | Function not enabled. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: &lt;br&gt;1. Mandatory parameters are left unspecified. &lt;br&gt;2. Incorrect parameter types. 3.Parameter verification failed. |
+| [17100001](../errorcode-webview.md#17100001-webviewcontroller-not-associated-with-a-web-component) | Init error. The WebviewController must be associated with a Web component. |
 
 ## zoomIn
 
@@ -4571,8 +4694,8 @@ Zooms in on this web page by 25%.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 17100004 | Function not enabled. |
-| 17100001 | Init error. The WebviewController must be associated with a Web component. |
+| [17100004](../errorcode-webview.md#17100004-function-not-enabled) | Function not enabled. |
+| [17100001](../errorcode-webview.md#17100001-webviewcontroller-not-associated-with-a-web-component) | Init error. The WebviewController must be associated with a Web component. |
 
 ## zoomOut
 
@@ -4594,6 +4717,6 @@ Zooms out of this web page by 20%.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 17100004 | Function not enabled. |
-| 17100001 | Init error. The WebviewController must be associated with a Web component. |
+| [17100004](../errorcode-webview.md#17100004-function-not-enabled) | Function not enabled. |
+| [17100001](../errorcode-webview.md#17100001-webviewcontroller-not-associated-with-a-web-component) | Init error. The WebviewController must be associated with a Web component. |
 

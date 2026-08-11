@@ -19,12 +19,6 @@
 
 **系统能力：** SystemCapability.Multimedia.Media.AudioRecorder
 
-## 导入模块
-
-```TypeScript
-import { media } from 'kits/@kit.MediaKit';
-```
-
 ## on('prepare' | 'start' | 'pause' | 'resume' | 'stop' | 'release' | 'reset')
 
 ```TypeScript
@@ -342,7 +336,7 @@ prepare(config: AudioRecorderConfig): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 201 | permission denied.<br>**适用版本：** 12+ |
+| [201](../../errorcode-universal.md#201-权限校验失败) | permission denied.<br>**适用版本：** 12+ |
 
 ## release
 

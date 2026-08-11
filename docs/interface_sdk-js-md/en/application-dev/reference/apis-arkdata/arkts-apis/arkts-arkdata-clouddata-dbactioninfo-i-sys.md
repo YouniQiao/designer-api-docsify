@@ -1,6 +1,6 @@
 # DBActionInfo (System API)
 
-端云协同数据库级清除配置信息。
+Defines the clearance information of a device-cloud synergy database.
 
 **Since:** 23
 
@@ -24,7 +24,7 @@ import { cloudData } from 'kits/@kit.ArkData';
 action: ClearAction
 ```
 
-数据库默认数据清除方式。
+Default data clearance mode of the database.
 
 **Type:** [ClearAction](arkts-arkdata-clouddata-clearaction-e-sys.md)
 
@@ -44,7 +44,7 @@ action: ClearAction
 tableInfo?: Record<string, ClearAction>
 ```
 
-要清除数据的表信息及清除规则。键为表名称，值为该表的清除方式。当未配置该参数时，默认使用数据库的数据清除方式。
+Information about the table whose data is to be cleared and the clearance rules. The key is the table name, and the value is the clearance mode of the table. If this parameter is not set, the data clearance mode of database is used by default.
 
 **Type:** [Record](../../apis-default/arkts-apis/arkts-record-t.md)&lt;string, ClearAction&gt;
 

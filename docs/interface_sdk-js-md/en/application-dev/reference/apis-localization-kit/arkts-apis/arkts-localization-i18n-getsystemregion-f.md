@@ -12,7 +12,7 @@ import { i18n } from 'kits/@kit.LocalizationKit';
 export function getSystemRegion(): string
 ```
 
-获取系统地区。
+Obtains the system region.
 
 **Since:** 7
 
@@ -30,5 +30,5 @@ export function getSystemRegion(): string
 
 | Type | Description |
 | --- | --- |
-| string | 系统地区ID。 |
+| string | System region ID. |
 

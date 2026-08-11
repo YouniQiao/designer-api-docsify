@@ -6,7 +6,7 @@
 export declare function compatibleWrappedBuilder(builder: Any, ...args: FixedArray<ESValue>): void
 ```
 
-为ArkTS-Sta提供使用ArkTS-Dyn WrappedBuilder对象的互操作方法。
+Obtains the compatible WrappedBuilder.
 
 **Since:** 23
 
@@ -24,6 +24,6 @@ export declare function compatibleWrappedBuilder(builder: Any, ...args: FixedArr
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| builder | Any | Yes | ArkTS-Dyn WrappedBuilder对象。 |
-| args | FixedArray&lt;ESValue&gt; | Yes | ArkTS-Dyn WrappedBuilder对象使用时的参数。 |
+| builder | Any | Yes | the WrappedBuilder |
+| args | FixedArray&lt;ESValue&gt; | Yes | the parameters of WrappedBuilder |
 

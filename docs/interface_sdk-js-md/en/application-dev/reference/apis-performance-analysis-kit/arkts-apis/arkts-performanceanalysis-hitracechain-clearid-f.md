@@ -12,9 +12,9 @@ import { hiTraceChain } from 'kits/@kit.PerformanceAnalysisKit';
 function clearId(): void
 ```
 
-清除跟踪标识，同步接口。用于在需要切断当前跟踪链的场景，例如业务逻辑分支不再需要跟踪、任务完成后清理跟踪标识、或者在开始新的跟踪前清理旧的跟踪标识。
+Clears the trace ID. This API returns the result synchronously.
 
-将当前线程TLS中的HiTraceId设置为无效。
+Clears the HiTrace ID in the current thread's TLS.
 
 **Since:** 8
 

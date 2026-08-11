@@ -1,11 +1,5 @@
 # query
 
-## 导入模块
-
-```TypeScript
-import { FaultLogger } from 'kits/@kit.PerformanceAnalysisKit';
-```
-
 ## query
 
 ```TypeScript
@@ -37,9 +31,9 @@ function query(faultType: FaultType, callback: AsyncCallback<Array<FaultLogInfo>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 10600001 | The service is not started or is faulty |
-| 401 | The parameter check failed, Parameter type error |
-| 801 | The specified SystemCapability name was not found |
+| [10600001](../errorcode-faultlogger.md#10600001-服务未启动或故障) | The service is not started or is faulty |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | The parameter check failed, Parameter type error |
+| [801](../../errorcode-universal.md#801-该设备不支持此api) | The specified SystemCapability name was not found |
 
 ## 示例
 
@@ -110,9 +104,9 @@ function query(faultType: FaultType): Promise<Array<FaultLogInfo>>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 10600001 | The service is not started or is faulty |
-| 401 | The parameter check failed, Parameter type error |
-| 801 | The specified SystemCapability name was not found |
+| [10600001](../errorcode-faultlogger.md#10600001-服务未启动或故障) | The service is not started or is faulty |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | The parameter check failed, Parameter type error |
+| [801](../../errorcode-universal.md#801-该设备不支持此api) | The specified SystemCapability name was not found |
 
 ## 示例
 

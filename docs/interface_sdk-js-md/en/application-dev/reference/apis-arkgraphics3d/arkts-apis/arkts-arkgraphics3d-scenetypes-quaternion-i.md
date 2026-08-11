@@ -1,6 +1,6 @@
 # Quaternion
 
-表示旋转的四元数.
+A mathematical notation for representing spatial rotations of elements in 3D space.Compared with Euler angles, a quaternion has advantages in numerical stability and avoiding the gimbal lock problem.
 
 **Since:** 12
 
@@ -16,7 +16,7 @@
 w: double
 ```
 
-四元数的W分量.
+Component on the W axis. The value is a real number.
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：double
 
@@ -34,7 +34,7 @@ w: double
 x: double
 ```
 
-四元数的X分量.
+Component on the X axis. The value is a real number.
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：double
 
@@ -52,7 +52,7 @@ x: double
 y: double
 ```
 
-四元数的Y分量.
+Component on the Y axis. The value is a real number.
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：double
 
@@ -70,7 +70,7 @@ y: double
 z: double
 ```
 
-四元数的Z分量.
+Component on the Z axis. The value is a real number.
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：double
 

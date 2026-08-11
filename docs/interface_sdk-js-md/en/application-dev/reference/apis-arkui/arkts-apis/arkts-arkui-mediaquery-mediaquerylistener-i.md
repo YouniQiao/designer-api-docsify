@@ -1,8 +1,6 @@
 # MediaQueryListener
 
-媒体查询的句柄，并包含了申请句柄时的首次查询结果。媒体查询根据设置的条件语句，比如'(width <= 600vp)'，比较系统信息，若首次查询时相关信息未初始化，matches返回false。
-
-继承自[MediaQueryResult](arkts-arkui-mediaquery-mediaqueryresult-i.md)。
+Defines the Listener of mediaquery.
 
 **Inheritance/Implementation:** MediaQueryListener extends [MediaQueryResult](arkts-arkui-mediaquery-mediaqueryresult-i.md)
 
@@ -26,7 +24,7 @@ import { mediaquery } from 'kits/@kit.ArkUI';
 offChange(callback?: Callback<MediaQueryResult>): void
 ```
 
-通过句柄向对应的查询条件取消注册回调，当媒体属性发生变更时不再触发指定的回调。
+Deregisters a callback with the corresponding query condition by using the handle.This callback is not triggered when the media attributes chang.
 
 **Since:** 23
 
@@ -50,7 +48,7 @@ offChange(callback?: Callback<MediaQueryResult>): void
 onChange(callback: Callback<MediaQueryResult>): void
 ```
 
-通过句柄向对应的查询条件注册回调，当媒体属性发生变更时会触发该回调。
+Registers a callback with the corresponding query condition by using the handle.This callback is triggered when the media attributes change.
 
 **Since:** 23
 

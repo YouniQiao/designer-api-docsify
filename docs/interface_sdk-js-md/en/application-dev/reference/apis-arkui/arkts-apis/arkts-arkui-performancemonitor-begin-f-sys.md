@@ -12,7 +12,7 @@ import { performanceMonitor } from 'kits/@kit.ArkUI';
 function begin(scene: string, startInputType: ActionType, note?: string): void
 ```
 
-用于标记用户场景开始，用户场景开始时调用此接口。
+Begin monitoring an application scene.
 
 **Since:** 23
 
@@ -30,7 +30,7 @@ function begin(scene: string, startInputType: ActionType, note?: string): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| scene | string | Yes | 用户场景id。字符串长度无限制，建议控制在255个字符以内，格式推荐字母大写且用下划线连接，例如LAUNCHER_APP_LAUNCH_FROM_ICON。 |
-| startInputType | [ActionType](../../apis-avsession-kit/arkts-apis/arkts-avsession-avmusictemplate-actiontype-t.md) | Yes | 用户场景触发模式。 |
-| note | string | No | 用户场景备注信息。字符串长度无限制，建议控制在255个字符以内，可以空缺不填，填写后性能指标上报会携带备注信息，不填无影响。 |
+| scene | string | Yes | Indicates the scene name. |
+| startInputType | [ActionType](../../apis-avsession-kit/arkts-apis/arkts-avsession-avmusictemplate-actiontype-t.md) | Yes | Indicates the scene input event type. |
+| note | string | No | Indicates the app expected info delivered. |
 

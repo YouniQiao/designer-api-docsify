@@ -1,11 +1,5 @@
 # offContinuousTaskSuspend
 
-## 导入模块
-
-```TypeScript
-import { backgroundTaskManager } from 'kits/@kit.BackgroundTasksKit';
-```
-
 ## offContinuousTaskSuspend
 
 ```TypeScript
@@ -34,6 +28,30 @@ function offContinuousTaskSuspend(callback?: Callback<ContinuousTaskSuspendInfo>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 9800005 | Continuous task verification failed. |
-| 201 | Permission denied. |
+| [9800005](../../apis-backgroundtasks-kit/errorcode-backgroundTaskMgr.md#9800005-长时任务校验失败) | Continuous task verification failed. |
+| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
+
+## 示例
+
+```TypeScript
+import { backgroundTaskManager } from '@kit.BackgroundTasksKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+import { AbilityConstant, UIAbility, Want } from '@kit.AbilityKit';
+
+function callback(info: backgroundTaskManager.ContinuousTaskSuspendInfo) {
+  console.info('continuousTaskSuspend callback continuousTaskId: ' + info.continuousTaskId);
+  console.info('continuousTaskSuspend callback suspendState: ' + info.suspendState);
+  console.info('continuousTaskSuspend callback suspendReason: ' + info.suspendReason);
+}
+
+export default class EntryAbility extends UIAbility {
+  onCreate(want: Want, launchParam: AbilityConstant.LaunchParam): void {
+    try {
+      backgroundTaskManager.offContinuousTaskSuspend(callback);
+    } catch (error) {
+      console.error(`Operation offContinuousTaskSuspend failed. code is ${(error as BusinessError).code} message is ${(error as BusinessError).message}`);
+    }
+  }
+};
+```
 

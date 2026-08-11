@@ -1,11 +1,5 @@
 # promiseWrapper
 
-## 导入模块
-
-```TypeScript
-import { util } from 'kits/@kit.ArkTS';
-```
-
 ## promiseWrapper
 
 ```TypeScript
@@ -30,7 +24,7 @@ function promiseWrapper(original: (err: Object, value: Object) => void): Object
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| original | (err: Object, value: Object) =&gt; void | 是 | 异步函数。 |
+| original | (err: Object, value: Object) =&gt; void | 是 | 采用错误优先回调模式的函数，第一个参数err是拒绝原因，第二个参数value是已解决的值。 |
 
 **返回值：**
 

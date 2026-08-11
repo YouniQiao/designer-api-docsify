@@ -1,6 +1,6 @@
 # AvoidanceMode
 
-定义Select下拉菜单的避让模式。
+Enumeration of avoidance modes for the Select dropdown menu
 
 **Since:** 23
 
@@ -16,7 +16,7 @@
 COVER_TARGET
 ```
 
-菜单覆盖目标组件。
+The value covers the target component.
 
 **Since:** 23
 
@@ -34,7 +34,7 @@ COVER_TARGET
 AVOID_AROUND_TARGET
 ```
 
-菜单在最大空间内显示（压缩滚动条）。
+This value is displayed in the maximum space.(Compress the scrollbar)
 
 **Since:** 23
 

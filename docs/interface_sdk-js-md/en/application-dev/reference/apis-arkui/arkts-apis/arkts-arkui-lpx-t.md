@@ -4,7 +4,7 @@
 declare type LPX = `${number}lpx`
 ```
 
-定义长度属性，单位为lpx。
+Defines the length property with number in units of lpx.
 
 **Since:** 23
 

@@ -22,7 +22,7 @@ import { sim } from 'kits/@kit.TelephonyKit';
 operatorName?: string
 ```
 
-表示卡的操作员名称。
+Indicates the operatorName for card.
 
 **Type:** string
 
@@ -44,7 +44,7 @@ operatorName?: string
 simLabelIndex?: int
 ```
 
-卡的simLabelIndex。取值限定为整数。
+Indicates the simLabelIndex for card.The value should be an integer.
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 

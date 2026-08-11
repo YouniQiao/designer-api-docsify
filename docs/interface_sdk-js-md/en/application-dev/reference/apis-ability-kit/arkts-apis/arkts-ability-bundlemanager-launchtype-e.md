@@ -1,6 +1,6 @@
 # LaunchType
 
-标识组件的[启动模式](../../../application-models/uiability-launch-type.md)。
+Enumerates the [launch types](../../../application-models/uiability-launch-type.md) of the UIAbility.
 
 **Since:** 9
 
@@ -16,7 +16,7 @@
 SINGLETON = 0
 ```
 
-UIAbility的启动模式，表示单实例。
+The UIAbility can have only one instance.
 
 **Since:** 9
 
@@ -34,7 +34,7 @@ UIAbility的启动模式，表示单实例。
 MULTITON = 1
 ```
 
-UIAbility的启动模式，表示普通多实例。
+The UIAbility can have multiple instances.
 
 **Since:** 9
 
@@ -52,7 +52,7 @@ UIAbility的启动模式，表示普通多实例。
 SPECIFIED = 2
 ```
 
-UIAbility的启动模式，表示该UIAbility内部根据业务自己指定多实例。
+The UIAbility can have one or multiple instances, depending on the internal service of the ability.
 
 **Since:** 9
 

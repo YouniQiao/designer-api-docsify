@@ -1,6 +1,6 @@
 # BundleConfigInfo (System API)
 
-包的配置信息。
+BundleConfigInfo: the bundle summary class.
 
 **Since:** 9
 
@@ -18,7 +18,7 @@
 readonly bundleName: string
 ```
 
-应用Bundle名称，用于标识应用的唯一性。
+Bundle name. It uniquely identifies an application.
 
 **Type:** string
 
@@ -38,7 +38,7 @@ readonly bundleName: string
 readonly version: Version
 ```
 
-包的版本。
+Bundle version.
 
 **Type:** [Version](arkts-ability-bundlepackinfo-version-i-sys.md)
 

@@ -1,6 +1,6 @@
 # GestureEvent
 
-定义手势的事件信息。继承自[BaseEvent](arkts-arkui-common-baseevent-i.md)。
+Defines the gesture event information. Inherits from [BaseEvent](arkts-arkui-common-baseevent-i.md).
 
 **Inheritance/Implementation:** GestureEvent extends [BaseEvent](arkts-arkui-common-baseevent-i.md)
 
@@ -18,15 +18,15 @@
 angle: number
 ```
 
-用于RotationGesture手势触发场景时，表示旋转角度，单位为deg。
+Rotation angle for the **RotationGesture** event, in deg.
 
-用于SwipeGesture手势触发场景时，表示快滑手势的角度，即手指滑动的瞬时方向与水平正方向的夹角，单位为deg。
+Angle of the swipe gesture for the **SwipeGesture** event, that is, the angle between the instantaneous direction of finger sliding and the positive horizontal direction, in deg.
 
-**说明：**
+**NOTE：**
 
-旋转角度计算方式：RotationGesture手势被识别到后，连接两根手指之间的线被识别为起始线条，随着手指的滑动，手指之间的线条会发生旋转，根据起始线条两端点和当前线条两端点的坐标，使用反正切函数分别计算其相对于水平方向的夹角，最后arctan2(cy2-cy1,cx2-cx1)-arctan2(y2-y1,x2-x1)为旋转的角度。以起始线条为坐标系，顺时针旋转为0到180度，逆时针旋转为0到-180度。
+Rotation gesture angle calculation: When a rotation gesture is detected, the line connecting the two fingers is identified as the starting line. As the fingers slide, the line between them rotates. Based on the coordinates of the end points of the starting line and the current line, the arctangent function is used to calculate the included angles relative to the horizontal direction. The rotation angle is calculated as arctan2(cy2-cy1, cx2-cx1) - arctan2(y2-y1, x2-x1). With the starting line as the reference axis, clockwise rotation ranges from 0 to 180 degrees, and counterclockwise rotation ranges from 0 to –180 degrees.
 
-取值范围：[-180, 180]
+Value range: [-180, 180]
 
 **Type:** number
 
@@ -46,11 +46,11 @@ angle: number
 fingerInfos?: FingerInfo[]
 ```
 
-由触屏产生的手势，fingerInfos中会包含触发事件的所有触点信息；由鼠标发起的手势，fingerInfos中只会有一条记录；触摸板的事件大类与鼠标一致，所以由触摸板发起的手势，fingerInfos只会携带一条记录。
+Information about touch points of the gesture event. For gesture events initiated by a touchscreen, **fingerInfos**includes information about all touch points. For gesture events initiated by a mouse or touchpad, **fingerInfos** contains only one touch point.
 
-**说明：**
+**NOTE：**
 
-fingerInfos只会记录参与触摸的有效手指信息，先按下但未参与当前手势触发的手指在fingerInfos中不会显示。默认值为空数组[]，返回空数组时，表示当前无有效触点信息。
+**fingerInfos** only records information about effective fingers that participate in the touch. Fingers that are pressed first but do not participate in triggering of the current gesture will not be shown in **fingerInfos**. The default value is an empty array **[]**, and an empty array indicates no effective touch point information.
 
 **Type:** [FingerInfo](arkts-arkui-gesture-fingerinfo-i.md)[]
 
@@ -72,11 +72,11 @@ fingerInfos只会记录参与触摸的有效手指信息，先按下但未参与
 fingerList: FingerInfo[]
 ```
 
-输入源为触屏产生的手势，fingerList中会包含触发事件的所有触点信息；由鼠标发起的手势，fingerList中只会有一条记录；触摸板的事件大类与鼠标一致，所以由触摸板发起的手势，fingerList只会携带一条记录。
+List of touch points of the gesture event. If the event input device is touchscreen, the list includes all touch points. If the event input device is mouse or touchpad, the list contains only one touch point.
 
-**说明：**
+**NOTE：**
 
-1. 手指索引编号与位置对应，即fingerList[index]的id为index。先按下且未参与当前手势触发的手指在fingerList中对应位置为空。2. 当使用键盘或手柄触发手势时，不存在手指信息，fingerList为空。
+1. The index of a finger corresponds to its position, that is, the ID of a finger in **fingerList[index]** refers to its index. If a finger is pressed first and does not participate in triggering of the current gesture, its position in **fingerList** is left empty.2. **fingerList** is empty when gestures are triggered using a keyboard or game controller and no finger information exists.
 
 **Type:** [FingerInfo](arkts-arkui-gesture-fingerinfo-i.md)[]
 
@@ -96,9 +96,9 @@ fingerList: FingerInfo[]
 offsetX: number
 ```
 
-手势事件相对于手指按下时的偏移量X，单位为vp，用于PanGesture手势触发场景，从左向右滑动offsetX为正，反之为负。
+X-axis offset of the gesture event relative to the finger press position, in vp. Used in **PanGesture** scenarios. A positive value means to pan from left to right, and a negative value means the opposite.
 
-取值范围：(-∞, +∞)
+Value range: (-∞, +∞)
 
 **Type:** number
 
@@ -118,9 +118,9 @@ offsetX: number
 offsetY: number
 ```
 
-手势事件相对于手指按下时的偏移量Y，单位为vp，用于PanGesture手势触发场景，从上向下滑动offsetY为正，反之为负。
+Y-axis offset of the gesture event relative to the finger press position, in vp. Used in **PanGesture** scenarios. A positive value means to pan from top to bottom, and a negative value means the opposite.
 
-取值范围：(-∞, +∞)
+Value range: (-∞, +∞)
 
 **Type:** number
 
@@ -140,9 +140,9 @@ offsetY: number
 pinchCenterX: number
 ```
 
-捏合手势中心点相对于当前组件元素原始区域左上角的x轴坐标，单位为vp，用于PinchGesture手势触发场景。
+X-coordinate of the center of the pinch gesture, in vp, relative to the original area of the current component. This attribute is used for the **PinchGesture** event.
 
-取值范围：[0, +∞)
+Value range: [0, +∞)
 
 **Type:** number
 
@@ -162,9 +162,9 @@ pinchCenterX: number
 pinchCenterY: number
 ```
 
-捏合手势中心点相对于当前组件元素原始区域左上角的y轴坐标，单位为vp，用于PinchGesture手势触发场景。
+Y-coordinate of the center of the pinch gesture, in vp, relative to the original area of the current component. This attribute is used for the **PinchGesture** event.
 
-取值范围：[0, +∞)
+Value range: [0, +∞)
 
 **Type:** number
 
@@ -184,7 +184,7 @@ pinchCenterY: number
 repeat: boolean
 ```
 
-是否为重复触发事件，用于LongPressGesture手势触发场景。true表示重复触发事件，false表示非重复触发事件。
+Whether the event is a repeated trigger event, used in the **LongPressGesture** scenarios. The value **true** means that the event is a repeated trigger event, and **false** means the opposite.
 
 **Type:** boolean
 
@@ -204,9 +204,9 @@ repeat: boolean
 scale: number
 ```
 
-缩放比例，用于PinchGesture手势触发场景。
+Scale ratio. This attribute is used for the pinch gesture.
 
-取值范围：[0, +∞)
+Value range: [0, +∞)
 
 **Type:** number
 
@@ -226,9 +226,9 @@ scale: number
 speed: number
 ```
 
-快滑手势速度，即所有手指相对当前组件元素原始区域滑动的平均速度，单位为vp/s，用于SwipeGesture手势触发场景。
+Swipe gesture speed, that is, the average swipe speed of all fingers relative to the original area of the current component, in vp/s. Used for the **SwipeGesture** event.
 
-取值范围：[0, +∞)
+Value range: [0, +∞)
 
 **Type:** number
 
@@ -248,7 +248,8 @@ speed: number
 tapLocation?: EventLocationInfo
 ```
 
-用于点击手势中，获取当前手势的坐标信息。在非点击手势中，tapLocation返回值为undefined。
+Coordinate information of the current tap gesture. For non-tap gestures, the return value of **tapLocation** is   
+**undefined**.
 
 **Type:** [EventLocationInfo](arkts-arkui-eventlocationinfo-i.md)
 
@@ -270,9 +271,9 @@ tapLocation?: EventLocationInfo
 velocity: number
 ```
 
-用于[PanGesture](arkts-arkui-gesture-con.md#pangesture)手势中，获取当前手势的主方向速度。为xy轴方向速度的平方和的算术平方根。单位为vp/s。
+Velocity along the main axis. This parameter is used in [PanGesture](arkts-arkui-gesture-con.md#pangesture). The value is the arithmetic square root of the sum of squares of the velocity along the x- and y-axis. The unit is vp/s.
 
-取值范围：[0, +∞)
+Value range: [0, +∞)
 
 **Type:** number
 
@@ -294,9 +295,9 @@ velocity: number
 velocityX: number
 ```
 
-用于[PanGesture](arkts-arkui-gesture-con.md#pangesture)手势中，获取当前手势的x轴方向速度。坐标轴原点为屏幕左上角，分正负方向速度，从左往右为正，反之为负。单位为vp/s。
+Velocity along the x-axis. This parameter is used in [PanGesture](arkts-arkui-gesture-con.md#pangesture). The origin of the coordinate axis is the upper left corner of the screen. The velocity is positive if the movement is from left to right, and it is negative if the movement is from right to left. The unit is vp/s.
 
-取值范围：(-∞, +∞)
+Value range: (-∞, +∞)
 
 **Type:** number
 
@@ -318,9 +319,9 @@ velocityX: number
 velocityY: number
 ```
 
-用于[PanGesture](arkts-arkui-gesture-con.md#pangesture)手势中，获取当前手势的y轴方向速度。坐标轴原点为屏幕左上角，分正负方向速度，从上往下为正，反之为负。单位为vp/s。
+Velocity along the y-axis. This parameter is used in [PanGesture](arkts-arkui-gesture-con.md#pangesture). The origin of the coordinate axis is the upper left corner of the screen. The velocity is positive if the movement is from top to bottom, and it is negative if the movement is from bottom to top. The unit is vp/s.
 
-取值范围：(-∞, +∞)
+Value range: (-∞, +∞)
 
 **Type:** number
 

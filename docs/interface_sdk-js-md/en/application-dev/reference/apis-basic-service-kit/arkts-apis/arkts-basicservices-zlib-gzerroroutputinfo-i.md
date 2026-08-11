@@ -1,6 +1,6 @@
 # GzErrorOutputInfo
 
-GzError返回信息。
+GzError return value information.
 
 **Since:** 12
 
@@ -22,7 +22,7 @@ import { zlib } from 'kits/@kit.BasicServicesKit';
 status: ReturnStatus
 ```
 
-返回zlib文件状态码，参考ReturnStatus的定义。
+Return Zlib status ReturnStatus the specific meaning is defined as enum.
 
 **Type:** [ReturnStatus](arkts-basicservices-zlib-returnstatus-e.md)
 
@@ -42,7 +42,7 @@ status: ReturnStatus
 statusMsg: string
 ```
 
-zlib文件上发生的最后一个状态的状态消息。
+The last status message reported on the zlib file.
 
 **Type:** string
 

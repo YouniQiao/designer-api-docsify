@@ -1,11 +1,5 @@
 # isStandby
 
-## 导入模块
-
-```TypeScript
-import { power } from 'kits/@kit.BasicServicesKit';
-```
-
 ## isStandby
 
 ```TypeScript
@@ -32,7 +26,7 @@ function isStandby(): boolean
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 4900101 | Failed to connect to the service. |
+| [4900101](../../apis-basic-services-kit/errorcode-power.md#4900101-连接服务失败) | Failed to connect to the service. |
 
 ## 示例
 
@@ -40,8 +34,8 @@ function isStandby(): boolean
 try {
     let isStandby = power.isStandby();
     console.info('device is in standby: ' + isStandby);
-} catch (err) {
-    console.error(`Failed to check isStandby. Code: ${err.code}, message: ${err.message}`);
+} catch(err) {
+    console.error('check isStandby failed, err: ' + err);
 }
 ```
 

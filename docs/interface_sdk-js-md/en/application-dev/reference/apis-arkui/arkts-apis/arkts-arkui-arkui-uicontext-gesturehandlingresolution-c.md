@@ -1,6 +1,6 @@
 # GestureHandlingResolution
 
-类手势处理解决方案。表示开发者对智能手势处理的决策结果。
+Class GestureHandlingResolution. Represents the developer's decision result for smart gesture handling.
 
 **Since:** 26.0.0
 
@@ -22,7 +22,7 @@ import { OverlayManager, FrameCallback, ResolvedUIContext, NodeRenderStateChange
 constructor(isConsumed: boolean)
 ```
 
-GestureHandlingResolution构造函数。
+GestureHandlingResolution constructor.
 
 **Since:** 26.0.0
 
@@ -38,7 +38,7 @@ GestureHandlingResolution构造函数。
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| isConsumed | boolean | Yes | 是否消费当前手势事件。 |
+| isConsumed | boolean | Yes | Whether to consume the current gesture event. |
 
 ## isConsumed
 
@@ -46,7 +46,7 @@ GestureHandlingResolution构造函数。
 isConsumed: boolean
 ```
 
-判断是否消费当前手势事件。如果手势没有被消费，它会告诉消费者该手势不被支持。
+Determines whether to consume the current gesture event. If the gesture is not consumed, it will inform the consumer that the gesture is not supported.
 
 **Type:** boolean
 
@@ -66,7 +66,7 @@ isConsumed: boolean
 selectedProposal?: BaseGestureHandlingProposal
 ```
 
-开发者最终选择的手势处理方案。
+The final gesture handling proposal selected by the developer.
 
 **Type:** [BaseGestureHandlingProposal](arkts-arkui-arkui-uicontext-basegesturehandlingproposal-c.md)
 

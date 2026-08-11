@@ -1,6 +1,6 @@
 # LineHeightStyle
 
-行高缩放基数枚举。
+Enumerates the line height scaling base.
 
 **Since:** 21
 
@@ -16,7 +16,8 @@
 FONT_SIZE = 0
 ```
 
-以字号大小作为缩放基数。最终行高为[TextStyle](arkts-arkgraphics2d-text-textstyle-i.md).fontSize * [TextStyle](arkts-arkgraphics2d-text-textstyle-i.md).heightScale。
+Uses the font size as the scaling base. The line height is calculated as follows:  
+[TextStyle](arkts-arkgraphics2d-text-textstyle-i.md).fontSize * [TextStyle](arkts-arkgraphics2d-text-textstyle-i.md).heightScale.
 
 **Since:** 21
 
@@ -34,7 +35,7 @@ FONT_SIZE = 0
 FONT_HEIGHT = 1
 ```
 
-以字形高度作为缩放基数。最终行高为塑形后字形高度 * [TextStyle](arkts-arkgraphics2d-text-textstyle-i.md).heightScale。
+Uses the font height as the scaling base. The line height is calculated as follows: the height of the shaped glyph * [TextStyle](arkts-arkgraphics2d-text-textstyle-i.md).heightScale.
 
 **Since:** 21
 

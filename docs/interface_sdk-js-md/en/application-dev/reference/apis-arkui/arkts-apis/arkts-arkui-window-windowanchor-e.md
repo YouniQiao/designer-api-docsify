@@ -1,6 +1,6 @@
 # WindowAnchor
 
-窗口锚点枚举。
+Enumerates the window anchor points.
 
 **Since:** 20
 
@@ -16,7 +16,7 @@
 TOP_START = 0
 ```
 
-窗口左上角。
+Top-left corner of the window.
 
 **Since:** 20
 
@@ -32,7 +32,7 @@ TOP_START = 0
 TOP = 1
 ```
 
-窗口上边界横向居中点。
+Horizontal center point along the top edge of the window.
 
 **Since:** 20
 
@@ -48,7 +48,7 @@ TOP = 1
 TOP_END = 2
 ```
 
-窗口右上角。
+Top-right corner of the window.
 
 **Since:** 20
 
@@ -64,7 +64,7 @@ TOP_END = 2
 START = 3
 ```
 
-窗口左边界纵向居中点。
+Vertical center point along the left edge of the window.
 
 **Since:** 20
 
@@ -80,7 +80,7 @@ START = 3
 CENTER = 4
 ```
 
-窗口横向和纵向居中点。
+Center point of the window, both horizontally and vertically.
 
 **Since:** 20
 
@@ -96,7 +96,7 @@ CENTER = 4
 END = 5
 ```
 
-窗口右边界纵向居中点。
+Vertical center point along the right edge of the window.
 
 **Since:** 20
 
@@ -112,7 +112,7 @@ END = 5
 BOTTOM_START = 6
 ```
 
-窗口左下角。
+Bottom-left corner of the window.
 
 **Since:** 20
 
@@ -128,7 +128,7 @@ BOTTOM_START = 6
 BOTTOM = 7
 ```
 
-窗口下边界横向居中点。
+Horizontal center point along the bottom edge of the window.
 
 **Since:** 20
 
@@ -144,7 +144,7 @@ BOTTOM = 7
 BOTTOM_END = 8
 ```
 
-窗口右下角。
+Bottom-right corner of the window.
 
 **Since:** 20
 

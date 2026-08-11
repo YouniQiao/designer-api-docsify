@@ -1,11 +1,5 @@
 # moveMainWindowToTargetDisplay（系统接口）
 
-## 导入模块
-
-```TypeScript
-import { window } from 'kits/@kit.ArkUI';
-```
-
 ## moveMainWindowToTargetDisplay
 
 ```TypeScript
@@ -51,44 +45,11 @@ function moveMainWindowToTargetDisplay(displayId: long, windowId: int, userId?: 
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 1300003 | This window manager service works abnormally. |
-| 801 | Capability not supported. Failed to call the API due to limited device capabilities. |
-| 1300002 | This window state is abnormal. Possible cause: The window is not found or has been destroyed. |
-| 1300016 | Parameter error. Possible cause: 1. The userId is not exist. |
-| 1300004 | Unauthorized operation. Possible cause: The window is not a main window. |
-| 202 | Permission verification failed. A non-system application calls a system API. |
-| 1300008 | Invalid display. Possible cause: 1. DisplayId is a negative number or not exists. |
-
-## 示例
-
-```TypeScript
-// EntryAbility.ets
-import { UIAbility } from '@kit.AbilityKit';
-import { display, window } from '@kit.ArkUI';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-export default class EntryAbility extends UIAbility {
-  // ...
-  onWindowStageCreate(windowStage: window.WindowStage): void {
-    console.info('onWindowStageCreate');
-    windowStage.loadContent('pages/Index', (err: BusinessError) => {
-      if (err.code) {
-        console.error(`Failed to load content for main window. Cause code: ${err.code}, message: ${err.message}`);
-      }
-      let displayClass: display.Display | null = null;
-      displayClass = display.getDefaultDisplaySync();
-      let mainWindow = windowStage.getMainWindowSync();
-      try {
-        window.moveMainWindowToTargetDisplay(displayClass.id, mainWindow.getWindowProperties().id).then(() => {
-          console.info(`Succeeded in moving window id: ${mainWindow.getWindowProperties().id} to target display id: ${mainWindow.getWindowProperties().displayId}`);
-        }).catch((err: BusinessError) => {
-          console.error(`Failed to move window to target display. Cause code: ${err.code}, message: ${err.message}`);
-        });
-      } catch (exception) {
-        console.error(`Failed to move window to target display. Cause code: ${exception.code}, message: ${exception.message}`);
-      }
-    });
-  }
-}
-```
+| [1300003](../errorcode-window.md#1300003-系统服务工作异常) | This window manager service works abnormally. |
+| [801](../../errorcode-universal.md#801-该设备不支持此api) | Capability not supported. Failed to call the API due to limited device capabilities. |
+| [1300002](../errorcode-window.md#1300002-窗口状态异常) | This window state is abnormal. Possible cause: The window is not found or has been destroyed. |
+| [1300016](../errorcode-window.md#1300016-参数校验错误) | Parameter error. Possible cause: 1. The userId is not exist. |
+| [1300004](../errorcode-window.md#1300004-无权限操作) | Unauthorized operation. Possible cause: The window is not a main window. |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed. A non-system application calls a system API. |
+| [1300008](../errorcode-window.md#1300008-显示设备异常) | Invalid display. Possible cause: 1. DisplayId is a negative number or not exists. |
 

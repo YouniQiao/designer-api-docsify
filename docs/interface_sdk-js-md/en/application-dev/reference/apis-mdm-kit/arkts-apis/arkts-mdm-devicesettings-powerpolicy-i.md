@@ -1,6 +1,6 @@
 # PowerPolicy
 
-电源策略。
+Represents the power policy.
 
 **Since:** 11
 
@@ -22,7 +22,7 @@ import { deviceSettings } from 'kits/@kit.MDMKit';
 delayTime: number
 ```
 
-延迟时间（单位：毫秒）。
+Delay, in ms.
 
 **Type:** number
 
@@ -42,7 +42,7 @@ delayTime: number
 powerPolicyAction: PowerPolicyAction
 ```
 
-执行电源策略的动作。
+Action to apply the power policy.
 
 **Type:** [PowerPolicyAction](arkts-mdm-devicesettings-powerpolicyaction-e.md)
 

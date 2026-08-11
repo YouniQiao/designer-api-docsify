@@ -1,6 +1,6 @@
 # ChargeType (System API)
 
-表示充电类型的枚举。
+Enumerates charging types.
 
 **Since:** 10
 
@@ -18,7 +18,7 @@
 NONE
 ```
 
-表示未知类型。
+Unknown charging type.
 
 **Since:** 10
 
@@ -36,7 +36,7 @@ NONE
 WIRED_NORMAL
 ```
 
-表示有线正常充电类型。
+Wired normal charging.
 
 **Since:** 10
 
@@ -54,7 +54,7 @@ WIRED_NORMAL
 WIRED_QUICK
 ```
 
-表示有线快速充电类型。
+Wired fast charging.
 
 **Since:** 10
 
@@ -72,7 +72,7 @@ WIRED_QUICK
 WIRED_SUPER_QUICK
 ```
 
-表示有线超级快速充电类型。
+Wired super fast charging.
 
 **Since:** 10
 
@@ -90,7 +90,7 @@ WIRED_SUPER_QUICK
 WIRELESS_NORMAL
 ```
 
-表示无线正常充电类型。
+Wireless normal charging.
 
 **Since:** 10
 
@@ -108,7 +108,7 @@ WIRELESS_NORMAL
 WIRELESS_QUICK
 ```
 
-表示无线快速充电类型。
+Wireless fast charging.
 
 **Since:** 10
 
@@ -126,7 +126,7 @@ WIRELESS_QUICK
 WIRELESS_SUPER_QUICK
 ```
 
-表示无线超级快速充电类型。
+Wireless super fast charging.
 
 **Since:** 10
 

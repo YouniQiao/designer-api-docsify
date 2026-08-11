@@ -4,7 +4,7 @@
 type OnFailureFn = () => void
 ```
 
-当保存请求失败时，该回调被调用。
+Called when auto-save fails.
 
 **Since:** 23
 

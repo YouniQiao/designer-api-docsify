@@ -1,6 +1,6 @@
 # DfsListeners
 
-事件监听类。创建DFSListener对象，用于监听分布式文件系统状态。
+The listeners of Distributed File System.
 
 **Since:** 23
 
@@ -22,7 +22,7 @@ import { Options, ReaderIteratorResult, Watcher, ReadTextOptions, WatchEventList
 onStatus: DfsListenerCallback
 ```
 
-分布式文件系统状态监听器。
+The Listener of Distributed File System status
 
 **Since:** 23
 

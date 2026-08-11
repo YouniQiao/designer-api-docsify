@@ -12,7 +12,7 @@ import { print } from 'kits/@kit.BasicServicesKit';
 function authPrintJob(jobId: string, userName: string, password: string): Promise<boolean>
 ```
 
-验证打印作业。
+Authenticate a print job.
 
 **Since:** 24
 
@@ -32,9 +32,9 @@ function authPrintJob(jobId: string, userName: string, password: string): Promis
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| jobId | string | Yes | 打印作业ID。 &lt;br&gt;要打印的作业ID。 |
-| userName | string | Yes | 用户名。 &lt;br&gt;用户名。 |
-| password | string | Yes | 用户密码。 &lt;br&gt;用户密码。 |
+| jobId | string | Yes | Indicates the print job ID. &lt;br&gt;Job ID to be printed. |
+| userName | string | Yes | Indicates the user name. &lt;br&gt;Indicates the user name. |
+| password | string | Yes | Indicates the user password. &lt;br&gt;Indicates the user password. |
 
 **Return value:**
 
@@ -46,7 +46,7 @@ function authPrintJob(jobId: string, userName: string, password: string): Promis
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 13100006 | Can not find the print job. |
-| 201 | the application does not have permission to call this function. |
-| 202 | not system application. |
+| [13100006](../../apis-basic-services-kit/errorcode-print.md#13100006-invalid-print-job) | Can not find the print job. |
+| [201](../../errorcode-universal.md#201-permission-denied) | the application does not have permission to call this function. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | not system application. |
 

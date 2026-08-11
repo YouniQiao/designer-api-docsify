@@ -1,6 +1,6 @@
 # View (System API)
 
-自定义组件
+View
 
 **Since:** 7
 
@@ -18,7 +18,7 @@
 create(value: any): any
 ```
 
-只需使用生成tsbundle
+Just use for generate tsbundle
 
 **Since:** 7
 

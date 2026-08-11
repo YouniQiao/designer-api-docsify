@@ -12,7 +12,7 @@ import { sendableRelationalStore } from 'kits/@kit.ArkData';
 function toSendableValuesBucket(valuesBucket: NonSendableBucket): ValuesBucket
 ```
 
-将不能用于跨线程传递的键值对数据，转换为可用于跨线程传递的键值对数据。
+Converts a key-value (KV) pair that cannot be passed across threads into the data that can be passed across threads.
 
 **Since:** 12
 
@@ -26,20 +26,20 @@ function toSendableValuesBucket(valuesBucket: NonSendableBucket): ValuesBucket
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| valuesBucket | [NonSendableBucket](arkts-arkdata-sendablerelationalstore-nonsendablebucket-t.md) | Yes | 不可跨线程传递的ValuesBucket数据。 |
+| valuesBucket | [NonSendableBucket](arkts-arkdata-sendablerelationalstore-nonsendablebucket-t.md) | Yes | Data that cannot be passed across threads. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [ValuesBucket](arkts-arkdata-rdb-valuesbucket-t.md) | 可用于跨线程传递的ValuesBucket数据。 |
+| [ValuesBucket](arkts-arkdata-rdb-valuesbucket-t.md) | Data that can be passed across threads. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. Possible causes: &lt;br&gt;1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; &lt;br&gt;3. Parameter verification failed. |
-| 14800000 | Inner error. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: &lt;br&gt;1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; &lt;br&gt;3. Parameter verification failed. |
+| [14800000](../../apis-basic-services-kit/errorcode-settings.md#14800000-parameter-check-failed) | Inner error. |
 
 ## Examples
 

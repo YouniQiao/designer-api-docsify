@@ -1,6 +1,6 @@
 # OperateButtonV2
 
-列表右侧按钮元素的类型。
+Declare type OperateButtonV2
 
 **Since:** 26.0.0
 
@@ -24,7 +24,7 @@ import { OperateCheckV2Options, ComposeListItemV2, IconTypeV2, OperateIconV2, Op
 constructor(options?: OperateButtonV2Options)
 ```
 
-OperateButtonV2的构造函数。
+The constructor of OperateButtonV2.
 
 **Since:** 26.0.0
 
@@ -40,7 +40,7 @@ OperateButtonV2的构造函数。
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| options | [OperateButtonV2Options](arkts-arkui-arkui-advanced-composelistitemv2-operatebuttonv2options-i.md) | No | OperateButtonV2的可选项 |
+| options | [OperateButtonV2Options](arkts-arkui-arkui-advanced-composelistitemv2-operatebuttonv2options-i.md) | No | The options of OperateButtonV2 |
 
 ## accessibilityDescription
 
@@ -48,7 +48,7 @@ OperateButtonV2的构造函数。
 public accessibilityDescription?: ResourceStr
 ```
 
-按钮的无障碍描述。
+The accessibilityDescription of the button.
 
 **Type:** [ResourceStr](arkts-arkui-resourcestr-t.md)
 
@@ -68,7 +68,7 @@ public accessibilityDescription?: ResourceStr
 public accessibilityLevel?: string
 ```
 
-按钮的无障碍重要性。
+The accessibilityLevel of the button.
 
 **Type:** string
 
@@ -90,7 +90,7 @@ public accessibilityLevel?: string
 public accessibilityText?: ResourceStr
 ```
 
-按钮的无障碍文本属性。
+The accessibilityText of the button.
 
 **Type:** [ResourceStr](arkts-arkui-resourcestr-t.md)
 
@@ -110,7 +110,7 @@ public accessibilityText?: ResourceStr
 public text?: ResourceStr
 ```
 
-按钮文本。
+The text on the button.
 
 **Type:** [ResourceStr](arkts-arkui-resourcestr-t.md)
 

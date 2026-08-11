@@ -358,7 +358,7 @@ pop(animated?: boolean): NavPathInfo | undefined
 
 | 类型 | 说明 |
 | --- | --- |
-| [NavPathInfo](../arkts-components/arkts-arkui-navpathinfo-c.md) | Returns the top NavPathInfo if the stack is not empty, otherwise returns undefined. |
+| [NavPathInfo](arkts-arkui-navigation-navpathinfo-c.md) | Returns the top NavPathInfo if the stack is not empty, otherwise returns undefined. |
 
 ## pop
 
@@ -409,7 +409,7 @@ pop(result: Object, animated?: boolean): NavPathInfo | undefined
 
 | 类型 | 说明 |
 | --- | --- |
-| [NavPathInfo](../arkts-components/arkts-arkui-navpathinfo-c.md) | Returns the top NavPathInfo if the stack is not empty, otherwise returns undefined. |
+| [NavPathInfo](arkts-arkui-navigation-navpathinfo-c.md) | Returns the top NavPathInfo if the stack is not empty, otherwise returns undefined. |
 
 ## popToIndex
 
@@ -552,7 +552,7 @@ pushDestination(info: NavPathInfo, animated?: boolean): Promise<void>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| info | [NavPathInfo](../arkts-components/arkts-arkui-navpathinfo-c.md) | 是 | NavDestination页面的信息。 |
+| info | [NavPathInfo](arkts-arkui-navigation-navpathinfo-c.md) | 是 | NavDestination页面的信息。 |
 | animated | boolean | 否 | 是否支持转场动画。&lt;br/&gt;true：支持转场动画；false：不支持转场动画。&lt;br/&gt;默认值：true |
 
 **返回值：**
@@ -565,10 +565,10 @@ pushDestination(info: NavPathInfo, animated?: boolean): Promise<void>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 100001 | Internal error. |
-| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameters types. 3. Parameter verification failed. |
-| 100005 | Builder function not registered. |
-| 100006 | NavDestination not found. |
+| [100001](../errorcode-internal.md#100001-接口调用异常错误码) | Internal error. |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameters types. 3. Parameter verification failed. |
+| [100005](../errorcode-router.md#100005-navigation跳转时未注册builder函数) | Builder function not registered. |
+| [100006](../errorcode-router.md#100006-navigation跳转时目标页面不存在navdestination组件) | NavDestination not found. |
 
 ## pushDestination
 
@@ -597,7 +597,7 @@ pushDestination(info: NavPathInfo, options?: NavigationOptions): Promise<void>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| info | [NavPathInfo](../arkts-components/arkts-arkui-navpathinfo-c.md) | 是 | NavDestination页面的信息。 |
+| info | [NavPathInfo](arkts-arkui-navigation-navpathinfo-c.md) | 是 | NavDestination页面的信息。 |
 | options | [NavigationOptions](arkts-arkui-navigation-navigationoptions-i.md) | 否 | 路由栈操作选项。 |
 
 **返回值：**
@@ -610,10 +610,10 @@ pushDestination(info: NavPathInfo, options?: NavigationOptions): Promise<void>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 100001 | Internal error. |
-| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameters types. 3. Parameter verification failed. |
-| 100005 | Builder function not registered. |
-| 100006 | NavDestination not found. |
+| [100001](../errorcode-internal.md#100001-接口调用异常错误码) | Internal error. |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameters types. 3. Parameter verification failed. |
+| [100005](../errorcode-router.md#100005-navigation跳转时未注册builder函数) | Builder function not registered. |
+| [100006](../errorcode-router.md#100006-navigation跳转时目标页面不存在navdestination组件) | NavDestination not found. |
 
 ## pushDestinationByName
 
@@ -656,10 +656,10 @@ pushDestinationByName(name: string, param: Object, animated?: boolean): Promise<
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 100001 | Internal error. |
-| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameters types. 3. Parameter verification failed. |
-| 100005 | Builder function not registered. |
-| 100006 | NavDestination not found. |
+| [100001](../errorcode-internal.md#100001-接口调用异常错误码) | Internal error. |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameters types. 3. Parameter verification failed. |
+| [100005](../errorcode-router.md#100005-navigation跳转时未注册builder函数) | Builder function not registered. |
+| [100006](../errorcode-router.md#100006-navigation跳转时目标页面不存在navdestination组件) | NavDestination not found. |
 
 ## pushDestinationByName
 
@@ -703,10 +703,10 @@ pushDestinationByName(name: string, param: Object, onPop: Callback<PopInfo>, ani
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 100001 | Internal error. |
-| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameters types. 3. Parameter verification failed. |
-| 100005 | Builder function not registered. |
-| 100006 | NavDestination not found. |
+| [100001](../errorcode-internal.md#100001-接口调用异常错误码) | Internal error. |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameters types. 3. Parameter verification failed. |
+| [100005](../errorcode-router.md#100005-navigation跳转时未注册builder函数) | Builder function not registered. |
+| [100006](../errorcode-router.md#100006-navigation跳转时目标页面不存在navdestination组件) | NavDestination not found. |
 
 ## pushPath
 
@@ -730,7 +730,7 @@ pushPath(info: NavPathInfo, animated?: boolean): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| info | [NavPathInfo](../arkts-components/arkts-arkui-navpathinfo-c.md) | 是 | NavDestination页面的信息。 |
+| info | [NavPathInfo](arkts-arkui-navigation-navpathinfo-c.md) | 是 | NavDestination页面的信息。 |
 | animated | boolean | 否 | 是否支持转场动画。&lt;br/&gt;true：支持转场动画；false：不支持转场动画。&lt;br/&gt;传入参数非法时，按true处理。 |
 
 ## pushPath
@@ -755,7 +755,7 @@ pushPath(info: NavPathInfo, options?: NavigationOptions): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| info | [NavPathInfo](../arkts-components/arkts-arkui-navpathinfo-c.md) | 是 | NavDestination页面的信息。 |
+| info | [NavPathInfo](arkts-arkui-navigation-navpathinfo-c.md) | 是 | NavDestination页面的信息。 |
 | options | [NavigationOptions](arkts-arkui-navigation-navigationoptions-i.md) | 否 | 路由栈操作选项。 |
 
 ## pushPathByName
@@ -925,7 +925,7 @@ replaceDestination(info: NavPathInfo, options?: NavigationOptions): Promise<void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| info | [NavPathInfo](../arkts-components/arkts-arkui-navpathinfo-c.md) | 是 | NavDestination页面的信息。 |
+| info | [NavPathInfo](arkts-arkui-navigation-navpathinfo-c.md) | 是 | NavDestination页面的信息。 |
 | options | [NavigationOptions](arkts-arkui-navigation-navigationoptions-i.md) | 否 | 路由栈操作选项。 |
 
 **返回值：**
@@ -938,10 +938,10 @@ replaceDestination(info: NavPathInfo, options?: NavigationOptions): Promise<void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 100001 | Internal error. |
-| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameters types. 3. Parameter verification failed. |
-| 100005 | Builder function not registered. |
-| 100006 | NavDestination not found. |
+| [100001](../errorcode-internal.md#100001-接口调用异常错误码) | Internal error. |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameters types. 3. Parameter verification failed. |
+| [100005](../errorcode-router.md#100005-navigation跳转时未注册builder函数) | Builder function not registered. |
+| [100006](../errorcode-router.md#100006-navigation跳转时目标页面不存在navdestination组件) | NavDestination not found. |
 
 ## replacePath
 
@@ -965,7 +965,7 @@ replacePath(info: NavPathInfo, animated?: boolean): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| info | [NavPathInfo](../arkts-components/arkts-arkui-navpathinfo-c.md) | 是 | 新栈顶页面参数信息。 |
+| info | [NavPathInfo](arkts-arkui-navigation-navpathinfo-c.md) | 是 | 新栈顶页面参数信息。 |
 | animated | boolean | 否 | 是否支持转场动画。&lt;br/&gt;true：支持转场动画；false：不支持转场动画。&lt;br/&gt;默认值：true |
 
 ## replacePath
@@ -990,7 +990,7 @@ replacePath(info: NavPathInfo, options?: NavigationOptions): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| info | [NavPathInfo](../arkts-components/arkts-arkui-navpathinfo-c.md) | 是 | 新栈顶页面参数信息。 |
+| info | [NavPathInfo](arkts-arkui-navigation-navpathinfo-c.md) | 是 | 新栈顶页面参数信息。 |
 | options | [NavigationOptions](arkts-arkui-navigation-navigationoptions-i.md) | 否 | 路由栈操作选项。 |
 
 ## replacePathByName

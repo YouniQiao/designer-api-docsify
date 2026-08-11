@@ -6,15 +6,17 @@
 declare const ArcAlphabetIndexer: ArcAlphabetIndexerInterface
 ```
 
-弧形索引条是一种弧形的、可按字母顺序排序进行快速定位的组件，可以与容器组件联动，按逻辑结构快速定位至容器显示区域。
+The **ArcAlphabetIndexer** component is an arc-shaped component designed for quick navigation through alphabetically sorted items. It can be integrated with container components to quickly locate items within the visible area.
 
-> **说明：**
+> **NOTE：**
 
-> - 该组件支持在Phone、PC/2in1、Tablet、TV、Wearable设备上使用。API version 22及以前版本，在Phone、PC/2in1、Tablet、TV上使用会编译告警，但可以正常运行。
+> - This component can be used on phones, PCs, 2-in-1 devices, tablets, TVs, and wearables. In API version 22 and
+> earlier versions, a compilation warning will be reported when this component is used on phones, PCs, 2-in-1
+> devices, tablets, and TVs, but the component can still run properly.
 
-### 子组件
+### Child Components
 
-无
+Not supported
 
 **Since:** 18
 

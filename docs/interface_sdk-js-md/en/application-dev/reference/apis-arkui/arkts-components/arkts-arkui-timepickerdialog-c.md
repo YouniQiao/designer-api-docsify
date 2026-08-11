@@ -1,6 +1,6 @@
 # TimePickerDialog
 
-以24小时的时间区间创建时间滑动选择器，展示在弹窗上。
+A time picker dialog box is a dialog box that allows users to select a time from the 24-hour range through scrolling.
 
 **Since:** 8
 
@@ -16,12 +16,12 @@
 static show(options?: TimePickerDialogOptions)
 ```
 
-定义时间滑动选择器弹窗并弹出。
+Shows a time picker dialog box.
 
-> **说明：**
-> 
-> 从API version 10开始，可以通过使用[UIContext](../arkts-apis/arkts-arkui-uicontext.md/arkts-arkui-uicontext.md)中的
-> [showTimePickerDialog](../arkts-apis/arkts-arkui-arkui-uicontext-uicontext-c.md/arkts-arkui-arkui-uicontext-uicontext-c.md#showtimepickerdialog)来明确UI的执行上下文。
+**NOTE：**
+
+- Since API version 10, you can use the  
+ [showTimePickerDialog](../../../reference/apis-arkui/arkts-apis-uicontext-uicontext.md#showtimepickerdialog) API  in [UIContext](../arkts-apis/arkts-arkui-uicontext.md/arkts-arkui-uicontext.md), which ensures that the time picker dialog box is shown in the  intended UI instance.
 
 **Since:** 8
 
@@ -41,5 +41,5 @@ static show(options?: TimePickerDialogOptions)
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| options | [TimePickerDialogOptions](arkts-arkui-timepickerdialogoptions-i.md) | No | 配置时间选择器弹窗的参数。参数缺省时不弹出弹窗。 |
+| options | [TimePickerDialogOptions](arkts-arkui-timepickerdialogoptions-i.md) | No | Parameters of the time picker dialog box. |
 

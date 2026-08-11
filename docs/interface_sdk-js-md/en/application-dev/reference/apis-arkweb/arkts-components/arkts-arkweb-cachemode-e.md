@@ -16,7 +16,7 @@ Enum type supplied to {@link cacheMode} for setting the Web cache mode.
 Default = 0
 ```
 
-优先使用未过期cache加载资源，无效或无cache时从网络获取。
+load cache when they are available and not expired, otherwise load online.
 
 **Since:** 9
 
@@ -34,7 +34,7 @@ Default = 0
 None = 1
 ```
 
-优先使用cache（含过期）加载资源，无cache时从网络获取。
+load cache when they are available, otherwise load online.
 
 **Since:** 8
 
@@ -52,7 +52,7 @@ None = 1
 Online = 2
 ```
 
-强制从网络获取最新资源，不使用任何cache。
+Load online and not cache.
 
 **Since:** 8
 
@@ -70,7 +70,7 @@ Online = 2
 Only = 3
 ```
 
-仅使用本地cache加载资源。
+load cache and not online.
 
 **Since:** 8
 

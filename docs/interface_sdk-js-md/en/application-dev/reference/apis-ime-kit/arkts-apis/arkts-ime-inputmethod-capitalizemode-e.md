@@ -1,21 +1,6 @@
 # CapitalizeMode
 
-枚举，定义了文本首字母大写的不同模式。
-
-| 名称 | 值 | 说明 |  
-| -------- | -- | -------- |  
-| NONE | 0 | 不进行任何首字母大写处理。
-
-**使用场景：**适用于无需自动大写的输入框，如密码输入、验证码输入等。|  
-| SENTENCES | 1 | 每个句子的首字母大写。
-
-**使用场景：**适用于普通文本输入框，如聊天、备忘录等，自动在句号等标点后将首字母大写。|  
-| WORDS | 2 | 每个单词首字母大写。
-
-**使用场景：**适用于标题、人名等需要每个单词首字母大写的场景。|  
-| CHARACTERS | 3 | 每个字母都大写。
-
-**使用场景：**适用于全大写输入场景，如缩写词输入（如URL中的域名部分）。|
+Enumerates the capitalization mode.
 
 **Since:** 20
 
@@ -31,7 +16,7 @@
 NONE = 0
 ```
 
-不进行任何首字母大写处理。
+Capitalize nothing.
 
 **Since:** 20
 
@@ -47,7 +32,7 @@ NONE = 0
 SENTENCES
 ```
 
-每个句子的首字母大写。
+Capitalize the first letter of each sentence.
 
 **Since:** 20
 
@@ -63,7 +48,7 @@ SENTENCES
 WORDS
 ```
 
-每个单词首字母大写。
+Capitalize the first letter of each word.
 
 **Since:** 20
 
@@ -79,7 +64,7 @@ WORDS
 CHARACTERS
 ```
 
-每个字母都大写。
+Capitalize each letter.
 
 **Since:** 20
 

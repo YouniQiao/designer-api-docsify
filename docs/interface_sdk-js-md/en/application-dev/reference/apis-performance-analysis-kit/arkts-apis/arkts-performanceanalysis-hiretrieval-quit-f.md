@@ -12,7 +12,7 @@ import { hiRetrieval } from 'kits/@kit.PerformanceAnalysisKit';
 function quit(): void
 ```
 
-设置此设备退出应用灰度活动，退出后此设备将无法在云端被圈选。
+Quit the HiRetrieval project. This operation clears the current HiRetrieval config.Invoking init function again is required after invoking quit function.
 
 **Since:** 26.0.0
 

@@ -1,6 +1,6 @@
 # OnTouchIconUrlReceivedEvent
 
-定义设置接收到apple-touch-icon url地址时的回调函数。
+Defines the triggered callback when the application receive an new url of an apple-touch-icon.
 
 **Since:** 12
 
@@ -16,7 +16,7 @@
 precomposed: boolean
 ```
 
-对应apple-touch-icon是否为预合成。
+Corresponding to whether apple-touch-icon is precomposited.
 
 **Type:** boolean
 
@@ -36,7 +36,7 @@ precomposed: boolean
 url: string
 ```
 
-接收到的apple-touch-icon url地址。
+The apple-touch-icon URL address received.
 
 **Type:** string
 

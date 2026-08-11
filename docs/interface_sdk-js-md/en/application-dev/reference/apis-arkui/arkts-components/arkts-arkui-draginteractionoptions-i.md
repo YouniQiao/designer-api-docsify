@@ -1,6 +1,6 @@
 # DragInteractionOptions
 
-设置拖拽过程中预览图浮起的交互模式。
+Interaction behavior for the floating preview image
 
 **Since:** 12
 
@@ -16,9 +16,10 @@
 defaultAnimationBeforeLifting?: boolean
 ```
 
-表示是否启用长按浮起阶段组件自身的默认点按效果（缩小）。true表示启用默认点按效果，false表示不启用默认点按效果。
+Whether to enable the default press animation (scale-down) during long-press lift phase. **true** to enable,  
+**false** otherwise.
 
-默认值：false
+Default value: **false**.
 
 **Type:** boolean
 
@@ -40,9 +41,13 @@ defaultAnimationBeforeLifting?: boolean
 enableEdgeAutoScroll?: boolean
 ```
 
-设置在拖拽至可滚动组件边缘时是否触发自动滚屏。true表示触发自动滚屏，false表示不触发自动滚屏。
+Whether to trigger automatic scrolling when users drag to the edges of a scrollable container.
 
-默认值：true
+**true**: Trigger automatic scrolling.
+
+**false**: Do not trigger automatic scrolling.
+
+Default value: **true**
 
 **Type:** boolean
 
@@ -64,12 +69,16 @@ enableEdgeAutoScroll?: boolean
 enableHapticFeedback?: boolean
 ```
 
-表示拖拽时是否启用震动。true表示启用震动，false表示不启用震动。仅在存在蒙层的预览（通过  
-[bindContextMenu](arkts-arkui-commonmethod-c.md#bindcontextmenu)）场景生效。
+Whether to enable haptic feedback during dragging.
 
-**注意：** 仅当应用具备 ohos.permission.VIBRATE 权限，且用户启用了触感反馈时才会生效。
+**true**: Enable haptic feedback during dragging.
 
-默认值：false
+**false**: Disable haptic feedback during dragging. This parameter is effective only for previews with masks (configured using  
+[bindContextMenu](arkts-arkui-commonmethod-c.md#bindcontextmenu)).
+
+Note: The settings take effect only when the application has the **ohos.permission.VIBRATE** permission and the user has enabled haptic feedback.
+
+Default value: **false**
 
 **Type:** boolean
 
@@ -91,12 +100,16 @@ enableHapticFeedback?: boolean
 isLiftingDisabled?: boolean
 ```
 
-表示长按拖拽时，是否禁用浮起效果。true表示禁用浮起效果，false表示不禁用浮起效果。
+Whether to disable the lift animation effect during dragging.
 
-如果设置为true，当组件支持拖拽并同时设置  
-[bindContextMenu](arkts-arkui-commonmethod-c.md#bindcontextmenu)时，仅弹出配置的自定义菜单预览。
+**true**: Disable the lifting effect during dragging.
 
-默认值：false
+**false**: Enable the lifting effect during dragging.
+
+With the value **true**, only the custom menu preview (set using  
+[bindContextMenu](arkts-arkui-commonmethod-c.md#bindcontextmenu)), also known as the long-press preview, is displayed if both the long-press preview and drag preview are configured.
+
+Default value: **false**
 
 **Type:** boolean
 
@@ -120,16 +133,17 @@ isLiftingDisabled?: boolean
 isMultiSelectionEnabled?: boolean
 ```
 
-表示拖拽过程中背板图是否支持多选聚拢效果。true表示支持多选聚拢效果，false表示不支持多选聚拢效果。该参数只在[Grid](../arkts-apis/arkts-arkui-grid-grid-f.md/arkts-arkui-grid-grid-f.md#grid)和[List](../../apis-arkts/arkts-apis/arkts-arkts-util-list-list-c.md/arkts-arkts-util-list-list-c.md)组件中的  
-[GridItem](../arkts-apis/arkts-arkui-griditem-griditem-f.md/arkts-arkui-griditem-griditem-f.md#griditem)组件和[ListItem](./list_item)组件生效。
+Whether to enable multi-select clustering during drag operations. **true** to enable, **false** otherwise. This parameter takes effect only for the [grid items](../arkts-apis/arkts-arkui-griditem-griditem-f.md/arkts-arkui-griditem-griditem-f.md#griditem) and [list items](./list_item) in the  
+[Grid](../arkts-apis/arkts-arkui-grid-grid-f.md/arkts-arkui-grid-grid-f.md#grid) and [List](../../apis-arkts/arkts-apis/arkts-arkts-util-list-list-c.md/arkts-arkts-util-list-list-c.md) containers.
 
-当一个item组件设置为多选拖拽时，该组件的子组件不可拖拽。聚拢组件预览图设置的优先级为  
-[dragPreview](arkts-arkui-commonmethod-c.md#dragpreview)中的string，dragPreview中的PixelMap，组件自截图，不支持dragPreview中的Builder形式。
+When this feature is enabled, child components cannot be dragged individually. Preview priority: string in  
+[dragPreview](arkts-arkui-commonmethod-c.md#dragpreview) > PixelMap in  
+**dragPreview** > component snapshot. Builder previews not supported.
 
-不支持组件绑定  
-[bindContextMenu](arkts-arkui-commonmethod-c.md#bindcontextmenu)中参数存在isShown的模式。
+This parameter is incompatible with bindContextMenu](ts-universal-attributes-menu.md#bindcontextmenu12) using  
+**isShown** parameter.
 
-默认值：false
+Default value: **false**
 
 **Type:** boolean
 

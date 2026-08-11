@@ -18,12 +18,6 @@ ImagePacker类，用于图片压缩和编码。
 
 **系统能力：** SystemCapability.Multimedia.Image.ImagePacker
 
-## 导入模块
-
-```TypeScript
-import { image } from 'kits/@kit.ImageKit';
-```
-
 ## packBinaryImageToTiffData
 
 ```TypeScript
@@ -59,8 +53,8 @@ packBinaryImageToTiffData(bufferInfo: BinaryBufferInfo, options?: PackingOptions
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 7800301 | Encode failed. |
-| 7800202 | Invalid parameter. Possible causes: 1. Invalid FD; 2. Compression algorithm mismatch. |
+| [7800301](../errorcode-image.md#7800301-编码失败) | Encode failed. |
+| [7800202](../errorcode-image.md#7800202-imagepacker无效参数) | Invalid parameter. Possible causes: 1. Invalid FD; 2. Compression algorithm mismatch. |
 
 ## packBinaryImageToTiffFile
 
@@ -104,8 +98,8 @@ packBinaryImageToTiffFile(bufferInfo: BinaryBufferInfo, fd: int, options?: Packi
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 7800301 | Encode failed. |
-| 7800202 | Invalid parameter. Possible causes: 1. Invalid FD; 2. Compression algorithm mismatch. |
+| [7800301](../errorcode-image.md#7800301-编码失败) | Encode failed. |
+| [7800202](../errorcode-image.md#7800202-imagepacker无效参数) | Invalid parameter. Possible causes: 1. Invalid FD; 2. Compression algorithm mismatch. |
 
 ## packToData
 
@@ -142,15 +136,15 @@ packToData(source: ImageSource, options: PackingOption): Promise<ArrayBuffer>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 62980113 | Unknown image format. The image data provided is not in a recognized or supported format, or it may be corrupted. |
-| 401 | If the parameter is invalid. |
-| 62980096 | The operation failed. Possible cause: 1.Image upload exception. 2. Decoding process exception. 3. Insufficient memory. |
-| 62980101 | The image data is abnormal. |
-| 62980119 | Failed to encode the image. |
-| 62980120 | Add pixelmap out of range. |
-| 62980106 | The image data is too large. This status code is thrown when an error occurs during the process of checking size. |
-| 62980172 | Failed to encode icc. |
-| 62980252 | Failed to create surface. |
+| [62980113](../errorcode-image.md#62980113-图片未知格式) | Unknown image format. The image data provided is not in a recognized or supported format, or it may be corrupted. |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | If the parameter is invalid. |
+| [62980096](../errorcode-image.md#62980096-操作失败) | The operation failed. Possible cause: 1.Image upload exception. 2. Decoding process exception. 3. Insufficient memory. |
+| [62980101](../errorcode-image.md#62980101-图片输入数据错误) | The image data is abnormal. |
+| [62980119](../errorcode-image.md#62980119-图片编码失败) | Failed to encode the image. |
+| [62980120](../errorcode-image.md#62980120-图片添加像素映射失败) | Add pixelmap out of range. |
+| [62980106](../errorcode-image.md#62980106-图片数据太大) | The image data is too large. This status code is thrown when an error occurs during the process of checking size. |
+| [62980172](../errorcode-image.md#62980172-编码icc失败) | Failed to encode icc. |
+| [62980252](../errorcode-image.md#62980252-创建surface失败) | Failed to create surface. |
 
 ## packToData
 
@@ -178,7 +172,7 @@ packToData(source: PixelMap, options: PackingOption): Promise<ArrayBuffer>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| source | [PixelMap](arkts-image-image-pixelmap-i.md) | 是 | 编码的PixelMap源。 |
+| source | [PixelMap](../../apis-arkui/arkts-apis/arkts-arkui-pixelmap-t.md) | 是 | 编码的PixelMap源。 |
 | options | [PackingOption](arkts-image-image-packingoption-i.md) | 是 | 设置编码参数。 |
 
 **返回值：**
@@ -191,15 +185,15 @@ packToData(source: PixelMap, options: PackingOption): Promise<ArrayBuffer>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 62980113 | Unknown image format. The image data provided is not in a recognized or supported format, or it may be corrupted. |
-| 401 | If the parameter is invalid. |
-| 62980096 | The operation failed. Possible cause: 1.Image upload exception. 2. Decoding process exception. 3. Insufficient memory. |
-| 62980101 | The image data is abnormal. |
-| 62980119 | Failed to encode the image. |
-| 62980120 | Add pixelmap out of range. |
-| 62980106 | The image data is too large. This status code is thrown when an error occurs during the process of checking size. |
-| 62980172 | Failed to encode icc. |
-| 62980252 | Failed to create surface. |
+| [62980113](../errorcode-image.md#62980113-图片未知格式) | Unknown image format. The image data provided is not in a recognized or supported format, or it may be corrupted. |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | If the parameter is invalid. |
+| [62980096](../errorcode-image.md#62980096-操作失败) | The operation failed. Possible cause: 1.Image upload exception. 2. Decoding process exception. 3. Insufficient memory. |
+| [62980101](../errorcode-image.md#62980101-图片输入数据错误) | The image data is abnormal. |
+| [62980119](../errorcode-image.md#62980119-图片编码失败) | Failed to encode the image. |
+| [62980120](../errorcode-image.md#62980120-图片添加像素映射失败) | Add pixelmap out of range. |
+| [62980106](../errorcode-image.md#62980106-图片数据太大) | The image data is too large. This status code is thrown when an error occurs during the process of checking size. |
+| [62980172](../errorcode-image.md#62980172-编码icc失败) | Failed to encode icc. |
+| [62980252](../errorcode-image.md#62980252-创建surface失败) | Failed to create surface. |
 
 ## packToDataFromPixelmapSequence
 
@@ -234,8 +228,8 @@ packToDataFromPixelmapSequence(pixelmapSequence: Array<PixelMap>, options: Packi
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. 3.Parameter verification failed. |
-| 7800301 | Failed to encode image. |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. 3.Parameter verification failed. |
+| [7800301](../errorcode-image.md#7800301-编码失败) | Failed to encode image. |
 
 ## packToFile
 
@@ -272,15 +266,15 @@ packToFile(source: ImageSource, fd: int, options: PackingOption, callback: Async
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 62980113 | Unknown image format. The image data provided is not in a recognized or supported format, or it may be corrupted. |
-| 62980096 | The operation failed. Possible cause: 1.Image upload exception. 2. Decoding process exception. 3. Insufficient memory. |
-| 62980115 | Invalid input parameter. |
-| 62980101 | The image data is abnormal. |
-| 62980119 | Failed to encode the image. |
-| 62980120 | Add pixelmap out of range. |
-| 62980106 | The image data is too large. This status code is thrown when an error occurs during the process of checking size. |
-| 62980172 | Failed to encode icc. |
-| 62980252 | Failed to create surface. |
+| [62980113](../errorcode-image.md#62980113-图片未知格式) | Unknown image format. The image data provided is not in a recognized or supported format, or it may be corrupted. |
+| [62980096](../errorcode-image.md#62980096-操作失败) | The operation failed. Possible cause: 1.Image upload exception. 2. Decoding process exception. 3. Insufficient memory. |
+| [62980115](../errorcode-image.md#62980115-图片无效参数) | Invalid input parameter. |
+| [62980101](../errorcode-image.md#62980101-图片输入数据错误) | The image data is abnormal. |
+| [62980119](../errorcode-image.md#62980119-图片编码失败) | Failed to encode the image. |
+| [62980120](../errorcode-image.md#62980120-图片添加像素映射失败) | Add pixelmap out of range. |
+| [62980106](../errorcode-image.md#62980106-图片数据太大) | The image data is too large. This status code is thrown when an error occurs during the process of checking size. |
+| [62980172](../errorcode-image.md#62980172-编码icc失败) | Failed to encode icc. |
+| [62980252](../errorcode-image.md#62980252-创建surface失败) | Failed to create surface. |
 
 ## packToFile
 
@@ -322,15 +316,15 @@ packToFile(source: ImageSource, fd: int, options: PackingOption): Promise<void>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 62980113 | Unknown image format. The image data provided is not in a recognized or supported format, or it may be corrupted. |
-| 62980096 | The operation failed. Possible cause: 1.Image upload exception. 2. Decoding process exception. 3. Insufficient memory. |
-| 62980115 | Invalid input parameter. |
-| 62980101 | The image data is abnormal. |
-| 62980119 | Failed to encode the image. |
-| 62980120 | Add pixelmap out of range. |
-| 62980106 | The image data is too large. This status code is thrown when an error occurs during the process of checking size. |
-| 62980172 | Failed to encode icc. |
-| 62980252 | Failed to create surface. |
+| [62980113](../errorcode-image.md#62980113-图片未知格式) | Unknown image format. The image data provided is not in a recognized or supported format, or it may be corrupted. |
+| [62980096](../errorcode-image.md#62980096-操作失败) | The operation failed. Possible cause: 1.Image upload exception. 2. Decoding process exception. 3. Insufficient memory. |
+| [62980115](../errorcode-image.md#62980115-图片无效参数) | Invalid input parameter. |
+| [62980101](../errorcode-image.md#62980101-图片输入数据错误) | The image data is abnormal. |
+| [62980119](../errorcode-image.md#62980119-图片编码失败) | Failed to encode the image. |
+| [62980120](../errorcode-image.md#62980120-图片添加像素映射失败) | Add pixelmap out of range. |
+| [62980106](../errorcode-image.md#62980106-图片数据太大) | The image data is too large. This status code is thrown when an error occurs during the process of checking size. |
+| [62980172](../errorcode-image.md#62980172-编码icc失败) | Failed to encode icc. |
+| [62980252](../errorcode-image.md#62980252-创建surface失败) | Failed to create surface. |
 
 ## packToFile
 
@@ -362,7 +356,7 @@ packToFile(source: PixelMap, fd: int, options: PackingOption, callback: AsyncCal
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| source | [PixelMap](arkts-image-image-pixelmap-i.md) | 是 | 编码的PixelMap资源。 |
+| source | [PixelMap](../../apis-arkui/arkts-apis/arkts-arkui-pixelmap-t.md) | 是 | 编码的PixelMap资源。 |
 | fd | ArkTS-Dyn: number  <br>ArkTS-Sta：int | 是 | 文件描述符。取值范围为[0，65535]。 |
 | options | [PackingOption](arkts-image-image-packingoption-i.md) | 是 | 设置编码参数。 |
 | callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数，当编码图片进文件成功，err为undefined，否则为错误对象。 |
@@ -371,15 +365,15 @@ packToFile(source: PixelMap, fd: int, options: PackingOption, callback: AsyncCal
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 62980113 | Unknown image format. The image data provided is not in a recognized or supported format, or it may be corrupted. |
-| 62980096 | The operation failed. Possible cause: 1.Image upload exception. 2. Decoding process exception. 3. Insufficient memory. |
-| 62980115 | Invalid input parameter. |
-| 62980101 | The image data is abnormal. |
-| 62980119 | Failed to encode the image. |
-| 62980120 | Add pixelmap out of range. |
-| 62980106 | The image data is too large. This status code is thrown when an error occurs during the process of checking size. |
-| 62980172 | Failed to encode icc. |
-| 62980252 | Failed to create surface. |
+| [62980113](../errorcode-image.md#62980113-图片未知格式) | Unknown image format. The image data provided is not in a recognized or supported format, or it may be corrupted. |
+| [62980096](../errorcode-image.md#62980096-操作失败) | The operation failed. Possible cause: 1.Image upload exception. 2. Decoding process exception. 3. Insufficient memory. |
+| [62980115](../errorcode-image.md#62980115-图片无效参数) | Invalid input parameter. |
+| [62980101](../errorcode-image.md#62980101-图片输入数据错误) | The image data is abnormal. |
+| [62980119](../errorcode-image.md#62980119-图片编码失败) | Failed to encode the image. |
+| [62980120](../errorcode-image.md#62980120-图片添加像素映射失败) | Add pixelmap out of range. |
+| [62980106](../errorcode-image.md#62980106-图片数据太大) | The image data is too large. This status code is thrown when an error occurs during the process of checking size. |
+| [62980172](../errorcode-image.md#62980172-编码icc失败) | Failed to encode icc. |
+| [62980252](../errorcode-image.md#62980252-创建surface失败) | Failed to create surface. |
 
 ## packToFile
 
@@ -411,7 +405,7 @@ packToFile(source: PixelMap, fd: int, options: PackingOption): Promise<void>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| source | [PixelMap](arkts-image-image-pixelmap-i.md) | 是 | 编码的PixelMap资源。 |
+| source | [PixelMap](../../apis-arkui/arkts-apis/arkts-arkui-pixelmap-t.md) | 是 | 编码的PixelMap资源。 |
 | fd | ArkTS-Dyn: number  <br>ArkTS-Sta：int | 是 | 文件描述符。取值范围为[0，65535]。 |
 | options | [PackingOption](arkts-image-image-packingoption-i.md) | 是 | 设置编码参数。 |
 
@@ -425,15 +419,15 @@ packToFile(source: PixelMap, fd: int, options: PackingOption): Promise<void>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 62980113 | Unknown image format. The image data provided is not in a recognized or supported format, or it may be corrupted. |
-| 62980096 | The operation failed. Possible cause: 1.Image upload exception. 2. Decoding process exception. 3. Insufficient memory. |
-| 62980115 | Invalid input parameter. |
-| 62980101 | The image data is abnormal. |
-| 62980119 | Failed to encode the image. |
-| 62980120 | Add pixelmap out of range. |
-| 62980106 | The image data is too large. This status code is thrown when an error occurs during the process of checking size. |
-| 62980172 | Failed to encode icc. |
-| 62980252 | Failed to create surface. |
+| [62980113](../errorcode-image.md#62980113-图片未知格式) | Unknown image format. The image data provided is not in a recognized or supported format, or it may be corrupted. |
+| [62980096](../errorcode-image.md#62980096-操作失败) | The operation failed. Possible cause: 1.Image upload exception. 2. Decoding process exception. 3. Insufficient memory. |
+| [62980115](../errorcode-image.md#62980115-图片无效参数) | Invalid input parameter. |
+| [62980101](../errorcode-image.md#62980101-图片输入数据错误) | The image data is abnormal. |
+| [62980119](../errorcode-image.md#62980119-图片编码失败) | Failed to encode the image. |
+| [62980120](../errorcode-image.md#62980120-图片添加像素映射失败) | Add pixelmap out of range. |
+| [62980106](../errorcode-image.md#62980106-图片数据太大) | The image data is too large. This status code is thrown when an error occurs during the process of checking size. |
+| [62980172](../errorcode-image.md#62980172-编码icc失败) | Failed to encode icc. |
+| [62980252](../errorcode-image.md#62980252-创建surface失败) | Failed to create surface. |
 
 ## packToFile
 
@@ -475,8 +469,8 @@ packToFile(picture: Picture, fd: int, options: PackingOption): Promise<void>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. 3.Parameter verification failed. |
-| 7800301 | Encode failed. |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. 3.Parameter verification failed. |
+| [7800301](../errorcode-image.md#7800301-编码失败) | Encode failed. |
 
 ## packToFileFromPixelmapSequence
 
@@ -518,8 +512,8 @@ packToFileFromPixelmapSequence(pixelmapSequence: Array<PixelMap>, fd: int, optio
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types;3.Parameter verification failed. |
-| 7800301 | Failed to encode image. |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types;3.Parameter verification failed. |
+| [7800301](../errorcode-image.md#7800301-编码失败) | Failed to encode image. |
 
 ## packing
 
@@ -627,7 +621,7 @@ packing(source: PixelMap, option: PackingOption, callback: AsyncCallback<ArrayBu
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| source | [PixelMap](arkts-image-image-pixelmap-i.md) | 是 | 编码的PixelMap资源。 |
+| source | [PixelMap](../../apis-arkui/arkts-apis/arkts-arkui-pixelmap-t.md) | 是 | 编码的PixelMap资源。 |
 | option | [PackingOption](arkts-image-image-packingoption-i.md) | 是 | 设置编码参数。 |
 | callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;ArrayBuffer&gt; | 是 | 回调函数，当图片编码成功，err为undefined，data为获取到的压缩或编码数据；否则为错误对象。 |
 
@@ -664,7 +658,7 @@ packing(source: PixelMap, option: PackingOption): Promise<ArrayBuffer>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| source | [PixelMap](arkts-image-image-pixelmap-i.md) | 是 | 编码的PixelMap源。 |
+| source | [PixelMap](../../apis-arkui/arkts-apis/arkts-arkui-pixelmap-t.md) | 是 | 编码的PixelMap源。 |
 | option | [PackingOption](arkts-image-image-packingoption-i.md) | 是 | 设置编码参数。 |
 
 **返回值：**
@@ -706,8 +700,8 @@ packing(picture: Picture, options: PackingOption): Promise<ArrayBuffer>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 401 | Parameter error.Possible causes: 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. 3.Parameter verification failed. |
-| 7800301 | Encode failed. |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error.Possible causes: 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. 3.Parameter verification failed. |
+| [7800301](../errorcode-image.md#7800301-编码失败) | Encode failed. |
 
 ## release
 

@@ -12,7 +12,7 @@ import { manager } from 'kits/@kit.ConnectivityKit';
 function disable(): void
 ```
 
-关闭星闪。
+Turns off NearLink.
 
 **Since:** 26.0.0
 
@@ -32,8 +32,8 @@ function disable(): void
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 801 | Capability not supported because the chip does not support it. |
+| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported because the chip does not support it. |
 | 36100099 | Operation failed. |
-| 201 | Permission denied. |
-| 202 | Non-system applications are not allowed to use system APIs. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Non-system applications are not allowed to use system APIs. |
 

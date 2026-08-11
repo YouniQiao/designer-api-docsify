@@ -1,6 +1,6 @@
 # File
 
-由open接口打开的File对象。
+Represents a **File** object opened by **open()**.
 
 **Since:** 9
 
@@ -22,7 +22,7 @@ import { Options, ReaderIteratorResult, Watcher, ReadTextOptions, WatchEventList
 getParent(): string
 ```
 
-获取File对象对应文件父目录。
+Obtains the parent directory of this file object.
 
 **Since:** 11
 
@@ -36,7 +36,7 @@ getParent(): string
 
 | Type | Description |
 | --- | --- |
-| string | 返回父目录路径。 |
+| string | Parent directory obtained. |
 
 **Error codes:**
 
@@ -49,10 +49,11 @@ getParent(): string
 ## Examples
 
 ```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
 let filePath = pathDir + "/test.txt";
-let file = fileIo.openSync(filePath, fileIo.OpenMode.READ_WRITE | fileIo.OpenMode.CREATE);
-console.info(`Succeeded in getting parent path, the parent path is: ${file.getParent()}`);
-fileIo.closeSync(file);
+let file = fs.openSync(filePath, fs.OpenMode.READ_WRITE | fs.OpenMode.CREATE);
+console.info('The parent path is: ' + file.getParent());
+fs.closeSync(file);
 ```
 
 ## lock
@@ -61,7 +62,7 @@ fileIo.closeSync(file);
 lock(exclusive?: boolean): Promise<void>
 ```
 
-对文件阻塞式施加共享锁或独占锁，使用promise异步回调。
+Applies an exclusive lock or a shared lock on this file in blocking mode. This API uses a promise to return the result.
 
 **Since:** 9
 
@@ -75,13 +76,13 @@ lock(exclusive?: boolean): Promise<void>
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| exclusive | boolean | No | 是否施加独占锁，默认false。true：施加独占锁；false：不施加独占锁。 |
+| exclusive | boolean | No | Lock to apply.&lt;br&gt; The value **true** means an exclusive lock, and the value **false** (default) means a shared lock. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise对象。无返回值。 |
+| Promise&lt;void&gt; | Promise that returns no value. |
 
 **Error codes:**
 
@@ -98,15 +99,14 @@ lock(exclusive?: boolean): Promise<void>
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
-
 let filePath = pathDir + "/test.txt";
-let file = fileIo.openSync(filePath, fileIo.OpenMode.READ_WRITE | fileIo.OpenMode.CREATE);
+let file = fs.openSync(filePath, fs.OpenMode.READ_WRITE | fs.OpenMode.CREATE);
 file.lock(true).then(() => {
-  console.info(`Succeeded in locking file.`);
+  console.info("lock file succeed");
 }).catch((err: BusinessError) => {
-  console.error(`Failed to lock file. Code: ${err.code}, message: ${err.message}`);
+  console.error("lock file failed with error message: " + err.message + ", error code: " + err.code);
 }).finally(() => {
-  fileIo.closeSync(file);
+  fs.closeSync(file);
 });
 ```
 
@@ -116,7 +116,7 @@ file.lock(true).then(() => {
 lock(callback: AsyncCallback<void>): void
 ```
 
-对文件阻塞式施加共享锁或独占锁，使Callback异步回调。
+Applies an exclusive lock or a shared lock on this file in blocking mode. This API uses an asynchronous callback to return the result.
 
 **Since:** 9
 
@@ -130,7 +130,7 @@ lock(callback: AsyncCallback<void>): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | 异步文件上锁之后的回调。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. |
 
 **Error codes:**
 
@@ -143,30 +143,13 @@ lock(callback: AsyncCallback<void>): void
 | 13900042 | Unknown error |
 | 13900043 | No record locks available |
 
-## Examples
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let filePath = pathDir + "/test.txt";
-let file = fileIo.openSync(filePath, fileIo.OpenMode.READ_WRITE | fileIo.OpenMode.CREATE);
-file.lock((err: BusinessError) => {
-  if (err) {
-    console.error(`Failed to lock file. Code: ${err.code}, message: ${err.message}`);
-  } else {
-    console.info(`Succeeded in locking file.`);
-  }
-  fileIo.closeSync(file);
-});
-```
-
 ## lock
 
 ```TypeScript
 lock(exclusive: boolean, callback: AsyncCallback<void>): void
 ```
 
-对文件阻塞式施加共享锁或独占锁，使Callback异步回调。
+Applies an exclusive lock or a shared lock on this file in blocking mode. This API uses an asynchronous callback to return the result.
 
 **Since:** 9
 
@@ -180,8 +163,8 @@ lock(exclusive: boolean, callback: AsyncCallback<void>): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| exclusive | boolean | Yes | 是否施加独占锁，默认false。true：施加独占锁；false：不施加独占锁。 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | 异步文件上锁之后的回调。 |
+| exclusive | boolean | Yes | Lock to apply.&lt;br&gt; The value **true** means an exclusive lock, and the value **false** (default) means a shared lock. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. |
 
 **Error codes:**
 
@@ -194,30 +177,13 @@ lock(exclusive: boolean, callback: AsyncCallback<void>): void
 | 13900042 | Unknown error |
 | 13900043 | No record locks available |
 
-## Examples
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let filePath = pathDir + "/test.txt";
-let file = fileIo.openSync(filePath, fileIo.OpenMode.READ_WRITE | fileIo.OpenMode.CREATE);
-file.lock(true, (err: BusinessError) => {
-  if (err) {
-    console.error(`Failed to lock file. Code: ${err.code}, message: ${err.message}`);
-  } else {
-    console.info(`Succeeded in locking file.`);
-  }
-  fileIo.closeSync(file);
-});
-```
-
 ## tryLock
 
 ```TypeScript
 tryLock(exclusive?: boolean): void
 ```
 
-文件非阻塞式施加共享锁或独占锁。
+Applies an exclusive lock or a shared lock on this file in non-blocking mode.
 
 **Since:** 9
 
@@ -231,7 +197,7 @@ tryLock(exclusive?: boolean): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| exclusive | boolean | No | 是否施加独占锁，默认false。true：施加独占锁；false：不施加独占锁。 |
+| exclusive | boolean | No | Lock to apply.&lt;br&gt; The value **true** means an exclusive lock, and the value **false** (default) means a shared lock. |
 
 **Error codes:**
 
@@ -248,10 +214,10 @@ tryLock(exclusive?: boolean): void
 
 ```TypeScript
 let filePath = pathDir + "/test.txt";
-let file = fileIo.openSync(filePath, fileIo.OpenMode.READ_WRITE | fileIo.OpenMode.CREATE);
+let file = fs.openSync(filePath, fs.OpenMode.READ_WRITE | fs.OpenMode.CREATE);
 file.tryLock(true);
-console.info(`Succeeded in locking file.`);
-fileIo.closeSync(file);
+console.info("lock file succeed");
+fs.closeSync(file);
 ```
 
 ## unlock
@@ -260,7 +226,7 @@ fileIo.closeSync(file);
 unlock(): void
 ```
 
-以同步方式解锁文件。
+Unlocks a file. This API returns the result synchronously.
 
 **Since:** 9
 
@@ -285,11 +251,11 @@ unlock(): void
 
 ```TypeScript
 let filePath = pathDir + "/test.txt";
-let file = fileIo.openSync(filePath, fileIo.OpenMode.READ_WRITE | fileIo.OpenMode.CREATE);
+let file = fs.openSync(filePath, fs.OpenMode.READ_WRITE | fs.OpenMode.CREATE);
 file.tryLock(true);
 file.unlock();
-console.info(`Succeeded in unlocking file.`);
-fileIo.closeSync(file);
+console.info("unlock file succeed");
+fs.closeSync(file);
 ```
 
 ## fd
@@ -298,7 +264,7 @@ fileIo.closeSync(file);
 readonly fd: number
 ```
 
-打开的文件描述符。
+FD of the file.
 
 **Type:** number
 
@@ -318,7 +284,7 @@ readonly fd: number
 readonly name: string
 ```
 
-文件名。
+Name of the file.
 
 **Type:** string
 
@@ -336,7 +302,7 @@ readonly name: string
 readonly path: string
 ```
 
-文件路径。
+Path of the file.
 
 **Type:** string
 

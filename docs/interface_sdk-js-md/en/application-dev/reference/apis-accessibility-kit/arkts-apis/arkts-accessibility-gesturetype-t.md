@@ -13,7 +13,7 @@ type GestureType = 'left' | 'leftThenRight' | 'leftThenUp' | 'leftThenDown' |
   'fourFingerSwipeUp' | 'fourFingerSwipeDown' | 'fourFingerSwipeLeft' | 'fourFingerSwipeRight' | 'oneFingerDoubleTap'
 ```
 
-手势事件类型。
+Enumerates gesture types.
 
 **Since:** 9
 
@@ -27,44 +27,44 @@ type GestureType = 'left' | 'leftThenRight' | 'leftThenUp' | 'leftThenDown' |
 
 | Type | Description |
 | --- | --- |
-| 'left' | 表示向左的手势。 |
-| 'leftThenRight' | 表示先向左再向右的手势。 |
-| 'leftThenUp' | 表示先向左再向上的手势。 |
-| 'leftThenDown' | 表示先向左再向下的手势。 |
-| 'right' | 表示向右的手势。 |
-| 'rightThenLeft' | 表示先向右再向左的手势。 |
-| 'rightThenUp' | 表示先向右再向上的手势。 |
-| 'rightThenDown' | 表示先向右再向下的手势。 |
-| 'up' | 表示向上的手势。 |
-| 'upThenLeft' | 表示先向上再向左的手势。 |
-| 'upThenRight' | 表示先向上再向右的手势。 |
-| 'upThenDown' | 表示先向上再向下的手势。 |
-| 'down' | 表示向下的手势。 |
-| 'downThenLeft' | 表示先向下再向左的手势。 |
-| 'downThenRight' | 表示先向下再向右的手势。 |
-| 'downThenUp' | 表示先向下再向上的手势。 |
-| 'twoFingerSingleTap' | 表示双指单击的手势。 [since 11] |
-| 'twoFingerDoubleTap' | 表示双指双击的手势。 [since 11] |
-| 'twoFingerDoubleTapAndHold' | 表示双指双击长按的手势。 [since 11] |
-| 'twoFingerTripleTap' | 表示双指三击的手势。 [since 11] |
-| 'twoFingerTripleTapAndHold' | 表示双指三击长按的手势。 [since 11] |
-| 'threeFingerSingleTap' | 表示三指单击的手势。 [since 11] |
-| 'threeFingerDoubleTap' | 表示三指双击的手势。 [since 11] |
-| 'threeFingerDoubleTapAndHold' | 表示三指双击长按的手势。 [since 11] |
-| 'threeFingerTripleTap' | 表示三指三击的手势。 [since 11] |
-| 'threeFingerTripleTapAndHold' | 表示三指三击长按的手势。 [since 11] |
-| 'fourFingerSingleTap' | 表示四指单击的手势。 [since 11] |
-| 'fourFingerDoubleTap' | 表示四指双击的手势。 [since 11] |
-| 'fourFingerDoubleTapAndHold' | 表示四指双击长按的手势。 [since 11] |
-| 'fourFingerTripleTap' | 表示四指三击的手势。 [since 11] |
-| 'fourFingerTripleTapAndHold' | 表示四指三击长按的手势。 [since 11] |
-| 'threeFingerSwipeUp' | 表示三指向上滑动的手势。 [since 11] |
-| 'threeFingerSwipeDown' | 表示三指向下滑动的手势。 [since 11] |
-| 'threeFingerSwipeLeft' | 表示三指向左滑动的手势。 [since 11] |
-| 'threeFingerSwipeRight' | 表示三指向右滑动的手势。 [since 11] |
-| 'fourFingerSwipeUp' | 表示四指向上滑动的手势。 [since 11] |
-| 'fourFingerSwipeDown' | 表示四指向下滑动的手势。 [since 11] |
-| 'fourFingerSwipeLeft' | 表示四指向左滑动的手势。 [since 11] |
-| 'fourFingerSwipeRight' | 表示四指向右滑动的手势。 [since 11] |
+| 'left' | Left gesture. |
+| 'leftThenRight' | Left-then-right gesture. |
+| 'leftThenUp' | Left-then-up gesture. |
+| 'leftThenDown' | Left-then-down gesture. |
+| 'right' | Right gesture. |
+| 'rightThenLeft' | Right-then-left gesture. |
+| 'rightThenUp' | Right-then-up gesture. |
+| 'rightThenDown' | Right-then-down gesture. |
+| 'up' | Up gesture. |
+| 'upThenLeft' | Up-then-left gesture. |
+| 'upThenRight' | Up-then-right gesture. |
+| 'upThenDown' | Up-then-down gesture. |
+| 'down' | Down gesture. |
+| 'downThenLeft' | Down-then-left gesture. |
+| 'downThenRight' | Down-then-right gesture. |
+| 'downThenUp' | Down-then-up gesture. |
+| 'twoFingerSingleTap' | Two-finger single-tap gesture. [since 11] |
+| 'twoFingerDoubleTap' | Two-finger double-tap gesture. [since 11] |
+| 'twoFingerDoubleTapAndHold' | Two-finger double-tap-and-hold gesture. [since 11] |
+| 'twoFingerTripleTap' | Two-finger triple-tap gesture. [since 11] |
+| 'twoFingerTripleTapAndHold' | Two-finger triple-tap-and-hold gesture. [since 11] |
+| 'threeFingerSingleTap' | Three-finger single-tap gesture. [since 11] |
+| 'threeFingerDoubleTap' | Three-finger double-tap gesture. [since 11] |
+| 'threeFingerDoubleTapAndHold' | Three-finger double-tap-and-hold gesture. [since 11] |
+| 'threeFingerTripleTap' | Three-finger triple-tap gesture. [since 11] |
+| 'threeFingerTripleTapAndHold' | Three-finger triple-tap-and-hold gesture. [since 11] |
+| 'fourFingerSingleTap' | Four-finger single-tap gesture. [since 11] |
+| 'fourFingerDoubleTap' | Four-finger double-tap gesture. [since 11] |
+| 'fourFingerDoubleTapAndHold' | Four-finger double-tap-and-hold gesture. [since 11] |
+| 'fourFingerTripleTap' | Four-finger triple-tap gesture. [since 11] |
+| 'fourFingerTripleTapAndHold' | Four-finger triple-tap-and-hold gesture. [since 11] |
+| 'threeFingerSwipeUp' | Three-finger swipe-up gesture. [since 11] |
+| 'threeFingerSwipeDown' | Three-finger swipe-down gesture. [since 11] |
+| 'threeFingerSwipeLeft' | Three-finger swipe-left gesture. [since 11] |
+| 'threeFingerSwipeRight' | Three-finger swipe-right gesture. [since 11] |
+| 'fourFingerSwipeUp' | Four-finger swipe-up gesture. [since 11] |
+| 'fourFingerSwipeDown' | Four-finger swipe-down gesture. [since 11] |
+| 'fourFingerSwipeLeft' | Four-finger swipe-left gesture. [since 11] |
+| 'fourFingerSwipeRight' | Four-finger swipe-right gesture. [since 11] |
 | 'oneFingerDoubleTap' | [since 26.0.0] |
 

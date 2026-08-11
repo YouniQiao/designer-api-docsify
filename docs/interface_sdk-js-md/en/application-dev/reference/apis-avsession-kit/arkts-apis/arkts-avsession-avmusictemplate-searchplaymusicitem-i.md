@@ -1,6 +1,6 @@
 # SearchPlayMusicItem
 
-搜播的音频项目的定义。
+The definition of SearchPlayMusicItem.
 
 **Since:** 23
 
@@ -22,7 +22,7 @@ import { avMusicTemplate } from 'kits/@kit.AVSessionKit';
 entityId: string
 ```
 
-音频的唯一标识。
+Unique id of the Media.
 
 **Type:** string
 
@@ -42,7 +42,7 @@ entityId: string
 entityName?: string
 ```
 
-音频的名称。
+Name of the Media.
 
 **Type:** string
 

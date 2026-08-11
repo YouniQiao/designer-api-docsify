@@ -122,7 +122,7 @@ extendInfo?: Record<string, Object>
 
 系统应用发布通知时的自定义扩展参数。默认为空。
 
-**类型：** [Record](../../apis-default/arkts-apis/arkts-record-t.md)&lt;string, Object&gt;
+**类型：** Record&lt;string, Object&gt;
 
 **起始版本：** 20
 
@@ -172,7 +172,7 @@ groupInfo?: GroupInfo
 
 组通知定制信息。默认为空。
 
-**类型：** [GroupInfo](arkts-notification-notificationrequest-groupinfo-i-sys.md)
+**类型：** [GroupInfo](arkts-notification-notificationmanager-groupinfo-t-sys.md)
 
 **起始版本：** 26.0.0
 

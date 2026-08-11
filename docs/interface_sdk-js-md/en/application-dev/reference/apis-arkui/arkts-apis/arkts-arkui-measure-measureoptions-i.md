@@ -1,6 +1,6 @@
 # MeasureOptions
 
-被计算文本属性。
+Defines the options of MeasureText.
 
 **Since:** 23
 
@@ -22,9 +22,7 @@ import { MeasureOptions } from 'kits/@kit.ArkUI';
 baselineOffset?: double | string
 ```
 
-设置被计算文本基线的偏移量。
-
-默认值：0
+Baseline offset.
 
 **Type:** double \| string
 
@@ -44,11 +42,7 @@ baselineOffset?: double | string
 constraintWidth?: double | string | Resource
 ```
 
-设置被计算文本布局宽度。
-
-**说明：**
-
-默认单位为vp，不支持设置百分比字符串。若不设置，则文本SizeOptions宽度为单行布局所占最大宽度值，若设置则为设置值。
+Text display area of width.
 
 **Type:** double \| string \| Resource
 
@@ -68,7 +62,7 @@ constraintWidth?: double | string | Resource
 fontFamily?: string | Resource
 ```
 
-设置被计算文本字体列表。
+Font list of text.
 
 **Type:** string \| Resource
 
@@ -88,15 +82,7 @@ fontFamily?: string | Resource
 fontSize?: double | string | Resource
 ```
 
-设置被计算文本字体大小，fontSize为number类型时，使用vp单位。
-
-默认值：16
-
-**说明：**
-
-不支持设置百分比字符串。
-
-从API version 12开始，fontSize为number类型时，使用fp单位。
+Font Size.
 
 **Type:** double \| string \| Resource
 
@@ -116,11 +102,7 @@ fontSize?: double | string | Resource
 fontStyle?: int | FontStyle
 ```
 
-设置被计算文本字体样式。
-
-默认值：FontStyle.Normal
-
-int类型取值范围为[0,1]，取值间隔为1，依次对应FontStyle中的枚举值。
+Font style.
 
 **Type:** int \| FontStyle
 
@@ -140,9 +122,7 @@ int类型取值范围为[0,1]，取值间隔为1，依次对应FontStyle中的�
 fontWeight?: int | string | FontWeight
 ```
 
-设置被计算文本的字体粗细，int类型取值[100, 900]，取值间隔为100，默认为400，取值越大，字体越粗。string类型仅支持int类型取值的字符串形式，例如"400"，以及"bold"、"bolder"、"lighter"、"regular"、"medium"，分别对应FontWeight中相应的枚举值。
-
-默认值：FontWeight.Normal
+Font weight.
 
 **Type:** int \| string \| FontWeight
 
@@ -162,9 +142,7 @@ fontWeight?: int | string | FontWeight
 letterSpacing?: double | string
 ```
 
-设置被计算文本字符间距。
-
-默认值：0
+Distance between text fonts.
 
 **Type:** double \| string
 
@@ -184,7 +162,7 @@ letterSpacing?: double | string
 lineHeight?: double | string | Resource
 ```
 
-设置被计算文本行高。
+Vertical center mode of the font.
 
 **Type:** double \| string \| Resource
 
@@ -204,9 +182,7 @@ lineHeight?: double | string | Resource
 maxLines?: int
 ```
 
-设置被计算文本最大行数。
-
-取值范围：[0, INT32_MAX]
+Maximum int of lines of text.
 
 **Type:** int
 
@@ -226,11 +202,7 @@ maxLines?: int
 overflow?: int | TextOverflow
 ```
 
-设置被计算文本超长时的截断方式。
-
-默认值：1
-
-int类型取值范围为[0,3]，取值间隔为1，依次对应TextOverflow中的枚举值。
+Overflow mode of the font.
 
 **Type:** int \| TextOverflow
 
@@ -250,11 +222,7 @@ int类型取值范围为[0,3]，取值间隔为1，依次对应TextOverflow中�
 textAlign?: int | TextAlign
 ```
 
-设置被计算文本水平方向的对齐方式。
-
-默认值：TextAlign.Start
-
-int类型取值范围为[0,3]，取值间隔为1，依次对应TextAlign中的枚举值。
+Alignment of text.
 
 **Type:** int \| TextAlign
 
@@ -274,11 +242,7 @@ int类型取值范围为[0,3]，取值间隔为1，依次对应TextAlign中的�
 textCase?: int | TextCase
 ```
 
-设置被计算文本大小写。
-
-默认值：TextCase.Normal
-
-int类型取值范围为[0,2]，取值间隔为1，依次对应TextCase中的枚举值。
+Type of letter in the text font
 
 **Type:** int \| TextCase
 
@@ -298,7 +262,7 @@ int类型取值范围为[0,2]，取值间隔为1，依次对应TextCase中的枚
 textContent: string | Resource
 ```
 
-设置被计算文本内容。
+Text to display.
 
 **Type:** string \| Resource
 
@@ -318,7 +282,7 @@ textContent: string | Resource
 textIndent?: double | string
 ```
 
-设置首行文本缩进，默认值为0。
+Specify the indentation of the first line in a text-block.
 
 **Type:** double \| string
 
@@ -338,13 +302,7 @@ textIndent?: double | string
 wordBreak?: WordBreak
 ```
 
-设置断行规则。
-
-默认值：WordBreak.BREAK_WORD
-
-**说明：**
-
-WordBreak.BREAK_ALL与{overflow: TextOverflow.Ellipsis}，`maxLines`组合使用可实现英文单词按字母截断，超出部分以省略号显示。
+Set the word break type.
 
 **Type:** [WordBreak](arkts-arkui-wordbreak-e.md)
 

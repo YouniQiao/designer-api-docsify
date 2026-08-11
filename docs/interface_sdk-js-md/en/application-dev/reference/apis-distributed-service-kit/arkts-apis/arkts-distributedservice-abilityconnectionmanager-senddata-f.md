@@ -12,7 +12,7 @@ import { abilityConnectionManager } from 'kits/@kit.DistributedServiceKit';
 function sendData(sessionId: int, data: ArrayBuffer): Promise<void>
 ```
 
-应用连接成功后，设备A或设备B可向对端设备发送[ArrayBuffer](../../../arkts-utils/arraybuffer-object.md)字节流。
+Sends [ArrayBuffer](../../../arkts-utils/arraybuffer-object.md) byte streams from one device to another after a connection is successfully established.
 
 **Since:** 18
 
@@ -28,20 +28,20 @@ function sendData(sessionId: int, data: ArrayBuffer): Promise<void>
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| sessionId | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | 协同会话ID。 |
-| data | ArrayBuffer | Yes | 字节流信息。 |
+| sessionId | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | ID of the collaboration session. |
+| data | ArrayBuffer | Yes | Byte stream information. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | 无返回结果的promise对象。 |
+| Promise&lt;void&gt; | Promise that returns no value. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. |
 
 ## Examples
 

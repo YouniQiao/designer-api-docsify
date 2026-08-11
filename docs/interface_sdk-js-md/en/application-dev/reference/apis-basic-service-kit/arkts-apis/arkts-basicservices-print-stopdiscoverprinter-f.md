@@ -12,7 +12,7 @@ import { print } from 'kits/@kit.BasicServicesKit';
 function stopDiscoverPrinter(callback: AsyncCallback<void>): void
 ```
 
-停止发现打印机，使用callback异步回调。
+Stops discovering printers. This API uses an asynchronous callback to return the result.
 
 **Since:** 20
 
@@ -30,14 +30,14 @@ function stopDiscoverPrinter(callback: AsyncCallback<void>): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | 停止发现打印机的异步回调。 |
+| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback to be invoked when printer discovery is stopped. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 201 | the application does not have permission to call this function. |
-| 202 | not system application<br>**Applicable version:** 10 - 19 |
+| [201](../../errorcode-universal.md#201-permission-denied) | the application does not have permission to call this function. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | not system application<br>**Applicable version:** 10 - 19 |
 
 ## Examples
 
@@ -61,7 +61,7 @@ print.stopDiscoverPrinter((err: BusinessError) => {
 function stopDiscoverPrinter(): Promise<void>
 ```
 
-停止发现打印机，使用Promise异步回调。
+Stops discovering printers. This API uses a promise to return the result.
 
 **Since:** 20
 
@@ -79,14 +79,14 @@ function stopDiscoverPrinter(): Promise<void>
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise对象，无返回结果。 |
+| Promise&lt;void&gt; | Promise that returns no value. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 201 | the application does not have permission to call this function. |
-| 202 | not system application<br>**Applicable version:** 10 - 19 |
+| [201](../../errorcode-universal.md#201-permission-denied) | the application does not have permission to call this function. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | not system application<br>**Applicable version:** 10 - 19 |
 
 ## Examples
 

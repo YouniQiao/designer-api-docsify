@@ -1,6 +1,6 @@
 # MotionBlurAnchor
 
-Define motion blur anchor coordinates.
+Describes the coordinates of the motion blur anchor.
 
 **Since:** 12
 
@@ -16,7 +16,7 @@ Define motion blur anchor coordinates.
 x: number
 ```
 
-Define anchor coordinate x-value.Value range [0.0, 1.0].
+X-coordinate of the anchor. The value range is [0.0, 1.0].
 
 **Type:** number
 
@@ -38,7 +38,7 @@ Define anchor coordinate x-value.Value range [0.0, 1.0].
 y: number
 ```
 
-Define anchor coordinate y-value.Value range [0.0, 1.0].
+Y-coordinate of the anchor. The value range is [0.0, 1.0].
 
 **Type:** number
 

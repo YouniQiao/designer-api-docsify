@@ -4,9 +4,10 @@
 type ImageErrorCallback = (error: ImageError) => void
 ```
 
-图片加载异常时触发此回调。
+Triggered when an error occurs during image loading.
 
-当组件的参数类型为[AnimatedDrawableDescriptor](../arkts-apis/arkts-arkui-arkui-drawabledescriptor-animateddrawabledescriptor-c.md/arkts-arkui-arkui-drawabledescriptor-animateddrawabledescriptor-c.md)时该事件不触发。
+This event is not triggered if the parameter type of the component is  
+[AnimatedDrawableDescriptor](../arkts-apis/arkts-arkui-arkui-drawabledescriptor-animateddrawabledescriptor-c.md/arkts-arkui-arkui-drawabledescriptor-animateddrawabledescriptor-c.md).
 
 **Since:** 9
 
@@ -24,5 +25,5 @@ type ImageErrorCallback = (error: ImageError) => void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| error | [ImageError](../arkts-apis/arkts-arkui-image-imageerror-i.md) | Yes | 图片加载异常时触发回调的返回对象。 |
+| error | [ImageError](../arkts-apis/arkts-arkui-image-imageerror-i.md) | Yes | Object returned by the callback triggered when an exception occurs during image loading. |
 

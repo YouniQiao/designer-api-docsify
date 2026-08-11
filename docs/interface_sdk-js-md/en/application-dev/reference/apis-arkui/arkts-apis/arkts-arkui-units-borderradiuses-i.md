@@ -1,10 +1,6 @@
 # BorderRadiuses
 
-type BorderRadiuses = { topLeft: Length; topRight: Length; bottomLeft: Length; bottomRight: Length; }
-
-圆角类型，用于描述组件边框圆角半径。
-
-引用该对象时，至少传入一个参数。
+Defines the border radius property.
 
 **Since:** 23
 
@@ -20,7 +16,7 @@ type BorderRadiuses = { topLeft: Length; topRight: Length; bottomLeft: Length; b
 bottomLeft?: Length
 ```
 
-组件左下角圆角半径。
+bottom-left property.
 
 **Type:** [Length](arkts-arkui-length-t.md)
 
@@ -40,7 +36,7 @@ bottomLeft?: Length
 bottomRight?: Length
 ```
 
-组件右下角圆角半径。
+bottom-right property.
 
 **Type:** [Length](arkts-arkui-length-t.md)
 
@@ -60,7 +56,7 @@ bottomRight?: Length
 topLeft?: Length
 ```
 
-组件左上角圆角半径。
+top-left property.
 
 **Type:** [Length](arkts-arkui-length-t.md)
 
@@ -80,7 +76,7 @@ topLeft?: Length
 topRight?: Length
 ```
 
-组件右上角圆角半径。
+top-right property.
 
 **Type:** [Length](arkts-arkui-length-t.md)
 

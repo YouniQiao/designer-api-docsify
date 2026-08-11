@@ -1,6 +1,6 @@
 # GestureShortcut
 
-组件的智慧手势响应优先级枚举。
+Define the smart gesture shortcut priority enumeration.
 
 **Since:** 26.0.0
 
@@ -16,7 +16,7 @@
 PRIMARY = 0
 ```
 
-智慧手势响应优先级。当前智慧手势响应配置仅支持该取值。
+Primary priority.
 
 **Since:** 26.0.0
 

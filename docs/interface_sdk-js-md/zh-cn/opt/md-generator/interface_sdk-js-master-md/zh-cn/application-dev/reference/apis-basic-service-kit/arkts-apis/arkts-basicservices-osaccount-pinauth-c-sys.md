@@ -1,0 +1,126 @@
+# PINAuth（系统接口）
+
+PIN码认证基类。
+
+**起始版本：** 8
+
+<!--Device-osAccount-class PINAuth--><!--Device-osAccount-class PINAuth-End-->
+
+**系统能力：** SystemCapability.Account.OsAccount
+
+**系统接口：** 此接口为系统接口。
+
+## constructor
+
+```TypeScript
+constructor()
+```
+
+创建PIN码认证的实例。
+
+**起始版本：** 8
+
+<!--Device-PINAuth-constructor()--><!--Device-PINAuth-constructor()-End-->
+
+**系统能力：** SystemCapability.Account.OsAccount
+
+**系统接口：** 此接口为系统接口。
+
+**错误码：**
+
+| 错误码ID |
+| --- |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
+
+## 示例
+
+```TypeScript
+let pinAuth: osAccount.PINAuth = new osAccount.PINAuth();
+```
+
+## registerInputer
+
+```TypeScript
+registerInputer(inputer: IInputer): void
+```
+
+注册PIN码输入器。
+
+**起始版本：** 8
+
+**需要权限：** ohos.permission.ACCESS_PIN_AUTH
+
+<!--Device-PINAuth-registerInputer(inputer: IInputer): void--><!--Device-PINAuth-registerInputer(inputer: IInputer): void-End-->
+
+**系统能力：** SystemCapability.Account.OsAccount
+
+**系统接口：** 此接口为系统接口。
+
+**参数：**
+
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| inputer | [IInputer](arkts-basicservices-osaccount-iinputer-i-sys.md) | 是 |
+
+**错误码：**
+
+| 错误码ID |
+| --- |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
+| [201](../../errorcode-universal.md#201-权限校验失败) |
+| [12300002](../../apis-basic-services-kit/errorcode-account.md#12300002-无效参数) |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
+| [12300001](../../apis-basic-services-kit/errorcode-account.md#12300001-系统服务异常) |
+| [12300103](../../apis-basic-services-kit/errorcode-account.md#12300103-凭据输入器已注册) |
+
+## 示例
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let pinAuth: osAccount.PINAuth = new osAccount.PINAuth();
+let password = new Uint8Array([0, 0, 0, 0, 0]);
+try {
+  pinAuth.registerInputer({
+    onGetData: (authSubType: osAccount.AuthSubType, callback: osAccount.IInputData) => {
+      callback.onSetData(authSubType, password);
+    }
+  });
+  console.info('registerInputer success.');
+} catch (e) {
+  const err = e as BusinessError;
+  console.error(`registerInputer exception = code is ${err.code}, message is ${err.message}`);
+}
+```
+
+## unregisterInputer
+
+```TypeScript
+unregisterInputer(): void
+```
+
+解注册PIN码输入器。
+
+**起始版本：** 8
+
+**需要权限：** ohos.permission.ACCESS_PIN_AUTH
+
+<!--Device-PINAuth-unregisterInputer(): void--><!--Device-PINAuth-unregisterInputer(): void-End-->
+
+**系统能力：** SystemCapability.Account.OsAccount
+
+**系统接口：** 此接口为系统接口。
+
+**错误码：**
+
+| 错误码ID |
+| --- |
+| [201](../../errorcode-universal.md#201-权限校验失败) |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
+
+## 示例
+
+```TypeScript
+let pinAuth: osAccount.PINAuth = new osAccount.PINAuth();
+pinAuth.unregisterInputer();
+```

@@ -1,6 +1,6 @@
 # BlurStyle
 
-模糊样式类型。
+enum Blur style
 
 **Since:** 23
 
@@ -16,7 +16,7 @@
 Thin = 0
 ```
 
-轻薄材质模糊。
+Thin material.
 
 **Since:** 23
 
@@ -31,10 +31,10 @@ Thin = 0
 ## Regular
 
 ```TypeScript
-Regular
+Regular = 1
 ```
 
-普通厚度材质模糊。
+Regular material.
 
 **Since:** 23
 
@@ -42,17 +42,17 @@ Regular
 
 **Model restriction:** This API can be used only in the stage model.
 
-<!--Device-BlurStyle-Regular--><!--Device-BlurStyle-Regular-End-->
+<!--Device-BlurStyle-Regular = 1--><!--Device-BlurStyle-Regular = 1-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## Thick
 
 ```TypeScript
-Thick
+Thick = 2
 ```
 
-厚材质模糊。
+Thick material.
 
 **Since:** 23
 
@@ -60,17 +60,17 @@ Thick
 
 **Model restriction:** This API can be used only in the stage model.
 
-<!--Device-BlurStyle-Thick--><!--Device-BlurStyle-Thick-End-->
+<!--Device-BlurStyle-Thick = 2--><!--Device-BlurStyle-Thick = 2-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## BACKGROUND_THIN
 
 ```TypeScript
-BACKGROUND_THIN
+BACKGROUND_THIN = 3
 ```
 
-近距景深模糊。
+Material that creates the minimum depth of field effect.
 
 **Since:** 23
 
@@ -78,17 +78,17 @@ BACKGROUND_THIN
 
 **Model restriction:** This API can be used only in the stage model.
 
-<!--Device-BlurStyle-BACKGROUND_THIN--><!--Device-BlurStyle-BACKGROUND_THIN-End-->
+<!--Device-BlurStyle-BACKGROUND_THIN = 3--><!--Device-BlurStyle-BACKGROUND_THIN = 3-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## BACKGROUND_REGULAR
 
 ```TypeScript
-BACKGROUND_REGULAR
+BACKGROUND_REGULAR = 4
 ```
 
-中距景深模糊。
+Material that creates a medium shallow depth of field effect.
 
 **Since:** 23
 
@@ -96,17 +96,17 @@ BACKGROUND_REGULAR
 
 **Model restriction:** This API can be used only in the stage model.
 
-<!--Device-BlurStyle-BACKGROUND_REGULAR--><!--Device-BlurStyle-BACKGROUND_REGULAR-End-->
+<!--Device-BlurStyle-BACKGROUND_REGULAR = 4--><!--Device-BlurStyle-BACKGROUND_REGULAR = 4-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## BACKGROUND_THICK
 
 ```TypeScript
-BACKGROUND_THICK
+BACKGROUND_THICK = 5
 ```
 
-远距景深模糊。
+Material that creates a high shallow depth of field effect.
 
 **Since:** 23
 
@@ -114,17 +114,17 @@ BACKGROUND_THICK
 
 **Model restriction:** This API can be used only in the stage model.
 
-<!--Device-BlurStyle-BACKGROUND_THICK--><!--Device-BlurStyle-BACKGROUND_THICK-End-->
+<!--Device-BlurStyle-BACKGROUND_THICK = 5--><!--Device-BlurStyle-BACKGROUND_THICK = 5-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## BACKGROUND_ULTRA_THICK
 
 ```TypeScript
-BACKGROUND_ULTRA_THICK
+BACKGROUND_ULTRA_THICK = 6
 ```
 
-超远距景深模糊。
+Material that creates the maximum depth of field effect.
 
 **Since:** 23
 
@@ -132,17 +132,17 @@ BACKGROUND_ULTRA_THICK
 
 **Model restriction:** This API can be used only in the stage model.
 
-<!--Device-BlurStyle-BACKGROUND_ULTRA_THICK--><!--Device-BlurStyle-BACKGROUND_ULTRA_THICK-End-->
+<!--Device-BlurStyle-BACKGROUND_ULTRA_THICK = 6--><!--Device-BlurStyle-BACKGROUND_ULTRA_THICK = 6-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## NONE
 
 ```TypeScript
-NONE
+NONE = 7
 ```
 
-关闭模糊。
+No blur.
 
 **Since:** 23
 
@@ -150,7 +150,7 @@ NONE
 
 **Model restriction:** This API can be used only in the stage model.
 
-<!--Device-BlurStyle-NONE--><!--Device-BlurStyle-NONE-End-->
+<!--Device-BlurStyle-NONE = 7--><!--Device-BlurStyle-NONE = 7-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -160,7 +160,7 @@ NONE
 COMPONENT_ULTRA_THIN = 8
 ```
 
-组件超轻薄材质模糊。
+Component ultra-thin material.
 
 **Since:** 23
 
@@ -178,7 +178,7 @@ COMPONENT_ULTRA_THIN = 8
 COMPONENT_THIN = 9
 ```
 
-组件轻薄材质模糊。
+Component thin material.
 
 **Since:** 23
 
@@ -196,7 +196,7 @@ COMPONENT_THIN = 9
 COMPONENT_REGULAR = 10
 ```
 
-组件普通材质模糊。
+Component regular material.
 
 **Since:** 23
 
@@ -214,7 +214,7 @@ COMPONENT_REGULAR = 10
 COMPONENT_THICK = 11
 ```
 
-组件厚材质模糊。
+Defines the thick component material.
 
 **Since:** 23
 
@@ -232,7 +232,7 @@ COMPONENT_THICK = 11
 COMPONENT_ULTRA_THICK = 12
 ```
 
-组件超厚材质模糊。
+Defines the ultra thick component material.
 
 **Since:** 23
 

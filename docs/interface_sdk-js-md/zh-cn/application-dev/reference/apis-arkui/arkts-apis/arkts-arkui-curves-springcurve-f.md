@@ -1,11 +1,5 @@
 # springCurve
 
-## 导入模块
-
-```TypeScript
-import { curves } from 'kits/@kit.ArkUI';
-```
-
 ## springCurve
 
 ```TypeScript
@@ -37,5 +31,5 @@ export function springCurve(velocity: double, mass: double, stiffness: double, d
 
 | 类型 | 说明 |
 | --- | --- |
-| [ICurve](arkts-arkui-curves-icurve-i.md) | 曲线的插值对象。 |
+| [ICurve](arkts-arkui-icurve-t.md) | 曲线的插值对象。 |
 

@@ -4,7 +4,7 @@
 type CallbackFunctionWithError = (e: Error) => void
 ```
 
-注册带有错误码的回调函数类型。
+Describes a callback function with an error message.
 
 **Since:** 12
 
@@ -20,5 +20,5 @@ type CallbackFunctionWithError = (e: Error) => void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| e | Error | Yes | 错误信息。 |
+| e | Error | Yes | Error message. |
 

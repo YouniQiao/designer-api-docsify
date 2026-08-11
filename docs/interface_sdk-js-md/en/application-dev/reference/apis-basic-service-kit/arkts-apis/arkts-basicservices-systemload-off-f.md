@@ -12,7 +12,7 @@ import { systemLoad } from 'kits/@kit.BasicServicesKit';
 function off(type: 'systemLoadChange', callback?: Callback<SystemLoadLevel>): void
 ```
 
-取消注册系统负载回调，使用callback异步回调。
+Disables listening for system load level changes. This API uses an asynchronous callback to return the result.
 
 **Since:** 12
 
@@ -26,14 +26,14 @@ function off(type: 'systemLoadChange', callback?: Callback<SystemLoadLevel>): vo
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'systemLoadChange' | Yes | 固定取值'systemLoadChange'，系统负载变化类型。 |
-| callback | [Callback](arkts-basicservices-base-callback-i.md)&lt;SystemLoadLevel&gt; | No | 回调函数，返回本次取消注册系统负载时的系统负载融合档位。 |
+| type | 'systemLoadChange' | Yes | Change type. This parameter has a fixed value of **systemLoadChange**. |
+| callback | [Callback](arkts-basicservices-base-callback-i.md)&lt;SystemLoadLevel&gt; | No | Callback used to return the system load level. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. Possible cause: 1. Callback parameter error; &lt;br&gt; 2. Unregister type has not register; 3. Parameter verification failed. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible cause: 1. Callback parameter error; &lt;br&gt; 2. Unregister type has not register; 3. Parameter verification failed. |
 
 ## Examples
 

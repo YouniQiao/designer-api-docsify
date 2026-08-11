@@ -1,6 +1,6 @@
 # SelectedMode
 
-选中子页签的显示模式枚举。
+Enum for the mode of the tab bar when selected.
 
 **Since:** 23
 
@@ -16,7 +16,7 @@
 INDICATOR
 ```
 
-使用下划线模式。
+Indicator mode.
 
 **Since:** 23
 
@@ -34,7 +34,7 @@ INDICATOR
 BOARD
 ```
 
-使用背板模式。
+Board mode.
 
 **Since:** 23
 

@@ -1,6 +1,6 @@
 # AudioDeviceDescriptor
 
-描述音频设备。
+Describes an audio device.
 
 **Since:** 7
 
@@ -22,9 +22,9 @@ import { audio } from 'kits/@kit.AudioKit';
 readonly address: string
 ```
 
-设备静态MAC地址。
+Static MAC address of the device.
 
-如果是蓝牙设备，需要申请权限ohos.permission.USE_BLUETOOTH。
+For a Bluetooth device, you must request the ohos.permission.USE_BLUETOOTH permission.
 
 **Type:** string
 
@@ -44,7 +44,7 @@ readonly address: string
 readonly capabilities?: Array<AudioStreamInfo>
 ```
 
-设备支持的音频流能力。
+Audio stream capabilities supported by the device.
 
 **Type:** Array&lt;AudioStreamInfo&gt;
 
@@ -62,7 +62,7 @@ readonly capabilities?: Array<AudioStreamInfo>
 readonly channelCounts: Array<int>
 ```
 
-支持的通道数。
+Number of channels supported.
 
 **Type:** ArkTS-Dyn: Array&lt;number&gt;  <br>ArkTS-Sta：Array&lt;int&gt;
 
@@ -82,7 +82,7 @@ readonly channelCounts: Array<int>
 readonly channelMasks: Array<int>
 ```
 
-支持的通道掩码。
+Supported channel masks.
 
 **Type:** ArkTS-Dyn: Array&lt;number&gt;  <br>ArkTS-Sta：Array&lt;int&gt;
 
@@ -102,7 +102,7 @@ readonly channelMasks: Array<int>
 readonly deviceRole: DeviceRole
 ```
 
-设备角色。
+Device role.
 
 **Type:** [DeviceRole](arkts-audio-audio-devicerole-e.md)
 
@@ -122,7 +122,7 @@ readonly deviceRole: DeviceRole
 readonly deviceType: DeviceType
 ```
 
-设备类型。
+Device type.
 
 **Type:** [DeviceType](../../apis-avsession-kit/arkts-apis/arkts-avsession-avsession-devicetype-e.md)
 
@@ -142,7 +142,7 @@ readonly deviceType: DeviceType
 readonly displayName: string
 ```
 
-设备显示名。
+Display name of the device.
 
 **Type:** string
 
@@ -162,7 +162,7 @@ readonly displayName: string
 readonly encodingTypes?: Array<AudioEncodingType>
 ```
 
-支持的编码类型。
+Supported encoding types.
 
 **Type:** Array&lt;AudioEncodingType&gt;
 
@@ -182,7 +182,7 @@ readonly encodingTypes?: Array<AudioEncodingType>
 readonly id: int
 ```
 
-唯一的设备id。
+Audio device id.
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
@@ -202,7 +202,7 @@ readonly id: int
 readonly model?: string
 ```
 
-设备的具体型号类别。
+Model of the device.
 
 **Type:** string
 
@@ -220,9 +220,9 @@ readonly model?: string
 readonly name: string
 ```
 
-设备名称。
+Device name.
 
-如果是蓝牙设备，需要申请权限ohos.permission.USE_BLUETOOTH。
+For a Bluetooth device, you must request the ohos.permission.USE_BLUETOOTH permission.
 
 **Type:** string
 
@@ -242,7 +242,9 @@ readonly name: string
 readonly sampleRates: Array<int>
 ```
 
-支持的采样率。
+Supported sampling rates.
+
+SystemCapability.Multimedia.Audio.Device
 
 **Type:** ArkTS-Dyn: Array&lt;number&gt;  <br>ArkTS-Sta：Array&lt;int&gt;
 
@@ -262,7 +264,7 @@ readonly sampleRates: Array<int>
 readonly spatializationSupported?: boolean
 ```
 
-设备是否支持空间音频。true表示支持空间音频，false表示不支持空间音频。
+Whether the device supports spatial audio rendering. **true** if supported, **false** otherwise.
 
 **Type:** boolean
 

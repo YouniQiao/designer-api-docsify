@@ -12,7 +12,7 @@ import { commonEventManager } from 'kits/@kit.BasicServicesKit';
 function publishAsUser(event: string, userId: int, callback: AsyncCallback<void>): void
 ```
 
-向指定用户发布公共事件。使用callback异步回调。
+Publishes a common event to a specified user. This API uses an asynchronous callback to return the result.
 
 **Since:** 9
 
@@ -28,22 +28,24 @@ function publishAsUser(event: string, userId: int, callback: AsyncCallback<void>
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| event | string | Yes | 表示要发布的公共事件。 |
-| userId | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | 表示指定接收此公共事件的用户ID。 |
-| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | 回调函数。当公共事件发布成功，err为undefined，否则为错误对象。 |
+| event | string | Yes | Name of the common event to publish. |
+| userId | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | ID of the user who will receive the common event. |
+| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined**; otherwise, **err** is an error object. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 1500006 | Invalid userId.<br>**Applicable version:** 21 and later |
-| 1500007 | Failed to send the message to the common event service. |
-| 1500003 | The common event sending frequency too high.<br>**Applicable version:** 20 and later |
-| 202 | Permission verification failed. A non-system application calls a system API. |
-| 1500008 | Failed to initialize the common event service. |
-| 1500009 | Failed to obtain system parameters. |
+| [1500006](../../apis-basic-services-kit/errorcode-CommonEventService.md#1500006-invalid-user-id) | Invalid userId.<br>**Applicable version:** 21 and later |
+| [1500007](../../apis-basic-services-kit/errorcode-CommonEventService.md#1500007-failed-to-send-a-request-through-ipc) | Failed to send the message to the common event service. |
+| [1500003](../../apis-basic-services-kit/errorcode-CommonEventService.md#1500003-common-event-sending-frequency-is-too-high) | The common event sending frequency too high.<br>**Applicable version:** 20 and later |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
+| [1500008](../../apis-basic-services-kit/errorcode-CommonEventService.md#1500008-failed-to-initialize-the-common-event-service) | Failed to initialize the common event service. |
+| [1500009](../../apis-basic-services-kit/errorcode-CommonEventService.md#1500009-failed-to-obtain-system-parameters) | Failed to obtain system parameters. |
 
 ## Examples
+
+ArkTS-Dyn example:
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -54,6 +56,29 @@ let userId = 100;
 // Publish a common event.
 try {
     commonEventManager.publishAsUser('event', userId, (err: BusinessError) => {
+      if (err) {
+        console.error(`publishAsUser failed, code is ${err.code}, message is ${err.message}`);
+        return;
+      }
+      console.info('publishAsUser');
+    });
+} catch (error) {
+    let err: BusinessError = error as BusinessError;
+    console.error(`publishAsUser failed, code is ${err.code}, message is ${err.message}`);
+}
+```
+
+ArkTS-Sta example:
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+// Specify the target user.
+let userId = 1;
+
+// Publish the common event.
+try {
+    commonEventManager.publishAsUser('event', userId, (err: BusinessError | null) => {
       if (err) {
         console.error(`publishAsUser failed, code is ${err.code}, message is ${err.message}`);
         return;
@@ -78,7 +103,7 @@ function publishAsUser(
   ): void
 ```
 
-向指定用户发布公共事件并指定发布信息。使用callback异步回调。
+Publishes a common event to a specified user and specifies the information to be published. This API uses an asynchronous callback to return the result.
 
 **Since:** 9
 
@@ -94,38 +119,68 @@ function publishAsUser(
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| event | string | Yes | 表示要发布的公共事件。 |
-| userId | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | 表示指定接收此公共事件的用户ID。 |
-| options | [CommonEventPublishData](arkts-basicservices-commoneventmanager-commoneventpublishdata-t.md) | Yes | 表示发布公共事件的属性。 |
-| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | 回调函数。当公共事件发布成功，err为undefined，否则为错误对象。 |
+| event | string | Yes | Name of the common event to publish. |
+| userId | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | ID of the user who will receive the common event. |
+| options | [CommonEventPublishData](arkts-basicservices-commoneventmanager-commoneventpublishdata-t.md) | Yes | Properties of the common event to publish. |
+| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined**; otherwise, **err** is an error object. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 1500006 | Invalid userId.<br>**Applicable version:** 21 and later |
-| 1500007 | Failed to send the message to the common event service. |
-| 1500003 | The common event sending frequency too high.<br>**Applicable version:** 20 and later |
-| 202 | Permission verification failed. A non-system application calls a system API. |
-| 1500008 | Failed to initialize the common event service. |
-| 1500009 | Failed to obtain system parameters. |
+| [1500006](../../apis-basic-services-kit/errorcode-CommonEventService.md#1500006-invalid-user-id) | Invalid userId.<br>**Applicable version:** 21 and later |
+| [1500007](../../apis-basic-services-kit/errorcode-CommonEventService.md#1500007-failed-to-send-a-request-through-ipc) | Failed to send the message to the common event service. |
+| [1500003](../../apis-basic-services-kit/errorcode-CommonEventService.md#1500003-common-event-sending-frequency-is-too-high) | The common event sending frequency too high.<br>**Applicable version:** 20 and later |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
+| [1500008](../../apis-basic-services-kit/errorcode-CommonEventService.md#1500008-failed-to-initialize-the-common-event-service) | Failed to initialize the common event service. |
+| [1500009](../../apis-basic-services-kit/errorcode-CommonEventService.md#1500009-failed-to-obtain-system-parameters) | Failed to obtain system parameters. |
 
 ## Examples
+
+ArkTS-Dyn example:
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
 
 // Information of the common event.
 let options: commonEventManager.CommonEventPublishData = {
-  code: 0,       // Initial code of the common event.
+  code: 0,        // Initial code of the common event.
   data: 'initial data', // Initial data of the common event.
-};
+}
 
 // Specify the user to whom the common event will be published.
 let userId = 100;
 // Publish a common event.
 try {
   commonEventManager.publishAsUser('event', userId, options, (err: BusinessError) => {
+    if (err) {
+      console.error(`publishAsUser failed, code is ${err.code}, message is ${err.message}`);
+      return;
+    }
+    console.info('publishAsUser');
+  });
+} catch (error) {
+  let err: BusinessError = error as BusinessError;
+  console.error(`publishAsUser failed, code is ${err.code}, message is ${err.message}`);
+}
+```
+
+ArkTS-Sta example:
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+// Information about the common event.
+let options:commonEventManager.CommonEventPublishData = {
+  code: 0,// Initial code of the common event.
+  data: 'initial data',// Initial data of the common event.
+}
+
+// Specify the target user.
+let userId = 1;
+// Publish the common event.
+try {
+  commonEventManager.publishAsUser('event', userId, options, (err: BusinessError | null) => {
     if (err) {
       console.error(`publishAsUser failed, code is ${err.code}, message is ${err.message}`);
       return;

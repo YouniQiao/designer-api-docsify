@@ -12,7 +12,7 @@ import { bundleManager } from 'kits/@kit.AbilityKit';
 function getAbilityInfo(uri: string, abilityFlags: int): Promise<Array<AbilityInfo>>
 ```
 
-获取指定资源标识符和组件信息标志对应的Ability信息。使用Promise异步回调。
+Obtains the ability information based on the given resource identifier and ability flag. This API uses a promise to return the result.
 
 **Since:** 20
 
@@ -30,42 +30,41 @@ function getAbilityInfo(uri: string, abilityFlags: int): Promise<Array<AbilityIn
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| uri | string | Yes | 表示统一资源标识符URI，取值与 [module.json5配置文件中skills下的uris字段](../../../quick-start/module-configuration-file.md#skills标签)相对应。 |
-| abilityFlags | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | 表示[Ability组件信息标志](arkts-ability-bundlemanager-abilityflag-e.md)，指示需要获取的 Ability组件信息的内容。 |
+| uri | string | Yes | URI of the resource. The value is the same as that of the [uris field under skills in the module.json5 file](../../../quick-start/module-configuration-file.md#skills). |
+| abilityFlags | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | [Ability flag](arkts-ability-bundlemanager-abilityflag-e.md), indicating the ability information to be obtained. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;Array&lt;AbilityInfo&gt;&gt; | Promise对象，返回获取到的Ability信息数组。 |
+| Promise&lt;Array&lt;AbilityInfo&gt;&gt; | Promise used to return an array of ability information. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 201 | Permission denied. |
-| 17700003 | The ability is not found. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
+| [17700003](../errorcode-bundle.md#17700003-ability-name-does-not-exist) | The ability is not found. |
 
 ## Examples
 
 ```TypeScript
 import { bundleManager } from '@kit.AbilityKit';
 import { BusinessError } from '@kit.BasicServicesKit';
-import { hilog } from '@kit.PerformanceAnalysisKit';
 
 let abilityFlags = bundleManager.AbilityFlag.GET_ABILITY_INFO_WITH_APPLICATION;
 let uri = "https://www.example.com";
 
 try {
   bundleManager.getAbilityInfo(uri, abilityFlags).then((data) => {
-    hilog.info(0x0000, 'testTag', 'getAbilityInfo successfully. Data: %{public}s', JSON.stringify(data));
+    console.info('getAbilityInfo successfully. Data: ' + JSON.stringify(data));
   }).catch((err: BusinessError) => {
     let message = (err as BusinessError).message;
-    hilog.error(0x0000, 'testTag', 'getAbilityInfo failed. Cause: %{public}s', message);
+    console.error('getAbilityInfo failed. Cause: ' + message);
   });
 } catch (err) {
   let message = (err as BusinessError).message;
-  hilog.error(0x0000, 'testTag', 'getAbilityInfo failed. Cause: %{public}s', message);
+  console.error('getAbilityInfo failed. Cause: ' + message);
 }
 ```
 

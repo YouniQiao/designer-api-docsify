@@ -1,6 +1,6 @@
 # AppCrashPolicy
 
-提供崩溃事件配置策略的定义。
+Defines the application crash event configuration policy.
 
 **Since:** 24
 
@@ -22,17 +22,7 @@ import { hiAppEvent } from 'kits/@kit.PerformanceAnalysisKit';
 collectMinidump?: boolean
 ```
 
-是否使能[minidump](../../../dfx/performance-analysis-kit-terminology.md#minidump)，默认值为false。
-
-true：[params字段说明](../../../dfx/hiappevent-watcher-crash-events.md#params字段说明)中log_over_limit字段判断生成的与已存在的故障日志文件的大小总和上限调整为35MB。
-
-false：log_over_limit字段判断生成的与已存在的故障日志文件的大小总和上限恢复为5MB。
-
-**说明：**该配置项为持久化配置，应用未重新设置前，值不变。
-
-**起始版本**：26.0.0
-
-**原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务中使用。
+Policy for the APP_CRASH event the value true means to the minidump capture capability is enabled.the value false means to the minidump capture function is disabled.&lt;br&gt;Default value:false.
 
 **Type:** boolean
 
@@ -52,17 +42,11 @@ false：log_over_limit字段判断生成的与已存在的故障日志文件的�
 extendPcLrPrinting?: boolean
 ```
 
-设置崩溃日志中是否打印pc和lr寄存器前后的内存值。
+The policy for APP_CRASH event.Whether to print the memory values before and after the PC and LR registers in crash logs.The value **true** means to print the memory values of 248 bytes before and 256 bytes after the PC and LR on 64-bit system, or 124 bytes before and 128 bytes after on 32-bit systems.
 
-true：64位系统打印pc和lr寄存器地址向前248字节、向后256字节范围的内存值。32位系统打印pc和lr寄存器地址向前124字节、向后128字节范围的内存值。
+The value **false** means to print the memory values of 16 bytes before and 232 bytes after the PC and LR on 64-bit system, or 8 bytes before and 116 bytes after on 32-bit systems.
 
-false：64位系统打印pc和lr寄存器地址向前16字节、向后232字节范围的内存值。32位系统打印pc和lr寄存器地址向前8字节、向后116字节范围的内存值。
-
-默认值：false。
-
-**起始版本**：26.0.0
-
-**原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务中使用。
+The default value is **false**.
 
 **Type:** boolean
 
@@ -82,11 +66,7 @@ false：64位系统打印pc和lr寄存器地址向前16字节、向后232字节�
 logFileCutoffSzBytes?: int
 ```
 
-设置崩溃日志截断大小。单位为byte，取值范围为[0, 5242880]。默认值取0，表示不截断崩溃日志。
-
-**起始版本**：26.0.0
-
-**原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务中使用。
+The policy for APP_CRASH event.Truncation size for crash logs. The value ranges from 0 to 5242880, in bytes. The default value is 0, indicating that crash logs are not truncated.
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
@@ -106,15 +86,15 @@ logFileCutoffSzBytes?: int
 pageSwitchLogEnable?: boolean
 ```
 
-是否使能崩溃事件的页面切换日志。
+Whether to enable the page switching log for APP_CRASH event.
 
-true：使能崩溃事件的页面切换日志。
+**true**: yes.
 
-false：不使能崩溃事件的页面切换日志。
+**false**: no.
 
-默认值：false。
+The default value is **false**.
 
-**说明：**应用每次使能行为只在应用当前生命周期生效，在同一生命周期内，以最后一次成功调用的使能状态为准。应用重启后，需要重新设置使能状态。
+Note: The enabling behavior of an application takes effect only in its current lifecycle. In the same lifecycle,the enabling status of the last successful call is used. After the application restarts, you need to set the enabling status again.
 
 **Type:** boolean
 
@@ -134,17 +114,14 @@ false：不使能崩溃事件的页面切换日志。
 simplifyVmaPrinting?: boolean
 ```
 
-设置崩溃日志是否打印所有VMA（Virtual Memory Area，虚拟内存空间）的映射信息，即崩溃日志中Maps。
+The policy for APP_CRASH event.Whether to print the mapping information of all virtual memory areas (VMAs) in the crash log, that is, the  
+**Maps** field in the crash log.
 
-true：只打印崩溃日志中出现的地址所属的VMA映射信息，以减小日志大小。
+The value **true** means to print only the VMA mapping information of the addresses in the crash log to reduce the log size.
 
-false：打印所有VMA映射信息。
+The value **false** means to print all VMA mapping information.
 
-默认值：false。
-
-**起始版本**：26.0.0
-
-**原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务中使用。
+The default value is **false**.
 
 **Type:** boolean
 

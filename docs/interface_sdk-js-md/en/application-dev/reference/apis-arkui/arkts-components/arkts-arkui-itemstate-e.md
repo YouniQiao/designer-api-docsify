@@ -1,6 +1,6 @@
 # ItemState
 
-步骤导航器nextLabel的显示状态。
+Display status of **nextLabel** in the stepper.
 
 **Since:** 8
 
@@ -20,11 +20,12 @@
 Normal
 ```
 
-正常状态，右侧文本按钮正常显示，可点击进入下一个StepperItem。
+The button on the right is clickable and can navigate users to the next **StepperItem** when it is clicked.
 
-**说明：**
+**NOTE：**
 
-从API version 8开始支持，从API version 22开始废弃，建议使用[index](../arkts-apis/arkts-arkui-swiper-swiperattribute-i.md/arkts-arkui-swiper-swiperattribute-i.md#index)替代。
+This API is supported since API version 8 and deprecated since API version 22. You are advised to use  
+[index](../arkts-apis/arkts-arkui-swiper-swiperattribute-i.md/arkts-arkui-swiper-swiperattribute-i.md#index) instead.
 
 **Since:** 8
 
@@ -46,11 +47,12 @@ Normal
 Disabled
 ```
 
-不可用状态，右侧文本按钮灰度显示，不可点击进入下一个StepperItem。
+The button on the right is disabled.
 
-**说明：**
+**NOTE：**
 
-从API version 8开始支持，从API version 22开始废弃，建议使用[indicatorInteractive](../arkts-apis/arkts-arkui-swiper-swiperattribute-i.md/arkts-arkui-swiper-swiperattribute-i.md#indicatorinteractive)替代。
+This API is supported since API version 8 and deprecated since API version 22. You are advised to use  
+[indicatorInteractive](../arkts-apis/arkts-arkui-swiper-swiperattribute-i.md/arkts-arkui-swiper-swiperattribute-i.md#indicatorinteractive) instead.
 
 **Since:** 8
 
@@ -72,11 +74,12 @@ Disabled
 Waiting
 ```
 
-等待状态，右侧文本按钮不显示，显示等待进度条，不可点击进入下一个StepperItem。
+The button on the right is not displayed, and a progress bar is displayed instead.
 
-**说明：**
+**NOTE：**
 
-从API version 8开始支持，从API version 22开始废弃，建议使用[Swiper](../arkts-apis/arkts-arkui-swiper-swiper-f.md/arkts-arkui-swiper-swiper-f.md#swiper)替代。
+This API is supported since API version 8 and deprecated since API version 22. You are advised to use  
+[Swiper](../arkts-apis/arkts-arkui-swiper-swiper-f.md/arkts-arkui-swiper-swiper-f.md#swiper) instead.
 
 **Since:** 8
 
@@ -98,11 +101,13 @@ Waiting
 Skip
 ```
 
-跳过状态，右侧文本按钮默认显示“跳过”，此时可在Stepper的onSkip回调中自定义相关逻辑。
+The button on the right reads "Skip" by default. You can define the processing logic for this state in the  
+**onSkip** callback of the stepper.
 
-**说明：**
+**NOTE：**
 
-从API version 8开始支持，从API version 22开始废弃，建议使用[index](../arkts-apis/arkts-arkui-swiper-swiperattribute-i.md/arkts-arkui-swiper-swiperattribute-i.md#index)替代。
+This API is supported since API version 8 and deprecated since API version 22. You are advised to use  
+[index](../arkts-apis/arkts-arkui-swiper-swiperattribute-i.md/arkts-arkui-swiper-swiperattribute-i.md#index) instead.
 
 **Since:** 8
 

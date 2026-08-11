@@ -12,7 +12,7 @@ import { pluginBundleManager } from 'kits/@kit.AbilityKit';
 function getAllLocalPluginInfoForSelf(): Promise<Array<PluginBundleInfo>>
 ```
 
-查询当前应用中所有自分发插件的信息。使用Promise异步回调。
+Obtains information about all local plugins installed on the current application.
 
 **Since:** 26.0.0
 
@@ -30,11 +30,11 @@ function getAllLocalPluginInfoForSelf(): Promise<Array<PluginBundleInfo>>
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;Array&lt;PluginBundleInfo&gt;&gt; | Promise对象，返回当前应用已安装的所有本地插件信息列表。 |
+| Promise&lt;Array&lt;PluginBundleInfo&gt;&gt; | Promise used to return the list of PluginBundleInfos object. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 201 | Calling interface without permission 'ohos.permission.kernel.SUPPORT_LOCAL_PLUGIN'. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Calling interface without permission 'ohos.permission.kernel.SUPPORT_LOCAL_PLUGIN'. |
 

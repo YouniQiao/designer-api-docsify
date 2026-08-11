@@ -1,9 +1,6 @@
 # ScaleOptions
 
-> **说明：**
-> 
-> 当组件同时设置了[rotate](../arkts-components/arkts-arkui-commonmethod-c.md/arkts-arkui-commonmethod-c.md#rotate)和[scale](../arkts-components/arkts-arkui-commonmethod-c.md/arkts-arkui-commonmethod-c.md#scale)属性时，centerX和centerY的取值会发生冲突，此时centerX和
-> centerY的值以最后设定的属性的值为准。
+Defines the options of scale.
 
 **Since:** 23
 
@@ -19,11 +16,7 @@
 centerX?: double | string
 ```
 
-变换中心点x轴坐标。表示组件变换中心点（即锚点）的x方向坐标。取值可为string类型，如'50'，'50%'。
-
-单位：vp
-
-默认值：'50%'
+X coordinate of the transformation center point (anchor). Unit is vp.
 
 **Type:** double \| string
 
@@ -43,11 +36,7 @@ centerX?: double | string
 centerY?: double | string
 ```
 
-变换中心点y轴坐标。表示组件变换中心点（即锚点）的y方向坐标。取值可为string类型，如'50'，'50%'。
-
-单位：vp
-
-默认值：'50%'
+Y coordinate of the transformation center point (anchor). Unit is vp.
 
 **Type:** double \| string
 
@@ -67,7 +56,7 @@ centerY?: double | string
 x?: double
 ```
 
-x轴的缩放倍数。x>1时以x轴方向放大，0<x<1时以x轴方向缩小，x<0时沿x轴反向并缩放。
+Scale ratio along the x-axis.x > 1: The component is scaled up along the x-axis.0 < x < 1: The component is scaled down along the x-axis.x < 0: The component is scaled in the reverse direction of the x-axis.
 
 **Type:** double
 
@@ -87,7 +76,7 @@ x轴的缩放倍数。x>1时以x轴方向放大，0<x<1时以x轴方向缩小，
 y?: double
 ```
 
-y轴的缩放倍数。y>1时以y轴方向放大，0<y<1时以y轴方向缩小，y<0时沿y轴反向并缩放。
+Scale ratio along the y-axis.y > 1: The component is scaled up along the y-axis.0 < y < 1: The component is scaled down along the y-axis.y < 0: The component is scaled in the reverse direction of the y-axis.
 
 **Type:** double
 
@@ -107,7 +96,7 @@ y轴的缩放倍数。y>1时以y轴方向放大，0<y<1时以y轴方向缩小，
 z?: double
 ```
 
-z轴的缩放倍数。z>1时以z轴方向放大，0<z<1时以z轴方向缩小，z<0时沿z轴反向并缩放。
+Scale ratio along the z-axis. z > 1: The component is scaled up along the z-axis.&lt;br&gt;0 < z < 1: The component is scaled down along the z-axis.&lt;br&gt;z < 0: The component is scaled in the reverse direction of the z-axis.
 
 **Type:** double
 

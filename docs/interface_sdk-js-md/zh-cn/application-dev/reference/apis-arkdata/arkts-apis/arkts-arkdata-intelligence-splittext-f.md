@@ -1,11 +1,5 @@
 # splitText
 
-## 导入模块
-
-```TypeScript
-import { intelligence } from 'kits/@kit.ArkData';
-```
-
 ## splitText
 
 ```TypeScript
@@ -39,11 +33,13 @@ function splitText(text: string, config: SplitConfig): Promise<Array<string>>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types. |
-| 801 | Capability not supported. |
-| 31300000 | Inner error. |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types. |
+| [801](../../errorcode-universal.md#801-该设备不支持此api) | Capability not supported. |
+| [31300000](../errorcode-intelligence.md#31300000-服务内部异常) | Inner error. |
 
 ## 示例
+
+ArkTS-Dyn示例：
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -59,6 +55,24 @@ intelligence.splitText(textToSplit, splitConfig)
     console.info("Succeeded in splitting Text");
   })
   .catch((err: BusinessError) => {
+    console.error(`Failed to split Text. Code: ${err.code}, message: ${err.message}`);
+  })
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+let splitConfig: intelligence.SplitConfig = {
+  size: 10,
+  overlapRatio: 0.1
+}
+let textToSplit = 'text';
+
+intelligence.splitText(textToSplit, splitConfig)
+  .then((data: Array<string>) => {
+    console.info("Succeeded in splitting Text");
+  })
+  .catch((err) => {
     console.error(`Failed to split Text. Code: ${err.code}, message: ${err.message}`);
   })
 ```

@@ -1,6 +1,6 @@
 # AcquireAuthorizationResult (System API)
 
-表示获取授权的结果。
+Defines the result of the authorization.
 
 **Since:** 24
 
@@ -24,9 +24,9 @@ import { osAccount } from 'kits/@kit.BasicServicesKit';
 isReused?: boolean
 ```
 
-是否为复用的授权结果，默认为undefined。
+Whether the authorization result is reused. The default value is **undefined**.
 
-true：表示是复用的授权结果。false：表示不是复用的授权结果。
+**true**: The authorization result is reused. **false**: The authorization result is not reused.
 
 **Type:** boolean
 
@@ -48,7 +48,7 @@ true：表示是复用的授权结果。false：表示不是复用的授权结�
 privilege: string
 ```
 
-与授权关联的权限。
+Permission associated with the authorization.
 
 **Type:** string
 
@@ -70,7 +70,7 @@ privilege: string
 resultCode: AuthorizationResultCode
 ```
 
-授权结果码。
+Authorization result code.If the authorization is successful, AuthorizationResultCode#AUTHORIZATION_SUCCESS is returned.Otherwise, an error code is returned. For details, see AuthorizationResultCode.
 
 **Type:** [AuthorizationResultCode](arkts-basicservices-osaccount-authorizationresultcode-e-sys.md)
 
@@ -92,7 +92,7 @@ resultCode: AuthorizationResultCode
 token?: Uint8Array
 ```
 
-授权令牌，默认为undefined。
+Authorization token. The default value is **undefined**.
 
 **Type:** Uint8Array
 
@@ -114,7 +114,7 @@ token?: Uint8Array
 validityPeriod?: int
 ```
 
-授权的有效期，默认值为300，单位为s。
+Validity period of the authorization, in seconds. The default value is **300**.
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 

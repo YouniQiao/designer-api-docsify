@@ -1,6 +1,6 @@
 # TextConfig
 
-编辑框的配置信息。
+Config of editor.
 
 **Since:** 10
 
@@ -22,7 +22,7 @@ import { inputMethod } from 'kits/@kit.IMEKit';
 capitalizeMode?: CapitalizeMode
 ```
 
-编辑框设置大小写模式。如果没有设置或设置非法值，默认不进行任何首字母大写处理。
+Indicates the capitalize mode of the edit box.
 
 **Type:** [CapitalizeMode](arkts-ime-inputmethod-capitalizemode-e.md)
 
@@ -42,7 +42,7 @@ capitalizeMode?: CapitalizeMode
 cursorInfo?: CursorInfo
 ```
 
-光标信息。
+Cursor information.
 
 **Type:** [CursorInfo](arkts-ime-inputmethod-cursorinfo-i.md)
 
@@ -60,7 +60,7 @@ cursorInfo?: CursorInfo
 inputAttribute: InputAttribute
 ```
 
-编辑框属性。
+Attribute of Input.
 
 **Type:** [InputAttribute](arkts-ime-inputmethod-inputattribute-i.md)
 
@@ -78,7 +78,7 @@ inputAttribute: InputAttribute
 newEditBox?: boolean
 ```
 
-表示是否为新编辑框。true表示新编辑框，false表示非新编辑框。
+Indicates that this is a new edit box.
 
 **Type:** boolean
 
@@ -96,7 +96,7 @@ newEditBox?: boolean
 selection?: Range
 ```
 
-文本选中的范围。
+Selection information.
 
 **Type:** [Range](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-scan-range-i.md)
 
@@ -114,9 +114,7 @@ selection?: Range
 windowId?: int
 ```
 
-编辑框所在的窗口Id，该参数应为整数。
-
-推荐使用[getWindowProperties](../../apis-arkui/arkts-apis/arkts-arkui-window-window-i.md/arkts-arkui-window-window-i.md#getwindowproperties)方法获取窗口id属性。
+The window ID of the application currently bound to the input method.
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 

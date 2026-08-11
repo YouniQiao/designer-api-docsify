@@ -1,6 +1,6 @@
 # MonitorOptions
 
-设置监听的行为。
+Define Monitor options.
 
 **Since:** 23
 
@@ -16,7 +16,7 @@
 isSynchronous?: boolean
 ```
 
-指定函数是否同步执行，`true`为同步，`false`为异步。默认为`false`。
+Used to determine whether the state variable change is triggered synchronously or asynchronously. The default value is false.
 
 **Type:** boolean
 
@@ -38,7 +38,7 @@ isSynchronous?: boolean
 owner?: IVariableOwner
 ```
 
-指定冻结的组件，仅能传入@ComponentV2装饰的自定义组件，默认值为`undefined`。
+Used to handle component freezing.If not set, component freezing won't affect the monitor.
 
 **Type:** [IVariableOwner](arkts-arkui-decorator-ivariableowner-i.md)
 
@@ -58,7 +58,7 @@ owner?: IVariableOwner
 path?: string | string[]
 ```
 
-显式指定监听状态变量的路径，默认为`addMonitor`自动生成的路径。
+Override path for each valueCallback element.
 
 **Type:** string \| string[]
 

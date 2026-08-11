@@ -12,11 +12,13 @@ import { sendableContextManager } from 'kits/@kit.AbilityKit';
 function setEventHubMultithreadingEnabled(context: common.Context, enabled: boolean): void
 ```
 
-设置[Context](arkts-ability-context-t.md)中的[EventHub](arkts-ability-eventhub-c.md)是否启用跨线程通信能力。
+Enables the cross-thread data transfer feature of [EventHub](arkts-ability-eventhub-c.md) in  
+[Context](arkts-ability-context-t.md).
 
-> **说明：**
+> **NOTE：**
 > 
-> - 当多个Context进行通信时，需要调用该接口设置每个Context都支持EventHub跨线程数据传递功能。
+> - When multiple Context objects communicate, you need to call this API to set each Context object to support
+> EventHub cross-thread data transfer.
 
 **Since:** 20
 
@@ -34,8 +36,8 @@ function setEventHubMultithreadingEnabled(context: common.Context, enabled: bool
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| context | common.Context | Yes | Context对象。其中，Eventhub支持传递的序列化数据类型参见 [序列化支持的类型](../../../reference/apis-arkts/js-apis-taskpool.md#序列化支持类型)，数据大小不超过16MB。 |
-| enabled | boolean | Yes | 表示是否启用Context的EventHub跨线程通信能力。true表示启用，false表示禁用。 |
+| context | common.Context | Yes | Context object. For details about the serialization data types supported by Eventhub, see [Sequenceable Data Types](../../../reference/apis-arkts/js-apis-taskpool.md#sequenceable-data-types). The data size cannot exceed 16 MB. |
+| enabled | boolean | Yes | Whether to enable the cross-thread data transfer feature.&lt;br&gt;- **true**: The cross-thread data transfer feature is enabled, and data is passed by reference.&lt;br&gt;- **false**: The cross-thread data transfer feature is disabled. Data is passed through serialization, which means that the data of the sender thread is independent of that of the receiver thread. |
 
 ## Examples
 

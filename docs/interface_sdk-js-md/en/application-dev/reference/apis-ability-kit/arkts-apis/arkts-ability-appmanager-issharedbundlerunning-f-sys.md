@@ -12,7 +12,7 @@ import { appManager } from 'kits/@kit.AbilityKit';
 function isSharedBundleRunning(bundleName: string, versionCode: long): Promise<boolean>
 ```
 
-检查共享库是否正在使用。使用Promise异步回调。
+Checks whether the shared library is in use. This API uses a promise to return the result.
 
 **Since:** 10
 
@@ -30,23 +30,23 @@ function isSharedBundleRunning(bundleName: string, versionCode: long): Promise<b
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| bundleName | string | Yes | 表示要查询的共享库包名。 |
-| versionCode | ArkTS-Dyn: number  <br>ArkTS-Sta：long | Yes | 表示要查询的共享库版本号。 |
+| bundleName | string | Yes | Bundle name of the shared library. |
+| versionCode | ArkTS-Dyn: number  <br>ArkTS-Sta：long | Yes | Version number of the shared library. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;boolean&gt; | Promise对象。返回true表示共享库正在使用，返回false表示共享库不在使用。 |
+| Promise&lt;boolean&gt; | Promise used to return the result. **true** if the shared library is in use, **false** otherwise. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
-| 16000050 | Internal error. |
-| 201 | Permission denied. |
-| 202 | Not system application. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| [16000050](../errorcode-ability.md#16000050-internal-error) | Internal error. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system application. |
 
 ## Examples
 
@@ -71,7 +71,7 @@ appManager.isSharedBundleRunning(bundleName, versionCode).then((data) => {
 function isSharedBundleRunning(bundleName: string, versionCode: long, callback: AsyncCallback<boolean>): void
 ```
 
-检查共享库是否正在使用。使用callback异步回调。
+Checks whether the shared library is in use. This API uses an asynchronous callback to return the result.
 
 **Since:** 10
 
@@ -89,18 +89,18 @@ function isSharedBundleRunning(bundleName: string, versionCode: long, callback: 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| bundleName | string | Yes | 表示要查询的共享库包名。 |
-| versionCode | ArkTS-Dyn: number  <br>ArkTS-Sta：long | Yes | 表示要查询的共享库版本号。 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;boolean&gt; | Yes | 回调函数。返回true表示共享库正在使用，返回false表示共享库不在使用。 |
+| bundleName | string | Yes | Bundle name of the shared library. |
+| versionCode | ArkTS-Dyn: number  <br>ArkTS-Sta：long | Yes | Version number of the shared library. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;boolean&gt; | Yes | Callback used to return the result. **true** if the shared library is in use, **false** otherwise. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
-| 16000050 | Internal error. |
-| 201 | Permission denied. |
-| 202 | Not system application. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| [16000050](../errorcode-ability.md#16000050-internal-error) | Internal error. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system application. |
 
 ## Examples
 

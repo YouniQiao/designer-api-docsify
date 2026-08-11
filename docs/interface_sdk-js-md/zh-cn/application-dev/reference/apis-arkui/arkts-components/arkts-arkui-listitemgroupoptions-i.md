@@ -22,7 +22,7 @@ footer?: CustomBuilder
 
 可以放单个子组件或不放子组件，不设置时无尾部组件。该参数的优先级低于参数footerComponent。即同时设置footer和footerComponent时，以footerComponent设置的值为准。
 
-**类型：** [CustomBuilder](arkts-arkui-custombuilder-t.md)
+**类型：** [CustomBuilder](../arkts-apis/arkts-arkui-custombuilder-t.md)
 
 **起始版本：** 9
 
@@ -104,7 +104,7 @@ header?: CustomBuilder
 
 可以放单个子组件或不放子组件，不设置时无头部组件。该参数的优先级低于参数headerComponent。即同时设置header和headerComponent时，以headerComponent设置的值为准。
 
-**类型：** [CustomBuilder](arkts-arkui-custombuilder-t.md)
+**类型：** [CustomBuilder](../arkts-apis/arkts-arkui-custombuilder-t.md)
 
 **起始版本：** 9
 

@@ -1,6 +1,6 @@
 # RgbaColor
 
-定义壁纸颜色信息结构。
+RgbaColor definition
 
 **Since:** 7
 
@@ -24,7 +24,7 @@ import { wallpaper } from 'kits/@kit.BasicServicesKit';
 alpha: long
 ```
 
-表示 alpha 值，范围为 0 到 255。
+The range is 0 to 255.
 
 **Type:** long
 
@@ -44,7 +44,7 @@ alpha: long
 blue: long
 ```
 
-表示蓝色值，范围为 0 到 255。
+The range is 0 to 255.
 
 **Type:** long
 
@@ -64,7 +64,7 @@ blue: long
 green: long
 ```
 
-表示绿色值，范围为 0 到 255。
+The range is 0 to 255.
 
 **Type:** long
 
@@ -84,7 +84,7 @@ green: long
 red: long
 ```
 
-表示红色值，范围为 0 到 255。
+The range is 0 to 255.
 
 **Type:** long
 

@@ -1,11 +1,5 @@
 # insertData
 
-## 导入模块
-
-```TypeScript
-import { unifiedDataChannel } from 'kits/@kit.ArkData';
-```
-
 ## insertData
 
 ```TypeScript
@@ -40,9 +34,11 @@ function insertData(options: Options, data: UnifiedData, callback: AsyncCallback
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 401 | Parameter error. Possible causes:1.Mandatory parameters are left unspecified; &lt;br&gt;2.Incorrect parameter types; &lt;br&gt;3. Parameter verification failed. |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes:1.Mandatory parameters are left unspecified; &lt;br&gt;2.Incorrect parameter types; &lt;br&gt;3. Parameter verification failed. |
 
 ## 示例
+
+ArkTS-Dyn示例：
 
 ```TypeScript
 import { uniformDataStruct, uniformTypeDescriptor } from '@kit.ArkData';
@@ -70,6 +66,33 @@ try {
 } catch (e) {
   let error: BusinessError = e as BusinessError;
   console.error(`Insert data throws an exception. code is ${error.code}, message is ${error.message}`);
+}
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+import { uniformDataStruct, uniformTypeDescriptor } from '@kit.ArkData';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let plainText: uniformDataStruct.PlainText = {
+  uniformDataType: 'general.plain-text',
+  textContent: 'This is a plain text example',
+  textAbstract: 'This is a text abstract'
+}
+let text = new unifiedDataChannel.UnifiedRecord(uniformTypeDescriptor.UniformDataType.PLAIN_TEXT, plainText);
+let unifiedData = new unifiedDataChannel.UnifiedData(text);
+
+let options: unifiedDataChannel.Options = {
+  intention: unifiedDataChannel.Intention.DATA_HUB
+}
+try {
+  unifiedDataChannel.insertData(options, unifiedData, (err, key) => {
+    console.info(`Succeeded in inserting data. key = ${key}`);
+  });
+} catch (e) {
+  let error: BusinessError = e as BusinessError;
+  console.error(`Insert data throws an exception. code is ${error.code}, message is ${error.message} `);
 }
 ```
 
@@ -111,9 +134,11 @@ function insertData(options: Options, data: UnifiedData): Promise<string>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 401 | Parameter error. Possible causes:1.Mandatory parameters are left unspecified; &lt;br&gt;2.Incorrect parameter types; &lt;br&gt;3. Parameter verification failed. |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes:1.Mandatory parameters are left unspecified; &lt;br&gt;2.Incorrect parameter types; &lt;br&gt;3. Parameter verification failed. |
 
 ## 示例
+
+ArkTS-Dyn示例：
 
 ```TypeScript
 import { uniformDataStruct, uniformTypeDescriptor } from '@kit.ArkData';
@@ -139,6 +164,39 @@ try {
 } catch (e) {
   let error: BusinessError = e as BusinessError;
   console.error(`Insert data throws an exception. code is ${error.code}, message is ${error.message}`);
+}
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+let options: unifiedDataChannel.Options = {
+  intention: unifiedDataChannel.Intention.DATA_HUB
+};
+let plainTextDetails: Record<string, string> = {
+  'attr1': 'value1',
+  'attr2': 'value2',
+}
+let plainText: uniformDataStruct.PlainText = {
+  uniformDataType: 'general.plain-text',
+  textContent: 'This is plainText textContent example',
+  textAbstract: 'This is a text abstract',
+  details: plainTextDetails,
+}
+
+let text = new unifiedDataChannel.UnifiedRecord(uniformTypeDescriptor.UniformDataType.PLAIN_TEXT, plainText);
+let unifiedData = new unifiedDataChannel.UnifiedData(text);
+try {
+  unifiedDataChannel.insertData(options, unifiedData).then((key) => {
+    console.info(`Succeeded in inserting data. key = ${key}`);
+  }).catch((err: Error) => {
+    const error = err as BusinessError;
+    console.error(`Failed to insert data. code is ${err.code}, message is ${err.message} `);
+  });
+} catch (err) {
+  const error = err as BusinessError;
+  console.error(`Insert data throws an exception. code is ${error.code}, message is ${error.message} `);
+  console.error(' error: ' + JSON.stringify(error));
 }
 ```
 

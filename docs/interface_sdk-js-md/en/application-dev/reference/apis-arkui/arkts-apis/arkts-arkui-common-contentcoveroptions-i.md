@@ -1,8 +1,6 @@
 # ContentCoverOptions
 
-继承自[BindOptions](../arkts-components/arkts-arkui-bindoptions-i.md/arkts-arkui-bindoptions-i.md)。
-
-全屏模态页面内容选项。
+Component content cover options
 
 **Inheritance/Implementation:** ContentCoverOptions extends [BindOptions](../arkts-components/arkts-arkui-bindoptions-i.md/arkts-arkui-bindoptions-i.md)
 
@@ -20,11 +18,7 @@
 onWillDismiss?: Callback<DismissContentCoverAction>
 ```
 
-全屏模态页面交互式关闭回调函数。
-
-**说明：**
-
-当用户执行back事件关闭交互操作时，如果注册该回调函数，则不会立刻关闭。在回调函数中可以通过reason得到阻拦关闭页面的操作类型，从而根据原因选择是否关闭全屏模态页面。在onWillDismiss回调中，不能再做onWillDismiss拦截。
+Callback function when the content cover interactive dismiss
 
 **Since:** 23
 
@@ -42,7 +36,7 @@ onWillDismiss?: Callback<DismissContentCoverAction>
 enableSafeArea?: boolean
 ```
 
-全屏模态是否适配安全区域，true表示全屏模态适配安全区域，将内容限制在安全区内，避让导航条和状态栏，false表示不做处理，和之前的样式保持一致。默认值为false。
+Set contentCover content adapts to safeArea.
 
 **Type:** boolean
 
@@ -64,13 +58,7 @@ enableSafeArea?: boolean
 modalTransition?: ModalTransition
 ```
 
-全屏模态页面的系统转场方式。
-
-默认值：ModalTransition.DEFAULT。
-
-**说明：**
-
-同transition同时设置时，此属性不生效。
+Defines transition type
 
 **Type:** [ModalTransition](../arkts-components/arkts-arkui-modaltransition-e.md)
 
@@ -92,7 +80,7 @@ modalTransition?: ModalTransition
 transition?: TransitionEffect
 ```
 
-全屏模态页面的自定义转场方式。
+Defines transition effect param
 
 **Type:** [TransitionEffect](arkts-arkui-common-transitioneffect-c.md)
 

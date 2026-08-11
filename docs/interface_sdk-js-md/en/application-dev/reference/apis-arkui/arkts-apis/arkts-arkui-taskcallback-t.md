@@ -4,7 +4,7 @@
 declare type TaskCallback = () => T
 ```
 
-同步执行的回调方法。
+Defines a synchronous callback.
 
 **Since:** 22
 

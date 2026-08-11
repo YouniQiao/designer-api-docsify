@@ -1,11 +1,5 @@
 # offEventData
 
-## 导入模块
-
-```TypeScript
-import { emitter } from 'kits/@kit.BasicServicesKit';
-```
-
 ## offEventData
 
 ```TypeScript
@@ -32,4 +26,18 @@ function offEventData(eventId: string, callback: Callback<EventData>): void
 | --- | --- | --- | --- |
 | eventId | string | 是 | 事件ID。取值为长度不超过10240字节的自定义字符串，且不可为空字符。 |
 | callback | [Callback](arkts-basicservices-base-callback-i.md)&lt;EventData&gt; | 是 | 事件的回调处理函数。 |
+
+## 示例
+
+```TypeScript
+import { Callback } from '@kit.BasicServicesKit';
+
+let callback: Callback<emitter.EventData> = (eventData: emitter.EventData | undefined | null) => {
+  console.info(`eventData: ${JSON.stringify(eventData)}`);
+}
+
+// 取消eventID为"eventId"的事件回调处理函数，callback对象应使用订阅时的对象
+// 如果该回调处理函数没有被订阅，则不做任何处理
+emitter.offEventData("eventId", callback);
+```
 

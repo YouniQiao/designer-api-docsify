@@ -1,11 +1,5 @@
 # onFoldDisplayModeChange
 
-## 导入模块
-
-```TypeScript
-import { display } from 'kits/@kit.ArkUI';
-```
-
 ## onFoldDisplayModeChange
 
 ```TypeScript
@@ -32,5 +26,20 @@ Register the callback for fold display mode changes.
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 1400003 | This display manager service works abnormally. |
+| [1400003](../errorcode-display.md#1400003-系统服务工作异常) | This display manager service works abnormally. |
+
+## 示例
+
+```TypeScript
+import { Callback } from '@kit.BasicServicesKit';
+
+/**
+ * 注册监听的callback参数要采用对象传递.
+ * 若使用匿名函数注册，每次调用会创建一个新的底层对象，引起内存泄漏问题。
+ */
+let callback: Callback<display.FoldDisplayMode> = (data: display.FoldDisplayMode) => {
+  console.info(`Listening enabled. Data: ${data}`);
+}; 
+display.onFoldDisplayModeChange(callback);
+```
 

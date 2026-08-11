@@ -1,6 +1,6 @@
 # TransactionOptions
 
-事务对象的配置信息。
+Represents the configuration of a transaction object.
 
 **Since:** 14
 
@@ -22,7 +22,9 @@ import { relationalStore } from 'kits/@kit.ArkData';
 transactionType?: TransactionType
 ```
 
-事务类型。默认为DEFERRED。
+Transaction object type. 
+
+Default value: **DEFERRED**.
 
 **Type:** [TransactionType](arkts-arkdata-relationalstore-transactiontype-e.md)
 

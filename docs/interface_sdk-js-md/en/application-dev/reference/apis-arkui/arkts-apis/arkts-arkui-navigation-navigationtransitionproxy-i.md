@@ -1,6 +1,6 @@
 # NavigationTransitionProxy
 
-自定义转场动画代理对象。
+Navigation transition proxy.
 
 **Since:** 23
 
@@ -16,7 +16,7 @@
 finishTransition(): void
 ```
 
-结束本次自定义转场动画，开发者需要主动触发该方法来结束本次转场，否则系统会在timeout的时间后结束本次转场。
+Notification system transition animation completed.
 
 **Since:** 23
 
@@ -34,7 +34,7 @@ finishTransition(): void
 updateTransition?: UpdateTransitionCallback
 ```
 
-更新交互转场动画进度(不可交互动画不支持动画进度设置)。
+Notification system transition animation update.
 
 **Since:** 23
 
@@ -52,7 +52,7 @@ updateTransition?: UpdateTransitionCallback
 cancelTransition?: VoidCallback
 ```
 
-取消本次交互转场，恢复到页面跳转前的路由栈(不支持取消不可交互转场动画)。
+Notification system transition animation canceled.
 
 **Type:** [VoidCallback](arkts-arkui-voidcallback-t.md)
 
@@ -72,7 +72,7 @@ cancelTransition?: VoidCallback
 from: NavContentInfo
 ```
 
-退场页面信息。
+From navigation content info.
 
 **Type:** [NavContentInfo](../arkts-components/arkts-arkui-navcontentinfo-i.md)
 
@@ -92,7 +92,7 @@ from: NavContentInfo
 isInteractive?: boolean
 ```
 
-本次转场动画是否为可交互转场。true：本次转场动画是可交互转场；false：本次转场动画不是可交互转场。默认值： false。
+Indicates whether it is an interactive transition.Default value: false.
 
 **Type:** boolean
 
@@ -114,7 +114,7 @@ isInteractive?: boolean
 to: NavContentInfo
 ```
 
-进场页面信息。
+To navigation content info.
 
 **Type:** [NavContentInfo](../arkts-components/arkts-arkui-navcontentinfo-i.md)
 

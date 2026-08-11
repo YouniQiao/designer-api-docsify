@@ -1,11 +1,5 @@
 # injectMouseEvent
 
-## 导入模块
-
-```TypeScript
-import { inputEventClient } from 'kits/@kit.InputKit';
-```
-
 ## injectMouseEvent
 
 ```TypeScript
@@ -35,11 +29,13 @@ function injectMouseEvent(mouseEvent: MouseEventData): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; 3. Parameter verification failed. |
-| 201 | Permission denied.<br>**适用版本：** 12+ |
-| 202 | SystemAPI permission error. |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; 3. Parameter verification failed. |
+| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied.<br>**适用版本：** 12+ |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | SystemAPI permission error. |
 
 ## 示例
+
+ArkTS-Dyn示例：
 
 ```TypeScript
 import { inputEventClient } from '@kit.InputKit';
@@ -114,6 +110,95 @@ struct Index {
               scrollLock: false,
               toolType: 1,
             };
+            let mouseButtonDown: inputEventClient.MouseEventData = {
+              mouseEvent: mouseButtonDownData
+            };
+            // 注入鼠标事件
+            inputEventClient.injectMouseEvent(mouseButtonDown);
+          } catch (error) {
+            console.error(`Failed to inject MouseEvent, Code: ${(error as BusinessError).code}, message: ${(error as BusinessError).message}.`);
+          }
+        })
+    }
+  }
+}
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+import { Entry, Text, RelativeContainer, Component } from '@kit.ArkUI';
+import { BusinessError } from '@kit.BasicServicesKit';
+import { inputEventClient, MouseAction, Button, MouseToolType, MouseEvent} from '@kit.InputKit';
+
+@Entry
+@Component
+struct Index {
+  build() {
+    RelativeContainer() {
+      Text()
+        .onClick(() => {
+          try {
+            let mouseButtonUpData: MouseEvent = {
+              id: 0,
+              deviceId: 1,
+              actionTime: 2,
+              screenId: 1,
+              windowId: 0,
+              action: MouseAction.BUTTON_UP,
+              screenX: 100,
+              screenY: 200,
+              windowX: 100,
+              windowY: 200,
+              rawDeltaX: 200,
+              rawDeltaY: 200,
+              button: Button.RIGHT,
+              pressedButtons: [],
+              axes: [],
+              pressedKeys: [],
+              ctrlKey: false,
+              altKey: false,
+              shiftKey: false,
+              logoKey: false,
+              fnKey: false,
+              capsLock: false,
+              numLock: false,
+              scrollLock: false,
+              toolType: MouseToolType.MOUSE
+            };
+            let mouseButtonUp: inputEventClient.MouseEventData = {
+              mouseEvent:  mouseButtonUpData
+            };
+            // 注入鼠标事件
+            inputEventClient.injectMouseEvent(mouseButtonUp);
+
+            let mouseButtonDownData: MouseEvent = {
+              id: 0,
+              deviceId: 1,
+              actionTime: 2,
+              screenId: 1,
+              windowId: 0,
+              action: MouseAction.BUTTON_DOWN,
+              screenX: 100,
+              screenY: 200,
+              windowX: 100,
+              windowY: 200,
+              rawDeltaX: 200,
+              rawDeltaY: 200,
+              button: Button.RIGHT,
+              pressedButtons: [Button.RIGHT],
+              axes: [],
+              pressedKeys: [],
+              ctrlKey: false,
+              altKey: false,
+              shiftKey: false,
+              logoKey: false,
+              fnKey: false,
+              capsLock: false,
+              numLock: false,
+              scrollLock: false,
+              toolType: MouseToolType.MOUSE,
+            }
             let mouseButtonDown: inputEventClient.MouseEventData = {
               mouseEvent: mouseButtonDownData
             };

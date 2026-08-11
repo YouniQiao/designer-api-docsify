@@ -1,6 +1,6 @@
 # JsResult
 
-定义 JS 返回结果。
+Defines the js result.
 
 **Since:** 8
 
@@ -16,7 +16,7 @@
 constructor()
 ```
 
-JsResult的构造函数。
+Constructor.
 
 **Since:** 8
 
@@ -34,7 +34,7 @@ JsResult的构造函数。
 handleCancel(): void
 ```
 
-若取消弹窗，则处理用户的JavaScript执行结果。
+Handle the user's JavaScript result if cancel the dialog.
 
 **Since:** 8
 
@@ -52,7 +52,7 @@ handleCancel(): void
 handleConfirm(): void
 ```
 
-确认弹窗后，处理用户的 JavaScript 执行结果。
+Handle the user's JavaScript result if confirm the dialog.
 
 **Since:** 8
 
@@ -70,7 +70,7 @@ handleConfirm(): void
 handlePromptConfirm(result: string): void
 ```
 
-确认提示框后，处理用户的 JavaScript 执行结果。
+Handle the user's JavaScript result if confirm the prompt dialog.
 
 **Since:** 9
 

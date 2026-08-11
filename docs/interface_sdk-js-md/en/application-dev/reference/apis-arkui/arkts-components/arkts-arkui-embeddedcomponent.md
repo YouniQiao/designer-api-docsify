@@ -1,25 +1,22 @@
 # EmbeddedComponent
 
-**EmbeddedComponent**组件用于支持在当前页面嵌入本应用内或满足跨应用权限条件的其他[EmbeddedUIExtensionAbility]{@link @ohos.app.ability.EmbeddedUIExtensionAbility:EmbeddedUIExtensionAbility}提供的UI。EmbeddedUIExtensionAbility运行在独立进程中，完成页面布局和渲染。
+The **EmbeddedComponent** is a component used to embed into the current page the UI provided by another
+[EmbeddedUIExtensionAbility]{@link @ohos.app.ability.EmbeddedUIExtensionAbility:EmbeddedUIExtensionAbility} in the
+same application. The EmbeddedUIExtensionAbility runs in an independent process for UI layout and rendering.
 
-通常用于需要进程隔离的模块化开发场景。
+It is usually used in modular development scenarios where process isolation is required.
 
-> **说明：**
->
-> EmbeddedComponent组件宽高默认值和最小值均为10vp。
-> 不支持如下与宽高相关的属性：“constraintSize”、“aspectRatio”、“layoutWeight”、“flexBasis”、“flexGrow”和“flexShrink”。
+> **NOTE**
 
-## 约束
+## Constraints
 
-**EmbeddedComponent**仅支持在拥有多进程权限的设备上使用。
+The **EmbeddedComponent** is supported only on devices configured with multi-process permissions.
 
-**EmbeddedComponent**只能在UIAbility中使用，且默认情况下被拉起的EmbeddedUIExtensionAbility需与UIAbility属于同一应用。从API版本26.0.0开始，在同时满足以下条件时，允许**EmbeddedComponent**跨应用拉起EmbeddedUIExtensionAbility：  
-- **EmbeddedComponent**所属应用申请了ohos.permission.SUPPORT_CROSS_APP_EMBED_FOR_OA权限（该权限仅企业普通应用可申请）；  
-- 该应用的appIdentifier在EmbeddedUIExtensionAbility支持的应用清单（即extensionAbilities标签的appIdentifierAllowList属性）中。
+The **EmbeddedComponent** can be used only in the UIAbility, and the EmbeddedUIExtensionAbility to start must belong to the same application as the UIAbility.
 
-## 子组件
+## Child Components
 
-不支持
+Not supported
 
 ## EmbeddedComponent
 
@@ -30,7 +27,7 @@ EmbeddedComponent(
 )
 ```
 
-创建跨进程嵌入式组件，用于显示同包名或满足跨应用权限条件的EmbeddedUIExtensionAbility的UI。
+Creates a cross-process embedded component to display the UI of the EmbeddedUIExtensionAbility with the same bundle name.
 
 **Since:** 12
 
@@ -48,8 +45,8 @@ EmbeddedComponent(
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| loader | import('../api/@ohos.app.ability.Want').default | Yes | 表示要加载的EmbeddedUIExtensionAbility。 |
-| type | [EmbeddedType](../arkts-apis/arkts-arkui-embeddedtype-e.md) | Yes | 提供方的类型。 |
+| loader | import('../api/@ohos.app.ability.Want').default | Yes | EmbeddedUIExtensionAbility to load. |
+| type | [EmbeddedType](../arkts-apis/arkts-arkui-embeddedtype-e.md) | Yes | Type of the provider. |
 
 ## EmbeddedComponent
 
@@ -61,7 +58,7 @@ EmbeddedComponent(
 )
 ```
 
-创建跨进程嵌入式组件，用于显示同包名或满足跨应用权限条件的EmbeddedUIExtensionAbility的UI。相对于API version 12的接口，新增options参数用于传递构造参数。
+Construct the EmbeddedComponent.&lt;br/&gt;Called when the EmbeddedComponent is used.
 
 **Since:** 26.0.0
 
@@ -79,9 +76,9 @@ EmbeddedComponent(
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| loader | import('../api/@ohos.app.ability.Want').default | Yes | 要加载的EmbeddedUIExtensionAbility。 |
-| type | [EmbeddedType](../arkts-apis/arkts-arkui-embeddedtype-e.md) | Yes | 提供方的类型。 |
-| options | [EmbeddedOptions](../arkts-apis/arkts-arkui-embeddedcomponent-embeddedoptions-i.md) | No | 嵌入式组件的可选配置项，用于设置占位符、DPI跟随策略、窗口模式跟随策略等。 |
+| loader | import('../api/@ohos.app.ability.Want').default | Yes | indicates initialization parameter. |
+| type | [EmbeddedType](../arkts-apis/arkts-arkui-embeddedtype-e.md) | Yes | indicates type of the EmbeddedComponent. |
+| options | [EmbeddedOptions](../arkts-apis/arkts-arkui-embeddedcomponent-embeddedoptions-i.md) | No | construction configuration of EmbeddedComponent. |
 
 ## Summary
 

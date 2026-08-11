@@ -1,12 +1,13 @@
 # GridColColumnOption
 
-用于自定义指定在不同宽度设备类型上，栅格子组件占据的栅格数量单位。
+Describes the numbers of grid columns occupied by the **GridCol** component on devices with different width types.
 
-- API version 20之前，仅配置部分断点下GridCol组件所占列数，取已配置的更小断点的列数补全未配置的列数。若未配置更小断点的列数，取默认值1。  
- &lt;!--code_no_check--&gt; ```ts  span: {xs:2, md:4, lg:8} // 等于配置 span: {xs:2, sm:2, md:4, lg:8, xl:8, xxl:8} span: {md:4, lg:8} // 等于配置 span: {xs:1, sm:1, md:4, lg:8, xl:8, xxl:8} ```  
-- API version 20及以后，仅配置部分断点下GridCol组件所占列数，取已配置的更小断点的列数补全未配置的列数。若未配置更小断点的列数，取已配置的更大断点的列数补全未配置的列数。  
- &lt;!--code_no_check--&gt; ```ts  span: {xs:2, md:4, lg:8} // 等于配置 span: {xs:2, sm:2, md:4, lg:8, xl:8, xxl:8} span: {md:4, lg:8} // 等于配置 span: {xs:4, sm:4, md:4, lg:8, xl:8, xxl:8} ```  
-- 建议手动配置不同断点下GridCol组件所占列数，避免默认补全列数的布局效果不符合预期。
+- In versions earlier than API version 20: When you configure **GridCol** column spans only at specific breakpoints,  
+unconfigured breakpoints inherit values from the next smaller configured breakpoint. If no smaller breakpoint is configured, the default value of **1** is used. &lt;!--code_no_check--&gt; ```ts  span: {xs:2, md:4, lg:8} // Equivalent to span: {xs:2, sm:2, md:4, lg:8, xl:8, xxl:8}. span: {md:4, lg:8} // Equivalent to span: {xs:1, sm:1, md:4, lg:8, xl:8, xxl:8}. ```  
+- Since API version 20: When you configure **GridCol** column spans only at specific breakpoints, unconfigured  
+breakpoints inherit values from the next smaller configured breakpoint. If no smaller breakpoint exists, values are inherited from the next larger configured breakpoint. &lt;!--code_no_check--&gt; ```ts  span: {xs:2, md:4, lg:8} // Equivalent to span: {xs:2, sm:2, md:4, lg:8, xl:8, xxl:8}. span: {md:4, lg:8} // Equivalent to span: {xs:4, sm:4, md:4, lg:8, xl:8, xxl:8}. ```  
+- Recommendation: Explicitly configure **GridCol** column spans for all required breakpoints to prevent unexpected  
+layout behavior caused by automatic value inheritance.
 
 **Since:** 9
 
@@ -22,7 +23,7 @@
 lg?: number
 ```
 
-在大宽度类型设备上，栅格子组件占据的栅格列数。取值为非负整数。默认值为1。非法值：按默认值处理。
+Number of grid columns on the device where the grid size is lg.
 
 **Type:** number
 
@@ -44,7 +45,7 @@ lg?: number
 md?: number
 ```
 
-在中等宽度类型设备上，栅格子组件占据的栅格列数。取值为非负整数。默认值为1。非法值：按默认值处理。
+Number of grid columns on the device where the grid size is md.
 
 **Type:** number
 
@@ -66,7 +67,7 @@ md?: number
 sm?: number
 ```
 
-在小宽度类型设备上，栅格子组件占据的栅格列数。取值为非负整数。默认值为1。非法值：按默认值处理。
+Number of grid columns on the device where the grid size is sm.
 
 **Type:** number
 
@@ -88,7 +89,7 @@ sm?: number
 xl?: number
 ```
 
-在特大宽度类型设备上，栅格子组件占据的栅格列数。取值为非负整数。默认值为1。非法值：按默认值处理。
+Number of grid columns on the device where the grid size is xl.
 
 **Type:** number
 
@@ -110,7 +111,7 @@ xl?: number
 xs?: number
 ```
 
-在最小宽度类型设备上，栅格子组件占据的栅格列数。取值为非负整数。默认值为1。非法值：按默认值处理。
+Number of grid columns on the device where the grid size is xs.
 
 **Type:** number
 
@@ -132,7 +133,7 @@ xs?: number
 xxl?: number
 ```
 
-在超大宽度类型设备上，栅格子组件占据的栅格列数。取值为非负整数。默认值为1。非法值：按默认值处理。
+Number of grid columns on the device where the grid size is xxl.
 
 **Type:** number
 

@@ -6,5 +6,5 @@
 
 | Name | Description |
 | --- | --- |
-| [Metadata](arkts-ability-metadata-i.md) | 元数据对象，可以通过  [bundleManager.getBundleInfoForSelf](arkts-ability-bundlemanager-getbundleinfoforself-f.md#getbundleinfoforself)获取，其中参数bundleFlags至少包含GET_BUNDLE_INFO_WITH_METADATA。此对象在[ApplicationInfo](arkts-ability-applicationinfo-i.md)、  [HapModuleInfo](arkts-ability-hapmoduleinfo-i.md)、[AbilityInfo](arkts-ability-abilityinfo-i.md)、  [ExtensionAbilityInfo](arkts-ability-extensionabilityinfo-i.md)中均包含。 |
+| [Metadata](arkts-ability-metadata-i.md) | The module defines a metadata object. An application can obtain the metadata through  [bundleManager.getBundleInfoForSelf](arkts-ability-bundlemanager-getbundleinfoforself-f.md#getbundleinfoforself), with **GET_BUNDLE_INFO_WITH_METADATA** passed in for  [bundleFlags](arkts-ability-bundlemanager-bundleflag-e.md). This object is contained in  [ApplicationInfo](arkts-ability-applicationinfo-i.md), [HapModuleInfo](arkts-ability-hapmoduleinfo-i.md), [AbilityInfo](arkts-ability-abilityinfo-i.md), and  [ExtensionAbilityInfo](arkts-ability-extensionabilityinfo-i.md).  The module provides the configuration about the module, UIAbility, and ExtensionAbility. The value is of the array type. The configuration is valid only for the current module, UIAbility, or ExtensionAbility. |
 

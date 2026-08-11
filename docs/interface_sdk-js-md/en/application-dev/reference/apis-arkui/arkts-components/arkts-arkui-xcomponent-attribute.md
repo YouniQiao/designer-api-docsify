@@ -1,10 +1,9 @@
 # XComponent properties/events
 
-定义XComponentAttribute。
+In addition to universal attributes, the following attributes are supported.
 
-除通用属性外，还支持以下属性。
-
-从API版本12开始，当type设置为**SURFACE**或**TEXTURE**时，支持[通用事件](../../apis-ability-kit/arkts-apis/arkts-app-ability-common.md/arkts-app-ability-common.md)。
+Since API version 12, the [universal events](../../apis-ability-kit/arkts-apis/arkts-app-ability-common.md/arkts-app-ability-common.md) are supported when **type** is set to **SURFACE** or  
+**TEXTURE**.
 
 **Inheritance/Implementation:** XComponentAttribute extends [CommonMethod<XComponentAttribute>](CommonMethod<XComponentAttribute>)
 
@@ -22,11 +21,14 @@
 enableAnalyzer(enable: boolean)
 ```
 
-设置是否启用AI图像分析器，支持主体识别、文字识别和查找对象。
+Sets whether to enable the AI image analyzer, which supports subject recognition, text recognition, and object lookup.
 
-要使设置生效，此属性必须与XComponentController的[StartImageAnalyzer](arkts-arkui-xcomponentcontroller-c.md#startimageanalyzer)和[StopImageAnalyzer](arkts-arkui-xcomponentcontroller-c.md#stopimageanalyzer)一起使用。
+For the settings to take effect, this attribute must be used together with  
+[StartImageAnalyzer](arkts-arkui-xcomponentcontroller-c.md#startimageanalyzer) and  
+[StopImageAnalyzer](arkts-arkui-xcomponentcontroller-c.md#stopimageanalyzer) of **XComponentController**.
 
-此特性不能与[overlay](../../../reference/apis-arkui/arkui-ts/ts-universal-attributes-overlay.md#overlay)属性同时使用。如果两者都设置，overlay中的CustomBuilder属性将不生效。此特性还依赖于设备能力。
+This feature cannot be used together with the  
+[overlay](../../../reference/apis-arkui/arkui-ts/ts-universal-attributes-overlay.md#overlay) attribute. If they are set at the same time, the **CustomBuilder** attribute in **overlay** has no effect. This feature depends on device capabilities.
 
 **Since:** 12
 
@@ -44,7 +46,7 @@ enableAnalyzer(enable: boolean)
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| enable | boolean | Yes | 是否启用AI图像分析器。&lt;br&gt;**true**：启用；**false**：禁用。&lt;br&gt; 默认值：**false**。 |
+| enable | boolean | Yes | Whether to enable the AI image analyzer.&lt;br&gt;**true**: enable; **false**: disable&lt;br&gt; Default value: **false**. |
 
 ## enableSecure
 
@@ -52,7 +54,7 @@ enableAnalyzer(enable: boolean)
 enableSecure(isSecure: boolean)
 ```
 
-设置是否启用安全surface，以保护组件内渲染的内容不被截屏或录屏。
+Sets whether to enable the secure surface to protect the content rendered within the component from being captured or recorded.
 
 **Since:** 13
 
@@ -70,7 +72,7 @@ enableSecure(isSecure: boolean)
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| isSecure | boolean | Yes | 是否启用安全surface。&lt;br&gt;值**true**表示启用安全surface，**false**表示相反的情况。&lt;br&gt; 默认值：**false**。 |
+| isSecure | boolean | Yes | Whether to enable the secure surface.&lt;br&gt;The value **true** means to enable the secure surface, and **false** means the opposite.&lt;br&gt;Default value: **false**. |
 
 ## hdrBrightness
 
@@ -78,9 +80,7 @@ enableSecure(isSecure: boolean)
 hdrBrightness(brightness: number)
 ```
 
-用于调整组件播放HDR视频的亮度。
-
-**说明：**仅XComponent构造参数中的type为**XComponentType**.SURFACE时该接口生效，否则该接口不生效。
+Sets the brightness of HDR video playback for the component.
 
 **Since:** 20
 
@@ -98,7 +98,7 @@ hdrBrightness(brightness: number)
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| brightness | number | Yes | HDR视频的亮度。&lt;br/&gt;取值范围：[0.0, 1.0]。小于0.0的值按0.0处理，大于1.0的值按1.0处理，其他异常值按1.0处理。 &lt;br/&gt;**0.0**表示视频按照SDR亮度显示，**1.0**表示视频按照当前允许的最高HDR亮度显示。&lt;br/&gt;默认值：**1.0**。 |
+| brightness | number | Yes | Brightness of HDR video playback.&lt;br&gt;Value range: 0.0 to 1.0. Values less than 0.0 are equivalent to 0.0, and values greater than 1.0 are equivalent to 1.0. **0.0** indicates the brightness of the SDR video, and **1.0** indicates the brightness of the HDR video.&lt;br&gt;Default value: **1.0**. |
 
 ## hdrBrightness
 
@@ -106,9 +106,7 @@ hdrBrightness(brightness: number)
 hdrBrightness(brightness: number, type?: HdrType)
 ```
 
-用于调整组件显示HDR内容时的亮度。&lt;br/&gt;当参数type设置为非**HdrType**.DEFAULT时，调用该接口前需先检查Display的hdrFormats属性是否包含对应的HDRFormat。仅当hdrFormats包含对应的HDRFormat时，当前设备才支持对应的HDR类型，参数设置才会生效；否则将使用默认值**HdrType**.DEFAULT。其映射关系如下：&lt;br/&gt;| type取值 | hdrFormats需包含的HDRFormat |&lt;br/&gt;| -------- | -------- |&lt;br/&gt;| **HdrType**.AIHDR | HDRFormat.VIDEO_AIHDR |
-
-**说明：**仅XComponent构造参数中的type为**XComponentType**.SURFACE时该接口生效，否则该接口不生效。
+Set hdrBrightness for XComponent.
 
 **Since:** 24
 
@@ -126,8 +124,8 @@ hdrBrightness(brightness: number, type?: HdrType)
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| brightness | number | Yes | HDR内容的亮度。&lt;br/&gt;取值范围：[0.0, 1.0]。小于0.0的值按0.0处理，大于1.0的值按1.0处理，其他异常值按1.0处理。 &lt;br/&gt;**0.0**表示内容按照SDR亮度显示，**1.0**表示内容按照当前允许的最高HDR亮度显示。&lt;br/&gt;默认值：**1.0**。 |
-| type | [HdrType](../../apis-media-kit/arkts-apis/arkts-media-media-hdrtype-e.md) | No | 显示HDR内容时的HDR类型。&lt;br/&gt;默认值：**HdrType.DEFAULT |
+| brightness | number | Yes | control the brightness of HDR video. |
+| type | [HdrType](../../apis-media-kit/arkts-apis/arkts-media-media-hdrtype-e.md) | No | the HDR type of the XComponent. |
 
 ## onDestroy
 
@@ -135,7 +133,7 @@ hdrBrightness(brightness: number, type?: HdrType)
 onDestroy(event: VoidCallback)
 ```
 
-当插件销毁时触发。
+Triggered when the plugin is destroyed.
 
 **Since:** 8
 
@@ -151,7 +149,7 @@ onDestroy(event: VoidCallback)
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| event | [VoidCallback](../arkts-apis/arkts-arkui-voidcallback-t.md) | Yes | XComponent销毁后的回调。<br>**Since:** 18 |
+| event | [VoidCallback](../arkts-apis/arkts-arkui-voidcallback-t.md) | Yes | Callback triggered after **XComponent** is destroyed.<br>**Since:** 18 |
 
 ## onLoad
 
@@ -159,7 +157,7 @@ onDestroy(event: VoidCallback)
 onLoad(callback: OnNativeLoadCallback)
 ```
 
-插件加载完成时回调事件。
+Triggered when the plugin is loaded.
 
 **Since:** 8
 
@@ -175,5 +173,5 @@ onLoad(callback: OnNativeLoadCallback)
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [OnNativeLoadCallback](arkts-arkui-onnativeloadcallback-t.md) | Yes | 插件加载完成时回调事件，用于获取XComponent实例对象的context。<br>**Since:** 18 |
+| callback | [OnNativeLoadCallback](arkts-arkui-onnativeloadcallback-t.md) | Yes | Callback triggered after the surface held by **XComponent** is created.<br>**Since:** 18 |
 

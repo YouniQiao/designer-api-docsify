@@ -1,6 +1,6 @@
 # OnHttpErrorReceiveEvent
 
-定义网页加载资源遇到HTTP错误时触发该回调。
+Represents the callback invoked when an HTTP error occurs during web page resource loading.
 
 **Since:** 12
 
@@ -22,7 +22,7 @@ import { AtomicServiceWeb, OnMessageEvent, OnPageEndEvent, OnHttpErrorReceiveEve
 request: WebResourceRequest
 ```
 
-网页请求的封装信息。
+Web resource request of event.
 
 **Type:** [WebResourceRequest](../../apis-arkweb/arkts-apis/arkts-arkweb-web-webresourcerequest-c.md)
 
@@ -42,7 +42,7 @@ request: WebResourceRequest
 response: WebResourceResponse
 ```
 
-资源响应的封装信息。
+Web resource response of event.
 
 **Type:** [WebResourceResponse](../../apis-arkweb/arkts-components/arkts-arkweb-webresourceresponse-c.md)
 

@@ -1,6 +1,6 @@
 # AudioRendererChangeInfo
 
-描述音频渲染器更改信息。
+Describes the audio renderer change event.
 
 **Since:** 9
 
@@ -22,7 +22,7 @@ import { audio } from 'kits/@kit.AudioKit';
 readonly deviceDescriptors: AudioDeviceDescriptors
 ```
 
-音频设备描述。
+Audio device description.
 
 **Type:** [AudioDeviceDescriptors](arkts-audio-audio-audiodevicedescriptors-t.md)
 
@@ -40,7 +40,7 @@ readonly deviceDescriptors: AudioDeviceDescriptors
 readonly rendererInfo: AudioRendererInfo
 ```
 
-音频渲染器信息。
+Audio renderer information.
 
 **Type:** [AudioRendererInfo](arkts-audio-audio-audiorendererinfo-i.md)
 
@@ -58,7 +58,7 @@ readonly rendererInfo: AudioRendererInfo
 readonly streamId: int
 ```
 
-音频流唯一id。
+Unique ID of an audio stream.
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 

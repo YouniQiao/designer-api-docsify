@@ -1,6 +1,6 @@
 # ProgressStyleMap
 
-进度条类型和样式的映射表。
+Defines the mapping between progress indicators and styles.
 
 **Since:** 10
 
@@ -16,7 +16,7 @@
 [ProgressType.Capsule]: CapsuleStyleOptions | ProgressStyleOptions
 ```
 
-胶囊形进度条对应的进度条样式。
+Progress bar style corresponding to the capsule progress bar.
 
 **Type:** [CapsuleStyleOptions](../arkts-apis/arkts-arkui-progress-capsulestyleoptions-i.md) \| ProgressStyleOptions
 
@@ -38,7 +38,7 @@
 [ProgressType.Eclipse]: EclipseStyleOptions | ProgressStyleOptions
 ```
 
-圆形进度条对应的进度条样式。
+Progress bar style corresponding to a round progress bar.
 
 **Type:** [EclipseStyleOptions](arkts-arkui-eclipsestyleoptions-i.md) \| ProgressStyleOptions
 
@@ -60,7 +60,7 @@
 [ProgressType.Linear]: LinearStyleOptions | ProgressStyleOptions
 ```
 
-线性进度条对应的进度条样式。
+Progress bar style corresponding to the linear progress bar.
 
 **Type:** [LinearStyleOptions](arkts-arkui-linearstyleoptions-i.md) \| ProgressStyleOptions
 
@@ -82,7 +82,7 @@
 [ProgressType.Ring]: RingStyleOptions | ProgressStyleOptions
 ```
 
-环形无刻度进度条对应的进度条样式。
+Progress bar style corresponding to the ring unscaled progress bar.
 
 **Type:** [RingStyleOptions](../arkts-apis/arkts-arkui-progress-ringstyleoptions-i.md) \| ProgressStyleOptions
 
@@ -104,7 +104,7 @@
 [ProgressType.ScaleRing]: ScaleRingStyleOptions | ProgressStyleOptions
 ```
 
-环形有刻度进度条对应的进度条样式。
+Progress bar style corresponding to the ring scaled progress bar.
 
 **Type:** [ScaleRingStyleOptions](arkts-arkui-scaleringstyleoptions-i.md) \| ProgressStyleOptions
 

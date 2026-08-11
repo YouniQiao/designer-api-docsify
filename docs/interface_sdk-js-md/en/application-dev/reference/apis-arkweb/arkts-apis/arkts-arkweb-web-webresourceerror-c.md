@@ -26,6 +26,28 @@ Constructor.
 
 **System capability:** SystemCapability.Web.Webview.Core
 
+## getCustomErrorCode
+
+```TypeScript
+getCustomErrorCode(): int
+```
+
+Gets the custom error code of the Web resource.
+
+**Since:** 26.1.0
+
+**ArkTS mode:** ArkTS-Sta only, since version 26.1.0.
+
+<!--Device-WebResourceError-getCustomErrorCode(): int--><!--Device-WebResourceError-getCustomErrorCode(): int-End-->
+
+**System capability:** SystemCapability.Web.Webview.Core
+
+**Return value:**
+
+| Type | Description |
+| --- | --- |
+| int | Return the custom error code of the Web resource. |
+
 ## getErrorCode
 
 ```TypeScript

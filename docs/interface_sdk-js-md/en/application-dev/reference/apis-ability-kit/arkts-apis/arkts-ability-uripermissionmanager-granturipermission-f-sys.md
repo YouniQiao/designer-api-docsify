@@ -17,15 +17,18 @@ function grantUriPermission(
   ): void
 ```
 
-授权URI给指定应用，授权成功后目标应用将获得该URI的文件访问权限，目标应用退出后权限将被回收。目标应用使用该URI的方法可以参考  
-[应用文件分享](../../../file-management/share-app-file.md)。使用callback异步回调。该接口仅在Phone、PC/2in1、Tablet设备中可正常调用，在其他设备可以调用但是不生效。
+Grants the URI permission to an application. If the call is successful, the application obtains the permission to access the file specified by the URI. Once the application exits, the permission will be automatically revoked. For  details about how to access the file based on the URI, see  
+[Sharing an Application File](../../../file-management/share-app-file.md). This API uses an asynchronous callback to return the result.
 
-> **说明：**
+> **NOTE：**
 > 
-> - 当应用拥有ohos.permission.PROXY_AUTHORIZATION_URI权限时, 可以授权不属于自身但具有访问权限的URI。如果不具备该权限，则仅支持授权属于自身的URI。
+> - If an application has the ohos.permission.PROXY_AUTHORIZATION_URI permission, it can grant the accessible URIs
+> of another application. If the application does not have this permission, it can grant only its own URI
+> permissions.
 > 
-> - 因URI处理涉及编解码，传入的URI需要使用[getUriFromPath](../../apis-core-file-kit/arkts-apis/arkts-corefile-fileuri-geturifrompath-f.md/arkts-corefile-fileuri-geturifrompath-f.md#geturifrompath)接口获取。对于应用自行拼接的URI，系统无法保证
-> 其功能。
+> - URI processing involves encoding and decoding. Therefore, the input URI must be obtained through the
+> [getUriFromPath](../../apis-core-file-kit/arkts-apis/arkts-corefile-fileuri-geturifrompath-f.md/arkts-corefile-fileuri-geturifrompath-f.md#geturifrompath) API. For URIs combined by the application, the
+> system cannot guarantee their functions.
 
 **Since:** 10
 
@@ -43,23 +46,23 @@ function grantUriPermission(
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| uri | string | Yes | 指向文件的URI，scheme固定为"file"，参考[FileUri](../../apis-core-file-kit/arkts-apis/arkts-corefile-fileuri-fileuri-c.md/arkts-corefile-fileuri-fileuri-c.md#constructor)。 |
-| flag | wantConstant.Flags | Yes | URI的读权限或写权限。 |
-| targetBundleName | string | Yes | 被授权URI的应用包名。 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;number&gt; | Yes | 回调函数。返回0表示有权限，返回-1表示无权限。 |
+| uri | string | Yes | URI of the file. The scheme has a fixed value of **file**. For details, see [FileUri](../../apis-core-file-kit/arkts-apis/arkts-corefile-fileuri-fileuri-c.md/arkts-corefile-fileuri-fileuri-c.md#constructor). |
+| flag | wantConstant.Flags | Yes | Read or write permission on the file to grant. |
+| targetBundleName | string | Yes | Bundle name of the target application. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;number&gt; | Yes | Callback used to return the result. If the operation is successful, **0** is returned; otherwise, **-1** is returned. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types. |
-| 801 | Capability not supported.<br>**Applicable version:** 19 and later |
-| 16000050 | Internal error. |
-| 16000060 | A sandbox application cannot grant URI permission. |
-| 201 | Permission denied. |
-| 202 | Not System App. Interface caller is not a system app. |
-| 16000058 | Invalid URI flag. |
-| 16000059 | Invalid URI type. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types. |
+| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported.<br>**Applicable version:** 19 and later |
+| [16000050](../errorcode-ability.md#16000050-internal-error) | Internal error. |
+| [16000060](../errorcode-ability.md#16000060-sandbox-applications-cannot-grant-uri-permission) | A sandbox application cannot grant URI permission. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not System App. Interface caller is not a system app. |
+| [16000058](../errorcode-ability.md#16000058-specified-uri-flag-is-invalid) | Invalid URI flag. |
+| [16000059](../errorcode-ability.md#16000059-specified-uri-type-is-invalid) | Invalid URI type. |
 
 ## Examples
 
@@ -99,15 +102,18 @@ function grantUriPermission(
   ): void
 ```
 
-授权URI给指定应用，授权成功后目标应用将获得该URI的文件访问权限，目标应用退出后权限将被回收。目标应用使用该URI的方法可以参考  
-[应用文件分享](../../../file-management/share-app-file.md)。使用callback异步回调。该接口仅在Phone、PC/2in1、Tablet设备中可正常调用，在其他设备可以调用但是不生效。
+Grants the URI permission to an application. If the call is successful, the application obtains the permission to access the file specified by the URI. Once the application exits, the permission will be automatically revoked. For  details about how to access the file based on the URI, see  
+[Sharing an Application File](../../../file-management/share-app-file.md). This API uses an asynchronous callback to return the result.
 
-> **说明：**
+> **NOTE：**
 > 
-> - 当应用拥有ohos.permission.PROXY_AUTHORIZATION_URI权限时, 可以授权不属于自身但具有访问权限的URI。如果不具备该权限，则仅支持授权属于自身的URI。
+> - If an application has the ohos.permission.PROXY_AUTHORIZATION_URI permission, it can grant the accessible URIs
+> of another application. If the application does not have this permission, it can grant only its own URI
+> permissions.
 > 
-> - 因URI处理涉及编解码，传入的URI需要使用[getUriFromPath](../../apis-core-file-kit/arkts-apis/arkts-corefile-fileuri-geturifrompath-f.md/arkts-corefile-fileuri-geturifrompath-f.md#geturifrompath)接口获取。对于应用自行拼接的URI，系统无法保证
-> 其功能。
+> - URI processing involves encoding and decoding. Therefore, the input URI must be obtained through the
+> [getUriFromPath](../../apis-core-file-kit/arkts-apis/arkts-corefile-fileuri-geturifrompath-f.md/arkts-corefile-fileuri-geturifrompath-f.md#geturifrompath) API. For URIs combined by the application, the
+> system cannot guarantee their functions.
 
 **Since:** 23
 
@@ -127,22 +133,22 @@ function grantUriPermission(
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| uri | string | Yes | 指向文件的URI，scheme固定为"file"，参考[FileUri](../../apis-core-file-kit/arkts-apis/arkts-corefile-fileuri-fileuri-c.md/arkts-corefile-fileuri-fileuri-c.md#constructor)。 |
-| flag | wantConstant.Flags | Yes | URI的读权限或写权限。 |
-| targetBundleName | string | Yes | 被授权URI的应用包名。 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | 回调函数。返回0表示有权限，返回-1表示无权限。 |
+| uri | string | Yes | URI of the file. The scheme has a fixed value of **file**. For details, see [FileUri](../../apis-core-file-kit/arkts-apis/arkts-corefile-fileuri-fileuri-c.md/arkts-corefile-fileuri-fileuri-c.md#constructor). |
+| flag | wantConstant.Flags | Yes | Read or write permission on the file to grant. |
+| targetBundleName | string | Yes | Bundle name of the target application. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. If the operation is successful, **0** is returned; otherwise, **-1** is returned. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 801 | Capability not supported. |
-| 16000050 | Connect to system server failed. |
-| 16000060 | A sandbox application cannot grant URI permission. |
-| 201 | Permission denied. |
-| 202 | Not System App. Interface caller is not a system app. |
-| 16000058 | Invalid URI flag. |
-| 16000059 | Invalid URI type. |
+| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. |
+| [16000050](../errorcode-ability.md#16000050-internal-error) | Connect to system server failed. |
+| [16000060](../errorcode-ability.md#16000060-sandbox-applications-cannot-grant-uri-permission) | A sandbox application cannot grant URI permission. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not System App. Interface caller is not a system app. |
+| [16000058](../errorcode-ability.md#16000058-specified-uri-flag-is-invalid) | Invalid URI flag. |
+| [16000059](../errorcode-ability.md#16000059-specified-uri-type-is-invalid) | Invalid URI type. |
 
 
 ## grantUriPermission
@@ -151,15 +157,18 @@ function grantUriPermission(
 function grantUriPermission(uri: string, flag: wantConstant.Flags, targetBundleName: string): Promise<number>
 ```
 
-授权URI给指定应用，授权成功后目标应用将获得该URI的文件访问权限，目标应用退出后权限将被回收。目标应用使用该URI的方法可以参考  
-[应用文件分享](../../../file-management/share-app-file.md)。使用Promise异步回调。该接口仅在Phone、PC/2in1、Tablet设备中可正常调用，在其他设备可以调用但是不生效。
+Grants the URI permission to an application. If the call is successful, the application obtains the permission to access the file specified by the URI. Once the application exits, the permission will be automatically revoked. For  details about how to access the file based on the URI, see  
+[Sharing an Application File](../../../file-management/share-app-file.md). This API uses a promise to return the result.
 
-> **说明：**
+> **NOTE：**
 > 
-> - 当应用拥有ohos.permission.PROXY_AUTHORIZATION_URI权限时, 可以授权不属于自身但具有访问权限的URI。如果不具备该权限，则仅支持授权属于自身的URI。
+> - If an application has the ohos.permission.PROXY_AUTHORIZATION_URI permission, it can grant the accessible URIs
+> of another application. If the application does not have this permission, it can grant only its own URI
+> permissions.
 > 
-> - 因URI处理涉及编解码，传入的URI需要使用[getUriFromPath](../../apis-core-file-kit/arkts-apis/arkts-corefile-fileuri-geturifrompath-f.md/arkts-corefile-fileuri-geturifrompath-f.md#geturifrompath)接口获取。对于应用自行拼接的URI，系统无法保证
-> 其功能。
+> - URI processing involves encoding and decoding. Therefore, the input URI must be obtained through the
+> [getUriFromPath](../../apis-core-file-kit/arkts-apis/arkts-corefile-fileuri-geturifrompath-f.md/arkts-corefile-fileuri-geturifrompath-f.md#geturifrompath) API. For URIs combined by the application, the
+> system cannot guarantee their functions.
 
 **Since:** 10
 
@@ -177,28 +186,28 @@ function grantUriPermission(uri: string, flag: wantConstant.Flags, targetBundleN
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| uri | string | Yes | 指向文件的URI，scheme固定为"file"，参考[FileUri](../../apis-core-file-kit/arkts-apis/arkts-corefile-fileuri-fileuri-c.md/arkts-corefile-fileuri-fileuri-c.md#constructor)。 |
-| flag | wantConstant.Flags | Yes | URI的读权限或写权限。 |
-| targetBundleName | string | Yes | 被授权URI的应用包名。 |
+| uri | string | Yes | URI of the file. The scheme has a fixed value of **file**. For details, see [FileUri](../../apis-core-file-kit/arkts-apis/arkts-corefile-fileuri-fileuri-c.md/arkts-corefile-fileuri-fileuri-c.md#constructor). |
+| flag | wantConstant.Flags | Yes | Read or write permission on the file to grant. |
+| targetBundleName | string | Yes | Bundle name of the target application. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;number&gt; | Promise对象。返回0表示有权限，返回-1表示无权限。 |
+| Promise&lt;number&gt; | Promise used to return the result. If the operation is successful, **0** is returned; otherwise, **-1** is returned. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types. |
-| 801 | Capability not supported.<br>**Applicable version:** 19 and later |
-| 16000050 | Internal error. |
-| 16000060 | A sandbox application cannot grant URI permission. |
-| 201 | Permission denied. |
-| 202 | Not System App. Interface caller is not a system app. |
-| 16000058 | Invalid URI flag. |
-| 16000059 | Invalid URI type. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types. |
+| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported.<br>**Applicable version:** 19 and later |
+| [16000050](../errorcode-ability.md#16000050-internal-error) | Internal error. |
+| [16000060](../errorcode-ability.md#16000060-sandbox-applications-cannot-grant-uri-permission) | A sandbox application cannot grant URI permission. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not System App. Interface caller is not a system app. |
+| [16000058](../errorcode-ability.md#16000058-specified-uri-flag-is-invalid) | Invalid URI flag. |
+| [16000059](../errorcode-ability.md#16000059-specified-uri-type-is-invalid) | Invalid URI type. |
 
 ## Examples
 
@@ -233,7 +242,18 @@ uriPermissionManager.grantUriPermission(uri, wantConstant.Flags.FLAG_AUTH_READ_U
 function grantUriPermission(uri: string, flag: wantConstant.Flags, targetBundleName: string): Promise<void>
 ```
 
-Grant URI to another application
+Grants the URI permission to an application. If the call is successful, the application obtains the permission to access the file specified by the URI. Once the application exits, the permission will be automatically revoked. For  details about how to access the file based on the URI, see  
+[Sharing an Application File](../../../file-management/share-app-file.md). This API uses a promise to return the result.
+
+> **NOTE：**
+> 
+> - If an application has the ohos.permission.PROXY_AUTHORIZATION_URI permission, it can grant the accessible URIs
+> of another application. If the application does not have this permission, it can grant only its own URI
+> permissions.
+> 
+> - URI processing involves encoding and decoding. Therefore, the input URI must be obtained through the
+> [getUriFromPath](../../apis-core-file-kit/arkts-apis/arkts-corefile-fileuri-geturifrompath-f.md/arkts-corefile-fileuri-geturifrompath-f.md#geturifrompath) API. For URIs combined by the application, the
+> system cannot guarantee their functions.
 
 **Since:** 23
 
@@ -251,27 +271,27 @@ Grant URI to another application
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| uri | string | Yes | File URI. |
-| flag | wantConstant.Flags | Yes | wantConstant.Flags.FLAG_AUTH_READ_URI_PERMISSION, wantConstant.Flags.FLAG_AUTH_WRITE_URI_PERMISSION or wantConstant.Flags.FLAG_AUTH_PERSISTABLE_URI_PERMISSION. |
-| targetBundleName | string | Yes | Indicates the bundle name of authorization target. |
+| uri | string | Yes | URI of the file. The scheme has a fixed value of **file**. For details, see [FileUri](../../apis-core-file-kit/arkts-apis/arkts-corefile-fileuri-fileuri-c.md/arkts-corefile-fileuri-fileuri-c.md#constructor). |
+| flag | wantConstant.Flags | Yes | Read or write permission on the file to grant. |
+| targetBundleName | string | Yes | Bundle name of the target application. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | the promise returned by the function. |
+| Promise&lt;void&gt; | Promise used to return the result. If the operation is successful, **0** is returned; otherwise, **-1** is returned. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 801 | Capability not supported. |
-| 16000050 | Connect to system server failed. |
-| 16000060 | A sandbox application cannot grant URI permission. |
-| 201 | Permission denied. |
-| 202 | Not System App. Interface caller is not a system app. |
-| 16000058 | Invalid URI flag. |
-| 16000059 | Invalid URI type. |
+| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. |
+| [16000050](../errorcode-ability.md#16000050-internal-error) | Connect to system server failed. |
+| [16000060](../errorcode-ability.md#16000060-sandbox-applications-cannot-grant-uri-permission) | A sandbox application cannot grant URI permission. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not System App. Interface caller is not a system app. |
+| [16000058](../errorcode-ability.md#16000058-specified-uri-flag-is-invalid) | Invalid URI flag. |
+| [16000059](../errorcode-ability.md#16000059-specified-uri-type-is-invalid) | Invalid URI type. |
 
 
 ## grantUriPermission
@@ -280,17 +300,21 @@ Grant URI to another application
 function grantUriPermission(uri: string, flag: wantConstant.Flags, targetBundleName: string, appCloneIndex: int): Promise<void>
 ```
 
-授权URI给指定应用，授权成功后目标应用将获得该URI的文件访问权限，目标应用退出后权限将被回收。目标应用使用该URI的方法可以参考  
-[应用文件分享](../../../file-management/share-app-file.md)。使用Promise异步回调。该接口仅在Phone、PC/2in1、Tablet设备中可正常调用，在其他设备可以调用但是不生效。
+Grants the URI permission to an application. If the call is successful, the application obtains the permission to access the file specified by the URI. Once the application exits, the permission will be automatically revoked. For  details about how to access the file based on the URI, see  
+[Sharing an Application File](../../../file-management/share-app-file.md). This API uses a promise to return the result.
 
-> **说明：**
+> **NOTE：**
 > 
-> - 当应用拥有ohos.permission.PROXY_AUTHORIZATION_URI权限时, 可以授权不属于自身但具有访问权限的URI。如果不具备该权限，则仅支持授权属于自身的URI。
+> - If an application has the ohos.permission.PROXY_AUTHORIZATION_URI permission, it can grant the accessible URIs
+> of another application. If the application does not have this permission, it can grant only its own URI
+> permissions.
 > 
-> - 该接口支持给分身应用授权，需要指定目标应用的应用包名和分身索引。
+> - This API can be used to grant URI access permission to a cloned application. You need to specify the
+> application bundle name and index of the cloned application.
 > 
-> - 因URI处理涉及编解码，传入的URI需要使用[getUriFromPath](../../apis-core-file-kit/arkts-apis/arkts-corefile-fileuri-geturifrompath-f.md/arkts-corefile-fileuri-geturifrompath-f.md#geturifrompath)接口获取。对于应用自行拼接的URI，系统无法保证
-> 其功能。
+> - URI processing involves encoding and decoding. Therefore, the input URI must be obtained through the
+> [getUriFromPath](../../apis-core-file-kit/arkts-apis/arkts-corefile-fileuri-geturifrompath-f.md/arkts-corefile-fileuri-geturifrompath-f.md#geturifrompath) API. For URIs combined by the application, the
+> system cannot guarantee their functions.
 
 **Since:** 14
 
@@ -308,30 +332,30 @@ function grantUriPermission(uri: string, flag: wantConstant.Flags, targetBundleN
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| uri | string | Yes | 指向文件的URI，scheme固定为"file"，参考[FileUri](../../apis-core-file-kit/arkts-apis/arkts-corefile-fileuri-fileuri-c.md/arkts-corefile-fileuri-fileuri-c.md#constructor)。 |
-| flag | wantConstant.Flags | Yes | URI的读权限或写权限。 |
-| targetBundleName | string | Yes | 被授权应用的应用包名。 |
-| appCloneIndex | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | 被授权应用的分身索引，有效范围为[0, 1000], 取值为0时表示主应用。 |
+| uri | string | Yes | URI of the file. The scheme has a fixed value of **file**. For details, see [FileUri](../../apis-core-file-kit/arkts-apis/arkts-corefile-fileuri-fileuri-c.md/arkts-corefile-fileuri-fileuri-c.md#constructor). |
+| flag | wantConstant.Flags | Yes | Read or write permission on the file to grant. |
+| targetBundleName | string | Yes | Bundle name of the target application. |
+| appCloneIndex | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | Index of the cloned application. The value range is [0, 1000]. The value **0** indicates the application itself. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise对象。无返回结果的Promise对象。 |
+| Promise&lt;void&gt; | Promise that returns no value. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types. |
-| 801 | Capability not supported.<br>**Applicable version:** 19 and later |
-| 16000081 | Failed to obtain the target application information. |
-| 16000050 | Internal error. |
-| 16000060 | A sandbox application cannot grant URI permission. |
-| 201 | Permission denied. |
-| 202 | Not System App. Interface caller is not a system app. |
-| 16000058 | Invalid URI flag. |
-| 16000059 | Invalid URI type. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types. |
+| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported.<br>**Applicable version:** 19 and later |
+| [16000081](../errorcode-ability.md#16000081-failed-to-obtain-the-target-application-information) | Failed to obtain the target application information. |
+| [16000050](../errorcode-ability.md#16000050-internal-error) | Internal error. |
+| [16000060](../errorcode-ability.md#16000060-sandbox-applications-cannot-grant-uri-permission) | A sandbox application cannot grant URI permission. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not System App. Interface caller is not a system app. |
+| [16000058](../errorcode-ability.md#16000058-specified-uri-flag-is-invalid) | Invalid URI flag. |
+| [16000059](../errorcode-ability.md#16000059-specified-uri-type-is-invalid) | Invalid URI type. |
 
 ## Examples
 

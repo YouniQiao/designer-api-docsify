@@ -12,7 +12,7 @@ import { backgroundTaskManager } from 'kits/@kit.BackgroundTasksKit';
 function on(type: 'continuousTaskCancel', callback: Callback<ContinuousTaskCancelInfo>): void
 ```
 
-注册长时任务取消的监听，使用callback异步回调。
+Subscribes to continuous task cancellation events. This API uses an asynchronous callback to return the result.
 
 **Since:** 15
 
@@ -28,15 +28,15 @@ function on(type: 'continuousTaskCancel', callback: Callback<ContinuousTaskCance
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'continuousTaskCancel' | Yes | 事件回调类型，固定取值为'continuousTaskCancel'，表示长时任务取消。 |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;ContinuousTaskCancelInfo&gt; | Yes | 回调函数，返回长时任务取消原因等信息。 |
+| type | 'continuousTaskCancel' | Yes | Event type. The value is fixed at **'continuousTaskCancel'**, indicating that a continuous task is canceled. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;ContinuousTaskCancelInfo&gt; | Yes | Callback used to return information such as the reason for canceling a continuous task. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. Possible cause: 1. Callback parameter error; &lt;br&gt; 2. Register a exist callback type; 3. Parameter verification failed. |
-| 201 | Permission denied. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible cause: 1. Callback parameter error; &lt;br&gt; 2. Register a exist callback type; 3. Parameter verification failed. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
 
 ## Examples
 
@@ -68,9 +68,9 @@ export default class EntryAbility extends UIAbility {
 function on(type: 'continuousTaskSuspend', callback: Callback<ContinuousTaskSuspendInfo>): void
 ```
 
-注册长时任务暂停的监听，使用callback异步回调。注册该回调后，如果系统首次检测到应用未执行相应的业务，不会直接取消长时任务，而是将长时任务标记为暂停状态，如果连续检测失败，仍会取消长时任务。
+Registers a listener for continuous task suspension. This API uses an asynchronous callback to return the result. After the callback is registered, if the system detects for the first time that the application does not execute the corresponding service, the system does not directly cancel the continuous task. Instead, it will mark the task as suspended. If the detection failures persist, the system will cancel the continuous task.
 
-长时任务处于暂停状态时，应用退后台会被挂起，回前台自动激活。
+When a continuous task is suspended, the application will be suspended when switched to the background and automatically activated when brought back to the foreground.
 
 **Since:** 20
 
@@ -86,15 +86,15 @@ function on(type: 'continuousTaskSuspend', callback: Callback<ContinuousTaskSusp
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'continuousTaskSuspend' | Yes | 事件回调类型，固定取值为'continuousTaskSuspend'，表示长时任务暂停。 |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;ContinuousTaskSuspendInfo&gt; | Yes | 回调函数，返回长时任务暂停原因等信息。 |
+| type | 'continuousTaskSuspend' | Yes | Event type. The value is fixed at **'continuousTaskSuspend'**, indicating that the continuous task is suspended. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;ContinuousTaskSuspendInfo&gt; | Yes | Callback used to return information such as the reason for suspending a continuous task. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 9800005 | Continuous task verification failed. |
-| 201 | Permission denied. |
+| [9800005](../../apis-backgroundtasks-kit/errorcode-backgroundTaskMgr.md#9800005-continuous-task-verification-failure) | Continuous task verification failed. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
 
 ## Examples
 
@@ -127,7 +127,7 @@ export default class EntryAbility extends UIAbility {
 function on(type: 'continuousTaskActive', callback: Callback<ContinuousTaskActiveInfo>): void
 ```
 
-注册长时任务激活的监听，使用callback异步回调。应用回前台激活暂停的长时任务。
+Registers a listener for continuous task activation. This API uses an asynchronous callback to return the result. The application returns to the foreground to activate the suspended continuous task.
 
 **Since:** 20
 
@@ -143,15 +143,15 @@ function on(type: 'continuousTaskActive', callback: Callback<ContinuousTaskActiv
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'continuousTaskActive' | Yes | 事件回调类型，固定取值为'continuousTaskActive'，表示长时任务激活。 |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;ContinuousTaskActiveInfo&gt; | Yes | 回调函数，返回长时任务激活相关信息。 |
+| type | 'continuousTaskActive' | Yes | Event type. The value is fixed at **'continuousTaskActive'**, indicating that the continuous task is activated. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;ContinuousTaskActiveInfo&gt; | Yes | Callback used to return the activation information about a continuous task. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 9800005 | Continuous task verification failed. |
-| 201 | Permission denied. |
+| [9800005](../../apis-backgroundtasks-kit/errorcode-backgroundTaskMgr.md#9800005-continuous-task-verification-failure) | Continuous task verification failed. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
 
 ## Examples
 

@@ -1,11 +1,5 @@
 # hasMatchedCallLog
 
-## 导入模块
-
-```TypeScript
-import { contact } from 'kits/@kit.ContactsKit';
-```
-
 ## hasMatchedCallLog
 
 ```TypeScript
@@ -46,9 +40,9 @@ function hasMatchedCallLog(context: Context, phoneNumber: string, minDuration: i
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 201 | Permission denied. |
-| 16700002 | Invalid parameter value. |
-| 16700001 | General error. |
+| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
+| [16700002](../errorcode-contacts.md#16700002-参数检查失败) | Invalid parameter value. |
+| [16700001](../errorcode-contacts.md#16700001-系统内部错误) | General error. |
 
 ## 示例
 
@@ -111,9 +105,9 @@ function hasMatchedCallLog(context: Context, phoneNumber: string, minDuration: i
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 201 | Permission denied. |
-| 16700002 | Invalid parameter value. |
-| 16700001 | General error. |
+| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
+| [16700002](../errorcode-contacts.md#16700002-参数检查失败) | Invalid parameter value. |
+| [16700001](../errorcode-contacts.md#16700001-系统内部错误) | General error. |
 
 ## 示例
 

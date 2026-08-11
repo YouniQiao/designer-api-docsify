@@ -1,6 +1,6 @@
 # ExtendAction
 
-编辑框中文本的扩展编辑操作类型，如剪切、复制等。
+Enumerates the extend action.
 
 **Since:** 10
 
@@ -16,9 +16,7 @@
 SELECT_ALL = 0
 ```
 
-全选。
-
-**使用场景：**输入法请求全选编辑框中的文本时使用。
+Select all text.
 
 **Since:** 10
 
@@ -34,9 +32,7 @@ SELECT_ALL = 0
 CUT = 3
 ```
 
-剪切。
-
-**使用场景：**输入法请求剪切选中的文本时使用，将选中文本复制到剪贴板并删除原文本。
+Cut selecting text.
 
 **Since:** 10
 
@@ -52,9 +48,7 @@ CUT = 3
 COPY = 4
 ```
 
-复制。
-
-**使用场景：**输入法请求复制选中的文本时使用，将选中文本复制到剪贴板。
+Copy selecting text.
 
 **Since:** 10
 
@@ -70,9 +64,7 @@ COPY = 4
 PASTE = 5
 ```
 
-粘贴。
-
-**使用场景：**输入法请求粘贴剪贴板内容时使用。
+Paste from paste board.
 
 **Since:** 10
 

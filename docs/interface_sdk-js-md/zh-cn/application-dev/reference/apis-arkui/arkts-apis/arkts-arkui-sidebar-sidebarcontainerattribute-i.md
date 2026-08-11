@@ -96,7 +96,7 @@ default controlButton(value: ButtonStyle | undefined): this
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | [ButtonStyle](../arkts-components/arkts-arkui-buttonstyle-i.md) \| undefined | 是 |  |
+| value | [ButtonStyle](arkts-arkui-sidebar-buttonstyle-i.md) \| undefined | 是 |  |
 
 **返回值：**
 
@@ -420,7 +420,7 @@ default sideBarPosition(value: SideBarPosition | undefined): this
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | [SideBarPosition](../arkts-components/arkts-arkui-sidebarposition-e.md) \| undefined | 是 |  |
+| value | [SideBarPosition](arkts-arkui-sidebar-sidebarposition-e.md) \| undefined | 是 |  |
 
 **返回值：**
 

@@ -18,7 +18,7 @@ reference?: BreakpointsReference
 
 断点切换参照物。
 
-**类型：** [BreakpointsReference](arkts-arkui-gridrow-breakpointsreference-e.md)
+**类型：** [BreakpointsReference](../arkts-components/arkts-arkui-breakpointsreference-e.md)
 
 **起始版本：** 23
 

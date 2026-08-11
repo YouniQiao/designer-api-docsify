@@ -1,6 +1,6 @@
 # PrinterCapability
 
-定义打印能力的接口。
+Defines the printer capabilities.
 
 **Since:** 24
 
@@ -22,7 +22,7 @@ import { print } from 'kits/@kit.BasicServicesKit';
 colorMode: int
 ```
 
-表示色彩模式。
+Color mode.
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
@@ -40,7 +40,7 @@ colorMode: int
 duplexMode: int
 ```
 
-表示单双面打印模式。
+Simplex or duplex mode.
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
@@ -58,7 +58,7 @@ duplexMode: int
 minMargin?: PrintMargin
 ```
 
-表示打印机最小边距。
+Minimum margin of the printer.
 
 **Type:** [PrintMargin](arkts-basicservices-print-printmargin-i.md)
 
@@ -76,7 +76,7 @@ minMargin?: PrintMargin
 options?: Object
 ```
 
-表示JSON对象字符串。
+Printer options. The value is a JSON object string.
 
 **Type:** Object
 
@@ -94,7 +94,7 @@ options?: Object
 pageSize: Array<PrintPageSize>
 ```
 
-表示打印机支持的页面尺寸列表。
+List of page sizes supported by the printer.
 
 **Type:** Array&lt;PrintPageSize&gt;
 
@@ -112,7 +112,7 @@ pageSize: Array<PrintPageSize>
 resolution?: Array<PrintResolution>
 ```
 
-表示打印机支持的分辨率列表。
+List of resolutions supported by the printer.
 
 **Type:** Array&lt;PrintResolution&gt;
 

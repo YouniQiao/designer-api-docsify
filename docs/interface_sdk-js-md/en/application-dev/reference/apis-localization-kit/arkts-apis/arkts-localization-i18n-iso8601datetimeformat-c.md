@@ -1,6 +1,7 @@
 # ISO8601DateTimeFormat
 
-符合ISO 8601标准的日期格式化对象。
+Provide a DateTime formatting interface which could format date to ISO 8601 standard string.  
+[ISO8601](https://iso8601.com/).
 
 **Since:** 26.0.0
 
@@ -22,7 +23,7 @@ import { i18n } from 'kits/@kit.LocalizationKit';
 public constructor(options?: ISO8601DateTimeFormatOptions)
 ```
 
-创建符合ISO 8601标准的日期格式化对象。
+A constructor used to create a ISO8601DateTimeFormat object.
 
 **Since:** 26.0.0
 
@@ -40,7 +41,7 @@ public constructor(options?: ISO8601DateTimeFormatOptions)
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| options | [ISO8601DateTimeFormatOptions](arkts-localization-i18n-iso8601datetimeformatoptions-i.md) | No | 符合ISO 8601标准的日期格式化对象创建时的配置项。 默认值：所有属性都取默认值时的配置项。 |
+| options | [ISO8601DateTimeFormatOptions](arkts-localization-i18n-iso8601datetimeformatoptions-i.md) | No | Options for creating a date formatting object that complies with ISO 8601. Default format is yyyy-MM-ddThh:mm:ssZZZZZ. |
 
 ## format
 
@@ -48,7 +49,7 @@ public constructor(options?: ISO8601DateTimeFormatOptions)
 public format(date: Date): string
 ```
 
-对时间日期进行格式化，返回符合ISO 8601标准的时间日期字符串。
+Formats a date to ISO 8601 formatted string.
 
 **Since:** 26.0.0
 
@@ -66,11 +67,11 @@ public format(date: Date): string
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| date | Date | Yes | 时间日期。 &lt;br&gt;**说明：** &lt;br&gt;月份从0开始计数，0表示一月。 |
+| date | Date | Yes | date to be formatted. Note: The month starts from 0. For example, 0 indicates January. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| string | 符合ISO8601标准的时间日期字符串。 |
+| string | Date and time string that complies with ISO 8601. |
 

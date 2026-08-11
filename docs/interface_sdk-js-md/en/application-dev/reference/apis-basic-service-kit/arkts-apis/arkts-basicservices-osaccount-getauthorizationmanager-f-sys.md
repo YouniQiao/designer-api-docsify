@@ -12,7 +12,7 @@ import { osAccount } from 'kits/@kit.BasicServicesKit';
 function getAuthorizationManager(): AuthorizationManager
 ```
 
-获取系统账号授权管理器。
+Obtains this OS account authorization manager.
 
 **Since:** 24
 
@@ -30,13 +30,13 @@ function getAuthorizationManager(): AuthorizationManager
 
 | Type | Description |
 | --- | --- |
-| [AuthorizationManager](arkts-basicservices-osaccount-authorizationmanager-i-sys.md) | 返回系统账号授权管理的实例对象。 |
+| [AuthorizationManager](arkts-basicservices-osaccount-authorizationmanager-i-sys.md) | Instance object of the OS account authorization manager. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 202 | Not system application. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system application. |
 
 ## Examples
 

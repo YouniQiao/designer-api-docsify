@@ -12,7 +12,7 @@ import { accessibility } from 'kits/@kit.AccessibilityKit';
 function offAnimationReduceStateChange(callback?: Callback<boolean>): void
 ```
 
-取消监听减弱动效模式变化事件。使用callback异步回调。
+Unsubscribes from the state changes in animation reduction mode. This API uses an asynchronous callback to return the result.
 
 **Since:** 23
 
@@ -28,7 +28,7 @@ function offAnimationReduceStateChange(callback?: Callback<boolean>): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;boolean&gt; | No | 回调函数。取消指定callback对象的事件响应。需与 [accessibility.onAnimationReduceStateChange](accessibility.onAnimationReduceStateChange(callback: Callback&lt;boolean&gt;)) 的callback一致。缺省时，表示注销所有已注册事件。 |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;boolean&gt; | No | Callback function. Cancels the event response of a specified callback object. The value must be the same as the value of callback in [accessibility.onAnimationReduceStateChange](accessibility.onAnimationReduceStateChange(callback: Callback&lt;boolean&gt;)) . If this parameter is not specified, listening will be disabled for all callbacks corresponding to the specified type. |
 
 ## Examples
 

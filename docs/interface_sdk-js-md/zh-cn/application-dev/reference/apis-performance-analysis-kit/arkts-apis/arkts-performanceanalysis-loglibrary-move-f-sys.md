@@ -1,11 +1,5 @@
 # move（系统接口）
 
-## 导入模块
-
-```TypeScript
-import { logLibrary } from 'kits/@kit.PerformanceAnalysisKit';
-```
-
 ## move
 
 ```TypeScript
@@ -44,12 +38,14 @@ function move(logType: string, logName: string, dest: string): Promise<void>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 401 | Invalid argument. Possible causes: &lt;br&gt;1. Mandatory parameters are left unspecified. &lt;br&gt;2. Incorrect parameter types. &lt;br&gt;3. Parameter verification failed. |
-| 21300001 | Source file does not exists |
-| 201 | Permission denied |
-| 202 | Permission denied, non-system app called system api |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Invalid argument. Possible causes: &lt;br&gt;1. Mandatory parameters are left unspecified. &lt;br&gt;2. Incorrect parameter types. &lt;br&gt;3. Parameter verification failed. |
+| [21300001](../errorcode-loglibrary-sys.md#21300001-指定文件不存在) | Source file does not exists |
+| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission denied, non-system app called system api |
 
 ## 示例
+
+ArkTS-Dyn示例：
 
 ```TypeScript
 import { logLibrary } from '@kit.PerformanceAnalysisKit';
@@ -71,6 +67,22 @@ try {
   }
 } catch (error) {
     console.error(`Failed to call logLibrary API. Code: ${error?.code}, message: ${error?.message}`);
+}
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+import { logLibrary } from '@kit.PerformanceAnalysisKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+try {
+  let logObj = logLibrary.list('FAULTLOG');
+  if (logObj.length > 0) {
+    await logLibrary.move('FAULTLOG', logObj[0].name, '');
+  }
+} catch (err: BusinessError) {
+  console.error(`error code: ${err?.code}, error msg: ${err?.message}`);
 }
 ```
 
@@ -108,12 +120,14 @@ function move(logType: string, logName: string, dest: string, callback: AsyncCal
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 401 | Invalid argument. Possible causes: &lt;br&gt;1. Mandatory parameters are left unspecified. &lt;br&gt;2. Incorrect parameter types. &lt;br&gt;3. Parameter verification failed. |
-| 21300001 | Source file does not exists |
-| 201 | Permission denied |
-| 202 | Permission denied, non-system app called system api |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Invalid argument. Possible causes: &lt;br&gt;1. Mandatory parameters are left unspecified. &lt;br&gt;2. Incorrect parameter types. &lt;br&gt;3. Parameter verification failed. |
+| [21300001](../errorcode-loglibrary-sys.md#21300001-指定文件不存在) | Source file does not exists |
+| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission denied, non-system app called system api |
 
 ## 示例
+
+ArkTS-Dyn示例：
 
 ```TypeScript
 import { logLibrary } from '@kit.PerformanceAnalysisKit';
@@ -131,6 +145,24 @@ try {
   }
 } catch (error) {
     console.error(`Failed to call logLibrary API. Code: ${error?.code}, message: ${error?.message}`);
+}
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+import { logLibrary } from '@kit.PerformanceAnalysisKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+try {
+  let logObj = logLibrary.list('FAULTLOG');
+  if (logObj.length > 0) {
+    logLibrary.move('FAULTLOG', logObj[0].name, 'dir1/dir2', (err: BusinessError | null) => {
+      // move结果
+    });
+  }
+} catch (err: BusinessError) {
+  console.error(`error code: ${err?.code}, error msg: ${err?.message}`);
 }
 ```
 

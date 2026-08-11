@@ -33,12 +33,12 @@ Queries the data traffic (including all TCP and UDP data packets) received throu
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. |
-| 2100002 | Failed to connect to the service. |
-| 2100003 | System internal error. |
-| 2103011 | Failed to create a system map. |
-| 2103012 | Failed to obtain the NIC name. |
-| 2103005 | Failed to read the system map. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. |
+| [2100002](../errorcode-net-connection.md#2100002-service-connection-failure) | Failed to connect to the service. |
+| [2100003](../errorcode-net-connection.md#2100003-system-internal-error) | System internal error. |
+| [2103011](../errorcode-net-statistics.md#2103011-failed-to-create-a-system-map) | Failed to create a system map. |
+| [2103012](../errorcode-net-statistics.md#2103012-failed-to-obtain-the-nic-name) | Failed to obtain the NIC name. |
+| [2103005](../errorcode-net-statistics.md#2103005-failed-to-read-the-system-map) | Failed to read the system map. |
 
 ## Examples
 
@@ -47,11 +47,8 @@ import { BusinessError } from '@kit.BasicServicesKit';
 import { statistics } from '@kit.NetworkKit';
 
 statistics.getIfaceRxBytes("wlan0", (error: BusinessError, stats: number) => {
-  if (error) {
-    console.error(`getIfaceRxBytes error, ${JSON.stringify(error)}`);
-    return;
-  }
-  console.info(`getIfaceRxBytes success, ${JSON.stringify(stats)}`);
+  console.error(JSON.stringify(error));
+  console.info(JSON.stringify(stats));
 });
 ```
 
@@ -88,23 +85,20 @@ Queries the data traffic (including all TCP and UDP data packets) received throu
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. |
-| 2100002 | Failed to connect to the service. |
-| 2100003 | System internal error. |
-| 2103011 | Failed to create a system map. |
-| 2103012 | Failed to obtain the NIC name. |
-| 2103005 | Failed to read the system map. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. |
+| [2100002](../errorcode-net-connection.md#2100002-service-connection-failure) | Failed to connect to the service. |
+| [2100003](../errorcode-net-connection.md#2100003-system-internal-error) | System internal error. |
+| [2103011](../errorcode-net-statistics.md#2103011-failed-to-create-a-system-map) | Failed to create a system map. |
+| [2103012](../errorcode-net-statistics.md#2103012-failed-to-obtain-the-nic-name) | Failed to obtain the NIC name. |
+| [2103005](../errorcode-net-statistics.md#2103005-failed-to-read-the-system-map) | Failed to read the system map. |
 
 ## Examples
 
 ```TypeScript
 import { statistics } from '@kit.NetworkKit';
-import { BusinessError } from '@kit.BasicServicesKit';
 
 statistics.getIfaceRxBytes("wlan0").then((stats: number) => {
   console.info(JSON.stringify(stats));
-}).catch((err: BusinessError) => {
-  console.error(JSON.stringify(err));
 });
 ```
 

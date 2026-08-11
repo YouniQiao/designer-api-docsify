@@ -1,6 +1,6 @@
 # MoveIndex
 
-定义移动数据的位置。
+Defines position of moved data.
 
 **Since:** 23
 
@@ -16,7 +16,7 @@
 from: int
 ```
 
-移动位置。取值范围是[0, 数据源长度-1]。
+Index of moved data.
 
 **Type:** int
 
@@ -36,7 +36,7 @@ from: int
 to: int
 ```
 
-目的移动位置。取值范围是[0, 数据源长度-1]。
+Destination of moved data.
 
 **Type:** int
 

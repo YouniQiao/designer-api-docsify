@@ -12,7 +12,7 @@ import { inputEventClient } from 'kits/@kit.InputKit';
 function permitInjection(result: boolean): void
 ```
 
-允许事件注入权限。
+Specifies whether to authorize event injection.
 
 **Since:** 12
 
@@ -28,13 +28,13 @@ function permitInjection(result: boolean): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| result | boolean | Yes | 授权结果（true表示：允许事件注入，false表示：不允许事件注入）。 |
+| result | boolean | Yes | Authorization result. The value **true** indicates that event injection is allowed, and the value **false** indicates the opposite. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; 3. Parameter verification failed. |
-| 201 | Permission denied. |
-| 202 | SystemAPI permission error. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; 3. Parameter verification failed. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | SystemAPI permission error. |
 

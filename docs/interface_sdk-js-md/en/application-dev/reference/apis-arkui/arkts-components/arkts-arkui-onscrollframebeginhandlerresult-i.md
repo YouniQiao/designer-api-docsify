@@ -1,10 +1,6 @@
 # OnScrollFrameBeginHandlerResult
 
-[OnScrollFrameBeginCallback](arkts-arkui-onscrollframebegincallback-t.md)返回的实际相对上一帧滚动偏移量。
-
-> **说明：**
-> 
-> 为规范匿名对象的定义，API version 18版本修改了此处的元素定义。其中，保留了历史匿名对象的起始版本信息，会出现外层元素@since版本号高于内层元素版本号的情况，但这不影响接口的使用。
+The data returned by the event handler when onScrollFrameBegin.
 
 **Since:** 18
 
@@ -20,7 +16,7 @@
 offsetRemain: number
 ```
 
-实际滚动偏移量。
+Actual scroll offset relative to the previous frame.&lt;br&gt;Unit: vp Anonymous Object Rectification.
 
 **Type:** number
 

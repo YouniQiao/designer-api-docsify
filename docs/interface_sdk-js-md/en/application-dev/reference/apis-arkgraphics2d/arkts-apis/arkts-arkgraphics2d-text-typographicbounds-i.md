@@ -1,19 +1,21 @@
 # TypographicBounds
 
-文本行的排版边界。文本行排版边界与排版字体、排版字号有关，与字符本身无关，例如字符串为" a b "，'a'字符前面有1个空格，'b'字符后面有1个空格，排版边界就包括行首和末尾空格的边界。例如字符串为"j"或"E"，排版边界相同，即与字符本身无关。
+Describes the typographic boundaries of a text line. These boundaries depend on the typographic font and font size,but not on the characters themselves. For example, for the string " a b " (which has a space before "a" and a space after "b"), the typographic boundaries include the spaces at the beginning and end of the line. Similarly, the strings "j" and "E" have identical typographic boundaries, independent of the characters themselves.
 
-> **说明：**
+> **NOTE：**
 > 
-> 示意图展示文本行排版参数：width（包含左右空格的文本行宽度）、ascent（上升高度最高点）、descent（下降高度最低点）、leading（行间距）、top（当前行最高点）、baseline（字符基线）、bottom（
-> 当前行最低点）、next line top（下一行最高点）。
+> The figure shows the text line typesetting parameters: width (the width of the text line including left and right
+> spaces), ascent (the highest point of the ascent), descent (the lowest point of the descent), leading (line
+> spacing), top (the highest point of the current line), baseline (the character baseline), bottom (the lowest
+> point of the current line), and next line top (the highest point of the next line).
 > 
 > ![Typographic.png](../../../reference/apis-arkgraphics2d/figures/Typographic.png)
 > 
-> 示意图展示了字符串为" a b "的排版边界。
+> The figure shows the typesetting boundaries for the string " a b ".
 > 
 > ![TypographicBounds.png](../../../reference/apis-arkgraphics2d/figures/TypographicBounds.png)
 > 
-> 示意图展示了字符串为"j"或"E"的排版边界。
+> The figure shows the typesetting boundaries for the string "j" or "E".
 > 
 > !
 > [TypographicBounds-Character.png](../../../reference/apis-arkgraphics2d/figures/TypographicBounds-Character.png)
@@ -38,7 +40,7 @@ import { text } from 'kits/@kit.ArkGraphics2D';
 ascent: double
 ```
 
-文本行的上升高度，浮点数，单位为物理像素px。
+Ascent height of a text line, which is a floating-point value in physical pixels (px).
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：double
 
@@ -58,7 +60,7 @@ ascent: double
 descent: double
 ```
 
-文本行的下降高度，浮点数，单位为物理像素px。
+Descent height of a text line, which is a floating-point value in physical pixels (px).
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：double
 
@@ -78,7 +80,7 @@ descent: double
 leading: double
 ```
 
-文本行的行间距，浮点数，单位为物理像素px。
+Leading of a text line, which is a floating-point value in physical pixels (px).
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：double
 
@@ -98,7 +100,7 @@ leading: double
 width: double
 ```
 
-排版边界的总宽度，浮点数，单位为物理像素px。
+Total width of the layout boundary, which is a floating-point value in physical pixels (px).
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：double
 

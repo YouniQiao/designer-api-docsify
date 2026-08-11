@@ -1,6 +1,6 @@
 # VideoAttribute
 
-用于播放视频文件并控制其播放状态的组件。
+Defines the Video attribute.
 
 **Inheritance/Implementation:** VideoAttribute extends [CommonMethod](arkts-arkui-common-commonmethod-i.md)
 

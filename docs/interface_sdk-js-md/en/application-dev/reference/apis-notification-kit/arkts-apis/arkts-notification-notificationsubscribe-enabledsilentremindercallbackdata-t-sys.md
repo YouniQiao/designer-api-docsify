@@ -4,7 +4,7 @@
 export type EnabledSilentReminderCallbackData = _EnabledSilentReminderCallbackData
 ```
 
-回调返回监听到的静默提醒使能状态信息。
+Describes the switch state for silent reminder notification.
 
 **Since:** 24
 

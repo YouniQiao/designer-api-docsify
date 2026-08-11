@@ -1,6 +1,6 @@
 # NavigationMenuOptions
 
-页面右上角菜单选项。
+The more button options of Navigation's menu or toolbar.
 
 **Since:** 23
 
@@ -16,7 +16,7 @@
 moreButtonOptions?: MoreButtonOptions
 ```
 
-工具栏更多图标的菜单选项。
+More button options.
 
 **Type:** [MoreButtonOptions](arkts-arkui-navigation-morebuttonoptions-i.md)
 

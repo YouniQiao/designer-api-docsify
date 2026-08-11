@@ -1,11 +1,5 @@
 # isAutoStartupSupported
 
-## 导入模块
-
-```TypeScript
-import { autoStartupManager } from 'kits/@kit.AbilityKit';
-```
-
 ## isAutoStartupSupported
 
 ```TypeScript

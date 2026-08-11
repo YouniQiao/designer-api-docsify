@@ -1,11 +1,5 @@
 # Popup
 
-## 导入模块
-
-```TypeScript
-import { Popup, PopupOptions, PopupButtonOptions, PopupIconOptions, PopupTextOptions } from 'kits/@kit.ArkUI';
-```
-
 ## Popup
 
 ```TypeScript

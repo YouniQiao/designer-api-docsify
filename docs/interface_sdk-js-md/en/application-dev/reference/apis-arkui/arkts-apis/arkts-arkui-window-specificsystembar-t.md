@@ -4,7 +4,7 @@
 type SpecificSystemBar = 'status' | 'navigation'| 'navigationIndicator'
 ```
 
-当前支持显示或隐藏的系统栏类型。
+Defines the type of system bar that can be displayed or hidden.
 
 **Since:** 11
 

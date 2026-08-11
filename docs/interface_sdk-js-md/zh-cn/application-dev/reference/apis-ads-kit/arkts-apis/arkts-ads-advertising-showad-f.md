@@ -1,11 +1,5 @@
 # showAd
 
-## 导入模块
-
-```TypeScript
-import { advertising } from 'kits/@kit.AdsKit';
-```
-
 ## showAd
 
 ```TypeScript
@@ -42,9 +36,9 @@ function showAd(ad: Advertisement, options: AdDisplayOptions, context?: common.U
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 401 | Invalid input parameter. Possible causes: 1. Mandatory parameters are left unspecified. |
-| 21800004 | Failed to display the ad. |
-| 21800001 | System internal error. |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Invalid input parameter. Possible causes: 1. Mandatory parameters are left unspecified. |
+| [21800004](../errorcode-ads.md#21800004-广告展示失败) | Failed to display the ad. |
+| [21800001](../errorcode-ads.md#21800001-系统内部错误) | System internal error. |
 
 ## 示例
 

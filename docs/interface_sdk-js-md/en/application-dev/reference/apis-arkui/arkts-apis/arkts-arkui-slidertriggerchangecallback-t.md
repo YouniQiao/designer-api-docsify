@@ -4,7 +4,7 @@
 export type SliderTriggerChangeCallback = (value: double, mode: SliderChangeMode) => void
 ```
 
-定义SliderConfiguration中使用的回调类型。
+Defines the callback type used in SliderConfiguration.
 
 **Since:** 23
 
@@ -20,6 +20,6 @@ export type SliderTriggerChangeCallback = (value: double, mode: SliderChangeMode
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | double | Yes | 设置当前的进度值。<br/>取值范围：[[min](../arkts-components/arkts-arkui-slideroptions-i.md/arkts-arkui-slideroptions-i.md)-[max](../arkts-components/arkts-arkui-slideroptions-i.md/arkts-arkui-slideroptions-i.md)] |
-| mode | [SliderChangeMode](../arkts-components/arkts-arkui-sliderchangemode-e.md) | Yes | 设置事件触发的相关状态值。 |
+| value | double | Yes | Current progress. |
+| mode | [SliderChangeMode](../arkts-components/arkts-arkui-sliderchangemode-e.md) | Yes | State triggered by the event. |
 

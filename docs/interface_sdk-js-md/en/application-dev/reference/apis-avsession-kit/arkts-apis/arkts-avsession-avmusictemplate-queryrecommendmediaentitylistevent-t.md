@@ -4,7 +4,7 @@
 type QueryRecommendMediaEntityListEvent = () => Promise<MediaEntity[]>
 ```
 
-推荐媒体实体列表查询事件。使用Promise异步回调。
+The query recommend media entity list event.
 
 **Since:** 23
 

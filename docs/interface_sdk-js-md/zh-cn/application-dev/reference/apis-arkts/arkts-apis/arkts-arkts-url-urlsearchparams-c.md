@@ -14,12 +14,6 @@ URLSearchParams接口定义了一些处理URL查询字符串的实用方法，�
 
 **系统能力：** SystemCapability.Utils.Lang
 
-## 导入模块
-
-```TypeScript
-import { url } from 'kits/@kit.ArkTS';
-```
-
 ## [Symbol.iterator]
 
 ```TypeScript
@@ -44,7 +38,7 @@ import { url } from 'kits/@kit.ArkTS';
 
 | 类型 | 说明 |
 | --- | --- |
-| [IterableIterator](arkts-arkts-iterator-iterableiterator-i.md)&lt;[string, string]&gt; | 返回一个ES6迭代器。迭代器的每一项都是一个JavaScript Array。 Array的第一项是name，第二项是value。 |
+| IterableIterator&lt;[string, string]&gt; | 返回一个迭代器，迭代器的每一项为包含name和value的[string, string]数组。 |
 
 ## 示例
 
@@ -64,7 +58,7 @@ for (let pair of pairs) {
 append(name: string, value: string): void
 ```
 
-将新的键值对插入到查询字符串。
+将新的键值对插入到查询字符串。与set方法不同，append不会替换已存在的键名对应的值，而是追加一个新的键值对，允许同一键名存在多个值。如需替换已有键值，请使用set方法。
 
 **起始版本：** 7
 
@@ -117,7 +111,7 @@ URLSearchParams的构造函数。
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| init | string[][] \| Record&lt;string, string&gt; \| string \| URLSearchParams | 否 | 入参对象。 &lt;br/&gt;- string[][]：字符串二维数组。 &lt;br/&gt;- Record&lt;string, string&gt;：对象列表。 &lt;br/&gt;- string：字符串。 &lt;br/&gt;- URLSearchParams：对象。 &lt;br/&gt;- 默认值：undefined。 |
+| init | string[][] \| Record&lt;string, string&gt; \| string \| URLSearchParams | 否 | 入参对象。 &lt;br/&gt;- string[][]：字符串二维数组，每个内部数组包含两个元素，分别为键名和键值。 &lt;br/&gt;- Record&lt;string, string&gt;：对象列表。 &lt;br/&gt;- string：字符串，需遵循URL查询参数格式，如'key=value&key2=value2'。 &lt;br/&gt;- URLSearchParams：对象。 &lt;br/&gt;- 默认值：undefined。 |
 
 ## 示例
 
@@ -135,7 +129,7 @@ let params = new url.URLSearchParams(urlObject.search);
 delete(name: string): void
 ```
 
-删除指定名称的键值对。
+删除指定名称的所有键值对。如果指定名称不存在，则不做任何操作。
 
 **起始版本：** 7
 
@@ -187,7 +181,7 @@ entries(): IterableIterator<[string, string]>
 
 | 类型 | 说明 |
 | --- | --- |
-| [IterableIterator](arkts-arkts-iterator-iterableiterator-i.md)&lt;[string, string]&gt; | 返回一个ES6的迭代器。 |
+| IterableIterator&lt;[string, string]&gt; | 返回一个ES6的迭代器。 |
 
 ## 示例
 
@@ -284,7 +278,7 @@ let getObj = paramsObject.get("abc"); // undefined
 getAll(name: string): string[]
 ```
 
-获取指定名称的所有键值对。
+获取指定名称的所有键对应值的集合。若查找一个不存在的键值对名称时返回值为空数组。
 
 **起始版本：** 7
 
@@ -308,7 +302,7 @@ getAll(name: string): string[]
 
 | 类型 | 说明 |
 | --- | --- |
-| string[] | 返回指定名称的所有键值对。 |
+| string[] | 返回指定名称的所有键对应值的集合。 |
 
 ## 示例
 
@@ -349,7 +343,7 @@ has(name: string): boolean
 
 | 类型 | 说明 |
 | --- | --- |
-| boolean | 是否存在相对应的key值。存在返回true，否则返回false。 |
+| boolean | 是否存在相对应的key值，存在返回true，否则返回false。 |
 
 ## 示例
 
@@ -365,7 +359,7 @@ paramsObject.has('bard') === true;
 keys(): IterableIterator<string>
 ```
 
-返回一个所有键值对的name的ES6迭代器。
+返回一个所有键值对的name的迭代器。
 
 **起始版本：** 7
 
@@ -383,7 +377,7 @@ keys(): IterableIterator<string>
 
 | 类型 | 说明 |
 | --- | --- |
-| [IterableIterator](arkts-arkts-iterator-iterableiterator-i.md)&lt;string&gt; | 返回一个所有键值对的name的ES6迭代器。 |
+| IterableIterator&lt;string&gt; | 返回一个所有键值对的name的迭代器。 |
 
 ## 示例
 
@@ -403,7 +397,7 @@ for (let key of keys) {
 set(name: string, value: string): void
 ```
 
-将与name关联的URLSearchParams对象中的值设置为value。如果存在名称为name的键值对，请将第一个键值对的值设置为value并删除所有其他值。如果不是，则将键值对附加到查询字符串。
+将与name关联的URLParams对象中的值设置为value。如果存在名称为name的键值对，请将第一个键值对的值设置为value并删除所有其他值。如果不存在该键名，则将键值对附加到查询字符串。
 
 **起始版本：** 7
 
@@ -438,7 +432,7 @@ paramsObject.set('baz', '3'); // Add a third parameter.
 sort(): void
 ```
 
-对包含在此对象中的所有键值对进行排序，并返回undefined。排序顺序是根据键的Unicode代码点。该方法使用稳定的排序算法 （即，将保留具有相等键的键值对之间的相对顺序）。
+对包含在此对象中的所有键值对进行排序。排序顺序是根据键的Unicode代码点。该方法使用稳定的排序算法 （即，将保留具有相等键的键值对之间的相对顺序）。
 
 **起始版本：** 7
 
@@ -501,7 +495,7 @@ console.info(params.toString()); // Output 'fod=1&bard=2&fod=3'
 values(): IterableIterator<string>
 ```
 
-返回一个所有键值对的value的ES6迭代器。
+返回一个所有键值对的value的迭代器。
 
 **起始版本：** 7
 
@@ -519,7 +513,7 @@ values(): IterableIterator<string>
 
 | 类型 | 说明 |
 | --- | --- |
-| [IterableIterator](arkts-arkts-iterator-iterableiterator-i.md)&lt;string&gt; | 返回一个所有键值对的value的ES6迭代器。 |
+| IterableIterator&lt;string&gt; | 返回一个所有键值对的value的迭代器。 |
 
 ## 示例
 

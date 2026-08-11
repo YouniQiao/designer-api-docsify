@@ -1,6 +1,6 @@
 # RotationSpeed (System API)
 
-转速，负值表示顺时针旋转。正值表示逆时针旋转。
+Rotational speed. A negative value indicates a clockwise rotation, and a positive value indicates a counterclockwise rotation.
 
 **Since:** 20
 
@@ -24,7 +24,7 @@ import { mechanicManager } from 'kits/@kit.MechanicKit';
 pitchSpeed?: double
 ```
 
-俯仰速度，单位为弧度每秒。
+Pitch speed, measured in radians per second.
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：double
 
@@ -44,7 +44,7 @@ pitchSpeed?: double
 rollSpeed?: double
 ```
 
-滚动速度，单位为弧度每秒。
+Roll speed, measured in radians per second.
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：double
 
@@ -64,7 +64,7 @@ rollSpeed?: double
 yawSpeed?: double
 ```
 
-偏航速度，单位为弧度每秒。
+Yaw speed, measured in radians per second.
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：double
 

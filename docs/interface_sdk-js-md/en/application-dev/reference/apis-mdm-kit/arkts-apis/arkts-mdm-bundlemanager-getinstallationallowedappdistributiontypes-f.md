@@ -12,7 +12,7 @@ import { bundleManager } from 'kits/@kit.MDMKit';
 function getInstallationAllowedAppDistributionTypes(admin: Want): Array<AppDistributionType>
 ```
 
-获取可安装的应用程序签名证书的分发类型。
+Obtains the distribution type of the signing certificate used by applications that can be installed.
 
 **Since:** 20
 
@@ -30,62 +30,21 @@ function getInstallationAllowedAppDistributionTypes(admin: Want): Array<AppDistr
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| admin | [Want](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-want-want-c.md) | Yes | 企业设备管理扩展组件。Want中必须包含企业设备管理扩展能力的abilityName和所在应用的bundleName。 |
+| admin | [Want](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-want-want-c.md) | Yes | EnterpriseAdminExtensionAbility. **Want** must contain the ability name of the EnterpriseAdminExtensionAbility and the bundle name of the application. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Array&lt;AppDistributionType&gt; | 应用程序签名证书的分发类型数组。 |
+| Array&lt;AppDistributionType&gt; | Distribution types of the application signing certificate. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 201 | Permission verification failed. The application does not have the permission required to call the API. |
-| 9200001 | The application is not an administrator application of the device. |
-| 9200002 | The administrator application does not have permission to manage the device. |
-
-
-## getInstallationAllowedAppDistributionTypes
-
-```TypeScript
-function getInstallationAllowedAppDistributionTypes(admin: Want | null): Array<AppDistributionType>
-```
-
-获取可安装的应用程序签名证书的分发类型。
-
-**Since:** 26.0.0
-
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
-
-**Required permissions:** ohos.permission.ENTERPRISE_SET_BUNDLE_INSTALL_POLICY
-
-**Model restriction:** This API can be used only in the stage model.
-
-<!--Device-bundleManager-function getInstallationAllowedAppDistributionTypes(admin: Want | null): Array<AppDistributionType>--><!--Device-bundleManager-function getInstallationAllowedAppDistributionTypes(admin: Want | null): Array<AppDistributionType>-End-->
-
-**System capability:** SystemCapability.Customization.EnterpriseDeviceManager
-
-**Parameters:**
-
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| admin | [Want](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-want-want-c.md) \| null | Yes | 企业设备管理扩展组件。Want中必须包含企业设备管理扩展能力的abilityName和所在应用的bundleName。 当设备存在多个MDM应用时，传入Want时查询对应企业设备管理应用设置的策略，传入null时查询实际生效的策略。 |
-
-**Return value:**
-
-| Type | Description |
-| --- | --- |
-| Array&lt;AppDistributionType&gt; | 应用程序签名证书的分发类型数组。 |
-
-**Error codes:**
-
-| Error Code ID | Error Message |
-| --- | --- |
-| 201 | Permission verification failed. The application does not have the permission required to call the API. |
-| 9200001 | The application is not an administrator application of the device. |
-| 9200002 | The administrator application does not have permission to manage the device. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed. The application does not have the permission required to call the API. |
+| [9200001](../errorcode-enterpriseDeviceManager.md#9200001-deviceadmin-not-enabled) | The application is not an administrator application of the device. |
+| [9200002](../errorcode-enterpriseDeviceManager.md#9200002-permission-denied) | The administrator application does not have permission to manage the device. |
 
 ## Examples
 
@@ -105,4 +64,45 @@ try {
   console.error(`Failed to get allowed appDistributionTypes. Code: ${err.code}, message: ${err.message}`);
 }
 ```
+
+
+## getInstallationAllowedAppDistributionTypes
+
+```TypeScript
+function getInstallationAllowedAppDistributionTypes(admin: Want | null): Array<AppDistributionType>
+```
+
+Obtains the distribution type of the signing certificate used by applications that can be installed.
+
+**Since:** 26.0.0
+
+**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
+
+**Required permissions:** ohos.permission.ENTERPRISE_SET_BUNDLE_INSTALL_POLICY
+
+**Model restriction:** This API can be used only in the stage model.
+
+<!--Device-bundleManager-function getInstallationAllowedAppDistributionTypes(admin: Want | null): Array<AppDistributionType>--><!--Device-bundleManager-function getInstallationAllowedAppDistributionTypes(admin: Want | null): Array<AppDistributionType>-End-->
+
+**System capability:** SystemCapability.Customization.EnterpriseDeviceManager
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| admin | [Want](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-want-want-c.md) \| null | Yes | EnterpriseAdminExtensionAbility. **Want** must contain the ability name of the. EnterpriseAdminExtensionAbility and the bundle name of the application.&lt;br&gt;If the device has multiple MDM applications, you can pass **admin** to query the corresponding policies. If **null** is passed, the policies that actually take effect on the device are returned. |
+
+**Return value:**
+
+| Type | Description |
+| --- | --- |
+| Array&lt;AppDistributionType&gt; | Distribution types of the application signing certificate. |
+
+**Error codes:**
+
+| Error Code ID | Error Message |
+| --- | --- |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed. The application does not have the permission required to call the API. |
+| [9200001](../errorcode-enterpriseDeviceManager.md#9200001-deviceadmin-not-enabled) | The application is not an administrator application of the device. |
+| [9200002](../errorcode-enterpriseDeviceManager.md#9200002-permission-denied) | The administrator application does not have permission to manage the device. |
 

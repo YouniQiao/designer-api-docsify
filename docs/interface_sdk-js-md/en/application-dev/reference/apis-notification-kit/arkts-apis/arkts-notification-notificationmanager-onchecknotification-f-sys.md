@@ -12,7 +12,7 @@ import { notificationManager } from 'kits/@kit.NotificationKit';
 function onCheckNotification(callback: (checkInfo: NotificationCheckInfo) => NotificationCheckResult): void
 ```
 
-通知监听回调。
+Subscribe the callback for check notifications.
 
 **Since:** 23
 
@@ -30,15 +30,15 @@ function onCheckNotification(callback: (checkInfo: NotificationCheckInfo) => Not
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | (checkInfo: NotificationCheckInfo) =&gt; NotificationCheckResult | Yes | 消息验证函数指针。 |
+| callback | (checkInfo: NotificationCheckInfo) =&gt; NotificationCheckResult | Yes | callback - The callback of check notifications. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. 3. Parameter verification failed. |
-| 1600001 | Internal error. |
-| 202 | Not system application to call the interface. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. 3. Parameter verification failed. |
+| [1600001](../errorcode-notification.md#1600001-internal-error) | Internal error. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system application to call the interface. |
 
 
 ## onCheckNotification
@@ -48,7 +48,7 @@ function onCheckNotification(checkRequest: NotificationCheckRequest,
     callback: (checkInfo: NotificationCheckInfo) => Promise<NotificationCheckResult>): void
 ```
 
-通知监听回调。
+Subscribe the callback for check notifications.
 
 **Since:** 23
 
@@ -66,17 +66,17 @@ function onCheckNotification(checkRequest: NotificationCheckRequest,
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| checkRequest | [NotificationCheckRequest](arkts-notification-notificationrequest-notificationcheckrequest-i-sys.md) | Yes | 通知请求验证内容。 |
-| callback | (checkInfo: NotificationCheckInfo) =&gt; Promise&lt;NotificationCheckResult&gt; | Yes | callback - 消息验证函数指针。 |
+| checkRequest | [NotificationCheckRequest](arkts-notification-notificationrequest-notificationcheckrequest-i-sys.md) | Yes | Check Request for filter notification request. |
+| callback | (checkInfo: NotificationCheckInfo) =&gt; Promise&lt;NotificationCheckResult&gt; | Yes | callback - The callback of check notifications. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. 3. Parameter verification failed. |
-| 201 | Permission denied. |
-| 1600001 | Internal error. |
-| 202 | Not system application to call the interface. |
-| 1600002 | Marshalling or unmarshalling error. |
-| 1600003 | Failed to connect to the service. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. 3. Parameter verification failed. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
+| [1600001](../errorcode-notification.md#1600001-internal-error) | Internal error. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system application to call the interface. |
+| [1600002](../errorcode-notification.md#1600002-marshalling-or-unmarshalling-error) | Marshalling or unmarshalling error. |
+| [1600003](../errorcode-notification.md#1600003-failed-to-connect-to-the-notification-service) | Failed to connect to the service. |
 

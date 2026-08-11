@@ -4,7 +4,7 @@
 type QueryHotWordsEvent = () => Promise<string[]>
 ```
 
-热词查询事件。使用Promise异步回调。
+The query hot words event.
 
 **Since:** 23
 

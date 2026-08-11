@@ -1,12 +1,13 @@
 # Pen
 
-画笔对象，用于描述所绘制图形形状的轮廓信息，支持设置颜色、线宽、抗锯齿、透明度、混合模式、转角样式、线帽样式，以及颜色滤波器、蒙版滤波器、路径效果、着色器、阴影层等绘制效果。
+Defines a pen, which is used to describe the style and color to outline a shape.
 
-> **说明：**
+> **NOTE：**
 > 
-> - 本模块使用屏幕物理像素单位px。
+> - This module uses the physical pixel unit, px.
 > 
-> - 本模块为单线程模型策略，需要调用方自行管理线程安全和上下文状态的切换。
+> - The module operates under a single-threaded model. The caller needs to manage thread safety and context state
+> transitions.
 
 **Since:** 11
 
@@ -28,7 +29,7 @@ import { drawing } from 'kits/@kit.ArkGraphics2D';
 constructor()
 ```
 
-构造一个新的画笔对象。
+A constructor used to create a **Pen** object.
 
 **Since:** 12
 
@@ -44,7 +45,7 @@ constructor()
 constructor(pen: Pen)
 ```
 
-复制构造一个新的画笔对象。
+Copies a **Pen** object to create a new one.
 
 **Since:** 12
 
@@ -58,13 +59,13 @@ constructor(pen: Pen)
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| pen | [Pen](arkts-arkgraphics2d-drawing-pen-c.md) | Yes | 待复制的画笔对象。 |
+| pen | [Pen](arkts-arkgraphics2d-drawing-pen-c.md) | Yes | Pen** object to copy. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types. |
 
 ## getAlpha
 
@@ -78,7 +79,7 @@ ArkTS-Sta:
 getAlpha(): int
 ```
 
-获取画笔的透明度。
+Obtains the alpha value of this pen.
 
 **Since:** 12
 
@@ -92,7 +93,7 @@ getAlpha(): int
 
 | Type | Description |
 | --- | --- |
-| ArkTS-Dyn: number  <br>ArkTS-Sta：int | 返回画笔的透明度，该返回值为0到255之间的整数。 |
+| ArkTS-Dyn: number  <br>ArkTS-Sta：int | Alpha value of the pen. The return value is an integer ranging from 0 to 255. |
 
 ## getCapStyle
 
@@ -100,7 +101,7 @@ getAlpha(): int
 getCapStyle(): CapStyle
 ```
 
-获取画笔的线帽样式。
+Obtains the cap style of this pen.
 
 **Since:** 12
 
@@ -114,7 +115,7 @@ getCapStyle(): CapStyle
 
 | Type | Description |
 | --- | --- |
-| [CapStyle](arkts-arkgraphics2d-drawing-capstyle-e.md) | 返回画笔的线帽样式。 |
+| [CapStyle](arkts-arkgraphics2d-drawing-capstyle-e.md) | Cap style. |
 
 ## getColor
 
@@ -122,7 +123,7 @@ getCapStyle(): CapStyle
 getColor(): common2D.Color
 ```
 
-获取画笔的颜色。
+Obtains the color of this pen.
 
 **Since:** 12
 
@@ -136,7 +137,7 @@ getColor(): common2D.Color
 
 | Type | Description |
 | --- | --- |
-| common2D.Color | 返回画笔当前设置的颜色。 |
+| common2D.Color | Color of the pen. |
 
 ## getColor
 
@@ -144,7 +145,7 @@ getColor(): common2D.Color
 getColor(): common2D.Color | undefined
 ```
 
-获取画笔的颜色。
+Obtains the color of this pen.
 
 **Since:** 23
 
@@ -158,7 +159,7 @@ getColor(): common2D.Color | undefined
 
 | Type | Description |
 | --- | --- |
-| common2D.Color | 返回画笔当前设置的颜色。获取失败时返回undefined。 |
+| common2D.Color | Returns a 32-bit (ARGB) variable that describes the color. |
 
 ## getColor4f
 
@@ -166,8 +167,7 @@ getColor(): common2D.Color | undefined
 getColor4f(): common2D.Color4f
 ```
 
-获取画笔的颜色，与[getColor](arkts-arkgraphics2d-drawing-pen-c.md#getcolor)的区别在于返回值类型为  
-[common2D.Color4f](arkts-arkgraphics2d-common2d-color4f-i.md)，颜色通道值为浮点数，适用于需要浮点数类型的场景。
+Obtains the pen color. The difference between this method and [getColor](arkts-arkgraphics2d-drawing-pen-c.md#getcolor) is that this method returns a floating point number.
 
 **Since:** 20
 
@@ -181,7 +181,7 @@ getColor4f(): common2D.Color4f
 
 | Type | Description |
 | --- | --- |
-| common2D.Color4f | 返回画笔当前设置的颜色，为ARGB格式的浮点数表示，每个颜色通道的取值范围为[0.0, 1.0]。 |
+| common2D.Color4f | Color of the pen. |
 
 ## getColor4f
 
@@ -189,8 +189,7 @@ getColor4f(): common2D.Color4f
 getColor4f(): common2D.Color4f | undefined
 ```
 
-获取画笔的颜色，与[getColor](arkts-arkgraphics2d-drawing-pen-c.md#getcolor)的区别在于返回值类型为  
-[common2D.Color4f](arkts-arkgraphics2d-common2d-color4f-i.md)，颜色通道值为浮点数，适用于需要浮点数类型的场景。
+Obtains the color of a pen. The color is used by the pen to outline a shape.
 
 **Since:** 24
 
@@ -204,7 +203,7 @@ getColor4f(): common2D.Color4f | undefined
 
 | Type | Description |
 | --- | --- |
-| common2D.Color4f | 返回画笔当前设置的颜色，为ARGB格式的浮点数表示，每个颜色通道的取值范围为[0.0, 1.0]。获取失败时返回undefined。 |
+| common2D.Color4f | Returns four floating point values that describes the color. |
 
 ## getColorFilter
 
@@ -212,7 +211,7 @@ getColor4f(): common2D.Color4f | undefined
 getColorFilter(): ColorFilter
 ```
 
-获取画笔的颜色滤波器。
+Obtains the color filter of this pen.
 
 **Since:** 12
 
@@ -226,7 +225,7 @@ getColorFilter(): ColorFilter
 
 | Type | Description |
 | --- | --- |
-| [ColorFilter](../../apis-arkui/arkts-apis/arkts-arkui-colorfilter-c.md) | 返回画笔当前设置的颜色滤波器，可用于查询当前画笔的颜色过滤效果。 |
+| [ColorFilter](../../apis-arkui/arkts-apis/arkts-arkui-colorfilter-c.md) | Color filter. |
 
 ## getColorFilter
 
@@ -234,7 +233,7 @@ getColorFilter(): ColorFilter
 getColorFilter(): ColorFilter | undefined
 ```
 
-获取画笔的颜色滤波器。
+Obtains the color filter of this pen.
 
 **Since:** 23
 
@@ -248,7 +247,7 @@ getColorFilter(): ColorFilter | undefined
 
 | Type | Description |
 | --- | --- |
-| [ColorFilter](../../apis-arkui/arkts-apis/arkts-arkui-colorfilter-c.md) | 返回画笔当前设置的颜色滤波器，可用于查询当前画笔的颜色过滤效果。获取失败时返回undefined。 |
+| [ColorFilter](../../apis-arkui/arkts-apis/arkts-arkui-colorfilter-c.md) | ColorFilter. |
 
 ## getFillPath
 
@@ -256,7 +255,7 @@ getColorFilter(): ColorFilter | undefined
 getFillPath(src: Path, dst: Path): boolean
 ```
 
-获取使用画笔绘制的源路径轮廓，并用目标路径表示。
+Obtains the source path outline drawn using this pen and represents it using a destination path.
 
 **Since:** 12
 
@@ -270,20 +269,20 @@ getFillPath(src: Path, dst: Path): boolean
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| src | [Path](arkts-arkgraphics2d-drawing-path-c.md) | Yes | 待提取轮廓的源路径对象。 |
-| dst | [Path](arkts-arkgraphics2d-drawing-path-c.md) | Yes | 目标路径对象，用于存储根据画笔属性从src路径计算得到的轮廓结果。 |
+| src | [Path](arkts-arkgraphics2d-drawing-path-c.md) | Yes | Source path. |
+| dst | [Path](arkts-arkgraphics2d-drawing-path-c.md) | Yes | Destination path. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| boolean | 返回获取源路径轮廓是否成功，true表示成功，false表示失败。 |
+| boolean | Check result. The value **true** means that the source path outline is obtained, and **false** means the opposite. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types. |
 
 ## getHexColor
 
@@ -297,7 +296,7 @@ ArkTS-Sta:
 getHexColor(): int
 ```
 
-获取画笔的颜色。
+Obtains the color of this pen.
 
 **Since:** 18
 
@@ -311,7 +310,7 @@ getHexColor(): int
 
 | Type | Description |
 | --- | --- |
-| ArkTS-Dyn: number  <br>ArkTS-Sta：int | 返回画笔的颜色，以16进制ARGB格式的32位无符号整数表示。 |
+| ArkTS-Dyn: number  <br>ArkTS-Sta：int | Color, represented as a 32-bit unsigned integer in hexadecimal ARGB format. |
 
 ## getJoinStyle
 
@@ -319,7 +318,7 @@ getHexColor(): int
 getJoinStyle(): JoinStyle
 ```
 
-获取画笔绘制转角的样式。
+Obtains the join style of this pen.
 
 **Since:** 12
 
@@ -333,7 +332,7 @@ getJoinStyle(): JoinStyle
 
 | Type | Description |
 | --- | --- |
-| [JoinStyle](arkts-arkgraphics2d-drawing-joinstyle-e.md) | 返回折线转角的样式。 |
+| [JoinStyle](arkts-arkgraphics2d-drawing-joinstyle-e.md) | Join style. |
 
 ## getMiterLimit
 
@@ -347,7 +346,7 @@ ArkTS-Sta:
 getMiterLimit(): double
 ```
 
-获取折线尖角长度与线宽的最大比值。
+Obtains the maximum ratio allowed between the sharp corner length of a polyline and its line width.
 
 **Since:** 12
 
@@ -361,7 +360,7 @@ getMiterLimit(): double
 
 | Type | Description |
 | --- | --- |
-| ArkTS-Dyn: number  <br>ArkTS-Sta：double | 返回折线尖角长度与线宽的最大比值。 |
+| ArkTS-Dyn: number  <br>ArkTS-Sta：double | Maximum ratio obtained. |
 
 ## getWidth
 
@@ -375,7 +374,7 @@ ArkTS-Sta:
 getWidth(): double
 ```
 
-获取画笔的线宽属性，线宽描述了画笔绘制图形轮廓的宽度。
+Obtains the stroke width of this pen. The width describes the thickness of the outline of a shape.
 
 **Since:** 12
 
@@ -389,7 +388,7 @@ getWidth(): double
 
 | Type | Description |
 | --- | --- |
-| ArkTS-Dyn: number  <br>ArkTS-Sta：double | 返回画笔的线宽，单位为物理像素px。 |
+| ArkTS-Dyn: number  <br>ArkTS-Sta：double | Stroke width for the pen, in px. |
 
 ## isAntiAlias
 
@@ -397,7 +396,7 @@ getWidth(): double
 isAntiAlias(): boolean
 ```
 
-获取画笔是否开启抗锯齿属性。
+Checks whether anti-aliasing is enabled for this pen.
 
 **Since:** 12
 
@@ -411,7 +410,7 @@ isAntiAlias(): boolean
 
 | Type | Description |
 | --- | --- |
-| boolean | 返回画笔是否开启抗锯齿属性，true表示开启，false表示关闭。 |
+| boolean | Check result. The value **true** means that anti-aliasing is enabled, and **false** means the opposite. |
 
 ## reset
 
@@ -419,7 +418,7 @@ isAntiAlias(): boolean
 reset(): void
 ```
 
-重置当前画笔为初始状态。
+Resets this pen to the initial state.
 
 **Since:** 12
 
@@ -441,7 +440,7 @@ ArkTS-Sta:
 setAlpha(alpha: int): void
 ```
 
-设置画笔的透明度。
+Sets an alpha value for this pen.
 
 **Since:** 11
 
@@ -455,13 +454,13 @@ setAlpha(alpha: int): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| alpha | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | 表示透明度，取值范围为[0, 255]，传入浮点类型时向下取整。 |
+| alpha | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | Alpha value. The value is an integer in the range [0, 255]. If a floating point number is passed in, the value is rounded down. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; 3. Parameter verification failed. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; 3. Parameter verification failed. |
 
 ## setAntiAlias
 
@@ -469,7 +468,7 @@ setAlpha(alpha: int): void
 setAntiAlias(aa: boolean): void
 ```
 
-设置画笔是否开启抗锯齿。开启后，使图形边缘在显示时更平滑。未调用此接口设置时，系统默认关闭抗锯齿。
+Enables anti-aliasing for this pen. Anti-aliasing makes the edges of the content smoother. If this API is not called, anti-aliasing is disabled by default.
 
 **Since:** 11
 
@@ -483,13 +482,13 @@ setAntiAlias(aa: boolean): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| aa | boolean | Yes | 表示是否开启抗锯齿。true表示开启，false表示关闭。 |
+| aa | boolean | Yes | Whether to enable anti-aliasing. **true** to enable, **false** otherwise. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types. |
 
 ## setBlendMode
 
@@ -497,7 +496,7 @@ setAntiAlias(aa: boolean): void
 setBlendMode(mode: BlendMode): void
 ```
 
-设置画笔的混合模式。
+Sets a blend mode for this pen.
 
 **Since:** 11
 
@@ -511,13 +510,13 @@ setBlendMode(mode: BlendMode): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| mode | [BlendMode](../../apis-arkui/arkts-apis/arkts-arkui-common-blendmode-e.md) | Yes | 颜色的混合模式。 |
+| mode | [BlendMode](../../apis-arkui/arkts-apis/arkts-arkui-common-blendmode-e.md) | Yes | Blend mode. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; 3. Parameter verification failed. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; 3. Parameter verification failed. |
 
 ## setCapStyle
 
@@ -525,7 +524,7 @@ setBlendMode(mode: BlendMode): void
 setCapStyle(style: CapStyle): void
 ```
 
-设置画笔的线帽样式。未调用此接口设置时，系统默认的线帽样式为FLAT_CAP。
+Sets the cap style for this pen. If this API is not called, the default cap style is **FLAT_CAP**.
 
 **Since:** 12
 
@@ -539,13 +538,13 @@ setCapStyle(style: CapStyle): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| style | [CapStyle](arkts-arkgraphics2d-drawing-capstyle-e.md) | Yes | 描述画笔的线帽样式。 |
+| style | [CapStyle](arkts-arkgraphics2d-drawing-capstyle-e.md) | Yes | Cap style. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; 3. Parameter verification failed. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; 3. Parameter verification failed. |
 
 ## setColor
 
@@ -553,7 +552,7 @@ setCapStyle(style: CapStyle): void
 setColor(color: common2D.Color): void
 ```
 
-设置画笔的颜色。
+Sets a color for this pen.
 
 **Since:** 11
 
@@ -567,13 +566,13 @@ setColor(color: common2D.Color): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| color | common2D.Color | Yes | ARGB格式的颜色，每个颜色通道的值是0到255之间的整数。 |
+| color | common2D.Color | Yes | Color in ARGB format. The value of each color channel is an integer ranging from 0 to 255. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; 3. Parameter verification failed. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; 3. Parameter verification failed. |
 
 ## setColor
 
@@ -587,7 +586,8 @@ ArkTS-Sta:
 setColor(alpha: int, red: int, green: int, blue: int): void
 ```
 
-设置画笔的颜色。性能优于[setColor](arkts-arkgraphics2d-drawing-pen-c.md#setcolor)接口，推荐使用本接口。
+Sets a color for this pen. This API provides better performance than  
+[setColor](arkts-arkgraphics2d-drawing-pen-c.md#setcolor) and is recommended.
 
 **Since:** 12
 
@@ -601,16 +601,16 @@ setColor(alpha: int, red: int, green: int, blue: int): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| alpha | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | ARGB格式颜色的透明度通道值，该参数取值范围是[0, 255]，传入范围内的浮点数会向下取整，超出范围的值会被截断到0或255。 |
-| red | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | ARGB格式颜色的红色通道值，该参数取值范围是[0, 255]，传入范围内的浮点数会向下取整，超出范围的值会被截断到0或255。 |
-| green | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | ARGB格式颜色的绿色通道值，该参数取值范围是[0, 255]，传入范围内的浮点数会向下取整，超出范围的值会被截断到0或255。 |
-| blue | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | ARGB格式颜色的蓝色通道值，该参数取值范围是[0, 255]，传入范围内的浮点数会向下取整，超出范围的值会被截断到0或255。 |
+| alpha | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | Alpha channel value of the color in ARGB format. The value is an integer ranging from 0 to 255. Any passed-in floating point number is rounded down. |
+| red | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | Red channel value of the color in ARGB format. The value is an integer ranging from 0 to 255 . Any passed-in floating point number is rounded down. |
+| green | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | Green channel value of the color in ARGB format. The value is an integer ranging from 0 to 255. Any passed-in floating point number is rounded down. |
+| blue | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | Blue channel value of the color in ARGB format. The value is an integer ranging from 0 to 2 55. Any passed-in floating point number is rounded down. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types. |
 
 ## setColor
 
@@ -624,7 +624,7 @@ ArkTS-Sta:
 setColor(color: int): void
 ```
 
-设置画笔的颜色。
+Sets a color for this pen.
 
 **Since:** 18
 
@@ -638,7 +638,7 @@ setColor(color: int): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| color | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | 16进制ARGB格式的颜色，格式为0xAARRGGBB，其中AA表示透明度通道，RR表示红色通道，GG表示绿色通道，BB表示蓝色通道，各通道取值范围为00-FF，取值范围为 [0x00000000, 0xFFFFFFFF]。超出有效范围的值会被截断处理。 |
+| color | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | Color in hexadecimal ARGB format. |
 
 ## setColor4f
 
@@ -646,7 +646,8 @@ setColor(color: int): void
 setColor4f(color4f: common2D.Color4f, colorSpace: colorSpaceManager.ColorSpaceManager | null): void
 ```
 
-设置画笔的颜色以及标准色域，与[setColor](arkts-arkgraphics2d-drawing-pen-c.md#setcolor)的区别在于可以单独设置色域。
+Sets the color and standard color gamut for this pen. The difference between this method and  
+[setColor](arkts-arkgraphics2d-drawing-pen-c.md#setcolor) is that the color gamut can be set separately.
 
 **Since:** 20
 
@@ -660,8 +661,8 @@ setColor4f(color4f: common2D.Color4f, colorSpace: colorSpaceManager.ColorSpaceMa
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| color4f | common2D.Color4f | Yes | ARGB格式的颜色，浮点数，每个颜色通道值的范围为[0.0, 1.0]，超出范围的值会被截断到0.0或1.0。 |
-| colorSpace | colorSpaceManager.ColorSpaceManager \| null | Yes | 标准色域对象，null表示使用SRGB色域。 |
+| color4f | common2D.Color4f | Yes | Color in the ARGB format. The value of each color channel is a floating point number ranging from 0.0 to 1.0. Values above 1.0 default to **1.0**, and values below 0.0 default to **0.0**. |
+| colorSpace | colorSpaceManager.ColorSpaceManager \| null | Yes | Standard color gamut object. **null** indicates SRGB. |
 
 ## setColorFilter
 
@@ -669,7 +670,7 @@ setColor4f(color4f: common2D.Color4f, colorSpace: colorSpaceManager.ColorSpaceMa
 setColorFilter(filter: ColorFilter | null): void
 ```
 
-给画笔添加额外的颜色滤波器。
+Sets a color filter for this pen.
 
 **Since:** 11
 
@@ -683,13 +684,13 @@ setColorFilter(filter: ColorFilter | null): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| filter | [ColorFilter](../../apis-arkui/arkts-apis/arkts-arkui-colorfilter-c.md) \| null | Yes | 颜色滤波器。null表示清空颜色滤波器。<br>**Since:** 20 |
+| filter | [ColorFilter](../../apis-arkui/arkts-apis/arkts-arkui-colorfilter-c.md) \| null | Yes | Defines a color filter. If **null** is passed in, the color filter is cleared.<br>**Since:** 20 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types. |
 
 ## setDither
 
@@ -697,7 +698,7 @@ setColorFilter(filter: ColorFilter | null): void
 setDither(dither: boolean): void
 ```
 
-设置画笔是否开启抖动绘制效果。抖动绘制使颜色更真实。
+Enables dithering for this pen. Dithering make the drawn color more realistic.
 
 **Since:** 11
 
@@ -711,13 +712,13 @@ setDither(dither: boolean): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| dither | boolean | Yes | 是否开启画笔的抖动绘制效果。true表示开启，false表示关闭。 |
+| dither | boolean | Yes | Whether to enable dithering. **true** to enable, **false** otherwise. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types. |
 
 ## setImageFilter
 
@@ -725,7 +726,7 @@ setDither(dither: boolean): void
 setImageFilter(filter: ImageFilter | null): void
 ```
 
-设置画笔的图像滤波器。
+Sets an image filter for this pen.
 
 **Since:** 12
 
@@ -739,13 +740,13 @@ setImageFilter(filter: ImageFilter | null): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| filter | [ImageFilter](arkts-arkgraphics2d-drawing-imagefilter-c.md) \| null | Yes | 图像滤波器，null表示清空画笔的图像滤波器效果。 |
+| filter | [ImageFilter](arkts-arkgraphics2d-drawing-imagefilter-c.md) \| null | Yes | Image filter. If **null** is passed in, the image filter effect of the pen will be cleared. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types. |
 
 ## setJoinStyle
 
@@ -753,7 +754,7 @@ setImageFilter(filter: ImageFilter | null): void
 setJoinStyle(style: JoinStyle): void
 ```
 
-设置画笔绘制转角的样式。未调用此接口设置时，系统默认的转角样式为MITER_JOIN。
+Sets the join style for this pen. If this API is not called, the default join style is **MITER_JOIN**.
 
 **Since:** 12
 
@@ -767,13 +768,13 @@ setJoinStyle(style: JoinStyle): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| style | [JoinStyle](arkts-arkgraphics2d-drawing-joinstyle-e.md) | Yes | 折线转角样式。 |
+| style | [JoinStyle](arkts-arkgraphics2d-drawing-joinstyle-e.md) | Yes | Join style. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; 3. Parameter verification failed. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; 3. Parameter verification failed. |
 
 ## setMaskFilter
 
@@ -781,7 +782,7 @@ setJoinStyle(style: JoinStyle): void
 setMaskFilter(filter: MaskFilter | null): void
 ```
 
-给画笔添加额外的蒙版滤镜。
+Adds a mask filter for this pen.
 
 **Since:** 12
 
@@ -795,13 +796,13 @@ setMaskFilter(filter: MaskFilter | null): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| filter | [MaskFilter](arkts-arkgraphics2d-drawing-maskfilter-c.md) \| null | Yes | 蒙版滤镜。null表示清空蒙版滤镜。<br>**Since:** 20 |
+| filter | [MaskFilter](arkts-arkgraphics2d-drawing-maskfilter-c.md) \| null | Yes | Mask filter. If **null** is passed in, the mask filter is cleared.<br>**Since:** 20 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types. |
 
 ## setMiterLimit
 
@@ -815,7 +816,7 @@ ArkTS-Sta:
 setMiterLimit(miter: double): void
 ```
 
-设置折线尖角长度与线宽的最大比值。当画笔绘制一条折线，并且[JoinStyle](arkts-arkgraphics2d-drawing-joinstyle-e.md)为MITER_JOIN时，若尖角长度与线宽的比值大于该最大比值，则该转角使用BEVEL_JOIN绘制。
+Sets the maximum ratio allowed between the sharp corner length of a polyline and its line width. When drawing a polyline with the pen, if [JoinStyle](arkts-arkgraphics2d-drawing-joinstyle-e.md) is set to **MITER_JOIN**and this maximum ratio is exceeded, the corner will be displayed as beveled instead of mitered.
 
 **Since:** 12
 
@@ -829,13 +830,13 @@ setMiterLimit(miter: double): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| miter | ArkTS-Dyn: number  <br>ArkTS-Sta：double | Yes | 折线尖角长度与线宽的最大比值，负数在绘制时会被视作4.0处理，非负数按实际传入值生效，该参数为浮点数。 |
+| miter | ArkTS-Dyn: number  <br>ArkTS-Sta：double | Yes | Maximum ratio of the sharp corner length of the polyline to the line width. A negative number is processed as **4.0** during drawing. Non-negative numbers take effect normally. The value is a floating point number. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types. |
 
 ## setPathEffect
 
@@ -843,7 +844,7 @@ setMiterLimit(miter: double): void
 setPathEffect(effect: PathEffect | null): void
 ```
 
-设置画笔路径效果。
+Sets the path effect for this pen.
 
 **Since:** 12
 
@@ -857,13 +858,13 @@ setPathEffect(effect: PathEffect | null): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| effect | [PathEffect](arkts-arkgraphics2d-drawing-patheffect-c.md) \| null | Yes | 路径效果对象，用于设置虚线、转角等路径绘制样式。null表示清空路径效果。<br>**Since:** 20 |
+| effect | [PathEffect](arkts-arkgraphics2d-drawing-patheffect-c.md) \| null | Yes | Implements a path effect. If **null** is passed in, the path filter is cleared.<br>**Since:** 20 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types. |
 
 ## setShaderEffect
 
@@ -871,7 +872,7 @@ setPathEffect(effect: PathEffect | null): void
 setShaderEffect(shaderEffect: ShaderEffect | null): void
 ```
 
-设置画笔着色器效果。
+Sets the shader effect for this pen.
 
 **Since:** 12
 
@@ -885,13 +886,13 @@ setShaderEffect(shaderEffect: ShaderEffect | null): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| shaderEffect | [ShaderEffect](arkts-arkgraphics2d-drawing-shadereffect-c.md) \| null | Yes | 着色器效果对象。null表示清空着色器效果。<br>**Since:** 20 |
+| shaderEffect | [ShaderEffect](arkts-arkgraphics2d-drawing-shadereffect-c.md) \| null | Yes | ShaderEffect** object. If **null** is passed in, the shader effect will be cleared.<br>**Since:** 20 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types. |
 
 ## setShadowLayer
 
@@ -899,7 +900,7 @@ setShaderEffect(shaderEffect: ShaderEffect | null): void
 setShadowLayer(shadowLayer: ShadowLayer | null): void
 ```
 
-设置画笔阴影层效果。当前仅在绘制文字时生效。
+Sets a shadow layer for this pen. The shadow layer effect takes effect only when text is drawn.
 
 **Since:** 12
 
@@ -913,13 +914,13 @@ setShadowLayer(shadowLayer: ShadowLayer | null): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| shadowLayer | [ShadowLayer](arkts-arkgraphics2d-drawing-shadowlayer-c.md) \| null | Yes | 阴影层对象。null表示清空阴影层效果。<br>**Since:** 20 |
+| shadowLayer | [ShadowLayer](arkts-arkgraphics2d-drawing-shadowlayer-c.md) \| null | Yes | Implements a shadow layer. If **null** is passed in, the shadow layer is cleared.<br>**Since:** 20 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types. |
 
 ## setStrokeWidth
 
@@ -933,7 +934,7 @@ ArkTS-Sta:
 setStrokeWidth(width: double): void
 ```
 
-设置画笔的线宽。0线宽被视作特殊的极细线宽，在绘制时始终会被绘制为1像素，不随画布的缩放而改变；负数线宽在实际绘制时会被视作0线宽。
+Sets the stroke width for this pen. The value **0** is treated as an unusually thin width. During drawing, the width of 0 is always drawn as 1 pixel wide, regardless of any scaling applied to the canvas. Negative values are also regarded as the value **0** during the drawing process.
 
 **Since:** 11
 
@@ -947,11 +948,11 @@ setStrokeWidth(width: double): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| width | ArkTS-Dyn: number  <br>ArkTS-Sta：double | Yes | 表示线宽，该参数为浮点数，单位为物理像素px。 |
+| width | ArkTS-Dyn: number  <br>ArkTS-Sta：double | Yes | Stroke width. The value is a floating point number. If a value less than 1 is passed in , the value **1** is used. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types. |
 

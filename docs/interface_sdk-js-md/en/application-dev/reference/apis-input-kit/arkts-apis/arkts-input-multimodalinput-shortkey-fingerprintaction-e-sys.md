@@ -1,6 +1,6 @@
 # FingerprintAction (System API)
 
-指纹手势事件类型的枚举。
+Enumerates fingerprint gesture event types.
 
 **Since:** 12
 
@@ -18,7 +18,7 @@
 DOWN = 0
 ```
 
-按下事件。
+Pressing down
 
 **Since:** 12
 
@@ -36,7 +36,7 @@ DOWN = 0
 UP = 1
 ```
 
-抬起事件。
+Lifting up
 
 **Since:** 12
 
@@ -54,7 +54,7 @@ UP = 1
 SLIDE = 2
 ```
 
-滑动事件。
+Sliding
 
 **Since:** 12
 
@@ -72,7 +72,7 @@ SLIDE = 2
 RETOUCH = 3
 ```
 
-第二次按下事件。
+Second pressing down
 
 **Since:** 12
 
@@ -90,7 +90,7 @@ RETOUCH = 3
 CLICK = 4
 ```
 
-双触事件。
+Double-click
 
 **Since:** 12
 

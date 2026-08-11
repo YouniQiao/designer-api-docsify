@@ -1,6 +1,6 @@
 # ActionMenuOptions
 
-操作菜单的选项。
+Defines the option of ShowActionMenu.
 
 **Since:** 8
 
@@ -26,7 +26,7 @@ import { prompt } from 'kits/@kit.ArkUI';
 buttons: [Button, Button?, Button?, Button?, Button?, Button?]
 ```
 
-菜单中菜单项按钮的数组，结构为：{text:'button', color: '#666666'}，支持1-6个按钮。大于6个按钮时弹窗不显示。
+Array of buttons in the dialog box.The array structure is {text:'button', color: '#666666'}.One to six buttons are supported.
 
 **Type:** [Button, Button?, Button?, Button?, Button?, Button?]
 
@@ -48,7 +48,7 @@ buttons: [Button, Button?, Button?, Button?, Button?, Button?]
 title?: string
 ```
 
-标题文本。
+Title of the text to display.
 
 **Type:** string
 

@@ -11,12 +11,6 @@ The module provides capabilities related to startup tasks in
 
 **系统能力：** SystemCapability.Ability.AppStartup
 
-## 导入模块
-
-```TypeScript
-import { StartupTask } from 'kits/@kit.AbilityKit';
-```
-
 ## init
 
 ```TypeScript

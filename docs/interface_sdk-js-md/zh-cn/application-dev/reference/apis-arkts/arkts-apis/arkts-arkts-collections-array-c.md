@@ -25,12 +25,6 @@
 
 **系统能力：** SystemCapability.Utils.Lang
 
-## 导入模块
-
-```TypeScript
-import { collections } from 'kits/@kit.ArkTS';
-```
-
 ## [Symbol.iterator]
 
 ```TypeScript
@@ -53,13 +47,13 @@ import { collections } from 'kits/@kit.ArkTS';
 
 | 类型 | 说明 |
 | --- | --- |
-| [IterableIterator](arkts-arkts-iterator-iterableiterator-i.md)&lt;T&gt; | 迭代器对象。 |
+| IterableIterator&lt;T&gt; | 迭代器对象。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 10200011 | The Symbol.iterator method cannot be bound. |
+| [10200011](../errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) | The Symbol.iterator method cannot be bound. |
 
 ## at
 
@@ -95,8 +89,8 @@ at(index: number): T | undefined
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 10200011 | The at method cannot be bound. |
-| 10200201 | Concurrent modification error. |
+| [10200011](../errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) | The at method cannot be bound. |
+| [10200201](../errorcode-utils.md#10200201-concurrent修改错误) | Concurrent modification error. |
 
 ## concat
 
@@ -120,7 +114,7 @@ concat(...items: ConcatArray<T>[]): Array<T>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| items | [ConcatArray](arkts-arkts-concatarray-i.md)&lt;T&gt;[] | 是 | 用于拼接ArkTS Array的一个或多个数组。 |
+| items | [ConcatArray](arkts-arkts-collections-concatarray-i.md)&lt;T&gt;[] | 是 | 用于拼接ArkTS Array的一个或多个数组，省略时返回原数组的浅拷贝。 |
 
 **返回值：**
 
@@ -132,8 +126,8 @@ concat(...items: ConcatArray<T>[]): Array<T>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 10200011 | The concat method cannot be bound. |
-| 10200201 | Concurrent modification error. |
+| [10200011](../errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) | The concat method cannot be bound. |
+| [10200201](../errorcode-utils.md#10200201-concurrent修改错误) | Concurrent modification error. |
 
 ## constructor
 
@@ -157,7 +151,7 @@ constructor()
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 10200012 | The Array's constructor cannot be directly invoked. |
+| [10200012](../errorcode-utils.md#10200012-构造函数调用异常) | The Array's constructor cannot be directly invoked. |
 
 ## constructor
 
@@ -188,7 +182,7 @@ ArkTS Array的构造函数，通过开发者提供的元素进行初始化。
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 10200012 | The Array's constructor cannot be directly invoked. |
+| [10200012](../errorcode-utils.md#10200012-构造函数调用异常) | The Array's constructor cannot be directly invoked. |
 
 ## constructor
 
@@ -212,13 +206,13 @@ ArkTS Array的构造函数，通过开发者提供的元素进行初始化。
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| items | T[] | 是 | 初始化ArkTS Array的元素。 |
+| items | T[] | 是 | 初始化ArkTS Array的元素，默认值为空数组。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 10200012 | The Array's constructor cannot be directly invoked. |
+| [10200012](../errorcode-utils.md#10200012-构造函数调用异常) | The Array's constructor cannot be directly invoked. |
 
 ## copyWithin
 
@@ -256,8 +250,8 @@ copyWithin(target: number, start: number, end?: number): Array<T>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 10200011 | The copyWithin method cannot be bound. |
-| 10200201 | Concurrent modification error. |
+| [10200011](../errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) | The copyWithin method cannot be bound. |
+| [10200201](../errorcode-utils.md#10200201-concurrent修改错误) | Concurrent modification error. |
 
 ## create
 
@@ -294,7 +288,7 @@ static create<T>(arrayLength: number, initialValue: T): Array<T>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 10200011 | The create method cannot be bound.<br>**适用版本：** 12 - 17 |
+| [10200011](../errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) | The create method cannot be bound.<br>**适用版本：** 12 - 17 |
 
 ## entries
 
@@ -318,14 +312,14 @@ entries(): IterableIterator<[number, T]>
 
 | 类型 | 说明 |
 | --- | --- |
-| [IterableIterator](arkts-arkts-iterator-iterableiterator-i.md)&lt;[number, T]&gt; | 包含Array中每个元素的键值对的 迭代器对象。 |
+| IterableIterator&lt;[number, T]&gt; | 包含Array中每个元素的键值对的 迭代器对象。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 10200011 | The entries method cannot be bound. |
-| 10200201 | Concurrent modification error. |
+| [10200011](../errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) | The entries method cannot be bound. |
+| [10200201](../errorcode-utils.md#10200201-concurrent修改错误) | Concurrent modification error. |
 
 ## every
 
@@ -361,8 +355,8 @@ every(predicate: ArrayPredicateFn<T, Array<T>>): boolean
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 10200011 | The every method cannot be bound. |
-| 10200201 | Concurrent modification error. |
+| [10200011](../errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) | The every method cannot be bound. |
+| [10200201](../errorcode-utils.md#10200201-concurrent修改错误) | Concurrent modification error. |
 
 ## extendTo
 
@@ -386,15 +380,15 @@ extendTo(arrayLength: number, initialValue: T): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| arrayLength | number | 是 | Array的新长度。如果传入的值小于或等于当前Array 的长度，Array不发生变化。 |
+| arrayLength | number | 是 | Array的新长度。取值应为非负整数，否则会抛出异常。如果传入的值小于或等于当前Array的长度，Array不发生变化。 |
 | initialValue | T | 是 | 新增元素的初始值。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 10200011 | The extendTo method cannot be bound. |
-| 10200201 | Concurrent modification error. |
+| [10200011](../errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) | The extendTo method cannot be bound. |
+| [10200201](../errorcode-utils.md#10200201-concurrent修改错误) | Concurrent modification error. |
 
 ## fill
 
@@ -432,8 +426,8 @@ fill(value: T, start?: number, end?: number): Array<T>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 10200011 | The fill method cannot be bound. |
-| 10200201 | Concurrent modification error. |
+| [10200011](../errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) | The fill method cannot be bound. |
+| [10200201](../errorcode-utils.md#10200201-concurrent修改错误) | Concurrent modification error. |
 
 ## filter
 
@@ -469,8 +463,8 @@ filter(predicate: (value: T, index: number, array: Array<T>) => boolean): Array<
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 10200011 | The filter method cannot be bound. |
-| 10200201 | Concurrent modification error. |
+| [10200011](../errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) | The filter method cannot be bound. |
+| [10200201](../errorcode-utils.md#10200201-concurrent修改错误) | Concurrent modification error. |
 
 ## find
 
@@ -506,8 +500,8 @@ find(predicate: (value: T, index: number, obj: Array<T>) => boolean): T | undefi
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 10200011 | The find method cannot be bound. |
-| 10200201 | Concurrent modification error. |
+| [10200011](../errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) | The find method cannot be bound. |
+| [10200201](../errorcode-utils.md#10200201-concurrent修改错误) | Concurrent modification error. |
 
 ## findIndex
 
@@ -543,8 +537,8 @@ findIndex(predicate: (value: T, index: number, obj: Array<T>) => boolean): numbe
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 10200011 | The findIndex method cannot be bound. |
-| 10200201 | Concurrent modification error. |
+| [10200011](../errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) | The findIndex method cannot be bound. |
+| [10200201](../errorcode-utils.md#10200201-concurrent修改错误) | Concurrent modification error. |
 
 ## forEach
 
@@ -574,8 +568,8 @@ forEach(callbackFn: (value: T, index: number, array: Array<T>) => void): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 10200011 | The forEach method cannot be bound. |
-| 10200201 | Concurrent modification error. |
+| [10200011](../errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) | The forEach method cannot be bound. |
+| [10200201](../errorcode-utils.md#10200201-concurrent修改错误) | Concurrent modification error. |
 
 ## from
 
@@ -599,7 +593,7 @@ static from<T>(arrayLike: ArrayLike<T>): Array<T>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| arrayLike | [ArrayLike](arkts-arkts-arraylike-i.md)&lt;T&gt; | 是 | 用于构造ArkTS Array的对象。 |
+| arrayLike | ArrayLike&lt;T&gt; | 是 | 用于构造ArkTS Array的对象。 |
 
 **返回值：**
 
@@ -611,7 +605,7 @@ static from<T>(arrayLike: ArrayLike<T>): Array<T>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 10200011 | The from method cannot be bound.<br>**适用版本：** 12 - 17 |
+| [10200011](../errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) | The from method cannot be bound.<br>**适用版本：** 12 - 17 |
 
 ## from
 
@@ -647,7 +641,7 @@ static from<T>(iterable: Iterable<T>): Array<T>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 10200011 | The from method cannot be bound.<br>**适用版本：** 12 - 17 |
+| [10200011](../errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) | The from method cannot be bound.<br>**适用版本：** 12 - 17 |
 
 ## from
 
@@ -671,7 +665,7 @@ static from<T>(arrayLike: ArrayLike<T> | Iterable<T>, mapFn: ArrayFromMapFn<T, T
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| arrayLike | [ArrayLike](arkts-arkts-arraylike-i.md)&lt;T&gt; \| Iterable&lt;T&gt; | 是 | 用于构造ArkTS Array的对象。 |
+| arrayLike | ArrayLike&lt;T&gt; \| Iterable&lt;T&gt; | 是 | 用于构造ArkTS Array的对象。 |
 | mapFn | [ArrayFromMapFn](arkts-arkts-collections-arrayfrommapfn-t.md)&lt;T, T&gt; | 是 | 用于处理数组元素的函数。 |
 
 **返回值：**
@@ -702,7 +696,7 @@ static from<U, T>(arrayLike: ArrayLike<U> | Iterable<U>, mapFn: ArrayFromMapFn<U
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| arrayLike | [ArrayLike](arkts-arkts-arraylike-i.md)&lt;U&gt; \| Iterable&lt;U&gt; | 是 | 用于构造ArkTS Array的对象。 |
+| arrayLike | ArrayLike&lt;U&gt; \| Iterable&lt;U&gt; | 是 | 用于构造ArkTS Array的对象。 |
 | mapFn | [ArrayFromMapFn](arkts-arkts-collections-arrayfrommapfn-t.md)&lt;U, T&gt; | 是 | 用于处理数组元素的函数。 |
 
 **返回值：**
@@ -746,8 +740,8 @@ includes(searchElement: T, fromIndex?: number): boolean
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 10200011 | The includes method cannot be bound. |
-| 10200201 | Concurrent modification error. |
+| [10200011](../errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) | The includes method cannot be bound. |
+| [10200201](../errorcode-utils.md#10200201-concurrent修改错误) | Concurrent modification error. |
 
 ## indexOf
 
@@ -784,8 +778,8 @@ indexOf(searchElement: T, fromIndex?: number): number
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 10200011 | The indexOf method cannot be bound. |
-| 10200201 | Concurrent modification error. |
+| [10200011](../errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) | The indexOf method cannot be bound. |
+| [10200201](../errorcode-utils.md#10200201-concurrent修改错误) | Concurrent modification error. |
 
 ## isArray
 
@@ -851,8 +845,8 @@ join(separator?: string): string
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 10200011 | The join method cannot be bound. |
-| 10200201 | Concurrent modification error. |
+| [10200011](../errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) | The join method cannot be bound. |
+| [10200201](../errorcode-utils.md#10200201-concurrent修改错误) | Concurrent modification error. |
 
 ## keys
 
@@ -876,14 +870,14 @@ keys(): IterableIterator<number>
 
 | 类型 | 说明 |
 | --- | --- |
-| [IterableIterator](arkts-arkts-iterator-iterableiterator-i.md)&lt;number&gt; | 包含Array中每个元素的索引的迭代器对象。 |
+| IterableIterator&lt;number&gt; | 包含Array中每个元素的索引的迭代器对象。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 10200011 | The keys method cannot be bound. |
-| 10200201 | Concurrent modification error. |
+| [10200011](../errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) | The keys method cannot be bound. |
+| [10200201](../errorcode-utils.md#10200201-concurrent修改错误) | Concurrent modification error. |
 
 ## lastIndexOf
 
@@ -920,8 +914,8 @@ lastIndexOf(searchElement: T, fromIndex?: number): number
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 10200011 | The lastIndexOf method cannot be bound. |
-| 10200201 | Concurrent modification error. |
+| [10200011](../errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) | The lastIndexOf method cannot be bound. |
+| [10200201](../errorcode-utils.md#10200201-concurrent修改错误) | Concurrent modification error. |
 
 ## map
 
@@ -957,8 +951,8 @@ map<U>(callbackFn: (value: T, index: number, array: Array<T>) => U): Array<U>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 10200011 | The map method cannot be bound. |
-| 10200201 | Concurrent modification error. |
+| [10200011](../errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) | The map method cannot be bound. |
+| [10200201](../errorcode-utils.md#10200201-concurrent修改错误) | Concurrent modification error. |
 
 ## of
 
@@ -1018,8 +1012,8 @@ pop(): T | undefined
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 10200011 | The pop method cannot be bound. |
-| 10200201 | Concurrent modification error. |
+| [10200011](../errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) | The pop method cannot be bound. |
+| [10200201](../errorcode-utils.md#10200201-concurrent修改错误) | Concurrent modification error. |
 
 ## push
 
@@ -1043,7 +1037,7 @@ push(...items: T[]): number
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| items | T[] | 是 | 要添加到Array末尾的元素。 |
+| items | T[] | 是 | 要添加到Array末尾的元素，默认值为空数组。 |
 
 **返回值：**
 
@@ -1055,8 +1049,8 @@ push(...items: T[]): number
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 10200011 | The push method cannot be bound. |
-| 10200201 | Concurrent modification error. |
+| [10200011](../errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) | The push method cannot be bound. |
+| [10200201](../errorcode-utils.md#10200201-concurrent修改错误) | Concurrent modification error. |
 
 ## reduce
 
@@ -1092,8 +1086,8 @@ reduce(callbackFn: (previousValue: T, currentValue: T, currentIndex: number, arr
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 10200011 | The reduce method cannot be bound. |
-| 10200201 | Concurrent modification error. |
+| [10200011](../errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) | The reduce method cannot be bound. |
+| [10200201](../errorcode-utils.md#10200201-concurrent修改错误) | Concurrent modification error. |
 
 ## reduce
 
@@ -1133,8 +1127,8 @@ reduce<U>(
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 10200011 | The reduce method cannot be bound. |
-| 10200201 | Concurrent modification error. |
+| [10200011](../errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) | The reduce method cannot be bound. |
+| [10200201](../errorcode-utils.md#10200201-concurrent修改错误) | Concurrent modification error. |
 
 ## reduceRight
 
@@ -1172,8 +1166,8 @@ reduceRight<U = T>(callbackFn: ArrayReduceCallback<U, T, Array<T>>, initialValue
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 10200011 | The reduceRight method cannot be bound. |
-| 10200201 | Concurrent modification error. |
+| [10200011](../errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) | The reduceRight method cannot be bound. |
+| [10200201](../errorcode-utils.md#10200201-concurrent修改错误) | Concurrent modification error. |
 
 ## reduceRight
 
@@ -1209,8 +1203,8 @@ reduceRight(callbackFn: ArrayReduceCallback<T, T, Array<T>>): T
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 10200011 | The reduceRight method cannot be bound. |
-| 10200201 | Concurrent modification error. |
+| [10200011](../errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) | The reduceRight method cannot be bound. |
+| [10200201](../errorcode-utils.md#10200201-concurrent修改错误) | Concurrent modification error. |
 
 ## reverse
 
@@ -1240,8 +1234,8 @@ reverse(): Array<T>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 10200011 | The reverse method cannot be bound. |
-| 10200201 | Concurrent modification error. |
+| [10200011](../errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) | The reverse method cannot be bound. |
+| [10200201](../errorcode-utils.md#10200201-concurrent修改错误) | Concurrent modification error. |
 
 ## shift
 
@@ -1271,8 +1265,8 @@ shift(): T | undefined
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 10200011 | The shift method cannot be bound. |
-| 10200201 | Concurrent modification error. |
+| [10200011](../errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) | The shift method cannot be bound. |
+| [10200201](../errorcode-utils.md#10200201-concurrent修改错误) | Concurrent modification error. |
 
 ## shrinkTo
 
@@ -1296,14 +1290,14 @@ shrinkTo(arrayLength: number): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| arrayLength | number | 是 | Array的新长度。如果传入的值大于或等于当前Array 的长度，Array不发生变化。 |
+| arrayLength | number | 是 | Array的新长度。取值应为非负整数，否则会抛出异常。如果传入的值大于或等于当前Array的长度，Array不发生变化。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 10200011 | The shrinkTo method cannot be bound. |
-| 10200201 | Concurrent modification error. |
+| [10200011](../errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) | The shrinkTo method cannot be bound. |
+| [10200201](../errorcode-utils.md#10200201-concurrent修改错误) | Concurrent modification error. |
 
 ## slice
 
@@ -1340,8 +1334,8 @@ slice(start?: number, end?: number): Array<T>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 10200011 | The slice method cannot be bound. |
-| 10200201 | Concurrent modification error. |
+| [10200011](../errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) | The slice method cannot be bound. |
+| [10200201](../errorcode-utils.md#10200201-concurrent修改错误) | Concurrent modification error. |
 
 ## some
 
@@ -1377,8 +1371,8 @@ some(predicate: ArrayPredicateFn<T, Array<T>>): boolean
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 10200011 | The some method cannot be bound. |
-| 10200201 | Concurrent modification error. |
+| [10200011](../errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) | The some method cannot be bound. |
+| [10200201](../errorcode-utils.md#10200201-concurrent修改错误) | Concurrent modification error. |
 
 ## sort
 
@@ -1414,8 +1408,8 @@ sort(compareFn?: (a: T, b: T) => number): Array<T>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 10200011 | The sort method cannot be bound. |
-| 10200201 | Concurrent modification error. |
+| [10200011](../errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) | The sort method cannot be bound. |
+| [10200201](../errorcode-utils.md#10200201-concurrent修改错误) | Concurrent modification error. |
 
 ## splice
 
@@ -1439,7 +1433,7 @@ splice(start: number): Array<T>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| start | number | 是 | 开始索引。如果`-array.length =< start < 0`， 则从`start + array.length`开始删除。如果`start < -array.length`，则从0开始删除。 |
+| start | number | 是 | 开始索引。如果`-array.length <= start < 0`， 则从`start + array.length`开始删除。如果`start < -array.length`，则从0开始删除。 |
 
 **返回值：**
 
@@ -1451,8 +1445,8 @@ splice(start: number): Array<T>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 10200011 | The splice method cannot be bound. |
-| 10200201 | Concurrent modification error. |
+| [10200011](../errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) | The splice method cannot be bound. |
+| [10200201](../errorcode-utils.md#10200201-concurrent修改错误) | Concurrent modification error. |
 
 ## splice
 
@@ -1476,7 +1470,7 @@ splice(start: number, deleteCount: number, ...items: T[]): Array<T>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| start | number | 是 | 开始索引。如果`-array.length =< start < 0`， 则从`start + array.length`开始删除。如果`start < -array.length`，则从0开始删除。 |
+| start | number | 是 | 开始索引。如果`-array.length <= start < 0`， 则从`start + array.length`开始删除。如果`start < -array.length`，则从0开始删除。 |
 | deleteCount | number | 是 | 删除元素的个数。 |
 | items | T[] | 是 | 从start位置开始插入的新元素。 如果未传入，则仅删除Array内的元素。 |
 
@@ -1490,8 +1484,8 @@ splice(start: number, deleteCount: number, ...items: T[]): Array<T>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 10200011 | The splice method cannot be bound. |
-| 10200201 | Concurrent modification error. |
+| [10200011](../errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) | The splice method cannot be bound. |
+| [10200201](../errorcode-utils.md#10200201-concurrent修改错误) | Concurrent modification error. |
 
 ## toLocaleString
 
@@ -1522,8 +1516,8 @@ toLocaleString(): string
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 10200011 | The toLocaleString method cannot be bound. |
-| 10200201 | Concurrent modification error. |
+| [10200011](../errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) | The toLocaleString method cannot be bound. |
+| [10200201](../errorcode-utils.md#10200201-concurrent修改错误) | Concurrent modification error. |
 
 ## toString
 
@@ -1553,8 +1547,8 @@ toString(): string
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 10200011 | The toString method cannot be bound. |
-| 10200201 | Concurrent modification error. |
+| [10200011](../errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) | The toString method cannot be bound. |
+| [10200201](../errorcode-utils.md#10200201-concurrent修改错误) | Concurrent modification error. |
 
 ## unshift
 
@@ -1578,7 +1572,7 @@ unshift(...items: T[]): number
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| items | T[] | 是 | 要插入到Array首端的元素。 |
+| items | T[] | 是 | 要插入到Array首端的元素，默认值为空数组。 |
 
 **返回值：**
 
@@ -1590,8 +1584,8 @@ unshift(...items: T[]): number
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 10200011 | The unshift method cannot be bound. |
-| 10200201 | Concurrent modification error. |
+| [10200011](../errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) | The unshift method cannot be bound. |
+| [10200201](../errorcode-utils.md#10200201-concurrent修改错误) | Concurrent modification error. |
 
 ## values
 
@@ -1615,14 +1609,14 @@ values(): IterableIterator<T>
 
 | 类型 | 说明 |
 | --- | --- |
-| [IterableIterator](arkts-arkts-iterator-iterableiterator-i.md)&lt;T&gt; | 包含Array中每个元素的值的迭代器对象。 |
+| IterableIterator&lt;T&gt; | 包含Array中每个元素的值的迭代器对象。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 10200011 | The values method cannot be bound. |
-| 10200201 | Concurrent modification error. |
+| [10200011](../errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) | The values method cannot be bound. |
+| [10200201](../errorcode-utils.md#10200201-concurrent修改错误) | Concurrent modification error. |
 
 ## [index: number]
 

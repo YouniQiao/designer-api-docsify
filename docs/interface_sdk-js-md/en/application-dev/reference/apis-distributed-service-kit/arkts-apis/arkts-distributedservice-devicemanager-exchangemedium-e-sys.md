@@ -1,6 +1,6 @@
 # ExchangeMedium (System API)
 
-表示发现类型的枚举。
+Enumerates the media used for device discovery.
 
 **Since:** 7
 
@@ -20,7 +20,7 @@
 AUTO = 0
 ```
 
-自动发现类型。
+Automatic.
 
 **Since:** 7
 
@@ -40,7 +40,7 @@ AUTO = 0
 BLE = 1
 ```
 
-蓝牙发现类型。
+Bluetooth.
 
 **Since:** 7
 
@@ -60,7 +60,7 @@ BLE = 1
 COAP = 2
 ```
 
-WiFi发现类型。
+Wi-Fi.
 
 **Since:** 7
 
@@ -80,7 +80,7 @@ WiFi发现类型。
 USB = 3
 ```
 
-USB发现类型。
+USB.
 
 **Since:** 7
 

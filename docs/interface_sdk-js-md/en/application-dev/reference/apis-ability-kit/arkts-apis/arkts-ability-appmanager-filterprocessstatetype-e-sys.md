@@ -1,6 +1,7 @@
 # FilterProcessStateType (System API)
 
-表示要监听的进程状态，该类型为枚举。可配合[AppStateFilter](arkts-ability-appmanager-appstatefilter-i-sys.md)过滤想要监听的进程状态。
+Enumerates the types of process states to filter. It can be used with  
+[AppStateFilter](arkts-ability-appmanager-appstatefilter-i-sys.md) to filter the process state types you want to listen for.
 
 **Since:** 21
 
@@ -18,7 +19,8 @@
 CREATE = 1 << 0
 ```
 
-进程刚创建完成，对应[ProcessData](../../../reference/apis-ability-kit/js-apis-inner-application-processData.md#属性)中state取值为0的状态。
+The process has just been created. It corresponds to the state whose value is **0** in  
+[ProcessData](../../../reference/apis-ability-kit/js-apis-inner-application-processData.md#properties).
 
 **Since:** 21
 
@@ -36,7 +38,8 @@ CREATE = 1 << 0
 FOREGROUND = 1 << 1
 ```
 
-进程处于前台，对应[ProcessData](../../../reference/apis-ability-kit/js-apis-inner-application-processData.md#属性)中state取值为2的状态。
+The process is running in the foreground. It corresponds to the state whose value is **2** in  
+[ProcessData](../../../reference/apis-ability-kit/js-apis-inner-application-processData.md#properties).
 
 **Since:** 21
 
@@ -54,7 +57,8 @@ FOREGROUND = 1 << 1
 BACKGROUND = 1 << 2
 ```
 
-进程处于后台，对应[ProcessData](../../../reference/apis-ability-kit/js-apis-inner-application-processData.md#属性)中state取值为4的状态。
+The process is running in the background. It corresponds to the state whose value is **4** in  
+[ProcessData](../../../reference/apis-ability-kit/js-apis-inner-application-processData.md#properties).
 
 **Since:** 21
 
@@ -72,7 +76,8 @@ BACKGROUND = 1 << 2
 DESTROY = 1 << 3
 ```
 
-进程已终止，对应[ProcessData](../../../reference/apis-ability-kit/js-apis-inner-application-processData.md#属性)中state取值为5的状态。
+The process has terminated. It corresponds to the state whose value is **5** in  
+[ProcessData](../../../reference/apis-ability-kit/js-apis-inner-application-processData.md#properties).
 
 **Since:** 21
 

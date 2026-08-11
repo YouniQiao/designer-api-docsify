@@ -12,9 +12,7 @@ import { matrix4 } from 'kits/@kit.ArkUI';
 function rotate(options: RotateOption): Matrix4Transit
 ```
 
-Matrix的旋转函数，可以为当前矩阵增加x轴/y轴/z轴旋转效果。
-
-> **说明：**
+Rotates this matrix object along the x, y, and z axes.
 
 **Since:** 7
 
@@ -22,7 +20,7 @@ Matrix的旋转函数，可以为当前矩阵增加x轴/y轴/z轴旋转效果。
 
 **Deprecated since:** 10
 
-**Substitutes:** [matrix4.Matrix4Transit.rotate](arkts-arkui-matrix4-matrix4transit-i.md#rotate)
+**Substitutes:** [Matrix4Transit.rotate](arkts-arkui-matrix4-matrix4transit-i.md#rotate)
 
 <!--Device-matrix4-function rotate(options: RotateOption): Matrix4Transit--><!--Device-matrix4-function rotate(options: RotateOption): Matrix4Transit-End-->
 
@@ -32,11 +30,11 @@ Matrix的旋转函数，可以为当前矩阵增加x轴/y轴/z轴旋转效果。
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| options | [RotateOption](arkts-arkui-matrix4-rotateoption-i.md) | Yes | 设置旋转参数。 |
+| options | [RotateOption](arkts-arkui-matrix4-rotateoption-i.md) | Yes | Rotation configuration. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [Matrix4Transit](arkts-arkui-matrix4-matrix4transit-i.md) | 旋转后的矩阵对象。 |
+| [Matrix4Transit](arkts-arkui-matrix4-matrix4transit-i.md) | Matrix object after rotation. |
 

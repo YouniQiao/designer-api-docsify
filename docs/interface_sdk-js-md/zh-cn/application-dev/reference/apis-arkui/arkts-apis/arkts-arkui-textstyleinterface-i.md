@@ -42,7 +42,7 @@ fontConfigs?: FontConfigs
 
 字体配置。默认值继承[FontConfigs](arkts-arkui-textcommon-fontconfigs-i.md)。
 
-**类型：** [FontConfigs](arkts-arkui-fontconfigs-i.md)
+**类型：** [FontConfigs](arkts-arkui-textcommon-fontconfigs-i.md)
 
 **起始版本：** 24
 
@@ -118,7 +118,7 @@ fontStyle?: FontStyle
 
 默认值：FontStyle.Normal
 
-**类型：** [FontStyle](../../apis-arkgraphics2d/arkts-apis/arkts-arkgraphics2d-text-fontstyle-e.md)
+**类型：** [FontStyle](arkts-arkui-enums-fontstyle-e.md)
 
 **起始版本：** 12
 

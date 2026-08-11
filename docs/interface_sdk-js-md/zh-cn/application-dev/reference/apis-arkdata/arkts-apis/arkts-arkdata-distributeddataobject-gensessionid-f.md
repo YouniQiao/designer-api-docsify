@@ -1,11 +1,5 @@
 # genSessionId
 
-## 导入模块
-
-```TypeScript
-import { distributedDataObject } from 'kits/@kit.ArkData';
-```
-
 ## genSessionId
 
 ```TypeScript

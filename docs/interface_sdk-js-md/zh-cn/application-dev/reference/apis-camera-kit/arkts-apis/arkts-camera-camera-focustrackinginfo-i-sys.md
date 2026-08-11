@@ -13,12 +13,6 @@ Describes the focus tracking information, which is obtained by calling VideoSess
 
 **系统接口：** 此接口为系统接口。
 
-## 导入模块
-
-```TypeScript
-import { camera } from 'kits/@kit.CameraKit';
-```
-
 ## trackingMode
 
 ```TypeScript
@@ -47,7 +41,7 @@ trackingRegion: Rect
 
 Tracking region.
 
-**类型：** [Rect](../../apis-form-kit/arkts-apis/arkts-form-forminfo-rect-i.md)
+**类型：** [Rect](../../apis-test-kit/arkts-apis/arkts-test-uitest-rect-i.md)
 
 **起始版本：** 15
 

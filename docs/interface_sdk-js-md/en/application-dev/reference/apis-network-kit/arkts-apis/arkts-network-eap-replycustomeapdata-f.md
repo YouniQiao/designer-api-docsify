@@ -35,9 +35,9 @@ send Customized eap packets to system
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 33200009 | netmanager stop |
-| 201 | Permission denied. |
-| 33200099 | internal error |
-| 33200004 | Invalid result |
-| 33200005 | Invalid size of eap data |
+| [33200009](../errorcode-net-eap.md#33200009-netmanager-not-exist) | netmanager stop |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
+| [33200099](../errorcode-net-eap.md#33200099-internal-program-error) | internal error |
+| [33200004](../errorcode-net-eap.md#33200004-invalid-eap-result-value) | Invalid result |
+| [33200005](../errorcode-net-eap.md#33200005-invalid-data-length) | Invalid size of eap data |
 

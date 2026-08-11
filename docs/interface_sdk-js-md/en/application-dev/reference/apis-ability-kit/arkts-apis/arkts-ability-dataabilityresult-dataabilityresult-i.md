@@ -1,7 +1,7 @@
 # DataAbilityResult
 
-定义DataAbility数据操作结果，通过  
-[executeBatch](../../../reference/apis-ability-kit/js-apis-inner-ability-dataAbilityHelper.md#dataabilityhelperexecutebatch)操作数据库时，操作结果使用DataAbilityResult对象返回。
+The module defines the operation result on DataAbilities. When you call  
+[executeBatch](../../../reference/apis-ability-kit/js-apis-inner-ability-dataAbilityHelper.md#dataabilityhelperexecutebatch) to operate the database, the operation result is returned through the DataAbilityResult object.
 
 **Since:** 7
 
@@ -17,7 +17,7 @@
 count?: number
 ```
 
-指示受操作影响的数据数量。
+Indicates the number of rows affected by the operation.
 
 **Type:** number
 
@@ -37,7 +37,7 @@ count?: number
 uri?: string
 ```
 
-指示待处理的DataAbility。例：'dataability:///com.example.xxx.xxxx'。
+Indicates the path of data to operate.
 
 **Type:** string
 

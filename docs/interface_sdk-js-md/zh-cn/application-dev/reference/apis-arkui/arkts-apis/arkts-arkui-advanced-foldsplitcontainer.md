@@ -1,11 +1,5 @@
 # @ohos.arkui.advanced.FoldSplitContainer
 
-## 导入模块
-
-```TypeScript
-import { HoverModeStatus, ExtraRegionPosition, OnHoverStatusChangeHandler, ExpandedRegionLayoutOptions, FoldSplitContainer, HoverModeRegionLayoutOptions, FoldedRegionLayoutOptions, PresetSplitRatio } from 'kits/@kit.ArkUI';
-```
-
 ## 汇总
 
 ### 枚举

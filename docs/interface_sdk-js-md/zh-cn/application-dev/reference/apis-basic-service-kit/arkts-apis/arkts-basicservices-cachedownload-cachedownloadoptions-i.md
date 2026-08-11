@@ -10,12 +10,6 @@
 
 **系统能力：** SystemCapability.Request.FileTransferAgent
 
-## 导入模块
-
-```TypeScript
-import { cacheDownload } from 'kits/@kit.BasicServicesKit';
-```
-
 ## caPath
 
 ```TypeScript
@@ -60,7 +54,7 @@ headers?: Record<string, string>
 
 缓存下载任务在HTTP传输时使用的请求头。默认值为空。
 
-**类型：** [Record](../../apis-default/arkts-apis/arkts-record-t.md)&lt;string, string&gt;
+**类型：** Record&lt;string, string&gt;
 
 **起始版本：** 18
 

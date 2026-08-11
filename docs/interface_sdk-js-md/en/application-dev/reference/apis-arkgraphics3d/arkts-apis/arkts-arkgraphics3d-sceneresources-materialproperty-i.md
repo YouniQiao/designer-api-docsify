@@ -1,6 +1,6 @@
 # MaterialProperty
 
-材质属性接口.
+Defines the textures, property factors, and texture samplers used by a material.
 
 **Since:** 20
 
@@ -16,7 +16,7 @@
 factor: Vec4
 ```
 
-纹理系数. 默认为{1,1,1,1}，表示无效果.
+PBR property factor, with different meanings for different properties.
 
 **Type:** [Vec4](arkts-arkgraphics3d-scenetypes-vec4-i.md)
 
@@ -34,7 +34,7 @@ factor: Vec4
 image: Image | null
 ```
 
-要使用的纹理. 如果未定义，factor定义漫反射颜色.
+Texture map based on PBR properties to convey the texture information of the material.
 
 **Type:** [Image](arkts-arkgraphics3d-sceneresources-image-i.md) \| null
 
@@ -52,7 +52,7 @@ image: Image | null
 sampler?: Sampler
 ```
 
-纹理贴图采样器，默认使用放大、缩小和mipmap过滤模式为线性过滤（LINEAR），纹理贴图U、V、W方向的寻址模式为重复（REPEAT）。
+Texture sampler, with the default value set to LINEAR for magnification, minification, and mipmaps,and to REPEAT for U, V, and W directions.
 
 **Type:** [Sampler](arkts-arkgraphics3d-sceneresources-sampler-i.md)
 

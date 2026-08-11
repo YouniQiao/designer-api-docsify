@@ -1,6 +1,6 @@
 # IParamDecoratedVariable
 
-Param装饰的变量。
+Define Param decoration variable interface.
 
 **Inheritance/Implementation:** IParamDecoratedVariable extends [IDecoratedImmutableVariable<T>](IDecoratedImmutableVariable<T>), [IDecoratedUpdatableVariable<T>](IDecoratedUpdatableVariable<T>), [IDecoratedV2Variable<T>](IDecoratedV2Variable<T>)
 

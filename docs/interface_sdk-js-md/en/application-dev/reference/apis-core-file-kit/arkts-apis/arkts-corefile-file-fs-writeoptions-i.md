@@ -1,6 +1,6 @@
 # WriteOptions
 
-可选项类型，支持write接口使用，WriteOptions继承自[Options](arkts-corefile-file-fs-options-i.md)。
+Defines the options used in **write()**. It inherits from [Options](arkts-corefile-file-fs-options-i.md).
 
 **Inheritance/Implementation:** WriteOptions extends [Options](arkts-corefile-file-fs-options-i.md)
 
@@ -24,7 +24,7 @@ import { Options, ReaderIteratorResult, Watcher, ReadTextOptions, WatchEventList
 length?: long
 ```
 
-期望写入数据的长度，单位为Byte。可选，默认缓冲区长度。
+Length of the data to write, in bytes. This parameter is optional. The default value is the buffer length.
 
 **Type:** long
 
@@ -42,7 +42,7 @@ length?: long
 offset?: long
 ```
 
-期望写入文件位置，单位为Byte（基于当前filePointer加上offset的位置）。可选，默认从偏移指针（filePointer）开始写。
+Start position of the file to write, in bytes. This parameter is optional. By default, data is written from the current position.
 
 **Type:** long
 

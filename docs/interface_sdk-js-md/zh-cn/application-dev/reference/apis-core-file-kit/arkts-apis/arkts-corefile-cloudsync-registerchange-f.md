@@ -1,11 +1,5 @@
 # registerChange
 
-## 导入模块
-
-```TypeScript
-import { cloudSync } from 'kits/@kit.CoreFileKit';
-```
-
 ## registerChange
 
 ```TypeScript
@@ -34,7 +28,7 @@ function registerChange(uri: string, recursion: boolean, callback: Callback<Chan
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 401 | The input parameter is invalid.Possible causes:1.Mandatory parameters are left unspecified; &lt;br&gt;2.Incorrect parameter types. |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | The input parameter is invalid.Possible causes:1.Mandatory parameters are left unspecified; &lt;br&gt;2.Incorrect parameter types. |
 | 13900001 | Operation not permitted |
 | 13900002 | No such file or directory. |
 | 14000002 | Invalid uri. |
@@ -42,12 +36,33 @@ function registerChange(uri: string, recursion: boolean, callback: Callback<Chan
 
 ## 示例
 
+ArkTS-Dyn示例：
+
 ```TypeScript
 import { fileUri } from '@kit.CoreFileKit';
 
 let path = "/data/storage/el2/cloud/1.txt";
 let uri = fileUri.getUriFromPath(path);
 let onCallback1 = (changeData: cloudSync.ChangeData) => {
+  if (changeData.type == cloudSync.NotifyType.NOTIFY_ADDED) {
+    // file has been added, do something
+  } else if (changeData.type== cloudSync.NotifyType.NOTIFY_DELETED) {
+    // file has been removed, do something
+  }
+}
+cloudSync.registerChange(uri, false, onCallback1);
+// 取消注册监听
+cloudSync.unregisterChange(uri);
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+import { fileUri } from '@kit.CoreFileKit';
+
+let path: string = "/data/storage/el2/cloud/1.txt";
+let uri: string = fileUri.getUriFromPath(path);
+let onCallback1 = (changeData: cloudSync.ChangeData): void => {
   if (changeData.type == cloudSync.NotifyType.NOTIFY_ADDED) {
     // file has been added, do something
   } else if (changeData.type== cloudSync.NotifyType.NOTIFY_DELETED) {

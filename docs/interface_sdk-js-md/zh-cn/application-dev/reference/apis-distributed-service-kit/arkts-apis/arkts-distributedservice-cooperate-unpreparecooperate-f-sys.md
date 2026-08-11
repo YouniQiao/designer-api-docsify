@@ -1,11 +1,5 @@
 # unprepareCooperate（系统接口）
 
-## 导入模块
-
-```TypeScript
-import { cooperate } from 'kits/@kit.DistributedServiceKit';
-```
-
 ## unprepareCooperate
 
 ```TypeScript
@@ -36,17 +30,37 @@ function unprepareCooperate(callback: AsyncCallback<void>): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 401 | Parameter error. Possible causes: &lt;br&gt;1. Mandatory parameters are left unspecified. &lt;br&gt;2. Incorrect parameter types. &lt;br&gt;3. Parameter verification failed.  **ArkTS模式：** 该错误码仅适用于ArkTS-Dyn。 |
-| 201 | Permission denied. |
-| 202 | Permission verification failed. A non-system application calls a system API. |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: &lt;br&gt;1. Mandatory parameters are left unspecified. &lt;br&gt;2. Incorrect parameter types. &lt;br&gt;3. Parameter verification failed.  **ArkTS模式：** 该错误码仅适用于ArkTS-Dyn。 |
+| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed. A non-system application calls a system API. |
 
 ## 示例
+
+ArkTS-Dyn示例：
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
 
 try {
   cooperate.unprepareCooperate((error: BusinessError) => {
+    if (error) {
+      console.error(`Keyboard mouse crossing unprepareCooperate failed, error: ${JSON.stringify(error,
+        [`code`, `message`])}`);
+      return;
+    }
+    console.info(`Keyboard mouse crossing unprepareCooperate success.`);
+  });
+} catch (error) {
+  console.error(`Keyboard mouse crossing unprepareCooperate failed, error: ${JSON.stringify(error,
+    [`code`, `message`])}`);
+}
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+try {
+  cooperate.unprepareCooperate((error: BusinessError<void>|null, info: undefined) => {
     if (error) {
       console.error(`Keyboard mouse crossing unprepareCooperate failed, error: ${JSON.stringify(error,
         [`code`, `message`])}`);
@@ -91,10 +105,12 @@ function unprepareCooperate(): Promise<void>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 201 | Permission denied. |
-| 202 | Permission verification failed. A non-system application calls a system API. |
+| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed. A non-system application calls a system API. |
 
 ## 示例
+
+ArkTS-Dyn示例：
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -103,6 +119,22 @@ try {
   cooperate.unprepareCooperate().then(() => {
     console.info(`Keyboard mouse crossing unprepareCooperate success.`);
   }, (error: BusinessError) => {
+    console.error(`Keyboard mouse crossing unprepareCooperate failed, error: ${JSON.stringify(error,
+      [`code`, `message`])}`);
+  });
+} catch (error) {
+  console.error(`Keyboard mouse crossing unprepareCooperate failed, error: ${JSON.stringify(error,
+    [`code`, `message`])}`);
+}
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+try {
+  cooperate.unprepareCooperate().then(() => {
+    console.info(`Keyboard mouse crossing unprepareCooperate success.`);
+  }, (error: Error): void => {
     console.error(`Keyboard mouse crossing unprepareCooperate failed, error: ${JSON.stringify(error,
       [`code`, `message`])}`);
   });

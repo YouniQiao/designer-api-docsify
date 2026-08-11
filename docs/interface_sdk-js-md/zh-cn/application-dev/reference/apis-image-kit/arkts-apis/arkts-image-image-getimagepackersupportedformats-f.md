@@ -1,11 +1,5 @@
 # getImagePackerSupportedFormats
 
-## 导入模块
-
-```TypeScript
-import { image } from 'kits/@kit.ImageKit';
-```
-
 ## getImagePackerSupportedFormats
 
 ```TypeScript

@@ -1,11 +1,5 @@
 # activateOsAccount
 
-## 导入模块
-
-```TypeScript
-import { accountManager } from 'kits/@kit.MDMKit';
-```
-
 ## activateOsAccount
 
 ```TypeScript
@@ -43,14 +37,14 @@ function activateOsAccount(admin: Want, accountId: number): Promise<void>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 9200012 | Parameter verification failed. |
-| 801 | Capability not supported. Failed to call the API due to limited device capabilities. |
-| 201 | Permission verification failed. The application does not have the permission required to call the API. |
-| 9201046 | The number of signed-in accounts reaches the upper limit. |
-| 9200016 | Service timeout. |
-| 9200001 | The application is not an administrator application of the device. |
-| 9201041 | Restricted account. |
-| 9200002 | The administrator application does not have permission to manage the device. |
+| [9200012](../errorcode-enterpriseDeviceManager.md#9200012-参数校验失败) | Parameter verification failed. |
+| [801](../../errorcode-universal.md#801-该设备不支持此api) | Capability not supported. Failed to call the API due to limited device capabilities. |
+| [201](../../errorcode-universal.md#201-权限校验失败) | Permission verification failed. The application does not have the permission required to call the API. |
+| [9201046](../errorcode-enterpriseDeviceManager.md#9201046-已登录系统账号数量达到上限) | The number of signed-in accounts reaches the upper limit. |
+| [9200016](../errorcode-enterpriseDeviceManager.md#9200016-服务超时) | Service timeout. |
+| [9200001](../errorcode-enterpriseDeviceManager.md#9200001-应用没有激活成设备管理器) | The application is not an administrator application of the device. |
+| [9201041](../errorcode-enterpriseDeviceManager.md#9201041-系统账号类型受限) | Restricted account. |
+| [9200002](../errorcode-enterpriseDeviceManager.md#9200002-设备管理器权限不够) | The administrator application does not have permission to manage the device. |
 
 ## 示例
 

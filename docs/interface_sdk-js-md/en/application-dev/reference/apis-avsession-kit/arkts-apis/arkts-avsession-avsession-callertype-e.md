@@ -1,6 +1,6 @@
 # CallerType
 
-表示调用方来源类型的枚举。
+Enumerates CallerType including caller source type.
 
 **Since:** 22
 
@@ -16,7 +16,7 @@
 TYPE_CAST = 'cast'
 ```
 
-调用方来自投播。
+The control command comes from cast service.
 
 **Since:** 22
 
@@ -32,7 +32,7 @@ TYPE_CAST = 'cast'
 TYPE_BLUETOOTH = 'bluetooth'
 ```
 
-调用方来自蓝牙。
+The control command comes from bluetooth.
 
 **Since:** 22
 
@@ -48,7 +48,7 @@ TYPE_BLUETOOTH = 'bluetooth'
 TYPE_NEARLINK = 'nearlink'
 ```
 
-调用方来自星闪。
+The control command comes from nearlink device.
 
 **Since:** 22
 
@@ -66,7 +66,7 @@ TYPE_NEARLINK = 'nearlink'
 TYPE_APP = 'app'
 ```
 
-调用方来自应用。
+The control command comes from an application.
 
 **Since:** 22
 

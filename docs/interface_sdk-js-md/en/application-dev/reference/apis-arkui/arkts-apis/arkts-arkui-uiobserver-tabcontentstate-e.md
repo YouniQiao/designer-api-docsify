@@ -1,6 +1,6 @@
 # TabContentState
 
-TabContent组件的状态。
+TabContent state.
 
 **Since:** 23
 
@@ -16,7 +16,7 @@ TabContent组件的状态。
 ON_SHOW = 0
 ```
 
-TabContent组件显示。
+When the TabContent is shown.
 
 **Since:** 23
 
@@ -34,7 +34,7 @@ TabContent组件显示。
 ON_HIDE = 1
 ```
 
-TabContent组件隐藏。
+When the TabContent is hidden.
 
 **Since:** 23
 

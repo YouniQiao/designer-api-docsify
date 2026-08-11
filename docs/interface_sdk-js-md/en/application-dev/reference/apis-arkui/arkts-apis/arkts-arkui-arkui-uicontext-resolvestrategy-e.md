@@ -1,6 +1,6 @@
 # ResolveStrategy
 
-UIContext解析策略枚举
+Enum of strategy of resolved UIContext.
 
 **Since:** 23
 
@@ -16,7 +16,7 @@ UIContext解析策略枚举
 CALLING_SCOPE = 0
 ```
 
-获取调用作用域的UIContext
+Get UIContext of calling scope.
 
 **Since:** 23
 
@@ -34,7 +34,7 @@ CALLING_SCOPE = 0
 LAST_FOCUS = 1
 ```
 
-获取最后获得焦点的UI实例的UIContext
+Get UIContext of last focused instance.
 
 **Since:** 23
 
@@ -52,7 +52,7 @@ LAST_FOCUS = 1
 MAX_INSTANCE_ID = 2
 ```
 
-获取实例ID最大的UIContext
+Get UIContext with maximum instanceId.
 
 **Since:** 23
 
@@ -70,7 +70,7 @@ MAX_INSTANCE_ID = 2
 UNIQUE = 3
 ```
 
-获取唯一UI实例的UIContext
+Get UIContext of unique UI instance.
 
 **Since:** 23
 
@@ -88,7 +88,7 @@ UNIQUE = 3
 LAST_FOREGROUND = 4
 ```
 
-取最后进入前台的UI实例的UIContext
+Get UIContext of last foregrounded instance.
 
 **Since:** 23
 
@@ -106,7 +106,7 @@ LAST_FOREGROUND = 4
 UNDEFINED = 5
 ```
 
-获取未定义调用作用域的UIContext
+Get UIContext of undefined calling scope.
 
 **Since:** 23
 

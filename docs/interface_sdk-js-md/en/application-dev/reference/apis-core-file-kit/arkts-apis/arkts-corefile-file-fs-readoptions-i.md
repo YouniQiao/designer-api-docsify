@@ -1,6 +1,6 @@
 # ReadOptions
 
-可选项类型，支持read接口使用。
+Defines the options used in **read()**.
 
 **Since:** 23
 
@@ -22,7 +22,7 @@ import { Options, ReaderIteratorResult, Watcher, ReadTextOptions, WatchEventList
 length?: long
 ```
 
-期望读取数据的长度，单位为Byte。可选，默认缓冲区长度。
+Length of the data to read, in bytes. This parameter is optional. The default value is the buffer length.
 
 **Type:** long
 
@@ -40,7 +40,7 @@ length?: long
 offset?: long
 ```
 
-期望读取文件位置，单位为Byte（基于当前filePointer加上offset的位置）。可选，默认从偏移指针（filePointer）开始读。
+Start position of the file to read, in bytes. This parameter is optional.By default, data is read from the current position.
 
 **Type:** long
 

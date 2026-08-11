@@ -14,7 +14,7 @@ export declare function ArcListItem(
 ): ArcListItemAttribute
 ```
 
-创建弧形列表子组件。
+Defines ArcListItem Component.
 
 **Since:** 23
 
@@ -46,11 +46,11 @@ export declare function ArcListItem(
 ): ArcListItemAttribute
 ```
 
-定义ArcListItem组件。
+Defines ArcListItem Component.
 
-**Since:** 26.0.0
+**Since:** 26.1.0
 
-**ArkTS mode:** ArkTS-Sta only, since version 26.0.0.
+**ArkTS mode:** ArkTS-Sta only, since version 26.1.0.
 
 **Decorator:** @Builder
 
@@ -64,12 +64,12 @@ export declare function ArcListItem(
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| style_ | [CustomBuilderT](../arkts-components/arkts-arkui-custombuildert-t.md)&lt;ArcListItemAttribute&gt; | Yes | 创建ArcListItem的样式 |
+| style_ | [CustomBuilderT](../arkts-components/arkts-arkui-custombuildert-t.md)&lt;ArcListItemAttribute&gt; | Yes | The style to create an ArcListItem. |
 | content_ | [CustomBuilder](../arkts-components/arkts-arkui-custombuilder-t.md) | No |  |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [ArcListItemAttribute](arkts-arkui-arkui-arclist-arclistitemattribute-c.md) | ArcListItem的属性。 |
+| [ArcListItemAttribute](arkts-arkui-arkui-arclist-arclistitemattribute-c.md) | The attribute of the ArcListItem. |
 

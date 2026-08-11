@@ -10,12 +10,6 @@
 
 **系统能力：** SystemCapability.Ability.AppStartup
 
-## 导入模块
-
-```TypeScript
-import { StartupConfigEntry } from 'kits/@kit.AbilityKit';
-```
-
 ## onConfig
 
 ```TypeScript
@@ -60,14 +54,14 @@ export default class MyStartupConfigEntry extends StartupConfigEntry {
       } else {
         hilog.info(0x0000, 'testTag', `onCompletedCallback: success.`);
       }
-    };
+    }
     let startupListener: StartupListener = {
       'onCompleted': onCompletedCallback
-    };
+    }
     let config: StartupConfig = {
       'timeoutMs': 10000,
       'startupListener': startupListener
-    };
+    }
     return config;
   }
 }
@@ -141,7 +135,7 @@ export default class MyStartupConfigEntry extends StartupConfigEntry {
   // ...
 
   onRequestCustomMatchRule(want: Want): string {
-    if (want?.parameters?.customParam == 'param1') {
+    if (want?.parameters!['customParam'] == 'param1') {
       return 'customRule1';
     }
     return '';

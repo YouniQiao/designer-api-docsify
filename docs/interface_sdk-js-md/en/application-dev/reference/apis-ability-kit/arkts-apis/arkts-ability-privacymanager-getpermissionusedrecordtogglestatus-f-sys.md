@@ -12,7 +12,7 @@ import { privacyManager } from 'kits/@kit.AbilityKit';
 function getPermissionUsedRecordToggleStatus(): Promise<boolean>
 ```
 
-系统应用调用此接口，可以获取当前用户的权限使用记录开关状态，例如在权限管理界面展示当前开关设置状态。使用Promise异步回调。
+A system application can call this API to obtain the current user's permission usage record toggle status, for example, to display the current toggle setting status on the permission management interface. This API uses a promise to return the result.
 
 **Since:** 18
 
@@ -30,16 +30,16 @@ function getPermissionUsedRecordToggleStatus(): Promise<boolean>
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;boolean&gt; | Promise对象，返回true，表示当前用户的开关状态值为开启。返回false，表示当前用户的开关状态值为关闭。 |
+| Promise&lt;boolean&gt; | Promise used to return the result. The value **true** indicates that the switch status value of the current user is on, and **false** indicates that the switch status value of the current user is off. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 201 | Permission denied. Interface caller does not have permission "ohos.permission.PERMISSION_USED_STATS". |
-| 202 | Not system app. Interface caller is not a system app. |
-| 12100004 | This API must be used together with [setPermissionUsedRecordToggleStatus](arkts-ability-privacymanager-setpermissionusedrecordtogglestatus-f-sys.md#setpermissionusedrecordtogglestatus).<br>**Applicable version:** 26.1.0 and later |
-| 12100007 | Service exception. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. Interface caller does not have permission "ohos.permission.PERMISSION_USED_STATS". |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system app. Interface caller is not a system app. |
+| [12100004](../errorcode-access-token.md#12100004-listener-apis-not-used-in-pairs) | This API must be used together with [setPermissionUsedRecordToggleStatus](arkts-ability-privacymanager-setpermissionusedrecordtogglestatus-f-sys.md#setpermissionusedrecordtogglestatus).<br>**Applicable version:** 26.1.0 and later |
+| [12100007](../errorcode-access-token.md#12100007-system-service-not-working-properly) | Service exception. |
 
 ## Examples
 
@@ -47,15 +47,14 @@ function getPermissionUsedRecordToggleStatus(): Promise<boolean>
 import { privacyManager } from '@kit.AbilityKit';
 import { BusinessError } from '@kit.BasicServicesKit';
 
-// Query permission usage record switch status
-privacyManager.getPermissionUsedRecordToggleStatus().then((status) => {
+privacyManager.getPermissionUsedRecordToggleStatus().then((res) => {
   console.info('getPermissionUsedRecordToggleStatus success');
-  if (status == true) {
+  if (res == true) {
     console.info('get status is TRUE');
   } else {
     console.info('get status is FALSE');
   }
-}).catch((err: BusinessError): void => {
+}).catch((err: BusinessError) => {
   console.error(`getPermissionUsedRecordToggleStatus fail, code: ${err.code}, message: ${err.message}`);
 });
 ```
@@ -67,7 +66,7 @@ privacyManager.getPermissionUsedRecordToggleStatus().then((status) => {
 function getPermissionUsedRecordToggleStatus(subProfileId: int): Promise<boolean>
 ```
 
-系统应用调用此接口，可以获取指定子身份资料的权限使用记录开关状态，例如在权限管理界面展示当前开关设置状态。使用Promise异步回调。
+A system application can call this API to obtain the permission usage record toggle status for a specified sub-profile, for example, to display the current toggle setting status on the permission management interface.This API uses a promise to return the result.
 
 **Since:** 26.1.0
 
@@ -87,21 +86,21 @@ function getPermissionUsedRecordToggleStatus(subProfileId: int): Promise<boolean
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| subProfileId | int | Yes | 子身份资料的标识符。可以通过[OsAccountSubProfile.id](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-osaccount-osaccountsubprofile-i-sys.md/arkts-basicservices-osaccount-osaccountsubprofile-i-sys.md#id)获取。 &lt;br&gt;取值限定为整数。取值约束：该参数必须为大于0的整数。 |
+| subProfileId | int | Yes | ID of the sub-profile. It can be obtained from [OsAccountSubProfile.id](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-osaccount-osaccountsubprofile-i-sys.md/arkts-basicservices-osaccount-osaccountsubprofile-i-sys.md#id). &lt;br&gt;The value should be an integer. Value constraint: This parameter must be an integer greater than 0. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;boolean&gt; | Promise对象，返回true，表示指定子身份资料的开关状态值为开启。返回false，表示指定子身份资料的开关状态值为关闭 |
+| Promise&lt;boolean&gt; | Promise used to return the result. The value **true** indicates that the toggle is enabled for the specified sub-profile, and **false** indicates that it is disabled. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 801 | Capability not supported. |
-| 201 | Permission denied. Interface caller does not have permission "ohos.permission.PERMISSION_USED_STATS". |
-| 12100001 | Invalid parameter. The specified subProfileId does not exist for the current user. |
-| 202 | Not system app. Interface caller is not a system app. |
-| 12100007 | Service exception. |
+| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. Interface caller does not have permission "ohos.permission.PERMISSION_USED_STATS". |
+| [12100001](../errorcode-access-token.md#12100001-invalid-parameters) | Invalid parameter. The specified subProfileId does not exist for the current user. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system app. Interface caller is not a system app. |
+| [12100007](../errorcode-access-token.md#12100007-system-service-not-working-properly) | Service exception. |
 

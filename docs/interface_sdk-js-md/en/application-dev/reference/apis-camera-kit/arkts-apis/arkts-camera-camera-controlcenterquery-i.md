@@ -1,6 +1,6 @@
 # ControlCenterQuery
 
-控制中心类，用于查询是否支持相机控制器。
+ControlCenterQuery is used to check whether the camera controller is supported.
 
 **Since:** 20
 
@@ -22,7 +22,7 @@ import { camera } from 'kits/@kit.CameraKit';
 getSupportedEffectTypes(): Array<ControlCenterEffectType>
 ```
 
-查询相机控制器支持的效果类型。
+Obtains the effect types supported by the camera controller.
 
 **Since:** 20
 
@@ -38,7 +38,7 @@ getSupportedEffectTypes(): Array<ControlCenterEffectType>
 
 | Type | Description |
 | --- | --- |
-| Array&lt;ControlCenterEffectType&gt; | 支持的效果类型。 |
+| Array&lt;ControlCenterEffectType&gt; | Array of effect types supported. |
 
 ## isControlCenterSupported
 
@@ -46,7 +46,7 @@ getSupportedEffectTypes(): Array<ControlCenterEffectType>
 isControlCenterSupported(): boolean
 ```
 
-查询是否支持相机控制器。
+Checks whether the camera controller is supported.
 
 **Since:** 20
 
@@ -62,5 +62,5 @@ isControlCenterSupported(): boolean
 
 | Type | Description |
 | --- | --- |
-| boolean | 返回是否支持相机控制器。true表示支持，false表示不支持。 |
+| boolean | Check result for the support of the camera controller. **true** if supported, **false** otherwise. |
 

@@ -1,6 +1,6 @@
 # ScanResults
 
-扫描结果的内容。
+Describes the contents of the scan results.
 
 **Since:** 26.0.0
 
@@ -22,7 +22,7 @@ import { scan } from 'kits/@kit.ConnectivityKit';
 address: string
 ```
 
-远端设备的地址。长度为17，由十六进制数字和冒号组成，例如：11:22:33:AA:BB:FF。
+Address of the remote device.The length is 17, and the value consists of hexadecimal digits and colons (:), for example, 11:22:33:AA:BB:FF.
 
 **Type:** string
 
@@ -42,7 +42,7 @@ address: string
 data: ArrayBuffer
 ```
 
-原始数据。
+The raw data.
 
 **Type:** ArrayBuffer
 
@@ -62,7 +62,7 @@ data: ArrayBuffer
 deviceClass?: nearlinkConstant.DeviceClass
 ```
 
-设备类型。
+Indicates the device class.
 
 **Type:** nearlinkConstant.DeviceClass
 
@@ -82,7 +82,7 @@ deviceClass?: nearlinkConstant.DeviceClass
 deviceName: string
 ```
 
-外围设备的设备名称。最大长度为26。
+Device name of the remote device.
 
 **Type:** string
 
@@ -102,7 +102,7 @@ deviceName: string
 isConnectable: boolean
 ```
 
-广播是否可连接。
+Indicates whether the remote device is connectable.
 
 **Type:** boolean
 
@@ -122,7 +122,7 @@ isConnectable: boolean
 rssi: int
 ```
 
-外围设备的RSSI。单位为： 分贝毫瓦，取值范围为全体整数，取值为127时表示无效值。
+RSSI of the remote device.Unit: dBm. The value is an integer within [-128,127], and the value 127 indicates an invalid RSSI.
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 

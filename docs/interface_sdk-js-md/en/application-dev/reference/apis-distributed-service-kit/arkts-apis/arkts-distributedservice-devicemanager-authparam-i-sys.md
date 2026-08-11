@@ -1,6 +1,6 @@
 # AuthParam (System API)
 
-认证参数。
+Defines the authentication parameters.
 
 **Since:** 7
 
@@ -26,7 +26,7 @@ import { deviceManager } from 'kits/@kit.DistributedServiceKit';
 authType: number
 ```
 
-认证类型。
+Authentication type.
 
 **Type:** number
 
@@ -48,7 +48,7 @@ authType: number
 extraInfo: { [key: string]: any }
 ```
 
-认证参数可扩展字段。可选，默认为undefined。
+Extended field. Optional. The default value is **undefined**.
 
 **Type:** { [key: string]: any }
 

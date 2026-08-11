@@ -1,6 +1,6 @@
 # PreviewAttribute
 
-定义打印预览属性的接口。
+Defines the print preview attributes.
 
 **Since:** 24
 
@@ -22,7 +22,7 @@ import { print } from 'kits/@kit.BasicServicesKit';
 previewRange: PrinterRange
 ```
 
-表示预览页面范围。
+Preview page range.
 
 **Type:** [PrinterRange](arkts-basicservices-print-printerrange-i.md)
 
@@ -40,7 +40,7 @@ previewRange: PrinterRange
 result?: int
 ```
 
-表示预览文件结果。默认值为-1。
+Print preview result. The default value is **-1**.
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 

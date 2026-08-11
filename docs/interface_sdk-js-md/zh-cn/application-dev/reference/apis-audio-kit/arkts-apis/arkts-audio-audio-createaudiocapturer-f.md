@@ -1,11 +1,5 @@
 # createAudioCapturer
 
-## 导入模块
-
-```TypeScript
-import { audio } from 'kits/@kit.AudioKit';
-```
-
 ## createAudioCapturer
 
 ```TypeScript
@@ -93,8 +87,8 @@ Obtains an {@link AudioCapturer} instance. This method uses an asynchronous call
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 6800101 | Parameter verification failed. |
-| 6800301 | Audio system internal error, such as system crash. |
+| [6800101](../errorcode-audio.md#6800101-无效入参) | Parameter verification failed. |
+| [6800301](../errorcode-audio.md#6800301-系统处理异常) | Audio system internal error, such as system crash. |
 
 
 ## createAudioCapturer
@@ -193,6 +187,6 @@ Obtains an {@link AudioCapturer} instance. This method uses a promise to return 
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 6800101 | Parameter verification failed. |
-| 6800301 | Audio system internal error, such as system crash. |
+| [6800101](../errorcode-audio.md#6800101-无效入参) | Parameter verification failed. |
+| [6800301](../errorcode-audio.md#6800301-系统处理异常) | Audio system internal error, such as system crash. |
 

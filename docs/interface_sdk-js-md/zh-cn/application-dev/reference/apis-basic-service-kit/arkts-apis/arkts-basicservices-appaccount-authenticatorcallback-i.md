@@ -18,12 +18,6 @@ OAuth认证器回调接口。
 
 **系统能力：** SystemCapability.Account.AppAccount
 
-## 导入模块
-
-```TypeScript
-import { appAccount } from 'kits/@kit.BasicServicesKit';
-```
-
 ## onRequestRedirected
 
 ```TypeScript
@@ -74,8 +68,8 @@ class MyAuthenticator extends appAccount.Authenticator {
     callback.onResult(appAccount.ResultCode.SUCCESS, {
       name: name,
       authType: authType,
-      token: 'xxxxxx'
-    });
+      token: 'xxxxxx'}
+    );
   }
 }
 ```
@@ -123,8 +117,8 @@ appAccountManager.getAuthenticatorCallback(sessionId).then((callback: appAccount
     name: 'LiSi',
     owner: 'com.example.accountjsdemo',
     authType: 'getSocialData',
-    token: 'xxxxxx'
-  });
+    token: 'xxxxxx'}
+  );
 }).catch((err: BusinessError) => {
   console.error(`getAuthenticatorCallback err: code is ${err.code}, message is ${err.message}`);
 });

@@ -1,6 +1,6 @@
 # KeepAliveSetter (System API)
 
-表示应用保活的设置方类型。
+Enumerates the types of parties that set to keep applications alive.
 
 **Since:** 14
 
@@ -18,7 +18,7 @@
 SYSTEM = 0
 ```
 
-应用保活设置方为系统。
+System, which means that the system sets to keep applications alive.
 
 **Since:** 14
 
@@ -36,7 +36,7 @@ SYSTEM = 0
 USER = 1
 ```
 
-应用保活设置方为用户。
+User, which means that a user sets to keep applications alive.
 
 **Since:** 14
 

@@ -12,7 +12,7 @@ import { thermal } from 'kits/@kit.BasicServicesKit';
 function getThermalLevel(): ThermalLevel
 ```
 
-获取当前热档位信息。
+Obtains the current thermal level.
 
 **Since:** 8
 
@@ -30,7 +30,7 @@ function getThermalLevel(): ThermalLevel
 
 | Type | Description |
 | --- | --- |
-| [ThermalLevel](arkts-basicservices-thermal-thermallevel-e.md) | 热档位信息。 |
+| [ThermalLevel](arkts-basicservices-thermal-thermallevel-e.md) | Thermal level. |
 
 ## Examples
 

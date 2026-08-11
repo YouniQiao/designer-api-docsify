@@ -12,7 +12,7 @@ import { insightIntentDriver } from 'kits/@kit.AbilityKit';
 function queryEntityInfo(param: QueryParam): Promise<Array<Record<string, Object>>>
 ```
 
-查询意图实体信息。
+Query insight intent entity information.
 
 **Since:** 26.0.0
 
@@ -32,7 +32,7 @@ function queryEntityInfo(param: QueryParam): Promise<Array<Record<string, Object
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| param | [QueryParam](arkts-ability-insightintentdriver-queryparam-i-sys.md) | Yes | 查询参数。 |
+| param | [QueryParam](arkts-ability-insightintentdriver-queryparam-i-sys.md) | Yes | Query parameter. |
 
 **Return value:**
 
@@ -44,10 +44,10 @@ function queryEntityInfo(param: QueryParam): Promise<Array<Record<string, Object
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 16000006 | Cross-user operations are not allowed. |
-| 16000050 | Internal error. Possible causes: 1. Connect to system service failed; 2.Send restart message to system service failed; 3.System service failed to communicate with dependency module. |
-| 201 | Permission denied. |
-| 202 | Not system application. |
+| [16000006](../errorcode-ability.md#16000006-crossuser-operation-is-not-allowed) | Cross-user operations are not allowed. |
+| [16000050](../errorcode-ability.md#16000050-internal-error) | Internal error. Possible causes: 1. Connect to system service failed; 2.Send restart message to system service failed; 3.System service failed to communicate with dependency module. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system application. |
 
 
 ## queryEntityInfo
@@ -56,7 +56,7 @@ function queryEntityInfo(param: QueryParam): Promise<Array<Record<string, Object
 function queryEntityInfo(param: QueryParam): Promise<Array<Record<string, RecordData>>>
 ```
 
-查询意图实体信息。
+Query insight intent entity information.
 
 **Since:** 26.0.0
 
@@ -76,7 +76,7 @@ function queryEntityInfo(param: QueryParam): Promise<Array<Record<string, Record
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| param | [QueryParam](arkts-ability-insightintentdriver-queryparam-i-sys.md) | Yes | 查询参数。 |
+| param | [QueryParam](arkts-ability-insightintentdriver-queryparam-i-sys.md) | Yes | Query parameter. |
 
 **Return value:**
 
@@ -88,8 +88,8 @@ function queryEntityInfo(param: QueryParam): Promise<Array<Record<string, Record
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 16000006 | Cross-user operations are not allowed. |
-| 16000050 | Internal error. Possible causes: 1. Connect to system service failed; 2.Send restart message to system service failed; 3.System service failed to communicate with dependency module. |
-| 201 | Permission denied. |
-| 202 | Not system application. |
+| [16000006](../errorcode-ability.md#16000006-crossuser-operation-is-not-allowed) | Cross-user operations are not allowed. |
+| [16000050](../errorcode-ability.md#16000050-internal-error) | Internal error. Possible causes: 1. Connect to system service failed; 2.Send restart message to system service failed; 3.System service failed to communicate with dependency module. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system application. |
 

@@ -6,7 +6,7 @@ typedef struct ArkUI_CrossLanguageOption ArkUI_CrossLanguageOption
 
 ## Overview
 
-The cross-language option.
+Defines a cross-language configuration option.
 
 **Since**: 15
 

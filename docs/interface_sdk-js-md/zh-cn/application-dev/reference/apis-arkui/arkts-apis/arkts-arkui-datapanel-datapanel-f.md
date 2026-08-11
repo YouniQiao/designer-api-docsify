@@ -24,13 +24,13 @@ export declare function DataPanel(
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| options | [DataPanelOptions](../arkts-components/arkts-arkui-datapaneloptions-i.md) | 是 | 数据面板组件参数。 |
+| options | [DataPanelOptions](arkts-arkui-datapanel-datapaneloptions-i.md) | 是 | 数据面板组件参数。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| [DataPanelAttribute](../arkts-components/arkts-arkui-datapanel-attribute.md) |  |
+| [DataPanelAttribute](arkts-arkui-datapanel-datapanelattribute-i.md) |  |
 
 
 ## DataPanel
@@ -65,5 +65,5 @@ export declare function DataPanel(
 
 | 类型 | 说明 |
 | --- | --- |
-| [DataPanelAttribute](../arkts-components/arkts-arkui-datapanel-attribute.md) |  |
+| [DataPanelAttribute](arkts-arkui-datapanel-datapanelattribute-i.md) |  |
 

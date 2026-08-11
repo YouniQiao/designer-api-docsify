@@ -8,12 +8,6 @@
  > - 从API version 12开始，本模块接口支持在ArkTS卡片中使用。
 
 
-## 导入模块
-
-```TypeScript
-import { Callback, BusinessError, ErrorCallback, AsyncCallback } from 'kits/@kit.BasicServicesKit';
-```
-
 ## 汇总
 
 ### 类

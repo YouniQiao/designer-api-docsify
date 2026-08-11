@@ -1,6 +1,6 @@
 # AudioCapturerOptions
 
-音频采集器选项信息。
+Describes audio capturer configurations.
 
 **Since:** 8
 
@@ -22,7 +22,7 @@ import { audio } from 'kits/@kit.AudioKit';
 capturerInfo: AudioCapturerInfo
 ```
 
-音频采集器信息。
+Audio capturer information.
 
 **Type:** [AudioCapturerInfo](arkts-audio-audio-audiocapturerinfo-i.md)
 
@@ -40,9 +40,10 @@ capturerInfo: AudioCapturerInfo
 playbackCaptureConfig?: AudioPlaybackCaptureConfig
 ```
 
-音频内录的配置信息。
+Defines configuration for capturing played audio.
 
-<br/
+This API is supported since API version 10 and deprecated since API version 12. You are advised to use  
+[AVScreenCapture](../../../reference/apis-media-kit/capi-avscreencapture.md) instead.
 
 **Type:** [AudioPlaybackCaptureConfig](arkts-audio-audio-audioplaybackcaptureconfig-i.md)
 
@@ -64,7 +65,7 @@ playbackCaptureConfig?: AudioPlaybackCaptureConfig
 playbackCaptureMode?: AudioPlaybackCaptureMode
 ```
 
-内录模式。可设置为AudioPlaybackCaptureMode中的枚举值或其按位或组合，当前仅支持MODE_DEFAULT（0x0）、MODE_MEDIA（0x1）、MODE_EXCLUDING_SELF（0x8000），以及MODE_MEDIA和MODE_EXCLUDING_SELF的按位或组合（0x8001）。
+The playback capture mode for audio capturer.This can be a combination of the available {@link AudioPlaybackCaptureMode}.
 
 **Type:** [AudioPlaybackCaptureMode](arkts-audio-audio-audioplaybackcapturemode-e.md)
 
@@ -84,7 +85,7 @@ playbackCaptureMode?: AudioPlaybackCaptureMode
 streamInfo: AudioStreamInfo
 ```
 
-音频流信息。
+Audio stream information.
 
 **Type:** [AudioStreamInfo](arkts-audio-audio-audiostreaminfo-i.md)
 

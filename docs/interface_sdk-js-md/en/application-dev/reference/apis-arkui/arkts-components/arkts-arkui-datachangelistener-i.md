@@ -1,11 +1,13 @@
 # DataChangeListener
 
-数据变化监听器，用于在数据源发生变化时通知LazyForEach组件进行相应的渲染更新，支持数据添加、删除、改变、移动、交换、重载等多种数据变化类型的监听。
+Listener for data changes.
 
-> **说明：**
+> **NOTE：**
 > 
-> DataChangeListener除onDatasetChange以外的方法中，当参数包含index且值为负数时，会默认用0来替换。onDatasetChange中，当单个DataOperation参数包含index且值在数据源
-> 索引范围之外（DataAddOperation中index可以等于数据源长度），则可能导致渲染异常。
+> In APIs of **DataChangeListener** other than **onDatasetChange**, if the value of **index** is negative, the value
+> is treated as **0** by default. In **onDatasetChange**, if the specified index in a **DataOperation** is outside
+> the data source index range, the corresponding **DataOperation** does not take effect. (In **DataAddOperation**,
+> the value of **index** can equal the data source length.)
 
 **Since:** 7
 
@@ -21,11 +23,7 @@
 onDataAdd(index: number): void
 ```
 
-通知组件index的位置有数据添加。添加数据完成后调用。
-
-> **说明：**
-> 
-> 该接口不能与onDatasetChange接口混用。
+Invoked when data is added to the position indicated by the specified index.
 
 **Since:** 8
 
@@ -41,7 +39,7 @@ onDataAdd(index: number): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| index | number | Yes | 数据添加位置的索引值。取值范围是[0, 数据源长度-1]。 &lt;br&gt;小于0时取值为0，大于数据源长度-1时取值为数据源长度-1。 |
+| index | number | Yes | Index of the position where data is added. The value range is [0, data source length - 1]. &lt;br&gt;If the value is less than 0, it is treated as **0**. If the value is greater than the data source length minus 1, it is treated as the data source length minus 1. |
 
 ## onDataAdded
 
@@ -49,11 +47,12 @@ onDataAdd(index: number): void
 onDataAdded(index: number): void
 ```
 
-通知组件index的位置有数据添加。添加数据完成后调用。
+Invoked when data is added to the position indicated by the specified index.
 
-> **说明：**
+> **NOTE：**
 > 
-> 从API version 7开始支持，从API version 8开始废弃。
+> This API is supported since API version 7 and deprecated since API version 8. Use
+> [onDataAdd](arkts-arkui-datachangelistener-i.md#ondataadd) instead.
 
 **Since:** 7
 
@@ -71,7 +70,7 @@ onDataAdded(index: number): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| index | number | Yes | 数据添加位置的索引值。取值范围是[0, 数据源长度-1]。 &lt;br&gt;小于0时取值为0，大于数据源长度-1时取值为数据源长度-1。 |
+| index | number | Yes | Index of the position where data is added. The value range is [0, data source length - 1]. &lt;br&gt;If the value is less than 0, it is treated as **0**. If the value is greater than the data source length minus 1, it is treated as the data source length minus 1. |
 
 ## onDataChange
 
@@ -79,11 +78,7 @@ onDataAdded(index: number): void
 onDataChange(index: number): void
 ```
 
-通知组件index的位置有数据变化。改变数据完成后调用。
-
-> **说明：**
-> 
-> 该接口不能与onDatasetChange接口混用。
+Invoked when data in the position indicated by the specified index is changed.
 
 **Since:** 8
 
@@ -99,7 +94,7 @@ onDataChange(index: number): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| index | number | Yes | 数据变化位置的索引值。取值范围是[0, 数据源长度-1]。 &lt;br&gt;小于0时取值为0，大于数据源长度-1时取值为数据源长度-1。 |
+| index | number | Yes | Index of the position where data is changed. The value range is [0, data source length - 1]. &lt;br&gt;If the value is less than 0, it is treated as **0**. If the value is greater than the data source length minus 1, it is treated as the data source length minus 1. |
 
 ## onDataChanged
 
@@ -107,11 +102,12 @@ onDataChange(index: number): void
 onDataChanged(index: number): void
 ```
 
-通知组件index的位置有数据变化。改变数据完成后调用。
+Invoked when data in the position indicated by the specified index is changed.
 
-> **说明：**
+> **NOTE：**
 > 
-> 从API version 7开始支持，从API version 8开始废弃。
+> This API is supported since API version 7 and deprecated since API version 8. Use
+> [onDataChange](arkts-arkui-datachangelistener-i.md#ondatachange) instead.
 
 **Since:** 7
 
@@ -129,7 +125,7 @@ onDataChanged(index: number): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| index | number | Yes | 数据变化位置的索引值。取值范围是[0, 数据源长度-1]。 &lt;br&gt;小于0时取值为0，大于数据源长度-1时取值为数据源长度-1。 |
+| index | number | Yes | Listener for data changes. The value range is [0, data source length - 1]. &lt;br&gt;If the value is less than 0, it is treated as **0**. If the value is greater than the data source length minus 1, it is treated as the data source length minus 1. |
 
 ## onDataDelete
 
@@ -137,13 +133,12 @@ onDataChanged(index: number): void
 onDataDelete(index: number): void
 ```
 
-通知组件删除index位置的数据并刷新LazyForEach的展示内容。删除数据完成后调用。
+Invoked when data is deleted from the position indicated by the specified index. LazyForEach will update the displayed content accordingly.
 
-> **说明：**
+> **NOTE：**
 > 
-> - 需要保证dataSource中的对应数据已经在调用onDataDelete前删除，否则页面渲染将出现未定义的行为。
-> 
-> - 该接口不能与onDatasetChange接口混用。
+> Before **onDataDelete** is called, ensure that the corresponding data in **dataSource** has been deleted.
+> Otherwise, undefined behavior will occur during page rendering.
 
 **Since:** 8
 
@@ -159,7 +154,7 @@ onDataDelete(index: number): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| index | number | Yes | 数据删除位置的索引值。取值范围是[0, 数据源长度-1]。 &lt;br&gt;小于0时取值为0，大于数据源长度-1时取值为数据源长度-1。 |
+| index | number | Yes | Index of the position where data is deleted. The value range is [0, data source length - 1]. &lt;br&gt;If the value is less than 0, it is treated as **0**. If the value is greater than the data source length minus 1, it is treated as the data source length minus 1. |
 
 ## onDataDeleted
 
@@ -167,11 +162,12 @@ onDataDelete(index: number): void
 onDataDeleted(index: number): void
 ```
 
-通知组件删除index位置的数据并刷新LazyForEach的展示内容。删除数据完成后调用。
+Invoked when data is deleted from the position indicated by the specified index. LazyForEach will update the displayed content accordingly.
 
-> **说明：**
+> **NOTE：**
 > 
-> - 从API version 7开始支持，从API version 8开始废弃。
+> This API is supported since API version 7 and deprecated since API version 8. Use
+> [onDataDelete](arkts-arkui-datachangelistener-i.md#ondatadelete) instead.
 
 **Since:** 7
 
@@ -189,7 +185,7 @@ onDataDeleted(index: number): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| index | number | Yes | 数据删除位置的索引值。取值范围是[0, 数据源长度-1]。 &lt;br&gt;小于0时取值为0，大于数据源长度-1时取值为数据源长度-1。 |
+| index | number | Yes | Index of the position where data is deleted. The value range is [0, data source length - 1]. &lt;br&gt;If the value is less than 0, it is treated as **0**. If the value is greater than the data source length minus 1, it is treated as the data source length minus 1. |
 
 ## onDataMove
 
@@ -197,13 +193,12 @@ onDataDeleted(index: number): void
 onDataMove(from: number, to: number): void
 ```
 
-通知组件数据有移动。将from和to位置的数据进行交换。数据移动起始位置与数据移动目标位置交换完成后调用。
+Invoked when data is moved, that is, when data is swapped between the **from** and **to** positions.
 
-> **说明：**
+> **NOTE：**
 > 
-> - 数据移动前后键值要保持不变，如果键值有变化，应使用删除数据和新增数据接口。
-> 
-> - 该接口不能与onDatasetChange接口混用。
+> The ID must remain unchanged before and after data movement. If the ID changes, APIs for deleting and adding data
+> must be called.
 
 **Since:** 8
 
@@ -219,8 +214,8 @@ onDataMove(from: number, to: number): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| from | number | Yes | 数据移动起始位置。取值范围是[0, 数据源长度-1]。 &lt;br&gt;小于0时取值为0，大于数据源长度-1时取值为数据源长度-1。 |
-| to | number | Yes | 数据移动目标位置。取值范围是[0, 数据源长度-1]。 &lt;br&gt;小于0时取值为0，大于数据源长度-1时取值为数据源长度-1。 |
+| from | number | Yes | Original position of data. The value range is [0, data source length - 1]. &lt;br&gt;If the value is less than 0, it is treated as **0**. If the value is greater than the data source length minus 1, it is treated as the data source length minus 1. |
+| to | number | Yes | Target position of data. The value range is [0, data source length - 1]. &lt;br&gt;If the value is less than 0, it is treated as **0**. If the value is greater than the data source length minus 1, it is treated as the data source length minus 1. |
 
 ## onDataMoved
 
@@ -228,13 +223,15 @@ onDataMove(from: number, to: number): void
 onDataMoved(from: number, to: number): void
 ```
 
-通知组件数据有移动。将from和to位置的数据进行交换。
+Invoked when data is moved, that is, when data is swapped between the **from** and **to** positions.
 
-> **说明：**
+> **NOTE：**
 > 
-> - 从API version 7开始支持，从API version 8开始废弃。
+> - This API is supported since API version 7 and deprecated since API version 8. Use
+> [onDataMove](arkts-arkui-datachangelistener-i.md#ondatamove) instead.
 > 
-> - 数据移动前后键值要保持不变，如果键值有变化，应使用删除数据和新增数据接口。数据移动起始位置与数据移动目标位置交换完成后调用。
+> - The ID must remain unchanged before and after data movement. If the ID changes, APIs for deleting and adding
+> data must be called.
 
 **Since:** 7
 
@@ -252,8 +249,8 @@ onDataMoved(from: number, to: number): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| from | number | Yes | 数据移动起始位置。取值范围是[0, 数据源长度-1]。 &lt;br&gt;小于0时取值为0，大于数据源长度-1时取值为数据源长度-1。 |
-| to | number | Yes | 数据移动目标位置。取值范围是[0, 数据源长度-1]。 &lt;br&gt;小于0时取值为0，大于数据源长度-1时取值为数据源长度-1。 |
+| from | number | Yes | Original position of data. The value range is [0, data source length - 1]. &lt;br&gt;If the value is less than 0, it is treated as **0**. If the value is greater than the data source length minus 1, it is treated as the data source length minus 1. |
+| to | number | Yes | Target position of data. The value range is [0, data source length - 1]. &lt;br&gt;If the value is less than 0, it is treated as **0**. If the value is greater than the data source length minus 1, it is treated as the data source length minus 1. |
 
 ## onDataReloaded
 
@@ -261,11 +258,7 @@ onDataMoved(from: number, to: number): void
 onDataReloaded(): void
 ```
 
-通知组件重新加载所有数据。键值没有变化的数据项会使用原先的子组件，键值发生变化的会重建子组件。重新加载数据完成后调用。
-
-> **说明：**
-> 
-> 该接口不能与onDatasetChange接口混用。
+Invoked when all data is reloaded. For data items whose key remains unchanged, the original child component is used. For data items whose key changes, a new child component is created.
 
 **Since:** 7
 
@@ -283,14 +276,7 @@ onDataReloaded(): void
 onDataReloaded(reuseImmediately: boolean): void
 ```
 
-通知组件重新加载所有数据，并配置是否允许在更新过程中复用旧的子组件。需要和@Reusable/@ReusableV2配合使用。重新加载数据完成后调用。
-
-配置允许在更新过程中复用旧的子组件，并和[@Reusable](../../../ui/state-management/arkts-reusable.md)/  
-[@ReusableV2](../../../ui/state-management/arkts-new-reusableV2.md)配合使用时，优先使用复用池中的组件，若复用池中无可复用的组件，而LazyForEach的旧子组件中有可复用的组件，该组件将被回收，并复用为新的子组件。当LazyForEach的旧子组件中也没有可复用的组件时，将创建新的子组件。
-
-配置允许在更新过程中复用旧的子组件，未使用@Reusable/@ReusableV2时，键值没有变化的数据项会使用原先的子组件，键值发生变化的会重建子组件。
-
-配置不允许在更新过程中复用旧的子组件，键值没有变化的数据项会使用原先的子组件，键值发生变化的数据项，若使用了@Reusable/@ReusableV2且复用池中有可用的组件，将复用旧组件，否则将创建新的子组件。
+Invoked when all data is reloaded. When \@Reuseable or \@ReuseableV2 is used and recycle pool is empty, old child components will be recycled and then be reused as new child components. If no old child component can be reused,new child components will be created.
 
 **Since:** 26.1.0
 
@@ -308,7 +294,7 @@ onDataReloaded(reuseImmediately: boolean): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| reuseImmediately | boolean | Yes | 是否允许在更新过程中复用旧的子组件。&lt;br/&gt;true：允许在更新过程中复用旧的子组件。&lt;br/&gt;false：不允许在更新过程中复用旧的子组件。 |
+| reuseImmediately | boolean | Yes | Whether to enable the feature that reuse old child components when \@Reuseable or \@ReuseableV2 is used and recycle pool is empty. &lt;br&gt; **true**: Enable the feature. &lt;br&gt;**false**: Disable the feature. |
 
 ## onDatasetChange
 
@@ -316,13 +302,16 @@ onDataReloaded(reuseImmediately: boolean): void
 onDatasetChange(dataOperations: DataOperation[]): void
 ```
 
-进行批量的数据处理后，调用onDatasetChange接口通知组件按照dataOperations刷新组件。
+Invoked when data is processed in batches to notify the component of refreshing.
 
-> **说明：**
+> **NOTE：**
 > 
-> onDatasetChange接口不能与其他DataChangeListener的更新接口混用。例如，在同一个LazyForEach中，调用过onDataAdd接口后，不能再调用onDatasetChange接口；反之，调用过
-> onDatasetChange接口后，也不能调用onDataAdd等其他更新接口。页面中不同LazyForEach之间互不影响。在同一个onDatasetChange批量处理数据时，如果多个DataOperation操作同一个
-> index，只有第一个DataOperation生效。
+> This API cannot be used together with other data operation APIs of **DataChangeListener**. For example, in the
+> same **LazyForEach**, if you have called **onDataAdd**, do not call **onDatasetChange**; if you have called
+> **onDatasetChange**, do not call **onDataAdd** or other data operation APIs. Different **LazyForEach** instances
+> on the page do not affect each other. When data is processed in batches within the same **onDatasetChange**
+> callback, if multiple **DataOperation** instances target the same index, only the first **DataOperation** will
+> take effect.
 
 **Since:** 12
 
@@ -340,5 +329,5 @@ onDatasetChange(dataOperations: DataOperation[]): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| dataOperations | [DataOperation](arkts-arkui-dataoperation-t.md)[] | Yes | 一次批量处理数据的操作集合，开发者将需要处理的数据操作（添加、删除、改变、移动、交换、重载等）放入该数组，组件按照数组中的操作顺序刷新展示内 容。 |
+| dataOperations | [DataOperation](arkts-arkui-dataoperation-t.md)[] | Yes | Array of data operations performed. |
 

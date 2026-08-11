@@ -1,8 +1,8 @@
 # DataShareResultSet (System API)
 
-提供通过查询数据库生成的结果集的相关访问方法。
+Provides APIs for accessing the result sets returned.
 
-列或键名称作为字符串数组返回，其中字符串的顺序与结果集中的列或键的顺序相同。
+The column or key names are returned as a string array, in which the strings are in the same order as the columns or keys in the result set.
 
 **Since:** 9
 
@@ -26,9 +26,9 @@ import { DataType } from 'kits/@kit.ArkData';
 close(): void
 ```
 
-关闭结果集。
+Closes this result set.
 
-对结果集调用此方法将释放其所有资源并使其无效。
+Calling this API will invalidate the result set and release all its resources.
 
 **Since:** 9
 
@@ -62,9 +62,9 @@ ArkTS-Sta:
 getBlob(columnIndex: int): Uint8Array
 ```
 
-以字节数组的形式获取当前行中指定列的值。
+Obtains the value in the form of a byte array based on the specified column and the current row.
 
-如果当前行中指定的列或键的值为空，或者指定的列或键不是Blob类型，则使用方需要确定是否抛出此异常。
+If the specified column or key is empty or the value is not of the Blob type, you need to determine whether to throw an exception.
 
 **Since:** 9
 
@@ -82,13 +82,13 @@ getBlob(columnIndex: int): Uint8Array
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| columnIndex | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | 指定的列索引，从0开始。 |
+| columnIndex | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | Index of the target column, starting from 0. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Uint8Array | 以字节数组的形式返回指定列的值。 |
+| Uint8Array | Value obtained. |
 
 ## Examples
 
@@ -117,9 +117,9 @@ ArkTS-Sta:
 getColumnIndex(columnName: string): int
 ```
 
-根据指定的列名获取列索引。
+Obtains the column index based on a column name.
 
-列名作为输入参数传递。
+The column name is passed in as an input parameter.
 
 **Since:** 9
 
@@ -137,13 +137,13 @@ getColumnIndex(columnName: string): int
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| columnName | string | Yes | 表示结果集中指定列的名称。 |
+| columnName | string | Yes | Column name. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| ArkTS-Dyn: number  <br>ArkTS-Sta：int | 返回指定列的索引。 |
+| ArkTS-Dyn: number  <br>ArkTS-Sta：int | Column index obtained. |
 
 ## Examples
 
@@ -167,9 +167,9 @@ ArkTS-Sta:
 getColumnName(columnIndex: int): string
 ```
 
-根据指定的列索引获取列名。
+Obtains the column name based on a column index.
 
-列索引作为输入参数传递。
+The column index is passed in as an input parameter.
 
 **Since:** 9
 
@@ -187,13 +187,13 @@ getColumnName(columnIndex: int): string
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| columnIndex | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | 表示结果集中指定列的索引。 |
+| columnIndex | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | Column index. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| string | 返回指定列的名称。 |
+| string | Column name obtained. |
 
 ## Examples
 
@@ -217,9 +217,9 @@ ArkTS-Sta:
 getDataType(columnIndex: int): DataType
 ```
 
-指定列索引获取该列的数据类型。
+Obtains the data type based on the specified column index.
 
-如果当前行中指定的列或键的值为空，或者指定的列或键不是DataType类型，则使用方需要确定是否抛出此异常。
+If the specified column or key is empty or the value is not of the DataType type, you need to determine whether to throw an exception.
 
 **Since:** 9
 
@@ -237,13 +237,13 @@ getDataType(columnIndex: int): DataType
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| columnIndex | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | 表示结果集中指定列的索引。 |
+| columnIndex | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | Column index. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [DataType](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-file-photopickercomponent-datatype-e.md) | 返回指定列的类型。 |
+| [DataType](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-file-photopickercomponent-datatype-e.md) | Data type obtained. |
 
 ## Examples
 
@@ -267,9 +267,9 @@ ArkTS-Sta:
 getDouble(columnIndex: int): double
 ```
 
-以值类型为双浮点数形式获取当前行中指定列的值。
+Obtains the value in the form of a double-precision floating-point number based on the specified column and the current row.
 
-如果当前行中指定的列或键的值为空，或者指定的列或键不是double类型，则使用方需要确定是否抛出此异常。
+If the specified column or key is empty or the value is not of the double type, you need to determine whether to throw an exception.
 
 **Since:** 9
 
@@ -287,7 +287,7 @@ getDouble(columnIndex: int): double
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| columnIndex | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | 指定的列索引，从0开始。 |
+| columnIndex | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | Index of the target column, starting from 0. |
 
 **Return value:**
 
@@ -318,9 +318,9 @@ ArkTS-Sta:
 getLong(columnIndex: int): long
 ```
 
-以长整数值形式获取当前行中指定列的值。
+Obtains the value in the form of a long integer based on the specified column and the current row.
 
-如果当前行中指定的列或键的值为空，或者指定的列或键不是long类型，则使用方需要确定是否抛出此异常。
+If the specified column or key is empty or the value is not of the long type, you need to determine whether to throw an exception.
 
 **Since:** 9
 
@@ -338,13 +338,13 @@ getLong(columnIndex: int): long
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| columnIndex | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | 指定的列索引，从0开始。 |
+| columnIndex | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | Index of the target column, starting from 0. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| ArkTS-Dyn: number  <br>ArkTS-Sta：long | 以长整数值形式返回指定列的值。 |
+| ArkTS-Dyn: number  <br>ArkTS-Sta：long | Value obtained. |
 
 ## Examples
 
@@ -369,9 +369,9 @@ ArkTS-Sta:
 getString(columnIndex: int): string
 ```
 
-以字符串形式获取当前行中指定列的值。
+Obtains the value in the form of a string based on the specified column and the current row.
 
-如果当前行中指定的列或键的值为空，或者指定的列或键不是string类型，则使用方需要确定是否抛出此异常。
+If the specified column or key is empty or the value is not of the string type, you need to determine whether to throw an exception.
 
 **Since:** 9
 
@@ -389,13 +389,13 @@ getString(columnIndex: int): string
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| columnIndex | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | 指定的列索引，从0开始。 |
+| columnIndex | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | Index of the target column, starting from 0. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| string | 以字符串形式返回指定列的值。 |
+| string | Value obtained. |
 
 ## Examples
 
@@ -420,7 +420,7 @@ ArkTS-Sta:
 goTo(offset: int): boolean
 ```
 
-相对于当前位置向前或向后移动指定行数。
+Moves based on the specified offset.
 
 **Since:** 9
 
@@ -438,13 +438,13 @@ goTo(offset: int): boolean
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| offset | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | 表示相对于当前位置的偏移量。offset为负值表示向前偏移，正值则表示向后偏移。 |
+| offset | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | Offset relative to the current position. A negative value means to move forward, and a positive value means to move backward. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| boolean | 如果成功移动结果集，则为true；否则返回false。 |
+| boolean | Returns **true** if the operation is successful; returns **false** otherwise. |
 
 ## Examples
 
@@ -462,7 +462,7 @@ if (resultSet != undefined) {
 goToFirstRow(): boolean
 ```
 
-转到结果集的第一行。
+Moves to the first row of the result set.
 
 **Since:** 9
 
@@ -480,7 +480,7 @@ goToFirstRow(): boolean
 
 | Type | Description |
 | --- | --- |
-| boolean | 如果成功移动结果集，则为true；否则返回false。 |
+| boolean | Returns **true** if the operation is successful; returns **false** otherwise. |
 
 ## Examples
 
@@ -498,7 +498,7 @@ if (resultSet != undefined) {
 goToLastRow(): boolean
 ```
 
-转到结果集的最后一行。
+Moves to the last row of the result set.
 
 **Since:** 9
 
@@ -516,7 +516,7 @@ goToLastRow(): boolean
 
 | Type | Description |
 | --- | --- |
-| boolean | 如果成功移动结果集，则为true；否则返回false。 |
+| boolean | Returns **true** if the operation is successful; returns **false** otherwise. |
 
 ## Examples
 
@@ -533,7 +533,7 @@ if (resultSet != undefined) {
 goToNextRow(): boolean
 ```
 
-转到结果集的下一行。
+Moves to the next row in the result set.
 
 **Since:** 9
 
@@ -551,7 +551,7 @@ goToNextRow(): boolean
 
 | Type | Description |
 | --- | --- |
-| boolean | 如果成功移动结果集，则为true；否则返回false。 |
+| boolean | Returns **true** if the operation is successful; returns **false** otherwise. |
 
 ## Examples
 
@@ -568,7 +568,7 @@ if (resultSet != undefined) {
 goToPreviousRow(): boolean
 ```
 
-转到结果集的上一行。
+Moves to the previous row in the result set.
 
 **Since:** 9
 
@@ -586,7 +586,7 @@ goToPreviousRow(): boolean
 
 | Type | Description |
 | --- | --- |
-| boolean | 如果成功移动结果集，则为true；否则返回false。 |
+| boolean | Returns **true** if the operation is successful; returns **false** otherwise. |
 
 ## Examples
 
@@ -609,7 +609,7 @@ ArkTS-Sta:
 goToRow(position: int): boolean
 ```
 
-转到结果集的指定行。
+Moves to the specified row in the result set.
 
 **Since:** 9
 
@@ -627,13 +627,13 @@ goToRow(position: int): boolean
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| position | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | 表示要移动到的指定位置，从 0 开始。 |
+| position | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | Position to move to, starting from 0. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| boolean | 如果成功移动结果集，则为true；否则返回false。 |
+| boolean | Returns **true** if the operation is successful; returns **false** otherwise. |
 
 ## Examples
 
@@ -651,7 +651,7 @@ if (resultSet != undefined) {
 columnCount: int
 ```
 
-结果集中的列数。
+Number of columns in the result set.
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
@@ -673,7 +673,7 @@ columnCount: int
 columnNames: Array<string>
 ```
 
-结果集中所有列的名称。
+Names of all columns in the result set.
 
 **Type:** Array&lt;string&gt;
 
@@ -695,7 +695,7 @@ columnNames: Array<string>
 isClosed: boolean
 ```
 
-标识当前结果集是否关闭。如果结果集已关闭，则为true；否则为false。
+Whether the result set is closed. The value **true** means the result set is closed; the value **false** means the opposite.
 
 **Type:** boolean
 
@@ -717,7 +717,7 @@ isClosed: boolean
 rowCount: int
 ```
 
-结果集中的行数。
+Number of rows in the result set.
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 

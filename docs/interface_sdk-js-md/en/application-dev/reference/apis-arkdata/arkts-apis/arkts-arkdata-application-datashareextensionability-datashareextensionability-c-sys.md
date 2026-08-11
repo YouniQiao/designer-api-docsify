@@ -1,6 +1,6 @@
 # DataShareExtensionAbility (System API)
 
-本模块提供数据共享和扩展功能。
+This module provides data sharing and expansion capabilities.
 
 **Since:** 9
 
@@ -24,7 +24,7 @@ import { DataShareExtensionAbility } from 'kits/@kit.ArkData';
 batchInsert?(uri: string, valueBuckets: Array<ValuesBucket>, callback: AsyncCallback<number>): void
 ```
 
-在数据库批量插入时服务端回调此接口，该方法可以选择性重写。
+Batch inserts data into the database. This API is called by the server and can be overridden as required.
 
 **Since:** 9
 
@@ -42,9 +42,9 @@ batchInsert?(uri: string, valueBuckets: Array<ValuesBucket>, callback: AsyncCall
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| uri | string | Yes | 指示要批量插入的数据的路径。 |
-| valueBuckets | Array&lt;[ValuesBucket](arkts-arkdata-valuesbucket-t.md)&gt; | Yes | 指示要批量插入的数据。 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;number&gt; | Yes | 回调函数。返回插入的数据记录数。 |
+| uri | string | Yes | URI of the data to insert. |
+| valueBuckets | Array&lt;[ValuesBucket](arkts-arkdata-valuesbucket-t.md)&gt; | Yes | Data to insert. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;number&gt; | Yes | Callback used to return the number of inserted data records. |
 
 ## Examples
 
@@ -57,7 +57,7 @@ let rdbStore: relationalStore.RdbStore;
 export default class DataShareExtAbility extends DataShareExtensionAbility {
   batchInsert(uri: string, valueBuckets: Array<ValuesBucket>, callback: Function) {
     if (valueBuckets === null || valueBuckets.length <= 0) {
-      console.info('invalid valueBucket');
+      console.error('invalid valueBuckets');
       return;
     }
     rdbStore.batchInsert(TBL_NAME, valueBuckets, (err, ret) => {
@@ -75,7 +75,7 @@ export default class DataShareExtAbility extends DataShareExtensionAbility {
 batchInsert?: BatchInsertFn
 ```
 
-插入多个数据到数据库中。该方法可被datashare数据提供方重写
+Inserts multiple data records into the database. This method should be implemented by a data share.
 
 **Since:** 23
 
@@ -98,7 +98,7 @@ batchUpdate?(
   ): void
 ```
 
-在数据库批量更新时服务端回调此接口，该方法可以选择性重写。
+Batch updates data into the database. This API is called by the server and can be overridden as required.
 
 **Since:** 12
 
@@ -116,8 +116,8 @@ batchUpdate?(
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| operations | [Record](../../apis-default/arkts-apis/arkts-record-t.md)&lt;string, Array&lt;UpdateOperation&gt;&gt; | Yes | 要更新数据的路径、筛选条件和数据集合。 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Record&lt;string, Array&lt;number&gt;&gt;&gt; | Yes | 回调函数。返回更新的数据记录数集合，更新失败的UpdateOperation的数据记录数为-1。 |
+| operations | [Record](../../apis-default/arkts-apis/arkts-record-t.md)&lt;string, Array&lt;UpdateOperation&gt;&gt; | Yes | Collection of the path of the data to update, update conditions, and new data. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Record&lt;string, Array&lt;number&gt;&gt;&gt; | Yes | Callback used to return an array of updated data records. The value **-1** means the update operation fails. |
 
 ## Examples
 
@@ -129,7 +129,7 @@ let TBL_NAME = 'TBL00';
 let rdbStore: relationalStore.RdbStore;
 
 export default class DataShareExtAbility extends DataShareExtensionAbility {
-  batchUpdate(operations: Record<string, Array<dataShare.UpdateOperation>>, callback: Function) {
+  batchUpdate(operations:Record<string, Array<dataShare.UpdateOperation>>, callback:Function) {
     let recordOps : Record<string, Array<dataShare.UpdateOperation>> = operations;
     let results : Record<string, Array<number>> = {};
     let a = Object.entries(recordOps);
@@ -142,7 +142,7 @@ export default class DataShareExtAbility extends DataShareExtensionAbility {
           console.info('Update row count is ' + rows);
           result.push(rows);
         }).catch((err:BusinessError) => {
-          console.error(`Failed to Update. Code: ${err.code}, message: ${err.message}`);
+          console.info('Update failed, err is ' + JSON.stringify(err));
           result.push(-1)
         })
       }
@@ -159,7 +159,7 @@ export default class DataShareExtAbility extends DataShareExtensionAbility {
 batchUpdate?: BatchUpdateFn
 ```
 
-更新数据库中多个数据。该方法可被datashare数据提供方重写。
+Updates multiple data records in the database. This method should be implemented by a data share.
 
 **Since:** 23
 
@@ -179,7 +179,7 @@ batchUpdate?: BatchUpdateFn
 delete?(uri: string, predicates: dataSharePredicates.DataSharePredicates, callback: AsyncCallback<number>): void
 ```
 
-在删除数据库记录时服务端回调此接口，该方法可以选择性重写。
+Deletes data from the database. This API can be overridden as required.
 
 **Since:** 9
 
@@ -197,9 +197,9 @@ delete?(uri: string, predicates: dataSharePredicates.DataSharePredicates, callba
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| uri | string | Yes | 指示要删除的数据的路径。 |
-| predicates | dataSharePredicates.DataSharePredicates | Yes | 指示筛选条件。 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;number&gt; | Yes | 回调函数。返回已删除的数据记录数。 |
+| uri | string | Yes | URI of the data to delete. |
+| predicates | dataSharePredicates.DataSharePredicates | Yes | Filter criteria for deleting data. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;number&gt; | Yes | Callback used to return the number of deleted data records. |
 
 ## Examples
 
@@ -229,7 +229,7 @@ export default class DataShareExtAbility extends DataShareExtensionAbility {
 delete?: DeleteFn
 ```
 
-删除数据库中一个或多个数据，该方法可被datashare数据提供方重写
+Deletes one or more data records. This method should be implemented by a data share.
 
 **Since:** 23
 
@@ -249,7 +249,7 @@ delete?: DeleteFn
 denormalizeUri?(uri: string, callback: AsyncCallback<string>): void
 ```
 
-服务端使用的URI转换为用户传入的初始URI时服务端回调此接口，该方法可以选择性重写。
+Denormalizes a URI. This API can be overridden as required.
 
 **Since:** 9
 
@@ -267,8 +267,8 @@ denormalizeUri?(uri: string, callback: AsyncCallback<string>): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| uri | string | Yes | 指示服务端使用的[URI](../../apis-arkts/arkts-apis/arkts-arkts-uri-uri-c.md/arkts-arkts-uri-uri-c.md)。 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;string&gt; | Yes | 回调函数。如果反规范化成功，则返回反规范化的URI；如果无需进行反规范化，则返回原始URI；若不支持则返回空。 |
+| uri | string | Yes | [URI](../../apis-arkts/arkts-apis/arkts-arkts-uri-uri-c.md/arkts-arkts-uri-uri-c.md) to denormalize. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;string&gt; | Yes | Callback used to return the result. If the operation is successful, the denormalized URI is returned. If the URI passed in is returned, denormalization is not required. If denormalization is not supported, **null** is returned. |
 
 ## Examples
 
@@ -285,8 +285,8 @@ export default class DataShareExtAbility extends DataShareExtensionAbility {
       name: key,
       message: key
     };
-    let ret = `denormalize ${uri}`;
-    callback(err, ret);
+      let ret = `denormalize ${uri}`;
+      callback(err, ret);
   }
 };
 ```
@@ -297,7 +297,7 @@ export default class DataShareExtAbility extends DataShareExtensionAbility {
 denormalizeUri?: DenormalizeUriFn
 ```
 
-将通过 normalizeUri(uri) 生成的给定标准化uri转换为非标准化uri。此方法的默认实现返回传递给它的原始 uri。
+Converts the given normalized {@code uri} generated by {@link #normalizeUri(uri)} into a denormalized one.The default implementation of this method returns the original uri passed to it.
 
 **Since:** 23
 
@@ -317,7 +317,7 @@ denormalizeUri?: DenormalizeUriFn
 insert?(uri: string, valueBucket: ValuesBucket, callback: AsyncCallback<number>): void
 ```
 
-在数据库插入时回调此接口，该方法可以选择性重写。
+Inserts data into the database. This API can be overridden as required.
 
 **Since:** 9
 
@@ -335,9 +335,9 @@ insert?(uri: string, valueBucket: ValuesBucket, callback: AsyncCallback<number>)
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| uri | string | Yes | 指示要插入的数据的路径。 |
-| valueBucket | [ValuesBucket](arkts-arkdata-valuesbucket-t.md) | Yes | 指示要插入的数据。 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;number&gt; | Yes | 回调函数。返回插入数据记录的索引。 |
+| uri | string | Yes | URI of the data to insert. |
+| valueBucket | [ValuesBucket](arkts-arkdata-valuesbucket-t.md) | Yes | Data to insert. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;number&gt; | Yes | Callback used to return the index of the inserted data record. |
 
 ## Examples
 
@@ -350,7 +350,7 @@ let rdbStore: relationalStore.RdbStore;
 export default class DataShareExtAbility extends DataShareExtensionAbility {
   insert(uri: string, valueBucket: ValuesBucket, callback: Function) {
     if (valueBucket === null) {
-      console.info('invalid valueBucket');
+      console.error('invalid valueBuckets');
       return;
     }
     rdbStore.insert(TBL_NAME, valueBucket, (err, ret) => {
@@ -369,7 +369,7 @@ export default class DataShareExtAbility extends DataShareExtensionAbility {
 insert?: InsertFn
 ```
 
-插入数据到数据库中，该方法可被datashare数据提供方重写
+Inserts a data record into the database. This method should be implemented by a data share.
 
 **Since:** 23
 
@@ -389,7 +389,7 @@ insert?: InsertFn
 normalizeUri?(uri: string, callback: AsyncCallback<string>): void
 ```
 
-用户给定的URI转换为服务端使用的URI时回调此接口，该方法可以选择性重写。
+Normalizes a URI. This API can be overridden as required.
 
 **Since:** 9
 
@@ -407,8 +407,8 @@ normalizeUri?(uri: string, callback: AsyncCallback<string>): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| uri | string | Yes | 指示用户传入的[URI](../../apis-arkts/arkts-apis/arkts-arkts-uri-uri-c.md/arkts-arkts-uri-uri-c.md)。 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;string&gt; | Yes | 回调函数。如果支持URI规范化，则返回规范化URI，否则返回空。 |
+| uri | string | Yes | [URI](../../apis-arkts/arkts-apis/arkts-arkts-uri-uri-c.md/arkts-arkts-uri-uri-c.md) to normalize. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;string&gt; | Yes | Callback used to return the result. If the operation is successful, the normalized URI is returned. Otherwise, **null** is returned. |
 
 ## Examples
 
@@ -437,7 +437,7 @@ export default class DataShareExtAbility extends DataShareExtensionAbility {
 normalizeUri?: NormalizeUriFn
 ```
 
-将给定的引用数据共享的 URI 转换为标准 URI。标准 URI 可以在设备之间使用，可以持久化、备份和恢复。即使上下文发生变化，它也可以引用数据共享中的同一项。
+Converts the given {@code uri} that refer to the data share into a normalized URI. A normalized URI can be used across devices, persisted, backed up, and restored. It can refer to the same item in the data share even if the context has changed.
 
 **Since:** 23
 
@@ -457,7 +457,7 @@ normalizeUri?: NormalizeUriFn
 onCreate?(want: Want, callback: AsyncCallback<void>): void
 ```
 
-DataShare客户端连接DataShareExtensionAbility服务端时，服务端回调此接口，执行初始化业务逻辑操作。该方法可以选择性重写。
+Called by the server to initialize service logic when the DataShare client connects to the DataShareExtensionAbility server. This API can be overridden as required.
 
 **Since:** 9
 
@@ -475,8 +475,8 @@ DataShare客户端连接DataShareExtensionAbility服务端时，服务端回调�
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| want | [Want](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-want-want-c.md) | Yes | Want类型信息，包括Ability名称、Bundle名称等。 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | 回调函数。无返回值。 |
+| want | [Want](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-want-want-c.md) | Yes | Want information, including the ability name and bundle name. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback that returns no value. |
 
 ## Examples
 
@@ -500,7 +500,7 @@ export default class DataShareExtAbility extends DataShareExtensionAbility {
       console.info(`getRdbStore done, data : ${data}`);
       rdbStore = data;
       rdbStore.executeSql(DDL_TBL_CREATE, [], (err) => {
-        console.error(`Failed to executeSql. Code: ${err.code}, message: ${err.message}`);
+        console.error(`executeSql done, error message : ${err}`);
       });
       if (callback) {
         callback();
@@ -516,7 +516,7 @@ export default class DataShareExtAbility extends DataShareExtensionAbility {
 onCreate?: OnCreateFn
 ```
 
-当datashare extension ability启动初始化时会被调用
+Called back when a datashare extension ability is started for initialization.
 
 **Since:** 23
 
@@ -541,7 +541,7 @@ query?(
   ): void
 ```
 
-在查询数据库时服务端回调此接口，该方法可以选择性重写。
+Queries data from the database. This API can be overridden as required.
 
 **Since:** 9
 
@@ -559,10 +559,10 @@ query?(
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| uri | string | Yes | 指示要查询的数据的路径。 |
-| predicates | dataSharePredicates.DataSharePredicates | Yes | 指示筛选条件。 |
-| columns | Array&lt;string&gt; | Yes | 指示要查询的列。如果此参数为空，则查询所有列。 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Object&gt; | Yes | 回调函数。返回查询到的结果集。 |
+| uri | string | Yes | URI of the data to query. |
+| predicates | dataSharePredicates.DataSharePredicates | Yes | Filter criteria for querying data. |
+| columns | Array&lt;string&gt; | Yes | Columns to query. If this parameter is empty, all columns will be queried. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Object&gt; | Yes | Callback used to return the result set obtained. |
 
 ## Examples
 
@@ -595,7 +595,7 @@ export default class DataShareExtAbility extends DataShareExtensionAbility {
 query?: QueryFn
 ```
 
-查询数据库中一个或多个数据记录。该方法可被datashare数据提供方重写。只支持RDB和分布式KVDB的结果集。当前版本不支持自定义结果集。
+Queries one or more data records in the database. This method should be implemented by a data share.Only RDB and distributed KVDB resultsets are supported. The current version does not support custom resultsets.
 
 **Since:** 23
 
@@ -620,7 +620,7 @@ update?(
   ): void
 ```
 
-在数据库更新时服务端回调此接口，该方法可以选择性重写。
+Updates data in the database. This API can be overridden as required.
 
 **Since:** 9
 
@@ -638,10 +638,10 @@ update?(
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| uri | string | Yes | 指示要更新的数据的路径。 |
-| predicates | dataSharePredicates.DataSharePredicates | Yes | 指示筛选条件。 |
-| valueBucket | [ValuesBucket](arkts-arkdata-valuesbucket-t.md) | Yes | 指示要更新的数据。 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;number&gt; | Yes | 回调函数。返回更新的数据记录数。 |
+| uri | string | Yes | URI of the data to update. |
+| predicates | dataSharePredicates.DataSharePredicates | Yes | Filter criteria for updating data. |
+| valueBucket | [ValuesBucket](arkts-arkdata-valuesbucket-t.md) | Yes | New data. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;number&gt; | Yes | Callback used to return the number of data records updated. |
 
 ## Examples
 
@@ -671,7 +671,7 @@ export default class DataShareExtAbility extends DataShareExtensionAbility {
 update?: UpdateFn
 ```
 
-更新数据库中一个或多个数据，该方法可被datashare数据提供方重写
+Updates one or more data records in the database. This method should be implemented by a data share.
 
 **Since:** 23
 
@@ -691,7 +691,7 @@ update?: UpdateFn
 context: ExtensionContext
 ```
 
-表示数据共享扩展能力上下文。
+Context of the DataShare ExtensionAbility.
 
 **Type:** [ExtensionContext](../../apis-ability-kit/arkts-apis/arkts-ability-extensioncontext-c.md)
 

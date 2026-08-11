@@ -12,12 +12,6 @@
 
 **系统能力：** SystemCapability.FileManagement.File.FileIO
 
-## 导入模块
-
-```TypeScript
-import { Options, ReaderIteratorResult, Watcher, ReadTextOptions, WatchEventListener, TaskSignal, WriteOptions, ListFileExtOptions, DfsListeners, Filter, ReadOptions, ListFileOptions, WatchEvent, FileFilter, ConflictFiles } from 'kits/@kit.CoreFileKit';
-```
-
 ## close
 
 ```TypeScript
@@ -55,6 +49,8 @@ close(): Promise<void>
 
 ## 示例
 
+ArkTS-Dyn示例：
+
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
 
@@ -63,6 +59,21 @@ let stream = fileIo.createStreamSync(filePath, "r+");
 stream.close().then(() => {
   console.info(`Succeeded in closing file stream.`);
 }).catch((err: BusinessError) => {
+  console.error(`Failed to close file stream. Code: ${err.code}, message: ${err.message}`);
+});
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let filePath = pathDir + "/test.txt";
+let stream = fileIo.createStreamSync(filePath, "r+");
+stream.close().then(() => {
+  console.info(`Succeeded in closing file stream.`);
+}).catch((error: Error) => {
+  let err: BusinessError = error as BusinessError;
   console.error(`Failed to close file stream. Code: ${err.code}, message: ${err.message}`);
 });
 ```
@@ -104,12 +115,30 @@ close(callback: AsyncCallback<void>): void
 
 ## 示例
 
+ArkTS-Dyn示例：
+
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
 
 let filePath = pathDir + "/test.txt";
 let stream = fileIo.createStreamSync(filePath, "r+");
 stream.close((err: BusinessError) => {
+  if (err) {
+    console.error(`Failed to close stream. Code: ${err.code}, message: ${err.message}`);
+  } else {
+    console.info(`Succeeded in closing stream.`);
+  }
+});
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let filePath = pathDir + "/test.txt";
+let stream = fileIo.createStreamSync(filePath, "r+");
+stream.close((err: BusinessError<void> | null) => {
   if (err) {
     console.error(`Failed to close stream. Code: ${err.code}, message: ${err.message}`);
   } else {
@@ -198,6 +227,8 @@ flush(): Promise<void>
 
 ## 示例
 
+ArkTS-Dyn示例：
+
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
 
@@ -207,6 +238,22 @@ stream.flush().then(() => {
   console.info(`Succeeded in flushing.`);
   stream.close();
 }).catch((err: BusinessError) => {
+  console.error(`Failed to flush. Code: ${err.code}, message: ${err.message}`);
+});
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let filePath = pathDir + "/test.txt";
+let stream = fileIo.createStreamSync(filePath, "r+");
+stream.flush().then(() => {
+  console.info(`Succeeded in flushing.`);
+  stream.close();
+}).catch((error: Error) => {
+  let err: BusinessError = error as BusinessError;
   console.error(`Failed to flush. Code: ${err.code}, message: ${err.message}`);
 });
 ```
@@ -254,12 +301,31 @@ flush(callback: AsyncCallback<void>): void
 
 ## 示例
 
+ArkTS-Dyn示例：
+
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
 
 let filePath = pathDir + "/test.txt";
 let stream = fileIo.createStreamSync(filePath, "r+");
 stream.flush((err: BusinessError) => {
+  if (err) {
+    console.error(`Failed to flush stream. Code: ${err.code}, message: ${err.message}`);
+  } else {
+    console.info(`Succeeded in flushing.`);
+    stream.close();
+  }
+});
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let filePath = pathDir + "/test.txt";
+let stream = fileIo.createStreamSync(filePath, "r+");
+stream.flush((err: BusinessError<void> | null) => {
   if (err) {
     console.error(`Failed to flush stream. Code: ${err.code}, message: ${err.message}`);
   } else {
@@ -364,6 +430,8 @@ read(
 
 ## 示例
 
+ArkTS-Dyn示例：
+
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
 import { buffer } from '@kit.ArkTS';
@@ -381,6 +449,31 @@ stream.read(arrayBuffer, readOption).then((readLen: number) => {
   console.info(`Succeeded in reading data, the content of file is: ${buf.toString()}`);
   stream.close();
 }).catch((err: BusinessError) => {
+  console.error(`Failed to read data. Code: ${err.code}, message: ${err.message}`);
+});
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+import { buffer } from '@kit.ArkTS';
+import { ReadOptions } from '@kit.CoreFileKit';
+
+let filePath = pathDir + "/test.txt";
+let stream = fileIo.createStreamSync(filePath, "r+");
+let arrayBuffer = new ArrayBuffer(4096);
+let readOption: ReadOptions = {
+  offset: 5,
+  length: 5
+};
+stream.read(arrayBuffer, readOption).then((readLen: long) => {
+  console.info('Succeeded in reading data');
+  let buf = buffer.from(arrayBuffer, 0, readLen.toInt());
+  console.info(`The content of file: ${buf.toString()}`);
+  stream.close();
+}).catch((error: Error) => {
+  let err: BusinessError = error as BusinessError;
   console.error(`Failed to read data. Code: ${err.code}, message: ${err.message}`);
 });
 ```
@@ -426,6 +519,8 @@ read(buffer: ArrayBuffer, callback: AsyncCallback<number>): void
 
 ## 示例
 
+ArkTS-Dyn示例：
+
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
 import { buffer } from '@kit.ArkTS';
@@ -433,12 +528,35 @@ import { buffer } from '@kit.ArkTS';
 let filePath = pathDir + "/test.txt";
 let stream = fileIo.createStreamSync(filePath, "r+");
 let arrayBuffer = new ArrayBuffer(4096);
+
 stream.read(arrayBuffer, (err: BusinessError, readLen: number) => {
   if (err) {
     console.error(`Failed to read stream. Code: ${err.code}, message: ${err.message}`);
   } else {
     let buf = buffer.from(arrayBuffer, 0, readLen);
     console.info(`Succeeded in reading data, the content of file is: ${buf.toString()}`);
+    stream.close();
+  }
+});
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+import { buffer } from '@kit.ArkTS';
+
+let filePath = pathDir + "/test.txt";
+let stream = fileIo.createStreamSync(filePath, "r+");
+let arrayBuffer = new ArrayBuffer(4096);
+
+stream.read(arrayBuffer, (err: BusinessError<void> | null, readLen: long | undefined) => {
+  if (err) {
+    console.error(`Failed to read stream. Code: ${err.code}, message: ${err.message}`);
+  } else {
+    console.info('Succeeded in reading data');
+    let buf = buffer.from(arrayBuffer, 0, readLen?.toInt());
+    console.info(`The content of file: ${buf.toString()}`);
     stream.close();
   }
 });
@@ -490,6 +608,8 @@ read(
 
 ## 示例
 
+ArkTS-Dyn示例：
+
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
 import { buffer } from '@kit.ArkTS';
@@ -508,6 +628,32 @@ stream.read(arrayBuffer, readOption, (err: BusinessError, readLen: number) => {
   } else {
     let buf = buffer.from(arrayBuffer, 0, readLen);
     console.info(`Succeeded in reading data, the content of file is: ${buf.toString()}`);
+    stream.close();
+  }
+});
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+import { buffer } from '@kit.ArkTS';
+import { ReadOptions } from '@kit.CoreFileKit';
+
+let filePath = pathDir + "/test.txt";
+let stream = fileIo.createStreamSync(filePath, "r+");
+let arrayBuffer = new ArrayBuffer(4096);
+let readOption: ReadOptions = {
+  offset: 5,
+  length: 5
+};
+stream.read(arrayBuffer, readOption, (err: BusinessError<void> | null, readLen: long | undefined) => {
+  if (err) {
+    console.error(`Failed to read stream. Code: ${err.code}, message: ${err.message}`);
+  } else {
+    console.info('Succeeded in reading data');
+    let buf = buffer.from(arrayBuffer, 0, readLen?.toInt());
+    console.info(`The content of file: ${buf.toString()}`);
     stream.close();
   }
 });
@@ -631,6 +777,8 @@ write(
 
 ## 示例
 
+ArkTS-Dyn示例：
+
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
 import { WriteOptions } from '@kit.CoreFileKit';
@@ -646,6 +794,28 @@ stream.write("hello, world", writeOption).then((number: number) => {
   console.info(`Succeeded in writing, size is: ${number}`);
   stream.close();
 }).catch((err: BusinessError) => {
+  console.error(`Failed to write. Code: ${err.code}, message: ${err.message}`);
+});
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+import { WriteOptions } from '@kit.CoreFileKit';
+
+let filePath = pathDir + "/test.txt";
+let stream = fileIo.createStreamSync(filePath, "r+");
+let writeOption: WriteOptions = {
+  offset: 5,
+  length: 5,
+  encoding: 'utf-8'
+};
+stream.write("hello, world", writeOption).then((number: long) => {
+  console.info(`Succeeded in writing, size is: ${number}`);
+  stream.close();
+}).catch((error: Error) => {
+  let err: BusinessError = error as BusinessError;
   console.error(`Failed to write. Code: ${err.code}, message: ${err.message}`);
 });
 ```
@@ -694,11 +864,14 @@ write(buffer: ArrayBuffer | string, callback: AsyncCallback<number>): void
 
 ## 示例
 
+ArkTS-Dyn示例：
+
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
 
 let filePath = pathDir + "/test.txt";
 let stream = fileIo.createStreamSync(filePath, "r+");
+
 stream.write("hello, world", (err: BusinessError, bytesWritten: number) => {
   if (err) {
     console.error(`Failed to write stream. Code: ${err.code}, message: ${err.message}`);
@@ -708,6 +881,26 @@ stream.write("hello, world", (err: BusinessError, bytesWritten: number) => {
     }
   }
   stream.close();
+});
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let filePath = pathDir + "/test.txt";
+let stream = fileIo.createStreamSync(filePath, "r+");
+
+stream.write("hello, world", (err: BusinessError<void> | null, bytesWritten: long | undefined) => {
+  if (err) {
+    console.error(`Failed to write stream. Code: ${err.code}, message: ${err.message}`);
+  } else {
+    if (bytesWritten) {
+      console.info(`Succeeded in writing, size is: ${bytesWritten}`);
+      stream.close();
+    }
+  }
 });
 ```
 
@@ -760,6 +953,8 @@ write(
 
 ## 示例
 
+ArkTS-Dyn示例：
+
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
 import { WriteOptions } from '@kit.CoreFileKit';
@@ -780,6 +975,31 @@ stream.write("hello, world", writeOption, (err: BusinessError, bytesWritten: num
     }
   }
   stream.close();
+});
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+import { WriteOptions } from '@kit.CoreFileKit';
+
+let filePath = pathDir + "/test.txt";
+let stream = fileIo.createStreamSync(filePath, "r+");
+let writeOption: WriteOptions = {
+  offset: 5,
+  length: 5,
+  encoding: 'utf-8'
+};
+stream.write("hello, world", writeOption, (err: BusinessError<void> | null, bytesWritten: long | undefined) => {
+  if (err) {
+    console.error(`Failed to write stream. Code: ${err.code}, message: ${err.message}`);
+  } else {
+    if (bytesWritten) {
+      console.info(`Succeeded in writing, size is: ${bytesWritten}`);
+      stream.close();
+    }
+  }
 });
 ```
 

@@ -18,7 +18,7 @@ handler: FullScreenExitHandler
 
 用于退出全屏模式的函数句柄。
 
-**类型：** [FullScreenExitHandler](../arkts-components/arkts-arkweb-fullscreenexithandler-c.md)
+**类型：** [FullScreenExitHandler](arkts-arkweb-web-fullscreenexithandler-c.md)
 
 **起始版本：** 23
 

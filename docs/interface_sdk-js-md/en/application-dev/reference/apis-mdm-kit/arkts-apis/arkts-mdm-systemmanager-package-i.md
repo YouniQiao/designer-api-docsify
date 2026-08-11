@@ -1,6 +1,6 @@
 # Package
 
-系统更新包详情。
+Represents the details about a system update package.
 
 **Since:** 12
 
@@ -22,7 +22,7 @@ import { systemManager } from 'kits/@kit.MDMKit';
 fd?: number
 ```
 
-系统更新包文件句柄。当前不支持只传入path参数，需要传入fd。
+File descriptor (FD) of the system update package. Currently, you cannot pass in **path** only. The **fd**parameter must also be passed in.
 
 **Type:** number
 
@@ -42,7 +42,7 @@ fd?: number
 path: string
 ```
 
-系统更新包文件路径。若传入fd参数，该参数传入更新包文件名。
+Path of the system update package. If **fd** is specified, pass in the update package name here.
 
 **Type:** string
 
@@ -62,7 +62,7 @@ path: string
 type: PackageType
 ```
 
-系统更新包类型。
+Type of the system update package.
 
 **Type:** [PackageType](arkts-mdm-systemmanager-packagetype-e.md)
 

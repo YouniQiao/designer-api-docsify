@@ -1,6 +1,6 @@
 # EffectInfo
 
-查询的预置效果信息。通过[vibrator.getEffectInfoSync](arkts-sensorservice-vibrator-geteffectinfosync-f.md#geteffectinfosync)返回此对象，用于判断预置振动效果是否受指定设备的指定马达支持。
+Defines the preset effect.
 
 **Since:** 19
 
@@ -22,8 +22,7 @@ import { vibrator } from 'kits/@kit.SensorServiceKit';
 isEffectSupported: boolean
 ```
 
-预置效果是否受支持。true表示支持该预置振动效果，可用于  
-[startVibration](arkts-sensorservice-vibrator-startvibration-f.md#startvibration)；false表示不支持，使用该effectId触发振动可能效果不佳。
+Whether the preset effect is supported. The value **true** indicates that the preset effect is supported, and the value **false** indicates the opposite.
 
 **Type:** boolean
 

@@ -14,12 +14,6 @@
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
-## 导入模块
-
-```TypeScript
-import { NavPushPathHelper } from 'kits/@kit.ArkUI';
-```
-
 ## constructor
 
 ```TypeScript
@@ -67,7 +61,7 @@ pushDestination(moduleName: string, info: NavPathInfo, animated?: boolean): Prom
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | moduleName | string | 是 | 目标[NavDestination](../../apis-arkui/arkts-components/arkts-arkui-nav_destination-i)所在分包的moduleName。 |
-| info | [NavPathInfo](../arkts-components/arkts-arkui-navpathinfo-c.md) | 是 | [NavDestination](../../apis-arkui/arkts-components/arkts-arkui-nav_destination-i)页面的信息。 |
+| info | [NavPathInfo](arkts-arkui-navigation-navpathinfo-c.md) | 是 | [NavDestination](../../apis-arkui/arkts-components/arkts-arkui-nav_destination-i)页面的信息。 |
 | animated | boolean | 否 | 是否支持转场动画。 &lt;br&gt;默认值：true。 &lt;br&gt;true：支持转场动画。 &lt;br&gt;false：不支持转场动画。 |
 
 **返回值：**
@@ -80,11 +74,11 @@ pushDestination(moduleName: string, info: NavPathInfo, animated?: boolean): Prom
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 100001 | Internal error. |
-| 401 | Parameter error. Possible causes: &lt;br&gt; 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameters types. &lt;br&gt; 3. Parameter verification failed. |
-| 100005 | Builder function not registered. |
-| 300001 | hsp silent install fail. |
-| 100006 | NavDestination not found. |
+| [100001](../errorcode-internal.md#100001-接口调用异常错误码) | Internal error. |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: &lt;br&gt; 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameters types. &lt;br&gt; 3. Parameter verification failed. |
+| [100005](../errorcode-router.md#100005-navigation跳转时未注册builder函数) | Builder function not registered. |
+| [300001](../errorcode-router.md#300001-navigation跳转前静默安装hsp分包失败) | hsp silent install fail. |
+| [100006](../errorcode-router.md#100006-navigation跳转时目标页面不存在navdestination组件) | NavDestination not found. |
 
 ## pushDestination
 
@@ -111,7 +105,7 @@ pushDestination(moduleName: string, info: NavPathInfo, options?: NavigationOptio
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | moduleName | string | 是 | 目标[NavDestination](../../apis-arkui/arkts-components/arkts-arkui-nav_destination-i)所在分包的moduleName。 |
-| info | [NavPathInfo](../arkts-components/arkts-arkui-navpathinfo-c.md) | 是 | [NavDestination](../../apis-arkui/arkts-components/arkts-arkui-nav_destination-i)页面的信息。 |
+| info | [NavPathInfo](arkts-arkui-navigation-navpathinfo-c.md) | 是 | [NavDestination](../../apis-arkui/arkts-components/arkts-arkui-nav_destination-i)页面的信息。 |
 | options | [NavigationOptions](arkts-arkui-navigation-navigationoptions-i.md) | 否 | 页面栈操作选项。默认值为{ launchMode: LaunchMode.STANDARD, animated: true }。 |
 
 **返回值：**
@@ -124,11 +118,11 @@ pushDestination(moduleName: string, info: NavPathInfo, options?: NavigationOptio
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 100001 | Internal error. |
-| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameters types. 3. Parameter verification failed. |
-| 100005 | Builder function not registered. |
-| 300001 | hsp silent install fail. |
-| 100006 | NavDestination not found. |
+| [100001](../errorcode-internal.md#100001-接口调用异常错误码) | Internal error. |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameters types. 3. Parameter verification failed. |
+| [100005](../errorcode-router.md#100005-navigation跳转时未注册builder函数) | Builder function not registered. |
+| [300001](../errorcode-router.md#300001-navigation跳转前静默安装hsp分包失败) | hsp silent install fail. |
+| [100006](../errorcode-router.md#100006-navigation跳转时目标页面不存在navdestination组件) | NavDestination not found. |
 
 ## pushDestinationByName
 
@@ -167,11 +161,11 @@ pushDestinationByName(moduleName: string, name: string, param: Object, animated?
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 100001 | Internal error. |
-| 401 | Parameter error. Possible causes: &lt;br&gt; 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameters types. &lt;br&gt; 3. Parameter verification failed. |
-| 100005 | Builder function not registered. |
-| 300001 | hsp silent install fail. |
-| 100006 | NavDestination not found. |
+| [100001](../errorcode-internal.md#100001-接口调用异常错误码) | Internal error. |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: &lt;br&gt; 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameters types. &lt;br&gt; 3. Parameter verification failed. |
+| [100005](../errorcode-router.md#100005-navigation跳转时未注册builder函数) | Builder function not registered. |
+| [300001](../errorcode-router.md#300001-navigation跳转前静默安装hsp分包失败) | hsp silent install fail. |
+| [100006](../errorcode-router.md#100006-navigation跳转时目标页面不存在navdestination组件) | NavDestination not found. |
 
 ## pushDestinationByName
 
@@ -212,11 +206,11 @@ pushDestinationByName(moduleName: string, name: string, param: Object,
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 100001 | Internal error. |
-| 401 | Parameter error. Possible causes: &lt;br&gt; 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameters types. &lt;br&gt; 3. Parameter verification failed. |
-| 100005 | Builder function not registered. |
-| 300001 | hsp silent install fail. |
-| 100006 | NavDestination not found. |
+| [100001](../errorcode-internal.md#100001-接口调用异常错误码) | Internal error. |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: &lt;br&gt; 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameters types. &lt;br&gt; 3. Parameter verification failed. |
+| [100005](../errorcode-router.md#100005-navigation跳转时未注册builder函数) | Builder function not registered. |
+| [300001](../errorcode-router.md#300001-navigation跳转前静默安装hsp分包失败) | hsp silent install fail. |
+| [100006](../errorcode-router.md#100006-navigation跳转时目标页面不存在navdestination组件) | NavDestination not found. |
 
 ## pushPath
 
@@ -241,7 +235,7 @@ pushPath(moduleName: string, info: NavPathInfo, animated?: boolean): Promise<voi
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | moduleName | string | 是 | 目标[NavDestination](../../apis-arkui/arkts-components/arkts-arkui-nav_destination-i)所在分包的moduleName。 |
-| info | [NavPathInfo](../arkts-components/arkts-arkui-navpathinfo-c.md) | 是 | [NavDestination](../../apis-arkui/arkts-components/arkts-arkui-nav_destination-i)页面的信息。 |
+| info | [NavPathInfo](arkts-arkui-navigation-navpathinfo-c.md) | 是 | [NavDestination](../../apis-arkui/arkts-components/arkts-arkui-nav_destination-i)页面的信息。 |
 | animated | boolean | 否 | 是否支持转场动画。 &lt;br&gt;默认值：true。 &lt;br&gt;true：支持转场动画。 &lt;br&gt;false：不支持转场动画。 |
 
 **返回值：**
@@ -254,7 +248,7 @@ pushPath(moduleName: string, info: NavPathInfo, animated?: boolean): Promise<voi
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 300001 | hsp silent install fail. |
+| [300001](../errorcode-router.md#300001-navigation跳转前静默安装hsp分包失败) | hsp silent install fail. |
 
 ## pushPath
 
@@ -281,7 +275,7 @@ pushPath(moduleName: string, info: NavPathInfo, options?: NavigationOptions): Pr
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | moduleName | string | 是 | 目标[NavDestination](../../apis-arkui/arkts-components/arkts-arkui-nav_destination-i)所在分包的moduleName。 |
-| info | [NavPathInfo](../arkts-components/arkts-arkui-navpathinfo-c.md) | 是 | [NavDestination](../../apis-arkui/arkts-components/arkts-arkui-nav_destination-i)页面的信息。 |
+| info | [NavPathInfo](arkts-arkui-navigation-navpathinfo-c.md) | 是 | [NavDestination](../../apis-arkui/arkts-components/arkts-arkui-nav_destination-i)页面的信息。 |
 | options | [NavigationOptions](arkts-arkui-navigation-navigationoptions-i.md) | 否 | 页面栈操作选项。默认值为{ launchMode: LaunchMode.STANDARD, animated: true }。 |
 
 **返回值：**
@@ -294,7 +288,7 @@ pushPath(moduleName: string, info: NavPathInfo, options?: NavigationOptions): Pr
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 300001 | hsp silent install fail. |
+| [300001](../errorcode-router.md#300001-navigation跳转前静默安装hsp分包失败) | hsp silent install fail. |
 
 ## pushPathByName
 
@@ -333,7 +327,7 @@ pushPathByName(moduleName: string, name: string, param: Object, animated?: boole
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 300001 | hsp silent install fail. |
+| [300001](../errorcode-router.md#300001-navigation跳转前静默安装hsp分包失败) | hsp silent install fail. |
 
 ## pushPathByName
 
@@ -374,7 +368,7 @@ pushPathByName(moduleName: string, name: string, param: Object,
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 300001 | hsp silent install fail. |
+| [300001](../errorcode-router.md#300001-navigation跳转前静默安装hsp分包失败) | hsp silent install fail. |
 
 ## replacePath
 
@@ -400,7 +394,7 @@ replacePath(moduleName: string, info: NavPathInfo, animated?: boolean): Promise<
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | moduleName | string | 是 | 目标[NavDestination](../../apis-arkui/arkts-components/arkts-arkui-nav_destination-i)所在分包的moduleName。 |
-| info | [NavPathInfo](../arkts-components/arkts-arkui-navpathinfo-c.md) | 是 | 新栈顶页面参数信息。 |
+| info | [NavPathInfo](arkts-arkui-navigation-navpathinfo-c.md) | 是 | 新栈顶页面参数信息。 |
 | animated | boolean | 否 | 是否支持转场动画。 &lt;br&gt;默认值：true。 &lt;br&gt;true：支持转场动画。 &lt;br&gt;false：不支持转场动画。 |
 
 **返回值：**
@@ -413,7 +407,7 @@ replacePath(moduleName: string, info: NavPathInfo, animated?: boolean): Promise<
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 300001 | hsp silent install fail. |
+| [300001](../errorcode-router.md#300001-navigation跳转前静默安装hsp分包失败) | hsp silent install fail. |
 
 ## replacePath
 
@@ -441,7 +435,7 @@ replacePath(moduleName: string, info: NavPathInfo, options?: NavigationOptions):
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | moduleName | string | 是 | 目标[NavDestination](../../apis-arkui/arkts-components/arkts-arkui-nav_destination-i)所在分包的moduleName。 |
-| info | [NavPathInfo](../arkts-components/arkts-arkui-navpathinfo-c.md) | 是 | 新栈顶页面参数信息。 |
+| info | [NavPathInfo](arkts-arkui-navigation-navpathinfo-c.md) | 是 | 新栈顶页面参数信息。 |
 | options | [NavigationOptions](arkts-arkui-navigation-navigationoptions-i.md) | 否 | 页面栈操作选项。默认值为{ launchMode: LaunchMode.STANDARD, animated: true }。 |
 
 **返回值：**
@@ -454,7 +448,7 @@ replacePath(moduleName: string, info: NavPathInfo, options?: NavigationOptions):
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 300001 | hsp silent install fail. |
+| [300001](../errorcode-router.md#300001-navigation跳转前静默安装hsp分包失败) | hsp silent install fail. |
 
 ## replacePathByName
 
@@ -494,5 +488,5 @@ replacePathByName(moduleName: string, name: string, param: Object, animated?: bo
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 300001 | hsp silent install fail. |
+| [300001](../errorcode-router.md#300001-navigation跳转前静默安装hsp分包失败) | hsp silent install fail. |
 

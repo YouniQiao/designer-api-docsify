@@ -1,6 +1,6 @@
 # KdfAlgo
 
-数据库的PBKDF2算法枚举。请使用枚举名称而非枚举值。
+Enumerates the PBKDF2 algorithms for the database. Use the enum name rather than the enum value.
 
 **Since:** 14
 
@@ -16,7 +16,7 @@
 KDF_SHA1 = 0
 ```
 
-PBKDF2_HMAC_SHA1算法。
+KDF_SHA1: PBKDF2_HMAC_SHA1 algorithm.
 
 **Since:** 14
 
@@ -32,7 +32,7 @@ PBKDF2_HMAC_SHA1算法。
 KDF_SHA256 = 1
 ```
 
-PBKDF2_HMAC_SHA256算法。
+KDF_SHA256: PBKDF2_HMAC_SHA256 algorithm.
 
 **Since:** 14
 
@@ -48,7 +48,7 @@ PBKDF2_HMAC_SHA256算法。
 KDF_SHA512 = 2
 ```
 
-PBKDF2_HMAC_SHA512算法。
+KDF_SHA512: PBKDF2_HMAC_SHA512 algorithm.
 
 **Since:** 14
 

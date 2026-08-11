@@ -1,6 +1,6 @@
 # RightClickType
 
-右键菜单的触发方式。
+Enumerates shortcut menu triggering modes.
 
 **Since:** 10
 
@@ -16,7 +16,7 @@
 TOUCHPAD_RIGHT_BUTTON = 1
 ```
 
-按压触控板右键区域。
+Tapping the right-button area of the touchpad.
 
 **Since:** 10
 
@@ -32,7 +32,7 @@ TOUCHPAD_RIGHT_BUTTON = 1
 TOUCHPAD_LEFT_BUTTON = 2
 ```
 
-按压触控板左键区域。
+Tapping the left-button area of the touchpad.
 
 **Since:** 10
 
@@ -48,7 +48,7 @@ TOUCHPAD_LEFT_BUTTON = 2
 TOUCHPAD_TWO_FINGER_TAP = 3
 ```
 
-双指轻击或双指按压触控板。
+Tapping or pressing the touchpad with two fingers.
 
 **Since:** 10
 
@@ -64,7 +64,7 @@ TOUCHPAD_TWO_FINGER_TAP = 3
 TOUCHPAD_TWO_FINGER_TAP_OR_RIGHT_BUTTON = 4
 ```
 
-双指轻击或双指按压触控板、或按压触控板右键区域。
+Tapping or pressing the touchpad with two fingers, or tapping the right-button area of the touchpad.
 
 **Since:** 20
 
@@ -80,7 +80,7 @@ TOUCHPAD_TWO_FINGER_TAP_OR_RIGHT_BUTTON = 4
 TOUCHPAD_TWO_FINGER_TAP_OR_LEFT_BUTTON = 5
 ```
 
-双指轻击或双指按压触控板、或按压触控板左键区域。
+Tapping or pressing the touchpad with two fingers, or tapping the left-button area of the touchpad.
 
 **Since:** 20
 

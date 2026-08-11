@@ -6,7 +6,7 @@
 export function createRowNode(context: UIContext, options?: FrameNodeOptions): Row
 ```
 
-创建Row类型的FrameNode。
+Create a FrameNode of Row type.On API 26.0.0 and above, It can also create a FrameNode of Row type with options.
 
 **Since:** 23
 
@@ -22,12 +22,12 @@ export function createRowNode(context: UIContext, options?: FrameNodeOptions): R
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| context | [UIContext](arkts-arkui-arkui-uicontext-uicontext-c.md) | Yes | 用于创建FrameNode的UI上下文。 |
-| options | [FrameNodeOptions](arkts-arkui-framenode-framenodeoptions-i.md) | No | Options for configuring FrameNode creation.<br>**Since:** 24 |
+| context | [UIContext](arkts-arkui-arkui-uicontext-uicontext-c.md) | Yes | uiContext used to create the FrameNode. |
+| options | [FrameNodeOptions](arkts-arkui-framenode-framenodeoptions-i.md) | No | Options for configuring FrameNode creation.<br>**Since:** 26.0.0 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [Row](arkts-arkui-typenode-row-t.md) | 返回 Row 类型的 FrameNode。 |
+| [Row](arkts-arkui-typenode-row-t.md) | Return Row type FrameNode. |
 

@@ -2,6 +2,10 @@
 
 提供一个可通过开发者自定义回调释放由开发者管理的资源的接口。
 
+> **说明：**
+> 
+> AutoFinalizer&lt;T&gt;需要和AutoFinalizerCleaner&lt;T&gt;一起使用，只实现该接口类没有任何功能。
+
 **起始版本：** 22
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为22。
@@ -9,12 +13,6 @@
 <!--Device-util-interface AutoFinalizer<T>--><!--Device-util-interface AutoFinalizer<T>-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
-
-## 导入模块
-
-```TypeScript
-import { util } from 'kits/@kit.ArkTS';
-```
 
 ## onFinalization
 

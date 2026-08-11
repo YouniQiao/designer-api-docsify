@@ -1,6 +1,11 @@
 # PasteData
 
-剪贴板内容对象。剪贴板内容包含一个或者多个内容条目（[PasteDataRecord](arkts-basicservices-pasteboard-pastedatarecord-i.md)）以及属性描述对象（[PasteDataProperty](arkts-basicservices-pasteboard-pastedataproperty-i.md)）。在调用PasteData的接口前，需要先通过[createData()](arkts-basicservices-pasteboard-createdata-f.md#createdata)或[getData()](arkts-basicservices-pasteboard-systempasteboard-i.md#getdata)获取一个PasteData对象。
+Implements a **PasteData** object. PasteData contains one or more data records (  
+[PasteDataRecord](arkts-basicservices-pasteboard-pastedatarecord-i.md)) and property description objects (  
+[PasteDataProperty](arkts-basicservices-pasteboard-pastedataproperty-i.md)).Before calling any API in **PasteData**, you must use **  
+[createData()](arkts-basicservices-pasteboard-createdata-f.md#createdata)** or **  
+[getData()](arkts-basicservices-pasteboard-systempasteboard-i.md#getdata)** to create a  
+**PasteData** object.
 
 **Since:** 6
 
@@ -22,7 +27,8 @@ import { pasteboard } from 'kits/@kit.BasicServicesKit';
 addHtmlRecord(htmlText: string): void
 ```
 
-向当前剪贴板内容中添加一条HTML内容条目，并将MIMETYPE_TEXT_HTML添加到[PasteDataProperty](arkts-basicservices-pasteboard-pastedataproperty-i.md)的mimeTypes中。入参均不能为空，否则添加失败。
+Adds an HTML record to the PasteData, and adds **MIMETYPE_TEXT_HTML** to **mimeTypes** in  
+[PasteDataProperty](arkts-basicservices-pasteboard-pastedataproperty-i.md). The parameters cannot be empty. Otherwise, the operation  fails.
 
 **Since:** 7
 
@@ -40,7 +46,7 @@ addHtmlRecord(htmlText: string): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| htmlText | string | Yes | HTML内容，需符合标准HTML格式。 |
+| htmlText | string | Yes | HTML content. |
 
 ## Examples
 
@@ -56,7 +62,8 @@ pasteData.addHtmlRecord(html);
 addRecord(record: PasteDataRecord): void
 ```
 
-向当前剪贴板内容中添加一条条目，同时也会将条目类型添加到[PasteDataProperty](arkts-basicservices-pasteboard-pastedataproperty-i.md)的mimeTypes中。入参均不能为空，否则添加失败。
+Adds a data record to the PasteData, and adds its type to **mimeTypes** in  
+[PasteDataProperty](arkts-basicservices-pasteboard-pastedataproperty-i.md). The parameters cannot be empty. Otherwise, the operation  fails.
 
 **Since:** 7
 
@@ -72,14 +79,12 @@ addRecord(record: PasteDataRecord): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| record | [PasteDataRecord](arkts-basicservices-pasteboard-pastedatarecord-i.md) | Yes | 待添加的条目，设置后会将该条目添加到剪贴板内容中，同时更新mimeTypes属性列表。 |
+| record | [PasteDataRecord](arkts-basicservices-pasteboard-pastedatarecord-i.md) | Yes | Record to add. |
 
 ## Examples
 
 ```TypeScript
-// Create a PasteData object of the URI type.
 let pasteData: pasteboard.PasteData = pasteboard.createData(pasteboard.MIMETYPE_TEXT_URI, 'dataability:///com.example.myapplication1/user.txt');
-// Create a data record of the plain text type.
 let textRecord: pasteboard.PasteDataRecord = pasteboard.createRecord(pasteboard.MIMETYPE_TEXT_PLAIN, 'hello');
 let html: string = "<!DOCTYPE html>\n" + "<html>\n" + "<head>\n" + "<meta charset=\"utf-8\">\n" + "<title>HTML-PASTEBOARD_HTML</title>\n" + "</head>\n" + "<body>\n" + "    <h1>HEAD</h1>\n" + "    <p></p>\n" + "</body>\n" + "</html>";
 let htmlRecord: pasteboard.PasteDataRecord = pasteboard.createRecord(pasteboard.MIMETYPE_TEXT_HTML, html);
@@ -93,7 +98,8 @@ pasteData.addRecord(htmlRecord);
 addRecord(mimeType: string, value: ValueType): void
 ```
 
-向当前剪贴板内容中添加一条数据内容条目，同时也会将数据类型添加到[PasteDataProperty](arkts-basicservices-pasteboard-pastedataproperty-i.md)的mimeTypes中。入参均不能为空，否则添加失败。当剪贴板内容需要包含多种类型的数据（如同时包含纯文本和HTML）时，使用此方法向已有的PasteData对象添加额外的数据条目。
+Adds a data record to the PasteData, and adds its type to **mimeTypes** in  
+[PasteDataProperty](arkts-basicservices-pasteboard-pastedataproperty-i.md). The parameters cannot be empty. Otherwise, the operation  fails.
 
 **Since:** 9
 
@@ -109,21 +115,20 @@ addRecord(mimeType: string, value: ValueType): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| mimeType | string | Yes | 数据的MIME类型，取值范围：长度不超过1024字节。超出范围时返回错误码401。 |
-| value | [ValueType](arkts-basicservices-pasteboard-valuetype-t.md) | Yes | 数据内容，设置后更新剪贴板内容的属性信息，包括时间戳、数据类型、粘贴范围等。 |
+| mimeType | string | Yes | MIME type of PasteData. The length cannot exceed 1024 bytes. |
+| value | [ValueType](arkts-basicservices-pasteboard-valuetype-t.md) | Yes | Data content. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameters types; 3. Parameter verification failed. |
-| 12900002 | The number of records exceeds the upper limit.<br>**Applicable version:** 9 and later |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameters types; 3. Parameter verification failed. |
+| [12900002](../../apis-basic-services-kit/errorcode-pasteboard.md#12900002-maximum-number-of-records-reached) | The number of records exceeds the upper limit.<br>**Applicable version:** 9 and later |
 
 ## Examples
 
 ```TypeScript
 let pasteData: pasteboard.PasteData = pasteboard.createData(pasteboard.MIMETYPE_TEXT_URI, 'dataability:///com.example.myapplication1/user.txt');
-// Create ArrayBuffer data.
 let dataXml = new ArrayBuffer(256);
 pasteData.addRecord('app/xml', dataXml);
 ```
@@ -134,7 +139,8 @@ pasteData.addRecord('app/xml', dataXml);
 addTextRecord(text: string): void
 ```
 
-向当前剪贴板内容中添加一条纯文本条目，并将MIMETYPE_TEXT_PLAIN添加到[PasteDataProperty](arkts-basicservices-pasteboard-pastedataproperty-i.md)的mimeTypes中。入参均不能为空，否则添加失败。
+Adds a plain text record to the PasteData, and adds **MIMETYPE_TEXT_PLAIN** to **mimeTypes** in  
+[PasteDataProperty](arkts-basicservices-pasteboard-pastedataproperty-i.md). The parameters cannot be empty. Otherwise, the operation  fails.
 
 **Since:** 7
 
@@ -152,7 +158,7 @@ addTextRecord(text: string): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| text | string | Yes | 纯文本内容。 |
+| text | string | Yes | Plain text. |
 
 ## Examples
 
@@ -167,7 +173,8 @@ pasteData.addTextRecord('good');
 addUriRecord(uri: string): void
 ```
 
-向当前剪贴板内容中添加一条URI条目，并将MIMETYPE_TEXT_URI添加到[PasteDataProperty](arkts-basicservices-pasteboard-pastedataproperty-i.md)的mimeTypes中。入参均不能为空，否则添加失败。
+Adds a URI record to the PasteData, and adds **MIMETYPE_TEXT_URI** to **mimeTypes** in  
+[PasteDataProperty](arkts-basicservices-pasteboard-pastedataproperty-i.md). The parameters cannot be empty. Otherwise, the operation  fails.
 
 **Since:** 7
 
@@ -185,7 +192,7 @@ addUriRecord(uri: string): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| uri | string | Yes | URI内容。 |
+| uri | string | Yes | URI content. |
 
 ## Examples
 
@@ -200,7 +207,8 @@ pasteData.addUriRecord('dataability:///com.example.myapplication1/user.txt');
 addWantRecord(want: Want): void
 ```
 
-向当前剪贴板内容中添加一条Want条目，并将MIMETYPE_TEXT_WANT添加到[PasteDataProperty](arkts-basicservices-pasteboard-pastedataproperty-i.md)的mimeTypes中。入参均不能为空，否则添加失败。
+Adds a Want record to the PasteData, and adds **MIMETYPE_TEXT_WANT** to **mimeTypes** in  
+[PasteDataProperty](arkts-basicservices-pasteboard-pastedataproperty-i.md). The parameters cannot be empty. Otherwise, the operation  fails.
 
 **Since:** 7
 
@@ -218,7 +226,7 @@ addWantRecord(want: Want): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| want | [Want](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-want-want-c.md) | Yes | Want对象内容。 |
+| want | [Want](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-want-want-c.md) | Yes | Want object. |
 
 ## Examples
 
@@ -239,7 +247,7 @@ pasteData.addWantRecord(object);
 getMimeTypes(): Array<string>
 ```
 
-获取剪贴板中[PasteDataProperty](arkts-basicservices-pasteboard-pastedataproperty-i.md)的mimeTypes列表，接口调用异常时返回undefined。
+Obtains types of [PasteDataProperty](arkts-basicservices-pasteboard-pastedataproperty-i.md) of the PasteData.
 
 **Since:** 7
 
@@ -255,7 +263,7 @@ getMimeTypes(): Array<string>
 
 | Type | Description |
 | --- | --- |
-| Array&lt;string&gt; | 剪贴板内容条目的数据类型，非重复的类型列表。 |
+| Array&lt;string&gt; | Data types of the PasteData. |
 
 ## Examples
 
@@ -270,7 +278,7 @@ let types: string[] = pasteData.getMimeTypes();
 getPrimaryHtml(): string
 ```
 
-获取第一条的HTML内容。
+Obtains the HTML content of the primary record.
 
 **Since:** 7
 
@@ -286,7 +294,7 @@ getPrimaryHtml(): string
 
 | Type | Description |
 | --- | --- |
-| string | HTML内容。剪贴板内容对象中没有HTML内容时，默认返回为undefined。 |
+| string | HTML content. |
 
 ## Examples
 
@@ -307,7 +315,7 @@ systemPasteboard.getData().then((pasteData: pasteboard.PasteData) => {
 getPrimaryMimeType(): string
 ```
 
-获取剪贴板内容中首个条目的数据类型。
+Obtains the data type of the primary record in the pasteboard.
 
 **Since:** 7
 
@@ -323,7 +331,7 @@ getPrimaryMimeType(): string
 
 | Type | Description |
 | --- | --- |
-| string | 首个条目的数据类型。 |
+| string | Data type of the primary record. |
 
 ## Examples
 
@@ -338,7 +346,7 @@ let type: string = pasteData.getPrimaryMimeType();
 getPrimaryPixelMap(): image.PixelMap
 ```
 
-获取第一条的PixelMap内容。
+Obtains the PixelMap of the primary record.
 
 **Since:** 9
 
@@ -354,16 +362,14 @@ getPrimaryPixelMap(): image.PixelMap
 
 | Type | Description |
 | --- | --- |
-| image.PixelMap | PixelMap内容。剪贴板内容对象中没有PixelMap内容时，默认返回为undefined。 |
+| image.PixelMap | PixelMap. |
 
 ## Examples
 
 ```TypeScript
 import { image } from '@kit.ImageKit';
 
-// Create a buffer for storing image data.
 let buffer = new ArrayBuffer(128);
-// Define the image size.
 let realSize: image.Size = { height: 3, width: 5 };
 let opt: image.InitializationOptions = {
     size: realSize,
@@ -384,7 +390,7 @@ image.createPixelMap(buffer, opt).then((pixelMap: image.PixelMap) => {
 getPrimaryText(): string
 ```
 
-获取第一条纯文本内容。
+Obtains the plain text of the primary record.
 
 **Since:** 6
 
@@ -400,21 +406,17 @@ getPrimaryText(): string
 
 | Type | Description |
 | --- | --- |
-| string | 纯文本内容。剪贴板内容对象中没有纯文本内容时，默认返回为undefined。 |
+| string | Plain text. |
 
 ## Examples
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
 
-// Obtain the SystemPasteboard object.
 const systemPasteboard: pasteboard.SystemPasteboard = pasteboard.getSystemPasteboard();
-// Asynchronously read the pasteboard data.
 systemPasteboard.getData().then((pasteData: pasteboard.PasteData) => {
-    // Obtain the plain text content from the pasteboard.
     let text: string = pasteData.getPrimaryText();
 }).catch((err: BusinessError) => {
-    // Handle the failure of obtaining the content.
     console.error('Failed to get PasteData. Cause: ' + err.message);
 });
 ```
@@ -425,7 +427,7 @@ systemPasteboard.getData().then((pasteData: pasteboard.PasteData) => {
 getPrimaryUri(): string
 ```
 
-获取第一条的URI内容。
+Obtains the URI of the primary record.
 
 **Since:** 7
 
@@ -441,7 +443,7 @@ getPrimaryUri(): string
 
 | Type | Description |
 | --- | --- |
-| string | URI内容。剪贴板内容对象中没有URI内容时，默认返回为undefined。 |
+| string | URI content. |
 
 ## Examples
 
@@ -462,7 +464,7 @@ systemPasteboard.getData().then((pasteData: pasteboard.PasteData) => {
 getPrimaryWant(): Want
 ```
 
-获取第一条的Want对象内容。
+Obtains the **Want** object of the primary record.
 
 **Since:** 7
 
@@ -478,7 +480,7 @@ getPrimaryWant(): Want
 
 | Type | Description |
 | --- | --- |
-| [Want](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-want-want-c.md) | Want对象内容。剪贴板内容对象中没有Want内容时，默认返回为undefined。 |
+| [Want](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-want-want-c.md) | Want object. |
 
 ## Examples
 
@@ -500,7 +502,7 @@ systemPasteboard.getData().then((pasteData: pasteboard.PasteData) => {
 getProperty(): PasteDataProperty
 ```
 
-获取剪贴板内容的属性描述对象。
+Obtains the property of the PasteData.
 
 **Since:** 7
 
@@ -516,7 +518,7 @@ getProperty(): PasteDataProperty
 
 | Type | Description |
 | --- | --- |
-| [PasteDataProperty](arkts-basicservices-pasteboard-pastedataproperty-i.md) | 属性描述对象。 |
+| [PasteDataProperty](arkts-basicservices-pasteboard-pastedataproperty-i.md) | Property of the PasteData. |
 
 ## Examples
 
@@ -537,7 +539,7 @@ ArkTS-Sta:
 getRecord(index: int): PasteDataRecord
 ```
 
-获取剪贴板内容中指定下标的条目。
+Obtains the record with a specific index in PasteData.
 
 **Since:** 9
 
@@ -553,20 +555,20 @@ getRecord(index: int): PasteDataRecord
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| index | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | 指定条目的下标。有效取值范围：[0, getRecordCount()-1]，超出范围会触发错误码12900001。 |
+| index | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | Index of the target record. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [PasteDataRecord](arkts-basicservices-pasteboard-pastedatarecord-i.md) | 指定下标的条目。 |
+| [PasteDataRecord](arkts-basicservices-pasteboard-pastedatarecord-i.md) | Record with the specified index. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. 3. Parameter verification failed. |
-| 12900001 | The index is out of the record. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. 3. Parameter verification failed. |
+| [12900001](../../apis-basic-services-kit/errorcode-pasteboard.md#12900001-index-out-of-range) | The index is out of the record. |
 
 ## Examples
 
@@ -581,7 +583,7 @@ let record: pasteboard.PasteDataRecord = pasteData.getRecord(0);
 getRecordAt(index: number): PasteDataRecord
 ```
 
-获取剪贴板内容中指定下标的条目。
+Obtains the record with a specific index in PasteData.
 
 **Since:** 7
 
@@ -599,19 +601,19 @@ getRecordAt(index: number): PasteDataRecord
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| index | number | Yes | 指定条目的下标。有效取值范围：[0, getRecordCount()-1]，超出范围返回错误码401。 |
+| index | number | Yes | Index of the target record. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [PasteDataRecord](arkts-basicservices-pasteboard-pastedatarecord-i.md) | 指定下标的条目。 |
+| [PasteDataRecord](arkts-basicservices-pasteboard-pastedatarecord-i.md) | Record with the specified index. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameters types. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameters types. |
 
 ## Examples
 
@@ -632,7 +634,7 @@ ArkTS-Sta:
 getRecordCount(): int
 ```
 
-获取剪贴板内容中条目的个数。
+Obtains the number of records in a PasteData object.
 
 **Since:** 7
 
@@ -648,7 +650,7 @@ getRecordCount(): int
 
 | Type | Description |
 | --- | --- |
-| ArkTS-Dyn: number  <br>ArkTS-Sta：int | 条目的个数。 |
+| ArkTS-Dyn: number  <br>ArkTS-Sta：int | Number of records. |
 
 ## Examples
 
@@ -663,7 +665,7 @@ let count: number = pasteData.getRecordCount();
 getTag(): string
 ```
 
-获取剪贴板内容中用户自定义的标签内容，如果没有设置用户自定义的标签内容将返回空。
+Obtains the custom tag from the PasteData. If no custom tag is set, an empty string is returned.
 
 **Since:** 7
 
@@ -679,7 +681,7 @@ getTag(): string
 
 | Type | Description |
 | --- | --- |
-| string | 返回用户自定义的标签内容，如果没有设置用户自定义的标签内容，将返回空。 |
+| string | Custom tag. If no custom tag is set, an empty string is returned. |
 
 ## Examples
 
@@ -694,7 +696,7 @@ let tag: string = pasteData.getTag();
 hasMimeType(mimeType: string): boolean
 ```
 
-检查剪贴板内容中是否有指定的数据类型。
+Checks whether the PasteData contains data of the specified type.
 
 **Since:** 7
 
@@ -712,19 +714,19 @@ hasMimeType(mimeType: string): boolean
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| mimeType | string | Yes | 待查询的数据类型。可以是 [常量](../../../reference/apis-basic-services-kit/js-apis-pasteboard.md#常量)中已定义的类型， 包括：HTML类型、Want类型、纯文本类型、URI类型、PixelMap类型，也可以是自定义的MIME类型，长度不能超过1024字节。 |
+| mimeType | string | Yes | Type of the data to query. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| boolean | 有指定的数据类型返回true，否则返回false。 |
+| boolean | Returns **true** if the specified data type exists; returns **false** otherwise. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameters types. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameters types. |
 
 ## Examples
 
@@ -739,7 +741,7 @@ let hasType: boolean = pasteData.hasMimeType(pasteboard.MIMETYPE_TEXT_PLAIN);
 hasType(mimeType: string): boolean
 ```
 
-检查剪贴板内容中是否有指定的MIME数据类型。
+Checks whether the PasteData contains data of the specified MIME type.
 
 **Since:** 9
 
@@ -755,19 +757,19 @@ hasType(mimeType: string): boolean
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| mimeType | string | Yes | 待查询的数据类型。 可以是[常量](../../../reference/apis-basic-services-kit/js-apis-pasteboard.md#常量)中已定义的类型， 包括：HTML类型、Want类型、纯文本类型、URI类型、PixelMap类型；也可以是自定义的MIME类型，数据类型的字符串长度不能超过1024字节。 |
+| mimeType | string | Yes | Type of the data to query. The value can be a predefined type listed in [Constants](../../../reference/apis-basic-services-kit/js-apis-pasteboard.md#constants), including HTML, Want, plain text, URI, and PixelMap, or a custom type. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| boolean | 有指定的数据类型返回true，否则返回false。 |
+| boolean | Returns **true** if the specified data type exists; returns **false** otherwise. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameters types. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameters types. |
 
 ## Examples
 
@@ -782,7 +784,7 @@ let hasType: boolean = pasteData.hasType(pasteboard.MIMETYPE_TEXT_PLAIN);
 pasteComplete(): void
 ```
 
-通知剪贴板服务数据使用已完成，可释放跨设备通道等资源。应在调用pasteStart之后、完成数据处理后调用，避免资源浪费。未调用可能导致跨设备通道长时间占用，影响后续跨设备粘贴操作。pasteComplete与其他接口的使用步骤可参考：1. getData()获取剪贴板数据2. pasteStart()保留跨设备通道3. 使用剪贴板数据4. pasteComplete()释放通道
+Invoked to notify pasteboard service the utilization of PasteData has completed and occupied resources can be released for further usage
 
 **Since:** 12
 
@@ -815,11 +817,7 @@ systemPasteboard.getData((err: BusinessError, pasteData: pasteboard.PasteData) =
 pasteStart(): void
 ```
 
-读取剪贴板数据前，通知剪贴板服务保留跨设备通道。访问剪贴板数据中的跨端文件数据前，通知剪贴板服务保留跨设备链路。跨设备链路用于连接远端设备并提供传输远端设备文件到本端设备的能力，如未调用此方法则跨设备链路将在30秒后自动断开。适用于跨设备粘贴场景。当需要确保跨设备剪贴板数据通道保持连接，以便后续读取远端设备剪贴板数据时使用。
-
-- 必须与[pasteComplete](arkts-basicservices-pasteboard-pastedata-i.md#pastecomplete)方法配对使用。  
-- 调用顺序：先调用pasteStart()通知保留通道，数据处理完成后必须调用pasteComplete()通知完成。  
-- 未调用pasteComplete()会导致跨设备通道未正确关闭，影响后续跨设备剪贴板操作。
+Notifies the pasteboard service to retain the cross-device channel before reading data from the pasteboard.
 
 **Since:** 12
 
@@ -858,7 +856,7 @@ ArkTS-Sta:
 removeRecord(index: int): void
 ```
 
-移除剪贴板内容中指定下标的条目。
+Removes the record with a specific index in PasteData.
 
 **Since:** 9
 
@@ -874,14 +872,14 @@ removeRecord(index: int): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| index | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | 指定的下标。有效取值范围：[0, getRecordCount()-1]，超出范围会触发错误码12900001。 |
+| index | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | Specified index. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. 3. Parameter verification failed. |
-| 12900001 | The index is out of the record. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. 3. Parameter verification failed. |
+| [12900001](../../apis-basic-services-kit/errorcode-pasteboard.md#12900001-index-out-of-range) | The index is out of the record. |
 
 ## Examples
 
@@ -896,7 +894,7 @@ pasteData.removeRecord(0);
 removeRecordAt(index: number): boolean
 ```
 
-移除剪贴板内容中指定下标的条目。
+Removes the record with a specific index in PasteData.
 
 **Since:** 7
 
@@ -914,19 +912,19 @@ removeRecordAt(index: number): boolean
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| index | number | Yes | 指定的下标。有效取值范围：[0, getRecordCount()-1]，超出范围返回错误码401。 |
+| index | number | Yes | Specified index. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| boolean | 移除指定下标的条目成功返回true，移除失败（如指定下标不存在或超出范围）返回false。 |
+| boolean | Returns **true** if the operation is successful; returns **false** otherwise. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameters types. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameters types. |
 
 ## Examples
 
@@ -947,7 +945,7 @@ ArkTS-Sta:
 replaceRecord(index: int, record: PasteDataRecord): void
 ```
 
-替换剪贴板内容中指定下标的条目。
+Replaces the record with a specific index in PasteData.
 
 **Since:** 9
 
@@ -963,15 +961,15 @@ replaceRecord(index: int, record: PasteDataRecord): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| index | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | 指定的下标。有效取值范围：[0, getRecordCount()-1]，超出范围会触发错误码12900001。 |
-| record | [PasteDataRecord](arkts-basicservices-pasteboard-pastedatarecord-i.md) | Yes | 被替换后的条目数据内容，设置后会替换指定下标位置的原始条目。 |
+| index | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | Specified index. |
+| record | [PasteDataRecord](arkts-basicservices-pasteboard-pastedatarecord-i.md) | Yes | New record. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. 3. Parameter verification failed. |
-| 12900001 | The index is out of the record. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. 3. Parameter verification failed. |
+| [12900001](../../apis-basic-services-kit/errorcode-pasteboard.md#12900001-index-out-of-range) | The index is out of the record. |
 
 ## Examples
 
@@ -987,7 +985,7 @@ pasteData.replaceRecord(0, record);
 replaceRecordAt(index: number, record: PasteDataRecord): boolean
 ```
 
-替换剪贴板内容中指定下标的条目。
+Replaces the record with a specific index in PasteData.
 
 **Since:** 7
 
@@ -1005,14 +1003,14 @@ replaceRecordAt(index: number, record: PasteDataRecord): boolean
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| index | number | Yes | 指定的下标。有效取值范围：[0, getRecordCount()-1]，超出范围返回错误码401。 |
-| record | [PasteDataRecord](arkts-basicservices-pasteboard-pastedatarecord-i.md) | Yes | 替换后的条目。 |
+| index | number | Yes | Specified index. |
+| record | [PasteDataRecord](arkts-basicservices-pasteboard-pastedatarecord-i.md) | Yes | New record. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| boolean | 替换指定下标的条目成功返回true，替换失败（如指定下标不存在或超出范围、参数为空）返回false。 |
+| boolean | Returns **true** if the operation is successful; returns **false** otherwise. |
 
 ## Examples
 
@@ -1028,7 +1026,7 @@ let isReplace: boolean = pasteData.replaceRecordAt(0, record);
 setProperty(property: PasteDataProperty): void
 ```
 
-设置剪贴板内容的属性描述对象[PasteDataProperty](arkts-basicservices-pasteboard-pastedataproperty-i.md)。
+Sets a [PasteDataProperty](arkts-basicservices-pasteboard-pastedataproperty-i.md) object.
 
 **Since:** 9
 
@@ -1044,23 +1042,20 @@ setProperty(property: PasteDataProperty): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| property | [PasteDataProperty](arkts-basicservices-pasteboard-pastedataproperty-i.md) | Yes | 属性描述对象，设置后更新剪贴板内容的属性信息，包括时间戳、数据类型、粘贴范围等。 |
+| property | [PasteDataProperty](arkts-basicservices-pasteboard-pastedataproperty-i.md) | Yes | Property of the PasteData. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameters types. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameters types. |
 
 ## Examples
 
 ```TypeScript
-// Define the type of the additional property.
 type AdditionType = Record<string, Record<string, Object>>;
 
-// Create a PasteData object of the HTML type.
 let pasteData: pasteboard.PasteData = pasteboard.createData(pasteboard.MIMETYPE_TEXT_HTML, 'application/xml');
-// Obtain a PasteDataProperty object.
 let prop: pasteboard.PasteDataProperty = pasteData.getProperty();
 prop.shareOption = pasteboard.ShareOption.INAPP;
 // Note that attributes cannot be added to additions. Attributes can be added only by re-assigning values.

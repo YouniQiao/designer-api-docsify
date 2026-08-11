@@ -1,5 +1,7 @@
 # Once
 
+Defining Once annotation Once annotation accepts values passed in only during variable initialization
+
 **Since:** 23
 
 **ArkTS mode:** ArkTS-Sta only, since version 23.

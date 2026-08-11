@@ -1,6 +1,6 @@
 # PreconfigRatio
 
-枚举，提供预配置的分辨率比例。
+Enumerates the preconfigured aspect ratios.
 
 **Since:** 12
 
@@ -16,7 +16,7 @@
 PRECONFIG_RATIO_1_1 = 0
 ```
 
-1:1画幅。
+1:1 aspect ratio.
 
 **Since:** 12
 
@@ -34,7 +34,7 @@ PRECONFIG_RATIO_1_1 = 0
 PRECONFIG_RATIO_4_3 = 1
 ```
 
-4:3画幅。
+4:3 aspect ratio.
 
 **Since:** 12
 
@@ -52,7 +52,7 @@ PRECONFIG_RATIO_4_3 = 1
 PRECONFIG_RATIO_16_9 = 2
 ```
 
-16:9画幅。
+16:9 aspect ratio.
 
 **Since:** 12
 

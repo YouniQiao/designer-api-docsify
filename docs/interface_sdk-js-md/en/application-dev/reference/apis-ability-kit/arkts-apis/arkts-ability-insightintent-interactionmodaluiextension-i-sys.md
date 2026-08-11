@@ -1,6 +1,6 @@
 # InteractionModalUIExtension (System API)
 
-定义当意图执行完成时模态UIExtension要显示为交互界面的信息，不支持分布式。
+Defines the information of the modal UIExtension to be displayed as the interaction UI after the current intent execution completes. Does not support distributed scenarios.
 
 **Inheritance/Implementation:** InteractionModalUIExtension extends [InteractionUI](arkts-ability-insightintent-interactionui-i-sys.md)
 
@@ -26,7 +26,7 @@ import { insightIntent } from 'kits/@kit.AbilityKit';
 abilityName: string
 ```
 
-目标UIExtension能力的Ability名称。
+Ability name of the target UIExtension ability.
 
 **Type:** string
 
@@ -48,7 +48,7 @@ abilityName: string
 bundleName: string
 ```
 
-目标UIExtension能力的Bundle名称。
+Bundle name of the target UIExtension ability.
 
 **Type:** string
 
@@ -70,7 +70,7 @@ bundleName: string
 interactionUIType: 'MODAL_UIEXTENSION'
 ```
 
-交互界面的类型，固定为'MODAL_UIEXTENSION'。
+Type of the interaction UI. The value is fixed to 'MODAL_UIEXTENSION'.
 
 **Type:** 'MODAL_UIEXTENSION'
 
@@ -92,7 +92,7 @@ interactionUIType: 'MODAL_UIEXTENSION'
 moduleName: string
 ```
 
-目标UIExtension能力的模块名称。
+Module name of the target UIExtension ability.
 
 **Type:** string
 
@@ -114,7 +114,7 @@ moduleName: string
 parameters: Record<string, Object>
 ```
 
-传递给目标UIExtension的参数。
+Parameters passed to the target UIExtension ability.
 
 **Type:** [Record](../../apis-default/arkts-apis/arkts-record-t.md)&lt;string, Object&gt;
 
@@ -136,7 +136,7 @@ parameters: Record<string, Object>
 uiExtensionType: string
 ```
 
-UIExtension的类型。
+Type of the UIExtension ability.
 
 **Type:** string
 
@@ -158,7 +158,7 @@ UIExtension的类型。
 uri: string
 ```
 
-传递给目标UIExtension的URI信息。
+URI information passed to the target UIExtension ability for data processing.
 
 **Type:** string
 

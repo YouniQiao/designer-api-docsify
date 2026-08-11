@@ -1,6 +1,6 @@
 # DialogTextStyleOptions
 
-在Dialog定义文本样式属性。
+Defines DialogTextStyleOptions in the dialog.
 
 **Since:** 26.1.0
 
@@ -22,7 +22,7 @@ import { DialogButtonOrientation, DialogState, DialogResult, DialogBaseControlle
 wordBreak?: WordBreak
 ```
 
-设置分词类型。
+Set the word break type.
 
 **Type:** [WordBreak](arkts-arkui-enums-wordbreak-e.md)
 

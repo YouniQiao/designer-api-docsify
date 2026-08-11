@@ -1,6 +1,6 @@
 # KeyAction
 
-按键动作。
+Enumerates key actions.
 
 **Since:** 23
 
@@ -16,7 +16,7 @@
 UNKNOWN = -1
 ```
 
-除按下和抬起动作以外，其他按键动作。
+Any key action other than press and release.
 
 **Since:** 23
 
@@ -34,7 +34,7 @@ UNKNOWN = -1
 DOWN = 0
 ```
 
-按键按下动作。
+Key press.
 
 **Since:** 23
 
@@ -52,7 +52,7 @@ DOWN = 0
 UP = 1
 ```
 
-按键抬起动作。
+Key release.
 
 **Since:** 23
 

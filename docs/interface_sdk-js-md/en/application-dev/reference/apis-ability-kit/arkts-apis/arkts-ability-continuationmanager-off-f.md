@@ -12,7 +12,7 @@ import { continuationManager } from 'kits/@kit.AbilityKit';
 function off(type: 'deviceSelected', token: number): void
 ```
 
-取消监听设备连接状态。
+Unsubscribes from device connection events.
 
 **Since:** 9
 
@@ -36,18 +36,18 @@ function off(type: 'deviceSelected', token: number): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'deviceSelected' | Yes | 取消监听的事件类型，固定值"deviceSelected"。 |
-| token | number | Yes | 注册后的token。 |
+| type | 'deviceSelected' | Yes | Event type. The value is fixed at **deviceSelected**. |
+| token | number | Yes | Token obtained after the registration of the continuation management service. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; 3. Parameter verification failed. |
-| 201 | Permission denied. |
-| 16600004 | The specified callback has been registered. |
-| 16600001 | The system ability works abnormally. |
-| 16600002 | The specified token or callback is not registered. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; 3. Parameter verification failed. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
+| [16600004](../errorcode-DistributedSchedule.md#16600004-the-specified-callback-has-been-registered) | The specified callback has been registered. |
+| [16600001](../errorcode-DistributedSchedule.md#16600001-the-system-ability-works-abnormally) | The system ability works abnormally. |
+| [16600002](../errorcode-DistributedSchedule.md#16600002-the-specified-token-or-callback-is-not-registered) | The specified token or callback is not registered. |
 
 ## Examples
 
@@ -69,7 +69,7 @@ try {
 function off(type: 'deviceUnselected', token: number): void
 ```
 
-取消监听设备断开状态。
+Unsubscribes from device disconnection events.
 
 **Since:** 9
 
@@ -93,18 +93,18 @@ function off(type: 'deviceUnselected', token: number): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'deviceUnselected' | Yes | 取消监听的事件类型，固定值"deviceUnselected"。 |
-| token | number | Yes | 注册后的token。 |
+| type | 'deviceUnselected' | Yes | Event type. The value is fixed at **deviceUnselected**. |
+| token | number | Yes | Token obtained after the registration of the continuation management service. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; 3. Parameter verification failed. |
-| 201 | Permission denied. |
-| 16600004 | The specified callback has been registered. |
-| 16600001 | The system ability works abnormally. |
-| 16600002 | The specified token or callback is not registered. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; 3. Parameter verification failed. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
+| [16600004](../errorcode-DistributedSchedule.md#16600004-the-specified-callback-has-been-registered) | The specified callback has been registered. |
+| [16600001](../errorcode-DistributedSchedule.md#16600001-the-system-ability-works-abnormally) | The system ability works abnormally. |
+| [16600002](../errorcode-DistributedSchedule.md#16600002-the-specified-token-or-callback-is-not-registered) | The specified token or callback is not registered. |
 
 ## Examples
 
@@ -126,7 +126,7 @@ try {
 function off(type: 'deviceConnect', callback?: Callback<ContinuationResult>): void
 ```
 
-异步方法，取消监听设备连接状态，使用Callback形式返回连接的设备信息。
+Unsubscribes from device connection events. This API uses an asynchronous callback to return the result.
 
 **Since:** 8
 
@@ -146,8 +146,8 @@ function off(type: 'deviceConnect', callback?: Callback<ContinuationResult>): vo
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'deviceConnect' | Yes | 取消监听的事件类型，固定值"deviceConnect"。 |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;ContinuationResult&gt; | No | 当用户从设备选择模块中选择设备时调用，返回设备ID、设备类型和设备名称供开发者使用。 |
+| type | 'deviceConnect' | Yes | Event type. The value is fixed at **deviceConnect**. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;ContinuationResult&gt; | No | Callback invoked when a device is selected from the device list provided by the device selection module. This callback returns the device ID, type, and name. |
 
 ## Examples
 
@@ -168,7 +168,7 @@ continuationManager.off("deviceConnect", (data) => {
 function off(type: 'deviceDisconnect', callback?: Callback<string>): void
 ```
 
-异步方法，取消监听设备断开状态，使用Callback形式返回连接的设备信息。
+Unsubscribes from device disconnection events. This API uses an asynchronous callback to return the result.
 
 **Since:** 8
 
@@ -188,8 +188,8 @@ function off(type: 'deviceDisconnect', callback?: Callback<string>): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'deviceDisconnect' | Yes | 取消监听的事件类型，固定值"deviceDisconnect"。 |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;string&gt; | No | 当用户从设备选择模块中断开设备时调用，返回设备ID供开发者使用。 |
+| type | 'deviceDisconnect' | Yes | Event type. The value is fixed at **deviceDisconnect**. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;string&gt; | No | Callback invoked when a device is unselected from the device list provided by the device selection module. This callback returns the device ID. |
 
 ## Examples
 

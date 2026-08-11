@@ -12,11 +12,12 @@ import { appManager } from 'kits/@kit.AbilityKit';
 function isAppRunning(bundleName: string, appCloneIndex?: int): Promise<boolean>
 ```
 
-判断所有用户下指定包名和分身应用索引的应用是否正在运行。使用Promise异步回调。
+Checks whether the application with the specified bundle name and application clone index is running across all users. This API uses a promise to return the result.
 
-> **说明：**
+> **NOTE：**
 > 
-> 如果当前用户未安装该应用，则返回错误码16000073；如果当前用户已安装该应用，则判断所有用户下该指定应用是否正在运行。
+> If the application is not installed for the current user, error code 16000073 is returned. If the application is
+> installed for the current user, the system checks whether the application is running across all users.
 
 **Since:** 14
 
@@ -32,23 +33,23 @@ function isAppRunning(bundleName: string, appCloneIndex?: int): Promise<boolean>
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| bundleName | string | Yes | 查询的应用包名。 |
-| appCloneIndex | ArkTS-Dyn: number  <br>ArkTS-Sta：int | No | 分身应用索引，默认值为0。取值范围：0~1000。取值为0时表示主应用；取值大于0时表示指定分身应用。 |
+| bundleName | string | Yes | Bundle name. |
+| appCloneIndex | ArkTS-Dyn: number  <br>ArkTS-Sta：int | No | Index of an application clone. The value ranges from 0 to 1000. The value **0** means the main application, and a value greater than 0 means a specific application clone. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;boolean&gt; | Promise对象。返回true表示至少存在一个用户正在运行指定包名和分身应用索引的应用，返回false表示所有用户下指定包名和分身应用索引的应用都没有运行。 |
+| Promise&lt;boolean&gt; | Promise used to return the result. **true** is returned if at least one user is running the specified application. **false** is returned if none of the users are running the application. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
-| 16000050 | Internal error. |
-| 201 | Permission denied. |
-| 16000073 | The app clone index is invalid. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| [16000050](../errorcode-ability.md#16000050-internal-error) | Internal error. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
+| [16000073](../errorcode-ability.md#16000073-appcloneindex-is-invalid) | The app clone index is invalid. |
 
 ## Examples
 

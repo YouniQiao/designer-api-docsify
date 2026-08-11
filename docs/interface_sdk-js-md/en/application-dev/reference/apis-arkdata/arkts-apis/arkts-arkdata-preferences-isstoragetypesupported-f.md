@@ -12,7 +12,7 @@ import { preferences } from 'kits/@kit.ArkData';
 function isStorageTypeSupported(type: StorageType): boolean
 ```
 
-判断当前平台是否支持传入的存储模式，此为同步接口。如果当前平台支持传入的存储模式时，该接口返回true；反之，返回false。
+Checks whether the specified storage type is supported. This API returns the result synchronously. If the storage type is supported, **true** is returned. Otherwise, **false** is returned.
 
 **Since:** 18
 
@@ -28,19 +28,19 @@ function isStorageTypeSupported(type: StorageType): boolean
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | [StorageType](arkts-arkdata-preferences-storagetype-e.md) | Yes | 需要判断是否支持的存储模式。 |
+| type | [StorageType](arkts-arkdata-preferences-storagetype-e.md) | Yes | Storage type to check. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| boolean | true表示当前平台支持当前校验的存储模式，false表示当前平台不支持当前校验的存储模式。 |
+| boolean | Returns **true** if the storage type is supported; returns **false** otherwise. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. Possible causes: Incorrect parameter types |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: Incorrect parameter types |
 
 ## Examples
 

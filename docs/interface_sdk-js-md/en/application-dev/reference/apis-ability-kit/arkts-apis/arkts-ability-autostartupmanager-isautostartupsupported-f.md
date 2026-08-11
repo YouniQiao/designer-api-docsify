@@ -12,12 +12,7 @@ import { autoStartupManager } from 'kits/@kit.AbilityKit';
 function isAutoStartupSupported(): boolean
 ```
 
-检查当前设备是否支持开机自启动。
-
-> **说明：**
-> 
-> 建议在调用[autoStartupManager.getAutoStartupStatusForSelf](arkts-ability-autostartupmanager-getautostartupstatusforself-f.md#getautostartupstatusforself) 之前，先调
-> 用该接口检查设备能力。如果返回false，则表明当前设备不支持开机自启动。
+Check whether the current device supports auto startup on this device.
 
 **Since:** 26.0.0
 
@@ -33,5 +28,5 @@ function isAutoStartupSupported(): boolean
 
 | Type | Description |
 | --- | --- |
-| boolean | 当前设备是否支持开机自启动。true：支持，false：不支持。 |
+| boolean | `true`: Device supports auto startup. - `false`: Device do not support auto startup. |
 

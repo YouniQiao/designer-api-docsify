@@ -1,6 +1,6 @@
 # BaseConnectOptions
 
-connect参数类型。
+Additional connect options for PersistenceV2.connect API.
 
 **Since:** 26.0.0
 
@@ -16,7 +16,7 @@ connect参数类型。
 enableAutoSave?: boolean
 ```
 
-是否自动持久化存储数据，默认值为true。
+Enable autosave feature. Default value is true.
 
 **Type:** boolean
 
@@ -36,9 +36,9 @@ enableAutoSave?: boolean
 fromJson?: FromJSONType<T>
 ```
 
-转换JSON格式对象到存储对象的函数。
+Customize deserialize callback.If fromJson is not set, then default deserialization method will be used.
 
-**Type:** [FromJSONType](../../apis-default/arkts-apis/arkts-fromjsontype-t.md)&lt;T&gt;
+**Type:** [FromJSONType](arkts-arkui-fromjsontype-t.md)&lt;T&gt;
 
 **Since:** 26.0.0
 
@@ -56,9 +56,9 @@ fromJson?: FromJSONType<T>
 toJson?: ToJSONType<T>
 ```
 
-转换存储对象到JSON格式对象的函数。
+Customize serialize callback.If toJson is not set, then default serialization method will be used.
 
-**Type:** [ToJSONType](../../apis-default/arkts-apis/arkts-tojsontype-t.md)&lt;T&gt;
+**Type:** [ToJSONType](arkts-arkui-tojsontype-t.md)&lt;T&gt;
 
 **Since:** 26.0.0
 

@@ -1,6 +1,6 @@
 # DistanceRank（系统接口）
 
-Enum for distance rank.
+测距结果的距离挡位，不同的挡位对应不同的距离范围。
 
 **起始版本：** 23
 
@@ -18,7 +18,7 @@ Enum for distance rank.
 RANK_ULTRA_SHORT_RANGE = 'rankUltraShort'
 ```
 
-indicates ultra-short range
+表示超短距。单位:cm，范围:[0:5]
 
 **起始版本：** 23
 
@@ -38,7 +38,7 @@ indicates ultra-short range
 RANK_SHORT_RANGE = 'rankShort'
 ```
 
-indicates short range
+表示短距。单位:cm，范围:(5:100]
 
 **起始版本：** 23
 
@@ -58,7 +58,7 @@ indicates short range
 RANK_SHORT_MEDIUM_RANGE = 'rankMediumShort'
 ```
 
-indicates medium-short range
+表示中短距。单位:cm，范围:(100:500]
 
 **起始版本：** 23
 
@@ -78,7 +78,7 @@ indicates medium-short range
 RANK_MEDIUM_RANGE = 'rankMedium'
 ```
 
-indicates medium range
+表示中距。单位:cm，范围:(500:1000]
 
 **起始版本：** 23
 

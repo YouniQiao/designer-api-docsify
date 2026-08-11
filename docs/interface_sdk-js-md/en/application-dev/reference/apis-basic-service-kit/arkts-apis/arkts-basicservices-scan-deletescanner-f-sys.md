@@ -12,7 +12,7 @@ import { scan } from 'kits/@kit.BasicServicesKit';
 function deleteScanner(uniqueId: string, discoveryMode: ScannerDiscoveryMode): Promise<void>
 ```
 
-删除扫描仪（系统API）。使用Promise异步回调。
+Deletes a scanner. This API uses a promise to return the result.
 
 **Since:** 20
 
@@ -30,21 +30,21 @@ function deleteScanner(uniqueId: string, discoveryMode: ScannerDiscoveryMode): P
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| uniqueId | string | Yes | 扫描仪的唯一ID。 |
-| discoveryMode | [ScannerDiscoveryMode](arkts-basicservices-scan-scannerdiscoverymode-e.md) | Yes | 发现模式。 |
+| uniqueId | string | Yes | Unique ID of the scanner. |
+| discoveryMode | [ScannerDiscoveryMode](arkts-basicservices-scan-scannerdiscoverymode-e.md) | Yes | Discovery mode. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise对象，无返回结果。 |
+| Promise&lt;void&gt; | Promise that returns no value. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 201 | Permission denied. |
-| 202 | Not system application. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system application. |
 
 ## Examples
 

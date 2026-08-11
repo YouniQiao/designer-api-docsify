@@ -12,7 +12,7 @@ import { Options, ReaderIteratorResult, Watcher, ReadTextOptions, WatchEventList
 function readLines(filePath: string, options?: Options): Promise<ReaderIterator>
 ```
 
-逐行读取文件文本内容，只支持读取utf-8格式文件。使用promise异步回调。
+Reads a file text line by line. Only the files in UTF-8 format are supported. This API uses a promise to return the result.
 
 **Since:** 23
 
@@ -26,14 +26,14 @@ function readLines(filePath: string, options?: Options): Promise<ReaderIterator>
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| filePath | string | Yes | 文件的应用沙箱路径。 |
-| options | [Options](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-zlib-options-i.md) | No | 可选项。支持以下选项：&lt;br/&gt;- encoding，string类型，当数据是 string 类型时有效，表示数据的编码方式， 默认 'utf-8'，仅支持 'utf-8'。 |
+| filePath | string | Yes | Application sandbox path of the file. |
+| options | [Options](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-zlib-options-i.md) | No | Options for reading the text. The options are as follows: &lt;br&gt;- **encoding** (string): format of the data to be encoded. &lt;br&gt;It is valid only when the data is of the string type. &lt;br&gt;The default value is **'utf-8'**, which is the only value supported. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;ReaderIterator&gt; | Promise对象，返回文件读取迭代器。 |
+| Promise&lt;ReaderIterator&gt; | Promise used to return the **ReaderIterator** object. |
 
 **Error codes:**
 
@@ -60,7 +60,7 @@ function readLines(filePath: string, options?: Options): Promise<ReaderIterator>
 function readLines(filePath: string, callback: AsyncCallback<ReaderIterator>): void
 ```
 
-逐行读取文件文本内容，只支持读取utf-8格式文件。使用callback异步回调。
+Reads a file text line by line. Only the files in UTF-8 format are supported. This API uses an asynchronous callback to return the result.
 
 **Since:** 23
 
@@ -74,8 +74,8 @@ function readLines(filePath: string, callback: AsyncCallback<ReaderIterator>): v
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| filePath | string | Yes | 文件的应用沙箱路径。 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;ReaderIterator&gt; | Yes | 回调函数，返回文件读取迭代器。 |
+| filePath | string | Yes | Application sandbox path of the file. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;ReaderIterator&gt; | Yes | Callback used to return a **ReaderIterator** object. |
 
 **Error codes:**
 
@@ -101,7 +101,7 @@ function readLines(filePath: string, callback: AsyncCallback<ReaderIterator>): v
 function readLines(filePath: string, options: Options, callback: AsyncCallback<ReaderIterator>): void
 ```
 
-逐行读取文件文本内容，可配置读取选项，只支持读取utf-8格式文件。使用callback异步回调。
+Reads a file text line by line. Read options can be configured. Only the files in UTF-8 format are supported. This API uses an asynchronous callback to return the result.
 
 **Since:** 23
 
@@ -115,9 +115,9 @@ function readLines(filePath: string, options: Options, callback: AsyncCallback<R
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| filePath | string | Yes | 文件的应用沙箱路径。 |
-| options | [Options](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-zlib-options-i.md) | Yes | 读取选项。支持以下选项：&lt;br/&gt;- encoding，string类型，当数据是 string 类型时有效，表示数据的编码方式， 默认 'utf-8'，仅支持 'utf-8'。 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;ReaderIterator&gt; | Yes | 回调函数，返回文件读取迭代器。 |
+| filePath | string | Yes | Application sandbox path of the file. |
+| options | [Options](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-zlib-options-i.md) | Yes | Read options. The options are as follows: &lt;br&gt;- **encoding** (string): format of the data to be encoded. &lt;br&gt;It is valid only when the data is of the string type. &lt;br&gt;The default value is **'utf-8'**, which is the only value supported. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;ReaderIterator&gt; | Yes | Callback used to return a **ReaderIterator** object. |
 
 **Error codes:**
 

@@ -1,6 +1,6 @@
 # ModalTransition
 
-全屏模态转场方式枚举类型，用于设置全屏模态转场类型。
+Defines modal transition type.
 
 **Since:** 10
 
@@ -16,7 +16,7 @@
 DEFAULT = 0
 ```
 
-全屏模态上下切换动画。
+Use default animation.Upward animation when entering and downward animation when exiting.
 
 **Since:** 10
 
@@ -36,7 +36,7 @@ DEFAULT = 0
 NONE = 1
 ```
 
-全屏模态无转场动画。
+Use none animation.
 
 **Since:** 10
 
@@ -56,7 +56,7 @@ NONE = 1
 ALPHA = 2
 ```
 
-全屏模态透明度渐变动画。
+Opacity gradient animation for the modal.
 
 **Since:** 10
 

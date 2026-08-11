@@ -1,6 +1,6 @@
 # HashMap
 
-HashMap底层采用数组、链表和红黑树实现，支持高效查询、插入和删除。HashMap存储内容基于键值对映射，不允许重复的key，且一个key只能对应一个value。
+HashMap is a map implemented based on the array, linked list, and red-black tree. It provides efficient data query, insertion,and removal. The elements in a HashMap instance are mappings of key-value pairs. Each key must be unique and have only one value.
 
 **Since:** 8
 
@@ -22,7 +22,7 @@ import { HashMap } from 'kits/@kit.ArkTS';
 $_iterator(): IterableIterator<[K, V]>
 ```
 
-返回一个迭代器，迭代器的每一项都是一个包含键和值的数组[K, V]。
+Obtains an iterator, each item of which is a JavaScript object.
 
 **Since:** 23
 
@@ -38,7 +38,7 @@ $_iterator(): IterableIterator<[K, V]>
 
 | Type | Description |
 | --- | --- |
-| [IterableIterator](arkts-arkts-iterator-iterableiterator-i.md)&lt;[K, V]&gt; | HashMap的迭代器。 |
+| [IterableIterator](arkts-arkts-iterator-iterableiterator-i.md)&lt;[K, V]&gt; | an iterator for the HashMap |
 
 ## [Symbol.iterator]
 
@@ -46,7 +46,7 @@ $_iterator(): IterableIterator<[K, V]>
 [Symbol.iterator](): IterableIterator<[K, V]>
 ```
 
-返回一个迭代器，迭代器的每一项都是一个包含键和值的数组[K, V]。
+Obtains an iterator, each item of which is a JavaScript object.
 
 **Since:** 8
 
@@ -62,13 +62,13 @@ $_iterator(): IterableIterator<[K, V]>
 
 | Type | Description |
 | --- | --- |
-| [IterableIterator](arkts-arkts-iterator-iterableiterator-i.md)&lt;[K, V]&gt; | 返回包含此HashMap中所有键值对的迭代器。 |
+| [IterableIterator](arkts-arkts-iterator-iterableiterator-i.md)&lt;[K, V]&gt; |  |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 10200011 | The Symbol.iterator method cannot be bound. |
+| [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) | The Symbol.iterator method cannot be bound. |
 
 ## Examples
 
@@ -119,7 +119,7 @@ for(let i = 0; i < 10; i++) {
 clear(): void
 ```
 
-清除HashMap中的所有元素，并将length置为0。
+Clears this HashMap and sets its length to **0**.
 
 **Since:** 8
 
@@ -135,7 +135,7 @@ clear(): void
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 10200011 | The clear method cannot be bound. |
+| [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) | The clear method cannot be bound. |
 
 ## Examples
 
@@ -154,7 +154,7 @@ console.info("result:", result);  // result: true
 constructor()
 ```
 
-创建HashMap实例。
+A constructor used to create a **HashMap** instance.
 
 **Since:** 8
 
@@ -170,7 +170,7 @@ constructor()
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 10200012 | The HashMap's constructor cannot be directly invoked. |
+| [10200012](../errorcode-utils.md#10200012-constructor-calling-failure) | The HashMap's constructor cannot be directly invoked. |
 
 ## Examples
 
@@ -184,7 +184,7 @@ let hashMap = new HashMap<string, number>();
 entries(): IterableIterator<[K, V]>
 ```
 
-返回此HashMap中包含的键值对的新迭代器对象。
+Returns an iterator that contains all the elements in this HashMap.
 
 **Since:** 8
 
@@ -200,13 +200,13 @@ entries(): IterableIterator<[K, V]>
 
 | Type | Description |
 | --- | --- |
-| [IterableIterator](arkts-arkts-iterator-iterableiterator-i.md)&lt;[K, V]&gt; | 返回包含此HashMap中所有键值对的迭代器。 |
+| [IterableIterator](arkts-arkts-iterator-iterableiterator-i.md)&lt;[K, V]&gt; | Iterator obtained. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 10200011 | The entries method cannot be bound. |
+| [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) | The entries method cannot be bound. |
 
 ## Examples
 
@@ -241,7 +241,7 @@ for(let i = 0; i < 10; i++) {
 forEach(callbackFn: (value?: V, key?: K, map?: HashMap<K, V>) => void, thisArg?: Object): void
 ```
 
-在遍历过程中对每个元素调用一次回调函数。
+Uses a callback to traverse each element.
 
 **Since:** 8
 
@@ -257,14 +257,14 @@ forEach(callbackFn: (value?: V, key?: K, map?: HashMap<K, V>) => void, thisArg?:
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callbackFn | (value?: V, key?: K, map?: HashMap&lt;K, V&gt;) =&gt; void | Yes | 回调函数。 |
-| thisArg | Object | No | callbackFn被调用时用作this值，默认值为当前实例对象。 |
+| callbackFn | (value?: V, key?: K, map?: HashMap&lt;K, V&gt;) =&gt; void | Yes | Callback invoked to traverse the elements in the HashMap. |
+| thisArg | Object | No | Value of **this** to use when **callbackFn** is invoked. The default value is this instance. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 10200011 | The forEach method cannot be bound. |
+| [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) | The forEach method cannot be bound. |
 
 ## Examples
 
@@ -297,7 +297,7 @@ for(let i = 0; i < 10; i++) {
 forEach(callbackFn: HashMapCbFn<K, V>): void
 ```
 
-通过回调函数遍历此容器中的元素，并获取其位置索引。
+Uses a callback to traverse the elements in this container and obtain their position indexes.
 
 **Since:** 23
 
@@ -313,7 +313,7 @@ forEach(callbackFn: HashMapCbFn<K, V>): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callbackFn | [HashMapCbFn](arkts-arkts-hashmapcbfn-t.md)&lt;K, V&gt; | Yes | 用于遍历容器中元素的回调函数。 |
+| callbackFn | [HashMapCbFn](arkts-arkts-hashmapcbfn-t.md)&lt;K, V&gt; | Yes | Callback invoked to traverse the elements in the container. |
 
 ## get
 
@@ -321,7 +321,7 @@ forEach(callbackFn: HashMapCbFn<K, V>): void
 get(key: K): V
 ```
 
-获取指定key对应的value，不存在返回undefined。
+Obtains the value of the specified key in this HashMap. If nothing is obtained, **undefined** is returned.
 
 **Since:** 8
 
@@ -337,19 +337,19 @@ get(key: K): V
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| key | K | Yes | 指定要获取其对应value的键。 |
+| key | K | Yes | Target key. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| V | 返回key映射的value值；key不存在时返回undefined。 |
+| V | Value obtained. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 10200011 | The get method cannot be bound. |
+| [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) | The get method cannot be bound. |
 
 ## Examples
 
@@ -367,7 +367,7 @@ console.info("result:", result);  // result: 356
 get(key: K): V | undefined
 ```
 
-获取此容器中指定key对应的值。如果未获取到，则返回undefined。
+Obtains the value of the specified key in this container. If nothing is obtained, undefined is returned.
 
 **Since:** 23
 
@@ -383,13 +383,13 @@ get(key: K): V | undefined
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| key | K | Yes | 查找的指定key。 |
+| key | K | Yes | Target key. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| V | 值或undefined。 |
+| V | value or undefined |
 
 ## hasKey
 
@@ -397,7 +397,7 @@ get(key: K): V | undefined
 hasKey(key: K): boolean
 ```
 
-判断此HashMap中是否包含指定key。
+Checks whether this HashMap has the specified key.
 
 **Since:** 8
 
@@ -413,19 +413,19 @@ hasKey(key: K): boolean
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| key | K | Yes | 指定要查询的键，用于判断HashMap中是否包含该键。 |
+| key | K | Yes | Target key. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| boolean | 包含指定key返回true，不包含指定key返回false。 |
+| boolean | Check result. The value **true** is returned if the specified key is contained; otherwise, **false** is returned. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 10200011 | The hasKey method cannot be bound. |
+| [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) | The hasKey method cannot be bound. |
 
 ## Examples
 
@@ -442,7 +442,7 @@ console.info("result:", result);  // result: true
 hasValue(value: V): boolean
 ```
 
-判断此HashMap中是否包含指定value。
+Checks whether this HashMap has the specified value.
 
 **Since:** 8
 
@@ -458,19 +458,19 @@ hasValue(value: V): boolean
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | V | Yes | 指定要查询的值，用于判断HashMap中是否包含该值。 |
+| value | V | Yes | Target value. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| boolean | 包含指定的value返回true，不包含指定的value返回false。 |
+| boolean | Check result. The value **true** is returned if the specified value is contained; otherwise, **false** is returned. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 10200011 | The hasValue method cannot be bound. |
+| [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) | The hasValue method cannot be bound. |
 
 ## Examples
 
@@ -487,7 +487,7 @@ console.info("result:", result);  // result: true
 isEmpty(): boolean
 ```
 
-判断该HashMap是否为空。
+Checks whether this HashMap is empty (contains no element).
 
 **Since:** 8
 
@@ -503,13 +503,13 @@ isEmpty(): boolean
 
 | Type | Description |
 | --- | --- |
-| boolean | 为空返回true，不为空返回false。 |
+| boolean | Check result. The value **true** is returned if the HashMap is empty; otherwise, **false** is returned. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 10200011 | The isEmpty method cannot be bound. |
+| [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) | The isEmpty method cannot be bound. |
 
 ## Examples
 
@@ -525,7 +525,7 @@ console.info("result = ", result) // result = true
 keys(): IterableIterator<K>
 ```
 
-返回新迭代器对象，包含此HashMap中所有的键。
+Returns an iterator that contains all the keys in this HashMap.
 
 **Since:** 8
 
@@ -541,13 +541,13 @@ keys(): IterableIterator<K>
 
 | Type | Description |
 | --- | --- |
-| [IterableIterator](arkts-arkts-iterator-iterableiterator-i.md)&lt;K&gt; | 返回包含此HashMap中所有key的迭代器。 |
+| [IterableIterator](arkts-arkts-iterator-iterableiterator-i.md)&lt;K&gt; | Iterator obtained. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 10200011 | The keys method cannot be bound. |
+| [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) | The keys method cannot be bound. |
 
 ## Examples
 
@@ -569,7 +569,7 @@ for (let key of keys) {
 remove(key: K): V
 ```
 
-删除指定key对应的元素，并返回该元素的value。若key不存在，则返回undefined。
+Removes an element with the specified key from this HashMap.
 
 **Since:** 8
 
@@ -585,19 +585,19 @@ remove(key: K): V
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| key | K | Yes | 指定key。 |
+| key | K | Yes | Key of the target element. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| V | 返回删除元素的值。 |
+| V | Value of the element. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 10200011 | The remove method cannot be bound. |
+| [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) | The remove method cannot be bound. |
 
 ## Examples
 
@@ -615,7 +615,7 @@ console.info("result:", result);  // result: 356
 remove(key: K): V | undefined
 ```
 
-删除此容器中指定key所对应的元素。
+Removes an element with the specified key from this container.
 
 **Since:** 23
 
@@ -631,13 +631,13 @@ remove(key: K): V | undefined
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| key | K | Yes | 指定key。 |
+| key | K | Yes | Key of the target element. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| V | 如果删除了指定key则返回其关联的值，否则返回undefined。 |
+| V | Tthe value associated with the key if it was removed, undefined otherwise |
 
 ## replace
 
@@ -645,7 +645,7 @@ remove(key: K): V | undefined
 replace(key: K, newValue: V): boolean
 ```
 
-替换指定键对应的值。仅当指定key已存在时才执行替换并返回true，若key不存在则不修改HashMap并返回false。
+Replaces the value of a specified key.
 
 **Since:** 8
 
@@ -661,20 +661,20 @@ replace(key: K, newValue: V): boolean
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| key | K | Yes | 依据key指定替换的元素，仅当key已存在时替换生效。 |
-| newValue | V | Yes | 替换指定key对应value的新值。仅当指定key已存在时，newValue才会替换原有value；若key不存在，该值不会被设置。 |
+| key | K | Yes | Key of the target element. |
+| newValue | V | Yes | New value of the element. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| boolean | 是否成功对已有数据进行替换，成功返回true，失败返回false。 |
+| boolean | Operation result. The value **true** is returned if the element is replaced; otherwise, **false** is returned. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 10200011 | The replace method cannot be bound. |
+| [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) | The replace method cannot be bound. |
 
 ## Examples
 
@@ -691,7 +691,7 @@ console.info("result:", result);  // result: true
 set(key: K, value: V): Object
 ```
 
-向HashMap中添加或更新一个键值对。若key不存在，则添加新的键值对；若key已存在，则更新其对应的value。
+Adds or updates an element in this HashMap.
 
 **Since:** 8
 
@@ -707,20 +707,20 @@ set(key: K, value: V): Object
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| key | K | Yes | 添加或更新的键名。若key已存在，将替换对应的value。 |
-| value | V | Yes | 添加或更新的值。 |
+| key | K | Yes | Key of the target element. |
+| value | V | Yes | Value of the target element. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Object | 返回包含添加或更新后元素的当前HashMap实例。 |
+| Object | HashMap that contains the new element. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 10200011 | The set method cannot be bound. |
+| [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) | The set method cannot be bound. |
 
 ## Examples
 
@@ -736,7 +736,7 @@ console.info("result:", hashMap.get("squirrel"));  // result: 123
 setAll(map: HashMap<K, V>): void
 ```
 
-将指定HashMap中的所有元素设置到当前HashMap中，若当前HashMap中已存在相同key，则对应value会被覆盖。
+Adds all elements in a **HashMap** instance to this HashMap.
 
 **Since:** 8
 
@@ -752,13 +752,13 @@ setAll(map: HashMap<K, V>): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| map | [HashMap](arkts-arkts-util-hashmap-hashmap-c.md)&lt;K, V&gt; | Yes | 需要将其全部元素添加到当前HashMap的源HashMap对象。若map与当前HashMap存在重复key，map中的value将替换当前HashMap中对应key的value。 |
+| map | [HashMap](arkts-arkts-util-hashmap-hashmap-c.md)&lt;K, V&gt; | Yes | HashMap** instance whose elements are to be added to the current HashMap. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 10200011 | The setAll method cannot be bound. |
+| [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) | The setAll method cannot be bound. |
 
 ## Examples
 
@@ -779,7 +779,7 @@ console.info("result:", result);  // result: true
 values(): IterableIterator<V>
 ```
 
-返回新迭代器对象，包含此HashMap中所有键对应的值。
+Returns an iterator that contains all the values in this HashMap.
 
 **Since:** 8
 
@@ -795,13 +795,13 @@ values(): IterableIterator<V>
 
 | Type | Description |
 | --- | --- |
-| [IterableIterator](arkts-arkts-iterator-iterableiterator-i.md)&lt;V&gt; | 返回包含此HashMap中所有value的迭代器。 |
+| [IterableIterator](arkts-arkts-iterator-iterableiterator-i.md)&lt;V&gt; | Iterator obtained. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 10200011 | The values method cannot be bound. |
+| [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) | The values method cannot be bound. |
 
 ## Examples
 
@@ -823,7 +823,7 @@ for (let value of values) {
 length: number
 ```
 
-HashMap的元素个数。
+Number of elements in a HashMap.
 
 **Type:** number
 

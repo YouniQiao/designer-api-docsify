@@ -14,7 +14,7 @@
 HIGH = 0
 ```
 
-不受限动态范围，最大限度进行图片提亮。
+Allow image content to use an unrestricted extended range.
 
 **Since:** 23
 
@@ -32,7 +32,7 @@ HIGH = 0
 CONSTRAINT = 1
 ```
 
-受限动态范围，受限进行图片提亮。
+Allow image content to use some extended range.
 
 **Since:** 23
 
@@ -50,7 +50,7 @@ CONSTRAINT = 1
 STANDARD = 2
 ```
 
-标准动态范围，不进行图片提亮。
+Restrict the image content dynamic range to the standard range.
 
 **Since:** 23
 

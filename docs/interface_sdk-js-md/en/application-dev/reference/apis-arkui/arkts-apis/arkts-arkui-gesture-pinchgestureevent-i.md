@@ -1,6 +1,6 @@
 # PinchGestureEvent
 
-继承自[BaseGestureEvent](arkts-arkui-basegestureevent-i.md)。可将该对象作为[onGestureJudgeBegin](arkts-arkui-common-commonmethod-i.md#ongesturejudgebegin)的event参数来传递。
+Defines event info for pinch gesture.
 
 **Inheritance/Implementation:** PinchGestureEvent extends [BaseGestureEvent](arkts-arkui-basegestureevent-i.md)
 
@@ -18,7 +18,7 @@
 pinchCenterX: double
 ```
 
-捏合手势中心点相对于当前组件元素原始区域左上角x轴坐标，单位为vp。
+X-axis coordinate of the kneading center point.The unit is vp.
 
 **Type:** double
 
@@ -38,7 +38,7 @@ pinchCenterX: double
 pinchCenterY: double
 ```
 
-捏合手势中心点相对于当前组件元素原始区域左上角y轴坐标，单位为vp。
+Y-axis coordinate of the kneading center point.The unit is vp.
 
 **Type:** double
 
@@ -58,7 +58,7 @@ pinchCenterY: double
 scale: double
 ```
 
-缩放比例。
+Scaling ratio.
 
 **Type:** double
 

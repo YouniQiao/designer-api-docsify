@@ -1,6 +1,6 @@
 # OPENFLAGS (System API)
 
-枚举，目前支持的文件打开的标志位。
+Enumerates the file open modes.
 
 **Since:** 9
 
@@ -22,7 +22,7 @@
 READ = 0o0
 ```
 
-读模式。
+Read mode.
 
 **Since:** 9
 
@@ -46,7 +46,7 @@ READ = 0o0
 WRITE = 0o1
 ```
 
-写模式。
+Write mode.
 
 **Since:** 9
 
@@ -70,7 +70,7 @@ WRITE = 0o1
 WRITE_READ = 0o2
 ```
 
-读写模式。
+Read/Write mode.
 
 **Since:** 9
 

@@ -1,11 +1,5 @@
 # @ohos.arkui.shape
 
-## 导入模块
-
-```TypeScript
-import { RectShape, CircleShape, EllipseShape, PathShape } from 'kits/@kit.ArkUI';
-```
-
 ## 汇总
 
 ### 类

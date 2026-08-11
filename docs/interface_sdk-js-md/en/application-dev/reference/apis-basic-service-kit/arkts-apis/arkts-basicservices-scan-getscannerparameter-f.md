@@ -12,7 +12,7 @@ import { scan } from 'kits/@kit.BasicServicesKit';
 function getScannerParameter(scannerId: string): Promise<ScannerParameter[]>
 ```
 
-获取扫描仪参数。使用Promise异步回调。
+Obtains scanner parameters. This API uses a promise to return the result.
 
 **Since:** 20
 
@@ -28,7 +28,7 @@ function getScannerParameter(scannerId: string): Promise<ScannerParameter[]>
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| scannerId | string | Yes | 扫描仪的ID。 |
+| scannerId | string | Yes | Scanner ID. |
 
 **Return value:**
 
@@ -40,7 +40,7 @@ function getScannerParameter(scannerId: string): Promise<ScannerParameter[]>
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 201 | Permission denied. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
 
 ## Examples
 

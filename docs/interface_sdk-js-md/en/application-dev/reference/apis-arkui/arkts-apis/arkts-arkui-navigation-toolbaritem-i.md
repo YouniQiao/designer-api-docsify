@@ -1,6 +1,6 @@
 # ToolbarItem
 
-工具栏可配置参数。
+Defines configurable parameters for toolbar item.
 
 **Since:** 23
 
@@ -16,7 +16,7 @@
 action?: () => void
 ```
 
-当前选项被选中的事件回调。
+Trigger by navigation toolbar item click.
 
 **Since:** 23
 
@@ -34,7 +34,7 @@ action?: () => void
 activeIcon?: ResourceStr
 ```
 
-工具栏单个选项处于ACTIVE态时的图标资源路径。
+The icon of navigation toolbar item in active state.
 
 **Type:** [ResourceStr](arkts-arkui-resourcestr-t.md)
 
@@ -54,10 +54,7 @@ activeIcon?: ResourceStr
 activeSymbolIcon?: SymbolGlyphModifier
 ```
 
-工具栏单个选项处于ACTIVE态时的symbol资源（优先级高于activeIcon）。  
-**说明：**不支持通过[SymbolGlyphModifier](../arkts-components/arkts-arkui-symbolglyphmodifier-t.md/arkts-arkui-symbolglyphmodifier-t.md)对象的
-[fontSize](../../../reference/apis-arkui/arkui-ts/ts-basic-components-symbolGlyph.md#fontsize)属性修改图标大小、  
-[effectStrategy](../../../reference/apis-arkui/arkui-ts/ts-basic-components-symbolGlyph.md#effectstrategy)属性修改动效、[symbolEffect](../../../reference/apis-arkui/arkui-ts/ts-basic-components-symbolGlyph.md#symboleffect12)属性修改动效类型。
+The symbol of navigation toolbar item in active state.
 
 **Type:** [SymbolGlyphModifier](../arkts-components/arkts-arkui-symbolglyphmodifier-t.md)
 
@@ -77,7 +74,7 @@ activeSymbolIcon?: SymbolGlyphModifier
 icon?: ResourceStr
 ```
 
-工具栏单个选项的图标资源路径。
+The icon of navigation toolbar item.
 
 **Type:** [ResourceStr](arkts-arkui-resourcestr-t.md)
 
@@ -97,7 +94,7 @@ icon?: ResourceStr
 status?: ToolbarItemStatus
 ```
 
-工具栏单个选项的状态。默认值： ToolbarItemStatus.NORMAL。
+The state of navigation toolbar item.Default value: ToolbarItemStatus.NORMAL.
 
 **Type:** [ToolbarItemStatus](../arkts-components/arkts-arkui-toolbaritemstatus-e.md)
 
@@ -117,7 +114,7 @@ status?: ToolbarItemStatus
 symbolIcon?: SymbolGlyphModifier
 ```
 
-工具栏单个选项的symbol资源（优先级高于icon）。
+The symbol of navigation toolbar item.
 
 **Type:** [SymbolGlyphModifier](../arkts-components/arkts-arkui-symbolglyphmodifier-t.md)
 
@@ -137,7 +134,7 @@ symbolIcon?: SymbolGlyphModifier
 value: ResourceStr | undefined
 ```
 
-工具栏单个选项的显示文本。
+The value of navigation toolbar item, default value is "", undefined means set to default value.
 
 **Type:** [ResourceStr](arkts-arkui-resourcestr-t.md) \| undefined
 

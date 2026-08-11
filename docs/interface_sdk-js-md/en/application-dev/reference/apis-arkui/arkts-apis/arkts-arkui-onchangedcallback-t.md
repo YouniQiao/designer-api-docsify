@@ -4,7 +4,7 @@
 declare type OnChangedCallback = (callbackParam: CallbackParamV2) => void
 ```
 
-节点事件回调函数类型。
+Callback method of event registration and processing.
 
 **Since:** 26.0.0
 

@@ -8,7 +8,7 @@ export declare function TextClock(
 ): TextClockAttribute
 ```
 
-创建文本时钟组件。
+Defines the TextClock component.
 
 **Since:** 23
 
@@ -24,7 +24,7 @@ export declare function TextClock(
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| options | [TextClockOptions](../arkts-components/arkts-arkui-textclockoptions-i.md) | No | 通过文本显示当前系统时间的组件参数。 |
+| options | [TextClockOptions](../arkts-components/arkts-arkui-textclockoptions-i.md) | No | text clock options. |
 
 **Return value:**
 
@@ -41,11 +41,11 @@ export declare function TextClock(
 ): TextClockAttribute
 ```
 
-定义TextClock组件。
+Defines TextClock Component.
 
-**Since:** 26.0.0
+**Since:** 26.1.0
 
-**ArkTS mode:** ArkTS-Sta only, since version 26.0.0.
+**ArkTS mode:** ArkTS-Sta only, since version 26.1.0.
 
 **Decorator:** @Builder
 
@@ -59,7 +59,7 @@ export declare function TextClock(
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| style | [CustomBuilderT](../arkts-components/arkts-arkui-custombuildert-t.md)&lt;TextClockAttribute&gt; | Yes | TextClock属性的实例。 |
+| style | [CustomBuilderT](../arkts-components/arkts-arkui-custombuildert-t.md)&lt;TextClockAttribute&gt; | Yes | TextClock attribute instance |
 
 **Return value:**
 

@@ -1,12 +1,12 @@
 # Button
 
-按钮组件，可快速创建不同样式的按钮。
+The **Button** component can be used to create different types of buttons.
 
-> **说明：**
+> **NOTE**
 
-## 子组件
+## Child Components
 
-可以包含单个子组件。
+This component can contain only one child component.
 
 ## Button
 
@@ -14,7 +14,7 @@
 Button()
 ```
 
-创建一个空按钮。
+Creates an empty button.
 
 **Since:** 7
 
@@ -34,7 +34,7 @@ Button()
 Button(options: ButtonOptions)
 ```
 
-创建可以包含单个子组件的按钮。未通过该接口设置时，则按照ButtonOptions中各参数的默认值配置。
+Creates a button that can contain a single child component.
 
 **Since:** 7
 
@@ -52,7 +52,7 @@ Button(options: ButtonOptions)
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| options | [ButtonOptions](../arkts-apis/arkts-arkui-button-buttonoptions-i.md) | Yes | 配置按钮的显示样式。 |
+| options | [ButtonOptions](../arkts-apis/arkts-arkui-button-buttonoptions-i.md) | Yes | Button settings. |
 
 ## Button
 
@@ -60,9 +60,9 @@ Button(options: ButtonOptions)
 Button(label: ResourceStr, options?: ButtonOptions)
 ```
 
-使用文本内容创建相应的按钮组件，此时Button无法包含子组件。
+Creates a button based on text content. In this case, the component cannot contain child components.
 
-文本内容默认单行显示。
+By default, the text content is displayed in a one line.
 
 **Since:** 7
 
@@ -80,8 +80,8 @@ Button(label: ResourceStr, options?: ButtonOptions)
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| label | [ResourceStr](../arkts-apis/arkts-arkui-resourcestr-t.md) | Yes | 按钮文本内容。<br/>**说明：** 当文本字符的长度超过按钮本身的宽度时，文本将会被截断。 |
-| options | [ButtonOptions](../arkts-apis/arkts-arkui-button-buttonoptions-i.md) | No | 配置按钮的显示样式。 <br/> 未设置时，则按照ButtonOptions中各参数的默认值配置。 |
+| label | [ResourceStr](../arkts-apis/arkts-arkui-resourcestr-t.md) | Yes | Button text.<br>Note: If the text is longer than the width of the button, it is truncated. |
+| options | [ButtonOptions](../arkts-apis/arkts-arkui-button-buttonoptions-i.md) | No | Button settings. |
 
 ## Summary
 

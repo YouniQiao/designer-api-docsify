@@ -1,10 +1,10 @@
 # AwarenessItem（系统接口）
 
-Provides page information, which includes:
+提供页面信息。包括：
 
-* Basic page information, such as page content, links, and screenshots.  
-* Page entity information, such as the title and body of a page article.  
-* Page interaction information, such as clicks and scrolling.
+* 页面基础信息，如页面内容、链接、截屏。  
+* 页面实体信息，如页面文章的标题、正文信息。  
+* 页面交互信息，如点击、滚动信息。
 
 **起始版本：** 23
 
@@ -16,21 +16,15 @@ Provides page information, which includes:
 
 **系统接口：** 此接口为系统接口。
 
-## 导入模块
-
-```TypeScript
-import { onScreen } from 'kits/@kit.MultimodalAwarenessKit';
-```
-
 ## itemInfo
 
 ```TypeScript
 itemInfo: Record<string, Object>
 ```
 
-Entity information of the awareness result, including the content, links, screenshots, and other entity information.
+感知结果实体信息，包括内容、链接、截屏和其它实体信息。
 
-**类型：** [Record](../../apis-default/arkts-apis/arkts-record-t.md)&lt;string, Object&gt;
+**类型：** Record&lt;string, Object&gt;
 
 **起始版本：** 23
 

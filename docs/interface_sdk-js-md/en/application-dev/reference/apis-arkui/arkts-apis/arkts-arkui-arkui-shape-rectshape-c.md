@@ -1,8 +1,6 @@
 # RectShape
 
-用于clipShape和maskShape接口的矩形形状。
-
-继承自[BaseShape](arkts-arkui-arkui-shape-baseshape-c.md)。
+Defines a rect drawing class.
 
 **Inheritance/Implementation:** RectShape extends [BaseShape](arkts-arkui-arkui-shape-baseshape-c.md)
 
@@ -26,7 +24,7 @@ import { RectShape, CircleShape, EllipseShape, PathShape } from 'kits/@kit.ArkUI
 constructor(options?: RectShapeOptions | RoundRectShapeOptions)
 ```
 
-创建RectShape对象。
+Constructor.
 
 **Since:** 23
 
@@ -42,7 +40,7 @@ constructor(options?: RectShapeOptions | RoundRectShapeOptions)
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| options | [RectShapeOptions](arkts-arkui-arkui-shape-rectshapeoptions-i.md) \| RoundRectShapeOptions | No | 矩形形状参数。 |
+| options | [RectShapeOptions](arkts-arkui-arkui-shape-rectshapeoptions-i.md) \| RoundRectShapeOptions | No |  |
 
 ## radius
 
@@ -50,7 +48,7 @@ constructor(options?: RectShapeOptions | RoundRectShapeOptions)
 radius(radius: double | string | Array<double | string>): this
 ```
 
-设置矩形形状的圆角半径。
+Sets the corner radius for RectShape.
 
 **Since:** 23
 
@@ -66,13 +64,13 @@ radius(radius: double | string | Array<double | string>): this
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| radius | double \| string \| Array&lt;double \| string&gt; | Yes | Array<double |
+| radius | double \| string \| Array&lt;double \| string&gt; | Yes |  |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| this | 返回RectShape对象。 |
+| this |  |
 
 ## radiusHeight
 
@@ -80,7 +78,7 @@ radius(radius: double | string | Array<double | string>): this
 radiusHeight(rHeight: double | string): this
 ```
 
-设置矩形形状圆角半径的高度。
+Sets the height of the corner radius for RectShape.
 
 **Since:** 23
 
@@ -96,13 +94,13 @@ radiusHeight(rHeight: double | string): this
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| rHeight | double \| string | Yes | 矩形形状圆角半径的高度。 &lt;br/&gt; 类型为number时取值范围是 [0, +∞)，类型为string时是[Length](arkts-arkui-length-t.md)。&lt;br/&gt;单位：vp&lt;br/&gt;取值为异常值时按照0vp处理。 |
+| rHeight | double \| string | Yes |  |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| this | 返回RectShape对象。 |
+| this |  |
 
 ## radiusWidth
 
@@ -110,7 +108,7 @@ radiusHeight(rHeight: double | string): this
 radiusWidth(rWidth: double | string): this
 ```
 
-设置矩形形状圆角半径的宽度。
+Sets the width of the corner radius for RectShape.
 
 **Since:** 23
 
@@ -126,11 +124,11 @@ radiusWidth(rWidth: double | string): this
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| rWidth | double \| string | Yes | 矩形形状圆角半径的宽度。&lt;br/&gt; 类型为double时取值范围是 [0, +∞)，类型为string时是[Length](arkts-arkui-length-t.md)。&lt;br/&gt;单位：vp&lt;br/&gt;取值为异常值时按照0vp处理。 |
+| rWidth | double \| string | Yes |  |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| this | 返回当前对象。 |
+| this |  |
 

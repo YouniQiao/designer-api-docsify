@@ -1,6 +1,6 @@
 # PackingSizeLimit
 
-图片编码的大小限制。
+Packing image size limit.
 
 **Since:** 26.0.0
 
@@ -22,7 +22,7 @@ import { image } from 'kits/@kit.ImageKit';
 level: AntiAliasingLevel
 ```
 
-缩放时采用的缩放算法。默认值是AntiAliasingLevel.NONE。
+Specify the scaling algorithm during zooming.
 
 **Type:** [AntiAliasingLevel](arkts-image-image-antialiasinglevel-e.md)
 
@@ -42,13 +42,7 @@ level: AntiAliasingLevel
 maxSize: Size
 ```
 
-最大编码尺寸。
-
-当指定的width或者height大于0时，原图尺寸超过限制将保持原宽高比进行缩放，确保图像尺寸不超过该边界。
-
-默认值为{width: 0, height: 0}，表示不限制编码尺寸。
-
-单位：像素（px）。
+Maximum packing size
 
 **Type:** [Size](../../apis-arkui/arkts-apis/arkts-arkui-window-size-i.md)
 

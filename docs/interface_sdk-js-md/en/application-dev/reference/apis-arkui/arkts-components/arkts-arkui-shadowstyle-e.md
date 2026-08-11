@@ -1,10 +1,10 @@
 # ShadowStyle
 
-组件阴影效果。
+enum Shadow style
 
-**Since:** 11
+**Since:** 10
 
-**ArkTS mode:** ArkTS-Dyn only, since version 11.
+**ArkTS mode:** ArkTS-Dyn only, since version 10.
 
 <!--Device-unnamed-declare enum ShadowStyle--><!--Device-unnamed-declare enum ShadowStyle-End-->
 
@@ -16,11 +16,11 @@
 OUTER_DEFAULT_XS = 0
 ```
 
-超小阴影。
+Mini shadow.
 
-**Since:** 11
+**Since:** 10
 
-**ArkTS mode:** ArkTS-Dyn only, since version 11.
+**ArkTS mode:** ArkTS-Dyn only, since version 10.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -36,11 +36,11 @@ OUTER_DEFAULT_XS = 0
 OUTER_DEFAULT_SM = 1
 ```
 
-小阴影。
+Small shadow.
 
-**Since:** 11
+**Since:** 10
 
-**ArkTS mode:** ArkTS-Dyn only, since version 11.
+**ArkTS mode:** ArkTS-Dyn only, since version 10.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -56,11 +56,11 @@ OUTER_DEFAULT_SM = 1
 OUTER_DEFAULT_MD = 2
 ```
 
-中阴影。
+Medium shadow.
 
-**Since:** 11
+**Since:** 10
 
-**ArkTS mode:** ArkTS-Dyn only, since version 11.
+**ArkTS mode:** ArkTS-Dyn only, since version 10.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -76,11 +76,11 @@ OUTER_DEFAULT_MD = 2
 OUTER_DEFAULT_LG = 3
 ```
 
-大阴影。
+Large shadow.
 
-**Since:** 11
+**Since:** 10
 
-**ArkTS mode:** ArkTS-Dyn only, since version 11.
+**ArkTS mode:** ArkTS-Dyn only, since version 10.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -96,11 +96,11 @@ OUTER_DEFAULT_LG = 3
 OUTER_FLOATING_SM = 4
 ```
 
-浮动小阴影。
+Floating small shadow.
 
-**Since:** 11
+**Since:** 10
 
-**ArkTS mode:** ArkTS-Dyn only, since version 11.
+**ArkTS mode:** ArkTS-Dyn only, since version 10.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -118,9 +118,9 @@ OUTER_FLOATING_MD = 5
 
 Floating medium shadow.
 
-**Since:** 11
+**Since:** 10
 
-**ArkTS mode:** ArkTS-Dyn only, since version 11.
+**ArkTS mode:** ArkTS-Dyn only, since version 10.
 
 **Model restriction:** This API can be used only in the stage model.
 

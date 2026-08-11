@@ -1,6 +1,6 @@
 # SensorAccuracy
 
-传感器数据的精度挡位。
+Enumerates the accuracy levels of sensor data.
 
 **Since:** 11
 
@@ -16,7 +16,7 @@
 ACCURACY_UNRELIABLE = 0
 ```
 
-传感器数据不可信，精度挡位最低，数据可靠性无法保证。
+The sensor data is unreliable.
 
 **Since:** 11
 
@@ -34,7 +34,7 @@ ACCURACY_UNRELIABLE = 0
 ACCURACY_LOW = 1
 ```
 
-传感器低挡位精度，数据精度较低，仅适用于粗略估算场景。
+The sensor data is at a low accuracy level.
 
 **Since:** 11
 
@@ -52,7 +52,7 @@ ACCURACY_LOW = 1
 ACCURACY_MEDIUM = 2
 ```
 
-传感器中挡位精度，数据精度中等，适用于一般应用场景。
+The sensor data is at a medium accuracy level.
 
 **Since:** 11
 
@@ -70,7 +70,7 @@ ACCURACY_MEDIUM = 2
 ACCURACY_HIGH = 3
 ```
 
-传感器高挡位精度，数据精度较高，适用于对精度要求严格的场景。
+The sensor data is at a high accuracy level.
 
 **Since:** 11
 

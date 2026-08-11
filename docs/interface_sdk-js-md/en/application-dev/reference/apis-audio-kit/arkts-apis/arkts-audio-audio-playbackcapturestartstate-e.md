@@ -1,6 +1,6 @@
 # PlaybackCaptureStartState
 
-表示调用[requestPlaybackCaptureStart](arkts-audio-audio-audiocapturer-i.md#requestplaybackcapturestart)后异步返回的内录启动状态的枚举。
+Defines the playback capture start state, which is returned asynchronously after calling {@link AudioCapturer.requestPlaybackCaptureStart} function.
 
 **Since:** 26.0.0
 
@@ -16,7 +16,7 @@
 STATE_SUCCESS = 0
 ```
 
-启动内录成功。
+Start playback capture success state.
 
 **Since:** 26.0.0
 
@@ -34,7 +34,7 @@ STATE_SUCCESS = 0
 STATE_FAILED = 1
 ```
 
-启动内录失败。原因是音频打断请求被拒绝或发生系统内部错误。
+Start playback capture failed state, because the request for interrupt is denied or meet system internal error.
 
 **Since:** 26.0.0
 
@@ -52,7 +52,7 @@ STATE_FAILED = 1
 STATE_NOT_AUTHORIZED = 2
 ```
 
-用户未授权，启动内录失败。
+Start playback capture but user not authorized state.
 
 **Since:** 26.0.0
 

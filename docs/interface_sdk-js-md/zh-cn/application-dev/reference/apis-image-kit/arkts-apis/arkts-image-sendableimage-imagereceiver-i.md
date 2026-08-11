@@ -12,12 +12,6 @@
 
 **系统能力：** SystemCapability.Multimedia.Image.ImageReceiver
 
-## 导入模块
-
-```TypeScript
-import { sendableImage } from 'kits/@kit.ImageKit';
-```
-
 ## getReceivingSurfaceId
 
 ```TypeScript

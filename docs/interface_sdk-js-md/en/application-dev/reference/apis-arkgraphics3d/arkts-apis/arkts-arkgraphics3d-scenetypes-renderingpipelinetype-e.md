@@ -1,6 +1,6 @@
 # RenderingPipelineType
 
-渲染管线类型枚举.
+The enum of rendering pipeline type.
 
 **Since:** 21
 
@@ -16,7 +16,7 @@
 FORWARD_LIGHTWEIGHT = 0
 ```
 
-轻量级前向渲染管线，直接渲染到后缓冲区.该管线只能在着色器中实现逐像素效果（例如色调映射）,不支持复杂效果（例如光晕）.
+Lightweight forward pipeline which renders directly to back buffer.This pipeline can only do per-pixel effects (e.g. tonemapping) in the shader,complex effects (e.g. bloom) are not supported.
 
 **Since:** 21
 
@@ -32,7 +32,7 @@ FORWARD_LIGHTWEIGHT = 0
 FORWARD = 1
 ```
 
-高质量前向渲染管线.用于复杂的视觉效果（例如光晕）.
+Forward pipeline for high quality rendering.Use this for complex visual effects (e.g. bloom).
 
 **Since:** 21
 

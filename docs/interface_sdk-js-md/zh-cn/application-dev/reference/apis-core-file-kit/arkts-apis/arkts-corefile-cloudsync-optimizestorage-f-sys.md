@@ -1,11 +1,5 @@
 # optimizeStorage（系统接口）
 
-## 导入模块
-
-```TypeScript
-import { cloudSync } from 'kits/@kit.CoreFileKit';
-```
-
 ## optimizeStorage
 
 ```TypeScript
@@ -36,12 +30,14 @@ function optimizeStorage():Promise<void>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 201 | Permission verification failed, usually the result returned by VerifyAccessToken. |
-| 202 | Permission verification failed, application which is not a system application uses system API. &lt;br&gt;2.Incorrect parameter types. |
+| [201](../../errorcode-universal.md#201-权限校验失败) | Permission verification failed, usually the result returned by VerifyAccessToken. |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed, application which is not a system application uses system API. &lt;br&gt;2.Incorrect parameter types. |
 | 13600001 | IPC error. |
 | 13900042 | Unknown error. |
 
 ## 示例
+
+ArkTS-Dyn示例：
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -50,6 +46,18 @@ cloudSync.optimizeStorage().then(() => {
   console.info("optimize storage successfully");   // 前台UX按需阻塞等待
 }).catch((err: BusinessError) => {
   console.error(`optimize storage failed with error message: ${err.message}, error code: ${err.code}`);
+});
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+cloudSync.optimizeStorage().then<void>((): void => {
+  console.info("optimize storage successfully");   // 前台UX按需阻塞等待
+}).catch((err: BusinessError<void>): void => {
+  console.error("optimize storage failed with error message: " + err.message + ", error code: " + err.code);
 });
 ```
 

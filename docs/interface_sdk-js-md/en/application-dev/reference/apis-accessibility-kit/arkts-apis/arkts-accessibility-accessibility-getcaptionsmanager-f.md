@@ -12,7 +12,7 @@ import { accessibility } from 'kits/@kit.AccessibilityKit';
 function getCaptionsManager(): CaptionsManager
 ```
 
-获取无障碍字幕配置管理实例。
+Obtains a **CaptionsManager** instance.
 
 **Since:** 8
 
@@ -28,7 +28,7 @@ function getCaptionsManager(): CaptionsManager
 
 | Type | Description |
 | --- | --- |
-| [CaptionsManager](arkts-accessibility-accessibility-captionsmanager-i.md) | 无障碍字幕配置管理。 |
+| [CaptionsManager](arkts-accessibility-accessibility-captionsmanager-i.md) | Captions configuration. |
 
 ## Examples
 

@@ -1,8 +1,8 @@
 # CameraErrorCode
 
-相机错误码。
+Enumerates the camera error codes,
 
-接口使用不正确以及on接口监听error状态返回。
+which are returned when an API call is incorrect or the **on()** API is used to listen for the error status.
 
 **Since:** 10
 
@@ -18,7 +18,7 @@
 INVALID_ARGUMENT = 7400101
 ```
 
-参数缺失或者参数类型不对。
+A parameter is missing or the parameter type is incorrect.
 
 **Since:** 10
 
@@ -36,7 +36,7 @@ INVALID_ARGUMENT = 7400101
 OPERATION_NOT_ALLOWED = 7400102
 ```
 
-操作流程不对，不允许。
+The operation is not allowed.
 
 **Since:** 10
 
@@ -54,7 +54,7 @@ OPERATION_NOT_ALLOWED = 7400102
 SESSION_NOT_CONFIG = 7400103
 ```
 
-session 未配置返回。
+The session is not configured.
 
 **Since:** 10
 
@@ -72,7 +72,7 @@ session 未配置返回。
 SESSION_NOT_RUNNING = 7400104
 ```
 
-session 未运行返回。
+The session is not running.
 
 **Since:** 10
 
@@ -90,7 +90,7 @@ session 未运行返回。
 SESSION_CONFIG_LOCKED = 7400105
 ```
 
-session 配置已锁定返回。
+The session configuration is locked.
 
 **Since:** 10
 
@@ -108,7 +108,7 @@ session 配置已锁定返回。
 DEVICE_SETTING_LOCKED = 7400106
 ```
 
-设备设置已锁定返回。
+The device setting is locked.
 
 **Since:** 10
 
@@ -126,7 +126,7 @@ DEVICE_SETTING_LOCKED = 7400106
 CONFLICT_CAMERA = 7400107
 ```
 
-设备重复打开返回。
+The device is already started.
 
 **Since:** 10
 
@@ -144,7 +144,7 @@ CONFLICT_CAMERA = 7400107
 DEVICE_DISABLED = 7400108
 ```
 
-安全原因相机被禁用。
+The camera is disabled for security reasons.
 
 **Since:** 10
 
@@ -162,7 +162,7 @@ DEVICE_DISABLED = 7400108
 DEVICE_PREEMPTED = 7400109
 ```
 
-相机被抢占导致无法使用。
+The camera is preempted.
 
 **Since:** 10
 
@@ -180,7 +180,7 @@ DEVICE_PREEMPTED = 7400109
 UNRESOLVED_CONFLICTS_WITH_CURRENT_CONFIGURATIONS = 7400110
 ```
 
-与当前配置存在冲突。
+The configuration conflicts with the current configuration.
 
 **Since:** 12
 
@@ -198,7 +198,7 @@ UNRESOLVED_CONFLICTS_WITH_CURRENT_CONFIGURATIONS = 7400110
 SERVICE_FATAL_ERROR = 7400201
 ```
 
-相机服务异常返回。
+The camera service is abnormal.
 
 **Since:** 10
 

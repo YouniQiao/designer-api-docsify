@@ -1,6 +1,6 @@
 # LightSource (System API)
 
-一个组件支持添加1个光源。
+LightSource info
 
 **Since:** 23
 
@@ -18,9 +18,7 @@
 color?: ResourceColor
 ```
 
-光源颜色。
-
-默认值：Color.White
+Defines the PointLight light color.
 
 **Type:** [ResourceColor](arkts-arkui-resourcecolor-t.md)
 
@@ -42,7 +40,7 @@ color?: ResourceColor
 intensity: double
 ```
 
-光源强度，建议取值范围0-1。当光源强度为0时，光源不发光。
+Defines the PointLight light intensity.
 
 **Type:** double
 
@@ -64,7 +62,7 @@ intensity: double
 positionX: Dimension
 ```
 
-光源相对于当前组件的X坐标。
+Defines the PointLight light positionX.
 
 **Type:** [Dimension](arkts-arkui-dimension-t.md)
 
@@ -86,7 +84,7 @@ positionX: Dimension
 positionY: Dimension
 ```
 
-光源相对于当前组件的Y坐标。
+Defines the PointLight light positionX.
 
 **Type:** [Dimension](arkts-arkui-dimension-t.md)
 
@@ -108,7 +106,7 @@ positionY: Dimension
 positionZ: Dimension
 ```
 
-光源高度。光源越高，照射范围越大。
+Defines the PointLight light positionX.
 
 **Type:** [Dimension](arkts-arkui-dimension-t.md)
 

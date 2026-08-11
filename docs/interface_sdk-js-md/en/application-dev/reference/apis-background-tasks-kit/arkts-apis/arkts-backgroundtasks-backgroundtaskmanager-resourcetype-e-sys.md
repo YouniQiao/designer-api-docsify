@@ -1,6 +1,6 @@
 # ResourceType (System API)
 
-能效资源类型。
+Enumerates the efficiency resource types.
 
 **Since:** 9
 
@@ -18,7 +18,7 @@
 CPU = 1
 ```
 
-CPU资源，申请后应用进程不被挂起。
+CPU resource. Such type of resource prevents an application from being suspended.
 
 **Since:** 9
 
@@ -36,7 +36,7 @@ CPU资源，申请后应用进程不被挂起。
 COMMON_EVENT = 1 << 1
 ```
 
-公共事件资源，申请后应用进程被挂起后，可以收到公共事件。
+Common event resource. Such type of resource ensures that an application in the suspended state can receive common events.
 
 **Since:** 9
 
@@ -54,7 +54,7 @@ COMMON_EVENT = 1 << 1
 TIMER = 1 << 2
 ```
 
-计时器，申请后应用进程被挂起后，Timer仍然可以唤醒应用。
+Timer resource. Such type of resource ensures that an application in the suspended state can be woken up by system timers.
 
 **Since:** 9
 
@@ -72,7 +72,7 @@ TIMER = 1 << 2
 WORK_SCHEDULER = 1 << 3
 ```
 
-延迟任务资源，申请后延迟任务管控变宽松。
+Deferred task resource. Such type of resource provides a loose control policy for an application.
 
 **Since:** 9
 
@@ -90,7 +90,7 @@ WORK_SCHEDULER = 1 << 3
 BLUETOOTH = 1 << 4
 ```
 
-蓝牙资源，申请后应用进程被挂起后，蓝牙相关事件仍然可以唤醒应用。
+Bluetooth resource. Such type of resource ensures that an application in the suspended state can be woken up by Bluetooth-related events.
 
 **Since:** 9
 
@@ -108,7 +108,7 @@ BLUETOOTH = 1 << 4
 GPS = 1 << 5
 ```
 
-GPS资源，申请后应用进程被挂起后，GPS相关事件可以唤醒应用。
+GPS resource. Such type of resource ensures that an application in the suspended state can be woken up by GPS-related events.
 
 **Since:** 9
 
@@ -126,7 +126,7 @@ GPS资源，申请后应用进程被挂起后，GPS相关事件可以唤醒应�
 AUDIO = 1 << 6
 ```
 
-音频资源，有音频播放时对应的应用进程不被挂起。
+Audio resource. Such type of resource prevents an application from being suspended when the application has an audio being played.
 
 **Since:** 9
 
@@ -144,7 +144,7 @@ AUDIO = 1 << 6
 RUNNING_LOCK = 1 << 7
 ```
 
-RUNNING_LOCK资源，申请后挂起状态不会代理RUNNING_BACKGROUND锁。
+RUNNING_LOCK resources are not proxied when the application is suspended.
 
 **Since:** 10
 
@@ -162,7 +162,7 @@ RUNNING_LOCK资源，申请后挂起状态不会代理RUNNING_BACKGROUND锁。
 SENSOR = 1 << 8
 ```
 
-申请后不拦截Sensor回调。
+Sensor callbacks are not intercepted.
 
 **Since:** 10
 

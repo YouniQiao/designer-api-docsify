@@ -20,12 +20,6 @@
 
 **系统能力：** SystemCapability.SelectionInput.Selection
 
-## 导入模块
-
-```TypeScript
-import { SelectionExtensionAbility } from 'kits/@kit.BasicServicesKit';
-```
-
 ## onConnect
 
 ```TypeScript
@@ -59,10 +53,10 @@ onConnect(want: Want): rpc.RemoteObject
 ## 示例
 
 ```TypeScript
-import { SelectionExtensionAbility } from '@kit.BasicServicesKit';
-import { rpc } from '@kit.IPCKit';
+import SelectionExtensionAbility from '@ohos.selectionInput.SelectionExtensionAbility';
+import rpc from '@ohos.rpc';
 import { Want } from '@kit.AbilityKit';
-import { hilog } from '@kit.PerformanceAnalysisKit';
+import hilog from '@ohos.hilog';
 
 const TAG: string = '[SelectionExtensionAbility]';
 
@@ -116,8 +110,8 @@ onDisconnect(): void
 ## 示例
 
 ```TypeScript
-import { SelectionExtensionAbility } from '@kit.BasicServicesKit';
-import { hilog } from '@kit.PerformanceAnalysisKit';
+import SelectionExtensionAbility from '@ohos.selectionInput.SelectionExtensionAbility';
+import hilog from '@ohos.hilog';
 
 const TAG: string = '[SelectionExtensionAbility]';
 

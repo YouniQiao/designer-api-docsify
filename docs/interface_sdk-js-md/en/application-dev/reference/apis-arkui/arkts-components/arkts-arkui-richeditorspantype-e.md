@@ -1,6 +1,6 @@
 # RichEditorSpanType
 
-Span类型信息。
+Provides the span type information.
 
 **Since:** 10
 
@@ -16,9 +16,7 @@ Span类型信息。
 TEXT = 0
 ```
 
-Span类型为文字。 
-
- 
+The span type is text.
 
 **Since:** 10
 
@@ -38,7 +36,7 @@ Span类型为文字。
 IMAGE = 1
 ```
 
-Span类型为图像。
+The span type is image.
 
 **Since:** 10
 
@@ -58,7 +56,7 @@ Span类型为图像。
 MIXED = 2
 ```
 
-Span类型为图文混合。
+The span type is image and text.
 
 **Since:** 10
 
@@ -78,7 +76,7 @@ Span类型为图文混合。
 BUILDER = 3
 ```
 
-Span类型为BuilderSpan。
+The span type is BuilderSpan.
 
 **Since:** 12
 
@@ -98,7 +96,7 @@ Span类型为BuilderSpan。
 DEFAULT = 4
 ```
 
-注册此类型的菜单，但未注册TEXT、IMAGE、MIXED、BUILDER菜单时，文字类型、图像类型、图文混合类型、BuilderSpan类型都会触发并显示此类型对应的菜单。
+When this type is registered but **TEXT**, **IMAGE**, **MIXED**, or **BUILDER** types are not registered, this type will be triggered and displayed for those registered types.
 
 **Since:** 15
 

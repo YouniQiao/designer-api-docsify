@@ -45,8 +45,7 @@ Queries usage information about each bundle within a specified period at a speci
 ## Examples
 
 ```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-import { bundleState } from '@kit.BackgroundTasksKit';
+import { BusinessError } from '@ohos.base';
 
 bundleState.queryBundleStateInfoByInterval(bundleState.IntervalType.BY_OPTIMIZED, 0, 20000000000000, (err: BusinessError, res: Array<bundleState.BundleStateInfo>) => {
   if (err) {
@@ -105,8 +104,7 @@ Queries usage information about each bundle within a specified period at a speci
 ## Examples
 
 ```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-import { bundleState } from '@kit.BackgroundTasksKit';
+import { BusinessError } from '@ohos.base';
 
 bundleState.queryBundleStateInfoByInterval(bundleState.IntervalType.BY_OPTIMIZED, 0, 20000000000000).then((res: Array<bundleState.BundleStateInfo>) => {
   console.info('BUNDLE_ACTIVE queryBundleStateInfoByInterval promise success.');

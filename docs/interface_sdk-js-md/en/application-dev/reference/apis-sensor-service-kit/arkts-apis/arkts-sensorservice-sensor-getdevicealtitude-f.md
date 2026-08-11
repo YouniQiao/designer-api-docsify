@@ -12,7 +12,7 @@ import { sensor } from 'kits/@kit.SensorServiceKit';
 function getDeviceAltitude(seaPressure: double, currentPressure: double, callback: AsyncCallback<double>): void
 ```
 
-根据气压值获取海拔高度，使用Callback异步方式返回结果。
+Obtains the altitude based on the atmospheric pressure. This API uses an asynchronous callback to return the result.
 
 **Since:** 9
 
@@ -26,16 +26,16 @@ function getDeviceAltitude(seaPressure: double, currentPressure: double, callbac
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| seaPressure | ArkTS-Dyn: number  <br>ArkTS-Sta：double | Yes | 海平面气压值，单位为hPa。 |
-| currentPressure | ArkTS-Dyn: number  <br>ArkTS-Sta：double | Yes | 指定的气压值，单位为hPa。 |
-| callback | ArkTS-Dyn: [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;number&gt;  <br>ArkTS-Sta：[AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;double&gt; | Yes | 回调函数，异步返回指定的气压值对应的海拔高度，单位为米。 |
+| seaPressure | ArkTS-Dyn: number  <br>ArkTS-Sta：double | Yes | Sea-level atmospheric pressure, in hPa. |
+| currentPressure | ArkTS-Dyn: number  <br>ArkTS-Sta：double | Yes | Specified atmospheric pressure, in hPa. |
+| callback | ArkTS-Dyn: [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;number&gt;  <br>ArkTS-Sta：[AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;double&gt; | Yes | Callback used to return the altitude, in meters. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt; 2. Incorrect parameter types; 3. Parameter verification failed. |
-| 14500101 | Service exception. Possible causes: 1. Sensor hdf service exception; &lt;br&gt; 2. Sensor service ipc exception;3. Sensor data channel exception. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| [14500101](../errorcode-sensor.md#14500101-service-exception) | Service exception. Possible causes: 1. Sensor hdf service exception; &lt;br&gt; 2. Sensor service ipc exception;3. Sensor data channel exception. |
 
 ## Examples
 
@@ -67,7 +67,7 @@ try {
 function getDeviceAltitude(seaPressure: double, currentPressure: double): Promise<double>
 ```
 
-根据气压值获取海拔高度，使用Promise异步方式返回结果。
+Obtains the altitude based on the atmospheric pressure. This API uses a promise to return the result.
 
 **Since:** 9
 
@@ -81,21 +81,21 @@ function getDeviceAltitude(seaPressure: double, currentPressure: double): Promis
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| seaPressure | ArkTS-Dyn: number  <br>ArkTS-Sta：double | Yes | 海平面气压值，单位为hPa。 |
-| currentPressure | ArkTS-Dyn: number  <br>ArkTS-Sta：double | Yes | 指定的气压值，单位为hPa。 |
+| seaPressure | ArkTS-Dyn: number  <br>ArkTS-Sta：double | Yes | Sea-level atmospheric pressure, in hPa. |
+| currentPressure | ArkTS-Dyn: number  <br>ArkTS-Sta：double | Yes | Specified atmospheric pressure, in hPa. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| ArkTS-Dyn: Promise&lt;number&gt;  <br>ArkTS-Sta：Promise&lt;double&gt; | Promise对象，使用异步方式返回指定的气压值对应的海拔高度，单位为米。 |
+| ArkTS-Dyn: Promise&lt;number&gt;  <br>ArkTS-Sta：Promise&lt;double&gt; | Promise used to return the altitude, in meters. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt; 2. Incorrect parameter types; 3. Parameter verification failed. |
-| 14500101 | Service exception. Possible causes: 1. Sensor hdf service exception; &lt;br&gt; 2. Sensor service ipc exception;3. Sensor data channel exception. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| [14500101](../errorcode-sensor.md#14500101-service-exception) | Service exception. Possible causes: 1. Sensor hdf service exception; &lt;br&gt; 2. Sensor service ipc exception;3. Sensor data channel exception. |
 
 ## Examples
 

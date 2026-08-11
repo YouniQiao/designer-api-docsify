@@ -12,16 +12,16 @@ The module defines the application information. An application can obtain its ow
 
 | Name | Description |
 | --- | --- |
-| [ApplicationInfo](arkts-ability-applicationinfo-i.md) | 应用程序信息。 |
-| [ModuleMetadata](arkts-ability-applicationinfo-modulemetadata-i.md) | 描述模块的元数据信息。 |
-| [MultiAppMode](arkts-ability-applicationinfo-multiappmode-i.md) | 表示[应用多开](../../../quick-start/multiInstance.md)模式。 |
+| [ApplicationInfo](arkts-ability-applicationinfo-i.md) | The module defines the application information. |
+| [ModuleMetadata](arkts-ability-applicationinfo-modulemetadata-i.md) | Describes the metadata of a module. |
+| [MultiAppMode](arkts-ability-applicationinfo-multiappmode-i.md) | Defines the [multi-app mode](../../../quick-start/multiInstance.md). |
 
 <!--Del-->
 ### Interfaces（系统接口）
 
 | Name | Description |
 | --- | --- |
-| [ApplicationInfo](arkts-ability-applicationinfo-i-sys.md) | 应用程序信息。 |
-| [PreinstalledApplicationInfo](arkts-ability-applicationinfo-preinstalledapplicationinfo-i-sys.md) | 预装应用的信息。 |
+| [ApplicationInfo](arkts-ability-applicationinfo-i-sys.md) | The module defines the application information. |
+| [PreinstalledApplicationInfo](arkts-ability-applicationinfo-preinstalledapplicationinfo-i-sys.md) | Indicates the information of preinstalled application. |
 <!--DelEnd-->
 

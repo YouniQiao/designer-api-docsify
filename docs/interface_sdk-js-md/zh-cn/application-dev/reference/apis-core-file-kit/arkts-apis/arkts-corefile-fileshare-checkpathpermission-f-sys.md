@@ -1,11 +1,5 @@
 # checkPathPermission（系统接口）
 
-## 导入模块
-
-```TypeScript
-import { fileShare } from 'kits/@kit.CoreFileKit';
-```
-
 ## checkPathPermission
 
 ```TypeScript
@@ -32,7 +26,7 @@ function checkPathPermission(tokenID: int, policies: Array<PathPolicyInfo>, poli
 | --- | --- | --- | --- |
 | tokenID | ArkTS-Dyn: number  <br>ArkTS-Sta：int | 是 | 目标应用的访问令牌标识。 |
 | policies | Array&lt;PathPolicyInfo&gt; | 是 | 需要查询授权状态的路径策略信息数组。 |
-| policyType | [PolicyType](arkts-corefile-fileshare-policytype-e.md) | 是 | 要查询的授权类型，使用TEMPORARY_TYPE查询临时授权，使用PERSISTENT_TYPE查询持久化授权。 |
+| policyType | [PolicyType](../../apis-mdm-kit/arkts-apis/arkts-mdm-systemmanager-policytype-e.md) | 是 | 要查询的授权类型，使用TEMPORARY_TYPE查询临时授权，使用PERSISTENT_TYPE查询持久化授权。 |
 
 **返回值：**
 
@@ -44,10 +38,10 @@ function checkPathPermission(tokenID: int, policies: Array<PathPolicyInfo>, poli
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 401 | Parameter error.Possible causes:1.Mandatory parameters are left unspecified; &lt;br&gt;2.Incorrect parameter types. |
-| 801 | Capability not supported. |
-| 201 | Permission verification failed, usually the result returned by VerifyAccessToken. |
-| 202 | The caller is not a system application |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error.Possible causes:1.Mandatory parameters are left unspecified; &lt;br&gt;2.Incorrect parameter types. |
+| [801](../../errorcode-universal.md#801-该设备不支持此api) | Capability not supported. |
+| [201](../../errorcode-universal.md#201-权限校验失败) | Permission verification failed, usually the result returned by VerifyAccessToken. |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | The caller is not a system application |
 | 13900042 | Out of memory. |
 
 ## 示例

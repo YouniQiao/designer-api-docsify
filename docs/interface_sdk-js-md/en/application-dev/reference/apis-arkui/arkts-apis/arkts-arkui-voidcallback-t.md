@@ -4,7 +4,7 @@
 declare type VoidCallback = () => void
 ```
 
-定义VoidCallback。
+Defines VoidCallback.
 
 **Since:** 12
 

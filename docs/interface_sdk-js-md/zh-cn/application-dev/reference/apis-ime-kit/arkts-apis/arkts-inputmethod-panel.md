@@ -17,12 +17,6 @@
  `InputMethodAbility.createPanel()`创建面板时传入`PanelInfo`指定面板类型和状态。
 
 
-## 导入模块
-
-```TypeScript
-import { PanelInfo, PanelType, PanelFlag } from 'kits/@kit.IMEKit';
-```
-
 ## 汇总
 
 ### 接口

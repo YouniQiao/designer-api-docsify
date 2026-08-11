@@ -1,6 +1,6 @@
 # Folder
 
-文件夹类型数据，是[File](arkts-arkdata-unifieddatachannel-file-c.md)的子类，用于描述文件夹。
+Represents the folder data. It is a child class of [File](arkts-arkdata-unifieddatachannel-file-c.md) and is used to describe a folder.
 
 **Inheritance/Implementation:** Folder extends [File](arkts-arkdata-unifieddatachannel-file-c.md)
 
@@ -24,7 +24,7 @@ import { unifiedDataChannel } from 'kits/@kit.ArkData';
 set folderUri(value: string)
 ```
 
-表示文件夹的uri。
+Indicates the uri of folder
 
 **Type:** string
 

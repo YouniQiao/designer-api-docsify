@@ -1,6 +1,6 @@
 # ConnectionInfo
 
-Web原生消息连接的信息对象。
+Represents the information object of the web native messaging connection.
 
 **Since:** 23
 
@@ -22,7 +22,7 @@ import { ConnectionInfo } from 'kits/@kit.ArkWeb';
 bundleName: string
 ```
 
-调用方的应用包名，用于身份识别和权限校验，可据此判断是否允许该应用建立连接或进行消息交互。
+Application bundle name of the caller.
 
 **Type:** string
 
@@ -40,7 +40,7 @@ bundleName: string
 connectionId: int
 ```
 
-连接的唯一标识符，用于区分和管理不同的Web原生消息连接，可用于在日志、状态跟踪或资源清理时定位特定连接。
+Connection ID.
 
 **Type:** int
 
@@ -58,7 +58,7 @@ connectionId: int
 extensionOrigin: string
 ```
 
-调用方扩展的原始URL，用于安全控制和来源识别，可据此判断扩展的合法性或实施基于域名的访问策略。
+Original URL of the caller extension.
 
 **Type:** string
 
@@ -76,7 +76,7 @@ extensionOrigin: string
 fdRead: int
 ```
 
-用于读取数据的管道文件描述符，可通过此文件描述符从Web端读取消息数据。
+Pipe file descriptor used to read data.
 
 **Type:** int
 
@@ -94,7 +94,7 @@ fdRead: int
 fdWrite: int
 ```
 
-用于写入数据的管道文件描述符，可通过此文件描述符向Web端发送消息数据。
+Pipe file descriptor used to write data.
 
 **Type:** int
 

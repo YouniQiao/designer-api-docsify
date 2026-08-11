@@ -12,12 +12,6 @@
 
 **系统接口：** 此接口为系统接口。
 
-## 导入模块
-
-```TypeScript
-import { cloudExtension } from 'kits/@kit.ArkData';
-```
-
 ## download
 
 ```TypeScript
@@ -53,6 +47,8 @@ download(table: string, gid: string, prefix: string, assets: Array<CloudAsset>):
 
 ## 示例
 
+ArkTS-Dyn示例：
+
 ```TypeScript
 class MyAssetLoader implements cloudExtension.AssetLoader {
   async download(table: string, gid: string, prefix: string, assets: Array<cloudExtension.CloudAsset>): Promise<Array<cloudExtension.Result<cloudExtension.CloudAsset>>> {
@@ -60,6 +56,23 @@ class MyAssetLoader implements cloudExtension.AssetLoader {
     let downloadRes = Array<cloudExtension.Result<cloudExtension.CloudAsset>>();
     // ...
     return downloadRes;
+  }
+}
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+import cloudExtension from '@ohos.data.cloudExtension';
+export default class MyAssetLoader implements cloudExtension.AssetLoader {
+  async download(table: string, gid: string, prefix: string, assets: Array<cloudExtension.CloudAsset>): Promise<Array<cloudExtension.Result<cloudExtension.CloudAsset>>> {
+    console.info(`download asset loader, table: ${table}, gid: ${gid}, prefix: ${prefix}`);
+    let downloadRes = Array<cloudExtension.Result<cloudExtension.CloudAsset>>();
+    // ...
+    return downloadRes;
+  }
+  async upload(table: string, gid: string, assets: cloudExtension.CloudAsset[]): Promise<cloudExtension.Result<cloudExtension.CloudAsset>[]> {
+    return [] as cloudExtension.Result<cloudExtension.CloudAsset>[];
   }
 }
 ```
@@ -98,6 +111,8 @@ upload(table: string, gid: string, assets: Array<CloudAsset>): Promise<Array<Res
 
 ## 示例
 
+ArkTS-Dyn示例：
+
 ```TypeScript
 class MyAssetLoader implements cloudExtension.AssetLoader {
   async upload(table: string, gid: string, assets: Array<cloudExtension.CloudAsset>): Promise<Array<cloudExtension.Result<cloudExtension.CloudAsset>>> {
@@ -107,6 +122,25 @@ class MyAssetLoader implements cloudExtension.AssetLoader {
     return uploadRes;
   }
     // ...
+}
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+import rpc from '@ohos.rpc';
+import cloudExtension from '@ohos.data.cloudExtension';
+export default class MyAssetLoader implements cloudExtension.AssetLoader {
+  async upload(table: string, gid: string, assets: Array<cloudExtension.CloudAsset>): Promise<Array<cloudExtension.Result<cloudExtension.CloudAsset>>> {
+    console.info(`upload asset loader, table: ${table}, gid: ${gid}`);
+    let uploadRes = Array<cloudExtension.Result<cloudExtension.CloudAsset>>();
+    // ...
+    return uploadRes;
+  }
+  // ...
+  async download(table: string, gid: string, prefix: string, assets: cloudExtension.CloudAsset[]): Promise<cloudExtension.Result<cloudExtension.CloudAsset>[]> {
+    return [] as cloudExtension.Result<cloudExtension.CloudAsset>[];
+  }
 }
 ```
 

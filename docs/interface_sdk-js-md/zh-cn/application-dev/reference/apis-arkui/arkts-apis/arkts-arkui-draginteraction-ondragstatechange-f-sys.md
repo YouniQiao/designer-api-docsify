@@ -1,11 +1,5 @@
 # onDragStateChange（系统接口）
 
-## 导入模块
-
-```TypeScript
-import { dragInteraction } from 'kits/@kit.ArkUI';
-```
-
 ## onDragStateChange
 
 ```TypeScript
@@ -34,5 +28,5 @@ Listens for dragging state change events.
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 202 | Permission verification failed. A non-system application calls a system API. |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed. A non-system application calls a system API. |
 

@@ -12,12 +12,6 @@
 
 **系统能力：** SystemCapability.Notification.ReminderAgent
 
-## 导入模块
-
-```TypeScript
-import { reminderAgentManager } from 'kits/@kit.BackgroundTasksKit';
-```
-
 ## buttonType
 
 ```TypeScript

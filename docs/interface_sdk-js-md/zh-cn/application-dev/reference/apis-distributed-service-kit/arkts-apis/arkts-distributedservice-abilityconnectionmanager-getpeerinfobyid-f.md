@@ -1,11 +1,5 @@
 # getPeerInfoById
 
-## 导入模块
-
-```TypeScript
-import { abilityConnectionManager } from 'kits/@kit.DistributedServiceKit';
-```
-
 ## getPeerInfoById
 
 ```TypeScript
@@ -40,13 +34,28 @@ function getPeerInfoById(sessionId: int): PeerInfo | undefined
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. |
 
 ## 示例
+
+ArkTS-Dyn示例：
 
 ```TypeScript
 import { abilityConnectionManager } from '@kit.DistributedServiceKit';
 import { hilog } from '@kit.PerformanceAnalysisKit';
+
+hilog.info(0x0000, 'testTag', 'getPeerInfoById called');
+// sessionId需通过createAbilityConnectionSession接口创建并获取，此处仅为示例
+let sessionId = 100;
+// 获取指定会话中对端应用信息
+const peerInfo = abilityConnectionManager.getPeerInfoById(sessionId);
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+import abilityConnectionManager from '@ohos.distributedsched.abilityConnectionManager';
+import hilog from '@ohos.hilog';
 
 hilog.info(0x0000, 'testTag', 'getPeerInfoById called');
 // sessionId需通过createAbilityConnectionSession接口创建并获取，此处仅为示例

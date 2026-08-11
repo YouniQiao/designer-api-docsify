@@ -1,6 +1,6 @@
 # IUserAuthCallback (System API)
 
-表示用户认证回调类。
+Provides callbacks for user authentication.
 
 **Since:** 8
 
@@ -30,7 +30,7 @@ ArkTS-Sta:
 onAcquireInfo?: (module: int, acquire: int, extraInfo: Uint8Array) => void
 ```
 
-身份认证信息获取回调函数。
+Called to acquire identity authentication information.
 
 **Since:** 8
 
@@ -78,7 +78,7 @@ ArkTS-Sta:
 onResult: (result: int, extraInfo: AuthResult) => void
 ```
 
-身份认证结果回调函数，返回结果码和认证结果信息。
+Called to return the result code and authentication result.
 
 **Since:** 8
 

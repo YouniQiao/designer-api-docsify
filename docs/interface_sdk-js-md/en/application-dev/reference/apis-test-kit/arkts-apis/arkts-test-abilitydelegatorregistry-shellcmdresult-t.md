@@ -4,7 +4,7 @@
 export type ShellCmdResult = _ShellCmdResult
 ```
 
-ShellCmdResult模块。
+Represents the **ShellCmdResult** module.
 
 **Since:** 9
 

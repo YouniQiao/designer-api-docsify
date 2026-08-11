@@ -1,6 +1,6 @@
 # SwipeActionOptions
 
-swipeAction属性的滑动操作选项。
+Defines the SwipeActionOption of swipeAction attribute method.
 
 **Since:** 23
 
@@ -16,7 +16,7 @@ swipeAction属性的滑动操作选项。
 onOffsetChange?: (offset: double) => void
 ```
 
-当列表项向左或向右滑动（当列表方向为"垂直"时），向上或向下滑动（当列表方向为"水平"时）位置发生变化触发。
+Called when swipe action offset changed.
 
 **Since:** 23
 
@@ -40,7 +40,7 @@ onOffsetChange?: (offset: double) => void
 edgeEffect?: SwipeEdgeEffect
 ```
 
-滑动效果。
+Sets whether sliding to a boundary has a spring effect.
 
 **Type:** [SwipeEdgeEffect](../arkts-components/arkts-arkui-swipeedgeeffect-e.md)
 
@@ -60,7 +60,7 @@ edgeEffect?: SwipeEdgeEffect
 end?: CustomBuilder | SwipeActionItem
 ```
 
-ListItem向左划动时item右边的组件（List垂直布局时）或ListItem向上划动时item下方的组件（List水平布局时）。
+An action item that appears when a list item slides left (when list direction is Vertical) or slides up (when list direction Horizontal).
 
 **Type:** [CustomBuilder](../arkts-components/arkts-arkui-custombuilder-t.md) \| SwipeActionItem
 
@@ -80,7 +80,7 @@ ListItem向左划动时item右边的组件（List垂直布局时）或ListItem�
 start?: CustomBuilder | SwipeActionItem
 ```
 
-当列表项向左或向右滑动（当列表方向为"垂直"时），向上或向下滑动（当列表方向为"水平"时）时显示的操作项。
+An action item that appears when a list item slides right (when list direction is Vertical) or slides down (when list direction Horizontal).
 
 **Type:** [CustomBuilder](../arkts-components/arkts-arkui-custombuilder-t.md) \| SwipeActionItem
 

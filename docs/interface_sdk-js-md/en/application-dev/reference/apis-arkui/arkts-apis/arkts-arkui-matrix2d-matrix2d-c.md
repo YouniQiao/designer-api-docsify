@@ -1,9 +1,6 @@
 # Matrix2D
 
-用于画布绘制[CanvasRenderingContext2D](../../../reference/apis-arkui/arkui-ts/ts-canvasrenderingcontext2d.md)、  
-[OffscreenCanvasRenderingContext2D](../../../reference/apis-arkui/arkui-ts/ts-offscreencanvasrenderingcontext2d.md)、  
-[CanvasPattern](../../../reference/apis-arkui/arkui-ts/ts-components-canvas-canvaspattern.md)和  
-[Path2D](../../../reference/apis-arkui/arkui-ts/ts-components-canvas-path2d.md)的矩阵对象，可以对矩阵进行缩放、旋转和平移等变换。
+2D transformation matrix, supporting rotation, translation, and scaling of the X-axis and Y-axis
 
 **Since:** 23
 
@@ -19,7 +16,7 @@
 constructor(unit?: LengthMetricsUnit)
 ```
 
-构造二维变换矩阵对象，默认值是属性全为0的矩阵。
+Constructs a 2D change matrix object. The default value is the unit matrix.
 
 **Since:** 23
 
@@ -35,7 +32,7 @@ constructor(unit?: LengthMetricsUnit)
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| unit | [LengthMetricsUnit](arkts-arkui-graphics-lengthmetricsunit-e.md) | No | 用来配置Matrix2D对象的单位模式，配置后无法动态更改。&lt;br&gt; 异常值NaN和Infinity按默认值处理。&lt;br&gt; 默认值：DEFAULT。 |
+| unit | [LengthMetricsUnit](arkts-arkui-graphics-lengthmetricsunit-e.md) | No | the unit mode |
 
 ## identity
 
@@ -43,7 +40,7 @@ constructor(unit?: LengthMetricsUnit)
 identity(): Matrix2D
 ```
 
-创建单位矩阵。
+Transforms the current 2D matrix back to the identity matrix (i.e., without any rotational translation scaling effect)
 
 **Since:** 23
 
@@ -59,7 +56,7 @@ identity(): Matrix2D
 
 | Type | Description |
 | --- | --- |
-| [Matrix2D](arkts-arkui-matrix2d-c.md) | 单位矩阵。 |
+| [Matrix2D](arkts-arkui-matrix2d-c.md) |  |
 
 ## invert
 
@@ -67,7 +64,7 @@ identity(): Matrix2D
 invert(): Matrix2D
 ```
 
-获取当前矩阵的逆矩阵。
+Transform the current 2D matrix into an inverse matrix (that is, the transformation effect is the opposite effect of the original)
 
 **Since:** 23
 
@@ -83,7 +80,7 @@ invert(): Matrix2D
 
 | Type | Description |
 | --- | --- |
-| [Matrix2D](arkts-arkui-matrix2d-c.md) | 逆矩阵结果。 |
+| [Matrix2D](arkts-arkui-matrix2d-c.md) |  |
 
 ## rotate
 
@@ -91,7 +88,7 @@ invert(): Matrix2D
 rotate(degree: double, rx?: double, ry?: double): Matrix2D
 ```
 
-以旋转点为中心，对当前矩阵进行右乘旋转运算。
+Adds the rotation effect of the X and Y axes to the current matrix.
 
 **Since:** 23
 
@@ -107,15 +104,15 @@ rotate(degree: double, rx?: double, ry?: double): Matrix2D
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| degree | double | Yes | 旋转弧度，取值范围无限制。顺时针方向为正弧度， 可以通过`角度 Math.PI / 180`将角度转换为弧度值传入该接口。&lt;br&gt; 异常值undefined和null按无效值处理，NaN和Infinity会导致Matrix2D异常。&lt;br&gt; 默认单位：弧度。 |
-| rx | double | No | 旋转点的水平方向坐标，取值范围无限制。&lt;br&gt; 默认单位：vp。&lt;br&gt; 异常值undefined和null按无效值处理，NaN和Infinity会导致Matrix2D异常。&lt;br&gt; 默认值：0。 |
-| ry | double | No | 旋转点的垂直方向坐标，取值范围无限制。&lt;br&gt; 默认单位：vp。&lt;br&gt; 异常值undefined和null按无效值处理，NaN和Infinity会导致Matrix2D异常。&lt;br&gt; 默认值：0。 |
+| degree | double | Yes | The rotation angle, clockwise in radians. |
+| rx | double | No | Rotation effect of the X-axis |
+| ry | double | No | Rotation effect of the Y-axis |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [Matrix2D](arkts-arkui-matrix2d-c.md) | 旋转后结果矩阵对象。 |
+| [Matrix2D](arkts-arkui-matrix2d-c.md) |  |
 
 ## scale
 
@@ -123,7 +120,7 @@ rotate(degree: double, rx?: double, ry?: double): Matrix2D
 scale(sx?: double, sy?: double): Matrix2D
 ```
 
-对当前矩阵进行右乘缩放运算。
+Adds the scaling effect of the X and Y axes to the current matrix.
 
 **Since:** 23
 
@@ -139,14 +136,14 @@ scale(sx?: double, sy?: double): Matrix2D
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| sx | double | No | 水平缩放比例系数，取值范围无限制。&lt;br&gt; 异常值undefined和null按无效值处理，NaN和Infinity会导致Matrix2D异常。&lt;br&gt; 默认值：1.0。 |
-| sy | double | No | 垂直缩放比例系数，取值范围无限制。&lt;br&gt; 异常值undefined和null按无效值处理，NaN和Infinity会导致Matrix2D异常。&lt;br&gt; 默认值：1.0。 |
+| sx | double | No | X-axis scaling effect |
+| sy | double | No | Y-axis scaling effect |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [Matrix2D](arkts-arkui-matrix2d-c.md) | 缩放结果矩阵对象。 |
+| [Matrix2D](arkts-arkui-matrix2d-c.md) |  |
 
 ## translate
 
@@ -154,7 +151,7 @@ scale(sx?: double, sy?: double): Matrix2D
 translate(tx?: double, ty?: double): Matrix2D
 ```
 
-对当前矩阵进行左乘平移运算。
+Adds the translation effect of the X and Y axes to the current matrix.
 
 **Since:** 23
 
@@ -170,14 +167,14 @@ translate(tx?: double, ty?: double): Matrix2D
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| tx | double | No | 水平方向平移距离，取值范围无限制。&lt;br&gt; 异常值undefined和null按无效值处理，NaN和Infinity会导致Matrix2D异常。&lt;br&gt; 默认单位：vp。&lt;br&gt; 默认值：0。 |
-| ty | double | No | 垂直方向平移距离，取值范围无限制。&lt;br&gt; 异常值undefined和null按无效值处理，NaN和Infinity会导致Matrix2D异常。&lt;br&gt; 默认单位：vp。&lt;br&gt; 默认值：0。 |
+| tx | double | No | X-axis translation effect |
+| ty | double | No | Y-axis translation effect |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [Matrix2D](arkts-arkui-matrix2d-c.md) | 平移后结果矩阵对象。 |
+| [Matrix2D](arkts-arkui-matrix2d-c.md) |  |
 
 ## rotateX
 
@@ -185,7 +182,7 @@ translate(tx?: double, ty?: double): Matrix2D
 set rotateX(rotateX: double | undefined)
 ```
 
-水平倾斜系数，取值范围无限制。
+Set the horizontal tilt.
 
 **Type:** double
 
@@ -205,7 +202,7 @@ set rotateX(rotateX: double | undefined)
 set rotateY(rotateY: double | undefined)
 ```
 
-垂直倾斜系数，取值范围无限制。
+Set the vertical tilt.
 
 **Type:** double
 
@@ -225,7 +222,7 @@ set rotateY(rotateY: double | undefined)
 set scaleX(scaleX: double | undefined)
 ```
 
-水平缩放系数，取值范围无限制。
+Set the horizontal zoom.
 
 **Type:** double
 
@@ -245,7 +242,7 @@ set scaleX(scaleX: double | undefined)
 set scaleY(scaleY: double | undefined)
 ```
 
-垂直缩放系数，取值范围无限制。
+Set the vertical zoom.
 
 **Type:** double
 
@@ -265,7 +262,7 @@ set scaleY(scaleY: double | undefined)
 set translateX(translateX: double | undefined)
 ```
 
-水平平移距离，取值范围无限制。
+Set the horizontal movement.
 
 **Type:** double
 
@@ -285,7 +282,7 @@ set translateX(translateX: double | undefined)
 set translateY(translateY: double | undefined)
 ```
 
-垂直平移距离，取值范围无限制。
+Set the vertical movement.
 
 **Type:** double
 

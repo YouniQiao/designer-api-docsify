@@ -1,10 +1,11 @@
 # ReqPermissionDetail
 
-应用运行时需向系统申请的权限集合的详细信息。
+Provides the detailed information of the permissions to request from the system.
 
-> **说明：**
+> **NOTE：**
 > 
-> - 如果应用内多包申请的权限名称一样，但是权限申请理由不一致，系统只会返回一个权限申请理由，优先级从高到低顺序为entry类型HAP、feature类型HAP、应用内HSP。
+> - If multiple packages of an application have requested the same permission but with different reasons, the system
+> returns only one reason based on a descending priority order: entry HAP > feature HAP > in-app HSP.
 
 **Since:** 9
 
@@ -20,7 +21,7 @@
 moduleName: string
 ```
 
-申请该权限的module名称。
+Name of the module that requests the permission.
 
 **Type:** string
 
@@ -40,7 +41,7 @@ moduleName: string
 name: string
 ```
 
-需要使用的[权限名称](../../../security/AccessToken/app-permissions.md)。
+[Name of the permission](../../../security/AccessToken/app-permissions.md) to request.
 
 **Type:** string
 
@@ -60,7 +61,7 @@ name: string
 reason: string
 ```
 
-描述申请权限的原因。
+Reason for requesting the permission.
 
 **Type:** string
 
@@ -80,7 +81,7 @@ reason: string
 reasonId: long
 ```
 
-描述申请权限的原因ID。
+ID of the reason for requesting the permission.
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：long
 
@@ -100,7 +101,7 @@ reasonId: long
 usedScene: UsedScene
 ```
 
-权限使用的场景和时机。
+Use scenario and timing for using the permission.
 
 **Type:** [UsedScene](arkts-ability-bundlemanager-usedscene-t.md)
 

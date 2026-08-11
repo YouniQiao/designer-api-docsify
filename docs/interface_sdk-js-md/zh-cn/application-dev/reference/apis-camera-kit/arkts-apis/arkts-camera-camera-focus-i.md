@@ -14,12 +14,6 @@ Focus继承自[FocusQuery](arkts-camera-camera-focusquery-i.md)。
 
 **系统能力：** SystemCapability.Multimedia.Camera.Core
 
-## 导入模块
-
-```TypeScript
-import { camera } from 'kits/@kit.CameraKit';
-```
-
 ## getFocalLength
 
 ArkTS-Dyn:
@@ -54,7 +48,7 @@ getFocalLength(): double
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 7400103 | Session not config. |
+| [7400103](../errorcode-camera.md#7400103-会话未配置) | Session not config. |
 
 ## getFocusMode
 
@@ -84,7 +78,7 @@ getFocusMode(): FocusMode
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 7400103 | Session not config. |
+| [7400103](../errorcode-camera.md#7400103-会话未配置) | Session not config. |
 
 ## getFocusPoint
 
@@ -108,13 +102,13 @@ getFocusPoint(): Point
 
 | 类型 | 说明 |
 | --- | --- |
-| [Point](arkts-camera-camera-point-i.md) | 用于获取当前的焦点。接口调用失败会返回相应错误码，错误码类型为[CameraErrorCode]{ |
+| [Point](../../apis-test-kit/arkts-apis/arkts-test-uitest-point-i.md) | 用于获取当前的焦点。接口调用失败会返回相应错误码，错误码类型为[CameraErrorCode]{ |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 7400103 | Session not config. |
+| [7400103](../errorcode-camera.md#7400103-会话未配置) | Session not config. |
 
 ## lockFocusTracking
 
@@ -140,14 +134,14 @@ lockFocusTracking(focusPoint: Point): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| focusPoint | [Point](arkts-camera-camera-point-i.md) | 是 | 锁定对焦跟踪点。x、y的取值范围均为 [0, 1]，超出范围则设置不生效。(0, 0)表示画面左上角，(1, 1)表示画面右下角。 |
+| focusPoint | [Point](../../apis-test-kit/arkts-apis/arkts-test-uitest-point-i.md) | 是 | 锁定对焦跟踪点。x、y的取值范围均为 [0, 1]，超出范围则设置不生效。(0, 0)表示画面左上角，(1, 1)表示画面右下角。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 7400103 | Session not config, only throw in session usage. |
-| 7400201 | Camera service fatal error. |
+| [7400103](../errorcode-camera.md#7400103-会话未配置) | Session not config, only throw in session usage. |
+| [7400201](../errorcode-camera.md#7400201-相机服务异常) | Camera service fatal error. |
 
 ## setFocusMode
 
@@ -179,7 +173,7 @@ setFocusMode(afMode: FocusMode): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 7400103 | Session not config. |
+| [7400103](../errorcode-camera.md#7400103-会话未配置) | Session not config. |
 
 ## setFocusPoint
 
@@ -205,13 +199,13 @@ setFocusPoint(point: Point): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| point | [Point](arkts-camera-camera-point-i.md) | 是 | 焦点。x、y设置范围应在[0，1]之内，超过范围，如果小于0设置0，大于1设置1。 |
+| point | [Point](../../apis-test-kit/arkts-apis/arkts-test-uitest-point-i.md) | 是 | 焦点。x、y设置范围应在[0，1]之内，超过范围，如果小于0设置0，大于1设置1。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 7400103 | Session not config. |
+| [7400103](../errorcode-camera.md#7400103-会话未配置) | Session not config. |
 
 ## unlockFocusTracking
 
@@ -237,6 +231,6 @@ unlockFocusTracking(): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 7400103 | Session not config, only throw in session usage. |
-| 7400201 | Camera service fatal error. |
+| [7400103](../errorcode-camera.md#7400103-会话未配置) | Session not config, only throw in session usage. |
+| [7400201](../errorcode-camera.md#7400201-相机服务异常) | Camera service fatal error. |
 

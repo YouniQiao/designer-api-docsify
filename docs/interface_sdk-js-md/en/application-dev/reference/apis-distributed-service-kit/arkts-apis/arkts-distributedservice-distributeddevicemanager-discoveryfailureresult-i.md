@@ -1,6 +1,6 @@
 # DiscoveryFailureResult
 
-设备发现失败原因。
+Discovery failure result.
 
 **Since:** 23
 
@@ -22,7 +22,7 @@ import { distributedDeviceManager } from 'kits/@kit.DistributedServiceKit';
 reason: int
 ```
 
-失败错误号。
+Discovery failure cause code.
 
 **Type:** int
 

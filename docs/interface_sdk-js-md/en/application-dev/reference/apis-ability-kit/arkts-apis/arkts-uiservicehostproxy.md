@@ -7,6 +7,6 @@
 
 | Name | Description |
 | --- | --- |
-| [UIServiceHostProxy](arkts-ability-uiservicehostproxy-i-sys.md) | UIServiceHostProxy提供代理能力，可以将数据从  [UIServiceExtension](arkts-ability-app-ability-uiserviceextensionability-uiserviceextensionability-c-sys.md)服务端发送到客户端。 |
+| [UIServiceHostProxy](arkts-ability-uiservicehostproxy-i-sys.md) | UIServiceHostProxy functions as a proxy to send data from the  [UIServiceExtensionAbility](arkts-ability-app-ability-uiserviceextensionability-uiserviceextensionability-c-sys.md) server to the client.  > **NOTE：** >  > - The APIs of this module must be used in the main thread, but not in child threads such as Worker and TaskPool. |
 <!--DelEnd-->
 

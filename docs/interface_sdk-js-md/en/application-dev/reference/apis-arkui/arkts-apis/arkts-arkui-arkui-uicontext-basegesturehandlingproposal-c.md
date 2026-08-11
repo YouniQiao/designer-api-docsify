@@ -1,6 +1,6 @@
 # BaseGestureHandlingProposal
 
-类BaseGestureHandlingProposal。
+Class BaseGestureHandlingProposal.
 
 **Since:** 26.0.0
 
@@ -22,7 +22,7 @@ import { OverlayManager, FrameCallback, ResolvedUIContext, NodeRenderStateChange
 action: SmartGestureAction
 ```
 
-要执行的智能手势操作。定义手势触发的具体操作。
+The smart gesture action to be performed. Defines the specific operation triggered by the gesture.
 
 **Type:** [SmartGestureAction](arkts-arkui-smartgestureaction-e.md)
 
@@ -42,7 +42,7 @@ action: SmartGestureAction
 operateIntention: OperateIntention
 ```
 
-底层的用户操作意图。表示基本的用户交互目标。
+The underlying user operation intention. Represents the fundamental user interaction goal.
 
 **Type:** [OperateIntention](arkts-arkui-operateintention-e.md)
 

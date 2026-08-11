@@ -10,12 +10,6 @@
 
 **系统能力：** SystemCapability.Notification.Emitter
 
-## 导入模块
-
-```TypeScript
-import { emitter } from 'kits/@kit.BasicServicesKit';
-```
-
 ## constructor
 
 ```TypeScript
@@ -37,7 +31,7 @@ constructor()
 ## 示例
 
 ```TypeScript
-let emitter1: emitter.Emitter = new emitter.Emitter();
+let emitter1 = new emitter.Emitter();
 ```
 
 ## emit
@@ -73,16 +67,36 @@ emit(eventId: string, data?: EventData): void
 
 ## 示例
 
+ArkTS-Dyn示例：
+
 ```TypeScript
 let emitter1: emitter.Emitter = new emitter.Emitter();
 let eventData: emitter.EventData = {
   data: {
-    "content": "content",
-    "id": 1,
+  "content": "content",
+  "id": 1,
   }
 };
 
-emitter1.emit('eventId', eventData);
+emitter1.emit("eventId", eventData);
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+import { RecordData } from '@ohos.base';
+
+let emitter1 = new emitter.Emitter();
+let record: Record<string, RecordData> = {
+  "content": "content",
+  "id": 1,
+};
+
+let eventData: emitter.EventData = {
+  data: record // 现在类型兼容
+};
+
+emitter1.emit("eventId", eventData);
 ```
 
 ## emit
@@ -136,7 +150,7 @@ let eventData: emitter.GenericEventData<Sample> = {
   data: new Sample()
 };
 
-emitter1.emit('eventId', eventData);
+emitter1.emit("eventId", eventData);
 ```
 
 ## emit
@@ -173,6 +187,8 @@ emit(eventId: string, options: Options, data?: EventData): void
 
 ## 示例
 
+ArkTS-Dyn示例：
+
 ```TypeScript
 let emitter1: emitter.Emitter = new emitter.Emitter();
 
@@ -181,12 +197,32 @@ let options: emitter.Options = {
 };
 let eventData: emitter.EventData = {
   data: {
-    "content": "content",
-    "id": 1,
+  "content": "content",
+  "id": 1,
   }
 };
 
-emitter1.emit('eventId', options, eventData);
+emitter1.emit("eventId", options, eventData);
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+import { RecordData } from '@ohos.base';
+
+let emitter1 = new emitter.Emitter();
+let options: emitter.Options = {
+  priority: emitter.EventPriority.HIGH
+};
+let record: Record<string, RecordData> = {
+  "content": "content",
+  "id": 1,
+};
+let eventData: emitter.EventData = {
+  data: record
+};
+
+emitter1.emit("eventId", options, eventData);
 ```
 
 ## emit
@@ -224,7 +260,6 @@ emit<T>(eventId: string, options: Options, data?: GenericEventData<T>): void
 ## 示例
 
 ```TypeScript
-@Sendable
 class Sample {
   constructor() {
     this.count = 100;
@@ -235,7 +270,7 @@ class Sample {
   count: number;
 }
 
-let emitter1: emitter.Emitter = new emitter.Emitter();
+let emitter1 = new emitter.Emitter();
 
 let options: emitter.Options = {
   priority: emitter.EventPriority.HIGH
@@ -244,7 +279,7 @@ let eventData: emitter.GenericEventData<Sample> = {
   data: new Sample()
 };
 
-emitter1.emit('eventId', options, eventData);
+emitter1.emit("eventId", options, eventData);
 ```
 
 ## getListenerCount
@@ -287,7 +322,7 @@ getListenerCount(eventId: string): long
 
 ```TypeScript
 let emitter1: emitter.Emitter = new emitter.Emitter();
-let count: number = emitter1.getListenerCount('eventId');
+let count = emitter1.getListenerCount("eventId");
 ```
 
 ## off
@@ -321,7 +356,7 @@ off(eventId: string): void
 ```TypeScript
 let emitter1: emitter.Emitter = new emitter.Emitter();
 
-emitter1.off('eventId');
+emitter1.off("eventId");
 ```
 
 ## off
@@ -361,9 +396,9 @@ let emitter1: emitter.Emitter = new emitter.Emitter();
 
 let callback: Callback<emitter.EventData> = (eventData: emitter.EventData) => {
   console.info(`eventData: ${JSON.stringify(eventData)}`);
-};
+}
 
-emitter1.off('eventId', callback);
+emitter1.off("eventId", callback);
 ```
 
 ## off
@@ -418,9 +453,9 @@ let callback: Callback<emitter.GenericEventData<Sample>> = (eventData: emitter.G
   if (eventData?.data instanceof Sample) {
     eventData?.data?.printCount();
   }
-};
+}
 
-emitter1.off('eventId', callback);
+emitter1.off("eventId", callback);
 ```
 
 ## offEventData
@@ -450,6 +485,20 @@ offEventData(eventId: string, callback: Callback<EventData>): void
 | eventId | string | 是 | 事件ID。取值为长度不超过10240字节的自定义字符串，且不可为空字符。 |
 | callback | [Callback](arkts-basicservices-base-callback-i.md)&lt;EventData&gt; | 是 | 事件的回调处理函数。 |
 
+## 示例
+
+```TypeScript
+import { Callback } from '@kit.BasicServicesKit';
+
+let emitter1 = new emitter.Emitter();
+
+let callback: Callback<emitter.EventData> = (eventData: emitter.EventData) => {
+  console.info(`eventData: ${JSON.stringify(eventData)}`);
+}
+
+emitter1.offEventData("eventId", callback);
+```
+
 ## offGenericEventData
 
 ```TypeScript
@@ -476,6 +525,34 @@ offGenericEventData<T>(eventId: string, callback: Callback<GenericEventData<T>>)
 | --- | --- | --- | --- |
 | eventId | string | 是 | 事件ID。取值为长度不超过10240字节的自定义字符串，且不可为空字符。 |
 | callback | [Callback](arkts-basicservices-base-callback-i.md)&lt;GenericEventData&lt;T&gt;&gt; | 是 | 事件的回调处理函数。 |
+
+## 示例
+
+```TypeScript
+import { Callback } from '@kit.BasicServicesKit';
+
+class Sample {
+  constructor() {
+    this.count = 100;
+  }
+  printCount() {
+    console.info('Print count : ' + this.count);
+  }
+  count: number;
+}
+
+let emitter1 = new emitter.Emitter();
+
+let callback: Callback<emitter.GenericEventData<Sample>> = (eventData: emitter.GenericEventData<Sample>): void => {
+  console.info(`eventData: ${JSON.stringify(eventData?.data)}`);
+  if (eventData?.data instanceof Sample) {
+    const sampleData = eventData.data as Sample;
+    sampleData.printCount();
+  }
+}
+
+emitter1.offGenericEventData("eventId", callback);
+```
 
 ## on
 
@@ -511,9 +588,9 @@ let emitter1: emitter.Emitter = new emitter.Emitter();
 
 let callback: Callback<emitter.EventData> = (eventData: emitter.EventData) => {
   console.info(`eventData: ${JSON.stringify(eventData)}`);
-};
+}
 
-emitter1.on('eventId', callback);
+emitter1.on(`eventId`, callback);
 ```
 
 ## on
@@ -564,9 +641,9 @@ let callback: Callback<emitter.GenericEventData<Sample>> = (eventData: emitter.G
   if (eventData?.data instanceof Sample) {
     eventData?.data?.printCount();
   }
-};
+}
 
-emitter1.on('eventId', callback);
+emitter1.on("eventId", callback);
 ```
 
 ## onEventData
@@ -592,6 +669,20 @@ onEventData(eventId: string, callback: Callback<EventData>): void
 | eventId | string | 是 | 持续订阅的事件。取值为长度不超过10240字节的自定义字符串，且不可为空字符。 |
 | callback | [Callback](arkts-basicservices-base-callback-i.md)&lt;EventData&gt; | 是 | 接收到该事件时需要执行的回调处理函数。 |
 
+## 示例
+
+```TypeScript
+import { Callback } from '@kit.BasicServicesKit';
+
+let emitter1 = new emitter.Emitter();
+
+let callback: Callback<emitter.EventData> = (eventData: emitter.EventData) => {
+  console.info(`eventData: ${JSON.stringify(eventData)}`);
+}
+
+emitter1.onEventData(`eventId`, callback);
+```
+
 ## onGenericEventData
 
 ```TypeScript
@@ -614,6 +705,34 @@ onGenericEventData<T>(eventId: string, callback: Callback<GenericEventData<T>>):
 | --- | --- | --- | --- |
 | eventId | string | 是 | 持续订阅的事件。取值为长度不超过10240字节的自定义字符串，且不可为空字符。 |
 | callback | [Callback](arkts-basicservices-base-callback-i.md)&lt;GenericEventData&lt;T&gt;&gt; | 是 | 接收到该事件时需要执行的回调处理函数。 |
+
+## 示例
+
+```TypeScript
+import { Callback } from '@kit.BasicServicesKit';
+
+let emitter1 = new emitter.Emitter();
+
+class Sample {
+  constructor() {
+    this.count = 100;
+  }
+  printCount() {
+    console.info('Print count : ' + this.count);
+  }
+  count: number;
+}
+
+let callback: Callback<emitter.GenericEventData<Sample>> = (eventData: emitter.GenericEventData<Sample>): void => {
+  console.info(`eventData: ${JSON.stringify(eventData?.data)}`);
+  if (eventData?.data instanceof Sample) {
+    const sampleData = eventData.data as Sample;
+    sampleData.printCount();
+  }
+}
+
+emitter1.onGenericEventData("eventId", callback);
+```
 
 ## once
 
@@ -649,9 +768,9 @@ let emitter1: emitter.Emitter = new emitter.Emitter();
 
 let callback: Callback<emitter.EventData> = (eventData: emitter.EventData) => {
   console.info(`eventData: ${JSON.stringify(eventData)}`);
-};
+}
 
-emitter1.once('eventId', callback);
+emitter1.once("eventId", callback);
 ```
 
 ## once
@@ -702,9 +821,9 @@ let callback: Callback<emitter.GenericEventData<Sample>> = (eventData: emitter.G
   if (eventData?.data instanceof Sample) {
     eventData?.data?.printCount();
   }
-};
+}
 
-emitter1.once('eventId', callback);
+emitter1.once("eventId", callback);
 ```
 
 ## onceEventData
@@ -730,6 +849,20 @@ onceEventData(eventId: string, callback: Callback<EventData>): void
 | eventId | string | 是 | 单次订阅的事件。取值为长度不超过10240字节的自定义字符串，且不可为空字符。 |
 | callback | [Callback](arkts-basicservices-base-callback-i.md)&lt;EventData&gt; | 是 | 接收到该事件时需要执行的回调处理函数。 |
 
+## 示例
+
+```TypeScript
+import { Callback } from '@kit.BasicServicesKit';
+
+let emitter1 = new emitter.Emitter();
+
+let callback: Callback<emitter.EventData> = (eventData: emitter.EventData) => {
+  console.info(`eventData: ${JSON.stringify(eventData)}`);
+}
+
+emitter1.onceEventData("eventId", callback);
+```
+
 ## onceGenericEventData
 
 ```TypeScript
@@ -752,4 +885,32 @@ onceGenericEventData<T>(eventId: string, callback: Callback<GenericEventData<T>>
 | --- | --- | --- | --- |
 | eventId | string | 是 | 单次订阅的事件。取值为长度不超过10240字节的自定义字符串，且不可为空字符。 |
 | callback | [Callback](arkts-basicservices-base-callback-i.md)&lt;GenericEventData&lt;T&gt;&gt; | 是 | 接收到该事件时需要执行的回调处理函数。 |
+
+## 示例
+
+```TypeScript
+import { Callback } from '@kit.BasicServicesKit';
+
+let emitter1 = new emitter.Emitter();
+
+class Sample {
+  constructor() {
+    this.count = 100;
+  }
+  printCount() {
+    console.info('Print count : ' + this.count);
+  }
+  count: number;
+}
+
+let callback: Callback<emitter.GenericEventData<Sample>> = (eventData: emitter.GenericEventData<Sample>): void => {
+  console.info(`eventData: ${JSON.stringify(eventData?.data)}`);
+  if (eventData?.data instanceof Sample) {
+    const sampleData = eventData.data as Sample;
+    sampleData.printCount();
+  }
+}
+
+emitter1.onceGenericEventData("eventId", callback);
+```
 

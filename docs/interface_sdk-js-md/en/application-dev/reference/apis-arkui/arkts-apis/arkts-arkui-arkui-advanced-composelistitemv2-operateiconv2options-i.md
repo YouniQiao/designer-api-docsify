@@ -1,6 +1,6 @@
 # OperateIconV2Options
 
-声明接口OperateIconV2Options
+Declare interface OperateIconV2Options
 
 **Since:** 26.0.0
 
@@ -22,7 +22,7 @@ import { OperateCheckV2Options, ComposeListItemV2, IconTypeV2, OperateIconV2, Op
 action?: OnActionCallback
 ```
 
-操作图标时的回调函数。
+Callback function when operate the icon.
 
 **Since:** 26.0.0
 
@@ -40,7 +40,7 @@ action?: OnActionCallback
 accessibilityDescription?: ResourceStr
 ```
 
-图标的无障碍描述。
+The accessibilityDescription of the icon.
 
 **Type:** [ResourceStr](arkts-arkui-resourcestr-t.md)
 
@@ -60,7 +60,7 @@ accessibilityDescription?: ResourceStr
 accessibilityLevel?: string
 ```
 
-图标的无障碍重要性。
+The accessibilityLevel of the icon.
 
 **Type:** string
 
@@ -82,7 +82,7 @@ accessibilityLevel?: string
 accessibilityText?: ResourceStr
 ```
 
-图标的无障碍文本属性。
+The accessibilityText of the icon.
 
 **Type:** [ResourceStr](arkts-arkui-resourcestr-t.md)
 
@@ -102,7 +102,7 @@ accessibilityText?: ResourceStr
 symbolStyle?: SymbolGlyphModifier
 ```
 
-文本内容或图标地址。
+The content of text or the address of symbol.
 
 **Type:** [SymbolGlyphModifier](../arkts-components/arkts-arkui-symbolglyphmodifier-t.md)
 
@@ -122,7 +122,7 @@ symbolStyle?: SymbolGlyphModifier
 value?: ResourceStr
 ```
 
-文本内容或图标地址。
+The content of text or the address of icon.
 
 **Type:** [ResourceStr](arkts-arkui-resourcestr-t.md)
 

@@ -15,12 +15,6 @@ AbilityStage拥有[onCreate()](arkts-ability-app-ability-abilitystage-abilitysta
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 
-## 导入模块
-
-```TypeScript
-import { AbilityStage } from 'kits/@kit.AbilityKit';
-```
-
 ## onAboutToCreateAbility
 
 ```TypeScript

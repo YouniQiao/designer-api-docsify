@@ -12,7 +12,7 @@ import { inputDevice } from 'kits/@kit.InputKit';
 function getIntervalSinceLastInput(): Promise<long>
 ```
 
-获取距离上次系统输入事件的时间间隔（包含设备休眠时间），使用Promise异步回调。
+Obtains the interval (including the device sleep time) elapsed since the last system input event. This API uses a promise to return the result.
 
 **Since:** 14
 
@@ -26,7 +26,7 @@ function getIntervalSinceLastInput(): Promise<long>
 
 | Type | Description |
 | --- | --- |
-| ArkTS-Dyn: Promise&lt;number&gt;  <br>ArkTS-Sta：Promise&lt;long&gt; | Promise对象，返回距离上次系统输入事件的时间间隔，单位为微秒（μs）。 |
+| ArkTS-Dyn: Promise&lt;number&gt;  <br>ArkTS-Sta：Promise&lt;long&gt; | Promise used to return the time elapsed since the last system input event, in microseconds (μs). |
 
 ## Examples
 
@@ -41,16 +41,11 @@ struct Index {
     RelativeContainer() {
       Text()
         .onClick(() => {
-           try {
-            // Obtain the time interval since the last input
-            inputDevice.getIntervalSinceLastInput().then((timeInterval: number) => {
-              console.info(`Succeeded in getting interval since last input: ${JSON.stringify(timeInterval)}.`);
-            }).catch((error: BusinessError) => {
-              console.error(`Failed to get interval since last input, Code: ${(error as BusinessError).code}, message: ${(error as BusinessError).message}.`);
-            })
-          } catch (error) {
-            console.error(`Failed to get interval since last input, Code: ${(error as BusinessError).code}, message: ${(error as BusinessError).message}.`);
-          }
+          inputDevice.getIntervalSinceLastInput().then((timeInterval: number) => {
+            console.info(`Interval since last input: ${JSON.stringify(timeInterval)}`);
+          }).catch((error: BusinessError) => {
+            console.error(`Get interval since last input failed, error: ${JSON.stringify(error)}`);
+          })
         })
     }
   }

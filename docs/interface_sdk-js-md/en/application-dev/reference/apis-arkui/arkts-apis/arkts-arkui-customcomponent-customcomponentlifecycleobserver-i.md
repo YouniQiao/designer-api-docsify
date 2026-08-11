@@ -1,6 +1,6 @@
 # CustomComponentLifecycleObserver
 
-用户注册自定义组件生命周期回调后，当该自定义组件的生命周期发生变化时，将触发监听器中相应的生命周期回调。
+CustomComponent LifecycleObserver. When a user registers a custom component lifecycle callback,the corresponding lifecycle callback will be triggered when the lifecycle changes.
 
 **Since:** 24
 
@@ -16,8 +16,7 @@
 default aboutToAppear(): void
 ```
 
-aboutToAppear函数在创建自定义组件的新实例后，执行其build()函数之前执行。开发者可以在此阶段修改状态变量。其功能与  
-[aboutToAppear](../../../reference/apis-arkui/arkui-ts/ts-custom-component-lifecycle.md#abouttoappear)类似，但是在自定义组件状态机的约束下触发的。
+The aboutToAppear function is extecuted after a new instance of the custom component is created,before its build() function is executed. Developers can modify state variables at this stage.
 
 **Since:** 24
 
@@ -35,8 +34,7 @@ aboutToAppear函数在创建自定义组件的新实例后，执行其build()函
 default aboutToDisappear(): void
 ```
 
-aboutToDisappear函数在自定义组件被销毁之前执行。不建议在aboutToDisappear函数中修改状态变量，特别是@Link变量的修改可能会导致应用程序行为不稳定。其功能与  
-[aboutToDisappear](../../../reference/apis-arkui/arkui-ts/ts-custom-component-lifecycle.md#abouttodisappear)类似，不同的是，CustomComponentLifecycleObserver中的aboutToDisappear函数受状态机约束，只有被监听的自定义组件状态向CustomComponentLifecycleState.DISAPPEARED转变前触发回调。
+The aboutToDisappear function executes before a custom component is destroyed.It is not allowed to change state variables in aboutToDisappear.
 
 **Since:** 24
 
@@ -54,7 +52,7 @@ aboutToDisappear函数在自定义组件被销毁之前执行。不建议在abou
 default aboutToRecycle(): void
 ```
 
-当组件被回收后触发，先执行应用程序中定义的必要回收操作，完成回收后调用aboutToRecycle函数。随后该组件被冻结，以避免该组件处于回收池时进行UI更新。最后，aboutToRecycle函数会递归遍历所有子组件，对每个完成回收的组件调用aboutToRecycle函数。
+Callback function invoked when the component is about to be recycled.
 
 **Since:** 24
 
@@ -72,7 +70,7 @@ default aboutToRecycle(): void
 default aboutToReuse(params?: ReuseObject): void
 ```
 
-当可复用的自定义组件从缓存中重新添加到节点树时调用aboutToReuse函数，以接收组件的构造参数。当params存在时，表示V1组件的复用回调。
+Invoked when a reusable custom component is re-added to the node tree from the reuse cache to receive construction parameters of the component.When params is defined, it is the callback for reusing the V1 component.When params is undefined, it is the callback for reusing the V2 compoennt.
 
 **Since:** 24
 
@@ -88,7 +86,7 @@ default aboutToReuse(params?: ReuseObject): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| params | [ReuseObject](arkts-arkui-customcomponent-reuseobject-c.md) | No | 当params存在时，表示V1组件的复用回调。 |
+| params | [ReuseObject](arkts-arkui-customcomponent-reuseobject-c.md) | No | V1 component reuse data. |
 
 ## onDidBuild
 
@@ -96,7 +94,7 @@ default aboutToReuse(params?: ReuseObject): void
 default onDidBuild(): void
 ```
 
-onDidBuild函数在自定义组件的新实例构建完成后，执行其build()函数之后执行。开发者可以在此阶段实现一些不影响实际UI的功能，例如事件数据上报。
+The onDidBuild function is executed after a new instance of the custom component is built,after its build() function is executed. Developers can implement functions that do not affect the actual UI, such as event data reporting, at this stage.
 
 **Since:** 24
 

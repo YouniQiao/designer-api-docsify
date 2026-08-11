@@ -1,6 +1,6 @@
 # RenderParameters
 
-定义手动渲染的参数.
+Describes the rendering parameters.
 
 **Since:** 15
 
@@ -16,7 +16,7 @@
 alwaysRender?: boolean
 ```
 
-如果为true，即使场景没有变化也始终渲染自上一帧以来. 如果为false，则场景没有变化时可以省略渲染.
+Whether to render every frame. The value true means to render every frame, and false means to render frames on demand.The default value is true.
 
 **Type:** boolean
 

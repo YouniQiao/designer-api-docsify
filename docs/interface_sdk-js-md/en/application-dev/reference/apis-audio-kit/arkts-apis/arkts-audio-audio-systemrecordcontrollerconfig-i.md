@@ -1,6 +1,6 @@
 # SystemRecordControllerConfig
 
-定义系统录像控制器面板配置。
+Defines the configuration for the system recording controller panel.
 
 **Since:** 26.0.0
 
@@ -22,7 +22,7 @@ import { audio } from 'kits/@kit.AudioKit';
 sourceType: SourceType
 ```
 
-系统使用它来确定应用程序的录制场景，根据应用程序期望用于流式传输的源类型，并为用户提供选择匹配降噪模式的能力。支持的源类型包括{@link SourceType#Source_TYPE_MIC},{@link SourceType#Source_TYPE_CAMCORDER}，以及{@link SourceType#Source_TYPE_LIVE}。
+The system uses this to determine the recording scenario of the application according to the SourceType that the application expects to use for streaming, and provides users with the ability to select matching noise reduction modes. The supported source types include{@link SourceType#SOURCE_TYPE_MIC}, {@link SourceType#SOURCE_TYPE_CAMCORDER}, and{@link SourceType#SOURCE_TYPE_LIVE}.
 
 **Type:** [SourceType](../../apis-arkweb/arkts-apis/arkts-arkweb-webview-sourcetype-e.md)
 

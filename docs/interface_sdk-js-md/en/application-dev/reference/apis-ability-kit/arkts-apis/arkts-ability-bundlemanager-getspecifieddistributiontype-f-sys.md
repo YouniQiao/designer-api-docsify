@@ -12,9 +12,10 @@ import { bundleManager } from 'kits/@kit.AbilityKit';
 function getSpecifiedDistributionType(bundleName: string): string
 ```
 
-以同步的方法查询指定bundleName的[HarmonyAppProvision配置文件说明](../../../security/app-provision-structure.md)，该返回值是在调用install接口时传入的[InstallParam](arkts-ability-installer-installparam-i-sys.md)中的specifiedDistributionType字段。
+Obtains the [distribution type](../../../security/app-provision-structure.md) of a bundle in synchronous mode. The return value is the **specifiedDistributionType** field value in  
+[InstallParam](arkts-ability-installer-installparam-i-sys.md) passed when **install** is called.
 
-获取调用方自身的信息时不需要权限。
+No permission is required for obtaining the caller's own information.
 
 **Since:** 10
 
@@ -32,38 +33,37 @@ function getSpecifiedDistributionType(bundleName: string): string
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| bundleName | string | Yes | 指定的bundleName。 |
+| bundleName | string | Yes | Bundle name. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| string | 返回指定bundleName的[HarmonyAppProvision配置文件说明](../../../security/app-provision-structure.md)。 |
+| string | [Distribution type](../../../security/app-provision-structure.md) of the bundle. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types. |
-| 201 | Permission denied. |
-| 202 | Permission denied, non-system app called system api. |
-| 17700001 | The specified bundleName is not found. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission denied, non-system app called system api. |
+| [17700001](../errorcode-bundle.md#17700001-bundle-name-does-not-exist) | The specified bundleName is not found. |
 
 ## Examples
 
 ```TypeScript
 import { bundleManager } from '@kit.AbilityKit';
 import { BusinessError } from '@kit.BasicServicesKit';
-import { hilog } from '@kit.PerformanceAnalysisKit';
 
 let bundleName = "com.example.myapplication";
 
 try {
   let type = bundleManager.getSpecifiedDistributionType(bundleName);
-  hilog.info(0x0000, 'testTag', 'getSpecifiedDistributionType successfully, type:%{public}s', type);
+  console.info('getSpecifiedDistributionType successfully, type:' + type);
 } catch (error) {
   let message = (error as BusinessError).message;
-  hilog.error(0x0000, 'testTag', 'getSpecifiedDistributionType failed. Cause: %{public}s', message);
+  console.error('getSpecifiedDistributionType failed. Cause: ' + message);
 }
 ```
 

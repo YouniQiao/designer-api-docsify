@@ -1,0 +1,237 @@
+# PersistentStorage
+
+For details about how to use PersistentStorage on the UI, see  
+[PersistentStorage: Persisting Application State](../../../ui/state-management/arkts-persiststorage.md).
+
+> **NOTE：**
+
+> Since API version 12, PersistentStorage supports **null** and **undefined**.
+
+**Since:** 7
+
+<!--Device-unnamed-declare class PersistentStorage--><!--Device-unnamed-declare class PersistentStorage-End-->
+
+**System capability:** SystemCapability.ArkUI.ArkUI.Full
+
+## DeleteProp
+
+```TypeScript
+static DeleteProp(key: string): void
+```
+
+Performs the reverse operation of [PersistProp](arkts-arkui-persistentstorage-c.md#persistprop). Specifically, this API deletes the property corresponding to the specified key from  
+[PersistentStorage](../../../ui/state-management/arkts-persiststorage.md). Subsequent operations on  
+[AppStorage](../../../ui/state-management/arkts-appstorage.md) do not affect data in PersistentStorage.
+
+**Since:** 7
+
+**Deprecated since:** 10
+
+**Substitutes:** [PersistentStorage#deleteProp](arkts-arkui-persistentstorage-c.md#deleteprop)
+
+<!--Device-PersistentStorage-static DeleteProp(key: string): void--><!--Device-PersistentStorage-static DeleteProp(key: string): void-End-->
+
+**System capability:** SystemCapability.ArkUI.ArkUI.Full
+
+**Parameters:**
+
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| key | string | Yes |
+
+## Keys
+
+```TypeScript
+static Keys(): Array<string>
+```
+
+Returns an array of all persisted property names.
+
+**Since:** 7
+
+**Deprecated since:** 10
+
+**Substitutes:** [PersistentStorage#keys](arkts-arkui-persistentstorage-c.md#keys)
+
+<!--Device-PersistentStorage-static Keys(): Array<string>--><!--Device-PersistentStorage-static Keys(): Array<string>-End-->
+
+**System capability:** SystemCapability.ArkUI.ArkUI.Full
+
+**Return value:**
+
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| Array&lt;string&gt; |
+
+## PersistProp
+
+```TypeScript
+static PersistProp<T>(key: string, defaultValue: T): void
+```
+
+Persists the property corresponding to **key** from [AppStorage](../../../ui/state-management/arkts-appstorage.md)to a file. This API is usually called before access to AppStorage.
+
+The order for determining the type and value of a property is as follows:
+
+1. If the property with the specified key is found in the  
+[PersistentStorage](../../../ui/state-management/arkts-persiststorage.md) file, the corresponding property is created in AppStorage and initialized with the value found in PersistentStorage.
+
+2. If the property with the specified key is not found in the PersistentStorage file, AppStorage is searched for the property. If the property is found, it is persisted.
+
+3. If no matching property is found in AppStorage, it is created in AppStorage, initialized with the value of  
+**defaultValue**, and persisted.
+
+According to the preceding initialization process, if the property exists in AppStorage, its value will be used,overriding the value in the PersistentStorage file. Because AppStorage stores data in the memory, the property value becomes nonpersistent.
+
+**Since:** 7
+
+**Deprecated since:** 10
+
+**Substitutes:** [PersistentStorage#persistProp](arkts-arkui-persistentstorage-c.md#persistprop)
+
+<!--Device-PersistentStorage-static PersistProp<T>(key: string, defaultValue: T): void--><!--Device-PersistentStorage-static PersistProp<T>(key: string, defaultValue: T): void-End-->
+
+**System capability:** SystemCapability.ArkUI.ArkUI.Full
+
+**Parameters:**
+
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| key | string | Yes |
+| defaultValue | T | Yes |
+
+## PersistProps
+
+```TypeScript
+static PersistProps(
+    properties: {
+      key: string;
+      defaultValue: any;
+    }[],
+  ): void
+```
+
+Persists multiple properties. This API is similar to [PersistProp](arkts-arkui-persistentstorage-c.md#persistprop), but allows multiple properties to be persisted at once, making it suitable for initializing during application startup.
+
+**Since:** 7
+
+**Deprecated since:** 10
+
+**Substitutes:** [PersistentStorage#PersistProps](arkts-arkui-persistentstorage-c.md#persistprops)
+
+<!--Device-PersistentStorage-static PersistProps(    properties: {      key: string;      defaultValue: any;    }[],  ): void--><!--Device-PersistentStorage-static PersistProps(    properties: {      key: string;      defaultValue: any;    }[],  ): void-End-->
+
+**System capability:** SystemCapability.ArkUI.ArkUI.Full
+
+**Parameters:**
+
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| properties | {
+       key: string;
+       defaultValue: any;
+     }[] | Yes |  |
+
+## deleteProp
+
+```TypeScript
+static deleteProp(key: string): void
+```
+
+Performs the reverse operation of [persistProp](arkts-arkui-persistentstorage-c.md#persistprop). Specifically, this API deletes the property corresponding to the specified **key** from  
+[PersistentStorage](../../../ui/state-management/arkts-persiststorage.md). Subsequent operations on  
+[AppStorage](../../../ui/state-management/arkts-appstorage.md) do not affect data in PersistentStorage. This operation removes the corresponding key from the persistence file. To persist the property again, you can call the  
+[persistProp](arkts-arkui-persistentstorage-c.md#persistprop) API.
+
+**Since:** 10
+
+**Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-PersistentStorage-static deleteProp(key: string): void--><!--Device-PersistentStorage-static deleteProp(key: string): void-End-->
+
+**System capability:** SystemCapability.ArkUI.ArkUI.Full
+
+**Parameters:**
+
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| key | string | Yes |
+
+## keys
+
+```TypeScript
+static keys(): Array<string>
+```
+
+Returns an array of all persisted property names.
+
+**Since:** 10
+
+**Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-PersistentStorage-static keys(): Array<string>--><!--Device-PersistentStorage-static keys(): Array<string>-End-->
+
+**System capability:** SystemCapability.ArkUI.ArkUI.Full
+
+**Return value:**
+
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| Array&lt;string&gt; |
+
+## persistProp
+
+```TypeScript
+static persistProp<T>(key: string, defaultValue: T): void
+```
+
+Persists the property corresponding to **key** from [AppStorage](../../../ui/state-management/arkts-appstorage.md)to a file. This API is usually called before access to AppStorage.
+
+The order for determining the type and value of a property is as follows:
+
+1. If the property with the specified key is found in the  
+[PersistentStorage](../../../ui/state-management/arkts-persiststorage.md) file, the corresponding property is created in AppStorage and initialized with the value found in PersistentStorage.
+
+2. If the property with the specified key is not found in the PersistentStorage file, AppStorage is searched for the property. If the property is found, it is persisted.
+
+3. If no matching property is found in AppStorage, it is created in AppStorage, initialized with the value of  
+**defaultValue**, and persisted.
+
+According to the preceding initialization process, if the property exists in AppStorage, its value will be used,overriding the value in the PersistentStorage file. Because AppStorage stores data in the memory, the property value becomes nonpersistent.
+
+**Since:** 10
+
+**Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-PersistentStorage-static persistProp<T>(key: string, defaultValue: T): void--><!--Device-PersistentStorage-static persistProp<T>(key: string, defaultValue: T): void-End-->
+
+**System capability:** SystemCapability.ArkUI.ArkUI.Full
+
+**Parameters:**
+
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| key | string | Yes |
+| defaultValue | T | Yes |
+
+## persistProps
+
+```TypeScript
+static persistProps(props: PersistPropsOptions[]): void
+```
+
+Persists multiple properties. This API is similar to [persistProp](arkts-arkui-persistentstorage-c.md#persistprop), but allows multiple properties to be persisted at once, making it suitable for initializing during application startup.
+
+**Since:** 10
+
+**Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-PersistentStorage-static persistProps(props: PersistPropsOptions[]): void--><!--Device-PersistentStorage-static persistProps(props: PersistPropsOptions[]): void-End-->
+
+**System capability:** SystemCapability.ArkUI.ArkUI.Full
+
+**Parameters:**
+
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| props | [PersistPropsOptions](arkts-arkui-persistpropsoptions-i.md)[] | Yes |

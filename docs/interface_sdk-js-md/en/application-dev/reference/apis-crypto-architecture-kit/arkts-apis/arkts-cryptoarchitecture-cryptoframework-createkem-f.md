@@ -12,7 +12,7 @@ import { cryptoFramework } from 'kits/@kit.CryptoArchitectureKit';
 function createKem(algNameId: KemAlgNameId): Kem
 ```
 
-创建一个用于密钥封装和解封装操作的Kem实例。
+Creates a Kem instance for key encapsulation and decapsulation operations.
 
 **Since:** 26.0.0
 
@@ -30,37 +30,20 @@ function createKem(algNameId: KemAlgNameId): Kem
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| algNameId | [KemAlgNameId](arkts-cryptoarchitecture-cryptoframework-kemalgnameid-e.md) | Yes | KEM的算法名称ID。 |
+| algNameId | [KemAlgNameId](arkts-cryptoarchitecture-cryptoframework-kemalgnameid-e.md) | Yes | The algorithm name ID of the KEM. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [Kem](arkts-cryptoarchitecture-cryptoframework-kem-i.md) | 返回对应算法的Kem实例。 |
+| [Kem](arkts-cryptoarchitecture-cryptoframework-kem-i.md) | Returns the **Kem** instance corresponding to the specified algorithm. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 17630001 | 密码操作错误。 |
-| 17620001 | 内存操作失败。 |
-| 17620002 | 获取Native对象失败或参数转换失败。 |
-| 17620003 | 参数检查失败。 |
-
-## Examples
-
-```TypeScript
-import { cryptoFramework } from '@kit.CryptoArchitectureKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-function createKem() {
-  try {
-    let kem = cryptoFramework.createKem(cryptoFramework.KemAlgNameId.ML_KEM_768);
-    console.info('create kem success');
-  } catch (err) {
-    let e: BusinessError = err as BusinessError;
-    console.error(`create kem failed: errCode: ${e.code}, errMsg: ${e.message}`);
-  }
-}
-```
+| [17630001](../errorcode-crypto-framework.md#17630001-cryptographic-operation-error) | Crypto operation error. |
+| [17620001](../errorcode-crypto-framework.md#17620001-memory-operation-failed) | Memory operation failed. |
+| [17620002](../errorcode-crypto-framework.md#17620002-failed-to-obtain-the-native-object-or-convert-parameters) | Failed to obtain the native object or convert parameters. |
+| [17620003](../errorcode-crypto-framework.md#17620003-parameter-check-failed) | Parameter check failed. |
 

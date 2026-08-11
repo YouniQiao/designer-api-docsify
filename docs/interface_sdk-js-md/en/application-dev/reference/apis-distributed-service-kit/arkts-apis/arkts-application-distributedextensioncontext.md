@@ -12,5 +12,5 @@ import { DistributedExtensionContext } from 'kits/@kit.DistributedServiceKit';
 
 | Name | Description |
 | --- | --- |
-| [DistributedExtensionContext](arkts-distributedservice-application-distributedextensioncontext-distributedextensioncontext-c.md) | 用于分布式扩展功能的实现。 |
+| [DistributedExtensionContext](arkts-distributedservice-application-distributedextensioncontext-distributedextensioncontext-c.md) | Class inherited for the distributed extension function. |
 

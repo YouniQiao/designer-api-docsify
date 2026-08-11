@@ -1,6 +1,10 @@
 # FullScreenExitHandler
 
-Define the handler to exit the full screen mode, related to the {@link onFullScreenEnter} event.
+Implements the **FullScreenExitHandler** object to notify you that the **Web** component exits full screen mode.For details about the sample code,see [onFullScreenEnter](./arkts-basic-components-web-events.md#onfullscreenenter9).
+
+> **NOTE：**
+> 
+> - The sample effect is subject to the actual device.
 
 **Since:** 23
 
@@ -16,7 +20,7 @@ Define the handler to exit the full screen mode, related to the {@link onFullScr
 constructor()
 ```
 
-WebKeyboardController的构造函数。
+Constructs a **FullScreenExitHandler** API.
 
 **Since:** 23
 
@@ -32,7 +36,7 @@ WebKeyboardController的构造函数。
 exitFullScreen(): void
 ```
 
-Exit the full screen mode.
+Exits full screen mode.
 
 **Since:** 23
 

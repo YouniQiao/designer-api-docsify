@@ -6,13 +6,10 @@
 export declare const DynamicLayout: DynamicLayoutInterface
 ```
 
-动态布局容器组件，支持在运行时动态切换不同的布局算法，不改变子组件的状态。
-
-> **说明：**
-
-### 子组件
-
-可以包含子组件。
+Defines the dynamic layout container component, which supports dynamically switching between different layout algorithms at runtime without changing the status of child components.  
+> **Child Components**
+> 
+> Child components are supported.
 
 **Since:** 24
 

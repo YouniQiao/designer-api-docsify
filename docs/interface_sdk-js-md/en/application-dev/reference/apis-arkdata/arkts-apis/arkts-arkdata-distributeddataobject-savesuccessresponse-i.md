@@ -1,6 +1,6 @@
 # SaveSuccessResponse
 
-[save](arkts-arkdata-distributeddataobject-dataobject-i.md#save)接口回调信息。
+Represents the information returned by the callback of save..
 
 **Since:** 9
 
@@ -22,7 +22,7 @@ import { distributedDataObject } from 'kits/@kit.ArkData';
 deviceId: string
 ```
 
-存储数据的设备号，标识需要保存对象的设备。"local"表示本地设备，否则表示其他设备的设备号。
+ID of the device where the distributed data object is stored. The value local indicates a local device.
 
 **Type:** string
 
@@ -40,7 +40,7 @@ deviceId: string
 sessionId: string
 ```
 
-多设备协同的唯一标识。
+Unique ID for multi-device collaboration.
 
 **Type:** string
 
@@ -58,7 +58,7 @@ sessionId: string
 version: int
 ```
 
-已保存对象的版本，取值为非负整数。
+Version of the saved object, which is a non-negative integer.
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 

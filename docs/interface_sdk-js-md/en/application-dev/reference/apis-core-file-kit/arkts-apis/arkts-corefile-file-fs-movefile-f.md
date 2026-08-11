@@ -12,11 +12,11 @@ import { Options, ReaderIteratorResult, Watcher, ReadTextOptions, WatchEventList
 declare function moveFile(src: string, dest: string, mode?: number): Promise<void>
 ```
 
-移动文件，使用promise异步回调。
+Moves a file. This API uses a promise to return the result.
 
-> **说明：**
+> **NOTE：**
 > 
-> 该接口不支持在分布式文件路径下操作。
+> This API is not supported in a distributed directory.
 
 **Since:** 9
 
@@ -30,15 +30,15 @@ declare function moveFile(src: string, dest: string, mode?: number): Promise<voi
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| src | string | Yes | 源文件的应用沙箱路径。 |
-| dest | string | Yes | 目标文件的应用沙箱路径。 |
-| mode | number | No | 移动模式。若mode为0，移动位置存在同名文件时，强制移动覆盖。若mode为1，移动位置存在同名文件时，抛出异常。默认为0。 |
+| src | string | Yes | Application sandbox path of the file to move. |
+| dest | string | Yes | Application sandbox path of the destination file. |
+| mode | number | No | Move mode.&lt;br&gt; The value **0** means to overwrite the file with the same name in the destination directory; the value **1** means to throw an exception. The default value is **0**. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise对象。无返回值。 |
+| Promise&lt;void&gt; | Promise that returns no value. |
 
 **Error codes:**
 
@@ -71,11 +71,11 @@ declare function moveFile(src: string, dest: string, mode?: number): Promise<voi
 declare function moveFile(src: string, dest: string, callback: AsyncCallback<void>): void
 ```
 
-移动文件。如果移动位置存在同名文件，将强制覆盖。使用callback异步回调。
+Moves a file and forcibly overwrites the file with the same name in the destination directory. This API uses an asynchronous callback to return the result.
 
-> **说明：**
+> **NOTE：**
 > 
-> 该接口不支持在分布式文件路径下操作。
+> This API is not supported in a distributed directory.
 
 **Since:** 9
 
@@ -89,9 +89,9 @@ declare function moveFile(src: string, dest: string, callback: AsyncCallback<voi
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| src | string | Yes | 源文件的应用沙箱路径。 |
-| dest | string | Yes | 目标文件的应用沙箱路径。 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | 异步移动文件之后的回调。 |
+| src | string | Yes | Application sandbox path of the file to move. |
+| dest | string | Yes | Application sandbox path of the destination file. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. |
 
 **Error codes:**
 
@@ -124,11 +124,11 @@ declare function moveFile(src: string, dest: string, callback: AsyncCallback<voi
 declare function moveFile(src: string, dest: string, mode: number, callback: AsyncCallback<void>): void
 ```
 
-移动文件，支持设置移动模式。使用callback异步回调。
+Moves a file with the specified mode. This API uses an asynchronous callback to return the result.
 
-> **说明：**
+> **NOTE：**
 > 
-> 该接口不支持在分布式文件路径下操作。
+> This API is not supported in a distributed directory.
 
 **Since:** 9
 
@@ -142,10 +142,10 @@ declare function moveFile(src: string, dest: string, mode: number, callback: Asy
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| src | string | Yes | 源文件的应用沙箱路径。 |
-| dest | string | Yes | 目标文件的应用沙箱路径。 |
-| mode | number | Yes | 移动模式。若mode为0，移动位置存在同名文件时，强制移动覆盖。若mode为1，移动位置存在同名文件时，抛出异常。默认为0。 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | 异步移动文件之后的回调。 |
+| src | string | Yes | Application sandbox path of the file to move. |
+| dest | string | Yes | Application sandbox path of the destination file. |
+| mode | number | Yes | Move mode.&lt;br&gt; The value **0** means to overwrite the file with the same name in the destination directory; the value **1** means to throw an exception. The default value is **0**. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. |
 
 **Error codes:**
 

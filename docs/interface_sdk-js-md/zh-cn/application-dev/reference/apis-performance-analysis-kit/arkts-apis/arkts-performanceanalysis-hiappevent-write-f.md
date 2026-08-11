@@ -1,11 +1,5 @@
 # write
 
-## 导入模块
-
-```TypeScript
-import { hiAppEvent } from 'kits/@kit.PerformanceAnalysisKit';
-```
-
 ## write
 
 ```TypeScript
@@ -40,16 +34,18 @@ function write(info: AppEventInfo): Promise<void>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 11101001 | Invalid event domain. Possible causes: 1. Contain invalid characters; &lt;br&gt;2. Length is invalid. |
-| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types. |
-| 11101003 | Invalid number of event parameters. Possibly caused by the number of parameters &lt;br&gt;is over 32. |
-| 11101002 | Invalid event name. Possible causes: 1. Contain invalid characters; &lt;br&gt;2. Length is invalid. |
-| 11101005 | Invalid event parameter name. Possible causes: 1. Contain invalid characters; &lt;br&gt;2. Length is invalid. |
-| 11101004 | Invalid string length of the event parameter. |
-| 11101006 | Invalid array length of the event parameter. |
-| 11100001 | Function disabled. Possibly caused by the param disable in ConfigOption is true. |
+| [11101001](../errorcode-hiappevent.md#11101001-非法的事件领域名称) | Invalid event domain. Possible causes: 1. Contain invalid characters; &lt;br&gt;2. Length is invalid. |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types. |
+| [11101003](../errorcode-hiappevent.md#11101003-非法的事件参数数量) | Invalid number of event parameters. Possibly caused by the number of parameters &lt;br&gt;is over 32. |
+| [11101002](../errorcode-hiappevent.md#11101002-非法的事件名称) | Invalid event name. Possible causes: 1. Contain invalid characters; &lt;br&gt;2. Length is invalid. |
+| [11101005](../errorcode-hiappevent.md#11101005-非法的事件参数名称) | Invalid event parameter name. Possible causes: 1. Contain invalid characters; &lt;br&gt;2. Length is invalid. |
+| [11101004](../errorcode-hiappevent.md#11101004-非法的事件参数字符串长度) | Invalid string length of the event parameter. |
+| [11101006](../errorcode-hiappevent.md#11101006-非法的事件参数数组长度) | Invalid array length of the event parameter. |
+| [11100001](../errorcode-hiappevent.md#11100001-打点功能被关闭) | Function disabled. Possibly caused by the param disable in ConfigOption is true. |
 
 ## 示例
+
+ArkTS-Dyn示例：
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -70,6 +66,30 @@ hiAppEvent.write({
   hilog.info(0x0000, 'hiAppEvent', `success to write event`);
 }).catch((err: BusinessError) => {
   hilog.error(0x0000, 'hiAppEvent', `code: ${err.code}, message: ${err.message}`);
+});
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+import { hilog } from '@kit.PerformanceAnalysisKit';
+import { BusinessError } from '@ohos.base';
+
+let eventParams: Record<String, int | string> = {
+  "int_data": 100,
+  "str_data": "strValue",
+};
+// 应用事件打点，使用Promise方式作为异步回调
+hiAppEvent.write({
+  domain: "test_domain",
+  name: "test_event",
+  eventType: hiAppEvent.EventType.FAULT,
+  params: eventParams,
+}).then(() => {
+  hilog.info(0x0000, 'hiAppEvent', `success to write event`);
+}).catch((err: Error) => {
+  const bErr = err as BusinessError;
+  hilog.error(0x0000, 'hiAppEvent', `code: ${bErr.code}, message: ${bErr.message}`);
 });
 ```
 
@@ -103,16 +123,18 @@ function write(info: AppEventInfo, callback: AsyncCallback<void>): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 11101001 | Invalid event domain. Possible causes: 1. Contain invalid characters; &lt;br&gt;2. Length is invalid. |
-| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types. |
-| 11101003 | Invalid number of event parameters. Possibly caused by the number of parameters &lt;br&gt;is over 32. |
-| 11101002 | Invalid event name. Possible causes: 1. Contain invalid characters; &lt;br&gt;2. Length is invalid. |
-| 11101005 | Invalid event parameter name. Possible causes: 1. Contain invalid characters; &lt;br&gt;2. Length is invalid. |
-| 11101004 | Invalid string length of the event parameter. |
-| 11101006 | Invalid array length of the event parameter. |
-| 11100001 | Function disabled. Possibly caused by the param disable in ConfigOption is true. |
+| [11101001](../errorcode-hiappevent.md#11101001-非法的事件领域名称) | Invalid event domain. Possible causes: 1. Contain invalid characters; &lt;br&gt;2. Length is invalid. |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types. |
+| [11101003](../errorcode-hiappevent.md#11101003-非法的事件参数数量) | Invalid number of event parameters. Possibly caused by the number of parameters &lt;br&gt;is over 32. |
+| [11101002](../errorcode-hiappevent.md#11101002-非法的事件名称) | Invalid event name. Possible causes: 1. Contain invalid characters; &lt;br&gt;2. Length is invalid. |
+| [11101005](../errorcode-hiappevent.md#11101005-非法的事件参数名称) | Invalid event parameter name. Possible causes: 1. Contain invalid characters; &lt;br&gt;2. Length is invalid. |
+| [11101004](../errorcode-hiappevent.md#11101004-非法的事件参数字符串长度) | Invalid string length of the event parameter. |
+| [11101006](../errorcode-hiappevent.md#11101006-非法的事件参数数组长度) | Invalid array length of the event parameter. |
+| [11100001](../errorcode-hiappevent.md#11100001-打点功能被关闭) | Function disabled. Possibly caused by the param disable in ConfigOption is true. |
 
 ## 示例
+
+ArkTS-Dyn示例：
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -132,6 +154,32 @@ hiAppEvent.write({
 }, (err: BusinessError) => {
   if (err) {
     hilog.error(0x0000, 'hiAppEvent', `code: ${err.code}, message: ${err.message}`);
+    return;
+  }
+  hilog.info(0x0000, 'hiAppEvent', `success to write event`);
+});
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+import { BusinessError } from '@ohos.base';
+import { hilog } from '@kit.PerformanceAnalysisKit';
+
+let eventParams: Record<string, int | string> = {
+  "int_data": 100,
+  "str_data": "strValue",
+};
+
+// 应用事件打点，使用callback方式作为异步回调
+hiAppEvent.write({
+  domain: "test_domain",
+  name: "test_event",
+  eventType: hiAppEvent.EventType.FAULT,
+  params: eventParams,
+}, (err: BusinessError<void>|null) => {
+  if (err?.code != 0) {
+    hilog.error(0x0000, 'hiAppEvent', `code: ${err?.code}, message: ${err?.message}`);
     return;
   }
   hilog.info(0x0000, 'hiAppEvent', `success to write event`);

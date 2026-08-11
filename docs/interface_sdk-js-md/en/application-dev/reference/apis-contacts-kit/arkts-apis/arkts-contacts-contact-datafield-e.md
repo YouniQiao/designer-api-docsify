@@ -1,6 +1,6 @@
 # DataField
 
-枚举，联系人数据字段。
+Enumerates contact data fields.
 
 **Since:** 15
 
@@ -16,7 +16,7 @@
 PHONE = 1
 ```
 
-联系人电话。
+Phone number of the contact.
 
 **Since:** 15
 
@@ -34,7 +34,7 @@ PHONE = 1
 ORGANIZATION = 2
 ```
 
-联系人单位。
+Organization of the contact.
 
 **Since:** 15
 
@@ -52,7 +52,7 @@ ORGANIZATION = 2
 EMAIL = 0
 ```
 
-联系人邮箱。
+Email of the contact.
 
 **Since:** 15
 

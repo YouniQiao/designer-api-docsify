@@ -4,9 +4,10 @@
 type AuthEventKey = 'result' | 'tip'
 ```
 
-表示认证事件类型的关键字，作为[on](arkts-userauthentication-userauth-authinstance-i.md#on)接口的参数。
+Defines the keyword of the authentication event type. It is used as a parameter of  
+[on](arkts-userauthentication-userauth-authinstance-i.md#on).
 
-该类型为下表类型取值中的联合类型。
+It consists of the fields in **Type** in the following table.
 
 **Since:** 9
 

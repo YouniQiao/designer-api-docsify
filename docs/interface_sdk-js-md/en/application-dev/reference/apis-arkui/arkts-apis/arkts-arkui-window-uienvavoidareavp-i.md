@@ -1,6 +1,7 @@
 # UIEnvAvoidAreaVP
 
-以vp为单位表示的窗口避让区域信息，在进行[沉浸式布局](../../../windowmanager/window-terminology.md#沉浸式布局)适配时需关注。
+Describes the information about the window avoidance area in units of vp, which requires careful attention during  
+[immersive layout](../../../windowmanager/window-terminology.md#immersive-layout) adaptation.
 
 **Since:** 23
 
@@ -22,7 +23,7 @@ import { window } from 'kits/@kit.ArkUI';
 bottomRect: RectInVP
 ```
 
-中心位于窗口的两条对角线的底部的矩形区，单位为vp。
+Rectangle centered at the bottom of the window's two diagonals, in vp.
 
 **Type:** [RectInVP](arkts-arkui-window-rectinvp-i.md)
 
@@ -40,7 +41,7 @@ bottomRect: RectInVP
 leftRect: RectInVP
 ```
 
-中心位于窗口的两条对角线的左侧的矩形区，单位为vp。
+Rectangle centered to the left of the window's two diagonals, in vp.
 
 **Type:** [RectInVP](arkts-arkui-window-rectinvp-i.md)
 
@@ -58,7 +59,7 @@ leftRect: RectInVP
 rightRect: RectInVP
 ```
 
-中心位于窗口的两条对角线的右侧的矩形区，单位为vp。
+Rectangle centered to the right of the window's two diagonals, in vp.
 
 **Type:** [RectInVP](arkts-arkui-window-rectinvp-i.md)
 
@@ -76,7 +77,7 @@ rightRect: RectInVP
 topRect: RectInVP
 ```
 
-中心位于窗口的两条对角线的顶部的矩形区，单位为vp。
+Rectangle centered at the top of the window's two diagonals, in vp.
 
 **Type:** [RectInVP](arkts-arkui-window-rectinvp-i.md)
 
@@ -94,7 +95,7 @@ topRect: RectInVP
 visible: boolean
 ```
 
-无实际意义，暂不支持使用。
+Whether the avoid area is visible. **true** if visible, **false** otherwise.
 
 **Type:** boolean
 

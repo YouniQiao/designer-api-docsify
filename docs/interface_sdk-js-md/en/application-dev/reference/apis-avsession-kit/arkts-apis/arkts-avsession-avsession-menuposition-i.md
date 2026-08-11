@@ -1,6 +1,6 @@
 # MenuPosition
 
-定义可弹出菜单的组件的位置。
+Position definition of one component on which the menu will bind and popup.
 
 **Since:** 22
 
@@ -22,7 +22,7 @@ import { avSession } from 'kits/@kit.AVSessionKit';
 height: int
 ```
 
-组件高度。单位为vp。
+Component height, uint is vp.
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
@@ -42,7 +42,7 @@ height: int
 width: int
 ```
 
-组件宽度。单位为vp。
+Component width, uint is vp.
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
@@ -62,7 +62,7 @@ width: int
 x: int
 ```
 
-组件在X轴上的位置坐标。单位为vp。
+Coordinate x of the position of the component, uint is vp.
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
@@ -82,7 +82,7 @@ x: int
 y: int
 ```
 
-组件在y轴上的位置坐标。单位为vp。
+Coordinate y of the position of the component, uint is vp.
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 

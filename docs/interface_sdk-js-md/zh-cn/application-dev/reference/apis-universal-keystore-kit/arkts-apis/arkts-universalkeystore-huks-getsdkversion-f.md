@@ -1,11 +1,5 @@
 # getSdkVersion
 
-## 导入模块
-
-```TypeScript
-import { huks } from 'kits/@kit.UniversalKeystoreKit';
-```
-
 ## getSdkVersion
 
 ```TypeScript

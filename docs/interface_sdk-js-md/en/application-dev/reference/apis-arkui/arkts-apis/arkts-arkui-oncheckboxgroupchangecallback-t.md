@@ -4,7 +4,7 @@
 export type OnCheckboxGroupChangeCallback = (value: CheckboxGroupResult) => void
 ```
 
-多选框群组的信息。
+Defines a CheckboxGroup callback when onChange.Anonymous Object Rectification.
 
 **Since:** 23
 
@@ -20,5 +20,5 @@ export type OnCheckboxGroupChangeCallback = (value: CheckboxGroupResult) => void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | [CheckboxGroupResult](../arkts-components/arkts-arkui-checkboxgroupresult-i.md) | Yes | 多选框群组的信息。 |
+| value | [CheckboxGroupResult](../arkts-components/arkts-arkui-checkboxgroupresult-i.md) | Yes | checkbox group result |
 

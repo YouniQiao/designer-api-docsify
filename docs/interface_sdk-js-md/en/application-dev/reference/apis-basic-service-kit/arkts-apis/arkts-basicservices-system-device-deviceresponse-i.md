@@ -1,7 +1,5 @@
 # DeviceResponse
 
-定义设备信息获取的参数选项。
-
 **Since:** 3
 
 **ArkTS mode:** ArkTS-Dyn only, since version 3.
@@ -24,7 +22,7 @@ import { DeviceResponse, GetDeviceOptions } from 'kits/@kit.BasicServicesKit';
 apiVersion: number
 ```
 
-系统API版本号。
+API version.
 
 **Type:** number
 
@@ -44,7 +42,7 @@ apiVersion: number
 brand: string
 ```
 
-品牌。
+Brand.
 
 **Type:** string
 
@@ -64,7 +62,7 @@ brand: string
 deviceType: string
 ```
 
-设备类型。常见取值：phone（手机）、tablet（平板）、tv（电视）、wearable（可穿戴设备）等。
+Device type. The options are as follows:phone: smartphone tablet: tablet tv: smart TV wearable: wearable liteWearable: lite wearable ar: AR vr: virtual reality earphones: headset pc: personal computer speaker: speaker smartVision: smart visual device linkIoT: connection module
 
 **Type:** string
 
@@ -84,7 +82,7 @@ deviceType: string
 language: string
 ```
 
-系统语言。
+System language.
 
 **Type:** string
 
@@ -104,7 +102,7 @@ language: string
 manufacturer: string
 ```
 
-生产商。
+Manufacturer.
 
 **Type:** string
 
@@ -124,7 +122,7 @@ manufacturer: string
 model: string
 ```
 
-型号。
+Model.
 
 **Type:** string
 
@@ -144,7 +142,7 @@ model: string
 product: string
 ```
 
-产品代号。
+Product number.
 
 **Type:** string
 
@@ -164,7 +162,7 @@ product: string
 region: string
 ```
 
-系统地区。
+System region.
 
 **Type:** string
 
@@ -184,7 +182,7 @@ region: string
 screenDensity: number
 ```
 
-屏幕像素密度。表示屏幕每英寸的像素点数量，单位为dpi(dots per inch)。不同设备的屏幕像素密度存在差异。
+Screen density, unit dpi.
 
 **Type:** number
 
@@ -204,11 +202,7 @@ screenDensity: number
 screenShape: 'rect' | 'circle'
 ```
 
-屏幕形状。可取值：
-
-- rect：方形屏；
-
-- circle：圆形屏。
+Screen shape. The options are as follows:rect: Rectangle screen.circle: Circle screen.
 
 **Type:** 'rect' \| 'circle'
 
@@ -222,13 +216,57 @@ screenShape: 'rect' | 'circle'
 
 **System capability:** SystemCapability.Startup.SystemInfo.Lite
 
+## sdkMinorApiVersion
+
+```TypeScript
+sdkMinorApiVersion?: number
+```
+
+Minor API version of the system software.From API 26 and later versions, the system API version format is sdkApiVersion.sdkMinorApiVersion.sdkPatchApiVersion.Example: 26.0.0Value range: (-∞,+∞).
+
+**Type:** number
+
+**Since:** 26.0.0
+
+**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
+
+**Deprecated since:** 26.0.0
+
+**Model restriction:** This API can be used only in the FA model.
+
+<!--Device-DeviceResponse-sdkMinorApiVersion?: number--><!--Device-DeviceResponse-sdkMinorApiVersion?: number-End-->
+
+**System capability:** SystemCapability.Startup.SystemInfo.Lite
+
+## sdkPatchApiVersion
+
+```TypeScript
+sdkPatchApiVersion?: number
+```
+
+Minor API version of the system software.From API 26 and later versions, the system API version format is sdkApiVersion.sdkMinorApiVersion.sdkPatchApiVersion.Example: 26.0.0Value range: (-∞,+∞).
+
+**Type:** number
+
+**Since:** 26.0.0
+
+**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
+
+**Deprecated since:** 26.0.0
+
+**Model restriction:** This API can be used only in the FA model.
+
+<!--Device-DeviceResponse-sdkPatchApiVersion?: number--><!--Device-DeviceResponse-sdkPatchApiVersion?: number-End-->
+
+**System capability:** SystemCapability.Startup.SystemInfo.Lite
+
 ## windowHeight
 
 ```TypeScript
 windowHeight: number
 ```
 
-可使用的窗口宽度，单位px。不同设备的可使用窗口尺寸存在差异。
+Window Height, unit px.
 
 **Type:** number
 
@@ -248,7 +286,7 @@ windowHeight: number
 windowWidth: number
 ```
 
-可使用的窗口宽度，单位px。不同设备的可使用窗口尺寸存在差异。
+Window width, unit px.
 
 **Type:** number
 

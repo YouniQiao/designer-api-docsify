@@ -1,12 +1,12 @@
 # Param
 
-此接口提供了所有预定义参数的参数名称常量。
+Provides constants that define the names of all predefined event parameters.
 
-| 名称 | 类型 | 可读 | 可写 | 说明 |  
+| Name | Type | Readable| Writable| Description |  
 | ------------------------------- | ------ | ---- | ---- | ------------------ |  
-| USER_ID | string | 是 | 否 | 用户自定义ID。 |  
-| DISTRIBUTED_SERVICE_NAME | string | 是 | 否 | 分布式服务名称。 |  
-| DISTRIBUTED_SERVICE_INSTANCE_ID | string | 是 | 否 | 分布式服务实例ID。 |
+| USER_ID | string | Yes | No | Custom user ID. |  
+| DISTRIBUTED_SERVICE_NAME | string | Yes | No | Distributed service name. |  
+| DISTRIBUTED_SERVICE_INSTANCE_ID | string | Yes | No | Distributed service instance ID.|
 
 **Since:** 7
 
@@ -26,7 +26,7 @@
 
 | Name | Description |
 | --- | --- |
-| [USER_ID](arkts-performanceanalysis-param-depr-con.md#user_id) | 用户自定义ID。 |
-| [DISTRIBUTED_SERVICE_NAME](arkts-performanceanalysis-param-depr-con.md#distributed_service_name) | 分布式服务名称。 |
-| [DISTRIBUTED_SERVICE_INSTANCE_ID](arkts-performanceanalysis-param-depr-con.md#distributed_service_instance_id) | 分布式服务实例ID。 |
+| [USER_ID](arkts-performanceanalysis-param-depr-con.md#user_id) | User id. |
+| [DISTRIBUTED_SERVICE_NAME](arkts-performanceanalysis-param-depr-con.md#distributed_service_name) | Distributed service name. |
+| [DISTRIBUTED_SERVICE_INSTANCE_ID](arkts-performanceanalysis-param-depr-con.md#distributed_service_instance_id) | Distributed service instance id. |
 

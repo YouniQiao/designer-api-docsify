@@ -1,6 +1,6 @@
 # ApplicationQuickFixInfo (System API)
 
-应用级别的快速修复信息。
+Defines the quick fix information at the application level.
 
 **Since:** 9
 
@@ -24,7 +24,7 @@ import { quickFixManager } from 'kits/@kit.AbilityKit';
 readonly bundleName: string
 ```
 
-应用Bundle名称。
+Bundle name.
 
 **Type:** string
 
@@ -44,7 +44,7 @@ readonly bundleName: string
 readonly bundleVersionCode: long
 ```
 
-应用的版本号。
+Internal version number of the application.
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：long
 
@@ -64,7 +64,7 @@ readonly bundleVersionCode: long
 readonly bundleVersionName: string
 ```
 
-应用版本号的文字描述。
+Version number of the application that is shown to users.
 
 **Type:** string
 
@@ -84,7 +84,7 @@ readonly bundleVersionName: string
 readonly hapModuleQuickFixInfo: Array<HapModuleQuickFixInfo>
 ```
 
-hap级别的快速修复信息。
+Quick fix information at the HAP file level.
 
 **Type:** Array&lt;HapModuleQuickFixInfo&gt;
 
@@ -104,7 +104,7 @@ hap级别的快速修复信息。
 readonly quickFixVersionCode: long
 ```
 
-快速修复补丁包的版本号。
+Version code of the quick fix patch package.
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：long
 
@@ -124,7 +124,7 @@ readonly quickFixVersionCode: long
 readonly quickFixVersionName: string
 ```
 
-快速修复补丁包版本号的文字描述。
+Text description of the version number of the quick fix patch package.
 
 **Type:** string
 

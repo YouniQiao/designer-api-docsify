@@ -1,13 +1,10 @@
 # @ohos.arkui.uiExtension
 
-用于[EmbeddedUIExtensionAbility](../../../application-models/embeddeduiextensionability.md)（或  
-[UIExtensionAbility](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-uiextensionability-uiextensionability-c.md/arkts-ability-app-ability-uiextensionability-uiextensionability-c.md)）中获取宿主应用的窗口信息或对应的  
-[EmbeddedComponent](../../apis-arkui/arkts-components/arkts-arkui-embedded_component-i)&lt;!--Del--&gt;（或  
-[UIExtensionComponent](../../apis-arkui/arkts-components/arkts-arkui-ui_extension_component-i)）&lt;!--DelEnd--&gt;组件的信息。
-
-> **说明：**
-> 
-> 从API version 12开始支持。后续版本如有新增内容，则采用上角标单独标记该内容的起始版本。
+The **uiExtension** module provides APIs for the  
+[EmbeddedUIExtensionAbility](../../../application-models/embeddeduiextensionability.md) (or  
+[UIExtensionAbility](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-uiextensionability-uiextensionability-c.md/arkts-ability-app-ability-uiextensionability-uiextensionability-c.md)) to obtain the host application window information or the information about the corresponding  
+[EmbeddedComponent](../../apis-arkui/arkts-components/arkts-arkui-embedded_component-i)&lt;!--Del--&gt; (or  
+[UIExtensionComponent](../../apis-arkui/arkts-components/arkts-arkui-ui_extension_component-i))&lt;!--DelEnd--&gt; component.
 
 **Since:** 12
 
@@ -31,23 +28,23 @@ import { uiExtension } from 'kits/@kit.ArkUI';
 
 | Name | Description |
 | --- | --- |
-| [AvoidAreaInfo](arkts-arkui-uiextension-avoidareainfo-i.md) | 用于表示窗口避让区的信息。 |
-| [RectChangeOptions](arkts-arkui-uiextension-rectchangeoptions-i.md) | 组件（EmbeddedComponent或UIExtensionComponent）矩形（位置及尺寸）变化返回的值及变化原因。 |
-| [WindowProxy](arkts-arkui-uiextension-windowproxy-i.md) | UIExtension窗口代理。 |
-| [WindowProxyProperties](arkts-arkui-uiextension-windowproxyproperties-i.md) | 用于表示组件的相关信息。 |
+| [AvoidAreaInfo](arkts-arkui-uiextension-avoidareainfo-i.md) | Represents the information about the avoidance area of the window. |
+| [RectChangeOptions](arkts-arkui-uiextension-rectchangeoptions-i.md) | Provides the values and reasons returned when the rectangle (position and size) of the component (  **EmbeddedComponent** or **UIExtensionComponent**) changes. |
+| [WindowProxy](arkts-arkui-uiextension-windowproxy-i.md) | The proxy of the UIExtension window. |
+| [WindowProxyProperties](arkts-arkui-uiextension-windowproxyproperties-i.md) | Provides information about a component. |
 
 <!--Del-->
 ### Interfaces（系统接口）
 
 | Name | Description |
 | --- | --- |
-| [WindowProxy](arkts-arkui-uiextension-windowproxy-i-sys.md) | UIExtension窗口代理。 |
+| [WindowProxy](arkts-arkui-uiextension-windowproxy-i-sys.md) | The proxy of the UIExtension window. |
 <!--DelEnd-->
 
 ### Enums
 
 | Name | Description |
 | --- | --- |
-| [EventFlag](arkts-arkui-uiextension-eventflag-e.md) | 事件类型枚举。 |
-| [RectChangeReason](arkts-arkui-uiextension-rectchangereason-e.md) | 组件（EmbeddedComponent或UIExtensionComponent）矩形（位置及尺寸）变化的原因。 |
+| [EventFlag](arkts-arkui-uiextension-eventflag-e.md) | Enumerates event types. |
+| [RectChangeReason](arkts-arkui-uiextension-rectchangereason-e.md) | Enumerates the reasons for changes in the rectangle (position and size) of the component (**EmbeddedComponent** or  **UIExtensionComponent**). |
 

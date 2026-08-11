@@ -1,6 +1,6 @@
 # PointerMatrix
 
-存储多指操作中每根手指每一步动作的坐标点及其行为的二维数组。
+Implements a **PointerMatrix** object that stores coordinates and behaviors of each action of each finger in a multi-touch operation. After creating an object using {@link create}, use {@link setPoint} to set the coordinates of each finger at each step. Then pass the coordinates to {@link injectMultiPointerAction} to perform a multi-finger operation.
 
 **Since:** 9
 
@@ -28,7 +28,7 @@ ArkTS-Sta:
 static create(fingers: int, steps: int): PointerMatrix
 ```
 
-静态方法，构造一个PointerMatrix对象，并返回该对象。
+Creates a **PointerMatrix** object and returns the object created. This API is a static API.
 
 **Since:** 9
 
@@ -44,20 +44,20 @@ static create(fingers: int, steps: int): PointerMatrix
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| fingers | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | 多指操作中注入的手指数，取值范围：[1,10]的整数。 |
-| steps | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | 每根手指操作的步骤数，取值范围：[1,1000]的整数。 |
+| fingers | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | Number of fingers injected during the multi-finger operation. The value is an integer ranging from 1 to 10. If the value is out of range, error code 401 is thrown. |
+| steps | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | Number of steps performed by a finger. The value is an integer ranging from 1 to 1000. If the value is out of range, error code 401 is thrown. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [PointerMatrix](arkts-test-uitest-pointermatrix-c.md) | 返回构造的PointerMatrix对象。 |
+| [PointerMatrix](arkts-test-uitest-pointermatrix-c.md) | PointerMatrix** object created. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
 
 ## Examples
 
@@ -82,7 +82,7 @@ ArkTS-Sta:
 setPoint(finger: int, step: int, point: Point): void
 ```
 
-设置PointerMatrix对象中指定手指和步骤对应动作的坐标点。
+Sets the coordinates for the action corresponding to the specified finger and step in the **PointerMatrix**object.
 
 **Since:** 9
 
@@ -98,15 +98,15 @@ setPoint(finger: int, step: int, point: Point): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| finger | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | 手指的序号，取值大于等于0的整数，且不超过构造PointerMatrix对象时设置的手指数。 |
-| step | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | 步骤的序号，取值大于等于0的整数，且不超过构造PointerMatrix对象时设置的操作的步骤数。 |
-| point | [Point](../../apis-camera-kit/arkts-apis/arkts-camera-camera-point-i.md) | Yes | 该行为的坐标点。建议相邻的坐标点距离在10px至80px范围内。 |
+| finger | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | Number of fingers. The value is an integer greater than or equal to 0 and cannot exceed the number of fingers set when the **PointerMatrix** object is constructed. |
+| step | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | Number of steps. The value is an integer greater than or equal to 0 and cannot exceed the number of steps set when the **PointerMatrix** object is constructed. |
+| point | [Point](../../apis-camera-kit/arkts-apis/arkts-camera-camera-point-i.md) | Yes | Coordinates of the action. It is recommended that the distance between adjacent coordinates be within the range of 10 px to 80 px. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
 
 ## Examples
 

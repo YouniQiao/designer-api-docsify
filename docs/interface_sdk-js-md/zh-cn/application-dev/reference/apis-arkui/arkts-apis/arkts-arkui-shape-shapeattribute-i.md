@@ -481,7 +481,7 @@ default viewPort(value: ViewportRect | undefined): this
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | [ViewportRect](arkts-arkui-shape-viewportrect-i.md) \| undefined | 是 | Viewport绘制属性。 默认值：{} 异常值undefined和null按照默认值处理。 |
+| value | [ViewportRect](../arkts-components/arkts-arkui-viewportrect-i.md) \| undefined | 是 | Viewport绘制属性。 默认值：{} 异常值undefined和null按照默认值处理。 |
 
 **返回值：**
 

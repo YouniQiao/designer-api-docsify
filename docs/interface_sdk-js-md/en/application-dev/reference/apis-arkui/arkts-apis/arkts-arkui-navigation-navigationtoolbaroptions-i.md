@@ -1,6 +1,6 @@
 # NavigationToolbarOptions
 
-工具栏选项。
+Indicates the options of Navigation's Toolbar.
 
 **Since:** 23
 
@@ -16,7 +16,7 @@
 backgroundBlurStyle?: BlurStyle
 ```
 
-标题栏背景模糊样式，不设置时关闭背景模糊效果。
+Background blur style.
 
 **Type:** [BlurStyle](../arkts-components/arkts-arkui-blurstyle-e.md)
 
@@ -36,8 +36,7 @@ backgroundBlurStyle?: BlurStyle
 backgroundBlurStyleOptions?: BackgroundBlurStyleOptions
 ```
 
-标题栏背景模糊选项。  
-**说明：**只在设置了backgroundBlurStyle时生效。不建议与backgroundEffect同时使用。
+Background blur style options.
 
 **Type:** [BackgroundBlurStyleOptions](../arkts-components/arkts-arkui-backgroundblurstyleoptions-i.md)
 
@@ -57,7 +56,7 @@ backgroundBlurStyleOptions?: BackgroundBlurStyleOptions
 backgroundColor?: ResourceColor
 ```
 
-标题栏背景颜色，不设置时为系统默认颜色。
+Background color.
 
 **Type:** [ResourceColor](arkts-arkui-resourcecolor-t.md)
 
@@ -77,8 +76,7 @@ backgroundColor?: ResourceColor
 backgroundEffect?: BackgroundEffectOptions
 ```
 
-设置标题栏背景属性包括：模糊半径，亮度，饱和度，颜色等。  
-**说明：**不建议与backgroundBlurStyleOptions同时使用。
+Background effect options.
 
 **Type:** [BackgroundEffectOptions](../arkts-components/arkts-arkui-backgroundeffectoptions-i.md)
 
@@ -98,7 +96,7 @@ backgroundEffect?: BackgroundEffectOptions
 barStyle?: BarStyle
 ```
 
-设置工具栏布局方式。默认值： BarStyle.STANDARD。
+Set tool bar style.Default value: BarStyle.STANDARD.
 
 **Type:** [BarStyle](../arkts-components/arkts-arkui-barstyle-e.md)
 
@@ -120,7 +118,7 @@ barStyle?: BarStyle
 hideItemValue?: boolean
 ```
 
-设置是否隐藏工具栏的文本，默认显示文本。true：隐藏工具栏的文本；false：不隐藏工具栏的文本。默认值： false。
+Set whether toolbar displays text.Default value: false.
 
 **Type:** boolean
 
@@ -142,7 +140,7 @@ hideItemValue?: boolean
 moreButtonOptions?: MoreButtonOptions
 ```
 
-工具栏更多图标的菜单选项。
+More button options.
 
 **Type:** [MoreButtonOptions](arkts-arkui-navigation-morebuttonoptions-i.md)
 

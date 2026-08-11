@@ -1,6 +1,6 @@
 # HeartRateResponse
 
-心率传感器数据，继承于[Response](arkts-sensorservice-sensor-response-i.md)。
+Describes the heart rate sensor data. It extends from [Response](arkts-sensorservice-sensor-response-i.md).
 
 **Inheritance/Implementation:** HeartRateResponse extends [Response](arkts-sensorservice-sensor-response-i.md)
 
@@ -24,7 +24,7 @@ import { sensor } from 'kits/@kit.SensorServiceKit';
 heartRate: double
 ```
 
-用户的心率数值。单位：bpm（beats per minute，每分钟心跳次数）。
+Heart rate, in beats per minute (bpm).
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：double
 

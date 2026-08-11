@@ -12,7 +12,7 @@ import { notificationManager } from 'kits/@kit.NotificationKit';
 function setDistributedEnabledBySlot(slot: SlotType, deviceType: string, enabled: boolean): Promise<void>
 ```
 
-设置指定渠道的通知是否支持通知跨设备协同至指定类型设备。使用Promise异步回调。
+Sets whether notifications of a specified slot can be sent to devices of a specified type through cross-device collaboration. This API uses a promise to return the result.
 
 **Since:** 18
 
@@ -30,23 +30,23 @@ function setDistributedEnabledBySlot(slot: SlotType, deviceType: string, enabled
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| slot | [SlotType](arkts-notification-notificationmanager-slottype-e-sys.md) | Yes | 通知渠道类型。 |
-| deviceType | string | Yes | 设备类型。&lt;br&gt;从API version 18开始，支持的设备类型如下：&lt;br&gt;- headset（可穿戴式音频设备）。&lt;br&gt;- liteWearable（轻量级智 能穿戴设备）。&lt;br&gt;- wearable（智能穿戴设备）。&lt;br&gt;从API version 20开始，支持的设备类型如下：&lt;br&gt;- headset（可穿戴式音频设备）。&lt;br&gt;- liteWearable（轻量级智能穿 戴设备）。&lt;br&gt;- wearable（智能穿戴设备）。&lt;br&gt;- current（本设备）。&lt;br&gt;- 2in1（PC设备）。&lt;br&gt;- tablet（平板）。 |
-| enabled | boolean | Yes | 是否开启通知跨设备协同开关。取值为true表示打开，取值为false表示关闭。 |
+| slot | [SlotType](arkts-notification-notificationmanager-slottype-e-sys.md) | Yes | Types of the notification slot. |
+| deviceType | string | Yes | Device type.&lt;br&gt;Since API version 18, the following device types are supported:&lt;br&gt;- **headset**: wearable audio device&lt;br&gt;- **liteWearable**: lite wearable&lt;br&gt;- **wearable**: wearable&lt;br&gt;Since API version 20, the following device types are supported:&lt;br&gt;- **headset**: wearable audio device&lt;br&gt;- **liteWearable**: lite wearable&lt;br&gt;- **wearable**: wearable&lt;br&gt;- **current**: current device&lt;br&gt;- **2in1**: PC&lt; br&gt;- **tablet**: tablet |
+| enabled | boolean | Yes | Whether to enable cross-device collaboration for notifications. The value **true** means to enable cross-device collaboration, and **false** means the opposite. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise对象。无返回结果的Promise对象。 |
+| Promise&lt;void&gt; | Promise that returns no value. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. 3. Parameter verification failed. |
-| 201 | Permission denied. |
-| 202 | Not system application to call the interface. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. 3. Parameter verification failed. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system application to call the interface. |
 
 ## Examples
 

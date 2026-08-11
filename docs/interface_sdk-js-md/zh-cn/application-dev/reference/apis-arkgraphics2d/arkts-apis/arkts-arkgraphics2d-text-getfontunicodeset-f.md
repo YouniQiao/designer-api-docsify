@@ -1,11 +1,5 @@
 # getFontUnicodeSet
 
-## 导入模块
-
-```TypeScript
-import { text } from 'kits/@kit.ArkGraphics2D';
-```
-
 ## getFontUnicodeSet
 
 ```TypeScript
@@ -41,6 +35,8 @@ function getFontUnicodeSet(path: string | Resource, index: int) : Promise<Array<
 
 ## 示例
 
+ArkTS-Dyn示例：
+
 ```TypeScript
 import { text } from '@kit.ArkGraphics2D'
 
@@ -61,6 +57,31 @@ struct GetFontUnicodeSetTest {
     }.width("100%")
     .height("100%")
     .justifyContent(FlexAlign.Center)
+  }
+}
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+import {Entry, Component, Column, Button} from '@ohos.arkui.component'
+import { text } from '@kit.ArkGraphics2D'
+
+@Entry
+@Component
+struct GetFontUnicodeSetTest {
+  build() {
+    Column() {
+      Button("get fontUnicode").onClick(() => {
+        text.getFontUnicodeSet("file:///system/fonts/HMSymbolVF.ttf", 0).then((unicodeSet:Array<int>) => {
+          for (let index = 0; index < unicodeSet.length; index++) {
+            console.info(unicodeSet[index].toString())
+          }
+        }).catch((error: Error) => {
+          console.error(`Failed to get font unicode, error: ${JSON.stringify(error)}`)
+        });
+      })
+    }
   }
 }
 ```

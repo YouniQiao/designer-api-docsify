@@ -16,7 +16,7 @@ Defining Monitor annotation Monitor provides the capability of listening for sta
 path: string[]
 ```
 
-用于设置对象属性名，可同时监听多个对象属性。
+Listened property name.
 
 **Type:** string[]
 

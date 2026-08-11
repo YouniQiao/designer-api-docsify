@@ -1,11 +1,5 @@
 # pluggedType
 
-## 导入模块
-
-```TypeScript
-import { batteryInfo } from 'kits/@kit.BasicServicesKit';
-```
-
 ## pluggedType
 
 ```TypeScript
@@ -27,4 +21,12 @@ function pluggedType(): BatteryPluggedType
 | 类型 | 说明 |
 | --- | --- |
 | [BatteryPluggedType](arkts-basicservices-batteryinfo-batterypluggedtype-e.md) | 返回当前设备连接的充电器类型。 |
+
+## 示例
+
+```TypeScript
+// ArkTS-Sta示例
+let result = batteryInfo.pluggedType();
+console.info("The result is: " + result);
+```
 

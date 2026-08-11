@@ -12,13 +12,7 @@ import { inputDeviceCooperate } from 'kits/@kit.InputKit';
 function getState(deviceDescriptor: string, callback: AsyncCallback<{ state: boolean }>): void
 ```
 
-获取键鼠穿越开关的状态，使用callback异步回调。
-
-> **说明：**
-> 
-> 从 API version 9开始支持，从API version 23开始废弃。建议使用
-> [cooperate.getCooperateSwitchState](../../apis-distributed-service-kit/arkts-apis/arkts-distributedservice-cooperate-getcooperateswitchstate-f-sys.md/arkts-distributedservice-cooperate-getcooperateswitchstate-f-sys.md#getcooperateswitchstate)
-> 替代。
+Obtains the state of the screen hopping switch. This API uses an asynchronous callback to return the result.
 
 **Since:** 9
 
@@ -38,15 +32,15 @@ function getState(deviceDescriptor: string, callback: AsyncCallback<{ state: boo
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| deviceDescriptor | string | Yes | 键鼠穿越目标设备描述符。 |
+| deviceDescriptor | string | Yes | Descriptor of the target device for screen hopping. |
 | callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;{ state: boolean }&gt; | Yes |  |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; 3. Parameter verification failed. |
-| 202 | Permission denied, non-system app called system api.<br>**Applicable version:** 12 and later |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; 3. Parameter verification failed. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission denied, non-system app called system api.<br>**Applicable version:** 12 and later |
 
 ## Examples
 
@@ -65,13 +59,13 @@ struct Index {
           try {
             inputDeviceCooperate.getState(deviceDescriptor, (error: BusinessError, data: object) => {
               if (error) {
-                console.error(`Failed to get status, Code: ${(error as BusinessError).code}, message: ${(error as BusinessError).message}.`);
+                console.error(`Get the status failed, error: ${JSON.stringify(error, [`code`, `message`])}`);
                 return;
               }
-              console.info(`Succeeded in getting status, data: ${JSON.stringify(data)}.`);
+              console.info(`Get the status success, data: ${JSON.stringify(data)}`);
             });
           } catch (error) {
-            console.error(`Failed to get status, Code: ${(error as BusinessError).code}, message: ${(error as BusinessError).message}.`);
+            console.error(`Get the status failed, error: ${JSON.stringify(error, [`code`, `message`])}`);
           }
         })
     }
@@ -86,13 +80,7 @@ struct Index {
 function getState(deviceDescriptor: string): Promise<{ state: boolean }>
 ```
 
-获取键鼠穿越开关的状态，使用Promise异步回调。
-
-> **说明：**
-> 
-> 从 API version 9开始支持，从API version 23开始废弃。建议使用
-> [cooperate.getCooperateSwitchState](../../apis-distributed-service-kit/arkts-apis/arkts-distributedservice-cooperate-getcooperateswitchstate-f-sys.md/arkts-distributedservice-cooperate-getcooperateswitchstate-f-sys.md#getcooperateswitchstate)替
-> 代。
+Checks whether screen hopping is enabled. This API uses a promise to return the result.
 
 **Since:** 9
 
@@ -112,7 +100,7 @@ function getState(deviceDescriptor: string): Promise<{ state: boolean }>
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| deviceDescriptor | string | Yes | 键鼠穿越目标设备描述符。 |
+| deviceDescriptor | string | Yes | Descriptor of the target device for screen hopping. |
 
 **Return value:**
 
@@ -124,8 +112,8 @@ function getState(deviceDescriptor: string): Promise<{ state: boolean }>
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; 3. Parameter verification failed. |
-| 202 | Permission denied, non-system app called system api.<br>**Applicable version:** 12 and later |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; 3. Parameter verification failed. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission denied, non-system app called system api.<br>**Applicable version:** 12 and later |
 
 ## Examples
 
@@ -141,11 +129,15 @@ struct Index {
       Text()
         .onClick(() => {
           let deviceDescriptor = "descriptor";
-          inputDeviceCooperate.getState(deviceDescriptor).then((data: object) => {
-            console.info(`Succeeded in getting the status, data: ${JSON.stringify(data)}.`);
-          }).catch((error: BusinessError) => {
-            console.error(`Failed to get the status, Code: ${(error as BusinessError).code}, message: ${(error as BusinessError).message}.`);
-          });
+          try {
+            inputDeviceCooperate.getState(deviceDescriptor).then((data: object) => {
+              console.info(`Get the status success, data: ${JSON.stringify(data)}`);
+            }, (error: BusinessError) => {
+              console.error(`Get the status failed, error: ${JSON.stringify(error, [`code`, `message`])}`);
+            });
+          } catch (error) {
+            console.error(`Get the status failed, error: ${JSON.stringify(error, [`code`, `message`])}`);
+          }
         })
     }
   }

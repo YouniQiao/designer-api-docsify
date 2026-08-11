@@ -52,10 +52,10 @@ Note: The device must be paired first.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 34900004 | The device has already been bound to the PartnerAgentExtensionAbility. |
-| 801 | Capability not supported. |
-| 34900005 | Bluetooth disabled. |
-| 34900003 | The device is not paired. |
-| 34900099 | Internal error. |
-| 201 | Permission denied. |
+| [34900004](../errorcode-fusionConnectivity.md#34900004-device-address-registered) | The device has already been bound to the PartnerAgentExtensionAbility. |
+| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. |
+| [34900005](../errorcode-fusionConnectivity.md#34900005-bluetooth-disabled) | Bluetooth disabled. |
+| [34900003](../errorcode-fusionConnectivity.md#34900003-device-not-paired) | The device is not paired. |
+| [34900099](../errorcode-fusionConnectivity.md#34900099-operation-failed) | Internal error. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
 

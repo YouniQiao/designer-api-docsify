@@ -1,6 +1,6 @@
 # WordBreak
 
-断词策略枚举。
+Enumerates the word break types.
 
 **Since:** 12
 
@@ -16,7 +16,7 @@
 NORMAL = 0
 ```
 
-默认的换行规则。依据各自语言的规则，允许在字间发生换行。
+Default mode that break words based on language-specific conventions.
 
 **Since:** 12
 
@@ -34,7 +34,7 @@ NORMAL = 0
 BREAK_ALL = 1
 ```
 
-对于Non-CJK（非中文，日文，韩文）文本允许在任意字符内发生换行。该值适合包含一些非亚洲文本的亚洲文本，比如使连续的英文字符断行。
+Allows breaks within any character in non-CJK text. (CJK means Chinese, Japanese, and Korean.) This value is suitable for Asian text that contains some non-Asian text. For example, it can be used to break consecutive English characters.
 
 **Since:** 12
 
@@ -52,7 +52,7 @@ BREAK_ALL = 1
 BREAK_WORD = 2
 ```
 
-对于Non-CJK的文本可在任意2个字符间断行，一行文本中有断行点（如空白符）时，优先按断行点换行，保障单词优先完整显示。若整一行文本均无断行点时，则在任意2个字符间断行。对于CJK文本，此策略与NORMAL效果一致。
+For non-CJK text, breaks lines between any two characters. If a line contains break points (such as whitespace characters), the line breaks at the break points first to keep words intact. If the entire line has no break points, the line breaks between any two characters. For CJK text, this strategy behaves the same as NORMAL.
 
 **Since:** 12
 
@@ -70,9 +70,10 @@ BREAK_WORD = 2
 BREAK_HYPHEN = 3
 ```
 
-每行末尾单词尝试通过连字符“-”进行断行，若无法添加连字符“-”，则跟`BREAK_WORD`保持一致。
+Attempts to break words at the end of a line using a hyphen. If a hyphen cannot be added, it behaves like  
+**BREAK_WORD**.
 
-使用此断词策略时，需与[TextStyle](arkts-arkgraphics2d-text-textstyle-i.md)中`locale`属性配合使用，通过locale定义语言环境共同作用影响断词效果。
+When using this word break strategy, you need to use the `locale` attribute in [TextStyle](arkts-arkgraphics2d-text-textstyle-i.md)to define the language environment, which affects the word break effect.
 
 **Since:** 18
 

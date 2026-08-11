@@ -4,7 +4,7 @@
 type ContentBuilder = () => void
 ```
 
-定义内容构建器。
+Defines ContentBuilder.
 
 **Since:** 23
 

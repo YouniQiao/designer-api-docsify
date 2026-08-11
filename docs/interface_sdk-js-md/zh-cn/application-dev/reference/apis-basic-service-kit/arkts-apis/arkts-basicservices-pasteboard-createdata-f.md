@@ -1,11 +1,5 @@
 # createData
 
-## 导入模块
-
-```TypeScript
-import { pasteboard } from 'kits/@kit.BasicServicesKit';
-```
-
 ## createData
 
 ```TypeScript
@@ -41,7 +35,7 @@ function createData(mimeType: string, value: ValueType): PasteData
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 401 | Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameters types; 3. Parameter verification failed. |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameters types; 3. Parameter verification failed. |
 
 
 ## createData
@@ -64,7 +58,7 @@ function createData(data: Record<string, ValueType>): PasteData
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| data | [Record](../../apis-default/arkts-apis/arkts-record-t.md)&lt;string, ValueType&gt; | 是 | Record的key为剪贴板数据对应的MIME类型。 可以是[常量](../../../reference/apis-basic-services-kit/js-apis-pasteboard.md#常量)中已定义的类型， 包括HTML类型，Want类型，纯文本类型，URI类型，PixelMap类型。也可以是自定义的MIME类型，可自定义此参数值，mimeType长度不能超过1024字节。 Record的value为key中指定MIME类型对应的数据。 Record中的首个key-value指定的MIME类型，会作为剪贴板内容对象中首个PasteDataRecord的默认MIME类型， 非默认类型的数据在粘贴时只能使用[getData](arkts-basicservices-pasteboard-pastedatarecord-i.md#getdata)接口读取。 |
+| data | Record&lt;string, ValueType&gt; | 是 | Record的key为剪贴板数据对应的MIME类型。 可以是[常量](../../../reference/apis-basic-services-kit/js-apis-pasteboard.md#常量)中已定义的类型， 包括HTML类型，Want类型，纯文本类型，URI类型，PixelMap类型。也可以是自定义的MIME类型，可自定义此参数值，mimeType长度不能超过1024字节。 Record的value为key中指定MIME类型对应的数据。 Record中的首个key-value指定的MIME类型，会作为剪贴板内容对象中首个PasteDataRecord的默认MIME类型， 非默认类型的数据在粘贴时只能使用[getData](arkts-basicservices-pasteboard-pastedatarecord-i.md#getdata)接口读取。 |
 
 **返回值：**
 
@@ -76,5 +70,5 @@ function createData(data: Record<string, ValueType>): PasteData
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 401 | Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameters types; 3. Parameter verification failed. |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameters types; 3. Parameter verification failed. |
 

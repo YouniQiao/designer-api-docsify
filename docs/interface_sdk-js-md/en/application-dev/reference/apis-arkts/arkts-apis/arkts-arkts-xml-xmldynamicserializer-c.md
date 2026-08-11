@@ -1,10 +1,6 @@
 # XmlDynamicSerializer
 
-XmlDynamicSerializer类用于动态生成XML字符串。当无法确定XML内容长度时，推荐使用该类。
-
-> **说明：**
-> 
-> 使用该类构造的对象无需自行创建ArrayBuffer，程序动态扩容，可以不断添加XML元素，最终序列化结果字符串长度上限为100000。
+The XmlDynamicSerializer interface is used to dynamically generate an xml file.
 
 **Since:** 20
 
@@ -26,11 +22,7 @@ import { xml } from 'kits/@kit.ArkTS';
 addEmptyElement(name: string): void
 ```
 
-写入一个空元素。
-
-> **说明：**
-> 
-> 该接口对所添加数据不做标准XML校验处理，请确保所添加的数据符合标准XML规范。比如不允许添加数字开头的元素名称。
+Add an empty element.
 
 **Since:** 20
 
@@ -46,14 +38,14 @@ addEmptyElement(name: string): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| name | string | Yes | 该空元素的元素名。所组成的XML长度不能超过100000。 |
+| name | string | Yes | Name of the element. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 10200062 | xml累计长度超过上限100000。 |
-| 10200064 | 不能为空字符串。 |
+| [10200062](../errorcode-utils.md#10200062-xml-cumulative-length-exceeded) | The cumulative length of xml has exceeded the upper limit 100000. |
+| [10200064](../errorcode-utils.md#10200064-input-string-cannot-be-empty) | Cannot be an empty string. |
 
 ## Examples
 
@@ -74,7 +66,7 @@ console.info(result); // <d/>
 constructor(encoding?: string)
 ```
 
-XmlDynamicSerializer的构造函数。
+A parameterized constructor used to create a new XmlDynamicSerializer instance.The input parameter is an encoding format of string type.
 
 **Since:** 20
 
@@ -90,13 +82,13 @@ XmlDynamicSerializer的构造函数。
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| encoding | string | No | 编码格式，默认'utf-8'(目前仅支持'utf-8')。 |
+| encoding | string | No | [encoding='utf8'] this is its encoding, only support utf-8. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 10200066 | 编码格式错误，目前仅支持utf-8。 |
+| [10200066](../errorcode-utils.md#10200066-incorrect-encoding-format) | Incorrect encoding format, only support utf-8. |
 
 ## Examples
 
@@ -110,11 +102,7 @@ let serializer = new xml.XmlDynamicSerializer('utf-8');
 endElement(): void
 ```
 
-写入元素结束标记。
-
-> **说明：**
-> 
-> 调用该接口前必须先调用[startElement](arkts-arkts-xml-xmlserializer-c.md#startelement)接口写入元素开始标记。
+Writes end tag of the element.
 
 **Since:** 20
 
@@ -130,8 +118,8 @@ endElement(): void
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 10200062 | xml累计长度超过上限100000。 |
-| 10200065 | startElement和endElement不匹配。 |
+| [10200062](../errorcode-utils.md#10200062-xml-cumulative-length-exceeded) | The cumulative length of xml has exceeded the upper limit 100000. |
+| [10200065](../errorcode-utils.md#10200065-mismatched-element-start-and-end-tags) | There is no match between the startElement and the endElement. |
 
 ## Examples
 
@@ -154,7 +142,7 @@ console.info(result); // <note>Happy</note>
 getOutput(): ArrayBuffer
 ```
 
-返回XML字符串的ArrayBuffer。
+Get an ArrayBuffer from a XmlDynamicSerializer instance.
 
 **Since:** 20
 
@@ -170,7 +158,7 @@ getOutput(): ArrayBuffer
 
 | Type | Description |
 | --- | --- |
-| ArrayBuffer | 用于接收写入XML信息的ArrayBuffer内存。 |
+| ArrayBuffer | Returns ArrayBuffer result from a XmlDynamicSerializer instance. |
 
 ## Examples
 
@@ -193,11 +181,7 @@ console.info(result); // <note>Happy</note>
 setAttributes(name: string, value: string): void
 ```
 
-写入元素的属性和属性值。
-
-> **说明：**
-> 
-> 该接口对所添加数据不做标准XML校验处理，请确保所添加的数据符合标准XML规范。比如不允许添加数字开头的属性名称以及添加多个同名的属性名称。
+Write an attribute to xml element.
 
 **Since:** 20
 
@@ -213,16 +197,16 @@ setAttributes(name: string, value: string): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| name | string | Yes | 属性。所组成的XML长度不能超过100000，不可为空字符。 |
-| value | string | Yes | 属性值。所组成的XML长度不能超过100000。 |
+| name | string | Yes | Key name of the attribute. Cannot be an empty string. |
+| value | string | Yes | Values of attribute. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 10200063 | xml位置非法。 |
-| 10200062 | xml累计长度超过上限100000。 |
-| 10200064 | 不能为空字符串。 |
+| [10200063](../errorcode-utils.md#10200063-xml-declaration-or-attribute-position-error) | Illegal position for xml. |
+| [10200062](../errorcode-utils.md#10200062-xml-cumulative-length-exceeded) | The cumulative length of xml has exceeded the upper limit 100000. |
+| [10200064](../errorcode-utils.md#10200064-input-string-cannot-be-empty) | Cannot be an empty string. |
 
 ## Examples
 
@@ -245,11 +229,7 @@ console.info(result); // <note importance="high"/>
 setCdata(text: string): void
 ```
 
-提供在CDATA标签中添加数据的能力，所生成的CDATA标签结构为："\&lt;!\[CDATA\[" + 所添加的数据 + "\]\]\&gt;"。
-
-> **说明：**
-> 
-> 该接口对所添加数据不做标准XML校验处理，请确保所添加的数据符合标准XML规范。比如不允许在CDATA标签中添加包含"\]\]\>"字符串的数据。
+Writes the CDATA.
 
 **Since:** 20
 
@@ -265,14 +245,14 @@ setCdata(text: string): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| text | string | Yes | CDATA属性的内容。所组成的XML长度不能超过100000。 |
+| text | string | Yes | Values of CDATA. Cannot be an empty string. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 10200062 | xml累计长度超过上限100000。 |
-| 10200064 | 不能为空字符串。 |
+| [10200062](../errorcode-utils.md#10200062-xml-cumulative-length-exceeded) | The cumulative length of xml has exceeded the upper limit 100000. |
+| [10200064](../errorcode-utils.md#10200064-input-string-cannot-be-empty) | Cannot be an empty string. |
 
 ## Examples
 
@@ -293,7 +273,7 @@ console.info(result); // <![CDATA[root SYSTEM]]>
 setComment(text: string): void
 ```
 
-写入注释内容。
+Writes the comment to xml.
 
 **Since:** 20
 
@@ -309,14 +289,14 @@ setComment(text: string): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| text | string | Yes | 当前元素的注释内容。所组成的XML长度不能超过100000。 |
+| text | string | Yes | Values of comment. Cannot be an empty string. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 10200062 | xml累计长度超过上限100000。 |
-| 10200064 | 不能为空字符串。 |
+| [10200062](../errorcode-utils.md#10200062-xml-cumulative-length-exceeded) | The cumulative length of xml has exceeded the upper limit 100000. |
+| [10200064](../errorcode-utils.md#10200064-input-string-cannot-be-empty) | Cannot be an empty string. |
 
 ## Examples
 
@@ -337,7 +317,7 @@ console.info(result); // <!--Hello, World!-->
 setDeclaration(): void
 ```
 
-编写带有编码的文件声明。
+Writes xml declaration with encoding. For example: &lt;?xml version="1.0" encoding="utf-8"?&gt;.
 
 **Since:** 20
 
@@ -353,8 +333,8 @@ setDeclaration(): void
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 10200063 | xml位置非法。 |
-| 10200062 | xml累计长度超过上限100000。 |
+| [10200063](../errorcode-utils.md#10200063-xml-declaration-or-attribute-position-error) | Illegal position for xml. |
+| [10200062](../errorcode-utils.md#10200062-xml-cumulative-length-exceeded) | The cumulative length of xml has exceeded the upper limit 100000. |
 
 ## Examples
 
@@ -375,7 +355,7 @@ console.info(result); // <?xml version="1.0" encoding="utf-8"?>
 setDocType(text: string): void
 ```
 
-写入文档类型。
+Writes the DOCTYPE.
 
 **Since:** 20
 
@@ -391,14 +371,14 @@ setDocType(text: string): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| text | string | Yes | DocType属性的内容。所组成的XML长度不能超过100000。 |
+| text | string | Yes | Values of docType. Cannot be an empty string. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 10200062 | xml累计长度超过上限100000。 |
-| 10200064 | 不能为空字符串。 |
+| [10200062](../errorcode-utils.md#10200062-xml-cumulative-length-exceeded) | The cumulative length of xml has exceeded the upper limit 100000. |
+| [10200064](../errorcode-utils.md#10200064-input-string-cannot-be-empty) | Cannot be an empty string. |
 
 ## Examples
 
@@ -419,11 +399,7 @@ console.info(result); // <!DOCTYPE root SYSTEM "http://www.test.org/test.dtd">
 setNamespace(prefix: string, namespace: string): void
 ```
 
-写入当前元素标记的命名空间。
-
-> **说明：**
-> 
-> 该接口对所添加数据不做标准XML校验处理，请确保所添加的数据符合标准XML规范。比如不允许添加数字开头的前缀以及对同一个元素设置多个命名空间。
+Writes the namespace of the current element tag.
 
 **Since:** 20
 
@@ -439,15 +415,15 @@ setNamespace(prefix: string, namespace: string): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| prefix | string | Yes | 当前元素及其子元素的前缀。所组成的XML长度不能超过100000，不可为空字符。 |
-| namespace | string | Yes | 当前元素及其子元素的命名空间。所组成的XML长度不能超过100000，不可为空字符。 |
+| prefix | string | Yes | Values name of the prefix. Cannot be an empty string. |
+| namespace | string | Yes | Values of namespace. Cannot be an empty string. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 10200062 | xml累计长度超过上限100000。 |
-| 10200064 | 不能为空字符串。 |
+| [10200062](../errorcode-utils.md#10200062-xml-cumulative-length-exceeded) | The cumulative length of xml has exceeded the upper limit 100000. |
+| [10200064](../errorcode-utils.md#10200064-input-string-cannot-be-empty) | Cannot be an empty string. |
 
 ## Examples
 
@@ -470,7 +446,7 @@ console.info(result); // <h:note xmlns:h="http://www.w3.org/TR/html4/"/>
 setText(text: string): void
 ```
 
-写入标签值。
+Writes the text to xml element.
 
 **Since:** 20
 
@@ -486,14 +462,14 @@ setText(text: string): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| text | string | Yes | 标签值。所组成的XML长度不能超过100000。 |
+| text | string | Yes | Values of text. Cannot be an empty string. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 10200062 | xml累计长度超过上限100000。 |
-| 10200064 | 不能为空字符串。 |
+| [10200062](../errorcode-utils.md#10200062-xml-cumulative-length-exceeded) | The cumulative length of xml has exceeded the upper limit 100000. |
+| [10200064](../errorcode-utils.md#10200064-input-string-cannot-be-empty) | Cannot be an empty string. |
 
 ## Examples
 
@@ -517,13 +493,7 @@ console.info(result); // <note importance="high">Happy</note>
 startElement(name: string): void
 ```
 
-写入元素开始标记。
-
-> **说明：**
-> 
-> - 调用该接口后须调用[endElement](arkts-arkts-xml-xmlserializer-c.md#endelement)写入元素结束标记，以确保节点正确闭合。
-> 
-> - 该接口对所添加数据不做标准XML校验处理，请确保所添加的数据符合标准XML规范。比如不允许添加数字开头的元素名称。
+Writes a element start tag with the given name.
 
 **Since:** 20
 
@@ -539,14 +509,14 @@ startElement(name: string): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| name | string | Yes | 当前元素的元素名。所组成的XML长度不能超过100000。 |
+| name | string | Yes | Name of the element. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 10200062 | xml累计长度超过上限100000。 |
-| 10200064 | 不能为空字符串。 |
+| [10200062](../errorcode-utils.md#10200062-xml-cumulative-length-exceeded) | The cumulative length of xml has exceeded the upper limit 100000. |
+| [10200064](../errorcode-utils.md#10200064-input-string-cannot-be-empty) | Cannot be an empty string. |
 
 ## Examples
 

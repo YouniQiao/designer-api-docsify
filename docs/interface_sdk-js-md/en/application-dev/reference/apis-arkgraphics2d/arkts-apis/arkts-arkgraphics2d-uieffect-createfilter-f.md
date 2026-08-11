@@ -12,7 +12,7 @@ import { uiEffect } from 'kits/@kit.ArkGraphics2D';
 function createFilter(): Filter
 ```
 
-创建Filter实例用于给组件添加多种Filter效果。
+Creates a Filter instance for adding multiple filter effects to a component.
 
 **Since:** 12
 
@@ -26,12 +26,11 @@ function createFilter(): Filter
 
 | Type | Description |
 | --- | --- |
-| [Filter](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-agent-filter-i.md) | 返回Filter实例，支持添加多种Filter效果。 |
+| [Filter](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-agent-filter-i.md) | Returns a Filter instance, which supports adding multiple filter effects. |
 
 ## Examples
 
 ```TypeScript
-// Create a Filter instance
-let filter : uiEffect.Filter = uiEffect.createFilter();
+let filter : uiEffect.Filter = uiEffect.createFilter()
 ```
 

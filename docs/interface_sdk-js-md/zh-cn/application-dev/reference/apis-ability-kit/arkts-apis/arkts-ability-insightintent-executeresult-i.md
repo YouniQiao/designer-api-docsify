@@ -10,12 +10,6 @@
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 
-## 导入模块
-
-```TypeScript
-import { insightIntent } from 'kits/@kit.AbilityKit';
-```
-
 ## code
 
 ```TypeScript
@@ -72,7 +66,7 @@ result?: Record<string, Object>
 
 意图执行返回的结果，通常会包含需要返回给系统入口的数据。
 
-**类型：** [Record](../../apis-default/arkts-apis/arkts-record-t.md)&lt;string, Object&gt;
+**类型：** Record&lt;string, Object&gt;
 
 **起始版本：** 11
 

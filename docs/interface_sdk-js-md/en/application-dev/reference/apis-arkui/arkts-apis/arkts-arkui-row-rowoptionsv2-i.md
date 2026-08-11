@@ -1,6 +1,6 @@
 # RowOptionsV2
 
-设置Row组件的子组件间距属性。间距类型SpaceType支持number、string或Resource类型。
+Define options used to construct a row.
 
 **Since:** 23
 
@@ -16,7 +16,7 @@
 space?: SpaceType
 ```
 
-横向布局元素间距。space为负数或者justifyContent设置为FlexAlign.SpaceBetween、FlexAlign.SpaceAround、FlexAlign.SpaceEvenly时不生效。默认值：0单位：vp非法值：按默认值处理。
+Vertical layout element spacing.
 
 **Type:** [SpaceType](../arkts-components/arkts-arkui-spacetype-t.md)
 

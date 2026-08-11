@@ -12,7 +12,7 @@ import { customConfig } from 'kits/@kit.BasicServicesKit';
 function getChannelId(): string
 ```
 
-获取应用的预装渠道号。
+Obtains a pre-installed channel ID of this application.
 
 **Since:** 12
 
@@ -28,7 +28,7 @@ function getChannelId(): string
 
 | Type | Description |
 | --- | --- |
-| string | 渠道号 |
+| string | Channel ID obtained. |
 
 ## Examples
 

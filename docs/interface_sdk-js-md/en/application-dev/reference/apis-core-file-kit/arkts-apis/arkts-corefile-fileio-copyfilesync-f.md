@@ -6,7 +6,7 @@
 declare function copyFileSync(src: string | number, dest: string | number, mode?: number): void
 ```
 
-以同步方法复制文件。
+Copies a file. This API returns the result synchronously.
 
 **Since:** 6
 
@@ -24,7 +24,7 @@ declare function copyFileSync(src: string | number, dest: string | number, mode?
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| src | string \| number | Yes | 待复制文件的路径或待复制文件的描述符。 |
-| dest | string \| number | Yes | 目标文件路径或目标文件描述符。 |
-| mode | number | No | mode提供覆盖文件的选项，当前仅支持0，且默认为0。&lt;br/&gt;0：完全覆盖目标文件，未覆盖部分将被裁切掉。 |
+| src | string \| number | Yes | Path or file descriptor of the source file to copy. |
+| dest | string \| number | Yes | Path or file descriptor of the destination file. |
+| mode | number | No | Option for overwriting the destination file. The default value is **0**, which is the only value supported.&lt;br&gt;**0**: Overwrite the file with the same name completely and truncate the part that is not overwritten. |
 

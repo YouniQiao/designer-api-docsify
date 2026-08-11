@@ -52,7 +52,7 @@ Close a given WebSocket connection.
 | Error Code ID | Error Message |
 | --- | --- |
 | 2302006 | websocket connection does not exist. |
-| 201 | Permission denied. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
 
 ## Examples
 
@@ -118,7 +118,7 @@ List all alive connections.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 201 | Permission denied. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
 
 ## Examples
 
@@ -644,7 +644,7 @@ Send a message using a specific connection.
 | Error Code ID | Error Message |
 | --- | --- |
 | 2302006 | websocket connection does not exist. |
-| 201 | Permission denied. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
 
 ## Examples
 
@@ -719,12 +719,12 @@ Start the WebSocket Server, and listen to a given port.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 2302002 | Websocket certificate file does not exist. |
-| 2302007 | Websocket port already occupied. |
-| 2302999 | Websocket other unknown error. |
-| 2302005 | Can't listen on the given Port. |
-| 2302004 | Can't listen on the given NIC. |
-| 201 | Permission denied. |
+| [2302002](../errorcode-net-webSocket.md#2302002-websocket-certificate-does-not-exist) | Websocket certificate file does not exist. |
+| [2302007](../errorcode-net-webSocket.md#2302007-listening-port-already-occupied) | Websocket port already occupied. |
+| [2302999](../errorcode-net-webSocket.md#2302999-internal-error) | Websocket other unknown error. |
+| [2302005](../errorcode-net-webSocket.md#2302005-listening-failed-on-the-specified-port) | Can't listen on the given Port. |
+| [2302004](../errorcode-net-webSocket.md#2302004-listening-failed-on-the-specified-nic) | Can't listen on the given NIC. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
 
 ## Examples
 
@@ -779,7 +779,7 @@ Stop listening.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 201 | Permission denied. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
 
 ## Examples
 

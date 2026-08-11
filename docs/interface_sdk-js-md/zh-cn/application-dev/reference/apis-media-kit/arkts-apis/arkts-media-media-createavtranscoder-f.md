@@ -1,11 +1,5 @@
 # createAVTranscoder
 
-## 导入模块
-
-```TypeScript
-import { media } from 'kits/@kit.MediaKit';
-```
-
 ## createAVTranscoder
 
 ```TypeScript
@@ -38,7 +32,7 @@ function createAVTranscoder(): Promise<AVTranscoder>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 5400101 | No memory. Return by promise. |
+| [5400101](../errorcode-media.md#5400101-内存分配失败) | No memory. Return by promise. |
 
 ## 示例
 
@@ -89,5 +83,5 @@ A maximum of 2 **AVTranscoder** instances can be created.
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 5400101 | No memory. Return by promise. |
+| [5400101](../errorcode-media.md#5400101-内存分配失败) | No memory. Return by promise. |
 

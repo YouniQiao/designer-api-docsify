@@ -6,7 +6,7 @@
 declare function choose(types?: string[]): Promise<string>
 ```
 
-通过文件管理器选择文件，异步返回文件URI，使用promise形式返回结果。
+Chooses files of the specified types. This API uses a promise to return the result.
 
 **Since:** 6
 
@@ -22,13 +22,13 @@ declare function choose(types?: string[]): Promise<string>
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| types | string[] | No | 限定文件选择的类型 |
+| types | string[] | No | Types of the files to choose. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;string&gt; | 异步返回文件URI（注：当前返回错误码） |
+| Promise&lt;string&gt; | Promise used to return the result. An error code is returned. |
 
 
 ## choose
@@ -37,7 +37,7 @@ declare function choose(types?: string[]): Promise<string>
 declare function choose(callback: AsyncCallback<string>): void
 ```
 
-通过文件管理器选择文件，异步返回文件URI，使用callback形式返回结果。
+Chooses a file. This API uses an asynchronous callback to return the result.
 
 **Since:** 6
 
@@ -53,7 +53,7 @@ declare function choose(callback: AsyncCallback<string>): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;string&gt; | Yes | 异步获取对应文件URI（注：当前返回错误码） |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;string&gt; | Yes | Callback used to return the result. An error code is returned. |
 
 
 ## choose
@@ -62,7 +62,7 @@ declare function choose(callback: AsyncCallback<string>): void
 declare function choose(types: string[], callback: AsyncCallback<string>): void
 ```
 
-通过文件管理器选择文件，异步返回文件URI，使用callback形式返回结果。
+Chooses files of the specified types. This API uses an asynchronous callback to return the result.
 
 **Since:** 6
 
@@ -78,6 +78,6 @@ declare function choose(types: string[], callback: AsyncCallback<string>): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| types | string[] | Yes | 限定选择文件的类型 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;string&gt; | Yes | 异步获取对应文件URI（注：当前返回错误码） |
+| types | string[] | Yes | Types of the files to choose. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;string&gt; | Yes | Callback used to return the result. An error code is returned. |
 

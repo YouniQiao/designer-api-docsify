@@ -15,7 +15,7 @@ export function onNavDestinationSwitch(
   ): void
 ```
 
-监听Navigation的页面切换事件。
+Registers a callback function to be called when the navigation switched to a new navDestination.
 
 **Since:** 23
 
@@ -31,8 +31,8 @@ export function onNavDestinationSwitch(
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| context | [UIAbilityContext](../../apis-ability-kit/arkts-apis/arkts-ability-uiabilitycontext-c.md) \| UIContext | Yes | 上下文信息，用以指定监听页面切换事件的范围。 |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;NavDestinationSwitchInfo&gt; | Yes | 回调函数。携带NavDestinationSwitchInfo，返回页面切换事件的信息。 |
+| context | [UIAbilityContext](../../apis-ability-kit/arkts-apis/arkts-ability-uiabilitycontext-c.md) \| UIContext | Yes | The context scope of the observer. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;NavDestinationSwitchInfo&gt; | Yes | The callback function to be called when the navigation switched to a new navDestination. |
 
 
 ## onNavDestinationSwitch
@@ -45,7 +45,7 @@ export function onNavDestinationSwitch(
   ): void
 ```
 
-监听Navigation的页面切换事件。
+Registers a callback function to be called when the navigation switched to a new navDestination.
 
 **Since:** 23
 
@@ -61,7 +61,7 @@ export function onNavDestinationSwitch(
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| context | [UIAbilityContext](../../apis-ability-kit/arkts-apis/arkts-ability-uiabilitycontext-c.md) \| UIContext | Yes | 上下文信息，用以指定监听页面切换事件的范围。 |
-| observerOptions | [NavDestinationSwitchObserverOptions](arkts-arkui-uiobserver-navdestinationswitchobserveroptions-i.md) | Yes | 监听选项。 |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;NavDestinationSwitchInfo&gt; | Yes | 回调函数。携带NavDestinationSwitchInfo，返回页面切换事件的信息。 |
+| context | [UIAbilityContext](../../apis-ability-kit/arkts-apis/arkts-ability-uiabilitycontext-c.md) \| UIContext | Yes | The context scope of the observer. |
+| observerOptions | [NavDestinationSwitchObserverOptions](arkts-arkui-uiobserver-navdestinationswitchobserveroptions-i.md) | Yes | Options. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;NavDestinationSwitchInfo&gt; | Yes | The callback function to be called when the navigation switched to a new navDestination. |
 

@@ -4,7 +4,7 @@
 type OnLazyLoadingFunc = (index: int) => void
 ```
 
-懒加载函数类型。
+Function that is used to do lazy loading.
 
 **Since:** 23
 
@@ -20,5 +20,5 @@ type OnLazyLoadingFunc = (index: int) => void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| index | int | Yes | 当前数据项对应的索引。 |
+| index | int | Yes | data index. |
 

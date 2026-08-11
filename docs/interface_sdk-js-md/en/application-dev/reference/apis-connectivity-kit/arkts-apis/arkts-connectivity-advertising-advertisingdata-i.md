@@ -1,6 +1,6 @@
 # AdvertisingData
 
-广播数据。
+Describes the advertising data.
 
 **Since:** 26.0.0
 
@@ -22,7 +22,7 @@ import { advertising } from 'kits/@kit.ConnectivityKit';
 includeDeviceName?: boolean
 ```
 
-指示是否包含设备名称。默认值： 默认值：false。
+Indicates whether the device name will be included.Default value: false.
 
 **Type:** boolean
 
@@ -42,7 +42,7 @@ includeDeviceName?: boolean
 manufacturerData?: ManufacturerData[]
 ```
 
-制造商数据。
+The specified manufacturer data.
 
 **Type:** [ManufacturerData](arkts-connectivity-advertising-manufacturerdata-i.md)[]
 
@@ -62,7 +62,7 @@ manufacturerData?: ManufacturerData[]
 serviceData?: ServiceData[]
 ```
 
-服务数据。
+The specified service data.
 
 **Type:** [ServiceData](arkts-connectivity-advertising-servicedata-i.md)[]
 
@@ -82,7 +82,7 @@ serviceData?: ServiceData[]
 serviceUuids?: string[]
 ```
 
-指定的服务UUID。UUID的长度必须为36，由36位十六进制数字和“-”组成。例如：FFFFFFFF-1234-5678-ABCD-000000001234，表示128位的标识符。
+The specified service UUIDs.The length of each UUID must be 36, The value consists of 36 hexadecimal digits and hyphens (-),for example, FFFFFFFF-1234-5678-ABCD-000000001234, indicating a 128-bit identifier.
 
 **Type:** string[]
 

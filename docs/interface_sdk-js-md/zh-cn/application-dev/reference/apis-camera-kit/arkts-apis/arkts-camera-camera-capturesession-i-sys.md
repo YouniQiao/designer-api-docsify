@@ -18,12 +18,6 @@
 
 **系统能力：** SystemCapability.Multimedia.Camera.Core
 
-## 导入模块
-
-```TypeScript
-import { camera } from 'kits/@kit.CameraKit';
-```
-
 ## getBeauty
 
 ```TypeScript
@@ -62,7 +56,7 @@ Obtains the level of the beauty type in use.
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 7400103 | Session not config. |
+| [7400103](../errorcode-camera.md#7400103-会话未配置) | Session not config. |
 
 ## 示例
 
@@ -127,7 +121,7 @@ Obtains the levels that can be set a beauty type. The beauty levels vary accordi
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 7400103 | Session not config. |
+| [7400103](../errorcode-camera.md#7400103-会话未配置) | Session not config. |
 
 ## 示例
 
@@ -174,7 +168,7 @@ Obtains the supported beauty types.
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 7400103 | Session not config. |
+| [7400103](../errorcode-camera.md#7400103-会话未配置) | Session not config. |
 
 ## 示例
 
@@ -220,7 +214,7 @@ Sets a beauty type and its level. Beauty mode is turned off only when all the
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 7400103 | Session not config. |
+| [7400103](../errorcode-camera.md#7400103-会话未配置) | Session not config. |
 
 ## 示例
 

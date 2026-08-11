@@ -22,7 +22,7 @@ fluidLightMode?: KeyboardFluidLightMode
 
 默认值：KeyboardFluidLightMode.NONE
 
-**类型：** [KeyboardFluidLightMode](arkts-arkui-textcommon-keyboardfluidlightmode-e-sys.md)
+**类型：** [KeyboardFluidLightMode](arkts-arkui-keyboardfluidlightmode-e-sys.md)
 
 **起始版本：** 20
 

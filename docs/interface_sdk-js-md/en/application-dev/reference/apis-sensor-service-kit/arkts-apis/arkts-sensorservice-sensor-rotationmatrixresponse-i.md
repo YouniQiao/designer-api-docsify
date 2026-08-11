@@ -1,6 +1,6 @@
 # RotationMatrixResponse
 
-设置旋转矩阵响应对象，用于描述旋转矩阵和倾斜矩阵的计算结果。
+Describes the response for setting the rotation matrix.
 
 **Since:** 8
 
@@ -22,7 +22,7 @@ import { sensor } from 'kits/@kit.SensorServiceKit';
 inclination: Array<double>
 ```
 
-倾斜矩阵，长度为9的一维数组，表示地磁倾斜变换矩阵。
+Inclination matrix.
 
 **Type:** ArkTS-Dyn: Array&lt;number&gt;  <br>ArkTS-Sta：Array&lt;double&gt;
 
@@ -40,7 +40,7 @@ inclination: Array<double>
 rotation: Array<double>
 ```
 
-旋转矩阵，长度为9的一维数组，表示设备在三维空间中的旋转状态。
+Rotation matrix.
 
 **Type:** ArkTS-Dyn: Array&lt;number&gt;  <br>ArkTS-Sta：Array&lt;double&gt;
 

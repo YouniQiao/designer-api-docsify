@@ -1,18 +1,12 @@
 # addContactViaUI
 
-## 导入模块
-
-```TypeScript
-import { contact } from 'kits/@kit.ContactsKit';
-```
-
 ## addContactViaUI
 
 ```TypeScript
 function addContactViaUI(context: Context, contact: Contact): Promise<number>
 ```
 
-通过UI交互创建联系人。使用Promise异步回调。
+调用新建联系人接口，打开新建联系人UI界面。使用Promise异步回调。
 
 **起始版本：** 15
 
@@ -41,11 +35,11 @@ function addContactViaUI(context: Context, contact: Contact): Promise<number>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 401 | Parameter error. Possible causes: Mandatory parameters are left unspecified. |
-| 801 | The specified SystemCapability name was not found. |
-| 16700102 | Failed to set value to contacts data. |
-| 16700103 | User cancel. |
-| 16700001 | General error. |
+| [401](../errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: Mandatory parameters are left unspecified. |
+| [801](../../errorcode-universal.md#801-该设备不支持此api) | The specified SystemCapability name was not found. |
+| [16700102](../errorcode-contacts.md#16700102-增删改数据库失败) | Failed to set value to contacts data. |
+| [16700103](../errorcode-contacts.md#16700103-用户取消) | User cancel. |
+| [16700001](../errorcode-contacts.md#16700001-系统内部错误) | General error. |
 
 ## 示例
 

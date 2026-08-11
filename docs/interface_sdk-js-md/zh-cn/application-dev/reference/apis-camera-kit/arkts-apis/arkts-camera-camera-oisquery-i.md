@@ -10,12 +10,6 @@ OIS (Optical Image Stabilization) query interface.
 
 **系统能力：** SystemCapability.Multimedia.Camera.Core
 
-## 导入模块
-
-```TypeScript
-import { camera } from 'kits/@kit.CameraKit';
-```
-
 ## getCurrentCustomOISBias
 
 ArkTS-Dyn:
@@ -58,8 +52,8 @@ Gets the current custom bias value for the specified OIS axis.
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 7400102 | Operation not allowed, the inputDevice or the session is abnormal. |
-| 7400103 | Session not config. |
+| [7400102](../errorcode-camera.md#7400102-非法操作) | Operation not allowed, the inputDevice or the session is abnormal. |
+| [7400103](../errorcode-camera.md#7400103-会话未配置) | Session not config. |
 
 ## getCurrentOISMode
 
@@ -91,8 +85,8 @@ Gets the current OIS mode.
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 7400102 | Operation not allowed, the inputDevice or the session is abnormal. |
-| 7400103 | Session not config. |
+| [7400102](../errorcode-camera.md#7400102-非法操作) | Operation not allowed, the inputDevice or the session is abnormal. |
+| [7400103](../errorcode-camera.md#7400103-会话未配置) | Session not config. |
 
 ## getSupportedOISBiasRange
 
@@ -136,8 +130,8 @@ Gets the supported bias range for the specified OIS axis.
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 7400102 | Operation not allowed, the inputDevice or the session is abnormal. |
-| 7400103 | Session not config. |
+| [7400102](../errorcode-camera.md#7400102-非法操作) | Operation not allowed, the inputDevice or the session is abnormal. |
+| [7400103](../errorcode-camera.md#7400103-会话未配置) | Session not config. |
 
 ## getSupportedOISBiasStep
 
@@ -181,8 +175,8 @@ Gets the bias step for the specified OIS axis.
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 7400102 | Operation not allowed, the inputDevice or the session is abnormal. |
-| 7400103 | Session not config. |
+| [7400102](../errorcode-camera.md#7400102-非法操作) | Operation not allowed, the inputDevice or the session is abnormal. |
+| [7400103](../errorcode-camera.md#7400103-会话未配置) | Session not config. |
 
 ## isOISModeSupported
 
@@ -220,6 +214,6 @@ Checks if the specified OIS mode is supported.
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 7400102 | Operation not allowed, the inputDevice or the session is abnormal. |
-| 7400103 | Session not config. |
+| [7400102](../errorcode-camera.md#7400102-非法操作) | Operation not allowed, the inputDevice or the session is abnormal. |
+| [7400103](../errorcode-camera.md#7400103-会话未配置) | Session not config. |
 

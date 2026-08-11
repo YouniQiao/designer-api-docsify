@@ -1,10 +1,6 @@
 # AVSessionController
 
-AVSessionController控制器可查看会话ID，并可完成对会话发送命令及事件，获取会话元数据，播放状态信息等操作。
-
-> **说明：**
-> 
-> - 本Interface首批接口从API version 10开始支持。
+Session controller,used to control media playback and get media information
 
 **Since:** 10
 
@@ -26,7 +22,7 @@ import { avSession } from 'kits/@kit.AVSessionKit';
 destroy(callback: AsyncCallback<void>): void
 ```
 
-销毁当前控制器，销毁后当前控制器不可再用。结果通过callback异步回调方式返回。
+Destroy the server controller
 
 **Since:** 10
 
@@ -40,14 +36,14 @@ destroy(callback: AsyncCallback<void>): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | 回调函数。当控制器销毁成功，err为undefined，否则返回错误对象。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | The asyncCallback triggered when the command is executed successfully. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 6600101 | Session service exception. |
-| 6600103 | The session controller does not exist. |
+| [6600101](../errorcode-avsession.md#6600101-session-service-exception) | Session service exception. |
+| [6600103](../errorcode-avsession.md#6600103-session-controller-does-not-exist) | The session controller does not exist. |
 
 ## destroy
 
@@ -55,7 +51,7 @@ destroy(callback: AsyncCallback<void>): void
 destroy(): Promise<void>
 ```
 
-销毁当前控制器，销毁后当前控制器不可再用。结果通过Promise异步回调方式返回。
+Destroy the server controller
 
 **Since:** 10
 
@@ -71,14 +67,14 @@ destroy(): Promise<void>
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise对象。当控制器销毁成功，无返回结果，否则返回错误对象。 |
+| Promise&lt;void&gt; | void promise when executed successfully |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 6600101 | Session service exception. |
-| 6600103 | The session controller does not exist. |
+| [6600101](../errorcode-avsession.md#6600101-session-service-exception) | Session service exception. |
+| [6600103](../errorcode-avsession.md#6600103-session-controller-does-not-exist) | The session controller does not exist. |
 
 ## getAVCallState
 
@@ -86,7 +82,7 @@ destroy(): Promise<void>
 getAVCallState(callback: AsyncCallback<AVCallState>): void
 ```
 
-获取通话状态数据。结果通过callback异步回调方式返回。
+Get the call status of the current session
 
 **Since:** 11
 
@@ -100,15 +96,15 @@ getAVCallState(callback: AsyncCallback<AVCallState>): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;AVCallState&gt; | Yes | 回调函数，返回通话状态。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;AVCallState&gt; | Yes | The triggered asyncCallback when (getAVCallState). |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 6600101 | Session service exception. |
-| 6600102 | The session does not exist. |
-| 6600103 | The session controller does not exist. |
+| [6600101](../errorcode-avsession.md#6600101-session-service-exception) | Session service exception. |
+| [6600102](../errorcode-avsession.md#6600102-session-does-not-exist) | The session does not exist. |
+| [6600103](../errorcode-avsession.md#6600103-session-controller-does-not-exist) | The session controller does not exist. |
 
 ## getAVCallState
 
@@ -116,7 +112,7 @@ getAVCallState(callback: AsyncCallback<AVCallState>): void
 getAVCallState(): Promise<AVCallState>
 ```
 
-获取通话状态数据。结果通过Promise异步回调方式返回。
+Get the call status of the current session
 
 **Since:** 11
 
@@ -130,15 +126,15 @@ getAVCallState(): Promise<AVCallState>
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;AVCallState&gt; | Promise对象，返回通话状态。 |
+| Promise&lt;AVCallState&gt; | (AVCallState) returned through promise |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 6600101 | Session service exception. |
-| 6600102 | The session does not exist. |
-| 6600103 | The session controller does not exist. |
+| [6600101](../errorcode-avsession.md#6600101-session-service-exception) | Session service exception. |
+| [6600102](../errorcode-avsession.md#6600102-session-does-not-exist) | The session does not exist. |
+| [6600103](../errorcode-avsession.md#6600103-session-controller-does-not-exist) | The session controller does not exist. |
 
 ## getAVMetadata
 
@@ -146,7 +142,7 @@ getAVCallState(): Promise<AVCallState>
 getAVMetadata(callback: AsyncCallback<AVMetadata>): void
 ```
 
-获取会话元数据。结果通过callback异步回调方式返回。
+Get the metadata of the current session
 
 **Since:** 10
 
@@ -160,15 +156,15 @@ getAVMetadata(callback: AsyncCallback<AVMetadata>): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;AVMetadata&gt; | Yes | 回调函数，返回会话元数据。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;AVMetadata&gt; | Yes | The triggered asyncCallback when (getAVMetadata). |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 6600101 | Session service exception. |
-| 6600102 | The session does not exist. |
-| 6600103 | The session controller does not exist. |
+| [6600101](../errorcode-avsession.md#6600101-session-service-exception) | Session service exception. |
+| [6600102](../errorcode-avsession.md#6600102-session-does-not-exist) | The session does not exist. |
+| [6600103](../errorcode-avsession.md#6600103-session-controller-does-not-exist) | The session controller does not exist. |
 
 ## getAVMetadata
 
@@ -176,7 +172,7 @@ getAVMetadata(callback: AsyncCallback<AVMetadata>): void
 getAVMetadata(): Promise<AVMetadata>
 ```
 
-获取会话元数据。结果通过Promise异步回调方式返回。
+Get the metadata of the current session
 
 **Since:** 10
 
@@ -192,15 +188,15 @@ getAVMetadata(): Promise<AVMetadata>
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;AVMetadata&gt; | Promise对象，返回会话元数据。 |
+| Promise&lt;AVMetadata&gt; | (AVMetadata) returned through promise |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 6600101 | Session service exception. |
-| 6600102 | The session does not exist. |
-| 6600103 | The session controller does not exist. |
+| [6600101](../errorcode-avsession.md#6600101-session-service-exception) | Session service exception. |
+| [6600102](../errorcode-avsession.md#6600102-session-does-not-exist) | The session does not exist. |
+| [6600103](../errorcode-avsession.md#6600103-session-controller-does-not-exist) | The session controller does not exist. |
 
 ## getAVMetadataSync
 
@@ -208,7 +204,7 @@ getAVMetadata(): Promise<AVMetadata>
 getAVMetadataSync(): AVMetadata
 ```
 
-使用同步方法获取会话元数据。
+Get the metadata of the current session
 
 **Since:** 10
 
@@ -224,15 +220,15 @@ getAVMetadataSync(): AVMetadata
 
 | Type | Description |
 | --- | --- |
-| [AVMetadata](arkts-avsession-avsession-avmetadata-i.md) | 会话元数据。 |
+| [AVMetadata](arkts-avsession-avsession-avmetadata-i.md) | (AVMetadata) returned |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 6600101 | Session service exception. |
-| 6600102 | The session does not exist. |
-| 6600103 | The session controller does not exist. |
+| [6600101](../errorcode-avsession.md#6600101-session-service-exception) | Session service exception. |
+| [6600102](../errorcode-avsession.md#6600102-session-does-not-exist) | The session does not exist. |
+| [6600103](../errorcode-avsession.md#6600103-session-controller-does-not-exist) | The session controller does not exist. |
 
 ## getAVPlaybackState
 
@@ -240,7 +236,7 @@ getAVMetadataSync(): AVMetadata
 getAVPlaybackState(callback: AsyncCallback<AVPlaybackState>): void
 ```
 
-获取当前的远端播放状态。结果通过callback异步回调方式返回。
+Get the playback status of the current session
 
 **Since:** 10
 
@@ -254,15 +250,15 @@ getAVPlaybackState(callback: AsyncCallback<AVPlaybackState>): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;AVPlaybackState&gt; | Yes | 回调函数，返回远端播放状态。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;AVPlaybackState&gt; | Yes | The triggered asyncCallback when (getAVPlaybackState). |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 6600101 | Session service exception. |
-| 6600102 | The session does not exist. |
-| 6600103 | The session controller does not exist. |
+| [6600101](../errorcode-avsession.md#6600101-session-service-exception) | Session service exception. |
+| [6600102](../errorcode-avsession.md#6600102-session-does-not-exist) | The session does not exist. |
+| [6600103](../errorcode-avsession.md#6600103-session-controller-does-not-exist) | The session controller does not exist. |
 
 ## getAVPlaybackState
 
@@ -270,7 +266,7 @@ getAVPlaybackState(callback: AsyncCallback<AVPlaybackState>): void
 getAVPlaybackState(): Promise<AVPlaybackState>
 ```
 
-获取当前的远端播放状态。结果通过Promise异步回调方式返回。
+Get the playback status of the current session
 
 **Since:** 10
 
@@ -286,15 +282,15 @@ getAVPlaybackState(): Promise<AVPlaybackState>
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;AVPlaybackState&gt; | Promise对象,返回远端播放状态。 |
+| Promise&lt;AVPlaybackState&gt; | (AVPlaybackState) returned through promise |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 6600101 | Session service exception. |
-| 6600102 | The session does not exist. |
-| 6600103 | The session controller does not exist. |
+| [6600101](../errorcode-avsession.md#6600101-session-service-exception) | Session service exception. |
+| [6600102](../errorcode-avsession.md#6600102-session-does-not-exist) | The session does not exist. |
+| [6600103](../errorcode-avsession.md#6600103-session-controller-does-not-exist) | The session controller does not exist. |
 
 ## getAVPlaybackStateSync
 
@@ -302,7 +298,7 @@ getAVPlaybackState(): Promise<AVPlaybackState>
 getAVPlaybackStateSync(): AVPlaybackState
 ```
 
-使用同步方法获取当前会话的播放状态。
+Get the playback status of the current session
 
 **Since:** 10
 
@@ -318,15 +314,15 @@ getAVPlaybackStateSync(): AVPlaybackState
 
 | Type | Description |
 | --- | --- |
-| [AVPlaybackState](arkts-avsession-avsession-avplaybackstate-i.md) | 当前会话的播放状态。 |
+| [AVPlaybackState](arkts-avsession-avsession-avplaybackstate-i.md) | (AVPlaybackState) returned |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 6600101 | Session service exception. |
-| 6600102 | The session does not exist. |
-| 6600103 | The session controller does not exist. |
+| [6600101](../errorcode-avsession.md#6600101-session-service-exception) | Session service exception. |
+| [6600102](../errorcode-avsession.md#6600102-session-does-not-exist) | The session does not exist. |
+| [6600103](../errorcode-avsession.md#6600103-session-controller-does-not-exist) | The session controller does not exist. |
 
 ## getAVQueueItems
 
@@ -334,7 +330,7 @@ getAVPlaybackStateSync(): AVPlaybackState
 getAVQueueItems(callback: AsyncCallback<Array<AVQueueItem>>): void
 ```
 
-获取当前播放列表相关信息。结果通过callback异步回调方式返回。
+Get the playlist of the current session
 
 **Since:** 10
 
@@ -348,15 +344,15 @@ getAVQueueItems(callback: AsyncCallback<Array<AVQueueItem>>): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;AVQueueItem&gt;&gt; | Yes | 回调函数，返回播放列表队列。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;AVQueueItem&gt;&gt; | Yes | The triggered asyncCallback when (getAVQueueItems). |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 6600101 | Session service exception. |
-| 6600102 | The session does not exist. |
-| 6600103 | The session controller does not exist. |
+| [6600101](../errorcode-avsession.md#6600101-session-service-exception) | Session service exception. |
+| [6600102](../errorcode-avsession.md#6600102-session-does-not-exist) | The session does not exist. |
+| [6600103](../errorcode-avsession.md#6600103-session-controller-does-not-exist) | The session controller does not exist. |
 
 ## getAVQueueItems
 
@@ -364,7 +360,7 @@ getAVQueueItems(callback: AsyncCallback<Array<AVQueueItem>>): void
 getAVQueueItems(): Promise<Array<AVQueueItem>>
 ```
 
-获取当前会话播放列表相关信息。结果通过Promise异步回调方式返回。
+Get the playlist of the current session
 
 **Since:** 10
 
@@ -380,15 +376,15 @@ getAVQueueItems(): Promise<Array<AVQueueItem>>
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;Array&lt;AVQueueItem&gt;&gt; | Promise对象。返回播放列表队列。 |
+| Promise&lt;Array&lt;AVQueueItem&gt;&gt; | (Array&lt;AVQueueItem&gt;) returned through promise |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 6600101 | Session service exception. |
-| 6600102 | The session does not exist. |
-| 6600103 | The session controller does not exist. |
+| [6600101](../errorcode-avsession.md#6600101-session-service-exception) | Session service exception. |
+| [6600102](../errorcode-avsession.md#6600102-session-does-not-exist) | The session does not exist. |
+| [6600103](../errorcode-avsession.md#6600103-session-controller-does-not-exist) | The session controller does not exist. |
 
 ## getAVQueueItemsSync
 
@@ -396,7 +392,7 @@ getAVQueueItems(): Promise<Array<AVQueueItem>>
 getAVQueueItemsSync(): Array<AVQueueItem>
 ```
 
-使用同步方法获取当前会话播放列表相关信息。
+Get the playlist of the current session
 
 **Since:** 10
 
@@ -412,15 +408,15 @@ getAVQueueItemsSync(): Array<AVQueueItem>
 
 | Type | Description |
 | --- | --- |
-| Array&lt;AVQueueItem&gt; | 当前会话播放列表队列。 |
+| Array&lt;AVQueueItem&gt; | (Array&lt;AVQueueItem&gt;) returned |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 6600101 | Session service exception. |
-| 6600102 | The session does not exist. |
-| 6600103 | The session controller does not exist. |
+| [6600101](../errorcode-avsession.md#6600101-session-service-exception) | Session service exception. |
+| [6600102](../errorcode-avsession.md#6600102-session-does-not-exist) | The session does not exist. |
+| [6600103](../errorcode-avsession.md#6600103-session-controller-does-not-exist) | The session controller does not exist. |
 
 ## getAVQueueTitle
 
@@ -428,7 +424,7 @@ getAVQueueItemsSync(): Array<AVQueueItem>
 getAVQueueTitle(callback: AsyncCallback<string>): void
 ```
 
-获取当前播放列表的名称。结果通过callback异步回调方式返回。
+Get the name of the playlist of the current session
 
 **Since:** 10
 
@@ -442,15 +438,15 @@ getAVQueueTitle(callback: AsyncCallback<string>): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;string&gt; | Yes | 回调函数，返回播放列表名称。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;string&gt; | Yes | The triggered asyncCallback when (getAVQueueTitle). |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 6600101 | Session service exception. |
-| 6600102 | The session does not exist. |
-| 6600103 | The session controller does not exist. |
+| [6600101](../errorcode-avsession.md#6600101-session-service-exception) | Session service exception. |
+| [6600102](../errorcode-avsession.md#6600102-session-does-not-exist) | The session does not exist. |
+| [6600103](../errorcode-avsession.md#6600103-session-controller-does-not-exist) | The session controller does not exist. |
 
 ## getAVQueueTitle
 
@@ -458,7 +454,7 @@ getAVQueueTitle(callback: AsyncCallback<string>): void
 getAVQueueTitle(): Promise<string>
 ```
 
-获取当前会话播放列表的名称。结果通过Promise异步回调方式返回。
+Get the name of the playlist of the current session
 
 **Since:** 10
 
@@ -474,15 +470,15 @@ getAVQueueTitle(): Promise<string>
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;string&gt; | Promise对象。返回播放列表名称。 |
+| Promise&lt;string&gt; | (string) returned through promise |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 6600101 | Session service exception. |
-| 6600102 | The session does not exist. |
-| 6600103 | The session controller does not exist. |
+| [6600101](../errorcode-avsession.md#6600101-session-service-exception) | Session service exception. |
+| [6600102](../errorcode-avsession.md#6600102-session-does-not-exist) | The session does not exist. |
+| [6600103](../errorcode-avsession.md#6600103-session-controller-does-not-exist) | The session controller does not exist. |
 
 ## getAVQueueTitleSync
 
@@ -490,7 +486,7 @@ getAVQueueTitle(): Promise<string>
 getAVQueueTitleSync(): string
 ```
 
-使用同步方法获取当前会话播放列表的名称。
+Get the name of the playlist of the current session
 
 **Since:** 10
 
@@ -506,15 +502,15 @@ getAVQueueTitleSync(): string
 
 | Type | Description |
 | --- | --- |
-| string | 当前会话播放列表名称。 |
+| string | (string) returned |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 6600101 | Session service exception. |
-| 6600102 | The session does not exist. |
-| 6600103 | The session controller does not exist. |
+| [6600101](../errorcode-avsession.md#6600101-session-service-exception) | Session service exception. |
+| [6600102](../errorcode-avsession.md#6600102-session-does-not-exist) | The session does not exist. |
+| [6600103](../errorcode-avsession.md#6600103-session-controller-does-not-exist) | The session controller does not exist. |
 
 ## getCallMetadata
 
@@ -522,7 +518,7 @@ getAVQueueTitleSync(): string
 getCallMetadata(callback: AsyncCallback<CallMetadata>): void
 ```
 
-获取通话会话的元数据。结果通过callback异步回调方式返回。
+Get the call metadata of the current session
 
 **Since:** 11
 
@@ -536,15 +532,15 @@ getCallMetadata(callback: AsyncCallback<CallMetadata>): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;CallMetadata&gt; | Yes | 回调函数，返回会话元数据。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;CallMetadata&gt; | Yes | The triggered asyncCallback when (getCallMetadata). |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 6600101 | Session service exception. |
-| 6600102 | The session does not exist. |
-| 6600103 | The session controller does not exist. |
+| [6600101](../errorcode-avsession.md#6600101-session-service-exception) | Session service exception. |
+| [6600102](../errorcode-avsession.md#6600102-session-does-not-exist) | The session does not exist. |
+| [6600103](../errorcode-avsession.md#6600103-session-controller-does-not-exist) | The session controller does not exist. |
 
 ## getCallMetadata
 
@@ -552,7 +548,7 @@ getCallMetadata(callback: AsyncCallback<CallMetadata>): void
 getCallMetadata(): Promise<CallMetadata>
 ```
 
-获取通话会话的元数据。结果通过Promise异步回调方式返回。
+Get the call metadata of the current session
 
 **Since:** 11
 
@@ -566,15 +562,15 @@ getCallMetadata(): Promise<CallMetadata>
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;CallMetadata&gt; | Promise对象，返回会话元数据。 |
+| Promise&lt;CallMetadata&gt; | (CallMetadata) returned through promise |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 6600101 | Session service exception. |
-| 6600102 | The session does not exist. |
-| 6600103 | The session controller does not exist. |
+| [6600101](../errorcode-avsession.md#6600101-session-service-exception) | Session service exception. |
+| [6600102](../errorcode-avsession.md#6600102-session-does-not-exist) | The session does not exist. |
+| [6600103](../errorcode-avsession.md#6600103-session-controller-does-not-exist) | The session controller does not exist. |
 
 ## getDesktopLyricState
 
@@ -582,7 +578,7 @@ getCallMetadata(): Promise<CallMetadata>
 getDesktopLyricState(): Promise<DesktopLyricState>
 ```
 
-获取当前会话桌面歌词状态。使用Promise异步回调。
+Get desktop lyric state such as lock state for this session.
 
 **Since:** 23
 
@@ -598,17 +594,17 @@ getDesktopLyricState(): Promise<DesktopLyricState>
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;DesktopLyricState&gt; | Promise对象。返回桌面歌词状态。 |
+| Promise&lt;DesktopLyricState&gt; | void promise when executed successfully |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 6600101 | Session service exception. |
-| 6600102 | The session does not exist. |
-| 6600103 | The session controller does not exist. |
-| 6600110 | The desktop lyrics feature of this application is not enabled. |
-| 6600111 | The desktop lyrics feature is not supported. |
+| [6600101](../errorcode-avsession.md#6600101-session-service-exception) | Session service exception. |
+| [6600102](../errorcode-avsession.md#6600102-session-does-not-exist) | The session does not exist. |
+| [6600103](../errorcode-avsession.md#6600103-session-controller-does-not-exist) | The session controller does not exist. |
+| [6600110](../errorcode-avsession.md#6600110-desktop-lyrics-not-enabled-for-the-application) | The desktop lyrics feature of this application is not enabled. |
+| [6600111](../errorcode-avsession.md#6600111-desktop-lyrics-not-supported-for-the-current-device) | The desktop lyrics feature is not supported. |
 
 ## getExtras
 
@@ -616,7 +612,7 @@ getDesktopLyricState(): Promise<DesktopLyricState>
 getExtras(callback: AsyncCallback<{[key: string]: Object}>): void
 ```
 
-获取媒体提供方设置的自定义媒体数据包。使用callback异步回调。
+Get custom media packets provided by the corresponding session
 
 **Since:** 10
 
@@ -636,12 +632,12 @@ getExtras(callback: AsyncCallback<{[key: string]: Object}>): void
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | parameter check failed. 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. 3.Parameter verification failed. |
-| 6600101 | Session service exception. |
-| 6600102 | The session does not exist. |
-| 6600103 | The session controller does not exist. |
-| 6600105 | Invalid session command. |
-| 6600107 | Too many commands or events. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | parameter check failed. 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. 3.Parameter verification failed. |
+| [6600101](../errorcode-avsession.md#6600101-session-service-exception) | Session service exception. |
+| [6600102](../errorcode-avsession.md#6600102-session-does-not-exist) | The session does not exist. |
+| [6600103](../errorcode-avsession.md#6600103-session-controller-does-not-exist) | The session controller does not exist. |
+| [6600105](../errorcode-avsession.md#6600105-invalid-session-command) | Invalid session command. |
+| [6600107](../errorcode-avsession.md#6600107-too-many-commands-or-events) | Too many commands or events. |
 
 ## getExtras
 
@@ -669,11 +665,11 @@ Get custom media packets provided by the corresponding session
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 6600101 | Session service exception. |
-| 6600102 | The session does not exist. |
-| 6600103 | The session controller does not exist. |
-| 6600105 | Invalid session command. |
-| 6600107 | Too many commands or events. |
+| [6600101](../errorcode-avsession.md#6600101-session-service-exception) | Session service exception. |
+| [6600102](../errorcode-avsession.md#6600102-session-does-not-exist) | The session does not exist. |
+| [6600103](../errorcode-avsession.md#6600103-session-controller-does-not-exist) | The session controller does not exist. |
+| [6600105](../errorcode-avsession.md#6600105-invalid-session-command) | Invalid session command. |
+| [6600107](../errorcode-avsession.md#6600107-too-many-commands-or-events) | Too many commands or events. |
 
 ## getExtras
 
@@ -681,7 +677,7 @@ Get custom media packets provided by the corresponding session
 getExtras(): Promise<{[key: string]: Object}>
 ```
 
-获取媒体提供方设置的自定义媒体数据包。使用Promise异步回调。
+Get custom media packets provided by the corresponding session
 
 **Since:** 10
 
@@ -697,18 +693,18 @@ getExtras(): Promise<{[key: string]: Object}>
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;{[key: string]: Object}&gt; | > } Promise对象，返回媒体提供方设置的自定义媒体数据包，数据包的内容与setExtras设置的内容完全一致。 |
+| Promise&lt;{[key: string]: Object}&gt; | > } the parameters of extras |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | parameter check failed. 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. 3.Parameter verification failed. |
-| 6600101 | Session service exception. |
-| 6600102 | The session does not exist. |
-| 6600103 | The session controller does not exist. |
-| 6600105 | Invalid session command. |
-| 6600107 | Too many commands or events. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | parameter check failed. 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. 3.Parameter verification failed. |
+| [6600101](../errorcode-avsession.md#6600101-session-service-exception) | Session service exception. |
+| [6600102](../errorcode-avsession.md#6600102-session-does-not-exist) | The session does not exist. |
+| [6600103](../errorcode-avsession.md#6600103-session-controller-does-not-exist) | The session controller does not exist. |
+| [6600105](../errorcode-avsession.md#6600105-invalid-session-command) | Invalid session command. |
+| [6600107](../errorcode-avsession.md#6600107-too-many-commands-or-events) | Too many commands or events. |
 
 ## getExtras
 
@@ -732,17 +728,17 @@ Get custom media packets provided by the corresponding session
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;Record&lt;string, Object&gt;&gt; | 返回自定义的扩展数据 |
+| Promise&lt;Record&lt;string, Object&gt;&gt; | the parameters of extras |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 6600101 | Session service exception. |
-| 6600102 | The session does not exist. |
-| 6600103 | The session controller does not exist. |
-| 6600105 | Invalid session command. |
-| 6600107 | Too many commands or events. |
+| [6600101](../errorcode-avsession.md#6600101-session-service-exception) | Session service exception. |
+| [6600102](../errorcode-avsession.md#6600102-session-does-not-exist) | The session does not exist. |
+| [6600103](../errorcode-avsession.md#6600103-session-controller-does-not-exist) | The session controller does not exist. |
+| [6600105](../errorcode-avsession.md#6600105-invalid-session-command) | Invalid session command. |
+| [6600107](../errorcode-avsession.md#6600107-too-many-commands-or-events) | Too many commands or events. |
 
 ## getExtrasWithEvent
 
@@ -750,7 +746,7 @@ Get custom media packets provided by the corresponding session
 getExtrasWithEvent(extraEvent: string): Promise<ExtraInfo>
 ```
 
-根据远端分布式事件类型，获取远端分布式媒体提供方设置的自定义媒体数据包。使用Promise异步回调。
+Get extra information for remote device, such as volume level, connected devices.
 
 **Since:** 18
 
@@ -764,22 +760,22 @@ getExtrasWithEvent(extraEvent: string): Promise<ExtraInfo>
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| extraEvent | string | Yes | 远端分布式事件类型。可获取的事件类型来自于 [setExtras](arkts-avsession-avsession-avsession-i.md#setextras))}。 &lt;br&gt;对Wearable设备类型，额外提供以下预设的事件类型： &lt;br&gt;'AUDIO_GET_VOLUME'：获取远端设备音量。 &lt;br&gt;'AUDIO_GET_AVAILABLE_DEVICES'：获取远端所有可连接设备。 &lt;br&gt;'AUDIO_GET_PREFERRED_OUTPUT_DEVICE_FOR_RENDERER_INFO'：获取远端实际发声设备。 |
+| extraEvent | string | Yes | the event name to get |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;ExtraInfo&gt; | Promise对象，返回远端分布式媒体提供方设置的自定义媒体数据包。 &lt;br&gt;参数ExtraInfo支持的数据类型有：字符串、数字、布尔、对象、数组和文件描述符等，详细介绍请参见 [ |
+| Promise&lt;ExtraInfo&gt; | the value returned for such event |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 6600101 | Session service exception. |
-| 6600102 | The session does not exist. |
-| 6600103 | The session controller does not exist. |
-| 6600105 | Invalid session command. |
+| [6600101](../errorcode-avsession.md#6600101-session-service-exception) | Session service exception. |
+| [6600102](../errorcode-avsession.md#6600102-session-does-not-exist) | The session does not exist. |
+| [6600103](../errorcode-avsession.md#6600103-session-controller-does-not-exist) | The session controller does not exist. |
+| [6600105](../errorcode-avsession.md#6600105-invalid-session-command) | Invalid session command. |
 
 ## getLaunchAbility
 
@@ -787,7 +783,7 @@ getExtrasWithEvent(extraEvent: string): Promise<ExtraInfo>
 getLaunchAbility(callback: AsyncCallback<WantAgent>): void
 ```
 
-获取应用在会话中保存的WantAgent对象。结果通过callback异步回调方式返回。
+Get the {@link WantAgent} of this session that can launch the session ability
 
 **Since:** 10
 
@@ -801,15 +797,15 @@ getLaunchAbility(callback: AsyncCallback<WantAgent>): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[WantAgent](../../apis-ability-kit/arkts-apis/arkts-ability-wantagent-t.md)&gt; | Yes | 回调函数。返回在 [setLaunchAbility](arkts-avsession-avsession-avsession-i.md#setlaunchability)保存的对象，包括应用的相关属性信息，如 bundleName，abilityName，deviceId等。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[WantAgent](../../apis-ability-kit/arkts-apis/arkts-ability-wantagent-t.md)&gt; | Yes | The asyncCallback triggered when getting the WantAgent. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 6600101 | Session service exception. |
-| 6600102 | The session does not exist. |
-| 6600103 | The session controller does not exist. |
+| [6600101](../errorcode-avsession.md#6600101-session-service-exception) | Session service exception. |
+| [6600102](../errorcode-avsession.md#6600102-session-does-not-exist) | The session does not exist. |
+| [6600103](../errorcode-avsession.md#6600103-session-controller-does-not-exist) | The session controller does not exist. |
 
 ## getLaunchAbility
 
@@ -817,7 +813,7 @@ getLaunchAbility(callback: AsyncCallback<WantAgent>): void
 getLaunchAbility(): Promise<WantAgent>
 ```
 
-获取应用在会话中保存的WantAgent对象。结果通过Promise异步回调方式返回。
+Get the {@link WantAgent} of this session that can launch the session ability
 
 **Since:** 10
 
@@ -833,15 +829,15 @@ getLaunchAbility(): Promise<WantAgent>
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;[WantAgent](../../apis-ability-kit/arkts-apis/arkts-ability-wantagent-t.md)&gt; | Promise对象，返回在 [setLaunchAbility]{ |
+| Promise&lt;[WantAgent](../../apis-ability-kit/arkts-apis/arkts-ability-wantagent-t.md)&gt; | WantAgent promise |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 6600101 | Session service exception. |
-| 6600102 | The session does not exist. |
-| 6600103 | The session controller does not exist. |
+| [6600101](../errorcode-avsession.md#6600101-session-service-exception) | Session service exception. |
+| [6600102](../errorcode-avsession.md#6600102-session-does-not-exist) | The session does not exist. |
+| [6600103](../errorcode-avsession.md#6600103-session-controller-does-not-exist) | The session controller does not exist. |
 
 ## getMediaCenterControlType
 
@@ -849,9 +845,7 @@ getLaunchAbility(): Promise<WantAgent>
 getMediaCenterControlType(): Promise<Array<AVMediaCenterControlType>>
 ```
 
-获取应用通过[setMediaCenterControlType](arkts-avsession-avsession-avsession-i.md#setmediacentercontroltype)接口设置优先显示的控制类型列表。使用Promise异步回调。
-
-如果应用未设置或者设置为空列表，则返回空列表。
+Get media control type that the can be displayed on the media center.
 
 **Since:** 26.0.0
 
@@ -867,14 +861,14 @@ getMediaCenterControlType(): Promise<Array<AVMediaCenterControlType>>
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;Array&lt;AVMediaCenterControlType&gt;&gt; | Promise对象。返回应用希望优先显示的控制类型列表。 |
+| Promise&lt;Array&lt;AVMediaCenterControlType&gt;&gt; | The control types that the app sets to be displayed on the media center. The default value is empty, indicating that the types of the customized display control is not set. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 6600101 | Session service exception. |
-| 6600103 | The session controller does not exist. |
+| [6600101](../errorcode-avsession.md#6600101-session-service-exception) | Session service exception. |
+| [6600103](../errorcode-avsession.md#6600103-session-controller-does-not-exist) | The session controller does not exist. |
 
 ## getOutputDevice
 
@@ -882,7 +876,7 @@ getMediaCenterControlType(): Promise<Array<AVMediaCenterControlType>>
 getOutputDevice(callback: AsyncCallback<OutputDeviceInfo>): void
 ```
 
-获取播放设备信息。结果通过callback异步回调方式返回。
+Get output device information
 
 **Since:** 10
 
@@ -896,7 +890,7 @@ getOutputDevice(callback: AsyncCallback<OutputDeviceInfo>): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;OutputDeviceInfo&gt; | Yes | 回调函数，返回播放设备信息。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;OutputDeviceInfo&gt; | Yes | The triggered asyncCallback when (getOutputDevice). |
 
 **Error codes:**
 
@@ -911,7 +905,7 @@ getOutputDevice(callback: AsyncCallback<OutputDeviceInfo>): void
 getOutputDevice(): Promise<OutputDeviceInfo>
 ```
 
-获取播放设备信息。结果通过Promise异步回调方式返回。
+Get output device information
 
 **Since:** 10
 
@@ -927,7 +921,7 @@ getOutputDevice(): Promise<OutputDeviceInfo>
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;OutputDeviceInfo&gt; | Promise对象，返回播放设备信息。 |
+| Promise&lt;OutputDeviceInfo&gt; | (OutputDeviceInfo) returned through promise |
 
 **Error codes:**
 
@@ -942,7 +936,7 @@ getOutputDevice(): Promise<OutputDeviceInfo>
 getOutputDeviceSync(): OutputDeviceInfo
 ```
 
-使用同步方法获取当前输出设备信息。
+Get output device information
 
 **Since:** 10
 
@@ -958,14 +952,14 @@ getOutputDeviceSync(): OutputDeviceInfo
 
 | Type | Description |
 | --- | --- |
-| [OutputDeviceInfo](arkts-avsession-avsession-outputdeviceinfo-i.md) | 当前输出设备信息。 |
+| [OutputDeviceInfo](arkts-avsession-avsession-outputdeviceinfo-i.md) | (OutputDeviceInfo) returned |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 6600101 | Session service exception. |
-| 6600103 | The session controller does not exist. |
+| [6600101](../errorcode-avsession.md#6600101-session-service-exception) | Session service exception. |
+| [6600103](../errorcode-avsession.md#6600103-session-controller-does-not-exist) | The session controller does not exist. |
 
 ## getRealPlaybackPositionSync
 
@@ -979,7 +973,7 @@ ArkTS-Sta:
 getRealPlaybackPositionSync(): long
 ```
 
-使用同步方法获取当前播放位置。
+Get the adjusted playback position. The time automatically calculated by the system taking into account factors such as playback status, playback speed, and application update time.
 
 **Since:** 10
 
@@ -995,14 +989,14 @@ getRealPlaybackPositionSync(): long
 
 | Type | Description |
 | --- | --- |
-| ArkTS-Dyn: number  <br>ArkTS-Sta：long | 时间节点，毫秒数。 |
+| ArkTS-Dyn: number  <br>ArkTS-Sta：long | current playback position in ms.Note that the returns value of each call will be different. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 6600101 | Session service exception. |
-| 6600103 | The session controller does not exist. |
+| [6600101](../errorcode-avsession.md#6600101-session-service-exception) | Session service exception. |
+| [6600103](../errorcode-avsession.md#6600103-session-controller-does-not-exist) | The session controller does not exist. |
 
 ## getSupportedLoopModes
 
@@ -1010,9 +1004,7 @@ getRealPlaybackPositionSync(): long
 getSupportedLoopModes(): Promise<Array<LoopMode>>
 ```
 
-获取应用支持的循环模式列表。使用Promise异步回调。
-
-该列表通过[setSupportedLoopModes](arkts-avsession-avsession-avsession-i.md#setsupportedloopmodes)接口设置。如果应用未设置或者设置为空列表，则返回空列表。
+Get supported loop modes supplied by application.
 
 **Since:** 26.0.0
 
@@ -1030,14 +1022,14 @@ getSupportedLoopModes(): Promise<Array<LoopMode>>
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;Array&lt;LoopMode&gt;&gt; | Promise对象。返回支持的循环模式列表。 |
+| Promise&lt;Array&lt;LoopMode&gt;&gt; | supported loop modes returned through promise |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 6600101 | Session service exception |
-| 6600103 | The session controller does not exist. |
+| [6600101](../errorcode-avsession.md#6600101-session-service-exception) | Session service exception. |
+| [6600103](../errorcode-avsession.md#6600103-session-controller-does-not-exist) | The session controller does not exist. |
 
 ## getSupportedPlaySpeeds
 
@@ -1051,9 +1043,7 @@ ArkTS-Sta:
 getSupportedPlaySpeeds(): Promise<Array<double>>
 ```
 
-获取应用支持的播放倍速列表。使用Promise异步回调。
-
-该列表通过[setSupportedPlaySpeeds](arkts-avsession-avsession-avsession-i.md#setsupportedplayspeeds)接口设置。如果应用未设置或者设置为空列表，则返回空列表。
+Get supported speeds supplied by application.
 
 **Since:** 26.0.0
 
@@ -1071,14 +1061,14 @@ getSupportedPlaySpeeds(): Promise<Array<double>>
 
 | Type | Description |
 | --- | --- |
-| ArkTS-Dyn: Promise&lt;Array&lt;number&gt;&gt;  <br>ArkTS-Sta：Promise&lt;Array&lt;double&gt;&gt; | Promise对象。返回支持的播放倍速列表。 |
+| ArkTS-Dyn: Promise&lt;Array&lt;number&gt;&gt;  <br>ArkTS-Sta：Promise&lt;Array&lt;double&gt;&gt; | Promise that returns no value. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 6600101 | Session service exception |
-| 6600103 | The session controller does not exist. |
+| [6600101](../errorcode-avsession.md#6600101-session-service-exception) | Session service exception. |
+| [6600103](../errorcode-avsession.md#6600103-session-controller-does-not-exist) | The session controller does not exist. |
 
 ## getValidCommands
 
@@ -1086,7 +1076,7 @@ getSupportedPlaySpeeds(): Promise<Array<double>>
 getValidCommands(callback: AsyncCallback<Array<AVControlCommandType>>): void
 ```
 
-获取会话支持的有效命令。结果通过callback异步回调方式返回。
+Get commands supported by the current session
 
 **Since:** 10
 
@@ -1100,15 +1090,15 @@ getValidCommands(callback: AsyncCallback<Array<AVControlCommandType>>): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;AVControlCommandType&gt;&gt; | Yes | 回调函数，返回有效命令的集合。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;AVControlCommandType&gt;&gt; | Yes | The triggered asyncCallback when ( getValidCommands). |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 6600101 | Session service exception. |
-| 6600102 | The session does not exist. |
-| 6600103 | The session controller does not exist. |
+| [6600101](../errorcode-avsession.md#6600101-session-service-exception) | Session service exception. |
+| [6600102](../errorcode-avsession.md#6600102-session-does-not-exist) | The session does not exist. |
+| [6600103](../errorcode-avsession.md#6600103-session-controller-does-not-exist) | The session controller does not exist. |
 
 ## getValidCommands
 
@@ -1116,7 +1106,7 @@ getValidCommands(callback: AsyncCallback<Array<AVControlCommandType>>): void
 getValidCommands(): Promise<Array<AVControlCommandType>>
 ```
 
-获取会话支持的有效命令。结果通过Promise异步回调方式返回。
+Get commands supported by the current session
 
 **Since:** 10
 
@@ -1132,15 +1122,15 @@ getValidCommands(): Promise<Array<AVControlCommandType>>
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;Array&lt;AVControlCommandType&gt;&gt; | Promise对象。返回有效命令的集合。 |
+| Promise&lt;Array&lt;AVControlCommandType&gt;&gt; | array of AVControlCommandType promise |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 6600101 | Session service exception. |
-| 6600102 | The session does not exist. |
-| 6600103 | The session controller does not exist. |
+| [6600101](../errorcode-avsession.md#6600101-session-service-exception) | Session service exception. |
+| [6600102](../errorcode-avsession.md#6600102-session-does-not-exist) | The session does not exist. |
+| [6600103](../errorcode-avsession.md#6600103-session-controller-does-not-exist) | The session controller does not exist. |
 
 ## getValidCommandsSync
 
@@ -1148,7 +1138,7 @@ getValidCommands(): Promise<Array<AVControlCommandType>>
 getValidCommandsSync(): Array<AVControlCommandType>
 ```
 
-使用同步方法获取会话支持的有效命令。
+Get commands supported by the current session
 
 **Since:** 10
 
@@ -1164,15 +1154,15 @@ getValidCommandsSync(): Array<AVControlCommandType>
 
 | Type | Description |
 | --- | --- |
-| Array&lt;AVControlCommandType&gt; | 会话支持的有效命令的集合。 |
+| Array&lt;AVControlCommandType&gt; | array of AVControlCommandType |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 6600101 | Session service exception. |
-| 6600102 | The session does not exist. |
-| 6600103 | The session controller does not exist. |
+| [6600101](../errorcode-avsession.md#6600101-session-service-exception) | Session service exception. |
+| [6600102](../errorcode-avsession.md#6600102-session-does-not-exist) | The session does not exist. |
+| [6600103](../errorcode-avsession.md#6600103-session-controller-does-not-exist) | The session controller does not exist. |
 
 ## isActive
 
@@ -1180,7 +1170,7 @@ getValidCommandsSync(): Array<AVControlCommandType>
 isActive(callback: AsyncCallback<boolean>): void
 ```
 
-判断会话是否被激活。结果通过callback异步回调方式返回。
+Check if the current session is active
 
 **Since:** 10
 
@@ -1194,15 +1184,15 @@ isActive(callback: AsyncCallback<boolean>): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;boolean&gt; | Yes | 回调函数。返回会话是否为激活状态，true表示被激活，false表示禁用。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;boolean&gt; | Yes | The triggered asyncCallback when (isActive). |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 6600101 | Session service exception. |
-| 6600102 | The session does not exist. |
-| 6600103 | The session controller does not exist. |
+| [6600101](../errorcode-avsession.md#6600101-session-service-exception) | Session service exception. |
+| [6600102](../errorcode-avsession.md#6600102-session-does-not-exist) | The session does not exist. |
+| [6600103](../errorcode-avsession.md#6600103-session-controller-does-not-exist) | The session controller does not exist. |
 
 ## isActive
 
@@ -1210,7 +1200,7 @@ isActive(callback: AsyncCallback<boolean>): void
 isActive(): Promise<boolean>
 ```
 
-获取会话是否被激活。结果通过Promise异步回调方式返回。
+Check if the current session is active
 
 **Since:** 10
 
@@ -1226,15 +1216,15 @@ isActive(): Promise<boolean>
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;boolean&gt; | Promise对象，返回会话是否为激活状态，true表示被激活，false表示禁用。 |
+| Promise&lt;boolean&gt; | boolean promise |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 6600101 | Session service exception. |
-| 6600102 | The session does not exist. |
-| 6600103 | The session controller does not exist. |
+| [6600101](../errorcode-avsession.md#6600101-session-service-exception) | Session service exception. |
+| [6600102](../errorcode-avsession.md#6600102-session-does-not-exist) | The session does not exist. |
+| [6600103](../errorcode-avsession.md#6600103-session-controller-does-not-exist) | The session controller does not exist. |
 
 ## isActiveSync
 
@@ -1242,7 +1232,7 @@ isActive(): Promise<boolean>
 isActiveSync(): boolean
 ```
 
-使用同步方法判断会话是否被激活。
+Check if the current session is active
 
 **Since:** 10
 
@@ -1258,15 +1248,15 @@ isActiveSync(): boolean
 
 | Type | Description |
 | --- | --- |
-| boolean | 会话是否为激活状态，true表示被激活，false表示禁用。 |
+| boolean | boolean |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 6600101 | Session service exception. |
-| 6600102 | The session does not exist. |
-| 6600103 | The session controller does not exist. |
+| [6600101](../errorcode-avsession.md#6600101-session-service-exception) | Session service exception. |
+| [6600102](../errorcode-avsession.md#6600102-session-does-not-exist) | The session does not exist. |
+| [6600103](../errorcode-avsession.md#6600103-session-controller-does-not-exist) | The session controller does not exist. |
 
 ## isDesktopLyricEnabled
 
@@ -1274,7 +1264,7 @@ isActiveSync(): boolean
 isDesktopLyricEnabled(): Promise<boolean>
 ```
 
-查询是否启用桌面歌词功能。使用Promise异步回调。
+Query desktop lyric enabled state for this session.
 
 **Since:** 23
 
@@ -1290,16 +1280,16 @@ isDesktopLyricEnabled(): Promise<boolean>
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;boolean&gt; | Promise对象。返回true表示启用桌面歌词功能；返回false表示不启用桌面歌词功能。 |
+| Promise&lt;boolean&gt; | return the enabled status |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 6600101 | Session service exception. |
-| 6600102 | The session does not exist. |
-| 6600103 | The session controller does not exist. |
-| 6600111 | The desktop lyrics feature is not supported. |
+| [6600101](../errorcode-avsession.md#6600101-session-service-exception) | Session service exception. |
+| [6600102](../errorcode-avsession.md#6600102-session-does-not-exist) | The session does not exist. |
+| [6600103](../errorcode-avsession.md#6600103-session-controller-does-not-exist) | The session controller does not exist. |
+| [6600111](../errorcode-avsession.md#6600111-desktop-lyrics-not-supported-for-the-current-device) | The desktop lyrics feature is not supported. |
 
 ## isDesktopLyricVisible
 
@@ -1307,7 +1297,7 @@ isDesktopLyricEnabled(): Promise<boolean>
 isDesktopLyricVisible(): Promise<boolean>
 ```
 
-查询当前会话桌面歌词的显示状态。使用Promise异步回调。
+Query desktop lyric visible state for this session.
 
 **Since:** 23
 
@@ -1323,17 +1313,17 @@ isDesktopLyricVisible(): Promise<boolean>
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;boolean&gt; | Promise对象。返回true表示显示桌面歌词；返回false表示不显示桌面歌词。 |
+| Promise&lt;boolean&gt; | return desktop lyric visible state |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 6600101 | Session service exception. |
-| 6600102 | The session does not exist. |
-| 6600103 | The session controller does not exist. |
-| 6600110 | The desktop lyrics feature of this application is not enabled. |
-| 6600111 | The desktop lyrics feature is not supported. |
+| [6600101](../errorcode-avsession.md#6600101-session-service-exception) | Session service exception. |
+| [6600102](../errorcode-avsession.md#6600102-session-does-not-exist) | The session does not exist. |
+| [6600103](../errorcode-avsession.md#6600103-session-controller-does-not-exist) | The session controller does not exist. |
+| [6600110](../errorcode-avsession.md#6600110-desktop-lyrics-not-enabled-for-the-application) | The desktop lyrics feature of this application is not enabled. |
+| [6600111](../errorcode-avsession.md#6600111-desktop-lyrics-not-supported-for-the-current-device) | The desktop lyrics feature is not supported. |
 
 ## off('metadataChange')
 
@@ -1341,7 +1331,7 @@ isDesktopLyricVisible(): Promise<boolean>
 off(type: 'metadataChange', callback?: (data: AVMetadata) => void)
 ```
 
-取消元数据变化事件监听。指定callback，可取消对应监听；未指定callback，取消所有事件监听。
+Unregister metadata changed callback
 
 **Since:** 10
 
@@ -1358,15 +1348,15 @@ off(type: 'metadataChange', callback?: (data: AVMetadata) => void)
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'metadataChange' | Yes |  |
-| callback | (data: AVMetadata) =&gt; void | No | 回调函数，参数data是需要更新的元数据。只包含需要更新的元数据属性，并不代表当前全量的元数据。 &lt;br&gt;该参数为可选参数，若不填写该参数，则认为取消所有相关会话的事件监听。 |
+| callback | (data: AVMetadata) =&gt; void | No | The callback used to handle metadata changed event. The callback function provides the {@link AVMetadata} parameter. It only contains the properties set in the filter. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | parameter check failed. 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. |
-| 6600101 | Session service exception. |
-| 6600103 | The session controller does not exist. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | parameter check failed. 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. |
+| [6600101](../errorcode-avsession.md#6600101-session-service-exception) | Session service exception. |
+| [6600103](../errorcode-avsession.md#6600103-session-controller-does-not-exist) | The session controller does not exist. |
 
 ## off('playbackStateChange')
 
@@ -1374,7 +1364,7 @@ off(type: 'metadataChange', callback?: (data: AVMetadata) => void)
 off(type: 'playbackStateChange', callback?: (state: AVPlaybackState) => void)
 ```
 
-取消播放状态变化事件监听。指定callback，可取消对应监听；未指定callback，取消所有事件监听。
+Unregister playback state changed callback
 
 **Since:** 10
 
@@ -1391,15 +1381,15 @@ off(type: 'playbackStateChange', callback?: (state: AVPlaybackState) => void)
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'playbackStateChange' | Yes |  |
-| callback | (state: AVPlaybackState) =&gt; void | No | 回调函数，参数state是需要更新的播放状态。只包含需要更新的播放状态属性，并不代表当前全量的播放状态。 &lt;br&gt;该参数为可选参数，若不填写该参数，则认为取消所有相关会话的事件监听。 |
+| callback | (state: AVPlaybackState) =&gt; void | No | The callback used to handle playback state changed event. The callback function provides the {@link AVPlaybackState} parameter. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | parameter check failed. 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. |
-| 6600101 | Session service exception. |
-| 6600103 | The session controller does not exist. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | parameter check failed. 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. |
+| [6600101](../errorcode-avsession.md#6600101-session-service-exception) | Session service exception. |
+| [6600103](../errorcode-avsession.md#6600103-session-controller-does-not-exist) | The session controller does not exist. |
 
 ## off('callMetadataChange')
 
@@ -1407,7 +1397,7 @@ off(type: 'playbackStateChange', callback?: (state: AVPlaybackState) => void)
 off(type: 'callMetadataChange', callback?: Callback<CallMetadata>): void
 ```
 
-取消设置通话元数据变化事件监听。指定callback，可取消对应监听；未指定callback，取消所有事件监听。
+Unregister call metadata changed callback
 
 **Since:** 11
 
@@ -1423,16 +1413,16 @@ off(type: 'callMetadataChange', callback?: Callback<CallMetadata>): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'callMetadataChange' | Yes | 取消对应的监听事件，支持事件`'callMetadataChange'`。 |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;CallMetadata&gt; | No | 回调函数，参数calldata是变化后的通话原数据。 &lt;br&gt;该参数为可选参数，若不填写该参数，则认为取消所有相关会话的事件监听。 |
+| type | 'callMetadataChange' | Yes | 'callMetadataChange' |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;CallMetadata&gt; | No | The callback used to handle call metadata changed event. The callback function provides the {@link CallMetadata} parameter. It only contains the properties set in the filter. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | parameter check failed. 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. |
-| 6600101 | Session service exception. |
-| 6600103 | The session controller does not exist. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | parameter check failed. 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. |
+| [6600101](../errorcode-avsession.md#6600101-session-service-exception) | Session service exception. |
+| [6600103](../errorcode-avsession.md#6600103-session-controller-does-not-exist) | The session controller does not exist. |
 
 ## off('callStateChange')
 
@@ -1440,7 +1430,7 @@ off(type: 'callMetadataChange', callback?: Callback<CallMetadata>): void
 off(type: 'callStateChange', callback?: Callback<AVCallState>): void
 ```
 
-取消设置通话状态变化事件监听。指定callback，可取消对应监听；未指定callback，取消所有事件监听。
+Unregister playback state changed callback
 
 **Since:** 11
 
@@ -1456,16 +1446,16 @@ off(type: 'callStateChange', callback?: Callback<AVCallState>): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'callStateChange' | Yes | 取消对应的监听事件，支持事件`'callStateChange'`。 |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;AVCallState&gt; | No | 回调函数，参数callstate是变化后的通话状态。 &lt;br&gt;该参数为可选参数，若不填写该参数，则认为取消所有相关会话的事件监听。 |
+| type | 'callStateChange' | Yes | 'callStateChange' |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;AVCallState&gt; | No | The callback used to handle call state changed event. The callback function provides the {@link AVCallState} parameter. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | parameter check failed. 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. |
-| 6600101 | Session service exception. |
-| 6600103 | The session controller does not exist. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | parameter check failed. 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. |
+| [6600101](../errorcode-avsession.md#6600101-session-service-exception) | Session service exception. |
+| [6600103](../errorcode-avsession.md#6600103-session-controller-does-not-exist) | The session controller does not exist. |
 
 ## off('sessionDestroy')
 
@@ -1473,7 +1463,7 @@ off(type: 'callStateChange', callback?: Callback<AVCallState>): void
 off(type: 'sessionDestroy', callback?: () => void)
 ```
 
-取消监听会话的销毁事件监听。指定callback，可取消对应监听；未指定callback，取消所有事件监听。
+Unregister current session destroyed callback
 
 **Since:** 10
 
@@ -1489,16 +1479,16 @@ off(type: 'sessionDestroy', callback?: () => void)
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'sessionDestroy' | Yes | 取消对应的监听事件，支持事件`'sessionDestroy'`。 |
-| callback | () =&gt; void | No | 回调函数。当监听事件取消成功，err为undefined，否则返回错误对象。 &lt;br&gt;该参数为可选参数，若不填写该参数，则认为取消所有相关会话的事件监听。 |
+| type | 'sessionDestroy' | Yes | 'sessionDestroy' |
+| callback | () =&gt; void | No | The callback used to handle current session destroyed event. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | parameter check failed. 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. |
-| 6600101 | Session service exception. |
-| 6600103 | The session controller does not exist. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | parameter check failed. 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. |
+| [6600101](../errorcode-avsession.md#6600101-session-service-exception) | Session service exception. |
+| [6600103](../errorcode-avsession.md#6600103-session-controller-does-not-exist) | The session controller does not exist. |
 
 ## off('activeStateChange')
 
@@ -1506,7 +1496,7 @@ off(type: 'sessionDestroy', callback?: () => void)
 off(type: 'activeStateChange', callback?: (isActive: boolean) => void)
 ```
 
-取消监听会话激活状态变化事件监听。指定callback，可取消对应监听；未指定callback，取消所有事件监听。
+Unregister the active state of this session changed callback
 
 **Since:** 10
 
@@ -1522,16 +1512,16 @@ off(type: 'activeStateChange', callback?: (isActive: boolean) => void)
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'activeStateChange' | Yes | 取消对应的监听事件，支持事件`'activeStateChange'`。 |
-| callback | (isActive: boolean) =&gt; void | No | 回调函数。参数isActive表示会话是否被激活。true表示被激活，false表示禁用。 &lt;br&gt;该参数为可选参数，若不填写该参数，则认为取消所有相关会话的事件监听。 |
+| type | 'activeStateChange' | Yes | 'activeStateChange' |
+| callback | (isActive: boolean) =&gt; void | No | The callback used to handle the active state of this session changed event. The callback function provides the changed session state. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | parameter check failed. 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. |
-| 6600101 | Session service exception. |
-| 6600103 | The session controller does not exist. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | parameter check failed. 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. |
+| [6600101](../errorcode-avsession.md#6600101-session-service-exception) | Session service exception. |
+| [6600103](../errorcode-avsession.md#6600103-session-controller-does-not-exist) | The session controller does not exist. |
 
 ## off('validCommandChange')
 
@@ -1539,7 +1529,7 @@ off(type: 'activeStateChange', callback?: (isActive: boolean) => void)
 off(type: 'validCommandChange', callback?: (commands: Array<AVControlCommandType>) => void)
 ```
 
-取消监听会话有效命令变化事件监听。指定callback，可取消对应监听；未指定callback，取消所有事件监听。
+Unregister the valid commands of the session changed callback
 
 **Since:** 10
 
@@ -1555,16 +1545,16 @@ off(type: 'validCommandChange', callback?: (commands: Array<AVControlCommandType
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'validCommandChange' | Yes | 取消对应的监听事件，支持事件`'validCommandChange'`。 |
-| callback | (commands: Array&lt;AVControlCommandType&gt;) =&gt; void | No | 回调函数。参数commands是有效命令的集合。 &lt;br&gt;该参数为可选参数，若不填写该参数，则认为取消所有相关会话的事件监听。 |
+| type | 'validCommandChange' | Yes | 'validCommandChange' |
+| callback | (commands: Array&lt;AVControlCommandType&gt;) =&gt; void | No | The callback used to handle the changes. The callback function provides an array of AVControlCommandType. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | parameter check failed. 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. |
-| 6600101 | Session service exception. |
-| 6600103 | The session controller does not exist. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | parameter check failed. 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. |
+| [6600101](../errorcode-avsession.md#6600101-session-service-exception) | Session service exception. |
+| [6600103](../errorcode-avsession.md#6600103-session-controller-does-not-exist) | The session controller does not exist. |
 
 ## off('outputDeviceChange')
 
@@ -1572,7 +1562,7 @@ off(type: 'validCommandChange', callback?: (commands: Array<AVControlCommandType
 off(type: 'outputDeviceChange', callback?: (state: ConnectionState, device: OutputDeviceInfo) => void): void
 ```
 
-取消监听分布式设备变化事件监听。指定callback，可取消对应监听；未指定callback，取消所有事件监听。
+Unregister session output device change callback
 
 **Since:** 10
 
@@ -1588,16 +1578,16 @@ off(type: 'outputDeviceChange', callback?: (state: ConnectionState, device: Outp
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'outputDeviceChange' | Yes | 取消对应的监听事件，支持事件`'outputDeviceChange'`。 |
-| callback | (state: ConnectionState, device: OutputDeviceInfo) =&gt; void | No | 回调函数，参数device是设备相关信息。 &lt;br&gt;该参数为可选参数，若不填写该参数，则认为取消所有相关会话的事件监听。 |
+| type | 'outputDeviceChange' | Yes | Registration Type 'outputDeviceChange' |
+| callback | (state: ConnectionState, device: OutputDeviceInfo) =&gt; void | No | Used to handle output device changed. The callback provide the new device info {@link OutputDeviceInfo} and related connection state {@link ConnectionState}. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | parameter check failed. 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. |
-| 6600101 | Session service exception |
-| 6600103 | The session controller does not exist |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | parameter check failed. 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. |
+| [6600101](../errorcode-avsession.md#6600101-session-service-exception) | Session service exception |
+| [6600103](../errorcode-avsession.md#6600103-session-controller-does-not-exist) | The session controller does not exist |
 
 ## off('sessionEvent')
 
@@ -1605,7 +1595,7 @@ off(type: 'outputDeviceChange', callback?: (state: ConnectionState, device: Outp
 off(type: 'sessionEvent', callback?: (sessionEvent: string, args: {[key: string]: Object}) => void): void
 ```
 
-取消会话事件监听。指定callback，可取消对应监听；未指定callback，取消所有事件监听。
+Unregister session event callback
 
 **Since:** 10
 
@@ -1621,16 +1611,16 @@ off(type: 'sessionEvent', callback?: (sessionEvent: string, args: {[key: string]
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'sessionEvent' | Yes | 取消对应的监听事件，支持事件`'sessionEvent'`。 |
-| callback | (sessionEvent: string, args: {[key: string]: Object}) =&gt; void | No | 回调函数，参数sessionEvent是变化的事件名，args为事件的参数。 |
+| type | 'sessionEvent' | Yes | 'sessionEvent' |
+| callback | (sessionEvent: string, args: {[key: string]: Object}) =&gt; void | No | Used to cancel a specific listener The callback function provides the event string and key-value pair parameters. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | parameter check failed. 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. |
-| 6600101 | Session service exception. |
-| 6600103 | The session controller does not exist. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | parameter check failed. 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. |
+| [6600101](../errorcode-avsession.md#6600101-session-service-exception) | Session service exception. |
+| [6600103](../errorcode-avsession.md#6600103-session-controller-does-not-exist) | The session controller does not exist. |
 
 ## off('queueItemsChange')
 
@@ -1638,7 +1628,7 @@ off(type: 'sessionEvent', callback?: (sessionEvent: string, args: {[key: string]
 off(type: 'queueItemsChange', callback?: (items: Array<AVQueueItem>) => void): void
 ```
 
-取消播放列表变化事件监听。指定callback，可取消对应监听；未指定callback，取消所有事件监听。
+Unregister session playlist change callback
 
 **Since:** 10
 
@@ -1654,16 +1644,16 @@ off(type: 'queueItemsChange', callback?: (items: Array<AVQueueItem>) => void): v
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'queueItemsChange' | Yes | 取消对应的监听事件，支持事件`'queueItemsChange'`。 |
-| callback | (items: Array&lt;AVQueueItem&gt;) =&gt; void | No | 回调函数，参数items是变化的播放列表。 &lt;br&gt;该参数为可选参数，若不填写该参数，则认为取消所有相关会话的事件监听。 |
+| type | 'queueItemsChange' | Yes | Registration Type 'queueItemsChange' |
+| callback | (items: Array&lt;AVQueueItem&gt;) =&gt; void | No | Used to handle playlist changed. The callback provides the new array of AVQueueItem {@link AVQueueItem} |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | parameter check failed. 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. |
-| 6600101 | Session service exception. |
-| 6600103 | The session controller does not exist. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | parameter check failed. 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. |
+| [6600101](../errorcode-avsession.md#6600101-session-service-exception) | Session service exception. |
+| [6600103](../errorcode-avsession.md#6600103-session-controller-does-not-exist) | The session controller does not exist. |
 
 ## off('queueTitleChange')
 
@@ -1671,7 +1661,7 @@ off(type: 'queueItemsChange', callback?: (items: Array<AVQueueItem>) => void): v
 off(type: 'queueTitleChange', callback?: (title: string) => void): void
 ```
 
-取消播放列表名称变化事件监听。指定callback，可取消对应监听；未指定callback，取消所有事件监听。
+Unregister the name of session playlist change callback
 
 **Since:** 10
 
@@ -1687,16 +1677,16 @@ off(type: 'queueTitleChange', callback?: (title: string) => void): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'queueTitleChange' | Yes | 取消对应的监听事件，支持事件`'queueTitleChange'`。 |
-| callback | (title: string) =&gt; void | No | 回调函数，参数items是变化的播放列表名称。 &lt;br&gt;该参数为可选参数，若不填写该参数，则认为取消所有相关会话的事件监听。 |
+| type | 'queueTitleChange' | Yes | Registration Type 'queueTitleChange' |
+| callback | (title: string) =&gt; void | No | Used to handle name of playlist changed. The callback provides the new name. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | parameter check failed. 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. |
-| 6600101 | Session service exception. |
-| 6600103 | The session controller does not exist. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | parameter check failed. 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. |
+| [6600101](../errorcode-avsession.md#6600101-session-service-exception) | Session service exception. |
+| [6600103](../errorcode-avsession.md#6600103-session-controller-does-not-exist) | The session controller does not exist. |
 
 ## off('extrasChange')
 
@@ -1704,7 +1694,7 @@ off(type: 'queueTitleChange', callback?: (title: string) => void): void
 off(type: 'extrasChange', callback?: (extras: {[key: string]: Object}) => void): void
 ```
 
-取消自定义媒体数据包变化事件监听。指定callback，可取消对应监听；未指定callback，取消所有事件监听。
+Unregister the custom media packets change callback
 
 **Since:** 10
 
@@ -1720,16 +1710,16 @@ off(type: 'extrasChange', callback?: (extras: {[key: string]: Object}) => void):
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'extrasChange' | Yes | 取消对应的监听事件，支持事件`'extrasChange'`。 |
-| callback | (extras: {[key: string]: Object}) =&gt; void | No | 注册监听事件时的回调函数。 &lt;br&gt;该参数为可选参数，若不填写该参数，则认为取消会话所有与此事件相关的监听。 |
+| type | 'extrasChange' | Yes | Registration Type 'extrasChange' |
+| callback | (extras: {[key: string]: Object}) =&gt; void | No | Used to handle custom media packets changed. The callback provides the new media packets. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | parameter check failed. 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. |
-| 6600101 | Session service exception. |
-| 6600103 | The session controller does not exist. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | parameter check failed. 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. |
+| [6600101](../errorcode-avsession.md#6600101-session-service-exception) | Session service exception. |
+| [6600103](../errorcode-avsession.md#6600103-session-controller-does-not-exist) | The session controller does not exist. |
 
 ## off('customDataChange')
 
@@ -1737,7 +1727,7 @@ off(type: 'extrasChange', callback?: (extras: {[key: string]: Object}) => void):
 off(type: 'customDataChange', callback?: Callback<Record<string, Object>>): void
 ```
 
-取消自定义数据监听。
+Unregister listener for custom data.
 
 **Since:** 20
 
@@ -1753,15 +1743,15 @@ off(type: 'customDataChange', callback?: Callback<Record<string, Object>>): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'customDataChange' | Yes | 取消对应的监听事件，支持的事件是'customDataChange'。 |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;Record&lt;string, Object&gt;&gt; | No | 注册监听事件时的回调函数。该参数为可选参数，若不填写该参数，则认为取消会话所有与此事件相关的监听。 |
+| type | 'customDataChange' | Yes | Type of the 'customDataChange' to listen for. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;Record&lt;string, Object&gt;&gt; | No | Callback used to retrieve custom data. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 6600101 | Session service exception |
-| 6600103 | The session controller does not exist. |
+| [6600101](../errorcode-avsession.md#6600101-session-service-exception) | Session service exception |
+| [6600103](../errorcode-avsession.md#6600103-session-controller-does-not-exist) | The session controller does not exist. |
 
 ## offActiveStateChange
 
@@ -1789,8 +1779,8 @@ Unregister the active state of this session changed callback
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 6600101 | Session service exception. |
-| 6600103 | The session controller does not exist. |
+| [6600101](../errorcode-avsession.md#6600101-session-service-exception) | Session service exception. |
+| [6600103](../errorcode-avsession.md#6600103-session-controller-does-not-exist) | The session controller does not exist. |
 
 ## offCallMetadataChange
 
@@ -1818,8 +1808,8 @@ Unregister call metadata changed callback
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 6600101 | Session service exception. |
-| 6600103 | The session controller does not exist. |
+| [6600101](../errorcode-avsession.md#6600101-session-service-exception) | Session service exception. |
+| [6600103](../errorcode-avsession.md#6600103-session-controller-does-not-exist) | The session controller does not exist. |
 
 ## offCallStateChange
 
@@ -1847,8 +1837,8 @@ Unregister playback state changed callback
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 6600101 | Session service exception. |
-| 6600103 | The session controller does not exist. |
+| [6600101](../errorcode-avsession.md#6600101-session-service-exception) | Session service exception. |
+| [6600103](../errorcode-avsession.md#6600103-session-controller-does-not-exist) | The session controller does not exist. |
 
 ## offCustomDataChange
 
@@ -1876,8 +1866,8 @@ Unregister listener for custom data.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 6600101 | Session service exception |
-| 6600103 | The session controller does not exist. |
+| [6600101](../errorcode-avsession.md#6600101-session-service-exception) | Session service exception |
+| [6600103](../errorcode-avsession.md#6600103-session-controller-does-not-exist) | The session controller does not exist. |
 
 ## offDesktopLyricEnabled
 
@@ -1885,7 +1875,7 @@ Unregister listener for custom data.
 offDesktopLyricEnabled(callback?: Callback<boolean>): void
 ```
 
-取消桌面歌词启用状态变更事件监听，取消后将不再对该事件进行监听。使用callback异步回调。
+Unregister desktop lyric enable state change callback.
 
 **Since:** 23
 
@@ -1901,14 +1891,14 @@ offDesktopLyricEnabled(callback?: Callback<boolean>): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;boolean&gt; | No | 回调函数。当监听事件取消成功，err为undefined，否则返回错误对象。 &lt;br&gt;该参数为可选参数，若不填写该参数，则认为取消所有桌面歌词功能启用状态变更事件监听。 |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;boolean&gt; | No | a callback to receive desktop lyric enable state. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 6600101 | Session service exception. |
-| 6600103 | The session controller does not exist. |
+| [6600101](../errorcode-avsession.md#6600101-session-service-exception) | Session service exception. |
+| [6600103](../errorcode-avsession.md#6600103-session-controller-does-not-exist) | The session controller does not exist. |
 
 ## offDesktopLyricStateChanged
 
@@ -1916,7 +1906,7 @@ offDesktopLyricEnabled(callback?: Callback<boolean>): void
 offDesktopLyricStateChanged(callback?: Callback<DesktopLyricState>): void
 ```
 
-取消桌面歌词状态变更事件监听，取消后将不再对该事件进行监听。使用callback异步回调。
+Unregister desktop lyric state changed callback.
 
 **Since:** 23
 
@@ -1932,14 +1922,14 @@ offDesktopLyricStateChanged(callback?: Callback<DesktopLyricState>): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;DesktopLyricState&gt; | No | 回调函数。当监听事件取消成功，err为undefined，否则返回错误对象。 &lt;br&gt;该参数为可选参数，若不填写该参数，则认为取消所有桌面歌词状态变更事件监听。 |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;DesktopLyricState&gt; | No | a callback to receive desktop lyric state. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 6600101 | Session service exception. |
-| 6600103 | The session controller does not exist. |
+| [6600101](../errorcode-avsession.md#6600101-session-service-exception) | Session service exception. |
+| [6600103](../errorcode-avsession.md#6600103-session-controller-does-not-exist) | The session controller does not exist. |
 
 ## offDesktopLyricVisibilityChanged
 
@@ -1947,7 +1937,7 @@ offDesktopLyricStateChanged(callback?: Callback<DesktopLyricState>): void
 offDesktopLyricVisibilityChanged(callback?: Callback<boolean>): void
 ```
 
-取消显示桌面歌词状态变更事件监听，取消后将不再对该事件进行监听。使用callback异步回调。
+Unregister desktop lyric visible state change callback.
 
 **Since:** 23
 
@@ -1963,14 +1953,14 @@ offDesktopLyricVisibilityChanged(callback?: Callback<boolean>): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;boolean&gt; | No | 回调函数。当监听事件取消成功，err为undefined，否则返回错误对象。 &lt;br&gt;该参数为可选参数，若不填写该参数，则认为取消所有显示桌面歌词状态变更事件监听。 |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;boolean&gt; | No | a callback to receive desktop lyric window visible state. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 6600101 | Session service exception. |
-| 6600103 | The session controller does not exist. |
+| [6600101](../errorcode-avsession.md#6600101-session-service-exception) | Session service exception. |
+| [6600103](../errorcode-avsession.md#6600103-session-controller-does-not-exist) | The session controller does not exist. |
 
 ## offExtrasChange
 
@@ -1998,8 +1988,8 @@ Unregister the custom media packets change callback
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 6600101 | Session service exception. |
-| 6600103 | The session controller does not exist. |
+| [6600101](../errorcode-avsession.md#6600101-session-service-exception) | Session service exception. |
+| [6600103](../errorcode-avsession.md#6600103-session-controller-does-not-exist) | The session controller does not exist. |
 
 ## offMediaCenterControlTypeChanged
 
@@ -2007,9 +1997,7 @@ Unregister the custom media packets change callback
 offMediaCenterControlTypeChanged(callback?: Callback<Array<AVMediaCenterControlType>>): void
 ```
 
-取消控制类型列表变化的监听事件。
-
-取消后将不再对该事件进行监听。其中控制类型列表由应用通过[setMediaCenterControlType](arkts-avsession-avsession-avsession-i.md#setmediacentercontroltype)接口设置。
+Unregister media center control type changed callback.
 
 **Since:** 26.0.0
 
@@ -2025,14 +2013,14 @@ offMediaCenterControlTypeChanged(callback?: Callback<Array<AVMediaCenterControlT
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;Array&lt;AVMediaCenterControlType&gt;&gt; | No | 回调函数。该参数为可选参数，若不填写该参数，则认为对所有控制类型列表变化事件取消监听。 |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;Array&lt;AVMediaCenterControlType&gt;&gt; | No | Callback to receive the changed control types. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 6600101 | Session service exception. |
-| 6600103 | The session controller does not exist. |
+| [6600101](../errorcode-avsession.md#6600101-session-service-exception) | Session service exception. |
+| [6600103](../errorcode-avsession.md#6600103-session-controller-does-not-exist) | The session controller does not exist. |
 
 ## offMetadataChange
 
@@ -2060,8 +2048,8 @@ Unregister metadata changed callback
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 6600101 | Session service exception. |
-| 6600103 | The session controller does not exist. |
+| [6600101](../errorcode-avsession.md#6600101-session-service-exception) | Session service exception. |
+| [6600103](../errorcode-avsession.md#6600103-session-controller-does-not-exist) | The session controller does not exist. |
 
 ## offOutputDeviceChange
 
@@ -2089,8 +2077,8 @@ Unregister session output device change callback
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 6600101 | Session service exception |
-| 6600103 | The session controller does not exist |
+| [6600101](../errorcode-avsession.md#6600101-session-service-exception) | Session service exception |
+| [6600103](../errorcode-avsession.md#6600103-session-controller-does-not-exist) | The session controller does not exist |
 
 ## offPlaybackStateChange
 
@@ -2118,8 +2106,8 @@ Unregister playback state changed callback
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 6600101 | Session service exception. |
-| 6600103 | The session controller does not exist. |
+| [6600101](../errorcode-avsession.md#6600101-session-service-exception) | Session service exception. |
+| [6600103](../errorcode-avsession.md#6600103-session-controller-does-not-exist) | The session controller does not exist. |
 
 ## offQueueItemsChange
 
@@ -2149,8 +2137,8 @@ Unregister session playlist change callback
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 6600101 | Session service exception. |
-| 6600103 | The session controller does not exist. |
+| [6600101](../errorcode-avsession.md#6600101-session-service-exception) | Session service exception. |
+| [6600103](../errorcode-avsession.md#6600103-session-controller-does-not-exist) | The session controller does not exist. |
 
 ## offQueueTitleChange
 
@@ -2178,8 +2166,8 @@ Unregister the name of session playlist change callback
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 6600101 | Session service exception. |
-| 6600103 | The session controller does not exist. |
+| [6600101](../errorcode-avsession.md#6600101-session-service-exception) | Session service exception. |
+| [6600103](../errorcode-avsession.md#6600103-session-controller-does-not-exist) | The session controller does not exist. |
 
 ## offSessionDestroy
 
@@ -2207,8 +2195,8 @@ Unregister current session destroyed callback
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 6600101 | Session service exception. |
-| 6600103 | The session controller does not exist. |
+| [6600101](../errorcode-avsession.md#6600101-session-service-exception) | Session service exception. |
+| [6600103](../errorcode-avsession.md#6600103-session-controller-does-not-exist) | The session controller does not exist. |
 
 ## offSessionEvent
 
@@ -2236,8 +2224,8 @@ Unregister session event callback
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 6600101 | Session service exception. |
-| 6600103 | The session controller does not exist. |
+| [6600101](../errorcode-avsession.md#6600101-session-service-exception) | Session service exception. |
+| [6600103](../errorcode-avsession.md#6600103-session-controller-does-not-exist) | The session controller does not exist. |
 
 ## offSupportedLoopModesChange
 
@@ -2245,9 +2233,7 @@ Unregister session event callback
 offSupportedLoopModesChange(callback?: Callback<Array<LoopMode>>): void
 ```
 
-取消支持的循环模式列表变化事件监听。
-
-取消后将不再对该事件进行监听。其中循环模式列表由应用通过[setSupportedLoopModes](arkts-avsession-avsession-avsession-i.md#setsupportedloopmodes)接口设置。
+Unregister listener for supported loop modes.
 
 **Since:** 26.0.0
 
@@ -2265,14 +2251,14 @@ offSupportedLoopModesChange(callback?: Callback<Array<LoopMode>>): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;Array&lt;LoopMode&gt;&gt; | No | 回调函数。该参数为可选参数，若不填写该参数，则认为对所有支持的循环模式列表变化事件取消监听。 |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;Array&lt;LoopMode&gt;&gt; | No | Callback used to retrieve supported loop modes. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 6600101 | Session service exception |
-| 6600103 | The session controller does not exist. |
+| [6600101](../errorcode-avsession.md#6600101-session-service-exception) | Session service exception |
+| [6600103](../errorcode-avsession.md#6600103-session-controller-does-not-exist) | The session controller does not exist. |
 
 ## offSupportedPlaySpeedsChange
 
@@ -2286,9 +2272,7 @@ ArkTS-Sta:
 offSupportedPlaySpeedsChange(callback?: Callback<Array<double>>): void
 ```
 
-取消支持的播放倍速列表变化事件监听。
-
-取消后将不再对该事件进行监听。其中播放倍速列表由应用通过[setSupportedPlaySpeeds](arkts-avsession-avsession-avsession-i.md#setsupportedplayspeeds)接口设置。
+Unregister listener for supported play speeds.
 
 **Since:** 26.0.0
 
@@ -2306,14 +2290,14 @@ offSupportedPlaySpeedsChange(callback?: Callback<Array<double>>): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | ArkTS-Dyn: [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;Array&lt;number&gt;&gt;  <br>ArkTS-Sta：[Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;Array&lt;double&gt;&gt; | No | 回调函数。该参数为可选参数，若不填写该参数，则认为对所有支持的播放倍速列表变化事件取消监听。 |
+| callback | ArkTS-Dyn: [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;Array&lt;number&gt;&gt;  <br>ArkTS-Sta：[Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;Array&lt;double&gt;&gt; | No | Callback used to retrieve supported play speeds. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 6600101 | Session service exception |
-| 6600103 | The session controller does not exist. |
+| [6600101](../errorcode-avsession.md#6600101-session-service-exception) | Session service exception |
+| [6600103](../errorcode-avsession.md#6600103-session-controller-does-not-exist) | The session controller does not exist. |
 
 ## offValidCommandChange
 
@@ -2341,8 +2325,8 @@ Unregister the valid commands of the session changed callback
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 6600101 | Session service exception. |
-| 6600103 | The session controller does not exist. |
+| [6600101](../errorcode-avsession.md#6600101-session-service-exception) | Session service exception. |
+| [6600103](../errorcode-avsession.md#6600103-session-controller-does-not-exist) | The session controller does not exist. |
 
 ## on('metadataChange')
 
@@ -2350,9 +2334,7 @@ Unregister the valid commands of the session changed callback
 on(type: 'metadataChange', filter: Array<keyof AVMetadata> | 'all', callback: (data: AVMetadata) => void)
 ```
 
-设置元数据变化的监听事件。
-
-每个指令支持注册多个回调，如果需要只执行最新监听，需要先注销旧的监听，否则新旧监听都会触发回调。
+Register metadata changed callback
 
 **Since:** 10
 
@@ -2369,16 +2351,16 @@ on(type: 'metadataChange', filter: Array<keyof AVMetadata> | 'all', callback: (d
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'metadataChange' | Yes |  |
-| filter | Array&lt;keyof AVMetadata&gt; \| 'all' | Yes | 'all'表示关注元数据所有字段变化；Array&lt;keyof AVMetadata&gt;表示关注Array中的字段变化。 |
-| callback | (data: AVMetadata) =&gt; void | Yes | 回调函数，参数data是需要更新的元数据。只包含需要更新的元数据属性，不代表当前全量的元数据。 |
+| filter | Array&lt;keyof AVMetadata&gt; \| 'all' | Yes | The properties of {@link AVMetadata} that you cared about |
+| callback | (data: AVMetadata) =&gt; void | Yes | The callback used to handle metadata changed event. The callback function provides the {@link AVMetadata} parameter. It only contains the properties set in the filter. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | parameter check failed. 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. |
-| 6600101 | Session service exception. |
-| 6600103 | The session controller does not exist. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | parameter check failed. 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. |
+| [6600101](../errorcode-avsession.md#6600101-session-service-exception) | Session service exception. |
+| [6600103](../errorcode-avsession.md#6600103-session-controller-does-not-exist) | The session controller does not exist. |
 
 ## on('playbackStateChange')
 
@@ -2386,9 +2368,7 @@ on(type: 'metadataChange', filter: Array<keyof AVMetadata> | 'all', callback: (d
 on(type: 'playbackStateChange', filter: Array<keyof AVPlaybackState> | 'all', callback: (state: AVPlaybackState) => void)
 ```
 
-设置播放状态变化的监听事件。
-
-每个指令支持注册多个回调，如果需要只执行最新监听，需要先注销旧的监听，否则新旧监听都会触发回调。
+Register playback state changed callback
 
 **Since:** 10
 
@@ -2405,16 +2385,16 @@ on(type: 'playbackStateChange', filter: Array<keyof AVPlaybackState> | 'all', ca
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'playbackStateChange' | Yes |  |
-| filter | Array&lt;keyof AVPlaybackState&gt; \| 'all' | Yes | 'all'表示关注播放状态所有字段更新。 &lt;br&gt;Array&lt;keyof AVPlaybackstate&gt; 表示关注Array中的字段更新。 |
-| callback | (state: AVPlaybackState) =&gt; void | Yes | 回调函数，参数state是需要更新的播放状态。只包含需要更新的播放状态属性，并不代表当前全量的播放状态。 |
+| filter | Array&lt;keyof AVPlaybackState&gt; \| 'all' | Yes | The properties of {@link AVPlaybackState} that you cared about |
+| callback | (state: AVPlaybackState) =&gt; void | Yes | The callback used to handle playback state changed event. The callback function provides the {@link AVPlaybackState} parameter. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | parameter check failed. 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. |
-| 6600101 | Session service exception. |
-| 6600103 | The session controller does not exist. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | parameter check failed. 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. |
+| [6600101](../errorcode-avsession.md#6600101-session-service-exception) | Session service exception. |
+| [6600103](../errorcode-avsession.md#6600103-session-controller-does-not-exist) | The session controller does not exist. |
 
 ## on('callMetadataChange')
 
@@ -2422,9 +2402,7 @@ on(type: 'playbackStateChange', filter: Array<keyof AVPlaybackState> | 'all', ca
 on(type: 'callMetadataChange', filter: Array<keyof CallMetadata> | 'all', callback: Callback<CallMetadata>): void
 ```
 
-设置通话元数据变化的监听事件。
-
-每个指令支持注册多个回调，如果需要只执行最新监听，需要先注销旧的监听，否则新旧监听都会触发回调。
+Register call metadata changed callback
 
 **Since:** 11
 
@@ -2440,17 +2418,17 @@ on(type: 'callMetadataChange', filter: Array<keyof CallMetadata> | 'all', callba
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'callMetadataChange' | Yes | 事件回调类型，支持事件`'callMetadataChange'`：当通话元数据变化时，触发该事件。 |
-| filter | Array&lt;keyof CallMetadata&gt; \| 'all' | Yes | 'all'表示关注通话元数据所有字段变化；Array&lt;keyof CallMetadata&gt; 表示关注Array中的字 段变化。\| 'all'。 |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;CallMetadata&gt; | Yes | 回调函数，参数callmetadata是变化后的通话元数据。 |
+| type | 'callMetadataChange' | Yes | 'callMetadataChange' |
+| filter | Array&lt;keyof CallMetadata&gt; \| 'all' | Yes | The properties of {@link CallMetadata} that you cared about |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;CallMetadata&gt; | Yes | The callback used to handle call metadata changed event. The callback function provides the {@link CallMetadata} parameter. It only contains the properties set in the filter. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | parameter check failed. 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. |
-| 6600101 | Session service exception. |
-| 6600103 | The session controller does not exist. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | parameter check failed. 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. |
+| [6600101](../errorcode-avsession.md#6600101-session-service-exception) | Session service exception. |
+| [6600103](../errorcode-avsession.md#6600103-session-controller-does-not-exist) | The session controller does not exist. |
 
 ## on('callStateChange')
 
@@ -2458,9 +2436,7 @@ on(type: 'callMetadataChange', filter: Array<keyof CallMetadata> | 'all', callba
 on(type: 'callStateChange', filter: Array<keyof AVCallState> | 'all', callback: Callback<AVCallState>): void
 ```
 
-设置通话状态变化的监听事件。
-
-每个指令支持注册多个回调，如果需要只执行最新监听，需要先注销旧的监听，否则新旧监听都会触发回调。
+Register call state changed callback
 
 **Since:** 11
 
@@ -2476,17 +2452,17 @@ on(type: 'callStateChange', filter: Array<keyof AVCallState> | 'all', callback: 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'callStateChange' | Yes | 事件回调类型，支持事件`'callStateChange'`：当通话状态变化时，触发该事件。 |
-| filter | Array&lt;keyof AVCallState&gt; \| 'all' | Yes | 'all' 表示关注通话状态所有字段变化；Array&lt;keyof AVCallState&gt;表示关注Array中的字段变 化。\| 'all'。 |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;AVCallState&gt; | Yes | 回调函数，参数callstate是变化后的通话状态。 |
+| type | 'callStateChange' | Yes | 'callStateChange' |
+| filter | Array&lt;keyof AVCallState&gt; \| 'all' | Yes | The properties of {@link AVCallState} that you cared about |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;AVCallState&gt; | Yes | The callback used to handle call state changed event. The callback function provides the {@link AVCallState} parameter. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | parameter check failed. 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. |
-| 6600101 | Session service exception. |
-| 6600103 | The session controller does not exist. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | parameter check failed. 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. |
+| [6600101](../errorcode-avsession.md#6600101-session-service-exception) | Session service exception. |
+| [6600103](../errorcode-avsession.md#6600103-session-controller-does-not-exist) | The session controller does not exist. |
 
 ## on('sessionDestroy')
 
@@ -2494,9 +2470,7 @@ on(type: 'callStateChange', filter: Array<keyof AVCallState> | 'all', callback: 
 on(type: 'sessionDestroy', callback: () => void)
 ```
 
-会话销毁的监听事件。
-
-每个指令支持注册多个回调，如果需要只执行最新监听，需要先注销旧的监听，否则新旧监听都会触发回调。
+Register current session destroyed callback
 
 **Since:** 10
 
@@ -2513,15 +2487,15 @@ on(type: 'sessionDestroy', callback: () => void)
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'sessionDestroy' | Yes |  |
-| callback | () =&gt; void | Yes | 回调函数。当监听事件注册成功，err为undefined，否则为错误对象。 |
+| callback | () =&gt; void | Yes | The callback used to handle current session destroyed event. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | parameter check failed. 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. |
-| 6600101 | Session service exception. |
-| 6600103 | The session controller does not exist. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | parameter check failed. 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. |
+| [6600101](../errorcode-avsession.md#6600101-session-service-exception) | Session service exception. |
+| [6600103](../errorcode-avsession.md#6600103-session-controller-does-not-exist) | The session controller does not exist. |
 
 ## on('activeStateChange')
 
@@ -2529,9 +2503,7 @@ on(type: 'sessionDestroy', callback: () => void)
 on(type: 'activeStateChange', callback: (isActive: boolean) => void)
 ```
 
-会话的激活状态的监听事件。
-
-每个指令支持注册多个回调，如果需要只执行最新监听，需要先注销旧的监听，否则新旧监听都会触发回调。
+Register the active state of this session changed callback
 
 **Since:** 10
 
@@ -2547,16 +2519,16 @@ on(type: 'activeStateChange', callback: (isActive: boolean) => void)
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'activeStateChange' | Yes | 事件回调类型，支持事件`'activeStateChange'`：当检测到会话的激活状态发生改变时，触发该事件。 |
-| callback | (isActive: boolean) =&gt; void | Yes | 回调函数。参数isActive表示会话是否被激活。true表示被激活，false表示禁用。 |
+| type | 'activeStateChange' | Yes | 'activeStateChange' |
+| callback | (isActive: boolean) =&gt; void | Yes | The callback used to handle the active state of this session changed event. The callback function provides the changed session state. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | parameter check failed. 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. |
-| 6600101 | Session service exception. |
-| 6600103 | The session controller does not exist. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | parameter check failed. 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. |
+| [6600101](../errorcode-avsession.md#6600101-session-service-exception) | Session service exception. |
+| [6600103](../errorcode-avsession.md#6600103-session-controller-does-not-exist) | The session controller does not exist. |
 
 ## on('validCommandChange')
 
@@ -2564,9 +2536,7 @@ on(type: 'activeStateChange', callback: (isActive: boolean) => void)
 on(type: 'validCommandChange', callback: (commands: Array<AVControlCommandType>) => void)
 ```
 
-会话支持的有效命令变化监听事件。
-
-每个指令支持注册多个回调，如果需要只执行最新监听，需要先注销旧的监听，否则新旧监听都会触发回调。
+Register the valid commands of the session changed callback
 
 **Since:** 10
 
@@ -2582,16 +2552,16 @@ on(type: 'validCommandChange', callback: (commands: Array<AVControlCommandType>)
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'validCommandChange' | Yes | 事件回调类型，支持事件`'validCommandChange'`：当检测到会话的合法命令发生改变时，触发该事件。 |
-| callback | (commands: Array&lt;AVControlCommandType&gt;) =&gt; void | Yes | 回调函数。参数commands是有效命令的集合。 |
+| type | 'validCommandChange' | Yes | 'validCommandChange' |
+| callback | (commands: Array&lt;AVControlCommandType&gt;) =&gt; void | Yes | The callback used to handle the changes. The callback function provides an array of AVControlCommandType. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | parameter check failed. 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. |
-| 6600101 | Session service exception. |
-| 6600103 | The session controller does not exist. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | parameter check failed. 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. |
+| [6600101](../errorcode-avsession.md#6600101-session-service-exception) | Session service exception. |
+| [6600103](../errorcode-avsession.md#6600103-session-controller-does-not-exist) | The session controller does not exist. |
 
 ## on('outputDeviceChange')
 
@@ -2599,9 +2569,7 @@ on(type: 'validCommandChange', callback: (commands: Array<AVControlCommandType>)
 on(type: 'outputDeviceChange', callback: (state: ConnectionState, device: OutputDeviceInfo) => void): void
 ```
 
-设置播放设备变化的监听事件。
-
-每个指令支持注册多个回调，如果需要只执行最新监听，需要先注销旧的监听，否则新旧监听都会触发回调。
+Register session output device change callback
 
 **Since:** 10
 
@@ -2617,16 +2585,16 @@ on(type: 'outputDeviceChange', callback: (state: ConnectionState, device: Output
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'outputDeviceChange' | Yes | 事件回调类型，支持事件为`'outputDeviceChange'`：当播放设备变化时，触发该事件）。 |
-| callback | (state: ConnectionState, device: OutputDeviceInfo) =&gt; void | Yes | 回调函数，参数device是设备相关信息。 |
+| type | 'outputDeviceChange' | Yes | Registration Type 'outputDeviceChange' |
+| callback | (state: ConnectionState, device: OutputDeviceInfo) =&gt; void | Yes | Used to handle output device changed. The callback provide the new device info {@link OutputDeviceInfo} and related connection state {@link ConnectionState}. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | parameter check failed. 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. |
-| 6600101 | Session service exception |
-| 6600103 | The session controller does not exist |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | parameter check failed. 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. |
+| [6600101](../errorcode-avsession.md#6600101-session-service-exception) | Session service exception |
+| [6600103](../errorcode-avsession.md#6600103-session-controller-does-not-exist) | The session controller does not exist |
 
 ## on('sessionEvent')
 
@@ -2634,9 +2602,7 @@ on(type: 'outputDeviceChange', callback: (state: ConnectionState, device: Output
 on(type: 'sessionEvent', callback: (sessionEvent: string, args: {[key: string]: Object}) => void): void
 ```
 
-媒体控制器设置会话自定义事件变化的监听器。
-
-每个指令支持注册多个回调，如果需要只执行最新监听，需要先注销旧的监听，否则新旧监听都会触发回调。
+Register session event callback
 
 **Since:** 10
 
@@ -2652,16 +2618,16 @@ on(type: 'sessionEvent', callback: (sessionEvent: string, args: {[key: string]: 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'sessionEvent' | Yes | 事件回调类型，支持事件`'sessionEvent'`：当会话事件变化时，触发该事件。 |
-| callback | (sessionEvent: string, args: {[key: string]: Object}) =&gt; void | Yes | 回调函数，sessionEvent为变化的会话事件名，args为事件的参数。 |
+| type | 'sessionEvent' | Yes | 'sessionEvent' |
+| callback | (sessionEvent: string, args: {[key: string]: Object}) =&gt; void | Yes | The callback used to handle session event changed event. The callback function provides the event string and key-value pair parameters. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | parameter check failed. 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. |
-| 6600101 | Session service exception. |
-| 6600103 | The session controller does not exist. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | parameter check failed. 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. |
+| [6600101](../errorcode-avsession.md#6600101-session-service-exception) | Session service exception. |
+| [6600103](../errorcode-avsession.md#6600103-session-controller-does-not-exist) | The session controller does not exist. |
 
 ## on('queueItemsChange')
 
@@ -2669,9 +2635,7 @@ on(type: 'sessionEvent', callback: (sessionEvent: string, args: {[key: string]: 
 on(type: 'queueItemsChange', callback: (items: Array<AVQueueItem>) => void): void
 ```
 
-媒体控制器设置会话自定义播放列表变化的监听器。
-
-每个指令支持注册多个回调，如果需要只执行最新监听，需要先注销旧的监听，否则新旧监听都会触发回调。
+Register session playlist change callback
 
 **Since:** 10
 
@@ -2687,16 +2651,16 @@ on(type: 'queueItemsChange', callback: (items: Array<AVQueueItem>) => void): voi
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'queueItemsChange' | Yes | 事件回调类型，支持事件`'queueItemsChange'`：当session修改播放列表时，触发该事件。 |
-| callback | (items: Array&lt;AVQueueItem&gt;) =&gt; void | Yes | 回调函数，items为变化的播放列表。 |
+| type | 'queueItemsChange' | Yes | Registration Type 'queueItemsChange' |
+| callback | (items: Array&lt;AVQueueItem&gt;) =&gt; void | Yes | Used to handle playlist changed. The callback provides the new array of AVQueueItem {@link AVQueueItem} |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | parameter check failed. 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. |
-| 6600101 | Session service exception. |
-| 6600103 | The session controller does not exist. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | parameter check failed. 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. |
+| [6600101](../errorcode-avsession.md#6600101-session-service-exception) | Session service exception. |
+| [6600103](../errorcode-avsession.md#6600103-session-controller-does-not-exist) | The session controller does not exist. |
 
 ## on('queueTitleChange')
 
@@ -2704,7 +2668,7 @@ on(type: 'queueItemsChange', callback: (items: Array<AVQueueItem>) => void): voi
 on(type: 'queueTitleChange', callback: (title: string) => void): void
 ```
 
-媒体控制器设置会话自定义播放列表的名称变化的监听器。
+Register the name of session playlist change callback
 
 **Since:** 10
 
@@ -2720,16 +2684,16 @@ on(type: 'queueTitleChange', callback: (title: string) => void): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'queueTitleChange' | Yes | 事件回调类型，支持事件`'queueTitleChange'`：当session修改播放列表名称时，触发该事件。 |
-| callback | (title: string) =&gt; void | Yes | 回调函数，title为变化的播放列表名称。 |
+| type | 'queueTitleChange' | Yes | Registration Type 'queueTitleChange' |
+| callback | (title: string) =&gt; void | Yes | Used to handle name of playlist changed. The callback provides the new name. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | parameter check failed. 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. |
-| 6600101 | Session service exception. |
-| 6600103 | The session controller does not exist. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | parameter check failed. 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. |
+| [6600101](../errorcode-avsession.md#6600101-session-service-exception) | Session service exception. |
+| [6600103](../errorcode-avsession.md#6600103-session-controller-does-not-exist) | The session controller does not exist. |
 
 ## on('extrasChange')
 
@@ -2737,7 +2701,7 @@ on(type: 'queueTitleChange', callback: (title: string) => void): void
 on(type: 'extrasChange', callback: (extras: {[key: string]: Object}) => void): void
 ```
 
-媒体控制器设置自定义媒体数据包事件变化的监听器。
+Register the custom media packets change callback
 
 **Since:** 10
 
@@ -2753,16 +2717,16 @@ on(type: 'extrasChange', callback: (extras: {[key: string]: Object}) => void): v
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'extrasChange' | Yes | 事件回调类型，支持事件`'extrasChange'`：当媒体提供方设置自定义媒体数据包时，触发该事件。 |
-| callback | (extras: {[key: string]: Object}) =&gt; void | Yes | 回调函数，extras为媒体提供方新设置的自定义媒体数据包，该自定义媒体数据包与dispatchSessionEvent方法设置的数据包完全一致。 |
+| type | 'extrasChange' | Yes | Registration Type 'extrasChange' |
+| callback | (extras: {[key: string]: Object}) =&gt; void | Yes | Used to handle custom media packets changed. The callback provides the new media packets. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | parameter check failed. 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. |
-| 6600101 | Session service exception. |
-| 6600103 | The session controller does not exist. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | parameter check failed. 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. |
+| [6600101](../errorcode-avsession.md#6600101-session-service-exception) | Session service exception. |
+| [6600103](../errorcode-avsession.md#6600103-session-controller-does-not-exist) | The session controller does not exist. |
 
 ## on('customDataChange')
 
@@ -2770,7 +2734,7 @@ on(type: 'extrasChange', callback: (extras: {[key: string]: Object}) => void): v
 on(type: 'customDataChange', callback: Callback<Record<string, Object>>): void
 ```
 
-注册从远程设备发送的自定义数据的监听器。
+Register listener for custom data.
 
 **Since:** 20
 
@@ -2786,15 +2750,15 @@ on(type: 'customDataChange', callback: Callback<Record<string, Object>>): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'customDataChange' | Yes | 事件回调类型，支持事件'customDataChange'，当媒体提供方发送自定义数据时，触发该事件。 |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;Record&lt;string, Object&gt;&gt; | Yes | 回调函数，用于接收自定义数据。 |
+| type | 'customDataChange' | Yes | Type of the 'customDataChange' to listen for. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;Record&lt;string, Object&gt;&gt; | Yes | Callback used to retrieve custom data. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 6600101 | Session service exception |
-| 6600103 | The session controller does not exist. |
+| [6600101](../errorcode-avsession.md#6600101-session-service-exception) | Session service exception |
+| [6600103](../errorcode-avsession.md#6600103-session-controller-does-not-exist) | The session controller does not exist. |
 
 ## onActiveStateChange
 
@@ -2822,8 +2786,8 @@ Register the active state of this session changed callback
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 6600101 | Session service exception. |
-| 6600103 | The session controller does not exist. |
+| [6600101](../errorcode-avsession.md#6600101-session-service-exception) | Session service exception. |
+| [6600103](../errorcode-avsession.md#6600103-session-controller-does-not-exist) | The session controller does not exist. |
 
 ## onCallMetadataChange
 
@@ -2852,8 +2816,8 @@ Register call metadata changed callback
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 6600101 | Session service exception. |
-| 6600103 | The session controller does not exist. |
+| [6600101](../errorcode-avsession.md#6600101-session-service-exception) | Session service exception. |
+| [6600103](../errorcode-avsession.md#6600103-session-controller-does-not-exist) | The session controller does not exist. |
 
 ## onCallMetadataChangeAll
 
@@ -2861,7 +2825,7 @@ Register call metadata changed callback
 onCallMetadataChangeAll(callback: Callback<CallMetadata>): void
 ```
 
-Register call metadata changed callback
+Registers a callback for all call metadata changes
 
 **Since:** 23
 
@@ -2881,8 +2845,8 @@ Register call metadata changed callback
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 6600101 | Session service exception. |
-| 6600103 | The session controller does not exist. |
+| [6600101](../errorcode-avsession.md#6600101-session-service-exception) | Session service exception. |
+| [6600103](../errorcode-avsession.md#6600103-session-controller-does-not-exist) | The session controller does not exist. |
 
 ## onCallStateChange
 
@@ -2911,8 +2875,8 @@ Register call state changed callback
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 6600101 | Session service exception. |
-| 6600103 | The session controller does not exist. |
+| [6600101](../errorcode-avsession.md#6600101-session-service-exception) | Session service exception. |
+| [6600103](../errorcode-avsession.md#6600103-session-controller-does-not-exist) | The session controller does not exist. |
 
 ## onCallStateChangeAll
 
@@ -2920,7 +2884,7 @@ Register call state changed callback
 onCallStateChangeAll(callback: Callback<AVCallState>): void
 ```
 
-Register call state changed callback
+Register a callback for all call attribute changes
 
 **Since:** 23
 
@@ -2940,8 +2904,8 @@ Register call state changed callback
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 6600101 | Session service exception. |
-| 6600103 | The session controller does not exist. |
+| [6600101](../errorcode-avsession.md#6600101-session-service-exception) | Session service exception. |
+| [6600103](../errorcode-avsession.md#6600103-session-controller-does-not-exist) | The session controller does not exist. |
 
 ## onCustomDataChange
 
@@ -2969,8 +2933,8 @@ Register listener for custom data.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 6600101 | Session service exception |
-| 6600103 | The session controller does not exist. |
+| [6600101](../errorcode-avsession.md#6600101-session-service-exception) | Session service exception |
+| [6600103](../errorcode-avsession.md#6600103-session-controller-does-not-exist) | The session controller does not exist. |
 
 ## onDesktopLyricEnabled
 
@@ -2978,7 +2942,7 @@ Register listener for custom data.
 onDesktopLyricEnabled(callback: Callback<boolean>): void
 ```
 
-桌面歌词功能启用状态变更的监听事件。使用callback异步回调。
+Register desktop lyric enable state change callback.
 
 **Since:** 23
 
@@ -2994,14 +2958,14 @@ onDesktopLyricEnabled(callback: Callback<boolean>): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;boolean&gt; | Yes | 回调函数。返回true表示桌面歌词功能启用；返回false表示桌面歌词功能未启用。 |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;boolean&gt; | Yes | a callback to receive desktop lyric enable state. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 6600101 | Session service exception. |
-| 6600103 | The session controller does not exist. |
+| [6600101](../errorcode-avsession.md#6600101-session-service-exception) | Session service exception. |
+| [6600103](../errorcode-avsession.md#6600103-session-controller-does-not-exist) | The session controller does not exist. |
 
 ## onDesktopLyricStateChanged
 
@@ -3009,7 +2973,7 @@ onDesktopLyricEnabled(callback: Callback<boolean>): void
 onDesktopLyricStateChanged(callback: Callback<DesktopLyricState>): void
 ```
 
-桌面歌词状态变更的监听事件。使用callback异步回调。
+Register desktop lyric state changed callback.
 
 **Since:** 23
 
@@ -3025,14 +2989,14 @@ onDesktopLyricStateChanged(callback: Callback<DesktopLyricState>): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;DesktopLyricState&gt; | Yes | 回调函数。返回桌面歌词状态。 |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;DesktopLyricState&gt; | Yes | a callback to receive desktop lyric state. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 6600101 | Session service exception. |
-| 6600103 | The session controller does not exist. |
+| [6600101](../errorcode-avsession.md#6600101-session-service-exception) | Session service exception. |
+| [6600103](../errorcode-avsession.md#6600103-session-controller-does-not-exist) | The session controller does not exist. |
 
 ## onDesktopLyricVisibilityChanged
 
@@ -3040,7 +3004,7 @@ onDesktopLyricStateChanged(callback: Callback<DesktopLyricState>): void
 onDesktopLyricVisibilityChanged(callback: Callback<boolean>): void
 ```
 
-显示桌面歌词状态变更的监听事件。使用callback异步回调。
+Register desktop lyric visible state change callback.
 
 **Since:** 23
 
@@ -3056,14 +3020,14 @@ onDesktopLyricVisibilityChanged(callback: Callback<boolean>): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;boolean&gt; | Yes | 回调函数。返回true表示开启显示桌面歌词状态；返回false表示关闭显示桌面歌词状态。 |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;boolean&gt; | Yes | a callback to receive desktop lyric window visible state. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 6600101 | Session service exception. |
-| 6600103 | The session controller does not exist. |
+| [6600101](../errorcode-avsession.md#6600101-session-service-exception) | Session service exception. |
+| [6600103](../errorcode-avsession.md#6600103-session-controller-does-not-exist) | The session controller does not exist. |
 
 ## onExtrasChange
 
@@ -3091,8 +3055,8 @@ Register the custom media packets change callback
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 6600101 | Session service exception. |
-| 6600103 | The session controller does not exist. |
+| [6600101](../errorcode-avsession.md#6600101-session-service-exception) | Session service exception. |
+| [6600103](../errorcode-avsession.md#6600103-session-controller-does-not-exist) | The session controller does not exist. |
 
 ## onMediaCenterControlTypeChanged
 
@@ -3100,9 +3064,7 @@ Register the custom media packets change callback
 onMediaCenterControlTypeChanged(callback: Callback<Array<AVMediaCenterControlType>>): void
 ```
 
-注册控制类型列表变化的监听事件。使用callback异步回调。
-
-其中控制类型列表由应用通过[setMediaCenterControlType](arkts-avsession-avsession-avsession-i.md#setmediacentercontroltype)接口设置。
+Register media center control type changed callback.
 
 **Since:** 26.0.0
 
@@ -3118,14 +3080,14 @@ onMediaCenterControlTypeChanged(callback: Callback<Array<AVMediaCenterControlTyp
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;Array&lt;AVMediaCenterControlType&gt;&gt; | Yes | 回调函数。返回变化后的控制类型列表。 |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;Array&lt;AVMediaCenterControlType&gt;&gt; | Yes | Callback to receive the changed control types. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 6600101 | Session service exception. |
-| 6600103 | The session controller does not exist. |
+| [6600101](../errorcode-avsession.md#6600101-session-service-exception) | Session service exception. |
+| [6600103](../errorcode-avsession.md#6600103-session-controller-does-not-exist) | The session controller does not exist. |
 
 ## onMetadataChange
 
@@ -3154,8 +3116,8 @@ Register metadata changed callback
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 6600101 | Session service exception. |
-| 6600103 | The session controller does not exist. |
+| [6600101](../errorcode-avsession.md#6600101-session-service-exception) | Session service exception. |
+| [6600103](../errorcode-avsession.md#6600103-session-controller-does-not-exist) | The session controller does not exist. |
 
 ## onMetadataChangeAll
 
@@ -3163,7 +3125,7 @@ Register metadata changed callback
 onMetadataChangeAll(callback: Callback<AVMetadata>): void
 ```
 
-Register metadata changed callback
+Registers a callback to be invoked whenever any metadata changes
 
 **Since:** 23
 
@@ -3183,8 +3145,8 @@ Register metadata changed callback
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 6600101 | Session service exception. |
-| 6600103 | The session controller does not exist. |
+| [6600101](../errorcode-avsession.md#6600101-session-service-exception) | Session service exception. |
+| [6600103](../errorcode-avsession.md#6600103-session-controller-does-not-exist) | The session controller does not exist. |
 
 ## onOutputDeviceChange
 
@@ -3212,8 +3174,8 @@ Register session output device change callback
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 6600101 | Session service exception |
-| 6600103 | The session controller does not exist |
+| [6600101](../errorcode-avsession.md#6600101-session-service-exception) | Session service exception |
+| [6600103](../errorcode-avsession.md#6600103-session-controller-does-not-exist) | The session controller does not exist |
 
 ## onPlaybackStateChange
 
@@ -3242,8 +3204,8 @@ Register playback state changed callback
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 6600101 | Session service exception. |
-| 6600103 | The session controller does not exist. |
+| [6600101](../errorcode-avsession.md#6600101-session-service-exception) | Session service exception. |
+| [6600103](../errorcode-avsession.md#6600103-session-controller-does-not-exist) | The session controller does not exist. |
 
 ## onPlaybackStateChangeAll
 
@@ -3251,7 +3213,7 @@ Register playback state changed callback
 onPlaybackStateChangeAll(callback: Callback<AVPlaybackState>): void
 ```
 
-Register playback state changed callback
+Registers a callback to be invoked whenever the playback state changes
 
 **Since:** 23
 
@@ -3271,8 +3233,8 @@ Register playback state changed callback
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 6600101 | Session service exception. |
-| 6600103 | The session controller does not exist. |
+| [6600101](../errorcode-avsession.md#6600101-session-service-exception) | Session service exception. |
+| [6600103](../errorcode-avsession.md#6600103-session-controller-does-not-exist) | The session controller does not exist. |
 
 ## onQueueItemsChange
 
@@ -3300,8 +3262,8 @@ Register session playlist change callback
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 6600101 | Session service exception. |
-| 6600103 | The session controller does not exist. |
+| [6600101](../errorcode-avsession.md#6600101-session-service-exception) | Session service exception. |
+| [6600103](../errorcode-avsession.md#6600103-session-controller-does-not-exist) | The session controller does not exist. |
 
 ## onQueueTitleChange
 
@@ -3329,8 +3291,8 @@ Register the name of session playlist change callback
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 6600101 | Session service exception. |
-| 6600103 | The session controller does not exist. |
+| [6600101](../errorcode-avsession.md#6600101-session-service-exception) | Session service exception. |
+| [6600103](../errorcode-avsession.md#6600103-session-controller-does-not-exist) | The session controller does not exist. |
 
 ## onSessionDestroy
 
@@ -3358,8 +3320,8 @@ Register current session destroyed callback
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 6600101 | Session service exception. |
-| 6600103 | The session controller does not exist. |
+| [6600101](../errorcode-avsession.md#6600101-session-service-exception) | Session service exception. |
+| [6600103](../errorcode-avsession.md#6600103-session-controller-does-not-exist) | The session controller does not exist. |
 
 ## onSessionEvent
 
@@ -3387,8 +3349,8 @@ Register session event callback
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 6600101 | Session service exception. |
-| 6600103 | The session controller does not exist. |
+| [6600101](../errorcode-avsession.md#6600101-session-service-exception) | Session service exception. |
+| [6600103](../errorcode-avsession.md#6600103-session-controller-does-not-exist) | The session controller does not exist. |
 
 ## onSupportedLoopModesChange
 
@@ -3396,9 +3358,7 @@ Register session event callback
 onSupportedLoopModesChange(callback: Callback<Array<LoopMode>>): void
 ```
 
-注册支持的循环模式列表变化的监听事件。使用callback异步回调。
-
-其中循环模式列表由应用通过[setSupportedLoopModes](arkts-avsession-avsession-avsession-i.md#setsupportedloopmodes)接口设置。
+Register listener for supported loop modes.
 
 **Since:** 26.0.0
 
@@ -3416,14 +3376,14 @@ onSupportedLoopModesChange(callback: Callback<Array<LoopMode>>): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;Array&lt;LoopMode&gt;&gt; | Yes | 回调函数。返回变化后支持的循环模式列表。 |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;Array&lt;LoopMode&gt;&gt; | Yes | Callback used to retrieve supported loop modes. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 6600101 | Session service exception |
-| 6600103 | The session controller does not exist. |
+| [6600101](../errorcode-avsession.md#6600101-session-service-exception) | Session service exception |
+| [6600103](../errorcode-avsession.md#6600103-session-controller-does-not-exist) | The session controller does not exist. |
 
 ## onSupportedPlaySpeedsChange
 
@@ -3437,9 +3397,7 @@ ArkTS-Sta:
 onSupportedPlaySpeedsChange(callback: Callback<Array<double>>): void
 ```
 
-注册支持的播放倍速列表变化的监听事件。使用callback异步回调。
-
-其中播放倍速列表由应用通过[setSupportedPlaySpeeds](arkts-avsession-avsession-avsession-i.md#setsupportedplayspeeds)接口设置。
+Register listener for supported play speeds.
 
 **Since:** 26.0.0
 
@@ -3457,14 +3415,14 @@ onSupportedPlaySpeedsChange(callback: Callback<Array<double>>): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | ArkTS-Dyn: [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;Array&lt;number&gt;&gt;  <br>ArkTS-Sta：[Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;Array&lt;double&gt;&gt; | Yes | 回调函数。返回变化后支持的播放倍速列表。 |
+| callback | ArkTS-Dyn: [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;Array&lt;number&gt;&gt;  <br>ArkTS-Sta：[Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;Array&lt;double&gt;&gt; | Yes | Callback used to retrieve supported play speeds. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 6600101 | Session service exception |
-| 6600103 | The session controller does not exist. |
+| [6600101](../errorcode-avsession.md#6600101-session-service-exception) | Session service exception |
+| [6600103](../errorcode-avsession.md#6600103-session-controller-does-not-exist) | The session controller does not exist. |
 
 ## onValidCommandChange
 
@@ -3492,8 +3450,8 @@ Register the valid commands of the session changed callback
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 6600101 | Session service exception. |
-| 6600103 | The session controller does not exist. |
+| [6600101](../errorcode-avsession.md#6600101-session-service-exception) | Session service exception. |
+| [6600103](../errorcode-avsession.md#6600103-session-controller-does-not-exist) | The session controller does not exist. |
 
 ## sendAVKeyEvent
 
@@ -3501,7 +3459,7 @@ Register the valid commands of the session changed callback
 sendAVKeyEvent(event: KeyEvent, callback: AsyncCallback<void>): void
 ```
 
-发送按键事件到会话。结果通过callback异步回调方式返回。
+Send media key event to this session
 
 **Since:** 10
 
@@ -3515,15 +3473,15 @@ sendAVKeyEvent(event: KeyEvent, callback: AsyncCallback<void>): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| event | [KeyEvent](../../apis-input-kit/arkts-apis/arkts-input-multimodalinput-keyevent-keyevent-i.md) | Yes | 按键事件。 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | 回调函数。当事件发送成功，err为undefined，否则返回错误对象。 |
+| event | [KeyEvent](../../apis-input-kit/arkts-apis/arkts-input-multimodalinput-keyevent-keyevent-i.md) | Yes | The KeyEvent |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | The asyncCallback triggered when the command is executed successfully. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
 | 600105 | Invalid session command. |
-| 401 | parameter check failed. 1.Mandatory parameters are left unspecified. 2.Parameter verification failed. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | parameter check failed. 1.Mandatory parameters are left unspecified. 2.Parameter verification failed. |
 | 600106 | The session is not activated. |
 | 600101 | Session service exception. |
 | 600103 | The session controller does not exist. |
@@ -3535,7 +3493,7 @@ sendAVKeyEvent(event: KeyEvent, callback: AsyncCallback<void>): void
 sendAVKeyEvent(event: KeyEvent): Promise<void>
 ```
 
-发送按键事件到控制器对应的会话。结果通过Promise异步回调方式返回。
+Send media key event to this session
 
 **Since:** 10
 
@@ -3551,20 +3509,20 @@ sendAVKeyEvent(event: KeyEvent): Promise<void>
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| event | [KeyEvent](../../apis-input-kit/arkts-apis/arkts-input-multimodalinput-keyevent-keyevent-i.md) | Yes | 按键事件。 |
+| event | [KeyEvent](../../apis-input-kit/arkts-apis/arkts-input-multimodalinput-keyevent-keyevent-i.md) | Yes | The KeyEvent |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise对象。当事件发送成功，无返回结果，否则返回错误对象。 |
+| Promise&lt;void&gt; | void promise when executed successfully |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
 | 600105 | Invalid session command. |
-| 401 | parameter check failed. 1.Mandatory parameters are left unspecified. 2.Parameter verification failed. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | parameter check failed. 1.Mandatory parameters are left unspecified. 2.Parameter verification failed. |
 | 600106 | The session is not activated. |
 | 600101 | Session service exception. |
 | 600103 | The session controller does not exist. |
@@ -3576,7 +3534,7 @@ sendAVKeyEvent(event: KeyEvent): Promise<void>
 sendCommonCommand(command: string, args: {[key: string]: Object}, callback: AsyncCallback<void>): void
 ```
 
-通过会话控制器发送自定义命令到其对应的会话。结果通过callback异步回调方式返回。
+Send common commands to this session
 
 **Since:** 10
 
@@ -3590,21 +3548,21 @@ sendCommonCommand(command: string, args: {[key: string]: Object}, callback: Asyn
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| command | string | Yes | 需要设置的自定义控制命令的名称。 |
-| args | {[key: string]: Object} | Yes | 需要传递的控制命令键值对。 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | 回调函数。当命令发送成功，err为undefined，否则返回错误对象。 |
+| command | string | Yes | The command name to be sent. |
+| args | {[key: string]: Object} | Yes | The parameters of session event |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | The asyncCallback triggered when the command is executed successfully. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | parameter check failed. 1.Mandatory parameters are left unspecified. 2.Parameter verification failed. |
-| 6600101 | Session service exception. |
-| 6600102 | The session does not exist. |
-| 6600103 | The session controller does not exist. |
-| 6600105 | Invalid session command. |
-| 6600106 | The session is not activated. |
-| 6600107 | Too many commands or events. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | parameter check failed. 1.Mandatory parameters are left unspecified. 2.Parameter verification failed. |
+| [6600101](../errorcode-avsession.md#6600101-session-service-exception) | Session service exception. |
+| [6600102](../errorcode-avsession.md#6600102-session-does-not-exist) | The session does not exist. |
+| [6600103](../errorcode-avsession.md#6600103-session-controller-does-not-exist) | The session controller does not exist. |
+| [6600105](../errorcode-avsession.md#6600105-invalid-session-command) | Invalid session command. |
+| [6600106](../errorcode-avsession.md#6600106-session-not-activated) | The session is not activated. |
+| [6600107](../errorcode-avsession.md#6600107-too-many-commands-or-events) | Too many commands or events. |
 
 ## sendCommonCommand
 
@@ -3628,7 +3586,7 @@ Send common commands to this session
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| command | string | Yes | The command name to be sent. &lt;br&gt;通用控制命令 |
+| command | string | Yes | The command name to be sent. |
 | args | [Record](../../apis-default/arkts-apis/arkts-record-t.md)&lt;string, Object&gt; | Yes | The parameters of session event |
 | callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | The asyncCallback triggered when the command is executed successfully. |
 
@@ -3636,12 +3594,12 @@ Send common commands to this session
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 6600101 | Session service exception. |
-| 6600102 | The session does not exist. |
-| 6600103 | The session controller does not exist. |
-| 6600105 | Invalid session command. |
-| 6600106 | The session is not activated. |
-| 6600107 | Too many commands or events. |
+| [6600101](../errorcode-avsession.md#6600101-session-service-exception) | Session service exception. |
+| [6600102](../errorcode-avsession.md#6600102-session-does-not-exist) | The session does not exist. |
+| [6600103](../errorcode-avsession.md#6600103-session-controller-does-not-exist) | The session controller does not exist. |
+| [6600105](../errorcode-avsession.md#6600105-invalid-session-command) | Invalid session command. |
+| [6600106](../errorcode-avsession.md#6600106-session-not-activated) | The session is not activated. |
+| [6600107](../errorcode-avsession.md#6600107-too-many-commands-or-events) | Too many commands or events. |
 
 ## sendCommonCommand
 
@@ -3649,7 +3607,7 @@ Send common commands to this session
 sendCommonCommand(command: string, args: {[key: string]: Object}): Promise<void>
 ```
 
-通过会话控制器发送自定义控制命令到其对应的会话。结果通过Promise异步回调方式返回。
+Send common commands to this session
 
 **Since:** 10
 
@@ -3665,26 +3623,26 @@ sendCommonCommand(command: string, args: {[key: string]: Object}): Promise<void>
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| command | string | Yes | 需要设置的自定义控制命令的名称。 |
-| args | {[key: string]: Object} | Yes | 需要传递的控制命令键值对。 |
+| command | string | Yes | The command name to be sent. |
+| args | {[key: string]: Object} | Yes | The parameters of session event |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise对象。无返回结果。 |
+| Promise&lt;void&gt; | void promise when executed successfully |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | parameter check failed. 1.Mandatory parameters are left unspecified. 2.Parameter verification failed. |
-| 6600101 | Session service exception. |
-| 6600102 | The session does not exist. |
-| 6600103 | The session controller does not exist. |
-| 6600105 | Invalid session command. |
-| 6600106 | The session is not activated. |
-| 6600107 | Too many commands or events. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | parameter check failed. 1.Mandatory parameters are left unspecified. 2.Parameter verification failed. |
+| [6600101](../errorcode-avsession.md#6600101-session-service-exception) | Session service exception. |
+| [6600102](../errorcode-avsession.md#6600102-session-does-not-exist) | The session does not exist. |
+| [6600103](../errorcode-avsession.md#6600103-session-controller-does-not-exist) | The session controller does not exist. |
+| [6600105](../errorcode-avsession.md#6600105-invalid-session-command) | Invalid session command. |
+| [6600106](../errorcode-avsession.md#6600106-session-not-activated) | The session is not activated. |
+| [6600107](../errorcode-avsession.md#6600107-too-many-commands-or-events) | Too many commands or events. |
 
 ## sendCommonCommand
 
@@ -3721,12 +3679,12 @@ Send common commands to this session
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 6600101 | Session service exception. |
-| 6600102 | The session does not exist. |
-| 6600103 | The session controller does not exist. |
-| 6600105 | Invalid session command. |
-| 6600106 | The session is not activated. |
-| 6600107 | Too many commands or events. |
+| [6600101](../errorcode-avsession.md#6600101-session-service-exception) | Session service exception. |
+| [6600102](../errorcode-avsession.md#6600102-session-does-not-exist) | The session does not exist. |
+| [6600103](../errorcode-avsession.md#6600103-session-controller-does-not-exist) | The session controller does not exist. |
+| [6600105](../errorcode-avsession.md#6600105-invalid-session-command) | Invalid session command. |
+| [6600106](../errorcode-avsession.md#6600106-session-not-activated) | The session is not activated. |
+| [6600107](../errorcode-avsession.md#6600107-too-many-commands-or-events) | Too many commands or events. |
 
 ## sendControlCommand
 
@@ -3734,13 +3692,7 @@ Send common commands to this session
 sendControlCommand(command: AVControlCommand, callback: AsyncCallback<void>): void
 ```
 
-通过会话控制器发送命令到其对应的会话。结果通过callback异步回调方式返回。
-
-> **说明：**
-> 
-> 媒体控制方在使用sendControlCommand命令前，需要确保控制对应的媒体会话注册了对应的监听，注册媒体会话相关监听的方法请参见接口
-> [on('play')](avSession.AVSession.on(type: 'play', callback: () => void))、
-> [on('pause')](avSession.AVSession.on(type: 'pause', callback: () => void))等。
+Send control commands to this session
 
 **Since:** 10
 
@@ -3754,20 +3706,20 @@ sendControlCommand(command: AVControlCommand, callback: AsyncCallback<void>): vo
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| command | [AVControlCommand](arkts-avsession-avsession-avcontrolcommand-i.md) | Yes | 会话的相关命令和命令相关参数。 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | 回调函数。当命令发送成功，err为undefined，否则返回错误对象。 |
+| command | [AVControlCommand](arkts-avsession-avsession-avcontrolcommand-i.md) | Yes | The command to be sent. See {@link AVControlCommand} |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | The asyncCallback triggered when the command is executed successfully. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | parameter check failed. 1.Mandatory parameters are left unspecified. 2.Parameter verification failed. |
-| 6600101 | Session service exception. |
-| 6600102 | The session does not exist. |
-| 6600103 | The session controller does not exist. |
-| 6600105 | Invalid session command. |
-| 6600106 | The session is not activated. |
-| 6600107 | Too many commands or events. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | parameter check failed. 1.Mandatory parameters are left unspecified. 2.Parameter verification failed. |
+| [6600101](../errorcode-avsession.md#6600101-session-service-exception) | Session service exception. |
+| [6600102](../errorcode-avsession.md#6600102-session-does-not-exist) | The session does not exist. |
+| [6600103](../errorcode-avsession.md#6600103-session-controller-does-not-exist) | The session controller does not exist. |
+| [6600105](../errorcode-avsession.md#6600105-invalid-session-command) | Invalid session command. |
+| [6600106](../errorcode-avsession.md#6600106-session-not-activated) | The session is not activated. |
+| [6600107](../errorcode-avsession.md#6600107-too-many-commands-or-events) | Too many commands or events. |
 
 ## sendControlCommand
 
@@ -3775,13 +3727,7 @@ sendControlCommand(command: AVControlCommand, callback: AsyncCallback<void>): vo
 sendControlCommand(command: AVControlCommand): Promise<void>
 ```
 
-通过控制器发送命令到其对应的会话。结果通过Promise异步回调方式返回。
-
-> **说明：**
-> 
-> 媒体控制方在使用sendControlCommand命令前，需要确保控制对应的媒体会话注册了对应的监听，注册媒体会话相关监听的方法请参见接口
-> [on('play')](avSession.AVSession.on(type: 'play', callback: () => void))、
-> [on('pause')](avSession.AVSession.on(type: 'pause', callback: () => void))等。
+Send control commands to this session
 
 **Since:** 10
 
@@ -3797,25 +3743,25 @@ sendControlCommand(command: AVControlCommand): Promise<void>
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| command | [AVControlCommand](arkts-avsession-avsession-avcontrolcommand-i.md) | Yes | 会话的相关命令和命令相关参数。 |
+| command | [AVControlCommand](arkts-avsession-avsession-avcontrolcommand-i.md) | Yes | The command to be sent. See {@link AVControlCommand} |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise对象。当命令发送成功，无返回结果，否则返回错误对象。 |
+| Promise&lt;void&gt; | void promise when executed successfully |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | parameter check failed. 1.Mandatory parameters are left unspecified. 2.Parameter verification failed. |
-| 6600101 | Session service exception. |
-| 6600102 | The session does not exist. |
-| 6600103 | The session controller does not exist. |
-| 6600105 | Invalid session command. |
-| 6600106 | The session is not activated. |
-| 6600107 | Too many commands or events. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | parameter check failed. 1.Mandatory parameters are left unspecified. 2.Parameter verification failed. |
+| [6600101](../errorcode-avsession.md#6600101-session-service-exception) | Session service exception. |
+| [6600102](../errorcode-avsession.md#6600102-session-does-not-exist) | The session does not exist. |
+| [6600103](../errorcode-avsession.md#6600103-session-controller-does-not-exist) | The session controller does not exist. |
+| [6600105](../errorcode-avsession.md#6600105-invalid-session-command) | Invalid session command. |
+| [6600106](../errorcode-avsession.md#6600106-session-not-activated) | The session is not activated. |
+| [6600107](../errorcode-avsession.md#6600107-too-many-commands-or-events) | Too many commands or events. |
 
 ## sendCustomData
 
@@ -3823,7 +3769,7 @@ sendControlCommand(command: AVControlCommand): Promise<void>
 sendCustomData(data: Record<string, Object>): Promise<void>
 ```
 
-发送私有数据到远端设备。使用Promise异步回调。
+Send custom data to this avsession.
 
 **Since:** 20
 
@@ -3839,21 +3785,21 @@ sendCustomData(data: Record<string, Object>): Promise<void>
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| data | [Record](../../apis-default/arkts-apis/arkts-record-t.md)&lt;string, Object&gt; | Yes | 应用程序填充的自定义数据。服务端仅解析key为'customData'，且Object为string类型的对象。 |
+| data | [Record](../../apis-default/arkts-apis/arkts-record-t.md)&lt;string, Object&gt; | Yes | The custom data populated by application. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise对象，无返回结果。 |
+| Promise&lt;void&gt; | void result promise when executed successfully |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 6600101 | Session service exception. |
-| 6600102 | The session does not exist. |
-| 6600103 | The session controller does not exist. |
+| [6600101](../errorcode-avsession.md#6600101-session-service-exception) | Session service exception. You are advised to:1.Scheduled retry.2.Destroy the current session or session controller and re-create it. |
+| [6600102](../errorcode-avsession.md#6600102-session-does-not-exist) | The session does not exist. |
+| [6600103](../errorcode-avsession.md#6600103-session-controller-does-not-exist) | The session controller does not exist. |
 
 ## setDesktopLyricState
 
@@ -3861,7 +3807,7 @@ sendCustomData(data: Record<string, Object>): Promise<void>
 setDesktopLyricState(state: DesktopLyricState): Promise<void>
 ```
 
-设置当前会话桌面歌词状态。使用Promise异步回调。
+Set desktop lyric state such as lock state for this session.
 
 **Since:** 23
 
@@ -3877,23 +3823,23 @@ setDesktopLyricState(state: DesktopLyricState): Promise<void>
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| state | [DesktopLyricState](arkts-avsession-avsession-desktoplyricstate-i.md) | Yes | 桌面歌词状态。 |
+| state | [DesktopLyricState](arkts-avsession-avsession-desktoplyricstate-i.md) | Yes | The desktop lyric state |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise对象，无返回结果。 |
+| Promise&lt;void&gt; | void promise when executed successfully |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 6600101 | Session service exception. |
-| 6600102 | The session does not exist. |
-| 6600103 | The session controller does not exist. |
-| 6600110 | The desktop lyrics feature of this application is not enabled. |
-| 6600111 | The desktop lyrics feature is not supported. |
+| [6600101](../errorcode-avsession.md#6600101-session-service-exception) | Session service exception. |
+| [6600102](../errorcode-avsession.md#6600102-session-does-not-exist) | The session does not exist. |
+| [6600103](../errorcode-avsession.md#6600103-session-controller-does-not-exist) | The session controller does not exist. |
+| [6600110](../errorcode-avsession.md#6600110-desktop-lyrics-not-enabled-for-the-application) | The desktop lyrics feature of this application is not enabled. |
+| [6600111](../errorcode-avsession.md#6600111-desktop-lyrics-not-supported-for-the-current-device) | The desktop lyrics feature is not supported. |
 
 ## setDesktopLyricVisible
 
@@ -3901,7 +3847,7 @@ setDesktopLyricState(state: DesktopLyricState): Promise<void>
 setDesktopLyricVisible(visible: boolean): Promise<void>
 ```
 
-设置当前会话桌面歌词的显示状态。使用Promise异步回调。
+Set desktop lyric visible state for this session.
 
 **Since:** 23
 
@@ -3917,23 +3863,23 @@ setDesktopLyricVisible(visible: boolean): Promise<void>
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| visible | boolean | Yes | 是否显示桌面歌词。true表示显示；false表示不显示。 |
+| visible | boolean | Yes | make desktop lyric window visible or not |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise对象，无返回结果。 |
+| Promise&lt;void&gt; | void promise when executed successfully |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 6600101 | Session service exception. |
-| 6600102 | The session does not exist. |
-| 6600103 | The session controller does not exist. |
-| 6600110 | The desktop lyrics feature of this application is not enabled. |
-| 6600111 | The desktop lyrics feature is not supported. |
+| [6600101](../errorcode-avsession.md#6600101-session-service-exception) | Session service exception. |
+| [6600102](../errorcode-avsession.md#6600102-session-does-not-exist) | The session does not exist. |
+| [6600103](../errorcode-avsession.md#6600103-session-controller-does-not-exist) | The session controller does not exist. |
+| [6600110](../errorcode-avsession.md#6600110-desktop-lyrics-not-enabled-for-the-application) | The desktop lyrics feature of this application is not enabled. |
+| [6600111](../errorcode-avsession.md#6600111-desktop-lyrics-not-supported-for-the-current-device) | The desktop lyrics feature is not supported. |
 
 ## skipToQueueItem
 
@@ -3947,7 +3893,7 @@ ArkTS-Sta:
 skipToQueueItem(itemId: int, callback: AsyncCallback<void>): void
 ```
 
-设置指定播放列表单项的ID，发送给session端处理，session端可以选择对这个单项歌曲进行播放。结果通过callback异步回调方式返回。
+Set the item in the playlist to be played
 
 **Since:** 10
 
@@ -3961,17 +3907,17 @@ skipToQueueItem(itemId: int, callback: AsyncCallback<void>): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| itemId | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | 播放列表单项的ID值，用以表示选中的播放列表单项。 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | 回调函数。当播放状态设置成功，err为undefined，否则返回错误对象。 |
+| itemId | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | The serial number of the item to be played |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | The asyncCallback triggered when the command is executed successfully |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | parameter check failed. 1.Mandatory parameters are left unspecified. 2.Parameter verification failed. |
-| 6600101 | Session service exception. |
-| 6600102 | The session does not exist. |
-| 6600103 | The session controller does not exist. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | parameter check failed. 1.Mandatory parameters are left unspecified. 2.Parameter verification failed. |
+| [6600101](../errorcode-avsession.md#6600101-session-service-exception) | Session service exception. |
+| [6600102](../errorcode-avsession.md#6600102-session-does-not-exist) | The session does not exist. |
+| [6600103](../errorcode-avsession.md#6600103-session-controller-does-not-exist) | The session controller does not exist. |
 
 ## skipToQueueItem
 
@@ -3985,7 +3931,7 @@ ArkTS-Sta:
 skipToQueueItem(itemId: int): Promise<void>
 ```
 
-设置指定播放列表单项的ID，发送给session端处理，session端可以选择对这个单项歌曲进行播放。结果通过Promise异步回调方式返回。
+Set the item in the playlist to be played
 
 **Since:** 10
 
@@ -4001,22 +3947,22 @@ skipToQueueItem(itemId: int): Promise<void>
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| itemId | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | 播放列表单项的ID值，用以表示选中的播放列表单项。 |
+| itemId | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | The serial number of the item to be played |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise对象。当播放列表单项ID设置成功，无返回结果，否则返回错误对象。 |
+| Promise&lt;void&gt; | void promise when executed successfully |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | parameter check failed. 1.Mandatory parameters are left unspecified. 2.Parameter verification failed. |
-| 6600101 | Session service exception. |
-| 6600102 | The session does not exist. |
-| 6600103 | The session controller does not exist. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | parameter check failed. 1.Mandatory parameters are left unspecified. 2.Parameter verification failed. |
+| [6600101](../errorcode-avsession.md#6600101-session-service-exception) | Session service exception. |
+| [6600102](../errorcode-avsession.md#6600102-session-does-not-exist) | The session does not exist. |
+| [6600103](../errorcode-avsession.md#6600103-session-controller-does-not-exist) | The session controller does not exist. |
 
 ## sessionId
 
@@ -4024,7 +3970,7 @@ skipToQueueItem(itemId: int): Promise<void>
 readonly sessionId: string
 ```
 
-AVSessionController对象唯一的会话标识。
+Unique session Id
 
 **Type:** string
 

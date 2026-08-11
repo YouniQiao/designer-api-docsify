@@ -12,7 +12,7 @@ import { ActionResult, ShowNotificationOptions } from 'kits/@kit.NotificationKit
 
 | Name | Description |
 | --- | --- |
-| [Notification](arkts-notification-system-notification-notification-c.md) | 提供通知管理的能力。 |
+| [Notification](arkts-notification-system-notification-notification-c.md) | Manages notifications. |
 
 ### Interfaces
 

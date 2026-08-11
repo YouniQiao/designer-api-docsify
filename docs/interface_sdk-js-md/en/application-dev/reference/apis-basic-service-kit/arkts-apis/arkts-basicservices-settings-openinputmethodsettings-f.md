@@ -34,7 +34,7 @@ Open the input method settings page.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 16900010 | Parameter error. |
+| [16900010](../../apis-basic-services-kit/errorcode-settings.md#16900010-parameter-check-failed) | Parameter error. |
 
 ## Examples
 

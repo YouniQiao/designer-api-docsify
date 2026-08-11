@@ -1,6 +1,6 @@
 # SimpleAnimatorOptions
 
-animator简易动画参数对象。与AnimatorOptions相比，部分动画参数有默认值，可不设置。
+Defines the SimpleAnimatorOptions class.
 
 **Since:** 23
 
@@ -22,7 +22,7 @@ import { AnimatorOptions, SimpleAnimatorOptions, AnimatorResult } from 'kits/@ki
 constructor(begin: double, end: double)
 ```
 
-SimpleAnimatorOptions的构造函数。
+constructor.
 
 **Since:** 23
 
@@ -38,8 +38,8 @@ SimpleAnimatorOptions的构造函数。
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| begin | double | Yes | 动画插值起点。 |
-| end | double | Yes | 动画插值终点。 |
+| begin | double | Yes | Starting point of animator interpolation. |
+| end | double | Yes | Ending point of animator interpolation. |
 
 ## delay
 
@@ -47,7 +47,7 @@ SimpleAnimatorOptions的构造函数。
 delay(delay: int): SimpleAnimatorOptions
 ```
 
-设置animator动画播放时延。
+Set delay for the animation start. The default value indicates no delay.
 
 **Since:** 23
 
@@ -63,13 +63,13 @@ delay(delay: int): SimpleAnimatorOptions
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| delay | int | Yes | 设置animator动画播放时延，单位毫秒，设置为0时，表示不延时。设置为负数时动画提前播放，如果提前播放的时长大于动画总时长，动画直接过渡到终点，默认值：0。 |
+| delay | int | Yes | if not set, default is 0. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [SimpleAnimatorOptions](arkts-arkui-animator-simpleanimatoroptions-c.md) | Animator简易动画参数对象。 |
+| [SimpleAnimatorOptions](arkts-arkui-animator-simpleanimatoroptions-c.md) |  |
 
 ## direction
 
@@ -77,7 +77,7 @@ delay(delay: int): SimpleAnimatorOptions
 direction(direction: PlayMode): SimpleAnimatorOptions
 ```
 
-设置animator动画播放方向。
+Set the animation playback mode.
 
 **Since:** 23
 
@@ -93,13 +93,13 @@ direction(direction: PlayMode): SimpleAnimatorOptions
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| direction | [PlayMode](arkts-arkui-playmode-e.md) | Yes | 设置animator动画播放方向，默认值：PlayMode.Normal。 |
+| direction | [PlayMode](arkts-arkui-playmode-e.md) | Yes | if not set, default is PlayMode.Normal. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [SimpleAnimatorOptions](arkts-arkui-animator-simpleanimatoroptions-c.md) | Animator简易动画参数对象。 |
+| [SimpleAnimatorOptions](arkts-arkui-animator-simpleanimatoroptions-c.md) |  |
 
 ## duration
 
@@ -107,7 +107,7 @@ direction(direction: PlayMode): SimpleAnimatorOptions
 duration(duration: int): SimpleAnimatorOptions
 ```
 
-设置animator动画时长。
+Set duration of the animation, in milliseconds.
 
 **Since:** 23
 
@@ -123,13 +123,13 @@ duration(duration: int): SimpleAnimatorOptions
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| duration | int | Yes | 设置动画时长，单位毫秒，默认值：1000。 |
+| duration | int | Yes | if not set, default is 1000. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [SimpleAnimatorOptions](arkts-arkui-animator-simpleanimatoroptions-c.md) | Animator简易动画参数对象。 |
+| [SimpleAnimatorOptions](arkts-arkui-animator-simpleanimatoroptions-c.md) |  |
 
 ## easing
 
@@ -137,7 +137,7 @@ duration(duration: int): SimpleAnimatorOptions
 easing(curve: string): SimpleAnimatorOptions
 ```
 
-设置animator动画插值曲线。
+Set time curve of the animation. For details about the supported types.linear The animation speed keeps unchanged.ease The animation starts and ends at a low speed, cubic-bezier(0.25, 0.1, 0.25, 1.0).ease-in The animation starts at a low speed, cubic-bezier(0.42, 0.0, 1.0, 1.0).ease-out The animation ends at a low speed, cubic-bezier(0.0, 0.0, 0.58, 1.0).ease-in-out The animation starts and ends at a low speed, cubic-bezier(0.42, 0.0, 0.58, 1.0).fast-out-slow-in Standard curve, cubic-bezier(0.4, 0.0, 0.2, 1.0).linear-out-slow-in Deceleration curve, cubic-bezier(0.0, 0.0, 0.2, 1.0).fast-out-linear-in Acceleration curve, cubic-bezier(0.4, 0.0, 1.0, 1.0).friction Damping curve, cubic-bezier(0.2, 0.0, 0.2, 1.0).extreme-deceleration Extreme deceleration curve, cubic-bezier(0.0, 0.0, 0.0, 1.0).sharp Sharp curve, cubic-bezier(0.33, 0.0, 0.67, 1.0).rhythm Rhythm curve, cubic-bezier(0.7, 0.0, 0.2, 1.0).smooth Smooth curve, cubic-bezier(0.4, 0.0, 0.4, 1.0).cubic-bezier(x1, y1, x2, y2) You can customize an animation speed curve in the cubic-bezier() function.The x and y values of each input parameter must be between 0 and 1.Step curve. The number must be set and only an integer is supported, step-position is optional.It can be set to start or end. The default value is end.
 
 **Since:** 23
 
@@ -153,13 +153,13 @@ easing(curve: string): SimpleAnimatorOptions
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| curve | string | Yes | 设置animator动画插值曲线，默认值：“ease”。 |
+| curve | string | Yes | if not set, default is ease. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [SimpleAnimatorOptions](arkts-arkui-animator-simpleanimatoroptions-c.md) | Animator简易动画参数对象。 |
+| [SimpleAnimatorOptions](arkts-arkui-animator-simpleanimatoroptions-c.md) |  |
 
 ## fill
 
@@ -167,7 +167,7 @@ easing(curve: string): SimpleAnimatorOptions
 fill(fillMode: FillMode): SimpleAnimatorOptions
 ```
 
-设置animator动画填充方式。
+Set FillMode of animation.FillMode indicates whether to resume to the initial state after the animation is executed.
 
 **Since:** 23
 
@@ -183,13 +183,13 @@ fill(fillMode: FillMode): SimpleAnimatorOptions
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| fillMode | [FillMode](arkts-arkui-fillmode-e.md) | Yes | 设置animator动画填充方式，影响动画delay期间和结束时的表现，默认值：FillMode.Forwards。 |
+| fillMode | [FillMode](arkts-arkui-fillmode-e.md) | Yes | if not set, default is FillMode.Forwards. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [SimpleAnimatorOptions](arkts-arkui-animator-simpleanimatoroptions-c.md) | Animator简易动画参数对象。 |
+| [SimpleAnimatorOptions](arkts-arkui-animator-simpleanimatoroptions-c.md) |  |
 
 ## iterations
 
@@ -197,7 +197,7 @@ fill(fillMode: FillMode): SimpleAnimatorOptions
 iterations(iterations: int): SimpleAnimatorOptions
 ```
 
-设置animator动画播放次数。
+Set number of times the animation will be played.Number indicates a fixed number of playback operations, and -1 an unlimited number of playback operations.
 
 **Since:** 23
 
@@ -213,11 +213,11 @@ iterations(iterations: int): SimpleAnimatorOptions
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| iterations | int | Yes | 设置animator动画播放次数，设置为0时不播放，设置为-1时无限次播放，默认值：1。 |
+| iterations | int | Yes | if not set, default is 1. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [SimpleAnimatorOptions](arkts-arkui-animator-simpleanimatoroptions-c.md) | Animator简易动画参数对象。 |
+| [SimpleAnimatorOptions](arkts-arkui-animator-simpleanimatoroptions-c.md) |  |
 

@@ -12,7 +12,7 @@ import { securityManager } from 'kits/@kit.MDMKit';
 function getDeviceEncryptionStatus(admin: Want): DeviceEncryptionStatus
 ```
 
-查询设备文件系统加密状态。
+Queries the encryption status of the device file system.
 
 **Since:** 11
 
@@ -34,23 +34,23 @@ function getDeviceEncryptionStatus(admin: Want): DeviceEncryptionStatus
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| admin | [Want](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-want-want-c.md) | Yes | 企业设备管理扩展组件。Want中必须包含企业设备管理扩展能力的abilityName和所在应用的bundleName。 |
+| admin | [Want](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-want-want-c.md) | Yes | EnterpriseAdminExtensionAbility. **Want** must contain the ability name of the EnterpriseAdminExtensionAbility and the bundle name of the application. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [DeviceEncryptionStatus](arkts-mdm-securitymanager-deviceencryptionstatus-i.md) | 文件加密状态结构体，现只含有是否进行加密字段（bool）。 |
+| [DeviceEncryptionStatus](arkts-mdm-securitymanager-deviceencryptionstatus-i.md) | File system encryption status. Currently, only a boolean value indicating whether the file system is encrypted is returned. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
-| 201 | Permission verification failed. The application does not have the permission required to call the API. |
-| 202 | Permission verification failed. A non-system application calls a system API. |
-| 9200001 | The application is not an administrator application of the device. |
-| 9200002 | The administrator application does not have permission to manage the device. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed. The application does not have the permission required to call the API. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
+| [9200001](../errorcode-enterpriseDeviceManager.md#9200001-deviceadmin-not-enabled) | The application is not an administrator application of the device. |
+| [9200002](../errorcode-enterpriseDeviceManager.md#9200002-permission-denied) | The administrator application does not have permission to manage the device. |
 
 ## Examples
 
@@ -65,10 +65,10 @@ let wantTemp: Want = {
 };
 
 try {
-  let result: securityManager.DeviceEncryptionStatus = securityManager.getDeviceEncryptionStatus(wantTemp);
-  console.info(`Succeeded in getting device encryption status. isEncrypted: ${result.isEncrypted}`);
+    let result: securityManager.DeviceEncryptionStatus = securityManager.getDeviceEncryptionStatus(wantTemp);
+    console.info(`Succeeded in getting device encryption status. isEncrypted: ${result.isEncrypted}`);
 } catch(err) {
-  console.error(`Failed to get device encryption status. Code: ${err.code}, message: ${err.message}`);
+    console.error(`Failed to get device encryption status. Code: ${err.code}, message: ${err.message}`);
 }
 ```
 

@@ -12,12 +12,6 @@
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
-## 导入模块
-
-```TypeScript
-import { curves } from 'kits/@kit.ArkUI';
-```
-
 ## interpolate
 
 ```TypeScript

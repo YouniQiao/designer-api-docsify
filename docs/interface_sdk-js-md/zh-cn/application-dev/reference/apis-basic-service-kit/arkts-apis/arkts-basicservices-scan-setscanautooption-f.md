@@ -1,11 +1,5 @@
 # setScanAutoOption
 
-## 导入模块
-
-```TypeScript
-import { scan } from 'kits/@kit.BasicServicesKit';
-```
-
 ## setScanAutoOption
 
 ```TypeScript
@@ -41,7 +35,7 @@ function setScanAutoOption(scannerId: string, optionIndex: int): Promise<void>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 201 | Permission denied. |
+| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
 
 ## 示例
 
@@ -54,7 +48,7 @@ let optionIndex: number = 1;
 scan.setScanAutoOption(scannerId, optionIndex).then(() => {
     console.info('set scan auto option success');
 }).catch((error: BusinessError) => {
-    console.error(`Failed to set scan auto option. Code: ${error.code}, message: ${error.message}`);
-});
+    console.error('set scan auto option failed: ' + JSON.stringify(error));
+})
 ```
 

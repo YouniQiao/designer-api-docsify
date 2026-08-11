@@ -1,6 +1,6 @@
 # FileSelectorResult
 
-定义文件选择器结果，与 {@link onFileSelectorShow} 方法相关联。
+Defines the file selector result, related to {@link onFileSelectorShow} method.
 
 **Since:** 9
 
@@ -16,7 +16,7 @@
 constructor()
 ```
 
-FileSelectorResult的构造函数。
+Constructor.
 
 **Since:** 9
 
@@ -34,7 +34,7 @@ FileSelectorResult的构造函数。
 handleFileList(fileList: Array<string>): void
 ```
 
-选择文件列表。
+select a list of files.
 
 **Since:** 9
 

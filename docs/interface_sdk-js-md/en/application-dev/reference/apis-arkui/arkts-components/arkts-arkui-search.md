@@ -1,14 +1,14 @@
 # Search
 
-搜索框组件，支持搜索图标、清除按钮、搜索按钮、placeholder提示文本、自定义键盘等功能配置，适用于浏览器的搜索内容输入框、应用内搜索等场景。
+The **Search** component provides an area for users to enter search queries.
 
-> **说明：**
+> **NOTE**
 >
-> 该组件仅支持单文本样式，若需实现富文本样式，建议使用[RichEditor]{@link ./rich_editor}组件。
+> This component supports plain text only. For rich text, use the [RichEditor]{@link ./rich_editor} component.
 
-## 子组件
+## Child Components
 
-无
+Not supported
 
 ## Search
 
@@ -16,7 +16,7 @@
 Search(options?: SearchOptions)
 ```
 
-定义搜索组件构造函数。
+Defines the constructor of Search.
 
 **Since:** 8
 
@@ -32,7 +32,7 @@ Search(options?: SearchOptions)
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| options | [SearchOptions](arkts-arkui-searchoptions-i.md) | No | 搜索框组件初始化选项。当需要设置搜索框的初始值、提示文本、图标或控制器时传入此参数，不传入时使用默认配置。 |
+| options | [SearchOptions](arkts-arkui-searchoptions-i.md) | No | Initialization options of the **Search** component. |
 
 ## Summary
 

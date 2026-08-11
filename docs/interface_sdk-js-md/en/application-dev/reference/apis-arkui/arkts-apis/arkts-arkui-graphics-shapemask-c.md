@@ -1,6 +1,6 @@
 # ShapeMask
 
-用于设置图形遮罩。
+Defines ShapeMask.
 
 **Since:** 23
 
@@ -16,7 +16,7 @@
 constructor()
 ```
 
-ShapeMask的构造函数。
+Constructor.
 
 **Since:** 23
 
@@ -34,7 +34,7 @@ ShapeMask的构造函数。
 setCircleShape(circle: Circle): void
 ```
 
-用于设置圆形遮罩。
+Set the circle shape of the ShapeMask.
 
 **Since:** 23
 
@@ -50,7 +50,7 @@ setCircleShape(circle: Circle): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| circle | [Circle](arkts-arkui-graphics-circle-i.md) | Yes | 圆形的形状。 |
+| circle | [Circle](arkts-arkui-graphics-circle-i.md) | Yes | The circle shape will be set. |
 
 ## setCommandPath
 
@@ -58,7 +58,7 @@ setCircleShape(circle: Circle): void
 setCommandPath(path: CommandPath): void
 ```
 
-用于设置路径绘制指令。
+Set the command path of the ShapeMask.
 
 **Since:** 23
 
@@ -74,7 +74,7 @@ setCommandPath(path: CommandPath): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| path | [CommandPath](arkts-arkui-graphics-commandpath-i.md) | Yes | 路径绘制指令。 |
+| path | [CommandPath](arkts-arkui-graphics-commandpath-i.md) | Yes | The command path will be set. |
 
 ## setOvalShape
 
@@ -82,7 +82,7 @@ setCommandPath(path: CommandPath): void
 setOvalShape(oval: Rect): void
 ```
 
-用于设置椭圆形遮罩。
+Set the oval shape of the ShapeMask.
 
 **Since:** 23
 
@@ -98,7 +98,7 @@ setOvalShape(oval: Rect): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| oval | [Rect](../../apis-form-kit/arkts-apis/arkts-form-forminfo-rect-i.md) | Yes | 椭圆形的形状。 |
+| oval | [Rect](../../apis-form-kit/arkts-apis/arkts-form-forminfo-rect-i.md) | Yes | The oval shape will be set. |
 
 ## setRectShape
 
@@ -106,7 +106,7 @@ setOvalShape(oval: Rect): void
 setRectShape(rect: Rect): void
 ```
 
-用于设置矩形遮罩。
+Set the rect shape of the ShapeMask.
 
 **Since:** 23
 
@@ -122,7 +122,7 @@ setRectShape(rect: Rect): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| rect | [Rect](../../apis-form-kit/arkts-apis/arkts-form-forminfo-rect-i.md) | Yes | 矩形的形状。 |
+| rect | [Rect](../../apis-form-kit/arkts-apis/arkts-form-forminfo-rect-i.md) | Yes | The rect shape will be set. |
 
 ## setRoundRectShape
 
@@ -130,7 +130,7 @@ setRectShape(rect: Rect): void
 setRoundRectShape(roundRect: RoundRect): void
 ```
 
-用于设置圆角矩形遮罩。
+Set the round rect shape of the ShapeMask.
 
 **Since:** 23
 
@@ -146,7 +146,7 @@ setRoundRectShape(roundRect: RoundRect): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| roundRect | [RoundRect](../../apis-arkgraphics2d/arkts-apis/arkts-arkgraphics2d-drawing-roundrect-c.md) | Yes | 圆角矩形的形状。 |
+| roundRect | [RoundRect](../../apis-arkgraphics2d/arkts-apis/arkts-arkgraphics2d-drawing-roundrect-c.md) | Yes | The round rect shape will be set. |
 
 ## fillColor
 
@@ -154,7 +154,7 @@ setRoundRectShape(roundRect: RoundRect): void
 fillColor: int
 ```
 
-遮罩的填充颜色，使用ARGB格式。默认值为`0XFF000000`。通过fillColor的透明度和亮度生成一个仅含透明度的颜色。亮度越高，颜色越透明。然后，使用[BlendMode.SRC_IN](../../apis-arkgraphics2d/arkts-apis/arkts-arkgraphics2d-drawing-blendmode-e.md/arkts-arkgraphics2d-drawing-blendmode-e.md)方式与RenderNode本身的颜色混合，生成最终颜色。取值限定为整数。
+The fill color of the ShapeMask.The value should be an integer.
 
 **Type:** int
 
@@ -176,7 +176,7 @@ fillColor: int
 strokeColor: int
 ```
 
-遮罩的边框颜色，使用ARGB格式。默认值为`0XFF000000`。通过strokeColor的透明度和亮度生成一个仅含透明度的颜色。亮度越高，颜色越透明。然后，使用[BlendMode.SRC_IN](../../apis-arkgraphics2d/arkts-apis/arkts-arkgraphics2d-drawing-blendmode-e.md/arkts-arkgraphics2d-drawing-blendmode-e.md)方式与RenderNode本身的颜色混合，生成最终颜色。取值限定为整数。
+The stroke color of the ShapeMask.The value should be an integer.
 
 **Type:** int
 
@@ -198,7 +198,7 @@ strokeColor: int
 strokeWidth: double
 ```
 
-遮罩的边框宽度，单位为px。默认值为0。
+The stroke width of the ShapeMask.
 
 **Type:** double
 

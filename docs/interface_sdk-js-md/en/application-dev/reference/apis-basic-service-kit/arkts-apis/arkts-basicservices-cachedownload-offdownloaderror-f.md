@@ -12,7 +12,7 @@ import { cacheDownload } from 'kits/@kit.BasicServicesKit';
 function offDownloadError(url: string, callback?: Callback<DownloadError>): void
 ```
 
-取消订阅预下载的错误事件。使用callback异步回调。
+Unsubscribes from the pre-download error events. This API uses an asynchronous callback to return the result.
 
 **Since:** 23
 
@@ -26,8 +26,8 @@ function offDownloadError(url: string, callback?: Callback<DownloadError>): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| url | string | Yes | 待注册回调的url，url字符串最大长度为8192字节。 |
-| callback | [Callback](arkts-basicservices-base-callback-i.md)&lt;DownloadError&gt; | No | 回调函数，返回预下载的错误信息。若不填该参数，表示url下的所有错误回调函数。 |
+| url | string | Yes | URL to be unregistered, with a maximum of 8192 bytes. |
+| callback | [Callback](arkts-basicservices-base-callback-i.md)&lt;DownloadError&gt; | No | Callback used to return the error information about the pre- download. If this parameter is left blank, all error callback functions of the URL are unregistered. |
 
 ## Examples
 

@@ -4,7 +4,7 @@
 export type ModuleAbilityInfo = _PackInfo.ModuleAbilityInfo
 ```
 
-module包含的ability组件信息。
+Defines the ability information of the module.
 
 **Since:** 9
 

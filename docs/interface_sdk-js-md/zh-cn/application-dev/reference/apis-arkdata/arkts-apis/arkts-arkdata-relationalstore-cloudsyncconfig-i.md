@@ -10,12 +10,6 @@
 
 **系统能力：** SystemCapability.DistributedDataManager.CloudSync.Client
 
-## 导入模块
-
-```TypeScript
-import { relationalStore } from 'kits/@kit.ArkData';
-```
-
 ## enablePredicate
 
 ```TypeScript
@@ -64,7 +58,7 @@ predicate?: RdbPredicates
 
 表级同步谓词。仅当enablePredicate为true时，此参数有效。
 
-**类型：** [RdbPredicates](arkts-arkdata-relationalstore-rdbpredicates-c.md)
+**类型：** [RdbPredicates](arkts-arkdata-rdb-rdbpredicates-c.md)
 
 **起始版本：** 26.0.0
 

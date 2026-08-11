@@ -12,7 +12,7 @@ import { deviceManager } from 'kits/@kit.DriverDevelopmentKit';
 function queryDevices(busType?: int): Array<Readonly<Device>>
 ```
 
-获取接入主设备的外部设备列表。如果没有设备接入，那么将会返回一个空的列表。
+Queries the list of peripheral devices. If the device has no peripheral device connected, an empty list is returned.
 
 **Since:** 10
 
@@ -28,20 +28,20 @@ function queryDevices(busType?: int): Array<Readonly<Device>>
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| busType | ArkTS-Dyn: number  <br>ArkTS-Sta：int | No | 由[BusType](arkts-driverdevelopment-devicemanager-bustype-e.md)约定的设备总线类型，不填则查找所有类型设备。 |
+| busType | ArkTS-Dyn: number  <br>ArkTS-Sta：int | No | Device bus type specified by [BusType](arkts-driverdevelopment-devicemanager-bustype-e.md). If this parameter is left empty, all types of devices are searched. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Array&lt;Readonly&lt;Device&gt;&gt; | 设备信息列表。 |
+| Array&lt;Readonly&lt;Device&gt;&gt; | List of peripheral devices obtained. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 201 | The permission check failed. |
-| 22900001 | ExternalDeviceManager service exception or busType parameter error. |
+| [201](../../errorcode-universal.md#201-permission-denied) | The permission check failed. |
+| [22900001](../../apis-driverdevelopment-kit/errorcode-deviceManager.md#22900001-externaldevicemanager-service-exception-or-bustype-parameter-error) | ExternalDeviceManager service exception or busType parameter error. |
 
 ## Examples
 

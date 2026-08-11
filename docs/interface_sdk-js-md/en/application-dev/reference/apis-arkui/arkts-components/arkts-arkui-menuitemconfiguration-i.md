@@ -1,6 +1,7 @@
 # MenuItemConfiguration
 
-开发者需要自定义class实现ContentModifier接口。继承自[CommonConfiguration](../arkts-apis/arkts-arkui-common-commonconfiguration-i.md/arkts-arkui-common-commonconfiguration-i.md)。
+You need a custom class to implement the **ContentModifier** API. Inherits from   
+[CommonConfiguration](../arkts-apis/arkts-arkui-common-commonconfiguration-i.md/arkts-arkui-common-commonconfiguration-i.md).
 
 **Inheritance/Implementation:** MenuItemConfiguration extends [CommonConfiguration<MenuItemConfiguration>](CommonConfiguration<MenuItemConfiguration>)
 
@@ -18,12 +19,8 @@
 triggerSelect(index: number, value: string): void
 ```
 
-下拉菜单选中某一项的回调函数。
-
-&lt;br/&gt;**说明：**
-
-&lt;br/&gt;index会赋值给事件[onSelect](SelectAttribute#onSelect(callback: (index: number, value: string) => void))回调中的索引参数； value会返回给Select组件显示，同时会赋值给事件  
-[onSelect](SelectAttribute#onSelect(callback: (index: number, value: string) => void))回调中的文本参数。
+Invoked when a drop-down menu option is selected.&lt;br&gt;**NOTE：**&lt;br&gt;The value of **index** will be assigned to the **index** parameter in the
+[onSelect](SelectAttribute#onSelect(callback: (index: number, value: string) => void)) callback; the value of **value** will be returned to the **Select** component for display and will also be assigned to the **value** parameter in the [onSelect](SelectAttribute#onSelect(callback: (index: number, value: string) => void)) callback.
 
 **Since:** 12
 
@@ -41,8 +38,8 @@ triggerSelect(index: number, value: string): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| index | number | Yes | 选中菜单项的索引。 |
-| value | string | Yes | 选中菜单项的文本。 |
+| index | number | Yes | index of the selected option. |
+| value | string | Yes | text of the selected option. |
 
 ## icon
 
@@ -50,11 +47,11 @@ triggerSelect(index: number, value: string): void
 icon?: ResourceStr
 ```
 
-下拉菜单项的图片内容。
+Icon of the drop-down menu option.
 
-**说明：**
+**NOTE：**
 
-string格式可用于加载网络图片和本地图片。
+The string type can be used to load network images and local images.
 
 **Type:** [ResourceStr](../arkts-apis/arkts-arkui-resourcestr-t.md)
 
@@ -76,7 +73,7 @@ string格式可用于加载网络图片和本地图片。
 index: number
 ```
 
-下拉菜单项的索引，索引值从0开始。
+Index of the drop-down menu option. The index is zero-based.
 
 **Type:** number
 
@@ -98,9 +95,9 @@ index: number
 selected: boolean
 ```
 
-下拉菜单项是否被选中。值为true表示选中，值为false表示未选中。
+Whether the drop-down menu option is selected. The value **true** means that the option is selected, and **false** means the opposite.
 
-默认值：false
+Default value: **false**
 
 **Type:** boolean
 
@@ -122,9 +119,9 @@ selected: boolean
 symbolIcon?: SymbolGlyphModifier
 ```
 
-下拉选项Symbol图片。
+Symbol icon of drop-down menu option.
 
-symbolIcon优先级高于icon。
+**symbolIcon** takes precedence over **icon**.
 
 **Type:** [SymbolGlyphModifier](arkts-arkui-symbolglyphmodifier-t.md)
 
@@ -146,11 +143,11 @@ symbolIcon优先级高于icon。
 value: ResourceStr
 ```
 
-下拉菜单项的文本内容。
+Text content of the drop-down menu option.
 
-**说明：**
+**NOTE：**
 
-当文本字符的长度超过菜单项文本区域的宽度时，文本将会被截断。
+If the length of the text exceeds the width of the menu item text area, the text will be truncated.
 
 **Type:** [ResourceStr](../arkts-apis/arkts-arkui-resourcestr-t.md)
 

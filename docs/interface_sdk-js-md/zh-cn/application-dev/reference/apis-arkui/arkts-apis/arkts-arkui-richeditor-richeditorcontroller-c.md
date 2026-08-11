@@ -225,7 +225,7 @@ deleteSpans(value?: RichEditorRange): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | [RichEditorRange](../arkts-components/arkts-arkui-richeditorrange-i.md) | 否 | 删除范围。省略时，删除所有文本和图片。 |
+| value | [RichEditorRange](arkts-arkui-richeditor-richeditorrange-i.md) | 否 | 删除范围。省略时，删除所有文本和图片。 |
 
 ## fromStyledString
 
@@ -261,7 +261,7 @@ fromStyledString(value: StyledString): Array<RichEditorSpan> | undefined
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 401 | 参数检查失败。 |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | 参数检查失败。 |
 
 ## getParagraphs
 
@@ -285,7 +285,7 @@ getParagraphs(value?: RichEditorRange): Array<RichEditorParagraphResult> | undef
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | [RichEditorRange](../arkts-components/arkts-arkui-richeditorrange-i.md) | 否 | 需要获取段落的范围。&lt;br/&gt;缺省时，获取所有段落信息。 |
+| value | [RichEditorRange](arkts-arkui-richeditor-richeditorrange-i.md) | 否 | 需要获取段落的范围。&lt;br/&gt;缺省时，获取所有段落信息。 |
 
 **返回值：**
 
@@ -315,7 +315,7 @@ getSelection(): RichEditorSelection | undefined
 
 | 类型 | 说明 |
 | --- | --- |
-| [RichEditorSelection](../arkts-components/arkts-arkui-richeditorselection-i.md) | 选中内容信息。&lt;br/&gt;返回undefined时表示controller未与组件绑定。 |
+| [RichEditorSelection](arkts-arkui-richeditor-richeditorselection-i.md) | 选中内容信息。&lt;br/&gt;返回undefined时表示controller未与组件绑定。 |
 
 ## getSpans
 
@@ -339,7 +339,7 @@ getSpans(value?: RichEditorRange): Array<RichEditorImageSpanResult | RichEditorT
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | [RichEditorRange](../arkts-components/arkts-arkui-richeditorrange-i.md) | 否 | 需要获取span范围。&lt;br/&gt;缺省时，获取所有span信息。 |
+| value | [RichEditorRange](arkts-arkui-richeditor-richeditorrange-i.md) | 否 | 需要获取span范围。&lt;br/&gt;缺省时，获取所有span信息。 |
 
 **返回值：**
 
@@ -369,7 +369,7 @@ toStyledString(value: RichEditorRange): StyledString | undefined
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | [RichEditorRange](../arkts-components/arkts-arkui-richeditorrange-i.md) | 是 | 需要获取的范围。 |
+| value | [RichEditorRange](arkts-arkui-richeditor-richeditorrange-i.md) | 是 | 需要获取的范围。 |
 
 **返回值：**
 
@@ -381,7 +381,7 @@ toStyledString(value: RichEditorRange): StyledString | undefined
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 401 | 参数检查失败。 |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | 参数检查失败。 |
 
 ## updateParagraphStyle
 
@@ -405,7 +405,7 @@ updateParagraphStyle(value: RichEditorParagraphStyleOptions): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | [RichEditorParagraphStyleOptions](arkts-arkui-richeditor-richeditorparagraphstyleoptions-i.md) | 是 | 段落的样式选项信息。 |
+| value | [RichEditorParagraphStyleOptions](../arkts-components/arkts-arkui-richeditorparagraphstyleoptions-i.md) | 是 | 段落的样式选项信息。 |
 
 ## updateSpanStyle
 

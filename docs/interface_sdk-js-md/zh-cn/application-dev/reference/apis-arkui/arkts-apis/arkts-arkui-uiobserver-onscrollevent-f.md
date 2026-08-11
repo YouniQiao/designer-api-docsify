@@ -1,11 +1,5 @@
 # onScrollEvent
 
-## 导入模块
-
-```TypeScript
-import { uiObserver } from 'kits/@kit.ArkUI';
-```
-
 ## onScrollEvent
 
 ```TypeScript
@@ -28,7 +22,7 @@ Registers a callback function to be called when the scroll event starts or stops
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| options | [ObserverOptions](../../apis-telephony-kit/arkts-apis/arkts-telephony-observer-observeroptions-i.md) | 是 | The options object. |
+| options | [ObserverOptions](arkts-arkui-uiobserver-observeroptions-i.md) | 是 | The options object. |
 | callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;ScrollEventInfo&gt; | 是 | The callback function to be called when the scroll event start or stop. |
 
 

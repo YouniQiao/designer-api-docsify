@@ -1,6 +1,6 @@
 # SlideEffect
 
-页面转场时的滑入滑出效果。
+Slide-in and slide-out effects for page transitions.
 
 **Since:** 7
 
@@ -13,10 +13,10 @@
 ## Left
 
 ```TypeScript
-Left = 0
+Left
 ```
 
-设置到入场时表示从左边滑入，出场时表示滑出到左边。
+When set to Enter, slides in from the left. When set to Exit, slides out to the left.
 
 **Since:** 7
 
@@ -24,17 +24,17 @@ Left = 0
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
-<!--Device-SlideEffect-Left = 0--><!--Device-SlideEffect-Left = 0-End-->
+<!--Device-SlideEffect-Left--><!--Device-SlideEffect-Left-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## Right
 
 ```TypeScript
-Right = 1
+Right
 ```
 
-设置到入场时表示从右边滑入，出场时表示滑出到右边。
+When set to Enter, slides in from the right. When set to Exit, slides out to the right.
 
 **Since:** 7
 
@@ -42,17 +42,17 @@ Right = 1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
-<!--Device-SlideEffect-Right = 1--><!--Device-SlideEffect-Right = 1-End-->
+<!--Device-SlideEffect-Right--><!--Device-SlideEffect-Right-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## Top
 
 ```TypeScript
-Top = 2
+Top
 ```
 
-设置到入场时表示从上边滑入，出场时表示滑出到上边。
+When set to Enter, slides in from the top. When set to Exit, slides out to the top.
 
 **Since:** 7
 
@@ -60,17 +60,17 @@ Top = 2
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
-<!--Device-SlideEffect-Top = 2--><!--Device-SlideEffect-Top = 2-End-->
+<!--Device-SlideEffect-Top--><!--Device-SlideEffect-Top-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## Bottom
 
 ```TypeScript
-Bottom = 3
+Bottom
 ```
 
-设置到入场时表示从下边滑入，出场时表示滑出到下边。
+When set to Enter, slides in from the bottom. When set to Exit, slides out to the bottom.
 
 **Since:** 7
 
@@ -78,7 +78,7 @@ Bottom = 3
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
-<!--Device-SlideEffect-Bottom = 3--><!--Device-SlideEffect-Bottom = 3-End-->
+<!--Device-SlideEffect-Bottom--><!--Device-SlideEffect-Bottom-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -88,7 +88,7 @@ Bottom = 3
 START = 5
 ```
 
-设置LTR入场时表示从左边滑入，出场时表示滑出到左边。RTL入场时表示从右边滑入，出场时表示滑出到右边。
+Left-to-right scripts: When set to Enter, slides in from the left; when set to Exit, slides out to the left. Right-to-left scripts: When set to Enter, slides in from the right; when set to Exit, slides out to the right.
 
 **Since:** 12
 
@@ -108,7 +108,7 @@ START = 5
 END = 6
 ```
 
-设置LTR入场时表示从右边滑入，出场时表示滑出到右边。RTL入场时表示从左边滑入，出场时表示滑出到左边。
+Left-to-right scripts: When set to Enter, slides in from the right; when set to Exit, slides out to the right. Right-to-left scripts: When set to Enter, slides in from the left; when set to Exit, slides out to the left.
 
 **Since:** 12
 

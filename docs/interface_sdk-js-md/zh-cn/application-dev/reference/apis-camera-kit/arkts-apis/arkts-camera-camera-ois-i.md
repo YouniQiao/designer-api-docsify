@@ -12,12 +12,6 @@ OIS (Optical Image Stabilization) interface.
 
 **系统能力：** SystemCapability.Multimedia.Camera.Core
 
-## 导入模块
-
-```TypeScript
-import { camera } from 'kits/@kit.CameraKit';
-```
-
 ## setOISMode
 
 ```TypeScript
@@ -48,8 +42,8 @@ Sets the OIS mode.
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 7400102 | Operation not allowed, the inputDevice or the session is abnormal. |
-| 7400103 | Session not config. |
+| [7400102](../errorcode-camera.md#7400102-非法操作) | Operation not allowed, the inputDevice or the session is abnormal. |
+| [7400103](../errorcode-camera.md#7400103-会话未配置) | Session not config. |
 
 ## setOISModeCustom
 
@@ -88,6 +82,6 @@ Sets custom OIS bias values for each axis.
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 7400102 | Operation not allowed, the inputDevice or the session is abnormal. |
-| 7400103 | Session not config. |
+| [7400102](../errorcode-camera.md#7400102-非法操作) | Operation not allowed, the inputDevice or the session is abnormal. |
+| [7400103](../errorcode-camera.md#7400103-会话未配置) | Session not config. |
 

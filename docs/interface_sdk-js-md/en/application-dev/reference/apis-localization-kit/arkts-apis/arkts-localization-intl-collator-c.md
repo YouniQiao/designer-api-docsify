@@ -1,10 +1,10 @@
 # Collator
 
-提供字符串排序的能力。
+Provides the string collation capability.
 
-**Since:** 8
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Sta only, since version 23.
 
 <!--Device-intl-export class Collator--><!--Device-intl-export class Collator-End-->
 
@@ -22,13 +22,11 @@ import { intl } from 'kits/@kit.LocalizationKit';
 compare(first: string, second: string): int
 ```
 
-根据配置项的排序规则，比较两个字符串。
+Compares two strings based on the specified collation rules.
 
-**Since:** 8
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
-**Atomic service API:** This API can be used in atomic services since API version 12.
+**ArkTS mode:** ArkTS-Sta only, since version 23.
 
 <!--Device-Collator-compare(first: string, second: string): int--><!--Device-Collator-compare(first: string, second: string): int-End-->
 
@@ -38,25 +36,14 @@ compare(first: string, second: string): int
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| first | string | Yes | 进行比较的第一个字符串。 |
-| second | string | Yes | 进行比较的第二个字符串。 |
+| first | string | Yes | First string to compare. |
+| second | string | Yes | Second string to compare. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| int | 比较结果。 &lt;br&gt;- number为负数时，表示first排序在second之前。 &lt;br&gt;- number为0时，表示first与second排序相同。 &lt;br&gt;- number为正数，表示first排序在second之后。 |
-
-## Examples
-
-```TypeScript
-import { intl } from '@kit.LocalizationKit';
-
-// Create a Collator object with the locale ID being en-GB.
-let collator = new intl.Collator('en-GB');
-// Compare the sequence of the first and second strings.
-let compareResult = collator.compare('first', 'second'); // compareResult = -1
-```
+| int | Comparison result. If the value is a negative number, the first string comes before the second string. If the value is 0, the first and second strings are in the same sequence. If the value is a positive number, the first string is comes after the second string. |
 
 ## constructor
 
@@ -64,26 +51,15 @@ let compareResult = collator.compare('first', 'second'); // compareResult = -1
 constructor()
 ```
 
-使用当前系统区域创建排序对象。
+Creates a Collator object.
 
-**Since:** 8
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
-**Atomic service API:** This API can be used in atomic services since API version 12.
+**ArkTS mode:** ArkTS-Sta only, since version 23.
 
 <!--Device-Collator-constructor()--><!--Device-Collator-constructor()-End-->
 
 **System capability:** SystemCapability.Global.I18n
-
-## Examples
-
-```TypeScript
-import { intl } from '@kit.LocalizationKit';
-
-// Create a Collator object using the current system locale ID.
-let collator = new intl.Collator();
-```
 
 ## constructor
 
@@ -91,13 +67,11 @@ let collator = new intl.Collator();
 constructor(locale: string | Array<string>, options?: CollatorOptions)
 ```
 
-根据指定的区域和配置项创建排序对象。
+Creates a Collator object.
 
-**Since:** 8
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
-**Atomic service API:** This API can be used in atomic services since API version 12.
+**ArkTS mode:** ArkTS-Sta only, since version 23.
 
 <!--Device-Collator-constructor(locale: string | Array<string>, options?: CollatorOptions)--><!--Device-Collator-constructor(locale: string | Array<string>, options?: CollatorOptions)-End-->
 
@@ -107,17 +81,8 @@ constructor(locale: string | Array<string>, options?: CollatorOptions)
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| locale | string \| Array&lt;string&gt; | Yes | 区域ID或区域ID数组。输入是区域ID数组时，使用第一个有效的区域ID。 |
-| options | [CollatorOptions](../../apis-arkts/arkts-apis/arkts-arkts-intl-collatoroptions-i.md) | No | 创建排序对象时可设置的配置项。 &lt;br&gt;默认值：所有属性都取默认值时的配置项。 |
-
-## Examples
-
-```TypeScript
-import { intl } from '@kit.LocalizationKit';
-
-// Create a Collator object with the locale ID being zh-CN, localeMatcher being lookup, and usage being sort.
-let collator = new intl.Collator('zh-CN', {localeMatcher: 'lookup', usage: 'sort'});
-```
+| locale | string \| Array&lt;string&gt; | Yes | Locale ID or locale ID array. If the input is a locale ID array, the first valid locale ID is used. |
+| options | [CollatorOptions](../../apis-arkts/arkts-apis/arkts-arkts-intl-collatoroptions-i.md) | No | Options for creating a Collator object. |
 
 ## resolvedOptions
 
@@ -125,13 +90,11 @@ let collator = new intl.Collator('zh-CN', {localeMatcher: 'lookup', usage: 'sort
 resolvedOptions(): CollatorOptions
 ```
 
-获取创建排序对象时设置的配置项。
+Obtains the options for creating a Collator object.
 
-**Since:** 8
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
-**Atomic service API:** This API can be used in atomic services since API version 12.
+**ArkTS mode:** ArkTS-Sta only, since version 23.
 
 <!--Device-Collator-resolvedOptions(): CollatorOptions--><!--Device-Collator-resolvedOptions(): CollatorOptions-End-->
 
@@ -141,17 +104,5 @@ resolvedOptions(): CollatorOptions
 
 | Type | Description |
 | --- | --- |
-| [CollatorOptions](../../apis-arkts/arkts-apis/arkts-arkts-intl-collatoroptions-i.md) | 返回排序对象的属性。 |
-
-## Examples
-
-```TypeScript
-import { intl } from '@kit.LocalizationKit';
-
-let collator = new intl.Collator('zh-Hans', { usage: 'sort', ignorePunctuation: true });
-// Obtain the options of the Collator object.
-let options = collator.resolvedOptions();
-let usage = options.usage; // usage = 'sort'
-let ignorePunctuation = options.ignorePunctuation; // ignorePunctuation = true
-```
+| [CollatorOptions](../../apis-arkts/arkts-apis/arkts-arkts-intl-collatoroptions-i.md) | Options for creating a Collator object. |
 

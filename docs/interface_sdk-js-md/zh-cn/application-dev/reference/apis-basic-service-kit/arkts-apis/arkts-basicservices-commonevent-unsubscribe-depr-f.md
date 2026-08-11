@@ -41,40 +41,39 @@ let subscribeInfo:CommonEventManager.CommonEventSubscribeInfo = {
 };
 
 // 订阅公共事件回调
-let subscribeCallBack = (err:Base.BusinessError, data:CommonEventManager.CommonEventData) => {
+function subscribeCB(err:Base.BusinessError, data:CommonEventManager.CommonEventData) {
     if (err.code) {
-        console.error(`subscribe failed, code is ${err.code}, message is ${err.message}`);
+        console.error(`subscribe failed, code is ${err.code}`);
     } else {
         console.info("subscribe " + JSON.stringify(data));
     }
 }
 
 // 创建订阅者回调
-let createCallBack = (err:Base.BusinessError, commonEventSubscriber:CommonEventManager.CommonEventSubscriber) => {
+function createCB(err:Base.BusinessError, commonEventSubscriber:CommonEventManager.CommonEventSubscriber) {
     if (err.code) {
-        console.error(`createSubscriber failed, code is ${err.code}, message is ${err.message}`);
+        console.error(`createSubscriber failed, code is ${err.code}`);
     } else {
         console.info("createSubscriber");
         subscriber = commonEventSubscriber;
-         // 订阅公共事件
-        commonEvent.subscribe(subscriber, subscribeCallBack);
+        // Subscribe to a common event.
+        commonEvent.subscribe(subscriber, subscribeCB);
     }
 }
 
 // 取消订阅公共事件回调
-let unsubscribeCallback = (err: Base.BusinessError) => {
+function unsubscribeCB(err:Base.BusinessError) {
     if (err.code) {
-        console.error(`unsubscribe failed, code is ${err.code}, message is ${err.message}`);
+        console.error(`unsubscribe failed, code is ${err.code}`);
     } else {
         console.info("unsubscribe");
     }
 }
 
 // 创建订阅者
-commonEvent.createSubscriber(subscribeInfo, createCallBack);
+commonEvent.createSubscriber(subscribeInfo, createCB);
 
 // 取消订阅公共事件
-// 注意：需在subscriber创建成功后（即createCallBack回调执行后）调用，此处仅展示API用法
-commonEvent.unsubscribe(subscriber, unsubscribeCallback);
+commonEvent.unsubscribe(subscriber, unsubscribeCB);
 ```
 

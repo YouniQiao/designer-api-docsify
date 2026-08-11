@@ -1,6 +1,6 @@
 # AuthStatusInfo (System API)
 
-表示认证状态信息。
+Presents the authentication status information.
 
 **Since:** 10
 
@@ -24,7 +24,7 @@ import { osAccount } from 'kits/@kit.BasicServicesKit';
 freezingTime: int
 ```
 
-冻结时间，单位为ms。
+Freezing time, in milliseconds.
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
@@ -44,7 +44,7 @@ freezingTime: int
 remainTimes: int
 ```
 
-剩余次数。
+Number of remaining times.
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 

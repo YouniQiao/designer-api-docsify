@@ -1,10 +1,11 @@
 # @ohos.application.testRunner
 
-TestRunner模块提供了框架测试的能力。包括准备单元测试环境、运行测试用例。
- 如果您想实现自己的单元测试框架，您必须继承这个类并覆盖它的所有方法。
- > **说明：**
+The **TestRunner** module provides a test framework. You can use the APIs of this module to prepare the unit test
+ environment and run test cases.
+ To implement your own unit test framework, extend this class and override its APIs.
+ > **NOTE**
  >
- > 本模块接口仅可在[单元测试框架](../../../application-test/unittest-guidelines.md)中使用。
+ > The APIs of this module can be used only in [JsUnit](../../../application-test/unittest-guidelines.md).
 
 
 ## Modules to Import
@@ -19,13 +20,13 @@ import { TestRunner } from 'kits/@kit.TestKit';
 
 | Name | Description |
 | --- | --- |
-| [TestRunner](arkts-test-application-testrunner-testrunner-i.md) | TestRunner模块提供了框架测试的能力。包括准备单元测试环境、运行测试用例。如果您想实现自己的单元测试框架，您必须继承这个类并覆盖它的所有方法。 |
+| [TestRunner](arkts-test-application-testrunner-testrunner-i.md) | Base class for the test framework.If you want to implement your own unit test framework, you must inherit this class and overrides all its methods. |
 
 ### Types
 
 | Name | Description |
 | --- | --- |
-| [OnPrepareFn](arkts-test-onpreparefn-t.md) | 为运行测试用例准备单元测试环境。 |
-| [OnRunFn](arkts-test-onrunfn-t.md) | 运行测试用例。 |
-| [OnStopFn](arkts-test-onstopfn-t.md) | 当测试完成时，系统会在测试环境退出前触发该回调。 |
+| [OnPrepareFn](arkts-test-onpreparefn-t.md) | Prepare the unit testing environment for running test cases. |
+| [OnRunFn](arkts-test-onrunfn-t.md) | Run all test cases. |
+| [OnStopFn](arkts-test-onstopfn-t.md) | Stop all test cases. |
 

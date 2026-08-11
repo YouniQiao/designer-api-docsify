@@ -1,6 +1,6 @@
 # IsolatedOptions (System API)
 
-用于在IsolatedComponent构造时传递构造参数。
+Describes the optional construction parameters during **IsolatedComponent** construction.
 
 **Since:** 12
 
@@ -18,7 +18,7 @@
 want: Want
 ```
 
-要加载的Abc信息。Want对象的parameters中需包含以下字段：&lt;br/&gt;resourcePath：资源路径，需为.hap文件路径；&lt;br/&gt;abcPath：经verifyAbc校验后的Abc文件路径，需以'/abcs'开头；&lt;br/&gt;entryPoint：Abc入口，格式为'bundleName/页面路径'。
+.abc file information to load.
 
 **Type:** [Want](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-want-want-c.md)
 
@@ -40,7 +40,7 @@ want: Want
 worker: RestrictedWorker
 ```
 
-运行Abc的受限Worker。
+Restricted Worker thread where the .abc file is running.
 
 **Type:** [RestrictedWorker](../../apis-arkts/arkts-apis/arkts-arkts-worker-restrictedworker-c-sys.md)
 

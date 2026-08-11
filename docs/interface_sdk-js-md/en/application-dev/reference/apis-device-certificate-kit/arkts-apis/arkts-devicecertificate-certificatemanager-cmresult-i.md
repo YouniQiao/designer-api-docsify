@@ -1,6 +1,6 @@
 # CMResult
 
-表示接口的返回结果。
+Represents the result returned.
 
 **Since:** 11
 
@@ -22,7 +22,7 @@ import { certificateManager } from 'kits/@kit.DeviceCertificateKit';
 appUidList?: Array<string>
 ```
 
-表示授权应用列表。
+List of authorized applications.
 
 **Type:** Array&lt;string&gt;
 
@@ -40,7 +40,7 @@ appUidList?: Array<string>
 certInfo?: CertInfo
 ```
 
-表示证书详情。
+Detailed certificate information.
 
 **Type:** [CertInfo](arkts-devicecertificate-certificatemanager-certinfo-i.md)
 
@@ -58,7 +58,7 @@ certInfo?: CertInfo
 certList?: Array<CertAbstract>
 ```
 
-表示证书简要信息的列表。
+Brief certificate information.
 
 **Type:** Array&lt;CertAbstract&gt;
 
@@ -76,7 +76,7 @@ certList?: Array<CertAbstract>
 credential?: Credential
 ```
 
-表示凭据详情。
+Detailed credential information.
 
 **Type:** [Credential](arkts-devicecertificate-certificatemanager-credential-i.md)
 
@@ -94,7 +94,7 @@ credential?: Credential
 credentialDetailList?: Array<Credential>
 ```
 
-表示凭据详细信息。
+Represents detailed information about a credential.
 
 **Type:** Array&lt;Credential&gt;
 
@@ -112,7 +112,7 @@ credentialDetailList?: Array<Credential>
 credentialList?: Array<CredentialAbstract>
 ```
 
-表示凭据简要信息的列表。
+Brief credential information.
 
 **Type:** Array&lt;CredentialAbstract&gt;
 
@@ -130,7 +130,7 @@ credentialList?: Array<CredentialAbstract>
 outData?: Uint8Array
 ```
 
-表示签名结果。
+Signature generated.
 
 **Type:** Uint8Array
 
@@ -148,7 +148,7 @@ outData?: Uint8Array
 uri?: string
 ```
 
-表示证书或凭据的唯一标识符，最大长度为256字节。
+Unique identifier of a certificate or credential. The value contains up to 256 bytes.
 
 **Type:** string
 
@@ -166,7 +166,8 @@ uri?: string
 uriList?: Array<string>
 ```
 
-表示证书URI列表。26.0.0
+Certificate URI list.  
+**Since**: 26.0.0
 
 **Type:** Array&lt;string&gt;
 

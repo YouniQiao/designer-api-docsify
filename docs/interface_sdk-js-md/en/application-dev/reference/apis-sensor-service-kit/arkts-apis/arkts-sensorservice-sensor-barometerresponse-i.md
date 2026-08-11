@@ -1,6 +1,6 @@
 # BarometerResponse
 
-气压计传感器数据，继承于[Response](arkts-sensorservice-sensor-response-i.md)。
+Describes the barometer sensor data. It extends from [Response](arkts-sensorservice-sensor-response-i.md).
 
 **Inheritance/Implementation:** BarometerResponse extends [Response](arkts-sensorservice-sensor-response-i.md)
 
@@ -24,7 +24,7 @@ import { sensor } from 'kits/@kit.SensorServiceKit';
 pressure: double
 ```
 
-大气压力值。单位：hPa（百帕）。
+Atmospheric pressure, in units of hPa.
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：double
 

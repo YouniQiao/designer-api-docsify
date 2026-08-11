@@ -22,7 +22,7 @@ direction?: PanDirection
 
 默认值：PanDirection.All
 
-**类型：** [PanDirection](arkts-arkui-gesture-pandirection-e.md)
+**类型：** [PanDirection](arkts-arkui-pandirection-e.md)
 
 **起始版本：** 12
 

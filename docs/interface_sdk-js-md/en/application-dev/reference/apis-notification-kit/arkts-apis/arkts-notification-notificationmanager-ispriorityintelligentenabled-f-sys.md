@@ -12,7 +12,7 @@ import { notificationManager } from 'kits/@kit.NotificationKit';
 function isPriorityIntelligentEnabled(): Promise<boolean>
 ```
 
-获取优先通知智能服务使能状态。使用Promise异步回调。
+Obtains whether the intelligent priority notification service is enabled. This API uses a promise to return the result.
 
 **Since:** 23
 
@@ -32,17 +32,17 @@ function isPriorityIntelligentEnabled(): Promise<boolean>
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;boolean&gt; | Promise对象，返回包含优先通知智能服务使能状态的Promise对象。 &lt;br&gt; - true：优先通知智能服务为打开状态。 &lt;br&gt; - false：优先通知智能服务为关闭状态。 |
+| Promise&lt;boolean&gt; | Promise that contains the enabling status of the intelligent priority notification service. &lt;br&gt; - **true**: The intelligent priority notification service is enabled. &lt;br&gt; - **false**: The intelligent priority notification service is disabled. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 1600012 | No memory space. |
-| 201 | Permission denied. |
-| 1600001 | Internal error. |
-| 202 | Not system application to call the interface. |
-| 1600003 | Failed to connect to the service. |
+| [1600012](../errorcode-notification.md#1600012-insufficient-memory-space) | No memory space. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
+| [1600001](../errorcode-notification.md#1600001-internal-error) | Internal error. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system application to call the interface. |
+| [1600003](../errorcode-notification.md#1600003-failed-to-connect-to-the-notification-service) | Failed to connect to the service. |
 
 ## Examples
 

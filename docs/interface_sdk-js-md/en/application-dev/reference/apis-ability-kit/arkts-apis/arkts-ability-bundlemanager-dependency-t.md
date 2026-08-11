@@ -4,7 +4,7 @@
 export type Dependency = _HapModuleInfo.Dependency
 ```
 
-模块所依赖的动态共享库信息。
+Defines the information about the dynamic shared libraries on which the module depends.
 
 **Since:** 9
 

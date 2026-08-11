@@ -1,6 +1,6 @@
 # NotificationFilter (System API)
 
-描述查询普通实况窗时的筛选条件。
+Describes the filter criteria for querying the live view.
 
 **Since:** 11
 
@@ -18,7 +18,7 @@
 bundle: BundleOption
 ```
 
-实况通知的包信息。
+Bundle information of the live view.
 
 **Type:** [BundleOption](arkts-notification-notificationcommondef-bundleoption-i.md)
 
@@ -38,7 +38,7 @@ bundle: BundleOption
 extraInfoKeys?: Array<string>
 ```
 
-筛选附加信息的键值列表。不填表示查询所有的附加信息。
+List of extra keys. If this parameter is left empty, all extra information is included.
 
 **Type:** Array&lt;string&gt;
 
@@ -58,7 +58,7 @@ extraInfoKeys?: Array<string>
 notificationKey: notificationSubscribe.NotificationKey
 ```
 
-通知信息，包含通知ID和通知标签。
+Notification information, including the notification ID and label.
 
 **Type:** notificationSubscribe.NotificationKey
 

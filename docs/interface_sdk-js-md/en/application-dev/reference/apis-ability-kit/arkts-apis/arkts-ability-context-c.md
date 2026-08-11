@@ -1,6 +1,6 @@
 # Context
 
-Context是Stage模型的上下文基类，主要用于访问特定应用程序的资源，以及执行应用级操作的回调。
+Context is the context base class of the stage model. It is used to access application-specific resources and perform callbacks for application-level operations.../../../
 
 **Inheritance/Implementation:** Context extends [BaseContext](arkts-ability-basecontext-c.md)
 
@@ -18,7 +18,7 @@ Context是Stage模型的上下文基类，主要用于访问特定应用程序�
 createAreaModeContext(areaMode: contextConstant.AreaMode): Context
 ```
 
-创建特定数据加密级别的应用上下文。开发者可以调用该接口创建不同加密级别的上下文，从而获取对应的沙箱路径。
+Creates an application context with a specific data encryption level. You can call this API to create contexts with different encryption levels, thereby obtaining the corresponding sandbox paths.
 
 **Since:** 18
 
@@ -36,13 +36,13 @@ createAreaModeContext(areaMode: contextConstant.AreaMode): Context
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| areaMode | contextConstant.AreaMode | Yes | 指定的数据加密等级。 |
+| areaMode | contextConstant.AreaMode | Yes | Data encryption level. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [Context](../../apis-mind-spore-lite-kit/arkts-apis/arkts-mindsporelite-mindsporelite-context-i.md) | 指定数据加密等级的上下文。 |
+| [Context](../../apis-mind-spore-lite-kit/arkts-apis/arkts-mindsporelite-mindsporelite-context-i.md) | Context created based on the data encryption level. |
 
 ## createDisplayContext
 
@@ -56,8 +56,9 @@ ArkTS-Sta:
 createDisplayContext(displayId: long): Context
 ```
 
-根据指定的物理屏幕ID创建带有屏幕信息（包括屏幕密度[ScreenDensity](../../apis-localization-kit/arkts-apis/arkts-localization-resourcemanager-screendensity-e.md/arkts-localization-resourcemanager-screendensity-e.md)和屏幕方向  
-[Direction](../../apis-localization-kit/arkts-apis/arkts-localization-resourcemanager-direction-e.md/arkts-localization-resourcemanager-direction-e.md)）的应用上下文。
+Creates an application context based on the specified display ID with screen information (including  
+[ScreenDensity](../../apis-localization-kit/arkts-apis/arkts-localization-resourcemanager-screendensity-e.md/arkts-localization-resourcemanager-screendensity-e.md) and  
+[Direction](../../apis-localization-kit/arkts-apis/arkts-localization-resourcemanager-direction-e.md/arkts-localization-resourcemanager-direction-e.md)).
 
 **Since:** 15
 
@@ -75,19 +76,19 @@ createDisplayContext(displayId: long): Context
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| displayId | ArkTS-Dyn: number  <br>ArkTS-Sta：long | Yes | 物理屏幕ID。 |
+| displayId | ArkTS-Dyn: number  <br>ArkTS-Sta：long | Yes | Display ID. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [Context](../../apis-mind-spore-lite-kit/arkts-apis/arkts-mindsporelite-mindsporelite-context-i.md) | 带有指定物理屏幕信息的上下文。 |
+| [Context](../../apis-mind-spore-lite-kit/arkts-apis/arkts-mindsporelite-mindsporelite-context-i.md) | Context with the specified screen information. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. |
 
 ## createModuleContext
 
@@ -95,12 +96,20 @@ createDisplayContext(displayId: long): Context
 createModuleContext(moduleName: string): Context
 ```
 
-根据模块名创建上下文。
+Creates the context based on the module name.
 
-> **说明：**
+> **NOTE：**
 > 
-> - 仅支持获取本应用中其他Module的Context和应用内HSP的Context，不支持获取其他应用的Context。
-> - 由于创建模块上下文的过程涉及资源查询与初始化，耗时相对较长，在对应用流畅性要求较高的场景下，不建议频繁或多次调用createModuleContext接口创建多个Context实例，以免影响用户体验。
+> - Only the context of other modules in the current application and the context of the intra-application HSP can
+> be obtained. The context of other applications cannot be obtained.
+> 
+> - This API has been supported since API version 9 and deprecated since API version 12. You are advised to use
+> [application.createModuleContext](arkts-ability-application-createmodulecontext-f.md#createmodulecontext)
+> instead. Otherwise, resource acquisition may fail.
+> 
+> - Creating a module context involves resource querying and initialization, which can be time-consuming. In
+> scenarios where application fluidity is critical, avoid frequently or repeatedly calling the
+> **createModuleContext** API to create multiple context instances, as this may negatively impact user experience.
 
 **Since:** 9
 
@@ -122,19 +131,19 @@ createModuleContext(moduleName: string): Context
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| moduleName | string | Yes | 模块名。 |
+| moduleName | string | Yes | Module name. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [Context](../../apis-mind-spore-lite-kit/arkts-apis/arkts-mindsporelite-mindsporelite-context-i.md) | 模块的上下文。 |
+| [Context](../../apis-mind-spore-lite-kit/arkts-apis/arkts-mindsporelite-mindsporelite-context-i.md) | Context created. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. |
 
 ## getApplicationContext
 
@@ -142,7 +151,7 @@ createModuleContext(moduleName: string): Context
 getApplicationContext(): ApplicationContext
 ```
 
-获取当前应用上下文。
+Obtains the application context.
 
 **Since:** 9
 
@@ -160,13 +169,13 @@ getApplicationContext(): ApplicationContext
 
 | Type | Description |
 | --- | --- |
-| [ApplicationContext](arkts-ability-applicationcontext-c.md) | 应用上下文。 |
+| [ApplicationContext](arkts-ability-applicationcontext-c.md) | Application context. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified. 2 .Incorrect parameter types. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified. 2 .Incorrect parameter types. |
 
 ## getGroupDir
 
@@ -174,7 +183,7 @@ getApplicationContext(): ApplicationContext
 getGroupDir(dataGroupID: string, callback: AsyncCallback<string>): void
 ```
 
-通过应用中的Group ID获取对应的共享目录，使用callback异步回调。
+Obtains the shared directory based on a group ID. This API uses an asynchronous callback to return the result.
 
 **Since:** 10
 
@@ -192,15 +201,15 @@ getGroupDir(dataGroupID: string, callback: AsyncCallback<string>): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| dataGroupID | string | Yes | 原子化服务类型的应用创建时，系统会指定分配唯一Group ID。 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;string&gt; | Yes | 回调函数。当获取共享目录成功，err为undefined，data为对应的共享目录，如果不存在则返回为空；否则为错误对象。&lt;br&gt;**说明：**仅支持应用el2加密级别。 |
+| dataGroupID | string | Yes | Group ID, which is assigned by the system when an application of the atomic service type is created. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;string&gt; | Yes | Callback used to return the result. If the API call is successful, **err** is **undefined** and **data** is the shared directory obtained (or empty if or is empty if non-existent ). Otherwise, an error object is returned.&lt;br&gt;Note: Only the EL2 encryption level is supported. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. |
-| 16000011 | The context does not exist. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. |
+| [16000011](../errorcode-ability.md#16000011-context-does-not-exist) | The context does not exist. |
 
 ## getGroupDir
 
@@ -208,7 +217,7 @@ getGroupDir(dataGroupID: string, callback: AsyncCallback<string>): void
 getGroupDir(dataGroupID: string): Promise<string>
 ```
 
-通过应用中的Group ID获取对应的共享目录，使用Promise异步回调。
+Obtains the shared directory based on a group ID. This API uses a promise to return the result.
 
 **Since:** 10
 
@@ -226,20 +235,20 @@ getGroupDir(dataGroupID: string): Promise<string>
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| dataGroupID | string | Yes | 原子化服务类型的应用创建时，系统会指定分配唯一Group ID。 |
+| dataGroupID | string | Yes | Group ID, which is assigned by the system when an application of the atomic service type is created. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;string&gt; | Promise对象，返回对应的共享目录。如果不存在则返回为空，仅支持应用el2加密级别。 |
+| Promise&lt;string&gt; | Promise used to return the result. If no shared directory exists, null is returned. Only the encryption level EL2 is supported. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified. 2 .Incorrect parameter types. |
-| 16000011 | The context does not exist. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified. 2 .Incorrect parameter types. |
+| [16000011](../errorcode-ability.md#16000011-context-does-not-exist) | The context does not exist. |
 
 ## isContextOf
 
@@ -247,7 +256,7 @@ getGroupDir(dataGroupID: string): Promise<string>
 isContextOf(contextType: contextConstant.ContextType): boolean
 ```
 
-判断当前Context是否为指定的ContextType类型。
+Checks if the current instance is associated with the specified context type.
 
 **Since:** 26.0.0
 
@@ -265,13 +274,13 @@ isContextOf(contextType: contextConstant.ContextType): boolean
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| contextType | contextConstant.ContextType | Yes | 上下文类型。 |
+| contextType | contextConstant.ContextType | Yes | Indicates the context type. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| boolean | 是否为指定类型的上下文。返回true表示Context类型为指定类型，返回false表示Context类型匹配失败。 |
+| boolean | Returns { |
 
 ## applicationInfo
 
@@ -279,7 +288,7 @@ isContextOf(contextType: contextConstant.ContextType): boolean
 applicationInfo: ApplicationInfo
 ```
 
-当前应用程序的信息。
+Application information.
 
 **Type:** [ApplicationInfo](arkts-ability-applicationinfo-i.md)
 
@@ -301,7 +310,8 @@ applicationInfo: ApplicationInfo
 area: contextConstant.AreaMode
 ```
 
-文件分区信息，按加密等级[AreaMode](arkts-ability-contextconstant-areamode-e.md)进行分区。
+Information about file partitions, which are divided according to the encryption level specified by  
+[AreaMode](arkts-ability-contextconstant-areamode-e.md).
 
 **Type:** contextConstant.AreaMode
 
@@ -323,8 +333,7 @@ area: contextConstant.AreaMode
 bundleCodeDir: string
 ```
 
-安装包目录。不能拼接路径访问资源文件，请使用[资源管理接口](arkts-ability-context-c.md#resourcemanager)访问资源，详情参考  
-[应用沙箱目录](../../../file-management/app-sandbox-directory.md)。
+Bundle code directory. Do not access resource files using concatenated paths.Use [resource manager APIs](arkts-ability-context-c.md#resourcemanager) instead.For details, see [Application Sandbox](../../../file-management/app-sandbox-directory.md).
 
 **Type:** string
 
@@ -346,7 +355,7 @@ bundleCodeDir: string
 cacheDir: string
 ```
 
-缓存目录，详情参考[应用沙箱目录](../../../file-management/app-sandbox-directory.md)。
+Cache directory.For details, see [Application Sandbox](../../../file-management/app-sandbox-directory.md).
 
 **Type:** string
 
@@ -368,7 +377,7 @@ cacheDir: string
 cloudFileDir: string
 ```
 
-云文件目录。
+Cloud file directory.
 
 **Type:** string
 
@@ -390,7 +399,7 @@ cloudFileDir: string
 databaseDir: string
 ```
 
-数据库目录，详情参考[应用沙箱目录](../../../file-management/app-sandbox-directory.md)。
+Database directory.For details, see [Application Sandbox](../../../file-management/app-sandbox-directory.md).
 
 **Type:** string
 
@@ -412,7 +421,7 @@ databaseDir: string
 distributedFilesDir: string
 ```
 
-分布式文件目录，详情参考[应用沙箱目录](../../../file-management/app-sandbox-directory.md)。
+Distributed file directory.For details, see [Application Sandbox](../../../file-management/app-sandbox-directory.md).
 
 **Type:** string
 
@@ -434,7 +443,7 @@ distributedFilesDir: string
 eventHub: EventHub
 ```
 
-事件中心，提供订阅、取消订阅、触发事件对象。
+Event hub that implements event subscription, unsubscription, and triggering.
 
 **Type:** [EventHub](arkts-ability-eventhub-c.md)
 
@@ -456,7 +465,7 @@ eventHub: EventHub
 filesDir: string
 ```
 
-文件目录，详情参考[应用沙箱目录](../../../file-management/app-sandbox-directory.md)。
+File directory.For details, see [Application Sandbox](../../../file-management/app-sandbox-directory.md).
 
 **Type:** string
 
@@ -478,7 +487,7 @@ filesDir: string
 get logFileDir(): string
 ```
 
-日志文件目录。
+Directory for storing log files.
 
 **Type:** string
 
@@ -500,7 +509,7 @@ get logFileDir(): string
 preferencesDir: string
 ```
 
-preferences目录，详情参考[应用沙箱目录](../../../file-management/app-sandbox-directory.md)。
+Preferences directory.For details, see [Application Sandbox](../../../file-management/app-sandbox-directory.md).
 
 **Type:** string
 
@@ -522,7 +531,7 @@ preferences目录，详情参考[应用沙箱目录](../../../file-management/ap
 processName: string
 ```
 
-当前应用的进程名。
+Process name of the current application.
 
 **Type:** string
 
@@ -544,11 +553,12 @@ processName: string
 resourceDir: string
 ```
 
-资源目录。
+Resource directory.
 
-> **说明：**
+> **NOTE: **
 > 
-> 需要开发者手动在`\&lt;module-name&gt;\resource`路径下创建`resfile`目录。创建的`resfile`目录仅支持以只读方式访问。
+> You are required to manually create the resfile directory in **&lt;module-name&gt;\resource**.
+> The **resfile** directory can be accessed only in read-only mode.
 
 **Type:** string
 
@@ -570,7 +580,7 @@ resourceDir: string
 resourceManager: resmgr.ResourceManager
 ```
 
-资源管理对象。
+Object for resource management.
 
 **Type:** resmgr.ResourceManager
 
@@ -592,7 +602,7 @@ resourceManager: resmgr.ResourceManager
 tempDir: string
 ```
 
-临时目录，详情参考[应用沙箱目录](../../../file-management/app-sandbox-directory.md)。
+Temporary directory.For details, see [Application Sandbox](../../../file-management/app-sandbox-directory.md).
 
 **Type:** string
 

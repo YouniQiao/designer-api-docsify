@@ -1,6 +1,6 @@
 # PlaneGeometry
 
-定义平面.
+Define a plane.
 
 **Inheritance/Implementation:** PlaneGeometry extends [GeometryDefinition](arkts-arkgraphics3d-scenetypes-geometrydefinition-c.md)
 
@@ -18,7 +18,7 @@
 set size(value: Vec2)
 ```
 
-平面的宽和长, 单位为世界坐标系下的场景单位（例如cm、m、km等）.
+The width and length of the plane, the unit is the scene unit in the world coordinate system (e.g., cm, m, km).
 
 **Type:** [Vec2](arkts-arkgraphics3d-scenetypes-vec2-i.md)
 

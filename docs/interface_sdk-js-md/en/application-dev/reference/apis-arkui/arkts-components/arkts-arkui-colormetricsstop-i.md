@@ -1,6 +1,6 @@
 # ColorMetricsStop
 
-线性渐变颜色断点类型，用于描述渐进色颜色断点。
+Describes the breakpoint of the gradient color.
 
 **Since:** 23
 
@@ -16,7 +16,7 @@
 color: ColorMetrics
 ```
 
-线性渐变颜色断点的颜色值。
+Color value of the linear gradient color breakpoint.
 
 **Type:** [ColorMetrics](../arkts-apis/arkts-arkui-graphics-colormetrics-c.md)
 
@@ -38,11 +38,11 @@ color: ColorMetrics
 offset: Length
 ```
 
-线性渐变颜色断点的断点值，取值为0~1之间的比例值。小于0置为0，大于1置为1。 
+Value of the linear gradient color stop. The value is a proportion ranging from 0 to 1. If a value less than 0 is passed, the value is set to **0**. If a value greater than 1 is passed, the value is set to **1**.
 
-**说明：**
+**NOTE：**
 
-如果传入字符串类型且内容为数字，则转换为对应的数值。例如'10vp'转换为10，'10%'转换为0.1。
+If the value is a string that represents a number, it will be converted to a number. For example, **'10vp'** is converted to **10**, and **'10%'** is converted to **0.1**.
 
 **Type:** [Length](../arkts-apis/arkts-arkui-length-t.md)
 

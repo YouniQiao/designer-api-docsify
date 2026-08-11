@@ -1,11 +1,5 @@
 # revokePermission
 
-## 导入模块
-
-```TypeScript
-import { fileShare } from 'kits/@kit.CoreFileKit';
-```
-
 ## revokePermission
 
 ```TypeScript
@@ -40,10 +34,10 @@ function revokePermission(policies: Array<PolicyInfo>): Promise<void>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 401 | Parameter error.Possible causes:1.Mandatory parameters are left unspecified; &lt;br&gt;2.Incorrect parameter types. |
-| 801 | Capability not supported. |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error.Possible causes:1.Mandatory parameters are left unspecified; &lt;br&gt;2.Incorrect parameter types. |
+| [801](../../errorcode-universal.md#801-该设备不支持此api) | Capability not supported. |
 | 13900001 | Operation not permitted. |
-| 201 | Permission verification failed, usually the result returned by VerifyAccessToken. |
+| [201](../../errorcode-universal.md#201-权限校验失败) | Permission verification failed, usually the result returned by VerifyAccessToken. |
 | 13900042 | Out of memory |
 
 ## 示例

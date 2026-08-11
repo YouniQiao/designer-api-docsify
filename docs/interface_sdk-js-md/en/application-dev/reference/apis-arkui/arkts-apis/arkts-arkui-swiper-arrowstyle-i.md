@@ -16,7 +16,7 @@ Arrow object.
 arrowColor?: ResourceColor
 ```
 
-设置箭头颜色。默认值： '#182431'，深灰色。
+The arrow color.Default value: '# 182431', Dark Grey.
 
 **Type:** [ResourceColor](arkts-arkui-resourcecolor-t.md)
 
@@ -38,7 +38,7 @@ arrowColor?: ResourceColor
 arrowSize?: Length
 ```
 
-设置箭头大小。在导航点两侧显示时：在导航点两侧显示时：默认值：18vp在组件两侧显示时：默认值：24vp。
+The arrow size.The arrow size can be set, when the background is not displayed.The size of the arrow is three-quarters of the background size, when the background is displayed.When displayed on either side of a navigation point:Default value: 18vp When displayed on both sides of the component:Default value: 24vp.
 
 **Type:** [Length](arkts-arkui-length-t.md)
 
@@ -60,7 +60,7 @@ arrowSize?: Length
 backgroundColor?: ResourceColor
 ```
 
-设置底板颜色。在导航点两侧显示：透明色.在组件两侧显示：默认值：'#19182431'，半透明深灰色。 默认值： '#00000000'。
+The arrow background background color.Default value: '# 00000000'.
 
 **Type:** [ResourceColor](arkts-arkui-resourcecolor-t.md)
 
@@ -82,7 +82,7 @@ backgroundColor?: ResourceColor
 backgroundSize?: Length
 ```
 
-设置底板大小。不支持设置百分比。&lt;br&gt;在导航点两侧显示：默认值：24vp在组件两侧显示：默认值：32vp。
+The arrow background size.The size of the arrow is three-quarters of the background size, when the background is displayed.The percentage cannot be set.&lt;br&gt;Displays on either side of the navigation point:Default value: 24vp Displayed on both sides of the component:Default value: 32vp.
 
 **Type:** [Length](arkts-arkui-length-t.md)
 
@@ -104,7 +104,7 @@ backgroundSize?: Length
 isSidebarMiddle?: boolean
 ```
 
-设置箭头显示位置。true：箭头居中显示在Swiper组件两侧；false：箭头显示在导航点指示器两侧。默认值： false。
+When the indicator show, set the arrow position is side of the indicator or in the middle of content area.The arrow is displayed on side of the indicator, if the value is false.Default value: false.
 
 **Type:** boolean
 
@@ -126,7 +126,7 @@ isSidebarMiddle?: boolean
 showBackground?: boolean
 ```
 
-设置箭头底板是否显示。true：箭头底板显示；false：箭头底板不显示。默认值： false。
+Is show the arrow background or not.Default value: false.
 
 **Type:** boolean
 

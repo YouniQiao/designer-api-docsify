@@ -12,15 +12,12 @@ import { zlib } from 'kits/@kit.BasicServicesKit';
 function unzipFile(inFile: string, outFile: string, options: Options): Promise<void>
 ```
 
-解压文件，解压完成后返回执行结果。使用Promise异步回调。
+Unzips a file. The execution result is returned after the decompression is complete. This API uses a promise to return the result.
 
-> **说明：**
+> **NOTE：**
 > 
-> 从API version 7开始支持，从API version 9开始废弃。建议使用
-> [zlib.decompressFile](arkts-basicservices-zlib-decompressfile-f.md#decompressfile)
-> 替代。
-> 
-> 传入的压缩包内部文件或者文件夹名称不能包含“../”，否则会返回-1错误码。
+> The name of the zipped file or zipped folder cannot contain two consecutive periods and a slash (../). Otherwise,
+> the error code -1 is returned.
 
 **Since:** 7
 
@@ -38,15 +35,15 @@ function unzipFile(inFile: string, outFile: string, options: Options): Promise<v
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| inFile | string | Yes | 指定的待解压缩文件的文件路径，路径必须为沙箱路径，沙箱路径可以通过context获取，可参考[FA模型](../../apis-ability-kit/arkts-apis/arkts-ability-context-t.md/arkts-ability-context-t.md)， [Stage模型](../../apis-ability-kit/arkts-apis/arkts-ability-context-t.md/arkts-ability-context-t.md)。如果待解压的.zip文件中包含中文的文件名或目录名，需使用UTF8进行编码，避免解压时文件名或目录名出现中文乱码。 |
-| outFile | string | Yes | 指定的解压文件路径。 |
-| options | [Options](arkts-basicservices-zlib-options-i.md) | Yes | 解压的可选参数。 |
+| inFile | string | Yes | Path of the file to unzip. The path must be an application sandbox path, which can be obtained from the context. For details about the context, see [FA Model](../../apis-ability-kit/arkts-apis/arkts-ability-context-t.md/arkts-ability-context-t.md) and [Stage Model](../../apis-ability-kit/arkts-apis/arkts-ability-context-t.md/arkts-ability-context-t.md). If the.zip file to be unzipped contains Chinese file names or folder names, use UTF-8 to encode them. Otherwise, garbled characters may be displayed after unzipping. |
+| outFile | string | Yes | Path of the unzipped file. |
+| options | [Options](arkts-basicservices-zlib-options-i.md) | Yes | Optional parameters for the unzip operation. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise对象，无返回值。 |
+| Promise&lt;void&gt; | Promise that returns no value. |
 
 ## Examples
 

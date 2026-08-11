@@ -6,7 +6,7 @@
 declare function getInspectorNodes(): object
 ```
 
-获取inspector节点信息。
+Get inspector node infos.
 
 **Since:** 7
 

@@ -1,11 +1,5 @@
 # requestTrace
 
-## 导入模块
-
-```TypeScript
-import { hidebug } from 'kits/@kit.PerformanceAnalysisKit';
-```
-
 ## requestTrace
 
 ```TypeScript
@@ -42,9 +36,9 @@ function requestTrace(config: RequestTraceConfig): Promise<string>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 11400302 | Resource unavailable. |
-| 11400104 | Remote service exception. |
-| 11400120 | Trace storage limit reached. |
+| [11400302](../errorcode-hiviewdfx-hidebug-trace.md#11400302-trace采集超出资源配额) | Resource unavailable. |
+| [11400104](../errorcode-hiviewdfx-hidebug-cpuusage.md#11400104-cpuusage统计异常) | Remote service exception. |
+| [11400120](../errorcode-hiviewdfx-hidebug-trace.md#11400120-trace文件存储达到限制) | Trace storage limit reached. |
 
 ## 示例
 

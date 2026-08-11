@@ -12,13 +12,8 @@ import { image } from 'kits/@kit.ImageKit';
 function createImageCreator(width: number, height: number, format: number, capacity: number): ImageCreator
 ```
 
-通过宽、高、图片格式、容量创建ImageCreator实例。
-
-由于图片占用内存较大，所以当ImageCreator实例使用完成后，应主动调用[release](arkts-image-image-imagecreator-i.md#release)方法及时释放内存。释放时应确保该实例的所有异步方法均执行完成，且后续不再使用该实例。
-
-> **说明：**
-> 
-> 从API version 9开始支持，从API version 11废弃，建议使用[createImageCreator](arkts-image-image-createimagecreator-f.md#createimagecreator)代替。
+Creates an ImageCreator instance by specifying the image width, height, format, and capacity.Images occupy a large amount of memory. When you finish using an ImageCreator instance, call   
+[release](arkts-image-image-imagecreator-i.md#release) to free the memory promptly. Before releasing the instance, ensure that all asynchronous operations associated with the instance have finished and the instance is no longer needed.
 
 **Since:** 9
 
@@ -36,16 +31,16 @@ function createImageCreator(width: number, height: number, format: number, capac
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| width | number | Yes | 图像的默认宽度。单位：像素（px）。 |
-| height | number | Yes | 图像的默认高度。单位：像素（px）。 |
-| format | number | Yes | 图像格式，如YCBCR_422_SP，JPEG。 |
-| capacity | number | Yes | 同时访问的最大图像数。该参数仅作为期望值，实际capacity由设备硬件决定。 |
+| width | number | Yes | Default image width, in px. |
+| height | number | Yes | Default image height, in px. |
+| format | number | Yes | Image format, for example, YCBCR_422_SP or JPEG. |
+| capacity | number | Yes | Maximum number of images that can be accessed at the same time. This parameter is used only as an expected value. The actual capacity is determined by the device hardware. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [ImageCreator](arkts-image-image-imagecreator-i.md) | 如果操作成功，则返回ImageCreator实例。 |
+| [ImageCreator](arkts-image-image-imagecreator-i.md) | ImageCreator instance. |
 
 ## Examples
 
@@ -60,9 +55,8 @@ let creator: image.ImageCreator = image.createImageCreator(8192, 8192, image.Ima
 function createImageCreator(size: Size, format: ImageFormat, capacity: int): ImageCreator
 ```
 
-通过图片大小、图片格式、容量创建ImageCreator实例。
-
-由于图片占用内存较大，所以当ImageCreator实例使用完成后，应主动调用[release](arkts-image-image-imagecreator-i.md#release)方法及时释放内存。释放时应确保该实例的所有异步方法均执行完成，且后续不再使用该实例。
+Creates an ImageCreator instance by specifying the image size, format, and capacity.Images occupy a large amount of memory. When you finish using an ImageCreator instance, call   
+[release](arkts-image-image-imagecreator-i.md#release) to free the memory promptly. Before releasing the instance, ensure that all asynchronous operations associated with the instance have finished and the instance is no longer needed.
 
 **Since:** 11
 
@@ -76,21 +70,21 @@ function createImageCreator(size: Size, format: ImageFormat, capacity: int): Ima
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| size | [Size](../../apis-arkui/arkts-apis/arkts-arkui-window-size-i.md) | Yes | 图像的默认大小。单位：像素（px）。 |
-| format | [ImageFormat](arkts-image-image-imageformat-e.md) | Yes | 图像格式，如YCBCR_422_SP，JPEG。 |
-| capacity | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | 同时访问的最大图像数。该参数仅作为期望值，实际capacity由设备硬件决定。 |
+| size | [Size](../../apis-arkui/arkts-apis/arkts-arkui-window-size-i.md) | Yes | Default size of the image. |
+| format | [ImageFormat](arkts-image-image-imageformat-e.md) | Yes | Image format, for example, YCBCR_422_SP or JPEG. |
+| capacity | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | Maximum number of images that can be accessed at the same time. This parameter is used only as an expected value. The actual capacity is determined by the device hardware. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [ImageCreator](arkts-image-image-imagecreator-i.md) | 如果操作成功，则返回ImageCreator实例。 |
+| [ImageCreator](arkts-image-image-imagecreator-i.md) | ImageCreator instance. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types; |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types; |
 
 ## Examples
 

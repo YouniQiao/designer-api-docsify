@@ -168,7 +168,7 @@ backgroundEffect?: BackgroundEffectOptions
 
 背景效果参数。默认值请参考BackgroundEffectOptions类型说明。
 
-**类型：** [BackgroundEffectOptions](../arkts-components/arkts-arkui-backgroundeffectoptions-i.md)
+**类型：** [BackgroundEffectOptions](arkts-arkui-common-backgroundeffectoptions-i.md)
 
 **起始版本：** 19
 
@@ -226,7 +226,7 @@ borderStyle?: BorderStyle | EdgeStyles
 
 如果使用borderStyle属性，需要和borderWidth属性一起使用。
 
-**类型：** [BorderStyle](arkts-arkui-enums-borderstyle-e.md) \| EdgeStyles
+**类型：** [BorderStyle](arkts-arkui-borderstyle-e.md) \| EdgeStyles
 
 **默认值：** BorderStyle.Solid - borderStyle must be used with borderWidth in pairs.
 
@@ -432,7 +432,7 @@ immersiveMode?: ImmersiveMode
 - 默认值：ImmersiveMode.DEFAULT   
 - 当且仅当levelMode属性设置为LevelMode.EMBEDDED时生效。
 
-**类型：** [ImmersiveMode](arkts-arkui-promptaction-immersivemode-e.md)
+**类型：** [ImmersiveMode](arkts-arkui-immersivemode-t.md)
 
 **默认值：** ImmersiveMode.DEFAULT - This parameter takes effect only when levelMode is set to LevelMode.EMBEDDED.
 
@@ -626,7 +626,7 @@ offset?: ActionSheetOffset
 
 2.alignment设置为其他时默认值为{dx: 0,dy: "-40vp"}
 
-**类型：** [ActionSheetOffset](arkts-arkui-actionsheetoffset-i.md)
+**类型：** [ActionSheetOffset](arkts-arkui-actionsheet-actionsheetoffset-i.md)
 
 **起始版本：** 8
 
@@ -948,7 +948,7 @@ transition?: TransitionEffect
 
 3.退出动效中按back键，不会打断退出动效，退出动效继续执行，继续按back键退出应用。
 
-**类型：** [TransitionEffect](arkts-arkui-common-transitioneffect-c.md)
+**类型：** [TransitionEffect](../arkts-components/arkts-arkui-transitioneffect-c.md)
 
 **起始版本：** 12
 

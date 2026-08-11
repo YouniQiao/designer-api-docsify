@@ -1,6 +1,6 @@
 # DeviceInfo (System API)
 
-设备信息。
+Defines device information.
 
 **Since:** 7
 
@@ -28,7 +28,7 @@ import { deviceManager } from 'kits/@kit.DistributedServiceKit';
 authForm: AuthForm
 ```
 
-设备认证类型。
+Authentication type of the device.
 
 **Type:** [AuthForm](arkts-distributedservice-devicemanager-authform-e-sys.md)
 
@@ -50,7 +50,7 @@ authForm: AuthForm
 deviceId: string
 ```
 
-设备的唯一标识。
+Unique identifier of the device.
 
 **Type:** string
 
@@ -74,7 +74,7 @@ deviceId: string
 deviceName: string
 ```
 
-设备名称。
+Device name.
 
 **Type:** string
 
@@ -98,7 +98,7 @@ deviceName: string
 deviceType: DeviceType
 ```
 
-设备类型。
+Device type.
 
 **Type:** [DeviceType](../../apis-avsession-kit/arkts-apis/arkts-avsession-avsession-devicetype-e.md)
 
@@ -122,7 +122,7 @@ deviceType: DeviceType
 networkId: string
 ```
 
-设备网络标识。
+Network ID of the device.
 
 **Type:** string
 
@@ -146,7 +146,7 @@ networkId: string
 range: number
 ```
 
-发现设备的距离。
+Distance between the discovered device and the device that initiates device discovery.
 
 **Type:** number
 

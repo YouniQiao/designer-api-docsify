@@ -1,6 +1,6 @@
 # CoordinateSystemType (System API)
 
-表示地理围栏坐标系类型的枚举。
+Enumerates the coordinate systems of a geofence.
 
 **Since:** 23
 
@@ -18,7 +18,7 @@
 COORDINATE_TYPE_WGS84 = 1
 ```
 
-WGS84坐标系。
+WGS84.
 
 **Since:** 23
 
@@ -36,7 +36,7 @@ WGS84坐标系。
 COORDINATE_TYPE_GCJ02 = 2
 ```
 
-GCJ02坐标系。
+GCJ02.
 
 **Since:** 23
 

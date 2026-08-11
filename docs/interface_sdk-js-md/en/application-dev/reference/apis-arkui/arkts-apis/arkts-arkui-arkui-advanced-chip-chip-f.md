@@ -12,6 +12,8 @@ import { SuffixIconOptions, CloseOptions, ChipSymbolGlyphOptions, Chip, Accessib
 export declare function Chip(options: ChipOptions): void
 ```
 
+Build function of Chip.
+
 **Since:** 23
 
 **ArkTS mode:** ArkTS-Sta only, since version 23.
@@ -28,5 +30,5 @@ export declare function Chip(options: ChipOptions): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| options | [ChipOptions](arkts-arkui-arkui-advanced-chip-chipoptions-i.md) | Yes | 定义Chip组件的参数。 |
+| options | [ChipOptions](arkts-arkui-arkui-advanced-chip-chipoptions-i.md) | Yes | chip option. |
 

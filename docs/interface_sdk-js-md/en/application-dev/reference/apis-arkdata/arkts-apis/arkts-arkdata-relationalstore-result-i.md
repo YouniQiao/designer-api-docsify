@@ -1,6 +1,6 @@
 # Result
 
-记录受影响的数据行数量和结果集。
+Records the number of affected data rows and the result set.
 
 **Since:** 23
 
@@ -22,7 +22,7 @@ import { relationalStore } from 'kits/@kit.ArkData';
 readonly changed: long
 ```
 
-表示受影响的行数量。
+Number of affected rows.
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：long
 
@@ -42,7 +42,7 @@ readonly changed: long
 readonly resultSet: LiteResultSet
 ```
 
-表示受影响数据的结果集。默认返回1024行，最大支持32766行，超出部分将被丢弃。
+Result set of the affected data. Defaults to 1,024 rows of data, with a maximum supported limit of 32,766 rows supported; excess rows will be discarded.
 
 **Type:** [LiteResultSet](arkts-arkdata-relationalstore-literesultset-c.md)
 

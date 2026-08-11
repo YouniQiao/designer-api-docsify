@@ -1,6 +1,6 @@
 # StreamRole (System API)
 
-流传输角色。
+Stream transmission role.
 
 **Since:** 18
 
@@ -18,7 +18,7 @@
 SOURCE = 0
 ```
 
-发送流。
+This status indicates the stream is a send stream.
 
 **Since:** 18
 
@@ -38,7 +38,7 @@ SOURCE = 0
 SINK = 1
 ```
 
-接收流。
+This status indicates the stream is a receive stream.
 
 **Since:** 18
 

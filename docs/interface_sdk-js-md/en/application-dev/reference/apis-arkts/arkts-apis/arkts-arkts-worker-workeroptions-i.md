@@ -1,6 +1,6 @@
 # WorkerOptions
 
-Worker构造函数的选项，用于为Worker添加其他信息。
+Provides options that can be set for the Worker instance to create.
 
 **Since:** 7
 
@@ -22,7 +22,7 @@ import { MessageEvents, PostMessageOptions, MessageEvent, Priority, WorkerEventT
 name?: string
 ```
 
-Worker的名称。默认值为undefined，此时线程名称为'WorkerThread'。非默认值情况下，对应的线程名称带有'WorkerThread_'前缀。比如name为'testName'时，对应的线程名称为'WorkerThread_testName'。线程名称可通过HeapMemoryInfo的threadName获取。
+Name of the Worker thread. The default value is undefined.
 
 **Type:** string
 
@@ -42,7 +42,7 @@ Worker的名称。默认值为undefined，此时线程名称为'WorkerThread'。
 priority?: ThreadWorkerPriority
 ```
 
-表示Worker线程优先级。默认值为MEDIUM。
+Priority of the Worker thread.
 
 **Type:** [ThreadWorkerPriority](arkts-arkts-worker-threadworkerpriority-e.md)
 
@@ -62,7 +62,7 @@ priority?: ThreadWorkerPriority
 shared?: boolean
 ```
 
-表示Worker共享功能，此接口暂不支持。
+Whether sharing of the Worker instance is enabled. Currently, sharing is not supported.
 
 **Type:** boolean
 
@@ -82,7 +82,7 @@ shared?: boolean
 type?: 'classic' | 'module'
 ```
 
-Worker执行脚本的模式类型，暂不支持module类型，默认值为classic。
+Mode in which the Worker instance executes the script. The module type is not supported yet. The default value is classic.
 
 **Type:** 'classic' \| 'module'
 

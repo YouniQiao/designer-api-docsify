@@ -1,6 +1,6 @@
 # DistributedBundleEnableInfo (System API)
 
-描述多设备协同的包信息。
+Describes the bundle information of an application that enables cross-device collaboration.
 
 **Since:** 20
 
@@ -24,7 +24,7 @@ import { notificationManager } from 'kits/@kit.NotificationKit';
 bundleName: string
 ```
 
-包名。
+Bundle name.
 
 **Type:** string
 
@@ -44,7 +44,7 @@ bundleName: string
 enable?: boolean
 ```
 
-是否支持跨设备协同，返回true表示支持，返回false表示不支持，默认为false。
+Whether the application enables cross-device collaboration. The value **true** indicates that the cross-device collaboration is enabled, and the value **false** indicates the opposite.
 
 **Type:** boolean
 
@@ -64,7 +64,7 @@ enable?: boolean
 uid: int
 ```
 
-应用的UID。
+UID of the application.
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 

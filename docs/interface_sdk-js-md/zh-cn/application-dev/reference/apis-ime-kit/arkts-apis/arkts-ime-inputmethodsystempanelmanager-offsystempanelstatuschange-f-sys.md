@@ -1,11 +1,5 @@
 # offSystemPanelStatusChange（系统接口）
 
-## 导入模块
-
-```TypeScript
-import { inputMethodSystemPanelManager } from 'kits/@kit.IMEKit';
-```
-
 ## offSystemPanelStatusChange
 
 ```TypeScript
@@ -36,5 +30,5 @@ function offSystemPanelStatusChange(callback?: Callback<SystemPanelStatus>): voi
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 202 | not system application. |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | not system application. |
 

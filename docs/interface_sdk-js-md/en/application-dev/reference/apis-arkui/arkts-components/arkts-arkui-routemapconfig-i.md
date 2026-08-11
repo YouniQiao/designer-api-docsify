@@ -1,6 +1,6 @@
 # RouteMapConfig
 
-路由配置信息。
+Defines the routing configuration.
 
 **Since:** 12
 
@@ -16,7 +16,7 @@
 data: Object
 ```
 
-页面自定义字段信息。
+Custom data of the page.
 
 **Type:** Object
 
@@ -38,7 +38,7 @@ data: Object
 name: string
 ```
 
-页面名称。
+Page name.
 
 **Type:** string
 
@@ -60,7 +60,7 @@ name: string
 pageSourceFile: string
 ```
 
-页面在当前包中的路径。
+Path of the page in the current package.
 
 **Type:** string
 

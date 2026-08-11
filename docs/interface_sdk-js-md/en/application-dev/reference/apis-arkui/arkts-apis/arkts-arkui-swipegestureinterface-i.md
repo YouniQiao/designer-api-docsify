@@ -1,6 +1,6 @@
 # SwipeGestureInterface
 
-用于触发快滑手势，滑动速度需大于速度阈值，默认最小速度为100vp/s。
+**SwipeGesture** is used to trigger a swipe gesture. This gesture is successfully recognized when the swipe speed exceeds the specified threshold, which is 100 vp/s by default.
 
 **Inheritance/Implementation:** SwipeGestureInterface extends [GestureInterface<SwipeGestureInterface>](GestureInterface<SwipeGestureInterface>)
 
@@ -18,7 +18,7 @@
 (value?: { fingers?: number; direction?: SwipeDirection; speed?: number }): SwipeGestureInterface
 ```
 
-继承自[GestureInterface&lt;T&gt;](arkts-arkui-gestureinterface-i.md)，设置快滑手势事件。
+Sets the parameters for the swipe gesture. Inherits from [GestureInterface&lt;T&gt;](arkts-arkui-gestureinterface-i.md).
 
 **Since:** 8
 
@@ -34,7 +34,7 @@
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | { fingers?: number; direction?: SwipeDirection; speed?: number } | No | 设置快滑事件参数。 &lt;br&gt; - fingers：触发快滑的最少手指数。&lt;br/&gt;默认值：1 &lt;br/&gt;取值范围：[1, 10] &lt;br&gt; - direction：触发快滑手势的滑动方向。&lt;br/&gt;默认值：SwipeDirection.All &lt;br&gt; - speed：识别快滑的最小速度。&lt;br/&gt;默认值：100VP/s &lt;br/&gt;取值范围：(0, +∞) &lt;br/&gt;**说明：** &lt;br/&gt;当滑动速度的值小于等于0时，会被转化为默认值。 |
+| value | { fingers?: number; direction?: SwipeDirection; speed?: number } | No | Parameters for the swipe gesture. &lt;br&gt; - **fingers**: minimum number of fingers to trigger the swipe gesture.&lt;br&gt;Default value: **1** &lt;br&gt;Value range: [1, 10]. &lt;br&gt; - **direction**: direction in which the swipe gesture can be recognized. &lt;br&gt;Default value: **SwipeDirection.All** &lt;br&gt; - **speed**: minimum speed of the swipe gesture.&lt;br&gt;Default value: 100 vp/s&lt;br&gt;Value range: (0, +∞). &lt;br&gt;**NOTE：**&lt;br&gt;If the value is less than or equal to 0, it will be converted to the default value. |
 
 **Return value:**
 
@@ -48,7 +48,7 @@
 (options?: SwipeGestureHandlerOptions): SwipeGestureInterface
 ```
 
-设置快滑手势事件。与[SwipeGesture](arkts-arkui-swipegestureinterface-i.md))}相比，options参数新增了isFingerCountLimited，表示是否检查触摸屏幕的手指数量。
+Sets the parameters for the swipe gesture. Compared with [SwipeGesture](arkts-arkui-swipegestureinterface-i.md))}, this API adds the **isFingerCountLimited** parameter to **options**, which determines whether to enforce the exact number of fingers touching the screen.
 
 **Since:** 15
 
@@ -66,7 +66,7 @@
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| options | [SwipeGestureHandlerOptions](arkts-arkui-gesture-swipegesturehandleroptions-i.md) | No | 快滑事件处理器配置参数。 |
+| options | [SwipeGestureHandlerOptions](arkts-arkui-gesture-swipegesturehandleroptions-i.md) | No | Parameters of the swipe gesture handler. |
 
 **Return value:**
 
@@ -80,7 +80,7 @@
 onAction(event: (event: GestureEvent) => void): SwipeGestureInterface
 ```
 
-Swipe手势识别成功时触发回调。
+Triggered when the swipe gesture is recognized.
 
 **Since:** 8
 
@@ -96,7 +96,7 @@ Swipe手势识别成功时触发回调。
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| event | (event: GestureEvent) =&gt; void | Yes | 手势事件回调函数。 |
+| event | (event: GestureEvent) =&gt; void | Yes | Callback for the gesture event. |
 
 **Return value:**
 

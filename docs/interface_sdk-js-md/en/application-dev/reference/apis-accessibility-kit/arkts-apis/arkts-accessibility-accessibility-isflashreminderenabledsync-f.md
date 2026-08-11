@@ -12,7 +12,7 @@ import { accessibility } from 'kits/@kit.AccessibilityKit';
 function isFlashReminderEnabledSync(): boolean
 ```
 
-使用同步方法判断闪烁提醒模式是否开启。
+Checks whether flash alerts mode is enabled with a synchronous method.
 
 **Since:** 23
 
@@ -28,7 +28,7 @@ function isFlashReminderEnabledSync(): boolean
 
 | Type | Description |
 | --- | --- |
-| boolean | 表示是否开启闪烁提醒模式。true表示开启闪烁提醒模式，false表示未开启闪烁提醒模式。 |
+| boolean | Whether flash alerts mode is enabled. Returns **true** if flash alerts mode is enabled; returns **false** otherwise. |
 
 ## Examples
 

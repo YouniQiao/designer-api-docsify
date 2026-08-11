@@ -1,6 +1,6 @@
 # ControlSize
 
-按钮的尺寸。
+Button size.
 
 **Since:** 11
 
@@ -16,7 +16,7 @@
 SMALL = 'small'
 ```
 
-小尺寸按钮。
+Small button.
 
 **Since:** 11
 
@@ -38,7 +38,7 @@ SMALL = 'small'
 NORMAL = 'normal'
 ```
 
-正常尺寸按钮。
+Normal button.
 
 **Since:** 11
 

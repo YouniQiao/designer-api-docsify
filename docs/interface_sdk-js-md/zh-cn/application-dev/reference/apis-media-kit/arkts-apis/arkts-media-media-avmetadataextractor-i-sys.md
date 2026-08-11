@@ -17,12 +17,6 @@
 
 **系统能力：** SystemCapability.Multimedia.Media.AVMetadataExtractor
 
-## 导入模块
-
-```TypeScript
-import { media } from 'kits/@kit.MediaKit';
-```
-
 ## getFrameIndexByTime
 
 ArkTS-Dyn:
@@ -63,9 +57,9 @@ Obtains the video frame number corresponding to a video timestamp. Only MP4 vide
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 401 | The parameter check failed. Return by promise. |
-| 5400102 | Operation not allowed. Returned by promise. |
-| 5400106 | Unsupported format. Returned by promise. |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | The parameter check failed. Return by promise. |
+| [5400102](../errorcode-media.md#5400102-当前状态不支持此操作) | Operation not allowed. Returned by promise. |
+| [5400106](../errorcode-media.md#5400106-不支持的规格) | Unsupported format. Returned by promise. |
 
 ## 示例
 
@@ -120,9 +114,9 @@ Obtains the video timestamp corresponding to a video frame number. Only MP4 vide
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 401 | The parameter check failed. Return by promise. |
-| 5400102 | Operation not allowed. Returned by promise. |
-| 5400106 | Unsupported format. Returned by promise. |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | The parameter check failed. Return by promise. |
+| [5400102](../errorcode-media.md#5400102-当前状态不支持此操作) | Operation not allowed. Returned by promise. |
+| [5400106](../errorcode-media.md#5400106-不支持的规格) | Unsupported format. Returned by promise. |
 
 ## 示例
 

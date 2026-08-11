@@ -6,20 +6,20 @@
 
 | Name | Description |
 | --- | --- |
-| [SecurityComponentMethod](arkts-arkui-securitycomponentmethod-c.md) | 安全控件通用属性模块，提供安全控件的布局、尺寸、文字、图标、颜色、边框和交互等通用属性的统一配置能力。  - 为[PasteButton](./paste_button)、[SaveButton](./save_button)等安全控件统一设置布局、尺寸、文字、图标、颜色、边框和交互相关属性。  - 在满足安全控件规范的前提下，调整安全控件显示效果和交互体验。具体约束请参见[约束与限制](../../../security/AccessToken/security-component-overview.md#约束与限制)。  - 通过链式调用方式复用安全控件通用属性能力。 |
+| [SecurityComponentMethod](arkts-arkui-securitycomponentmethod-c.md) | The universal attributes module for security components enables unified configuration of universal attributes such as layout, size, text, icon, color, border, and interaction behaviors.  This module is mainly used in the following scenarios:  - Set layout, size, text, icon, color, border, and interaction-related attributes for security components  such as [PasteButton](./paste_button) and [SaveButton](./save_button).  - Adjust the display effect and interaction experience of security components while ensuring compliance with  the security component specifications. For specific constraints,see [Constraints](../../../security/AccessToken/security-component-overview.md#constraints).  - Reuse the universal attribute capabilities of security components through chained calls. |
 
 <!--Del-->
 ### Classes（系统接口）
 
 | Name | Description |
 | --- | --- |
-| [SecurityComponentMethod](arkts-arkui-securitycomponentmethod-c-sys.md) | 安全控件通用属性模块，提供安全控件的布局、尺寸、文字、图标、颜色、边框和交互等通用属性的统一配置能力。  - 为[PasteButton](./paste_button)、[SaveButton](./save_button)等安全控件统一设置布局、尺寸、文字、图标、颜色、边框和交互相关属性。  - 在满足安全控件规范的前提下，调整安全控件显示效果和交互体验。具体约束请参见[约束与限制](../../../security/AccessToken/security-component-overview.md#约束与限制)。  - 通过链式调用方式复用安全控件通用属性能力。 |
+| [SecurityComponentMethod](arkts-arkui-securitycomponentmethod-c-sys.md) | The universal attributes module for security components enables unified configuration of universal attributes such as layout, size, text, icon, color, border, and interaction behaviors.  This module is mainly used in the following scenarios:  - Set layout, size, text, icon, color, border, and interaction-related attributes for security components  such as [PasteButton](./paste_button) and [SaveButton](./save_button).  - Adjust the display effect and interaction experience of security components while ensuring compliance with  the security component specifications. For specific constraints,see [Constraints](../../../security/AccessToken/security-component-overview.md#constraints).  - Reuse the universal attribute capabilities of security components through chained calls. |
 <!--DelEnd-->
 
 ### Enums
 
 | Name | Description |
 | --- | --- |
-| [SecurityComponentLayoutDirection](arkts-arkui-securitycomponentlayoutdirection-e.md) | 安全控件上图标和文字的排列方向。 |
-| [SecurityComponentRoleType](arkts-arkui-securitycomponentroletype-e.md) | 定义组件的屏幕朗读功能角色类型。 |
+| [SecurityComponentLayoutDirection](arkts-arkui-securitycomponentlayoutdirection-e.md) | Enumerates the layout directions of the icon and text on a security component. |
+| [SecurityComponentRoleType](arkts-arkui-securitycomponentroletype-e.md) | Defines the screen reader role type of the component. |
 

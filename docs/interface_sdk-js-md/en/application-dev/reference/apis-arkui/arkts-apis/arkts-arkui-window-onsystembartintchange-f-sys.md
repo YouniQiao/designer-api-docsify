@@ -12,7 +12,7 @@ import { window } from 'kits/@kit.ArkUI';
 function onSystemBarTintChange(callback: Callback<SystemBarTintState>): void
 ```
 
-开启状态栏、导航栏属性变化的监听。
+Subscribes to the property change event of the status bar and navigation bar.
 
 **Since:** 23
 
@@ -28,11 +28,11 @@ function onSystemBarTintChange(callback: Callback<SystemBarTintState>): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;SystemBarTintState&gt; | Yes | 回调函数。返回当前的状态栏、导航栏信息集合。 |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;SystemBarTintState&gt; | Yes | Callback used to return the properties of the system bar. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 202 | Permission verification failed. A non-system application calls a system API. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
 

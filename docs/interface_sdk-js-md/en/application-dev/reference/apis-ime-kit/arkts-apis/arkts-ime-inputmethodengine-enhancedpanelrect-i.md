@@ -1,6 +1,6 @@
 # EnhancedPanelRect
 
-增强的输入法面板位置、大小信息，包含自定义避让区域、自定义热区。
+Indicates the size of the enhanced input method panel, including the custom avoid area and touch area.
 
 **Since:** 15
 
@@ -22,10 +22,10 @@ import { inputMethodEngine } from 'kits/@kit.IMEKit';
 fullScreenMode?: boolean
 ```
 
-是否开启全屏模式。默认值为false。
+Indicates whether to enable the full-screen mode. The default value is **false**.
 
-- 值为true，landscapeRect和portraitRect可不填写。  
-- 值为false，landscapeRect和portraitRect为必选属性。
+- If the value is **true**, **landscapeRect** and **portraitRect** are optional.  
+- If the value is **false**, **landscapeRect** and **portraitRect** are mandatory.
 
 **Type:** boolean
 
@@ -45,10 +45,11 @@ fullScreenMode?: boolean
 landscapeAvoidY?: int
 ```
 
-横屏状态时，面板中的避让线距离面板顶部的距离，单位px。默认值为0。
+Distance between the avoid line and the top of the panel in landscape mode, in px. The default value is **0**.
 
-- 应用内其他系统组件会对避让线以下的输入法面板区域进行避让。  
-- 面板为固定态时，避让线到屏幕底部的高度不能超过屏幕高度的70%。当面板高度大于屏幕高度70%时，取默认值0将无法通过此校验，需要开发者手动设置，使得避让线到屏幕底部的高度不超过屏幕高度的70%。
+- Other system components in the application avoid the input method panel area below the avoid line.  
+- When the panel is fixed, the distance between the avoid line and the bottom of the screen cannot exceed 70% of   
+the screen height.
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
@@ -68,10 +69,10 @@ landscapeAvoidY?: int
 landscapeInputRegion?: Array<window.Rect>
 ```
 
-横屏状态时，面板接收输入事件的区域。
+Region where the panel receives input events in landscape mode.
 
-- 数组大小限制为[1, 4]。默认值为横屏时的面板大小。  
-- 传入的热区位置是相对于输入法面板窗口左顶点的位置。
+- The array size is limited to [1, 4]. The default value is the panel size in landscape mode.  
+- The input hot zone is relative to the left vertex of the input method panel window.
 
 **Type:** Array&lt;window.Rect&gt;
 
@@ -89,9 +90,9 @@ landscapeInputRegion?: Array<window.Rect>
 landscapeRect?: window.Rect
 ```
 
-横屏状态时输入法面板窗口的位置大小。
+Size of the input method panel window in landscape mode.
 
-- 当fullScreenMode不填写或值为false时，此属性为必选。
+- This attribute is mandatory when **fullScreenMode** is not set or is set to **false**.
 
 **Type:** window.Rect
 
@@ -109,10 +110,11 @@ landscapeRect?: window.Rect
 portraitAvoidY?: int
 ```
 
-竖屏状态时，面板中的避让线距离面板顶部的距离，单位px。默认值为0。
+Distance between the avoid line and the top of the panel in portrait mode, in px. The default value is **0**.
 
-- 应用内其他系统组件会对避让线以下的输入法面板区域进行避让。  
-- 面板为固定态时，避让线到屏幕底部的高度不能超过屏幕高度的70%。当面板高度大于屏幕高度70%时，取默认值0将无法通过此校验，需要开发者手动设置，使得避让线到屏幕底部的高度不超过屏幕高度的70%。
+- Other system components in the application avoid the input method panel area below the avoid line.  
+- When the panel is fixed, the distance between the avoid line and the bottom of the screen cannot exceed 70% of   
+the screen height.
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
@@ -132,10 +134,10 @@ portraitAvoidY?: int
 portraitInputRegion?: Array<window.Rect>
 ```
 
-竖屏状态时，面板接收输入事件的区域。
+Region where the panel receives input events in portrait mode.
 
-- 数组大小限制为[1, 4]。默认值为竖屏时的面板大小。  
-- 传入的热区位置是相对于输入法面板窗口左顶点的位置。
+- The array size is limited to [1, 4]. The default value is the panel size in portrait mode.  
+- The input hot zone is relative to the left vertex of the input method panel window.
 
 **Type:** Array&lt;window.Rect&gt;
 
@@ -153,9 +155,9 @@ portraitInputRegion?: Array<window.Rect>
 portraitRect?: window.Rect
 ```
 
-竖屏状态时，输入法面板窗口的位置大小。
+Size of the input method panel window in portrait mode.
 
-- 当fullScreenMode不填写或值为false时，此属性为必选。
+- This attribute is mandatory when **fullScreenMode** is not set or is set to **false**.
 
 **Type:** window.Rect
 

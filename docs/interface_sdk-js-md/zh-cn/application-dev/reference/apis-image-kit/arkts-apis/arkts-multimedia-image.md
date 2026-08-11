@@ -50,12 +50,6 @@ Image对象存储了JPEG文件。
 **系统能力：** 
 - API版本11+：SystemCapability.Multimedia.Image.Core
 
-## 导入模块
-
-```TypeScript
-import { image } from 'kits/@kit.ImageKit';
-```
-
 ## 汇总
 
 ### 函数

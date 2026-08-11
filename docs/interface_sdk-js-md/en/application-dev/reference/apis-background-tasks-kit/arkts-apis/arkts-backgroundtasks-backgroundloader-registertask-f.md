@@ -12,11 +12,11 @@ import { backgroundLoader } from 'kits/@kit.BackgroundTasksKit';
 function registerTask(taskInfo: TaskInfo): void
 ```
 
-注册后台加载任务。使用 callee.on(ON_START)来接受系统测触发的任务
+Register background load task.
 
-**Since:** 26.1.0
+**Since:** 26.0.0
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.1.0.
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
 **Required permissions:** ohos.permission.KEEP_BACKGROUND_RUNNING
 
@@ -36,7 +36,7 @@ function registerTask(taskInfo: TaskInfo): void
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 9700004 | Check on taskInfo failed. |
-| 9700003 | System service operation failed. |
-| 201 | Permission denied. |
+| [9700004](../../apis-backgroundtasks-kit/errorcode-workScheduler.md#9700004-workinfo-verification-failure) | Check on taskInfo failed. |
+| [9700003](../../apis-backgroundtasks-kit/errorcode-workScheduler.md#9700003-system-service-failure) | System service operation failed. |
+| [201](../../errorcode-universal.md#201-permission-denied) | No permission. |
 

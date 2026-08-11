@@ -12,7 +12,7 @@ import { cert } from 'kits/@kit.DeviceCertificateKit';
 function createPkcs12Sync(data: Pkcs12Data, config: Pkcs12CreationConfig): Uint8Array
 ```
 
-表示创建P12，同步返回结果。
+Creates P12. This API returns the result synchronously.
 
 **Since:** 21
 
@@ -28,23 +28,23 @@ function createPkcs12Sync(data: Pkcs12Data, config: Pkcs12CreationConfig): Uint8
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| data | [Pkcs12Data](arkts-devicecertificate-cert-pkcs12data-i.md) | Yes | 要打包的P12数据对象。 |
-| config | [Pkcs12CreationConfig](arkts-devicecertificate-cert-pkcs12creationconfig-i.md) | Yes | P12的创建配置。 |
+| data | [Pkcs12Data](arkts-devicecertificate-cert-pkcs12data-i.md) | Yes | P12 data object to be packed. |
+| config | [Pkcs12CreationConfig](arkts-devicecertificate-cert-pkcs12creationconfig-i.md) | Yes | Configuration for creating the P12 file. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Uint8Array | 表示创建的P12，DER格式。 |
+| Uint8Array | P12 file created, in DER format. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 19020002 | 运行时外部错误。可能的原因： &lt;br&gt;1. 内存拷贝失败； &lt;br&gt;2. 系统内部出现空指针； &lt;br&gt;3. 获取Native对象失败或参数转换失败。 |
-| 19020003 | 参数检查失败。可能的原因： &lt;br&gt;1. 密码过短或过长； &lt;br&gt;2. 私钥与证书不匹配； &lt;br&gt;3. 加密算法参数无效。 |
-| 19020001 | 内存错误。 |
-| 19030001 | 调用三方算法库API出错。 |
+| [19020002](../errorcode-cert.md#19020002-runtime-error) | Runtime error. Possible causes: &lt;br&gt;1. Memory copy failed; &lt;br&gt;2. A null pointer occurs inside the system; &lt;br&gt;3. Failed to obtain the native object or convert parameters. |
+| [19020003](../errorcode-cert.md#19020003-parameter-check-failure) | Parameter check failed. Possible causes: &lt;br&gt;1. The password is too short or too long; &lt;br&gt;2. The private key does not match the certificate; &lt;br&gt;3. Invalid encryption algorithm parameters. |
+| [19020001](../errorcode-cert.md#19020001-memory-error) | Memory malloc failed. |
+| [19030001](../errorcode-cert.md#19030001-crypto-operation-error) | Crypto operation error. |
 
 ## Examples
 

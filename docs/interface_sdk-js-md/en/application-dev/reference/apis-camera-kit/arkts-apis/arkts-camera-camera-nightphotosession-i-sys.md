@@ -152,7 +152,7 @@ Unsubscribes from LCD flash status change events.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 202 | Not System Application. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not System Application. |
 
 ## offError
 
@@ -230,7 +230,7 @@ Unsubscribes from lcd flash status.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 202 | Not System Application. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not System Application. |
 
 ## offSmoothZoomInfoAvailable
 
@@ -410,7 +410,7 @@ Subscribes to LCD flash status change events. This API uses an asynchronous call
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 202 | Not System Application. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not System Application. |
 
 ## onError
 
@@ -488,7 +488,7 @@ Subscribes to lcd flash status.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 202 | Not System Application. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not System Application. |
 
 ## onSmoothZoomInfoAvailable
 

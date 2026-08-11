@@ -1,11 +1,5 @@
 # setShieldStatus（系统接口）
 
-## 导入模块
-
-```TypeScript
-import { inputConsumer } from 'kits/@kit.InputKit';
-```
-
 ## setShieldStatus
 
 ```TypeScript
@@ -37,11 +31,13 @@ function setShieldStatus(shieldMode: ShieldMode, isShield: boolean): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; 3. Parameter verification failed. |
-| 201 | Permission denied. |
-| 202 | SystemAPI permission error. |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; 3. Parameter verification failed. |
+| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | SystemAPI permission error. |
 
 ## 示例
+
+ArkTS-Dyn示例：
 
 ```TypeScript
 import { inputConsumer } from '@kit.InputKit';
@@ -58,6 +54,34 @@ struct Index {
           try {
             // 设置屏蔽状态
             inputConsumer.setShieldStatus(FACTORY_MODE, true);
+            console.info(`Succeeded in setting shield status.`);
+          } catch (error) {
+            console.error(`Failed to set shield status, Code: ${(error as BusinessError).code}, message: ${(error as BusinessError).message}.`);
+          }
+        })
+    }
+  }
+}
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+import { Entry, Text, RelativeContainer, Component } from '@kit.ArkUI';
+import { BusinessError } from '@kit.BasicServicesKit';
+import { inputConsumer } from '@kit.InputKit';
+
+@Entry
+@Component
+struct Index {
+  build() {
+    RelativeContainer() {
+      Text()
+        .onClick(() => {
+          let mode = inputConsumer.ShieldMode.FACTORY_MODE;
+          try {
+            // 设置屏蔽状态
+            inputConsumer.setShieldStatus(mode, true);
             console.info(`Succeeded in setting shield status.`);
           } catch (error) {
             console.error(`Failed to set shield status, Code: ${(error as BusinessError).code}, message: ${(error as BusinessError).message}.`);

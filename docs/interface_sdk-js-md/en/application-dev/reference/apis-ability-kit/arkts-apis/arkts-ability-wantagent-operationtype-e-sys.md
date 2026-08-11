@@ -1,6 +1,6 @@
 # OperationType
 
-表示WantAgent支持的操作类型。
+Enumerates the operation types of the WantAgent objects.
 
 **Since:** 9
 
@@ -16,7 +16,7 @@
 START_SERVICE_EXTENSION = 6
 ```
 
-开启一个ServiceExtension。
+Starts a service extension.
 
 **Since:** 12
 

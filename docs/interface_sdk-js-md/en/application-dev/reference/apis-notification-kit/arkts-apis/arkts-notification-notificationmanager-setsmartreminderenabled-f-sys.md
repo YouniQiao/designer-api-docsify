@@ -12,7 +12,9 @@ import { notificationManager } from 'kits/@kit.NotificationKit';
 function setSmartReminderEnabled(deviceType: string, enable: boolean): Promise<void>
 ```
 
-设置设备是否与其他设备协同智能提醒。使用Promise异步回调。
+Sets a smart reminder for cross-device collaboration. This API uses a promise to return the result.
+
+This API can be properly called on devices other than wearables and TVs. If it is called on wearables and TVs,error code 801 is returned.
 
 **Since:** 12
 
@@ -30,29 +32,29 @@ function setSmartReminderEnabled(deviceType: string, enable: boolean): Promise<v
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| deviceType | string | Yes | 设备类型。 |
-| enable | boolean | Yes | 指定应用是否支持设备是否与其他设备协同智能提醒（true：支持，false：不支持）。 |
+| deviceType | string | Yes | Device type. |
+| enable | boolean | Yes | Indicates whether the specified application supports a smart reminder for cross-device collaboration (**true**: enabled; **false**: disabled). |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise对象。无返回结果的Promise对象。 |
+| Promise&lt;void&gt; | Promise that returns no value. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. 3. Parameter verification failed. |
-| 801 | Capability not supported.<br>**Applicable version:** 18 and later |
-| 1600010 | Distributed operation failed. |
-| 1600012 | No memory space. |
-| 201 | Permission denied. |
-| 1600001 | Internal error. |
-| 202 | Not system application to call the interface. |
-| 1600002 | Marshalling or unmarshalling error. |
-| 1600003 | Failed to connect to the service. |
-| 17700001 | The specified bundle name was not found. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. 3. Parameter verification failed. |
+| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported.<br>**Applicable version:** 18 and later |
+| [1600010](../errorcode-notification.md#1600010-distributed-operation-failed) | Distributed operation failed. |
+| [1600012](../errorcode-notification.md#1600012-insufficient-memory-space) | No memory space. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
+| [1600001](../errorcode-notification.md#1600001-internal-error) | Internal error. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system application to call the interface. |
+| [1600002](../errorcode-notification.md#1600002-marshalling-or-unmarshalling-error) | Marshalling or unmarshalling error. |
+| [1600003](../errorcode-notification.md#1600003-failed-to-connect-to-the-notification-service) | Failed to connect to the service. |
+| [17700001](../../apis-ability-kit/errorcode-bundle.md#17700001-bundle-name-does-not-exist) | The specified bundle name was not found. |
 
 ## Examples
 

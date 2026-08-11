@@ -1,6 +1,6 @@
 # SwipeGestureHandlerOptions
 
-快滑手势处理器配置参数。继承自[BaseHandlerOptions](arkts-arkui-basehandleroptions-i.md)。
+Provides the parameters of the swipe gesture handler. Inherits from [BaseHandlerOptions](arkts-arkui-basehandleroptions-i.md).
 
 **Inheritance/Implementation:** SwipeGestureHandlerOptions extends [BaseHandlerOptions](arkts-arkui-basehandleroptions-i.md)
 
@@ -18,9 +18,9 @@
 direction?: SwipeDirection
 ```
 
-触发快滑手势的滑动方向。
+Directions in which the swipe gesture can be recognized.
 
-默认值：SwipeDirection.All
+Default value: **SwipeDirection.All**
 
 **Type:** [SwipeDirection](arkts-arkui-gesture-swipedirection-e.md)
 
@@ -42,11 +42,11 @@ direction?: SwipeDirection
 fingers?: number
 ```
 
-触发快滑的最少手指数，默认为1，最小为1指，最大为10指。
+Minimum number of fingers to trigger a swipe gesture. The value ranges from 1 to 10.
 
-默认值：1 
+Default value: **1**
 
-取值范围：[1, 10]
+Value range: [1, 10]
 
 **Type:** number
 
@@ -68,13 +68,13 @@ fingers?: number
 speed?: number
 ```
 
-识别快滑的最小速度。
+Minimum speed of the swipe gesture.
 
-默认值：100VP/s 
+Default value: 100 vp/s
 
-**说明：**
+**NOTE：**
 
-当滑动速度的值小于等于0时，会被转化为默认值。
+If the value is less than or equal to 0, it will be converted to the default value.
 
 **Type:** number
 

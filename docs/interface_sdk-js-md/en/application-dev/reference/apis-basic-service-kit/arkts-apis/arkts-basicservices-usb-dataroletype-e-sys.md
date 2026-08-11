@@ -1,6 +1,6 @@
 # DataRoleType (System API)
 
-数据角色类型。
+Enumerates data role types.
 
 **Since:** 9
 
@@ -22,7 +22,7 @@
 NONE = 0
 ```
 
-无。
+None
 
 **Since:** 9
 
@@ -44,7 +44,7 @@ NONE = 0
 HOST = 1
 ```
 
-主设备角色。
+USB host.
 
 **Since:** 9
 
@@ -66,7 +66,7 @@ HOST = 1
 DEVICE = 2
 ```
 
-从设备角色。
+USB device.
 
 **Since:** 9
 

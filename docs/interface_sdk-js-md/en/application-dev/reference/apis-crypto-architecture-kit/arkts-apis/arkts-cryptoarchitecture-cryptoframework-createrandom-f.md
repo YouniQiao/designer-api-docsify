@@ -12,7 +12,7 @@ import { cryptoFramework } from 'kits/@kit.CryptoArchitectureKit';
 function createRandom(): Random
 ```
 
-创建随机数实例。
+Creates a **Random** instance.
 
 **Since:** 9
 
@@ -34,13 +34,13 @@ function createRandom(): Random
 
 | Type | Description |
 | --- | --- |
-| [Random](arkts-cryptoarchitecture-cryptoframework-random-i.md) | 返回Random实例。 |
+| [Random](arkts-cryptoarchitecture-cryptoframework-random-i.md) | Returns the **Random** instance created. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 17620001 | 内存操作失败。 |
+| [17620001](../errorcode-crypto-framework.md#17620001-memory-operation-failed) | Memory operation failed. |
 
 ## Examples
 

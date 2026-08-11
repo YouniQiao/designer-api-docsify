@@ -1,6 +1,6 @@
 # PasteEvent
 
-定义用户粘贴事件。
+Defines the paste event.
 
 **Since:** 23
 
@@ -16,7 +16,7 @@
 preventDefault(): void
 ```
 
-阻止系统默认粘贴事件。
+Override system paste event.
 
 **Since:** 23
 

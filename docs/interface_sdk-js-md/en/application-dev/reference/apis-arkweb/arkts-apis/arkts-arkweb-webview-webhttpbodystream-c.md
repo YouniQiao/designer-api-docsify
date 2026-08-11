@@ -86,7 +86,7 @@ Initialize data stream.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 17100022 | Failed to initialize the HTTP body stream. |
+| [17100022](../errorcode-webview.md#17100022-failed-to-initialize-webhttpbodystream) | Failed to initialize the HTTP body stream. |
 
 ## isChunked
 
@@ -186,5 +186,5 @@ Read the data stream to the buffer. Unit: bytes.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt;2. Incorrect parameter types. 3.Parameter verification failed. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt;2. Incorrect parameter types. 3.Parameter verification failed. |
 

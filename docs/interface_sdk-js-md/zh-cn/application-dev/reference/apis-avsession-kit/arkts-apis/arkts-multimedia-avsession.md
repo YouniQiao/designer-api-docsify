@@ -8,12 +8,6 @@
 
 **系统能力：** SystemCapability.Multimedia.AVSession.Core
 
-## 导入模块
-
-```TypeScript
-import { avSession } from 'kits/@kit.AVSessionKit';
-```
-
 ## 汇总
 
 ### 函数

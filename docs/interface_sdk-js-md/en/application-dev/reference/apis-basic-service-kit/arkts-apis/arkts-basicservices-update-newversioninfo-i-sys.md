@@ -1,6 +1,6 @@
 # NewVersionInfo (System API)
 
-新版本数据。
+Represents information about the new version.
 
 **Since:** 9
 
@@ -24,7 +24,7 @@ import { update } from 'kits/@kit.BasicServicesKit';
 versionComponents: Array<VersionComponent>
 ```
 
-版本组件。
+Version components.
 
 **Type:** Array&lt;VersionComponent&gt;
 
@@ -44,7 +44,7 @@ versionComponents: Array<VersionComponent>
 versionDigestInfo: VersionDigestInfo
 ```
 
-版本摘要。
+Version digest information.
 
 **Type:** [VersionDigestInfo](arkts-basicservices-update-versiondigestinfo-i-sys.md)
 

@@ -27,5 +27,5 @@ Scroll每帧滚动前触发的回调。
 
 | 类型 | 说明 |
 | --- | --- |
-| [OnScrollFrameBeginHandlerResult](../arkts-components/arkts-arkui-onscrollframebeginhandlerresult-i.md) | 返回实际滑动量。 |
+| [OnScrollFrameBeginHandlerResult](arkts-arkui-scroll-onscrollframebeginhandlerresult-i.md) | 返回实际滑动量。 |
 

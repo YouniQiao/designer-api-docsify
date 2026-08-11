@@ -1,6 +1,6 @@
 # HitTestType
 
-点击事件检测结果类型。
+Enumerates the test result types of the click event.
 
 **Since:** 8
 
@@ -20,7 +20,7 @@
 EditText = 0
 ```
 
-可编辑的区域。
+Editable area.
 
 **Since:** 8
 
@@ -42,7 +42,7 @@ EditText = 0
 Email = 1
 ```
 
-电子邮件地址。
+Email address.
 
 **Since:** 8
 
@@ -64,7 +64,7 @@ Email = 1
 HttpAnchor = 2
 ```
 
-超链接，其src为http。
+Hyperlink whose **src** is **http**.
 
 **Since:** 8
 
@@ -86,7 +86,7 @@ HttpAnchor = 2
 HttpAnchorImg = 3
 ```
 
-带有超链接的图片，其中超链接的src为http。
+Image with a hyperlink, where **src** is **http**.
 
 **Since:** 8
 
@@ -108,7 +108,7 @@ HttpAnchorImg = 3
 Img = 4
 ```
 
-HTML::img标签。
+HTML::img tag.
 
 **Since:** 8
 
@@ -130,7 +130,7 @@ HTML::img标签。
 Map = 5
 ```
 
-地理地址。
+Geographical address.
 
 **Since:** 8
 
@@ -152,7 +152,7 @@ Map = 5
 Phone = 6
 ```
 
-电话号码。
+Phone number.
 
 **Since:** 8
 
@@ -174,7 +174,7 @@ Phone = 6
 Unknown = 7
 ```
 
-未知内容。
+Unknown content.
 
 **Since:** 8
 

@@ -1,6 +1,6 @@
 # EffectScope
 
-动效范围。
+Declare scope type of the symbol effect
 
 **Since:** 23
 
@@ -16,7 +16,7 @@
 LAYER = 0
 ```
 
-分层动画。
+The layered animation of symbol
 
 **Since:** 23
 
@@ -34,7 +34,7 @@ LAYER = 0
 WHOLE = 1
 ```
 
-整体动画。
+The whole animation of symbol
 
 **Since:** 23
 

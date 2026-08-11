@@ -8,17 +8,11 @@
 
 **废弃版本：** 20
 
-**替代接口：** [Intl.Locale](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/Locale)
+**替代接口：** [Intl.Locale](arkts-intl.md#intl.locale)
 
 <!--Device-intl-export class Locale--><!--Device-intl-export class Locale-End-->
 
 **系统能力：** SystemCapability.Global.I18n
-
-## 导入模块
-
-```TypeScript
-import { intl } from 'kits/@kit.LocalizationKit';
-```
 
 ## constructor
 
@@ -84,7 +78,7 @@ constructor(locale: string, options?: LocaleOptions)
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | locale | string | 是 | 表示区域ID的字符串，由语言、脚本、国家地区组成。 |
-| options | [LocaleOptions](../../apis-arkts/arkts-apis/arkts-arkts-intl-localeoptions-i.md) | 否 | 创建区域对象的配置项。 &lt;br&gt;默认值：所有属性都取默认值时的配置项。<br>**起始版本：** 12 |
+| options | [LocaleOptions](arkts-localization-intl-localeoptions-i.md) | 否 | 创建区域对象的配置项。 &lt;br&gt;默认值：所有属性都取默认值时的配置项。<br>**起始版本：** 12 |
 
 ## 示例
 
@@ -278,7 +272,7 @@ calendar: string
 
 **废弃版本：** 20
 
-**替代接口：** [Intl.LocaleOptions.calendar](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/Locale/calendar)
+**替代接口：** [Intl.LocaleOptions.calendar](arkts-intl.md#intl.localeoptions.calendar)
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 

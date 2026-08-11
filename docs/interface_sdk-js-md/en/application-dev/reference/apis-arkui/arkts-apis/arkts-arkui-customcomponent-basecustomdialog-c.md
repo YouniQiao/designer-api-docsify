@@ -22,7 +22,7 @@ static _invokeImpl<S extends BaseCustomDialog<S, S_Options>, S_Options>(
     ): void
 ```
 
-创建自定义对话框的实现
+Implementation for creating a custom dialog
 
 **Since:** 23
 
@@ -40,9 +40,9 @@ static _invokeImpl<S extends BaseCustomDialog<S, S_Options>, S_Options>(
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| factory | () =&gt; S | Yes | 用于创建自定义对话框实例的工厂 |
-| initializers | () =&gt; S_Options | No | 自定义对话框中所有字段的初始数据 |
-| content | [CustomBuilder](../arkts-components/arkts-arkui-custombuilder-t.md) | No | 自定义对话框的尾随闭包 |
+| factory | () =&gt; S | Yes | factory to create instance of custom dialog |
+| initializers | () =&gt; S_Options | No | initial data for all the fields in custom dialog |
+| content | [CustomBuilder](../arkts-components/arkts-arkui-custombuilder-t.md) | No | tail closure for custom dialog |
 
 ## constructor
 

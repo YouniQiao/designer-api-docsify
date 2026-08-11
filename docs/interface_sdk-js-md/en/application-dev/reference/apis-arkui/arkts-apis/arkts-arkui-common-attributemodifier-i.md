@@ -166,6 +166,8 @@ Specifies the states to be monitored.Override this method to specify which state
 
 **ArkTS mode:** ArkTS-Sta only, since version 23.
 
+**Model restriction:** This API can be used only in the stage model.
+
 <!--Device-AttributeModifier-default monitoredStates(): int--><!--Device-AttributeModifier-default monitoredStates(): int-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full

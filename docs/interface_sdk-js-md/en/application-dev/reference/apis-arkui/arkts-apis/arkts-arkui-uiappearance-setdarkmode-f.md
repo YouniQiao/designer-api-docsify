@@ -12,7 +12,9 @@ import { uiAppearance } from 'kits/@kit.ArkUI';
 function setDarkMode(mode: DarkMode, callback: AsyncCallback<void>): void
 ```
 
-设置系统深浅色模式，修改系统级配色方案配置。设置后，所有跟随系统配色方案的应用将自动切换至对应模式。使用callback异步回调。
+Sets the system color mode. This API uses an asynchronous callback to return the result.
+
+**Permission required**: ohos.permission.UPDATE_CONFIGURATION
 
 **Since:** 10
 
@@ -35,9 +37,9 @@ function setDarkMode(mode: DarkMode, callback: AsyncCallback<void>): void
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. Possible causes: &lt;br&gt; 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameters types. &lt;br&gt; 3. Parameter verification failed. |
-| 500001 | Internal error. |
-| 201 | Permission denied. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: &lt;br&gt; 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameters types. &lt;br&gt; 3. Parameter verification failed. |
+| [500001](../errorcode-uiappearance.md#500001-internal-error) | Internal error. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
 
 ## Examples
 
@@ -48,14 +50,14 @@ import { BusinessError } from '@kit.BasicServicesKit';
 try {
   uiAppearance.setDarkMode(uiAppearance.DarkMode.ALWAYS_DARK, (error) => {
     if (error) {
-      console.error(`Set dark-mode failed. Code: ${error.code}, message: ${error.message}`);
-      return;
+      console.error('Set dark-mode failed, ' + error.message);
+    } else {
+      console.info('Set dark-mode successfully.');
     }
-    console.info('Set dark-mode successfully.');
-  });
+  })
 } catch (error) {
-  let err = error as BusinessError;
-  console.error(`Set dark-mode failed. Code: ${err.code}, message: ${err.message}`);
+  let message = (error as BusinessError).message;
+  console.error('Set dark-mode failed, ' + message);
 }
 ```
 
@@ -66,7 +68,9 @@ try {
 function setDarkMode(mode: DarkMode): Promise<void>
 ```
 
-设置系统深浅色模式，修改系统级配色方案配置。设置后，所有跟随系统配色方案的应用将自动切换至对应模式。使用Promise异步回调。
+Sets the system color mode. This API uses a promise to return the result.
+
+**Permission required**: ohos.permission.UPDATE_CONFIGURATION
 
 **Since:** 10
 
@@ -88,15 +92,15 @@ function setDarkMode(mode: DarkMode): Promise<void>
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise对象。无返回结果的Promise对象。 |
+| Promise&lt;void&gt; | Promise that returns no value. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. Possible causes: &lt;br&gt; 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameters types. &lt;br&gt; 3. Parameter verification failed. |
-| 500001 | Internal error. |
-| 201 | Permission denied. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: &lt;br&gt; 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameters types. &lt;br&gt; 3. Parameter verification failed. |
+| [500001](../errorcode-uiappearance.md#500001-internal-error) | Internal error. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
 
 ## Examples
 
@@ -107,12 +111,12 @@ import { BusinessError } from '@kit.BasicServicesKit';
 try {
   uiAppearance.setDarkMode(uiAppearance.DarkMode.ALWAYS_DARK).then(() => {
     console.info('Set dark-mode successfully.');
-  }).catch((error: BusinessError) => {
-    console.error(`Set dark-mode failed. Code: ${error.code}, message: ${error.message}`);
+  }).catch((error: Error) => {
+    console.error('Set dark-mode failed, ' + error.message);
   });
 } catch (error) {
-  let err = error as BusinessError;
-  console.error(`Set dark-mode failed. Code: ${err.code}, message: ${err.message}`);
+  let message = (error as BusinessError).message;
+  console.error('Set dark-mode failed, ' + message);
 }
 ```
 

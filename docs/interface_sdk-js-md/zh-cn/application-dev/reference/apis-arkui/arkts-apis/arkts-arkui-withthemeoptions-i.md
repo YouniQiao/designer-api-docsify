@@ -44,7 +44,7 @@ theme?: CustomTheme
 
 默认值：undefined，默认配色跟随系统[token默认样式](../../../ui/theme_skinning.md#系统缺省token色值)。
 
-**类型：** [CustomTheme](arkts-arkui-arkui-theme-customtheme-i.md)
+**类型：** [CustomTheme](arkts-arkui-customtheme-t.md)
 
 **起始版本：** 12
 

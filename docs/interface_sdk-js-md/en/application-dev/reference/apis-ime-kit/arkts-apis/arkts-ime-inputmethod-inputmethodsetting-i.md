@@ -1,19 +1,6 @@
 # InputMethodSetting
 
-InputMethodSetting提供输入法配置与查询能力，面向前台应用提供以下功能：
-
-- **输入法变化订阅**：通过  
-[on('imeChange')](inputMethod.InputMethodSetting.on( type: 'imeChange', callback: (inputMethodProperty: InputMethodProperty, inputMethodSubtype: InputMethodSubtype) => void ))订阅输入法及子类型变化事件，当用户切换输入法时收到通知。  
-- **输入法列表查询**：通过  
-[getInputMethods](arkts-ime-inputmethod-inputmethodsetting-i.md#getinputmethods)查询已激活/未激活输入法列表，通过  
-[getAllInputMethods](arkts-ime-inputmethod-inputmethodsetting-i.md#getallinputmethods)查询所有已安装输入法列表，通过  
-[listInputMethodSubtype](arkts-ime-inputmethod-inputmethodsetting-i.md#listinputmethodsubtype)查询指定输入法的子类型列表。  
-- **面板可见性查询**：通过isPanelShown查询输入法面板是否显示。  
-- **输入法选择对话框**：通过showOptionalInputMethods显示输入法选择对话框（已废弃，建议使用InputMethodListDialog）。
-
-需通过[getSetting](arkts-ime-inputmethod-getsetting-f.md#getsetting)获取InputMethodSetting实例后使用。
-
-下列API均需使用[getSetting](arkts-ime-inputmethod-getsetting-f.md#getsetting)获取到InputMethodSetting实例后，通过实例调用。
+In the following API examples, you must first use [getSetting](arkts-ime-inputmethod-getsetting-f.md#getsetting) to obtain an **InputMethodSetting** instance, and then call the APIs using the obtained instance.
 
 **Since:** 8
 
@@ -35,8 +22,6 @@ import { inputMethod } from 'kits/@kit.IMEKit';
 displayOptionalInputMethod(callback: AsyncCallback<void>): void
 ```
 
-显示输入法选择对话框。使用callback异步回调。
-
 **Since:** 8
 
 **ArkTS mode:** ArkTS-Dyn only, since version 8.
@@ -53,7 +38,7 @@ displayOptionalInputMethod(callback: AsyncCallback<void>): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | 回调函数。当输入法选择对话框显示成功。err为undefined，否则为错误对象。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | the callback of displayOptionalInputMethod. |
 
 ## Examples
 
@@ -75,8 +60,6 @@ inputMethod.getSetting().displayOptionalInputMethod((err: BusinessError) => {
 displayOptionalInputMethod(): Promise<void>
 ```
 
-显示输入法选择对话框。使用promise异步回调。
-
 **Since:** 8
 
 **ArkTS mode:** ArkTS-Dyn only, since version 8.
@@ -93,7 +76,7 @@ displayOptionalInputMethod(): Promise<void>
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | 无返回结果的Promise对象。 |
+| Promise&lt;void&gt; | the promise returned by the function. |
 
 ## Examples
 
@@ -113,7 +96,7 @@ inputMethod.getSetting().displayOptionalInputMethod().then(() => {
 getAllInputMethods(callback: AsyncCallback<Array<InputMethodProperty>>): void
 ```
 
-获取所有输入法应用列表。使用callback异步回调。
+List all input methods
 
 **Since:** 11
 
@@ -127,14 +110,14 @@ getAllInputMethods(callback: AsyncCallback<Array<InputMethodProperty>>): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;InputMethodProperty&gt;&gt; | Yes | 回调函数，返回所有输入法列表。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;InputMethodProperty&gt;&gt; | Yes | the callback of getInputMethods. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 12800001 | bundle manager error. |
-| 12800008 | input method manager service error. Possible cause: a system error, such as null pointer, IPC exception. |
+| [12800001](../errorcode-inputmethod-framework.md#12800001-package-manager-error) | bundle manager error. |
+| [12800008](../errorcode-inputmethod-framework.md#12800008-input-method-manager-service-error) | input method manager service error. Possible cause: a system error, such as null pointer, IPC exception. |
 
 ## Examples
 
@@ -156,7 +139,7 @@ inputMethod.getSetting().getAllInputMethods((err: BusinessError, data: Array<inp
 getAllInputMethods(): Promise<Array<InputMethodProperty>>
 ```
 
-获取所有输入法应用列表。使用promise异步回调。
+List all input methods
 
 **Since:** 11
 
@@ -170,14 +153,14 @@ getAllInputMethods(): Promise<Array<InputMethodProperty>>
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;Array&lt;InputMethodProperty&gt;&gt; | Promise对象，返回所有输入法列表。 |
+| Promise&lt;Array&lt;InputMethodProperty&gt;&gt; | the promise returned by the function. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 12800001 | bundle manager error. |
-| 12800008 | input method manager service error. Possible cause: a system error, such as null pointer, IPC exception. |
+| [12800001](../errorcode-inputmethod-framework.md#12800001-package-manager-error) | bundle manager error. |
+| [12800008](../errorcode-inputmethod-framework.md#12800008-input-method-manager-service-error) | input method manager service error. Possible cause: a system error, such as null pointer, IPC exception. |
 
 ## Examples
 
@@ -197,7 +180,7 @@ inputMethod.getSetting().getAllInputMethods().then((data: Array<inputMethod.Inpu
 getAllInputMethodsSync(): Array<InputMethodProperty>
 ```
 
-获取所有输入法应用列表。同步接口。
+List all input methods sync
 
 **Since:** 11
 
@@ -211,14 +194,14 @@ getAllInputMethodsSync(): Array<InputMethodProperty>
 
 | Type | Description |
 | --- | --- |
-| Array&lt;InputMethodProperty&gt; | 返回所有输入法列表。 |
+| Array&lt;InputMethodProperty&gt; | the list of all inputmethod. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 12800001 | bundle manager error. |
-| 12800008 | input method manager service error. Possible cause: a system error, such as null pointer, IPC exception. |
+| [12800001](../errorcode-inputmethod-framework.md#12800001-package-manager-error) | bundle manager error. |
+| [12800008](../errorcode-inputmethod-framework.md#12800008-input-method-manager-service-error) | input method manager service error. Possible cause: a system error, such as null pointer, IPC exception. |
 
 ## Examples
 
@@ -232,7 +215,7 @@ let imeProperty: Array<inputMethod.InputMethodProperty> = inputMethod.getSetting
 getInputMethodState(): Promise<EnabledState>
 ```
 
-查询输入法的启用状态。使用promise异步回调。
+The input method application calls this interface to obtain its own enabled state.
 
 **Since:** 15
 
@@ -246,14 +229,14 @@ getInputMethodState(): Promise<EnabledState>
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;EnabledState&gt; | Promise对象，返回EnabledState.DISABLED表示未启用; 返回EnabledState.BASIC_MODE表示基础模式; 返回 EnabledState.FULL_EXPERIENCE_MODE表示完整体验模式。 |
+| Promise&lt;EnabledState&gt; | the promise returned by the function. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 12800004 | not an input method application. |
-| 12800008 | input method manager service error. Possible cause: a system error, such as null pointer, IPC exception. |
+| [12800004](../errorcode-inputmethod-framework.md#12800004-not-an-input-method) | not an input method application. |
+| [12800008](../errorcode-inputmethod-framework.md#12800008-input-method-manager-service-error) | input method manager service error. Possible cause: a system error, such as null pointer, IPC exception. |
 
 ## Examples
 
@@ -273,7 +256,7 @@ inputMethod.getSetting().getInputMethodState().then((status: inputMethod.Enabled
 getInputMethods(enable: boolean, callback: AsyncCallback<Array<InputMethodProperty>>): void
 ```
 
-获取已激活/未激活的输入法应用列表。使用callback异步回调。
+List input methods
 
 **Since:** 9
 
@@ -287,16 +270,16 @@ getInputMethods(enable: boolean, callback: AsyncCallback<Array<InputMethodProper
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| enable | boolean | Yes | true表示返回已激活输入法列表，false表示返回未激活输入法列表。 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;InputMethodProperty&gt;&gt; | Yes | 回调函数，返回已激活/未激活输入法列表。 |
+| enable | boolean | Yes | If true, collect enabled input methods. If false, collect disabled input methods. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;InputMethodProperty&gt;&gt; | Yes | the callback of getInputMethods. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
-| 12800001 | bundle manager error. |
-| 12800008 | input method manager service error. Possible cause: a system error, such as null pointer, IPC exception. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
+| [12800001](../errorcode-inputmethod-framework.md#12800001-package-manager-error) | bundle manager error. |
+| [12800008](../errorcode-inputmethod-framework.md#12800008-input-method-manager-service-error) | input method manager service error. Possible cause: a system error, such as null pointer, IPC exception. |
 
 ## Examples
 
@@ -318,7 +301,7 @@ inputMethod.getSetting().getInputMethods(true, (err: BusinessError, data: Array<
 getInputMethods(enable: boolean): Promise<Array<InputMethodProperty>>
 ```
 
-获取已激活/未激活的输入法应用列表。使用promise异步回调。
+List input methods
 
 **Since:** 9
 
@@ -332,21 +315,21 @@ getInputMethods(enable: boolean): Promise<Array<InputMethodProperty>>
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| enable | boolean | Yes | true表示返回已激活输入法列表，false表示返回未激活输入法列表。 |
+| enable | boolean | Yes | If true, collect enabled input methods. If false, collect disabled input methods. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;Array&lt;InputMethodProperty&gt;&gt; | Promise对象，返回已激活/未激活输入法列表。 |
+| Promise&lt;Array&lt;InputMethodProperty&gt;&gt; | the promise returned by the function. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
-| 12800001 | bundle manager error. |
-| 12800008 | input method manager service error. Possible cause: a system error, such as null pointer, IPC exception. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
+| [12800001](../errorcode-inputmethod-framework.md#12800001-package-manager-error) | bundle manager error. |
+| [12800008](../errorcode-inputmethod-framework.md#12800008-input-method-manager-service-error) | input method manager service error. Possible cause: a system error, such as null pointer, IPC exception. |
 
 ## Examples
 
@@ -366,7 +349,7 @@ inputMethod.getSetting().getInputMethods(true).then((data: Array<inputMethod.Inp
 getInputMethodsSync(enable: boolean): Array<InputMethodProperty>
 ```
 
-获取已激活/未激活的输入法应用列表。同步接口。
+List enabled or disabled input methods sync
 
 **Since:** 11
 
@@ -380,21 +363,21 @@ getInputMethodsSync(enable: boolean): Array<InputMethodProperty>
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| enable | boolean | Yes | true表示返回已激活输入法列表，false表示返回未激活输入法列表。 |
+| enable | boolean | Yes | If true, collect enabled input methods. If false, collect disabled input methods. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Array&lt;InputMethodProperty&gt; | 返回已激活/未激活输入法列表。 |
+| Array&lt;InputMethodProperty&gt; | the list of inputmethod. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
-| 12800001 | bundle manager error. |
-| 12800008 | input method manager service error. Possible cause: a system error, such as null pointer, IPC exception. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
+| [12800001](../errorcode-inputmethod-framework.md#12800001-package-manager-error) | bundle manager error. |
+| [12800008](../errorcode-inputmethod-framework.md#12800008-input-method-manager-service-error) | input method manager service error. Possible cause: a system error, such as null pointer, IPC exception. |
 
 ## Examples
 
@@ -408,7 +391,7 @@ let imeProperty: Array<inputMethod.InputMethodProperty> = inputMethod.getSetting
 listCurrentInputMethodSubtype(callback: AsyncCallback<Array<InputMethodSubtype>>): void
 ```
 
-查询当前输入法应用的所有子类型。使用callback异步回调。
+List subtype of current input method
 
 **Since:** 9
 
@@ -422,14 +405,14 @@ listCurrentInputMethodSubtype(callback: AsyncCallback<Array<InputMethodSubtype>>
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;[InputMethodSubtype](arkts-ime-inputmethodsubtype-i.md)&gt;&gt; | Yes | 回调函数，返回当前输入法应用的所有子类型。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;[InputMethodSubtype](arkts-ime-inputmethodsubtype-i.md)&gt;&gt; | Yes | the callback of listCurrentInputMethodSubtype. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 12800001 | bundle manager error. |
-| 12800008 | input method manager service error. Possible cause: a system error, such as null pointer, IPC exception. |
+| [12800001](../errorcode-inputmethod-framework.md#12800001-package-manager-error) | bundle manager error. |
+| [12800008](../errorcode-inputmethod-framework.md#12800008-input-method-manager-service-error) | input method manager service error. Possible cause: a system error, such as null pointer, IPC exception. |
 
 ## Examples
 
@@ -453,7 +436,7 @@ inputMethodSetting.listCurrentInputMethodSubtype((err: BusinessError, data: Arra
 listCurrentInputMethodSubtype(): Promise<Array<InputMethodSubtype>>
 ```
 
-查询当前输入法应用的所有子类型。使用promise异步回调。
+List subtype of current input method
 
 **Since:** 9
 
@@ -467,14 +450,14 @@ listCurrentInputMethodSubtype(): Promise<Array<InputMethodSubtype>>
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;Array&lt;[InputMethodSubtype](arkts-ime-inputmethodsubtype-i.md)&gt;&gt; | Promise对象，返回当前输入法应用的所有子类型。 |
+| Promise&lt;Array&lt;[InputMethodSubtype](arkts-ime-inputmethodsubtype-i.md)&gt;&gt; | the promise returned by the function. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 12800001 | bundle manager error. |
-| 12800008 | input method manager service error. Possible cause: a system error, such as null pointer, IPC exception. |
+| [12800001](../errorcode-inputmethod-framework.md#12800001-package-manager-error) | bundle manager error. |
+| [12800008](../errorcode-inputmethod-framework.md#12800008-input-method-manager-service-error) | input method manager service error. Possible cause: a system error, such as null pointer, IPC exception. |
 
 ## Examples
 
@@ -497,8 +480,6 @@ inputMethodSetting.listCurrentInputMethodSubtype().then((data: Array<InputMethod
 listInputMethod(callback: AsyncCallback<Array<InputMethodProperty>>): void
 ```
 
-查询已安装的输入法列表。使用callback异步回调。
-
 **Since:** 8
 
 **ArkTS mode:** ArkTS-Dyn only, since version 8.
@@ -515,7 +496,7 @@ listInputMethod(callback: AsyncCallback<Array<InputMethodProperty>>): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;InputMethodProperty&gt;&gt; | Yes | 回调函数，返回已安装的输入法列表。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;InputMethodProperty&gt;&gt; | Yes | the callback of listInputMethod. |
 
 ## Examples
 
@@ -537,8 +518,6 @@ inputMethod.getSetting().listInputMethod((err: BusinessError, data: Array<inputM
 listInputMethod(): Promise<Array<InputMethodProperty>>
 ```
 
-查询已安装的输入法列表。使用promise异步回调。
-
 **Since:** 8
 
 **ArkTS mode:** ArkTS-Dyn only, since version 8.
@@ -555,7 +534,7 @@ listInputMethod(): Promise<Array<InputMethodProperty>>
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;Array&lt;InputMethodProperty&gt;&gt; | Promise对象，返回已安装输入法列表。 |
+| Promise&lt;Array&lt;InputMethodProperty&gt;&gt; | the promise returned by the function. |
 
 ## Examples
 
@@ -578,7 +557,7 @@ listInputMethodSubtype(
     ): void
 ```
 
-获取指定输入法应用的所有子类型。使用callback异步回调。
+List subtype of the specified input method.
 
 **Since:** 9
 
@@ -592,16 +571,16 @@ listInputMethodSubtype(
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| inputMethodProperty | [InputMethodProperty](arkts-ime-inputmethod-inputmethodproperty-i.md) | Yes | 输入法应用。 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;[InputMethodSubtype](arkts-ime-inputmethodsubtype-i.md)&gt;&gt; | Yes | 回调函数，返回指定输入法应用的所有子类型。 |
+| inputMethodProperty | [InputMethodProperty](arkts-ime-inputmethod-inputmethodproperty-i.md) | Yes | the property of the specified inputmethod. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;[InputMethodSubtype](arkts-ime-inputmethodsubtype-i.md)&gt;&gt; | Yes | the callback of listInputMethodSubtype. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types; 3.Parameter verification failed. |
-| 12800001 | bundle manager error. |
-| 12800008 | input method manager service error. Possible cause: a system error, such as null pointer, IPC exception. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types; 3.Parameter verification failed. |
+| [12800001](../errorcode-inputmethod-framework.md#12800001-package-manager-error) | bundle manager error. |
+| [12800008](../errorcode-inputmethod-framework.md#12800008-input-method-manager-service-error) | input method manager service error. Possible cause: a system error, such as null pointer, IPC exception. |
 
 ## Examples
 
@@ -633,7 +612,7 @@ inputMethodSetting.listInputMethodSubtype(inputMethodProperty,
 listInputMethodSubtype(inputMethodProperty: InputMethodProperty): Promise<Array<InputMethodSubtype>>
 ```
 
-获取指定输入法应用的所有子类型。使用promise异步回调。
+List subtype of the specified input method.
 
 **Since:** 9
 
@@ -647,21 +626,21 @@ listInputMethodSubtype(inputMethodProperty: InputMethodProperty): Promise<Array<
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| inputMethodProperty | [InputMethodProperty](arkts-ime-inputmethod-inputmethodproperty-i.md) | Yes | 输入法应用。 |
+| inputMethodProperty | [InputMethodProperty](arkts-ime-inputmethod-inputmethodproperty-i.md) | Yes | Indicates the specified input method. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;Array&lt;[InputMethodSubtype](arkts-ime-inputmethodsubtype-i.md)&gt;&gt; | Promise对象，返回指定输入法应用的所有子类型。 |
+| Promise&lt;Array&lt;[InputMethodSubtype](arkts-ime-inputmethodsubtype-i.md)&gt;&gt; | the promise returned by the function. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types; 3.Parameter verification failed. |
-| 12800001 | bundle manager error. |
-| 12800008 | input method manager service error. Possible cause: a system error, such as null pointer, IPC exception. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types; 3.Parameter verification failed. |
+| [12800001](../errorcode-inputmethod-framework.md#12800001-package-manager-error) | bundle manager error. |
+| [12800008](../errorcode-inputmethod-framework.md#12800008-input-method-manager-service-error) | input method manager service error. Possible cause: a system error, such as null pointer, IPC exception. |
 
 ## Examples
 
@@ -693,7 +672,7 @@ off(
     ): void
 ```
 
-取消订阅输入法及子类型变化监听事件。使用callback异步回调。
+Unsubscribe input method or subtype change.
 
 **Since:** 9
 
@@ -707,8 +686,8 @@ off(
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'imeChange' | Yes | 设置监听类型，固定取值为'imeChange'。 |
-| callback | (inputMethodProperty: InputMethodProperty, inputMethodSubtype: InputMethodSubtype) =&gt; void | No | 回调函数，返回取消订阅的输入法属性对象及子类型对象。 |
+| type | 'imeChange' | Yes | Indicates the event type. |
+| callback | (inputMethodProperty: InputMethodProperty, inputMethodSubtype: InputMethodSubtype) =&gt; void | No | the callback of 'imeChange', when subscriber unsubscribes all callback functions of event 'imeChange', this parameter can be left blank. |
 
 ## Examples
 
@@ -722,7 +701,7 @@ inputMethod.getSetting().off('imeChange');
 offImeChange(callback?: ImeChangeCallback): void
 ```
 
-取消订阅输入法或子类型切换事件。
+Unsubscribe input method or subtype change.
 
 **Since:** 23
 
@@ -747,7 +726,7 @@ on(
     ): void
 ```
 
-订阅输入法及子类型变化监听事件。使用callback异步回调。
+Subscribe input method or subtype change.
 
 **Since:** 9
 
@@ -761,8 +740,8 @@ on(
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'imeChange' | Yes | 设置监听类型，固定取值为'imeChange'。 |
-| callback | (inputMethodProperty: InputMethodProperty, inputMethodSubtype: InputMethodSubtype) =&gt; void | Yes | 回调函数，返回输入法属性对象及子类型对象。 |
+| type | 'imeChange' | Yes | Indicates the event type. |
+| callback | (inputMethodProperty: InputMethodProperty, inputMethodSubtype: InputMethodSubtype) =&gt; void | Yes | the callback of 'imeChange' |
 
 ## Examples
 
@@ -782,7 +761,7 @@ inputMethod.getSetting()
 onImeChange(callback: ImeChangeCallback): void
 ```
 
-订阅输入法或子类型切换事件。
+Subscribe input method or subtype change.
 
 **Since:** 23
 
@@ -804,7 +783,7 @@ onImeChange(callback: ImeChangeCallback): void
 showOptionalInputMethods(callback: AsyncCallback<boolean>): void
 ```
 
-显示输入法选择对话框。使用callback异步回调。
+Show input method setting extension dialog
 
 **Since:** 9
 
@@ -822,13 +801,13 @@ showOptionalInputMethods(callback: AsyncCallback<boolean>): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;boolean&gt; | Yes | 回调函数。当输入法选择对话框显示成功，err为undefined，data为true；否则为错误对象。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;boolean&gt; | Yes | the callback of showOptionalInputMethods. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 12800008 | input method manager service error. Possible cause: a system error, such as null pointer, IPC exception. |
+| [12800008](../errorcode-inputmethod-framework.md#12800008-input-method-manager-service-error) | input method manager service error. Possible cause: a system error, such as null pointer, IPC exception. |
 
 ## Examples
 
@@ -854,7 +833,7 @@ inputMethod.getSetting().showOptionalInputMethods((err: BusinessError, result: b
 showOptionalInputMethods(): Promise<boolean>
 ```
 
-显示输入法选择对话框。使用promise异步回调。
+Show input method setting extension dialog
 
 **Since:** 9
 
@@ -872,13 +851,13 @@ showOptionalInputMethods(): Promise<boolean>
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;boolean&gt; | Promise对象。当输入法选择对话框显示成功，err为undefined，data为true；否则为错误对象。 |
+| Promise&lt;boolean&gt; | the promise returned by the function. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 12800008 | input method manager service error. Possible cause: a system error, such as null pointer, IPC exception. |
+| [12800008](../errorcode-inputmethod-framework.md#12800008-input-method-manager-service-error) | input method manager service error. Possible cause: a system error, such as null pointer, IPC exception. |
 
 ## Examples
 

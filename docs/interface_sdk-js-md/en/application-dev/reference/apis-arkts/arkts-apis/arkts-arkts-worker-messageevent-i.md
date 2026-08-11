@@ -1,6 +1,6 @@
 # MessageEvent
 
-消息类，持有Worker线程间传递的数据，MessageEvent类继承Event。
+Holds the data transferred between worker threads.
 
 **Inheritance/Implementation:** MessageEvent extends [Event](arkts-arkts-worker-event-i.md)
 
@@ -24,7 +24,7 @@ import { MessageEvents, PostMessageOptions, MessageEvent, Priority, WorkerEventT
 readonly data: T
 ```
 
-异常发生时传递的数据。
+Data transferred when an exception occurs.
 
 **Type:** T
 

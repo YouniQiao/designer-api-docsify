@@ -58,7 +58,7 @@ identity(): Matrix2D
 
 | 类型 | 说明 |
 | --- | --- |
-| [Matrix2D](arkts-arkui-matrix2d-c.md) |  |
+| [Matrix2D](arkts-arkui-canvaspattern-matrix2d-c.md) |  |
 
 ## invert
 
@@ -86,7 +86,7 @@ invert(): Matrix2D
 
 | 类型 | 说明 |
 | --- | --- |
-| [Matrix2D](arkts-arkui-matrix2d-c.md) |  |
+| [Matrix2D](arkts-arkui-canvaspattern-matrix2d-c.md) |  |
 
 ## multiply
 
@@ -114,13 +114,13 @@ multiply(other?: Matrix2D): Matrix2D
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| other | [Matrix2D](arkts-arkui-matrix2d-c.md) | 否 | 目标矩阵。&lt;br/&gt;异常值undefined和null按无效值处理。&lt;br/&gt;默认值：null |
+| other | [Matrix2D](arkts-arkui-canvaspattern-matrix2d-c.md) | 否 | 目标矩阵。&lt;br/&gt;异常值undefined和null按无效值处理。&lt;br/&gt;默认值：null |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| [Matrix2D](arkts-arkui-matrix2d-c.md) |  |
+| [Matrix2D](arkts-arkui-canvaspattern-matrix2d-c.md) |  |
 
 ## rotate
 
@@ -155,7 +155,7 @@ rotate(rx?: number, ry?: number): Matrix2D
 
 | 类型 | 说明 |
 | --- | --- |
-| [Matrix2D](arkts-arkui-matrix2d-c.md) |  |
+| [Matrix2D](arkts-arkui-canvaspattern-matrix2d-c.md) |  |
 
 ## scale
 
@@ -190,7 +190,7 @@ scale(sx?: number, sy?: number): Matrix2D
 
 | 类型 | 说明 |
 | --- | --- |
-| [Matrix2D](arkts-arkui-matrix2d-c.md) |  |
+| [Matrix2D](arkts-arkui-canvaspattern-matrix2d-c.md) |  |
 
 ## translate
 
@@ -225,7 +225,7 @@ translate(tx?: number, ty?: number): Matrix2D
 
 | 类型 | 说明 |
 | --- | --- |
-| [Matrix2D](arkts-arkui-matrix2d-c.md) |  |
+| [Matrix2D](arkts-arkui-canvaspattern-matrix2d-c.md) |  |
 
 ## rotateX
 

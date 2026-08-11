@@ -1,6 +1,6 @@
 # CameraStatusInfo
 
-相机管理器回调返回的接口实例，该实例表示相机状态信息。
+Describes the camera status information.
 
 **Since:** 10
 
@@ -22,7 +22,7 @@ import { camera } from 'kits/@kit.CameraKit';
 camera: CameraDevice
 ```
 
-相机信息。
+Camera device.
 
 **Type:** [CameraDevice](arkts-camera-camera-cameradevice-i.md)
 
@@ -42,7 +42,7 @@ camera: CameraDevice
 status: CameraStatus
 ```
 
-相机状态。
+Camera status.
 
 **Type:** [CameraStatus](arkts-camera-camera-camerastatus-e.md)
 

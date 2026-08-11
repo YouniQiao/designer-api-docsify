@@ -1,7 +1,6 @@
 # ObservedArray
 
-继承自Array&lt;T&gt;，为可观察API操作的Array对象。详见  
-[ObservedArray/ObservedMap/ObservedSet/ObservedDate：具有观察能力的Built-in类型](../../../ui/state-management-static/arkts-static-new-observed-built-in-types.md)。
+Observable Array base class.
 
 **Inheritance/Implementation:** ObservedArray extends [Array<T>](Array<T>)
 
@@ -19,7 +18,7 @@
 public constructor()
 ```
 
-无参构造函数。
+No arg constructor for observable array.
 
 **Since:** 26.0.0
 
@@ -37,7 +36,7 @@ public constructor()
 public constructor(first: T, ...d: T[])
 ```
 
-使用元素列表初始化ObservedArray实例。
+Elements constructor for observable array.
 
 **Since:** 26.0.0
 
@@ -53,8 +52,8 @@ public constructor(first: T, ...d: T[])
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| first | T | Yes | 第一个元素。 |
-| d | T[] | Yes | 其余元素组成的数组，默认为[]。 |
+| first | T | Yes | first element. |
+| d | T[] | Yes | more elements. |
 
 ## constructor
 
@@ -62,7 +61,7 @@ public constructor(first: T, ...d: T[])
 public constructor(arrayLen: int, initializer: ObservedArrayInitializer<T>)
 ```
 
-使用指定的长度和初始化函数初始化ObservedArray实例。
+Array length and initializer constructor for observable array.
 
 **Since:** 26.0.0
 
@@ -78,6 +77,6 @@ public constructor(arrayLen: int, initializer: ObservedArrayInitializer<T>)
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| arrayLen | int | Yes | 数组初始长度。 |
-| initializer | [ObservedArrayInitializer](arkts-arkui-observedarrayinitializer-t.md)&lt;T&gt; | Yes | 数组元素初始化函数。 |
+| arrayLen | int | Yes | initial array length |
+| initializer | [ObservedArrayInitializer](arkts-arkui-observedarrayinitializer-t.md)&lt;T&gt; | Yes | element initializer. |
 

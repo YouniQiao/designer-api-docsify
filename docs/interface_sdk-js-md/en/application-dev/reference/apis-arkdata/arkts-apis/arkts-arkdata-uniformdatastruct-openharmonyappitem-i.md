@@ -1,6 +1,6 @@
 # OpenHarmonyAppItem
 
-系统定义的桌面图标类型数据，用于跨应用共享桌面图标信息。典型使用场景包括：桌面启动器拖拽图标、应用商店分享应用图标或创建快捷方式等。
+Represents data of the home screen icon type defined by the system.
 
 **Since:** 12
 
@@ -22,7 +22,7 @@ import { uniformDataStruct } from 'kits/@kit.ArkData';
 abilityName: string
 ```
 
-图标对应的应用ability名。建议遵循Ability组件命名规范：取值为长度不超过127字节的字符串，以字母开头，可包含字母、数字、下划线（_）或点号（.）；确保该名称在整个应用中唯一。推荐使用"包名.Ability名"格式（如"com.example.myapplication.MainAbility"）。
+Application ability name corresponding to the icon.
 
 **Type:** string
 
@@ -42,7 +42,7 @@ abilityName: string
 appIconId: string
 ```
 
-图标的图片id。
+Image ID of the icon.
 
 **Type:** string
 
@@ -62,7 +62,7 @@ appIconId: string
 appId: string
 ```
 
-图标对应的应用id。
+ID of the application, for which the icon is used.
 
 **Type:** string
 
@@ -82,7 +82,7 @@ appId: string
 appLabelId: string
 ```
 
-图标名称对应的标签id。
+Label ID corresponding to the icon name.
 
 **Type:** string
 
@@ -102,7 +102,7 @@ appLabelId: string
 appName: string
 ```
 
-图标对应的应用名。
+Name of the application, for which the icon is used.
 
 **Type:** string
 
@@ -122,7 +122,7 @@ appName: string
 bundleName: string
 ```
 
-图标对应的应用bundle名，格式需符合应用包名规范。
+Bundle name corresponding to the icon.
 
 **Type:** string
 
@@ -142,7 +142,7 @@ bundleName: string
 details?: Record<string, int | long | double | string | Uint8Array>
 ```
 
-字典类型对象，key为string类型，value可包含number（数值类型）、string（字符串类型）或Uint8Array（二进制字节数组）类型数据。非必填字段，默认值为空字典对象。
+Object of the dictionary type used to describe the icon. The key is of the string type, and the value can be a number, a string, or a Uint8Array. By default, it is an empty dictionary object.
 
 **Type:** ArkTS-Dyn: [Record](../../apis-default/arkts-apis/arkts-record-t.md)&lt;string, number \| number \| number \| string \| Uint8Array&gt;  <br>ArkTS-Sta：[Record](../../apis-default/arkts-apis/arkts-record-t.md)&lt;string, int \| long \| double \| string \| Uint8Array&gt;
 
@@ -162,8 +162,8 @@ details?: Record<string, int | long | double | string | Uint8Array>
 readonly uniformDataType: 'openharmony.app-item'
 ```
 
-统一数据类型标识为桌面图标类型数据，固定为“openharmony.app-item”，数据类型描述信息见  
-[UniformDataType](arkts-arkdata-uniformtypedescriptor-uniformdatatype-e.md)。
+Uniform data type, which has a fixed value of **openharmony.app-item**. For details, see   
+[UniformDataType](arkts-arkdata-uniformtypedescriptor-uniformdatatype-e.md).
 
 **Type:** 'openharmony.app-item'
 

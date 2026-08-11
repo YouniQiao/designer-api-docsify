@@ -47,12 +47,11 @@ let context: mindSporeLite.Context = {};
 context.target = ["nnrt"];
 context.nnrt = {};
 let allDevices = mindSporeLite.getAllNNRTDeviceDescriptions();
-if (allDevices == null || allDevices.length === 0) {
-  console.error(`Failed to get NNRT device descriptions. Context: ${JSON.stringify(context)}, Result: null or empty`);
+if (allDevices == null) {
+  console.error('getAllNNRTDeviceDescriptions is NULL.');
 } else {
-  console.info(`Succeeded in getting NNRT device descriptions. Device count: ${allDevices.length}`);
-    for (let i: number = 0; i < allDevices.length; i++) {
-      console.info(`Device ${i} ID: ${allDevices[i].deviceID().toString()}`);
+  for (let i: number = 0; i < allDevices.length; i++) {
+    console.info(allDevices[i].deviceID().toString());
   }
 }
 ```
@@ -88,12 +87,11 @@ let context: mindSporeLite.Context = {};
 context.target = ["nnrt"];
 context.nnrt = {};
 let allDevices = mindSporeLite.getAllNNRTDeviceDescriptions();
-if (allDevices == null || allDevices.length === 0) {
-  console.error(`Failed to get NNRT device descriptions. Context: ${JSON.stringify(context)}, Result: null or empty`);
+if (allDevices == null) {
+  console.error('getAllNNRTDeviceDescriptions is NULL.');
 } else {
-console.info(`Succeeded in getting NNRT device descriptions. Device count: ${allDevices.length}`);
   for (let i: number = 0; i < allDevices.length; i++) {
-    console.info(`Device ${i} name: ${allDevices[i].deviceName()}`);
+    console.info(allDevices[i].deviceName().toString());
   }
 }
 ```
@@ -129,12 +127,11 @@ let context: mindSporeLite.Context = {};
 context.target = ["nnrt"];
 context.nnrt = {};
 let allDevices = mindSporeLite.getAllNNRTDeviceDescriptions();
-if (allDevices == null || allDevices.length === 0) {
-  console.error(`Failed to get NNRT device descriptions. Context: ${JSON.stringify(context)}, Result: null or empty`);
+if (allDevices == null) {
+  console.error('getAllNNRTDeviceDescriptions is NULL.');
 } else {
-console.info(`Succeeded in getting NNRT device descriptions. Device count: ${allDevices.length}`);
   for (let i: number = 0; i < allDevices.length; i++) {
-    console.info(`Device ${i} type: ${allDevices[i].deviceType().toString()}`);
+    console.info(allDevices[i].deviceType().toString());
   }
 }
 ```

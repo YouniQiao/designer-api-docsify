@@ -4,7 +4,7 @@
 export type Curve = curves.Curve
 ```
 
-插值曲线。
+enum Curve.
 
 **Since:** 23
 

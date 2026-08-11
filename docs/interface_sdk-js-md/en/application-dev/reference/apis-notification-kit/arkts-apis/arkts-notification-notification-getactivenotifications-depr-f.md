@@ -6,7 +6,7 @@
 function getActiveNotifications(callback: AsyncCallback<Array<NotificationRequest>>): void
 ```
 
-获取当前应用未删除的通知列表（Callback形式）。
+Obtains active notifications of this application. This API uses an asynchronous callback to return the result.
 
 **Since:** 7
 
@@ -24,7 +24,7 @@ function getActiveNotifications(callback: AsyncCallback<Array<NotificationReques
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;[NotificationRequest](arkts-notification-notificationrequest-notificationrequest-i.md)&gt;&gt; | Yes | 获取当前应用通知列表回调函数。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;[NotificationRequest](arkts-notification-notificationrequest-notificationrequest-i.md)&gt;&gt; | Yes | Callback used to return the result. |
 
 
 ## getActiveNotifications
@@ -33,7 +33,7 @@ function getActiveNotifications(callback: AsyncCallback<Array<NotificationReques
 function getActiveNotifications(): Promise<Array<NotificationRequest>>
 ```
 
-获取当前应用未删除的通知列表（Promise形式）。
+Obtains active notifications of this application. This API uses a promise to return the result.
 
 **Since:** 7
 
@@ -51,5 +51,5 @@ function getActiveNotifications(): Promise<Array<NotificationRequest>>
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;Array&lt;[NotificationRequest](arkts-notification-notificationrequest-notificationrequest-i.md)&gt;&gt; | 以Promise形式返回获取当前应用通知列表。 |
+| Promise&lt;Array&lt;[NotificationRequest](arkts-notification-notificationrequest-notificationrequest-i.md)&gt;&gt; | Promise used to return the result. |
 

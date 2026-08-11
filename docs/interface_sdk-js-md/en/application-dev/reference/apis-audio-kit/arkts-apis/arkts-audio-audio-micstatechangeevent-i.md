@@ -1,6 +1,6 @@
 # MicStateChangeEvent
 
-麦克风状态变化时，应用接收到的事件。
+Describes the event received by the application when the microphone mute status is changed.
 
 **Since:** 9
 
@@ -22,7 +22,7 @@ import { audio } from 'kits/@kit.AudioKit';
 mute: boolean
 ```
 
-系统麦克风是否为静音状态。true表示静音，false表示非静音。
+Mute status of the microphone **true** if muted, **false** otherwise.
 
 **Type:** boolean
 

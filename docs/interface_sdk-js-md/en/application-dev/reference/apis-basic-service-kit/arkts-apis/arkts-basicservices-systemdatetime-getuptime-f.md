@@ -12,7 +12,7 @@ import { systemDateTime } from 'kits/@kit.BasicServicesKit';
 function getUptime(timeType: TimeType, isNanoseconds?: boolean): long
 ```
 
-使用同步方式获取自系统启动以来经过的时间。
+Obtains the time elapsed since system startup. This API returns the result synchronously.
 
 **Since:** 10
 
@@ -26,20 +26,20 @@ function getUptime(timeType: TimeType, isNanoseconds?: boolean): long
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| timeType | [TimeType](arkts-basicservices-systemdatetime-timetype-e.md) | Yes | 获取时间的类型，仅能为`STARTUP`或者`ACTIVE`。 |
+| timeType | [TimeType](arkts-basicservices-systemdatetime-timetype-e.md) | Yes | Type of the time to be obtained. The value can only be `STARTUP` or `ACTIVE`. |
 | isNanoseconds | boolean | No |  |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| ArkTS-Dyn: number  <br>ArkTS-Sta：long | 自系统启动以来经过的时间。 |
+| ArkTS-Dyn: number  <br>ArkTS-Sta：long | Time elapsed since system startup. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. Possible causes: &lt;br&gt; 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameter types. &lt;br&gt; 3. Parameter verification failed. This error code was added due to missing issues.<br>**Applicable version:** 12 and later |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: &lt;br&gt; 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameter types. &lt;br&gt; 3. Parameter verification failed. This error code was added due to missing issues.<br>**Applicable version:** 12 and later |
 
 ## Examples
 

@@ -1,6 +1,6 @@
 # VibratorEventType
 
-振动事件类型。用于[VibratorEvent](arkts-sensorservice-vibrator-vibratorevent-i.md)的eventType字段指定振动事件的类型。
+Vibration event type.
 
 **Since:** 18
 
@@ -16,7 +16,7 @@
 CONTINUOUS = 0
 ```
 
-表示长振。适用于需要持续振动反馈的场景（如引擎振动、拉弓振动等）。
+Long vibration.
 
 **Since:** 18
 
@@ -32,7 +32,7 @@ CONTINUOUS = 0
 TRANSIENT = 1
 ```
 
-表示短振。适用于需要短暂振动反馈的场景（如点击、按键反馈等）。
+Short vibration.
 
 **Since:** 18
 

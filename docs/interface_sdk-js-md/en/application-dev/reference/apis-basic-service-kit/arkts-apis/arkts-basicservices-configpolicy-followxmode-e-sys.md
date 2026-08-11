@@ -1,5 +1,7 @@
 # FollowXMode (System API)
 
+Define followXMode.
+
 **Since:** 11
 
 **ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
@@ -16,7 +18,7 @@
 DEFAULT = 0
 ```
 
-默认模式，会根据各配置层级下的followx_file_list.cfg文件配置的跟随规则进行文件查找。
+Files are searched based on the follow rules configured in the **followx_file_list.cfg** file at each configuration level.
 
 **Since:** 11
 
@@ -34,7 +36,7 @@ DEFAULT = 0
 NO_RULE_FOLLOWED = 1
 ```
 
-不跟随模式，不会使用任何跟随规则，即使存在followx_file_list.cfg文件。
+No follow rule is used even if the **followx_file_list.cfg** file exists.
 
 **Since:** 11
 
@@ -52,7 +54,7 @@ NO_RULE_FOLLOWED = 1
 SIM_DEFAULT = 10
 ```
 
-跟随默认卡模式，会根据默认卡的opkey在各配置层级下的etc/carrier/\${opkey}下查找文件。
+Files are searched in **etc/carrier/\${opkey}** at each configuration level based on the opkey of the default card.
 
 **Since:** 11
 
@@ -70,7 +72,7 @@ SIM_DEFAULT = 10
 SIM_1 = 11
 ```
 
-跟随卡1模式，会根据卡1的opkey在各配置层级下的etc/carrier/\${opkey}下查找文件。
+Files are searched in **etc/carrier/\${opkey}** at each configuration level based on the opkey of card 1.
 
 **Since:** 11
 
@@ -88,7 +90,7 @@ SIM_1 = 11
 SIM_2 = 12
 ```
 
-跟随卡2模式，会根据卡2的opkey在各配置层级下的etc/carrier/\${opkey}下查找文件。
+Files are searched in **etc/carrier/\${opkey}** at each configuration level based on the opkey of card 2.
 
 **Since:** 11
 
@@ -106,7 +108,8 @@ SIM_2 = 12
 USER_DEFINED = 100
 ```
 
-用户自定义模式，会根据入参extra提供的跟随规则进行配置文件获取，忽略各配置层级下的followx_file_list.cfg文件。
+In user-defined mode, configuration files are obtained based on the follow rule provided by **extra**, and the   
+**followx_file_list.cfg** file at each configuration level is ignored.
 
 **Since:** 11
 

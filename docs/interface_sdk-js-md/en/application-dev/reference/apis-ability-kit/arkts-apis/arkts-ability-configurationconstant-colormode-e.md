@@ -1,6 +1,7 @@
 # ColorMode
 
-表示深浅色模式的枚举，用于[Configuration.colorMode](arkts-ability-app-ability-configuration-configuration-i.md)字段。开发者可以使用这些预置枚举设置或获取系统/应用的深浅色模式。
+Enumerates the dark/light color modes, which are used in the  
+[Configuration.colorMode](arkts-ability-app-ability-configuration-configuration-i.md) field. You can use these predefined enumerated values to set or obtain the dark/light color mode of the system or application.
 
 **Since:** 9
 
@@ -16,7 +17,7 @@
 COLOR_MODE_NOT_SET = -1
 ```
 
-表示未设置颜色模式。
+Unspecified color mode.
 
 **Since:** 9
 
@@ -34,7 +35,7 @@ COLOR_MODE_NOT_SET = -1
 COLOR_MODE_DARK = 0
 ```
 
-表示深色模式。
+Dark mode.
 
 **Since:** 9
 
@@ -52,7 +53,7 @@ COLOR_MODE_DARK = 0
 COLOR_MODE_LIGHT = 1
 ```
 
-表示浅色模式。
+Light mode.
 
 **Since:** 9
 

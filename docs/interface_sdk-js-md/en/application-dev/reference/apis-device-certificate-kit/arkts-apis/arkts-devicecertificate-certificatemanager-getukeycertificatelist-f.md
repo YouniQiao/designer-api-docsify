@@ -12,7 +12,7 @@ import { certificateManager } from 'kits/@kit.DeviceCertificateKit';
 function getUkeyCertificateList(ukeyProvider: string, ukeyInfo: UkeyInfo): Promise<CMResult>
 ```
 
-获取USB Key证书凭据列表。使用Promise异步回调。
+Obtains the list of USB Key credential . This API uses a promise to return the result.
 
 **Since:** 26.0.0
 
@@ -30,24 +30,24 @@ function getUkeyCertificateList(ukeyProvider: string, ukeyInfo: UkeyInfo): Promi
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| ukeyProvider | string | Yes | 表示USB Key的设备提供商 |
-| ukeyInfo | [UkeyInfo](arkts-devicecertificate-certificatemanager-ukeyinfo-i.md) | Yes | 表示USB Key证书凭据的属性信息 |
+| ukeyProvider | string | Yes | USB Key device provider |
+| ukeyInfo | [UkeyInfo](arkts-devicecertificate-certificatemanager-ukeyinfo-i.md) | Yes | Attributes of a USB Key credential |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;CMResult&gt; | Promise对象，返回获取USB Key证书凭据列表的结果，返回值为[CMResult]{ |
+| Promise&lt;CMResult&gt; | Promise used to return the operation result, that is, **credentialDetailList** in the [CMResult]{ |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 17500011 | Parameter verification failed. &lt;br&gt; Possible causes: the ukeyInfo parameter is invalid. For example, the parameter format is incorrect or the value range is invalid. |
-| 801 | Capability not supported. |
-| 17500010 | Indicates that access USB Key service failed. |
-| 201 | Permission verification failed. &lt;br&gt;The application does not have the permission required to call the API. |
-| 17500001 | Internal error. Possible causes: 1. IPC communication failed; &lt;br&gt;2. Memory operation error; 3. File operation error. |
+| [17500011](../errorcode-certManager.md#17500011-failed-to-validate-the-input-parameter) | Parameter verification failed. &lt;br&gt; Possible causes: the ukeyInfo parameter is invalid. For example, the parameter format is incorrect or the value range is invalid. |
+| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. |
+| [17500010](../errorcode-certManager.md#17500010-failed-to-access-the-usb-credential) | Indicates that access USB Key service failed. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed. &lt;br&gt;The application does not have the permission required to call the API. |
+| [17500001](../errorcode-certManager.md#17500001-internal-error) | Internal error. Possible causes: 1. IPC communication failed; &lt;br&gt;2. Memory operation error; 3. File operation error. |
 
 ## Examples
 
@@ -57,18 +57,17 @@ import { BusinessError } from '@kit.BasicServicesKit';
 
 let ukeyProvider: string = 'testProvider'; /* USB credential provider, which is omitted here. */
 let ukeyInfo: certificateManager.UkeyInfo = { /* USB credential attributes. The value is omitted here. */
-  certPurpose: certificateManager.CertificatePurpose.PURPOSE_DEFAULT,
+    certPurpose: certificateManager.CertificatePurpose.PURPOSE_DEFAULT,
 }
 try {
-  certificateManager.getUkeyCertificateList(ukeyProvider, ukeyInfo).then((cmResult) => {
-    let list: Array<certificateManager.Credential> = cmResult.credentialDetailList ?? [];
-    console.info('Succeeded in getting USB key certificate list.');
-  }).catch((error: Error) => {
-    let err = error as BusinessError;
-    console.error(`Failed to get USB key certificate list. Code: ${err.code}, message: ${err.message}`);
-  })
-} catch (error) {
-  console.error(`Failed to get USB key certificate list. Code: ${error.code}, message: ${error.message}`);
+    certificateManager.getUkeyCertificateList(ukeyProvider, ukeyInfo).then((cmResult: certificateManager.CMResult) => {
+        let list: Array<certificateManager.Credential> = cmResult.credentialDetailList ?? [];
+        console.info('Succeeded in getting USB key certificate list.');
+    }).catch((err: BusinessError) => {
+        console.error(`Failed to get USB key certificate list. Code: ${err.code}, message: ${err.message}`);
+    })
+} catch (error: BusinessError) {
+    console.error(`Failed to get USB key certificate list. Code: ${error.code}, message: ${error.message}`);
 }
 ```
 

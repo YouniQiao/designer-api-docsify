@@ -1,6 +1,7 @@
 # BarStyle
 
-标题栏或工具栏的布局样式。NavDestination的工具栏不支持设置该属性。
+Enumerates the layout styles of the title bar and toolbar. Note that this API is not supported for the toolbar in  
+**NavDestination**.
 
 **Since:** 12
 
@@ -16,7 +17,7 @@
 STANDARD = 0
 ```
 
-指定该模式的标题栏或工具栏与内容区采用上下布局。
+In this mode, the title bar or toolbar is laid out above the content area.
 
 **Since:** 12
 
@@ -36,7 +37,7 @@ STANDARD = 0
 STACK = 1
 ```
 
-指定该模式的标题栏或工具栏与内容区采用层叠布局，标题栏或工具栏布局在内容区上层。
+In this mode, the title bar or toolbar is overlaid on top of the content area.
 
 **Since:** 12
 
@@ -56,7 +57,8 @@ STACK = 1
 SAFE_AREA_PADDING = 2
 ```
 
-将指定该模式的标题栏或工具栏设置为[组件级安全区](../arkts-apis/arkts-arkui-common-commonmethod-i.md/arkts-arkui-common-commonmethod-i.md#safeareapadding)。
+In this mode, the title bar or toolbar is configured to respect the  
+[component-level safe area](../arkts-apis/arkts-arkui-common-commonmethod-i.md/arkts-arkui-common-commonmethod-i.md#safeareapadding).
 
 **Since:** 14
 

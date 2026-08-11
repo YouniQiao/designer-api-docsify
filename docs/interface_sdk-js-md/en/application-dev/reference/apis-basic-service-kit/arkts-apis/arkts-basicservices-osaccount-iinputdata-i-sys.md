@@ -1,6 +1,6 @@
 # IInputData (System API)
 
-密码数据回调。
+Provides callbacks for PIN operations.
 
 **Since:** 8
 
@@ -24,7 +24,7 @@ import { osAccount } from 'kits/@kit.BasicServicesKit';
 onSetData(authSubType: AuthSubType, data: Uint8Array): void
 ```
 
-通知设置数据。
+Called to notify the caller the data is set.
 
 **Since:** 8
 
@@ -40,16 +40,16 @@ onSetData(authSubType: AuthSubType, data: Uint8Array): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| authSubType | [AuthSubType](arkts-basicservices-osaccount-authsubtype-e-sys.md) | Yes | 用于认证的凭据子类型。 |
-| data | Uint8Array | Yes | 要设置的数据是凭据，用来在认证、添加、修改凭据操作。 |
+| authSubType | [AuthSubType](arkts-basicservices-osaccount-authsubtype-e-sys.md) | Yes | Credential subtype. |
+| data | Uint8Array | Yes | Data (credential) to set. The data is used for authentication and operations for adding and modifying credentials. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameter types. |
-| 12300002 | Invalid pinSubType. |
-| 202 | Not system application. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameter types. |
+| [12300002](../../apis-basic-services-kit/errorcode-account.md#12300002-invalid-parameter) | Invalid pinSubType. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system application. |
 
 ## Examples
 

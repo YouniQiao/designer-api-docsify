@@ -1,6 +1,6 @@
 # AudioSessionStrategy
 
-音频会话策略。
+Describes an audio session strategy.
 
 **Since:** 12
 
@@ -22,7 +22,7 @@ import { audio } from 'kits/@kit.AudioKit';
 concurrencyMode: AudioConcurrencyMode
 ```
 
-音频并发模式。
+Audio concurrency mode.
 
 **Type:** [AudioConcurrencyMode](arkts-audio-audio-audioconcurrencymode-e.md)
 

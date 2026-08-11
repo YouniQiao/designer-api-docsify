@@ -12,7 +12,7 @@ import { uniformTypeDescriptor } from 'kits/@kit.ArkData';
 function unregisterTypeDescriptors(typeIds: Array<string>): Promise<void>
 ```
 
-从系统中注销一个或多个标准化数据类型。使用Promise异步回调。注销后，该数据类型将不再被系统识别，依赖该数据类型的数据可能无法正常处理，请确保在注销前已清理相关数据依赖。
+Unregister one or more type descriptors from the system by the given type IDs.
 
 **Since:** 22
 
@@ -34,19 +34,19 @@ function unregisterTypeDescriptors(typeIds: Array<string>): Promise<void>
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| typeIds | Array&lt;string&gt; | Yes | 待注销的typeId列表。列表不可为空，其中元素个数不超过50。每项长度不超过127。 |
+| typeIds | Array&lt;string&gt; | Yes | The list of type IDs to be unregistered. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise对象，无返回结果。 |
+| Promise&lt;void&gt; | The promise returned by the function. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 20400004 | One or more typeIds are invalid or do not exist. |
-| 201 | Permission verification failed. The application does not have the permission required to call the API. |
-| 202 | Permission denied, non-system app called system api. |
+| [20400004](../errorcode-udmf.md#20400004-invalid-utd-ids) | One or more typeIds are invalid or do not exist. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed. The application does not have the permission required to call the API. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission denied, non-system app called system api. |
 

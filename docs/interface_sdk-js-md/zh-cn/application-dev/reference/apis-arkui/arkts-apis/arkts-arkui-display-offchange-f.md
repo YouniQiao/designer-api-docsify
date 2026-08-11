@@ -1,11 +1,5 @@
 # offChange
 
-## 导入模块
-
-```TypeScript
-import { display } from 'kits/@kit.ArkUI';
-```
-
 ## offChange
 
 ```TypeScript
@@ -27,4 +21,17 @@ Unregister the callback for display changes.
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;long&gt; | 否 | Unregister the callback function. If not provided, all callbacks for the given event type will be removed. |
+
+## 示例
+
+```TypeScript
+// 如果通过on注册多个callback，同时关闭所有callback监听
+display.offChange();
+
+let callback: Callback<long> = (data: long) => {
+  console.info(`Succeeded in unregistering the callback for display Change. Data: ${data}`)
+};
+// 关闭传入的callback监听
+display.offChange(callback);
+```
 

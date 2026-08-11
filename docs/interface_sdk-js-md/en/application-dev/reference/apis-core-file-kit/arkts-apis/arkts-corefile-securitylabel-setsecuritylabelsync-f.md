@@ -12,7 +12,7 @@ import { securityLabel } from 'kits/@kit.CoreFileKit';
 function setSecurityLabelSync(path: string, type: DataLevel): void
 ```
 
-以同步方法设置文件或目录的数据安全等级。数据安全等级仅可由低向高或平级设置。
+Sets the data security level for a file or directory in synchronous mode. The level can only be adjusted from low to high, or set to the same level.
 
 **Since:** 9
 
@@ -26,8 +26,8 @@ function setSecurityLabelSync(path: string, type: DataLevel): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| path | string | Yes | 文件路径。 |
-| type | [DataLevel](arkts-corefile-securitylabel-datalevel-t.md) | Yes | 数据安全等级，只支持"s0","s1","s2","s3","s4"。 |
+| path | string | Yes | File path. |
+| type | [DataLevel](arkts-corefile-securitylabel-datalevel-t.md) | Yes | Data security level. The value can only be **s0**, **s1**, **s2**, **s3**, or **s4**. |
 
 **Error codes:**
 

@@ -1,6 +1,6 @@
 # HdrType
 
-表示视频HDR类型的枚举。
+Enumerates the HDR types.
 
 **Since:** 12
 
@@ -16,7 +16,7 @@
 AV_HDR_TYPE_NONE = 0
 ```
 
-表示无HDR类型。
+No HDR.
 
 **Since:** 12
 
@@ -32,7 +32,7 @@ AV_HDR_TYPE_NONE = 0
 AV_HDR_TYPE_VIVID = 1
 ```
 
-表示为HDR VIVID类型。
+HDR VIVID.
 
 **Since:** 12
 

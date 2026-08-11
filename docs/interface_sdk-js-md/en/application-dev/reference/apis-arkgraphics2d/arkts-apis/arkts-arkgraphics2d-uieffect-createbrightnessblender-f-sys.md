@@ -12,7 +12,7 @@ import { uiEffect } from 'kits/@kit.ArkGraphics2D';
 function createBrightnessBlender(param: BrightnessBlenderParam): BrightnessBlender
 ```
 
-创建BrightnessBlender实例用于给组件添加提亮效果。
+Creates a BrightnessBlender instance for adding a brightness effect to a component.
 
 **Since:** 12
 
@@ -30,18 +30,17 @@ function createBrightnessBlender(param: BrightnessBlenderParam): BrightnessBlend
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| param | [BrightnessBlenderParam](arkts-arkgraphics2d-graphics-uieffect-brightnessblenderparam-i-sys.md) | Yes | 实现提亮效果的参数，包含灰度调整系数、饱和度、混合比例等配置项。 |
+| param | [BrightnessBlenderParam](arkts-arkgraphics2d-graphics-uieffect-brightnessblenderparam-i-sys.md) | Yes | The brightness blender parameters, including grayscale adjustment coefficients, saturation, blending ratio, and other configuration items. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [BrightnessBlender](arkts-arkgraphics2d-uieffect-brightnessblender-i-sys.md) | 返回提亮效果的BrightnessBlender混合器。 |
+| [BrightnessBlender](arkts-arkgraphics2d-uieffect-brightnessblender-i-sys.md) | Returns the brightness blender. |
 
 ## Examples
 
 ```TypeScript
-// Create a BrightnessBlender instance to add a brightening effect to a component.
 let blender : uiEffect.BrightnessBlender =
   uiEffect.createBrightnessBlender({cubicRate:1.0, quadraticRate:1.0, linearRate:1.0, degree:1.0, saturation:1.0,
     positiveCoefficient:[2.3, 4.5, 2.0], negativeCoefficient:[0.5, 2.0, 0.5], fraction:0.0})

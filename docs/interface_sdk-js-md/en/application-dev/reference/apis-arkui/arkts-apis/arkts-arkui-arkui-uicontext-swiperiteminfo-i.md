@@ -1,6 +1,6 @@
 # SwiperItemInfo
 
-Swiper子组件的信息。
+The information of changed SwiperItem.
 
 **Since:** 23
 
@@ -22,7 +22,7 @@ import { OverlayManager, FrameCallback, ResolvedUIContext, NodeRenderStateChange
 index: int
 ```
 
-Swiper子组件在Swiper中的索引。取值限定为整数。
+The index of SwiperItem.The value should be an integer.
 
 **Type:** int
 
@@ -42,7 +42,7 @@ Swiper子组件在Swiper中的索引。取值限定为整数。
 uniqueId: int
 ```
 
-Swiper子组件的唯一标识符。取值限定为整数。
+The uniqueId of SwiperItem.The value should be an integer.
 
 **Type:** int
 

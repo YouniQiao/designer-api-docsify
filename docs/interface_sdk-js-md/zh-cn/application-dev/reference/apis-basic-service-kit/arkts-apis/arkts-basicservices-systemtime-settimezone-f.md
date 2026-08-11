@@ -1,11 +1,5 @@
 # setTimezone
 
-## 导入模块
-
-```TypeScript
-import { systemTime } from 'kits/@kit.BasicServicesKit';
-```
-
 ## setTimezone
 
 ```TypeScript

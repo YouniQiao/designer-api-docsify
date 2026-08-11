@@ -58,7 +58,7 @@ Blocks the default event.
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 100017 | Component does not support prevent function. |
+| [100017](../errorcode-event.md#100017-组件不支持阻止默认事件) | Component does not support prevent function. |
 
 ## stopPropagation
 

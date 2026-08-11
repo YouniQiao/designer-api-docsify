@@ -1,22 +1,27 @@
 # NavRouter
 
-导航组件，默认提供点击响应处理，不需要开发者自定义点击事件逻辑。
+The **NavRouter** component provides default processing logic for responding to clicks, eliminating the need for
+manual logic definition.
 
-## 子组件
+> **NOTE**
+>
+> This component is deprecated since API version 13. You are advised to use [NavPathStack]{@link NavPathStack} in
+> conjunction with the **navDestination** attribute for page routing.
 
-必须包含两个子组件，其中第二个子组件必须为[NavDestination]{@link nav_destination}。
+## Child Components
 
-> **说明：**
+This component must contain two child components, the second of which must be  
+[NavDestination]{@link nav_destination}.
+
+> **NOTE：**
 > 
-> 子组件个数异常时：
+> 1. If there is only one child component, the navigation to the **NavDestination** component does not work.
 > 
-> 1. 有且仅有1个时，触发路由到NavDestination的能力失效。
+> 2. If there is only the **NavDestination** child component, the navigation does not work.
 > 
-> 2. 有且仅有1个时，且使用NavDestination场景下，不进行路由。
+> 3. If there are more than two child components, the excess child components are not displayed.
 > 
-> 3. 大于2个时，后续的子组件不显示。
-> 
-> 4. 第二个子组件不为NavDestination时，触发路由功能失效。
+> 4. If the second child component is not **NavDestination**, the navigation does not work.
 
 ## NavRouter
 
@@ -24,7 +29,7 @@
 NavRouter()
 ```
 
-创建NavRouter。
+Constructor.
 
 **Since:** 9
 
@@ -46,7 +51,7 @@ NavRouter()
 NavRouter(value: RouteInfo)
 ```
 
-提供路由信息，指定点击NavRouter时，要跳转的NavDestination页面。
+Provides route information so that clicking the **NavRouter** component redirects the user to the specified navigation destination page.
 
 **Since:** 10
 
@@ -68,7 +73,7 @@ NavRouter(value: RouteInfo)
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | [RouteInfo](../../apis-network-kit/arkts-apis/arkts-network-vpnextension-routeinfo-t.md) | Yes | 路由信息。 |
+| value | [RouteInfo](../../apis-network-kit/arkts-apis/arkts-network-vpnextension-routeinfo-t.md) | Yes | Route information. |
 
 ## Summary
 

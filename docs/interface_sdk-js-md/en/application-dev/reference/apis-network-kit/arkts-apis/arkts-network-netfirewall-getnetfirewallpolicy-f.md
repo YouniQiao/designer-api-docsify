@@ -40,12 +40,12 @@ Get firewall policy by userId.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 29400000 | The specified user does not exist. |
-| 401 | Parameter error. |
-| 2100001 | Invalid parameter value. |
-| 2100002 | Operation failed. Cannot connect to service. |
-| 2100003 | System internal error. |
-| 201 | Permission denied. |
+| [29400000](../errorcode-net-netfirewall.md#29400000-specified-user-does-not-exist) | The specified user does not exist. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. |
+| [2100001](../errorcode-net-connection.md#2100001-invalid-parameter-value) | Invalid parameter value. |
+| [2100002](../errorcode-net-connection.md#2100002-service-connection-failure) | Operation failed. Cannot connect to service. |
+| [2100003](../errorcode-net-connection.md#2100003-system-internal-error) | System internal error. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
 
 ## Examples
 

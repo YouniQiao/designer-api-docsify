@@ -10,12 +10,6 @@ PopupOptions定义Popup的具体样式参数。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
-## 导入模块
-
-```TypeScript
-import { Popup, PopupOptions, PopupButtonOptions, PopupIconOptions, PopupTextOptions } from 'kits/@kit.ArkUI';
-```
-
 ## buttons
 
 ```TypeScript
@@ -29,7 +23,7 @@ buttons?: [
 
 默认不显示按钮。
 
-**类型：** [     PopupButtonOptions \| undefined,     PopupButtonOptions \| undefined   ]
+**类型：** [     PopupButtonOptions \| undefined,     PopupButtonOptions \| undefined   ]
 
 **起始版本：** 23
 

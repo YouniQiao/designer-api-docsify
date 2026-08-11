@@ -1,6 +1,6 @@
 # CameraCaptureState
 
-Indicates current camera capture state of current web page.
+Enumerates the camera capture states.
 
 **Since:** 23
 
@@ -16,7 +16,7 @@ Indicates current camera capture state of current web page.
 NONE = 0
 ```
 
-None of any cameras are in use.
+The camera is not working.
 
 **Since:** 23
 
@@ -32,7 +32,7 @@ None of any cameras are in use.
 PAUSED = 1
 ```
 
-This web page is not actively using camera capturing.
+The camera is paused.
 
 **Since:** 23
 
@@ -48,7 +48,7 @@ This web page is not actively using camera capturing.
 ACTIVE = 2
 ```
 
-This web page is actively using camera capturing.
+The camera is active.
 
 **Since:** 23
 

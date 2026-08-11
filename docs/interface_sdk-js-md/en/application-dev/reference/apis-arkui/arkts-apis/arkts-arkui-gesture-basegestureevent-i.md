@@ -1,6 +1,6 @@
 # BaseGestureEvent
 
-基础手势事件类型。继承自[BaseEvent](arkts-arkui-common-baseevent-i.md)。
+Defines the gesture base event.
 
 **Inheritance/Implementation:** BaseGestureEvent extends [BaseEvent](arkts-arkui-common-baseevent-i.md)
 
@@ -18,7 +18,7 @@
 fingerInfos?: FingerInfo[]
 ```
 
-参与触发事件的所有有效触点信息。默认值为空数组[]，返回空数组时，表示当前无有效触点信息。
+All finger information when the gesture event is triggered, the return value is one array, and the array length is just the total fingers count.
 
 **Type:** [FingerInfo](arkts-arkui-gesture-fingerinfo-i.md)[]
 
@@ -38,7 +38,7 @@ fingerInfos?: FingerInfo[]
 fingerList: FingerInfo[]
 ```
 
-触发事件的所有手指信息。
+All finger information.
 
 **Type:** [FingerInfo](arkts-arkui-gesture-fingerinfo-i.md)[]
 

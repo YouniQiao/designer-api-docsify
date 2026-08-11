@@ -1,6 +1,6 @@
 # BadgePosition
 
-标记显示位置。
+Enumerates the display positions of a badge.
 
 **Since:** 7
 
@@ -16,7 +16,7 @@
 RightTop
 ```
 
-圆点显示在右上角。
+The badge is displayed in the upper right corner of the parent component.
 
 **Since:** 7
 
@@ -36,7 +36,7 @@ RightTop
 Right
 ```
 
-Dots are displayed in the upper right corner.
+The badge is vertically centered on the right of the parent component.
 
 **Since:** 7
 
@@ -56,7 +56,7 @@ Dots are displayed in the upper right corner.
 Left
 ```
 
-The dot is displayed in the left vertical center.
+The badge is vertically centered on the left of the parent component.
 
 **Since:** 7
 

@@ -34,7 +34,7 @@ Deinitialize global environment for image processing.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 29200006 | The operation is not permitted. This may be caused by incorrect status. |
+| [29200006](../errorcode-videoprocessingengine.md#29200006-operation-not-allowed) | The operation is not permitted. This may be caused by incorrect status. |
 
 ## Examples
 

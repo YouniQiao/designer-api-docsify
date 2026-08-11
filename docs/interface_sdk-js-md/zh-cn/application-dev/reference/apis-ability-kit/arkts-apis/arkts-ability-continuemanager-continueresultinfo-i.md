@@ -10,12 +10,6 @@
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Mission
 
-## 导入模块
-
-```TypeScript
-import { continueManager } from 'kits/@kit.AbilityKit';
-```
-
 ## resultInfo
 
 ```TypeScript

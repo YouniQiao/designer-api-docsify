@@ -1,11 +1,5 @@
 # getCurrentFoldCreaseRegion
 
-## 导入模块
-
-```TypeScript
-import { display } from 'kits/@kit.ArkUI';
-```
-
 ## getCurrentFoldCreaseRegion
 
 ```TypeScript
@@ -34,7 +28,7 @@ function getCurrentFoldCreaseRegion(): FoldCreaseRegion
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 1400003 | This display manager service works abnormally. |
+| [1400003](../errorcode-display.md#1400003-系统服务工作异常) | This display manager service works abnormally. |
 
 ## 示例
 

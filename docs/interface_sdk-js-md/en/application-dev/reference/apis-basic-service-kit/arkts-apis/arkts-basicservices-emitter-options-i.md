@@ -1,6 +1,6 @@
 # Options
 
-发送事件的优先级。
+Describes the event emit priority.
 
 **Since:** 11
 
@@ -22,7 +22,7 @@ import { emitter } from 'kits/@kit.BasicServicesKit';
 priority?: EventPriority
 ```
 
-事件的优先级，默认值为EventPriority.LOW。
+Event priority. The default value is **EventPriority.LOW**.
 
 **Type:** [EventPriority](arkts-basicservices-emitter-eventpriority-e.md)
 

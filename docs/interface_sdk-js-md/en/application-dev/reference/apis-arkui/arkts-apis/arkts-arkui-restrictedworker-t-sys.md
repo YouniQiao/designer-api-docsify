@@ -4,7 +4,7 @@
 declare type RestrictedWorker = import('../api/@ohos.worker').default.RestrictedWorker
 ```
 
-用于运行Abc的受限Worker。
+Indicates restricted worker for run abc.
 
 **Since:** 12
 

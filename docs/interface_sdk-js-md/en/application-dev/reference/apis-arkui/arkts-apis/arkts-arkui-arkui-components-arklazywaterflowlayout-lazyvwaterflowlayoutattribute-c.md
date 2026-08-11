@@ -1,6 +1,6 @@
 # LazyVWaterFlowLayoutAttribute
 
-定义懒加载垂直瀑布流布局属性。
+Defines the lazy vertical waterflow layout attribute.
 
 **Inheritance/Implementation:** LazyVWaterFlowLayoutAttribute extends [LazyWaterFlowLayoutAttribute<LazyVWaterFlowLayoutAttribute>](LazyWaterFlowLayoutAttribute<LazyVWaterFlowLayoutAttribute>)
 
@@ -24,7 +24,7 @@ import { LazyVWaterFlowLayout, LazyWaterFlowLayoutAttribute, LazyVWaterFlowLayou
 columnsTemplate(value: string | ItemFillPolicy | undefined): LazyVWaterFlowLayoutAttribute
 ```
 
-该参数用于指定当前瀑布流布局中的列数。
+This parameter specifies the number of columns in the current waterflow layout.
 
 **Since:** 26.0.0
 
@@ -42,7 +42,7 @@ columnsTemplate(value: string | ItemFillPolicy | undefined): LazyVWaterFlowLayou
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | string \| ItemFillPolicy \| undefined | Yes | 布局中的列数。 &lt;br&gt;默认值：'1fr' |
+| value | string \| ItemFillPolicy \| undefined | Yes | Number of columns in the layout. &lt;br&gt;Default value: '1fr' &lt;br&gt;When the value is a string, it sets the number of columns or the minimum column width of the current &lt;em&gt;LazyVWaterFlowLayout&lt;/em&gt;. For example, &lt;em&gt;columnsTemplate('1fr 1fr 2fr')&lt;/em&gt; divides the &lt;em&gt;LazyVWaterFlowLayout&lt;/em&gt; into 3 columns, splitting the width into 4 equal parts: column 1 takes 1 part, column 2 takes 1 part, and column 3 takes 2 parts. |
 
 **Return value:**
 

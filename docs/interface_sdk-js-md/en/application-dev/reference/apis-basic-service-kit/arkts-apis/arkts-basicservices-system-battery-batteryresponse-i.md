@@ -1,6 +1,6 @@
 # BatteryResponse
 
-包含充电状态及剩余电量的对象。
+Defines a response that returns the charging status and remaining power of the device.
 
 **Since:** 3
 
@@ -24,10 +24,10 @@ import { GetStatusOptions, BatteryResponse } from 'kits/@kit.BasicServicesKit';
 charging: boolean
 ```
 
-当前电池是否在充电中。true表示在充电，false表示没有充电，默认为false。
+Whether the battery is being charged. The value **true** indicates that the battery is being charged; **false**indicates the opposite. The default value is **false**.
 
-**说明：** 除Lite Wearable外，从API Version 6开始不再维护，建议使用
-[`batteryInfo.chargingStatus`](../../../reference/apis-basic-services-kit/js-apis-battery-info.md#常量)替代。
+Note: This API is no longer maintained since API version 6 except for lite wearables. You are advised to use  
+[batteryInfo.chargingStatus](../../../reference/apis-basic-services-kit/js-apis-battery-info.md#constants)instead.
 
 **Type:** boolean
 
@@ -49,10 +49,10 @@ charging: boolean
 level: number
 ```
 
-当前电池的电量百分比，取值范围：0.00~1.00。
+Current battery level in percent, which ranges from **0.00** to **1.00**.
 
-**说明：** 除Lite Wearable外，从API Version 6开始不再维护，建议使用
-[`batteryInfo.batterySOC`](../../../reference/apis-basic-services-kit/js-apis-battery-info.md#常量)替代。
+Note: This API is no longer maintained since API version 6 except for lite wearables. You are advised to use  
+[batteryInfo.batterySOC](../../../reference/apis-basic-services-kit/js-apis-battery-info.md#constants) instead.
 
 **Type:** number
 

@@ -12,13 +12,14 @@ import { hilog } from 'kits/@kit.PerformanceAnalysisKit';
 function setMinLogLevel(level: LogLevel): void
 ```
 
-设置应用日志打印的最低日志级别，用于拦截低级别日志打印。
+Sets the minimum log level.
 
-> **注意：**
+> **NOTE：**
 > 
-> 如果设置的日志级别低于[全局日志级别](../../../dfx/hilog.md#查看和设置日志级别)，设置不生效。
+> If the set log level is lower than the
+> [global log level](../../../dfx/hilog.md#displaying-and-setting-log-levels), the setting does not take effect.
 > 
-> debug版本应用下，此函数不生效。
+> This function does not take effect for debug applications.
 
 **Since:** 15
 
@@ -34,7 +35,7 @@ function setMinLogLevel(level: LogLevel): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| level | [LogLevel](arkts-performanceanalysis-hilog-loglevel-e.md) | Yes | 日志级别。 |
+| level | [LogLevel](arkts-performanceanalysis-hilog-loglevel-e.md) | Yes | Log level. |
 
 ## Examples
 

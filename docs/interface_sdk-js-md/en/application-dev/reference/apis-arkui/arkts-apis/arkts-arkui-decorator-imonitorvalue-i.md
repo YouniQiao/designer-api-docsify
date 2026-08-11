@@ -1,5 +1,7 @@
 # IMonitorValue
 
+Define IMonitorValue interface
+
 **Since:** 23
 
 **ArkTS mode:** ArkTS-Sta only, since version 23.
@@ -14,7 +16,7 @@
 before: T
 ```
 
-变量变化前的值。
+Get the previous value.
 
 **Type:** T
 
@@ -34,7 +36,7 @@ before: T
 now: T
 ```
 
-变量当前的值。
+Get current value.
 
 **Type:** T
 
@@ -54,7 +56,7 @@ now: T
 path: string
 ```
 
-变量的路径。
+Monitored path input by the user.
 
 **Type:** string
 

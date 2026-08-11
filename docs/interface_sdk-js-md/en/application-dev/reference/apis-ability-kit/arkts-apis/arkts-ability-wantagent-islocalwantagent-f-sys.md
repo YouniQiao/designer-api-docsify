@@ -12,7 +12,7 @@ import { WantAgent } from 'kits/@kit.AbilityKit';
 function isLocalWantAgent(agent: WantAgent): boolean
 ```
 
-判断WantAgent实例是否为本地实例。
+Checks whether the specified WantAgent is local.
 
 **Since:** 20
 
@@ -42,7 +42,7 @@ function isLocalWantAgent(agent: WantAgent): boolean
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 202 | Not System app. Interface caller is not a system app. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not System app. Interface caller is not a system app. |
 
 ## Examples
 

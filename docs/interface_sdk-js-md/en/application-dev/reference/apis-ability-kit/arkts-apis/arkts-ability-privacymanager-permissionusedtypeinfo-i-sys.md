@@ -1,6 +1,6 @@
 # PermissionUsedTypeInfo (System API)
 
-表示某次权限使用类型的详情。
+Represents detailed information about the use of a permission.
 
 **Since:** 12
 
@@ -24,7 +24,7 @@ import { privacyManager } from 'kits/@kit.AbilityKit';
 permissionName: Permissions
 ```
 
-被访问的敏感权限名称。
+Name of the sensitive permission accessed.
 
 **Type:** [Permissions](arkts-ability-permissions-t.md)
 
@@ -44,7 +44,7 @@ permissionName: Permissions
 tokenId: int
 ```
 
-访问敏感权限的应用身份标识。
+Token ID of the application that accesses the sensitive permission.
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
@@ -64,7 +64,7 @@ tokenId: int
 usedType: PermissionUsedType
 ```
 
-敏感权限使用类型。
+Usage type of the sensitive permission.
 
 **Type:** [PermissionUsedType](arkts-ability-privacymanager-permissionusedtype-e-sys.md)
 

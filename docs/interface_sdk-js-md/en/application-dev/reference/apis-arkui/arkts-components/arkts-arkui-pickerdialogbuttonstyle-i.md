@@ -236,7 +236,7 @@ Describes the button style.
 type?: ButtonType
 ```
 
-Describes the button style.
+Describes the button type.
 
 **Type:** [ButtonType](arkts-arkui-buttontype-e.md)
 

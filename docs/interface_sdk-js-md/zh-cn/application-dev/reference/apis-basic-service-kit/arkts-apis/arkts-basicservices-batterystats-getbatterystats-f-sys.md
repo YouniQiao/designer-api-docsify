@@ -1,11 +1,5 @@
 # getBatteryStats（系统接口）
 
-## 导入模块
-
-```TypeScript
-import { batteryStats } from 'kits/@kit.BasicServicesKit';
-```
-
 ## getBatteryStats
 
 ```TypeScript
@@ -34,8 +28,8 @@ function getBatteryStats(): Promise<Array<BatteryStatsInfo>>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 4600101 | Failed to connect to the service. |
-| 202 | Permission verification failed. A non-system application calls a system API. |
+| [4600101](../../apis-basic-services-kit/errorcode-batteryStatistics.md#4600101-连接服务失败) | Failed to connect to the service. |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed. A non-system application calls a system API. |
 
 ## 示例
 
@@ -44,8 +38,8 @@ batteryStats.getBatteryStats()
 .then((data: batteryStats.BatteryStatsInfo[]) => {
     console.info('battery statistics info: ' + data);
 })
-.catch((err: BusinessError) => {
-    console.error(`Failed to get battery statistics. Code: ${err.code}, message: ${err.message}`);
+.catch((err: Error) => {
+    console.error('get battery statistics failed, err: ' + err);
 });
 ```
 
@@ -78,18 +72,32 @@ function getBatteryStats(callback: AsyncCallback<Array<BatteryStatsInfo>>): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1. Parameter verification failed. |
-| 4600101 | Failed to connect to the service. |
-| 202 | Permission verification failed. A non-system application calls a system API. |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1. Parameter verification failed. |
+| [4600101](../../apis-basic-services-kit/errorcode-batteryStatistics.md#4600101-连接服务失败) | Failed to connect to the service. |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed. A non-system application calls a system API. |
 
 ## 示例
 
+ArkTS-Dyn示例：
+
 ```TypeScript
-batteryStats.getBatteryStats((err: BusinessError, data: batteryStats.BatteryStatsInfo[]) => {
-    if (err) {
-        console.error(`Failed to get battery statistics. Code: ${err.code}, message: ${err.message}`);
-    } else {
+batteryStats.getBatteryStats((err: Error, data : batteryStats.BatteryStatsInfo[]) => {
+    if (typeof err === 'undefined') {
         console.info('battery statistics info: ' + data);
+    } else {
+        console.error('get battery statistics failed, err: ' + err);
+    }
+});
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+batteryStats.getBatteryStats((err: Error | null, data : batteryStats.BatteryStatsInfo[] | undefined) => {
+    if (!err) {
+        console.info('battery statistics info: ' + data);
+    } else {
+        console.error('get battery statistics failed, err: ' + err);
     }
 });
 ```

@@ -1,11 +1,5 @@
 # @ohos.arkui.advanced.DatePickerComponent
 
-## 导入模块
-
-```TypeScript
-import { DisplayMode, TimeFormat, DatePickerComponent, DateMode, DatePickerComponentOptions, DatePickerComponentResult } from 'kits/@kit.ArkUI';
-```
-
 ## 汇总
 
 ### 类

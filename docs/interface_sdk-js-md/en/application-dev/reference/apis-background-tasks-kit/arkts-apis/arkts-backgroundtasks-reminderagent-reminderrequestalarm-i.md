@@ -1,6 +1,6 @@
 # ReminderRequestAlarm
 
-闹钟实例对象，用于设置提醒的时间。
+Defines a reminder for an alarm.
 
 **Inheritance/Implementation:** ReminderRequestAlarm extends [ReminderRequest](arkts-backgroundtasks-reminderagent-reminderrequest-i.md)
 
@@ -28,7 +28,7 @@ import { reminderAgent } from 'kits/@kit.BackgroundTasksKit';
 daysOfWeek?: Array<number>
 ```
 
-指明每周哪几天需要重复提醒。范围为周一到周末，对应数字为1到7。
+Days of a week when the reminder repeats. The value ranges from 1 to 7, corresponding to the data from Monday to Sunday.
 
 **Type:** Array&lt;number&gt;
 
@@ -50,7 +50,7 @@ daysOfWeek?: Array<number>
 hour: number
 ```
 
-指明提醒的目标时刻。
+Hour portion of the reminder time.
 
 **Type:** number
 
@@ -72,7 +72,7 @@ hour: number
 minute: number
 ```
 
-指明提醒的目标分钟。
+Minute portion of the reminder time.
 
 **Type:** number
 

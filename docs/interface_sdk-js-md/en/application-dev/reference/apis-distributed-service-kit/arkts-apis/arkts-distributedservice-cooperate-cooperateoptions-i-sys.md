@@ -1,6 +1,6 @@
 # CooperateOptions (System API)
 
-键鼠穿越可选控制参数，控制穿出点位置。
+Screen hopping options, such as the exit position.
 
 **Since:** 20
 
@@ -24,7 +24,7 @@ import { cooperate } from 'kits/@kit.DistributedServiceKit';
 displayId: long
 ```
 
-对端设备屏幕标识。
+Screen ID of the peer device.
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：long
 
@@ -44,7 +44,7 @@ displayId: long
 displayX: int
 ```
 
-鼠标X坐标位置。
+X coordinate of the mouse cursor.
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
@@ -64,7 +64,7 @@ displayX: int
 displayY: int
 ```
 
-鼠标Y坐标位置。
+Y coordinate of the mouse cursor.
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 

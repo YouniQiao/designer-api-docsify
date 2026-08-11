@@ -1,6 +1,6 @@
 # PropertyDescriptorType
 
-属性描述符类型的枚举。
+The enum of property descriptor type.
 
 **Since:** 26.0.0
 
@@ -16,7 +16,7 @@
 PROPERTY = 1
 ```
 
-属性说明描述符。
+Property description descriptor.
 
 **Since:** 26.0.0
 
@@ -34,7 +34,7 @@ PROPERTY = 1
 CLIENT_PROPERTY_CONFIG = 2
 ```
 
-客户端属性配置描述符。
+Client property configuration descriptor.
 
 **Since:** 26.0.0
 
@@ -52,7 +52,7 @@ CLIENT_PROPERTY_CONFIG = 2
 SERVER_PROPERTY_CONFIG = 3
 ```
 
-服务端属性配置描述符。
+Server property configuration descriptor.
 
 **Since:** 26.0.0
 
@@ -70,7 +70,7 @@ SERVER_PROPERTY_CONFIG = 3
 PROPERTY_FORMAT = 4
 ```
 
-属性格式描述符。
+Property format descriptor.
 
 **Since:** 26.0.0
 
@@ -88,7 +88,7 @@ PROPERTY_FORMAT = 4
 TYPE_VENDOR = 255
 ```
 
-厂商自定义。
+Vendor-defined.
 
 **Since:** 26.0.0
 

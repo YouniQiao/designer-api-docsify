@@ -1,6 +1,6 @@
 # OsAccountType
 
-表示系统账号类型的枚举。
+Enumerates the OS account types.
 
 **Since:** 7
 
@@ -16,7 +16,7 @@
 ADMIN = 0
 ```
 
-管理员账号。
+Administrator account.
 
 **Since:** 7
 
@@ -32,7 +32,7 @@ ADMIN = 0
 NORMAL = 1
 ```
 
-普通账号。
+Normal account.
 
 **Since:** 7
 
@@ -48,7 +48,7 @@ NORMAL = 1
 GUEST = 2
 ```
 
-访客账号。
+Guest account.
 
 **Since:** 7
 

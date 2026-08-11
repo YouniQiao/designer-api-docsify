@@ -12,12 +12,6 @@
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
-## 导入模块
-
-```TypeScript
-import { BreakpointOptions, ContainerReader, ContainerReaderAttribute } from 'kits/@kit.ArkUI';
-```
-
 ## breakpointConfig
 
 ```TypeScript
@@ -50,5 +44,5 @@ breakpointConfig(value?: BreakpointOptions): ContainerReaderAttribute
 
 | 类型 | 说明 |
 | --- | --- |
-| [ContainerReaderAttribute](arkts-arkui-arkui-components-containerreader-containerreaderattribute-i.md) |  |
+| [ContainerReaderAttribute](arkts-arkui-arkui-components-containerreader-containerreaderattribute-c.md) |  |
 

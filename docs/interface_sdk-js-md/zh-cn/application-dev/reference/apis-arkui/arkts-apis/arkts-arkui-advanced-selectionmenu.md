@@ -1,11 +1,5 @@
 # @ohos.arkui.advanced.SelectionMenu
 
-## 导入模块
-
-```TypeScript
-import { EditorMenuOptions, SelectionMenuOptions, EditorEventInfo, SelectionMenu, ExpandedMenuOptions } from 'kits/@kit.ArkUI';
-```
-
 ## 汇总
 
 ### 类型

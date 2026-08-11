@@ -1,6 +1,6 @@
 # MetadataObjectType
 
-枚举，metadata元数据检测类型。
+Enumerates the types of metadata objects used for camera detection.
 
 **Since:** 10
 
@@ -16,7 +16,7 @@
 FACE_DETECTION = 0
 ```
 
-元数据的对象类型，用于人脸检测。
+Metadata object used for face detection.
 
 **Since:** 10
 
@@ -34,7 +34,7 @@ FACE_DETECTION = 0
 HUMAN_BODY = 1
 ```
 
-元数据的对象类型，用于人体检测。
+Metadata object used for body detection.
 
 **Since:** 23
 
@@ -52,7 +52,7 @@ HUMAN_BODY = 1
 CAT_FACE = 2
 ```
 
-用于检测猫脸的metadata类型。
+Metadata object used for cat face detection.
 
 **Since:** 26.0.0
 
@@ -70,7 +70,7 @@ CAT_FACE = 2
 CAT_BODY = 3
 ```
 
-用于检测猫的身体的metadata类型。
+Metadata object used for cat body detection.
 
 **Since:** 26.0.0
 
@@ -88,7 +88,7 @@ CAT_BODY = 3
 DOG_FACE = 4
 ```
 
-用于检测狗脸的metadata类型。
+Metadata object used for dog face detection.
 
 **Since:** 26.0.0
 
@@ -106,7 +106,7 @@ DOG_FACE = 4
 DOG_BODY = 5
 ```
 
-用于检测狗的身体的metadata类型。
+Metadata object used for dog body detection.
 
 **Since:** 26.0.0
 
@@ -124,7 +124,7 @@ DOG_BODY = 5
 SALIENT_DETECTION = 6
 ```
 
-用于显著性检测。
+Metadata object used for salient detection.
 
 **Since:** 26.0.0
 
@@ -142,7 +142,7 @@ SALIENT_DETECTION = 6
 BAR_CODE_DETECTION = 7
 ```
 
-用于二维码检测。
+Metadata object used for QR code detection.
 
 **Since:** 26.0.0
 
@@ -160,7 +160,7 @@ BAR_CODE_DETECTION = 7
 BASIC_FACE_DETECTION = 8
 ```
 
-用于基础人脸检测。
+Metadata object for basic face detection.
 
 **Since:** 26.0.0
 

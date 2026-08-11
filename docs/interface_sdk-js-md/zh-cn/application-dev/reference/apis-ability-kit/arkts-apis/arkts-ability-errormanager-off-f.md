@@ -1,11 +1,5 @@
 # off
 
-## 导入模块
-
-```TypeScript
-import { errorManager } from 'kits/@kit.AbilityKit';
-```
-
 ## off('error')
 
 ```TypeScript
@@ -38,8 +32,8 @@ function off(type: 'error', observerId: number, callback: AsyncCallback<void>): 
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 401 | 参数错误。可能的原因：1. 必填参数未填写； 2. 参数类型不正确；3. 参数校验失败。 |
-| 16000003 | 指定的ID不存在。 |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | 参数错误。可能的原因：1. 必填参数未填写； 2. 参数类型不正确；3. 参数校验失败。 |
+| [16000003](../errorcode-ability.md#16000003-指定的id不存在) | 指定的ID不存在。 |
 
 ## 示例
 
@@ -102,8 +96,8 @@ function off(type: 'error', observerId: number): Promise<void>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 401 | 参数错误。可能的原因：1. 必填参数未填写； 2. 参数类型不正确；3. 参数校验失败。 |
-| 16000003 | 指定的ID不存在。 |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | 参数错误。可能的原因：1. 必填参数未填写； 2. 参数类型不正确；3. 参数校验失败。 |
+| [16000003](../errorcode-ability.md#16000003-指定的id不存在) | 指定的ID不存在。 |
 
 ## 示例
 
@@ -154,15 +148,15 @@ function off(type: 'loopObserver', observer?: LoopObserver): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'loopObserver' | 是 | 填写'loopObserver'，表示应用主线程观测器。 |
-| observer | [LoopObserver](arkts-ability-loopobserver-i.md) | 否 | 应用主线程观测器标志。 |
+| observer | [LoopObserver](arkts-ability-errormanager-loopobserver-t.md) | 否 | 应用主线程观测器标志。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 401 | 参数错误。可能的原因：1. 必填参数未填写； 2. 参数类型不正确；3. 参数校验失败。 |
-| 16200001 | 请在主线程中调用。 |
-| 16300004 | 观测器不存在。 |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | 参数错误。可能的原因：1. 必填参数未填写； 2. 参数类型不正确；3. 参数校验失败。 |
+| [16200001](../errorcode-ability.md#16200001-通用组件客户端caller已回收) | 请在主线程中调用。 |
+| [16300004](../errorcode-ability.md#16300004-指定的observer不存在) | 观测器不存在。 |
 
 ## 示例
 
@@ -210,9 +204,9 @@ function off(type: 'unhandledRejection', observer?: UnhandledRejectionObserver):
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 401 | 参数错误。可能的原因：1. 必填参数未填写； 2. 参数类型不正确；3. 参数校验失败。 |
-| 16200001 | 请在主线程中调用。 |
-| 16300004 | 观测器不存在。 |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | 参数错误。可能的原因：1. 必填参数未填写； 2. 参数类型不正确；3. 参数校验失败。 |
+| [16200001](../errorcode-ability.md#16200001-通用组件客户端caller已回收) | 请在主线程中调用。 |
+| [16300004](../errorcode-ability.md#16300004-指定的observer不存在) | 观测器不存在。 |
 
 ## 示例
 
@@ -230,7 +224,7 @@ let observer: errorManager.UnhandledRejectionObserver = (reason: Error, promise:
   }
 };
 
-errorManager.on('unhandledRejection', observer);
+errorManager.on("unhandledRejection", observer);
 
 let promise1 = new Promise<void>(() => {}).then(() => {
   throw new Error('uncaught error')
@@ -255,13 +249,13 @@ let observer: errorManager.UnhandledRejectionObserver = (reason: Error, promise:
   }
 };
 
-errorManager.on('unhandledRejection', observer);
+errorManager.on("unhandledRejection", observer);
 
 let promise1 = new Promise<void>(() => {}).then(() => {
   throw new Error('uncaught error')
 })
 
-errorManager.off('unhandledRejection', observer);
+errorManager.off("unhandledRejection", observer);
 ```
 
 
@@ -296,9 +290,9 @@ function off(type: 'globalUnhandledRejectionDetected', observer?: GlobalObserver
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 401 | 参数错误。可能的原因：1. 必填参数未填写； 2. 参数类型不正确；3. 参数校验失败。 |
-| 16200001 | 调用者无效。 |
-| 16300004 | 观测器不存在。 |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | 参数错误。可能的原因：1. 必填参数未填写； 2. 参数类型不正确；3. 参数校验失败。 |
+| [16200001](../errorcode-ability.md#16200001-通用组件客户端caller已回收) | 调用者无效。 |
+| [16300004](../errorcode-ability.md#16300004-指定的observer不存在) | 观测器不存在。 |
 
 ## 示例
 
@@ -360,15 +354,15 @@ function off(type: 'freeze', observer?: FreezeObserver): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 401 | 参数错误。可能的原因：1. 必填参数未填写； 2. 参数类型不正确；3. 参数校验失败。 |
-| 16300004 | 观测器不存在。 |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | 参数错误。可能的原因：1. 必填参数未填写； 2. 参数类型不正确；3. 参数校验失败。 |
+| [16300004](../errorcode-ability.md#16300004-指定的observer不存在) | 观测器不存在。 |
 
 ## 示例
 
 ```TypeScript
 import { errorManager } from '@kit.AbilityKit';
 import { BusinessError } from '@kit.BasicServicesKit';
-
+  
 const freezeCallback = () => {
   console.info('freezecallback');
 };
@@ -414,9 +408,9 @@ function off(type: 'globalErrorOccurred', observer?: GlobalObserver): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 401 | 参数错误。可能的原因：1. 必填参数未填写； 2. 参数类型不正确；3. 参数校验失败。 |
-| 16200001 | 调用者无效。 |
-| 16300004 | 观测器不存在。 |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | 参数错误。可能的原因：1. 必填参数未填写； 2. 参数类型不正确；3. 参数校验失败。 |
+| [16200001](../errorcode-ability.md#16200001-通用组件客户端caller已回收) | 调用者无效。 |
+| [16300004](../errorcode-ability.md#16300004-指定的observer不存在) | 观测器不存在。 |
 
 ## 示例
 
@@ -430,7 +424,7 @@ const errorFunc = (observer: errorManager.GlobalError) => {
   console.info('result stack :' + observer.stack);
   console.info('result instanceName :' + observer.instanceName);
   console.info('result instanceType :' + observer.instanceType);
-}
+};
 
 try {
   errorManager.off('globalErrorOccurred', errorFunc)

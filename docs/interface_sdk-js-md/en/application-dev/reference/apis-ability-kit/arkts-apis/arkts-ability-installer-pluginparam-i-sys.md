@@ -1,6 +1,6 @@
 # PluginParam (System API)
 
-插件应用安装、卸载的参数信息。
+Defines the parameters for installing or uninstalling a plugin.
 
 **Since:** 19
 
@@ -24,7 +24,7 @@ import { installer } from 'kits/@kit.AbilityKit';
 parameters?: Array<Parameters>
 ```
 
-指定安装、卸载插件程序的扩展参数，默认值为空。
+Extension parameters for installing or uninstalling the plugin. The default value is empty.
 
 **Type:** Array&lt;Parameters&gt;
 
@@ -44,8 +44,8 @@ parameters?: Array<Parameters>
 userId?: int
 ```
 
-指定安装、卸载插件程序所在的用户ID，可以通过  
-[getOsAccountLocalId接口](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-osaccount-accountmanager-i.md/arkts-basicservices-osaccount-accountmanager-i.md#getosaccountlocalid)获取。默认值：调用方所在用户。
+ID of the user for whom the plugin is to be installed or uninstalled. You can obtain the user ID by calling  
+[getOsAccountLocalId](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-osaccount-accountmanager-i.md/arkts-basicservices-osaccount-accountmanager-i.md#getosaccountlocalid). The default value is the user ID of the caller.
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 

@@ -6,11 +6,11 @@ struct ArkUI_Node
 
 ## 概述
 
-Defines the ArkUI native component object.
+定义ArkUI Native组件实例对象，供ArkUI_NodeHandle指针在Native接口中标识和传递组件实例。
 
-**起始版本：** 12
+**起始版本：** 22
 
 **相关模块：** [ArkUI_NativeModule](capi-arkui-nativemodule.md)
 
-**所在头文件：** [native_type.h](capi-native-type-h.md)
+**所在头文件：** [drawable_descriptor.h](capi-drawable-descriptor-h.md)
 

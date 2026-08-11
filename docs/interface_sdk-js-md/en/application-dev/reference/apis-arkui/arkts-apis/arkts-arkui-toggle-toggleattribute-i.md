@@ -1,6 +1,6 @@
 # ToggleAttribute
 
-除支持[通用属性](../../apis-ability-kit/arkts-apis/arkts-app-ability-common.md/arkts-app-ability-common.md)外，还支持以下属性：
+Defines the Toggle component attributes.
 
 **Inheritance/Implementation:** ToggleAttribute extends [CommonMethod](arkts-arkui-common-commonmethod-i.md)
 
@@ -48,7 +48,7 @@ Set the attribute modifier of toggle.
 default contentModifier(modifier: ContentModifier<ToggleConfiguration> | undefined): this
 ```
 
-定制Toggle内容区的方法。
+Set the content modifier of toggle.
 
 **Since:** 23
 
@@ -64,7 +64,7 @@ default contentModifier(modifier: ContentModifier<ToggleConfiguration> | undefin
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| modifier | [ContentModifier](../arkts-components/arkts-arkui-contentmodifier-i.md)&lt;ToggleConfiguration&gt; \| undefined | Yes | 在Toggle组件上，定制内容区的方法。&lt;br/&gt;modifier：内容修改器，开发 者需要自定义class实现ContentModifier接口。取值为undefined时，则不使用contentModifier。 |
+| modifier | [ContentModifier](../arkts-components/arkts-arkui-contentmodifier-i.md)&lt;ToggleConfiguration&gt; \| undefined | Yes | The content modifier of toggle. |
 
 **Return value:**
 
@@ -78,7 +78,7 @@ default contentModifier(modifier: ContentModifier<ToggleConfiguration> | undefin
 default onChange(callback: ((isOn: boolean) => void) | undefined): this
 ```
 
-开关状态切换时触发该事件。
+Called when the selected state of the component changes.
 
 **Since:** 23
 
@@ -94,7 +94,7 @@ default onChange(callback: ((isOn: boolean) => void) | undefined): this
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | ((isOn: boolean) =&gt; void) \| undefined | Yes | 为true时，代表状态从关切换为开。false时，代表状态从开切换为关。为undefined时，则不使用事 件。 |
+| callback | ((isOn: boolean) =&gt; void) \| undefined | Yes |  |
 
 **Return value:**
 
@@ -108,7 +108,7 @@ default onChange(callback: ((isOn: boolean) => void) | undefined): this
 default selectedColor(value: ResourceColor | undefined): this
 ```
 
-设置组件在打开状态下的背景颜色。
+Called when the color of the selected button is set.
 
 **Since:** 23
 
@@ -124,7 +124,7 @@ default selectedColor(value: ResourceColor | undefined): this
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | [ResourceColor](arkts-arkui-resourcecolor-t.md) \| undefined | Yes | 组件打开状态的背景颜色。取值为undefined时，按默认值处理。&lt;br/&gt;默认值：&lt;br/&gt;当ToggleType为Switch时，默 认值为`\\$r('sys.color.ohos_id_color_emphasize')`。&lt;br/&gt;当ToggleType为Checkbox时，默认值为 `\\$r('sys.color.ohos_id_color_emphasize')`。&lt;br/&gt;当ToggleType为Button时，默认值为 `\\$r('sys.color.ohos_id_color_emphasize')`混合`\\$r('sys.float.ohos_id_alpha_highlight_bg')`的透明度。 |
+| value | [ResourceColor](arkts-arkui-resourcecolor-t.md) \| undefined | Yes |  |
 
 **Return value:**
 
@@ -132,13 +132,43 @@ default selectedColor(value: ResourceColor | undefined): this
 | --- | --- |
 | this |  |
 
+## setToggleOptions
+
+```TypeScript
+default setToggleOptions(options: ToggleOptions): this
+```
+
+Set toggle options.
+
+**Since:** 26.1.0
+
+**ArkTS mode:** ArkTS-Sta only, since version 26.1.0.
+
+**Model restriction:** This API can be used only in the stage model.
+
+<!--Device-ToggleAttribute-default setToggleOptions(options: ToggleOptions): this--><!--Device-ToggleAttribute-default setToggleOptions(options: ToggleOptions): this-End-->
+
+**System capability:** SystemCapability.ArkUI.ArkUI.Full
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| options | [ToggleOptions](arkts-arkui-toggle-toggleoptions-i.md) | Yes | toggle constructor options |
+
+**Return value:**
+
+| Type | Description |
+| --- | --- |
+| this | Returns the instance of the ToggleAttribute. |
+
 ## switchPointColor
 
 ```TypeScript
 default switchPointColor(color: ResourceColor | undefined): this
 ```
 
-设置Switch类型的圆形滑块颜色。仅当type为ToggleType.Switch生效。
+Called when the color of the selected button is set.
 
 **Since:** 23
 
@@ -154,7 +184,7 @@ default switchPointColor(color: ResourceColor | undefined): this
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| color | [ResourceColor](arkts-arkui-resourcecolor-t.md) \| undefined | Yes | Switch类型的圆形滑块颜色。取值为undefined时，按默认值处理。&lt;br/&gt;默认值：\\$r(' sys.color.ohos_id_color_foreground_contrary')&lt;br/&gt;**说明：**&lt;br/&gt;同时设置了systemMaterial新材质时，设置此属性后会出现点光源效果，点光源颜色跟随此 属性的设置。 |
+| color | [ResourceColor](arkts-arkui-resourcecolor-t.md) \| undefined | Yes |  |
 
 **Return value:**
 
@@ -168,7 +198,7 @@ default switchPointColor(color: ResourceColor | undefined): this
 default switchStyle(value: SwitchStyle | undefined): this
 ```
 
-设置Switch类型的样式。仅当type为ToggleType.Switch生效。
+Set the style of the switch.
 
 **Since:** 23
 
@@ -184,7 +214,7 @@ default switchStyle(value: SwitchStyle | undefined): this
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | [SwitchStyle](../arkts-components/arkts-arkui-switchstyle-i.md) \| undefined | Yes | Switch样式风格。取值为undefined时，按各属性的默认值处理。 |
+| value | [SwitchStyle](../arkts-components/arkts-arkui-switchstyle-i.md) \| undefined | Yes |  |
 
 **Return value:**
 

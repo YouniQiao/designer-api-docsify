@@ -1,6 +1,7 @@
 # ApplicationDefinedRecord
 
-ApplicationDefinedRecord是[UnifiedRecord](arkts-arkdata-unifieddatachannel-unifiedrecord-c.md)的子类，也是应用自定义数据类型的基类，用于描述仅在应用生态内部流通的自定义数据类型，应用可基于此类进行自定义数据类型的扩展。
+Represents the custom data type for applications only. It is a child class of   
+[UnifiedRecord](arkts-arkdata-unifieddatachannel-unifiedrecord-c.md) and a base class of custom data types of applications. Applications can extend custom data types based on this class.
 
 **Inheritance/Implementation:** ApplicationDefinedRecord extends [UnifiedRecord](arkts-arkdata-unifieddatachannel-unifiedrecord-c.md)
 
@@ -24,7 +25,7 @@ import { unifiedDataChannel } from 'kits/@kit.ArkData';
 set applicationDefinedType(value: string)
 ```
 
-应用自定义类型标识符，必须以'ApplicationDefined'开头。
+Indicates the type of data, should always be started with 'ApplicationDefined.', will return error otherwise
 
 **Type:** string
 
@@ -46,7 +47,7 @@ set applicationDefinedType(value: string)
 set rawData(value: Uint8Array)
 ```
 
-应用自定义数据类型的二进制数据。
+Indicates the raw data of application defined data
 
 **Type:** Uint8Array
 

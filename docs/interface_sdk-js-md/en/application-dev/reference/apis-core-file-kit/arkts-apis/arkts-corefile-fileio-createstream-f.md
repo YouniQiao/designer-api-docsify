@@ -6,7 +6,7 @@
 declare function createStream(path: string, mode: string): Promise<Stream>
 ```
 
-基于文件路径打开文件流，使用Promise异步回调。
+Creates a stream based on the file path. This API uses a promise to return the result.
 
 **Since:** 7
 
@@ -24,14 +24,14 @@ declare function createStream(path: string, mode: string): Promise<Stream>
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| path | string | Yes | 待打开文件的应用沙箱路径。 |
-| mode | string | Yes | ?r：打开只读文件，该文件必须存在。&lt;br/&gt;-?r+：打开可读写的文件，该文件必须存在。&lt;br/&gt;-?w：打开只写文件，若文件存在则文件长度清0，即该文件内容会消失。若文件不存在则 建立该文件。&lt;br/&gt;-?w+：打开可读写文件，若文件存在则文件长度清0，即该文件内容会消失。若文件不存在则建立该文件。&lt;br/&gt;-?a：以附加的方式打开只写文件。若文件不存在，则会建立该文件，如果文件存在，写入的数据会被加到 文件尾，即文件原先的内容会被保留。&lt;br/&gt;-?a+：以附加方式打开可读写的文件。若文件不存在，则会建立该文件，如果文件存在，写入的数据会被加到文件尾后，即文件原先的内容会被保留。 |
+| path | string | Yes | Application sandbox path of the file. |
+| mode | string | Yes | r**: Open a file for reading. The file must exist.&lt;br&gt;- **r+**: Open a file for both reading and writing. The file must exist.&lt;br&gt;- **w**: Open a file for writing. If the file exists, clear its content. If the file does not exist, create a file.&lt;br&gt;- **w+**: Open a file for both reading and writing. If the file exists, clear its content. If the file does not exist, create a file.&lt;br&gt;- **a**: Open a file in append mode for writing at the end of the file. If the file does not exist, create a file. If the file exists, write data to the end of the file (the original content of the file is reserved).&lt;br&gt;- **a+**: Open a file in append mode for reading or updating at the end of the file. If the file does not exist, create a file. If the file exists, write data to the end of the file (the original content of the file is reserved). |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;Stream&gt; | Promise对象。返回文件流的结果。 |
+| Promise&lt;Stream&gt; | Promise that returns the file stream. |
 
 
 ## createStream
@@ -40,7 +40,7 @@ declare function createStream(path: string, mode: string): Promise<Stream>
 declare function createStream(path: string, mode: string, callback: AsyncCallback<Stream>): void
 ```
 
-基于文件路径打开文件流，使用callback异步回调。
+Creates a stream based on the file path. This API uses an asynchronous callback to return the result.
 
 **Since:** 7
 
@@ -58,7 +58,7 @@ declare function createStream(path: string, mode: string, callback: AsyncCallbac
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| path | string | Yes | 待打开文件的应用沙箱路径。 |
-| mode | string | Yes | ?r：打开只读文件，该文件必须存在。&lt;br/&gt;-?r+：打开可读写的文件，该文件必须存在。&lt;br/&gt;-?w：打开只写文件，若文件存在则文件长度清0，即该文件内容会消失。若文件不存在则 建立该文件。&lt;br/&gt;-?w+：打开可读写文件，若文件存在则文件长度清0，即该文件内容会消失。若文件不存在则建立该文件。&lt;br/&gt;-?a：以附加的方式打开只写文件。若文件不存在，则会建立该文件，如果文件存在，写入的数据会被加到 文件尾，即文件原先的内容会被保留。&lt;br/&gt;-?a+：以附加方式打开可读写的文件。若文件不存在，则会建立该文件，如果文件存在，写入的数据会被加到文件尾后，即文件原先的内容会被保留。 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Stream&gt; | Yes | 异步打开文件流之后的回调。 |
+| path | string | Yes | Application sandbox path of the file. |
+| mode | string | Yes | r**: Open a file for reading. The file must exist.&lt;br&gt;- **r+**: Open a file for both reading and writing. The file must exist.&lt;br&gt;- **w**: Open a file for writing. If the file exists, clear its content. If the file does not exist, create a file.&lt;br&gt;- **w+**: Open a file for both reading and writing. If the file exists, clear its content. If the file does not exist, create a file.&lt;br&gt;- **a**: Open a file in append mode for writing at the end of the file. If the file does not exist, create a file. If the file exists, write data to the end of the file (the original content of the file is reserved).&lt;br&gt;- **a+**: Open a file in append mode for reading or updating at the end of the file. If the file does not exist, create a file. If the file exists, write data to the end of the file (the original content of the file is reserved). |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Stream&gt; | Yes | Callback invoked when the stream is opened asynchronously. |
 

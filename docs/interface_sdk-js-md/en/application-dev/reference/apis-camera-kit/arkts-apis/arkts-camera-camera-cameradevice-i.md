@@ -1,6 +1,6 @@
 # CameraDevice
 
-相机设备信息。
+Describes the camera device information.
 
 **Since:** 10
 
@@ -22,7 +22,7 @@ import { camera } from 'kits/@kit.CameraKit';
 readonly automotiveCameraPosition?: AutomotiveCameraPosition
 ```
 
-Car设备摄像头位置。
+Automotive camera position attribute.
 
 **Type:** [AutomotiveCameraPosition](arkts-camera-camera-automotivecameraposition-e.md)
 
@@ -44,7 +44,7 @@ Car设备摄像头位置。
 readonly cameraId: string
 ```
 
-相机ID。
+Camera ID.
 
 **Type:** string
 
@@ -64,7 +64,7 @@ readonly cameraId: string
 readonly cameraOrientation: int
 ```
 
-相机安装角度，不会随着屏幕旋转而改变。取值范围为[0, 360]。单位：度。
+Camera installation angle, which does not change as the screen rotates. The value range is [0, 360], in degrees.
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
@@ -84,7 +84,7 @@ readonly cameraOrientation: int
 readonly cameraPosition: CameraPosition
 ```
 
-相机位置。
+Camera position.
 
 **Type:** [CameraPosition](arkts-camera-camera-cameraposition-e.md)
 
@@ -104,7 +104,7 @@ readonly cameraPosition: CameraPosition
 readonly cameraType: CameraType
 ```
 
-相机类型。
+Camera type.
 
 **Type:** [CameraType](arkts-camera-camera-cameratype-e.md)
 
@@ -124,7 +124,7 @@ readonly cameraType: CameraType
 readonly connectionType: ConnectionType
 ```
 
-相机连接类型。
+Camera connection type.
 
 **Type:** [ConnectionType](arkts-camera-camera-connectiontype-e.md)
 
@@ -144,7 +144,7 @@ readonly connectionType: ConnectionType
 readonly constituentCameraDevices?: Array<CameraDevice>
 ```
 
-组成此逻辑相机的物理相机列表。
+List of physical cameras that form the logical camera.
 
 **Type:** Array&lt;[CameraDevice](arkts-camera-camera-cameradevice-i.md)&gt;
 
@@ -166,7 +166,7 @@ readonly constituentCameraDevices?: Array<CameraDevice>
 readonly hostDeviceName: string
 ```
 
-远端设备名称。若当前无远端设备，返回为空。
+Remote device name. If no remote device is available, an empty value is returned.
 
 **Type:** string
 
@@ -186,7 +186,7 @@ readonly hostDeviceName: string
 readonly hostDeviceType: HostDeviceType
 ```
 
-远端设备类型。
+Remote device type.
 
 **Type:** [HostDeviceType](arkts-camera-camera-hostdevicetype-e.md)
 
@@ -206,7 +206,7 @@ readonly hostDeviceType: HostDeviceType
 readonly isLogicalCamera?: boolean
 ```
 
-是否为逻辑摄像头（由多个物理相机组成）, true表示是逻辑摄像头，false表示是物理摄像头。
+Whether a camera is a logical camera (consisting of multiple physical cameras). **true** if the camera is a logical camera, **false** otherwise.
 
 **Type:** boolean
 
@@ -228,7 +228,7 @@ readonly isLogicalCamera?: boolean
 readonly lensDistortion?: Array<double>
 ```
 
-镜头畸变参数数组。
+Array of lens distortion parameters.
 
 **Type:** ArkTS-Dyn: Array&lt;number&gt;  <br>ArkTS-Sta：Array&lt;double&gt;
 
@@ -250,7 +250,7 @@ readonly lensDistortion?: Array<double>
 readonly lensEquivalentFocalLength?: Array<int>
 ```
 
-相机镜头等效焦距。
+Equivalent focal length of the camera lens.
 
 **Type:** ArkTS-Dyn: Array&lt;number&gt;  <br>ArkTS-Sta：Array&lt;int&gt;
 
@@ -270,7 +270,7 @@ readonly lensEquivalentFocalLength?: Array<int>
 readonly lensFocalLength?: double
 ```
 
-镜头实际焦距。
+Actual focal length of the lens.
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：double
 
@@ -292,7 +292,7 @@ readonly lensFocalLength?: double
 readonly lensIntrinsicCalibration?: Array<double>
 ```
 
-镜头内参标定参数数组。
+Array of lens intrinsic calibration parameters.
 
 **Type:** ArkTS-Dyn: Array&lt;number&gt;  <br>ArkTS-Sta：Array&lt;double&gt;
 
@@ -314,7 +314,7 @@ readonly lensIntrinsicCalibration?: Array<double>
 readonly minimumFocusDistance?: double
 ```
 
-相机最小对焦距离。
+Minimum focus distance of the camera.
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：double
 
@@ -336,7 +336,7 @@ readonly minimumFocusDistance?: double
 readonly sensorColorFilterArrangement?: SensorColorFilterArrangement
 ```
 
-传感器颜色滤镜排列方式。
+Arrangement mode of the sensor color filter.
 
 **Type:** [SensorColorFilterArrangement](arkts-camera-camera-sensorcolorfilterarrangement-e.md)
 
@@ -358,7 +358,7 @@ readonly sensorColorFilterArrangement?: SensorColorFilterArrangement
 readonly sensorPhysicalSize?: Array<double>
 ```
 
-传感器物理尺寸（宽度和高度）。
+Physical dimensions (width and height) of the sensor.
 
 **Type:** ArkTS-Dyn: Array&lt;number&gt;  <br>ArkTS-Sta：Array&lt;double&gt;
 
@@ -380,7 +380,7 @@ readonly sensorPhysicalSize?: Array<double>
 readonly sensorPixelArraySize?: Array<int>
 ```
 
-传感器像素阵列尺寸（宽度和高度。单位：像素）。
+Pixel array dimensions (width and height, in pixels) of the sensor.
 
 **Type:** ArkTS-Dyn: Array&lt;number&gt;  <br>ArkTS-Sta：Array&lt;int&gt;
 

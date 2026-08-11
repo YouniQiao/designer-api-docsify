@@ -12,9 +12,9 @@ import { dlpPermission } from 'kits/@kit.DataProtectionKit';
 function getDLPSuffix(): string
 ```
 
-获取DLP文件扩展名。调用成功后返回DLP文件扩展名（如'.dlp'）。接口为同步接口。
+Obtains the DLP file name extension. After the API is called successfully, the DLP file name extension (for example, .dlp) is returned. This API returns the result synchronously.
 
-用于获取DLP文件的标准扩展名，便于构建DLP文件名或进行文件类型判断。
+This API is used to obtain the standard extension of the DLP file, which can be used to construct the DLP file name or the determination of the file type.
 
 **Since:** 10
 
@@ -28,20 +28,26 @@ function getDLPSuffix(): string
 
 | Type | Description |
 | --- | --- |
-| string | 返回DLP文件扩展名。例如：原文件"test.txt"，加密后的DLP文件名为"test.txt.dlp"，返回扩展名为".dlp"。 |
+| string | DLP file name extension obtained. For example, if the original file name is **test.txt**, the encrypted DLP file name is **test.txt.dlp**, and the returned extension is **.dlp**. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 19100011 | The system ability works abnormally. |
+| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported because car not support DLP feature.<br>**Applicable version:** 26.1.0 and later |
+| [19100011](../errorcode-dlp.md#19100011-system-service-abnormal) | The system ability works abnormally. |
 
 ## Examples
 
 ```TypeScript
 import { dlpPermission } from '@kit.DataProtectionKit';
+import { BusinessError } from '@kit.BasicServicesKit';
 
-let dlpSuffix = dlpPermission.getDLPSuffix(); // Obtain the DLP file name extension.
-console.info('dlpSuffix:', dlpSuffix);
+try {
+  let res = dlpPermission.getDLPSuffix(); // Obtain the DLP file name extension.
+  console.info('res', res);
+} catch (err) {
+  console.error('error', (err as BusinessError).code, (err as BusinessError).message); // Throw an error if the operation fails.
+}
 ```
 

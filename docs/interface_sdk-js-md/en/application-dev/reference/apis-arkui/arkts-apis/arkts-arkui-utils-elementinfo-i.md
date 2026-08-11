@@ -1,6 +1,6 @@
 # ElementInfo
 
-可被观察对象关联的组件信息，包含系统组件和自定义组件。
+The custom component and UI component information.For the V2 @Monitor or @Computed scenario, The id and decorated function name by @Monitor or @Computed will be returned.
 
 **Since:** 24
 
@@ -16,7 +16,7 @@
 elementId: int
 ```
 
-组件的ID。
+Dependent custom component and UI component id.For the V2 @Monitor or @Computed scenario, elementId refers to the id of the @Monitor or @Computed.
 
 **Type:** int
 
@@ -36,7 +36,7 @@ elementId: int
 elementName: string
 ```
 
-组件的名称。
+Dependent custom component and UI component name.For the V2 @Monitor or @Computed scenario, elementName refers to the name of the decorator and the function name decorated with @Monitor or @Computed.
 
 **Type:** string
 

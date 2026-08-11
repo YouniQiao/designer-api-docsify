@@ -1,6 +1,6 @@
 # CollaborateEventType
 
-协同事件类型的枚举。
+Enumerates collaboration event types.
 
 **Since:** 18
 
@@ -16,7 +16,7 @@
 SEND_FAILURE = 0
 ```
 
-表示任务发送失败。
+Task sending failure.
 
 **Since:** 18
 
@@ -34,7 +34,7 @@ SEND_FAILURE = 0
 COLOR_SPACE_CONVERSION_FAILURE = 1
 ```
 
-表示色彩空间转换失败。
+Color space conversion failure.
 
 **Since:** 18
 

@@ -20,7 +20,7 @@ fluidLightMode?: KeyboardFluidLightMode
 
 键盘的流光效果。&lt;br/&gt;默认值：KeyboardFluidLightMode.NONE
 
-**类型：** [KeyboardFluidLightMode](arkts-arkui-textcommon-keyboardfluidlightmode-e-sys.md)
+**类型：** [KeyboardFluidLightMode](arkts-arkui-keyboardfluidlightmode-e-sys.md)
 
 **起始版本：** 24
 

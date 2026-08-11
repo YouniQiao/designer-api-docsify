@@ -12,7 +12,7 @@ import { uniformTypeDescriptor } from 'kits/@kit.ArkData';
 function getUniformDataTypesByFilenameExtension(filenameExtension: string, belongsTo?: string): Array<string>
 ```
 
-根据给定的文件后缀名和所归属的标准化数据类型查询标准化数据类型ID列表。
+Obtains the uniform data type IDs based on the given file name extension and data type.
 
 **Since:** 13
 
@@ -28,20 +28,20 @@ function getUniformDataTypesByFilenameExtension(filenameExtension: string, belon
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| filenameExtension | string | Yes | 文件后缀名称。 |
-| belongsTo | string | No | 要查询的标准化数据类型所归属类型ID，无默认值，若不传入此参数则只按照文件后缀名称查询[标准化数据类型ID]。 |
+| filenameExtension | string | Yes | File name extension. |
+| belongsTo | string | No | ID of the uniform data type, to which the data type to be obtained belongs. This parameter has no default value. If it is not specified, the [uniform data type ID] is queried based on the file name extension. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Array&lt;string&gt; | 返回与给定文件后缀名以及归属类型ID（如果设置了belongsTo参数）匹配的标准化数据类型ID列表，如果要查询的标准化数据类型不存在则返回根据入参按指定规则生成的动态类型列表。 |
+| Array&lt;string&gt; | Uniform data type IDs that match the specified file name extension and **belongsTo** (if specified). If no match is found, the data types dynamically generated based on the rules specified by the input parameters are returned. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. Possible causes:1.Mandatory parameters are left unspecified; &lt;br&gt;2.Incorrect parameter types; &lt;br&gt;3. Parameter verification failed. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes:1.Mandatory parameters are left unspecified; &lt;br&gt;2.Incorrect parameter types; &lt;br&gt;3. Parameter verification failed. |
 
 ## Examples
 

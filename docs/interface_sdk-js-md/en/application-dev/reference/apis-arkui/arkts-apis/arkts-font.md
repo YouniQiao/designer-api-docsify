@@ -1,8 +1,5 @@
 # @ohos.font
 
-注册自定义字体
-
-
 **Since:** 23
 
 **ArkTS mode:** ArkTS-Sta only, since version 23.
@@ -25,7 +22,7 @@ import { font } from 'kits/@kit.ArkUI';
 
 | Name | Description |
 | --- | --- |
-| [getUIFontConfig](arkts-arkui-font-getuifontconfig-f.md#getuifontconfig) | 获取系统字体配置文件的UI字体配置信息。  该接口仅支持获取配置文件内的信息以及当UI上下文不明确时可能返回undefined，如果想要获取全量的字体配置信息，推荐使用字体引擎的  [getSystemFontFullNamesByType](../../../reference/apis-arkgraphics2d/js-apis-graphics-text.md#textgetsystemfontfullnamesbytype14)接口。 |
+| [getUIFontConfig](arkts-arkui-font-getuifontconfig-f.md#getuifontconfig) | Get font details according to the font name. |
 
 ### Interfaces
 

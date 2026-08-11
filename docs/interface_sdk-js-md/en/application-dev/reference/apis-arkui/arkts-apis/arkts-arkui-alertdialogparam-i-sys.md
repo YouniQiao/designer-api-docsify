@@ -1,6 +1,6 @@
 # AlertDialogParam
 
-警告弹窗的样式。
+Enumerates the alert dialog box styles.
 
 **Since:** 7
 

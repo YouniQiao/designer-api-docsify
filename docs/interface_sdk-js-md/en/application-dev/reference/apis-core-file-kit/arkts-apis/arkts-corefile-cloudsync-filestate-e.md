@@ -1,6 +1,6 @@
 # FileState
 
-端云文件同步状态，为枚举类型。
+Enumerates the device-cloud file sync states.
 
 **Since:** 20
 
@@ -16,7 +16,7 @@
 INITIAL_AFTER_DOWNLOAD = 0
 ```
 
-首次下行后的初始状态。
+Initial state after the first download.
 
 **Since:** 20
 
@@ -32,7 +32,7 @@ INITIAL_AFTER_DOWNLOAD = 0
 UPLOADING = 1
 ```
 
-上行同步中。
+The file is being uploaded.
 
 **Since:** 20
 
@@ -48,7 +48,7 @@ UPLOADING = 1
 STOPPED = 2
 ```
 
-上行已停止。
+The upload has been stopped.
 
 **Since:** 20
 
@@ -64,7 +64,7 @@ STOPPED = 2
 TO_BE_UPLOADED = 3
 ```
 
-正在等待上行。
+The file is going to be uploaded.
 
 **Since:** 20
 
@@ -80,7 +80,7 @@ TO_BE_UPLOADED = 3
 UPLOAD_SUCCESS = 4
 ```
 
-文件已成功上行。
+The file has been successfully uploaded.
 
 **Since:** 20
 
@@ -96,7 +96,7 @@ UPLOAD_SUCCESS = 4
 UPLOAD_FAILURE = 5
 ```
 
-文件上行失败。
+The file fails to be uploaded.
 
 **Since:** 20
 

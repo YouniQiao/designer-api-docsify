@@ -1,11 +1,5 @@
 # getSignatureInfo
 
-## 导入模块
-
-```TypeScript
-import { bundleManager } from 'kits/@kit.AbilityKit';
-```
-
 ## getSignatureInfo
 
 ```TypeScript
@@ -40,8 +34,8 @@ function getSignatureInfo(uid: int): SignatureInfo
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 201 | Permission denied. |
-| 17700021 | The uid is not found. |
+| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
+| [17700021](../errorcode-bundle.md#17700021-指定的uid无效) | The uid is not found. |
 
 ## 示例
 

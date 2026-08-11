@@ -1,11 +1,5 @@
 # setDisposedStatusSync（系统接口）
 
-## 导入模块
-
-```TypeScript
-import { appControl } from 'kits/@kit.AbilityKit';
-```
-
 ## setDisposedStatusSync
 
 ```TypeScript
@@ -37,11 +31,11 @@ function setDisposedStatusSync(appId: string, disposedWant: Want): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types. |
-| 801 | Capability not supported. |
-| 201 | Permission denied. |
-| 202 | Permission denied, non-system app called system api. |
-| 17700005 | The specified app ID is empty string. |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types. |
+| [801](../../errorcode-universal.md#801-该设备不支持此api) | Capability not supported. |
+| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission denied, non-system app called system api. |
+| [17700005](../errorcode-bundle.md#17700005-指定的appid为空字符串) | The specified app ID is empty string. |
 
 ## 示例
 

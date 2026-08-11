@@ -1,6 +1,6 @@
 # TextInputOptions
 
-TextInput初始化参数。
+Defines the options of TextInput.
 
 **Since:** 23
 
@@ -16,7 +16,7 @@ TextInput初始化参数。
 controller?: TextInputController
 ```
 
-设置TextInput控制器。
+Called when the position of the insertion cursor is set.
 
 **Type:** [TextInputController](arkts-arkui-textinput-textinputcontroller-c.md)
 
@@ -36,7 +36,7 @@ controller?: TextInputController
 placeholder?: ResourceStr
 ```
 
-设置无输入时的提示文本。
+The place holder text string.
 
 **Type:** [ResourceStr](arkts-arkui-resourcestr-t.md)
 
@@ -56,7 +56,7 @@ placeholder?: ResourceStr
 text?: ResourceStr | Bindable<ResourceStr> | Bindable<Resource> | Bindable<string>
 ```
 
-输入框文本内容。
+Sets the current value of TextInput.
 
 **Type:** [ResourceStr](arkts-arkui-resourcestr-t.md) \| Bindable&lt;[ResourceStr](arkts-arkui-resourcestr-t.md)&gt; \| Bindable&lt;Resource&gt; \| Bindable&lt;string&gt;
 

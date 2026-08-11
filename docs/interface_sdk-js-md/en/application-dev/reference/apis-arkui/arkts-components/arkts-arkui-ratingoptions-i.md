@@ -1,10 +1,12 @@
 # RatingOptions
 
-评分组件的信息。
+Provides configuration options for the **Rating** component.
 
-> **说明：**
+> **NOTE：**
 > 
-> 为规范匿名对象的定义，API 18版本修改了此处的元素定义。其中，保留了历史匿名对象的起始版本信息，会出现外层元素@since版本号高于内层元素版本号的情况，但这不影响接口的使用。
+> To standardize anonymous object definitions, the element definitions here have been revised in API version 18.
+> While historical version information is preserved for anonymous objects, there may be cases where the outer element
+> 's @since version number is higher than inner elements'. This does not affect interface usability.
 
 **Since:** 18
 
@@ -20,15 +22,15 @@
 indicator?: boolean
 ```
 
-设置评分组件作为指示器使用。值为true时，作为指示器使用，不可改变评分；值为false时，可进行评分。
+Whether the component is used as an indicator. If this parameter is set to **true**, the rating value cannot be changed.
 
-默认值：false，可进行评分
+Default value: **false**
 
-**说明：**
+**NOTE：**
 
-indicator=true时，默认组件高度height=12.0vp，组件width=height * stars。 
+When **indicator** is set to **true**, the default component height is 12.0 vp, and the component width is calculated as follows: Height x Value of **stars**.
 
-indicator=false时，默认组件高度height=28.0vp，组件width=height * stars。
+When **indicator** is set to **false**, the default component height is 28.0 vp, and the component width is calculated as follows: Height x Value of **stars**.
 
 **Type:** boolean
 
@@ -50,15 +52,16 @@ indicator=false时，默认组件高度height=28.0vp，组件width=height * star
 rating: number
 ```
 
-设置并接收评分值。
+Value to rate.
 
-默认值：0
+Default value: **0**
 
-取值范围： [0, stars]
+Value range: [0, stars]
 
-小于0取0，大于[stars](RatingAttribute#stars(value: number))取最大值stars。
+Values less than 0 are treated as **0**, and values greater than the value of   
+[stars](RatingAttribute#stars(value: number)) are treated as the value of **stars**.
 
-该参数支持[\$\$](../../../ui/state-management/arkts-two-way-sync.md)双向绑定变量。
+This parameter supports two-way binding through [\$\$](../../../ui/state-management/arkts-two-way-sync.md).
 
 **Type:** number
 

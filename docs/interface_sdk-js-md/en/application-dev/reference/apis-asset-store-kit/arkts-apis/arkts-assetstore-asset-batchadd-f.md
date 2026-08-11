@@ -12,14 +12,9 @@ import { asset } from 'kits/@kit.AssetStoreKit';
 function batchAdd(attributesArray: Array<AssetMap>): Promise<BatchResult>
 ```
 
-批量新增关键资产。使用Promise异步回调。
+Adds assets in batches based on an attributes array.To set {@link Tag.IS_PERSISTENT}, the application must have the ohos.permission.STORE_PERSISTENT_DATA permission.
 
-设置[Tag.IS_PERSISTENT](arkts-assetstore-asset-tagtype-e.md)属性时，需要申请ohos.permission.STORE_PERSISTENT_DATA权限，申请方式请参考  
-[声明权限](../../../security/AccessToken/declare-permissions.md)。
-
-批量新增的关键资产必须具有相同的[Tag.GROUP_ID](arkts-assetstore-asset-tagtype-e.md)和[Tag.REQUIRE_ATTR_ENCRYPTED](arkts-assetstore-asset-tagtype-e.md)属性。
-
-批量新增的关键资产数量最大值为100。
+Only assets with the same {@link Tag.GROUP_ID} and {@link Tag.REQUIRE_ATTR_ENCRYPTED} can be added in batches.
 
 **Since:** 26.0.0
 
@@ -33,29 +28,29 @@ function batchAdd(attributesArray: Array<AssetMap>): Promise<BatchResult>
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| attributesArray | Array&lt;AssetMap&gt; | Yes | 待新增关键资产的属性集合数组，包括关键资产明文、访问控制属性、自定义数据等。 |
+| attributesArray | Array&lt;AssetMap&gt; | Yes | an array of assets to be added. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;BatchResult&gt; | Promise对象，返回批量操作结果，包含失败关键资产的错误信息。 |
+| Promise&lt;BatchResult&gt; | The result of the batch operation, including error information for adding failed assets, if there are any failures. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 24000014 | The file operation failed. |
-| 24000015 | Getting the system time failed. |
-| 24000012 | Calling the OS Account service failed. |
-| 24000013 | Calling the Access Token service failed. |
-| 24000010 | IPC failed. |
-| 24000011 | Calling the Bundle Manager service failed. |
-| 24000008 | The database operation failed. |
-| 24000009 | The cryptography operation failed. |
-| 24000006 | Insufficient memory. |
-| 24000007 | The asset is corrupted. |
-| 24000005 | The screen lock status does not match. |
-| 24000001 | The ASSET service is unavailable. |
-| 24000019 | Each value of {@link Tag.GROUP_ID} and {@link Tag.REQUIRE_ATTR_ENCRYPTED} in the array is not consistent. |
+| [24000014](../errorcode-asset.md#24000014-file-operation-failed) | The file operation failed. |
+| [24000015](../errorcode-asset.md#24000015-failed-to-obtain-the-system-time) | Getting the system time failed. |
+| [24000012](../errorcode-asset.md#24000012-account-system-service-abnormal) | Calling the OS Account service failed. |
+| [24000013](../errorcode-asset.md#24000013-access-token-service-abnormal) | Calling the Access Token service failed. |
+| [24000010](../errorcode-asset.md#24000010-ipc-failed) | IPC failed. |
+| [24000011](../errorcode-asset.md#24000011-bundle-manager-service-abnormal) | Calling the Bundle Manager service failed. |
+| [24000008](../errorcode-asset.md#24000008-database-operation-failed) | The database operation failed. |
+| [24000009](../errorcode-asset.md#24000009-cryptographic-operation-failed) | The cryptography operation failed. |
+| [24000006](../errorcode-asset.md#24000006-insufficient-memory) | Insufficient memory. |
+| [24000007](../errorcode-asset.md#24000007-asset-corrupted) | The asset is corrupted. |
+| [24000005](../errorcode-asset.md#24000005-incorrect-screen-lock-status) | The screen lock status does not match. |
+| [24000001](../errorcode-asset.md#24000001-asset-store-service-unavailable) | The ASSET service is unavailable. |
+| [24000019](../errorcode-asset.md#24000019-inconsistent-attribute-values) | Each value of {@link Tag.GROUP_ID} and {@link Tag.REQUIRE_ATTR_ENCRYPTED} in the array is not consistent. |
 

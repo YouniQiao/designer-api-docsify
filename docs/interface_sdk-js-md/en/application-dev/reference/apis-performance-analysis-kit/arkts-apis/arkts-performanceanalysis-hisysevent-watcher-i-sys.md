@@ -1,6 +1,6 @@
 # Watcher (System API)
 
-系统事件订阅者对象接口。
+Defines a watcher for event subscription.
 
 **Since:** 9
 
@@ -24,7 +24,7 @@ import { hiSysEvent } from 'kits/@kit.PerformanceAnalysisKit';
 onEvent: (info: SysEventInfo) => void
 ```
 
-订阅事件的回调方法(info: [SysEventInfo](arkts-performanceanalysis-hisysevent-syseventinfo-i-sys.md)) => void。
+Callback for event subscription: (info: [SysEventInfo](arkts-performanceanalysis-hisysevent-syseventinfo-i-sys.md)) => void
 
 **Since:** 9
 
@@ -48,7 +48,7 @@ onEvent: (info: SysEventInfo) => void
 onServiceDied: () => void
 ```
 
-系统事件服务关闭的回调方法() => void。
+Callback for disabling of event subscription: () => void
 
 **Since:** 9
 
@@ -66,7 +66,7 @@ onServiceDied: () => void
 rules: WatchRule[]
 ```
 
-订阅对象数组，每个订阅者对象包含多个订阅规则。
+Array of matching event subscription rules.
 
 **Type:** [WatchRule](arkts-performanceanalysis-hisysevent-watchrule-i-sys.md)[]
 

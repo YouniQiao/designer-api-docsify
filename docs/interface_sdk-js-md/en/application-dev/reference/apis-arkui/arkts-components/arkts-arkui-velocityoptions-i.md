@@ -1,10 +1,12 @@
 # VelocityOptions
 
-粒子速度配置。
+Defines velocity options.
 
-> **说明：**
+* > **NOTE：**
 > 
-> 为规范匿名对象的定义，API 18版本修改了此处的元素定义。其中，保留了历史匿名对象的起始版本信息，会出现外层元素@since版本号高于内层元素版本号的情况，但这不影响接口的使用。
+> To standardize anonymous object definitions, the element definitions here have been revised in API version 18.
+> While historical version information is preserved for anonymous objects, there may be cases where the outer
+> element's @since version number is higher than inner elements'. This does not affect interface usability.
 
 **Since:** 18
 
@@ -20,9 +22,7 @@
 angle: ParticleTuple<number, number>
 ```
 
-表示速度的方向（单位为角度）。以元素几何中心为坐标原点，水平方向为X轴，正数表示顺时针方向旋转角度。
-
-默认值：[0.0,0.0]
+Direction (in angles) in which the particle moves, with the geometric center of the element as the coordinate origin and the horizontal direction as the x-axis. A positive number indicates clockwise rotation.
 
 **Type:** [ParticleTuple](../arkts-apis/arkts-arkui-particletuple-t.md)&lt;number, number&gt;
 
@@ -44,9 +44,7 @@ angle: ParticleTuple<number, number>
 speed: ParticleTuple<number, number>
 ```
 
-表示速度大小。
-
-默认值：[0.0,0.0]
+Time rate at which the particle moves.
 
 **Type:** [ParticleTuple](../arkts-apis/arkts-arkui-particletuple-t.md)&lt;number, number&gt;
 

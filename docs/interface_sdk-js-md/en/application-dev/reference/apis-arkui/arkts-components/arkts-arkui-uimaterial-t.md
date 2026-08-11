@@ -4,7 +4,7 @@
 declare type UIMaterial = import('../api/@ohos.arkui.uiMaterial').uiMaterial
 ```
 
-材质
+UIMaterial
 
 **Since:** 26.0.0
 

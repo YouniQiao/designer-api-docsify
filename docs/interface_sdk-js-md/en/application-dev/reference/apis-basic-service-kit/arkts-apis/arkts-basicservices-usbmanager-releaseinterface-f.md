@@ -12,13 +12,13 @@ import { usbManager } from 'kits/@kit.BasicServicesKit';
 function releaseInterface(pipe: USBDevicePipe, iface: USBInterface): int
 ```
 
-释放claim过的通信接口。
+Releases the claimed communication interface.
 
-> **说明：**
+> **NOTE：**
 > 
-> 在调用该接口前需要通过
+> Before calling this API, call the
 > [usbManager.claimInterface](arkts-basicservices-usbmanager-claiminterface-f.md#claiminterface)
-> claim通信接口。
+> API to claim a communication interface.
 
 **Since:** 9
 
@@ -32,21 +32,21 @@ function releaseInterface(pipe: USBDevicePipe, iface: USBInterface): int
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| pipe | [USBDevicePipe](arkts-basicservices-usbmanager-usbdevicepipe-i.md) | Yes | 用于确定总线号和设备地址，需要调用[usbManager.connectDevice](arkts-basicservices-usbmanager-connectdevice-f.md#connectdevice)获取。 |
-| iface | [USBInterface](arkts-basicservices-usb-usbinterface-i.md) | Yes | 用于确定需要释放接口的索引，需要调用[usbManager.getDevices](arkts-basicservices-usbmanager-getdevices-f.md#getdevices)获取设备信息并通过id确定唯一接口。 |
+| pipe | [USBDevicePipe](arkts-basicservices-usbmanager-usbdevicepipe-i.md) | Yes | USB device pipe, which is used to determine the bus number and device address. You need to call [usbManager.connectDevice](arkts-basicservices-usbmanager-connectdevice-f.md#connectdevice) to obtain its value. |
+| iface | [USBInterface](arkts-basicservices-usb-usbinterface-i.md) | Yes | USB interface. You can use [usbManager.getDevices](arkts-basicservices-usbmanager-getdevices-f.md#getdevices) to obtain device information and identify the USB interface based on the ID. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| ArkTS-Dyn: number  <br>ArkTS-Sta：int | 释放接口成功返回0；释放接口失败返回其他错误码如下： |
+| ArkTS-Dyn: number  <br>ArkTS-Sta：int | Returns **0** if the USB interface is successfully released; returns an error code otherwise. The error codes are as follows: |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. Possible causes:  &lt;br&gt;1.Mandatory parameters are left unspecified.  &lt;br&gt;2.Incorrect parameter types. |
-| 801 | Capability not supported.<br>**Applicable version:** 18 and later |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes:  &lt;br&gt;1.Mandatory parameters are left unspecified.  &lt;br&gt;2.Incorrect parameter types. |
+| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported.<br>**Applicable version:** 18 and later |
 
 ## Examples
 
@@ -58,10 +58,10 @@ function releaseInterface() {
     return;
   }
 
-  let device: usbManager.USBDevice = devicesList?.[0];
+  let device: usbManager.USBDevice = devicesList[0];
   usbManager.requestRight(device.name);
   let devicepipe: usbManager.USBDevicePipe = usbManager.connectDevice(device);
-  let interfaces: usbManager.USBInterface = device.configs?.[0]?.interfaces?.[0];
+  let interfaces: usbManager.USBInterface = device.configs[0].interfaces[0];
   let ret: number = usbManager.claimInterface(devicepipe, interfaces);
   ret = usbManager.releaseInterface(devicepipe, interfaces);
   console.info(`releaseInterface = ${ret}`);

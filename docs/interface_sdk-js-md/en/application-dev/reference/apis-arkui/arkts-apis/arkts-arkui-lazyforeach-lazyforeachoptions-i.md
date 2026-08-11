@@ -1,6 +1,6 @@
 # LazyForEachOptions
 
-配置LazyForEach的参数。
+Options for LazyForEach.
 
 **Since:** 26.0.0
 
@@ -16,7 +16,7 @@
 customComponentFreezeMode?: LazyForEachCustomComponentFreezeMode
 ```
 
-已移出组件树的缓存自定义节点的冻结模式。默认值：LazyForEachCustomComponentFreezeMode.AUTO。
+Freeze mode for cached custom nodes that have been removed from the component tree. Default value: LazyForEachCustomComponentFreezeMode.AUTO.
 
 **Type:** [LazyForEachCustomComponentFreezeMode](../arkts-components/arkts-arkui-lazyforeachcustomcomponentfreezemode-e.md)
 
@@ -38,7 +38,7 @@ customComponentFreezeMode?: LazyForEachCustomComponentFreezeMode
 memoryOptimizationStrategy?: LazyForEachMemOptStrategy
 ```
 
-LazyForEach的内存优化策略。该参数在创建LazyForEach时设定，不支持动态修改。默认值：[DEFAULT]。
+Memory optimization strategy for LazyForEach.
 
 **Type:** [LazyForEachMemOptStrategy](../arkts-components/arkts-arkui-lazyforeachmemoptstrategy-e.md)
 
@@ -58,7 +58,7 @@ LazyForEach的内存优化策略。该参数在创建LazyForEach时设定，不�
 releaseStrategy?: LazyForEachReleaseStrategy
 ```
 
-LazyForEach缓存节点的资源释放策略。默认值：LazyForEachReleaseStrategy.BATCH。&lt;br&gt;默认值:默认值：LazyForEachReleaseStrategy.BATCH。
+Resource release strategy for LazyForEach discarded nodes.Default value:LazyForEachReleaseStrategy.BATCH.
 
 **Type:** [LazyForEachReleaseStrategy](../arkts-components/arkts-arkui-lazyforeachreleasestrategy-e.md)
 

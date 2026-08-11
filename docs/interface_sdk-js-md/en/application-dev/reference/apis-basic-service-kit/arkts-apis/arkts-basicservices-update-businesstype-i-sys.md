@@ -1,6 +1,6 @@
 # BusinessType (System API)
 
-升级业务类型。
+Represents an upgrade service type.
 
 **Since:** 9
 
@@ -24,13 +24,13 @@ import { update } from 'kits/@kit.BasicServicesKit';
 subType: BusinessSubType
 ```
 
-升级类型，用于指定升级的目标对象。
+Upgrade type, which is used to specify the target object to be upgraded.
 
-使用场景：系统根据升级类型选择相应的升级包和升级流程。
+Use scenarios: The system selects the upgrade package and upgrade process based on the upgrade type.
 
-可选值：FIRMWARE（固件升级，用于升级系统固件而非应用）。
+The value can be **FIRMWARE**, indicating firmware upgrade,which is applicable to upgrade of the system firmware instead of the app.
 
-建议：系统固件升级场景使用FIRMWARE，应用升级场景使用其他类型。
+You are advised to set **subType** to **FIRMWARE** for system firmware upgrade. Other values should be selected for app upgrade.
 
 **Type:** [BusinessSubType](arkts-basicservices-update-businesssubtype-e-sys.md)
 
@@ -50,13 +50,13 @@ subType: BusinessSubType
 vendor: BusinessVendor
 ```
 
-供应商类型，用于标识升级包的来源厂商。
+Vendor type, which is used to identify the vendor of the upgrade package.
 
-使用场景：系统根据供应商类型选择对应的升级包管理服务器和验证策略。
+Use scenarios: The system selects the upgrade package management server and verification policy based on the vendor type.
 
-可选值：PUBLIC（开源厂商，适用于开源版本的升级场景）。
+The value can be **PUBLIC**, indicating an open-source vendor, applicable to open-source version upgrade.
 
-建议根据实际升级包来源选择对应类型，开源版本升级时使用PUBLIC。
+You are advised to select a vendor type based on the actual upgrade package source. Set **vendor** to **PUBLIC** for open-source version upgrade.
 
 **Type:** [BusinessVendor](arkts-basicservices-update-businessvendor-e-sys.md)
 

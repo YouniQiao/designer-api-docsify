@@ -1,6 +1,6 @@
 # TextDecorationStyle
 
-Type of text decoration line style.
+The style of the text decoration.
 
 **Since:** 12
 
@@ -16,7 +16,7 @@ Type of text decoration line style.
 SOLID = 0
 ```
 
-Solid line.
+Single solid line (default value).
 
 **Since:** 12
 
@@ -36,7 +36,7 @@ Solid line.
 DOUBLE = 1
 ```
 
-Double lines.
+Double solid line.
 
 **Since:** 12
 

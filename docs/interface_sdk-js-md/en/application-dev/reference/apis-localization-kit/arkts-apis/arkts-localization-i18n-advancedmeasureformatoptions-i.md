@@ -1,6 +1,6 @@
 # AdvancedMeasureFormatOptions
 
-创建数字格式化对象时的可选配置项。
+Represents optional configuration items for AdvancedMeasureFormat object.
 
 **Since:** 23
 
@@ -22,7 +22,7 @@ import { i18n } from 'kits/@kit.LocalizationKit';
 unitUsage?: UnitUsage
 ```
 
-单位格式化使用场景的枚举。
+Scenarios for MeasureFormat.
 
 **Type:** [UnitUsage](arkts-localization-i18n-unitusage-e.md)
 

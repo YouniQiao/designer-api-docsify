@@ -1,6 +1,6 @@
 # SyncResultCode
 
-描述设备同步状态的枚举。请使用枚举名称而非枚举值。
+Describes the status of device sync.
 
 **Since:** 26.0.0
 
@@ -16,7 +16,7 @@
 SUCCESS = 0
 ```
 
-表示同步成功。
+Indicates sync success.
 
 **Since:** 26.0.0
 
@@ -34,7 +34,7 @@ SUCCESS = 0
 FAIL = 1
 ```
 
-表示同步失败。
+Indicates sync fail, for detailed reasons, please refer to the message.
 
 **Since:** 26.0.0
 
@@ -52,7 +52,7 @@ FAIL = 1
 OFFLINE = 2
 ```
 
-表示远端设备离线。
+Indicates that the device is offline.
 
 **Since:** 26.0.0
 
@@ -70,7 +70,7 @@ OFFLINE = 2
 INVALID_ARGS = 3
 ```
 
-表示参数无效。
+Indicates parameter is invalid.
 
 **Since:** 26.0.0
 
@@ -88,7 +88,7 @@ INVALID_ARGS = 3
 DISTRIBUTED_TABLE_NOT_SET = 4
 ```
 
-表示本端设备或远端设备未设置分布式表。
+Indicates that a distributed table is not set.
 
 **Since:** 26.0.0
 
@@ -106,7 +106,7 @@ DISTRIBUTED_TABLE_NOT_SET = 4
 TABLE_FIELD_MISMATCH = 5
 ```
 
-表示对端设备与本端设备本地表的同步字段不一致。
+Indicates that the synchronization field of the peer device is inconsistent with that of the local device.
 
 **Since:** 26.0.0
 
@@ -124,7 +124,7 @@ TABLE_FIELD_MISMATCH = 5
 DISTRIBUTED_SCHEMA_MISMATCH = 6
 ```
 
-表示对端设备与本端设备分布式表的Schema字段不一致，或者存在一个分布式表没有配置Schema。
+Indicates that the schema field of the peer device is inconsistent with that of the local device.
 
 **Since:** 26.0.0
 
@@ -142,7 +142,7 @@ DISTRIBUTED_SCHEMA_MISMATCH = 6
 BUSY = 7
 ```
 
-表示数据库繁忙。
+Indicates that the database is busy.
 
 **Since:** 26.0.0
 
@@ -160,7 +160,7 @@ BUSY = 7
 CORRUPTED = 8
 ```
 
-表示数据库损坏。
+Indicates that the database is corrupted.
 
 **Since:** 26.0.0
 
@@ -178,7 +178,7 @@ CORRUPTED = 8
 TIMEOUT = 9
 ```
 
-表示同步操作因超时失败。常见原因包括：对端设备数据库未创建、连接中断或网络抖动导致丢包。
+Indicates synchronization timeout.
 
 **Since:** 26.0.0
 
@@ -196,7 +196,7 @@ TIMEOUT = 9
 SCHEMA_CHANGED = 10
 ```
 
-表示在同步过程中表结构已更改。
+Indicates that the table structure changed during the synchronization process.
 
 **Since:** 26.0.0
 
@@ -214,7 +214,7 @@ SCHEMA_CHANGED = 10
 CONSTRAINT_VIOLATION = 11
 ```
 
-表示同步数据时违反约束条件。
+Indicates a violation of constraints when synchronizing data.
 
 **Since:** 26.0.0
 

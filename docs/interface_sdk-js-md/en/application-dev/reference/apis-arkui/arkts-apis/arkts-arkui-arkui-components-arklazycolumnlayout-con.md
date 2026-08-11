@@ -6,7 +6,7 @@
 export declare const LazyColumnLayout: LazyColumnLayoutInterface
 ```
 
-定义懒式列布局组件。
+Defines the lazy column layout component.
 
 **Since:** 26.0.0
 
@@ -26,7 +26,7 @@ export declare const LazyColumnLayout: LazyColumnLayoutInterface
 export declare const LazyColumnLayoutInstance: LazyColumnLayoutAttribute
 ```
 
-定义懒加载列布局组件实例。
+Defines the lazy column layout component instance.
 
 **Since:** 26.0.0
 

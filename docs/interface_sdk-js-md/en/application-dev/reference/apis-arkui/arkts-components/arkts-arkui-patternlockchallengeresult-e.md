@@ -1,6 +1,6 @@
 # PatternLockChallengeResult
 
-图案密码状态。
+Authentication challenge result of the pattern password.
 
 **Since:** 11
 
@@ -16,7 +16,7 @@
 CORRECT = 1
 ```
 
-图案密码正确。
+The pattern password is correct.
 
 **Since:** 11
 
@@ -36,7 +36,7 @@ CORRECT = 1
 WRONG = 2
 ```
 
-图案密码错误。
+The pattern password is incorrect.
 
 **Since:** 11
 

@@ -32,5 +32,5 @@ Defines MenuItem Component.
 
 | 类型 | 说明 |
 | --- | --- |
-| [MenuItemAttribute](arkts-arkui-menuitem-menuitemattribute-i.md) |  |
+| [MenuItemAttribute](../arkts-components/arkts-arkui-menuitem-attribute.md) |  |
 

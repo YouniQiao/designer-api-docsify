@@ -12,7 +12,7 @@ import { hichecker } from 'kits/@kit.PerformanceAnalysisKit';
 function addCheckRule(rule: bigint) : void
 ```
 
-����һ�����������ϵͳ��ϵͳ�������ӵĹ�����м�������������Ӧ���򴥷�ʱ����hilog��grep HiChecker�鿴������Ϣ��
+Adds one or more check rules. HiChecker detects unexpected operations or gives feedback based on the added rules.You can use **grep HiChecker** to check for the application running information in the hilog.
 
 **Since:** 9
 
@@ -26,13 +26,13 @@ function addCheckRule(rule: bigint) : void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| rule | bigint | Yes | ��Ҫ���ӵĹ��� |
+| rule | bigint | Yes | Rule to be added. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | the parameter check failed, only one bigint type parameter is needed |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | the parameter check failed, only one bigint type parameter is needed |
 
 ## Examples
 

@@ -10,12 +10,6 @@ You can trigger download manually through this interface, or resume failed or ca
 
 **系统能力：** SystemCapability.Web.Webview.Core
 
-## 导入模块
-
-```TypeScript
-import { webview } from 'kits/@kit.ArkWeb';
-```
-
 ## resumeDownload
 
 ```TypeScript
@@ -42,7 +36,7 @@ Resume the canceled or failed download.
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 17100018 | No WebDownloadDelegate has been set yet. |
+| [17100018](../errorcode-webview.md#17100018-没有设置一个委托类来接收下载状态) | No WebDownloadDelegate has been set yet. |
 
 ## setDownloadDelegate
 

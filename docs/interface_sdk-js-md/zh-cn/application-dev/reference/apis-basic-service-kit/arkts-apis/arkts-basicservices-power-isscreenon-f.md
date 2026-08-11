@@ -1,11 +1,5 @@
 # isScreenOn
 
-## 导入模块
-
-```TypeScript
-import { power } from 'kits/@kit.BasicServicesKit';
-```
-
 ## isScreenOn
 
 ```TypeScript
@@ -35,13 +29,13 @@ function isScreenOn(callback: AsyncCallback<boolean>): void
 ## 示例
 
 ```TypeScript
-power.isScreenOn((err: BusinessError, data: boolean) => {
-    if (err) {
-        console.error(`Failed to check screen status. Code: ${err.code}, message: ${err.message}`);
-        return;
+power.isScreenOn((err: Error, data: boolean) => {
+    if (typeof err === 'undefined') {
+        console.info('screen on status is ' + data);
+    } else {
+        console.error('check screen status failed, err: ' + err);
     }
-    console.info('screen on status is ' + data);
-});
+})
 ```
 
 
@@ -78,8 +72,8 @@ power.isScreenOn()
 .then((data: boolean) => {
     console.info('screen on status is ' + data);
 })
-.catch((err: BusinessError) => {
-    console.error(`Failed to check screen status. Code: ${err.code}, message: ${err.message}`);
-});
+.catch((err: Error) => {
+    console.error('check screen status failed, err: ' + err);
+})
 ```
 

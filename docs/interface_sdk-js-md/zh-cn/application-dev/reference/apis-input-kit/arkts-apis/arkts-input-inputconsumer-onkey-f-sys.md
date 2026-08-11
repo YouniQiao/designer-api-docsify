@@ -1,11 +1,5 @@
 # onKey（系统接口）
 
-## 导入模块
-
-```TypeScript
-import { inputConsumer } from 'kits/@kit.InputKit';
-```
-
 ## onKey
 
 ```TypeScript
@@ -35,8 +29,45 @@ function onKey(keyOptions: KeyOptions, callback: Callback<KeyOptions>): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
-| 202 | Permission denied, non-system app called system api. |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission denied, non-system app called system api. |
+
+## 示例
+
+```TypeScript
+import { Entry, Text, RelativeContainer, Component } from '@kit.ArkUI';
+import { BusinessError } from '@kit.BasicServicesKit';
+import { inputConsumer, KeyCode } from '@kit.InputKit';
+
+@Entry
+@Component
+struct Index {
+  build() {
+    RelativeContainer() {
+      Text()
+        .onClick(() => {
+          let leftAltKey = 2045;
+          let tabKey = 2049;
+          let keyOptions: inputConsumer.KeyOptions = {
+            preKeys: [ leftAltKey ],
+            finalKey: tabKey,
+            isFinalKeyDown: true,
+            finalKeyDownDuration: 0
+          };
+          let callback = (keyOptions: inputConsumer.KeyOptions) => {
+            console.info(`Succeeded in consuming key, keyOptions: ${JSON.stringify(keyOptions)}`);
+          }
+          try {
+            // 订阅按键事件
+            inputConsumer.onKey(keyOptions, callback);
+          } catch (error) {
+            console.error(`Failed to subscribe, Code: ${(error as BusinessError).code}, message: ${(error as BusinessError).message}.`);
+          }
+        })
+    }
+  }
+}
+```
 
 
 ## onKey
@@ -77,7 +108,7 @@ function onKey(keyOptions: KeyOptions, callback:KeyCommandCallback): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 202 | Permission denied, non-system app called system api. |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission denied, non-system app called system api. |
 
 ## 示例
 

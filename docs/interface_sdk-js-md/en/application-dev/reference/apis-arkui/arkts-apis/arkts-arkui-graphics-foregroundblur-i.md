@@ -1,10 +1,6 @@
 # ForegroundBlur
 
-设置前景模糊效果。
-
-.0.0
-
-.0.0
+Defines the foreground blur effect.
 
 **Since:** 26.0.0
 
@@ -20,7 +16,7 @@
 radius: double
 ```
 
-模糊效果半径。取值范围为[0, +∞)，默认值为0，值越大前景模糊效果越明显，为0时不模糊。
+Blur radius for foreground blur.Value range: [0, +∞). The larger the value, the more blurred the foreground.
 
 **Type:** double
 

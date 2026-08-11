@@ -1,19 +1,21 @@
 # ListItem
 
-ListItem用于展示列表中的具体列表项，支持设置划出菜单、选中状态、鼠标框选和卡片样式等能力，必须配合List组件使用，适用于需要在列表中展示内容并对单个列表项进行交互操作（如滑动删除、选中标记）的场景。
+The ListItem component displays specific items in the list. It must be used together with List.
 
-> **说明：**
+> **NOTE**
 >
-> - 该组件的父组件只能是[List]{@link ./list}或者[ListItemGroup]{@link ./list_item_group}。
+> - This component is supported since API version 7. Updates will be marked with a superscript to indicate
+> their earliest API version.
 >
-> - 当ListItem配合[LazyForEach](docroot://ui/rendering-control/arkts-rendering-control-lazyforeach.md)使用时，ListItem子组件在
-> ListItem创建时创建。配合[if/else](docroot://ui/rendering-control/arkts-rendering-control-ifelse.md)、
-> [ForEach](docroot://ui/rendering-control/arkts-rendering-control-foreach.md)使用时，或父组件为List/ListItemGroup时，ListItem子组
-> 件在ListItem布局时创建。
+> - The parent of this component can only be List or ListItemGroup.
+>
+> - When this component is used with LazyForEach, its child components are created when it is created.
+> When this component is used with if/else or ForEach, or when the parent component is List or ListItemGroup,
+> its child components are created when it is laid out.
 
-## 子组件
+## Child Components
 
-可以包含单个子组件。
+This component can contain a single child component.
 
 ## ListItem
 
@@ -21,7 +23,7 @@ ListItem用于展示列表中的具体列表项，支持设置划出菜单、选
 ListItem(value?: ListItemOptions)
 ```
 
-创建ListItem组件。
+Creates a ListItem component.
 
 **Since:** 10
 
@@ -49,11 +51,7 @@ ListItem(value?: ListItemOptions)
 ListItem(value?: string)
 ```
 
-创建ListItem组件。
-
-> **说明：**
-> 
-> 从API version 7开始支持，从API version 10开始废弃。
+Creates a ListItem component.
 
 **Since:** 7
 

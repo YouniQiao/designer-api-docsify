@@ -1,6 +1,6 @@
 # ReminderType
 
-提醒的类型。
+Enumerates reminder types.
 
 **Since:** 7
 
@@ -20,7 +20,7 @@
 REMINDER_TYPE_TIMER = 0
 ```
 
-表示提醒类型：倒计时。
+Countdown reminder.
 
 **Since:** 7
 
@@ -40,7 +40,7 @@ REMINDER_TYPE_TIMER = 0
 REMINDER_TYPE_CALENDAR = 1
 ```
 
-表示提醒类型：日历。
+Calendar reminder.
 
 **Since:** 7
 
@@ -60,7 +60,7 @@ REMINDER_TYPE_CALENDAR = 1
 REMINDER_TYPE_ALARM = 2
 ```
 
-表示提醒类型：闹钟。
+Alarm reminder.
 
 **Since:** 7
 

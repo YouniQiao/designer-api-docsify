@@ -1,6 +1,6 @@
 # PatternLockController
 
-PatternLock组件的控制器，用于重置组件状态和设置图案密码的正确或错误状态。
+Provides methods for control pattern lock component.
 
 **Since:** 23
 
@@ -16,7 +16,7 @@ PatternLock组件的控制器，用于重置组件状态和设置图案密码的
 constructor()
 ```
 
-PatternLockController的构造函数。
+A constructor used to create a PatternLockController instance.
 
 **Since:** 23
 
@@ -34,7 +34,7 @@ PatternLockController的构造函数。
 reset(): void
 ```
 
-重置组件状态。
+Reset pattern lock.
 
 **Since:** 23
 
@@ -52,7 +52,7 @@ reset(): void
 setChallengeResult(result: PatternLockChallengeResult): void
 ```
 
-设置图案密码的正确或错误状态。
+Sets the authentication challenge result for the pattern password.
 
 **Since:** 23
 
@@ -68,5 +68,5 @@ setChallengeResult(result: PatternLockChallengeResult): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| result | [PatternLockChallengeResult](../arkts-components/arkts-arkui-patternlockchallengeresult-e.md) | Yes | 图案密码状态。包括正确和错误状态。 |
+| result | [PatternLockChallengeResult](../arkts-components/arkts-arkui-patternlockchallengeresult-e.md) | Yes | Authentication challenge result of the pattern password. |
 

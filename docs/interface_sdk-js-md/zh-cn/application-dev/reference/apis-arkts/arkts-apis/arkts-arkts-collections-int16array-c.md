@@ -17,12 +17,6 @@
 
 **系统能力：** SystemCapability.Utils.Lang
 
-## 导入模块
-
-```TypeScript
-import { collections } from 'kits/@kit.ArkTS';
-```
-
 ## [Symbol.iterator]
 
 ```TypeScript
@@ -45,13 +39,13 @@ import { collections } from 'kits/@kit.ArkTS';
 
 | 类型 | 说明 |
 | --- | --- |
-| [IterableIterator](arkts-arkts-iterator-iterableiterator-i.md)&lt;number&gt; | 返回一个迭代器。 |
+| IterableIterator&lt;number&gt; | 返回一个迭代器。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 10200011 | The Symbol.iterator method cannot be bound. |
+| [10200011](../errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) | The Symbol.iterator method cannot be bound. |
 
 ## at
 
@@ -87,8 +81,8 @@ at(index: number): number | undefined
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 10200011 | The at method cannot be bound. |
-| 10200201 | Concurrent modification error. |
+| [10200011](../errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) | The at method cannot be bound. |
+| [10200201](../errorcode-utils.md#10200201-concurrent修改错误) | Concurrent modification error. |
 
 ## constructor
 
@@ -112,7 +106,7 @@ constructor()
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 10200012 | The Int16Array's constructor cannot be directly invoked. |
+| [10200012](../errorcode-utils.md#10200012-构造函数调用异常) | The Int16Array's constructor cannot be directly invoked. |
 
 ## constructor
 
@@ -136,13 +130,13 @@ constructor(length: number)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| length | number | 是 | 用于指定ArkTS Int16Array的长度。 |
+| length | number | 是 | 用于指定ArkTS Int16Array的长度，取值需为非负整数。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 10200012 | The Int16Array's constructor cannot be directly invoked. |
+| [10200012](../errorcode-utils.md#10200012-构造函数调用异常) | The Int16Array's constructor cannot be directly invoked. |
 
 ## constructor
 
@@ -172,7 +166,7 @@ constructor(elements: Iterable<number>)
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 10200012 | The Int16Array's constructor cannot be directly invoked. |
+| [10200012](../errorcode-utils.md#10200012-构造函数调用异常) | The Int16Array's constructor cannot be directly invoked. |
 
 ## constructor
 
@@ -196,13 +190,13 @@ constructor(array: ArrayLike<number> | ArrayBuffer)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| array | [ArrayLike](arkts-arkts-arraylike-i.md)&lt;number&gt; \| ArrayBuffer | 是 | 用于构造ArkTS Int16Array的对象。当参数类型是ArrayBuffer时， buffer所占的字节数须是4的整数倍。 |
+| array | ArrayLike&lt;number&gt; \| ArrayBuffer | 是 | 用于构造ArkTS Int16Array的对象。当参数类型是ArrayBuffer时， buffer所占的字节数须是4的整数倍。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 10200012 | The Int16Array's constructor cannot be directly invoked. |
+| [10200012](../errorcode-utils.md#10200012-构造函数调用异常) | The Int16Array's constructor cannot be directly invoked. |
 
 ## constructor
 
@@ -210,7 +204,7 @@ constructor(array: ArrayLike<number> | ArrayBuffer)
 constructor(buffer: ArrayBuffer, byteOffset?: number, length?: number)
 ```
 
-构造函数，以ArrayBuffer创建一个ArkTS Int16Array对象。
+构造函数，以ArkTS ArrayBuffer创建一个ArkTS Int16Array对象。
 
 **起始版本：** 12
 
@@ -234,7 +228,7 @@ constructor(buffer: ArrayBuffer, byteOffset?: number, length?: number)
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 10200012 | The Int16Array's constructor cannot be directly invoked. |
+| [10200012](../errorcode-utils.md#10200012-构造函数调用异常) | The Int16Array's constructor cannot be directly invoked. |
 
 ## copyWithin
 
@@ -259,7 +253,7 @@ copyWithin(target: number, start: number, end?: number): Int16Array
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | target | number | 是 | 目标起始位置的下标，如果`target < 0`，则会从`target + array.length`位置开始。 |
-| start | number | 是 | 源起始位置下标，如果`start < 0`，则会从`start + Int16Array.length`位置开始。 |
+| start | number | 是 | 源起始位置索引，如果`start < 0`，则会从`start + Int16Array.length`位置开始。 |
 | end | number | 否 | 源终止位置下标（不包含end位置的元素），如果`end < 0`，则会从`end + Int16Array.length`位置终止。 默认为ArkTS Int16Array的长度。 |
 
 **返回值：**
@@ -272,8 +266,8 @@ copyWithin(target: number, start: number, end?: number): Int16Array
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 10200011 | The copyWithin method cannot be bound. |
-| 10200201 | Concurrent modification error. |
+| [10200011](../errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) | The copyWithin method cannot be bound. |
+| [10200201](../errorcode-utils.md#10200201-concurrent修改错误) | Concurrent modification error. |
 
 ## entries
 
@@ -297,14 +291,14 @@ entries(): IterableIterator<[number, number]>
 
 | 类型 | 说明 |
 | --- | --- |
-| [IterableIterator](arkts-arkts-iterator-iterableiterator-i.md)&lt;[number, number]&gt; | 新的迭代器对象。 |
+| IterableIterator&lt;[number, number]&gt; | 新的迭代器对象。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 10200011 | The entries method cannot be bound. |
-| 10200201 | Concurrent modification error. |
+| [10200011](../errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) | The entries method cannot be bound. |
+| [10200201](../errorcode-utils.md#10200201-concurrent修改错误) | Concurrent modification error. |
 
 ## every
 
@@ -340,8 +334,8 @@ every(predicate: TypedArrayPredicateFn<number, Int16Array>): boolean
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 10200011 | The every method cannot be bound. |
-| 10200201 | Concurrent modification error. |
+| [10200011](../errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) | The every method cannot be bound. |
+| [10200201](../errorcode-utils.md#10200201-concurrent修改错误) | Concurrent modification error. |
 
 ## fill
 
@@ -379,8 +373,8 @@ fill(value: number, start?: number, end?: number): Int16Array
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 10200011 | The fill method cannot be bound. |
-| 10200201 | Concurrent modification error. |
+| [10200011](../errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) | The fill method cannot be bound. |
+| [10200201](../errorcode-utils.md#10200201-concurrent修改错误) | Concurrent modification error. |
 
 ## filter
 
@@ -416,8 +410,8 @@ filter(predicate: TypedArrayPredicateFn<number, Int16Array>): Int16Array
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 10200011 | The filter method cannot be bound. |
-| 10200201 | Concurrent modification error. |
+| [10200011](../errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) | The filter method cannot be bound. |
+| [10200201](../errorcode-utils.md#10200201-concurrent修改错误) | Concurrent modification error. |
 
 ## find
 
@@ -453,8 +447,8 @@ find(predicate: TypedArrayPredicateFn<number, Int16Array>): number | undefined
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 10200011 | The find method cannot be bound. |
-| 10200201 | Concurrent modification error. |
+| [10200011](../errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) | The find method cannot be bound. |
+| [10200201](../errorcode-utils.md#10200201-concurrent修改错误) | Concurrent modification error. |
 
 ## findIndex
 
@@ -490,8 +484,8 @@ findIndex(predicate: TypedArrayPredicateFn<number, Int16Array>): number
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 10200011 | The findIndex method cannot be bound. |
-| 10200201 | Concurrent modification error. |
+| [10200011](../errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) | The findIndex method cannot be bound. |
+| [10200201](../errorcode-utils.md#10200201-concurrent修改错误) | Concurrent modification error. |
 
 ## forEach
 
@@ -521,8 +515,8 @@ forEach(callbackFn: TypedArrayForEachCallback<number, Int16Array>): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 10200011 | The forEach method cannot be bound. |
-| 10200201 | Concurrent modification error. |
+| [10200011](../errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) | The forEach method cannot be bound. |
+| [10200201](../errorcode-utils.md#10200201-concurrent修改错误) | Concurrent modification error. |
 
 ## from
 
@@ -530,7 +524,7 @@ forEach(callbackFn: TypedArrayForEachCallback<number, Int16Array>): void
 static from(arrayLike: ArrayLike<number>): Int16Array
 ```
 
-从一个ArrayLike或者可迭代对象中创建一个ArkTS Int16Array对象。
+从一个ArrayLike中创建一个ArkTS Int16Array对象。
 
 **起始版本：** 12
 
@@ -546,7 +540,7 @@ static from(arrayLike: ArrayLike<number>): Int16Array
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| arrayLike | [ArrayLike](arkts-arkts-arraylike-i.md)&lt;number&gt; | 是 | 用于构造ArkTS Int16Array的ArrayLike对象。 |
+| arrayLike | ArrayLike&lt;number&gt; | 是 | 用于构造ArkTS Int16Array的ArrayLike对象。 |
 
 **返回值：**
 
@@ -576,7 +570,7 @@ static from<T>(arrayLike: ArrayLike<T>, mapFn: TypedArrayFromMapFn<T, number>): 
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| arrayLike | [ArrayLike](arkts-arkts-arraylike-i.md)&lt;T&gt; | 是 | 用于构造ArkTS Int16Array的ArrayLike对象。 |
+| arrayLike | ArrayLike&lt;T&gt; | 是 | 用于构造ArkTS Int16Array的ArrayLike对象。 |
 | mapFn | [TypedArrayFromMapFn](arkts-arkts-collections-typedarrayfrommapfn-t.md)&lt;T, number&gt; | 是 | 映射函数。 |
 
 **返回值：**
@@ -622,7 +616,7 @@ static from(arrayLike: Iterable<number>, mapFn?: TypedArrayFromMapFn<number, num
 includes(searchElement: number, fromIndex?: number): boolean
 ```
 
-判断ArkTS Int16Array是否包含特定元素。
+判断ArkTS Int16Array是否包含指定元素。
 
 **起始版本：** 12
 
@@ -651,8 +645,8 @@ includes(searchElement: number, fromIndex?: number): boolean
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 10200011 | The includes method cannot be bound. |
-| 10200201 | Concurrent modification error. |
+| [10200011](../errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) | The includes method cannot be bound. |
+| [10200201](../errorcode-utils.md#10200201-concurrent修改错误) | Concurrent modification error. |
 
 ## indexOf
 
@@ -689,8 +683,8 @@ indexOf(searchElement: number, fromIndex?: number): number
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 10200011 | The indexOf method cannot be bound. |
-| 10200201 | Concurrent modification error. |
+| [10200011](../errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) | The indexOf method cannot be bound. |
+| [10200201](../errorcode-utils.md#10200201-concurrent修改错误) | Concurrent modification error. |
 
 ## join
 
@@ -726,8 +720,8 @@ join(separator?: string): string
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 10200011 | The join method cannot be bound. |
-| 10200201 | Concurrent modification error. |
+| [10200011](../errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) | The join method cannot be bound. |
+| [10200201](../errorcode-utils.md#10200201-concurrent修改错误) | Concurrent modification error. |
 
 ## keys
 
@@ -735,7 +729,7 @@ join(separator?: string): string
 keys(): IterableIterator<number>
 ```
 
-返回一个新的迭代器对象，该对象包含ArkTS Int16Array中每个元素的键（下标）。
+返回一个新的迭代器对象，该对象包含ArkTS Int16Array中每个元素的键（索引）。
 
 **起始版本：** 12
 
@@ -751,14 +745,14 @@ keys(): IterableIterator<number>
 
 | 类型 | 说明 |
 | --- | --- |
-| [IterableIterator](arkts-arkts-iterator-iterableiterator-i.md)&lt;number&gt; | 新的迭代器对象。 |
+| IterableIterator&lt;number&gt; | 新的迭代器对象。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 10200011 | The keys method cannot be bound. |
-| 10200201 | Concurrent modification error. |
+| [10200011](../errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) | The keys method cannot be bound. |
+| [10200201](../errorcode-utils.md#10200201-concurrent修改错误) | Concurrent modification error. |
 
 ## lastIndexOf
 
@@ -795,8 +789,8 @@ lastIndexOf(searchElement: number, fromIndex?: number): number
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 10200011 | The lastIndexOf method cannot be bound. |
-| 10200201 | Concurrent modification error. |
+| [10200011](../errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) | The lastIndexOf method cannot be bound. |
+| [10200201](../errorcode-utils.md#10200201-concurrent修改错误) | Concurrent modification error. |
 
 ## map
 
@@ -820,7 +814,7 @@ map(callbackFn: TypedArrayMapCallback<number, Int16Array>): Int16Array
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callbackFn | [TypedArrayMapCallback](arkts-arkts-collections-typedarraymapcallback-t.md)&lt;number, Int16Array&gt; | 是 | 回调函数。 map方法对数组中的每个元素调用一次callbackfn函数。 |
+| callbackFn | [TypedArrayMapCallback](arkts-arkts-collections-typedarraymapcallback-t.md)&lt;number, Int16Array&gt; | 是 | 回调函数。回调执行期间不能修改当前Map对象，否则会触发并发修改错误。 map方法对数组中的每个元素调用一次callbackfn函数。 |
 
 **返回值：**
 
@@ -832,8 +826,8 @@ map(callbackFn: TypedArrayMapCallback<number, Int16Array>): Int16Array
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 10200011 | The map method cannot be bound. |
-| 10200201 | Concurrent modification error. |
+| [10200011](../errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) | The map method cannot be bound. |
+| [10200201](../errorcode-utils.md#10200201-concurrent修改错误) | Concurrent modification error. |
 
 ## of
 
@@ -841,7 +835,7 @@ map(callbackFn: TypedArrayMapCallback<number, Int16Array>): Int16Array
 static of(...items: number[]): Int16Array
 ```
 
-通过可变数量的参数创建一个新的ArkTS Int16Array对象，参数个数可以是0个、1个或者多个。
+通过可变数量的参数创建一个新的ArkTS Int16Array对象。
 
 **起始版本：** 18
 
@@ -899,8 +893,8 @@ reduce(callbackFn: TypedArrayReduceCallback<number, number, Int16Array>): number
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 10200011 | The reduce method cannot be bound. |
-| 10200201 | Concurrent modification error. |
+| [10200011](../errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) | The reduce method cannot be bound. |
+| [10200201](../errorcode-utils.md#10200201-concurrent修改错误) | Concurrent modification error. |
 
 ## reduce
 
@@ -937,8 +931,8 @@ reduce(callbackFn: TypedArrayReduceCallback<number, number, Int16Array>, initial
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 10200011 | The reduce method cannot be bound. |
-| 10200201 | Concurrent modification error. |
+| [10200011](../errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) | The reduce method cannot be bound. |
+| [10200201](../errorcode-utils.md#10200201-concurrent修改错误) | Concurrent modification error. |
 
 ## reduce
 
@@ -975,8 +969,8 @@ reduce<U>(callbackFn: TypedArrayReduceCallback<U, number, Int16Array>, initialVa
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 10200011 | The reduce method cannot be bound. |
-| 10200201 | Concurrent modification error. |
+| [10200011](../errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) | The reduce method cannot be bound. |
+| [10200201](../errorcode-utils.md#10200201-concurrent修改错误) | Concurrent modification error. |
 
 ## reduceRight
 
@@ -1013,8 +1007,8 @@ reduceRight<U = number>(callbackFn: TypedArrayReduceCallback<U, number, Int16Arr
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 10200011 | The reduceRight method cannot be bound. |
-| 10200201 | Concurrent modification error. |
+| [10200011](../errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) | The reduceRight method cannot be bound. |
+| [10200201](../errorcode-utils.md#10200201-concurrent修改错误) | Concurrent modification error. |
 
 ## reduceRight
 
@@ -1050,8 +1044,8 @@ reduceRight(callbackFn: TypedArrayReduceCallback<number, number, Int16Array>): n
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 10200011 | The reduceRight method cannot be bound. |
-| 10200201 | Concurrent modification error. |
+| [10200011](../errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) | The reduceRight method cannot be bound. |
+| [10200201](../errorcode-utils.md#10200201-concurrent修改错误) | Concurrent modification error. |
 
 ## reverse
 
@@ -1059,7 +1053,7 @@ reduceRight(callbackFn: TypedArrayReduceCallback<number, number, Int16Array>): n
 reverse(): Int16Array
 ```
 
-反转ArkTS Int16Array。
+反转ArkTS Int16Array中元素的顺序。
 
 **起始版本：** 12
 
@@ -1081,8 +1075,8 @@ reverse(): Int16Array
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 10200011 | The reverse method cannot be bound. |
-| 10200201 | Concurrent modification error. |
+| [10200011](../errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) | The reverse method cannot be bound. |
+| [10200201](../errorcode-utils.md#10200201-concurrent修改错误) | Concurrent modification error. |
 
 ## set
 
@@ -1106,15 +1100,15 @@ set(array: ArrayLike<number>, offset?: number): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| array | [ArrayLike](arkts-arkts-arraylike-i.md)&lt;number&gt; | 是 | 用于设置的ArrayLike对象。 |
+| array | ArrayLike&lt;number&gt; | 是 | 用于设置的ArrayLike对象。 |
 | offset | number | 否 | 写入的起始位置。默认为0。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 10200011 | The set method cannot be bound. |
-| 10200201 | Concurrent modification error. |
+| [10200011](../errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) | The set method cannot be bound. |
+| [10200201](../errorcode-utils.md#10200201-concurrent修改错误) | Concurrent modification error. |
 
 ## slice
 
@@ -1122,7 +1116,7 @@ set(array: ArrayLike<number>, offset?: number): void
 slice(start?: number, end?: number): Int16Array
 ```
 
-返回一个新的ArkTS Int16Array对象，其包含原ArkTS Int16Array指定范围的内容。
+返回一个新的ArkTS Int16Array对象，其包含原ArkTS Int16Array指定范围的内容。与subarray不同，slice返回的对象不会影响原数组。
 
 **起始版本：** 12
 
@@ -1151,8 +1145,8 @@ slice(start?: number, end?: number): Int16Array
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 10200011 | The slice method cannot be bound. |
-| 10200201 | Concurrent modification error. |
+| [10200011](../errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) | The slice method cannot be bound. |
+| [10200201](../errorcode-utils.md#10200201-concurrent修改错误) | Concurrent modification error. |
 
 ## some
 
@@ -1160,7 +1154,7 @@ slice(start?: number, end?: number): Int16Array
 some(predicate: TypedArrayPredicateFn<number, Int16Array>): boolean
 ```
 
-测试ArkTS Int16Array中的是否存在元素满足指定条件。
+测试ArkTS Int16Array中是否存在元素满足指定条件。
 
 **起始版本：** 12
 
@@ -1188,8 +1182,8 @@ some(predicate: TypedArrayPredicateFn<number, Int16Array>): boolean
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 10200011 | The some method cannot be bound. |
-| 10200201 | Concurrent modification error. |
+| [10200011](../errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) | The some method cannot be bound. |
+| [10200201](../errorcode-utils.md#10200201-concurrent修改错误) | Concurrent modification error. |
 
 ## sort
 
@@ -1197,7 +1191,7 @@ some(predicate: TypedArrayPredicateFn<number, Int16Array>): boolean
 sort(compareFn?: TypedArrayCompareFn<number>): Int16Array
 ```
 
-对ArkTS Int16Array进行排序，并返回排序后的ArkTS Int16Array对象。
+对ArkTS Int16Array进行原地排序，并返回排序后的ArkTS Int16Array对象。
 
 **起始版本：** 12
 
@@ -1225,8 +1219,8 @@ sort(compareFn?: TypedArrayCompareFn<number>): Int16Array
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 10200011 | The sort method cannot be bound. |
-| 10200201 | Concurrent modification error. |
+| [10200011](../errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) | The sort method cannot be bound. |
+| [10200201](../errorcode-utils.md#10200201-concurrent修改错误) | Concurrent modification error. |
 
 ## subarray
 
@@ -1234,7 +1228,7 @@ sort(compareFn?: TypedArrayCompareFn<number>): Int16Array
 subarray(begin?: number, end?: number): Int16Array
 ```
 
-从指定的位置截取数组，返回一个新的、基于相同ArkTS ArrayBuffer的ArkTS Int16Array对象。
+从指定的位置截取数组，返回一个基于相同ArkTS ArrayBuffer的新ArkTS Int16Array对象。由于返回的对象与原始对象共享同一个ArrayBuffer，修改其中一个会影响另一个。
 
 **起始版本：** 12
 
@@ -1263,8 +1257,8 @@ subarray(begin?: number, end?: number): Int16Array
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 10200011 | The subarray method cannot be bound. |
-| 10200201 | Concurrent modification error. |
+| [10200011](../errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) | The subarray method cannot be bound. |
+| [10200201](../errorcode-utils.md#10200201-concurrent修改错误) | Concurrent modification error. |
 
 ## toLocaleString
 
@@ -1272,7 +1266,7 @@ subarray(begin?: number, end?: number): Int16Array
 toLocaleString(): string
 ```
 
-根据当前应用的系统地区获取符合当前文化习惯的数字表示形式，让每个元素调用自己的toLocaleString方法把数字转换为字符串，然后使用逗号将每个元素的结果字符串按照顺序拼接成字符串。
+根据当前应用的系统地区获取符合当前文化习惯的数字表示形式，对每个元素调用toLocaleString方法，把数字转换为字符串，然后使用逗号将每个元素的结果字符串按照顺序拼接成字符串。
 
 **起始版本：** 18
 
@@ -1294,8 +1288,8 @@ toLocaleString(): string
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 10200011 | The toLocaleString method cannot be bound. |
-| 10200201 | Concurrent modification error. |
+| [10200011](../errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) | The toLocaleString method cannot be bound. |
+| [10200201](../errorcode-utils.md#10200201-concurrent修改错误) | Concurrent modification error. |
 
 ## toString
 
@@ -1303,7 +1297,7 @@ toLocaleString(): string
 toString(): string
 ```
 
-ArkTS Int16Array转换为字符串。
+将ArkTS Int16Array转换为字符串，各元素以逗号分隔拼接。
 
 **起始版本：** 18
 
@@ -1325,8 +1319,8 @@ ArkTS Int16Array转换为字符串。
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 10200011 | The toString method cannot be bound. |
-| 10200201 | Concurrent modification error. |
+| [10200011](../errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) | The toString method cannot be bound. |
+| [10200201](../errorcode-utils.md#10200201-concurrent修改错误) | Concurrent modification error. |
 
 ## values
 
@@ -1350,14 +1344,14 @@ values(): IterableIterator<number>
 
 | 类型 | 说明 |
 | --- | --- |
-| [IterableIterator](arkts-arkts-iterator-iterableiterator-i.md)&lt;number&gt; | 新的迭代器对象。 |
+| IterableIterator&lt;number&gt; | 新的迭代器对象。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 10200011 | The values method cannot be bound. |
-| 10200201 | Concurrent modification error. |
+| [10200011](../errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) | The values method cannot be bound. |
+| [10200201](../errorcode-utils.md#10200201-concurrent修改错误) | Concurrent modification error. |
 
 ## BYTES_PER_ELEMENT
 
@@ -1365,7 +1359,7 @@ values(): IterableIterator<number>
 static readonly BYTES_PER_ELEMENT: number
 ```
 
-ArkTS Int16Array中每个元素所占用的字节数。
+ArkTS Int16Array中每个元素所占的字节数。
 
 **类型：** number
 
@@ -1385,7 +1379,7 @@ ArkTS Int16Array中每个元素所占用的字节数。
 [index: number]: number
 ```
 
-返回Int16Array指定索引位置的元素。
+返回ArkTS Int16Array指定索引位置的元素。
 
 **类型：** number
 
@@ -1425,7 +1419,7 @@ ArkTS Int16Array底层使用的buffer。
 readonly byteLength: number
 ```
 
-ArkTS Int16Array的所占的字节数。
+ArkTS Int16Array所占的字节数。
 
 **类型：** number
 
@@ -1445,7 +1439,7 @@ ArkTS Int16Array的所占的字节数。
 readonly byteOffset: number
 ```
 
-ArkTS Int16Array距离其ArrayBuffer起始位置的偏移。
+ArkTS Int16Array距离其ArrayBuffer起始位置的字节偏移。
 
 **类型：** number
 

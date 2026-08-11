@@ -12,7 +12,7 @@ import { systemParameter } from 'kits/@kit.BasicServicesKit';
 function set(key: string, value: string, callback: AsyncCallback<void>): void
 ```
 
-设置系统参数key对应的值，使用callback异步回调。
+Sets a value for the specified key. This API uses an asynchronous callback to return the result.
 
 **Since:** 6
 
@@ -32,35 +32,9 @@ function set(key: string, value: string, callback: AsyncCallback<void>): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| key | string | Yes | 待设置的系统参数key。 |
-| value | string | Yes | 待设置的系统参数值。长度限制请参考[系统参数](../../../../device-dev/subsystems/subsys-boot-init-sysparam.md)。 |
-| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | 回调函数，用于异步返回设置结果。当设置成功时，err为undefined；当设置失败时，err为错误对象。 |
-
-**Error codes:**
-
-| Error Code ID | Error Message |
-| --- | --- |
-| 401 | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.incorrect parameter types; 3.parameter verification failed. |
-| 14700102 | Invalid system parameter value. |
-| 14700103 | The operation on the system permission is denied. |
-| 14700104 | System internal error such as out memory or deadlock. |
-
-## Examples
-
-```TypeScript
-import { BusinessError } from '@ohos.base';
-
-try {
-    systemParameter.set("test.parameter.key", "testValue",  (err: BusinessError, data: void) =>{
-    if (err == undefined) {
-        console.info("set test.parameter.key value success :" + data)
-    } else {
-        console.error("set test.parameter.key value err:" + err.code)
-    }});
-} catch(e) {
-    console.error("set unexpected error: " + e);
-}
-```
+| key | string | Yes | Target key. |
+| value | string | Yes | Value to set. |
+| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. |
 
 
 ## set
@@ -69,7 +43,7 @@ try {
 function set(key: string, value: string): Promise<void>
 ```
 
-设置系统参数key对应的值，使用Promise异步回调。
+Sets a value for the specified key. This API uses a promise to return the result.
 
 **Since:** 6
 
@@ -89,38 +63,12 @@ function set(key: string, value: string): Promise<void>
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| key | string | Yes | 待设置的系统参数key。 |
-| value | string | Yes | 待设置的系统参数值。长度限制请参考[系统参数](../../../../device-dev/subsystems/subsys-boot-init-sysparam.md)。 |
+| key | string | Yes | Target key. |
+| value | string | Yes | Value to set. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise实例，用于异步获取结果。 |
-
-**Error codes:**
-
-| Error Code ID | Error Message |
-| --- | --- |
-| 401 | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.incorrect parameter types; 3.parameter verification failed. |
-| 14700102 | Invalid system parameter value. |
-| 14700103 | The operation on the system permission is denied. |
-| 14700104 | System internal error such as out memory or deadlock. |
-
-## Examples
-
-```TypeScript
-import { BusinessError } from '@ohos.base';
-
-try {
-    let p: Promise<void> = systemParameter.set("test.parameter.key", "testValue");
-    p.then((value: void) => {
-        console.info("set test.parameter.key success: " + value);
-    }).catch((err: BusinessError) => {
-        console.error(" set test.parameter.key error: " + err.code);
-    });
-} catch(e) {
-    console.error("set unexpected error: " + e);
-}
-```
+| Promise&lt;void&gt; | Promise used to return the execution result. |
 

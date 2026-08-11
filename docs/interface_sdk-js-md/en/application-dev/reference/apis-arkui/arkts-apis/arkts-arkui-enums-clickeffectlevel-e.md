@@ -1,6 +1,6 @@
 # ClickEffectLevel
 
-定义点击效果的级别及对应动效参数。
+Enum of click effect level.
 
 **Since:** 23
 
@@ -16,7 +16,7 @@
 LIGHT = 0
 ```
 
-小面积（轻盈）
+Click effect level1.The default scale number of this click effect level1 is 0.90.The animation type is interpolatingSpring, velocity:10, mass:1, stiffness:410, damping:38.
 
 **Since:** 23
 
@@ -34,7 +34,7 @@ LIGHT = 0
 MIDDLE = 1
 ```
 
-中面积（稳定）
+Click effect level2.The default scale number of this click effect level2 is 0.95.The animation type is interpolatingSpring, velocity:10, mass:1, stiffness:350, damping:35.
 
 **Since:** 23
 
@@ -52,7 +52,7 @@ MIDDLE = 1
 HEAVY = 2
 ```
 
-大面积（厚重）
+Click effect level3.The default scale number of this click effect level3 is 0.95.The animation type is interpolatingSpring, velocity:0, mass:1, stiffness:240, damping:28.
 
 **Since:** 23
 

@@ -1,11 +1,5 @@
 # convertToUIAbilityContext
 
-## 导入模块
-
-```TypeScript
-import { sendableContextManager } from 'kits/@kit.AbilityKit';
-```
-
 ## convertToUIAbilityContext
 
 ```TypeScript
@@ -42,7 +36,7 @@ function convertToUIAbilityContext(sendableContext: SendableContext): common.UIA
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 401 | If the input parameter invalid. Possible causes: 1.Incorrect parameter types; 2.Parameter verification failed. |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | If the input parameter invalid. Possible causes: 1.Incorrect parameter types; 2.Parameter verification failed. |
 
 ## 示例
 

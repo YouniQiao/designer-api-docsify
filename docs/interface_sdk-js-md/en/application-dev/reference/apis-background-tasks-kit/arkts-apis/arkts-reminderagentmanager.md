@@ -1,7 +1,6 @@
-# @ohos.reminderAgentManager(后台代理提醒)
+# @ohos.reminderAgentManager(Agent-powered Reminder)
 
-本模块提供后台代理提醒的能力，即当应用被冻结或应用退出时，定时提醒功能将被系统服务代理。开发者可以调用本模块接口创建定时提醒，提醒类型支持倒计时、日历、闹钟三种。开发指导请参考  
-[代理提醒开发指南](../../../task-management/agent-powered-reminder.md)。
+The **reminderAgentManager** module provides APIs related to agent-powered reminders. When your application is frozen or exits, the application's scheduled notification capability will be taken over by a system service running in the background. You can use the APIs to create scheduled reminders for countdown timers, calendar events, and alarm clocks. For details, see [Agent-powered Reminder](../../../task-management/agent-powered-reminder.md).
 
 **Since:** 9
 
@@ -23,68 +22,68 @@ import { reminderAgentManager } from 'kits/@kit.BackgroundTasksKit';
 
 | Name | Description |
 | --- | --- |
-| [addExcludeDate](arkts-backgroundtasks-reminderagentmanager-addexcludedate-f.md#addexcludedate) | 为指定id的周期性的日历提醒，添加不提醒日期（如每天提醒的日历，设置周二不提醒）。使用Promise异步回调。 |
-| [addNotificationSlot](arkts-backgroundtasks-reminderagentmanager-addnotificationslot-f.md#addnotificationslot) | 添加通知渠道。使用callback异步回调。 |
-| [addNotificationSlot](arkts-backgroundtasks-reminderagentmanager-addnotificationslot-f.md#addnotificationslot-1) | 添加通知渠道。使用Promise异步回调。 |
-| [cancelAllReminders](arkts-backgroundtasks-reminderagentmanager-cancelallreminders-f.md#cancelallreminders) | 取消当前应用设置的所有代理提醒。使用callback异步回调。 |
-| [cancelAllReminders](arkts-backgroundtasks-reminderagentmanager-cancelallreminders-f.md#cancelallreminders-1) | 取消当前应用设置的所有代理提醒。使用Promise异步回调。 |
-| [cancelReminder](arkts-backgroundtasks-reminderagentmanager-cancelreminder-f.md#cancelreminder) | 取消指定id的代理提醒。使用callback异步回调。 |
-| [cancelReminder](arkts-backgroundtasks-reminderagentmanager-cancelreminder-f.md#cancelreminder-1) | 取消指定id的代理提醒。使用Promise异步回调。 |
-| [cancelReminderOnDisplay](arkts-backgroundtasks-reminderagentmanager-cancelreminderondisplay-f.md#cancelreminderondisplay) | 取消当前通知中心内显示的通知卡片，不取消代理提醒数据。例如：每天重复的提醒，该提醒正在通知中心内显示，该接口将通知从通知中心内取消，并且会按照设定的周期，在第二天再次提醒。 |
-| [deleteExcludeDates](arkts-backgroundtasks-reminderagentmanager-deleteexcludedates-f.md#deleteexcludedates) | 为指定id的周期性的日历提醒，删除设置的所有不提醒日期。使用Promise异步回调。 |
-| [getAllValidReminders](arkts-backgroundtasks-reminderagentmanager-getallvalidreminders-f.md#getallvalidreminders) | 获取当前应用设置的所有[有效（未过期）的代理提醒](../../../task-management/agent-powered-reminder.md#约束与限制)。使用Promise异步回调。该接口调用需要申请ohos.permission.PUBLISH_AGENT_REMINDER权限。 |
-| [getExcludeDates](arkts-backgroundtasks-reminderagentmanager-getexcludedates-f.md#getexcludedates) | 为指定id的周期性的日历提醒，查询设置的所有不提醒日期。使用Promise异步回调。 |
-| [getValidReminders](arkts-backgroundtasks-reminderagentmanager-getvalidreminders-f.md#getvalidreminders) | 获取当前应用设置的所有[有效（未过期）的代理提醒](../../../task-management/agent-powered-reminder.md#约束与限制)。使用callback异步回调。 |
-| [getValidReminders](arkts-backgroundtasks-reminderagentmanager-getvalidreminders-f.md#getvalidreminders-1) | 获取当前应用设置的所有[有效（未过期）的代理提醒](../../../task-management/agent-powered-reminder.md#约束与限制)。使用Promise异步回调。 |
-| [publishReminder](arkts-backgroundtasks-reminderagentmanager-publishreminder-f.md#publishreminder) | 发布后台代理提醒。使用callback异步回调。 |
-| [publishReminder](arkts-backgroundtasks-reminderagentmanager-publishreminder-f.md#publishreminder-1) | 发布后台代理提醒。使用Promise异步回调。 |
-| [removeNotificationSlot](arkts-backgroundtasks-reminderagentmanager-removenotificationslot-f.md#removenotificationslot) | 删除指定的通知渠道类型，使用callback异步回调。 |
-| [removeNotificationSlot](arkts-backgroundtasks-reminderagentmanager-removenotificationslot-f.md#removenotificationslot-1) | 删除指定的通知渠道类型，使用Promise异步回调。 |
-| [subscribeReminderState](arkts-backgroundtasks-reminderagentmanager-subscribereminderstate-f.md#subscribereminderstate) | 订阅代理提醒状态。使用Promise异步回调。 |
-| [unsubscribeReminderState](arkts-backgroundtasks-reminderagentmanager-unsubscribereminderstate-f.md#unsubscribereminderstate) | 取消订阅代理提醒状态。使用Promise异步回调。 |
-| [updateReminder](arkts-backgroundtasks-reminderagentmanager-updatereminder-f.md#updatereminder) | 更新指定id的代理提醒，使用Promise异步回调。仅[有效（未过期）](../../../task-management/agent-powered-reminder.md#约束与限制)、未显示在通知中心的代理提醒支持更新。 |
+| [addExcludeDate](arkts-backgroundtasks-reminderagentmanager-addexcludedate-f.md#addexcludedate) | Adds a non-reminder date for a recurring calendar reminder with a specific ID. For example, configure a daily reminder to skip notifications on Tuesdays. This API uses a promise to return the result. |
+| [addNotificationSlot](arkts-backgroundtasks-reminderagentmanager-addnotificationslot-f.md#addnotificationslot) | Adds a notification slot. This API uses an asynchronous callback to return the result. |
+| [addNotificationSlot](arkts-backgroundtasks-reminderagentmanager-addnotificationslot-f.md#addnotificationslot-1) | Adds a notification slot. This API uses a promise to return the result. |
+| [cancelAllReminders](arkts-backgroundtasks-reminderagentmanager-cancelallreminders-f.md#cancelallreminders) | Cancels all reminders set by the current application. This API uses an asynchronous callback to return the result. |
+| [cancelAllReminders](arkts-backgroundtasks-reminderagentmanager-cancelallreminders-f.md#cancelallreminders-1) | Cancels all reminders set by the current application. This API uses a promise to return the result. |
+| [cancelReminder](arkts-backgroundtasks-reminderagentmanager-cancelreminder-f.md#cancelreminder) | Cancels a reminder published. This API uses an asynchronous callback to return the result. |
+| [cancelReminder](arkts-backgroundtasks-reminderagentmanager-cancelreminder-f.md#cancelreminder-1) | Cancels a reminder published. This API uses a promise to return the result. |
+| [cancelReminderOnDisplay](arkts-backgroundtasks-reminderagentmanager-cancelreminderondisplay-f.md#cancelreminderondisplay) | Cancels the notification card displayed in the notification center with the agent reminder data retained. For example, for a daily repeating reminder, calling this API removes the card from the notification center, but the reminder will be triggered again the next day according to its schedule. |
+| [deleteExcludeDates](arkts-backgroundtasks-reminderagentmanager-deleteexcludedates-f.md#deleteexcludedates) | Deletes all non-reminder dates for a recurring calendar reminder with a specific ID. This API uses a promise to return the result. |
+| [getAllValidReminders](arkts-backgroundtasks-reminderagentmanager-getallvalidreminders-f.md#getallvalidreminders) | Obtains all [valid (not yet expired) reminders](../../../task-management/agent-powered-reminder.md#constraints) set by the current application. This API uses a promise to return the result. To call this API, you need to request the ohos.permission.PUBLISH_AGENT_REMINDER permission. |
+| [getExcludeDates](arkts-backgroundtasks-reminderagentmanager-getexcludedates-f.md#getexcludedates) | Obtains all non-reminder dates for a recurring calendar reminder with a specific ID. This API uses a promise to return the result. |
+| [getValidReminders](arkts-backgroundtasks-reminderagentmanager-getvalidreminders-f.md#getvalidreminders) | Obtains all [valid (not yet expired) reminders](../../../task-management/agent-powered-reminder.md#constraints) set by the current application. This API uses an asynchronous callback to return the result. |
+| [getValidReminders](arkts-backgroundtasks-reminderagentmanager-getvalidreminders-f.md#getvalidreminders-1) | Obtains all [valid (not yet expired) reminders](../../../task-management/agent-powered-reminder.md#constraints) set by the current application. This API uses a promise to return the result. |
+| [publishReminder](arkts-backgroundtasks-reminderagentmanager-publishreminder-f.md#publishreminder) | Publishes a reminder. This API uses an asynchronous callback to return the result.  > **NOTE：** >  > This API can be called only after the > [notificationManager.requestEnableNotification](../../apis-notification-kit/arkts-apis/arkts-notification-notificationmanager-requestenablenotification-f.md/arkts-notification-notificationmanager-requestenablenotification-f.md#requestenablenotification) > permission is obtained. > |
+| [publishReminder](arkts-backgroundtasks-reminderagentmanager-publishreminder-f.md#publishreminder-1) | Publishes a reminder. This API uses a promise to return the result.  > **NOTE：** >  > This API can be called only after the > [notificationManager.requestEnableNotification](../../apis-notification-kit/arkts-apis/arkts-notification-notificationmanager-requestenablenotification-f.md/arkts-notification-notificationmanager-requestenablenotification-f.md#requestenablenotification) > permission is obtained. > |
+| [removeNotificationSlot](arkts-backgroundtasks-reminderagentmanager-removenotificationslot-f.md#removenotificationslot) | Removes a specified notification slot. This API uses an asynchronous callback to return the result. |
+| [removeNotificationSlot](arkts-backgroundtasks-reminderagentmanager-removenotificationslot-f.md#removenotificationslot-1) | Removes a specified notification slot. This API uses a promise to return the result. |
+| [subscribeReminderState](arkts-backgroundtasks-reminderagentmanager-subscribereminderstate-f.md#subscribereminderstate) | Subscribes to agent-powered reminder state changes. This API uses a promise to return the result. |
+| [unsubscribeReminderState](arkts-backgroundtasks-reminderagentmanager-unsubscribereminderstate-f.md#unsubscribereminderstate) | Unsubscribes from agent-powered reminder state changes. This API uses a promise to return the result. |
+| [updateReminder](arkts-backgroundtasks-reminderagentmanager-updatereminder-f.md#updatereminder) | Updates the agent-powered reminder with the specified ID. This API uses a promise to return the result. Only  [valid (not yet expired) reminders](../../../task-management/agent-powered-reminder.md#constraints) that are not displayed in the notification panel can be updated. |
 
 ### Interfaces
 
 | Name | Description |
 | --- | --- |
-| [ActionButton](arkts-backgroundtasks-reminderagentmanager-actionbutton-i.md) | 弹出的提醒中按钮的类型和标题。 |
-| [LocalDateTime](arkts-backgroundtasks-reminderagentmanager-localdatetime-i.md) | 用于日历类提醒设置时指定时间信息。 |
-| [MaxScreenWantAgent](arkts-backgroundtasks-reminderagentmanager-maxscreenwantagent-i.md) | 通知中心弹出提醒时，全屏显示自动拉起目标的ability信息。该接口为预留接口，暂不支持使用。 |
-| [NotificationRequestProxy](arkts-backgroundtasks-reminderagentmanager-notificationrequestproxy-i.md) | 通知请求信息。 |
-| [ReminderInfo](arkts-backgroundtasks-reminderagentmanager-reminderinfo-i.md) | 代理提醒信息，包含 ReminderRequest 和 ReminderId。 |
-| [ReminderRequest](arkts-backgroundtasks-reminderagentmanager-reminderrequest-i.md) | 代理提醒对象，用于设置提醒类型、响铃时长等具体信息。 |
-| [ReminderRequestAlarm](arkts-backgroundtasks-reminderagentmanager-reminderrequestalarm-i.md) | ReminderRequestAlarm extends ReminderRequest  闹钟实例对象，用于设置提醒的时间。 |
-| [ReminderRequestCalendar](arkts-backgroundtasks-reminderagentmanager-reminderrequestcalendar-i.md) | ReminderRequestCalendar extends ReminderRequest  日历实例对象，用于设置提醒的时间。 |
-| [ReminderRequestTimer](arkts-backgroundtasks-reminderagentmanager-reminderrequesttimer-i.md) | ReminderRequestTimer extends ReminderRequest  倒计时实例对象，用于设置提醒的时间。 |
-| [ReminderState](arkts-backgroundtasks-reminderagentmanager-reminderstate-i.md) | 代理提醒状态信息。状态信息会在如下两种情况发送通知：  1. 用户点击代理提醒的通知按钮时，如果应用进程存在，则会发送用户点击的按钮类型的通知给应用。如果应用未运行，则无法收到通知。2. 由于第1点不能保证应用可以收到通知，因此应用注册新的回调函数时，会将该应用下所有用户点击的按钮类型回调给应用。状态信息最多保存30天，应用注册新的回调函数时或者超过30天未注册回调函数，会删除缓存的状态信息。 |
-| [WantAgent](arkts-backgroundtasks-reminderagentmanager-wantagent-i.md) | 跳转目标的ability信息。 |
+| [ActionButton](arkts-backgroundtasks-reminderagentmanager-actionbutton-i.md) | Describes the button displayed for a reminder. |
+| [LocalDateTime](arkts-backgroundtasks-reminderagentmanager-localdatetime-i.md) | Defines the time information for a calendar reminder. |
+| [MaxScreenWantAgent](arkts-backgroundtasks-reminderagentmanager-maxscreenwantagent-i.md) | Describes the information about the ability that is started automatically and displayed in full-screen mode when a reminder is displayed in the notification center. This API is reserved. |
+| [NotificationRequestProxy](arkts-backgroundtasks-reminderagentmanager-notificationrequestproxy-i.md) | Notification request proxy. |
+| [ReminderInfo](arkts-backgroundtasks-reminderagentmanager-reminderinfo-i.md) | Defines the reminder information. |
+| [ReminderRequest](arkts-backgroundtasks-reminderagentmanager-reminderrequest-i.md) | Defines the request for publishing a reminder. |
+| [ReminderRequestAlarm](arkts-backgroundtasks-reminderagentmanager-reminderrequestalarm-i.md) | ReminderRequestAlarm extends ReminderRequest  Defines a reminder for an alarm. |
+| [ReminderRequestCalendar](arkts-backgroundtasks-reminderagentmanager-reminderrequestcalendar-i.md) | ReminderRequestCalendar extends ReminderRequest  Defines a reminder for a calendar event. |
+| [ReminderRequestTimer](arkts-backgroundtasks-reminderagentmanager-reminderrequesttimer-i.md) | ReminderRequestTimer extends ReminderRequest  Defines a reminder for a scheduled timer. |
+| [ReminderState](arkts-backgroundtasks-reminderagentmanager-reminderstate-i.md) | Defines the agent-powered reminder state information, for which notifications are triggered in the following scenarios:  1. When a user taps a button on an agent-powered reminder notification,a notification specifying the tapped button type is sent to the application if it is running.If the application is not running, the notification will not be received.2. Since the above scenario cannot guarantee that the application receives the notification,all callbacks associated with user-tapped button types under the application are returned to the application when it registers a new callback function. State information is retained for a maximum of 30 days.Cached state information is cleared when the application registers a new callback function or has not registered any callback function for more than 30 days. |
+| [WantAgent](arkts-backgroundtasks-reminderagentmanager-wantagent-i.md) | Defines the information about the redirected-to ability. |
 
 <!--Del-->
 ### Interfaces（系统接口）
 
 | Name | Description |
 | --- | --- |
-| [ActionButton](arkts-backgroundtasks-reminderagentmanager-actionbutton-i-sys.md) | 弹出的提醒中按钮的类型和标题。 |
-| [DataShareUpdate](arkts-backgroundtasks-reminderagentmanager-datashareupdate-i-sys.md) | 更新数据库需要的参数信息。  数据提供方需要在module.json5中的proxyData节点定义要共享的表的标识，读写权限和基本信息。配置方式请见  [数据提供方应用的开发](../../../database/share-data-by-silent-access-sys.md#数据提供方应用的开发)。 |
-| [ReminderRequest](arkts-backgroundtasks-reminderagentmanager-reminderrequest-i-sys.md) | 代理提醒对象，用于设置提醒类型、响铃时长等具体信息。 |
-| [ReminderRequestCalendar](arkts-backgroundtasks-reminderagentmanager-reminderrequestcalendar-i-sys.md) | ReminderRequestCalendar extends ReminderRequest  日历实例对象，用于设置提醒的时间。 |
+| [ActionButton](arkts-backgroundtasks-reminderagentmanager-actionbutton-i-sys.md) | Describes the button displayed for a reminder. |
+| [DataShareUpdate](arkts-backgroundtasks-reminderagentmanager-datashareupdate-i-sys.md) | Defines the parameter information used to update the database.  The data provider needs to set the ID, read/write permissions, and basic information of the table to be shared under **proxyData** in the **module.json5** file. For details about the configuration method, see  [Data Provider Application Development](../../../database/share-data-by-silent-access-sys.md#data-provider-application-development) |
+| [ReminderRequest](arkts-backgroundtasks-reminderagentmanager-reminderrequest-i-sys.md) | Defines the request for publishing a reminder. |
+| [ReminderRequestCalendar](arkts-backgroundtasks-reminderagentmanager-reminderrequestcalendar-i-sys.md) | ReminderRequestCalendar extends ReminderRequest  Defines a reminder for a calendar event. |
 <!--DelEnd-->
 
 ### Enums
 
 | Name | Description |
 | --- | --- |
-| [ActionButtonType](arkts-backgroundtasks-reminderagentmanager-actionbuttontype-e.md) | 提醒上的按钮的类型。 |
-| [ReminderType](arkts-backgroundtasks-reminderagentmanager-remindertype-e.md) | 提醒的类型。 |
-| [RingChannel](arkts-backgroundtasks-reminderagentmanager-ringchannel-e.md) | 自定义提示音的音频播放通道。 |
-| [TimeZoneType](arkts-backgroundtasks-reminderagentmanager-timezonetype-e.md) | 时区类型。用于时区变更时，按照变更后的时区重新计算提醒的目标时间。 |
+| [ActionButtonType](arkts-backgroundtasks-reminderagentmanager-actionbuttontype-e.md) | Enumerates the types of buttons displayed for a reminder. |
+| [ReminderType](arkts-backgroundtasks-reminderagentmanager-remindertype-e.md) | Enumerates the reminder types. |
+| [RingChannel](arkts-backgroundtasks-reminderagentmanager-ringchannel-e.md) | Enumerates the audio playback channels for the custom prompt tone. |
+| [TimeZoneType](arkts-backgroundtasks-reminderagentmanager-timezonetype-e.md) | Enumerates the time zone types. When the time zone is changed, the reminder time is recalculated based on the new time zone. |
 
 <!--Del-->
 ### Enums（系统接口）
 
 | Name | Description |
 | --- | --- |
-| [ActionButtonType](arkts-backgroundtasks-reminderagentmanager-actionbuttontype-e-sys.md) | 提醒上的按钮的类型。 |
+| [ActionButtonType](arkts-backgroundtasks-reminderagentmanager-actionbuttontype-e-sys.md) | Enumerates the types of buttons displayed for a reminder. |
 <!--DelEnd-->
 

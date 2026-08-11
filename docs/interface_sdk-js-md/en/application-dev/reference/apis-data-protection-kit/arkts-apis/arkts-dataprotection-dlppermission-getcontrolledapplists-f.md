@@ -12,13 +12,11 @@ import { dlpPermission } from 'kits/@kit.DataProtectionKit';
 function getControlledAppLists(): Promise<Array<string>>
 ```
 
-获取当前用户受企业DLP控制的应用程序列表。使用Promise异步回调。
+Obtains the list of applications controlled by enterprise DLP for the current user. This API uses a promise to return the result.
 
-> **说明：**
-> 
-> 该接口仅能查询通过
-> [setControlledAppLists](arkts-dataprotection-dlppermission-setcontrolledapplists-f.md#setcontrolledapplists)
-> 设置的受企业DLP控制的应用程序列表。
+> **NOTE：**
+> This API can only be used to query the list of applications controlled by enterprise DLP, which is set using
+> [setControlledAppLists](arkts-dataprotection-dlppermission-setcontrolledapplists-f.md#setcontrolledapplists).
 
 **Since:** 26.0.0
 
@@ -36,28 +34,13 @@ function getControlledAppLists(): Promise<Array<string>>
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;Array&lt;string&gt;&gt; | Promise that returns the appIdentifiers of controlled application for the current user. |
+| Promise&lt;Array&lt;string&gt;&gt; | Promise used to return the list of applications controlled by enterprise DLP for the current user. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 801 | Capability not supported. |
-| 19100011 | The system ability works abnormally. |
-| 201 | Permission denied. |
-
-## Examples
-
-```TypeScript
-import { dlpPermission } from '@kit.DataProtectionKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-dlpPermission.getControlledAppLists().then((res) => {
-  console.info('res', JSON.stringify(res));
-}).catch((error: BusinessError) => {
-  console.error(JSON.stringify(error));
-}).finally(() => {
-  console.info("Completed getControlledAppLists operation.");
-})
-```
+| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. |
+| [19100011](../errorcode-dlp.md#19100011-system-service-abnormal) | The system ability works abnormally. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
 

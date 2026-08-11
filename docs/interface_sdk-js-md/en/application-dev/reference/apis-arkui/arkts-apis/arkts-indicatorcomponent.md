@@ -6,17 +6,17 @@
 
 | Name | Description |
 | --- | --- |
-| [IndicatorComponent](arkts-arkui-indicatorcomponent-indicatorcomponent-f.md#indicatorcomponent) | 定义IndicatorComponent组件 |
+| [IndicatorComponent](arkts-arkui-indicatorcomponent-indicatorcomponent-f.md#indicatorcomponent) | Defines IndicatorComponent Component |
 
 ### Classes
 
 | Name | Description |
 | --- | --- |
-| [IndicatorComponentController](arkts-arkui-indicatorcomponent-indicatorcomponentcontroller-c.md) | Indicator组件的控制器，可以将此对象绑定至Indicator组件来控制翻页。 |
+| [IndicatorComponentController](arkts-arkui-indicatorcomponent-indicatorcomponentcontroller-c.md) | Provides methods for switching components. |
 
 ### Interfaces
 
 | Name | Description |
 | --- | --- |
-| [IndicatorComponentAttribute](arkts-arkui-indicatorcomponent-indicatorcomponentattribute-i.md) | 除支持[通用属性](../../apis-arkui/arkts-components/arkts-arkui-common-attribute.md)外，还支持以下属性。 |
+| [IndicatorComponentAttribute](arkts-arkui-indicatorcomponent-indicatorcomponentattribute-i.md) | Defines the IndicatorComponent attribute functions. |
 

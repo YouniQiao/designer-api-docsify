@@ -10,12 +10,6 @@
 
 **系统能力：** SystemCapability.ResourceSchedule.BackgroundTaskManager.ContinuousTask
 
-## 导入模块
-
-```TypeScript
-import { backgroundTaskManager } from 'kits/@kit.BackgroundTasksKit';
-```
-
 ## fileName
 
 ```TypeScript

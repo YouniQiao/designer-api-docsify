@@ -12,14 +12,7 @@ import { sensor } from 'kits/@kit.SensorServiceKit';
 function getGeomagneticField(locationOptions: LocationOptions, timeMillis: number, callback: AsyncCallback<GeomagneticResponse>): void
 ```
 
-获取地球上特定位置的地磁场，使用callback异步方式返回结果。
-
-> **说明：**
-> 
-> 从API version 8 开始支持，从API version 9 开始废弃，建议使用
-> [sensor.getGeomagneticInfo]
-> {@link sensor.getGeomagneticInfo(locationOptions: LocationOptions, timeMillis: long, callback: AsyncCallback&lt;GeomagneticResponse&gt;)}
-> 替代。
+Obtains the geomagnetic field of a geographic location. This API uses an asynchronous callback to return the result.
 
 **Since:** 8
 
@@ -37,9 +30,9 @@ function getGeomagneticField(locationOptions: LocationOptions, timeMillis: numbe
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| locationOptions | [LocationOptions](arkts-sensorservice-sensor-locationoptions-i.md) | Yes | 地理位置。 |
-| timeMillis | number | Yes | 表示获取磁偏角的时间，单位为毫秒。 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;GeomagneticResponse&gt; | Yes | 异步返回磁场信息。 |
+| locationOptions | [LocationOptions](arkts-sensorservice-sensor-locationoptions-i.md) | Yes | Geographic location. |
+| timeMillis | number | Yes | Time for obtaining the magnetic declination, in milliseconds. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;GeomagneticResponse&gt; | Yes | Callback used to return the geomagnetic field. |
 
 ## Examples
 
@@ -66,13 +59,7 @@ sensor.getGeomagneticField({ latitude: 80, longitude: 0, altitude: 0 }, 15804864
 function getGeomagneticField(locationOptions: LocationOptions, timeMillis: number): Promise<GeomagneticResponse>
 ```
 
-获取地球上特定位置的地磁场，使用Promise异步方式返回结果。
-
-> **说明：**
-> 
-> 从API version 8 开始支持，从API version 9 开始废弃，建议使用
-> [sensor.getGeomagneticInfo](arkts-sensorservice-sensor-getgeomagneticinfo-f.md#getgeomagneticinfo)替
-> 代。
+Obtains the geomagnetic field of a geographic location. This API uses a promise to return the result.
 
 **Since:** 8
 
@@ -90,14 +77,14 @@ function getGeomagneticField(locationOptions: LocationOptions, timeMillis: numbe
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| locationOptions | [LocationOptions](arkts-sensorservice-sensor-locationoptions-i.md) | Yes | 地理位置。 |
-| timeMillis | number | Yes | 表示获取磁偏角的时间，单位为毫秒。 |
+| locationOptions | [LocationOptions](arkts-sensorservice-sensor-locationoptions-i.md) | Yes | Geographic location. |
+| timeMillis | number | Yes | Time for obtaining the magnetic declination, in milliseconds. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;GeomagneticResponse&gt; | 使用异步方式返回磁场信息。 |
+| Promise&lt;GeomagneticResponse&gt; | Promise used to return the geomagnetic field. |
 
 ## Examples
 

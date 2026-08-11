@@ -36,7 +36,7 @@ reason: DismissReason
 
 Defines popup dismiss reason
 
-**类型：** [DismissReason](../arkts-components/arkts-arkui-dismissreason-e.md)
+**类型：** [DismissReason](arkts-arkui-common-dismissreason-e.md)
 
 **起始版本：** 23
 

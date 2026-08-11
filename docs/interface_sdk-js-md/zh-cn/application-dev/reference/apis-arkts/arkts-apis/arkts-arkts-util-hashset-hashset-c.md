@@ -10,12 +10,6 @@ HashSet是一种非线性容器，用于存储不重复的元素集合，支持�
 
 **系统能力：** SystemCapability.Utils.Lang
 
-## 导入模块
-
-```TypeScript
-import { HashSet } from 'kits/@kit.ArkTS';
-```
-
 ## $_iterator
 
 ```TypeScript
@@ -38,7 +32,29 @@ $_iterator(): IterableIterator<T>
 
 | 类型 | 说明 |
 | --- | --- |
-| [IterableIterator](arkts-arkts-iterator-iterableiterator-i.md)&lt;T&gt; | 返回一个迭代器。 |
+| IterableIterator&lt;T&gt; | 返回包含此HashSet中所有元素的迭代器对象。 |
+
+## 示例
+
+```TypeScript
+let hashSet: HashSet<string> = new HashSet<string>();
+hashSet.add("squirrel");
+hashSet.add("sparrow");
+
+// 使用方法一：
+let val: Array<string> = Array.from(hashSet.values())
+for (let item of val) {
+  console.info("value: " + item);
+}
+
+// 使用方法二：
+let iter = hashSet.$_iterator();
+let temp: IteratorResult<string> = iter.next();
+while(!temp.done) {
+  console.info("value: " + temp.value);
+  temp = iter.next();
+}
+```
 
 ## [Symbol.iterator]
 
@@ -65,13 +81,13 @@ $_iterator(): IterableIterator<T>
 
 | 类型 | 说明 |
 | --- | --- |
-| [IterableIterator](arkts-arkts-iterator-iterableiterator-i.md)&lt;T&gt; | 返回包含此HashSet中所有元素的迭代器对象。 |
+| IterableIterator&lt;T&gt; | 返回包含此HashSet中所有元素的迭代器对象。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 10200011 | The Symbol.iterator method cannot be bound. |
+| [10200011](../errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) | The Symbol.iterator method cannot be bound. |
 
 ## 示例
 
@@ -144,7 +160,7 @@ add(value: T): boolean
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 10200011 | The add method cannot be bound. |
+| [10200011](../errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) | The add method cannot be bound. |
 
 ## 示例
 
@@ -178,7 +194,7 @@ clear(): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 10200011 | The clear method cannot be bound. |
+| [10200011](../errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) | The clear method cannot be bound. |
 
 ## 示例
 
@@ -214,12 +230,20 @@ HashSet的构造函数，用于创建一个空的HashSet实例。
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 10200012 | The HashSet's constructor cannot be directly invoked. |
+| [10200012](../errorcode-utils.md#10200012-构造函数调用异常) | The HashSet's constructor cannot be directly invoked. |
 
 ## 示例
 
+ArkTS-Dyn示例：
+
 ```TypeScript
 let hashSet = new HashSet<number>();
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+let hashSet: HashSet<int> = new HashSet<int>();
 ```
 
 ## entries
@@ -247,13 +271,13 @@ entries(): IterableIterator<[T, T]>
 
 | 类型 | 说明 |
 | --- | --- |
-| [IterableIterator](arkts-arkts-iterator-iterableiterator-i.md)&lt;[T, T]&gt; | 返回包含此HashSet中所有元素的迭代器对象。 |
+| IterableIterator&lt;[T, T]&gt; | 返回包含此HashSet中所有元素的迭代器对象。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 10200011 | The entries method cannot be bound. |
+| [10200011](../errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) | The entries method cannot be bound. |
 
 ## 示例
 
@@ -284,6 +308,10 @@ for(let i = 0; i < 10; i++) {
 for(let i = 0; i < 10; i++) {
   hashSet.remove("sparrow" + i);
 }
+// key:squirrel
+// value:squirrel
+// key:sparrow
+// value:sparrow
 ```
 
 ## forEach
@@ -315,7 +343,7 @@ forEach(callbackFn: (value?: T, key?: T, set?: HashSet<T>) => void, thisArg?: Ob
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 10200011 | The forEach method cannot be bound. |
+| [10200011](../errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) | The forEach method cannot be bound. |
 
 ## 示例
 
@@ -366,6 +394,22 @@ forEach(callbackFn: HashSetCbFn<T>): void
 | --- | --- | --- | --- |
 | callbackFn | [HashSetCbFn](arkts-arkts-hashsetcbfn-t.md)&lt;T&gt; | 是 | 对每个元素执行的回调函数。 |
 
+## 示例
+
+```TypeScript
+import { HashSetCbFn } from '@kit.ArkTS';
+
+let hashSet: HashSet<string> = new HashSet<string>();
+hashSet.add("sparrow");
+hashSet.add("squirrel");
+let hashSetCb: HashSetCbFn<string> = (value: string, key: string, set: HashSet<string>): void => {
+  console.info("value: " + value, " key: " + key);
+};
+hashSet.forEach(hashSetCb);
+// value:squirrel key:squirrel 
+// value:sparrow key:sparrow
+```
+
 ## has
 
 ```TypeScript
@@ -400,7 +444,7 @@ has(value: T): boolean
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 10200011 | The has method cannot be bound. |
+| [10200011](../errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) | The has method cannot be bound. |
 
 ## 示例
 
@@ -434,19 +478,29 @@ isEmpty(): boolean
 
 | 类型 | 说明 |
 | --- | --- |
-| boolean | 为空返回true，不为空返回false。 |
+| boolean | 为空时返回true，不为空时返回false。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 10200011 | The isEmpty method cannot be bound. |
+| [10200011](../errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) | The isEmpty method cannot be bound. |
 
 ## 示例
+
+ArkTS-Dyn示例：
 
 ```TypeScript
 // 创建HashSet实例，判断是否为空
 const hashSet = new HashSet<number>();
+let result = hashSet.isEmpty();
+console.info("result:", result);  // result: true
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+const hashSet: HashSet<int> = new HashSet<int>();
 let result = hashSet.isEmpty();
 console.info("result:", result);  // result: true
 ```
@@ -485,7 +539,7 @@ remove(value: T): boolean
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 10200011 | The remove method cannot be bound. |
+| [10200011](../errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) | The remove method cannot be bound. |
 
 ## 示例
 
@@ -523,13 +577,13 @@ values(): IterableIterator<T>
 
 | 类型 | 说明 |
 | --- | --- |
-| [IterableIterator](arkts-arkts-iterator-iterableiterator-i.md)&lt;T&gt; | 返回包含此HashSet中所有值的迭代器对象。 |
+| IterableIterator&lt;T&gt; | 返回包含此HashSet中所有值的迭代器对象。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 10200011 | The values method cannot be bound. |
+| [10200011](../errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) | The values method cannot be bound. |
 
 ## 示例
 

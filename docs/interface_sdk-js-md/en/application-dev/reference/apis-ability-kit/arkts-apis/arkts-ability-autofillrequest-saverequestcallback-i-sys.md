@@ -1,6 +1,6 @@
 # SaveRequestCallback (System API)
 
-自动保存或者手动保存请求回调。
+Implements callbacks for an automatic or a manual saving request.
 
 **Since:** 11
 
@@ -18,7 +18,7 @@
 onFailure(): void
 ```
 
-通知保存请求处理失败。
+Called when a saving request fails to be processed.
 
 **Since:** 11
 
@@ -36,8 +36,8 @@ onFailure(): void
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 16000050 | Internal error. |
-| 202 | Permission denied, non-system app called system api. |
+| [16000050](../errorcode-ability.md#16000050-internal-error) | Internal error. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission denied, non-system app called system api. |
 
 ## onSuccess
 
@@ -45,7 +45,7 @@ onFailure(): void
 onSuccess(): void
 ```
 
-通知保存请求已成功处理。
+Called when a saving request is successfully processed.
 
 **Since:** 11
 
@@ -63,6 +63,6 @@ onSuccess(): void
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 16000050 | Internal error. |
-| 202 | Permission denied, non-system app called system api. |
+| [16000050](../errorcode-ability.md#16000050-internal-error) | Internal error. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission denied, non-system app called system api. |
 

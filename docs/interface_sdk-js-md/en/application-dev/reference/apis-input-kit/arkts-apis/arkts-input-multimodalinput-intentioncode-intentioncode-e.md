@@ -1,6 +1,6 @@
 # IntentionCode
 
-将键盘输入设备的原始事件映射为归一化交互的意图事件，如键盘上空格键映射后的事件为INTENTION_SELECT，意图为选中。
+The **intentionCode** module maps the original events of the keyboard to intention codes for normalized interaction.For example, if the mapped event of the space bar on the keyboard is **INTENTION_SELECT**, the intent is to select an item.
 
 **Since:** 10
 
@@ -16,7 +16,7 @@
 INTENTION_UNKNOWN = -1
 ```
 
-未知意图
+Unknown intent
 
 **Since:** 10
 
@@ -34,7 +34,7 @@ INTENTION_UNKNOWN = -1
 INTENTION_UP = 1
 ```
 
-上
+Up
 
 **Since:** 10
 
@@ -52,7 +52,7 @@ INTENTION_UP = 1
 INTENTION_DOWN = 2
 ```
 
-下
+Down
 
 **Since:** 10
 
@@ -70,7 +70,7 @@ INTENTION_DOWN = 2
 INTENTION_LEFT = 3
 ```
 
-左
+Left
 
 **Since:** 10
 
@@ -88,7 +88,7 @@ INTENTION_LEFT = 3
 INTENTION_RIGHT = 4
 ```
 
-右
+Right
 
 **Since:** 10
 
@@ -106,7 +106,7 @@ INTENTION_RIGHT = 4
 INTENTION_SELECT = 5
 ```
 
-选中
+Select
 
 **Since:** 10
 
@@ -124,7 +124,7 @@ INTENTION_SELECT = 5
 INTENTION_ESCAPE = 6
 ```
 
-退出
+Escape
 
 **Since:** 10
 
@@ -142,7 +142,7 @@ INTENTION_ESCAPE = 6
 INTENTION_BACK = 7
 ```
 
-返回
+Back
 
 **Since:** 10
 
@@ -160,7 +160,7 @@ INTENTION_BACK = 7
 INTENTION_FORWARD = 8
 ```
 
-前进
+Forward
 
 **Since:** 10
 
@@ -178,7 +178,7 @@ INTENTION_FORWARD = 8
 INTENTION_MENU = 9
 ```
 
-菜单
+Menu
 
 **Since:** 10
 
@@ -196,7 +196,7 @@ INTENTION_MENU = 9
 INTENTION_PAGE_UP = 11
 ```
 
-上一页
+Page up
 
 **Since:** 10
 
@@ -214,7 +214,7 @@ INTENTION_PAGE_UP = 11
 INTENTION_PAGE_DOWN = 12
 ```
 
-下一页
+Page down
 
 **Since:** 10
 
@@ -232,7 +232,7 @@ INTENTION_PAGE_DOWN = 12
 INTENTION_ZOOM_OUT = 13
 ```
 
-缩小键
+Zoom out
 
 **Since:** 10
 
@@ -250,7 +250,7 @@ INTENTION_ZOOM_OUT = 13
 INTENTION_ZOOM_IN = 14
 ```
 
-放大键
+Zoom in
 
 **Since:** 10
 

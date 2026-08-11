@@ -12,7 +12,7 @@ import { i18n } from 'kits/@kit.LocalizationKit';
 export function getFirstPreferredLanguage(): string
 ```
 
-获取偏好语言列表中的第一个语言。
+Obtains the first language in the preferred language list.
 
 **Since:** 8
 
@@ -30,5 +30,5 @@ export function getFirstPreferredLanguage(): string
 
 | Type | Description |
 | --- | --- |
-| string | 偏好语言列表中的第一个语言。 |
+| string | First language in the preferred language list. |
 

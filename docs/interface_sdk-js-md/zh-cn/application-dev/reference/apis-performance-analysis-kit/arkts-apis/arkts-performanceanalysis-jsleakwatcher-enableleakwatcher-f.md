@@ -1,11 +1,5 @@
 # enableLeakWatcher
 
-## 导入模块
-
-```TypeScript
-import { jsLeakWatcher } from 'kits/@kit.PerformanceAnalysisKit';
-```
-
 ## enableLeakWatcher
 
 ```TypeScript
@@ -36,9 +30,9 @@ function enableLeakWatcher(isEnabled: boolean, configs: Array<string>, callback:
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 10801001 | The parameter isEnabled is invalid. |
-| 10801002 | The parameter config is invalid. |
-| 10801003 | The parameter callback is invalid. Input parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types; 3.Parameter verification failed. |
+| [10801001](../errorcode-jsleakwatcher.md#10801001--参数isenabled无效) | The parameter isEnabled is invalid. |
+| [10801002](../errorcode-jsleakwatcher.md#10801002--参数config无效) | The parameter config is invalid. |
+| [10801003](../errorcode-jsleakwatcher.md#10801003--参数callback无效) | The parameter callback is invalid. Input parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types; 3.Parameter verification failed. |
 
 ## 示例
 
@@ -87,9 +81,9 @@ function enableLeakWatcher(isEnabled: boolean, configs: LeakWatcherConfig, callb
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 10801001 | The parameter isEnabled is invalid. |
-| 10801002 | The parameter config is invalid. |
-| 10801003 | The parameter callback is invalid. Input parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types; 3.Parameter verification failed. |
+| [10801001](../errorcode-jsleakwatcher.md#10801001--参数isenabled无效) | The parameter isEnabled is invalid. |
+| [10801002](../errorcode-jsleakwatcher.md#10801002--参数config无效) | The parameter config is invalid. |
+| [10801003](../errorcode-jsleakwatcher.md#10801003--参数callback无效) | The parameter callback is invalid. Input parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types; 3.Parameter verification failed. |
 
 ## 示例
 

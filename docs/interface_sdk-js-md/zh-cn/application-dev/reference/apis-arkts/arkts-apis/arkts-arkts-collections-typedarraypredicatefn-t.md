@@ -5,7 +5,7 @@ type TypedArrayPredicateFn<ElementType, ArrayType> =
     (value: ElementType, index: number, array: ArrayType) => boolean
 ```
 
-ArkTS TypedArray断言测试函数类型。
+ArkTS TypedArray断言函数类型，被TypedArray类的'some'、'every'、'filter'、'find'和'findIndex'接口使用。
 
 **起始版本：** 12
 
@@ -21,7 +21,7 @@ ArkTS TypedArray断言测试函数类型。
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | ElementType | 是 | 当前遍历的ArkTS TypedArray元素。 |
+| value | ElementType | 是 | 当前遍历的ArkTS TypedArray元素，用于判断是否满足测试条件。 |
 | index | number | 是 | 当前遍历的ArkTS TypedArray元素索引，从0开始。 |
 | array | ArrayType | 是 | 当前遍历的ArkTS TypedArray实例。 |
 
@@ -29,5 +29,5 @@ ArkTS TypedArray断言测试函数类型。
 
 | 类型 | 说明 |
 | --- | --- |
-| boolean | 如果值符合条件，则为true，否则为false。 |
+| boolean | 断言函数的结果，该结果作为判断当前元素是否通过测试条件。为true时表示当前元素已满足测试条件，为false时表示当前元素不满足测试条件。 |
 

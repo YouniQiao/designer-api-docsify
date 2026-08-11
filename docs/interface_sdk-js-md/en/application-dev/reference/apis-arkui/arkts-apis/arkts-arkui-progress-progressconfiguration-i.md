@@ -1,6 +1,6 @@
 # ProgressConfiguration
 
-进度条配置。继承自[CommonConfiguration](arkts-arkui-common-commonconfiguration-i.md)。
+ProgressConfiguration used by progress contentModifier
 
 **Inheritance/Implementation:** ProgressConfiguration extends [CommonConfiguration<ProgressConfiguration>](CommonConfiguration<ProgressConfiguration>)
 
@@ -18,13 +18,7 @@
 total: double
 ```
 
-进度总长。
-
-默认值：100
-
-**说明：**
-
-total是负数时，按照100处理。
+The total of Progress.
 
 **Type:** double
 
@@ -44,11 +38,7 @@ total是负数时，按照100处理。
 value: double
 ```
 
-当前进度值。当设置的数值小于0时，将其置为0。当设置的数值大于total时，将其置为total。
-
-默认值：0
-
-取值范围：[0, total]
+The value of Progress.
 
 **Type:** double
 

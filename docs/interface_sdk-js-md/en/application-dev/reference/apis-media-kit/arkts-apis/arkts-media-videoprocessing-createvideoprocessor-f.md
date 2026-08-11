@@ -34,7 +34,7 @@ Create a video processing instance.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 801 | Capability not supported. Function createVideoProcessor can not work correctly due to limited device capabilities. |
-| 29200007 | Out of memory. |
-| 29200003 | Failed to create video processing instance. For example, the number of instances exceeds the upper limit. |
+| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. Function createVideoProcessor can not work correctly due to limited device capabilities. |
+| [29200007](../../apis-image-kit/errorcode-videoprocessingengine.md#29200007-insufficient-memory) | Out of memory. |
+| [29200003](../../apis-image-kit/errorcode-videoprocessingengine.md#29200003-creation-failure) | Failed to create video processing instance. For example, the number of instances exceeds the upper limit. |
 

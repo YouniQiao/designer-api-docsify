@@ -1,8 +1,6 @@
 # TextEmbedding
 
-描述文本嵌入模型的文本嵌入函数。
-
-下列接口都需先使用[intelligence.getTextEmbeddingModel](arkts-arkdata-intelligence-gettextembeddingmodel-f.md#gettextembeddingmodel)获取到TextEmbedding实例，再通过此实例调用对应接口。
+Describes the text embedding functions of the multi-modal embedding model.Chinese and English are supported.
 
 **Since:** 15
 
@@ -30,9 +28,7 @@ ArkTS-Sta:
 getEmbedding(text: string): Promise<Array<double>>
 ```
 
-获取给定文本的嵌入向量。使用Promise异步回调。
-
-该接口需先调用[loadModel](arkts-arkdata-intelligence-textembedding-i.md#loadmodel)加载嵌入模型，加载成功后调用getEmbedding。
+Obtains the embedding vector of the given text.The model can process up to 512 characters of text per inference, supporting both Chinese and English.
 
 **Since:** 15
 
@@ -46,21 +42,21 @@ getEmbedding(text: string): Promise<Array<double>>
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| text | string | Yes | 嵌入模型的输入文本。长度上限为512个字符。 |
+| text | string | Yes | The input text of the embedding model. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| ArkTS-Dyn: Promise&lt;Array&lt;number&gt;&gt;  <br>ArkTS-Sta：Promise&lt;Array&lt;double&gt;&gt; | Promise对象，返回向量化结果的数组。 |
+| ArkTS-Dyn: Promise&lt;Array&lt;number&gt;&gt;  <br>ArkTS-Sta：Promise&lt;Array&lt;double&gt;&gt; | The promise used to return the embedding result. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types. |
-| 801 | Capability not supported. |
-| 31300000 | Inner error. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types. |
+| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. |
+| [31300000](../errorcode-intelligence.md#31300000-internal-error) | Inner error. |
 
 ## Examples
 
@@ -90,9 +86,7 @@ ArkTS-Sta:
 getEmbedding(batchTexts: Array<string>): Promise<Array<Array<double>>>
 ```
 
-获取给定批次文本的嵌入向量。批量处理可以提高性能，适用于需要同时处理多个文本的场景。使用Promise异步回调。
-
-该接口需先调用[loadModel](arkts-arkdata-intelligence-textembedding-i.md#loadmodel)加载嵌入模型，加载成功后调用getEmbedding。
+Obtains the embedding vector of a given batch of text.The model can process up to 512 characters of text per inference, supporting both Chinese and English.
 
 **Since:** 15
 
@@ -106,21 +100,21 @@ getEmbedding(batchTexts: Array<string>): Promise<Array<Array<double>>>
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| batchTexts | Array&lt;string&gt; | Yes | 嵌入模型的文本输入批次。单个文本长度上限为512个字符。 |
+| batchTexts | Array&lt;string&gt; | Yes | The input batch of texts of the embedding model. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| ArkTS-Dyn: Promise&lt;Array&lt;Array&lt;number&gt;&gt;&gt;  <br>ArkTS-Sta：Promise&lt;Array&lt;Array&lt;double&gt;&gt;&gt; | Promise对象，返回批次向量化结果的二维数组。 |
+| ArkTS-Dyn: Promise&lt;Array&lt;Array&lt;number&gt;&gt;&gt;  <br>ArkTS-Sta：Promise&lt;Array&lt;Array&lt;double&gt;&gt;&gt; | The promise used to return the embedding result. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types. |
-| 801 | Capability not supported. |
-| 31300000 | Inner error. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types. |
+| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. |
+| [31300000](../errorcode-intelligence.md#31300000-internal-error) | Inner error. |
 
 ## Examples
 
@@ -144,12 +138,7 @@ textEmbedding.getEmbedding(batchTexts)
 loadModel(): Promise<void>
 ```
 
-加载文本嵌入模型。使用Promise异步回调。
-
-**配对调用：**  
-- 调用loadModel()后，必须在使用完毕后调用[releaseModel()](#releasemodel)释放模型资源。  
-- 未调用releaseModel()会导致资源泄漏，影响系统性能。  
-- 建议将releaseModel()放在finally块中确保资源被正确释放。
+Loads this text embedding model. If the loading fails, an error code is returned.
 
 **Since:** 15
 
@@ -163,14 +152,14 @@ loadModel(): Promise<void>
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | 无返回结果的Promise。 |
+| Promise&lt;void&gt; | The promise returned by the function. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 801 | Capability not supported. |
-| 31300000 | Inner error. |
+| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. |
+| [31300000](../errorcode-intelligence.md#31300000-internal-error) | Inner error. |
 
 ## Examples
 
@@ -192,7 +181,7 @@ textEmbedding.loadModel()
 releaseModel(): Promise<void>
 ```
 
-释放文本嵌入模型。使用Promise异步回调。
+Releases this text embedding model. If the releasing fails, an error code is returned.
 
 **Since:** 15
 
@@ -206,14 +195,14 @@ releaseModel(): Promise<void>
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | 无返回结果的Promise对象。 |
+| Promise&lt;void&gt; | The promise returned by the function. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 801 | Capability not supported. |
-| 31300000 | Inner error. |
+| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. |
+| [31300000](../errorcode-intelligence.md#31300000-internal-error) | Inner error. |
 
 ## Examples
 

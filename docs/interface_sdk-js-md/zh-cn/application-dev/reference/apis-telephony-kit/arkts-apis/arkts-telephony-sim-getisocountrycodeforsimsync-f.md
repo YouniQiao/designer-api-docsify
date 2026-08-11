@@ -1,11 +1,5 @@
 # getISOCountryCodeForSimSync
 
-## 导入模块
-
-```TypeScript
-import { sim } from 'kits/@kit.TelephonyKit';
-```
-
 ## getISOCountryCodeForSimSync
 
 ```TypeScript

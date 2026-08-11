@@ -1,11 +1,5 @@
 # offActiveSessionChanged（系统接口）
 
-## 导入模块
-
-```TypeScript
-import { avSession } from 'kits/@kit.AVSessionKit';
-```
-
 ## offActiveSessionChanged
 
 ```TypeScript
@@ -36,32 +30,7 @@ function offActiveSessionChanged(callback?: Callback<Array<AVSessionDescriptor>>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 6600101 | Session service exception. |
-| 201 | permission denied |
-| 202 | Not System App. |
-
-## 示例
-
-```TypeScript
-import { avSession } from '@kit.AVSessionKit';
-
-@Entry
-@Component
-struct Index {
-  @State message: string = 'hello world';
-
-  build() {
-    Column() {
-      Text(this.message)
-        .onClick(() => {
-          avSession.onActiveSessionChanged((descriptors: Array<avSession.AVSessionDescriptor>) => {
-          });
-          avSession.offActiveSessionChanged();
-        })
-    }
-    .width('100%')
-    .height('100%')
-  }
-}
-```
+| [6600101](../errorcode-avsession.md#6600101-会话服务端异常) | Session service exception. |
+| [201](../../errorcode-universal.md#201-权限校验失败) | permission denied |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not System App. |
 

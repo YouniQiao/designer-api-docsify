@@ -1,6 +1,6 @@
 # DataProxyType
 
-数据代理类型的枚举。
+Enumerates the data proxy types.
 
 **Since:** 20
 
@@ -16,7 +16,7 @@
 SHARED_CONFIG = 0
 ```
 
-表示应用之间的共享配置。
+Inter-application shared configuration.
 
 **Since:** 20
 

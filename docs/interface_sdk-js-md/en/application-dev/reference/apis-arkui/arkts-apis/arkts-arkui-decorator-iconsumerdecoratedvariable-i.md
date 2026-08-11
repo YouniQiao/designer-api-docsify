@@ -1,6 +1,6 @@
 # IConsumerDecoratedVariable
 
-Consumer装饰的变量。
+Define Consumer decoration variable interface.
 
 **Inheritance/Implementation:** IConsumerDecoratedVariable extends [IDecoratedMutableVariable<T>](IDecoratedMutableVariable<T>), [IDecoratedV2Variable<T>](IDecoratedV2Variable<T>)
 

@@ -1,6 +1,6 @@
 # DLPFileAccess
 
-DLP文件授权类型的枚举。
+Enumerates the permissions on a DLP file.
 
 **Since:** 10
 
@@ -16,7 +16,7 @@ DLP文件授权类型的枚举。
 NO_PERMISSION = 0
 ```
 
-表示无文件权限。
+The user has no permission on the file.
 
 **Since:** 10
 
@@ -32,7 +32,7 @@ NO_PERMISSION = 0
 READ_ONLY = 1
 ```
 
-表示文件的只读权限。
+The user has only the permission to read the file.
 
 **Since:** 10
 
@@ -48,7 +48,7 @@ READ_ONLY = 1
 CONTENT_EDIT = 2
 ```
 
-表示文件的编辑权限。
+Edit the file.
 
 **Since:** 10
 
@@ -64,7 +64,7 @@ CONTENT_EDIT = 2
 FULL_CONTROL = 3
 ```
 
-表示文件的完全控制权限。
+The user has full control on the file.
 
 **Since:** 10
 

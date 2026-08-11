@@ -1,6 +1,6 @@
 # KVManagerConfig
 
-提供KVManager实例的配置信息，包括调用方的包名和应用的上下文。
+Provides the **KVManager** instance configuration, including the bundle name of the invoker and the application context.
 
 **Since:** 9
 
@@ -22,7 +22,7 @@ import { distributedKVStore } from 'kits/@kit.ArkData';
 bundleName: string
 ```
 
-调用方的包名，不可为空且长度范围为1-256字节。
+Bundle name.
 
 **Type:** string
 
@@ -42,13 +42,16 @@ bundleName: string
 context: BaseContext
 ```
 
-应用的上下文。
+Application context.
 
-FA模型的应用Context定义见[Context](arkts-arkdata-distributedkvstore-kvmanagerconfig-i.md#context)。
+For details about the application context of the FA model, see  
+[Context](../apis-ability-kit/js-apis-inner-app-context.md).
 
-Stage模型的应用Context定义见[Context](../../apis-ability-kit/arkts-apis/arkts-ability-uiabilitycontext-c.md/arkts-ability-uiabilitycontext-c.md)。
+For details about the application context of the stage model, see  
+[Context](../apis-ability-kit/js-apis-inner-application-uiAbilityContext.md).
 
-从API version 10开始，context的参数类型为[BaseContext](../../apis-ability-kit/arkts-apis/arkts-ability-basecontext-c.md/arkts-ability-basecontext-c.md)。
+Since API version 10, the parameter type of context is  
+[BaseContext](../apis-ability-kit/js-apis-inner-application-baseContext.md).
 
 **Type:** [BaseContext](../../apis-ability-kit/arkts-apis/arkts-ability-basecontext-c.md)
 
@@ -62,5 +65,5 @@ Stage模型的应用Context定义见[Context](../../apis-ability-kit/arkts-apis/
 
 **System capability:** 
 - API version 10 and later: SystemCapability.DistributedDataManager.KVStore.Core if swap the area, you should close all the KV store and use the new BaseContext to create the KVManager
-- API version 9: SystemCapability.DistributedDataManager.KVStore.Core if swap the area, you should close all the KV store and use the new Context to create the KVManager
+- API version 9 to 23: SystemCapability.DistributedDataManager.KVStore.Core if swap the area, you should close all the KV store and use the new Context to create the KVManager
 

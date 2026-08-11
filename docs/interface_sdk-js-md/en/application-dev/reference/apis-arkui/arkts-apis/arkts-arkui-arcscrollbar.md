@@ -12,5 +12,5 @@ import { ArcScrollBarAttribute, ArcScrollBar } from 'kits/@kit.ArkUI';
 
 | Name | Description |
 | --- | --- |
-| [ArcScrollBarOptions](arkts-arkui-arkui-arcscrollbar-arcscrollbaroptions-i.md) | ArcScrollBar的构造函数参数。 |
+| [ArcScrollBarOptions](arkts-arkui-arkui-arcscrollbar-arcscrollbaroptions-i.md) | Defines the arc scroll bar options. |
 

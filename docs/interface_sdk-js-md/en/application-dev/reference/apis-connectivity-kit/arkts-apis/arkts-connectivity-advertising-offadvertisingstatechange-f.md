@@ -12,7 +12,7 @@ import { advertising } from 'kits/@kit.ConnectivityKit';
 function offAdvertisingStateChange(callback?: Callback<AdvertisingStateChangeInfo>): void
 ```
 
-取消订阅广播状态变更事件。
+Unsubscribes from the advertising state change event.
 
 **Since:** 26.0.0
 
@@ -28,11 +28,11 @@ function offAdvertisingStateChange(callback?: Callback<AdvertisingStateChangeInf
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;AdvertisingStateChangeInfo&gt; | No | 用于监听广播状态的回调。 |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;AdvertisingStateChangeInfo&gt; | No | Callback used to listen for the advertising state. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 801 | Capability not supported because the chip does not support it. |
+| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported because the chip does not support it. |
 

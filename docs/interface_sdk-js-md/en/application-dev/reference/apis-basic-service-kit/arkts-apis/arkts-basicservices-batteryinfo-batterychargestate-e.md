@@ -1,6 +1,6 @@
 # BatteryChargeState
 
-表示电池充电状态的枚举。
+Enumerates charging states.
 
 **Since:** 23
 
@@ -16,7 +16,7 @@
 NONE
 ```
 
-表示电池充电状态为未充电。
+Unknown state.
 
 **Since:** 23
 
@@ -32,7 +32,7 @@ NONE
 ENABLE
 ```
 
-表示电池充电状态为使能状态。
+The battery is being charged.
 
 **Since:** 23
 
@@ -48,7 +48,7 @@ ENABLE
 DISABLE
 ```
 
-表示电池充电状态为停止状态。
+The battery is not being charged.
 
 **Since:** 23
 
@@ -64,7 +64,7 @@ DISABLE
 FULL
 ```
 
-表示电池充电状态为已充满状态。
+The battery is fully charged.
 
 **Since:** 23
 

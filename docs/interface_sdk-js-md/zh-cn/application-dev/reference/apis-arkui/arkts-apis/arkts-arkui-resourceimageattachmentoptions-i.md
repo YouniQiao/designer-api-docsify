@@ -40,7 +40,7 @@ layoutStyle?: ImageAttachmentLayoutStyle
 
 设置图片布局。
 
-**类型：** [ImageAttachmentLayoutStyle](arkts-arkui-imageattachmentlayoutstyle-i.md)
+**类型：** [ImageAttachmentLayoutStyle](arkts-arkui-styledstring-imageattachmentlayoutstyle-i.md)
 
 **起始版本：** 15
 

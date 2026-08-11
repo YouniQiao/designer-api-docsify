@@ -1,11 +1,12 @@
 # IntentDecoratorInfo
 
-意图装饰器的通用属性，用于定义意图的基本信息（包括意图名称、意图版本号）。适用于本模块的所有装饰器。
+Common properties for intent decorators, used to define basic information about an intent (including the intent name and version number). It applies to all decorators provided by this module.
 
-> **说明：**
+> **NOTE：**
 > 
-> 如果根据schema与intentVersion字段，在标准意图列表存在匹配的标准意图，系统会将intentName、domain、llmDescription、keywords、parameters、result字段均设置为标准
-> 意图的相应字段值。
+> If a matching intent is found in the standard intent list based on the **schema** and **intentVersion** fields, the
+> system automatically populates the **intentName**, **domain**, **llmDescription**, **keywords**, **parameters**,
+> and **result** fields with the values from the matching standard intent.
 
 **Since:** 20
 
@@ -27,7 +28,7 @@ import { InsightIntentFunction, InsightIntentForm, InsightIntentLink, InsightInt
 displayDescription?: string
 ```
 
-表示显示给用户的意图描述。
+Description of the intent displayed to users.
 
 **Type:** string
 
@@ -49,7 +50,7 @@ displayDescription?: string
 displayName: string
 ```
 
-表示显示给用户的意图名称。
+Name of the intent displayed to users.
 
 **Type:** string
 
@@ -71,8 +72,8 @@ displayName: string
 domain: string
 ```
 
-表示意图垂域，用于将意图按垂直领域分类（例如：视频、音乐、游戏），取值范围参见  
-[各垂域的智慧分发特性列表](https://developer.huawei.com/consumer/cn/doc/service/intents-ai-distribution-characteristic-0000001901922213#section2656133582215)中的垂域字段。
+Vertical domain of the intent. It is used to categorize intents by vertical fields (for example, video, music, and games). For details about the value range, see the vertical domain fields in  
+[smart distribution features in different vertical domains](https://developer.huawei.com/consumer/en/doc/service/intents-ai-distribution-characteristic-0000001901922213#section2656133582215).
 
 **Type:** string
 
@@ -94,10 +95,11 @@ domain: string
 icon?: ResourceStr
 ```
 
-表示意图图标，用于在AI入口显示。
+Icon of the intent. It is displayed in the AI entry point.
 
-- 当取值为字符串类型时，表示图标读取网络资源。  
-- 当取值为[Resource](../../reference/apis-localization-kit/js-apis-resource-manager.md)时，表示图标读取本地资源。
+- If the value is a string, the icon is read from a network resource.  
+- If the value is a [resource](../../reference/apis-localization-kit/js-apis-resource-manager.md), the icon is read  
+ from a local resource.
 
 **Type:** [ResourceStr](../../apis-arkui/arkts-apis/arkts-arkui-resourcestr-t.md)
 
@@ -119,7 +121,7 @@ icon?: ResourceStr
 intentName: string
 ```
 
-表示意图名称，是意图的唯一标识。
+Intent name, which is the unique identifier of an intent.
 
 **Type:** string
 
@@ -141,7 +143,7 @@ intentName: string
 intentVersion: string
 ```
 
-表示意图版本号。当意图能力演进时，可通过版本号进行区分和管理。
+Version number of the intent. It is used to distinguish and manage intents when their capabilities evolve.
 
 **Type:** string
 
@@ -163,7 +165,7 @@ intentVersion: string
 keywords?: string[]
 ```
 
-表示意图的搜索关键字。
+Search keywords for the intent.
 
 **Type:** string[]
 
@@ -185,7 +187,7 @@ keywords?: string[]
 llmDescription?: string
 ```
 
-表示意图的功能，用于大型语言模型理解该意图。
+Function of an intent, which helps large language models understand the intent.
 
 **Type:** string
 
@@ -207,8 +209,7 @@ llmDescription?: string
 parameters?: Record<string, Object>
 ```
 
-表示意图参数的数据格式声明，用于意图调用时定义入参的数据格式。取值参见  
-[各垂域意图Schema](https://developer.huawei.com/consumer/cn/doc/service/intents-schema-0000001901962713)
+Data format of intent parameters, which is used to define the input data format during intent calls.
 
 **Type:** [Record](../../apis-default/arkts-apis/arkts-record-t.md)&lt;string, Object&gt;
 
@@ -230,7 +231,7 @@ parameters?: Record<string, Object>
 result?: Record<string, Object>
 ```
 
-表示意图调用返回结果的数据格式声明，用于定义意图调用返回结果的数据格式。
+Data format for the results returned by intent calls. It defines how the data should be structured.
 
 **Type:** [Record](../../apis-default/arkts-apis/arkts-record-t.md)&lt;string, Object&gt;
 
@@ -252,9 +253,10 @@ result?: Record<string, Object>
 schema?: string
 ```
 
-表示接入的标准意图的名称。开发者[接入标准意图](../../../application-models/insight-intent-definition.md#接入标准意图)时，需要配置该字段，  
-[创建自定义意图](../../../application-models/insight-intent-definition.md#创建自定义意图)时，无需配置该字段。标准意图列表参见  
-[附录：标准意图接入规范](../../../application-models/insight-intent-access-specifications.md)。
+Name of a standard intent schema. This field is required when you  
+[access a standard intent](../../../application-models/insight-intent-definition.md#accessing-standard-intents).It is not required when you  
+[create a custom intent](../../../application-models/insight-intent-definition.md#creating-custom-intents). For details about the standard intent list, see  
+[Appendix: Standard Intent Access Specifications](../../../application-models/insight-intent-access-specifications.md).
 
 **Type:** string
 

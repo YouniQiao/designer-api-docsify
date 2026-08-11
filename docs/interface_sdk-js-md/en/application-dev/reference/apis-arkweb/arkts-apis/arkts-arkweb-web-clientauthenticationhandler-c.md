@@ -98,7 +98,7 @@ Confirm to use the identify of the certificate. The identify can be obtained fro
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 801 | Capability not supported. |
+| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. |
 
 ## constructor
 

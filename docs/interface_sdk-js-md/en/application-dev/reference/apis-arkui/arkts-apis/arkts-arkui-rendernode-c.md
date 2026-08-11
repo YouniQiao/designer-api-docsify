@@ -1,13 +1,6 @@
 # RenderNode
 
-提供自绘制渲染节点RenderNode，支持开发者通过C API进行开发，完成自定义绘制需求。
-
-> **说明：**
-> 
-> - 不建议对[BuilderNode](arkts-arkui-buildernode-c.md)中的RenderNode进行修改操作。BuilderNode中持有的[FrameNode](arkts-arkui-framenode-c.md)仅用于将该
-> BuilderNode作为子节点挂载到其他FrameNode上，对该FrameNode或对应的RenderNode进行属性设置与子节点操作可能会产生未定义行为，包括但不限于显示异常、事件异常、稳定性问题等。
-> 
-> - RenderNode对象不支持使用JSON序列化。
+Defines RenderNode. Contains node tree operations and render property operations on node.
 
 **Since:** 23
 
@@ -23,7 +16,7 @@
 appendChild(node: RenderNode): void
 ```
 
-在RenderNode最后一个子节点后添加新的子节点。
+Add child to the end of the RenderNode's children.
 
 **Since:** 23
 
@@ -39,13 +32,13 @@ appendChild(node: RenderNode): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| node | [RenderNode](arkts-arkui-rendernode-c.md) | Yes | 需要添加的RenderNode。 |
+| node | [RenderNode](arkts-arkui-rendernode-c.md) | Yes | The node will be added. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 100025 | The parameter is invalid. Details about the invalid parameter and the reason are included in the error message. For example: "The parameter 'node' is invalid: its corresponding FrameNode cannot be adopted." |
+| [100025](../errorcode-node.md#100025-invalid-parameter-value) | The parameter is invalid. Details about the invalid parameter and the reason are included in the error message. For example: "The parameter 'node' is invalid: its corresponding FrameNode cannot be adopted." |
 
 ## clearChildren
 
@@ -53,7 +46,7 @@ appendChild(node: RenderNode): void
 clearChildren(): void
 ```
 
-清除当前RenderNode的所有子节点。
+Clear children of the current RenderNode.
 
 **Since:** 23
 
@@ -71,7 +64,7 @@ clearChildren(): void
 constructor()
 ```
 
-RenderNode的构造函数。
+Constructor.
 
 **Since:** 23
 
@@ -89,7 +82,7 @@ RenderNode的构造函数。
 dispose(): void
 ```
 
-立即释放当前RenderNode。
+Dispose the RenderNode immediately.
 
 **Since:** 23
 
@@ -107,14 +100,7 @@ dispose(): void
 draw(context: DrawContext): void
 ```
 
-绘制方法，需要开发者进行实现。该方法会在RenderNode进行绘制时被调用。
-
-该接口的[DrawContext](arkts-arkui-graphics-drawcontext-c.md)中的Canvas是用于记录指令的临时Canvas，并非节点的真实Canvas。使用请参见  
-[调整自定义绘制Canvas的变换矩阵](../../../ui/arkts-user-defined-arktsNode-renderNode.md#调整自定义绘制canvas的变换矩阵)。
-
-> **说明：**
-> 
-> RenderNode初始化时，会调用两次draw方法。第一次调用是在首次创建FrameNode时触发Render流程，第二次调用是在首次设置modifier时触发绘制。后续绘制流程皆由modifier触发。
+Draw Method. Executed when the associated RenderNode is onDraw.
 
 **Since:** 23
 
@@ -130,7 +116,7 @@ draw(context: DrawContext): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| context | [DrawContext](arkts-arkui-graphics-drawcontext-c.md) | Yes | 图形绘制上下文。 |
+| context | [DrawContext](arkts-arkui-graphics-drawcontext-c.md) | Yes | The DrawContext will be used when executed draw method. |
 
 ## getChild
 
@@ -138,7 +124,7 @@ draw(context: DrawContext): void
 getChild(index: int): RenderNode | null
 ```
 
-通过索引获取当前RenderNode的子节点。
+Get a child of the current RenderNode by index.
 
 **Since:** 23
 
@@ -154,7 +140,7 @@ getChild(index: int): RenderNode | null
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| index | int | Yes | 需要查询的子节点的序列号。 &lt;br&gt;取值限定为整数。 |
+| index | int | Yes | The index of the desired node in the children of RenderNode. |
 
 **Return value:**
 
@@ -168,7 +154,7 @@ getChild(index: int): RenderNode | null
 getFirstChild(): RenderNode | null
 ```
 
-获取当前RenderNode的第一个子节点。
+Get the first child of the current RenderNode.
 
 **Since:** 23
 
@@ -192,7 +178,7 @@ getFirstChild(): RenderNode | null
 getNextSibling(): RenderNode | null
 ```
 
-获取当前RenderNode的下一个同级节点。
+Get the next sibling node of the current RenderNode.
 
 **Since:** 23
 
@@ -216,7 +202,7 @@ getNextSibling(): RenderNode | null
 getPreviousSibling(): RenderNode | null
 ```
 
-获取当前RenderNode的上一个同级节点。
+Get the previous sibling node of the current RenderNode.
 
 **Since:** 23
 
@@ -240,7 +226,7 @@ getPreviousSibling(): RenderNode | null
 insertChildAfter(child: RenderNode, sibling: RenderNode | null): void
 ```
 
-在RenderNode指定子节点之后添加新的子节点。
+Add child to the current RenderNode.
 
 **Since:** 23
 
@@ -256,14 +242,14 @@ insertChildAfter(child: RenderNode, sibling: RenderNode | null): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| child | [RenderNode](arkts-arkui-rendernode-c.md) | Yes | 需要添加的子节点。 |
-| sibling | [RenderNode](arkts-arkui-rendernode-c.md) \| null | Yes | 新节点将插入到该节点之后。若该参数设置为空，则新节点将插入到首个子节点之前。 |
+| child | [RenderNode](arkts-arkui-rendernode-c.md) | Yes | The node will be added. |
+| sibling | [RenderNode](arkts-arkui-rendernode-c.md) \| null | Yes | The new node is added after this node. When sibling is null, insert node as the first children of the node. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 100025 | The parameter is invalid. Details about the invalid parameter and the reason are included in the error message. For example: "The parameter 'child' is invalid: its corresponding FrameNode cannot be adopted." |
+| [100025](../errorcode-node.md#100025-invalid-parameter-value) | The parameter is invalid. Details about the invalid parameter and the reason are included in the error message. For example: "The parameter 'child' is invalid: its corresponding FrameNode cannot be adopted." |
 
 ## invalidate
 
@@ -271,7 +257,7 @@ insertChildAfter(child: RenderNode, sibling: RenderNode | null): void
 invalidate(): void
 ```
 
-该方法会触发RenderNode的重新渲染。
+Invalidate the RenderNode, which will cause a re-render of the RenderNode.
 
 **Since:** 23
 
@@ -289,7 +275,7 @@ invalidate(): void
 isDisposed(): boolean
 ```
 
-查询当前RenderNode对象是否已解除与后端实体节点的引用关系。前端节点均绑定有相应的后端实体节点，当节点调用dispose接口解除绑定后，再次调用接口可能会出现crash、返回默认值的情况。由于业务需求，可能存在节点在dispose后仍被调用接口的情况。为此，提供此接口以供开发者在操作节点前检查其有效性，避免潜在风险。
+Get if the RenderNode is disposed.
 
 **Since:** 26.0.0
 
@@ -305,7 +291,7 @@ isDisposed(): boolean
 
 | Type | Description |
 | --- | --- |
-| boolean | 后端实体节点是否解除引用。true为节点已与后端实体节点解除引用，false为节点未与后端实体节点解除引用。 |
+| boolean | Returns true if the RenderNode is disposed, false otherwise. |
 
 ## removeChild
 
@@ -313,7 +299,7 @@ isDisposed(): boolean
 removeChild(node: RenderNode): void
 ```
 
-从RenderNode中删除指定的子节点。
+Remove child from the current RenderNode.
 
 **Since:** 23
 
@@ -329,7 +315,7 @@ removeChild(node: RenderNode): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| node | [RenderNode](arkts-arkui-rendernode-c.md) | Yes | 需要删除的子节点。 |
+| node | [RenderNode](arkts-arkui-rendernode-c.md) | Yes | The node will be removed. |
 
 ## backgroundBlur
 
@@ -337,7 +323,7 @@ removeChild(node: RenderNode): void
 get backgroundBlur(): BackgroundBlur
 ```
 
-获取背景模糊效果。
+Get the background blur effect.
 
 **Type:** [BackgroundBlur](arkts-arkui-graphics-backgroundblur-i.md)
 
@@ -357,7 +343,7 @@ get backgroundBlur(): BackgroundBlur
 get backgroundColor(): int
 ```
 
-获取RenderNode的背景色。
+Get the background color of the RenderNode.
 
 **Type:** int
 
@@ -377,7 +363,7 @@ get backgroundColor(): int
 get borderColor(): NodeEdges<int> | undefined
 ```
 
-获取RenderNode的边框颜色。
+Get border color of the RenderNode.
 
 **Type:** [NodeEdges](arkts-arkui-graphics-nodeedges-i.md)&lt;int&gt;
 
@@ -397,7 +383,7 @@ get borderColor(): NodeEdges<int> | undefined
 get borderRadius(): NodeBorderRadiuses | undefined
 ```
 
-获取RenderNode的边界半径。
+Get border radius of the RenderNode.
 
 **Type:** [NodeBorderRadiuses](arkts-arkui-nodeborderradiuses-t.md)
 
@@ -417,7 +403,7 @@ get borderRadius(): NodeBorderRadiuses | undefined
 get borderStyle(): NodeEdges<BorderStyle> | undefined
 ```
 
-获取RenderNode的边框样式。
+Get border style of the RenderNode.
 
 **Type:** [NodeEdges](arkts-arkui-graphics-nodeedges-i.md)&lt;[BorderStyle](arkts-arkui-borderstyle-e.md)&gt;
 
@@ -437,7 +423,7 @@ get borderStyle(): NodeEdges<BorderStyle> | undefined
 get borderWidth(): NodeEdges<double> | undefined
 ```
 
-获取RenderNode的边框宽度。
+Get border width of the RenderNode.
 
 **Type:** [NodeEdges](arkts-arkui-graphics-nodeedges-i.md)&lt;double&gt;
 
@@ -457,7 +443,7 @@ get borderWidth(): NodeEdges<double> | undefined
 get clipToFrame(): boolean
 ```
 
-获取RenderNode是否裁剪到帧。
+Get whether the RenderNode clip to frame.
 
 **Type:** boolean
 
@@ -477,7 +463,7 @@ get clipToFrame(): boolean
 get contentBlur(): ContentBlur
 ```
 
-获取内容模糊效果。
+Get the content blur effect.
 
 **Type:** [ContentBlur](arkts-arkui-graphics-contentblur-i.md)
 
@@ -497,7 +483,7 @@ get contentBlur(): ContentBlur
 get foregroundBlur(): ForegroundBlur
 ```
 
-获取前景模糊效果。
+Get the foreground blur effect.
 
 **Type:** [ForegroundBlur](arkts-arkui-graphics-foregroundblur-i.md)
 
@@ -517,7 +503,7 @@ get foregroundBlur(): ForegroundBlur
 get frame(): Frame
 ```
 
-获取RenderNode的框架信息。
+Get frame info of the RenderNode.
 
 **Type:** [Frame](arkts-arkui-graphics-frame-i.md)
 
@@ -537,7 +523,7 @@ get frame(): Frame
 get label(): string
 ```
 
-获取RenderNode的标签。默认值为""。
+Get label of the RenderNode.
 
 **Type:** string
 
@@ -557,7 +543,7 @@ get label(): string
 get lengthMetricsUnit(): LengthMetricsUnit
 ```
 
-获取RenderNode的长度度量单位。
+Get the length metrics unit of RenderNode.
 
 **Type:** [LengthMetricsUnit](arkts-arkui-graphics-lengthmetricsunit-e.md)
 
@@ -579,7 +565,7 @@ get lengthMetricsUnit(): LengthMetricsUnit
 get markNodeGroup(): boolean
 ```
 
-获取是否优先绘制节点及其子节点。
+Get whether to preferentially draw the node and its children.
 
 **Type:** boolean
 
@@ -601,7 +587,7 @@ get markNodeGroup(): boolean
 get opacity(): double
 ```
 
-获取RenderNode的不透明度。
+Get opacity of the RenderNode.
 
 **Type:** double
 
@@ -621,7 +607,7 @@ get opacity(): double
 get pivot(): Pivot
 ```
 
-获取RenderNode的轴心向量。
+Get pivot vector of the RenderNode.
 
 **Type:** [Pivot](arkts-arkui-pivot-t.md)
 
@@ -641,7 +627,7 @@ get pivot(): Pivot
 get position(): NodePosition
 ```
 
-获取RenderNode的帧位置。
+Get frame position of the RenderNode.
 
 **Type:** [NodePosition](arkts-arkui-nodeposition-t.md)
 
@@ -661,7 +647,7 @@ get position(): NodePosition
 get rotation(): Rotation
 ```
 
-获取RenderNode的旋转向量。
+Get rotation vector of the RenderNode.
 
 **Type:** [Rotation](arkts-arkui-rotation-t.md)
 
@@ -681,7 +667,7 @@ get rotation(): Rotation
 get scale(): Scale
 ```
 
-获取RenderNode的缩放向量。
+Get scale vector of the RenderNode.
 
 **Type:** [Scale](arkts-arkui-scale-t.md)
 
@@ -701,7 +687,7 @@ get scale(): Scale
 get shadowAlpha(): double
 ```
 
-获取RenderNode的阴影alpha。
+Get shadow alpha of the RenderNode.
 
 **Type:** double
 
@@ -721,7 +707,7 @@ get shadowAlpha(): double
 get shadowColor(): int
 ```
 
-获取RenderNode的阴影颜色。
+Get shadow color of the RenderNode.
 
 **Type:** int
 
@@ -741,7 +727,7 @@ get shadowColor(): int
 get shadowElevation(): double
 ```
 
-获取RenderNode的阴影高度。
+Get shadow elevation of the RenderNode.
 
 **Type:** double
 
@@ -761,7 +747,7 @@ get shadowElevation(): double
 get shadowOffset(): NodeOffset
 ```
 
-获取RenderNode的阴影偏移量。
+Get shadow offset of the RenderNode.
 
 **Type:** [NodeOffset](arkts-arkui-nodeoffset-t.md)
 
@@ -781,7 +767,7 @@ get shadowOffset(): NodeOffset
 get shadowRadius(): double
 ```
 
-获取RenderNode的阴影半径。
+Get shadow radius of the RenderNode.
 
 **Type:** double
 
@@ -801,7 +787,7 @@ get shadowRadius(): double
 get shapeClip(): ShapeClip
 ```
 
-获取RenderNode的形状裁剪属性
+Get shape clip of the RenderNode.
 
 **Type:** [ShapeClip](arkts-arkui-graphics-shapeclip-c.md)
 
@@ -821,7 +807,7 @@ get shapeClip(): ShapeClip
 get shapeMask(): ShapeMask | undefined
 ```
 
-获取RenderNode的形状掩码。
+Get shape mask of the RenderNode.
 
 **Type:** [ShapeMask](arkts-arkui-graphics-shapemask-c.md)
 
@@ -841,7 +827,7 @@ get shapeMask(): ShapeMask | undefined
 get size(): Size
 ```
 
-获取RenderNode的帧大小。
+Get frame size of the RenderNode.
 
 **Type:** [Size](arkts-arkui-graphics-size-i.md)
 
@@ -861,7 +847,7 @@ get size(): Size
 get transform(): Matrix4
 ```
 
-获取RenderNode的转换信息。
+Get transform info of the RenderNode.
 
 **Type:** [Matrix4](arkts-arkui-matrix4-t.md)
 
@@ -881,7 +867,7 @@ get transform(): Matrix4
 get translation(): Translation
 ```
 
-获取RenderNode的平移向量。
+Get translation vector of the RenderNode.
 
 **Type:** [Translation](arkts-arkui-translation-t.md)
 

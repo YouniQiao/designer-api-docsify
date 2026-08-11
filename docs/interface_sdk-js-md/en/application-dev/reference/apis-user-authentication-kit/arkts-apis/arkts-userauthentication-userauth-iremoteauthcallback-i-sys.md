@@ -1,6 +1,6 @@
 # IRemoteAuthCallback (System API)
 
-远程认证回调接口。该接口用于远程认证场景，提供获取远程认证页面参数和返回认证结果的回调能力。
+Defines the remote authentication callback API. This API is used in remote authentication scenarios and provides the callback capabilities for obtaining remote authentication widget parameters and returning authentication results.
 
 **Since:** 26.0.0
 
@@ -24,7 +24,7 @@ import { userAuth } from 'kits/@kit.UserAuthenticationKit';
 onGetRemoteAuthWidgetParam: WidgetParamCallback
 ```
 
-获取远程认证页面参数的回调函数。在远程设备发起认证请求时，系统会调用此回调获取认证界面配置参数。
+Callback for obtaining remote authentication widget parameters. When a remote device initiates an authentication request, the system invokes this callback to obtain the authentication widget configuration parameters.
 
 **Since:** 26.0.0
 
@@ -44,7 +44,7 @@ onGetRemoteAuthWidgetParam: WidgetParamCallback
 onRemoteAuthResult: ResultCallback
 ```
 
-返回远程认证结果的回调函数。在远程认证完成后，系统会调用此回调将认证结果返回给发起方。
+Callback for returning remote authentication results. After the remote authentication is complete, the system invokes this callback to return the authentication result to the initiator.
 
 **Since:** 26.0.0
 

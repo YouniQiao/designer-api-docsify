@@ -1,11 +1,5 @@
 # setEventHubMultithreadingEnabled
 
-## 导入模块
-
-```TypeScript
-import { sendableContextManager } from 'kits/@kit.AbilityKit';
-```
-
 ## setEventHubMultithreadingEnabled
 
 ```TypeScript

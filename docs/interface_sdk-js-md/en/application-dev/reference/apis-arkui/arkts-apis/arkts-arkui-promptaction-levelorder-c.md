@@ -1,6 +1,6 @@
 # LevelOrder
 
-弹窗层级，可以控制弹窗显示的顺序。
+Defines level order.
 
 **Since:** 23
 
@@ -22,7 +22,7 @@ import { LevelMode, ImmersiveMode, LevelOrder } from 'kits/@kit.ArkUI';
 static clamp(order: double): LevelOrder
 ```
 
-创建指定顺序的弹窗层级。
+Generate valid level order.
 
 **Since:** 23
 
@@ -38,13 +38,13 @@ static clamp(order: double): LevelOrder
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| order | double | Yes | 弹窗显示顺序。取值范围为[-100000.0, 100000.0]，如果值小于-100000.0则设置为-100000.0，如果值大于100000.0则设置为100000.0。 |
+| order | double | Yes | Clamp order with minimum number -100000 and maximum number 100000. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [LevelOrder](arkts-arkui-promptaction-levelorder-c.md) | 返回当前对象实例。 |
+| [LevelOrder](arkts-arkui-promptaction-levelorder-c.md) | the order object. |
 
 ## getOrder
 
@@ -52,7 +52,7 @@ static clamp(order: double): LevelOrder
 getOrder(): double
 ```
 
-获取弹窗显示顺序。
+Get the order from LevelOrder object.
 
 **Since:** 23
 
@@ -68,5 +68,5 @@ getOrder(): double
 
 | Type | Description |
 | --- | --- |
-| double | 返回显示顺序数值。 |
+| double | the order number. |
 

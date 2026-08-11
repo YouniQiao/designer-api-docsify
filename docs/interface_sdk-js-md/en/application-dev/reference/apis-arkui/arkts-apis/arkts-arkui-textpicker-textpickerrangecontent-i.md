@@ -1,6 +1,6 @@
 # TextPickerRangeContent
 
-单列数据选择器的数据选项内容。
+Define the contents of each selector item.
 
 **Since:** 23
 
@@ -16,7 +16,7 @@
 icon: string | Resource
 ```
 
-图片资源。 icon是string类型时，表示图片存放的路径，例如"/common/hello.png"。
+Image resource.If the value is a string, such as **"/common/hello.png"**, it represents the path to the image.
 
 **Type:** string \| Resource
 
@@ -36,11 +36,9 @@ icon: string | Resource
 text?: string | Resource
 ```
 
-文本信息。
+Text information.
 
-默认值：空字符串
-
-**说明：**当文本长度大于列宽时，文本被截断。
+&lt;p&gt;&lt;strong&gt;NOTE&lt;/strong&gt;:&lt;br&gt;If the text length exceeds the column width, the text will be truncated.&lt;/p&gt;
 
 **Type:** string \| Resource
 

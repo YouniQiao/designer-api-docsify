@@ -4,7 +4,7 @@
 declare type StyledStringMarshallingValue = UserDataSpan
 ```
 
-属性字符串自定义序列化对象类型，需要开发者定义序列化和反序列化的方式。
+Defines a custom marshalling object for styled strings, which you need to define marshalling and unmarshalling methods.
 
 **Since:** 19
 

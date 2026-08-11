@@ -1,11 +1,5 @@
 # createSoundPool
 
-## 导入模块
-
-```TypeScript
-import { media } from 'kits/@kit.MediaKit';
-```
-
 ## createSoundPool
 
 ```TypeScript
@@ -44,7 +38,7 @@ function createSoundPool(
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 5400101 | No memory. Return by callback. |
+| [5400101](../errorcode-media.md#5400101-内存分配失败) | No memory. Return by callback. |
 
 ## 示例
 
@@ -108,7 +102,7 @@ Therefore, an application process can create a maximum of 128 **SoundPool** inst
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 5400101 | No memory. Return by callback. |
+| [5400101](../errorcode-media.md#5400101-内存分配失败) | No memory. Return by callback. |
 
 
 ## createSoundPool
@@ -150,7 +144,7 @@ function createSoundPool(maxStreams: number, audioRenderInfo: audio.AudioRendere
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 5400101 | No memory. Return by promise. |
+| [5400101](../errorcode-media.md#5400101-内存分配失败) | No memory. Return by promise. |
 
 ## 示例
 
@@ -217,5 +211,5 @@ Therefore, an application process can create a maximum of 128 **SoundPool** inst
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 5400101 | No memory. Return by promise. |
+| [5400101](../errorcode-media.md#5400101-内存分配失败) | No memory. Return by promise. |
 

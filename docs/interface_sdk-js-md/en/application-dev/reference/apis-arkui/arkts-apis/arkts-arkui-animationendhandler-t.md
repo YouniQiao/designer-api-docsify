@@ -4,7 +4,7 @@
 export type AnimationEndHandler = (index: int, event: SwiperAnimationEvent) => void
 ```
 
-切换动画结束时的回调。
+Handler of swiper, used in OnAnimationEnd.
 
 **Since:** 26.0.0
 
@@ -20,6 +20,6 @@ export type AnimationEndHandler = (index: int, event: SwiperAnimationEvent) => v
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| index | int | Yes | 当前显示元素的索引。 |
-| event | [SwiperAnimationEvent](../arkts-components/arkts-arkui-swiperanimationevent-i.md) | Yes | 动画相关信息，只返回主轴方向上当前显示元素相对于ArcSwiper起始位置的位移。 |
+| index | int | Yes | The index of the current swiper. |
+| event | [SwiperAnimationEvent](../arkts-components/arkts-arkui-swiperanimationevent-i.md) | Yes | The extra information of the animation. |
 

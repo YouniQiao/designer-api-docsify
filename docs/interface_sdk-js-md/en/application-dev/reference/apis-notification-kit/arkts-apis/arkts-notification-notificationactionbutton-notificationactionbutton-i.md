@@ -1,6 +1,7 @@
 # NotificationActionButton
 
-NotificationActionButton模块定义了通知中显示的操作按钮，用于在[NotificationRequest](arkts-notification-notificationrequest-notificationrequest-i.md)中添加交互式操作按钮，让用户通过点击按钮触发WantAgent动作。当开发者需要在通知中提供交互式操作按钮（如"回复"、"标记已读"等）时使用此模块。
+The **NotificationActionButton** module defines the action buttons displayed in a notification. It is used to add interactive action buttons in NotificationRequest, allowing users to trigger a **WantAgent** action by tapping the button. This module is used when you need to provide interactive action buttons (such as **Reply** and  
+**Mark as read**) in a notification.
 
 **Since:** 7
 
@@ -16,7 +17,7 @@ NotificationActionButton模块定义了通知中显示的操作按钮，用于�
 extras?: { [key: string]: any }
 ```
 
-按钮扩展信息。默认为空。用于存储按钮的自定义扩展数据，应用可按需添加任意键值对信息，如按钮的特定标识、附加数据等。
+Extension information of the button. The default value is empty. It is used to store custom extension data of the button.An application can add any key-value pair information as needed, such as the specific identifier and additional data of the button.
 
 **Type:** { [key: string]: any }
 
@@ -34,7 +35,7 @@ extras?: { [key: string]: any }
 title: string
 ```
 
-按钮标题，显示在通知的操作按钮上。字符串长度不超过202字节，超出部分会被截断。不可为空字符串。
+Title of the button, displayed on the action button of the notification. The string length cannot exceed 202bytes; the excess part will be truncated. It cannot be an empty string.
 
 **Type:** string
 
@@ -52,7 +53,7 @@ title: string
 userInput?: NotificationUserInput
 ```
 
-用户输入对象实例，默认为空。表示用户输入时的标识。
+User input object. This parameter is left empty by default. ID entered by a subscriber.
 
 **Type:** [NotificationUserInput](arkts-notification-notificationuserinput-notificationuserinput-i.md)
 
@@ -70,7 +71,7 @@ userInput?: NotificationUserInput
 wantAgent: WantAgent
 ```
 
-点击按钮时触发的WantAgent，封装了应用的行为意图。用户点击按钮后，系统将按WantAgent指定的方式执行动作（如跳转至指定UIAbility或发送公共事件）。
+**WantAgent** triggered when the button is tapped, which encapsulates the application's behavioral intent. After the user taps the button, the system will execute the action in the method specified by the **WantAgent** (such as navigating to a specified **UIAbility** or sending a common event).
 
 **Type:** [WantAgent](../../apis-ability-kit/arkts-apis/arkts-ability-wantagent-t.md)
 

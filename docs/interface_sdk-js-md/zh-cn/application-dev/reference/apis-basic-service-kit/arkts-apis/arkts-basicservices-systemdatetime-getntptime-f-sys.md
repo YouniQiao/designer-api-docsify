@@ -1,11 +1,5 @@
 # getNtpTime（系统接口）
 
-## 导入模块
-
-```TypeScript
-import { systemDateTime } from 'kits/@kit.BasicServicesKit';
-```
-
 ## getNtpTime
 
 ```TypeScript
@@ -34,10 +28,12 @@ function getNtpTime(): long
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 13000002 | updateNtpTime() is not called successfully. |
-| 202 | Permission verification failed. A non-system application calls a system API. |
+| [13000002](../../apis-basic-services-kit/errorcode-time.md#13000002-未更新ntp时间) | updateNtpTime() is not called successfully. |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed. A non-system application calls a system API. |
 
 ## 示例
+
+ArkTS-Dyn示例：
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -47,6 +43,18 @@ try {
 } catch (err) {
   let error = err as BusinessError;
   console.error(`Failed to get ntp time. Code: ${error.code}, message: ${error.message}`);
+}
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+import { BusinessError } from '@ohos.base';
+
+try {
+  let time: long = systemDateTime.getNtpTime();
+} catch(error: BusinessError) {
+  console.error(`Failed to get ntp time. message: ${error.message}, code: ${error.code}`);
 }
 ```
 

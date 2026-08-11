@@ -1,6 +1,6 @@
 # OffsetOptions
 
-初始滚动偏移量的参数选项。
+Provides parameters for setting the initial scrolling offset.
 
 **Since:** 12
 
@@ -16,7 +16,7 @@
 xOffset?: Dimension
 ```
 
-水平滚动偏移量。
+Horizontal scrolling offset.
 
 **Type:** [Dimension](../arkts-apis/arkts-arkui-dimension-t.md)
 
@@ -40,7 +40,7 @@ xOffset?: Dimension
 yOffset?: Dimension
 ```
 
-竖直滚动偏移量。
+Vertical scrolling offset.
 
 **Type:** [Dimension](../arkts-apis/arkts-arkui-dimension-t.md)
 

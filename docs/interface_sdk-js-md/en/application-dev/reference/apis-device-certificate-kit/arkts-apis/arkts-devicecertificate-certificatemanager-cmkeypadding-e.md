@@ -1,6 +1,6 @@
 # CmKeyPadding
 
-表示签名、验签使用的填充方式的枚举。
+Enumerates the padding modes that can be used for signing and signature verification.
 
 **Since:** 11
 
@@ -16,7 +16,7 @@
 CM_PADDING_NONE = 0
 ```
 
-无填充。
+No padding.
 
 **Since:** 11
 
@@ -32,7 +32,7 @@ CM_PADDING_NONE = 0
 CM_PADDING_PSS = 1
 ```
 
-PSS方式填充。
+PSS.
 
 **Since:** 11
 
@@ -48,7 +48,7 @@ PSS方式填充。
 CM_PADDING_PKCS1_V1_5 = 2
 ```
 
-PKCS1_V1_5方式填充。
+PKCS1-V1_5.
 
 **Since:** 11
 

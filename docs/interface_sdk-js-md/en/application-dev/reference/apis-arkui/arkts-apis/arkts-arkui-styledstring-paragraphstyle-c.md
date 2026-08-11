@@ -1,12 +1,6 @@
 # ParagraphStyle
 
-文本段落样式对象说明。
-
-除首个段落外，后续段落按'\n'划分。
-
-每个段落的段落样式按首个占位设置的段落样式生效，未设置时，段落按被绑定组件的段落样式生效。
-
-在API版本26.0.0之前，如果属性字符串段落内首个占位为[CustomSpan](arkts-arkui-styledstring-customspan-c.md)或[ImageAttachment](arkts-arkui-styledstring-imageattachment-c.md)时，设置在该段落上的段落样式不生效。从API版本26.0.0开始，设置段落样式生效。
+Defines ParagraphStyle.
 
 **Since:** 23
 
@@ -22,7 +16,7 @@
 constructor(value?: ParagraphStyleInterface)
 ```
 
-文本段落样式的构造函数。
+constructor.
 
 **Since:** 23
 
@@ -38,7 +32,7 @@ constructor(value?: ParagraphStyleInterface)
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | [ParagraphStyleInterface](arkts-arkui-styledstring-paragraphstyleinterface-i.md) | No | 段落样式设置项。 |
+| value | [ParagraphStyleInterface](arkts-arkui-styledstring-paragraphstyleinterface-i.md) | No | paragraph property object. |
 
 ## leadingMargin
 
@@ -46,9 +40,7 @@ constructor(value?: ParagraphStyleInterface)
 readonly leadingMargin?: double | LeadingMarginPlaceholder
 ```
 
-获取属性字符串文本段落的缩进。
-
-返回为number或double类型时，单位为vp。
+Get the leading margin of the StyledString.
 
 **Type:** double \| LeadingMarginPlaceholder
 
@@ -68,7 +60,7 @@ readonly leadingMargin?: double | LeadingMarginPlaceholder
 readonly leadingMarginSpan?: LeadingMarginSpan
 ```
 
-获取属性字符串文本段落的自定义缩进信息。
+Get the leading margin span of the StyledString.
 
 **Type:** [LeadingMarginSpan](arkts-arkui-styledstring-leadingmarginspan-c.md)
 
@@ -88,7 +80,7 @@ readonly leadingMarginSpan?: LeadingMarginSpan
 readonly maxLines?: int
 ```
 
-获取属性字符串文本段落的最大行数。
+Get the maximum number of lines of the StyledString.The value should be an integer.
 
 **Type:** int
 
@@ -108,7 +100,7 @@ readonly maxLines?: int
 readonly overflow?: TextOverflow
 ```
 
-获取属性字符串文本段落超长时的显示方式。
+Get the overflow mode of the StyledString.
 
 **Type:** [TextOverflow](arkts-arkui-textoverflow-e.md)
 
@@ -128,9 +120,7 @@ readonly overflow?: TextOverflow
 readonly paragraphSpacing?: double
 ```
 
-获取属性字符串文本段落的段落间距。
-
-单位：vp
+Get the paragraph spacing of the StyledString.The unit is vp.
 
 **Type:** double
 
@@ -150,7 +140,7 @@ readonly paragraphSpacing?: double
 readonly shaderStyle?: ShaderStyle
 ```
 
-获取文本着色器效果。
+Get the shader style of the StyledString.
 
 **Type:** [ShaderStyle](arkts-arkui-shaderstyle-c.md)
 
@@ -170,13 +160,7 @@ readonly shaderStyle?: ShaderStyle
 readonly tailIndents?: Array<double>
 ```
 
-获取属性字符串文本段落的文本尾部缩进距离。
-
-单位：vp
-
-取值范围：[0, INT32_MAX]
-
-值为0时不做尾部缩进。
+Get the tail indentation of the StyledString.The unit is vp.
 
 **Type:** Array&lt;double&gt;
 
@@ -196,7 +180,7 @@ readonly tailIndents?: Array<double>
 readonly textAlign?: TextAlign
 ```
 
-获取属性字符串文本段落在水平方向的对齐方式。
+Get the text alignment of the StyledString.
 
 **Type:** [TextAlign](arkts-arkui-textalign-e.md)
 
@@ -216,7 +200,7 @@ readonly textAlign?: TextAlign
 readonly textDirection?: TextDirection
 ```
 
-获取文本方向。
+Get the text direction of the StyledString.
 
 **Type:** [TextDirection](arkts-arkui-textdirection-e.md)
 
@@ -236,9 +220,7 @@ readonly textDirection?: TextDirection
 readonly textIndent?: double
 ```
 
-获取属性字符串文本段落的首行文本缩进。
-
-单位：vp
+Get the first line indentation of the StyledString.The unit is vp.
 
 **Type:** double
 
@@ -258,10 +240,7 @@ readonly textIndent?: double
 readonly textVerticalAlign?: TextVerticalAlign
 ```
 
-获取属性字符串文本段落在垂直方向的对齐方式。
-
-一个段落下使用同一字号必须同时设置行高[lineHeight](../../../reference/apis-arkui/arkui-ts/ts-basic-components-text.md#lineheight)或者同一个段落不同字号文本混排时才有效果差异，否则设置了该属性任意枚举值和未设置该属性都是一样的排版效果。属性字符串[TextStyle](arkts-arkui-styledstring-textstyle-c.md)中的SuperscriptStyle上下角标样式仅在  
-[TextVerticalAlign](../../../reference/apis-arkui/arkui-ts/ts-text-common.md#textverticalalign20)属性值为TextVerticalAlign.BASELINE时生效，其余垂直对齐方式下上下角标文本和普通文本表现一致，无上下角标效果。
+Get the text vertical alignment of the StyledString.
 
 **Type:** [TextVerticalAlign](arkts-arkui-textverticalalign-e.md)
 
@@ -281,7 +260,7 @@ readonly textVerticalAlign?: TextVerticalAlign
 readonly wordBreak?: WordBreak
 ```
 
-获取属性字符串文本段落的断行规则。
+Get the wordBreak mode of the StyledString.
 
 **Type:** [WordBreak](arkts-arkui-wordbreak-e.md)
 

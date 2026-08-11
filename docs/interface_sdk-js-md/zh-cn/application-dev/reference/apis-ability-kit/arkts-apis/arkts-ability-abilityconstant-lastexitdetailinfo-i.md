@@ -10,12 +10,6 @@
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 
-## 导入模块
-
-```TypeScript
-import { AbilityConstant } from 'kits/@kit.AbilityKit';
-```
-
 ## exitMsg
 
 ```TypeScript

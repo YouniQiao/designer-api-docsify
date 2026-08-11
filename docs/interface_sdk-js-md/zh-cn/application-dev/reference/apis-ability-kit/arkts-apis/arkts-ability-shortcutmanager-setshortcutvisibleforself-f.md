@@ -1,11 +1,5 @@
 # setShortcutVisibleForSelf
 
-## 导入模块
-
-```TypeScript
-import { shortcutManager } from 'kits/@kit.AbilityKit';
-```
-
 ## setShortcutVisibleForSelf
 
 ```TypeScript
@@ -39,9 +33,11 @@ function setShortcutVisibleForSelf(id: string, visible: boolean): Promise<void>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 17700070 | The specified shortcut id is not exist. |
+| [17700070](../errorcode-bundle.md#17700070-指定的快捷方式id不合法) | The specified shortcut id is not exist. |
 
 ## 示例
+
+ArkTS-Dyn示例:
 
 ```TypeScript
 import { shortcutManager } from '@kit.AbilityKit';
@@ -52,7 +48,24 @@ shortcutManager.setShortcutVisibleForSelf("shortcut_id", false)
   .then(() => {
     console.info('setShortcutVisibleForSelf success');
   }).catch((err: BusinessError) => {
-  console.error(`setShortcutVisibleForSelf errData is errCode:${err.code}  message:${err.message}`);
+    console.error(`setShortcutVisibleForSelf errData is errCode:${err.code}  message:${err.message}`);
+});
+```
+
+ArkTS-Sta示例:
+
+```TypeScript
+'use static'
+
+import { shortcutManager } from '@kit.AbilityKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+// 请替换为module.json5配置文件中的shortcuts标签下实际配置的shortcutId字段
+shortcutManager.setShortcutVisibleForSelf("shortcut_id", false)
+  .then(() => {
+    console.info('setShortcutVisibleForSelf success');
+  }).catch((err: Error) => {
+    console.error(`setShortcutVisibleForSelf errData is errCode:${(err as BusinessError).code}  message:${(err as BusinessError).message}`);
 });
 ```
 

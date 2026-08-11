@@ -1,6 +1,6 @@
 # DistanceMeasurementConfigParams（系统接口）
 
-Configuration parameters for the distance measurement interface
+测距接口的输入参数配置。根据不同的参数配置，执行对应的算法。
 
 **起始版本：** 23
 
@@ -12,19 +12,13 @@ Configuration parameters for the distance measurement interface
 
 **系统接口：** 此接口为系统接口。
 
-## 导入模块
-
-```TypeScript
-import { spatialAwareness } from 'kits/@kit.MultimodalAwarenessKit';
-```
-
 ## deviceList
 
 ```TypeScript
 deviceList: string[]
 ```
 
-distance measurement supported devices list
+表示设备列表。
 
 **类型：** string[]
 
@@ -46,7 +40,7 @@ distance measurement supported devices list
 reportFrequency: int
 ```
 
-distance measurement result reporting frequency
+表示结果上报频率。
 
 **类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
@@ -68,7 +62,7 @@ distance measurement result reporting frequency
 reportMode: ReportingMode
 ```
 
-distance measurement result reporting mode
+表示结果上报模式。
 
 **类型：** [ReportingMode](arkts-multimodalawareness-spatialawareness-reportingmode-e-sys.md)
 
@@ -90,7 +84,7 @@ distance measurement result reporting mode
 techType: TechnologyType
 ```
 
-distance measurement technology type
+表示信号类型。
 
 **类型：** [TechnologyType](arkts-multimodalawareness-spatialawareness-technologytype-e-sys.md)
 

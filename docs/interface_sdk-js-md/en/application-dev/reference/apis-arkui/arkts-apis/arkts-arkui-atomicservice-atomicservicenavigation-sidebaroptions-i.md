@@ -1,6 +1,6 @@
 # SideBarOptions
 
-侧边栏的功能选项。
+Defines sidebar options.
 
 **Since:** 18
 
@@ -22,7 +22,7 @@ import { GradientBackground, TitleBarType, MixMode, AtomicServiceNavigation, Sid
 onChange?: Callback<boolean>
 ```
 
-侧边栏显示隐藏回调。
+Side bar status change callback.
 
 **Type:** [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;boolean&gt;
 
@@ -42,7 +42,7 @@ onChange?: Callback<boolean>
 sideBarBackground?: ResourceColor
 ```
 
-设置侧边栏的背景颜色。
+Side bar Background.
 
 **Type:** [ResourceColor](arkts-arkui-resourcecolor-t.md)
 
@@ -62,7 +62,7 @@ sideBarBackground?: ResourceColor
 sideBarIcon?: Resource | SymbolGlyphModifier
 ```
 
-侧边栏的展开图标。
+Side bar icon.
 
 **Type:** [Resource](../../apis-localization-kit/arkts-apis/arkts-localization-resource-resource-i.md) \| SymbolGlyphModifier
 

@@ -4,7 +4,7 @@
 type OnAtomicServiceRequestFailureFn = (appId: string, failureCode: FailureCode, failureMessage: string) => void
 ```
 
-打开原子化服务失败时的回调函数。
+Notify the failure result of openAtomicService.
 
 **Since:** 23
 
@@ -20,7 +20,7 @@ type OnAtomicServiceRequestFailureFn = (appId: string, failureCode: FailureCode,
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| appId | string | Yes | 被拉起原子化服务的appId。 |
-| failureCode | [FailureCode](arkts-ability-app-ability-completionhandlerforatomicservice-failurecode-e.md) | Yes | 失败原因的错误码。 |
-| failureMessage | string | Yes | 失败原因的描述。 |
+| appId | string | Yes | Globally unique identifier of an atomicservice, which is allocated by the cloud. |
+| failureCode | [FailureCode](arkts-ability-app-ability-completionhandlerforatomicservice-failurecode-e.md) | Yes | Indicates the failure code for open atomic service. |
+| failureMessage | string | Yes | Indicates the detail failure message for open atomic service. |
 

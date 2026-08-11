@@ -18,7 +18,7 @@ controller?: TextInputController
 
 设置TextInput控制器。当需要通过控制器调用光标设置、文本选择等方法时传入此参数。不设置时默认无控制器，无法使用控制器相关方法。
 
-**类型：** [TextInputController](../arkts-apis/arkts-arkui-textinput-textinputcontroller-c.md)
+**类型：** [TextInputController](arkts-arkui-textinputcontroller-c.md)
 
 **起始版本：** 8
 

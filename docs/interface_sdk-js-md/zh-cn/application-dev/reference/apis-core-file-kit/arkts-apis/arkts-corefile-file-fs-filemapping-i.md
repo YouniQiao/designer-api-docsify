@@ -10,12 +10,6 @@
 
 **系统能力：** SystemCapability.FileManagement.File.FileIO
 
-## 导入模块
-
-```TypeScript
-import { Options, ReaderIteratorResult, Watcher, ReadTextOptions, WatchEventListener, TaskSignal, WriteOptions, ListFileExtOptions, DfsListeners, Filter, ReadOptions, ListFileOptions, WatchEvent, FileFilter, ConflictFiles } from 'kits/@kit.CoreFileKit';
-```
-
 ## capacity
 
 ```TypeScript
@@ -230,6 +224,8 @@ msync(): Promise<void>
 
 ## 示例
 
+ArkTS-Dyn示例：
+
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
 
@@ -243,6 +239,29 @@ mapping.write(buffer);
 mapping.msync().then(() => {
   console.info("Succeeded in msync.");
 }).catch((err: BusinessError) => {
+  console.error(`Failed to msync. Code: ${err.code}, message: ${err.message}`);
+}).finally(() => {
+  mapping.unmapSync();
+  fileIo.closeSync(file);
+});
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let filePath = pathDir + "/test.txt";
+let file = fileIo.openSync(filePath, fileIo.OpenMode.READ_WRITE | fileIo.OpenMode.CREATE);
+let mapping = fileIo.mmapSync(file, fileIo.MappingMode.READ_WRITE, 0, 1024);
+
+let buffer = new ArrayBuffer(11);
+mapping.write(buffer);
+
+mapping.msync().then(() => {
+  console.info("Succeeded in msync.");
+}).catch((error: Error) => {
+  let err: BusinessError = error as BusinessError;
   console.error(`Failed to msync. Code: ${err.code}, message: ${err.message}`);
 }).finally(() => {
   mapping.unmapSync();
@@ -294,6 +313,8 @@ msync(position: number, length: number): Promise<void>
 
 ## 示例
 
+ArkTS-Dyn示例：
+
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
 
@@ -307,6 +328,29 @@ mapping.write(50, buffer);
 mapping.msync(50, buffer.byteLength).then(() => {
   console.info("Succeeded in msync.");
 }).catch((err: BusinessError) => {
+  console.error(`Failed to msync. Code: ${err.code}, message: ${err.message}`);
+}).finally(() => {
+  mapping.unmapSync();
+  fileIo.closeSync(file);
+});
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let filePath = pathDir + "/test.txt";
+let file = fileIo.openSync(filePath, fileIo.OpenMode.READ_WRITE | fileIo.OpenMode.CREATE);
+let mapping = fileIo.mmapSync(file, fileIo.MappingMode.READ_WRITE, 0, 1024);
+
+let buffer = new ArrayBuffer(11);
+mapping.write(50, buffer);
+
+mapping.msync(50, buffer.byteLength).then(() => {
+  console.info("Succeeded in msync.");
+}).catch((error: Error) => {
+  let err: BusinessError = error as BusinessError;
   console.error(`Failed to msync. Code: ${err.code}, message: ${err.message}`);
 }).finally(() => {
   mapping.unmapSync();
@@ -698,6 +742,8 @@ unmap(): Promise<void>
 
 ## 示例
 
+ArkTS-Dyn示例：
+
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
 
@@ -710,6 +756,27 @@ mapping.write(buffer);
 mapping.unmap().then(() => {
   console.info("Succeeded in unmap.");
 }).catch((err: BusinessError) => {
+  console.error(`Failed to unmap. Code: ${err.code}, message: ${err.message}`);
+}).finally(() => {
+  fileIo.closeSync(file);
+});
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let filePath = pathDir + "/test.txt";
+let file = fileIo.openSync(filePath, fileIo.OpenMode.READ_WRITE | fileIo.OpenMode.CREATE);
+let mapping = fileIo.mmapSync(file, fileIo.MappingMode.READ_WRITE, 0, 1024);
+
+let buffer = new ArrayBuffer(11);
+mapping.write(buffer);
+mapping.unmap().then(() => {
+  console.info("Succeeded in unmap.");
+}).catch((error: Error) => {
+  let err: BusinessError = error as BusinessError;
   console.error(`Failed to unmap. Code: ${err.code}, message: ${err.message}`);
 }).finally(() => {
   fileIo.closeSync(file);

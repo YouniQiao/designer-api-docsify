@@ -12,7 +12,7 @@ import { batteryInfo } from 'kits/@kit.BasicServicesKit';
 function batteryTemperature(): int
 ```
 
-表示当前设备电池的温度，单位0.1摄氏度。
+Battery temperature of the device, in unit of 0.1°C.
 
 **Since:** 23
 
@@ -26,5 +26,5 @@ function batteryTemperature(): int
 
 | Type | Description |
 | --- | --- |
-| int | 返回当前设备电池的温度，单位0.1摄氏度。 |
+| int | Returns the battery temperature of the device, in unit of 0.1°C. |
 

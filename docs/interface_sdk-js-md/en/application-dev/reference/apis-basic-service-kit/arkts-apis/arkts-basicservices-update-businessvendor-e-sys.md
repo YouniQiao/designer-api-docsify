@@ -1,6 +1,6 @@
 # BusinessVendor (System API)
 
-设备厂家。
+Represents a device vendor.
 
 **Since:** 9
 
@@ -18,7 +18,7 @@
 PUBLIC = 'public'
 ```
 
-开源。表示供应商类型为开源厂商，适用于开源版本的升级场景。
+Open source. This parameter indicates that the vendor is an open-source vendor, which is applicable to open-source version upgrade.
 
 **Since:** 9
 

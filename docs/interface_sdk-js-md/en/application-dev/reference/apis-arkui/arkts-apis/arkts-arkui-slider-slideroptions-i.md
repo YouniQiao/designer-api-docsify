@@ -1,6 +1,6 @@
 # SliderOptions
 
-滑动条的信息。
+Parameters of the slider.
 
 **Since:** 23
 
@@ -16,13 +16,7 @@
 direction?: Axis
 ```
 
-设置滑动条滑动方向为水平或竖直方向。
-
-默认值：Axis.Horizontal 
-
-**ArkTS-Dyn起始版本：** 8 
-
-**ArkTS-Sta起始版本：** 23
+Whether the slider moves horizontally or vertically.
 
 **Type:** [Axis](arkts-arkui-axis-e.md)
 
@@ -44,19 +38,7 @@ direction?: Axis
 max?: double
 ```
 
-设置最大值。
-
-默认值：100
-
-**说明：**
-
-min >= max异常情况，min取默认值0，max取默认值100。
-
-value不在[min, max]范围之内，取min或者max，靠近min取min，靠近max取max。 
-
-**ArkTS-Dyn起始版本：** 7 
-
-**ArkTS-Sta起始版本：** 23
+Maximum value.&lt;p&gt;&lt;strong&gt;NOTE&lt;/strong&gt;:&lt;br&gt;If the value of min is greater than or equal to the value of max, the min value defaults to 0, and the max value defaults to 100. If the value is not within the [min, max] range, the value of min or max is used,whichever is closer.&lt;/p&gt;
 
 **Type:** double
 
@@ -78,13 +60,7 @@ value不在[min, max]范围之内，取min或者max，靠近min取min，靠近ma
 min?: double
 ```
 
-设置最小值。
-
-默认值：0 
-
-**ArkTS-Dyn起始版本：** 7 
-
-**ArkTS-Sta起始版本：** 23
+Minimum value.
 
 **Type:** double
 
@@ -106,15 +82,7 @@ min?: double
 reverse?: boolean
 ```
 
-设置滑动条取值范围是否反向。
-
-true：横向Slider从右往左滑动，竖向Slider从下往上滑动；false：横向Slider从左往右滑动，竖向Slider从上往下滑动。
-
-默认值：false 
-
-**ArkTS-Dyn起始版本：** 8 
-
-**ArkTS-Sta起始版本：** 23
+Whether the slider values are reversed. By default, the values increase from left to right for a horizontal slider and from top to bottom for a vertical slider.
 
 **Type:** boolean
 
@@ -136,19 +104,7 @@ true：横向Slider从右往左滑动，竖向Slider从下往上滑动；false�
 step?: double
 ```
 
-设置Slider滑动步长。
-
-默认值：1
-
-取值范围：[0.01, max - min]
-
-**说明：**
-
-若设置的step值小于0或大于max值，则按默认值显示。 
-
-**ArkTS-Dyn起始版本：** 7 
-
-**ArkTS-Sta起始版本：** 23
+Step of the slider.&lt;p&gt;&lt;strong&gt;NOTE&lt;/strong&gt;:&lt;br&gt;If this parameter is set to a value less than 0 or greater than the value of max, the default value is used.&lt;/p&gt;
 
 **Type:** double
 
@@ -170,13 +126,7 @@ step?: double
 style?: SliderStyle
 ```
 
-设置Slider的滑块与滑轨显示样式。
-
-默认值：SliderStyle.OutSet 
-
-**ArkTS-Dyn起始版本：** 7 
-
-**ArkTS-Sta起始版本：** 23
+Style of the slider thumb and track.
 
 **Type:** [SliderStyle](../arkts-components/arkts-arkui-sliderstyle-e.md)
 
@@ -198,24 +148,7 @@ style?: SliderStyle
 value?: double | undefined | Bindable<double>
 ```
 
-当前进度值。取值为undefined时，按默认值处理。
-
-默认值：与属性min的取值一致。
-
-从API version 10开始，该属性支持[\$\$](../../../ui/state-management/arkts-two-way-sync.md)双向绑定变量。
-
-该属性支持[!!](../../../ui/state-management/arkts-new-binding.md#系统组件参数双向绑定)双向绑定变量。
-
-取值范围： [min, max]
-
-小于min时取min，大于max时取max。
-
-\$\$运算符为系统组件提供TS变量的引用，使得TS变量和slider组件的value值保持同步。详细使用示例请参考  
-[示例7（设置滑动条的双向绑定）](../../../reference/apis-arkui/arkui-ts/ts-basic-components-slider copy.md#示例7设置滑动条的双向绑定)。 
-
-**ArkTS-Dyn起始版本：** 7 
-
-**ArkTS-Sta起始版本：** 23
+Current value of Slider.
 
 **Type:** double \| undefined \| Bindable&lt;double&gt;
 

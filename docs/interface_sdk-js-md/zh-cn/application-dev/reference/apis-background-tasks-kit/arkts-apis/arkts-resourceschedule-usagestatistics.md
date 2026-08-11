@@ -14,12 +14,6 @@
 
 **系统能力：** SystemCapability.ResourceSchedule.UsageStatistics.App
 
-## 导入模块
-
-```TypeScript
-import { usageStatistics } from 'kits/@kit.BackgroundTasksKit';
-```
-
 ## 汇总
 
 <!--Del-->

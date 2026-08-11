@@ -1,11 +1,5 @@
 # getTotalInodes
 
-## 导入模块
-
-```TypeScript
-import { storageStatistics } from 'kits/@kit.CoreFileKit';
-```
-
 ## getTotalInodes
 
 ```TypeScript
@@ -39,12 +33,26 @@ function getTotalInodes(): Promise<long>
 
 ## 示例
 
+ArkTS-Dyn示例：
+
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
 
 storageStatistics.getTotalInodes().then((totalInodes: number) => {
   console.info('getTotalInodes successfully:' + totalInodes);
 }).catch((err: BusinessError) => {
+  console.error(`getTotalInodes failed. Code: ${err.code}, message: ${err.message}`);
+});
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+storageStatistics.getTotalInodes().then((totalInodes: long) => {
+  console.info('getTotalInodes successfully:' + totalInodes);
+}).catch((err: BusinessError): void => {
   console.error(`getTotalInodes failed. Code: ${err.code}, message: ${err.message}`);
 });
 ```

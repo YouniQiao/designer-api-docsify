@@ -1,6 +1,6 @@
 # ImmersiveEffect
 
-沉浸效果。
+Describes the immersive effect.
 
 **Since:** 20
 
@@ -22,9 +22,9 @@ import { inputMethodEngine } from 'kits/@kit.IMEKit';
 fluidLightMode?: FluidLightMode
 ```
 
-流光模式，未填充时默认为NONE。
+Fluid light mode. If this attribute is not specified or is set to an invalid value, the fluid light mode is not used by default.
 
-该属性仅系统应用可以使用。
+This attribute is available only to system applications.
 
 **Type:** [FluidLightMode](arkts-ime-inputmethodengine-fluidlightmode-e-sys.md)
 

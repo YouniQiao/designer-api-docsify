@@ -58,7 +58,7 @@ rangeAfter: TextRange
 
 变化后的选区范围。
 
-**类型：** [TextRange](arkts-arkui-textrange-i.md)
+**类型：** [TextRange](arkts-arkui-textcommon-textrange-i.md)
 
 **起始版本：** 23
 
@@ -78,7 +78,7 @@ rangeBefore: TextRange
 
 变化前的选区范围。
 
-**类型：** [TextRange](arkts-arkui-textrange-i.md)
+**类型：** [TextRange](arkts-arkui-textcommon-textrange-i.md)
 
 **起始版本：** 23
 

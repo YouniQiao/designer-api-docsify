@@ -12,7 +12,7 @@ import { mechanicManager } from 'kits/@kit.MechanicKit';
 function getRotationAxesStatus(mechId: int): RotationAxesStatus
 ```
 
-获取当前转轴状态
+Obtains the status of the rotation axes.
 
 **Since:** 20
 
@@ -28,7 +28,7 @@ function getRotationAxesStatus(mechId: int): RotationAxesStatus
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| mechId | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | 机械设备ID |
+| mechId | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | ID of the mechanical device. |
 
 **Return value:**
 
@@ -40,9 +40,9 @@ function getRotationAxesStatus(mechId: int): RotationAxesStatus
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 202 | Not system application. |
-| 33300001 | Service exception. |
-| 33300002 | Device not connected. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system application. |
+| [33300001](../errorcode-mechanic.md#33300001-system-error) | Service exception. |
+| [33300002](../errorcode-mechanic.md#33300002-device-not-connected) | Device not connected. |
 
 ## Examples
 

@@ -1,6 +1,6 @@
 # TileMode (System API)
 
-像素填充模式枚举。
+Pixel fill mode enumeration.
 
 **Since:** 12
 
@@ -18,7 +18,7 @@
 CLAMP = 0
 ```
 
-截断。
+Clamp mode.
 
 **Since:** 12
 
@@ -36,7 +36,7 @@ CLAMP = 0
 REPEAT = 1
 ```
 
-重复。
+Repeat mode.
 
 **Since:** 12
 
@@ -54,7 +54,7 @@ REPEAT = 1
 MIRROR = 2
 ```
 
-镜像。
+Mirror mode.
 
 **Since:** 12
 
@@ -72,7 +72,7 @@ MIRROR = 2
 DECAL = 3
 ```
 
-透明。
+Decal mode.
 
 **Since:** 12
 

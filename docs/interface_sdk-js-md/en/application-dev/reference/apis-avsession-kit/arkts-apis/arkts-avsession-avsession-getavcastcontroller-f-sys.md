@@ -12,9 +12,7 @@ import { avSession } from 'kits/@kit.AVSessionKit';
 function getAVCastController(sessionId: string, callback: AsyncCallback<AVCastController>): void
 ```
 
-设备建立连接后，获取投播控制器。结果通过callback异步回调方式返回。
-
-此功能在本端和远端都可以使用，通过该接口可以获取一个相同的控制器，进行投播音频的播放控制。
+Register a callback to retrieve an avsession cast controller.This function can be used at both side to get the same controller to do the playback control.
 
 **Since:** 10
 
@@ -32,22 +30,23 @@ function getAVCastController(sessionId: string, callback: AsyncCallback<AVCastCo
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| sessionId | string | Yes | 用于指定要获取的投播控制器的sessionId。 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;AVCastController&gt; | Yes | 回调函数，返回投播控制器实例。 |
+| sessionId | string | Yes | Specifies the sessionId to get controller. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;AVCastController&gt; | Yes | async callback for the AVCastController. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | parameter check failed. 1.Mandatory parameters are left unspecified. 2.Parameter verification failed. |
-| 6600101 | Session service exception |
-| 6600102 | session does not exist |
-| 201 | permission denied |
-| 202 | Not System App. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | parameter check failed. 1.Mandatory parameters are left unspecified. 2.Parameter verification failed. |
+| [6600101](../errorcode-avsession.md#6600101-session-service-exception) | Session service exception |
+| [6600102](../errorcode-avsession.md#6600102-session-does-not-exist) | session does not exist |
+| [201](../../errorcode-universal.md#201-permission-denied) | permission denied |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not System App. |
 
 ## Examples
 
 ```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
 import { avSession } from '@kit.AVSessionKit';
 
 @Entry
@@ -64,10 +63,14 @@ struct Index {
           let context = this.getUIContext().getHostContext() as Context;
           let sessionId: string = ""; // Used as an input parameter of subsequent functions.
 
-          let avCastController: avSession.AVCastController;
-          avSession.getAVCastController(sessionId, (avcontroller: avSession.AVCastController) => {
-              avCastController = avcontroller;
-              console.info('Succeeded in getting AV cast controller.');
+          let aVCastController: avSession.AVCastController;
+          avSession.getAVCastController(sessionId, (err: BusinessError, avcontroller: avSession.AVCastController) => {
+            if (err) {
+              console.error(`getAVCastController BusinessError: code: ${err.code}, message: ${err.message}`);
+            } else {
+              aVCastController = avcontroller;
+              console.info('getAVCastController : SUCCESS ');
+            }
           });
         })
     }
@@ -109,10 +112,10 @@ Register a callback to retrieve an avsession cast controller.This function can b
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 6600101 | Session service exception |
-| 6600102 | session does not exist |
-| 201 | permission denied |
-| 202 | Not System App. |
+| [6600101](../errorcode-avsession.md#6600101-session-service-exception) | Session service exception |
+| [6600102](../errorcode-avsession.md#6600102-session-does-not-exist) | session does not exist |
+| [201](../../errorcode-universal.md#201-permission-denied) | permission denied |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not System App. |
 
 
 ## getAVCastController
@@ -121,9 +124,7 @@ Register a callback to retrieve an avsession cast controller.This function can b
 function getAVCastController(sessionId: string): Promise<AVCastController>
 ```
 
-设备建立连接后，获取投播控制器。结果通过Promise方式返回。
-
-此功能在本端和远端都可以使用，通过该接口可以获取一个相同的控制器，进行投播音频的播放控制。
+Get the current session's remote controller client.If the avsession is not under casting state, the controller will return null.
 
 **Since:** 10
 
@@ -141,27 +142,28 @@ function getAVCastController(sessionId: string): Promise<AVCastController>
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| sessionId | string | Yes | 用于指定要获取的投播控制器的sessionId。 |
+| sessionId | string | Yes | Specifies the sessionId to get controller. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;AVCastController&gt; | Promise对象。返回投播控制器实例。 |
+| Promise&lt;AVCastController&gt; | Promise for the AVCastController |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | parameter check failed. 1.Mandatory parameters are left unspecified. 2.Parameter verification failed. |
-| 6600101 | server exception |
-| 6600102 | session does not exist |
-| 201 | permission denied |
-| 202 | Not System App. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | parameter check failed. 1.Mandatory parameters are left unspecified. 2.Parameter verification failed. |
+| [6600101](../errorcode-avsession.md#6600101-session-service-exception) | server exception |
+| [6600102](../errorcode-avsession.md#6600102-session-does-not-exist) | session does not exist |
+| [201](../../errorcode-universal.md#201-permission-denied) | permission denied |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not System App. |
 
 ## Examples
 
 ```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
 import { avSession } from '@kit.AVSessionKit';
 
 @Entry
@@ -178,10 +180,12 @@ struct Index {
           let context = this.getUIContext().getHostContext() as Context;
           let sessionId: string = ""; // Used as an input parameter of subsequent functions.
 
-          let avCastController: avSession.AVCastController;
+          let aVCastController: avSession.AVCastController;
           avSession.getAVCastController(sessionId).then((avcontroller: avSession.AVCastController) => {
-            avCastController = avcontroller;
-            console.info('Succeeded in getting AV cast controller.');
+            aVCastController = avcontroller;
+            console.info('getAVCastController : SUCCESS');
+          }).catch((err: BusinessError) => {
+            console.error(`getAVCastController BusinessError: code: ${err.code}, message: ${err.message}`);
           });
         })
     }
@@ -228,8 +232,8 @@ Get the current session's remote controller client.If the avsession is not under
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 6600101 | server exception |
-| 6600102 | session does not exist |
-| 201 | permission denied |
-| 202 | Not System App. |
+| [6600101](../errorcode-avsession.md#6600101-session-service-exception) | server exception |
+| [6600102](../errorcode-avsession.md#6600102-session-does-not-exist) | session does not exist |
+| [201](../../errorcode-universal.md#201-permission-denied) | permission denied |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not System App. |
 

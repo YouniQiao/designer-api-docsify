@@ -1,6 +1,6 @@
 # StyledString
 
-属性字符串
+StyledString
 
 **Since:** 23
 
@@ -17,7 +17,7 @@ static marshalling(styledString: StyledString, callback: StyledStringMarshallCal
         ArrayBuffer | undefined
 ```
 
-序列化属性字符串，通过定义回调来序列化属性字符串的[StyledStringMarshallingValue](arkts-arkui-styledstringmarshallingvalue-t-sys.md)。
+Returns ArrayBuffer from the serialized styled string.
 
 **Since:** 23
 
@@ -35,8 +35,8 @@ static marshalling(styledString: StyledString, callback: StyledStringMarshallCal
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| styledString | [StyledString](arkts-arkui-styledstring-c-sys.md) | Yes | 属性字符串参数。 |
-| callback | [StyledStringMarshallCallback](arkts-arkui-styledstringmarshallcallback-t-sys.md) | Yes | 如何序列化[StyledStringMarshallingValue](arkts-arkui-styledstringmarshallingvalue-t-sys.md)的回调。 |
+| styledString | [StyledString](arkts-arkui-styledstring-c-sys.md) | Yes | StyledString parameter. |
+| callback | [StyledStringMarshallCallback](arkts-arkui-styledstringmarshallcallback-t-sys.md) | Yes | When marshalling StyledStringMarshingValue, will trigger this callback to get ArrayBuffer |
 
 **Return value:**
 
@@ -50,7 +50,7 @@ static marshalling(styledString: StyledString, callback: StyledStringMarshallCal
 static marshalling(styledString: StyledString): ArrayBuffer | undefined
 ```
 
-序列化属性字符串。
+Returns ArrayBuffer from the serialized styled string.
 
 **Since:** 23
 
@@ -68,7 +68,7 @@ static marshalling(styledString: StyledString): ArrayBuffer | undefined
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| styledString | [StyledString](arkts-arkui-styledstring-c-sys.md) | Yes | 属性字符串参数。 |
+| styledString | [StyledString](arkts-arkui-styledstring-c-sys.md) | Yes | StyledString parameter. |
 
 **Return value:**
 
@@ -83,7 +83,7 @@ static unmarshalling(buffer: ArrayBuffer, callback: StyledStringUnmarshallCallba
         Promise<StyledString | undefined>
 ```
 
-反序列化后得到属性字符串，通过定义回调来反序列化[StyledStringMarshallingValue](arkts-arkui-styledstringmarshallingvalue-t-sys.md)。
+Returns StyledString from the deserialized ArrayBuffer.
 
 **Since:** 23
 
@@ -101,8 +101,8 @@ static unmarshalling(buffer: ArrayBuffer, callback: StyledStringUnmarshallCallba
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| buffer | ArrayBuffer | Yes | 属性字符串序列化后的数据。 |
-| callback | [StyledStringUnmarshallCallback](arkts-arkui-styledstringunmarshallcallback-t-sys.md) | Yes | 如何反序列化ArrayBuffer的回调。 |
+| buffer | ArrayBuffer | Yes | The buffer will be deserialized to a StyledString. |
+| callback | [StyledStringUnmarshallCallback](arkts-arkui-styledstringunmarshallcallback-t-sys.md) | Yes | When unmarshalling ArrayBuffer, will trigger this callback to get StyledStringMarshingValue. |
 
 **Return value:**
 
@@ -114,8 +114,8 @@ static unmarshalling(buffer: ArrayBuffer, callback: StyledStringUnmarshallCallba
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 170002 | Styled string decode error. |
-| 401 | Parameter error. Possible causes: &lt;br&gt; 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameters types. &lt;br&gt; 3. Parameter verification failed. |
+| [170002](../errorcode-styled-string.md#170002-styled-string-decoding-error) | Styled string decode error. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: &lt;br&gt; 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameters types. &lt;br&gt; 3. Parameter verification failed. |
 
 ## unmarshalling
 
@@ -123,7 +123,7 @@ static unmarshalling(buffer: ArrayBuffer, callback: StyledStringUnmarshallCallba
 static unmarshalling(buffer: ArrayBuffer): Promise<StyledString | undefined>
 ```
 
-反序列化后得到属性字符串。
+Returns StyledString from the deserialized ArrayBuffer.
 
 **Since:** 23
 
@@ -141,7 +141,7 @@ static unmarshalling(buffer: ArrayBuffer): Promise<StyledString | undefined>
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| buffer | ArrayBuffer | Yes | 属性字符串序列化后的数据。 |
+| buffer | ArrayBuffer | Yes | The buffer will be deserialized to a StyledString. |
 
 **Return value:**
 
@@ -153,6 +153,6 @@ static unmarshalling(buffer: ArrayBuffer): Promise<StyledString | undefined>
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 170002 | Styled string decode error. |
-| 401 | Parameter error. Possible causes: &lt;br&gt; 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameters types. &lt;br&gt; 3. Parameter verification failed. |
+| [170002](../errorcode-styled-string.md#170002-styled-string-decoding-error) | Styled string decode error. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: &lt;br&gt; 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameters types. &lt;br&gt; 3. Parameter verification failed. |
 

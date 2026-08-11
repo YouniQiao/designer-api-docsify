@@ -1,8 +1,8 @@
 # RichEditorSpanStyleOptions
 
-文本样式选项。
+Defines the text span style options.
 
-继承自[RichEditorRange](arkts-arkui-richeditorrange-i.md)。
+Inherits [RichEditorRange](arkts-arkui-richeditorrange-i.md).
 
 **Inheritance/Implementation:** RichEditorSpanStyleOptions extends [RichEditorRange](arkts-arkui-richeditorrange-i.md)
 

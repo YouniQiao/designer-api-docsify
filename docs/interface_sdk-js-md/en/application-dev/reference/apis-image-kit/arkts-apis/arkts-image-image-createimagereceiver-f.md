@@ -12,14 +12,9 @@ import { image } from 'kits/@kit.ImageKit';
 function createImageReceiver(width: number, height: number, format: number, capacity: number): ImageReceiver
 ```
 
-通过宽、高、图片格式、容量创建ImageReceiver实例。ImageReceiver做为图片的接收方、消费者，它的参数属性实际上不会对接收到的图片产生影响。图片属性的配置应在发送方、生产者进行，如相机预览流  
-[createPreviewOutput](../../apis-camera-kit/arkts-apis/arkts-camera-camera-cameramanager-i.md/arkts-camera-camera-cameramanager-i.md#createpreviewoutput)。
-
-由于图片占用内存较大，所以当ImageReceiver实例使用完成后，应主动调用[release](arkts-image-image-imagereceiver-i.md#release)方法及时释放内存。释放时应确保该实例的所有异步方法均执行完成，且后续不再使用该实例。
-
-> **说明：**
-> 
-> 从API version 9开始支持，从API version 11废弃，建议使用[createImageReceiver](arkts-image-image-createimagereceiver-f.md#createimagereceiver)代替。
+Creates an ImageReceiver instance by specifying the image width, height, format, and capacity. The ImageReceiver acts as the receiver and consumer of images. Its parameter properties do not actually affect the received images. The configuration of image properties should be done on the sending side (the producer), such as when creating a camera preview stream with   
+[createPreviewOutput](../../apis-camera-kit/arkts-apis/arkts-camera-camera-cameramanager-i.md/arkts-camera-camera-cameramanager-i.md#createpreviewoutput).Images occupy a large amount of memory. When you finish using an ImageReceiver instance, call   
+[release](arkts-image-image-imagereceiver-i.md#release) to free the memory promptly. Before releasing the instance, ensure that all asynchronous operations associated with the instance have finished and the instance is no longer needed.
 
 **Since:** 9
 
@@ -37,16 +32,16 @@ function createImageReceiver(width: number, height: number, format: number, capa
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| width | number | Yes | 图像的默认宽度。单位：像素（px）。该参数不会影响接收到的图片宽度，实际宽度由生产者决定，如相机。 |
-| height | number | Yes | 图像的默认高度。单位：像素（px）。该参数不会影响接收到的图片高度，实际高度由生产者决定，如相机。 |
-| format | number | Yes | 图像格式，取值为[ImageFormat](arkts-image-image-imageformat-e.md)常量（目前仅支持 ImageFormat:JPEG，实际返回格式由生产者决定，如相机 ）。 |
-| capacity | number | Yes | 同时访问的最大图像数。该参数仅作为期望值，实际capacity由设备硬件决定。 |
+| width | number | Yes | Default image width, in px. This parameter does not affect the width of the received image. The actual width is determined by the producer, for example, the camera. |
+| height | number | Yes | Default image height, in px. This parameter does not affect the height of the received image. The actual height is determined by the producer, for example, the camera. |
+| format | number | Yes | Image format, which is a constant of [ImageFormat](arkts-image-image-imageformat-e.md). (Currently, only **ImageFormat:JPEG** is supported. The format actually returned is determined by the producer, for example, camera.) |
+| capacity | number | Yes | Maximum number of images that can be accessed at the same time. This parameter is used only as an expected value. The actual capacity is determined by the device hardware. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [ImageReceiver](arkts-image-image-imagereceiver-i.md) | 如果操作成功，则返回ImageReceiver实例。 |
+| [ImageReceiver](arkts-image-image-imagereceiver-i.md) | ImageReceiver instance. |
 
 ## Examples
 
@@ -61,10 +56,9 @@ let receiver: image.ImageReceiver = image.createImageReceiver(8192, 8192, image.
 function createImageReceiver(size: Size, format: ImageFormat, capacity: int): ImageReceiver
 ```
 
-通过图片大小、图片格式、容量创建ImageReceiver实例。ImageReceiver作为图片的接收方、消费者，它的参数属性实际上不会对接收到的图片产生影响。图片属性的配置应在发送方、生产者进行，如相机预览流  
-[createPreviewOutput](../../apis-camera-kit/arkts-apis/arkts-camera-camera-cameramanager-i.md/arkts-camera-camera-cameramanager-i.md#createpreviewoutput)。
-
-由于图片占用内存较大，所以当ImageReceiver实例使用完成后，应主动调用[release](arkts-image-image-imagereceiver-i.md#release)方法及时释放内存。释放时应确保该实例的所有异步方法均执行完成，且后续不再使用该实例。
+Creates an ImageReceiver instance by specifying the image size, format, and capacity. The ImageReceiver acts as the receiver and consumer of images. Its parameter properties do not actually affect the received images. The configuration of image properties should be done on the sending side (the producer), such as when creating a camera preview stream with   
+[createPreviewOutput](../../apis-camera-kit/arkts-apis/arkts-camera-camera-cameramanager-i.md/arkts-camera-camera-cameramanager-i.md#createpreviewoutput).Images occupy a large amount of memory. When you finish using an ImageReceiver instance, call   
+[release](arkts-image-image-imagereceiver-i.md#release) to free the memory promptly. Before releasing the instance, ensure that all asynchronous operations associated with the instance have finished and the instance is no longer needed.
 
 **Since:** 11
 
@@ -78,21 +72,21 @@ function createImageReceiver(size: Size, format: ImageFormat, capacity: int): Im
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| size | [Size](../../apis-arkui/arkts-apis/arkts-arkui-window-size-i.md) | Yes | 图像的默认大小。单位：像素（px）。该参数不会影响接收到的图片大小，实际返回大小由生产者决定，如相机。 |
-| format | [ImageFormat](arkts-image-image-imageformat-e.md) | Yes | 图像格式，取值为[ImageFormat](arkts-image-image-imageformat-e.md)常量（目前仅支持 ImageFormat:JPEG，实际返回格式由生产者决 定，如相机）。 |
-| capacity | int | Yes | 同时访问的最大图像数。该参数仅作为期望值，实际capacity由设备硬件决定。 |
+| size | [Size](../../apis-arkui/arkts-apis/arkts-arkui-window-size-i.md) | Yes | Default size of the image. This parameter does not affect the size of the received image. The actual returned size is determined by the producer, for example, the camera. |
+| format | [ImageFormat](arkts-image-image-imageformat-e.md) | Yes | Image format, which is a constant of [ImageFormat](arkts-image-image-imageformat-e.md). (Currently, only **ImageFormat:JPEG** is supported. The format actually returned is determined by the producer, for example, camera.) |
+| capacity | int | Yes | Maximum number of images that can be accessed at the same time. This parameter is used only as an expected value. The actual capacity is determined by the device hardware. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [ImageReceiver](arkts-image-image-imagereceiver-i.md) | 如果操作成功，则返回ImageReceiver实例。 |
+| [ImageReceiver](arkts-image-image-imagereceiver-i.md) | ImageReceiver instance. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types; |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types; |
 
 ## Examples
 
@@ -142,10 +136,7 @@ Creates an ImageReceiver instance.
 function createImageReceiver(options?: ImageReceiverOptions): ImageReceiver | undefined
 ```
 
-通过ImageReceiverOptions创建ImageReceiver实例。ImageReceiver作为图片的接收方、消费者，其参数属性实际上不会对接收到的图片产生影响。图片属性的配置应在发送方、生产者进行，如相机预览流  
-[createPreviewOutput](../../apis-camera-kit/arkts-apis/arkts-camera-camera-cameramanager-i.md/arkts-camera-camera-cameramanager-i.md#createpreviewoutput)。
-
-由于图片占用内存较大，所以当ImageReceiver实例使用完成后，应主动调用[release](arkts-image-image-imagereceiver-i.md#release)方法及时释放内存。释放时应确保该实例的所有异步方法均执行完成，且后续不再使用该实例。
+Creates an ImageReceiver instance.
 
 **Since:** 23
 
@@ -161,27 +152,17 @@ function createImageReceiver(options?: ImageReceiverOptions): ImageReceiver | un
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| options | [ImageReceiverOptions](arkts-image-image-imagereceiveroptions-i.md) | No | 创建ImageReceiver的属性，包括图片的默认大小和同时访问的最大图片数。 &lt;br&gt;未传入options时，默认的size为1920*1080，单位为像素（px），表示期望接收宽为1920px，高为1080px的图片。 &lt;br&gt;未传入options时，默认的capacity为3，表示期望同时最多有3张图片等待读取。 |
+| options | [ImageReceiverOptions](arkts-image-image-imagereceiveroptions-i.md) | No | Initialization options for the ImageReceiver. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [ImageReceiver](arkts-image-image-imagereceiver-i.md) | 操作成功时返回ImageReceiver实例，否则返回undefined。 |
+| [ImageReceiver](arkts-image-image-imagereceiver-i.md) | ImageReceiver instance created. If the operation fails, undefined is returned. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 7900201 | Invalid parameter. |
-
-## Examples
-
-```TypeScript
-let options: image.ImageReceiverOptions = {
-  size: { width: 480, height: 480 },
-  capacity: 3
-}
-let receiver: image.ImageReceiver | undefined = image.createImageReceiver(options);
-```
+| [7900201](../errorcode-image.md#7900201-invalid-parameter) | Invalid parameter. |
 

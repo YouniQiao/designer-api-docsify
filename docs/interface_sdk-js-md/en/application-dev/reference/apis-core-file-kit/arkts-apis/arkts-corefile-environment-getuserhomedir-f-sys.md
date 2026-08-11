@@ -12,7 +12,7 @@ import { Environment } from 'kits/@kit.CoreFileKit';
 function getUserHomeDir(): string
 ```
 
-获取当前用户下应用沙箱路径的内卡目录，该接口仅对具有该系统能力的设备开放。
+Obtains the sandbox path of the built-in card directory of the current user. This API is available only to the devices with the SystemCapability.FileManagement.File.Environment.FolderObtain system capability.
 
 **Since:** 11
 
@@ -30,14 +30,14 @@ function getUserHomeDir(): string
 
 | Type | Description |
 | --- | --- |
-| string | 返回当前用户下应用沙箱路径的内卡目录。 |
+| string | Sandbox path of the built-in card directory obtained. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 801 | Capability not supported. |
-| 201 | Permission verification failed, usually the result returned by VerifyAccessToken. |
-| 202 | Permission verification failed, application which is not a system application uses system API. |
+| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed, usually the result returned by VerifyAccessToken. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed, application which is not a system application uses system API. |
 | 13900042 | Unknown error. |
 

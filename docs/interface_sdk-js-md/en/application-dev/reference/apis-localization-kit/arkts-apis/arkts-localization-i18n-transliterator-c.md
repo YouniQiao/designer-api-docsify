@@ -1,6 +1,6 @@
 # Transliterator
 
-提供文本音译相关的能力，包括音译支持范围获取和文本音译等。
+Provides the API for transliterate text from one format to another.
 
 **Since:** 23
 
@@ -22,7 +22,7 @@ import { i18n } from 'kits/@kit.LocalizationKit';
 static getAvailableIDs(): string[]
 ```
 
-获取音译支持的转换ID列表。
+Obtains a list of IDs supported by the Transliterator object.
 
 **Since:** 23
 
@@ -38,7 +38,7 @@ static getAvailableIDs(): string[]
 
 | Type | Description |
 | --- | --- |
-| string[] | 音译支持的转换ID列表。 |
+| string[] | List of IDs supported by the Transliterator object. |
 
 ## getInstance
 
@@ -46,7 +46,7 @@ static getAvailableIDs(): string[]
 static getInstance(id: string): Transliterator
 ```
 
-创建指定转换ID的音译对象。
+Creates a Transliterator object based on the specified ID.
 
 **Since:** 23
 
@@ -62,13 +62,13 @@ static getInstance(id: string): Transliterator
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| id | string | Yes | 音译支持的转换ID。 |
+| id | string | Yes | ID supported by the Transliterator object. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [Transliterator](arkts-localization-i18n-transliterator-c.md) | 音译对象。 |
+| [Transliterator](arkts-localization-i18n-transliterator-c.md) | Transliterator object. |
 
 ## transform
 
@@ -76,7 +76,7 @@ static getInstance(id: string): Transliterator
 transform(text: string): string
 ```
 
-将输入文本从源格式转换为目标格式。
+Converts the input text from the source format to the target format.
 
 **Since:** 23
 
@@ -92,11 +92,11 @@ transform(text: string): string
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| text | string | Yes | 输入文本。 |
+| text | string | Yes | Input text. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| string | 转换后的文本。 |
+| string | Text after conversion. |
 

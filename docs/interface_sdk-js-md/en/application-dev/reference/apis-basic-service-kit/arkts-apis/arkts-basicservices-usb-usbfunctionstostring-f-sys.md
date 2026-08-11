@@ -12,7 +12,7 @@ import { usb } from 'kits/@kit.BasicServicesKit';
 function usbFunctionsToString(funcs: FunctionType): string
 ```
 
-在设备模式下，将数字掩码形式的USB功能列表转化为字符串。
+Converts the USB function list in the numeric mask format to a string in Device mode.
 
 **Since:** 9
 
@@ -32,13 +32,13 @@ function usbFunctionsToString(funcs: FunctionType): string
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| funcs | [FunctionType](arkts-basicservices-usb-functiontype-e-sys.md) | Yes | 功能列表对应数字掩码。 |
+| funcs | [FunctionType](arkts-basicservices-usb-functiontype-e-sys.md) | Yes | USB function list in numeric mask format. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| string | 转化后的字符串形式的功能列表。 |
+| string | Function list in string format after conversion. |
 
 ## Examples
 

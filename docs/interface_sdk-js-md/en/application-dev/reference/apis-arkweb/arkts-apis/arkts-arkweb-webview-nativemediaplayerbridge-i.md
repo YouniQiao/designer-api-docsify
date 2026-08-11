@@ -1,16 +1,11 @@
 # NativeMediaPlayerBridge
 
-[CreateNativeMediaPlayerCallback](../../../reference/apis-arkweb/arkts-apis-webview-t.md#createnativemediaplayercallback12)回调函数的返回值类型。接管网页媒体的播放器和ArkWeb内核之间的一个接口类。
+Implements a **CreateNativeMediaPlayerCallback** object to control the player created by the application for taking over the web page media playback. This object is a return value type of the  
+[CreateNativeMediaPlayerCallback](../../../reference/apis-arkweb/arkts-apis-webview-t.md#createnativemediaplayercallback12)callback.
 
-ArkWeb内核通过该接口类的实例对象来控制应用创建的用来接管网页媒体的播放器。
-
-> **说明：**
+> **NOTE：**
 > 
-> - 本模块同时支持ArkTS-Dyn、ArkTS-Sta。
-> 
-> - 本Interface首批接口从API version 12开始支持。
-> 
-> - 示例效果请以真机运行为准。
+> - The sample effect is subject to the actual device.
 
 **Since:** 23
 
@@ -32,7 +27,7 @@ import { webview } from 'kits/@kit.ArkWeb';
 enterFullscreen: ZeroParamFn<>
 ```
 
-播放器进入全屏。
+Enables the player to enter full screen mode.
 
 **Since:** 23
 
@@ -48,7 +43,7 @@ enterFullscreen: ZeroParamFn<>
 exitFullscreen: ZeroParamFn<>
 ```
 
-播放器退出全屏。
+Enables the player to exit full screen mode.
 
 **Since:** 23
 
@@ -64,7 +59,7 @@ exitFullscreen: ZeroParamFn<>
 pause: ZeroParamFn<>
 ```
 
-暂停播放。
+Pauses playback.
 
 **Since:** 23
 
@@ -80,7 +75,7 @@ pause: ZeroParamFn<>
 play: ZeroParamFn<>
 ```
 
-播放视频。
+Plays this video.
 
 **Since:** 23
 
@@ -96,7 +91,7 @@ play: ZeroParamFn<>
 release: ZeroParamFn<>
 ```
 
-销毁播放器。
+Releases this player.
 
 **Since:** 23
 
@@ -112,7 +107,7 @@ release: ZeroParamFn<>
 resumePlayer?: ResumePlayerFn
 ```
 
-通知应用销毁应用内播放器，并保存应用内播放器的状态信息。
+Resumes the player and its status information.
 
 **Since:** 23
 
@@ -128,7 +123,7 @@ resumePlayer?: ResumePlayerFn
 seek: OneParamFn<double>
 ```
 
-播放跳转到某个时间点。
+Seeks to a specific time point in the media.
 
 **Since:** 23
 
@@ -144,7 +139,7 @@ seek: OneParamFn<double>
 setMuted: OneParamFn<boolean>
 ```
 
-设置静音状态。
+Sets the muted status.
 
 **Since:** 23
 
@@ -160,7 +155,7 @@ setMuted: OneParamFn<boolean>
 setPlaybackRate: OneParamFn<double>
 ```
 
-设置播放速度。
+Sets the playback rate.
 
 **Since:** 23
 
@@ -176,7 +171,7 @@ setPlaybackRate: OneParamFn<double>
 setVolume: OneParamFn<double>
 ```
 
-设置播放器音量值。
+Sets the playback volume.
 
 **Since:** 23
 
@@ -192,7 +187,7 @@ setVolume: OneParamFn<double>
 suspendPlayer?: SuspendPlayerFn
 ```
 
-通知应用销毁应用内播放器，并保存应用内播放器的状态信息。
+Suspends the player and save its status information.
 
 **Since:** 23
 
@@ -208,7 +203,7 @@ suspendPlayer?: SuspendPlayerFn
 updateRect: UpdateRectFn
 ```
 
-更新surface位置信息。
+Updates the surface position information.
 
 **Since:** 23
 

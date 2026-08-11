@@ -1,11 +1,5 @@
 # evictFilePages
 
-## 导入模块
-
-```TypeScript
-import { appMemoryOptimizer } from 'kits/@kit.AbilityKit';
-```
-
 ## evictFilePages
 
 ```TypeScript
@@ -40,5 +34,5 @@ function evictFilePages(fileNames: Array<string>): Promise<void>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 16000163 | 文件类型错误。文件名未以.so、.hap或.hsp结尾。 |
+| [16000163](../errorcode-ability.md#16000163-文件类型错误) | 文件类型错误。文件名未以.so、.hap或.hsp结尾。 |
 

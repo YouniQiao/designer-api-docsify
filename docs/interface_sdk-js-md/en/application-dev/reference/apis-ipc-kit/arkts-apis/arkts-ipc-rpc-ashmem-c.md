@@ -1,15 +1,7 @@
 # Ashmem
 
-提供与匿名共享内存对象相关的方法，包括创建、关闭、映射和取消映射Ashmem、从Ashmem读取数据和写入数据、获取Ashmem大小、设置Ashmem保护。
-
-共享内存只适用与本设备内跨进程通信。
-
-- 大数据传输：传输大量数据(如图片、文件)时使用共享内存提升效率。  
-- 跨进程数据共享：多个进程需要共享访问同一块内存数据。  
-- 传输效率问题：大数据通过共享内存传输避免序列化开销，提升传输效率。  
-- 内存复用问题：多进程可共享访问同一内存，避免数据拷贝。  
-- 提升传输性能：共享内存机制大幅提升大数据传输效率。  
-- 减少内存占用：避免数据多次拷贝，节省内存资源。
+Provides methods related to anonymous shared memory objects, including creating, closing, mapping, and unmapping an  
+ **Ashmem** object, reading data from and writing data to an **Ashmem** object, obtaining the **Ashmem** size, and setting **Ashmem** protection. The shared memory applies only to cross-process communication within the  local device.
 
 **Since:** 8
 
@@ -31,11 +23,11 @@ import { rpc } from 'kits/@kit.IPCKit';
 closeAshmem(): void
 ```
 
-关闭这个Ashmem。
+Closes this **Ashmem** object.
 
-> **说明：**
+> **NOTE：**
 > 
-> 关闭Ashmem对象前需要先解除地址映射。
+> Before closing the **Ashmem** object, you need to remove the address mapping.
 
 **Since:** 8
 
@@ -71,7 +63,7 @@ ArkTS-Sta:
 static create(name: string, size: int): Ashmem
 ```
 
-静态方法，根据指定的名称和大小创建Ashmem对象。
+Creates an **Ashmem** object with the specified name and size. This API is a static method.
 
 **Since:** 9
 
@@ -85,20 +77,20 @@ static create(name: string, size: int): Ashmem
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| name | string | Yes | Ashmem名称，用于查询Ashmem信息，其长度不能为0。 |
-| size | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | Ashmem的大小，其大小应大于0，以字节为单位。 |
+| name | string | Yes | Name of the **Ashmem** object to create. The length of the Ashmem name cannot be 0. |
+| size | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | Size of the **Ashmem** object, in bytes. The value must be greater than 0. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [Ashmem](arkts-ipc-rpc-ashmem-c.md) | 返回创建的Ashmem对象；如果创建失败，返回null。 |
+| [Ashmem](arkts-ipc-rpc-ashmem-c.md) | Returns the **Ashmem** object if it is created successfully; returns null otherwise. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1.The number of parameters is incorrect; 2.The parameter type does not match; 3.The Ashmem name passed is empty; 4.The Ashmem size passed is less than or equal to 0. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.The number of parameters is incorrect; 2.The parameter type does not match; 3.The Ashmem name passed is empty; 4.The Ashmem size passed is less than or equal to 0. |
 
 ## Examples
 
@@ -125,7 +117,7 @@ try {
 static create(ashmem: Ashmem): Ashmem
 ```
 
-静态方法，通过复制现有Ashmem对象的文件描述符(fd)来创建Ashmem对象。两个Ashmem对象指向同一个共享内存区域。
+Creates an **Ashmem** object by copying the file descriptor of an existing **Ashmem** object. The two **Ashmem** objects point to the same shared memory region.
 
 **Since:** 9
 
@@ -139,19 +131,19 @@ static create(ashmem: Ashmem): Ashmem
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| ashmem | [Ashmem](arkts-ipc-rpc-ashmem-c.md) | Yes | 已存在的Ashmem对象。 |
+| ashmem | [Ashmem](arkts-ipc-rpc-ashmem-c.md) | Yes | Existing **Ashmem** object. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [Ashmem](arkts-ipc-rpc-ashmem-c.md) | 返回创建的Ashmem对象。 |
+| [Ashmem](arkts-ipc-rpc-ashmem-c.md) | Ashmem** object created. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1.The number of parameters is incorrect; 2.The passed parameter is not an Ashmem object; 3.The ashmem instance for obtaining packaging is empty. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.The number of parameters is incorrect; 2.The passed parameter is not an Ashmem object; 3.The ashmem instance for obtaining packaging is empty. |
 
 ## Examples
 
@@ -178,7 +170,7 @@ try {
 static createAshmem(name: string, size: number): Ashmem
 ```
 
-静态方法，根据指定的名称和大小创建Ashmem对象。
+Creates an **Ashmem** object with the specified name and size. This API is a static method.
 
 **Since:** 8
 
@@ -196,14 +188,14 @@ static createAshmem(name: string, size: number): Ashmem
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| name | string | Yes | 名称，用于查询Ashmem信息。 |
-| size | number | Yes | Ashmem的大小，以字节为单位。 |
+| name | string | Yes | Name of the **Ashmem** object to create. |
+| size | number | Yes | Size (in bytes) of the **Ashmem** object to create. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [Ashmem](arkts-ipc-rpc-ashmem-c.md) | 返回创建的Ashmem对象；如果创建失败，返回null。 |
+| [Ashmem](arkts-ipc-rpc-ashmem-c.md) | Returns the **Ashmem** object if it is created successfully; returns null otherwise. |
 
 ## Examples
 
@@ -227,7 +219,7 @@ try {
 static createAshmemFromExisting(ashmem: Ashmem): Ashmem
 ```
 
-静态方法，通过复制现有Ashmem对象的文件描述符(fd)来创建Ashmem对象。两个Ashmem对象指向同一个共享内存区域。
+Creates an **Ashmem** object by copying the file descriptor of an existing **Ashmem** object. The two **Ashmem** objects point to the same shared memory region.
 
 **Since:** 8
 
@@ -245,13 +237,13 @@ static createAshmemFromExisting(ashmem: Ashmem): Ashmem
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| ashmem | [Ashmem](arkts-ipc-rpc-ashmem-c.md) | Yes | 已存在的Ashmem对象。 |
+| ashmem | [Ashmem](arkts-ipc-rpc-ashmem-c.md) | Yes | Existing **Ashmem** object. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [Ashmem](arkts-ipc-rpc-ashmem-c.md) | 返回创建的Ashmem对象。 |
+| [Ashmem](arkts-ipc-rpc-ashmem-c.md) | Ashmem** object created. |
 
 ## Examples
 
@@ -281,7 +273,7 @@ ArkTS-Sta:
 getAshmemSize(): int
 ```
 
-获取Ashmem对象的内存大小。
+Obtains the memory size of this **Ashmem** object.
 
 **Since:** 8
 
@@ -295,7 +287,7 @@ getAshmemSize(): int
 
 | Type | Description |
 | --- | --- |
-| ArkTS-Dyn: number  <br>ArkTS-Sta：int | 返回Ashmem对象的内存大小。 |
+| ArkTS-Dyn: number  <br>ArkTS-Sta：int | Ashmem** size obtained. |
 
 ## Examples
 
@@ -318,7 +310,7 @@ try {
 mapAshmem(mapType: number): boolean
 ```
 
-在此进程的虚拟地址空间上创建共享文件映射，映射区域大小由此Ashmem对象指定。
+Creates the shared file mapping on the virtual address space of this process. The size of the mapping region is  specified by this **Ashmem** object.
 
 **Since:** 8
 
@@ -336,13 +328,13 @@ mapAshmem(mapType: number): boolean
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| mapType | number | Yes | 指定映射的内存区域的保护等级。 |
+| mapType | number | Yes | Protection level of the memory region to which the shared file is mapped. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| boolean | true：映射成功，false：映射失败。 |
+| boolean | Returns **true** if the mapping is created; returns **false** otherwise. |
 
 ## Examples
 
@@ -365,7 +357,7 @@ try {
 mapReadAndWriteAshmem(): boolean
 ```
 
-在此进程虚拟地址空间上创建可读写的共享文件映射。
+Maps the shared file to the readable and writable virtual address space of the process.
 
 **Since:** 8
 
@@ -383,7 +375,7 @@ mapReadAndWriteAshmem(): boolean
 
 | Type | Description |
 | --- | --- |
-| boolean | true：映射成功，false：映射失败。 |
+| boolean | Returns **true** if the mapping is created; returns **false** otherwise. |
 
 ## Examples
 
@@ -406,7 +398,7 @@ try {
 mapReadOnlyAshmem(): boolean
 ```
 
-在此进程虚拟地址空间上创建只读的共享文件映射。
+Maps the shared file to the read-only virtual address space of the process.
 
 **Since:** 8
 
@@ -424,7 +416,7 @@ mapReadOnlyAshmem(): boolean
 
 | Type | Description |
 | --- | --- |
-| boolean | true：映射成功，false：映射失败。 |
+| boolean | Returns **true** if the mapping is created; returns **false** otherwise. |
 
 ## Examples
 
@@ -447,7 +439,7 @@ try {
 mapReadWriteAshmem(): void
 ```
 
-在此进程虚拟地址空间上创建可读写的共享文件映射。
+Maps the shared file to the readable and writable virtual address space of the process.
 
 **Since:** 9
 
@@ -461,7 +453,7 @@ mapReadWriteAshmem(): void
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 1900001 | Failed to call mmap. |
+| [1900001](../errorcode-rpc.md#1900001-failed-to-call-mmap) | Failed to call mmap. |
 
 ## Examples
 
@@ -486,7 +478,7 @@ try {
 mapReadonlyAshmem(): void
 ```
 
-在此进程虚拟地址空间上创建只读的共享文件映射。
+Maps the shared file to the read-only virtual address space of the process.
 
 **Since:** 9
 
@@ -500,7 +492,7 @@ mapReadonlyAshmem(): void
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 1900001 | Failed to call mmap. |
+| [1900001](../errorcode-rpc.md#1900001-failed-to-call-mmap) | Failed to call mmap. |
 
 ## Examples
 
@@ -531,7 +523,7 @@ ArkTS-Sta:
 mapTypedAshmem(mapType: int): void
 ```
 
-在此进程的虚拟地址空间上创建共享文件映射，映射区域大小由此Ashmem对象指定。
+Creates the shared file mapping on the virtual address space of this process. The size of the mapping region is  specified by this **Ashmem** object.
 
 **Since:** 9
 
@@ -545,14 +537,14 @@ mapTypedAshmem(mapType: int): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| mapType | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | 指定映射的内存区域的保护等级。 |
+| mapType | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | Protection level of the memory region to which the shared file is mapped. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1.The number of parameters is incorrect; 2.The parameter type does not match; 3.The passed mapType exceeds the maximum protection level. |
-| 1900001 | Failed to call mmap. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.The number of parameters is incorrect; 2.The parameter type does not match; 3.The passed mapType exceeds the maximum protection level. |
+| [1900001](../errorcode-rpc.md#1900001-failed-to-call-mmap) | Failed to call mmap. |
 
 ## Examples
 
@@ -577,11 +569,12 @@ try {
 readAshmem(size: number, offset: number): number[]
 ```
 
-从此Ashmem对象关联的共享文件中读取数据。
+Reads data from the shared file associated with this **Ashmem** object.
 
-> **说明：**
+> **NOTE：**
 > 
-> 对Ashmem对象进行写操作时，需要先调用[mapReadWriteAshmem](arkts-ipc-rpc-ashmem-c.md#mapreadwriteashmem)进行映射。
+> - Before writing an **Ashmem** object, you need to call
+> [mapReadWriteAshmem](arkts-ipc-rpc-ashmem-c.md#mapreadwriteashmem) for mapping.
 
 **Since:** 9
 
@@ -599,21 +592,21 @@ readAshmem(size: number, offset: number): number[]
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| size | number | Yes | 要读取的数据的大小，以字节为单位。 |
-| offset | number | Yes | 要读取的数据在此Ashmem对象关联的内存区间的起始位置。 |
+| size | number | Yes | Size of the data to read. |
+| offset | number | Yes | Start position of the data to read in the memory region associated with this **Ashmem** object. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| number[] | 返回读取的数据。 |
+| number[] | Data read. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1.The number of parameters is incorrect; 2.The parameter type does not match. |
-| 1900004 | Failed to read data from the shared memory. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.The number of parameters is incorrect; 2.The parameter type does not match. |
+| [1900004](../errorcode-rpc.md#1900004-failed-to-read-data-from-the-shared-memory) | Failed to read data from the shared memory. |
 
 ## Examples
 
@@ -648,11 +641,12 @@ ArkTS-Sta:
 readDataFromAshmem(size: int, offset: int): ArrayBuffer
 ```
 
-从此Ashmem对象关联的共享文件中读取数据。
+Reads data from the shared file associated with this **Ashmem** object.
 
-> **说明：**
+> **NOTE：**
 > 
-> 对Ashmem对象进行写操作时，需要先调用[mapReadWriteAshmem](arkts-ipc-rpc-ashmem-c.md#mapreadwriteashmem)进行映射。
+> Before writing an **Ashmem** object, you need to call
+> [mapReadWriteAshmem](arkts-ipc-rpc-ashmem-c.md#mapreadwriteashmem) for mapping.
 
 **Since:** 11
 
@@ -666,21 +660,21 @@ readDataFromAshmem(size: int, offset: int): ArrayBuffer
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| size | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | 要读取的数据的大小，以字节为单位。 |
-| offset | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | 要读取的数据在此Ashmem对象关联的内存区间的起始位置。 |
+| size | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | Size of the data to read. |
+| offset | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | Start position of the data to read in the memory region associated with this **Ashmem** object. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| ArrayBuffer | 返回读取的数据。 |
+| ArrayBuffer | Data read. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1.The number of parameters is incorrect; 2.The parameter type does not match. |
-| 1900004 | Failed to read data from the shared memory. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.The number of parameters is incorrect; 2.The parameter type does not match. |
+| [1900004](../errorcode-rpc.md#1900004-failed-to-read-data-from-the-shared-memory) | Failed to read data from the shared memory. |
 
 ## Examples
 
@@ -715,11 +709,12 @@ try {
 readFromAshmem(size: number, offset: number): number[]
 ```
 
-从此Ashmem对象关联的共享文件中读取数据。
+Reads data from the shared file associated with this **Ashmem** object.
 
-> **说明：**
+> **NOTE：**
 > 
-> 对Ashmem对象进行写操作时，需要先调用[mapReadWriteAshmem](arkts-ipc-rpc-ashmem-c.md#mapreadwriteashmem)进行映射。
+> - Before writing an **Ashmem** object, you need to call
+> [mapReadWriteAshmem](arkts-ipc-rpc-ashmem-c.md#mapreadwriteashmem) for mapping.
 
 **Since:** 8
 
@@ -737,14 +732,14 @@ readFromAshmem(size: number, offset: number): number[]
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| size | number | Yes | 要读取的数据的大小，以字节为单位。 |
-| offset | number | Yes | 要读取的数据在此Ashmem对象关联的内存区间的起始位置。 |
+| size | number | Yes | Size of the data to read. |
+| offset | number | Yes | Start position of the data to read in the memory region associated with this **Ashmem** object. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| number[] | 返回读取的数据。 |
+| number[] | Data read. |
 
 ## Examples
 
@@ -772,7 +767,7 @@ try {
 setProtection(protectionType: number): boolean
 ```
 
-设置映射内存区域的保护等级。
+Sets the protection level of the memory region to which the shared file is mapped.
 
 **Since:** 8
 
@@ -790,13 +785,13 @@ setProtection(protectionType: number): boolean
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| protectionType | number | Yes | 要设置的保护类型。 |
+| protectionType | number | Yes | Protection type to set. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| boolean | true：设置成功，false：设置失败。 |
+| boolean | Returns **true** if the operation is successful; returns **false** otherwise. |
 
 ## Examples
 
@@ -826,7 +821,7 @@ ArkTS-Sta:
 setProtectionType(protectionType: int): void
 ```
 
-设置映射内存区域的保护等级。
+Sets the protection level of the memory region to which the shared file is mapped.
 
 **Since:** 9
 
@@ -840,14 +835,14 @@ setProtectionType(protectionType: int): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| protectionType | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | 要设置的保护类型。 |
+| protectionType | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | Protection type to set. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1.The number of parameters is incorrect; 2.The parameter type does not match. |
-| 1900002 | Failed to call ioctl. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.The number of parameters is incorrect; 2.The parameter type does not match. |
+| [1900002](../errorcode-rpc.md#1900002-failed-to-call-ioctl) | Failed to call ioctl. |
 
 ## Examples
 
@@ -872,7 +867,7 @@ try {
 unmapAshmem(): void
 ```
 
-删除该Ashmem对象的地址映射。
+Deletes the mappings for the specified address range of this **Ashmem** object.
 
 **Since:** 8
 
@@ -902,11 +897,12 @@ try {
 writeAshmem(buf: number[], size: number, offset: number): void
 ```
 
-将数据写入此Ashmem对象关联的共享文件。
+Writes data to the shared file associated with this **Ashmem** object.
 
-> **说明：**
+> **NOTE：**
 > 
-> 对Ashmem对象进行写操作时，需要先调用[mapReadWriteAshmem](arkts-ipc-rpc-ashmem-c.md#mapreadwriteashmem)进行映射。
+> - Before writing an **Ashmem** object, you need to call
+> [mapReadWriteAshmem](arkts-ipc-rpc-ashmem-c.md#mapreadwriteashmem) for mapping.
 
 **Since:** 9
 
@@ -924,16 +920,16 @@ writeAshmem(buf: number[], size: number, offset: number): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| buf | number[] | Yes | 写入Ashmem对象的数据。 |
-| size | number | Yes | 要写入的数据大小，以字节为单位。 |
-| offset | number | Yes | 要写入的数据在此Ashmem对象关联的内存区间的起始位置。 |
+| buf | number[] | Yes | Data to write. |
+| size | number | Yes | Size of the data to write. |
+| offset | number | Yes | Start position of the data to write in the memory region associated with this **Ashmem** object. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1.The number of parameters is incorrect; 2.The parameter type does not match; 3.The element does not exist in the array. |
-| 1900003 | Failed to write data to the shared memory. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.The number of parameters is incorrect; 2.The parameter type does not match; 3.The element does not exist in the array. |
+| [1900003](../errorcode-rpc.md#1900003-failed-to-write-data-to-the-shared-memory) | Failed to write data to the shared memory. |
 
 ## Examples
 
@@ -966,11 +962,12 @@ ArkTS-Sta:
 writeDataToAshmem(buf: ArrayBuffer, size: int, offset: int): void
 ```
 
-将数据写入此Ashmem对象关联的共享文件。
+Writes data to the shared file associated with this **Ashmem** object.
 
-> **说明：**
+> **NOTE：**
 > 
-> 对Ashmem对象进行写操作时，需要先调用[mapReadWriteAshmem](arkts-ipc-rpc-ashmem-c.md#mapreadwriteashmem)进行映射。
+> Before writing an **Ashmem** object, you need to call
+> [mapReadWriteAshmem](arkts-ipc-rpc-ashmem-c.md#mapreadwriteashmem) for mapping.
 
 **Since:** 11
 
@@ -984,16 +981,16 @@ writeDataToAshmem(buf: ArrayBuffer, size: int, offset: int): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| buf | ArrayBuffer | Yes | 写入Ashmem对象的数据。 |
-| size | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | 要写入的数据大小，以字节为单位。 |
-| offset | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | 要写入的数据在此Ashmem对象关联的内存区间的起始位置。 |
+| buf | ArrayBuffer | Yes | Data to write. |
+| size | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | Size of the data to write. |
+| offset | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | Start position of the data to write in the memory region associated with this **Ashmem** object. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1.The number of parameters is incorrect; 2.The parameter type does not match; 3.Failed to obtain arrayBuffer information. |
-| 1900003 | Failed to write data to the shared memory. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.The number of parameters is incorrect; 2.The parameter type does not match; 3.Failed to obtain arrayBuffer information. |
+| [1900003](../errorcode-rpc.md#1900003-failed-to-write-data-to-the-shared-memory) | Failed to write data to the shared memory. |
 
 ## Examples
 
@@ -1025,11 +1022,12 @@ try {
 writeToAshmem(buf: number[], size: number, offset: number): boolean
 ```
 
-将数据写入此Ashmem对象关联的共享文件。
+Writes data to the shared file associated with this **Ashmem** object.
 
-> **说明：**
+> **NOTE：**
 > 
-> 对Ashmem对象进行写操作时，需要先调用[mapReadWriteAshmem](arkts-ipc-rpc-ashmem-c.md#mapreadwriteashmem)进行映射。
+> - Before writing an **Ashmem** object, you need to call
+> [mapReadWriteAshmem](arkts-ipc-rpc-ashmem-c.md#mapreadwriteashmem) for mapping.
 
 **Since:** 8
 
@@ -1047,15 +1045,15 @@ writeToAshmem(buf: number[], size: number, offset: number): boolean
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| buf | number[] | Yes | 写入Ashmem对象的数据。 |
-| size | number | Yes | 要写入的数据大小，以字节为单位。 |
-| offset | number | Yes | 要写入的数据在此Ashmem对象关联的内存区间的起始位置。 |
+| buf | number[] | Yes | Data to write. |
+| size | number | Yes | Size of the data to write. |
+| offset | number | Yes | Start position of the data to write in the memory region associated with this **Ashmem** object. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| boolean | true：如果数据写入成功，false：在其他情况下，如数据写入越界或未获得写入权限。 |
+| boolean | Returns **true** if the data is written successfully; returns **false** otherwise. |
 
 ## Examples
 
@@ -1081,7 +1079,7 @@ try {
 static readonly PROT_EXEC: number
 ```
 
-映射内存保护类型，代表映射的内存可执行。
+Mapped memory protection type, indicating that the mapped memory is executable.
 
 **Type:** number
 
@@ -1101,7 +1099,7 @@ static readonly PROT_EXEC: number
 static readonly PROT_NONE: number
 ```
 
-映射内存保护类型，代表映射的内存不可访问。
+Mapped memory protection type, indicating that the mapped memory cannot be accessed.
 
 **Type:** number
 
@@ -1121,7 +1119,7 @@ static readonly PROT_NONE: number
 static readonly PROT_READ: number
 ```
 
-映射内存保护类型，代表映射的内存可读。
+Mapped memory protection type, indicating that the mapped memory is readable.
 
 **Type:** number
 
@@ -1141,7 +1139,7 @@ static readonly PROT_READ: number
 static readonly PROT_WRITE: number
 ```
 
-映射内存保护类型，代表映射的内存可写。
+Mapped memory protection type, indicating that the mapped memory is readable.
 
 **Type:** number
 

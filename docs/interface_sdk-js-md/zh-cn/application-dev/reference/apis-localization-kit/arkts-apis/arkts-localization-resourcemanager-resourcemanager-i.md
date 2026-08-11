@@ -24,12 +24,6 @@
 
 **系统能力：** SystemCapability.Global.ResourceManager
 
-## 导入模块
-
-```TypeScript
-import { resourceManager } from 'kits/@kit.LocalizationKit';
-```
-
 ## addResource
 
 ```TypeScript
@@ -62,8 +56,8 @@ addResource(path: string) : void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 401 | Parameter error. Possible causes: Incorrect parameter types. |
-| 9001010 | Invalid overlay path. |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: Incorrect parameter types. |
+| [9001010](../errorcode-resource-manager.md#9001010-无效的overlay路径) | Invalid overlay path. |
 
 ## 示例
 
@@ -72,17 +66,17 @@ import { AbilityConstant, UIAbility, Want } from '@kit.AbilityKit';
 import { BusinessError } from '@kit.BasicServicesKit';
 
 export default class EntryAbility extends UIAbility {
-    onCreate(want: Want, launchParam: AbilityConstant.LaunchParam): void {
-        // "/library1-default-signed.hsp"仅作示例，请替换为实际的文件路径
-        let path = this.context.bundleCodeDir + "/library1-default-signed.hsp";
-        try {
-            this.context.resourceManager.addResource(path);
-        } catch (error) {
-            let code = (error as BusinessError).code;
-            let message = (error as BusinessError).message;
-            console.error(`addResource failed, error code: ${code}, message: ${message}.`);
-        }
+  onCreate(want: Want, launchParam: AbilityConstant.LaunchParam): void {
+    // "/library1-default-signed.hsp"仅作示例，请替换为实际的文件路径
+    let path = this.context.bundleCodeDir + "/library1-default-signed.hsp";
+    try {
+      this.context.resourceManager.addResource(path);
+    } catch (error) {
+      let code = (error as BusinessError).code;
+      let message = (error as BusinessError).message;
+      console.error(`addResource failed, error code: ${code}, message: ${message}.`);
     }
+  }
 }
 ```
 
@@ -115,10 +109,12 @@ closeRawFd(path: string, callback: _AsyncCallback<void>): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 401 | Parameter error. Possible causes: Incorrect parameter types. |
-| 9001005 | Invalid relative path. |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: Incorrect parameter types. |
+| [9001005](../errorcode-resource-manager.md#9001005-无效的相对路径) | Invalid relative path. |
 
 ## 示例
+
+ArkTS-Dyn示例：
 
 ```TypeScript
 import { AbilityConstant, UIAbility, Want } from '@kit.AbilityKit';
@@ -132,10 +128,38 @@ export default class EntryAbility extends UIAbility {
       // 根据实际业务场景，使用rawfile资源
       this.context.resourceManager.closeRawFd("test.txt", (error: BusinessError) => {
         if (error != null) {
-          console.error("error is " + error);
+          console.error("callback closeRawFd failed, error is " + error);
           return;
         }
-        console.info('closeRawFd success.');
+        console.info('callback closeRawFd success.');
+      });
+    } catch (error) {
+      let code = (error as BusinessError).code;
+      let message = (error as BusinessError).message;
+      console.error(`callback closeRawFd failed, error code: ${code}, message: ${message}.`);
+    }
+  }
+}
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+import { AbilityConstant, UIAbility, Want } from '@kit.AbilityKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+export default class EntryAbility extends UIAbility {
+  onCreate(want: Want, launchParam: AbilityConstant.LaunchParam): void {
+    try {
+      // "test.txt"仅作示例，请替换为实际使用的资源
+      let rawfile = this.context.resourceManager.getRawFdSync("test.txt");
+      // 根据实际业务场景，使用rawfile资源
+      this.context.resourceManager.closeRawFd("test.txt", (error: BusinessError | null) => {
+        if (error != null) {
+          console.error("callback closeRawFd failed, error is " + error);
+          return;
+        }
+        console.info('callback closeRawFd success.');
       });
     } catch (error) {
       let code = (error as BusinessError).code;
@@ -180,10 +204,12 @@ closeRawFd(path: string): Promise<void>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 401 | Parameter error. Possible causes: Incorrect parameter types. |
-| 9001005 | Invalid relative path. |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: Incorrect parameter types. |
+| [9001005](../errorcode-resource-manager.md#9001005-无效的相对路径) | Invalid relative path. |
 
 ## 示例
+
+ArkTS-Dyn示例：
 
 ```TypeScript
 import { AbilityConstant, UIAbility, Want } from '@kit.AbilityKit';
@@ -195,8 +221,37 @@ export default class EntryAbility extends UIAbility {
       // "test.txt"仅作示例，请替换为实际使用的资源
       let rawfile = this.context.resourceManager.getRawFdSync("test.txt");
       // 根据实际业务场景，使用rawfile资源
-      this.context.resourceManager.closeRawFd("test.txt");
-      console.info(`closeRawFd test success.`);
+      this.context.resourceManager.closeRawFd("test.txt").then(() => {
+        console.info('promise closeRawFd success.');
+      }).catch((error: BusinessError) => {
+        console.error(`promise closeRawFd failed, error is ${error}.`);
+      });
+    } catch (error) {
+      let code = (error as BusinessError).code;
+      let message = (error as BusinessError).message;
+      console.error(`promise closeRawFd failed, error code: ${code}, message: ${message}.`);
+    }
+  }
+}
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+import { AbilityConstant, UIAbility, Want } from '@kit.AbilityKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+export default class EntryAbility extends UIAbility {
+  onCreate(want: Want, launchParam: AbilityConstant.LaunchParam): void {
+    try {
+      // "test.txt"仅作示例，请替换为实际使用的资源
+      let rawfile = this.context.resourceManager.getRawFdSync("test.txt");
+      // 根据实际业务场景，使用rawfile资源
+      this.context.resourceManager.closeRawFd("test.txt").then(() => {
+        console.info('promise closeRawFd success.');
+      }).catch((error: Error) => {
+        console.error(`promise closeRawFd failed, error is ${error}.`);
+      });
     } catch (error) {
       let code = (error as BusinessError).code;
       let message = (error as BusinessError).message;
@@ -234,8 +289,8 @@ closeRawFdSync(path: string): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 401 | Parameter error. Possible causes: Incorrect parameter types. |
-| 9001005 | Invalid relative path. |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: Incorrect parameter types. |
+| [9001005](../errorcode-resource-manager.md#9001005-无效的相对路径) | Invalid relative path. |
 
 ## 示例
 
@@ -249,9 +304,8 @@ export default class EntryAbility extends UIAbility {
       // "test.txt"仅作示例，请替换为实际使用的资源
       let rawfile = this.context.resourceManager.getRawFdSync("test.txt");
       // 根据实际业务场景，使用rawfile资源
-
       this.context.resourceManager.closeRawFdSync("test.txt");
-      console.info(`closeRawFdSync test success.`);
+      console.info('closeRawFdSync test success.');
     } catch (error) {
       let code = (error as BusinessError).code;
       let message = (error as BusinessError).message;
@@ -286,7 +340,7 @@ closeRawFileDescriptor(path: string, callback: AsyncCallback<void>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | path | string | 是 | 相对resources/rawfile目录的rawfile文件路径，如"test.txt"、"subdir/test.txt"，不以"/"开头。 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | 是 | 回调函数。当关闭rawfile文件的文件描述符（fd）成功，err为undefined，否则为错误对象。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数。当关闭rawfile文件的文件描述符（fd）成功，err为undefined，否则为错误对象。 |
 
 ## 示例
 
@@ -384,10 +438,10 @@ getBoolean(resId: long): boolean
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 9001001 | Invalid resource ID. |
-| 401 | Parameter error. Possible causes: Incorrect parameter types. |
-| 9001002 | No matching resource is found based on the resource ID. |
-| 9001006 | The resource is referenced cyclically. |
+| [9001001](../errorcode-resource-manager.md#9001001-无效的资源id) | Invalid resource ID. |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: Incorrect parameter types. |
+| [9001002](../errorcode-resource-manager.md#9001002-根据当前资源id未找到匹配的资源) | No matching resource is found based on the resource ID. |
+| [9001006](../errorcode-resource-manager.md#9001006-资源存在循环引用) | The resource is referenced cyclically. |
 
 ## 示例
 
@@ -403,23 +457,48 @@ getBoolean(resId: long): boolean
 }
 ```
 
+ArkTS-Dyn示例：
+
 ```TypeScript
 import { AbilityConstant, UIAbility, Want } from '@kit.AbilityKit';
 import { BusinessError } from '@kit.BasicServicesKit';
 
 export default class EntryAbility extends UIAbility {
-    onCreate(want: Want, launchParam: AbilityConstant.LaunchParam): void {
-        try {
-            // 'app.boolean.boolean_test'仅作示例，请替换为实际使用的资源
-            let boolTest = this.context.resourceManager.getBoolean($r('app.boolean.boolean_test').id);
-            console.info(`getBoolean, result: ${boolTest}`);
-            // 打印输出结果: getBoolean, result: true
-        } catch (error) {
-            let code = (error as BusinessError).code;
-            let message = (error as BusinessError).message;
-            console.error(`getBoolean failed, error code: ${code}, message: ${message}.`);
-        }
+  onCreate(want: Want, launchParam: AbilityConstant.LaunchParam): void {
+    try {
+      // 'app.boolean.boolean_test'仅作示例，请替换为实际使用的资源
+      let boolTest = this.context.resourceManager.getBoolean($r('app.boolean.boolean_test').id);
+      console.info(`getBoolean, result: ${boolTest}`);
+      // 打印输出结果: getBoolean, result: true
+    } catch (error) {
+      let code = (error as BusinessError).code;
+      let message = (error as BusinessError).message;
+      console.error(`getBoolean failed, error code: ${code}, message: ${message}.`);
     }
+  }
+}
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+import { AbilityConstant, UIAbility, Want } from '@kit.AbilityKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+import { $r } from '@kit.ArkUI';
+
+export default class EntryAbility extends UIAbility {
+  onCreate(want: Want, launchParam: AbilityConstant.LaunchParam): void {
+    try {
+      // 'app.boolean.boolean_test'仅作示例，请替换为实际使用的资源
+      let boolTest = this.context.resourceManager.getBoolean($r('app.boolean.boolean_test').id);
+      console.info(`getBoolean, result: ${boolTest}`);
+      // 打印输出结果: getBoolean, result: true
+    } catch (error) {
+      let code = (error as BusinessError).code;
+      let message = (error as BusinessError).message;
+      console.error(`getBoolean failed, error code: ${code}, message: ${message}.`);
+    }
+  }
 }
 ```
 
@@ -463,10 +542,10 @@ getBoolean(resource: Resource): boolean
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 9001001 | Invalid resource ID. |
-| 401 | Parameter error. Possible causes: Incorrect parameter types. |
-| 9001002 | No matching resource is found based on the resource ID. |
-| 9001006 | The resource is referenced cyclically. |
+| [9001001](../errorcode-resource-manager.md#9001001-无效的资源id) | Invalid resource ID. |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: Incorrect parameter types. |
+| [9001002](../errorcode-resource-manager.md#9001002-根据当前资源id未找到匹配的资源) | No matching resource is found based on the resource ID. |
+| [9001006](../errorcode-resource-manager.md#9001006-资源存在循环引用) | The resource is referenced cyclically. |
 
 ## 示例
 
@@ -536,10 +615,10 @@ getBooleanByName(resName: string): boolean
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 401 | Parameter error. Possible causes: Incorrect parameter types. |
-| 9001003 | Invalid resource name. |
-| 9001004 | No matching resource is found based on the resource name. |
-| 9001006 | The resource is referenced cyclically. |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: Incorrect parameter types. |
+| [9001003](../errorcode-resource-manager.md#9001003-无效的资源名称) | Invalid resource name. |
+| [9001004](../errorcode-resource-manager.md#9001004-根据当前资源名称未找到匹配的资源) | No matching resource is found based on the resource name. |
+| [9001006](../errorcode-resource-manager.md#9001006-资源存在循环引用) | The resource is referenced cyclically. |
 
 ## 示例
 
@@ -560,18 +639,18 @@ import { AbilityConstant, UIAbility, Want } from '@kit.AbilityKit';
 import { BusinessError } from '@kit.BasicServicesKit';
 
 export default class EntryAbility extends UIAbility {
-    onCreate(want: Want, launchParam: AbilityConstant.LaunchParam): void {
-        try {
-            // "boolean_test"仅作示例，请替换为实际使用的资源
-            let boolTest = this.context.resourceManager.getBooleanByName("boolean_test");
-            console.info(`getBooleanByName, result: ${boolTest}`);
-            // 打印输出结果: getBooleanByName, result: true
-        } catch (error) {
-            let code = (error as BusinessError).code;
-            let message = (error as BusinessError).message;
-            console.error(`getBooleanByName failed, error code: ${code}, message: ${message}.`);
-        }
+  onCreate(want: Want, launchParam: AbilityConstant.LaunchParam): void {
+    try {
+      // "boolean_test"仅作示例，请替换为实际使用的资源
+      let boolTest = this.context.resourceManager.getBooleanByName("boolean_test");
+      console.info(`getBooleanByName, result: ${boolTest}`);
+      // 打印输出结果: getBooleanByName, result: true
+    } catch (error) {
+      let code = (error as BusinessError).code;
+      let message = (error as BusinessError).message;
+      console.error(`getBooleanByName failed, error code: ${code}, message: ${message}.`);
     }
+  }
 }
 ```
 
@@ -610,10 +689,79 @@ getColor(resId: long, callback: _AsyncCallback<long>): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 9001001 | Invalid resource ID. |
-| 401 | Parameter error. Possible causes: Incorrect parameter types. |
-| 9001002 | No matching resource is found based on the resource ID. |
-| 9001006 | The resource is referenced cyclically. |
+| [9001001](../errorcode-resource-manager.md#9001001-无效的资源id) | Invalid resource ID. |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: Incorrect parameter types. |
+| [9001002](../errorcode-resource-manager.md#9001002-根据当前资源id未找到匹配的资源) | No matching resource is found based on the resource ID. |
+| [9001006](../errorcode-resource-manager.md#9001006-资源存在循环引用) | The resource is referenced cyclically. |
+
+## 示例
+
+```TypeScript
+// 资源文件路径: src/main/resources/base/element/color.json
+{
+  "color": [
+    {
+      "name": "test",
+      "value": "#FFFFFF"
+    }
+  ]
+}
+```
+
+ArkTS-Dyn示例：
+
+```TypeScript
+import { AbilityConstant, UIAbility, Want } from '@kit.AbilityKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+export default class EntryAbility extends UIAbility {
+  onCreate(want: Want, launchParam: AbilityConstant.LaunchParam): void {
+    try {
+      // 'app.color.test'仅作示例，请替换为实际使用的资源
+      this.context.resourceManager.getColor($r('app.color.test').id, (error: BusinessError, value: number) => {
+        if (error != null) {
+          console.error(`callback getColor failed, error code: ${error.code}, message: ${error.message}.`);
+        } else {
+          console.info(`getColor, result: ${value}`);
+          // 打印输出结果: getColor, result: 4294967295
+        }
+      });
+    } catch (error) {
+      let code = (error as BusinessError).code;
+      let message = (error as BusinessError).message;
+      console.error(`callback getColor failed, error code: ${code}, message: ${message}.`);
+    }
+  }
+}
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+import { AbilityConstant, UIAbility, Want } from '@kit.AbilityKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+import { $r } from '@kit.ArkUI';
+
+export default class EntryAbility extends UIAbility {
+  onCreate(want: Want, launchParam: AbilityConstant.LaunchParam): void {
+    try {
+      // 'app.color.test'仅作示例，请替换为实际使用的资源
+      this.context.resourceManager.getColor($r('app.color.test').id, (error: BusinessError | null, value: long | undefined) => {
+        if (error != null) {
+          console.error(`callback getColor failed, error code: ${error.code}, message: ${error.message}.`);
+        } else {
+          console.info(`getColor, result: ${value}`);
+          // 打印输出结果: getColor, result: 4294967295
+        }
+      });
+    } catch (error) {
+      let code = (error as BusinessError).code;
+      let message = (error as BusinessError).message;
+      console.error(`callback getColor failed, error code: ${code}, message: ${message}.`);
+    }
+  }
+}
+```
 
 ## getColor
 
@@ -655,10 +803,10 @@ getColor(resId: long): Promise<long>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 9001001 | Invalid resource ID. |
-| 401 | Parameter error. Possible causes: Incorrect parameter types. |
-| 9001002 | No matching resource is found based on the resource ID. |
-| 9001006 | The resource is referenced cyclically. |
+| [9001001](../errorcode-resource-manager.md#9001001-无效的资源id) | Invalid resource ID. |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: Incorrect parameter types. |
+| [9001002](../errorcode-resource-manager.md#9001002-根据当前资源id未找到匹配的资源) | No matching resource is found based on the resource ID. |
+| [9001006](../errorcode-resource-manager.md#9001006-资源存在循环引用) | The resource is referenced cyclically. |
 
 ## 示例
 
@@ -674,22 +822,58 @@ getColor(resId: long): Promise<long>
 }
 ```
 
+ArkTS-Dyn示例：
+
 ```TypeScript
 import { AbilityConstant, UIAbility, Want } from '@kit.AbilityKit';
 import { BusinessError } from '@kit.BasicServicesKit';
 
 export default class EntryAbility extends UIAbility {
-    onCreate(want: Want, launchParam: AbilityConstant.LaunchParam): void {
-        // 'app.color.test'仅作示例，请替换为实际使用的资源
-        this.context.resourceManager.getColor($r('app.color.test').id)
-            .then((value: number) => {
-                console.info(`getColor, result: ${value}`);
-                // 打印输出结果: getColor, result: 4294967295
-            })
-            .catch((error: BusinessError) => {
-                console.error(`promise getColor failed, error code: ${error.code}, message: ${error.message}.`);
-            });
+  onCreate(want: Want, launchParam: AbilityConstant.LaunchParam): void {
+    try {
+      // 'app.color.test'仅作示例，请替换为实际使用的资源
+      this.context.resourceManager.getColor($r('app.color.test').id)
+        .then((value: number) => {
+          console.info(`getColor, result: ${value}`);
+          // 打印输出结果: getColor, result: 4294967295
+        })
+        .catch((error: BusinessError) => {
+          console.error(`promise getColor failed, error code: ${error.code}, message: ${error.message}.`);
+        });
+    } catch (error) {
+      let code = (error as BusinessError).code;
+      let message = (error as BusinessError).message;
+      console.error(`promise getColor failed, error code: ${code}, message: ${message}.`);
     }
+  }
+}
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+import { AbilityConstant, UIAbility, Want } from '@kit.AbilityKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+import { $r } from '@kit.ArkUI';
+
+export default class EntryAbility extends UIAbility {
+  onCreate(want: Want, launchParam: AbilityConstant.LaunchParam): void {
+    try {
+      // 'app.color.test'仅作示例，请替换为实际使用的资源
+      this.context.resourceManager.getColor($r('app.color.test').id)
+        .then((value: long) => {
+          console.info(`getColor, result: ${value}`);
+          // 打印输出结果: getColor, result: 4294967295
+        })
+        .catch((error: Error) => {
+          console.error(`promise getColor failed, error is ${error}.`);
+        });
+    } catch (error) {
+      let code = (error as BusinessError).code;
+      let message = (error as BusinessError).message;
+      console.error(`promise getColor failed, error code: ${code}, message: ${message}.`);
+    }
+  }
 }
 ```
 
@@ -728,10 +912,10 @@ getColor(resource: Resource, callback: _AsyncCallback<number>): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 9001001 | Invalid resource ID. |
-| 401 | Parameter error. Possible causes: Incorrect parameter types. |
-| 9001002 | No matching resource is found based on the resource ID. |
-| 9001006 | The resource is referenced cyclically. |
+| [9001001](../errorcode-resource-manager.md#9001001-无效的资源id) | Invalid resource ID. |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: Incorrect parameter types. |
+| [9001002](../errorcode-resource-manager.md#9001002-根据当前资源id未找到匹配的资源) | No matching resource is found based on the resource ID. |
+| [9001006](../errorcode-resource-manager.md#9001006-资源存在循环引用) | The resource is referenced cyclically. |
 
 ## 示例
 
@@ -806,10 +990,10 @@ getColor(resource: Resource): Promise<number>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 9001001 | Invalid resource ID. |
-| 401 | Parameter error. Possible causes: Incorrect parameter types. |
-| 9001002 | No matching resource is found based on the resource ID. |
-| 9001006 | The resource is referenced cyclically. |
+| [9001001](../errorcode-resource-manager.md#9001001-无效的资源id) | Invalid resource ID. |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: Incorrect parameter types. |
+| [9001002](../errorcode-resource-manager.md#9001002-根据当前资源id未找到匹配的资源) | No matching resource is found based on the resource ID. |
+| [9001006](../errorcode-resource-manager.md#9001006-资源存在循环引用) | The resource is referenced cyclically. |
 
 ## 示例
 
@@ -879,10 +1063,10 @@ getColorByName(resName: string, callback: _AsyncCallback<long>): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 401 | Parameter error. Possible causes: Incorrect parameter types. |
-| 9001003 | Invalid resource name. |
-| 9001004 | No matching resource is found based on the resource name. |
-| 9001006 | The resource is referenced cyclically. |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: Incorrect parameter types. |
+| [9001003](../errorcode-resource-manager.md#9001003-无效的资源名称) | Invalid resource name. |
+| [9001004](../errorcode-resource-manager.md#9001004-根据当前资源名称未找到匹配的资源) | No matching resource is found based on the resource name. |
+| [9001006](../errorcode-resource-manager.md#9001006-资源存在循环引用) | The resource is referenced cyclically. |
 
 ## 示例
 
@@ -898,22 +1082,57 @@ getColorByName(resName: string, callback: _AsyncCallback<long>): void
 }
 ```
 
+ArkTS-Dyn示例：
+
 ```TypeScript
 import { AbilityConstant, UIAbility, Want } from '@kit.AbilityKit';
 import { BusinessError } from '@kit.BasicServicesKit';
 
 export default class EntryAbility extends UIAbility {
-    onCreate(want: Want, launchParam: AbilityConstant.LaunchParam): void {
-        // "test"仅作示例，请替换为实际使用的资源
-        this.context.resourceManager.getColorByName("test", (error: BusinessError, value: number) => {
-            if (error != null) {
-                console.error(`callback getColorByName failed, error code: ${error.code}, message: ${error.message}.`);
-            } else {
-                console.info(`getColorByName, result: ${value}`);
-                // 打印输出结果: getColorByName, result: 4294967295
-            }
-        });
+  onCreate(want: Want, launchParam: AbilityConstant.LaunchParam): void {
+    try {
+      // "test"仅作示例，请替换为实际使用的资源
+      this.context.resourceManager.getColorByName("test", (error: BusinessError, value: number) => {
+        if (error != null) {
+          console.error(`callback getColorByName failed, error code: ${error.code}, message: ${error.message}.`);
+        } else {
+          console.info(`getColorByName, result: ${value}`);
+          // 打印输出结果: getColorByName, result: 4294967295
+        }
+      });
+    } catch (error) {
+      let code = (error as BusinessError).code;
+      let message = (error as BusinessError).message;
+      console.error(`callback getColorByName failed, error code: ${code}, message: ${message}.`);
     }
+  }
+}
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+import { AbilityConstant, UIAbility, Want } from '@kit.AbilityKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+export default class EntryAbility extends UIAbility {
+  onCreate(want: Want, launchParam: AbilityConstant.LaunchParam): void {
+    try {
+      // "test"仅作示例，请替换为实际使用的资源
+      this.context.resourceManager.getColorByName("test", (error: BusinessError | null, value: long | undefined) => {
+        if (error != null) {
+          console.error(`callback getColorByName failed, error code: ${error.code}, message: ${error.message}.`);
+        } else {
+          console.info(`getColorByName, result: ${value}`);
+          // 打印输出结果: getColorByName, result: 4294967295
+        }
+      });
+    } catch (error) {
+      let code = (error as BusinessError).code;
+      let message = (error as BusinessError).message;
+      console.error(`callback getColorByName failed, error code: ${code}, message: ${message}.`);
+    }
+  }
 }
 ```
 
@@ -957,10 +1176,10 @@ getColorByName(resName: string): Promise<long>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 401 | Parameter error. Possible causes: Incorrect parameter types. |
-| 9001003 | Invalid resource name. |
-| 9001004 | No matching resource is found based on the resource name. |
-| 9001006 | The resource is referenced cyclically. |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: Incorrect parameter types. |
+| [9001003](../errorcode-resource-manager.md#9001003-无效的资源名称) | Invalid resource name. |
+| [9001004](../errorcode-resource-manager.md#9001004-根据当前资源名称未找到匹配的资源) | No matching resource is found based on the resource name. |
+| [9001006](../errorcode-resource-manager.md#9001006-资源存在循环引用) | The resource is referenced cyclically. |
 
 ## 示例
 
@@ -976,22 +1195,57 @@ getColorByName(resName: string): Promise<long>
 }
 ```
 
+ArkTS-Dyn示例：
+
 ```TypeScript
 import { AbilityConstant, UIAbility, Want } from '@kit.AbilityKit';
 import { BusinessError } from '@kit.BasicServicesKit';
 
 export default class EntryAbility extends UIAbility {
-    onCreate(want: Want, launchParam: AbilityConstant.LaunchParam): void {
-        // "test"仅作示例，请替换为实际使用的资源
-        this.context.resourceManager.getColorByName("test")
-            .then((value: number) => {
-                console.info(`getColorByName, result: ${value}`);
-                // 打印输出结果: getColorByName, result: 4294967295
-            })
-            .catch((error: BusinessError) => {
-                console.error(`promise getColorByName failed, error code: ${error.code}, message: ${error.message}.`);
-            });
+  onCreate(want: Want, launchParam: AbilityConstant.LaunchParam): void {
+    try {
+      // "test"仅作示例，请替换为实际使用的资源
+      this.context.resourceManager.getColorByName("test")
+        .then((value: number) => {
+          console.info(`getColorByName, result: ${value}`);
+          // 打印输出结果: getColorByName, result: 4294967295
+        })
+        .catch((error: BusinessError) => {
+          console.error(`promise getColorByName failed, error code: ${error.code}, message: ${error.message}.`);
+        });
+    } catch (error) {
+      let code = (error as BusinessError).code;
+      let message = (error as BusinessError).message;
+      console.error(`promise getColorByName failed, error code: ${code}, message: ${message}.`);
     }
+  }
+}
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+import { AbilityConstant, UIAbility, Want } from '@kit.AbilityKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+export default class EntryAbility extends UIAbility {
+  onCreate(want: Want, launchParam: AbilityConstant.LaunchParam): void {
+    try {
+      // "test"仅作示例，请替换为实际使用的资源
+      this.context.resourceManager.getColorByName("test")
+        .then((value: long) => {
+          console.info(`getColorByName, result: ${value}`);
+          // 打印输出结果: getColorByName, result: 4294967295
+        })
+        .catch((error: Error) => {
+          console.error(`promise getColorByName failed, error is ${error}.`);
+        });
+    } catch (error) {
+      let code = (error as BusinessError).code;
+      let message = (error as BusinessError).message;
+      console.error(`promise getColorByName failed, error code: ${code}, message: ${message}.`);
+    }
+  }
 }
 ```
 
@@ -1035,10 +1289,10 @@ getColorByNameSync(resName: string) : long
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 401 | Parameter error. Possible causes: Incorrect parameter types. |
-| 9001003 | Invalid resource name. |
-| 9001004 | No matching resource is found based on the resource name. |
-| 9001006 | The resource is referenced cyclically. |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: Incorrect parameter types. |
+| [9001003](../errorcode-resource-manager.md#9001003-无效的资源名称) | Invalid resource name. |
+| [9001004](../errorcode-resource-manager.md#9001004-根据当前资源名称未找到匹配的资源) | No matching resource is found based on the resource name. |
+| [9001006](../errorcode-resource-manager.md#9001006-资源存在循环引用) | The resource is referenced cyclically. |
 
 ## 示例
 
@@ -1059,18 +1313,18 @@ import { AbilityConstant, UIAbility, Want } from '@kit.AbilityKit';
 import { BusinessError } from '@kit.BasicServicesKit';
 
 export default class EntryAbility extends UIAbility {
-    onCreate(want: Want, launchParam: AbilityConstant.LaunchParam): void {
-        try {
-            // "test"仅作示例，请替换为实际使用的资源
-            let colorValue = this.context.resourceManager.getColorByNameSync("test");
-            console.info(`getColorByNameSync, result: ${colorValue}`);
-            // 打印输出结果: getColorByNameSync, result: 4294967295
-        } catch (error) {
-            let code = (error as BusinessError).code;
-            let message = (error as BusinessError).message;
-            console.error(`getColorByNameSync failed, error code: ${code}, message: ${message}.`);
-        }
+  onCreate(want: Want, launchParam: AbilityConstant.LaunchParam): void {
+    try {
+      // "test"仅作示例，请替换为实际使用的资源
+      let colorValue = this.context.resourceManager.getColorByNameSync("test");
+      console.info(`getColorByNameSync, result: ${colorValue}`);
+      // 打印输出结果: getColorByNameSync, result: 4294967295
+    } catch (error) {
+      let code = (error as BusinessError).code;
+      let message = (error as BusinessError).message;
+      console.error(`getColorByNameSync failed, error code: ${code}, message: ${message}.`);
     }
+  }
 }
 ```
 
@@ -1114,10 +1368,10 @@ getColorSync(resId: long) : long
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 9001001 | Invalid resource ID. |
-| 401 | Parameter error. Possible causes: Incorrect parameter types. |
-| 9001002 | No matching resource is found based on the resource ID. |
-| 9001006 | The resource is referenced cyclically. |
+| [9001001](../errorcode-resource-manager.md#9001001-无效的资源id) | Invalid resource ID. |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: Incorrect parameter types. |
+| [9001002](../errorcode-resource-manager.md#9001002-根据当前资源id未找到匹配的资源) | No matching resource is found based on the resource ID. |
+| [9001006](../errorcode-resource-manager.md#9001006-资源存在循环引用) | The resource is referenced cyclically. |
 
 ## 示例
 
@@ -1133,23 +1387,48 @@ getColorSync(resId: long) : long
 }
 ```
 
+ArkTS-Dyn示例：
+
 ```TypeScript
 import { AbilityConstant, UIAbility, Want } from '@kit.AbilityKit';
 import { BusinessError } from '@kit.BasicServicesKit';
 
 export default class EntryAbility extends UIAbility {
-    onCreate(want: Want, launchParam: AbilityConstant.LaunchParam): void {
-        try {
-            // 'app.color.test'仅作示例，请替换为实际使用的资源
-            let colorValue = this.context.resourceManager.getColorSync($r('app.color.test').id);
-            console.info(`getColorSync, result: ${colorValue}`);
-            // 打印输出结果: getColorSync, result: 4294967295
-        } catch (error) {
-            let code = (error as BusinessError).code;
-            let message = (error as BusinessError).message;
-            console.error(`getColorSync failed, error code: ${code}, message: ${message}.`);
-        }
+  onCreate(want: Want, launchParam: AbilityConstant.LaunchParam): void {
+    try {
+      // 'app.color.test'仅作示例，请替换为实际使用的资源
+      let colorValue = this.context.resourceManager.getColorSync($r('app.color.test').id);
+      console.info(`getColorSync, result: ${colorValue}`);
+      // 打印输出结果: getColorSync, result: 4294967295
+    } catch (error) {
+      let code = (error as BusinessError).code;
+      let message = (error as BusinessError).message;
+      console.error(`getColorSync failed, error code: ${code}, message: ${message}.`);
     }
+  }
+}
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+import { AbilityConstant, UIAbility, Want } from '@kit.AbilityKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+import { $r } from '@kit.ArkUI';
+
+export default class EntryAbility extends UIAbility {
+  onCreate(want: Want, launchParam: AbilityConstant.LaunchParam): void {
+    try {
+      // 'app.color.test'仅作示例，请替换为实际使用的资源
+      let colorValue = this.context.resourceManager.getColorSync($r('app.color.test').id);
+      console.info(`getColorSync, result: ${colorValue}`);
+      // 打印输出结果: getColorSync, result: 4294967295
+    } catch (error) {
+      let code = (error as BusinessError).code;
+      let message = (error as BusinessError).message;
+      console.error(`getColorSync failed, error code: ${code}, message: ${message}.`);
+    }
+  }
 }
 ```
 
@@ -1193,10 +1472,10 @@ getColorSync(resource: Resource) : number
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 9001001 | Invalid resource ID. |
-| 401 | Parameter error. Possible causes: Incorrect parameter types. |
-| 9001002 | No matching resource is found based on the resource ID. |
-| 9001006 | The resource is referenced cyclically. |
+| [9001001](../errorcode-resource-manager.md#9001001-无效的资源id) | Invalid resource ID. |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: Incorrect parameter types. |
+| [9001002](../errorcode-resource-manager.md#9001002-根据当前资源id未找到匹配的资源) | No matching resource is found based on the resource ID. |
+| [9001006](../errorcode-resource-manager.md#9001006-资源存在循环引用) | The resource is referenced cyclically. |
 
 ## 示例
 
@@ -1258,26 +1537,82 @@ getConfiguration(callback: _AsyncCallback<Configuration>): void
 
 ## 示例
 
+ArkTS-Dyn示例：
+
 ```TypeScript
 import { AbilityConstant, UIAbility, Want } from '@kit.AbilityKit';
 import { BusinessError } from '@kit.BasicServicesKit';
 import { resourceManager } from '@kit.LocalizationKit';
 
 export default class EntryAbility extends UIAbility {
-    onCreate(want: Want, launchParam: AbilityConstant.LaunchParam): void {
-        try {
-            this.context.resourceManager.getConfiguration((error: BusinessError, config: resourceManager.Configuration) => {
-                if (error != null) {
-                    console.error("getConfiguration callback error is " + error);
-                } else {
-                    let direction = config.direction;
-                    let locale = config.locale;
-                }
-            });
-        } catch (error) {
-            console.error("getConfiguration callback error is " + error);
+  onCreate(want: Want, launchParam: AbilityConstant.LaunchParam): void {
+    try {
+      this.context.resourceManager.getConfiguration((error: BusinessError, value: resourceManager.Configuration) => {
+        if (error != null) {
+          console.error("getConfiguration callback error is " + error);
+        } else {
+          let direction = value.direction;
+          let locale = value.locale;
         }
+      });
+    } catch (error) {
+      console.error("getConfiguration callback error is " + error);
     }
+  }
+}
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+import { AbilityConstant, UIAbility, Want } from '@kit.AbilityKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+import { resourceManager } from '@kit.LocalizationKit';
+
+export default class EntryAbility extends UIAbility {
+  onCreate(want: Want, launchParam: AbilityConstant.LaunchParam): void {
+    try {
+      this.context.resourceManager.getConfiguration((error: BusinessError | null, value: resourceManager.Configuration | undefined) => {
+        if (error != null) {
+          console.error("getConfiguration callback error is " + error);
+        } else {
+          if (value) {
+            let direction = value.direction;
+            let locale = value.locale;
+          }
+        }
+      });
+    } catch (error) {
+      console.error("getConfiguration callback error is " + error);
+    }
+  }
+}
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+import { AbilityConstant, UIAbility, Want } from '@kit.AbilityKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+import { resourceManager } from '@kit.LocalizationKit';
+
+export default class EntryAbility extends UIAbility {
+  onCreate(want: Want, launchParam: AbilityConstant.LaunchParam): void {
+    try {
+      this.context.resourceManager.getConfiguration((error: BusinessError | null, value: resourceManager.Configuration | undefined) => {
+        if (error != null) {
+          console.error("getConfiguration callback error is " + error);
+        } else {
+          if (value) {
+            let direction = value.direction;
+            let locale = value.locale;
+          }
+        }
+      });
+    } catch (error) {
+      console.error("getConfiguration callback error is " + error);
+    }
+  }
 }
 ```
 
@@ -1307,24 +1642,70 @@ getConfiguration(): Promise<Configuration>
 
 ## 示例
 
+ArkTS-Dyn示例：
+
 ```TypeScript
 import { AbilityConstant, UIAbility, Want } from '@kit.AbilityKit';
 import { BusinessError } from '@kit.BasicServicesKit';
 import { resourceManager } from '@kit.LocalizationKit';
 
 export default class EntryAbility extends UIAbility {
-    onCreate(want: Want, launchParam: AbilityConstant.LaunchParam): void {
-        try {
-            this.context.resourceManager.getConfiguration().then((config: resourceManager.Configuration) => {
-                let direction = config.direction;
-                let locale = config.locale;
-            }).catch((error: BusinessError) => {
-                console.error("getConfiguration promise error is " + error);
-            });
-        } catch (error) {
-            console.error("getConfiguration promise error is " + error);
-        }
+  onCreate(want: Want, launchParam: AbilityConstant.LaunchParam): void {
+    try {
+      this.context.resourceManager.getConfiguration().then((value: resourceManager.Configuration) => {
+        let direction = value.direction;
+        let locale = value.locale;
+      }).catch((error: BusinessError) => {
+        console.error("getConfiguration promise error is " + error);
+      });
+    } catch (error) {
+      console.error("getConfiguration promise error is " + error);
     }
+  }
+}
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+import { AbilityConstant, UIAbility, Want } from '@kit.AbilityKit';
+import { resourceManager } from '@kit.LocalizationKit';
+
+export default class EntryAbility extends UIAbility {
+  onCreate(want: Want, launchParam: AbilityConstant.LaunchParam): void {
+    try {
+      this.context.resourceManager.getConfiguration().then((value: resourceManager.Configuration) => {
+        let direction = value.direction;
+        let locale = value.locale;
+      }).catch((error: Error) => {
+        console.error("getConfiguration promise error is " + error);
+      });
+    } catch (error) {
+      console.error("getConfiguration promise error is " + error);
+    }
+  }
+}
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+import { AbilityConstant, UIAbility, Want } from '@kit.AbilityKit';
+import { resourceManager } from '@kit.LocalizationKit';
+
+export default class EntryAbility extends UIAbility {
+  onCreate(want: Want, launchParam: AbilityConstant.LaunchParam): void {
+    try {
+      this.context.resourceManager.getConfiguration().then((value: resourceManager.Configuration) => {
+        let direction = value.direction;
+        let locale = value.locale;
+      }).catch((error: Error) => {
+        console.error("getConfiguration promise error is " + error);
+      });
+    } catch (error) {
+      console.error("getConfiguration promise error is " + error);
+    }
+  }
 }
 ```
 
@@ -1358,15 +1739,15 @@ getConfigurationSync(): Configuration
 import { AbilityConstant, UIAbility, Want } from '@kit.AbilityKit';
 
 export default class EntryAbility extends UIAbility {
-    onCreate(want: Want, launchParam: AbilityConstant.LaunchParam): void {
-        try {
-            let value = this.context.resourceManager.getConfigurationSync();
-            let direction = value.direction;
-            let locale = value.locale;
-        } catch (error) {
-            console.error("getConfigurationSync error is " + error);
-        }
+  onCreate(want: Want, launchParam: AbilityConstant.LaunchParam): void {
+    try {
+      let value = this.context.resourceManager.getConfigurationSync();
+      let direction = value.direction;
+      let locale = value.locale;
+    } catch (error) {
+      console.error("getConfigurationSync error is " + error);
     }
+  }
 }
 ```
 
@@ -1396,26 +1777,55 @@ getDeviceCapability(callback: _AsyncCallback<DeviceCapability>): void
 
 ## 示例
 
+ArkTS-Dyn示例：
+
 ```TypeScript
 import { AbilityConstant, UIAbility, Want } from '@kit.AbilityKit';
 import { BusinessError } from '@kit.BasicServicesKit';
 import { resourceManager } from '@kit.LocalizationKit';
 
 export default class EntryAbility extends UIAbility {
-    onCreate(want: Want, launchParam: AbilityConstant.LaunchParam): void {
-        try {
-            this.context.resourceManager.getDeviceCapability((error: BusinessError, value: resourceManager.DeviceCapability) => {
-                if (error != null) {
-                    console.error("getDeviceCapability callback error is " + error);
-                } else {
-                    let screenDensity = value.screenDensity;
-                    let deviceType = value.deviceType;
-                }
-            });
-        } catch (error) {
-            console.error("getDeviceCapability callback error is " + error);
+  onCreate(want: Want, launchParam: AbilityConstant.LaunchParam): void {
+    try {
+      this.context.resourceManager.getDeviceCapability((error: BusinessError, value: resourceManager.DeviceCapability) => {
+        if (error != null) {
+          console.error("getDeviceCapability callback error is " + error);
+        } else {
+          let screenDensity = value.screenDensity;
+          let deviceType = value.deviceType;
         }
+      });
+    } catch (error) {
+      console.error("getDeviceCapability callback error is " + error);
     }
+  }
+}
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+import { AbilityConstant, UIAbility, Want } from '@kit.AbilityKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+import { resourceManager } from '@kit.LocalizationKit';
+
+export default class EntryAbility extends UIAbility {
+  onCreate(want: Want, launchParam: AbilityConstant.LaunchParam): void {
+    try {
+      this.context.resourceManager.getDeviceCapability((error: BusinessError | null, value: resourceManager.DeviceCapability | undefined) => {
+        if (error != null) {
+          console.error("getDeviceCapability callback error is " + error);
+        } else {
+          if (value) {
+            let screenDensity = value.screenDensity;
+            let deviceType = value.deviceType;
+          }
+        }
+      });
+    } catch (error) {
+      console.error("getDeviceCapability callback error is " + error);
+    }
+  }
 }
 ```
 
@@ -1445,24 +1855,48 @@ getDeviceCapability(): Promise<DeviceCapability>
 
 ## 示例
 
+ArkTS-Dyn示例：
+
 ```TypeScript
 import { AbilityConstant, UIAbility, Want } from '@kit.AbilityKit';
 import { BusinessError } from '@kit.BasicServicesKit';
 import { resourceManager } from '@kit.LocalizationKit';
 
 export default class EntryAbility extends UIAbility {
-    onCreate(want: Want, launchParam: AbilityConstant.LaunchParam): void {
-        try {
-            this.context.resourceManager.getDeviceCapability().then((value: resourceManager.DeviceCapability) => {
-                let screenDensity = value.screenDensity;
-                let deviceType = value.deviceType;
-            }).catch((error: BusinessError) => {
-                console.error("getDeviceCapability promise error is " + error);
-            });
-        } catch (error) {
-            console.error("getDeviceCapability promise error is " + error);
-        }
+  onCreate(want: Want, launchParam: AbilityConstant.LaunchParam): void {
+    try {
+      this.context.resourceManager.getDeviceCapability().then((value: resourceManager.DeviceCapability) => {
+        let screenDensity = value.screenDensity;
+        let deviceType = value.deviceType;
+      }).catch((error: BusinessError) => {
+        console.error("getDeviceCapability promise error is " + error);
+      });
+    } catch (error) {
+      console.error("getDeviceCapability promise error is " + error);
     }
+  }
+}
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+import { AbilityConstant, UIAbility, Want } from '@kit.AbilityKit';
+import { resourceManager } from '@kit.LocalizationKit';
+
+export default class EntryAbility extends UIAbility {
+  onCreate(want: Want, launchParam: AbilityConstant.LaunchParam): void {
+    try {
+      this.context.resourceManager.getDeviceCapability().then((value: resourceManager.DeviceCapability) => {
+        let screenDensity = value.screenDensity;
+        let deviceType = value.deviceType;
+      }).catch((error: Error) => {
+        console.error("getDeviceCapability promise error is " + error);
+      });
+    } catch (error) {
+      console.error("getDeviceCapability promise error is " + error);
+    }
+  }
 }
 ```
 
@@ -1488,7 +1922,7 @@ getDeviceCapabilitySync(): DeviceCapability
 
 | 类型 | 说明 |
 | --- | --- |
-| [DeviceCapability](../../apis-connectivity-kit/arkts-apis/arkts-connectivity-partneragent-devicecapability-i.md) | 设备的DeviceCapability。 |
+| [DeviceCapability](arkts-localization-resourcemanager-devicecapability-c.md) | 设备的DeviceCapability。 |
 
 ## 示例
 
@@ -1496,15 +1930,15 @@ getDeviceCapabilitySync(): DeviceCapability
 import { AbilityConstant, UIAbility, Want } from '@kit.AbilityKit';
 
 export default class EntryAbility extends UIAbility {
-    onCreate(want: Want, launchParam: AbilityConstant.LaunchParam): void {
-        try {
-            let value = this.context.resourceManager.getDeviceCapabilitySync();
-            let screenDensity = value.screenDensity;
-            let deviceType = value.deviceType;
-        } catch (error) {
-            console.error("getDeviceCapabilitySync error is " + error);
-        }
+  onCreate(want: Want, launchParam: AbilityConstant.LaunchParam): void {
+    try {
+      let value = this.context.resourceManager.getDeviceCapabilitySync();
+      let screenDensity = value.screenDensity;
+      let deviceType = value.deviceType;
+    } catch (error) {
+      console.error("getDeviceCapabilitySync error is " + error);
     }
+  }
 }
 ```
 
@@ -1542,9 +1976,46 @@ getDouble(resId: long): double
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 9001001 | Invalid resource ID. |
-| 9001002 | No matching resource is found based on the resource ID. |
-| 9001006 | The resource is referenced cyclically. |
+| [9001001](../errorcode-resource-manager.md#9001001-无效的资源id) | Invalid resource ID. |
+| [9001002](../errorcode-resource-manager.md#9001002-根据当前资源id未找到匹配的资源) | No matching resource is found based on the resource ID. |
+| [9001006](../errorcode-resource-manager.md#9001006-资源存在循环引用) | The resource is referenced cyclically. |
+
+## 示例
+
+```TypeScript
+// 资源文件路径: src/main/resources/base/element/float.json
+// 数值为30.6vp，带单位
+{
+  "float": [
+    {
+      "name": "double_test",
+      "value": "30.6vp"
+    }
+  ]
+}
+```
+
+```TypeScript
+import { AbilityConstant, UIAbility, Want } from '@kit.AbilityKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+import { $r, display } from '@kit.ArkUI';
+
+export default class EntryAbility extends UIAbility {
+  onCreate(want: Want, launchParam: AbilityConstant.LaunchParam): void {
+    try {
+      // 'app.float.double_test'资源中的数值为30.6vp，带单位，因此doubleValue返回像素值。参考如下打印结果，densityPixels为1.5，则doubleValue = 30.6 * 1.5 = 45.900001525878906
+      // 'app.float.double_test'仅作示例，请替换为实际使用的资源
+      let doubleValue = this.context.resourceManager.getDouble($r('app.float.double_test').id);
+      console.info(`getDouble, densityPixels: ${display.getDefaultDisplaySync().densityPixels}, double value: ${doubleValue}`);
+      // 打印输出结果: getDouble, densityPixels: 1.5, double value: 45.900001525878906
+    } catch (error) {
+      let code = (error as BusinessError).code;
+      let message = (error as BusinessError).message;
+      console.error(`getDouble failed, error code: ${code}, message: ${message}.`);
+    }
+  }
+}
+```
 
 ## getDoubleByName
 
@@ -1580,9 +2051,46 @@ getDoubleByName(resName: string): double
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 9001003 | Invalid resource name. |
-| 9001004 | No matching resource is found based on the resource name. |
-| 9001006 | The resource is referenced cyclically. |
+| [9001003](../errorcode-resource-manager.md#9001003-无效的资源名称) | Invalid resource name. |
+| [9001004](../errorcode-resource-manager.md#9001004-根据当前资源名称未找到匹配的资源) | No matching resource is found based on the resource name. |
+| [9001006](../errorcode-resource-manager.md#9001006-资源存在循环引用) | The resource is referenced cyclically. |
+
+## 示例
+
+```TypeScript
+// 资源文件路径: src/main/resources/base/element/float.json
+// 数值为30.6vp，带单位
+{
+  "float": [
+    {
+      "name": "double_test",
+      "value": "30.6vp"
+    }
+  ]
+}
+```
+
+```TypeScript
+import { AbilityConstant, UIAbility, Want } from '@kit.AbilityKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+import { display } from '@kit.ArkUI';
+
+export default class EntryAbility extends UIAbility {
+  onCreate(want: Want, launchParam: AbilityConstant.LaunchParam): void {
+    try {
+      // "double_test"资源中的数值为30.6vp，带单位，因此doubleValue返回像素值。参考如下打印结果，densityPixels为1.5，则doubleValue = 30.6 * 1.5 = 45.900001525878906
+      // "double_test"仅作示例，请替换为实际使用的资源
+      let doubleValue = this.context.resourceManager.getDoubleByName("double_test");
+      console.info(`getDoubleByName, densityPixels: ${display.getDefaultDisplaySync().densityPixels}, double value: ${doubleValue}`);
+      // 打印输出结果: getDoubleByName, densityPixels: 1.5, double value: 45.900001525878906
+    } catch (error) {
+      let code = (error as BusinessError).code;
+      let message = (error as BusinessError).message;
+      console.error(`getDoubleByName failed, error code: ${code}, message: ${message}.`);
+    }
+  }
+}
+```
 
 ## getDoublePluralStringByNameSync
 
@@ -1627,10 +2135,10 @@ getDoublePluralStringByNameSync(resName: string, num: number, ...args: Array<str
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 9001003 | Invalid resource name. |
-| 9001004 | No matching resource is found based on the resource name. |
-| 9001006 | The resource is referenced cyclically. |
-| 9001008 | Failed to format the resource obtained based on the resource name. |
+| [9001003](../errorcode-resource-manager.md#9001003-无效的资源名称) | Invalid resource name. |
+| [9001004](../errorcode-resource-manager.md#9001004-根据当前资源名称未找到匹配的资源) | No matching resource is found based on the resource name. |
+| [9001006](../errorcode-resource-manager.md#9001006-资源存在循环引用) | The resource is referenced cyclically. |
+| [9001008](../errorcode-resource-manager.md#9001008-根据当前名称获取的资源格式化失败) | Failed to format the resource obtained based on the resource name. |
 
 ## 示例
 
@@ -1660,20 +2168,20 @@ import { AbilityConstant, UIAbility, Want } from '@kit.AbilityKit';
 import { BusinessError } from '@kit.BasicServicesKit';
 
 export default class EntryAbility extends UIAbility {
-    onCreate(want: Want, launchParam: AbilityConstant.LaunchParam): void {
-        try {
-            // 根据语言单复数规则，参数num取值为2.1，英文环境下对应单复数类别为other
-            // 在资源文件中用quantity字段表示单复数类别，因此会获取quantity为other的字符串
-            // "format_test"仅作示例，请替换为实际使用的资源
-            let pluralStr = this.context.resourceManager.getDoublePluralStringByNameSync("format_test", 2.1, 2, "basket", 0.6);
-            console.info(`getDoublePluralStringByNameSync, result: ${pluralStr}`);
-            // 打印输出结果: getDoublePluralStringByNameSync, result: There are 2 apples in the basket, the total amount is 0.6 kg.
-        } catch (error) {
-            let code = (error as BusinessError).code;
-            let message = (error as BusinessError).message;
-            console.error(`getDoublePluralStringByNameSync failed, error code: ${code}, message: ${message}.`);
-        }
+  onCreate(want: Want, launchParam: AbilityConstant.LaunchParam): void {
+    try {
+      // 根据语言单复数规则，参数num取值为2.1，英文环境下对应单复数类别为other
+      // 在资源文件中用quantity字段表示单复数类别，因此会获取quantity为other的字符串
+      // "format_test"仅作示例，请替换为实际使用的资源
+      let pluralStr = this.context.resourceManager.getDoublePluralStringByNameSync("format_test", 2.1, 2, "basket", 0.6);
+      console.info(`getDoublePluralStringByNameSync, result: ${pluralStr}`);
+      // 打印输出结果: getDoublePluralStringByNameSync, result: There are 2 apples in the basket, the total amount is 0.6 kg.
+    } catch (error) {
+      let code = (error as BusinessError).code;
+      let message = (error as BusinessError).message;
+      console.error(`getDoublePluralStringByNameSync failed, error code: ${code}, message: ${message}.`);
     }
+  }
 }
 ```
 
@@ -1720,10 +2228,10 @@ getDoublePluralStringByNameSync(resName: string, num: double, ...args: (string |
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 9001003 | Invalid resource name. |
-| 9001004 | No matching resource is found based on the resource name. |
-| 9001006 | The resource is referenced cyclically. |
-| 9001008 | Failed to format the resource obtained based on the resource name. |
+| [9001003](../errorcode-resource-manager.md#9001003-无效的资源名称) | Invalid resource name. |
+| [9001004](../errorcode-resource-manager.md#9001004-根据当前资源名称未找到匹配的资源) | No matching resource is found based on the resource name. |
+| [9001006](../errorcode-resource-manager.md#9001006-资源存在循环引用) | The resource is referenced cyclically. |
+| [9001008](../errorcode-resource-manager.md#9001008-根据当前名称获取的资源格式化失败) | Failed to format the resource obtained based on the resource name. |
 
 ## getDoublePluralStringValueSync
 
@@ -1768,10 +2276,10 @@ getDoublePluralStringValueSync(resId: number, num: number, ...args: Array<string
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 9001001 | Invalid resource ID. |
-| 9001002 | No matching resource is found based on the resource ID. |
-| 9001007 | Failed to format the resource obtained based on the resource ID. |
-| 9001006 | The resource is referenced cyclically. |
+| [9001001](../errorcode-resource-manager.md#9001001-无效的资源id) | Invalid resource ID. |
+| [9001002](../errorcode-resource-manager.md#9001002-根据当前资源id未找到匹配的资源) | No matching resource is found based on the resource ID. |
+| [9001007](../errorcode-resource-manager.md#9001007-根据当前id获取的资源格式化失败) | Failed to format the resource obtained based on the resource ID. |
+| [9001006](../errorcode-resource-manager.md#9001006-资源存在循环引用) | The resource is referenced cyclically. |
 
 ## 示例
 
@@ -1796,25 +2304,52 @@ getDoublePluralStringValueSync(resId: number, num: number, ...args: Array<string
 }
 ```
 
+ArkTS-Dyn示例：
+
 ```TypeScript
 import { AbilityConstant, UIAbility, Want } from '@kit.AbilityKit';
 import { BusinessError } from '@kit.BasicServicesKit';
 
 export default class EntryAbility extends UIAbility {
-    onCreate(want: Want, launchParam: AbilityConstant.LaunchParam): void {
-        try {
-            // 根据语言单复数规则，参数num取值为2.1，英文环境下对应单复数类别为other
-            // 在资源文件中用quantity字段表示单复数类别，因此会获取quantity为other的字符串
-            // 'app.plural.format_test'仅作示例，请替换为实际使用的资源
-            let pluralStr = this.context.resourceManager.getDoublePluralStringValueSync($r('app.plural.format_test').id, 2.1, 2, "basket", 0.6);
-            console.info(`getDoublePluralStringValueSync, result: ${pluralStr}`);
-            // 打印输出结果: getDoublePluralStringValueSync, result: There are 2 apples in the basket, the total amount is 0.6 kg.
-        } catch (error) {
-            let code = (error as BusinessError).code;
-            let message = (error as BusinessError).message;
-            console.error(`getDoublePluralStringValueSync failed, error code: ${code}, message: ${message}.`);
-        }
+  onCreate(want: Want, launchParam: AbilityConstant.LaunchParam): void {
+    try {
+      // 根据语言单复数规则，参数num取值为2.1，英文环境下对应单复数类别为other
+      // 在资源文件中用quantity字段表示单复数类别，因此会获取quantity为other的字符串
+      // 'app.plural.format_test'仅作示例，请替换为实际使用的资源
+      let pluralStr = this.context.resourceManager.getDoublePluralStringValueSync($r('app.plural.format_test').id, 2.1, 2, "basket", 0.6);
+      console.info(`getDoublePluralStringValueSync, result: ${pluralStr}`);
+      // 打印输出结果: getDoublePluralStringValueSync, result: There are 2 apples in the basket, the total amount is 0.6 kg.
+    } catch (error) {
+      let code = (error as BusinessError).code;
+      let message = (error as BusinessError).message;
+      console.error(`getDoublePluralStringValueSync failed, error code: ${code}, message: ${message}.`);
     }
+  }
+}
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+import { AbilityConstant, UIAbility, Want } from '@kit.AbilityKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+import { $r } from '@kit.ArkUI';
+
+export default class EntryAbility extends UIAbility {
+  onCreate(want: Want, launchParam: AbilityConstant.LaunchParam): void {
+    try {
+      // 根据语言单复数规则，参数num取值为2.1，英文环境下对应单复数类别为other
+      // 在资源文件中用quantity字段表示单复数类别，因此会获取quantity为other的字符串
+      // 'app.plural.format_test'仅作示例，请替换为实际使用的资源
+      let pluralStr = this.context.resourceManager.getDoublePluralStringValueSync($r('app.plural.format_test').id, 2.1, 2, "basket", 0.6);
+      console.info(`getDoublePluralStringValueSync, result: ${pluralStr}`);
+      // 打印输出结果: getDoublePluralStringValueSync, result: There are 2 apples in the basket, the total amount is 0.6 kg.
+    } catch (error) {
+      let code = (error as BusinessError).code;
+      let message = (error as BusinessError).message;
+      console.error(`getDoublePluralStringValueSync failed, error code: ${code}, message: ${message}.`);
+    }
+  }
 }
 ```
 
@@ -1861,10 +2396,10 @@ getDoublePluralStringValueSync(resId: long, num: double, ...args: (string | doub
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 9001001 | Invalid resource ID. |
-| 9001002 | No matching resource is found based on the resource ID. |
-| 9001007 | Failed to format the resource obtained based on the resource ID. |
-| 9001006 | The resource is referenced cyclically. |
+| [9001001](../errorcode-resource-manager.md#9001001-无效的资源id) | Invalid resource ID. |
+| [9001002](../errorcode-resource-manager.md#9001002-根据当前资源id未找到匹配的资源) | No matching resource is found based on the resource ID. |
+| [9001007](../errorcode-resource-manager.md#9001007-根据当前id获取的资源格式化失败) | Failed to format the resource obtained based on the resource ID. |
+| [9001006](../errorcode-resource-manager.md#9001006-资源存在循环引用) | The resource is referenced cyclically. |
 
 ## getDoublePluralStringValueSync
 
@@ -1913,10 +2448,10 @@ getDoublePluralStringValueSync(resource: Resource, num: number, ...args: Array<s
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 9001001 | Invalid resource ID. |
-| 9001002 | No matching resource is found based on the resource ID. |
-| 9001007 | Failed to format the resource obtained based on the resource ID. |
-| 9001006 | The resource is referenced cyclically. |
+| [9001001](../errorcode-resource-manager.md#9001001-无效的资源id) | Invalid resource ID. |
+| [9001002](../errorcode-resource-manager.md#9001002-根据当前资源id未找到匹配的资源) | No matching resource is found based on the resource ID. |
+| [9001007](../errorcode-resource-manager.md#9001007-根据当前id获取的资源格式化失败) | Failed to format the resource obtained based on the resource ID. |
+| [9001006](../errorcode-resource-manager.md#9001006-资源存在循环引用) | The resource is referenced cyclically. |
 
 ## 示例
 
@@ -2006,11 +2541,13 @@ getDrawableDescriptor(resId: long, density?: int, type?: int): DrawableDescripto
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 9001001 | Invalid resource ID. |
-| 401 | Parameter error. Possible causes: 1.Incorrect parameter types; 2.Parameter verification failed. |
-| 9001002 | No matching resource is found based on the resource ID. |
+| [9001001](../errorcode-resource-manager.md#9001001-无效的资源id) | Invalid resource ID. |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1.Incorrect parameter types; 2.Parameter verification failed. |
+| [9001002](../errorcode-resource-manager.md#9001002-根据当前资源id未找到匹配的资源) | No matching resource is found based on the resource ID. |
 
 ## 示例
+
+ArkTS-Dyn示例：
 
 ```TypeScript
 import { AbilityConstant, UIAbility, Want } from '@kit.AbilityKit';
@@ -2018,32 +2555,69 @@ import { BusinessError } from '@kit.BasicServicesKit';
 import { DrawableDescriptor } from '@kit.ArkUI';
 
 export default class EntryAbility extends UIAbility {
-    onCreate(want: Want, launchParam: AbilityConstant.LaunchParam): void {
-        try {
-            // 'app.media.icon'仅作示例，请替换为实际使用的资源
-            let drawableDescriptor:DrawableDescriptor = this.context.resourceManager.getDrawableDescriptor($r('app.media.icon').id);
-        } catch (error) {
-            let code = (error as BusinessError).code;
-            let message = (error as BusinessError).message;
-            console.error(`getDrawableDescriptor failed, error code: ${code}, message: ${message}.`);
-        }
-        try {
-            // 'app.media.icon'仅作示例，请替换为实际使用的资源
-            let drawableDescriptor:DrawableDescriptor = this.context.resourceManager.getDrawableDescriptor($r('app.media.icon').id, 120);
-        } catch (error) {
-            let code = (error as BusinessError).code;
-            let message = (error as BusinessError).message;
-            console.error(`getDrawableDescriptor failed, error code: ${code}, message: ${message}.`);
-        }
-        try {
-            // 'app.media.icon'仅作示例，请替换为实际使用的资源
-            let drawableDescriptor:DrawableDescriptor = this.context.resourceManager.getDrawableDescriptor($r('app.media.icon').id, 0, 1);
-        } catch (error) {
-            let code = (error as BusinessError).code;
-            let message = (error as BusinessError).message;
-            console.error(`getDrawableDescriptor failed, error code: ${code}, message: ${message}.`);
-        }
+  onCreate(want: Want, launchParam: AbilityConstant.LaunchParam): void {
+    try {
+      // 'app.media.icon'仅作示例，请替换为实际使用的资源
+      let drawableDescriptor:DrawableDescriptor = this.context.resourceManager.getDrawableDescriptor($r('app.media.icon').id);
+    } catch (error) {
+      let code = (error as BusinessError).code;
+      let message = (error as BusinessError).message;
+      console.error(`getDrawableDescriptor failed, error code: ${code}, message: ${message}.`);
     }
+    try {
+      // 'app.media.icon'仅作示例，请替换为实际使用的资源
+      let drawableDescriptor:DrawableDescriptor = this.context.resourceManager.getDrawableDescriptor($r('app.media.icon').id, 120);
+    } catch (error) {
+      let code = (error as BusinessError).code;
+      let message = (error as BusinessError).message;
+      console.error(`getDrawableDescriptor failed, error code: ${code}, message: ${message}.`);
+    }
+    try {
+      // 'app.media.icon'仅作示例，请替换为实际使用的资源
+      let drawableDescriptor:DrawableDescriptor = this.context.resourceManager.getDrawableDescriptor($r('app.media.icon').id, 0, 1);
+    } catch (error) {
+      let code = (error as BusinessError).code;
+      let message = (error as BusinessError).message;
+      console.error(`getDrawableDescriptor failed, error code: ${code}, message: ${message}.`);
+    }
+  }
+}
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+import { AbilityConstant, UIAbility, Want } from '@kit.AbilityKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+import { $r, DrawableDescriptor } from '@kit.ArkUI';
+
+export default class EntryAbility extends UIAbility {
+  onCreate(want: Want, launchParam: AbilityConstant.LaunchParam): void {
+    try {
+      // 'app.media.icon'仅作示例，请替换为实际使用的资源
+      let drawableDescriptor:DrawableDescriptor = this.context.resourceManager.getDrawableDescriptor($r('app.media.icon').id);
+    } catch (error) {
+      let code = (error as BusinessError).code;
+      let message = (error as BusinessError).message;
+      console.error(`getDrawableDescriptor failed, error code: ${code}, message: ${message}.`);
+    }
+    try {
+      // 'app.media.icon'仅作示例，请替换为实际使用的资源
+      let drawableDescriptor:DrawableDescriptor = this.context.resourceManager.getDrawableDescriptor($r('app.media.icon').id, 120);
+    } catch (error) {
+      let code = (error as BusinessError).code;
+      let message = (error as BusinessError).message;
+      console.error(`getDrawableDescriptor failed, error code: ${code}, message: ${message}.`);
+    }
+    try {
+      // 'app.media.icon'仅作示例，请替换为实际使用的资源
+      let drawableDescriptor:DrawableDescriptor = this.context.resourceManager.getDrawableDescriptor($r('app.media.icon').id, 0, 1);
+    } catch (error) {
+      let code = (error as BusinessError).code;
+      let message = (error as BusinessError).message;
+      console.error(`getDrawableDescriptor failed, error code: ${code}, message: ${message}.`);
+    }
+  }
 }
 ```
 
@@ -2089,9 +2663,9 @@ getDrawableDescriptor(resource: Resource, density?: number, type?: number): Draw
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 9001001 | Invalid resource ID. |
-| 401 | Parameter error. Possible causes: 1.Incorrect parameter types; 2 .Parameter verification failed. |
-| 9001002 | No matching resource is found based on the resource ID. |
+| [9001001](../errorcode-resource-manager.md#9001001-无效的资源id) | Invalid resource ID. |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1.Incorrect parameter types; 2 .Parameter verification failed. |
+| [9001002](../errorcode-resource-manager.md#9001002-根据当前资源id未找到匹配的资源) | No matching resource is found based on the resource ID. |
 
 ## 示例
 
@@ -2170,9 +2744,9 @@ getDrawableDescriptorByName(resName: string, density?: int, type?: int): Drawabl
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1.Incorrect parameter types; 2.Parameter verification failed. |
-| 9001003 | Invalid resource name. |
-| 9001004 | No matching resource is found based on the resource name. |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1.Incorrect parameter types; 2.Parameter verification failed. |
+| [9001003](../errorcode-resource-manager.md#9001003-无效的资源名称) | Invalid resource name. |
+| [9001004](../errorcode-resource-manager.md#9001004-根据当前资源名称未找到匹配的资源) | No matching resource is found based on the resource name. |
 
 ## 示例
 
@@ -2182,32 +2756,32 @@ import { BusinessError } from '@kit.BasicServicesKit';
 import { DrawableDescriptor } from '@kit.ArkUI';
 
 export default class EntryAbility extends UIAbility {
-    onCreate(want: Want, launchParam: AbilityConstant.LaunchParam): void {
-        try {
-            // "icon"仅作示例，请替换为实际使用的资源
-            let drawableDescriptor:DrawableDescriptor = this.context.resourceManager.getDrawableDescriptorByName('icon');
-        } catch (error) {
-            let code = (error as BusinessError).code;
-            let message = (error as BusinessError).message;
-            console.error(`getDrawableDescriptorByName failed, error code: ${code}, message: ${message}.`);
-        }
-        try {
-            // "icon"仅作示例，请替换为实际使用的资源
-            let drawableDescriptor:DrawableDescriptor = this.context.resourceManager.getDrawableDescriptorByName('icon', 120);
-        } catch (error) {
-            let code = (error as BusinessError).code;
-            let message = (error as BusinessError).message;
-            console.error(`getDrawableDescriptorByName failed, error code: ${code}, message: ${message}.`);
-        }
-        try {
-            // "icon"仅作示例，请替换为实际使用的资源
-            let drawableDescriptor:DrawableDescriptor = this.context.resourceManager.getDrawableDescriptorByName('icon', 0, 1);
-        } catch (error) {
-            let code = (error as BusinessError).code;
-            let message = (error as BusinessError).message;
-            console.error(`getDrawableDescriptorByName failed, error code: ${code}, message: ${message}.`);
-        }
+  onCreate(want: Want, launchParam: AbilityConstant.LaunchParam): void {
+    try {
+      // "icon"仅作示例，请替换为实际使用的资源
+      let drawableDescriptor:DrawableDescriptor = this.context.resourceManager.getDrawableDescriptorByName('icon');
+    } catch (error) {
+      let code = (error as BusinessError).code;
+      let message = (error as BusinessError).message;
+      console.error(`getDrawableDescriptorByName failed, error code: ${code}, message: ${message}.`);
     }
+    try {
+      // "icon"仅作示例，请替换为实际使用的资源
+      let drawableDescriptor:DrawableDescriptor = this.context.resourceManager.getDrawableDescriptorByName('icon', 120);
+    } catch (error) {
+      let code = (error as BusinessError).code;
+      let message = (error as BusinessError).message;
+      console.error(`getDrawableDescriptorByName failed, error code: ${code}, message: ${message}.`);
+    }
+    try {
+      // "icon"仅作示例，请替换为实际使用的资源
+      let drawableDescriptor:DrawableDescriptor = this.context.resourceManager.getDrawableDescriptorByName('icon', 0, 1);
+    } catch (error) {
+      let code = (error as BusinessError).code;
+      let message = (error as BusinessError).message;
+      console.error(`getDrawableDescriptorByName failed, error code: ${code}, message: ${message}.`);
+    }
+  }
 }
 ```
 
@@ -2245,9 +2819,45 @@ getInt(resId: long): int
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 9001001 | Invalid resource ID. |
-| 9001002 | No matching resource is found based on the resource ID. |
-| 9001006 | The resource is referenced cyclically. |
+| [9001001](../errorcode-resource-manager.md#9001001-无效的资源id) | Invalid resource ID. |
+| [9001002](../errorcode-resource-manager.md#9001002-根据当前资源id未找到匹配的资源) | No matching resource is found based on the resource ID. |
+| [9001006](../errorcode-resource-manager.md#9001006-资源存在循环引用) | The resource is referenced cyclically. |
+
+## 示例
+
+```TypeScript
+// 资源文件路径: src/main/resources/base/element/integer.json
+{
+  "integer": [
+    {
+      "name": "integer_test",
+      "value": 100
+    }
+  ]
+}
+```
+
+```TypeScript
+import { AbilityConstant, UIAbility, Want } from '@kit.AbilityKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+import { $r } from '@kit.ArkUI';
+
+export default class EntryAbility extends UIAbility {
+  onCreate(want: Want, launchParam: AbilityConstant.LaunchParam): void {
+    try {
+      // integer对应返回的是原数值
+      // 'app.integer.integer_test'仅作示例，请替换为实际使用的资源
+      let intValue = this.context.resourceManager.getInt($r('app.integer.integer_test').id);
+      console.info(`getInt, int value: ${intValue}`);
+      // 打印输出结果: getInt, int value: 100
+    } catch (error) {
+      let code = (error as BusinessError).code;
+      let message = (error as BusinessError).message;
+      console.error(`getInt failed, error code: ${code}, message: ${message}.`);
+    }
+  }
+}
+```
 
 ## getIntByName
 
@@ -2283,9 +2893,44 @@ getIntByName(resName: string): int
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 9001003 | Invalid resource name. |
-| 9001004 | No matching resource is found based on the resource name. |
-| 9001006 | The resource is referenced cyclically. |
+| [9001003](../errorcode-resource-manager.md#9001003-无效的资源名称) | Invalid resource name. |
+| [9001004](../errorcode-resource-manager.md#9001004-根据当前资源名称未找到匹配的资源) | No matching resource is found based on the resource name. |
+| [9001006](../errorcode-resource-manager.md#9001006-资源存在循环引用) | The resource is referenced cyclically. |
+
+## 示例
+
+```TypeScript
+// 资源文件路径: src/main/resources/base/element/integer.json
+{
+  "integer": [
+    {
+      "name": "integer_test",
+      "value": 100
+    }
+  ]
+}
+```
+
+```TypeScript
+import { AbilityConstant, UIAbility, Want } from '@kit.AbilityKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+export default class EntryAbility extends UIAbility {
+  onCreate(want: Want, launchParam: AbilityConstant.LaunchParam): void {
+    try {
+      // integer对应返回的是原数值
+      // "integer_test"仅作示例，请替换为实际使用的资源
+      let intValue = this.context.resourceManager.getIntByName("integer_test");
+      console.info(`getIntByName, int value: ${intValue}`);
+      // 打印输出结果: getIntByName, int value: 100
+    } catch (error) {
+      let code = (error as BusinessError).code;
+      let message = (error as BusinessError).message;
+      console.error(`getIntByName failed, error code: ${code}, message: ${message}.`);
+    }
+  }
+}
+```
 
 ## getIntPluralStringByNameSync
 
@@ -2330,10 +2975,10 @@ getIntPluralStringByNameSync(resName: string, num: number, ...args: Array<string
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 9001003 | Invalid resource name. |
-| 9001004 | No matching resource is found based on the resource name. |
-| 9001006 | The resource is referenced cyclically. |
-| 9001008 | Failed to format the resource obtained based on the resource name. |
+| [9001003](../errorcode-resource-manager.md#9001003-无效的资源名称) | Invalid resource name. |
+| [9001004](../errorcode-resource-manager.md#9001004-根据当前资源名称未找到匹配的资源) | No matching resource is found based on the resource name. |
+| [9001006](../errorcode-resource-manager.md#9001006-资源存在循环引用) | The resource is referenced cyclically. |
+| [9001008](../errorcode-resource-manager.md#9001008-根据当前名称获取的资源格式化失败) | Failed to format the resource obtained based on the resource name. |
 
 ## 示例
 
@@ -2363,20 +3008,20 @@ import { AbilityConstant, UIAbility, Want } from '@kit.AbilityKit';
 import { BusinessError } from '@kit.BasicServicesKit';
 
 export default class EntryAbility extends UIAbility {
-    onCreate(want: Want, launchParam: AbilityConstant.LaunchParam): void {
-        try {
-            // 根据语言单复数规则，参数num取值为1，英文环境下对应单复数类别为one
-            // 在资源文件中用quantity字段表示单复数类别，因此会获取quantity为one的字符串
-            // "format_test"仅作示例，请替换为实际使用的资源
-            let pluralStr = this.context.resourceManager.getIntPluralStringByNameSync("format_test", 1, 1, "basket", 0.3);
-            console.info(`getIntPluralStringByNameSync, result: ${pluralStr}`);
-            // 打印输出结果: getIntPluralStringByNameSync, result: There is 1 apple in the basket, the total amount is 0.3 kg.
-        } catch (error) {
-            let code = (error as BusinessError).code;
-            let message = (error as BusinessError).message;
-            console.error(`getIntPluralStringByNameSync failed, error code: ${code}, message: ${message}.`);
-        }
+  onCreate(want: Want, launchParam: AbilityConstant.LaunchParam): void {
+    try {
+      // 根据语言单复数规则，参数num取值为1，英文环境下对应单复数类别为one
+      // 在资源文件中用quantity字段表示单复数类别，因此会获取quantity为one的字符串
+      // "format_test"仅作示例，请替换为实际使用的资源
+      let pluralStr = this.context.resourceManager.getIntPluralStringByNameSync("format_test", 1, 1, "basket", 0.3);
+      console.info(`getIntPluralStringByNameSync, result: ${pluralStr}`);
+      // 打印输出结果: getIntPluralStringByNameSync, result: There is 1 apple in the basket, the total amount is 0.3 kg.
+    } catch (error) {
+      let code = (error as BusinessError).code;
+      let message = (error as BusinessError).message;
+      console.error(`getIntPluralStringByNameSync failed, error code: ${code}, message: ${message}.`);
     }
+  }
 }
 ```
 
@@ -2423,10 +3068,10 @@ getIntPluralStringByNameSync(resName: string, num: int, ...args: (string | doubl
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 9001003 | Invalid resource name. |
-| 9001004 | No matching resource is found based on the resource name. |
-| 9001006 | The resource is referenced cyclically. |
-| 9001008 | Failed to format the resource obtained based on the resource name. |
+| [9001003](../errorcode-resource-manager.md#9001003-无效的资源名称) | Invalid resource name. |
+| [9001004](../errorcode-resource-manager.md#9001004-根据当前资源名称未找到匹配的资源) | No matching resource is found based on the resource name. |
+| [9001006](../errorcode-resource-manager.md#9001006-资源存在循环引用) | The resource is referenced cyclically. |
+| [9001008](../errorcode-resource-manager.md#9001008-根据当前名称获取的资源格式化失败) | Failed to format the resource obtained based on the resource name. |
 
 ## getIntPluralStringValueSync
 
@@ -2471,10 +3116,10 @@ getIntPluralStringValueSync(resId: number, num: number,...args: Array<string | n
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 9001001 | Invalid resource ID. |
-| 9001002 | No matching resource is found based on the resource ID. |
-| 9001007 | Failed to format the resource obtained based on the resource ID. |
-| 9001006 | The resource is referenced cyclically. |
+| [9001001](../errorcode-resource-manager.md#9001001-无效的资源id) | Invalid resource ID. |
+| [9001002](../errorcode-resource-manager.md#9001002-根据当前资源id未找到匹配的资源) | No matching resource is found based on the resource ID. |
+| [9001007](../errorcode-resource-manager.md#9001007-根据当前id获取的资源格式化失败) | Failed to format the resource obtained based on the resource ID. |
+| [9001006](../errorcode-resource-manager.md#9001006-资源存在循环引用) | The resource is referenced cyclically. |
 
 ## 示例
 
@@ -2499,25 +3144,52 @@ getIntPluralStringValueSync(resId: number, num: number,...args: Array<string | n
 }
 ```
 
+ArkTS-Dyn示例：
+
 ```TypeScript
 import { AbilityConstant, UIAbility, Want } from '@kit.AbilityKit';
 import { BusinessError } from '@kit.BasicServicesKit';
 
 export default class EntryAbility extends UIAbility {
-    onCreate(want: Want, launchParam: AbilityConstant.LaunchParam): void {
-        try {
-            // 根据语言单复数规则，参数num取值为1，英文环境下对应单复数类别为one
-            // 在资源文件中用quantity字段表示单复数类别，因此会获取quantity为one的字符串
-            // 'app.plural.format_test'仅作示例，请替换为实际使用的资源
-            let pluralStr = this.context.resourceManager.getIntPluralStringValueSync($r('app.plural.format_test').id, 1, 1, "basket", 0.3);
-            console.info(`getIntPluralStringValueSync, result: ${pluralStr}`);
-            // 打印输出结果: getIntPluralStringValueSync, result: There is 1 apple in the basket, the total amount is 0.3 kg.
-        } catch (error) {
-            let code = (error as BusinessError).code;
-            let message = (error as BusinessError).message;
-            console.error(`getIntPluralStringValueSync failed, error code: ${code}, message: ${message}.`);
-        }
+  onCreate(want: Want, launchParam: AbilityConstant.LaunchParam): void {
+    try {
+      // 根据语言单复数规则，参数num取值为1，英文环境下对应单复数类别为one
+      // 在资源文件中用quantity字段表示单复数类别，因此会获取quantity为one的字符串
+      // 'app.plural.format_test'仅作示例，请替换为实际使用的资源
+      let pluralStr = this.context.resourceManager.getIntPluralStringValueSync($r('app.plural.format_test').id, 1, 1, "basket", 0.3);
+      console.info(`getIntPluralStringValueSync, result: ${pluralStr}`);
+      // 打印输出结果: getIntPluralStringValueSync, result: There is 1 apple in the basket, the total amount is 0.3 kg.
+    } catch (error) {
+      let code = (error as BusinessError).code;
+      let message = (error as BusinessError).message;
+      console.error(`getIntPluralStringValueSync failed, error code: ${code}, message: ${message}.`);
     }
+  }
+}
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+import { AbilityConstant, UIAbility, Want } from '@kit.AbilityKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+import { $r } from '@kit.ArkUI';
+
+export default class EntryAbility extends UIAbility {
+  onCreate(want: Want, launchParam: AbilityConstant.LaunchParam): void {
+    try {
+      // 根据语言单复数规则，参数num取值为1，英文环境下对应单复数类别为one
+      // 在资源文件中用quantity字段表示单复数类别，因此会获取quantity为one的字符串
+      // 'app.plural.format_test'仅作示例，请替换为实际使用的资源
+      let pluralStr = this.context.resourceManager.getIntPluralStringValueSync($r('app.plural.format_test').id, 1, 1, "basket", 0.3);
+      console.info(`getIntPluralStringValueSync, result: ${pluralStr}`);
+      // 打印输出结果: getIntPluralStringValueSync, result: There is 1 apple in the basket, the total amount is 0.3 kg.
+    } catch (error) {
+      let code = (error as BusinessError).code;
+      let message = (error as BusinessError).message;
+      console.error(`getIntPluralStringValueSync failed, error code: ${code}, message: ${message}.`);
+    }
+  }
 }
 ```
 
@@ -2564,10 +3236,10 @@ getIntPluralStringValueSync(resId: long, num: int,...args: (string | double)[]):
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 9001001 | Invalid resource ID. |
-| 9001002 | No matching resource is found based on the resource ID. |
-| 9001007 | Failed to format the resource obtained based on the resource ID. |
-| 9001006 | The resource is referenced cyclically. |
+| [9001001](../errorcode-resource-manager.md#9001001-无效的资源id) | Invalid resource ID. |
+| [9001002](../errorcode-resource-manager.md#9001002-根据当前资源id未找到匹配的资源) | No matching resource is found based on the resource ID. |
+| [9001007](../errorcode-resource-manager.md#9001007-根据当前id获取的资源格式化失败) | Failed to format the resource obtained based on the resource ID. |
+| [9001006](../errorcode-resource-manager.md#9001006-资源存在循环引用) | The resource is referenced cyclically. |
 
 ## getIntPluralStringValueSync
 
@@ -2616,10 +3288,10 @@ getIntPluralStringValueSync(resource: Resource, num: number, ...args: Array<stri
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 9001001 | Invalid resource ID. |
-| 9001002 | No matching resource is found based on the resource ID. |
-| 9001007 | Failed to format the resource obtained based on the resource ID. |
-| 9001006 | The resource is referenced cyclically. |
+| [9001001](../errorcode-resource-manager.md#9001001-无效的资源id) | Invalid resource ID. |
+| [9001002](../errorcode-resource-manager.md#9001002-根据当前资源id未找到匹配的资源) | No matching resource is found based on the resource ID. |
+| [9001007](../errorcode-resource-manager.md#9001007-根据当前id获取的资源格式化失败) | Failed to format the resource obtained based on the resource ID. |
+| [9001006](../errorcode-resource-manager.md#9001006-资源存在循环引用) | The resource is referenced cyclically. |
 
 ## 示例
 
@@ -2701,41 +3373,41 @@ getLocales(includeSystem?: boolean): Array<string>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 401 | Parameter error. Possible causes: Incorrect parameter types. |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: Incorrect parameter types. |
 
 ## 示例
 
 ```TypeScript
 import { AbilityConstant, UIAbility, Want } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
 import { resourceManager } from '@kit.LocalizationKit';
+import { BusinessError } from '@kit.BasicServicesKit';
 
 export default class EntryAbility extends UIAbility {
-    onCreate(want: Want, launchParam: AbilityConstant.LaunchParam): void {
-        try {
-            this.context.resourceManager.getLocales(); // 仅获取应用资源语言列表
-        } catch (error) {
-            let code = (error as BusinessError).code;
-            let message = (error as BusinessError).message;
-            console.error(`getLocales failed, error code: ${code}, message: ${message}.`);
-        }
-
-        try {
-            resourceManager.getSysResourceManager().getLocales(); // 仅获取系统资源语言列表
-        } catch (error) {
-            let code = (error as BusinessError).code;
-            let message = (error as BusinessError).message;
-            console.error(`getLocales failed, error code: ${code}, message: ${message}.`);
-        }
-
-        try {
-            this.context.resourceManager.getLocales(true); // 获取应用资源和系统资源语言列表
-        } catch (error) {
-            let code = (error as BusinessError).code;
-            let message = (error as BusinessError).message;
-            console.error(`getLocales failed, error code: ${code}, message: ${message}.`);
-        }
+  onCreate(want: Want, launchParam: AbilityConstant.LaunchParam): void {
+    try {
+      this.context.resourceManager.getLocales(); // 仅获取应用资源语言列表
+    } catch (error) {
+      let code = (error as BusinessError).code;
+      let message = (error as BusinessError).message;
+      console.error(`getLocales failed, error code: ${code}, message: ${message}.`);
     }
+
+    try {
+      resourceManager.getSysResourceManager().getLocales(); // 仅获取系统资源语言列表
+    } catch (error) {
+      let code = (error as BusinessError).code;
+      let message = (error as BusinessError).message;
+      console.error(`getLocales failed, error code: ${code}, message: ${message}.`);
+    }
+
+    try {
+      this.context.resourceManager.getLocales(true); // 获取应用资源和系统资源语言列表
+    } catch (error) {
+      let code = (error as BusinessError).code;
+      let message = (error as BusinessError).message;
+      console.error(`getLocales failed, error code: ${code}, message: ${message}.`);
+    }
+  }
 }
 ```
 
@@ -2764,7 +3436,7 @@ getMedia(resId: number, callback: AsyncCallback<Uint8Array>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | resId | number | 是 | 资源ID值。 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;Uint8Array&gt; | 是 | 回调函数，返回资源ID值对应的媒体文件内容。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Uint8Array&gt; | 是 | 回调函数，返回资源ID值对应的媒体文件内容。 |
 
 ## 示例
 
@@ -2851,7 +3523,7 @@ getMediaBase64(resId: number, callback: AsyncCallback<string>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | resId | number | 是 | 资源ID值。 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;string&gt; | 是 | 回调函数，返回资源ID值对应的图片资源Base64编码。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;string&gt; | 是 | 回调函数，返回资源ID值对应的图片资源Base64编码。 |
 
 ## 示例
 
@@ -2942,33 +3614,61 @@ getMediaBase64ByName(resName: string, callback: _AsyncCallback<string>): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 401 | Parameter error. Possible causes: Incorrect parameter types. |
-| 9001003 | Invalid resource name. |
-| 9001004 | No matching resource is found based on the resource name. |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: Incorrect parameter types. |
+| [9001003](../errorcode-resource-manager.md#9001003-无效的资源名称) | Invalid resource name. |
+| [9001004](../errorcode-resource-manager.md#9001004-根据当前资源名称未找到匹配的资源) | No matching resource is found based on the resource name. |
 
 ## 示例
+
+ArkTS-Dyn示例：
 
 ```TypeScript
 import { AbilityConstant, UIAbility, Want } from '@kit.AbilityKit';
 import { BusinessError } from '@kit.BasicServicesKit';
 
 export default class EntryAbility extends UIAbility {
-    onCreate(want: Want, launchParam: AbilityConstant.LaunchParam): void {
-        try {
-            // "test"仅作示例，请替换为实际使用的资源
-            this.context.resourceManager.getMediaBase64ByName("test", (error: BusinessError, value: string) => {
-                if (error != null) {
-                    console.error("error is " + error);
-                } else {
-                    let media = value;
-                }
-            });
-        } catch (error) {
-            let code = (error as BusinessError).code;
-            let message = (error as BusinessError).message;
-            console.error(`callback getMediaBase64ByName failed, error code: ${code}, message: ${message}.`);
+  onCreate(want: Want, launchParam: AbilityConstant.LaunchParam): void {
+    try {
+      // "test"仅作示例，请替换为实际使用的资源
+      this.context.resourceManager.getMediaBase64ByName("test", (error: BusinessError, value: string) => {
+        if (error != null) {
+          console.error("error is " + error);
+        } else {
+          let media = value;
         }
+      });
+    } catch (error) {
+      let code = (error as BusinessError).code;
+      let message = (error as BusinessError).message;
+      console.error(`callback getMediaBase64ByName failed, error code: ${code}, message: ${message}.`);
     }
+  }
+}
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+import { AbilityConstant, UIAbility, Want } from '@kit.AbilityKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+export default class EntryAbility extends UIAbility {
+  onCreate(want: Want, launchParam: AbilityConstant.LaunchParam): void {
+    try {
+      // "test"仅作示例，请替换为实际使用的资源
+      this.context.resourceManager.getMediaBase64ByName("test", (error: BusinessError | null, value: string | undefined) => {
+        if (error != null) {
+          console.error("error is " + error);
+        } else {
+          let media = value;
+        }
+      });
+    } catch (error) {
+      let code = (error as BusinessError).code;
+      let message = (error as BusinessError).message;
+      console.error(`callback getMediaBase64ByName failed, error code: ${code}, message: ${message}.`);
+    }
+  }
 }
 ```
 
@@ -3008,33 +3708,61 @@ getMediaBase64ByName(resName: string, density: int, callback: _AsyncCallback<str
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1.Incorrect parameter types; 2.Parameter verification failed. |
-| 9001003 | Invalid resource name. |
-| 9001004 | No matching resource is found based on the resource name. |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1.Incorrect parameter types; 2.Parameter verification failed. |
+| [9001003](../errorcode-resource-manager.md#9001003-无效的资源名称) | Invalid resource name. |
+| [9001004](../errorcode-resource-manager.md#9001004-根据当前资源名称未找到匹配的资源) | No matching resource is found based on the resource name. |
 
 ## 示例
+
+ArkTS-Dyn示例：
 
 ```TypeScript
 import { AbilityConstant, UIAbility, Want } from '@kit.AbilityKit';
 import { BusinessError } from '@kit.BasicServicesKit';
 
 export default class EntryAbility extends UIAbility {
-    onCreate(want: Want, launchParam: AbilityConstant.LaunchParam): void {
-        try {
-            // "test"仅作示例，请替换为实际使用的资源
-            this.context.resourceManager.getMediaBase64ByName("test", 120, (error: BusinessError, value: string) => {
-                if (error != null) {
-                    console.error(`callback getMediaBase64ByName failed, error code: ${error.code}, message: ${error.message}.`);
-                } else {
-                    let media = value;
-                }
-            });
-        } catch (error) {
-            let code = (error as BusinessError).code;
-            let message = (error as BusinessError).message;
-            console.error(`callback getMediaBase64ByName failed, error code: ${code}, message: ${message}.`);
+  onCreate(want: Want, launchParam: AbilityConstant.LaunchParam): void {
+    try {
+      // "test"仅作示例，请替换为实际使用的资源
+      this.context.resourceManager.getMediaBase64ByName("test", 120, (error: BusinessError, value: string) => {
+        if (error != null) {
+          console.error(`callback getMediaBase64ByName failed, error code: ${error.code}, message: ${error.message}.`);
+        } else {
+          let media = value;
         }
+      });
+    } catch (error) {
+      let code = (error as BusinessError).code;
+      let message = (error as BusinessError).message;
+      console.error(`callback getMediaBase64ByName failed, error code: ${code}, message: ${message}.`);
     }
+  }
+}
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+import { AbilityConstant, UIAbility, Want } from '@kit.AbilityKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+export default class EntryAbility extends UIAbility {
+  onCreate(want: Want, launchParam: AbilityConstant.LaunchParam): void {
+    try {
+      // "test"仅作示例，请替换为实际使用的资源
+      this.context.resourceManager.getMediaBase64ByName("test", 120, (error: BusinessError | null, value: string | undefined) => {
+        if (error != null) {
+          console.error(`callback getMediaBase64ByName failed, error code: ${error.code}, message: ${error.message}.`);
+        } else {
+          let media = value;
+        }
+      });
+    } catch (error) {
+      let code = (error as BusinessError).code;
+      let message = (error as BusinessError).message;
+      console.error(`callback getMediaBase64ByName failed, error code: ${code}, message: ${message}.`);
+    }
+  }
 }
 ```
 
@@ -3072,31 +3800,57 @@ getMediaBase64ByName(resName: string): Promise<string>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 401 | Parameter error. Possible causes: Incorrect parameter types. |
-| 9001003 | Invalid resource name. |
-| 9001004 | No matching resource is found based on the resource name. |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: Incorrect parameter types. |
+| [9001003](../errorcode-resource-manager.md#9001003-无效的资源名称) | Invalid resource name. |
+| [9001004](../errorcode-resource-manager.md#9001004-根据当前资源名称未找到匹配的资源) | No matching resource is found based on the resource name. |
 
 ## 示例
+
+ArkTS-Dyn示例：
 
 ```TypeScript
 import { AbilityConstant, UIAbility, Want } from '@kit.AbilityKit';
 import { BusinessError } from '@kit.BasicServicesKit';
 
 export default class EntryAbility extends UIAbility {
-    onCreate(want: Want, launchParam: AbilityConstant.LaunchParam): void {
-        try {
-            // "test"仅作示例，请替换为实际使用的资源
-            this.context.resourceManager.getMediaBase64ByName("test").then((value: string) => {
-                let media = value;
-            }).catch((error: BusinessError) => {
-                console.error("getMediaBase64ByName promise error is " + error);
-            });
-        } catch (error) {
-            let code = (error as BusinessError).code;
-            let message = (error as BusinessError).message;
-            console.error(`promise getMediaBase64ByName failed, error code: ${code}, message: ${message}.`);
-        }
+  onCreate(want: Want, launchParam: AbilityConstant.LaunchParam): void {
+    try {
+      // "test"仅作示例，请替换为实际使用的资源
+      this.context.resourceManager.getMediaBase64ByName("test").then((value: string) => {
+        let media = value;
+      }).catch((error: BusinessError) => {
+        console.error(`promise getMediaBase64ByName failed, error is ${error}.`);
+      });
+    } catch (error) {
+      let code = (error as BusinessError).code;
+      let message = (error as BusinessError).message;
+      console.error(`promise getMediaBase64ByName failed, error code: ${code}, message: ${message}.`);
     }
+  }
+}
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+import { AbilityConstant, UIAbility, Want } from '@kit.AbilityKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+export default class EntryAbility extends UIAbility {
+  onCreate(want: Want, launchParam: AbilityConstant.LaunchParam): void {
+    try {
+      // "test"仅作示例，请替换为实际使用的资源
+      this.context.resourceManager.getMediaBase64ByName("test").then((value: string) => {
+        let media = value;
+      }).catch((error: Error) => {
+        console.error(`promise getMediaBase64ByName failed, error is ${error}.`);
+      });
+    } catch (error) {
+      let code = (error as BusinessError).code;
+      let message = (error as BusinessError).message;
+      console.error(`promise getMediaBase64ByName failed, error code: ${code}, message: ${message}.`);
+    }
+  }
 }
 ```
 
@@ -3141,31 +3895,57 @@ getMediaBase64ByName(resName: string, density: int): Promise<string>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1.Incorrect parameter types; 2.Parameter verification failed. |
-| 9001003 | Invalid resource name. |
-| 9001004 | No matching resource is found based on the resource name. |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1.Incorrect parameter types; 2.Parameter verification failed. |
+| [9001003](../errorcode-resource-manager.md#9001003-无效的资源名称) | Invalid resource name. |
+| [9001004](../errorcode-resource-manager.md#9001004-根据当前资源名称未找到匹配的资源) | No matching resource is found based on the resource name. |
 
 ## 示例
+
+ArkTS-Dyn示例：
 
 ```TypeScript
 import { AbilityConstant, UIAbility, Want } from '@kit.AbilityKit';
 import { BusinessError } from '@kit.BasicServicesKit';
 
 export default class EntryAbility extends UIAbility {
-    onCreate(want: Want, launchParam: AbilityConstant.LaunchParam): void {
-        try {
-            // "test"仅作示例，请替换为实际使用的资源
-            this.context.resourceManager.getMediaBase64ByName("test", 120).then((value: string) => {
-                let media = value;
-            }).catch((error: BusinessError) => {
-                console.error(`promise getMediaBase64ByName failed, error code: ${error.code}, message: ${error.message}.`);
-            });
-        } catch (error) {
-            let code = (error as BusinessError).code;
-            let message = (error as BusinessError).message;
-            console.error(`promise getMediaBase64ByName failed, error code: ${code}, message: ${message}.`);
-        }
+  onCreate(want: Want, launchParam: AbilityConstant.LaunchParam): void {
+    try {
+      // "test"仅作示例，请替换为实际使用的资源
+      this.context.resourceManager.getMediaBase64ByName("test", 120).then((value: string) => {
+        let media = value;
+      }).catch((error: BusinessError) => {
+        console.error(`promise getMediaBase64ByName failed, error code: ${error.code}, message: ${error.message}.`);
+      });
+    } catch (error) {
+      let code = (error as BusinessError).code;
+      let message = (error as BusinessError).message;
+      console.error(`promise getMediaBase64ByName failed, error code: ${code}, message: ${message}.`);
     }
+  }
+}
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+import { AbilityConstant, UIAbility, Want } from '@kit.AbilityKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+export default class EntryAbility extends UIAbility {
+  onCreate(want: Want, launchParam: AbilityConstant.LaunchParam): void {
+    try {
+      // "test"仅作示例，请替换为实际使用的资源
+      this.context.resourceManager.getMediaBase64ByName("test", 120).then((value: string) => {
+        let media = value;
+      }).catch((error: Error) => {
+        console.error(`promise getMediaBase64ByName failed, error is ${error}.`);
+      });
+    } catch (error) {
+      let code = (error as BusinessError).code;
+      let message = (error as BusinessError).message;
+      console.error(`promise getMediaBase64ByName failed, error code: ${code}, message: ${message}.`);
+    }
+  }
 }
 ```
 
@@ -3210,9 +3990,9 @@ getMediaBase64ByNameSync(resName: string, density?: int): string
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1.Incorrect parameter types; 2.Parameter verification failed. |
-| 9001003 | Invalid resource name. |
-| 9001004 | No matching resource is found based on the resource name. |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1.Incorrect parameter types; 2.Parameter verification failed. |
+| [9001003](../errorcode-resource-manager.md#9001003-无效的资源名称) | Invalid resource name. |
+| [9001004](../errorcode-resource-manager.md#9001004-根据当前资源名称未找到匹配的资源) | No matching resource is found based on the resource name. |
 
 ## 示例
 
@@ -3221,25 +4001,25 @@ import { AbilityConstant, UIAbility, Want } from '@kit.AbilityKit';
 import { BusinessError } from '@kit.BasicServicesKit';
 
 export default class EntryAbility extends UIAbility {
-    onCreate(want: Want, launchParam: AbilityConstant.LaunchParam): void {
-        try {
-            // "test"仅作示例，请替换为实际使用的资源
-            this.context.resourceManager.getMediaBase64ByNameSync("test"); // 默认屏幕密度
-        } catch (error) {
-            let code = (error as BusinessError).code;
-            let message = (error as BusinessError).message;
-            console.error(`getMediaBase64ByNameSync failed, error code: ${code}, message: ${message}.`);
-        }
-
-        try {
-            // "test"仅作示例，请替换为实际使用的资源
-            this.context.resourceManager.getMediaBase64ByNameSync("test", 120); // 指定屏幕密度
-        } catch (error) {
-            let code = (error as BusinessError).code;
-            let message = (error as BusinessError).message;
-            console.error(`getMediaBase64ByNameSync failed, error code: ${code}, message: ${message}.`);
-        }
+  onCreate(want: Want, launchParam: AbilityConstant.LaunchParam): void {
+    try {
+      // "test"仅作示例，请替换为实际使用的资源
+      this.context.resourceManager.getMediaBase64ByNameSync("test"); // 默认屏幕密度
+    } catch (error) {
+      let code = (error as BusinessError).code;
+      let message = (error as BusinessError).message;
+      console.error(`getMediaBase64ByNameSync failed, error code: ${code}, message: ${message}.`);
     }
+
+    try {
+      // "test"仅作示例，请替换为实际使用的资源
+      this.context.resourceManager.getMediaBase64ByNameSync("test", 120); // 指定屏幕密度
+    } catch (error) {
+      let code = (error as BusinessError).code;
+      let message = (error as BusinessError).message;
+      console.error(`getMediaBase64ByNameSync failed, error code: ${code}, message: ${message}.`);
+    }
+  }
 }
 ```
 
@@ -3272,33 +4052,61 @@ getMediaByName(resName: string, callback: _AsyncCallback<Uint8Array>): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 401 | Parameter error. Possible causes: Incorrect parameter types. |
-| 9001003 | Invalid resource name. |
-| 9001004 | No matching resource is found based on the resource name. |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: Incorrect parameter types. |
+| [9001003](../errorcode-resource-manager.md#9001003-无效的资源名称) | Invalid resource name. |
+| [9001004](../errorcode-resource-manager.md#9001004-根据当前资源名称未找到匹配的资源) | No matching resource is found based on the resource name. |
 
 ## 示例
+
+ArkTS-Dyn示例：
 
 ```TypeScript
 import { AbilityConstant, UIAbility, Want } from '@kit.AbilityKit';
 import { BusinessError } from '@kit.BasicServicesKit';
 
 export default class EntryAbility extends UIAbility {
-    onCreate(want: Want, launchParam: AbilityConstant.LaunchParam): void {
-        try {
-            // "test"仅作示例，请替换为实际使用的资源
-            this.context.resourceManager.getMediaByName("test", (error: BusinessError, value: Uint8Array) => {
-                if (error != null) {
-                    console.error("error is " + error);
-                } else {
-                    let media = value;
-                }
-            });
-        } catch (error) {
-            let code = (error as BusinessError).code;
-            let message = (error as BusinessError).message;
-            console.error(`callback getMediaByName failed, error code: ${code}, message: ${message}.`);
+  onCreate(want: Want, launchParam: AbilityConstant.LaunchParam): void {
+    try {
+      // "test"仅作示例，请替换为实际使用的资源
+      this.context.resourceManager.getMediaByName("test", (error: BusinessError, value: Uint8Array) => {
+        if (error != null) {
+          console.error("error is " + error);
+        } else {
+          let media = value;
         }
+      });
+    } catch (error) {
+      let code = (error as BusinessError).code;
+      let message = (error as BusinessError).message;
+      console.error(`callback getMediaByName failed, error code: ${code}, message: ${message}.`);
     }
+  }
+}
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+import { AbilityConstant, UIAbility, Want } from '@kit.AbilityKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+export default class EntryAbility extends UIAbility {
+  onCreate(want: Want, launchParam: AbilityConstant.LaunchParam): void {
+    try {
+      // "test"仅作示例，请替换为实际使用的资源
+      this.context.resourceManager.getMediaByName("test", (error: BusinessError | null, value: Uint8Array | undefined) => {
+        if (error != null) {
+          console.error("error is " + error);
+        } else {
+          let media = value;
+        }
+      });
+    } catch (error) {
+      let code = (error as BusinessError).code;
+      let message = (error as BusinessError).message;
+      console.error(`callback getMediaByName failed, error code: ${code}, message: ${message}.`);
+    }
+  }
 }
 ```
 
@@ -3338,33 +4146,61 @@ getMediaByName(resName: string, density: int, callback: _AsyncCallback<Uint8Arra
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1.Incorrect parameter types; 2.Parameter verification failed. |
-| 9001003 | Invalid resource name. |
-| 9001004 | No matching resource is found based on the resource name. |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1.Incorrect parameter types; 2.Parameter verification failed. |
+| [9001003](../errorcode-resource-manager.md#9001003-无效的资源名称) | Invalid resource name. |
+| [9001004](../errorcode-resource-manager.md#9001004-根据当前资源名称未找到匹配的资源) | No matching resource is found based on the resource name. |
 
 ## 示例
+
+ArkTS-Dyn示例：
 
 ```TypeScript
 import { AbilityConstant, UIAbility, Want } from '@kit.AbilityKit';
 import { BusinessError } from '@kit.BasicServicesKit';
 
 export default class EntryAbility extends UIAbility {
-    onCreate(want: Want, launchParam: AbilityConstant.LaunchParam): void {
-        try {
-            // "test"仅作示例，请替换为实际使用的资源
-            this.context.resourceManager.getMediaByName("test", 120, (error: BusinessError, value: Uint8Array) => {
-                if (error != null) {
-                    console.error(`callback getMediaByName failed, error code: ${error.code}, message: ${error.message}.`);
-                } else {
-                    let media = value;
-                }
-            });
-        } catch (error) {
-            let code = (error as BusinessError).code;
-            let message = (error as BusinessError).message;
-            console.error(`callback getMediaByName failed, error code: ${code}, message: ${message}.`);
+  onCreate(want: Want, launchParam: AbilityConstant.LaunchParam): void {
+    try {
+      // "test"仅作示例，请替换为实际使用的资源
+      this.context.resourceManager.getMediaByName("test", 120, (error: BusinessError, value: Uint8Array) => {
+        if (error != null) {
+          console.error(`callback getMediaByName failed, error code: ${error.code}, message: ${error.message}.`);
+        } else {
+          let media = value;
         }
+      });
+    } catch (error) {
+      let code = (error as BusinessError).code;
+      let message = (error as BusinessError).message;
+      console.error(`callback getMediaByName failed, error code: ${code}, message: ${message}.`);
     }
+  }
+}
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+import { AbilityConstant, UIAbility, Want } from '@kit.AbilityKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+export default class EntryAbility extends UIAbility {
+  onCreate(want: Want, launchParam: AbilityConstant.LaunchParam): void {
+    try {
+      // "test"仅作示例，请替换为实际使用的资源
+      this.context.resourceManager.getMediaByName("test", 120, (error: BusinessError | null, value: Uint8Array | undefined) => {
+        if (error != null) {
+          console.error(`callback getMediaByName failed, error code: ${error.code}, message: ${error.message}.`);
+        } else {
+          let media = value;
+        }
+      });
+    } catch (error) {
+      let code = (error as BusinessError).code;
+      let message = (error as BusinessError).message;
+      console.error(`callback getMediaByName failed, error code: ${code}, message: ${message}.`);
+    }
+  }
 }
 ```
 
@@ -3402,31 +4238,57 @@ getMediaByName(resName: string): Promise<Uint8Array>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 401 | Parameter error. Possible causes: Incorrect parameter types. |
-| 9001003 | Invalid resource name. |
-| 9001004 | No matching resource is found based on the resource name. |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: Incorrect parameter types. |
+| [9001003](../errorcode-resource-manager.md#9001003-无效的资源名称) | Invalid resource name. |
+| [9001004](../errorcode-resource-manager.md#9001004-根据当前资源名称未找到匹配的资源) | No matching resource is found based on the resource name. |
 
 ## 示例
+
+ArkTS-Dyn示例：
 
 ```TypeScript
 import { AbilityConstant, UIAbility, Want } from '@kit.AbilityKit';
 import { BusinessError } from '@kit.BasicServicesKit';
 
 export default class EntryAbility extends UIAbility {
-    onCreate(want: Want, launchParam: AbilityConstant.LaunchParam): void {
-        try {
-            // "test"仅作示例，请替换为实际使用的资源
-            this.context.resourceManager.getMediaByName("test").then((value: Uint8Array) => {
-                let media = value;
-            }).catch((error: BusinessError) => {
-                console.error("getMediaByName promise error is " + error);
-            });
-        } catch (error) {
-            let code = (error as BusinessError).code;
-            let message = (error as BusinessError).message;
-            console.error(`promise getMediaByName failed, error code: ${code}, message: ${message}.`);
-        }
+  onCreate(want: Want, launchParam: AbilityConstant.LaunchParam): void {
+    try {
+      // "test"仅作示例，请替换为实际使用的资源
+      this.context.resourceManager.getMediaByName("test").then((value: Uint8Array) => {
+        let media = value;
+      }).catch((error: BusinessError) => {
+        console.error(`promise getMediaByName failed, error is ${error}.`);
+      });
+    } catch (error) {
+      let code = (error as BusinessError).code;
+      let message = (error as BusinessError).message;
+      console.error(`promise getMediaByName failed, error code: ${code}, message: ${message}.`);
     }
+  }
+}
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+import { AbilityConstant, UIAbility, Want } from '@kit.AbilityKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+export default class EntryAbility extends UIAbility {
+  onCreate(want: Want, launchParam: AbilityConstant.LaunchParam): void {
+    try {
+      // "test"仅作示例，请替换为实际使用的资源
+      this.context.resourceManager.getMediaByName("test").then((value: Uint8Array) => {
+        let media = value;
+      }).catch((error: Error) => {
+        console.error(`promise getMediaByName failed, error is ${error}.`);
+      });
+    } catch (error) {
+      let code = (error as BusinessError).code;
+      let message = (error as BusinessError).message;
+      console.error(`promise getMediaByName failed, error code: ${code}, message: ${message}.`);
+    }
+  }
 }
 ```
 
@@ -3471,31 +4333,57 @@ getMediaByName(resName: string, density: int): Promise<Uint8Array>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1.Incorrect parameter types; 2.Parameter verification failed. |
-| 9001003 | Invalid resource name. |
-| 9001004 | No matching resource is found based on the resource name. |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1.Incorrect parameter types; 2.Parameter verification failed. |
+| [9001003](../errorcode-resource-manager.md#9001003-无效的资源名称) | Invalid resource name. |
+| [9001004](../errorcode-resource-manager.md#9001004-根据当前资源名称未找到匹配的资源) | No matching resource is found based on the resource name. |
 
 ## 示例
+
+ArkTS-Dyn示例：
 
 ```TypeScript
 import { AbilityConstant, UIAbility, Want } from '@kit.AbilityKit';
 import { BusinessError } from '@kit.BasicServicesKit';
 
 export default class EntryAbility extends UIAbility {
-    onCreate(want: Want, launchParam: AbilityConstant.LaunchParam): void {
-        try {
-            // "test"仅作示例，请替换为实际使用的资源
-            this.context.resourceManager.getMediaByName("test", 120).then((value: Uint8Array) => {
-                let media = value;
-            }).catch((error: BusinessError) => {
-                console.error(`promise getMediaByName failed, error code: ${error.code}, message: ${error.message}.`);
-            });
-        } catch (error) {
-            let code = (error as BusinessError).code;
-            let message = (error as BusinessError).message;
-            console.error(`promise getMediaByName failed, error code: ${code}, message: ${message}.`);
-        }
+  onCreate(want: Want, launchParam: AbilityConstant.LaunchParam): void {
+    try {
+      // "test"仅作示例，请替换为实际使用的资源
+      this.context.resourceManager.getMediaByName("test", 120).then((value: Uint8Array) => {
+        let media = value;
+      }).catch((error: BusinessError) => {
+        console.error(`promise getMediaByName failed, error code: ${error.code}, message: ${error.message}.`);
+      });
+    } catch (error) {
+      let code = (error as BusinessError).code;
+      let message = (error as BusinessError).message;
+      console.error(`promise getMediaByName failed, error code: ${code}, message: ${message}.`);
     }
+  }
+}
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+import { AbilityConstant, UIAbility, Want } from '@kit.AbilityKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+export default class EntryAbility extends UIAbility {
+  onCreate(want: Want, launchParam: AbilityConstant.LaunchParam): void {
+    try {
+      // "test"仅作示例，请替换为实际使用的资源
+      this.context.resourceManager.getMediaByName("test", 120).then((value: Uint8Array) => {
+        let media = value;
+      }).catch((error: Error) => {
+        console.error(`promise getMediaByName failed, error is ${error}.`);
+      });
+    } catch (error) {
+      let code = (error as BusinessError).code;
+      let message = (error as BusinessError).message;
+      console.error(`promise getMediaByName failed, error code: ${code}, message: ${message}.`);
+    }
+  }
 }
 ```
 
@@ -3540,9 +4428,9 @@ getMediaByNameSync(resName: string, density?: int): Uint8Array
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1.Incorrect parameter types; 2.Parameter verification failed. |
-| 9001003 | Invalid resource name. |
-| 9001004 | No matching resource is found based on the resource name. |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1.Incorrect parameter types; 2.Parameter verification failed. |
+| [9001003](../errorcode-resource-manager.md#9001003-无效的资源名称) | Invalid resource name. |
+| [9001004](../errorcode-resource-manager.md#9001004-根据当前资源名称未找到匹配的资源) | No matching resource is found based on the resource name. |
 
 ## 示例
 
@@ -3551,25 +4439,25 @@ import { AbilityConstant, UIAbility, Want } from '@kit.AbilityKit';
 import { BusinessError } from '@kit.BasicServicesKit';
 
 export default class EntryAbility extends UIAbility {
-    onCreate(want: Want, launchParam: AbilityConstant.LaunchParam): void {
-        try {
-            // "test"仅作示例，请替换为实际使用的资源
-            this.context.resourceManager.getMediaByNameSync("test"); // 默认屏幕密度
-        } catch (error) {
-            let code = (error as BusinessError).code;
-            let message = (error as BusinessError).message;
-            console.error(`getMediaByNameSync failed, error code: ${code}, message: ${message}.`);
-        }
-
-        try {
-            // "test"仅作示例，请替换为实际使用的资源
-            this.context.resourceManager.getMediaByNameSync("test", 120); // 指定屏幕密度
-        } catch (error) {
-            let code = (error as BusinessError).code;
-            let message = (error as BusinessError).message;
-            console.error(`getMediaByNameSync failed, error code: ${code}, message: ${message}.`);
-        }
+  onCreate(want: Want, launchParam: AbilityConstant.LaunchParam): void {
+    try {
+      // "test"仅作示例，请替换为实际使用的资源
+      this.context.resourceManager.getMediaByNameSync("test"); // 默认屏幕密度
+    } catch (error) {
+      let code = (error as BusinessError).code;
+      let message = (error as BusinessError).message;
+      console.error(`getMediaByNameSync failed, error code: ${code}, message: ${message}.`);
     }
+
+    try {
+      // "test"仅作示例，请替换为实际使用的资源
+      this.context.resourceManager.getMediaByNameSync("test", 120); // 指定屏幕密度
+    } catch (error) {
+      let code = (error as BusinessError).code;
+      let message = (error as BusinessError).message;
+      console.error(`getMediaByNameSync failed, error code: ${code}, message: ${message}.`);
+    }
+  }
 }
 ```
 
@@ -3608,9 +4496,9 @@ getMediaContent(resource: Resource, callback: _AsyncCallback<Uint8Array>): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 9001001 | Invalid resource ID. |
-| 401 | Parameter error. Possible causes: Incorrect parameter types. |
-| 9001002 | No matching resource is found based on the resource ID. |
+| [9001001](../errorcode-resource-manager.md#9001001-无效的资源id) | Invalid resource ID. |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: Incorrect parameter types. |
+| [9001002](../errorcode-resource-manager.md#9001002-根据当前资源id未找到匹配的资源) | No matching resource is found based on the resource ID. |
 
 ## 示例
 
@@ -3674,9 +4562,9 @@ getMediaContent(resource: Resource, density: number, callback: _AsyncCallback<Ui
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 9001001 | Invalid resource ID. |
-| 401 | Parameter error. Possible causes: 1.Incorrect parameter types; 2 .Parameter verification failed. |
-| 9001002 | No matching resource is found based on the resource ID. |
+| [9001001](../errorcode-resource-manager.md#9001001-无效的资源id) | Invalid resource ID. |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1.Incorrect parameter types; 2 .Parameter verification failed. |
+| [9001002](../errorcode-resource-manager.md#9001002-根据当前资源id未找到匹配的资源) | No matching resource is found based on the resource ID. |
 
 ## 示例
 
@@ -3744,9 +4632,9 @@ getMediaContent(resource: Resource): Promise<Uint8Array>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 9001001 | Invalid resource ID. |
-| 401 | Parameter error. Possible causes: Incorrect parameter types. |
-| 9001002 | No matching resource is found based on the resource ID. |
+| [9001001](../errorcode-resource-manager.md#9001001-无效的资源id) | Invalid resource ID. |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: Incorrect parameter types. |
+| [9001002](../errorcode-resource-manager.md#9001002-根据当前资源id未找到匹配的资源) | No matching resource is found based on the resource ID. |
 
 ## 示例
 
@@ -3813,9 +4701,9 @@ getMediaContent(resource: Resource, density: number): Promise<Uint8Array>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 9001001 | Invalid resource ID. |
-| 401 | Parameter error. Possible causes: 1.Incorrect parameter types; 2 .Parameter verification failed. |
-| 9001002 | No matching resource is found based on the resource ID. |
+| [9001001](../errorcode-resource-manager.md#9001001-无效的资源id) | Invalid resource ID. |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1.Incorrect parameter types; 2 .Parameter verification failed. |
+| [9001002](../errorcode-resource-manager.md#9001002-根据当前资源id未找到匹配的资源) | No matching resource is found based on the resource ID. |
 
 ## 示例
 
@@ -3876,34 +4764,64 @@ getMediaContent(resId: long, callback: _AsyncCallback<Uint8Array>): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 9001001 | Invalid resource ID. |
-| 401 | Parameter error. Possible causes: Incorrect parameter types. |
-| 9001002 | No matching resource is found based on the resource ID. |
+| [9001001](../errorcode-resource-manager.md#9001001-无效的资源id) | Invalid resource ID. |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: Incorrect parameter types. |
+| [9001002](../errorcode-resource-manager.md#9001002-根据当前资源id未找到匹配的资源) | No matching resource is found based on the resource ID. |
 
 ## 示例
+
+ArkTS-Dyn示例：
 
 ```TypeScript
 import { AbilityConstant, UIAbility, Want } from '@kit.AbilityKit';
 import { BusinessError } from '@kit.BasicServicesKit';
 
 export default class EntryAbility extends UIAbility {
-    onCreate(want: Want, launchParam: AbilityConstant.LaunchParam): void {
-        try {
-            // 'app.media.test'仅作示例，请替换为实际使用的资源
-            this.context.resourceManager.getMediaContent($r('app.media.test').id,
-                (error: BusinessError, value: Uint8Array) => {
-                    if (error != null) {
-                        console.error("error is " + error);
-                    } else {
-                        let media = value;
-                    }
-                });
-        } catch (error) {
-            let code = (error as BusinessError).code;
-            let message = (error as BusinessError).message;
-            console.error(`callback getMediaContent failed, error code: ${code}, message: ${message}.`);
-        }
+  onCreate(want: Want, launchParam: AbilityConstant.LaunchParam): void {
+    try {
+      // 'app.media.test'仅作示例，请替换为实际使用的资源
+      this.context.resourceManager.getMediaContent($r('app.media.test').id,
+        (error: BusinessError, value: Uint8Array) => {
+          if (error != null) {
+            console.error("error is " + error);
+          } else {
+            let media = value;
+          }
+        });
+    } catch (error) {
+      let code = (error as BusinessError).code;
+      let message = (error as BusinessError).message;
+      console.error(`callback getMediaContent failed, error code: ${code}, message: ${message}.`);
     }
+  }
+}
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+import { AbilityConstant, UIAbility, Want } from '@kit.AbilityKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+import { $r } from '@kit.ArkUI';
+
+export default class EntryAbility extends UIAbility {
+  onCreate(want: Want, launchParam: AbilityConstant.LaunchParam): void {
+    try {
+      // 'app.media.test'仅作示例，请替换为实际使用的资源
+      this.context.resourceManager.getMediaContent($r('app.media.test').id,
+        (error: BusinessError | null, value: Uint8Array | undefined) => {
+          if (error != null) {
+            console.error("error is " + error);
+          } else {
+            let media = value;
+          }
+        });
+    } catch (error) {
+      let code = (error as BusinessError).code;
+      let message = (error as BusinessError).message;
+      console.error(`callback getMediaContent failed, error code: ${code}, message: ${message}.`);
+    }
+  }
 }
 ```
 
@@ -3943,33 +4861,62 @@ getMediaContent(resId: long, density: int, callback: _AsyncCallback<Uint8Array>)
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 9001001 | Invalid resource ID. |
-| 401 | Parameter error. Possible causes: 1.Incorrect parameter types; 2.Parameter verification failed. |
-| 9001002 | No matching resource is found based on the resource ID. |
+| [9001001](../errorcode-resource-manager.md#9001001-无效的资源id) | Invalid resource ID. |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1.Incorrect parameter types; 2.Parameter verification failed. |
+| [9001002](../errorcode-resource-manager.md#9001002-根据当前资源id未找到匹配的资源) | No matching resource is found based on the resource ID. |
 
 ## 示例
+
+ArkTS-Dyn示例：
 
 ```TypeScript
 import { AbilityConstant, UIAbility, Want } from '@kit.AbilityKit';
 import { BusinessError } from '@kit.BasicServicesKit';
 
 export default class EntryAbility extends UIAbility {
-    onCreate(want: Want, launchParam: AbilityConstant.LaunchParam): void {
-        try {
-            // 'app.media.test'仅作示例，请替换为实际使用的资源
-            this.context.resourceManager.getMediaContent($r('app.media.test').id, 120, (error: BusinessError, value: Uint8Array) => {
-                if (error != null) {
-                    console.error(`callback getMediaContent failed, error code: ${error.code}, message: ${error.message}.`);
-                } else {
-                    let media = value;
-                }
-            });
-        } catch (error) {
-            let code = (error as BusinessError).code;
-            let message = (error as BusinessError).message;
-            console.error(`callback getMediaContent failed, error code: ${code}, message: ${message}.`);
+  onCreate(want: Want, launchParam: AbilityConstant.LaunchParam): void {
+    try {
+      // 'app.media.test'仅作示例，请替换为实际使用的资源
+      this.context.resourceManager.getMediaContent($r('app.media.test').id, 120, (error: BusinessError, value: Uint8Array) => {
+        if (error != null) {
+          console.error(`callback getMediaContent failed, error code: ${error.code}, message: ${error.message}.`);
+        } else {
+          let media = value;
         }
+      });
+    } catch (error) {
+      let code = (error as BusinessError).code;
+      let message = (error as BusinessError).message;
+      console.error(`callback getMediaContent failed, error code: ${code}, message: ${message}.`);
     }
+  }
+}
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+import { AbilityConstant, UIAbility, Want } from '@kit.AbilityKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+import { $r } from '@kit.ArkUI';
+
+export default class EntryAbility extends UIAbility {
+  onCreate(want: Want, launchParam: AbilityConstant.LaunchParam): void {
+    try {
+      // 'app.media.test'仅作示例，请替换为实际使用的资源
+      this.context.resourceManager.getMediaContent($r('app.media.test').id, 120, (error: BusinessError | null, value: Uint8Array | undefined) => {
+        if (error != null) {
+          console.error(`callback getMediaContent failed, error code: ${error.code}, message: ${error.message}.`);
+        } else {
+          let media = value;
+        }
+      });
+    } catch (error) {
+      let code = (error as BusinessError).code;
+      let message = (error as BusinessError).message;
+      console.error(`callback getMediaContent failed, error code: ${code}, message: ${message}.`);
+    }
+  }
 }
 ```
 
@@ -4013,31 +4960,58 @@ getMediaContent(resId: long): Promise<Uint8Array>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 9001001 | Invalid resource ID. |
-| 401 | Parameter error. Possible causes: Incorrect parameter types. |
-| 9001002 | No matching resource is found based on the resource ID. |
+| [9001001](../errorcode-resource-manager.md#9001001-无效的资源id) | Invalid resource ID. |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: Incorrect parameter types. |
+| [9001002](../errorcode-resource-manager.md#9001002-根据当前资源id未找到匹配的资源) | No matching resource is found based on the resource ID. |
 
 ## 示例
+
+ArkTS-Dyn示例：
 
 ```TypeScript
 import { AbilityConstant, UIAbility, Want } from '@kit.AbilityKit';
 import { BusinessError } from '@kit.BasicServicesKit';
 
 export default class EntryAbility extends UIAbility {
-    onCreate(want: Want, launchParam: AbilityConstant.LaunchParam): void {
-        try {
-            // 'app.media.test'仅作示例，请替换为实际使用的资源
-            this.context.resourceManager.getMediaContent($r('app.media.test').id).then((value: Uint8Array) => {
-                let media = value;
-            }).catch((error: BusinessError) => {
-                console.error("getMediaContent promise error is " + error);
-            });
-        } catch (error) {
-            let code = (error as BusinessError).code;
-            let message = (error as BusinessError).message;
-            console.error(`promise getMediaContent failed, error code: ${code}, message: ${message}.`);
-        }
+  onCreate(want: Want, launchParam: AbilityConstant.LaunchParam): void {
+    try {
+      // 'app.media.test'仅作示例，请替换为实际使用的资源
+      this.context.resourceManager.getMediaContent($r('app.media.test').id).then((value: Uint8Array) => {
+        let media = value;
+      }).catch((error: BusinessError) => {
+        console.error(`promise getMediaContent failed, error is ${error}.`);
+      });
+    } catch (error) {
+      let code = (error as BusinessError).code;
+      let message = (error as BusinessError).message;
+      console.error(`promise getMediaContent failed, error code: ${code}, message: ${message}.`);
     }
+  }
+}
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+import { AbilityConstant, UIAbility, Want } from '@kit.AbilityKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+import { $r } from '@kit.ArkUI';
+
+export default class EntryAbility extends UIAbility {
+  onCreate(want: Want, launchParam: AbilityConstant.LaunchParam): void {
+    try {
+      // 'app.media.test'仅作示例，请替换为实际使用的资源
+      this.context.resourceManager.getMediaContent($r('app.media.test').id).then((value: Uint8Array) => {
+        let media = value;
+      }).catch((error: Error) => {
+        console.error(`promise getMediaContent failed, error is ${error}.`);
+      });
+    } catch (error) {
+      let code = (error as BusinessError).code;
+      let message = (error as BusinessError).message;
+      console.error(`promise getMediaContent failed, error code: ${code}, message: ${message}.`);
+    }
+  }
 }
 ```
 
@@ -4082,31 +5056,58 @@ getMediaContent(resId: long, density: int): Promise<Uint8Array>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 9001001 | Invalid resource ID. |
-| 401 | Parameter error. Possible causes: 1.Incorrect parameter types; 2.Parameter verification failed. |
-| 9001002 | No matching resource is found based on the resource ID. |
+| [9001001](../errorcode-resource-manager.md#9001001-无效的资源id) | Invalid resource ID. |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1.Incorrect parameter types; 2.Parameter verification failed. |
+| [9001002](../errorcode-resource-manager.md#9001002-根据当前资源id未找到匹配的资源) | No matching resource is found based on the resource ID. |
 
 ## 示例
+
+ArkTS-Dyn示例：
 
 ```TypeScript
 import { AbilityConstant, UIAbility, Want } from '@kit.AbilityKit';
 import { BusinessError } from '@kit.BasicServicesKit';
 
 export default class EntryAbility extends UIAbility {
-    onCreate(want: Want, launchParam: AbilityConstant.LaunchParam): void {
-        try {
-            // 'app.media.test'仅作示例，请替换为实际使用的资源
-            this.context.resourceManager.getMediaContent($r('app.media.test').id, 120).then((value: Uint8Array) => {
-                let media = value;
-            }).catch((error: BusinessError) => {
-                console.error(`promise getMediaContent failed, error code: ${error.code}, message: ${error.message}.`);
-            });
-        } catch (error) {
-            let code = (error as BusinessError).code;
-            let message = (error as BusinessError).message;
-            console.error(`promise getMediaContent failed, error code: ${code}, message: ${message}.`);
-        }
+  onCreate(want: Want, launchParam: AbilityConstant.LaunchParam): void {
+    try {
+      // 'app.media.test'仅作示例，请替换为实际使用的资源
+      this.context.resourceManager.getMediaContent($r('app.media.test').id, 120).then((value: Uint8Array) => {
+        let media = value;
+      }).catch((error: BusinessError) => {
+        console.error(`promise getMediaContent failed, error code: ${error.code}, message: ${error.message}.`);
+      });
+    } catch (error) {
+      let code = (error as BusinessError).code;
+      let message = (error as BusinessError).message;
+      console.error(`promise getMediaContent failed, error code: ${code}, message: ${message}.`);
     }
+  }
+}
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+import { AbilityConstant, UIAbility, Want } from '@kit.AbilityKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+import { $r } from '@kit.ArkUI';
+
+export default class EntryAbility extends UIAbility {
+  onCreate(want: Want, launchParam: AbilityConstant.LaunchParam): void {
+    try {
+      // 'app.media.test'仅作示例，请替换为实际使用的资源
+      this.context.resourceManager.getMediaContent($r('app.media.test').id, 120).then((value: Uint8Array) => {
+        let media = value;
+      }).catch((error: Error) => {
+        console.error(`promise getMediaContent failed, error is ${error}.`);
+      });
+    } catch (error) {
+      let code = (error as BusinessError).code;
+      let message = (error as BusinessError).message;
+      console.error(`promise getMediaContent failed, error code: ${code}, message: ${message}.`);
+    }
+  }
 }
 ```
 
@@ -4145,9 +5146,9 @@ getMediaContentBase64(resource: Resource, callback: _AsyncCallback<string>): voi
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 9001001 | Invalid resource ID. |
-| 401 | Parameter error. Possible causes: Incorrect parameter types. |
-| 9001002 | No matching resource is found based on the resource ID. |
+| [9001001](../errorcode-resource-manager.md#9001001-无效的资源id) | Invalid resource ID. |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: Incorrect parameter types. |
+| [9001002](../errorcode-resource-manager.md#9001002-根据当前资源id未找到匹配的资源) | No matching resource is found based on the resource ID. |
 
 ## 示例
 
@@ -4211,9 +5212,9 @@ getMediaContentBase64(resource: Resource, density: number, callback: _AsyncCallb
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 9001001 | Invalid resource ID. |
-| 401 | Parameter error. Possible causes: 1.Incorrect parameter types; 2 .Parameter verification failed. |
-| 9001002 | No matching resource is found based on the resource ID. |
+| [9001001](../errorcode-resource-manager.md#9001001-无效的资源id) | Invalid resource ID. |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1.Incorrect parameter types; 2 .Parameter verification failed. |
+| [9001002](../errorcode-resource-manager.md#9001002-根据当前资源id未找到匹配的资源) | No matching resource is found based on the resource ID. |
 
 ## 示例
 
@@ -4281,9 +5282,9 @@ getMediaContentBase64(resource: Resource): Promise<string>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 9001001 | Invalid resource ID. |
-| 401 | Parameter error. Possible causes: Incorrect parameter types. |
-| 9001002 | No matching resource is found based on the resource ID. |
+| [9001001](../errorcode-resource-manager.md#9001001-无效的资源id) | Invalid resource ID. |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: Incorrect parameter types. |
+| [9001002](../errorcode-resource-manager.md#9001002-根据当前资源id未找到匹配的资源) | No matching resource is found based on the resource ID. |
 
 ## 示例
 
@@ -4350,9 +5351,9 @@ getMediaContentBase64(resource: Resource, density: number): Promise<string>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 9001001 | Invalid resource ID. |
-| 401 | Parameter error. Possible causes: 1.Incorrect parameter types; 2 .Parameter verification failed. |
-| 9001002 | No matching resource is found based on the resource ID. |
+| [9001001](../errorcode-resource-manager.md#9001001-无效的资源id) | Invalid resource ID. |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1.Incorrect parameter types; 2 .Parameter verification failed. |
+| [9001002](../errorcode-resource-manager.md#9001002-根据当前资源id未找到匹配的资源) | No matching resource is found based on the resource ID. |
 
 ## 示例
 
@@ -4413,33 +5414,62 @@ getMediaContentBase64(resId: long, callback: _AsyncCallback<string>): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 9001001 | Invalid resource ID. |
-| 401 | Parameter error. Possible causes: Incorrect parameter types. |
-| 9001002 | No matching resource is found based on the resource ID. |
+| [9001001](../errorcode-resource-manager.md#9001001-无效的资源id) | Invalid resource ID. |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: Incorrect parameter types. |
+| [9001002](../errorcode-resource-manager.md#9001002-根据当前资源id未找到匹配的资源) | No matching resource is found based on the resource ID. |
 
 ## 示例
+
+ArkTS-Dyn示例：
 
 ```TypeScript
 import { AbilityConstant, UIAbility, Want } from '@kit.AbilityKit';
 import { BusinessError } from '@kit.BasicServicesKit';
 
 export default class EntryAbility extends UIAbility {
-    onCreate(want: Want, launchParam: AbilityConstant.LaunchParam): void {
-        try {
-            // 'app.media.test'仅作示例，请替换为实际使用的资源
-            this.context.resourceManager.getMediaContentBase64($r('app.media.test').id, (error: BusinessError, value: string) => {
-                if (error != null) {
-                    console.error("error is " + error);
-                } else {
-                    let media = value;
-                }
-            });
-        } catch (error) {
-            let code = (error as BusinessError).code;
-            let message = (error as BusinessError).message;
-            console.error(`callback getMediaContentBase64 failed, error code: ${code}, message: ${message}.`);
+  onCreate(want: Want, launchParam: AbilityConstant.LaunchParam): void {
+    try {
+      // 'app.media.test'仅作示例，请替换为实际使用的资源
+      this.context.resourceManager.getMediaContentBase64($r('app.media.test').id, (error: BusinessError, value: string) => {
+        if (error != null) {
+          console.error(`callback getMediaContentBase64 failed, error is ${error}.`);
+        } else {
+          let media = value;
         }
+      });
+    } catch (error) {
+      let code = (error as BusinessError).code;
+      let message = (error as BusinessError).message;
+      console.error(`callback getMediaContentBase64 failed, error code: ${code}, message: ${message}.`);
     }
+  }
+}
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+import { AbilityConstant, UIAbility, Want } from '@kit.AbilityKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+import { $r } from '@kit.ArkUI';
+
+export default class EntryAbility extends UIAbility {
+  onCreate(want: Want, launchParam: AbilityConstant.LaunchParam): void {
+    try {
+      // 'app.media.test'仅作示例，请替换为实际使用的资源
+      this.context.resourceManager.getMediaContentBase64($r('app.media.test').id, (error: BusinessError | null, value: string | undefined) => {
+        if (error != null) {
+          console.error(`callback getMediaContentBase64 failed, error is ${error}.`);
+        } else {
+          let media = value;
+        }
+      });
+    } catch (error) {
+      let code = (error as BusinessError).code;
+      let message = (error as BusinessError).message;
+      console.error(`callback getMediaContentBase64 failed, error code: ${code}, message: ${message}.`);
+    }
+  }
 }
 ```
 
@@ -4479,33 +5509,62 @@ getMediaContentBase64(resId: long, density: int, callback: _AsyncCallback<string
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 9001001 | Invalid resource ID. |
-| 401 | Parameter error. Possible causes: 1.Incorrect parameter types; 2.Parameter verification failed. |
-| 9001002 | No matching resource is found based on the resource ID. |
+| [9001001](../errorcode-resource-manager.md#9001001-无效的资源id) | Invalid resource ID. |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1.Incorrect parameter types; 2.Parameter verification failed. |
+| [9001002](../errorcode-resource-manager.md#9001002-根据当前资源id未找到匹配的资源) | No matching resource is found based on the resource ID. |
 
 ## 示例
+
+ArkTS-Dyn示例：
 
 ```TypeScript
 import { AbilityConstant, UIAbility, Want } from '@kit.AbilityKit';
 import { BusinessError } from '@kit.BasicServicesKit';
 
 export default class EntryAbility extends UIAbility {
-    onCreate(want: Want, launchParam: AbilityConstant.LaunchParam): void {
-        try {
-            // 'app.media.test'仅作示例，请替换为实际使用的资源
-            this.context.resourceManager.getMediaContentBase64($r('app.media.test').id, 120, (error: BusinessError, value: string) => {
-                if (error != null) {
-                    console.error(`callback getMediaContentBase64 failed, error code: ${error.code}, message: ${error.message}.`);
-                } else {
-                    let media = value;
-                }
-            });
-        } catch (error) {
-            let code = (error as BusinessError).code;
-            let message = (error as BusinessError).message;
-            console.error(`callback getMediaContentBase64 failed, error code: ${code}, message: ${message}.`);
+  onCreate(want: Want, launchParam: AbilityConstant.LaunchParam): void {
+    try {
+      // 'app.media.test'仅作示例，请替换为实际使用的资源
+      this.context.resourceManager.getMediaContentBase64($r('app.media.test').id, 120, (error: BusinessError, value: string) => {
+        if (error != null) {
+          console.error(`callback getMediaContentBase64 failed, error code: ${error.code}, message: ${error.message}.`);
+        } else {
+          let media = value;
         }
+      });
+    } catch (error) {
+      let code = (error as BusinessError).code;
+      let message = (error as BusinessError).message;
+      console.error(`callback getMediaContentBase64 failed, error code: ${code}, message: ${message}.`);
     }
+  }
+}
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+import { AbilityConstant, UIAbility, Want } from '@kit.AbilityKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+import { $r } from '@kit.ArkUI';
+
+export default class EntryAbility extends UIAbility {
+  onCreate(want: Want, launchParam: AbilityConstant.LaunchParam): void {
+    try {
+      // 'app.media.test'仅作示例，请替换为实际使用的资源
+      this.context.resourceManager.getMediaContentBase64($r('app.media.test').id, 120, (error: BusinessError | null, value: string | undefined) => {
+        if (error != null) {
+          console.error(`callback getMediaContentBase64 failed, error code: ${error.code}, message: ${error.message}.`);
+        } else {
+          let media = value;
+        }
+      });
+    } catch (error) {
+      let code = (error as BusinessError).code;
+      let message = (error as BusinessError).message;
+      console.error(`callback getMediaContentBase64 failed, error code: ${code}, message: ${message}.`);
+    }
+  }
 }
 ```
 
@@ -4549,31 +5608,58 @@ getMediaContentBase64(resId: long): Promise<string>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 9001001 | Invalid resource ID. |
-| 401 | Parameter error. Possible causes: Incorrect parameter types. |
-| 9001002 | No matching resource is found based on the resource ID. |
+| [9001001](../errorcode-resource-manager.md#9001001-无效的资源id) | Invalid resource ID. |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: Incorrect parameter types. |
+| [9001002](../errorcode-resource-manager.md#9001002-根据当前资源id未找到匹配的资源) | No matching resource is found based on the resource ID. |
 
 ## 示例
+
+ArkTS-Dyn示例：
 
 ```TypeScript
 import { AbilityConstant, UIAbility, Want } from '@kit.AbilityKit';
 import { BusinessError } from '@kit.BasicServicesKit';
 
 export default class EntryAbility extends UIAbility {
-    onCreate(want: Want, launchParam: AbilityConstant.LaunchParam): void {
-        try {
-            // 'app.media.test'仅作示例，请替换为实际使用的资源
-            this.context.resourceManager.getMediaContentBase64($r('app.media.test').id).then((value: string) => {
-                let media = value;
-            }).catch((error: BusinessError) => {
-                console.error("getMediaContentBase64 promise error is " + error);
-            });
-        } catch (error) {
-            let code = (error as BusinessError).code;
-            let message = (error as BusinessError).message;
-            console.error(`promise getMediaContentBase64 failed, error code: ${code}, message: ${message}.`);
-        }
+  onCreate(want: Want, launchParam: AbilityConstant.LaunchParam): void {
+    try {
+      // 'app.media.test'仅作示例，请替换为实际使用的资源
+      this.context.resourceManager.getMediaContentBase64($r('app.media.test').id).then((value: string) => {
+        let media = value;
+      }).catch((error: BusinessError) => {
+        console.error(`promise getMediaContentBase64 failed, error is ${error}.`);
+      });
+    } catch (error) {
+      let code = (error as BusinessError).code;
+      let message = (error as BusinessError).message;
+      console.error(`promise getMediaContentBase64 failed, error code: ${code}, message: ${message}.`);
     }
+  }
+}
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+import { AbilityConstant, UIAbility, Want } from '@kit.AbilityKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+import { $r } from '@kit.ArkUI';
+
+export default class EntryAbility extends UIAbility {
+  onCreate(want: Want, launchParam: AbilityConstant.LaunchParam): void {
+    try {
+      // 'app.media.test'仅作示例，请替换为实际使用的资源
+      this.context.resourceManager.getMediaContentBase64($r('app.media.test').id).then((value: string) => {
+        let media = value;
+      }).catch((error: Error) => {
+        console.error(`promise getMediaContentBase64 failed, error is ${error}.`);
+      });
+    } catch (error) {
+      let code = (error as BusinessError).code;
+      let message = (error as BusinessError).message;
+      console.error(`promise getMediaContentBase64 failed, error code: ${code}, message: ${message}.`);
+    }
+  }
 }
 ```
 
@@ -4618,31 +5704,58 @@ getMediaContentBase64(resId: long, density: int): Promise<string>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 9001001 | Invalid resource ID. |
-| 401 | Parameter error. Possible causes: 1.Incorrect parameter types; 2.Parameter verification failed. |
-| 9001002 | No matching resource is found based on the resource ID. |
+| [9001001](../errorcode-resource-manager.md#9001001-无效的资源id) | Invalid resource ID. |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1.Incorrect parameter types; 2.Parameter verification failed. |
+| [9001002](../errorcode-resource-manager.md#9001002-根据当前资源id未找到匹配的资源) | No matching resource is found based on the resource ID. |
 
 ## 示例
+
+ArkTS-Dyn示例：
 
 ```TypeScript
 import { AbilityConstant, UIAbility, Want } from '@kit.AbilityKit';
 import { BusinessError } from '@kit.BasicServicesKit';
 
 export default class EntryAbility extends UIAbility {
-    onCreate(want: Want, launchParam: AbilityConstant.LaunchParam): void {
-        try {
-            // 'app.media.test'仅作示例，请替换为实际使用的资源
-            this.context.resourceManager.getMediaContentBase64($r('app.media.test').id, 120).then((value: string) => {
-                let media = value;
-            }).catch((error: BusinessError) => {
-                console.error(`promise getMediaContentBase64 failed, error code: ${error.code}, message: ${error.message}.`);
-            });
-        } catch (error) {
-            let code = (error as BusinessError).code;
-            let message = (error as BusinessError).message;
-            console.error(`promise getMediaContentBase64 failed, error code: ${code}, message: ${message}.`);
-        }
+  onCreate(want: Want, launchParam: AbilityConstant.LaunchParam): void {
+    try {
+      // 'app.media.test'仅作示例，请替换为实际使用的资源
+      this.context.resourceManager.getMediaContentBase64($r('app.media.test').id, 120).then((value: string) => {
+        let media = value;
+      }).catch((error: BusinessError) => {
+        console.error(`promise getMediaContentBase64 failed, error code: ${error.code}, message: ${error.message}.`);
+      });
+    } catch (error) {
+      let code = (error as BusinessError).code;
+      let message = (error as BusinessError).message;
+      console.error(`promise getMediaContentBase64 failed, error code: ${code}, message: ${message}.`);
     }
+  }
+}
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+import { AbilityConstant, UIAbility, Want } from '@kit.AbilityKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+import { $r } from '@kit.ArkUI';
+
+export default class EntryAbility extends UIAbility {
+  onCreate(want: Want, launchParam: AbilityConstant.LaunchParam): void {
+    try {
+      // 'app.media.test'仅作示例，请替换为实际使用的资源
+      this.context.resourceManager.getMediaContentBase64($r('app.media.test').id, 120).then((value: string) => {
+        let media = value;
+      }).catch((error: Error) => {
+        console.error(`promise getMediaContentBase64 failed, error is ${error}.`);
+      });
+    } catch (error) {
+      let code = (error as BusinessError).code;
+      let message = (error as BusinessError).message;
+      console.error(`promise getMediaContentBase64 failed, error code: ${code}, message: ${message}.`);
+    }
+  }
 }
 ```
 
@@ -4687,36 +5800,68 @@ getMediaContentBase64Sync(resId: long, density?: int): string
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 9001001 | Invalid resource ID. |
-| 401 | Parameter error. Possible causes: 1.Incorrect parameter types; 2.Parameter verification failed. |
-| 9001002 | No matching resource is found based on the resource ID. |
+| [9001001](../errorcode-resource-manager.md#9001001-无效的资源id) | Invalid resource ID. |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1.Incorrect parameter types; 2.Parameter verification failed. |
+| [9001002](../errorcode-resource-manager.md#9001002-根据当前资源id未找到匹配的资源) | No matching resource is found based on the resource ID. |
 
 ## 示例
+
+ArkTS-Dyn示例：
 
 ```TypeScript
 import { AbilityConstant, UIAbility, Want } from '@kit.AbilityKit';
 import { BusinessError } from '@kit.BasicServicesKit';
 
 export default class EntryAbility extends UIAbility {
-    onCreate(want: Want, launchParam: AbilityConstant.LaunchParam): void {
-        try {
-            // 'app.media.test'仅作示例，请替换为实际使用的资源
-            this.context.resourceManager.getMediaContentBase64Sync($r('app.media.test').id); // 默认屏幕密度
-        } catch (error) {
-            let code = (error as BusinessError).code;
-            let message = (error as BusinessError).message;
-            console.error(`getMediaContentBase64Sync failed, error code: ${code}, message: ${message}.`);
-        }
-
-        try {
-            // 'app.media.test'仅作示例，请替换为实际使用的资源
-            this.context.resourceManager.getMediaContentBase64Sync($r('app.media.test').id, 120); // 指定屏幕密度
-        } catch (error) {
-            let code = (error as BusinessError).code;
-            let message = (error as BusinessError).message;
-            console.error(`getMediaContentBase64Sync failed, error code: ${code}, message: ${message}.`);
-        }
+  onCreate(want: Want, launchParam: AbilityConstant.LaunchParam): void {
+    try {
+      // 'app.media.test'仅作示例，请替换为实际使用的资源
+      this.context.resourceManager.getMediaContentBase64Sync($r('app.media.test').id); // 默认屏幕密度
+    } catch (error) {
+      let code = (error as BusinessError).code;
+      let message = (error as BusinessError).message;
+      console.error(`getMediaContentBase64Sync failed, error code: ${code}, message: ${message}.`);
     }
+
+    try {
+      // 'app.media.test'仅作示例，请替换为实际使用的资源
+      this.context.resourceManager.getMediaContentBase64Sync($r('app.media.test').id, 120); // 指定屏幕密度
+    } catch (error) {
+      let code = (error as BusinessError).code;
+      let message = (error as BusinessError).message;
+      console.error(`getMediaContentBase64Sync failed, error code: ${code}, message: ${message}.`);
+    }
+  }
+}
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+import { AbilityConstant, UIAbility, Want } from '@kit.AbilityKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+import { $r } from '@kit.ArkUI';
+
+export default class EntryAbility extends UIAbility {
+  onCreate(want: Want, launchParam: AbilityConstant.LaunchParam): void {
+    try {
+      // 'app.media.test'仅作示例，请替换为实际使用的资源
+      this.context.resourceManager.getMediaContentBase64Sync($r('app.media.test').id); // 默认屏幕密度
+    } catch (error) {
+      let code = (error as BusinessError).code;
+      let message = (error as BusinessError).message;
+      console.error(`getMediaContentBase64Sync failed, error code: ${code}, message: ${message}.`);
+    }
+
+    try {
+      // 'app.media.test'仅作示例，请替换为实际使用的资源
+      this.context.resourceManager.getMediaContentBase64Sync($r('app.media.test').id, 120); // 指定屏幕密度
+    } catch (error) {
+      let code = (error as BusinessError).code;
+      let message = (error as BusinessError).message;
+      console.error(`getMediaContentBase64Sync failed, error code: ${code}, message: ${message}.`);
+    }
+  }
 }
 ```
 
@@ -4761,9 +5906,9 @@ getMediaContentBase64Sync(resource: Resource, density?: number): string
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 9001001 | Invalid resource ID. |
-| 401 | Parameter error. Possible causes: 1.Incorrect parameter types; 2 .Parameter verification failed. |
-| 9001002 | No matching resource is found based on the resource ID. |
+| [9001001](../errorcode-resource-manager.md#9001001-无效的资源id) | Invalid resource ID. |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1.Incorrect parameter types; 2 .Parameter verification failed. |
+| [9001002](../errorcode-resource-manager.md#9001002-根据当前资源id未找到匹配的资源) | No matching resource is found based on the resource ID. |
 
 ## 示例
 
@@ -4834,36 +5979,68 @@ getMediaContentSync(resId: long, density?: int): Uint8Array
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 9001001 | Invalid resource ID. |
-| 401 | Parameter error. Possible causes: 1.Incorrect parameter types; 2.Parameter verification failed. |
-| 9001002 | No matching resource is found based on the resource ID. |
+| [9001001](../errorcode-resource-manager.md#9001001-无效的资源id) | Invalid resource ID. |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1.Incorrect parameter types; 2.Parameter verification failed. |
+| [9001002](../errorcode-resource-manager.md#9001002-根据当前资源id未找到匹配的资源) | No matching resource is found based on the resource ID. |
 
 ## 示例
+
+ArkTS-Dyn示例：
 
 ```TypeScript
 import { AbilityConstant, UIAbility, Want } from '@kit.AbilityKit';
 import { BusinessError } from '@kit.BasicServicesKit';
 
 export default class EntryAbility extends UIAbility {
-    onCreate(want: Want, launchParam: AbilityConstant.LaunchParam): void {
-        try {
-            // 'app.media.test'仅作示例，请替换为实际使用的资源
-            this.context.resourceManager.getMediaContentSync($r('app.media.test').id); // 默认屏幕密度
-        } catch (error) {
-            let code = (error as BusinessError).code;
-            let message = (error as BusinessError).message;
-            console.error(`getMediaContentSync failed, error code: ${code}, message: ${message}.`);
-        }
-
-        try {
-            // 'app.media.test'仅作示例，请替换为实际使用的资源
-            this.context.resourceManager.getMediaContentSync($r('app.media.test').id, 120); // 指定屏幕密度
-        } catch (error) {
-            let code = (error as BusinessError).code;
-            let message = (error as BusinessError).message;
-            console.error(`getMediaContentSync failed, error code: ${code}, message: ${message}.`);
-        }
+  onCreate(want: Want, launchParam: AbilityConstant.LaunchParam): void {
+    try {
+      // 'app.media.test'仅作示例，请替换为实际使用的资源
+      this.context.resourceManager.getMediaContentSync($r('app.media.test').id); // 默认屏幕密度
+    } catch (error) {
+      let code = (error as BusinessError).code;
+      let message = (error as BusinessError).message;
+      console.error(`getMediaContentSync failed, error code: ${code}, message: ${message}.`);
     }
+
+    try {
+      // 'app.media.test'仅作示例，请替换为实际使用的资源
+      this.context.resourceManager.getMediaContentSync($r('app.media.test').id, 120); // 指定屏幕密度
+    } catch (error) {
+      let code = (error as BusinessError).code;
+      let message = (error as BusinessError).message;
+      console.error(`getMediaContentSync failed, error code: ${code}, message: ${message}.`);
+    }
+  }
+}
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+import { AbilityConstant, UIAbility, Want } from '@kit.AbilityKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+import { $r } from '@kit.ArkUI';
+
+export default class EntryAbility extends UIAbility {
+  onCreate(want: Want, launchParam: AbilityConstant.LaunchParam): void {
+    try {
+      // 'app.media.test'仅作示例，请替换为实际使用的资源
+      this.context.resourceManager.getMediaContentSync($r('app.media.test').id); // 默认屏幕密度
+    } catch (error) {
+      let code = (error as BusinessError).code;
+      let message = (error as BusinessError).message;
+      console.error(`getMediaContentSync failed, error code: ${code}, message: ${message}.`);
+    }
+
+    try {
+      // 'app.media.test'仅作示例，请替换为实际使用的资源
+      this.context.resourceManager.getMediaContentSync($r('app.media.test').id, 120); // 指定屏幕密度
+    } catch (error) {
+      let code = (error as BusinessError).code;
+      let message = (error as BusinessError).message;
+      console.error(`getMediaContentSync failed, error code: ${code}, message: ${message}.`);
+    }
+  }
 }
 ```
 
@@ -4908,9 +6085,9 @@ getMediaContentSync(resource: Resource, density?: number): Uint8Array
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 9001001 | Invalid resource ID. |
-| 401 | Parameter error. Possible causes: 1.Incorrect parameter types; 2 .Parameter verification failed. |
-| 9001002 | No matching resource is found based on the resource ID. |
+| [9001001](../errorcode-resource-manager.md#9001001-无效的资源id) | Invalid resource ID. |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1.Incorrect parameter types; 2 .Parameter verification failed. |
+| [9001002](../errorcode-resource-manager.md#9001002-根据当前资源id未找到匹配的资源) | No matching resource is found based on the resource ID. |
 
 ## 示例
 
@@ -4974,10 +6151,10 @@ getNumber(resId: number): number
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 9001001 | Invalid resource ID. |
-| 401 | Parameter error. Possible causes: Incorrect parameter types. |
-| 9001002 | No matching resource is found based on the resource ID. |
-| 9001006 | The resource is referenced cyclically. |
+| [9001001](../errorcode-resource-manager.md#9001001-无效的资源id) | Invalid resource ID. |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: Incorrect parameter types. |
+| [9001002](../errorcode-resource-manager.md#9001002-根据当前资源id未找到匹配的资源) | No matching resource is found based on the resource ID. |
+| [9001006](../errorcode-resource-manager.md#9001006-资源存在循环引用) | The resource is referenced cyclically. |
 
 ## 示例
 
@@ -4995,6 +6172,7 @@ getNumber(resId: number): number
 
 ```TypeScript
 // 资源文件路径: src/main/resources/base/element/float.json
+// 数值为30.6vp，带单位
 {
   "float": [
     {
@@ -5011,31 +6189,31 @@ import { BusinessError } from '@kit.BasicServicesKit';
 import { display } from '@kit.ArkUI';
 
 export default class EntryAbility extends UIAbility {
-    onCreate(want: Want, launchParam: AbilityConstant.LaunchParam): void {
-        try {
-            // integer对应返回的是原数值
-            // 'app.integer.integer_test'仅作示例，请替换为实际使用的资源
-            let intValue = this.context.resourceManager.getNumber($r('app.integer.integer_test').id);
-            console.info(`getNumber, int value: ${intValue}`);
-            // 打印输出结果: getNumber, int value: 100
-        } catch (error) {
-            let code = (error as BusinessError).code;
-            let message = (error as BusinessError).message;
-            console.error(`getNumber failed, error code: ${code}, message: ${message}.`);
-        }
-
-        try {
-            // float对应返回的是真实像素点值，带"vp","fp"单位的像素值 = 原数值 * densityPixels
-            // 'app.float.float_test'仅作示例，请替换为实际使用的资源
-            let floatValue = this.context.resourceManager.getNumber($r('app.float.float_test').id);
-            console.info(`getNumber, densityPixels: ${display.getDefaultDisplaySync().densityPixels}, float value: ${floatValue}`);
-            // 打印输出结果: getNumber, densityPixels: 3.25, float value: 99.45000457763672
-        } catch (error) {
-            let code = (error as BusinessError).code;
-            let message = (error as BusinessError).message;
-            console.error(`getNumber failed, error code: ${code}, message: ${message}.`);
-        }
+  onCreate(want: Want, launchParam: AbilityConstant.LaunchParam): void {
+    try {
+      // integer对应返回的是原数值
+      // 'app.integer.integer_test'仅作示例，请替换为实际使用的资源
+      let intValue = this.context.resourceManager.getNumber($r('app.integer.integer_test').id);
+      console.info(`getNumber, int value: ${intValue}`);
+      // 打印输出结果: getNumber, int value: 100
+    } catch (error) {
+      let code = (error as BusinessError).code;
+      let message = (error as BusinessError).message;
+      console.error(`getNumber failed, error code: ${code}, message: ${message}.`);
     }
+
+    try {
+      // 'app.float.float_test'资源中的数值为30.6vp，带单位，因此floatValue返回像素值。参考如下打印结果，densityPixels为1.5，则floatValue = 30.6 * 1.5 = 45.900001525878906
+      // 'app.float.float_test'仅作示例，请替换为实际使用的资源
+      let floatValue = this.context.resourceManager.getNumber($r('app.float.float_test').id);
+      console.info(`getNumber, densityPixels: ${display.getDefaultDisplaySync().densityPixels}, float value: ${floatValue}`);
+      // 打印输出结果: getNumber, densityPixels: 1.5, float value: 45.900001525878906
+    } catch (error) {
+      let code = (error as BusinessError).code;
+      let message = (error as BusinessError).message;
+      console.error(`getNumber failed, error code: ${code}, message: ${message}.`);
+    }
+  }
 }
 ```
 
@@ -5079,10 +6257,10 @@ getNumber(resource: Resource): number
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 9001001 | Invalid resource ID. |
-| 401 | Parameter error. Possible causes: Incorrect parameter types. |
-| 9001002 | No matching resource is found based on the resource ID. |
-| 9001006 | The resource is referenced cyclically. |
+| [9001001](../errorcode-resource-manager.md#9001001-无效的资源id) | Invalid resource ID. |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: Incorrect parameter types. |
+| [9001002](../errorcode-resource-manager.md#9001002-根据当前资源id未找到匹配的资源) | No matching resource is found based on the resource ID. |
+| [9001006](../errorcode-resource-manager.md#9001006-资源存在循环引用) | The resource is referenced cyclically. |
 
 ## 示例
 
@@ -5153,10 +6331,10 @@ getNumberByName(resName: string): number
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 401 | Parameter error. Possible causes: Incorrect parameter types. |
-| 9001003 | Invalid resource name. |
-| 9001004 | No matching resource is found based on the resource name. |
-| 9001006 | The resource is referenced cyclically. |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: Incorrect parameter types. |
+| [9001003](../errorcode-resource-manager.md#9001003-无效的资源名称) | Invalid resource name. |
+| [9001004](../errorcode-resource-manager.md#9001004-根据当前资源名称未找到匹配的资源) | No matching resource is found based on the resource name. |
+| [9001006](../errorcode-resource-manager.md#9001006-资源存在循环引用) | The resource is referenced cyclically. |
 
 ## 示例
 
@@ -5174,6 +6352,7 @@ getNumberByName(resName: string): number
 
 ```TypeScript
 // 资源文件路径: src/main/resources/base/element/float.json
+// 数值为30.6vp，带单位
 {
   "float": [
     {
@@ -5190,31 +6369,31 @@ import { BusinessError } from '@kit.BasicServicesKit';
 import { display } from '@kit.ArkUI';
 
 export default class EntryAbility extends UIAbility {
-    onCreate(want: Want, launchParam: AbilityConstant.LaunchParam): void {
-        try {
-            // integer对应返回的是原数值
-            // "integer_test"仅作示例，请替换为实际使用的资源
-            let intValue = this.context.resourceManager.getNumberByName("integer_test");
-            console.info(`getNumberByName, int value: ${intValue}`);
-            // 打印输出结果: getNumberByName, int value: 100
-        } catch (error) {
-            let code = (error as BusinessError).code;
-            let message = (error as BusinessError).message;
-            console.error(`getNumberByName failed, error code: ${code}, message: ${message}.`);
-        }
-
-        try {
-            // float对应返回的是真实像素点值，带"vp","fp"单位的像素值 = 原数值 * densityPixels
-            // "float_test"仅作示例，请替换为实际使用的资源
-            let floatValue = this.context.resourceManager.getNumberByName("float_test");
-            console.info(`getNumberByName, densityPixels: ${display.getDefaultDisplaySync().densityPixels}, float value: ${floatValue}`);
-            // 打印输出结果: getNumberByName, densityPixels: 3.25, float value: 99.45000457763672
-        } catch (error) {
-            let code = (error as BusinessError).code;
-            let message = (error as BusinessError).message;
-            console.error(`getNumberByName failed, error code: ${code}, message: ${message}.`);
-        }
+  onCreate(want: Want, launchParam: AbilityConstant.LaunchParam): void {
+    try {
+      // integer对应返回的是原数值
+      // "integer_test"仅作示例，请替换为实际使用的资源
+      let intValue = this.context.resourceManager.getNumberByName("integer_test");
+      console.info(`getNumberByName, int value: ${intValue}`);
+      // 打印输出结果: getNumberByName, int value: 100
+    } catch (error) {
+      let code = (error as BusinessError).code;
+      let message = (error as BusinessError).message;
+      console.error(`getNumberByName failed, error code: ${code}, message: ${message}.`);
     }
+
+    try {
+      // "float_test"资源中的数值为30.6vp，带单位，因此floatValue返回像素值。参考如下打印结果，densityPixels为1.5，则floatValue = 30.6 * 1.5 = 45.900001525878906
+      // "float_test"仅作示例，请替换为实际使用的资源
+      let floatValue = this.context.resourceManager.getNumberByName("float_test");
+      console.info(`getNumberByName, densityPixels: ${display.getDefaultDisplaySync().densityPixels}, float value: ${floatValue}`);
+      // 打印输出结果: getNumberByName, densityPixels: 1.5, float value: 45.900001525878906
+    } catch (error) {
+      let code = (error as BusinessError).code;
+      let message = (error as BusinessError).message;
+      console.error(`getNumberByName failed, error code: ${code}, message: ${message}.`);
+    }
+  }
 }
 ```
 
@@ -5252,18 +6431,18 @@ import { BusinessError } from '@kit.BasicServicesKit';
 import { resourceManager } from '@kit.LocalizationKit';
 
 export default class EntryAbility extends UIAbility {
-    onCreate(want: Want, launchParam: AbilityConstant.LaunchParam): void {
-        try {
-            let resMgr = this.context.resourceManager;
-            let overrideConfig = resMgr.getOverrideConfiguration();
-            overrideConfig.colorMode = resourceManager.ColorMode.DARK;
-            let overrideResMgr = resMgr.getOverrideResourceManager(overrideConfig);
-        } catch (error) {
-            let code = (error as BusinessError).code;
-            let message = (error as BusinessError).message;
-            console.error(`getOverrideResourceManager failed, error code: ${code}, message: ${message}.`);
-        }
+  onCreate(want: Want, launchParam: AbilityConstant.LaunchParam): void {
+    try {
+      let resMgr = this.context.resourceManager;
+      let overrideConfig = resMgr.getOverrideConfiguration();
+      overrideConfig.colorMode = resourceManager.ColorMode.DARK;
+      let overrideResMgr = resMgr.getOverrideResourceManager(overrideConfig);
+    } catch (error) {
+      let code = (error as BusinessError).code;
+      let message = (error as BusinessError).message;
+      console.error(`getOverrideResourceManager failed, error code: ${code}, message: ${message}.`);
     }
+  }
 }
 ```
 
@@ -5303,7 +6482,7 @@ getOverrideResourceManager(configuration?: Configuration): ResourceManager
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 401 | Parameter error. Possible causes: Incorrect parameter types. |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: Incorrect parameter types. |
 
 ## 示例
 
@@ -5313,18 +6492,18 @@ import { BusinessError } from '@kit.BasicServicesKit';
 import { resourceManager } from '@kit.LocalizationKit';
 
 export default class EntryAbility extends UIAbility {
-    onCreate(want: Want, launchParam: AbilityConstant.LaunchParam): void {
-        try {
-            let resMgr = this.context.resourceManager;
-            let overrideConfig = resMgr.getOverrideConfiguration();
-            overrideConfig.colorMode = resourceManager.ColorMode.DARK;
-            let overrideResMgr = resMgr.getOverrideResourceManager(overrideConfig);
-        } catch (error) {
-            let code = (error as BusinessError).code;
-            let message = (error as BusinessError).message;
-            console.error(`getOverrideResourceManager failed, error code: ${code}, message: ${message}.`);
-        }
+  onCreate(want: Want, launchParam: AbilityConstant.LaunchParam): void {
+    try {
+      let resMgr = this.context.resourceManager;
+      let overrideConfig = resMgr.getOverrideConfiguration();
+      overrideConfig.colorMode = resourceManager.ColorMode.DARK;
+      let overrideResMgr = resMgr.getOverrideResourceManager(overrideConfig);
+    } catch (error) {
+      let code = (error as BusinessError).code;
+      let message = (error as BusinessError).message;
+      console.error(`getOverrideResourceManager failed, error code: ${code}, message: ${message}.`);
     }
+  }
 }
 ```
 
@@ -5359,7 +6538,7 @@ getPluralString(resId: number, num: number, callback: AsyncCallback<string>): vo
 | --- | --- | --- | --- |
 | resId | number | 是 | 资源ID值。 |
 | num | number | 是 | 数量值。根据当前语言的 [单复数规则](https://www.unicode.org/cldr/charts/45/supplemental/language_plural_rules.html)获取该数量值对应的字符串。 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;string&gt; | 是 | 回调函数，返回资源ID值对应的指定数量的单复数字符串。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;string&gt; | 是 | 回调函数，返回资源ID值对应的指定数量的单复数字符串。 |
 
 ## 示例
 
@@ -5468,10 +6647,10 @@ getPluralStringByName(resName: string, num: number, callback: _AsyncCallback<str
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 401 | Parameter error. Possible causes: Incorrect parameter types. |
-| 9001003 | Invalid resource name. |
-| 9001004 | No matching resource is found based on the resource name. |
-| 9001006 | The resource is referenced cyclically. |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: Incorrect parameter types. |
+| [9001003](../errorcode-resource-manager.md#9001003-无效的资源名称) | Invalid resource name. |
+| [9001004](../errorcode-resource-manager.md#9001004-根据当前资源名称未找到匹配的资源) | No matching resource is found based on the resource name. |
+| [9001006](../errorcode-resource-manager.md#9001006-资源存在循环引用) | The resource is referenced cyclically. |
 
 ## 示例
 
@@ -5555,10 +6734,10 @@ getPluralStringByName(resName: string, num: number): Promise<string>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 401 | Parameter error. Possible causes: Incorrect parameter types. |
-| 9001003 | Invalid resource name. |
-| 9001004 | No matching resource is found based on the resource name. |
-| 9001006 | The resource is referenced cyclically. |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: Incorrect parameter types. |
+| [9001003](../errorcode-resource-manager.md#9001003-无效的资源名称) | Invalid resource name. |
+| [9001004](../errorcode-resource-manager.md#9001004-根据当前资源名称未找到匹配的资源) | No matching resource is found based on the resource name. |
+| [9001006](../errorcode-resource-manager.md#9001006-资源存在循环引用) | The resource is referenced cyclically. |
 
 ## 示例
 
@@ -5642,10 +6821,10 @@ getPluralStringByNameSync(resName: string, num: number): string
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 401 | Parameter error. Possible causes: Incorrect parameter types. |
-| 9001003 | Invalid resource name. |
-| 9001004 | No matching resource is found based on the resource name. |
-| 9001006 | The resource is referenced cyclically. |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: Incorrect parameter types. |
+| [9001003](../errorcode-resource-manager.md#9001003-无效的资源名称) | Invalid resource name. |
+| [9001004](../errorcode-resource-manager.md#9001004-根据当前资源名称未找到匹配的资源) | No matching resource is found based on the resource name. |
+| [9001006](../errorcode-resource-manager.md#9001006-资源存在循环引用) | The resource is referenced cyclically. |
 
 ## 示例
 
@@ -5727,10 +6906,10 @@ getPluralStringValue(resource: Resource, num: number, callback: _AsyncCallback<s
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 9001001 | Invalid resource ID. |
-| 401 | Parameter error. Possible causes: Incorrect parameter types. |
-| 9001002 | No matching resource is found based on the resource ID. |
-| 9001006 | The resource is referenced cyclically. |
+| [9001001](../errorcode-resource-manager.md#9001001-无效的资源id) | Invalid resource ID. |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: Incorrect parameter types. |
+| [9001002](../errorcode-resource-manager.md#9001002-根据当前资源id未找到匹配的资源) | No matching resource is found based on the resource ID. |
+| [9001006](../errorcode-resource-manager.md#9001006-资源存在循环引用) | The resource is referenced cyclically. |
 
 ## 示例
 
@@ -5823,10 +7002,10 @@ getPluralStringValue(resource: Resource, num: number): Promise<string>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 9001001 | Invalid resource ID. |
-| 401 | Parameter error. Possible causes: Incorrect parameter types. |
-| 9001002 | No matching resource is found based on the resource ID. |
-| 9001006 | The resource is referenced cyclically. |
+| [9001001](../errorcode-resource-manager.md#9001001-无效的资源id) | Invalid resource ID. |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: Incorrect parameter types. |
+| [9001002](../errorcode-resource-manager.md#9001002-根据当前资源id未找到匹配的资源) | No matching resource is found based on the resource ID. |
+| [9001006](../errorcode-resource-manager.md#9001006-资源存在循环引用) | The resource is referenced cyclically. |
 
 ## 示例
 
@@ -5911,10 +7090,10 @@ getPluralStringValue(resId: number, num: number, callback: _AsyncCallback<string
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 9001001 | Invalid resource ID. |
-| 401 | Parameter error. Possible causes: Incorrect parameter types. |
-| 9001002 | No matching resource is found based on the resource ID. |
-| 9001006 | The resource is referenced cyclically. |
+| [9001001](../errorcode-resource-manager.md#9001001-无效的资源id) | Invalid resource ID. |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: Incorrect parameter types. |
+| [9001002](../errorcode-resource-manager.md#9001002-根据当前资源id未找到匹配的资源) | No matching resource is found based on the resource ID. |
+| [9001006](../errorcode-resource-manager.md#9001006-资源存在循环引用) | The resource is referenced cyclically. |
 
 ## 示例
 
@@ -5999,10 +7178,10 @@ getPluralStringValue(resId: number, num: number): Promise<string>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 9001001 | Invalid resource ID. |
-| 401 | Parameter error. Possible causes: Incorrect parameter types. |
-| 9001002 | No matching resource is found based on the resource ID. |
-| 9001006 | The resource is referenced cyclically. |
+| [9001001](../errorcode-resource-manager.md#9001001-无效的资源id) | Invalid resource ID. |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: Incorrect parameter types. |
+| [9001002](../errorcode-resource-manager.md#9001002-根据当前资源id未找到匹配的资源) | No matching resource is found based on the resource ID. |
+| [9001006](../errorcode-resource-manager.md#9001006-资源存在循环引用) | The resource is referenced cyclically. |
 
 ## 示例
 
@@ -6086,10 +7265,10 @@ getPluralStringValueSync(resId: number, num: number): string
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 9001001 | Invalid resource ID. |
-| 401 | Parameter error. Possible causes: Incorrect parameter types. |
-| 9001002 | No matching resource is found based on the resource ID. |
-| 9001006 | The resource is referenced cyclically. |
+| [9001001](../errorcode-resource-manager.md#9001001-无效的资源id) | Invalid resource ID. |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: Incorrect parameter types. |
+| [9001002](../errorcode-resource-manager.md#9001002-根据当前资源id未找到匹配的资源) | No matching resource is found based on the resource ID. |
+| [9001006](../errorcode-resource-manager.md#9001006-资源存在循环引用) | The resource is referenced cyclically. |
 
 ## 示例
 
@@ -6176,10 +7355,10 @@ getPluralStringValueSync(resource: Resource, num: number): string
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 9001001 | Invalid resource ID. |
-| 401 | Parameter error. Possible causes: Incorrect parameter types. |
-| 9001002 | No matching resource is found based on the resource ID. |
-| 9001006 | The resource is referenced cyclically. |
+| [9001001](../errorcode-resource-manager.md#9001001-无效的资源id) | Invalid resource ID. |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: Incorrect parameter types. |
+| [9001002](../errorcode-resource-manager.md#9001002-根据当前资源id未找到匹配的资源) | No matching resource is found based on the resource ID. |
+| [9001006](../errorcode-resource-manager.md#9001006-资源存在循环引用) | The resource is referenced cyclically. |
 
 ## 示例
 
@@ -6261,10 +7440,12 @@ getRawFd(path: string, callback: _AsyncCallback<RawFileDescriptor>): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 401 | Parameter error. Possible causes: Incorrect parameter types. |
-| 9001005 | Invalid relative path. |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: Incorrect parameter types. |
+| [9001005](../errorcode-resource-manager.md#9001005-无效的相对路径) | Invalid relative path. |
 
 ## 示例
+
+ArkTS-Dyn示例：
 
 ```TypeScript
 import { AbilityConstant, UIAbility, Want } from '@kit.AbilityKit';
@@ -6272,24 +7453,55 @@ import { BusinessError } from '@kit.BasicServicesKit';
 import { resourceManager } from '@kit.LocalizationKit';
 
 export default class EntryAbility extends UIAbility {
-    onCreate(want: Want, launchParam: AbilityConstant.LaunchParam): void {
-        try {
-            // "test.txt"仅作示例，请替换为实际使用的资源
-            this.context.resourceManager.getRawFd("test.txt", (error: BusinessError, value: resourceManager.RawFileDescriptor) => {
-                if (error != null) {
-                    console.error(`callback getRawFd failed error code: ${error.code}, message: ${error.message}.`);
-                } else {
-                    let fd = value.fd;
-                    let offset = value.offset;
-                    let length = value.length;
-                }
-            });
-        } catch (error) {
-            let code = (error as BusinessError).code;
-            let message = (error as BusinessError).message;
-            console.error(`callback getRawFd failed, error code: ${code}, message: ${message}.`);
+  onCreate(want: Want, launchParam: AbilityConstant.LaunchParam): void {
+    try {
+      // "test.txt"仅作示例，请替换为实际使用的资源
+      this.context.resourceManager.getRawFd("test.txt", (error: BusinessError, value: resourceManager.RawFileDescriptor) => {
+        if (error != null) {
+          console.error(`callback getRawFd failed, error code: ${error.code}, message: ${error.message}.`);
+        } else {
+          let fd = value.fd;
+          let offset = value.offset;
+          let length = value.length;
         }
+      });
+    } catch (error) {
+      let code = (error as BusinessError).code;
+      let message = (error as BusinessError).message;
+      console.error(`callback getRawFd failed, error code: ${code}, message: ${message}.`);
     }
+  }
+}
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+import { AbilityConstant, UIAbility, Want } from '@kit.AbilityKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+import { resourceManager } from '@kit.LocalizationKit';
+
+export default class EntryAbility extends UIAbility {
+  onCreate(want: Want, launchParam: AbilityConstant.LaunchParam): void {
+    try {
+      // "test.txt"仅作示例，请替换为实际使用的资源
+      this.context.resourceManager.getRawFd("test.txt", (error: BusinessError | null, value: resourceManager.RawFileDescriptor | undefined) => {
+        if (error != null) {
+          console.error(`callback getRawFd failed, error code: ${error.code}, message: ${error.message}.`);
+        } else {
+          if (value) {
+            let fd = value.fd;
+            let offset = value.offset;
+            let length = value.length;
+          }
+        }
+      });
+    } catch (error) {
+      let code = (error as BusinessError).code;
+      let message = (error as BusinessError).message;
+      console.error(`callback getRawFd failed, error code: ${code}, message: ${message}.`);
+    }
+  }
 }
 ```
 
@@ -6333,10 +7545,12 @@ getRawFd(path: string): Promise<RawFileDescriptor>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 401 | Parameter error. Possible causes: Incorrect parameter types. |
-| 9001005 | Invalid relative path. |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: Incorrect parameter types. |
+| [9001005](../errorcode-resource-manager.md#9001005-无效的相对路径) | Invalid relative path. |
 
 ## 示例
+
+ArkTS-Dyn示例：
 
 ```TypeScript
 import { AbilityConstant, UIAbility, Want } from '@kit.AbilityKit';
@@ -6344,22 +7558,49 @@ import { BusinessError } from '@kit.BasicServicesKit';
 import { resourceManager } from '@kit.LocalizationKit';
 
 export default class EntryAbility extends UIAbility {
-    onCreate(want: Want, launchParam: AbilityConstant.LaunchParam): void {
-        try {
-            // "test.txt"仅作示例，请替换为实际使用的资源
-            this.context.resourceManager.getRawFd("test.txt").then((value: resourceManager.RawFileDescriptor) => {
-                let fd = value.fd;
-                let offset = value.offset;
-                let length = value.length;
-            }).catch((error: BusinessError) => {
-                console.error(`promise getRawFd error error code: ${error.code}, message: ${error.message}.`);
-            });
-        } catch (error) {
-            let code = (error as BusinessError).code;
-            let message = (error as BusinessError).message;
-            console.error(`promise getRawFd failed, error code: ${code}, message: ${message}.`);
-        }
+  onCreate(want: Want, launchParam: AbilityConstant.LaunchParam): void {
+    try {
+      // "test.txt"仅作示例，请替换为实际使用的资源
+      this.context.resourceManager.getRawFd("test.txt").then((value: resourceManager.RawFileDescriptor) => {
+        let fd = value.fd;
+        let offset = value.offset;
+        let length = value.length;
+      }).catch((error: BusinessError) => {
+        console.error(`promise getRawFd failed, error code: ${error.code}, message: ${error.message}.`);
+      });
+    } catch (error) {
+      let code = (error as BusinessError).code;
+      let message = (error as BusinessError).message;
+      console.error(`promise getRawFd failed, error code: ${code}, message: ${message}.`);
     }
+  }
+}
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+import { AbilityConstant, UIAbility, Want } from '@kit.AbilityKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+import { resourceManager } from '@kit.LocalizationKit';
+
+export default class EntryAbility extends UIAbility {
+  onCreate(want: Want, launchParam: AbilityConstant.LaunchParam): void {
+    try {
+      // "test.txt"仅作示例，请替换为实际使用的资源
+      this.context.resourceManager.getRawFd("test.txt").then((value: resourceManager.RawFileDescriptor) => {
+        let fd = value.fd;
+        let offset = value.offset;
+        let length = value.length;
+      }).catch((error: Error) => {
+        console.error(`promise getRawFd failed, error is ${error}.`);
+      });
+    } catch (error) {
+      let code = (error as BusinessError).code;
+      let message = (error as BusinessError).message;
+      console.error(`promise getRawFd failed, error code: ${code}, message: ${message}.`);
+    }
+  }
 }
 ```
 
@@ -6397,14 +7638,14 @@ getRawFdSync(path: string): RawFileDescriptor
 
 | 类型 | 说明 |
 | --- | --- |
-| [RawFileDescriptor](arkts-localization-rawfiledescriptor-rawfiledescriptor-i.md) | rawfile文件所在HAP的文件描述符（fd）。 |
+| [RawFileDescriptor](arkts-localization-resourcemanager-rawfiledescriptor-t.md) | rawfile文件所在HAP的文件描述符（fd）。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 401 | Parameter error. Possible causes: Incorrect parameter types. |
-| 9001005 | Invalid relative path. |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: Incorrect parameter types. |
+| [9001005](../errorcode-resource-manager.md#9001005-无效的相对路径) | Invalid relative path. |
 
 ## 示例
 
@@ -6413,16 +7654,16 @@ import { AbilityConstant, UIAbility, Want } from '@kit.AbilityKit';
 import { BusinessError } from '@kit.BasicServicesKit';
 
 export default class EntryAbility extends UIAbility {
-    onCreate(want: Want, launchParam: AbilityConstant.LaunchParam): void {
-        try {
-            // "test.txt"仅作示例，请替换为实际使用的资源
-            this.context.resourceManager.getRawFdSync("test.txt");
-        } catch (error) {
-            let code = (error as BusinessError).code;
-            let message = (error as BusinessError).message;
-            console.error(`getRawFdSync failed, error code: ${code}, message: ${message}.`);
-        }
+  onCreate(want: Want, launchParam: AbilityConstant.LaunchParam): void {
+    try {
+      // "test.txt"仅作示例，请替换为实际使用的资源
+      this.context.resourceManager.getRawFdSync("test.txt");
+    } catch (error) {
+      let code = (error as BusinessError).code;
+      let message = (error as BusinessError).message;
+      console.error(`getRawFdSync failed, error code: ${code}, message: ${message}.`);
     }
+  }
 }
 ```
 
@@ -6451,7 +7692,7 @@ getRawFile(path: string, callback: AsyncCallback<Uint8Array>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | path | string | 是 | 相对resources/rawfile目录的rawfile文件路径，如"test.txt"、"subdir/test.txt"，不以"/"开头。 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;Uint8Array&gt; | 是 | 回调函数，返回rawfile文件内容。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Uint8Array&gt; | 是 | 回调函数，返回rawfile文件内容。 |
 
 ## 示例
 
@@ -6544,32 +7785,60 @@ getRawFileContent(path: string, callback: _AsyncCallback<Uint8Array>): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 401 | Parameter error. Possible causes: Incorrect parameter types. |
-| 9001005 | Invalid relative path. |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: Incorrect parameter types. |
+| [9001005](../errorcode-resource-manager.md#9001005-无效的相对路径) | Invalid relative path. |
 
 ## 示例
+
+ArkTS-Dyn示例：
 
 ```TypeScript
 import { AbilityConstant, UIAbility, Want } from '@kit.AbilityKit';
 import { BusinessError } from '@kit.BasicServicesKit';
 
 export default class EntryAbility extends UIAbility {
-    onCreate(want: Want, launchParam: AbilityConstant.LaunchParam): void {
-        try {
-            // "test.txt"仅作示例，请替换为实际使用的资源
-            this.context.resourceManager.getRawFileContent("test.txt", (error: BusinessError, value: Uint8Array) => {
-                if (error != null) {
-                    console.error("error is " + error);
-                } else {
-                    let rawFile = value;
-                }
-            });
-        } catch (error) {
-            let code = (error as BusinessError).code;
-            let message = (error as BusinessError).message;
-            console.error(`callback getRawFileContent failed, error code: ${code}, message: ${message}.`);
+  onCreate(want: Want, launchParam: AbilityConstant.LaunchParam): void {
+    try {
+      // "test.txt"仅作示例，请替换为实际使用的资源
+      this.context.resourceManager.getRawFileContent("test.txt", (error: BusinessError, value: Uint8Array) => {
+        if (error != null) {
+          console.error(`callback getRawFileContent failed, error is ${error}.`);
+        } else {
+          let rawFile = value;
         }
+      });
+    } catch (error) {
+      let code = (error as BusinessError).code;
+      let message = (error as BusinessError).message;
+      console.error(`callback getRawFileContent failed, error code: ${code}, message: ${message}.`);
     }
+  }
+}
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+import { AbilityConstant, UIAbility, Want } from '@kit.AbilityKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+export default class EntryAbility extends UIAbility {
+  onCreate(want: Want, launchParam: AbilityConstant.LaunchParam): void {
+    try {
+      // "test.txt"仅作示例，请替换为实际使用的资源
+      this.context.resourceManager.getRawFileContent("test.txt", (error: BusinessError | null, value: Uint8Array | undefined) => {
+        if (error != null) {
+          console.error(`callback getRawFileContent failed, error is ${error}.`);
+        } else {
+          let rawFile = value;
+        }
+      });
+    } catch (error) {
+      let code = (error as BusinessError).code;
+      let message = (error as BusinessError).message;
+      console.error(`callback getRawFileContent failed, error code: ${code}, message: ${message}.`);
+    }
+  }
 }
 ```
 
@@ -6607,30 +7876,56 @@ getRawFileContent(path: string): Promise<Uint8Array>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 401 | Parameter error. Possible causes: Incorrect parameter types. |
-| 9001005 | Invalid relative path. |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: Incorrect parameter types. |
+| [9001005](../errorcode-resource-manager.md#9001005-无效的相对路径) | Invalid relative path. |
 
 ## 示例
+
+ArkTS-Dyn示例：
 
 ```TypeScript
 import { AbilityConstant, UIAbility, Want } from '@kit.AbilityKit';
 import { BusinessError } from '@kit.BasicServicesKit';
 
 export default class EntryAbility extends UIAbility {
-    onCreate(want: Want, launchParam: AbilityConstant.LaunchParam): void {
-        try {
-            // "test.txt"仅作示例，请替换为实际使用的资源
-            this.context.resourceManager.getRawFileContent("test.txt").then((value: Uint8Array) => {
-                let rawFile = value;
-            }).catch((error: BusinessError) => {
-                console.error("getRawFileContent promise error is " + error);
-            });
-        } catch (error) {
-            let code = (error as BusinessError).code;
-            let message = (error as BusinessError).message;
-            console.error(`promise getRawFileContent failed, error code: ${code}, message: ${message}.`);
-        }
+  onCreate(want: Want, launchParam: AbilityConstant.LaunchParam): void {
+    try {
+      // "test.txt"仅作示例，请替换为实际使用的资源
+      this.context.resourceManager.getRawFileContent("test.txt").then((value: Uint8Array) => {
+        let rawFile = value;
+      }).catch((error: BusinessError) => {
+        console.error(`promise getRawFileContent failed, error is ${error}`.);
+      });
+    } catch (error) {
+      let code = (error as BusinessError).code;
+      let message = (error as BusinessError).message;
+      console.error(`promise getRawFileContent failed, error code: ${code}, message: ${message}.`);
     }
+  }
+}
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+import { AbilityConstant, UIAbility, Want } from '@kit.AbilityKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+export default class EntryAbility extends UIAbility {
+  onCreate(want: Want, launchParam: AbilityConstant.LaunchParam): void {
+    try {
+      // "test.txt"仅作示例，请替换为实际使用的资源
+      this.context.resourceManager.getRawFileContent("test.txt").then((value: Uint8Array) => {
+        let rawFile = value;
+      }).catch((error: Error) => {
+        console.error(`promise getRawFileContent failed, error is ${error}`.);
+      });
+    } catch (error) {
+      let code = (error as BusinessError).code;
+      let message = (error as BusinessError).message;
+      console.error(`promise getRawFileContent failed, error code: ${code}, message: ${message}.`);
+    }
+  }
 }
 ```
 
@@ -6668,8 +7963,8 @@ getRawFileContentSync(path: string): Uint8Array
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 401 | Parameter error. Possible causes: Incorrect parameter types. |
-| 9001005 | Invalid relative path. |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: Incorrect parameter types. |
+| [9001005](../errorcode-resource-manager.md#9001005-无效的相对路径) | Invalid relative path. |
 
 ## 示例
 
@@ -6678,16 +7973,16 @@ import { AbilityConstant, UIAbility, Want } from '@kit.AbilityKit';
 import { BusinessError } from '@kit.BasicServicesKit';
 
 export default class EntryAbility extends UIAbility {
-    onCreate(want: Want, launchParam: AbilityConstant.LaunchParam): void {
-        try {
-            // "test.txt"仅作示例，请替换为实际使用的资源
-            this.context.resourceManager.getRawFileContentSync("test.txt");
-        } catch (error) {
-            let code = (error as BusinessError).code;
-            let message = (error as BusinessError).message;
-            console.error(`getRawFileContentSync failed, error code: ${code}, message: ${message}.`);
-        }
+  onCreate(want: Want, launchParam: AbilityConstant.LaunchParam): void {
+    try {
+      // "test.txt"仅作示例，请替换为实际使用的资源
+      this.context.resourceManager.getRawFileContentSync("test.txt");
+    } catch (error) {
+      let code = (error as BusinessError).code;
+      let message = (error as BusinessError).message;
+      console.error(`getRawFileContentSync failed, error code: ${code}, message: ${message}.`);
     }
+  }
 }
 ```
 
@@ -6716,7 +8011,7 @@ getRawFileDescriptor(path: string, callback: AsyncCallback<RawFileDescriptor>): 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | path | string | 是 | 相对resources/rawfile目录的rawfile文件路径，如"test.txt"、"subdir/test.txt"，不以"/"开头。 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;RawFileDescriptor&gt; | 是 | 回调函数，返回rawfile文件的文件描述符（fd）。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;RawFileDescriptor&gt; | 是 | 回调函数，返回rawfile文件的文件描述符（fd）。 |
 
 ## 示例
 
@@ -6817,28 +8112,64 @@ getRawFileList(path: string, callback: _AsyncCallback<Array<string>>): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 401 | Parameter error. Possible causes: Incorrect parameter types. |
-| 9001005 | Invalid relative path. |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: Incorrect parameter types. |
+| [9001005](../errorcode-resource-manager.md#9001005-无效的相对路径) | Invalid relative path. |
 
 ## 示例
+
+ArkTS-Dyn示例：
 
 ```TypeScript
 import { AbilityConstant, UIAbility, Want } from '@kit.AbilityKit';
 import { BusinessError } from '@kit.BasicServicesKit';
 
 export default class EntryAbility extends UIAbility {
-    onCreate(want: Want, launchParam: AbilityConstant.LaunchParam): void {
-        // 传入""表示获取rawfile根目录下的文件列表，假设rawfile根目录下存在test.txt文件
-        // 传入""仅作示例，请替换为rawfile目录下实际的文件路径
-        this.context.resourceManager.getRawFileList("", (error: BusinessError, value: Array<string>) => {
-            if (error != null) {
-                console.error(`callback getRawFileList failed, error code: ${error.code}, message: ${error.message}.`);
-            } else {
-                console.info(`getRawFileList, result: ${JSON.stringify(value)}`);
-                // 打印输出结果: getRawFileList, result: ["test.txt"]
-            }
-        });
+  onCreate(want: Want, launchParam: AbilityConstant.LaunchParam): void {
+    try {
+      // 传入""表示获取rawfile根目录下的文件列表，假设rawfile根目录下存在test.txt文件
+      // 传入""仅作示例，请替换为rawfile目录下实际的文件路径
+      this.context.resourceManager.getRawFileList("", (error: BusinessError, value: Array<string>) => {
+        if (error != null) {
+          console.error(`callback getRawFileList failed, error code: ${error.code}, message: ${error.message}.`);
+        } else {
+          console.info(`getRawFileList, result: ${JSON.stringify(value)}`);
+          // 打印输出结果: getRawFileList, result: ["test.txt"]
+        }
+      });
+    } catch (error) {
+      let code = (error as BusinessError).code;
+      let message = (error as BusinessError).message;
+      console.error(`callback getRawFileList failed, error code: ${code}, message: ${message}.`);
     }
+  }
+}
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+import { AbilityConstant, UIAbility, Want } from '@kit.AbilityKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+export default class EntryAbility extends UIAbility {
+  onCreate(want: Want, launchParam: AbilityConstant.LaunchParam): void {
+    try {
+      // 传入""表示获取rawfile根目录下的文件列表，假设rawfile根目录下存在test.txt文件
+      // 传入""仅作示例，请替换为rawfile目录下实际的文件路径
+      this.context.resourceManager.getRawFileList("", (error: BusinessError | null, value: Array<string> | undefined) => {
+        if (error != null) {
+          console.error(`callback getRawFileList failed, error code: ${error.code}, message: ${error.message}.`);
+        } else {
+          console.info(`getRawFileList, result: ${JSON.stringify(value)}`);
+          // 打印输出结果: getRawFileList, result: ["test.txt"]
+        }
+      });
+    } catch (error) {
+      let code = (error as BusinessError).code;
+      let message = (error as BusinessError).message;
+      console.error(`callback getRawFileList failed, error code: ${code}, message: ${message}.`);
+    }
+  }
 }
 ```
 
@@ -6880,28 +8211,64 @@ getRawFileList(path: string): Promise<Array<string>>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 401 | Parameter error. Possible causes: Incorrect parameter types. |
-| 9001005 | Invalid relative path. |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: Incorrect parameter types. |
+| [9001005](../errorcode-resource-manager.md#9001005-无效的相对路径) | Invalid relative path. |
 
 ## 示例
+
+ArkTS-Dyn示例：
 
 ```TypeScript
 import { AbilityConstant, UIAbility, Want } from '@kit.AbilityKit';
 import { BusinessError } from '@kit.BasicServicesKit';
 
 export default class EntryAbility extends UIAbility {
-    onCreate(want: Want, launchParam: AbilityConstant.LaunchParam): void {
-        // 传入""表示获取rawfile根目录下的文件列表，假设rawfile根目录下存在test.txt文件
-        // 传入""仅作示例，请替换为rawfile目录下实际的文件路径
-        this.context.resourceManager.getRawFileList("")
-            .then((value: Array<string>) => {
-                console.info(`getRawFileList, result: ${JSON.stringify(value)}`);
-                // 打印输出结果: getRawFileList, result: ["test.txt"]
-            })
-            .catch((error: BusinessError) => {
-                console.error(`promise getRawFileList failed, error code: ${error.code}, message: ${error.message}.`);
-            });
+  onCreate(want: Want, launchParam: AbilityConstant.LaunchParam): void {
+    try {
+      // 传入""表示获取rawfile根目录下的文件列表，假设rawfile根目录下存在test.txt文件
+      // 传入""仅作示例，请替换为rawfile目录下实际的文件路径
+      this.context.resourceManager.getRawFileList("")
+        .then((value: Array<string>) => {
+          console.info(`getRawFileList, result: ${JSON.stringify(value)}`);
+          // 打印输出结果: getRawFileList, result: ["test.txt"]
+        })
+        .catch((error: BusinessError) => {
+          console.error(`promise getRawFileList failed, error code: ${error.code}, message: ${error.message}.`);
+        });
+    } catch (error) {
+      let code = (error as BusinessError).code;
+      let message = (error as BusinessError).message;
+      console.error(`promise getRawFileList failed, error code: ${code}, message: ${message}.`);
     }
+  }
+}
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+import { AbilityConstant, UIAbility, Want } from '@kit.AbilityKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+export default class EntryAbility extends UIAbility {
+  onCreate(want: Want, launchParam: AbilityConstant.LaunchParam): void {
+    try {
+      // 传入""表示获取rawfile根目录下的文件列表，假设rawfile根目录下存在test.txt文件
+      // 传入""仅作示例，请替换为rawfile目录下实际的文件路径
+      this.context.resourceManager.getRawFileList("")
+        .then((value: Array<string>) => {
+          console.info(`getRawFileList, result: ${JSON.stringify(value)}`);
+          // 打印输出结果: getRawFileList, result: ["test.txt"]
+        })
+        .catch((error: Error) => {
+          console.error(`promise getRawFileList failed, error is ${error}.`);
+        });
+    } catch (error) {
+      let code = (error as BusinessError).code;
+      let message = (error as BusinessError).message;
+      console.error(`promise getRawFileList failed, error code: ${code}, message: ${message}.`);
+    }
+  }
 }
 ```
 
@@ -6943,8 +8310,8 @@ getRawFileListSync(path: string): Array<string>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 401 | Parameter error. Possible causes: Incorrect parameter types. |
-| 9001005 | Invalid relative path. |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: Incorrect parameter types. |
+| [9001005](../errorcode-resource-manager.md#9001005-无效的相对路径) | Invalid relative path. |
 
 ## 示例
 
@@ -6953,19 +8320,19 @@ import { AbilityConstant, UIAbility, Want } from '@kit.AbilityKit';
 import { BusinessError } from '@kit.BasicServicesKit';
 
 export default class EntryAbility extends UIAbility {
-    onCreate(want: Want, launchParam: AbilityConstant.LaunchParam): void {
-        try {
-            // 传入""表示获取rawfile根目录下的文件列表，假设rawfile根目录下存在test.txt文件
-            // 传入""仅作示例，请替换为rawfile目录下实际的文件路径
-            let fileList: Array<string> = this.context.resourceManager.getRawFileListSync("");
-            console.info(`getRawFileListSync, result: ${JSON.stringify(fileList)}`);
-            // 打印输出结果: getRawFileListSync, result: ["test.txt"] 
-        } catch (error) {
-            let code = (error as BusinessError).code;
-            let message = (error as BusinessError).message;
-            console.error(`getRawFileListSync failed, error code: ${code}, message: ${message}.`);
-        }
+  onCreate(want: Want, launchParam: AbilityConstant.LaunchParam): void {
+    try {
+      // 传入""表示获取rawfile根目录下的文件列表，假设rawfile根目录下存在test.txt文件
+      // 传入""仅作示例，请替换为rawfile目录下实际的文件路径
+      let fileList: Array<string> = this.context.resourceManager.getRawFileListSync("");
+      console.info(`getRawFileListSync, result: ${JSON.stringify(fileList)}`);
+      // 打印输出结果: getRawFileListSync, result: ["test.txt"] 
+    } catch (error) {
+      let code = (error as BusinessError).code;
+      let message = (error as BusinessError).message;
+      console.error(`getRawFileListSync failed, error code: ${code}, message: ${message}.`);
     }
+  }
 }
 ```
 
@@ -7011,7 +8378,7 @@ getResourceName(resId: long): string
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 9001001 | Invalid resource ID. |
+| [9001001](../errorcode-resource-manager.md#9001001-无效的资源id) | Invalid resource ID. |
 
 ## 示例
 
@@ -7027,23 +8394,48 @@ getResourceName(resId: long): string
 }
 ```
 
+ArkTS-Dyn示例：
+
 ```TypeScript
 import { AbilityConstant, UIAbility, Want } from '@kit.AbilityKit';
 import { BusinessError } from '@kit.BasicServicesKit';
 
 export default class EntryAbility extends UIAbility {
-    onCreate(want: Want, launchParam: AbilityConstant.LaunchParam): void {
-        try {
-            // 'app.string.test'仅作示例，请替换为实际使用的资源
-            let resName: string = this.context.resourceManager.getResourceName($r('app.string.test').id);
-            console.info(`getResourceName, result: ${resName}`);
-            // 打印输出结果: getResourceName, result: test
-        } catch (error) {
-            let code = (error as BusinessError).code;
-            let message = (error as BusinessError).message;
-            console.error(`getResourceName failed, error code: ${code}, message: ${message}.`);
-        }
+  onCreate(want: Want, launchParam: AbilityConstant.LaunchParam): void {
+    try {
+      // 'app.string.test'仅作示例，请替换为实际使用的资源
+      let resName: string = this.context.resourceManager.getResourceName($r('app.string.test').id);
+      console.info(`getResourceName, result: ${resName}`);
+      // 打印输出结果: getResourceName, result: test
+    } catch (error) {
+      let code = (error as BusinessError).code;
+      let message = (error as BusinessError).message;
+      console.error(`getResourceName failed, error code: ${code}, message: ${message}.`);
     }
+  }
+}
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+import { AbilityConstant, UIAbility, Want } from '@kit.AbilityKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+import { $r } from '@kit.ArkUI';
+
+export default class EntryAbility extends UIAbility {
+  onCreate(want: Want, launchParam: AbilityConstant.LaunchParam): void {
+    try {
+      // 'app.string.test'仅作示例，请替换为实际使用的资源
+      let resName: string = this.context.resourceManager.getResourceName($r('app.string.test').id);
+      console.info(`getResourceName, result: ${resName}`);
+      // 打印输出结果: getResourceName, result: test
+    } catch (error) {
+      let code = (error as BusinessError).code;
+      let message = (error as BusinessError).message;
+      console.error(`getResourceName failed, error code: ${code}, message: ${message}.`);
+    }
+  }
 }
 ```
 
@@ -7072,7 +8464,7 @@ getString(resId: number, callback: AsyncCallback<string>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | resId | number | 是 | 资源ID值。 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;string&gt; | 是 | 回调函数，返回资源ID值对应的字符串。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;string&gt; | 是 | 回调函数，返回资源ID值对应的字符串。 |
 
 ## 示例
 
@@ -7159,7 +8551,7 @@ getStringArray(resId: number, callback: AsyncCallback<Array<string>>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | resId | number | 是 | 资源ID值。 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;Array&lt;string&gt;&gt; | 是 | 回调函数，返回资源ID值对应的字符串数组。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;string&gt;&gt; | 是 | 回调函数，返回资源ID值对应的字符串数组。 |
 
 ## 示例
 
@@ -7250,10 +8642,10 @@ getStringArrayByName(resName: string, callback: _AsyncCallback<Array<string>>): 
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 401 | Parameter error. Possible causes: Incorrect parameter types. |
-| 9001003 | Invalid resource name. |
-| 9001004 | No matching resource is found based on the resource name. |
-| 9001006 | The resource is referenced cyclically. |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: Incorrect parameter types. |
+| [9001003](../errorcode-resource-manager.md#9001003-无效的资源名称) | Invalid resource name. |
+| [9001004](../errorcode-resource-manager.md#9001004-根据当前资源名称未找到匹配的资源) | No matching resource is found based on the resource name. |
+| [9001006](../errorcode-resource-manager.md#9001006-资源存在循环引用) | The resource is referenced cyclically. |
 
 ## 示例
 
@@ -7273,23 +8665,61 @@ getStringArrayByName(resName: string, callback: _AsyncCallback<Array<string>>): 
 }
 ```
 
+ArkTS-Dyn示例：
+
 ```TypeScript
 import { AbilityConstant, UIAbility, Want } from '@kit.AbilityKit';
 import { BusinessError } from '@kit.BasicServicesKit';
 
 export default class EntryAbility extends UIAbility {
-    onCreate(want: Want, launchParam: AbilityConstant.LaunchParam): void {
-        // "test"仅作示例，请替换为实际使用的资源
-        this.context.resourceManager.getStringArrayByName("test", (error: BusinessError, value: Array<string>) => {
-            if (error != null) {
-                console.error(`callback getStringArrayByName failed, error code: ${error.code}, message: ${error.message}.`);
-            } else {
-                let strArray = value;
-                console.info(`getStringArrayByName, result: ${value[0]}`);
-                // 打印输出结果: getStringArrayByName, result: I'm one of the array's values.
-            }
-        });
+  onCreate(want: Want, launchParam: AbilityConstant.LaunchParam): void {
+    try {
+      // "test"仅作示例，请替换为实际使用的资源
+      this.context.resourceManager.getStringArrayByName("test", (error: BusinessError, value: Array<string>) => {
+        if (error != null) {
+          console.error(`callback getStringArrayByName failed, error code: ${error.code}, message: ${error.message}.`);
+        } else {
+          let strArray = value;
+          console.info(`getStringArrayByName, result: ${value[0]}`);
+          // 打印输出结果: getStringArrayByName, result: I'm one of the array's values.
+        }
+      });
+    } catch (error) {
+      let code = (error as BusinessError).code;
+      let message = (error as BusinessError).message;
+      console.error(`callback getStringArrayByName failed, error code: ${code}, message: ${message}.`);
     }
+  }
+}
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+import { AbilityConstant, UIAbility, Want } from '@kit.AbilityKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+export default class EntryAbility extends UIAbility {
+  onCreate(want: Want, launchParam: AbilityConstant.LaunchParam): void {
+    try {
+      // "test"仅作示例，请替换为实际使用的资源
+      this.context.resourceManager.getStringArrayByName("test", (error: BusinessError | null, value: Array<string> | undefined) => {
+        if (error != null) {
+          console.error(`callback getStringArrayByName failed, error code: ${error.code}, message: ${error.message}.`);
+        } else {
+          if (value) {
+            let strArray = value;
+            console.info(`getStringArrayByName, result: ${value[0]}`);
+            // 打印输出结果: getStringArrayByName, result: I'm one of the array's values.
+          }
+        }
+      });
+    } catch (error) {
+      let code = (error as BusinessError).code;
+      let message = (error as BusinessError).message;
+      console.error(`callback getStringArrayByName failed, error code: ${code}, message: ${message}.`);
+    }
+  }
 }
 ```
 
@@ -7327,10 +8757,10 @@ getStringArrayByName(resName: string): Promise<Array<string>>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 401 | Parameter error. Possible causes: Incorrect parameter types. |
-| 9001003 | Invalid resource name. |
-| 9001004 | No matching resource is found based on the resource name. |
-| 9001006 | The resource is referenced cyclically. |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: Incorrect parameter types. |
+| [9001003](../errorcode-resource-manager.md#9001003-无效的资源名称) | Invalid resource name. |
+| [9001004](../errorcode-resource-manager.md#9001004-根据当前资源名称未找到匹配的资源) | No matching resource is found based on the resource name. |
+| [9001006](../errorcode-resource-manager.md#9001006-资源存在循环引用) | The resource is referenced cyclically. |
 
 ## 示例
 
@@ -7350,22 +8780,57 @@ getStringArrayByName(resName: string): Promise<Array<string>>
 }
 ```
 
+ArkTS-Dyn示例：
+
 ```TypeScript
 import { AbilityConstant, UIAbility, Want } from '@kit.AbilityKit';
 import { BusinessError } from '@kit.BasicServicesKit';
 
 export default class EntryAbility extends UIAbility {
-    onCreate(want: Want, launchParam: AbilityConstant.LaunchParam): void {
-        // "test"仅作示例，请替换为实际使用的资源
-        this.context.resourceManager.getStringArrayByName("test")
-            .then((value: Array<string>) => {
-                console.info(`getStringArrayByName, result: ${value[0]}`);
-                // 打印输出结果: getStringArrayByName, result: I'm one of the array's values.
-            })
-            .catch((error: BusinessError) => {
-                console.error(`promise getStringArrayByName failed, error code: ${error.code}, message: ${error.message}.`);
-            });
+  onCreate(want: Want, launchParam: AbilityConstant.LaunchParam): void {
+    try {
+      // "test"仅作示例，请替换为实际使用的资源
+      this.context.resourceManager.getStringArrayByName("test")
+        .then((value: Array<string>) => {
+          console.info(`getStringArrayByName, result: ${value[0]}`);
+          // 打印输出结果: getStringArrayByName, result: I'm one of the array's values.
+        })
+        .catch((error: BusinessError) => {
+          console.error(`promise getStringArrayByName failed, error code: ${error.code}, message: ${error.message}.`);
+        });
+    } catch (error) {
+      let code = (error as BusinessError).code;
+      let message = (error as BusinessError).message;
+      console.error(`promise getStringArrayByName failed, error code: ${code}, message: ${message}.`);
     }
+  }
+}
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+import { AbilityConstant, UIAbility, Want } from '@kit.AbilityKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+export default class EntryAbility extends UIAbility {
+  onCreate(want: Want, launchParam: AbilityConstant.LaunchParam): void {
+    try {
+      // "test"仅作示例，请替换为实际使用的资源
+      this.context.resourceManager.getStringArrayByName("test")
+        .then((value: Array<string>) => {
+          console.info(`getStringArrayByName, result: ${value[0]}`);
+          // 打印输出结果: getStringArrayByName, result: I'm one of the array's values.
+        })
+        .catch((error: Error) => {
+          console.error(`promise getStringArrayByName failed, error is ${error}.`);
+        });
+    } catch (error) {
+      let code = (error as BusinessError).code;
+      let message = (error as BusinessError).message;
+      console.error(`promise getStringArrayByName failed, error code: ${code}, message: ${message}.`);
+    }
+  }
 }
 ```
 
@@ -7403,10 +8868,10 @@ getStringArrayByNameSync(resName: string): Array<string>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 401 | Parameter error. Possible causes: Incorrect parameter types. |
-| 9001003 | Invalid resource name. |
-| 9001004 | No matching resource is found based on the resource name. |
-| 9001006 | The resource is referenced cyclically. |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: Incorrect parameter types. |
+| [9001003](../errorcode-resource-manager.md#9001003-无效的资源名称) | Invalid resource name. |
+| [9001004](../errorcode-resource-manager.md#9001004-根据当前资源名称未找到匹配的资源) | No matching resource is found based on the resource name. |
+| [9001006](../errorcode-resource-manager.md#9001006-资源存在循环引用) | The resource is referenced cyclically. |
 
 ## 示例
 
@@ -7431,18 +8896,18 @@ import { AbilityConstant, UIAbility, Want } from '@kit.AbilityKit';
 import { BusinessError } from '@kit.BasicServicesKit';
 
 export default class EntryAbility extends UIAbility {
-    onCreate(want: Want, launchParam: AbilityConstant.LaunchParam): void {
-        try {
-            // "test"仅作示例，请替换为实际使用的资源
-            let strArray: Array<string> = this.context.resourceManager.getStringArrayByNameSync("test");
-            console.info(`getStringArrayByNameSync, result: ${strArray[0]}`);
-            // 打印输出结果: getStringArrayByNameSync, result: I'm one of the array's values.
-        } catch (error) {
-            let code = (error as BusinessError).code;
-            let message = (error as BusinessError).message;
-            console.error(`getStringArrayByNameSync failed, error code: ${code}, message: ${message}.`);
-        }
+  onCreate(want: Want, launchParam: AbilityConstant.LaunchParam): void {
+    try {
+      // "test"仅作示例，请替换为实际使用的资源
+      let strArray: Array<string> = this.context.resourceManager.getStringArrayByNameSync("test");
+      console.info(`getStringArrayByNameSync, result: ${strArray[0]}`);
+      // 打印输出结果: getStringArrayByNameSync, result: I'm one of the array's values.
+    } catch (error) {
+      let code = (error as BusinessError).code;
+      let message = (error as BusinessError).message;
+      console.error(`getStringArrayByNameSync failed, error code: ${code}, message: ${message}.`);
     }
+  }
 }
 ```
 
@@ -7481,10 +8946,10 @@ getStringArrayValue(resource: Resource, callback: _AsyncCallback<Array<string>>)
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 9001001 | Invalid resource ID. |
-| 401 | Parameter error. Possible causes: Incorrect parameter types. |
-| 9001002 | No matching resource is found based on the resource ID. |
-| 9001006 | The resource is referenced cyclically. |
+| [9001001](../errorcode-resource-manager.md#9001001-无效的资源id) | Invalid resource ID. |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: Incorrect parameter types. |
+| [9001002](../errorcode-resource-manager.md#9001002-根据当前资源id未找到匹配的资源) | No matching resource is found based on the resource ID. |
+| [9001006](../errorcode-resource-manager.md#9001006-资源存在循环引用) | The resource is referenced cyclically. |
 
 ## 示例
 
@@ -7563,10 +9028,10 @@ getStringArrayValue(resource: Resource): Promise<Array<string>>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 9001001 | Invalid resource ID. |
-| 401 | Parameter error. Possible causes: Incorrect parameter types. |
-| 9001002 | No matching resource is found based on the resource ID. |
-| 9001006 | The resource is referenced cyclically. |
+| [9001001](../errorcode-resource-manager.md#9001001-无效的资源id) | Invalid resource ID. |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: Incorrect parameter types. |
+| [9001002](../errorcode-resource-manager.md#9001002-根据当前资源id未找到匹配的资源) | No matching resource is found based on the resource ID. |
+| [9001006](../errorcode-resource-manager.md#9001006-资源存在循环引用) | The resource is referenced cyclically. |
 
 ## 示例
 
@@ -7640,10 +9105,10 @@ getStringArrayValue(resId: long, callback: _AsyncCallback<Array<string>>): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 9001001 | Invalid resource ID. |
-| 401 | Parameter error. Possible causes: Incorrect parameter types. |
-| 9001002 | No matching resource is found based on the resource ID. |
-| 9001006 | The resource is referenced cyclically. |
+| [9001001](../errorcode-resource-manager.md#9001001-无效的资源id) | Invalid resource ID. |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: Incorrect parameter types. |
+| [9001002](../errorcode-resource-manager.md#9001002-根据当前资源id未找到匹配的资源) | No matching resource is found based on the resource ID. |
+| [9001006](../errorcode-resource-manager.md#9001006-资源存在循环引用) | The resource is referenced cyclically. |
 
 ## 示例
 
@@ -7663,23 +9128,62 @@ getStringArrayValue(resId: long, callback: _AsyncCallback<Array<string>>): void
 }
 ```
 
+ArkTS-Dyn示例：
+
 ```TypeScript
 import { AbilityConstant, UIAbility, Want } from '@kit.AbilityKit';
 import { BusinessError } from '@kit.BasicServicesKit';
 
 export default class EntryAbility extends UIAbility {
-    onCreate(want: Want, launchParam: AbilityConstant.LaunchParam): void {
-        // 'app.strarray.test'仅作示例，请替换为实际使用的资源
-        this.context.resourceManager.getStringArrayValue($r('app.strarray.test').id,
-            (error: BusinessError, value: Array<string>) => {
-                if (error != null) {
-                    console.error(`callback getStringArrayValue failed, error code: ${error.code}, message: ${error.message}.`);
-                } else {
-                    console.info(`getStringArrayValue, result: ${value[0]}`);
-                    // 打印输出结果: getStringArrayValue, result: I'm one of the array's values.
-                }
-            });
+  onCreate(want: Want, launchParam: AbilityConstant.LaunchParam): void {
+    try {
+      // 'app.strarray.test'仅作示例，请替换为实际使用的资源
+      this.context.resourceManager.getStringArrayValue($r('app.strarray.test').id,
+        (error: BusinessError, value: Array<string>) => {
+          if (error != null) {
+            console.error(`callback getStringArrayValue failed, error code: ${error.code}, message: ${error.message}.`);
+          } else {
+            console.info(`getStringArrayValue, result: ${value[0]}`);
+            // 打印输出结果: getStringArrayValue, result: I'm one of the array's values.
+          }
+        });
+    } catch (error) {
+      let code = (error as BusinessError).code;
+      let message = (error as BusinessError).message;
+      console.error(`callback getStringArrayValue failed, error code: ${code}, message: ${message}.`);
     }
+  }
+}
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+import { AbilityConstant, UIAbility, Want } from '@kit.AbilityKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+import { $r } from '@kit.ArkUI';
+
+export default class EntryAbility extends UIAbility {
+  onCreate(want: Want, launchParam: AbilityConstant.LaunchParam): void {
+    try {
+      // 'app.strarray.test'仅作示例，请替换为实际使用的资源
+      this.context.resourceManager.getStringArrayValue($r('app.strarray.test').id,
+        (error: BusinessError | null, value: Array<string> | undefined) => {
+          if (error != null) {
+            console.error(`callback getStringArrayValue failed, error code: ${error.code}, message: ${error.message}.`);
+          } else {
+            if (value) {
+              console.info(`getStringArrayValue, result: ${value[0]}`);
+              // 打印输出结果: getStringArrayValue, result: I'm one of the array's values.
+            }
+          }
+        });
+    } catch (error) {
+      let code = (error as BusinessError).code;
+      let message = (error as BusinessError).message;
+      console.error(`callback getStringArrayValue failed, error code: ${code}, message: ${message}.`);
+    }
+  }
 }
 ```
 
@@ -7723,10 +9227,10 @@ getStringArrayValue(resId: long): Promise<Array<string>>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 9001001 | Invalid resource ID. |
-| 401 | Parameter error. Possible causes: Incorrect parameter types. |
-| 9001002 | No matching resource is found based on the resource ID. |
-| 9001006 | The resource is referenced cyclically. |
+| [9001001](../errorcode-resource-manager.md#9001001-无效的资源id) | Invalid resource ID. |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: Incorrect parameter types. |
+| [9001002](../errorcode-resource-manager.md#9001002-根据当前资源id未找到匹配的资源) | No matching resource is found based on the resource ID. |
+| [9001006](../errorcode-resource-manager.md#9001006-资源存在循环引用) | The resource is referenced cyclically. |
 
 ## 示例
 
@@ -7746,22 +9250,58 @@ getStringArrayValue(resId: long): Promise<Array<string>>
 }
 ```
 
+ArkTS-Dyn示例：
+
 ```TypeScript
 import { AbilityConstant, UIAbility, Want } from '@kit.AbilityKit';
 import { BusinessError } from '@kit.BasicServicesKit';
 
 export default class EntryAbility extends UIAbility {
-    onCreate(want: Want, launchParam: AbilityConstant.LaunchParam): void {
-        // 'app.strarray.test'仅作示例，请替换为实际使用的资源
-        this.context.resourceManager.getStringArrayValue($r('app.strarray.test').id)
-            .then((value: Array<string>) => {
-                console.info(`getStringArrayValue, result: ${value[0]}`);
-                // 打印输出结果: getStringArrayValue, result: I'm one of the array's values.
-            })
-            .catch((error: BusinessError) => {
-                console.error(`promise getStringArrayValue failed, error code: ${error.code}, message: ${error.message}.`);
-            });
+  onCreate(want: Want, launchParam: AbilityConstant.LaunchParam): void {
+    try {
+      // 'app.strarray.test'仅作示例，请替换为实际使用的资源
+      this.context.resourceManager.getStringArrayValue($r('app.strarray.test').id)
+        .then((value: Array<string>) => {
+          console.info(`getStringArrayValue, result: ${value[0]}`);
+          // 打印输出结果: getStringArrayValue, result: I'm one of the array's values.
+        })
+        .catch((error: BusinessError) => {
+          console.error(`promise getStringArrayValue failed, error code: ${error.code}, message: ${error.message}.`);
+        });
+    } catch (error) {
+      let code = (error as BusinessError).code;
+      let message = (error as BusinessError).message;
+      console.error(`promise getStringArrayValue failed, error code: ${code}, message: ${message}.`);
     }
+  }
+}
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+import { AbilityConstant, UIAbility, Want } from '@kit.AbilityKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+import { $r } from '@kit.ArkUI';
+
+export default class EntryAbility extends UIAbility {
+  onCreate(want: Want, launchParam: AbilityConstant.LaunchParam): void {
+    try {
+      // 'app.strarray.test'仅作示例，请替换为实际使用的资源
+      this.context.resourceManager.getStringArrayValue($r('app.strarray.test').id)
+        .then((value: Array<string>) => {
+          console.info(`getStringArrayValue, result: ${value[0]}`);
+          // 打印输出结果: getStringArrayValue, result: I'm one of the array's values.
+        })
+        .catch((error: Error) => {
+          console.error(`promise getStringArrayValue failed, error is ${error}.`);
+        });
+    } catch (error) {
+      let code = (error as BusinessError).code;
+      let message = (error as BusinessError).message;
+      console.error(`promise getStringArrayValue failed, error code: ${code}, message: ${message}.`);
+    }
+  }
 }
 ```
 
@@ -7805,10 +9345,10 @@ getStringArrayValueSync(resId: long): Array<string>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 9001001 | Invalid resource ID. |
-| 401 | Parameter error. Possible causes: Incorrect parameter types. |
-| 9001002 | No matching resource is found based on the resource ID. |
-| 9001006 | The resource is referenced cyclically. |
+| [9001001](../errorcode-resource-manager.md#9001001-无效的资源id) | Invalid resource ID. |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: Incorrect parameter types. |
+| [9001002](../errorcode-resource-manager.md#9001002-根据当前资源id未找到匹配的资源) | No matching resource is found based on the resource ID. |
+| [9001006](../errorcode-resource-manager.md#9001006-资源存在循环引用) | The resource is referenced cyclically. |
 
 ## 示例
 
@@ -7828,23 +9368,48 @@ getStringArrayValueSync(resId: long): Array<string>
 }
 ```
 
+ArkTS-Dyn示例：
+
 ```TypeScript
 import { AbilityConstant, UIAbility, Want } from '@kit.AbilityKit';
 import { BusinessError } from '@kit.BasicServicesKit';
 
 export default class EntryAbility extends UIAbility {
-    onCreate(want: Want, launchParam: AbilityConstant.LaunchParam): void {
-        try {
-            // 'app.strarray.test'仅作示例，请替换为实际使用的资源
-            let strArray: Array<string> = this.context.resourceManager.getStringArrayValueSync($r('app.strarray.test').id);
-            console.info(`getStringArrayValueSync, result: ${strArray[0]}`);
-            // 打印输出结果: getStringArrayValueSync, result: I'm one of the array's values.
-        } catch (error) {
-            let code = (error as BusinessError).code;
-            let message = (error as BusinessError).message;
-            console.error(`getStringArrayValueSync failed, error code: ${code}, message: ${message}.`);
-        }
+  onCreate(want: Want, launchParam: AbilityConstant.LaunchParam): void {
+    try {
+      // 'app.strarray.test'仅作示例，请替换为实际使用的资源
+      let strArray: Array<string> = this.context.resourceManager.getStringArrayValueSync($r('app.strarray.test').id);
+      console.info(`getStringArrayValueSync, result: ${strArray[0]}`);
+      // 打印输出结果: getStringArrayValueSync, result: I'm one of the array's values.
+    } catch (error) {
+      let code = (error as BusinessError).code;
+      let message = (error as BusinessError).message;
+      console.error(`getStringArrayValueSync failed, error code: ${code}, message: ${message}.`);
     }
+  }
+}
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+import { AbilityConstant, UIAbility, Want } from '@kit.AbilityKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+import { $r } from '@kit.ArkUI';
+
+export default class EntryAbility extends UIAbility {
+  onCreate(want: Want, launchParam: AbilityConstant.LaunchParam): void {
+    try {
+      // 'app.strarray.test'仅作示例，请替换为实际使用的资源
+      let strArray: Array<string> = this.context.resourceManager.getStringArrayValueSync($r('app.strarray.test').id);
+      console.info(`getStringArrayValueSync, result: ${strArray[0]}`);
+      // 打印输出结果: getStringArrayValueSync, result: I'm one of the array's values.
+    } catch (error) {
+      let code = (error as BusinessError).code;
+      let message = (error as BusinessError).message;
+      console.error(`getStringArrayValueSync failed, error code: ${code}, message: ${message}.`);
+    }
+  }
 }
 ```
 
@@ -7888,10 +9453,10 @@ getStringArrayValueSync(resource: Resource): Array<string>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 9001001 | Invalid resource ID. |
-| 401 | Parameter error. Possible causes: Incorrect parameter types. |
-| 9001002 | No matching resource is found based on the resource ID. |
-| 9001006 | The resource is referenced cyclically. |
+| [9001001](../errorcode-resource-manager.md#9001001-无效的资源id) | Invalid resource ID. |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: Incorrect parameter types. |
+| [9001002](../errorcode-resource-manager.md#9001002-根据当前资源id未找到匹配的资源) | No matching resource is found based on the resource ID. |
+| [9001006](../errorcode-resource-manager.md#9001006-资源存在循环引用) | The resource is referenced cyclically. |
 
 ## 示例
 
@@ -7960,10 +9525,10 @@ getStringByName(resName: string, callback: _AsyncCallback<string>): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 401 | Parameter error. Possible causes: Incorrect parameter types. |
-| 9001003 | Invalid resource name. |
-| 9001004 | No matching resource is found based on the resource name. |
-| 9001006 | The resource is referenced cyclically. |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: Incorrect parameter types. |
+| [9001003](../errorcode-resource-manager.md#9001003-无效的资源名称) | Invalid resource name. |
+| [9001004](../errorcode-resource-manager.md#9001004-根据当前资源名称未找到匹配的资源) | No matching resource is found based on the resource name. |
+| [9001006](../errorcode-resource-manager.md#9001006-资源存在循环引用) | The resource is referenced cyclically. |
 
 ## 示例
 
@@ -7979,22 +9544,57 @@ getStringByName(resName: string, callback: _AsyncCallback<string>): void
 }
 ```
 
+ArkTS-Dyn示例：
+
 ```TypeScript
 import { AbilityConstant, UIAbility, Want } from '@kit.AbilityKit';
 import { BusinessError } from '@kit.BasicServicesKit';
 
 export default class EntryAbility extends UIAbility {
-    onCreate(want: Want, launchParam: AbilityConstant.LaunchParam): void {
-        // "test"仅作示例，请替换为实际使用的资源
-        this.context.resourceManager.getStringByName("test", (error: BusinessError, value: string) => {
-            if (error != null) {
-                console.error(`callback getStringByName failed, error code: ${error.code}, message: ${error.message}.`);
-            } else {
-                console.info(`getStringByName, result: ${value}`);
-                // 打印输出结果: getStringByName, result: I'm a test string resource.
-            }
-        });
+  onCreate(want: Want, launchParam: AbilityConstant.LaunchParam): void {
+    try {
+      // "test"仅作示例，请替换为实际使用的资源
+      this.context.resourceManager.getStringByName("test", (error: BusinessError, value: string) => {
+        if (error != null) {
+          console.error(`callback getStringByName failed, error code: ${error.code}, message: ${error.message}.`);
+        } else {
+          console.info(`getStringByName, result: ${value}`);
+          // 打印输出结果: getStringByName, result: I'm a test string resource.
+        }
+      });
+    } catch (error) {
+      let code = (error as BusinessError).code;
+      let message = (error as BusinessError).message;
+      console.error(`callback getStringByName failed, error code: ${code}, message: ${message}.`);
     }
+  }
+}
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+import { AbilityConstant, UIAbility, Want } from '@kit.AbilityKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+export default class EntryAbility extends UIAbility {
+  onCreate(want: Want, launchParam: AbilityConstant.LaunchParam): void {
+    try {
+      // "test"仅作示例，请替换为实际使用的资源
+      this.context.resourceManager.getStringByName("test", (error: BusinessError | null, value: string | undefined) => {
+        if (error != null) {
+          console.error(`callback getStringByName failed, error code: ${error.code}, message: ${error.message}.`);
+        } else {
+          console.info(`getStringByName, result: ${value}`);
+          // 打印输出结果: getStringByName, result: I'm a test string resource.
+        }
+      });
+    } catch (error) {
+      let code = (error as BusinessError).code;
+      let message = (error as BusinessError).message;
+      console.error(`callback getStringByName failed, error code: ${code}, message: ${message}.`);
+    }
+  }
 }
 ```
 
@@ -8032,10 +9632,10 @@ getStringByName(resName: string): Promise<string>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 401 | Parameter error. Possible causes: Incorrect parameter types. |
-| 9001003 | Invalid resource name. |
-| 9001004 | No matching resource is found based on the resource name. |
-| 9001006 | The resource is referenced cyclically. |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: Incorrect parameter types. |
+| [9001003](../errorcode-resource-manager.md#9001003-无效的资源名称) | Invalid resource name. |
+| [9001004](../errorcode-resource-manager.md#9001004-根据当前资源名称未找到匹配的资源) | No matching resource is found based on the resource name. |
+| [9001006](../errorcode-resource-manager.md#9001006-资源存在循环引用) | The resource is referenced cyclically. |
 
 ## 示例
 
@@ -8051,20 +9651,53 @@ getStringByName(resName: string): Promise<string>
 }
 ```
 
+ArkTS-Dyn示例：
+
 ```TypeScript
 import { AbilityConstant, UIAbility, Want } from '@kit.AbilityKit';
 import { BusinessError } from '@kit.BasicServicesKit';
 
 export default class EntryAbility extends UIAbility {
-    onCreate(want: Want, launchParam: AbilityConstant.LaunchParam): void {
-        // "test"仅作示例，请替换为实际使用的资源
-        this.context.resourceManager.getStringByName("test").then((value: string) => {
-            console.info(`getStringByName, result: ${value}`);
-            // 打印输出结果: getStringByName, result: I'm a test string resource.
-        }).catch((error: BusinessError) => {
-            console.error(`promise getStringByName failed, error code: ${error.code}, message: ${error.message}.`);
-        });
+  onCreate(want: Want, launchParam: AbilityConstant.LaunchParam): void {
+    try {
+      // "test"仅作示例，请替换为实际使用的资源
+      this.context.resourceManager.getStringByName("test").then((value: string) => {
+        console.info(`getStringByName, result: ${value}`);
+        // 打印输出结果: getStringByName, result: I'm a test string resource.
+      }).catch((error: BusinessError) => {
+        console.error(`promise getStringByName failed, error code: ${error.code}, message: ${error.message}.`);
+      });
+    } catch (error) {
+      let code = (error as BusinessError).code;
+      let message = (error as BusinessError).message;
+      console.error(`promise getStringByName failed, error code: ${code}, message: ${message}.`);
     }
+  }
+}
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+import { AbilityConstant, UIAbility, Want } from '@kit.AbilityKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+export default class EntryAbility extends UIAbility {
+  onCreate(want: Want, launchParam: AbilityConstant.LaunchParam): void {
+    try {
+      // "test"仅作示例，请替换为实际使用的资源
+      this.context.resourceManager.getStringByName("test").then((value: string) => {
+        console.info(`getStringByName, result: ${value}`);
+        // 打印输出结果: getStringByName, result: I'm a test string resource.
+      }).catch((error: Error) => {
+        console.error(`promise getStringByName failed, error is ${error}.`);
+      });
+    } catch (error) {
+      let code = (error as BusinessError).code;
+      let message = (error as BusinessError).message;
+      console.error(`promise getStringByName failed, error code: ${code}, message: ${message}.`);
+    }
+  }
 }
 ```
 
@@ -8102,10 +9735,10 @@ getStringByNameSync(resName: string): string
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 401 | Parameter error. Possible causes: Incorrect parameter types. |
-| 9001003 | Invalid resource name. |
-| 9001004 | No matching resource is found based on the resource name. |
-| 9001006 | The resource is referenced cyclically. |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: Incorrect parameter types. |
+| [9001003](../errorcode-resource-manager.md#9001003-无效的资源名称) | Invalid resource name. |
+| [9001004](../errorcode-resource-manager.md#9001004-根据当前资源名称未找到匹配的资源) | No matching resource is found based on the resource name. |
+| [9001006](../errorcode-resource-manager.md#9001006-资源存在循环引用) | The resource is referenced cyclically. |
 
 ## 示例
 
@@ -8126,18 +9759,18 @@ import { AbilityConstant, UIAbility, Want } from '@kit.AbilityKit';
 import { BusinessError } from '@kit.BasicServicesKit';
 
 export default class EntryAbility extends UIAbility {
-    onCreate(want: Want, launchParam: AbilityConstant.LaunchParam): void {
-        try {
-            // "test"仅作示例，请替换为实际使用的资源
-            let testStr = this.context.resourceManager.getStringByNameSync("test");
-            console.info(`getStringByNameSync, result: ${testStr}`);
-            // 打印输出结果: getStringByNameSync, result: I'm a test string resource.
-        } catch (error) {
-            let code = (error as BusinessError).code;
-            let message = (error as BusinessError).message;
-            console.error(`getStringByNameSync failed, error code: ${code}, message: ${message}.`);
-        }
+  onCreate(want: Want, launchParam: AbilityConstant.LaunchParam): void {
+    try {
+      // "test"仅作示例，请替换为实际使用的资源
+      let testStr = this.context.resourceManager.getStringByNameSync("test");
+      console.info(`getStringByNameSync, result: ${testStr}`);
+      // 打印输出结果: getStringByNameSync, result: I'm a test string resource.
+    } catch (error) {
+      let code = (error as BusinessError).code;
+      let message = (error as BusinessError).message;
+      console.error(`getStringByNameSync failed, error code: ${code}, message: ${message}.`);
     }
+  }
 }
 ```
 
@@ -8176,11 +9809,11 @@ getStringByNameSync(resName: string, ...args: Array<string | number>): string
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 401 | Parameter error. Possible causes: Incorrect parameter types. |
-| 9001003 | Invalid resource name. |
-| 9001004 | No matching resource is found based on the resource name. |
-| 9001006 | The resource is referenced cyclically. |
-| 9001008 | Failed to format the resource obtained based on the resource name. |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: Incorrect parameter types. |
+| [9001003](../errorcode-resource-manager.md#9001003-无效的资源名称) | Invalid resource name. |
+| [9001004](../errorcode-resource-manager.md#9001004-根据当前资源名称未找到匹配的资源) | No matching resource is found based on the resource name. |
+| [9001006](../errorcode-resource-manager.md#9001006-资源存在循环引用) | The resource is referenced cyclically. |
+| [9001008](../errorcode-resource-manager.md#9001008-根据当前名称获取的资源格式化失败) | Failed to format the resource obtained based on the resource name. |
 
 ## 示例
 
@@ -8201,18 +9834,18 @@ import { AbilityConstant, UIAbility, Want } from '@kit.AbilityKit';
 import { BusinessError } from '@kit.BasicServicesKit';
 
 export default class EntryAbility extends UIAbility {
-    onCreate(want: Want, launchParam: AbilityConstant.LaunchParam): void {
-        try {
-            // "test"仅作示例，请替换为实际使用的资源
-            let testStr = this.context.resourceManager.getStringByNameSync("test", "format string", 10, 98.78);
-            console.info(`getStringByNameSync, result: ${testStr}`);
-            // 打印输出结果: getStringByNameSync, result: I'm a format string, format int: 10, format float: 98.78.
-        } catch (error) {
-            let code = (error as BusinessError).code;
-            let message = (error as BusinessError).message;
-            console.error(`getStringByNameSync failed, error code: ${code}, message: ${message}.`);
-        }
+  onCreate(want: Want, launchParam: AbilityConstant.LaunchParam): void {
+    try {
+      // "test"仅作示例，请替换为实际使用的资源
+      let testStr = this.context.resourceManager.getStringByNameSync("test", "format string", 10, 98.78);
+      console.info(`getStringByNameSync, result: ${testStr}`);
+      // 打印输出结果: getStringByNameSync, result: I'm a format string, format int: 10, format float: 98.78.
+    } catch (error) {
+      let code = (error as BusinessError).code;
+      let message = (error as BusinessError).message;
+      console.error(`getStringByNameSync failed, error code: ${code}, message: ${message}.`);
     }
+  }
 }
 ```
 
@@ -8251,10 +9884,10 @@ getStringByNameSync(resName: string, ...args: (string | double)[]): string
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 9001003 | Invalid resource name. |
-| 9001004 | No matching resource is found based on the resource name. |
-| 9001006 | The resource is referenced cyclically. |
-| 9001008 | Failed to format the resource obtained based on the resource name. |
+| [9001003](../errorcode-resource-manager.md#9001003-无效的资源名称) | Invalid resource name. |
+| [9001004](../errorcode-resource-manager.md#9001004-根据当前资源名称未找到匹配的资源) | No matching resource is found based on the resource name. |
+| [9001006](../errorcode-resource-manager.md#9001006-资源存在循环引用) | The resource is referenced cyclically. |
+| [9001008](../errorcode-resource-manager.md#9001008-根据当前名称获取的资源格式化失败) | Failed to format the resource obtained based on the resource name. |
 
 ## getStringSync
 
@@ -8290,10 +9923,10 @@ getStringSync(resId: long): string
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 9001001 | Invalid resource ID. |
-| 401 | Parameter error. Possible causes: Incorrect parameter types. |
-| 9001002 | No matching resource is found based on the resource ID. |
-| 9001006 | The resource is referenced cyclically. |
+| [9001001](../errorcode-resource-manager.md#9001001-无效的资源id) | Invalid resource ID. |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: Incorrect parameter types. |
+| [9001002](../errorcode-resource-manager.md#9001002-根据当前资源id未找到匹配的资源) | No matching resource is found based on the resource ID. |
+| [9001006](../errorcode-resource-manager.md#9001006-资源存在循环引用) | The resource is referenced cyclically. |
 
 ## 示例
 
@@ -8314,18 +9947,18 @@ import { AbilityConstant, UIAbility, Want } from '@kit.AbilityKit';
 import { BusinessError } from '@kit.BasicServicesKit';
 
 export default class EntryAbility extends UIAbility {
-    onCreate(want: Want, launchParam: AbilityConstant.LaunchParam): void {
-        try {
-            // 'app.string.test'仅作示例，请替换为实际使用的资源
-            let testStr = this.context.resourceManager.getStringSync($r('app.string.test').id);
-            console.info(`getStringSync, result: ${testStr}`);
-            // 打印输出结果: getStringSync, result: I'm a test string resource.
-        } catch (error) {
-            let code = (error as BusinessError).code;
-            let message = (error as BusinessError).message;
-            console.error(`getStringSync failed, error code: ${code}, message: ${message}.`);
-        }
+  onCreate(want: Want, launchParam: AbilityConstant.LaunchParam): void {
+    try {
+      // 'app.string.test'仅作示例，请替换为实际使用的资源
+      let testStr = this.context.resourceManager.getStringSync($r('app.string.test').id);
+      console.info(`getStringSync, result: ${testStr}`);
+      // 打印输出结果: getStringSync, result: I'm a test string resource.
+    } catch (error) {
+      let code = (error as BusinessError).code;
+      let message = (error as BusinessError).message;
+      console.error(`getStringSync failed, error code: ${code}, message: ${message}.`);
     }
+  }
 }
 ```
 
@@ -8364,11 +9997,11 @@ getStringSync(resId: number, ...args: Array<string | number>): string
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 9001001 | Invalid resource ID. |
-| 401 | Parameter error. Possible causes: Incorrect parameter types. |
-| 9001002 | No matching resource is found based on the resource ID. |
-| 9001007 | Failed to format the resource obtained based on the resource ID. |
-| 9001006 | The resource is referenced cyclically. |
+| [9001001](../errorcode-resource-manager.md#9001001-无效的资源id) | Invalid resource ID. |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: Incorrect parameter types. |
+| [9001002](../errorcode-resource-manager.md#9001002-根据当前资源id未找到匹配的资源) | No matching resource is found based on the resource ID. |
+| [9001007](../errorcode-resource-manager.md#9001007-根据当前id获取的资源格式化失败) | Failed to format the resource obtained based on the resource ID. |
+| [9001006](../errorcode-resource-manager.md#9001006-资源存在循环引用) | The resource is referenced cyclically. |
 
 ## 示例
 
@@ -8384,23 +10017,48 @@ getStringSync(resId: number, ...args: Array<string | number>): string
 }
 ```
 
+ArkTS-Dyn示例：
+
 ```TypeScript
 import { AbilityConstant, UIAbility, Want } from '@kit.AbilityKit';
 import { BusinessError } from '@kit.BasicServicesKit';
 
 export default class EntryAbility extends UIAbility {
-    onCreate(want: Want, launchParam: AbilityConstant.LaunchParam): void {
-        try {
-            // 'app.string.test'仅作示例，请替换为实际使用的资源
-            let testStr = this.context.resourceManager.getStringSync($r('app.string.test').id, "format string", 10, 98.78);
-            console.info(`getStringSync, result: ${testStr}`);
-            // 打印输出结果: getStringSync, result: I'm a format string, format int: 10, format float: 98.78.
-        } catch (error) {
-            let code = (error as BusinessError).code;
-            let message = (error as BusinessError).message;
-            console.error(`getStringSync failed, error code: ${code}, message: ${message}.`);
-        }
+  onCreate(want: Want, launchParam: AbilityConstant.LaunchParam): void {
+    try {
+      // 'app.string.test'仅作示例，请替换为实际使用的资源
+      let testStr = this.context.resourceManager.getStringSync($r('app.string.test').id, "format string", 10, 98.78);
+      console.info(`getStringSync, result: ${testStr}`);
+      // 打印输出结果: getStringSync, result: I'm a format string, format int: 10, format float: 98.78.
+    } catch (error) {
+      let code = (error as BusinessError).code;
+      let message = (error as BusinessError).message;
+      console.error(`getStringSync failed, error code: ${code}, message: ${message}.`);
     }
+  }
+}
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+import { AbilityConstant, UIAbility, Want } from '@kit.AbilityKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+import { $r } from '@kit.ArkUI';
+
+export default class EntryAbility extends UIAbility {
+  onCreate(want: Want, launchParam: AbilityConstant.LaunchParam): void {
+    try {
+      // 'app.string.test'仅作示例，请替换为实际使用的资源
+      let testStr = this.context.resourceManager.getStringSync($r('app.string.test').id, "format string", 10, 98.78);
+      console.info(`getStringSync, result: ${testStr}`);
+      // 打印输出结果: getStringSync, result: I'm a format string, format int: 10, format float: 98.78.
+    } catch (error) {
+      let code = (error as BusinessError).code;
+      let message = (error as BusinessError).message;
+      console.error(`getStringSync failed, error code: ${code}, message: ${message}.`);
+    }
+  }
 }
 ```
 
@@ -8439,10 +10097,10 @@ getStringSync(resId: long, ...args: (string | double)[]): string
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 9001001 | Invalid resource ID. |
-| 9001002 | No matching resource is found based on the resource ID. |
-| 9001007 | Failed to format the resource obtained based on the resource ID. |
-| 9001006 | The resource is referenced cyclically. |
+| [9001001](../errorcode-resource-manager.md#9001001-无效的资源id) | Invalid resource ID. |
+| [9001002](../errorcode-resource-manager.md#9001002-根据当前资源id未找到匹配的资源) | No matching resource is found based on the resource ID. |
+| [9001007](../errorcode-resource-manager.md#9001007-根据当前id获取的资源格式化失败) | Failed to format the resource obtained based on the resource ID. |
+| [9001006](../errorcode-resource-manager.md#9001006-资源存在循环引用) | The resource is referenced cyclically. |
 
 ## getStringSync
 
@@ -8484,10 +10142,10 @@ getStringSync(resource: Resource): string
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 9001001 | Invalid resource ID. |
-| 401 | Parameter error. Possible causes: Incorrect parameter types. |
-| 9001002 | No matching resource is found based on the resource ID. |
-| 9001006 | The resource is referenced cyclically. |
+| [9001001](../errorcode-resource-manager.md#9001001-无效的资源id) | Invalid resource ID. |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: Incorrect parameter types. |
+| [9001002](../errorcode-resource-manager.md#9001002-根据当前资源id未找到匹配的资源) | No matching resource is found based on the resource ID. |
+| [9001006](../errorcode-resource-manager.md#9001006-资源存在循环引用) | The resource is referenced cyclically. |
 
 ## 示例
 
@@ -8564,11 +10222,11 @@ getStringSync(resource: Resource, ...args: Array<string | number>): string
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 9001001 | Invalid resource ID. |
-| 401 | Parameter error. Possible causes: Incorrect parameter types. |
-| 9001002 | No matching resource is found based on the resource ID. |
-| 9001007 | Failed to format the resource obtained based on the resource ID. |
-| 9001006 | The resource is referenced cyclically. |
+| [9001001](../errorcode-resource-manager.md#9001001-无效的资源id) | Invalid resource ID. |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: Incorrect parameter types. |
+| [9001002](../errorcode-resource-manager.md#9001002-根据当前资源id未找到匹配的资源) | No matching resource is found based on the resource ID. |
+| [9001007](../errorcode-resource-manager.md#9001007-根据当前id获取的资源格式化失败) | Failed to format the resource obtained based on the resource ID. |
+| [9001006](../errorcode-resource-manager.md#9001006-资源存在循环引用) | The resource is referenced cyclically. |
 
 ## 示例
 
@@ -8639,10 +10297,10 @@ getStringValue(resource: Resource, callback: _AsyncCallback<string>): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 9001001 | Invalid resource ID. |
-| 401 | Parameter error. Possible causes: Incorrect parameter types. |
-| 9001002 | No matching resource is found based on the resource ID. |
-| 9001006 | The resource is referenced cyclically. |
+| [9001001](../errorcode-resource-manager.md#9001001-无效的资源id) | Invalid resource ID. |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: Incorrect parameter types. |
+| [9001002](../errorcode-resource-manager.md#9001002-根据当前资源id未找到匹配的资源) | No matching resource is found based on the resource ID. |
+| [9001006](../errorcode-resource-manager.md#9001006-资源存在循环引用) | The resource is referenced cyclically. |
 
 ## 示例
 
@@ -8717,10 +10375,10 @@ getStringValue(resource: Resource): Promise<string>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 9001001 | Invalid resource ID. |
-| 401 | Parameter error. Possible causes: Incorrect parameter types. |
-| 9001002 | No matching resource is found based on the resource ID. |
-| 9001006 | The resource is referenced cyclically. |
+| [9001001](../errorcode-resource-manager.md#9001001-无效的资源id) | Invalid resource ID. |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: Incorrect parameter types. |
+| [9001002](../errorcode-resource-manager.md#9001002-根据当前资源id未找到匹配的资源) | No matching resource is found based on the resource ID. |
+| [9001006](../errorcode-resource-manager.md#9001006-资源存在循环引用) | The resource is referenced cyclically. |
 
 ## 示例
 
@@ -8778,10 +10436,79 @@ getStringValue(resId: long, callback: _AsyncCallback<string>): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 9001001 | Invalid resource ID. |
-| 401 | Parameter error. Possible causes: Incorrect parameter types. |
-| 9001002 | No matching resource is found based on the resource ID. |
-| 9001006 | The resource is referenced cyclically. |
+| [9001001](../errorcode-resource-manager.md#9001001-无效的资源id) | Invalid resource ID. |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: Incorrect parameter types. |
+| [9001002](../errorcode-resource-manager.md#9001002-根据当前资源id未找到匹配的资源) | No matching resource is found based on the resource ID. |
+| [9001006](../errorcode-resource-manager.md#9001006-资源存在循环引用) | The resource is referenced cyclically. |
+
+## 示例
+
+```TypeScript
+// 资源文件路径: src/main/resources/base/element/string.json
+{
+  "string": [
+    {
+      "name": "test",
+      "value": "I'm a test string resource."
+    }
+  ]
+}
+```
+
+ArkTS-Dyn示例：
+
+```TypeScript
+import { AbilityConstant, UIAbility, Want } from '@kit.AbilityKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+export default class EntryAbility extends UIAbility {
+  onCreate(want: Want, launchParam: AbilityConstant.LaunchParam): void {
+    try {
+      // 'app.string.test'仅作示例，请替换为实际使用的资源
+      this.context.resourceManager.getStringValue($r('app.string.test').id, (error: BusinessError, value: string) => {
+        if (error != null) {
+          console.error(`callback getStringValue failed, error code: ${error.code}, message: ${error.message}.`);
+        } else {
+          console.info(`getStringValue, result: ${value}`);
+          // 打印输出结果: getStringValue, result: I'm a test string resource.
+        }
+      });
+    } catch (error) {
+      let code = (error as BusinessError).code;
+      let message = (error as BusinessError).message;
+      console.error(`callback getStringValue failed, error code: ${code}, message: ${message}.`);
+    }
+  }
+}
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+import { AbilityConstant, UIAbility, Want } from '@kit.AbilityKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+import { $r } from '@kit.ArkUI';
+
+export default class EntryAbility extends UIAbility {
+  onCreate(want: Want, launchParam: AbilityConstant.LaunchParam): void {
+    try {
+      // 'app.string.test'仅作示例，请替换为实际使用的资源
+      this.context.resourceManager.getStringValue($r('app.string.test').id, (error: BusinessError | null, value: string | undefined) => {
+        if (error != null) {
+          console.error(`callback getStringValue failed, error code: ${error.code}, message: ${error.message}.`);
+        } else {
+          console.info(`getStringValue, result: ${value}`);
+          // 打印输出结果: getStringValue, result: I'm a test string resource.
+        }
+      });
+    } catch (error) {
+      let code = (error as BusinessError).code;
+      let message = (error as BusinessError).message;
+      console.error(`callback getStringValue failed, error code: ${code}, message: ${message}.`);
+    }
+  }
+}
+```
 
 ## getStringValue
 
@@ -8823,10 +10550,10 @@ getStringValue(resId: long): Promise<string>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 9001001 | Invalid resource ID. |
-| 401 | Parameter error. Possible causes: Incorrect parameter types. |
-| 9001002 | No matching resource is found based on the resource ID. |
-| 9001006 | The resource is referenced cyclically. |
+| [9001001](../errorcode-resource-manager.md#9001001-无效的资源id) | Invalid resource ID. |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: Incorrect parameter types. |
+| [9001002](../errorcode-resource-manager.md#9001002-根据当前资源id未找到匹配的资源) | No matching resource is found based on the resource ID. |
+| [9001006](../errorcode-resource-manager.md#9001006-资源存在循环引用) | The resource is referenced cyclically. |
 
 ## 示例
 
@@ -8842,20 +10569,54 @@ getStringValue(resId: long): Promise<string>
 }
 ```
 
+ArkTS-Dyn示例：
+
 ```TypeScript
 import { AbilityConstant, UIAbility, Want } from '@kit.AbilityKit';
 import { BusinessError } from '@kit.BasicServicesKit';
 
 export default class EntryAbility extends UIAbility {
-    onCreate(want: Want, launchParam: AbilityConstant.LaunchParam): void {
-        // 'app.string.test'仅作示例，请替换为实际使用的资源
-        this.context.resourceManager.getStringValue($r('app.string.test').id).then((value: string) => {
-            console.info(`getStringValue, result: ${value}`);
-            // 打印输出结果: getStringValue, result: I'm a test string resource.
-        }).catch((error: BusinessError) => {
-            console.error(`promise getStringValue failed, error code: ${error.code}, message: ${error.message}.`);
-        });
+  onCreate(want: Want, launchParam: AbilityConstant.LaunchParam): void {
+    try {
+      // 'app.string.test'仅作示例，请替换为实际使用的资源
+      this.context.resourceManager.getStringValue($r('app.string.test').id).then((value: string) => {
+        console.info(`getStringValue, result: ${value}`);
+        // 打印输出结果: getStringValue, result: I'm a test string resource.
+      }).catch((error: BusinessError) => {
+        console.error(`promise getStringValue failed, error code: ${error.code}, message: ${error.message}.`);
+      });
+    } catch (error) {
+      let code = (error as BusinessError).code;
+      let message = (error as BusinessError).message;
+      console.error(`promise getStringValue failed, error code: ${code}, message: ${message}.`);
     }
+  }
+}
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+import { AbilityConstant, UIAbility, Want } from '@kit.AbilityKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+import { $r } from '@kit.ArkUI';
+
+export default class EntryAbility extends UIAbility {
+  onCreate(want: Want, launchParam: AbilityConstant.LaunchParam): void {
+    try {
+      // 'app.string.test'仅作示例，请替换为实际使用的资源
+      this.context.resourceManager.getStringValue($r('app.string.test').id).then((value: string) => {
+        console.info(`getStringValue, result: ${value}`);
+        // 打印输出结果: getStringValue, result: I'm a test string resource.
+      }).catch((error: Error) => {
+        console.error(`promise getStringValue failed, error is ${error}.`);
+      });
+    } catch (error) {
+      let code = (error as BusinessError).code;
+      let message = (error as BusinessError).message;
+      console.error(`promise getStringValue failed, error code: ${code}, message: ${message}.`);
+    }
+  }
 }
 ```
 
@@ -8899,30 +10660,55 @@ getSymbol(resId: long) : long
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 9001001 | Invalid resource ID. |
-| 401 | Parameter error. Possible causes: Incorrect parameter types. |
-| 9001002 | No matching resource is found based on the resource ID. |
-| 9001006 | The resource is referenced cyclically. |
+| [9001001](../errorcode-resource-manager.md#9001001-无效的资源id) | Invalid resource ID. |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: Incorrect parameter types. |
+| [9001002](../errorcode-resource-manager.md#9001002-根据当前资源id未找到匹配的资源) | No matching resource is found based on the resource ID. |
+| [9001006](../errorcode-resource-manager.md#9001006-资源存在循环引用) | The resource is referenced cyclically. |
 
 ## 示例
+
+ArkTS-Dyn示例：
 
 ```TypeScript
 import { AbilityConstant, UIAbility, Want } from '@kit.AbilityKit';
 import { BusinessError } from '@kit.BasicServicesKit';
 
 export default class EntryAbility extends UIAbility {
-    onCreate(want: Want, launchParam: AbilityConstant.LaunchParam): void {
-        try {
-            // 'sys.symbol.message'仅作示例，请替换为实际使用的资源
-            let symbolValue = this.context.resourceManager.getSymbol($r('sys.symbol.message').id);
-            console.info(`getSymbol, result: ${symbolValue}`);
-            // 打印输出结果: getSymbol, result: 983183
-        } catch (error) {
-            let code = (error as BusinessError).code;
-            let message = (error as BusinessError).message;
-            console.error(`getSymbol failed, error code: ${code}, message: ${message}.`);
-        }
+  onCreate(want: Want, launchParam: AbilityConstant.LaunchParam): void {
+    try {
+      // 'sys.symbol.message'仅作示例，请替换为实际使用的资源
+      let symbolValue = this.context.resourceManager.getSymbol($r('sys.symbol.message').id);
+      console.info(`getSymbol, result: ${symbolValue}`);
+      // 打印输出结果: getSymbol, result: 983183
+    } catch (error) {
+      let code = (error as BusinessError).code;
+      let message = (error as BusinessError).message;
+      console.error(`getSymbol failed, error code: ${code}, message: ${message}.`);
     }
+  }
+}
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+import { AbilityConstant, UIAbility, Want } from '@kit.AbilityKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+import { $r } from '@kit.ArkUI';
+
+export default class EntryAbility extends UIAbility {
+  onCreate(want: Want, launchParam: AbilityConstant.LaunchParam): void {
+    try {
+      // 'sys.symbol.message'仅作示例，请替换为实际使用的资源
+      let symbolValue = this.context.resourceManager.getSymbol($r('sys.symbol.message').id);
+      console.info(`getSymbol, result: ${symbolValue}`);
+      // 打印输出结果: getSymbol, result: 983183
+    } catch (error) {
+      let code = (error as BusinessError).code;
+      let message = (error as BusinessError).message;
+      console.error(`getSymbol failed, error code: ${code}, message: ${message}.`);
+    }
+  }
 }
 ```
 
@@ -8966,10 +10752,10 @@ getSymbol(resource: Resource) : number
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 9001001 | Invalid resource ID. |
-| 401 | Parameter error. Possible causes: Incorrect parameter types. |
-| 9001002 | No matching resource is found based on the resource ID. |
-| 9001006 | The resource is referenced cyclically. |
+| [9001001](../errorcode-resource-manager.md#9001001-无效的资源id) | Invalid resource ID. |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: Incorrect parameter types. |
+| [9001002](../errorcode-resource-manager.md#9001002-根据当前资源id未找到匹配的资源) | No matching resource is found based on the resource ID. |
+| [9001006](../errorcode-resource-manager.md#9001006-资源存在循环引用) | The resource is referenced cyclically. |
 
 ## 示例
 
@@ -9033,10 +10819,10 @@ getSymbolByName(resName: string) : long
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 401 | Parameter error. Possible causes: Incorrect parameter types. |
-| 9001003 | Invalid resource name. |
-| 9001004 | No matching resource is found based on the resource name. |
-| 9001006 | The resource is referenced cyclically. |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: Incorrect parameter types. |
+| [9001003](../errorcode-resource-manager.md#9001003-无效的资源名称) | Invalid resource name. |
+| [9001004](../errorcode-resource-manager.md#9001004-根据当前资源名称未找到匹配的资源) | No matching resource is found based on the resource name. |
+| [9001006](../errorcode-resource-manager.md#9001006-资源存在循环引用) | The resource is referenced cyclically. |
 
 ## 示例
 
@@ -9045,18 +10831,18 @@ import { AbilityConstant, UIAbility, Want } from '@kit.AbilityKit';
 import { BusinessError } from '@kit.BasicServicesKit';
 
 export default class EntryAbility extends UIAbility {
-    onCreate(want: Want, launchParam: AbilityConstant.LaunchParam): void {
-        try {
-            // "message"仅作示例，请替换为实际使用的资源
-            let symbolValue = this.context.resourceManager.getSymbolByName("message");
-            console.info(`getSymbolByName, result: ${symbolValue}`);
-            // 打印输出结果: getSymbolByName, result: 983183
-        } catch (error) {
-            let code = (error as BusinessError).code;
-            let message = (error as BusinessError).message;
-            console.error(`getSymbolByName failed, error code: ${code}, message: ${message}.`);
-        }
+  onCreate(want: Want, launchParam: AbilityConstant.LaunchParam): void {
+    try {
+      // "message"仅作示例，请替换为实际使用的资源
+      let symbolValue = this.context.resourceManager.getSymbolByName("message");
+      console.info(`getSymbolByName, result: ${symbolValue}`);
+      // 打印输出结果: getSymbolByName, result: 983183
+    } catch (error) {
+      let code = (error as BusinessError).code;
+      let message = (error as BusinessError).message;
+      console.error(`getSymbolByName failed, error code: ${code}, message: ${message}.`);
     }
+  }
 }
 ```
 
@@ -9094,8 +10880,8 @@ isRawDir(path: string): boolean
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 401 | Parameter error. Possible causes: Incorrect parameter types. |
-| 9001005 | Invalid relative path. |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: Incorrect parameter types. |
+| [9001005](../errorcode-resource-manager.md#9001005-无效的相对路径) | Invalid relative path. |
 
 ## 示例
 
@@ -9104,25 +10890,25 @@ import { AbilityConstant, UIAbility, Want } from '@kit.AbilityKit';
 import { BusinessError } from '@kit.BasicServicesKit';
 
 export default class EntryAbility extends UIAbility {
-    onCreate(want: Want, launchParam: AbilityConstant.LaunchParam): void {
-        try {
-            // 假设rawfile根目录下存在非空文件夹sub，则isRawDir返回结果为true
-            // "sub"仅作示例，请替换为实际使用的目录名称
-            let isRawDir = this.context.resourceManager.isRawDir("sub");
-            // 打印输出结果: sub isRawDir, result: true
-            console.info(`sub isRawDir, result: ${isRawDir}`);
+  onCreate(want: Want, launchParam: AbilityConstant.LaunchParam): void {
+    try {
+      // 假设rawfile根目录下存在非空文件夹sub，则isRawDir返回结果为true
+      // "sub"仅作示例，请替换为实际使用的目录名称
+      let isRawDir = this.context.resourceManager.isRawDir("sub");
+      // 打印输出结果: sub isRawDir, result: true
+      console.info(`sub isRawDir, result: ${isRawDir}`);
 
-            // 假设rawfile根目录下存在test.txt文件，则isRawDir返回结果为false
-            // "test.txt"仅作示例，请替换为实际使用的资源
-            isRawDir = this.context.resourceManager.isRawDir("test.txt");
-            // 打印输出结果: test.txt isRawDir, result: false
-            console.info(`test.txt isRawDir, result: ${isRawDir}`);
-        } catch (error) {
-            let code = (error as BusinessError).code;
-            let message = (error as BusinessError).message;
-            console.error(`isRawDir failed, error code: ${code}, message: ${message}.`);
-        }
+      // 假设rawfile根目录下存在test.txt文件，则isRawDir返回结果为false
+      // "test.txt"仅作示例，请替换为实际使用的资源
+      isRawDir = this.context.resourceManager.isRawDir("test.txt");
+      // 打印输出结果: test.txt isRawDir, result: false
+      console.info(`test.txt isRawDir, result: ${isRawDir}`);
+    } catch (error) {
+      let code = (error as BusinessError).code;
+      let message = (error as BusinessError).message;
+      console.error(`isRawDir failed, error code: ${code}, message: ${message}.`);
     }
+  }
 }
 ```
 
@@ -9188,8 +10974,8 @@ removeResource(path: string) : void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 401 | Parameter error. Possible causes: Incorrect parameter types. |
-| 9001010 | Invalid overlay path. |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: Incorrect parameter types. |
+| [9001010](../errorcode-resource-manager.md#9001010-无效的overlay路径) | Invalid overlay path. |
 
 ## 示例
 
@@ -9198,17 +10984,18 @@ import { AbilityConstant, UIAbility, Want } from '@kit.AbilityKit';
 import { BusinessError } from '@kit.BasicServicesKit';
 
 export default class EntryAbility extends UIAbility {
-    onCreate(want: Want, launchParam: AbilityConstant.LaunchParam): void {
-        // "/library1-default-signed.hsp"仅作示例，请替换为实际的文件路径
-        let path = this.context.bundleCodeDir + "/library1-default-signed.hsp";
-        try {
-            this.context.resourceManager.removeResource(path);
-        } catch (error) {
-            let code = (error as BusinessError).code;
-            let message = (error as BusinessError).message;
-            console.error(`removeResource failed, error code: ${code}, message: ${message}.`);
-        }
+  onCreate(want: Want, launchParam: AbilityConstant.LaunchParam): void {
+    // "/library1-default-signed.hsp"仅作示例，请替换为实际的文件路径
+    let path = this.context.bundleCodeDir + "/library1-default-signed.hsp";
+    try {
+      this.context.resourceManager.addResource(path);
+      this.context.resourceManager.removeResource(path);
+    } catch (error) {
+      let code = (error as BusinessError).code;
+      let message = (error as BusinessError).message;
+      console.error(`removeResource failed, error code: ${code}, message: ${message}.`);
     }
+  }
 }
 ```
 
@@ -9242,7 +11029,7 @@ updateOverrideConfiguration(configuration: Configuration): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 401 | Parameter error. Possible causes: Incorrect parameter types. |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: Incorrect parameter types. |
 
 ## 示例
 
@@ -9252,18 +11039,18 @@ import { BusinessError } from '@kit.BasicServicesKit';
 import { resourceManager } from '@kit.LocalizationKit';
 
 export default class EntryAbility extends UIAbility {
-    onCreate(want: Want, launchParam: AbilityConstant.LaunchParam): void {
-        try {
-            let resMgr = this.context.resourceManager;
-            let overrideConfig = resMgr.getOverrideConfiguration();
-            overrideConfig.colorMode = resourceManager.ColorMode.DARK;
-            let overrideResMgr = resMgr.updateOverrideConfiguration(overrideConfig);
-        } catch (error) {
-            let code = (error as BusinessError).code;
-            let message = (error as BusinessError).message;
-            console.error(`updateOverrideConfiguration failed, error code: ${code}, message: ${message}.`);
-        }
+  onCreate(want: Want, launchParam: AbilityConstant.LaunchParam): void {
+    try {
+      let resMgr = this.context.resourceManager;
+      let overrideConfig = resMgr.getOverrideConfiguration();
+      overrideConfig.colorMode = resourceManager.ColorMode.DARK;
+      resMgr.updateOverrideConfiguration(overrideConfig);
+    } catch (error) {
+      let code = (error as BusinessError).code;
+      let message = (error as BusinessError).message;
+      console.error(`updateOverrideConfiguration failed, error code: ${code}, message: ${message}.`);
     }
+  }
 }
 ```
 

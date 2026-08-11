@@ -10,12 +10,6 @@ SSAP客户端属性写请求参数说明。
 
 **系统能力：** SystemCapability.Communication.NearLink.Base
 
-## 导入模块
-
-```TypeScript
-import { ssap } from 'kits/@kit.ConnectivityKit';
-```
-
 ## address
 
 ```TypeScript

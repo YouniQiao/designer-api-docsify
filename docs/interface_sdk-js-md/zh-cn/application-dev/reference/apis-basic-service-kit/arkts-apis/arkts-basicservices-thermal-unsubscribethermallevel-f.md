@@ -1,11 +1,5 @@
 # unsubscribeThermalLevel
 
-## 导入模块
-
-```TypeScript
-import { thermal } from 'kits/@kit.BasicServicesKit';
-```
-
 ## unsubscribeThermalLevel
 
 ```TypeScript

@@ -1,6 +1,6 @@
 # Organization
 
-联系人的组织类。
+Defines a contact's organization.
 
 **Since:** 7
 
@@ -22,7 +22,7 @@ import { contact } from 'kits/@kit.ContactsKit';
 name: string
 ```
 
-单位名称。
+Organization name.
 
 **Type:** string
 
@@ -42,7 +42,7 @@ name: string
 title?: string
 ```
 
-职位名称。
+Job title.
 
 **Type:** string
 

@@ -1,6 +1,6 @@
 # TaskInfo (System API)
 
-任务信息。
+Represents the task information.
 
 **Since:** 9
 
@@ -24,9 +24,9 @@ import { update } from 'kits/@kit.BasicServicesKit';
 existTask: boolean
 ```
 
-是否存在升级任务，用于判断当前是否有进行中的升级任务。
+Whether an upgrade task exists, which is used to determine whether an upgrade task is in progress.
 
-使用场景：在执行升级操作前查询任务状态，避免重复操作；在升级流程中监控任务状态变化。true表示存在进行中的升级任务(如下载或安装任务)，需要等待任务完成或取消后再执行新任务。false表示当前无任务，可以开始新的升级流程。
+Use scenarios: Query the task status before the upgrade to avoid repeated operations. Monitor the task status change during the upgrade. The value **true** indicates that an upgrade task (for example, a download or installation task) is in progress. You need to wait until the task is complete or canceled before executing a new task. The value **false** indicates that no task is running and a new upgrade process can be started.
 
 **Type:** boolean
 
@@ -46,7 +46,7 @@ existTask: boolean
 taskBody: TaskBody
 ```
 
-任务数据。
+Task data.
 
 **Type:** [TaskBody](arkts-basicservices-update-taskbody-i-sys.md)
 

@@ -1,6 +1,6 @@
 # XComponentNode
 
-定义XComponent Node。
+Defines XComponent Node.
 
 **Inheritance/Implementation:** XComponentNode extends [FrameNode](arkts-arkui-framenode-c.md)
 
@@ -22,7 +22,7 @@
 changeRenderType(type: NodeRenderType): boolean
 ```
 
-设置builderNode的渲染类型。
+Set the render type of the builderNode.
 
 **Since:** 11
 
@@ -42,13 +42,13 @@ changeRenderType(type: NodeRenderType): boolean
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | [NodeRenderType](arkts-arkui-buildernode-noderendertype-e.md) | Yes | 渲染类型 |
+| type | [NodeRenderType](arkts-arkui-buildernode-noderendertype-e.md) | Yes | render type |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| boolean | 返回是否成功修改渲染类型。 |
+| boolean | Returns if change the render type successfully. |
 
 ## constructor
 
@@ -57,7 +57,7 @@ constructor(uiContext: UIContext, options: RenderOptions,
     id: string, type: XComponentType, libraryName?: string)
 ```
 
-构造函数。
+constructor.
 
 **Since:** 11
 
@@ -77,11 +77,11 @@ constructor(uiContext: UIContext, options: RenderOptions,
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| uiContext | [UIContext](arkts-arkui-arkui-uicontext-uicontext-c.md) | Yes | 用于创建FrameNode的UIContext |
-| options | [RenderOptions](arkts-arkui-buildernode-renderoptions-i.md) | Yes | Builder Node的渲染选项 |
-| id | string | Yes | 应用定义的XComponent id |
-| type | [XComponentType](arkts-arkui-enums-xcomponenttype-e.md) | Yes | XComponent类型 |
-| libraryName | string | No | XComponent要加载的库名称 |
+| uiContext | [UIContext](arkts-arkui-arkui-uicontext-uicontext-c.md) | Yes | UIContext used to create the FrameNode |
+| options | [RenderOptions](arkts-arkui-buildernode-renderoptions-i.md) | Yes | Render options of the Builder Node |
+| id | string | Yes | XComponent id defined by the application |
+| type | [XComponentType](arkts-arkui-enums-xcomponenttype-e.md) | Yes | XComponent type |
+| libraryName | string | No | The name of the library to be loaded by XComponent |
 
 ## onCreate
 
@@ -89,7 +89,7 @@ constructor(uiContext: UIContext, options: RenderOptions,
 onCreate(event?: Object): void
 ```
 
-当XComponent的surface创建完成时回调。
+Called when the XComponent surface has been created.
 
 **Since:** 11
 
@@ -109,7 +109,7 @@ onCreate(event?: Object): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| event | Object | No | 加载库时来自native的事件 |
+| event | Object | No | event from native when the library loaded |
 
 ## onDestroy
 
@@ -117,7 +117,7 @@ onCreate(event?: Object): void
 onDestroy(): void
 ```
 
-当XComponent的surface被销毁时回调。
+Called when the XComponent surface has been destroyed.
 
 **Since:** 11
 

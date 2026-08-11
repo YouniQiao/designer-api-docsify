@@ -1,6 +1,6 @@
 # AutoStartupInfo (System API)
 
-定义开机自启动应用组件信息。
+The module defines information about the application component that automatically starts upon system boot.
 
 **Since:** 11
 
@@ -18,7 +18,7 @@
 abilityName: string
 ```
 
-应用程序的Ability名称。
+Ability name.
 
 **Type:** string
 
@@ -40,7 +40,7 @@ abilityName: string
 abilityTypeName?: string
 ```
 
-应用程序的Ability类型。
+Ability type.
 
 **Type:** string
 
@@ -62,7 +62,7 @@ abilityTypeName?: string
 appCloneIndex?: int
 ```
 
-分身应用索引。
+Index of an application clone.
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
@@ -84,7 +84,7 @@ appCloneIndex?: int
 bundleName: string
 ```
 
-应用程序的Bundle名称。
+Bundle name.
 
 **Type:** string
 
@@ -106,7 +106,8 @@ bundleName: string
 readonly canUserModify?: boolean
 ```
 
-表示是否允许开发者修改此应用的开机自启动状态，true表示允许，false表示不允许。
+Whether the developer is allowed to modify the auto-startup status of this application. The options include  
+**true** (yes) and **false** (no).
 
 **Type:** boolean
 
@@ -128,7 +129,7 @@ readonly canUserModify?: boolean
 moduleName?: string
 ```
 
-应用程序的Module名称。
+Module name.
 
 **Type:** string
 
@@ -150,7 +151,7 @@ moduleName?: string
 readonly setterUserId?: int
 ```
 
-设置者的用户ID，记录了将当前应用设置为开机自启动的用户ID。
+User ID of the person who set the application to automatically start upon system boot.
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
@@ -172,7 +173,7 @@ readonly setterUserId?: int
 readonly userId?: int
 ```
 
-应用程序所属的用户ID，用于区分同一设备上不同用户账号下的应用。
+User ID associated with the application, used to differentiate applications belonging to different user accounts on the same device.
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 

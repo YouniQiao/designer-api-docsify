@@ -1,6 +1,6 @@
 # AISessionType
 
-支持的AI会话类型。
+Enum representing the supported types of AI sessions.
 
 **Since:** 26.0.0
 
@@ -16,7 +16,7 @@
 TRANSLATOR = 1
 ```
 
-翻译模型。
+Translator model
 
 **Since:** 26.0.0
 
@@ -34,7 +34,7 @@ TRANSLATOR = 1
 LANGUAGE_DETECTOR = 2
 ```
 
-语言检测模型。
+Language detector model
 
 **Since:** 26.0.0
 
@@ -52,7 +52,7 @@ LANGUAGE_DETECTOR = 2
 SUMMARIZER = 3
 ```
 
-内容摘要生成模型。
+Summarization generator model
 
 **Since:** 26.0.0
 
@@ -70,7 +70,7 @@ SUMMARIZER = 3
 WRITER = 4
 ```
 
-写作助手模型。
+Writing assistant model
 
 **Since:** 26.0.0
 
@@ -88,7 +88,7 @@ WRITER = 4
 REWRITER = 5
 ```
 
-内容改写助手模型。
+Rewriting assistant model
 
 **Since:** 26.0.0
 
@@ -106,7 +106,7 @@ REWRITER = 5
 PROMPT = 6
 ```
 
-提示词模型。
+Prompt engineering model
 
 **Since:** 26.0.0
 
@@ -124,7 +124,7 @@ PROMPT = 6
 PROOFREADER = 7
 ```
 
-内容校对助手模型。
+Proofreading assistant model
 
 **Since:** 26.0.0
 

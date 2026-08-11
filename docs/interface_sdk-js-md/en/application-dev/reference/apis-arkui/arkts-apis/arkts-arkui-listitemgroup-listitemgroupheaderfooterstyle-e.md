@@ -1,6 +1,6 @@
 # ListItemGroupHeaderFooterStyle
 
-ListItemGroup头部和尾部样式枚举。
+Defines the list item group header/footer style.
 
 **Since:** 26.0.0
 
@@ -16,7 +16,7 @@ ListItemGroup头部和尾部样式枚举。
 NONE = 0
 ```
 
-无样式。
+Show none style.
 
 **Since:** 26.0.0
 
@@ -34,7 +34,7 @@ NONE = 0
 FLOATING = 1
 ```
 
-悬浮样式。
+Show floating style.
 
 **Since:** 26.0.0
 

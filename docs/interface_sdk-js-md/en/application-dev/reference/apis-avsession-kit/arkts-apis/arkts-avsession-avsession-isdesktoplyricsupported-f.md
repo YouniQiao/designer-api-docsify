@@ -12,7 +12,7 @@ import { avSession } from 'kits/@kit.AVSessionKit';
 function isDesktopLyricSupported(): Promise<boolean>
 ```
 
-设备是否支持桌面歌词功能。使用Promise异步回调。
+Whether desktop lyric feature is supported.
 
 **Since:** 23
 
@@ -28,21 +28,11 @@ function isDesktopLyricSupported(): Promise<boolean>
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;boolean&gt; | Promise对象。返回true表示设备支持桌面歌词功能；返回false表示设备不支持桌面歌词功能。 |
+| Promise&lt;boolean&gt; | result returned to indicate desktop lyric is supported. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 6600101 | Session service exception. |
-
-## Examples
-
-```TypeScript
-import { avSession } from '@kit.AVSessionKit';
-
-avSession.isDesktopLyricSupported().then((isSupported: boolean) => {
-  console.info(`Succeeded in checking desktop lyric supported: ${isSupported}`);
-});
-```
+| [6600101](../errorcode-avsession.md#6600101-session-service-exception) | Session service exception. |
 

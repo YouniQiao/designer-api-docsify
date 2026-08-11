@@ -1,7 +1,7 @@
 # AppVersionInfo
 
-应用版本信息，可以通过  
-[getAppVersionInfo](../../../reference/apis-ability-kit/js-apis-inner-app-context.md#contextgetappversioninfo7)获取当前应用的版本信息。
+The module defines the application version information. You can use  
+[getAppVersionInfo](../../../reference/apis-ability-kit/js-apis-inner-app-context.md#contextgetappversioninfo7) to obtain the version information of the current application.
 
 **Since:** 7
 
@@ -17,7 +17,7 @@
 readonly appName: string
 ```
 
-应用名称。
+Application name.
 
 **Type:** string
 
@@ -42,7 +42,7 @@ readonly appName: string
 readonly versionCode: number
 ```
 
-应用版本编码。
+Application version number.
 
 **Type:** number
 
@@ -67,7 +67,7 @@ readonly versionCode: number
 readonly versionName: string
 ```
 
-应用版本名称。
+Application version name.
 
 **Type:** string
 

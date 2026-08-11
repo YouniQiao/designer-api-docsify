@@ -1,6 +1,6 @@
 # ActionButton
 
-弹出的提醒中按钮的类型和标题。
+Describes the button displayed for a reminder.
 
 **Since:** 9
 
@@ -22,7 +22,7 @@ import { reminderAgentManager } from 'kits/@kit.BackgroundTasksKit';
 title: string
 ```
 
-按钮显示的标题。
+Text on the button.
 
 **Type:** string
 
@@ -40,7 +40,7 @@ title: string
 titleResource?: string
 ```
 
-标题的资源ID，用于切换系统语言后读取对应标题信息。
+Resource ID of the title. This parameter is used to read the title information after the system language is switched.
 
 **Type:** string
 
@@ -58,7 +58,7 @@ titleResource?: string
 type: ActionButtonType
 ```
 
-按钮的类型。
+Button type.
 
 **Type:** [ActionButtonType](arkts-backgroundtasks-reminderagentmanager-actionbuttontype-e.md)
 

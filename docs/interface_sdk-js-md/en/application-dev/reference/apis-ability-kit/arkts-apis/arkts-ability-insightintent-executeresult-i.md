@@ -1,6 +1,6 @@
 # ExecuteResult
 
-意图执行的返回结果。
+Enumerates the return results of intent execution.
 
 **Since:** 11
 
@@ -22,7 +22,7 @@ import { insightIntent } from 'kits/@kit.AbilityKit';
 code: int
 ```
 
-意图执行返回的错误码，由开发者定义。
+Error code returned by the intent execution, defined by the developer.
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
@@ -44,11 +44,12 @@ code: int
 flags?: int
 ```
 
-意图执行返回给系统入口的URI列表的授权权限。
+Permissions to be granted to the system entry point for the URI list returned by the intent execution.
 
-**说明：**
+**NOTE：**
 
-该参数仅支持FLAG_AUTH_READ_URI_PERMISSION、FLAG_AUTH_WRITE_URI_PERMISSION、FLAG_AUTH_READ_URI_PERMISSION|FLAG_AUTH_WRITE_URI_PERMISSION。权限介绍见[Flags](arkts-ability-wantconstant-flags-e.md)。
+This parameter supports only FLAG_AUTH_READ_URI_PERMISSION, FLAG_AUTH_WRITE_URI_PERMISSION, and FLAG_AUTH_READ_URI_PERMISSION|FLAG_AUTH_WRITE_URI_PERMISSION. For details about the permissions, see  
+[Flags](arkts-ability-wantconstant-flags-e.md).
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
@@ -70,7 +71,7 @@ flags?: int
 result?: Record<string, Object>
 ```
 
-意图执行返回的结果，通常会包含需要返回给系统入口的数据。
+Result data returned by the intent execution, typically containing information to be passed back to the system entry point.
 
 **Type:** [Record](../../apis-default/arkts-apis/arkts-record-t.md)&lt;string, Object&gt;
 
@@ -92,7 +93,7 @@ result?: Record<string, Object>
 uris?: Array<string>
 ```
 
-意图执行返回的URI列表。该字段需要与flags字段配合使用，根据URI列表将flags字段的相应权限授权给系统入口。
+List of URIs returned by the intent execution. This field must be used together with the **flags** field to grant the corresponding permissions for the URI list to the system entry point.
 
 **Type:** Array&lt;string&gt;
 

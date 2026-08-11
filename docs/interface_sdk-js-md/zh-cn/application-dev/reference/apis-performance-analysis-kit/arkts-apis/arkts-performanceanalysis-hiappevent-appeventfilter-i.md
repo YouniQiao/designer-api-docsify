@@ -14,12 +14,6 @@
 
 **系统能力：** SystemCapability.HiviewDFX.HiAppEvent
 
-## 导入模块
-
-```TypeScript
-import { hiAppEvent } from 'kits/@kit.PerformanceAnalysisKit';
-```
-
 ## domain
 
 ```TypeScript
@@ -48,7 +42,7 @@ eventTypes?: EventType[]
 
 需要订阅的事件类型集合。默认不进行过滤。
 
-**类型：** [EventType](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-screenlock-eventtype-t-sys.md)[]
+**类型：** [EventType](../../apis-arkts/arkts-apis/arkts-arkts-xml-eventtype-e.md)[]
 
 **起始版本：** 9
 

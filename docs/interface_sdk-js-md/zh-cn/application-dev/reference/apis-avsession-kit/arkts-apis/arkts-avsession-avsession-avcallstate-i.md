@@ -10,12 +10,6 @@
 
 **系统能力：** SystemCapability.Multimedia.AVSession.Core
 
-## 导入模块
-
-```TypeScript
-import { avSession } from 'kits/@kit.AVSessionKit';
-```
-
 ## muted
 
 ```TypeScript
@@ -44,7 +38,7 @@ state: CallState
 
 当前通话状态。
 
-**类型：** [CallState](../../apis-telephony-kit/arkts-apis/arkts-telephony-call-callstate-e.md)
+**类型：** [CallState](arkts-avsession-avsession-callstate-e.md)
 
 **起始版本：** 11
 

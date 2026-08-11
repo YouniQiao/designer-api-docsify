@@ -1,6 +1,6 @@
 # AdvancedMeasureFormat
 
-提供数字格式化能力，支持根据单位使用场景自动转换合适的单位。
+Provides the number formatting capability, supporting automatic unit conversion based on specific application scenarios.
 
 **Since:** 23
 
@@ -22,7 +22,7 @@ import { i18n } from 'kits/@kit.LocalizationKit';
 constructor(numberFormat: Intl.NumberFormat, options?: AdvancedMeasureFormatOptions)
 ```
 
-创建数字格式化对象。
+A constructor used to create an AdvancedMeasureFormat object.
 
 **Since:** 23
 
@@ -40,7 +40,7 @@ constructor(numberFormat: Intl.NumberFormat, options?: AdvancedMeasureFormatOpti
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| numberFormat | Intl.NumberFormat | Yes | 用于格式化数字的对象。 |
+| numberFormat | Intl.NumberFormat | Yes | Indicates the number format object that used to format number. |
 | options | [AdvancedMeasureFormatOptions](arkts-localization-i18n-advancedmeasureformatoptions-i.md) | No |  |
 
 ## format
@@ -49,7 +49,7 @@ constructor(numberFormat: Intl.NumberFormat, options?: AdvancedMeasureFormatOpti
 format(num: double): string
 ```
 
-对数字进行格式化。
+Formats a number by appropriate measure for usage scenarios. For instance, when formatting the value 12.3 for rainfall in the English locale, the output is "12.3 mm".
 
 **Since:** 23
 
@@ -67,11 +67,11 @@ format(num: double): string
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| num | double | Yes | 需要格式化的数字。 |
+| num | double | Yes | number to be formatted. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| string | 格式化后的文本。 |
+| string | measure formatting result. |
 

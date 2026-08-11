@@ -13,7 +13,7 @@ type AxisType =
     | 'null'
 ```
 
-输入设备的轴类型。
+Defines the axis type of an input device.
 
 **Since:** 9
 
@@ -25,13 +25,13 @@ type AxisType =
 
 | Type | Description |
 | --- | --- |
-| 'touchmajor' | 椭圆触摸区域长轴。 |
-| 'touchminor' | 椭圆触摸区域短轴。 |
-| 'orientation' | 方向轴。 |
-| 'x' | 横坐标轴。 |
-| 'y' | 纵坐标轴。 |
-| 'pressure' | 压力轴。 |
-| 'toolminor' | 工具区域短轴。 |
-| 'toolmajor' | 工具区域长轴。 |
-| 'null' | 无类型。 |
+| 'touchmajor' | Major axis of the elliptical touching area. |
+| 'touchminor' | Minor axis of the elliptical touching area. |
+| 'orientation' | Orientation axis. |
+| 'x' | Horizontal axis. |
+| 'y' | Vertical axis. |
+| 'pressure' | Pressure axis. |
+| 'toolminor' | Minor axis of the tool area. |
+| 'toolmajor' | Major axis of the tool area. |
+| 'null' | None. |
 

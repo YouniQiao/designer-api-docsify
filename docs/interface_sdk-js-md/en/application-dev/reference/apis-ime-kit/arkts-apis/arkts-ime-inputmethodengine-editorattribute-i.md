@@ -1,6 +1,7 @@
 # EditorAttribute
 
-编辑框属性值。
+In the following API examples, you must first use   
+[getKeyboardDelegate](arkts-ime-inputmethodengine-getkeyboarddelegate-f.md#getkeyboarddelegate) to obtain a **KeyboardDelegate** instance, and then call the APIs using the obtained instance.
 
 **Since:** 8
 
@@ -22,7 +23,7 @@ import { inputMethodEngine } from 'kits/@kit.IMEKit';
 readonly abilityName?: string
 ```
 
-编辑框设置的ability名称。
+Ability name set for the edit box.
 
 **Type:** string
 
@@ -40,7 +41,7 @@ readonly abilityName?: string
 readonly bundleName?: string
 ```
 
-编辑框所属应用包名；该值可能为""，使用该属性时需要考虑为""的场景。
+Name of the application package to which the edit box belongs. The value may be **""**. Handle this scenario when using the attribute.
 
 **Type:** string
 
@@ -58,7 +59,7 @@ readonly bundleName?: string
 readonly capitalizeMode?: CapitalizeMode
 ```
 
-编辑框设置大小写模式。如果没有设置或设置非法值，默认不进行任何首字母大写处理。
+Whether to capitalize the first letter in the edit box. If it is not set or is set to an invalid value, the first letter is not capitalized by default.
 
 **Type:** [CapitalizeMode](arkts-ime-inputmethod-capitalizemode-e.md)
 
@@ -76,10 +77,7 @@ readonly capitalizeMode?: CapitalizeMode
 readonly consumeKeyEvents?: boolean
 ```
 
-编辑框是否具有完整处理字母、字符、功能等按键的能力。
-
-- 值为true，表示具备此能力。  
-- 值为false，表示不具备此能力。
+Whether the editor supports consuming key events.
 
 **Type:** boolean
 
@@ -99,7 +97,7 @@ readonly consumeKeyEvents?: boolean
 readonly displayId?: long
 ```
 
-编辑框设置窗口对应的屏幕ID。如果没有设置windowId，取当前焦点窗口屏幕ID。
+Screen ID of the window corresponding to the edit box. If window ID is not set, the screen ID of the focused window is used.
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：long
 
@@ -117,7 +115,8 @@ readonly displayId?: long
 readonly enterKeyType: int
 ```
 
-编辑框的功能属性
+Function attributes of the edit box. For details, see   
+[function key definitions in constants](../../../reference/apis-ime-kit/js-apis-inputmethodengine.md#Constants).
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
@@ -135,7 +134,7 @@ readonly enterKeyType: int
 readonly extraConfig?: InputMethodExtraConfig
 ```
 
-输入法扩展信息。
+Extra information about the input method.
 
 **Type:** [InputMethodExtraConfig](arkts-ime-inputmethod-extraconfig-inputmethodextraconfig-i.md)
 
@@ -153,7 +152,7 @@ readonly extraConfig?: InputMethodExtraConfig
 readonly gradientMode?: GradientMode
 ```
 
-渐变模式。如果没有设置或设置非法值，默认不使用渐变模式。
+Gradient mode. If this attribute is not specified or is set to an invalid value, the gradient mode is not used by default.
 
 **Type:** [GradientMode](arkts-ime-inputmethodengine-gradientmode-e.md)
 
@@ -171,7 +170,7 @@ readonly gradientMode?: GradientMode
 readonly immersiveMode?: ImmersiveMode
 ```
 
-输入法沉浸模式。
+Immersive mode of the input method.
 
 **Type:** [ImmersiveMode](../../apis-arkui/arkts-apis/arkts-arkui-promptaction-immersivemode-e.md)
 
@@ -189,7 +188,8 @@ readonly immersiveMode?: ImmersiveMode
 readonly inputPattern: int
 ```
 
-编辑框的文本属性
+Text attribute of the edit box. For details, see   
+[edit box definitions in constants](../../../reference/apis-ime-kit/js-apis-inputmethodengine.md#Constants).
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
@@ -207,10 +207,10 @@ readonly inputPattern: int
 isTextPreviewSupported: boolean
 ```
 
-编辑框是否支持预上屏。
+Whether text preview is supported.
 
-- 值为true，表示支持。  
-- 值为false，表示不支持。
+- **true**: Supported.  
+- **false**: Unsupported.
 
 **Type:** boolean
 
@@ -228,7 +228,7 @@ isTextPreviewSupported: boolean
 readonly placeholder?: string
 ```
 
-编辑框设置的占位符信息。
+Placeholder information set for the edit box.
 
 **Type:** string
 
@@ -246,7 +246,7 @@ readonly placeholder?: string
 readonly windowId?: int
 ```
 
-编辑框设置所属窗口ID。
+ID of the window where the edit box is located.
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 

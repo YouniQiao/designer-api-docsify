@@ -1,11 +1,5 @@
 # getBundlesLocalFilePresentStatus（系统接口）
 
-## 导入模块
-
-```TypeScript
-import { cloudSyncManager } from 'kits/@kit.CoreFileKit';
-```
-
 ## getBundlesLocalFilePresentStatus
 
 ```TypeScript
@@ -44,12 +38,14 @@ function getBundlesLocalFilePresentStatus(bundleNames: Array<string>): Promise<A
 | --- | --- |
 | 13900020 | Invalid argument. Possible causes: &lt;br&gt;1.Mandatory parameter are left unspecified. 2.The length of the input parameter exceeds the upper limit. &lt;br&gt;3.The input parameter contains an invalid bundleName. |
 | 22400005 | Inner error. Possible causes: &lt;br&gt;1.Failed to access the database or execute the SQL statement. &lt;br&gt;2.System error, such as a null pointer, insufficient memory or a JS engine exception. |
-| 201 | Permission verification failed. |
-| 202 | The caller is not a system application. |
+| [201](../../errorcode-universal.md#201-权限校验失败) | Permission verification failed. |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | The caller is not a system application. |
 | 13600001 | IPC error. Possible causes: &lt;br&gt;1.IPC failed or timed out. 2.Failed to load the service. |
 | 13900010 | Try again. |
 
 ## 示例
+
+ArkTS-Dyn示例：
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -60,6 +56,21 @@ cloudSyncManager.getBundlesLocalFilePresentStatus(bundles).then((results: Array<
     console.info(`bundle: ${item.bundleName}, hasLocalUncloudedFiles: ${item.isLocalFilePresent}`);
   });
 }).catch((err: BusinessError) => {
+  console.error(`getBundlesLocalFilePresentStatus failed, code: ${err.code}, message: ${err.message}`);
+});
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let bundles: Array<string> = ['com.example.app1', 'com.example.app2'];
+cloudSyncManager.getBundlesLocalFilePresentStatus(bundles).then<void>((results: Array<cloudSyncManager.LocalFilePresentStatus>): void => {
+  results.forEach((item: cloudSyncManager.LocalFilePresentStatus): void => {
+    console.info(`bundle: ${item.bundleName}, hasLocalUncloudedFiles: ${item.isLocalFilePresent}`);
+  });
+}).catch((err: BusinessError<void>): void => {
   console.error(`getBundlesLocalFilePresentStatus failed, code: ${err.code}, message: ${err.message}`);
 });
 ```

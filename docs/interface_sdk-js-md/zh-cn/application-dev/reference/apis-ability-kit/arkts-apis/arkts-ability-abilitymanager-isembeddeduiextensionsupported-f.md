@@ -1,11 +1,5 @@
 # isEmbeddedUIExtensionSupported
 
-## 导入模块
-
-```TypeScript
-import { abilityManager } from 'kits/@kit.AbilityKit';
-```
-
 ## isEmbeddedUIExtensionSupported
 
 ```TypeScript

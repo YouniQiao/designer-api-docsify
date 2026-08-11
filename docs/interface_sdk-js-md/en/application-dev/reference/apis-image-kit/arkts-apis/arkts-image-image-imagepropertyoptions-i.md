@@ -1,6 +1,6 @@
 # ImagePropertyOptions
 
-表示查询图片属性的索引。
+Describes the image properties.
 
 **Since:** 11
 
@@ -22,7 +22,7 @@ import { image } from 'kits/@kit.ImageKit';
 defaultValue?: string
 ```
 
-默认属性值。默认值为空。
+Default property value. The default value is null.
 
 **Type:** string
 
@@ -40,7 +40,7 @@ defaultValue?: string
 index?: int
 ```
 
-图片序号。默认值为0。
+Index of the image. The default value is **0**.
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 

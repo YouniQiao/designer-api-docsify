@@ -1,6 +1,6 @@
 # FinishCallbackType
 
-动画中定义onFinish回调的类型。
+Defines the type of the **onFinish** callback.
 
 **Since:** 11
 
@@ -16,7 +16,7 @@
 REMOVED = 0
 ```
 
-当整个动画结束并立即删除时，将触发回调。
+The callback is invoked when the entire animation is removed once it has finished.
 
 **Since:** 11
 
@@ -38,7 +38,7 @@ REMOVED = 0
 LOGICALLY = 1
 ```
 
-当动画在逻辑上处于下降状态，但可能仍处于其长尾状态时，将触发回调。
+The callback is invoked when the animation logically enters the falling state, though it may still be in its long tail state.
 
 **Since:** 11
 

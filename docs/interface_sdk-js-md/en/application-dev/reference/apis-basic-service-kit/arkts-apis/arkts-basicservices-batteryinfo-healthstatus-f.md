@@ -12,7 +12,7 @@ import { batteryInfo } from 'kits/@kit.BasicServicesKit';
 function healthStatus(): BatteryHealthState
 ```
 
-表示当前设备电池的健康状态。
+Battery health status of the device.
 
 **Since:** 23
 
@@ -26,5 +26,5 @@ function healthStatus(): BatteryHealthState
 
 | Type | Description |
 | --- | --- |
-| [BatteryHealthState](arkts-basicservices-batteryinfo-batteryhealthstate-e.md) | 返回当前设备电池的健康状态。 |
+| [BatteryHealthState](arkts-basicservices-batteryinfo-batteryhealthstate-e.md) | Returns the battery health status of the device. |
 

@@ -1,6 +1,6 @@
 # EdgeLightParams (System API)
 
-定义边缘流光效果参数。
+Defines the parameters of the edge light effect.
 
 **Since:** 26.0.0
 
@@ -18,9 +18,7 @@
 color?: ResourceColor
 ```
 
-边缘流光颜色。
-
-默认值：#FFFFFF，显示为白色。
+The color of the light effect.&lt;br&gt;If not specified, the default color is white (#FFFFFF).
 
 **Type:** [ResourceColor](../arkts-apis/arkts-arkui-resourcecolor-t.md)
 
@@ -44,21 +42,7 @@ color?: ResourceColor
 intensity?: double
 ```
 
-边缘流光效果的发光强度。
-
-取值范围：[0, 1]
-
-默认值：1
-
-**说明：**
-
-值为0时，流光效果完全不可见。
-
-值为1时，流光效果达到最大亮度。
-
-设置大于1的值时，按值为1处理。
-
-设置小于0的值时，按值为0处理。
+The luminous intensity of the Edge Streamer effect.&lt;br&gt;Valid range: [0.0, 1.0].Default value is 1.&lt;br&gt;Value 0.0 means the light effect is completely invisible.&lt;br&gt;Value 1.0 means the light effect is at maximum brightness.&lt;br&gt;Values exceeding 1.0 will be clamped to 1.0.&lt;br&gt;Negative values are treated as 0.0.
 
 **Type:** double
 
@@ -80,15 +64,7 @@ intensity?: double
 length: Length
 ```
 
-沿流动方向的边缘流光的投影长度（不支持百分比）。
-
-取值范围：[0, +∞)
-
-单位：vp
-
-**说明：**
-
-设置小于0的值时，按值为0处理。
+Projection length of the edge streamer along the flow direction.&lt;br&gt;Negative values are treated as 0.
 
 **Type:** [Length](../arkts-apis/arkts-arkui-length-t.md)
 
@@ -110,7 +86,7 @@ length: Length
 position: EdgeLightPosition
 ```
 
-边缘流光位置。
+The location of the edge light effect.
 
 **Type:** [EdgeLightPosition](../arkts-apis/arkts-arkui-edgelightposition-e-sys.md)
 
@@ -132,17 +108,7 @@ position: EdgeLightPosition
 thickness?: Length
 ```
 
-边缘流光线条粗细（不支持百分比）。
-
-取值范围：[0, +∞)
-
-单位：vp
-
-默认值：0
-
-**说明：**
-
-设置小于0的值时，按值为0处理。
+The thickness (width) of the light effect line.&lt;br&gt;Negative values are treated as 0.&lt;br&gt;If not specified, the default value is 0vp.
 
 **Type:** [Length](../arkts-apis/arkts-arkui-length-t.md)
 

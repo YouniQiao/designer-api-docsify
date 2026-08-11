@@ -1,6 +1,6 @@
 # MonitorBaseOptions
 
-监听基础选项。
+Define MonitorBaseOptions.
 
 **Since:** 26.0.0
 
@@ -16,11 +16,7 @@
 isSynchronous?: boolean
 ```
 
-是否同步回调。
-
-true：同步回调；false：异步回调。
-
-默认值：false。
+Used to determine whether the state variable change is triggered synchronously or asynchronously. The default value is false.
 
 **Type:** boolean
 
@@ -40,7 +36,7 @@ true：同步回调；false：异步回调。
 owner?: IVariableOwner
 ```
 
-指定冻结的组件，仅能传入[@ComponentV2](../../../ui/state-management-static/arkts-static-componentv2.md)装饰的自定义组件。默认值为`undefined`，即不指定冻结的组件。
+Used to handle component freezing.If not set, component freezing won't affect the monitor.
 
 **Type:** [IVariableOwner](arkts-arkui-decorator-ivariableowner-i.md)
 

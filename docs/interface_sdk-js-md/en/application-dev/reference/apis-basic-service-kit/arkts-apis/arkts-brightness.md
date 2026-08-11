@@ -1,10 +1,10 @@
 # @ohos.brightness
 
-该模块提供屏幕亮度的设置接口。
+The **brightness** module provides an API for setting the screen brightness.
 
-> **说明：**
+> **NOTE：**
 > 
-> - 本模块接口为系统接口。
+> - The APIs provided by this module are system APIs.
 
 **Since:** 7
 
@@ -29,7 +29,7 @@ import { brightness } from 'kits/@kit.BasicServicesKit';
 
 | Name | Description |
 | --- | --- |
-| [setValue](arkts-basicservices-brightness-setvalue-f-sys.md#setvalue) | 设置系统的屏幕亮度。 |
-| [setValue](arkts-basicservices-brightness-setvalue-f-sys.md#setvalue-1) | 设置系统的屏幕亮度。用于连续调节亮度的场景，在连续调节亮度过程中，设置continuous为true，结束时设置continuous为false，会有更好的性能。 |
+| [setValue](arkts-basicservices-brightness-setvalue-f-sys.md#setvalue) | Sets the screen brightness. |
+| [setValue](arkts-basicservices-brightness-setvalue-f-sys.md#setvalue-1) | Sets the screen brightness. This API is used for continuous brightness adjustment. To achieve a better performance,set **continuous** to **true** when you start, and set it to **false** after you finish. |
 <!--DelEnd-->
 

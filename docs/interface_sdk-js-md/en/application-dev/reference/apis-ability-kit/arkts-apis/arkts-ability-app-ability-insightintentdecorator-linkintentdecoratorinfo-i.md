@@ -1,7 +1,7 @@
 # LinkIntentDecoratorInfo
 
-LinkIntentDecoratorInfo继承自[IntentDecoratorInfo](arkts-ability-app-ability-insightintentdecorator-intentdecoratorinfo-i.md)，用于描述  
-[@InsightIntentLink](../../../reference/apis-ability-kit/js-apis-app-ability-InsightIntentDecorator.md#insightintentlink)装饰器支持的参数，例如应用间跳转需要的uri信息。
+LinkIntentDecoratorInfo inherits from [IntentDecoratorInfo](arkts-ability-app-ability-insightintentdecorator-intentdecoratorinfo-i.md) and describes the parameters supported by the  
+[@InsightIntentLink](../../../reference/apis-ability-kit/js-apis-app-ability-InsightIntentDecorator.md#insightintentlink) decorator, such as the URI information required for application redirection.
 
 **Inheritance/Implementation:** LinkIntentDecoratorInfo extends [IntentDecoratorInfo](arkts-ability-app-ability-insightintentdecorator-intentdecoratorinfo-i.md)
 
@@ -25,7 +25,7 @@ import { InsightIntentFunction, InsightIntentForm, InsightIntentLink, InsightInt
 paramMappings?: LinkIntentParamMapping[]
 ```
 
-意图参数和uri信息的映射。
+Mapping between intent parameters and URI information.
 
 **Type:** [LinkIntentParamMapping](arkts-ability-app-ability-insightintentdecorator-linkintentparammapping-i.md)[]
 
@@ -47,7 +47,7 @@ paramMappings?: LinkIntentParamMapping[]
 uri: string
 ```
 
-表示意图的uri信息。
+URI information associated with the intent.
 
 **Type:** string
 

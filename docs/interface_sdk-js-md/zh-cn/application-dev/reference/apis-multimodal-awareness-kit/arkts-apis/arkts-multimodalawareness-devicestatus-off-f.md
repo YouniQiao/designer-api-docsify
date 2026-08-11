@@ -1,18 +1,12 @@
 # off
 
-## 导入模块
-
-```TypeScript
-import { deviceStatus } from 'kits/@kit.MultimodalAwarenessKit';
-```
-
 ## off('steadyStandingDetect')
 
 ```TypeScript
 function off(type: 'steadyStandingDetect', callback?: Callback<SteadyStandingStatus>): void
 ```
 
-Unsubscribes from steady standing state events.
+取消订阅设备静止姿态感知（支架态）事件，用于应用在退出页面或不再需要监听支架态变化的场景。调用后释放相关资源。
 
 **起始版本：** 18
 
@@ -26,16 +20,16 @@ Unsubscribes from steady standing state events.
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| type | 'steadyStandingDetect' | 是 | Event type. This field has a fixed value of **steadyStandingDetect**. |
-| callback | [Callback](../../apis-arkui/arkts-components/arkts-arkui-callback-i.md)&lt;SteadyStandingStatus&gt; | 否 | Callback used to return the steady standing state of the device. |
+| type | 'steadyStandingDetect' | 是 | 事件类型。type为“steadyStandingDetect”，表示设备静止姿态（支架态）感知。 |
+| callback | [Callback](../../apis-arkui/arkts-components/arkts-arkui-callback-i.md)&lt;SteadyStandingStatus&gt; | 否 | 要注销的回调函数，需与订阅时传入的回调函数一致。若不填，则取消当前监听该事件的所有回调函数。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 801 | Capability not supported. Function can not work correctly due to limited &lt;br&gt; device capabilities. |
-| 32500003 | Unsubscription failed. |
-| 32500001 | Service exception. |
+| [801](../../errorcode-universal.md#801-该设备不支持此api) | Capability not supported. Function can not work correctly due to limited &lt;br&gt; device capabilities. |
+| [32500003](../../apis-multimodalawareness-kit/errorcode-deviceStatus.md#32500003-取消订阅失败) | Unsubscription failed. |
+| [32500001](../../apis-multimodalawareness-kit/errorcode-deviceStatus.md#32500001-服务异常) | Service exception. |
 
 ## 示例
 
@@ -45,7 +39,7 @@ Unsubscribes from steady standing state events.
 try {
    deviceStatus.off('steadyStandingDetect');
 } catch (err) {
-   console.error(`off failed, err = ${err}`);
+   console.error('off failed, err = ' + err);
 }
 ```
 
@@ -54,19 +48,19 @@ try {
 ```TypeScript
 // 定义callback变量
 let callback : Callback<deviceStatus.SteadyStandingStatus> = (data : deviceStatus.SteadyStandingStatus) => {
-   console.info('succeeded to get status, now status = ' + JSON.stringify(data));
+   console.info('succeed to get status, now status = ' + data);
 };
 // 以callback为回调函数，订阅设备静止姿态感知（支架态）事件
 try {
    deviceStatus.on('steadyStandingDetect', callback);
 } catch (err) {
-   console.error(`on failed. Code: ${err.code}, message: ${err.message}`);
+   console.error('on failed, err = ' + err);
 }
 // 取消该客户端订阅设备静止姿态感知（支架态）事件的特定回调函数
 try {
    deviceStatus.off('steadyStandingDetect', callback);
 } catch (err) {
-   console.error(`off failed. Code: ${err.code}, message: ${err.message}`);
+   console.error('off failed, err = ' + err);
 }
 ```
 

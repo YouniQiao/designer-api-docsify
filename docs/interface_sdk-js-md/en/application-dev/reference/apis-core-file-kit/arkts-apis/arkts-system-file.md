@@ -6,26 +6,26 @@
 
 | Name | Description |
 | --- | --- |
-| [File](arkts-corefile-system-file-file-depr-c.md) | 文件类。 |
+| [File](arkts-corefile-system-file-file-depr-c.md) | File |
 
 ### Interfaces
 
 | Name | Description |
 | --- | --- |
-| [FileAccessOption](arkts-corefile-system-file-fileaccessoption-depr-i.md) | 可选项类型，支持access接口使用。 |
-| [FileCopyOption](arkts-corefile-system-file-filecopyoption-depr-i.md) | 可选项类型，支持copy接口使用。 |
-| [FileDeleteOption](arkts-corefile-system-file-filedeleteoption-depr-i.md) | 可选项类型，支持delete接口使用。 |
-| [FileGetOption](arkts-corefile-system-file-filegetoption-depr-i.md) | 可选项类型，支持get接口使用。 |
-| [FileListOption](arkts-corefile-system-file-filelistoption-depr-i.md) | 可选项类型，支持list接口使用。 |
-| [FileListResponse](arkts-corefile-system-file-filelistresponse-depr-i.md) | 文件列表返回，包含文件列表信息。 |
-| [FileMkdirOption](arkts-corefile-system-file-filemkdiroption-depr-i.md) | 可选项类型，支持mkdir接口使用。 |
-| [FileMoveOption](arkts-corefile-system-file-filemoveoption-depr-i.md) | 可选项类型，支持move接口使用。 |
-| [FileReadArrayBufferOption](arkts-corefile-system-file-filereadarraybufferoption-depr-i.md) | 可选项类型，支持readArrayBuffer接口使用。 |
-| [FileReadArrayBufferResponse](arkts-corefile-system-file-filereadarraybufferresponse-depr-i.md) | 文件读取返回，包含读取到的文件内容。 |
-| [FileReadTextOption](arkts-corefile-system-file-filereadtextoption-depr-i.md) | 可选项类型，支持readText接口使用。 |
-| [FileReadTextResponse](arkts-corefile-system-file-filereadtextresponse-depr-i.md) | 文本读取返回，包含读取到的文本内容。 |
-| [FileResponse](arkts-corefile-system-file-fileresponse-depr-i.md) | 文件返回。包含文件的信息。 |
-| [FileRmdirOption](arkts-corefile-system-file-filermdiroption-depr-i.md) | 可选项类型，支持rmdir接口使用。 |
-| [FileWriteArrayBufferOption](arkts-corefile-system-file-filewritearraybufferoption-depr-i.md) | 可选项类型，支持writeArrayBuffer接口使用。 |
-| [FileWriteTextOption](arkts-corefile-system-file-filewritetextoption-depr-i.md) | 可选项类型，支持writeText接口使用。 |
+| [FileAccessOption](arkts-corefile-system-file-fileaccessoption-depr-i.md) | Defines the options used in access(). |
+| [FileCopyOption](arkts-corefile-system-file-filecopyoption-depr-i.md) | Defines the options used in copy(). |
+| [FileDeleteOption](arkts-corefile-system-file-filedeleteoption-depr-i.md) | Defines the options used in delete(). |
+| [FileGetOption](arkts-corefile-system-file-filegetoption-depr-i.md) | Defines the options used in get(). |
+| [FileListOption](arkts-corefile-system-file-filelistoption-depr-i.md) | Defines the options used in list(). |
+| [FileListResponse](arkts-corefile-system-file-filelistresponse-depr-i.md) | Returns a file list, including the file list information. |
+| [FileMkdirOption](arkts-corefile-system-file-filemkdiroption-depr-i.md) | Defines the options used in mkdir(). |
+| [FileMoveOption](arkts-corefile-system-file-filemoveoption-depr-i.md) | Defines the options used in move(). |
+| [FileReadArrayBufferOption](arkts-corefile-system-file-filereadarraybufferoption-depr-i.md) | Defines the options used in readArrayBuffer(). |
+| [FileReadArrayBufferResponse](arkts-corefile-system-file-filereadarraybufferresponse-depr-i.md) | Returns the file read, including the file content. |
+| [FileReadTextOption](arkts-corefile-system-file-filereadtextoption-depr-i.md) | Defines the options used in readText(). |
+| [FileReadTextResponse](arkts-corefile-system-file-filereadtextresponse-depr-i.md) | Returns the text read, including the text content. |
+| [FileResponse](arkts-corefile-system-file-fileresponse-depr-i.md) | Returns a file, including the file information. |
+| [FileRmdirOption](arkts-corefile-system-file-filermdiroption-depr-i.md) | Defines the options used in rmdir(). |
+| [FileWriteArrayBufferOption](arkts-corefile-system-file-filewritearraybufferoption-depr-i.md) | Defines the options used in writeArrayBuffer(). |
+| [FileWriteTextOption](arkts-corefile-system-file-filewritetextoption-depr-i.md) | Defines the options used in writeText(). |
 

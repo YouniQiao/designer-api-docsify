@@ -1,8 +1,6 @@
 # IfAttribute
 
-支持[ElseIf](../../../reference/apis-arkui/arkui-ts/ts-rendering-control-ifelse-sta.md#elseif)、  
-[Else](../../../reference/apis-arkui/arkui-ts/ts-rendering-control-ifelse-sta.md#else)和  
-[debugLine](../../../reference/apis-arkui/arkui-ts/ts-rendering-control-ifelse-sta.md#debugline24)属性。
+The IfAttribute.
 
 **Since:** 26.0.0
 
@@ -20,7 +18,7 @@ Else(
     ): void
 ```
 
-定义Else分支。
+Defines 'Else' branch.
 
 **Since:** 26.0.0
 
@@ -36,7 +34,7 @@ Else(
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| content_ | [CustomBuilder](../arkts-components/arkts-arkui-custombuilder-t.md) | Yes | ElseIf分支代码 |
+| content_ | [CustomBuilder](../arkts-components/arkts-arkui-custombuilder-t.md) | Yes | code for the branch |
 
 ## ElseIf
 
@@ -47,7 +45,7 @@ ElseIf(
     ): this
 ```
 
-定义ElseIf分支。
+Defines 'ElseIf' branch.
 
 **Since:** 26.0.0
 
@@ -63,8 +61,8 @@ ElseIf(
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| condition | boolean | Yes | 分支判断条件。&lt;br&gt;true: 执行该分支的UI描述。&lt;br&gt;false: 不执行该分支的UI描述。 |
-| content_ | [CustomBuilder](../arkts-components/arkts-arkui-custombuilder-t.md) | Yes | ElseIf分支代码 |
+| condition | boolean | Yes | condition of the branch. |
+| content_ | [CustomBuilder](../arkts-components/arkts-arkui-custombuilder-t.md) | Yes | code for the branch |
 
 **Return value:**
 
@@ -78,11 +76,11 @@ ElseIf(
 applyAttributesFinish(): void
 ```
 
-如果已完成设置其属性，则通知。
+Notify If has finished setting up its attributes.
 
-**Since:** 26.0.0
+**Since:** 26.1.0
 
-**ArkTS mode:** ArkTS-Sta only, since version 26.0.0.
+**ArkTS mode:** ArkTS-Sta only, since version 26.1.0.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -96,7 +94,7 @@ applyAttributesFinish(): void
 debugLine(sourceLine: string, moduleName?: string): this
 ```
 
-设置组件源码重定向信息。
+Set the component's source code redirection information.
 
 **Since:** 26.0.0
 
@@ -112,8 +110,8 @@ debugLine(sourceLine: string, moduleName?: string): this
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| sourceLine | string | Yes | 源码行号。 |
-| moduleName | string | No | 组件所属模块名。 |
+| sourceLine | string | Yes | the source code line. |
+| moduleName | string | No | module to which the component belongs. |
 
 **Return value:**
 
@@ -127,11 +125,11 @@ debugLine(sourceLine: string, moduleName?: string): this
 setIfOptions(condition: boolean): this
 ```
 
-设置If选项
+Sets If options.
 
-**Since:** 26.0.0
+**Since:** 26.1.0
 
-**ArkTS mode:** ArkTS-Sta only, since version 26.0.0.
+**ArkTS mode:** ArkTS-Sta only, since version 26.1.0.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -143,11 +141,11 @@ setIfOptions(condition: boolean): this
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| condition | boolean | Yes | 条件分支。 |
+| condition | boolean | Yes | condition of the branch. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| this | IfAttribute实例 |
+| this | IfAttribute instance |
 

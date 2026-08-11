@@ -1,6 +1,6 @@
 # DepthComponentAttribute (System API)
 
-除支持[通用属性](../../apis-arkui/arkts-components/arkts-arkui-common-attribute.md)外，还支持以下属性：
+Style the DepthComponent.
 
 **Inheritance/Implementation:** DepthComponentAttribute extends [CommonMethod](arkts-arkui-common-commonmethod-i.md)
 
@@ -20,11 +20,7 @@
 default camera(camera: DepthCameraParams): this
 ```
 
-设置景深渲染使用的相机参数。
-
-> **说明：**
-> 
-> 以图片作为背景时，相机参数更新不会引起背景的变化。
+Camera parameters for depth rendering.
 
 **Since:** 26.0.0
 
@@ -42,7 +38,7 @@ default camera(camera: DepthCameraParams): this
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| camera | [DepthCameraParams](arkts-arkui-depthcomponent-depthcameraparams-i-sys.md) | Yes | 相机参数。 |
+| camera | [DepthCameraParams](arkts-arkui-depthcomponent-depthcameraparams-i-sys.md) | Yes | Camera parameters. |
 
 **Return value:**
 
@@ -56,13 +52,7 @@ default camera(camera: DepthCameraParams): this
 default depthMap(depthMap: ResourceStr | PixelMap, callback?: DepthMapCallback): this
 ```
 
-设置用于景深计算和渲染的深度图。使用callback异步回调。
-
-> **说明：**
-> 
-> - 深度图是用于描述在3D空间中，背景中每个像素点与相机距离的二维矩阵图像。
-> 
-> - 其数据格式为灰阶图，灰度值越大（颜色越白）的像素点距离相机越近。
+Depth map for depth calculation and rendering.
 
 **Since:** 26.0.0
 
@@ -80,8 +70,8 @@ default depthMap(depthMap: ResourceStr | PixelMap, callback?: DepthMapCallback):
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| depthMap | [ResourceStr](arkts-arkui-resourcestr-t.md) \| PixelMap | Yes | 深度图资源或PixelMap对象，引用方式与静态背景图一致。仅背景为静态图时需要设置深度图。深度图需要与背景图的分辨率保持一致。 |
-| callback | [DepthMapCallback](arkts-arkui-depthmapcallback-t-sys.md) | No | 深度图加载完成时的回调函数。加载成功时error.code为0，加载失败时error中包含错误码和错误信息。 |
+| depthMap | [ResourceStr](arkts-arkui-resourcestr-t.md) \| PixelMap | Yes | Depth map path or PixelMap. |
+| callback | [DepthMapCallback](arkts-arkui-depthmapcallback-t-sys.md) | No | Callback invoked when the depth map resource is loaded. |
 
 **Return value:**
 
@@ -95,7 +85,7 @@ default depthMap(depthMap: ResourceStr | PixelMap, callback?: DepthMapCallback):
 default light(light: DepthLightParams): this
 ```
 
-设置景深渲染使用的光照参数。
+Lighting parameters for depth rendering.
 
 **Since:** 26.0.0
 
@@ -113,7 +103,7 @@ default light(light: DepthLightParams): this
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| light | [DepthLightParams](../arkts-components/arkts-arkui-depthlightparams-i-sys.md) | Yes | 光照参数，包含方向、颜色和强度。 |
+| light | [DepthLightParams](../arkts-components/arkts-arkui-depthlightparams-i-sys.md) | Yes | Lighting parameters including direction, color and intensity. |
 
 **Return value:**
 
@@ -127,7 +117,7 @@ default light(light: DepthLightParams): this
 default onComplete(callback: DepthComponentCompleteCallback): this
 ```
 
-背景资源加载成功时触发该回调。使用callback异步回调。
+Triggered when the background resource is loaded successfully.
 
 **Since:** 26.0.0
 
@@ -145,7 +135,7 @@ default onComplete(callback: DepthComponentCompleteCallback): this
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [DepthComponentCompleteCallback](../arkts-components/arkts-arkui-depthcomponentcompletecallback-t-sys.md) | Yes | 背景资源加载成功的回调函数。 |
+| callback | [DepthComponentCompleteCallback](../arkts-components/arkts-arkui-depthcomponentcompletecallback-t-sys.md) | Yes |  |
 
 **Return value:**
 
@@ -159,7 +149,7 @@ default onComplete(callback: DepthComponentCompleteCallback): this
 default onError(callback: DepthComponentErrorCallback): this
 ```
 
-背景资源加载出现错误时触发该回调。使用callback异步回调。
+Triggered when an error occurs during background resource loading.
 
 **Since:** 26.0.0
 
@@ -177,7 +167,7 @@ default onError(callback: DepthComponentErrorCallback): this
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [DepthComponentErrorCallback](arkts-arkui-depthcomponenterrorcallback-t-sys.md) | Yes | 背景资源加载失败的回调函数。 |
+| callback | [DepthComponentErrorCallback](arkts-arkui-depthcomponenterrorcallback-t-sys.md) | Yes |  |
 
 **Return value:**
 

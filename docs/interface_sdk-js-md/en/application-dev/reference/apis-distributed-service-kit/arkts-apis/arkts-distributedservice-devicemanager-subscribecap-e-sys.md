@@ -1,6 +1,6 @@
 # SubscribeCap (System API)
 
-表示发现能力的枚举。
+Enumerates the discovery capabilities.
 
 **Since:** 7
 
@@ -20,7 +20,7 @@
 SUBSCRIBE_CAPABILITY_DDMP = 0
 ```
 
-DDMP能力，后续会被废弃。
+DDMP capability. This will be deprecated later.
 
 **Since:** 7
 
@@ -40,7 +40,7 @@ DDMP能力，后续会被废弃。
 SUBSCRIBE_CAPABILITY_OSD = 1
 ```
 
-OSD能力。
+OSD capability.
 
 **Since:** 7
 

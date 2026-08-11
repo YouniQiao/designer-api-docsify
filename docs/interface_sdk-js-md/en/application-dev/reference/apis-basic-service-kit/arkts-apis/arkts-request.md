@@ -1,8 +1,8 @@
-# @ohos.request(上传下载)
+# @ohos.request(Upload and Download)
 
-request模块给应用提供上传下载文件、后台代理传输的基础功能。
+The **request** module provides applications with basic upload, download, and background transmission agent capabilities.
 
-- request暂不支持在Extension中调用。
+- Currently, the **request** module cannot be called in extensions.
 
 ## Modules to Import
 
@@ -16,5 +16,5 @@ import { request } from 'kits/@kit.BasicServicesKit';
 
 | Name | Description |
 | --- | --- |
-| [request](arkts-basicservices-request-n.md) | request模块给应用提供上传下载文件、后台代理传输的基础功能。  - request暂不支持在Extension中调用。 |
+| [request](arkts-basicservices-request-n.md) | The **request** module provides applications with basic upload, download, and background transmission agent capabilities.  - Currently, the **request** module cannot be called in extensions. |
 

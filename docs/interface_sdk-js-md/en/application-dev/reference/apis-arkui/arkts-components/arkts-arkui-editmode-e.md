@@ -1,6 +1,6 @@
 # EditMode
 
-ListItem元素编辑模式枚举。
+Enumerates the edit modes of list items.
 
 **Since:** 7
 
@@ -18,7 +18,7 @@ ListItem元素编辑模式枚举。
 None
 ```
 
-编辑操作不限制。
+Unrestricted operations.
 
 **Since:** 7
 
@@ -36,7 +36,7 @@ None
 Deletable
 ```
 
-Deletable.
+The list item can be deleted.
 
 **Since:** 7
 
@@ -54,7 +54,7 @@ Deletable.
 Movable
 ```
 
-Movable.
+The list item can be moved.
 
 **Since:** 7
 

@@ -14,12 +14,6 @@ request部件主要给应用提供上传下载文件、后台传输代理的基�
 
 **系统能力：** SystemCapability.Request.FileTransferAgent
 
-## 导入模块
-
-```TypeScript
-import { cacheDownload } from 'kits/@kit.BasicServicesKit';
-```
-
 ## 汇总
 
 ### 函数

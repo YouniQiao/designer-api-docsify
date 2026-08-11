@@ -6,5 +6,5 @@
 
 | Name | Description |
 | --- | --- |
-| [CommonEventPublishData](arkts-basicservices-commoneventpublishdata-commoneventpublishdata-i.md) | 用于封装公共事件发布时携带的数据和属性，包括事件数据（code/data）、订阅者权限、订阅者包名、是否有序/粘性事件及附加参数等，支持发布方对公共事件接收方范围、事件投递顺序及粘性特性进行精细化控制，适用于需要限定接收方、传递自定义事件数据或实现有序/粘性公共事件等场景。 |
+| [CommonEventPublishData](arkts-basicservices-commoneventpublishdata-commoneventpublishdata-i.md) | This module encapsulates the data and attributes carried when a common event is published, including the event data (code/data), subscriber permissions, subscriber bundle name, whether the event is ordered or sticky, and additional parameters. It allows the publisher to precisely control the common event recipients, event delivery sequence, and sticky feature. This module is applicable to scenarios where the recipients need to be specified, custom event data needs to be transferred, and ordered/sticky common events need to be implemented.  > **NOTE：** >  > If there is no restriction, any app can subscribe to common events and read the > information carried by the event. In this case, sensitive information should not be > carried in common events. The **subscriberPermissions** and **bundleName** parameters > of this module can be used to restrict the receiving scope of common events. |
 

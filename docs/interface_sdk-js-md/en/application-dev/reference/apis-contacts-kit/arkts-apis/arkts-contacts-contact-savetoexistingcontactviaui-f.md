@@ -12,7 +12,7 @@ import { contact } from 'kits/@kit.ContactsKit';
 function saveToExistingContactViaUI(context: Context, contact: Contact): Promise<number>
 ```
 
-调用保存至已有联系人接口，选择联系人UI界面并完成编辑。使用Promise异步回调。
+Saves the information to an existing contact through UI interaction.. This API uses a promise to return the result.
 
 **Since:** 15
 
@@ -28,35 +28,35 @@ function saveToExistingContactViaUI(context: Context, contact: Contact): Promise
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| context | [Context](../../apis-arkui/arkts-components/arkts-arkui-context-t.md) | Yes | 应用上下文Context。 |
-| contact | [Contact](arkts-contacts-contact-contact-c.md) | Yes | 联系人信息。 |
+| context | [Context](../../apis-arkui/arkts-components/arkts-arkui-context-t.md) | Yes | Indicates the context of application or capability. |
+| contact | [Contact](arkts-contacts-contact-contact-c.md) | Yes | Indicates the contact information. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;number&gt; | Promise对象。返回添加的联系人id。 |
+| Promise&lt;number&gt; | Promise used to return the result, which is the contact ID. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. Possible causes: Mandatory parameters are left unspecified. |
-| 801 | The specified SystemCapability name was not found. |
-| 16700102 | Failed to set value to contacts data. |
-| 16700103 | User cancel. |
-| 16700101 | Failed to get value from contacts data. |
-| 16700001 | General error. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: Mandatory parameters are left unspecified. |
+| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | The specified SystemCapability name was not found. |
+| [16700102](../errorcode-contacts.md#16700102-database-data-addition-deletion-or-modification-failed) | Failed to set value to contacts data. |
+| [16700103](../errorcode-contacts.md#16700103-operation-canceled) | User cancel. |
+| [16700101](../errorcode-contacts.md#16700101-database-query-failed) | Failed to get value from contacts data. |
+| [16700001](../errorcode-contacts.md#16700001-system-internal-error) | General error. |
 
 ## Examples
 
-In the examples in this document, this.context is used to obtain the UIAbilityContext, where this represents a UIAbility instance inherited from UIAbility. To use the capabilities provided by UIAbilityContext in the UI, see [Obtaining the Context of UIAbility](../../application-models/uiability-usage.md#obtaining-the-context-of-uiability).
+In the sample code provided in this topic, this.context is used to obtain UIAbilityContext, where this indicates a UIAbility instance inherited from UIAbility. To use UIAbilityContext APIs on pages, see [Obtaining the Context of UIAbility](../../application-models/uiability-usage.md#obtaining-the-context-of-uiability).
 
 ```TypeScript
 import { common } from '@kit.AbilityKit';
-import { contact } from '@kit.ContactsKit';
+import { BusinessError } from '@kit.BasicServicesKit';
 
-// Obtain the context in the component.
+// Obtain the context within the component.
 let contactInfo: contact.Contact = {
   id: 1,
   name: {
@@ -70,6 +70,8 @@ let context = this.getUIContext().getHostContext() as common.UIAbilityContext;
 let promise = contact.saveToExistingContactViaUI(context, contactInfo);
 promise.then((data) => {
     console.info(`Succeeded in save to existing Contact via UI.data->${JSON.stringify(data)}`);
+  }).catch((err: BusinessError) => {
+    console.error(`Failed to save to existing Contact via UI. Code: ${err.code}, message: ${err.message}`);
   });
 ```
 

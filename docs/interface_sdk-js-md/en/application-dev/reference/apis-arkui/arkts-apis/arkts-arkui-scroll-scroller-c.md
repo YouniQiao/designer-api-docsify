@@ -1,21 +1,8 @@
 # Scroller
 
-可滚动容器组件的控制器，可以将此组件绑定至容器组件，然后通过它控制容器组件的滚动。同一个控制器不可以控制多个容器组件，目前支持绑定到[ArcList](arkts-arkui-arclist.md)、  
-[ArcScrollBar](arkts-arkui-arcscrollbar.md)、[List](../../apis-arkts/arkts-apis/arkts-arkts-util-list-list-c.md/arkts-arkts-util-list-list-c.md)、Scroll、[ScrollBar](scroll_bar)、  
-[Grid](arkts-arkui-grid-grid-f.md#grid)、[WaterFlow](water_flow)上。
+Defines a controller for scrollable container components.
 
-> **说明：**
-> 
-> 1、Scroller控制器与滚动容器组件的绑定发生在组件创建阶段。
-
-> 2、Scroller控制器与滚动容器组件绑定后才可以正常调用Scroller方法，否则根据调用接口不同会不生效或者抛异常。
-
-> 3、以[aboutToAppear](../../../reference/apis-arkui/arkui-ts/ts-custom-component-lifecycle.md#abouttoappear)为例，
-> aboutToAppear在创建自定义组件的新实例后，在执行其build()方法之前执行。因此如果滚动组件在自定义组件build内，在该自定义组件aboutToAppear执行时，内部滚动组件还没有创建，是不能正常调用上述
-> Scroller方法的。
-
-> 4、以[onAppear](arkts-arkui-common-commonmethod-i.md#onappear)为例，组件挂载显示后触发此回调。因此在滚动组件的onAppear回调执行时，滚动组件已经创建并已经和Scroller绑定成功，是可以正常调用
-> Scroller方法的。
+&lt;p&gt;&lt;strong&gt;NOTE&lt;/strong&gt;&lt;br&gt;1. The binding of a &lt;em&gt;Scroller&lt;/em&gt; instance to a scrollable container component occurs during the component creation phase.&lt;br&gt;2. &lt;em&gt;Scroller&lt;/em&gt; APIs can only be effectively called after the &lt;em&gt;Scroller&lt;/em&gt; instance is bound to a scrollable container component.Otherwise, depending on the API called, it may have no effect or throw an exception.&lt;br&gt;3. For example, with aboutToAppear, this callback is executed after a new instance of a custom component is created and before its &lt;em&gt;build()&lt;/em&gt; method is called.Therefore, if a scrollable component is defined within the &lt;em&gt;build&lt;/em&gt; method of a custom component,the internal scrollable component has not yet been created during the &lt;em&gt;aboutToAppear&lt;/em&gt; callback of that custom component, and therefore the &lt;em&gt;Scroller&lt;/em&gt; APIs cannot be called effectively.&lt;/p&gt;
 
 **Since:** 23
 
@@ -31,7 +18,7 @@
 constructor()
 ```
 
-Scroller的构造函数。
+A constructor used to create a &lt;em&gt;Scroller&lt;/em&gt; object.
 
 **Since:** 23
 
@@ -49,23 +36,7 @@ Scroller的构造函数。
 contentSize() : SizeResult
 ```
 
-获取滚动组件内容总大小。
-
-> **说明：**
-> 
-> - Grid、List、WaterFlow和Scroll组件主轴方向内容大小为所有子组件布局后的总大小，交叉轴方向内容大小为组件自身交叉轴方向大小减去padding和border后的大小。
-> 
-> - Grid、List、WaterFlow组件有懒加载机制，该接口依赖已布局的子节点进行估算。如果组件内容没有布局完成且子组件高度不一致，估算结果可能会有误差，需要开发者去适配，比如List组件可以通过
-> childrenMainSize属性解决估算不准问题。
-> 
-> - 如果应用动态增删子节点，则需要应用动态获取内容总大小，来保证接口获取结果的即时性。
-> 
-> - 当Scroll组件设置scrollable为ScrollDirection.FREE自由滚动模式时，获取到的内容总大小为子组件缩放后的总大小。
-> 
-> - 当Scroll组件设置scrollable为ScrollDirection.None不可滚动时，获取到的内容总大小为0。
-> 
-> - 当Grid组件同时设置columnsTemplate和rowsTemplate，或columnsTemplate和rowsTemplate都不设置时即为不可滚动场景，此时获取到的内容总大小高度为0，宽度为Grid组件内
-> 容区宽度。
+Obtains the content size.
 
 **Since:** 26.0.0
 
@@ -81,13 +52,13 @@ contentSize() : SizeResult
 
 | Type | Description |
 | --- | --- |
-| [SizeResult](../arkts-components/arkts-arkui-sizeresult-i.md) | 滚动组件内容总大小，包括内容宽度和高度。&lt;br/&gt;单位：vp |
+| [SizeResult](../arkts-components/arkts-arkui-sizeresult-i.md) | Returns the content size. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 100004 | Controller not bound to a component. |
+| [100004](../errorcode-router.md#100004-incorrect-route-name) | Controller not bound to a component. |
 
 ## currentOffset
 
@@ -95,14 +66,7 @@ contentSize() : SizeResult
 currentOffset(): OffsetResult | undefined
 ```
 
-获取当前的滚动总偏移量。
-
-> **说明：**
-> 
-> 1. 当Scroller没有和组件绑定时，该接口会返回undefined，但是接口中没有声明，推荐使用[offset](../arkts-components/arkts-arkui-scroller-c.md/arkts-arkui-scroller-c.md#offset)函数。
-> 
-> 2. Grid、List、WaterFlow组件有懒加载机制，组件内容没有加载并布局完成时，内容总偏移量通过估算得到，估算结果可能会有误差。其中List组件可以通过
-> [childrenMainSize](arkts-arkui-list-listattribute-i.md#childrenmainsize)属性解决估算不准确的问题，Grid与WaterFlow估算不准暂无解决方案。
+Obtains the current scrolling offset.
 
 **Since:** 23
 
@@ -126,7 +90,7 @@ currentOffset(): OffsetResult | undefined
 fling(velocity: double): void
 ```
 
-滚动类组件根据传入的初始速度进行惯性滚动。
+Performs inertial scrolling based on the initial velocity passed in.
 
 **Since:** 23
 
@@ -142,14 +106,14 @@ fling(velocity: double): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| velocity | double | Yes | 惯性滚动的初始速度值。单位：vp/s&lt;br/&gt;**说明：**&lt;br/&gt;velocity值设置为0，视为异常值，本次滚动不生效。如果值为正数，则向顶部滚动；如果值为负数， 则向底部滚动。&lt;br/&gt;。 &lt;br&gt;取值范围：(-∞, +∞)。 &lt;br&gt; &lt;em&gt;注意&lt;/em&gt; &lt;br&gt;如果指定的值为0，则视为无效，此实例的滚动将不会 生效。 正值表示向顶部滚动，负值表示向 底的意思。 |
+| velocity | double | Yes | Initial velocity of inertial scrolling. &lt;br&gt;Unit: vp/s. &lt;br&gt;&lt;em&gt;NOTE&lt;/em&gt; &lt;br&gt;If the value specified is 0, it is considered as invalid, and the scrolling for this instance will not take effect. A positive value indicates scrolling towards the top, while a negative value indicates scrolling towards the bottom. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. Possible causes: &lt;br&gt; 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameters types. &lt;br&gt; 3. Parameter verification failed. |
-| 100004 | Controller not bound to a component. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: &lt;br&gt; 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameters types. &lt;br&gt; 3. Parameter verification failed. |
+| [100004](../errorcode-router.md#100004-incorrect-route-name) | Controller not bound to a component. |
 
 ## getFrameNode
 
@@ -157,7 +121,7 @@ fling(velocity: double): void
 getFrameNode(): FrameNode | undefined
 ```
 
-获取与当前Scroller绑定的FrameNode。
+Obtains the FrameNode corresponding to this scroller.
 
 **Since:** 26.0.0
 
@@ -173,7 +137,7 @@ getFrameNode(): FrameNode | undefined
 
 | Type | Description |
 | --- | --- |
-| [FrameNode](arkts-arkui-framenode-t.md) | Returns the FrameNode bound to this scroller. If the scroller is not bound to a component, the return value is undefined. |
+| [FrameNode](../arkts-components/arkts-arkui-framenode-t.md) | Returns the FrameNode bound to this scroller. If the scroller is not bound to a component, the return value is undefined. |
 
 ## getItemIndex
 
@@ -181,13 +145,9 @@ getFrameNode(): FrameNode | undefined
 getItemIndex(x: double, y: double): int
 ```
 
-通过坐标获取子组件的索引。
+Obtains the index of a child component based on coordinates.
 
-> **说明：**
-> 
-> 支持List、Grid、WaterFlow组件。
-> 
-> 非法值返回的索引为-1。
+&lt;p&gt;&lt;strong&gt;NOTE&lt;/strong&gt;&lt;br&gt;The returned index is &lt;em&gt;-1&lt;/em&gt; for invalid coordinates.&lt;/p&gt;
 
 **Since:** 23
 
@@ -203,21 +163,21 @@ getItemIndex(x: double, y: double): int
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| x | double | Yes | x轴坐标，单位为vp。 |
-| y | double | Yes | y轴坐标，单位为vp。 |
+| x | double | Yes | X-coordinate, in vp. |
+| y | double | Yes | Y-coordinate, in vp. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| int | 返回子组件的索引。 |
+| int | Index of the item. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. Possible causes: &lt;br&gt; 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameters types. &lt;br&gt; 3. Parameter verification failed. |
-| 100004 | Controller not bound to a component. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: &lt;br&gt; 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameters types. &lt;br&gt; 3. Parameter verification failed. |
+| [100004](../errorcode-router.md#100004-incorrect-route-name) | Controller not bound to a component. |
 
 ## getItemRect
 
@@ -225,11 +185,9 @@ getItemIndex(x: double, y: double): int
 getItemRect(index: int): RectResult
 ```
 
-获取子组件的大小及相对容器组件的位置。
+Obtains the size and position of a child component relative to its container.
 
-> **说明：**
-> 
-> 支持ArcList、Scroll、List、Grid、WaterFlow组件。
+&lt;p&gt;&lt;strong&gt;NOTE&lt;/strong&gt;&lt;br&gt;- The value of &lt;em&gt;index&lt;/em&gt; must be the index of a child component visible in the display area.Otherwise, the value is considered invalid.&lt;br&gt;- The value of &lt;em&gt;index&lt;/em&gt; must be the index of a child component visible in the display area. Otherwise,the value is considered invalid.&lt;/p&gt;
 
 **Since:** 23
 
@@ -245,20 +203,20 @@ getItemRect(index: int): RectResult
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| index | int | Yes | 子组件的索引值。**说明：**&lt;br/&gt;index必须是当前显示区域显示的子组件的索引值，否则视为非法值。非法值返回的大小和位置均为0。 &lt;br&gt;取值限定为整数。 |
+| index | int | Yes | Index of the target child component. &lt;br&gt;The value should be an integer. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [RectResult](../arkts-components/arkts-arkui-rectresult-i.md) | 子组件的大小和相对于组件的位置。&lt;br/&gt;单位：vp。 |
+| [RectResult](../arkts-components/arkts-arkui-rectresult-i.md) | Returns the size and position. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. Possible causes: &lt;br&gt; 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameters types. &lt;br&gt; 3. Parameter verification failed. |
-| 100004 | Controller not bound to a component. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: &lt;br&gt; 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameters types. &lt;br&gt; 3. Parameter verification failed. |
+| [100004](../errorcode-router.md#100004-incorrect-route-name) | Controller not bound to a component. |
 
 ## isAtEnd
 
@@ -266,11 +224,9 @@ getItemRect(index: int): RectResult
 isAtEnd(): boolean
 ```
 
-查询组件是否滚动到底部。
+Checks whether the component has scrolled to the bottom.
 
-> **说明：**
-> 
-> 支持ArcList、Scroll、List、Grid、WaterFlow组件。
+&lt;p&gt;&lt;strong&gt;NOTE&lt;/strong&gt;&lt;br&gt;This API is available for the &lt;em&gt;ArcList&lt;/em&gt;, &lt;em&gt;Scroll&lt;/em&gt;, &lt;em&gt;List&lt;/em&gt;, &lt;em&gt;Grid&lt;/em&gt;, and &lt;em&gt;WaterFlow&lt;/em&gt; components.&lt;/p&gt;
 
 **Since:** 23
 
@@ -286,7 +242,7 @@ isAtEnd(): boolean
 
 | Type | Description |
 | --- | --- |
-| boolean | true表示组件已经滚动到底部，false表示组件还没滚动到底部。 |
+| boolean | Returns whether the component scrolls to the end position. |
 
 ## offset
 
@@ -294,7 +250,7 @@ isAtEnd(): boolean
 offset(): OffsetResult | undefined
 ```
 
-获取当前的滚动总偏移量。除接口声明有undefined以外，其他与[currentOffset](../arkts-components/arkts-arkui-scroller-c.md/arkts-arkui-scroller-c.md#currentoffset)接口保持一致。
+Obtains the current scrolling offset.
 
 **Since:** 23
 
@@ -318,19 +274,7 @@ offset(): OffsetResult | undefined
 scrollBy(dx: Length, dy: Length): void
 ```
 
-滑动指定距离。
-
-> **说明：**
-
-> - 支持ArcList、Scroll、List、Grid、WaterFlow组件。
-> 
-> - 各组件行为存在差异：
-> 
-> - [ArcList](arkts-arkui-arclist.md)和[List](../../apis-arkts/arkts-apis/arkts-arkts-util-list-list-c.md/arkts-arkts-util-list-list-c.md)组件会对所有经过的item进行加载和布局。
-> 
-> - Grid组件和[SLIDING_WINDOW]模式的[WaterFlow](water_flow)组件在跳转距离较大（大于2倍组件主轴高度）时，会直接估算出要显示的item。
-> 
-> - [ALWAYS_TOP_DOWN]模式的WaterFlow组件向后跳转（即dx或dy为正值时）会加载和布局所有经过的item，向前跳转（即dx或dy为负值时）会直接跳转到对应位置。
+Called when the setting slides by offset.
 
 **Since:** 23
 
@@ -355,9 +299,7 @@ scrollBy(dx: Length, dy: Length): void
 scrollEdge(value: Edge, options?: ScrollEdgeOptions): void
 ```
 
-滚动到容器边缘，不区分滚动轴方向，Edge.Top和Edge.Start表现相同，Edge.Bottom和Edge.End表现相同。
-
-Scroll组件默认有动画，Grid、List、WaterFlow组件默认无动画。
+Called when scrolling to the edge of the container.
 
 **Since:** 23
 
@@ -373,8 +315,8 @@ Scroll组件默认有动画，Grid、List、WaterFlow组件默认无动画。
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | [Edge](arkts-arkui-edge-e.md) | Yes | 滚动到的边缘位置。 |
-| options | [ScrollEdgeOptions](../arkts-components/arkts-arkui-scrolledgeoptions-i.md) | No | 设置滚动到边缘位置的模式。 |
+| value | [Edge](arkts-arkui-edge-e.md) | Yes | Edge type of the container. |
+| options | [ScrollEdgeOptions](../arkts-components/arkts-arkui-scrolledgeoptions-i.md) | No | Options of scrolling to edge. |
 
 ## scrollPage
 
@@ -382,7 +324,7 @@ Scroll组件默认有动画，Grid、List、WaterFlow组件默认无动画。
 scrollPage(value: ScrollPageOptions): void
 ```
 
-滚动到下一页或者上一页。
+Called when page turning mode is set.
 
 **Since:** 23
 
@@ -406,19 +348,7 @@ scrollPage(value: ScrollPageOptions): void
 scrollTo(options: ScrollOptions): void
 ```
 
-滑动到指定位置。
-
-> **说明：**
-
-> - scrollTo动画速度大于200vp/s时，滚动组件区域内的组件不响应点击事件。
-> 
-> - 各组件行为存在差异：
-> 
-> - [ArcList](arkts-arkui-arclist.md)和[List](../../apis-arkts/arkts-apis/arkts-arkts-util-list-list-c.md/arkts-arkts-util-list-list-c.md)组件会对所有经过的item进行加载和布局。
-> 
-> - Grid组件和[SLIDING_WINDOW]模式的[WaterFlow](water_flow)组件在跳转距离较大（大于2倍组件主轴高度）时，会直接估算出要显示的item。
-> 
-> - [ALWAYS_TOP_DOWN]模式的WaterFlow组件向后跳转（即dx或dy为正值时）会加载和布局所有经过的item，向前跳转（即dx或dy为负值时）会直接跳转到对应位置。
+Called when the setting slides to the specified position.
 
 **Since:** 23
 
@@ -434,7 +364,7 @@ scrollTo(options: ScrollOptions): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| options | [ScrollOptions](arkts-arkui-viewmodel-scrolloptions-i.md) | Yes | 滑动到指定位置的参数。 |
+| options | [ScrollOptions](arkts-arkui-viewmodel-scrolloptions-i.md) | Yes | scroll options |
 
 ## scrollToIndex
 
@@ -442,31 +372,7 @@ scrollTo(options: ScrollOptions): void
 scrollToIndex(value: int, smooth?: boolean, align?: ScrollAlign, options?: ScrollToIndexOptions): void
 ```
 
-滑动到指定Index，支持设置滑动额外偏移量。
-
-开启smooth动效时，会对经过的所有item进行加载和布局计算，当大量加载item时会导致性能问题，建议先调用scrollToIndex不带动画跳转到目标附近位置，再调用scrollToIndex带动画滚动到目标位置。
-
-> **说明：**
-> 
-> 1.仅支持ArcList、Grid、List、WaterFlow组件。
-> 
-> 2.在[LazyForEach](lazy_for_each)、[ForEach](for_each)、[Repeat](arkts-arkui-repeat-repeat-f.md#repeat)刷新数据源时，需确保在数据刷新完成之后再调用此接
-> 口。
-> 
-> 3.从API version 11开始，在List中支持
-> [contentStartOffset](../../../reference/apis-arkui/arkui-ts/ts-container-list.md#contentstartoffset11)和
-> [contentEndOffset](../../../reference/apis-arkui/arkui-ts/ts-container-list.md#contentendoffset11)。从API
-> version 22开始，在Grid和Waterflow组件中支持设置
-> [contentStartOffset](../../../reference/apis-arkui/arkui-ts/ts-container-scrollable-common.md#contentstartoffset22)
-> 和
-> [contentEndOffset](../../../reference/apis-arkui/arkui-ts/ts-container-scrollable-common.md#contentendoffset22)。
-> 
-> - 当滚动容器组件设置contentStartOffset时，如果ScrollAlign设置为START，滚动结束时，指定item首部会与滚动容器组件contentStartOffset处对齐。
-> 
-> - 当滚动容器组件设置contentEndOffset时，如果ScrollAlign设置为END，滚动结束时，指定item尾部会与滚动容器组件contentEndOffset处对齐。
-> 
-> - 当滚动容器组件设置contentStartOffset或contentEndOffset时，如果ScrollAlign设置为AUTO，且指定item完全处于显示区内，不做调整；否则依照滚动距离最短的原则，将指定item
-> 首部与滚动组件contentStartOffset处对齐，或指定item尾部与滚动组件contentEndOffset处对齐，使指定item完全显示。
+Scroll to the specified index.
 
 **Since:** 23
 
@@ -482,8 +388,8 @@ scrollToIndex(value: int, smooth?: boolean, align?: ScrollAlign, options?: Scrol
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | int | Yes | 要滑动到的目标元素在当前容器中的索引值。 &lt;br/&gt;**说明：** &lt;br/&gt;value值设置成负值或者大于当前容器子组件的最大索引值，视为异常值，本次跳转不生效。 &lt;br&gt;取值限定为整数。 |
-| smooth | boolean | No | 设置滑动到列表项在列表中的索引值时是否有动效，true表示有动效，false表示没有动效。&lt;br/&gt;。 &lt;br&gt;默认值：false。 |
-| align | [ScrollAlign](../arkts-components/arkts-arkui-scrollalign-e.md) | No | 指定滑动到的元素与当前容器的对齐方式。&lt;br/&gt;List中的默认值为：ScrollAlign.START。Grid中默认值为：ScrollAlign.AUTO。 WaterFlow中的默认值为：ScrollAlign.START。&lt;br/&gt;**说明：** &lt;br/&gt;仅List、Grid、WaterFlow组件支持该参数。 |
-| options | [ScrollToIndexOptions](arkts-arkui-scroll-scrolltoindexoptions-i.md) | No | 设置滑动到指定Index的选项，如额外偏移量。&lt;br/&gt;。 &lt;br&gt;单位为：vp。默认值：0，单位：vp。 |
+| value | int | Yes | Index to jump to. &lt;br&gt;The value should be an integer. |
+| smooth | boolean | No | If true, scroll to index item with animation. If false, scroll to index item without animation. |
+| align | [ScrollAlign](../arkts-components/arkts-arkui-scrollalign-e.md) | No | Sets the alignment mode of a specified index. |
+| options | [ScrollToIndexOptions](arkts-arkui-scroll-scrolltoindexoptions-i.md) | No | Sets the options of a specified index, such as extra offset. &lt;br&gt;Unit: vp. Default value: 0 (unit:vp). |
 

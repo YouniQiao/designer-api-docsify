@@ -1,8 +1,8 @@
 # PlayParameters
 
-表示音频池播放参数设置。
+Describes the playback parameters of the sound pool.
 
-通过设置播放相关参数，来控制播放的音量，循环次数，播放优先级等参数。
+These parameters are used to control the playback volume, number of loops, and priority.
 
 **Since:** 10
 
@@ -18,11 +18,10 @@
 parallelPlayFlag?: boolean
 ```
 
-表示是否和其他正在播放的音频并行播放的标识。
+Whether the sound can be played in parallel with other active audio streams, without preempting the audio focus.   
+**true** if yes, **false** otherwise. The default value is **false**.
 
-true：不抢占音频焦点，和其他正在播放的音频一起并行播放；false：抢占焦点打断其他正在播放的音频。默认值：false。
-
-此接口为系统接口。
+This is a system API.
 
 **Type:** boolean
 

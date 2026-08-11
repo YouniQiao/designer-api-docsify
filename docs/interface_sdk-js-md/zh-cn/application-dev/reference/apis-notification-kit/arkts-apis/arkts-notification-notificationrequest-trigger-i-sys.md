@@ -20,7 +20,7 @@ condition:Geofence
 
 条件具体描述。
 
-**类型：** [Geofence](../../apis-location-kit/arkts-apis/arkts-location-geolocation-geofence-i.md)
+**类型：** [Geofence](arkts-notification-notificationmanager-geofence-t-sys.md)
 
 **起始版本：** 23
 

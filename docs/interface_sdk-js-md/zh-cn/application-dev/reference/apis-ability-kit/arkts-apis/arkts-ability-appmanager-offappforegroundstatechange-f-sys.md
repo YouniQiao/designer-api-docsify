@@ -1,11 +1,5 @@
 # offAppForegroundStateChange（系统接口）
 
-## 导入模块
-
-```TypeScript
-import { appManager } from 'kits/@kit.AbilityKit';
-```
-
 ## offAppForegroundStateChange
 
 ```TypeScript
@@ -36,7 +30,44 @@ function offAppForegroundStateChange(observer?: AppForegroundStateObserver): voi
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 16000050 | Internal error. |
-| 201 | Permission denied. |
-| 202 | Not system application. |
+| [16000050](../errorcode-ability.md#16000050-内部错误) | Internal error. |
+| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not system application. |
+
+## 示例
+
+ArkTS-Sta示例：
+
+```TypeScript
+'use static'
+import { appManager } from '@kit.AbilityKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+class AppForegroundStateObserverCustom implements appManager.AppForegroundStateObserver {
+  onAppStateChanged(appStateData: appManager.AppStateData) {
+    console.info(`[appManager] onAppStateChanged: ${JSON.stringify(appStateData)}`);
+  }
+}
+
+let observer_: appManager.AppForegroundStateObserver | undefined;
+try {
+  let observer = new AppForegroundStateObserverCustom();
+  appManager.onAppForegroundStateChange(observer);
+  // 保存observer对象，用于注销
+  observer_ = observer;
+} catch (paramError) {
+  let code = (paramError as BusinessError).code;
+  let message = (paramError as BusinessError).message;
+  console.error(`[appManager] error: ${code}, ${message}`);
+}
+
+// 2.注销监听器
+try {
+  appManager.offAppForegroundStateChange(observer_);
+} catch (paramError) {
+  let code = (paramError as BusinessError).code;
+  let message = (paramError as BusinessError).message;
+  console.error(`[appManager] error: ${code}, ${message}`);
+}
+```
 

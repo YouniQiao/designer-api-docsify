@@ -48,7 +48,7 @@ makeConsume<T>(owner: IVariableOwner, varName: string,
     provideAlias: string, watchFunc?: WatchFuncType): IConsumeDecoratedVariable<T>
 ```
 
-创建@Consume状态变量实例
+Create a Consume variable instance.
 
 **Since:** 23
 
@@ -64,16 +64,16 @@ makeConsume<T>(owner: IVariableOwner, varName: string,
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| owner | [IVariableOwner](arkts-arkui-decorator-ivariableowner-i.md) | Yes | 状态变量的所有者 |
-| varName | string | Yes | 状态变量的名字 |
-| provideAlias | string | Yes | 变量别名 |
-| watchFunc | [WatchFuncType](arkts-arkui-watchfunctype-t.md) | No | 监听函数 |
+| owner | [IVariableOwner](arkts-arkui-decorator-ivariableowner-i.md) | Yes | owner of this variable. |
+| varName | string | Yes | state variable name. |
+| provideAlias | string | Yes | provide alias. |
+| watchFunc | [WatchFuncType](arkts-arkui-watchfunctype-t.md) | No | watch type |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [IConsumeDecoratedVariable](arkts-arkui-decorator-iconsumedecoratedvariable-i.md)&lt;T&gt; | 状态变量实例 |
+| [IConsumeDecoratedVariable](arkts-arkui-decorator-iconsumedecoratedvariable-i.md)&lt;T&gt; | Consume instance |
 
 ## makeConsume
 
@@ -82,7 +82,7 @@ makeConsume<T>(owner: IVariableOwner, varName: string,
     provideAlias: string, watchFunc?: WatchFuncType, consumeOptions?: ConsumeOptions<T>): IConsumeDecoratedVariable<T>
 ```
 
-创建@Consume状态变量实例
+Create a Consume variable instance. It is used to establish two-way data binding with @Provide.
 
 **Since:** 23
 
@@ -98,17 +98,17 @@ makeConsume<T>(owner: IVariableOwner, varName: string,
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| owner | [IVariableOwner](arkts-arkui-decorator-ivariableowner-i.md) | Yes | 状态变量的所有者 |
-| varName | string | Yes | 状态变量的名字 |
-| provideAlias | string | Yes | 变量别名 |
-| watchFunc | [WatchFuncType](arkts-arkui-watchfunctype-t.md) | No | 监听函数 |
-| consumeOptions | [ConsumeOptions](arkts-arkui-decorator-consumeoptions-i.md)&lt;T&gt; | No | 包含开发者设置的初始值的接口 |
+| owner | [IVariableOwner](arkts-arkui-decorator-ivariableowner-i.md) | Yes | instance of the custom component where this state variable is located. |
+| varName | string | Yes | state variable name. |
+| provideAlias | string | Yes | provide alias. |
+| watchFunc | [WatchFuncType](arkts-arkui-watchfunctype-t.md) | No | watch callback function type. |
+| consumeOptions | [ConsumeOptions](arkts-arkui-decorator-consumeoptions-i.md)&lt;T&gt; | No | interface containing default value set by developer. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [IConsumeDecoratedVariable](arkts-arkui-decorator-iconsumedecoratedvariable-i.md)&lt;T&gt; | 状态变量实例 |
+| [IConsumeDecoratedVariable](arkts-arkui-decorator-iconsumedecoratedvariable-i.md)&lt;T&gt; | Consume instance. |
 
 ## makeConsumer
 
@@ -118,7 +118,7 @@ makeConsumer<T>(
   ): IConsumerDecoratedVariable<T>
 ```
 
-创建@Consumer状态变量实例
+Create a consumer variable instance.
 
 **Since:** 23
 
@@ -134,24 +134,24 @@ makeConsumer<T>(
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| owner | [IVariableOwner](arkts-arkui-decorator-ivariableowner-i.md) | Yes | 状态变量的所有者 |
-| varName | string | Yes | 状态变量的名字 |
-| providerAlias | string | Yes | 变量别名 |
-| defaultValue | T | Yes | 状态变量的初始值 |
+| owner | [IVariableOwner](arkts-arkui-decorator-ivariableowner-i.md) | Yes | owner of this variable. |
+| varName | string | Yes | consumer variable name. |
+| providerAlias | string | Yes | consumer alias. |
+| defaultValue | T | Yes | consumer default value. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [IConsumerDecoratedVariable](arkts-arkui-decorator-iconsumerdecoratedvariable-i.md)&lt;T&gt; | 状态变量实例 |
+| [IConsumerDecoratedVariable](arkts-arkui-decorator-iconsumerdecoratedvariable-i.md)&lt;T&gt; | Consumer instance |
 
 ## makeCustomEnv
 
 ```TypeScript
-makeCustomEnv<T>(owner: IVariableOwner, envKey: CustomEnvKey<T>, varName: string, localInitValue: T): ICustomEnvDecoratedVariable<T>
+makeCustomEnv<T>(owner: IVariableOwner, envKey: CustomEnvKey<T>, varName: string, localInitValue: T, customEnvOptions?: CustomEnvOptions<T>): ICustomEnvDecoratedVariable<T>
 ```
 
-创建一个CustomEnv变量实例。
+Create a CustomEnv variable instance.
 
 **Since:** 26.0.0
 
@@ -159,7 +159,7 @@ makeCustomEnv<T>(owner: IVariableOwner, envKey: CustomEnvKey<T>, varName: string
 
 **Model restriction:** This API can be used only in the stage model.
 
-<!--Device-IStateMgmtFactory-makeCustomEnv<T>(owner: IVariableOwner, envKey: CustomEnvKey<T>, varName: string, localInitValue: T): ICustomEnvDecoratedVariable<T>--><!--Device-IStateMgmtFactory-makeCustomEnv<T>(owner: IVariableOwner, envKey: CustomEnvKey<T>, varName: string, localInitValue: T): ICustomEnvDecoratedVariable<T>-End-->
+<!--Device-IStateMgmtFactory-makeCustomEnv<T>(owner: IVariableOwner, envKey: CustomEnvKey<T>, varName: string, localInitValue: T, customEnvOptions?: CustomEnvOptions<T>): ICustomEnvDecoratedVariable<T>--><!--Device-IStateMgmtFactory-makeCustomEnv<T>(owner: IVariableOwner, envKey: CustomEnvKey<T>, varName: string, localInitValue: T, customEnvOptions?: CustomEnvOptions<T>): ICustomEnvDecoratedVariable<T>-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -167,16 +167,17 @@ makeCustomEnv<T>(owner: IVariableOwner, envKey: CustomEnvKey<T>, varName: string
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| owner | [IVariableOwner](arkts-arkui-decorator-ivariableowner-i.md) | Yes | 该变量的自定义组件所有者。 |
-| envKey | [CustomEnvKey](../arkts-components/arkts-arkui-customenvkey-c.md)&lt;T&gt; | Yes | 自定义环境变量键。 |
-| varName | string | Yes | 被@CustomEnv装饰的变量名。 |
-| localInitValue | T | Yes | @CustomEnv本地初始值。 |
+| owner | [IVariableOwner](arkts-arkui-decorator-ivariableowner-i.md) | Yes | custom component owner. |
+| envKey | [CustomEnvKey](../arkts-components/arkts-arkui-customenvkey-c.md)&lt;T&gt; | Yes | custom env key. |
+| varName | string | Yes | variable name that is decorated by @CustomEnv. |
+| localInitValue | T | Yes | custom env variable initValue. |
+| customEnvOptions | [CustomEnvOptions](arkts-arkui-decorator-customenvoptions-i.md)&lt;T&gt; | No | additional options for makeCustomEnv. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [ICustomEnvDecoratedVariable](arkts-arkui-decorator-icustomenvdecoratedvariable-i.md)&lt;T&gt; | CustomEnv变量实例。 |
+| [ICustomEnvDecoratedVariable](arkts-arkui-decorator-icustomenvdecoratedvariable-i.md)&lt;T&gt; | CustomEnv variable instance |
 
 ## makeEnv
 
@@ -184,7 +185,7 @@ makeCustomEnv<T>(owner: IVariableOwner, envKey: CustomEnvKey<T>, varName: string
 makeEnv<T>(owner: IVariableOwner, envValue: string | SystemEnvKey<T>, varName: string, envOptions?: EnvOptions<T>): IEnvDecoratedVariable<T>
 ```
 
-创建一个Env变量实例。在API 26.0.0及更高版本上，envValue参数支持SystemEnvKey类型。
+Create a Env variable instance.On API 26.0.0 and above, it can also support SystemEnvKey type for envValue.
 
 **Since:** 24
 
@@ -200,16 +201,16 @@ makeEnv<T>(owner: IVariableOwner, envValue: string | SystemEnvKey<T>, varName: s
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| owner | [IVariableOwner](arkts-arkui-decorator-ivariableowner-i.md) | Yes | 自定义组件。 |
-| envValue | string \| SystemEnvKey&lt;T&gt; | Yes | 支持的环境变量类型 [APi22 - API24] |
-| varName | string | Yes | @Env装饰的变量名。 |
-| envOptions | [EnvOptions](arkts-arkui-decorator-envoptions-i.md)&lt;T&gt; | No | makeEnv的其他选项。 |
+| owner | [IVariableOwner](arkts-arkui-decorator-ivariableowner-i.md) | Yes | custom component owner |
+| envValue | string \| SystemEnvKey&lt;T&gt; | Yes | system environment key<br>**Since:** 26.0.0 |
+| varName | string | Yes | variable name that is decorated by @Env |
+| envOptions | [EnvOptions](arkts-arkui-decorator-envoptions-i.md)&lt;T&gt; | No | additional options for makeEnv |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [IEnvDecoratedVariable](arkts-arkui-decorator-ienvdecoratedvariable-i.md)&lt;T&gt; | Env变量实例。 |
+| [IEnvDecoratedVariable](arkts-arkui-decorator-ienvdecoratedvariable-i.md)&lt;T&gt; | Env variable instance |
 
 ## makeGlobalReusePool
 
@@ -218,7 +219,7 @@ makeGlobalReusePool(reusePool: ReusePoolOwnership,
     poolAccepts: Class[], owningView: IVariableOwner): IGlobalReusePoolVariable
 ```
 
-在自定义组件上创建全局重用池。
+Create global reuse pool on a custom component.
 
 **Since:** 26.0.0
 
@@ -234,15 +235,15 @@ makeGlobalReusePool(reusePool: ReusePoolOwnership,
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| reusePool | [ReusePoolOwnership](arkts-arkui-customcomponent-reusepoolownership-e.md) | Yes | 复用池类型 |
-| poolAccepts | [Class](../../apis-arkts/arkts-apis/arkts-arkts-class-c.md)[] | Yes | 重用池接受的自定义组件 |
-| owningView | [IVariableOwner](arkts-arkui-decorator-ivariableowner-i.md) | Yes | 拥有全局池的自定义组件 |
+| reusePool | [ReusePoolOwnership](arkts-arkui-customcomponent-reusepoolownership-e.md) | Yes | reuse pool type. |
+| poolAccepts | [Class](../../apis-arkts/arkts-apis/arkts-arkts-class-c.md)[] | Yes | custom components that reuse pool accepts. |
+| owningView | [IVariableOwner](arkts-arkui-decorator-ivariableowner-i.md) | Yes | custom component that owns the global pool. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [IGlobalReusePoolVariable](arkts-arkui-decorator-iglobalreusepoolvariable-i.md) | 全局重用池句柄。 |
+| [IGlobalReusePoolVariable](arkts-arkui-decorator-iglobalreusepoolvariable-i.md) | global reuse pool handle. |
 
 ## makeLink
 
@@ -251,7 +252,7 @@ makeLink<T>(owner: IVariableOwner, varName: string, source: LinkSourceType<T>,
     watchFunc?: WatchFuncType): ILinkDecoratedVariable<T>
 ```
 
-创建@Link状态变量实例
+Create a Link variable instance.
 
 **Since:** 23
 
@@ -267,22 +268,24 @@ makeLink<T>(owner: IVariableOwner, varName: string, source: LinkSourceType<T>,
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| owner | [IVariableOwner](arkts-arkui-decorator-ivariableowner-i.md) | Yes | 状态变量的所有者 |
-| varName | string | Yes | 状态变量的名字 |
-| source | [LinkSourceType](arkts-arkui-linksourcetype-t.md)&lt;T&gt; | Yes | 状态变量的初始值 |
-| watchFunc | [WatchFuncType](arkts-arkui-watchfunctype-t.md) | No | 监听函数 |
+| owner | [IVariableOwner](arkts-arkui-decorator-ivariableowner-i.md) | Yes | owner of this variable. |
+| varName | string | Yes | state variable name. |
+| source | [LinkSourceType](arkts-arkui-linksourcetype-t.md)&lt;T&gt; | Yes | state variable sync source. |
+| watchFunc | [WatchFuncType](arkts-arkui-watchfunctype-t.md) | No | watch type |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [ILinkDecoratedVariable](arkts-arkui-decorator-ilinkdecoratedvariable-i.md)&lt;T&gt; | 状态变量实例 |
+| [ILinkDecoratedVariable](arkts-arkui-decorator-ilinkdecoratedvariable-i.md)&lt;T&gt; | PropRef instance |
 
 ## makeLocal
 
 ```TypeScript
 makeLocal<T>(owner: IVariableOwner, varName: string, localInitValue: T): ILocalDecoratedVariable<T>
 ```
+
+Create a Local variable instance.
 
 **Since:** 23
 
@@ -315,7 +318,7 @@ makeLocalStorageLink<T>(owner: IVariableOwner, propName: string,
         varName: string, initValue: T, watchFunc?: WatchFuncType): ILocalStorageLinkDecoratedVariable<T>
 ```
 
-创建@LocalStorageLink状态变量实例
+Create a LocalStorageLink variable instance.
 
 **Since:** 23
 
@@ -331,17 +334,17 @@ makeLocalStorageLink<T>(owner: IVariableOwner, propName: string,
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| owner | [IVariableOwner](arkts-arkui-decorator-ivariableowner-i.md) | Yes | 状态变量的所有者 |
-| propName | string | Yes | 属性名字 |
-| varName | string | Yes | 状态变量的名字 |
-| initValue | T | Yes | 状态变量的初始值 |
-| watchFunc | [WatchFuncType](arkts-arkui-watchfunctype-t.md) | No | 监听函数 |
+| owner | [IVariableOwner](arkts-arkui-decorator-ivariableowner-i.md) | Yes | owner of this variable. |
+| propName | string | Yes | property name. |
+| varName | string | Yes | state variable name. |
+| initValue | T | Yes | init value. |
+| watchFunc | [WatchFuncType](arkts-arkui-watchfunctype-t.md) | No | watch type |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [ILocalStorageLinkDecoratedVariable](arkts-arkui-decorator-ilocalstoragelinkdecoratedvariable-i.md)&lt;T&gt; | 状态变量实例 |
+| [ILocalStorageLinkDecoratedVariable](arkts-arkui-decorator-ilocalstoragelinkdecoratedvariable-i.md)&lt;T&gt; | LocalStorageLink instance |
 
 ## makeLocalStoragePropRef
 
@@ -415,6 +418,8 @@ Create a monitored variable instance.
 makeMonitor(pathInfos: Array<IMonitorPathInfo>, monitorCallback: MonitorCallback, options?: MakeMonitorOptions): IMonitorDecoratedVariable
 ```
 
+Create a monitored variable instance.
+
 **Since:** 24
 
 **ArkTS mode:** ArkTS-Sta only, since version 24.
@@ -445,6 +450,8 @@ makeMonitor(pathInfos: Array<IMonitorPathInfo>, monitorCallback: MonitorCallback
 makeMutableStateMeta(): IMutableStateMeta
 ```
 
+get mutable state meta
+
 **Since:** 23
 
 **ArkTS mode:** ArkTS-Sta only, since version 23.
@@ -467,7 +474,7 @@ makeMutableStateMeta(): IMutableStateMeta
 makeMutableStateMeta(observedObject: IObservedObject | undefined, propertyName: string): IMutableStateMeta
 ```
 
-获取可变状态元
+get mutable state meta
 
 **Since:** 24
 
@@ -483,8 +490,8 @@ makeMutableStateMeta(observedObject: IObservedObject | undefined, propertyName: 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| observedObject | [IObservedObject](arkts-arkui-decorator-iobservedobject-i.md) \| undefined | Yes | 此元的所有者。 |
-| propertyName | string | Yes | 元名称。 |
+| observedObject | [IObservedObject](arkts-arkui-decorator-iobservedobject-i.md) \| undefined | Yes | owner of this meta. |
+| propertyName | string | Yes | meta name. |
 
 **Return value:**
 
@@ -499,7 +506,7 @@ makeObjectLink<T>(owner: IVariableOwner, varName: string,
     initValue: T, watchFunc?: WatchFuncType): IObjectLinkDecoratedVariable<T>
 ```
 
-创建@ObjectLink状态变量实例
+Create a ObjectLink variable instance.
 
 **Since:** 23
 
@@ -515,16 +522,16 @@ makeObjectLink<T>(owner: IVariableOwner, varName: string,
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| owner | [IVariableOwner](arkts-arkui-decorator-ivariableowner-i.md) | Yes | 状态变量的所有者 |
-| varName | string | Yes | 状态变量的名字 |
-| initValue | T | Yes | 状态变量的初始值 |
-| watchFunc | [WatchFuncType](arkts-arkui-watchfunctype-t.md) | No | 监听函数 |
+| owner | [IVariableOwner](arkts-arkui-decorator-ivariableowner-i.md) | Yes | owner of this variable. |
+| varName | string | Yes | state variable name. |
+| initValue | T | Yes | init value. |
+| watchFunc | [WatchFuncType](arkts-arkui-watchfunctype-t.md) | No | watch type |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [IObjectLinkDecoratedVariable](arkts-arkui-decorator-iobjectlinkdecoratedvariable-i.md)&lt;T&gt; | 状态变量实例 |
+| [IObjectLinkDecoratedVariable](arkts-arkui-decorator-iobjectlinkdecoratedvariable-i.md)&lt;T&gt; | ObjectLink instance |
 
 ## makeParam
 
@@ -532,7 +539,7 @@ makeObjectLink<T>(owner: IVariableOwner, varName: string,
 makeParam<T>(owner: IVariableOwner, varName: string, initValue: T): IParamDecoratedVariable<T>
 ```
 
-创建@Param状态变量实例
+Create a Param variable instance.
 
 **Since:** 23
 
@@ -548,15 +555,15 @@ makeParam<T>(owner: IVariableOwner, varName: string, initValue: T): IParamDecora
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| owner | [IVariableOwner](arkts-arkui-decorator-ivariableowner-i.md) | Yes | 状态变量的所有者 |
-| varName | string | Yes | 状态变量的名字 |
-| initValue | T | Yes | 状态变量的初始值 |
+| owner | [IVariableOwner](arkts-arkui-decorator-ivariableowner-i.md) | Yes | owner of this variable. |
+| varName | string | Yes | state variable name. |
+| initValue | T | Yes | param variable initValue. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [IParamDecoratedVariable](arkts-arkui-decorator-iparamdecoratedvariable-i.md)&lt;T&gt; | 状态变量实例 |
+| [IParamDecoratedVariable](arkts-arkui-decorator-iparamdecoratedvariable-i.md)&lt;T&gt; | Param instance |
 
 ## makeParamOnce
 
@@ -564,7 +571,7 @@ makeParam<T>(owner: IVariableOwner, varName: string, initValue: T): IParamDecora
 makeParamOnce<T>(owner: IVariableOwner, varName: string, initValue: T): IParamOnceDecoratedVariable<T>
 ```
 
-创建@Once @Param状态变量实例
+Create a param once variable instance.
 
 **Since:** 23
 
@@ -580,15 +587,15 @@ makeParamOnce<T>(owner: IVariableOwner, varName: string, initValue: T): IParamOn
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| owner | [IVariableOwner](arkts-arkui-decorator-ivariableowner-i.md) | Yes | 状态变量的所有者 |
-| varName | string | Yes | 状态变量的名字 |
-| initValue | T | Yes | 状态变量的初始值 |
+| owner | [IVariableOwner](arkts-arkui-decorator-ivariableowner-i.md) | Yes | owner of this variable. |
+| varName | string | Yes | state variable name. |
+| initValue | T | Yes | param once variable initValue. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [IParamOnceDecoratedVariable](arkts-arkui-decorator-iparamoncedecoratedvariable-i.md)&lt;T&gt; | 状态变量实例 |
+| [IParamOnceDecoratedVariable](arkts-arkui-decorator-iparamoncedecoratedvariable-i.md)&lt;T&gt; | Param Once instance |
 
 ## makePropRef
 
@@ -597,7 +604,7 @@ makePropRef<T>(owner: IVariableOwner, varName: string, initValue: T,
     watchFunc?: WatchFuncType): IPropRefDecoratedVariable<T>
 ```
 
-创建@PropRef状态变量实例
+Create a PropRef variable instance.
 
 **Since:** 23
 
@@ -613,16 +620,16 @@ makePropRef<T>(owner: IVariableOwner, varName: string, initValue: T,
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| owner | [IVariableOwner](arkts-arkui-decorator-ivariableowner-i.md) | Yes | 状态变量的所有者 |
-| varName | string | Yes | 状态变量的名字 |
-| initValue | T | Yes | 状态变量的初始值 |
-| watchFunc | [WatchFuncType](arkts-arkui-watchfunctype-t.md) | No | 监听函数 |
+| owner | [IVariableOwner](arkts-arkui-decorator-ivariableowner-i.md) | Yes | owner of this variable. |
+| varName | string | Yes | state variable name. |
+| initValue | T | Yes | state variable initValue. |
+| watchFunc | [WatchFuncType](arkts-arkui-watchfunctype-t.md) | No | watch type |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [IPropRefDecoratedVariable](arkts-arkui-decorator-iproprefdecoratedvariable-i.md)&lt;T&gt; | 状态变量实例 |
+| [IPropRefDecoratedVariable](arkts-arkui-decorator-iproprefdecoratedvariable-i.md)&lt;T&gt; | PropRef instance |
 
 ## makeProvide
 
@@ -631,7 +638,7 @@ makeProvide<T>(owner: IVariableOwner, varName: string, provideAlias: string, ini
       allowOverride: boolean, watchFunc?: WatchFuncType): IProvideDecoratedVariable<T>
 ```
 
-创建@Provide状态变量实例
+Create a Provide variable instance.
 
 **Since:** 23
 
@@ -647,18 +654,18 @@ makeProvide<T>(owner: IVariableOwner, varName: string, provideAlias: string, ini
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| owner | [IVariableOwner](arkts-arkui-decorator-ivariableowner-i.md) | Yes | 状态变量的所有者 |
-| varName | string | Yes | 状态变量的名字 |
-| provideAlias | string | Yes | 变量别名 |
-| initValue | T | Yes | 状态变量的初始值 |
-| allowOverride | boolean | Yes | 是否覆盖父组件上的同名@Provide状态变量 |
-| watchFunc | [WatchFuncType](arkts-arkui-watchfunctype-t.md) | No | 监听函数 |
+| owner | [IVariableOwner](arkts-arkui-decorator-ivariableowner-i.md) | Yes | owner of this variable. |
+| varName | string | Yes | state variable name. |
+| provideAlias | string | Yes | provide alias. |
+| initValue | T | Yes | init value. |
+| allowOverride | boolean | Yes | Override the @Provide of any parent |
+| watchFunc | [WatchFuncType](arkts-arkui-watchfunctype-t.md) | No | watch type |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [IProvideDecoratedVariable](arkts-arkui-decorator-iprovidedecoratedvariable-i.md)&lt;T&gt; | 状态变量实例 |
+| [IProvideDecoratedVariable](arkts-arkui-decorator-iprovidedecoratedvariable-i.md)&lt;T&gt; | Provide instance |
 
 ## makeProvider
 
@@ -667,7 +674,7 @@ makeProvider<T>(owner: IVariableOwner, varName: string, providerAlias: string,
                   localInitValue: T): IProviderDecoratedVariable<T>
 ```
 
-创建@Provider 状态变量实例
+Create a provider variable instance.
 
 **Since:** 23
 
@@ -683,16 +690,16 @@ makeProvider<T>(owner: IVariableOwner, varName: string, providerAlias: string,
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| owner | [IVariableOwner](arkts-arkui-decorator-ivariableowner-i.md) | Yes | 状态变量的所有者 |
-| varName | string | Yes | 状态变量的名字 |
-| providerAlias | string | Yes | 变量别名 |
-| localInitValue | T | Yes | 状态变量的初始值 |
+| owner | [IVariableOwner](arkts-arkui-decorator-ivariableowner-i.md) | Yes | owner of this variable. |
+| varName | string | Yes | provider variable name. |
+| providerAlias | string | Yes | provider alias. |
+| localInitValue | T | Yes | provider local variable value. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [IProviderDecoratedVariable](arkts-arkui-decorator-iproviderdecoratedvariable-i.md)&lt;T&gt; | 状态变量实例 |
+| [IProviderDecoratedVariable](arkts-arkui-decorator-iproviderdecoratedvariable-i.md)&lt;T&gt; | Provider instance |
 
 ## makeState
 
@@ -701,7 +708,7 @@ makeState<T>(owner: IVariableOwner, varName: string, initValue: T,
     watchFunc?: WatchFuncType): IStateDecoratedVariable<T>
 ```
 
-创建@State状态变量实例
+Create a State variable instance.
 
 **Since:** 23
 
@@ -717,16 +724,16 @@ makeState<T>(owner: IVariableOwner, varName: string, initValue: T,
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| owner | [IVariableOwner](arkts-arkui-decorator-ivariableowner-i.md) | Yes | 状态变量的所有者 |
-| varName | string | Yes | 状态变量的名字 |
-| initValue | T | Yes | 状态变量的初始值 |
-| watchFunc | [WatchFuncType](arkts-arkui-watchfunctype-t.md) | No | 监听函数 |
+| owner | [IVariableOwner](arkts-arkui-decorator-ivariableowner-i.md) | Yes | owner of this variable. |
+| varName | string | Yes | state variable name. |
+| initValue | T | Yes | state variable initValue. |
+| watchFunc | [WatchFuncType](arkts-arkui-watchfunctype-t.md) | No | watch type |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [IStateDecoratedVariable](arkts-arkui-decorator-istatedecoratedvariable-i.md)&lt;T&gt; | 状态变量实例 |
+| [IStateDecoratedVariable](arkts-arkui-decorator-istatedecoratedvariable-i.md)&lt;T&gt; | State instance |
 
 ## makeStaticLocal
 
@@ -766,7 +773,7 @@ makeStorageLink<T>(owner: IVariableOwner, propName: string,
     varName: string, initValue: T, watchFunc?: WatchFuncType): IStorageLinkDecoratedVariable<T>
 ```
 
-创建@StorageLink状态变量实例
+Create a StorageLink variable instance.
 
 **Since:** 23
 
@@ -782,17 +789,17 @@ makeStorageLink<T>(owner: IVariableOwner, propName: string,
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| owner | [IVariableOwner](arkts-arkui-decorator-ivariableowner-i.md) | Yes | 状态变量的所有者 |
-| propName | string | Yes | 属性名字 |
-| varName | string | Yes | 状态变量的名字 |
-| initValue | T | Yes | 状态变量的初始值 |
-| watchFunc | [WatchFuncType](arkts-arkui-watchfunctype-t.md) | No | 监听函数 |
+| owner | [IVariableOwner](arkts-arkui-decorator-ivariableowner-i.md) | Yes | owner of this variable. |
+| propName | string | Yes | property name. |
+| varName | string | Yes | state variable name. |
+| initValue | T | Yes | init value. |
+| watchFunc | [WatchFuncType](arkts-arkui-watchfunctype-t.md) | No | watch type |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [IStorageLinkDecoratedVariable](arkts-arkui-decorator-istoragelinkdecoratedvariable-i.md)&lt;T&gt; | 状态变量实例 |
+| [IStorageLinkDecoratedVariable](arkts-arkui-decorator-istoragelinkdecoratedvariable-i.md)&lt;T&gt; | StorageLink instance |
 
 ## makeStoragePropRef
 
@@ -801,7 +808,7 @@ makeStoragePropRef<T>(owner: IVariableOwner, propName: string,
     varName: string, initValue: T, watchFunc?: WatchFuncType): IStoragePropRefDecoratedVariable<T>
 ```
 
-创建@Storage PropRef状态变量实例
+Create a StoragePropRef variable instance.
 
 **Since:** 23
 
@@ -817,17 +824,17 @@ makeStoragePropRef<T>(owner: IVariableOwner, propName: string,
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| owner | [IVariableOwner](arkts-arkui-decorator-ivariableowner-i.md) | Yes | 状态变量的所有者 |
-| propName | string | Yes | 属性名字 |
-| varName | string | Yes | 状态变量的名字 |
-| initValue | T | Yes | 状态变量的初始值 |
-| watchFunc | [WatchFuncType](arkts-arkui-watchfunctype-t.md) | No | 监听函数 |
+| owner | [IVariableOwner](arkts-arkui-decorator-ivariableowner-i.md) | Yes | owner of this variable. |
+| propName | string | Yes | property name. |
+| varName | string | Yes | state variable name. |
+| initValue | T | Yes | init value. |
+| watchFunc | [WatchFuncType](arkts-arkui-watchfunctype-t.md) | No | watch type |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [IStoragePropRefDecoratedVariable](arkts-arkui-decorator-istorageproprefdecoratedvariable-i.md)&lt;T&gt; | 状态变量实例 |
+| [IStoragePropRefDecoratedVariable](arkts-arkui-decorator-istorageproprefdecoratedvariable-i.md)&lt;T&gt; | StoragePropRef instance |
 
 ## makeSubscribedWatches
 
@@ -860,7 +867,7 @@ makeSyncMonitor(pathInfos: IMonitorPathInfo[], monitorCallback: MonitorCallback,
     options?: MakeMonitorOptions): IMonitorDecoratedVariable
 ```
 
-创建同步监控变量实例。
+Create a synchronous monitored variable instance.
 
 **Since:** 26.0.0
 
@@ -876,13 +883,13 @@ makeSyncMonitor(pathInfos: IMonitorPathInfo[], monitorCallback: MonitorCallback,
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| pathInfos | [IMonitorPathInfo](arkts-arkui-decorator-imonitorpathinfo-i.md)[] | Yes | 到其访问器的监视器路径。 |
-| monitorCallback | [MonitorCallback](arkts-arkui-monitorcallback-t.md) | Yes | 监视器触发时的回调。 |
-| options | [MakeMonitorOptions](arkts-arkui-decorator-makemonitoroptions-i.md) | No | 此监视器的选项。 |
+| pathInfos | [IMonitorPathInfo](arkts-arkui-decorator-imonitorpathinfo-i.md)[] | Yes | monitor path to its accessor. |
+| monitorCallback | [MonitorCallback](arkts-arkui-monitorcallback-t.md) | Yes | callback when the monitor triggers. |
+| options | [MakeMonitorOptions](arkts-arkui-decorator-makemonitoroptions-i.md) | No | options of this monitor. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [IMonitorDecoratedVariable](arkts-arkui-decorator-imonitordecoratedvariable-i.md) | 监控变量实例 |
+| [IMonitorDecoratedVariable](arkts-arkui-decorator-imonitordecoratedvariable-i.md) | Monitor variable instance |
 

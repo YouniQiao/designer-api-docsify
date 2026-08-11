@@ -20,7 +20,7 @@ import { LocaleResponse } from 'kits/@kit.ArkUI';
 countryOrRegion: string
 ```
 
-国家或地区。例如：CN。
+Country or region. Example: CN.
 
 **Type:** string
 
@@ -40,11 +40,7 @@ countryOrRegion: string
 dir: "ltr" | "rtl"
 ```
 
-文字布局方向。取值范围：
-
-- ltr：从左到右。
-
-- rtl：从右到左。
+Text layout direction. Available values are as follows:ltr: The text direction is from left to right.rtl: The text direction is from right to left.
 
 **Type:** "ltr" \| "rtl"
 
@@ -64,7 +60,7 @@ dir: "ltr" | "rtl"
 language: string
 ```
 
-语言。例如：zh。
+Current language of the application. Example: zh.
 
 **Type:** string
 

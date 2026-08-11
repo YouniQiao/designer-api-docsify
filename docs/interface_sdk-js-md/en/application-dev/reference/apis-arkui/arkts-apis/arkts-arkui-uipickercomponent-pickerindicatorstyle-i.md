@@ -1,6 +1,6 @@
 # PickerIndicatorStyle
 
-选中项指示器样式的参数说明。
+Defines the options of Indicator style.
 
 **Since:** 23
 
@@ -16,13 +16,7 @@
 backgroundColor?: ResourceColor
 ```
 
-选中项背景的颜色。
-
-默认值：'sys.color.comp_background_tertiary'
-
-**说明：**
-
-当type为PickerIndicatorType.BACKGROUND时生效。
+Define the background color of selected item.
 
 **Type:** [ResourceColor](arkts-arkui-resourcecolor-t.md)
 
@@ -42,15 +36,7 @@ backgroundColor?: ResourceColor
 borderRadius?: LengthMetrics | BorderRadiuses | LocalizedBorderRadiuses
 ```
 
-选中项背景的边框圆角半径。
-
-默认值：{ value:12, unit:LengthUnit.vp }，即四个圆角半径均为12vp。
-
-取值范围：取选中项的宽和高之中较小的边长为x，最大不超过x的一半。当取值小于0时，使用默认值；当取值大于最大值时，使用最大值。
-
-**说明：**
-
-1. 当type为PickerIndicatorType.BACKGROUND时生效。2. [LengthMetrics](arkts-arkui-graphics-lengthmetrics-c.md)：统一设置四个圆角半径的大小和单位。3. [BorderRadiuses](arkts-arkui-borderradiuses-t.md)：单独设置四个圆角半径的大小（单位为vp）。4. [LocalizedBorderRadiuses](arkts-arkui-units-localizedborderradiuses-i.md)：单独设置四个圆角半径的大小和单位。
+Defines the border radius of selected items.
 
 **Type:** [LengthMetrics](arkts-arkui-lengthmetrics-t.md) \| BorderRadiuses \| LocalizedBorderRadiuses
 
@@ -70,13 +56,7 @@ borderRadius?: LengthMetrics | BorderRadiuses | LocalizedBorderRadiuses
 dividerColor?: ResourceColor
 ```
 
-分割线的颜色。
-
-默认值：'sys.color.comp_divider'
-
-**说明：**
-
-当type为PickerIndicatorType.DIVIDER时生效。
+The color of Divider.
 
 **Type:** [ResourceColor](arkts-arkui-resourcecolor-t.md)
 
@@ -96,17 +76,7 @@ dividerColor?: ResourceColor
 endMargin?: LengthMetrics
 ```
 
-分割线与UIPickerComponent容器侧边结束端的距离。
-
-默认值：0
-
-单位：与LengthMetrics一致。
-
-取值范围：startMargin与endMargin之和不得超过UIPickerComponent容器的宽度。设置小于0或startMargin与endMargin之和超过UIPickerComponent容器的宽度时，使用默认值。不支持“百分比”类型。
-
-**说明：**
-
-当type为PickerIndicatorType.DIVIDER时生效。
+The endMargin of Divider.
 
 **Type:** [LengthMetrics](arkts-arkui-lengthmetrics-t.md)
 
@@ -126,17 +96,7 @@ endMargin?: LengthMetrics
 startMargin?: LengthMetrics
 ```
 
-分割线与UIPickerComponent容器侧边起始端的距离。
-
-默认值：0
-
-单位：与LengthMetrics一致。
-
-取值范围：startMargin与endMargin之和不得超过UIPickerComponent容器的宽度。设置小于0或startMargin与endMargin之和超过UIPickerComponent容器的宽度时，使用默认值。不支持“百分比”类型。
-
-**说明：**
-
-当type为PickerIndicatorType.DIVIDER时生效。
+The startMargin of Divider.
 
 **Type:** [LengthMetrics](arkts-arkui-lengthmetrics-t.md)
 
@@ -156,17 +116,7 @@ startMargin?: LengthMetrics
 strokeWidth?: LengthMetrics
 ```
 
-分割线的线宽。
-
-默认值：2.0px
-
-单位：与LengthMetrics一致。
-
-取值范围：[0, 选中项高度的一半（即20vp）]。strokeWidth小于0或大于选中项高度的一半时使用默认值。不支持“百分比”类型。
-
-**说明：**
-
-1. 当type为PickerIndicatorType.DIVIDER时生效。2. 通过LengthMetrics.resource方式设置时，使用非长度属性的值会按照0vp处理。
+The width of Divider stroke.
 
 **Type:** [LengthMetrics](arkts-arkui-lengthmetrics-t.md)
 
@@ -186,11 +136,7 @@ strokeWidth?: LengthMetrics
 type: PickerIndicatorType
 ```
 
-选中项指示器的类型。
-
-默认值：PickerIndicatorType.BACKGROUND
-
-当type的值为小数时，使用向下取整后的整数；当type的值不在PickerIndicatorType枚举范围内时，使用默认值。
+The type of indicator.
 
 **Type:** [PickerIndicatorType](arkts-arkui-uipickercomponent-pickerindicatortype-e.md)
 

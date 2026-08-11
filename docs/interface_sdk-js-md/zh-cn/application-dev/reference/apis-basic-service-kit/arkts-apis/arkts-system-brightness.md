@@ -1,11 +1,5 @@
 # @system.brightness
 
-## 导入模块
-
-```TypeScript
-import { BrightnessResponse, BrightnessModeResponse, SetBrightnessModeOptions, GetBrightnessModeOptions, SetBrightnessOptions, GetBrightnessOptions, SetKeepScreenOnOptions } from 'kits/@kit.BasicServicesKit';
-```
-
 ## 汇总
 
 ### 类

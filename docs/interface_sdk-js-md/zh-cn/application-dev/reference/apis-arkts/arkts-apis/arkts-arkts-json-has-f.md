@@ -1,11 +1,5 @@
 # has
 
-## 导入模块
-
-```TypeScript
-import { JSON } from 'kits/@kit.ArkTS';
-```
-
 ## has
 
 ```TypeScript

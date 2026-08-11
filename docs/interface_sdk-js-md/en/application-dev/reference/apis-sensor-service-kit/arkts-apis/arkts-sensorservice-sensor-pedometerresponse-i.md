@@ -1,6 +1,6 @@
 # PedometerResponse
 
-计步传感器数据，继承于[Response](arkts-sensorservice-sensor-response-i.md)。
+Describes the pedometer sensor data. It extends from [Response](arkts-sensorservice-sensor-response-i.md).
 
 **Inheritance/Implementation:** PedometerResponse extends [Response](arkts-sensorservice-sensor-response-i.md)
 
@@ -24,7 +24,7 @@ import { sensor } from 'kits/@kit.SensorServiceKit';
 steps: double
 ```
 
-用户的行走步数。单位：步。
+Number of steps a user has walked.
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：double
 

@@ -1,6 +1,6 @@
 # ArcSwiperController
 
-ArcSwiper容器组件的控制器，可以将此对象绑定至ArcSwiper组件，实现控制ArcSwiper翻页等功能。
+Provide methods for controlling ArcSwiper component.
 
 **Since:** 26.0.0
 
@@ -22,7 +22,7 @@ import { ArcSwiperAttribute, ArcSwiper, ArcDirection, ArcSwiperController, ArcDo
 constructor()
 ```
 
-ArcSwiperController的构造函数。
+A constructor used to create a ArcSwiperController object.
 
 **Since:** 26.0.0
 
@@ -40,7 +40,7 @@ ArcSwiperController的构造函数。
 finishAnimation(handler?: FinishAnimationHandler): void
 ```
 
-停止播放动画。默认无回调。
+Finish the swiper animation.
 
 **Since:** 26.0.0
 
@@ -56,7 +56,7 @@ finishAnimation(handler?: FinishAnimationHandler): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| handler | [FinishAnimationHandler](arkts-arkui-finishanimationhandler-t.md) | No | 动画结束的回调。&lt;br&gt;默认值：不传入时无回调 |
+| handler | [FinishAnimationHandler](arkts-arkui-finishanimationhandler-t.md) | No | The handler is used to listen for the end of the animation. |
 
 ## showNext
 
@@ -64,7 +64,7 @@ finishAnimation(handler?: FinishAnimationHandler): void
 showNext(): void
 ```
 
-翻至下一页。翻页带动效切换过程，时长通过[duration](arkts-arkui-arkui-arcswiper-arcswiperattribute-c.md#duration)指定。
+Show next subcomponent.
 
 **Since:** 26.0.0
 
@@ -82,7 +82,7 @@ showNext(): void
 showPrevious(): void
 ```
 
-翻至上一页。翻页带动效切换过程，时长通过[duration](arkts-arkui-arkui-arcswiper-arcswiperattribute-c.md#duration)指定。
+Show previous subcomponent.
 
 **Since:** 26.0.0
 

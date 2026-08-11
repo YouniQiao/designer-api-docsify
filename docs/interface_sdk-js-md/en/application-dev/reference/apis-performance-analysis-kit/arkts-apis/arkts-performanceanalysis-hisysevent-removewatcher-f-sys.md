@@ -12,7 +12,7 @@ import { hiSysEvent } from 'kits/@kit.PerformanceAnalysisKit';
 function removeWatcher(watcher: Watcher): void
 ```
 
-取消订阅系统事件，接收[Watcher](arkts-performanceanalysis-hisysevent-watcher-i-sys.md)类型的对象作为事件参数。
+Removes a watcher used for event subscription.
 
 **Since:** 9
 
@@ -30,16 +30,16 @@ function removeWatcher(watcher: Watcher): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| watcher | [Watcher](../../apis-core-file-kit/arkts-apis/arkts-corefile-watcher-t.md) | Yes | 系统事件订阅者对象。 |
+| watcher | [Watcher](../../apis-core-file-kit/arkts-apis/arkts-corefile-watcher-t.md) | Yes | Watcher for event subscription. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. 3. Parameter verification failed. |
-| 11200201 | The watcher does not exist. |
-| 201 | Permission denied. An attempt was made to read system event forbidden by permission: ohos.permission.READ_DFX_SYSEVENT. |
-| 202 | System API is not allowed called by Non-system application. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. 3. Parameter verification failed. |
+| [11200201](../errorcode-hisysevent-sys.md#11200201-event-watcher-not-exist) | The watcher does not exist. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. An attempt was made to read system event forbidden by permission: ohos.permission.READ_DFX_SYSEVENT. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | System API is not allowed called by Non-system application. |
 
 ## Examples
 

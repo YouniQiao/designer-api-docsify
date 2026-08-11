@@ -12,7 +12,7 @@ import { featureAbility } from 'kits/@kit.AbilityKit';
 function getWant(callback: AsyncCallback<Want>): void
 ```
 
-获取要拉起的Ability对应的Want。使用callback异步回调。
+Obtains the Want corresponding to the ability to start. This API uses an asynchronous callback to return the result.
 
 **Since:** 6
 
@@ -28,7 +28,7 @@ function getWant(callback: AsyncCallback<Want>): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[Want](arkts-ability-app-ability-want-want-c.md)&gt; | Yes | 回调函数，返回want信息。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[Want](arkts-ability-app-ability-want-want-c.md)&gt; | Yes | Callback used to return the Want. |
 
 ## Examples
 
@@ -51,7 +51,7 @@ featureAbility.getWant((error, data) => {
 function getWant(): Promise<Want>
 ```
 
-获取要拉起的Ability对应的Want。使用Promise异步回调。
+Obtains the Want corresponding to the ability to start. This API uses a promise to return the result.
 
 **Since:** 6
 
@@ -67,7 +67,7 @@ function getWant(): Promise<Want>
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;[Want](arkts-ability-app-ability-want-want-c.md)&gt; | Promise对象，返回want信息。 |
+| Promise&lt;[Want](arkts-ability-app-ability-want-want-c.md)&gt; | Promise used to return the Want. |
 
 ## Examples
 

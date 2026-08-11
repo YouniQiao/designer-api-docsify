@@ -10,12 +10,6 @@ Queue遵循先进先出原则：在尾部增加元素，在头部删除元素。
 
 **系统能力：** SystemCapability.Utils.Lang
 
-## 导入模块
-
-```TypeScript
-import { Queue } from 'kits/@kit.ArkTS';
-```
-
 ## $_iterator
 
 ```TypeScript
@@ -38,7 +32,24 @@ $_iterator(): IterableIterator<T>
 
 | 类型 | 说明 |
 | --- | --- |
-| [IterableIterator](arkts-arkts-iterator-iterableiterator-i.md)&lt;T&gt; |  |
+| IterableIterator&lt;T&gt; |  |
+
+## 示例
+
+```TypeScript
+let queue : Queue<int> = new Queue<int>();
+queue.add(2);
+queue.add(4);
+queue.add(5);
+queue.add(4);
+
+let iter = queue.$_iterator();
+let temp: IteratorResult<int> = iter.next();
+while(temp.value != undefined) {
+  console.info("value:" + temp.value);
+  temp = iter.next();
+}
+```
 
 ## [Symbol.iterator]
 
@@ -62,13 +73,13 @@ $_iterator(): IterableIterator<T>
 
 | 类型 | 说明 |
 | --- | --- |
-| [IterableIterator](arkts-arkts-iterator-iterableiterator-i.md)&lt;T&gt; | 返回一个迭代器，用于遍历Queue中的所有元素。 |
+| IterableIterator&lt;T&gt; | 返回一个迭代器，用于遍历Queue中的所有元素。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 10200011 | The Symbol.iterator method cannot be bound. |
+| [10200011](../errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) | The Symbol.iterator method cannot be bound. |
 
 ## 示例
 
@@ -137,14 +148,16 @@ add(element: T): boolean
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 10200011 | The add method cannot be bound. |
+| [10200011](../errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) | The add method cannot be bound. |
 
 ## 示例
 
+ArkTS-Dyn示例：
+
 ```TypeScript
 class PersonInfo {
-  name: string = "";
-  age: string = "";
+  name: string = ""
+  age: string = ""
 }
 // 创建支持多种类型的Queue实例
 let queue = new Queue<number | string | PersonInfo | number[]>();
@@ -155,6 +168,23 @@ let b = [1, 2, 3];
 queue.add(b);
 let c : PersonInfo = {name : "Dylan", age : "13"};
 queue.add(c);
+console.info("result:", queue.length);  // result: 4
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+class PersonInfo {
+  name: string = "";
+  age: string = "";
+}
+let queue : Queue<int | string | C1 | int[]> = new Queue<int | string | C1 | int[]>();
+let result = queue.add("a");
+let result1 = queue.add(1);
+let b: int[] = [1, 2, 3];
+let result2 = queue.add(b);
+let c : C1 = {name : "Dylan", age : "13"};
+let result3 = queue.add(c);
 console.info("result:", queue.length);  // result: 4
 ```
 
@@ -180,14 +210,22 @@ Queue的构造函数，创建一个新的Queue实例，初始长度为0。Queue�
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 10200012 | The Queue's constructor cannot be directly invoked. |
+| [10200012](../errorcode-utils.md#10200012-构造函数调用异常) | The Queue's constructor cannot be directly invoked. |
 
 ## 示例
+
+ArkTS-Dyn示例：
 
 ```TypeScript
 // 创建Queue实例
 let queue = new Queue<number | string | Object>();
 console.info("queue length:", queue.length);  // queue length: 0
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+let queue : Queue<int | string | Object> = new Queue<int | string | Object>();
 ```
 
 ## forEach
@@ -219,7 +257,7 @@ forEach(callbackFn: (value: T, index?: number, Queue?: Queue<T>) => void, thisAr
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 10200011 | The forEach method cannot be bound. |
+| [10200011](../errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) | The forEach method cannot be bound. |
 
 ## 示例
 
@@ -263,7 +301,7 @@ forEach(callbackFn: QueueForEachCb<T>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callbackFn | [QueueForEachCb](arkts-arkts-queueforeachcb-t.md)&lt;T&gt; | 是 | 回调函数。 |
+| callbackFn | [QueueForEachCb](arkts-arkts-queueforeachcb-t.md)&lt;T&gt; | 是 | 对每个元素执行的回调函数。 |
 
 ## getFirst
 
@@ -293,10 +331,12 @@ getFirst(): T
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 10200011 | The getFirst method cannot be bound. |
-| 10200010 | Container is empty.<br>**适用版本：** 23+  **ArkTS模式：** 该错误码仅适用于ArkTS-Sta。 |
+| [10200011](../errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) | The getFirst method cannot be bound. |
+| [10200010](../errorcode-utils.md#10200010-容器为空) | Container is empty.<br>**适用版本：** 23+  **ArkTS模式：** 该错误码仅适用于ArkTS-Sta。 |
 
 ## 示例
+
+ArkTS-Dyn示例：
 
 ```TypeScript
 let queue = new Queue<number>();
@@ -305,6 +345,18 @@ queue.add(4);
 queue.add(5);
 queue.add(2);
 // 获取队列的头元素
+let result = queue.getFirst();
+console.info("result:", result);  // result: 2
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+let queue = new Queue<int>();
+queue.add(2);
+queue.add(4);
+queue.add(5);
+queue.add(2);
 let result = queue.getFirst();
 console.info("result:", result);  // result: 2
 ```
@@ -337,13 +389,29 @@ pop(): T
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 10200011 | The pop method cannot be bound. |
-| 10200010 | Container is empty.<br>**适用版本：** 23+  **ArkTS模式：** 该错误码仅适用于ArkTS-Sta。 |
+| [10200011](../errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) | The pop method cannot be bound. |
+| [10200010](../errorcode-utils.md#10200010-容器为空) | Container is empty.<br>**适用版本：** 23+  **ArkTS模式：** 该错误码仅适用于ArkTS-Sta。 |
 
 ## 示例
 
+ArkTS-Dyn示例：
+
 ```TypeScript
 let queue = new Queue<number>();
+queue.add(2);
+queue.add(4);
+queue.add(5);
+queue.add(2);
+queue.add(4);
+// 删除队头元素，并返回被删除元素
+let result = queue.pop();
+console.info("result:", result);  // result: 2
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+let queue = new Queue<int>();
 queue.add(2);
 queue.add(4);
 queue.add(5);

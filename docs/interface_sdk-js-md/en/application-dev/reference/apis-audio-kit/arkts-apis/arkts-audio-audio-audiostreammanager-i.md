@@ -1,12 +1,13 @@
 # AudioStreamManager
 
-音频流管理。
+This interface implements audio stream management.
 
-在使用AudioStreamManager的接口之前，需先通过[getStreamManager](arkts-audio-audio-audiomanager-i.md#getstreammanager)获取AudioStreamManager实例。
+Before calling any API in AudioStreamManager, you must use  
+[getStreamManager](arkts-audio-audio-audiomanager-i.md#getstreammanager) to obtain an AudioStreamManager instance.
 
-> **说明：**
+> **NOTE：**
 > 
-> - 本Interface首批接口从API version 9开始支持。
+> - The initial APIs of this interface are supported since API version 9.
 
 **Since:** 9
 
@@ -28,7 +29,7 @@ import { audio } from 'kits/@kit.AudioKit';
 getAudioEffectInfoArray(usage: StreamUsage, callback: AsyncCallback<AudioEffectInfoArray>): void
 ```
 
-获取当前音效模式的信息。使用callback异步回调。
+Obtains information about the audio effect mode in use. This API uses an asynchronous callback to return the result.
 
 **Since:** 10
 
@@ -42,15 +43,15 @@ getAudioEffectInfoArray(usage: StreamUsage, callback: AsyncCallback<AudioEffectI
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| usage | [StreamUsage](arkts-audio-audio-streamusage-e.md) | Yes | 音频流使用类型。 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;AudioEffectInfoArray&gt; | Yes | 回调函数。当获取当前音效模式的信息成功，err为undefined，data为获取到的当前音效模式的信息；否则 为错误对象。 |
+| usage | [StreamUsage](arkts-audio-audio-streamusage-e.md) | Yes | Audio stream usage. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;AudioEffectInfoArray&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined** and **data** is the information about the audio effect mode obtained; otherwise, **err** is an error object. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
-| 6800101 | Parameter verification failed. Return by callback. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
+| [6800101](../errorcode-audio.md#6800101-invalid-parameter) | Parameter verification failed. Return by callback. |
 
 ## getAudioEffectInfoArray
 
@@ -58,7 +59,7 @@ getAudioEffectInfoArray(usage: StreamUsage, callback: AsyncCallback<AudioEffectI
 getAudioEffectInfoArray(usage: StreamUsage): Promise<AudioEffectInfoArray>
 ```
 
-获取当前音效模式的信息。使用Promise异步回调。
+Obtains information about the audio effect mode in use. This API uses a promise to return the result.
 
 **Since:** 10
 
@@ -72,20 +73,20 @@ getAudioEffectInfoArray(usage: StreamUsage): Promise<AudioEffectInfoArray>
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| usage | [StreamUsage](arkts-audio-audio-streamusage-e.md) | Yes | 音频流使用类型。 |
+| usage | [StreamUsage](arkts-audio-audio-streamusage-e.md) | Yes | Audio stream usage. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;AudioEffectInfoArray&gt; | Promise对象，返回当前音效模式的信息。 |
+| Promise&lt;AudioEffectInfoArray&gt; | Promise used to return the information about the audio effect mode obtained. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
-| 6800101 | Parameter verification failed. Return by promise. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
+| [6800101](../errorcode-audio.md#6800101-invalid-parameter) | Parameter verification failed. Return by promise. |
 
 ## getAudioEffectInfoArraySync
 
@@ -93,7 +94,7 @@ getAudioEffectInfoArray(usage: StreamUsage): Promise<AudioEffectInfoArray>
 getAudioEffectInfoArraySync(usage: StreamUsage): AudioEffectInfoArray
 ```
 
-获取当前音效模式的信息。同步返回结果。
+Obtains information about the audio effect mode in use. This API returns the result synchronously.
 
 **Since:** 10
 
@@ -107,20 +108,20 @@ getAudioEffectInfoArraySync(usage: StreamUsage): AudioEffectInfoArray
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| usage | [StreamUsage](arkts-audio-audio-streamusage-e.md) | Yes | 音频流使用类型。 |
+| usage | [StreamUsage](arkts-audio-audio-streamusage-e.md) | Yes | Audio stream usage. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [AudioEffectInfoArray](arkts-audio-audio-audioeffectinfoarray-t.md) | 返回当前音效模式的信息。 |
+| [AudioEffectInfoArray](arkts-audio-audio-audioeffectinfoarray-t.md) | Information about the audio effect mode. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
-| 6800101 | Parameter verification failed. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
+| [6800101](../errorcode-audio.md#6800101-invalid-parameter) | Parameter verification failed. |
 
 ## getCurrentAudioCapturerInfoArray
 
@@ -128,11 +129,12 @@ getAudioEffectInfoArraySync(usage: StreamUsage): AudioEffectInfoArray
 getCurrentAudioCapturerInfoArray(callback: AsyncCallback<AudioCapturerChangeInfoArray>): void
 ```
 
-获取当前音频采集器的信息。使用callback异步回调。
+Obtains the information about this audio capturer. This API uses an asynchronous callback to return the result.
 
-> **说明：**
+> **NOTE：**
 > 
-> 该接口返回的音频采集器信息，可能包含系统内部音频录制流，如语音唤醒、蜂窝通话等。
+> The audio capturer information returned by this API may include internal audio recording streams, such as voice
+> wakeup and cellular calls.
 
 **Since:** 9
 
@@ -146,7 +148,7 @@ getCurrentAudioCapturerInfoArray(callback: AsyncCallback<AudioCapturerChangeInfo
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;AudioCapturerChangeInfoArray&gt; | Yes | 回调函数。当获取当前音频采集器的信息成功，err为undefined，data为获取到的当前音 频采集器的信息；否则为错误对象。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;AudioCapturerChangeInfoArray&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined** and **data** is the audio capturer information obtained; otherwise, **err** is an error object. |
 
 ## getCurrentAudioCapturerInfoArray
 
@@ -154,11 +156,12 @@ getCurrentAudioCapturerInfoArray(callback: AsyncCallback<AudioCapturerChangeInfo
 getCurrentAudioCapturerInfoArray(): Promise<AudioCapturerChangeInfoArray>
 ```
 
-获取当前音频采集器的信息。使用Promise异步回调。
+Obtains the information about this audio capturer. This API uses a promise to return the result.
 
-> **说明：**
+> **NOTE：**
 > 
-> 该接口返回的音频采集器信息，可能包含系统内部音频录制流，如语音唤醒、蜂窝通话等。
+> The audio capturer information returned by this API may include internal audio recording streams, such as voice
+> wakeup and cellular calls.
 
 **Since:** 9
 
@@ -172,7 +175,7 @@ getCurrentAudioCapturerInfoArray(): Promise<AudioCapturerChangeInfoArray>
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;AudioCapturerChangeInfoArray&gt; | Promise对象，返回当前音频采集器信息。 |
+| Promise&lt;AudioCapturerChangeInfoArray&gt; | Promise used to return the audio capturer information. |
 
 ## getCurrentAudioCapturerInfoArraySync
 
@@ -180,11 +183,12 @@ getCurrentAudioCapturerInfoArray(): Promise<AudioCapturerChangeInfoArray>
 getCurrentAudioCapturerInfoArraySync(): AudioCapturerChangeInfoArray
 ```
 
-获取当前音频采集器的信息。同步返回结果。
+Obtains the information about this audio capturer. This API returns the result synchronously.
 
-> **说明：**
+> **NOTE：**
 > 
-> 该接口返回的音频采集器信息，可能包含系统内部音频录制流，如语音唤醒、蜂窝通话等。
+> The audio capturer information returned by this API may include internal audio recording streams, such as voice
+> wakeup and cellular calls.
 
 **Since:** 10
 
@@ -198,7 +202,7 @@ getCurrentAudioCapturerInfoArraySync(): AudioCapturerChangeInfoArray
 
 | Type | Description |
 | --- | --- |
-| [AudioCapturerChangeInfoArray](arkts-audio-audio-audiocapturerchangeinfoarray-t.md) | 返回当前音频采集器信息。 |
+| [AudioCapturerChangeInfoArray](arkts-audio-audio-audiocapturerchangeinfoarray-t.md) | Audio capturer information. |
 
 ## getCurrentAudioRendererInfoArray
 
@@ -206,11 +210,12 @@ getCurrentAudioCapturerInfoArraySync(): AudioCapturerChangeInfoArray
 getCurrentAudioRendererInfoArray(callback: AsyncCallback<AudioRendererChangeInfoArray>): void
 ```
 
-获取当前音频渲染器的信息。使用callback异步回调。
+Obtains the information about this audio renderer. This API uses an asynchronous callback to return the result.
 
-> **说明：**
+> **NOTE：**
 > 
-> 该接口返回的音频渲染器信息，可能包含系统内部音频播放流，如蜂窝通话、超声波等。
+> The audio renderer information returned by this API may include internal audio playback streams, such as
+> cellular calls and ultrasonic streams.
 
 **Since:** 9
 
@@ -224,7 +229,7 @@ getCurrentAudioRendererInfoArray(callback: AsyncCallback<AudioRendererChangeInfo
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;AudioRendererChangeInfoArray&gt; | Yes | 回调函数。当获取当前音频渲染器的信息成功，err为undefined，data为获取到的当前音 频渲染器的信息；否则为错误对象。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;AudioRendererChangeInfoArray&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined** and **data** is the audio renderer information obtained; otherwise, **err** is an error object. |
 
 ## getCurrentAudioRendererInfoArray
 
@@ -232,11 +237,12 @@ getCurrentAudioRendererInfoArray(callback: AsyncCallback<AudioRendererChangeInfo
 getCurrentAudioRendererInfoArray(): Promise<AudioRendererChangeInfoArray>
 ```
 
-获取当前音频渲染器的信息。使用Promise异步回调。
+Obtains the information about this audio renderer. This API uses a promise to return the result.
 
-> **说明：**
+> **NOTE：**
 > 
-> 该接口返回的音频渲染器信息，可能包含系统内部音频播放流，如蜂窝通话、超声波等。
+> The audio renderer information returned by this API may include internal audio playback streams, such as
+> cellular calls and ultrasonic streams.
 
 **Since:** 9
 
@@ -250,7 +256,7 @@ getCurrentAudioRendererInfoArray(): Promise<AudioRendererChangeInfoArray>
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;AudioRendererChangeInfoArray&gt; | Promise对象，返回当前音频渲染器信息。 |
+| Promise&lt;AudioRendererChangeInfoArray&gt; | Promise used to return the audio renderer information. |
 
 ## getCurrentAudioRendererInfoArraySync
 
@@ -258,11 +264,12 @@ getCurrentAudioRendererInfoArray(): Promise<AudioRendererChangeInfoArray>
 getCurrentAudioRendererInfoArraySync(): AudioRendererChangeInfoArray
 ```
 
-获取当前音频渲染器的信息。同步返回结果。
+Obtains the information about this audio renderer. This API returns the result synchronously.
 
-> **说明：**
+> **NOTE：**
 > 
-> 该接口返回的音频渲染器信息，可能包含系统内部音频播放流，如蜂窝通话、超声波等。
+> The audio renderer information returned by this API may include internal audio playback streams, such as
+> cellular calls and ultrasonic streams.
 
 **Since:** 10
 
@@ -276,7 +283,7 @@ getCurrentAudioRendererInfoArraySync(): AudioRendererChangeInfoArray
 
 | Type | Description |
 | --- | --- |
-| [AudioRendererChangeInfoArray](arkts-audio-audio-audiorendererchangeinfoarray-t.md) | 返回当前音频渲染器信息。 |
+| [AudioRendererChangeInfoArray](arkts-audio-audio-audiorendererchangeinfoarray-t.md) | Audio renderer information. |
 
 ## isAcousticEchoCancelerSupported
 
@@ -284,7 +291,7 @@ getCurrentAudioRendererInfoArraySync(): AudioRendererChangeInfoArray
 isAcousticEchoCancelerSupported(sourceType: SourceType): boolean
 ```
 
-查询指定的音源类型是否支持回声消除。
+Checks whether the specified audio source type supports echo cancellation.
 
 **Since:** 20
 
@@ -298,19 +305,19 @@ isAcousticEchoCancelerSupported(sourceType: SourceType): boolean
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| sourceType | [SourceType](../../apis-arkweb/arkts-apis/arkts-arkweb-webview-sourcetype-e.md) | Yes | 音源类型。 |
+| sourceType | [SourceType](../../apis-arkweb/arkts-apis/arkts-arkweb-webview-sourcetype-e.md) | Yes | Audio source type. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| boolean | 是否支持回声消除。true表示支持回声消除，false表示不支持回声消除。 |
+| boolean | Check result for whether echo cancellation is supported. **true** if supported, **false** otherwise. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 6800101 | Parameter verification failed. |
+| [6800101](../errorcode-audio.md#6800101-invalid-parameter) | Parameter verification failed. |
 
 ## isActive
 
@@ -318,7 +325,7 @@ isAcousticEchoCancelerSupported(sourceType: SourceType): boolean
 isActive(volumeType: AudioVolumeType, callback: AsyncCallback<boolean>): void
 ```
 
-获取指定音频流活跃状态。使用callback异步回调。
+Checks whether a stream is active. This API uses an asynchronous callback to return the result.
 
 **Since:** 9
 
@@ -336,8 +343,8 @@ isActive(volumeType: AudioVolumeType, callback: AsyncCallback<boolean>): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| volumeType | [AudioVolumeType](arkts-audio-audio-audiovolumetype-e.md) | Yes | 音频流类型。 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;boolean&gt; | Yes | 回调函数。当获取指定音频流活跃状态成功，err为undefined，data为true表示活跃，false表示不活跃；否则为错误对象。 |
+| volumeType | [AudioVolumeType](arkts-audio-audio-audiovolumetype-e.md) | Yes | Audio stream types. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;boolean&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined** and **data** is **true** if the stream is active or **false** if not active; otherwise, **err** is an error object. |
 
 ## isActive
 
@@ -345,7 +352,7 @@ isActive(volumeType: AudioVolumeType, callback: AsyncCallback<boolean>): void
 isActive(volumeType: AudioVolumeType): Promise<boolean>
 ```
 
-获取指定音频流是否为活跃状态。使用Promise异步回调。
+Checks whether a stream is active. This API uses a promise to return the result.
 
 **Since:** 9
 
@@ -363,13 +370,13 @@ isActive(volumeType: AudioVolumeType): Promise<boolean>
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| volumeType | [AudioVolumeType](arkts-audio-audio-audiovolumetype-e.md) | Yes | 音频流类型。 |
+| volumeType | [AudioVolumeType](arkts-audio-audio-audiovolumetype-e.md) | Yes | Audio stream types. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;boolean&gt; | Promise对象。返回true表示流状态为活跃；返回false表示流状态不活跃。 |
+| Promise&lt;boolean&gt; | Promise used to return the result, indicating whether the stream is active. **true** if active, **false** otherwise. |
 
 ## isActiveSync
 
@@ -377,7 +384,7 @@ isActive(volumeType: AudioVolumeType): Promise<boolean>
 isActiveSync(volumeType: AudioVolumeType): boolean
 ```
 
-获取指定音频流是否为活跃状态。同步返回结果。
+Checks whether a stream is active. This API returns the result synchronously.
 
 **Since:** 10
 
@@ -395,20 +402,20 @@ isActiveSync(volumeType: AudioVolumeType): boolean
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| volumeType | [AudioVolumeType](arkts-audio-audio-audiovolumetype-e.md) | Yes | 音频流类型。 |
+| volumeType | [AudioVolumeType](arkts-audio-audio-audiovolumetype-e.md) | Yes | Audio stream types. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| boolean | 流的活跃状态。返回true表示活跃，返回false表示不活跃。 |
+| boolean | Check result for whether the stream is active. **true** if active, **false** otherwise. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
-| 6800101 | Parameter verification failed. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
+| [6800101](../errorcode-audio.md#6800101-invalid-parameter) | Parameter verification failed. |
 
 ## isAudioLoopbackSupported
 
@@ -416,7 +423,7 @@ isActiveSync(volumeType: AudioVolumeType): boolean
 isAudioLoopbackSupported(mode: AudioLoopbackMode): boolean
 ```
 
-查询当前系统是否支持指定的音频返听模式。
+Checks whether the current system supports the specified audio loopback mode.
 
 **Since:** 20
 
@@ -430,19 +437,19 @@ isAudioLoopbackSupported(mode: AudioLoopbackMode): boolean
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| mode | [AudioLoopbackMode](arkts-audio-audio-audioloopbackmode-e.md) | Yes | 音频返听模式。 |
+| mode | [AudioLoopbackMode](arkts-audio-audio-audioloopbackmode-e.md) | Yes | Audio loopback mode. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| boolean | 是否支持指定的音频返听模式。true表示支持，false表示不支持。 |
+| boolean | Check result for whether the audio loopback mode is supported. **true** if supported, **false** otherwise. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 6800101 | Parameter verification failed. |
+| [6800101](../errorcode-audio.md#6800101-invalid-parameter) | Parameter verification failed. |
 
 ## isDirectPlaybackSupported
 
@@ -450,7 +457,7 @@ isAudioLoopbackSupported(mode: AudioLoopbackMode): boolean
 isDirectPlaybackSupported(streamInfo: AudioStreamInfo, usage: StreamUsage): boolean
 ```
 
-查询指定音频流信息和使用场景下是否支持直通播放。
+Return if direct playback is supported for the specific audio stream info and usage type in current device situation.
 
 **Since:** 26.0.0
 
@@ -466,14 +473,14 @@ isDirectPlaybackSupported(streamInfo: AudioStreamInfo, usage: StreamUsage): bool
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| streamInfo | [AudioStreamInfo](arkts-audio-audio-audiostreaminfo-i.md) | Yes | 音频流信息，用于描述基础音频格式。 |
-| usage | [StreamUsage](arkts-audio-audio-streamusage-e.md) | Yes | 音频流使用场景，用于决定音频设备和通路类型的选择结果。 |
+| streamInfo | [AudioStreamInfo](arkts-audio-audio-audiostreaminfo-i.md) | Yes | reference of stream info structure to describe basic audio format. |
+| usage | [StreamUsage](arkts-audio-audio-streamusage-e.md) | Yes | stream usage type used to decide the audio device and pipe type selection result. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| boolean | 是否支持直通播放。true表示支持，false表示不支持。 |
+| boolean | True if direct playback is supported in this situation. |
 
 ## isFastPlaybackSupported
 
@@ -481,7 +488,7 @@ isDirectPlaybackSupported(streamInfo: AudioStreamInfo, usage: StreamUsage): bool
 isFastPlaybackSupported(streamInfo: AudioStreamInfo, usage: StreamUsage): boolean
 ```
 
-查询指定音频流信息和使用场景下是否支持低时延播放。
+Return if fast playback is supported for the specific audio stream info and usage type in current device situation.
 
 **Since:** 26.0.0
 
@@ -497,14 +504,14 @@ isFastPlaybackSupported(streamInfo: AudioStreamInfo, usage: StreamUsage): boolea
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| streamInfo | [AudioStreamInfo](arkts-audio-audio-audiostreaminfo-i.md) | Yes | 音频流信息，用于描述基础音频格式。 |
-| usage | [StreamUsage](arkts-audio-audio-streamusage-e.md) | Yes | 音频流使用场景，用于决定音频设备和通路类型的选择结果。 |
+| streamInfo | [AudioStreamInfo](arkts-audio-audio-audiostreaminfo-i.md) | Yes | reference of stream info structure to describe basic audio format. |
+| usage | [StreamUsage](arkts-audio-audio-streamusage-e.md) | Yes | stream usage type used to decide the audio device and pipe type selection result. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| boolean | 是否支持低时延播放。true表示支持，false表示不支持。 |
+| boolean | True if fast playback is supported in this situation. |
 
 ## isFastRecordingSupported
 
@@ -512,7 +519,7 @@ isFastPlaybackSupported(streamInfo: AudioStreamInfo, usage: StreamUsage): boolea
 isFastRecordingSupported(streamInfo: AudioStreamInfo, source: SourceType): boolean
 ```
 
-查询指定音频流信息和音源类型下是否支持低时延录制。
+Return if fast recording is supported for the specific audio stream info and usage type in current device situation.
 
 **Since:** 26.0.0
 
@@ -528,14 +535,14 @@ isFastRecordingSupported(streamInfo: AudioStreamInfo, source: SourceType): boole
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| streamInfo | [AudioStreamInfo](arkts-audio-audio-audiostreaminfo-i.md) | Yes | 音频流信息，用于描述基础音频格式。 |
-| source | [SourceType](../../apis-arkweb/arkts-apis/arkts-arkweb-webview-sourcetype-e.md) | Yes | 音源类型，用于决定音频设备和通路类型的选择结果。 |
+| streamInfo | [AudioStreamInfo](arkts-audio-audio-audiostreaminfo-i.md) | Yes | reference of stream info structure to describe basic audio format. |
+| source | [SourceType](../../apis-arkweb/arkts-apis/arkts-arkweb-webview-sourcetype-e.md) | Yes | stream source type used to decide the audio device and pipe type selection result. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| boolean | 是否支持低时延录制。true表示支持，false表示不支持。 |
+| boolean | True if fast recording is supported in this situation. |
 
 ## isIntelligentNoiseReductionEnabledForCurrentDevice
 
@@ -543,7 +550,7 @@ isFastRecordingSupported(streamInfo: AudioStreamInfo, source: SourceType): boole
 isIntelligentNoiseReductionEnabledForCurrentDevice(sourceType: SourceType): boolean
 ```
 
-查询指定的音源类型智能降噪开关是否打开。
+Checks whether the intelligent noise reduction feature is enabled for the audio stream of the specified source type.
 
 **Since:** 21
 
@@ -557,19 +564,19 @@ isIntelligentNoiseReductionEnabledForCurrentDevice(sourceType: SourceType): bool
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| sourceType | [SourceType](../../apis-arkweb/arkts-apis/arkts-arkweb-webview-sourcetype-e.md) | Yes | 表示音源类型。 |
+| sourceType | [SourceType](../../apis-arkweb/arkts-apis/arkts-arkweb-webview-sourcetype-e.md) | Yes | Audio source type. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| boolean | 智能降噪开关的状态。true表示打开，false表示关闭。 |
+| boolean | Check result for whether the intelligent noise reduction feature is enabled. **true** if enabled, **false** otherwise. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 6800101 | Parameter verification failed. |
+| [6800101](../errorcode-audio.md#6800101-invalid-parameter) | Parameter verification failed. |
 
 ## isMultichannelPlaybackSupported
 
@@ -577,7 +584,7 @@ isIntelligentNoiseReductionEnabledForCurrentDevice(sourceType: SourceType): bool
 isMultichannelPlaybackSupported(streamInfo: AudioStreamInfo, usage: StreamUsage): boolean
 ```
 
-查询指定音频流信息和使用场景下是否支持多声道播放。
+Return if multichannel playback is supported for the specific audio stream info and usage type in current device situation.
 
 **Since:** 26.0.0
 
@@ -593,14 +600,14 @@ isMultichannelPlaybackSupported(streamInfo: AudioStreamInfo, usage: StreamUsage)
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| streamInfo | [AudioStreamInfo](arkts-audio-audio-audiostreaminfo-i.md) | Yes | 音频流信息，用于描述基础音频格式。 |
-| usage | [StreamUsage](arkts-audio-audio-streamusage-e.md) | Yes | 音频流使用场景，用于决定音频设备和通路类型的选择结果。 |
+| streamInfo | [AudioStreamInfo](arkts-audio-audio-audiostreaminfo-i.md) | Yes | reference of stream info structure to describe basic audio format. |
+| usage | [StreamUsage](arkts-audio-audio-streamusage-e.md) | Yes | stream usage type used to decide the audio device and pipe type selection result. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| boolean | 是否支持多声道播放。true表示支持，false表示不支持。 |
+| boolean | True if multichannel playback is supported in this situation. |
 
 ## isOffloadPlaybackSupported
 
@@ -608,7 +615,7 @@ isMultichannelPlaybackSupported(streamInfo: AudioStreamInfo, usage: StreamUsage)
 isOffloadPlaybackSupported(streamInfo: AudioStreamInfo, usage: StreamUsage): boolean
 ```
 
-查询指定音频流信息和使用场景下是否支持低功耗通路播放。
+Return if offload playback is supported for the specific audio stream info and usage type in current device situation.
 
 **Since:** 26.0.0
 
@@ -624,14 +631,14 @@ isOffloadPlaybackSupported(streamInfo: AudioStreamInfo, usage: StreamUsage): boo
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| streamInfo | [AudioStreamInfo](arkts-audio-audio-audiostreaminfo-i.md) | Yes | 音频流信息，用于描述基础音频格式。 |
-| usage | [StreamUsage](arkts-audio-audio-streamusage-e.md) | Yes | 音频流使用场景，用于决定音频设备和通路类型的选择结果。 |
+| streamInfo | [AudioStreamInfo](arkts-audio-audio-audiostreaminfo-i.md) | Yes | reference of stream info structure to describe basic audio format. |
+| usage | [StreamUsage](arkts-audio-audio-streamusage-e.md) | Yes | stream usage type used to decide the audio device and pipe type selection result. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| boolean | 是否支持低功耗通路播放。true表示支持，false表示不支持。 |
+| boolean | True if offload playback is supported in this situation. |
 
 ## isRecordingAvailable
 
@@ -639,7 +646,7 @@ isOffloadPlaybackSupported(streamInfo: AudioStreamInfo, usage: StreamUsage): boo
 isRecordingAvailable(capturerInfo: AudioCapturerInfo): boolean
 ```
 
-检查传入的音频采集器信息中音源类型的录制是否可以启动成功。
+Checks whether recording can be started based on the audio source type in the audio capturer information.
 
 **Since:** 20
 
@@ -653,19 +660,19 @@ isRecordingAvailable(capturerInfo: AudioCapturerInfo): boolean
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| capturerInfo | [AudioCapturerInfo](arkts-audio-audio-audiocapturerinfo-i.md) | Yes | 音频采集器信息。 |
+| capturerInfo | [AudioCapturerInfo](arkts-audio-audio-audiocapturerinfo-i.md) | Yes | Audio capturer information. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| boolean | 代表录制是否可以启动成功。true表示成功，false表示失败。 &lt;br&gt;仅检测是否可以获取音频采集器信息中音源类型的焦点。通常在音频录制启动前调用，否则已存在的录制流可能会拒绝其启动。 |
+| boolean | Check result for whether recording can be started. **true** if recording can be started, **false** otherwise. &lt;br&gt;This API checks whether the specified audio source type in the capturer information can acquire focus. It should be called before starting audio recording to avoid conflicts with existing recording streams. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 6800101 | Parameter verification failed. |
+| [6800101](../errorcode-audio.md#6800101-invalid-parameter) | Parameter verification failed. |
 
 ## isStreamActive
 
@@ -673,7 +680,7 @@ isRecordingAvailable(capturerInfo: AudioCapturerInfo): boolean
 isStreamActive(streamUsage: StreamUsage): boolean
 ```
 
-获取指定音频流是否为活跃状态。同步返回结果。
+Checks whether a stream is active. This API returns the result synchronously.
 
 **Since:** 20
 
@@ -687,19 +694,19 @@ isStreamActive(streamUsage: StreamUsage): boolean
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| streamUsage | [StreamUsage](arkts-audio-audio-streamusage-e.md) | Yes | 音频流使用类型。 |
+| streamUsage | [StreamUsage](arkts-audio-audio-streamusage-e.md) | Yes | Audio stream usage. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| boolean | 流是否处于活跃状态。返回true表示活跃，返回false表示不活跃。 |
+| boolean | Check result for whether the stream is active. **true** if active, **false** otherwise. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 6800101 | Parameter verification failed. |
+| [6800101](../errorcode-audio.md#6800101-invalid-parameter) | Parameter verification failed. |
 
 ## off('audioRendererChange')
 
@@ -707,11 +714,12 @@ isStreamActive(streamUsage: StreamUsage): boolean
 off(type: 'audioRendererChange', callback?: Callback<AudioRendererChangeInfoArray>): void
 ```
 
-取消监听音频渲染器更改事件。使用callback异步回调。
+Unsubscribes from the audio renderer change event. This API uses an asynchronous callback to return the result.
 
-> **说明：**
+> **NOTE：**
 > 
-> 该接口返回的音频渲染器信息，可能包含系统内部音频播放流，如蜂窝通话、超声波等。
+> The audio renderer information returned by this API may include internal audio playback streams, such as
+> cellular calls and ultrasonic streams.
 
 **Since:** 9
 
@@ -725,14 +733,14 @@ off(type: 'audioRendererChange', callback?: Callback<AudioRendererChangeInfoArra
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'audioRendererChange' | Yes | 事件回调类型，支持的事件为'audioRendererChange'，当取消监听音频渲染器更改事件时，触发该事件。 |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;AudioRendererChangeInfoArray&gt; | No | 回调函数，返回当前音频渲染器信息。<br>**Since:** 18 |
+| type | 'audioRendererChange' | Yes | Event type. The event **'audioRendererChange'** is triggered when the audio playback stream status or device is changed. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;AudioRendererChangeInfoArray&gt; | No | Callback used to return the audio renderer information.<br>**Since:** 18 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 6800101 | Parameter verification failed. |
+| [6800101](../errorcode-audio.md#6800101-invalid-parameter) | Parameter verification failed. |
 
 ## off('audioCapturerChange')
 
@@ -740,11 +748,12 @@ off(type: 'audioRendererChange', callback?: Callback<AudioRendererChangeInfoArra
 off(type: 'audioCapturerChange', callback?: Callback<AudioCapturerChangeInfoArray>): void
 ```
 
-取消监听音频采集器更改事件。使用callback异步回调。
+Unsubscribes from the audio capturer change event. This API uses an asynchronous callback to return the result.
 
-> **说明：**
+> **NOTE：**
 > 
-> 该接口返回的音频采集器信息，可能包含系统内部音频录制流，如语音唤醒、蜂窝通话等。
+> The audio capturer information returned by this API may include internal audio recording streams, such as voice
+> wakeup and cellular calls.
 
 **Since:** 9
 
@@ -758,14 +767,14 @@ off(type: 'audioCapturerChange', callback?: Callback<AudioCapturerChangeInfoArra
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'audioCapturerChange' | Yes | 事件回调类型，支持的事件为'audioCapturerChange'，当取消监听音频采集器更改事件时，触发该事件。 |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;AudioCapturerChangeInfoArray&gt; | No | 回调函数，返回当前音频采集器信息。<br>**Since:** 18 |
+| type | 'audioCapturerChange' | Yes | Event type. The event **'audioCapturerChange'** is triggered when the audio capturer is changed. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;AudioCapturerChangeInfoArray&gt; | No | Callback used to return the audio capturer information.<br>**Since:** 18 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 6800101 | Parameter verification failed. |
+| [6800101](../errorcode-audio.md#6800101-invalid-parameter) | Parameter verification failed. |
 
 ## offAudioCapturerChange
 
@@ -793,7 +802,7 @@ Unsubscribes to audio capturer change events.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 6800101 | Parameter verification failed. |
+| [6800101](../errorcode-audio.md#6800101-invalid-parameter) | Parameter verification failed. |
 
 ## offAudioRendererChange
 
@@ -821,7 +830,7 @@ Unsubscribes to audio renderer change events.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 6800101 | Parameter verification failed. |
+| [6800101](../errorcode-audio.md#6800101-invalid-parameter) | Parameter verification failed. |
 
 ## on('audioRendererChange')
 
@@ -829,11 +838,12 @@ Unsubscribes to audio renderer change events.
 on(type: 'audioRendererChange', callback: Callback<AudioRendererChangeInfoArray>): void
 ```
 
-监听音频渲染器更改事件（当音频播放流状态变化或设备变化时触发）。使用callback异步回调。
+Subscribes to the audio renderer change event, which is triggered when the audio playback stream status or device is changed. This API uses an asynchronous callback to return the result.
 
-> **说明：**
+> **NOTE：**
 > 
-> 该接口返回的音频渲染器信息，可能包含系统内部音频播放流，如蜂窝通话、超声波等。
+> The audio renderer information returned by this API may include internal audio playback streams, such as
+> cellular calls and ultrasonic streams.
 
 **Since:** 9
 
@@ -847,15 +857,15 @@ on(type: 'audioRendererChange', callback: Callback<AudioRendererChangeInfoArray>
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'audioRendererChange' | Yes | 事件回调类型，支持的事件为'audioRendererChange'，当音频播放流状态变化或设备变化时，触发该事件。 |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;AudioRendererChangeInfoArray&gt; | Yes | 回调函数，返回当前音频渲染器信息。 |
+| type | 'audioRendererChange' | Yes | Event type. The event **'audioRendererChange'** is triggered when the audio playback stream status or device is changed. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;AudioRendererChangeInfoArray&gt; | Yes | Callback used to return the audio renderer information. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
-| 6800101 | Parameter verification failed. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
+| [6800101](../errorcode-audio.md#6800101-invalid-parameter) | Parameter verification failed. |
 
 ## on('audioCapturerChange')
 
@@ -863,11 +873,12 @@ on(type: 'audioRendererChange', callback: Callback<AudioRendererChangeInfoArray>
 on(type: 'audioCapturerChange', callback: Callback<AudioCapturerChangeInfoArray>): void
 ```
 
-监听音频采集器更改事件（当音频录制流状态变化或设备变化时触发）。使用callback异步回调。
+Subscribes to the audio capturer change event, which is triggered when the audio recording stream status or device is changed. This API uses an asynchronous callback to return the result.
 
-> **说明：**
+> **NOTE：**
 > 
-> 该接口返回的音频采集器信息，可能包含系统内部音频录制流，如语音唤醒、蜂窝通话等。
+> The audio capturer information returned by this API may include internal audio recording streams, such as voice
+> wakeup and cellular calls.
 
 **Since:** 9
 
@@ -881,15 +892,15 @@ on(type: 'audioCapturerChange', callback: Callback<AudioCapturerChangeInfoArray>
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'audioCapturerChange' | Yes | 事件回调类型，支持的事件为'audioCapturerChange'，当音频录制流状态变化或设备变化时，触发该事件。 |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;AudioCapturerChangeInfoArray&gt; | Yes | 回调函数，返回当前音频采集器信息。 |
+| type | 'audioCapturerChange' | Yes | Event type. The event **'audioCapturerChange'** is triggered when the audio recording stream status or device is changed. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;AudioCapturerChangeInfoArray&gt; | Yes | Callback used to return the audio capturer information. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
-| 6800101 | Parameter verification failed. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
+| [6800101](../errorcode-audio.md#6800101-invalid-parameter) | Parameter verification failed. |
 
 ## onAudioCapturerChange
 
@@ -917,7 +928,7 @@ Listens for audio capturer change events. When there is any audio capturer chang
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 6800101 | Parameter verification failed. |
+| [6800101](../errorcode-audio.md#6800101-invalid-parameter) | Parameter verification failed. |
 
 ## onAudioRendererChange
 
@@ -945,5 +956,5 @@ Listens for audio renderer change events. When there is any audio renderer chang
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 6800101 | Parameter verification failed. |
+| [6800101](../errorcode-audio.md#6800101-invalid-parameter) | Parameter verification failed. |
 

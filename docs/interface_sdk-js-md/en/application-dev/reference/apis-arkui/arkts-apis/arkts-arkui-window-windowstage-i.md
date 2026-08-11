@@ -1,8 +1,9 @@
 # WindowStage
 
-窗口管理器。管理各个基本窗口单元，即[Window](arkts-window.md)实例。
+Implements a window manager, which manages each basic window unit, that is, [Window](arkts-window.md) instance.
 
-下列API示例中都需在[onWindowStageCreate()](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-uiability-uiability-c.md/arkts-ability-app-ability-uiability-uiability-c.md#onwindowstagecreate)函数中使用WindowStage的实例调用对应方法。
+Before calling any of the following APIs, you must use  
+[onWindowStageCreate()](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-uiability-uiability-c.md/arkts-ability-app-ability-uiability-uiability-c.md#onwindowstagecreate) to create a WindowStage instance.
 
 **Since:** 9
 
@@ -24,9 +25,7 @@ import { window } from 'kits/@kit.ArkUI';
 createSubWindow(name: string): Promise<Window>
 ```
 
-创建该WindowStage实例下的子窗口，使用Promise异步回调。
-
-子窗口创建后默认是[沉浸式布局](../../windowmanager/window-terminology.md#沉浸式布局)。
+Create sub window of the stage.
 
 **Since:** 9
 
@@ -44,21 +43,21 @@ createSubWindow(name: string): Promise<Window>
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| name | string | Yes | 子窗口的名字。 |
+| name | string | Yes | window name of sub window |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;Window&gt; | Promise对象。返回当前WindowStage下的子窗口对象。 |
+| Promise&lt;Window&gt; | Promise used to return the subwindow. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. Possible cause: Incorrect parameter types. |
-| 1300002 | This window state is abnormal. Possible cause: The subWindow has been created and cannot be created again. |
-| 1300005 | This window stage is abnormal.<br>**Applicable version:** 9 and later |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible cause: Incorrect parameter types. |
+| [1300002](../errorcode-window.md#1300002-abnormal-window-state) | This window state is abnormal. Possible cause: The subWindow has been created and cannot be created again. |
+| [1300005](../errorcode-window.md#1300005-abnormal-windowstage) | This window stage is abnormal.<br>**Applicable version:** 9 and later |
 
 ## createSubWindow
 
@@ -66,9 +65,7 @@ createSubWindow(name: string): Promise<Window>
 createSubWindow(name: string, callback: AsyncCallback<Window>): void
 ```
 
-创建该WindowStage实例下的子窗口，使用callback异步回调。
-
-子窗口创建后默认是[沉浸式布局](../../windowmanager/window-terminology.md#沉浸式布局)。
+Create sub window of the stage.
 
 **Since:** 9
 
@@ -86,16 +83,16 @@ createSubWindow(name: string, callback: AsyncCallback<Window>): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| name | string | Yes | 子窗口的名字。 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Window&gt; | Yes | 回调函数。返回当前WindowStage下的子窗口对象。 |
+| name | string | Yes | window name of sub window |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Window&gt; | Yes | Callback used to return the subwindow. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. Possible cause: Incorrect parameter types. |
-| 1300002 | This window state is abnormal. Possible cause: The subWindow has been created and cannot be created again. |
-| 1300005 | This window stage is abnormal.<br>**Applicable version:** 9 and later |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible cause: Incorrect parameter types. |
+| [1300002](../errorcode-window.md#1300002-abnormal-window-state) | This window state is abnormal. Possible cause: The subWindow has been created and cannot be created again. |
+| [1300005](../errorcode-window.md#1300005-abnormal-windowstage) | This window stage is abnormal.<br>**Applicable version:** 9 and later |
 
 ## createSubWindowWithOptions
 
@@ -103,11 +100,7 @@ createSubWindow(name: string, callback: AsyncCallback<Window>): void
 createSubWindowWithOptions(name: string, options: SubWindowOptions): Promise<Window>
 ```
 
-创建该WindowStage实例下的子窗口，使用Promise异步回调。
-
-非[自由窗口](../../windowmanager/window-terminology.md#自由窗口)状态下，子窗口创建后默认是[沉浸式布局](../../windowmanager/window-terminology.md#沉浸式布局)。
-
-自由窗口状态下，子窗口参数[decorEnabled](arkts-apis-window-i.md#subwindowoptions11)为false时，子窗口创建后为沉浸式布局；子窗口参数decorEnabled为true，子窗口创建后为非沉浸式布局。
+Create sub window of the stage.
 
 **Since:** 11
 
@@ -125,8 +118,8 @@ createSubWindowWithOptions(name: string, options: SubWindowOptions): Promise<Win
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| name | string | Yes | 子窗口的名字。 |
-| options | [SubWindowOptions](arkts-arkui-window-subwindowoptions-i.md) | Yes | 子窗口参数。 |
+| name | string | Yes | window name of sub window |
+| options | [SubWindowOptions](arkts-arkui-window-subwindowoptions-i.md) | Yes | options of sub window creation |
 
 **Return value:**
 
@@ -138,10 +131,10 @@ createSubWindowWithOptions(name: string, options: SubWindowOptions): Promise<Win
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. Possible cause: Incorrect parameter types. |
-| 801 | Capability not supported. Failed to call the API due to limited device capabilities. |
-| 1300002 | This window state is abnormal. Possible cause: 1. The window is not created or destroyed; 2. The subWindow has been created and cannot be created again. |
-| 1300005 | This window stage is abnormal. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible cause: Incorrect parameter types. |
+| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. Failed to call the API due to limited device capabilities. |
+| [1300002](../errorcode-window.md#1300002-abnormal-window-state) | This window state is abnormal. Possible cause: 1. The window is not created or destroyed; 2. The subWindow has been created and cannot be created again. |
+| [1300005](../errorcode-window.md#1300005-abnormal-windowstage) | This window stage is abnormal. |
 
 ## getMainWindow
 
@@ -149,9 +142,7 @@ createSubWindowWithOptions(name: string, options: SubWindowOptions): Promise<Win
 getMainWindow(): Promise<Window>
 ```
 
-获取该WindowStage实例下的主窗口，使用Promise异步回调。
-
-调用该接口前，建议先通过[loadContent](../apis-arkui/arkts-apis-window-WindowStage.md#loadcontent9)方法或者[setUIContent](arkts-apis-window-Window.md#setuicontent9-1)方法完成页面加载。
+Get main window of the stage.
 
 **Since:** 9
 
@@ -169,14 +160,14 @@ getMainWindow(): Promise<Window>
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;Window&gt; | Promise对象。返回当前WindowStage下的主窗口对象。 |
+| Promise&lt;Window&gt; | Callback used to return the subwindow. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 1300002 | This window state is abnormal. Possible cause: The window is not created or destroyed. |
-| 1300005 | This window stage is abnormal. |
+| [1300002](../errorcode-window.md#1300002-abnormal-window-state) | This window state is abnormal. Possible cause: The window is not created or destroyed. |
+| [1300005](../errorcode-window.md#1300005-abnormal-windowstage) | This window stage is abnormal. |
 
 ## getMainWindow
 
@@ -184,9 +175,7 @@ getMainWindow(): Promise<Window>
 getMainWindow(callback: AsyncCallback<Window>): void
 ```
 
-获取该WindowStage实例下的主窗口，使用callback异步回调。
-
-调用该接口前，建议先通过[loadContent](../apis-arkui/arkts-apis-window-WindowStage.md#loadcontent9)方法或者[setUIContent](arkts-apis-window-Window.md#setuicontent9-1)方法完成页面加载。
+Get main window of the stage.
 
 **Since:** 9
 
@@ -204,14 +193,14 @@ getMainWindow(callback: AsyncCallback<Window>): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Window&gt; | Yes | 回调函数。返回当前WindowStage下的主窗口对象。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Window&gt; | Yes | Callback used to return the main window. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 1300002 | This window state is abnormal. Possible cause: The window is not created or destroyed. |
-| 1300005 | This window stage is abnormal. |
+| [1300002](../errorcode-window.md#1300002-abnormal-window-state) | This window state is abnormal. Possible cause: The window is not created or destroyed. |
+| [1300005](../errorcode-window.md#1300005-abnormal-windowstage) | This window stage is abnormal. |
 
 ## getMainWindowSync
 
@@ -219,7 +208,7 @@ getMainWindow(callback: AsyncCallback<Window>): void
 getMainWindowSync(): Window
 ```
 
-获取该WindowStage实例下的主窗口，该接口为同步调用。
+Get main window of the stage.
 
 **Since:** 9
 
@@ -237,14 +226,14 @@ getMainWindowSync(): Window
 
 | Type | Description |
 | --- | --- |
-| [Window](arkts-arkui-window-window-i.md) | 返回当前WindowStage下的主窗口对象。 |
+| [Window](arkts-arkui-window-window-i.md) |  |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 1300002 | This window state is abnormal. Possible cause: The window is not created or destroyed. |
-| 1300005 | This window stage is abnormal. |
+| [1300002](../errorcode-window.md#1300002-abnormal-window-state) | This window state is abnormal. Possible cause: The window is not created or destroyed. |
+| [1300005](../errorcode-window.md#1300005-abnormal-windowstage) | This window stage is abnormal. |
 
 ## getSubWindow
 
@@ -252,7 +241,7 @@ getMainWindowSync(): Window
 getSubWindow(): Promise<Array<Window>>
 ```
 
-获取该WindowStage实例下的所有子窗口，使用Promise异步回调。
+Get sub window of the stage.
 
 **Since:** 9
 
@@ -270,14 +259,14 @@ getSubWindow(): Promise<Array<Window>>
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;Array&lt;Window&gt;&gt; | Promise对象。返回当前WindowStage下的所有子窗口对象。 |
+| Promise&lt;Array&lt;Window&gt;&gt; |  |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 1300002 | This window state is abnormal. Possible cause: The window is not created or destroyed.<br>**Applicable version:** 10 and later |
-| 1300005 | This window stage is abnormal.<br>**Applicable version:** 9 and later |
+| [1300002](../errorcode-window.md#1300002-abnormal-window-state) | This window state is abnormal. Possible cause: The window is not created or destroyed.<br>**Applicable version:** 10 and later |
+| [1300005](../errorcode-window.md#1300005-abnormal-windowstage) | This window stage is abnormal.<br>**Applicable version:** 9 and later |
 
 ## getSubWindow
 
@@ -285,7 +274,7 @@ getSubWindow(): Promise<Array<Window>>
 getSubWindow(callback: AsyncCallback<Array<Window>>): void
 ```
 
-获取该WindowStage实例下的所有子窗口，使用callback异步回调。
+Get sub window of the stage.
 
 **Since:** 9
 
@@ -303,14 +292,14 @@ getSubWindow(callback: AsyncCallback<Array<Window>>): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;Window&gt;&gt; | Yes | 回调函数。返回当前WindowStage下的所有子窗口对象。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;Window&gt;&gt; | Yes | Callback used to return all the subwindows. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 1300002 | This window state is abnormal.<br>**Applicable version:** 10 and later |
-| 1300005 | This window stage is abnormal.<br>**Applicable version:** 9 and later |
+| [1300002](../errorcode-window.md#1300002-abnormal-window-state) | This window state is abnormal. Possible cause: The window is not created or destroyed.<br>**Applicable version:** 10 and later |
+| [1300005](../errorcode-window.md#1300005-abnormal-windowstage) | This window stage is abnormal.<br>**Applicable version:** 9 and later |
 
 ## isWindowRectAutoSave
 
@@ -318,7 +307,7 @@ getSubWindow(callback: AsyncCallback<Array<Window>>): void
 isWindowRectAutoSave(): Promise<boolean>
 ```
 
-判断当前主窗口是否已经启用尺寸记忆，使用Promise异步回调。
+Whether the window supports the window rect auto-save.
 
 **Since:** 14
 
@@ -336,15 +325,15 @@ isWindowRectAutoSave(): Promise<boolean>
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;boolean&gt; | Promise对象。返回true表示当前窗口启用尺寸记忆，返回false表示当前窗口禁用尺寸记忆。 |
+| Promise&lt;boolean&gt; | Promise used to return the result. The value true means that the window rect auto-save is supported, and false means the opposite. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 1300003 | This window manager service works abnormally.<br>**Applicable version:** 20 and later |
-| 801 | Capability not supported. Failed to call the API due to limited device capabilities. |
-| 1300002 | This window state is abnormal. Possible cause: 1. The window is not created or destroyed; 2. Internal task error. |
+| [1300003](../errorcode-window.md#1300003-abnormal-window-manager-service) | This window manager service works abnormally.<br>**Applicable version:** 20 and later |
+| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. Failed to call the API due to limited device capabilities. |
+| [1300002](../errorcode-window.md#1300002-abnormal-window-state) | This window state is abnormal. Possible cause: 1. The window is not created or destroyed; 2. Internal task error. |
 
 ## loadContent
 
@@ -352,11 +341,7 @@ isWindowRectAutoSave(): Promise<boolean>
 loadContent(path: string, storage: LocalStorage, callback: AsyncCallback<void>): void
 ```
 
-根据当前工程中指定的页面路径为窗口加载具体页面内容，通过LocalStorage传递状态属性给加载的页面，使用callback异步回调。
-
-建议在UIAbility启动过程中使用该接口，重复调用将先销毁旧的页面内容（即UIContent）再加载新的页面内容，请谨慎使用。
-
-当前UI的执行上下文可能不明确，所以不建议在本接口的回调函数中做UI相关的操作。
+Loads the content of a page, with its path in the current project specified, to the main window of this window stage, and transfers the state attribute to the page through a local storage.This API uses an asynchronous callback to return the result.You are advised to call this API during UIAbility startup.If called multiple times, this API will destroy the existing page content (UIContent)before loading the new content. Exercise caution when using it.
 
 **Since:** 9
 
@@ -374,17 +359,17 @@ loadContent(path: string, storage: LocalStorage, callback: AsyncCallback<void>):
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| path | string | Yes | 要加载到窗口中的页面内容的路径，该路径需添加到工程的main_pages.json文件中。不支持相对路径写法，需与main_pages.json中的src取值保持一致。 |
-| storage | [LocalStorage](arkts-arkui-localstorage-c.md) | Yes | 页面级UI状态存储单元，这里用于为加载到窗口的页面内容传递状态属性。 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | 回调函数。 |
+| path | string | Yes | Path of the page to which the content will be loaded |
+| storage | [LocalStorage](arkts-arkui-localstorage-c.md) | Yes | The data object shared within the content instance loaded by the window |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. Possible cause: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Invalid path parameter. |
-| 1300002 | This window state is abnormal. Possible cause: The window is not created or destroyed. |
-| 1300005 | This window stage is abnormal.<br>**Applicable version:** 9 and later |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible cause: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Invalid path parameter. |
+| [1300002](../errorcode-window.md#1300002-abnormal-window-state) | This window state is abnormal. Possible cause: The window is not created or destroyed. |
+| [1300005](../errorcode-window.md#1300005-abnormal-windowstage) | This window stage is abnormal.<br>**Applicable version:** 9 and later |
 
 ## loadContent
 
@@ -392,9 +377,7 @@ loadContent(path: string, storage: LocalStorage, callback: AsyncCallback<void>):
 loadContent(path: string, storage?: LocalStorage): Promise<void>
 ```
 
-根据当前工程中指定的页面路径为WindowStage的主窗口加载具体页面内容，通过LocalStorage传递状态属性给加载的页面，使用Promise异步回调。
-
-建议在UIAbility启动过程中调用该接口，重复调用将首先销毁旧的页面内容（即UIContent）再加载新页面内容，请谨慎使用。当前UI的执行上下文可能不明确，所以不建议在回调函数中做UI相关的操作。
+Loads the content of a page, with its path in the current project specified, to the main window of this window stage, and transfers the state attribute to the page through a local storage.This API uses a promise to return the result. You are advised to call this API during UIAbility startup.If called multiple times, this API will destroy the existing page content (UIContent)before loading the new content. Exercise caution when using it.
 
 **Since:** 9
 
@@ -412,22 +395,22 @@ loadContent(path: string, storage?: LocalStorage): Promise<void>
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| path | string | Yes | 要加载到窗口中的页面内容的路径，该路径需添加到工程的main_pages.json文件中。不支持相对路径写法，需与main_pages.json中的src取值保持一致。 |
-| storage | [LocalStorage](arkts-arkui-localstorage-c.md) | No | 页面级UI状态存储单元，为加载到窗口的页面内容传递状态属性，默认值为空。 |
+| path | string | Yes | of the page to which the content will be loaded |
+| storage | [LocalStorage](arkts-arkui-localstorage-c.md) | No | The data object shared within the content instance loaded by the window |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | 无返回结果的Promise对象。 |
+| Promise&lt;void&gt; |  |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. Possible cause: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Invalid path parameter. |
-| 1300002 | This window state is abnormal. Possible cause: The window is not created or destroyed. |
-| 1300005 | This window stage is abnormal.<br>**Applicable version:** 9 and later |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible cause: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Invalid path parameter. |
+| [1300002](../errorcode-window.md#1300002-abnormal-window-state) | This window state is abnormal. Possible cause: The window is not created or destroyed. |
+| [1300005](../errorcode-window.md#1300005-abnormal-windowstage) | This window stage is abnormal.<br>**Applicable version:** 9 and later |
 
 ## loadContent
 
@@ -435,11 +418,7 @@ loadContent(path: string, storage?: LocalStorage): Promise<void>
 loadContent(path: string, callback: AsyncCallback<void>): void
 ```
 
-为当前窗口加载具体页面内容，使用callback异步回调。
-
-建议在UIAbility启动过程中使用该接口，多次调用该接口会先销毁旧的页面内容（即UIContent）再加载新的页面内容，请谨慎使用。
-
-当前UI的执行上下文可能不明确，所以不建议在本接口的回调函数中做UI相关的操作。
+Loads content from a page to this window stage. This API uses an asynchronous callback to return the result. You are advised to call this API during UIAbility startup.If called multiple times, this API will destroy the existing page content (UIContent)before loading the new content. Exercise caution when using it.
 
 **Since:** 9
 
@@ -457,16 +436,16 @@ loadContent(path: string, callback: AsyncCallback<void>): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| path | string | Yes | 要加载到窗口中的页面内容的路径，Stage模型下该路径需添加到工程的main_pages.json文件中，FA模型下该路径需添加到工程的config.json文件中。不支持相对路径写法，需与main_pages.json或config.json中的src取值保持一致。 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | 回调函数。 |
+| path | string | Yes | of the page to which the content will be loaded |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. Possible cause: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Invalid path parameter. |
-| 1300002 | This window state is abnormal. Possible cause: The window is not created or destroyed. |
-| 1300005 | This window stage is abnormal.<br>**Applicable version:** 9 and later |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible cause: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Invalid path parameter. |
+| [1300002](../errorcode-window.md#1300002-abnormal-window-state) | This window state is abnormal. Possible cause: The window is not created or destroyed. |
+| [1300005](../errorcode-window.md#1300005-abnormal-windowstage) | This window stage is abnormal.<br>**Applicable version:** 9 and later |
 
 ## loadContentByName
 
@@ -474,7 +453,7 @@ loadContent(path: string, callback: AsyncCallback<void>): void
 loadContentByName(name: string, storage: LocalStorage, callback: AsyncCallback<void>): void
 ```
 
-Loads content by named router
+Loads the content of a [named route](../../ui/arkts-routing.md#named-route) page to this window, and transfers  the state attribute to the page through a local storage. This API uses an asynchronous callback to return  the result.You are advised to call this API during UIAbility startup. If called repeatedly, this API will destroy the  existing page content (UIContent) before loading the new content. Exercise caution when using it.The execution context of the current UI may be unclear. Therefore, you are advised not to perform UI-related  operations within the callback of this API.
 
 **Since:** 11
 
@@ -500,8 +479,8 @@ Loads content by named router
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. Possible cause: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types. |
-| 1300002 | This window state is abnormal. Possible cause: The window is not created or destroyed. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible cause: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types. |
+| [1300002](../errorcode-window.md#1300002-abnormal-window-state) | This window state is abnormal. Possible cause: The window is not created or destroyed. |
 
 ## loadContentByName
 
@@ -509,11 +488,7 @@ Loads content by named router
 loadContentByName(name: string, callback: AsyncCallback<void>): void
 ```
 
-根据指定路由页面名称为当前窗口加载[命名路由](../../ui/arkts-routing.md#命名路由)页面，使用callback异步回调。
-
-建议在UIAbility启动过程中使用该接口，重复调用该接口将先销毁旧的页面内容（即UIContent）再加载新的页面内容，请谨慎使用。
-
-当前UI的执行上下文可能不明确，所以不建议在本接口的回调函数中做UI相关的操作。
+Loads the content of a [named route](../../ui/arkts-routing.md#named-route) page to this window. This API uses an asynchronous callback to return the result.You are advised to call this API during UIAbility startup. If called repeatedly, this API will destroy  the existing page content (UIContent) before loading the new content. Exercise caution when using it.The execution context of the current UI may be unclear. Therefore, you are advised not to perform  UI-related operations within the callback of this API.
 
 **Since:** 11
 
@@ -538,8 +513,8 @@ loadContentByName(name: string, callback: AsyncCallback<void>): void
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. Possible cause: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types. |
-| 1300002 | This window state is abnormal. Possible cause: The window is not created or destroyed. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible cause: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types. |
+| [1300002](../errorcode-window.md#1300002-abnormal-window-state) | This window state is abnormal. Possible cause: The window is not created or destroyed. |
 
 ## loadContentByName
 
@@ -578,8 +553,8 @@ Loads content by named router
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. Possible cause: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types. |
-| 1300002 | This window state is abnormal. Possible cause: The window is not created or destroyed. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible cause: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types. |
+| [1300002](../errorcode-window.md#1300002-abnormal-window-state) | This window state is abnormal. Possible cause: The window is not created or destroyed. |
 
 ## off
 
@@ -587,11 +562,7 @@ Loads content by named router
 off(eventType: 'windowStageEvent', callback?: Callback<WindowStageEventType>): void
 ```
 
-关闭WindowStage生命周期变化的监听。
-
-用于关闭[on('windowStageEvent')](#onwindowstageevent9)接口对WindowStage生命周期变化的监听。
-
-如果没有调用[on('windowStageEvent')](#onwindowstageevent9)接口开启监听就关闭，程序正常执行不会抛出异常。
+Unsubscribes from the window stage lifecycle change event.
 
 **Since:** 9
 
@@ -609,16 +580,16 @@ off(eventType: 'windowStageEvent', callback?: Callback<WindowStageEventType>): v
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| eventType | 'windowStageEvent' | Yes | 监听事件，固定为'windowStageEvent'，即WindowStage生命周期变化事件。 |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;WindowStageEventType&gt; | No | 回调函数。返回当前的WindowStage生命周期状态。若传入参数，则关闭该监听。若未传入参数，则关闭所有WindowStage生命周期变化的监听。 |
+| eventType | 'windowStageEvent' | Yes | Event type. The value is fixed at 'windowStageEvent', indicating the window stage lifecycle change event. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;WindowStageEventType&gt; | No | Callback used to return the window stage lifecycle state. If a value is passed in, the corresponding subscription is canceled. If no value is passed in, all subscriptions to the specified event are canceled. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. Possible cause: 1. Incorrect parameter types; 2. Parameter verification failed. |
-| 1300002 | This window state is abnormal. |
-| 1300005 | This window stage is abnormal. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible cause: 1. Incorrect parameter types; 2. Parameter verification failed. |
+| [1300002](../errorcode-window.md#1300002-abnormal-window-state) | This window state is abnormal. Possible cause: The window is not created or destroyed. |
+| [1300005](../errorcode-window.md#1300005-abnormal-windowstage) | This window stage is abnormal. |
 
 ## off
 
@@ -626,7 +597,7 @@ off(eventType: 'windowStageEvent', callback?: Callback<WindowStageEventType>): v
 off(eventType: 'windowStageLifecycleEvent', callback?: Callback<WindowStageLifecycleEventType>): void
 ```
 
-关闭WindowStage生命周期变化的监听。
+Unsubscribes from the window stage lifecycle change event.
 
 **Since:** 20
 
@@ -642,16 +613,16 @@ off(eventType: 'windowStageLifecycleEvent', callback?: Callback<WindowStageLifec
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| eventType | 'windowStageLifecycleEvent' | Yes | 监听事件，固定为'windowStageLifecycleEvent'，即WindowStage生命周期变化事件。 |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;WindowStageLifecycleEventType&gt; | No | 回调函数。返回当前的WindowStage生命周期状态。若传入参数，则关闭该监听。若未传入参数，则关闭所有WindowStage生命周期变化的监听。 |
+| eventType | 'windowStageLifecycleEvent' | Yes | Event type. The value is fixed at 'windowStageLifecycleEvent', indicating the window stage lifecycle change event. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;WindowStageLifecycleEventType&gt; | No | Callback used to return the window stage lifecycle state. If a value is passed in, the corresponding subscription is canceled. If no value is passed in, all subscriptions to the specified event are canceled. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 801 | Capability not supported. Failed to call the API due to limited device capabilities. |
-| 1300002 | This window state is abnormal. |
-| 1300005 | This window stage is abnormal. |
+| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. Failed to call the API due to limited device capabilities. |
+| [1300002](../errorcode-window.md#1300002-abnormal-window-state) | This window state is abnormal. Possible cause: The window is not created or destroyed. |
+| [1300005](../errorcode-window.md#1300005-abnormal-windowstage) | This window stage is abnormal. |
 
 ## off
 
@@ -659,7 +630,7 @@ off(eventType: 'windowStageLifecycleEvent', callback?: Callback<WindowStageLifec
 off(eventType: 'windowStageClose', callback?: Callback<void>): void
 ```
 
-关闭主窗口关闭事件的监听。
+Window stage close callback off.
 
 **Since:** 14
 
@@ -677,16 +648,16 @@ off(eventType: 'windowStageClose', callback?: Callback<void>): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| eventType | 'windowStageClose' | Yes | 监听事件，固定为'windowStageClose'，即关闭主窗口关闭事件的监听。 |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;void&gt; | No | 回调函数。当点击主窗口右上角关闭按钮事件发生时的回调。该回调函数不返回任何参数。 回调函数内部逻辑需要有boolean类型的返回值，该返回值决定当前主窗是否继续关闭，true表示不关闭，false表示关闭。如果传入 参数，则关闭该监听。如果未传入参数，则关闭所有主窗口关闭的监听。 |
+| eventType | 'windowStageClose' | Yes | The value is fixed at 'windowStageClose', indicating the window stage close event. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;void&gt; | No | Callback function requires a boolean return value to determine whether to close the current main window. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. Possible cause: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
-| 801 | Capability not supported. Failed to call the API due to limited device capabilities. |
-| 1300002 | This window state is abnormal. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible cause: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. Failed to call the API due to limited device capabilities. |
+| [1300002](../errorcode-window.md#1300002-abnormal-window-state) | This window state is abnormal. Possible cause: The window is not created or destroyed. |
 
 ## offWindowStageClose
 
@@ -694,7 +665,7 @@ off(eventType: 'windowStageClose', callback?: Callback<void>): void
 offWindowStageClose(callback?: Callback<void, boolean>): void
 ```
 
-关闭主窗口关闭事件的监听。
+Unsubscribes from the event indicating that the main window is closed.
 
 **Since:** 23
 
@@ -710,14 +681,14 @@ offWindowStageClose(callback?: Callback<void, boolean>): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;void, boolean&gt; | No | 回调函数。当点击主窗口右上角关闭按钮事件发生时的回调。该回调函数 不返回任何参数。回调函数内部逻辑需要有boolean类型的返回值，该返回值决定当前主窗是否继续关闭，true表示不关闭，false 表示关闭。如果传入参数，则关闭该监听。如果未传入参数，则关闭所有主窗口关闭的监听。 |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;void, boolean&gt; | No | Unregister the callback function. If not provided, all callbacks for the given event type will be removed. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 801 | Capability not supported. Failed to call the API due to limited device capabilities. |
-| 1300002 | This window state is abnormal. |
+| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. Failed to call the API due to limited device capabilities. |
+| [1300002](../errorcode-window.md#1300002-abnormal-window-state) | This window state is abnormal. Possible cause: The window is not created or destroyed. |
 
 ## offWindowStageEvent
 
@@ -725,7 +696,7 @@ offWindowStageClose(callback?: Callback<void, boolean>): void
 offWindowStageEvent(callback?: Callback<WindowStageEventType>): void
 ```
 
-关闭主窗口关闭事件的监听。
+Unsubscribes from the window stage lifecycle change event.
 
 **Since:** 23
 
@@ -741,14 +712,14 @@ offWindowStageEvent(callback?: Callback<WindowStageEventType>): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;WindowStageEventType&gt; | No | 回调函数。当点击主窗口右上角关闭按钮事件发生时的回调。该回调函数不返回任何参数。回调函数内部逻辑需要有boolean类型的返回值，该返回值决定当前主窗是否继续关闭，true表示不关闭，false表示关闭。如果传入参数，则关闭该监听。如果未传入参数，则关闭所有主窗口关闭的监听。 |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;WindowStageEventType&gt; | No | Unregister the callback function. If not provided, all callbacks for the given event type will be removed. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 1300002 | This window state is abnormal. |
-| 1300005 | This window stage is abnormal. |
+| [1300002](../errorcode-window.md#1300002-abnormal-window-state) | This window state is abnormal. Possible cause: The window is not created or destroyed. |
+| [1300005](../errorcode-window.md#1300005-abnormal-windowstage) | This window stage is abnormal. |
 
 ## offWindowStageLifecycleEvent
 
@@ -756,7 +727,7 @@ offWindowStageEvent(callback?: Callback<WindowStageEventType>): void
 offWindowStageLifecycleEvent(callback?: Callback<WindowStageLifecycleEventType>): void
 ```
 
-关闭WindowStage生命周期变化的监听。
+Unsubscribes from the window stage lifecycle change event.
 
 **Since:** 23
 
@@ -772,15 +743,15 @@ offWindowStageLifecycleEvent(callback?: Callback<WindowStageLifecycleEventType>)
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;WindowStageLifecycleEventType&gt; | No | 回调函数。返回当前的WindowStage生命周期状态。若传入参数，则关闭该监听。若未传入参数，则关闭所有WindowStage生命周期变化的监听。 |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;WindowStageLifecycleEventType&gt; | No | Unregister the callback function. If not provided, all callbacks for the given event type will be removed. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 801 | Capability not supported. Failed to call the API due to limited device capabilities. |
-| 1300002 | This window state is abnormal. |
-| 1300005 | This window stage is abnormal. |
+| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. Failed to call the API due to limited device capabilities. |
+| [1300002](../errorcode-window.md#1300002-abnormal-window-state) | This window state is abnormal. Possible cause: The window is not created or destroyed. |
+| [1300005](../errorcode-window.md#1300005-abnormal-windowstage) | This window stage is abnormal. |
 
 ## on
 
@@ -788,7 +759,7 @@ offWindowStageLifecycleEvent(callback?: Callback<WindowStageLifecycleEventType>)
 on(eventType: 'windowStageEvent', callback: Callback<WindowStageEventType>): void
 ```
 
-开启WindowStage生命周期变化的监听。
+Subscribes to the window stage lifecycle change event.
 
 **Since:** 9
 
@@ -806,16 +777,16 @@ on(eventType: 'windowStageEvent', callback: Callback<WindowStageEventType>): voi
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| eventType | 'windowStageEvent' | Yes | 监听事件，固定为'windowStageEvent'，即WindowStage生命周期变化事件。 |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;WindowStageEventType&gt; | Yes | 回调函数。返回当前的WindowStage生命周期状态。 |
+| eventType | 'windowStageEvent' | Yes | Event type. The value is fixed at 'windowStageEvent', indicating the window stage lifecycle change event. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;WindowStageEventType&gt; | Yes | Callback used to return the window stage lifecycle state. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. Possible cause: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
-| 1300002 | This window state is abnormal. |
-| 1300005 | This window stage is abnormal. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible cause: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| [1300002](../errorcode-window.md#1300002-abnormal-window-state) | This window state is abnormal. Possible cause: The window is not created or destroyed. |
+| [1300005](../errorcode-window.md#1300005-abnormal-windowstage) | This window stage is abnormal. |
 
 ## on
 
@@ -823,7 +794,7 @@ on(eventType: 'windowStageEvent', callback: Callback<WindowStageEventType>): voi
 on(eventType: 'windowStageLifecycleEvent', callback: Callback<WindowStageLifecycleEventType>): void
 ```
 
-开启WindowStage生命周期变化的监听。
+Subscribes to the window stage lifecycle change event.
 
 **Since:** 20
 
@@ -839,16 +810,16 @@ on(eventType: 'windowStageLifecycleEvent', callback: Callback<WindowStageLifecyc
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| eventType | 'windowStageLifecycleEvent' | Yes | 监听事件，固定为'windowStageLifecycleEvent'，即WindowStage生命周期变化事件。 |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;WindowStageLifecycleEventType&gt; | Yes | 回调函数。返回当前的WindowStage生命周期状态。 |
+| eventType | 'windowStageLifecycleEvent' | Yes | Event type. The value is fixed at 'windowStageLifecycleEvent', indicating the window stage lifecycle change event. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;WindowStageLifecycleEventType&gt; | Yes | Callback used to return the window stage lifecycle state. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 801 | Capability not supported. Failed to call the API due to limited device capabilities. |
-| 1300002 | This window state is abnormal. |
-| 1300005 | This window stage is abnormal. |
+| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. Failed to call the API due to limited device capabilities. |
+| [1300002](../errorcode-window.md#1300002-abnormal-window-state) | This window state is abnormal. Possible cause: The window is not created or destroyed. |
+| [1300005](../errorcode-window.md#1300005-abnormal-windowstage) | This window stage is abnormal. |
 
 ## on
 
@@ -856,7 +827,7 @@ on(eventType: 'windowStageLifecycleEvent', callback: Callback<WindowStageLifecyc
 on(eventType: 'windowStageClose', callback: Callback<void>): void
 ```
 
-开启点击主窗三键区的关闭按钮监听事件。
+Window stage close callback on.
 
 **Since:** 14
 
@@ -881,9 +852,9 @@ on(eventType: 'windowStageClose', callback: Callback<void>): void
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. Possible cause: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
-| 801 | Capability not supported. Failed to call the API due to limited device capabilities. |
-| 1300002 | This window state is abnormal. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible cause: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. Failed to call the API due to limited device capabilities. |
+| [1300002](../errorcode-window.md#1300002-abnormal-window-state) | This window state is abnormal. Possible cause: The window is not created or destroyed. |
 
 ## onWindowStageClose
 
@@ -891,13 +862,7 @@ on(eventType: 'windowStageClose', callback: Callback<void>): void
 onWindowStageClose(callback: Callback<void, boolean>): void
 ```
 
-开启点击主窗三键区的关闭按钮监听事件。点击主窗口的三键区域的关闭键时触发该回调函数，将不执行注册的[UIAbility.onPrepareToTerminate](../apis-ability-kit/js-apis-app-ability-uiAbility.md#onpreparetoterminate10)生命周期回调函数。
-
-当重复注册窗口关闭事件的监听时，最后一次注册成功的监听事件生效。
-
-触发的回调函数是同步执行，主窗口的异步关闭事件监听参考[on('windowWillClose')](arkts-apis-window-Window.md#onwindowwillclose15)方法。
-
-如果存在[on('windowWillClose')](arkts-apis-window-Window.md#onwindowwillclose15)监听事件，只响应[on('windowWillClose')](arkts-apis-window-Window.md#onwindowwillclose15)接口。
+Subscribes to the click event on the close button in the three-button navigation bar of the main window.This event is triggered when the close button in the three-button navigation bar of the main window is clicked.
 
 **Since:** 23
 
@@ -913,14 +878,14 @@ onWindowStageClose(callback: Callback<void, boolean>): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;void, boolean&gt; | Yes | 监听事件，固定为'windowStageClose'，即开启主窗三键区的关闭按钮监听。 |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;void, boolean&gt; | Yes | Callback invoked when the close button in the upper right corner of the main window is clicked. The return value determines whether to continue to close the main window. The value true means not to close the main window, and false means to continue to close the main window. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 801 | Capability not supported. Failed to call the API due to limited device capabilities. |
-| 1300002 | This window state is abnormal. |
+| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. Failed to call the API due to limited device capabilities. |
+| [1300002](../errorcode-window.md#1300002-abnormal-window-state) | This window state is abnormal. Possible cause: The window is not created or destroyed. |
 
 ## onWindowStageEvent
 
@@ -928,7 +893,7 @@ onWindowStageClose(callback: Callback<void, boolean>): void
 onWindowStageEvent(callback: Callback<WindowStageEventType>): void
 ```
 
-开启WindowStage生命周期变化的监听。
+Subscribes to the window stage lifecycle change event.
 
 **Since:** 23
 
@@ -944,14 +909,14 @@ onWindowStageEvent(callback: Callback<WindowStageEventType>): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;WindowStageEventType&gt; | Yes | 监听事件，固定为'windowStageEvent'，即WindowStage生命周期变化事件。 |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;WindowStageEventType&gt; | Yes | Callback used to return the window stage lifecycle state. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 1300002 | This window state is abnormal. |
-| 1300005 | This window stage is abnormal. |
+| [1300002](../errorcode-window.md#1300002-abnormal-window-state) | This window state is abnormal. Possible cause: The window is not created or destroyed. |
+| [1300005](../errorcode-window.md#1300005-abnormal-windowstage) | This window stage is abnormal. |
 
 ## onWindowStageLifecycleEvent
 
@@ -959,7 +924,7 @@ onWindowStageEvent(callback: Callback<WindowStageEventType>): void
 onWindowStageLifecycleEvent(callback: Callback<WindowStageLifecycleEventType>): void
 ```
 
-关闭WindowStage生命周期变化的监听。
+Subscribes to the window stage lifecycle change event.
 
 **Since:** 23
 
@@ -975,15 +940,15 @@ onWindowStageLifecycleEvent(callback: Callback<WindowStageLifecycleEventType>): 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;WindowStageLifecycleEventType&gt; | Yes | 回调函数。返回当前的WindowStage生命周期状态。 |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;WindowStageLifecycleEventType&gt; | Yes | Callback used to return the window stage lifecycle state. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 801 | Capability not supported. Failed to call the API due to limited device capabilities. |
-| 1300002 | This window state is abnormal. |
-| 1300005 | This window stage is abnormal. |
+| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. Failed to call the API due to limited device capabilities. |
+| [1300002](../errorcode-window.md#1300002-abnormal-window-state) | This window state is abnormal. Possible cause: The window is not created or destroyed. |
+| [1300005](../errorcode-window.md#1300005-abnormal-windowstage) | This window stage is abnormal. |
 
 ## releaseUIContent
 
@@ -991,7 +956,7 @@ onWindowStageLifecycleEvent(callback: Callback<WindowStageLifecycleEventType>): 
 releaseUIContent(): Promise<void>
 ```
 
-释放
+Release the content of this window in the current project.This API uses a promise to return the result.
 
 **Since:** 24
 
@@ -1013,7 +978,7 @@ releaseUIContent(): Promise<void>
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 1300002 | This window state is abnormal. Possible cause: The window is not created or destroyed. |
+| [1300002](../errorcode-window.md#1300002-abnormal-window-state) | This window state is abnormal. Possible cause: The window is not created or destroyed. |
 
 ## removeImageForRecent
 
@@ -1021,7 +986,7 @@ releaseUIContent(): Promise<void>
 removeImageForRecent(): Promise<void>
 ```
 
-移除应用设置的在多任务中和Dock栏悬停时显示的图片，下次进多任务查看应用卡片时生效，使用Promise异步回调。
+Removes the image that the application has set to be displayed in the multitasking view and on dock hover. The change will be effective the next time you check the application widget in the multitasking view. This API  uses a promise to return the result.
 
 **Since:** 26.0.0
 
@@ -1040,17 +1005,43 @@ removeImageForRecent(): Promise<void>
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise对象，无返回结果。 |
+| Promise&lt;void&gt; | Promise that returns no value. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 1300003 | This window manager service works abnormally. |
-| 801 | Capability not supported. Failed to call the API due to limited device capabilities. |
-| 1300002 | This window state is abnormal. |
-| 201 | Permission verification failed. The application does not have the permission required or a non-system application calls the API.<br>**Applicable version:** 26.0.0 and later |
-| 202 | Permission verification failed. A non-system application calls a system API.<br>**Applicable version:** 22 - 24 |
+| [1300003](../errorcode-window.md#1300003-abnormal-window-manager-service) | This window manager service works abnormally. |
+| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. Failed to call the API due to limited device capabilities. |
+| [1300002](../errorcode-window.md#1300002-abnormal-window-state) | This window state is abnormal. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed. The application does not have the permission required or a non-system application calls the API.<br>**Applicable version:** 26.0.0 and later |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API.<br>**Applicable version:** 22 - 24 |
+
+## Examples
+
+```TypeScript
+import { UIAbility } from '@kit.AbilityKit';
+import { window } from '@kit.ArkUI';
+import { BusinessError } from '@kit.BasicServicesKit';
+import { image } from '@kit.ImageKit';
+
+export default class EntryAbility extends UIAbility {
+  // ...
+
+  onWindowStageCreate(windowStage: window.WindowStage) {
+    try {
+      let promise = windowStage.removeImageForRecent();
+      promise.then(() => {
+        console.info(`Succeeded in removing image for recent`);
+      }).catch((err: BusinessError) => {
+        console.error(`Failed to remove image for recent. Cause code: ${err.code}, message: ${err.message}`);
+      });
+    } catch (exception) {
+      console.error(`Failed to remove image for recent.`);
+    }
+  }
+};
+```
 
 ## removeStartingWindow
 
@@ -1058,13 +1049,7 @@ removeImageForRecent(): Promise<void>
 removeStartingWindow(): Promise<void>
 ```
 
-支持应用控制启动页消失时机。
-
-此接口只对应用主窗口生效，且需要在module.json5配置文件abilities标签中的metadata标签下配置"enable.remove.starting.window"为"true"才会生效。
-
-在标签配置为"true"的情况下，系统提供了启动页超时保护机制，若5s内未调用此接口，系统将自动移除启动页。
-
-若标签配置为"false"或未配置标签，则此接口不生效，启动页将会在应用首帧渲染完成后自动移除。
+Remove the starting window, it must be used with configuration "enable.remove.starting.window".
 
 **Since:** 14
 
@@ -1082,15 +1067,15 @@ removeStartingWindow(): Promise<void>
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | 无返回结果的Promise对象。 |
+| Promise&lt;void&gt; | The promise returned by the function. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 1300003 | This window manager service works abnormally. |
-| 801 | Capability not supported. Failed to call the API due to limited device capabilities. |
-| 1300002 | This window state is abnormal. Possible cause: 1. The window stage is not created or destroyed; 2. The main window is not created or destroyed; 3. Internal task error. |
+| [1300003](../errorcode-window.md#1300003-abnormal-window-manager-service) | This window manager service works abnormally. |
+| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. Failed to call the API due to limited device capabilities. |
+| [1300002](../errorcode-window.md#1300002-abnormal-window-state) | This window state is abnormal. Possible cause: 1. The window stage is not created or destroyed; 2. The main window is not created or destroyed; 3. Internal task error. |
 
 ## setCustomDensity
 
@@ -1098,11 +1083,11 @@ removeStartingWindow(): Promise<void>
 setCustomDensity(density: number): void
 ```
 
-支持应用主窗口自定义其显示大小缩放系数。
+Allows the main window of the application to customize its display size scale factor.
 
-已创建的子窗和系统窗口不会立即跟随主窗的customDensity变化重新布局，而是在子窗或系统窗口下一次位置、大小、系统缩放大小等窗口布局信息变化时跟随主窗的customDensity变化重新布局。
+Existing child windows and system windows do not immediately re-layout to match the main window's new scale  factor. They will re-layout to reflect this change only when their layout information (such as position, size, and system scale size) changes.
 
-当存在同时使用该接口和setDefaultDensityEnabled(true)的情况时，以最后调用的设置效果为准。
+If both this API and [setDefaultDensityEnabled(true)](arkts-arkui-window-windowstage-i.md#setdefaultdensityenabled) are called, the setting from the last called API will be applied.
 
 **Since:** 15
 
@@ -1120,16 +1105,16 @@ setCustomDensity(density: number): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| density | number | Yes | 自定义显示大小缩放系数。该参数为浮点数，取值范围为[0.5, 4.0]或-1.0。4.0表示窗口可显示的 最大显示大小缩放系数，-1.0表示窗口使用系统显示大小缩放系数。 |
+| density | number | Yes | the specified custom density value. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. Possible cause: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types. |
-| 801 | Capability not supported. Failed to call the API due to limited device capabilities. |
-| 1300002 | This window state is abnormal. |
-| 1300005 | This window stage is abnormal. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible cause: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types. |
+| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. Failed to call the API due to limited device capabilities. |
+| [1300002](../errorcode-window.md#1300002-abnormal-window-state) | This window state is abnormal. Possible cause: The window is not created or destroyed. |
+| [1300005](../errorcode-window.md#1300005-abnormal-windowstage) | This window stage is abnormal. |
 
 ## setCustomDensity
 
@@ -1143,11 +1128,9 @@ ArkTS-Sta:
 setCustomDensity(density: double, applyToSubWindow?: boolean): void
 ```
 
-支持应用主窗口自定义其显示大小缩放系数。
+Allows the main window of the application to customize its display size scale factor and control when child  windows and system windows re-layout to match the main window.
 
-已创建的子窗和系统窗口不会立即跟随主窗的customDensity变化重新布局，而是在子窗或系统窗口下一次位置、大小、系统缩放大小等窗口布局信息变化时跟随主窗的customDensity变化重新布局。
-
-当存在同时使用该接口和setDefaultDensityEnabled(true)的情况时，以最后调用的设置效果为准。
+If both this API and [setDefaultDensityEnabled(true)](arkts-arkui-window-windowstage-i.md#setdefaultdensityenabled) are called, the setting from the last called API will be applied.
 
 **Since:** 20
 
@@ -1163,16 +1146,16 @@ setCustomDensity(density: double, applyToSubWindow?: boolean): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| density | ArkTS-Dyn: number  <br>ArkTS-Sta：double | Yes | 自定义显示大小缩放系数。该参数为浮点数，取值范围为[0.5, 4.0]或-1.0。4.0表示窗口可显示的 最大显示大小缩放系数，-1.0表示窗口使用系统显示大小缩放系数。 |
-| applyToSubWindow | boolean | No | 设置当前已创建的子窗和系统窗口是否立即跟随主窗口更新customDensity并重新布局。 设置为true时，表示立即跟随主窗生效；设置为false时，表示不会立即跟随主窗生效，而是在子窗或系统窗口下一次位置、大小、 系统缩放大小等窗口布局信息变化时跟随主窗的customDensity变化重新布局。默认值为false。 |
+| density | ArkTS-Dyn: number  <br>ArkTS-Sta：double | Yes | the specified custom density value. |
+| applyToSubWindow | boolean | No | whether to apply the custom density to already created subwindows. The default value is false. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 801 | Capability not supported. Failed to call the API due to limited device capabilities. |
-| 1300002 | This window state is abnormal. Possible cause: The main window is not created or destroyed. |
-| 1300005 | This window stage is abnormal. Possible cause: The window stage is not created or destroyed. |
+| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. Failed to call the API due to limited device capabilities. |
+| [1300002](../errorcode-window.md#1300002-abnormal-window-state) | This window state is abnormal. Possible cause: The main window is not created or destroyed. |
+| [1300005](../errorcode-window.md#1300005-abnormal-windowstage) | This window stage is abnormal. Possible cause: The window stage is not created or destroyed. |
 
 ## setDefaultDensityEnabled
 
@@ -1180,11 +1163,11 @@ setCustomDensity(density: double, applyToSubWindow?: boolean): void
 setDefaultDensityEnabled(enabled: boolean): void
 ```
 
-设置应用主窗口是否使用系统默认Density，子窗和系统窗口会跟随主窗生效。调用此接口前，需先调用WindowStage.loadContent()初始化布局，确保接口调用时序正确。
+Sets whether the main window of the application uses the system's default density. Child windows and system  windows will follow the main window's setting. Before calling this API, call [WindowStage.loadContent()](arkts-arkui-window-windowstage-i.md#loadcontent) to initialize the layout to ensure the correct call sequence.
 
-不调用此接口进行设置，则表示不使用系统默认Density。
+If this API is not called, the default density is not used.
 
-不使用系统默认Density时，若调用过setCustomDensity()，则窗口会跟随用户自定义的显示大小变化重新布局，否则跟随系统显示大小变化重新布局。
+When the default density is not used, if [setCustomDensity()](arkts-arkui-window-windowstage-i.md#setcustomdensity) has been called, the window will be re-laid out according to the custom display size changes. Otherwise, it will be re-laid out according to the system display size changes.
 
 **Since:** 12
 
@@ -1202,16 +1185,16 @@ setDefaultDensityEnabled(enabled: boolean): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| enabled | boolean | Yes | 是否设置应用使用系统默认Density。true表示使用系统默认Density，窗口不跟随系统显示大小变化重新布局；false表示不使用系统默认Density，窗口跟随系统显示大小变化重新布局。 |
+| enabled | boolean | Yes | Use default density if true, or follow system density change if false |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. Possible cause: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types. |
-| 801 | Capability not supported. Failed to call the API due to limited device capabilities. |
-| 1300002 | This window state is abnormal. Possible cause: The main window is not created or destroyed. |
-| 1300005 | This window stage is abnormal. Possible cause: The window stage is not created or destroyed. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible cause: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types. |
+| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. Failed to call the API due to limited device capabilities. |
+| [1300002](../errorcode-window.md#1300002-abnormal-window-state) | This window state is abnormal. Possible cause: The main window is not created or destroyed. |
+| [1300005](../errorcode-window.md#1300005-abnormal-windowstage) | This window stage is abnormal. Possible cause: The window stage is not created or destroyed. |
 
 ## setImageForRecent
 
@@ -1225,13 +1208,17 @@ ArkTS-Sta:
 setImageForRecent(imageResource: long | image.PixelMap, value: ImageFit): Promise<void>
 ```
 
-设置应用在多任务中和Dock栏悬停时显示的图片，使用Promise异步回调。  
-> **说明：**
-> 
-> 调用该接口前，建议先通过[loadContent](#loadcontent9)方法或者[setUIContent](arkts-apis-window-Window.md#setuicontent9-1)
-> 方法完成页面加载。如果应用窗口未完成页面加载就直接调用该接口，功能将不会生效。此时多任务中只显示应用启动页。
+Sets the image displayed in the multitasking view and on dock hover. This API uses a promise to return the result.
 
-**Since:** 22
+> **NOTE：**
+> 
+> Before calling this API, you are advised to complete page loading via
+> [loadContent](arkts-arkui-window-window-i.md#loadcontent) or
+> [setUIContent](arkts-arkui-window-window-i.md#setuicontent). If this API is called before the application
+> completes page loading, the intended functionality does not take effect. As a result, only the application's
+> launch page is displayed in the multitasking view.
+
+**Since:** 26.0.0
 
 **ArkTS mode:** ArkTS-Dyn since version 22; ArkTS-Sta since version 23.
 
@@ -1248,8 +1235,8 @@ setImageForRecent(imageResource: long | image.PixelMap, value: ImageFit): Promis
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| imageResource | ArkTS-Dyn: number \| image.PixelMap  <br>ArkTS-Sta：long \| image.PixelMap | Yes | 应用自定义的图片资源，可传入资源id或PixelMap位图。传入资源id时， 图片资源需放在resources/base/media目录下，通过\\$r资源访问方式获取对应图片的资源id，这里以获取startIcon图片的资源id 为例给出示意：\\$r("app.media.startIcon").id。 |
-| value | [ImageFit](arkts-arkui-imagefit-e.md) | Yes | 应用自定义图片的填充方式。 |
+| imageResource | ArkTS-Dyn: number \| image.PixelMap  <br>ArkTS-Sta：long \| image.PixelMap | Yes | imageResourceId or pixelMap for recent image. imageResourceId Value Range: [0x1000000, 0xffffffff]. |
+| value | [ImageFit](arkts-arkui-imagefit-e.md) | Yes | Sets the zoom type of an image. |
 
 **Return value:**
 
@@ -1261,12 +1248,60 @@ setImageForRecent(imageResource: long | image.PixelMap, value: ImageFit): Promis
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 1300003 | This window manager service works abnormally. |
-| 801 | Capability not supported. Failed to call the API due to limited device capabilities. |
-| 1300002 | This window state is abnormal. Possible cause: 1. The window is not created or destroyed. 2. The WindowStage is running in the background. 3. Internal task error. |
-| 1300016 | Parameter error. Possible cause: 1. Invalid parameter range. 2. Invalid parameter length. |
-| 201 | Permission verification failed. The application does not have the permission required or a non-system application calls the API.<br>**Applicable version:** 26.0.0 and later |
-| 202 | Permission verification failed. A non-system application calls a system API.<br>**Applicable version:** 22 - 24 |
+| [1300003](../errorcode-window.md#1300003-abnormal-window-manager-service) | This window manager service works abnormally. |
+| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. Failed to call the API due to limited device capabilities. |
+| [1300002](../errorcode-window.md#1300002-abnormal-window-state) | This window state is abnormal. Possible cause: 1. The window is not created or destroyed. 2. The WindowStage is running in the background. 3. Internal task error. |
+| [1300016](../errorcode-window.md#1300016-parameter-verification-error) | Parameter error. Possible cause: 1. Invalid parameter range. 2. Invalid parameter length. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed. The application does not have the permission required or a non-system application calls the API.<br>**Applicable version:** 26.0.0 and later |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API.<br>**Applicable version:** 22 - 24 |
+
+## Examples
+
+```TypeScript
+import { UIAbility } from '@kit.AbilityKit';
+import { window } from '@kit.ArkUI';
+import { BusinessError } from '@kit.BasicServicesKit';
+import { image } from '@kit.ImageKit';
+
+export default class EntryAbility extends UIAbility {
+  // ...
+
+  onWindowStageCreate(windowStage: window.WindowStage) {
+    windowStage.loadContent('pages/Index', (err) => {
+      if (err.code) {
+        console.error('Failed to load the content. Cause: %{public}s', JSON.stringify(err));
+        return;
+      }
+      console.info('Succeeded in loading the content.');
+      let color = new ArrayBuffer(512 * 512 * 4); // Create an ArrayBuffer object to store image pixels. The size of the object is (height * width * 4) bytes.
+      let pixelMap: image.PixelMap;
+      let bufferArr = new Uint8Array(color);
+      for (let i = 0; i < bufferArr.length; i += 4) {
+        bufferArr[i] = 255;
+        bufferArr[i+1] = 0;
+        bufferArr[i+2] = 122;
+        bufferArr[i+3] = 255;
+      }
+      image.createPixelMap(color, {
+        editable: true, pixelFormat: image.PixelMapFormat.RGBA_8888, size: { height: 512, width: 512 }
+      }).then((data) => {
+        pixelMap = data;
+        console.info(`Succeeded in creating pixelMap`);
+        try {
+          let promise = windowStage.setImageForRecent(pixelMap, ImageFit.Fill);
+          promise.then(() => {
+            console.info(`Succeeded in setting image for recent`);
+          }).catch((err: BusinessError) => {
+            console.error(`Failed to set image for recent. Cause code: ${err.code}, message: ${err.message}`);
+          });
+        } catch (exception) {
+          console.error(`Failed to set image for recent.`);
+        }
+      })
+    });
+  }
+};
+```
 
 ## setSupportedWindowModes
 
@@ -1274,7 +1309,7 @@ setImageForRecent(imageResource: long | image.PixelMap, value: ImageFit): Promis
 setSupportedWindowModes(supportedWindowModes: Array<bundleManager.SupportWindowMode>): Promise<void>
 ```
 
-设置主窗的窗口支持模式，使用Promise异步回调。
+Sets the supported window modes.
 
 **Since:** 15
 
@@ -1292,21 +1327,21 @@ setSupportedWindowModes(supportedWindowModes: Array<bundleManager.SupportWindowM
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| supportedWindowModes | Array&lt;bundleManager.SupportWindowMode&gt; | Yes | 设置主窗的窗口支持模式。 &lt;br&gt;- FULL_SCREEN：支持全屏模式。&lt;br&gt;- FLOATING：支持自由悬浮窗口模式。 &lt;br&gt;- SPLIT：支持分屏模式。需要配合FULL_SCREEN或FLOATING一起使用，不支持仅配置SPLIT。 &lt;br&gt; 注：数组中SupportWindowMode字段取值不应该与该UIAbility对应的 [module.json5配置文件][module.json5 file](../../../quick-start/module-configuration-file.md)中 [abilities标签](../../../quick-start/module-configuration-file.md#abilities)的supportWindowMode字段取值或者 [StartOptions](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-startoptions-startoptions-c.md/arkts-ability-app-ability-startoptions-startoptions-c.md)的 supportWindowModes属性取值冲突。当取值冲突时，最终以该参数设置的窗口支持模式为准。 |
+| supportedWindowModes | Array&lt;bundleManager.SupportWindowMode&gt; | Yes | The supported modes of window. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | 无返回结果的Promise对象。 |
+| Promise&lt;void&gt; | Promise that returns no value |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 1300003 | This window manager service works abnormally. |
-| 801 | Capability not supported. Failed to call the API due to limited device capabilities. |
-| 1300002 | This window state is abnormal. Possible cause: 1. The window is not created or destroyed. 2. Internal task error. |
+| [1300003](../errorcode-window.md#1300003-abnormal-window-manager-service) | This window manager service works abnormally. |
+| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. Failed to call the API due to limited device capabilities. |
+| [1300002](../errorcode-window.md#1300002-abnormal-window-state) | This window state is abnormal. Possible cause: 1. The window is not created or destroyed. 2. Internal task error. |
 
 ## setSupportedWindowModes
 
@@ -1314,7 +1349,7 @@ setSupportedWindowModes(supportedWindowModes: Array<bundleManager.SupportWindowM
 setSupportedWindowModes(supportedWindowModes: Array<bundleManager.SupportWindowMode>, grayOutMaximizeButton: boolean): Promise<void>
 ```
 
-设置主窗的窗口支持模式，并提供最大化按钮置灰功能，使用Promise异步回调。
+Sets the supported window modes of the main window.
 
 **Since:** 20
 
@@ -1330,23 +1365,23 @@ setSupportedWindowModes(supportedWindowModes: Array<bundleManager.SupportWindowM
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| supportedWindowModes | Array&lt;bundleManager.SupportWindowMode&gt; | Yes | 设置主窗的窗口支持模式。 &lt;br&gt;- FULL_SCREEN：支持全屏模式。&lt;br&gt;- FLOATING：支持自由悬浮窗口模式。 &lt;br&gt;- SPLIT：支持分屏模式。需要配合FULL_SCREEN或FLOATING一起使用，不支持仅配置SPLIT。 &lt;br&gt; 注：数组中SupportWindowMode字段取值不应该与该UIAbility对应的 [module.json5配置文件][module.json5 file](../../../quick-start/module-configuration-file.md)中 [abilities标签](../../../quick-start/module-configuration-file.md#abilities)的supportWindowMode字段取值或者 [StartOptions](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-startoptions-startoptions-c.md/arkts-ability-app-ability-startoptions-startoptions-c.md)的 supportWindowModes属性取值冲突。当取值冲突时，最终以该参数设置的窗口支持模式为准。 |
-| grayOutMaximizeButton | boolean | Yes | 是否显示并将主窗口的最大化按钮置灰 true表示显示并将主窗口的最大化按钮置灰，此时最大化按钮不可用；false表示不显示主窗口的最大化按钮。 此参数配置仅在supportedWindowModes不支持FULL_SCREEN时生效。 |
+| supportedWindowModes | Array&lt;bundleManager.SupportWindowMode&gt; | Yes | The supported modes of window. |
+| grayOutMaximizeButton | boolean | Yes | Whether to gray out the window maximize button. The value true means to gray out the button, and false means the opposite. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | 无返回结果的Promise对象。 |
+| Promise&lt;void&gt; | Promise that returns no value. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 1300003 | This window manager service works abnormally. |
-| 801 | Capability not supported. Function setSupportedWindowModes can not work correctly due to limited device capabilities. |
-| 1300002 | This window state is abnormal. Possible cause: 1. The window is not created or destroyed. 2. Internal task error. |
-| 1300016 | Parameter error. Possible cause: 1. Invalid parameter range. 2. Invalid parameter length. 3. Incorrect parameter format. |
+| [1300003](../errorcode-window.md#1300003-abnormal-window-manager-service) | This window manager service works abnormally. |
+| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. Function setSupportedWindowModes can not work correctly due to limited device capabilities. |
+| [1300002](../errorcode-window.md#1300002-abnormal-window-state) | This window state is abnormal. Possible cause: 1. The window is not created or destroyed. 2. Internal task error. |
+| [1300016](../errorcode-window.md#1300016-parameter-verification-error) | Parameter error. Possible cause: 1. Invalid parameter range. 2. Invalid parameter length. 3. Incorrect parameter format. |
 
 ## setWindowModal
 
@@ -1384,11 +1419,11 @@ Set the application modality of the windowStage.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 1300003 | This window manager service works abnormally. |
-| 401 | Parameter error. Possible cause: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types. |
-| 801 | Capability not supported. Failed to call the API due to limited device capabilities. |
-| 1300002 | This window state is abnormal. |
-| 1300005 | This window stage is abnormal. Possible cause: The window is not created or destroyed.<br>**Applicable version:** 20 and later |
+| [1300003](../errorcode-window.md#1300003-abnormal-window-manager-service) | This window manager service works abnormally. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible cause: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types. |
+| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. Failed to call the API due to limited device capabilities. |
+| [1300002](../errorcode-window.md#1300002-abnormal-window-state) | This window state is abnormal. Possible cause: The window is not created or destroyed. |
+| [1300005](../errorcode-window.md#1300005-abnormal-windowstage) | This window stage is abnormal. Possible cause: The window is not created or destroyed.<br>**Applicable version:** 20 and later |
 
 ## setWindowRectAutoSave
 
@@ -1396,18 +1431,7 @@ Set the application modality of the windowStage.
 setWindowRectAutoSave(enabled: boolean): Promise<void>
 ```
 
-设置是否启用最后关闭的主窗尺寸的记忆功能，使用Promise异步回调。
-
-启用记忆功能后，在同一个UIAbility下，记忆最后关闭的主窗口的尺寸；此主窗口再次启动时，以记忆的尺寸按照规则进行打开。层叠规则：1、当前实例是自由窗口时，打开下一实例窗口层叠时，大小要跟随。2、当前实例是最大化或全屏窗口时，打开下一个实例窗口层叠时，保持最大化。
-
-记忆规则：  
-|上一次窗口状态|记忆规则|  
-|-------------|-------|  
-|自由窗口|保留自由窗口的大小/位置，超出工作区回弹|  
-|二分屏窗口|保留二分屏之前自由窗口的大小/位置|  
-|最大化窗口|保留最大化|  
-|沉浸式窗口|保留沉浸式之前自由窗口的大小/位置|  
-|最小化窗口|保留最小化之前自由窗口的大小/位置|
+Set to automatically save the window rect.
 
 **Since:** 14
 
@@ -1425,22 +1449,22 @@ setWindowRectAutoSave(enabled: boolean): Promise<void>
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| enabled | boolean | Yes | 设置是否启用主窗尺寸的记忆功能，true为启用，false为不启用。 |
+| enabled | boolean | Yes | Enable the window rect auto-save if true, otherwise means the opposite. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | 无返回结果的Promise对象。 |
+| Promise&lt;void&gt; | Promise that returns no value. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 1300003 | This window manager service works abnormally. |
-| 401 | Parameter error. Possible cause: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types. |
-| 801 | Capability not supported. Failed to call the API due to limited device capabilities. |
-| 1300002 | This window state is abnormal. Possible cause: 1. The window is not created or destroyed; 2. Internal task error. |
+| [1300003](../errorcode-window.md#1300003-abnormal-window-manager-service) | This window manager service works abnormally. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible cause: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types. |
+| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. Failed to call the API due to limited device capabilities. |
+| [1300002](../errorcode-window.md#1300002-abnormal-window-state) | This window state is abnormal. Possible cause: 1. The window is not created or destroyed; 2. Internal task error. |
 
 ## setWindowRectAutoSave
 
@@ -1448,20 +1472,7 @@ setWindowRectAutoSave(enabled: boolean): Promise<void>
 setWindowRectAutoSave(enabled: boolean, isSaveBySpecifiedFlag: boolean): Promise<void>
 ```
 
-设置是否启用主窗的尺寸记忆功能，使用Promise异步回调。
-
-在同一个UIAbility下，可记忆最后关闭的主窗口尺寸，也可针对每个主窗口尺寸单独进行记忆。只有在UIAbility启动模式为specified，且isSaveBySpecifiedFlag设置为true时，才能针对每个主窗口尺寸进行单独记忆。
-
-启用记忆功能后，记忆主窗口关闭时的尺寸；对应主窗口再次启动时，以记忆的尺寸按照规则进行打开。
-
-记忆规则：  
-|上一次窗口状态|记忆规则|  
-|-------------|-------|  
-|自由窗口|保留自由窗口的大小/位置，超出工作区回弹。|  
-|二分屏窗口|保留二分屏之前自由窗口的大小/位置。|  
-|最大化窗口|保留最大化。|  
-|沉浸式窗口|保留沉浸式之前自由窗口的大小/位置。|  
-|最小化窗口|保留最小化之前自由窗口的大小/位置。|
+Set to automatically save the window rect and whether to enable specifiedFlag.Through the specifiedFlag flag, the window is marked and its rect is saved.
 
 **Since:** 17
 
@@ -1492,8 +1503,8 @@ setWindowRectAutoSave(enabled: boolean, isSaveBySpecifiedFlag: boolean): Promise
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 1300003 | This window manager service works abnormally. |
-| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types. |
-| 801 | Capability not supported. Function setWindowRectAutoSave can not work correctly due to limited device capabilities. |
-| 1300002 | This window state is abnormal. Possible cause: 1. The window is not created or destroyed; 2. Internal task error. |
+| [1300003](../errorcode-window.md#1300003-abnormal-window-manager-service) | This window manager service works abnormally. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types. |
+| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. Function setWindowRectAutoSave can not work correctly due to limited device capabilities. |
+| [1300002](../errorcode-window.md#1300002-abnormal-window-state) | This window state is abnormal. Possible cause: 1. The window is not created or destroyed; 2. Internal task error. |
 

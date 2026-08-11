@@ -1,6 +1,6 @@
 # DrawableTabBarIndicator
 
-使用图片资源作为下划线的对象。
+Provide an interface for the style of a drawable indicator including margin top.
 
 **Since:** 23
 
@@ -16,13 +16,7 @@
 borderRadius?: Length
 ```
 
-下划线的圆角半径（不支持百分比设置）。
-
-默认值：0.0
-
-单位：vp
-
-取值范围：[0, +∞)
+Rounded corner radius of the indicator. It cannot be set in percentage.&lt;br&gt;Value constraint:[0, +∞).&lt;br&gt;Default value:0.0vp.
 
 **Type:** [Length](arkts-arkui-length-t.md)
 
@@ -46,12 +40,7 @@ borderRadius?: Length
 drawable?: DrawableDescriptor
 ```
 
-下划线的图源。
-
-支持[DrawableDescriptor](arkts-arkui-arkui-drawabledescriptor-drawabledescriptorloadedresult-i.md)、  
-[PixelMapDrawableDescriptor](arkts-arkui-arkui-drawabledescriptor-pixelmapdrawabledescriptor-c.md)、  
-[LayeredDrawableDescriptor](arkts-arkui-arkui-drawabledescriptor-layereddrawabledescriptor-c.md)和  
-[AnimatedDrawableDescriptor](arkts-arkui-arkui-drawabledescriptor-animateddrawabledescriptor-c.md)类型。当传入无效图源时将显示默认的实线型下划线。
+Define the drawable object for the indicator.
 
 **Type:** [DrawableDescriptor](arkts-arkui-arkui-drawabledescriptor-drawabledescriptor-c.md)
 
@@ -73,13 +62,7 @@ drawable?: DrawableDescriptor
 height?: Length
 ```
 
-下划线的高度（不支持百分比设置）。
-
-默认值：2.0
-
-单位：vp
-
-取值范围：[0, +∞)
+Height of the indicator. It cannot be set in percentage.&lt;br&gt;Value constraint:(0, +∞).&lt;br&gt;Default value:2.0vp.
 
 **Type:** [Length](arkts-arkui-length-t.md)
 
@@ -103,13 +86,7 @@ height?: Length
 marginTop?: Length
 ```
 
-下划线与文字的间距（不支持百分比设置）。
-
-默认值：8.0
-
-单位：vp
-
-取值范围：[0, +∞)
+Spacing between the indicator and text.It cannot be set in percentage.&lt;br&gt;Value constraint:[0, +∞).&lt;br&gt;Default value:8.0vp.
 
 **Type:** [Length](arkts-arkui-length-t.md)
 
@@ -133,15 +110,7 @@ marginTop?: Length
 width?: Length
 ```
 
-下划线的宽度（不支持百分比设置）。
-
-默认值：0.0
-
-单位：vp
-
-取值范围：[0, +∞) 
-
-宽度设置为0时，按页签文本宽度显示。
+Width of the indicator. It cannot be set in percentage.If it is 0, the width will be equal to the width of the content&lt;br&gt;Default value:0.0vp.
 
 **Type:** [Length](arkts-arkui-length-t.md)
 

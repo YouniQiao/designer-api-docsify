@@ -23,12 +23,6 @@ InputMethodSetting提供输入法配置与查询能力，面向前台应用提�
 
 **系统能力：** SystemCapability.MiscServices.InputMethodFramework
 
-## 导入模块
-
-```TypeScript
-import { inputMethod } from 'kits/@kit.IMEKit';
-```
-
 ## enableInputMethod
 
 ```TypeScript
@@ -67,11 +61,11 @@ enableInputMethod(bundleName: string, extensionName: string, enabledState: Enabl
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 12800019 | current operation cannot be applied to the preconfigured default input method. |
-| 12800018 | input method is not found. |
-| 201 | permissions check fails. |
-| 202 | not system application. |
-| 12800008 | input method manager service error. Possible cause: a system error, such as null pointer, IPC exception. |
+| [12800019](../errorcode-inputmethod-framework.md#12800019-系统配置的默认输入法不支持此操作) | current operation cannot be applied to the preconfigured default input method. |
+| [12800018](../errorcode-inputmethod-framework.md#12800018-输入法未找到) | input method is not found. |
+| [201](../../errorcode-universal.md#201-权限校验失败) | permissions check fails. |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | not system application. |
+| [12800008](../errorcode-inputmethod-framework.md#12800008-输入法管理服务异常) | input method manager service error. Possible cause: a system error, such as null pointer, IPC exception. |
 
 ## 示例
 
@@ -151,14 +145,14 @@ enableInputMethod(
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 12800019 | current operation cannot be applied to the preconfigured default input method. |
-| 12800018 | input method is not found. |
-| 12800023 | the specified user does not exist. |
-| 201 | permissions check fails. |
-| 202 | not system application. |
-| 12800025 | cross-user operation denied. Only user 0 applications are authorized for this operation. |
-| 12800008 | input method manager service error. Possible cause: a system error, such as null pointer, IPC exception. |
-| 12800024 | the specified user is not in the foreground. |
+| [12800019](../errorcode-inputmethod-framework.md#12800019-系统配置的默认输入法不支持此操作) | current operation cannot be applied to the preconfigured default input method. |
+| [12800018](../errorcode-inputmethod-framework.md#12800018-输入法未找到) | input method is not found. |
+| [12800023](../errorcode-inputmethod-framework.md#12800023-指定的用户不存在) | the specified user does not exist. |
+| [201](../../errorcode-universal.md#201-权限校验失败) | permissions check fails. |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | not system application. |
+| [12800025](../errorcode-inputmethod-framework.md#12800025-跨用户操作被拒绝) | cross-user operation denied. Only user 0 applications are authorized for this operation. |
+| [12800008](../errorcode-inputmethod-framework.md#12800008-输入法管理服务异常) | input method manager service error. Possible cause: a system error, such as null pointer, IPC exception. |
+| [12800024](../errorcode-inputmethod-framework.md#12800024-指定的用户未在前台) | the specified user is not in the foreground. |
 
 ## getAllInputMethodsSync
 
@@ -202,12 +196,12 @@ getAllInputMethodsSync(userId?: int): Array<InputMethodProperty>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 12800001 | bundle manager error. |
-| 12800023 | the specified user does not exist. |
-| 202 | not system application. |
-| 12800025 | cross-user operation denied. Only user 0 applications are authorized for this operation. |
-| 12800008 | input method manager service error. Possible cause: a system error, such as null pointer, IPC exception. |
-| 12800024 | the specified user is not in the foreground. |
+| [12800001](../errorcode-inputmethod-framework.md#12800001-包管理服务异常) | bundle manager error. |
+| [12800023](../errorcode-inputmethod-framework.md#12800023-指定的用户不存在) | the specified user does not exist. |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | not system application. |
+| [12800025](../errorcode-inputmethod-framework.md#12800025-跨用户操作被拒绝) | cross-user operation denied. Only user 0 applications are authorized for this operation. |
+| [12800008](../errorcode-inputmethod-framework.md#12800008-输入法管理服务异常) | input method manager service error. Possible cause: a system error, such as null pointer, IPC exception. |
+| [12800024](../errorcode-inputmethod-framework.md#12800024-指定的用户未在前台) | the specified user is not in the foreground. |
 
 ## getCursorInfo
 
@@ -251,12 +245,12 @@ getCursorInfo(userId?: int): CursorInfo
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 12800003 | input method client error. Possible causes: 1. No edit box is bound to the current input method application under the specified user. |
-| 12800023 | the specified user does not exist. |
-| 202 | not system application. |
-| 12800025 | cross-user operation denied. Only user 0 applications are authorized for this operation. |
-| 12800008 | input method manager service error. Possible causes: a system error, such as null pointer, IPC exception. |
-| 12800024 | the specified user is not in the foreground. |
+| [12800003](../errorcode-inputmethod-framework.md#12800003-客户端应用异常) | input method client error. Possible causes: 1. No edit box is bound to the current input method application under the specified user. |
+| [12800023](../errorcode-inputmethod-framework.md#12800023-指定的用户不存在) | the specified user does not exist. |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | not system application. |
+| [12800025](../errorcode-inputmethod-framework.md#12800025-跨用户操作被拒绝) | cross-user operation denied. Only user 0 applications are authorized for this operation. |
+| [12800008](../errorcode-inputmethod-framework.md#12800008-输入法管理服务异常) | input method manager service error. Possible causes: a system error, such as null pointer, IPC exception. |
+| [12800024](../errorcode-inputmethod-framework.md#12800024-指定的用户未在前台) | the specified user is not in the foreground. |
 
 ## 示例
 
@@ -302,8 +296,8 @@ getDefaultInputMethodAbility(): InputMethodProperty
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 202 | not system application. |
-| 12800008 | input method manager service error. Possible cause: a system error, such as null pointer, IPC exception. |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | not system application. |
+| [12800008](../errorcode-inputmethod-framework.md#12800008-输入法管理服务异常) | input method manager service error. Possible cause: a system error, such as null pointer, IPC exception. |
 
 ## 示例
 
@@ -362,12 +356,12 @@ getInputMethodSubtypes(bundleName: string, userId?: int): Array<InputMethodSubty
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 12800001 | bundle manager error. |
-| 12800023 | the specified user does not exist. |
-| 202 | not system application. |
-| 12800025 | cross-user operation denied. Only user 0 applications are authorized for this operation. |
-| 12800008 | input method manager service error. Possible cause: a system error, such as null pointer, IPC exception. |
-| 12800024 | the specified user is not in the foreground. |
+| [12800001](../errorcode-inputmethod-framework.md#12800001-包管理服务异常) | bundle manager error. |
+| [12800023](../errorcode-inputmethod-framework.md#12800023-指定的用户不存在) | the specified user does not exist. |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | not system application. |
+| [12800025](../errorcode-inputmethod-framework.md#12800025-跨用户操作被拒绝) | cross-user operation denied. Only user 0 applications are authorized for this operation. |
+| [12800008](../errorcode-inputmethod-framework.md#12800008-输入法管理服务异常) | input method manager service error. Possible cause: a system error, such as null pointer, IPC exception. |
+| [12800024](../errorcode-inputmethod-framework.md#12800024-指定的用户未在前台) | the specified user is not in the foreground. |
 
 ## getInputMethodsSync
 
@@ -412,12 +406,12 @@ getInputMethodsSync(enable: boolean, userId?: int): Array<InputMethodProperty>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 12800001 | bundle manager error. |
-| 12800023 | the specified user does not exist. |
-| 202 | not system application. |
-| 12800025 | cross-user operation denied. Only user 0 applications are authorized for this operation. |
-| 12800008 | input method manager service error. Possible cause: a system error, such as null pointer, IPC exception. |
-| 12800024 | the specified user is not in the foreground. |
+| [12800001](../errorcode-inputmethod-framework.md#12800001-包管理服务异常) | bundle manager error. |
+| [12800023](../errorcode-inputmethod-framework.md#12800023-指定的用户不存在) | the specified user does not exist. |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | not system application. |
+| [12800025](../errorcode-inputmethod-framework.md#12800025-跨用户操作被拒绝) | cross-user operation denied. Only user 0 applications are authorized for this operation. |
+| [12800008](../errorcode-inputmethod-framework.md#12800008-输入法管理服务异常) | input method manager service error. Possible cause: a system error, such as null pointer, IPC exception. |
+| [12800024](../errorcode-inputmethod-framework.md#12800024-指定的用户未在前台) | the specified user is not in the foreground. |
 
 ## isPanelShown
 
@@ -453,9 +447,9 @@ isPanelShown(panelInfo: PanelInfo): boolean
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
-| 202 | not system application. |
-| 12800008 | input method manager service error. Possible cause: a system error, such as null pointer, IPC exception. |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | not system application. |
+| [12800008](../errorcode-inputmethod-framework.md#12800008-输入法管理服务异常) | input method manager service error. Possible cause: a system error, such as null pointer, IPC exception. |
 
 ## 示例
 
@@ -518,10 +512,12 @@ isPanelShown(panelInfo: PanelInfo, displayId: long): boolean
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 202 | not system application. |
-| 12800008 | input method manager service error. Possible cause: a system error, such as null pointer, IPC exception. |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | not system application. |
+| [12800008](../errorcode-inputmethod-framework.md#12800008-输入法管理服务异常) | input method manager service error. Possible cause: a system error, such as null pointer, IPC exception. |
 
 ## 示例
+
+ArkTS-Dyn示例:
 
 ```TypeScript
 import { PanelInfo, PanelType, PanelFlag } from '@kit.IMEKit';
@@ -532,12 +528,23 @@ let info: PanelInfo = {
   flag: PanelFlag.FLAG_FIXED
 }
 
-try {
-  let result: boolean = inputMethod.getSetting().isPanelShown(info, displayId);
-  console.info('Succeeded in querying isPanelShown, result: ' + result);
-} catch (err) {
-  console.error(`Failed to query isPanelShown. Code: ${err.code}, message: ${err.message}`);
+let result: boolean = inputMethod.getSetting().isPanelShown(info, displayId);
+console.info('Succeeded in querying isPanelShown, result: ' + result);
+```
+
+ArkTS-Sta示例:
+
+```TypeScript
+import { PanelInfo, PanelType, PanelFlag } from '@kit.IMEKit';
+
+let displayId: long = 10;
+let info: PanelInfo = {
+  type: PanelType.SOFT_KEYBOARD,
+  flag: PanelFlag.FLAG_FIXED
 }
+
+let result: boolean = inputMethod.getSetting().isPanelShown(info, displayId);
+console.info('Succeeded in querying isPanelShown, result: ' + result);
 ```
 
 ## off('imeShow')
@@ -632,7 +639,7 @@ offImeChangeWithUserId(callback?: ImeChangeWithUserIdCallback): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 202 | not system application. |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | not system application. |
 
 ## offImeHide
 
@@ -657,6 +664,12 @@ offImeHide(callback?: Callback<Array<InputWindowInfo>>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;Array&lt;InputWindowInfo&gt;&gt; | 否 | 取消订阅的回调函数。 参数不填写时，取消订阅type对应的所有回调事件。 |
+
+## 示例
+
+```TypeScript
+inputMethod.getSetting().offImeHide();
+```
 
 ## offImeShow
 
@@ -683,6 +696,12 @@ offImeShow(callback?: Callback<Array<InputWindowInfo>>):void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;Array&lt;InputWindowInfo&gt;&gt; | 否 | 取消订阅的回调函数。 参数不填写时，取消订阅type对应的所有回调事件。 |
+
+## 示例
+
+```TypeScript
+inputMethod.getSetting().offImeShow();
+```
 
 ## on('imeShow')
 
@@ -713,7 +732,7 @@ on(type: 'imeShow', callback: (info: Array<InputWindowInfo>) => void): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 202 | not system application. |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | not system application. |
 
 ## 示例
 
@@ -752,7 +771,7 @@ on(type: 'imeHide', callback: (info: Array<InputWindowInfo>) => void): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 202 | not system application. |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | not system application. |
 
 ## 示例
 
@@ -792,7 +811,7 @@ onImeChangeWithUserId(callback: ImeChangeWithUserIdCallback): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 202 | not system application. |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | not system application. |
 
 ## onImeHide
 
@@ -822,7 +841,15 @@ onImeHide(callback: Callback<Array<InputWindowInfo>>): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 202 | not system application. |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | not system application. |
+
+## 示例
+
+```TypeScript
+inputMethod.getSetting().onImeHide((info: Array<inputMethod.InputWindowInfo>) => {
+  console.info('Succeeded in subscribing imeHide event.');
+});
+```
 
 ## onImeShow
 
@@ -854,5 +881,13 @@ onImeShow(callback: Callback<Array<InputWindowInfo>>):void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 202 | not system application. |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | not system application. |
+
+## 示例
+
+```TypeScript
+inputMethod.getSetting().onImeShow((info: Array<inputMethod.InputWindowInfo>) => {
+  console.info('Succeeded in subscribing imeShow event.');
+});
+```
 

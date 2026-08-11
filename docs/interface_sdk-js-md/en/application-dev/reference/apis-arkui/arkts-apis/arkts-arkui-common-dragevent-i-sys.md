@@ -44,9 +44,9 @@ This method can only be called in onDrop, and please do not use custom drop anim
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 801 | Capability not supported. |
-| 190003 | Operation not allowed for current phase. |
-| 202 | Permission verification failed, application which is not a system application uses system API. |
+| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. |
+| [190003](../errorcode-drag-event.md#190003-operation-not-allowed-in-the-current-phase) | Operation not allowed for current phase. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed, application which is not a system application uses system API. |
 
 ## executeFollowHandMorphDropAnimation
 

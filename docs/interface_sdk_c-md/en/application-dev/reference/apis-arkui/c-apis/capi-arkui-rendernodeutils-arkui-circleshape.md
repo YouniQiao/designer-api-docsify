@@ -6,7 +6,7 @@ typedef struct ArkUI_CircleShape ArkUI_CircleShapeOption
 
 ## Overview
 
-Circle shape option.
+Defines a circle shape option.
 
 **Since**: 20
 

@@ -1,6 +1,6 @@
 # PathOptions
 
-用于描述Path组件绘制属性。
+Define options used to construct a path.
 
 **Since:** 23
 
@@ -16,11 +16,7 @@
 commands?: ResourceStr
 ```
 
-路径绘制的命令字符串。
-
-默认值：空字符串
-
-异常值按照默认值处理。
+Commands option.
 
 **Type:** [ResourceStr](arkts-arkui-resourcestr-t.md)
 
@@ -40,11 +36,7 @@ commands?: ResourceStr
 height?: Length
 ```
 
-路径所在矩形的高度。
-
-值为异常值或缺省时按照自身内容需要的高度处理。
-
-默认单位：vp
+Height option.
 
 **Type:** [Length](arkts-arkui-length-t.md)
 
@@ -64,11 +56,7 @@ height?: Length
 width?: Length
 ```
 
-路径所在矩形的宽度。
-
-值为异常值或缺省时按照自身内容需要的宽度处理。
-
-默认单位：vp
+Width option.
 
 **Type:** [Length](arkts-arkui-length-t.md)
 

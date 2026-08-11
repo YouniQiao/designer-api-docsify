@@ -1,6 +1,6 @@
 # DeviceRotationRadian（系统接口）
 
-Interface for device rotation radian
+设备旋转弧度接口。
 
 **起始版本：** 20
 
@@ -12,19 +12,13 @@ Interface for device rotation radian
 
 **系统接口：** 此接口为系统接口。
 
-## 导入模块
-
-```TypeScript
-import { deviceStatus } from 'kits/@kit.MultimodalAwarenessKit';
-```
-
 ## x
 
 ```TypeScript
 x: double
 ```
 
-indicates X-RotationRadian
+表示X轴旋转弧度。
 
 **类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：double
 
@@ -44,7 +38,7 @@ indicates X-RotationRadian
 y: double
 ```
 
-indicates Y-RotationRadian
+表示Y轴旋转弧度。
 
 **类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：double
 
@@ -64,7 +58,7 @@ indicates Y-RotationRadian
 z: double
 ```
 
-indicates Z-RotationRadian
+表示Z轴旋转弧度。
 
 **类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：double
 

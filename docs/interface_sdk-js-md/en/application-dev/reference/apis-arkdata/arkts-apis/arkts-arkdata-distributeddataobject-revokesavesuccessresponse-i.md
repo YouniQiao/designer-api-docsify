@@ -1,6 +1,6 @@
 # RevokeSaveSuccessResponse
 
-[revokeSave](arkts-arkdata-distributeddataobject-dataobject-i.md#revokesave)接口回调信息。
+Represents the information returned by the callback of revokeSave.
 
 **Since:** 9
 
@@ -22,7 +22,7 @@ import { distributedDataObject } from 'kits/@kit.ArkData';
 sessionId: string
 ```
 
-多设备协同的唯一标识。
+Unique ID for multi-device collaboration.
 
 **Type:** string
 

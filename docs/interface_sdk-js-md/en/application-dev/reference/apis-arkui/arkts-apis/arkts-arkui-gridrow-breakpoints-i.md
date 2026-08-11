@@ -1,6 +1,6 @@
 # BreakPoints
 
-设置栅格容器组件的断点。
+Defines the breakpoints of grid-row component.
 
 **Since:** 23
 
@@ -16,7 +16,7 @@
 reference?: BreakpointsReference
 ```
 
-断点切换参照物。
+Set breakpoint reference
 
 **Type:** [BreakpointsReference](arkts-arkui-gridrow-breakpointsreference-e.md)
 
@@ -36,7 +36,7 @@ reference?: BreakpointsReference
 value?: Array<string>
 ```
 
-设置断点位置的单调递增数组。
+Breakpoint array
 
 **Type:** Array&lt;string&gt;
 

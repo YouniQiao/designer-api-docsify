@@ -1,6 +1,6 @@
 # AuthStatus (System API)
 
-授权状态。
+Authorization status.
 
 **Since:** 26.0.0
 
@@ -18,7 +18,7 @@
 REQUIRE_AUTH = 0
 ```
 
-需要授权。
+Requires authorization.
 
 **Since:** 26.0.0
 
@@ -36,7 +36,7 @@ REQUIRE_AUTH = 0
 FORBIDDEN = 1
 ```
 
-禁止使用。
+Forbidden.
 
 **Since:** 26.0.0
 
@@ -54,7 +54,7 @@ FORBIDDEN = 1
 AUTHORIZED = 2
 ```
 
-已授权。
+Authorized.
 
 **Since:** 26.0.0
 
@@ -72,7 +72,7 @@ AUTHORIZED = 2
 RESTRICTED = 3
 ```
 
-受策略限制，不允许授权。
+Restricted by policy, authorization not allowed.
 
 **Since:** 26.0.0
 
@@ -90,7 +90,7 @@ RESTRICTED = 3
 REMOTE_RESTRICTED = 4
 ```
 
-策略限制的远程授权。
+Remote authorization restricted by policy.
 
 **Since:** 26.0.0
 

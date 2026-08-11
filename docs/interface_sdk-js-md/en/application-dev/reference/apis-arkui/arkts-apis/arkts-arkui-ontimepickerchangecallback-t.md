@@ -4,7 +4,7 @@
 export type OnTimePickerChangeCallback = (result: TimePickerResult) => void
 ```
 
-选择时间时触发该事件。
+Callback of the timePicker time is selected event.
 
 **Since:** 23
 

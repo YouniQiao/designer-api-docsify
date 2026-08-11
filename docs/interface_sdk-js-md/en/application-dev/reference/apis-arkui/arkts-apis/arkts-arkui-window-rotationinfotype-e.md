@@ -1,6 +1,6 @@
 # RotationInfoType
 
-旋转信息类型枚举。
+Enumerates the types of rotation information.
 
 **Since:** 23
 
@@ -16,9 +16,10 @@
 WINDOW_ORIENTATION = 0
 ```
 
-窗口所在屏幕的显示方向，以窗口模块对横竖屏的定义方式表示。
+Window's screen orientation, based on how the Window module defines landscape/portrait modes.
 
-开发者在使用时，需要注意该方向表示[RotationChangeInfo](arkts-arkui-window-rotationchangeinfo-i.md)中的orientation参数。
+Note that it maps to the **orientation** parameter in  
+[RotationChangeInfo](arkts-arkui-window-rotationchangeinfo-i.md).
 
 **Since:** 23
 
@@ -34,9 +35,9 @@ WINDOW_ORIENTATION = 0
 DISPLAY_ORIENTATION = 1
 ```
 
-屏幕显示方向，以屏幕模块对横竖屏的定义方式表示。
+Physical screen orientation, based on how the Display module defines landscape/portrait modes.
 
-开发者在使用时，需要注意该方向表示[display](arkts-arkui-display-displaystate-e.md)对象的orientation属性。
+It maps to the **orientation** property of the [display](arkts-arkui-display-displaystate-e.md) object.
 
 **Since:** 23
 
@@ -52,9 +53,9 @@ DISPLAY_ORIENTATION = 1
 DISPLAY_ROTATION = 2
 ```
 
-设备的屏幕顺时针旋转角度。
+Physical rotation angle of the device's screen (in degrees, clockwise).
 
-开发者在使用时，需要注意该方向表示[display](arkts-arkui-display-displaystate-e.md)对象的rotation属性。
+It maps to the **rotation** property of the [display](arkts-arkui-display-displaystate-e.md) object.
 
 **Since:** 23
 

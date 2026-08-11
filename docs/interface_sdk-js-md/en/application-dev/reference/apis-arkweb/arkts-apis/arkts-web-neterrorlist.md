@@ -12,5 +12,5 @@ import { WebNetErrorList } from 'kits/@kit.ArkWeb';
 
 | Name | Description |
 | --- | --- |
-| [WebNetErrorList](arkts-arkweb-web-neterrorlist-webneterrorlist-e.md) | ArkWeb的网络协议栈错误列表。 |
+| [WebNetErrorList](arkts-arkweb-web-neterrorlist-webneterrorlist-e.md) | Web net error list. |
 

@@ -1,6 +1,6 @@
 # PermissionRequest
 
-权限请求。
+Defines the onPermissionRequest callback, related to {@link onPermissionRequest} method.
 
 **Since:** 23
 
@@ -16,7 +16,7 @@
 constructor()
 ```
 
-WebKeyboardController的构造函数。
+Constructor.
 
 **Since:** 23
 

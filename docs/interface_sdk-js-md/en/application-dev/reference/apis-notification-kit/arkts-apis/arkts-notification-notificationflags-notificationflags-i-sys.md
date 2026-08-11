@@ -1,6 +1,6 @@
 # NotificationFlags
 
-描述通知标志位。
+Defines the notification flags.
 
 **Since:** 8
 
@@ -16,14 +16,15 @@
 readonly reminderFlags?: long
 ```
 
-是否启用输入信息提示功能。
+Settings of the input information reminder features.
 
-- bit0：铃声提示。0表示关闭，1表示开启。   
-- bit1：锁屏。0表示关闭，1表示开启。   
-- bit2：横幅。0表示关闭，1表示开启。   
-- bit3：亮屏。0表示关闭，1表示开启。   
-- bit4：振动。0表示关闭，1表示开启。   
-- bit5：状态栏通知图标。0表示关闭，1表示开启。
+- Bit 0: sound alert. The value **0** means to enable the feature, and **1** means the opposite.  
+- Bit 1: locking the screen. The value **0** means to enable the feature, and **1** means the opposite.  
+- Bit 2: banner. The value **0** means to enable the feature, and **1** means the opposite.  
+- Bit 3: turning on the screen. The value **0** means to enable the feature, and **1** means the opposite.  
+- Bit 4: vibration. The value **0** means to enable the feature, and **1** means the opposite.  
+- Bit 5: notification icon in the status bar. The value **0** means to enable the feature, and **1** means the   
+opposite.
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：long
 

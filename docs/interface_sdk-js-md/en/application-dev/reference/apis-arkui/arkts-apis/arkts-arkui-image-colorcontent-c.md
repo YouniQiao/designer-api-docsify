@@ -1,6 +1,6 @@
 # ColorContent
 
-指定颜色填充内容。
+Defines the ColorContent.
 
 **Since:** 23
 
@@ -16,7 +16,7 @@
 static readonly ORIGIN: ColorContent
 ```
 
-重置[fillColor](fillColor)接口，效果上与不设置[fillColor](fillColor)一致。
+Indicates the ColorContent to original value.
 
 **Type:** [ColorContent](arkts-arkui-image-colorcontent-c.md)
 

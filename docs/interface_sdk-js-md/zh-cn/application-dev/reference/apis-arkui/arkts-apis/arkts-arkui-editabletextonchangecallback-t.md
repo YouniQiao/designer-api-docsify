@@ -24,5 +24,5 @@ declare type EditableTextOnChangeCallback = (value: string, previewText?: Previe
 | --- | --- | --- | --- |
 | value | string | 是 | Text displayed in the text box. |
 | previewText | [PreviewText](arkts-arkui-previewtext-i.md) | 否 | Information about the preview text, including its start position and text content. |
-| options | [TextChangeOptions](arkts-arkui-textcommon-textchangeoptions-i.md) | 否 | Information about the text change, including the selection range, text displayed in the text box, and preview text. |
+| options | [TextChangeOptions](arkts-arkui-textchangeoptions-i.md) | 否 | Information about the text change, including the selection range, text displayed in the text box, and preview text. |
 

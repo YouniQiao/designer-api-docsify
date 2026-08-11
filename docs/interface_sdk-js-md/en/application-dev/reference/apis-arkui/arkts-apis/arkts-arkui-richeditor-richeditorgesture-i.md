@@ -1,6 +1,6 @@
 # RichEditorGesture
 
-用户手势事件。
+Defines the richEditor Gestures.
 
 **Since:** 23
 
@@ -16,11 +16,7 @@
 onClick?: Callback<ClickEvent>
 ```
 
-[ClickEvent](arkts-arkui-common-clickevent-i.md)为用户点击事件。
-
-点击完成时回调事件。
-
-双击时，第一次点击触发回调事件。
+Trigger a click event when a click is clicked.
 
 **Type:** [Callback](../arkts-components/arkts-arkui-callback-i.md)&lt;[ClickEvent](../arkts-components/arkts-arkui-clickevent-i.md)&gt;
 
@@ -40,9 +36,7 @@ onClick?: Callback<ClickEvent>
 onLongPress?: Callback<GestureEvent>
 ```
 
-[GestureEvent](../../../reference/apis-arkui/arkui-ts/ts-gesture-common.md#gestureevent对象说明)为用户长按事件。
-
-长按完成时回调事件。
+Trigger a gesture event when long press event is complete.
 
 **Type:** [Callback](../arkts-components/arkts-arkui-callback-i.md)&lt;[GestureEvent](arkts-arkui-gestureevent-i.md)&gt;
 

@@ -14,12 +14,6 @@ TimeOptions定义时间选择器的选项。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
-## 导入模块
-
-```TypeScript
-import { DisplayMode, TimeFormat, DatePickerComponent, DateMode, DatePickerComponentOptions, DatePickerComponentResult } from 'kits/@kit.ArkUI';
-```
-
 ## format
 
 ```TypeScript

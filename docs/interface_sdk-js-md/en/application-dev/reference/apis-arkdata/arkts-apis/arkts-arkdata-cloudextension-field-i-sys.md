@@ -1,6 +1,6 @@
 # Field (System API)
 
-数据库中的字段结构。
+Represents a field in the database.
 
 **Since:** 11
 
@@ -24,7 +24,7 @@ import { cloudExtension } from 'kits/@kit.ArkData';
 alias: string
 ```
 
-该字段在服务器表中的别名。
+Alias of the field in the table.
 
 **Type:** string
 
@@ -44,7 +44,7 @@ alias: string
 colName: string
 ```
 
-列名。
+Name of the column, in which the field is located.
 
 **Type:** string
 
@@ -64,7 +64,7 @@ colName: string
 nullable: boolean
 ```
 
-当前列是否允许为空值。true表示允许为空，false表示不允许为空。
+Whether the current column can be null.The value true means the current column can be null; the value false means the opposite.
 
 **Type:** boolean
 
@@ -84,7 +84,7 @@ nullable: boolean
 primary: boolean
 ```
 
-当前列是否为主键。true表示是主键，false表示不是主键。
+Whether the current column is the primary key.The value true means the current column is the primary key; the value false means the opposite.
 
 **Type:** boolean
 
@@ -104,7 +104,7 @@ primary: boolean
 type: FieldType
 ```
 
-字段类型。
+Type of the field. For details, see {@link FieldType}.
 
 **Type:** [FieldType](arkts-arkdata-cloudextension-fieldtype-e-sys.md)
 

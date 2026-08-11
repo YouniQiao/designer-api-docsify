@@ -1,11 +1,5 @@
 # offAutoSyncTrigger
 
-## 导入模块
-
-```TypeScript
-import { cloudData } from 'kits/@kit.ArkData';
-```
-
 ## offAutoSyncTrigger
 
 ```TypeScript
@@ -34,11 +28,13 @@ function offAutoSyncTrigger(observer?: Callback<AutoSyncTriggerInfo>): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 801 | Capability not supported. |
+| [801](../../errorcode-universal.md#801-该设备不支持此api) | Capability not supported. |
 
 ## 示例
 
 ```TypeScript
+import { cloudData } from '@kit.ArkData';
+
 function autoSyncTriggerObserver(info: cloudData.AutoSyncTriggerInfo) {
   console.info(`Auto sync triggered, mode: ${info.mode}`);
 }

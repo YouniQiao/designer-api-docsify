@@ -10,12 +10,6 @@ The request agent api.Supports "background" and "frontend" tasks as while.Though
 
 **系统能力：** SystemCapability.Request.FileTransferAgent
 
-## 导入模块
-
-```TypeScript
-import { request } from 'kits/@kit.BasicServicesKit';
-```
-
 ## 汇总
 
 ### 函数

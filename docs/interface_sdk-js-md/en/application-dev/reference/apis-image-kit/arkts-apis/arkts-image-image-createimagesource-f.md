@@ -12,9 +12,10 @@ import { image } from 'kits/@kit.ImageKit';
 function createImageSource(uri: string): ImageSource
 ```
 
-通过传入的uri创建ImageSource实例。
+Creates an ImageSource instance based on a given URI.
 
-由于图片占用内存较大，所以当ImageSource实例使用完成后，应主动调用[release](arkts-image-image-imagesource-i.md#release)方法及时释放内存。释放时应确保该实例的所有异步方法均执行完成，且后续不再使用该实例。
+Images occupy a large amount of memory. When you finish using an ImageSource instance, call   
+[release](arkts-image-image-imagesource-i.md#release) to free the memory promptly. Before releasing the instance, ensure that all asynchronous operations associated with the instance have finished and the instance is no longer needed.
 
 **Since:** 6
 
@@ -30,13 +31,13 @@ function createImageSource(uri: string): ImageSource
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| uri | string | Yes | 图片路径，当前仅支持应用沙箱路径。 &lt;br&gt;当前支持格式有：JPEG、PNG、GIF、BMP、WebP、DNG、HEIC&lt;sup&gt;12+&lt;/sup&gt;、WBMP&lt;sup&gt;23+&lt;/sup&gt;、HEIFS&lt;sup&gt;23+&lt;/sup&gt;、TIFF&lt;sup&gt;23+&lt;/ sup&gt;、SVG&lt;sup&gt;10+&lt;/sup&gt;（可参考[SVG标签说明](../../../reference/apis-image-kit/arkts-apis-image-f.md#svg标签说明)）、ICO&lt;sup&gt; 11+&lt;/sup&gt;。从API版本26.0.0开始，增加支持AVIF、AVIS格式。 &lt;br&gt;部分格式的解码能力依赖于具体的设备硬件，建议在调用前使用 [image.getImageSourceSupportedFormats](arkts-image-image-getimagesourcesupportedformats-f.md#getimagesourcesupportedformats)接口，动态查询当前设备上的解码能力。 |
+| uri | string | Yes | Image path. Currently, only the application sandbox path is supported. &lt;br&gt;The following formats are supported: .jpg, .png, .gif, .bmp, .webp, .dng, .heic&lt;sup&gt;12+&lt;/sup&gt; (depending on the hardware), [.svg&lt;sup&gt;10+&lt;/sup&gt;](@ohos.multimedia.image:image.Functions#SVG Tags), and .ico&lt;sup&gt;11+&lt;/sup&gt;. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [ImageSource](arkts-image-sendableimage-imagesource-i.md) | 返回ImageSource类实例，失败时返回undefined。 |
+| [ImageSource](arkts-image-sendableimage-imagesource-i.md) | ImageSource instance. If the operation fails, undefined is returned. |
 
 ## Examples
 
@@ -84,9 +85,10 @@ Creates an ImageSource instance based on the URI.
 function createImageSource(uri: string, options: SourceOptions): ImageSource
 ```
 
-通过传入的uri创建ImageSource实例。
+Creates an ImageSource instance based on a given URI.
 
-由于图片占用内存较大，所以当ImageSource实例使用完成后，应主动调用[release](arkts-image-image-imagesource-i.md#release)方法及时释放内存。释放时应确保该实例的所有异步方法均执行完成，且后续不再使用该实例。
+Images occupy a large amount of memory. When you finish using an ImageSource instance, call   
+[release](arkts-image-image-imagesource-i.md#release) to free the memory promptly. Before releasing the instance, ensure that all asynchronous operations associated with the instance have finished and the instance is no longer needed.
 
 **Since:** 9
 
@@ -104,14 +106,14 @@ function createImageSource(uri: string, options: SourceOptions): ImageSource
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| uri | string | Yes | 图片路径，当前仅支持应用沙箱路径（可参考[使用说明](../../../reference/apis-core-file-kit/js-apis-file-fs.md#使用说明)） 。 &lt;br&gt;当前支持格式有：JPEG、PNG、GIF、BMP、WebP、DNG、HEIC&lt;sup&gt;12+&lt;/sup&gt;、WBMP&lt;sup&gt;23+&lt;/sup&gt;、HEIFS&lt;sup&gt;23+&lt;/sup&gt;、TIFF&lt;sup&gt;23+&lt;/ sup&gt;、SVG&lt;sup&gt;10+&lt;/sup&gt;（可参考[SVG标签说明](../../../reference/apis-image-kit/arkts-apis-image-f.md#svg标签说明)）、ICO&lt;sup&gt; 11+&lt;/sup&gt;。从API版本26.0.0开始，增加支持AVIF、AVIS格式。部分格式的解码能力依赖于具体的设备硬件，建议在调用前使用 [image.getImageSourceSupportedFormats](arkts-image-image-getimagesourcesupportedformats-f.md#getimagesourcesupportedformats)接口，动态查询当前设备上的解码能力。 |
-| options | [SourceOptions](arkts-image-image-sourceoptions-i.md) | Yes | 图片属性，包括图片像素密度、像素格式和图片尺寸。 |
+| uri | string | Yes | Image path. Currently, only the application sandbox path is supported. &lt;br&gt;The following formats are supported: .jpg, .png, .gif, .bmp, .webp, .dng, .heic&lt;sup&gt;12+&lt;/sup&gt; (depending on the hardware), [.svg&lt;sup&gt;10+&lt;/sup&gt;](@ohos.multimedia.image:image.Functions#SVG Tags), and .ico&lt;sup&gt;11+&lt;/sup&gt;. |
+| options | [SourceOptions](arkts-image-image-sourceoptions-i.md) | Yes | Image properties, including the image pixel density, pixel format, and image size. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [ImageSource](arkts-image-sendableimage-imagesource-i.md) | 返回ImageSource类实例，失败时返回undefined。 |
+| [ImageSource](arkts-image-sendableimage-imagesource-i.md) | ImageSource instance. If the operation fails, undefined is returned. |
 
 ## Examples
 
@@ -161,9 +163,10 @@ Creates an ImageSource instance based on the URI.
 function createImageSource(fd: int): ImageSource
 ```
 
-通过传入文件描述符来创建ImageSource实例。
+Creates an ImageSource instance based on a given file descriptor.
 
-由于图片占用内存较大，所以当ImageSource实例使用完成后，应主动调用[release](arkts-image-image-imagesource-i.md#release)方法及时释放内存。释放时应确保该实例的所有异步方法均执行完成，且后续不再使用该实例。
+Images occupy a large amount of memory. When you finish using an ImageSource instance, call   
+[release](arkts-image-image-imagesource-i.md#release) to free the memory promptly. Before releasing the instance, ensure that all asynchronous operations associated with the instance have finished and the instance is no longer needed.
 
 **Since:** 7
 
@@ -179,23 +182,23 @@ function createImageSource(fd: int): ImageSource
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| fd | int | Yes | 文件描述符fd。取值范围为[0，65535]。 |
+| fd | int | Yes | File descriptor. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [ImageSource](arkts-image-sendableimage-imagesource-i.md) | 返回ImageSource类实例，失败时返回undefined。 |
+| [ImageSource](arkts-image-sendableimage-imagesource-i.md) | ImageSource instance. If the operation fails, undefined is returned. |
 
 ## Examples
 
 ```TypeScript
-import { fileIo } from '@kit.CoreFileKit';
+import { fileIo as fs } from '@kit.CoreFileKit';
 
 async function CreateImageSource(context : Context) {
   // 'test.jpg' is only an example. Replace it with the actual one in use. Otherwise, the imageSource instance fails to be created, and subsequent operations cannot be performed.
   let filePath: string = context.filesDir + "/test.jpg";
-  let file = fileIo.openSync(filePath, fileIo.OpenMode.CREATE | fileIo.OpenMode.READ_WRITE);
+  let file = fs.openSync(filePath, fs.OpenMode.CREATE | fs.OpenMode.READ_WRITE);
   const imageSourceObj: image.ImageSource = image.createImageSource(file.fd);
 }
 ```
@@ -236,9 +239,10 @@ Creates an ImageSource instance based on the file descriptor.
 function createImageSource(fd: int, options: SourceOptions): ImageSource
 ```
 
-通过传入文件描述符来创建ImageSource实例。
+Creates an ImageSource instance based on a given file descriptor.
 
-由于图片占用内存较大，所以当ImageSource实例使用完成后，应主动调用[release](arkts-image-image-imagesource-i.md#release)方法及时释放内存。释放时应确保该实例的所有异步方法均执行完成，且后续不再使用该实例。
+Images occupy a large amount of memory. When you finish using an ImageSource instance, call   
+[release](arkts-image-image-imagesource-i.md#release) to free the memory promptly. Before releasing the instance, ensure that all asynchronous operations associated with the instance have finished and the instance is no longer needed.
 
 **Since:** 9
 
@@ -256,25 +260,25 @@ function createImageSource(fd: int, options: SourceOptions): ImageSource
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| fd | int | Yes | 文件描述符fd。取值范围为[0，65535]。 |
-| options | [SourceOptions](arkts-image-image-sourceoptions-i.md) | Yes | 图片属性，包括图片像素密度、像素格式和图片尺寸。 |
+| fd | int | Yes | File descriptor. |
+| options | [SourceOptions](arkts-image-image-sourceoptions-i.md) | Yes | Image properties, including the image pixel density, pixel format, and image size. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [ImageSource](arkts-image-sendableimage-imagesource-i.md) | 返回ImageSource类实例，失败时返回undefined。 |
+| [ImageSource](arkts-image-sendableimage-imagesource-i.md) | ImageSource instance. If the operation fails, undefined is returned. |
 
 ## Examples
 
 ```TypeScript
-import { fileIo } from '@kit.CoreFileKit';
+import { fileIo as fs } from '@kit.CoreFileKit';
 
 async function CreateImageSource(context : Context) {
   let sourceOptions: image.SourceOptions = { sourceDensity: 120 };
   // 'test.jpg' is only an example. Replace it with the actual one in use. Otherwise, the imageSource instance fails to be created, and subsequent operations cannot be performed.
   const filePath: string = context.filesDir + "/test.jpg";
-  let file = fileIo.openSync(filePath, fileIo.OpenMode.CREATE | fileIo.OpenMode.READ_WRITE);
+  let file = fs.openSync(filePath, fs.OpenMode.CREATE | fs.OpenMode.READ_WRITE);
   const imageSourceObj: image.ImageSource = image.createImageSource(file.fd, sourceOptions);
 }
 ```
@@ -316,10 +320,9 @@ Creates an ImageSource instance based on the file descriptor.
 function createImageSource(buf: ArrayBuffer): ImageSource
 ```
 
-通过缓冲区创建ImageSource实例。buf数据是未解码的数据，不可以传入类似于RBGA，YUV的像素buffer数据，如果想通过像素buffer数据创建pixelMap，可以调用  
-[image.createPixelMapSync](arkts-image-image-createpixelmapsync-f.md#createpixelmapsync)这一类接口。
-
-由于图片占用内存较大，所以当ImageSource实例使用完成后，应主动调用[release](arkts-image-image-imagesource-i.md#release)方法及时释放内存。释放时应确保该实例的所有异步方法均执行完成，且后续不再使用该实例。
+Creates an ImageSource instance based on buffers. The data passed by **buf** must be undecoded. Do not pass the pixel buffer data such as RBGA and YUV. If you want to create a PixelMap based on the pixel buffer data, call   
+[image.createPixelMapSync](arkts-image-image-imagesource-i.md#createpixelmapsync).Images occupy a large amount of memory. When you finish using an ImageSource instance, call   
+[release](arkts-image-image-imagesource-i.md#release) to free the memory promptly. Before releasing the instance, ensure that all asynchronous operations associated with the instance have finished and the instance is no longer needed.
 
 **Since:** 9
 
@@ -337,19 +340,19 @@ function createImageSource(buf: ArrayBuffer): ImageSource
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| buf | ArrayBuffer | Yes | 图像缓冲区数组。 |
+| buf | ArrayBuffer | Yes | Array of image buffers. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [ImageSource](arkts-image-sendableimage-imagesource-i.md) | 返回ImageSource类实例，失败时返回undefined。 |
+| [ImageSource](arkts-image-sendableimage-imagesource-i.md) | ImageSource instance. If the operation fails, undefined is returned. |
 
 ## Examples
 
 ```TypeScript
 async function CreateImageSource() {
-  const buf: ArrayBuffer = new ArrayBuffer(96); // 96 indicates the size of the pixel buffer to create. The value is calculated as follows: width × height × 4.
+  const buf: ArrayBuffer = new ArrayBuffer(96); // 96 is the size of the pixel buffer to create. The value is calculated as follows: height * width *4.
   const imageSourceObj: image.ImageSource = image.createImageSource(buf);
 }
 ```
@@ -390,10 +393,9 @@ Creates an ImageSource instance based on the buffer.
 function createImageSource(buf: ArrayBuffer, options: SourceOptions): ImageSource
 ```
 
-通过缓冲区创建ImageSource实例。buf数据是未解码的数据，不可以传入类似于RBGA，YUV的像素buffer数据，如果想通过像素buffer数据创建pixelMap，可以调用  
-[image.createPixelMapSync](arkts-image-image-createpixelmapsync-f.md#createpixelmapsync)这一类接口。
-
-由于图片占用内存较大，所以当ImageSource实例使用完成后，应主动调用[release](arkts-image-image-imagesource-i.md#release)方法及时释放内存。释放时应确保该实例的所有异步方法均执行完成，且后续不再使用该实例。
+Creates an ImageSource instance based on buffers. The data passed by **buf** must be undecoded. Do not pass the pixel buffer data such as RBGA and YUV. If you want to create a PixelMap based on the pixel buffer data, call   
+[image.createPixelMapSync](arkts-image-image-imagesource-i.md#createpixelmapsync).Images occupy a large amount of memory. When you finish using an ImageSource instance, call   
+[release](arkts-image-image-imagesource-i.md#release) to free the memory promptly. Before releasing the instance, ensure that all asynchronous operations associated with the instance have finished and the instance is no longer needed.
 
 **Since:** 9
 
@@ -411,14 +413,14 @@ function createImageSource(buf: ArrayBuffer, options: SourceOptions): ImageSourc
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| buf | ArrayBuffer | Yes | 图像缓冲区数组。 |
-| options | [SourceOptions](arkts-image-image-sourceoptions-i.md) | Yes | 图片属性，包括图片像素密度、像素格式和图片尺寸。 |
+| buf | ArrayBuffer | Yes | Array of image buffers. |
+| options | [SourceOptions](arkts-image-image-sourceoptions-i.md) | Yes | Image properties, including the image pixel density, pixel format, and image size. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [ImageSource](arkts-image-sendableimage-imagesource-i.md) | 返回ImageSource类实例，失败时返回undefined。 |
+| [ImageSource](arkts-image-sendableimage-imagesource-i.md) | ImageSource instance. If the operation fails, undefined is returned. |
 
 ## Examples
 
@@ -467,9 +469,8 @@ Creates an ImageSource instance based on the buffer.
 function createImageSource(rawfile: resourceManager.RawFileDescriptor, options?: SourceOptions): ImageSource
 ```
 
-通过图像资源文件的RawFileDescriptor创建ImageSource实例。
-
-由于图片占用内存较大，所以当ImageSource实例使用完成后，应主动调用[release](arkts-image-image-imagesource-i.md#release)方法及时释放内存。释放时应确保该实例的所有异步方法均执行完成，且后续不再使用该实例。
+Creates an ImageSource instance based on the raw file descriptor of an image resource file.Images occupy a large amount of memory. When you finish using an ImageSource instance, call   
+[release](arkts-image-image-imagesource-i.md#release) to free the memory promptly. Before releasing the instance, ensure that all asynchronous operations associated with the instance have finished and the instance is no longer needed.
 
 **Since:** 11
 
@@ -485,14 +486,14 @@ function createImageSource(rawfile: resourceManager.RawFileDescriptor, options?:
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| rawfile | resourceManager.RawFileDescriptor | Yes | 图像资源文件的RawFileDescriptor。 |
-| options | [SourceOptions](arkts-image-image-sourceoptions-i.md) | No | 图片属性，包括图片像素密度、像素格式和图片尺寸。 |
+| rawfile | resourceManager.RawFileDescriptor | Yes | Raw file descriptor of the image resource file. |
+| options | [SourceOptions](arkts-image-image-sourceoptions-i.md) | No | Image properties, including the image pixel density, pixel format, and image size. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [ImageSource](arkts-image-sendableimage-imagesource-i.md) | 返回ImageSource类实例，失败时返回undefined。 |
+| [ImageSource](arkts-image-sendableimage-imagesource-i.md) | ImageSource instance. If the operation fails, undefined is returned. |
 
 ## Examples
 

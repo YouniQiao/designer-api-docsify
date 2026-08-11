@@ -1,6 +1,6 @@
 # DomainAccountManager
 
-域账号管理类。
+Provides APIs for domain account management.
 
 **Since:** 18
 
@@ -22,7 +22,7 @@ import { osAccount } from 'kits/@kit.BasicServicesKit';
 static updateAccountInfo(oldAccountInfo: DomainAccountInfo, newAccountInfo: DomainAccountInfo): Promise<void>
 ```
 
-修改指定域账号信息。使用Promise异步回调。
+Updates information of a domain account. This API uses a promise to return the result.
 
 **Since:** 18
 
@@ -38,25 +38,25 @@ static updateAccountInfo(oldAccountInfo: DomainAccountInfo, newAccountInfo: Doma
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| oldAccountInfo | [DomainAccountInfo](arkts-basicservices-osaccount-domainaccountinfo-i.md) | Yes | 表示旧域账号信息。 |
-| newAccountInfo | [DomainAccountInfo](arkts-basicservices-osaccount-domainaccountinfo-i.md) | Yes | 表示新域账号信息。 |
+| oldAccountInfo | [DomainAccountInfo](arkts-basicservices-osaccount-domainaccountinfo-i.md) | Yes | Domain account information. |
+| newAccountInfo | [DomainAccountInfo](arkts-basicservices-osaccount-domainaccountinfo-i.md) | Yes | New domain account information. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise对象，无返回结果的Promise对象。 |
+| Promise&lt;void&gt; | Promise that returns no value. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 801 | Capability not supported. |
-| 12300003 | The old account not found. |
-| 201 | Permission denied. |
-| 12300002 | The new account info is invalid. |
-| 12300001 | The system service works abnormally. |
-| 12300004 | The new account already exists. |
+| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. |
+| [12300003](../../apis-basic-services-kit/errorcode-account.md#12300003-account-not-found) | The old account not found. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
+| [12300002](../../apis-basic-services-kit/errorcode-account.md#12300002-invalid-parameter) | The new account info is invalid. |
+| [12300001](../../apis-basic-services-kit/errorcode-account.md#12300001-system-service-abnormal) | The system service works abnormally. |
+| [12300004](../../apis-basic-services-kit/errorcode-account.md#12300004-account-already-exists) | The new account already exists. |
 
 ## Examples
 

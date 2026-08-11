@@ -1,6 +1,6 @@
 # StatusInfoResult (System API)
 
-DLP特性开关状态设置的结果信息。
+Describes the DLP settings.
 
 **Since:** 26.0.0
 
@@ -24,7 +24,7 @@ import { dlpSetDlpFeature } from 'kits/@kit.DataProtectionKit';
 isSuccess: boolean
 ```
 
-DLP特性开关状态是否设置成功。true表示设置成功；false表示设置失败。
+Whether the DLP setting is successful. The value **true** indicates that the setting is successful, and the value **false** indicates that the setting fails.
 
 **Type:** boolean
 

@@ -38,33 +38,6 @@ Register an observer for anyone application's senior mode state changes.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 201 | Permission verification failed. &lt;br&gt;The application does not have the permission required to call the API. |
-| 202 | Permission verification failed. &lt;br&gt;A non-system application calls a system API. |
-
-## Examples
-
-```TypeScript
-import { config } from '@kit.AccessibilityKit';
-
-@Entry
-@Component
-struct Index {
-  callback = (data: config.AppSeniorModeInfo) => {
-    console.info(`callback data, name: ${data.bundleName}, appIndex: ${data.appIndex}, seniorModeState: ${data.seniorModeState}`);
-  }
-
-  aboutToAppear(): void {
-    config.onSeniorModeStateChangeForApp(this.callback);
-  }
-
-  aboutToDisappear(): void {
-    config.offSeniorModeStateChangeForApp(this.callback);
-  }
-
-  build() {
-    Column() {
-    }
-  }
-}
-```
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed. &lt;br&gt;The application does not have the permission required to call the API. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. &lt;br&gt;A non-system application calls a system API. |
 

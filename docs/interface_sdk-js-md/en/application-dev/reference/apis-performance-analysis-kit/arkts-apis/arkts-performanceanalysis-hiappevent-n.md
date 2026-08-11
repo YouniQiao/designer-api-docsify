@@ -1,11 +1,11 @@
 # hiAppEvent
 
-本模块提供应用打点和事件订阅能力，包括事件存储、事件订阅、事件清理、打点配置等功能。HiAppEvent将应用运行过程中触发的事件信息统一归纳到[AppEventInfo](arkts-performanceanalysis-hiappevent-appeventinfo-i.md)中，并将事件分为系统事件和应用事件两类。
+This module provides application logging and event subscription capabilities, including event storage, event subscription, event clearance, and logging configuration. HiAppEvent records the events triggered during application running in [AppEventInfo](arkts-performanceanalysis-hiappevent-appeventinfo-i.md), and classifies the events into system events and application events.
 
-系统事件来源于系统服务，是系统预先定义的事件，这类事件信息中的事件参数对象params包含的字段已由各系统事件定义，具体字段含义在各系统事件指南的介绍中，例如  
-[崩溃事件介绍](../../../dfx/hiappevent-watcher-crash-events.md)。
+System events are triggered in system services and are predefined in the system. The fields of the event parameter object **params** of such events are defined by each system event. For details, see overviews of user guides. For example, [Crash Event Overview](../../../dfx/hiappevent-watcher-crash-events.md).
 
-应用事件来源于应用，是应用开发者自己定义的事件，这类事件信息支持自定义后通过[Write](arkts-performanceanalysis-hiappevent-write-f.md#write)打点接口进行配置设定，具体字段含义可结合开发者需求展开。
+Application events are defined by application developers and can be customized using the  
+[Write](arkts-performanceanalysis-hiappevent-write-f.md#write) API as required.
 
 **Since:** 9
 
@@ -27,67 +27,67 @@ import { hiAppEvent } from 'kits/@kit.PerformanceAnalysisKit';
 
 | Name | Description |
 | --- | --- |
-| [domain](arkts-performanceanalysis-hiappevent-domain-n.md) | 提供域名常量。  \|名称\|类型\|只读\|描述\|  \| --- \| ------ \| ------ \| ---------- \|  \| OS \| string \|是\|系统域\| |
-| [event](arkts-performanceanalysis-hiappevent-event-n.md) | 提供事件名称常量，包括系统事件名称常量和应用事件名称常量。&lt;br&gt;应用事件名称常量是为开发者在调用Write接口进行应用事件打点时预留的可选自定义事件名称。 |
-| [param](arkts-performanceanalysis-hiappevent-param-n.md) | 提供参数名常量。  \|名称\|类型\|只读\|描述\|  \| ------------------------------- \| ------ \| ------ \| ------------------ \|  \| USER_ID \| string \|是\|自定义用户ID\|  \| DISTRIBUTED_SERVICE_NAME \| string \|是\|分布式服务名称\|  \| DISTRIBUTED_SERVICE_INSTANCE_ID \| string \|是\|分布式服务实例ID\| |
+| [domain](arkts-performanceanalysis-hiappevent-domain-n.md) | Provides domain name constants.  \| Name\| Type \| Read Only \| Description \|  \| --- \| ------ \| ------ \| ---------- \|  \| OS \| string \| Yes\| System domain.\| |
+| [event](arkts-performanceanalysis-hiappevent-event-n.md) | Provides event name constants, including system event name constants and application event name constants.&lt;br&gt;The application event name constants are optional custom event names reserved when you call Write for application event logging. |
+| [param](arkts-performanceanalysis-hiappevent-param-n.md) | Provides parameter name constants.  \| Name \| Type \| Read Only \| Description \|  \| ------------------------------- \| ------ \| ------ \| ------------------ \|  \| USER_ID \| string \| Yes\| Custom user ID. \|  \| DISTRIBUTED_SERVICE_NAME \| string \| Yes\| Distributed service name. \|  \| DISTRIBUTED_SERVICE_INSTANCE_ID \| string \| Yes\| Distributed service instance ID.\| |
 
 ### Functions
 
 | Name | Description |
 | --- | --- |
-| [configure](arkts-performanceanalysis-hiappevent-configure-f.md#configure) | 应用事件打点配置方法，支持配置打点开关和目录存储配额大小。 |
-| [write](arkts-performanceanalysis-hiappevent-write-f.md#write) | 应用事件打点方法，将AppEventInfo类型的事件进行存储，使用Promise方式作为异步回调。通过此接口写入的事件对象是开发者自定义的对象，为了避免与系统事件产生冲突混淆，不建议写入系统事件（[Event](arkts-performanceanalysis-hiappevent-event-n.md#event)中定义的系统事件名称常量）。此接口写入的事件可通过订阅事件观察者（[addWatcher](arkts-performanceanalysis-hiappevent-addwatcher-f.md#addwatcher)）进行处理。 |
-| [write](arkts-performanceanalysis-hiappevent-write-f.md#write-1) | 应用事件打点方法，将AppEventInfo类型的事件进行存储，使用callback方式作为异步回调。通过此接口写入的事件对象是开发者自定义的对象，为了避免与系统事件产生冲突混淆，不建议写入系统事件（[Event](arkts-performanceanalysis-hiappevent-event-n.md#event)中定义的系统事件名称常量）。此接口写入的事件可通过订阅事件观察者（[addWatcher](arkts-performanceanalysis-hiappevent-addwatcher-f.md#addwatcher)）进行订阅。 |
-| [setEventParam](arkts-performanceanalysis-hiappevent-seteventparam-f.md#seteventparam) | 事件自定义参数设置方法，使用Promise方式作为异步回调。在同一生命周期中，可以通过事件领域和事件名称关联系统事件和应用事件。 |
-| [setEventConfig](arkts-performanceanalysis-hiappevent-seteventconfig-f.md#seteventconfig) | 事件相关的配置参数设置方法，使用Promise方式作为异步回调。在同一生命周期中，可以通过事件名称，设置事件相关的配置参数。  不同的事件有不同的配置项，目前仅支持以下事件：  - MAIN_THREAD_JANK（参数配置详见  [主线程超时事件检测](../../../dfx/hiappevent-watcher-mainthreadjank-events.md#seteventconfig接口参数设置说明)）  - APP_CRASH（参数配置详见[崩溃日志配置参数设置介绍](../../../dfx/hiappevent-watcher-crash-events.md#自定义规格设置)）  - RESOURCE_OVERLIMIT（参数配置详见[资源泄漏事件检测](../../../dfx/hiappevent-watcher-resourceleak-events.md#自定义规格设置)） |
-| [addWatcher](arkts-performanceanalysis-hiappevent-addwatcher-f.md#addwatcher) | 添加事件观察者。可通过事件观察者的回调函数监听事件。 |
-| [removeWatcher](arkts-performanceanalysis-hiappevent-removewatcher-f.md#removewatcher) | 移除事件观察者。 |
-| [clearData](arkts-performanceanalysis-hiappevent-cleardata-f.md#cleardata) | 应用事件打点数据清理方法，将当前应用存储在本地的打点数据进行清除。 |
-| [setUserId](arkts-performanceanalysis-hiappevent-setuserid-f.md#setuserid) | 设置用户ID值。用于在配置[Processor](arkts-performanceanalysis-hiappevent-processor-i.md)数据处理者时进行关联。 |
-| [getUserId](arkts-performanceanalysis-hiappevent-getuserid-f.md#getuserid) | 获取通过setUserId接口设置的value值。 |
-| [setUserProperty](arkts-performanceanalysis-hiappevent-setuserproperty-f.md#setuserproperty) | 设置用户属性值。用于在配置[Processor](arkts-performanceanalysis-hiappevent-processor-i.md)数据处理者时进行关联。 |
-| [getUserProperty](arkts-performanceanalysis-hiappevent-getuserproperty-f.md#getuserproperty) | 获取通过setUserProperty接口设置的value值。 |
-| [addProcessor](arkts-performanceanalysis-hiappevent-addprocessor-f.md#addprocessor) | 添加数据处理者配置信息，用于配置处理者接收的事件名等信息。事件发生后处理者可以接收事件。  该接口为同步接口，包含耗时操作。为了确保性能，建议使用[addProcessorFromConfig](arkts-performanceanalysis-hiappevent-addprocessorfromconfig-f.md#addprocessorfromconfig)异步接口或者交由子线程执行。 |
-| [addProcessorFromConfig](arkts-performanceanalysis-hiappevent-addprocessorfromconfig-f.md#addprocessorfromconfig) | 添加数据处理者配置信息，通过配置文件配置处理者接收的事件名等信息，事件发生后处理者可以接收事件，使用Promise异步回调。 |
-| [removeProcessor](arkts-performanceanalysis-hiappevent-removeprocessor-f.md#removeprocessor) | 移除上报事件的数据处理者。 |
-| [configEventPolicy](arkts-performanceanalysis-hiappevent-configeventpolicy-f.md#configeventpolicy) | 系统事件相关的配置策略设置方法，使用Promise方式作为异步回调。  在同一生命周期中，可以通过配置策略设置系统事件相关的策略参数。 |
+| [configure](arkts-performanceanalysis-hiappevent-configure-f.md#configure) | Configures the application event logging function, such as setting the logging switch and directory storage quota. |
+| [write](arkts-performanceanalysis-hiappevent-write-f.md#write) | Writes events of the **AppEventInfo** type. This API uses a promise to return the result. The event object written by calling this API is a custom object. To avoid conflicts with system events, you are not advised to write it to system events (system event name constants defined in [Event](arkts-performanceanalysis-hiappevent-event-n.md#event)). The events written by this API can be subscribed to through ([addWatcher](arkts-performanceanalysis-hiappevent-addwatcher-f.md#addwatcher)). |
+| [write](arkts-performanceanalysis-hiappevent-write-f.md#write-1) | Writes events of the **AppEventInfo** type. This API uses an asynchronous callback to return the result. The event object written by calling this API is a custom object. To avoid conflicts with system events, you are not advised to write it to system events (system event name constants defined in [Event](arkts-performanceanalysis-hiappevent-event-n.md#event)). The events written by this API can be subscribed to through ([addWatcher](arkts-performanceanalysis-hiappevent-addwatcher-f.md#addwatcher)). |
+| [setEventParam](arkts-performanceanalysis-hiappevent-seteventparam-f.md#seteventparam) | Sets custom event parameters. This API uses a promise to return the result. During the same lifecycle, system events and application events can be associated through event domain and event name.System events only support crash, freeze and resource leak events. |
+| [setEventConfig](arkts-performanceanalysis-hiappevent-seteventconfig-f.md#seteventconfig) | Sets event configuration. This method uses a promise to return the result. In the same lifecycle, you can set event configuration by event name.  Configuration items vary depending on events. Currently, only the following events are supported:  - **MAIN_THREAD_JANK** (For details about the parameter configuration, see  [Main Thread Jank Event Overview](../../../dfx/hiappevent-watcher-mainthreadjank-events.md#parameters-of-seteventconfig).)  - **APP_CRASH** (For details about the parameter configuration, see  [Crash Log Configuration Parameters](../../../dfx/hiappevent-watcher-crash-events.md#customizing-crash-log-specifications).)  - **RESOURCE_OVERLIMIT** (For details about the parameter configuration, see  [Resource Leak Event Overview](../../../dfx/hiappevent-watcher-resourceleak-events.md#customizing-specifications).)  > **NOTE：** >  > Since API version 26.0.0, all settings of this API are supported by > [configEventPolicy](arkts-performanceanalysis-hiappevent-configeventpolicy-f.md#configeventpolicy). You are advised to use > [configEventPolicy](arkts-performanceanalysis-hiappevent-configeventpolicy-f.md#configeventpolicy). |
+| [addWatcher](arkts-performanceanalysis-hiappevent-addwatcher-f.md#addwatcher) | Adds an event watcher. You can use the callback of the event watcher to subscribe to events. |
+| [removeWatcher](arkts-performanceanalysis-hiappevent-removewatcher-f.md#removewatcher) | Removes an event watcher. |
+| [clearData](arkts-performanceanalysis-hiappevent-cleardata-f.md#cleardata) | Clears local logging data of the application. |
+| [setUserId](arkts-performanceanalysis-hiappevent-setuserid-f.md#setuserid) | Sets a user ID, which is used for association when a [Processor](arkts-performanceanalysis-hiappevent-processor-i.md) is configured. |
+| [getUserId](arkts-performanceanalysis-hiappevent-getuserid-f.md#getuserid) | Obtains the value set through **setUserId**. |
+| [setUserProperty](arkts-performanceanalysis-hiappevent-setuserproperty-f.md#setuserproperty) | Sets a user property, which is used for association when a [Processor](arkts-performanceanalysis-hiappevent-processor-i.md) is configured. |
+| [getUserProperty](arkts-performanceanalysis-hiappevent-getuserproperty-f.md#getuserproperty) | Obtains the value set through **setUserProperty**. |
+| [addProcessor](arkts-performanceanalysis-hiappevent-addprocessor-f.md#addprocessor) | Adds the configuration information of the data processor, such as the event name received by it.  This is a synchronous API and involves time-consuming operations. To ensure performance, you are advised to use the asynchronous API [addProcessorFromConfig](arkts-performanceanalysis-hiappevent-addprocessorfromconfig-f.md#addprocessorfromconfig) or use a child thread. |
+| [addProcessorFromConfig](arkts-performanceanalysis-hiappevent-addprocessorfromconfig-f.md#addprocessorfromconfig) | Adds the configuration information of the data processor. The configuration file contains information such as the name of the event received by the data processor. This API uses a promise to return the result. |
+| [removeProcessor](arkts-performanceanalysis-hiappevent-removeprocessor-f.md#removeprocessor) | Removes the data processor of a reported event. |
+| [configEventPolicy](arkts-performanceanalysis-hiappevent-configeventpolicy-f.md#configeventpolicy) | Sets a system event configuration policy. This API uses a promise to return the result.  In the same lifecycle, you can set system event configuration by policy. |
 
 ### Classes
 
 | Name | Description |
 | --- | --- |
-| [AppEventPackageHolder](arkts-performanceanalysis-hiappevent-appeventpackageholder-c.md) | 订阅数据持有者类，用于对事件信息进行处理。 |
+| [AppEventPackageHolder](arkts-performanceanalysis-hiappevent-appeventpackageholder-c.md) | Defines a subscription data holder for processing event information. |
 
 ### Interfaces
 
 | Name | Description |
 | --- | --- |
-| [ConfigOption](arkts-performanceanalysis-hiappevent-configoption-i.md) | 提供对应用事件打点功能的配置选项。 |
-| [AppEventInfo](arkts-performanceanalysis-hiappevent-appeventinfo-i.md) | 提供事件信息的参数选项。 |
-| [AppEventPackage](arkts-performanceanalysis-hiappevent-appeventpackage-i.md) | 提供订阅返回的事件包的参数定义。可用于获取事件包的详细信息，事件包由[takeNext](arkts-performanceanalysis-hiappevent-appeventpackageholder-c.md#takenext)接口获得。 |
-| [TriggerCondition](arkts-performanceanalysis-hiappevent-triggercondition-i.md) | 提供设置[Watcher](arkts-performanceanalysis-hiappevent-watcher-i.md)的onTrigger回调触发条件的参数选项。 |
-| [AppEventFilter](arkts-performanceanalysis-hiappevent-appeventfilter-i.md) | 提供设置[Watcher](arkts-performanceanalysis-hiappevent-watcher-i.md)的订阅过滤条件的参数选项。用于在事件观察者中设置事件过滤条件，确保只有满足过滤条件的事件才会被监听处理。 |
-| [AppEventGroup](arkts-performanceanalysis-hiappevent-appeventgroup-i.md) | 提供订阅返回的事件组的参数定义。可用于获取事件组的详细信息，事件组常在[Watcher](arkts-performanceanalysis-hiappevent-watcher-i.md)的onReceive回调中使用。 |
-| [Watcher](arkts-performanceanalysis-hiappevent-watcher-i.md) | 提供事件观察者的参数选项。用于配置和管理事件的观察者，实现对特定事件的监听和处理。 |
-| [AppEventReportConfig](arkts-performanceanalysis-hiappevent-appeventreportconfig-i.md) | 数据处理者可以上报事件的描述配置。 |
-| [Processor](arkts-performanceanalysis-hiappevent-processor-i.md) | 可以上报事件的数据处理者对象。用于事件的上报和管理，开发者可自定义数据处理配置，满足不同的数据处理需求。 |
-| [MainThreadJankPolicy](arkts-performanceanalysis-hiappevent-mainthreadjankpolicy-i.md) | 提供主线程超时事件配置策略的定义。 |
-| [CpuUsageHighPolicy](arkts-performanceanalysis-hiappevent-cpuusagehighpolicy-i.md) | 提供CPU高负载事件配置策略的定义。  > **注意：** >  > 该接口被调用后，会将设置值持久化。后续重复调用该接口时，若不设置对应参数，则取上一次系统取用的值。 |
-| [AppCrashPolicy](arkts-performanceanalysis-hiappevent-appcrashpolicy-i.md) | 提供崩溃事件配置策略的定义。 |
-| [AppFreezePolicy](arkts-performanceanalysis-hiappevent-appfreezepolicy-i.md) | 提供应用冻屏事件配置策略的定义。 |
-| [ResourceOverlimitPolicy](arkts-performanceanalysis-hiappevent-resourceoverlimitpolicy-i.md) | 提供资源泄漏事件配置策略的定义。 |
-| [AddressSanitizerPolicy](arkts-performanceanalysis-hiappevent-addresssanitizerpolicy-i.md) | 提供地址越界事件配置策略的定义。 |
-| [EventPolicy](arkts-performanceanalysis-hiappevent-eventpolicy-i.md) | 提供系统事件配置策略的定义，用于使用[configEventPolicy](arkts-performanceanalysis-hiappevent-configeventpolicy-f.md#configeventpolicy)设置事件配置策略。 |
+| [ConfigOption](arkts-performanceanalysis-hiappevent-configoption-i.md) | Provides configuration options for application event logging. |
+| [AppEventInfo](arkts-performanceanalysis-hiappevent-appeventinfo-i.md) | Defines parameters of the event information. |
+| [AppEventPackage](arkts-performanceanalysis-hiappevent-appeventpackage-i.md) | Defines parameters of an **AppEventPackage** object. This API is used to obtain detail information about an event package, which is obtained using the [takeNext](arkts-performanceanalysis-hiappevent-appeventpackageholder-c.md#takenext) API. |
+| [TriggerCondition](arkts-performanceanalysis-hiappevent-triggercondition-i.md) | Defines the triggering condition parameters of the **onTrigger** callback of a [Watcher](arkts-performanceanalysis-hiappevent-watcher-i.md). |
+| [AppEventFilter](arkts-performanceanalysis-hiappevent-appeventfilter-i.md) | Defines parameters of subscription filtering conditions of a [Watcher](arkts-performanceanalysis-hiappevent-watcher-i.md). This API is used to set event filtering conditions in the event watcher to ensure that only the events that meet the filtering conditions are subscribed to.  > **NOTE：** >  > The subscription specifications of system events vary according to application types. For details, see > [HiAppEvent Constraints](../../../dfx/hiappevent-intro.md#constraints). |
+| [AppEventGroup](arkts-performanceanalysis-hiappevent-appeventgroup-i.md) | Defines parameters of the event group returned by the subscription. This API can be used to obtain detail information about an event group, which is often used in the **onReceive** callback of  [Watcher](arkts-performanceanalysis-hiappevent-watcher-i.md). |
+| [Watcher](arkts-performanceanalysis-hiappevent-watcher-i.md) | Defines parameters for a **Watcher** object. This API is used to configure and manage event watchers to subscribe to and process specified events.  > **NOTE：** >  > You are not advised to call [removeWatcher](arkts-performanceanalysis-hiappevent-removewatcher-f.md#removewatcher) in the callback. Once a watcher is > removed, the subscription callback of the watcher becomes invalid, and the callback may not be triggered when an > event occurs. |
+| [AppEventReportConfig](arkts-performanceanalysis-hiappevent-appeventreportconfig-i.md) | Defines the event configuration for the data processor to report. |
+| [Processor](arkts-performanceanalysis-hiappevent-processor-i.md) | Defines a data processor for reporting and managing events. You can customize processor configurations as required. |
+| [MainThreadJankPolicy](arkts-performanceanalysis-hiappevent-mainthreadjankpolicy-i.md) | Defines the configuration policy for the main thread jank event. |
+| [CpuUsageHighPolicy](arkts-performanceanalysis-hiappevent-cpuusagehighpolicy-i.md) | Defines the configuration policy for the high CPU usage event.  > **NOTE：** >  > After this API is called, the setting is persisted. If this API is called again and the corresponding parameter > is not set, the value used by the system last time is used. |
+| [AppCrashPolicy](arkts-performanceanalysis-hiappevent-appcrashpolicy-i.md) | Defines the application crash event configuration policy. |
+| [AppFreezePolicy](arkts-performanceanalysis-hiappevent-appfreezepolicy-i.md) | Defines the application freeze event configuration policy. |
+| [ResourceOverlimitPolicy](arkts-performanceanalysis-hiappevent-resourceoverlimitpolicy-i.md) | Defines the resource leak event configuration policy. |
+| [AddressSanitizerPolicy](arkts-performanceanalysis-hiappevent-addresssanitizerpolicy-i.md) | Defines the address sanitizer event configuration policy. |
+| [EventPolicy](arkts-performanceanalysis-hiappevent-eventpolicy-i.md) | Defines the system event configuration policy, which is set by calling  [configEventPolicy](arkts-performanceanalysis-hiappevent-configeventpolicy-f.md#configeventpolicy). |
 
 ### Enums
 
 | Name | Description |
 | --- | --- |
-| [EventType](arkts-performanceanalysis-hiappevent-eventtype-e.md) | 事件类型枚举。 |
+| [EventType](arkts-performanceanalysis-hiappevent-eventtype-e.md) | Enumerates event types. |
 
 ### Types
 
 | Name | Description |
 | --- | --- |
-| [ParamType](arkts-performanceanalysis-hiappevent-paramtype-t.md) | 事件自定义参数值的类型。 |
+| [ParamType](arkts-performanceanalysis-hiappevent-paramtype-t.md) | Enumerates the types of custom event parameter values. |
 

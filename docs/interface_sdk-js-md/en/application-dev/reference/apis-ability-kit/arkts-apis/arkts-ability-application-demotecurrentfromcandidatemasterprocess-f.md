@@ -12,7 +12,8 @@ import { application } from 'kits/@kit.AbilityKit';
 export function demoteCurrentFromCandidateMasterProcess(): Promise<void>
 ```
 
-撤销当前进程的备选主控进程资格。使用Promise异步回调。该接口在PC/2in1、Tablet中可正常调用，在其他设备类型中返回801错误码。
+Removes the current process from the candidate master process list. This API uses a promise to return the result.This API can be properly called on PCs/2-in-1 devices and tablets. If it is called on other devices, error code 801 is returned.  
+**System capability**: SystemCapability.Ability.AbilityRuntime.Core
 
 **Since:** 20
 
@@ -28,15 +29,15 @@ export function demoteCurrentFromCandidateMasterProcess(): Promise<void>
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise对象。无返回结果。 |
+| Promise&lt;void&gt; | Promise that returns no result. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 16000116 | The current process is already a master process and does not support cancellation. |
-| 801 | Capability not supported. |
-| 16000117 | The current process is not a candidate master process and does not support cancellation. |
+| [16000116](../errorcode-ability.md#16000116-process-is-already-a-master-process) | The current process is already a master process and does not support cancellation. |
+| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. |
+| [16000117](../errorcode-ability.md#16000117-process-is-not-a-candidate-master-process) | The current process is not a candidate master process and does not support cancellation. |
 
 ## Examples
 

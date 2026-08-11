@@ -1,6 +1,6 @@
 # Config (System API)
 
-用于属性的设置、获取与监听。
+Implements configuration, acquisition, and listening for properties.
 
 **Since:** 9
 
@@ -24,7 +24,7 @@ import { config } from 'kits/@kit.AccessibilityKit';
 get(): Promise<T>
 ```
 
-获取属性。使用Promise异步回调。
+Obtains the value of a property. This API uses a promise to return the result.
 
 **Since:** 9
 
@@ -40,14 +40,14 @@ get(): Promise<T>
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;T&gt; | Promise对象，返回对应属性值。 |
+| Promise&lt;T&gt; | Promise used to return the value obtained. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 201 | Permission verification failed. The application does not have the permission required to call the API. |
-| 202 | Permission verification failed. A non-system application calls a system API. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed. The application does not have the permission required to call the API. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
 
 ## Examples
 
@@ -56,9 +56,9 @@ import { config } from '@kit.AccessibilityKit';
 import { BusinessError } from '@kit.BasicServicesKit';
 
 config.highContrastText.get().then((data: boolean) => {
-  console.info(`succeeded in getting highContrastText, data is ${data}`);
+  console.info(`Succeeded in get highContrastText, data is ${data}`);
 }).catch((err: BusinessError) => {
-  console.error(`Failed to get highContrastText. Code: ${err.code}, message: ${err.message}`);
+  console.error(`failed to get highContrastText, Code is ${err.code}, message is ${err.message}`);
 });
 ```
 
@@ -68,7 +68,7 @@ config.highContrastText.get().then((data: boolean) => {
 get(callback: AsyncCallback<T>): void
 ```
 
-获取属性，使用callback异步回调。
+Obtains the property value. This API uses an asynchronous callback to return the result.
 
 **Since:** 9
 
@@ -84,13 +84,13 @@ get(callback: AsyncCallback<T>): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;T&gt; | Yes | 回调函数，返回属性值。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;T&gt; | Yes | Callback used to return the property value. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 202 | Permission verification failed. A non-system application calls a system API. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
 
 ## Examples
 
@@ -100,10 +100,10 @@ import { BusinessError } from '@kit.BasicServicesKit';
 
 config.highContrastText.get((err: BusinessError, data: boolean) => {
   if (err) {
-    console.error(`Failed to get highContrastText. Code: ${err.code}, message: ${err.message}`);
+    console.error(`failed to get highContrastText, Code is ${err.code}, message is ${err.message}`);
     return;
   }
-  console.info(`succeeded in getting highContrastText, data is ${data}`);
+  console.info(`Succeeded in get highContrastText, data is ${data}`);
 });
 ```
 
@@ -113,7 +113,7 @@ config.highContrastText.get((err: BusinessError, data: boolean) => {
 off(callback?: Callback<T>): void
 ```
 
-取消属性变化监听，使用callback异步回调。
+Cancels the listener for property changes. This API uses an asynchronous callback to return the result.
 
 **Since:** 9
 
@@ -131,25 +131,23 @@ off(callback?: Callback<T>): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;T&gt; | No | 回调函数，取消指定callback对象的事件响应。需与on()的callback一致。缺省时，表示注销所有已注册事件。 |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;T&gt; | No | Callback used to unregister. The value must be the same as the value of **callback** in **on()**. If this parameter is not specified, listening will be disabled for all callbacks corresponding to the specified type. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 201 | Permission verification failed. The application does not have the permission required to call the API. |
-| 202 | Permission verification failed. A non-system application calls a system API. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed. The application does not have the permission required to call the API. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
 
 ## Examples
 
 ```TypeScript
 import { config } from '@kit.AccessibilityKit';
 
-let callback = (data: boolean) => {
-  console.info(`subscribe highContrastText success, result: ${JSON.stringify(data)}`);
-};
-config.highContrastText.on(callback);
-config.highContrastText.off(callback);
+config.highContrastText.off((data: boolean) => {
+  console.info(`Unsubscribe highContrastText success, result: ${JSON.stringify(data)}`);
+});
 ```
 
 ## on
@@ -158,7 +156,7 @@ config.highContrastText.off(callback);
 on(callback: Callback<T>): void
 ```
 
-添加属性变化监听，使用callback异步回调。
+Adds a listener for property changes. This API uses an asynchronous callback to return the result.
 
 **Since:** 9
 
@@ -176,15 +174,15 @@ on(callback: Callback<T>): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;T&gt; | Yes | 回调函数，在属性变化时通过此函数进行通知。 |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;T&gt; | Yes | Callback invoked when the property changes. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
-| 201 | Permission verification failed. The application does not have the permission required to call the API. |
-| 202 | Permission verification failed. A non-system application calls a system API. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed. The application does not have the permission required to call the API. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
 
 ## Examples
 
@@ -202,7 +200,7 @@ config.highContrastText.on((data: boolean) => {
 set(value: T): Promise<void>
 ```
 
-设置属性。使用Promise异步回调。
+Sets the value of a property. This API uses a promise to return the result.
 
 **Since:** 9
 
@@ -220,21 +218,21 @@ set(value: T): Promise<void>
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | T | Yes | 设置的属性值。 |
+| value | T | Yes | Property value to set. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise对象，无返回结果。 |
+| Promise&lt;void&gt; | Promise that returns no value. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
-| 201 | Permission verification failed. The application does not have the permission required to call the API. |
-| 202 | Permission verification failed. A non-system application calls a system API. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed. The application does not have the permission required to call the API. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
 
 ## Examples
 
@@ -245,9 +243,9 @@ import { BusinessError } from '@kit.BasicServicesKit';
 let value: boolean = true;
 
 config.highContrastText.set(value).then(() => {
-  console.info(`succeeded in setting highContrastText value is ${value}`);
+  console.info(`Succeeded in set highContrastText value is ${value}`);
 }).catch((err: BusinessError) => {
-  console.error(`Failed to set highContrastText. Code: ${err.code}, message: ${err.message}`);
+  console.error(`failed to set highContrastText, Code is ${err.code}, message is ${err.message}`);
 });
 ```
 
@@ -257,7 +255,7 @@ config.highContrastText.set(value).then(() => {
 set(value: T, callback: AsyncCallback<void>): void
 ```
 
-设置属性，使用callback异步回调。
+Sets the property value. This API uses an asynchronous callback to return the result.
 
 **Since:** 9
 
@@ -275,16 +273,16 @@ set(value: T, callback: AsyncCallback<void>): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | T | Yes | 设置的属性值。 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | 回调函数。 |
+| value | T | Yes | Property value to set. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
-| 201 | Permission verification failed. The application does not have the permission required to call the API. |
-| 202 | Permission verification failed. A non-system application calls a system API. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed. The application does not have the permission required to call the API. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
 
 ## Examples
 
@@ -296,10 +294,10 @@ let value: boolean = true;
 
 config.highContrastText.set(value, (err: BusinessError) => {
   if (err) {
-    console.error(`Failed to set highContrastText. Code: ${err.code}, message: ${err.message}`);
+    console.error(`failed to set highContrastText, Code is ${err.code}, message is ${err.message}`);
     return;
   }
-  console.info(`succeeded in setting highContrastText, value is ${value}`);
+  console.info(`Succeeded in set highContrastText, value is ${value}`);
 });
 ```
 

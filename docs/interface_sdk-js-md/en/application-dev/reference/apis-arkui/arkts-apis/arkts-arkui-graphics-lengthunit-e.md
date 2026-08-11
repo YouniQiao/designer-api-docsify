@@ -1,6 +1,6 @@
 # LengthUnit
 
-长度属性单位枚举。
+Defines the Length Unit.
 
 **Since:** 23
 
@@ -16,7 +16,7 @@
 PX = 0
 ```
 
-长度类型，用于描述以px像素单位为单位的长度。
+Logical pixel used in Ace1.0. It's based on frontend design width.For example, when a frontend with 750px design width running on a device with 1080 pixels width, 1px represents 1.44 pixels.
 
 **Since:** 23
 
@@ -34,7 +34,7 @@ PX = 0
 VP = 1
 ```
 
-长度类型，用于描述以vp像素单位为单位的长度。
+Density independent pixels, one vp is one pixel on a 160 dpi screen.
 
 **Since:** 23
 
@@ -52,7 +52,7 @@ VP = 1
 FP = 2
 ```
 
-长度类型，用于描述以fp像素单位为单位的长度。
+Scale independent pixels. This is like VP but will be scaled by user's font size preference.
 
 **Since:** 23
 
@@ -70,7 +70,7 @@ FP = 2
 PERCENT = 3
 ```
 
-长度类型，用于描述以%像素单位为单位的长度。
+The percentage of either a value from the element's parent or from another property of the element itself.
 
 **Since:** 23
 
@@ -88,7 +88,7 @@ PERCENT = 3
 LPX = 4
 ```
 
-长度类型，用于描述以lpx像素单位为单位的长度。
+Logic pixels used in ACE2.0 instead of PX, and PX is the physical pixels in ACE2.0.
 
 **Since:** 23
 

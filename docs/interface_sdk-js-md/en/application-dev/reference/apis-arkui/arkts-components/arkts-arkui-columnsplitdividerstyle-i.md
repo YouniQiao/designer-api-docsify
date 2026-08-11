@@ -1,12 +1,15 @@
 # ColumnSplitDividerStyle
 
-设置子组件与上下分割线的距离。
+Sets the distance between the child component and the upper and lower dividers.
 
-> **说明：**
+> **NOTE：**
 > 
-> 与[RowSplit](./row_split)相同，ColumnSplit的分割线可调整上下两侧子组件的高度，子组件的高度调整范围受其最大最小高度限制。
+> Similar to [RowSplit](../arkts-apis/arkts-arkui-rowsplit-rowsplit-f.md/arkts-arkui-rowsplit-rowsplit-f.md#rowsplit), the dividers of **ColumnSplit** adjust the height of adjacent child
+> components. However, this adjustment is only applied to the extent that the resulting height stays within the
+> height limits of the child components.
 > 
-> 支持[clip](../arkts-apis/arkts-arkui-common-commonmethod-i.md/arkts-arkui-common-commonmethod-i.md#clip)、[margin](../arkts-apis/arkts-arkui-common-commonmethod-i.md/arkts-arkui-common-commonmethod-i.md#margin)等通用属性，未设置clip属性时，其默认值为true。
+> Universal attributes such as [clip](../arkts-apis/arkts-arkui-common-commonmethod-i.md/arkts-arkui-common-commonmethod-i.md#clip) and [margin](../arkts-apis/arkts-arkui-common-commonmethod-i.md/arkts-arkui-common-commonmethod-i.md#margin) are supported.
+> If **clip** is not set, the default value **true** is used.
 
 **Since:** 10
 
@@ -22,14 +25,8 @@
 endMargin?: Dimension
 ```
 
-子组件与其下方分割线的距离。可调整间距（如避免内容与分割线重叠、美化布局等场景）。
-
-默认值：0vp
-
-取值范围：不支持负值。
-
-非法值：按默认值处理，此时  
-[getInspectorByKey()](../../../reference/apis-arkui/arkui-ts/ts-universal-attributes-component-id.md#getinspectorbykey9)接口获取到的属性值为undefined。
+Distance between the child component and the lower divider.&lt;br&gt;Default value: **0vp**&lt;br&gt;Invalid values are treated as the default value. In this case, the attribute value obtained by the  
+[getInspectorByKey()](../../../reference/apis-arkui/arkui-ts/ts-universal-attributes-component-id.md#getinspectorbykey9)
 
 **Type:** [Dimension](../arkts-apis/arkts-arkui-dimension-t.md)
 
@@ -53,14 +50,8 @@ endMargin?: Dimension
 startMargin?: Dimension
 ```
 
-子组件与其上方分割线的距离。可调整间距（如避免内容与分割线重叠、美化布局等场景）。
-
-默认值：0vp
-
-取值范围：不支持负值。
-
-非法值：按默认值处理，此时  
-[getInspectorByKey()](../../../reference/apis-arkui/arkui-ts/ts-universal-attributes-component-id.md#getinspectorbykey9)接口获取到的属性值为undefined。
+Distance between the child component and the upper divider.&lt;br&gt;Default value: **0vp**&lt;br&gt;Invalid values are treated as the default value. In this case, the attribute value obtained by the  
+[getInspectorByKey()](../../../reference/apis-arkui/arkui-ts/ts-universal-attributes-component-id.md#getinspectorbykey9)
 
 **Type:** [Dimension](../arkts-apis/arkts-arkui-dimension-t.md)
 

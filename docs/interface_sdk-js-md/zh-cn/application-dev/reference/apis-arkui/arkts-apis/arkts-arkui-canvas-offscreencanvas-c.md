@@ -59,7 +59,7 @@ getContext(contextType: '2d', options?: RenderingContextSettings): OffscreenCanv
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | contextType | '2d' | 是 | OffscreenCanvas组件绘图上下文的类型，当前仅支持"2d"类型。 "2d"：创建一个表示二维渲染上下文的OffscreenCanvasRenderingContext2D对象。 异常值undefined和null按无效值处理，当前接口返回undefined。 |
-| options | [RenderingContextSettings](arkts-arkui-canvas-renderingcontextsettings-c.md) | 否 | 用来配置OffscreenCanvasRenderingContext2D 对象的参数，见RenderingContextSettings。 异常值undefined和null按RenderingContextSettings的默认值处理。默认值：null。 |
+| options | [RenderingContextSettings](arkts-arkui-renderingcontextsettings-c.md) | 否 | 用来配置OffscreenCanvasRenderingContext2D 对象的参数，见RenderingContextSettings。 异常值undefined和null按RenderingContextSettings的默认值处理。默认值：null。 |
 
 **返回值：**
 

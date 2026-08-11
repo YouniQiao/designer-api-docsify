@@ -1,6 +1,6 @@
 # EnterpriseInfo
 
-设备管理应用的企业信息。
+Represents the enterprise information of a device administrator application.
 
 **Since:** 9
 
@@ -22,7 +22,7 @@ import { adminManager } from 'kits/@kit.MDMKit';
 description: string
 ```
 
-表示设备管理应用所属企业的描述。
+Description of the enterprise.
 
 **Type:** string
 
@@ -40,7 +40,7 @@ description: string
 name: string
 ```
 
-表示设备管理应用所属企业的名称。
+Name of the enterprise.
 
 **Type:** string
 

@@ -1,10 +1,11 @@
-# @ohos.hiAppEvent(应用事件打点)
+# @ohos.hiAppEvent(Application Event Logging)
 
-本模块提供了应用事件打点能力，包括对打点数据的落盘，以及对打点功能的管理配置。
+The **hiAppEvent** module provides the application event logging functions, such as writing application events to the event file and managing the event logging configuration.
 
-> **说明：**
+> **NOTE：**
 > 
-> - 本模块接口从API version 9开始废弃，建议使用新接口[@ohos.hiviewdfx.hiAppEvent](arkts-performanceanalysis-hiappevent-depr-n.md)替代。
+> - The APIs provided by this module are deprecated since API version 9. You are advised to use
+> [@ohos.hiviewdfx.hiAppEvent](arkts-performanceanalysis-hiappevent-depr-n.md).
 
 ## Summary
 
@@ -12,5 +13,5 @@
 
 | Name | Description |
 | --- | --- |
-| [hiAppEvent](arkts-performanceanalysis-hiappevent-depr-n.md) | 本模块提供了应用事件打点能力，包括对打点数据的落盘，以及对打点功能的管理配置。 |
+| [hiAppEvent](arkts-performanceanalysis-hiappevent-depr-n.md) | The **hiAppEvent** module provides the application event logging functions, such as writing application events to the event file and managing the event logging configuration.  > **NOTE：** >  > - The APIs provided by this module are deprecated since API version 9. You are advised to use > [@ohos.hiviewdfx.hiAppEvent](arkts-performanceanalysis-hiappevent-depr-n.md). |
 

@@ -1,0 +1,62 @@
+# splitText
+
+## Modules to Import
+
+```TypeScript
+import { intelligence } from 'kits/@kit.ArkData';
+```
+
+## splitText
+
+```TypeScript
+function splitText(text: string, config: SplitConfig): Promise<Array<string>>
+```
+
+Splits text.
+
+**Since:** 15
+
+<!--Device-intelligence-function splitText(text: string, config: SplitConfig): Promise<Array<string>>--><!--Device-intelligence-function splitText(text: string, config: SplitConfig): Promise<Array<string>>-End-->
+
+**System capability:** SystemCapability.DistributedDataManager.DataIntelligence.Core
+
+**Parameters:**
+
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| text | string | Yes |
+| config | [SplitConfig](arkts-arkdata-intelligence-splitconfig-i.md) | Yes |
+
+**Return value:**
+
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| Promise&lt;Array&lt;string&gt;&gt; |
+
+**Error codes:**
+
+| Error Code ID |
+| --- |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
+| [31300000](../errorcode-intelligence.md#31300000-internal-error) |
+
+## Examples
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let splitConfig: intelligence.SplitConfig = {
+  size: 10,
+  overlapRatio: 0.1
+}
+let splitText = 'text';
+
+intelligence.splitText(splitText, splitConfig)
+  .then((data: Array<string>) => {
+    console.info("Succeeded in splitting Text");
+  })
+  .catch((err: BusinessError) => {
+    console.error("Failed to split Text and code is " + err.code);
+  })
+```

@@ -1,6 +1,6 @@
 # CertBlob
 
-证书信息。
+Represents the certificate information.
 
 **Since:** 10
 
@@ -26,7 +26,7 @@ import { deviceSettings } from 'kits/@kit.MDMKit';
 alias: string
 ```
 
-证书别名，别名长度小于40个字符。
+Certificate alias. The value length must be less than 40 characters.
 
 **Type:** string
 
@@ -50,7 +50,7 @@ alias: string
 inData: Uint8Array
 ```
 
-证书的二进制内容。
+Binary content of the certificate.
 
 **Type:** Uint8Array
 

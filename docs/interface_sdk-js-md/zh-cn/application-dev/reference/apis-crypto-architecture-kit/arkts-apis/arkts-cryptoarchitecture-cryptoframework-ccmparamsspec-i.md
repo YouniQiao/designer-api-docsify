@@ -22,12 +22,6 @@
 - API版本12+：SystemCapability.Security.CryptoFramework.Cipher
 - API版本9-11：SystemCapability.Security.CryptoFramework
 
-## 导入模块
-
-```TypeScript
-import { cryptoFramework } from 'kits/@kit.CryptoArchitectureKit';
-```
-
 ## aad
 
 ```TypeScript
@@ -36,7 +30,7 @@ aad: DataBlob
 
 指明加解密参数aad。aad最小长度为1字节，最大为2048字节。
 
-**类型：** [DataBlob](arkts-cryptoarchitecture-cryptoframework-datablob-i.md)
+**类型：** [DataBlob](../../apis-device-certificate-kit/arkts-apis/arkts-devicecertificate-cert-datablob-i.md)
 
 **起始版本：** 9
 
@@ -65,7 +59,7 @@ authTag: DataBlob
 [init()](arkts-cryptoarchitecture-cryptoframework-cipher-i.md#init)或  
 [initSync()](arkts-cryptoarchitecture-cryptoframework-cipher-i.md#initsync)方法中CcmParamsSpec的authTag。
 
-**类型：** [DataBlob](arkts-cryptoarchitecture-cryptoframework-datablob-i.md)
+**类型：** [DataBlob](../../apis-device-certificate-kit/arkts-apis/arkts-devicecertificate-cert-datablob-i.md)
 
 **起始版本：** 9
 
@@ -87,7 +81,7 @@ iv: DataBlob
 
 指明加解密参数iv，仅支持7字节。若传入iv长度超过7字节，超出范围将被截断。
 
-**类型：** [DataBlob](arkts-cryptoarchitecture-cryptoframework-datablob-i.md)
+**类型：** [DataBlob](../../apis-device-certificate-kit/arkts-apis/arkts-devicecertificate-cert-datablob-i.md)
 
 **起始版本：** 9
 

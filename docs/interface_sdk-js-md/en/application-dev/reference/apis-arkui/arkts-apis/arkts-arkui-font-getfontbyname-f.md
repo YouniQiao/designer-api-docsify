@@ -12,18 +12,14 @@ import { font } from 'kits/@kit.ArkUI';
 function getFontByName(fontName: string): FontInfo
 ```
 
-根据传入的系统字体名称获取系统字体的相关信息。
+Obtains information about a system font based on the font name.
 
-> **说明：**
+> **NOTE：**
 > 
-> -getFontByName需要先通过[UIContext](arkts-arkui-uicontext.md)中的
-> [getFont](../../../reference/apis-arkui/arkts-apis-uicontext-uicontext.md#getfont)方法获取
-> [Font](arkts-arkui-uicontext.md)对象，然后通过该对象进行调用。且直接使用getFontByName可能导致
-> [UI上下文不明确](../../../ui/arkts-global-interface.md#ui上下文不明确)的问题。
-> 
-> - 从API version 10开始，可以通过使用[UIContext](arkts-arkui-uicontext.md)中的
-> [getFont](../../../reference/apis-arkui/arkts-apis-uicontext-uicontext.md#getfont)方法获取当前UI上下文关联的
-> [Font](arkts-arkui-uicontext.md)对象。
+> - Since API version 10, you can use the
+> [getFont](../../../reference/apis-arkui/arkts-apis-uicontext-uicontext.md#getfont) API in
+> [UIContext](arkts-arkui-uicontext.md) to obtain the [Font](arkts-arkui-uicontext.md) object associated with
+> the current UI context.
 
 **Since:** 10
 
@@ -45,11 +41,11 @@ function getFontByName(fontName: string): FontInfo
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| fontName | string | Yes | 系统的字体名。 |
+| fontName | string | Yes | System font name. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [FontInfo](arkts-arkui-font-fontinfo-i.md) | 字体的详细信息。 |
+| [FontInfo](arkts-arkui-font-fontinfo-i.md) | Information about the system font. |
 

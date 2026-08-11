@@ -12,11 +12,11 @@ import { Options, ReaderIteratorResult, Watcher, ReadTextOptions, WatchEventList
 declare function moveFileSync(src: string, dest: string, mode?: number): void
 ```
 
-以同步方式移动文件。
+Moves a file. This API returns the result synchronously.
 
-> **说明：**
+> **NOTE：**
 > 
-> 该接口不支持在分布式文件路径下操作。
+> This API is not supported in a distributed directory.
 
 **Since:** 9
 
@@ -30,9 +30,9 @@ declare function moveFileSync(src: string, dest: string, mode?: number): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| src | string | Yes | 源文件的应用沙箱路径。 |
-| dest | string | Yes | 目标文件的应用沙箱路径。 |
-| mode | number | No | 移动模式。若mode为0，移动位置存在同名文件时，强制移动覆盖。若mode为1，移动位置存在同名文件时，抛出异常。默认为0。 |
+| src | string | Yes | Application sandbox path of the file to move. |
+| dest | string | Yes | Application sandbox path of the destination file. |
+| mode | number | No | Move mode.&lt;br&gt; The value **0** means to overwrite the file with the same name in the destination directory; the value **1** means to throw an exception. The default value is **0**. |
 
 **Error codes:**
 

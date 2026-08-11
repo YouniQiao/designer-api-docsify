@@ -1,6 +1,6 @@
 # BlurStyleActivePolicy
 
-定义背景模糊激活策略。
+Enumerates the policies for activating the blur style.
 
 **Since:** 23
 
@@ -16,7 +16,7 @@
 FOLLOWS_WINDOW_ACTIVE_STATE = 0
 ```
 
-模糊效果跟随窗口焦点状态变化，非焦点不模糊，焦点模糊。
+The component has the blur effect only when the window is focused.
 
 **Since:** 23
 
@@ -34,7 +34,7 @@ FOLLOWS_WINDOW_ACTIVE_STATE = 0
 ALWAYS_ACTIVE = 1
 ```
 
-一直有模糊效果。
+The component always has the blur effect, regardless of whether the window is focused.
 
 **Since:** 23
 
@@ -52,7 +52,7 @@ ALWAYS_ACTIVE = 1
 ALWAYS_INACTIVE = 2
 ```
 
-一直无模糊效果。
+The component does not have the blur effect, regardless of whether the window is focused.
 
 **Since:** 23
 

@@ -1,6 +1,6 @@
 # UIExtensionOptions (System API)
 
-用于在UIExtensionComponent进行构造时传递可选的构造参数。
+This interface is used to set the options for UIExtensionComponentAttribute during construction
 
 **Since:** 23
 
@@ -18,7 +18,7 @@
 areaChangePlaceholder?: Record<string, ComponentContentBase>
 ```
 
-设置尺寸变化占位符，在UIExtensionComponent尺寸发生变化并且UIExtensionAbility内部渲染未完成时显示，key值仅支持"FOLD_TO_EXPAND"（折叠展开尺寸变化）、 "UNDEFINED"（默认尺寸变化），传入其他key值时不生效。不设置时默认不显示尺寸变化占位内容。
+Set Areachange placeholder.If the Areachange placeholder ComponentContentBase is set, the placeholder node is displayed until the UIExtensionComponent size change is complete.
 
 **Type:** [Record](../../apis-default/arkts-apis/arkts-record-t.md)&lt;string, ComponentContentBase&gt;
 
@@ -40,7 +40,7 @@ areaChangePlaceholder?: Record<string, ComponentContentBase>
 dpiFollowStrategy?: DpiFollowStrategy
 ```
 
-提供接口支持设置DPI跟随宿主或跟随UIExtensionAbility。
+Set UIExtensionComponent Content Dpi Follow Strategy.
 
 **Type:** [DpiFollowStrategy](arkts-arkui-uiextensioncomponent-dpifollowstrategy-e-sys.md)
 
@@ -64,7 +64,7 @@ dpiFollowStrategy?: DpiFollowStrategy
 isTransferringCaller?: boolean
 ```
 
-在使用UIExtensionComponent嵌套时，设置当前UIExtensionComponent是否转发上一级的Caller信息。&lt;br/&gt;true表示转发上一级的Caller信息，false表示不转发上一级的Caller信息。&lt;br/&gt;默认值：false
+Set whether the current capability is used as a Caller.&lt;br/&gt;If set to true, as a Caller, the current token of UIExtensionComponent is set to rootToken.
 
 **Type:** boolean
 
@@ -88,7 +88,7 @@ isTransferringCaller?: boolean
 placeholder?: ComponentContentBase
 ```
 
-设置占位符，在UIExtensionComponent与UIExtensionAbility建立连接前显示。当需要在连接建立前向用户展示加载状态或提示内容时传入此参数，不设置时默认不显示占位内容。
+Set placeholder.If set placeholder ComponentContentBase, show placeholder node when connection is not established.
 
 **Type:** [ComponentContentBase](arkts-arkui-componentcontent-componentcontentbase-c.md)
 
@@ -110,7 +110,7 @@ placeholder?: ComponentContentBase
 windowModeFollowStrategy?: WindowModeFollowStrategy
 ```
 
-提供接口以支持设置窗口Mode，使其能够跟随宿主或UIExtensionAbility。
+Set UIExtensionComponent Content Window Mode Follow Strategy.
 
 **Type:** [WindowModeFollowStrategy](../arkts-components/arkts-arkui-windowmodefollowstrategy-e-sys.md)
 

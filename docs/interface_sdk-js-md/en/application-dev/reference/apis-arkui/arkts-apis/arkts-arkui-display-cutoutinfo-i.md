@@ -1,6 +1,6 @@
 # CutoutInfo
 
-挖孔屏、刘海屏、瀑布屏等不可用屏幕区域信息。
+Describes the unusable area of a display, including punch hole, notch, and curved area of a waterfall display.
 
 **Since:** 9
 
@@ -22,7 +22,7 @@ import { display } from 'kits/@kit.ArkUI';
 readonly boundingRects: Array<Rect>
 ```
 
-挖孔、刘海等区域的边界矩形。如果没有挖孔、刘海等区域，数组返回为空。
+Unusable areas (bounding rectangles) designed for punch holes and notches. If there are no punch holes or notches, an empty array is returned.
 
 **Type:** Array&lt;Rect&gt;
 
@@ -42,7 +42,7 @@ readonly boundingRects: Array<Rect>
 readonly waterfallDisplayAreaRects: WaterfallDisplayAreaRects
 ```
 
-瀑布屏曲面部分显示区域。
+Curved area on a waterfall display.
 
 **Type:** [WaterfallDisplayAreaRects](arkts-arkui-display-waterfalldisplayarearects-i.md)
 

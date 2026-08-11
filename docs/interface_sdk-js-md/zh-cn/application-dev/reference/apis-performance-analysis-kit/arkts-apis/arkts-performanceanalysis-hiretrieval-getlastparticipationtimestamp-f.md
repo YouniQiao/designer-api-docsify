@@ -1,11 +1,5 @@
 # getLastParticipationTimestamp
 
-## 导入模块
-
-```TypeScript
-import { hiRetrieval } from 'kits/@kit.PerformanceAnalysisKit';
-```
-
 ## getLastParticipationTimestamp
 
 ```TypeScript

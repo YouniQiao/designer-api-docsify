@@ -1,11 +1,5 @@
 # createZip
 
-## 导入模块
-
-```TypeScript
-import { zlib } from 'kits/@kit.BasicServicesKit';
-```
-
 ## createZip
 
 ```TypeScript

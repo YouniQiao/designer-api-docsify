@@ -10,12 +10,6 @@
 
 **系统能力：** SystemCapability.Multimedia.Camera.Core
 
-## 导入模块
-
-```TypeScript
-import { camera } from 'kits/@kit.CameraKit';
-```
-
 ## compressionQuality
 
 ```TypeScript
@@ -48,7 +42,7 @@ location?: Location
 
 图片地理位置信息（默认以设备硬件信息为准）。
 
-**类型：** [Location](../../apis-location-kit/arkts-apis/arkts-location-geolocationmanager-location-i.md)
+**类型：** [Location](arkts-camera-camera-location-i.md)
 
 **起始版本：** 10
 
@@ -90,7 +84,7 @@ quality?: QualityLevel
 
 当quality未下发时，默认按compressionQuality下发生效；若quality与compressionQuality同时下发则按compressionQuality下发生效；若quality与compressionQuality均未下发则图片质量默认是高等。
 
-**类型：** [QualityLevel](../../apis-image-kit/arkts-apis/arkts-image-videoprocessingengine-qualitylevel-e.md)
+**类型：** [QualityLevel](arkts-camera-camera-qualitylevel-e.md)
 
 **起始版本：** 10
 

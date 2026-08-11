@@ -1,6 +1,6 @@
 # LazyCustomLayoutAlgorithm
 
-定义懒式自定义布局算法。
+Defines the lazy custom layout algorithm.
 
 **Inheritance/Implementation:** LazyCustomLayoutAlgorithm implements [LazyLayoutAlgorithm](arkts-arkui-lazylayoutalgorithm-i.md)
 
@@ -18,7 +18,7 @@
 constructor(option?: LazyCustomLayoutAlgorithmOptions)
 ```
 
-构造函数。
+Constructor.
 
 **Since:** 26.0.0
 
@@ -34,7 +34,7 @@ constructor(option?: LazyCustomLayoutAlgorithmOptions)
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| option | [LazyCustomLayoutAlgorithmOptions](arkts-arkui-lazylayoutalgorithm-lazycustomlayoutalgorithmoptions-i.md) | No | 设置懒加载自定义布局算法的属性。 |
+| option | [LazyCustomLayoutAlgorithmOptions](arkts-arkui-lazylayoutalgorithm-lazycustomlayoutalgorithmoptions-i.md) | No | set properties of lazy custom layout algorithm. |
 
 ## onLayout
 
@@ -42,7 +42,7 @@ constructor(option?: LazyCustomLayoutAlgorithmOptions)
 onLayout(self: FrameNode, position: NodePosition): void
 ```
 
-方法为DynamicLayout的FrameNode及其每个子节点分配一个位置。它可以用于指定DynamicLayoutdFrameNode及其子节点的布局位置。
+Method to assign a position to the DynamicLayout FrameNode and each of its children.It can be used to specify the layout location of the DynamicLayout FrameNode and its children.
 
 **Since:** 26.0.0
 
@@ -58,8 +58,8 @@ onLayout(self: FrameNode, position: NodePosition): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| self | [FrameNode](arkts-arkui-framenode-c.md) | Yes | DynamicLayout组件的FrameNode。 |
-| position | [NodePosition](arkts-arkui-nodeposition-t.md) | Yes | 节点的位置，将在执行布局方法时使用。 |
+| self | [FrameNode](arkts-arkui-framenode-c.md) | Yes | The FrameNode of DynamicLayout component. |
+| position | [NodePosition](arkts-arkui-nodeposition-t.md) | Yes | The position of the node, will be used when executing layout method. |
 
 ## onMeasure
 
@@ -67,7 +67,7 @@ onLayout(self: FrameNode, position: NodePosition): void
 onMeasure(self: FrameNode, constraint: LayoutConstraint, helper?: LazyLayoutHelper): void
 ```
 
-测量DynamicLayout FrameNode及其内容，以确定测量的大小的方法。
+Method to measure the DynamicLayout FrameNode and its content to determine the measured size.
 
 **Since:** 26.0.0
 
@@ -83,7 +83,7 @@ onMeasure(self: FrameNode, constraint: LayoutConstraint, helper?: LazyLayoutHelp
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| self | [FrameNode](arkts-arkui-framenode-c.md) | Yes | DynamicLayout组件的FrameNode。 |
-| constraint | [LayoutConstraint](arkts-arkui-framenode-layoutconstraint-i.md) | Yes | 节点的布局约束，将在测量过程中使用。 |
-| helper | [LazyLayoutHelper](arkts-arkui-lazylayoutalgorithm-lazylayouthelper-c.md) | No | 懒布局算法的助手对象，提供布局方向和视图位置信息。 如果未定义，则表示当前组件未在可滚动组件下使用，不支持懒布局。 |
+| self | [FrameNode](arkts-arkui-framenode-c.md) | Yes | The FrameNode of DynamicLayout component. |
+| constraint | [LayoutConstraint](arkts-arkui-framenode-layoutconstraint-i.md) | Yes | The layout constraint of the node, which will be used in measure process. |
+| helper | [LazyLayoutHelper](arkts-arkui-lazylayoutalgorithm-lazylayouthelper-c.md) | No | The helper object for lazy layout algorithm, which provides layout direction and view position information. If undefined, it indicates that the current component is not used under a scrollable component and does not support lazy layout. |
 

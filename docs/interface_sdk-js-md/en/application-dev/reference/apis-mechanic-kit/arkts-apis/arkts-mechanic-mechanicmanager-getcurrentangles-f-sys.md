@@ -12,7 +12,7 @@ import { mechanicManager } from 'kits/@kit.MechanicKit';
 function getCurrentAngles(mechId: int): EulerAngles
 ```
 
-获取机械设备的当前角度
+Obtains the current angles of a mechanical device.
 
 **Since:** 20
 
@@ -28,21 +28,21 @@ function getCurrentAngles(mechId: int): EulerAngles
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| mechId | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | 机械设备ID |
+| mechId | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | ID of the mechanical device. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [EulerAngles](arkts-mechanic-mechanicmanager-eulerangles-i-sys.md) | 返回当前角度 |
+| [EulerAngles](arkts-mechanic-mechanicmanager-eulerangles-i-sys.md) | Rotation angles. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 202 | Not system application. |
-| 33300001 | Service exception. |
-| 33300002 | Device not connected. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system application. |
+| [33300001](../errorcode-mechanic.md#33300001-system-error) | Service exception. |
+| [33300002](../errorcode-mechanic.md#33300002-device-not-connected) | Device not connected. |
 
 ## Examples
 

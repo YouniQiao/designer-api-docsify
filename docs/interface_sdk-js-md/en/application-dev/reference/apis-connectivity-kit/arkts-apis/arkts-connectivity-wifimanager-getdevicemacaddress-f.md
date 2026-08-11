@@ -34,10 +34,10 @@ Obtain the MAC address of a Wi-Fi device. Wi-Fi must be enabled.The MAC address 
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 801 | Capability not supported. |
-| 201 | Permission denied. |
-| 2501000 | Operation failed. |
-| 2501001 | Wi-Fi STA disabled. |
+| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
+| [2501000](../errorcode-wifi.md#2501000-sta-internal-error) | Operation failed. |
+| [2501001](../errorcode-wifi.md#2501001-sta-disabled) | Wi-Fi STA disabled. |
 
 ## Examples
 

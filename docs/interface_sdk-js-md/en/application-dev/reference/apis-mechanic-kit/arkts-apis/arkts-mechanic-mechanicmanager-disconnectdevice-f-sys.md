@@ -12,7 +12,7 @@ import { mechanicManager } from 'kits/@kit.MechanicKit';
 function disconnectDevice(mechId: int): Promise<Result>
 ```
 
-基于具身设备ID断开设备
+Disconnect a device with mechanic id.
 
 **Since:** 26.0.0
 
@@ -32,7 +32,7 @@ function disconnectDevice(mechId: int): Promise<Result>
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| mechId | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | 具身设备ID。 &lt;br&gt;取值限定为整数。 |
+| mechId | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | mechanic device id. &lt;br&gt;The value should be an integer. |
 
 **Return value:**
 
@@ -44,7 +44,7 @@ function disconnectDevice(mechId: int): Promise<Result>
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 201 | Permission denied. |
-| 202 | Not system application. |
-| 33300001 | Service exception. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system application. |
+| [33300001](../errorcode-mechanic.md#33300001-system-error) | Service exception. |
 

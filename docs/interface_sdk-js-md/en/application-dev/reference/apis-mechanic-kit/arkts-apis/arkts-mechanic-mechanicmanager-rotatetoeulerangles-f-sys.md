@@ -12,7 +12,7 @@ import { mechanicManager } from 'kits/@kit.MechanicKit';
 function rotateToEulerAngles(mechId: int, angles: EulerAngles, duration: int): Promise<Result>
 ```
 
-将机械设备旋转到绝对角度
+Rotates a mechanical device to the absolute angles.
 
 **Since:** 20
 
@@ -28,23 +28,23 @@ function rotateToEulerAngles(mechId: int, angles: EulerAngles, duration: int): P
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| mechId | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | 机械设备ID |
-| angles | [EulerAngles](arkts-mechanic-mechanicmanager-eulerangles-i-sys.md) | Yes | 绝对角度位置 |
-| duration | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | 执行时间 |
+| mechId | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | ID of the mechanical device. |
+| angles | [EulerAngles](arkts-mechanic-mechanicmanager-eulerangles-i-sys.md) | Yes | Absolute angles. |
+| duration | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | Rotation duration. Unit: millisecond. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;Result&gt; | 返回执行结果 |
+| Promise&lt;Result&gt; | Promise that return the execution result. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 202 | Not system application. |
-| 33300001 | Service exception. |
-| 33300002 | Device not connected. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system application. |
+| [33300001](../errorcode-mechanic.md#33300001-system-error) | Service exception. |
+| [33300002](../errorcode-mechanic.md#33300002-device-not-connected) | Device not connected. |
 
 ## Examples
 

@@ -1,11 +1,5 @@
 # @ohos.app.ability.DriverExtensionAbility
 
-## 导入模块
-
-```TypeScript
-import { DriverExtensionContext } from 'kits/@kit.DriverDevelopmentKit';
-```
-
 ## 汇总
 
 ### 类

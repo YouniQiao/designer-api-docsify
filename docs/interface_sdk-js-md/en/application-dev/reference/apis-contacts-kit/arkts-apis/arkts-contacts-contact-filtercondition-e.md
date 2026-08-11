@@ -1,6 +1,6 @@
 # FilterCondition
 
-枚举，过滤条件。
+Enumerates filter criteria.
 
 **Since:** 15
 
@@ -16,7 +16,7 @@
 EQUAL_TO = 1
 ```
 
-对应字段等于某值，值类型为string。
+The corresponding field is equal to a value.
 
 **Since:** 15
 
@@ -34,7 +34,7 @@ EQUAL_TO = 1
 NOT_EQUAL_TO = 2
 ```
 
-对应字段不等于某值。
+The corresponding field is not equal to a value.
 
 **Since:** 15
 
@@ -52,7 +52,7 @@ NOT_EQUAL_TO = 2
 IN = 3
 ```
 
-对应字段值在某数组中，值类型为string。
+The value of the corresponding field is in an array.
 
 **Since:** 15
 
@@ -70,7 +70,7 @@ IN = 3
 IS_NOT_NULL = 0
 ```
 
-对应字段不为空。
+The corresponding field is not empty.
 
 **Since:** 15
 
@@ -88,7 +88,7 @@ IS_NOT_NULL = 0
 NOT_IN = 4
 ```
 
-对应字段值不在某数组中。
+The value of the corresponding field is not in an array.
 
 **Since:** 15
 
@@ -106,7 +106,7 @@ NOT_IN = 4
 CONTAINS = 5
 ```
 
-对应字段值包含某值，值类型为string
+The value of the corresponding field contains a certain value.
 
 **Since:** 15
 

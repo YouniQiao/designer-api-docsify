@@ -1,6 +1,6 @@
 # NavigationInterception
 
-Navigation跳转拦截对象。
+Provide navigation transition interception
 
 **Since:** 23
 
@@ -16,7 +16,7 @@ Navigation跳转拦截对象。
 didShow?: InterceptionShowCallback
 ```
 
-页面跳转后回调。在该回调中操作栈在下一次跳转中刷新。
+Called after destination transition.For details, see { @Link InterceptionShowCallback}.
 
 **Since:** 23
 
@@ -34,9 +34,7 @@ didShow?: InterceptionShowCallback
 interception?: InterceptionCallback
 ```
 
-页面跳转前的回调，允许操作栈，在当前跳转中生效。拦截的页面不会被创建。
-
-**模型约束：** 此接口仅可在Stage模型下使用。
+Called before destination is created.For details, see { @Link InterceptionCallback}.
 
 **Since:** 26.0.0
 
@@ -54,7 +52,7 @@ interception?: InterceptionCallback
 modeChange?: InterceptionModeCallback
 ```
 
-Navigation单双栏显示状态发生变更时触发该回调。
+Called when navigation mode changed.For details, see { @Link InterceptionModeCallback}.
 
 **Since:** 23
 
@@ -72,7 +70,7 @@ Navigation单双栏显示状态发生变更时触发该回调。
 willShow?: InterceptionShowCallback
 ```
 
-页面跳转前的回调，允许操作栈，在当前跳转中生效。拦截的页面会被创建。
+Called before destination transition.NavPathStack can be changed in this callback,it will takes effect during this transition.For details, see { @Link InterceptionShowCallback}.
 
 **Since:** 23
 

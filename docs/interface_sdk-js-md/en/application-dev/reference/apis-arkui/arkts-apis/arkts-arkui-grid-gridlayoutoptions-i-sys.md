@@ -1,6 +1,6 @@
 # GridLayoutOptions
 
-Grid布局选项。
+The options to help grid layout
 
 **Since:** 23
 
@@ -16,7 +16,7 @@ Grid布局选项。
 onGetStartIndexByIndex?: OnGetStartIndexByIndexCallback
 ```
 
-根据指定的目标索引，计算Grid滚动到该位置时页面内的起始行，用于支持[scrollToIndex](arkts-arkui-scroll-scroller-c.md#scrolltoindex)等操作。
+Called to return the StartLineInfo based on target index for the scrollToIndex operation.
 
 **Since:** 23
 
@@ -36,7 +36,7 @@ onGetStartIndexByIndex?: OnGetStartIndexByIndexCallback
 onGetStartIndexByOffset?: OnGetStartIndexByOffsetCallback
 ```
 
-根据Grid滚动的总偏移量，计算Grid当前页面起始行位置，用于快速滑动或反向滑动场景。
+Called to return the StartLineInfo based on total offset for the fast or reverse sliding.
 
 **Since:** 23
 

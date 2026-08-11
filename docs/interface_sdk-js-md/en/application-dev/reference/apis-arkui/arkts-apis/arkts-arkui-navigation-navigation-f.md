@@ -9,8 +9,7 @@ export declare function Navigation(
 ): NavigationAttribute
 ```
 
-绑定导航控制器到Navigation组件，适用于使用[NavPathStack](../arkts-components/arkts-arkui-navpathstack-c.md/arkts-arkui-navpathstack-c.md)配合  
-[navDestination](NavigationAttribute.navDestination)属性进行页面路由。
+Defines Navigation Component
 
 **Since:** 23
 
@@ -26,8 +25,8 @@ export declare function Navigation(
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| pathInfos | [NavPathStack](arkts-arkui-navigation-navpathstack-c.md) | No | 导航控制器对象。 |
-| content_ | [CustomBuilder](../arkts-components/arkts-arkui-custombuilder-t.md) | No | 子组件。 |
+| pathInfos | [NavPathStack](arkts-arkui-navigation-navpathstack-c.md) | No | Navigation constructor options |
+| content_ | [CustomBuilder](../arkts-components/arkts-arkui-custombuilder-t.md) | No | container |
 
 **Return value:**
 
@@ -40,14 +39,13 @@ export declare function Navigation(
 
 ```TypeScript
 export declare function Navigation(
-   pathInfos?: NavPathStack, 
-   homeDestination?: HomePathInfo,
-   content_?: CustomBuilder
+    pathInfos?: NavPathStack, 
+    homeDestination?: HomePathInfo,
+    content_?: CustomBuilder
 ): NavigationAttribute
 ```
 
-绑定导航控制器到Navigation组件，并设置自定义首页，适用于使用[NavPathStack](../arkts-components/arkts-arkui-navpathstack-c.md/arkts-arkui-navpathstack-c.md)配合  
-[navDestination](NavigationAttribute.navDestination)属性进行页面路由。
+Defines Navigation Component
 
 **Since:** 24
 
@@ -55,7 +53,7 @@ export declare function Navigation(
 
 **Model restriction:** This API can be used only in the stage model.
 
-<!--Device-unnamed-export declare function Navigation(   pathInfos?: NavPathStack,    homeDestination?: HomePathInfo,   content_?: CustomBuilder): NavigationAttribute--><!--Device-unnamed-export declare function Navigation(   pathInfos?: NavPathStack,    homeDestination?: HomePathInfo,   content_?: CustomBuilder): NavigationAttribute-End-->
+<!--Device-unnamed-export declare function Navigation(    pathInfos?: NavPathStack,     homeDestination?: HomePathInfo,    content_?: CustomBuilder): NavigationAttribute--><!--Device-unnamed-export declare function Navigation(    pathInfos?: NavPathStack,     homeDestination?: HomePathInfo,    content_?: CustomBuilder): NavigationAttribute-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -63,9 +61,9 @@ export declare function Navigation(
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| pathInfos | [NavPathStack](arkts-arkui-navigation-navpathstack-c.md) | No | 导航控制器对象。 |
-| homeDestination | [HomePathInfo](arkts-arkui-navigation-homepathinfo-i.md) | No | 自定义首页信息。 |
-| content_ | [CustomBuilder](../arkts-components/arkts-arkui-custombuilder-t.md) | No | 子组件。 |
+| pathInfos | [NavPathStack](arkts-arkui-navigation-navpathstack-c.md) | No | Navigation constructor options |
+| homeDestination | [HomePathInfo](arkts-arkui-navigation-homepathinfo-i.md) | No | The custom home destination info.<br>**Since:** 26.0.0 |
+| content_ | [CustomBuilder](../arkts-components/arkts-arkui-custombuilder-t.md) | No | container |
 
 **Return value:**
 
@@ -83,12 +81,11 @@ export declare function Navigation(
 ): NavigationAttribute
 ```
 
-绑定导航控制器到Navigation组件，适用于使用[NavPathStack](../arkts-components/arkts-arkui-navpathstack-c.md/arkts-arkui-navpathstack-c.md)配合  
-[navDestination](NavigationAttribute.navDestination)属性进行页面路由。
+Defines Navigation Component
 
-**Since:** 26.0.0
+**Since:** 26.1.0
 
-**ArkTS mode:** ArkTS-Sta only, since version 26.0.0.
+**ArkTS mode:** ArkTS-Sta only, since version 26.1.0.
 
 **Decorator:** @Builder
 
@@ -102,8 +99,8 @@ export declare function Navigation(
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| style_ | [CustomBuilderT](../arkts-components/arkts-arkui-custombuildert-t.md)&lt;NavigationAttribute&gt; | Yes | 导航控制器对象。 |
-| content_ | [CustomBuilder](../arkts-components/arkts-arkui-custombuilder-t.md) | No | 子组件。 |
+| style_ | [CustomBuilderT](../arkts-components/arkts-arkui-custombuildert-t.md)&lt;NavigationAttribute&gt; | Yes | navigation attribute instance |
+| content_ | [CustomBuilder](../arkts-components/arkts-arkui-custombuilder-t.md) | No | container |
 
 **Return value:**
 

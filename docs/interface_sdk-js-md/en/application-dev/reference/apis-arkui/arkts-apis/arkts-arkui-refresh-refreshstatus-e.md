@@ -1,6 +1,6 @@
 # RefreshStatus
 
-下拉刷新的刷新状态。
+The refresh status of the drop-down refresh.
 
 **Since:** 23
 

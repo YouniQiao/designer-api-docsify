@@ -1,6 +1,6 @@
 # ShieldMode (System API)
 
-系统快捷键屏蔽类型。
+Enumerates shortcut key shield modes.
 
 **Since:** 11
 
@@ -18,7 +18,7 @@
 FACTORY_MODE = 0
 ```
 
-屏蔽所有系统快捷键。
+Factory mode, which means to shield all shortcut keys.
 
 **Since:** 11
 

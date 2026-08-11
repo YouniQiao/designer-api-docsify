@@ -24,7 +24,7 @@ Performs the specified action for each element in an array.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | self | FixedArray&lt;boolean&gt; | Yes | The array to operate `forEach` on. |
-| callbackfn | (value: boolean, index: int, array: FixedArray&lt;boolean&gt;)     =&gt; void | Yes | A function that accepts up to three arguments. forEach calls the callbackfn function one time for each element in the array. |
+| callbackfn | (value: boolean, index: int, array: FixedArray&lt;boolean&gt;)     =&gt; void | Yes | A function that accepts up to three arguments. forEach calls the callbackfn function one time for each element in the array. |
 
 
 ## forEach
@@ -51,7 +51,7 @@ Performs the specified action for each element in an array.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | self | FixedArray&lt;byte&gt; | Yes | The array to operate `forEach` on. |
-| callbackfn | (value: byte, index: int, array: FixedArray&lt;byte&gt;)      =&gt; void | Yes | A function that accepts up to three arguments. forEach calls the callbackfn function one time for each element in the array. |
+| callbackfn | (value: byte, index: int, array: FixedArray&lt;byte&gt;)      =&gt; void | Yes | A function that accepts up to three arguments. forEach calls the callbackfn function one time for each element in the array. |
 
 
 ## forEach
@@ -78,7 +78,7 @@ Performs the specified action for each element in an array.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | self | FixedArray&lt;short&gt; | Yes | The array to operate `forEach` on. |
-| callbackfn | (value: short, index: int, array: FixedArray&lt;short&gt;)      =&gt; void | Yes | A function that accepts up to three arguments. forEach calls the callbackfn function one time for each element in the array. |
+| callbackfn | (value: short, index: int, array: FixedArray&lt;short&gt;)      =&gt; void | Yes | A function that accepts up to three arguments. forEach calls the callbackfn function one time for each element in the array. |
 
 
 ## forEach
@@ -105,7 +105,7 @@ Performs the specified action for each element in an array.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | self | FixedArray&lt;int&gt; | Yes | The array to operate `forEach` on. |
-| callbackfn | (value: int, index: int, array: FixedArray&lt;int&gt;)      =&gt; void | Yes | A function that accepts up to three arguments. forEach calls the callbackfn function one time for each element in the array. |
+| callbackfn | (value: int, index: int, array: FixedArray&lt;int&gt;)      =&gt; void | Yes | A function that accepts up to three arguments. forEach calls the callbackfn function one time for each element in the array. |
 
 
 ## forEach
@@ -132,7 +132,7 @@ Performs the specified action for each element in an array.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | self | FixedArray&lt;long&gt; | Yes | The array to operate `forEach` on. |
-| callbackfn | (value: long, index: int, array: FixedArray&lt;long&gt;)      =&gt; void | Yes | A function that accepts up to three arguments. forEach calls the callbackfn function one time for each element in the array. |
+| callbackfn | (value: long, index: int, array: FixedArray&lt;long&gt;)      =&gt; void | Yes | A function that accepts up to three arguments. forEach calls the callbackfn function one time for each element in the array. |
 
 
 ## forEach
@@ -159,7 +159,7 @@ Performs the specified action for each element in an array.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | self | FixedArray&lt;float&gt; | Yes | The array to operate `forEach` on. |
-| callbackfn | (value: float, index: int, array: FixedArray&lt;float&gt;)      =&gt; void | Yes | A function that accepts up to three arguments. forEach calls the callbackfn function one time for each element in the array. |
+| callbackfn | (value: float, index: int, array: FixedArray&lt;float&gt;)      =&gt; void | Yes | A function that accepts up to three arguments. forEach calls the callbackfn function one time for each element in the array. |
 
 
 ## forEach
@@ -186,7 +186,7 @@ Performs the specified action for each element in an array.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | self | FixedArray&lt;double&gt; | Yes | The array to operate `forEach` on. |
-| callbackfn | (value: double, index: int, array: FixedArray&lt;double&gt;)      =&gt; void | Yes | A function that accepts up to three arguments. forEach calls the callbackfn function one time for each element in the array. |
+| callbackfn | (value: double, index: int, array: FixedArray&lt;double&gt;)      =&gt; void | Yes | A function that accepts up to three arguments. forEach calls the callbackfn function one time for each element in the array. |
 
 
 ## forEach
@@ -213,5 +213,5 @@ Performs the specified action for each element in an array.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | self | FixedArray&lt;char&gt; | Yes | The array to operate `forEach` on. |
-| callbackfn | (value: char, index: int, array: FixedArray&lt;char&gt;)      =&gt; void | Yes | A function that accepts up to three arguments. forEach calls the callbackfn function one time for each element in the array. |
+| callbackfn | (value: char, index: int, array: FixedArray&lt;char&gt;)      =&gt; void | Yes | A function that accepts up to three arguments. forEach calls the callbackfn function one time for each element in the array. |
 

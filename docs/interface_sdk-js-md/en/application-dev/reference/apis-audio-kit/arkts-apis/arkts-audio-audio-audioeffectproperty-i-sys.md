@@ -1,5 +1,7 @@
 # AudioEffectProperty (System API)
 
+Describes an audio effect property.
+
 **Since:** 18
 
 **ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
@@ -22,6 +24,8 @@ import { audio } from 'kits/@kit.AudioKit';
 category: string
 ```
 
+Effect category this effect property belongs to.
+
 **Type:** string
 
 **Since:** 18
@@ -40,6 +44,8 @@ category: string
 flag: EffectFlag
 ```
 
+Effect flag of this effect property.
+
 **Type:** [EffectFlag](arkts-audio-audio-effectflag-e-sys.md)
 
 **Since:** 18
@@ -57,6 +63,8 @@ flag: EffectFlag
 ```TypeScript
 name: string
 ```
+
+Name of effect property.
 
 **Type:** string
 

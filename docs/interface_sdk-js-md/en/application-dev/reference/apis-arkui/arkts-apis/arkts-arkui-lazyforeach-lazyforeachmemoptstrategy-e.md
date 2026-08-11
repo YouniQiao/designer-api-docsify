@@ -1,6 +1,6 @@
 # LazyForEachMemOptStrategy
 
-定义内存优化策略的类型。
+Defines type for memory optimization strategy.
 
 **Since:** 26.0.0
 
@@ -16,7 +16,7 @@
 DEFAULT = 0
 ```
 
-没有内存优化。
+No memory optimization.
 
 **Since:** 26.0.0
 
@@ -34,7 +34,7 @@ DEFAULT = 0
 ENABLE_AUTO_CACHE_OPTIMIZATION = 1 << 0
 ```
 
-LazyForEach处理内存优化。
+LazyForEach handles memory optimization.
 
 **Since:** 26.0.0
 

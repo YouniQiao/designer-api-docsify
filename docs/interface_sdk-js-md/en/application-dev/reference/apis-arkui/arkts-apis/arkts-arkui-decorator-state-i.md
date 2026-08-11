@@ -1,5 +1,7 @@
 # State
 
+Defining State annotation State variable that holds the state property and is used to render the owning custom component.
+
 **Since:** 23
 
 **ArkTS mode:** ArkTS-Sta only, since version 23.

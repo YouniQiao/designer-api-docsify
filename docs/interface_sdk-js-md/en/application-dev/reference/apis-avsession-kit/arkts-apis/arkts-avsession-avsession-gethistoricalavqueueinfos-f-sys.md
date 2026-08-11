@@ -12,7 +12,7 @@ import { avSession } from 'kits/@kit.AVSessionKit';
 function getHistoricalAVQueueInfos(maxSize: int, maxAppSize: int, callback: AsyncCallback<Array<Readonly<AVQueueInfo>>>): void
 ```
 
-获取全部的历史播放歌单。结果通过callback异步回调方式返回。
+Get history play list information records.
 
 **Since:** 11
 
@@ -30,24 +30,30 @@ function getHistoricalAVQueueInfos(maxSize: int, maxAppSize: int, callback: Asyn
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| maxSize | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | 指定获取歌曲列表数量的最大值，暂与获取歌单数量无关。 |
-| maxAppSize | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | 指定获取歌曲列表所属应用数量的最大值，暂与获取歌单数量无关。 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;Readonly&lt;AVQueueInfo&gt;&gt;&gt; | Yes | 回调函数。返回所有历史播放歌单的只读对象。 |
+| maxSize | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | Specifies the maximum size of the returned value array. |
+| maxAppSize | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | Specifies the maximum app size of the returned value array. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;Readonly&lt;AVQueueInfo&gt;&gt;&gt; | Yes | async callback for an array of AVQueueInfo. If provided '0' or not provided, the maximum value is determined by the system. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | parameter check failed. 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. |
-| 6600101 | Session service exception. |
-| 201 | permission denied |
-| 202 | Not System App. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | parameter check failed. 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. |
+| [6600101](../errorcode-avsession.md#6600101-session-service-exception) | Session service exception. |
+| [201](../../errorcode-universal.md#201-permission-denied) | permission denied |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not System App. |
 
 ## Examples
 
 ```TypeScript
-avSession.getHistoricalAVQueueInfos(3, 5, (avQueueInfos: avSession.AVQueueInfo[]) => { 
-    console.info(`Succeeded in getting historical AV queue infos, length: ${avQueueInfos.length}`); 
+import { BusinessError } from '@kit.BasicServicesKit';
+
+avSession.getHistoricalAVQueueInfos(3, 5, (err: BusinessError, avQueueInfos: avSession.AVQueueInfo[]) => {
+  if (err) {
+    console.error(`getHistoricalAVQueueInfos BusinessError: code: ${err.code}, message: ${err.message}`);
+  } else {
+    console.info(`getHistoricalAVQueueInfos : SUCCESS : avQueueInfos.length : ${avQueueInfos.length}`);
+  }
 });
 ```
 
@@ -58,7 +64,7 @@ avSession.getHistoricalAVQueueInfos(3, 5, (avQueueInfos: avSession.AVQueueInfo[]
 function getHistoricalAVQueueInfos(maxSize: int, maxAppSize: int): Promise<Array<Readonly<AVQueueInfo>>>
 ```
 
-获取全部的历史播放歌单。结果通过Promise异步回调方式返回。
+Get history play list information records.
 
 **Since:** 11
 
@@ -76,27 +82,31 @@ function getHistoricalAVQueueInfos(maxSize: int, maxAppSize: int): Promise<Array
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| maxSize | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | 指定获取歌曲列表数量的最大值，暂与获取歌单数量无关。 |
-| maxAppSize | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | 指定获取歌曲列表所属应用数量的最大值，暂与获取歌单数量无关。 |
+| maxSize | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | Specifies the maximum size of the returned value array. |
+| maxAppSize | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | Specifies the maximum app size of the returned value array. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;Array&lt;Readonly&lt;AVQueueInfo&gt;&gt;&gt; | Promise对象。返回所有历史播放歌单的只读对象。 |
+| Promise&lt;Array&lt;Readonly&lt;AVQueueInfo&gt;&gt;&gt; | Promise for an array of AVQueueInfo |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | parameter check failed. 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. |
-| 6600101 | Session service exception. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | parameter check failed. 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. |
+| [6600101](../errorcode-avsession.md#6600101-session-service-exception) | Session service exception. |
 
 ## Examples
 
 ```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
 avSession.getHistoricalAVQueueInfos(3, 5).then((avQueueInfos: avSession.AVQueueInfo[]) => {
-  console.info(`Succeeded in getting historical AV queue infos, length: ${avQueueInfos.length}`);
+  console.info(`getHistoricalAVQueueInfos : SUCCESS : avQueueInfos.length : ${avQueueInfos.length}`);
+}).catch((err: BusinessError) => {
+  console.error(`getHistoricalAVQueueInfos BusinessError: code: ${err.code}, message: ${err.message}`);
 });
 ```
 

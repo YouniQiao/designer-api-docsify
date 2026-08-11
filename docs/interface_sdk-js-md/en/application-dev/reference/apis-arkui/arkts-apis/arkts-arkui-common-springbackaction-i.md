@@ -1,6 +1,6 @@
 # SpringBackAction
 
-控制半模态关闭前的回弹。
+Defines sheet spring back action
 
 **Since:** 23
 
@@ -16,7 +16,7 @@
 springBack(): void
 ```
 
-半模态页面关闭前控制回弹函数，开发者需要半模态回弹时调用。
+Defines spring back function
 
 **Since:** 23
 

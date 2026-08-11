@@ -1,6 +1,6 @@
 # ToggleConfiguration
 
-开发者需要自定义class实现ContentModifier接口。继承自[CommonConfiguration](arkts-arkui-common-commonconfiguration-i.md)。
+ToggleConfiguration used by toggle Modifier
 
 **Inheritance/Implementation:** ToggleConfiguration extends [CommonConfiguration<ToggleConfiguration>](CommonConfiguration<ToggleConfiguration>)
 
@@ -18,13 +18,7 @@
 isOn: boolean
 ```
 
-开关是否打开。
-
-true：开关打开；false：开关关闭。
-
-默认值：false 
-
-**ArkTS-Sta起始版本：** 23
+Indicates whether the Toggle is on.
 
 **Type:** boolean
 
@@ -44,11 +38,7 @@ true：开关打开；false：开关关闭。
 triggerChange: Callback<boolean>
 ```
 
-触发switch选中状态变化。
-
-true：状态从关切换为开；false：状态从开切换为关。
-
-**ArkTS-Sta起始版本：** 23
+Trigger toggle select change
 
 **Type:** [Callback](../arkts-components/arkts-arkui-callback-i.md)&lt;boolean&gt;
 

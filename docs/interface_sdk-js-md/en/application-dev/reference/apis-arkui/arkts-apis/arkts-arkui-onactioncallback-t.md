@@ -4,7 +4,7 @@
 declare type OnActionCallback = () => void
 ```
 
-点击事件的回调函数类型。
+Callback function when click on this menu item.
 
 **Since:** 26.0.0
 

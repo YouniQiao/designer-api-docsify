@@ -4,7 +4,7 @@
 type ControlPanelActionEventCallback = (event: PiPActionEventType, status?: int) => void
 ```
 
-描述画中画控制面板控件动作事件回调。
+Describes the action event callback of the PiP controller.
 
 **Since:** 12
 
@@ -20,6 +20,6 @@ type ControlPanelActionEventCallback = (event: PiPActionEventType, status?: int)
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| event | [PiPActionEventType](arkts-arkui-pipwindow-pipactioneventtype-t.md) | Yes | 回调画中画控制面板控件动作事件类型。<br/>应用依据控件动作事件做相应处理，如触发'playbackStateChanged'事件时，需要开始或停止视频 。 |
-| status | ArkTS-Dyn: number  <br>ArkTS-Sta：int | No | 表示可切换状态的控件当前的状态，如具备打开和关闭两种状态的麦克风控件组、摄像头控件组和静音控件组，打开为1，关闭为0。其余控件该参数返回默认值-1。 取值限定为整数 |
+| event | [PiPActionEventType](arkts-arkui-pipwindow-pipactioneventtype-t.md) | Yes | Type of the action event of the PiP controller. <br>The application performs processing based on the action event. For example, if the **'playbackStateChanged'** event is triggered, the application starts or stops the video. |
+| status | ArkTS-Dyn: number  <br>ArkTS-Sta：int | No | Status of a component that can be switched. For example, for a microphone on/off component group, a camera on/off component group, and a mute/unmute component group, the value **1** means that the component is enabled and **0** means that the component is disabled. For other components, the default value **-1** is used. The value should be an integer. |
 

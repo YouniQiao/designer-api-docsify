@@ -46,8 +46,8 @@ Closes a WebSocket connection.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. |
-| 201 | Permission denied. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
 
 ## Examples
 
@@ -96,8 +96,8 @@ Closes a WebSocket connection.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. |
-| 201 | Permission denied. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
 
 ## Examples
 
@@ -157,8 +157,8 @@ Closes a WebSocket connection.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. |
-| 201 | Permission denied. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
 
 ## Examples
 
@@ -210,13 +210,13 @@ Initiates a WebSocket request to establish a WebSocket connection to a given URL
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 2302003 | Websocket connection already exists. |
-| 401 | Parameter error. |
-| 2302002 | Websocket certificate file does not exist. |
-| 2302001 | Websocket url error. |
-| 2302999 | Internal error. |
-| 2302998 | It is not allowed to access this domain. |
-| 201 | Permission denied. |
+| [2302003](../errorcode-net-webSocket.md#2302003-websocket-connection-already-exists) | Websocket connection already exists. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. |
+| [2302002](../errorcode-net-webSocket.md#2302002-websocket-certificate-does-not-exist) | Websocket certificate file does not exist. |
+| [2302001](../errorcode-net-webSocket.md#2302001-websocket-url-error) | Websocket url error. |
+| [2302999](../errorcode-net-webSocket.md#2302999-internal-error) | Internal error. |
+| [2302998](../errorcode-net-webSocket.md#2302998-domain-access-denied) | It is not allowed to access this domain. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
 
 ## Examples
 
@@ -267,13 +267,13 @@ Initiates a WebSocket request to establish a WebSocket connection to a given URL
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 2302003 | Websocket connection already exists. |
-| 401 | Parameter error. |
-| 2302002 | Websocket certificate file does not exist. |
-| 2302001 | Websocket url error. |
-| 2302999 | Internal error. |
-| 2302998 | It is not allowed to access this domain. |
-| 201 | Permission denied. |
+| [2302003](../errorcode-net-webSocket.md#2302003-websocket-connection-already-exists) | Websocket connection already exists. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. |
+| [2302002](../errorcode-net-webSocket.md#2302002-websocket-certificate-does-not-exist) | Websocket certificate file does not exist. |
+| [2302001](../errorcode-net-webSocket.md#2302001-websocket-url-error) | Websocket url error. |
+| [2302999](../errorcode-net-webSocket.md#2302999-internal-error) | Internal error. |
+| [2302998](../errorcode-net-webSocket.md#2302998-domain-access-denied) | It is not allowed to access this domain. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
 
 ## Examples
 
@@ -353,13 +353,13 @@ Initiates a WebSocket request to establish a WebSocket connection to a given URL
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 2302003 | Websocket connection already exists. |
-| 401 | Parameter error. |
-| 2302002 | Websocket certificate file does not exist. |
-| 2302001 | Websocket url error. |
-| 2302999 | Internal error. |
-| 2302998 | It is not allowed to access this domain. |
-| 201 | Permission denied. |
+| [2302003](../errorcode-net-webSocket.md#2302003-websocket-connection-already-exists) | Websocket connection already exists. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. |
+| [2302002](../errorcode-net-webSocket.md#2302002-websocket-certificate-does-not-exist) | Websocket certificate file does not exist. |
+| [2302001](../errorcode-net-webSocket.md#2302001-websocket-url-error) | Websocket url error. |
+| [2302999](../errorcode-net-webSocket.md#2302999-internal-error) | Internal error. |
+| [2302998](../errorcode-net-webSocket.md#2302998-domain-access-denied) | It is not allowed to access this domain. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
 
 ## Examples
 
@@ -444,25 +444,6 @@ Cancels listening for the open info events of a WebSocket connection.
 | --- | --- | --- | --- |
 | type | 'openInfo' | Yes | event indicating that the open info of a WebSocket connection is returned. |
 | callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;WebSocketOpenInfo&gt; | No | the callback used to return the result. |
-
-## Examples
-
-```TypeScript
-import { webSocket } from '@kit.NetworkKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let ws = webSocket.createWebSocket();
-let callback1 = (err: BusinessError, value: webSocket.WebSocketOpenInfo) => {
-  if (value?.protocol != undefined) {
-    console.info(`on openInfo exist protocol: status: ${value.status}, message: ${value.message}, protocol: ${value.protocol}`);
-  } else {
-    console.info(`on openInfo , status: ${value.status}, message: ${value.message}, protocol: ${value.protocol}`);
-  }
-}
-ws.on('openInfo', callback1);
-// You can pass the callback used in on to unsubscribe from a specific subscription, or omit the callback to clear all subscriptions.
-ws.off('openInfo', callback1);
-```
 
 ## off('message')
 
@@ -856,22 +837,6 @@ Enables listening for the open info events of a WebSocket connection.
 | type | 'openInfo' | Yes | event indicating that the open info of a WebSocket connection is returned. |
 | callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;WebSocketOpenInfo&gt; | Yes | the callback used to return the result. |
 
-## Examples
-
-```TypeScript
-import { webSocket } from '@kit.NetworkKit';
-import { BusinessError, Callback } from '@kit.BasicServicesKit';
-
-let ws = webSocket.createWebSocket();
-ws.on('openInfo', (err: BusinessError, value: webSocket.WebSocketOpenInfo) => {
-  if (value?.protocol != undefined) {
-    console.info(`on openInfo exist protocol: status: ${value.status}, message: ${value.message}, protocol: ${value.protocol}`);
-  } else {
-    console.info(`on openInfo , status: ${value.status}, message: ${value.message}, protocol: ${value.protocol}`);
-  }
-});
-```
-
 ## on('message')
 
 ```TypeScript
@@ -1242,8 +1207,8 @@ Sends data through a WebSocket connection.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. |
-| 201 | Permission denied. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
 
 ## Examples
 
@@ -1312,8 +1277,8 @@ Sends data through a WebSocket connection.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. |
-| 201 | Permission denied. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
 
 ## Examples
 

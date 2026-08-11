@@ -1,11 +1,5 @@
 # injectKeyEvent
 
-## 导入模块
-
-```TypeScript
-import { inputEventClient } from 'kits/@kit.InputKit';
-```
-
 ## injectKeyEvent
 
 ```TypeScript
@@ -35,11 +29,13 @@ function injectKeyEvent(keyEvent: KeyEventData): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; 3. Parameter verification failed. |
-| 201 | Permission denied.<br>**适用版本：** 12+ |
-| 202 | SystemAPI permission error. |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; 3. Parameter verification failed. |
+| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied.<br>**适用版本：** 12+ |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | SystemAPI permission error. |
 
 ## 示例
+
+ArkTS-Dyn示例：
 
 ```TypeScript
 import { inputEventClient } from '@kit.InputKit';
@@ -82,6 +78,41 @@ struct Index {
             let eventUp: EventUp = { keyEvent: backKeyUp }
             // 注入按键事件
             inputEventClient.injectKeyEvent(eventUp);
+          } catch (error) {
+            console.error(`Failed to inject KeyEvent, Code: ${(error as BusinessError).code}, message: ${(error as BusinessError).message}.`);
+          }
+        })
+    }
+  }
+}
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+import { Entry, Text, RelativeContainer, Component } from '@kit.ArkUI';
+import { BusinessError } from '@kit.BasicServicesKit';
+import { inputEventClient, KeyCode } from '@kit.InputKit';
+
+@Entry
+@Component
+struct Index {
+  build() {
+    RelativeContainer() {
+      Text()
+        .onClick(() => {
+          try {
+            let backKeyUp: inputEventClient.KeyEvent = {
+              isPressed: false,
+              keyCode: KeyCode.KEYCODE_BACK,
+              keyDownDuration: 0,
+              isIntercepted: false
+            };
+            let keyEventInfo: inputEventClient.KeyEventData = {
+              keyEvent: backKeyUp
+            }
+            // 注入按键事件
+            inputEventClient.injectKeyEvent(keyEventInfo);
           } catch (error) {
             console.error(`Failed to inject KeyEvent, Code: ${(error as BusinessError).code}, message: ${(error as BusinessError).message}.`);
           }

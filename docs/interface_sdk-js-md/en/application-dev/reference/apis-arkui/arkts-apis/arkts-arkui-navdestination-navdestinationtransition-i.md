@@ -1,6 +1,6 @@
 # NavDestinationTransition
 
-NavDestination自定义动画接口。
+NavDestination animation protocol.
 
 **Since:** 23
 
@@ -16,7 +16,7 @@ NavDestination自定义动画接口。
 curve?: Curve
 ```
 
-动画的曲线类型，默认值为[Curve.EaseInOut](arkts-arkui-curve-t.md)。
+Define the curve of the transition animation.
 
 **Type:** [Curve](arkts-arkui-curve-e.md)
 
@@ -36,7 +36,7 @@ curve?: Curve
 delay?: int
 ```
 
-转场动画的延迟。取值范围为全体整数，单位：ms。 默认值： 0（毫秒）。
+Define the delay of the transition animation.The value range is all integers.
 
 **Type:** int
 
@@ -56,7 +56,7 @@ delay?: int
 duration?: int
 ```
 
-转场动画的持续时间。取值范围为全体整数，单位：ms。 默认值： 1000（毫秒）。
+Define the limit duration of the transition animation.The value range is all integers.
 
 **Type:** int
 
@@ -76,8 +76,7 @@ duration?: int
 event: VoidCallback
 ```
 
-指定转场动效的闭包函数，系统会根据闭包中对组件UI状态的修改，生成对应的过渡动画。参见  
-[animateTo](../../../reference/apis-arkui/arkts-apis-uicontext-uicontext.md#animateto)中的event。
+Configure the custom transition event.
 
 **Type:** [VoidCallback](arkts-arkui-voidcallback-t.md)
 
@@ -97,7 +96,7 @@ event: VoidCallback
 onTransitionEnd?: VoidCallback
 ```
 
-转场动画结束时的回调函数。
+This method is called after the transition ends to notify whether the transition was successful.
 
 **Type:** [VoidCallback](arkts-arkui-voidcallback-t.md)
 

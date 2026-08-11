@@ -1,6 +1,7 @@
 # Dirent
 
-在调用Dirent的方法前，需要先通过[dir.read()](arkts-corefile-fileio-read-f.md#read)方法（同步或异步）来构建一个Dirent实例。
+Provides information about files and directories. Before calling an API of the **Dirent** class, use  
+[dir.read()](arkts-corefile-fileio-read-f.md#read) synchronously or asynchronously to create a **Dirent** instance.
 
 **Since:** 6
 
@@ -20,7 +21,7 @@
 isBlockDevice(): boolean
 ```
 
-用于判断当前目录项是否是块特殊文件。一个块特殊文件只能以块为粒度进行访问，且访问的时候带缓存。
+Checks whether this directory entry is a block special file. A block special file supports access by block only,and it is cached when accessed.
 
 **Since:** 6
 
@@ -38,7 +39,7 @@ isBlockDevice(): boolean
 
 | Type | Description |
 | --- | --- |
-| boolean | 表示当前目录项是否是块特殊设备。true为是，false为不是。 |
+| boolean | Returns **true** if it is a block special file; returns **false** otherwise. |
 
 ## Examples
 
@@ -53,7 +54,7 @@ let isBLockDevice = dir.readSync().isBlockDevice();
 isCharacterDevice(): boolean
 ```
 
-用于判断当前目录项是否是字符特殊设备。一个字符特殊设备可进行随机访问，且访问的时候不带缓存。
+Checks whether this directory entry is a character special file. A character special file supports random access,and it is not cached when accessed.
 
 **Since:** 6
 
@@ -71,7 +72,7 @@ isCharacterDevice(): boolean
 
 | Type | Description |
 | --- | --- |
-| boolean | 表示当前目录项是否是字符特殊设备。true为是，false为不是。 |
+| boolean | Returns **true** if it is a character special file; returns **false** otherwise. |
 
 ## Examples
 
@@ -86,7 +87,7 @@ let isCharacterDevice = dir.readSync().isCharacterDevice();
 isDirectory(): boolean
 ```
 
-用于判断当前目录项是否是目录。
+Checks whether this directory entry is a directory.
 
 **Since:** 6
 
@@ -104,7 +105,7 @@ isDirectory(): boolean
 
 | Type | Description |
 | --- | --- |
-| boolean | 表示当前目录项是否是目录。true为是，false为不是。 |
+| boolean | Returns **true** if it is a directory; returns **false** otherwise. |
 
 ## Examples
 
@@ -119,7 +120,7 @@ let isDirectory = dir.readSync().isDirectory();
 isFIFO(): boolean
 ```
 
-用于判断当前目录项是否是命名管道（有时也称为FIFO）。命名管道通常用于进程间通信。
+Checks whether this directory entry is a named pipe (also called FIFO). Named pipes are used for inter-process communication.
 
 **Since:** 6
 
@@ -137,7 +138,7 @@ isFIFO(): boolean
 
 | Type | Description |
 | --- | --- |
-| boolean | 表示当前目录项是否是FIFO。true为是，false为不是。 |
+| boolean | Returns **true** if it is a named pipe; returns **false** otherwise. |
 
 ## Examples
 
@@ -152,7 +153,7 @@ let isFIFO = dir.readSync().isFIFO();
 isFile(): boolean
 ```
 
-用于判断当前目录项是否是普通文件。
+Checks whether this directory entry is a regular file.
 
 **Since:** 6
 
@@ -170,7 +171,7 @@ isFile(): boolean
 
 | Type | Description |
 | --- | --- |
-| boolean | 表示当前目录项是否是普通文件。true为是，false为不是。 |
+| boolean | Returns **true** if it is a regular file; returns **false** otherwise. |
 
 ## Examples
 
@@ -185,7 +186,7 @@ let isFile = dir.readSync().isFile();
 isSocket(): boolean
 ```
 
-用于判断当前目录项是否是套接字。
+Checks whether this directory entry is a socket.
 
 **Since:** 6
 
@@ -203,7 +204,7 @@ isSocket(): boolean
 
 | Type | Description |
 | --- | --- |
-| boolean | 表示当前目录项是否是套接字。true为是，false为不是。 |
+| boolean | Returns **true** if it is a socket; returns **false** otherwise. |
 
 ## Examples
 
@@ -218,7 +219,7 @@ let isSocket = dir.readSync().isSocket();
 isSymbolicLink(): boolean
 ```
 
-用于判断当前目录项是否是符号链接。
+Checks whether this directory entry is a symbolic link.
 
 **Since:** 6
 
@@ -236,7 +237,7 @@ isSymbolicLink(): boolean
 
 | Type | Description |
 | --- | --- |
-| boolean | 表示当前目录项是否是符号链接。true为是，false为不是。 |
+| boolean | Returns **true** if it is a symbolic link; returns **false** otherwise. |
 
 ## Examples
 
@@ -251,7 +252,7 @@ let isSymbolicLink = dir.readSync().isSymbolicLink();
 readonly name: string
 ```
 
-目录项的名称。
+Directory entry name.
 
 **Type:** string
 

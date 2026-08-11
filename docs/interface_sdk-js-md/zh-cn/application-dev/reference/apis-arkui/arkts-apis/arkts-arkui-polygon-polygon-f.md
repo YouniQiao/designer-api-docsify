@@ -24,7 +24,7 @@ export declare function Polygon(
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| options | [PolygonOptions](../arkts-components/arkts-arkui-polygonoptions-i.md) | 否 | Polygon绘制区域。&lt;br/&gt;异常值undefined和null按照无效值处理，本次设置不生效。 |
+| options | [PolygonOptions](arkts-arkui-polygon-polygonoptions-i.md) | 否 | Polygon绘制区域。&lt;br/&gt;异常值undefined和null按照无效值处理，本次设置不生效。 |
 
 **返回值：**
 

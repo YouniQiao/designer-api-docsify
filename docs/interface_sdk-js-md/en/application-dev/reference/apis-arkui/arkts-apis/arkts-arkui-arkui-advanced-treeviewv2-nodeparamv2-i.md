@@ -1,6 +1,6 @@
 # NodeParamV2
 
-节点参数接口，用于配置树节点的属性。
+Declare NodeParamV2
 
 **Since:** 26.0.0
 
@@ -22,9 +22,7 @@ import { TreeListenerManagerV2, NodeParamV2, CallbackParamV2, TreeControllerV2, 
 container?: OnContainerCallback
 ```
 
-绑定在节点上的右键子组件，子组件由@Builder修饰。
-
-默认值：() => void
+set subcomponent binded on tree item.
 
 **Since:** 26.0.0
 
@@ -42,13 +40,7 @@ container?: OnContainerCallback
 currentNodeId?: int
 ```
 
-当前子节点Id。
-
-取值范围：大于等于-1。
-
-不能为根节点id，不能为null，否则会抛出异常。且不能设置两个相同的currentNodeId。
-
-默认值：-1
+Set currentNodeId.
 
 **Type:** int
 
@@ -68,9 +60,7 @@ currentNodeId?: int
 editIcon?: ResourceStr
 ```
 
-编辑图标。
-
-默认值：空字符串。
+Set edit icon resource.
 
 **Type:** [ResourceStr](arkts-arkui-resourcestr-t.md)
 
@@ -90,9 +80,7 @@ editIcon?: ResourceStr
 icon?: ResourceStr
 ```
 
-图标。
-
-默认值：空字符串。
+Set the icon resource.
 
 **Type:** [ResourceStr](arkts-arkui-resourcestr-t.md)
 
@@ -112,11 +100,7 @@ icon?: ResourceStr
 isFolder?: boolean
 ```
 
-是否是目录。
-
-默认值：false
-
-true：是目录，false：不是目录。
+Set catalog whether is floder.
 
 **Type:** boolean
 
@@ -136,11 +120,7 @@ true：是目录，false：不是目录。
 parentNodeId?: int
 ```
 
-父节点Id。
-
-取值范围：大于等于-1。
-
-默认值：-1，根节点id值为-1。若设置数值小于-1，该节点无效，不显示在树视图上。
+Set the parentNodeId.
 
 **Type:** int
 
@@ -160,9 +140,7 @@ parentNodeId?: int
 primaryTitle?: ResourceStr
 ```
 
-主标题。
-
-默认值：空字符串。
+Set primary title content.
 
 **Type:** [ResourceStr](arkts-arkui-resourcestr-t.md)
 
@@ -182,9 +160,7 @@ primaryTitle?: ResourceStr
 secondaryTitle?: ResourceStr
 ```
 
-副标题。
-
-默认值：空字符串。
+Set secondary title content.
 
 **Type:** [ResourceStr](arkts-arkui-resourcestr-t.md)
 
@@ -204,9 +180,7 @@ secondaryTitle?: ResourceStr
 selectedIcon?: ResourceStr
 ```
 
-选中图标。
-
-默认值：空字符串。
+Set selected icon resource.
 
 **Type:** [ResourceStr](arkts-arkui-resourcestr-t.md)
 
@@ -226,9 +200,7 @@ selectedIcon?: ResourceStr
 symbolEditIconStyle?: SymbolGlyphModifier
 ```
 
-Symbol编辑图标样式，优先级大于editIcon。
-
-默认值：undefined，编辑时显示与非编辑态一样
+Set edit symbol resource.
 
 **Type:** [SymbolGlyphModifier](../arkts-components/arkts-arkui-symbolglyphmodifier-t.md)
 
@@ -248,9 +220,7 @@ Symbol编辑图标样式，优先级大于editIcon。
 symbolIconStyle?: SymbolGlyphModifier
 ```
 
-Symbol图标样式，显示优先级大于icon，同时设置symbolIconStyle和icon，只显示Symbol图标。
-
-默认值：undefined，表示不显示Symbol图标。
+Set the symbol resource.
 
 **Type:** [SymbolGlyphModifier](../arkts-components/arkts-arkui-symbolglyphmodifier-t.md)
 
@@ -270,9 +240,7 @@ Symbol图标样式，显示优先级大于icon，同时设置symbolIconStyle和i
 symbolSelectedIconStyle?: SymbolGlyphModifier
 ```
 
-Symbol选中图标样式，优先级大于selectedIcon。
-
-默认值：undefined，选中时显示与未选中一样
+Set selected symbol resource.
 
 **Type:** [SymbolGlyphModifier](../arkts-components/arkts-arkui-symbolglyphmodifier-t.md)
 

@@ -12,13 +12,7 @@ import { hidebug } from 'kits/@kit.PerformanceAnalysisKit';
 function setJsRawHeapTrimLevel(level: JsRawHeapTrimLevel): void
 ```
 
-���õ�ǰ����ת�������ԭʼ�ѿ��յĲü�����ʹ�øýӿڲ��������TRIM_LEVEL_2��������Ч���ٶѿ��յ��ļ���С��
-
-> **ע��**
-> 
-> Ĭ�ϲü�������TRIM_LEVEL_1�����������TRIM_LEVEL_2�ü�����ʹ��API version 20֮���rawheap-translator���߲��ܽ�.rawheap�ļ�ת��Ϊ.heapsnapshot�ļ���������ܵ���ת��ʧ�ܡ�
-> 
-> �ýӿ�Ӱ��dumpJsRawHeapData�Ľ����
+Sets the raw heap snapshot trimming level for the current process.
 
 **Since:** 20
 
@@ -32,7 +26,7 @@ function setJsRawHeapTrimLevel(level: JsRawHeapTrimLevel): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| level | [JsRawHeapTrimLevel](arkts-performanceanalysis-hidebug-jsrawheaptrimlevel-e.md) | Yes | ת���ѿ��յĲü�����Ĭ��ΪTRIM_LEVEL_1�� |
+| level | [JsRawHeapTrimLevel](arkts-performanceanalysis-hidebug-jsrawheaptrimlevel-e.md) | Yes | The trimming level of raw heap snapshot. |
 
 ## Examples
 

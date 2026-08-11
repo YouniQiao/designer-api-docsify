@@ -18,7 +18,7 @@ contentModifier: ContentModifier<T>
 
 用于将用户需要的组件信息发送到自定义内容区。
 
-**类型：** [ContentModifier](arkts-arkui-contentmodifier-i.md)&lt;T&gt;
+**类型：** [ContentModifier](../arkts-apis/arkts-arkui-common-contentmodifier-i.md)&lt;T&gt;
 
 **起始版本：** 12
 

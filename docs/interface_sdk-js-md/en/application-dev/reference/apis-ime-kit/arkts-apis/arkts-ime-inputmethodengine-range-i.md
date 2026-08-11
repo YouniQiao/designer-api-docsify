@@ -1,6 +1,6 @@
 # Range
 
-选中的文本范围。
+Describes the range of the selected text.
 
 **Since:** 10
 
@@ -22,7 +22,7 @@ import { inputMethodEngine } from 'kits/@kit.IMEKit';
 end: int
 ```
 
-选中文本的末字符在编辑框的索引值。
+Index of the last selected character in the text box.
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
@@ -40,7 +40,7 @@ end: int
 start: int
 ```
 
-选中文本的首字符在编辑框的索引值。
+Index of the first selected character in the text box.
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 

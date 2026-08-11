@@ -1,6 +1,6 @@
 # ModalTransition
 
-全屏模态转场方式枚举类型，用于设置全屏模态转场类型。
+Defines modal transition type.
 
 **Since:** 23
 
@@ -16,7 +16,7 @@
 DEFAULT = 0
 ```
 
-全屏模态上下切换动画。
+Slide-up and slide-down animation for the modal.
 
 **Since:** 23
 
@@ -31,10 +31,10 @@ DEFAULT = 0
 ## NONE
 
 ```TypeScript
-NONE
+NONE = 1
 ```
 
-全屏模态无转场动画。
+No transition animation for the modal.
 
 **Since:** 23
 
@@ -42,17 +42,17 @@ NONE
 
 **Model restriction:** This API can be used only in the stage model.
 
-<!--Device-ModalTransition-NONE--><!--Device-ModalTransition-NONE-End-->
+<!--Device-ModalTransition-NONE = 1--><!--Device-ModalTransition-NONE = 1-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## ALPHA
 
 ```TypeScript
-ALPHA
+ALPHA = 2
 ```
 
-全屏模态透明度渐变动画。
+Opacity gradient animation for the modal.
 
 **Since:** 23
 
@@ -60,7 +60,7 @@ ALPHA
 
 **Model restriction:** This API can be used only in the stage model.
 
-<!--Device-ModalTransition-ALPHA--><!--Device-ModalTransition-ALPHA-End-->
+<!--Device-ModalTransition-ALPHA = 2--><!--Device-ModalTransition-ALPHA = 2-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 

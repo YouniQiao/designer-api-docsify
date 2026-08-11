@@ -9,7 +9,7 @@ export declare function Gauge(
 ): GaugeAttribute
 ```
 
-创建数据量规图表组件。
+Defines the Gauge component.
 
 **Since:** 23
 
@@ -25,7 +25,7 @@ export declare function Gauge(
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| options | [GaugeOptions](arkts-arkui-gauge-gaugeoptions-i.md) | Yes | 数据量规图表组件参数。 |
+| options | [GaugeOptions](arkts-arkui-gauge-gaugeoptions-i.md) | Yes | gauge options. |
 | content_ | [CustomBuilder](../arkts-components/arkts-arkui-custombuilder-t.md) | No |  |
 
 **Return value:**
@@ -44,11 +44,11 @@ export declare function Gauge(
 ): GaugeAttribute
 ```
 
-定义Gauge组件。
+Defines Gauge Component.
 
-**Since:** 26.0.0
+**Since:** 26.1.0
 
-**ArkTS mode:** ArkTS-Sta only, since version 26.0.0.
+**ArkTS mode:** ArkTS-Sta only, since version 26.1.0.
 
 **Decorator:** @Builder
 
@@ -62,8 +62,8 @@ export declare function Gauge(
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| style | [CustomBuilderT](../arkts-components/arkts-arkui-custombuildert-t.md)&lt;GaugeAttribute&gt; | Yes | Gauge属性的实例。 |
-| content_ | [CustomBuilder](../arkts-components/arkts-arkui-custombuilder-t.md) | No | 子组件。 |
+| style | [CustomBuilderT](../arkts-components/arkts-arkui-custombuildert-t.md)&lt;GaugeAttribute&gt; | Yes | Gauge attribute instance |
+| content_ | [CustomBuilder](../arkts-components/arkts-arkui-custombuilder-t.md) | No | Child component |
 
 **Return value:**
 

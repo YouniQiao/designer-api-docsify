@@ -4,7 +4,7 @@
 declare type ShouldRecognizerParallelWithCallback = (current: GestureRecognizer, others: Array<GestureRecognizer>) => GestureRecognizer
 ```
 
-手势与响应链上其他组件的手势设置并行关系的回调事件类型。
+Represents the callback used to set the parallel relationship between gestures of the current component and gestures of other components in the response chain.
 
 **Since:** 26.0.0
 
@@ -22,12 +22,12 @@ declare type ShouldRecognizerParallelWithCallback = (current: GestureRecognizer,
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| current | [GestureRecognizer](../arkts-apis/arkts-arkui-gesturerecognizer-c.md) | Yes | 当前组件的手势识别器，当前仅支持[GestureType](../arkts-apis/arkts-arkui-gesturecontrol-gesturetype-e.md/arkts-arkui-gesturecontrol-gesturetype-e.md).PAN_GESTURE类型的手势识别器。 |
-| others | Array&lt;[GestureRecognizer](../arkts-apis/arkts-arkui-gesturerecognizer-c.md)&gt; | Yes | 响应链上优先级高于当前组件的其他组件所持有的同类型[GestureType](../arkts-apis/arkts-arkui-gesturecontrol-gesturetype-e.md/arkts-arkui-gesturecontrol-gesturetype-e.md)的手势识别器。 |
+| current | [GestureRecognizer](../arkts-apis/arkts-arkui-gesturerecognizer-c.md) | Yes | Gesture recognizer of the current component. Currently only a gesture recognizer of the [GestureType](../../apis-accessibility-kit/arkts-apis/arkts-accessibility-gesturetype-t.md/arkts-accessibility-gesturetype-t.md).PAN_GESTURE type is supported. |
+| others | Array&lt;[GestureRecognizer](../arkts-apis/arkts-arkui-gesturerecognizer-c.md)&gt; | Yes | Gesture recognizers of the same [GestureType](../arkts-apis/arkts-arkui-gesturecontrol-gesturetype-e.md/arkts-arkui-gesturecontrol-gesturetype-e.md) from other components with higher priority in the response chain. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [GestureRecognizer](../arkts-apis/arkts-arkui-gesturerecognizer-c.md) | 与current识别器绑定并行关系的某个手势识别器。 |
+| [GestureRecognizer](../arkts-apis/arkts-arkui-gesturerecognizer-c.md) | Gesture recognizer that is bound in parallel with the current recognizer. |
 

@@ -1,6 +1,6 @@
 # AppearSymbolEffect
 
-AppearSymbolEffect继承自父类SymbolEffect。
+Defines AppearSymbolEffect class, which inherits from **SymbolEffect**.
 
 **Inheritance/Implementation:** AppearSymbolEffect extends [SymbolEffect](arkts-arkui-symboleffect-c.md)
 
@@ -18,7 +18,7 @@ AppearSymbolEffect继承自父类SymbolEffect。
 constructor(scope?: EffectScope)
 ```
 
-AppearSymbolEffect的构造函数，出现动效。
+A constructor used to create an **AppearSymbolEffect** instance, which comes with an appear animation effect.
 
 **Since:** 12
 
@@ -38,7 +38,7 @@ AppearSymbolEffect的构造函数，出现动效。
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| scope | [EffectScope](arkts-arkui-effectscope-e.md) | No | 动效范围。具体枚举值及说明请参考EffectScope枚举说明。 &lt;br&gt;默认值：EffectScope.LAYER |
+| scope | [EffectScope](arkts-arkui-effectscope-e.md) | No | Effect scope.&lt;br&gt;Default value: **EffectScope.LAYER |
 
 ## scope
 
@@ -46,9 +46,9 @@ AppearSymbolEffect的构造函数，出现动效。
 scope?: EffectScope
 ```
 
-动效范围。具体枚举值及说明请参考EffectScope枚举说明。
+Effect scope.
 
-默认值：EffectScope.LAYER
+Default value: **EffectScope.LAYER**
 
 **Type:** [EffectScope](arkts-arkui-effectscope-e.md)
 

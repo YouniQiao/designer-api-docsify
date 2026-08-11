@@ -197,7 +197,7 @@ voiceContentOptions?: VoiceContentOptions
 
 通知语音播报配置项。
 
-**类型：** [VoiceContentOptions](arkts-notification-notificationsubscribeinfo-voicecontentoptions-i-sys.md)
+**类型：** [VoiceContentOptions](arkts-notification-notificationsubscribe-voicecontentoptions-t-sys.md)
 
 **起始版本：** 26.0.0
 

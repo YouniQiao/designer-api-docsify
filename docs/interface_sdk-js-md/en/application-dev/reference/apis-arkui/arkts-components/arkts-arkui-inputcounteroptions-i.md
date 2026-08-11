@@ -1,10 +1,10 @@
 # InputCounterOptions
 
-Define the ratio of characters entered by the the percentage of InputCounterOptions.
+Provides configuration options for the character counter.
 
-**Since:** 12
+**Since:** 11
 
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
+**ArkTS mode:** ArkTS-Dyn only, since version 11.
 
 <!--Device-unnamed-declare interface InputCounterOptions--><!--Device-unnamed-declare interface InputCounterOptions-End-->
 
@@ -16,7 +16,7 @@ Define the ratio of characters entered by the the percentage of InputCounterOpti
 counterTextColor?: ColorMetrics
 ```
 
-It is the color of counter when textField hasn't wanted to exceed the maximum character count.
+Text color of the character counter. When the input character count exceeds the maximum limit multiplied by the specified percentage, the counter displays the current count text using this color. If **counterTextColor** is not set, the default gray color is used.
 
 **Type:** [ColorMetrics](../arkts-apis/arkts-arkui-colormetrics-t.md)
 
@@ -38,7 +38,13 @@ It is the color of counter when textField hasn't wanted to exceed the maximum ch
 counterTextOverflowColor?: ColorMetrics
 ```
 
-It is the color of counter when textField wants to exceed the maximum character count.
+Text color of the character counter when the maximum limit is exceeded. When the user input exceeds the maximum character count, both the counter text and border switch to this color to indicate overflow. If  
+**counterTextOverflowColor** is not set, the default red color is used.
+
+**NOTE：**
+
+The border color is changed only when the **highlightBorder** attribute of  
+[InputCounterOptions](arkts-arkui-inputcounteroptions-i.md) is set.
 
 **Type:** [ColorMetrics](../arkts-apis/arkts-arkui-colormetrics-t.md)
 
@@ -60,17 +66,15 @@ It is the color of counter when textField wants to exceed the maximum character 
 highlightBorder?: boolean
 ```
 
-If the current input character count reaches the maximum character count and users want to exceed the normal input, the border will turn red. If this parameter is true, the red border displayed.
-
-&lt;p&gt;&lt;strong&gt;NOTE&lt;/strong&gt;:&lt;br&gt;Whether to highlight the text box border and character counter subscript in red.&lt;br&gt;If options is not set, the text box border and character counter subscript turn red&lt;br&gt;when the number of characters entered reaches the limit.&lt;br&gt;If the character counter is displayed and thresholdPercentage is set to a valid value,the text box border and character counter subscript turn red when the number of entered characters exceeds the limit.&lt;br&gt;The value true (default) means to highlight the text box border and character counter subscript in red.&lt;/p&gt;
+Whether to highlight the text box border and character counter subscript in red. If **InputCounterOptions** is not set, the text box border and character counter subscript turn red when the number of characters entered reaches the  limit. If the character counter is displayed and **thresholdPercentage** is set to a valid value, the text box border and character counter subscript turn red when the number of entered characters exceeds the limit. If this parameter is **true**, the red border is displayed; if **false**, it is not displayed.
 
 **Type:** boolean
 
 **Default:** true
 
-**Since:** 12
+**Since:** 11
 
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
+**ArkTS mode:** ArkTS-Dyn only, since version 11.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -86,15 +90,13 @@ If the current input character count reaches the maximum character count and use
 thresholdPercentage?: number
 ```
 
-It is the numerator bit of the percentage and used as a threshold. If the number of characters input reaches the maximum number of characters multiplied by this threshold, the counter is displayed.
-
-&lt;p&gt;&lt;strong&gt;NOTE&lt;/strong&gt;:&lt;br&gt;Threshold percentage for displaying the character counter.&lt;br&gt;The character counter is displayed when the number of characters that have been entered is greater than the maximum number of characters multiplied by the threshold percentage value.&lt;br&gt;When displayed, the character counter is in the following format:&lt;br&gt;Number of characters that have been entered/Maximum number of characters allowed.&lt;br&gt;It is visible when the number of characters entered is greater than the character limit multiplied by the threshold percentage value.&lt;br&gt;Value range: [1, 100]&lt;br&gt;If the value is not an integer, it is rounded down to the nearest integer.&lt;br&gt;If the value exceeds the valid value range, the character counter is not displayed.&lt;br&gt;If the value is &lt;em&gt;undefined&lt;/em&gt;, the character counter is displayed, but this parameter has no effect.&lt;/p&gt;
+Threshold percentage for displaying the character counter. The character counter is displayed when the number of characters that have been entered is greater than the maximum number of characters multiplied by the threshold percentage value. When displayed, the character counter is in the following format: Number of characters that have been entered/Maximum number of characters allowed. It is visible when the number of characters entered is greater than the character limit multiplied by the threshold percentage value. Value range: [1, 100]. If the value is not an integer, it is rounded down to the nearest integer. If the value exceeds the valid value range, the character counter is not displayed. If the value is **undefined**, the character counter is displayed, but this parameter has no effect.
 
 **Type:** number
 
-**Since:** 12
+**Since:** 11
 
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
+**ArkTS mode:** ArkTS-Dyn only, since version 11.
 
 **Model restriction:** This API can be used only in the stage model.
 

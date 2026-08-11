@@ -1,10 +1,6 @@
 # AVCastController
 
-在投播建立后，调用[avSession.getAVCastController](arkts-avsession-avsession-getavcastcontroller-f-sys.md#getavcastcontroller)后，返回会话控制器实例。控制器可查看会话ID，并可完成对会话发送命令及事件，获取会话元数据，播放状态信息等操作。
-
-> **说明：**
-> 
-> - 本Interface首批接口从API version 10开始支持。
+AVCastController definition used to implement a remote control when a cast is connected
 
 **Since:** 10
 
@@ -26,7 +22,7 @@ import { avSession } from 'kits/@kit.AVSessionKit';
 getAVPlaybackState(callback: AsyncCallback<AVPlaybackState>): void
 ```
 
-获取当前的远端播放状态。结果通过callback异步回调方式返回。
+Get the playback status of the current player
 
 **Since:** 10
 
@@ -40,13 +36,13 @@ getAVPlaybackState(callback: AsyncCallback<AVPlaybackState>): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;AVPlaybackState&gt; | Yes | 回调函数，返回远端播放状态。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;AVPlaybackState&gt; | Yes | The triggered asyncCallback when (getAVPlaybackState). |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 6600101 | Session service exception |
+| [6600101](../errorcode-avsession.md#6600101-session-service-exception) | Session service exception |
 
 ## getAVPlaybackState
 
@@ -54,7 +50,7 @@ getAVPlaybackState(callback: AsyncCallback<AVPlaybackState>): void
 getAVPlaybackState(): Promise<AVPlaybackState>
 ```
 
-获取当前的远端播放状态。结果通过Promise异步回调方式返回。
+Get the playback status of the current player
 
 **Since:** 10
 
@@ -70,13 +66,13 @@ getAVPlaybackState(): Promise<AVPlaybackState>
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;AVPlaybackState&gt; | Promise对象。返回远端播放状态。 |
+| Promise&lt;AVPlaybackState&gt; | (AVPlaybackState) returned through promise |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 6600101 | Session service exception |
+| [6600101](../errorcode-avsession.md#6600101-session-service-exception) | Session service exception |
 
 ## getCurrentItem
 
@@ -84,7 +80,7 @@ getAVPlaybackState(): Promise<AVPlaybackState>
 getCurrentItem(callback: AsyncCallback<AVQueueItem>): void
 ```
 
-获取当前投播的资源信息。结果通过callback异步回调方式返回。
+Get the current playing item
 
 **Since:** 10
 
@@ -98,13 +94,13 @@ getCurrentItem(callback: AsyncCallback<AVQueueItem>): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;AVQueueItem&gt; | Yes | 回调函数。当命令发送成功，err为undefined，否则返回错误对象。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;AVQueueItem&gt; | Yes | The triggered asyncCallback. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 6600101 | Session service exception |
+| [6600101](../errorcode-avsession.md#6600101-session-service-exception) | Session service exception |
 
 ## getCurrentItem
 
@@ -112,7 +108,7 @@ getCurrentItem(callback: AsyncCallback<AVQueueItem>): void
 getCurrentItem(): Promise<AVQueueItem>
 ```
 
-获取当前投播的资源信息。结果通过Promise异步回调方式返回。
+Get the current playing item
 
 **Since:** 10
 
@@ -128,13 +124,13 @@ getCurrentItem(): Promise<AVQueueItem>
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;AVQueueItem&gt; | Promise对象，返回当前的播放资源，否则返回错误对象。 |
+| Promise&lt;AVQueueItem&gt; | (AVQueueItem) returned through promise |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 6600101 | Session service exception |
+| [6600101](../errorcode-avsession.md#6600101-session-service-exception) | Session service exception |
 
 ## getRecommendedResolutionLevel
 
@@ -142,7 +138,7 @@ getCurrentItem(): Promise<AVQueueItem>
 getRecommendedResolutionLevel(decoderType: DecoderType): Promise<ResolutionLevel>
 ```
 
-通过传递解码方式，获取推荐的分辨率。使用Promise异步回调。
+Get recommended resolution of remote player based on each decoder.
 
 **Since:** 19
 
@@ -158,19 +154,19 @@ getRecommendedResolutionLevel(decoderType: DecoderType): Promise<ResolutionLevel
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| decoderType | [DecoderType](arkts-avsession-avsession-decodertype-e.md) | Yes | 设备所支持的解码格式。 &lt;br&gt;设备所支持的解码格式包括： &lt;br&gt;'OH_AVCODEC_MIMETYPE_VIDEO_AVC'：VIDEO AVC， &lt;br&gt;'OH_AVCODEC_MIMETYPE_VIDEO_HEVC'：VIDEO HEVC， &lt;br&gt;'OH_AVCODEC_MIMETYPE_AUDIO_VIVID'：AUDIO AV3A。 |
+| decoderType | [DecoderType](arkts-avsession-avsession-decodertype-e.md) | Yes | The decoder type. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;ResolutionLevel&gt; | Promise对象。返回远端设备推荐的分辨率。 |
+| Promise&lt;ResolutionLevel&gt; | ResolutionLevel returned through promise |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 6600101 | Session service exception |
+| [6600101](../errorcode-avsession.md#6600101-session-service-exception) | Session service exception |
 
 ## getSupportedDecoders
 
@@ -178,7 +174,7 @@ getRecommendedResolutionLevel(decoderType: DecoderType): Promise<ResolutionLevel
 getSupportedDecoders(): Promise<Array<DecoderType>>
 ```
 
-获取当前远端设备的解码方式。使用Promise异步回调。
+Get supported decoders of remote player.
 
 **Since:** 19
 
@@ -194,13 +190,13 @@ getSupportedDecoders(): Promise<Array<DecoderType>>
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;Array&lt;DecoderType&gt;&gt; | Promise对象。返回远端设备所支持的解码能力列表。 |
+| Promise&lt;Array&lt;DecoderType&gt;&gt; | (DecoderType) returned through promise |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 6600101 | Session service exception |
+| [6600101](../errorcode-avsession.md#6600101-session-service-exception) | Session service exception |
 
 ## getSupportedHdrCapabilities
 
@@ -208,7 +204,7 @@ getSupportedDecoders(): Promise<Array<DecoderType>>
 getSupportedHdrCapabilities(): Promise<Array<hdrCapability.HDRFormat>>
 ```
 
-获取当前的远端设备所支持的HDR能力。使用Promise异步回调。
+Get supported hdr capabilities of remote player.
 
 **Since:** 19
 
@@ -224,13 +220,13 @@ getSupportedHdrCapabilities(): Promise<Array<hdrCapability.HDRFormat>>
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;Array&lt;hdrCapability.HDRFormat&gt;&gt; | Promise对象。返回远端设备所支持的HDR能力。 |
+| Promise&lt;Array&lt;hdrCapability.HDRFormat&gt;&gt; | HDRFormat returned through promise |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 6600101 | Session service exception |
+| [6600101](../errorcode-avsession.md#6600101-session-service-exception) | Session service exception |
 
 ## getSupportedPlaySpeeds
 
@@ -244,7 +240,7 @@ ArkTS-Sta:
 getSupportedPlaySpeeds(): Promise<Array<double>>
 ```
 
-获取当前的远端设备所支持倍速播放列表，仅支持使用cast+协议连接的设备。使用Promise异步回调。
+Get supported speed of remote player.
 
 **Since:** 19
 
@@ -260,13 +256,13 @@ getSupportedPlaySpeeds(): Promise<Array<double>>
 
 | Type | Description |
 | --- | --- |
-| ArkTS-Dyn: Promise&lt;Array&lt;number&gt;&gt;  <br>ArkTS-Sta：Promise&lt;Array&lt;double&gt;&gt; | Promise对象。返回远端设备所支持的倍速播放列表。 |
+| ArkTS-Dyn: Promise&lt;Array&lt;number&gt;&gt;  <br>ArkTS-Sta：Promise&lt;Array&lt;double&gt;&gt; | supported speed returned through promise |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 6600101 | Session service exception |
+| [6600101](../errorcode-avsession.md#6600101-session-service-exception) | Session service exception |
 
 ## getValidCommands
 
@@ -274,7 +270,7 @@ getSupportedPlaySpeeds(): Promise<Array<double>>
 getValidCommands(callback: AsyncCallback<Array<AVCastControlCommandType>>): void
 ```
 
-获取当前支持的命令。结果通过callback异步回调方式返回。
+Get commands supported by the current cast controller
 
 **Since:** 11
 
@@ -288,13 +284,13 @@ getValidCommands(callback: AsyncCallback<Array<AVCastControlCommandType>>): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;AVCastControlCommandType&gt;&gt; | Yes | 回调函数。返回当前支持的命令。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;AVCastControlCommandType&gt;&gt; | Yes | The triggered asyncCallback when ( getValidCommands). |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 6600101 | Session service exception. |
+| [6600101](../errorcode-avsession.md#6600101-session-service-exception) | Session service exception. |
 
 ## getValidCommands
 
@@ -302,7 +298,7 @@ getValidCommands(callback: AsyncCallback<Array<AVCastControlCommandType>>): void
 getValidCommands(): Promise<Array<AVCastControlCommandType>>
 ```
 
-获取当前支持的命令。结果通过Promise异步回调方式返回。
+Get commands supported by the current cast controller
 
 **Since:** 11
 
@@ -316,13 +312,13 @@ getValidCommands(): Promise<Array<AVCastControlCommandType>>
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;Array&lt;AVCastControlCommandType&gt;&gt; | Promise对象，返回当前支持的命令。 |
+| Promise&lt;Array&lt;AVCastControlCommandType&gt;&gt; | array of AVCastControlCommandType promise |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 6600101 | Session service exception. |
+| [6600101](../errorcode-avsession.md#6600101-session-service-exception) | Session service exception. |
 
 ## off('playbackStateChange')
 
@@ -330,7 +326,7 @@ getValidCommands(): Promise<Array<AVCastControlCommandType>>
 off(type: 'playbackStateChange', callback?: (state: AVPlaybackState) => void): void
 ```
 
-取消播放状态变化事件监听。指定callback，可取消对应监听；未指定callback，取消所有事件监听。
+Unregister playback state changed callback
 
 **Since:** 10
 
@@ -347,14 +343,14 @@ off(type: 'playbackStateChange', callback?: (state: AVPlaybackState) => void): v
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'playbackStateChange' | Yes |  |
-| callback | (state: AVPlaybackState) =&gt; void | No | 回调函数，参数state是变化后的播放状态。 &lt;br&gt;该参数为可选参数，若不填写该参数，则认为取消所有相关会话的事件监听。 |
+| callback | (state: AVPlaybackState) =&gt; void | No | The callback used to handle playback state changed event. The callback function provides the {@link AVPlaybackState} parameter. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | parameter check failed. 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. |
-| 6600101 | Session service exception |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | parameter check failed. 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. |
+| [6600101](../errorcode-avsession.md#6600101-session-service-exception) | Session service exception |
 
 ## off('mediaItemChange')
 
@@ -362,7 +358,7 @@ off(type: 'playbackStateChange', callback?: (state: AVPlaybackState) => void): v
 off(type: 'mediaItemChange'): void
 ```
 
-取消设置投播当前播放媒体内容事件监听。指定callback，可取消对应监听；未指定callback，取消所有事件监听。
+Unregister listener for current media item playback events.
 
 **Since:** 10
 
@@ -378,14 +374,14 @@ off(type: 'mediaItemChange'): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'mediaItemChange' | Yes | 取消对应的监听事件，支持事件`'mediaItemChange'`。 |
+| type | 'mediaItemChange' | Yes | Type of the playback event to listen for. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | parameter check failed. 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. |
-| 6600101 | Session service exception |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | parameter check failed. 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. |
+| [6600101](../errorcode-avsession.md#6600101-session-service-exception) | Session service exception |
 
 ## off('playNext')
 
@@ -393,7 +389,7 @@ off(type: 'mediaItemChange'): void
 off(type: 'playNext'): void
 ```
 
-取消设置播放下一首资源事件监听。指定callback，可取消对应监听；未指定callback，取消所有事件监听。
+Unregister playback command callback sent by remote side or media center.When canceling the callback, need to update the supported commands list.
 
 **Since:** 10
 
@@ -409,14 +405,14 @@ off(type: 'playNext'): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'playNext' | Yes | 取消对应的监听事件，支持事件`'playNext'`。 |
+| type | 'playNext' | Yes | Type of the 'playNext' event to listen for. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | parameter check failed. 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. |
-| 6600101 | Session service exception |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | parameter check failed. 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. |
+| [6600101](../errorcode-avsession.md#6600101-session-service-exception) | Session service exception |
 
 ## off('playPrevious')
 
@@ -424,7 +420,7 @@ off(type: 'playNext'): void
 off(type: 'playPrevious'): void
 ```
 
-取消设置播放上一首资源事件监听。指定callback，可取消对应监听；未指定callback，取消所有事件监听。
+Unregister playback command callback sent by remote side or media center.When canceling the callback, need to update the supported commands list.
 
 **Since:** 10
 
@@ -440,14 +436,14 @@ off(type: 'playPrevious'): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'playPrevious' | Yes | 取消对应的监听事件，支持事件`'playPrevious'`。 |
+| type | 'playPrevious' | Yes | Type of the 'playPrevious' to listen for. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | parameter check failed. 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. |
-| 6600101 | Session service exception |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | parameter check failed. 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. |
+| [6600101](../errorcode-avsession.md#6600101-session-service-exception) | Session service exception |
 
 ## off('requestPlay')
 
@@ -455,7 +451,7 @@ off(type: 'playPrevious'): void
 off(type: 'requestPlay', callback?: Callback<AVQueueItem>): void
 ```
 
-取消设置请求播放事件监听。指定callback，可取消对应监听；未指定callback，取消所有事件监听。
+Unregister requested playback command callback sent by remote side or media center.
 
 **Since:** 11
 
@@ -469,15 +465,15 @@ off(type: 'requestPlay', callback?: Callback<AVQueueItem>): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'requestPlay' | Yes | 取消对应的监听事件，支持事件`'requestPlay'`。 |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;AVQueueItem&gt; | No | 回调函数，参数AVQueueItem是当前正在播放的媒体内容。当监听事件取消成功，err为undefined，否则返回错误对象。该参数为可 选参数，若不填写该参数，则认为取消所有相关会话的事件监听。 |
+| type | 'requestPlay' | Yes | Type of the 'requestPlay' to listen for. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;AVQueueItem&gt; | No | Used to handle 'requestPlay' command |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | parameter check failed. 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. |
-| 6600101 | Session service exception |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | parameter check failed. 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. |
+| [6600101](../errorcode-avsession.md#6600101-session-service-exception) | Session service exception |
 
 ## off('endOfStream')
 
@@ -485,7 +481,7 @@ off(type: 'requestPlay', callback?: Callback<AVQueueItem>): void
 off(type: 'endOfStream', callback?: Callback<void>): void
 ```
 
-取消设置播放结束事件监听。指定callback，可取消对应监听；未指定callback，取消所有事件监听。
+Unregister endOfStream state callback.
 
 **Since:** 11
 
@@ -499,15 +495,15 @@ off(type: 'endOfStream', callback?: Callback<void>): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'endOfStream' | Yes | 取消对应的监听事件，支持事件`'endOfStream'`。 |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;void&gt; | No | 回调函数。当监听事件取消成功，err为undefined，否则返回错误对象。该参数为可选参数，若不填写该参数，则认为取消所有相关会话的事件监听。 |
+| type | 'endOfStream' | Yes | Type of the 'endOfStream' to listen for. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;void&gt; | No | Used to handle 'endOfStream' command |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | parameter check failed. 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. |
-| 6600101 | Session service exception |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | parameter check failed. 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. |
+| [6600101](../errorcode-avsession.md#6600101-session-service-exception) | Session service exception |
 
 ## off('seekDone')
 
@@ -515,7 +511,7 @@ off(type: 'endOfStream', callback?: Callback<void>): void
 off(type: 'seekDone'): void
 ```
 
-取消设置seek结束事件监听。指定callback，可取消对应监听；未指定callback，取消所有事件监听。
+Unregister listens for playback events.
 
 **Since:** 10
 
@@ -531,14 +527,14 @@ off(type: 'seekDone'): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'seekDone' | Yes | 取消对应的监听事件，支持事件`'seekDone'`。 |
+| type | 'seekDone' | Yes | Type of the 'seekDone' to listen for. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | parameter check failed. 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. |
-| 6600101 | Session service exception |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | parameter check failed. 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. |
+| [6600101](../errorcode-avsession.md#6600101-session-service-exception) | Session service exception |
 
 ## off('validCommandChange')
 
@@ -546,7 +542,7 @@ off(type: 'seekDone'): void
 off(type: 'validCommandChange', callback?: Callback<Array<AVCastControlCommandType>>)
 ```
 
-取消会话有效命令变化事件监听。指定callback，可取消对应监听；未指定callback，取消所有事件监听。
+Unregister the valid commands of the casted session changed callback
 
 **Since:** 11
 
@@ -560,16 +556,16 @@ off(type: 'validCommandChange', callback?: Callback<Array<AVCastControlCommandTy
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'validCommandChange' | Yes | 取消对应的监听事件，支持事件`'validCommandChange'`。 |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;Array&lt;AVCastControlCommandType&gt;&gt; | No | 回调函数。参数commands是有效命令的集合。 &lt;br&gt;该参数为可选参数，若不填写该参数，则认为取消所有相关会话的事件监听。 |
+| type | 'validCommandChange' | Yes | 'validCommandChange' |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;Array&lt;AVCastControlCommandType&gt;&gt; | No | The callback used to handle the changes. The callback function provides an array of AVCastControlCommandType. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | parameter check failed. 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. |
-| 6600101 | Session service exception. |
-| 6600103 | The session controller does not exist. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | parameter check failed. 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. |
+| [6600101](../errorcode-avsession.md#6600101-session-service-exception) | Session service exception. |
+| [6600103](../errorcode-avsession.md#6600103-session-controller-does-not-exist) | The session controller does not exist. |
 
 ## off('videoSizeChange')
 
@@ -577,7 +573,7 @@ off(type: 'validCommandChange', callback?: Callback<Array<AVCastControlCommandTy
 off(type: 'videoSizeChange'): void
 ```
 
-取消视频尺寸事件监听。指定callback，可取消对应监听；未指定callback，取消所有事件监听。
+Unregister listener for video size change event, used at remote side.
 
 **Since:** 12
 
@@ -591,19 +587,19 @@ off(type: 'videoSizeChange'): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'videoSizeChange' | Yes | 事件回调类型，支持事件`'videoSizeChange'`：当检测到会话的合法命令发生改变时，触发该事件。 |
+| type | 'videoSizeChange' | Yes | Type of the 'videoSizeChange' to listen for. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | parameter check failed. 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. |
-| 6600101 | Session service exception |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | parameter check failed. 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. |
+| [6600101](../errorcode-avsession.md#6600101-session-service-exception) | Session service exception |
 
 ## Examples
 
 ```TypeScript
-avCastController.off('videoSizeChange');
+aVCastController.off('videoSizeChange');
 ```
 
 ## off('error')
@@ -612,7 +608,7 @@ avCastController.off('videoSizeChange');
 off(type: 'error'): void
 ```
 
-取消播放的错误事件监听。指定callback，可取消对应监听；未指定callback，取消所有事件监听。
+Unregister listens for playback error events.
 
 **Since:** 10
 
@@ -628,20 +624,20 @@ off(type: 'error'): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'error' | Yes | 错误事件回调类型，取消注册的事件：'error'。 |
+| type | 'error' | Yes | Type of the 'error' to listen for. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | parameter check failed. 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. |
-| 6600101 | Session service exception |
-| 5400102 | Operation not allowed. |
-| 5400103 | I/O error. |
-| 5400101 | No memory. |
-| 5400106 | Unsupport format. |
-| 5400104 | Time out. |
-| 5400105 | Service died. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | parameter check failed. 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. |
+| [6600101](../errorcode-avsession.md#6600101-session-service-exception) | Session service exception |
+| [5400102](../../apis-media-kit/errorcode-media.md#5400102-unsupported-operation) | Operation not allowed. |
+| [5400103](../../apis-media-kit/errorcode-media.md#5400103-io-error) | I/O error. |
+| [5400101](../../apis-media-kit/errorcode-media.md#5400101-memory-allocation-failed) | No memory. |
+| [5400106](../../apis-media-kit/errorcode-media.md#5400106-format-not-supported) | Unsupport format. |
+| [5400104](../../apis-media-kit/errorcode-media.md#5400104-operation-timeout) | Time out. |
+| [5400105](../../apis-media-kit/errorcode-media.md#5400105-play-service-dead) | Service died. |
 
 ## off('castControlGenericError')
 
@@ -649,7 +645,7 @@ off(type: 'error'): void
 off(type: 'castControlGenericError', callback?: ErrorCallback): void
 ```
 
-取消投播通用的错误事件监听。指定callback，可取消对应监听；未指定callback，取消所有事件监听。
+Unregister listeners for cast control generic error events.
 
 **Since:** 13
 
@@ -665,14 +661,14 @@ off(type: 'castControlGenericError', callback?: ErrorCallback): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'castControlGenericError' | Yes | 取消对应的监听事件，支持的事件是'castControlGenericError'。 |
-| callback | [ErrorCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-errorcallback-i.md) | No | 回调函数。当监听事件取消成功，err为undefined，否则返回错误对象。该参数为可选参数，若不填写该参数，则认为取消所有相关会话的事件监听。 |
+| type | 'castControlGenericError' | Yes | Type of the 'castControlGenericError' to listen for. |
+| callback | [ErrorCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-errorcallback-i.md) | No | Callback used to listen for the cast control error event. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter check failed. 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter check failed. 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. |
 
 ## off('castControlIoError')
 
@@ -680,7 +676,7 @@ off(type: 'castControlGenericError', callback?: ErrorCallback): void
 off(type: 'castControlIoError', callback?: ErrorCallback): void
 ```
 
-取消投播输入/输出的错误事件监听。指定callback，可取消对应监听；未指定callback，取消所有事件监听。
+Unregister listeners for cast control input/output error events.
 
 **Since:** 13
 
@@ -696,14 +692,14 @@ off(type: 'castControlIoError', callback?: ErrorCallback): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'castControlIoError' | Yes | 取消对应的监听事件，支持的事件是'castControlIoError'。 |
-| callback | [ErrorCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-errorcallback-i.md) | No | 回调函数。当监听事件取消成功，err为undefined，否则返回错误对象。该参数为可选参数，若不填写该参数，则认为取消所有相关会话的事件监听。 |
+| type | 'castControlIoError' | Yes | Type of the 'castControlIoError' to listen for. |
+| callback | [ErrorCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-errorcallback-i.md) | No | Callback used to listen for the cast control error event. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter check failed. 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter check failed. 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. |
 
 ## off('castControlParsingError')
 
@@ -711,7 +707,7 @@ off(type: 'castControlIoError', callback?: ErrorCallback): void
 off(type: 'castControlParsingError', callback?: ErrorCallback): void
 ```
 
-取消投播解析的错误事件监听。指定callback，可取消对应监听；未指定callback，取消所有事件监听。
+Unregister listeners for cast control parsing error events.
 
 **Since:** 13
 
@@ -727,14 +723,14 @@ off(type: 'castControlParsingError', callback?: ErrorCallback): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'castControlParsingError' | Yes | 取消对应的监听事件，支持的事件是'castControlParsingError'。 |
-| callback | [ErrorCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-errorcallback-i.md) | No | 回调函数。当监听事件取消成功，err为undefined，否则返回错误对象。该参数为可选参数，若不填写该参数，则认为取消所有相关会话的事件监听。 |
+| type | 'castControlParsingError' | Yes | Type of the 'castControlParsingError' to listen for. |
+| callback | [ErrorCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-errorcallback-i.md) | No | Callback used to listen for the cast control error event. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter check failed. 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter check failed. 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. |
 
 ## off('castControlDecodingError')
 
@@ -742,7 +738,7 @@ off(type: 'castControlParsingError', callback?: ErrorCallback): void
 off(type: 'castControlDecodingError', callback?: ErrorCallback): void
 ```
 
-取消投播解码的错误事件监听。指定callback，可取消对应监听；未指定callback，取消所有事件监听。
+Unregister listeners for cast control decoding error events.
 
 **Since:** 13
 
@@ -758,14 +754,14 @@ off(type: 'castControlDecodingError', callback?: ErrorCallback): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'castControlDecodingError' | Yes | 取消对应的监听事件，支持的事件是'castControlDecodingError'。 |
-| callback | [ErrorCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-errorcallback-i.md) | No | 回调函数。当监听事件取消成功，err为undefined，否则返回错误对象。该参数为可选参数，若不填写该参数，则认为取消所有相关会话的事件监听。 |
+| type | 'castControlDecodingError' | Yes | Type of the 'castControlDecodingError' to listen for. |
+| callback | [ErrorCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-errorcallback-i.md) | No | Callback used to listen for the cast control error event. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter check failed. 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter check failed. 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. |
 
 ## off('castControlAudioRendererError')
 
@@ -773,7 +769,7 @@ off(type: 'castControlDecodingError', callback?: ErrorCallback): void
 off(type: 'castControlAudioRendererError', callback?: ErrorCallback): void
 ```
 
-取消投播音频渲染器的错误事件监听。指定callback，可取消对应监听；未指定callback，取消所有事件监听。
+Unregister listeners for cast control audio renderer error events.
 
 **Since:** 13
 
@@ -789,14 +785,14 @@ off(type: 'castControlAudioRendererError', callback?: ErrorCallback): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'castControlAudioRendererError' | Yes | 取消对应的监听事件，支持的事件是'castControlAudioRendererError'。 |
-| callback | [ErrorCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-errorcallback-i.md) | No | 回调函数。当监听事件取消成功，err为undefined，否则返回错误对象。该参数为可选参数，若不填写该参数，则认为取消所有相关会话的事件监听。 |
+| type | 'castControlAudioRendererError' | Yes | Type of the 'castControlAudioRendererError' to listen for. |
+| callback | [ErrorCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-errorcallback-i.md) | No | Callback used to listen for the cast control error event. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter check failed. 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter check failed. 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. |
 
 ## off('castControlDrmError')
 
@@ -804,7 +800,7 @@ off(type: 'castControlAudioRendererError', callback?: ErrorCallback): void
 off(type: 'castControlDrmError', callback?: ErrorCallback): void
 ```
 
-取消投播drm的错误事件监听。指定callback，可取消对应监听；未指定callback，取消所有事件监听。
+Unregister listeners for cast control drm error events.
 
 **Since:** 13
 
@@ -820,14 +816,14 @@ off(type: 'castControlDrmError', callback?: ErrorCallback): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'castControlDrmError' | Yes | 取消对应的监听事件，支持的事件是'castControlDrmError'。 |
-| callback | [ErrorCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-errorcallback-i.md) | No | 回调函数。当监听事件取消成功，err为undefined，否则返回错误对象。该参数为可选参数，若不填写该参数，则认为取消所有相关会话的事件监听。 |
+| type | 'castControlDrmError' | Yes | Type of the 'castControlDrmError' to listen for. |
+| callback | [ErrorCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-errorcallback-i.md) | No | Callback used to listen for the cast control error event. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter check failed. 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter check failed. 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. |
 
 ## off('keyRequest')
 
@@ -835,7 +831,7 @@ off(type: 'castControlDrmError', callback?: ErrorCallback): void
 off(type: 'keyRequest', callback?: KeyRequestCallback): void
 ```
 
-取消许可证请求事件监听。指定callback，可取消对应监听；未指定callback，取消所有事件监听。
+Unregister listener for drm key request.
 
 **Since:** 12
 
@@ -851,15 +847,15 @@ off(type: 'keyRequest', callback?: KeyRequestCallback): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'keyRequest' | Yes | 取消对应的监听事件，支持的事件是`'keyRequest'`。 |
-| callback | [KeyRequestCallback](arkts-avsession-avsession-keyrequestcallback-t.md) | No | 回调函数。当监听事件取消成功，err为undefined，否则返回错误对象。该参数为可选参数，若不填写该参数，则认为取消所有相关会话的事件监听。 |
+| type | 'keyRequest' | Yes | Type of the 'keyRequest' to listen for. |
+| callback | [KeyRequestCallback](arkts-avsession-avsession-keyrequestcallback-t.md) | No | Callback used to request drm key. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | parameter check failed. 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. |
-| 6600101 | Session service exception |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | parameter check failed. 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. |
+| [6600101](../errorcode-avsession.md#6600101-session-service-exception) | Session service exception |
 
 ## off('customDataChange')
 
@@ -867,7 +863,7 @@ off(type: 'keyRequest', callback?: KeyRequestCallback): void
 off(type: 'customDataChange', callback?: Callback<Record<string, Object>>): void
 ```
 
-取消对自定义数据的监听。
+Unregister listener for custom data sent from remote device.
 
 **Since:** 20
 
@@ -883,14 +879,14 @@ off(type: 'customDataChange', callback?: Callback<Record<string, Object>>): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'customDataChange' | Yes | 取消对应的监听事件，支持的事件是'customDataChange'。 |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;Record&lt;string, Object&gt;&gt; | No | 注册监听事件时的回调函数。该参数为可选参数，若不填写该参数，则认为取消会话所有与此事件相关的监听。 |
+| type | 'customDataChange' | Yes | Type of the 'customDataChange' to listen for. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;Record&lt;string, Object&gt;&gt; | No | Callback used to retrieve custom data. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 6600101 | Session service exception |
+| [6600101](../errorcode-avsession.md#6600101-session-service-exception) | Session service exception |
 
 ## offCastControlAudioRendererError
 
@@ -1050,7 +1046,7 @@ Unregister listener for custom data sent from remote device.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 6600101 | Session service exception |
+| [6600101](../errorcode-avsession.md#6600101-session-service-exception) | Session service exception |
 
 ## offEndOfStream
 
@@ -1078,7 +1074,7 @@ Unregister endOfStream state callback.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 6600101 | Session service exception |
+| [6600101](../errorcode-avsession.md#6600101-session-service-exception) | Session service exception |
 
 ## offError
 
@@ -1100,13 +1096,13 @@ Unregister listens for playback error events.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 6600101 | Session service exception |
-| 5400102 | Operation not allowed. |
-| 5400103 | I/O error. |
-| 5400101 | No memory. |
-| 5400106 | Unsupport format. |
-| 5400104 | Time out. |
-| 5400105 | Service died. |
+| [6600101](../errorcode-avsession.md#6600101-session-service-exception) | Session service exception |
+| [5400102](../../apis-media-kit/errorcode-media.md#5400102-unsupported-operation) | Operation not allowed. |
+| [5400103](../../apis-media-kit/errorcode-media.md#5400103-io-error) | I/O error. |
+| [5400101](../../apis-media-kit/errorcode-media.md#5400101-memory-allocation-failed) | No memory. |
+| [5400106](../../apis-media-kit/errorcode-media.md#5400106-format-not-supported) | Unsupport format. |
+| [5400104](../../apis-media-kit/errorcode-media.md#5400104-operation-timeout) | Time out. |
+| [5400105](../../apis-media-kit/errorcode-media.md#5400105-play-service-dead) | Service died. |
 
 ## offKeyRequest
 
@@ -1134,7 +1130,7 @@ Unregister listener for drm key request.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 6600101 | Session service exception |
+| [6600101](../errorcode-avsession.md#6600101-session-service-exception) | Session service exception |
 
 ## offMediaItemChange
 
@@ -1156,7 +1152,7 @@ Unregister listener for current media item playback events.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 6600101 | Session service exception |
+| [6600101](../errorcode-avsession.md#6600101-session-service-exception) | Session service exception |
 
 ## offPlayNext
 
@@ -1178,7 +1174,7 @@ Unregister playback command callback sent by remote side or media center.When ca
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 6600101 | Session service exception |
+| [6600101](../errorcode-avsession.md#6600101-session-service-exception) | Session service exception |
 
 ## offPlayPrevious
 
@@ -1200,7 +1196,7 @@ Unregister playback command callback sent by remote side or media center.When ca
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 6600101 | Session service exception |
+| [6600101](../errorcode-avsession.md#6600101-session-service-exception) | Session service exception |
 
 ## offPlaybackStateChange
 
@@ -1228,7 +1224,7 @@ Unregister playback state changed callback
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 6600101 | Session service exception |
+| [6600101](../errorcode-avsession.md#6600101-session-service-exception) | Session service exception |
 
 ## offRequestPlay
 
@@ -1256,7 +1252,7 @@ Unregister requested playback command callback sent by remote side or media cent
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 6600101 | Session service exception |
+| [6600101](../errorcode-avsession.md#6600101-session-service-exception) | Session service exception |
 
 ## offSeekDone
 
@@ -1278,7 +1274,7 @@ Unregister listens for playback events.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 6600101 | Session service exception |
+| [6600101](../errorcode-avsession.md#6600101-session-service-exception) | Session service exception |
 
 ## offValidCommandChange
 
@@ -1306,8 +1302,8 @@ Unregister the valid commands of the casted session changed callback
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 6600101 | Session service exception. |
-| 6600103 | The session controller does not exist. |
+| [6600101](../errorcode-avsession.md#6600101-session-service-exception) | Session service exception. |
+| [6600103](../errorcode-avsession.md#6600103-session-controller-does-not-exist) | The session controller does not exist. |
 
 ## offVideoSizeChange
 
@@ -1329,7 +1325,7 @@ Unregister listener for video size change event, used at remote side.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 6600101 | Session service exception |
+| [6600101](../errorcode-avsession.md#6600101-session-service-exception) | Session service exception |
 
 ## on('playbackStateChange')
 
@@ -1337,9 +1333,7 @@ Unregister listener for video size change event, used at remote side.
 on(type: 'playbackStateChange', filter: Array<keyof AVPlaybackState> | 'all', callback: (state: AVPlaybackState) => void): void
 ```
 
-设置播放状态变化的监听事件。使用callback异步回调。
-
-每个指令支持注册多个回调，如果需要只执行最新监听，需要先注销旧的监听，否则新旧监听都会触发回调。
+Register playback state changed callback
 
 **Since:** 10
 
@@ -1356,15 +1350,15 @@ on(type: 'playbackStateChange', filter: Array<keyof AVPlaybackState> | 'all', ca
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'playbackStateChange' | Yes |  |
-| filter | Array&lt;keyof AVPlaybackState&gt; \| 'all' | Yes | 'all'表示关注播放状态所有字段变化；Array&lt;keyof AVPlaybackState&gt;表示关注 Array中的字段变化。 |
-| callback | (state: AVPlaybackState) =&gt; void | Yes | 回调函数，参数state是变化后的播放状态。 |
+| filter | Array&lt;keyof AVPlaybackState&gt; \| 'all' | Yes | The properties of {@link AVPlaybackState} that you cared about |
+| callback | (state: AVPlaybackState) =&gt; void | Yes | The callback used to handle playback state changed event. The callback function provides the {@link AVPlaybackState} parameter. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | parameter check failed. 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. |
-| 6600101 | Session service exception |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | parameter check failed. 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. |
+| [6600101](../errorcode-avsession.md#6600101-session-service-exception) | Session service exception |
 
 ## on('mediaItemChange')
 
@@ -1372,9 +1366,7 @@ on(type: 'playbackStateChange', filter: Array<keyof AVPlaybackState> | 'all', ca
 on(type: 'mediaItemChange', callback: Callback<AVQueueItem>): void
 ```
 
-设置投播当前播放媒体内容的监听事件。使用callback异步回调。
-
-每个指令支持注册多个回调，如果需要只执行最新监听，需要先注销旧的监听，否则新旧监听都会触发回调。
+Register listener for current media item playback events.
 
 **Since:** 10
 
@@ -1390,15 +1382,15 @@ on(type: 'mediaItemChange', callback: Callback<AVQueueItem>): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'mediaItemChange' | Yes | 事件回调类型，支持事件`'mediaItemChange'`：当播放的媒体内容变化时，触发该事件。 |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;AVQueueItem&gt; | Yes | 回调函数，参数AVQueueItem是当前正在播放的媒体内容。 |
+| type | 'mediaItemChange' | Yes | Type of the playback event to listen for. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;AVQueueItem&gt; | Yes | Callback used to listen for current item changed. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | parameter check failed. 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. |
-| 6600101 | Session service exception |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | parameter check failed. 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. |
+| [6600101](../errorcode-avsession.md#6600101-session-service-exception) | Session service exception |
 
 ## on('playNext')
 
@@ -1406,9 +1398,7 @@ on(type: 'mediaItemChange', callback: Callback<AVQueueItem>): void
 on(type: 'playNext', callback: Callback<void>): void
 ```
 
-设置播放下一首资源的监听事件。
-
-每个指令支持注册多个回调，如果需要只执行最新监听，需要先注销旧的监听，否则新旧监听都会触发回调。
+Register playback command callback sent by remote side or media center.Application needs update the new media resource when receive these commands by using playItem.
 
 **Since:** 10
 
@@ -1424,15 +1414,15 @@ on(type: 'playNext', callback: Callback<void>): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'playNext' | Yes | 事件回调类型，支持事件`'playNext'`：当播放下一首状态变化时，触发该事件。 |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;void&gt; | Yes | 回调函数。 |
+| type | 'playNext' | Yes | Type of the 'playNext' event to listen for. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;void&gt; | Yes | Used to handle 'playNext' command |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | parameter check failed. 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. |
-| 6600101 | Session service exception |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | parameter check failed. 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. |
+| [6600101](../errorcode-avsession.md#6600101-session-service-exception) | Session service exception |
 
 ## on('playPrevious')
 
@@ -1440,9 +1430,7 @@ on(type: 'playNext', callback: Callback<void>): void
 on(type: 'playPrevious', callback: Callback<void>): void
 ```
 
-设置播放上一首资源的监听事件。
-
-每个指令支持注册多个回调，如果需要只执行最新监听，需要先注销旧的监听，否则新旧监听都会触发回调。
+Register playback command callback sent by remote side or media center.Application needs update the new media resource when receive these commands by using playItem.
 
 **Since:** 10
 
@@ -1458,15 +1446,15 @@ on(type: 'playPrevious', callback: Callback<void>): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'playPrevious' | Yes | 事件回调类型，支持事件`'playPrevious'`：当播放上一首状态变化时，触发该事件。 |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;void&gt; | Yes | 回调函数。 |
+| type | 'playPrevious' | Yes | Type of the 'playPrevious' to listen for. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;void&gt; | Yes | Used to handle 'playPrevious' command |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | parameter check failed. 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. |
-| 6600101 | Session service exception |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | parameter check failed. 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. |
+| [6600101](../errorcode-avsession.md#6600101-session-service-exception) | Session service exception |
 
 ## on('requestPlay')
 
@@ -1474,9 +1462,7 @@ on(type: 'playPrevious', callback: Callback<void>): void
 on(type: 'requestPlay', callback: Callback<AVQueueItem>): void
 ```
 
-设置请求播放的监听事件。
-
-每个指令支持注册多个回调，如果需要只执行最新监听，需要先注销旧的监听，否则新旧监听都会触发回调。
+Register requested playback command callback sent by remote side or media center.The AVQueueItem may include the requested assetId, starting position and other configurations.
 
 **Since:** 11
 
@@ -1490,15 +1476,15 @@ on(type: 'requestPlay', callback: Callback<AVQueueItem>): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'requestPlay' | Yes | 事件回调类型，支持事件`'requestPlay'`：当请求播放状态变化时，触发该事件。 |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;AVQueueItem&gt; | Yes | 回调函数，参数AVQueueItem是当前正在播放的媒体内容。当监听事件注册成功，err为undefined，否则返回错误对象。 |
+| type | 'requestPlay' | Yes | Type of the 'requestPlay' to listen for. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;AVQueueItem&gt; | Yes | Used to handle 'requestPlay' command |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | parameter check failed. 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. |
-| 6600101 | Session service exception |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | parameter check failed. 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. |
+| [6600101](../errorcode-avsession.md#6600101-session-service-exception) | Session service exception |
 
 ## on('endOfStream')
 
@@ -1506,9 +1492,7 @@ on(type: 'requestPlay', callback: Callback<AVQueueItem>): void
 on(type: 'endOfStream', callback: Callback<void>): void
 ```
 
-设置播放结束的监听事件。
-
-每个指令支持注册多个回调，如果需要只执行最新监听，需要先注销旧的监听，否则新旧监听都会触发回调。
+Register endOfStream state callback.Application needs update the new media resource when receive these commands by using playItem.
 
 **Since:** 11
 
@@ -1522,15 +1506,15 @@ on(type: 'endOfStream', callback: Callback<void>): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'endOfStream' | Yes | 事件回调类型，支持事件`'endOfStream'`：当资源播放结束时，触发该事件。 |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;void&gt; | Yes | 回调函数。当监听事件注册成功，err为undefined，否则返回错误对象。 |
+| type | 'endOfStream' | Yes | Type of the 'endOfStream' to listen for. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;void&gt; | Yes | Used to handle 'endOfStream' command |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | parameter check failed. 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. |
-| 6600101 | Session service exception |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | parameter check failed. 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. |
+| [6600101](../errorcode-avsession.md#6600101-session-service-exception) | Session service exception |
 
 ## on('seekDone')
 
@@ -1538,9 +1522,7 @@ on(type: 'endOfStream', callback: Callback<void>): void
 on(type: 'seekDone', callback: Callback<int>): void
 ```
 
-设置seek结束的监听事件。
-
-每个指令支持注册多个回调，如果需要只执行最新监听，需要先注销旧的监听，否则新旧监听都会触发回调。
+Register listens for playback events.
 
 **Since:** 10
 
@@ -1556,15 +1538,15 @@ on(type: 'seekDone', callback: Callback<int>): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'seekDone' | Yes | 事件回调类型，支持事件`'seekDone'`：当seek结束时，触发该事件。 |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;int&gt; | Yes | 回调函数，返回seek后播放的位置。 |
+| type | 'seekDone' | Yes | Type of the 'seekDone' to listen for. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;int&gt; | Yes | Callback used to listen for the playback seekDone event. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | parameter check failed. 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. |
-| 6600101 | Session service exception |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | parameter check failed. 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. |
+| [6600101](../errorcode-avsession.md#6600101-session-service-exception) | Session service exception |
 
 ## on('validCommandChange')
 
@@ -1572,9 +1554,7 @@ on(type: 'seekDone', callback: Callback<int>): void
 on(type: 'validCommandChange', callback: Callback<Array<AVCastControlCommandType>>)
 ```
 
-会话支持的有效命令变化监听事件。
-
-每个指令支持注册多个回调，如果需要只执行最新监听，需要先注销旧的监听，否则新旧监听都会触发回调。
+Register the valid commands of the casted session changed callback
 
 **Since:** 11
 
@@ -1588,16 +1568,16 @@ on(type: 'validCommandChange', callback: Callback<Array<AVCastControlCommandType
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'validCommandChange' | Yes | 事件回调类型，支持事件`'validCommandChange'`：当检测到会话的合法命令发生改变时，触发该事件。 |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;Array&lt;AVCastControlCommandType&gt;&gt; | Yes | 回调函数。参数commands是有效命令的集合。 |
+| type | 'validCommandChange' | Yes | 'validCommandChange' |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;Array&lt;AVCastControlCommandType&gt;&gt; | Yes | The callback used to handle the changes. The callback function provides an array of AVCastControlCommandType. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | parameter check failed. 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. |
-| 6600101 | Session service exception. |
-| 6600103 | The session controller does not exist. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | parameter check failed. 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. |
+| [6600101](../errorcode-avsession.md#6600101-session-service-exception) | Session service exception. |
+| [6600103](../errorcode-avsession.md#6600103-session-controller-does-not-exist) | The session controller does not exist. |
 
 ## on('videoSizeChange')
 
@@ -1605,9 +1585,7 @@ on(type: 'validCommandChange', callback: Callback<Array<AVCastControlCommandType
 on(type: 'videoSizeChange', callback: (width: int, height: int) => void): void
 ```
 
-媒体控制器监听视频尺寸变化变化的事件。
-
-每个指令支持注册多个回调，如果需要只执行最新监听，需要先注销旧的监听，否则新旧监听都会触发回调。
+Register listener for video size change event, used at remote side.
 
 **Since:** 12
 
@@ -1621,20 +1599,20 @@ on(type: 'videoSizeChange', callback: (width: int, height: int) => void): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'videoSizeChange' | Yes | 事件回调类型，支持事件`'videoSizeChange'`：当检测到会话的合法命令发生改变时，触发该事件。 |
-| callback | (width: int, height: int) =&gt; void | Yes | 回调函数。 |
+| type | 'videoSizeChange' | Yes | Type of the 'videoSizeChange' to listen for. |
+| callback | (width: int, height: int) =&gt; void | Yes | Callback used to return video size. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | parameter check failed. 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. |
-| 6600101 | Session service exception |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | parameter check failed. 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. |
+| [6600101](../errorcode-avsession.md#6600101-session-service-exception) | Session service exception |
 
 ## Examples
 
 ```TypeScript
-avCastController.on('videoSizeChange', (width: number, height: number) => {
+aVCastController.on('videoSizeChange', (width: number, height: number) => {
   console.info(`width : ${width} `);
   console.info(`height: ${height} `);
 });
@@ -1646,9 +1624,7 @@ avCastController.on('videoSizeChange', (width: number, height: number) => {
 on(type: 'error', callback: ErrorCallback): void
 ```
 
-监听远端播放器的错误事件，该事件仅用于错误提示，不需要用户停止播控动作。
-
-每个指令支持注册多个回调，如果需要只执行最新监听，需要先注销旧的监听，否则新旧监听都会触发回调。
+Register listeners for playback error events.
 
 **Since:** 10
 
@@ -1664,21 +1640,21 @@ on(type: 'error', callback: ErrorCallback): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'error' | Yes | 错误事件回调类型，支持的事件：'error'，用户操作和系统都会触发此事件。 |
-| callback | [ErrorCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-errorcallback-i.md) | Yes | 错误事件回调方法：远端播放过程中发生的错误，会提供错误码ID和错误信息。 |
+| type | 'error' | Yes | Type of the 'error' to listen for. |
+| callback | [ErrorCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-errorcallback-i.md) | Yes | Callback used to listen for the playback error event. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | parameter check failed. 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. |
-| 6600101 | Session service exception |
-| 5400102 | Operation not allowed. |
-| 5400103 | I/O error. |
-| 5400101 | No memory. |
-| 5400106 | Unsupport format. |
-| 5400104 | Time out. |
-| 5400105 | Service died. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | parameter check failed. 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. |
+| [6600101](../errorcode-avsession.md#6600101-session-service-exception) | Session service exception |
+| [5400102](../../apis-media-kit/errorcode-media.md#5400102-unsupported-operation) | Operation not allowed. |
+| [5400103](../../apis-media-kit/errorcode-media.md#5400103-io-error) | I/O error. |
+| [5400101](../../apis-media-kit/errorcode-media.md#5400101-memory-allocation-failed) | No memory. |
+| [5400106](../../apis-media-kit/errorcode-media.md#5400106-format-not-supported) | Unsupport format. |
+| [5400104](../../apis-media-kit/errorcode-media.md#5400104-operation-timeout) | Time out. |
+| [5400105](../../apis-media-kit/errorcode-media.md#5400105-play-service-dead) | Service died. |
 
 ## on('castControlGenericError')
 
@@ -1686,9 +1662,7 @@ on(type: 'error', callback: ErrorCallback): void
 on(type: 'castControlGenericError', callback: ErrorCallback): void
 ```
 
-监听投播通用错误事件。
-
-每个指令支持注册多个回调，如果需要只执行最新监听，需要先注销旧的监听，否则新旧监听都会触发回调。
+Register listeners for cast control generic error events.
 
 **Since:** 13
 
@@ -1704,28 +1678,28 @@ on(type: 'castControlGenericError', callback: ErrorCallback): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'castControlGenericError' | Yes | 错误事件回调类型，支持的事件：'castControlGenericError'。 |
-| callback | [ErrorCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-errorcallback-i.md) | Yes | 投播通用错误事件回调方法。 |
+| type | 'castControlGenericError' | Yes | Type of the 'castControlGenericError' to listen for. |
+| callback | [ErrorCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-errorcallback-i.md) | Yes | Callback used to listen for the cast control error event. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 6611108 | Operation is not allowed. |
-| 6611104 | The specified playback speed is not supported. |
-| 6611105 | The action failed because either the media source device or the media sink device has been revoked. |
-| 6611106 | The parameter is invalid, for example, the url is illegal to play. |
-| 6611107 | Allocation of memory failed. |
-| 401 | Parameter check failed. 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. |
-| 6611004 | The runtime check failed. |
-| 6611100 | Cross-device data transmission is locked. |
-| 6611101 | The specified seek mode is not supported. |
-| 6611102 | The position to seek to is out of the range of the media asset or the specified seek mode is not supported. |
-| 6611103 | The specified playback mode is not supported. |
-| 6611000 | The error code for cast control is unspecified. |
-| 6611001 | An unspecified error occurs in the remote player. |
-| 6611002 | The playback position falls behind the live window. |
-| 6611003 | The process of cast control times out. |
+| [6611108](../errorcode-avsession.md#6611108-operation-not-allowed) | Operation is not allowed. |
+| [6611104](../errorcode-avsession.md#6611104-unsupported-playback-speed) | The specified playback speed is not supported. |
+| [6611105](../errorcode-avsession.md#6611105-device-revocation) | The action failed because either the media source device or the media sink device has been revoked. |
+| [6611106](../errorcode-avsession.md#6611106-invalid-input-parameter) | The parameter is invalid, for example, the url is illegal to play. |
+| [6611107](../errorcode-avsession.md#6611107-memory-allocation-failure) | Allocation of memory failed. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter check failed. 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. |
+| [6611004](../errorcode-avsession.md#6611004-runtime-check-failure) | The runtime check failed. |
+| [6611100](../errorcode-avsession.md#6611100-crossdevice-data-transmission-locked) | Cross-device data transmission is locked. |
+| [6611101](../errorcode-avsession.md#6611101-unsupported-seek-mode) | The specified seek mode is not supported. |
+| [6611102](../errorcode-avsession.md#6611102-invalid-seek-target) | The position to seek to is out of the range of the media asset or the specified seek mode is not supported. |
+| [6611103](../errorcode-avsession.md#6611103-unsupported-playback-mode) | The specified playback mode is not supported. |
+| [6611000](../errorcode-avsession.md#6611000-unknown-error-in-the-cast-controller) | The error code for cast control is unspecified. |
+| [6611001](../errorcode-avsession.md#6611001-unknown-error-in-the-remote-device) | An unspecified error occurs in the remote player. |
+| [6611002](../errorcode-avsession.md#6611002-loading-position-exceeds-the-total-video-progress) | The playback position falls behind the live window. |
+| [6611003](../errorcode-avsession.md#6611003-cast-controller-loading-timeout) | The process of cast control times out. |
 
 ## on('castControlIoError')
 
@@ -1733,9 +1707,7 @@ on(type: 'castControlGenericError', callback: ErrorCallback): void
 on(type: 'castControlIoError', callback: ErrorCallback): void
 ```
 
-监听投播输入/输出的错误事件。
-
-每个指令支持注册多个回调，如果需要只执行最新监听，需要先注销旧的监听，否则新旧监听都会触发回调。
+Register listeners for cast control input/output error events.
 
 **Since:** 13
 
@@ -1751,31 +1723,31 @@ on(type: 'castControlIoError', callback: ErrorCallback): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'castControlIoError' | Yes | 错误事件回调类型，支持的事件：'castControlIoError'。 |
-| callback | [ErrorCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-errorcallback-i.md) | Yes | 投播输入/输出的错误事件回调方法。 |
+| type | 'castControlIoError' | Yes | Type of the 'castControlIoError' to listen for. |
+| callback | [ErrorCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-errorcallback-i.md) | Yes | Callback used to listen for the cast control error event. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 6612004 | The HTTP server returns an unexpected HTTP response status code. |
-| 6612100 | The media does not contain any contents that can be played. |
-| 6612005 | The file does not exist. |
-| 6612101 | The media cannot be read, for example, because of dust or scratches. |
-| 6612006 | No permission is granted to perform the IO operation. |
-| 6612102 | This resource is already in use. |
-| 6612007 | Access to cleartext HTTP traffic is not allowed by the app's network security configuration. |
-| 6612103 | The content using the validity interval has expired. |
-| 6612000 | An unspecified input/output error occurs. |
-| 6612001 | Network connection failure. |
-| 6612002 | Network timeout. |
-| 6612003 | Invalid "Content-Type" HTTP header. |
-| 6612008 | Reading data out of the data bound. |
-| 6612104 | Using the requested content to play is not allowed. |
-| 6612105 | The use of the allowed content cannot be verified. |
-| 6612106 | The number of times this content has been used as requested has reached the maximum allowed number of uses. |
-| 6612107 | An error occurs when sending packet from source device to sink device. |
-| 401 | Parameter check failed. 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. |
+| [6612004](../errorcode-avsession.md#6612004-unexpected-http-response-status-code-from-the-http-server) | The HTTP server returns an unexpected HTTP response status code. |
+| [6612100](../errorcode-avsession.md#6612100-no-playable-content) | The media does not contain any contents that can be played. |
+| [6612005](../errorcode-avsession.md#6612005-file-does-not-exist) | The file does not exist. |
+| [6612101](../errorcode-avsession.md#6612101-failure-in-reading-media-assets) | The media cannot be read, for example, because of dust or scratches. |
+| [6612006](../errorcode-avsession.md#6612006-no-permission-for-io-operations) | No permission is granted to perform the IO operation. |
+| [6612102](../errorcode-avsession.md#6612102-resource-is-being-used) | This resource is already in use. |
+| [6612007](../errorcode-avsession.md#6612007-operation-not-allowed-by-network-security-configuration) | Access to cleartext HTTP traffic is not allowed by the app's network security configuration. |
+| [6612103](../errorcode-avsession.md#6612103-content-expired) | The content using the validity interval has expired. |
+| [6612000](../errorcode-avsession.md#6612000-unknown-io-error) | An unspecified input/output error occurs. |
+| [6612001](../errorcode-avsession.md#6612001-network-connection-failure) | Network connection failure. |
+| [6612002](../errorcode-avsession.md#6612002-network-timeout) | Network timeout. |
+| [6612003](../errorcode-avsession.md#6612003-invalid-contenttype-http-header) | Invalid "Content-Type" HTTP header. |
+| [6612008](../errorcode-avsession.md#6612008-data-to-read-out-of-range) | Reading data out of the data bound. |
+| [6612104](../errorcode-avsession.md#6612104-requested-content-cannot-be-used) | Using the requested content to play is not allowed. |
+| [6612105](../errorcode-avsession.md#6612105-unable-to-verify-the-allowed-content) | The use of the allowed content cannot be verified. |
+| [6612106](../errorcode-avsession.md#6612106-frequent-resource-usage) | The number of times this content has been used as requested has reached the maximum allowed number of uses. |
+| [6612107](../errorcode-avsession.md#6612107-failure-in-sending-resource-packages-to-the-remote-device) | An error occurs when sending packet from source device to sink device. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter check failed. 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. |
 
 ## on('castControlParsingError')
 
@@ -1783,9 +1755,7 @@ on(type: 'castControlIoError', callback: ErrorCallback): void
 on(type: 'castControlParsingError', callback: ErrorCallback): void
 ```
 
-监听投播解析的错误事件。
-
-每个指令支持注册多个回调，如果需要只执行最新监听，需要先注销旧的监听，否则新旧监听都会触发回调。
+Register listeners for cast control parsing error events.
 
 **Since:** 13
 
@@ -1801,19 +1771,19 @@ on(type: 'castControlParsingError', callback: ErrorCallback): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'castControlParsingError' | Yes | 错误事件回调类型，支持的事件：'castControlParsingError'。 |
-| callback | [ErrorCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-errorcallback-i.md) | Yes | 投播解析的错误事件回调方法。 |
+| type | 'castControlParsingError' | Yes | Type of the 'castControlParsingError' to listen for. |
+| callback | [ErrorCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-errorcallback-i.md) | Yes | Callback used to listen for the cast control error event. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter check failed. 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. |
-| 6613004 | Unsupported feature in the media manifest. |
-| 6613000 | Unspecified error related to content parsing. |
-| 6613001 | Parsing error associated with media container format bit streams. |
-| 6613002 | Parsing error associated with the media manifest. |
-| 6613003 | An error occurs when attempting to extract a file with an unsupported media container format or an unsupported media container feature. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter check failed. 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. |
+| [6613004](../errorcode-avsession.md#6613004-unsupported-feature-in-the-media-manifest) | Unsupported feature in the media manifest. |
+| [6613000](../errorcode-avsession.md#6613000-unknown-parsing-error) | Unspecified error related to content parsing. |
+| [6613001](../errorcode-avsession.md#6613001-invalid-type) | Parsing error associated with media container format bit streams. |
+| [6613002](../errorcode-avsession.md#6613002-error-in-parsing-media-manifest) | Parsing error associated with the media manifest. |
+| [6613003](../errorcode-avsession.md#6613003-unsupported-media-format) | An error occurs when attempting to extract a file with an unsupported media container format or an unsupported media container feature. |
 
 ## on('castControlDecodingError')
 
@@ -1821,9 +1791,7 @@ on(type: 'castControlParsingError', callback: ErrorCallback): void
 on(type: 'castControlDecodingError', callback: ErrorCallback): void
 ```
 
-监听投播解码的错误事件。
-
-每个指令支持注册多个回调，如果需要只执行最新监听，需要先注销旧的监听，否则新旧监听都会触发回调。
+Register listeners for cast control decoding error events.
 
 **Since:** 13
 
@@ -1839,20 +1807,20 @@ on(type: 'castControlDecodingError', callback: ErrorCallback): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'castControlDecodingError' | Yes | 错误事件回调类型，支持的事件：'castControlDecodingError'。 |
-| callback | [ErrorCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-errorcallback-i.md) | Yes | 投播解码的错误事件回调方法。 |
+| type | 'castControlDecodingError' | Yes | Type of the 'castControlDecodingError' to listen for. |
+| callback | [ErrorCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-errorcallback-i.md) | Yes | Callback used to listen for the cast control error event. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 6614004 | The format of the content to decode exceeds the capabilities of the device. |
-| 401 | Parameter check failed. 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. |
-| 6614005 | The format of the content to decode is not supported. |
-| 6614000 | Unspecified decoding error. |
-| 6614001 | Decoder initialization failed. |
-| 6614002 | Decoder query failed. |
-| 6614003 | Decoding the media samples failed. |
+| [6614004](../errorcode-avsession.md#6614004-content-format-is-beyond-the-device-capability) | The format of the content to decode exceeds the capabilities of the device. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter check failed. 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. |
+| [6614005](../errorcode-avsession.md#6614005-decoding-of-the-content-format-is-not-supported) | The format of the content to decode is not supported. |
+| [6614000](../errorcode-avsession.md#6614000-unknown-decoding-error) | Unspecified decoding error. |
+| [6614001](../errorcode-avsession.md#6614001-decoder-initialization-failure) | Decoder initialization failed. |
+| [6614002](../errorcode-avsession.md#6614002-decoder-query-failure) | Decoder query failed. |
+| [6614003](../errorcode-avsession.md#6614003-media-sample-decoding-failure) | Decoding the media samples failed. |
 
 ## on('castControlAudioRendererError')
 
@@ -1860,9 +1828,7 @@ on(type: 'castControlDecodingError', callback: ErrorCallback): void
 on(type: 'castControlAudioRendererError', callback: ErrorCallback): void
 ```
 
-监听投播音频渲染器的错误事件。
-
-每个指令支持注册多个回调，如果需要只执行最新监听，需要先注销旧的监听，否则新旧监听都会触发回调。
+Register listeners for cast control audio renderer error error events.
 
 **Since:** 13
 
@@ -1878,17 +1844,17 @@ on(type: 'castControlAudioRendererError', callback: ErrorCallback): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'castControlAudioRendererError' | Yes | 错误事件回调类型，支持的事件：'castControlAudioRendererError'。 |
-| callback | [ErrorCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-errorcallback-i.md) | Yes | 投播音频渲染器的错误事件回调方法。 |
+| type | 'castControlAudioRendererError' | Yes | Type of the 'castControlAudioRendererError' to listen for. |
+| callback | [ErrorCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-errorcallback-i.md) | Yes | Callback used to listen for the cast control error event. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter check failed. 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. |
-| 6615000 | Unspecified errors related to the audio renderer. |
-| 6615001 | Initializing the audio renderer failed. |
-| 6615002 | The audio renderer fails to write data. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter check failed. 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. |
+| [6615000](../errorcode-avsession.md#6615000-unknown-error-related-to-the-audio-renderer) | Unspecified errors related to the audio renderer. |
+| [6615001](../errorcode-avsession.md#6615001-audio-renderer-initialization-failure) | Initializing the audio renderer failed. |
+| [6615002](../errorcode-avsession.md#6615002-audio-renderer-failure-in-writing-data) | The audio renderer fails to write data. |
 
 ## on('castControlDrmError')
 
@@ -1896,9 +1862,7 @@ on(type: 'castControlAudioRendererError', callback: ErrorCallback): void
 on(type: 'castControlDrmError', callback: ErrorCallback): void
 ```
 
-监听投播drm的错误事件。
-
-每个指令支持注册多个回调，如果需要只执行最新监听，需要先注销旧的监听，否则新旧监听都会触发回调。
+Register listeners for cast control drm error events.
 
 **Since:** 13
 
@@ -1914,24 +1878,24 @@ on(type: 'castControlDrmError', callback: ErrorCallback): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'castControlDrmError' | Yes | 错误事件回调类型，支持的事件：'castControlDrmError'。 |
-| callback | [ErrorCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-errorcallback-i.md) | Yes | 投播drm的错误事件回调方法。 |
+| type | 'castControlDrmError' | Yes | Type of the 'castControlDrmError' to listen for. |
+| callback | [ErrorCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-errorcallback-i.md) | Yes | Callback used to listen for the cast control error event. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 6616004 | Failed to obtain a license. |
-| 6616100 | An error occurs when the DRM processes the key response. |
-| 401 | Parameter check failed. 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. |
-| 6616005 | The operation is disallowed by the license policy. |
-| 6616006 | An error occurs in the DRM system. |
-| 6616007 | The device has revoked DRM privileges. |
-| 6616000 | Unspecified error related to DRM. |
-| 6616001 | The chosen DRM protection scheme is not supported by the device. |
-| 6616002 | Device provisioning failed. |
-| 6616003 | The DRM-protected content to play is incompatible. |
-| 6616008 | The DRM license being loaded into the open DRM session has expired. |
+| [6616004](../errorcode-avsession.md#6616004-license-obtaining-failure) | Failed to obtain a license. |
+| [6616100](../errorcode-avsession.md#6616100-error-in-processing-the-key-response) | An error occurs when the DRM processes the key response. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter check failed. 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. |
+| [6616005](../errorcode-avsession.md#6616005-operation-not-allowed-by-the-license-policy) | The operation is disallowed by the license policy. |
+| [6616006](../errorcode-avsession.md#6616006-drm-system-error) | An error occurs in the DRM system. |
+| [6616007](../errorcode-avsession.md#6616007-drm-privileges-revoked) | The device has revoked DRM privileges. |
+| [6616000](../errorcode-avsession.md#6616000-unknown-drm-error) | Unspecified error related to DRM. |
+| [6616001](../errorcode-avsession.md#6616001-device-does-not-support-the-selected-drm-solution) | The chosen DRM protection scheme is not supported by the device. |
+| [6616002](../errorcode-avsession.md#6616002-device-provisioning-failure) | Device provisioning failed. |
+| [6616003](../errorcode-avsession.md#6616003-drmprotected-content-to-play-is-incompatible) | The DRM-protected content to play is incompatible. |
+| [6616008](../errorcode-avsession.md#6616008-expired-drm-license-loaded) | The DRM license being loaded into the open DRM session has expired. |
 
 ## on('keyRequest')
 
@@ -1939,9 +1903,7 @@ on(type: 'castControlDrmError', callback: ErrorCallback): void
 on(type: 'keyRequest', callback: KeyRequestCallback): void
 ```
 
-在线DRM资源投播时，设置许可证请求的事件监听。
-
-每个指令支持注册多个回调，如果需要只执行最新监听，需要先注销旧的监听，否则新旧监听都会触发回调。
+Register listener for drm key request.
 
 **Since:** 12
 
@@ -1957,15 +1919,15 @@ on(type: 'keyRequest', callback: KeyRequestCallback): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'keyRequest' | Yes | 事件回调类型，支持事件`'keyRequest'`：当DRM资源播放需要许可证时，触发该事件。 |
-| callback | [KeyRequestCallback](arkts-avsession-avsession-keyrequestcallback-t.md) | Yes | 回调函数，媒体资源及许可证请求数据。 |
+| type | 'keyRequest' | Yes | Type of the 'keyRequest' to listen for. |
+| callback | [KeyRequestCallback](arkts-avsession-avsession-keyrequestcallback-t.md) | Yes | Callback used to request drm key. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | parameter check failed. 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. |
-| 6600101 | Session service exception |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | parameter check failed. 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. |
+| [6600101](../errorcode-avsession.md#6600101-session-service-exception) | Session service exception |
 
 ## on('customDataChange')
 
@@ -1973,7 +1935,7 @@ on(type: 'keyRequest', callback: KeyRequestCallback): void
 on(type: 'customDataChange', callback: Callback<Record<string, Object>>): void
 ```
 
-注册从远端设备发送的自定义数据的监听器。
+Register listener for custom data sent from remote device.
 
 **Since:** 20
 
@@ -1989,14 +1951,14 @@ on(type: 'customDataChange', callback: Callback<Record<string, Object>>): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'customDataChange' | Yes | 事件回调类型，支持'customDataChange'事件。媒体提供方发送自定义数据时触发。 |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;Record&lt;string, Object&gt;&gt; | Yes | 回调函数，用于接收自定义数据。 |
+| type | 'customDataChange' | Yes | Type of the 'customDataChange' to listen for. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;Record&lt;string, Object&gt;&gt; | Yes | Callback used to retrieve custom data. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 6600101 | Session service exception |
+| [6600101](../errorcode-avsession.md#6600101-session-service-exception) | Session service exception |
 
 ## onCastControlAudioRendererError
 
@@ -2024,9 +1986,9 @@ Register listeners for cast control audio renderer error error events.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 6615000 | Unspecified errors related to the audio renderer. |
-| 6615001 | Initializing the audio renderer failed. |
-| 6615002 | The audio renderer fails to write data. |
+| [6615000](../errorcode-avsession.md#6615000-unknown-error-related-to-the-audio-renderer) | Unspecified errors related to the audio renderer. |
+| [6615001](../errorcode-avsession.md#6615001-audio-renderer-initialization-failure) | Initializing the audio renderer failed. |
+| [6615002](../errorcode-avsession.md#6615002-audio-renderer-failure-in-writing-data) | The audio renderer fails to write data. |
 
 ## onCastControlDecodingError
 
@@ -2054,12 +2016,12 @@ Register listeners for cast control decoding error events.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 6614004 | The format of the content to decode exceeds the capabilities of the device. |
-| 6614005 | The format of the content to decode is not supported. |
-| 6614000 | Unspecified decoding error. |
-| 6614001 | Decoder initialization failed. |
-| 6614002 | Decoder query failed. |
-| 6614003 | Decoding the media samples failed. |
+| [6614004](../errorcode-avsession.md#6614004-content-format-is-beyond-the-device-capability) | The format of the content to decode exceeds the capabilities of the device. |
+| [6614005](../errorcode-avsession.md#6614005-decoding-of-the-content-format-is-not-supported) | The format of the content to decode is not supported. |
+| [6614000](../errorcode-avsession.md#6614000-unknown-decoding-error) | Unspecified decoding error. |
+| [6614001](../errorcode-avsession.md#6614001-decoder-initialization-failure) | Decoder initialization failed. |
+| [6614002](../errorcode-avsession.md#6614002-decoder-query-failure) | Decoder query failed. |
+| [6614003](../errorcode-avsession.md#6614003-media-sample-decoding-failure) | Decoding the media samples failed. |
 
 ## onCastControlDrmError
 
@@ -2087,16 +2049,16 @@ Register listeners for cast control drm error events.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 6616004 | Failed to obtain a license. |
-| 6616100 | An error occurs when the DRM processes the key response. |
-| 6616005 | The operation is disallowed by the license policy. |
-| 6616006 | An error occurs in the DRM system. |
-| 6616007 | The device has revoked DRM privileges. |
-| 6616000 | Unspecified error related to DRM. |
-| 6616001 | The chosen DRM protection scheme is not supported by the device. |
-| 6616002 | Device provisioning failed. |
-| 6616003 | The DRM-protected content to play is incompatible. |
-| 6616008 | The DRM license being loaded into the open DRM session has expired. |
+| [6616004](../errorcode-avsession.md#6616004-license-obtaining-failure) | Failed to obtain a license. |
+| [6616100](../errorcode-avsession.md#6616100-error-in-processing-the-key-response) | An error occurs when the DRM processes the key response. |
+| [6616005](../errorcode-avsession.md#6616005-operation-not-allowed-by-the-license-policy) | The operation is disallowed by the license policy. |
+| [6616006](../errorcode-avsession.md#6616006-drm-system-error) | An error occurs in the DRM system. |
+| [6616007](../errorcode-avsession.md#6616007-drm-privileges-revoked) | The device has revoked DRM privileges. |
+| [6616000](../errorcode-avsession.md#6616000-unknown-drm-error) | Unspecified error related to DRM. |
+| [6616001](../errorcode-avsession.md#6616001-device-does-not-support-the-selected-drm-solution) | The chosen DRM protection scheme is not supported by the device. |
+| [6616002](../errorcode-avsession.md#6616002-device-provisioning-failure) | Device provisioning failed. |
+| [6616003](../errorcode-avsession.md#6616003-drmprotected-content-to-play-is-incompatible) | The DRM-protected content to play is incompatible. |
+| [6616008](../errorcode-avsession.md#6616008-expired-drm-license-loaded) | The DRM license being loaded into the open DRM session has expired. |
 
 ## onCastControlGenericError
 
@@ -2124,20 +2086,20 @@ Register listeners for cast control generic error events.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 6611108 | Operation is not allowed. |
-| 6611104 | The specified playback speed is not supported. |
-| 6611105 | The action failed because either the media source device or the media sink device has been revoked. |
-| 6611106 | The parameter is invalid, for example, the url is illegal to play. |
-| 6611107 | Allocation of memory failed. |
-| 6611004 | The runtime check failed. |
-| 6611100 | Cross-device data transmission is locked. |
-| 6611101 | The specified seek mode is not supported. |
-| 6611102 | The position to seek to is out of the range of the media asset or the specified seek mode is not supported. |
-| 6611103 | The specified playback mode is not supported. |
-| 6611000 | The error code for cast control is unspecified. |
-| 6611001 | An unspecified error occurs in the remote player. |
-| 6611002 | The playback position falls behind the live window. |
-| 6611003 | The process of cast control times out. |
+| [6611108](../errorcode-avsession.md#6611108-operation-not-allowed) | Operation is not allowed. |
+| [6611104](../errorcode-avsession.md#6611104-unsupported-playback-speed) | The specified playback speed is not supported. |
+| [6611105](../errorcode-avsession.md#6611105-device-revocation) | The action failed because either the media source device or the media sink device has been revoked. |
+| [6611106](../errorcode-avsession.md#6611106-invalid-input-parameter) | The parameter is invalid, for example, the url is illegal to play. |
+| [6611107](../errorcode-avsession.md#6611107-memory-allocation-failure) | Allocation of memory failed. |
+| [6611004](../errorcode-avsession.md#6611004-runtime-check-failure) | The runtime check failed. |
+| [6611100](../errorcode-avsession.md#6611100-crossdevice-data-transmission-locked) | Cross-device data transmission is locked. |
+| [6611101](../errorcode-avsession.md#6611101-unsupported-seek-mode) | The specified seek mode is not supported. |
+| [6611102](../errorcode-avsession.md#6611102-invalid-seek-target) | The position to seek to is out of the range of the media asset or the specified seek mode is not supported. |
+| [6611103](../errorcode-avsession.md#6611103-unsupported-playback-mode) | The specified playback mode is not supported. |
+| [6611000](../errorcode-avsession.md#6611000-unknown-error-in-the-cast-controller) | The error code for cast control is unspecified. |
+| [6611001](../errorcode-avsession.md#6611001-unknown-error-in-the-remote-device) | An unspecified error occurs in the remote player. |
+| [6611002](../errorcode-avsession.md#6611002-loading-position-exceeds-the-total-video-progress) | The playback position falls behind the live window. |
+| [6611003](../errorcode-avsession.md#6611003-cast-controller-loading-timeout) | The process of cast control times out. |
 
 ## onCastControlIoError
 
@@ -2165,23 +2127,23 @@ Register listeners for cast control input/output error events.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 6612004 | The HTTP server returns an unexpected HTTP response status code. |
-| 6612100 | The media does not contain any contents that can be played. |
-| 6612005 | The file does not exist. |
-| 6612101 | The media cannot be read, for example, because of dust or scratches. |
-| 6612006 | No permission is granted to perform the IO operation. |
-| 6612102 | This resource is already in use. |
-| 6612007 | Access to cleartext HTTP traffic is not allowed by the app's network security configuration. |
-| 6612103 | The content using the validity interval has expired. |
-| 6612000 | An unspecified input/output error occurs. |
-| 6612001 | Network connection failure. |
-| 6612002 | Network timeout. |
-| 6612003 | Invalid "Content-Type" HTTP header. |
-| 6612008 | Reading data out of the data bound. |
-| 6612104 | Using the requested content to play is not allowed. |
-| 6612105 | The use of the allowed content cannot be verified. |
-| 6612106 | The number of times this content has been used as requested has reached the maximum allowed number of uses. |
-| 6612107 | An error occurs when sending packet from source device to sink device. |
+| [6612004](../errorcode-avsession.md#6612004-unexpected-http-response-status-code-from-the-http-server) | The HTTP server returns an unexpected HTTP response status code. |
+| [6612100](../errorcode-avsession.md#6612100-no-playable-content) | The media does not contain any contents that can be played. |
+| [6612005](../errorcode-avsession.md#6612005-file-does-not-exist) | The file does not exist. |
+| [6612101](../errorcode-avsession.md#6612101-failure-in-reading-media-assets) | The media cannot be read, for example, because of dust or scratches. |
+| [6612006](../errorcode-avsession.md#6612006-no-permission-for-io-operations) | No permission is granted to perform the IO operation. |
+| [6612102](../errorcode-avsession.md#6612102-resource-is-being-used) | This resource is already in use. |
+| [6612007](../errorcode-avsession.md#6612007-operation-not-allowed-by-network-security-configuration) | Access to cleartext HTTP traffic is not allowed by the app's network security configuration. |
+| [6612103](../errorcode-avsession.md#6612103-content-expired) | The content using the validity interval has expired. |
+| [6612000](../errorcode-avsession.md#6612000-unknown-io-error) | An unspecified input/output error occurs. |
+| [6612001](../errorcode-avsession.md#6612001-network-connection-failure) | Network connection failure. |
+| [6612002](../errorcode-avsession.md#6612002-network-timeout) | Network timeout. |
+| [6612003](../errorcode-avsession.md#6612003-invalid-contenttype-http-header) | Invalid "Content-Type" HTTP header. |
+| [6612008](../errorcode-avsession.md#6612008-data-to-read-out-of-range) | Reading data out of the data bound. |
+| [6612104](../errorcode-avsession.md#6612104-requested-content-cannot-be-used) | Using the requested content to play is not allowed. |
+| [6612105](../errorcode-avsession.md#6612105-unable-to-verify-the-allowed-content) | The use of the allowed content cannot be verified. |
+| [6612106](../errorcode-avsession.md#6612106-frequent-resource-usage) | The number of times this content has been used as requested has reached the maximum allowed number of uses. |
+| [6612107](../errorcode-avsession.md#6612107-failure-in-sending-resource-packages-to-the-remote-device) | An error occurs when sending packet from source device to sink device. |
 
 ## onCastControlParsingError
 
@@ -2209,11 +2171,11 @@ Register listeners for cast control parsing error events.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 6613004 | Unsupported feature in the media manifest. |
-| 6613000 | Unspecified error related to content parsing. |
-| 6613001 | Parsing error associated with media container format bit streams. |
-| 6613002 | Parsing error associated with the media manifest. |
-| 6613003 | An error occurs when attempting to extract a file with an unsupported media container format or an unsupported media container feature. |
+| [6613004](../errorcode-avsession.md#6613004-unsupported-feature-in-the-media-manifest) | Unsupported feature in the media manifest. |
+| [6613000](../errorcode-avsession.md#6613000-unknown-parsing-error) | Unspecified error related to content parsing. |
+| [6613001](../errorcode-avsession.md#6613001-invalid-type) | Parsing error associated with media container format bit streams. |
+| [6613002](../errorcode-avsession.md#6613002-error-in-parsing-media-manifest) | Parsing error associated with the media manifest. |
+| [6613003](../errorcode-avsession.md#6613003-unsupported-media-format) | An error occurs when attempting to extract a file with an unsupported media container format or an unsupported media container feature. |
 
 ## onCustomDataChange
 
@@ -2241,7 +2203,7 @@ Register listener for custom data sent from remote device.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 6600101 | Session service exception |
+| [6600101](../errorcode-avsession.md#6600101-session-service-exception) | Session service exception |
 
 ## onEndOfStream
 
@@ -2269,7 +2231,7 @@ Register endOfStream state callback.Application needs update the new media resou
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 6600101 | Session service exception |
+| [6600101](../errorcode-avsession.md#6600101-session-service-exception) | Session service exception |
 
 ## onError
 
@@ -2297,13 +2259,13 @@ Register listeners for playback error events.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 6600101 | Session service exception |
-| 5400102 | Operation not allowed. |
-| 5400103 | I/O error. |
-| 5400101 | No memory. |
-| 5400106 | Unsupport format. |
-| 5400104 | Time out. |
-| 5400105 | Service died. |
+| [6600101](../errorcode-avsession.md#6600101-session-service-exception) | Session service exception |
+| [5400102](../../apis-media-kit/errorcode-media.md#5400102-unsupported-operation) | Operation not allowed. |
+| [5400103](../../apis-media-kit/errorcode-media.md#5400103-io-error) | I/O error. |
+| [5400101](../../apis-media-kit/errorcode-media.md#5400101-memory-allocation-failed) | No memory. |
+| [5400106](../../apis-media-kit/errorcode-media.md#5400106-format-not-supported) | Unsupport format. |
+| [5400104](../../apis-media-kit/errorcode-media.md#5400104-operation-timeout) | Time out. |
+| [5400105](../../apis-media-kit/errorcode-media.md#5400105-play-service-dead) | Service died. |
 
 ## onKeyRequest
 
@@ -2331,7 +2293,7 @@ Register listener for drm key request.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 6600101 | Session service exception |
+| [6600101](../errorcode-avsession.md#6600101-session-service-exception) | Session service exception |
 
 ## onMediaItemChange
 
@@ -2359,7 +2321,7 @@ Register listener for current media item playback events.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 6600101 | Session service exception |
+| [6600101](../errorcode-avsession.md#6600101-session-service-exception) | Session service exception |
 
 ## onPlayNext
 
@@ -2387,7 +2349,7 @@ Register playback command callback sent by remote side or media center.Applicati
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 6600101 | Session service exception |
+| [6600101](../errorcode-avsession.md#6600101-session-service-exception) | Session service exception |
 
 ## onPlayPrevious
 
@@ -2415,7 +2377,7 @@ Register playback command callback sent by remote side or media center.Applicati
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 6600101 | Session service exception |
+| [6600101](../errorcode-avsession.md#6600101-session-service-exception) | Session service exception |
 
 ## onPlaybackStateChange
 
@@ -2444,7 +2406,7 @@ Register playback state changed callback
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 6600101 | Session service exception |
+| [6600101](../errorcode-avsession.md#6600101-session-service-exception) | Session service exception. 1. Required parameters are missing. 2. Provided parameters have invalid types. |
 
 ## onPlaybackStateChangeAll
 
@@ -2452,7 +2414,7 @@ Register playback state changed callback
 onPlaybackStateChangeAll(callback: Callback<AVPlaybackState>): void
 ```
 
-Register playback state changed callback
+Registers a callback to be invoked whenever the playback state changes
 
 **Since:** 23
 
@@ -2472,7 +2434,7 @@ Register playback state changed callback
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 6600101 | Session service exception |
+| [6600101](../errorcode-avsession.md#6600101-session-service-exception) | Session service exception. 1. Required parameters are missing. 2. Provided parameters have invalid types. |
 
 ## onRequestPlay
 
@@ -2500,7 +2462,7 @@ Register requested playback command callback sent by remote side or media center
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 6600101 | Session service exception |
+| [6600101](../errorcode-avsession.md#6600101-session-service-exception) | Session service exception |
 
 ## onSeekDone
 
@@ -2528,7 +2490,7 @@ Register listens for playback events.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 6600101 | Session service exception |
+| [6600101](../errorcode-avsession.md#6600101-session-service-exception) | Session service exception |
 
 ## onValidCommandChange
 
@@ -2556,8 +2518,8 @@ Register the valid commands of the casted session changed callback
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 6600101 | Session service exception. |
-| 6600103 | The session controller does not exist. |
+| [6600101](../errorcode-avsession.md#6600101-session-service-exception) | Session service exception. |
+| [6600103](../errorcode-avsession.md#6600103-session-controller-does-not-exist) | The session controller does not exist. |
 
 ## onVideoSizeChange
 
@@ -2585,7 +2547,7 @@ Register listener for video size change event, used at remote side.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 6600101 | Session service exception |
+| [6600101](../errorcode-avsession.md#6600101-session-service-exception) | Session service exception |
 
 ## prepare
 
@@ -2593,7 +2555,7 @@ Register listener for video size change event, used at remote side.
 prepare(item: AVQueueItem, callback: AsyncCallback<void>): void
 ```
 
-准备播放媒体资源，即进行播放资源的加载和缓冲。结果通过callback异步回调方式返回。
+Load the current item and mediaUri can be null, this is needed for sink media information displaying
 
 **Since:** 10
 
@@ -2607,16 +2569,16 @@ prepare(item: AVQueueItem, callback: AsyncCallback<void>): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| item | [AVQueueItem](arkts-avsession-avsession-avqueueitem-i.md) | Yes | 播放列表中单项的相关属性。 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | 回调函数。当命令发送成功，err为undefined，否则返回错误对象。 |
+| item | [AVQueueItem](arkts-avsession-avsession-avqueueitem-i.md) | Yes | media item info. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | The asyncCallback triggered when the command is executed successfully |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | parameter check failed. 1.Mandatory parameters are left unspecified. 2.Parameter verification failed. |
-| 6600101 | Session service exception |
-| 6600109 | The remote connection is not established |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | parameter check failed. 1.Mandatory parameters are left unspecified. 2.Parameter verification failed. |
+| [6600101](../errorcode-avsession.md#6600101-session-service-exception) | Session service exception |
+| [6600109](../errorcode-avsession.md#6600109-remote-session-does-not-exist) | The remote connection is not established |
 
 ## prepare
 
@@ -2624,7 +2586,7 @@ prepare(item: AVQueueItem, callback: AsyncCallback<void>): void
 prepare(item: AVQueueItem): Promise<void>
 ```
 
-准备播放媒体资源，即进行播放资源的加载和缓冲。结果通过Promise异步回调方式返回。
+Load the current item and mediaUri can be null, this is needed for sink media information displaying
 
 **Since:** 10
 
@@ -2640,21 +2602,21 @@ prepare(item: AVQueueItem): Promise<void>
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| item | [AVQueueItem](arkts-avsession-avsession-avqueueitem-i.md) | Yes | 播放列表中单项的相关属性。 |
+| item | [AVQueueItem](arkts-avsession-avsession-avqueueitem-i.md) | Yes | media item info. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise对象。当命令发送成功，无返回结果，否则返回错误对象。 |
+| Promise&lt;void&gt; | Promise used to return the result. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | parameter check failed. 1.Mandatory parameters are left unspecified. 2.Parameter verification failed. |
-| 6600101 | Session service exception |
-| 6600109 | The remote connection is not established |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | parameter check failed. 1.Mandatory parameters are left unspecified. 2.Parameter verification failed. |
+| [6600101](../errorcode-avsession.md#6600101-session-service-exception) | Session service exception |
+| [6600109](../errorcode-avsession.md#6600109-remote-session-does-not-exist) | The remote connection is not established |
 
 ## processMediaKeyResponse
 
@@ -2662,7 +2624,7 @@ prepare(item: AVQueueItem): Promise<void>
 processMediaKeyResponse(assetId: string, response: Uint8Array): Promise<void>
 ```
 
-在线DRM资源投播时，处理许可证响应。结果通过Promise异步回调方式返回。
+Process the response corresponding to the media key request obtained by the application.
 
 **Since:** 12
 
@@ -2678,21 +2640,21 @@ processMediaKeyResponse(assetId: string, response: Uint8Array): Promise<void>
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| assetId | string | Yes | 媒体ID。 |
-| response | Uint8Array | Yes | 许可证响应。 |
+| assetId | string | Yes | The assetId of resource which provides the response. |
+| response | Uint8Array | Yes | Response corresponding to the request. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise对象，当处理许可证响应成功，无返回结果，否则返回错误对象。 |
+| Promise&lt;void&gt; | void promise when executed successfully |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | parameter check failed. 1.Mandatory parameters are left unspecified. 2.Parameter verification failed. |
-| 6600101 | Session service exception |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | parameter check failed. 1.Mandatory parameters are left unspecified. 2.Parameter verification failed. |
+| [6600101](../errorcode-avsession.md#6600101-session-service-exception) | Session service exception |
 
 ## release
 
@@ -2700,7 +2662,7 @@ processMediaKeyResponse(assetId: string, response: Uint8Array): Promise<void>
 release(callback: AsyncCallback<void>): void
 ```
 
-销毁当前controller，结果通过callback异步回调方式返回。
+Destroy the controller
 
 **Since:** 11
 
@@ -2714,13 +2676,13 @@ release(callback: AsyncCallback<void>): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | 回调函数。当命令执行成功，err为undefined，否则返回错误对象。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | The asyncCallback triggered when the command is executed successfully. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 6600101 | Session service exception. |
+| [6600101](../errorcode-avsession.md#6600101-session-service-exception) | Session service exception. |
 
 ## release
 
@@ -2728,7 +2690,7 @@ release(callback: AsyncCallback<void>): void
 release(): Promise<void>
 ```
 
-销毁当前controller。结果通过Promise异步回调方式返回。
+Destroy the controller
 
 **Since:** 11
 
@@ -2744,13 +2706,13 @@ release(): Promise<void>
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise对象，controller销毁成功，无结果返回，否则返回错误对象。 |
+| Promise&lt;void&gt; | void promise when executed successfully |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 6600101 | Session service exception. |
+| [6600101](../errorcode-avsession.md#6600101-session-service-exception) | Session service exception. |
 
 ## sendControlCommand
 
@@ -2758,7 +2720,7 @@ release(): Promise<void>
 sendControlCommand(command: AVCastControlCommand, callback: AsyncCallback<void>): void
 ```
 
-通过会话控制器发送命令到其对应的会话。结果通过callback异步回调方式返回。
+Send control commands to remote player
 
 **Since:** 10
 
@@ -2772,17 +2734,17 @@ sendControlCommand(command: AVCastControlCommand, callback: AsyncCallback<void>)
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| command | [AVCastControlCommand](arkts-avsession-avsession-avcastcontrolcommand-i.md) | Yes | 会话的相关命令和命令相关参数。 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | 回调函数。当命令发送成功，err为undefined，否则返回错误对象。 |
+| command | [AVCastControlCommand](arkts-avsession-avsession-avcastcontrolcommand-i.md) | Yes | The command to be send. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | The asyncCallback triggered when the command is executed successfully |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | parameter check failed. 1.Mandatory parameters are left unspecified. 2.Parameter verification failed. |
-| 6600101 | Session service exception |
-| 6600109 | The remote connection is not established |
-| 6600105 | Invalid session command |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | parameter check failed. 1.Mandatory parameters are left unspecified. 2.Parameter verification failed. |
+| [6600101](../errorcode-avsession.md#6600101-session-service-exception) | Session service exception |
+| [6600109](../errorcode-avsession.md#6600109-remote-session-does-not-exist) | The remote connection is not established |
+| [6600105](../errorcode-avsession.md#6600105-invalid-session-command) | Invalid session command |
 
 ## sendControlCommand
 
@@ -2790,7 +2752,7 @@ sendControlCommand(command: AVCastControlCommand, callback: AsyncCallback<void>)
 sendControlCommand(command: AVCastControlCommand): Promise<void>
 ```
 
-通过控制器发送命令到其对应的会话。结果通过Promise异步回调方式返回。
+Send control commands to remote player
 
 **Since:** 10
 
@@ -2806,22 +2768,22 @@ sendControlCommand(command: AVCastControlCommand): Promise<void>
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| command | [AVCastControlCommand](arkts-avsession-avsession-avcastcontrolcommand-i.md) | Yes | 会话的相关命令和命令相关参数。 |
+| command | [AVCastControlCommand](arkts-avsession-avsession-avcastcontrolcommand-i.md) | Yes | The command to be send. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise对象。当命令发送成功，无返回结果，否则返回错误对象。 |
+| Promise&lt;void&gt; | Promise used to return the result. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | parameter check failed. 1.Mandatory parameters are left unspecified. 2.Parameter verification failed. |
-| 6600101 | Session service exception |
-| 6600109 | The remote connection is not established |
-| 6600105 | Invalid session command |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | parameter check failed. 1.Mandatory parameters are left unspecified. 2.Parameter verification failed. |
+| [6600101](../errorcode-avsession.md#6600101-session-service-exception) | Session service exception |
+| [6600109](../errorcode-avsession.md#6600109-remote-session-does-not-exist) | The remote connection is not established |
+| [6600105](../errorcode-avsession.md#6600105-invalid-session-command) | Invalid session command |
 
 ## sendCustomData
 
@@ -2829,7 +2791,7 @@ sendControlCommand(command: AVCastControlCommand): Promise<void>
 sendCustomData(data: Record<string, Object>): Promise<void>
 ```
 
-发送私有数据到远端设备。使用Promise异步回调。
+Sends custom data to a remote device.
 
 **Since:** 20
 
@@ -2845,19 +2807,19 @@ sendCustomData(data: Record<string, Object>): Promise<void>
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| data | [Record](../../apis-default/arkts-apis/arkts-record-t.md)&lt;string, Object&gt; | Yes | 应用程序填充的自定义数据。 &lt;br&gt;服务端仅解析key：string为'customData'，且Object为string类型的对象。 |
+| data | [Record](../../apis-default/arkts-apis/arkts-record-t.md)&lt;string, Object&gt; | Yes | Custom data populated by the application. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise对象，无返回结果。 |
+| Promise&lt;void&gt; | Promise that returns no value. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 6600101 | Session service exception. |
+| [6600101](../errorcode-avsession.md#6600101-session-service-exception) | Session service exception. You are advised to:1.Scheduled retry.2.Destroy the current session or session controller and re-create it. |
 
 ## start
 
@@ -2865,13 +2827,7 @@ sendCustomData(data: Record<string, Object>): Promise<void>
 start(item: AVQueueItem, callback: AsyncCallback<void>): void
 ```
 
-启动播放某个媒体资源。结果通过callback异步回调方式返回。
-
-> **说明：**
-> 
-> 在音视频投播场景下，当应用程序顺序调用
-> [prepare](arkts-avsession-avsession-avcastcontroller-i.md#prepare)和start接口，且
-> assetId不变时，如果prepare已经传入有效的mediaUri或fdSrc，则start接口将复用prepare阶段的完整的AVMediaDescription对象信息。
+Play the current item, should contain mediaUri otherwise the playback will fail.
 
 **Since:** 10
 
@@ -2885,16 +2841,16 @@ start(item: AVQueueItem, callback: AsyncCallback<void>): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| item | [AVQueueItem](arkts-avsession-avsession-avqueueitem-i.md) | Yes | 播放列表中单项的相关属性。 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | 回调函数。当命令发送成功，err为undefined，否则返回错误对象。 |
+| item | [AVQueueItem](arkts-avsession-avsession-avqueueitem-i.md) | Yes | media item info. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | The asyncCallback triggered when the command is executed successfully |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | parameter check failed. 1.Mandatory parameters are left unspecified. 2.Parameter verification failed. |
-| 6600101 | Session service exception |
-| 6600109 | The remote connection is not established |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | parameter check failed. 1.Mandatory parameters are left unspecified. 2.Parameter verification failed. |
+| [6600101](../errorcode-avsession.md#6600101-session-service-exception) | Session service exception |
+| [6600109](../errorcode-avsession.md#6600109-remote-session-does-not-exist) | The remote connection is not established |
 
 ## start
 
@@ -2902,13 +2858,7 @@ start(item: AVQueueItem, callback: AsyncCallback<void>): void
 start(item: AVQueueItem): Promise<void>
 ```
 
-启动播放某个媒体资源。结果通过Promise异步回调方式返回。
-
-> **说明：**
-> 
-> 在音视频投播场景下，当应用程序顺序调用
-> [prepare](arkts-avsession-avsession-avcastcontroller-i.md#prepare)和start接口，且
-> assetId不变时，如果prepare已经传入有效的mediaUri或fdSrc，则start接口将复用prepare阶段的完整的AVMediaDescription对象信息。
+Play the current item, should contain mediaUri otherwise the playback will fail.
 
 **Since:** 10
 
@@ -2924,56 +2874,19 @@ start(item: AVQueueItem): Promise<void>
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| item | [AVQueueItem](arkts-avsession-avsession-avqueueitem-i.md) | Yes | 播放列表中单项的相关属性。 |
+| item | [AVQueueItem](arkts-avsession-avsession-avqueueitem-i.md) | Yes | media item info. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise对象。当命令发送成功，无返回结果，否则返回错误对象。 |
+| Promise&lt;void&gt; | Promise used to return the result. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | parameter check failed. 1.Mandatory parameters are left unspecified. 2.Parameter verification failed. |
-| 6600101 | Session service exception |
-| 6600109 | The remote connection is not established |
-
-## update
-
-```TypeScript
-update(item: AVQueueItem): Promise<void>
-```
-
-更新投播媒体信息
-
-**Since:** 26.0.0
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
-
-**Model restriction:** This API can be used only in the stage model.
-
-<!--Device-AVCastController-update(item: AVQueueItem): Promise<void>--><!--Device-AVCastController-update(item: AVQueueItem): Promise<void>-End-->
-
-**System capability:** SystemCapability.Multimedia.AVSession.AVCast
-
-**Parameters:**
-
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| item | [AVQueueItem](arkts-avsession-avsession-avqueueitem-i.md) | Yes | 媒体信息item |
-
-**Return value:**
-
-| Type | Description |
-| --- | --- |
-| Promise&lt;void&gt; | 通过promise回调成功 |
-
-**Error codes:**
-
-| Error Code ID | Error Message |
-| --- | --- |
-| 6600101 | Session service exception |
-| 6600109 | The remote connection is not established |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | parameter check failed. 1.Mandatory parameters are left unspecified. 2.Parameter verification failed. |
+| [6600101](../errorcode-avsession.md#6600101-session-service-exception) | Session service exception |
+| [6600109](../errorcode-avsession.md#6600109-remote-session-does-not-exist) | The remote connection is not established |
 

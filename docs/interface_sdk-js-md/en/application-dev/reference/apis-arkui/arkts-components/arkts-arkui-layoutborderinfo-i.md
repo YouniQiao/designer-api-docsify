@@ -1,6 +1,6 @@
 # LayoutBorderInfo
 
-子组件边框信息
+Provides the border information of the child component.
 
 **Since:** 9
 
@@ -20,7 +20,7 @@
 borderWidth: EdgeWidths
 ```
 
-子组件边框宽度信息
+Edge widths in different directions of the component.
 
 **Type:** [EdgeWidths](../arkts-apis/arkts-arkui-units-edgewidths-i.md)
 
@@ -44,7 +44,7 @@ borderWidth: EdgeWidths
 margin: Margin
 ```
 
-子组件外边距信息
+Margin values in different directions of the component.
 
 **Type:** [Margin](../arkts-apis/arkts-arkui-margin-t.md)
 
@@ -68,7 +68,7 @@ margin: Margin
 padding: Padding
 ```
 
-子组件内边距信息
+Padding values in different directions of the component.
 
 **Type:** [Padding](../arkts-apis/arkts-arkui-units-padding-i.md)
 

@@ -1,6 +1,6 @@
 # ForegroundEffectOptions
 
-前景效果参数。
+Describes the foreground effect.
 
 **Since:** 12
 
@@ -16,9 +16,9 @@
 radius: number
 ```
 
-模糊半径，取值范围：[0, +∞)。
+Blur radius. The value range is [0, +∞).
 
-仅在组件范围内生效，与其他接口连用时超出组件范围的效果无法生效。
+This parameter takes effect only within the component scope. When it is used with other APIs, the effect beyond the component scope does not apply.
 
 **Type:** number
 

@@ -1,6 +1,6 @@
 # AmbientTemperatureResponse
 
-温度传感器数据，继承于[Response](arkts-sensorservice-sensor-response-i.md)。
+Describes the ambient temperature sensor data. It extends from [Response](arkts-sensorservice-sensor-response-i.md).
 
 **Inheritance/Implementation:** AmbientTemperatureResponse extends [Response](arkts-sensorservice-sensor-response-i.md)
 
@@ -24,7 +24,7 @@ import { sensor } from 'kits/@kit.SensorServiceKit';
 temperature: double
 ```
 
-环境温度。单位：℃（摄氏度）。
+Ambient temperature, in degree Celsius.
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：double
 

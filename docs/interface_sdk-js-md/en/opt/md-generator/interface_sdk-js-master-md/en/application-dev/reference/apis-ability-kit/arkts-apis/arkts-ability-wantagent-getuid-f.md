@@ -1,0 +1,211 @@
+# getUid
+
+## Modules to Import
+
+```TypeScript
+import { WantAgent } from 'kits/@kit.AbilityKit';
+```
+
+## getUid
+
+```TypeScript
+function getUid(agent: WantAgent, callback: AsyncCallback<number>): void
+```
+
+Obtains the user ID of a WantAgent object.This API uses an asynchronous callback to return the result.
+
+**Since:** 9
+
+**Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-wantAgent-function getUid(agent: WantAgent, callback: AsyncCallback<int>): void--><!--Device-wantAgent-function getUid(agent: WantAgent, callback: AsyncCallback<int>): void-End-->
+
+**System capability:** SystemCapability.Ability.AbilityRuntime.Core
+
+**Parameters:**
+
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| agent | [WantAgent](../../apis-background-tasks-kit/arkts-apis/arkts-backgroundtasks-reminderagent-wantagent-i.md) | Yes |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;number&gt; | Yes |
+
+**Error codes:**
+
+| Error Code ID |
+| --- |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [16000007](../errorcode-ability.md#16000007-service-unresponsive) |
+| [16000151](../errorcode-ability.md#16000151-invalid-wantagent-object) |
+
+## Examples
+
+```TypeScript
+import { wantAgent, Want } from '@kit.AbilityKit';
+import type { WantAgent } from '@kit.AbilityKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+// WantAgent object.
+let wantAgentData: WantAgent;
+// WantAgentInfo object.
+let wantAgentInfo: wantAgent.WantAgentInfo = {
+  wants: [
+    {
+      deviceId: 'deviceId',
+      bundleName: 'com.example.myapplication',
+      abilityName: 'EntryAbility',
+      action: 'action1',
+      entities: ['entity1'],
+      type: 'MIMETYPE',
+      uri: 'key={true,true,false}',
+      parameters:
+      {
+        mykey0: 2222,
+        mykey1: [1, 2, 3],
+        mykey2: '[1, 2, 3]',
+        mykey3: 'ssssssssssssssssssssssssss',
+        mykey4: [false, true, false],
+        mykey5: ['qqqqq', 'wwwwww', 'aaaaaaaaaaaaaaaaa'],
+        mykey6: true,
+      }
+    } as Want
+  ],
+  actionType: wantAgent.OperationType.START_ABILITY,
+  requestCode: 0,
+  wantAgentFlags: [wantAgent.WantAgentFlags.UPDATE_PRESENT_FLAG]
+};
+
+// getWantAgent callback.
+function getWantAgentCallback(err: BusinessError, data: WantAgent) {
+  if (err) {
+    console.error(`getWantAgent failed, code: ${err.code}, message: ${err.message}.`);
+  } else {
+    wantAgentData = data;
+  }
+  // getUid callback.
+  let getUidCallback = (err: BusinessError, data: number) => {
+    if (err) {
+      console.error(`getUid failed, err code: ${err.code}, err msg: ${err.message}.`);
+    } else {
+      console.info(`getUid ok, data: ${JSON.stringify(data)}.`);
+    }
+  }
+  try {
+    wantAgent.getUid(wantAgentData, getUidCallback);
+  } catch (err) {
+    let code = (err as BusinessError).code;
+    let msg = (err as BusinessError).message;
+    console.error(`getUid failed, err code: ${code}, err msg: ${msg}.`);
+  }
+}
+
+try {
+  wantAgent.getWantAgent(wantAgentInfo, getWantAgentCallback);
+} catch (err) {
+  let code = (err as BusinessError).code;
+  let msg = (err as BusinessError).message;
+  console.error(`getWantAgent failed, err code: ${code}, err msg: ${msg}.`);
+}
+```
+
+
+## getUid
+
+```TypeScript
+function getUid(agent: WantAgent): Promise<number>
+```
+
+Obtains the user ID of a WantAgent object.This API uses a promise to return the result.
+
+**Since:** 9
+
+**Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-wantAgent-function getUid(agent: WantAgent): Promise<int>--><!--Device-wantAgent-function getUid(agent: WantAgent): Promise<int>-End-->
+
+**System capability:** SystemCapability.Ability.AbilityRuntime.Core
+
+**Parameters:**
+
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| agent | [WantAgent](../../apis-background-tasks-kit/arkts-apis/arkts-backgroundtasks-reminderagent-wantagent-i.md) | Yes |
+
+**Return value:**
+
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| Promise&lt;number&gt; |
+
+**Error codes:**
+
+| Error Code ID |
+| --- |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [16000007](../errorcode-ability.md#16000007-service-unresponsive) |
+| [16000151](../errorcode-ability.md#16000151-invalid-wantagent-object) |
+
+## Examples
+
+```TypeScript
+import { wantAgent, Want } from '@kit.AbilityKit';
+import type { WantAgent } from '@kit.AbilityKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+// WantAgent object.
+let wantAgentData: WantAgent;
+// WantAgentInfo object.
+let wantAgentInfo: wantAgent.WantAgentInfo = {
+  wants: [
+    {
+      deviceId: 'deviceId',
+      bundleName: 'com.example.myapplication',
+      abilityName: 'EntryAbility',
+      action: 'action1',
+      entities: ['entity1'],
+      type: 'MIMETYPE',
+      uri: 'key={true,true,false}',
+      parameters:
+      {
+        mykey0: 2222,
+        mykey1: [1, 2, 3],
+        mykey2: '[1, 2, 3]',
+        mykey3: 'ssssssssssssssssssssssssss',
+        mykey4: [false, true, false],
+        mykey5: ['qqqqq', 'wwwwww', 'aaaaaaaaaaaaaaaaa'],
+        mykey6: true,
+      }
+    } as Want
+  ],
+  actionType: wantAgent.OperationType.START_ABILITY,
+  requestCode: 0,
+  wantAgentFlags: [wantAgent.WantAgentFlags.UPDATE_PRESENT_FLAG]
+};
+
+// getWantAgent callback.
+function getWantAgentCallback(err: BusinessError, data: WantAgent) {
+  if (err) {
+    console.error(`getWantAgent failed, err code: ${err.code}, err msg: ${err.message}.`);
+  } else {
+    wantAgentData = data;
+  }
+  try {
+    wantAgent.getUid(wantAgentData).then((data) => {
+      console.info(`getUid ok, data: ${JSON.stringify(data)}.`);
+    }).catch((err: BusinessError) => {
+      console.error(`getUid failed, err code: ${err.code}, err msg: ${err.message}.`);
+    });
+  } catch (err) {
+    let code = (err as BusinessError).code;
+    let msg = (err as BusinessError).message;
+    console.error(`getUid failed, err code: ${code}, err msg: ${msg}.`);
+  }
+}
+
+try {
+  wantAgent.getWantAgent(wantAgentInfo, getWantAgentCallback);
+} catch (err) {
+  let code = (err as BusinessError).code;
+  let msg = (err as BusinessError).message;
+  console.error(`getWantAgent failed, err code: ${code}, err msg: ${msg}.`);
+}
+```

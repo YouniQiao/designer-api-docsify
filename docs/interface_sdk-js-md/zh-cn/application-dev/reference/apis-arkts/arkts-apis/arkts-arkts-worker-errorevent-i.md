@@ -12,12 +12,6 @@
 
 **系统能力：** SystemCapability.Utils.Lang
 
-## 导入模块
-
-```TypeScript
-import { MessageEvents, PostMessageOptions, MessageEvent, Priority, WorkerEventTarget, ThreadWorkerPriority, ThreadWorkerGlobalScope, DedicatedWorkerGlobalScope, ErrorEvent, Event, EventListener, WorkerOptions, EventTarget, WorkerEventListener } from 'kits/@kit.ArkTS';
-```
-
 ## colno
 
 ```TypeScript
@@ -44,7 +38,7 @@ readonly colno: number
 readonly error: Object
 ```
 
-异常类型。
+异常对象。
 
 **类型：** Object
 

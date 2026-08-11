@@ -32,7 +32,7 @@ export declare function ToolBarItem(
 
 | 类型 | 说明 |
 | --- | --- |
-| [ToolBarItemAttribute](arkts-arkui-toolbar-toolbaritemattribute-i.md) |  |
+| [ToolBarItemAttribute](../arkts-components/arkts-arkui-toolbaritem-attribute.md) |  |
 
 
 ## ToolBarItem
@@ -69,5 +69,5 @@ export declare function ToolBarItem(
 
 | 类型 | 说明 |
 | --- | --- |
-| [ToolBarItemAttribute](arkts-arkui-toolbar-toolbaritemattribute-i.md) | ToolBarItem的属性。 |
+| [ToolBarItemAttribute](../arkts-components/arkts-arkui-toolbaritem-attribute.md) | ToolBarItem的属性。 |
 

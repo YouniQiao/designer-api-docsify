@@ -1,6 +1,7 @@
 # SaveOccasionFlag
 
-保存条件标志，[enableAppRecovery](arkts-ability-apprecovery-enableapprecovery-f.md#enableapprecovery)接口状态保存时的选项参数，该类型为枚举。
+Enumerates the scenarios for saving the application state. This enum is used as an input parameter of   
+[enableAppRecovery](arkts-ability-apprecovery-enableapprecovery-f.md#enableapprecovery).
 
 **Since:** 9
 
@@ -16,7 +17,7 @@
 SAVE_WHEN_ERROR = 0x0001
 ```
 
-当发生应用故障时保存。
+Saving the application state when an application fault occurs.
 
 **Since:** 9
 
@@ -34,7 +35,7 @@ SAVE_WHEN_ERROR = 0x0001
 SAVE_WHEN_BACKGROUND = 0x0002
 ```
 
-当应用切入后台时保存。
+Saving the application state when the application is switched to the background.
 
 **Since:** 9
 

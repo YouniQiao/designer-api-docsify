@@ -10,12 +10,6 @@
 
 **系统能力：** SystemCapability.DistributedDataManager.KVStore.Core
 
-## 导入模块
-
-```TypeScript
-import { distributedKVStore } from 'kits/@kit.ArkData';
-```
-
 ## and
 
 ```TypeScript
@@ -51,11 +45,10 @@ try {
       query.notEqualTo('field', 'value1');
       query.and();
       query.notEqualTo('field', 'value2');
-      console.info('query is ' + query.getSqlLike());
+      console.info(`query is ` + query.getSqlLike());
     }
     query = null;
 } catch (err) {
-    let error = err as BusinessError;
     console.error(`An unexpected error occurred. Code: ${error.code}, message: ${error.message}`);
 }
 ```
@@ -95,11 +88,10 @@ try {
       query.beginGroup();
       query.isNotNull('field');
       query.endGroup();
-      console.info('query is ' + query.getSqlLike());
+      console.info(`query is ` + query.getSqlLike());
     }
     query = null;
 } catch (err) {
-    let error = err as BusinessError;
     console.error(`An unexpected error occurred. Code: ${error.code}, message: ${error.message}`);
 }
 ```
@@ -166,7 +158,7 @@ deviceId(deviceId: string): Query
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 401 | Parameter error.Possible causes:1.Mandatory parameters are left unspecified; &lt;br&gt;2.Incorrect parameters types; &lt;br&gt;3.Parameter verification failed. |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error.Possible causes:1.Mandatory parameters are left unspecified; &lt;br&gt;2.Incorrect parameters types; &lt;br&gt;3.Parameter verification failed. |
 
 ## 示例
 
@@ -181,7 +173,7 @@ try {
     }
 } catch (err) {
     let error = err as BusinessError;
-    console.error(`An unexpected error occurred. Code: ${error.code}, message: ${error.message}`);
+    console.error(`duplicated calls should be ok. Code: ${error.code}, message: ${error.message}`);
 }
 ```
 
@@ -220,11 +212,10 @@ try {
       query.beginGroup();
       query.isNotNull('field');
       query.endGroup();
-      console.info('query is ' + query.getSqlLike());
+      console.info(`query is ` + query.getSqlLike());
     }
     query = null;
 } catch (err) {
-    let error = err as BusinessError;
     console.error(`An unexpected error occurred. Code: ${error.code}, message: ${error.message}`);
 }
 ```
@@ -277,7 +268,7 @@ equalTo(field: string, value: long | double | string | boolean): Query
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 401 | Parameter error.Possible causes:1.Mandatory parameters are left unspecified; &lt;br&gt;2.Incorrect parameters types; &lt;br&gt;3.Parameter verification failed. |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error.Possible causes:1.Mandatory parameters are left unspecified; &lt;br&gt;2.Incorrect parameters types; &lt;br&gt;3.Parameter verification failed. |
 
 ## getSqlLike
 
@@ -315,7 +306,6 @@ try {
       console.info(`GetSqlLike sql= ${sql1}`);
     }
 } catch (err) {
-    let error = err as BusinessError;
     console.error(`An unexpected error occurred. Code: ${error.code}, message: ${error.message}`);
 }
 ```
@@ -368,7 +358,7 @@ greaterThan(field: string, value: long | double | string | boolean): Query
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 401 | Parameter error.Possible causes:1.Mandatory parameters are left unspecified; &lt;br&gt;2.Incorrect parameters types; &lt;br&gt;3.Parameter verification failed. |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error.Possible causes:1.Mandatory parameters are left unspecified; &lt;br&gt;2.Incorrect parameters types; &lt;br&gt;3.Parameter verification failed. |
 
 ## greaterThanOrEqualTo
 
@@ -418,7 +408,7 @@ greaterThanOrEqualTo(field: string, value: long | double | string): Query
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 401 | Parameter error.Possible causes:1.Mandatory parameters are left unspecified; &lt;br&gt;2.Incorrect parameters types; &lt;br&gt;3.Parameter verification failed. |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error.Possible causes:1.Mandatory parameters are left unspecified; &lt;br&gt;2.Incorrect parameters types; &lt;br&gt;3.Parameter verification failed. |
 
 ## inNumber
 
@@ -468,7 +458,7 @@ inNumber(field: string, valueList: long[] | double[]): Query
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 401 | Parameter error.Possible causes:1.Mandatory parameters are left unspecified; &lt;br&gt;2.Incorrect parameters types; &lt;br&gt;3.Parameter verification failed. |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error.Possible causes:1.Mandatory parameters are left unspecified; &lt;br&gt;2.Incorrect parameters types; &lt;br&gt;3.Parameter verification failed. |
 
 ## inString
 
@@ -512,7 +502,7 @@ inString(field: string, valueList: string[]): Query
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 401 | Parameter error.Possible causes:1.Mandatory parameters are left unspecified; &lt;br&gt;2.Incorrect parameters types; &lt;br&gt;3.Parameter verification failed. |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error.Possible causes:1.Mandatory parameters are left unspecified; &lt;br&gt;2.Incorrect parameters types; &lt;br&gt;3.Parameter verification failed. |
 
 ## 示例
 
@@ -528,7 +518,7 @@ try {
     query = null;
 } catch (err) {
     let error = err as BusinessError;
-    console.error(`An unexpected error occurred. Code: ${error.code}, message: ${error.message}`);
+    console.error(`duplicated calls should be ok. Code: ${error.code}, message: ${error.message}`);
 }
 ```
 
@@ -573,7 +563,7 @@ isNotNull(field: string): Query
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 401 | Parameter error.Possible causes:1.Mandatory parameters are left unspecified; &lt;br&gt;2.Incorrect parameters types. |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error.Possible causes:1.Mandatory parameters are left unspecified; &lt;br&gt;2.Incorrect parameters types. |
 
 ## 示例
 
@@ -589,7 +579,7 @@ try {
   query = null;
 } catch (err) {
   let error = err as BusinessError;
-  console.error(`An unexpected error occurred. Code: ${error.code}, message: ${error.message}`);
+  console.error(`duplicated calls should be ok. Code: ${error.code}, message: ${error.message}`);
 }
 ```
 
@@ -634,7 +624,7 @@ isNull(field: string): Query
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 401 | Parameter error.Possible causes:1.Mandatory parameters are left unspecified; &lt;br&gt;2.Incorrect parameters types; &lt;br&gt;3.Parameter verification failed. |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error.Possible causes:1.Mandatory parameters are left unspecified; &lt;br&gt;2.Incorrect parameters types; &lt;br&gt;3.Parameter verification failed. |
 
 ## 示例
 
@@ -650,7 +640,7 @@ try {
     query = null;
 } catch (err) {
     let error = err as BusinessError;
-    console.error(`An unexpected error occurred. Code: ${error.code}, message: ${error.message}`);
+    console.error(`duplicated calls should be ok. Code: ${error.code}, message: ${error.message}`);
 }
 ```
 
@@ -702,7 +692,7 @@ lessThan(field: string, value: long | double | string): Query
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 401 | Parameter error.Possible causes:1.Mandatory parameters are left unspecified; &lt;br&gt;2.Incorrect parameters types; &lt;br&gt;3.Parameter verification failed. |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error.Possible causes:1.Mandatory parameters are left unspecified; &lt;br&gt;2.Incorrect parameters types; &lt;br&gt;3.Parameter verification failed. |
 
 ## lessThanOrEqualTo
 
@@ -752,7 +742,7 @@ lessThanOrEqualTo(field: string, value: long | double | string): Query
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 401 | Parameter error.Possible causes:1.Mandatory parameters are left unspecified; &lt;br&gt;2.Incorrect parameters types; &lt;br&gt;3.Parameter verification failed. |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error.Possible causes:1.Mandatory parameters are left unspecified; &lt;br&gt;2.Incorrect parameters types; &lt;br&gt;3.Parameter verification failed. |
 
 ## like
 
@@ -796,7 +786,7 @@ like(field: string, value: string): Query
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 401 | Parameter error.Possible causes:1.Mandatory parameters are left unspecified; &lt;br&gt;2.Incorrect parameters types; &lt;br&gt;3.Parameter verification failed. |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error.Possible causes:1.Mandatory parameters are left unspecified; &lt;br&gt;2.Incorrect parameters types; &lt;br&gt;3.Parameter verification failed. |
 
 ## 示例
 
@@ -812,7 +802,7 @@ try {
     query = null;
 } catch (err) {
     let error = err as BusinessError;
-    console.error(`An unexpected error occurred. Code: ${error.code}, message: ${error.message}`);
+    console.error(`duplicated calls should be ok. Code: ${error.code}, message: ${error.message}`);
 }
 ```
 
@@ -857,7 +847,7 @@ limit(total: int, offset: int): Query
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 401 | Parameter error.Possible causes:1.Mandatory parameters are left unspecified; &lt;br&gt;2.Incorrect parameters types. |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error.Possible causes:1.Mandatory parameters are left unspecified; &lt;br&gt;2.Incorrect parameters types. |
 
 ## 示例
 
@@ -876,7 +866,7 @@ try {
   query = null;
 } catch (err) {
   let error = err as BusinessError;
-  console.error(`An unexpected error occurred. Code: ${error.code}, message: ${error.message}`);
+  console.error(`duplicated calls should be ok. Code: ${error.code}, message: ${error.message}`);
 }
 ```
 
@@ -928,7 +918,7 @@ notEqualTo(field: string, value: long | double | string | boolean): Query
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 401 | Parameter error.Possible causes:1.Mandatory parameters are left unspecified; &lt;br&gt;2.Incorrect parameters types; &lt;br&gt;3.Parameter verification failed. |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error.Possible causes:1.Mandatory parameters are left unspecified; &lt;br&gt;2.Incorrect parameters types; &lt;br&gt;3.Parameter verification failed. |
 
 ## notInNumber
 
@@ -978,7 +968,7 @@ notInNumber(field: string, valueList: long[] | double[]): Query
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 401 | Parameter error.Possible causes:1.Mandatory parameters are left unspecified; &lt;br&gt;2.Incorrect parameters types; &lt;br&gt;3.Parameter verification failed. |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error.Possible causes:1.Mandatory parameters are left unspecified; &lt;br&gt;2.Incorrect parameters types; &lt;br&gt;3.Parameter verification failed. |
 
 ## notInString
 
@@ -1022,7 +1012,7 @@ notInString(field: string, valueList: string[]): Query
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 401 | Parameter error.Possible causes:1.Mandatory parameters are left unspecified; &lt;br&gt;2.Incorrect parameters types; &lt;br&gt;3.Parameter verification failed. |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error.Possible causes:1.Mandatory parameters are left unspecified; &lt;br&gt;2.Incorrect parameters types; &lt;br&gt;3.Parameter verification failed. |
 
 ## 示例
 
@@ -1038,7 +1028,7 @@ try {
     query = null;
 } catch (err) {
     let error = err as BusinessError;
-    console.error(`An unexpected error occurred. Code: ${error.code}, message: ${error.message}`);
+    console.error(`duplicated calls should be ok. Code: ${error.code}, message: ${error.message}`);
 }
 ```
 
@@ -1077,11 +1067,10 @@ try {
       query.notEqualTo('field', 'value1');
       query.or();
       query.notEqualTo('field', 'value2');
-      console.info('query is ' + query.getSqlLike());
+      console.info(`query is ` + query.getSqlLike());
     }
     query = null;
 } catch (err) {
-    let error = err as BusinessError;
     console.error(`An unexpected error occurred. Code: ${error.code}, message: ${error.message}`);
 }
 ```
@@ -1127,7 +1116,7 @@ orderByAsc(field: string): Query
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 401 | Parameter error.Possible causes:1.Mandatory parameters are left unspecified; &lt;br&gt;2.Incorrect parameters types; &lt;br&gt;3.Parameter verification failed. |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error.Possible causes:1.Mandatory parameters are left unspecified; &lt;br&gt;2.Incorrect parameters types; &lt;br&gt;3.Parameter verification failed. |
 
 ## 示例
 
@@ -1144,7 +1133,7 @@ try {
     query = null;
 } catch (err) {
     let error = err as BusinessError;
-    console.error(`An unexpected error occurred. Code: ${error.code}, message: ${error.message}`);
+    console.error(`duplicated calls should be ok. Code: ${error.code}, message: ${error.message}`);
 }
 ```
 
@@ -1189,7 +1178,7 @@ orderByDesc(field: string): Query
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 401 | Parameter error.Possible causes:1.Mandatory parameters are left unspecified; &lt;br&gt;2.Incorrect parameters types; &lt;br&gt;3.Parameter verification failed. |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error.Possible causes:1.Mandatory parameters are left unspecified; &lt;br&gt;2.Incorrect parameters types; &lt;br&gt;3.Parameter verification failed. |
 
 ## 示例
 
@@ -1206,7 +1195,7 @@ try {
     query = null;
 } catch (err) {
     let error = err as BusinessError;
-    console.error(`An unexpected error occurred. Code: ${error.code}, message: ${error.message}`);
+    console.error(`duplicated calls should be ok. Code: ${error.code}, message: ${error.message}`);
 }
 ```
 
@@ -1244,7 +1233,7 @@ prefixKey(prefix: string): Query
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 401 | Parameter error.Possible causes:1.Mandatory parameters are left unspecified; &lt;br&gt;2.Incorrect parameters types. |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error.Possible causes:1.Mandatory parameters are left unspecified; &lt;br&gt;2.Incorrect parameters types. |
 
 ## 示例
 
@@ -1261,7 +1250,7 @@ try {
     query = null;
 } catch (err) {
     let error = err as BusinessError;
-    console.error(`An unexpected error occurred. Code: ${error.code}, message: ${error.message}`);
+    console.error(`duplicated calls should be ok. Code: ${error.code}, message: ${error.message}`);
 }
 ```
 
@@ -1298,13 +1287,12 @@ try {
   let query: distributedKVStore.Query | null = new distributedKVStore.Query();
   if (query != null) {
     query.equalTo('key', 'value');
-    console.info('query is ' + query.getSqlLike());
+    console.info(`query is ` + query.getSqlLike());
     query.reset();
-    console.info('query is ' + query.getSqlLike());
+    console.info(`query is ` + query.getSqlLike());
   }
   query = null;
 } catch (err) {
-  let error = err as BusinessError;
   console.error(`An unexpected error occurred. Code: ${error.code}, message: ${error.message}`);
 }
 ```
@@ -1343,7 +1331,7 @@ setSuggestIndex(index: string): Query
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 401 | Parameter error.Possible causes:1.Mandatory parameters are left unspecified; &lt;br&gt;2.Incorrect parameters types. |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error.Possible causes:1.Mandatory parameters are left unspecified; &lt;br&gt;2.Incorrect parameters types. |
 
 ## 示例
 
@@ -1360,7 +1348,7 @@ try {
     query = null;
 } catch (err) {
     let error = err as BusinessError;
-    console.error(`An unexpected error occurred. Code: ${error.code}, message: ${error.message}`);
+    console.error(`duplicated calls should be ok. Code: ${error.code}, message: ${error.message}`);
 }
 ```
 
@@ -1406,7 +1394,7 @@ unlike(field: string, value: string): Query
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 401 | Parameter error.Possible causes:1.Mandatory parameters are left unspecified; &lt;br&gt;2.Incorrect parameters types; &lt;br&gt;3.Parameter verification failed. |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error.Possible causes:1.Mandatory parameters are left unspecified; &lt;br&gt;2.Incorrect parameters types; &lt;br&gt;3.Parameter verification failed. |
 
 ## 示例
 
@@ -1422,7 +1410,7 @@ try {
     query = null;
 } catch (err) {
     let error = err as BusinessError;
-    console.error(`An unexpected error occurred. Code: ${error.code}, message: ${error.message}`);
+    console.error(`duplicated calls should be ok. Code: ${error.code}, message: ${error.message}`);
 }
 ```
 

@@ -1,6 +1,6 @@
 # DeviceNameChangeResult
 
-设备名字改变结果信息。
+Device name change result.
 
 **Since:** 23
 
@@ -22,7 +22,7 @@ import { distributedDeviceManager } from 'kits/@kit.DistributedServiceKit';
 deviceName: string
 ```
 
-设备名字。
+Device name.
 
 **Type:** string
 

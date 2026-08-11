@@ -1,11 +1,5 @@
 # clearMemoryCache
 
-## 导入模块
-
-```TypeScript
-import { cacheDownload } from 'kits/@kit.BasicServicesKit';
-```
-
 ## clearMemoryCache
 
 ```TypeScript
@@ -24,9 +18,15 @@ function clearMemoryCache(): void
 
 ## 示例
 
+ArkTS-Dyn示例：
+
 ```TypeScript
-import { cacheDownload } from '@kit.BasicServicesKit';
-  
+cacheDownload.clearMemoryCache();
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
 cacheDownload.clearMemoryCache();
 ```
 

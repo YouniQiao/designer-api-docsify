@@ -1,17 +1,14 @@
 # GridLayoutAlgorithm
 
-网格布局算法类。
-
-> **说明：**
-> 
-> GridLayoutAlgorithm类对象可以作为
-> [DynamicLayout](../../../reference/apis-arkui/arkui-ts/ts-container-dynamiclayout.md)组件的入参指定布局算法。
+Defines the grid layout algorithm.
 
 **Inheritance/Implementation:** GridLayoutAlgorithm implements [LayoutAlgorithm](arkts-arkui-layoutalgorithm-i.md)
 
 **Since:** 24
 
 **ArkTS mode:** ArkTS-Sta only, since version 24.
+
+**Decorator:** @ObservedV2
 
 <!--Device-unnamed-export declare class GridLayoutAlgorithm implements LayoutAlgorithm--><!--Device-unnamed-export declare class GridLayoutAlgorithm implements LayoutAlgorithm-End-->
 
@@ -23,11 +20,13 @@
 constructor(option?: GridLayoutAlgorithmOptions)
 ```
 
-网格布局算法类的构造函数。
+Constructor.
 
 **Since:** 24
 
 **ArkTS mode:** ArkTS-Sta only, since version 24.
+
+**Model restriction:** This API can be used only in the stage model.
 
 <!--Device-GridLayoutAlgorithm-constructor(option?: GridLayoutAlgorithmOptions)--><!--Device-GridLayoutAlgorithm-constructor(option?: GridLayoutAlgorithmOptions)-End-->
 
@@ -37,7 +36,7 @@ constructor(option?: GridLayoutAlgorithmOptions)
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| option | [GridLayoutAlgorithmOptions](arkts-arkui-layoutalgorithm-gridlayoutalgorithmoptions-i.md) | No | 网格布局算法的构造入参， 设置网格布局的列数、列间距、行间距。 |
+| option | [GridLayoutAlgorithmOptions](arkts-arkui-layoutalgorithm-gridlayoutalgorithmoptions-i.md) | No | set properties of grid layout algorithm. |
 
 ## columnsGap
 
@@ -45,7 +44,7 @@ constructor(option?: GridLayoutAlgorithmOptions)
 public columnsGap?: LengthMetrics
 ```
 
-列与列之间的间距。非法值：按默认值处理。
+The spacing between columns.
 
 **Type:** [LengthMetrics](arkts-arkui-graphics-lengthmetrics-c.md)
 
@@ -54,6 +53,8 @@ public columnsGap?: LengthMetrics
 **Since:** 24
 
 **ArkTS mode:** ArkTS-Sta only, since version 24.
+
+**Model restriction:** This API can be used only in the stage model.
 
 <!--Device-GridLayoutAlgorithm-public columnsGap?: LengthMetrics--><!--Device-GridLayoutAlgorithm-public columnsGap?: LengthMetrics-End-->
 
@@ -65,7 +66,7 @@ public columnsGap?: LengthMetrics
 public columnsTemplate?: string | ItemFillPolicy
 ```
 
-设置当前网格布局的列数。非法值：按默认值处理。
+This parameter specifies the number of columns in the current grid layout.
 
 **Type:** string \| ItemFillPolicy
 
@@ -74,6 +75,8 @@ public columnsTemplate?: string | ItemFillPolicy
 **Since:** 24
 
 **ArkTS mode:** ArkTS-Sta only, since version 24.
+
+**Model restriction:** This API can be used only in the stage model.
 
 <!--Device-GridLayoutAlgorithm-public columnsTemplate?: string | ItemFillPolicy--><!--Device-GridLayoutAlgorithm-public columnsTemplate?: string | ItemFillPolicy-End-->
 
@@ -85,7 +88,7 @@ public columnsTemplate?: string | ItemFillPolicy
 public rowsGap?: LengthMetrics
 ```
 
-行与行之间的间距。非法值：按默认值处理。
+The spacing between rows.
 
 **Type:** [LengthMetrics](arkts-arkui-graphics-lengthmetrics-c.md)
 
@@ -94,6 +97,8 @@ public rowsGap?: LengthMetrics
 **Since:** 24
 
 **ArkTS mode:** ArkTS-Sta only, since version 24.
+
+**Model restriction:** This API can be used only in the stage model.
 
 <!--Device-GridLayoutAlgorithm-public rowsGap?: LengthMetrics--><!--Device-GridLayoutAlgorithm-public rowsGap?: LengthMetrics-End-->
 

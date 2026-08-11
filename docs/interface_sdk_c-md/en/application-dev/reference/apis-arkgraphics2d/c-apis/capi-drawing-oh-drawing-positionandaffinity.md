@@ -6,7 +6,7 @@ typedef struct OH_Drawing_PositionAndAffinity OH_Drawing_PositionAndAffinity
 
 ## Overview
 
-Defines a struct used to receive the position and affinity of a glyph.
+Receives the text position and cursor affinity.
 
 **Since**: 11
 

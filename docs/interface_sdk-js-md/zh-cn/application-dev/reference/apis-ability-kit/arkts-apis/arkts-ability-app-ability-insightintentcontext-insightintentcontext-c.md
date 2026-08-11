@@ -11,12 +11,6 @@
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 
-## 导入模块
-
-```TypeScript
-import { InsightIntentContext } from 'kits/@kit.AbilityKit';
-```
-
 ## setReturnModeForUIAbilityForeground
 
 ```TypeScript
@@ -47,9 +41,11 @@ setReturnModeForUIAbilityForeground(returnMode: insightIntent.ReturnMode): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 16000011 | The context does not exist. Possible causes: 1.The context is not insightIntentContext; 2.The context is not for UIAbility foreground insight intent execute mode. |
+| [16000011](../errorcode-ability.md#16000011-上下文对象不存在) | The context does not exist. Possible causes: 1.The context is not insightIntentContext; 2.The context is not for UIAbility foreground insight intent execute mode. |
 
 ## 示例
+
+ArkTS-Dyn示例：
 
 ```TypeScript
 import { InsightIntentExecutor, insightIntent } from '@kit.AbilityKit';
@@ -92,6 +88,52 @@ export default class InsightIntentExecutorUI extends InsightIntentExecutor {
 }
 ```
 
+ArkTS-Sta示例：
+
+```TypeScript
+'use static'
+import { InsightIntentExecutor, insightIntent } from '@kit.AbilityKit';
+import { window, LocalStorage } from '@kit.ArkUI';
+import { hilog } from '@kit.PerformanceAnalysisKit';
+import { BusinessError, RecordData } from '@kit.BasicServicesKit';
+
+export default class InsightIntentExecutorUI extends InsightIntentExecutor {
+  onExecuteInUIAbilityForegroundMode(name: string, param: Record<string, Object>,
+    pageLoader: window.WindowStage): insightIntent.ExecuteResult {
+    hilog.info(0x0000, 'testTag', 'onExecuteInUIAbilityForegroundMode %{public}s', name);
+    let result: insightIntent.ExecuteResult;
+    result = {
+      code: 0,
+      result: {
+        'message': 'Unsupported insight intent.',
+      } as Record<string, RecordData>,
+    };
+
+    try {
+      this.context.setReturnModeForUIAbilityForeground(insightIntent.ReturnMode.FUNCTION);
+    } catch (error) {
+      let code = (error as BusinessError).code;
+      let msg = (error as BusinessError).message;
+      console.error(`testTag setReturnModeForUIAbilityForeground fail, error code: ${code}, err msg: ${msg}.`);
+    }
+
+    let localStorageData: Record<string, number> = {
+      'insightId': this.context.instanceId,
+    };
+    let storage: LocalStorage = new LocalStorage(localStorageData);
+    pageLoader.loadContent('pages/UIAbilityIndex', storage, (error, data): void => {
+      let err = error as BusinessError;
+      if (err.code) {
+        hilog.error(0x0000, 'testTag', 'Failed to load the content. Cause: %{public}s', JSON.stringify(err));
+      } else {
+        hilog.info(0x0000, 'testTag', '%{public}s', 'Succeeded in loading the content');
+      }
+    });
+    return result;
+  }
+}
+```
+
 ## setReturnModeForUIExtensionAbility
 
 ```TypeScript
@@ -122,9 +164,11 @@ setReturnModeForUIExtensionAbility(returnMode: insightIntent.ReturnMode): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 16000011 | The context does not exist. Possible causes: 1.The context is not insightIntentContext; 2.The context is not for UIExtensionAbility insight intent execute mode. |
+| [16000011](../errorcode-ability.md#16000011-上下文对象不存在) | The context does not exist. Possible causes: 1.The context is not insightIntentContext; 2.The context is not for UIExtensionAbility insight intent execute mode. |
 
 ## 示例
+
+ArkTS-Dyn示例：
 
 ```TypeScript
 import { InsightIntentExecutor, insightIntent, UIExtensionContentSession } from '@kit.AbilityKit';
@@ -166,6 +210,51 @@ export default class InsightIntentExecutorUI extends InsightIntentExecutor {
 }
 ```
 
+ArkTS-Sta示例：
+
+```TypeScript
+'use static'
+import { InsightIntentExecutor, insightIntent, UIExtensionContentSession } from '@kit.AbilityKit';
+import { hilog } from '@kit.PerformanceAnalysisKit';
+import { BusinessError, RecordData } from '@kit.BasicServicesKit';
+import { LocalStorage } from '@kit.ArkUI';
+
+export default class InsightIntentExecutorUI extends InsightIntentExecutor {
+  onExecuteInUIExtensionAbility(name: string, param: Record<string, Object>,
+    pageLoader: UIExtensionContentSession): insightIntent.ExecuteResult {
+    hilog.info(0x0000, 'testTag', 'onExecuteInUIExtensionAbility %{public}s', name);
+    let result: insightIntent.ExecuteResult;
+    result = {
+      code: 0,
+      result: {
+        'message': 'Unsupported insight intent.',
+      } as Record<string, RecordData>,
+    };
+    try {
+      this.context.setReturnModeForUIExtensionAbility(insightIntent.ReturnMode.FUNCTION)
+    } catch (error) {
+      let code = (error as BusinessError).code;
+      let msg = (error as BusinessError).message;
+      console.error(`testTag setReturnModeForUIExtensionAbility fail, error code: ${code}, error msg: ${msg}.`);
+    }
+
+    try {
+      let localStorageData: Record<string, number> = {
+        'insightId': this.context.instanceId,
+      };
+      let storage: LocalStorage = new LocalStorage(localStorageData);
+      storage.setOrCreate('session', pageLoader);
+      pageLoader.loadContent('pages/UIExtensionPage', storage);
+    } catch (err) {
+      let code = (err as BusinessError).code;
+      let msg = (err as BusinessError).message;
+      console.info(`testTag loadContent error code: ${code}, error msg: ${msg}.`);
+    }
+    return result;
+  }
+}
+```
+
 ## startAbility
 
 ```TypeScript
@@ -197,23 +286,25 @@ startAbility(want: Want, callback: AsyncCallback<void>): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 16000053 | The ability is not on the top of the UI. |
-| 16000055 | Installation-free timed out. |
-| 16000050 | Internal error. |
-| 16000061 | Operation not supported. |
-| 16000004 | Cannot start an invisible component. |
-| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types. |
-| 16000005 | The specified process does not have the permission. |
-| 16000006 | Cross-user operations are not allowed. |
-| 16000001 | The specified ability does not exist. |
-| 16200001 | The caller has been released. |
-| 16000012 | The application is controlled. |
-| 16000013 | The application is controlled by EDM. |
-| 16000008 | The crowdtesting application expires. |
-| 16000009 | An ability cannot be started or stopped in Wukong mode. |
-| 16000011 | The context does not exist. |
+| [16000053](../errorcode-ability.md#16000053-非顶层ability) | The ability is not on the top of the UI. |
+| [16000055](../errorcode-ability.md#16000055-免安装超时) | Installation-free timed out. |
+| [16000050](../errorcode-ability.md#16000050-内部错误) | Internal error. |
+| [16000061](../errorcode-ability.md#16000061-不支持的操作) | Operation not supported. |
+| [16000004](../errorcode-ability.md#16000004-可见性校验失败) | Cannot start an invisible component. |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types. |
+| [16000005](../errorcode-ability.md#16000005-指定的进程权限校验失败) | The specified process does not have the permission. |
+| [16000006](../errorcode-ability.md#16000006-不允许跨用户操作) | Cross-user operations are not allowed. |
+| [16000001](../errorcode-ability.md#16000001-指定的ability名称不存在) | The specified ability does not exist. |
+| [16200001](../errorcode-ability.md#16200001-通用组件客户端caller已回收) | The caller has been released. |
+| [16000012](../errorcode-ability.md#16000012-应用被管控) | The application is controlled. |
+| [16000013](../errorcode-ability.md#16000013-应用被edm管控) | The application is controlled by EDM. |
+| [16000008](../errorcode-ability.md#16000008-众测应用到期) | The crowdtesting application expires. |
+| [16000009](../errorcode-ability.md#16000009-wukong模式不允许启动停止ability) | An ability cannot be started or stopped in Wukong mode. |
+| [16000011](../errorcode-ability.md#16000011-上下文对象不存在) | The context does not exist. |
 
 ## 示例
+
+ArkTS-Dyn示例：
 
 ```TypeScript
 import { InsightIntentExecutor, insightIntent, Want } from '@kit.AbilityKit';
@@ -248,6 +339,47 @@ export default class IntentExecutorImpl extends InsightIntentExecutor {
       result: {
         message: 'Execute insight intent succeed.',
       }
+    };
+    return result;
+  }
+}
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+'use static'
+import { InsightIntentExecutor, insightIntent, Want } from '@kit.AbilityKit';
+import { window } from '@kit.ArkUI';
+import { hilog } from '@kit.PerformanceAnalysisKit';
+import { RecordData } from '@kit.BasicServicesKit';
+
+export default class IntentExecutorImpl extends InsightIntentExecutor {
+  onExecuteInUIAbilityForegroundMode(name: string, param: Record<string, Object>,
+    pageLoader: window.WindowStage): insightIntent.ExecuteResult {
+    let want: Want = {
+      bundleName: 'com.ohos.intentexecutedemo',
+      moduleName: 'entry',
+      abilityName: 'AnotherAbility',
+    };
+
+    try {
+      this.context.startAbility(want, (error) => {
+        if (error) {
+          hilog.error(0x0000, 'testTag', 'Start ability failed with %{public}s', JSON.stringify(error));
+        } else {
+          hilog.info(0x0000, 'testTag', '%{public}s', 'Start ability succeed');
+        }
+      })
+    } catch (error) {
+      hilog.error(0x0000, 'testTag', 'Start ability error caught %{public}s', JSON.stringify(error));
+    }
+
+    let result: insightIntent.ExecuteResult = {
+      code: 0,
+      result: {
+        'message': 'Execute insight intent succeed.',
+      } as Record<string, RecordData>
     };
     return result;
   }
@@ -290,23 +422,25 @@ startAbility(want: Want): Promise<void>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 16000053 | The ability is not on the top of the UI. |
-| 16000055 | Installation-free timed out. |
-| 16000050 | Internal error. |
-| 16000061 | Operation not supported. |
-| 16000004 | Cannot start an invisible component. |
-| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types. |
-| 16000005 | The specified process does not have the permission. |
-| 16000006 | Cross-user operations are not allowed. |
-| 16000001 | The specified ability does not exist. |
-| 16200001 | The caller has been released. |
-| 16000012 | The application is controlled. |
-| 16000013 | The application is controlled by EDM. |
-| 16000008 | The crowdtesting application expires. |
-| 16000009 | An ability cannot be started or stopped in Wukong mode. |
-| 16000011 | The context does not exist. |
+| [16000053](../errorcode-ability.md#16000053-非顶层ability) | The ability is not on the top of the UI. |
+| [16000055](../errorcode-ability.md#16000055-免安装超时) | Installation-free timed out. |
+| [16000050](../errorcode-ability.md#16000050-内部错误) | Internal error. |
+| [16000061](../errorcode-ability.md#16000061-不支持的操作) | Operation not supported. |
+| [16000004](../errorcode-ability.md#16000004-可见性校验失败) | Cannot start an invisible component. |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types. |
+| [16000005](../errorcode-ability.md#16000005-指定的进程权限校验失败) | The specified process does not have the permission. |
+| [16000006](../errorcode-ability.md#16000006-不允许跨用户操作) | Cross-user operations are not allowed. |
+| [16000001](../errorcode-ability.md#16000001-指定的ability名称不存在) | The specified ability does not exist. |
+| [16200001](../errorcode-ability.md#16200001-通用组件客户端caller已回收) | The caller has been released. |
+| [16000012](../errorcode-ability.md#16000012-应用被管控) | The application is controlled. |
+| [16000013](../errorcode-ability.md#16000013-应用被edm管控) | The application is controlled by EDM. |
+| [16000008](../errorcode-ability.md#16000008-众测应用到期) | The crowdtesting application expires. |
+| [16000009](../errorcode-ability.md#16000009-wukong模式不允许启动停止ability) | An ability cannot be started or stopped in Wukong mode. |
+| [16000011](../errorcode-ability.md#16000011-上下文对象不存在) | The context does not exist. |
 
 ## 示例
+
+ArkTS-Dyn示例：
 
 ```TypeScript
 import { InsightIntentExecutor, insightIntent, Want } from '@kit.AbilityKit';
@@ -342,6 +476,42 @@ export default class IntentExecutorImpl extends InsightIntentExecutor {
 }
 ```
 
+ArkTS-Sta示例：
+
+```TypeScript
+'use static'
+import { InsightIntentExecutor, insightIntent, Want } from '@kit.AbilityKit';
+import { window } from '@kit.ArkUI';
+import { hilog } from '@kit.PerformanceAnalysisKit';
+import { RecordData } from '@kit.BasicServicesKit';
+
+export default class IntentExecutorImpl extends InsightIntentExecutor {
+  async onExecuteInUIAbilityForegroundMode(name: string, param: Record<string, Object>,
+    pageLoader: window.WindowStage): Promise<insightIntent.ExecuteResult> {
+    let want: Want = {
+      bundleName: 'com.ohos.intentexecutedemo',
+      moduleName: 'entry',
+      abilityName: 'AnotherAbility',
+    };
+
+    try {
+      await this.context.startAbility(want);
+      hilog.info(0x0000, 'testTag', '%{public}s', 'Start ability finished');
+    } catch (error) {
+      hilog.error(0x0000, 'testTag', 'Start ability error caught %{public}s', JSON.stringify(error));
+    }
+
+    let result: insightIntent.ExecuteResult = {
+      code: 0,
+      result: {
+        'message': 'Execute insight intent succeed.',
+      } as Record<string, RecordData>
+    };
+    return result;
+  }
+}
+```
+
 ## instanceId
 
 ```TypeScript
@@ -349,8 +519,8 @@ instanceId: int
 ```
 
 意图实例唯一ID。用于通过  
-[insightIntentProvider.sendExecuteResult接口](arkts-ability-insightintentprovider-sendexecuteresult-f.md#sendexecuteresult) 和  
-[insightIntentProvider.sendIntentResult接口](arkts-ability-insightintentprovider-sendintentresult-f.md#sendintentresult)返回指定意图的执行结果。
+[insightIntentProvider.sendExecuteResult接口](@ohos.app.ability.insightIntentProvider:insightIntentProvider.sendExecuteResult) 和  
+[insightIntentProvider.sendIntentResult接口](@ohos.app.ability.insightIntentProvider:insightIntentProvider.sendIntentResult)返回指定意图的执行结果。
 
 **类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 

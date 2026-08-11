@@ -1,6 +1,6 @@
 # SourceOptions
 
-ImageSource的初始化选项。
+Defines image source initialization options.
 
 **Since:** 9
 
@@ -22,11 +22,12 @@ import { image } from 'kits/@kit.ImageKit';
 sourceDensity: int
 ```
 
-图片资源像素密度。单位：ppi（像素/英寸）。
+Pixel density of the image resource, in ppi.
 
-在解码参数[DecodingOptions](arkts-image-image-decodingoptions-i.md)未设置desiredSize的前提下，当前参数SourceOptions.sourceDensity与DecodingOptions.fitDensity非零时将对解码输出的pixelmap进行缩放。
+If **desiredSize** is not set in [DecodingOptions](arkts-image-image-decodingoptions-i.md) and   
+**SourceOptions.sourceDensity** and **DecodingOptions.fitDensity** are not 0, the PixelMap output after decoding will be scaled.
 
-缩放后宽计算公式如下(高同理)：(width * fitDensity + (sourceDensity >> 1)) / sourceDensity。
+The formula for calculating the width after scaling is as follows (the same applies to the height): (width * fitDensity + (sourceDensity >> 1)) / sourceDensity.
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
@@ -48,7 +49,7 @@ sourceDensity: int
 sourcePixelFormat?: PixelMapFormat
 ```
 
-图片像素格式，默认值为UNKNOWN。
+Image pixel format. The default value is **UNKNOWN**.
 
 **Type:** [PixelMapFormat](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-multimedia-movingphotoview-pixelmapformat-e.md)
 
@@ -70,7 +71,7 @@ sourcePixelFormat?: PixelMapFormat
 sourceSize?: Size
 ```
 
-图像像素大小，默认值为空。
+Image pixel size. The default value is null.
 
 **Type:** [Size](../../apis-arkui/arkts-apis/arkts-arkui-window-size-i.md)
 

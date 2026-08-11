@@ -1,11 +1,13 @@
 # PermissiveUsbDeviceType
 
-USB设备类型信息，支持部分字段匹配。
+USB device type information. Partial field matching is supported.
 
-- 与[UsbDeviceType](arkts-mdm-usbmanager-usbdevicetype-i.md)相比，本接口的subClass、protocol、descriptor字段为可选字段，实现更灵活的USB设备禁用策略。  
-- 支持仅根据baseClass字段进行匹配。  
-- 支持配置多个字段，多个字段同时满足才匹配。  
-- 可通过[getDevices](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-usbmanager-getdevices-f.md/arkts-basicservices-usbmanager-getdevices-f.md#getdevices)接口获取已接入主设备的USB设备列表，并从返回值列表中查找当前设备的类型信息。
+- Compared with [UsbDeviceType](arkts-mdm-usbmanager-usbdevicetype-i.md), the **subClass**, **protocol**, and **descriptor**  
+parameters in this API are optional, allowing for more flexible USB device disabling policies.  
+- Only the matching based on the **baseClass** parameter is supported.  
+- Multiple parameters can be configured. All parameters must be satisfied simultaneously for a match.  
+- You can obtain the list of USB devices connected to the host device through the  
+[getDevices](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-usbmanager-getdevices-f.md/arkts-basicservices-usbmanager-getdevices-f.md#getdevices) API, and then find the type of the current device in the returned list.
 
 **Since:** 26.0.0
 
@@ -27,7 +29,8 @@ import { usbManager } from 'kits/@kit.MDMKit';
 baseClass: number
 ```
 
-类型编码。取值范围为[0, 255]。若descriptor为DEVICE，则本字段取USBDevice.clazz字段值；若descriptor为INTERFACE，则本字段取USBDevice.configs.interfaces.clazz字段值。
+Type code. The value range is [0, 255].If **descriptor** is **DEVICE**, this parameter takes the value of the **USBDevice.clazz** parameter; if  
+**descriptor** is **INTERFACE**, this parameter takes the value of the **USBDevice.configs.interfaces.clazz**parameter.
 
 **Type:** number
 
@@ -47,8 +50,7 @@ baseClass: number
 descriptor?: Descriptor
 ```
 
-USB描述符。若USBDevice.clazz字段值为0，则须在[defined-class-codes](https://www.usb.org/defined-class-codes)中的Base Class列查找USBDevice.configs.interfaces.clazz字段值，查找结果所在行所对应的Descriptor Usage列就表示当前应该传入的descriptor类型（若Descriptor Usage列为Both，表示两种类型都可以传入，需要设备级禁用时传入DEVICE，需要接口级禁用时传入INTERFACE）；若USBDevice.clazz字段值为其他值，则须在  
-[defined-class-codes](https://www.usb.org/defined-class-codes)中的Base Class列查找该值，查找结果所在行所对应的Descriptor Usage列就表示当前应该传入的descriptor类型（若Descriptor Usage列为Both，表示两种类型都可以传入，需要设备级禁用时传入DEVICE，需要接口级禁用时传入INTERFACE）。
+USB descriptor.If **USBDevice.clazz** is **0**, locate the value of **USBDevice.configs.interfaces.clazz** in the **Base Class**column of the [defined-class-codes](https://www.usb.org/defined-class-codes) table. The **Descriptor Usage**column of the corresponding row indicates the descriptor type to be passed. (If **Descriptor Usage** is **Both**,either type can be passed. You can pass **DEVICE** for device-level disabling, or **INTERFACE** for interface-level disabling.) If **USBDevice.clazz** is other than **0**, locate that value in the **Base Class** column of the [defined-class-codes](https://www.usb.org/defined-class-codes) table. The **Descriptor Usage** column of the corresponding row indicates the descriptor type to be passed. (If **Descriptor Usage** is **Both**, either type can be passed. Pass **DEVICE** for device-level disabling, or **INTERFACE** for interface-level disabling.).
 
 **Type:** [Descriptor](arkts-mdm-usbmanager-descriptor-e.md)
 
@@ -68,7 +70,8 @@ USB描述符。若USBDevice.clazz字段值为0，则须在[defined-class-codes](
 protocol?: number
 ```
 
-协议编码。取值范围为[0, 255]。若descriptor为DEVICE，则本字段取USBDevice.protocol字段值；若descriptor为INTERFACE，则本字段取USBDevice.configs.interfaces.protocol字段值。
+Protocol code. The value range is [0, 255].If **descriptor** is **DEVICE**, this parameter takes the value of the **USBDevice.protocol** parameter; if  
+**descriptor** is **INTERFACE**, this parameter takes the value of the **USBDevice.configs.interfaces.protocol**parameter.
 
 **Type:** number
 
@@ -88,7 +91,8 @@ protocol?: number
 subClass?: number
 ```
 
-子类型编码。取值范围为[0, 255]。若descriptor为DEVICE，则本字段取USBDevice.subClass字段值；若descriptor为INTERFACE，则本字段取USBDevice.configs.interfaces.subClass字段值。
+Subtype code. The value range is [0, 255].If **descriptor** is **DEVICE**, this parameter takes the value of the **USBDevice.subClass** parameter; if  
+**descriptor** is **INTERFACE**, this parameter takes the value of the **USBDevice.configs.interfaces.subClass**parameter.
 
 **Type:** number
 

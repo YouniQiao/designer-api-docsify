@@ -1,6 +1,6 @@
 # EmitterProperty
 
-设置发射器属性。
+Defines the emitter property.
 
 **Since:** 12
 
@@ -16,7 +16,7 @@
 annulusRegion?: ParticleAnnulusRegion
 ```
 
-环形发射器参数。需要对应index的发射器形状为环形才生效。
+the description of the annulus region. This parameter is valid only for emitter whose shape is annulus.
 
 **Type:** [ParticleAnnulusRegion](arkts-arkui-particleannulusregion-i.md)
 
@@ -38,9 +38,10 @@ annulusRegion?: ParticleAnnulusRegion
 emitRate?: number
 ```
 
-发射器发射速率，即每秒发射粒子的数量。
+Emit rate, that is, the number of particles emitted per second.
 
-未传入时保持其当前的发射速率， 传入值小于0时取默认值5。emitRate值超过5000时会极大影响性能，建议设置参数小于5000。
+If no value is passed in, the current emit rate is retained. If a value less than 0 is passed in, the default value  
+**5** is used. The **emitRate** value can significantly impact performance when it exceeds 5000; you are advised to set it to be less than 5000.
 
 **Type:** number
 
@@ -59,10 +60,10 @@ emitRate?: number
 ## index
 
 ```TypeScript
-index : number
+index: number
 ```
 
-索引，取整，按初始化参数中发射器的数组索引指定对应的发射器。异常默认值为0。
+Index of the emitter based on the index array of the emitters in the initialization parameters. The value is rounded to the nearest whole number. The default value **0** is used in case of exceptions.
 
 **Type:** number
 
@@ -74,7 +75,7 @@ index : number
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
-<!--Device-EmitterProperty-index : number--><!--Device-EmitterProperty-index : number-End-->
+<!--Device-EmitterProperty-index: number--><!--Device-EmitterProperty-index: number-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -84,11 +85,11 @@ index : number
 position?: PositionT<number>
 ```
 
-发射器位置的数组，只支持number类型。
+Array of emitter positions. Only the number type is supported.
 
-未传入时保持其当前的发射器位置。需传入两个有效参数，若其中一个为异常值，则position不生效。
+If no value is passed in, the current emitter position is retained. Two valid values must be passed in; if either is an invalid value, **position** will not take effect.
 
-x、y的取值范围：(-∞, +∞)。
+Value range of **x** and **y**: (-∞, +∞).
 
 **Type:** [PositionT](../arkts-apis/arkts-arkui-positiont-t.md)&lt;number&gt;
 
@@ -110,9 +111,9 @@ x、y的取值范围：(-∞, +∞)。
 size?: SizeT<number>
 ```
 
-发射窗口的大小，只支持number类型。
+Size of the emit window. Only the number type is supported.
 
-未传入时保持其当前发射窗口大小。需传入两个有效参数且都大于0，若其中一个为异常值，则size不生效。
+If no value is passed in, the current emitter window size is retained. Two valid values greater than 0 must be passed in; if either is an invalid value, **size** will not take effect.
 
 **Type:** [SizeT](../arkts-apis/arkts-arkui-graphics-sizet-i.md)&lt;number&gt;
 

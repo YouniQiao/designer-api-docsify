@@ -1,6 +1,6 @@
 # NavContentInfo
 
-跳转Destination信息。
+Navigation content info.
 
 **Since:** 23
 
@@ -16,7 +16,7 @@
 index: int
 ```
 
-NavDestination在NavPathStack中的序号， 如果为根视图(NavBar)，则返回值为 -1。取值应为≥-1的整数。取值范围为全体整数。
+Navigation content index.The value must be an integer greater than or equal to -1.The value range is all integers.
 
 **Type:** int
 
@@ -36,7 +36,7 @@ NavDestination在NavPathStack中的序号， 如果为根视图(NavBar)，则返
 mode?: NavDestinationMode
 ```
 
-NavDestination的模式，如果是根视图(NavBar)，则返回值为undefined。默认值： NavDestinationMode.STANDARD。
+Navigation content mode.Default value: NavDestinationMode.STANDARD.
 
 **Type:** [NavDestinationMode](../arkts-components/arkts-arkui-navdestinationmode-e.md)
 
@@ -56,7 +56,7 @@ NavDestination的模式，如果是根视图(NavBar)，则返回值为undefined�
 name?: string
 ```
 
-NavDestination名称，如果为根视图(NavBar)，则返回值为undefined。
+Navigation content name.
 
 **Type:** string
 
@@ -76,7 +76,7 @@ NavDestination名称，如果为根视图(NavBar)，则返回值为undefined。
 navDestinationId?: string
 ```
 
-NavDestination的唯一标识符。
+The unique id of NavDestination.
 
 **Type:** string
 
@@ -96,7 +96,7 @@ NavDestination的唯一标识符。
 param?: Object
 ```
 
-NavDestination页面加载的参数。
+Navigation content param.
 
 **Type:** Object
 

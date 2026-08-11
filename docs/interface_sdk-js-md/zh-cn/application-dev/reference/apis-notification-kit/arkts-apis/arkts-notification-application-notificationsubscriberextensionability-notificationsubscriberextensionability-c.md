@@ -44,6 +44,20 @@ onCancelMessages(hashCodes: Array<string>): void
 
 ## 示例
 
+ArkTS-Dyn示例：
+
+```TypeScript
+const TAG = 'NotificationSubscriberExtAbility';
+
+export default class NotificationSubscriberExtAbility extends NotificationSubscriberExtensionAbility {
+  onCancelMessages(hashCodes: Array<string>): void {
+    console.info(`${TAG} onCancelMessages. hashCodes: ${JSON.stringify(hashCodes)}`);
+  }
+}
+```
+
+ArkTS-Sta示例：
+
 ```TypeScript
 const TAG = 'NotificationSubscriberExtAbility';
 
@@ -73,6 +87,20 @@ onDestroy(): void
 **系统能力：** SystemCapability.Notification.Notification
 
 ## 示例
+
+ArkTS-Dyn示例：
+
+```TypeScript
+const TAG = 'NotificationSubscriberExtAbility';
+
+export default class NotificationSubscriberExtAbility extends NotificationSubscriberExtensionAbility {
+  onDestroy(): void {
+    console.info(`${TAG} onDestroy`);
+  }
+}
+```
+
+ArkTS-Sta示例：
 
 ```TypeScript
 const TAG = 'NotificationSubscriberExtAbility';
@@ -110,12 +138,26 @@ onReceiveMessage(notificationInfo: NotificationInfo): void
 
 ## 示例
 
+ArkTS-Dyn示例：
+
 ```TypeScript
 const TAG = 'NotificationSubscriberExtAbility';
 
 export default class NotificationSubscriberExtAbility extends NotificationSubscriberExtensionAbility {
   onReceiveMessage(notificationInfo: notificationExtensionSubscription.NotificationInfo): void {
     console.info(`${TAG} onReceiveMessage. notificationInfo: ${JSON.stringify(notificationInfo)}`);
+  }
+}
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+const TAG = 'NotificationSubscriberExtAbility';
+
+export default class NotificationSubscriberExtAbility extends NotificationSubscriberExtensionAbility {
+  onReceiveMessage(notificationInfo: notificationExtensionSubscription.NotificationInfo): void {
+    console.info(`${TAG}  onReceiveMessage. notificationInfo: ${JSON.stringify(notificationInfo)}`);
   }
 }
 ```

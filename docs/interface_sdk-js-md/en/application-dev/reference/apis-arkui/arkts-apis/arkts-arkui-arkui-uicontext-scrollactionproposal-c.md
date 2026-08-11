@@ -1,6 +1,6 @@
 # ScrollActionProposal
 
-类ScrollActionProposal。默认滚动方向为向前。
+Class ScrollActionProposal. The default scroll direction is forward.
 
 **Inheritance/Implementation:** ScrollActionProposal extends [TargetedGestureProposal](arkts-arkui-arkui-uicontext-targetedgestureproposal-c.md)
 
@@ -24,7 +24,7 @@ import { OverlayManager, FrameCallback, ResolvedUIContext, NodeRenderStateChange
 constructor(node: FrameNode, distance: double)
 ```
 
-ScrollActionProposal构造函数。
+ScrollActionProposal constructor.
 
 **Since:** 26.0.0
 
@@ -40,8 +40,8 @@ ScrollActionProposal构造函数。
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| node | [FrameNode](arkts-arkui-framenode-t.md) | Yes | 响应滚动动作的节点。 |
-| distance | double | Yes | 滚动或滑动的距离。 |
+| node | [FrameNode](../arkts-components/arkts-arkui-framenode-t.md) | Yes | The node responding to scroll action. |
+| distance | double | Yes | The distance to scroll or slide. |
 
 ## distance
 
@@ -49,7 +49,7 @@ ScrollActionProposal构造函数。
 distance: double
 ```
 
-手势操作的距离参数。用于滚动或滑动等动作，以指定移动距离。
+Distance parameter for gesture operations. Used for actions like scrolling or sliding to specify travel distance.
 
 **Type:** double
 

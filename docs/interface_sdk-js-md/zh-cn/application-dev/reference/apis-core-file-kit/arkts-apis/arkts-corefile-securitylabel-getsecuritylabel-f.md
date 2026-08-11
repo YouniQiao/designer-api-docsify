@@ -1,11 +1,5 @@
 # getSecurityLabel
 
-## 导入模块
-
-```TypeScript
-import { securityLabel } from 'kits/@kit.CoreFileKit';
-```
-
 ## getSecurityLabel
 
 ```TypeScript

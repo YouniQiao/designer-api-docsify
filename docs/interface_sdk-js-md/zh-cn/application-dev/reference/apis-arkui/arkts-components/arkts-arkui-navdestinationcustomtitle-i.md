@@ -18,7 +18,7 @@ builder: CustomBuilder
 
 设置标题栏内容。
 
-**类型：** [CustomBuilder](arkts-arkui-custombuilder-t.md)
+**类型：** [CustomBuilder](../arkts-apis/arkts-arkui-custombuilder-t.md)
 
 **起始版本：** 9
 

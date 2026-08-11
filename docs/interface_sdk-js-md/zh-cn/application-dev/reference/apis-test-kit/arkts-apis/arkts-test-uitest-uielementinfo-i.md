@@ -10,12 +10,6 @@ UI事件的相关信息。
 
 **系统能力：** SystemCapability.Test.UiTest
 
-## 导入模块
-
-```TypeScript
-import { ResizeDirection, WindowMode, PenMode, PenKeyOperation, Driver, MatchPattern, UiDirection, TouchOptions, ComponentEventType, PointerMatrix, WindowChangeType, Component, ON, PenKey, Rect, InputTextMode, UIEventObserver, WindowFilter, WindowChangeOptions, UiWindow, TouchPadSwipeOptions, Point, KeyOptions, DisplayRotation, UIElementInfo, PenKeyOperationOptions, ComponentEventOptions, MouseButton, On } from 'kits/@kit.TestKit';
-```
-
 ## bundleName
 
 ```TypeScript
@@ -92,7 +86,7 @@ readonly componentRect?: Rect
 
 从API version 22开始，该接口支持在原子化服务中使用。
 
-**类型：** [Rect](../../apis-form-kit/arkts-apis/arkts-form-forminfo-rect-i.md)
+**类型：** [Rect](arkts-test-uitest-rect-i.md)
 
 **起始版本：** 22
 

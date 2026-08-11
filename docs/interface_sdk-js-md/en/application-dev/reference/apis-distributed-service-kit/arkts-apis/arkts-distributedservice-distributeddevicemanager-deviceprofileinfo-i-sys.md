@@ -1,6 +1,6 @@
 # DeviceProfileInfo (System API)
 
-设备信息。
+Defines the device profile information.
 
 **Since:** 15
 
@@ -24,7 +24,7 @@ import { distributedDeviceManager } from 'kits/@kit.DistributedServiceKit';
 bleMac: string
 ```
 
-蓝牙BLE的MAC地址。
+Bluetooth BLE MAC address.
 
 **Type:** string
 
@@ -44,7 +44,7 @@ bleMac: string
 brMac: string
 ```
 
-蓝牙BR的MAC地址。
+Bluetooth BR MAC address.
 
 **Type:** string
 
@@ -64,7 +64,7 @@ brMac: string
 deviceId: string
 ```
 
-设备ID。
+Device ID.
 
 **Type:** string
 
@@ -84,7 +84,7 @@ deviceId: string
 deviceName: string
 ```
 
-设备名称。
+Device name.
 
 **Type:** string
 
@@ -104,7 +104,7 @@ deviceName: string
 deviceSn: string
 ```
 
-设备序列号。
+Device SN.
 
 **Type:** string
 
@@ -124,7 +124,7 @@ deviceSn: string
 deviceType: string
 ```
 
-设备类型。
+Device type.
 
 **Type:** string
 
@@ -144,7 +144,7 @@ deviceType: string
 firmwareVersion: string
 ```
 
-固件版本。
+Firmware version.
 
 **Type:** string
 
@@ -164,7 +164,7 @@ firmwareVersion: string
 hardwareVersion: string
 ```
 
-硬件版本。
+Hardware version.
 
 **Type:** string
 
@@ -184,7 +184,7 @@ hardwareVersion: string
 internalModel?: string
 ```
 
-设备所属产品的内部型号。默认为空。
+Internal product model. This parameter is left unspecified by default.
 
 **Type:** string
 
@@ -204,10 +204,10 @@ internalModel?: string
 isLocalDevice: boolean
 ```
 
-是否为本地设备。
+Whether the device is a local device.
 
-- false：表示非本地设备，即被查询的其他设备。  
-- true：表示本地设备，即当前正在使用该接口的设备。
+- **false**: non-local device.  
+- **true**: local device.
 
 **Type:** boolean
 
@@ -227,7 +227,7 @@ isLocalDevice: boolean
 mac: string
 ```
 
-MAC地址。
+MAC address.
 
 **Type:** string
 
@@ -247,7 +247,7 @@ MAC地址。
 manufacturer: string
 ```
 
-制造商。
+Manufacturer.
 
 **Type:** string
 
@@ -267,7 +267,7 @@ manufacturer: string
 model: string
 ```
 
-设备型号。
+Device model.
 
 **Type:** string
 
@@ -287,7 +287,7 @@ model: string
 modifyTime: string
 ```
 
-修改时间。
+Modification time.
 
 **Type:** string
 
@@ -307,7 +307,7 @@ modifyTime: string
 productId: string
 ```
 
-设备所属产品ID。
+Product ID.
 
 **Type:** string
 
@@ -327,7 +327,7 @@ productId: string
 productName?: string
 ```
 
-设备所属的产品名称。默认为空。
+Product name. This parameter is left unspecified by default.
 
 **Type:** string
 
@@ -347,7 +347,7 @@ productName?: string
 protocolType: int
 ```
 
-协议类型。
+Protocol type.
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
@@ -367,7 +367,7 @@ protocolType: int
 registerTime: string
 ```
 
-注册时间。
+Registration time.
 
 **Type:** string
 
@@ -387,7 +387,7 @@ registerTime: string
 sdkVersion: string
 ```
 
-SDK版本。
+SDK version.
 
 **Type:** string
 
@@ -407,7 +407,7 @@ SDK版本。
 services?: Array<ServiceProfileInfo>
 ```
 
-服务配置信息列表。默认为空。
+Service list. This parameter is left unspecified by default.
 
 **Type:** Array&lt;ServiceProfileInfo&gt;
 
@@ -427,7 +427,7 @@ services?: Array<ServiceProfileInfo>
 setupType: int
 ```
 
-设备类型。
+Device type.
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
@@ -447,7 +447,7 @@ setupType: int
 shareTime: string
 ```
 
-分享时间。
+Share time.
 
 **Type:** string
 
@@ -467,7 +467,7 @@ shareTime: string
 sleMac: string
 ```
 
-Starflash的MAC地址。
+Starflash MAC address.
 
 **Type:** string
 
@@ -487,7 +487,7 @@ Starflash的MAC地址。
 softwareVersion: string
 ```
 
-软件版本。
+Software version.
 
 **Type:** string
 
@@ -507,7 +507,7 @@ softwareVersion: string
 subProductId?: string
 ```
 
-设备所属产品子ID。默认为空。
+Sub-product ID. This parameter is left unspecified by default.
 
 **Type:** string
 
@@ -527,7 +527,7 @@ subProductId?: string
 wiseDeviceId: string
 ```
 
-已注册设备标识。
+Registered device ID.
 
 **Type:** string
 
@@ -547,7 +547,7 @@ wiseDeviceId: string
 wiseUserId: string
 ```
 
-已注册用户标识。
+Registered user ID.
 
 **Type:** string
 

@@ -3,12 +3,6 @@
 应用配置
 
 
-## 导入模块
-
-```TypeScript
-import { LocaleResponse } from 'kits/@kit.ArkUI';
-```
-
 ## 汇总
 
 ### 类

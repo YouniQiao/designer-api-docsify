@@ -1,6 +1,6 @@
 # ControlType (System API)
 
-标识拦截指定应用程序的不同策略。
+Enumerates the control type of application disposal.
 
 **Since:** 11
 
@@ -18,7 +18,7 @@
 ALLOWED_LIST = 1
 ```
 
-允许运行指定功能的列表。
+A trustlist is used, which means that the application components in the list are allowed to run.
 
 **Since:** 11
 
@@ -36,7 +36,7 @@ ALLOWED_LIST = 1
 DISALLOWED_LIST = 2
 ```
 
-不允许运行指定功能的列表。
+A blocklist is used, which means that the application components in the list are forbidden to run.
 
 **Since:** 11
 

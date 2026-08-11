@@ -1,6 +1,6 @@
 # SceneResource
 
-定义被其他3D资源扩展的场景资源.
+Define scene resource extended by other 3d resource.
 
 **Since:** 12
 
@@ -16,7 +16,7 @@
 destroy(): void
 ```
 
-销毁场景资源，释放所有关联的资源或引用，一旦被释放，资源就不能被再次使用或访问。
+Release scene resource.
 
 **Since:** 12
 
@@ -32,7 +32,7 @@ destroy(): void
 name: string
 ```
 
-场景资源名称，没有特殊格式要求。
+Scene resource name.
 
 **Type:** string
 
@@ -50,7 +50,7 @@ name: string
 readonly resourceType: SceneResourceType
 ```
 
-场景资源类型，默认值为undefined。
+Scene resource type.
 
 **Type:** [SceneResourceType](arkts-arkgraphics3d-sceneresources-sceneresourcetype-e.md)
 
@@ -68,7 +68,7 @@ readonly resourceType: SceneResourceType
 readonly uri?: ResourceStr
 ```
 
-需要加载的场景资源URI，默认值为undefined。
+Scene resource uri.
 
 **Type:** [ResourceStr](../../apis-arkui/arkts-apis/arkts-arkui-resourcestr-t.md)
 

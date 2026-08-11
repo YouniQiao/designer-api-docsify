@@ -1,8 +1,8 @@
 # OffscreenCanvasRenderingContext2D
 
-使用OffscreenCanvasRenderingContext2D在Canvas上进行离屏绘制，绘制对象可以是形状、文本、图片等。离屏绘制是指将需要绘制的内容先绘制在缓存区，然后将其转换成图片，一次性绘制到Canvas上。离屏绘制使用CPU进行绘制，绘制速度较慢，对绘制速度有要求的场景应避免使用离屏绘制。
+Draw context object for the OffscreenCanvas component.
 
-**Inheritance/Implementation:** OffscreenCanvasRenderingContext2D extends [CanvasRenderer](arkts-arkui-canvasrenderer-c.md)
+**Inheritance/Implementation:** OffscreenCanvasRenderingContext2D extends [CanvasRenderer](../arkts-components/arkts-arkui-canvasrenderer-c.md/arkts-arkui-canvasrenderer-c.md)
 
 **Since:** 23
 
@@ -18,7 +18,7 @@
 constructor(width: double, height: double, settings?: RenderingContextSettings, unit?: LengthMetricsUnit)
 ```
 
-构造离屏Canvas画布对象，支持配置画布宽高、OffscreenCanvasRenderingContext2D对象的参数和单位模式。
+Constructor of the canvas drawing context object, which is used to create a drawing context object.
 
 **Since:** 23
 
@@ -34,10 +34,10 @@ constructor(width: double, height: double, settings?: RenderingContextSettings, 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| width | double | Yes | 离屏画布的宽度，默认单位：vp。 异常值NaN和Infinity按无效值处理。 |
-| height | double | Yes | 离屏画布的高度，默认单位：vp。 异常值NaN和Infinity按无效值处理。 |
-| settings | [RenderingContextSettings](arkts-arkui-canvas-renderingcontextsettings-c.md) | No | 用来配置OffscreenCanvasRenderingContext2D 对象的参数，见RenderingContextSettings。 异常值undefined按RenderingContextSettings的默认值处理。默认值：null。 |
-| unit | [LengthMetricsUnit](arkts-arkui-lengthmetricsunit-t.md) | No | 用来配置OffscreenCanvasRenderingContext2D对象的单位模式， 配置后无法动态更改。异常值undefined、NaN和Infinity按默认值处理。默认值：DEFAULT。 |
+| width | double | Yes | the width of the OffscreenCanvas |
+| height | double | Yes | the height of the OffscreenCanvas |
+| settings | [RenderingContextSettings](arkts-arkui-canvas-renderingcontextsettings-c.md) | No | Drawing attribute. For details, see {@link RenderingContextSettings}. |
+| unit | [LengthMetricsUnit](arkts-arkui-lengthmetricsunit-t.md) | No | the unit mode |
 
 ## toDataURL
 
@@ -45,7 +45,7 @@ constructor(width: double, height: double, settings?: RenderingContextSettings, 
 toDataURL(type?: string, quality?: double): string
 ```
 
-生成一个包含图片展示的URL，该接口存在内存拷贝行为，高耗时，应避免频繁使用。
+Generate a character string in the data url format.
 
 **Since:** 23
 
@@ -61,14 +61,14 @@ toDataURL(type?: string, quality?: double): string
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | string | No | 用于指定图像格式。可选参数为："image/png"，"image/jpeg"， "image/webp"。异常值undefined或null按默认值处理。默认值：image/png。 |
-| quality | double | No | 在指定图片格式为image/jpeg或image/webp的情况下， 可以从0到1的区间内选择图片的质量。如果超出取值范围， 将会使用默认值0.92。异常值undefined、null、NaN和Infinity按默认值处理。 默认值：0.92。 |
+| type | string | No | Image format. The default value is image/png. |
+| quality | double | No | If the image format is image/jpeg or image/webp, you can select the image quality from 0 to 1. If the value is out of the range, the default value 0.92 is used. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| string | 图像的URL地址。 |
+| string |  |
 
 ## transferToImageBitmap
 
@@ -76,7 +76,7 @@ toDataURL(type?: string, quality?: double): string
 transferToImageBitmap(): ImageBitmap | undefined
 ```
 
-在离屏画布最近渲染的图像上创建一个ImageBitmap对象。
+transfer the content to ImageBitmap
 
 **Since:** 23
 
@@ -92,5 +92,5 @@ transferToImageBitmap(): ImageBitmap | undefined
 
 | Type | Description |
 | --- | --- |
-| [ImageBitmap](arkts-arkui-canvas-imagebitmap-c.md) | 存储离屏画布上渲染的像素数据。 |
+| [ImageBitmap](arkts-arkui-canvas-imagebitmap-c.md) |  |
 

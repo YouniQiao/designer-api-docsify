@@ -340,5 +340,5 @@ onDatasetChange(dataOperations: DataOperation[]): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| dataOperations | [DataOperation](arkts-arkui-dataoperation-t.md)[] | 是 | 一次批量处理数据的操作集合，开发者将需要处理的数据操作（添加、删除、改变、移动、交换、重载等）放入该数组，组件按照数组中的操作顺序刷新展示内 容。 |
+| dataOperations | [DataOperation](../arkts-apis/arkts-arkui-dataoperation-t.md)[] | 是 | 一次批量处理数据的操作集合，开发者将需要处理的数据操作（添加、删除、改变、移动、交换、重载等）放入该数组，组件按照数组中的操作顺序刷新展示内 容。 |
 

@@ -1,6 +1,6 @@
 # KeyUsageType
 
-表示证书中密钥用途的枚举。
+Enumerates the purposes for which the key in the certificate is used.
 
 **Since:** 12
 
@@ -16,7 +16,7 @@
 KEYUSAGE_DIGITAL_SIGNATURE = 0
 ```
 
-证书持有者可以用证书中包含的私钥进行数字签名操作。
+The certificate holder can use the private key contained in the certificate to generate a digital signature.
 
 **Since:** 12
 
@@ -34,7 +34,7 @@ KEYUSAGE_DIGITAL_SIGNATURE = 0
 KEYUSAGE_NON_REPUDIATION = 1
 ```
 
-证书公钥可用于不可否认操作，防止签名者否认其签名。
+The certificate holder can use the key to create a digital signature as part of a non-repudiation service.
 
 **Since:** 12
 
@@ -52,7 +52,7 @@ KEYUSAGE_NON_REPUDIATION = 1
 KEYUSAGE_KEY_ENCIPHERMENT = 2
 ```
 
-证书公钥可用于密钥加密操作，用于加密对称密钥等。
+The certificate holder can use the public key contained in the certificate for key encryption.
 
 **Since:** 12
 
@@ -70,7 +70,7 @@ KEYUSAGE_KEY_ENCIPHERMENT = 2
 KEYUSAGE_DATA_ENCIPHERMENT = 3
 ```
 
-证书公钥可用于数据加密操作，用于加密数据。
+The certificate holder can use the public key contained in the certificate for data encryption.
 
 **Since:** 12
 
@@ -88,7 +88,7 @@ KEYUSAGE_DATA_ENCIPHERMENT = 3
 KEYUSAGE_KEY_AGREEMENT = 4
 ```
 
-证书公钥可用于密钥协商操作，用于协商共享密钥。
+The certificate holder can use the private key contained in the certificate to perform key agreement operations.
 
 **Since:** 12
 
@@ -106,7 +106,7 @@ KEYUSAGE_KEY_AGREEMENT = 4
 KEYUSAGE_KEY_CERT_SIGN = 5
 ```
 
-证书公钥可用于证书签名操作。
+The certificate holder can use the private key contained in the certificate to sign other certificates.
 
 **Since:** 12
 
@@ -124,7 +124,7 @@ KEYUSAGE_KEY_CERT_SIGN = 5
 KEYUSAGE_CRL_SIGN = 6
 ```
 
-证书公钥可用于证书吊销列表（CRL）的签名操作。
+The certificate holder can use the private key contained in the certificate to sign CRLs.
 
 **Since:** 12
 
@@ -142,7 +142,7 @@ KEYUSAGE_CRL_SIGN = 6
 KEYUSAGE_ENCIPHER_ONLY = 7
 ```
 
-密钥只能用于加密操作，不能用于解密操作。
+The certificate holder can use the key to perform encryption operations only.
 
 **Since:** 12
 
@@ -160,7 +160,7 @@ KEYUSAGE_ENCIPHER_ONLY = 7
 KEYUSAGE_DECIPHER_ONLY = 8
 ```
 
-密钥只能用于解密操作，不能用于加密操作。
+The certificate holder can use the key to perform decryption operations only.
 
 **Since:** 12
 

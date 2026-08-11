@@ -1,6 +1,6 @@
 # WindowModeFollowStrategy (System API)
 
-窗口Mode跟随策略，用于设置窗口Mode，使其能够跟随宿主或UIExtensionAbility。
+Enumeration of different types of WindowModeFollowStrategy.
 
 **Since:** 23
 
@@ -18,7 +18,7 @@
 FOLLOW_HOST_WINDOW_MODE = 0
 ```
 
-表示窗口Mode跟随宿主。
+Followed the host Window Mode.
 
 **Since:** 23
 
@@ -38,7 +38,7 @@ FOLLOW_HOST_WINDOW_MODE = 0
 FOLLOW_UI_EXTENSION_ABILITY_WINDOW_MODE = 1
 ```
 
-表示窗口Mode跟随UIExtensionAbility。
+Followed the UIExtensionAbility.
 
 **Since:** 23
 

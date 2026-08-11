@@ -1,6 +1,7 @@
 # VideoCallControlGroup
 
-视频通话控件组枚举。仅当[PiPTemplateType](arkts-arkui-pipwindow-piptemplatetype-e.md) 为VIDEO_CALL时使用。
+Enumerates the video call component groups. They are used only when  
+[PiPTemplateType](arkts-arkui-pipwindow-piptemplatetype-e.md) is set to **VIDEO_CALL**.
 
 **Since:** 12
 
@@ -16,7 +17,7 @@
 MICROPHONE_SWITCH = 201
 ```
 
-打开/关闭麦克风控件组。
+Microphone on/off component group.
 
 **Since:** 12
 
@@ -34,7 +35,7 @@ MICROPHONE_SWITCH = 201
 HANG_UP_BUTTON = 202
 ```
 
-挂断控件组。
+Hang-up component group.
 
 **Since:** 12
 
@@ -52,7 +53,7 @@ HANG_UP_BUTTON = 202
 CAMERA_SWITCH = 203
 ```
 
-打开/关闭摄像头控件组。
+Camera on/off component group.
 
 **Since:** 12
 
@@ -70,7 +71,7 @@ CAMERA_SWITCH = 203
 MUTE_SWITCH = 204
 ```
 
-静音控件组。
+Mute/Unmute component group.
 
 **Since:** 12
 

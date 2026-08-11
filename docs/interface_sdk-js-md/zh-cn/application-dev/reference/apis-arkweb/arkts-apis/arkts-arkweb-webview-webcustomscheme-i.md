@@ -10,12 +10,6 @@ Defines the configuration of web custom scheme, related to {@link customizeSchem
 
 **系统能力：** SystemCapability.Web.Webview.Core
 
-## 导入模块
-
-```TypeScript
-import { webview } from 'kits/@kit.ArkWeb';
-```
-
 ## isCodeCacheSupported
 
 ```TypeScript

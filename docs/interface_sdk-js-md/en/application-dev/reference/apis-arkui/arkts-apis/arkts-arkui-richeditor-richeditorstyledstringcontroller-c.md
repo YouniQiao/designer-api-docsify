@@ -1,6 +1,6 @@
 # RichEditorStyledStringController
 
-使用属性字符串构建的RichEditor组件的控制器，继承自[RichEditorBaseController](arkts-arkui-richeditor-richeditorbasecontroller-c.md)。
+Provides Controller for RichEditor with StyledString.
 
 **Inheritance/Implementation:** RichEditorStyledStringController extends [RichEditorBaseController](arkts-arkui-richeditor-richeditorbasecontroller-c.md) and implements [StyledStringController](arkts-arkui-textcommon-styledstringcontroller-i.md)
 
@@ -18,7 +18,7 @@
 getSelection(): RichEditorRange | undefined
 ```
 
-获取富文本当前的选中区域范围。
+Get the selection in the StyledString of the RichEditor.
 
 **Since:** 23
 
@@ -34,7 +34,7 @@ getSelection(): RichEditorRange | undefined
 
 | Type | Description |
 | --- | --- |
-| [RichEditorRange](../arkts-components/arkts-arkui-richeditorrange-i.md) | 选中区域范围。&lt;br/&gt;返回undefined时表示controller未与组件绑定。 |
+| [RichEditorRange](../arkts-components/arkts-arkui-richeditorrange-i.md) |  |
 
 ## getStyledString
 
@@ -42,7 +42,7 @@ getSelection(): RichEditorRange | undefined
 getStyledString(): MutableStyledString | undefined
 ```
 
-获取富文本组件显示的属性字符串。
+Get the StyledString of the RichEditor.
 
 **Since:** 23
 
@@ -58,7 +58,7 @@ getStyledString(): MutableStyledString | undefined
 
 | Type | Description |
 | --- | --- |
-| [MutableStyledString](arkts-arkui-mutablestyledstring-c.md) | 富文本组件显示的属性字符串。&lt;br/&gt;返回undefined时表示controller未与组件绑定。 |
+| [MutableStyledString](arkts-arkui-mutablestyledstring-c.md) |  |
 
 ## onContentChanged
 
@@ -66,7 +66,7 @@ getStyledString(): MutableStyledString | undefined
 onContentChanged(listener: StyledStringChangedListener): void
 ```
 
-注册文本内容变化回调，该回调会在后端程序导致文本内容变更时触发。
+Register content changed listener
 
 **Since:** 23
 
@@ -82,7 +82,7 @@ onContentChanged(listener: StyledStringChangedListener): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| listener | [StyledStringChangedListener](arkts-arkui-styledstringchangedlistener-i.md) | Yes | 文本内容变化回调监听器。 |
+| listener | [StyledStringChangedListener](arkts-arkui-styledstringchangedlistener-i.md) | Yes | content changed listener. |
 
 ## setStyledString
 
@@ -90,7 +90,7 @@ onContentChanged(listener: StyledStringChangedListener): void
 setStyledString(styledString: StyledString): void
 ```
 
-设置富文本组件显示的属性字符串。
+Set the StyledString of the RichEditor.
 
 **Since:** 23
 
@@ -106,5 +106,5 @@ setStyledString(styledString: StyledString): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| styledString | [StyledString](arkts-arkui-styledstring-c.md) | Yes | 属性字符串。&lt;br/&gt;**说明：** &lt;br/&gt;StyledString的子类 [MutableStyledString](arkts-arkui-styledstring-mutablestyledstring-c.md)也可以作为入参值。 |
+| styledString | [StyledString](arkts-arkui-styledstring-c.md) | Yes | StyledString. |
 

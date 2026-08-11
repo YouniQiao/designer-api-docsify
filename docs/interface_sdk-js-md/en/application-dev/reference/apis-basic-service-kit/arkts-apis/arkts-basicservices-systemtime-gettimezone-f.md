@@ -12,7 +12,7 @@ import { systemTime } from 'kits/@kit.BasicServicesKit';
 function getTimezone(callback: AsyncCallback<string>): void
 ```
 
-获取系统时区，使用callback异步回调。
+Obtains the system time zone. This API uses an asynchronous callback to return the result.
 
 **Since:** 8
 
@@ -30,7 +30,7 @@ function getTimezone(callback: AsyncCallback<string>): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;string&gt; | Yes | 回调函数，返回系统时区。具体可见 [支持的系统时区](../../../reference/apis-basic-services-kit/js-apis-system-time.md#支持的系统时区) 。 |
+| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;string&gt; | Yes | Callback used to return the system time zone. For details, see [Supported System Time Zones](../../../reference/apis-basic-services-kit/js-apis-system-time.md#supported-system-time-zones) . |
 
 **Error codes:**
 
@@ -64,7 +64,7 @@ try {
 function getTimezone(): Promise<string>
 ```
 
-获取系统时区，使用Promise异步回调。
+Obtains the system time zone. This API uses a promise to return the result.
 
 **Since:** 8
 
@@ -82,7 +82,7 @@ function getTimezone(): Promise<string>
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;string&gt; | Promise对象，返回系统时区。具体可见 [支持的系统时区](../../../reference/apis-basic-services-kit/js-apis-system-time.md#支持的系统时区) 。 |
+| Promise&lt;string&gt; | Promise used to return the system time zone. For details, see [Supported System Time Zones](../../../reference/apis-basic-services-kit/js-apis-system-time.md#supported-system-time-zones) . |
 
 **Error codes:**
 

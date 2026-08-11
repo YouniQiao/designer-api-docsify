@@ -10,19 +10,13 @@
 
 **系统能力：** SystemCapability.Utils.Lang
 
-## 导入模块
-
-```TypeScript
-import { url } from 'kits/@kit.ArkTS';
-```
-
 ## constructor
 
 ```TypeScript
 constructor(url: string, base?: string | URL)
 ```
 
-URL的构造函数。
+URL的构造函数。与parseURL方法功能相同，但parseURL为静态工厂方法，推荐使用parseURL来创建URL对象。
 
 **起始版本：** 7
 
@@ -40,8 +34,8 @@ URL的构造函数。
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| url | string | 是 | 一个表示绝对URL或相对URL的字符串。 &lt;br/&gt;如果 url 是相对URL，则需要指定 base，用于解析最终的URL。 &lt;br/&gt;如果 url 是绝对URL，则给定的 base 将不会生效。 |
-| base | string \| URL | 否 | 入参字符串或者对象，默认值是undefined。&lt;br/&gt;- string：字符串。&lt;br/&gt;- URL：URL对象。 |
+| url | string | 是 | 一个表示绝对URL或相对URL的字符串，必须是合法的URL格式。 &lt;br/&gt;如果url是相对URL，则需要指定base，用于解析最终的URL。 &lt;br/&gt;如果 url是绝对URL，则给定的base将不会生效。 |
+| base | string \| URL | 否 | 入参字符串或者对象，默认值是undefined。&lt;br&gt;- string：表示基础URL的字符串， 当url为相对URL时需为合法URL格式。&lt;br&gt;- URL：已解析的URL对象，用作相对URL解析的基础地址。 |
 
 ## constructor
 
@@ -49,7 +43,7 @@ URL的构造函数。
 constructor()
 ```
 
-URL的无参构造函数。parseURL调用后返回一个URL对象，不单独使用。
+URL的无参构造函数，不建议直接调用。请使用parseURL方法创建URL对象。
 
 **起始版本：** 9
 
@@ -61,6 +55,12 @@ URL的无参构造函数。parseURL调用后返回一个URL对象，不单独使
 
 **系统能力：** SystemCapability.Utils.Lang
 
+## 示例
+
+```TypeScript
+let a = new url.URL();
+```
+
 ## parseURL
 
 ```TypeScript
@@ -68,6 +68,12 @@ static parseURL(url: string, base?: string | URL): URL
 ```
 
 解析URL字符串，返回解析后的URL对象。该对象包含协议、主机、端口、路径和查询参数等URL组成部分。
+
+> **说明：**
+> 
+> 当入参url是相对URL时，调用该接口解析后的URL并不是简单地将入参url和base直接拼接。
+> url内容为相对路径格式时，会相对于base的当前目录进行解析，包括base中path字段最后一个斜杠前的所有路径片段，
+> 但不包括其后的部分（参照示例中url1）。url内容为指向根目录的格式时，会相对于base的原始地址（origin）进行解析（参照示例中url2）。
 
 **起始版本：** 9
 
@@ -96,7 +102,7 @@ static parseURL(url: string, base?: string | URL): URL
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 10200002 | Invalid url string. |
+| [10200002](../errorcode-utils.md#10200002-参数解析错误) | Invalid url string. |
 
 ## 示例
 
@@ -345,7 +351,12 @@ pathname: string
 port: string
 ```
 
-获取和设置URL的端口部分。
+获取和设置URL的端口部分。当port为当前protocol的默认端口时，port将被解析为空字符串。
+
+> **说明：**
+> 
+> 在解析URL字符串时，如果入参中的port内容是当前protocol的默认端口，那么port将被解析为空字符串。默认端口为：http为80，https为443，ftp为21，gopher为70，ws为80，
+> wss为443。
 
 **类型：** string
 

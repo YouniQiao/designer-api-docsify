@@ -12,7 +12,8 @@ import { hidebug } from 'kits/@kit.PerformanceAnalysisKit';
 function getNativeHeapFreeSize() : bigint
 ```
 
-��ȡ�ڴ������ͳ�ƵĽ��̳��еĿ��е���ͨ����ռ�õ����ֽ�����
+Obtains the total number of bytes occupied by the total free space (**fordblks**, which is obtained from  
+**mallinfo**) held by a process, which is measured by the memory allocator.
 
 **Since:** 8
 
@@ -26,7 +27,7 @@ function getNativeHeapFreeSize() : bigint
 
 | Type | Description |
 | --- | --- |
-| bigint | �����ڴ������ͳ�ƵĽ��̳��еĿ��е���ͨ����ռ���ڴ��С����λΪByte�� |
+| bigint | Size of the memory occupied by the total free space held by the process, in bytes. |
 
 ## Examples
 
@@ -34,6 +35,5 @@ function getNativeHeapFreeSize() : bigint
 import { hidebug } from '@kit.PerformanceAnalysisKit';
 
 let nativeHeapFreeSize: bigint = hidebug.getNativeHeapFreeSize();
-console.info(`nativeHeapFreeSize = ${nativeHeapFreeSize}`);
 ```
 

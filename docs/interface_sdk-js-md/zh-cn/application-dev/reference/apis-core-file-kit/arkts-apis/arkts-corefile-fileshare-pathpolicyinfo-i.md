@@ -10,12 +10,6 @@
 
 **系统能力：** SystemCapability.FileManagement.AppFileService.FolderAuthorization
 
-## 导入模块
-
-```TypeScript
-import { fileShare } from 'kits/@kit.CoreFileKit';
-```
-
 ## operationMode
 
 ```TypeScript

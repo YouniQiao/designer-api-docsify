@@ -12,7 +12,7 @@ import { accountManager } from 'kits/@kit.MDMKit';
 function setDomainAccountPolicy(admin: Want, domainAccountInfo: osAccount.DomainAccountInfo, policy: DomainAccountPolicy): void
 ```
 
-设置域账号策略。
+Sets the domain account policy.
 
 **Since:** 19
 
@@ -30,18 +30,18 @@ function setDomainAccountPolicy(admin: Want, domainAccountInfo: osAccount.Domain
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| admin | [Want](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-want-want-c.md) | Yes | 企业设备管理扩展组件。Want中必须包含企业设备管理扩展能力的abilityName和所在应用的bundleName。 |
-| domainAccountInfo | osAccount.DomainAccountInfo | Yes | 域账号信息。&lt;br /&gt;若传入的domainAccountInfo内部属性均为空，则会设置为全局域账号策略。全局 策略对所有的域账号生效。&lt;br /&gt;若传入的domainAccountInfo内部属性不为空，则为指定域账号设置策略。&lt;br /&gt;指定域账号策略的优先级高于全局策略，若指定域账号已有域账号策略，则全局策略对其不生效。&lt;br /&gt;**说明：**若为指定域账号设置策略，DomainAccountInfo的serverConfigId字段必填。 |
-| policy | [DomainAccountPolicy](arkts-mdm-accountmanager-domainaccountpolicy-i.md) | Yes | 域账号策略。&lt;br /&gt;**说明：**设置域账号策略后须在设备侧修改域账号密码，若未修改密码，则DomainAccountPolicy中的 passwordValidityPeriod、passwordExpirationNotification配置不生效。 |
+| admin | [Want](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-want-want-c.md) | Yes | EnterpriseAdminExtensionAbility. **Want** must contain the ability name of the EnterpriseAdminExtensionAbility and the bundle name of the application. |
+| domainAccountInfo | osAccount.DomainAccountInfo | Yes | Domain account information. &lt;br&gt;If the internal attribute of **domainAccountInfo** is empty, a global policy is set for all domain accounts. &lt;br&gt;If the internal attribute of **domainAccountInfo** is not empty, the policy is set for the specified domain account. &lt;br&gt;The priority of the specified domain account policy is higher than that of the global policy. If the specified domain account has a domain account policy, the global policy does not take effect for the domain account. &lt;br&gt;**Note:** To set a policy for a specified domain account, the **serverConfigId** parameter in **DomainAccountInfo** is mandatory. |
+| policy | [DomainAccountPolicy](arkts-mdm-accountmanager-domainaccountpolicy-i.md) | Yes | Domain account policy. &lt;br&gt;**Note:** After setting the domain account policy, you must change the domain account password on the device. Otherwise, the **passwordValidityPeriod** and **passwordExpirationNotification** configurations in **DomainAccountPolicy** do not take effect. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 801 | Capability not supported. Failed to call the API due to limited device capabilities. |
-| 201 | Permission verification failed. The application does not have the permission required to call the API. |
-| 9200001 | The application is not an administrator application of the device. |
-| 9200002 | The administrator application does not have permission to manage the device. |
+| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. Failed to call the API due to limited device capabilities. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed. The application does not have the permission required to call the API. |
+| [9200001](../errorcode-enterpriseDeviceManager.md#9200001-deviceadmin-not-enabled) | The application is not an administrator application of the device. |
+| [9200002](../errorcode-enterpriseDeviceManager.md#9200002-permission-denied) | The administrator application does not have permission to manage the device. |
 
 ## Examples
 

@@ -1,0 +1,908 @@
+# GattClientDevice
+
+Manages GATT client. Before calling an Gatt client method, you must use {@link createGattClientDevice} to create an GattClientDevice instance.
+
+**Since:** 7
+
+**Deprecated since:** 9
+
+**Substitutes:** ohos.bluetoothManager/bluetoothManager.GattClientDevice
+
+<!--Device-bluetooth-interface GattClientDevice--><!--Device-bluetooth-interface GattClientDevice-End-->
+
+**System capability:** SystemCapability.Communication.Bluetooth.Core
+
+## Modules to Import
+
+```TypeScript
+import { bluetooth } from 'kits/@kit.ConnectivityKit';
+```
+
+## close
+
+```TypeScript
+close(): boolean
+```
+
+Disables a BLE peripheral device.
+
+This method unregisters the device and clears the registered callbacks and handles.
+
+**Since:** 7
+
+**Deprecated since:** 9
+
+**Substitutes:** ohos.bluetoothManager/bluetoothManager.GattClientDevice#close
+
+**Required permissions:** ohos.permission.USE_BLUETOOTH
+
+<!--Device-GattClientDevice-close(): boolean--><!--Device-GattClientDevice-close(): boolean-End-->
+
+**System capability:** SystemCapability.Communication.Bluetooth.Core
+
+**Return value:**
+
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| boolean |
+
+## Examples
+
+```TypeScript
+let device : bluetooth.GattClientDevice = bluetooth.BLE.createGattClientDevice('XX:XX:XX:XX:XX:XX');
+let ret : boolean = device.close();
+```
+
+## connect
+
+```TypeScript
+connect(): boolean
+```
+
+Connects to a BLE peripheral device.
+
+The 'BLEConnectionStateChange' event is subscribed to return the connection state.
+
+**Since:** 7
+
+**Deprecated since:** 9
+
+**Substitutes:** ohos.bluetoothManager/bluetoothManager.GattClientDevice#connect
+
+**Required permissions:** ohos.permission.USE_BLUETOOTH
+
+<!--Device-GattClientDevice-connect(): boolean--><!--Device-GattClientDevice-connect(): boolean-End-->
+
+**System capability:** SystemCapability.Communication.Bluetooth.Core
+
+**Return value:**
+
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| boolean |
+
+## Examples
+
+```TypeScript
+let device : bluetooth.GattClientDevice = bluetooth.BLE.createGattClientDevice('XX:XX:XX:XX:XX:XX');
+let ret : boolean = device.connect();
+```
+
+## disconnect
+
+```TypeScript
+disconnect(): boolean
+```
+
+Disconnects from or stops an ongoing connection to a BLE peripheral device.
+
+**Since:** 7
+
+**Deprecated since:** 9
+
+**Substitutes:** ohos.bluetoothManager/bluetoothManager.GattClientDevice#disconnect
+
+**Required permissions:** ohos.permission.USE_BLUETOOTH
+
+<!--Device-GattClientDevice-disconnect(): boolean--><!--Device-GattClientDevice-disconnect(): boolean-End-->
+
+**System capability:** SystemCapability.Communication.Bluetooth.Core
+
+**Return value:**
+
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| boolean |
+
+## Examples
+
+```TypeScript
+let device : bluetooth.GattClientDevice = bluetooth.BLE.createGattClientDevice('XX:XX:XX:XX:XX:XX');
+let ret : boolean = device.disconnect();
+```
+
+## getDeviceName
+
+```TypeScript
+getDeviceName(callback: AsyncCallback<string>): void
+```
+
+Obtains the name of BLE peripheral device.
+
+**Since:** 7
+
+**Deprecated since:** 9
+
+**Substitutes:** ohos.bluetoothManager/bluetoothManager.GattClientDevice#getDeviceName
+
+**Required permissions:** ohos.permission.USE_BLUETOOTH
+
+<!--Device-GattClientDevice-getDeviceName(callback: AsyncCallback<string>): void--><!--Device-GattClientDevice-getDeviceName(callback: AsyncCallback<string>): void-End-->
+
+**System capability:** SystemCapability.Communication.Bluetooth.Core
+
+**Parameters:**
+
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;string&gt; | Yes |
+
+## Examples
+
+```TypeScript
+import { BusinessError } from '@ohos.base';
+// callback
+let gattClient : bluetooth.GattClientDevice = bluetooth.BLE.createGattClientDevice("XX:XX:XX:XX:XX:XX");
+let deviceName : void = gattClient.getDeviceName((err : BusinessError, data : string)=> {
+    console.info('device name err ' + JSON.stringify(err));
+    console.info('device name' + JSON.stringify(data));
+})
+```
+
+## getDeviceName
+
+```TypeScript
+getDeviceName(): Promise<string>
+```
+
+Obtains the name of BLE peripheral device.
+
+**Since:** 7
+
+**Deprecated since:** 9
+
+**Substitutes:** ohos.bluetoothManager/bluetoothManager.GattClientDevice#getDeviceName
+
+**Required permissions:** ohos.permission.USE_BLUETOOTH
+
+<!--Device-GattClientDevice-getDeviceName(): Promise<string>--><!--Device-GattClientDevice-getDeviceName(): Promise<string>-End-->
+
+**System capability:** SystemCapability.Communication.Bluetooth.Core
+
+**Return value:**
+
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| Promise&lt;string&gt; |
+
+## Examples
+
+```TypeScript
+// promise
+let gattClient : bluetooth.GattClientDevice = bluetooth.BLE.createGattClientDevice("XX:XX:XX:XX:XX:XX");
+gattClient.getDeviceName().then((data) => {
+    console.info('device name' + JSON.stringify(data));
+})
+```
+
+## getRssiValue
+
+```TypeScript
+getRssiValue(callback: AsyncCallback<number>): void
+```
+
+Get the RSSI value of this BLE peripheral device.
+
+**Since:** 7
+
+**Deprecated since:** 9
+
+**Substitutes:** ohos.bluetoothManager/bluetoothManager.GattClientDevice#getRssiValue
+
+**Required permissions:** ohos.permission.USE_BLUETOOTH
+
+<!--Device-GattClientDevice-getRssiValue(callback: AsyncCallback<number>): void--><!--Device-GattClientDevice-getRssiValue(callback: AsyncCallback<number>): void-End-->
+
+**System capability:** SystemCapability.Communication.Bluetooth.Core
+
+**Parameters:**
+
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;number&gt; | Yes |
+
+## Examples
+
+```TypeScript
+import { BusinessError } from '@ohos.base';
+// callback
+let gattClient : bluetooth.GattClientDevice = bluetooth.BLE.createGattClientDevice("XX:XX:XX:XX:XX:XX");
+let ret : boolean = gattClient.connect();
+gattClient.getRssiValue((err : BusinessError, data : number)=> {
+    console.info('rssi err ' + JSON.stringify(err));
+    console.info('rssi value' + JSON.stringify(data));
+})
+```
+
+## getRssiValue
+
+```TypeScript
+getRssiValue(): Promise<number>
+```
+
+Get the RSSI value of this BLE peripheral device.
+
+**Since:** 7
+
+**Deprecated since:** 9
+
+**Substitutes:** ohos.bluetoothManager/bluetoothManager.GattClientDevice#getRssiValue
+
+**Required permissions:** ohos.permission.USE_BLUETOOTH
+
+<!--Device-GattClientDevice-getRssiValue(): Promise<number>--><!--Device-GattClientDevice-getRssiValue(): Promise<number>-End-->
+
+**System capability:** SystemCapability.Communication.Bluetooth.Core
+
+**Return value:**
+
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| Promise&lt;number&gt; |
+
+## Examples
+
+```TypeScript
+// promise
+let gattClient : bluetooth.GattClientDevice = bluetooth.BLE.createGattClientDevice("XX:XX:XX:XX:XX:XX");
+gattClient.getRssiValue().then((data : number) => {
+    console.info('rssi' + JSON.stringify(data));
+})
+```
+
+## getServices
+
+```TypeScript
+getServices(callback: AsyncCallback<Array<GattService>>): void
+```
+
+Starts discovering services.
+
+**Since:** 7
+
+**Deprecated since:** 9
+
+**Substitutes:** ohos.bluetoothManager/bluetoothManager.GattClientDevice#getServices
+
+**Required permissions:** ohos.permission.USE_BLUETOOTH
+
+<!--Device-GattClientDevice-getServices(callback: AsyncCallback<Array<GattService>>): void--><!--Device-GattClientDevice-getServices(callback: AsyncCallback<Array<GattService>>): void-End-->
+
+**System capability:** SystemCapability.Communication.Bluetooth.Core
+
+**Parameters:**
+
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;GattService&gt;&gt; | Yes |
+
+## Examples
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+// Callback mode.
+function getServices(code : BusinessError, gattServices : Array<bluetooth.GattService>) {
+  if (code.code == 0) {
+      console.info(`bluetooth code is ${code.code}`);
+      console.info(`bluetooth services size is ${gattServices.length}`);
+
+      for (let i = 0; i < gattServices.length; i++) {
+        console.info(`bluetooth serviceUuid is ${gattServices[i].serviceUuid}`);
+      }
+  }
+}
+
+let device : bluetooth.GattClientDevice = bluetooth.BLE.createGattClientDevice('XX:XX:XX:XX:XX:XX');
+device.connect();
+device.getServices(getServices);
+```
+
+## getServices
+
+```TypeScript
+getServices(): Promise<Array<GattService>>
+```
+
+Starts discovering services.
+
+**Since:** 7
+
+**Deprecated since:** 9
+
+**Substitutes:** ohos.bluetoothManager/bluetoothManager.GattClientDevice#getServices
+
+**Required permissions:** ohos.permission.USE_BLUETOOTH
+
+<!--Device-GattClientDevice-getServices(): Promise<Array<GattService>>--><!--Device-GattClientDevice-getServices(): Promise<Array<GattService>>-End-->
+
+**System capability:** SystemCapability.Communication.Bluetooth.Core
+
+**Return value:**
+
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| Promise&lt;Array&lt;GattService&gt;&gt; |
+
+## Examples
+
+```TypeScript
+// Promise
+let device : bluetooth.GattClientDevice= bluetooth.BLE.createGattClientDevice('XX:XX:XX:XX:XX:XX');
+device.connect();
+device.getServices().then((result : Array<bluetooth.GattService>) => {
+    console.info("getServices successfully:" + JSON.stringify(result));
+});
+```
+
+## off('BLECharacteristicChange')
+
+```TypeScript
+off(type: 'BLECharacteristicChange', callback?: Callback<BLECharacteristic>): void
+```
+
+Unsubscribe characteristic value changed event.
+
+**Since:** 7
+
+**Deprecated since:** 9
+
+**Substitutes:** ohos.bluetoothManager/bluetoothManager.GattClientDevice.off#event:BLECharacteristicChange
+
+**Required permissions:** ohos.permission.USE_BLUETOOTH
+
+<!--Device-GattClientDevice-off(type: 'BLECharacteristicChange', callback?: Callback<BLECharacteristic>): void--><!--Device-GattClientDevice-off(type: 'BLECharacteristicChange', callback?: Callback<BLECharacteristic>): void-End-->
+
+**System capability:** SystemCapability.Communication.Bluetooth.Core
+
+**Parameters:**
+
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| type | 'BLECharacteristicChange' | Yes |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;BLECharacteristic&gt; | No |
+
+## Examples
+
+```TypeScript
+let device : bluetooth.GattClientDevice = bluetooth.BLE.createGattClientDevice('XX:XX:XX:XX:XX:XX');
+device.off('BLECharacteristicChange');
+```
+
+## off('BLEConnectionStateChange')
+
+```TypeScript
+off(type: 'BLEConnectionStateChange', callback?: Callback<BLEConnectChangedState>): void
+```
+
+Unsubscribe client connection state changed event.
+
+**Since:** 7
+
+**Deprecated since:** 9
+
+**Substitutes:** ohos.bluetoothManager/bluetoothManager.GattClientDevice.off#event:BLEConnectionStateChange
+
+**Required permissions:** ohos.permission.USE_BLUETOOTH
+
+<!--Device-GattClientDevice-off(type: 'BLEConnectionStateChange', callback?: Callback<BLEConnectChangedState>): void--><!--Device-GattClientDevice-off(type: 'BLEConnectionStateChange', callback?: Callback<BLEConnectChangedState>): void-End-->
+
+**System capability:** SystemCapability.Communication.Bluetooth.Core
+
+**Parameters:**
+
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| type | 'BLEConnectionStateChange' | Yes |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;BLEConnectChangedState&gt; | No |
+
+## Examples
+
+```TypeScript
+let device : bluetooth.GattClientDevice = bluetooth.BLE.createGattClientDevice('XX:XX:XX:XX:XX:XX');
+device.off('BLEConnectionStateChange');
+```
+
+## on('BLECharacteristicChange')
+
+```TypeScript
+on(type: 'BLECharacteristicChange', callback: Callback<BLECharacteristic>): void
+```
+
+Subscribe characteristic value changed event.
+
+**Since:** 7
+
+**Deprecated since:** 9
+
+**Substitutes:** ohos.bluetoothManager/bluetoothManager.GattClientDevice.on#event:BLECharacteristicChange
+
+**Required permissions:** ohos.permission.USE_BLUETOOTH
+
+<!--Device-GattClientDevice-on(type: 'BLECharacteristicChange', callback: Callback<BLECharacteristic>): void--><!--Device-GattClientDevice-on(type: 'BLECharacteristicChange', callback: Callback<BLECharacteristic>): void-End-->
+
+**System capability:** SystemCapability.Communication.Bluetooth.Core
+
+**Parameters:**
+
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| type | 'BLECharacteristicChange' | Yes |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;BLECharacteristic&gt; | Yes |
+
+## Examples
+
+```TypeScript
+function CharacteristicChange(CharacteristicChangeReq : bluetooth.BLECharacteristic) {
+  let serviceUuid : string = CharacteristicChangeReq.serviceUuid;
+  let characteristicUuid : string = CharacteristicChangeReq.characteristicUuid;
+  let value = new Uint8Array(CharacteristicChangeReq.characteristicValue);
+}
+let device : bluetooth.GattClientDevice = bluetooth.BLE.createGattClientDevice('XX:XX:XX:XX:XX:XX');
+device.on('BLECharacteristicChange', CharacteristicChange);
+```
+
+## on('BLEConnectionStateChange')
+
+```TypeScript
+on(type: 'BLEConnectionStateChange', callback: Callback<BLEConnectChangedState>): void
+```
+
+Subscribe client connection state changed event.
+
+**Since:** 7
+
+**Deprecated since:** 9
+
+**Substitutes:** ohos.bluetoothManager/bluetoothManager.GattClientDevice.on#event:BLEConnectionStateChange
+
+**Required permissions:** ohos.permission.USE_BLUETOOTH
+
+<!--Device-GattClientDevice-on(type: 'BLEConnectionStateChange', callback: Callback<BLEConnectChangedState>): void--><!--Device-GattClientDevice-on(type: 'BLEConnectionStateChange', callback: Callback<BLEConnectChangedState>): void-End-->
+
+**System capability:** SystemCapability.Communication.Bluetooth.Core
+
+**Parameters:**
+
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| type | 'BLEConnectionStateChange' | Yes |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;BLEConnectChangedState&gt; | Yes |
+
+## Examples
+
+```TypeScript
+function ConnectStateChanged(state : bluetooth.BLEConnectChangedState) {
+  console.info('bluetooth connect state changed');
+  let connectState : bluetooth.ProfileConnectionState = state.state;
+}
+let device : bluetooth.GattClientDevice = bluetooth.BLE.createGattClientDevice('XX:XX:XX:XX:XX:XX');
+device.on('BLEConnectionStateChange', ConnectStateChanged);
+```
+
+## readCharacteristicValue
+
+```TypeScript
+readCharacteristicValue(characteristic: BLECharacteristic, callback: AsyncCallback<BLECharacteristic>): void
+```
+
+Reads the characteristic of a BLE peripheral device.
+
+**Since:** 7
+
+**Deprecated since:** 9
+
+**Substitutes:** ohos.bluetoothManager/bluetoothManager.GattClientDevice#readCharacteristicValue
+
+**Required permissions:** ohos.permission.USE_BLUETOOTH
+
+<!--Device-GattClientDevice-readCharacteristicValue(characteristic: BLECharacteristic, callback: AsyncCallback<BLECharacteristic>): void--><!--Device-GattClientDevice-readCharacteristicValue(characteristic: BLECharacteristic, callback: AsyncCallback<BLECharacteristic>): void-End-->
+
+**System capability:** SystemCapability.Communication.Bluetooth.Core
+
+**Parameters:**
+
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| characteristic | [BLECharacteristic](arkts-connectivity-bluetooth-blecharacteristic-i.md) | Yes |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;BLECharacteristic&gt; | Yes |
+
+## Examples
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+function readCcc(code : BusinessError, BLECharacteristic : bluetooth.BLECharacteristic) {
+  if (code.code != 0) {
+      return;
+  }
+  console.info(`bluetooth characteristic uuid: ${BLECharacteristic.characteristicUuid}`);
+  let value = new Uint8Array(BLECharacteristic.characteristicValue);
+}
+
+let device : bluetooth.GattClientDevice = bluetooth.BLE.createGattClientDevice('XX:XX:XX:XX:XX:XX');
+let descriptors : Array<bluetooth.BLEDescriptor> = [];
+let bufferDesc : ArrayBuffer = new ArrayBuffer(8);
+let descV : Uint8Array = new Uint8Array(bufferDesc);
+descV[0] = 11;
+let descriptor : bluetooth.BLEDescriptor = {serviceUuid: '00001810-0000-1000-8000-00805F9B34FB',
+characteristicUuid: '00001820-0000-1000-8000-00805F9B34FB',
+descriptorUuid: '00002903-0000-1000-8000-00805F9B34FB', descriptorValue: bufferDesc};
+descriptors[0] = descriptor;
+
+let bufferCCC = new ArrayBuffer(8);
+let cccV = new Uint8Array(bufferCCC);
+cccV[0] = 1;
+let characteristic : bluetooth.BLECharacteristic = {serviceUuid: '00001810-0000-1000-8000-00805F9B34FB',
+characteristicUuid: '00001820-0000-1000-8000-00805F9B34FB',
+characteristicValue: bufferCCC, descriptors:descriptors};
+
+device.readCharacteristicValue(characteristic, readCcc);
+```
+
+## readCharacteristicValue
+
+```TypeScript
+readCharacteristicValue(characteristic: BLECharacteristic): Promise<BLECharacteristic>
+```
+
+Reads the characteristic of a BLE peripheral device.
+
+**Since:** 7
+
+**Deprecated since:** 9
+
+**Substitutes:** ohos.bluetoothManager/bluetoothManager.GattClientDevice#readCharacteristicValue
+
+**Required permissions:** ohos.permission.USE_BLUETOOTH
+
+<!--Device-GattClientDevice-readCharacteristicValue(characteristic: BLECharacteristic): Promise<BLECharacteristic>--><!--Device-GattClientDevice-readCharacteristicValue(characteristic: BLECharacteristic): Promise<BLECharacteristic>-End-->
+
+**System capability:** SystemCapability.Communication.Bluetooth.Core
+
+**Parameters:**
+
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| characteristic | [BLECharacteristic](arkts-connectivity-bluetooth-blecharacteristic-i.md) | Yes |
+
+**Return value:**
+
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| Promise&lt;BLECharacteristic&gt; |
+
+## Examples
+
+```TypeScript
+let device : bluetooth.GattClientDevice = bluetooth.BLE.createGattClientDevice('XX:XX:XX:XX:XX:XX');
+let descriptors : Array<bluetooth.BLEDescriptor> = [];
+let bufferDesc = new ArrayBuffer(8);
+let descV = new Uint8Array(bufferDesc);
+descV[0] = 11;
+let descriptor : bluetooth.BLEDescriptor = {serviceUuid: '00001810-0000-1000-8000-00805F9B34FB',
+characteristicUuid: '00001820-0000-1000-8000-00805F9B34FB',
+descriptorUuid: '00002903-0000-1000-8000-00805F9B34FB', descriptorValue: bufferDesc};
+descriptors[0] = descriptor;
+
+let bufferCCC = new ArrayBuffer(8);
+let cccV = new Uint8Array(bufferCCC);
+cccV[0] = 1;
+let characteristic : bluetooth.BLECharacteristic = {serviceUuid: '00001810-0000-1000-8000-00805F9B34FB',
+characteristicUuid: '00001820-0000-1000-8000-00805F9B34FB',
+characteristicValue: bufferCCC, descriptors:descriptors};
+
+device.readCharacteristicValue(characteristic);
+```
+
+## readDescriptorValue
+
+```TypeScript
+readDescriptorValue(descriptor: BLEDescriptor, callback: AsyncCallback<BLEDescriptor>): void
+```
+
+Reads the descriptor of a BLE peripheral device.
+
+**Since:** 7
+
+**Deprecated since:** 9
+
+**Substitutes:** ohos.bluetoothManager/bluetoothManager.GattClientDevice#readDescriptorValue
+
+**Required permissions:** ohos.permission.USE_BLUETOOTH
+
+<!--Device-GattClientDevice-readDescriptorValue(descriptor: BLEDescriptor, callback: AsyncCallback<BLEDescriptor>): void--><!--Device-GattClientDevice-readDescriptorValue(descriptor: BLEDescriptor, callback: AsyncCallback<BLEDescriptor>): void-End-->
+
+**System capability:** SystemCapability.Communication.Bluetooth.Core
+
+**Parameters:**
+
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| descriptor | [BLEDescriptor](arkts-connectivity-bluetooth-bledescriptor-i.md) | Yes |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;BLEDescriptor&gt; | Yes |
+
+## Examples
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+function readDesc(code : BusinessError, BLEDescriptor : bluetooth.BLEDescriptor) {
+  if (code.code != 0) {
+      return;
+  }
+  console.info(`bluetooth descriptor uuid: ${BLEDescriptor.descriptorUuid}`);
+  let value = new Uint8Array(BLEDescriptor.descriptorValue);
+}
+
+let device : bluetooth.GattClientDevice = bluetooth.BLE.createGattClientDevice('XX:XX:XX:XX:XX:XX');
+let bufferDesc = new ArrayBuffer(8);
+let descV = new Uint8Array(bufferDesc);
+descV[0] = 11;
+let descriptor : bluetooth.BLEDescriptor = {serviceUuid: '00001810-0000-1000-8000-00805F9B34FB',
+  characteristicUuid: '00001820-0000-1000-8000-00805F9B34FB',
+  descriptorUuid: '00002903-0000-1000-8000-00805F9B34FB', descriptorValue: bufferDesc};
+device.readDescriptorValue(descriptor, readDesc);
+```
+
+## readDescriptorValue
+
+```TypeScript
+readDescriptorValue(descriptor: BLEDescriptor): Promise<BLEDescriptor>
+```
+
+Reads the descriptor of a BLE peripheral device.
+
+**Since:** 7
+
+**Deprecated since:** 9
+
+**Substitutes:** ohos.bluetoothManager/bluetoothManager.GattClientDevice#readDescriptorValue
+
+**Required permissions:** ohos.permission.USE_BLUETOOTH
+
+<!--Device-GattClientDevice-readDescriptorValue(descriptor: BLEDescriptor): Promise<BLEDescriptor>--><!--Device-GattClientDevice-readDescriptorValue(descriptor: BLEDescriptor): Promise<BLEDescriptor>-End-->
+
+**System capability:** SystemCapability.Communication.Bluetooth.Core
+
+**Parameters:**
+
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| descriptor | [BLEDescriptor](arkts-connectivity-bluetooth-bledescriptor-i.md) | Yes |
+
+**Return value:**
+
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| Promise&lt;BLEDescriptor&gt; |
+
+## Examples
+
+```TypeScript
+let device : bluetooth.GattClientDevice = bluetooth.BLE.createGattClientDevice('XX:XX:XX:XX:XX:XX');
+let bufferDesc = new ArrayBuffer(8);
+let descV = new Uint8Array(bufferDesc);
+descV[0] = 11;
+let descriptor : bluetooth.BLEDescriptor = {serviceUuid: '00001810-0000-1000-8000-00805F9B34FB',
+  characteristicUuid: '00001820-0000-1000-8000-00805F9B34FB',
+  descriptorUuid: '00002903-0000-1000-8000-00805F9B34FB', descriptorValue: bufferDesc};
+device.readDescriptorValue(descriptor);
+```
+
+## setBLEMtuSize
+
+```TypeScript
+setBLEMtuSize(mtu: number): boolean
+```
+
+Set the mtu size of a BLE peripheral device.
+
+**Since:** 7
+
+**Deprecated since:** 9
+
+**Substitutes:** ohos.bluetoothManager/bluetoothManager.GattClientDevice#setBLEMtuSize
+
+**Required permissions:** ohos.permission.USE_BLUETOOTH
+
+<!--Device-GattClientDevice-setBLEMtuSize(mtu: number): boolean--><!--Device-GattClientDevice-setBLEMtuSize(mtu: number): boolean-End-->
+
+**System capability:** SystemCapability.Communication.Bluetooth.Core
+
+**Parameters:**
+
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| mtu | number | Yes |
+
+**Return value:**
+
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| boolean |
+
+## Examples
+
+```TypeScript
+let device : bluetooth.GattClientDevice = bluetooth.BLE.createGattClientDevice('XX:XX:XX:XX:XX:XX');
+device.setBLEMtuSize(128);
+```
+
+## setNotifyCharacteristicChanged
+
+```TypeScript
+setNotifyCharacteristicChanged(characteristic: BLECharacteristic, enable: boolean): boolean
+```
+
+Enables or disables notification of a characteristic when value changed.
+
+**Since:** 7
+
+**Deprecated since:** 9
+
+**Substitutes:** ohos.bluetoothManager/bluetoothManager.GattClientDevice#setNotifyCharacteristicChanged
+
+**Required permissions:** ohos.permission.USE_BLUETOOTH
+
+<!--Device-GattClientDevice-setNotifyCharacteristicChanged(characteristic: BLECharacteristic, enable: boolean): boolean--><!--Device-GattClientDevice-setNotifyCharacteristicChanged(characteristic: BLECharacteristic, enable: boolean): boolean-End-->
+
+**System capability:** SystemCapability.Communication.Bluetooth.Core
+
+**Parameters:**
+
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| characteristic | [BLECharacteristic](arkts-connectivity-bluetooth-blecharacteristic-i.md) | Yes |
+| enable | boolean | Yes |
+
+**Return value:**
+
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| boolean |
+
+## Examples
+
+```TypeScript
+// Create descriptors.
+let descriptors : Array<bluetooth.BLEDescriptor> = [];
+let arrayBuffer = new ArrayBuffer(8);
+let descV = new Uint8Array(arrayBuffer);
+descV[0] = 11;
+let descriptor : bluetooth.BLEDescriptor = {serviceUuid: '00001810-0000-1000-8000-00805F9B34FB',
+  characteristicUuid: '00001820-0000-1000-8000-00805F9B34FB',
+  descriptorUuid: '00002902-0000-1000-8000-00805F9B34FB', descriptorValue: arrayBuffer};
+descriptors[0] = descriptor;
+let arrayBufferC = new ArrayBuffer(8);
+let characteristic : bluetooth.BLECharacteristic = {serviceUuid: '00001810-0000-1000-8000-00805F9B34FB',
+  characteristicUuid: '00001820-0000-1000-8000-00805F9B34FB', characteristicValue: arrayBufferC, descriptors:descriptors};
+let device : bluetooth.GattClientDevice = bluetooth.BLE.createGattClientDevice('XX:XX:XX:XX:XX:XX');
+device.setNotifyCharacteristicChanged(characteristic, false);
+```
+
+## writeCharacteristicValue
+
+```TypeScript
+writeCharacteristicValue(characteristic: BLECharacteristic): boolean
+```
+
+Writes the characteristic of a BLE peripheral device.
+
+**Since:** 7
+
+**Deprecated since:** 9
+
+**Substitutes:** ohos.bluetoothManager/bluetoothManager.GattClientDevice#writeCharacteristicValue
+
+**Required permissions:** ohos.permission.USE_BLUETOOTH
+
+<!--Device-GattClientDevice-writeCharacteristicValue(characteristic: BLECharacteristic): boolean--><!--Device-GattClientDevice-writeCharacteristicValue(characteristic: BLECharacteristic): boolean-End-->
+
+**System capability:** SystemCapability.Communication.Bluetooth.Core
+
+**Parameters:**
+
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| characteristic | [BLECharacteristic](arkts-connectivity-bluetooth-blecharacteristic-i.md) | Yes |
+
+**Return value:**
+
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| boolean |
+
+## Examples
+
+```TypeScript
+let device : bluetooth.GattClientDevice = bluetooth.BLE.createGattClientDevice('XX:XX:XX:XX:XX:XX');
+let descriptors : Array<bluetooth.BLEDescriptor> = [];
+let bufferDesc = new ArrayBuffer(8);
+let descV = new Uint8Array(bufferDesc);
+descV[0] = 11;
+let descriptor : bluetooth.BLEDescriptor = {serviceUuid: '00001810-0000-1000-8000-00805F9B34FB',
+  characteristicUuid: '00001820-0000-1000-8000-00805F9B34FB',
+  descriptorUuid: '00002903-0000-1000-8000-00805F9B34FB', descriptorValue: bufferDesc};
+descriptors[0] = descriptor;
+
+let bufferCCC = new ArrayBuffer(8);
+let cccV = new Uint8Array(bufferCCC);
+cccV[0] = 1;
+let characteristic : bluetooth.BLECharacteristic = {serviceUuid: '00001810-0000-1000-8000-00805F9B34FB',
+  characteristicUuid: '00001820-0000-1000-8000-00805F9B34FB',
+  characteristicValue: bufferCCC, descriptors:descriptors};
+let retWriteCcc : boolean = device.writeCharacteristicValue(characteristic);
+if (retWriteCcc) {
+  console.info('write characteristic successfully');
+} else {
+  console.error('write characteristic failed');
+}
+```
+
+## writeDescriptorValue
+
+```TypeScript
+writeDescriptorValue(descriptor: BLEDescriptor): boolean
+```
+
+Writes the descriptor of a BLE peripheral device.
+
+**Since:** 7
+
+**Deprecated since:** 9
+
+**Substitutes:** ohos.bluetoothManager/bluetoothManager.GattClientDevice#writeDescriptorValue
+
+**Required permissions:** ohos.permission.USE_BLUETOOTH
+
+<!--Device-GattClientDevice-writeDescriptorValue(descriptor: BLEDescriptor): boolean--><!--Device-GattClientDevice-writeDescriptorValue(descriptor: BLEDescriptor): boolean-End-->
+
+**System capability:** SystemCapability.Communication.Bluetooth.Core
+
+**Parameters:**
+
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| descriptor | [BLEDescriptor](arkts-connectivity-bluetooth-bledescriptor-i.md) | Yes |
+
+**Return value:**
+
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| boolean |
+
+## Examples
+
+```TypeScript
+let device : bluetooth.GattClientDevice = bluetooth.BLE.createGattClientDevice('XX:XX:XX:XX:XX:XX');
+let bufferDesc = new ArrayBuffer(8);
+let descV = new Uint8Array(bufferDesc);
+descV[0] = 22;
+let descriptor : bluetooth.BLEDescriptor = {serviceUuid: '00001810-0000-1000-8000-00805F9B34FB',
+  characteristicUuid: '00001820-0000-1000-8000-00805F9B34FB',
+  descriptorUuid: '00002903-0000-1000-8000-00805F9B34FB', descriptorValue: bufferDesc};
+let retWriteDesc : boolean = device.writeDescriptorValue(descriptor);
+if (retWriteDesc) {
+  console.info('bluetooth write descriptor successfully');
+} else {
+  console.error('bluetooth write descriptor failed');
+}
+```

@@ -1,11 +1,5 @@
 # getFreeSize
 
-## 导入模块
-
-```TypeScript
-import { storageStatistics } from 'kits/@kit.CoreFileKit';
-```
-
 ## getFreeSize
 
 ```TypeScript
@@ -35,17 +29,37 @@ function getFreeSize(callback: AsyncCallback<long>): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 401 | The input parameter is invalid.Possible causes:Mandatory parameters are left unspecified; |
-| 201 | Permission verification failed.<br>**适用版本：** 9 - 14 |
-| 202 | The caller is not a system application.<br>**适用版本：** 9 - 14 |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | The input parameter is invalid.Possible causes:Mandatory parameters are left unspecified; |
+| [201](../../errorcode-universal.md#201-权限校验失败) | Permission verification failed.<br>**适用版本：** 9 - 14 |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | The caller is not a system application.<br>**适用版本：** 9 - 14 |
 | 13600001 | IPC error. |
 | 13900042 | Unknown error. |
 
 ## 示例
 
+ArkTS-Dyn示例：
+
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
+
 storageStatistics.getFreeSize((error: BusinessError, freeSize: number) => {
+  if (error) {
+    console.error(`getFreeSize failed. Code: ${error.code}, message: ${error.message}`);
+  } else {
+    // do something
+    console.info('getFreeSize successfully:' + freeSize);
+  }
+});
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let error: BusinessError = {};
+let totalSize: long = 0;
+storageStatistics.getFreeSize((error, freeSize): void => {
   if (error) {
     console.error(`getFreeSize failed. Code: ${error.code}, message: ${error.message}`);
   } else {
@@ -87,11 +101,27 @@ function getFreeSize(): Promise<long>
 
 ## 示例
 
+ArkTS-Dyn示例：
+
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
+
 storageStatistics.getFreeSize().then((freeSize: number) => {
   console.info('getFreeSize successfully:' + freeSize);
 }).catch((err: BusinessError) => {
+  console.error(`getFreeSize failed. Code: ${err.code}, message: ${err.message}`);
+});
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let totalSize: long = 0;
+storageStatistics.getFreeSize().then((freeSize) => {
+  console.info('getFreeSize successfully:' + freeSize);
+}).catch((err: BusinessError): void => {
   console.error(`getFreeSize failed. Code: ${err.code}, message: ${err.message}`);
 });
 ```

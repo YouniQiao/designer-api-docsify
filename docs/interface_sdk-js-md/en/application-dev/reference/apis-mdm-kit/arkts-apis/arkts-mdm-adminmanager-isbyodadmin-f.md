@@ -12,7 +12,8 @@ import { adminManager } from 'kits/@kit.MDMKit';
 function isByodAdmin(admin: Want): boolean
 ```
 
-根据企业设备管理扩展组件查询当前应用是否被激活为BYOD设备管理应用。
+Checks whether the current application is activated as a BYOD device administrator application based on the  
+**EnterpriseAdminExtensionAbility** component.
 
 **Since:** 20
 
@@ -30,20 +31,20 @@ function isByodAdmin(admin: Want): boolean
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| admin | [Want](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-want-want-c.md) | Yes | 企业设备管理扩展组件。Want中必须包含企业设备管理扩展能力的abilityName和所在应用的bundleName。仅支持传入当前应用的企业设备管理扩展组件。 |
+| admin | [Want](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-want-want-c.md) | Yes | EnterpriseAdminExtensionAbility. **Want** must contain the ability name of the EnterpriseAdminExtensionAbility and the bundle name of the application. Only the **EnterpriseAdminExtensionAbility** component of the current application can be passed. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| boolean | 返回true表示被激活为BYOD设备管理应用，返回false表示没有被激活为BYOD设备管理应用。 |
+| boolean | The value **true** indicates the application is activated as a BYOD device administrator application, and the value **false** indicates the opposite. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 9200012 | Parameter verification failed. |
-| 201 | Permission verification failed. The application does not have the permission required to call the API. |
+| [9200012](../errorcode-enterpriseDeviceManager.md#9200012-parameter-verification-failed) | Parameter verification failed. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed. The application does not have the permission required to call the API. |
 
 ## Examples
 

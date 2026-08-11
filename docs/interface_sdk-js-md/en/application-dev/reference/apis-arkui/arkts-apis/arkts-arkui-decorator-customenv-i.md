@@ -16,7 +16,7 @@ Defining CustomEnv PropertyDecorator.
 value: string
 ```
 
-自定义环境变量装饰器。
+Key value input by the user.
 
 **Type:** string
 

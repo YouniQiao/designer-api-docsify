@@ -1,6 +1,6 @@
 # GestureGroupGestureHandlerOptions
 
-手势组处理器配置参数。
+Provides the parameters of the gesture group handler.
 
 **Since:** 12
 
@@ -16,11 +16,11 @@
 gestures: GestureHandler<TapGestureHandler | LongPressGestureHandler | PanGestureHandler | SwipeGestureHandler | PinchGestureHandler | RotationGestureHandler | GestureGroupHandler>[]
 ```
 
-设置手势组中需要包含的手势集合。
+Gestures to be included in a gesture group.
 
-**说明：**
+**NOTE：**
 
-当需要为一个组件同时添加单击和双击手势时，可在[GestureGroup](arkts-arkui-gesture-con.md#gesturegroup)中添加两个[TapGesture](arkts-arkui-gesture-con.md#tapgesture)，需要双击手势在前，单击手势在后，否则不生效。
+To add both single-tap and double-tap gestures for a component, add two [TapGesture](arkts-arkui-gesture-con.md#tapgesture) instances as the [combined gestures](arkts-arkui-gesture-con.md#gesturegroup), with the double-tap gesture preceding the single-tap gesture. The gestures will not work correctly if this order is reversed.
 
 **Type:** [GestureHandler](arkts-arkui-gesturehandler-c.md)&lt;TapGestureHandler \| LongPressGestureHandler \| PanGestureHandler \| SwipeGestureHandler \| PinchGestureHandler \| RotationGestureHandler \| GestureGroupHandler&gt;[]
 
@@ -42,9 +42,9 @@ gestures: GestureHandler<TapGestureHandler | LongPressGestureHandler | PanGestur
 mode: GestureMode
 ```
 
-设置组合手势识别模式。
+Recognition mode of combined gestures.
 
-默认值：GestureMode.Sequence
+Default value: **GestureMode.Sequence**
 
 **Type:** [GestureMode](arkts-arkui-gesture-gesturemode-e.md)
 

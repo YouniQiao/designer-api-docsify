@@ -1,6 +1,6 @@
 # PrintAttributes
 
-定义打印参数的接口。
+Defines the print attributes.
 
 **Since:** 11
 
@@ -22,7 +22,7 @@ import { print } from 'kits/@kit.BasicServicesKit';
 colorMode?: PrintColorMode
 ```
 
-表示待打印文件的色彩模式。
+Color mode of the files to print.
 
 **Type:** [PrintColorMode](arkts-basicservices-print-printcolormode-e.md)
 
@@ -40,7 +40,7 @@ colorMode?: PrintColorMode
 copyNumber?: int
 ```
 
-表示文件打印份数。默认值为1。
+Number of printed file copies. The default value is **1**.
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
@@ -58,7 +58,7 @@ copyNumber?: int
 directionMode?: PrintDirectionMode
 ```
 
-表示待打印文件的方向。
+Print direction mode.
 
 **Type:** [PrintDirectionMode](arkts-basicservices-print-printdirectionmode-e.md)
 
@@ -76,7 +76,7 @@ directionMode?: PrintDirectionMode
 duplexMode?: PrintDuplexMode
 ```
 
-表示待打印文件的单双面模式。
+Duplex mode of the files to print.
 
 **Type:** [PrintDuplexMode](arkts-basicservices-print-printduplexmode-e.md)
 
@@ -94,7 +94,7 @@ duplexMode?: PrintDuplexMode
 pageRange?: PrintPageRange
 ```
 
-表示待打印文件的页面范围。
+Page range of the file to print.
 
 **Type:** [PrintPageRange](arkts-basicservices-print-printpagerange-i.md)
 
@@ -112,7 +112,7 @@ pageRange?: PrintPageRange
 pageSize?: PrintPageSize | PrintPageType
 ```
 
-表示待打印文件的纸张类型。
+Page size of the file to print.
 
 **Type:** [PrintPageSize](arkts-basicservices-print-printpagesize-i.md) \| PrintPageType
 

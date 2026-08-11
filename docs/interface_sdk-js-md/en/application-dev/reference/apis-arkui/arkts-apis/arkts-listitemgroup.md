@@ -6,12 +6,12 @@
 
 | Name | Description |
 | --- | --- |
-| [ListItemGroupOptions](arkts-arkui-listitemgroup-listitemgroupoptions-i.md) | ListItemGroup组件参数。 |
+| [ListItemGroupOptions](arkts-arkui-listitemgroup-listitemgroupoptions-i.md) | Defines the list item group options. |
 
 ### Enums
 
 | Name | Description |
 | --- | --- |
-| [ListItemGroupHeaderFooterStyle](arkts-arkui-listitemgroup-listitemgroupheaderfooterstyle-e.md) | ListItemGroup头部和尾部样式枚举。 |
-| [ListItemGroupStyle](arkts-arkui-listitemgroup-listitemgroupstyle-e.md) | ListItemGroup组件卡片样式枚举。 |
+| [ListItemGroupHeaderFooterStyle](arkts-arkui-listitemgroup-listitemgroupheaderfooterstyle-e.md) | Defines the list item group header/footer style. |
+| [ListItemGroupStyle](arkts-arkui-listitemgroup-listitemgroupstyle-e.md) | Defines the list item group style. |
 

@@ -1,6 +1,6 @@
 # AudioRendererOptions
 
-音频渲染器选项信息。
+Describes audio renderer configurations.
 
 **Since:** 8
 
@@ -22,7 +22,7 @@ import { audio } from 'kits/@kit.AudioKit';
 originalAppIdInfo?: AppIdInfo
 ```
 
-音频流的原始应用ID。
+Indicates the original app ID of the audio stream.
 
 **Type:** [AppIdInfo](arkts-audio-audio-appidinfo-i-sys.md)
 

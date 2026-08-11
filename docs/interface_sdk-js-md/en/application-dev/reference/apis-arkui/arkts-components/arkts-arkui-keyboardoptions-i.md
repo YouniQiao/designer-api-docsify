@@ -1,6 +1,6 @@
 # KeyboardOptions
 
-设置自定义键盘是否支持避让功能。
+Sets whether to support keyboard avoidance.
 
 **Since:** 12
 
@@ -16,7 +16,7 @@
 supportAvoidance?: boolean
 ```
 
-设置自定义键盘是否支持避让功能。默认值为 `false`，表示不支持避让；`true` 表示支持避让。
+Whether to support keyboard avoidance. **true** to support, **false** otherwise. Default value: **false**.
 
 **Type:** boolean
 

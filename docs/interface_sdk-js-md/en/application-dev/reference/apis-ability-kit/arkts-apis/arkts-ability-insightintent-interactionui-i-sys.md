@@ -1,6 +1,6 @@
 # InteractionUI (System API)
 
-定义当前意图执行完成后需要展示的交互界面的信息。
+Defines the base information of the interaction UI to be displayed after the current intent execution completes.This is a base class. Use its subclasses such as {@link InteractionModalUIExtension} in practice.
 
 **Since:** 26.1.0
 
@@ -24,7 +24,7 @@ import { insightIntent } from 'kits/@kit.AbilityKit';
 interactionUIType: string
 ```
 
-交互界面的类型。
+Type of the interaction UI.
 
 **Type:** string
 

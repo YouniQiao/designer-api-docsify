@@ -1,8 +1,8 @@
 # ArcAlphabetIndexerAttribute
 
-除支持[通用属性](../../apis-ability-kit/arkts-apis/arkts-app-ability-common.md/arkts-app-ability-common.md)外，还支持以下属性：
+In addition to the [universal attributes](../../apis-ability-kit/arkts-apis/arkts-app-ability-common.md/arkts-app-ability-common.md), the following attributes are supported.
 
-除支持[通用事件](../../apis-ability-kit/arkts-apis/arkts-app-ability-common.md/arkts-app-ability-common.md)外，还支持以下事件：
+In addition to the [universal events](../../apis-ability-kit/arkts-apis/arkts-app-ability-common.md/arkts-app-ability-common.md), the following events are supported.
 
 **Inheritance/Implementation:** ArcAlphabetIndexerAttribute extends [CommonMethod<ArcAlphabetIndexerAttribute>](CommonMethod<ArcAlphabetIndexerAttribute>)
 
@@ -26,7 +26,7 @@ import { ArcAlphabetIndexerAttribute, ArcAlphabetIndexer } from 'kits/@kit.ArkUI
 autoCollapse(enable: Optional<boolean>): ArcAlphabetIndexerAttribute
 ```
 
-设置是否使用自适应折叠模式。当索引项过多时，组件会根据可用显示空间自动调整索引项的显示布局。
+Sets whether to enable the adaptive collapse behavior for the indexer.
 
 **Since:** 18
 
@@ -42,7 +42,7 @@ autoCollapse(enable: Optional<boolean>): ArcAlphabetIndexerAttribute
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| enable | [Optional](../arkts-components/arkts-arkui-optional-t.md)&lt;boolean&gt; | Yes | 是否使用自适应折叠模式。&lt;br/&gt;默认值：true &lt;br/&gt;true：使用自适应折叠模式。&lt;br/&gt;false：不使用自适应折叠模式。 |
+| enable | [Optional](../arkts-components/arkts-arkui-optional-t.md)&lt;boolean&gt; | Yes | Whether to enable the adaptive collapse behavior for the indexer.&lt;br&gt;Default value: **true**.&lt;br&gt;**true**: Enable the adaptive collapse behavior.&lt;br&gt;**false**: Disable the adaptive collapse behavior. |
 
 **Return value:**
 
@@ -56,7 +56,7 @@ autoCollapse(enable: Optional<boolean>): ArcAlphabetIndexerAttribute
 color(color: Optional<ColorMetrics>): ArcAlphabetIndexerAttribute
 ```
 
-设置普通状态下索引项文字颜色。
+Sets the text color of the index items in the normal state.
 
 **Since:** 18
 
@@ -72,7 +72,7 @@ color(color: Optional<ColorMetrics>): ArcAlphabetIndexerAttribute
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| color | [Optional](../arkts-components/arkts-arkui-optional-t.md)&lt;[ColorMetrics](arkts-arkui-colormetrics-t.md)&gt; | Yes | 文字颜色。&lt;br/&gt;默认值：0xFFFFFF，显示为白色。 |
+| color | [Optional](../arkts-components/arkts-arkui-optional-t.md)&lt;[ColorMetrics](arkts-arkui-colormetrics-t.md)&gt; | Yes | Text color.&lt;br&gt;Default value: **0xFFFFFF**, displayed as white |
 
 **Return value:**
 
@@ -86,7 +86,7 @@ color(color: Optional<ColorMetrics>): ArcAlphabetIndexerAttribute
 font(font: Optional<Font>): ArcAlphabetIndexerAttribute
 ```
 
-设置弧形字母索引条默认字体样式。
+Sets the default font style of the index items.
 
 **Since:** 18
 
@@ -102,7 +102,7 @@ font(font: Optional<Font>): ArcAlphabetIndexerAttribute
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| font | [Optional](../arkts-components/arkts-arkui-optional-t.md)&lt;[Font](arkts-arkui-font-i.md)&gt; | Yes | 字母索引条默认字体样式，用于设置索引条上所有字母的显示效果，包括文字大小、粗细、倾斜角度和字体族等。&lt;br/&gt;默认值：&lt;br/&gt;{&lt;br/&gt;size:'13.0fp',&lt;br/&gt; style:FontStyle.Normal,&lt;br/&gt; weight:500,&lt;br/&gt; family:'HarmonyOS Sans'&lt;br/&gt;} |
+| font | [Optional](../arkts-components/arkts-arkui-optional-t.md)&lt;[Font](arkts-arkui-font-i.md)&gt; | Yes | Default font style of the index items.&lt;br&gt;Default value:&lt;br&gt;{&lt;br&gt;size:'13.0fp',&lt;br &gt; style:FontStyle.Normal,&lt;br&gt; weight:500,&lt;br&gt; family:'HarmonyOS Sans'&lt;br&gt;} |
 
 **Return value:**
 
@@ -116,7 +116,7 @@ font(font: Optional<Font>): ArcAlphabetIndexerAttribute
 itemSize(size: Optional<LengthMetrics>): ArcAlphabetIndexerAttribute
 ```
 
-设置弧形索引条索引项区域大小。
+Sets the size of the index item area.
 
 **Since:** 18
 
@@ -132,7 +132,7 @@ itemSize(size: Optional<LengthMetrics>): ArcAlphabetIndexerAttribute
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| size | [Optional](../arkts-components/arkts-arkui-optional-t.md)&lt;[LengthMetrics](arkts-arkui-lengthmetrics-t.md)&gt; | Yes | 弧形索引条索引项区域大小，索引项区域为圆形，即圆形直径。不支持设置为百分比。&lt;br/&gt;默认值：24.0 &lt;br/&gt;单位：vp |
+| size | [Optional](../arkts-components/arkts-arkui-optional-t.md)&lt;[LengthMetrics](arkts-arkui-lengthmetrics-t.md)&gt; | Yes | Size of the index item area. For the circular item area, this represents the diameter of the circle. Percentage values are not supported.&lt;br&gt;Default value: **24.0**&lt;br&gt;Unit: vp |
 
 **Return value:**
 
@@ -146,7 +146,7 @@ itemSize(size: Optional<LengthMetrics>): ArcAlphabetIndexerAttribute
 onSelect(handler: Optional<OnSelectCallback>): ArcAlphabetIndexerAttribute
 ```
 
-索引条选中回调，返回值为当前选中索引。
+Triggered when an index item is selected. The return value is the index of the selected item.
 
 **Since:** 18
 
@@ -162,7 +162,7 @@ onSelect(handler: Optional<OnSelectCallback>): ArcAlphabetIndexerAttribute
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| handler | [Optional](../arkts-components/arkts-arkui-optional-t.md)&lt;OnSelectCallback&gt; | Yes | 回调函数，用于处理索引条选中事件。当用户点击或滑动索引条选中某项时触发，回调中返回当前选中项的索引值。 |
+| handler | [Optional](../arkts-components/arkts-arkui-optional-t.md)&lt;OnSelectCallback&gt; | Yes | Callback used to return the result. |
 
 **Return value:**
 
@@ -176,7 +176,7 @@ onSelect(handler: Optional<OnSelectCallback>): ArcAlphabetIndexerAttribute
 popupBackground(color: Optional<ColorMetrics>): ArcAlphabetIndexerAttribute
 ```
 
-设置提示弹窗背景色。
+Sets the background color of the pop-up window.
 
 **Since:** 18
 
@@ -192,7 +192,7 @@ popupBackground(color: Optional<ColorMetrics>): ArcAlphabetIndexerAttribute
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| color | [Optional](../arkts-components/arkts-arkui-optional-t.md)&lt;[ColorMetrics](arkts-arkui-colormetrics-t.md)&gt; | Yes | 提示弹窗背景色。&lt;br/&gt;默认值：0xD8404040，显示为微透明的深灰色。 |
+| color | [Optional](../arkts-components/arkts-arkui-optional-t.md)&lt;[ColorMetrics](arkts-arkui-colormetrics-t.md)&gt; | Yes | Background color of the pop-up window.&lt;br&gt;Default value: **0xD8404040**, displayed as dark gray with slight transparency |
 
 **Return value:**
 
@@ -206,12 +206,12 @@ popupBackground(color: Optional<ColorMetrics>): ArcAlphabetIndexerAttribute
 popupBackgroundBlurStyle(style: Optional<BlurStyle>): ArcAlphabetIndexerAttribute
 ```
 
-设置提示弹窗的背景模糊材质。未通过该接口设置时，默认为关闭模糊，对应取值为BlurStyle中的NONE。
+Sets the background blur style of the pop-up window. If this API is not used, the blur is disabled by default. The corresponding value is **NONE** in **BlurStyle**.
 
-> **说明：**
+> **NOTE：**
 
-> 当通过popupBackgroundBlurStyle设置弹窗气泡的背景模糊材质时，不建议再通过
-> [popupBackground](arkts-arkui-arkui-arcalphabetindexer-arcalphabetindexerattribute-c.md#popupbackground)设置背景色。
+> After configuring the pop-up window background blur style with **popupBackgroundBlurStyle**, avoid applying
+> background colors via [popupBackground](arkts-arkui-arkui-arcalphabetindexer-arcalphabetindexerattribute-c.md#popupbackground).
 
 **Since:** 18
 
@@ -227,7 +227,7 @@ popupBackgroundBlurStyle(style: Optional<BlurStyle>): ArcAlphabetIndexerAttribut
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| style | [Optional](../arkts-components/arkts-arkui-optional-t.md)&lt;[BlurStyle](../arkts-components/arkts-arkui-blurstyle-e.md)&gt; | Yes | 设置提示弹窗的背景模糊材质。&lt;br/&gt;默认值：BlurStyle.NONE。 &lt;br/&gt;设置此属性后不建议再设置[popupBackground](#popupbackground)属性。 |
+| style | [Optional](../arkts-components/arkts-arkui-optional-t.md)&lt;[BlurStyle](../arkts-components/arkts-arkui-blurstyle-e.md)&gt; | Yes | Background blur style of the pop-up window. |
 
 **Return value:**
 
@@ -241,7 +241,7 @@ popupBackgroundBlurStyle(style: Optional<BlurStyle>): ArcAlphabetIndexerAttribut
 popupColor(color: Optional<ColorMetrics>): ArcAlphabetIndexerAttribute
 ```
 
-设置提示弹窗文字颜色。
+Sets the text color for the pop-up window.
 
 **Since:** 18
 
@@ -257,7 +257,7 @@ popupColor(color: Optional<ColorMetrics>): ArcAlphabetIndexerAttribute
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| color | [Optional](../arkts-components/arkts-arkui-optional-t.md)&lt;[ColorMetrics](arkts-arkui-colormetrics-t.md)&gt; | Yes | 提示弹窗文字颜色。&lt;br/&gt;默认值：0xFFFFFF，显示为白色。 |
+| color | [Optional](../arkts-components/arkts-arkui-optional-t.md)&lt;[ColorMetrics](arkts-arkui-colormetrics-t.md)&gt; | Yes | Text color of the pop-up window.&lt;br&gt;Default value: **0xFFFFFF**, displayed as white |
 
 **Return value:**
 
@@ -271,7 +271,7 @@ popupColor(color: Optional<ColorMetrics>): ArcAlphabetIndexerAttribute
 popupFont(font: Optional<Font>): ArcAlphabetIndexerAttribute
 ```
 
-设置提示弹窗字体样式，用于设置提示弹窗中显示的当前选中字母的显示效果，包括文字大小、粗细、倾斜角度和字体族等。
+Sets the font style of the pop-up window.
 
 **Since:** 18
 
@@ -287,7 +287,7 @@ popupFont(font: Optional<Font>): ArcAlphabetIndexerAttribute
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| font | [Optional](../arkts-components/arkts-arkui-optional-t.md)&lt;[Font](arkts-arkui-font-i.md)&gt; | Yes | 提示弹窗字体样式。&lt;br/&gt;默认值：&lt;br/&gt;{&lt;br/&gt;size:'19.0fp',&lt;br/&gt; style:FontStyle.Normal,&lt;br/&gt; weight:500,&lt;br/&gt; family:'HarmonyOS Sans'&lt;br/&gt;} |
+| font | [Optional](../arkts-components/arkts-arkui-optional-t.md)&lt;[Font](arkts-arkui-font-i.md)&gt; | Yes | Font style of the pop-up window.&lt;br&gt;Default value:&lt;br&gt;{&lt;br&gt;size:'19.0fp',&lt;br&gt; style:FontStyle.Normal,&lt;br&gt; weight:500,&lt;br&gt; family:'HarmonyOS Sans'&lt;br&gt;} |
 
 **Return value:**
 
@@ -301,7 +301,7 @@ popupFont(font: Optional<Font>): ArcAlphabetIndexerAttribute
 selected(index: Optional<number>): ArcAlphabetIndexerAttribute
 ```
 
-设置选中项索引值。
+Sets the index of the selected item.
 
 **Since:** 18
 
@@ -317,7 +317,7 @@ selected(index: Optional<number>): ArcAlphabetIndexerAttribute
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| index | [Optional](../arkts-components/arkts-arkui-optional-t.md)&lt;number&gt; | Yes | 选中项索引值。若超出有效索引范围，则取默认值0。&lt;br/&gt;默认值：0 &lt;br/&gt;该参数支持 [!!](../../../ui/state-management/arkts-new-binding.md)双向绑定变量。 |
+| index | [Optional](../arkts-components/arkts-arkui-optional-t.md)&lt;number&gt; | Yes | Index of the selected item.&lt;br&gt;Default value: **0**&lt;br&gt;This parameter supports two-way binding through [!!](../../../ui/state-management/arkts-new-binding.md). |
 
 **Return value:**
 
@@ -331,7 +331,7 @@ selected(index: Optional<number>): ArcAlphabetIndexerAttribute
 selectedBackgroundColor(color: Optional<ColorMetrics>): ArcAlphabetIndexerAttribute
 ```
 
-设置选中项背景颜色。
+Sets the background color of the selected item.
 
 **Since:** 18
 
@@ -347,7 +347,7 @@ selectedBackgroundColor(color: Optional<ColorMetrics>): ArcAlphabetIndexerAttrib
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| color | [Optional](../arkts-components/arkts-arkui-optional-t.md)&lt;[ColorMetrics](arkts-arkui-colormetrics-t.md)&gt; | Yes | 选中项背景颜色。&lt;br/&gt;默认值：0x1F71FF，显示为深蓝色。 |
+| color | [Optional](../arkts-components/arkts-arkui-optional-t.md)&lt;[ColorMetrics](arkts-arkui-colormetrics-t.md)&gt; | Yes | Background color of the selected item.&lt;br&gt;Default value: **0x1F71FF**, displayed as dark blue |
 
 **Return value:**
 
@@ -361,7 +361,7 @@ selectedBackgroundColor(color: Optional<ColorMetrics>): ArcAlphabetIndexerAttrib
 selectedColor(color: Optional<ColorMetrics>): ArcAlphabetIndexerAttribute
 ```
 
-设置选中项文字颜色。
+Sets the text color of the selected item.
 
 **Since:** 18
 
@@ -377,7 +377,7 @@ selectedColor(color: Optional<ColorMetrics>): ArcAlphabetIndexerAttribute
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| color | [Optional](../arkts-components/arkts-arkui-optional-t.md)&lt;[ColorMetrics](arkts-arkui-colormetrics-t.md)&gt; | Yes | 选中项文字颜色。&lt;br/&gt;默认值：0xFFFFFF，显示为白色。 |
+| color | [Optional](../arkts-components/arkts-arkui-optional-t.md)&lt;[ColorMetrics](arkts-arkui-colormetrics-t.md)&gt; | Yes | Text color of the selected item.&lt;br&gt;Default value: **0xFFFFFF**, displayed as white |
 
 **Return value:**
 
@@ -391,7 +391,7 @@ selectedColor(color: Optional<ColorMetrics>): ArcAlphabetIndexerAttribute
 selectedFont(font: Optional<Font>): ArcAlphabetIndexerAttribute
 ```
 
-设置选中项文字尺寸、粗细、字体族、倾斜等样式。
+Sets the font style of the selected item, including size, weight, style, and font family.
 
 **Since:** 18
 
@@ -407,7 +407,7 @@ selectedFont(font: Optional<Font>): ArcAlphabetIndexerAttribute
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| font | [Optional](../arkts-components/arkts-arkui-optional-t.md)&lt;[Font](arkts-arkui-font-i.md)&gt; | Yes | 选中项文字样式。&lt;br/&gt;默认值：{&lt;br/&gt;size:'13.0fp',&lt;br/&gt; style:FontStyle.Normal,&lt;br/&gt; weight:500 ,&lt;br/&gt; family:'HarmonyOS Sans'&lt;br/&gt;} |
+| font | [Optional](../arkts-components/arkts-arkui-optional-t.md)&lt;[Font](arkts-arkui-font-i.md)&gt; | Yes | Font style of the selected item.&lt;br&gt;Default value: {&lt;br&gt;size:'13.0fp',&lt;br&gt; style: FontStyle.Normal,&lt;br&gt; weight:500,&lt;br&gt; family:'HarmonyOS Sans'&lt;br&gt;} |
 
 **Return value:**
 
@@ -421,7 +421,7 @@ selectedFont(font: Optional<Font>): ArcAlphabetIndexerAttribute
 usePopup(enabled: Optional<boolean>): ArcAlphabetIndexerAttribute
 ```
 
-设置是否使用提示弹窗。
+Sets whether to display the pop-up window.
 
 **Since:** 18
 
@@ -437,7 +437,7 @@ usePopup(enabled: Optional<boolean>): ArcAlphabetIndexerAttribute
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| enabled | [Optional](../arkts-components/arkts-arkui-optional-t.md)&lt;boolean&gt; | Yes | 是否使用提示弹窗。&lt;br/&gt;true表示使用提示弹窗；false表示不使用提示弹窗。&lt;br/&gt;默认值：false |
+| enabled | [Optional](../arkts-components/arkts-arkui-optional-t.md)&lt;boolean&gt; | Yes | Whether to display the pop-up window.&lt;br&gt;**true**: yes; **false**: no&lt;br&gt; Default value: **false |
 
 **Return value:**
 

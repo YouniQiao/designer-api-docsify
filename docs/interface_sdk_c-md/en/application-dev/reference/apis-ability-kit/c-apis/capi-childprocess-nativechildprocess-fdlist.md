@@ -6,7 +6,7 @@ typedef struct NativeChildProcess_FdList {...} NativeChildProcess_FdList
 
 ## Overview
 
-The list of the info of the file descriptors passed to child process.
+The struct describes a list of file descriptors passed to the child process. The list can contain a maximumof 16 entries.
 
 **Since**: 13
 
@@ -20,6 +20,6 @@ The list of the info of the file descriptors passed to child process.
 
 | Name | Description |
 | -- | -- |
-| struct [NativeChildProcess_Fd*](capi-childprocess-nativechildprocess-fd.md) head | the head of the list.For details, see [NativeChildProcess_Fd](capi-childprocess-nativechildprocess-fd.md). |
+| struct [NativeChildProcess_Fd*](capi-childprocess-nativechildprocess-fd.md) head |  |
 
 

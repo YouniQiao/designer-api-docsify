@@ -1,6 +1,6 @@
 # OnPermissionRequestEvent
 
-定义通知收到获取权限请求。
+Represents the callback invoked when a permission request is received.
 
 **Since:** 23
 
@@ -16,7 +16,7 @@
 request: PermissionRequest
 ```
 
-通知Web组件用户操作行为。
+User operation.
 
 **Type:** [PermissionRequest](arkts-arkweb-web-permissionrequest-c.md)
 

@@ -67,7 +67,7 @@ onMenuItemClick(menuItem: TextMenuItem, range: TextRange): boolean
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | menuItem | [TextMenuItem](arkts-arkui-textmenuitem-i.md) | 是 | 菜单项。 &lt;br&gt;**说明：** &lt;br&gt;从API version 23开始，对于具备可展开二级菜单能力的一级菜单项，例如自动填充，仅执行系统默认逻辑，不会执行用户自定义逻辑。 |
-| range | [TextRange](arkts-arkui-textrange-i.md) | 是 | 选中的文本信息。 |
+| range | [TextRange](arkts-arkui-textcommon-textrange-i.md) | 是 | 选中的文本信息。 |
 
 **返回值：**
 

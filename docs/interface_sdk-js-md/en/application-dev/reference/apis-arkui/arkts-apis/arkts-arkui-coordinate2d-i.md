@@ -1,6 +1,6 @@
 # Coordinate2D
 
-描述一个二维坐标。
+Describes a two-dimension coordinate.
 
 **Since:** 26.0.0
 
@@ -16,7 +16,7 @@
 x: double
 ```
 
-横坐标。
+Horizontal coordinate.
 
 **Type:** double
 
@@ -38,7 +38,7 @@ x: double
 y: double
 ```
 
-纵坐标。
+Vertical coordinate.
 
 **Type:** double
 

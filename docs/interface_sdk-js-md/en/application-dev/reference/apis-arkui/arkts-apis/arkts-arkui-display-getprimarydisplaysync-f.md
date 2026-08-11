@@ -12,7 +12,7 @@ import { display } from 'kits/@kit.ArkUI';
 function getPrimaryDisplaySync(): Display
 ```
 
-获取主屏信息。除2in1之外的设备获取的是设备自带屏幕的Display对象；2in1设备外接屏幕时获取的是当前主屏幕的Display对象；2in1设备没有外接屏幕时获取的是自带屏幕的Display对象。
+Obtains the information about the primary display. For devices other than 2-in-1 devices, the Display object obtained is the built-in screen. For 2-in-1 devices with an external screen, the Display object obtained is the primary screen. For 2-in-1 devices without an external screen, the Display object obtained is the built-in screen.
 
 **Since:** 14
 
@@ -28,17 +28,19 @@ function getPrimaryDisplaySync(): Display
 
 | Type | Description |
 | --- | --- |
-| [Display](arkts-arkui-display-display-i.md) | 当前设备主屏幕的Display对象。 |
+| [Display](arkts-arkui-display-display-i.md) | Display object of the primary screen. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 1400001 | Invalid display or screen. Possible cause: Invalid display id. |
+| [1400001](../errorcode-display.md#1400001-invalid-display-or-screen) | Invalid display or screen. Possible cause: Invalid display id. |
 
 ## Examples
 
 ```TypeScript
+import { display } from '@kit.ArkUI';
+
 let displayClass: display.Display | null = null;
 
 displayClass = display.getPrimaryDisplaySync();

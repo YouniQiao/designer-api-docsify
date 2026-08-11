@@ -6,19 +6,19 @@
 
 | Name | Description |
 | --- | --- |
-| [LazyCustomLayoutAlgorithm](arkts-arkui-lazylayoutalgorithm-lazycustomlayoutalgorithm-c.md) | 定义懒式自定义布局算法。 |
-| [LazyLayoutHelper](arkts-arkui-lazylayoutalgorithm-lazylayouthelper-c.md) | 懒布局算法的帮助器类，为懒布局提供布局方向和视图位置信息。 |
+| [LazyCustomLayoutAlgorithm](arkts-arkui-lazylayoutalgorithm-lazycustomlayoutalgorithm-c.md) | Defines the lazy custom layout algorithm. |
+| [LazyLayoutHelper](arkts-arkui-lazylayoutalgorithm-lazylayouthelper-c.md) | Helper class for lazy layout algorithm.Provides layout direction and view position information for lazy layout. |
 
 ### Interfaces
 
 | Name | Description |
 | --- | --- |
-| [LazyCustomLayoutAlgorithmOptions](arkts-arkui-lazylayoutalgorithm-lazycustomlayoutalgorithmoptions-i.md) | LazyCustomLayoutAlgorithm构造函数选项。 |
-| [LazyLayoutAlgorithm](arkts-arkui-lazylayoutalgorithm-i.md) | 定义懒加载布局算法。 |
+| [LazyCustomLayoutAlgorithmOptions](arkts-arkui-lazylayoutalgorithm-lazycustomlayoutalgorithmoptions-i.md) | LazyCustomLayoutAlgorithm constructor options. |
+| [LazyLayoutAlgorithm](arkts-arkui-lazylayoutalgorithm-i.md) | Defines lazy layout algorithm. |
 
 ### Enums
 
 | Name | Description |
 | --- | --- |
-| [LazyLayoutDirection](arkts-arkui-lazylayoutalgorithm-lazylayoutdirection-e.md) | 定义懒加载布局的方向。 |
+| [LazyLayoutDirection](arkts-arkui-lazylayoutalgorithm-lazylayoutdirection-e.md) | Defines the direction of lazy layout. |
 

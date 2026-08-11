@@ -1,12 +1,13 @@
 # PermissionDef (System API)
 
-配置文件中定义的权限详细信息。
+The module provides permission details defined in the configuration file.
 
-> **说明：**
+> **NOTE：**
 > 
-> 从API version 9开始，该模块不再维护，建议使用[bundleManager-PermissionDef](arkts-ability-permissiondef-i-sys.md)替代。
+> The APIs of this module have been deprecated since API version 9. You are advised to use
+> [bundleManager-PermissionDef](arkts-ability-permissiondef-i-sys.md) instead.
 > 
-> 本模块为系统接口。
+> The APIs provided by this module are system APIs.
 
 **Since:** 8
 
@@ -28,7 +29,7 @@
 descriptionId: number
 ```
 
-描述权限的ID。
+ID of the permission description.
 
 **Type:** number
 
@@ -54,7 +55,7 @@ descriptionId: number
 grantMode: number
 ```
 
-权限的授予模式。0表示安装后系统自动授予该权限，1表示使用时动态申请，用户授权后方可使用。
+Grant mode of the permission. The value **0** means that the system automatically grants the permission after the application installation, and **1** means that the application needs to dynamically request the permission from the user.
 
 **Type:** number
 
@@ -80,7 +81,7 @@ grantMode: number
 labelId: number
 ```
 
-权限的标签ID。
+ID of the permission label.
 
 **Type:** number
 
@@ -106,7 +107,7 @@ labelId: number
 permissionName: string
 ```
 
-权限名称。
+Name of the permission.
 
 **Type:** string
 

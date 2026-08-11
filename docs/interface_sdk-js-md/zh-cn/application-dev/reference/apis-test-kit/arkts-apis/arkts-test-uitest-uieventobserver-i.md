@@ -10,12 +10,6 @@ UI事件监听器。
 
 **系统能力：** SystemCapability.Test.UiTest
 
-## 导入模块
-
-```TypeScript
-import { ResizeDirection, WindowMode, PenMode, PenKeyOperation, Driver, MatchPattern, UiDirection, TouchOptions, ComponentEventType, PointerMatrix, WindowChangeType, Component, ON, PenKey, Rect, InputTextMode, UIEventObserver, WindowFilter, WindowChangeOptions, UiWindow, TouchPadSwipeOptions, Point, KeyOptions, DisplayRotation, UIElementInfo, PenKeyOperationOptions, ComponentEventOptions, MouseButton, On } from 'kits/@kit.TestKit';
-```
-
 ## once('toastShow')
 
 ```TypeScript
@@ -45,7 +39,7 @@ once(type: 'toastShow', callback: Callback<UIElementInfo>): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
 
 ## 示例
 
@@ -54,7 +48,7 @@ once(type: 'toastShow', callback: Callback<UIElementInfo>): void
 import { Driver, UIElementInfo, UIEventObserver } from '@kit.TestKit';
 
 async function demo() {
-  // 创建Driver对象。
+  // 创建Driver对象
   let driver: Driver = Driver.create();
   // 创建UI事件监听器。
   let observer: UIEventObserver = driver.createUIEventObserver();
@@ -98,7 +92,7 @@ once(type: 'dialogShow', callback: Callback<UIElementInfo>): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
 
 ## 示例
 
@@ -150,8 +144,8 @@ once(type: 'windowChange', windowChangeType: WindowChangeType, options: WindowCh
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 17000007 | Parameter verification failed. |
-| 17000005 | This operation is not supported. |
+| [17000007](../errorcode-uitest.md#17000007-参数不合法) | Parameter verification failed. |
+| [17000005](../errorcode-uitest.md#17000005-操作不支持) | This operation is not supported. |
 
 ## 示例
 
@@ -208,8 +202,8 @@ once(type: 'componentEventOccur', componentEventType: ComponentEventType, option
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 17000007 | Parameter verification failed. |
-| 17000005 | This operation is not supported. |
+| [17000007](../errorcode-uitest.md#17000007-参数不合法) | Parameter verification failed. |
+| [17000005](../errorcode-uitest.md#17000005-操作不支持) | This operation is not supported. |
 
 ## 示例
 
@@ -268,8 +262,37 @@ Listen on component event once, additional listening options can be set.
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 17000007 | Parameter verification failed. |
-| 17000005 | This operation is not supported. |
+| [17000007](../errorcode-uitest.md#17000007-参数不合法) | Parameter verification failed. |
+| [17000005](../errorcode-uitest.md#17000005-操作不支持) | This operation is not supported. |
+
+## 示例
+
+```TypeScript
+// xxx.test.ets
+import { UIElementInfo, UIEventObserver, ComponentEventOptions, ComponentEventType, ON } from '@kit.TestKit';
+
+async function demo() {
+  let driver: Driver = Driver.create();
+  let observer: UIEventObserver = driver.createUIEventObserver();
+  let option: ComponentEventOptions = {
+    timeout: 20000,
+    on: ON.id('123')  // 请开发者替换为实际存在的控件id值
+  };
+  let callback = (UIElementInfo: UIElementInfo) => {
+    console.info(UIElementInfo.bundleName);
+    console.info(UIElementInfo.text);
+    console.info(UIElementInfo.type);
+    console.info(UIElementInfo.componentEventType?.toString());
+    console.info(UIElementInfo.windowId?.toString());
+    console.info(UIElementInfo.componentId);
+    console.info(UIElementInfo.componentRect?.left.toString());
+    console.info(UIElementInfo.componentRect?.top.toString());
+    console.info(UIElementInfo.componentRect?.right.toString());
+    console.info(UIElementInfo.componentRect?.bottom.toString());
+  };
+  observer.onceComponentEventOccur(ComponentEventType.COMPONENT_CLICKED, option, callback);
+}
+```
 
 ## onceDialogShow
 
@@ -297,7 +320,25 @@ Listen for dialog show once
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+
+## 示例
+
+```TypeScript
+// xxx.test.ets
+import { UIElementInfo, UIEventObserver } from '@kit.TestKit';
+
+async function demo() {
+  let driver: Driver = Driver.create();
+  let observer: UIEventObserver = driver.createUIEventObserver();
+  let callback = (UIElementInfo: UIElementInfo) => {
+    console.info(UIElementInfo.bundleName);
+    console.info(UIElementInfo.text);
+    console.info(UIElementInfo.type);
+  }
+  observer.onceDialogShow(callback);
+}
+```
 
 ## onceToastShow
 
@@ -325,7 +366,25 @@ Listen for toast show once
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+
+## 示例
+
+```TypeScript
+// xxx.test.ets
+import { UIElementInfo, UIEventObserver } from '@kit.TestKit';
+
+async function demo() {
+  let driver: Driver = Driver.create();
+  let observer: UIEventObserver = driver.createUIEventObserver();
+  let callback = (UIElementInfo: UIElementInfo) => {
+    console.info(UIElementInfo.bundleName);
+    console.info(UIElementInfo.text);
+    console.info(UIElementInfo.type);
+  }
+  observer.onceToastShow(callback);
+}
+```
 
 ## onceWindowChange
 
@@ -355,6 +414,30 @@ Listen on window change once, additional listening options can be set.
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 17000007 | Parameter verification failed. |
-| 17000005 | This operation is not supported. |
+| [17000007](../errorcode-uitest.md#17000007-参数不合法) | Parameter verification failed. |
+| [17000005](../errorcode-uitest.md#17000005-操作不支持) | This operation is not supported. |
+
+## 示例
+
+```TypeScript
+// xxx.test.ets
+import { UIElementInfo, UIEventObserver, WindowChangeOptions, WindowChangeType } from '@kit.TestKit';
+
+async function demo() {
+  let driver: Driver = Driver.create();
+  let observer: UIEventObserver = driver.createUIEventObserver();
+  let options: WindowChangeOptions = {
+    timeout: 20000,
+    bundleName: 'com.example.myapplication'  // 请开发者替换为实际包名
+  }
+  let callback = (UIElementInfo: UIElementInfo) => {
+    console.info(UIElementInfo.bundleName);
+    console.info(UIElementInfo.text);
+    console.info(UIElementInfo.type);
+    console.info(UIElementInfo.windowChangeType?.toString());
+    console.info(UIElementInfo.windowId?.toString());
+  }
+  observer.onceWindowChange(WindowChangeType.WINDOW_ADDED, options, callback);
+}
+```
 

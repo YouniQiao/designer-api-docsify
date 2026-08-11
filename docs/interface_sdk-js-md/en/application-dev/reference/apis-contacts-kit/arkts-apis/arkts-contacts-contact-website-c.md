@@ -1,6 +1,6 @@
 # Website
 
-联系人的网站信息类。
+Defines a contact's website.
 
 **Since:** 7
 
@@ -22,7 +22,7 @@ import { contact } from 'kits/@kit.ContactsKit';
 website: string
 ```
 
-联系人的网站。
+Website that stores the contact information.
 
 **Type:** string
 

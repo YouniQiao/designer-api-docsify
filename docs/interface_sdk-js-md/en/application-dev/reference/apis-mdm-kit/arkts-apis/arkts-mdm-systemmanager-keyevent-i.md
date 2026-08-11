@@ -1,7 +1,7 @@
 # KeyEvent
 
-按键事件。  
-[EnterpriseAdminExtensionAbility.onKeyEvent](../../apis-default/arkts-apis/arkts-enterprise-enterpriseadminextensionability-enterpriseadminextensionability-c.md/arkts-enterprise-enterpriseadminextensionability-enterpriseadminextensionability-c.md#onkeyevent)按键事件回调触发时，传递当前按键事件信息。
+Enumerates key events. When the  
+[EnterpriseAdminExtensionAbility.onKeyEvent](arkts-mdm-enterprise-enterpriseadminextensionability-enterpriseadminextensionability-c.md#onkeyevent)key event callback is triggered, the current key event information is transferred.
 
 **Since:** 23
 
@@ -23,7 +23,7 @@ import { systemManager } from 'kits/@kit.MDMKit';
 actionTime: number
 ```
 
-按键动作发生时间，系统开机后微秒级时间戳。当按键长按时后续按键事件该参数不发生改变，应用可以通过该时间来判断该事件是否属于长按事件，以执行长按事件逻辑处理。
+Time when the key action occurs. The value is a microsecond-level timestamp after the system is powered on. For long-press key events, this parameter remains unchanged in subsequent key events. Apps can use this timestamp to determine whether the event is a long-press event and execute the corresponding long-press event logic accordingly.
 
 **Type:** number
 
@@ -43,7 +43,7 @@ actionTime: number
 keyAction: KeyAction
 ```
 
-按键动作。
+Key action.
 
 **Type:** [KeyAction](arkts-mdm-systemmanager-keyaction-e.md)
 
@@ -63,7 +63,7 @@ keyAction: KeyAction
 keyCode: KeyCode
 ```
 
-按键编码。
+Key code.
 
 **Type:** [KeyCode](../../apis-input-kit/arkts-apis/arkts-input-multimodalinput-keycode-keycode-e.md)
 
@@ -83,7 +83,7 @@ keyCode: KeyCode
 keyItems: Array<KeyItem>
 ```
 
-其他按键信息，当前按键事件发生时，其他正在被按下的按键信息。
+Information about other keys that are being pressed when the current key event occurs.
 
 **Type:** Array&lt;KeyItem&gt;
 

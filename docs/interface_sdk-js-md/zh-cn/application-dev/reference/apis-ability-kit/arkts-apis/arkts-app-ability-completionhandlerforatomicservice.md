@@ -1,11 +1,5 @@
 # @ohos.app.ability.CompletionHandlerForAtomicService
 
-## 导入模块
-
-```TypeScript
-import { FailureCode } from 'kits/@kit.AbilityKit';
-```
-
 ## 汇总
 
 ### 类

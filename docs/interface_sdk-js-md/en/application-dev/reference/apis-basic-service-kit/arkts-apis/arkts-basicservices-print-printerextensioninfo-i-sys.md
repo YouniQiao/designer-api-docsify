@@ -1,6 +1,6 @@
 # PrinterExtensionInfo (System API)
 
-定义打印扩展信息的接口。
+Provides the printer extension information.
 
 **Since:** 10
 
@@ -24,7 +24,7 @@ import { print } from 'kits/@kit.BasicServicesKit';
 extensionId: string
 ```
 
-表示打印机扩展的扩展ID。
+ID of the printer extension.
 
 **Type:** string
 
@@ -44,7 +44,7 @@ extensionId: string
 vendorIcon: int
 ```
 
-表示供应商图标。
+Vendor icon of the printer extension.
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
@@ -64,7 +64,7 @@ vendorIcon: int
 vendorId: string
 ```
 
-表示扩展的供应商ID。
+Vendor ID of the printer extension.
 
 **Type:** string
 
@@ -84,7 +84,7 @@ vendorId: string
 vendorName: string
 ```
 
-表示供应商名称。
+Vendor name of the printer extension.
 
 **Type:** string
 
@@ -104,7 +104,7 @@ vendorName: string
 version: string
 ```
 
-表示当前打印机扩展的版本。
+Version of the printer extension.
 
 **Type:** string
 

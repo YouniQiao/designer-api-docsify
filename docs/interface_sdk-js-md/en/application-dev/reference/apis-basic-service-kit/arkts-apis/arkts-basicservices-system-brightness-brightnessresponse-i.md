@@ -1,6 +1,6 @@
 # BrightnessResponse
 
-包含屏幕亮度的对象。
+Defines a response that returns the screen brightness.
 
 **Since:** 3
 
@@ -24,7 +24,7 @@ import { BrightnessResponse, BrightnessModeResponse, SetBrightnessModeOptions, G
 value: number
 ```
 
-屏幕亮度，范围：1到255。
+Screen brightness. The value ranges from **1** to **255**.
 
 **Type:** number
 

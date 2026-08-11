@@ -10,12 +10,6 @@
 
 **系统能力：** SystemCapability.MiscServices.InputMethodFramework
 
-## 导入模块
-
-```TypeScript
-import { inputMethodEngine } from 'kits/@kit.IMEKit';
-```
-
 ## abilityName
 
 ```TypeScript
@@ -173,7 +167,7 @@ readonly immersiveMode?: ImmersiveMode
 
 输入法沉浸模式。
 
-**类型：** [ImmersiveMode](../../apis-arkui/arkts-apis/arkts-arkui-promptaction-immersivemode-e.md)
+**类型：** [ImmersiveMode](../../apis-arkui/arkts-apis/arkts-arkui-immersivemode-t.md)
 
 **起始版本：** 15
 

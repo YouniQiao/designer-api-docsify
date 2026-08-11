@@ -1,6 +1,6 @@
 # DomainAccountInfo
 
-表示域账号信息。
+Represents the domain account information.
 
 **Since:** 8
 
@@ -22,9 +22,9 @@ import { osAccount } from 'kits/@kit.BasicServicesKit';
 accountId?: string
 ```
 
-域账号标识。
+Domain account ID.
 
-此接口为系统接口，默认为undefined。
+This is a system API and is **undefined** by default.
 
 **Type:** string
 
@@ -44,9 +44,9 @@ accountId?: string
 isAuthenticated?: boolean
 ```
 
-指示域账号是否已认证。true表示指定的域账号已认证；false表示指定的域账号未认证。
+Whether the domain account has been authenticated. The value **true** means that the specified domain account has  been authenticated; the value **false** means the opposite.
 
-此接口为系统接口，默认为false。
+This is a system API. The default value is **false**.
 
 **Type:** boolean
 

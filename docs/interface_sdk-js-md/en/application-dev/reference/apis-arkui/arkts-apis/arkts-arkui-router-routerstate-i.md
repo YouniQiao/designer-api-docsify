@@ -1,10 +1,8 @@
 # RouterState
 
-页面状态信息。
+**Since:** 23
 
-**Since:** 8
-
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
+**ArkTS mode:** ArkTS-Sta only, since version 23.
 
 <!--Device-router-interface RouterState--><!--Device-router-interface RouterState-End-->
 
@@ -19,20 +17,20 @@ import { router } from 'kits/@kit.ArkUI';
 ## index
 
 ```TypeScript
-index: number
+index: int
 ```
 
-表示当前页面在页面栈中的索引。从栈底到栈顶，index从1开始递增。
+Index of the current page in the stack.NOTE: The index starts from 1 from the bottom to the top of the stack.The value range is all integers.
 
-**Type:** number
+**Type:** int
 
-**Since:** 8
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
+**ArkTS mode:** ArkTS-Sta only, since version 23.
 
-**Atomic service API:** This API can be used in atomic services since API version 11.
+**Model restriction:** This API can be used only in the stage model.
 
-<!--Device-RouterState-index: number--><!--Device-RouterState-index: number-End-->
+<!--Device-RouterState-index: int--><!--Device-RouterState-index: int-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -42,15 +40,15 @@ index: number
 name: string
 ```
 
-表示当前页面的名称，即对应文件名。
+Name of the current page, that is, the file name.
 
 **Type:** string
 
-**Since:** 8
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
+**ArkTS mode:** ArkTS-Sta only, since version 23.
 
-**Atomic service API:** This API can be used in atomic services since API version 11.
+**Model restriction:** This API can be used only in the stage model.
 
 <!--Device-RouterState-name: string--><!--Device-RouterState-name: string-End-->
 
@@ -62,23 +60,15 @@ name: string
 params: Object
 ```
 
-表示当前页面携带的参数。
-
-**说明：** params参数只能传递可序列化的参数，不能传递方法和系统接口返回的对象（例如，媒体接口定义和返回的PixelMap对象）。建议开发者提取系统接口返回的对象中需要被传递的基础类型属性，自行构造object类型对象进行传递。
-
-从API version 12开始，该接口支持在原子化服务中使用。
-
-此接口仅可在Stage模型下使用。
+Data that passed to the destination page during navigation.
 
 **Type:** Object
 
-**Since:** 12
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
+**ArkTS mode:** ArkTS-Sta only, since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
-
-**Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-RouterState-params: Object--><!--Device-RouterState-params: Object-End-->
 
@@ -90,15 +80,15 @@ params: Object
 path: string
 ```
 
-表示当前页面的路径。
+Path of the current page.
 
 **Type:** string
 
-**Since:** 8
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
+**ArkTS mode:** ArkTS-Sta only, since version 23.
 
-**Atomic service API:** This API can be used in atomic services since API version 11.
+**Model restriction:** This API can be used only in the stage model.
 
 <!--Device-RouterState-path: string--><!--Device-RouterState-path: string-End-->
 

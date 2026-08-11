@@ -4,7 +4,7 @@
 declare type VP = `${number}vp` | number
 ```
 
-定义长度属性，可以是数字或以 vp 为单位的数字。
+Defines the length property with number or number in units of vp.
 
 **Since:** 23
 

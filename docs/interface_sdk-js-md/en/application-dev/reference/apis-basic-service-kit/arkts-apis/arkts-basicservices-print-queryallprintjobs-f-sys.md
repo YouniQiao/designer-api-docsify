@@ -12,7 +12,7 @@ import { print } from 'kits/@kit.BasicServicesKit';
 function queryAllPrintJobs(callback: AsyncCallback<void>): void
 ```
 
-查询所有打印任务，使用callback异步回调。
+Queries all print jobs. This API uses an asynchronous callback to return the result.
 
 **Since:** 10
 
@@ -34,14 +34,14 @@ function queryAllPrintJobs(callback: AsyncCallback<void>): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | 异步查询所有打印任务之后的回调。 |
+| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 201 | the application does not have permission to call this function. |
-| 202 | not system application |
+| [201](../../errorcode-universal.md#201-permission-denied) | the application does not have permission to call this function. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | not system application |
 
 
 ## queryAllPrintJobs
@@ -50,7 +50,7 @@ function queryAllPrintJobs(callback: AsyncCallback<void>): void
 function queryAllPrintJobs(): Promise<void>
 ```
 
-查询所有打印任务，使用Promise异步回调。
+Queries all print jobs. This API uses a promise to return the result.
 
 **Since:** 10
 
@@ -72,12 +72,12 @@ function queryAllPrintJobs(): Promise<void>
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise对象，无返回结果。 |
+| Promise&lt;void&gt; | Promise that returns no value. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 201 | the application does not have permission to call this function. |
-| 202 | not system application |
+| [201](../../errorcode-universal.md#201-permission-denied) | the application does not have permission to call this function. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | not system application |
 

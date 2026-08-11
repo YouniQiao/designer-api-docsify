@@ -1,16 +1,17 @@
 # InputEventMonitor
 
-输入事件监听器标识对象。
+Input event monitor identity object.
 
-此对象由系统创建并返回，作为监听器的唯一标识。
+This object is created and returned by the system, serving as the unique identifier of the monitor.
 
-> **说明：**
+> **NOTE：**
 > 
-> - 对象为空对象，不包含任何可访问的成员。
+> - The object is empty and does not contain any accessible members.
 > 
-> - 开发者无法主动构造此对象，只能通过[addLocalInputEventMonitor](../arkts-apis/arkts-arkui-arkui-uicontext-uicontext-c.md/arkts-arkui-arkui-uicontext-uicontext-c.md#addlocalinputeventmonitor)接口注册获取。
+> - Developers cannot create this object on their own. It can only be obtained by registering through the
+> [addLocalInputEventMonitor](../arkts-apis/arkts-arkui-arkui-uicontext-uicontext-c.md/arkts-arkui-arkui-uicontext-uicontext-c.md#addlocalinputeventmonitor) API.
 > 
-> - 用于后续解除注册时验证身份。
+> - It is used for identity verification when unregistering later.
 
 **Since:** 26.0.0
 

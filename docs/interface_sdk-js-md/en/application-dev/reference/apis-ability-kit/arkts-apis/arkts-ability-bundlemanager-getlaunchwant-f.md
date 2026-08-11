@@ -12,7 +12,8 @@ import { bundleManager } from 'kits/@kit.AbilityKit';
 function getLaunchWant(): Want
 ```
 
-获取本应用[入口UIAbility](../../../quick-start/application-package-glossary.md#uiability)的Want参数。
+Obtains the **Want** parameters of the  
+[entry UIAbility](../../../quick-start/application-package-glossary.md#uiability) of the current application.
 
 **Since:** 13
 
@@ -28,13 +29,13 @@ function getLaunchWant(): Want
 
 | Type | Description |
 | --- | --- |
-| [Want](arkts-ability-app-ability-want-want-c.md) | 返回仅包含bundleName和abilityName的Want对象。 |
+| [Want](arkts-ability-app-ability-want-want-c.md) | Want object that contains only the bundle name and ability name. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 17700072 | The launch want is not found. |
+| [17700072](../errorcode-bundle.md#17700072-launch-want-does-not-exist) | The launch want is not found. |
 
 ## Examples
 

@@ -1,6 +1,6 @@
 # BaseDialogOptions
 
-弹窗的选项。
+Dialog base options
 
 **Since:** 23
 
@@ -22,7 +22,7 @@ import { LevelMode, ImmersiveMode, LevelOrder } from 'kits/@kit.ArkUI';
 alignment?: DialogAlignment
 ```
 
-弹窗在竖直方向上的对齐方式。&lt;br&gt;默认值：DialogAlignment.Default &lt;br/&gt;**说明：**&lt;br/&gt;若在UIExtension中设置showInSubWindow为true, 弹窗将基于UIExtension的宿主窗口对齐。
+Defines the dialog alignment of the screen.
 
 **Type:** [DialogAlignment](arkts-arkui-dialogalignment-e.md)
 
@@ -42,7 +42,7 @@ alignment?: DialogAlignment
 autoCancel?: boolean
 ```
 
-点击遮障层时，是否关闭弹窗，true表示关闭弹窗。false表示不关闭弹窗。&lt;br/&gt;默认值：true
+Allows users to click the mask layer to exit.
 
 **Type:** boolean
 
@@ -64,7 +64,7 @@ autoCancel?: boolean
 backgroundBlurStyleOptions?: BackgroundBlurStyleOptions
 ```
 
-背景模糊效果。默认值请参考BackgroundBlurStyleOptions类型说明。
+Defines the customDialog's background blur style with options
 
 **Type:** [BackgroundBlurStyleOptions](../arkts-components/arkts-arkui-backgroundblurstyleoptions-i.md)
 
@@ -84,7 +84,7 @@ backgroundBlurStyleOptions?: BackgroundBlurStyleOptions
 backgroundEffect?: BackgroundEffectOptions
 ```
 
-背景效果参数。默认值请参考BackgroundEffectOptions类型说明。
+Defines the customDialog's background effect with options
 
 **Type:** [BackgroundEffectOptions](../arkts-components/arkts-arkui-backgroundeffectoptions-i.md)
 
@@ -104,7 +104,7 @@ backgroundEffect?: BackgroundEffectOptions
 dialogTransition?: TransitionEffect
 ```
 
-设置弹窗内容显示的过渡效果。默认无动效。
+Dialog transition parameters of opening/closing custom dialog.
 
 **Type:** [TransitionEffect](../arkts-components/arkts-arkui-transitioneffect-c.md)
 
@@ -146,7 +146,7 @@ Defines the dialog display mode when show in subwindow.
 enableHoverMode?: boolean
 ```
 
-是否响应悬停态，值为true时，响应悬停态。&lt;br /&gt;默认值：false，默认不响应。&lt;br /&gt;**说明：**&lt;br /&gt;PC/2in1设备弹窗默认显示在上半屏，在enableHoverMode设置为true。可以通过设置hoverModeArea参数显示在下半屏。其他设备弹窗在enableHoverMode设置为true时默认显示在下半屏，可以通过设置hoverModeArea参数显示在上半屏。
+Defines whether to respond to the hover mode.
 
 **Type:** boolean
 
@@ -168,7 +168,7 @@ enableHoverMode?: boolean
 focusable?: boolean
 ```
 
-设置弹窗是否获取焦点。值为true表示获取焦点，值为false表示不获取焦点。&lt;br /&gt;默认值：true &lt;br /&gt;**说明：**&lt;br /&gt;只有弹出覆盖在当前窗口之上的弹窗才可以获取焦点。
+Specifies whether to get focus when the custom dialog is displayed.
 
 **Type:** boolean
 
@@ -190,7 +190,7 @@ focusable?: boolean
 hoverModeArea?: HoverModeAreaType
 ```
 
-悬停态下弹窗默认展示区域。&lt;br /&gt;默认值：HoverModeAreaType.BOTTOM_SCREEN
+Defines the dialog's display area in hover mode.
 
 **Type:** [HoverModeAreaType](../arkts-components/arkts-arkui-hovermodeareatype-e.md)
 
@@ -212,7 +212,7 @@ hoverModeArea?: HoverModeAreaType
 immersiveMode?: ImmersiveMode
 ```
 
-设置页面内弹窗蒙层效果。&lt;br /&gt;**说明：**&lt;br /&gt;- 默认值：ImmersiveMode.DEFAULT &lt;br /&gt;- 当且仅当levelMode属性设置为LevelMode.EMBEDDED时生效。
+Determine the immersive mode of the dialog.
 
 **Type:** [ImmersiveMode](arkts-arkui-promptaction-immersivemode-e.md)
 
@@ -234,7 +234,7 @@ immersiveMode?: ImmersiveMode
 isModal?: boolean
 ```
 
-弹窗是否为模态窗口。值为true表示为模态窗口且有蒙层，不可与弹窗周围其他控件进行交互，即蒙层区域无法事件透传。值为false表示为非模态窗口且无蒙层，可以与弹窗周围其他控件进行交互。&lt;br/&gt;默认值：true
+Whether it is a modal dialog
 
 **Type:** boolean
 
@@ -256,7 +256,7 @@ isModal?: boolean
 keyboardAvoidDistance?: LengthMetrics
 ```
 
-弹窗避让键盘后，和键盘之间距离。&lt;br /&gt;**说明：**&lt;br/&gt;- 默认值：16vp&lt;br /&gt;- 默认单位：vp&lt;br /&gt;- 当且仅当keyboardAvoidMode属性设置为DEFAULT时生效。
+Defines the distance between the customDialog and system keyboard.
 
 **Type:** [LengthMetrics](arkts-arkui-lengthmetrics-t.md)
 
@@ -276,7 +276,7 @@ keyboardAvoidDistance?: LengthMetrics
 keyboardAvoidMode?: KeyboardAvoidMode
 ```
 
-用于设置弹窗是否在拉起软键盘时进行自动避让。&lt;br/&gt;默认值：KeyboardAvoidMode.DEFAULT
+Defines the customDialog's keyboard avoid mode
 
 **Type:** [KeyboardAvoidMode](../arkts-components/arkts-arkui-keyboardavoidmode-e.md)
 
@@ -298,7 +298,7 @@ keyboardAvoidMode?: KeyboardAvoidMode
 levelMode?: LevelMode
 ```
 
-设置弹窗显示层级。&lt;br /&gt;**说明：**&lt;br /&gt;- 默认值：LevelMode.OVERLAY &lt;br /&gt;- 当且仅当showInSubWindow属性设置为false时生效。
+Determine the display level of the dialog.
 
 **Type:** [LevelMode](arkts-arkui-promptaction-levelmode-e.md)
 
@@ -320,7 +320,7 @@ levelMode?: LevelMode
 levelOrder?: LevelOrder
 ```
 
-设置弹窗显示的顺序。&lt;br /&gt;**说明：**&lt;br /&gt;- 默认值：LevelOrder.clamp(0) &lt;br /&gt;- 不支持动态刷新顺序。
+Determine the display order of the dialog.
 
 **Type:** [LevelOrder](arkts-arkui-promptaction-levelorder-c.md)
 
@@ -342,7 +342,7 @@ levelOrder?: LevelOrder
 levelUniqueId?: int
 ```
 
-设置页面级弹窗需要显示的层级下的节点UniqueID，该ID可以通过[getUniqueId](arkts-arkui-framenode-c.md#getuniqueid)获取。&lt;br/&gt;取值范围：大于等于0的数字。&lt;br /&gt;**说明：** &lt;br /&gt;- 当且仅当levelMode属性设置为LevelMode.EMBEDDED时生效。
+The uniqueId of any node in the router or navigation page.
 
 **Type:** int
 
@@ -362,7 +362,7 @@ levelUniqueId?: int
 maskColor?: ResourceColor
 ```
 
-自定义蒙层颜色。&lt;br&gt;默认值: 0x33000000
+Defines custom dialog maskColor
 
 **Type:** [ResourceColor](arkts-arkui-resourcecolor-t.md)
 
@@ -382,7 +382,7 @@ maskColor?: ResourceColor
 maskRect?: Rectangle
 ```
 
-弹窗遮蔽层区域。&lt;br/&gt;默认值：{ x: 0, y: 0, width: '100%', height: '100%' }&lt;br/&gt;**说明：** &lt;br/&gt;showInSubWindow为true时，maskRect不生效。&lt;br/&gt;maskRect在设置[Rectangle](../../../reference/apis-arkui/arkui-ts/ts-methods-alert-dialog-box.md#rectangle8)中的部分属性后，若未设置其余的属性，则其余属性的默认值为0。
+Mask Region of dialog. The size can't exceed the main window.
 
 **Type:** [Rectangle](../arkts-components/arkts-arkui-rectangle-i.md)
 
@@ -402,7 +402,7 @@ maskRect?: Rectangle
 maskTransition?: TransitionEffect
 ```
 
-设置蒙层显示的过渡效果。默认无动效。
+Mask transition parameters of opening/closing custom dialog.
 
 **Type:** [TransitionEffect](../arkts-components/arkts-arkui-transitioneffect-c.md)
 
@@ -422,7 +422,7 @@ maskTransition?: TransitionEffect
 offset?: Offset
 ```
 
-弹窗相对alignment所在位置的偏移量。&lt;br/&gt;默认值：{&nbsp;dx:&nbsp;0&nbsp;,&nbsp;dy:&nbsp;0&nbsp;}
+Defines the dialog offset.
 
 **Type:** [Offset](arkts-arkui-componentutils-offset-i.md)
 
@@ -442,7 +442,7 @@ offset?: Offset
 onDidAppear?: VoidCallback
 ```
 
-弹窗弹出后的事件回调。&lt;br /&gt;**说明：**&lt;br /&gt;1.正常时序依次为：onWillAppear>>onDidAppear>>(onDateAccept/onCancel/onDateChange)>>onWillDisappear>>onDidDisappear。&lt;br /&gt;2.在onDidAppear内设置改变弹窗显示效果的回调事件，二次弹出生效。&lt;br /&gt;3.快速点击弹出，消失弹窗时，存在onWillDisappear在onDidAppear前生效。&lt;br /&gt;4. 当弹窗入场动效未完成时关闭弹窗，该回调不会触发。
+Callback function when the dialog appears.
 
 **Type:** [VoidCallback](arkts-arkui-voidcallback-t.md)
 
@@ -462,7 +462,7 @@ onDidAppear?: VoidCallback
 onDidDisappear?: VoidCallback
 ```
 
-弹窗消失后的事件回调。&lt;br /&gt;**说明：**&lt;br /&gt;正常时序依次为：onWillAppear>>onDidAppear>>(onDateAccept/onCancel/onDateChange)>>onWillDisappear>>onDidDisappear。 &lt;br/&gt;当弹窗退场动画未完成时（例如：同时触发弹窗关闭和页面切换），该回调不会触发。
+Callback function when the dialog disappears.
 
 **Type:** [VoidCallback](arkts-arkui-voidcallback-t.md)
 
@@ -482,7 +482,7 @@ onDidDisappear?: VoidCallback
 onWillAppear?: VoidCallback
 ```
 
-弹窗显示动效前的事件回调。&lt;br /&gt;**说明：**&lt;br /&gt;1.正常时序依次为：onWillAppear>>onDidAppear>>(onDateAccept/onCancel/onDateChange)>>onWillDisappear>>onDidDisappear。&lt;br /&gt;2.在onWillAppear内设置改变弹窗显示效果的回调事件，二次弹出生效。
+Callback function before the dialog openAnimation starts.
 
 **Type:** [VoidCallback](arkts-arkui-voidcallback-t.md)
 
@@ -502,7 +502,7 @@ onWillAppear?: VoidCallback
 onWillDisappear?: VoidCallback
 ```
 
-弹窗退出动效前的事件回调。&lt;br /&gt;**说明：**&lt;br /&gt;1.正常时序依次为：onWillAppear>>onDidAppear>>(onDateAccept/onCancel/onDateChange)>>onWillDisappear>>onDidDisappear。&lt;br /&gt;2.快速点击弹出，消失弹窗时，存在onWillDisappear在onDidAppear前生效。
+Callback function before the dialog closeAnimation starts.
 
 **Type:** [VoidCallback](arkts-arkui-voidcallback-t.md)
 
@@ -522,7 +522,7 @@ onWillDisappear?: VoidCallback
 onWillDismiss?: Callback<DismissDialogAction>
 ```
 
-交互式关闭回调函数。&lt;br/&gt;**说明：** &lt;br/&gt;1.当用户执行点击遮障层关闭、侧滑（左滑/右滑）、三键back、键盘ESC关闭交互操作时，如果注册该回调函数，则不会立刻关闭弹窗。在回调函数中可以通过reason得到阻拦关闭弹窗的操作类型，从而根据原因选择是否能关闭弹窗。当前组件返回的reason中，暂不支持CLOSE_BUTTON的枚举值。&lt;br/&gt;2.在onWillDismiss回调中，不能再做onWillDismiss拦截。
+Callback function when the CustomDialog interactive dismiss.
 
 **Type:** [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[DismissDialogAction](arkts-arkui-dismissdialogaction-i.md)&gt;
 
@@ -542,7 +542,7 @@ onWillDismiss?: Callback<DismissDialogAction>
 showInSubWindow?: boolean
 ```
 
-某弹窗需要显示在主窗口之外时，是否在子窗口显示此弹窗。值为true表示在子窗口显示弹窗。&lt;br/&gt;默认值：false，弹窗显示在应用内，而非独立子窗口。
+Whether to display in the sub window.
 
 **Type:** boolean
 
@@ -564,7 +564,9 @@ showInSubWindow?: boolean
 systemMaterial?: uiMaterial.Material
 ```
 
-设置弹窗的系统材质。&lt;br/&gt;**说明：**&lt;br/&gt;- 默认值：ImmersiveOptions的style为ImmersiveStyle.ULTRA_THICK的ImmersiveMaterial对象。设置undefined时与默认值保持一致。&lt;br/&gt;- 不同的材质具有不同的效果，该接口影响背景色[backgroundColor](arkts-arkui-common-commonmethod-i.md#backgroundcolor)、背景模糊[backgroundBlurStyle](arkts-arkui-common-commonmethod-i.md#backgroundblurstyle)、背景效果[backgroundEffect](arkts-arkui-common-commonmethod-i.md#backgroundeffect)、边框颜色[borderColor](arkts-arkui-common-commonmethod-i.md#bordercolor)、边框宽度[borderWidth](arkts-arkui-common-commonmethod-i.md#borderwidth)、阴影[shadow](arkts-arkui-common-commonmethod-i.md#shadow)，不建议与上述接口一起使用。
+Set system-styled materials for dialog. Different materials have different effects, which can influence backgroundColor, border, shadow, and other visual attributes of dialog.
+
+Device Behavior Differences:The effect of same material may vary across different devices depending on their computing power.
 
 **Type:** uiMaterial.Material
 
@@ -584,7 +586,7 @@ systemMaterial?: uiMaterial.Material
 transition?: TransitionEffect
 ```
 
-设置弹窗显示和退出的过渡效果。&lt;br/&gt;**说明：**&lt;br/&gt; 1.如果不设置，则使用默认的显示/退出动效。&lt;br/&gt; 2.显示动效中按back键，打断显示动效，执行退出动效，动画效果为显示动效与退出动效的曲线叠加后的效果。&lt;br/&gt; 3.退出动效中按back键，不会打断退出动效，退出动效继续执行，继续按back键退出应用。
+Transition parameters of opening/closing custom dialog.
 
 **Type:** [TransitionEffect](../arkts-components/arkts-arkui-transitioneffect-c.md)
 

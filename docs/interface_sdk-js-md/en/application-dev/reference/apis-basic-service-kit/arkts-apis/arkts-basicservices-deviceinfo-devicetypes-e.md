@@ -1,6 +1,6 @@
 # DeviceTypes
 
-设备类型枚举值，可用于校验deviceType的返回值。
+Enumerates device types, which can be used to verify the return value of **deviceType**.
 
 **Since:** 24
 
@@ -16,7 +16,7 @@
 TYPE_DEFAULT = 'default'
 ```
 
-默认设备。
+Default device
 
 **Since:** 24
 
@@ -34,7 +34,7 @@ TYPE_DEFAULT = 'default'
 TYPE_PHONE = 'phone'
 ```
 
-手机。
+Smartphone
 
 **Since:** 24
 
@@ -52,7 +52,7 @@ TYPE_PHONE = 'phone'
 TYPE_TABLET = 'tablet'
 ```
 
-平板。
+Tablet
 
 **Since:** 24
 
@@ -70,7 +70,7 @@ TYPE_TABLET = 'tablet'
 TYPE_2IN1 = '2in1'
 ```
 
-PC/2in1。
+PC/2-in-1 device
 
 **Since:** 24
 
@@ -88,7 +88,7 @@ PC/2in1。
 TYPE_TV = 'tv'
 ```
 
-智慧屏。
+Smart TV
 
 **Since:** 24
 
@@ -106,7 +106,7 @@ TYPE_TV = 'tv'
 TYPE_WEARABLE = 'wearable'
 ```
 
-智能手表。
+Wearable
 
 **Since:** 24
 
@@ -124,7 +124,7 @@ TYPE_WEARABLE = 'wearable'
 TYPE_CAR = 'car'
 ```
 
-车机。
+Head unit
 
 **Since:** 24
 

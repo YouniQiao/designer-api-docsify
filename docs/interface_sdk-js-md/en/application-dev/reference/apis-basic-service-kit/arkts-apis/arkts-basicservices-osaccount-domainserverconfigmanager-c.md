@@ -1,6 +1,6 @@
 # DomainServerConfigManager
 
-域服务器配置管理类。
+Provides APIs for domain server configuration and management.
 
 **Since:** 18
 
@@ -22,7 +22,7 @@ import { osAccount } from 'kits/@kit.BasicServicesKit';
 static addServerConfig(parameters: Record<string, Object>): Promise<DomainServerConfig>
 ```
 
-添加域服务器配置。使用Promise异步回调。
+Adds domain server configuration. This API uses a promise to return the result.
 
 **Since:** 18
 
@@ -38,23 +38,23 @@ static addServerConfig(parameters: Record<string, Object>): Promise<DomainServer
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| parameters | [Record](../../apis-default/arkts-apis/arkts-record-t.md)&lt;string, Object&gt; | Yes | 表示域服务器配置参数。 |
+| parameters | [Record](../../apis-default/arkts-apis/arkts-record-t.md)&lt;string, Object&gt; | Yes | Configuration parameters of the domain server. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;DomainServerConfig&gt; | Promise对象，返回新添加的域服务器配置。 |
+| Promise&lt;DomainServerConfig&gt; | Promise used to return the configuration of the newly added domain server. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 801 | Capability not supported. |
+| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. |
 | 12300211 | Server unreachable. |
-| 201 | Permission denied. |
-| 12300002 | Invalid server config parameters. |
-| 12300001 | The system service works abnormally. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
+| [12300002](../../apis-basic-services-kit/errorcode-account.md#12300002-invalid-parameter) | Invalid server config parameters. |
+| [12300001](../../apis-basic-services-kit/errorcode-account.md#12300001-system-service-abnormal) | The system service works abnormally. |
 | 12300215 | The number of server config reaches the upper limit. |
 | 12300213 | Server config already exists. |
 
@@ -81,7 +81,7 @@ osAccount.DomainServerConfigManager.addServerConfig(configParams).then((
 static addServerConfig(parameters: Record<string, RecordData>): Promise<DomainServerConfig>
 ```
 
-添加域服务器配置。使用Promise异步回调。
+Adds domain server configuration. This API uses a promise to return the result.
 
 **Since:** 23
 
@@ -97,23 +97,23 @@ static addServerConfig(parameters: Record<string, RecordData>): Promise<DomainSe
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| parameters | [Record](../../apis-default/arkts-apis/arkts-record-t.md)&lt;string, RecordData&gt; | Yes | 表示域服务器配置参数。 |
+| parameters | [Record](../../apis-default/arkts-apis/arkts-record-t.md)&lt;string, RecordData&gt; | Yes | Configuration parameters of the domain server. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;DomainServerConfig&gt; | Promise对象，返回新添加的域服务器配置。 |
+| Promise&lt;DomainServerConfig&gt; | Promise used to return the configuration of the newly added domain server. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 801 | Capability not supported. |
+| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. |
 | 12300211 | Server unreachable. |
-| 201 | Permission denied. |
-| 12300002 | Invalid server config parameters. |
-| 12300001 | The system service works abnormally. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
+| [12300002](../../apis-basic-services-kit/errorcode-account.md#12300002-invalid-parameter) | Invalid server config parameters. |
+| [12300001](../../apis-basic-services-kit/errorcode-account.md#12300001-system-service-abnormal) | The system service works abnormally. |
 | 12300215 | The number of server config reaches the upper limit. |
 | 12300213 | Server config already exists. |
 
@@ -123,7 +123,7 @@ static addServerConfig(parameters: Record<string, RecordData>): Promise<DomainSe
 static getAccountServerConfig(domainAccountInfo: DomainAccountInfo): Promise<DomainServerConfig>
 ```
 
-获取目标域账号的服务器配置。使用Promise异步回调。
+Obtains the server configuration of a domain account. This API uses a promise to return the result.
 
 **Since:** 18
 
@@ -139,22 +139,22 @@ static getAccountServerConfig(domainAccountInfo: DomainAccountInfo): Promise<Dom
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| domainAccountInfo | [DomainAccountInfo](arkts-basicservices-osaccount-domainaccountinfo-i.md) | Yes | 表示目标域账号信息。 |
+| domainAccountInfo | [DomainAccountInfo](arkts-basicservices-osaccount-domainaccountinfo-i.md) | Yes | Information of the domain account. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;DomainServerConfig&gt; | Promise对象，返回目标账号的域服务器配置。 |
+| Promise&lt;DomainServerConfig&gt; | Promise used to return the domain server configuration of the account. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 801 | Capability not supported. |
-| 12300003 | Domain account not found. |
-| 201 | Permission denied. |
-| 12300001 | The system service works abnormally. |
+| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. |
+| [12300003](../../apis-basic-services-kit/errorcode-account.md#12300003-account-not-found) | Domain account not found. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
+| [12300001](../../apis-basic-services-kit/errorcode-account.md#12300001-system-service-abnormal) | The system service works abnormally. |
 
 ## Examples
 
@@ -179,7 +179,7 @@ osAccount.DomainServerConfigManager.getAccountServerConfig(accountInfo).then((
 static getAllServerConfigs(): Promise<Array<DomainServerConfig>>
 ```
 
-获取所有域服务器配置。使用Promise异步回调。
+Obtains the configurations of all domain servers. This API uses a promise to return the result.
 
 **Since:** 18
 
@@ -195,15 +195,15 @@ static getAllServerConfigs(): Promise<Array<DomainServerConfig>>
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;Array&lt;DomainServerConfig&gt;&gt; | Promise对象，返回获取的所有域服务器配置。 |
+| Promise&lt;Array&lt;DomainServerConfig&gt;&gt; | Promise used to return the domain server configuration obtained. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 801 | Capability not supported. |
-| 201 | Permission denied. |
-| 12300001 | The system service works abnormally. |
+| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
+| [12300001](../../apis-basic-services-kit/errorcode-account.md#12300001-system-service-abnormal) | The system service works abnormally. |
 
 ## Examples
 
@@ -233,7 +233,7 @@ osAccount.DomainServerConfigManager.addServerConfig(configParams).then((
 static getServerConfig(configId: string): Promise<DomainServerConfig>
 ```
 
-获取域服务器配置。使用Promise异步回调。
+Obtains the domain server configuration. This API uses a promise to return the result.
 
 **Since:** 18
 
@@ -249,21 +249,21 @@ static getServerConfig(configId: string): Promise<DomainServerConfig>
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| configId | string | Yes | 表示服务器配置标识。 |
+| configId | string | Yes | Server configuration ID. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;DomainServerConfig&gt; | Promise对象，返回获取的域服务器配置。 |
+| Promise&lt;DomainServerConfig&gt; | Promise used to return the domain server configuration obtained. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 801 | Capability not supported. |
-| 201 | Permission denied. |
-| 12300001 | The system service works abnormally. |
+| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
+| [12300001](../../apis-basic-services-kit/errorcode-account.md#12300001-system-service-abnormal) | The system service works abnormally. |
 | 12300212 | Server config not found. |
 
 ## Examples
@@ -294,7 +294,7 @@ osAccount.DomainServerConfigManager.addServerConfig(configParams).then((
 static removeServerConfig(configId: string): Promise<void>
 ```
 
-删除域服务器配置。使用Promise异步回调。
+Removes domain server configuration. This API uses a promise to return the result.
 
 **Since:** 18
 
@@ -310,21 +310,21 @@ static removeServerConfig(configId: string): Promise<void>
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| configId | string | Yes | 表示服务器配置标识。 |
+| configId | string | Yes | Server configuration ID. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise对象，无返回结果的Promise对象。 |
+| Promise&lt;void&gt; | Promise that returns no value. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 801 | Capability not supported. |
-| 201 | Permission denied. |
-| 12300001 | The system service works abnormally. |
+| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
+| [12300001](../../apis-basic-services-kit/errorcode-account.md#12300001-system-service-abnormal) | The system service works abnormally. |
 | 12300214 | Server config has been associated with an account. |
 | 12300212 | Server config not found. |
 
@@ -353,7 +353,7 @@ osAccount.DomainServerConfigManager.addServerConfig(configParams).then((
 static updateServerConfig(configId: string, parameters: Record<string, Object>): Promise<DomainServerConfig>
 ```
 
-更新域服务器配置。使用Promise异步回调。
+Updates the domain server configuration. This API uses a promise to return the result.
 
 **Since:** 18
 
@@ -369,24 +369,24 @@ static updateServerConfig(configId: string, parameters: Record<string, Object>):
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| configId | string | Yes | 表示服务器配置标识。 |
-| parameters | [Record](../../apis-default/arkts-apis/arkts-record-t.md)&lt;string, Object&gt; | Yes | 表示域服务器配置参数。 |
+| configId | string | Yes | Server configuration ID. |
+| parameters | [Record](../../apis-default/arkts-apis/arkts-record-t.md)&lt;string, Object&gt; | Yes | Configuration parameters of the domain server. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;DomainServerConfig&gt; | Promise对象，返回更新后的域服务器配置。 |
+| Promise&lt;DomainServerConfig&gt; | Promise used to return the updated domain server configuration. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 801 | Capability not supported. |
+| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. |
 | 12300211 | Server unreachable. |
-| 201 | Permission denied. |
-| 12300002 | Invalid server config parameters. |
-| 12300001 | The system service works abnormally. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
+| [12300002](../../apis-basic-services-kit/errorcode-account.md#12300002-invalid-parameter) | Invalid server config parameters. |
+| [12300001](../../apis-basic-services-kit/errorcode-account.md#12300001-system-service-abnormal) | The system service works abnormally. |
 | 12300214 | Server config has been associated with an account. |
 | 12300213 | Server config already exists. |
 | 12300212 | Server config not found. |
@@ -419,7 +419,7 @@ osAccount.DomainServerConfigManager.addServerConfig(configParams).then((
 static updateServerConfig(configId: string, parameters: Record<string, RecordData>): Promise<DomainServerConfig>
 ```
 
-更新域服务器配置。使用Promise异步回调。
+Updates the domain server configuration. This API uses a promise to return the result.
 
 **Since:** 23
 
@@ -435,24 +435,24 @@ static updateServerConfig(configId: string, parameters: Record<string, RecordDat
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| configId | string | Yes | 表示服务器配置标识。 |
-| parameters | [Record](../../apis-default/arkts-apis/arkts-record-t.md)&lt;string, RecordData&gt; | Yes | 表示域服务器配置参数。 |
+| configId | string | Yes | Server configuration ID. |
+| parameters | [Record](../../apis-default/arkts-apis/arkts-record-t.md)&lt;string, RecordData&gt; | Yes | Configuration parameters of the domain server. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;DomainServerConfig&gt; | Promise对象，返回更新后的域服务器配置。 |
+| Promise&lt;DomainServerConfig&gt; | Promise used to return the updated domain server configuration. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 801 | Capability not supported. |
+| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. |
 | 12300211 | Server unreachable. |
-| 201 | Permission denied. |
-| 12300002 | Invalid server config parameters. |
-| 12300001 | The system service works abnormally. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
+| [12300002](../../apis-basic-services-kit/errorcode-account.md#12300002-invalid-parameter) | Invalid server config parameters. |
+| [12300001](../../apis-basic-services-kit/errorcode-account.md#12300001-system-service-abnormal) | The system service works abnormally. |
 | 12300214 | Server config has been associated with an account. |
 | 12300213 | Server config already exists. |
 | 12300212 | Server config not found. |

@@ -1,6 +1,6 @@
 # AvoidAreaOptions
 
-系统避让区变化后返回当前避让区域以及避让区域类型。
+Describes the new area where the window cannot be displayed. The new area is returned when the corresponding event is triggered.
 
 **Since:** 12
 
@@ -22,7 +22,7 @@ import { window } from 'kits/@kit.ArkUI';
 area: AvoidArea
 ```
 
-系统避让区变化后返回的避让区域。
+New area returned.
 
 **Type:** [AvoidArea](arkts-arkui-window-avoidarea-i.md)
 
@@ -42,7 +42,7 @@ area: AvoidArea
 type: AvoidAreaType
 ```
 
-系统避让区变化后返回的避让区域类型。
+Type of the new area returned.
 
 **Type:** [AvoidAreaType](arkts-arkui-window-avoidareatype-e.md)
 

@@ -6,7 +6,7 @@ typedef struct OH_Drawing_FontParser OH_Drawing_FontParser
 
 ## Overview
 
-Defines a struct used to parse system font files.
+Parses system font files.
 
 **Since**: 12
 

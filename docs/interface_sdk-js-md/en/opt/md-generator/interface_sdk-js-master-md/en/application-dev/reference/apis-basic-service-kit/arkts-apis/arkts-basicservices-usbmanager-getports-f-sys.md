@@ -1,0 +1,33 @@
+# getPorts (System API)
+
+## Modules to Import
+
+```TypeScript
+import { usbManager } from 'kits/@kit.BasicServicesKit';
+```
+
+## getPorts
+
+```TypeScript
+function getPorts(): Array<USBPort>
+```
+
+Obtains the list of all physical USB ports. When the developer mode is disabled, **undefined** may be returned if no device is connected. Check whether the return value of the API is empty.
+
+**Since:** 9
+
+**Deprecated since:** 12
+
+**Substitutes:** [usbManager.getPortList](arkts-basicservices-usbmanager-getportlist-f-sys.md#getportlist)()
+
+<!--Device-usbManager-function getPorts(): Array<USBPort>--><!--Device-usbManager-function getPorts(): Array<USBPort>-End-->
+
+**System capability:** SystemCapability.USB.USBManager
+
+**System API:** This is a system API.
+
+**Return value:**
+
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| Array&lt;USBPort&gt; |

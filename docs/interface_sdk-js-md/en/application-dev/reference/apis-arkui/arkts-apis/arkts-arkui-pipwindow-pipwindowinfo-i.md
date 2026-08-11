@@ -1,6 +1,6 @@
 # PiPWindowInfo
 
-画中画窗口信息。
+Describes the PiP window information.
 
 **Since:** 15
 
@@ -22,7 +22,7 @@ import { PiPWindow } from 'kits/@kit.ArkUI';
 size: PiPWindowSize
 ```
 
-画中画窗口大小。
+Size of the PiP window.
 
 **Type:** [PiPWindowSize](arkts-arkui-pipwindow-pipwindowsize-i.md)
 
@@ -42,7 +42,7 @@ size: PiPWindowSize
 windowId: int
 ```
 
-画中画窗口ID。
+ID of the PiP window.
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 

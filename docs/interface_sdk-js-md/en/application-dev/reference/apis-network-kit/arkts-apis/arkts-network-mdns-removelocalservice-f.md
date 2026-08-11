@@ -37,12 +37,12 @@ Removes an mDNS service.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. |
-| 2100002 | Failed to connect to the service. |
-| 2100003 | System internal error. |
-| 2204002 | Callback not found. |
-| 2204008 | Failed to delete the service instance. |
-| 2204010 | Failed to send the message. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. |
+| [2100002](../errorcode-net-connection.md#2100002-service-connection-failure) | Failed to connect to the service. |
+| [2100003](../errorcode-net-connection.md#2100003-system-internal-error) | System internal error. |
+| [2204002](../errorcode-net-mdns.md#2204002-target-service-not-found) | Callback not found. |
+| [2204008](../errorcode-net-mdns.md#2204008-service-deletion-failure) | Failed to delete the service instance. |
+| [2204010](../errorcode-net-mdns.md#2204010-message-sending-failure) | Failed to send the message. |
 
 ## Examples
 
@@ -108,12 +108,12 @@ Removes an mDNS service.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. |
-| 2100002 | Failed to connect to the service. |
-| 2100003 | System internal error. |
-| 2204002 | Callback not found. |
-| 2204008 | Failed to delete the service instance. |
-| 2204010 | Failed to send the message. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. |
+| [2100002](../errorcode-net-connection.md#2100002-service-connection-failure) | Failed to connect to the service. |
+| [2100003](../errorcode-net-connection.md#2100003-system-internal-error) | System internal error. |
+| [2204002](../errorcode-net-mdns.md#2204002-target-service-not-found) | Callback not found. |
+| [2204008](../errorcode-net-mdns.md#2204008-service-deletion-failure) | Failed to delete the service instance. |
+| [2204010](../errorcode-net-mdns.md#2204010-message-sending-failure) | Failed to send the message. |
 
 ## Examples
 

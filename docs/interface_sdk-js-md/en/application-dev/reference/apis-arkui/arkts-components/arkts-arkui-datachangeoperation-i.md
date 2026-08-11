@@ -1,6 +1,6 @@
 # DataChangeOperation
 
-改变数据操作。
+Represents an operation for changing data.
 
 **Since:** 12
 
@@ -16,7 +16,7 @@
 index: number
 ```
 
-改变的数据的索引值。取值范围是[0, 数据源长度-1]。超出取值范围时渲染异常。
+Index of the data to be changed. The value range is [0, data source length - 1].
 
 **Type:** number
 
@@ -38,7 +38,7 @@ index: number
 key?: string
 ```
 
-为改变的数据分配新的键值，默认使用原键值。
+New key to assign to the changed data. The original key is used by default.
 
 **Type:** string
 
@@ -60,7 +60,7 @@ key?: string
 type: DataOperationType.CHANGE
 ```
 
-数据改变类型。
+Type of data change.
 
 **Type:** DataOperationType.CHANGE
 

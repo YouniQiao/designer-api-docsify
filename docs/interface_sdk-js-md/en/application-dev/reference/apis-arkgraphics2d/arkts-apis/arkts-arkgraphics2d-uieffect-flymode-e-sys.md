@@ -1,6 +1,6 @@
 # FlyMode (System API)
 
-飞入飞出形变场景模式枚举。
+Fly-in or fly-out deformation scene mode enumeration.
 
 **Since:** 12
 
@@ -18,7 +18,7 @@
 BOTTOM = 0
 ```
 
-从底部进行飞入飞出形变。
+Fly-in or fly-out deformation from the bottom.
 
 **Since:** 12
 
@@ -36,7 +36,7 @@ BOTTOM = 0
 TOP = 1
 ```
 
-从顶部进行飞入飞出形变。
+Fly-in or fly-out deformation from the top.
 
 **Since:** 12
 

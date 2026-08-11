@@ -1,6 +1,6 @@
 # TouchGestureEvent (System API)
 
-触摸屏手势事件。
+Defines a touchscreen gesture event.
 
 **Since:** 18
 
@@ -24,7 +24,7 @@ import { SwipeInward, FourFingersSwipe, Pinch, ActionType, Rotate, ThreeFingersT
 action: TouchGestureAction
 ```
 
-触摸屏手势类型。
+Enumerates touchscreen gesture types.
 
 **Type:** [TouchGestureAction](arkts-input-multimodalinput-gestureevent-touchgestureaction-e-sys.md)
 
@@ -44,7 +44,7 @@ action: TouchGestureAction
 touches: Touch[]
 ```
 
-触屏点信息。
+Touch point information.
 
 **Type:** [Touch](arkts-input-multimodalinput-touchevent-touch-i-sys.md)[]
 

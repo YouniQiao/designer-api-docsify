@@ -1,11 +1,5 @@
 # WithEnv
 
-## 导入模块
-
-```TypeScript
-import { WithEnvAttribute, WithEnv } from 'kits/@kit.ArkUI';
-```
-
 ## WithEnv
 
 ```TypeScript

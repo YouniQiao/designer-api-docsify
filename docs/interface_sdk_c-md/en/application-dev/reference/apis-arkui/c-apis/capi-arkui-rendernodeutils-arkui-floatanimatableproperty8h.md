@@ -6,7 +6,7 @@ typedef struct ArkUI_FloatAnimatableProperty* ArkUI_FloatAnimatablePropertyHandl
 
 ## Overview
 
-Handle to the ArkUI native animatable float render property.
+Defines an animatable float property pointer.
 
 **Since**: 20
 

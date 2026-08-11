@@ -1,11 +1,5 @@
 # promoteCurrentToCandidateMasterProcess
 
-## 导入模块
-
-```TypeScript
-import { application } from 'kits/@kit.AbilityKit';
-```
-
 ## promoteCurrentToCandidateMasterProcess
 
 ```TypeScript
@@ -59,8 +53,8 @@ export function promoteCurrentToCandidateMasterProcess(insertToHead: boolean): P
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 801 | Capability not supported. |
-| 16000115 | The current process cannot be set as a candidate master process. |
+| [801](../../errorcode-universal.md#801-该设备不支持此api) | Capability not supported. |
+| [16000115](../errorcode-ability.md#16000115-当前进程不支持设置为备选主控进程) | The current process cannot be set as a candidate master process. |
 
 ## 示例
 
@@ -75,7 +69,8 @@ export default class EntryAbility extends UIAbility {
         .then(() => {
           console.info('promote succeed');
         })
-        .catch((err: BusinessError) => {
+        .catch((error: Error) => {
+          let err = error as BusinessError;
           console.error(`promote failed, code is ${err.code}, message is ${err.message}`);
         });
     } catch (error) {

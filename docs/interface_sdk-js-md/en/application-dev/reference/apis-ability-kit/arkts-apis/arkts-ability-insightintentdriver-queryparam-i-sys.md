@@ -1,6 +1,6 @@
 # QueryParam (System API)
 
-查询洞察意图实体时的Param。
+Param when query insight intent entity.
 
 **Since:** 26.0.0
 
@@ -24,7 +24,7 @@ import { insightIntentDriver } from 'kits/@kit.AbilityKit';
 bundleName: string
 ```
 
-套餐名称。
+Indicates the bundle name.
 
 **Type:** string
 
@@ -46,7 +46,7 @@ bundleName: string
 className: string
 ```
 
-实体类名称。
+Indicates the entity class name.
 
 **Type:** string
 
@@ -68,7 +68,7 @@ className: string
 intentName: string
 ```
 
-意图名称。
+Indicates the intent name.
 
 **Type:** string
 
@@ -90,7 +90,7 @@ intentName: string
 moduleName: string
 ```
 
-模块名称。
+Indicates the module name.
 
 **Type:** string
 
@@ -112,7 +112,7 @@ moduleName: string
 queryEntityParam: insightIntent.QueryEntityParam
 ```
 
-查询实体的param。
+Indicates the param for query entity.
 
 **Type:** insightIntent.QueryEntityParam
 
@@ -134,7 +134,9 @@ queryEntityParam: insightIntent.QueryEntityParam
 userId?: int
 ```
 
-目标用户ID。如果调用方应用的用户ID与目标用户ID不一致，则需要申请权限：oos.permission.INTERACT_ACROSS_LOCAL_ACCOUNTS。取值范围为全体整数。
+Indicates the target user ID.
+
+If the user ID of the caller application is different from the target user ID, you need to apply for permission: ohos.permission.INTERACT_ACROSS_LOCAL_ACCOUNTS.
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 

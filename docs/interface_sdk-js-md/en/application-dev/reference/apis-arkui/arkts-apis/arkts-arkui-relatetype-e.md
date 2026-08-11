@@ -2,9 +2,9 @@
 
 RelateType enumeration description
 
-**Since:** 11
+**Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 11.
+**ArkTS mode:** ArkTS-Dyn only, since version 7.
 
 <!--Device-unnamed-declare enum RelateType--><!--Device-unnamed-declare enum RelateType-End-->
 
@@ -18,9 +18,9 @@ FILL
 
 Scales the current component to fill the parent component.
 
-**Since:** 11
+**Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 11.
+**ArkTS mode:** ArkTS-Dyn only, since version 7.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -36,9 +36,9 @@ FIT
 
 Scales the current component to fit the parent component.
 
-**Since:** 11
+**Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 11.
+**ArkTS mode:** ArkTS-Dyn only, since version 7.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 

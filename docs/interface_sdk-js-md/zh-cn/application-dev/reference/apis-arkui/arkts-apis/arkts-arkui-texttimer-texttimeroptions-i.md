@@ -18,7 +18,7 @@ controller?: TextTimerController
 
 TextTimer控制器。
 
-**类型：** [TextTimerController](../arkts-components/arkts-arkui-texttimercontroller-c.md)
+**类型：** [TextTimerController](arkts-arkui-texttimer-texttimercontroller-c.md)
 
 **起始版本：** 23
 

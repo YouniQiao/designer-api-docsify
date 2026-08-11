@@ -46,7 +46,7 @@ mode?: NavDestinationMode
 
 从API version 22开始，该接口支持在原子化服务中使用。
 
-**类型：** [NavDestinationMode](arkts-arkui-navdestinationmode-e.md)
+**类型：** [NavDestinationMode](../arkts-apis/arkts-arkui-navdestination-navdestinationmode-e.md)
 
 **起始版本：** 22
 
@@ -90,7 +90,7 @@ pathInfo: NavPathInfo
 
 跳转NavDestination时指定的参数。
 
-**类型：** [NavPathInfo](arkts-arkui-navpathinfo-c.md)
+**类型：** [NavPathInfo](../arkts-apis/arkts-arkui-navigation-navpathinfo-c.md)
 
 **起始版本：** 11
 

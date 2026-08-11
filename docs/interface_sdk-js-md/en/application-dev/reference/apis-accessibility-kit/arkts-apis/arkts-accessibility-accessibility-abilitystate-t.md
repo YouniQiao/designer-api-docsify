@@ -4,7 +4,7 @@
 type AbilityState = 'enable' | 'disable' | 'install'
 ```
 
-辅助应用状态类型。
+Enumerates the states of an accessibility application.
 
 **Since:** 7
 
@@ -20,7 +20,7 @@ type AbilityState = 'enable' | 'disable' | 'install'
 
 | Type | Description |
 | --- | --- |
-| 'enable' | 表示辅助应用已启用。 |
-| 'disable' | 辅助应用已禁用。 |
-| 'install' | 辅助应用已安装。 |
+| 'enable' | The accessibility application is enabled. |
+| 'disable' | The accessibility application is disabled. |
+| 'install' | The accessibility application has been installed. |
 

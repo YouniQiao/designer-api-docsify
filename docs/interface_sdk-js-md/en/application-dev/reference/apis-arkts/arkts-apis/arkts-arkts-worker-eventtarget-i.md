@@ -1,6 +1,6 @@
 # EventTarget
 
-用于管理Worker的监听事件。
+Specific event features.
 
 **Since:** 7
 
@@ -26,7 +26,7 @@ import { MessageEvents, PostMessageOptions, MessageEvent, Priority, WorkerEventT
 addEventListener(type: string, listener: EventListener): void
 ```
 
-向Worker添加一个事件监听。
+Adds an event listener to the worker.
 
 **Since:** 7
 
@@ -44,8 +44,8 @@ addEventListener(type: string, listener: EventListener): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | string | Yes | 监听的事件类型。 |
-| listener | [EventListener](arkts-arkts-worker-eventlistener-i.md) | Yes | listener 当指定类型的事件发生时调用的回调函数。 |
+| type | string | Yes | Type of the event to listen for. |
+| listener | [EventListener](arkts-arkts-worker-eventlistener-i.md) | Yes | listener Callback to invoke when an event of the specified type occurs. |
 
 ## Examples
 
@@ -66,7 +66,7 @@ workerPort.addEventListener("alert", () => {
 dispatchEvent(event: Event): boolean
 ```
 
-分发定义在Worker的事件。
+Dispatches the event defined for the worker.
 
 **Since:** 7
 
@@ -84,7 +84,7 @@ dispatchEvent(event: Event): boolean
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| event | [Event](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-event-c.md) | Yes | 需要分发的事件。 |
+| event | [Event](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-event-c.md) | Yes | Event to dispatch. |
 
 **Return value:**
 
@@ -141,7 +141,7 @@ workerPort.onmessage = (event: MessageEvents) => {
 removeAllListener(): void
 ```
 
-移除Worker所有的事件监听。
+Removes all event listeners for the worker.
 
 **Since:** 7
 
@@ -176,7 +176,7 @@ workerPort.removeAllListener();
 removeEventListener(type: string, callback?: EventListener): void
 ```
 
-移除Worker的事件监听。
+Removes an event defined for the worker.
 
 **Since:** 7
 
@@ -194,8 +194,8 @@ removeEventListener(type: string, callback?: EventListener): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | string | Yes | 需要移除的事件类型。 |
-| callback | [EventListener](arkts-arkts-worker-eventlistener-i.md) | No | 要移除的事件监听的回调函数。 |
+| type | string | Yes | Type of the event for which the event listener is removed. |
+| callback | [EventListener](arkts-arkts-worker-eventlistener-i.md) | No | Callback of the event listener to remove. |
 
 ## Examples
 

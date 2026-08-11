@@ -1,11 +1,5 @@
 # createModuleContext
 
-## 导入模块
-
-```TypeScript
-import { application } from 'kits/@kit.AbilityKit';
-```
-
 ## createModuleContext
 
 ```TypeScript
@@ -47,12 +41,12 @@ export function createModuleContext(context: Context, moduleName: string): Promi
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
 
 ## 示例
 
 ```TypeScript
-import { AbilityConstant, UIAbility, application, common, Want } from '@kit.AbilityKit';
+import { AbilityConstant, UIAbility, application, common, Want, Context } from '@kit.AbilityKit';
 import { BusinessError } from '@kit.BasicServicesKit';
 
 export default class EntryAbility extends UIAbility {
@@ -62,7 +56,7 @@ export default class EntryAbility extends UIAbility {
       application.createModuleContext(this.context, 'entry').then((data: common.Context) => {
         moduleContext = data;
         console.info('createModuleContext success!');
-      }).catch((error: BusinessError) => {
+      }).catch((error: Error) => {
         let code: number = (error as BusinessError).code;
         let message: string = (error as BusinessError).message;
         console.error(`createModuleContext failed, error.code: ${code}, error.message: ${message}`);

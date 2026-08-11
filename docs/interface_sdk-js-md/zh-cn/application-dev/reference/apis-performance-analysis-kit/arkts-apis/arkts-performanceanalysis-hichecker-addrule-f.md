@@ -1,11 +1,5 @@
 # addRule
 
-## 导入模块
-
-```TypeScript
-import { hichecker } from 'kits/@kit.PerformanceAnalysisKit';
-```
-
 ## addRule
 
 ```TypeScript

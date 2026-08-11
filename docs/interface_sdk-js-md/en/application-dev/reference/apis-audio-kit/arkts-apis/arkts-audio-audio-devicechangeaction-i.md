@@ -1,6 +1,6 @@
 # DeviceChangeAction
 
-描述设备连接状态变化和设备信息。
+Describes the device connection status and device information.
 
 **Since:** 7
 
@@ -22,7 +22,7 @@ import { audio } from 'kits/@kit.AudioKit';
 deviceDescriptors: AudioDeviceDescriptors
 ```
 
-设备信息。
+Device information.
 
 **Type:** [AudioDeviceDescriptors](arkts-audio-audio-audiodevicedescriptors-t.md)
 
@@ -40,7 +40,7 @@ deviceDescriptors: AudioDeviceDescriptors
 type: DeviceChangeType
 ```
 
-设备连接状态变化。
+Device change type.
 
 **Type:** [DeviceChangeType](arkts-audio-audio-devicechangetype-e.md)
 

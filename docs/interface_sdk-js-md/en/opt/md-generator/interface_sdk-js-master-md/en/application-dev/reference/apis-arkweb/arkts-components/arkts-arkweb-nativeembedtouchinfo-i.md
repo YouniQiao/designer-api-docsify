@@ -1,0 +1,63 @@
+# NativeEmbedTouchInfo
+
+Provides touch information of the same-layer tag.
+
+**Since:** 11
+
+<!--Device-unnamed-declare interface NativeEmbedTouchInfo--><!--Device-unnamed-declare interface NativeEmbedTouchInfo-End-->
+
+**System capability:** SystemCapability.Web.Webview.Core
+
+## embedId
+
+```TypeScript
+embedId?: string
+```
+
+Unique ID of the same-layer tag.
+
+**Type:** string
+
+**Since:** 11
+
+**Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-NativeEmbedTouchInfo-embedId?: string--><!--Device-NativeEmbedTouchInfo-embedId?: string-End-->
+
+**System capability:** SystemCapability.Web.Webview.Core
+
+## result
+
+```TypeScript
+result?: EventResult
+```
+
+Gesture event consumption result.
+
+**Type:** [EventResult](arkts-arkweb-eventresult-c.md)
+
+**Since:** 12
+
+**Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-NativeEmbedTouchInfo-result?: EventResult--><!--Device-NativeEmbedTouchInfo-result?: EventResult-End-->
+
+**System capability:** SystemCapability.Web.Webview.Core
+
+## touchEvent
+
+```TypeScript
+touchEvent?: TouchEvent
+```
+
+Touch action information.
+
+**Type:** [TouchEvent](../../apis-input-kit/arkts-apis/arkts-input-multimodalinput-touchevent-touchevent-i.md)
+
+**Since:** 11
+
+**Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-NativeEmbedTouchInfo-touchEvent?: TouchEvent--><!--Device-NativeEmbedTouchInfo-touchEvent?: TouchEvent-End-->
+
+**System capability:** SystemCapability.Web.Webview.Core

@@ -1,6 +1,6 @@
 # ServiceInfo (System API)
 
-云服务信息
+Represents the cloud service information.
 
 **Since:** 11
 
@@ -24,7 +24,7 @@ import { cloudExtension } from 'kits/@kit.ArkData';
 enableCloud: boolean
 ```
 
-表示是否启用了云服务。true表示启用云服务，false表示未启用
+Whether the cloud service is enabled. The value true means that the cloud service is enabled,and the value false means the opposite.
 
 **Type:** boolean
 
@@ -44,7 +44,7 @@ enableCloud: boolean
 id: string
 ```
 
-使用哈希函数SHA256生成的云账号ID。
+Cloud account ID generated using SHA-256.
 
 **Type:** string
 
@@ -64,7 +64,7 @@ id: string
 remainingSpace: long
 ```
 
-服务器上账号的可用空间（KB）。
+Available account space on the server, in KB.
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：long
 
@@ -84,7 +84,7 @@ remainingSpace: long
 totalSpace: long
 ```
 
-服务器上账号的总空间（KB）。
+Total account space on the server, in KB.
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：long
 
@@ -104,7 +104,7 @@ totalSpace: long
 user: int
 ```
 
-设备的当前用户ID。
+Current user ID of the device.
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 

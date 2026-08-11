@@ -16,7 +16,7 @@ Provides an interface for swiper animation.
 currentOffset: double
 ```
 
-Swiper当前显示元素在主轴方向上，相对于Swiper起始位置的位移。单位为： vp。
+Offset of the current page to the start position of the swiper main axis.Unit: vp.
 
 **Type:** double
 
@@ -38,7 +38,7 @@ Swiper当前显示元素在主轴方向上，相对于Swiper起始位置的位�
 targetOffset: double
 ```
 
-Swiper动画目标元素在主轴方向上，相对于Swiper起始位置的位移。单位为： vp。
+Offset of the target page to the start position of the swiper main axis.Unit: vp.
 
 **Type:** double
 
@@ -60,7 +60,7 @@ Swiper动画目标元素在主轴方向上，相对于Swiper起始位置的位�
 velocity: double
 ```
 
-Swiper离手动画开始时的离手速度。单位为： vp。
+Start speed of the page-turning animation.Unit: vp.
 
 **Type:** double
 

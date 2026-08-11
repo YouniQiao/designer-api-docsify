@@ -6,11 +6,11 @@
 
 | Name | Description |
 | --- | --- |
-| [RefreshOptions](arkts-arkui-refresh-refreshoptions-i.md) | 用于设置Refresh组件参数。 |
+| [RefreshOptions](arkts-arkui-refresh-refreshoptions-i.md) | Defines the options of refresh component. |
 
 ### Enums
 
 | Name | Description |
 | --- | --- |
-| [RefreshStatus](arkts-arkui-refresh-refreshstatus-e.md) | 下拉刷新的刷新状态。 |
+| [RefreshStatus](arkts-arkui-refresh-refreshstatus-e.md) | The refresh status of the drop-down refresh. |
 

@@ -13,7 +13,7 @@ function off(type: 'connect', sessionId: number,
         callback?: Callback<EventCallbackInfo>): void
 ```
 
-取消connect事件的回调监听。
+Disables listening for **connect** events.
 
 **Since:** 18
 
@@ -29,15 +29,15 @@ function off(type: 'connect', sessionId: number,
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'connect' | Yes | 事件回调类型，支持的事件为'connect'。 |
-| sessionId | number | Yes | 创建的协同会话ID。 |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;EventCallbackInfo&gt; | No | 注册的回调函数。 |
+| type | 'connect' | Yes | Event type. This field has a fixed value of **connect**. |
+| sessionId | number | Yes | ID of the collaboration session. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;EventCallbackInfo&gt; | No | Registered callback function. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. |
 
 ## Examples
 
@@ -56,7 +56,7 @@ function off(type: 'disconnect', sessionId: number,
         callback?: Callback<EventCallbackInfo>): void
 ```
 
-取消disconnect事件的回调监听。
+Disables listening for **disconnect** events.
 
 **Since:** 18
 
@@ -72,15 +72,15 @@ function off(type: 'disconnect', sessionId: number,
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'disconnect' | Yes | 事件回调类型，支持的事件为'disconnect'。 |
-| sessionId | number | Yes | 创建的协同会话ID。 |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;EventCallbackInfo&gt; | No | 注册的回调函数。 |
+| type | 'disconnect' | Yes | Event type. This field has a fixed value of **disconnect**. |
+| sessionId | number | Yes | ID of the collaboration session. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;EventCallbackInfo&gt; | No | Registered callback function. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. |
 
 ## Examples
 
@@ -100,7 +100,7 @@ function off(type: 'receiveMessage', sessionId: number,
         callback?: Callback<EventCallbackInfo>): void
 ```
 
-取消receiveMessage事件的回调监听。
+Disables listening for **receiveMessage** events.
 
 **Since:** 18
 
@@ -116,15 +116,15 @@ function off(type: 'receiveMessage', sessionId: number,
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'receiveMessage' | Yes | 事件回调类型，支持的事件为'receiveMessage'。 |
-| sessionId | number | Yes | 创建的协同会话ID。 |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;EventCallbackInfo&gt; | No | 注册的回调函数。 |
+| type | 'receiveMessage' | Yes | Event type. This field has a fixed value of **receiveMessage**. |
+| sessionId | number | Yes | ID of the collaboration session. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;EventCallbackInfo&gt; | No | Registered callback function. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. |
 
 ## Examples
 
@@ -144,7 +144,7 @@ function off(type: 'receiveData', sessionId: number,
         callback?: Callback<EventCallbackInfo>): void
 ```
 
-取消receiveData事件的回调监听。
+Disables listening for **receiveData** events.
 
 **Since:** 18
 
@@ -160,15 +160,15 @@ function off(type: 'receiveData', sessionId: number,
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'receiveData' | Yes | 事件回调类型，支持的事件为'receiveData'，完成。 |
-| sessionId | number | Yes | 创建的协同会话ID。 |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;EventCallbackInfo&gt; | No | 注册的回调函数。 |
+| type | 'receiveData' | Yes | Event type. This field has a fixed value of **receiveData**. |
+| sessionId | number | Yes | ID of the collaboration session. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;EventCallbackInfo&gt; | No | Registered callback function. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. |
 
 ## Examples
 

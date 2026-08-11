@@ -4,7 +4,7 @@
 export type AbilityForegroundStateObserver = _AbilityForegroundStateObserver.default
 ```
 
-AbilityForegroundStateObserver二级模块。
+Defines the level-2 module AbilityForegroundStateObserver.
 
 **Since:** 11
 

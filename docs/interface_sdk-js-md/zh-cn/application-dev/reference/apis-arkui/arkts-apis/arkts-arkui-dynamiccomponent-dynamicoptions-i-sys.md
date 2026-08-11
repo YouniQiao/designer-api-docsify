@@ -112,7 +112,7 @@ worker: EAWorker | undefined
 
 运行Abc的Worker。&lt;br/&gt;ArkTS-Sta模式下，可传入undefined，表示回拉起一个空的DynamicComponent。
 
-**类型：** [EAWorker](../../apis-arkts/arkts-apis/arkts-arkts-eaworker-c.md) \| undefined
+**类型：** EAWorker \| undefined
 
 **起始版本：** 26.0.0
 

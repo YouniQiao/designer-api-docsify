@@ -1,10 +1,10 @@
 # BlurStyleOptions
 
-内容模糊选项。
+Defines the options of blurStyle
 
-**Since:** 11
+**Since:** 10
 
-**ArkTS mode:** ArkTS-Dyn only, since version 11.
+**ArkTS mode:** ArkTS-Dyn only, since version 10.
 
 <!--Device-unnamed-declare interface BlurStyleOptions--><!--Device-unnamed-declare interface BlurStyleOptions-End-->
 
@@ -16,17 +16,17 @@
 adaptiveColor?: AdaptiveColor
 ```
 
-内容模糊效果使用的取色模式。
+Adaptive color mode.
 
-默认值：AdaptiveColor.DEFAULT
+Default value: **AdaptiveColor.DEFAULT**
 
 **Type:** [AdaptiveColor](../arkts-apis/arkts-arkui-common-adaptivecolor-e.md)
 
 **Default:** AdaptiveColor.DEFAULT
 
-**Since:** 11
+**Since:** 10
 
-**ArkTS mode:** ArkTS-Dyn only, since version 11.
+**ArkTS mode:** ArkTS-Dyn only, since version 10.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -42,17 +42,17 @@ adaptiveColor?: AdaptiveColor
 blurOptions?: BlurOptions
 ```
 
-灰阶模糊参数。
+Grayscale blur parameters.
 
-默认值：grayscale: [0,0]
+Default value: **grayscale: [0,0]**
 
 **Type:** [BlurOptions](arkts-arkui-bluroptions-i.md)
 
 **Default:** { grayScale: [0,0] }
 
-**Since:** 12
+**Since:** 11
 
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
+**ArkTS mode:** ArkTS-Dyn only, since version 11.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -68,17 +68,17 @@ blurOptions?: BlurOptions
 colorMode?: ThemeColorMode
 ```
 
-内容模糊效果使用的深浅色模式。
+Color mode used for the foreground blur.
 
-默认值：ThemeColorMode.SYSTEM
+Default value: **ThemeColorMode.SYSTEM**
 
 **Type:** [ThemeColorMode](arkts-arkui-themecolormode-e.md)
 
 **Default:** ThemeColorMode.SYSTEM
 
-**Since:** 11
+**Since:** 10
 
-**ArkTS mode:** ArkTS-Dyn only, since version 11.
+**ArkTS mode:** ArkTS-Dyn only, since version 10.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -94,15 +94,15 @@ colorMode?: ThemeColorMode
 scale?: number
 ```
 
-内容模糊效果程度。
+Foreground blur scale.
 
-默认值：1.0
+Default value: **1.0**
 
-取值范围：[0.0, 1.0]
+Value range: [0.0, 1.0]
 
-1.0表示模糊程度最高。
+**1.0** indicates the highest blur degree.
 
-0.0表示模糊程度最低。
+**0.0** indicates the lowest blur degree.
 
 **Type:** number
 

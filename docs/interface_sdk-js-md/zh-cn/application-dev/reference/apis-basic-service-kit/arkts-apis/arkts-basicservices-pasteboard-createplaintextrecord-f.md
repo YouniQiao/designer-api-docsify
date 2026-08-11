@@ -1,11 +1,5 @@
 # createPlainTextRecord
 
-## 导入模块
-
-```TypeScript
-import { pasteboard } from 'kits/@kit.BasicServicesKit';
-```
-
 ## createPlainTextRecord
 
 ```TypeScript

@@ -1,6 +1,6 @@
 # SectionOptions
 
-描述瀑布流项分组的配置信息。
+Describes the configuration of the water flow item section.
 
 **Since:** 23
 
@@ -16,7 +16,7 @@
 onGetItemMainSizeByIndex?: GetItemMainSizeByIndex
 ```
 
-瀑布流组件布局过程中获取指定index的FlowItem的主轴大小的回调，纵向瀑布流时为高度，横向瀑布流时为宽度，单位vp。&lt;p&gt;&lt;strong&gt;说明&lt;/strong&gt;。&lt;br&gt;1. 同时使用onGetItemMainSizeByIndex和FlowItem的宽高属性时，主轴大小以onGetItemMainSizeByIndex返回结果为准，onGetItemMainSizeByIndex会覆盖FlowItem的主轴长度。&lt;br&gt;2. 使用onGetItemMainSizeByIndex可以提高瀑布流跳转到指定位置或index时的效率，避免混用设置onGetItemMainSizeByIndex和未设置的分组，会导致布局异常。&lt;br&gt;3. onGetItemMainSizeByIndex返回负数时FlowItem高度为0。&lt;/p&gt;
+Callback used to obtain the main axis size,in vp, of the water flow item at a specified index during the layout process of the WaterFlow component.&lt;p&gt;&lt;strong&gt;NOTE&lt;/strong&gt;.&lt;br&gt;1. When both &lt;em&gt;onGetItemMainSizeByIndex&lt;/em&gt;and the width or height attribute of the water flow item are used,the main axis size is determined by the return value of &lt;em&gt;onGetItemMainSizeByIndex&lt;/em&gt;,which will override the main axis length of water flow item.&lt;br&gt;2. Using &lt;em&gt;onGetItemMainSizeByIndex&lt;/em&gt; can improve the efficiency of jumping to a specific position or index in the &lt;em&gt;WaterFlow&lt;/em&gt; component.Avoid mixing the use of &lt;em&gt;onGetItemMainSizeByIndex&lt;/em&gt; with sections that do not have it set,as this can cause layout exceptions.&lt;br&gt;3. If &lt;em&gt;onGetItemMainSizeByIndex&lt;/em&gt; returns a negative number, the height of the water flow item is 0.&lt;/p&gt;
 
 **Since:** 23
 
@@ -34,7 +34,7 @@ onGetItemMainSizeByIndex?: GetItemMainSizeByIndex
 columnsGap?: Dimension
 ```
 
-该分组的列间距，不设置该参数时默认使用瀑布流的columnsGap，设置非法值时使用0vp。
+Gap between columns. If this parameter is not set, the value of columnsGap for the water flow is used.If this parameter is set to an invalid value, 0 vp is used.
 
 **Type:** [Dimension](arkts-arkui-dimension-t.md)
 
@@ -54,7 +54,7 @@ columnsGap?: Dimension
 crossCount?: int
 ```
 
-该分组纵向布局时的列数，或横向布局时的行数。取值限定为整数。&lt;br&gt; 小于1的按默认值处理。
+The columns of this section in vertical layout, or rows in horizontal layout.The value should be an integer.
 
 **Type:** int
 
@@ -76,7 +76,7 @@ crossCount?: int
 itemsCount: int
 ```
 
-该分组中FlowItem的数量。取值限定为整数。
+The number of FlowItems in this section.The value should be an integer.
 
 **Type:** int
 
@@ -96,7 +96,7 @@ itemsCount: int
 margin?: Margin | Dimension
 ```
 
-该分组的外边距，参数为Length类型时，四个方向外边距同时生效。
+Padding of the section. A value of the Length type specifies the margin for all the four sides.
 
 **Type:** [Margin](arkts-arkui-margin-t.md) \| Dimension
 
@@ -118,7 +118,7 @@ margin?: Margin | Dimension
 rowsGap?: Dimension
 ```
 
-该分组的行间距，不设置该参数时默认使用瀑布流的rowsGap，设置非法值时使用0vp。
+Gap between rows. If this parameter is not set, the value of &lt;em&gt;rowsGap&lt;/em&gt; for the water flow is used.If this parameter is set to an invalid value, 0 vp is used.
 
 **Type:** [Dimension](arkts-arkui-dimension-t.md)
 

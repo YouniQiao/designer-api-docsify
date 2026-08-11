@@ -1,0 +1,35 @@
+# getStartRealtime
+
+## Modules to Import
+
+```TypeScript
+import { process } from 'kits/@kit.ArkTS';
+```
+
+## getStartRealtime
+
+```TypeScript
+function getStartRealtime(): number
+```
+
+Obtains the duration (excluding the system sleep time), in milliseconds, from the time the system starts to the time the process starts.
+
+**Since:** 8
+
+**Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-process-function getStartRealtime(): number--><!--Device-process-function getStartRealtime(): number-End-->
+
+**System capability:** SystemCapability.Utils.Lang
+
+**Return value:**
+
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| number |
+
+## Examples
+
+```TypeScript
+let realtime = process.getStartRealtime();
+```

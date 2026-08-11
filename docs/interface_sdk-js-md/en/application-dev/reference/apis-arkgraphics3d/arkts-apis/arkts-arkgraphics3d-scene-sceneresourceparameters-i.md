@@ -1,6 +1,6 @@
 # SceneResourceParameters
 
-场景资源参数类型.
+The scene resource parameters type.
 
 **Since:** 12
 
@@ -16,7 +16,7 @@
 name: string
 ```
 
-场景资源参数的名称.
+The name of the scene resource parameters.
 
 **Type:** string
 
@@ -34,7 +34,7 @@ name: string
 uri?: ResourceStr
 ```
 
-场景资源参数的资源URI.
+The resource uri of the scene resource parameters.
 
 **Type:** [ResourceStr](../../apis-arkui/arkts-apis/arkts-arkui-resourcestr-t.md)
 

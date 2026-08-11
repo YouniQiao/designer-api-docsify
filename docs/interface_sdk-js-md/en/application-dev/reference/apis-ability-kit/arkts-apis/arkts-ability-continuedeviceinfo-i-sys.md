@@ -1,7 +1,7 @@
 # ContinueDeviceInfo (System API)
 
-表示发起Mission迁移时所需参数的枚举，迁移Mission详见：  
-[continueMission接口](arkts-ability-distributedmissionmanager-continuemission-f-sys.md#continuemission)
+The module defines the parameters required for initiating mission continuation. For details about mission continuation, see  
+[continueMission](arkts-ability-distributedmissionmanager-continuemission-f-sys.md#continuemission)
 
 **Since:** 9
 
@@ -19,7 +19,7 @@
 dstDeviceId: string
 ```
 
-表示任务迁移目标设备ID。
+Indicates the target deviceId to continue mission.
 
 **Type:** string
 
@@ -41,7 +41,7 @@ dstDeviceId: string
 missionId: int
 ```
 
-表示任务ID。
+Indicates the mission to continue.
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
@@ -63,7 +63,7 @@ missionId: int
 srcDeviceId: string
 ```
 
-表示任务迁移源设备ID。
+Indicates the original deviceId to continue mission.
 
 **Type:** string
 
@@ -85,7 +85,7 @@ srcDeviceId: string
 wantParam: Record<string, Object>
 ```
 
-表示扩展参数。
+Indicates the extended param.
 
 **Type:** [Record](../../apis-default/arkts-apis/arkts-record-t.md)&lt;string, Object&gt;
 

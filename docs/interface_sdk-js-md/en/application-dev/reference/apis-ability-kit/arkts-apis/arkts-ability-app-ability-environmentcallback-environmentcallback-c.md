@@ -1,6 +1,6 @@
 # EnvironmentCallback
 
-EnvironmentCallback模块提供对系统环境变化监听回调的能力。
+The EnvironmentCallback module provides capabilities to listen for system environment changes.
 
 **Since:** 9
 
@@ -22,7 +22,8 @@ import { EnvironmentCallback } from 'kits/@kit.AbilityKit';
 onConfigurationUpdated(config: Configuration): void
 ```
 
-[注册系统环境变化的监听](./application/ApplicationContext:ApplicationContext.on(type: 'environment', callback: EnvironmentCallback))后，在系统环境变化时触发回调。
+Called when the system configuration changes, after   
+[a listener has been registered for such events](./application/ApplicationContext:ApplicationContext#on(type: 'environment', callback: EnvironmentCallback)).
 
 **Since:** 9
 
@@ -40,7 +41,7 @@ onConfigurationUpdated(config: Configuration): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| config | [Configuration](arkts-ability-app-ability-configuration-configuration-i.md) | Yes | 变化后的Configuration对象。 |
+| config | [Configuration](arkts-ability-app-ability-configuration-configuration-i.md) | Yes | Configuration object after the change. |
 
 ## Examples
 
@@ -52,7 +53,8 @@ See [Usage of EnvironmentCallback](#usage-of-environmentcallback).
 onMemoryLevel(level: AbilityConstant.MemoryLevel): void
 ```
 
-[注册系统环境变化的监听](./application/ApplicationContext:ApplicationContext.on(type: 'environment', callback: EnvironmentCallback))后，在系统内存变化时触发回调。
+Called when the system memory level changes, after   
+[a listener has been registered for such events](./application/ApplicationContext:ApplicationContext#on(type: 'environment', callback: EnvironmentCallback)).
 
 **Since:** 9
 
@@ -70,7 +72,7 @@ onMemoryLevel(level: AbilityConstant.MemoryLevel): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| level | AbilityConstant.MemoryLevel | Yes | 整机可用内存级别，对应的触发场景详见 [AbilityConstant.MemoryLevel](arkts-ability-abilityconstant-memorylevel-e.md)。 |
+| level | AbilityConstant.MemoryLevel | Yes | Memory level, indicating the available memory of the entire device. |
 
 ## Examples
 

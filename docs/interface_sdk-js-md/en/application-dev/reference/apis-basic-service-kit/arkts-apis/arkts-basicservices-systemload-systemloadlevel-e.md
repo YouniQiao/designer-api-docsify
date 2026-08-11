@@ -1,6 +1,6 @@
 # SystemLoadLevel
 
-系统负载融合档位。
+Enumerates system load levels.
 
 **Since:** 12
 
@@ -16,7 +16,7 @@
 LOW = 0
 ```
 
-设备当前温度、负载比较低，无高负载场景。
+The device temperature and load are low.
 
 **Since:** 12
 
@@ -32,7 +32,7 @@ LOW = 0
 NORMAL = 1
 ```
 
-设备温度、负载正常，但邻近中等状态，无感知业务应降低规格和负载。
+The device temperature and load are normal but are approaching the medium range. You need to downgrade or reduce the load of imperceptible services.
 
 **Since:** 12
 
@@ -48,7 +48,7 @@ NORMAL = 1
 MEDIUM = 2
 ```
 
-设备温度、负载有一项或多项稍高，或者当前处于高负载场景，无感知业务应暂停或延迟运行。
+One or more device temperature or load items are slightly high, or the device temperature is in the medium range but the load is high. You need to stop or delay some imperceptible services.
 
 **Since:** 12
 
@@ -64,7 +64,7 @@ MEDIUM = 2
 HIGH = 3
 ```
 
-设备当前发热明显或负载比较高，或处于负载温度中等但处于高负载场景，无感知业务应停止，非关键业务应降低规格及负载。
+The device temperature and load are relatively high. You need to stop all imperceptible services and downgrade or reduce the load of non-critical services.
 
 **Since:** 12
 
@@ -80,7 +80,7 @@ HIGH = 3
 OVERHEATED = 4
 ```
 
-设备发热严重或者负载较重，无感知业务与非关键业务应停止，前台关键业务应降低规格及负载。
+The device temperature and load are high, and the device is overheated. You need to stop all imperceptible services and downgrade or reduce the load of major foreground services.
 
 **Since:** 12
 
@@ -96,7 +96,7 @@ OVERHEATED = 4
 WARNING = 5
 ```
 
-设备过热或负载过重，或者温度较高但处于高负载场景，即将进入紧急状态，整机资源供给大幅降低，停止所有非关键，前台关键业务应降低至最低规格。
+The device is overheated or heavily loaded and is about to enter the Warning state. You need to stop all imperceptible services and downgrade major foreground services to the maximum extent.
 
 **Since:** 12
 
@@ -112,7 +112,7 @@ WARNING = 5
 EMERGENCY = 6
 ```
 
-设备已经进入过热状态或负载极高紧急状态，或接近紧急状态但处于高负载场景，整机资源供给降至最低，设备功能受限，仅保留基础功能可用。
+The device is overheated or significantly heavy loaded and is about to enter the Emergency state.You need to stop all services except those for fundamental use.
 
 **Since:** 12
 
@@ -128,7 +128,7 @@ EMERGENCY = 6
 ESCAPE = 7
 ```
 
-设备即将进入热逃生状态或当前负载已经不堪重负，或已经处于紧急状态且高负载状态，所有业务将被强制停止，业务需做好逃生措施，例如保存重要数据等。
+The device is overheated or extremely heavy loaded and is about to enter the Escape state.You need to stop all services and take necessary emergency measures such as data backup.
 
 **Since:** 12
 

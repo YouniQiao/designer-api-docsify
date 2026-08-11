@@ -16,7 +16,7 @@ Defines @Monitor decorated variable interface.
 resetOnReuse(): void
 ```
 
-ComponentV2被重用时重置Monitor。
+Reset Monitor when the ComponentV2 instance is reused.
 
 **Since:** 23
 
@@ -34,7 +34,7 @@ ComponentV2被重用时重置Monitor。
 readonly path: string[]
 ```
 
-获取所有被监听的状态变量的路径。
+Path for generated monitors, either generated or set by addMonitor parameters.
 
 **Type:** string[]
 

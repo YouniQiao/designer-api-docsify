@@ -1,6 +1,6 @@
 # CapturePhoto
 
-获取全质量图和未压缩图的对象。
+**CapturePhoto** provides APIs for obtaining the objects of the full-quality image and the uncompressed image.
 
 **Since:** 23
 

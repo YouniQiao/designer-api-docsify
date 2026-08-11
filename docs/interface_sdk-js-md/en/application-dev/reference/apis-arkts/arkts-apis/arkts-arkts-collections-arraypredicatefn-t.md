@@ -5,7 +5,7 @@ type ArrayPredicateFn<ElementType, ArrayType> =
     (value: ElementType, index: number, array: ArrayType) => boolean
 ```
 
-ArkTS Array归约函数类型，被Array类的'some'和'every'接口使用，用来判断数组元素是否满足测试条件。
+Defines the ArkTS Array reduction function, which is used by the 'some' and 'every'APIs of the Array class to determine whether array elements meet certain test conditions.
 
 **Since:** 18
 
@@ -21,13 +21,13 @@ ArkTS Array归约函数类型，被Array类的'some'和'every'接口使用，用
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | ElementType | Yes | 当前正在处理的元素。 |
-| index | number | Yes | 当前遍历的ArkTS Array元素索引。 |
-| array | ArrayType | Yes | 当前遍历的ArkTS Array本身。 |
+| value | ElementType | Yes | Element that is being processed. |
+| index | number | Yes | Index of the element in the ArkTS array. |
+| array | ArrayType | Yes | ArkTS array that is being traversed. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| boolean | 归约函数的结果，该结果作为判断当前元素是否通过测试条件。为true时表示当前或之前的某个元素已满足条件，为false时表示尚未找到符合条件的元素。 |
+| boolean | True if the value meets the predicate, otherwise false. |
 

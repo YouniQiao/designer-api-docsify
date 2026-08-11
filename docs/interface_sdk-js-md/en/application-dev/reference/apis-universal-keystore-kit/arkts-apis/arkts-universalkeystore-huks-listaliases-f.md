@@ -12,7 +12,7 @@ import { huks } from 'kits/@kit.UniversalKeystoreKit';
 function listAliases(options: HuksOptions): Promise<HuksListAliasesReturnResult>
 ```
 
-查询密钥别名集接口。使用Promise异步回调。
+Lists key aliases. This API uses a promise to return the result.
 
 **Since:** 12
 
@@ -28,24 +28,24 @@ function listAliases(options: HuksOptions): Promise<HuksListAliasesReturnResult>
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| options | [HuksOptions](arkts-universalkeystore-huks-huksoptions-i.md) | Yes | listAliases操作的参数集合。 |
+| options | [HuksOptions](arkts-universalkeystore-huks-huksoptions-i.md) | Yes | Parameters for listing key aliases. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;HuksListAliasesReturnResult&gt; | Promise对象，返回调用接口的结果。当调用成功时，HuksListAliasesReturnResult的成员 keyAliases为获取的密钥别名集。 |
+| Promise&lt;HuksListAliasesReturnResult&gt; | Promise that returns the operation result. If the operation is successful, **keyAliases** of **HuksListAliasesReturnResult** is the obtained key aliases. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. 3. Parameter verification failed. |
-| 12000005 | IPC communication failed |
-| 12000004 | operating file failed |
-| 12000018 | the group id specified by the access group tag is invalid<br>**Applicable version:** 23 and later |
-| 12000014 | memory is insufficient |
-| 12000012 | Device environment or input parameter abnormal |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. 3. Parameter verification failed. |
+| [12000005](../errorcode-huks.md#12000005-ipc-error) | IPC communication failed |
+| [12000004](../errorcode-huks.md#12000004-file-error) | operating file failed |
+| [12000018](../errorcode-huks.md#12000018-invalid-input-parameter) | the group id specified by the access group tag is invalid<br>**Applicable version:** 23 and later |
+| [12000014](../errorcode-huks.md#12000014-insufficient-memory) | memory is insufficient |
+| [12000012](../errorcode-huks.md#12000012-external-error) | Device environment or input parameter abnormal |
 
 ## Examples
 
@@ -63,14 +63,8 @@ async function testListAliases() {
     properties: queryProperties
   };
 
-  try{
-    await huks.listAliases(queryOptions)
-      .then((data) => {
-      console.info(`promise: listAliases success, data: ` + JSON.stringify(data));
-    });
-  } catch (error) {
-    console.error(`promise: listAliases failed, errCode : ${error.code}, errMsg : ${error.message}`);
-  }
+  let result: huks.HuksListAliasesReturnResult = await huks.listAliases(queryOptions);
+  console.info(`promise: listAliases success`);
 }
 ```
 

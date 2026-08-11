@@ -34,12 +34,12 @@ Gets SMS format supported on IMS. SMS over IMS format is either 3GPP or 3GPP2.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. |
-| 8300999 | Unknown error code. |
-| 202 | Non-system applications use system APIs. |
-| 8300002 | Operation failed. Cannot connect to service. |
-| 8300003 | System internal error. |
-| 8300001 | Invalid parameter value. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. |
+| [8300999](../errorcode-telephony.md#8300999-internal-error) | Unknown error code. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Non-system applications use system APIs. |
+| [8300002](../errorcode-telephony.md#8300002-service-connection-error) | Operation failed. Cannot connect to service. |
+| [8300003](../errorcode-telephony.md#8300003-system-internal-error) | System internal error. |
+| [8300001](../errorcode-telephony.md#8300001-input-parameter-value-out-of-range) | Invalid parameter value. |
 
 ## Examples
 
@@ -81,10 +81,10 @@ Gets SMS format supported on IMS. SMS over IMS format is either 3GPP or 3GPP2.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 8300999 | Unknown error code. |
-| 202 | Non-system applications use system APIs. |
-| 8300002 | Operation failed. Cannot connect to service. |
-| 8300003 | System internal error. |
+| [8300999](../errorcode-telephony.md#8300999-internal-error) | Unknown error code. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Non-system applications use system APIs. |
+| [8300002](../errorcode-telephony.md#8300002-service-connection-error) | Operation failed. Cannot connect to service. |
+| [8300003](../errorcode-telephony.md#8300003-system-internal-error) | System internal error. |
 
 ## Examples
 

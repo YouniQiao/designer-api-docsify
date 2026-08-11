@@ -10,12 +10,6 @@ animator简易动画参数对象。与AnimatorOptions相比，部分动画参数
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
-## 导入模块
-
-```TypeScript
-import { AnimatorOptions, SimpleAnimatorOptions, AnimatorResult } from 'kits/@kit.ArkUI';
-```
-
 ## constructor
 
 ```TypeScript

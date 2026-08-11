@@ -1,6 +1,6 @@
 # CustomSpanDrawInfo
 
-定义CustomSpanDrawInfo接口。
+Defines the CustomSpanDrawInfo interface.
 
 **Since:** 23
 
@@ -16,9 +16,7 @@
 baseline: double
 ```
 
-自定义绘制Span的所在行的基线偏移量。
-
-单位：[px](../../../reference/apis-arkui/arkui-ts/ts-pixel-units.md#基本像素单位)
+The baseline offset of the line where customSpan is located.The unit is px.
 
 **Type:** double
 
@@ -38,9 +36,7 @@ baseline: double
 lineBottom: double
 ```
 
-自定义绘制Span相对于Text组件的下边距。
-
-单位：[px](../../../reference/apis-arkui/arkui-ts/ts-pixel-units.md#基本像素单位)
+The bottom position of the line where customSpan is located.The unit is px.
 
 **Type:** double
 
@@ -60,9 +56,7 @@ lineBottom: double
 lineTop: double
 ```
 
-自定义绘制Span相对于Text组件的上边距。
-
-单位：[px](../../../reference/apis-arkui/arkui-ts/ts-pixel-units.md#基本像素单位)
+The top position of the line where customSpan is located.The unit is px.
 
 **Type:** double
 
@@ -82,9 +76,7 @@ lineTop: double
 x: double
 ```
 
-自定义绘制Span相对于挂载组件的偏移。
-
-单位：[px](../../../reference/apis-arkui/arkui-ts/ts-pixel-units.md#基本像素单位)
+CustomSpan's offset relative to the parent component.The unit is px.
 
 **Type:** double
 

@@ -1,6 +1,6 @@
 # DragEvent
 
-拖拽事件信息。
+Provides information about the drag event.
 
 **Since:** 7
 
@@ -16,8 +16,8 @@
 executeDropAnimation(customDropAnimation: Callback<void>): void
 ```
 
-设置自定义落位动效的执行函数，仅在  
-[useCustomDropAnimation](arkts-arkui-dragevent-i.md#usecustomdropanimation)为true时有效。
+Sets the execution function of the custom drop animation. This parameter is valid only when  
+[useCustomDropAnimation](arkts-arkui-dragevent-i.md#usecustomdropanimation) is set to **true**.
 
 **Since:** 18
 
@@ -35,7 +35,7 @@ executeDropAnimation(customDropAnimation: Callback<void>): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| customDropAnimation | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;void&gt; | Yes | 在此回调函数中实现自定义落位动效。&lt;br/&gt; **说明：** &lt;br/&gt;1. 该接口仅在onDrop回调中使用有效。&lt;br/&gt; 2. 使用前需设置useCustomDropAnimation为true，否则该接口不生效。&lt;br/&gt; 3. 不要在动画callback中实现与动效无关的逻辑，避免影响执行效率。 |
+| customDropAnimation | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;void&gt; | Yes | Custom drop animation in this callback.&lt;br&gt; **NOTE：**&lt;br&gt;1. This API is valid only in the **onDrop** callback.&lt;br&gt; 2. Before using this API, set **useCustomDropAnimation** to **true**. Otherwise, this API does not take effect.&lt;br&gt; 3. Do not implement logic unrelated to the animation in the animation callback to avoid affecting performance. |
 
 ## getData
 
@@ -43,7 +43,7 @@ executeDropAnimation(customDropAnimation: Callback<void>): void
 getData(): UnifiedData
 ```
 
-获取拖拽相关数据。
+Obtains drag-related data.
 
 **Since:** 10
 
@@ -61,14 +61,14 @@ getData(): UnifiedData
 
 | Type | Description |
 | --- | --- |
-| [UnifiedData](arkts-arkui-unifieddata-t.md) | 从DragEvent中获取拖拽相关数据。数据获取结果请参考错误码说明。 |
+| [UnifiedData](arkts-arkui-unifieddata-t.md) | Drag-related data. For details about the data obtaining result, see the error code description. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 190002 | Data error. |
-| 190001 | Data not found. |
+| [190002](../errorcode-uicontext.md#190002-invalid-callback-function) | Data error. |
+| [190001](../errorcode-uicontext.md#190001-invalid-uicontext-object) | Data not found. |
 
 ## getDisplayId
 
@@ -76,7 +76,8 @@ getData(): UnifiedData
 getDisplayId(): number
 ```
 
-获取当前拖拽事件发生时所在的屏幕ID，不支持在[onDragEnd](arkts-arkui-commonmethod-c.md#ondragend)阶段使用。
+Obtains the ID of the screen where the current drag event occurs. This API is not supported in the  
+[onDragEnd](arkts-arkui-commonmethod-c.md#ondragend) callback.
 
 **Since:** 20
 
@@ -94,7 +95,7 @@ getDisplayId(): number
 
 | Type | Description |
 | --- | --- |
-| number | 当前拖拽事件发生时所在的屏幕ID。 |
+| number | ID of the screen where the current drag event occurs. |
 
 ## getDisplayX
 
@@ -102,7 +103,7 @@ getDisplayId(): number
 getDisplayX(): number
 ```
 
-获取当前拖拽点相对于屏幕左上角的x轴坐标。
+Obtains the x-coordinate of the drag point relative to the upper left corner of the screen.
 
 **Since:** 10
 
@@ -120,7 +121,7 @@ getDisplayX(): number
 
 | Type | Description |
 | --- | --- |
-| number | 当前拖拽点相对于屏幕左上角的x轴坐标，单位为vp。 |
+| number | X-coordinate of the drag point relative to the upper left corner of the screen, in vp. |
 
 ## getDisplayY
 
@@ -128,7 +129,7 @@ getDisplayX(): number
 getDisplayY(): number
 ```
 
-获取当前拖拽点相对于屏幕左上角的y轴坐标。
+Obtains the y-coordinate of the drag point relative to the upper left corner of the screen.
 
 **Since:** 10
 
@@ -146,7 +147,7 @@ getDisplayY(): number
 
 | Type | Description |
 | --- | --- |
-| number | 当前拖拽点相对于屏幕左上角的y轴坐标，单位为vp。 |
+| number | Y-coordinate of the drag point relative to the upper left corner of the screen, in vp. |
 
 ## getDragSource
 
@@ -154,7 +155,7 @@ getDisplayY(): number
 getDragSource(): string
 ```
 
-获取拖起方包名。
+Obtains the package name of the drag source application.
 
 **Since:** 20
 
@@ -172,7 +173,7 @@ getDragSource(): string
 
 | Type | Description |
 | --- | --- |
-| string | 拖起方的包名。 |
+| string | Package name of the drag source application. |
 
 ## getGlobalDisplayX
 
@@ -180,7 +181,7 @@ getDragSource(): string
 getGlobalDisplayX(): number
 ```
 
-当前拖拽点相对于全局屏幕的左上角的X坐标。
+Obtains the x-coordinate of the drag point relative to the upper left corner of the global screen.
 
 **Since:** 20
 
@@ -198,7 +199,7 @@ getGlobalDisplayX(): number
 
 | Type | Description |
 | --- | --- |
-| number | 返回当前拖拽点相对于全局屏幕的左上角的X坐标。&lt;br/&gt;单位：vp，取值范围：[0, +∞) |
+| number | X-coordinate of the drag point relative to the upper left corner of the global screen. &lt;br&gt;Unit: vp. Value range: (-∞, +∞) |
 
 ## getGlobalDisplayY
 
@@ -206,7 +207,7 @@ getGlobalDisplayX(): number
 getGlobalDisplayY(): number
 ```
 
-当前拖拽点相对于全局屏幕的左上角的Y坐标。
+Obtains the y-coordinate of the drag point relative to the upper left corner of the global screen.
 
 **Since:** 20
 
@@ -224,7 +225,7 @@ getGlobalDisplayY(): number
 
 | Type | Description |
 | --- | --- |
-| number | 返回当前拖拽点相对于全局屏幕的左上角的Y坐标。&lt;br/&gt;单位：vp，取值范围：[0, +∞) |
+| number | Y-coordinate of the drag point relative to the upper left corner of the global screen. &lt;br&gt;Unit: vp. Value range: (-∞, +∞) |
 
 ## getModifierKeyState
 
@@ -232,7 +233,7 @@ getGlobalDisplayY(): number
 getModifierKeyState?(keys: Array<string>): boolean
 ```
 
-获取功能键按压状态。
+Obtains the pressed status of modifier keys.
 
 **Since:** 12
 
@@ -250,19 +251,19 @@ getModifierKeyState?(keys: Array<string>): boolean
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| keys | Array&lt;string&gt; | Yes | 获取功能键按压状态。报错信息请参考以下错误码。支持功能键 'Ctrl' \| 'Alt' \| 'Shift'。&lt;br/&gt;**说明：**&lt;br/&gt;此接口不支持在手写笔场景 下使用。 |
+| keys | Array&lt;string&gt; | Yes | Obtains the pressed status of modifier keys. For details about the error message, see the following error codes. The following modifier keys are supported: 'Ctrl' \| 'Alt' \| 'Shift'.&lt;br&gt;**NOTE：**&lt;br&gt;This API is not supported in stylus scenarios. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| boolean | 是否被按下，返回true表示被按下，返回false表示未被按下 |
+| boolean | Whether the specified modifier keys are pressed. Returns **true** if the specified modifier keys are pressed; returns **false** otherwise. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1. Incorrect parameter types. 2. Parameter verification failed. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Incorrect parameter types. 2. Parameter verification failed. |
 
 ## getPreviewRect
 
@@ -270,7 +271,7 @@ getModifierKeyState?(keys: Array<string>): boolean
 getPreviewRect(): Rectangle
 ```
 
-获取拖拽预览图相对于当前窗口的位置，以及预览图尺寸信息。
+Obtains the position of the drag preview relative to the current window and the preview size.
 
 **Since:** 10
 
@@ -288,7 +289,7 @@ getPreviewRect(): Rectangle
 
 | Type | Description |
 | --- | --- |
-| [Rectangle](../arkts-apis/arkts-arkui-common-rectangle-i.md) | 拖拽预览图相对于当前窗口的位置，以及预览图尺寸信息，单位vp，其中x和y代表预览图左上角的窗口坐标，width和height代表预览图的尺寸。 |
+| [Rectangle](../arkts-apis/arkts-arkui-common-rectangle-i.md) | Position of the drag preview relative to the current window and the preview size, in vp. x and y indicate the window coordinates of the upper left corner of the preview, and width and height indicate the preview size. |
 
 ## getResult
 
@@ -296,7 +297,7 @@ getPreviewRect(): Rectangle
 getResult(): DragResult
 ```
 
-获取拖拽结果。
+Obtains the drag result.
 
 **Since:** 10
 
@@ -314,7 +315,7 @@ getResult(): DragResult
 
 | Type | Description |
 | --- | --- |
-| [DragResult](arkts-arkui-dragresult-e.md) | 从DragEvent中获取的拖拽结果。 |
+| [DragResult](arkts-arkui-dragresult-e.md) | Drag result. |
 
 ## getSummary
 
@@ -322,7 +323,7 @@ getResult(): DragResult
 getSummary(): Summary
 ```
 
-获取所拖拽数据的概要，包括数据类型及大小信息；在延迟拖拽场景下，只能获取到数据类型信息。
+Obtains a summary of drag data, including data type and size information. In a delayed drag scenario, only data type information can be obtained.
 
 **Since:** 10
 
@@ -340,7 +341,7 @@ getSummary(): Summary
 
 | Type | Description |
 | --- | --- |
-| [Summary](../arkts-apis/arkts-arkui-summary-t.md) | 拖拽相关数据的概要。 |
+| [Summary](../arkts-apis/arkts-arkui-summary-t.md) | Summary of drag data. |
 
 ## getVelocity
 
@@ -348,7 +349,7 @@ getSummary(): Summary
 getVelocity(): number
 ```
 
-获取当前拖拽的主方向拖动速度。
+Obtains the dragging velocity along the main axis.
 
 **Since:** 10
 
@@ -366,7 +367,7 @@ getVelocity(): number
 
 | Type | Description |
 | --- | --- |
-| number | 当前拖拽的主方向拖动速度。为xy轴方向速度的平方和的算术平方根，单位为vp。 |
+| number | Dragging velocity along the main axis. The value is the arithmetic square root of the sum of the squares of the velocities along the x-axis and y-axis, in vp. |
 
 ## getVelocityX
 
@@ -374,7 +375,7 @@ getVelocity(): number
 getVelocityX(): number
 ```
 
-获取当前拖拽的x轴方向拖动速度。
+Obtains the dragging velocity along the x-axis.
 
 **Since:** 10
 
@@ -392,7 +393,7 @@ getVelocityX(): number
 
 | Type | Description |
 | --- | --- |
-| number | 当前拖拽的x轴方向拖动速度。坐标轴原点为屏幕左上角，单位为vp，分正负方向速度，从左往右为正，反之为负。 |
+| number | Dragging velocity along the x-axis. The origin of the coordinate axis is the upper left corner of the screen. The unit is vp. The velocity is positive if the movement is from left to right, and it is negative if the movement is from right to left. |
 
 ## getVelocityY
 
@@ -400,7 +401,7 @@ getVelocityX(): number
 getVelocityY(): number
 ```
 
-获取当前拖拽的y轴方向拖动速度。
+Obtains the dragging velocity along the y-axis.
 
 **Since:** 10
 
@@ -418,7 +419,7 @@ getVelocityY(): number
 
 | Type | Description |
 | --- | --- |
-| number | 当前拖拽的y轴方向拖动速度。坐标轴原点为屏幕左上角，单位为vp，分正负方向速度，从上往下为正，反之为负。 |
+| number | Dragging velocity along the y-axis. The origin of the coordinate axis is the upper left corner of the screen. The unit is vp. The velocity is positive if the movement is from top to bottom, and it is negative if the movement is from bottom to top. |
 
 ## getWindowX
 
@@ -426,7 +427,7 @@ getVelocityY(): number
 getWindowX(): number
 ```
 
-获取拖拽点相对于窗口左上角的x轴坐标。
+Obtains the x-coordinate of the drag point relative to the upper left corner of the window.
 
 **Since:** 10
 
@@ -444,7 +445,7 @@ getWindowX(): number
 
 | Type | Description |
 | --- | --- |
-| number | 当前拖拽点相对于窗口左上角的x轴坐标，单位为vp。 |
+| number | X coordinate of the drag point relative to the upper left corner of the window, in vp. |
 
 ## getWindowY
 
@@ -452,7 +453,7 @@ getWindowX(): number
 getWindowY(): number
 ```
 
-获取拖拽点相对于窗口左上角的y轴坐标。
+Obtains the y-coordinate of the drag point relative to the upper left corner of the window.
 
 **Since:** 10
 
@@ -470,7 +471,7 @@ getWindowY(): number
 
 | Type | Description |
 | --- | --- |
-| number | 当前拖拽点相对于窗口左上角的y轴坐标，单位为vp。 |
+| number | Y-coordinate of the drag point relative to the upper left corner of the window, in vp. |
 
 ## getX
 
@@ -478,9 +479,9 @@ getWindowY(): number
 getX(): number
 ```
 
-当前拖拽点相对于窗口左上角的x轴坐标，单位为vp。
+Obtains the x-coordinate of the drag point relative to the upper left corner of the window, in vp.
 
-> **说明：**
+> **NOTE：**
 
 **Since:** 7
 
@@ -498,7 +499,7 @@ getX(): number
 
 | Type | Description |
 | --- | --- |
-| number | 返回当前拖拽点相对于窗口左上角的x轴坐标。&lt;br/&gt;单位：vp |
+| number | X-coordinate of the drag point relative to the upper left corner of the window. &lt;br&gt;Unit: vp. |
 
 ## getY
 
@@ -506,9 +507,9 @@ getX(): number
 getY(): number
 ```
 
-当前拖拽点相对于窗口左上角的y轴坐标，单位为vp。
+Obtains the y-coordinate of the drag point relative to the upper left corner of the window, in vp.
 
-> **说明：**
+> **NOTE：**
 
 **Since:** 7
 
@@ -526,7 +527,7 @@ getY(): number
 
 | Type | Description |
 | --- | --- |
-| number | 返回当前拖拽点相对于窗口左上角的y轴坐标。&lt;br/&gt;单位：vp |
+| number | Y-coordinate of the drag point relative to the upper left corner of the window. &lt;br&gt;Unit: vp. |
 
 ## isRemote
 
@@ -534,7 +535,7 @@ getY(): number
 isRemote(): boolean
 ```
 
-获取是否是跨设备拖拽，跨设备拖拽时为true。
+Checks whether the drag operation is cross-device.
 
 **Since:** 20
 
@@ -552,7 +553,7 @@ isRemote(): boolean
 
 | Type | Description |
 | --- | --- |
-| boolean | 是否是跨设备拖拽，返回true表示是跨设备拖拽，返回false表示不是跨设备拖拽。 |
+| boolean | Whether the drag operation is cross-device. Returns **true** for cross-device drag operations; returns **false** otherwise. |
 
 ## setData
 
@@ -560,7 +561,7 @@ isRemote(): boolean
 setData(unifiedData: UnifiedData): void
 ```
 
-向DragEvent中设置用于拖拽的数据。
+Sets drag-related data in **DragEvent**.
 
 **Since:** 10
 
@@ -578,7 +579,7 @@ setData(unifiedData: UnifiedData): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| unifiedData | [UnifiedData](arkts-arkui-unifieddata-t.md) | Yes | 拖拽相关的数据。 |
+| unifiedData | [UnifiedData](arkts-arkui-unifieddata-t.md) | Yes | Drag-related data. |
 
 ## setDataLoadParams
 
@@ -586,7 +587,8 @@ setData(unifiedData: UnifiedData): void
 setDataLoadParams(dataLoadParams: DataLoadParams): void
 ```
 
-设置起拖方延迟提供数据。使用此方法向系统提供数据加载参数，而不是直接提供完整的数据对象。当用户在目标应用程序上落入时，系统将使用此参数从起拖方请求实际数据。与[setData](arkts-arkui-dragevent-i.md#setdata)方法同时使用，以最后调用的方法为准。该接口仅在[onDragStart](arkts-arkui-commonmethod-c.md#ondragstart)回调中生效。
+Sets the parameters for deferred data loading from the drag source. This API provides data loading parameters to the system instead of directly providing complete data objects. When the user drops data on the target application,the system will use these parameters to request the actual data from the drag source. If this API is used together with [setData](arkts-arkui-dragevent-i.md#setdata), the last called API takes precedence. This API takes effect only in the  
+[onDragStart](arkts-arkui-commonmethod-c.md#ondragstart) callback.
 
 **Since:** 20
 
@@ -604,7 +606,7 @@ setDataLoadParams(dataLoadParams: DataLoadParams): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| dataLoadParams | [DataLoadParams](../arkts-apis/arkts-arkui-dataloadparams-t.md) | Yes | 落入操作时使用的数据加载参数。 |
+| dataLoadParams | [DataLoadParams](../arkts-apis/arkts-arkui-dataloadparams-t.md) | Yes | Data loading parameters used during a drop operation. |
 
 ## setResult
 
@@ -612,7 +614,7 @@ setDataLoadParams(dataLoadParams: DataLoadParams): void
 setResult(dragResult: DragResult): void
 ```
 
-在DragEvent中设置拖拽结果。
+Sets the drag result in **DragEvent**.
 
 **Since:** 10
 
@@ -630,7 +632,7 @@ setResult(dragResult: DragResult): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| dragResult | [DragResult](arkts-arkui-dragresult-e.md) | Yes | 拖拽结果。 |
+| dragResult | [DragResult](arkts-arkui-dragresult-e.md) | Yes | Drag result. |
 
 ## startDataLoading
 
@@ -638,7 +640,7 @@ setResult(dragResult: DragResult): void
 startDataLoading(options: DataSyncOptions): string
 ```
 
-异步获取拖拽数据，并通知开发者当前数据同步进度，仅支持在onDrop阶段使用。
+Asynchronously obtains drag data and notifies you of the current data synchronization progress. This API is only supported in the **onDrop** callback.
 
 **Since:** 15
 
@@ -656,20 +658,20 @@ startDataLoading(options: DataSyncOptions): string
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| options | [DataSyncOptions](arkts-arkui-datasyncoptions-t.md) | Yes | 获取拖拽数据时的参数，包含目标路径、文件冲突选项、进度条类型等。数据传输过程中可使用 [cancelDataLoading](../arkts-apis/arkts-arkui-arkui-uicontext-dragcontroller-c.md/arkts-arkui-arkui-uicontext-dragcontroller-c.md#canceldataloading)接口取消数据加载。 |
+| options | [DataSyncOptions](arkts-arkui-datasyncoptions-t.md) | Yes | Parameters for obtaining drag data, including the target path, file conflict options, and progress bar type. You can use the [cancelDataLoading](../arkts-apis/arkts-arkui-arkui-uicontext-dragcontroller-c.md/arkts-arkui-arkui-uicontext-dragcontroller-c.md#canceldataloading) API to cancel data loading during data transmission. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| string | 拖拽数据的标识，用于区分每次拖拽。 |
+| string | Identifier for the drag data. It is used to distinguish between different drag operations. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. |
-| 190003 | Operation not allowed for current phase. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. |
+| [190003](../errorcode-drag-event.md#190003-operation-not-allowed-in-the-current-phase) | Operation not allowed for current phase. |
 
 ## autoHideComponentUniqueIds
 
@@ -677,16 +679,7 @@ startDataLoading(options: DataSyncOptions): string
 autoHideComponentUniqueIds?: int | int[]
 ```
 
-设置拖拽过程中需要自动隐藏的组件uniqueId，支持传入单个uniqueId或数组。
-
-仅在[onDragStart](arkts-arkui-commonmethod-c.md#ondragstart)回调中设置生效。拖拽成功发起后，系统会在显示拖拽预览窗口前隐藏目标组件。
-
-若拖拽源本身也需要隐藏，需要同时传入拖拽源组件的uniqueId。
-
-组件的uniqueId可通过[UIContext.getFrameNodeById()](../arkts-apis/arkts-arkui-arkui-uicontext-uicontext-c.md/arkts-arkui-arkui-uicontext-uicontext-c.md#getframenodebyid)配合[FrameNode.getUniqueId()](../arkts-apis/arkts-arkui-framenode-c.md/arkts-arkui-framenode-c.md#getuniqueid)获取。
-
-开发者应在[onDragEnd](arkts-arkui-commonmethod-c.md#ondragend)或  
-[onDrop](arkts-arkui-commonmethod-c.md#ondrop)中恢复组件显示状态。
+Set the uniqueId or uniqueId array of components that need to be automatically hidden during dragging.This property takes effect only in onDragStart. After the drag starts successfully, the system hides the target components before the drag preview window is shown. Developers need to restore component visibility in onDragEnd or onDrop based on service requirements.
 
 **Type:** int \| int[]
 
@@ -708,9 +701,9 @@ autoHideComponentUniqueIds?: int | int[]
 dragBehavior: DragBehavior
 ```
 
-切换复制和剪贴模式的角标显示状态。
+Copy or paste mode.
 
-默认值：DragBehavior.COPY。
+Default value: **DragBehavior.COPY**
 
 **Type:** [DragBehavior](arkts-arkui-dragbehavior-e.md)
 
@@ -734,15 +727,15 @@ dragBehavior: DragBehavior
 useCustomDropAnimation: boolean
 ```
 
-当拖拽结束时，是否禁用系统默认落位动效。
+Whether to disable the default drop animation when the dragging ends.
 
-应用可将该值设定为true来禁用系统默认落位动效，并实现自己的自定义落位动效。
+If this parameter is set to **true**, the default drop animation is disabled, and the custom one is used.
 
-当不配置或设置为false时，系统默认落位动效生效，当[setResult](arkts-arkui-dragevent-i.md#setresult)设置为DRAG_SUCCESSFUL时，落位为缩小消失动效，不为DRAG_SUCCESSFUL时，则为放大消失动效。
+If this parameter is not set or is set to **false**, the default drop animation takes effect. When [setResult](arkts-arkui-dragevent-i.md#setresult)is set to **DRAG_SUCCESSFUL**, a shrink-out animation takes effect. Otherwise, an expand-out animation takes effect.
 
-当未禁用系统默认落位动效时，应用不应再实现自定义动效，以避免动效上的冲突。
+When the default drop animation is not disabled, avoid implementing custom animations to prevent conflicts.
 
-默认值：false
+Default value: **false**
 
 **Type:** boolean
 

@@ -1,6 +1,6 @@
 # TransferProgress (System API)
 
-搬迁任务的进度信息。
+Defines the TransferProgress data structure.
 
 **Since:** 26.0.0
 
@@ -24,7 +24,7 @@ import { cloudSyncManager } from 'kits/@kit.CoreFileKit';
 failedCount: int
 ```
 
-搬迁失败的文件个数，取值范围[0, INT32_MAX]，单位：个。进度异常时返回-1。
+failed count in TransferProgress.The value should be an integer.&lt;br&gt;Unit:Pcs.
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
@@ -46,7 +46,7 @@ failedCount: int
 state: TransferState
 ```
 
-搬迁任务的状态。
+Describes the state type of transfer task.
 
 **Type:** [TransferState](arkts-corefile-cloudsyncmanager-transferstate-e-sys.md)
 
@@ -68,7 +68,7 @@ state: TransferState
 stopReason: TransferStopReason
 ```
 
-搬迁停止的原因。
+Describes the state type of transfer stop reason.
 
 **Type:** [TransferStopReason](arkts-corefile-cloudsyncmanager-transferstopreason-e-sys.md)
 
@@ -90,7 +90,7 @@ stopReason: TransferStopReason
 successfulCount: int
 ```
 
-已搬迁的文件个数，取值范围[0, INT32_MAX]，单位：个。进度异常时返回-1。
+successful count in TransferProgress.The value should be an integer.&lt;br&gt;Unit:Pcs.
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
@@ -112,7 +112,7 @@ successfulCount: int
 totalCount: int
 ```
 
-待搬迁文件总个数，取值范围[0, INT32_MAX]，单位：个。进度异常时返回-1。
+total count in TransferProgress.The value should be an integer.&lt;br&gt;Unit:Pcs.
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
@@ -134,7 +134,7 @@ totalCount: int
 totalSize: long
 ```
 
-需要搬迁的文件总大小，取值范围[0, INT64_MAX)，单位：Byte。进度异常时返回INT64_MAX。
+Total size in TransferProgress.&lt;br&gt;Unit:Byte.
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：long
 
@@ -156,7 +156,7 @@ totalSize: long
 transferredSize: long
 ```
 
-已搬迁的数据大小，取值范围[0, INT64_MAX)，单位：Byte。进度异常时返回INT64_MAX。
+transferred size in TransferProgress.&lt;br&gt;Unit:Byte.
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：long
 

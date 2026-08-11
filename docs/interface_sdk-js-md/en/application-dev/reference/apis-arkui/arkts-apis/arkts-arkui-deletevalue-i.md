@@ -1,6 +1,6 @@
 # DeleteValue
 
-提供从文本中删除值的接口。
+Provides an interface for deleting value from text.
 
 **Since:** 12
 
@@ -16,7 +16,7 @@
 deleteOffset: number
 ```
 
-删除的值的位置索引，从0开始。
+Position of the deleted text.
 
 **Type:** number
 
@@ -38,7 +38,7 @@ deleteOffset: number
 deleteValue: string
 ```
 
-删除的值。
+Content of the deleted text.
 
 **Type:** string
 
@@ -60,7 +60,7 @@ deleteValue: string
 direction: TextDeleteDirection
 ```
 
-删除值的方向。
+Direction for deleting the text.
 
 **Type:** [TextDeleteDirection](arkts-arkui-textdeletedirection-e.md)
 

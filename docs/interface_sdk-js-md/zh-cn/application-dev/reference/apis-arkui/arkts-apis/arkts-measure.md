@@ -3,12 +3,6 @@
 文本计算
 
 
-## 导入模块
-
-```TypeScript
-import { MeasureOptions } from 'kits/@kit.ArkUI';
-```
-
 ## 汇总
 
 ### 类

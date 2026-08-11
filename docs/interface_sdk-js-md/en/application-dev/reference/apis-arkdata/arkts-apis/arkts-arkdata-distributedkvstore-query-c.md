@@ -1,6 +1,6 @@
 # Query
 
-使用谓词表示数据库查询，提供创建Query实例、查询数据库中的数据和添加谓词的方法。Query对象的谓词方法均返回自身，支持链式调用。一个Query对象中谓词数量上限为256个。
+Provides methods to create a **Query** object, which defines different data query criteria. A **Query** object supports a maximum of 256 predicates.
 
 **Since:** 9
 
@@ -22,7 +22,7 @@ import { distributedKVStore } from 'kits/@kit.ArkData';
 and(): Query
 ```
 
-构造一个带有与条件的查询对象。需先通过equalTo、notEqualTo等谓词方法添加查询条件后，再调用and()连接多个条件，无前置谓词时调用and()无效。
+Creates a **Query** object with the AND condition.
 
 **Since:** 9
 
@@ -38,7 +38,7 @@ and(): Query
 
 | Type | Description |
 | --- | --- |
-| [Query](arkts-arkdata-distributeddata-query-c.md) | 返回查询对象。 |
+| [Query](arkts-arkdata-distributeddata-query-c.md) | Query** object created. |
 
 ## Examples
 
@@ -48,15 +48,14 @@ import { BusinessError } from '@kit.BasicServicesKit';
 try {
     let query: distributedKVStore.Query | null = new distributedKVStore.Query();
     if (query != null) {
-      query.notEqualTo('field', 'value1');
+      query.notEqualTo("field", "value1");
       query.and();
-      query.notEqualTo('field', 'value2');
-      console.info('query is ' + query.getSqlLike());
+      query.notEqualTo("field", "value2");
+      console.info("query is " + query.getSqlLike());
     }
     query = null;
-} catch (err) {
-    let error = err as BusinessError;
-    console.error(`An unexpected error occurred. Code: ${error.code}, message: ${error.message}`);
+} catch (e) {
+    console.error("duplicated calls should be ok :" + e);
 }
 ```
 
@@ -66,7 +65,7 @@ try {
 beginGroup(): Query
 ```
 
-创建一个带有左括号的查询条件组。必须与[endGroup()](arkts-arkdata-distributedkvstore-query-c.md#endgroup)成对使用，以形成完整的查询条件分组。
+Creates a **Query** object for a query condition group with a left parenthesis.
 
 **Since:** 9
 
@@ -82,7 +81,7 @@ beginGroup(): Query
 
 | Type | Description |
 | --- | --- |
-| [Query](arkts-arkdata-distributeddata-query-c.md) | 返回Query对象。 |
+| [Query](arkts-arkdata-distributeddata-query-c.md) | Query** object created. |
 
 ## Examples
 
@@ -93,14 +92,13 @@ try {
     let query: distributedKVStore.Query | null = new distributedKVStore.Query();
     if (query != null) {
       query.beginGroup();
-      query.isNotNull('field');
+      query.isNotNull("field");
       query.endGroup();
-      console.info('query is ' + query.getSqlLike());
+      console.info("query is " + query.getSqlLike());
     }
     query = null;
-} catch (err) {
-    let error = err as BusinessError;
-    console.error(`An unexpected error occurred. Code: ${error.code}, message: ${error.message}`);
+} catch (e) {
+    console.error("duplicated calls should be ok :" + e);
 }
 ```
 
@@ -110,7 +108,7 @@ try {
 constructor()
 ```
 
-用于创建Query实例的构造函数。
+Defines a constructor used to create a **Query** instance.
 
 **Since:** 9
 
@@ -128,17 +126,14 @@ constructor()
 deviceId(deviceId: string): Query
 ```
 
-添加设备ID作为Key的前缀。
+Creates a **Query** object with the device ID as the key prefix.
 
-> **说明：**
+> **NOTE：**
 > 
-> 其中deviceId为[DeviceBasicInfo](../../apis-distributed-service-kit/arkts-apis/arkts-distributedservice-distributeddevicemanager-devicebasicinfo-i.md/arkts-distributedservice-distributeddevicemanager-devicebasicinfo-i.md)中的
-> networkId，通过调用
+> **deviceId** can be obtained by
 > [deviceManager.getAvailableDeviceListSync](../../apis-distributed-service-kit/arkts-apis/arkts-distributedservice-distributeddevicemanager-devicemanager-i.md/arkts-distributedservice-distributeddevicemanager-devicemanager-i.md#getavailabledevicelistsync)
-> 方法得到。
-> 
-> deviceId具体获取方式请参考
-> [sync接口示例](arkts-arkdata-distributedkvstore-singlekvstore-i.md#sync)。
+> .
+> > For details about how to obtain **deviceId**, see [sync()](arkts-arkdata-distributedkvstore-syncmode-e.md).
 
 **Since:** 9
 
@@ -154,19 +149,19 @@ deviceId(deviceId: string): Query
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| deviceId | string | Yes | 设备的networkId，标识要查询其数据的设备，不能为空。 |
+| deviceId | string | Yes | ID of the device to be queried. This parameter cannot be left empty. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [Query](arkts-arkdata-distributeddata-query-c.md) | 返回Query对象。 |
+| [Query](arkts-arkdata-distributeddata-query-c.md) | Query** object created. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error.Possible causes:1.Mandatory parameters are left unspecified; &lt;br&gt;2.Incorrect parameters types; &lt;br&gt;3.Parameter verification failed. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error.Possible causes:1.Mandatory parameters are left unspecified; &lt;br&gt;2.Incorrect parameters types; &lt;br&gt;3.Parameter verification failed. |
 
 ## Examples
 
@@ -176,12 +171,12 @@ import { BusinessError } from '@kit.BasicServicesKit';
 try {
     let query: distributedKVStore.Query | null = new distributedKVStore.Query();
     if (query != null) {
-      query.deviceId('deviceId');
+      query.deviceId("deviceId");
       console.info(`query is ${query.getSqlLike()}`);
     }
-} catch (err) {
-    let error = err as BusinessError;
-    console.error(`An unexpected error occurred. Code: ${error.code}, message: ${error.message}`);
+} catch (e) {
+    let error = e as BusinessError;
+    console.error(`duplicated calls should be ok.code is ${error.code},message is ${error.message}`);
 }
 ```
 
@@ -191,7 +186,7 @@ try {
 endGroup(): Query
 ```
 
-创建一个带有右括号的查询条件组。必须与[beginGroup()](arkts-arkdata-distributedkvstore-query-c.md#begingroup)成对使用，以形成完整的查询条件分组。
+Creates a **Query** object for a query condition group with a right parenthesis.
 
 **Since:** 9
 
@@ -207,7 +202,7 @@ endGroup(): Query
 
 | Type | Description |
 | --- | --- |
-| [Query](arkts-arkdata-distributeddata-query-c.md) | 返回Query对象。 |
+| [Query](arkts-arkdata-distributeddata-query-c.md) | Query** object created. |
 
 ## Examples
 
@@ -218,14 +213,13 @@ try {
     let query: distributedKVStore.Query | null = new distributedKVStore.Query();
     if (query != null) {
       query.beginGroup();
-      query.isNotNull('field');
+      query.isNotNull("field");
       query.endGroup();
-      console.info('query is ' + query.getSqlLike());
+      console.info("query is " + query.getSqlLike());
     }
     query = null;
-} catch (err) {
-    let error = err as BusinessError;
-    console.error(`An unexpected error occurred. Code: ${error.code}, message: ${error.message}`);
+} catch (e) {
+    console.error("duplicated calls should be ok :" + e);
 }
 ```
 
@@ -241,14 +235,15 @@ ArkTS-Sta:
 equalTo(field: string, value: long | double | string | boolean): Query
 ```
 
-构造一个Query对象来查询具有指定字段的条目，其值等于指定的值。
+Creates a **Query** object to match the specified field whose value is equal to the given value.
 
-> **说明：**
+> **NOTE：**
 > 
-> 使用equalTo时需要结合[Schema](arkts-arkdata-distributedkvstore-schema-c.md)使用。
+> This API should be used together with [Schema](arkts-arkdata-distributedkvstore-schema-c.md).
 > 
-> 使用Schema创建数据库请参见[通过键值型数据库实现数据持久化](../../../database/data-persistence-by-kv-store.md#开发步骤)中使用getKVStore()方法创建并获
-> 取键值数据库示例。
+> For details about how to use **Schema** to create a database, see the example of creating and obtaining a KV
+> store using the **getKVStore()** method in
+> [Persisting KV Store Data](../../../database/data-persistence-by-kv-store.md#how-to-develop).
 
 **Since:** 9
 
@@ -264,20 +259,20 @@ equalTo(field: string, value: long | double | string | boolean): Query
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| field | string | Yes | 表示指定字段，不能包含'^'。包含'^'将导致谓词失效，查询结果会返回数据库中的所有数据。 |
-| value | ArkTS-Dyn: number \| number \| string \| boolean  <br>ArkTS-Sta：long \| double \| string \| boolean | Yes | 表示指定字段要匹配的值，值的类型应与Schema中定义的字段类型一致。 |
+| field | string | Yes | Field to match. It cannot contain '^'. If the value contains '^', the predicate becomes invalid and all data in the KV store will be returned. |
+| value | ArkTS-Dyn: number \| number \| string \| boolean  <br>ArkTS-Sta：long \| double \| string \| boolean | Yes | Value specified. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [Query](arkts-arkdata-distributeddata-query-c.md) | 返回Query对象。 |
+| [Query](arkts-arkdata-distributeddata-query-c.md) | Query** object created. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error.Possible causes:1.Mandatory parameters are left unspecified; &lt;br&gt;2.Incorrect parameters types; &lt;br&gt;3.Parameter verification failed. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error.Possible causes:1.Mandatory parameters are left unspecified; &lt;br&gt;2.Incorrect parameters types; &lt;br&gt;3.Parameter verification failed. |
 
 ## getSqlLike
 
@@ -285,7 +280,7 @@ equalTo(field: string, value: long | double | string | boolean): Query
 getSqlLike(): string
 ```
 
-获取Query对象的查询语句。
+Obtains the query statement of the **Query** object.
 
 **Since:** 9
 
@@ -301,7 +296,7 @@ getSqlLike(): string
 
 | Type | Description |
 | --- | --- |
-| string | 返回Query对象构建的查询语句字符串，可用于查看和调试当前的查询条件。 |
+| string | Returns the query statement obtained. |
 
 ## Examples
 
@@ -314,9 +309,8 @@ try {
       let sql1 = query.getSqlLike();
       console.info(`GetSqlLike sql= ${sql1}`);
     }
-} catch (err) {
-    let error = err as BusinessError;
-    console.error(`An unexpected error occurred. Code: ${error.code}, message: ${error.message}`);
+} catch (e) {
+    console.error("duplicated calls should be ok : " + e);
 }
 ```
 
@@ -332,14 +326,15 @@ ArkTS-Sta:
 greaterThan(field: string, value: long | double | string | boolean): Query
 ```
 
-构造一个Query对象以查询具有大于指定值的指定字段的条目。
+Creates a **Query** object to match the specified field whose value is greater than the specified value.
 
-> **说明：**
+> **NOTE：**
 > 
-> 使用greaterThan时需要结合[Schema](arkts-arkdata-distributedkvstore-schema-c.md)使用。
+> This API should be used together with [Schema](arkts-arkdata-distributedkvstore-schema-c.md).
 > 
-> 使用Schema创建数据库请参见[通过键值型数据库实现数据持久化](../../../database/data-persistence-by-kv-store.md#开发步骤)中使用getKVStore()方法创建并获
-> 取键值数据库示例。
+> For details about how to use **Schema** to create a database, see the example of creating and obtaining a KV
+> store using the **getKVStore()** method in
+> [Persisting KV Store Data](../../../database/data-persistence-by-kv-store.md#how-to-develop).
 
 **Since:** 9
 
@@ -362,13 +357,13 @@ greaterThan(field: string, value: long | double | string | boolean): Query
 
 | Type | Description |
 | --- | --- |
-| [Query](arkts-arkdata-distributeddata-query-c.md) | 返回Query对象。 |
+| [Query](arkts-arkdata-distributeddata-query-c.md) | Query** object created. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error.Possible causes:1.Mandatory parameters are left unspecified; &lt;br&gt;2.Incorrect parameters types; &lt;br&gt;3.Parameter verification failed. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error.Possible causes:1.Mandatory parameters are left unspecified; &lt;br&gt;2.Incorrect parameters types; &lt;br&gt;3.Parameter verification failed. |
 
 ## greaterThanOrEqualTo
 
@@ -382,14 +377,15 @@ ArkTS-Sta:
 greaterThanOrEqualTo(field: string, value: long | double | string): Query
 ```
 
-构造一个Query对象以查询具有指定字段且值大于或等于指定值的条目。
+Creates a **Query** object to match the specified field whose value is greater than or equal to the specified value.
 
-> **说明：**
+> **NOTE：**
 > 
-> 使用greaterThanOrEqualTo时需要结合[Schema](arkts-arkdata-distributedkvstore-schema-c.md)使用。
+> This API should be used together with [Schema](arkts-arkdata-distributedkvstore-schema-c.md).
 > 
-> 使用Schema创建数据库请参见[通过键值型数据库实现数据持久化](../../../database/data-persistence-by-kv-store.md#开发步骤)中使用getKVStore()方法创建并获
-> 取键值数据库示例。
+> For details about how to use **Schema** to create a database, see the example of creating and obtaining a KV
+> store using the **getKVStore()** method in
+> [Persisting KV Store Data](../../../database/data-persistence-by-kv-store.md#how-to-develop).
 
 **Since:** 9
 
@@ -405,20 +401,20 @@ greaterThanOrEqualTo(field: string, value: long | double | string): Query
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| field | string | Yes | 表示指定字段，不能包含'^'。包含'^'将导致谓词失效，查询结果会返回数据库中的所有数据。 |
-| value | ArkTS-Dyn: number \| number \| string  <br>ArkTS-Sta：long \| double \| string | Yes | 表示指定字段要匹配的值，值的类型应与Schema中定义的字段类型一致。 |
+| field | string | Yes | Field to match. It cannot contain '^'. If the value contains '^', the predicate becomes invalid and all data in the KV store will be returned. |
+| value | ArkTS-Dyn: number \| number \| string  <br>ArkTS-Sta：long \| double \| string | Yes | Value specified. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [Query](arkts-arkdata-distributeddata-query-c.md) | 返回Query对象。 |
+| [Query](arkts-arkdata-distributeddata-query-c.md) | Query** object created. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error.Possible causes:1.Mandatory parameters are left unspecified; &lt;br&gt;2.Incorrect parameters types; &lt;br&gt;3.Parameter verification failed. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error.Possible causes:1.Mandatory parameters are left unspecified; &lt;br&gt;2.Incorrect parameters types; &lt;br&gt;3.Parameter verification failed. |
 
 ## inNumber
 
@@ -432,14 +428,15 @@ ArkTS-Sta:
 inNumber(field: string, valueList: long[] | double[]): Query
 ```
 
-构造一个Query对象以查询具有指定字段的条目，其值在指定的值列表中。
+Creates a **Query** object to match the specified field whose value is within the specified list of numbers.
 
-> **说明：**
+> **NOTE：**
 > 
-> 使用inNumber时需要结合[Schema](arkts-arkdata-distributedkvstore-schema-c.md)使用。
+> This API should be used together with [Schema](arkts-arkdata-distributedkvstore-schema-c.md).
 > 
-> 使用Schema创建数据库请参见[通过键值型数据库实现数据持久化](../../../database/data-persistence-by-kv-store.md#开发步骤)中使用getKVStore()方法创建并获
-> 取键值数据库示例。
+> For details about how to use **Schema** to create a database, see the example of creating and obtaining a KV
+> store using the **getKVStore()** method in
+> [Persisting KV Store Data](../../../database/data-persistence-by-kv-store.md#how-to-develop).
 
 **Since:** 9
 
@@ -455,20 +452,20 @@ inNumber(field: string, valueList: long[] | double[]): Query
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| field | string | Yes | 表示指定字段，不能包含'^'。包含'^'将导致谓词失效，查询结果会返回数据库中的所有数据。 |
-| valueList | ArkTS-Dyn: number[] \| number[]  <br>ArkTS-Sta：long[] \| double[] | Yes | 是 |
+| field | string | Yes | Field to match. It cannot contain '^'. If the value contains '^', the predicate becomes invalid and all data in the KV store will be returned. |
+| valueList | ArkTS-Dyn: number[] \| number[]  <br>ArkTS-Sta：long[] \| double[] | Yes | List of numbers. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [Query](arkts-arkdata-distributeddata-query-c.md) | 返回Query对象。 |
+| [Query](arkts-arkdata-distributeddata-query-c.md) | Query** object created. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error.Possible causes:1.Mandatory parameters are left unspecified; &lt;br&gt;2.Incorrect parameters types; &lt;br&gt;3.Parameter verification failed. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error.Possible causes:1.Mandatory parameters are left unspecified; &lt;br&gt;2.Incorrect parameters types; &lt;br&gt;3.Parameter verification failed. |
 
 ## inString
 
@@ -476,14 +473,15 @@ inNumber(field: string, valueList: long[] | double[]): Query
 inString(field: string, valueList: string[]): Query
 ```
 
-构造一个Query对象以查询具有指定字段的条目，其值在指定的字符串值列表中。
+Creates a **Query** object to match the specified field whose value is within the specified list of strings.
 
-> **说明：**
+> **NOTE：**
 > 
-> 使用inString时需要结合[Schema](arkts-arkdata-distributedkvstore-schema-c.md)使用。
+> This API should be used together with [Schema](arkts-arkdata-distributedkvstore-schema-c.md).
 > 
-> 使用Schema创建数据库请参见[通过键值型数据库实现数据持久化](../../../database/data-persistence-by-kv-store.md#开发步骤)中使用getKVStore()方法创建并获
-> 取键值数据库示例。
+> For details about how to use **Schema** to create a database, see the example of creating and obtaining a KV
+> store using the **getKVStore()** method in
+> [Persisting KV Store Data](../../../database/data-persistence-by-kv-store.md#how-to-develop).
 
 **Since:** 9
 
@@ -499,20 +497,20 @@ inString(field: string, valueList: string[]): Query
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| field | string | Yes | 表示指定字段，不能包含'^'。包含'^'将导致谓词失效，查询结果会返回数据库中的所有数据。 |
-| valueList | string[] | Yes | 表示指定的字符串值列表。 |
+| field | string | Yes | Field to match. It cannot contain '^'. If the value contains '^', the predicate becomes invalid and all data in the KV store will be returned. |
+| valueList | string[] | Yes | List of strings. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [Query](arkts-arkdata-distributeddata-query-c.md) | 返回Query对象。 |
+| [Query](arkts-arkdata-distributeddata-query-c.md) | Query** object created. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error.Possible causes:1.Mandatory parameters are left unspecified; &lt;br&gt;2.Incorrect parameters types; &lt;br&gt;3.Parameter verification failed. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error.Possible causes:1.Mandatory parameters are left unspecified; &lt;br&gt;2.Incorrect parameters types; &lt;br&gt;3.Parameter verification failed. |
 
 ## Examples
 
@@ -522,13 +520,13 @@ import { BusinessError } from '@kit.BasicServicesKit';
 try {
     let query: distributedKVStore.Query | null = new distributedKVStore.Query();
     if (query != null) {
-      query.inString('field', ['test1', 'test2']);
+      query.inString("field", ['test1', 'test2']);
       console.info(`query is ${query.getSqlLike()}`);
     }
     query = null;
-} catch (err) {
-    let error = err as BusinessError;
-    console.error(`An unexpected error occurred. Code: ${error.code}, message: ${error.message}`);
+} catch (e) {
+    let error = e as BusinessError;
+    console.error(`duplicated calls should be ok.code is ${error.code},message is ${error.message}`);
 }
 ```
 
@@ -538,14 +536,15 @@ try {
 isNotNull(field: string): Query
 ```
 
-构造一个Query对象以查询具有值不为null的指定字段的条目。
+Creates a **Query** object to match the specified field whose value is not **null**.
 
-> **说明：**
+> **NOTE：**
 > 
-> 使用isNotNull时需要结合[Schema](arkts-arkdata-distributedkvstore-schema-c.md)使用。
+> This API should be used together with [Schema](arkts-arkdata-distributedkvstore-schema-c.md).
 > 
-> 使用Schema创建数据库请参见[通过键值型数据库实现数据持久化](../../../database/data-persistence-by-kv-store.md#开发步骤)中使用getKVStore()方法创建并获
-> 取键值数据库示例。
+> For details about how to use **Schema** to create a database, see the example of creating and obtaining a KV
+> store using the **getKVStore()** method in
+> [Persisting KV Store Data](../../../database/data-persistence-by-kv-store.md#how-to-develop).
 
 **Since:** 9
 
@@ -561,19 +560,19 @@ isNotNull(field: string): Query
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| field | string | Yes | 表示指定字段，不能包含'^'。包含'^'将导致谓词失效，查询结果会返回数据库中的所有数据。 |
+| field | string | Yes | Field to match. It cannot contain '^'. If the value contains '^', the predicate becomes invalid and all data in the KV store will be returned. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [Query](arkts-arkdata-distributeddata-query-c.md) | 返回Query对象。 |
+| [Query](arkts-arkdata-distributeddata-query-c.md) | Query** object created. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error.Possible causes:1.Mandatory parameters are left unspecified; &lt;br&gt;2.Incorrect parameters types. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error.Possible causes:1.Mandatory parameters are left unspecified; &lt;br&gt;2.Incorrect parameters types. |
 
 ## Examples
 
@@ -583,13 +582,13 @@ import { BusinessError } from '@kit.BasicServicesKit';
 try {
   let query: distributedKVStore.Query | null = new distributedKVStore.Query();
   if (query != null) {
-    query.isNotNull('field');
+    query.isNotNull("field");
     console.info(`query is ${query.getSqlLike()}`);
   }
   query = null;
-} catch (err) {
-  let error = err as BusinessError;
-  console.error(`An unexpected error occurred. Code: ${error.code}, message: ${error.message}`);
+} catch (e) {
+  let error = e as BusinessError;
+  console.error(`duplicated calls should be ok.code is ${error.code},message is ${error.message}`);
 }
 ```
 
@@ -599,14 +598,15 @@ try {
 isNull(field: string): Query
 ```
 
-构造一个Query对象以查询具有值为null的指定字段的条目。
+Creates a **Query** object to match the specified field whose value is **null**.
 
-> **说明：**
+> **NOTE：**
 > 
-> 使用isNull时需要结合[Schema](arkts-arkdata-distributedkvstore-schema-c.md)使用。
+> This API should be used together with [Schema](arkts-arkdata-distributedkvstore-schema-c.md).
 > 
-> 使用Schema创建数据库请参见[通过键值型数据库实现数据持久化](../../../database/data-persistence-by-kv-store.md#开发步骤)中使用getKVStore()方法创建并获
-> 取键值数据库示例。
+> For details about how to use **Schema** to create a database, see the example of creating and obtaining a KV
+> store using the **getKVStore()** method in
+> [Persisting KV Store Data](../../../database/data-persistence-by-kv-store.md#how-to-develop).
 
 **Since:** 9
 
@@ -622,19 +622,19 @@ isNull(field: string): Query
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| field | string | Yes | 表示指定字段，不能包含'^'。包含'^'将导致谓词失效，查询结果会返回数据库中的所有数据。 |
+| field | string | Yes | Field to match. It cannot contain '^'. If the value contains '^', the predicate becomes invalid and all data in the KV store will be returned. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [Query](arkts-arkdata-distributeddata-query-c.md) | 返回Query对象。 |
+| [Query](arkts-arkdata-distributeddata-query-c.md) | Query** object created. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error.Possible causes:1.Mandatory parameters are left unspecified; &lt;br&gt;2.Incorrect parameters types; &lt;br&gt;3.Parameter verification failed. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error.Possible causes:1.Mandatory parameters are left unspecified; &lt;br&gt;2.Incorrect parameters types; &lt;br&gt;3.Parameter verification failed. |
 
 ## Examples
 
@@ -644,13 +644,13 @@ import { BusinessError } from '@kit.BasicServicesKit';
 try {
     let query: distributedKVStore.Query | null = new distributedKVStore.Query();
     if (query != null) {
-      query.isNull('field');
+      query.isNull("field");
       console.info(`query is ${query.getSqlLike()}`);
     }
     query = null;
-} catch (err) {
-    let error = err as BusinessError;
-    console.error(`An unexpected error occurred. Code: ${error.code}, message: ${error.message}`);
+} catch (e) {
+    let error = e as BusinessError;
+    console.error(`duplicated calls should be ok.code is ${error.code},message is ${error.message}`);
 }
 ```
 
@@ -666,14 +666,15 @@ ArkTS-Sta:
 lessThan(field: string, value: long | double | string): Query
 ```
 
-构造一个Query对象以查询具有小于指定值的指定字段的条目。
+Creates a **Query** object to match the specified field whose value is less than the specified value.
 
-> **说明：**
+> **NOTE：**
 > 
-> 使用lessThan时需要结合[Schema](arkts-arkdata-distributedkvstore-schema-c.md)使用。
+> This API should be used together with [Schema](arkts-arkdata-distributedkvstore-schema-c.md).
 > 
-> 使用Schema创建数据库请参见[通过键值型数据库实现数据持久化](../../../database/data-persistence-by-kv-store.md#开发步骤)中使用getKVStore()方法创建并获
-> 取键值数据库示例。
+> For details about how to use **Schema** to create a database, see the example of creating and obtaining a KV
+> store using the **getKVStore()** method in
+> [Persisting KV Store Data](../../../database/data-persistence-by-kv-store.md#how-to-develop).
 
 **Since:** 9
 
@@ -689,20 +690,20 @@ lessThan(field: string, value: long | double | string): Query
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| field | string | Yes | 表示指定字段，不能包含'^'。包含'^'将导致谓词失效，查询结果会返回数据库中的所有数据。 |
-| value | ArkTS-Dyn: number \| number \| string  <br>ArkTS-Sta：long \| double \| string | Yes | 表示指定字段要匹配的值，值的类型应与Schema中定义的字段类型一致。 |
+| field | string | Yes | Field to match. It cannot contain '^'. If the value contains '^', the predicate becomes invalid and all data in the KV store will be returned. |
+| value | ArkTS-Dyn: number \| number \| string  <br>ArkTS-Sta：long \| double \| string | Yes | Value specified. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [Query](arkts-arkdata-distributeddata-query-c.md) | 返回Query对象。 |
+| [Query](arkts-arkdata-distributeddata-query-c.md) | Query** object created. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error.Possible causes:1.Mandatory parameters are left unspecified; &lt;br&gt;2.Incorrect parameters types; &lt;br&gt;3.Parameter verification failed. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error.Possible causes:1.Mandatory parameters are left unspecified; &lt;br&gt;2.Incorrect parameters types; &lt;br&gt;3.Parameter verification failed. |
 
 ## lessThanOrEqualTo
 
@@ -716,14 +717,15 @@ ArkTS-Sta:
 lessThanOrEqualTo(field: string, value: long | double | string): Query
 ```
 
-构造一个Query对象以查询具有指定字段且值小于或等于指定值的条目。
+Creates a **Query** object to match the specified field whose value is less than or equal to the specified value.
 
-> **说明：**
+> **NOTE：**
 > 
-> 使用lessThanOrEqualTo时需要结合[Schema](arkts-arkdata-distributedkvstore-schema-c.md)使用。
+> This API should be used together with [Schema](arkts-arkdata-distributedkvstore-schema-c.md).
 > 
-> 使用Schema创建数据库请参见[通过键值型数据库实现数据持久化](../../../database/data-persistence-by-kv-store.md#开发步骤)中使用getKVStore()方法创建并获
-> 取键值数据库示例。
+> For details about how to use **Schema** to create a database, see the example of creating and obtaining a KV
+> store using the **getKVStore()** method in
+> [Persisting KV Store Data](../../../database/data-persistence-by-kv-store.md#how-to-develop).
 
 **Since:** 9
 
@@ -739,20 +741,20 @@ lessThanOrEqualTo(field: string, value: long | double | string): Query
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| field | string | Yes | 表示指定字段，不能包含'^'。包含'^'将导致谓词失效，查询结果会返回数据库中的所有数据。 |
-| value | ArkTS-Dyn: number \| number \| string  <br>ArkTS-Sta：long \| double \| string | Yes | 表示指定字段要匹配的值，值的类型应与Schema中定义的字段类型一致。 |
+| field | string | Yes | Field to match. It cannot contain '^'. If the value contains '^', the predicate becomes invalid and all data in the KV store will be returned. |
+| value | ArkTS-Dyn: number \| number \| string  <br>ArkTS-Sta：long \| double \| string | Yes | Value specified. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [Query](arkts-arkdata-distributeddata-query-c.md) | 返回Query对象。 |
+| [Query](arkts-arkdata-distributeddata-query-c.md) | Query** object created. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error.Possible causes:1.Mandatory parameters are left unspecified; &lt;br&gt;2.Incorrect parameters types; &lt;br&gt;3.Parameter verification failed. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error.Possible causes:1.Mandatory parameters are left unspecified; &lt;br&gt;2.Incorrect parameters types; &lt;br&gt;3.Parameter verification failed. |
 
 ## like
 
@@ -760,14 +762,15 @@ lessThanOrEqualTo(field: string, value: long | double | string): Query
 like(field: string, value: string): Query
 ```
 
-构造一个Query对象以查询具有与指定字符串值相似的指定字段的条目。
+Creates a **Query** object to match the specified field whose value is similar to the specified string.
 
-> **说明：**
+> **NOTE：**
 > 
-> 使用like时需要结合[Schema](arkts-arkdata-distributedkvstore-schema-c.md)使用。
+> This API should be used together with [Schema](arkts-arkdata-distributedkvstore-schema-c.md).
 > 
-> 使用Schema创建数据库请参见[通过键值型数据库实现数据持久化](../../../database/data-persistence-by-kv-store.md#开发步骤)中使用getKVStore()方法创建并获
-> 取键值数据库示例。
+> For details about how to use **Schema** to create a database, see the example of creating and obtaining a KV
+> store using the **getKVStore()** method in
+> [Persisting KV Store Data](../../../database/data-persistence-by-kv-store.md#how-to-develop).
 
 **Since:** 9
 
@@ -783,20 +786,20 @@ like(field: string, value: string): Query
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| field | string | Yes | 表示指定字段，不能包含'^'。包含'^'将导致谓词失效，查询结果会返回数据库中的所有数据。 |
-| value | string | Yes | 表示指定字段要匹配的字符串值。 |
+| field | string | Yes | Field to match. It cannot contain '^'. If the value contains '^', the predicate becomes invalid and all data in the KV store will be returned. |
+| value | string | Yes | String specified. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [Query](arkts-arkdata-distributeddata-query-c.md) | 返回Query对象。 |
+| [Query](arkts-arkdata-distributeddata-query-c.md) | Query** object created. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error.Possible causes:1.Mandatory parameters are left unspecified; &lt;br&gt;2.Incorrect parameters types; &lt;br&gt;3.Parameter verification failed. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error.Possible causes:1.Mandatory parameters are left unspecified; &lt;br&gt;2.Incorrect parameters types; &lt;br&gt;3.Parameter verification failed. |
 
 ## Examples
 
@@ -806,13 +809,13 @@ import { BusinessError } from '@kit.BasicServicesKit';
 try {
     let query: distributedKVStore.Query | null = new distributedKVStore.Query();
     if (query != null) {
-      query.like('field', 'value');
+      query.like("field", "value");
       console.info(`query is ${query.getSqlLike()}`);
     }
     query = null;
-} catch (err) {
-    let error = err as BusinessError;
-    console.error(`An unexpected error occurred. Code: ${error.code}, message: ${error.message}`);
+} catch (e) {
+    let error = e as BusinessError;
+    console.error(`duplicated calls should be ok.code is ${error.code},message is ${error.message}`);
 }
 ```
 
@@ -828,7 +831,7 @@ ArkTS-Sta:
 limit(total: int, offset: int): Query
 ```
 
-构造一个Query对象来指定结果的数量和开始位置。该接口必须要在Query对象查询和升降序等操作之后调用，调用limit接口后，不可再对Query对象进行查询和升降序等操作。
+Creates a **Query** object to specify the number of records of the query result and where to start. This API must  be called after the invocation of the **orderByAsc()**, **orderByDesc()**, and the query APIs of the **Query**object.
 
 **Since:** 9
 
@@ -844,20 +847,20 @@ limit(total: int, offset: int): Query
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| total | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | 表示最大数据记录数。&lt;br/&gt;取值为非负整数时表示指定的最大记录数。&lt;br/&gt;取值为负数时，表示查询整个结果集。 |
-| offset | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | 指定查询结果的起始位置。取值为非负整数时表示指定的起始位置；取值为负数时，表示查询整个结果集。当offset超出结果集最后位置时，查询结果为空。 |
+| total | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | Maximum number of results to query. The value must be a non-negative integer.&lt;br&gt;If the value is a negative number, the entire result set is queried. |
+| offset | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | Start position of the query result. The value must be a non-negative integer.&lt;br&gt;If the value is a negative number, the entire result set is queried.&lt;br&gt;If **offset** exceeds the end of the result set, the query result is empty. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [Query](arkts-arkdata-distributeddata-query-c.md) | 返回Query对象。 |
+| [Query](arkts-arkdata-distributeddata-query-c.md) | Query** object created. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error.Possible causes:1.Mandatory parameters are left unspecified; &lt;br&gt;2.Incorrect parameters types. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error.Possible causes:1.Mandatory parameters are left unspecified; &lt;br&gt;2.Incorrect parameters types. |
 
 ## Examples
 
@@ -869,14 +872,14 @@ let offset = 1;
 try {
   let query: distributedKVStore.Query | null = new distributedKVStore.Query();
   if (query != null) {
-    query.notEqualTo('field', 'value');
+    query.notEqualTo("field", "value");
     query.limit(total, offset);
     console.info(`query is ${query.getSqlLike()}`);
   }
   query = null;
-} catch (err) {
-  let error = err as BusinessError;
-  console.error(`An unexpected error occurred. Code: ${error.code}, message: ${error.message}`);
+} catch (e) {
+  let error = e as BusinessError;
+  console.error(`duplicated calls should be ok.code is ${error.code},message is ${error.message}`);
 }
 ```
 
@@ -892,14 +895,15 @@ ArkTS-Sta:
 notEqualTo(field: string, value: long | double | string | boolean): Query
 ```
 
-构造一个Query对象以查询具有指定字段且值不等于指定值的条目。
+Creates a **Query** object to match the specified field whose value is not equal to the specified value.
 
-> **说明：**
+> **NOTE：**
 > 
-> 使用notEqualTo时需要结合[Schema](arkts-arkdata-distributedkvstore-schema-c.md)使用。
+> This API should be used together with [Schema](arkts-arkdata-distributedkvstore-schema-c.md).
 > 
-> 使用Schema创建数据库请参见[通过键值型数据库实现数据持久化](../../../database/data-persistence-by-kv-store.md#开发步骤)中使用getKVStore()方法创建并获
-> 取键值数据库示例。
+> For details about how to use **Schema** to create a database, see the example of creating and obtaining a KV
+> store using the **getKVStore()** method in
+> [Persisting KV Store Data](../../../database/data-persistence-by-kv-store.md#how-to-develop).
 
 **Since:** 9
 
@@ -915,20 +919,20 @@ notEqualTo(field: string, value: long | double | string | boolean): Query
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| field | string | Yes | 表示指定字段，不能包含'^'。包含'^'将导致谓词失效，查询结果会返回数据库中的所有数据。 |
-| value | ArkTS-Dyn: number \| number \| string \| boolean  <br>ArkTS-Sta：long \| double \| string \| boolean | Yes | 表示指定字段要匹配的值，值的类型应与Schema中定义的字段类型一致。 |
+| field | string | Yes | Field to match. It cannot contain '^'. If the value contains '^', the predicate becomes invalid and all data in the KV store will be returned. |
+| value | ArkTS-Dyn: number \| number \| string \| boolean  <br>ArkTS-Sta：long \| double \| string \| boolean | Yes | Value specified. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [Query](arkts-arkdata-distributeddata-query-c.md) | 返回Query对象。 |
+| [Query](arkts-arkdata-distributeddata-query-c.md) | Query** object created. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error.Possible causes:1.Mandatory parameters are left unspecified; &lt;br&gt;2.Incorrect parameters types; &lt;br&gt;3.Parameter verification failed. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error.Possible causes:1.Mandatory parameters are left unspecified; &lt;br&gt;2.Incorrect parameters types; &lt;br&gt;3.Parameter verification failed. |
 
 ## notInNumber
 
@@ -942,14 +946,15 @@ ArkTS-Sta:
 notInNumber(field: string, valueList: long[] | double[]): Query
 ```
 
-构造一个Query对象以查询具有指定字段的条目，该字段的值不在指定的值列表中。
+Creates a **Query** object to match the specified field whose value is not within the specified list of numbers.
 
-> **说明：**
+> **NOTE：**
 > 
-> 使用notInNumber时需要结合[Schema](arkts-arkdata-distributedkvstore-schema-c.md)使用。
+> This API should be used together with [Schema](arkts-arkdata-distributedkvstore-schema-c.md).
 > 
-> 使用Schema创建数据库请参见[通过键值型数据库实现数据持久化](../../../database/data-persistence-by-kv-store.md#开发步骤)中使用getKVStore()方法创建并获
-> 取键值数据库示例。
+> For details about how to use **Schema** to create a database, see the example of creating and obtaining a KV
+> store using the **getKVStore()** method in
+> [Persisting KV Store Data](../../../database/data-persistence-by-kv-store.md#how-to-develop).
 
 **Since:** 9
 
@@ -965,20 +970,20 @@ notInNumber(field: string, valueList: long[] | double[]): Query
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| field | string | Yes | 表示指定字段，不能包含'^'。包含'^'将导致谓词失效，查询结果会返回数据库中的所有数据。 |
-| valueList | ArkTS-Dyn: number[] \| number[]  <br>ArkTS-Sta：long[] \| double[] | Yes | 是 |
+| field | string | Yes | Field to match. It cannot contain '^'. If the value contains '^', the predicate becomes invalid and all data in the KV store will be returned. |
+| valueList | ArkTS-Dyn: number[] \| number[]  <br>ArkTS-Sta：long[] \| double[] | Yes | List of numbers. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [Query](arkts-arkdata-distributeddata-query-c.md) | 返回Query对象。 |
+| [Query](arkts-arkdata-distributeddata-query-c.md) | Query** object created. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error.Possible causes:1.Mandatory parameters are left unspecified; &lt;br&gt;2.Incorrect parameters types; &lt;br&gt;3.Parameter verification failed. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error.Possible causes:1.Mandatory parameters are left unspecified; &lt;br&gt;2.Incorrect parameters types; &lt;br&gt;3.Parameter verification failed. |
 
 ## notInString
 
@@ -986,14 +991,15 @@ notInNumber(field: string, valueList: long[] | double[]): Query
 notInString(field: string, valueList: string[]): Query
 ```
 
-构造一个Query对象以查询具有指定字段且值不在指定字符串值列表中的条目。
+Creates a **Query** object to match the specified field whose value is not within the specified list of strings.
 
-> **说明：**
+> **NOTE：**
 > 
-> 使用notInString时需要结合[Schema](arkts-arkdata-distributedkvstore-schema-c.md)使用。
+> This API should be used together with [Schema](arkts-arkdata-distributedkvstore-schema-c.md).
 > 
-> 使用Schema创建数据库请参见[通过键值型数据库实现数据持久化](../../../database/data-persistence-by-kv-store.md#开发步骤)中使用getKVStore()方法创建并获
-> 取键值数据库示例。
+> For details about how to use **Schema** to create a database, see the example of creating and obtaining a KV
+> store using the **getKVStore()** method in
+> [Persisting KV Store Data](../../../database/data-persistence-by-kv-store.md#how-to-develop).
 
 **Since:** 9
 
@@ -1009,20 +1015,20 @@ notInString(field: string, valueList: string[]): Query
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| field | string | Yes | 表示指定字段，不能包含'^'。包含'^'将导致谓词失效，查询结果会返回数据库中的所有数据。 |
-| valueList | string[] | Yes | 表示指定的字符串值列表。 |
+| field | string | Yes | Field to match. It cannot contain '^'. If the value contains '^', the predicate becomes invalid and all data in the KV store will be returned. |
+| valueList | string[] | Yes | List of strings. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [Query](arkts-arkdata-distributeddata-query-c.md) | 返回Query对象。 |
+| [Query](arkts-arkdata-distributeddata-query-c.md) | Query** object created. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error.Possible causes:1.Mandatory parameters are left unspecified; &lt;br&gt;2.Incorrect parameters types; &lt;br&gt;3.Parameter verification failed. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error.Possible causes:1.Mandatory parameters are left unspecified; &lt;br&gt;2.Incorrect parameters types; &lt;br&gt;3.Parameter verification failed. |
 
 ## Examples
 
@@ -1032,13 +1038,13 @@ import { BusinessError } from '@kit.BasicServicesKit';
 try {
     let query: distributedKVStore.Query | null = new distributedKVStore.Query();
     if (query != null) {
-      query.notInString('field', ['test1', 'test2']);
+      query.notInString("field", ['test1', 'test2']);
       console.info(`query is ${query.getSqlLike()}`);
     }
     query = null;
-} catch (err) {
-    let error = err as BusinessError;
-    console.error(`An unexpected error occurred. Code: ${error.code}, message: ${error.message}`);
+} catch (e) {
+    let error = e as BusinessError;
+    console.error(`duplicated calls should be ok.code is ${error.code},message is ${error.message}`);
 }
 ```
 
@@ -1048,7 +1054,7 @@ try {
 or(): Query
 ```
 
-构造一个带有或条件的Query对象。需先通过equalTo、notEqualTo等谓词方法添加查询条件后，再调用or()连接多个条件，无前置谓词时调用or()无效。
+Creates a **Query** object with the OR condition.
 
 **Since:** 9
 
@@ -1064,7 +1070,7 @@ or(): Query
 
 | Type | Description |
 | --- | --- |
-| [Query](arkts-arkdata-distributeddata-query-c.md) | 返回查询对象。 |
+| [Query](arkts-arkdata-distributeddata-query-c.md) | Query** object created. |
 
 ## Examples
 
@@ -1074,15 +1080,14 @@ import { BusinessError } from '@kit.BasicServicesKit';
 try {
     let query: distributedKVStore.Query | null = new distributedKVStore.Query();
     if (query != null) {
-      query.notEqualTo('field', 'value1');
+      query.notEqualTo("field", "value1");
       query.or();
-      query.notEqualTo('field', 'value2');
-      console.info('query is ' + query.getSqlLike());
+      query.notEqualTo("field", "value2");
+      console.info("query is " + query.getSqlLike());
     }
     query = null;
-} catch (err) {
-    let error = err as BusinessError;
-    console.error(`An unexpected error occurred. Code: ${error.code}, message: ${error.message}`);
+} catch (e) {
+    console.error("duplicated calls should be ok :" + e);
 }
 ```
 
@@ -1092,14 +1097,15 @@ try {
 orderByAsc(field: string): Query
 ```
 
-构造一个Query对象，将查询结果按升序排序。
+Creates a **Query** object to sort the query results in ascending order.
 
-> **说明：**
+> **NOTE：**
 > 
-> 使用orderByAsc时需要结合[Schema](arkts-arkdata-distributedkvstore-schema-c.md)使用。
+> This API should be used together with [Schema](arkts-arkdata-distributedkvstore-schema-c.md).
 > 
-> 使用Schema创建数据库请参见[通过键值型数据库实现数据持久化](../../../database/data-persistence-by-kv-store.md#开发步骤)中使用getKVStore()方法创建并获
-> 取键值数据库示例。
+> For details about how to use **Schema** to create a database, see the example of creating and obtaining a KV
+> store using the **getKVStore()** method in
+> [Persisting KV Store Data](../../../database/data-persistence-by-kv-store.md#how-to-develop).
 
 **Since:** 9
 
@@ -1115,19 +1121,19 @@ orderByAsc(field: string): Query
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| field | string | Yes | 表示指定字段，不能包含'^'。包含'^'将导致谓词失效，查询结果会返回数据库中的所有数据。 |
+| field | string | Yes | Field to match. It cannot contain '^'. If the value contains '^', the predicate becomes invalid and all data in the KV store will be returned. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [Query](arkts-arkdata-distributeddata-query-c.md) | 返回Query对象。 |
+| [Query](arkts-arkdata-distributeddata-query-c.md) | Query** object created. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error.Possible causes:1.Mandatory parameters are left unspecified; &lt;br&gt;2.Incorrect parameters types; &lt;br&gt;3.Parameter verification failed. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error.Possible causes:1.Mandatory parameters are left unspecified; &lt;br&gt;2.Incorrect parameters types; &lt;br&gt;3.Parameter verification failed. |
 
 ## Examples
 
@@ -1137,14 +1143,14 @@ import { BusinessError } from '@kit.BasicServicesKit';
 try {
     let query: distributedKVStore.Query | null = new distributedKVStore.Query();
     if (query != null) {
-      query.notEqualTo('field', 'value');
-      query.orderByAsc('field');
+      query.notEqualTo("field", "value");
+      query.orderByAsc("field");
       console.info(`query is ${query.getSqlLike()}`);
     }
     query = null;
-} catch (err) {
-    let error = err as BusinessError;
-    console.error(`An unexpected error occurred. Code: ${error.code}, message: ${error.message}`);
+} catch (e) {
+    let error = e as BusinessError;
+    console.error(`duplicated calls should be ok.code is ${error.code},message is ${error.message}`);
 }
 ```
 
@@ -1154,14 +1160,15 @@ try {
 orderByDesc(field: string): Query
 ```
 
-构造一个Query对象，将查询结果按降序排序。
+Creates a **Query** object to sort the query results in descending order.
 
-> **说明：**
+> **NOTE：**
 > 
-> 使用orderByDesc时需要结合[Schema](arkts-arkdata-distributedkvstore-schema-c.md)使用。
+> This API should be used together with [Schema](arkts-arkdata-distributedkvstore-schema-c.md).
 > 
-> 使用Schema创建数据库请参见[通过键值型数据库实现数据持久化](../../../database/data-persistence-by-kv-store.md#开发步骤)中使用getKVStore()方法创建并获
-> 取键值数据库示例。
+> For details about how to use **Schema** to create a database, see the example of creating and obtaining a KV
+> store using the **getKVStore()** method in
+> [Persisting KV Store Data](../../../database/data-persistence-by-kv-store.md#how-to-develop).
 
 **Since:** 9
 
@@ -1177,19 +1184,19 @@ orderByDesc(field: string): Query
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| field | string | Yes | 表示指定字段，不能包含'^'。包含'^'将导致谓词失效，查询结果会返回数据库中的所有数据。 |
+| field | string | Yes | Field to match. It cannot contain '^'. If the value contains '^', the predicate becomes invalid and all data in the KV store will be returned. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [Query](arkts-arkdata-distributeddata-query-c.md) | 返回Query对象。 |
+| [Query](arkts-arkdata-distributeddata-query-c.md) | Query** object created. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error.Possible causes:1.Mandatory parameters are left unspecified; &lt;br&gt;2.Incorrect parameters types; &lt;br&gt;3.Parameter verification failed. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error.Possible causes:1.Mandatory parameters are left unspecified; &lt;br&gt;2.Incorrect parameters types; &lt;br&gt;3.Parameter verification failed. |
 
 ## Examples
 
@@ -1199,14 +1206,14 @@ import { BusinessError } from '@kit.BasicServicesKit';
 try {
     let query: distributedKVStore.Query | null = new distributedKVStore.Query();
     if (query != null) {
-      query.notEqualTo('field', 'value');
-      query.orderByDesc('field');
+      query.notEqualTo("field", "value");
+      query.orderByDesc("field");
       console.info(`query is ${query.getSqlLike()}`);
     }
     query = null;
-} catch (err) {
-    let error = err as BusinessError;
-    console.error(`An unexpected error occurred. Code: ${error.code}, message: ${error.message}`);
+} catch (e) {
+    let error = e as BusinessError;
+    console.error(`duplicated calls should be ok.code is ${error.code},message is ${error.message}`);
 }
 ```
 
@@ -1216,7 +1223,7 @@ try {
 prefixKey(prefix: string): Query
 ```
 
-创建具有指定键前缀的查询条件。
+Creates a **Query** object with a specified key prefix.
 
 **Since:** 9
 
@@ -1232,19 +1239,19 @@ prefixKey(prefix: string): Query
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| prefix | string | Yes | 表示指定的键前缀，长度范围为0-[MAX_KEY_LENGTH](arkts-arkdata-distributedkvstore-constants-i.md)，不能包含'^'。包含'^'将导致谓 词失效，查询结果会返回数据库中的所有数据。 |
+| prefix | string | Yes | Key prefix, which cannot contain '^'. If the value contains '^', the predicate becomes invalid and all data in the KV store will be returned. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [Query](arkts-arkdata-distributeddata-query-c.md) | 返回Query对象。 |
+| [Query](arkts-arkdata-distributeddata-query-c.md) | Query** object created. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error.Possible causes:1.Mandatory parameters are left unspecified; &lt;br&gt;2.Incorrect parameters types. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error.Possible causes:1.Mandatory parameters are left unspecified; &lt;br&gt;2.Incorrect parameters types. |
 
 ## Examples
 
@@ -1254,14 +1261,14 @@ import { BusinessError } from '@kit.BasicServicesKit';
 try {
     let query: distributedKVStore.Query | null = new distributedKVStore.Query();
     if (query != null) {
-      query.prefixKey('$.name');
-      query.prefixKey('0');
+      query.prefixKey("$.name");
+      query.prefixKey("0");
       console.info(`query is ${query.getSqlLike()}`);
     }
     query = null;
-} catch (err) {
-    let error = err as BusinessError;
-    console.error(`An unexpected error occurred. Code: ${error.code}, message: ${error.message}`);
+} catch (e) {
+    let error = e as BusinessError;
+    console.error(`duplicated calls should be ok.code is ${error.code},message is ${error.message}`);
 }
 ```
 
@@ -1271,7 +1278,7 @@ try {
 reset(): Query
 ```
 
-重置Query对象。
+Resets the **Query** object.
 
 **Since:** 9
 
@@ -1287,7 +1294,7 @@ reset(): Query
 
 | Type | Description |
 | --- | --- |
-| [Query](arkts-arkdata-distributeddata-query-c.md) | 返回重置后的Query对象，所有已添加的谓词条件被清空，可用于重新构建查询条件。 |
+| [Query](arkts-arkdata-distributeddata-query-c.md) | Query** object reset. |
 
 ## Examples
 
@@ -1297,15 +1304,14 @@ import { BusinessError } from '@kit.BasicServicesKit';
 try {
   let query: distributedKVStore.Query | null = new distributedKVStore.Query();
   if (query != null) {
-    query.equalTo('key', 'value');
-    console.info('query is ' + query.getSqlLike());
+    query.equalTo("key", "value");
+    console.info("query is " + query.getSqlLike());
     query.reset();
-    console.info('query is ' + query.getSqlLike());
+    console.info("query is " + query.getSqlLike());
   }
   query = null;
-} catch (err) {
-  let error = err as BusinessError;
-  console.error(`An unexpected error occurred. Code: ${error.code}, message: ${error.message}`);
+} catch (e) {
+  console.error("simply calls should be ok :" + e);
 }
 ```
 
@@ -1315,7 +1321,7 @@ try {
 setSuggestIndex(index: string): Query
 ```
 
-设置一个指定的索引，将优先用于查询。
+Creates a **Query** object with an index preferentially used for query.
 
 **Since:** 9
 
@@ -1331,19 +1337,19 @@ setSuggestIndex(index: string): Query
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| index | string | Yes | 表示要设置的索引，不能包含'^'。包含'^'将导致谓词失效，查询结果会返回数据库中的所有数据。 |
+| index | string | Yes | Index to set, which cannot contain '^'. If the value contains '^', the predicate becomes invalid and all data in the KV store will be returned. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [Query](arkts-arkdata-distributeddata-query-c.md) | 返回Query对象。 |
+| [Query](arkts-arkdata-distributeddata-query-c.md) | Query** object created. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error.Possible causes:1.Mandatory parameters are left unspecified; &lt;br&gt;2.Incorrect parameters types. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error.Possible causes:1.Mandatory parameters are left unspecified; &lt;br&gt;2.Incorrect parameters types. |
 
 ## Examples
 
@@ -1353,14 +1359,14 @@ import { BusinessError } from '@kit.BasicServicesKit';
 try {
     let query: distributedKVStore.Query | null = new distributedKVStore.Query();
     if (query != null) {
-      query.setSuggestIndex('$.name');
-      query.setSuggestIndex('0');
+      query.setSuggestIndex("$.name");
+      query.setSuggestIndex("0");
       console.info(`query is ${query.getSqlLike()}`);
     }
     query = null;
-} catch (err) {
-    let error = err as BusinessError;
-    console.error(`An unexpected error occurred. Code: ${error.code}, message: ${error.message}`);
+} catch (e) {
+    let error = e as BusinessError;
+    console.error(`duplicated calls should be ok.code is ${error.code},message is ${error.message}`);
 }
 ```
 
@@ -1370,14 +1376,15 @@ try {
 unlike(field: string, value: string): Query
 ```
 
-构造一个Query对象以查询具有与指定字符串值不相似的指定字段的条目。
+Creates a **Query** object to match the specified field whose value is not similar to the specified string.
 
-> **说明：**
+> **NOTE：**
 > 
-> 使用unlike时需要结合[Schema](arkts-arkdata-distributedkvstore-schema-c.md)使用。
+> This API should be used together with [Schema](arkts-arkdata-distributedkvstore-schema-c.md).
 > 
-> 使用Schema创建数据库请参见[通过键值型数据库实现数据持久化](../../../database/data-persistence-by-kv-store.md#开发步骤)中使用getKVStore()方法创建并获
-> 取键值数据库示例。
+> For details about how to use **Schema** to create a database, see the example of creating and obtaining a KV
+> store using the **getKVStore()** method in
+> [Persisting KV Store Data](../../../database/data-persistence-by-kv-store.md#how-to-develop).
 
 **Since:** 9
 
@@ -1393,20 +1400,20 @@ unlike(field: string, value: string): Query
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| field | string | Yes | 表示指定字段，不能包含'^'。包含'^'将导致谓词失效，查询结果会返回数据库中的所有数据。 |
-| value | string | Yes | 表示指定字段要不匹配的字符串值。 |
+| field | string | Yes | Field to match. It cannot contain '^'. If the value contains '^', the predicate becomes invalid and all data in the KV store will be returned. |
+| value | string | Yes | String specified. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [Query](arkts-arkdata-distributeddata-query-c.md) | 返回Query对象。 |
+| [Query](arkts-arkdata-distributeddata-query-c.md) | Query** object created. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error.Possible causes:1.Mandatory parameters are left unspecified; &lt;br&gt;2.Incorrect parameters types; &lt;br&gt;3.Parameter verification failed. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error.Possible causes:1.Mandatory parameters are left unspecified; &lt;br&gt;2.Incorrect parameters types; &lt;br&gt;3.Parameter verification failed. |
 
 ## Examples
 
@@ -1416,13 +1423,13 @@ import { BusinessError } from '@kit.BasicServicesKit';
 try {
     let query: distributedKVStore.Query | null = new distributedKVStore.Query();
     if (query != null) {
-      query.unlike('field', 'value');
+      query.unlike("field", "value");
       console.info(`query is ${query.getSqlLike()}`);
     }
     query = null;
-} catch (err) {
-    let error = err as BusinessError;
-    console.error(`An unexpected error occurred. Code: ${error.code}, message: ${error.message}`);
+} catch (e) {
+    let error = e as BusinessError;
+    console.error(`duplicated calls should be ok.code is ${error.code},message is ${error.message}`);
 }
 ```
 

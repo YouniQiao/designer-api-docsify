@@ -1,0 +1,33 @@
+# Constants
+
+## DEVICE_SHARED
+
+```TypeScript
+const DEVICE_SHARED: string
+```
+
+Provide the domain name for device shared Key.
+
+&lt;p&gt;This constants is a domain name for device level shared key.
+
+**Since:** 11
+
+<!--Device-domainName-const DEVICE_SHARED: string--><!--Device-domainName-const DEVICE_SHARED: string-End-->
+
+**System capability:** SystemCapability.Applications.Settings.Core
+
+## USER_PROPERTY
+
+```TypeScript
+const USER_PROPERTY: string
+```
+
+Provide the domain name for user property.
+
+&lt;p&gt;This constants is a domain name for user level key.
+
+**Since:** 11
+
+<!--Device-domainName-const USER_PROPERTY: string--><!--Device-domainName-const USER_PROPERTY: string-End-->
+
+**System capability:** SystemCapability.Applications.Settings.Core

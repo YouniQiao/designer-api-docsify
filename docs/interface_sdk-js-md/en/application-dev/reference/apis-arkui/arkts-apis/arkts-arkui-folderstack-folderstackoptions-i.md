@@ -1,6 +1,6 @@
 # FolderStackOptions
 
-FolderStack的配置项。
+FolderStack constructor options.
 
 **Since:** 23
 
@@ -16,7 +16,7 @@ FolderStack的配置项。
 upperItems?: Array<string>
 ```
 
-定义悬停态会被移到上半屏的子组件的id数组。当悬停触发时，upperItems数组中的子组件自动避让折叠屏折痕区后移到上半屏，其它组件堆叠在下半屏区域。
+Define the IDs of the sub component that will be moved to the upper half screen when hovering.
 
 Anonymous Object Rectification
 

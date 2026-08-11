@@ -1,6 +1,6 @@
 # DeviceInfo (System API)
 
-设备详细信息。
+Defines the detailed information about a device.
 
 **Since:** 12
 
@@ -24,7 +24,7 @@ import { deviceManager } from 'kits/@kit.DriverDevelopmentKit';
 deviceId: long
 ```
 
-设备ID。
+Device ID.
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：long
 
@@ -44,7 +44,7 @@ deviceId: long
 driverUid?: string
 ```
 
-设备匹配的驱动UID。
+UID of the driver matching the device.
 
 **Type:** string
 
@@ -64,7 +64,7 @@ driverUid?: string
 isDriverMatched: boolean
 ```
 
-设备是否匹配到驱动。`true`：匹配到驱动；`false`：未匹配到驱动。
+Whether the device matches the driver. The value `true` indicates the device matches the driver, and the value`false` indicates the opposite.
 
 **Type:** boolean
 

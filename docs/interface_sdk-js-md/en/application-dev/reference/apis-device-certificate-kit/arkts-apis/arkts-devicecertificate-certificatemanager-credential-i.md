@@ -1,6 +1,6 @@
 # Credential
 
-表示凭据详细信息。
+Represents detailed information about a credential.
 
 **Since:** 11
 
@@ -22,7 +22,7 @@ import { certificateManager } from 'kits/@kit.DeviceCertificateKit';
 alias: string
 ```
 
-表示凭据的别名，最大长度为128字节。
+Alias of a credential. The value contains up to 128 bytes.
 
 **Type:** string
 
@@ -40,7 +40,7 @@ alias: string
 certNum: int
 ```
 
-表示凭据中包含的证书个数。
+Number of certificates contained in the credential.
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
@@ -58,7 +58,7 @@ certNum: int
 certPurpose?: CertificatePurpose
 ```
 
-表示凭据的用途。默认值为CertificatePurpose.PURPOSE_DEFAULT。
+Credential usage. The default value is **CertificatePurpose.PURPOSE_DEFAULT**.
 
 **Type:** [CertificatePurpose](arkts-devicecertificate-certificatemanager-certificatepurpose-e.md)
 
@@ -76,7 +76,7 @@ certPurpose?: CertificatePurpose
 credentialData: Uint8Array
 ```
 
-表示凭据二进制数据，最大长度为20480字节。
+Binary data of a credential. The value contains up to 20480 bytes.
 
 **Type:** Uint8Array
 
@@ -94,7 +94,7 @@ credentialData: Uint8Array
 keyNum: int
 ```
 
-表示凭据中包含的密钥个数。
+Number of keys contained in the credential.
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
@@ -112,7 +112,7 @@ keyNum: int
 keyUri: string
 ```
 
-表示凭据的唯一标识符，最大长度为256字节。
+Unique identifier of a credential. The value contains up to 256 bytes.
 
 **Type:** string
 
@@ -130,7 +130,7 @@ keyUri: string
 type: string
 ```
 
-表示凭据的类型，最大长度为8字节。
+Type of a credential. The value contains up to 8 bytes.
 
 **Type:** string
 

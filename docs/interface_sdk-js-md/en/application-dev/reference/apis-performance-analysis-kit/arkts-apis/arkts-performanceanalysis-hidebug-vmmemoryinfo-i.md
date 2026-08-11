@@ -1,6 +1,6 @@
 # VMMemoryInfo
 
-VM�ڴ���Ϣ��
+Describes the VM memory information.
 
 **Since:** 12
 
@@ -22,7 +22,7 @@ import { hidebug } from 'kits/@kit.PerformanceAnalysisKit';
 allArraySize: bigint
 ```
 
-��ʾ��ǰ�������������������С����KBΪ��λ��
+Size of all array objects of the current VM, in KB.
 
 **Type:** bigint
 
@@ -40,7 +40,7 @@ allArraySize: bigint
 heapUsed: bigint
 ```
 
-��ʾ��ǰ�����ʹ�õĶѴ�С����KBΪ��λ��
+Heap size used by the current VM, in KB.
 
 **Type:** bigint
 
@@ -58,7 +58,7 @@ heapUsed: bigint
 totalHeap: bigint
 ```
 
-��ʾ��ǰ������Ķ��ܴ�С����KBΪ��λ��
+Total heap size of the current VM, in KB.
 
 **Type:** bigint
 

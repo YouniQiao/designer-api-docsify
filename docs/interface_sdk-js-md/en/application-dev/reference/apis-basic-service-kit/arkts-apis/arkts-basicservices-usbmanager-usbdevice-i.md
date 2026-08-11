@@ -1,6 +1,6 @@
 # USBDevice
 
-USB设备信息。
+Represents the USB device information.
 
 **Since:** 9
 
@@ -22,7 +22,7 @@ import { usbManager } from 'kits/@kit.BasicServicesKit';
 busNum: int
 ```
 
-总线地址。
+Bus address.
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
@@ -40,7 +40,7 @@ busNum: int
 clazz: int
 ```
 
-设备类。
+Device class.
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
@@ -58,7 +58,7 @@ clazz: int
 configs: Array<USBConfiguration>
 ```
 
-设备配置描述符信息。
+Device configuration descriptor information.
 
 **Type:** Array&lt;USBConfiguration&gt;
 
@@ -76,7 +76,7 @@ configs: Array<USBConfiguration>
 devAddress: int
 ```
 
-设备地址。
+Device address.
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
@@ -94,7 +94,7 @@ devAddress: int
 manufacturerName: string
 ```
 
-产商信息。
+Device manufacturer.
 
 **Type:** string
 
@@ -112,7 +112,7 @@ manufacturerName: string
 name: string
 ```
 
-设备名字。
+Device name.
 
 **Type:** string
 
@@ -130,7 +130,7 @@ name: string
 productId: int
 ```
 
-产品ID。
+Product ID.
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
@@ -148,7 +148,7 @@ productId: int
 productName: string
 ```
 
-产品信息。
+Product name.
 
 **Type:** string
 
@@ -166,7 +166,7 @@ productName: string
 protocol: int
 ```
 
-设备协议码。
+Device protocol code.
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
@@ -184,7 +184,7 @@ protocol: int
 serial: string
 ```
 
-序列号。
+Sequence number.
 
 **Type:** string
 
@@ -202,7 +202,7 @@ serial: string
 subClass: int
 ```
 
-设备子类。
+Device subclass.
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
@@ -220,7 +220,7 @@ subClass: int
 vendorId: int
 ```
 
-厂商ID。
+Vendor ID.
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
@@ -238,7 +238,7 @@ vendorId: int
 version: string
 ```
 
-版本。
+Version number.
 
 **Type:** string
 

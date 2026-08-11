@@ -12,7 +12,7 @@ import { notificationManager } from 'kits/@kit.NotificationKit';
 function disableNotificationFeature(disabled:boolean, bundleList: Array<string>): Promise<void>
 ```
 
-将应用包名添加到通知发布权限管控名单，以阻止应用发布通知。支持启用或关闭该功能。
+Disables the application from publishing notifications by adding the application bundle name to the permission control list. This function can be disabled as required.
 
 **Since:** 18
 
@@ -30,25 +30,25 @@ function disableNotificationFeature(disabled:boolean, bundleList: Array<string>)
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| disabled | boolean | Yes | 是否启用通知发布权限管控名单（true：开启，false：关闭）。 |
-| bundleList | Array&lt;string&gt; | Yes | 指定通知发布权限管控名单的应用列表，使用包名代表应用。 |
+| disabled | boolean | Yes | Whether to enable the permission control list for publishing notifications (**true**: enabled; **false**: disabled). |
+| bundleList | Array&lt;string&gt; | Yes | Application list under the permission control list. The bundle name is used to represent a specific application. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise对象。无返回结果的Promise对象。 |
+| Promise&lt;void&gt; | Promise that returns no value. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. 3. Parameter verification failed. |
-| 801 | Capability not supported. |
-| 201 | Permission denied. |
-| 1600001 | Internal error. |
-| 202 | Not system application to call the interface. |
-| 1600002 | Marshalling or unmarshalling error. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. 3. Parameter verification failed. |
+| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
+| [1600001](../errorcode-notification.md#1600001-internal-error) | Internal error. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system application to call the interface. |
+| [1600002](../errorcode-notification.md#1600002-marshalling-or-unmarshalling-error) | Marshalling or unmarshalling error. |
 
 ## Examples
 
@@ -76,7 +76,7 @@ try {
 function disableNotificationFeature(disabled: boolean, bundleList: Array<string>, userId: int): Promise<void>
 ```
 
-将应用包名添加到通知发布权限管控名单，以阻止应用发布通知。使用Promise异步回调。
+Disables the application from publishing notifications by adding the application bundle name to the permission control list. This API uses a promise to return the result.
 
 **Since:** 20
 
@@ -94,24 +94,24 @@ function disableNotificationFeature(disabled: boolean, bundleList: Array<string>
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| disabled | boolean | Yes | 表示是否启用通知发布权限管控名单。true表示启用，false表示关闭。 |
-| bundleList | Array&lt;string&gt; | Yes | 指定通知发布权限管控名单的应用列表，使用包名表示应用。 |
-| userId | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | 表示用户ID。 |
+| disabled | boolean | Yes | Whether to enable the notification permission control list. The value **true** indicates that the notification permission control list is enabled; **false** indicates the opposite. |
+| bundleList | Array&lt;string&gt; | Yes | Bundles under the permission control list. The bundle name is used to represent a specific application. |
+| userId | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | User ID. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise对象，无返回结果。 |
+| Promise&lt;void&gt; | Promise that returns no value. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 201 | Permission verification failed. The application does not have the permission required to call the API. |
-| 1600001 | Internal error. |
-| 202 | Permission verification failed. A non-system application calls a system API. |
-| 1600002 | Marshalling or unmarshalling error. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed. The application does not have the permission required to call the API. |
+| [1600001](../errorcode-notification.md#1600001-internal-error) | Internal error. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
+| [1600002](../errorcode-notification.md#1600002-marshalling-or-unmarshalling-error) | Marshalling or unmarshalling error. |
 
 ## Examples
 

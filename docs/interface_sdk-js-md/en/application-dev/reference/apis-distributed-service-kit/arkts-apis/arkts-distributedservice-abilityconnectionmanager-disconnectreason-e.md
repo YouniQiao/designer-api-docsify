@@ -1,6 +1,6 @@
 # DisconnectReason
 
-当前断连原因的枚举。
+Enumerates the disconnection reasons.
 
 **Since:** 18
 
@@ -16,7 +16,7 @@
 PEER_APP_CLOSE_COLLABORATION = 0
 ```
 
-表示对端应用主动关闭了协作。
+The peer application proactively disables collaboration.
 
 **Since:** 18
 
@@ -34,7 +34,7 @@ PEER_APP_CLOSE_COLLABORATION = 0
 PEER_APP_EXIT = 1
 ```
 
-表示对端应用退出。
+The peer application exits.
 
 **Since:** 18
 
@@ -52,7 +52,7 @@ PEER_APP_EXIT = 1
 NETWORK_DISCONNECTED = 2
 ```
 
-表示网络断开。
+The network is disconnected.
 
 **Since:** 18
 

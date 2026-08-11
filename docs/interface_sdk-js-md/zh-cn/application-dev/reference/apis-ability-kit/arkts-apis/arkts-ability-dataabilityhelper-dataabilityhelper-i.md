@@ -92,7 +92,7 @@ call(uri: string, method: string, arg: string, extras: PacMap, callback: AsyncCa
 | uri | string | 是 | 表示待处理的DataAbility。例：'dataability:///com.example.xxx.xxxx'。 |
 | method | string | 是 | 表示被调用的方法名。 |
 | arg | string | 是 | 表示需传入的参数。 |
-| extras | [PacMap](arkts-ability-common-pacmap-t.md) | 是 | 表示扩展的键值对参数。 |
+| extras | [PacMap](arkts-ability-dataabilityhelper-pacmap-i.md) | 是 | 表示扩展的键值对参数。 |
 | callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;PacMap&gt; | 是 | 回调函数，返回扩展的键值对参数。 |
 
 ## call
@@ -120,7 +120,7 @@ call(uri: string, method: string, arg: string, extras: PacMap): Promise<PacMap>
 | uri | string | 是 | 表示待处理的DataAbility。例：'dataability:///com.example.xxx.xxxx'。 |
 | method | string | 是 | 表示被调用的方法名。 |
 | arg | string | 是 | 表示需传入的参数。 |
-| extras | [PacMap](arkts-ability-common-pacmap-t.md) | 是 | 表示扩展的键值对参数。 |
+| extras | [PacMap](arkts-ability-dataabilityhelper-pacmap-i.md) | 是 | 表示扩展的键值对参数。 |
 
 **返回值：**
 

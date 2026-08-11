@@ -1,6 +1,6 @@
 # Reference (System API)
 
-记录表之间通过表字段指定的关联关系。其中表a关联到表b，称a为b关联的子表，b为a关联的父表。
+Indicates the reference between tables.
 
 **Since:** 11
 
@@ -24,7 +24,7 @@ import { relationalStore } from 'kits/@kit.ArkData';
 refFields: Record<string, string>
 ```
 
-表示关联表的关联字段。键值数据中键为子表字段，值为父表字段。
+Indicates the reference fields.
 
 **Type:** [Record](../../apis-default/arkts-apis/arkts-record-t.md)&lt;string, string&gt;
 
@@ -44,7 +44,7 @@ refFields: Record<string, string>
 sourceTable: string
 ```
 
-关联的子表名称。
+Indicates the table that references another table.
 
 **Type:** string
 
@@ -64,7 +64,7 @@ sourceTable: string
 targetTable: string
 ```
 
-关联的父表名称。
+Indicates the table to be referenced.
 
 **Type:** string
 

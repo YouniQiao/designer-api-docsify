@@ -130,7 +130,7 @@ builder?: CustomBuilder
 
 当列表项向左或向右滑动（当列表方向为"垂直"时），向上或向下滑动（当列表方向为"水平"时）时显示的操作项。
 
-**类型：** [CustomBuilder](arkts-arkui-custombuilder-t.md)
+**类型：** [CustomBuilder](../arkts-apis/arkts-arkui-custombuilder-t.md)
 
 **起始版本：** 10
 

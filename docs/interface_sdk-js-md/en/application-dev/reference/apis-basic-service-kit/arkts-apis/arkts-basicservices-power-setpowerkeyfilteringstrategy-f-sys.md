@@ -12,9 +12,10 @@ import { power } from 'kits/@kit.BasicServicesKit';
 function setPowerKeyFilteringStrategy(strategy: PowerKeyFilteringStrategy): void
 ```
 
-设置电源键过滤策略，在电源服务订阅电源键事件后，用于配置电源键事件的处理方式。
+Sets the power key filtering strategy. After the power service subscribes to the power key event, this API is used to configure the processing mode of this event.
 
-电源键过滤策略见[power.PowerKeyFilteringStrategy](arkts-basicservices-power-powerkeyfilteringstrategy-e.md)接口。
+For details about the power key filtering strategy, see  
+[power.PowerKeyFilteringStrategy](arkts-basicservices-power-powerkeyfilteringstrategy-e.md).
 
 **Since:** 21
 
@@ -32,15 +33,15 @@ function setPowerKeyFilteringStrategy(strategy: PowerKeyFilteringStrategy): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| strategy | [PowerKeyFilteringStrategy](arkts-basicservices-power-powerkeyfilteringstrategy-e.md) | Yes | 电源键过滤策略。该参数必须为枚举类型。 |
+| strategy | [PowerKeyFilteringStrategy](arkts-basicservices-power-powerkeyfilteringstrategy-e.md) | Yes | Power key filtering strategy. The value must be of the enum type. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 201 | Permission verification failed. The application does not have the permission required to call the API. |
-| 202 | Permission verification failed. A non-system application calls a system API. |
-| 4900101 | Failed to connect to the service. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed. The application does not have the permission required to call the API. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
+| [4900101](../../apis-basic-services-kit/errorcode-power.md#4900101-service-connection-failure) | Failed to connect to the service. |
 
 ## Examples
 

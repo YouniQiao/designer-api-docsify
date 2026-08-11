@@ -1,6 +1,6 @@
 # SelectFrameNode
 
-定义Select类型的FrameNode。
+Define the Select type of FrameNode.
 
 **Inheritance/Implementation:** SelectFrameNode extends [TypedFrameNode<SelectAttribute>](TypedFrameNode<SelectAttribute>)
 
@@ -18,7 +18,7 @@
 abstract initialize(value: Array<SelectOption>): SelectAttribute
 ```
 
-初始化Select类型的FrameNode。
+Initialize Select FrameNode.
 
 **Since:** 23
 

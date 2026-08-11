@@ -1,6 +1,6 @@
 # SourceType
 
-表示媒体源的类型。
+Enumerates the media source types.
 
 **Since:** 23
 
@@ -16,7 +16,7 @@
 URL = 0
 ```
 
-媒体源的类型是URL。
+URL.
 
 **Since:** 23
 
@@ -32,7 +32,7 @@ URL = 0
 MSE = 1
 ```
 
-媒体源的类型是blob。
+Blob.
 
 **Since:** 23
 

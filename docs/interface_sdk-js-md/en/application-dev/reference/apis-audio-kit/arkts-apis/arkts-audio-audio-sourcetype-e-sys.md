@@ -1,6 +1,6 @@
 # SourceType
 
-表示录制音频流类型的枚举。
+Enumerates the types of audio streams captured.
 
 **Since:** 8
 

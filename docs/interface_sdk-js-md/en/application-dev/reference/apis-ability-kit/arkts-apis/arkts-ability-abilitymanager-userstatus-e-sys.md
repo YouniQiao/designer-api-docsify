@@ -1,6 +1,6 @@
 # UserStatus (System API)
 
-用户操作的断言调试结果，该类型为枚举。
+Enumerates the assertion result for different user operations.
 
 **Since:** 12
 
@@ -18,7 +18,7 @@
 ASSERT_TERMINATE = 0
 ```
 
-表示用户点击终止的操作的断言调试结果。
+Assertion result of the terminate operation.
 
 **Since:** 12
 
@@ -38,7 +38,7 @@ ASSERT_TERMINATE = 0
 ASSERT_CONTINUE = 1
 ```
 
-表示用户点击继续的操作的断言调试结果。
+Assertion result of the continue operation.
 
 **Since:** 12
 
@@ -58,7 +58,7 @@ ASSERT_CONTINUE = 1
 ASSERT_RETRY = 2
 ```
 
-表示用户点击重试的操作的断言调试结果。
+Assertion result of the retry operation.
 
 **Since:** 12
 

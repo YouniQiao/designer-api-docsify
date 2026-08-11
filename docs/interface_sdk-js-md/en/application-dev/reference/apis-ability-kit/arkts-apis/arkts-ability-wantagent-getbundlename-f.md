@@ -12,7 +12,7 @@ import { WantAgent } from 'kits/@kit.AbilityKit';
 function getBundleName(agent: WantAgent, callback: AsyncCallback<string>): void
 ```
 
-获取WantAgent实例所属应用的包名，使用callback异步回调。
+Obtains the bundle name of a WantAgent object.This API uses an asynchronous callback to return the result.
 
 **Since:** 9
 
@@ -28,16 +28,16 @@ function getBundleName(agent: WantAgent, callback: AsyncCallback<string>): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| agent | [WantAgent](arkts-ability-wantagent-t.md) | Yes | WantAgent对象。 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;string&gt; | Yes | 回调函数。当获取包名成功，err为undefined，data为创建的WantAgent；否则err会返回对应的错误码和错误信息。 |
+| agent | [WantAgent](arkts-ability-wantagent-t.md) | Yes | Target WantAgent object. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;string&gt; | Yes | Callback used to return the bundle name. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types. |
-| 16000007 | Service busy. There are concurrent tasks. Try again later. |
-| 16000151 | Invalid wantAgent object. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types. |
+| [16000007](../errorcode-ability.md#16000007-service-unresponsive) | Service busy. There are concurrent tasks. Try again later. |
+| [16000151](../errorcode-ability.md#16000151-invalid-wantagent-object) | Invalid wantAgent object. |
 
 ## Examples
 
@@ -112,7 +112,7 @@ try {
 function getBundleName(agent: WantAgent): Promise<string>
 ```
 
-获取WantAgent实例所属应用的包名。使用Promise异步回调。
+Obtains the bundle name of a WantAgent object.This API uses a promise to return the result.
 
 **Since:** 9
 
@@ -128,21 +128,21 @@ function getBundleName(agent: WantAgent): Promise<string>
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| agent | [WantAgent](arkts-ability-wantagent-t.md) | Yes | WantAgent对象。 |
+| agent | [WantAgent](arkts-ability-wantagent-t.md) | Yes | Target WantAgent object. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;string&gt; | Promise对象，返回获取WantAgent实例的包名。 |
+| Promise&lt;string&gt; | Promise used to return the bundle name. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types. |
-| 16000007 | Service busy. There are concurrent tasks. Try again later. |
-| 16000151 | Invalid wantAgent object. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types. |
+| [16000007](../errorcode-ability.md#16000007-service-unresponsive) | Service busy. There are concurrent tasks. Try again later. |
+| [16000151](../errorcode-ability.md#16000151-invalid-wantagent-object) | Invalid wantAgent object. |
 
 ## Examples
 

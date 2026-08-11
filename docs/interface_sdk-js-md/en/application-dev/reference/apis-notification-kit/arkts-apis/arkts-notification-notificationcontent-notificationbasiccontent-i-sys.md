@@ -1,6 +1,6 @@
 # NotificationBasicContent
 
-描述普通文本通知，用于展示标题和正文内容，是其他通知类型的基础内容结构。其他通知类型（如长文本、多行文本、图片、实况窗）均继承本接口，在此基础上扩展各自特有字段。
+Describes the basic text notification, which is used to display the title and body content. It serves as the basic content structure for other notification types. Other notification types (such as long text, multi-line text, picture, and live view) inherit this API and extend their own specific fields on this basis.
 
 **Since:** 7
 
@@ -16,7 +16,7 @@
 structuredText?: Map<string, string>
 ```
 
-通知结构化字段。当前仅支持服务提醒类短信在通知中心结构化展示。默认为空。（key/value大小不超过512字节，超出部分会被截断，最多支持3对结构化数据，超出部分会被忽略。）
+Structured notification. Currently, only service reminder messages can be displayed in structured format in the notification center. This parameter is left empty by default. (The size of key or value cannot exceed 512bytes; otherwise, the excess part will be truncated. Only a maximum of three pairs of structured data are supported.)
 
 **Type:** Map&lt;string, string&gt;
 

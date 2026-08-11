@@ -6,6 +6,8 @@
 export declare function edgeWidths(all: double): NodeEdges<double>
 ```
 
+Obtain an object with all edges are set to the same width.
+
 **Since:** 23
 
 **ArkTS mode:** ArkTS-Sta only, since version 23.
@@ -20,11 +22,11 @@ export declare function edgeWidths(all: double): NodeEdges<double>
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| all | double | Yes | 边框宽度，单位为vp。&lt;br/&gt;取值范围：[0, +∞) |
+| all | double | Yes | The edge width will be set. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [NodeEdges](arkts-arkui-graphics-nodeedges-i.md)&lt;double&gt; | 边框宽度均设置为传入值的边框宽度对象。 |
+| [NodeEdges](arkts-arkui-graphics-nodeedges-i.md)&lt;double&gt; | The object with all edges are set to the same width. |
 

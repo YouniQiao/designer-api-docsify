@@ -4,7 +4,7 @@
 export type Context = _Context
 ```
 
-Context模块。
+Defines the Context module.
 
 **Since:** 9
 

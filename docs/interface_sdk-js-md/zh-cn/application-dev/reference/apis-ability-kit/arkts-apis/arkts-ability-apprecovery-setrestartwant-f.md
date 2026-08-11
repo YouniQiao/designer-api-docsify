@@ -1,11 +1,5 @@
 # setRestartWant
 
-## 导入模块
-
-```TypeScript
-import { appRecovery } from 'kits/@kit.AbilityKit';
-```
-
 ## setRestartWant
 
 ```TypeScript
@@ -34,8 +28,37 @@ function setRestartWant(want: Want): void
 
 ## 示例
 
+ArkTS-Dyn示例：
+
 ```TypeScript
 import { appRecovery, Want } from '@kit.AbilityKit';
+
+@Entry
+@Component
+struct Index {
+  build() {
+    Button("启动到恢复Ability")
+      .fontSize(40)
+      .fontWeight(FontWeight.Bold)
+      .onClick(() => {
+        // set restart want
+        let want: Want = {
+          bundleName: "ohos.samples.recovery",
+          abilityName: "RecoveryAbility"
+        };
+
+        appRecovery.setRestartWant(want);
+      })
+  }
+}
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+'use static'
+import { appRecovery, Want } from '@kit.AbilityKit';
+import { Entry, Component, Button, FontWeight } from '@kit.ArkUI';
 
 @Entry
 @Component

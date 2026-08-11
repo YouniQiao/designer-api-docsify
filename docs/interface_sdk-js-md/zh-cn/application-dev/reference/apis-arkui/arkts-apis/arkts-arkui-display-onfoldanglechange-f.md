@@ -1,11 +1,5 @@
 # onFoldAngleChange
 
-## 导入模块
-
-```TypeScript
-import { display } from 'kits/@kit.ArkUI';
-```
-
 ## onFoldAngleChange
 
 ```TypeScript
@@ -32,5 +26,16 @@ Register the callback for fold angle changes.
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 1400003 | This display manager service works abnormally. |
+| [1400003](../errorcode-display.md#1400003-系统服务工作异常) | This display manager service works abnormally. |
+
+## 示例
+
+```TypeScript
+import { Callback } from '@kit.BasicServicesKit';
+
+let callback: Callback<Array<double>> = (angles: Array<double>) => {
+  console.info(`Listening fold angles length: ${angles.length}`);
+};
+display.onFoldAngleChange(callback);
+```
 

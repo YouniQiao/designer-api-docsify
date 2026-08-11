@@ -1,6 +1,6 @@
 # HapticFeedbackMode
 
-菜单弹出时振动效果。
+Enumerates the haptic feedback modes used when the menu is displayed.
 
 **Since:** 18
 
@@ -16,7 +16,7 @@
 DISABLED = 0
 ```
 
-菜单弹出时不振动。
+The menu is displayed without haptic feedback.
 
 **Since:** 18
 
@@ -36,7 +36,7 @@ DISABLED = 0
 ENABLED = 1
 ```
 
-菜单弹出时振动。
+The menu is displayed with haptic feedback.
 
 **Since:** 18
 
@@ -56,7 +56,7 @@ ENABLED = 1
 AUTO = 2
 ```
 
-菜单振动效果跟随系统，当前为菜单有蒙层时振动。
+Whether to enable haptic feedback is subject to system settings. It is enabled when the menu has a mask.
 
 **Since:** 18
 

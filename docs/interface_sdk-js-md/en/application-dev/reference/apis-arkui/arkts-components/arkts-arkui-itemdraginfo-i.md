@@ -1,6 +1,6 @@
 # ItemDragInfo
 
-拖拽点信息对象。
+ItemDragInfo object description
 
 **Since:** 11
 
@@ -16,7 +16,7 @@
 x: number
 ```
 
-当前拖拽点的x坐标，单位vp。
+Obtains the X coordinate of the drag window, in vp.
 
 **Type:** number
 
@@ -36,7 +36,7 @@ x: number
 y: number
 ```
 
-当前拖拽点的y坐标，单位vp。
+Obtains the Y coordinate of the drag window, in vp.
 
 **Type:** number
 

@@ -1,6 +1,6 @@
 # SyncedPropertyTwoWay (System API)
 
-继承自[SubscribedAbstractProperty\&lt;T\&gt;](arkts-arkui-subscribedabstractproperty-c.md)。用于实现父子组件之间的双向状态数据同步。
+Inherits from [SubscribedAbstractProperty&lt;T&gt;](arkts-arkui-subscribedabstractproperty-c.md). Represents a property with two-way synchronization.
 
 **Inheritance/Implementation:** SyncedPropertyTwoWay extends [SubscribedAbstractProperty<T>](SubscribedAbstractProperty<T>) and implements [ISinglePropertyChangeSubscriber<T>](ISinglePropertyChangeSubscriber<T>)
 
@@ -20,7 +20,7 @@
 aboutToBeDeleted(unsubscribeMe?: IPropertySubscriber): void
 ```
 
-销毁时调用。
+Called when the object is about to be destroyed.
 
 **Since:** 7
 
@@ -36,7 +36,7 @@ aboutToBeDeleted(unsubscribeMe?: IPropertySubscriber): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| unsubscribeMe | [IPropertySubscriber](arkts-arkui-ipropertysubscriber-i-sys.md) | No | 被取消的订阅者，需为已订阅的订阅者；不传入则取消所有订阅者。 |
+| unsubscribeMe | [IPropertySubscriber](arkts-arkui-ipropertysubscriber-i-sys.md) | No | Subscriber to remove. |
 
 ## constructor
 
@@ -44,7 +44,7 @@ aboutToBeDeleted(unsubscribeMe?: IPropertySubscriber): void
 constructor(source: SubscribedAbstractProperty<T>, subscribeMe?: IPropertySubscriber, info?: string)
 ```
 
-构造函数。订阅关系不再需要时，应调用[unlinkSuscriber()](arkts-arkui-subscribedabstractproperty-c.md#unlinksuscriber)解除订阅（订阅者ID通过[IPropertySubscriber](arkts-arkui-ipropertysubscriber-i-sys.md).[id()](arkts-arkui-ipropertysubscriber-i-sys.md#id)获取），或调用本对象的[aboutToBeDeleted()](arkts-arkui-syncedpropertytwoway-c-sys.md#abouttobedeleted)方法处理取消订阅。
+Constructor.
 
 **Since:** 7
 
@@ -60,9 +60,9 @@ constructor(source: SubscribedAbstractProperty<T>, subscribeMe?: IPropertySubscr
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| source | [SubscribedAbstractProperty](arkts-arkui-storageproperty-subscribedabstractproperty-i.md)&lt;T&gt; | Yes | 双向同步属性的数据源。 |
-| subscribeMe | [IPropertySubscriber](arkts-arkui-ipropertysubscriber-i-sys.md) | No | 订阅者，用于接收属性变化通知；不传入则不建立订阅关系。 |
-| info | string | No | 变量信息，用于标识该订阅关系；不传入时默认为undefined。 |
+| source | [SubscribedAbstractProperty](arkts-arkui-storageproperty-subscribedabstractproperty-i.md)&lt;T&gt; | Yes | Data source for the two-way synchronized property. |
+| subscribeMe | [IPropertySubscriber](arkts-arkui-ipropertysubscriber-i-sys.md) | No | Subscriber. |
+| info | string | No | Additional information about the subscriber. |
 
 ## get
 
@@ -70,7 +70,7 @@ constructor(source: SubscribedAbstractProperty<T>, subscribeMe?: IPropertySubscr
 get(): T
 ```
 
-获取数据时调用。
+Obtains the current value of the property.
 
 **Since:** 7
 
@@ -86,7 +86,7 @@ get(): T
 
 | Type | Description |
 | --- | --- |
-| T | 返回双向同步属性当前的数据值。 |
+| T | Instance of the T type. |
 
 ## hasChanged
 
@@ -94,7 +94,7 @@ get(): T
 hasChanged(newValue: T): void
 ```
 
-变化时调用。
+Notifies subscribers that the property value has changed.
 
 **Since:** 7
 
@@ -110,7 +110,7 @@ hasChanged(newValue: T): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| newValue | T | Yes | 更改后的新值。 |
+| newValue | T | Yes | Instance of the T type. |
 
 ## set
 
@@ -118,7 +118,7 @@ hasChanged(newValue: T): void
 set(newValue: T): void
 ```
 
-赋值时调用。
+Sets a new value for the property.
 
 **Since:** 7
 
@@ -134,7 +134,7 @@ set(newValue: T): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| newValue | T | Yes | 要设置的新值。 |
+| newValue | T | Yes | Instance of the T type. |
 
 ## source_
 
@@ -142,7 +142,7 @@ set(newValue: T): void
 private source_
 ```
 
-双向同步属性的数据源。
+Data source for the two-way synchronized property.
 
 **Since:** 7
 

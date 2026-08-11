@@ -12,7 +12,7 @@ import { reminderAgentManager } from 'kits/@kit.BackgroundTasksKit';
 function subscribeReminderState(callback: Callback<Array<ReminderState>>): Promise<void>
 ```
 
-订阅代理提醒状态。使用Promise异步回调。
+Subscribes to agent-powered reminder state changes. This API uses a promise to return the result.
 
 **Since:** 23
 
@@ -30,20 +30,20 @@ function subscribeReminderState(callback: Callback<Array<ReminderState>>): Promi
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;Array&lt;ReminderState&gt;&gt; | Yes | 回调函数，返回代理提醒状态信息。 |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;Array&lt;ReminderState&gt;&gt; | Yes | Callback used to return the agent-powered reminder state. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise对象，无返回结果。 |
+| Promise&lt;void&gt; | Promise that returns no value. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 201 | Permission denied. |
-| 1700007 | If the input parameter is not valid parameter. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
+| [1700007](../../apis-backgroundtasks-kit/errorcode-reminderAgentManager.md#1700007-invalid-parameter) | If the input parameter is not valid parameter. |
 
 ## Examples
 

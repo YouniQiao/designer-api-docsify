@@ -1,11 +1,5 @@
 # setPrinterPreferences（系统接口）
 
-## 导入模块
-
-```TypeScript
-import { print } from 'kits/@kit.BasicServicesKit';
-```
-
 ## setPrinterPreferences
 
 ```TypeScript
@@ -43,15 +37,15 @@ function setPrinterPreferences(printerId: string, printerPreferences: PrinterPre
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
-| 201 | the application does not have permission to call this function. |
-| 202 | not system application |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
+| [201](../../errorcode-universal.md#201-权限校验失败) | the application does not have permission to call this function. |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | not system application |
 
 ## 示例
 
 ```TypeScript
 import { print } from '@kit.BasicServicesKit';
-import { BusinessError } from '@kit.BasicServicesKit';
+import { BusinessError } from '@ohos.base';
 
 let printerId : string = 'testPrinterId';
 let preferences : print.PrinterPreferences = {
@@ -60,7 +54,7 @@ let preferences : print.PrinterPreferences = {
 print.setPrinterPreferences(printerId, preferences).then(() => {
     console.info('setPrinterPreferences success');
 }).catch((error: BusinessError) => {
-    console.error(`Failed to set printer preferences. Code: ${error.code}, message: ${error.message}`);
-});
+    console.error('setPrinterPreferences error : ' + JSON.stringify(error));
+})
 ```
 

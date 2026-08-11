@@ -2,9 +2,9 @@
 
 HorizontalAlign enumeration description.
 
-**Since:** 11
+**Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 11.
+**ArkTS mode:** ArkTS-Dyn only, since version 7.
 
 <!--Device-unnamed-declare enum HorizontalAlign--><!--Device-unnamed-declare enum HorizontalAlign-End-->
 
@@ -18,13 +18,13 @@ Start
 
 Aligns the start end in the language direction.
 
-**Since:** 11
+**Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 11.
+**ArkTS mode:** ArkTS-Dyn only, since version 7.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
-**Widget capability:** This API can be used in ArkTS widgets since API version 11.
+**Widget capability:** This API can be used in ArkTS widgets since API version 9.
 
 <!--Device-HorizontalAlign-Start--><!--Device-HorizontalAlign-Start-End-->
 
@@ -38,13 +38,13 @@ Center
 
 Center alignment. The default alignment mode is used.
 
-**Since:** 11
+**Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 11.
+**ArkTS mode:** ArkTS-Dyn only, since version 7.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
-**Widget capability:** This API can be used in ArkTS widgets since API version 11.
+**Widget capability:** This API can be used in ArkTS widgets since API version 9.
 
 <!--Device-HorizontalAlign-Center--><!--Device-HorizontalAlign-Center-End-->
 
@@ -58,13 +58,13 @@ End
 
 Aligns the ends in the language direction.
 
-**Since:** 11
+**Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 11.
+**ArkTS mode:** ArkTS-Dyn only, since version 7.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
-**Widget capability:** This API can be used in ArkTS widgets since API version 11.
+**Widget capability:** This API can be used in ArkTS widgets since API version 9.
 
 <!--Device-HorizontalAlign-End--><!--Device-HorizontalAlign-End-End-->
 

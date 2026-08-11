@@ -1,11 +1,5 @@
 # showToast
 
-## 导入模块
-
-```TypeScript
-import { prompt } from 'kits/@kit.ArkUI';
-```
-
 ## showToast
 
 ```TypeScript

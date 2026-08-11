@@ -1,6 +1,6 @@
 # CircleOptions
 
-用于描述Circle组件绘制属性。
+Defines circle options for Circle component.
 
 **Since:** 23
 
@@ -16,7 +16,7 @@
 height?: Length
 ```
 
-高度，取值范围≥0。&lt;br/&gt;默认值：0&lt;br/&gt;默认单位：vp&lt;br/&gt;异常值undefined、null、NaN和Infinity按照默认值处理。
+Defines the height property.
 
 **Type:** [Length](arkts-arkui-length-t.md)
 
@@ -36,7 +36,7 @@ height?: Length
 width?: Length
 ```
 
-宽度，取值范围≥0。&lt;br/&gt;默认值：0&lt;br/&gt;默认单位：vp&lt;br/&gt;异常值undefined、null、NaN和Infinity按照默认值处理。
+Defines the width property.
 
 **Type:** [Length](arkts-arkui-length-t.md)
 

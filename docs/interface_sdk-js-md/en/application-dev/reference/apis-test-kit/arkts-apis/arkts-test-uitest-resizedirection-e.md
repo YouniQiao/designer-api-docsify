@@ -1,6 +1,6 @@
 # ResizeDirection
 
-窗口调整大小的方向。
+Enumerates the directions in which a window can be resized.
 
 **Since:** 9
 
@@ -16,7 +16,7 @@
 LEFT = 0
 ```
 
-左方。
+Left.
 
 **Since:** 9
 
@@ -34,7 +34,7 @@ LEFT = 0
 RIGHT = 1
 ```
 
-右方。
+Right.
 
 **Since:** 9
 
@@ -52,7 +52,7 @@ RIGHT = 1
 UP = 2
 ```
 
-上方。
+Up.
 
 **Since:** 9
 
@@ -70,7 +70,7 @@ UP = 2
 DOWN = 3
 ```
 
-下方。
+Down.
 
 **Since:** 9
 
@@ -88,7 +88,7 @@ DOWN = 3
 LEFT_UP = 4
 ```
 
-左上方。
+Upper left.
 
 **Since:** 9
 
@@ -106,7 +106,7 @@ LEFT_UP = 4
 LEFT_DOWN = 5
 ```
 
-左下方。
+Lower left.
 
 **Since:** 9
 
@@ -124,7 +124,7 @@ LEFT_DOWN = 5
 RIGHT_UP = 6
 ```
 
-右上方。
+Upper right.
 
 **Since:** 9
 
@@ -142,7 +142,7 @@ RIGHT_UP = 6
 RIGHT_DOWN = 7
 ```
 
-右下方。
+Lower right.
 
 **Since:** 9
 

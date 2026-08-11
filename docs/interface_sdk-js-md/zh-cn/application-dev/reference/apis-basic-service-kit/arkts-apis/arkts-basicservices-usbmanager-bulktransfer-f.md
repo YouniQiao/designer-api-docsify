@@ -1,11 +1,5 @@
 # bulkTransfer
 
-## 导入模块
-
-```TypeScript
-import { usbManager } from 'kits/@kit.BasicServicesKit';
-```
-
 ## bulkTransfer
 
 ```TypeScript
@@ -54,18 +48,17 @@ function bulkTransfer(
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 401 | Parameter error. Possible causes:  &lt;br&gt;1.Mandatory parameters are left unspecified.  &lt;br&gt;2.Incorrect parameter types. |
-| 801 | Capability not supported.<br>**适用版本：** 18+ |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes:  &lt;br&gt;1.Mandatory parameters are left unspecified.  &lt;br&gt;2.Incorrect parameter types. |
+| [801](../../errorcode-universal.md#801-该设备不支持此api) | Capability not supported.<br>**适用版本：** 18+ |
 
 ## 示例
 
 以下示例代码只是调用bulkTransfer接口的必要流程，实际调用时，设备开发者需要遵循目标USB设备的协议规范进行调用，具体协议要求请参考设备的技术文档，确保数据的正确传输和设备的兼容性。
 
 ```TypeScript
-import {BusinessError} from '@kit.BasicServicesKit';
 // usbManager.getDevices 接口返回数据集合，取其中一个设备对象，并获取权限。
 // 把获取到的设备对象作为参数传入usbManager.connectDevice；当usbManager.connectDevice接口成功返回之后；
-// 才可以调用第三个接口usbManager.claimInterface。当usbManager.claimInterface 调用成功以后，再调用该接口。
+// 才可以调用第三个接口usbManager.claimInterface。当usbManager.claimInterface 调用成功以后,再调用该接口。
 async function bulkTransfer() {
   let devicesList: Array<usbManager.USBDevice> = usbManager.getDevices();
   if (!devicesList || devicesList.length == 0) {
@@ -88,20 +81,20 @@ async function bulkTransfer() {
     if (device.configs?.[0]?.interfaces?.[i]?.endpoints?.[0]?.attributes == 2) {
       let endpoint: usbManager.USBEndpoint = device.configs?.[0]?.interfaces?.[i]?.endpoints?.[0];
       let interfaces: usbManager.USBInterface = device.configs?.[0]?.interfaces?.[i];
-      let ret: number = usbManager.claimInterface(devicePipe, interfaces);
+      let ret: int = usbManager.claimInterface(devicePipe, interfaces);
       if (ret !== 0) {
         console.error(`claim interface failed`);
         continue;
       }
       let buffer = new Uint8Array(128);
-      usbManager.bulkTransfer(devicePipe, endpoint, buffer).then((ret: number) => {
+      usbManager.bulkTransfer(devicePipe, endpoint, buffer).then((ret: int) => {
         console.info(`bulkTransfer = ${ret}`);
-        ret = usbManager.releaseInterface(devicePipe, interfaces);
-        console.info(`releaseInterface = ${ret}`);
+        let relIntfRet: int = usbManager.releaseInterface(devicePipe, interfaces);
+        console.info(`releaseInterface = ${relIntfRet}`);
         if (i === device.configs?.[0]?.interfaces.length - 1) {
           usbManager.closePipe(devicePipe);
         }
-      }).catch((error: BusinessError) => {
+      }).catch((error) => {
         console.error(`Failed to transfer. Code: ${error.code}, message: ${error.message}`);
       });
     }

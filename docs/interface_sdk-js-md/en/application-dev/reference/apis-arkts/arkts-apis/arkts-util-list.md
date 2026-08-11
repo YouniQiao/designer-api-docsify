@@ -1,16 +1,22 @@
 # @ohos.util.List
 
-List底层通过单向链表实现，每个节点有一个指向后一个元素的引用。查询元素必须从头遍历，因此查询效率低，但插入和删除效率高。List允许元素为null。
- List和[LinkedList](arkts-util-linkedlist.md)相比，LinkedList是双向链表，可以快速地在头尾进行增删，而List是单向链表，不支持双向操作。
- > **注意：**
+List is implemented based on the singly linked list. Each node has a reference pointing to the next element. Elements
+ must be traversed from the beginning, making querying inefficient. However, insertion and deletion operations are
+ highly efficient. List allows null elements.
+ Unlike [LinkedList](arkts-util-linkedlist.md), which is a doubly linked list, List is a singly linked list that
+ does not support insertion or removal at both ends.
+ > **NOTE**
  >
- > 在List中使用\[index\]的方式获取元素可能导致未定义结果，推荐使用get()方法。
- **推荐使用场景：** 当需要频繁的插入删除元素且需要使用单向链表时，推荐使用List。
- 文档中使用了泛型，涉及以下泛型标记符：
- - T：Type，类型
- > **说明**
+ > Accessing elements in a List using the \[index\] syntax may lead to undefined results. You are advised to use
+ > **get()** instead.
+ > **Recommended use case**: Use List for frequent insertion and removal operations when a singly linked list is
+ > required.
+ > This topic uses the following to identify the use of generics:
+ - T: Type
+ > **NOTE**
  >
- > - 容器类使用静态语言实现，限制了存储位置和属性，不支持自定义属性和方法。
+ > - Container classes, implemented in static languages, have restrictions on storage locations and properties, and do
+ > not support custom properties or methods.
 
 
 ## Modules to Import
@@ -25,13 +31,13 @@ import { List } from 'kits/@kit.ArkTS';
 
 | Name | Description |
 | --- | --- |
-| [List](arkts-arkts-util-list-list-c.md) | List底层通过单向链表实现，每个节点有一个指向后一个元素的引用。查询元素必须从头遍历，因此查询效率低，但插入和删除效率高。List允许元素为null。 |
+| [List](arkts-arkts-util-list-list-c.md) | List is implemented based on the singly linked list. Each node has a reference pointing to the next element.When querying an element, the system traverses the list from the beginning. |
 
 ### Types
 
 | Name | Description |
 | --- | --- |
-| [ListComparatorFn](arkts-arkts-listcomparatorfn-t.md) | List中sort方法的回调函数。 |
-| [ListForEachCb](arkts-arkts-listforeachcb-t.md) | List的回调函数类型。 |
-| [ListReplaceCb](arkts-arkts-listreplacecb-t.md) | List的回调函数类型。 |
+| [ListComparatorFn](arkts-arkts-listcomparatorfn-t.md) | This type specifies the comparator of sort in comparation. |
+| [ListForEachCb](arkts-arkts-listforeachcb-t.md) | The type of List callback function. |
+| [ListReplaceCb](arkts-arkts-listreplacecb-t.md) | The type of List callback function. |
 

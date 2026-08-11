@@ -10,12 +10,6 @@
 
 **系统能力：** SystemCapability.Utils.Lang
 
-## 导入模块
-
-```TypeScript
-import { uri } from 'kits/@kit.ArkTS';
-```
-
 ## addEncodedSegment
 
 ```TypeScript
@@ -236,7 +230,7 @@ console.info(`${uriInstance1.checkOpaque()}`); // true
 checkRelative(): boolean
 ```
 
-判断此URI是否为相对URI，相对URI指的是不包含协议(scheme)部分的URI。
+判断此URI是否为相对URI，相对URI指的是不包含协议（scheme）部分的URI。
 
 **起始版本：** 12
 
@@ -269,7 +263,7 @@ console.info(`${uriInstance1.checkRelative()}`); // true
 clearQuery(): URI
 ```
 
-清除URI路径查询部分，并创建一个新的URI对象返回，同时保持原有URI对象不变。
+清除URI查询部分，并创建一个新的URI对象返回，同时保持原有URI对象不变。
 
 **起始版本：** 12
 
@@ -322,7 +316,7 @@ constructor(uri: string)
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 10200002 | Invalid uri string. |
+| [10200002](../errorcode-utils.md#10200002-参数解析错误) | Invalid uri string. |
 
 ## 示例
 
@@ -341,7 +335,7 @@ new uri.URI('https://username:password@host:8080');
 static createFromParts(scheme: string, ssp: string, fragment: string): URI
 ```
 
-根据提供的协议、方案以及片段创建一个新的URI对象。
+根据提供的方案（scheme）、方案特定部分（ssp）以及片段（fragment）创建一个新的URI对象。
 
 **起始版本：** 12
 
@@ -357,7 +351,7 @@ static createFromParts(scheme: string, ssp: string, fragment: string): URI
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| scheme | string | 是 | 此URI协议部分。该参数需符合URI协议标准。 |
+| scheme | string | 是 | 此URI方案部分。该参数需符合URI协议标准。 |
 | ssp | string | 是 | 此URI的方案特定部分，即位于协议分隔符“:”和片段分隔符“#”之间的所有内容，这部分将被编码。 |
 | fragment | string | 是 | 此URI的片段部分，即“#”符号后面的内容，如果未定义则为空，这部分也将被编码。 |
 
@@ -365,7 +359,7 @@ static createFromParts(scheme: string, ssp: string, fragment: string): URI
 
 | 类型 | 说明 |
 | --- | --- |
-| [URI](arkts-arkts-uri-uri-c.md) | 返回由给定协议、协议特定部分和片段创建的URI对象。 |
+| [URI](arkts-arkts-uri-uri-c.md) | 返回由给定方案、方案特定部分和片段创建的URI对象。 |
 
 ## 示例
 
@@ -380,7 +374,7 @@ console.info(uriInstance.toString()); // mailto:no%20body#top
 equals(other: URI): boolean
 ```
 
-判断此URI是否与其他URI对象相等。
+判断此URI是否与其他URI对象相等，通过逐组件比较scheme、authority、path、query和fragment等内容来确定两个URI是否等价。
 
 **起始版本：** 8
 
@@ -420,7 +414,7 @@ uriInstance.equals(uriInstance1); // true
 equalsTo(other: URI): boolean
 ```
 
-判断此URI是否与其他URI对象相等。
+判断此URI是否与其他URI对象相等，通过逐组件比较scheme、authority、path、query和fragment等内容来确定两个URI是否等价。
 
 **起始版本：** 9
 
@@ -504,7 +498,7 @@ console.info(`${uriInstance4.getBooleanQueryValue('active', true)}`); // true
 getLastSegment(): string
 ```
 
-获取此URI路径的最后一个段。每个段代表路径中的一个部分，通常通过“/”来进行分隔。对于以斜杠结尾的或者没有路径的部分不计入段。
+获取此URI路径的最后一个段。每个段代表路径中的一个部分，通常通过“/”来进行分隔。以斜杠结尾的路径段不计入段，没有路径时不计入段。
 
 **起始版本：** 12
 
@@ -710,7 +704,7 @@ console.info(uriInstance.getSegment().toString()); // path,to,image.jpg
 normalize(): URI
 ```
 
-规范化此URI的路径。
+规范化此URI的路径，适用于处理包含点段（.或..）的路径场景。
 
 > **说明：**
 > 
@@ -790,7 +784,7 @@ let result1 = result.toString(); // https://username:password@host:8080/director
 authority: string
 ```
 
-获取和设置此URI的解码授权组件部分，若无此部分则返回null对象。
+获取和设置此URI的解码授权组件部分，若无此部分则返回null对象。此属性在API version 19之前为只读属性，不可写，修改此属性会报错。
 
 **类型：** string
 
@@ -810,7 +804,7 @@ authority: string
 encodedAuthority: string
 ```
 
-获取和设置URI的编码授权组件部分，若无此部分则返回null对象。
+获取和设置URI的编码授权组件部分，若无此部分则返回null对象。此属性在API version 19之前为只读属性，不可写，修改此属性会报错。
 
 **类型：** string
 
@@ -830,7 +824,7 @@ encodedAuthority: string
 encodedFragment: string
 ```
 
-获取和设置URI的编码片段部分，若无此部分则返回null对象。
+获取和设置URI的编码片段部分，若无此部分则返回null对象。此属性在API version 19之前为只读属性，不可写，修改此属性会报错。
 
 **类型：** string
 
@@ -850,7 +844,7 @@ encodedFragment: string
 encodedPath: string
 ```
 
-获取和设置URI的编码路径部分，若无此部分则返回null对象。
+获取和设置URI的编码路径部分，若无此部分则返回null对象。此属性在API version 19之前为只读属性，不可写，修改此属性会报错。
 
 **类型：** string
 
@@ -870,7 +864,7 @@ encodedPath: string
 encodedQuery: string
 ```
 
-获取和设置URI的编码查询部分，若无此部分则返回null对象。
+获取和设置URI的编码查询部分，若无此部分则返回null对象。此属性在API version 19之前为只读属性，不可写，修改此属性会报错。
 
 **类型：** string
 
@@ -890,7 +884,7 @@ encodedQuery: string
 encodedSSP: string
 ```
 
-获取和设置URI的编码方案特定部分，若无此部分则返回null对象。
+获取和设置URI的编码方案特定部分，若无此部分则返回null对象。此属性在API version 19之前为只读属性，不可写，修改此属性会报错。
 
 **类型：** string
 
@@ -910,7 +904,7 @@ encodedSSP: string
 encodedUserInfo: string
 ```
 
-获取和设置URI的编码用户信息部分，若无此部分则返回null对象。
+获取和设置URI的编码用户信息部分，若无此部分则返回null对象。此属性在API version 19之前为只读属性，不可写，修改此属性会报错。
 
 **类型：** string
 
@@ -930,7 +924,7 @@ encodedUserInfo: string
 fragment: string
 ```
 
-获取和设置URI的片段部分，若无此部分则返回null对象。
+获取和设置URI的片段部分，若无此部分则返回null对象。此属性在API version 19之前为只读属性，不可写，修改此属性会报错。
 
 **类型：** string
 
@@ -970,7 +964,7 @@ host: string
 path: string
 ```
 
-获取和设置URI的路径部分，若无此部分则返回null对象。
+获取和设置URI的路径部分，若无此部分则返回null对象。此属性在API version 19之前为只读属性，不可写，修改此属性会报错。
 
 **类型：** string
 
@@ -1010,7 +1004,7 @@ port: string
 query: string
 ```
 
-获取和设置URI的查询部分，若无此部分则返回null对象。
+获取和设置URI的查询部分，若无此部分则返回null对象。此属性在API version 19之前为只读属性，不可写，修改此属性会报错。
 
 **类型：** string
 
@@ -1030,7 +1024,7 @@ query: string
 scheme: string
 ```
 
-获取和设置URI的方案部分，若无此部分则返回null对象。方案名以字母开头，只能包含字母、数字、加号(+)、减号(-)和点号(.)。
+获取和设置URI的方案部分，若无此部分则返回null对象。方案名以字母开头，只能包含字母、数字、加号(+)、减号(-)和点号(.)。此属性在API version 19之前为只读属性，不可写，修改此属性会报错。
 
 **类型：** string
 
@@ -1050,7 +1044,7 @@ scheme: string
 ssp: string
 ```
 
-获取和设置URI的解码方案特定部分，方案特定部分是URI的一部分，它包含了特定于协议或方案的信息。
+获取和设置URI的解码方案特定部分，方案特定部分是URI的一部分，它包含了特定于协议或方案的信息。此属性在API version 19之前为只读属性，不可写，修改此属性会报错。
 
 **类型：** string
 
@@ -1070,7 +1064,7 @@ ssp: string
 userInfo: string
 ```
 
-获取和设置URI的用户信息部分，若无此部分则返回null对象。
+获取和设置URI的用户信息部分，若无此部分则返回null对象。此属性在API version 19之前为只读属性，不可写，修改此属性会报错。
 
 **类型：** string
 

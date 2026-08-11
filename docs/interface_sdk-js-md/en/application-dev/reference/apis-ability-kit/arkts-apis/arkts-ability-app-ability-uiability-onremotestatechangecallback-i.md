@@ -1,6 +1,6 @@
 # OnRemoteStateChangeCallback
 
-注册协同场景下跨设备组件状态变化监听通知的回调函数类型。
+Defines the callback that is invoked when the remote UIAbility state changes in the collaboration scenario.
 
 **Since:** 10
 
@@ -22,7 +22,7 @@ import { Callee, Caller, OnReleaseCallback, OnRemoteStateChangeCallback, CalleeC
 (msg: string): void
 ```
 
-定义OnRemoteStateChange的回调函数。
+Defines the callback of OnRemoteStateChange.
 
 **Since:** 10
 
@@ -38,5 +38,5 @@ import { Callee, Caller, OnReleaseCallback, OnRemoteStateChangeCallback, CalleeC
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| msg | string | Yes | 用于传递释放消息。 |
+| msg | string | Yes | Message used for disconnection. |
 

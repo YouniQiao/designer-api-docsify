@@ -48,8 +48,8 @@ Binds the Local address.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. |
-| 2301013 | Insufficient permissions. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. |
+| [2301013](../errorcode-net-socket.md#2301013-insufficient-permissions) | Insufficient permissions. |
 | 2301098 | Address already in use. |
 | 2301022 | Invalid argument. |
 
@@ -100,7 +100,7 @@ Closes a LocalSocket connection.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 2301009 | Bad file descriptor. |
+| [2301009](../errorcode-net-socket.md#2301009-bad-file-descriptor) | Bad file descriptor. |
 
 ## Examples
 
@@ -148,9 +148,9 @@ Sets up a connection to the specified Local address .
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. |
 | 2301111 | Connection refused. |
-| 2301013 | Insufficient permissions. |
+| [2301013](../errorcode-net-socket.md#2301013-insufficient-permissions) | Insufficient permissions. |
 | 2301099 | Cannot assign requested address. |
 | 2301022 | Invalid argument. |
 
@@ -205,7 +205,7 @@ Gets other attributes of the LocalSocket connection.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 2301009 | Bad file descriptor. |
+| [2301009](../errorcode-net-socket.md#2301009-bad-file-descriptor) | Bad file descriptor. |
 
 ## Examples
 
@@ -263,9 +263,9 @@ Obtains the local address of a LocalSocket connection.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 2300002 | System internal error. |
-| 2301009 | Bad file descriptor. |
-| 2303188 | Socket operation on non-socket. |
+| [2300002](../errorcode-net-socket.md#2300002-system-internal-error) | System internal error. |
+| [2301009](../errorcode-net-socket.md#2301009-bad-file-descriptor) | Bad file descriptor. |
+| [2303188](../errorcode-net-socket.md#2303188-socket-operations-on-nonsockets) | Socket operation on non-socket. |
 
 ## Examples
 
@@ -425,7 +425,7 @@ Cancels listening for message receiving events of the LocalSocket connection.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. |
 
 ## Examples
 
@@ -474,7 +474,7 @@ Cancels listening for connection events of the LocalSocket connection.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. |
 
 ## Examples
 
@@ -518,7 +518,7 @@ Cancels listening for close events of the LocalSocket connection.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. |
 
 ## Examples
 
@@ -562,7 +562,7 @@ Cancels listening for error events of the LocalSocket connection.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. |
 
 ## Examples
 
@@ -606,7 +606,7 @@ Listens for message receiving events of the LocalSocket connection.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. |
 
 ## Examples
 
@@ -652,7 +652,7 @@ Listens for connection events of the LocalSocket connection.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. |
 
 ## Examples
 
@@ -692,7 +692,7 @@ Listens for close events of the LocalSocket connection.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. |
 
 ## Examples
 
@@ -733,7 +733,7 @@ Listens for error events of the LocalSocket connection.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. |
 
 ## Examples
 
@@ -779,7 +779,7 @@ Sends data over a LocalSocket connection.
 | Error Code ID | Error Message |
 | --- | --- |
 | 2301011 | Operation would block. |
-| 401 | Parameter error. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. |
 
 ## Examples
 
@@ -846,8 +846,8 @@ Sets other attributes of the LocalSocket connection.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. |
-| 2301009 | Bad file descriptor. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. |
+| [2301009](../errorcode-net-socket.md#2301009-bad-file-descriptor) | Bad file descriptor. |
 
 ## Examples
 

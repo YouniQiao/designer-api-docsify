@@ -1,6 +1,6 @@
 # DragState (System API)
 
-拖拽状态。
+Enumerates dragging states.
 
 **Since:** 10
 
@@ -18,7 +18,7 @@
 MSG_DRAG_STATE_START = 1
 ```
 
-表示开始拖拽。
+Dragging is started.
 
 **Since:** 10
 
@@ -36,7 +36,7 @@ MSG_DRAG_STATE_START = 1
 MSG_DRAG_STATE_STOP = 2
 ```
 
-表示结束拖拽。
+Dragging is ended.
 
 **Since:** 10
 
@@ -54,7 +54,7 @@ MSG_DRAG_STATE_STOP = 2
 MSG_DRAG_STATE_CANCEL = 3
 ```
 
-表示取消拖拽。
+Dragging is canceled.
 
 **Since:** 10
 

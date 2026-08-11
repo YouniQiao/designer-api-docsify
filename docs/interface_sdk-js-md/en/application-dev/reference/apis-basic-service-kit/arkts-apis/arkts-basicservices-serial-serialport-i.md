@@ -1,6 +1,6 @@
 # SerialPort
 
-串口对象，提供串口设备信息和通信相关能力
+Serial port object, which provides information and communication capabilities of the serial port device.
 
 **Since:** 26.0.0
 
@@ -22,7 +22,7 @@ import { serial } from 'kits/@kit.BasicServicesKit';
 close(): Promise<void>
 ```
 
-关闭串口。使用Promise异步回调。
+Closes the serial port device. This API returns the result asynchronously through a promise.
 
 **Since:** 26.0.0
 
@@ -38,14 +38,14 @@ close(): Promise<void>
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise对象，无返回结果 |
+| Promise&lt;void&gt; | Promise that returns no value. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 35700001 | Service error. |
-| 35700005 | Port not open. |
+| [35700001](../../apis-basic-services-kit/errorcode-busmanager-serial.md#35700001-abnormal-service) | Service error. |
+| [35700005](../../apis-basic-services-kit/errorcode-busmanager-serial.md#35700005-port-not-opened) | Port not open. |
 
 ## drain
 
@@ -53,7 +53,7 @@ close(): Promise<void>
 drain(): Promise<void>
 ```
 
-等待所有写入请求完成。使用Promise异步回调。
+Waits until all write requests are complete. This API returns the result asynchronously through a promise.
 
 **Since:** 26.0.0
 
@@ -69,15 +69,15 @@ drain(): Promise<void>
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise对象，无返回结果 |
+| Promise&lt;void&gt; | Promise that returns no value. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 35700001 | Service error. |
-| 35700003 | Virtual serial port disconnected. |
-| 35700005 | Port not open. |
+| [35700001](../../apis-basic-services-kit/errorcode-busmanager-serial.md#35700001-abnormal-service) | Service error. |
+| [35700003](../../apis-basic-services-kit/errorcode-busmanager-serial.md#35700003-virtual-serial-port-disconnected) | Virtual serial port disconnected. |
+| [35700005](../../apis-basic-services-kit/errorcode-busmanager-serial.md#35700005-port-not-opened) | Port not open. |
 
 ## flush
 
@@ -85,7 +85,7 @@ drain(): Promise<void>
 flush(): Promise<void>
 ```
 
-flush串口缓冲区。使用Promise异步回调。
+Flushes the serial port buffer. This API returns the result asynchronously through a promise.
 
 **Since:** 26.0.0
 
@@ -101,15 +101,15 @@ flush串口缓冲区。使用Promise异步回调。
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise对象，无返回结果 |
+| Promise&lt;void&gt; | Promise that returns no value. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 35700001 | Service error. |
-| 35700003 | Virtual serial port disconnected. |
-| 35700005 | Port not open. |
+| [35700001](../../apis-basic-services-kit/errorcode-busmanager-serial.md#35700001-abnormal-service) | Service error. |
+| [35700003](../../apis-basic-services-kit/errorcode-busmanager-serial.md#35700003-virtual-serial-port-disconnected) | Virtual serial port disconnected. |
+| [35700005](../../apis-basic-services-kit/errorcode-busmanager-serial.md#35700005-port-not-opened) | Port not open. |
 
 ## getCts
 
@@ -117,7 +117,7 @@ flush串口缓冲区。使用Promise异步回调。
 getCts(): Promise<boolean>
 ```
 
-获取cts信号状态。使用Promise异步回调。
+Obtains the CTS signal status. This API returns the result asynchronously through a promise.
 
 **Since:** 26.0.0
 
@@ -133,15 +133,15 @@ getCts(): Promise<boolean>
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;boolean&gt; | Promise对象，返回CTS信号状态，表示是否允许发送数据 |
+| Promise&lt;boolean&gt; | Promise used to return the CTS signal status, indicating whether data can be sent. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 35700001 | Service error. |
-| 35700003 | Virtual serial port disconnected. |
-| 35700005 | Port not open. |
+| [35700001](../../apis-basic-services-kit/errorcode-busmanager-serial.md#35700001-abnormal-service) | Service error. |
+| [35700003](../../apis-basic-services-kit/errorcode-busmanager-serial.md#35700003-virtual-serial-port-disconnected) | Virtual serial port disconnected. |
+| [35700005](../../apis-basic-services-kit/errorcode-busmanager-serial.md#35700005-port-not-opened) | Port not open. |
 
 ## getDsr
 
@@ -149,7 +149,7 @@ getCts(): Promise<boolean>
 getDsr(): Promise<boolean>
 ```
 
-获取DSR信号状态，使用Promise异步返回
+Obtains the DSR signal status. This API returns the result asynchronously through a promise.
 
 **Since:** 26.0.0
 
@@ -165,15 +165,15 @@ getDsr(): Promise<boolean>
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;boolean&gt; | DSR信号状态，true表示对端已就绪，false表示对端未就绪 |
+| Promise&lt;boolean&gt; | Promise used to return the result. The value **true** indicates the remote end is ready, and **false** indicates the remote end is not ready. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 35700001 | Service error. |
-| 35700003 | Virtual serial port disconnected. |
-| 35700005 | Port not open. |
+| [35700001](../../apis-basic-services-kit/errorcode-busmanager-serial.md#35700001-abnormal-service) | Service error. |
+| [35700003](../../apis-basic-services-kit/errorcode-busmanager-serial.md#35700003-virtual-serial-port-disconnected) | Virtual serial port disconnected. |
+| [35700005](../../apis-basic-services-kit/errorcode-busmanager-serial.md#35700005-port-not-opened) | Port not open. |
 
 ## offDataRead
 
@@ -181,7 +181,7 @@ getDsr(): Promise<boolean>
 offDataRead(callback?: Callback<Uint8Array>): void
 ```
 
-取消监听串口端口接收数据事件。
+Cancels listening for data receiving events on the serial port.
 
 **Since:** 26.0.0
 
@@ -197,14 +197,14 @@ offDataRead(callback?: Callback<Uint8Array>): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](arkts-basicservices-base-callback-i.md)&lt;Uint8Array&gt; | No | 回调函数，返回串口端口接收到的数据 &lt;br&gt;默认值:缺省行为：清除串口端口接收数据事件的所有监听。 |
+| callback | [Callback](arkts-basicservices-base-callback-i.md)&lt;Uint8Array&gt; | No | Callback used to return the data received by the serial port. &lt;br&gt;Default value: Clear all listeners for data receiving events on the serial port. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 35700001 | Service error. |
-| 35700005 | Port not open. |
+| [35700001](../../apis-basic-services-kit/errorcode-busmanager-serial.md#35700001-abnormal-service) | Service error. |
+| [35700005](../../apis-basic-services-kit/errorcode-busmanager-serial.md#35700005-port-not-opened) | Port not open. |
 
 ## offDisconnect
 
@@ -212,7 +212,7 @@ offDataRead(callback?: Callback<Uint8Array>): void
 offDisconnect(callback?: Callback<void>): void
 ```
 
-取消监听USB虚拟串口断开事件。
+This command is used to cancel the monitoring of the USB virtual serial port disconnection event.
 
 **Since:** 26.0.0
 
@@ -228,14 +228,14 @@ offDisconnect(callback?: Callback<void>): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](arkts-basicservices-base-callback-i.md)&lt;void&gt; | No | USB虚拟串口断开的回调函数。 &lt;br&gt;默认值：清除所有USB虚拟串口断开事件的回调函数。 |
+| callback | [Callback](arkts-basicservices-base-callback-i.md)&lt;void&gt; | No | Callback of the USB virtual serial port disconnection event. &lt;br&gt;Default value: Clears all callbacks for USB virtual serial port disconnection events. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 35700001 | Service error. |
-| 35700005 | Port not open. |
+| [35700001](../../apis-basic-services-kit/errorcode-busmanager-serial.md#35700001-abnormal-service) | Service error. |
+| [35700005](../../apis-basic-services-kit/errorcode-busmanager-serial.md#35700005-port-not-opened) | Port not open. |
 
 ## onDataRead
 
@@ -243,7 +243,7 @@ offDisconnect(callback?: Callback<void>): void
 onDataRead(callback: Callback<Uint8Array>): void
 ```
 
-监听串口端口接收到的数据。使用Callback异步回调。调用{@link close}接口时，会清理全部回调
+Listens for data received by the serial port. This API uses an asynchronous callback to return the result.When {@link close} is called, all callbacks are cleared.
 
 **Since:** 26.0.0
 
@@ -259,15 +259,15 @@ onDataRead(callback: Callback<Uint8Array>): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](arkts-basicservices-base-callback-i.md)&lt;Uint8Array&gt; | Yes | 回调函数，返回串口端口接收到的数据 |
+| callback | [Callback](arkts-basicservices-base-callback-i.md)&lt;Uint8Array&gt; | Yes | Callback used to return the data received by the serial port. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 35700001 | Service error. |
-| 35700003 | Virtual serial port disconnected. |
-| 35700005 | Port not open. |
+| [35700001](../../apis-basic-services-kit/errorcode-busmanager-serial.md#35700001-abnormal-service) | Service error. |
+| [35700003](../../apis-basic-services-kit/errorcode-busmanager-serial.md#35700003-virtual-serial-port-disconnected) | Virtual serial port disconnected. |
+| [35700005](../../apis-basic-services-kit/errorcode-busmanager-serial.md#35700005-port-not-opened) | Port not open. |
 
 ## onDisconnect
 
@@ -275,7 +275,7 @@ onDataRead(callback: Callback<Uint8Array>): void
 onDisconnect(callback: Callback<void>): void
 ```
 
-监听USB虚拟串口断开事件。使用Callback异步回调。调用{@link close}接口时，会清理全部回调
+This interface is used to listen to the disconnection event of the USB virtual serial port. Use Callback asynchronous callback.When the {@link close} interface is invoked, all callbacks are cleared.
 
 **Since:** 26.0.0
 
@@ -291,14 +291,14 @@ onDisconnect(callback: Callback<void>): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](arkts-basicservices-base-callback-i.md)&lt;void&gt; | Yes | USB虚拟串口断开事件的回调函数。 |
+| callback | [Callback](arkts-basicservices-base-callback-i.md)&lt;void&gt; | Yes | Callback of the USB virtual serial port disconnection event. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 35700001 | Service error. |
-| 35700005 | Port not open. |
+| [35700001](../../apis-basic-services-kit/errorcode-busmanager-serial.md#35700001-abnormal-service) | Service error. |
+| [35700005](../../apis-basic-services-kit/errorcode-busmanager-serial.md#35700005-port-not-opened) | Port not open. |
 
 ## open
 
@@ -306,7 +306,7 @@ onDisconnect(callback: Callback<void>): void
 open(config?: SerialConfigs): Promise<void>
 ```
 
-打开端口。使用Promise异步回调。
+Enables the port. This API returns the result asynchronously through a promise.
 
 **Since:** 26.0.0
 
@@ -322,23 +322,23 @@ open(config?: SerialConfigs): Promise<void>
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| config | [SerialConfigs](arkts-basicservices-serial-serialconfigs-i.md) | No | 串口通信参数 &lt;br&gt;默认值:默认值：参考SerialConfigs的默认值。 &lt;br&gt;Default value: Refer to the default value of SerialConfigs.. |
+| config | [SerialConfigs](arkts-basicservices-serial-serialconfigs-i.md) | No | Serial port communication parameter. &lt;br&gt;Default value: Refer to the default value of SerialConfigs. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise对象，无返回结果 |
+| Promise&lt;void&gt; | Promise that returns no value. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 35700001 | Service error. |
-| 35700002 | Invalid parameter. |
-| 35700003 | Virtual serial port disconnected. |
-| 35700004 | Port already in use. |
-| 35700007 | User authorization required. |
+| [35700001](../../apis-basic-services-kit/errorcode-busmanager-serial.md#35700001-abnormal-service) | Service error. |
+| [35700002](../../apis-basic-services-kit/errorcode-busmanager-serial.md#35700002-parameter-error) | Invalid parameter. |
+| [35700003](../../apis-basic-services-kit/errorcode-busmanager-serial.md#35700003-virtual-serial-port-disconnected) | Virtual serial port disconnected. |
+| [35700004](../../apis-basic-services-kit/errorcode-busmanager-serial.md#35700004-port-in-use) | Port already in use. |
+| [35700007](../../apis-basic-services-kit/errorcode-busmanager-serial.md#35700007-user-authorization-rejected) | User authorization required. |
 
 ## sendBrk
 
@@ -346,7 +346,7 @@ open(config?: SerialConfigs): Promise<void>
 sendBrk(): Promise<void>
 ```
 
-发送brk信号。使用Promise异步回调。
+Sends a BRK signal. This API returns the result asynchronously through a promise.
 
 **Since:** 26.0.0
 
@@ -362,15 +362,15 @@ sendBrk(): Promise<void>
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise对象，无返回结果 |
+| Promise&lt;void&gt; | Promise that returns no value. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 35700001 | Service error. |
-| 35700003 | Virtual serial port disconnected. |
-| 35700005 | Port not open. |
+| [35700001](../../apis-basic-services-kit/errorcode-busmanager-serial.md#35700001-abnormal-service) | Service error. |
+| [35700003](../../apis-basic-services-kit/errorcode-busmanager-serial.md#35700003-virtual-serial-port-disconnected) | Virtual serial port disconnected. |
+| [35700005](../../apis-basic-services-kit/errorcode-busmanager-serial.md#35700005-port-not-opened) | Port not open. |
 
 ## setDtr
 
@@ -378,7 +378,7 @@ sendBrk(): Promise<void>
 setDtr(enable: boolean): Promise<void>
 ```
 
-设置DTR信号状态，使用Promise异步返回
+Sets the DTR signal status. Use Promise asynchronous callbacks.
 
 **Since:** 26.0.0
 
@@ -394,21 +394,21 @@ setDtr(enable: boolean): Promise<void>
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| enable | boolean | Yes | DTR信号状态，表示本端是否就绪。 |
+| enable | boolean | Yes | DTR signal status, indicating whether the local end is ready. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | 不返回任何值的Promise。 |
+| Promise&lt;void&gt; | Promise that returns no value. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 35700001 | Service error. |
-| 35700003 | Virtual serial port disconnected. |
-| 35700005 | Port not open. |
+| [35700001](../../apis-basic-services-kit/errorcode-busmanager-serial.md#35700001-abnormal-service) | Service error. |
+| [35700003](../../apis-basic-services-kit/errorcode-busmanager-serial.md#35700003-virtual-serial-port-disconnected) | Virtual serial port disconnected. |
+| [35700005](../../apis-basic-services-kit/errorcode-busmanager-serial.md#35700005-port-not-opened) | Port not open. |
 
 ## setRts
 
@@ -416,7 +416,7 @@ setDtr(enable: boolean): Promise<void>
 setRts(enable: boolean): Promise<void>
 ```
 
-设置rts信号。使用Promise异步回调。
+Sets the RTS signal. This API returns the result asynchronously through a promise.
 
 **Since:** 26.0.0
 
@@ -432,21 +432,21 @@ setRts(enable: boolean): Promise<void>
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| enable | boolean | Yes | RTS信号状态，表示是否请求发送。 |
+| enable | boolean | Yes | RTS signal status, indicating whether to request sending data. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise对象，无返回结果 |
+| Promise&lt;void&gt; | Promise that returns no value. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 35700001 | Service error. |
-| 35700003 | Virtual serial port disconnected. |
-| 35700005 | Port not open. |
+| [35700001](../../apis-basic-services-kit/errorcode-busmanager-serial.md#35700001-abnormal-service) | Service error. |
+| [35700003](../../apis-basic-services-kit/errorcode-busmanager-serial.md#35700003-virtual-serial-port-disconnected) | Virtual serial port disconnected. |
+| [35700005](../../apis-basic-services-kit/errorcode-busmanager-serial.md#35700005-port-not-opened) | Port not open. |
 
 ## write
 
@@ -460,7 +460,7 @@ ArkTS-Sta:
 write(data: Uint8Array, timeout?: int): Promise<int>
 ```
 
-发送数据。使用Promise异步回调。
+Sends data. This API returns the result asynchronously through a promise.
 
 **Since:** 26.0.0
 
@@ -476,24 +476,24 @@ write(data: Uint8Array, timeout?: int): Promise<int>
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| data | Uint8Array | Yes | 要发送的数据 &lt;br&gt;长度范围:(0,4096]。 |
-| timeout | ArkTS-Dyn: number  <br>ArkTS-Sta：int | No | 超时时间 &lt;br&gt;长度范围:[0,300000]。取值限定为整数。单位:毫秒。默认值:0。 &lt;br&gt;表示端口无法写入数据时不等待，直接返回。 |
+| data | Uint8Array | Yes | Data to be sent. &lt;br&gt;Length range: (0, 4096] |
+| timeout | ArkTS-Dyn: number  <br>ArkTS-Sta：int | No | Timeout interval. &lt;br&gt;Length range: [0, 300000]. The value must be an integer, in milliseconds. The default value is 0, indicating that when data cannot be written to the port, the API does not wait and directly returns 0. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| ArkTS-Dyn: Promise&lt;number&gt;  <br>ArkTS-Sta：Promise&lt;int&gt; | Promise对象，返回成功写入的长度 |
+| ArkTS-Dyn: Promise&lt;number&gt;  <br>ArkTS-Sta：Promise&lt;int&gt; | Promise used to return the length of the data written. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 35700001 | Service error. |
-| 35700002 | Invalid parameter. |
-| 35700003 | Virtual serial port disconnected. |
-| 35700005 | Port not open. |
-| 35700006 | Transmission timeout. |
+| [35700001](../../apis-basic-services-kit/errorcode-busmanager-serial.md#35700001-abnormal-service) | Service error. |
+| [35700002](../../apis-basic-services-kit/errorcode-busmanager-serial.md#35700002-parameter-error) | Invalid parameter. |
+| [35700003](../../apis-basic-services-kit/errorcode-busmanager-serial.md#35700003-virtual-serial-port-disconnected) | Virtual serial port disconnected. |
+| [35700005](../../apis-basic-services-kit/errorcode-busmanager-serial.md#35700005-port-not-opened) | Port not open. |
+| [35700006](../../apis-basic-services-kit/errorcode-busmanager-serial.md#35700006-transmission-timeout) | Transmission timeout. |
 
 ## portInfo
 
@@ -501,7 +501,7 @@ write(data: Uint8Array, timeout?: int): Promise<int>
 readonly portInfo: SerialPortInfo
 ```
 
-串口端口信息
+Serial port information.
 
 **Type:** [SerialPortInfo](arkts-basicservices-serial-serialportinfo-i.md)
 

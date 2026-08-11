@@ -1,6 +1,6 @@
 # MenuAlignType
 
-下拉菜单的对齐方式。
+Enumerates drop-down menu alignment modes.
 
 **Since:** 10
 
@@ -16,7 +16,7 @@
 START
 ```
 
-按照语言方向起始端对齐。
+Aligned with the start edge in the same direction as the language in use.
 
 **Since:** 10
 
@@ -36,7 +36,7 @@ START
 CENTER
 ```
 
-居中对齐。
+Aligned with the center.
 
 **Since:** 10
 
@@ -56,7 +56,7 @@ CENTER
 END
 ```
 
-按照语言方向末端对齐。
+Aligned with the end edge in the same direction as the language in use.
 
 **Since:** 10
 

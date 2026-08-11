@@ -1,6 +1,6 @@
 # Common
 
-Common通用接口
+Common for ide.
 
 ## Common
 
@@ -8,7 +8,7 @@ Common通用接口
 Common()
 ```
 
-构造器。
+Constructor
 
 **Since:** 7
 
@@ -39,6 +39,7 @@ Common()
 - [BaseEvent](arkts-arkui-common-baseevent-i.md)
 - [BindOptions](arkts-arkui-common-bindoptions-i.md)
 - [BlurOptions](arkts-arkui-common-bluroptions-i.md)
+- [BlurSnapshotOptions](arkts-arkui-common-blursnapshotoptions-i-sys.md)
 - [BlurStyleOptions](arkts-arkui-common-blurstyleoptions-i.md)
 - [BorderImageOption](arkts-arkui-common-borderimageoption-i.md)
 - [Callback](arkts-arkui-common-callback-i.md)
@@ -294,6 +295,7 @@ Common()
 - [SheetType](arkts-arkui-common-sheettype-e.md)
 - [SourceTool](arkts-arkui-common-sourcetool-e.md)
 - [SourceType](arkts-arkui-common-sourcetype-e.md)
+- [SpatialPositionMode](arkts-arkui-common-spatialpositionmode-e-sys.md)
 - [SystemProperties](arkts-arkui-common-systemproperties-e.md)
 - [ThemeColorMode](arkts-arkui-common-themecolormode-e.md)
 - [TouchTestStrategy](arkts-arkui-common-touchteststrategy-e.md)

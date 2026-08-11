@@ -1,17 +1,22 @@
 # SliderStyle
 
-滑动条滑块在滑轨上显示的样式，样式说明请参考[Slider组件滑块与滑轨是如何对齐的](../../../ui/arkts-select-component-faq.md#slider组件滑块与滑轨是如何对齐的)。
+Enumerates the display styles of the slider thumb relative to the track. For details, see   
+[How Are the Slider Thumb and Track of the Slider Component Aligned?](../../../ui/arkts-select-component-faq.md#how-are-the-slider-thumb-and-track-of-the-slider-component-aligned).
 
-> **说明：**
+> **NOTE：**
 > 
-> - Slider无默认padding。
+> - By default, the slider has no padding.
 > 
-> - 当Slider为水平滑动条时，默认高度为40vp，宽度为父容器的宽度，滑动条居中显示，当滑动条的style为SliderStyle.OutSet时，左右间距分别为9vp，即为
-> [blockSize](SliderAttribute#blockSize)宽度的一半，当滑动条的style为SliderStyle.InSet时，左右间距分别为6vp，若设置padding，padding不会覆盖左右
-> 间距。
+> - For horizontal sliders, the default height is 40 vp, the width matches the parent container's width, and the
+> track maintains center alignment. When **SliderStyle.OutSet** is used, it applies 9 vp (half of the
+> [blockSize](SliderAttribute#blockSize) value) margins on both left and right sides. When
+> **SliderStyle.InSet** is used, it enforces 6 vp margins on both left and right sides. Custom padding values will be
+> applied in addition to these default margins and will not override them.
 > 
-> - 当Slider为竖直滑动条时，默认宽度为40vp，高度为父容器的高度，滑动条居中显示，当滑动条的style为SliderStyle.OutSet时，上下间距分别为10vp，当滑动条的style为
-> SliderStyle.InSet时，上下间距分别为6vp，若设置padding，padding不会覆盖上下间距。
+> - For vertical sliders, the default width is 40 vp, the height matches the parent container's height, and the track
+> maintains center alignment. When **SliderStyle.OutSet** is used, it applies 10 vp margins on both top and bottom
+> sides. When **SliderStyle.InSet** is used, it enforces 6 vp margins on both top and bottom sides. Custom padding
+> values will be applied in addition to these default margins and will not override them.
 
 **Since:** 7
 
@@ -27,7 +32,7 @@
 OutSet
 ```
 
-滑块在滑轨上。
+The thumb is on the track.
 
 **Since:** 7
 
@@ -47,7 +52,7 @@ OutSet
 InSet
 ```
 
-滑块在滑轨内。
+The thumb is in the track.
 
 **Since:** 7
 
@@ -67,7 +72,7 @@ InSet
 NONE
 ```
 
-无滑块
+There is no thumb.
 
 **Since:** 12
 

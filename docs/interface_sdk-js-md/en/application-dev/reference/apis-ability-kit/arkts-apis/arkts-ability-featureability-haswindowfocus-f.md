@@ -12,7 +12,7 @@ import { featureAbility } from 'kits/@kit.AbilityKit';
 function hasWindowFocus(callback: AsyncCallback<boolean>): void
 ```
 
-检查Ability的主窗口是否具有窗口焦点。使用callback异步回调。
+Checks whether the main window of this ability has the focus. This API uses an asynchronous callback to return the result.
 
 **Since:** 7
 
@@ -28,7 +28,7 @@ function hasWindowFocus(callback: AsyncCallback<boolean>): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;boolean&gt; | Yes | 回调函数。&lt;br&gt;如果此Ability当前具有视窗焦点，则返回true；否则返回false。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;boolean&gt; | Yes | Callback used to return the result.&lt;br&gt;If the main window has the focus, **true** is returned. Otherwise, **false** is returned. |
 
 ## Examples
 
@@ -51,7 +51,7 @@ featureAbility.hasWindowFocus((error, data) => {
 function hasWindowFocus(): Promise<boolean>
 ```
 
-检查Ability的主窗口是否具有窗口焦点。使用Promise异步回调。
+Checks whether the main window of this ability has the focus. This API uses a promise to return the result.
 
 **Since:** 7
 
@@ -67,7 +67,7 @@ function hasWindowFocus(): Promise<boolean>
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;boolean&gt; | Promise对象。如果此Ability当前具有视窗焦点，则返回true；否则返回false。 |
+| Promise&lt;boolean&gt; | Promise used to return the result. If the main window has the focus, **true** is returned. Otherwise, **false** is returned. |
 
 ## Examples
 

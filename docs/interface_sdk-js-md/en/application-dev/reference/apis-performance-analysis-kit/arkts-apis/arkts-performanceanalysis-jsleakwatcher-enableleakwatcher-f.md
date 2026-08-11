@@ -12,9 +12,12 @@ import { jsLeakWatcher } from 'kits/@kit.PerformanceAnalysisKit';
 function enableLeakWatcher(isEnabled: boolean, configs: Array<string>, callback: Callback<Array<string>>): void
 ```
 
-ʹ��ArkTS����й©��⡣
+Enables the detection for JS object leaks. This function is disabled by default.
 
-�˽ӿ�ͨ��һ�ε��ü��ɼ��ArkTS������ڴ�й©����֮ǰ��Ҫ�����ĸ�������enable��watch��check��dump���ķ������Ӽ�ࡣ
+This API can detect the JS object memory leak, which is simpler than the method that needs to call the **enable**,  
+**watch**, **check**, and **dump** functions.
+
+If a memory leak occurs, the leaked file is returned through the callback.
 
 **Since:** 20
 
@@ -28,23 +31,23 @@ function enableLeakWatcher(isEnabled: boolean, configs: Array<string>, callback:
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| isEnabled | boolean | Yes | �Ƿ�ʹ��ArkTS�����ڴ�й©��⹦�ܡ�true������ArkTS�ڴ�й©��⹦�ܣ�false���ر�ArkTS�ڴ�й©��⹦�ܡ� |
-| configs | Array&lt;string&gt; | Yes | �����������ÿ��Ԫ��Ϊ�������������͡�&lt;br&gt;�������������XComponent��NodeContainer��Window��CustomComponent ��Ability��&lt;br&gt;**˵��**���������������������ȫ������ |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;Array&lt;string&gt;&gt; | Yes | �ص����������ڽ���jsLeakWatcher.enableLeakWatcher�ӿڷ��ص��ڴ�й©�ļ��б���������ڴ�����ļ���&lt;br&gt;�ص������д���һ������ ��������0Ϊй©�б��ļ�������׺Ϊ.jsleaklist������1Ϊ������ڴ�����ļ�������׺Ϊ.rawheap�� |
+| isEnabled | boolean | Yes | Whether to enable the detection for JS object memory leaks. **true**: yes; **false** : no. |
+| configs | Array&lt;string&gt; | Yes | Configuration item. Each element in the array indicates a specific object type to monitor.&lt;br&gt;Options: **XComponent**, **NodeContainer**, **Window**, **CustomComponent**, and **Ability**.&lt;br &gt;Note: An empty array indicates that all the preceding objects are monitored. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;Array&lt;string&gt;&gt; | Yes | Callback used to receive the memory-leaked object returned by the **jsLeakWatcher.enableLeakWatcher** API.&lt;br&gt;You need to input an array object in the callback. Index **0** is the name of the leak list file, whose extension is **.jsleaklist**. Index **1** is the name of the VM memory snapshot file, whose extension is **.rawheap**. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 10801001 | The parameter isEnabled is invalid. |
-| 10801002 | The parameter config is invalid. |
-| 10801003 | The parameter callback is invalid. Input parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types; 3.Parameter verification failed. |
+| [10801001](../errorcode-jsleakwatcher.md#10801001-invalid-isenabled) | The parameter isEnabled is invalid. |
+| [10801002](../errorcode-jsleakwatcher.md#10801002-invalid-config) | The parameter config is invalid. |
+| [10801003](../errorcode-jsleakwatcher.md#10801003-invalid-callback) | The parameter callback is invalid. Input parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types; 3.Parameter verification failed. |
 
 ## Examples
 
 ```TypeScript
 let config: Array<string> = ['XComponent'];
-// Monitor the memory leak of the ArkTS object XComponent.
+// Monitor the memory leak of the JS object XComponent.
 // If an empty array is passed, all objects are monitored.
 jsLeakWatcher.enableLeakWatcher(true, config, (filePath: Array<string>) => {
     console.info('JsLeakWatcher leaklistFileName:' + filePath[0]);
@@ -59,13 +62,9 @@ jsLeakWatcher.enableLeakWatcher(true, config, (filePath: Array<string>) => {
 function enableLeakWatcher(isEnabled: boolean, configs: LeakWatcherConfig, callback: Callback<Array<string>>): void
 ```
 
-ʹ��ArkTS����й©��⡣
+Enables the ArkTS object leak detection.
 
-�˽ӿ�ͨ��һ�ε��ü��ɼ��ArkTS������ڴ�й©����֮ǰ��Ҫ�����ĸ�������enable��watch��check��dump���ķ������Ӽ�ࣻͨ��configs��������������Զ������ü��������ԣ���Ƚ�֮ǰ����������й©������ܡ�
-
-> **ע��**
-> 
-> ��ǰjsLeakWatcherй©������ܿ����ϴ󣬻ᵼ��Ӧ�ÿ��٣�������������ʱ�䣬���ٿ���Ƶ�ʡ�
+This API can detect memory leaks of ArkTS objects with a single call, which is simpler than the previous method that requires four functions (**enable**, **watch**, **check**, and **dump**). You can use the **configs**parameter to customize the properties of monitoring items, greatly improving the leak detection performance.
 
 **Since:** 24
 
@@ -79,25 +78,34 @@ function enableLeakWatcher(isEnabled: boolean, configs: LeakWatcherConfig, callb
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| isEnabled | boolean | Yes | �Ƿ�ʹ��ArkTS�����ڴ�й©��⹦�ܡ�&lt;br&gt;true������ArkTS�ڴ�й©��⹦�ܡ�&lt;br&gt;false���ر�ArkTS�ڴ�й©��⹦�ܡ� |
-| configs | [LeakWatcherConfig](arkts-performanceanalysis-jsleakwatcher-leakwatcherconfig-i.md) | Yes | LeakWatcherConfig�������ͣ������а�����������ڴ�й©���Ŀ��������ԡ�&lt;br&gt;**˵��**�������в������ʹ����ֵ���ֵ�������������� ΪĬ��ֵ�� |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;Array&lt;string&gt;&gt; | Yes | �ص����������ڽ���й©���ĵ����ļ�·����&lt;br&gt;�ص������д���һ������ ��������0Ϊй©�б��ļ�������׺Ϊ.jsleaklist������1Ϊ������ڴ�����ļ�������׺Ϊ.rawheap�� |
+| isEnabled | boolean | Yes | Whether to enable the detection for ArkTS object memory leaks.&lt;br&gt;**true**: yes;&lt;br&gt; **false**: no. |
+| configs | [LeakWatcherConfig](arkts-performanceanalysis-jsleakwatcher-leakwatcherconfig-i.md) | Yes | LeakWatcherConfig object, which contains multiple configurable properties for memory leak monitoring.&lt;br&gt;Note: If the parameter type in the object is set to null or a false value, the default value is used. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;Array&lt;string&gt;&gt; | Yes | Callback used to receive the memory-leaked object returned by the **jsLeakWatcher.enableLeakWatcher** API.&lt;br&gt;You need to input an array object in the callback. Index **0** is the name of the leak list file, whose extension is **.jsleaklist**. Index **1** is the name of the VM memory snapshot file, whose extension is **.rawheap**. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 10801001 | The parameter isEnabled is invalid. |
-| 10801002 | The parameter config is invalid. |
-| 10801003 | The parameter callback is invalid. Input parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types; 3.Parameter verification failed. |
+| [10801001](../errorcode-jsleakwatcher.md#10801001-invalid-isenabled) | The parameter isEnabled is invalid. |
+| [10801002](../errorcode-jsleakwatcher.md#10801002-invalid-config) | The parameter config is invalid. |
+| [10801003](../errorcode-jsleakwatcher.md#10801003-invalid-callback) | The parameter callback is invalid. Input parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types; 3.Parameter verification failed. |
 
 ## Examples
 
 ```TypeScript
+enum MonitorObjectType {
+  ALL = -1, 
+  CUSTOM_COMPONENT = 1 << 0,
+  WINDOW = 1 << 1,
+  NODE_CONTAINER = 1 << 2,
+  X_COMPONENT = 1 << 3,
+  ABILITY = 1 << 4
+};
+
 // Detect memory leaks of the ArkTS objects CustomComponent and Window.
 // If the value of an object type is null or false, the default value is used.
-let config: jsLeakWatcher.LeakWatcherConfig = {
-    monitorObjectTypes: jsLeakWatcher.MonitorObjectType.CUSTOM_COMPONENT | jsLeakWatcher.MonitorObjectType.WINDOW,
+let config: LeakWatcherConfig = {
+    monitorObjectTypes: MonitorObjectType.CUSTOM_COMPONENT | MonitorObjectType.WINDOW,
     objectUniqueIDs: [],
     checkInterval: 10000,
     fgLeakCountThreshold: 5,
@@ -106,7 +114,7 @@ let config: jsLeakWatcher.LeakWatcherConfig = {
     dumpHeapWaitTimeMs: 5000,
     exclusionList: []
 };
-jsLeakWatcher.enableLeakWatcher(true, config, (filePath : Array<string>) => {
+jsLeakWatcher.enableLeakWatcher(true, config, (filepath : Array<string>) => {
     console.info('JsLeakWatcher leaklistFileName:' + filePath[0]);
     console.info('JsLeakWatcher heapDumpFileName:' + filePath[1]);
 });

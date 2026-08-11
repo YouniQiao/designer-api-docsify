@@ -12,7 +12,7 @@ import { appManager } from 'kits/@kit.AbilityKit';
 function off(type: 'applicationState', observerId: int, callback: AsyncCallback<void>): void
 ```
 
-注销应用状态监听器。使用callback异步回调。
+Unregisters the observer used to listen for application state changes. This API uses an asynchronous callback to return the result.
 
 **Since:** 15
 
@@ -28,17 +28,17 @@ function off(type: 'applicationState', observerId: int, callback: AsyncCallback<
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'applicationState' | Yes | 调用接口类型，固定填'applicationState'字符串。 |
-| observerId | int | Yes | 注册的应用状态监听器ID，即 [on('applicationState')](appManager.on(type: 'applicationState', observer: ApplicationStateObserver))返回的监听器ID。 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | 回调函数。当取消注册应用程序状态观测器成功，err为undefined，否则为错误对象。 |
+| type | 'applicationState' | Yes | Type of the API to call. It is fixed at **'applicationState'**. |
+| observerId | int | Yes | ID of the observer registered, which is the listener ID returned by [on('applicationState')](appManager.on(type: 'applicationState', observer: ApplicationStateObserver)). |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. If the application state observer is deregistered, **err** is undefined; otherwise, **error** is an error object. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
-| 16000050 | Internal error. |
-| 201 | Permission denied. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| [16000050](../errorcode-ability.md#16000050-internal-error) | Internal error. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
 
 ## Examples
 
@@ -107,7 +107,7 @@ try {
 function off(type: 'applicationState', observerId: int): Promise<void>
 ```
 
-注销应用状态监听器。使用Promise异步回调。
+Unregisters the observer used to listen for application state changes. This API uses a promise to return the result.
 
 **Since:** 14
 
@@ -123,22 +123,22 @@ function off(type: 'applicationState', observerId: int): Promise<void>
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'applicationState' | Yes | 调用接口类型，固定填'applicationState'字符串。 |
-| observerId | int | Yes | 注册的应用状态监听器ID，即 [on('applicationState')](appManager.on(type: 'applicationState', observer: ApplicationStateObserver))返回的监听器ID。 |
+| type | 'applicationState' | Yes | Type of the API to call. It is fixed at **'applicationState'**. |
+| observerId | int | Yes | ID of the observer registered, which is the listener ID returned by [on('applicationState')](appManager.on(type: 'applicationState', observer: ApplicationStateObserver)). |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise对象，无返回结果。 |
+| Promise&lt;void&gt; | Promise that returns no value. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
-| 16000050 | Internal error. |
-| 201 | Permission denied. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| [16000050](../errorcode-ability.md#16000050-internal-error) | Internal error. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
 
 ## Examples
 

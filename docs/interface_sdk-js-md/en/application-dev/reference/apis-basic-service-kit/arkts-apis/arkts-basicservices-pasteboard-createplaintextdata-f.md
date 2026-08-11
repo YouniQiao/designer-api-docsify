@@ -12,7 +12,7 @@ import { pasteboard } from 'kits/@kit.BasicServicesKit';
 function createPlainTextData(text: string): PasteData
 ```
 
-构建一个纯文本剪贴板内容对象。
+Creates a **PasteData** object of the plain text type.
 
 **Since:** 6
 
@@ -30,13 +30,13 @@ function createPlainTextData(text: string): PasteData
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| text | string | Yes | 纯文本内容。 |
+| text | string | Yes | Plain text. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [PasteData](arkts-basicservices-pasteboard-pastedata-i.md) | 剪贴板内容对象。 |
+| [PasteData](arkts-basicservices-pasteboard-pastedata-i.md) | PasteData** object. |
 
 ## Examples
 

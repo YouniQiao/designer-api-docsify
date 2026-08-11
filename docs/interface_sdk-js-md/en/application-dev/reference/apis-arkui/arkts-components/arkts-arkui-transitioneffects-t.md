@@ -16,7 +16,7 @@ declare type TransitionEffects = {
 }
 ```
 
-定义所有转场效果。
+Defines all transition effects.
 
 **Since:** 10
 

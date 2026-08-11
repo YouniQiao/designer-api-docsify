@@ -1,6 +1,6 @@
 # CallMetadata
 
-通话会话元数据相关属性。
+The metadata of the current call.
 
 **Since:** 11
 
@@ -22,7 +22,7 @@ import { avSession } from 'kits/@kit.AVSessionKit';
 avatar?: image.PixelMap
 ```
 
-来电人头像。
+The displayed picture that represents a particular user.
 
 **Type:** image.PixelMap
 
@@ -42,7 +42,7 @@ avatar?: image.PixelMap
 name?: string
 ```
 
-来电人姓名（别名）。
+The displayed user name of current call.
 
 **Type:** string
 
@@ -62,7 +62,7 @@ name?: string
 phoneNumber?: string
 ```
 
-来电电话号码。
+The phone number of current call.
 
 **Type:** string
 

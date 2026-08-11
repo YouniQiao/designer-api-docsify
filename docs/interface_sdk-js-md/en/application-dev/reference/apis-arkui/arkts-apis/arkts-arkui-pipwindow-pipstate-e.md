@@ -1,6 +1,6 @@
 # PiPState
 
-画中画生命周期状态枚举。
+Enumerates the PiP states.
 
 **Since:** 11
 
@@ -16,7 +16,7 @@
 ABOUT_TO_START = 1
 ```
 
-表示画中画将要启动。
+PiP is about to start.
 
 **Since:** 11
 
@@ -34,7 +34,7 @@ ABOUT_TO_START = 1
 STARTED = 2
 ```
 
-表示画中画已经启动。
+PiP is started.
 
 **Since:** 11
 
@@ -52,7 +52,7 @@ STARTED = 2
 ABOUT_TO_STOP = 3
 ```
 
-表示画中画将要停止。
+PiP is about to stop.
 
 **Since:** 11
 
@@ -70,7 +70,7 @@ ABOUT_TO_STOP = 3
 STOPPED = 4
 ```
 
-表示画中画已经停止。
+PiP is stopped.
 
 **Since:** 11
 
@@ -88,7 +88,7 @@ STOPPED = 4
 ABOUT_TO_RESTORE = 5
 ```
 
-表示画中画将从小窗播放恢复到原始播放界面。
+The original page is about to restore.
 
 **Since:** 11
 
@@ -106,7 +106,7 @@ ABOUT_TO_RESTORE = 5
 ERROR = 6
 ```
 
-表示画中画生命周期执行过程出现了异常。
+An error occurs during the execution of the PiP lifecycle.
 
 **Since:** 11
 

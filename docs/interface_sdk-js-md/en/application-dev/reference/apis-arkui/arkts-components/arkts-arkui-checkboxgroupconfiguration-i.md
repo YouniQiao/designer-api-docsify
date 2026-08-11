@@ -1,6 +1,7 @@
 # CheckBoxGroupConfiguration
 
-开发者必须自定义此类以实现ContentModifier接口，使用方法见[contentModifier](CheckboxGroupAttribute#contentModifier)。
+You must customize this class to implement the ContentModifier interface. For details, see   
+[contentModifier](CheckboxGroupAttribute#contentModifier).
 
 **Inheritance/Implementation:** CheckBoxGroupConfiguration extends [CommonConfiguration<CheckBoxGroupConfiguration>](CommonConfiguration<CheckBoxGroupConfiguration>)
 
@@ -18,7 +19,7 @@
 name: string
 ```
 
-当前多选框群组名称，用于标识和关联Checkbox与CheckboxGroup，与Checkbox的group属性值相同时属于同一群组。
+Name of the check box group.
 
 **Type:** string
 
@@ -40,7 +41,7 @@ name: string
 status: SelectStatus
 ```
 
-表示多选框群组的选中状态。
+Selected status of the check box group.
 
 **Type:** [SelectStatus](arkts-arkui-selectstatus-e.md)
 
@@ -62,7 +63,7 @@ status: SelectStatus
 triggerChange: Callback<boolean>
 ```
 
-触发多选框群组选中状态变化。true表示从部分选中或未选中变为全部选中，false表示从全部选中或部分选中变为全部未选中。
+Triggers a change in the selection state of the check box group. The value true indicates that the selected status changes from partially selected or unselected to fully selected, and the value false indicates that the selected status changes from fully selected or partially selected to unselected.
 
 **Type:** [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;boolean&gt;
 

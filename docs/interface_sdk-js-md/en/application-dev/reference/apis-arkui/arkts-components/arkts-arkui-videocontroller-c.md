@@ -1,10 +1,6 @@
 # VideoController
 
-一个VideoController对象可以控制一个或多个Video。
-
-## 导入对象
-
-```ts let controller: VideoController = new VideoController();```
+A **VideoController** object can control one or more **Video** components.
 
 **Since:** 7
 
@@ -20,7 +16,7 @@
 constructor()
 ```
 
-VideoController的构造函数。
+A constructor used to create a **VideoController** object.
 
 **Since:** 7
 
@@ -38,7 +34,7 @@ VideoController的构造函数。
 exitFullscreen()
 ```
 
-退出全屏播放。
+Exits full-screen mode.
 
 **Since:** 7
 
@@ -56,7 +52,7 @@ exitFullscreen()
 pause()
 ```
 
-暂停播放，显示当前帧，再次播放时从当前位置继续播放。
+Pauses playback. The current frame is then displayed, and playback will be resumed from this paused position.
 
 **Since:** 7
 
@@ -74,7 +70,7 @@ pause()
 requestFullscreen(value: boolean)
 ```
 
-请求全屏播放。
+Requests full-screen playback.
 
 **Since:** 7
 
@@ -90,7 +86,7 @@ requestFullscreen(value: boolean)
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | boolean | Yes | 是否全屏（填充满应用窗口）播放。 &lt;br&gt;true：请求全屏播放；false：不请求全屏播放。 &lt;br&gt;默认值：false |
+| value | boolean | Yes | Whether to request full-screen playback (filling the application window).&lt;br&gt;**true**: Request full-screen playback.&lt;br&gt;**false**: Do not request full-screen playback.&lt;br&gt;Default value: **false**. |
 
 ## reset
 
@@ -98,7 +94,7 @@ requestFullscreen(value: boolean)
 reset(): void
 ```
 
-重置视频播放器。显示当前帧，再次播放时从头开始播放。
+Resets the **AVPlayer** instance of this component, which displays the current frame and sets the playback to start from the beginning for subsequent playbacks.
 
 **Since:** 12
 
@@ -118,11 +114,12 @@ reset(): void
 setCurrentTime(value: number)
 ```
 
-指定视频播放的进度位置。
+Sets the video playback position.
 
-> **说明：**
+> **NOTE：**
 > 
-> 如需从视频内的某一时间点开始播放，应关闭自动播放，在视频准备完成后先跳转再播放。
+> To start playback from a specific position, disable autoplay, wait for video preparation to complete, and then
+> seek to the target position.
 
 **Since:** 7
 
@@ -138,7 +135,7 @@ setCurrentTime(value: number)
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | number | Yes | 视频播放进度位置。 &lt;br&gt;取值范围：[0, [duration](arkts-arkui-preparedinfo-i.md)] &lt;br&gt;当设置value大于duration时，进度跳转至最后；当设置value小于0时，不会进行进度跳转。 &lt;br&gt;单位：s &lt;br&gt;从API version 8开始，支持设置视频的跳转模式，详见 [setCurrentTime&lt;sup&gt;8+&lt;/sup&gt;](arkts-arkui-videocontroller-c.md#setcurrenttime)。 |
+| value | number | Yes | Video playback position.&lt;br&gt;Value range: [0, [duration](arkts-arkui-preparedinfo-i.md)]&lt;br&gt; When the set value is greater than the duration, the progress will jump to the end; when the set value is less than 0, no progress jump will occur.&lt;br&gt;Unit: second&lt;br&gt;Since API version 8, seek mode configuration is supported. For details, see [setCurrentTime&lt;sup&gt;8+&lt;/sup&gt;](arkts-arkui-videocontroller-c.md#setcurrenttime). |
 
 ## setCurrentTime
 
@@ -146,11 +143,7 @@ setCurrentTime(value: number)
 setCurrentTime(value: number, seekMode: SeekMode)
 ```
 
-指定视频播放的进度位置，并指定跳转模式。
-
-> **说明：**
-> 
-> 如需从视频内的某一时间点开始播放，应关闭自动播放，在视频准备完成后先跳转再播放。
+Sets the video playback position with the specified seek mode.
 
 **Since:** 8
 
@@ -166,8 +159,8 @@ setCurrentTime(value: number, seekMode: SeekMode)
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | number | Yes | 视频播放进度位置。 &lt;br&gt;取值范围：[0, [duration](arkts-arkui-preparedinfo-i.md)] &lt;br&gt;当设置value大于duration时，进度跳转至最后；当设置value小于0时，不会进行进度跳转。 &lt;br&gt;单位：s |
-| seekMode | [SeekMode](arkts-arkui-seekmode-e.md) | Yes | 跳转模式。 &lt;br&gt;异常值undefined、null、NaN和Infinity按PreviousKeyframe处理。 |
+| value | number | Yes | Video playback position.&lt;br&gt;Value range: [0, [duration](arkts-arkui-preparedinfo-i.md)]&lt;br&gt; When the set value is greater than the duration, the progress will jump to the end; when the set value is less than 0, no progress jump will occur.&lt;br&gt;Unit: second |
+| seekMode | [SeekMode](../../apis-media-kit/arkts-apis/arkts-media-media-seekmode-e.md) | Yes | Seek mode. |
 
 ## start
 
@@ -175,7 +168,7 @@ setCurrentTime(value: number, seekMode: SeekMode)
 start()
 ```
 
-开始播放。
+Starts playback.
 
 **Since:** 7
 
@@ -193,7 +186,7 @@ start()
 stop()
 ```
 
-停止播放，显示当前帧，再次播放时从头开始播放。
+Stops playback. The current frame is then displayed, and playback will restart from the very beginning.
 
 **Since:** 7
 

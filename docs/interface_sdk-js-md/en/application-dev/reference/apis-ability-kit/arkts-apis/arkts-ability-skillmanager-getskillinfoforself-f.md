@@ -12,7 +12,7 @@ import { skillManager } from 'kits/@kit.AbilityKit';
 function getSkillInfoForSelf(moduleName: string, skillName: string, flags: int): Promise<SkillInfo>
 ```
 
-获取本应用中指定模块下指定名称的技能信息。使用Promise异步回调。
+Obtains SkillInfo of the calling application based on moduleName and skillName.
 
 **Since:** 26.0.0
 
@@ -30,20 +30,20 @@ function getSkillInfoForSelf(moduleName: string, skillName: string, flags: int):
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| moduleName | string | Yes | 指定查询技能所属模块的名称。 |
-| skillName | string | Yes | 指定查询技能的名称。 |
+| moduleName | string | Yes | Indicates the module name of the skill. |
+| skillName | string | Yes | Indicates the name of the skill. |
 | flags | int | Yes | { |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;SkillInfo&gt; | Promise对象，返回指定技能的SkillInfo。 |
+| Promise&lt;SkillInfo&gt; | Returns the SkillInfo object of the specified skill. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
 | 17700093 | The specified skillName is not found. |
-| 17700002 | The specified module is not found. |
+| [17700002](../errorcode-bundle.md#17700002-module-name-does-not-exist) | The specified module is not found. |
 

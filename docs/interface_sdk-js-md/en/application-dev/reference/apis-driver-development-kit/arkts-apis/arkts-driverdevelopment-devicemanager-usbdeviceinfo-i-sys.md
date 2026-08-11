@@ -1,6 +1,7 @@
 # USBDeviceInfo (System API)
 
-USB设备详细信息，继承自[DeviceInfo](arkts-driverdevelopment-devicemanager-deviceinfo-i-sys.md)。
+Defines detailed information about the USB device. It is inherited from  
+[DeviceInfo](arkts-driverdevelopment-devicemanager-deviceinfo-i-sys.md).
 
 **Inheritance/Implementation:** USBDeviceInfo extends [DeviceInfo](arkts-driverdevelopment-devicemanager-deviceinfo-i-sys.md)
 
@@ -26,7 +27,7 @@ import { deviceManager } from 'kits/@kit.DriverDevelopmentKit';
 interfaceDescList: Array<Readonly<USBInterfaceDesc>>
 ```
 
-USB设备接口描述符列表。
+List of interface descriptors of the USB device.
 
 **Type:** Array&lt;Readonly&lt;USBInterfaceDesc&gt;&gt;
 
@@ -46,7 +47,7 @@ USB设备接口描述符列表。
 productId: int
 ```
 
-USB设备Product ID。
+Product ID of the USB device.
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
@@ -66,7 +67,7 @@ USB设备Product ID。
 vendorId: int
 ```
 
-USB设备Vendor ID。
+Vendor ID of the USB device.
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 

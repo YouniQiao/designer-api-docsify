@@ -1,6 +1,6 @@
 # DataTransferProgress
 
-长时任务通知进度信息。
+Information about continuousTask notification progress.
 
 **Since:** 26.1.0
 
@@ -22,7 +22,7 @@ import { backgroundTaskManager } from 'kits/@kit.BackgroundTasksKit';
 continuousTaskId: int
 ```
 
-长时任务ID。取值限定为整数。
+Continuous task ID.The value should be an integer.
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
@@ -42,7 +42,7 @@ continuousTaskId: int
 progressInfo: ProgressInfo
 ```
 
-通知进度信息。
+Notify progress data.
 
 **Type:** [ProgressInfo](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-pasteboard-progressinfo-i.md)
 
@@ -62,7 +62,7 @@ progressInfo: ProgressInfo
 wantAgent?: WantAgent
 ```
 
-通知参数，用于指定点击长时任务通知后跳转的界面。
+Notification parameters, which are used to specify the target page that is redirected to when a continuous task notification is clicked.
 
 **Type:** [WantAgent](../../apis-ability-kit/arkts-apis/arkts-ability-wantagent-t.md)
 

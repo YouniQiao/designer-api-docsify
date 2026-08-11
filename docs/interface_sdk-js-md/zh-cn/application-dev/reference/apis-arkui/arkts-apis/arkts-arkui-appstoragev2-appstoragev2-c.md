@@ -41,7 +41,7 @@ public static connect<T extends object>(ttype: Class, key: string,
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| ttype | [Class](../../apis-arkts/arkts-apis/arkts-arkts-class-c.md) | 是 | 指定的类型。 |
+| ttype | Class | 是 | 指定的类型。 |
 | key | string | 是 | 指定的key。 |
 | defaultCreator | [StorageDefaultCreator](arkts-arkui-storagedefaultcreator-t.md)&lt;T&gt; | 否 | 获取默认值的构造器，默认值为undefined。 |
 
@@ -81,7 +81,7 @@ public static connect<T extends object>(ttype: Class, defaultCreator?: StorageDe
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| ttype | [Class](../../apis-arkts/arkts-apis/arkts-arkts-class-c.md) | 是 | 指定的类型。 |
+| ttype | Class | 是 | 指定的类型。 |
 | defaultCreator | [StorageDefaultCreator](arkts-arkui-storagedefaultcreator-t.md)&lt;T&gt; | 否 | 获取默认值的构造器，默认值为undefined。 |
 
 **返回值：**

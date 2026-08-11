@@ -1,6 +1,6 @@
 # TouchRecognizer
 
-触摸识别器对象。
+Defines the touch recognizer.
 
 **Since:** 26.0.0
 
@@ -16,7 +16,7 @@
 cancelTouch(): void
 ```
 
-向当前触摸识别器发送触摸取消事件的信息。
+Dispatch touch cancel to the touch recognizer.
 
 **Since:** 26.0.0
 
@@ -34,7 +34,7 @@ cancelTouch(): void
 getEventTargetInfo(): EventTargetInfo
 ```
 
-返回当前触摸识别器对应组件的信息。
+Returns the event target information of the component.
 
 **Since:** 26.0.0
 
@@ -50,7 +50,7 @@ getEventTargetInfo(): EventTargetInfo
 
 | Type | Description |
 | --- | --- |
-| [EventTargetInfo](arkts-arkui-eventtargetinfo-c.md) | 当前触摸识别器对应组件的信息。 |
+| [EventTargetInfo](arkts-arkui-eventtargetinfo-c.md) | the event target information of the component. |
 
 ## isHostBelongsTo
 
@@ -58,7 +58,7 @@ getEventTargetInfo(): EventTargetInfo
 isHostBelongsTo(uniqueId: int): boolean
 ```
 
-返回当前触摸识别器绑定节点是否为传入组件的后代节点。
+Check whether the current gesture binding node is a descendant of the passed-in component.
 
 **Since:** 26.0.0
 
@@ -74,11 +74,11 @@ isHostBelongsTo(uniqueId: int): boolean
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| uniqueId | int | Yes | 组件的唯一ID。可以通过[getUniqueId](arkts-arkui-eventtargetinfo-c.md#getuniqueid)接口获取该ID。 |
+| uniqueId | int | Yes | the unique id of the component. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| boolean | 当前触摸识别器绑定节点是否为传入组件的后代节点。true表示当前绑定节点为传入组件的后代节点，false表示当前绑定节点非传入组件的后代节点。 |
+| boolean | the query result. |
 

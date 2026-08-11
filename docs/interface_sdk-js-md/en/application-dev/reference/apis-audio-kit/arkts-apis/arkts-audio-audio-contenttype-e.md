@@ -1,6 +1,6 @@
 # ContentType
 
-表示音频内容类型的枚举。
+Enumerates the audio content types.
 
 **Since:** 7
 
@@ -20,7 +20,7 @@
 CONTENT_TYPE_UNKNOWN = 0
 ```
 
-未知类型。
+Unknown content.
 
 **Since:** 7
 
@@ -40,7 +40,7 @@ CONTENT_TYPE_UNKNOWN = 0
 CONTENT_TYPE_SPEECH = 1
 ```
 
-语音。
+Speech.
 
 **Since:** 7
 
@@ -60,7 +60,7 @@ CONTENT_TYPE_SPEECH = 1
 CONTENT_TYPE_MUSIC = 2
 ```
 
-音乐。
+Music.
 
 **Since:** 7
 
@@ -80,7 +80,7 @@ CONTENT_TYPE_MUSIC = 2
 CONTENT_TYPE_MOVIE = 3
 ```
 
-电影。
+Movie.
 
 **Since:** 7
 
@@ -100,7 +100,7 @@ CONTENT_TYPE_MOVIE = 3
 CONTENT_TYPE_SONIFICATION = 4
 ```
 
-通知音。
+Notification tone.
 
 **Since:** 7
 
@@ -120,7 +120,7 @@ CONTENT_TYPE_SONIFICATION = 4
 CONTENT_TYPE_RINGTONE = 5
 ```
 
-铃声。
+Ringtone.
 
 **Since:** 8
 

@@ -1,11 +1,5 @@
 # getAllShortcutInfoForSelf
 
-## 导入模块
-
-```TypeScript
-import { shortcutManager } from 'kits/@kit.AbilityKit';
-```
-
 ## getAllShortcutInfoForSelf
 
 ```TypeScript
@@ -30,6 +24,8 @@ function getAllShortcutInfoForSelf(): Promise<Array<ShortcutInfo>>
 
 ## 示例
 
+ArkTS-Dyn示例:
+
 ```TypeScript
 import { shortcutManager } from '@kit.AbilityKit';
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -38,7 +34,23 @@ shortcutManager.getAllShortcutInfoForSelf()
   .then((data: shortcutManager.ShortcutInfo[]) => {
     console.info('getAllShortcutInfoForSelf shortcut data is' + JSON.stringify(data));
   }).catch((err: BusinessError) => {
-  console.error(`getAllShortcutInfoForSelf errData is errCode:${err.code}  message:${err.message}`);
+    console.error(`getAllShortcutInfoForSelf errData is errCode:${err.code}  message:${err.message}`);
 });
+```
+
+ArkTS-Sta示例:
+
+```TypeScript
+'use static'
+
+import { shortcutManager } from '@kit.AbilityKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+shortcutManager.getAllShortcutInfoForSelf()
+  .then((data: shortcutManager.ShortcutInfo[]) => {
+    console.info('getAllShortcutInfoForSelf shortcut data is' + JSON.stringify(data));
+  }).catch((err: Error) => {
+    console.error(`getAllShortcutInfoForSelf errData is errCode:${(err as BusinessError).code}  message:${(err as BusinessError).message}`);
+  });
 ```
 

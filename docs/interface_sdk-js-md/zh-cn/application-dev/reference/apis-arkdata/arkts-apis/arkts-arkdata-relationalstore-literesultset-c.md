@@ -19,12 +19,6 @@ LiteResultSet实例不会实时刷新。使用结果集后，如果数据库中�
 
 **系统能力：** SystemCapability.DistributedDataManager.RelationalStore.Core
 
-## 导入模块
-
-```TypeScript
-import { relationalStore } from 'kits/@kit.ArkData';
-```
-
 ## close
 
 ```TypeScript
@@ -79,16 +73,16 @@ getAsset(columnIndex: int): Asset
 
 | 类型 | 说明 |
 | --- | --- |
-| [Asset](arkts-arkdata-commontype-asset-i.md) | 以Asset形式返回指定列的值。 |
+| [Asset](arkts-arkdata-sendablerelationalstore-asset-i.md) | 以Asset形式返回指定列的值。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 14800041 | Type conversion failed. |
-| 14800013 | Column index is out of bounds. |
-| 14800012 | ResultSet is empty or pointer index is out of bounds. |
-| 14800014 | The target instance is already closed. |
+| [14800041](../errorcode-data-rdb.md#14800041-类型转换失败) | Type conversion failed. |
+| [14800013](../errorcode-data-rdb.md#14800013-列号越界或列类型与当前调用接口不兼容) | Column index is out of bounds. |
+| [14800012](../errorcode-data-rdb.md#14800012-结果集为空或指定位置不合法) | ResultSet is empty or pointer index is out of bounds. |
+| [14800014](../errorcode-data-rdb.md#14800014-目标实例已关闭) | The target instance is already closed. |
 
 ## getAssets
 
@@ -132,10 +126,10 @@ getAssets(columnIndex: int): Assets
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 14800041 | Type conversion failed. |
-| 14800013 | Column index is out of bounds. |
-| 14800012 | ResultSet is empty or pointer index is out of bounds. |
-| 14800014 | The target instance is already closed. |
+| [14800041](../errorcode-data-rdb.md#14800041-类型转换失败) | Type conversion failed. |
+| [14800013](../errorcode-data-rdb.md#14800013-列号越界或列类型与当前调用接口不兼容) | Column index is out of bounds. |
+| [14800012](../errorcode-data-rdb.md#14800012-结果集为空或指定位置不合法) | ResultSet is empty or pointer index is out of bounds. |
+| [14800014](../errorcode-data-rdb.md#14800014-目标实例已关闭) | The target instance is already closed. |
 
 ## getBlob
 
@@ -181,10 +175,10 @@ getBlob(columnIndex: int): Uint8Array
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 14800041 | Type conversion failed. |
-| 14800013 | Column index is out of bounds. |
-| 14800012 | ResultSet is empty or pointer index is out of bounds. |
-| 14800014 | The target instance is already closed. |
+| [14800041](../errorcode-data-rdb.md#14800041-类型转换失败) | Type conversion failed. |
+| [14800013](../errorcode-data-rdb.md#14800013-列号越界或列类型与当前调用接口不兼容) | Column index is out of bounds. |
+| [14800012](../errorcode-data-rdb.md#14800012-结果集为空或指定位置不合法) | ResultSet is empty or pointer index is out of bounds. |
+| [14800014](../errorcode-data-rdb.md#14800014-目标实例已关闭) | The target instance is already closed. |
 
 ## getColumnIndex
 
@@ -226,14 +220,14 @@ getColumnIndex(columnName: string): int
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 14800001 | Invalid arguments. Possible causes: 1. Parameter is out of valid range. |
-| 14800019 | The SQL must be a query statement. |
-| 14800021 | SQLite: Generic error. |
-| 14800011 | The current operation failed because the database is corrupted. |
-| 14800026 | SQLite: The database is out of memory. |
-| 14800028 | SQLite: Some kind of disk I/O error occurred. |
-| 14800014 | The target instance is already closed. |
-| 14800030 | SQLite: Unable to open the database file. |
+| [14800001](../errorcode-data-rdb.md#14800001-无效的参数) | Invalid arguments. Possible causes: 1. Parameter is out of valid range. |
+| [14800019](../errorcode-data-rdb.md#14800019-sql必须是查询语句) | The SQL must be a query statement. |
+| [14800021](../errorcode-data-rdb.md#14800021-sqlite通用错误) | SQLite: Generic error. |
+| [14800011](../errorcode-data-rdb.md#14800011-数据库文件异常) | The current operation failed because the database is corrupted. |
+| [14800026](../errorcode-data-rdb.md#14800026-sqlite数据库内存不足) | SQLite: The database is out of memory. |
+| [14800028](../errorcode-data-rdb.md#14800028-sqlite发生了某种磁盘io错误) | SQLite: Some kind of disk I/O error occurred. |
+| [14800014](../errorcode-data-rdb.md#14800014-目标实例已关闭) | The target instance is already closed. |
+| [14800030](../errorcode-data-rdb.md#14800030-sqlite无法打开数据库文件) | SQLite: Unable to open the database file. |
 
 ## getColumnName
 
@@ -275,15 +269,15 @@ getColumnName(columnIndex: int): string
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 14800001 | Invalid arguments. Possible causes: 1. Parameter is out of valid range. |
-| 14800019 | The SQL must be a query statement. |
-| 14800021 | SQLite: Generic error. |
-| 14800011 | The current operation failed because the database is corrupted. |
-| 14800026 | SQLite: The database is out of memory. |
-| 14800013 | Column index is out of bounds. |
-| 14800028 | SQLite: Some kind of disk I/O error occurred. |
-| 14800014 | The target instance is already closed. |
-| 14800030 | SQLite: Unable to open the database file. |
+| [14800001](../errorcode-data-rdb.md#14800001-无效的参数) | Invalid arguments. Possible causes: 1. Parameter is out of valid range. |
+| [14800019](../errorcode-data-rdb.md#14800019-sql必须是查询语句) | The SQL must be a query statement. |
+| [14800021](../errorcode-data-rdb.md#14800021-sqlite通用错误) | SQLite: Generic error. |
+| [14800011](../errorcode-data-rdb.md#14800011-数据库文件异常) | The current operation failed because the database is corrupted. |
+| [14800026](../errorcode-data-rdb.md#14800026-sqlite数据库内存不足) | SQLite: The database is out of memory. |
+| [14800013](../errorcode-data-rdb.md#14800013-列号越界或列类型与当前调用接口不兼容) | Column index is out of bounds. |
+| [14800028](../errorcode-data-rdb.md#14800028-sqlite发生了某种磁盘io错误) | SQLite: Some kind of disk I/O error occurred. |
+| [14800014](../errorcode-data-rdb.md#14800014-目标实例已关闭) | The target instance is already closed. |
+| [14800030](../errorcode-data-rdb.md#14800030-sqlite无法打开数据库文件) | SQLite: Unable to open the database file. |
 
 ## getColumnNames
 
@@ -315,14 +309,14 @@ getColumnNames(): Array<string>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 14800001 | Invalid arguments. Possible causes: 1. Parameter is out of valid range. |
-| 14800019 | The SQL must be a query statement. |
-| 14800021 | SQLite: Generic error. |
-| 14800011 | The current operation failed because the database is corrupted. |
-| 14800026 | SQLite: The database is out of memory. |
-| 14800028 | SQLite: Some kind of disk I/O error occurred. |
-| 14800014 | The target instance is already closed. |
-| 14800030 | SQLite: Unable to open the database file. |
+| [14800001](../errorcode-data-rdb.md#14800001-无效的参数) | Invalid arguments. Possible causes: 1. Parameter is out of valid range. |
+| [14800019](../errorcode-data-rdb.md#14800019-sql必须是查询语句) | The SQL must be a query statement. |
+| [14800021](../errorcode-data-rdb.md#14800021-sqlite通用错误) | SQLite: Generic error. |
+| [14800011](../errorcode-data-rdb.md#14800011-数据库文件异常) | The current operation failed because the database is corrupted. |
+| [14800026](../errorcode-data-rdb.md#14800026-sqlite数据库内存不足) | SQLite: The database is out of memory. |
+| [14800028](../errorcode-data-rdb.md#14800028-sqlite发生了某种磁盘io错误) | SQLite: Some kind of disk I/O error occurred. |
+| [14800014](../errorcode-data-rdb.md#14800014-目标实例已关闭) | The target instance is already closed. |
+| [14800030](../errorcode-data-rdb.md#14800030-sqlite无法打开数据库文件) | SQLite: Unable to open the database file. |
 
 ## getColumnType
 
@@ -364,16 +358,16 @@ getColumnType(columnIdentifier: int | string): Promise<ColumnType>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 14800001 | Invalid arguments. Possible causes: 1. Parameter is out of valid range. |
-| 14800019 | The SQL must be a query statement. |
-| 14800021 | SQLite: Generic error. |
-| 14800011 | The current operation failed because the database is corrupted. |
-| 14800026 | SQLite: The database is out of memory. |
-| 14800013 | Column index is out of bounds. |
-| 14800012 | ResultSet is empty or pointer index is out of bounds. |
-| 14800028 | SQLite: Some kind of disk I/O error occurred. |
-| 14800014 | The target instance is already closed. |
-| 14800030 | SQLite: Unable to open the database file. |
+| [14800001](../errorcode-data-rdb.md#14800001-无效的参数) | Invalid arguments. Possible causes: 1. Parameter is out of valid range. |
+| [14800019](../errorcode-data-rdb.md#14800019-sql必须是查询语句) | The SQL must be a query statement. |
+| [14800021](../errorcode-data-rdb.md#14800021-sqlite通用错误) | SQLite: Generic error. |
+| [14800011](../errorcode-data-rdb.md#14800011-数据库文件异常) | The current operation failed because the database is corrupted. |
+| [14800026](../errorcode-data-rdb.md#14800026-sqlite数据库内存不足) | SQLite: The database is out of memory. |
+| [14800013](../errorcode-data-rdb.md#14800013-列号越界或列类型与当前调用接口不兼容) | Column index is out of bounds. |
+| [14800012](../errorcode-data-rdb.md#14800012-结果集为空或指定位置不合法) | ResultSet is empty or pointer index is out of bounds. |
+| [14800028](../errorcode-data-rdb.md#14800028-sqlite发生了某种磁盘io错误) | SQLite: Some kind of disk I/O error occurred. |
+| [14800014](../errorcode-data-rdb.md#14800014-目标实例已关闭) | The target instance is already closed. |
+| [14800030](../errorcode-data-rdb.md#14800030-sqlite无法打开数据库文件) | SQLite: Unable to open the database file. |
 
 ## getColumnTypeSync
 
@@ -415,16 +409,16 @@ getColumnTypeSync(columnIdentifier: int | string): ColumnType
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 14800001 | Invalid arguments. Possible causes: 1. Parameter is out of valid range. |
-| 14800019 | The SQL must be a query statement. |
-| 14800021 | SQLite: Generic error. |
-| 14800011 | The current operation failed because the database is corrupted. |
-| 14800026 | SQLite: The database is out of memory. |
-| 14800013 | Column index is out of bounds. |
-| 14800012 | ResultSet is empty or pointer index is out of bounds. |
-| 14800028 | SQLite: Some kind of disk I/O error occurred. |
-| 14800014 | The target instance is already closed. |
-| 14800030 | SQLite: Unable to open the database file. |
+| [14800001](../errorcode-data-rdb.md#14800001-无效的参数) | Invalid arguments. Possible causes: 1. Parameter is out of valid range. |
+| [14800019](../errorcode-data-rdb.md#14800019-sql必须是查询语句) | The SQL must be a query statement. |
+| [14800021](../errorcode-data-rdb.md#14800021-sqlite通用错误) | SQLite: Generic error. |
+| [14800011](../errorcode-data-rdb.md#14800011-数据库文件异常) | The current operation failed because the database is corrupted. |
+| [14800026](../errorcode-data-rdb.md#14800026-sqlite数据库内存不足) | SQLite: The database is out of memory. |
+| [14800013](../errorcode-data-rdb.md#14800013-列号越界或列类型与当前调用接口不兼容) | Column index is out of bounds. |
+| [14800012](../errorcode-data-rdb.md#14800012-结果集为空或指定位置不合法) | ResultSet is empty or pointer index is out of bounds. |
+| [14800028](../errorcode-data-rdb.md#14800028-sqlite发生了某种磁盘io错误) | SQLite: Some kind of disk I/O error occurred. |
+| [14800014](../errorcode-data-rdb.md#14800014-目标实例已关闭) | The target instance is already closed. |
+| [14800030](../errorcode-data-rdb.md#14800030-sqlite无法打开数据库文件) | SQLite: Unable to open the database file. |
 
 ## getCurrentRowData
 
@@ -454,15 +448,15 @@ getCurrentRowData(): RowData
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 14800001 | Invalid arguments. Possible causes: 1. Parameter is out of valid range. |
-| 14800019 | The SQL must be a query statement. |
-| 14800021 | SQLite: Generic error. |
-| 14800011 | The current operation failed because the database is corrupted. |
-| 14800026 | SQLite: The database is out of memory. |
-| 14800012 | ResultSet is empty or pointer index is out of bounds. |
-| 14800028 | SQLite: Some kind of disk I/O error occurred. |
-| 14800014 | The target instance is already closed. |
-| 14800030 | SQLite: Unable to open the database file. |
+| [14800001](../errorcode-data-rdb.md#14800001-无效的参数) | Invalid arguments. Possible causes: 1. Parameter is out of valid range. |
+| [14800019](../errorcode-data-rdb.md#14800019-sql必须是查询语句) | The SQL must be a query statement. |
+| [14800021](../errorcode-data-rdb.md#14800021-sqlite通用错误) | SQLite: Generic error. |
+| [14800011](../errorcode-data-rdb.md#14800011-数据库文件异常) | The current operation failed because the database is corrupted. |
+| [14800026](../errorcode-data-rdb.md#14800026-sqlite数据库内存不足) | SQLite: The database is out of memory. |
+| [14800012](../errorcode-data-rdb.md#14800012-结果集为空或指定位置不合法) | ResultSet is empty or pointer index is out of bounds. |
+| [14800028](../errorcode-data-rdb.md#14800028-sqlite发生了某种磁盘io错误) | SQLite: Some kind of disk I/O error occurred. |
+| [14800014](../errorcode-data-rdb.md#14800014-目标实例已关闭) | The target instance is already closed. |
+| [14800030](../errorcode-data-rdb.md#14800030-sqlite无法打开数据库文件) | SQLite: Unable to open the database file. |
 
 ## getDouble
 
@@ -508,10 +502,10 @@ getDouble(columnIndex: int): double
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 14800041 | Type conversion failed. |
-| 14800013 | Column index is out of bounds. |
-| 14800012 | ResultSet is empty or pointer index is out of bounds. |
-| 14800014 | The target instance is already closed. |
+| [14800041](../errorcode-data-rdb.md#14800041-类型转换失败) | Type conversion failed. |
+| [14800013](../errorcode-data-rdb.md#14800013-列号越界或列类型与当前调用接口不兼容) | Column index is out of bounds. |
+| [14800012](../errorcode-data-rdb.md#14800012-结果集为空或指定位置不合法) | ResultSet is empty or pointer index is out of bounds. |
+| [14800014](../errorcode-data-rdb.md#14800014-目标实例已关闭) | The target instance is already closed. |
 
 ## getLong
 
@@ -562,10 +556,10 @@ getLong(columnIndex: int): long
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 14800041 | Type conversion failed. |
-| 14800013 | Column index is out of bounds. |
-| 14800012 | ResultSet is empty or pointer index is out of bounds. |
-| 14800014 | The target instance is already closed. |
+| [14800041](../errorcode-data-rdb.md#14800041-类型转换失败) | Type conversion failed. |
+| [14800013](../errorcode-data-rdb.md#14800013-列号越界或列类型与当前调用接口不兼容) | Column index is out of bounds. |
+| [14800012](../errorcode-data-rdb.md#14800012-结果集为空或指定位置不合法) | ResultSet is empty or pointer index is out of bounds. |
+| [14800014](../errorcode-data-rdb.md#14800014-目标实例已关闭) | The target instance is already closed. |
 
 ## getRow
 
@@ -595,15 +589,15 @@ getRow(): ValuesBucket
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 14800001 | Invalid arguments. Possible causes: 1. Parameter is out of valid range. |
-| 14800019 | The SQL must be a query statement. |
-| 14800021 | SQLite: Generic error. |
-| 14800011 | The current operation failed because the database is corrupted. |
-| 14800026 | SQLite: The database is out of memory. |
-| 14800012 | ResultSet is empty or pointer index is out of bounds. |
-| 14800028 | SQLite: Some kind of disk I/O error occurred. |
-| 14800014 | The target instance is already closed. |
-| 14800030 | SQLite: Unable to open the database file. |
+| [14800001](../errorcode-data-rdb.md#14800001-无效的参数) | Invalid arguments. Possible causes: 1. Parameter is out of valid range. |
+| [14800019](../errorcode-data-rdb.md#14800019-sql必须是查询语句) | The SQL must be a query statement. |
+| [14800021](../errorcode-data-rdb.md#14800021-sqlite通用错误) | SQLite: Generic error. |
+| [14800011](../errorcode-data-rdb.md#14800011-数据库文件异常) | The current operation failed because the database is corrupted. |
+| [14800026](../errorcode-data-rdb.md#14800026-sqlite数据库内存不足) | SQLite: The database is out of memory. |
+| [14800012](../errorcode-data-rdb.md#14800012-结果集为空或指定位置不合法) | ResultSet is empty or pointer index is out of bounds. |
+| [14800028](../errorcode-data-rdb.md#14800028-sqlite发生了某种磁盘io错误) | SQLite: Some kind of disk I/O error occurred. |
+| [14800014](../errorcode-data-rdb.md#14800014-目标实例已关闭) | The target instance is already closed. |
+| [14800030](../errorcode-data-rdb.md#14800030-sqlite无法打开数据库文件) | SQLite: Unable to open the database file. |
 
 ## getRows
 
@@ -646,16 +640,16 @@ getRows(maxCount: int, position?: int): Promise<Array<ValuesBucket>>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 14800001 | Invalid arguments. Possible causes: 1. Parameter is out of valid range. |
-| 14800019 | The SQL must be a query statement. |
-| 14800021 | SQLite: Generic error. |
-| 14800011 | The current operation failed because the database is corrupted. |
-| 14800026 | SQLite: The database is out of memory. |
-| 14800012 | ResultSet is empty or pointer index is out of bounds. |
-| 14800028 | SQLite: Some kind of disk I/O error occurred. |
-| 14800031 | SQLite: TEXT or BLOB exceeds size limit. |
-| 14800014 | The target instance is already closed. |
-| 14800030 | SQLite: Unable to open the database file. |
+| [14800001](../errorcode-data-rdb.md#14800001-无效的参数) | Invalid arguments. Possible causes: 1. Parameter is out of valid range. |
+| [14800019](../errorcode-data-rdb.md#14800019-sql必须是查询语句) | The SQL must be a query statement. |
+| [14800021](../errorcode-data-rdb.md#14800021-sqlite通用错误) | SQLite: Generic error. |
+| [14800011](../errorcode-data-rdb.md#14800011-数据库文件异常) | The current operation failed because the database is corrupted. |
+| [14800026](../errorcode-data-rdb.md#14800026-sqlite数据库内存不足) | SQLite: The database is out of memory. |
+| [14800012](../errorcode-data-rdb.md#14800012-结果集为空或指定位置不合法) | ResultSet is empty or pointer index is out of bounds. |
+| [14800028](../errorcode-data-rdb.md#14800028-sqlite发生了某种磁盘io错误) | SQLite: Some kind of disk I/O error occurred. |
+| [14800031](../errorcode-data-rdb.md#14800031-sqlitetext或blob超出大小限制) | SQLite: TEXT or BLOB exceeds size limit. |
+| [14800014](../errorcode-data-rdb.md#14800014-目标实例已关闭) | The target instance is already closed. |
+| [14800030](../errorcode-data-rdb.md#14800030-sqlite无法打开数据库文件) | SQLite: Unable to open the database file. |
 
 ## getRowsData
 
@@ -698,16 +692,16 @@ getRowsData(maxCount: int, position?: int): Promise<RowsData>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 14800001 | Invalid arguments. Possible causes: 1. Parameter is out of valid range. |
-| 14800019 | The SQL must be a query statement. |
-| 14800021 | SQLite: Generic error. |
-| 14800011 | The current operation failed because the database is corrupted. |
-| 14800026 | SQLite: The database is out of memory. |
-| 14800012 | ResultSet is empty or pointer index is out of bounds. |
-| 14800028 | SQLite: Some kind of disk I/O error occurred. |
-| 14800031 | SQLite: TEXT or BLOB exceeds size limit. |
-| 14800014 | The target instance is already closed. |
-| 14800030 | SQLite: Unable to open the database file. |
+| [14800001](../errorcode-data-rdb.md#14800001-无效的参数) | Invalid arguments. Possible causes: 1. Parameter is out of valid range. |
+| [14800019](../errorcode-data-rdb.md#14800019-sql必须是查询语句) | The SQL must be a query statement. |
+| [14800021](../errorcode-data-rdb.md#14800021-sqlite通用错误) | SQLite: Generic error. |
+| [14800011](../errorcode-data-rdb.md#14800011-数据库文件异常) | The current operation failed because the database is corrupted. |
+| [14800026](../errorcode-data-rdb.md#14800026-sqlite数据库内存不足) | SQLite: The database is out of memory. |
+| [14800012](../errorcode-data-rdb.md#14800012-结果集为空或指定位置不合法) | ResultSet is empty or pointer index is out of bounds. |
+| [14800028](../errorcode-data-rdb.md#14800028-sqlite发生了某种磁盘io错误) | SQLite: Some kind of disk I/O error occurred. |
+| [14800031](../errorcode-data-rdb.md#14800031-sqlitetext或blob超出大小限制) | SQLite: TEXT or BLOB exceeds size limit. |
+| [14800014](../errorcode-data-rdb.md#14800014-目标实例已关闭) | The target instance is already closed. |
+| [14800030](../errorcode-data-rdb.md#14800030-sqlite无法打开数据库文件) | SQLite: Unable to open the database file. |
 
 ## getString
 
@@ -755,10 +749,10 @@ getString(columnIndex: int): string
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 14800041 | Type conversion failed. |
-| 14800013 | Column index is out of bounds. |
-| 14800012 | ResultSet is empty or pointer index is out of bounds. |
-| 14800014 | The target instance is already closed. |
+| [14800041](../errorcode-data-rdb.md#14800041-类型转换失败) | Type conversion failed. |
+| [14800013](../errorcode-data-rdb.md#14800013-列号越界或列类型与当前调用接口不兼容) | Column index is out of bounds. |
+| [14800012](../errorcode-data-rdb.md#14800012-结果集为空或指定位置不合法) | ResultSet is empty or pointer index is out of bounds. |
+| [14800014](../errorcode-data-rdb.md#14800014-目标实例已关闭) | The target instance is already closed. |
 
 ## getValue
 
@@ -803,9 +797,9 @@ getValue(columnIndex: int): ValueType
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 14800013 | Column index is out of bounds. |
-| 14800012 | ResultSet is empty or pointer index is out of bounds. |
-| 14800014 | The target instance is already closed. |
+| [14800013](../errorcode-data-rdb.md#14800013-列号越界或列类型与当前调用接口不兼容) | Column index is out of bounds. |
+| [14800012](../errorcode-data-rdb.md#14800012-结果集为空或指定位置不合法) | ResultSet is empty or pointer index is out of bounds. |
+| [14800014](../errorcode-data-rdb.md#14800014-目标实例已关闭) | The target instance is already closed. |
 
 ## goToNextRow
 
@@ -835,16 +829,16 @@ goToNextRow(): boolean
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 14800001 | Invalid arguments. Possible causes: 1. Parameter is out of valid range. |
-| 14800019 | The SQL must be a query statement. |
-| 14800021 | SQLite: Generic error. |
-| 14800011 | The current operation failed because the database is corrupted. |
-| 14800026 | SQLite: The database is out of memory. |
-| 14800012 | ResultSet is empty or pointer index is out of bounds. |
-| 14800028 | SQLite: Some kind of disk I/O error occurred. |
-| 14800031 | SQLite: TEXT or BLOB exceeds size limit. |
-| 14800014 | The target instance is already closed. |
-| 14800030 | SQLite: Unable to open the database file. |
+| [14800001](../errorcode-data-rdb.md#14800001-无效的参数) | Invalid arguments. Possible causes: 1. Parameter is out of valid range. |
+| [14800019](../errorcode-data-rdb.md#14800019-sql必须是查询语句) | The SQL must be a query statement. |
+| [14800021](../errorcode-data-rdb.md#14800021-sqlite通用错误) | SQLite: Generic error. |
+| [14800011](../errorcode-data-rdb.md#14800011-数据库文件异常) | The current operation failed because the database is corrupted. |
+| [14800026](../errorcode-data-rdb.md#14800026-sqlite数据库内存不足) | SQLite: The database is out of memory. |
+| [14800012](../errorcode-data-rdb.md#14800012-结果集为空或指定位置不合法) | ResultSet is empty or pointer index is out of bounds. |
+| [14800028](../errorcode-data-rdb.md#14800028-sqlite发生了某种磁盘io错误) | SQLite: Some kind of disk I/O error occurred. |
+| [14800031](../errorcode-data-rdb.md#14800031-sqlitetext或blob超出大小限制) | SQLite: TEXT or BLOB exceeds size limit. |
+| [14800014](../errorcode-data-rdb.md#14800014-目标实例已关闭) | The target instance is already closed. |
+| [14800030](../errorcode-data-rdb.md#14800030-sqlite无法打开数据库文件) | SQLite: Unable to open the database file. |
 
 ## isColumnNull
 
@@ -886,14 +880,14 @@ isColumnNull(columnIndex: int): boolean
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 14800001 | Invalid arguments. Possible causes: 1. Parameter is out of valid range. |
-| 14800019 | The SQL must be a query statement. |
-| 14800021 | SQLite: Generic error. |
-| 14800011 | The current operation failed because the database is corrupted. |
-| 14800026 | SQLite: The database is out of memory. |
-| 14800013 | Column index is out of bounds. |
-| 14800012 | ResultSet is empty or pointer index is out of bounds. |
-| 14800028 | SQLite: Some kind of disk I/O error occurred. |
-| 14800014 | The target instance is already closed. |
-| 14800030 | SQLite: Unable to open the database file |
+| [14800001](../errorcode-data-rdb.md#14800001-无效的参数) | Invalid arguments. Possible causes: 1. Parameter is out of valid range. |
+| [14800019](../errorcode-data-rdb.md#14800019-sql必须是查询语句) | The SQL must be a query statement. |
+| [14800021](../errorcode-data-rdb.md#14800021-sqlite通用错误) | SQLite: Generic error. |
+| [14800011](../errorcode-data-rdb.md#14800011-数据库文件异常) | The current operation failed because the database is corrupted. |
+| [14800026](../errorcode-data-rdb.md#14800026-sqlite数据库内存不足) | SQLite: The database is out of memory. |
+| [14800013](../errorcode-data-rdb.md#14800013-列号越界或列类型与当前调用接口不兼容) | Column index is out of bounds. |
+| [14800012](../errorcode-data-rdb.md#14800012-结果集为空或指定位置不合法) | ResultSet is empty or pointer index is out of bounds. |
+| [14800028](../errorcode-data-rdb.md#14800028-sqlite发生了某种磁盘io错误) | SQLite: Some kind of disk I/O error occurred. |
+| [14800014](../errorcode-data-rdb.md#14800014-目标实例已关闭) | The target instance is already closed. |
+| [14800030](../errorcode-data-rdb.md#14800030-sqlite无法打开数据库文件) | SQLite: Unable to open the database file |
 

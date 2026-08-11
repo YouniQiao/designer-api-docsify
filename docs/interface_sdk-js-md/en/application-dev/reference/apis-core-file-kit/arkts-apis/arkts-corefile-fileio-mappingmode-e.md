@@ -1,6 +1,6 @@
 # MappingMode
 
-文件内存映射模式类型的枚举。
+Enumerates file memory mapping modes.
 
 **Since:** 26.0.0
 
@@ -16,7 +16,7 @@
 READ_ONLY = 0
 ```
 
-只读映射模式。文件映射区不可写，修改会抛出异常。
+Read-only mode. The file mapping area is not writable. An exception is thrown when the file mapping area is modified.
 
 **Since:** 26.0.0
 
@@ -34,7 +34,7 @@ READ_ONLY = 0
 READ_WRITE = 1
 ```
 
-读写映射模式。修改会写入文件映射区，后续由操作系统同步到文件（非实时）。
+Read/Write mode. The modification is written to the file mapping area and then synchronized to the file by the operating system (non-real-time).
 
 **Since:** 26.0.0
 
@@ -52,7 +52,7 @@ READ_WRITE = 1
 PRIVATE = 2
 ```
 
-私有映射模式。是一种写时复制的映射机制，对映射区的修改仅对当前进程可见，不会影响原始文件。
+Private mode. It is a copy-on-write mapping mechanism. Modifications to the mapping area are visible only to the current process and do not affect the raw file.
 
 **Since:** 26.0.0
 

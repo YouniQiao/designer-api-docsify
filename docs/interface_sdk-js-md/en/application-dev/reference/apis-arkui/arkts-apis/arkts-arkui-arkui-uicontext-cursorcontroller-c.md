@@ -40,7 +40,7 @@ Restore default cursor.
 setCursor(value: PointerStyle): void
 ```
 
-设置光标样式。
+Set cursor style.
 
 **Since:** 23
 
@@ -64,7 +64,7 @@ setCursor(value: PointerStyle): void
 setCustomCursor(value: image.PixelMap, focusX?: int, focusY?: int): void
 ```
 
-设置自定义光标样式。
+Sets the custom cursor style.
 
 **Since:** 26.0.0
 
@@ -80,7 +80,7 @@ setCustomCursor(value: image.PixelMap, focusX?: int, focusY?: int): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | image.PixelMap | Yes | 自定义光标样式。 |
-| focusX | int | No | 自定义光标的焦点x。取值大于等于0。默认的 值为0。 |
-| focusY | int | No | 自定义光标的焦点y。取值大于等于0。默认的 值为0。 |
+| value | image.PixelMap | Yes | custom cursor style. |
+| focusX | int | No | Focus x of the custom cursor. The value is greater than or equal to 0. The default value is 0. |
+| focusY | int | No | Focus y of the custom cursor. The value is greater than or equal to 0. The default value is 0. |
 

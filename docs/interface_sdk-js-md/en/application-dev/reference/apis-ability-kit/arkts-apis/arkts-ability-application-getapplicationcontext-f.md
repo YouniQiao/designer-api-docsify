@@ -12,7 +12,7 @@ import { application } from 'kits/@kit.AbilityKit';
 export function getApplicationContext(): ApplicationContext
 ```
 
-获取应用上下文。开发者使用该接口时，无需依赖Context基类。重复调用该接口，将生成新的ApplicationContext对象。
+Obtains the application context. This API provides context access independent of the base class **Context**.Repeated calls to this API generate a new ApplicationContext object.
 
 **Since:** 14
 
@@ -30,13 +30,13 @@ export function getApplicationContext(): ApplicationContext
 
 | Type | Description |
 | --- | --- |
-| [ApplicationContext](arkts-ability-applicationcontext-c.md) | 应用上下文。 |
+| [ApplicationContext](arkts-ability-applicationcontext-c.md) | Application context. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 16000050 | Internal error. |
+| [16000050](../errorcode-ability.md#16000050-internal-error) | Internal error. |
 
 ## Examples
 

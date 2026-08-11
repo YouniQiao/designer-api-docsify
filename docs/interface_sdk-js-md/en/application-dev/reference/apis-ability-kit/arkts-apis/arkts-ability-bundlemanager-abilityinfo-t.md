@@ -4,7 +4,7 @@
 export type AbilityInfo = _AbilityInfo.AbilityInfo
 ```
 
-Ability信息。
+Defines the ability information.
 
 **Since:** 9
 

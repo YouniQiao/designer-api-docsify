@@ -1,11 +1,5 @@
 # revokeUriPermission（系统接口）
 
-## 导入模块
-
-```TypeScript
-import { uriPermissionManager } from 'kits/@kit.AbilityKit';
-```
-
 ## revokeUriPermission
 
 ```TypeScript
@@ -46,12 +40,12 @@ function revokeUriPermission(uri: string, targetBundleName: string, callback: As
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types. |
-| 801 | Capability not supported.<br>**适用版本：** 19+ |
-| 16000050 | Internal error. |
-| 201 | Permission denied.<br>**适用版本：** 10 - 11 |
-| 202 | Not System App. Interface caller is not a system app. |
-| 16000059 | Invalid URI type. |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types. |
+| [801](../../errorcode-universal.md#801-该设备不支持此api) | Capability not supported.<br>**适用版本：** 19+ |
+| [16000050](../errorcode-ability.md#16000050-内部错误) | Internal error. |
+| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied.<br>**适用版本：** 10 - 11 |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not System App. Interface caller is not a system app. |
+| [16000059](../errorcode-ability.md#16000059-指定的uri类型无效) | Invalid URI type. |
 
 ## 示例
 
@@ -106,10 +100,30 @@ function revokeUriPermission(uri: string, targetBundleName: string, callback: As
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 801 | Capability not supported. |
-| 16000050 | Connect to system server failed. |
-| 202 | Not System App. Interface caller is not a system app. |
-| 16000059 | Invalid URI type. |
+| [801](../../errorcode-universal.md#801-该设备不支持此api) | Capability not supported. |
+| [16000050](../errorcode-ability.md#16000050-内部错误) | Connect to system server failed. |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not System App. Interface caller is not a system app. |
+| [16000059](../errorcode-ability.md#16000059-指定的uri类型无效) | Invalid URI type. |
+
+## 示例
+
+ArkTS-Sta示例：
+
+```TypeScript
+'use static'
+import { uriPermissionManager } from '@kit.AbilityKit';
+
+let targetBundleName = 'com.example.test_case2';
+let uri = "file://com.example.test_case1/data/storage/el2/base/haps/entry_test/files/newDir";
+
+uriPermissionManager.revokeUriPermission(uri, targetBundleName, (error) => {
+  if (error && error.code !== 0) {
+    console.error("revokeUriPermission failed, error.code = " + error.code);
+    return;
+  }
+  console.info("revokeUriPermission success");
+});
+```
 
 
 ## revokeUriPermission
@@ -157,12 +171,12 @@ function revokeUriPermission(uri: string, targetBundleName: string): Promise<num
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types. |
-| 801 | Capability not supported.<br>**适用版本：** 19+ |
-| 16000050 | Internal error. |
-| 201 | Permission denied.<br>**适用版本：** 10 - 11 |
-| 202 | Not System App. Interface caller is not a system app. |
-| 16000059 | Invalid URI type. |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types. |
+| [801](../../errorcode-universal.md#801-该设备不支持此api) | Capability not supported.<br>**适用版本：** 19+ |
+| [16000050](../errorcode-ability.md#16000050-内部错误) | Internal error. |
+| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied.<br>**适用版本：** 10 - 11 |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not System App. Interface caller is not a system app. |
+| [16000059](../errorcode-ability.md#16000059-指定的uri类型无效) | Invalid URI type. |
 
 ## 示例
 
@@ -222,10 +236,30 @@ function revokeUriPermission(uri: string, targetBundleName: string): Promise<voi
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 801 | Capability not supported. |
-| 16000050 | Connect to system server failed. |
-| 202 | Not System App. Interface caller is not a system app. |
-| 16000059 | Invalid URI type. |
+| [801](../../errorcode-universal.md#801-该设备不支持此api) | Capability not supported. |
+| [16000050](../errorcode-ability.md#16000050-内部错误) | Connect to system server failed. |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not System App. Interface caller is not a system app. |
+| [16000059](../errorcode-ability.md#16000059-指定的uri类型无效) | Invalid URI type. |
+
+## 示例
+
+ArkTS-Sta示例：
+
+```TypeScript
+'use static'
+import { uriPermissionManager } from '@kit.AbilityKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let targetBundleName = 'com.example.test_case2';
+let uri = 'file://com.example.test_case1/data/storage/el2/base/haps/entry_test/files/newDir';
+
+uriPermissionManager.revokeUriPermission(uri, targetBundleName)
+  .then((data) => {
+    console.info(`Verification success, data: ${data}.`);
+  }).catch((error: BusinessError<void>): void => {
+  console.error(`Verification failed, err code: ${error.code}, err msg: ${error.message}.`);
+});
+```
 
 
 ## revokeUriPermission
@@ -273,14 +307,16 @@ function revokeUriPermission(uri: string, targetBundleName: string, appCloneInde
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types. |
-| 801 | Capability not supported.<br>**适用版本：** 19+ |
-| 16000081 | Failed to obtain the target application information. |
-| 16000050 | Internal error. |
-| 202 | Not System App. Interface caller is not a system app. |
-| 16000059 | Invalid URI type. |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types. |
+| [801](../../errorcode-universal.md#801-该设备不支持此api) | Capability not supported.<br>**适用版本：** 19+ |
+| [16000081](../errorcode-ability.md#16000081-获取目标应用信息失败) | Failed to obtain the target application information. |
+| [16000050](../errorcode-ability.md#16000050-内部错误) | Internal error. |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not System App. Interface caller is not a system app. |
+| [16000059](../errorcode-ability.md#16000059-指定的uri类型无效) | Invalid URI type. |
 
 ## 示例
+
+ArkTS-Dyn示例：
 
 ```TypeScript
 import { AbilityConstant, UIAbility, Want, wantConstant, uriPermissionManager } from '@kit.AbilityKit';
@@ -295,7 +331,7 @@ export default class EntryAbility extends UIAbility {
     let targetBundleName: string = 'com.example.demo1';
     let filePath: string = this.context.filesDir + "/test.txt";
     let uri: string = fileUri.getUriFromPath(filePath);
-    // 撤销主应用的URI权限
+    // 撤销主应用uri权限
     try {
       let appCloneIndex: number = 0;
       uriPermissionManager.revokeUriPermission(uri, targetBundleName, appCloneIndex)
@@ -308,13 +344,58 @@ export default class EntryAbility extends UIAbility {
       console.error(`revokeUriPermission failed. error: ${JSON.stringify(error)}.`);
     }
 
-    // 撤销分身应用的URI权限
+    // 撤销分身应用uri权限
     try {
       let appCloneIndex: number = 1;
       uriPermissionManager.revokeUriPermission(uri, targetBundleName, appCloneIndex)
         .then(() => {
           console.info('revokeUriPermission succeeded.');
         }).catch((error: BusinessError) => {
+        console.error(`revokeUriPermission failed. error: ${JSON.stringify(error)}.`);
+      });
+    } catch (error) {
+      console.error(`revokeUriPermission failed. error: ${JSON.stringify(error)}.`);
+    }
+  }
+}
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+'use static'
+import { AbilityConstant, UIAbility, Want, wantConstant, uriPermissionManager } from '@kit.AbilityKit';
+import { fileUri } from '@kit.CoreFileKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+export default class EntryAbility extends UIAbility {
+  onCreate(want: Want, launchParam: AbilityConstant.LaunchParam): void {
+  }
+
+  onForeground(): void {
+    let targetBundleName: string = 'com.example.demo1';
+    let filePath: string = this.context.filesDir + "/test.txt";
+    let uri: string = fileUri.getUriFromPath(filePath);
+    // 撤销主应用uri权限
+    try {
+      let appCloneIndex: int = 0;
+      uriPermissionManager.revokeUriPermission(uri, targetBundleName, appCloneIndex)
+        .then(() => {
+          console.info('revokeUriPermission succeeded.');
+        }).catch((error: BusinessError<void>): void => {
+        console.error(`revokeUriPermission failed. error: ${JSON.stringify(error)}.`);
+      });
+    } catch (error) {
+      console.error(`revokeUriPermission failed. error: ${JSON.stringify(error)}.`);
+    }
+
+    // 撤销分身应用uri权限
+    try {
+      let appCloneIndex: int = 0;
+      uriPermissionManager.revokeUriPermission(uri, targetBundleName, appCloneIndex)
+        .then(() => {
+          console.info('revokeUriPermission succeeded.');
+        }).catch((error: BusinessError<void>): void => {
         console.error(`revokeUriPermission failed. error: ${JSON.stringify(error)}.`);
       });
     } catch (error) {

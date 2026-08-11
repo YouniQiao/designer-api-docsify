@@ -1,6 +1,6 @@
 # @ohos.hidebug
 
-ΪӦ���ṩ���ֵ��ԡ����ŵķ��������������߶�λ����ƿ�����Ż�Ӧ�����ܡ���Ҫ���ܰ������ڴ����ݷ�����CPUʹ���ʼ�ء�trace�ɼ���profiler�ɼ���VM�ѿ���ת�������ڸ�ģ��Ľӿڴ��ȽϺķ����ܣ��ӿڵ��ý�Ϊ��ʱ���һ���HiDebugģ�鶨�壬��ģ���ڵĽӿڽ�������Ӧ�õ��ԡ����Ž׶�ʹ�á�����Ҫ����������ʹ��ʱ������������������õĽӿڶ�Ӧ�����ܵ�Ӱ�졣
+Provide interfaces related to debugger access and obtaining CPU,memory and other virtual machine information during runtime for JS programs
 
 ## Modules to Import
 
@@ -14,5 +14,5 @@ import { hidebug } from 'kits/@kit.PerformanceAnalysisKit';
 
 | Name | Description |
 | --- | --- |
-| [hidebug](arkts-performanceanalysis-hidebug-n.md) | ΪӦ���ṩ���ֵ��ԡ����ŵķ��������������߶�λ����ƿ�����Ż�Ӧ�����ܡ���Ҫ���ܰ������ڴ����ݷ�����CPUʹ���ʼ�ء�trace�ɼ���profiler�ɼ���VM�ѿ���ת�������ڸ�ģ��Ľӿڴ��ȽϺķ����ܣ��ӿڵ��ý�Ϊ��ʱ���һ���HiDebugģ�鶨�壬��ģ���ڵĽӿڽ�������Ӧ�õ��ԡ����Ž׶�ʹ�á�����Ҫ����������ʹ��ʱ������������������õĽӿڶ�Ӧ�����ܵ�Ӱ�졣 |
+| [hidebug](arkts-performanceanalysis-hidebug-n.md) | Provide interfaces related to debugger access and obtaining CPU,memory and other virtual machine information during runtime for JS programs |
 

@@ -1,6 +1,6 @@
 # SwiperDisplayMode
 
-Swiper在主轴上的尺寸大小模式枚举。
+Declare the size of the swiper on the spindle.
 
 **Since:** 23
 
@@ -13,10 +13,10 @@ Swiper在主轴上的尺寸大小模式枚举。
 ## STRETCH
 
 ```TypeScript
-STRETCH = 0
+STRETCH
 ```
 
-Swiper滑动一页的宽度为Swiper组件自身的宽度。
+Carousel map extension.
 
 **Since:** 23
 
@@ -24,7 +24,7 @@ Swiper滑动一页的宽度为Swiper组件自身的宽度。
 
 **Model restriction:** This API can be used only in the stage model.
 
-<!--Device-SwiperDisplayMode-STRETCH = 0--><!--Device-SwiperDisplayMode-STRETCH = 0-End-->
+<!--Device-SwiperDisplayMode-STRETCH--><!--Device-SwiperDisplayMode-STRETCH-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 

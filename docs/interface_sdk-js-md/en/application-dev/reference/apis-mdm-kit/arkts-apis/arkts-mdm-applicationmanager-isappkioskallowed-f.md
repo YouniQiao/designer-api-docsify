@@ -12,7 +12,7 @@ import { applicationManager } from 'kits/@kit.MDMKit';
 function isAppKioskAllowed(appIdentifier: string): boolean
 ```
 
-查询某应用是否允许在Kiosk模式下运行。
+Checks whether an application is allowed to run in kiosk mode.
 
 **Since:** 20
 
@@ -28,13 +28,13 @@ function isAppKioskAllowed(appIdentifier: string): boolean
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| appIdentifier | string | Yes | 应用[唯一标识符](../../apis-ability-kit/arkts-apis/arkts-ability-bundleinfo-signatureinfo-i.md/arkts-ability-bundleinfo-signatureinfo-i.md)，可以通过接口 [bundleManager.getBundleInfo](../../apis-ability-kit/arkts-apis/arkts-ability-bundlemanager-getbundleinfo-f.md/arkts-ability-bundlemanager-getbundleinfo-f.md#getbundleinfo)获取 bundleInfo.signatureInfo.appIdentifier。 |
+| appIdentifier | string | Yes | [Unique identifiers](../../apis-ability-kit/arkts-apis/arkts-ability-bundleinfo-signatureinfo-i.md/arkts-ability-bundleinfo-signatureinfo-i.md) of an application. You can call the [bundleManager.getBundleInfo](../../apis-ability-kit/arkts-apis/arkts-ability-bundlemanager-getbundleinfo-f.md/arkts-ability-bundlemanager-getbundleinfo-f.md#getbundleinfo) API to obtain the **bundleInfo.signatureInfo.appIdentifier**. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| boolean | true表示允许在Kiosk模式下运行。false表示不允许在Kiosk模式下运行。 |
+| boolean | The value **true** means the application can run in kiosk mode; the value **false** means the opposite. |
 
 ## Examples
 

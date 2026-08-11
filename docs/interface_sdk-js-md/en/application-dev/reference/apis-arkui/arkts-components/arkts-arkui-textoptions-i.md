@@ -1,6 +1,6 @@
 # TextOptions
 
-Text初始化参数。
+Describes the initialization options of the **Text** component.
 
 **Since:** 11
 
@@ -16,7 +16,7 @@ Text初始化参数。
 controller: TextController
 ```
 
-文本控制器。
+Text controller.
 
 **Type:** [TextController](../arkts-apis/arkts-arkui-text-textcontroller-c.md)
 

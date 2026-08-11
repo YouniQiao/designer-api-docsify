@@ -1,6 +1,6 @@
 # DLPSandboxState (System API)
 
-DLP沙箱的状态信息。
+Represents the DLP sandbox state information.
 
 **Since:** 10
 
@@ -24,7 +24,7 @@ import { dlpPermission } from 'kits/@kit.DataProtectionKit';
 appIndex: number
 ```
 
-表示DLP沙箱应用索引。
+Index of the DLP sandbox application. The value range is [1000, 1100]. If the value is out of range, an error log is generated.
 
 **Type:** number
 
@@ -44,7 +44,7 @@ appIndex: number
 bundleName: string
 ```
 
-表示应用包名。
+Bundle name of the application.
 
 **Type:** string
 

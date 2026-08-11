@@ -1,6 +1,6 @@
 # ChangeData
 
-定义变更数据。
+Represents the data change information.
 
 **Since:** 12
 
@@ -22,7 +22,7 @@ import { cloudSync } from 'kits/@kit.CoreFileKit';
 isDirectory: Array<boolean>
 ```
 
-指示更改的URI是否为目录。true：是目录。false：非目录。
+Whether the URIs with data changed are of directories. The value **true** means the URIs are of directories; the value **false** means the opposite.
 
 **Type:** Array&lt;boolean&gt;
 
@@ -40,7 +40,7 @@ isDirectory: Array<boolean>
 type: NotifyType
 ```
 
-更改的通知类型。
+Type of the data change.
 
 **Type:** [NotifyType](arkts-corefile-cloudsync-notifytype-e.md)
 
@@ -58,7 +58,7 @@ type: NotifyType
 uris: Array<string>
 ```
 
-需要更改的URI列表。
+List of URIs whose data needs to be changed.
 
 **Type:** Array&lt;string&gt;
 

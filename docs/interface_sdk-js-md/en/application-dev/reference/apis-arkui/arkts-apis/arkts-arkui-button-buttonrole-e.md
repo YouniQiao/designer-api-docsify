@@ -1,6 +1,6 @@
 # ButtonRole
 
-按钮的角色。
+Enum for button role.
 
 **Since:** 23
 
@@ -16,7 +16,7 @@
 NORMAL = 0
 ```
 
-正常按钮。
+Normal button.
 
 **Since:** 23
 
@@ -34,7 +34,7 @@ NORMAL = 0
 ERROR = 1
 ```
 
-警示按钮。
+Error button.
 
 **Since:** 23
 

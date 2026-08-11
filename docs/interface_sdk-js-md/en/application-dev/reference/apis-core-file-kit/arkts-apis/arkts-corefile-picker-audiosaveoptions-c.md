@@ -1,6 +1,6 @@
 # AudioSaveOptions
 
-音频保存选项。
+Defines the options for saving audio clips.
 
 **Since:** 9
 
@@ -22,7 +22,7 @@ import { picker } from 'kits/@kit.CoreFileKit';
 newFileNames?: Array<string>
 ```
 
-拉起documentPicker进行保存的文件名。若无此参数，则默认需要用户自行输入。
+Name of the document to save. If this parameter is not specified, the user needs to enter the file name.
 
 **Type:** Array&lt;string&gt;
 

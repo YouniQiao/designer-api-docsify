@@ -1,6 +1,6 @@
 # PreviewText
 
-预上屏信息。
+Preview text.
 
 **Since:** 12
 
@@ -16,7 +16,7 @@
 offset: number
 ```
 
-预上屏内容的起始位置索引，从0开始。
+Start position of the preview text.
 
 **Type:** number
 
@@ -38,7 +38,7 @@ offset: number
 value: string
 ```
 
-预上屏的内容。
+Content of the preview text.
 
 **Type:** string
 

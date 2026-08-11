@@ -12,7 +12,7 @@ import { i18n } from 'kits/@kit.LocalizationKit';
 export function getTimeZone(zoneID?: string): TimeZone
 ```
 
-获取时区ID对应的时区对象。
+Obtains the TimeZone object corresponding to the specified time zone ID.
 
 **Since:** 23
 
@@ -28,11 +28,11 @@ export function getTimeZone(zoneID?: string): TimeZone
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| zoneID | string | No | 时区ID。默认值：系统时区。 |
+| zoneID | string | No | Time zone ID. The default value is the system time zone. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [TimeZone](arkts-localization-i18n-timezone-c.md) | 时区ID对应的时区对象。 |
+| [TimeZone](arkts-localization-i18n-timezone-c.md) | TimeZone object corresponding to the time zone ID. |
 

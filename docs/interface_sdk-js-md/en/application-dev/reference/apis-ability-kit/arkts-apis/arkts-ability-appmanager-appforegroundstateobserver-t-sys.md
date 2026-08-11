@@ -4,7 +4,7 @@
 export type AppForegroundStateObserver = _AppForegroundStateObserver.default
 ```
 
-应用启动和退出的状态监听。
+Defines the listener for the state of application launch and exit.
 
 **Since:** 11
 

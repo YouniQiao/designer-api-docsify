@@ -12,7 +12,7 @@ import { backup } from 'kits/@kit.CoreFileKit';
 function fileSystemServiceRequest(config: FileSystemRequestConfig): Promise<int>
 ```
 
-根据指定配置请求文件系统执行碎片清理。
+Requests filesystem garbage collection with specified configuration.
 
 **Since:** 23
 
@@ -32,21 +32,21 @@ function fileSystemServiceRequest(config: FileSystemRequestConfig): Promise<int>
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| config | [FileSystemRequestConfig](arkts-corefile-backup-filesystemrequestconfig-i-sys.md) | Yes | 碎片清理的配置参数。 &lt;br&gt;triggerType取值为0，writeSize取值范围为0至2097152 MB，waitTime取值范围为0至300秒。 |
+| config | [FileSystemRequestConfig](arkts-corefile-backup-filesystemrequestconfig-i-sys.md) | Yes | Configuration parameters for garbage collection. &lt;br&gt;triggerType: 0. writeSize: 0 - 2097152(MB). waitTime: 0-300(s). |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| ArkTS-Dyn: Promise&lt;number&gt;  <br>ArkTS-Sta：Promise&lt;int&gt; | Promise对象，返回碎片清理的错误码。 |
+| ArkTS-Dyn: Promise&lt;number&gt;  <br>ArkTS-Sta：Promise&lt;int&gt; | The errcode of garbage collection. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
 | 13900020 | Invalid argument |
-| 201 | Permission verification failed, usually the result returned by VerifyAccessToken. |
-| 202 | Permission verification failed, application which is not a system application uses system API. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed, usually the result returned by VerifyAccessToken. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed, application which is not a system application uses system API. |
 
 ## Examples
 

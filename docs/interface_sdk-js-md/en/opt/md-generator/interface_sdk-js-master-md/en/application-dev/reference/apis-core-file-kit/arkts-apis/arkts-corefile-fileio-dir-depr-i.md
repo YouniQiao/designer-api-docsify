@@ -1,0 +1,204 @@
+# Dir
+
+Manages directories. Before calling a method of the **Dir** class, use the **opendir()** method synchronously or asynchronously to create a **Dir** instance.
+
+**Since:** 6
+
+**Deprecated since:** 9
+
+**Substitutes:** [@ohos.file.fs:listFile](arkts-corefile-file-fs-listfile-f.md#listfile)
+
+<!--Device-unnamed-declare interface Dir--><!--Device-unnamed-declare interface Dir-End-->
+
+**System capability:** SystemCapability.FileManagement.File.FileIO
+
+## close
+
+```TypeScript
+close(): Promise<void>
+```
+
+Closes a directory. This API uses a promise to return the result. After a directory is closed, the file descriptor in **Dir** will be released and no directory entry can be read from **Dir**.
+
+**Since:** 7
+
+**Deprecated since:** 9
+
+**Substitutes:** [@ohos.file.fs:listFile](arkts-corefile-file-fs-listfile-f.md#listfile)
+
+<!--Device-Dir-close(): Promise<void>--><!--Device-Dir-close(): Promise<void>-End-->
+
+**System capability:** SystemCapability.FileManagement.File.FileIO
+
+**Return value:**
+
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| Promise&lt;void&gt; |
+
+## Examples
+
+```TypeScript
+import { BusinessError } from '@ohos.base';
+dir.close().then(() => {
+  console.info("close dir successfully");
+});
+```
+
+## close
+
+```TypeScript
+close(callback: AsyncCallback<void>): void
+```
+
+Closes a directory. This API uses an asynchronous callback to return the result. After a directory is closed, the file descriptor in **Dir** will be released and no directory entry can be read from **Dir**.
+
+**Since:** 7
+
+**Deprecated since:** 9
+
+**Substitutes:** [@ohos.file.fs:listFile](arkts-corefile-file-fs-listfile-f.md#listfile)
+
+<!--Device-Dir-close(callback: AsyncCallback<void>): void--><!--Device-Dir-close(callback: AsyncCallback<void>): void-End-->
+
+**System capability:** SystemCapability.FileManagement.File.FileIO
+
+**Parameters:**
+
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes |
+
+## Examples
+
+```TypeScript
+import { BusinessError } from '@ohos.base';
+dir.close((err: BusinessError) => {
+  console.info("close dir successfully");
+});
+```
+
+## closeSync
+
+```TypeScript
+closeSync(): void
+```
+
+Closes a directory. After a directory is closed, the file descriptor in **Dir** will be released and no directory entry can be read from **Dir**.
+
+**Since:** 6
+
+**Deprecated since:** 9
+
+**Substitutes:** [@ohos.file.fs:listFile](arkts-corefile-file-fs-listfile-f.md#listfile)
+
+<!--Device-Dir-closeSync(): void--><!--Device-Dir-closeSync(): void-End-->
+
+**System capability:** SystemCapability.FileManagement.File.FileIO
+
+## Examples
+
+```TypeScript
+dir.closeSync();
+```
+
+## read
+
+```TypeScript
+read(): Promise<Dirent>
+```
+
+Reads the next directory entry. This API uses a promise to return the result.
+
+**Since:** 6
+
+**Deprecated since:** 9
+
+**Substitutes:** [@ohos.file.fs:listFile](arkts-corefile-file-fs-listfile-f.md#listfile)
+
+<!--Device-Dir-read(): Promise<Dirent>--><!--Device-Dir-read(): Promise<Dirent>-End-->
+
+**System capability:** SystemCapability.FileManagement.File.FileIO
+
+**Return value:**
+
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| Promise&lt;Dirent&gt; |
+
+## Examples
+
+```TypeScript
+import { BusinessError } from '@ohos.base';
+dir.read().then((dirent: fileio.Dirent) => {
+  console.info("read succeed, the name of dirent is " + dirent.name);
+}).catch((err: BusinessError) => {
+  console.error("read failed with error:" + err);
+});
+```
+
+## read
+
+```TypeScript
+read(callback: AsyncCallback<Dirent>): void
+```
+
+Reads the next directory entry. This API uses an asynchronous callback to return the result.
+
+**Since:** 6
+
+**Deprecated since:** 9
+
+**Substitutes:** [@ohos.file.fs:listFile](arkts-corefile-file-fs-listfile-f.md#listfile)
+
+<!--Device-Dir-read(callback: AsyncCallback<Dirent>): void--><!--Device-Dir-read(callback: AsyncCallback<Dirent>): void-End-->
+
+**System capability:** SystemCapability.FileManagement.File.FileIO
+
+**Parameters:**
+
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Dirent&gt; | Yes |
+
+## Examples
+
+```TypeScript
+import { BusinessError } from '@ohos.base';
+dir.read((err: BusinessError, dirent: fileio.Dirent) => {
+  if (dirent) {
+    // Do something.
+    console.info("read succeed, the name of file is " + dirent.name);
+  }
+});
+```
+
+## readSync
+
+```TypeScript
+readSync(): Dirent
+```
+
+Reads the next directory entry. This API returns the result synchronously.
+
+**Since:** 6
+
+**Deprecated since:** 9
+
+**Substitutes:** [@ohos.file.fs:listFile](arkts-corefile-file-fs-listfile-f.md#listfile)
+
+<!--Device-Dir-readSync(): Dirent--><!--Device-Dir-readSync(): Dirent-End-->
+
+**System capability:** SystemCapability.FileManagement.File.FileIO
+
+**Return value:**
+
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| [Dirent](arkts-corefile-fileio-dirent-depr-i.md) |
+
+## Examples
+
+```TypeScript
+let dirent = dir.readSync();
+```

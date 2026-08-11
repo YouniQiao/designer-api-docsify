@@ -1,6 +1,6 @@
 # EnvOptions
 
-Env创建可选参数
+Defines Env options to create Env variables.
 
 **Since:** 24
 
@@ -10,13 +10,31 @@ Env创建可选参数
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
+## watchFunc
+
+```TypeScript
+watchFunc?: WatchFuncType
+```
+
+Watch Function.
+
+**Since:** 26.0.0
+
+**ArkTS mode:** ArkTS-Sta only, since version 26.0.0.
+
+**Model restriction:** This API can be used only in the stage model.
+
+<!--Device-EnvOptions-watchFunc?: WatchFuncType--><!--Device-EnvOptions-watchFunc?: WatchFuncType-End-->
+
+**System capability:** SystemCapability.ArkUI.ArkUI.Full
+
 ## initValue
 
 ```TypeScript
 initValue?: T
 ```
 
-用户定义初始值，预留参数。
+Init value for user defined Env.
 
 **Type:** T
 

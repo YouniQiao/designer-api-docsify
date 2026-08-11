@@ -84,7 +84,7 @@ radius?: BorderRadiuses | Length | LocalizedBorderRadiuses
 
 Defines the border radius.
 
-**类型：** [BorderRadiuses](arkts-arkui-units-borderradiuses-i.md) \| Length \| LocalizedBorderRadiuses
+**类型：** [BorderRadiuses](arkts-arkui-borderradiuses-t.md) \| Length \| LocalizedBorderRadiuses
 
 **起始版本：** 12
 

@@ -16,12 +16,6 @@
 
 **系统能力：** SystemCapability.UserIAM.UserAuth.FaceAuth
 
-## 导入模块
-
-```TypeScript
-import { faceAuth } from 'kits/@kit.UserAuthenticationKit';
-```
-
 ## 汇总
 
 <!--Del-->

@@ -1,6 +1,6 @@
 # USBDevice
 
-USB设备信息。
+Represents the USB device information.
 
 **Since:** 8
 
@@ -26,7 +26,7 @@ import { usb } from 'kits/@kit.BasicServicesKit';
 busNum: number
 ```
 
-总线地址。
+Bus address.
 
 **Type:** number
 
@@ -48,7 +48,7 @@ busNum: number
 clazz: number
 ```
 
-设备类。
+Device class.
 
 **Type:** number
 
@@ -70,7 +70,7 @@ clazz: number
 configs: Array<USBConfig>
 ```
 
-设备配置描述符信息。
+Device configuration descriptor information.
 
 **Type:** Array&lt;USBConfig&gt;
 
@@ -92,7 +92,7 @@ configs: Array<USBConfig>
 devAddress: number
 ```
 
-设备地址。
+Device address.
 
 **Type:** number
 
@@ -114,7 +114,7 @@ devAddress: number
 manufacturerName: string
 ```
 
-产商信息。
+Device manufacturer.
 
 **Type:** string
 
@@ -136,7 +136,7 @@ manufacturerName: string
 name: string
 ```
 
-设备名字。
+Device name.
 
 **Type:** string
 
@@ -158,7 +158,7 @@ name: string
 productId: number
 ```
 
-产品ID。
+Product ID.
 
 **Type:** number
 
@@ -180,7 +180,7 @@ productId: number
 productName: string
 ```
 
-产品信息。
+Product name.
 
 **Type:** string
 
@@ -202,7 +202,7 @@ productName: string
 protocol: number
 ```
 
-设备协议码。
+Device protocol code.
 
 **Type:** number
 
@@ -224,7 +224,7 @@ protocol: number
 serial: string
 ```
 
-序列号。
+Sequence number.
 
 **Type:** string
 
@@ -246,7 +246,7 @@ serial: string
 subClass: number
 ```
 
-设备子类。
+Device subclass.
 
 **Type:** number
 
@@ -268,7 +268,7 @@ subClass: number
 vendorId: number
 ```
 
-厂商ID。
+Vendor ID.
 
 **Type:** number
 
@@ -290,7 +290,7 @@ vendorId: number
 version: string
 ```
 
-版本。
+Version.
 
 **Type:** string
 

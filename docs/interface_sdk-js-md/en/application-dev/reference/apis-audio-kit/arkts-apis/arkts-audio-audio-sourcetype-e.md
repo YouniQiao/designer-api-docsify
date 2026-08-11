@@ -1,6 +1,6 @@
 # SourceType
 
-表示录制音频流类型的枚举。
+Enumerates the types of audio streams captured.
 
 **Since:** 8
 
@@ -16,7 +16,7 @@
 SOURCE_TYPE_INVALID = -1
 ```
 
-无效的音频源。
+Invalid audio source.
 
 **Since:** 8
 
@@ -32,7 +32,7 @@ SOURCE_TYPE_INVALID = -1
 SOURCE_TYPE_MIC = 0
 ```
 
-Mic音频源。
+Mic source.
 
 **Since:** 8
 
@@ -48,7 +48,7 @@ Mic音频源。
 SOURCE_TYPE_VOICE_RECOGNITION = 1
 ```
 
-语音识别源。
+Voice recognition source.
 
 **Since:** 9
 
@@ -64,9 +64,7 @@ SOURCE_TYPE_VOICE_RECOGNITION = 1
 SOURCE_TYPE_PLAYBACK_CAPTURE = 2
 ```
 
-播放音频流（内录）录制音频源。
-
-<br/
+Playback capture source type.
 
 **Since:** 10
 
@@ -86,8 +84,8 @@ SOURCE_TYPE_PLAYBACK_CAPTURE = 2
 SOURCE_TYPE_VOICE_COMMUNICATION = 7
 ```
 
-语音通话场景的音频源（单独启动录制不会开启3A算法，需同时使用[STREAM_USAGE_VOICE_COMMUNICATION](arkts-audio-audio-streamusage-e.md)或  
-[STREAM_USAGE_VIDEO_COMMUNICATION](arkts-audio-audio-streamusage-e.md)类型的AudioRender起播才会触发开启3A算法）。
+Voice communication source. (The 3A algorithm is not enabled if recording is started independently. It is enabled when the AudioRenderer of the [STREAM_USAGE_VOICE_COMMUNICATION](arkts-audio-audio-streamusage-e.md) or  
+[STREAM_USAGE_VIDEO_COMMUNICATION](arkts-audio-audio-streamusage-e.md) type is also used to start playback.)
 
 **Since:** 8
 
@@ -103,7 +101,7 @@ SOURCE_TYPE_VOICE_COMMUNICATION = 7
 SOURCE_TYPE_VOICE_MESSAGE = 10
 ```
 
-短语音消息的音频源。
+Voice message source.
 
 **Since:** 12
 
@@ -119,7 +117,7 @@ SOURCE_TYPE_VOICE_MESSAGE = 10
 SOURCE_TYPE_CAMCORDER = 13
 ```
 
-录像的音频源。
+Camcorder source type.
 
 **Since:** 13
 
@@ -135,7 +133,7 @@ SOURCE_TYPE_CAMCORDER = 13
 SOURCE_TYPE_UNPROCESSED = 14
 ```
 
-麦克风纯净录音的音频源（系统不做任何算法处理）。
+Unprocessed source type.
 
 **Since:** 14
 
@@ -151,7 +149,7 @@ SOURCE_TYPE_UNPROCESSED = 14
 SOURCE_TYPE_LIVE = 17
 ```
 
-直播场景的音频源，在支持的设备上会提供系统回声消除能力。
+Live broadcast source type.
 
 **Since:** 20
 

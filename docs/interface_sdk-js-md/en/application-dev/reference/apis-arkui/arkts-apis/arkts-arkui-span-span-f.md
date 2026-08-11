@@ -8,7 +8,7 @@ export declare function Span(
 ): SpanAttribute
 ```
 
-定义Span组件。
+Defines Span Component.
 
 **Since:** 23
 
@@ -41,7 +41,7 @@ export declare function Span(
 ): SpanAttribute
 ```
 
-定义Span组件。
+Defines Span Component.
 
 **Since:** 26.1.0
 
@@ -59,7 +59,7 @@ export declare function Span(
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| style | [CustomBuilderT](../arkts-components/arkts-arkui-custombuildert-t.md)&lt;SpanAttribute&gt; | Yes | Span属性实例。 |
+| style | [CustomBuilderT](../arkts-components/arkts-arkui-custombuildert-t.md)&lt;SpanAttribute&gt; | Yes | Span attribute instance |
 
 **Return value:**
 

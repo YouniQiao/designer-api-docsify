@@ -1,6 +1,6 @@
 # RadialGradientStyle
 
-显示为径向渐变。RadialGradientStyle继承自[ShaderStyle](arkts-arkui-shaderstyle-c.md)。
+Displays a radial gradient. **RadialGradientStyle** inherits from [ShaderStyle](arkts-arkui-shaderstyle-c.md).
 
 **Inheritance/Implementation:** RadialGradientStyle extends [ShaderStyle](arkts-arkui-shaderstyle-c.md)
 
@@ -18,7 +18,7 @@
 constructor(options: RadialGradientOptions)
 ```
 
-用于创建RadialGradientStyle对象的构造函数。
+A constructor used to create a **RadialGradientOptions** object.
 
 **Since:** 20
 
@@ -36,7 +36,7 @@ constructor(options: RadialGradientOptions)
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| options | [RadialGradientOptions](../arkts-components/arkts-arkui-radialgradientoptions-i.md) | Yes | 显示为径向渐变效果。 |
+| options | [RadialGradientOptions](../arkts-components/arkts-arkui-radialgradientoptions-i.md) | Yes | Options for displaying a radial gradient. |
 
 ## options
 
@@ -44,7 +44,7 @@ constructor(options: RadialGradientOptions)
 options: RadialGradientOptions
 ```
 
-显示为径向渐变效果。
+Options for displaying a radial gradient.
 
 **Type:** [RadialGradientOptions](../arkts-components/arkts-arkui-radialgradientoptions-i.md)
 

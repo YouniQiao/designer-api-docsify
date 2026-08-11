@@ -1,6 +1,6 @@
 # RepeatMemOptStrategy
 
-定义内存优化策略的类型。
+Defines type for memory optimization strategy.
 
 **Since:** 26.0.0
 
@@ -16,7 +16,7 @@
 DEFAULT = 0
 ```
 
-无内存优化策略
+No memory optimization.
 
 **Since:** 26.0.0
 
@@ -34,7 +34,7 @@ DEFAULT = 0
 ENABLE_AUTO_CACHE_OPTIMIZATION = 1 << 0
 ```
 
-Repeat组件处理内存优化策略
+Repeat handles the memory optimization.
 
 **Since:** 26.0.0
 

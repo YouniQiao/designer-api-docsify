@@ -1,6 +1,6 @@
 # ComponentContentBase
 
-定义ComponentContent的基类.
+Defines the base class for ComponentContent.
 
 **Inheritance/Implementation:** ComponentContentBase extends [Content](arkts-arkui-content-c.md)
 

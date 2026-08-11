@@ -42,7 +42,7 @@ Resume the canceled or failed download.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 17100018 | No WebDownloadDelegate has been set yet. |
+| [17100018](../errorcode-webview.md#17100018-no-webdownloaddelegate-available) | No WebDownloadDelegate has been set yet. |
 
 ## setDownloadDelegate
 

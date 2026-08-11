@@ -6,7 +6,7 @@
 const DEVICES_URI = 'file://docs'
 ```
 
-监听设备上线，下线通知，作为注册监听的URI。
+Indicates the root uri of the device
 
 **Since:** 11
 

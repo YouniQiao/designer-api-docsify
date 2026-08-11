@@ -3,7 +3,7 @@
 继承自Date，为可观察API操作的Date对象。详见  
 [ObservedArray/ObservedMap/ObservedSet/ObservedDate：具有观察能力的Built-in类型](../../../ui/state-management-static/arkts-static-new-observed-built-in-types.md)。
 
-**继承/实现关系：** ObservedDate extends [Date](../../apis-arkts/arkts-apis/arkts-arkts-date-c.md/arkts-arkts-date-c.md)
+**继承/实现关系：** ObservedDate extends [Date](Date)
 
 **起始版本：** 26.0.0
 

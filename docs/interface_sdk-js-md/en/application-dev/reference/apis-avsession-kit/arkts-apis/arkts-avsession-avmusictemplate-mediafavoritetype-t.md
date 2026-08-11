@@ -4,7 +4,7 @@
 type MediaFavoriteType = 'addFavorite' | 'removeFavorite'
 ```
 
-媒体收藏类型的定义。该类型可取的值为下表字符串。
+Media favorite type addFavorite & removeFavorite.
 
 **Since:** 23
 

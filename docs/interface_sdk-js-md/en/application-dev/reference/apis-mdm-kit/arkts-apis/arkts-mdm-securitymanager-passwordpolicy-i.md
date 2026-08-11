@@ -1,6 +1,6 @@
 # PasswordPolicy
 
-设备锁屏口令策略。
+Represents a device screen lock password policy.
 
 **Since:** 12
 
@@ -22,7 +22,7 @@ import { securityManager } from 'kits/@kit.MDMKit';
 additionalDescription?: string
 ```
 
-口令复杂度描述文本，例如：密码中必须包含字母、数字、特殊字符，至少8个字符，最多30个字符。
+Password complexity description, for example, "The password must contain 8 to 30 characters consisting of letters, digits, and special characters".
 
 **Type:** string
 
@@ -42,7 +42,7 @@ additionalDescription?: string
 complexityRegex?: string
 ```
 
-口令复杂度正则表达式。
+Regular expression for password complexity.
 
 **Type:** string
 
@@ -62,7 +62,7 @@ complexityRegex?: string
 passwordAlgs?: PasswordAlgs
 ```
 
-处理口令数据使用的加密算法。设置后，PC/2in1设备上将原始口令处理成口令凭据会使用该参数指定的加密算法，其他设备无效果。
+Encryption algorithm used to process password data. After the setting, the encryption algorithm specified by this parameter is used to process the original password into a password credential on a PC/2-in-1 device. This parameter has no effect on other device types.
 
 **Type:** [PasswordAlgs](arkts-mdm-securitymanager-passwordalgs-e.md)
 
@@ -82,7 +82,7 @@ passwordAlgs?: PasswordAlgs
 validityPeriod?: long
 ```
 
-密码有效期（单位：毫秒）。
+Password validity period, in ms.
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：long
 

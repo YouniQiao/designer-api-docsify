@@ -4,7 +4,7 @@
 type PiPActionEventType = PiPVideoActionEvent | PiPCallActionEvent | PiPMeetingActionEvent | PiPLiveActionEvent
 ```
 
-画中画控制面板控件动作事件类型，支持以下四种。
+Enumerates the types of action events of the PiP controller.
 
 **Since:** 11
 
@@ -18,8 +18,8 @@ type PiPActionEventType = PiPVideoActionEvent | PiPCallActionEvent | PiPMeetingA
 
 | Type | Description |
 | --- | --- |
-| PiPVideoActionEvent | 视频播放控制面板控件事件类型。 |
-| PiPCallActionEvent | 视频通话控制面板控件事件类型。 |
-| PiPMeetingActionEvent | 视频会议控制面板控件事件类型。 |
-| PiPLiveActionEvent | 直播控制面板控件事件类型。 |
+| PiPVideoActionEvent | Action event for components displayed on the video playback controller. |
+| PiPCallActionEvent | Action event for components displayed on the video call controller. |
+| PiPMeetingActionEvent | Action event for components displayed on the video meeting controller. |
+| PiPLiveActionEvent | Action event for components displayed on the live video controller. |
 

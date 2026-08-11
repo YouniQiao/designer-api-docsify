@@ -4,7 +4,7 @@
 export type OnScrollEdgeCallback = (side: Edge) => void
 ```
 
-滚动到边缘时触发的回调。
+Represents the callback triggered when scrolling reaches an edge.
 
 **Since:** 23
 
@@ -20,5 +20,5 @@ export type OnScrollEdgeCallback = (side: Edge) => void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| side | [Edge](arkts-arkui-edge-e.md) | Yes | 滚动到的边缘位置。 |
+| side | [Edge](arkts-arkui-edge-e.md) | Yes | Edge position to scroll to. |
 

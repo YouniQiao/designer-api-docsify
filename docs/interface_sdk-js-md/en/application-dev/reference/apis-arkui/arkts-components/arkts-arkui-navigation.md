@@ -1,30 +1,40 @@
 # Navigation
 
-Navigation组件是路由导航的根视图容器，一般作为Page页面的根容器使用，其内部默认包含了标题栏、内容区和工具栏，其中内容区默认首页显示导航内容（Navigation的子组件）或非首页显示（
-[NavDestination]{@link nav_destination}的子组件），首页和非首页通过路由进行切换。
+The **Navigation** component is the root view container for navigation. It typically functions as the root container
+of a page and includes a title bar, content area, and toolbar. The content area switches between the home page
+content (child components of **Navigation**) and non-home page content (child components of
+[NavDestination]{@link nav_destination}) through routing.
 
-> **说明：**
+> **NOTE**
 
-> - 该组件从API version 11开始默认支持安全区避让特性(默认值为：expandSafeArea(
-> [SafeAreaType.SYSTEM, SafeAreaType.KEYBOARD, SafeAreaType.CUTOUT], [SafeAreaEdge.TOP, SafeAreaEdge.BOTTOM]))，开发者可以重
-> 写该属性覆盖默认行为，API version 11之前的版本需配合[expandSafeArea]{@link CommonMethod#expandSafeArea}属性实现安全区避让。
+> - Since API version 11, this component supports the safe area attribute by default, with the default attribute
+> value being
+> **expandSafeArea([SafeAreaType.SYSTEM, SafeAreaType.KEYBOARD, SafeAreaType.CUTOUT], [SafeAreaEdge.TOP,
+ SafeAreaEdge.BOTTOM])**.
+> You can override this attribute to change the default behavior. In earlier versions, you need to use the
+> [expandSafeArea]{@link CommonMethod#expandSafeArea} attribute to implement the safe area feature.
 >
-> - [NavBar]{@link NavBar}嵌套使用Navigation时，内层NavDestination的生命周期不和外层NavDestination以及[全模态]{@link common}的生命周期进行联动。
+> - When [NavBar]{@link NavBar} is nested within a **Navigation** component, the lifecycle of the inner
+> **NavDestination** component does not synchronize with the outer **NavDestination** component or the lifecycle of a
+> [modal]{@link common}.
 >
-> - Navigation未设置主副标题（[title]{@link NavigationAttribute#title}或[subTitle]{@link NavigationAttribute#subTitle}）且
-> [hideBackButton]{@link NavigationAttribute#hideBackButton}属性设置为true时，不显示标题栏。
+> - If the [title]{@link NavigationAttribute#title} and [subTitle]{@link NavigationAttribute#subTitle} are not set
+> and [hideBackButton]{@link NavigationAttribute#hideBackButton} is set to **true**, the title bar is not displayed.
 >
-> - Navigation的子页面切换时，新页面会主动请求焦点。
+> - During subpage navigation within **Navigation**, the new page actively requests focus.
 >
-> - 不建议在[aboutToAppear]{@link BaseCustomComponent#aboutToAppear}中使用栈操作，此时的页面还未构建完成，会导致白屏或跳转失败等问题。
+> - You are not advised to use stack operations in [aboutToAppear]{@link BaseCustomComponent#aboutToAppear}, as the
+> page has not yet finished building at this stage, which may lead to issues such as white screens or navigation
+> failures.
 
-## 子组件
+## Child Components
 
-可以包含子组件。
+Supported
 
-从API version 9开始，推荐与[NavRouter]{@link nav_router}组件搭配使用。
+Since API version 9, it is recommended that this component be used together with the [NavRouter]{@link nav_router}component.
 
-从API version 10开始，推荐使用[NavPathStack]{@link NavPathStack}配合[navDestination]{@link NavigationAttribute#navDestination}属性进行页面路由。
+Since API version 10, it is recommended that this component be used together with the  
+[NavPathStack]{@link NavPathStack} component and [navDestination]{@link NavigationAttribute#navDestination} attribute for page routing.
 
 ## Navigation
 
@@ -32,7 +42,8 @@ Navigation组件是路由导航的根视图容器，一般作为Page页面的根
 Navigation()
 ```
 
-创建路由导航的根视图容器，适用于使用[NavRouter]{@link nav_router}组件进行页面路由。
+Creates a root view container for route navigation, suitable for page routing using the  
+[NavRouter]{@link nav_router} component.
 
 **Since:** 8
 
@@ -50,8 +61,8 @@ Navigation()
 Navigation(pathInfos: NavPathStack)
 ```
 
-绑定导航控制器到Navigation组件，适用于使用[NavPathStack]{@link NavPathStack}配合  
-[navDestination]{@link NavigationAttribute#navDestination}属性进行页面路由。
+Binds a navigation controller to the **Navigation** component, suitable for page routing using  
+[NavPathStack]{@link NavPathStack} with the [navDestination]{@link NavigationAttribute#navDestination} attribute.
 
 **Since:** 10
 
@@ -69,7 +80,7 @@ Navigation(pathInfos: NavPathStack)
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| pathInfos | [NavPathStack](../arkts-apis/arkts-arkui-navigation-navpathstack-c.md) | Yes | 导航控制器对象。 |
+| pathInfos | [NavPathStack](../arkts-apis/arkts-arkui-navigation-navpathstack-c.md) | Yes | Navigation controller object. |
 
 ## Navigation
 
@@ -77,9 +88,9 @@ Navigation(pathInfos: NavPathStack)
 Navigation(pathInfos: NavPathStack, homeDestination: HomePathInfo)
 ```
 
-绑定路由栈到Navigation组件，指定一个NavDestination作为Navigation的导航页（主页），适用于使用[NavPathStack]{@link NavPathStack}配合  
-[navDestination]{@link NavigationAttribute#navDestination}属性或者系统路由表进行页面路由。使用示例参考  
-[示例16（Navigation使用NavDestination作为导航页）](docroot://reference/apis-arkui/arkui-ts/ts-basic-components-navigation.md#示例16navigation使用navdestination作为导航页)。
+Binds a routing stack to the **Navigation** component and specifies a **NavDestination** component as the navigation page (home page) for **Navigation**. This is suitable for page routing using  
+[NavPathStack]{@link NavPathStack} with the [navDestination]{@link NavigationAttribute#navDestination} attribute or the system routing table. For the usage example, see  
+[Example 16: Using NavDestination as a Navigation Page in Navigation](docroot://reference/apis-arkui/arkui-ts/ts-basic-components-navigation.md#example-16-using-navdestination-as-a-navigation-page-in-navigation).
 
 **Since:** 20
 
@@ -97,8 +108,8 @@ Navigation(pathInfos: NavPathStack, homeDestination: HomePathInfo)
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| pathInfos | [NavPathStack](../arkts-apis/arkts-arkui-navigation-navpathstack-c.md) | Yes | 路由栈信息。 |
-| homeDestination | [HomePathInfo](../arkts-apis/arkts-arkui-navigation-homepathinfo-i.md) | Yes | 主页NavDestination信息。 |
+| pathInfos | [NavPathStack](../arkts-apis/arkts-arkui-navigation-navpathstack-c.md) | Yes | Information about the routing stack. |
+| homeDestination | [HomePathInfo](../arkts-apis/arkts-arkui-navigation-homepathinfo-i.md) | Yes | Home page **NavDestination** information. |
 
 ## Summary
 
@@ -118,6 +129,7 @@ Navigation(pathInfos: NavPathStack, homeDestination: HomePathInfo)
 - [NavigationToolbarOptions](arkts-arkui-navigation-navigationtoolbaroptions-i.md)
 - [NavigationTransitionProxy](arkts-arkui-navigation-navigationtransitionproxy-i.md)
 - [PopInfo](arkts-arkui-navigation-popinfo-i.md)
+- [PreloadOptions](arkts-arkui-navigation-preloadoptions-i.md)
 - [ScrollEffectOptions](arkts-arkui-navigation-scrolleffectoptions-i.md)
 - [ToolbarItem](arkts-arkui-navigation-toolbaritem-i.md)
 - [InterceptionCallback](arkts-arkui-navigation-interceptioncallback-t.md)

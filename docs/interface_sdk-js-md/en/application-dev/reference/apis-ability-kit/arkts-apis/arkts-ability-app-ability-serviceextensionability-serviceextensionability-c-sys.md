@@ -1,6 +1,6 @@
 # ServiceExtensionAbility (System API)
 
-ServiceExtensionAbility模块提供后台服务相关扩展能力，提供后台服务创建、销毁、连接、断开等生命周期回调。
+The ServiceExtensionAbility module provides extended capabilities for background services, including lifecycle callbacks for creating, destroying, connecting, and disconnecting background services.
 
 **Since:** 9
 
@@ -24,7 +24,7 @@ import { ServiceExtensionAbility } from 'kits/@kit.AbilityKit';
 onConfigurationUpdate(newConfig: Configuration): void
 ```
 
-当Extension更新配置信息时调用。
+Called when the configuration of this ServiceExtensionAbility is updated.
 
 **Since:** 9
 
@@ -42,7 +42,7 @@ onConfigurationUpdate(newConfig: Configuration): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| newConfig | [Configuration](arkts-ability-app-ability-configuration-configuration-i.md) | Yes | 表示需要更新的配置信息。 |
+| newConfig | [Configuration](arkts-ability-app-ability-configuration-configuration-i.md) | Yes | New configuration. |
 
 ## Examples
 
@@ -62,7 +62,7 @@ class ServiceExt extends ServiceExtensionAbility {
 onConnect(want: Want): rpc.RemoteObject | Promise<rpc.RemoteObject>
 ```
 
-Extension生命周期回调，如果是connectAbility拉起的服务，会在onCreate之后回调。返回一个RemoteObject对象，用于客户端和服务端进行通信。
+Called following **onCreate()** when a ServiceExtensionAbility is started by calling **connectAbility()**. A RemoteObject is returned for communication between the server and client.
 
 **Since:** 9
 
@@ -80,7 +80,7 @@ Extension生命周期回调，如果是connectAbility拉起的服务，会在onC
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| want | [Want](arkts-ability-app-ability-want-want-c.md) | Yes | 当前Extension相关的Want类型信息，包括ability名称、bundle名称等。 |
+| want | [Want](arkts-ability-app-ability-want-want-c.md) | Yes | Want information related to this ServiceExtensionAbility, including the ability name and bundle name. |
 
 **Return value:**
 
@@ -141,7 +141,7 @@ class ServiceExt extends ServiceExtensionAbility {
 onCreate(want: Want): void
 ```
 
-Extension生命周期回调，在创建时回调，执行初始化业务逻辑操作。
+Called to initialize the service logic when a ServiceExtensionAbility is being created.
 
 **Since:** 9
 
@@ -159,7 +159,7 @@ Extension生命周期回调，在创建时回调，执行初始化业务逻辑�
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| want | [Want](arkts-ability-app-ability-want-want-c.md) | Yes | 当前Extension相关的Want类型信息，包括ability名称、bundle名称等。 |
+| want | [Want](arkts-ability-app-ability-want-want-c.md) | Yes | Want information related to this ServiceExtensionAbility, including the ability name and bundle name. |
 
 ## Examples
 
@@ -179,7 +179,7 @@ class ServiceExt extends ServiceExtensionAbility {
 onDestroy(): void
 ```
 
-Extension生命周期回调，在销毁时回调，执行资源清理等操作。
+Called to clear resources when this ServiceExtensionAbility is being destroyed.
 
 **Since:** 9
 
@@ -211,7 +211,7 @@ class ServiceExt extends ServiceExtensionAbility {
 onDisconnect(want: Want): void | Promise<void>
 ```
 
-Extension的生命周期回调，客户端执行断开连接服务时回调。
+Called when a client is disconnected from this ServiceExtensionAbility.This API returns the result synchronously or uses a promise to return the result.
 
 **Since:** 9
 
@@ -229,7 +229,7 @@ Extension的生命周期回调，客户端执行断开连接服务时回调。
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| want | [Want](arkts-ability-app-ability-want-want-c.md) | Yes | 当前Extension相关的Want类型信息，包括ability名称、bundle名称等。 |
+| want | [Want](arkts-ability-app-ability-want-want-c.md) | Yes | Want information related to this ServiceExtensionAbility, including the ability name and bundle name. |
 
 ## Examples
 
@@ -264,7 +264,7 @@ class ServiceExt extends ServiceExtensionAbility {
 onDisconnect(want: Want): Promise<void> | undefined
 ```
 
-Extension的生命周期回调，客户端执行断开连接服务时回调。
+Called when a client is disconnected from this ServiceExtensionAbility.This API returns the result synchronously or uses a promise to return the result.
 
 **Since:** 23
 
@@ -282,7 +282,7 @@ Extension的生命周期回调，客户端执行断开连接服务时回调。
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| want | [Want](arkts-ability-app-ability-want-want-c.md) | Yes | 当前Extension相关的Want类型信息，包括ability名称、bundle名称等。 |
+| want | [Want](arkts-ability-app-ability-want-want-c.md) | Yes | Want information related to this ServiceExtensionAbility, including the ability name and bundle name. |
 
 **Return value:**
 
@@ -296,7 +296,7 @@ Extension的生命周期回调，客户端执行断开连接服务时回调。
 onDump(params: Array<string>): Array<string>
 ```
 
-转储客户端信息时调用。
+Dumps the client information.
 
 **Since:** 9
 
@@ -314,13 +314,13 @@ onDump(params: Array<string>): Array<string>
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| params | Array&lt;string&gt; | Yes | 表示命令形式的参数。 |
+| params | Array&lt;string&gt; | Yes | Parameters in the form of a command. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Array&lt;string&gt; | 表示转存客户端信息数组。 |
+| Array&lt;string&gt; | Array of client information. |
 
 ## Examples
 
@@ -341,7 +341,7 @@ class ServiceExt extends ServiceExtensionAbility {
 onReconnect(want: Want): void
 ```
 
-Extension的生命周期回调，当所有以前的客户端都断开连接之后，新客户端尝试连接到服务时调用。预留能力，当前暂未支持。
+Called when a new client attempts to connect to this ServiceExtensionAbility after all previous clients are disconnected. This capability is reserved.
 
 **Since:** 9
 
@@ -359,7 +359,7 @@ Extension的生命周期回调，当所有以前的客户端都断开连接之�
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| want | [Want](arkts-ability-app-ability-want-want-c.md) | Yes | 当前Extension相关的Want类型信息，包括ability名称、bundle名称等。 |
+| want | [Want](arkts-ability-app-ability-want-want-c.md) | Yes | Want information related to this ServiceExtensionAbility, including the ability name and bundle name. |
 
 ## Examples
 
@@ -385,7 +385,8 @@ ArkTS-Sta:
 onRequest(want: Want, startId: int): void
 ```
 
-Extension生命周期回调，如果是startAbility或者startServiceExtensionAbility拉起的服务，会在onCreate之后回调。每次拉起服务都会回调，startId会递增。
+Called following **onCreate()** when a ServiceExtensionAbility is started by calling **startAbility()** or  
+**startServiceExtensionAbility()**. The value of **startId** is incremented for each ServiceExtensionAbility that is started.
 
 **Since:** 9
 
@@ -403,8 +404,8 @@ Extension生命周期回调，如果是startAbility或者startServiceExtensionAb
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| want | [Want](arkts-ability-app-ability-want-want-c.md) | Yes | 当前Extension相关的Want类型信息，包括ability名称、bundle名称等。 |
-| startId | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | 返回拉起次数。首次拉起初始值返回1，多次之后自动递增。 |
+| want | [Want](arkts-ability-app-ability-want-want-c.md) | Yes | Want information related to this ServiceExtensionAbility, including the ability name and bundle name. |
+| startId | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | Number of times the instance has been started. The initial value is **1** for the first start, and it increments automatically for subsequent starts. |
 
 ## Examples
 
@@ -424,9 +425,9 @@ class ServiceExt extends ServiceExtensionAbility {
 context: ServiceExtensionContext
 ```
 
-ServiceExtension的上下文环境，继承自ExtensionContext。
+Context of the ServiceExtensionAbility. This context inherits from **ExtensionContext**.
 
-**Type:** [ServiceExtensionContext](../../apis-default/arkts-apis/arkts-serviceextensioncontext-c-sys.md)
+**Type:** [ServiceExtensionContext](arkts-ability-serviceextensioncontext-c-sys.md)
 
 **Since:** 9
 

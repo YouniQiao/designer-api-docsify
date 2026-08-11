@@ -1,6 +1,6 @@
 # WindowProxyProperties
 
-用于表示组件的相关信息。
+Provides information about a component.
 
 **Since:** 14
 
@@ -22,7 +22,7 @@ import { uiExtension } from 'kits/@kit.ArkUI';
 uiExtensionHostWindowProxyRect: window.Rect
 ```
 
-组件（EmbeddedComponent或UIExtensionComponent）的位置和宽高。
+Position and size of the component (**EmbeddedComponent** or **UIExtensionComponent**).
 
 **Type:** window.Rect
 

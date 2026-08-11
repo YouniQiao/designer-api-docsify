@@ -1,11 +1,5 @@
 # LazyColumnLayout
 
-## 导入模块
-
-```TypeScript
-import { LazyColumnLayoutAttribute, LazyColumnLayout } from 'kits/@kit.ArkUI';
-```
-
 ## LazyColumnLayout
 
 ```TypeScript

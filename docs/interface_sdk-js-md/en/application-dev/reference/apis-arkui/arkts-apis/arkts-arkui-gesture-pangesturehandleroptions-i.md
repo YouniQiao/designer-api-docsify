@@ -1,6 +1,6 @@
 # PanGestureHandlerOptions
 
-滑动手势处理器配置参数。继承自[BaseHandlerOptions](arkts-arkui-basehandleroptions-i.md)。
+Defines the PanGestureHandler options.
 
 **Inheritance/Implementation:** PanGestureHandlerOptions extends [BaseHandlerOptions](arkts-arkui-basehandleroptions-i.md)
 
@@ -18,9 +18,7 @@
 direction?: PanDirection
 ```
 
-用于指定触发拖动的手势方向，此枚举值支持逻辑与(&)和逻辑或（|）运算。
-
-默认值：PanDirection.All
+Indicates the move direction of the pan gesture.The default value is PanDirection.All.
 
 **Type:** [PanDirection](arkts-arkui-gesture-pandirection-e.md)
 
@@ -40,17 +38,7 @@ direction?: PanDirection
 distance?: double
 ```
 
-用于指定触发滑动手势事件的最小拖动距离，单位为vp。
-
-手写笔默认值：8，其余输入源默认值：5
-
-**说明：**
-
-[Tabs组件](../../apis-ability-kit/arkts-apis/arkts-app-ability-common.md/arkts-app-ability-common.md)滑动与该滑动手势事件同时存在时，可将distance值设为1，使拖动更灵敏，避免造成事件错乱。
-
-取值范围：[0, +∞)，当设定的值小于0时，按默认值处理。
-
-从API version 19开始，手写笔默认值为8，单位为vp。
+Indicates minimum move distance.The default value is 5vp.
 
 **Type:** double
 
@@ -70,11 +58,7 @@ distance?: double
 distanceMap?: Map<SourceTool, double>
 ```
 
-用于指定不同输入源触发滑动手势事件的最小拖动距离，单位为vp。
-
-手写笔默认值：8，其余输入源默认值：5
-
-取值范围：[0, +∞)，当设定的值小于0时，按默认值处理。
+Indicates minimum move distance map.
 
 **Type:** Map&lt;[SourceTool](../arkts-components/arkts-arkui-sourcetool-e.md), double&gt;
 
@@ -94,15 +78,7 @@ distanceMap?: Map<SourceTool, double>
 fingers?: int
 ```
 
-用于指定触发拖动的最少手指数，最小为1指， 最大取值为10指。
-
-默认值：1
-
-取值范围：[1, 10]
-
-**说明：**
-
-当设置的值小于1或不设置时，会被转化为默认值。
+Indicates the hand index that triggers the pan. If the value is less than 1, the default value is used.The default value is 1.
 
 **Type:** int
 

@@ -1,6 +1,6 @@
 # BundleInfo
 
-描述应用包信息。
+Describes the application bundle information.
 
 **Since:** 20
 
@@ -22,7 +22,7 @@ import { bundleManager } from 'kits/@kit.MDMKit';
 readonly appIndex: number
 ```
 
-应用包的分身索引标识，仅在分身应用中生效。
+Index of an application clone. It takes effect only for application clones.
 
 **Type:** number
 
@@ -42,7 +42,7 @@ readonly appIndex: number
 readonly appInfo: ApplicationInfo
 ```
 
-应用程序的配置信息。
+Application information.
 
 **Type:** [ApplicationInfo](../../apis-ability-kit/arkts-apis/arkts-ability-bundlemanager-applicationinfo-t.md)
 
@@ -62,7 +62,7 @@ readonly appInfo: ApplicationInfo
 readonly firstInstallTime?: number
 ```
 
-应用在当前设备的首次安装时间戳，表示从1970-01-01 08:00:00 UTC+8逝去的毫秒数，单位毫秒，预置应用的首次安装时间戳为1533657660000。
+Timestamp for the initial installation of the application bundle. It measures the milliseconds elapsed since the Unix epoch (January 1, 1970, 08:00:00 UTC+8). For preinstalled applications, the initial installation timestamp is 1533657660000.
 
 **Type:** number
 
@@ -82,7 +82,7 @@ readonly firstInstallTime?: number
 readonly installTime: number
 ```
 
-应用包安装时间戳，表示从1970-01-01 08:00:00 UTC+8逝去的毫秒数，单位毫秒。
+Timestamp for the installation of the application bundle. It measures the milliseconds elapsed since the Unix epoch (January 1, 1970, 08:00:00 UTC+8).
 
 **Type:** number
 
@@ -102,7 +102,8 @@ readonly installTime: number
 readonly minCompatibleVersionCode: number
 ```
 
-分布式场景下的应用包兼容的最低版本，对应[app.json5](../../../quick-start/app-configuration-file.md)中配置的minCompatibleVersionCode字段。
+Minimum compatible version of the application bundle in the distributed scenario. It corresponds to the  
+**minCompatibleVersionCode** field in the [app.json5](../../../quick-start/app-configuration-file.md) file.
 
 **Type:** number
 
@@ -122,7 +123,8 @@ readonly minCompatibleVersionCode: number
 readonly name: string
 ```
 
-应用包的名称，对应[app.json5](../../../quick-start/app-configuration-file.md)中配置的bundleName字段。
+Name of the application bundle. It corresponds to the **bundleName** field in the  
+[app.json5](../../../quick-start/app-configuration-file.md) file.
 
 **Type:** string
 
@@ -142,7 +144,7 @@ readonly name: string
 readonly signatureInfo: SignatureInfo
 ```
 
-应用包的签名信息。
+Signature information of the bundle.
 
 **Type:** [SignatureInfo](arkts-mdm-bundlemanager-signatureinfo-i.md)
 
@@ -162,7 +164,8 @@ readonly signatureInfo: SignatureInfo
 readonly targetVersion: number
 ```
 
-应用运行目标版本，对应[app.json5](../../../quick-start/app-configuration-file.md)中配置的targetAPIVersion字段。
+Target version of the application. It corresponds to the **targetAPIVersion** field in the  
+[app.json5](../../../quick-start/app-configuration-file.md) file.
 
 **Type:** number
 
@@ -182,7 +185,7 @@ readonly targetVersion: number
 readonly updateTime: number
 ```
 
-应用包更新时间戳，表示从1970-01-01 08:00:00 UTC+8逝去的毫秒数，单位毫秒。
+Timestamp for the last update of the application bundle. It measures the milliseconds elapsed since the Unix epoch (January 1, 1970, 08:00:00 UTC+8).
 
 **Type:** number
 
@@ -202,7 +205,8 @@ readonly updateTime: number
 readonly vendor: string
 ```
 
-应用包的供应商，对应[app.json5](../../../quick-start/app-configuration-file.md)中配置的vendor字段。
+Vendor of the application bundle. It corresponds to the **vendor** field in the  
+[app.json5](../../../quick-start/app-configuration-file.md) file.
 
 **Type:** string
 
@@ -222,7 +226,8 @@ readonly vendor: string
 readonly versionCode: number
 ```
 
-应用包的版本号，对应[app.json5](../../../quick-start/app-configuration-file.md)中配置的versionCode字段。
+Version code of the application bundle. It corresponds to the **versionCode** field in the  
+[app.json5](../../../quick-start/app-configuration-file.md) file.
 
 **Type:** number
 
@@ -242,7 +247,8 @@ readonly versionCode: number
 readonly versionName: string
 ```
 
-应用包的版本文本描述信息，对应[app.json5](../../../quick-start/app-configuration-file.md)中配置的versionName字段。
+Version description of the application bundle. It corresponds to the **versionName** field in the  
+[app.json5](../../../quick-start/app-configuration-file.md) file.
 
 **Type:** string
 

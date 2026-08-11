@@ -16,7 +16,7 @@ function setWallpaper(
   ): void
 ```
 
-将指定资源设置为指定类型的壁纸。
+Sets a wallpaper of the specified type based on the uri path from a JPEG or PNG file or the pixel map of a PNG file.
 
 **Since:** 7
 
@@ -34,9 +34,9 @@ function setWallpaper(
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| source | string \| image.PixelMap | Yes |  |
-| wallpaperType | [WallpaperType](arkts-basicservices-wallpaper-wallpapertype-e.md) | Yes |  |
-| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | 回调函数，设置壁纸成功，error为undefined，否则返回error信息。 |
+| source | string \| image.PixelMap | Yes | indicates the uri path from a JPEG or PNG file or the pixel map of the PNG file. |
+| wallpaperType | [WallpaperType](arkts-basicservices-wallpaper-wallpapertype-e.md) | Yes | indicates the wallpaper type. |
+| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | the callback of setWallpaper. |
 
 ## Examples
 
@@ -82,7 +82,7 @@ imageSource.createPixelMap(opts).then((pixelMap: image.PixelMap) => {
 function setWallpaper(source: string | image.PixelMap, wallpaperType: WallpaperType): Promise<void>
 ```
 
-将指定资源设置为指定类型的壁纸。
+Sets a wallpaper of the specified type based on the uri path from a JPEG or PNG file or the pixel map of a PNG file.
 
 **Since:** 7
 
@@ -100,8 +100,8 @@ function setWallpaper(source: string | image.PixelMap, wallpaperType: WallpaperT
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| source | string \| image.PixelMap | Yes |  |
-| wallpaperType | [WallpaperType](arkts-basicservices-wallpaper-wallpapertype-e.md) | Yes |  |
+| source | string \| image.PixelMap | Yes | indicates the uri path from a JPEG or PNG file or the pixel map of the PNG file. |
+| wallpaperType | [WallpaperType](arkts-basicservices-wallpaper-wallpapertype-e.md) | Yes | indicates the wallpaper type. |
 
 **Return value:**
 

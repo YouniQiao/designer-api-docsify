@@ -1,6 +1,6 @@
 # ShortcutInfo
 
-快捷方式的配置信息。
+Describes the configuration information for a shortcut.
 
 **Since:** 20
 
@@ -16,7 +16,7 @@
 appIndex: int
 ```
 
-快捷方式所属应用的分身索引。
+Index of the application clone to which the shortcut belongs.
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
@@ -34,7 +34,7 @@ appIndex: int
 bundleName: string
 ```
 
-快捷方式所属应用的包名。
+Bundle name of the application to which the shortcut belongs.
 
 **Type:** string
 
@@ -52,7 +52,7 @@ bundleName: string
 hostAbility?: string
 ```
 
-快捷方式的宿主组件名, 即承载此快捷方式的组件名。
+Name of the ability that hosts the shortcut.
 
 **Type:** string
 
@@ -70,7 +70,7 @@ hostAbility?: string
 icon?: string
 ```
 
-快捷方式的图标，取值为资源文件的索引。
+Icon of the shortcut. The value is the index of a resource file.
 
 **Type:** string
 
@@ -88,7 +88,7 @@ icon?: string
 iconId?: long
 ```
 
-快捷方式图标的资源ID。
+Resource ID of the shortcut icon.
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：long
 
@@ -106,7 +106,7 @@ iconId?: long
 id: string
 ```
 
-快捷方式的ID。
+ID of the shortcut.
 
 **Type:** string
 
@@ -124,7 +124,7 @@ id: string
 label?: string
 ```
 
-快捷方式的标签信息，即快捷方式对外显示的文字描述信息。可以是描述性内容，也可以是标识label的资源索引。
+Label of the shortcut. The value can be descriptive text or a resource index.
 
 **Type:** string
 
@@ -142,7 +142,7 @@ label?: string
 labelId?: long
 ```
 
-快捷方式标签信息为资源索引时的资源ID。
+Resource ID of the shortcut label.
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：long
 
@@ -160,7 +160,7 @@ labelId?: long
 moduleName?: string
 ```
 
-快捷方式的模块名。
+Module name of the shortcut.
 
 **Type:** string
 
@@ -178,7 +178,7 @@ moduleName?: string
 sourceType: int
 ```
 
-快捷方式来源类型。0表示自定义快捷方式，1表示静态快捷方式，2表示动态快捷方式。从API version 23开始，支持动态快捷方式。
+Source type of the shortcut. The value **0** means a custom shortcut, **1** means a static shortcut, and **2**means a dynamic shortcut. Dynamic shortcuts are supported since API version 23.
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
@@ -196,7 +196,7 @@ sourceType: int
 visible?: boolean
 ```
 
-快捷方式是否显示。true：快捷方式显示；false：快捷方式不显示。默认值为true。
+Whether the shortcut is visible. **true** if visible, **false** otherwise. The default value is **true**.
 
 **Type:** boolean
 
@@ -214,7 +214,7 @@ visible?: boolean
 wants?: Array<ShortcutWant>
 ```
 
-快捷方式内定义的目标wants信息集合。
+A collection of target Wants information defined within the shortcut.
 
 **Type:** Array&lt;ShortcutWant&gt;
 

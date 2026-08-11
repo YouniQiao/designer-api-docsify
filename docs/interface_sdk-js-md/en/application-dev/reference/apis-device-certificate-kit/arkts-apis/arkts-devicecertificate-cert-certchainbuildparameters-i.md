@@ -1,6 +1,6 @@
 # CertChainBuildParameters
 
-证书链创建参数。
+Represents the parameters for building a certificate chain.
 
 **Since:** 12
 
@@ -22,7 +22,7 @@ import { cert } from 'kits/@kit.DeviceCertificateKit';
 certMatchParameters: X509CertMatchParameters
 ```
 
-指定过滤条件。
+Filter criteria.
 
 **Type:** [X509CertMatchParameters](arkts-devicecertificate-cert-x509certmatchparameters-i.md)
 
@@ -42,7 +42,7 @@ certMatchParameters: X509CertMatchParameters
 maxLength?: int
 ```
 
-指定CA证书的最大数量。
+Maximum number of CA certificates in the certificate chain.
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
@@ -62,7 +62,7 @@ maxLength?: int
 validationParameters: CertChainValidationParameters
 ```
 
-指定验证条件。
+Parameters for certificate chain validation.
 
 **Type:** [CertChainValidationParameters](arkts-devicecertificate-cert-certchainvalidationparameters-i.md)
 

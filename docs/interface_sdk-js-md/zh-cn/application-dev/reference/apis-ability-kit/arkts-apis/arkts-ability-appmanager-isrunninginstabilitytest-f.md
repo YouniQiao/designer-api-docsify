@@ -1,11 +1,5 @@
 # isRunningInStabilityTest
 
-## 导入模块
-
-```TypeScript
-import { appManager } from 'kits/@kit.AbilityKit';
-```
-
 ## isRunningInStabilityTest
 
 ```TypeScript
@@ -38,8 +32,8 @@ function isRunningInStabilityTest(callback: AsyncCallback<boolean>): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
-| 16000050 | Internal error. |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| [16000050](../errorcode-ability.md#16000050-内部错误) | Internal error. |
 
 ## 示例
 
@@ -88,7 +82,7 @@ function isRunningInStabilityTest(): Promise<boolean>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 16000050 | Internal error. |
+| [16000050](../errorcode-ability.md#16000050-内部错误) | Internal error. |
 
 ## 示例
 
@@ -97,9 +91,10 @@ import { appManager } from '@kit.AbilityKit';
 import { BusinessError } from '@kit.BasicServicesKit';
 
 appManager.isRunningInStabilityTest().then((flag) => {
-  console.info(`The result of isRunningInStabilityTest is: ${JSON.stringify(flag)}`);
-}).catch((error: BusinessError) => {
-  console.error(`error: ${JSON.stringify(error)}`);
+  console.info(`The result of isRunningInStabilityTest is: ${flag}`);
+}).catch((err: Error) => {
+  let error=err as BusinessError;
+  console.error(`error: code: ${error.code} message: ${error.message}`);
 });
 ```
 

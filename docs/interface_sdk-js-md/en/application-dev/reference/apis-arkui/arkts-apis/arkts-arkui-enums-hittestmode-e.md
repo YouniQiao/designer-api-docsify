@@ -1,11 +1,6 @@
 # HitTestMode
 
-定义触摸测试的响应逻辑及节点阻塞规则。
-
-> **说明：**
-> 
-> 当Stack组件中有多个节点触摸区域重叠时，如果最上层节点的子组件命中，则默认只会对显示在最上层的节点做触摸测试。此时只有给显示在最上层的节点设置
-> [hitTestBehavior](arkts-arkui-common-commonmethod-i.md#hittestbehavior)为HitTestMode.Transparent时，才能使显示在下层的节点触发触摸测试。
+Defines the hit test mode.
 
 **Since:** 23
 
@@ -21,7 +16,7 @@
 Default = 0
 ```
 
-默认触摸测试效果。自身及子节点响应触摸测试，但阻塞兄弟节点的触摸测试，不影响祖先节点的触摸测试。
+Both self and children nodes respond to the hit test for touch events,but block hit test of the other nodes which is masked by this node.
 
 **Since:** 23
 
@@ -39,7 +34,7 @@ Default = 0
 Block = 1
 ```
 
-自身响应触摸测试，阻塞子节点、兄弟节点和祖先节点的触摸测试。
+Self respond to the hit test for touch events,but block hit test of children and other nodes which is masked by this node.
 
 **Since:** 23
 
@@ -57,7 +52,7 @@ Block = 1
 Transparent = 2
 ```
 
-自身和子节点均响应触摸测试，不会阻塞兄弟节点和祖先节点的触摸测试。
+Self and children respond to the hit test for touch events,and allow hit test of other nodes which is masked by this node.
 
 **Since:** 23
 
@@ -75,7 +70,7 @@ Transparent = 2
 None = 3
 ```
 
-自身不响应触摸测试，不会阻塞子节点、兄弟节点和祖先节点的触摸测试。
+Self not respond to the hit test for touch events,but children respond to the hit test for touch events.
 
 **Since:** 23
 
@@ -93,7 +88,7 @@ None = 3
 BLOCK_HIERARCHY = 4
 ```
 
-自身和子节点响应触摸测试，阻止所有优先级较低的兄弟节点和父节点参与触摸测试。
+Blocks all lower-priority siblings and parent nodes from receiving the event.
 
 **Since:** 23
 
@@ -111,7 +106,7 @@ BLOCK_HIERARCHY = 4
 BLOCK_DESCENDANTS = 5
 ```
 
-自身不响应触摸测试，并且所有的后代（孩子，孙子等）也不响应触摸测试，不会影响祖先节点的触摸测试。
+Self not respond to the hit test for touch events,and all descendants (children, grandchildren, etc.) not respond to the hit test for touch events too.
 
 **Since:** 23
 

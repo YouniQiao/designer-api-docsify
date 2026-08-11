@@ -1,6 +1,6 @@
 # ConnectResult
 
-连接的结果。
+Defines the connection result.
 
 **Since:** 18
 
@@ -22,7 +22,7 @@ import { abilityConnectionManager } from 'kits/@kit.DistributedServiceKit';
 errorCode?: ConnectErrorCode
 ```
 
-表示连接错误码。
+Connection error code.
 
 **Type:** [ConnectErrorCode](arkts-distributedservice-abilityconnectionmanager-connecterrorcode-e.md)
 
@@ -42,7 +42,7 @@ errorCode?: ConnectErrorCode
 isConnected: boolean
 ```
 
-true表示连接成功，false表示连接失败。
+Whether the connection is successful. The value **true** indicates that the connection is successful, and the value **false** indicates the opposite.
 
 **Type:** boolean
 
@@ -62,7 +62,7 @@ true表示连接成功，false表示连接失败。
 reason?: string
 ```
 
-表示拒绝连接的原因。
+Connection rejection reason.
 
 **Type:** string
 

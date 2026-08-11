@@ -1,6 +1,6 @@
 # ConnectOptions
 
-应用连接时所需的连接选项。
+Connection options for the application.
 
 **Since:** 18
 
@@ -22,7 +22,7 @@ import { abilityConnectionManager } from 'kits/@kit.DistributedServiceKit';
 needSendData?: boolean
 ```
 
-true代表需要传输数据，false代表不需要传输数据。
+Whether to send data. The value **true** indicates that data needs to be sent, and the value **false** indicates the opposite.
 
 **Type:** boolean
 
@@ -42,7 +42,7 @@ true代表需要传输数据，false代表不需要传输数据。
 parameters?: Record<string, string>
 ```
 
-配置连接所需的额外信息。
+Additional configuration for the connection.
 
 **Type:** [Record](../../apis-default/arkts-apis/arkts-record-t.md)&lt;string, string&gt;
 
@@ -62,7 +62,7 @@ parameters?: Record<string, string>
 startOptions?: StartOptionParams
 ```
 
-配置应用启动选项。
+Application startup options.
 
 **Type:** [StartOptionParams](arkts-distributedservice-abilityconnectionmanager-startoptionparams-e.md)
 

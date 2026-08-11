@@ -1,11 +1,5 @@
 # createPluginModuleContext
 
-## 导入模块
-
-```TypeScript
-import { application } from 'kits/@kit.AbilityKit';
-```
-
 ## createPluginModuleContext
 
 ```TypeScript
@@ -41,7 +35,7 @@ export function createPluginModuleContext(context: Context, pluginBundleName: st
 ## 示例
 
 ```TypeScript
-import { AbilityConstant, UIAbility, application, common, Want } from '@kit.AbilityKit';
+import { AbilityConstant, UIAbility, application, common, Want, Context } from '@kit.AbilityKit';
 import { BusinessError } from '@kit.BasicServicesKit';
 
 export default class EntryAbility extends UIAbility {
@@ -53,7 +47,7 @@ export default class EntryAbility extends UIAbility {
           moduleContext = data;
           console.info('createPluginModuleContext success!');
         })
-        .catch((error: BusinessError) => {
+        .catch((error: Error) => {
           let code: number = (error as BusinessError).code;
           let message: string = (error as BusinessError).message;
           console.error(`createPluginModuleContext failed, error.code: ${code}, error.message: ${message}`);

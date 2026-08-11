@@ -5,7 +5,7 @@ type WindowMinimizationCallback = (minimizingWindowTarget: WindowAnimationTarget
     finishCallback: WindowAnimationFinishedCallback) => void
 ```
 
-最小化窗口时的回调。
+Callback function on minimizing a window.
 
 **Since:** 23
 
@@ -21,6 +21,6 @@ type WindowMinimizationCallback = (minimizingWindowTarget: WindowAnimationTarget
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| minimizingWindowTarget | [WindowAnimationTarget](arkts-arkui-remotewindow-windowanimationtarget-i-sys.md) | Yes | 动画目标窗口。 |
-| finishCallback | [WindowAnimationFinishedCallback](arkts-arkui-windowanimationmanager-windowanimationfinishedcallback-i-sys.md) | Yes | 动画完成后的回调。 |
+| minimizingWindowTarget | [WindowAnimationTarget](arkts-arkui-remotewindow-windowanimationtarget-i-sys.md) | Yes | Window target of the minimizing window. |
+| finishCallback | [WindowAnimationFinishedCallback](arkts-arkui-windowanimationmanager-windowanimationfinishedcallback-i-sys.md) | Yes | Animation finished callback. |
 

@@ -1,6 +1,6 @@
 # Queue
 
-Queue遵循先进先出原则：在尾部增加元素，在头部删除元素。Queue基于循环队列的数据结构实现。
+Queue follows the principle of First In First Out (FIFO).It supports insertion of elements at the end and removal from the front of the queue.Queue is implemented based on the queue data structure.
 
 **Since:** 8
 
@@ -22,7 +22,7 @@ import { Queue } from 'kits/@kit.ArkTS';
 $_iterator(): IterableIterator<T>
 ```
 
-返回一个迭代器，每一项都是一个ArkTS对象。
+returns an iterator. Each item of the iterator is a ArkTS Object
 
 **Since:** 23
 
@@ -46,7 +46,7 @@ $_iterator(): IterableIterator<T>
 [Symbol.iterator](): IterableIterator<T>
 ```
 
-返回一个迭代器，每一项为T类型的元素。
+returns an iterator.Each item of the iterator is a Javascript Object
 
 **Since:** 8
 
@@ -62,13 +62,13 @@ $_iterator(): IterableIterator<T>
 
 | Type | Description |
 | --- | --- |
-| [IterableIterator](arkts-arkts-iterator-iterableiterator-i.md)&lt;T&gt; | 返回一个迭代器，用于遍历Queue中的所有元素。 |
+| [IterableIterator](arkts-arkts-iterator-iterableiterator-i.md)&lt;T&gt; |  |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 10200011 | The Symbol.iterator method cannot be bound. |
+| [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) | The Symbol.iterator method cannot be bound. |
 
 ## Examples
 
@@ -107,7 +107,7 @@ while(temp != undefined) {
 add(element: T): boolean
 ```
 
-在队列尾部插入元素，插入成功则返回true，队列长度增加，否则返回false。
+Adds an element at the end of this Queue.
 
 **Since:** 8
 
@@ -123,19 +123,19 @@ add(element: T): boolean
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| element | T | Yes | 要插入的元素。 |
+| element | T | Yes | Target element. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| boolean | 插入成功返回true，否则返回false。 |
+| boolean | Operation result. The value **true** is returned if the element is added; otherwise, **false** is returned. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 10200011 | The add method cannot be bound. |
+| [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) | The add method cannot be bound. |
 
 ## Examples
 
@@ -160,7 +160,7 @@ console.info("result:", queue.length);  // result: 4
 constructor()
 ```
 
-Queue的构造函数，创建一个新的Queue实例，初始长度为0。Queue容器类使用静态语言实现，限制了存储位置和属性，不支持自定义属性和方法。
+A constructor used to create a **Queue** instance.
 
 **Since:** 8
 
@@ -176,7 +176,7 @@ Queue的构造函数，创建一个新的Queue实例，初始长度为0。Queue�
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 10200012 | The Queue's constructor cannot be directly invoked. |
+| [10200012](../errorcode-utils.md#10200012-constructor-calling-failure) | The Queue's constructor cannot be directly invoked. |
 
 ## Examples
 
@@ -190,7 +190,7 @@ let queue = new Queue<number | string | Object>();
 forEach(callbackFn: (value: T, index?: number, Queue?: Queue<T>) => void, thisArg?: Object): void
 ```
 
-遍历Queue实例中的每个元素，并对每个元素执行回调函数。
+Uses a callback to traverse each element in the **Queue** instance.
 
 **Since:** 8
 
@@ -206,14 +206,14 @@ forEach(callbackFn: (value: T, index?: number, Queue?: Queue<T>) => void, thisAr
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callbackFn | (value: T, index?: number, Queue?: Queue&lt;T&gt;) =&gt; void | Yes | 对每个元素执行的回调函数。 |
-| thisArg | Object | No | callbackFn被调用时用作this值，默认值为当前实例对象。 |
+| callbackFn | (value: T, index?: number, Queue?: Queue&lt;T&gt;) =&gt; void | Yes | Callback invoked to traverse the elements in the Queue. |
+| thisArg | Object | No | Value of **this** to use when **callbackFn** is invoked. The default value is this instance. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 10200011 | The forEach method cannot be bound. |
+| [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) | The forEach method cannot be bound. |
 
 ## Examples
 
@@ -238,7 +238,7 @@ queue.forEach((value: number, index: number): void => {
 forEach(callbackFn: QueueForEachCb<T>): void
 ```
 
-在遍历队列对象中每一个元素的过程中，对每个元素执行回调函数。
+Executes a provided function once for each value in the queue object.
 
 **Since:** 23
 
@@ -256,7 +256,7 @@ forEach(callbackFn: QueueForEachCb<T>): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callbackFn | [QueueForEachCb](arkts-arkts-queueforeachcb-t.md)&lt;T&gt; | Yes | 回调函数。 |
+| callbackFn | [QueueForEachCb](arkts-arkts-queueforeachcb-t.md)&lt;T&gt; | Yes | callbackFn |
 
 ## getFirst
 
@@ -264,7 +264,7 @@ forEach(callbackFn: QueueForEachCb<T>): void
 getFirst(): T
 ```
 
-获取队列的头元素（不会删除队列的头元素）。
+Obtains the first element of this Queue.
 
 **Since:** 8
 
@@ -280,14 +280,14 @@ getFirst(): T
 
 | Type | Description |
 | --- | --- |
-| T | 返回队列的头元素。 |
+| T | The first element obtained. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 10200011 | The getFirst method cannot be bound. |
-| 10200010 | Container is empty.<br>**Applicable version:** 23 and later  **ArkTS mode:** This error code applies only to ArkTS-Sta. |
+| [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) | The getFirst method cannot be bound. |
+| [10200010](../errorcode-utils.md#10200010-empty-container) | Container is empty.<br>**Applicable version:** 23 and later  **ArkTS mode:** This error code applies only to ArkTS-Sta. |
 
 ## Examples
 
@@ -307,7 +307,7 @@ console.info("result:", result);  // result: 2
 pop(): T
 ```
 
-删除队列头部元素，并返回被删除元素。当Queue为空时，返回undefined。
+Removes the first element from this Queue.
 
 **Since:** 8
 
@@ -323,14 +323,14 @@ pop(): T
 
 | Type | Description |
 | --- | --- |
-| T | 返回删除的元素。当Queue为空时，返回undefined。 |
+| T | Element removed. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 10200011 | The pop method cannot be bound. |
-| 10200010 | Container is empty.<br>**Applicable version:** 23 and later  **ArkTS mode:** This error code applies only to ArkTS-Sta. |
+| [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) | The pop method cannot be bound. |
+| [10200010](../errorcode-utils.md#10200010-empty-container) | Container is empty.<br>**Applicable version:** 23 and later  **ArkTS mode:** This error code applies only to ArkTS-Sta. |
 
 ## Examples
 
@@ -351,7 +351,7 @@ console.info("result:", result);  // result: 2
 length: number
 ```
 
-Queue的元素个数。
+Number of elements in a Queue.
 
 **Type:** number
 

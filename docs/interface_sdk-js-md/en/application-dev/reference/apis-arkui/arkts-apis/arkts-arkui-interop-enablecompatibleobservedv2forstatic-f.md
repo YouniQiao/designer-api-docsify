@@ -6,7 +6,7 @@
 export declare function enableCompatibleObservedV2ForStatic<T>(value: T): T
 ```
 
-在ArkTS-Sta中引用ArkTS-Dyn中使用@ObservedV2和@Trace修饰的类。
+Enable compatible ObservedV2 for Static
 
 **Since:** 23
 
@@ -22,11 +22,11 @@ export declare function enableCompatibleObservedV2ForStatic<T>(value: T): T
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | T | Yes | 在ArkTS-Dyn中@ObservedV2修饰的class。 |
+| value | T | Yes | the source value |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| T | 返回当前组件。 |
+| T | the result |
 

@@ -1,6 +1,6 @@
 # PatternLockChallengeResult
 
-图案密码状态。
+The challenge result based on input pattern for control pattern lock component.
 
 **Since:** 23
 
@@ -16,7 +16,7 @@
 CORRECT = 1
 ```
 
-图案密码正确。
+The challenge result is correct.
 
 **Since:** 23
 
@@ -34,7 +34,7 @@ CORRECT = 1
 WRONG = 2
 ```
 
-图案密码错误。
+The challenge result is wrong.
 
 **Since:** 23
 

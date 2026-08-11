@@ -10,12 +10,6 @@
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
-## 导入模块
-
-```TypeScript
-import { LevelMode, ImmersiveMode, LevelOrder } from 'kits/@kit.ArkUI';
-```
-
 ## alignment
 
 ```TypeScript
@@ -214,7 +208,7 @@ immersiveMode?: ImmersiveMode
 
 设置页面内弹窗蒙层效果。&lt;br /&gt;**说明：**&lt;br /&gt;- 默认值：ImmersiveMode.DEFAULT &lt;br /&gt;- 当且仅当levelMode属性设置为LevelMode.EMBEDDED时生效。
 
-**类型：** [ImmersiveMode](arkts-arkui-promptaction-immersivemode-e.md)
+**类型：** [ImmersiveMode](arkts-arkui-immersivemode-t.md)
 
 **默认值：** ImmersiveMode.DEFAULT
 
@@ -424,7 +418,7 @@ offset?: Offset
 
 弹窗相对alignment所在位置的偏移量。&lt;br/&gt;默认值：{&nbsp;dx:&nbsp;0&nbsp;,&nbsp;dy:&nbsp;0&nbsp;}
 
-**类型：** [Offset](arkts-arkui-componentutils-offset-i.md)
+**类型：** [Offset](arkts-arkui-units-offset-i.md)
 
 **起始版本：** 23
 

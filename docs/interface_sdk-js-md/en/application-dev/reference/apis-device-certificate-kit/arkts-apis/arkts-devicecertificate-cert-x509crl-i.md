@@ -1,6 +1,6 @@
 # X509CRL
 
-提供用于X.509证书吊销列表操作的API。
+Provides APIs for X.509 CRL operations.
 
 **Since:** 11
 
@@ -22,7 +22,7 @@ import { cert } from 'kits/@kit.DeviceCertificateKit';
 getEncoded(callback: AsyncCallback<EncodingBlob>): void
 ```
 
-表示获取X.509证书吊销列表的序列化数据。使用Callback异步回调。
+Obtains the serialized X.509 CRL data. This API uses an asynchronous callback to return the result.
 
 **Since:** 11
 
@@ -38,16 +38,16 @@ getEncoded(callback: AsyncCallback<EncodingBlob>): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;EncodingBlob&gt; | Yes | 回调函数。当获取X.509证书吊销列表序列化数据成功时，err为undefined， data为获取到的X.509证书吊销列表序列化数据；否则为错误对象。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;EncodingBlob&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined**, and **data** is the serialized X.509 CRL data obtained. Otherwise, **err** is an error object. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 19020002 | 运行时外部错误。可能的原因： &lt;br&gt;1. 内存拷贝失败； &lt;br&gt;2. 系统内部出现空指针； &lt;br&gt;3. 获取Native对象失败或参数转换失败。 |
-| 401 | 参数错误。可能的原因： &lt;br&gt;1. 必填参数未指定； &lt;br&gt;2. 参数类型不正确； |
-| 19020001 | 内存错误。 |
-| 19030001 | 调用三方算法库API出错。 |
+| [19020002](../errorcode-cert.md#19020002-runtime-error) | Runtime error. Possible causes: &lt;br&gt;1. Memory copy failed; &lt;br&gt;2. A null pointer occurs inside the system; &lt;br&gt;3. Failed to obtain the native object or convert parameters. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Invalid parameters. Possible causes: &lt;br&gt;1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; |
+| [19020001](../errorcode-cert.md#19020001-memory-error) | Memory malloc failed. |
+| [19030001](../errorcode-cert.md#19030001-crypto-operation-error) | Crypto operation error. |
 
 ## getEncoded
 
@@ -55,7 +55,7 @@ getEncoded(callback: AsyncCallback<EncodingBlob>): void
 getEncoded(): Promise<EncodingBlob>
 ```
 
-表示获取X.509证书吊销列表的序列化数据。使用Promise方式返回结果。
+Obtains the serialized X.509 CRL data. This API uses a promise to return the result.
 
 **Since:** 11
 
@@ -71,16 +71,16 @@ getEncoded(): Promise<EncodingBlob>
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;EncodingBlob&gt; | Promise对象，返回X.509证书吊销列表的序列化数据。 |
+| Promise&lt;EncodingBlob&gt; | Promise used to return the serialized X.509 CRL data obtained. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 19020002 | 运行时外部错误。可能的原因： &lt;br&gt;1. 内存拷贝失败； &lt;br&gt;2. 系统内部出现空指针； &lt;br&gt;3. 获取Native对象失败或参数转换失败。 |
-| 401 | 参数错误。可能的原因： &lt;br&gt;1. 必填参数未指定； &lt;br&gt;2. 参数类型不正确； |
-| 19020001 | 内存错误。 |
-| 19030001 | 调用三方算法库API出错。 |
+| [19020002](../errorcode-cert.md#19020002-runtime-error) | Runtime error. Possible causes: &lt;br&gt;1. Memory copy failed; &lt;br&gt;2. A null pointer occurs inside the system; &lt;br&gt;3. Failed to obtain the native object or convert parameters. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Invalid parameters. Possible causes: &lt;br&gt;1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; |
+| [19020001](../errorcode-cert.md#19020001-memory-error) | Memory malloc failed. |
+| [19030001](../errorcode-cert.md#19030001-crypto-operation-error) | Crypto operation error. |
 
 ## getExtensions
 
@@ -88,7 +88,7 @@ getEncoded(): Promise<EncodingBlob>
 getExtensions(): DataBlob
 ```
 
-表示获取CRL扩展的DER格式数据。
+Obtains the CRL extensions data in DER format.
 
 **Since:** 11
 
@@ -104,15 +104,15 @@ getExtensions(): DataBlob
 
 | Type | Description |
 | --- | --- |
-| [DataBlob](../../apis-crypto-architecture-kit/arkts-apis/arkts-cryptoarchitecture-cryptoframework-datablob-i.md) | 表示CRL扩展的DER格式数据。 |
+| [DataBlob](../../apis-crypto-architecture-kit/arkts-apis/arkts-cryptoarchitecture-cryptoframework-datablob-i.md) | CRL extensions data in DER format obtained. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 19020002 | 运行时外部错误。可能的原因： &lt;br&gt;1. 内存拷贝失败； &lt;br&gt;2. 系统内部出现空指针； &lt;br&gt;3. 获取Native对象失败或参数转换失败。 |
-| 19020001 | 内存错误。 |
-| 19030001 | 调用三方算法库API出错。 |
+| [19020002](../errorcode-cert.md#19020002-runtime-error) | Runtime error. Possible causes: &lt;br&gt;1. Memory copy failed; &lt;br&gt;2. A null pointer occurs inside the system; &lt;br&gt;3. Failed to obtain the native object or convert parameters. |
+| [19020001](../errorcode-cert.md#19020001-memory-error) | Memory malloc failed. |
+| [19030001](../errorcode-cert.md#19030001-crypto-operation-error) | Crypto operation error. |
 
 ## getExtensionsObject
 
@@ -120,7 +120,7 @@ getExtensions(): DataBlob
 getExtensionsObject(): CertExtension
 ```
 
-获取CRL扩展对象。
+Obtains the CRL extension object.
 
 **Since:** 12
 
@@ -136,15 +136,15 @@ getExtensionsObject(): CertExtension
 
 | Type | Description |
 | --- | --- |
-| [CertExtension](arkts-devicecertificate-cert-certextension-i.md) | CRL扩展对象。 |
+| [CertExtension](arkts-devicecertificate-cert-certextension-i.md) | CRL extensions object obtained. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 19020002 | 运行时外部错误。可能的原因： &lt;br&gt;1. 内存拷贝失败； &lt;br&gt;2. 系统内部出现空指针； &lt;br&gt;3. 获取Native对象失败或参数转换失败。 |
-| 19020001 | 内存错误。 |
-| 19030001 | 调用三方算法库API出错。 |
+| [19020002](../errorcode-cert.md#19020002-runtime-error) | Runtime error. Possible causes: &lt;br&gt;1. Memory copy failed; &lt;br&gt;2. A null pointer occurs inside the system; &lt;br&gt;3. Failed to obtain the native object or convert parameters. |
+| [19020001](../errorcode-cert.md#19020001-memory-error) | Memory malloc failed. |
+| [19030001](../errorcode-cert.md#19030001-crypto-operation-error) | Crypto operation error. |
 
 ## getIssuerName
 
@@ -152,11 +152,11 @@ getExtensionsObject(): CertExtension
 getIssuerName(): DataBlob
 ```
 
-表示获取X.509证书吊销列表颁发者名称。
+Obtains the issuer of the X.509 CRL.
 
-> **说明：**
+> **NOTE：**
 > 
-> 获取到的X.509证书吊销列表颁发者名称数据带字符串结束符。
+> The obtained X.509 CRL issuer name contains a string terminator.
 
 **Since:** 11
 
@@ -172,15 +172,15 @@ getIssuerName(): DataBlob
 
 | Type | Description |
 | --- | --- |
-| [DataBlob](../../apis-crypto-architecture-kit/arkts-apis/arkts-cryptoarchitecture-cryptoframework-datablob-i.md) | 表示X.509证书吊销列表颁发者名称。 |
+| [DataBlob](../../apis-crypto-architecture-kit/arkts-apis/arkts-cryptoarchitecture-cryptoframework-datablob-i.md) | Issuer of the X.509 CRL obtained. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 19020002 | 运行时外部错误。可能的原因： &lt;br&gt;1. 内存拷贝失败； &lt;br&gt;2. 系统内部出现空指针； &lt;br&gt;3. 获取Native对象失败或参数转换失败。 |
-| 19020001 | 内存错误。 |
-| 19030001 | 调用三方算法库API出错。 |
+| [19020002](../errorcode-cert.md#19020002-runtime-error) | Runtime error. Possible causes: &lt;br&gt;1. Memory copy failed; &lt;br&gt;2. A null pointer occurs inside the system; &lt;br&gt;3. Failed to obtain the native object or convert parameters. |
+| [19020001](../errorcode-cert.md#19020001-memory-error) | Memory malloc failed. |
+| [19030001](../errorcode-cert.md#19030001-crypto-operation-error) | Crypto operation error. |
 
 ## getIssuerName
 
@@ -188,7 +188,7 @@ getIssuerName(): DataBlob
 getIssuerName(encodingType: EncodingType): string
 ```
 
-根据编码类型获取X.509证书吊销列表颁发者名称。
+Obtains the issuer name of an X.509 CRL based on the encoding type.
 
 **Since:** 20
 
@@ -204,22 +204,22 @@ getIssuerName(encodingType: EncodingType): string
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| encodingType | [EncodingType](arkts-devicecertificate-cert-encodingtype-e.md) | Yes | 表示编码类型。 |
+| encodingType | [EncodingType](arkts-devicecertificate-cert-encodingtype-e.md) | Yes | Encoding type. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| string | 表示X.509证书吊销列表颁发者名称，使用逗号分隔相对可分辨名称。 |
+| string | Issuer name of an X.509 CRL, separated by commas (,). |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 19020002 | 运行时外部错误。可能的原因： &lt;br&gt;1. 内存拷贝失败； &lt;br&gt;2. 系统内部出现空指针； &lt;br&gt;3. 获取Native对象失败或参数转换失败。 |
-| 19020003 | 参数检查失败。可能的原因： &lt;br&gt;1. encodingType的值不在EncodingType枚举范围内。 |
-| 19020001 | 内存错误。 |
-| 19030001 | 调用三方算法库API出错。 |
+| [19020002](../errorcode-cert.md#19020002-runtime-error) | Runtime error. Possible causes: &lt;br&gt;1. Memory copy failed; &lt;br&gt;2. A null pointer occurs inside the system; &lt;br&gt;3. Failed to obtain the native object or convert parameters. |
+| [19020003](../errorcode-cert.md#19020003-parameter-check-failure) | Parameter check failed. Possible causes: &lt;br&gt;1. The value of encodingType is not in the EncodingType enumeration range. |
+| [19020001](../errorcode-cert.md#19020001-memory-error) | Memory malloc failed. |
+| [19030001](../errorcode-cert.md#19030001-crypto-operation-error) | Crypto operation error. |
 
 ## getIssuerX500DistinguishedName
 
@@ -227,7 +227,7 @@ getIssuerName(encodingType: EncodingType): string
 getIssuerX500DistinguishedName(): X500DistinguishedName
 ```
 
-获取CRL颁发者的X.500可分辨名称对象。
+Obtains the distinguished name (DN) of the X.509 CRL issuer.
 
 **Since:** 12
 
@@ -243,15 +243,15 @@ getIssuerX500DistinguishedName(): X500DistinguishedName
 
 | Type | Description |
 | --- | --- |
-| [X500DistinguishedName](arkts-devicecertificate-cert-x500distinguishedname-i.md) | X.500可分辨名称对象。 |
+| [X500DistinguishedName](arkts-devicecertificate-cert-x500distinguishedname-i.md) | DN object obtained. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 19020002 | 运行时外部错误。可能的原因： &lt;br&gt;1. 内存拷贝失败； &lt;br&gt;2. 系统内部出现空指针； &lt;br&gt;3. 获取Native对象失败或参数转换失败。 |
-| 19020001 | 内存错误。 |
-| 19030001 | 调用三方算法库API出错。 |
+| [19020002](../errorcode-cert.md#19020002-runtime-error) | Runtime error. Possible causes: &lt;br&gt;1. Memory copy failed; &lt;br&gt;2. A null pointer occurs inside the system; &lt;br&gt;3. Failed to obtain the native object or convert parameters. |
+| [19020001](../errorcode-cert.md#19020001-memory-error) | Memory malloc failed. |
+| [19030001](../errorcode-cert.md#19030001-crypto-operation-error) | Crypto operation error. |
 
 ## getLastUpdate
 
@@ -259,7 +259,7 @@ getIssuerX500DistinguishedName(): X500DistinguishedName
 getLastUpdate(): string
 ```
 
-表示获取X.509证书吊销列表最后一次更新日期。
+Obtains the last update date of this X.509 CRL.
 
 **Since:** 11
 
@@ -275,15 +275,15 @@ getLastUpdate(): string
 
 | Type | Description |
 | --- | --- |
-| string | 表示X.509证书吊销列表最后一次更新日期，日期采用 ASN.1 UTCTime 或 GeneralizedTime 格式。 |
+| string | Last update date of the X.509 CRL, in an ASN.1 time format, specifically UTCTime or GeneralizedTime. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 19020002 | 运行时外部错误。可能的原因： &lt;br&gt;1. 内存拷贝失败； &lt;br&gt;2. 系统内部出现空指针； &lt;br&gt;3. 获取Native对象失败或参数转换失败。 |
-| 19020001 | 内存错误。 |
-| 19030001 | 调用三方算法库API出错。 |
+| [19020002](../errorcode-cert.md#19020002-runtime-error) | Runtime error. Possible causes: &lt;br&gt;1. Memory copy failed; &lt;br&gt;2. A null pointer occurs inside the system; &lt;br&gt;3. Failed to obtain the native object or convert parameters. |
+| [19020001](../errorcode-cert.md#19020001-memory-error) | Memory malloc failed. |
+| [19030001](../errorcode-cert.md#19030001-crypto-operation-error) | Crypto operation error. |
 
 ## getNextUpdate
 
@@ -291,7 +291,7 @@ getLastUpdate(): string
 getNextUpdate(): string
 ```
 
-表示获取证书吊销列表下一次更新的日期。
+Obtains the next update date of this CRL.
 
 **Since:** 11
 
@@ -307,15 +307,15 @@ getNextUpdate(): string
 
 | Type | Description |
 | --- | --- |
-| string | 表示X.509证书吊销列表下一次更新的日期，日期采用 ASN.1 UTCTime 或 GeneralizedTime 格式。 |
+| string | Next update date of the CRL, in an ASN.1 time format, specifically UTCTime or GeneralizedTime. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 19020002 | 运行时外部错误。可能的原因： &lt;br&gt;1. 内存拷贝失败； &lt;br&gt;2. 系统内部出现空指针； &lt;br&gt;3. 获取Native对象失败或参数转换失败。 |
-| 19020001 | 内存错误。 |
-| 19030001 | 调用三方算法库API出错。 |
+| [19020002](../errorcode-cert.md#19020002-runtime-error) | Runtime error. Possible causes: &lt;br&gt;1. Memory copy failed; &lt;br&gt;2. A null pointer occurs inside the system; &lt;br&gt;3. Failed to obtain the native object or convert parameters. |
+| [19020001](../errorcode-cert.md#19020001-memory-error) | Memory malloc failed. |
+| [19030001](../errorcode-cert.md#19030001-crypto-operation-error) | Crypto operation error. |
 
 ## getRevokedCert
 
@@ -323,7 +323,7 @@ getNextUpdate(): string
 getRevokedCert(serialNumber: bigint): X509CRLEntry
 ```
 
-表示通过指定证书序列号获取证书吊销条目。
+Obtains the revoked certificate entry from the X.509 CRL based on the specified serial number.
 
 **Since:** 11
 
@@ -339,21 +339,21 @@ getRevokedCert(serialNumber: bigint): X509CRLEntry
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| serialNumber | bigint | Yes | 表示证书序列号。 |
+| serialNumber | bigint | Yes | Serial number of the certificate. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [X509CRLEntry](arkts-devicecertificate-cert-x509crlentry-i.md) | 表示证书吊销条目。 |
+| [X509CRLEntry](arkts-devicecertificate-cert-x509crlentry-i.md) | Revoked certificate entry obtained. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | 参数错误。可能的原因： &lt;br&gt;1. 必填参数未指定； &lt;br&gt;2. 参数类型不正确； &lt;br&gt;3. 参数校验失败。 |
-| 19020001 | 内存错误。 |
-| 19030001 | 调用三方算法库API出错。 |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Invalid parameters. Possible causes: &lt;br&gt;1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; &lt;br&gt;3. Parameter verification failed. |
+| [19020001](../errorcode-cert.md#19020001-memory-error) | Memory malloc failed. |
+| [19030001](../errorcode-cert.md#19030001-crypto-operation-error) | Crypto operation error. |
 
 ## getRevokedCertWithCert
 
@@ -361,7 +361,7 @@ getRevokedCert(serialNumber: bigint): X509CRLEntry
 getRevokedCertWithCert(cert: X509Cert): X509CRLEntry
 ```
 
-表示通过指定证书对象获取证书吊销条目。
+Obtains the revoked certificate entry from the X.509 CRL based on the specified certificate.
 
 **Since:** 11
 
@@ -377,21 +377,21 @@ getRevokedCertWithCert(cert: X509Cert): X509CRLEntry
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| cert | [X509Cert](../../apis-network-kit/arkts-apis/arkts-network-http-x509cert-t.md) | Yes | 表示证书对象。 |
+| cert | [X509Cert](../../apis-network-kit/arkts-apis/arkts-network-http-x509cert-t.md) | Yes | Certificate based on which the revoked certificate is obtained. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [X509CRLEntry](arkts-devicecertificate-cert-x509crlentry-i.md) | 表示证书吊销条目。 |
+| [X509CRLEntry](arkts-devicecertificate-cert-x509crlentry-i.md) | Revoked certificate entry obtained. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | 参数错误。可能的原因： &lt;br&gt;1. 必填参数未指定； &lt;br&gt;2. 参数类型不正确； &lt;br&gt;3. 参数校验失败。 |
-| 19020001 | 内存错误。 |
-| 19030001 | 调用三方算法库API出错。 |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Invalid parameters. Possible causes: &lt;br&gt;1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; &lt;br&gt;3. Parameter verification failed. |
+| [19020001](../errorcode-cert.md#19020001-memory-error) | Memory malloc failed. |
+| [19030001](../errorcode-cert.md#19030001-crypto-operation-error) | Crypto operation error. |
 
 ## getRevokedCerts
 
@@ -399,7 +399,7 @@ getRevokedCertWithCert(cert: X509Cert): X509CRLEntry
 getRevokedCerts(callback: AsyncCallback<Array<X509CRLEntry>>): void
 ```
 
-表示获取证书吊销条目列表。使用Callback异步回调。
+Obtains all the revoked certificate entries from the X.509 CRL. This API uses an asynchronous callback to return the result.
 
 **Since:** 11
 
@@ -415,15 +415,15 @@ getRevokedCerts(callback: AsyncCallback<Array<X509CRLEntry>>): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;X509CRLEntry&gt;&gt; | Yes | 回调函数。当获取证书吊销条目列表成功时，err为undefined， data为获取到的证书吊销条目列表；否则为错误对象。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;X509CRLEntry&gt;&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined**, and **data** is the revoked certificate entries obtained. Otherwise, **err** is an error object. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | 参数错误。可能的原因： &lt;br&gt;1. 必填参数未指定； &lt;br&gt;2. 参数类型不正确； |
-| 19020001 | 内存错误。 |
-| 19030001 | 调用三方算法库API出错。 |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Invalid parameters. Possible causes: &lt;br&gt;1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; |
+| [19020001](../errorcode-cert.md#19020001-memory-error) | Memory malloc failed. |
+| [19030001](../errorcode-cert.md#19030001-crypto-operation-error) | Crypto operation error. |
 
 ## getRevokedCerts
 
@@ -431,7 +431,7 @@ getRevokedCerts(callback: AsyncCallback<Array<X509CRLEntry>>): void
 getRevokedCerts(): Promise<Array<X509CRLEntry>>
 ```
 
-表示获取证书吊销条目列表。使用Promise方式返回结果。
+Obtains all the revoked certificate entries from the X.509 CRL. This API uses a promise to return the result.
 
 **Since:** 11
 
@@ -447,15 +447,15 @@ getRevokedCerts(): Promise<Array<X509CRLEntry>>
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;Array&lt;X509CRLEntry&gt;&gt; | Promise对象，返回证书吊销条目列表。 |
+| Promise&lt;Array&lt;X509CRLEntry&gt;&gt; | Promise used to return the revoked certificate entries obtained. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | 参数错误。可能的原因： &lt;br&gt;1. 必填参数未指定； &lt;br&gt;2. 参数类型不正确； |
-| 19020001 | 内存错误。 |
-| 19030001 | 调用三方算法库API出错。 |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Invalid parameters. Possible causes: &lt;br&gt;1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; |
+| [19020001](../errorcode-cert.md#19020001-memory-error) | Memory malloc failed. |
+| [19030001](../errorcode-cert.md#19030001-crypto-operation-error) | Crypto operation error. |
 
 ## getSignature
 
@@ -463,7 +463,7 @@ getRevokedCerts(): Promise<Array<X509CRLEntry>>
 getSignature(): DataBlob
 ```
 
-表示获取X.509证书吊销列表的签名数据。
+Obtains the signature data of the X.509 CRL.
 
 **Since:** 11
 
@@ -479,15 +479,15 @@ getSignature(): DataBlob
 
 | Type | Description |
 | --- | --- |
-| [DataBlob](../../apis-crypto-architecture-kit/arkts-apis/arkts-cryptoarchitecture-cryptoframework-datablob-i.md) | 表示X.509证书吊销列表的签名数据。 |
+| [DataBlob](../../apis-crypto-architecture-kit/arkts-apis/arkts-cryptoarchitecture-cryptoframework-datablob-i.md) | Signature data of the X.509 CRL obtained. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 19020002 | 运行时外部错误。可能的原因： &lt;br&gt;1. 内存拷贝失败； &lt;br&gt;2. 系统内部出现空指针； &lt;br&gt;3. 获取Native对象失败或参数转换失败。 |
-| 19020001 | 内存错误。 |
-| 19030001 | 调用三方算法库API出错。 |
+| [19020002](../errorcode-cert.md#19020002-runtime-error) | Runtime error. Possible causes: &lt;br&gt;1. Memory copy failed; &lt;br&gt;2. A null pointer occurs inside the system; &lt;br&gt;3. Failed to obtain the native object or convert parameters. |
+| [19020001](../errorcode-cert.md#19020001-memory-error) | Memory malloc failed. |
+| [19030001](../errorcode-cert.md#19030001-crypto-operation-error) | Crypto operation error. |
 
 ## getSignatureAlgName
 
@@ -495,7 +495,7 @@ getSignature(): DataBlob
 getSignatureAlgName(): string
 ```
 
-表示获取X.509证书吊销列表签名的算法名称。
+Obtains the signing algorithm of the X.509 CRL.
 
 **Since:** 11
 
@@ -511,15 +511,15 @@ getSignatureAlgName(): string
 
 | Type | Description |
 | --- | --- |
-| string | 表示X.509证书吊销列表签名的算法名。 |
+| string | Signing algorithm obtained. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 19020002 | 运行时外部错误。可能的原因： &lt;br&gt;1. 内存拷贝失败； &lt;br&gt;2. 系统内部出现空指针； &lt;br&gt;3. 获取Native对象失败或参数转换失败。 |
-| 19020001 | 内存错误。 |
-| 19030001 | 调用三方算法库API出错。 |
+| [19020002](../errorcode-cert.md#19020002-runtime-error) | Runtime error. Possible causes: &lt;br&gt;1. Memory copy failed; &lt;br&gt;2. A null pointer occurs inside the system; &lt;br&gt;3. Failed to obtain the native object or convert parameters. |
+| [19020001](../errorcode-cert.md#19020001-memory-error) | Memory malloc failed. |
+| [19030001](../errorcode-cert.md#19030001-crypto-operation-error) | Crypto operation error. |
 
 ## getSignatureAlgOid
 
@@ -527,7 +527,7 @@ getSignatureAlgName(): string
 getSignatureAlgOid(): string
 ```
 
-表示获取X.509证书吊销列表签名算法的对象标识符OID（Object Identifier）。OID是由国际标准化组织（ISO）的名称注册机构分配。
+Obtains the OID of the X.509 CRL signing algorithm. OIDs are allocated by the International Organization for Standardization (ISO).
 
 **Since:** 11
 
@@ -543,15 +543,15 @@ getSignatureAlgOid(): string
 
 | Type | Description |
 | --- | --- |
-| string | 表示X.509证书吊销列表签名算法的对象标识符OID。 |
+| string | OID of the X.509 CRL signing algorithm obtained. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 19020002 | 运行时外部错误。可能的原因： &lt;br&gt;1. 内存拷贝失败； &lt;br&gt;2. 系统内部出现空指针； &lt;br&gt;3. 获取Native对象失败或参数转换失败。 |
-| 19020001 | 内存错误。 |
-| 19030001 | 调用三方算法库API出错。 |
+| [19020002](../errorcode-cert.md#19020002-runtime-error) | Runtime error. Possible causes: &lt;br&gt;1. Memory copy failed; &lt;br&gt;2. A null pointer occurs inside the system; &lt;br&gt;3. Failed to obtain the native object or convert parameters. |
+| [19020001](../errorcode-cert.md#19020001-memory-error) | Memory malloc failed. |
+| [19030001](../errorcode-cert.md#19030001-crypto-operation-error) | Crypto operation error. |
 
 ## getSignatureAlgParams
 
@@ -559,7 +559,7 @@ getSignatureAlgOid(): string
 getSignatureAlgParams(): DataBlob
 ```
 
-表示获取X.509证书吊销列表签名的算法参数。
+Obtains the parameters of the X.509 CRL signing algorithm.
 
 **Since:** 11
 
@@ -575,16 +575,16 @@ getSignatureAlgParams(): DataBlob
 
 | Type | Description |
 | --- | --- |
-| [DataBlob](../../apis-crypto-architecture-kit/arkts-apis/arkts-cryptoarchitecture-cryptoframework-datablob-i.md) | 表示X.509证书吊销列表签名的算法参数。 |
+| [DataBlob](../../apis-crypto-architecture-kit/arkts-apis/arkts-cryptoarchitecture-cryptoframework-datablob-i.md) | Algorithm parameters obtained. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 19020002 | 运行时外部错误。可能的原因： &lt;br&gt;1. 内存拷贝失败； &lt;br&gt;2. 系统内部出现空指针； &lt;br&gt;3. 获取Native对象失败或参数转换失败。 |
-| 801 | 不支持该操作。 |
-| 19020001 | 内存错误。 |
-| 19030001 | 调用三方算法库API出错。 |
+| [19020002](../errorcode-cert.md#19020002-runtime-error) | Runtime error. Possible causes: &lt;br&gt;1. Memory copy failed; &lt;br&gt;2. A null pointer occurs inside the system; &lt;br&gt;3. Failed to obtain the native object or convert parameters. |
+| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | This operation is not supported. |
+| [19020001](../errorcode-cert.md#19020001-memory-error) | Memory malloc failed. |
+| [19030001](../errorcode-cert.md#19030001-crypto-operation-error) | Crypto operation error. |
 
 ## getTBSInfo
 
@@ -592,7 +592,7 @@ getSignatureAlgParams(): DataBlob
 getTBSInfo(): DataBlob
 ```
 
-表示获取证书吊销列表的tbsCertList信息。
+Obtains the DER-encoded CRL information, that is, **tbsCertList** from this CRL.
 
 **Since:** 11
 
@@ -608,15 +608,15 @@ getTBSInfo(): DataBlob
 
 | Type | Description |
 | --- | --- |
-| [DataBlob](../../apis-crypto-architecture-kit/arkts-apis/arkts-cryptoarchitecture-cryptoframework-datablob-i.md) | 表示证书吊销列表的tbsCertList信息。 |
+| [DataBlob](../../apis-crypto-architecture-kit/arkts-apis/arkts-cryptoarchitecture-cryptoframework-datablob-i.md) | tbsCertList** information obtained. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 19020002 | 运行时外部错误。可能的原因： &lt;br&gt;1. 内存拷贝失败； &lt;br&gt;2. 系统内部出现空指针； &lt;br&gt;3. 获取Native对象失败或参数转换失败。 |
-| 19020001 | 内存错误。 |
-| 19030001 | 调用三方算法库API出错。 |
+| [19020002](../errorcode-cert.md#19020002-runtime-error) | Runtime error. Possible causes: &lt;br&gt;1. Memory copy failed; &lt;br&gt;2. A null pointer occurs inside the system; &lt;br&gt;3. Failed to obtain the native object or convert parameters. |
+| [19020001](../errorcode-cert.md#19020001-memory-error) | Memory malloc failed. |
+| [19030001](../errorcode-cert.md#19030001-crypto-operation-error) | Crypto operation error. |
 
 ## getType
 
@@ -624,7 +624,7 @@ getTBSInfo(): DataBlob
 getType(): string
 ```
 
-表示获取证书吊销列表类型。
+Obtains the CRL type.
 
 **Since:** 11
 
@@ -640,7 +640,7 @@ getType(): string
 
 | Type | Description |
 | --- | --- |
-| string | 表示证书吊销列表类型。 |
+| string | CRL type obtained. |
 
 ## getVersion
 
@@ -654,7 +654,7 @@ ArkTS-Sta:
 getVersion(): int
 ```
 
-表示获取X.509证书吊销列表的版本号。
+Obtains the version of the X.509 CRL.
 
 **Since:** 11
 
@@ -670,7 +670,7 @@ getVersion(): int
 
 | Type | Description |
 | --- | --- |
-| ArkTS-Dyn: number  <br>ArkTS-Sta：int | 表示获取X.509证书吊销列表的版本号。 |
+| ArkTS-Dyn: number  <br>ArkTS-Sta：int | Version of the X.509 CRL obtained. |
 
 ## hashCode
 
@@ -678,7 +678,7 @@ getVersion(): int
 hashCode(): Uint8Array
 ```
 
-获取DER格式数据的哈希值。
+Obtains the hash value of the data in DER format.
 
 **Since:** 12
 
@@ -694,15 +694,15 @@ hashCode(): Uint8Array
 
 | Type | Description |
 | --- | --- |
-| Uint8Array | DER格式数据的哈希值。 |
+| Uint8Array | Hash value obtained. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 19020002 | 运行时外部错误。可能的原因： &lt;br&gt;1. 内存拷贝失败； &lt;br&gt;2. 系统内部出现空指针； &lt;br&gt;3. 获取Native对象失败或参数转换失败。 |
-| 19020001 | 内存错误。 |
-| 19030001 | 调用三方算法库API出错。 |
+| [19020002](../errorcode-cert.md#19020002-runtime-error) | Runtime error. Possible causes: &lt;br&gt;1. Memory copy failed; &lt;br&gt;2. A null pointer occurs inside the system; &lt;br&gt;3. Failed to obtain the native object or convert parameters. |
+| [19020001](../errorcode-cert.md#19020001-memory-error) | Memory malloc failed. |
+| [19030001](../errorcode-cert.md#19030001-crypto-operation-error) | Crypto operation error. |
 
 ## isRevoked
 
@@ -710,7 +710,7 @@ hashCode(): Uint8Array
 isRevoked(cert: X509Cert): boolean
 ```
 
-表示检查证书是否吊销。
+Checks whether an X.509 certificate is revoked.
 
 **Since:** 11
 
@@ -726,19 +726,19 @@ isRevoked(cert: X509Cert): boolean
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| cert | [X509Cert](../../apis-network-kit/arkts-apis/arkts-network-http-x509cert-t.md) | Yes | 表示被检查的证书对象。 |
+| cert | [X509Cert](../../apis-network-kit/arkts-apis/arkts-network-http-x509cert-t.md) | Yes | X.509 certificate to check. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| boolean | 表示证书吊销状态，true表示已吊销，false表示未吊销。 |
+| boolean | Whether the certificate is revoked. The value **true** indicates that the certificate is revoked, and **false** indicates the opposite. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | 参数错误。可能的原因： &lt;br&gt;1. 必填参数未指定； &lt;br&gt;2. 参数类型不正确； &lt;br&gt;3. 参数校验失败。 |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Invalid parameters. Possible causes: &lt;br&gt;1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; &lt;br&gt;3. Parameter verification failed. |
 
 ## match
 
@@ -746,7 +746,7 @@ isRevoked(cert: X509Cert): boolean
 match(param: X509CRLMatchParameters): boolean
 ```
 
-判断证书吊销列表是否与输入参数匹配。
+Checks whether this CRL matches the specified parameters.
 
 **Since:** 11
 
@@ -762,21 +762,21 @@ match(param: X509CRLMatchParameters): boolean
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| param | [X509CRLMatchParameters](arkts-devicecertificate-cert-x509crlmatchparameters-i.md) | Yes | 表示需要匹配的参数。 |
+| param | [X509CRLMatchParameters](arkts-devicecertificate-cert-x509crlmatchparameters-i.md) | Yes | Parameters specified for matching the CRL. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| boolean | 当参数匹配时，该方法返回true，否则返回false。 |
+| boolean | Returns **true** if the CRL matches the parameters specified; returns **false** otherwise. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | 参数错误。可能的原因： &lt;br&gt;1. 必填参数未指定； &lt;br&gt;2. 参数类型不正确； &lt;br&gt;3. 参数校验失败。 |
-| 19020001 | 内存错误。 |
-| 19030001 | 调用三方算法库API出错。 |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Invalid parameters. Possible causes: &lt;br&gt;1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; &lt;br&gt;3. Parameter verification failed. |
+| [19020001](../errorcode-cert.md#19020001-memory-error) | Memory malloc failed. |
+| [19030001](../errorcode-cert.md#19030001-crypto-operation-error) | Crypto operation error. |
 
 ## toString
 
@@ -784,7 +784,7 @@ match(param: X509CRLMatchParameters): boolean
 toString(): string
 ```
 
-获取对象的字符串类型数据。
+Converts the object data into a string.
 
 **Since:** 12
 
@@ -800,15 +800,15 @@ toString(): string
 
 | Type | Description |
 | --- | --- |
-| string | 对象的字符串类型数据。 |
+| string | String obtained. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 19020002 | 运行时外部错误。可能的原因： &lt;br&gt;1. 内存拷贝失败； &lt;br&gt;2. 系统内部出现空指针； &lt;br&gt;3. 获取Native对象失败或参数转换失败。 |
-| 19020001 | 内存错误。 |
-| 19030001 | 调用三方算法库API出错。 |
+| [19020002](../errorcode-cert.md#19020002-runtime-error) | Runtime error. Possible causes: &lt;br&gt;1. Memory copy failed; &lt;br&gt;2. A null pointer occurs inside the system; &lt;br&gt;3. Failed to obtain the native object or convert parameters. |
+| [19020001](../errorcode-cert.md#19020001-memory-error) | Memory malloc failed. |
+| [19030001](../errorcode-cert.md#19030001-crypto-operation-error) | Crypto operation error. |
 
 ## toString
 
@@ -816,7 +816,7 @@ toString(): string
 toString(encodingType: EncodingType): string
 ```
 
-根据编码类型获取对象的字符串类型数据。
+Converts this object into a string in the specified encoding format.
 
 **Since:** 20
 
@@ -832,22 +832,22 @@ toString(encodingType: EncodingType): string
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| encodingType | [EncodingType](arkts-devicecertificate-cert-encodingtype-e.md) | Yes | 表示编码类型。 |
+| encodingType | [EncodingType](arkts-devicecertificate-cert-encodingtype-e.md) | Yes | Encoding type. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| string | 表示对象的字符串类型数据。 |
+| string | String obtained. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 19020002 | 运行时外部错误。可能的原因： &lt;br&gt;1. 内存拷贝失败； &lt;br&gt;2. 系统内部出现空指针； &lt;br&gt;3. 获取Native对象失败或参数转换失败。 |
-| 19020003 | 参数检查失败。可能的原因： &lt;br&gt;1. encodingType的值不在EncodingType枚举范围内。 |
-| 19020001 | 内存错误。 |
-| 19030001 | 调用三方算法库API出错。 |
+| [19020002](../errorcode-cert.md#19020002-runtime-error) | Runtime error. Possible causes: &lt;br&gt;1. Memory copy failed; &lt;br&gt;2. A null pointer occurs inside the system; &lt;br&gt;3. Failed to obtain the native object or convert parameters. |
+| [19020003](../errorcode-cert.md#19020003-parameter-check-failure) | Parameter check failed. Possible causes: &lt;br&gt;1. The value of encodingType is not in the EncodingType enumeration range. |
+| [19020001](../errorcode-cert.md#19020001-memory-error) | Memory malloc failed. |
+| [19030001](../errorcode-cert.md#19030001-crypto-operation-error) | Crypto operation error. |
 
 ## verify
 
@@ -855,7 +855,7 @@ toString(encodingType: EncodingType): string
 verify(key: cryptoFramework.PubKey, callback: AsyncCallback<void>): void
 ```
 
-表示对X.509证书吊销列表进行验签。使用Callback异步回调。验签支持RSA算法。
+Verifies the signature of the X.509 CRL. The RSA algorithm is supported. This API uses an asynchronous callback to return the result.
 
 **Since:** 11
 
@@ -871,15 +871,15 @@ verify(key: cryptoFramework.PubKey, callback: AsyncCallback<void>): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| key | cryptoFramework.PubKey | Yes | 表示用于验签的公钥对象。 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | 回调函数。当验签成功时，err为undefined，否则为错误对象。 |
+| key | cryptoFramework.PubKey | Yes | Public key used for signature verification. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined**. Otherwise, **err** is an error object. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | 参数错误。可能的原因： &lt;br&gt;1. 必填参数未指定； &lt;br&gt;2. 参数类型不正确； &lt;br&gt;3. 参数校验失败。 |
-| 19030001 | 调用三方算法库API出错。 |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Invalid parameters. Possible causes: &lt;br&gt;1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; &lt;br&gt;3. Parameter verification failed. |
+| [19030001](../errorcode-cert.md#19030001-crypto-operation-error) | Crypto operation error. |
 
 ## verify
 
@@ -887,7 +887,7 @@ verify(key: cryptoFramework.PubKey, callback: AsyncCallback<void>): void
 verify(key: cryptoFramework.PubKey): Promise<void>
 ```
 
-表示对X.509证书吊销列表进行验签。使用Promise方式返回结果。验签支持RSA算法。
+Verifies the signature of the X.509 CRL. The RSA algorithm is supported. This API uses a promise to return the result.
 
 **Since:** 11
 
@@ -903,18 +903,18 @@ verify(key: cryptoFramework.PubKey): Promise<void>
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| key | cryptoFramework.PubKey | Yes | 表示用于验签的公钥对象。 |
+| key | cryptoFramework.PubKey | Yes | Public key used for signature verification. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise对象，无返回结果。 |
+| Promise&lt;void&gt; | Promise that returns no value. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | 参数错误。可能的原因： &lt;br&gt;1. 必填参数未指定； &lt;br&gt;2. 参数类型不正确； &lt;br&gt;3. 参数校验失败。 |
-| 19030001 | 调用三方算法库API出错。 |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Invalid parameters. Possible causes: &lt;br&gt;1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; &lt;br&gt;3. Parameter verification failed. |
+| [19030001](../errorcode-cert.md#19030001-crypto-operation-error) | Crypto operation error. |
 

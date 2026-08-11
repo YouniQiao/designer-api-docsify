@@ -1,14 +1,16 @@
 # PathFillType
 
-定义路径的填充类型枚举。
+Enumerates the fill types of a path.
 
-> **说明：**
+> **NOTE：**
 
-> ![WINDING&EVEN_ODD](../../../reference/apis-arkgraphics2d/figures/PathFillType-Winding-Even-Odd.png)
+> ![image_PathFillType_Winding_Even_Odd.png](../../../reference/apis-arkgraphics2d/figures/zh-ch_image_PathFillType_Winding_Even_Odd.png)
 
-> 如图所示圆环为路径，箭头指示路径的方向，p为区域内任意一点，蓝色线条为点p出发的射线，黑色箭头所指为对应填充规则下使用蓝色填
-充路径的结果。WINDING填充规则下，射线与路径的交点计数为2，不为0，点p被涂色；EVEN_ODD  
-> 填充规则下，射线与路径的相交次数为2，是偶数，点p不被涂色。
+> As shown in the above figure, the path is a circle, the arrow indicates the path direction, **p** is any point "
+> inside" the path, the blue line is the ray emitted from **p**, and the black arrow indicates the fill result
+> using blue under the corresponding fill type. Under the **WINDING** fill rule, the number of intersection points
+> of the ray and path is 2 (not 0), and therefore **p** is colored. Under the **EVEN_ODD** filling rule, the number
+> of intersection points of the ray and path is 2 (an even number), and therefore **p** is not colored.
 
 **Since:** 12
 
@@ -24,7 +26,7 @@
 WINDING = 0
 ```
 
-绘制区域中的任意一点，向任意方向射出一条射线，对于射线和路径的所有交点，初始计数为0，遇到每个顺时针的交点（路径从射线的左边向右穿过），计数加1，遇到每个逆时针的交点（路径从射线的右边向左穿过），计数减1，若最终的计数结果不为0，则认为这个点在路径内部，需要被涂色；若计数为0则不被涂色。
+Specifies that "inside" is computed by a non-zero sum of signed edge crossings. Specifically, draws a point and emits a ray in any direction. A count is used to record the number of intersection points of the ray and path,and the initial count is 0. When encountering a clockwise intersection point (the path passes from the left to the right of the ray), the count increases by 1. When encountering a counterclockwise intersection point (the path passes from the right to the left of the ray), the count decreases by 1. If the final count is not 0, the point is inside the path and needs to be colored. If the final count is 0, the point is not colored.
 
 **Since:** 12
 
@@ -40,7 +42,7 @@ WINDING = 0
 EVEN_ODD = 1
 ```
 
-绘制区域中的任意一点，向任意方向射出一条射线，若这条射线和路径相交的次数是奇数，则这个点被认为在路径内部，需要被涂色；若是偶数则不被涂色。
+Specifies that "inside" is computed by an odd number of edge crossings. Specifically, draws a point and emits a ray in any direction. If the number of intersection points of the ray and path is an odd number, the point is considered to be inside the path and needs to be colored. If the number is an even number, the point is not colored.
 
 **Since:** 12
 
@@ -56,7 +58,7 @@ EVEN_ODD = 1
 INVERSE_WINDING = 2
 ```
 
-WINDING涂色规则取反。若最终的计数结果不为0，则认为这个点在路径内部，不涂色；若计数为0则涂色。
+Same as **WINDING**, but draws outside of the path, rather than inside.
 
 **Since:** 12
 
@@ -72,7 +74,7 @@ WINDING涂色规则取反。若最终的计数结果不为0，则认为这个点
 INVERSE_EVEN_ODD = 3
 ```
 
-EVEN_ODD涂色规则取反。若这条射线和路径相交的次数是奇数，则这个点被认为在路径内部，不涂色；若是偶数则需要被涂色。
+Same as **EVEN_ODD**, but draws outside of the path, rather than inside.
 
 **Since:** 12
 

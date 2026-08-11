@@ -12,7 +12,7 @@ import { application } from 'kits/@kit.AbilityKit';
 export function exitMasterProcessRole(): Promise<void>
 ```
 
-放弃当前进程的[主控进程](../../../application-models/ability-terminology.md#masterprocess主控进程)身份。使用Promise异步回调。该接口仅在2in1、Tablet设备中可正常调用，在其他设备中返回801错误码。
+Relinquishes the [master-process](../../../application-models/ability-terminology.md#master-process) role from the  current process. This API uses a promise to return the result.This API can be properly called only on 2-in-1 devices and tablets. If it is called on other device types, error code 801 is returned.
 
 **Since:** 21
 
@@ -28,15 +28,15 @@ export function exitMasterProcessRole(): Promise<void>
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise对象，无返回结果。 |
+| Promise&lt;void&gt; | Promise that returns no value. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 801 | Capability not supported. |
-| 16000118 | Not a master process. |
-| 16000119 | Cannot exit because there is an unfinished request. |
+| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. |
+| [16000118](../errorcode-ability.md#16000118-process-is-not-the-master-process) | Not a master process. |
+| [16000119](../errorcode-ability.md#16000119-pending-request-exists) | Cannot exit because there is an unfinished request. |
 
 ## Examples
 

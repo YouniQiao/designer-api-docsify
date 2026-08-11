@@ -1,6 +1,6 @@
 # SelectedDragPreviewStyle
 
-文本拖拽时的背板样式。
+Selected drag preview style configuration.
 
 **Since:** 23
 
@@ -16,9 +16,7 @@
 color?: ResourceColor
 ```
 
-用于设置文本拖拽时的背板颜色。
-
-默认值：跟随主题。默认主题时，浅色模式显示白色，深色模式显示黑色。
+The color of background.
 
 **Type:** [ResourceColor](arkts-arkui-resourcecolor-t.md)
 

@@ -6,5 +6,5 @@
 
 | Name | Description |
 | --- | --- |
-| [RawFileDescriptor](arkts-localization-rawfiledescriptor-rawfiledescriptor-i.md) | 本模块提供rawfile文件所在HAP包的文件描述符信息，包括文件描述符、rawfile文件的起始偏移和文件长度。 |
+| [RawFileDescriptor](arkts-localization-rawfiledescriptor-rawfiledescriptor-i.md) | This module provides file descriptor information of the HAP where the `rawfile` file is located, including the file descriptor, start offset, and file length. |
 

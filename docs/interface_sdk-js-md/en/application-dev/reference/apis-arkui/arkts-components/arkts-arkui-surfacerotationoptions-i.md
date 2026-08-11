@@ -1,6 +1,6 @@
 # SurfaceRotationOptions
 
-定义屏幕旋转时是否锁定当前XComponent所持有的surface的方向。
+Defines whether the orientation of the surface held by the current **XComponent** is locked when the screen rotates.
 
 **Since:** 12
 
@@ -16,11 +16,11 @@
 lock?: boolean
 ```
 
-屏幕旋转时是否锁定surface的方向。如果不设置此参数，默认值为false，表示不锁定方向。
+Whether the orientation of the surface is locked when the screen rotates. If this parameter is not set, the default value **false** is used, indicating that the orientation is not locked.
 
-**true**：屏幕旋转时锁定surface的方向。
+**true**: The orientation of the surface is locked when the screen rotates.
 
-**false**：屏幕旋转时不锁定surface的方向。
+**false**: The orientation of the surface is not locked when the screen rotates.
 
 **Type:** boolean
 

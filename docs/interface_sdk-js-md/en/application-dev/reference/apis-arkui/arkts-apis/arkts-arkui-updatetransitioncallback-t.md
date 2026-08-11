@@ -4,7 +4,7 @@
 export type UpdateTransitionCallback = (progress: double) => void
 ```
 
-交互转场动画进度。
+navigation update transition callback.
 
 **Since:** 23
 
@@ -20,5 +20,5 @@ export type UpdateTransitionCallback = (progress: double) => void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| progress | double | Yes | 设置交互转场动画进度百分比。 取值范围：[0,1] |
+| progress | double | Yes | Indicates the process of transition Value range: [0,1] |
 

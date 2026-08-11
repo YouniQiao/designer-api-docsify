@@ -12,7 +12,7 @@ import { abilityManager } from 'kits/@kit.AbilityKit';
 function setResidentProcessEnabled(bundleName: string, enable: boolean): Promise<void>
 ```
 
-常驻进程支持按需启停。
+Enables or disables the resident process of an application.
 
 **Since:** 12
 
@@ -28,23 +28,23 @@ function setResidentProcessEnabled(bundleName: string, enable: boolean): Promise
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| bundleName | string | Yes | 常驻进程的包名。 |
-| enable | boolean | Yes | 常驻进程的使能状态。true表示该进程为常驻进程；false表示该进程为普通进程，不会进行保活。 |
+| bundleName | string | Yes | Bundle name of the resident process. |
+| enable | boolean | Yes | Whether to enable or disable the resident process. **true** to enable, **false** otherwise. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise对象。无返回结果的Promise对象。 |
+| Promise&lt;void&gt; | Promise that returns no value. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. Possible cause: 1.Non empty package name needs to be provided; 2.The second parameter needs to provide a Boolean type setting value. |
-| 16200006 | The caller application can only set the resident status of the configured process. |
-| 16000050 | Internal error. |
-| 202 | Not a system application. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible cause: 1.Non empty package name needs to be provided; 2.The second parameter needs to provide a Boolean type setting value. |
+| [16200006](../errorcode-ability.md#16200006-no-permission-to-enable-or-disable-the-resident-process) | The caller application can only set the resident status of the configured process. |
+| [16000050](../errorcode-ability.md#16000050-internal-error) | Internal error. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not a system application. |
 
 ## Examples
 

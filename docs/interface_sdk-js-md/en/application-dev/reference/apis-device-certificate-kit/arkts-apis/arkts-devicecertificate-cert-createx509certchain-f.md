@@ -12,7 +12,7 @@ import { cert } from 'kits/@kit.DeviceCertificateKit';
 function createX509CertChain(inStream: EncodingBlob): Promise<X509CertChain>
 ```
 
-表示创建X.509证书链对象。使用Promise方式返回结果。
+Creates an **X509CertChain** instance. This API uses a promise to return the result.
 
 **Since:** 11
 
@@ -28,21 +28,21 @@ function createX509CertChain(inStream: EncodingBlob): Promise<X509CertChain>
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| inStream | [EncodingBlob](arkts-devicecertificate-cert-encodingblob-i.md) | Yes | X.509证书序列化数据。 |
+| inStream | [EncodingBlob](arkts-devicecertificate-cert-encodingblob-i.md) | Yes | X.509 certificate serialization data. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;X509CertChain&gt; | Promise对象，返回创建的X509CertChain实例。 |
+| Promise&lt;X509CertChain&gt; | Promise used to return the **X509CertChain** instance created. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | 参数错误。可能的原因： &lt;br&gt;1. 必填参数未指定； &lt;br&gt;2. 参数类型不正确； &lt;br&gt;3. 参数校验失败。 |
-| 19020001 | 内存错误。 |
-| 19030001 | 调用三方算法库API出错。 |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Invalid parameters. Possible causes: &lt;br&gt;1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; &lt;br&gt;3. Parameter verification failed. |
+| [19020001](../errorcode-cert.md#19020001-memory-error) | Memory malloc failed. |
+| [19030001](../errorcode-cert.md#19030001-crypto-operation-error) | Crypto operation error. |
 
 ## Examples
 
@@ -141,7 +141,7 @@ createX509CertChain();
 function createX509CertChain(inStream: EncodingBlob, callback: AsyncCallback<X509CertChain>): void
 ```
 
-表示创建X.509证书链对象。使用Callback异步回调。
+Creates an **X509CertChain** instance. This API uses an asynchronous callback to return the result.
 
 **Since:** 11
 
@@ -157,16 +157,16 @@ function createX509CertChain(inStream: EncodingBlob, callback: AsyncCallback<X50
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| inStream | [EncodingBlob](arkts-devicecertificate-cert-encodingblob-i.md) | Yes | X.509证书序列化数据。 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;X509CertChain&gt; | Yes | 回调函数。当创建X.509证书链对象成功时，err为undefined，data为获取到的 X509CertChain实例；否则为错误对象。 |
+| inStream | [EncodingBlob](arkts-devicecertificate-cert-encodingblob-i.md) | Yes | X.509 certificate serialization data. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;X509CertChain&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined**, and **data** is the **X509CertChain** instance created. Otherwise, **err** is an error object. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | 参数错误。可能的原因： &lt;br&gt;1. 必填参数未指定； &lt;br&gt;2. 参数类型不正确； &lt;br&gt;3. 参数校验失败。 |
-| 19020001 | 内存错误。 |
-| 19030001 | 调用三方算法库API出错。 |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Invalid parameters. Possible causes: &lt;br&gt;1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; &lt;br&gt;3. Parameter verification failed. |
+| [19020001](../errorcode-cert.md#19020001-memory-error) | Memory malloc failed. |
+| [19030001](../errorcode-cert.md#19030001-crypto-operation-error) | Crypto operation error. |
 
 ## Examples
 
@@ -260,7 +260,7 @@ cert.createX509CertChain(encodingBlob, (err, certChain) => {
 function createX509CertChain(certs: Array<X509Cert>): X509CertChain
 ```
 
-表示使用X509Cert数组方式创建X.509证书链对象，并同步返回结果。
+Creates an X.509 certificate chain object based on the specified certificates. This API returns the result synchronously.
 
 **Since:** 11
 
@@ -276,21 +276,21 @@ function createX509CertChain(certs: Array<X509Cert>): X509CertChain
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| certs | Array&lt;X509Cert&gt; | Yes | X.509证书对象数组。 |
+| certs | Array&lt;X509Cert&gt; | Yes | Array of X.509 certificates. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [X509CertChain](arkts-devicecertificate-cert-x509certchain-i.md) | 表示X.509证书链对象。 |
+| [X509CertChain](arkts-devicecertificate-cert-x509certchain-i.md) | X509CertChain** object created. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | 参数错误。可能的原因： &lt;br&gt;1. 必填参数未指定； &lt;br&gt;2. 参数类型不正确； &lt;br&gt;3. 参数校验失败。 |
-| 19020001 | 内存错误。 |
-| 19030001 | 调用三方算法库API出错。 |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Invalid parameters. Possible causes: &lt;br&gt;1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; &lt;br&gt;3. Parameter verification failed. |
+| [19020001](../errorcode-cert.md#19020001-memory-error) | Memory malloc failed. |
+| [19030001](../errorcode-cert.md#19030001-crypto-operation-error) | Crypto operation error. |
 
 ## Examples
 

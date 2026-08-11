@@ -1,6 +1,6 @@
 # WorkerEventListener
 
-事件监听类。
+Implements event listening.
 
 **Since:** 9
 
@@ -22,7 +22,7 @@ import { MessageEvents, PostMessageOptions, MessageEvent, Priority, WorkerEventT
 (event: Event): void | Promise<void>
 ```
 
-指定要调用的回调函数。
+Specifies the callback function to be invoked.
 
 **Since:** 9
 
@@ -38,14 +38,14 @@ import { MessageEvents, PostMessageOptions, MessageEvent, Priority, WorkerEventT
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| event | [Event](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-event-c.md) | Yes | 回调的事件类。 |
+| event | [Event](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-event-c.md) | Yes | Event class for the callback to invoke. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 10200005 | The called API is not supported in the worker thread. |
-| 10200004 | The Worker instance is not running. |
+| [10200005](../errorcode-utils.md#10200005-api-not-supported-in-the-worker-thread) | The called API is not supported in the worker thread. |
+| [10200004](../errorcode-utils.md#10200004-worker-instance-is-not-running) | The Worker instance is not running. |
 
 ## Examples
 

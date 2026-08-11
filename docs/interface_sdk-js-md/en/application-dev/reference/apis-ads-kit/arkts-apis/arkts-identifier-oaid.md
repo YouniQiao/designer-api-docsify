@@ -1,11 +1,12 @@
-# @ohos.identifier.oaid(开放匿名设备标识服务)
+# @ohos.identifier.oaid(OAID)
 
-本模块提供开放匿名设备标识符（Open Anonymous Device Identifier, OAID）的获取和重置能力。
+This module provides the capability of obtaining and resetting the Open Anonymous Device Identifier (OAID).
 
-> **说明：**
-> 
-> 使用获取开放匿名设备标识符接口，需[向用户申请授权](../../../security/AccessToken/request-user-authorization.md)
-> （默认开启权限）：ohos.permission.APP_TRACKING_CONSENT。
+> **NOTE：**
+
+> To use the API for obtaining the OAID, you need to
+> [request user authorization](../../../security/AccessToken/request-user-authorization.md) (the permission is
+> enabled by default): ohos.permission.APP_TRACKING_CONSENT.
 
 **Since:** 10
 
@@ -27,14 +28,14 @@ import { identifier } from 'kits/@kit.AdsKit';
 
 | Name | Description |
 | --- | --- |
-| [getOAID](arkts-ads-identifier-getoaid-f.md#getoaid) | 获取开放匿名设备标识符（OAID）。使用callback异步回调。 |
-| [getOAID](arkts-ads-identifier-getoaid-f.md#getoaid-1) | 获取开放匿名设备标识符（OAID）。使用Promise异步回调。 |
+| [getOAID](arkts-ads-identifier-getoaid-f.md#getoaid) | Obtains the OAID. This API uses an asynchronous callback to return the result.  > **NOTE：** >  > The setting item of cross-app association access permission was named app tracking access permission > in HarmonyOS NEXT Developer Beta5 and earlier versions. |
+| [getOAID](arkts-ads-identifier-getoaid-f.md#getoaid-1) | Obtains the OAID. This API uses a promise to return the result.  > **NOTE：** >  > The setting item of cross-app association access permission was named app tracking access permission > in HarmonyOS NEXT Developer Beta5 and earlier versions. |
 
 <!--Del-->
 ### Functions（系统接口）
 
 | Name | Description |
 | --- | --- |
-| [resetOAID](arkts-ads-identifier-resetoaid-f-sys.md#resetoaid) | 重置开放匿名设备标识符（OAID）。 |
+| [resetOAID](arkts-ads-identifier-resetoaid-f-sys.md#resetoaid) | Resets the OAID. |
 <!--DelEnd-->
 

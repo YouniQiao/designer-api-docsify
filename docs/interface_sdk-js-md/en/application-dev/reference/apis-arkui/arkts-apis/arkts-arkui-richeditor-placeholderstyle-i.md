@@ -1,6 +1,6 @@
 # PlaceholderStyle
 
-设置提示文本的字体样式。
+Defines the placeholder style.
 
 **Since:** 23
 
@@ -16,9 +16,7 @@
 font?: Font
 ```
 
-设置placeholder文本样式。
-
-默认值遵循主题设置。
+font.
 
 **Type:** [Font](arkts-arkui-font-i.md)
 
@@ -38,9 +36,7 @@ font?: Font
 fontColor?: ResourceColor
 ```
 
-设置placeholder文本颜色。
-
-默认值遵循主题设置。
+fontColor.
 
 **Type:** [ResourceColor](arkts-arkui-resourcecolor-t.md)
 

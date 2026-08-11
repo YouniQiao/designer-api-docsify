@@ -1,6 +1,13 @@
 # systemTonePlayer
 
-系统提示音播放器
+The module provides APIs for playing and configuring SMS tones and notification tones and obtaining related
+ information.
+ This module must work with
+ [@ohos.multimedia.systemSoundManager](arkts-multimedia-systemsoundmanager.md) to manage
+ system tones.
+ > **NOTE**
+ >
+ > - The APIs provided by this module are system APIs.
 
 
 ## Summary
@@ -10,7 +17,7 @@
 
 | Name | Description |
 | --- | --- |
-| [SystemToneOptions](arkts-audio-systemtoneplayer-systemtoneoptions-i-sys.md) | 提示音参数选项。 |
-| [SystemTonePlayer](arkts-audio-systemtoneplayer-systemtoneplayer-i-sys.md) | 系统提示音播放器提供了短信提示音、通知提示音的播放、配置、获取信息等功能。在调用SystemTonePlayer的接口前，需要先通过  [getSystemTonePlayer](arkts-audio-systemsoundmanager-systemsoundmanager-i.md#getsystemtoneplayer)创建实例。 |
+| [SystemToneOptions](arkts-audio-systemtoneplayer-systemtoneoptions-i-sys.md) | Describes the options of system tones. |
+| [SystemTonePlayer](arkts-audio-systemtoneplayer-systemtoneplayer-i-sys.md) | The module provides APIs for playing and configuring SMS tones and notification tones and obtaining related information. Before calling any API in SystemTonePlayer, you must use  [getSystemTonePlayer](arkts-audio-systemsoundmanager-systemsoundmanager-i.md#getsystemtoneplayer)to create a SystemTonePlayer instance. |
 <!--DelEnd-->
 

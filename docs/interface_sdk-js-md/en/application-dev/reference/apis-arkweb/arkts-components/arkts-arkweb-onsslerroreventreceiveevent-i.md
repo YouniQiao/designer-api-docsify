@@ -1,6 +1,6 @@
 # OnSslErrorEventReceiveEvent
 
-定义网页收到SSL错误时触发。
+Defines the triggered callback when the Web page receives an ssl Error.
 
 **Since:** 12
 
@@ -16,7 +16,7 @@
 certChainData?: Array<Uint8Array>
 ```
 
-证书链数据。
+Certificate chain data in DER format.
 
 **Type:** Array&lt;Uint8Array&gt;
 
@@ -34,7 +34,7 @@ certChainData?: Array<Uint8Array>
 error: SslError
 ```
 
-错误码。
+Error codes.
 
 **Type:** [SslError](arkts-arkweb-sslerror-e.md)
 
@@ -54,7 +54,7 @@ error: SslError
 handler: SslErrorHandler
 ```
 
-通知Web组件用户操作行为。
+Notifies the user of the operation behavior of the web component.
 
 **Type:** [SslErrorHandler](arkts-arkweb-sslerrorhandler-c.md)
 

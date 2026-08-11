@@ -1,6 +1,6 @@
 # Trigger (System API)
 
-触发条件的具体信息。
+Defines the details for triggering a geofence.
 
 **Since:** 23
 
@@ -18,7 +18,7 @@
 condition:Geofence
 ```
 
-条件具体描述。
+Details about a geofence.
 
 **Type:** [Geofence](../../apis-location-kit/arkts-apis/arkts-location-geolocation-geofence-i.md)
 
@@ -38,7 +38,7 @@ condition:Geofence
 displayTime?:int
 ```
 
-条件触发实况的展示时间，单位：秒，取值范围：[15, 1800]，默认值为900。
+Display time of a live view, in seconds. The value ranges from 15 to 1800. The default value is **900**.
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
@@ -58,7 +58,7 @@ displayTime?:int
 type:TriggerType
 ```
 
-条件类型。
+Trigger type.
 
 **Type:** [TriggerType](arkts-notification-notificationmanager-triggertype-t-sys.md)
 

@@ -1,11 +1,12 @@
 # HapModuleInfo
 
-Hap模块信息，未做特殊说明的属性，均通过  
-[bundle.getBundleInfo](arkts-ability-bundle-getbundleinfo-f.md#getbundleinfo)获取。
+The HapModuleInfo module provides information about an HAP module. Unless otherwise specified, the information is obtained through  
+[bundle.getBundleInfo](arkts-ability-bundle-getbundleinfo-f.md#getbundleinfo).
 
-> **说明：**
+> **NOTE：**
 > 
-> 从API version 9开始，该模块不再维护，建议使用[bundleManager-HapModuleInfo](arkts-ability-hapmoduleinfo-hapmoduleinfo-depr-i.md)替代。
+> The APIs of this module have been deprecated since API version 9. You are advised to use
+> [bundleManager-HapModuleInfo](arkts-ability-hapmoduleinfo-hapmoduleinfo-depr-i.md) instead.
 
 **Since:** 7
 
@@ -25,7 +26,7 @@ Hap模块信息，未做特殊说明的属性，均通过
 readonly abilityInfo: Array<AbilityInfo>
 ```
 
-Ability信息。
+Ability information.
 
 **Type:** Array&lt;[AbilityInfo](arkts-ability-abilityinfo-abilityinfo-depr-i.md)&gt;
 
@@ -49,7 +50,7 @@ Ability信息。
 readonly backgroundImg: string
 ```
 
-模块背景图片。
+Module background image.
 
 **Type:** string
 
@@ -71,7 +72,7 @@ readonly backgroundImg: string
 readonly description: string
 ```
 
-模块描述信息。
+Module description.
 
 **Type:** string
 
@@ -95,7 +96,7 @@ readonly description: string
 readonly descriptionId: number
 ```
 
-描述信息ID。
+Module description ID.
 
 **Type:** number
 
@@ -119,7 +120,7 @@ readonly descriptionId: number
 readonly deviceTypes: Array<string>
 ```
 
-支持运行的设备类型。
+Device types supported by the module.
 
 **Type:** Array&lt;string&gt;
 
@@ -143,7 +144,7 @@ readonly deviceTypes: Array<string>
 readonly icon: string
 ```
 
-模块图标。
+Module icon.
 
 **Type:** string
 
@@ -167,7 +168,7 @@ readonly icon: string
 readonly iconId: number
 ```
 
-模块图标ID。
+Module icon ID.
 
 **Type:** number
 
@@ -191,7 +192,7 @@ readonly iconId: number
 readonly installationFree: boolean
 ```
 
-是否支持免安装，取值为true表示支持免安装，取值为false表示不支持免安装。
+Whether installation-free is supported. **true** if supported, **false** otherwise.
 
 **Type:** boolean
 
@@ -215,7 +216,7 @@ readonly installationFree: boolean
 readonly label: string
 ```
 
-模块标签。
+Module label.
 
 **Type:** string
 
@@ -239,7 +240,7 @@ readonly label: string
 readonly labelId: number
 ```
 
-模块标签ID。
+Module label ID.
 
 **Type:** number
 
@@ -263,7 +264,7 @@ readonly labelId: number
 readonly mainAbilityName: string
 ```
 
-入口Ability名称。
+Name of the main ability.
 
 **Type:** string
 
@@ -285,7 +286,7 @@ readonly mainAbilityName: string
 readonly moduleName: string
 ```
 
-模块名。
+Module name.
 
 **Type:** string
 
@@ -309,7 +310,7 @@ readonly moduleName: string
 readonly name: string
 ```
 
-模块名称。
+Module name.
 
 **Type:** string
 
@@ -333,7 +334,7 @@ readonly name: string
 readonly reqCapabilities: Array<string>
 ```
 
-模块运行需要的能力。
+Capabilities required for module running.
 
 **Type:** Array&lt;string&gt;
 
@@ -355,7 +356,7 @@ readonly reqCapabilities: Array<string>
 readonly supportedModes: number
 ```
 
-模块支持的模式。
+Running modes supported by the module.
 
 **Type:** number
 

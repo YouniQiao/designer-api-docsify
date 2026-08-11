@@ -1,6 +1,6 @@
 # AdvertisingParams
 
-广播参数。
+Describes the advertising parameters.
 
 **Since:** 26.0.0
 
@@ -22,7 +22,7 @@ import { advertising } from 'kits/@kit.ConnectivityKit';
 advertisingData: AdvertisingData
 ```
 
-广播数据。
+Indicates the advertising data.
 
 **Type:** [AdvertisingData](arkts-connectivity-advertising-advertisingdata-i.md)
 
@@ -42,7 +42,7 @@ advertisingData: AdvertisingData
 advertisingSettings: AdvertisingSettings
 ```
 
-广播设置。
+Indicates the advertising settings.
 
 **Type:** [AdvertisingSettings](arkts-connectivity-advertising-advertisingsettings-i.md)
 

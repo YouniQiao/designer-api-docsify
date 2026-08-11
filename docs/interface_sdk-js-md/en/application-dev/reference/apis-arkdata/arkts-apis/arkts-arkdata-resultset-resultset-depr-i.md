@@ -1,10 +1,7 @@
 # ResultSet
 
-结果集是指用户调用关系型数据库查询接口之后返回的结果集合，提供了多种灵活的数据访问方式，以便用户获取各项数据。
-
-> **说明：**
-> 
-> 从API Version 9开始，该接口不再维护，推荐使用新接口[ResultSet](arkts-arkdata-relationalstore-resultset-i.md)。
+A result set is a set of results returned after the relational database (RDB) query APIs are called. You can use the  
+**resultset** APIs to obtain required data.
 
 **Since:** 7
 
@@ -24,7 +21,7 @@
 close(): void
 ```
 
-关闭结果集。
+Closes this result set.
 
 **Since:** 7
 
@@ -44,7 +41,7 @@ close(): void
 getBlob(columnIndex: number): Uint8Array
 ```
 
-以字节数组的形式获取当前行中指定列的值。
+Obtains the value from the specified column in the current row as a byte array.
 
 **Since:** 7
 
@@ -62,13 +59,13 @@ getBlob(columnIndex: number): Uint8Array
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| columnIndex | number | Yes | 指定的列索引，从0开始。 |
+| columnIndex | number | Yes | Index of the specified column, starting from 0. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Uint8Array | 以字节数组的形式返回指定列的值。 |
+| Uint8Array | Value in the specified column as a byte array. |
 
 ## getColumnIndex
 
@@ -76,7 +73,7 @@ getBlob(columnIndex: number): Uint8Array
 getColumnIndex(columnName: string): number
 ```
 
-根据指定的列名获取列索引。
+Obtains the column index based on the column name.
 
 **Since:** 7
 
@@ -94,13 +91,13 @@ getColumnIndex(columnName: string): number
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| columnName | string | Yes | 表示结果集中指定列的名称。 |
+| columnName | string | Yes | Column name specified. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| number | 返回指定列的索引。 |
+| number | Index of the column obtained. |
 
 ## getColumnName
 
@@ -108,7 +105,7 @@ getColumnIndex(columnName: string): number
 getColumnName(columnIndex: number): string
 ```
 
-根据指定的列索引获取列名。
+Obtains the column name based on the column index.
 
 **Since:** 7
 
@@ -126,13 +123,13 @@ getColumnName(columnIndex: number): string
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| columnIndex | number | Yes | 表示结果集中指定列的索引。 |
+| columnIndex | number | Yes | Column index specified. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| string | 返回指定列的名称。 |
+| string | Column name obtained. |
 
 ## getDouble
 
@@ -140,7 +137,7 @@ getColumnName(columnIndex: number): string
 getDouble(columnIndex: number): number
 ```
 
-以double形式获取当前行中指定列的值。
+Obtains the value from the specified column in the current row as a Double.
 
 **Since:** 7
 
@@ -158,13 +155,13 @@ getDouble(columnIndex: number): number
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| columnIndex | number | Yes | 指定的列索引，从0开始。 |
+| columnIndex | number | Yes | Index of the specified column, starting from 0. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| number | 以double形式返回指定列的值。 |
+| number | Value in the specified column as a Double. |
 
 ## getLong
 
@@ -172,7 +169,7 @@ getDouble(columnIndex: number): number
 getLong(columnIndex: number): number
 ```
 
-以Long形式获取当前行中指定列的值。
+Obtains the value from the specified column in the current row as a Long.
 
 **Since:** 7
 
@@ -190,13 +187,13 @@ getLong(columnIndex: number): number
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| columnIndex | number | Yes | 指定的列索引，从0开始。 |
+| columnIndex | number | Yes | Index of the specified column, starting from 0. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| number | 以Long形式返回指定列的值。&lt;br/&gt;该接口支持的数据范围是：Number.MIN_SAFE_INTEGER ~ Number.MAX_SAFE_INTEGER，若超出该范围，建议使用 [getDouble](../../../reference/apis-arkdata/js-apis-data-resultset.md#getdouble)。 |
+| number | Value in the specified column as a Long. &lt;br&gt;The value range supported by this API is **Number.MIN_SAFE_INTEGER** to **Number.MAX_SAFE_INTEGER**. If the value is out of this range, use [getDouble]{ |
 
 ## getString
 
@@ -204,7 +201,7 @@ getLong(columnIndex: number): number
 getString(columnIndex: number): string
 ```
 
-以字符串形式获取当前行中指定列的值。
+Obtains the value from the specified column in the current row as a string.
 
 **Since:** 7
 
@@ -222,13 +219,13 @@ getString(columnIndex: number): string
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| columnIndex | number | Yes | 指定的列索引，从0开始。 |
+| columnIndex | number | Yes | Index of the specified column, starting from 0. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| string | 以字符串形式返回指定列的值。 |
+| string | Value in the specified column as a string. |
 
 ## goTo
 
@@ -236,7 +233,7 @@ getString(columnIndex: number): string
 goTo(offset: number): boolean
 ```
 
-向前或向后移至结果集的指定行，相对于其当前位置偏移。
+Moves the result set forward or backward to the specified row with an offset relative to the current position.
 
 **Since:** 7
 
@@ -254,13 +251,13 @@ goTo(offset: number): boolean
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| offset | number | Yes | 表示相对于当前位置的偏移量。 |
+| offset | number | Yes | Offset relative to the current position. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| boolean | 如果成功移动结果集，则为true；否则返回false。 |
+| boolean | Returns **true** if the operation is successful; returns **false** otherwise. |
 
 ## goToFirstRow
 
@@ -268,7 +265,7 @@ goTo(offset: number): boolean
 goToFirstRow(): boolean
 ```
 
-转到结果集的第一行。
+Moves the cursor to the first row of the result set.
 
 **Since:** 7
 
@@ -286,7 +283,7 @@ goToFirstRow(): boolean
 
 | Type | Description |
 | --- | --- |
-| boolean | 如果成功移动结果集到第一行，则为true；否则为false。 |
+| boolean | Returns **true** if the operation is successful; returns **false** otherwise. |
 
 ## goToLastRow
 
@@ -294,7 +291,7 @@ goToFirstRow(): boolean
 goToLastRow(): boolean
 ```
 
-转到结果集的最后一行。
+Moves the cursor to the last row of the result set.
 
 **Since:** 7
 
@@ -312,7 +309,7 @@ goToLastRow(): boolean
 
 | Type | Description |
 | --- | --- |
-| boolean | 如果成功移动结果集到最后一行，则为true；否则为false。 |
+| boolean | Returns **true** if the operation is successful; returns **false** otherwise. |
 
 ## goToNextRow
 
@@ -320,7 +317,7 @@ goToLastRow(): boolean
 goToNextRow(): boolean
 ```
 
-转到结果集的下一行。
+Moves the cursor to the next row in the result set.
 
 **Since:** 7
 
@@ -338,7 +335,7 @@ goToNextRow(): boolean
 
 | Type | Description |
 | --- | --- |
-| boolean | 如果成功移动结果集到下一行，则为true；否则为false。 |
+| boolean | Returns **true** if the operation is successful; returns **false** otherwise. |
 
 ## goToPreviousRow
 
@@ -346,7 +343,7 @@ goToNextRow(): boolean
 goToPreviousRow(): boolean
 ```
 
-转到结果集的上一行。
+Moves the cursor to the previous row in the result set.
 
 **Since:** 7
 
@@ -364,7 +361,7 @@ goToPreviousRow(): boolean
 
 | Type | Description |
 | --- | --- |
-| boolean | 如果成功移动结果集到上一行，则为true；否则为false。 |
+| boolean | Returns **true** if the operation is successful; returns **false** otherwise. |
 
 ## goToRow
 
@@ -372,7 +369,7 @@ goToPreviousRow(): boolean
 goToRow(position: number): boolean
 ```
 
-转到结果集的指定行。
+Moves the cursor to the specified row in the result set.
 
 **Since:** 7
 
@@ -390,13 +387,13 @@ goToRow(position: number): boolean
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| position | number | Yes | 表示要移动到的指定位置。 |
+| position | number | Yes | Position to which the cursor is to be moved. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| boolean | 如果成功移动结果集，则为true；否则返回false。 |
+| boolean | Returns **true** if the operation is successful; returns **false** otherwise. |
 
 ## isColumnNull
 
@@ -404,7 +401,7 @@ goToRow(position: number): boolean
 isColumnNull(columnIndex: number): boolean
 ```
 
-检查当前行中指定列的值是否为null。
+Checks whether the value in the specified column of the current row is null.
 
 **Since:** 7
 
@@ -422,13 +419,13 @@ isColumnNull(columnIndex: number): boolean
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| columnIndex | number | Yes | 指定的列索引，从0开始。 |
+| columnIndex | number | Yes | Index of the specified column, starting from 0. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| boolean | 如果当前行中指定列的值为null，则返回true，否则返回false。 |
+| boolean | Returns **true** if the value is null; returns **false** otherwise. |
 
 ## columnCount
 
@@ -436,9 +433,7 @@ isColumnNull(columnIndex: number): boolean
 columnCount: number
 ```
 
-columnCount: number
-
-获取结果集中的列数。
+Number of columns in the result set.
 
 **Type:** number
 
@@ -460,9 +455,7 @@ columnCount: number
 columnNames: Array<string>
 ```
 
-columnNames: Array&lt;string&gt;
-
-获取结果集中所有列的名称。
+Names of all columns in the result set.
 
 **Type:** Array&lt;string&gt;
 
@@ -484,9 +477,7 @@ columnNames: Array&lt;string&gt;
 isAtFirstRow: boolean
 ```
 
-isAtFirstRow: boolean
-
-检查结果集是否位于第一行。
+Whether the cursor is in the first row of the result set.
 
 **Type:** boolean
 
@@ -508,9 +499,7 @@ isAtFirstRow: boolean
 isAtLastRow: boolean
 ```
 
-isAtLastRow: boolean
-
-检查结果集是否位于最后一行。
+Whether the cursor is in the last row of the result set.
 
 **Type:** boolean
 
@@ -532,9 +521,7 @@ isAtLastRow: boolean
 isClosed: boolean
 ```
 
-isClosed: boolean
-
-检查当前结果集是否关闭。
+Whether the result set is closed.
 
 **Type:** boolean
 
@@ -556,9 +543,7 @@ isClosed: boolean
 isEnded: boolean
 ```
 
-isEnded: boolean
-
-检查结果集是否位于最后一行之后。
+Whether the cursor is after the last row of the result set.
 
 **Type:** boolean
 
@@ -580,9 +565,7 @@ isEnded: boolean
 isStarted: boolean
 ```
 
-isStarted: boolean
-
-检查指针是否移动过。
+Whether the cursor has been moved.
 
 **Type:** boolean
 
@@ -604,9 +587,7 @@ isStarted: boolean
 rowCount: number
 ```
 
-rowCount: number
-
-获取结果集中的行数。
+Number of rows in the result set.
 
 **Type:** number
 
@@ -628,9 +609,7 @@ rowCount: number
 rowIndex: number
 ```
 
-rowIndex: number
-
-获取结果集当前行的索引。
+Index of the current row in the result set.
 
 **Type:** number
 

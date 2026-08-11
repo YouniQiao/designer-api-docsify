@@ -6,29 +6,32 @@
 const ODID: string
 ```
 
-开发者匿名设备标识符。
+Open device identifier.
 
-**ODID值会在以下场景重新生成：**
+An ODID will be regenerated in the following scenarios:
 
-手机恢复出厂设置。
+Restore a phone to its factory settings.
 
-同一设备上同一个开发者(developerId相同)的应用全部卸载后重新安装时。
+Uninstall and reinstall all applications with the same **developerId** on one device.
 
-**ODID生成规则：**
+An ODID is generated based on the following rules:
 
-根据签名信息里developerId解析出的groupId生成，developerId规则为groupId.developerId，若无groupId则取整个developerId作为groupId。
+The value is generated based on the **groupId** parsed from the **developerId** in the signature information. As  
+**groupId.developerId** is the rule, if no **groupId** exists, the **developerId** is used as the **groupId**.
 
-同一设备上运行的同一个开发者(developerId相同)的应用，ODID相同。
+Applications with the same **developerId** use the same ODID on one device.
 
-同一个设备上不同开发者(developerId不同)的应用，ODID不同。
+Applications with different **developerId**s use different ODIDs on one device.
 
-不同设备上同一个开发者(developerId相同)的应用，ODID不同。
+Applications with the same **developerId** use different ODIDs on different devices.
 
-不同设备上不同开发者(developerId不同)的应用，ODID不同。
+Applications with different **developerId**s use different ODIDs on different devices.
 
-**说明：**数据长度为37字节(包含结束符)。
+**NOTE：**
 
-示例：1234a567-XXXX-XXXX-XXXX-XXXXXXXXXXXX
+The data length is 37 bytes.
+
+Example: 1234a567-XXXX-XXXX-XXXX-XXXXXXXXXXXX
 
 **Since:** 12
 
@@ -44,9 +47,9 @@ const ODID: string
 const abiList: string
 ```
 
-应用二进制接口（Abi）。
+Application binary interface (Abi) list.
 
-示例：arm64-v8a
+Example: arm64-v8a
 
 **Since:** 6
 
@@ -62,9 +65,7 @@ const abiList: string
 const bootCount: number
 ```
 
-当前设备重启次数，获取失败时返回-1
-
-示例：100
+Obtains boot count since the device starts running
 
 **Since:** 21
 
@@ -80,9 +81,9 @@ const bootCount: number
 const bootloaderVersion: string
 ```
 
-Bootloader版本号，用于标识设备启动引导程序的版本信息。
+Bootloader version.
 
-示例：bootloader
+Example: bootloader
 
 **Since:** 6
 
@@ -98,7 +99,9 @@ Bootloader版本号，用于标识设备启动引导程序的版本信息。
 const brand: string
 ```
 
-设备品牌名称。
+Device brand.
+
+Example: HUAWEI
 
 **Since:** 6
 
@@ -116,9 +119,9 @@ const brand: string
 const buildHost: string
 ```
 
-构建主机。
+Build host.
 
-示例：default
+Example: default
 
 **Since:** 6
 
@@ -134,9 +137,9 @@ const buildHost: string
 const buildRootHash: string
 ```
 
-构建版本Hash。
+Build root hash.
 
-示例：default
+Example: default
 
 **Since:** 6
 
@@ -152,9 +155,9 @@ const buildRootHash: string
 const buildTime: string
 ```
 
-构建时间。
+Build time.
 
-示例：default
+Example: default
 
 **Since:** 6
 
@@ -170,9 +173,9 @@ const buildTime: string
 const buildType: string
 ```
 
-构建类型。
+Build type.
 
-示例：default
+Example: default
 
 **Since:** 6
 
@@ -188,9 +191,9 @@ const buildType: string
 const buildUser: string
 ```
 
-构建用户。
+Build user.
 
-示例：default
+Example: default
 
 **Since:** 6
 
@@ -206,9 +209,10 @@ const buildUser: string
 const buildVersion: number
 ```
 
-Build版本号，标识编译构建的版本号，值为osFullName中的第四位数值，建议直接使用deviceInfo.buildVersion获取，可提升效率，不建议开发者自主解析osFullName获取。
+Build version number. The value is the fourth digit in **osFullName**. You are advised to use   
+**deviceInfo.buildVersion** instead of parsing **osFullName** to obtain the value, facilitating efficiency improvement.
 
-示例：1
+Example: 1
 
 **Since:** 6
 
@@ -224,9 +228,7 @@ Build版本号，标识编译构建的版本号，值为osFullName中的第四�
 const chipType: string
 ```
 
-当前设备CPU芯片型号
-
-示例：xxxxx
+Obtains the device CPU chipType by a string.
 
 **Since:** 21
 
@@ -242,9 +244,7 @@ const chipType: string
 const deviceColor: string
 ```
 
-当前设备颜色。如果无法获取，则返回空字符串
-
-示例：gold
+Obtain the device color represented by a string. If it cannot be obtained, return an empty string
 
 **Since:** 26.0.0
 
@@ -262,9 +262,9 @@ const deviceColor: string
 const deviceType: string
 ```
 
-设备类型。详细请参考[deviceTypes标签](../../../quick-start/module-configuration-file.md#devicetypes标签)。
+Device type. For details, see [deviceTypes tag](../../../quick-start/module-configuration-file.md#devicetypes).
 
-示例：&lt;!--RP1--&gt;wearable&lt;!--RP1End--&gt;
+Example: &lt;!--RP1--&gt;wearable&lt;!--RP1End--&gt;
 
 **Since:** 6
 
@@ -282,13 +282,15 @@ const deviceType: string
 const diskSN: string
 ```
 
-硬盘序列号。
+Disk SN.
 
-**说明：**该字段只能在2in1设备进行查询，其他设备查询结果为空。
+**NOTE：**
 
-ohos.permission.ACCESS_DISK_PHY_INFO 
+This field can be queried only on the 2-in-1 device. For other devices, the query result is empty.
 
-示例：2502EM400567
+ohos.permission.ACCESS_DISK_PHY_INFO
+
+Example: 2502EM400567
 
 **Since:** 15
 
@@ -306,9 +308,9 @@ ohos.permission.ACCESS_DISK_PHY_INFO
 const displayVersion: string
 ```
 
-产品版本。
+Product version.
 
-示例：&lt;!--RP8--&gt;XXX X.X.X.X&lt;!--RP8End--&gt;
+Example: &lt;!--RP8--&gt;XXX X.X.X.X&lt;!--RP8End--&gt;
 
 **Since:** 6
 
@@ -324,7 +326,7 @@ const displayVersion: string
 const distributionOSApiName: string
 ```
 
-发行版系统api版本名称&lt;!--Del--&gt;，由发行方定义&lt;!--DelEnd--&gt;。
+Distribution OS API name.&lt;!--Del--&gt; It is defined by the issuer.&lt;!--DelEnd--&gt;
 
 **Since:** 13
 
@@ -340,9 +342,9 @@ const distributionOSApiName: string
 const distributionOSApiVersion: number
 ```
 
-发行版系统api版本&lt;!--Del--&gt;，由发行方定义&lt;!--DelEnd--&gt;。
+Distribution OS API version.&lt;!--Del--&gt; It is defined by the issuer.&lt;!--DelEnd--&gt;
 
-示例：50001
+Example: 50001
 
 **Since:** 10
 
@@ -358,9 +360,9 @@ const distributionOSApiVersion: number
 const distributionOSName: string
 ```
 
-发行版系统名称&lt;!--Del--&gt;，由发行方定义&lt;!--DelEnd--&gt;。
+Distribution OS name.&lt;!--Del--&gt; It is defined by the issuer.&lt;!--DelEnd--&gt;
 
-示例：OpenHarmony
+Example: OpenHarmony
 
 **Since:** 10
 
@@ -376,9 +378,9 @@ const distributionOSName: string
 const distributionOSReleaseType: string
 ```
 
-发行版系统类型&lt;!--Del--&gt;，由发行方定义&lt;!--DelEnd--&gt;。
+Distribution OS release type.&lt;!--Del--&gt; It is defined by the issuer.&lt;!--DelEnd--&gt;
 
-示例：Release
+Example: Release
 
 **Since:** 10
 
@@ -394,9 +396,9 @@ const distributionOSReleaseType: string
 const distributionOSVersion: string
 ```
 
-发行版系统版本号&lt;!--Del--&gt;，由发行方定义&lt;!--DelEnd--&gt;。&lt;!--RP11--&gt;&lt;!--RP11End--&gt;
+Distribution OS version.&lt;!--Del--&gt; It is defined by the issuer.&lt;!--DelEnd--&gt;&lt;!--RP11--&gt;&lt;!--RP11End--&gt;
 
-示例：5.0.0
+Example: 5.0.0
 
 **Since:** 10
 
@@ -412,9 +414,10 @@ const distributionOSVersion: string
 const featureVersion: number
 ```
 
-Feature版本号，标识规划的新特性版本，值为osFullName中的第三位数值，建议直接使用deviceInfo.featureVersion获取，可提升效率，不建议开发者自主解析osFullName获取。
+Feature version number. The value is the third digit in **osFullName**. You are advised to use   
+**deviceInfo.featureVersion** instead of parsing **osFullName** to obtain the value, facilitating efficiency improvement.
 
-示例：0
+Example: 0
 
 **Since:** 6
 
@@ -430,9 +433,9 @@ Feature版本号，标识规划的新特性版本，值为osFullName中的第三
 const firstApiVersion: number
 ```
 
-首个版本系统软件API版本。
+First API version.
 
-示例：3
+Example: 3
 
 **Since:** 6
 
@@ -448,9 +451,9 @@ const firstApiVersion: number
 const hardwareModel: string
 ```
 
-硬件版本号。
+Hardware model.
 
-示例：&lt;!--RP6--&gt;TASA00CVN1&lt;!--RP6End--&gt;
+Example: &lt;!--RP6--&gt;TASA00CVN1&lt;!--RP6End--&gt;
 
 **Since:** 6
 
@@ -466,13 +469,13 @@ const hardwareModel: string
 const hardwareProfile: string
 ```
 
-硬件Profile。
+Hardware profile.
 
-**说明：**
+**NOTE：**
 
-从API version 6 开始支持，从API version 9 开始废弃，建议使用[系统能力SystemCapability](../../../reference/syscap.md)替代。
+This API is supported since API version 6 and deprecated since API version 9.
 
-示例：default
+Example: default
 
 **Since:** 6
 
@@ -490,9 +493,9 @@ const hardwareProfile: string
 const incrementalVersion: string
 ```
 
-差异版本号，是编译时生成的ohos的版本号。
+Incremental version.
 
-示例：default
+Example: default
 
 **Since:** 6
 
@@ -508,9 +511,9 @@ const incrementalVersion: string
 const majorVersion: number
 ```
 
-Major版本号，随主版本更新增加，值为osFullName中的第一位数值，建议直接使用deviceInfo.majorVersion获取，可提升效率，不建议开发者自主解析osFullName获取。
+Major version number, which increments with the main version. The value is the first digit in **osFullName**. You are advised to use **deviceInfo.majorVersion** instead of parsing **osFullName** to obtain the value, facilitating efficiency improvement.
 
-示例：5
+Example: 5
 
 **Since:** 6
 
@@ -526,7 +529,9 @@ Major版本号，随主版本更新增加，值为osFullName中的第一位数�
 const manufacture: string
 ```
 
-设备厂家名称。
+Device manufacturer.
+
+Example: HUAWEI
 
 **Since:** 6
 
@@ -542,9 +547,9 @@ const manufacture: string
 const marketName: string
 ```
 
-外部产品系列。
+Marketing name.
 
-示例：&lt;!--RP2--&gt;Mate XX&lt;!--RP2End--&gt;
+Example: &lt;!--RP2--&gt;Mate XX&lt;!--RP2End--&gt;
 
 **Since:** 6
 
@@ -560,11 +565,9 @@ const marketName: string
 const osFullName: string
 ```
 
-系统版本，版本格式&lt;!--RP12--&gt;OpenHarmony-x.x.x.x,x为数值。&lt;!--RP12End--&gt;
+System version. The version number is in the format of **OpenHarmony-x.x.x.x**, where **x** is a digit.
 
-示例：&lt;!--RP10--&gt;OpenHarmony-x.x.x.x，其中x表示数字占位符。&lt;!--RP10End--&gt;
-
-如需获取版本号各段数值，建议直接使用majorVersion、seniorVersion、featureVersion、buildVersion字段，可提升效率，不建议解析osFullName获取。
+Example: &lt;!--RP10--&gt;Openharmony-5.0.0.1&lt;!--RP10End--&gt;
 
 **Since:** 6
 
@@ -582,15 +585,15 @@ const osFullName: string
 const osReleaseType: string
 ```
 
-系统的发布类型，取值为：
+OS release type. The options are as follows:
 
-- Canary：面向特定开发者发布的早期预览版本，不承诺API稳定性。
+- **Canary**: Preliminary release open only to specific developers. This release does not promise API stability  
+and may require tolerance of instability.  
+- **Beta**: Release open to all developers. This release does not promise API stability and may require tolerance   
+of instability.  
+- **Release**: Official release open to all developers. This release promises that all APIs are stable.
 
-- Beta：面向开发者公开发布的Beta版本，不承诺API稳定性。
-
-- Release：面向开发者公开发布的正式版本，承诺API稳定性。
-
-示例：&lt;!--RP9--&gt;Canary/Beta/Release&lt;!--RP9End--&gt;
+Example: &lt;!--RP9--&gt;Canary/Beta/Release&lt;!--RP9End--&gt;
 
 **Since:** 6
 
@@ -606,7 +609,7 @@ const osReleaseType: string
 const performanceClass: PerformanceClassLevel
 ```
 
-描述设备能力等级，基于CPU、内存、存储读写性能和屏幕分辨率等因素综合评估。
+Device capability level.
 
 **Since:** 19
 
@@ -622,9 +625,9 @@ const performanceClass: PerformanceClassLevel
 const productModel: string
 ```
 
-认证型号。
+Product model.
 
-示例：&lt;!--RP4--&gt;TAS-AL00&lt;!--RP4End--&gt;
+Example: &lt;!--RP4--&gt;TAS-AL00&lt;!--RP4End--&gt;
 
 **Since:** 6
 
@@ -642,9 +645,9 @@ const productModel: string
 const productModelAlias: string
 ```
 
-认证型号别名。
+Product model alias.
 
-示例：TAS-AL00
+Example: TAS-AL00
 
 **Since:** 14
 
@@ -662,9 +665,9 @@ const productModelAlias: string
 const productSeries: string
 ```
 
-产品系列。
+Product series.
 
-示例：&lt;!--RP3--&gt;TAS&lt;!--RP3End--&gt;
+Example: &lt;!--RP3--&gt;TAS&lt;!--RP3End--&gt;
 
 **Since:** 6
 
@@ -680,9 +683,9 @@ const productSeries: string
 const sdkApiVersion: number
 ```
 
-系统软件API版本。
+SDK API version.
 
-示例：12
+Example: 12
 
 **Since:** 6
 
@@ -700,11 +703,7 @@ const sdkApiVersion: number
 const sdkMinorApiVersion: number
 ```
 
-系统软件Minor API版本。从API 26 版本开始，系统API版本格式：sdkApiVersion.sdkMinorApiVersion.sdkPatchApiVersion。
-
-26.0.0
-
-示例：0
+Obtains the SDK Minor API version.
 
 **Since:** 26.0.0
 
@@ -724,11 +723,7 @@ const sdkMinorApiVersion: number
 const sdkPatchApiVersion: number
 ```
 
-系统软件Patch API版本。从API 26 版本开始，系统API版本格式：sdkApiVersion.sdkMinorApiVersion.sdkPatchApiVersion。
-
-26.0.0
-
-示例：0
+Obtains the SDK Patch API version.
 
 **Since:** 26.0.0
 
@@ -748,9 +743,9 @@ const sdkPatchApiVersion: number
 const securityPatchTag: string
 ```
 
-安全补丁级别。
+Security patch tag.
 
-示例：&lt;!--RP7--&gt;2021/01/01&lt;!--RP7End--&gt;
+Example: &lt;!--RP7--&gt;2021/01/01&lt;!--RP7End--&gt;
 
 **Since:** 6
 
@@ -766,9 +761,10 @@ const securityPatchTag: string
 const seniorVersion: number
 ```
 
-Senior版本号，随局部架构、重大特性增加，值为osFullName中的第二位数值，建议直接使用deviceInfo.seniorVersion获取，可提升效率，不建议开发者自主解析osFullName获取。
+Senior version number, which increments with architecture and feature updates. The value is the second digit in  
+**osFullName**. You are advised to use **deviceInfo.seniorVersion** instead of parsing **osFullName** to obtain the value, facilitating efficiency improvement.
 
-示例：0
+Example: 0
 
 **Since:** 6
 
@@ -784,13 +780,15 @@ Senior版本号，随局部架构、重大特性增加，值为osFullName中的�
 const serial: string
 ```
 
-设备序列号SN(Serial Number)。
+Device serial number (SN).
 
-**说明：**可作为设备唯一识别码。
+**NOTE：**
 
-ohos.permission.sec.ACCESS_UDID(该权限只允许系统应用及企业定制应用申请) 
+The device SN can be used as the unique identifier of a device.
 
-示例：序列号随设备差异
+**Required permission**: ohos.permission.sec.ACCESS_UDID (for system applications and enterprise applications only)
+
+Example: The SN varies with the device.
 
 **Since:** 6
 
@@ -808,9 +806,9 @@ ohos.permission.sec.ACCESS_UDID(该权限只允许系统应用及企业定制应
 const softwareModel: string
 ```
 
-内部软件子型号。
+Software model.
 
-示例：&lt;!--RP5--&gt;TAS-AL00&lt;!--RP5End--&gt;
+Example: &lt;!--RP5--&gt;TAS-AL00&lt;!--RP5End--&gt;
 
 **Since:** 6
 
@@ -826,13 +824,15 @@ const softwareModel: string
 const udid: string
 ```
 
-设备UDID。
+Device UDID.
 
-**说明：**数据长度为65字节。可作为设备唯一识别码。
+**NOTE：**
 
-ohos.permission.sec.ACCESS_UDID(该权限只允许系统应用及企业类应用申请)
+The data length is 65 bytes. The UDID can be used as the unique identifier of a device.
 
-示例：9D6AABD147XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXE5536412
+**Required permission**: ohos.permission.sec.ACCESS_UDID (for system applications and enterprise applications only)
+
+Example: 9D6AABD147XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXE5536412
 
 **Since:** 7
 
@@ -850,7 +850,10 @@ ohos.permission.sec.ACCESS_UDID(该权限只允许系统应用及企业类应用
 const versionId: string
 ```
 
-版本ID。由deviceType、manufacture、brand、productSeries、osFullName、productModel、softwareModel、sdkApiVersion、incrementalVersion、buildType拼接组成。如果需要获取其中的某个字段值，建议直接使用对应的字段（如deviceType、manufacture等），可提升效率，不建议解析versionId获取。
+Version ID. It consists of the following fields: **deviceType**, **manufacture**, **brand**, **productSeries**,   
+**osFullName**, **productModel**, **softwareModel**, **sdkApiVersion**, **incrementalVersion**, and **buildType**.
+
+Example: wearable/HUAWEI/HUAWEI/TAS/OpenHarmony-5.0.0.1/TAS-AL00/TAS-AL00/12/default/release:nolog
 
 **Since:** 6
 

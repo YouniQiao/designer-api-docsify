@@ -1,6 +1,6 @@
 # ControlCenterEffectType
 
-枚举，相机控制器支持的效果类型。
+Enumerates the effect types supported by the camera controller.
 
 **Since:** 20
 
@@ -16,7 +16,7 @@
 BEAUTY = 0
 ```
 
-美颜。
+Beauty effect.
 
 **Since:** 20
 
@@ -34,7 +34,7 @@ BEAUTY = 0
 PORTRAIT = 1
 ```
 
-人像虚化。
+Portrait blur effect.
 
 **Since:** 20
 
@@ -52,7 +52,7 @@ PORTRAIT = 1
 AUTO_FRAMING = 2
 ```
 
-自动对焦。
+Auto focus.
 
 **Since:** 24
 
@@ -70,7 +70,7 @@ AUTO_FRAMING = 2
 COLOR_EFFECT = 3
 ```
 
-色彩效果。
+Color effect
 
 **Since:** 26.0.0
 

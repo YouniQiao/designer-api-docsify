@@ -4,7 +4,7 @@
 declare type DataLoadParams = import('../api/@ohos.data.unifiedDataChannel').default.DataLoadParams
 ```
 
-落入操作时使用的数据加载参数。
+Defines the data loading parameters used during a drop operation.
 
 **Since:** 20
 

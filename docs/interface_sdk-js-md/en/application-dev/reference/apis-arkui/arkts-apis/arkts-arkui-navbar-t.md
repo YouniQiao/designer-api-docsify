@@ -4,7 +4,7 @@
 export type NavBar = 'navBar'
 ```
 
-Navigation首页名字。
+Navigation home name
 
 **Since:** 23
 

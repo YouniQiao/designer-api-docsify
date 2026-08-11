@@ -1,6 +1,6 @@
 # Binding
 
-只读数据绑定的泛型类可以绑定任意类型的数据（需要与@builder参数列表同时使用）。当调用函数时，需要使用makeBinding来进行值的传递。
+Represents a read-only data binding.Use with @Builder argument list for primitive types. Use makeBinding to pass values when calling the function.
 
 **Since:** 23
 
@@ -16,7 +16,7 @@
 get value(): T
 ```
 
-提供get访问器以获取当前绑定值。
+Get function that can acquire the value.
 
 **Type:** T
 
@@ -27,4 +27,6 @@ get value(): T
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-Binding-get value(): T--><!--Device-Binding-get value(): T-End-->
+
+**System capability:** SystemCapability.ArkUI.ArkUI.Full
 

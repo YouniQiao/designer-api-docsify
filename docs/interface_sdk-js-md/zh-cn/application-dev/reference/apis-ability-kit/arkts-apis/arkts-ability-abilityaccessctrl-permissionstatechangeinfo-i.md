@@ -10,12 +10,6 @@
 
 **系统能力：** SystemCapability.Security.AccessToken
 
-## 导入模块
-
-```TypeScript
-import { Context, Permissions, PermissionRequestResult } from 'kits/@kit.AbilityKit';
-```
-
 ## change
 
 ```TypeScript
@@ -44,7 +38,7 @@ permissionName: Permissions
 
 当前授权状态发生变化的权限名，合法的权限名取值可在[应用权限列表](../../../security/AccessToken/app-permissions.md)中查询。
 
-**类型：** [Permissions](arkts-ability-permissions-t.md)
+**类型：** Permissions
 
 **起始版本：** 18
 

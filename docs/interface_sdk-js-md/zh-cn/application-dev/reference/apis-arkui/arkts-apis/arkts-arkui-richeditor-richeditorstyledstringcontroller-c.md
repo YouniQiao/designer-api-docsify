@@ -34,7 +34,7 @@ getSelection(): RichEditorRange | undefined
 
 | 类型 | 说明 |
 | --- | --- |
-| [RichEditorRange](../arkts-components/arkts-arkui-richeditorrange-i.md) | 选中区域范围。&lt;br/&gt;返回undefined时表示controller未与组件绑定。 |
+| [RichEditorRange](arkts-arkui-richeditor-richeditorrange-i.md) | 选中区域范围。&lt;br/&gt;返回undefined时表示controller未与组件绑定。 |
 
 ## getStyledString
 

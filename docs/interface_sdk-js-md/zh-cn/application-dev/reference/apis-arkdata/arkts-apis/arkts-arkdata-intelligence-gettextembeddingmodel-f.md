@@ -1,11 +1,5 @@
 # getTextEmbeddingModel
 
-## 导入模块
-
-```TypeScript
-import { intelligence } from 'kits/@kit.ArkData';
-```
-
 ## getTextEmbeddingModel
 
 ```TypeScript
@@ -38,11 +32,13 @@ function getTextEmbeddingModel(config: ModelConfig): Promise<TextEmbedding>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types. |
-| 801 | Capability not supported. |
-| 31300000 | Inner error. |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types. |
+| [801](../../errorcode-universal.md#801-该设备不支持此api) | Capability not supported. |
+| [31300000](../errorcode-intelligence.md#31300000-服务内部异常) | Inner error. |
 
 ## 示例
+
+ArkTS-Dyn示例：
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -61,6 +57,27 @@ intelligence.getTextEmbeddingModel(textConfig)
     textEmbedding = data;
   })
   .catch((err: BusinessError) => {
+    console.error(`Failed to get TextModel. Code: ${err.code}, message: ${err.message}`);
+  })
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+let textConfig: intelligence.ModelConfig = {
+  version: intelligence.ModelVersion.BASIC_MODEL,
+  isNpuAvailable: false,
+  cachePath: "/data"
+}
+let textEmbedding: intelligence.TextEmbedding | null = null;
+
+intelligence.getTextEmbeddingModel(textConfig)
+  .then((data: intelligence.TextEmbedding) => {
+    console.info("Succeeded in getting TextModel");
+    // 保存文本嵌入模型对象供后续使用
+    textEmbedding = data;
+  })
+  .catch((err) => {
     console.error(`Failed to get TextModel. Code: ${err.code}, message: ${err.message}`);
   })
 ```

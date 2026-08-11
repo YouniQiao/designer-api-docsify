@@ -1,6 +1,6 @@
 # DataReloadOperation
 
-重载所有数据操作。当onDatasetChange含有DataOperationType.RELOAD操作时，其余操作全部失效，框架会自己调用keyGenerator进行键值比对。
+Defines reload operation.
 
 **Since:** 23
 
@@ -16,7 +16,7 @@
 type: DataOperationType
 ```
 
-数据全部重载类型。
+How to operate reload data.
 
 **Type:** [DataOperationType](arkts-arkui-lazyforeach-dataoperationtype-e.md)
 

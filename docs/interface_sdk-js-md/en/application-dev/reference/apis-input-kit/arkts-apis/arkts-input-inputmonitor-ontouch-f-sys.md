@@ -12,7 +12,7 @@ import { inputMonitor } from 'kits/@kit.InputKit';
 function onTouch(receiver: TouchEventReceiver): void
 ```
 
-监听全局触屏事件。
+Listens for touch input events.
 
 **Since:** 23
 
@@ -30,13 +30,13 @@ function onTouch(receiver: TouchEventReceiver): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| receiver | [TouchEventReceiver](arkts-input-inputmonitor-toucheventreceiver-t-sys.md) | Yes | 回调函数，异步上报触摸屏输入事件。 |
+| receiver | [TouchEventReceiver](arkts-input-inputmonitor-toucheventreceiver-t-sys.md) | Yes | Callback used to receive the reported data. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
-| 201 | Permission denied. |
-| 202 | Permission denied, non-system app called system api. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission denied, non-system app called system api. |
 

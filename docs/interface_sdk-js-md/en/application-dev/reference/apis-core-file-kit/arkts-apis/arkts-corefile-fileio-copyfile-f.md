@@ -6,7 +6,7 @@
 declare function copyFile(src: string | number, dest: string | number, mode?: number): Promise<void>
 ```
 
-复制文件，使用Promise异步回调。
+Copies a file. This API uses a promise to return the result.
 
 **Since:** 6
 
@@ -24,15 +24,15 @@ declare function copyFile(src: string | number, dest: string | number, mode?: nu
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| src | string \| number | Yes | 待复制文件的路径或待复制文件的描述符。 |
-| dest | string \| number | Yes | 目标文件路径或目标文件描述符。 |
-| mode | number | No | mode提供覆盖文件的选项，当前仅支持0，且默认为0。&lt;br/&gt;0：完全覆盖目标文件，未覆盖部分将被裁切掉。 |
+| src | string \| number | Yes | Path or file descriptor of the source file to copy. |
+| dest | string \| number | Yes | Path or file descriptor of the destination file. |
+| mode | number | No | Option for overwriting the destination file. The default value is **0**, which is the only value supported.&lt;br&gt;**0**: Overwrite the file with the same name completely and truncate the part that is not overwritten. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise对象。无返回值。 |
+| Promise&lt;void&gt; | Promise that returns no value. |
 
 
 ## copyFile
@@ -41,7 +41,7 @@ declare function copyFile(src: string | number, dest: string | number, mode?: nu
 declare function copyFile(src: string | number, dest: string | number, callback: AsyncCallback<void>): void
 ```
 
-copyFile.
+Copies a file. This API uses an asynchronous callback to return the result.
 
 **Since:** 6
 
@@ -59,9 +59,9 @@ copyFile.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| src | string \| number | Yes | 待复制文件的路径或待复制文件的描述符。 |
-| dest | string \| number | Yes | 目标文件路径或目标文件描述符。 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | 异步复制文件之后的回调。 |
+| src | string \| number | Yes | Path or file descriptor of the source file to copy. |
+| dest | string \| number | Yes | Path or file descriptor of the destination file. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback invoked when the file is copied asynchronously. |
 
 
 ## copyFile
@@ -75,7 +75,7 @@ declare function copyFile(
 ): void
 ```
 
-复制文件，使用callback异步回调。
+Copies a file. This API uses an asynchronous callback to return the result.
 
 **Since:** 6
 
@@ -93,8 +93,8 @@ declare function copyFile(
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| src | string \| number | Yes | 待复制文件的路径或待复制文件的描述符。 |
-| dest | string \| number | Yes | 目标文件路径或目标文件描述符。 |
-| mode | number | Yes | mode提供覆盖文件的选项，当前仅支持0，且默认为0。&lt;br/&gt;0：完全覆盖目标文件，未覆盖部分将被裁切掉。 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | 异步复制文件之后的回调。 |
+| src | string \| number | Yes | Path or file descriptor of the source file to copy. |
+| dest | string \| number | Yes | Path or file descriptor of the destination file. |
+| mode | number | Yes | Option for overwriting the destination file. The default value is **0**, which is the only value supported.&lt;br&gt;**0**: Overwrite the file with the same name completely and truncate the part that is not overwritten. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback invoked when the file is copied asynchronously. |
 

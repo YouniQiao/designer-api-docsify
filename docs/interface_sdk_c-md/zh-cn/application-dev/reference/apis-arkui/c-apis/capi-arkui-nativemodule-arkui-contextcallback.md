@@ -6,13 +6,13 @@ typedef struct ArkUI_ContextCallback {...} ArkUI_ContextCallback
 
 ## 概述
 
-Defines the event callback type.
+事件回调类型，用于定义回调函数及其用户自定义数据。使用该类型的接口触发回调时，会调用callback，并将userData作为参数传入。
 
 **起始版本：** 12
 
 **相关模块：** [ArkUI_NativeModule](capi-arkui-nativemodule.md)
 
-**所在头文件：** [native_type.h](capi-native-type-h.md)
+**所在头文件：** [common_type.h](capi-common-type-h.md)
 
 ## 汇总
 
@@ -20,14 +20,14 @@ Defines the event callback type.
 
 | 名称 | 描述 |
 | -- | -- |
-| void* userData | Custom type, data of a user-defined type that is passed as a parameter during callbacks. |
+| void* userData |  |
 
 
 ### 成员函数
 
 | 名称 | 描述 |
 | -- | -- |
-| [void (\*callback)(void* userData)](#callback) | Event callback. |
+| [void (\*callback)(void* userData)](#callback) |  |
 
 ## 成员函数说明
 
@@ -38,7 +38,5 @@ void (*callback)(void* userData)
 ```
 
 **描述**
-
-Event callback.
 
 

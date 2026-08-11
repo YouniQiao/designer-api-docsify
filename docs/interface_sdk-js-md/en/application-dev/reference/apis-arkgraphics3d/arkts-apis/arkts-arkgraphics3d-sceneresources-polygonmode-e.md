@@ -1,6 +1,6 @@
 # PolygonMode
 
-多边形模式枚举.
+The enum of polygon mode.
 
 **Since:** 23
 
@@ -16,7 +16,7 @@
 FILL = 0
 ```
 
-渲染整个多边形
+Render the whole polygon
 
 **Since:** 23
 
@@ -32,7 +32,7 @@ FILL = 0
 LINE = 1
 ```
 
-仅渲染多边形的边（线框）
+Render only edges(wireframe) of the polygon
 
 **Since:** 23
 
@@ -48,7 +48,7 @@ LINE = 1
 POINT = 2
 ```
 
-仅渲染多边形的顶点
+Render only vertices of the polygon
 
 **Since:** 23
 

@@ -4,7 +4,7 @@
 type InsertFn = (uri: string, valueBucket: ValuesBucket, callback: AsyncCallback<int>) => void
 ```
 
-插入操作的属性类型。
+Callback function called when inserting a data record into the database.
 
 **Since:** 23
 

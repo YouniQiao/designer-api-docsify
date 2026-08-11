@@ -20,7 +20,7 @@ areaChangePlaceholder?: Record<string, ComponentContent>
 
 设置尺寸变化占位符，在UIExtensionComponent尺寸发生变化并且UIExtensionAbility内部渲染未完成时显示。key值仅支持"FOLD_TO_EXPAND"（折叠展开尺寸变化）、"UNDEFINED"（默认尺寸变化），传入其他key值时不生效。不设置时默认不显示尺寸变化占位内容。
 
-**类型：** [Record](../../apis-default/arkts-apis/arkts-record-t.md)&lt;string, ComponentContent&gt;
+**类型：** Record&lt;string, ComponentContent&gt;
 
 **起始版本：** 14
 

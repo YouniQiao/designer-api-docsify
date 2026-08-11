@@ -1,6 +1,6 @@
 # BarGridColumnOptions
 
-TabBar栅格化方式设置的对象，包括栅格模式下的column边距和间隔，以及小、中、大屏下，页签占用的columns数量。
+Implements a **BarGridColumnOptions** object for setting the visible area of the tab bar in grid mode, including the column margin and gutter, as well as the number of columns occupied by tabs under small, medium, and large screen sizes.
 
 **Since:** 10
 
@@ -16,11 +16,11 @@ TabBar栅格化方式设置的对象，包括栅格模式下的column边距和�
 gutter?: Dimension
 ```
 
-栅格模式下的column间隔。不支持百分比设置，取值范围：[0, +∞)。
+Column gutter (that is, gap between columns) in grid mode. It cannot be set in percentage.
 
-默认值：24.0
+Default value: **24.0**
 
-单位：vp
+Unit: vp
 
 **Type:** [Dimension](../arkts-apis/arkts-arkui-dimension-t.md)
 
@@ -42,9 +42,9 @@ gutter?: Dimension
 lg?: number
 ```
 
-大屏下，页签占用的columns数量，非负偶数或-1（-1表示页签占用TabBar全部宽度）。大屏为大于等于840vp但小于1024vp。
+Number of columns occupied by a tab on a screen whose width is greater than or equal to 840 vp but less than 1024vp.
 
-默认值为-1，代表页签占用TabBar全部宽度。
+The value must be a non-negative even number. The default value is **-1**, indicating that the tab takes up the entire width of the tab bar.
 
 **Type:** number
 
@@ -66,11 +66,11 @@ lg?: number
 margin?: Dimension
 ```
 
-栅格模式下的column边距。不支持百分比设置，取值范围：[0, +∞)。
+Column margin in grid mode. It cannot be set in percentage.
 
-默认值：24.0
+Default value: **24.0**
 
-单位：vp
+Unit: vp
 
 **Type:** [Dimension](../arkts-apis/arkts-arkui-dimension-t.md)
 
@@ -92,9 +92,9 @@ margin?: Dimension
 md?: number
 ```
 
-中屏下，页签占用的columns数量，非负偶数或-1（-1表示页签占用TabBar全部宽度）。中屏为大于等于600vp但小于800vp。
+Number of columns occupied by a tab on a screen whose width is greater than or equal to 600 vp but less than 800vp.
 
-默认值为-1，代表页签占用TabBar全部宽度。
+The value must be a non-negative even number. The default value is **-1**, indicating that the tab takes up the entire width of the tab bar.
 
 **Type:** number
 
@@ -116,9 +116,9 @@ md?: number
 sm?: number
 ```
 
-小屏下，页签占用的columns数量。非负偶数或-1（-1表示页签占用TabBar全部宽度）。小屏为大于等于320vp但小于600vp。
+Number of columns occupied by a tab on a screen whose width is greater than or equal to 320 vp but less than 600vp.
 
-默认值为-1，代表页签占用TabBar全部宽度。
+The value must be a non-negative even number. The default value is **-1**, indicating that the tab takes up the entire width of the tab bar.
 
 **Type:** number
 

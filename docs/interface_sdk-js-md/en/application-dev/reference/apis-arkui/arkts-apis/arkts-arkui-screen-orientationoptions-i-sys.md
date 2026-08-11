@@ -1,6 +1,6 @@
 # OrientationOptions (System API)
 
-设置旋转行为的参数
+The parameter of setting orientation
 
 **Since:** 26.0.0
 
@@ -24,7 +24,7 @@ import { screen } from 'kits/@kit.ArkUI';
 ignoreRotationLock?: boolean
 ```
 
-是否忽略旋转锁定
+Whether to ignore rotation lock.The value true means allowing the screen to rotate even if some system windows lock screen rotation, while false means preventing the screen from rotating when any system windows lock it.
 
 **Type:** boolean
 
@@ -48,7 +48,7 @@ ignoreRotationLock?: boolean
 needAnimation?: boolean
 ```
 
-是否需要动效
+Whether to need animation.The value true means rotating the screen with animation, while false means rotating the screen without animation.
 
 **Type:** boolean
 

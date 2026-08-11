@@ -12,9 +12,9 @@ import { appMemoryOptimizer } from 'kits/@kit.AbilityKit';
 function evictModuleFilePages(moduleNames: Array<string>): Promise<void>
 ```
 
-向系统发出释放指定模块的文件页缓存请求，系统会根据当前内存状况决定是否真正执行释放，不保证一定释放成功。系统会读取对应模块中的memory_optimizer.json配置文件，获取evictFilePages数组，然后对数组中的文件执行文件页缓存释放操作。
+Sends a request to the system to release file page cache of specified modules. The system determines whether to actually perform the release based on the current memory status, and success is not guaranteed.The system reads the memory_optimizer.json configuration file of the corresponding module, obtains the evictFilePages array, and performs file page cache eviction on the files in the array.
 
-配置文件路径：{模块目录}/src/main/resources/rawfile/memory_optimizer.json配置文件中evictFilePages数组里的文件名必须以 .so、.hap 或 .hsp 结尾。
+Configuration file path: {Module directory}/src/main/resources/rawfile/memory_optimizer.json File names in the evictFilePages array of the configuration file must end with .so, .hap, or .hsp.
 
 **Since:** 26.0.0
 
@@ -30,18 +30,18 @@ function evictModuleFilePages(moduleNames: Array<string>): Promise<void>
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| moduleNames | Array&lt;string&gt; | Yes | 需要释放文件页缓存的模块名数组。 |
+| moduleNames | Array&lt;string&gt; | Yes | Array of module names for which file page cache needs to be released. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise对象，无返回结果。 |
+| Promise&lt;void&gt; | Promise that returns no value. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 16000164 | 解析配置文件失败。 |
-| 16000163 | 文件类型错误。配置文件中evictFilePages数组中的文件名未以.so、.hap或.hsp 结尾。 |
+| 16000164 | Failed to parse configuration file. |
+| 16000163 | File type error. File names in the evictFilePages array of the configuration file do not end with .so, .hap, or .hsp. |
 

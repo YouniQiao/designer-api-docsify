@@ -1,11 +1,5 @@
 # createRdbPredicates
 
-## 导入模块
-
-```TypeScript
-import { dataAbility } from 'kits/@kit.ArkData';
-```
-
 ## createRdbPredicates
 
 ```TypeScript

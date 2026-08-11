@@ -1,5 +1,7 @@
 # @ohos.sensor
 
+The **Sensor** module provides APIs for obtaining the sensor list and subscribing to sensor data. It also provides some common sensor algorithms.
+
 **Since:** 8
 
 **ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
@@ -20,111 +22,111 @@ import { sensor } from 'kits/@kit.SensorServiceKit';
 
 | Name | Description |
 | --- | --- |
-| [createQuaternion](arkts-sensorservice-sensor-createquaternion-f.md#createquaternion) | 将旋转矢量转换为四元数，使用Callback异步方式返回结果。 |
-| [createQuaternion](arkts-sensorservice-sensor-createquaternion-f.md#createquaternion-1) | 将旋转矢量转换为四元数，使用Promise异步方式返回结果。 |
-| [createRotationMatrix](arkts-sensorservice-sensor-createrotationmatrix-f.md#createrotationmatrix) | 将旋转矢量转换为旋转矩阵，使用Callback异步方式返回结果。 |
-| [createRotationMatrix](arkts-sensorservice-sensor-createrotationmatrix-f.md#createrotationmatrix-1) | 将旋转矢量转换为旋转矩阵，使用Promise异步方式返回结果。 |
-| [createRotationMatrix](arkts-sensorservice-sensor-createrotationmatrix-f.md#createrotationmatrix-2) | 根据重力矢量和地磁矢量计算旋转矩阵，使用Callback异步方式返回结果。 |
-| [createRotationMatrix](arkts-sensorservice-sensor-createrotationmatrix-f.md#createrotationmatrix-3) | 根据重力矢量和地磁矢量计算旋转矩阵，使用Promise异步方式返回结果。 |
-| [getAltitude](arkts-sensorservice-sensor-getaltitude-f.md#getaltitude) | 根据气压值获取设备所在的海拔高度，使用Callback异步方式返回结果。 |
-| [getAltitude](arkts-sensorservice-sensor-getaltitude-f.md#getaltitude-1) | 根据气压值获取设备所在的海拔高度，使用Promise异步方式返回结果。 |
+| [createQuaternion](arkts-sensorservice-sensor-createquaternion-f.md#createquaternion) | Converts a rotation vector into a quaternion. This API uses an asynchronous callback to return the result. |
+| [createQuaternion](arkts-sensorservice-sensor-createquaternion-f.md#createquaternion-1) | Converts a rotation vector into a quaternion. This API uses a promise to return the result. |
+| [createRotationMatrix](arkts-sensorservice-sensor-createrotationmatrix-f.md#createrotationmatrix) | Converts a rotation vector into a rotation matrix. This API uses an asynchronous callback to return the result. |
+| [createRotationMatrix](arkts-sensorservice-sensor-createrotationmatrix-f.md#createrotationmatrix-1) | Converts a rotation vector into a rotation matrix. This API uses a promise to return the result. |
+| [createRotationMatrix](arkts-sensorservice-sensor-createrotationmatrix-f.md#createrotationmatrix-2) | Obtains the rotation matrix based on a gravity vector and geomagnetic vector. This API uses an asynchronous callback to return the result. |
+| [createRotationMatrix](arkts-sensorservice-sensor-createrotationmatrix-f.md#createrotationmatrix-3) | Obtains the rotation matrix based on a gravity vector and geomagnetic vector. This API uses a promise to return the result. |
+| [getAltitude](arkts-sensorservice-sensor-getaltitude-f.md#getaltitude) | Obtains the altitude at which the device is located based on the sea-level atmospheric pressure and the current atmospheric pressure. This API uses an asynchronous callback to return the result. |
+| [getAltitude](arkts-sensorservice-sensor-getaltitude-f.md#getaltitude-1) | Obtains the altitude at which the device is located based on the sea-level atmospheric pressure and the current atmospheric pressure. This API uses a promise to return the result. |
 | [getAngleModify](arkts-sensorservice-sensor-getanglemodify-f.md#getanglemodify) | Obtains the angle change between two rotation matrices. This API uses an asynchronous callback to return the result. |
 | [getAngleModify](arkts-sensorservice-sensor-getanglemodify-f.md#getanglemodify-1) | Obtains the angle change between two rotation matrices. This API uses a promise to return the result. |
-| [getAngleVariation](arkts-sensorservice-sensor-getanglevariation-f.md#getanglevariation) | 计算两个旋转矩阵之间的角度变化，使用Callback异步方式返回结果。 |
-| [getAngleVariation](arkts-sensorservice-sensor-getanglevariation-f.md#getanglevariation-1) | 得到两个旋转矩阵之间的角度变化，使用Promise异步方式返回结果。 |
-| [getDeviceAltitude](arkts-sensorservice-sensor-getdevicealtitude-f.md#getdevicealtitude) | 根据气压值获取海拔高度，使用Callback异步方式返回结果。 |
-| [getDeviceAltitude](arkts-sensorservice-sensor-getdevicealtitude-f.md#getdevicealtitude-1) | 根据气压值获取海拔高度，使用Promise异步方式返回结果。 |
-| [getDirection](arkts-sensorservice-sensor-getdirection-f.md#getdirection) | 根据旋转矩阵计算设备的方向，使用Callback异步方式返回结果。 |
-| [getDirection](arkts-sensorservice-sensor-getdirection-f.md#getdirection-1) | 根据旋转矩阵计算设备的方向，使用Promise异步方式返回结果。 |
-| [getGeomagneticDip](arkts-sensorservice-sensor-getgeomagneticdip-f.md#getgeomagneticdip) | 根据倾斜矩阵计算地磁倾斜角，使用Callback异步方式返回结果。 |
-| [getGeomagneticDip](arkts-sensorservice-sensor-getgeomagneticdip-f.md#getgeomagneticdip-1) | 根据倾斜矩阵计算地磁倾斜角，使用Promise异步方式返回结果。 |
-| [getGeomagneticField](arkts-sensorservice-sensor-getgeomagneticfield-f.md#getgeomagneticfield) | 获取地球上特定位置的地磁场，使用callback异步方式返回结果。 |
-| [getGeomagneticField](arkts-sensorservice-sensor-getgeomagneticfield-f.md#getgeomagneticfield-1) | 获取地球上特定位置的地磁场，使用Promise异步方式返回结果。 |
-| [getGeomagneticInfo](arkts-sensorservice-sensor-getgeomagneticinfo-f.md#getgeomagneticinfo) | 获取某时刻地球上特定位置的地磁场信息，使用Callback异步方式返回结果。 |
-| [getGeomagneticInfo](arkts-sensorservice-sensor-getgeomagneticinfo-f.md#getgeomagneticinfo-1) | 获取某时刻地球上特定位置的地磁场信息，使用Promise异步方式返回结果。 |
-| [getInclination](arkts-sensorservice-sensor-getinclination-f.md#getinclination) | 根据倾斜矩阵计算地磁倾角，使用Callback异步方式返回结果。 |
-| [getInclination](arkts-sensorservice-sensor-getinclination-f.md#getinclination-1) | 根据倾斜矩阵计算地磁倾角，使用Promise异步方式返回结果。 |
-| [getOrientation](arkts-sensorservice-sensor-getorientation-f.md#getorientation) | 根据旋转矩阵计算设备方向，使用Callback异步方式返回结果。 |
-| [getOrientation](arkts-sensorservice-sensor-getorientation-f.md#getorientation-1) | 根据旋转矩阵计算设备的方向，使用Promise异步方式返回结果。 |
-| [getQuaternion](arkts-sensorservice-sensor-getquaternion-f.md#getquaternion) | 根据旋转向量计算归一化四元数，使用Callback异步方式返回结果。 |
-| [getQuaternion](arkts-sensorservice-sensor-getquaternion-f.md#getquaternion-1) | 根据旋转向量计算归一化四元数，使用Promise异步方式返回结果。 |
-| [getRotationMatrix](arkts-sensorservice-sensor-getrotationmatrix-f.md#getrotationmatrix) | 根据旋转矢量获取旋转矩阵，使用Callback异步方式返回结果。 |
-| [getRotationMatrix](arkts-sensorservice-sensor-getrotationmatrix-f.md#getrotationmatrix-1) | 根据旋转矢量获取旋转矩阵，使用Promise异步方式返回结果。 |
-| [getRotationMatrix](arkts-sensorservice-sensor-getrotationmatrix-f.md#getrotationmatrix-2) | 根据重力矢量和地磁矢量计算旋转矩阵，使用Callback异步方式返回结果。 |
-| [getRotationMatrix](arkts-sensorservice-sensor-getrotationmatrix-f.md#getrotationmatrix-3) | 根据重力矢量和地磁矢量计算旋转矩阵，使用Promise异步方式返回结果。 |
-| [getSensorList](arkts-sensorservice-sensor-getsensorlist-f.md#getsensorlist) | 获取设备上的所有传感器信息，使用Callback异步方式返回结果。 |
-| [getSensorList](arkts-sensorservice-sensor-getsensorlist-f.md#getsensorlist-1) | 获取设备上的所有传感器信息，使用Promise异步方式返回结果。 |
-| [getSensorListByDeviceSync](arkts-sensorservice-sensor-getsensorlistbydevicesync-f.md#getsensorlistbydevicesync) | 同步获取设备的所有传感器信息。 |
-| [getSensorListSync](arkts-sensorservice-sensor-getsensorlistsync-f.md#getsensorlistsync) | 获取设备上的所有传感器信息，使用同步方式返回结果。 |
-| [getSingleSensor](arkts-sensorservice-sensor-getsinglesensor-f.md#getsinglesensor) | 获取指定传感器类型的属性信息，使用Callback异步方式返回结果。 |
-| [getSingleSensor](arkts-sensorservice-sensor-getsinglesensor-f.md#getsinglesensor-1) | 获取指定类型的传感器信息，使用Promise异步方式返回结果。 |
-| [getSingleSensorByDeviceSync](arkts-sensorservice-sensor-getsinglesensorbydevicesync-f.md#getsinglesensorbydevicesync) | 同步获取指定设备和类型的传感器信息。如果存在外设且未指定设备ID，获取到的传感器将是所有符合指定传感器类型的本地和外设传感器。如果不存在外设，则仅获取本地的传感器。 |
-| [getSingleSensorSync](arkts-sensorservice-sensor-getsinglesensorsync-f.md#getsinglesensorsync) | 获取指定类型的传感器信息，使用同步方式返回结果。 |
-| [off](arkts-sensorservice-sensor-off-f.md#off-4) | 取消订阅加速度传感器数据。当不再需要接收加速度传感器数据时调用此接口取消订阅。off取消订阅必须与on订阅成对出现。 |
-| [off](arkts-sensorservice-sensor-off-f.md#off-5) | 取消订阅加速度传感器数据。当不再需要接收加速度传感器数据时调用此接口取消订阅。off取消订阅必须与on订阅成对出现。 |
-| [off](arkts-sensorservice-sensor-off-f.md#off-6) | 取消订阅未校准加速度传感器数据。当不再需要接收未校准加速度传感器数据时调用此接口取消订阅。off取消订阅必须与on订阅成对出现。 |
-| [off](arkts-sensorservice-sensor-off-f.md#off-7) | 取消订阅未校准加速度传感器数据。当不再需要接收未校准加速度传感器数据时调用此接口取消订阅。off取消订阅必须与on订阅成对出现。 |
-| [off](arkts-sensorservice-sensor-off-f.md#off-8) | 取消订阅环境光传感器数据。当不再需要接收环境光传感器数据时调用此接口取消订阅。off取消订阅必须与on订阅成对出现。 |
-| [off](arkts-sensorservice-sensor-off-f.md#off-9) | 取消订阅环境光传感器数据。当不再需要接收环境光传感器数据时调用此接口取消订阅。off取消订阅必须与on订阅成对出现。 |
-| [off](arkts-sensorservice-sensor-off-f.md#off-10) | 取消订阅温度传感器数据。当不再需要接收温度传感器数据时调用此接口取消订阅。off取消订阅必须与on订阅成对出现。 |
-| [off](arkts-sensorservice-sensor-off-f.md#off-11) | 取消订阅温度传感器数据。当不再需要接收温度传感器数据时调用此接口取消订阅。off取消订阅必须与on订阅成对出现。 |
-| [off](arkts-sensorservice-sensor-off-f.md#off-12) | 取消订阅气压计传感器数据。当不再需要接收气压计传感器数据时调用此接口取消订阅。off取消订阅必须与on订阅成对出现。 |
-| [off](arkts-sensorservice-sensor-off-f.md#off-13) | 取消订阅气压计传感器数据。当不再需要接收气压计传感器数据时调用此接口取消订阅。off取消订阅必须与on订阅成对出现。 |
-| [off](arkts-sensorservice-sensor-off-f.md#off-14) | 取消订阅重力传感器数据。当不再需要接收重力传感器数据时调用此接口取消订阅。off取消订阅必须与on订阅成对出现。 |
-| [off](arkts-sensorservice-sensor-off-f.md#off-15) | 取消订阅重力传感器数据。当不再需要接收重力传感器数据时调用此接口取消订阅。off取消订阅必须与on订阅成对出现。 |
-| [off](arkts-sensorservice-sensor-off-f.md#off-16) | 取消订阅陀螺仪传感器数据。当不再需要接收陀螺仪传感器数据时调用此接口取消订阅。off取消订阅必须与on订阅成对出现。 |
-| [off](arkts-sensorservice-sensor-off-f.md#off-17) | 取消订阅陀螺仪传感器数据。当不再需要接收陀螺仪传感器数据时调用此接口取消订阅。off取消订阅必须与on订阅成对出现。 |
-| [off](arkts-sensorservice-sensor-off-f.md#off-18) | 取消订阅未校准陀螺仪传感器数据。当不再需要接收未校准陀螺仪传感器数据时调用此接口取消订阅。off取消订阅必须与on订阅成对出现。 |
-| [off](arkts-sensorservice-sensor-off-f.md#off-19) | 取消订阅未校准陀螺仪传感器数据。 |
-| [off](arkts-sensorservice-sensor-off-f.md#off-20) | 取消订阅霍尔传感器数据。当不再需要接收霍尔传感器数据时调用此接口取消订阅。off取消订阅必须与on订阅成对出现。 |
-| [off](arkts-sensorservice-sensor-off-f.md#off-21) | 取消订阅霍尔传感器数据。当不再需要接收霍尔传感器数据时调用此接口取消订阅。off取消订阅必须与on订阅成对出现。 |
-| [off](arkts-sensorservice-sensor-off-f.md#off-22) | 取消订阅心率传感器数据。当不再需要接收心率传感器数据时调用此接口取消订阅。off取消订阅必须与on订阅成对出现。 |
-| [off](arkts-sensorservice-sensor-off-f.md#off-23) | 取消订阅心率传感器数据。当不再需要接收心率传感器数据时调用此接口取消订阅。off取消订阅必须与on订阅成对出现。 |
-| [off](arkts-sensorservice-sensor-off-f.md#off-24) | 取消订阅湿度传感器数据。当不再需要接收湿度传感器数据时调用此接口取消订阅。off取消订阅必须与on订阅成对出现。 |
-| [off](arkts-sensorservice-sensor-off-f.md#off-25) | 取消订阅湿度传感器数据。当不再需要接收湿度传感器数据时调用此接口取消订阅。off取消订阅必须与on订阅成对出现。 |
-| [off](arkts-sensorservice-sensor-off-f.md#off-26) | 取消订阅线性加速度传感器数据。当不再需要接收线性加速度传感器数据时调用此接口取消订阅。off取消订阅必须与on订阅成对出现。 |
-| [off](arkts-sensorservice-sensor-off-f.md#off-27) | 取消订阅线性加速度传感器数据。当不再需要接收线性加速度传感器数据时调用此接口取消订阅。off取消订阅必须与on订阅成对出现。 |
-| [off](arkts-sensorservice-sensor-off-f.md#off-28) | 取消订阅磁场传感器数据。当不再需要接收磁场传感器数据时调用此接口取消订阅。off取消订阅必须与on订阅成对出现。 |
-| [off](arkts-sensorservice-sensor-off-f.md#off-29) | 取消订阅磁场传感器数据。当不再需要接收磁场传感器数据时调用此接口取消订阅。off取消订阅必须与on订阅成对出现。 |
-| [off](arkts-sensorservice-sensor-off-f.md#off-30) | 取消订阅未校准的磁场传感器数据。当不再需要接收未校准磁场传感器数据时调用此接口取消订阅。off取消订阅必须与on订阅成对出现。 |
-| [off](arkts-sensorservice-sensor-off-f.md#off-31) | 取消订阅未校准的磁场传感器数据。当不再需要接收未校准磁场传感器数据时调用此接口取消订阅。off取消订阅必须与on订阅成对出现。 |
-| [off](arkts-sensorservice-sensor-off-f.md#off-32) | 取消订阅方向传感器数据。当不再需要接收方向传感器数据时调用此接口取消订阅。off取消订阅必须与on订阅成对出现。 |
-| [off](arkts-sensorservice-sensor-off-f.md#off-33) | 取消订阅方向传感器数据。当不再需要接收方向传感器数据时调用此接口取消订阅。off取消订阅必须与on订阅成对出现。 |
-| [off](arkts-sensorservice-sensor-off-f.md#off-34) | 取消订阅计步器传感器数据。当不再需要接收计步器传感器数据时调用此接口取消订阅。off取消订阅必须与on订阅成对出现。 |
-| [off](arkts-sensorservice-sensor-off-f.md#off-35) | 取消订阅计步器传感器数据。当不再需要接收计步器传感器数据时调用此接口取消订阅。off取消订阅必须与on订阅成对出现。 |
-| [off](arkts-sensorservice-sensor-off-f.md#off-36) | 取消订阅计步检测器传感器数据。当不再需要接收计步检测器传感器数据时调用此接口取消订阅。off取消订阅必须与on订阅成对出现。 |
-| [off](arkts-sensorservice-sensor-off-f.md#off-37) | 取消订阅计步检测器传感器数据。当不再需要接收计步检测器传感器数据时调用此接口取消订阅。off取消订阅必须与on订阅成对出现。 |
-| [off](arkts-sensorservice-sensor-off-f.md#off-38) | 取消订阅接近光传感器数据。当不再需要接收接近光传感器数据时调用此接口取消订阅。off取消订阅必须与on订阅成对出现。 |
-| [off](arkts-sensorservice-sensor-off-f.md#off-39) | 取消订阅接近光传感器数据。当不再需要接收接近光传感器数据时调用此接口取消订阅。off取消订阅必须与on订阅成对出现。 |
-| [off](arkts-sensorservice-sensor-off-f.md#off-40) | 取消订阅旋转矢量传感器数据。当不再需要接收旋转矢量传感器数据时调用此接口取消订阅。off取消订阅必须与on订阅成对出现。 |
-| [off](arkts-sensorservice-sensor-off-f.md#off-41) | 取消订阅旋转矢量传感器数据。当不再需要接收旋转矢量传感器数据时调用此接口取消订阅。off取消订阅必须与on订阅成对出现。 |
-| [off](arkts-sensorservice-sensor-off-f.md#off-42) | 取消订阅有效运动传感器数据。当不再需要接收有效运动传感器数据时调用此接口取消订阅。off取消订阅必须与on订阅成对出现。 |
-| [off](arkts-sensorservice-sensor-off-f.md#off-43) | 取消订阅有效运动传感器数据。当不再需要接收有效运动传感器数据时调用此接口取消订阅。off取消订阅必须与on订阅成对出现。 |
-| [off](arkts-sensorservice-sensor-off-f.md#off-44) | 取消订阅佩戴检测传感器数据。当不再需要接收佩戴检测传感器数据时调用此接口取消订阅。off取消订阅必须与on订阅成对出现。 |
-| [off](arkts-sensorservice-sensor-off-f.md#off-45) | 取消订阅融合压力传感器数据。当不再需要接收融合压力传感器数据时调用此接口取消订阅。off取消订阅必须与on订阅成对出现。 |
-| [off](arkts-sensorservice-sensor-off-f.md#off-46) | 取消订阅佩戴检测传感器数据。当不再需要接收佩戴检测传感器数据时调用此接口取消订阅。off取消订阅必须与on订阅成对出现。 |
-| [off](arkts-sensorservice-sensor-off-f.md#off-47) | 取消订阅加速度传感器数据。off取消订阅必须与on订阅成对出现。 |
-| [off](arkts-sensorservice-sensor-off-f.md#off-48) | 取消订阅未校准加速度传感器数据。off取消订阅必须与on订阅成对出现。 |
-| [off](arkts-sensorservice-sensor-off-f.md#off-49) | 取消订阅环境光传感器数据。off取消订阅必须与on订阅成对出现。 |
-| [off](arkts-sensorservice-sensor-off-f.md#off-50) | 取消订阅环境温度传感器数据。off取消订阅必须与on订阅成对出现。 |
-| [off](arkts-sensorservice-sensor-off-f.md#off-51) | 取消订阅气压计传感器数据。off取消订阅必须与on订阅成对出现。 |
-| [off](arkts-sensorservice-sensor-off-f.md#off-52) | 取消订阅重力传感器数据。off取消订阅必须与on订阅成对出现。 |
-| [off](arkts-sensorservice-sensor-off-f.md#off-53) | 取消订阅陀螺仪传感器数据。off取消订阅必须与on订阅成对出现。 |
-| [off](arkts-sensorservice-sensor-off-f.md#off-54) | 取消订阅未校准陀螺仪传感器数据。off取消订阅必须与on订阅成对出现。 |
-| [off](arkts-sensorservice-sensor-off-f.md#off-55) | 取消订阅霍尔传感器数据。off取消订阅必须与on订阅成对出现。 |
-| [off](arkts-sensorservice-sensor-off-f.md#off-56) | 取消订阅心率传感器数据。off取消订阅必须与on订阅成对出现。 |
-| [off](arkts-sensorservice-sensor-off-f.md#off-57) | 取消订阅湿度传感器数据。off取消订阅必须与on订阅成对出现。 |
-| [off](arkts-sensorservice-sensor-off-f.md#off-58) | 取消订阅线性加速度传感器数据。off取消订阅必须与on订阅成对出现。 |
-| [off](arkts-sensorservice-sensor-off-f.md#off-59) | 取消订阅磁场传感器数据。off取消订阅必须与on订阅成对出现。 |
-| [off](arkts-sensorservice-sensor-off-f.md#off-60) | 取消订阅未校准磁场传感器数据。off取消订阅必须与on订阅成对出现。 |
-| [off](arkts-sensorservice-sensor-off-f.md#off-61) | 取消订阅方向传感器数据。off取消订阅必须与on订阅成对出现。 |
-| [off](arkts-sensorservice-sensor-off-f.md#off-62) | 取消订阅计步传感器数据。off取消订阅必须与on订阅成对出现。 |
-| [off](arkts-sensorservice-sensor-off-f.md#off-63) | 取消订阅计步检测传感器数据。off取消订阅必须与on订阅成对出现。 |
-| [off](arkts-sensorservice-sensor-off-f.md#off-64) | 取消订阅接近光传感器数据。off取消订阅必须与on订阅成对出现。 |
-| [off](arkts-sensorservice-sensor-off-f.md#off-65) | 取消订阅旋转矢量传感器数据。off取消订阅必须与on订阅成对出现。 |
-| [off](arkts-sensorservice-sensor-off-f.md#off-66) | 取消订阅有效运动传感器数据。off取消订阅必须与on订阅成对出现。 |
-| [off](arkts-sensorservice-sensor-off-f.md#off-67) | 取消订阅佩戴检测传感器数据。off取消订阅必须与on订阅成对出现。 |
-| [off](arkts-sensorservice-sensor-off-f.md#off-68) | 取消监听传感器上线下线状态的变化。当不再需要感知传感器上下线状态时调用此接口取消监听。off取消监听必须与on监听成对出现。 |
+| [getAngleVariation](arkts-sensorservice-sensor-getanglevariation-f.md#getanglevariation) | Obtains the angle change between two rotation matrices. This API uses an asynchronous callback to return the result. |
+| [getAngleVariation](arkts-sensorservice-sensor-getanglevariation-f.md#getanglevariation-1) | Obtains the angle change between two rotation matrices. This API uses a promise to return the result. |
+| [getDeviceAltitude](arkts-sensorservice-sensor-getdevicealtitude-f.md#getdevicealtitude) | Obtains the altitude based on the atmospheric pressure. This API uses an asynchronous callback to return the result. |
+| [getDeviceAltitude](arkts-sensorservice-sensor-getdevicealtitude-f.md#getdevicealtitude-1) | Obtains the altitude based on the atmospheric pressure. This API uses a promise to return the result. |
+| [getDirection](arkts-sensorservice-sensor-getdirection-f.md#getdirection) | Obtains the device direction based on the rotation matrix. This API uses an asynchronous callback to return the result. |
+| [getDirection](arkts-sensorservice-sensor-getdirection-f.md#getdirection-1) | Obtains the device direction based on the rotation matrix. This API uses a promise to return the result. |
+| [getGeomagneticDip](arkts-sensorservice-sensor-getgeomagneticdip-f.md#getgeomagneticdip) | Obtains the magnetic dip based on the inclination matrix. This API uses an asynchronous callback to return the result. |
+| [getGeomagneticDip](arkts-sensorservice-sensor-getgeomagneticdip-f.md#getgeomagneticdip-1) | Obtains the magnetic dip based on the inclination matrix. This API uses a promise to return the result. |
+| [getGeomagneticField](arkts-sensorservice-sensor-getgeomagneticfield-f.md#getgeomagneticfield) | Obtains the geomagnetic field of a geographic location. This API uses an asynchronous callback to return the result. |
+| [getGeomagneticField](arkts-sensorservice-sensor-getgeomagneticfield-f.md#getgeomagneticfield-1) | Obtains the geomagnetic field of a geographic location. This API uses a promise to return the result. |
+| [getGeomagneticInfo](arkts-sensorservice-sensor-getgeomagneticinfo-f.md#getgeomagneticinfo) | Obtains the geomagnetic field of a geographic location at a certain time. This API uses an asynchronous callback to return the result. |
+| [getGeomagneticInfo](arkts-sensorservice-sensor-getgeomagneticinfo-f.md#getgeomagneticinfo-1) | Obtains the geomagnetic field of a geographic location at a certain time. This API uses a promise to return the result. |
+| [getInclination](arkts-sensorservice-sensor-getinclination-f.md#getinclination) | Obtains the magnetic dip based on the inclination matrix. This API uses an asynchronous callback to return the result. |
+| [getInclination](arkts-sensorservice-sensor-getinclination-f.md#getinclination-1) | Obtains the magnetic dip based on the inclination matrix. This API uses a promise to return the result. |
+| [getOrientation](arkts-sensorservice-sensor-getorientation-f.md#getorientation) | Obtains the device direction based on the rotation matrix. This API uses an asynchronous callback to return the result. |
+| [getOrientation](arkts-sensorservice-sensor-getorientation-f.md#getorientation-1) | Obtains the device direction based on the rotation matrix. This API uses a promise to return the result. |
+| [getQuaternion](arkts-sensorservice-sensor-getquaternion-f.md#getquaternion) | Obtains the quaternion from a rotation vector. This API uses an asynchronous callback to return the result. |
+| [getQuaternion](arkts-sensorservice-sensor-getquaternion-f.md#getquaternion-1) | Obtains the quaternion from a rotation vector. This API uses a promise to return the result. |
+| [getRotationMatrix](arkts-sensorservice-sensor-getrotationmatrix-f.md#getrotationmatrix) | Obtains the rotation matrix from a rotation vector. This API uses an asynchronous callback to return the result. |
+| [getRotationMatrix](arkts-sensorservice-sensor-getrotationmatrix-f.md#getrotationmatrix-1) | Obtains the rotation matrix from a rotation vector. This API uses a promise to return the result. |
+| [getRotationMatrix](arkts-sensorservice-sensor-getrotationmatrix-f.md#getrotationmatrix-2) | Obtains the rotation matrix based on a gravity vector and geomagnetic vector. This API uses an asynchronous callback to return the result. |
+| [getRotationMatrix](arkts-sensorservice-sensor-getrotationmatrix-f.md#getrotationmatrix-3) | Obtains the rotation matrix based on a gravity vector and geomagnetic vector. This API uses a promise to return the result. |
+| [getSensorList](arkts-sensorservice-sensor-getsensorlist-f.md#getsensorlist) | Obtains information about all sensors on the device. This API uses an asynchronous callback to return the result. |
+| [getSensorList](arkts-sensorservice-sensor-getsensorlist-f.md#getsensorlist-1) | Obtains information about all sensors on the device. This API uses a promise to return the result. |
+| [getSensorListByDeviceSync](arkts-sensorservice-sensor-getsensorlistbydevicesync-f.md#getsensorlistbydevicesync) | Obtains the information about all sensors on the device. |
+| [getSensorListSync](arkts-sensorservice-sensor-getsensorlistsync-f.md#getsensorlistsync) | Obtains information about all sensors on the device. This API returns the result synchronously. |
+| [getSingleSensor](arkts-sensorservice-sensor-getsinglesensor-f.md#getsinglesensor) | Obtains information about the sensor of a specific type. This API uses an asynchronous callback to return the result. |
+| [getSingleSensor](arkts-sensorservice-sensor-getsinglesensor-f.md#getsinglesensor-1) | Obtains information about the sensor of a specific type. This API uses a promise to return the result. |
+| [getSingleSensorByDeviceSync](arkts-sensorservice-sensor-getsinglesensorbydevicesync-f.md#getsinglesensorbydevicesync) | Obtains information about the sensor of a specific type. |
+| [getSingleSensorSync](arkts-sensorservice-sensor-getsinglesensorsync-f.md#getsinglesensorsync) | Obtains information about the sensor of a specific type. This API returns the result synchronously. |
+| [off](arkts-sensorservice-sensor-off-f.md#off-4) | Unsubscribes from data of the acceleration sensor. |
+| [off](arkts-sensorservice-sensor-off-f.md#off-5) | Unsubscribes from data of the acceleration sensor. |
+| [off](arkts-sensorservice-sensor-off-f.md#off-6) | Unsubscribes from data of the uncalibrated acceleration sensor. |
+| [off](arkts-sensorservice-sensor-off-f.md#off-7) | Unsubscribes from data of the uncalibrated acceleration sensor. |
+| [off](arkts-sensorservice-sensor-off-f.md#off-8) | Unsubscribes from data of the ambient light sensor. |
+| [off](arkts-sensorservice-sensor-off-f.md#off-9) | Unsubscribes from data of the ambient light sensor. |
+| [off](arkts-sensorservice-sensor-off-f.md#off-10) | Unsubscribes from data of the ambient temperature sensor. |
+| [off](arkts-sensorservice-sensor-off-f.md#off-11) | Unsubscribes from data of the ambient temperature sensor. |
+| [off](arkts-sensorservice-sensor-off-f.md#off-12) | Unsubscribes from data of the barometer sensor. |
+| [off](arkts-sensorservice-sensor-off-f.md#off-13) | Unsubscribes from data of the barometer sensor. |
+| [off](arkts-sensorservice-sensor-off-f.md#off-14) | Unsubscribes from data of the gravity sensor. |
+| [off](arkts-sensorservice-sensor-off-f.md#off-15) | Unsubscribes from data of the gravity sensor. |
+| [off](arkts-sensorservice-sensor-off-f.md#off-16) | Unsubscribes from data of the gyroscope sensor. |
+| [off](arkts-sensorservice-sensor-off-f.md#off-17) | Unsubscribes from data of the gyroscope sensor. |
+| [off](arkts-sensorservice-sensor-off-f.md#off-18) | Unsubscribes from data of the uncalibrated gyroscope sensor. |
+| [off](arkts-sensorservice-sensor-off-f.md#off-19) | Unsubscribes from data of the uncalibrated gyroscope sensor. |
+| [off](arkts-sensorservice-sensor-off-f.md#off-20) | Unsubscribes from data of the Hall effect sensor. |
+| [off](arkts-sensorservice-sensor-off-f.md#off-21) | Unsubscribes from data of the Hall effect sensor. |
+| [off](arkts-sensorservice-sensor-off-f.md#off-22) | Unsubscribes from data of the heart rate sensor. |
+| [off](arkts-sensorservice-sensor-off-f.md#off-23) | Unsubscribes from data of the heart rate sensor. |
+| [off](arkts-sensorservice-sensor-off-f.md#off-24) | Unsubscribes from data of the humidity sensor. |
+| [off](arkts-sensorservice-sensor-off-f.md#off-25) | Unsubscribes from data of the humidity sensor. |
+| [off](arkts-sensorservice-sensor-off-f.md#off-26) | Unsubscribes from data of the linear acceleration sensor. |
+| [off](arkts-sensorservice-sensor-off-f.md#off-27) | Unsubscribes from data of the linear acceleration sensor. |
+| [off](arkts-sensorservice-sensor-off-f.md#off-28) | Unsubscribes from data of the magnetic field sensor. |
+| [off](arkts-sensorservice-sensor-off-f.md#off-29) | Unsubscribes from data of the magnetic field sensor. |
+| [off](arkts-sensorservice-sensor-off-f.md#off-30) | Unsubscribes from data of the uncalibrated magnetic field sensor. |
+| [off](arkts-sensorservice-sensor-off-f.md#off-31) | Unsubscribes from data of the uncalibrated magnetic field sensor. |
+| [off](arkts-sensorservice-sensor-off-f.md#off-32) | Unsubscribes from data of the orientation sensor. |
+| [off](arkts-sensorservice-sensor-off-f.md#off-33) | Unsubscribes from data of the orientation sensor. |
+| [off](arkts-sensorservice-sensor-off-f.md#off-34) | Unsubscribes from data of the pedometer sensor. |
+| [off](arkts-sensorservice-sensor-off-f.md#off-35) | Unsubscribes from data of the pedometer sensor. |
+| [off](arkts-sensorservice-sensor-off-f.md#off-36) | Unsubscribes from data of the pedometer detection sensor. |
+| [off](arkts-sensorservice-sensor-off-f.md#off-37) | Unsubscribes from data of the pedometer detection sensor. |
+| [off](arkts-sensorservice-sensor-off-f.md#off-38) | Unsubscribes from data of the proximity sensor. |
+| [off](arkts-sensorservice-sensor-off-f.md#off-39) | Unsubscribes from data of the proximity sensor. |
+| [off](arkts-sensorservice-sensor-off-f.md#off-40) | Unsubscribes from data of the rotation vector sensor. |
+| [off](arkts-sensorservice-sensor-off-f.md#off-41) | Unsubscribes from data of the rotation vector sensor. |
+| [off](arkts-sensorservice-sensor-off-f.md#off-42) | Unsubscribes from valid motion sensor data. |
+| [off](arkts-sensorservice-sensor-off-f.md#off-43) | Unsubscribes from valid motion sensor data. |
+| [off](arkts-sensorservice-sensor-off-f.md#off-44) | Unsubscribes from data of the wear detection sensor. |
+| [off](arkts-sensorservice-sensor-off-f.md#off-45) | Unsubscribes from the fused pressure sensor data. |
+| [off](arkts-sensorservice-sensor-off-f.md#off-46) | Unsubscribes from data of the wear detection sensor. |
+| [off](arkts-sensorservice-sensor-off-f.md#off-47) | Unsubscribes from sensor data changes. |
+| [off](arkts-sensorservice-sensor-off-f.md#off-48) | Unsubscribes from sensor data changes. |
+| [off](arkts-sensorservice-sensor-off-f.md#off-49) | Unsubscribes from sensor data changes. |
+| [off](arkts-sensorservice-sensor-off-f.md#off-50) | Unsubscribes from sensor data changes. |
+| [off](arkts-sensorservice-sensor-off-f.md#off-51) | Unsubscribes from sensor data changes. |
+| [off](arkts-sensorservice-sensor-off-f.md#off-52) | Unsubscribes from sensor data changes. |
+| [off](arkts-sensorservice-sensor-off-f.md#off-53) | Unsubscribes from sensor data changes. |
+| [off](arkts-sensorservice-sensor-off-f.md#off-54) | Unsubscribes from sensor data changes. |
+| [off](arkts-sensorservice-sensor-off-f.md#off-55) | Unsubscribes from sensor data changes. |
+| [off](arkts-sensorservice-sensor-off-f.md#off-56) | Unsubscribes from sensor data changes. |
+| [off](arkts-sensorservice-sensor-off-f.md#off-57) | Unsubscribes from sensor data changes. |
+| [off](arkts-sensorservice-sensor-off-f.md#off-58) | Unsubscribes from sensor data changes. |
+| [off](arkts-sensorservice-sensor-off-f.md#off-59) | Unsubscribes from sensor data changes. |
+| [off](arkts-sensorservice-sensor-off-f.md#off-60) | Unsubscribes from sensor data changes. |
+| [off](arkts-sensorservice-sensor-off-f.md#off-61) | Unsubscribes from sensor data changes. |
+| [off](arkts-sensorservice-sensor-off-f.md#off-62) | Unsubscribes from sensor data changes. |
+| [off](arkts-sensorservice-sensor-off-f.md#off-63) | Unsubscribes from sensor data changes. |
+| [off](arkts-sensorservice-sensor-off-f.md#off-64) | Unsubscribes from sensor data changes. |
+| [off](arkts-sensorservice-sensor-off-f.md#off-65) | Unsubscribes from sensor data changes. |
+| [off](arkts-sensorservice-sensor-off-f.md#off-66) | Unsubscribes from valid motion sensor data. |
+| [off](arkts-sensorservice-sensor-off-f.md#off-67) | Unsubscribes from sensor data changes. |
+| [off](arkts-sensorservice-sensor-off-f.md#off-68) | Disables listening for sensor status changes. |
 | [offAccelerometerChange](arkts-sensorservice-sensor-offaccelerometerchange-f.md#offaccelerometerchange) | Unsubscribe to accelerometer sensor data, {@code SensorId.ACCELEROMETER}. |
 | [offAccelerometerUncalibratedChange](arkts-sensorservice-sensor-offaccelerometeruncalibratedchange-f.md#offaccelerometeruncalibratedchange) | Unsubscribe to uncalibrated accelerometer sensor data, {@code SensorId.ACCELEROMETER_UNCALIBRATED}. |
 | [offAmbientLightChange](arkts-sensorservice-sensor-offambientlightchange-f.md#offambientlightchange) | Unsubscribe to ambient light sensor data, {@code SensorId.AMBIENT_LIGHT}. |
@@ -148,50 +150,50 @@ import { sensor } from 'kits/@kit.SensorServiceKit';
 | [offSensorStatusChange](arkts-sensorservice-sensor-offsensorstatuschange-f.md#offsensorstatuschange) | Stop listening on device status changes. |
 | [offSignificantMotionChange](arkts-sensorservice-sensor-offsignificantmotionchange-f.md#offsignificantmotionchange) | Unsubscribe to significant motion sensor data, {@code SensorId.SIGNIFICANT_MOTION}. |
 | [offWearDetectionChange](arkts-sensorservice-sensor-offweardetectionchange-f.md#offweardetectionchange) | Unsubscribe to wear detection sensor data, {@code SensorId.WEAR_DETECTION}. |
-| [on](arkts-sensorservice-sensor-on-f.md#on-2) | 订阅加速度传感器数据。加速度传感器用于测量设备在X、Y、Z三个方向上的加速度，包含重力加速度分量。适用于需要感知设备运动状态、实现屏幕旋转、游戏操控、计步等场景的场景。调用后，系统会按设定频率通过callback持续上报加速度数据。 |
-| [on](arkts-sensorservice-sensor-on-f.md#on-3) | 订阅未校准加速度传感器数据。未校准加速度传感器与加速度传感器的区别在于，其上报的偏移值(biasX/biasY/biasZ)未经系统校准补偿，适用于需要获取原始加速度数据或自行实现校准算法的场景。与sensor.on('SensorId.ACCELEROMETER')相比，本接口额外提供偏移值信息，适用于需要分析设备校准偏差的场景。 |
-| [on](arkts-sensorservice-sensor-on-f.md#on-4) | 订阅环境光传感器数据。环境光传感器用于测量周围环境的光照强度，适用于自动调节屏幕亮度、判断环境明暗等场景。调用后，系统会按设定频率通过callback持续上报环境光强度数据。 |
-| [on](arkts-sensorservice-sensor-on-f.md#on-5) | 订阅环境温度传感器数据。温度传感器用于测量设备周围的环境温度，适用于环境温度监测、温度补偿等场景。调用后，系统会按设定频率通过callback持续上报温度数据。 |
-| [on](arkts-sensorservice-sensor-on-f.md#on-6) | 订阅气压计传感器数据。气压计传感器用于测量大气压强，适用于海拔估算、天气预报辅助等场景。调用后，系统会按设定频率通过callback持续上报气压数据。 |
-| [on](arkts-sensorservice-sensor-on-f.md#on-7) | 订阅重力传感器数据。重力传感器用于测量设备在X、Y、Z三个方向上受到的重力加速度分量，适用于需要分离重力分量进行运动分析的的场景，如游戏操控、运动检测。调用后，系统会按设定频率通过callback持续上报重力分量数据。 |
-| [on](arkts-sensorservice-sensor-on-f.md#on-8) | 订阅校准的陀螺仪传感器数据。陀螺仪传感器用于测量设备绕X、Y、Z轴的旋转角速度，适用于设备旋转检测、姿态跟踪、游戏操控等场景。调用后，系统会按设定频率通过callback持续上报角速度数据。 |
-| [on](arkts-sensorservice-sensor-on-f.md#on-9) | 订阅未校准陀螺仪传感器数据。未校准陀螺仪传感器与陀螺仪传感器的区别在于，其上报的偏移值(biasX/biasY/biasZ)未经系统校准补偿，适用于需要获取原始陀螺仪数据或自行实现校准算法的场景。与sensor.on('SensorId.GYROSCOPE')相比，本接口额外提供偏移值信息，适用于需要分析设备陀螺仪校准偏差的场景。 |
-| [on](arkts-sensorservice-sensor-on-f.md#on-10) | 订阅霍尔传感器数据。霍尔传感器用于检测磁场变化，常用于检测翻盖手机或皮套的开合状态。当霍尔事件被触发得较为频繁时，可通过options参数限定事件上报频率。调用后，系统会通过callback持续上报霍尔状态数据。 |
-| [on](arkts-sensorservice-sensor-on-f.md#on-11) | 订阅心率传感器数据。心率传感器用于测量用户的心率值，适用于健康监测、运动辅助等场景。调用后，系统会按设定频率通过callback持续上报心率数据。 |
-| [on](arkts-sensorservice-sensor-on-f.md#on-12) | 订阅湿度传感器数据。湿度传感器用于测量周围环境的相对湿度，适用于环境湿度监测、智能家居联动等场景。调用后，系统会按设定频率通过callback持续上报湿度数据。 |
-| [on](arkts-sensorservice-sensor-on-f.md#on-13) | 订阅线性加速度传感器数据。线性加速度传感器用于测量设备在X、Y、Z三个方向上的加速度（不含重力加速度分量），适用于需要感知设备纯粹运动加速度的场景，如运动追踪、碰撞检测。与sensor.on('SensorId.ACCELEROMETER')相比，本接口已去除重力分量，适用于仅需设备运动加速度的场景。 |
-| [on](arkts-sensorservice-sensor-on-f.md#on-14) | 订阅地磁传感器数据。地磁传感器用于测量设备周围的磁场强度在X、Y、Z三个方向上的分量，适用于指南针、方向检测、金属检测等场景。调用后，系统会按设定频率通过callback持续上报磁场分量数据。 |
-| [on](arkts-sensorservice-sensor-on-f.md#on-15) | 订阅未校准地磁传感器数据。未校准地磁传感器与地磁传感器的区别在于，其上报的偏移值(biasX/biasY/biasZ)未经系统校准补偿，适用于需要获取原始磁场数据或自行实现校准算法的场景。与sensor.on('SensorId.MAGNETIC_FIELD')相比，本接口额外提供偏移值信息，适用于需要分析设备地磁校准偏差的场景。 |
-| [on](arkts-sensorservice-sensor-on-f.md#on-16) | 订阅方向传感器数据。方向传感器用于测量设备绕Z轴旋转的角度(alpha)、绕X轴旋转的角度(beta)和绕Y轴旋转的角度(gamma)，适用于屏幕旋转、指南针、姿态感知等场景。调用后，系统会按设定频率通过callback持续上报方向数据。调用本接口的应用或服务可以通过提示用户使用8字校准法来提高应用获取的方向传感器的精度，此传感器理论误差正负5度，具体的精度根据不同的驱动及算法实现可能存在差异。 |
-| [on](arkts-sensorservice-sensor-on-f.md#on-17) | 订阅计步器传感器数据。计步器传感器用于统计用户的步行步数，适用于运动追踪、健康管理等场景。计步传感器数据上报有一定延迟，延迟时间由具体的实现产品决定。调用后，系统会按设定频率通过callback持续上报步数数据。 |
-| [on](arkts-sensorservice-sensor-on-f.md#on-18) | 订阅计步检测器传感器数据。计步检测器传感器用于检测用户是否发生了计步事件（如迈步动作），适用于需要实时检测步行状态的场景。与sensor.on('SensorId.PEDOMETER')相比，本接口上报的是计步事件标量而非累计步数，适用于需要检测单步事件的场景。 |
-| [on](arkts-sensorservice-sensor-on-f.md#on-19) | 订阅接近光传感器数据。接近光传感器用于检测物体与设备的距离状态，常用于通话时自动关闭屏幕以防止误触。当接近光事件被触发得较为频繁时，可通过options参数限定事件上报频率。调用后，系统会通过callback持续上报接近状态数据。 |
-| [on](arkts-sensorservice-sensor-on-f.md#on-20) | 订阅旋转矢量传感器数据。旋转矢量传感器用于表示设备的姿态旋转，数据由X、Y、Z分量和标量W组成，可用于设备姿态估计、AR/VR场景等。调用后，系统会按设定频率通过callback持续上报旋转矢量数据。 |
-| [on](arkts-sensorservice-sensor-on-f.md#on-21) | 订阅有效运动传感器数据，用于检测用户拿起设备、明显移动或剧烈摇晃等有效运动事件。适用于需要根据用户活动状态唤醒设备、启动应用或切换模式的场景。 |
-| [on](arkts-sensorservice-sensor-on-f.md#on-22) | 订阅佩戴检测传感器数据。佩戴检测传感器用于检测设备是否被用户佩戴，适用于智能手表等可穿戴设备的佩戴状态检测，以便自动切换工作模式。调用后，系统会按设定频率通过callback持续上报佩戴状态数据。 |
-| [on](arkts-sensorservice-sensor-on-f.md#on-23) | 订阅融合压力传感器数据。融合压力传感器用于获取经融合算法处理的压力数据，仅适用于智能手表设备。适用于需要获取手腕压力数据的健康监测场景。调用后，系统会按设定频率通过callback持续上报融合压力数据。 |
-| [on](arkts-sensorservice-sensor-on-f.md#on-24) | 监听加速度传感器的数据变化。适用于需要感知设备运动状态、实现屏幕旋转或游戏操控的场景。如果多次调用该接口，仅最后一次调用生效。 |
-| [on](arkts-sensorservice-sensor-on-f.md#on-25) | 监听未校准加速度传感器的数据变化。适用于需要获取包含偏差校准数据的加速度原始数据的场景。如果多次调用该接口，仅最后一次调用生效。 |
-| [on](arkts-sensorservice-sensor-on-f.md#on-26) | 监听环境光传感器的数据变化。适用于需要感知环境光照强度的场景。如果多次调用该接口，仅最后一次调用生效。 |
-| [on](arkts-sensorservice-sensor-on-f.md#on-27) | 监听环境温度传感器的数据变化。适用于需要感知环境温度的场景。如果多次调用该接口，仅最后一次调用生效。 |
-| [on](arkts-sensorservice-sensor-on-f.md#on-28) | 监听气压计传感器的数据变化。适用于需要感知环境气压的场景。如果多次调用该接口，仅最后一次调用生效。 |
-| [on](arkts-sensorservice-sensor-on-f.md#on-29) | 监听重力传感器的数据变化。适用于需要感知设备重力方向的场景。如果多次调用该接口，仅最后一次调用生效。 |
-| [on](arkts-sensorservice-sensor-on-f.md#on-30) | 监听陀螺仪传感器的数据变化。适用于需要感知设备旋转角速度的场景。如果多次调用该接口，仅最后一次调用生效。 |
-| [on](arkts-sensorservice-sensor-on-f.md#on-31) | 监听未校准陀螺仪传感器的数据变化。适用于需要获取包含偏差校准数据的陀螺仪原始数据的场景。如果多次调用该接口，仅最后一次调用生效。 |
-| [on](arkts-sensorservice-sensor-on-f.md#on-32) | 监听霍尔传感器的数据变化。适用于需要检测设备翻盖或磁铁状态的场景。如果多次调用该接口，仅最后一次调用生效。 |
-| [on](arkts-sensorservice-sensor-on-f.md#on-33) | 监听心率传感器的数据变化。适用于需要获取用户心率数据的场景。如果多次调用该接口，仅最后一次调用生效。 |
-| [on](arkts-sensorservice-sensor-on-f.md#on-34) | 监听湿度传感器的数据变化。适用于需要感知环境湿度的场景。如果多次调用该接口，仅最后一次调用生效。 |
-| [on](arkts-sensorservice-sensor-on-f.md#on-35) | 监听线性加速度传感器的数据变化。适用于需要获取排除重力影响的线性加速度数据的场景。如果多次调用该接口，仅最后一次调用生效。 |
-| [on](arkts-sensorservice-sensor-on-f.md#on-36) | 监听磁场传感器的数据变化。适用于需要感知设备周围磁场强度与方向的场景。如果多次调用该接口，仅最后一次调用生效。 |
-| [on](arkts-sensorservice-sensor-on-f.md#on-37) | 监听未校准磁场传感器的数据变化。适用于需要获取包含偏差校准数据的磁场原始数据的场景。如果多次调用该接口，仅最后一次调用生效。 |
-| [on](arkts-sensorservice-sensor-on-f.md#on-38) | 监听方向传感器的数据变化。适用于需要感知设备姿态方向的场景。如果多次调用该接口，仅最后一次调用生效。 |
-| [on](arkts-sensorservice-sensor-on-f.md#on-39) | 监听计步传感器的数据变化。适用于需要获取用户步数数据的场景。如果多次调用该接口，仅最后一次调用生效。 |
-| [on](arkts-sensorservice-sensor-on-f.md#on-40) | 监听计步检测传感器的数据变化。适用于需要检测用户是否在行走的场景。如果多次调用该接口，仅最后一次调用生效。 |
-| [on](arkts-sensorservice-sensor-on-f.md#on-41) | 监听接近光传感器的数据变化。适用于需要感知设备前方是否有物体靠近的场景。如果多次调用该接口，仅最后一次调用生效。 |
-| [on](arkts-sensorservice-sensor-on-f.md#on-42) | 监听旋转矢量传感器的数据变化。适用于需要感知设备三维空间旋转状态的场景。如果多次调用该接口，仅最后一次调用生效。 |
-| [on](arkts-sensorservice-sensor-on-f.md#on-43) | 监听有效运动传感器数据变化。适用于需要检测设备是否有显著运动的场景。如果多次调用该接口，仅最后一次调用生效。 |
-| [on](arkts-sensorservice-sensor-on-f.md#on-44) | 监听所佩戴的检测传感器的数据变化。适用于需要检测设备是否被佩戴的场景。如果多次调用该接口，仅最后一次调用生效。 |
-| [on](arkts-sensorservice-sensor-on-f.md#on-45) | 监听传感器上线下线状态的变化，callback返回传感器状态事件数据。适用于需要感知传感器设备动态上下线的场景，如远程传感器连接或断开时自动更新传感器列表或订阅状态。 |
+| [on](arkts-sensorservice-sensor-on-f.md#on-2) | Subscribes to data of the acceleration sensor. |
+| [on](arkts-sensorservice-sensor-on-f.md#on-3) | Subscribes to data of the uncalibrated acceleration sensor. |
+| [on](arkts-sensorservice-sensor-on-f.md#on-4) | Subscribes to data of the ambient light sensor. |
+| [on](arkts-sensorservice-sensor-on-f.md#on-5) | Subscribes to data of the ambient temperature sensor. |
+| [on](arkts-sensorservice-sensor-on-f.md#on-6) | Subscribes to data of the barometer sensor. |
+| [on](arkts-sensorservice-sensor-on-f.md#on-7) | Subscribes to data of the gravity sensor. |
+| [on](arkts-sensorservice-sensor-on-f.md#on-8) | Subscribes to data of the gyroscope sensor. |
+| [on](arkts-sensorservice-sensor-on-f.md#on-9) | Subscribes to data of the uncalibrated gyroscope sensor. |
+| [on](arkts-sensorservice-sensor-on-f.md#on-10) | Subscribes to data of the Hall effect sensor. |
+| [on](arkts-sensorservice-sensor-on-f.md#on-11) | Subscribes to data of the heart rate sensor. |
+| [on](arkts-sensorservice-sensor-on-f.md#on-12) | Subscribes to data of the humidity sensor. |
+| [on](arkts-sensorservice-sensor-on-f.md#on-13) | Subscribes to data of the linear acceleration sensor. |
+| [on](arkts-sensorservice-sensor-on-f.md#on-14) | Subscribes to data of the magnetic field sensor. |
+| [on](arkts-sensorservice-sensor-on-f.md#on-15) | Subscribes to data of the uncalibrated magnetic field sensor. |
+| [on](arkts-sensorservice-sensor-on-f.md#on-16) | Subscribes to data of the orientation sensor.  > **NOTE：** >  > Applications or services invoking this API can prompt users to use figure-8 calibration to improve the accuracy > of the direction sensor. The sensor has a theoretical error of ±5 degrees, but the specific precision may vary > depending on different driver implementations and algorithmic designs. |
+| [on](arkts-sensorservice-sensor-on-f.md#on-17) | Subscribes to data of the pedometer sensor. The step counter sensor's data reporting is subject to some delay, and the delay is determined by specific product implementations. |
+| [on](arkts-sensorservice-sensor-on-f.md#on-18) | Subscribes to data of the pedometer detection sensor. |
+| [on](arkts-sensorservice-sensor-on-f.md#on-19) | Subscribes to data of the proximity sensor. |
+| [on](arkts-sensorservice-sensor-on-f.md#on-20) | Subscribes to data of the rotation vector sensor. |
+| [on](arkts-sensorservice-sensor-on-f.md#on-21) | Subscribes to the significant motion sensor data. |
+| [on](arkts-sensorservice-sensor-on-f.md#on-22) | Subscribes to data of the wear detection sensor. |
+| [on](arkts-sensorservice-sensor-on-f.md#on-23) | Subscribes to the fused pressure sensor data. |
+| [on](arkts-sensorservice-sensor-on-f.md#on-24) | Subscribes to data changes of the acceleration sensor. If this API is called multiple times for the same application, the last call takes effect. |
+| [on](arkts-sensorservice-sensor-on-f.md#on-25) | Subscribes to data changes of the uncalibrated acceleration sensor. If this API is called multiple times for the same application, the last call takes effect. |
+| [on](arkts-sensorservice-sensor-on-f.md#on-26) | Subscribes to data changes of the ambient light sensor. If this API is called multiple times for the same application, the last call takes effect. |
+| [on](arkts-sensorservice-sensor-on-f.md#on-27) | Subscribes to data changes of the ambient temperature sensor. If this API is called multiple times for the same application, the last call takes effect. |
+| [on](arkts-sensorservice-sensor-on-f.md#on-28) | Subscribes to data changes of the barometer sensor. If this API is called multiple times for the same application,the last call takes effect. |
+| [on](arkts-sensorservice-sensor-on-f.md#on-29) | Subscribes to data changes of the gravity sensor. If this API is called multiple times for the same application,the last call takes effect. |
+| [on](arkts-sensorservice-sensor-on-f.md#on-30) | Subscribes to data changes of the gyroscope sensor. If this API is called multiple times for the same application,the last call takes effect. |
+| [on](arkts-sensorservice-sensor-on-f.md#on-31) | Subscribes to data changes of the uncalibrated gyroscope sensor. If this API is called multiple times for the same application, the last call takes effect. |
+| [on](arkts-sensorservice-sensor-on-f.md#on-32) | Subscribes to data changes of the Hall effect sensor. If this API is called multiple times for the same application, the last call takes effect. |
+| [on](arkts-sensorservice-sensor-on-f.md#on-33) | Subscribes to data changes of the heart rate sensor. If this API is called multiple times for the same application,the last call takes effect. |
+| [on](arkts-sensorservice-sensor-on-f.md#on-34) | Subscribes to data changes of the humidity sensor. If this API is called multiple times for the same application,the last call takes effect. |
+| [on](arkts-sensorservice-sensor-on-f.md#on-35) | Subscribes to data changes of the linear acceleration sensor. If this API is called multiple times for the same application, the last call takes effect. |
+| [on](arkts-sensorservice-sensor-on-f.md#on-36) | Subscribes to data changes of the magnetic field sensor. If this API is called multiple times for the same application, the last call takes effect. |
+| [on](arkts-sensorservice-sensor-on-f.md#on-37) | Subscribes to data changes of the uncalibrated magnetic field sensor. If this API is called multiple times for the same application, the last call takes effect. |
+| [on](arkts-sensorservice-sensor-on-f.md#on-38) | Subscribes to data changes of the orientation sensor. If this API is called multiple times for the same application, the last call takes effect. |
+| [on](arkts-sensorservice-sensor-on-f.md#on-39) | Subscribes to data changes of the pedometer sensor. If this API is called multiple times for the same application,the last call takes effect. |
+| [on](arkts-sensorservice-sensor-on-f.md#on-40) | Subscribes to data changes of the pedometer detection sensor. If this API is called multiple times for the same application, the last call takes effect. |
+| [on](arkts-sensorservice-sensor-on-f.md#on-41) | Subscribes to data changes of the proximity sensor. If this API is called multiple times for the same application,the last call takes effect. |
+| [on](arkts-sensorservice-sensor-on-f.md#on-42) | Subscribes to data changes of the rotation vector sensor. If this API is called multiple times for the same application, the last call takes effect. |
+| [on](arkts-sensorservice-sensor-on-f.md#on-43) | Subscribes to data changes of the significant motion sensor. If this API is called multiple times for the same application, the last call takes effect. |
+| [on](arkts-sensorservice-sensor-on-f.md#on-44) | Subscribes to data changes of the wear detection sensor. If this API is called multiple times for the same application, the last call takes effect. |
+| [on](arkts-sensorservice-sensor-on-f.md#on-45) | Enables listening for sensor status changes. This API asynchronously returns the result through a callback. |
 | [onAccelerometerChange](arkts-sensorservice-sensor-onaccelerometerchange-f.md#onaccelerometerchange) | Subscribe to accelerometer sensor data, {@code SensorId.ACCELEROMETER}. |
 | [onAccelerometerUncalibratedChange](arkts-sensorservice-sensor-onaccelerometeruncalibratedchange-f.md#onaccelerometeruncalibratedchange) | Subscribe to uncalibrated accelerometer sensor data, {@code SensorId.ACCELEROMETER_UNCALIBRATED}. |
 | [onAmbientLightChange](arkts-sensorservice-sensor-onambientlightchange-f.md#onambientlightchange) | Subscribe to ambient light sensor data, {@code SensorId.AMBIENT_LIGHT}. |
@@ -215,48 +217,48 @@ import { sensor } from 'kits/@kit.SensorServiceKit';
 | [onSensorStatusChange](arkts-sensorservice-sensor-onsensorstatuschange-f.md#onsensorstatuschange) | Start listening on device status changes. |
 | [onSignificantMotionChange](arkts-sensorservice-sensor-onsignificantmotionchange-f.md#onsignificantmotionchange) | Subscribe to significant motion sensor data, {@code SensorId.SIGNIFICANT_MOTION}. |
 | [onWearDetectionChange](arkts-sensorservice-sensor-onweardetectionchange-f.md#onweardetectionchange) | Subscribe to wear detection sensor data, {@code SensorId.WEAR_DETECTION}. |
-| [once](arkts-sensorservice-sensor-once-f.md#once) | 获取一次加速度传感器数据。适用于无需持续监听、仅需一次性获取当前加速度数据的场景。调用后，callback仅触发一次，自动取消订阅。 |
-| [once](arkts-sensorservice-sensor-once-f.md#once-1) | 获取一次未校准加速度传感器数据。适用于仅需一次性获取原始加速度及偏移数据的场景。调用后，callback仅触发一次，自动取消订阅。 |
-| [once](arkts-sensorservice-sensor-once-f.md#once-2) | 获取一次环境光传感器数据。适用于仅需一次性获取当前环境光强度的场景。调用后，callback仅触发一次，自动取消订阅。 |
-| [once](arkts-sensorservice-sensor-once-f.md#once-3) | 获取一次温度传感器数据。适用于仅需一次性获取当前环境温度的场景。调用后，callback仅触发一次，自动取消订阅。 |
-| [once](arkts-sensorservice-sensor-once-f.md#once-4) | 获取一次气压计传感器数据。适用于仅需一次性获取当前气压值的场景。调用后，callback仅触发一次，自动取消订阅。 |
-| [once](arkts-sensorservice-sensor-once-f.md#once-5) | 获取一次重力传感器数据。适用于仅需一次性获取当前重力分量的场景。调用后，callback仅触发一次，自动取消订阅。 |
-| [once](arkts-sensorservice-sensor-once-f.md#once-6) | 获取一次陀螺仪传感器数据。适用于仅需一次性获取当前旋转角速度的场景。调用后，callback仅触发一次，自动取消订阅。 |
-| [once](arkts-sensorservice-sensor-once-f.md#once-7) | 获取一次未校准陀螺仪传感器数据。适用于仅需一次性获取原始角速度及偏移数据的场景。调用后，callback仅触发一次，自动取消订阅。 |
-| [once](arkts-sensorservice-sensor-once-f.md#once-8) | 获取一次霍尔传感器数据。适用于仅需一次性检测当前霍尔状态的场景。调用后，callback仅触发一次，自动取消订阅。 |
-| [once](arkts-sensorservice-sensor-once-f.md#once-9) | 获取一次心率传感器数据。适用于仅需一次性获取当前心率值的场景。调用后，callback仅触发一次，自动取消订阅。 |
-| [once](arkts-sensorservice-sensor-once-f.md#once-10) | 获取一次湿度传感器数据。适用于仅需一次性获取当前环境湿度的场景。调用后，callback仅触发一次，自动取消订阅。 |
-| [once](arkts-sensorservice-sensor-once-f.md#once-11) | 获取一次线性加速度传感器数据。适用于仅需一次性获取当前线性加速度（不含重力分量）的场景。调用后，callback仅触发一次，自动取消订阅。 |
-| [once](arkts-sensorservice-sensor-once-f.md#once-12) | 获取一次磁场传感器数据。适用于仅需一次性获取当前磁场分量的场景。调用后，callback仅触发一次，自动取消订阅。 |
-| [once](arkts-sensorservice-sensor-once-f.md#once-13) | 获取一次未经校准的磁场传感器数据。适用于仅需一次性获取原始磁场及偏移数据的场景。调用后，callback仅触发一次，自动取消订阅。 |
-| [once](arkts-sensorservice-sensor-once-f.md#once-14) | 获取一次方向传感器数据。适用于仅需一次性获取当前设备方向的场景。调用后，callback仅触发一次，自动取消订阅。 |
-| [once](arkts-sensorservice-sensor-once-f.md#once-15) | 获取一次计步器传感器数据。计步传感器数据上报有一定延迟，延迟时间由具体的实现产品决定。适用于仅需一次性获取当前步数的场景。调用后，callback仅触发一次，自动取消订阅。 |
-| [once](arkts-sensorservice-sensor-once-f.md#once-16) | 获取一次计步检测器传感器数据。适用于仅需一次性检测计步事件的场景。调用后，callback仅触发一次，自动取消订阅。 |
-| [once](arkts-sensorservice-sensor-once-f.md#once-17) | 获取一次接近光传感器数据。适用于仅需一次性检测当前接近状态的场景。调用后，callback仅触发一次，自动取消订阅。 |
-| [once](arkts-sensorservice-sensor-once-f.md#once-18) | 获取一次旋转矢量传感器数据。适用于仅需一次性获取当前设备姿态的场景。调用后，callback仅触发一次，自动取消订阅。 |
-| [once](arkts-sensorservice-sensor-once-f.md#once-19) | 获取一次有效运动传感器数据。适用于仅需一次性检测有效运动的场景。调用后，callback仅触发一次，自动取消订阅。 |
-| [once](arkts-sensorservice-sensor-once-f.md#once-20) | 获取一次佩戴检测传感器数据。适用于仅需一次性检测佩戴状态的场景。调用后，callback仅触发一次，自动取消订阅。 |
-| [once](arkts-sensorservice-sensor-once-f.md#once-21) | 监听加速度传感器的数据变化一次。适用于仅需一次性获取当前加速度数据的场景。 |
-| [once](arkts-sensorservice-sensor-once-f.md#once-22) | 监听未校准加速度传感器的数据变化一次。适用于仅需一次性获取当前未校准加速度数据的场景。 |
-| [once](arkts-sensorservice-sensor-once-f.md#once-23) | 监听环境光传感器数据变化一次。适用于仅需一次性获取当前环境光数据的场景。 |
-| [once](arkts-sensorservice-sensor-once-f.md#once-24) | 监听环境温度传感器数据变化一次。适用于仅需一次性获取当前环境温度数据的场景。 |
-| [once](arkts-sensorservice-sensor-once-f.md#once-25) | 监听气压计传感器数据变化一次。适用于仅需一次性获取当前气压数据的场景。 |
-| [once](arkts-sensorservice-sensor-once-f.md#once-26) | 监听重力传感器的数据变化一次。适用于仅需一次性获取当前重力数据的场景。 |
-| [once](arkts-sensorservice-sensor-once-f.md#once-27) | 监听陀螺仪传感器的数据变化一次。适用于仅需一次性获取当前陀螺仪数据的场景。 |
-| [once](arkts-sensorservice-sensor-once-f.md#once-28) | 监听未校准陀螺仪传感器的数据变化一次。适用于仅需一次性获取当前未校准陀螺仪数据的场景。 |
-| [once](arkts-sensorservice-sensor-once-f.md#once-29) | 监听霍尔传感器数据变化一次。适用于仅需一次性获取当前霍尔数据的场景。 |
-| [once](arkts-sensorservice-sensor-once-f.md#once-30) | 监听心率传感器数据变化一次。适用于仅需一次性获取当前心率数据的场景。 |
-| [once](arkts-sensorservice-sensor-once-f.md#once-31) | 监听湿度传感器数据变化一次。适用于仅需一次性获取当前湿度数据的场景。 |
-| [once](arkts-sensorservice-sensor-once-f.md#once-32) | 监听线性加速度传感器数据变化一次。适用于仅需一次性获取当前线性加速度数据的场景。 |
-| [once](arkts-sensorservice-sensor-once-f.md#once-33) | 监听磁场传感器数据变化一次。适用于仅需一次性获取当前磁场数据的场景。 |
-| [once](arkts-sensorservice-sensor-once-f.md#once-34) | 监听未校准磁场传感器数据变化一次。适用于仅需一次性获取当前未校准磁场数据的场景。 |
-| [once](arkts-sensorservice-sensor-once-f.md#once-35) | 监听方向传感器数据变化一次。适用于仅需一次性获取当前方向数据的场景。 |
-| [once](arkts-sensorservice-sensor-once-f.md#once-36) | 监听计步器传感器数据变化一次。适用于仅需一次性获取当前计步数据的场景。 |
-| [once](arkts-sensorservice-sensor-once-f.md#once-37) | 监听计步检测传感器数据变化一次。适用于仅需一次性获取当前计步检测数据的场景。 |
-| [once](arkts-sensorservice-sensor-once-f.md#once-38) | 监听接近光传感器数据变化一次。适用于仅需一次性获取当前接近光数据的场景。 |
-| [once](arkts-sensorservice-sensor-once-f.md#once-39) | 监听旋转矢量传感器数据变化一次。适用于仅需一次性获取当前旋转矢量数据的场景。 |
-| [once](arkts-sensorservice-sensor-once-f.md#once-40) | 监听有效运动传感器的数据变化一次。适用于仅需一次性获取当前有效运动数据的场景。 |
-| [once](arkts-sensorservice-sensor-once-f.md#once-41) | 监听所佩戴的检测传感器的数据变化一次。适用于仅需一次性获取当前佩戴检测数据的场景。 |
+| [once](arkts-sensorservice-sensor-once-f.md#once) | Obtains data of the acceleration sensor once. |
+| [once](arkts-sensorservice-sensor-once-f.md#once-1) | Obtains data of the uncalibrated acceleration sensor once. |
+| [once](arkts-sensorservice-sensor-once-f.md#once-2) | Obtains data of the ambient light sensor once. |
+| [once](arkts-sensorservice-sensor-once-f.md#once-3) | Obtains data of the temperature sensor once. |
+| [once](arkts-sensorservice-sensor-once-f.md#once-4) | Obtains data of the barometer sensor once. |
+| [once](arkts-sensorservice-sensor-once-f.md#once-5) | Obtains data of the gravity sensor once. |
+| [once](arkts-sensorservice-sensor-once-f.md#once-6) | Obtains data of the gyroscope sensor once. |
+| [once](arkts-sensorservice-sensor-once-f.md#once-7) | Obtains data of the uncalibrated gyroscope sensor once. |
+| [once](arkts-sensorservice-sensor-once-f.md#once-8) | Obtains data of the Hall effect sensor once. |
+| [once](arkts-sensorservice-sensor-once-f.md#once-9) | Obtains data of the heart rate sensor once. |
+| [once](arkts-sensorservice-sensor-once-f.md#once-10) | Obtains data of the humidity sensor once. |
+| [once](arkts-sensorservice-sensor-once-f.md#once-11) | Obtains data of the linear acceleration sensor once. |
+| [once](arkts-sensorservice-sensor-once-f.md#once-12) | Obtains data of the magnetic field sensor once. |
+| [once](arkts-sensorservice-sensor-once-f.md#once-13) | Obtains data of the uncalibrated magnetic field sensor once. |
+| [once](arkts-sensorservice-sensor-once-f.md#once-14) | Obtains data of the orientation sensor once. |
+| [once](arkts-sensorservice-sensor-once-f.md#once-15) | Obtains data of the pedometer sensor once. The step counter sensor's data reporting is subject to some delay, and the delay is determined by specific product implementations. |
+| [once](arkts-sensorservice-sensor-once-f.md#once-16) | Obtains data of the pedometer sensor once. |
+| [once](arkts-sensorservice-sensor-once-f.md#once-17) | Obtains data of the proximity sensor once. |
+| [once](arkts-sensorservice-sensor-once-f.md#once-18) | Obtains data of the rotation vector sensor once. |
+| [once](arkts-sensorservice-sensor-once-f.md#once-19) | Obtains the significant motion sensor data once. |
+| [once](arkts-sensorservice-sensor-once-f.md#once-20) | Obtains data of the wear detection sensor once. |
+| [once](arkts-sensorservice-sensor-once-f.md#once-21) | Subscribes to only one data change of the acceleration sensor. |
+| [once](arkts-sensorservice-sensor-once-f.md#once-22) | Subscribes to only one data change of the uncalibrated acceleration sensor. |
+| [once](arkts-sensorservice-sensor-once-f.md#once-23) | Subscribes to only one data change of the ambient light sensor. |
+| [once](arkts-sensorservice-sensor-once-f.md#once-24) | Subscribes to only one data change of the ambient temperature sensor. |
+| [once](arkts-sensorservice-sensor-once-f.md#once-25) | Subscribes to only one data change of the barometer sensor. |
+| [once](arkts-sensorservice-sensor-once-f.md#once-26) | Subscribes to only one data change of the gravity sensor. |
+| [once](arkts-sensorservice-sensor-once-f.md#once-27) | Subscribes to only one data change of the gyroscope sensor. |
+| [once](arkts-sensorservice-sensor-once-f.md#once-28) | Subscribes to only one data change of the uncalibrated gyroscope sensor. |
+| [once](arkts-sensorservice-sensor-once-f.md#once-29) | Subscribes to only one data change of the Hall effect sensor. |
+| [once](arkts-sensorservice-sensor-once-f.md#once-30) | Subscribes to only one data change of the heart rate sensor. |
+| [once](arkts-sensorservice-sensor-once-f.md#once-31) | Subscribes to only one data change of the humidity sensor. |
+| [once](arkts-sensorservice-sensor-once-f.md#once-32) | Subscribes to only one data change of the linear acceleration sensor. |
+| [once](arkts-sensorservice-sensor-once-f.md#once-33) | Subscribes to only one data change of the magnetic field sensor. |
+| [once](arkts-sensorservice-sensor-once-f.md#once-34) | Subscribes to only one data change of the uncalibrated magnetic field sensor. |
+| [once](arkts-sensorservice-sensor-once-f.md#once-35) | Subscribes to only one data change of the orientation sensor. |
+| [once](arkts-sensorservice-sensor-once-f.md#once-36) | Subscribes to only one data change of the pedometer sensor. |
+| [once](arkts-sensorservice-sensor-once-f.md#once-37) | Subscribes to only one data change of the pedometer detection sensor. |
+| [once](arkts-sensorservice-sensor-once-f.md#once-38) | Subscribes to only one data change of the proximity sensor. |
+| [once](arkts-sensorservice-sensor-once-f.md#once-39) | Subscribes to only one data change of the rotation vector sensor. |
+| [once](arkts-sensorservice-sensor-once-f.md#once-40) | Subscribes to only one data change of the significant motion sensor. |
+| [once](arkts-sensorservice-sensor-once-f.md#once-41) | Subscribes to only one data change of the wear detection sensor. |
 | [onceAccelerometerChange](arkts-sensorservice-sensor-onceaccelerometerchange-f.md#onceaccelerometerchange) | Subscribe to accelerometer sensor data once, {@code SensorId.ACCELEROMETER}. |
 | [onceAccelerometerUncalibratedChange](arkts-sensorservice-sensor-onceaccelerometeruncalibratedchange-f.md#onceaccelerometeruncalibratedchange) | Subscribe to uncalibrated accelerometer sensor data once, {@code SensorId.ACCELEROMETER_UNCALIBRATED}. |
 | [onceAmbientLightChange](arkts-sensorservice-sensor-onceambientlightchange-f.md#onceambientlightchange) | Subscribe to ambient light sensor data once, {@code SensorId.AMBIENT_LIGHT}. |
@@ -278,24 +280,24 @@ import { sensor } from 'kits/@kit.SensorServiceKit';
 | [onceRotationVectorChange](arkts-sensorservice-sensor-oncerotationvectorchange-f.md#oncerotationvectorchange) | Subscribe to rotation vector sensor data once, {@code SensorId.ROTATION_VECTOR}. |
 | [onceSignificantMotionChange](arkts-sensorservice-sensor-oncesignificantmotionchange-f.md#oncesignificantmotionchange) | Subscribe to significant motion sensor data once, {@code SensorId.SIGNIFICANT_MOTION}. |
 | [onceWearDetectionChange](arkts-sensorservice-sensor-onceweardetectionchange-f.md#onceweardetectionchange) | Subscribe to wear detection sensor data once, {@code SensorId.WEAR_DETECTION}. |
-| [transformCoordinateSystem](arkts-sensorservice-sensor-transformcoordinatesystem-f.md#transformcoordinatesystem) | 旋转提供的旋转矩阵，使其可以以不同的方式表示坐标系，使用Callback异步方式返回结果。 |
-| [transformCoordinateSystem](arkts-sensorservice-sensor-transformcoordinatesystem-f.md#transformcoordinatesystem-1) | 旋转提供的旋转矩阵，使其可以以不同的方式表示坐标系，使用Promise异步方式返回结果。 |
-| [transformRotationMatrix](arkts-sensorservice-sensor-transformrotationmatrix-f.md#transformrotationmatrix) | 根据指定坐标系映射旋转矩阵，使用Callback异步方式返回结果。 |
-| [transformRotationMatrix](arkts-sensorservice-sensor-transformrotationmatrix-f.md#transformrotationmatrix-1) | 根据指定坐标系映射旋转矩阵，使用Promise异步方式返回结果。 |
+| [transformCoordinateSystem](arkts-sensorservice-sensor-transformcoordinatesystem-f.md#transformcoordinatesystem) | Rotates a rotation vector so that it can represent the coordinate system in different ways. This API uses an asynchronous callback to return the result. |
+| [transformCoordinateSystem](arkts-sensorservice-sensor-transformcoordinatesystem-f.md#transformcoordinatesystem-1) | Rotates a rotation vector so that it can represent the coordinate system in different ways. This API uses a promise to return the result. |
+| [transformRotationMatrix](arkts-sensorservice-sensor-transformrotationmatrix-f.md#transformrotationmatrix) | Transforms a rotation vector based on the coordinate system. This API uses an asynchronous callback to return the result. |
+| [transformRotationMatrix](arkts-sensorservice-sensor-transformrotationmatrix-f.md#transformrotationmatrix-1) | Transforms a rotation vector based on the coordinate system. This API uses a promise to return the result. |
 
 <!--Del-->
 ### Functions（系统接口）
 
 | Name | Description |
 | --- | --- |
-| [off](arkts-sensorservice-sensor-off-f-sys.md#off) | 取消订阅颜色传感器数据。调用后，颜色传感器的回调函数将不再触发。 |
-| [off](arkts-sensorservice-sensor-off-f-sys.md#off-1) | 取消订阅颜色传感器数据。与API version 10的off接口相比，新增sensorInfoParam参数，支持通过指定deviceId和sensorIndex来精确取消订阅某一设备上的特定传感器回调，适用于多设备场景。 |
-| [off](arkts-sensorservice-sensor-off-f-sys.md#off-2) | 取消订阅吸收比率传感器数据。调用后，SAR传感器的回调函数将不再触发。 |
-| [off](arkts-sensorservice-sensor-off-f-sys.md#off-3) | 取消订阅吸收比率传感器数据。与API version 10的off接口相比，新增sensorInfoParam参数，支持通过指定deviceId和sensorIndex来精确取消订阅某一设备上的特定传感器回调，适用于多设备场景。 |
+| [off](arkts-sensorservice-sensor-off-f-sys.md#off) | Unsubscribes from data of the color sensor. |
+| [off](arkts-sensorservice-sensor-off-f-sys.md#off-1) | Unsubscribes from data of the color sensor. |
+| [off](arkts-sensorservice-sensor-off-f-sys.md#off-2) | Unsubscribes from data of the SAR sensor. |
+| [off](arkts-sensorservice-sensor-off-f-sys.md#off-3) | Unsubscribes from data of the SAR sensor. |
 | [offColorChange](arkts-sensorservice-sensor-offcolorchange-f-sys.md#offcolorchange) | Unsubscribe to color sensor data, {@code SensorId.COLOR}. |
 | [offSarChange](arkts-sensorservice-sensor-offsarchange-f-sys.md#offsarchange) | Unsubscribe to sar sensor data, {@code SensorId.SAR}. |
-| [on](arkts-sensorservice-sensor-on-f-sys.md#on) | 订阅颜色传感器数据变化。通过回调函数异步上报颜色传感器数据，数据格式为ColorResponse对象，包含lightIntensity（光照强度）和colorTemperature（色温）两个number类型字段。 |
-| [on](arkts-sensorservice-sensor-on-f-sys.md#on-1) | 订阅吸收比率传感器数据变化。通过回调函数异步上报SAR传感器数据，数据格式为SarResponse对象，包含absorptionRatio（吸收率）一个number类型字段。 |
+| [on](arkts-sensorservice-sensor-on-f-sys.md#on) | Subscribes to data of the color sensor. |
+| [on](arkts-sensorservice-sensor-on-f-sys.md#on-1) | Subscribes to data of the Sodium Adsorption Ratio (SAR) sensor. |
 | [onColorChange](arkts-sensorservice-sensor-oncolorchange-f-sys.md#oncolorchange) | Subscribe to color sensor data, {@code SensorId.COLOR}. |
 | [onSarChange](arkts-sensorservice-sensor-onsarchange-f-sys.md#onsarchange) | Subscribe to SAR sensor data, {@code SensorId.SAR}. |
 <!--DelEnd-->
@@ -304,66 +306,66 @@ import { sensor } from 'kits/@kit.SensorServiceKit';
 
 | Name | Description |
 | --- | --- |
-| [AccelerometerResponse](arkts-sensorservice-sensor-accelerometerresponse-i.md) | 加速度传感器数据，继承于[Response](arkts-sensorservice-sensor-response-i.md)。 |
-| [AccelerometerUncalibratedResponse](arkts-sensorservice-sensor-accelerometeruncalibratedresponse-i.md) | 未校准加速度传感器数据，继承于[Response](arkts-sensorservice-sensor-response-i.md)。 |
-| [AmbientTemperatureResponse](arkts-sensorservice-sensor-ambienttemperatureresponse-i.md) | 温度传感器数据，继承于[Response](arkts-sensorservice-sensor-response-i.md)。 |
-| [BarometerResponse](arkts-sensorservice-sensor-barometerresponse-i.md) | 气压计传感器数据，继承于[Response](arkts-sensorservice-sensor-response-i.md)。 |
-| [CoordinatesOptions](arkts-sensorservice-sensor-coordinatesoptions-i.md) | 设置坐标选项对象，用于指定坐标系的变换方向。 |
-| [FusionPressureResponse](arkts-sensorservice-sensor-fusionpressureresponse-i.md) | 融合压力传感器数据，继承于[Response](arkts-sensorservice-sensor-response-i.md)。 |
-| [GeomagneticResponse](arkts-sensorservice-sensor-geomagneticresponse-i.md) | 设置地磁响应对象，用于描述指定地理位置的地磁场信息。 |
-| [GravityResponse](arkts-sensorservice-sensor-gravityresponse-i.md) | 重力传感器数据，继承于[Response](arkts-sensorservice-sensor-response-i.md)。 |
-| [GyroscopeResponse](arkts-sensorservice-sensor-gyroscoperesponse-i.md) | 陀螺仪传感器数据，继承于[Response](arkts-sensorservice-sensor-response-i.md)。 |
-| [GyroscopeUncalibratedResponse](arkts-sensorservice-sensor-gyroscopeuncalibratedresponse-i.md) | 未校准陀螺仪传感器数据，继承于[Response](arkts-sensorservice-sensor-response-i.md)。 |
-| [HallResponse](arkts-sensorservice-sensor-hallresponse-i.md) | 霍尔传感器数据，继承于[Response](arkts-sensorservice-sensor-response-i.md)。 |
-| [HeartRateResponse](arkts-sensorservice-sensor-heartrateresponse-i.md) | 心率传感器数据，继承于[Response](arkts-sensorservice-sensor-response-i.md)。 |
-| [HumidityResponse](arkts-sensorservice-sensor-humidityresponse-i.md) | 湿度传感器数据，继承于[Response](arkts-sensorservice-sensor-response-i.md)。 |
-| [LightResponse](arkts-sensorservice-sensor-lightresponse-i.md) | 环境光传感器数据，继承于[Response](arkts-sensorservice-sensor-response-i.md)。 |
-| [LinearAccelerometerResponse](arkts-sensorservice-sensor-linearaccelerometerresponse-i.md) | 线性加速度传感器数据，继承于[Response](arkts-sensorservice-sensor-response-i.md)。 |
-| [LocationOptions](arkts-sensorservice-sensor-locationoptions-i.md) | 指示地理位置，用于传入经纬度和海拔信息以计算地磁场。 |
-| [MagneticFieldResponse](arkts-sensorservice-sensor-magneticfieldresponse-i.md) | 磁场传感器数据，继承于[Response](arkts-sensorservice-sensor-response-i.md)。 |
-| [MagneticFieldUncalibratedResponse](arkts-sensorservice-sensor-magneticfielduncalibratedresponse-i.md) | 未校准磁场传感器数据，继承于[Response](arkts-sensorservice-sensor-response-i.md)。 |
-| [Options](arkts-sensorservice-sensor-options-i.md) | 设置传感器上报频率及传感器选择参数。 |
-| [OrientationResponse](arkts-sensorservice-sensor-orientationresponse-i.md) | 方向传感器数据，继承于[Response](arkts-sensorservice-sensor-response-i.md)。 |
-| [PedometerDetectionResponse](arkts-sensorservice-sensor-pedometerdetectionresponse-i.md) | 计步检测传感器数据，继承于[Response](arkts-sensorservice-sensor-response-i.md)。 |
-| [PedometerResponse](arkts-sensorservice-sensor-pedometerresponse-i.md) | 计步传感器数据，继承于[Response](arkts-sensorservice-sensor-response-i.md)。 |
-| [ProximityResponse](arkts-sensorservice-sensor-proximityresponse-i.md) | 接近光传感器数据，继承于[Response](arkts-sensorservice-sensor-response-i.md)。 |
-| [Response](arkts-sensorservice-sensor-response-i.md) | 传感器数据的时间戳与精度信息基类，所有传感器Response类型均继承于此。 |
-| [RotationMatrixResponse](arkts-sensorservice-sensor-rotationmatrixresponse-i.md) | 设置旋转矩阵响应对象，用于描述旋转矩阵和倾斜矩阵的计算结果。 |
-| [RotationVectorResponse](arkts-sensorservice-sensor-rotationvectorresponse-i.md) | 旋转矢量传感器数据，继承于[Response](arkts-sensorservice-sensor-response-i.md)。 |
-| [Sensor](arkts-sensorservice-sensor-sensor-i.md) | 指示传感器信息。 |
-| [SensorInfoParam](arkts-sensorservice-sensor-sensorinfoparam-i.md) | 传感器传入设置参数，多传感器情况下通过deviceId、sensorIndex控制指定传感器。 |
-| [SensorStatusEvent](arkts-sensorservice-sensor-sensorstatusevent-i.md) | 设备状态变化事件数据，用于描述传感器上下线事件的信息。 |
-| [SignificantMotionResponse](arkts-sensorservice-sensor-significantmotionresponse-i.md) | 有效运动传感器数据，继承于[Response](arkts-sensorservice-sensor-response-i.md)。 |
-| [WearDetectionResponse](arkts-sensorservice-sensor-weardetectionresponse-i.md) | 佩戴检测传感器数据，继承于[Response](arkts-sensorservice-sensor-response-i.md)。 |
+| [AccelerometerResponse](arkts-sensorservice-sensor-accelerometerresponse-i.md) | Describes the acceleration sensor data. It extends from [Response](arkts-sensorservice-sensor-response-i.md). |
+| [AccelerometerUncalibratedResponse](arkts-sensorservice-sensor-accelerometeruncalibratedresponse-i.md) | Describes the uncalibrated acceleration sensor data. It extends from [Response](arkts-sensorservice-sensor-response-i.md). |
+| [AmbientTemperatureResponse](arkts-sensorservice-sensor-ambienttemperatureresponse-i.md) | Describes the ambient temperature sensor data. It extends from [Response](arkts-sensorservice-sensor-response-i.md). |
+| [BarometerResponse](arkts-sensorservice-sensor-barometerresponse-i.md) | Describes the barometer sensor data. It extends from [Response](arkts-sensorservice-sensor-response-i.md). |
+| [CoordinatesOptions](arkts-sensorservice-sensor-coordinatesoptions-i.md) | Describes the coordinate options. |
+| [FusionPressureResponse](arkts-sensorservice-sensor-fusionpressureresponse-i.md) | Describes the fusion pressure sensor data. It extends from [Response](arkts-sensorservice-sensor-response-i.md). |
+| [GeomagneticResponse](arkts-sensorservice-sensor-geomagneticresponse-i.md) | Describes a geomagnetic response object. |
+| [GravityResponse](arkts-sensorservice-sensor-gravityresponse-i.md) | Describes the gravity sensor data. It extends from [Response](arkts-sensorservice-sensor-response-i.md). |
+| [GyroscopeResponse](arkts-sensorservice-sensor-gyroscoperesponse-i.md) | Describes the gyroscope sensor data. It extends from [Response](arkts-sensorservice-sensor-response-i.md). |
+| [GyroscopeUncalibratedResponse](arkts-sensorservice-sensor-gyroscopeuncalibratedresponse-i.md) | Describes the uncalibrated gyroscope sensor data. It extends from [Response](arkts-sensorservice-sensor-response-i.md). |
+| [HallResponse](arkts-sensorservice-sensor-hallresponse-i.md) | Describes the Hall effect sensor data. It extends from [Response](arkts-sensorservice-sensor-response-i.md). |
+| [HeartRateResponse](arkts-sensorservice-sensor-heartrateresponse-i.md) | Describes the heart rate sensor data. It extends from [Response](arkts-sensorservice-sensor-response-i.md). |
+| [HumidityResponse](arkts-sensorservice-sensor-humidityresponse-i.md) | Describes the humidity sensor data. It extends from [Response](arkts-sensorservice-sensor-response-i.md). |
+| [LightResponse](arkts-sensorservice-sensor-lightresponse-i.md) | Describes the ambient light sensor data. It extends from [Response](arkts-sensorservice-sensor-response-i.md). |
+| [LinearAccelerometerResponse](arkts-sensorservice-sensor-linearaccelerometerresponse-i.md) | Describes the linear acceleration sensor data. It extends from [Response](arkts-sensorservice-sensor-response-i.md). |
+| [LocationOptions](arkts-sensorservice-sensor-locationoptions-i.md) | Describes the geographical location. |
+| [MagneticFieldResponse](arkts-sensorservice-sensor-magneticfieldresponse-i.md) | Describes the magnetic field sensor data. It extends from [Response](arkts-sensorservice-sensor-response-i.md). |
+| [MagneticFieldUncalibratedResponse](arkts-sensorservice-sensor-magneticfielduncalibratedresponse-i.md) | Describes the uncalibrated magnetic field sensor data. It extends from [Response](arkts-sensorservice-sensor-response-i.md). |
+| [Options](arkts-sensorservice-sensor-options-i.md) | Describes the sensor data reporting frequency. |
+| [OrientationResponse](arkts-sensorservice-sensor-orientationresponse-i.md) | Describes the orientation sensor data. It extends from [Response](arkts-sensorservice-sensor-response-i.md). |
+| [PedometerDetectionResponse](arkts-sensorservice-sensor-pedometerdetectionresponse-i.md) | Describes the pedometer detection sensor data. It extends from [Response](arkts-sensorservice-sensor-response-i.md). |
+| [PedometerResponse](arkts-sensorservice-sensor-pedometerresponse-i.md) | Describes the pedometer sensor data. It extends from [Response](arkts-sensorservice-sensor-response-i.md). |
+| [ProximityResponse](arkts-sensorservice-sensor-proximityresponse-i.md) | Describes the proximity sensor data. It extends from [Response](arkts-sensorservice-sensor-response-i.md). |
+| [Response](arkts-sensorservice-sensor-response-i.md) | Describes the timestamp of the sensor data. |
+| [RotationMatrixResponse](arkts-sensorservice-sensor-rotationmatrixresponse-i.md) | Describes the response for setting the rotation matrix. |
+| [RotationVectorResponse](arkts-sensorservice-sensor-rotationvectorresponse-i.md) | Describes the rotation vector sensor data. It extends from [Response](arkts-sensorservice-sensor-response-i.md). |
+| [Sensor](arkts-sensorservice-sensor-sensor-i.md) | Describes the sensor information. |
+| [SensorInfoParam](arkts-sensorservice-sensor-sensorinfoparam-i.md) | Defines sensor parameters, including **deviceId** and **sensorIndex**. |
+| [SensorStatusEvent](arkts-sensorservice-sensor-sensorstatusevent-i.md) | Defines a device status change event. |
+| [SignificantMotionResponse](arkts-sensorservice-sensor-significantmotionresponse-i.md) | Describes the significant motion sensor data. It extends from [Response](arkts-sensorservice-sensor-response-i.md). |
+| [WearDetectionResponse](arkts-sensorservice-sensor-weardetectionresponse-i.md) | Describes the wear detection sensor data. It extends from [Response](arkts-sensorservice-sensor-response-i.md). |
 
 <!--Del-->
 ### Interfaces（系统接口）
 
 | Name | Description |
 | --- | --- |
-| [ColorResponse](arkts-sensorservice-sensor-colorresponse-i-sys.md) | 颜色传感器数据，继承于[Response](arkts-sensorservice-sensor-response-i.md)。用于表示颜色传感器上报的响应数据，包含光照强度和色温信息。 |
-| [SarResponse](arkts-sensorservice-sensor-sarresponse-i-sys.md) | 吸收比率传感器数据，继承于[Response](arkts-sensorservice-sensor-response-i.md)。用于表示吸收比率传感器上报的响应数据，包含电磁波吸收率信息。 |
+| [ColorResponse](arkts-sensorservice-sensor-colorresponse-i-sys.md) | Describes the color sensor data. It extends from [Response](arkts-sensorservice-sensor-response-i.md). |
+| [SarResponse](arkts-sensorservice-sensor-sarresponse-i-sys.md) | Describes the SAR sensor data. It extends from [Response](arkts-sensorservice-sensor-response-i.md). |
 <!--DelEnd-->
 
 ### Enums
 
 | Name | Description |
 | --- | --- |
-| [SensorAccuracy](arkts-sensorservice-sensor-sensoraccuracy-e.md) | 传感器数据的精度挡位。 |
-| [SensorId](arkts-sensorservice-sensor-sensorid-e.md) | 表示当前支持订阅或取消订阅的传感器类型。 |
-| [SensorType](arkts-sensorservice-sensor-sensortype-e.md) | 表示要订阅或取消订阅的传感器类型。 |
+| [SensorAccuracy](arkts-sensorservice-sensor-sensoraccuracy-e.md) | Enumerates the accuracy levels of sensor data. |
+| [SensorId](arkts-sensorservice-sensor-sensorid-e.md) | Enumerates the sensor types. |
+| [SensorType](arkts-sensorservice-sensor-sensortype-e.md) | Enumerates the sensor types. |
 
 <!--Del-->
 ### Enums（系统接口）
 
 | Name | Description |
 | --- | --- |
-| [SensorId](arkts-sensorservice-sensor-sensorid-e-sys.md) | 表示当前支持订阅或取消订阅的传感器类型。 |
+| [SensorId](arkts-sensorservice-sensor-sensorid-e-sys.md) | Enumerates the sensor types. |
 <!--DelEnd-->
 
 ### Types
 
 | Name | Description |
 | --- | --- |
-| [SensorFrequency](arkts-sensorservice-sensor-sensorfrequency-t.md) | 传感器上报频率模式，提供预定义的频率档位，方便开发者快速设置常用的上报频率。 |
+| [SensorFrequency](arkts-sensorservice-sensor-sensorfrequency-t.md) | Defines the reporting frequency mode of the sensor. |
 

@@ -12,7 +12,7 @@ import { systemLoad } from 'kits/@kit.BasicServicesKit';
 function getLevel(): Promise<SystemLoadLevel>
 ```
 
-获取系统负载融合档位，使用promise异步回调。
+Obtains the system load level. This API uses a promise to return the result.
 
 **Since:** 12
 
@@ -26,5 +26,5 @@ function getLevel(): Promise<SystemLoadLevel>
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;SystemLoadLevel&gt; | Promise对象，返回系统负载融合档位。 |
+| Promise&lt;SystemLoadLevel&gt; | Promise used to return the system load level. |
 

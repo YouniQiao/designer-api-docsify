@@ -1,6 +1,6 @@
 # HdrComposeOptions
 
-Picture合成HDR时可配置的参数选项。
+Describes compose parameters.
 
 **Since:** 23
 
@@ -22,7 +22,7 @@ import { image } from 'kits/@kit.ImageKit';
 desiredPixelFormat?: PixelMapFormat
 ```
 
-用于合成图像的像素格式，支持RGBA_1010102、YCBCR_P010和YCRCB_P010格式。
+Pixel format used for composite image, RGBA_1010102\YCBCR_P010\YCRCB_P010 are supported.
 
 **Type:** [PixelMapFormat](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-multimedia-movingphotoview-pixelmapformat-e.md)
 

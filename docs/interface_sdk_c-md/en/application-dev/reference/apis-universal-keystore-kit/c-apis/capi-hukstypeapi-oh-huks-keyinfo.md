@@ -1,7 +1,7 @@
 # OH_Huks_KeyInfo
 
 ```c
-struct OH_Huks_KeyInfo {...}
+typedef struct OH_Huks_KeyInfo {...} OH_Huks_KeyInfo
 ```
 
 ## Overview
@@ -20,7 +20,7 @@ Defines the struct of key information.
 
 | Name | Description |
 | -- | -- |
-| struct [OH_Huks_Blob](capi-hukstypeapi-oh-huks-blob.md) alias | Alias used in key attestation. |
+| struct [OH_Huks_Blob](capi-hukstypeapi-oh-huks-blob.md) alias | Key alias. |
 | struct [OH_Huks_ParamSet](capi-hukstypeapi-oh-huks-paramset.md) *paramSet | Pointer to the key parameter set. |
 
 

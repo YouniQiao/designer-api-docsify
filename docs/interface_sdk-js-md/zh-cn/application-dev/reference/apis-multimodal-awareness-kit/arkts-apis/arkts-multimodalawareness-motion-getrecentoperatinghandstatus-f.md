@@ -1,18 +1,12 @@
 # getRecentOperatingHandStatus
 
-## 导入模块
-
-```TypeScript
-import { motion } from 'kits/@kit.MultimodalAwarenessKit';
-```
-
 ## getRecentOperatingHandStatus
 
 ```TypeScript
 function getRecentOperatingHandStatus(): OperatingHandStatus
 ```
 
-Obtains the latest operating hand status.
+获取最新触控操作手状态。
 
 **起始版本：** 15
 
@@ -30,15 +24,15 @@ Obtains the latest operating hand status.
 
 | 类型 | 说明 |
 | --- | --- |
-| [OperatingHandStatus](arkts-multimodalawareness-motion-operatinghandstatus-e.md) | Status of the operating hand. |
+| [OperatingHandStatus](arkts-multimodalawareness-motion-operatinghandstatus-e.md) | 返回触控操作手状态信息。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 801 | Capability not supported. Function can not work correctly due to limited &lt;br&gt; device capabilities. |
-| 31500001 | Service exception. Possible causes: 1. A system error, such as null pointer, container-related exception; &lt;br&gt; 2. N-API invocation exception, invalid N-API status. |
-| 201 | Permission denied. An attempt was made to get the recent operating hand &lt;br&gt; status forbidden by permission: ohos.permission.ACTIVITY_MOTION or ohos.permission.DETECT_GESTURE. |
+| [801](../../errorcode-universal.md#801-该设备不支持此api) | Capability not supported. Function can not work correctly due to limited &lt;br&gt; device capabilities. |
+| [31500001](../../apis-multimodalawareness-kit/errorcode-motion.md#31500001-服务异常) | Service exception. Possible causes: 1. A system error, such as null pointer, container-related exception; &lt;br&gt; 2. N-API invocation exception, invalid N-API status. |
+| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. An attempt was made to get the recent operating hand &lt;br&gt; status forbidden by permission: ohos.permission.ACTIVITY_MOTION or ohos.permission.DETECT_GESTURE. |
 
 ## 示例
 
@@ -47,10 +41,10 @@ import { BusinessError } from '@kit.BasicServicesKit';
 
 try {
     let data:motion.OperatingHandStatus = motion.getRecentOperatingHandStatus();
-    console.info('get succeeded: ' + data);
+    console.info('get succeeded' + data);
 } catch (err) {
     let error = err as BusinessError;
-    console.error(`Failed to get recent operating hand status. Code: ${error.code}, message: ${error.message}`);
+    console.error("Failed get and err code is " + error.code);
 }
 ```
 

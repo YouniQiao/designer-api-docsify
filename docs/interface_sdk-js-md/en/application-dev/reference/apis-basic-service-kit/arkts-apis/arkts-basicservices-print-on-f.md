@@ -12,7 +12,7 @@ import { print } from 'kits/@kit.BasicServicesKit';
 function on(type: 'printerChange', callback: PrinterChangeCallback): void
 ```
 
-注册打印机变动事件回调，使用callback回调。
+Registers a listener for the printer change events. This API uses a callback to return the result.
 
 **Since:** 18
 
@@ -28,15 +28,15 @@ function on(type: 'printerChange', callback: PrinterChangeCallback): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'printerChange' | Yes | 表示打印机变动事件。 |
-| callback | [PrinterChangeCallback](arkts-basicservices-print-printerchangecallback-t.md) | Yes | 打印机变动之后的回调。 |
+| type | 'printerChange' | Yes | Printer change event. |
+| callback | [PrinterChangeCallback](arkts-basicservices-print-printerchangecallback-t.md) | Yes | Callback to be invoked when the printer changes. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
-| 201 | the application does not have permission to call this function. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
+| [201](../../errorcode-universal.md#201-permission-denied) | the application does not have permission to call this function. |
 
 ## Examples
 

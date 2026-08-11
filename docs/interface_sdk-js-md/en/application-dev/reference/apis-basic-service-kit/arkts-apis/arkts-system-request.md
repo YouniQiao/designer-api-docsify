@@ -1,9 +1,10 @@
-# @system.request(上传下载)
+# @system.request(Upload and Download)
 
-system.request部件主要给应用提供上传下载文件的基础能力。
- > **说明：**
+The **system.request** module provides applications with basic upload and download capabilities.
+ > **NOTE**
  >
- > - 从API Version 9开始所有接口不再维护，推荐使用新接口[@ohos.request](arkts-basicservices-request-n.md)。
+ > - The APIs of this module are deprecated since API version 9. You are advised to use
+ > [@ohos.request](arkts-basicservices-request-n.md) instead.
 
 
 ## Modules to Import
@@ -24,12 +25,12 @@ import { UploadResponse, RequestData, DownloadRequestOptions, DownloadResponse, 
 
 | Name | Description |
 | --- | --- |
-| [DownloadRequestOptions](arkts-basicservices-system-request-downloadrequestoptions-i.md) |  |
+| [DownloadRequestOptions](arkts-basicservices-system-request-downloadrequestoptions-i.md) | > **NOTE：** >  > This API has been supported since API version 3 and deprecated since API version 9. You are advised to use > [UploadConfig](arkts-basicservices-agent-config-i.md) instead. |
 | [DownloadResponse](arkts-basicservices-system-request-downloadresponse-i.md) |  |
 | [OnDownloadCompleteOptions](arkts-basicservices-system-request-ondownloadcompleteoptions-i.md) |  |
 | [OnDownloadCompleteResponse](arkts-basicservices-system-request-ondownloadcompleteresponse-i.md) |  |
 | [RequestData](arkts-basicservices-system-request-requestdata-i.md) |  |
 | [RequestFile](arkts-basicservices-system-request-requestfile-i.md) |  |
-| [UploadRequestOptions](arkts-basicservices-system-request-uploadrequestoptions-i.md) |  |
+| [UploadRequestOptions](arkts-basicservices-system-request-uploadrequestoptions-i.md) | > **NOTE：** >  > This API has been supported since API version 3 and deprecated since API version 9. You are advised to use > [UploadConfig](arkts-basicservices-agent-config-i.md) instead. |
 | [UploadResponse](arkts-basicservices-system-request-uploadresponse-i.md) |  |
 

@@ -1,6 +1,6 @@
 # NotificationIconButton (System API)
 
-描述系统通知按钮。
+Describes the system notification button.
 
 **Since:** 18
 
@@ -18,10 +18,10 @@
 hidePanel?: boolean
 ```
 
-点击按钮时，是否隐藏通知中心。默认为false。
+Whether to hide the notification panel when the button is tapped. The default value is **false**.
 
-- true：是。  
-- false：否。
+- **true**: Yes.  
+- **false**: No.
 
 **Type:** boolean
 
@@ -41,7 +41,7 @@ hidePanel?: boolean
 iconResource: IconType
 ```
 
-按钮的背景图。
+Background image of a button.
 
 **Type:** [IconType](../../apis-arkui/arkts-apis/arkts-arkui-arkui-advanced-composelistitem-icontype-e.md)
 
@@ -61,7 +61,7 @@ iconResource: IconType
 name: string
 ```
 
-按钮标识，用于区分同一通知的多个不同按钮。字符串长度不超过202字节，超出部分会被截断。不可为空字符串。
+Button identifier, used to distinguish multiple different buttons for the same notification. The string length cannot exceed 202 bytes, and the exceeding part will be truncated. It cannot be an empty string.
 
 **Type:** string
 
@@ -81,7 +81,7 @@ name: string
 text?: string
 ```
 
-按钮展示的信息。默认为空。字符串长度不超过202字节，超出部分会被截断。
+Text displayed on the button, which defaults to empty. The string length cannot exceed 202 bytes, and the exceeding part will be truncated.
 
 **Type:** string
 

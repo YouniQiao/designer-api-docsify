@@ -1,6 +1,6 @@
 # Location
 
-图片地理位置信息。
+Describes the geolocation information.
 
 **Since:** 10
 
@@ -22,7 +22,7 @@ import { camera } from 'kits/@kit.CameraKit';
 altitude: double
 ```
 
-海拔（米）。
+Altitude, in meters.
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：double
 
@@ -42,7 +42,7 @@ altitude: double
 latitude: double
 ```
 
-纬度（度）。取值范围：[-90, 90]。
+Latitude, in degrees, within the range [–90, 90].
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：double
 
@@ -62,7 +62,7 @@ latitude: double
 longitude: double
 ```
 
-经度（度）。取值范围：[-180, 180]。
+Longitude, in degrees, within the range [–180, 180].
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：double
 

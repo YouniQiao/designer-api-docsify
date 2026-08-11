@@ -1,6 +1,6 @@
 # Advertisement
 
-本模块为请求的广告内容。
+This module provides the requested ad content.
 
 **Since:** 11
 
@@ -16,7 +16,7 @@
 [key:string]: Object
 ```
 
-自定义参数。
+Custom parameters.
 
 &lt;!--RP1--&gt;&lt;!--RP1End--&gt;
 
@@ -38,16 +38,16 @@
 adType: number
 ```
 
-广告类型。
+Ad type.
 
-- 1：开屏广告。  
-- 3：原生广告。  
-- 7：激励广告。  
-- 8：横幅广告。  
-- 12：插屏广告。  
-- 60：贴片广告。
+- 1: Splash ad.  
+- 3: Native ad.  
+- 7: Rewarded ad.  
+- 8: Banner ad.  
+- 12: Interstitial ad.  
+- 60: Roll ad.
 
-不填默认为原生广告类型。
+If not filled, the default is native ad type.
 
 **Type:** number
 
@@ -67,10 +67,10 @@ adType: number
 clicked: boolean
 ```
 
-广告是否被点击。
+Whether the ad is clicked.
 
-- true：被点击。  
-- false：未被点击。
+- **true**: The ad is clicked.  
+- **false**: The ad is not clicked.
 
 **Type:** boolean
 
@@ -90,7 +90,7 @@ clicked: boolean
 rewardVerifyConfig: Map<string, string>
 ```
 
-服务器验证参数。
+Server verification parameters.
 
 {
 
@@ -118,10 +118,10 @@ userId: "12345"
 rewarded: boolean
 ```
 
-广告是否获得奖励。
+Whether users get rewarded for watching or clicking the ad.
 
-- true：获得奖励。  
-- false：没有获得奖励。
+- **true**: Users get rewarded.  
+- **false**: Users do not get rewarded.
 
 **Type:** boolean
 
@@ -141,10 +141,10 @@ rewarded: boolean
 shown: boolean
 ```
 
-广告是否展示。
+Whether the ad is shown.
 
-- true：展示。  
-- false：未展示。
+- **true**: The ad is shown.  
+- **false**: The ad is not shown.
 
 **Type:** boolean
 
@@ -164,7 +164,7 @@ shown: boolean
 uniqueId: string
 ```
 
-广告唯一标识。
+Unique ID of the ad.
 
 **Type:** string
 

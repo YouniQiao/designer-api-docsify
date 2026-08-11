@@ -1,11 +1,5 @@
 # setAlternateIcon
 
-## 导入模块
-
-```TypeScript
-import { bundleManager } from 'kits/@kit.AbilityKit';
-```
-
 ## setAlternateIcon
 
 ```TypeScript
@@ -40,9 +34,9 @@ function setAlternateIcon(alternateIconName: string): Promise<void>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 17700310 | Failed to set the alternate icon. |
-| 17700308 | The alternateIconName must match the name field under alternateIcons in the app.json5 file. |
-| 17700309 | No alternate icon is enabled. |
+| [17700310](../errorcode-bundle.md#17700310-设置备用图标失败) | Failed to set the alternate icon. |
+| [17700308](../errorcode-bundle.md#17700308-备用图标名称没有在配置文件中配置) | The alternateIconName must match the name field under alternateIcons in the app.json5 file. |
+| [17700309](../errorcode-bundle.md#17700309-当前没有设置备用图标) | No alternate icon is enabled. |
 
 ## 示例
 

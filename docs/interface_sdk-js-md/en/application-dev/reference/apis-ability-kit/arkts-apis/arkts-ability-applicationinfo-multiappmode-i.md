@@ -1,6 +1,6 @@
 # MultiAppMode
 
-表示[应用多开](../../../quick-start/multiInstance.md)模式。
+Defines the [multi-app mode](../../../quick-start/multiInstance.md).
 
 **Since:** 12
 
@@ -16,7 +16,7 @@
 readonly maxCount: int
 ```
 
-应用多开的最大个数。
+Indicates the max count of the bundle,the unit is quantity.
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
@@ -34,7 +34,7 @@ readonly maxCount: int
 readonly multiAppModeType: bundleManager.MultiAppModeType
 ```
 
-应用多开模式的类型。
+Indicates the multiAppModeType of the bundle
 
 **Type:** bundleManager.MultiAppModeType
 

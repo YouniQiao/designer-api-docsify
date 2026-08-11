@@ -1,10 +1,10 @@
 # AsyncCallback
 
-通用回调函数，携带错误参数和异步返回值，用于在异步操作完成时同时回传错误信息或成功数据。
+Defines a common callback that carries an error parameter and asynchronous return value. It is used to return error information or success data when an asynchronous operation is complete.
 
-错误参数为[BusinessError](arkts-basicservices-base-businesserror-i.md)类型。
+The error parameter is of the [BusinessError](arkts-basicservices-base-businesserror-i.md) type.
 
-异步返回值的类型由开发者自定义，回调将返回对应类型的信息。
+The type of the asynchronous return value is defined by the developer.
 
 **Since:** 6
 
@@ -42,6 +42,6 @@ import { Callback, BusinessError, ErrorCallback, AsyncCallback } from 'kits/@kit
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| err | [BusinessError](arkts-basicservices-base-businesserror-c.md)&lt;E&gt; | Yes | 接口调用失败的公共错误信息，包含错误码和可选附加信息。 当不指定E类型参数时，默认为void，此时BusinessError不包含附加信息，只包含错误码。接口调用成功时，此参数返回null。 |
-| data | T | Yes | 接口调用成功时的异步返回数据，类型由开发者自定义。接口调用失败时，此参数不可用。 |
+| err | [BusinessError](arkts-basicservices-base-businesserror-c.md)&lt;E&gt; | Yes | Common error information returned when the API fails to be called, including the error code and optional additional data. If the **E** parameter is not specified, the default value **void** is used. In this case, **BusinessError** contains only the error code. If the API call succeeds, this parameter returns **null**. |
+| data | T | Yes | Data returned asynchronously when the API is successfully called. The data type is defined by the developer. This parameter is unavailable when the API fails to be called. |
 

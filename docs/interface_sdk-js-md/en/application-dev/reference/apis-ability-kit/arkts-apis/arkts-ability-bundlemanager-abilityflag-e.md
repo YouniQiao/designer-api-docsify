@@ -1,6 +1,6 @@
 # AbilityFlag
 
-Ability组件信息标志，指示需要获取的Ability组件信息的内容。
+Enumerates the ability flags, which indicate the type of ability information to obtain.
 
 **Since:** 20
 
@@ -16,9 +16,9 @@ Ability组件信息标志，指示需要获取的Ability组件信息的内容。
 GET_ABILITY_INFO_DEFAULT = 0x00000000
 ```
 
-获取默认[AbilityInfo](arkts-abilityinfo.md)，获取的AbilityInfo不包含permissions、metadata、被禁用Ability对应的AbilityInfo。&lt;!--Del--&gt;通过  
-[setAbilityEnabled接口](arkts-ability-bundlemanager-setabilityenabled-f-sys.md#setabilityenabled)可设置Ability禁用状态、通过  
-[isAbilityEnabled接口](arkts-ability-bundlemanager-isabilityenabled-f-sys.md#isabilityenabled)可获取Ability禁用状态。&lt;!--DelEnd--&gt;
+Used to obtain the default [ability information](arkts-abilityinfo.md), which does not contain permissions, metadata, or ability information of disabled abilities. &lt;!--Del--&gt;You can use  
+[setAbilityEnabled](arkts-ability-bundlemanager-setabilityenabled-f-sys.md#setabilityenabled)to set the ability enabling status and use  
+[isAbilityEnabled](arkts-ability-bundlemanager-isabilityenabled-f-sys.md#isabilityenabled) to obtain the ability enabling status.&lt;!--DelEnd--&gt;
 
 **Since:** 20
 
@@ -36,7 +36,7 @@ GET_ABILITY_INFO_DEFAULT = 0x00000000
 GET_ABILITY_INFO_WITH_PERMISSION = 0x00000001
 ```
 
-获取包含permissions的AbilityInfo。
+Used to obtain the ability information containing permissions.
 
 **Since:** 20
 
@@ -54,7 +54,7 @@ GET_ABILITY_INFO_WITH_PERMISSION = 0x00000001
 GET_ABILITY_INFO_WITH_APPLICATION = 0x00000002
 ```
 
-获取包含applicationInfo的AbilityInfo。
+Used to obtain the ability information containing application information.
 
 **Since:** 20
 
@@ -72,7 +72,7 @@ GET_ABILITY_INFO_WITH_APPLICATION = 0x00000002
 GET_ABILITY_INFO_WITH_METADATA = 0x00000004
 ```
 
-获取包含metadata的AbilityInfo。
+Used to obtain the ability information containing metadata.
 
 **Since:** 20
 
@@ -90,7 +90,7 @@ GET_ABILITY_INFO_WITH_METADATA = 0x00000004
 GET_ABILITY_INFO_WITH_DISABLE = 0x00000008
 ```
 
-获取被禁用Ability对应的AbilityInfo。
+Used to obtain the ability information of disabled abilities.
 
 **Since:** 20
 
@@ -108,7 +108,7 @@ GET_ABILITY_INFO_WITH_DISABLE = 0x00000008
 GET_ABILITY_INFO_ONLY_SYSTEM_APP = 0x00000010
 ```
 
-获取系统应用对应的AbilityInfo。
+Used to obtain the ability information of system applications.
 
 **Since:** 20
 
@@ -126,7 +126,8 @@ GET_ABILITY_INFO_ONLY_SYSTEM_APP = 0x00000010
 GET_ABILITY_INFO_WITH_APP_LINKING = 0x00000040
 ```
 
-获取通过&lt;!--RP3--&gt;[域名校验](../../../application-models/app-linking-startup.md#实现原理)&lt;!--RP3End--&gt;筛选的AbilityInfo。
+Used to obtain the ability information that passes &lt;!--RP3--&gt;  
+[domain name verification](../../../application-models/app-linking-startup.md#working-principles)&lt;!--RP3End--&gt;.
 
 **Since:** 20
 
@@ -144,7 +145,7 @@ GET_ABILITY_INFO_WITH_APP_LINKING = 0x00000040
 GET_ABILITY_INFO_WITH_SKILL = 0x00000080
 ```
 
-获取包含skills的AbilityInfo。
+Used to obtain the ability information containing skills.
 
 **Since:** 20
 

@@ -4,7 +4,9 @@
 export type OnPasteCallback = (content: string, event: PasteEvent) => void
 ```
 
-粘贴回调。
+Defines a TextInput callback when onPaste.
+
+Anonymous Object Rectification.
 
 **Since:** 23
 
@@ -20,6 +22,6 @@ export type OnPasteCallback = (content: string, event: PasteEvent) => void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| content | string | Yes | 粘贴的文本内容。 |
-| event | [PasteEvent](../arkts-components/arkts-arkui-pasteevent-i.md) | Yes | 用户自定义的粘贴事件。 |
+| content | string | Yes | The text content of the paste. |
+| event | [PasteEvent](../arkts-components/arkts-arkui-pasteevent-i.md) | Yes | User-defined paste event. |
 

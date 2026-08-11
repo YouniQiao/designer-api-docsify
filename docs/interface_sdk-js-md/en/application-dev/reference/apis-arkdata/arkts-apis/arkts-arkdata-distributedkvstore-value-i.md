@@ -1,6 +1,6 @@
 # Value
 
-存储在数据库中的值对象。
+Defines the **value** object in a KV store.
 
 **Since:** 9
 
@@ -22,7 +22,7 @@ import { distributedKVStore } from 'kits/@kit.ArkData';
 type: ValueType
 ```
 
-值类型。
+Type of the value.
 
 **Type:** [ValueType](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-pasteboard-valuetype-t.md)
 
@@ -42,7 +42,7 @@ type: ValueType
 value: Uint8Array | string | long | double | boolean
 ```
 
-键值对中的值。Uint8Array、string类型的长度范围为0-[MAX_VALUE_LENGTH](arkts-arkdata-distributedkvstore-constants-i.md)，number和boolean类型的取值范围由其自身类型决定。
+Value of the KV pair.
 
 **Type:** ArkTS-Dyn: Uint8Array \| string \| number \| number \| boolean  <br>ArkTS-Sta：Uint8Array \| string \| long \| double \| boolean
 

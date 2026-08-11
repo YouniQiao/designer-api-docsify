@@ -1,8 +1,8 @@
 # AccessibilityAction (System API)
 
-表示无障碍节点元素可执行的操作枚举。
+Enumerates executable actions for accessibility node elements.
 
-无障碍节点元素是指，UI界面上可执行无障碍操作的一些组件，例如：按钮、文本输入框等组件。
+Accessibility node elements are UI components that support accessibility actions, such as buttons, text boxes, and so on.
 
 **Since:** 20
 
@@ -20,7 +20,7 @@
 ACCESSIBILITY_FOCUS = 0
 ```
 
-表示获得无障碍焦点。
+Gain an accessibility focus.
 
 **Since:** 20
 
@@ -38,7 +38,7 @@ ACCESSIBILITY_FOCUS = 0
 CLEAR_ACCESSIBILITY_FOCUS = 1
 ```
 
-表示清除无障碍焦点。
+Clear an accessibility focus.
 
 **Since:** 20
 
@@ -56,7 +56,7 @@ CLEAR_ACCESSIBILITY_FOCUS = 1
 FOCUS = 2
 ```
 
-表示组件获得焦点。
+Gain a focus for a component.
 
 **Since:** 20
 
@@ -74,7 +74,7 @@ FOCUS = 2
 CLEAR_FOCUS = 3
 ```
 
-表示清除组件焦点。
+Clear a focus for a component.
 
 **Since:** 20
 
@@ -92,7 +92,7 @@ CLEAR_FOCUS = 3
 CLICK = 4
 ```
 
-表示点击组件。
+Click a component.
 
 **Since:** 20
 
@@ -110,7 +110,7 @@ CLICK = 4
 LONG_CLICK = 5
 ```
 
-表示长按点击组件。
+Long press a component.
 
 **Since:** 20
 
@@ -128,7 +128,7 @@ LONG_CLICK = 5
 CUT = 6
 ```
 
-表示剪切组件内容。
+Cut the content of a component.
 
 **Since:** 20
 
@@ -146,7 +146,7 @@ CUT = 6
 COPY = 7
 ```
 
-表示拷贝组件内容。
+Copy the content of a component.
 
 **Since:** 20
 
@@ -164,7 +164,7 @@ COPY = 7
 PASTE = 8
 ```
 
-表示粘贴内容到组件。
+Paste the content into a component.
 
 **Since:** 20
 
@@ -182,7 +182,7 @@ PASTE = 8
 SELECT = 9
 ```
 
-表示选择组件。
+Select a component.
 
 **Since:** 20
 
@@ -200,7 +200,7 @@ SELECT = 9
 SET_TEXT = 10
 ```
 
-表示设置组件的文本。
+Set the text of a component.
 
 **Since:** 20
 
@@ -218,7 +218,7 @@ SET_TEXT = 10
 SCROLL_FORWARD = 11
 ```
 
-表示向前滚动组件。
+Scroll a component forward.
 
 **Since:** 20
 
@@ -236,7 +236,7 @@ SCROLL_FORWARD = 11
 SCROLL_BACKWARD = 12
 ```
 
-表示向后滚动组件。
+Scroll a component backward.
 
 **Since:** 20
 
@@ -254,7 +254,7 @@ SCROLL_BACKWARD = 12
 SET_SELECTION = 13
 ```
 
-表示选定组件内文本范围。
+Select a text range in a component.
 
 **Since:** 20
 
@@ -272,7 +272,7 @@ SET_SELECTION = 13
 SET_CURSOR_POSITION = 14
 ```
 
-表示设置组件内的光标位置。
+Set the cursor position in a component.
 
 **Since:** 20
 
@@ -290,7 +290,7 @@ SET_CURSOR_POSITION = 14
 HOME = 15
 ```
 
-表示组件返回首页操作。
+Return to the home screen.
 
 **Since:** 20
 
@@ -308,7 +308,7 @@ HOME = 15
 BACK = 16
 ```
 
-表示执行返回操作。
+Return to the previous screen.
 
 **Since:** 20
 
@@ -326,7 +326,7 @@ BACK = 16
 RECENT_TASK = 17
 ```
 
-显示最近任务。
+Open a recent task.
 
 **Since:** 20
 
@@ -344,7 +344,7 @@ RECENT_TASK = 17
 NOTIFICATION_CENTER = 18
 ```
 
-显示通知中心。
+Open the notification center.
 
 **Since:** 20
 
@@ -362,7 +362,7 @@ NOTIFICATION_CENTER = 18
 CONTROL_CENTER = 19
 ```
 
-显示控制中心。
+Open the control center.
 
 **Since:** 20
 
@@ -380,7 +380,7 @@ CONTROL_CENTER = 19
 SPAN_CLICK = 20
 ```
 
-对局部文本进行点击操作。
+Click a text span.
 
 **Since:** 20
 
@@ -398,7 +398,7 @@ SPAN_CLICK = 20
 INJECT_ACTION = 21
 ```
 
-表示注入动作。
+Injection action.
 
 **Since:** 26.0.0
 

@@ -9,7 +9,7 @@ export declare function ListItem(
 ): ListItemAttribute
 ```
 
-创建ListItem组件。
+Defines ListItem Component.
 
 **Since:** 23
 
@@ -44,11 +44,11 @@ export declare function ListItem(
 ): ListItemAttribute
 ```
 
-可扩展的ListItem组件的入口。
+Defines ListItem Component.
 
-**Since:** 26.0.0
+**Since:** 26.1.0
 
-**ArkTS mode:** ArkTS-Sta only, since version 26.0.0.
+**ArkTS mode:** ArkTS-Sta only, since version 26.1.0.
 
 **Decorator:** @Builder
 

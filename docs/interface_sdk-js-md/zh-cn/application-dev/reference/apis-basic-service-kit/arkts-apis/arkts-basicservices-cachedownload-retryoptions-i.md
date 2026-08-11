@@ -10,12 +10,6 @@ Task retry configuration.
 
 **系统能力：** SystemCapability.Request.FileTransferAgent
 
-## 导入模块
-
-```TypeScript
-import { cacheDownload } from 'kits/@kit.BasicServicesKit';
-```
-
 ## maxRetryCount
 
 ```TypeScript

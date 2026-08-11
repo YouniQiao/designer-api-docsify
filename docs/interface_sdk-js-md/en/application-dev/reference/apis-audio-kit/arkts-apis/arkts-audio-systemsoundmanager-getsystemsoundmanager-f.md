@@ -12,7 +12,7 @@ import { systemSoundManager } from 'kits/@kit.AudioKit';
 function getSystemSoundManager(): SystemSoundManager
 ```
 
-获取系统声音管理器。
+Gets system sound manager for all type sound.
 
 **Since:** 10
 
@@ -26,7 +26,7 @@ function getSystemSoundManager(): SystemSoundManager
 
 | Type | Description |
 | --- | --- |
-| [SystemSoundManager](arkts-audio-systemsoundmanager-systemsoundmanager-i.md) | 系统声音管理类。 |
+| [SystemSoundManager](arkts-audio-systemsoundmanager-systemsoundmanager-i.md) | SystemSoundManager instance. |
 
 ## Examples
 

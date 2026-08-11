@@ -1,7 +1,7 @@
 # ProcessRunningInfo
 
-运行进程信息，可以通过appManager中  
-[getProcessRunningInfos](arkts-ability-appmanager-getprocessrunninginfos-depr-f.md#getprocessrunninginfos)方法来获取运行进程信息。
+The module defines the running information of a process. The information can be obtained through  
+[getProcessRunningInfos](arkts-ability-appmanager-getprocessrunninginfos-f-sys.md#getprocessrunninginfos) of appManager.
 
 **Since:** 8
 
@@ -21,7 +21,7 @@
 bundleNames: Array<string>
 ```
 
-进程中所有运行的Bundle名称。
+Names of all running bundles in the process.
 
 **Type:** Array&lt;string&gt;
 
@@ -45,7 +45,7 @@ bundleNames: Array<string>
 pid: number
 ```
 
-进程ID。
+Process ID.
 
 **Type:** number
 
@@ -69,7 +69,7 @@ pid: number
 processName: string
 ```
 
-进程名称。
+Process name.
 
 **Type:** string
 
@@ -93,7 +93,7 @@ processName: string
 uid: number
 ```
 
-应用程序的UID。
+UID of the application.
 
 **Type:** number
 

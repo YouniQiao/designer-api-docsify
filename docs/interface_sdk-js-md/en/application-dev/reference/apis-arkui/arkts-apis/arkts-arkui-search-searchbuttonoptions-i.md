@@ -1,6 +1,6 @@
 # SearchButtonOptions
 
-搜索按钮样式对象。
+Defines the SearchButton options
 
 **Since:** 23
 
@@ -16,11 +16,9 @@
 autoDisable?: boolean
 ```
 
-Search无文本内容时按钮置灰且不可点击。
+Automatically disables the search button before the user enters text
 
-默认值：false
-
-true表示开启按钮置灰功能，false表示不开启。
+&lt;p&gt;&lt;strong&gt;NOTE&lt;/strong&gt;:&lt;br&gt;&lt;em&gt;true&lt;/em&gt;: The search button is disabled when there is no text input.&lt;br&gt;&lt;em&gt;false&lt;/em&gt;: The search button remains enabled regardless of the text input.&lt;/p&gt;
 
 **Type:** boolean
 
@@ -42,9 +40,7 @@ true表示开启按钮置灰功能，false表示不开启。
 fontColor?: ResourceColor
 ```
 
-文本按钮字体颜色。
-
-默认值：Wearable设备是'#007dff'，TV设备是'#5291ff'，其他设备是'#5ea1ff'，均是蓝色。
+Set the SearchButton fontColor
 
 **Type:** [ResourceColor](arkts-arkui-resourcecolor-t.md)
 
@@ -64,9 +60,9 @@ fontColor?: ResourceColor
 fontSize?: Length
 ```
 
-文本按钮字体大小，不支持百分比。
+Set the SearchButton fontSize
 
-默认值：Wearable设备15fp，其他设备14fp。
+&lt;p&gt;&lt;strong&gt;NOTE&lt;/strong&gt;:&lt;br&gt;It cannot be set in percentage.&lt;/p&gt;
 
 **Type:** [Length](arkts-arkui-length-t.md)
 

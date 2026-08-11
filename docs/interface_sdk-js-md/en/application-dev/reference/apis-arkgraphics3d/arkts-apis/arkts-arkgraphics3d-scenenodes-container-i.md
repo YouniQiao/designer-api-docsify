@@ -1,6 +1,6 @@
 # Container
 
-定义场景对象容器.
+Defines a scene object container.
 
 **Since:** 12
 
@@ -16,7 +16,7 @@
 append(item: T): void
 ```
 
-将项目追加到容器.
+Append an item to the container.
 
 **Since:** 12
 
@@ -30,7 +30,7 @@ append(item: T): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| item | T | Yes | 要追加到容器末尾的项目 |
+| item | T | Yes | the item append to the end of container |
 
 ## clear
 
@@ -38,7 +38,7 @@ append(item: T): void
 clear(): void
 ```
 
-清空所有子节点.
+Clear all children.
 
 **Since:** 12
 
@@ -60,7 +60,7 @@ ArkTS-Sta:
 count(): int
 ```
 
-返回容器中的项目数量.
+Obtains the number of nodes in the container.
 
 **Since:** 12
 
@@ -74,7 +74,7 @@ count(): int
 
 | Type | Description |
 | --- | --- |
-| ArkTS-Dyn: number  <br>ArkTS-Sta：int | 容器的数量 |
+| ArkTS-Dyn: number  <br>ArkTS-Sta：int | Number of nodes in the container. The value is a non-negative integer. |
 
 ## get
 
@@ -88,7 +88,7 @@ ArkTS-Sta:
 get(index: int): T | null
 ```
 
-从容器的子节点列表中返回给定索引的子节点.
+Obtains a node of a given index. If no node is obtained, null is returned.
 
 **Since:** 12
 
@@ -102,13 +102,13 @@ get(index: int): T | null
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| index | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | 要返回的子节点的索引 |
+| index | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | Index of the node. The value is an integer greater than or equal to 0. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| T | 返回由索引指定的项目 |
+| T | Object obtained. If no object is obtained, null is returned. |
 
 ## insertAfter
 
@@ -116,7 +116,7 @@ get(index: int): T | null
 insertAfter(item: T, sibling: T | null): void
 ```
 
-插入项目.
+Insert an item.
 
 **Since:** 12
 
@@ -130,8 +130,8 @@ insertAfter(item: T, sibling: T | null): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| item | T | Yes | 要插入到容器的项目 |
-| sibling | T \| null | Yes | 在此项目后插入，如果sibling为null则插入到头部 |
+| item | T | Yes | the item insert to the container |
+| sibling | T \| null | Yes | insert after this item, insert to the head if sibling is null |
 
 ## remove
 
@@ -139,7 +139,7 @@ insertAfter(item: T, sibling: T | null): void
 remove(item: T): void
 ```
 
-从容器的子节点中移除项目.
+Remove an item from Container's children.
 
 **Since:** 12
 
@@ -153,5 +153,5 @@ remove(item: T): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| item | T | Yes | 要移除的项目 |
+| item | T | Yes | the item to be removed |
 

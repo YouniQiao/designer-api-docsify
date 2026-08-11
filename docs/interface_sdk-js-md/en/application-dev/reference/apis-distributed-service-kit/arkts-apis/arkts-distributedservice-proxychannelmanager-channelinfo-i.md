@@ -1,6 +1,6 @@
 # ChannelInfo
 
-打开代理通道函数的入参，包括对端设备的MAC地址和监听服务的UUID。
+Represents the proxy channel information, including the MAC address and service UUID of the peer device.
 
 **Since:** 20
 
@@ -22,7 +22,7 @@ import { proxyChannelManager } from 'kits/@kit.DistributedServiceKit';
 linkType: LinkType
 ```
 
-代理通道的链路类型。
+Link type of the proxy channel.
 
 **Type:** [LinkType](arkts-distributedservice-proxychannelmanager-linktype-e.md)
 
@@ -42,7 +42,7 @@ linkType: LinkType
 peerDevAddr: string
 ```
 
-对端设备的MAC地址。
+MAC address of the peer device.
 
 **Type:** string
 
@@ -62,7 +62,7 @@ peerDevAddr: string
 peerUuid: string
 ```
 
-对端监听的服务的UUID。
+Service UUID of the peer device.
 
 **Type:** string
 

@@ -10,12 +10,6 @@
 
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
-## 导入模块
-
-```TypeScript
-import { effectKit } from 'kits/@kit.ArkGraphics2D';
-```
-
 ## ellipticalGradientBlur
 
 ArkTS-Dyn:
@@ -63,7 +57,7 @@ ellipticalGradientBlur(blurRadius: double, center: EllipticalMaskCenter,
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 202 | 权限校验失败，非系统应用调用系统接口。 |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | 权限校验失败，非系统应用调用系统接口。 |
 
 ## 示例
 
@@ -72,9 +66,9 @@ import { image } from '@kit.ImageKit';
 import { effectKit } from '@kit.ArkGraphics2D';
 import { common } from '@kit.AbilityKit';
 // 传入读取的图片数据
-function ImageEllipticalGradientBlur(imageBuffer: ArrayBuffer): Promise<image.PixelMap> {
+function ImageEllipticalGradientBlur(Image: ArrayBuffer): Promise<image.PixelMap> {
   return new Promise((resolve, reject) => {
-    let imageSource = image.createImageSource(imageBuffer);
+    let imageSource = image.createImageSource(Image);
     let blurRadius:number = 25;
     let fractionStops:FractionStop[] = [[0, 0.2], [0.5, 0.7]];
     let maskRadius:effectKit.EllipticalMaskRadius = [1, 1];
@@ -84,13 +78,13 @@ function ImageEllipticalGradientBlur(imageBuffer: ArrayBuffer): Promise<image.Pi
       if (headFilter != null) {
         // 对图片添加效果标识
         headFilter.ellipticalGradientBlur(blurRadius, center, maskRadius, fractionStops);
-        // 按照添加的效果标识对图片进行处理并且返回处理好的图片数据
-        headFilter.getEffectPixelMap(false).then(imageData => {
-          resolve(imageData);
-        });
       }
-    });
-  });
+      // 按照添加的效果标识对图片进行处理并且返回处理好的图片数据
+      headFilter.getEffectPixelMap(false).then(imageData => {
+        resolve(imageData);
+      })
+    })
+  })
 }
 
 @Entry
@@ -100,19 +94,19 @@ struct Index {
   private imageBuffer: ArrayBuffer | undefined = undefined;
   // 读取rawfile文件夹下的图片文件，也可根据需求更换读取方式，保证最终得到的是ArrayBuffer格式的图片数据即可
   async getFileBuffer(): Promise<ArrayBuffer | undefined> {
-    try {
+    try{
       const context: Context = this.getUIContext().getHostContext() as common.UIAbilityContext;
       const fileData: Uint8Array = await context.resourceManager.getRawFileContent('image.png');
       const buffer: ArrayBuffer = fileData.buffer.slice(0);
       return buffer;
-    } catch (err) {
-      return undefined;
+    }catch (err){
+      return undefined
     }
   }
 
-  async aboutToAppear(): Promise<void> {
+  async aboutToAppear(): Promise<void>{
     this.imageBuffer = await this.getFileBuffer();
-    if (this.imageBuffer == undefined) {
+    if(this.imageBuffer == undefined){
       return;
     }
     // 图片处理为异步操作，可以依据是否需要拿到处理好的图片数据再进行下一步逻辑，按需添加await进行同步

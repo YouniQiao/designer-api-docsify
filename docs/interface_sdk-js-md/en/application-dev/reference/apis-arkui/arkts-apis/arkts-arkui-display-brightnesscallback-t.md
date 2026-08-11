@@ -4,7 +4,7 @@
 type BrightnessCallback<T1, T2> = (data1: T1, data2: T2) => void
 ```
 
-监听屏幕亮度信息时使用的回调函数类型。
+Defines the callback function used to listen for screen brightness information.
 
 **Since:** 22
 
@@ -18,6 +18,6 @@ type BrightnessCallback<T1, T2> = (data1: T1, data2: T2) => void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| data1 | T1 | Yes | 表示displayId，类型为number。 |
-| data2 | T2 | Yes | 表示brightnessInfo，类型为[BrightnessInfo](arkts-arkui-display-brightnessinfo-i.md)。 |
+| data1 | T1 | Yes | Display ID. The value is of the number type. |
+| data2 | T2 | Yes | Brightness information. The value is of the [BrightnessInfo](arkts-arkui-display-brightnessinfo-i.md) type. |
 

@@ -1,6 +1,6 @@
 # X509CertMatchParameters
 
-用于匹配证书的过滤参数。如果参数中任一项都未指定，则匹配所有证书。
+Defines the parameters used to match a certificate. If no parameter is specified, all certificates are matched.
 
 **Since:** 11
 
@@ -22,7 +22,7 @@ import { cert } from 'kits/@kit.DeviceCertificateKit';
 authorityKeyIdentifier?: Uint8Array
 ```
 
-指定证书颁发机构密钥。
+Key of the certificate authority (CA).
 
 **Type:** Uint8Array
 
@@ -42,7 +42,7 @@ authorityKeyIdentifier?: Uint8Array
 certPolicy?: Array<string>
 ```
 
-指定证书策略。
+Certificate policy.
 
 **Type:** Array&lt;string&gt;
 
@@ -62,7 +62,7 @@ certPolicy?: Array<string>
 extendedKeyUsage?: Array<string>
 ```
 
-指定扩展密钥用途。
+Extended key usage.
 
 **Type:** Array&lt;string&gt;
 
@@ -82,7 +82,7 @@ extendedKeyUsage?: Array<string>
 issuer?: Uint8Array
 ```
 
-指定证书颁发者，为DER编码格式。
+Certificate issuer, in DER format.
 
 **Type:** Uint8Array
 
@@ -102,7 +102,7 @@ issuer?: Uint8Array
 keyUsage?: Array<boolean>
 ```
 
-指定是否需要匹配密钥用途。true为需要，false为不需要。
+Whether to match the key usage. **true**: yes; **false**: no.
 
 **Type:** Array&lt;boolean&gt;
 
@@ -122,7 +122,7 @@ keyUsage?: Array<boolean>
 matchAllSubjectAltNames?: boolean
 ```
 
-指定是否需要匹配证书主体备用名称。true为需要，false为不需要。
+Whether to match all SANs of the certificate. **true**: yes; **false**: no.
 
 **Type:** boolean
 
@@ -142,7 +142,7 @@ matchAllSubjectAltNames?: boolean
 minPathLenConstraint?: int
 ```
 
-指定证书CA路径长度。
+Minimum length of the certification path (chain of trust) that can be built from the certificate to a trusted root CA.
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
@@ -162,7 +162,7 @@ minPathLenConstraint?: int
 nameConstraints?: Uint8Array
 ```
 
-指定证书的使用者名称。
+Constraints on the subject names that can be included in certificates.
 
 **Type:** Uint8Array
 
@@ -182,7 +182,7 @@ nameConstraints?: Uint8Array
 privateKey?: string | Uint8Array
 ```
 
-指定证书私钥，string表示PEM格式私钥，Uint8Array表示DER格式私钥。
+Specifies the certificate private key. string indicates a private key in PEM format, and Uint8Array indicates a private key in DER format.
 
 **Type:** string \| Uint8Array
 
@@ -204,7 +204,7 @@ privateKey?: string | Uint8Array
 privateKeyValid?: string
 ```
 
-指定证书私钥有效期。
+Validity period of the certificate private key.
 
 **Type:** string
 
@@ -224,7 +224,7 @@ privateKeyValid?: string
 publicKey?: DataBlob
 ```
 
-指定证书公钥，DER编码格式。
+Public key of the certificate, in DER format.
 
 **Type:** [DataBlob](../../apis-crypto-architecture-kit/arkts-apis/arkts-cryptoarchitecture-cryptoframework-datablob-i.md)
 
@@ -244,7 +244,7 @@ publicKey?: DataBlob
 publicKeyAlgID?: string
 ```
 
-指定证书公钥的算法。
+Algorithm of the certificate public key.
 
 **Type:** string
 
@@ -264,7 +264,7 @@ publicKeyAlgID?: string
 serialNumber?: bigint
 ```
 
-指定证书的序列号。
+Serial number of the certificate.
 
 **Type:** bigint
 
@@ -284,7 +284,7 @@ serialNumber?: bigint
 subject?: Uint8Array
 ```
 
-指定证书主体名称，DER编码格式。
+Certificate subject name, in DER format.
 
 **Type:** Uint8Array
 
@@ -304,7 +304,7 @@ subject?: Uint8Array
 subjectAlternativeNames?: Array<GeneralName>
 ```
 
-指定证书主体备用名称。
+Subject Alternative Names (SANs) of the certificate.
 
 **Type:** Array&lt;GeneralName&gt;
 
@@ -324,7 +324,7 @@ subjectAlternativeNames?: Array<GeneralName>
 subjectKeyIdentifier?: Uint8Array
 ```
 
-指定证书公钥。
+Identifier of the public key of the certificate's subject.
 
 **Type:** Uint8Array
 
@@ -344,7 +344,7 @@ subjectKeyIdentifier?: Uint8Array
 validDate?: string
 ```
 
-指定证书有效期。
+Certificate validity period.
 
 **Type:** string
 
@@ -364,7 +364,7 @@ validDate?: string
 x509Cert?: X509Cert
 ```
 
-指定具体的证书对象。
+Certificate object.
 
 **Type:** [X509Cert](../../apis-network-kit/arkts-apis/arkts-network-http-x509cert-t.md)
 

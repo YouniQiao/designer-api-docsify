@@ -1,6 +1,6 @@
 # SurfaceConfig
 
-用于描述XComponent持有的Surface在渲染时是否需要被视为不透明。
+Surface config.
 
 **Since:** 23
 
@@ -16,11 +16,7 @@
 isOpaque?: boolean
 ```
 
-XComponent持有的Surface在渲染时是否需要被视为不透明，未设置时默认取值为false，即在渲染时会应用Surface中绘制内容像素的透明度。
-
-true：表示需要被视为不透明；false：表示不需要被视为不透明。
-
-默认值：false
+Whether the surface held by XComponent needs to be considered opaque,even if the surface has translucent pixel.True means needing to be considered opaque, false otherwise.
 
 **Type:** boolean
 

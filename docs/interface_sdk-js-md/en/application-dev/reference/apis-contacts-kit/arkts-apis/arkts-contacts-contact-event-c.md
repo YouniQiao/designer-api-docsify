@@ -1,6 +1,6 @@
 # Event
 
-联系人事件类。
+Defines a contact's event.
 
 **Since:** 7
 
@@ -22,7 +22,7 @@ import { contact } from 'kits/@kit.ContactsKit';
 static readonly CUSTOM_LABEL: 0
 ```
 
-自定义邮箱类型，默认值为0。
+Custom event type, the default value is **0**.
 
 **Type:** 0
 
@@ -42,7 +42,7 @@ static readonly CUSTOM_LABEL: 0
 static readonly EVENT_ANNIVERSARY: 1
 ```
 
-自定义邮箱类型，默认值为0。
+Anniversary event type, the default value is **1**.
 
 **Type:** 1
 
@@ -62,7 +62,7 @@ static readonly EVENT_ANNIVERSARY: 1
 static readonly EVENT_BIRTHDAY: 3
 ```
 
-生日事件类型，默认值为3。
+Birthday event, the default value is **3**.
 
 **Type:** 3
 
@@ -82,7 +82,7 @@ static readonly EVENT_BIRTHDAY: 3
 static readonly EVENT_OTHER: 2
 ```
 
-自定义邮箱类型，默认值为0。
+Other event type, the default value is **2**.
 
 **Type:** 2
 
@@ -102,7 +102,7 @@ static readonly EVENT_OTHER: 2
 static readonly INVALID_LABEL_ID: -1
 ```
 
-无效邮箱类型，默认值为-1。
+Invalid event type, the default value is **-1**.
 
 **Type:** -1
 
@@ -122,7 +122,7 @@ static readonly INVALID_LABEL_ID: -1
 eventDate: string
 ```
 
-事件的日期。
+Event date.
 
 **Type:** string
 
@@ -142,7 +142,7 @@ eventDate: string
 labelId?: number
 ```
 
-邮箱的类型。
+Event type.
 
 **Type:** number
 
@@ -162,7 +162,7 @@ labelId?: number
 labelName?: string
 ```
 
-邮箱的类型名称。
+Name of the Event type.
 
 **Type:** string
 

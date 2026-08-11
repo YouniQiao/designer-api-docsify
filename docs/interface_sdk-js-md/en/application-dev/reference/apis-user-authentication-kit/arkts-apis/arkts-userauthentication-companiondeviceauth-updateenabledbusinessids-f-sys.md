@@ -12,9 +12,7 @@ import { companionDeviceAuth } from 'kits/@kit.UserAuthenticationKit';
 function updateEnabledBusinessIds(templateId: Uint8Array, enabledBusinessIds: int[]): Promise<void>
 ```
 
-更新指定伴随设备模板支持的业务范围。用于修改已注册模板的启用业务ID列表，从而控制该模板可参与的业务场景。使用Promise异步回调。
-
-生效机制：更新立即生效，下一次认证按新的业务范围判断，无需重启应用或重新认证。
+Updates the service scope supported by the specified companion device template. This API is used to modify the list of service IDs enabled for a registered template, thereby controlling the service scenarios in which the template can be used. This API uses a promise to return the result.
 
 **Since:** 23
 
@@ -34,24 +32,24 @@ function updateEnabledBusinessIds(templateId: Uint8Array, enabledBusinessIds: in
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| templateId | Uint8Array | Yes | 目标模板ID。要更新业务范围的模板的唯一标识，可通过 [getTemplateStatus](arkts-userauthentication-companiondeviceauth-statusmonitor-i-sys.md#gettemplatestatus)获取。 |
-| enabledBusinessIds | ArkTS-Dyn: number[]  <br>ArkTS-Sta：int[] | Yes | 模板支持的业务ID集合。要启用的业务场景列表，如[BusinessId.DEFAULT]。不同业务ID对应不同的认证场景，应用可根据业务需求配置（厂商自定 义业务ID需 ≥ 10000）。 |
+| templateId | Uint8Array | Yes | ID of the target template. Unique ID of the template whose service scope is to be updated, which can be obtained through [getTemplateStatus](arkts-userauthentication-companiondeviceauth-statusmonitor-i-sys.md#gettemplatestatus). |
+| enabledBusinessIds | ArkTS-Dyn: number[]  <br>ArkTS-Sta：int[] | Yes | ID set of services supported by the template. It indicates the list of service scenarios to be enabled, such as [DEFAULT] and [Service ID for unlocking the screen]. Different service IDs correspond to different authentication scenarios. You can configure the service IDs based on service requirements. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise对象，无返回结果。 |
+| Promise&lt;void&gt; | Promise that returns no value. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 32600001 | The system service is not working properly. Please try again later. |
-| 32600003 | The business ID is invalid. |
-| 32600002 | The template is not found. |
-| 201 | Permission denied. |
-| 202 | Not system application. |
+| [32600001](../errorcode-useriam.md#32600001-system-service-not-working-properly) | The system service is not working properly. Please try again later. |
+| [32600003](../errorcode-useriam.md#32600003-invalid-service-id) | The business ID is invalid. |
+| [32600002](../errorcode-useriam.md#32600002-template-not-found) | The template is not found. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system application. |
 
 ## Examples
 

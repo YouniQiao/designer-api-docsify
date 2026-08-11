@@ -4,7 +4,7 @@
 type PiPLiveActionEvent = 'playbackStateChanged' | 'voiceStateChanged'
 ```
 
-直播控制事件类型。
+Defines the PiP action event in a live.
 
 **Since:** 11
 
@@ -18,6 +18,6 @@ type PiPLiveActionEvent = 'playbackStateChanged' | 'voiceStateChanged'
 
 | Type | Description |
 | --- | --- |
-| 'playbackStateChanged' | 播放或暂停直播。 |
-| 'voiceStateChanged' | 静音或解除静音。 [since 12] |
+| 'playbackStateChanged' | The live is played or paused. |
+| 'voiceStateChanged' | The speaker is muted or unmuted. [since 12] |
 

@@ -1,6 +1,6 @@
 # FileConflictOptions
 
-定义文件拷贝冲突时的选项。
+Enumerates options for file copy conflicts.
 
 **Since:** 15
 
@@ -16,7 +16,7 @@
 OVERWRITE = 0
 ```
 
-目标路径存在同文件名时覆盖。
+Overwrites the file with the same name in the destination path.
 
 **Since:** 15
 
@@ -34,7 +34,7 @@ OVERWRITE = 0
 SKIP = 1
 ```
 
-目标路径存在同文件名时跳过，若设置SKIP，应用获取到的粘贴数据不包含跳过文件。
+Skips the file with the same name in the destination path. If **SKIP** is set, the copied data of the skipped file is not pasted to the application.
 
 **Since:** 15
 

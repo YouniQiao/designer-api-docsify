@@ -1,11 +1,5 @@
 # bindDriverWithDeviceId
 
-## 导入模块
-
-```TypeScript
-import { deviceManager } from 'kits/@kit.DriverDevelopmentKit';
-```
-
 ## bindDriverWithDeviceId
 
 ```TypeScript
@@ -41,9 +35,9 @@ function bindDriverWithDeviceId(deviceId: long, onDisconnect: AsyncCallback<long
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 26300001 | ExternalDeviceManager service exception. |
-| 26300002 | The driver service does not allow any client to bind. |
-| 201 | The permission check failed. |
+| [26300001](../../apis-driverdevelopment-kit/errorcode-deviceManager.md#26300001-扩展外设驱动服务异常) | ExternalDeviceManager service exception. |
+| [26300002](../../apis-driverdevelopment-kit/errorcode-deviceManager.md#26300002-驱动服务端不允许驱动客户端绑定) | The driver service does not allow any client to bind. |
+| [201](../../errorcode-universal.md#201-权限校验失败) | The permission check failed. |
 
 ## 示例
 

@@ -6,7 +6,7 @@ struct OH_PixelmapNative
 
 ## Overview
 
-Introduces the native pixel map information defined by Image Kit.
+The OH_PixelmapNative struct describes an uncompressed PixelMap format, which is encapsulated at the nativelayer after images are decoded.<br>To create an OH_PixelmapNative object, call{@link OH_PixelmapNative_CreatePixelmap}. By default, BGRA_8888 is used for data processing.<br>To release anOH_PixelmapNative object, call {@link OH_PixelmapNative_Release}.<br>The table below describes the content andoperation mode of the OH_PixelmapNative struct.
 
 **Since**: 12
 

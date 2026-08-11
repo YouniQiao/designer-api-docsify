@@ -1,11 +1,12 @@
 # ElementName
 
-ElementName信息，通过接口  
-[Context.getElementName](../../../reference/apis-ability-kit/js-apis-inner-app-context.md#contextgetelementname7)获取。
+The module provides element name information, which can be obtained through  
+[Context.getElementName](arkts-ability-context-t.md).
 
-> **说明：**
+> **NOTE：**
 > 
-> 从API version 9开始，该模块不再维护，建议使用[bundleManager-ElementName](arkts-ability-elementname-elementname-depr-i.md)替代。
+> The APIs of this module have been deprecated since API version 9. You are advised to use
+> [bundleManager-ElementName](arkts-ability-elementname-elementname-depr-i.md) instead.
 
 **Since:** 7
 
@@ -25,7 +26,7 @@ ElementName信息，通过接口
 abilityName: string
 ```
 
-Ability的名称。
+Ability name.
 
 **Type:** string
 
@@ -49,7 +50,7 @@ Ability的名称。
 bundleName: string
 ```
 
-应用Bundle的名称。
+Bundle name.
 
 **Type:** string
 
@@ -73,7 +74,7 @@ bundleName: string
 deviceId?: string
 ```
 
-设备id值。
+Device ID.
 
 **Type:** string
 
@@ -97,7 +98,7 @@ deviceId?: string
 shortName?: string
 ```
 
-Ability的短名称。
+Short name of the ability.
 
 **Type:** string
 
@@ -121,7 +122,7 @@ Ability的短名称。
 uri?: string
 ```
 
-资源标识符。
+Resource ID.
 
 **Type:** string
 

@@ -1,6 +1,6 @@
 # AdminType
 
-设备管理应用的类型。
+Enumerates the types of device administrator applications.
 
 **Since:** 15
 
@@ -16,7 +16,8 @@
 ADMIN_TYPE_NORMAL = 0x00
 ```
 
-普通设备管理应用，激活后应用可卸载，其[企业设备管理扩展能力](../../../mdm/mdm-kit-term.md#enterpriseadminextensionability企业设备管理扩展能力)组件将开机自启和组件进程死亡后能重新拉起。
+After a common device administrator application is enabled, it can be uninstalled. Its  
+[EnterpriseAdminExtensionAbility](../../../mdm/mdm-kit-term.md#enterpriseadminextensionability) component will automatically start upon device startup and can be restarted after the component process dies.
 
 **Since:** 9
 
@@ -32,7 +33,8 @@ ADMIN_TYPE_NORMAL = 0x00
 ADMIN_TYPE_SUPER = 0x01
 ```
 
-超级设备管理应用，激活后应用不可卸载，其[企业设备管理扩展能力](../../../mdm/mdm-kit-term.md#enterpriseadminextensionability企业设备管理扩展能力)组件将开机自启和组件进程死亡后能重新拉起。
+After a super device administrator application is enabled, it cannot be uninstalled. Its  
+[EnterpriseAdminExtensionAbility](../../../mdm/mdm-kit-term.md#enterpriseadminextensionability) component will automatically start upon device startup and can be restarted after the component process dies.
 
 **Since:** 9
 
@@ -48,7 +50,7 @@ ADMIN_TYPE_SUPER = 0x01
 ADMIN_TYPE_BYOD = 0x02
 ```
 
-BYOD设备管理应用。
+BYOD device administrator application.
 
 **Since:** 15
 

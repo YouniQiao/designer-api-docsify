@@ -1,6 +1,6 @@
 # MoreButtonOptions
 
-更多图标的菜单选项。设置后，可自定义更多按钮的背景模糊样式、背景效果等。
+Defines the options for the more button menu.
 
 **Since:** 19
 
@@ -16,7 +16,7 @@
 backgroundBlurStyle?: BlurStyle
 ```
 
-更多图标的菜单背景模糊样式，设置后，更多图标的菜单将应用指定的模糊样式；不设置时关闭背景模糊效果。
+Background blur style of the more button menu. If this parameter is not set, background blur is disabled.
 
 **Type:** [BlurStyle](arkts-arkui-blurstyle-e.md)
 
@@ -38,13 +38,13 @@ backgroundBlurStyle?: BlurStyle
 backgroundBlurStyleOptions?: BackgroundBlurStyleOptions
 ```
 
-更多图标的菜单背景模糊选项。
+Options for the title bar background blur style.
 
-**说明：**
+**NOTE：**
 
-只在设置了backgroundBlurStyle时生效。
+This parameter is only effective when **backgroundBlurStyle** is set.
 
-不建议与backgroundEffect同时使用。
+Avoid using this API in conjunction with **backgroundEffect**.
 
 **Type:** [BackgroundBlurStyleOptions](arkts-arkui-backgroundblurstyleoptions-i.md)
 
@@ -66,11 +66,11 @@ backgroundBlurStyleOptions?: BackgroundBlurStyleOptions
 backgroundEffect?: BackgroundEffectOptions
 ```
 
-设置更多图标的菜单背景属性包括：模糊半径，亮度，饱和度，颜色等。
+Title bar background properties, including blur radius, brightness, saturation, and color.
 
-**说明：**
+**NOTE：**
 
-不建议与backgroundBlurStyleOptions同时使用。
+Avoid using this API in conjunction with **backgroundBlurStyleOptions**.
 
 **Type:** [BackgroundEffectOptions](arkts-arkui-backgroundeffectoptions-i.md)
 

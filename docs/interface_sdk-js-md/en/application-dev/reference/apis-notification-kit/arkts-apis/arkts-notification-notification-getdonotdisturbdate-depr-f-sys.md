@@ -6,7 +6,7 @@
 function getDoNotDisturbDate(callback: AsyncCallback<DoNotDisturbDate>): void
 ```
 
-查询免打扰时间（Callback形式）。
+Obtains the DND time. This API uses an asynchronous callback to return the result.
 
 **Since:** 8
 
@@ -28,7 +28,7 @@ function getDoNotDisturbDate(callback: AsyncCallback<DoNotDisturbDate>): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;DoNotDisturbDate&gt; | Yes | 查询免打扰时间回调函数。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;DoNotDisturbDate&gt; | Yes | Callback used to return the result. |
 
 
 ## getDoNotDisturbDate
@@ -37,7 +37,7 @@ function getDoNotDisturbDate(callback: AsyncCallback<DoNotDisturbDate>): void
 function getDoNotDisturbDate(): Promise<DoNotDisturbDate>
 ```
 
-查询免打扰时间（Promise形式）。
+Obtains the DND time. This API uses a promise to return the result.
 
 **Since:** 8
 
@@ -59,7 +59,7 @@ function getDoNotDisturbDate(): Promise<DoNotDisturbDate>
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;DoNotDisturbDate&gt; | 以Promise形式返回查询到的免打扰时间。 |
+| Promise&lt;DoNotDisturbDate&gt; | Promise used to return the result. |
 
 
 ## getDoNotDisturbDate
@@ -68,7 +68,7 @@ function getDoNotDisturbDate(): Promise<DoNotDisturbDate>
 function getDoNotDisturbDate(userId: number, callback: AsyncCallback<DoNotDisturbDate>): void
 ```
 
-查询指定用户的免打扰时间（Callback形式）。
+Obtains the DND time of a specified user. This API uses an asynchronous callback to return the result.
 
 **Since:** 8
 
@@ -90,8 +90,8 @@ function getDoNotDisturbDate(userId: number, callback: AsyncCallback<DoNotDistur
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| userId | number | Yes | 用户ID。 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;DoNotDisturbDate&gt; | Yes | 查询免打扰时间回调函数。 |
+| userId | number | Yes | User ID. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;DoNotDisturbDate&gt; | Yes | Callback used to return the result. |
 
 
 ## getDoNotDisturbDate
@@ -100,7 +100,7 @@ function getDoNotDisturbDate(userId: number, callback: AsyncCallback<DoNotDistur
 function getDoNotDisturbDate(userId: number): Promise<DoNotDisturbDate>
 ```
 
-查询指定用户的免打扰时间（Promise形式）。
+Obtains the DND time of a specified user. This API uses a promise to return the result.
 
 **Since:** 8
 
@@ -122,11 +122,11 @@ function getDoNotDisturbDate(userId: number): Promise<DoNotDisturbDate>
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| userId | number | Yes | 用户ID。 |
+| userId | number | Yes | User ID. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;DoNotDisturbDate&gt; | 以Promise形式返回查询到的免打扰时间。 |
+| Promise&lt;DoNotDisturbDate&gt; | Promise used to return the result. |
 

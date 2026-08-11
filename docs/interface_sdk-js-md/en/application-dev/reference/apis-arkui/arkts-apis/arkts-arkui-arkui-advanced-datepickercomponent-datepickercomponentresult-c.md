@@ -1,6 +1,6 @@
 # DatePickerComponentResult
 
-DatePickerComponentResult定义日期时间选择器的选择结果。
+DatePickerComponentResult defines the selection result of the date time picker.
 
 **Since:** 26.0.0
 
@@ -22,7 +22,7 @@ import { DisplayMode, TimeFormat, DatePickerComponent, DateMode, DatePickerCompo
 day?: int
 ```
 
-所选日期的日。取值限定为整数。
+Day of the selected date.The value should be an integer.
 
 **Type:** int
 
@@ -42,7 +42,7 @@ day?: int
 hour?: int
 ```
 
-所选时间的小时部分。取值限定为整数。
+Hour part of the selected time.The value should be an integer.
 
 **Type:** int
 
@@ -62,7 +62,7 @@ hour?: int
 minute?: int
 ```
 
-所选时间的分钟部分。取值限定为整数。
+Minute part of the selected time.The value should be an integer.
 
 **Type:** int
 
@@ -82,7 +82,7 @@ minute?: int
 month?: int
 ```
 
-所选日期的月份索引，从0开始，0表示1月，11表示12月。取值限定为整数。
+Month index of the selected date, starting from 0, where 0 indicates January and 11 indicates December.The value should be an integer.
 
 **Type:** int
 
@@ -102,7 +102,7 @@ month?: int
 second?: int
 ```
 
-所选时间的秒部分。取值限定为整数。
+Second part of the selected time.The value should be an integer.
 
 **Type:** int
 
@@ -122,7 +122,7 @@ second?: int
 year?: int
 ```
 
-所选日期的年份。取值限定为整数。
+Year of the selected date.The value should be an integer.
 
 **Type:** int
 

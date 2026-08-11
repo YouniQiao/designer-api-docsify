@@ -1,6 +1,6 @@
 # SymbolGlyphFrameNode
 
-定义SymbolGlyph类型的FrameNode。
+Define the SymbolGlyph type of FrameNode.
 
 **Inheritance/Implementation:** SymbolGlyphFrameNode extends [TypedFrameNode<SymbolGlyphAttribute>](TypedFrameNode<SymbolGlyphAttribute>)
 
@@ -18,7 +18,7 @@
 abstract initialize(value?: Resource): SymbolGlyphAttribute
 ```
 
-初始化SymbolGlyph类型的FrameNode。
+Initialize SymbolGlyph FrameNode.
 
 **Since:** 23
 

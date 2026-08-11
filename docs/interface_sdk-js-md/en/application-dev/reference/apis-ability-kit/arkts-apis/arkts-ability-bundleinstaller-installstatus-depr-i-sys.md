@@ -1,6 +1,6 @@
 # InstallStatus (System API)
 
-应用程序安装卸载的结果。
+Describes the bundle installation or uninstall status.
 
 **Since:** 7
 
@@ -20,7 +20,8 @@
 status: bundle.InstallErrorCode
 ```
 
-表示安装或卸载错误状态码。取值范围：枚举值[InstallErrorCode](arkts-ability-bundle-installerrorcode-e.md)。
+Installation or uninstall error code. The value must be defined in  
+[InstallErrorCode](arkts-ability-bundle-installerrorcode-e.md).
 
 **Type:** bundle.InstallErrorCode
 
@@ -44,9 +45,45 @@ status: bundle.InstallErrorCode
 statusMessage: string
 ```
 
-表示安装或卸载的字符串结果信息。取值范围包括：
+Installation or uninstall status message.
 
-"SUCCESS" : 安装成功。&lt;/br&gt; "STATUS_INSTALL_FAILURE": 安装失败（不存在安装文件）。&lt;/br&gt; "STATUS_INSTALL_FAILURE_ABORTED": 安装中止。 &lt;/br&gt; "STATUS_INSTALL_FAILURE_INVALID": 安装参数无效。 &lt;/br&gt; "STATUS_INSTALL_FAILURE_CONFLICT": 安装冲突（常见于升级和已有应用基本信息不一致）。 &lt;/br&gt; "STATUS_INSTALL_FAILURE_STORAGE": 存储包信息失败。 &lt;/br&gt; "STATUS_INSTALL_FAILURE_INCOMPATIBLE": 安装不兼容（常见于版本降级安装或者签名信息错误）。 &lt;/br&gt; "STATUS_UNINSTALL_FAILURE": 卸载失败（不存在卸载的应用）。 &lt;/br&gt; "STATUS_UNINSTALL_FAILURE_ABORTED": 卸载中止（没有使用）。 &lt;/br&gt; "STATUS_UNINSTALL_FAILURE_ABORTED": 卸载冲突（卸载系统应用失败， 结束应用进程失败）。 &lt;/br&gt; "STATUS_INSTALL_FAILURE_DOWNLOAD_TIMEOUT": 安装失败（下载超时）。&lt;/br&gt; "STATUS_INSTALL_FAILURE_DOWNLOAD_FAILED": 安装失败（下载失败）。 &lt;/br&gt; "STATUS_RECOVER_FAILURE_INVALID": 恢复预置应用失败。&lt;/br&gt; "STATUS_ABILITY_NOT_FOUND": Ability未找到。&lt;/br&gt; "STATUS_BMS_SERVICE_ERROR": BMS服务错误。 &lt;/br&gt; "STATUS_FAILED_NO_SPACE_LEFT": 设备空间不足。&lt;/br&gt; "STATUS_GRANT_REQUEST_PERMISSIONS_FAILED": 应用授权失败。 &lt;/br&gt; "STATUS_INSTALL_PERMISSION_DENIED": 缺少安装权限。 &lt;/br&gt; "STATUS_UNINSTALL_PERMISSION_DENIED": 缺少卸载权限。
+**SUCCESS**: Installation succeeded.
+
+**STATUS_INSTALL_FAILURE**: Installation failed (no installation file exists).
+
+**STATUS_INSTALL_FAILURE_ABORTED**: Installation aborted.
+
+**STATUS_INSTALL_FAILURE_INVALID**: Invalid installation parameter.
+
+**STATUS_INSTALL_FAILURE_CONFLICT**: Installation conflict. (The basic information of the application to update is inconsistent with that of the existing application.)
+
+**STATUS_INSTALL_FAILURE_STORAGE**: Failed to store the bundle information.
+
+**STATUS_INSTALL_FAILURE_INCOMPATIBLE**: Installation incompatibility. (A downgrade occurs or the signature information is incorrect.)
+
+**STATUS_UNINSTALL_FAILURE**: Uninstallation failed. (The application to be uninstalled is not found.)
+
+**STATUS_UNINSTALL_FAILURE_ABORTED**: Uninstallation aborted. (This error code is not in use.)
+
+**STATUS_UNINSTALL_FAILURE_ABORTED**: Uninstallation conflict. (Failed to uninstall a system application or end the application process.)
+
+**STATUS_INSTALL_FAILURE_DOWNLOAD_TIMEOUT**: Installation failed. (Download timed out.)
+
+**STATUS_INSTALL_FAILURE_DOWNLOAD_FAILED**: Installation failed. (Download failed.)
+
+**STATUS_RECOVER_FAILURE_INVALID**: Failed to restore the pre-installed application.
+
+**STATUS_ABILITY_NOT_FOUND**: Ability not found.
+
+**STATUS_BMS_SERVICE_ERROR**: BMS service error.
+
+**STATUS_FAILED_NO_SPACE_LEFT**: Insufficient device space.
+
+**STATUS_GRANT_REQUEST_PERMISSIONS_FAILED**: Application authorization failed.
+
+**STATUS_INSTALL_PERMISSION_DENIED**: No installation permission.
+
+**STATUS_UNINSTALL_PERMISSION_DENIED**: No uninstallation permission.
 
 **Type:** string
 

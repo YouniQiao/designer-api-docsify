@@ -1,10 +1,10 @@
 # NotificationProgress
 
-描述通知进度，用于在实况窗中展示进度条信息。
+Describes the notification progress, which is used to display progress bar information in the live view.
 
-> **说明：**
+> **NOTE：**
 > 
-> 实际显示效果依赖于设备能力和通知中心UI样式。
+> The actual display effect depends on the device capabilities and the notification center UI style.
 
 **Since:** 11
 
@@ -20,7 +20,7 @@
 currentValue?: int
 ```
 
-进度当前值。
+Current value of the progress.
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
@@ -38,10 +38,10 @@ currentValue?: int
 isPercentage?: boolean
 ```
 
-是否按百分比展示进度。默认为false。
+Whether to display the progress as a percentage. The value defaults to **false**.
 
-- true：进度以百分比形式展示。  
-- false：进度以绝对值形式展示。
+- **true**: The progress is displayed as a percentage.  
+- **false**: The progress is displayed as an absolute value.
 
 **Type:** boolean
 
@@ -59,7 +59,7 @@ isPercentage?: boolean
 maxValue?: int
 ```
 
-进度最大值。
+Maximum value of the progress.
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 

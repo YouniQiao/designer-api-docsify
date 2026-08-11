@@ -12,18 +12,14 @@ import { router } from 'kits/@kit.ArkUI';
 function getLength(): string
 ```
 
-获取当前在页面栈内的页面数量。
+Obtains the number of pages in the current stack.
 
-> **说明：**
+> **NOTE：**
 > 
-> - 从API version 8开始支持，从API version 18开始废弃，建议使用[getLength](arkts-arkui-arkui-uicontext-router-c.md#getlength)替代。
-> getLength需先通过[UIContext](arkts-arkui-uicontext.md)中的
-> [getRouter](../../../reference/apis-arkui/arkts-apis-uicontext-uicontext.md#getrouter)获取
-> [Router](arkts-arkui-uicontext.md)实例，然后通过该实例进行调用。
-> 
-> - 从API version 10开始，可以通过使用[UIContext](arkts-arkui-uicontext.md)中的
-> [getRouter](../../../reference/apis-arkui/arkts-apis-uicontext-uicontext.md#getrouter)方法获取当前UI上下文关联的
-> [Router](arkts-arkui-uicontext.md)对象。
+> - Since API version 10, you can use the
+> [getRouter](../../../reference/apis-arkui/arkts-apis-uicontext-uicontext.md#getrouter) API in
+> [UIContext](arkts-arkui-uicontext.md) to obtain the [Router](arkts-arkui-uicontext.md) object associated
+> with the current UI context.
 
 **Since:** 8
 
@@ -43,7 +39,7 @@ function getLength(): string
 
 | Type | Description |
 | --- | --- |
-| string | 页面数量，页面栈支持最大数值是32。 |
+| string | Number of pages in the stack. The maximum value is **32**. |
 
 ## Examples
 

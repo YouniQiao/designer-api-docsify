@@ -1,6 +1,6 @@
 # CmKeyPurpose
 
-表示密钥使用目的的枚举，用于签名、验签。
+Enumerates the purposes of using the key.
 
 **Since:** 11
 
@@ -16,7 +16,7 @@
 CM_KEY_PURPOSE_SIGN = 4
 ```
 
-签名。
+Signs data.
 
 **Since:** 11
 
@@ -32,7 +32,7 @@ CM_KEY_PURPOSE_SIGN = 4
 CM_KEY_PURPOSE_VERIFY = 8
 ```
 
-验签。
+Verifies a signature.
 
 **Since:** 11
 

@@ -1,6 +1,6 @@
 # HuksUserAuthType
 
-表示用户认证类型。
+Enumerates the user authentication types.
 
 **Since:** 9
 
@@ -16,7 +16,7 @@
 HUKS_USER_AUTH_TYPE_FINGERPRINT = 1 << 0
 ```
 
-表示用户认证类型为指纹。
+Fingerprint authentication.
 
 **Since:** 9
 
@@ -34,7 +34,7 @@ HUKS_USER_AUTH_TYPE_FINGERPRINT = 1 << 0
 HUKS_USER_AUTH_TYPE_FACE = 1 << 1
 ```
 
-表示用户认证类型为人脸。
+Facial authentication.
 
 **Since:** 9
 
@@ -52,7 +52,7 @@ HUKS_USER_AUTH_TYPE_FACE = 1 << 1
 HUKS_USER_AUTH_TYPE_PIN = 1 << 2
 ```
 
-表示用户认证类型为PIN码。
+PIN authentication.
 
 **Since:** 9
 
@@ -70,9 +70,7 @@ HUKS_USER_AUTH_TYPE_PIN = 1 << 2
 HUKS_USER_AUTH_TYPE_TUI_PIN = 1 << 5
 ```
 
-表示用户认证类型为TUI PIN码。&lt;!--Del--&gt;（暂不支持）&lt;!--DelEnd--&gt;
-
-**原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务中使用。
+TUI PIN authentication. &lt;!--Del--&gt;(Currently not supported.)&lt;!--DelEnd--&gt;
 
 **Since:** 20
 

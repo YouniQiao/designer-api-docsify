@@ -1,11 +1,5 @@
 # registerWatermarkCallback
 
-## 导入模块
-
-```TypeScript
-import { print } from 'kits/@kit.BasicServicesKit';
-```
-
 ## registerWatermarkCallback
 
 ```TypeScript
@@ -36,7 +30,7 @@ function registerWatermarkCallback(callback: WatermarkCallback): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 201 | the application does not have permission to call this function. |
+| [201](../../errorcode-universal.md#201-权限校验失败) | the application does not have permission to call this function. |
 
 ## 示例
 
@@ -45,13 +39,13 @@ import { print } from '@kit.BasicServicesKit';
 
 let watermarkCallback: print.WatermarkCallback = (jobId: string, fd: number) => {
     console.info('Watermark callback triggered, jobId: ' + jobId + ', fd: ' + fd);
-};
+}
 
 try {
     print.registerWatermarkCallback(watermarkCallback);
     console.info('registerWatermarkCallback success');
 } catch (error) {
-    console.error(`Failed to registerWatermarkCallback. Code: ${error.code}, message: ${error.message}`);
+    console.error('registerWatermarkCallback error: ' + JSON.stringify(error));
 }
 ```
 

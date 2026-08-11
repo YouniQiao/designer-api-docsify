@@ -10,12 +10,6 @@
 
 **系统能力：** SystemCapability.Communication.IPC.Core
 
-## 导入模块
-
-```TypeScript
-import { rpc } from 'kits/@kit.IPCKit';
-```
-
 ## constructor
 
 ```TypeScript
@@ -38,8 +32,8 @@ MessageOption构造函数。
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| syncFlags | number | 否 | 同步调用或异步调用标志。取值范围：{0, 1}。同步调用标志：0（当需要立即获取响应结果时选择）；异步调用标志：1（当不需要立即获取响应结果时选择）。不传入时默认为0 （同步调用）。 |
-| waitTime | number | 否 | 调用rpc最长等待时间（单位：秒）。&lt;br/&gt;默认值：8&lt;br/&gt;取值范围：(0, 3000]。当RPC调用耗时较长时，可适当增加等待时间；当需要快速响应时，可适当减少 等待时间。不传入时使用默认等待时间8秒。 |
+| syncFlags | number | 否 | 同步调用或异步调用标志。取值范围：{0, 1}。同步调用标志：0（当需要立即获取响应结果时选择）；异步调用标志：1（当不需要立即获取响应结果时选择）。 不传入时默认为0（同步调用）。 |
+| waitTime | number | 否 | 调用rpc最长等待时间（单位：秒）。&lt;br/&gt;默认值：8&lt;br/&gt;取值范围：(0, 3000]。 当RPC调用耗时较长时，可适当增加等待时间；当需要快速响应时，可适当减少等待时间。不传入时使用默认等待时间8秒。 |
 
 ## 示例
 
@@ -47,8 +41,8 @@ MessageOption构造函数。
 import { rpc } from '@kit.IPCKit';
 
 class TestRemoteObject extends rpc.MessageOption {
-  constructor(syncFlags?: number,waitTime?: number) {
-    super(syncFlags,waitTime);
+  constructor(syncFlags?: number, waitTime?: number) {
+    super(syncFlags, waitTime);
   }
 }
 ```
@@ -95,7 +89,7 @@ class TestRemoteObject extends rpc.MessageOption {
 constructor(isAsync: boolean)
 ```
 
-A constructor used to create a MessageOption instance.
+MessageOption构造函数。
 
 **起始版本：** 23
 
@@ -109,7 +103,22 @@ A constructor used to create a MessageOption instance.
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| isAsync | boolean | 是 | Specifies whether the SendRequest is called synchronously (default) or asynchronously. |
+| isAsync | boolean | 是 | true：表示异步调用标志，false：表示同步调用标志。默认同步调用。 |
+
+## 示例
+
+```TypeScript
+// ArkTS-Sta示例
+import rpc from '@ohos.rpc';
+import hilog from 'ohos.hilog';
+import { BusinessError } from '@ohos.base';
+
+class TestRemoteObject extends rpc.MessageOption {
+  constructor(isAsync: boolean) {
+    super(isAsync);
+  }
+}
+```
 
 ## constructor
 
@@ -117,7 +126,7 @@ A constructor used to create a MessageOption instance.
 constructor()
 ```
 
-A constructor used to create a MessageOption instance.
+MessageOption构造函数。
 
 **起始版本：** 23
 
@@ -127,13 +136,26 @@ A constructor used to create a MessageOption instance.
 
 **系统能力：** SystemCapability.Communication.IPC.Core
 
+## 示例
+
+```TypeScript
+// ArkTS-Sta示例
+import { rpc } from '@kit.IPCKit';
+
+class TestRemoteObject extends rpc.MessageOption {
+  constructor() {
+    super();
+  }
+}
+```
+
 ## constructor
 
 ```TypeScript
 constructor(syncFlags: int)
 ```
 
-A constructor used to create a MessageOption instance.
+MessageOption构造函数。
 
 **起始版本：** 23
 
@@ -147,7 +169,20 @@ A constructor used to create a MessageOption instance.
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| syncFlags | int | 是 | Specifies whether the SendRequest is called synchronously (default) or asynchronously. |
+| syncFlags | int | 是 | 同步调用或异步调用标志，同步调用标志：0；异步调用标志：1。默认同步调用。 |
+
+## 示例
+
+```TypeScript
+// ArkTS-Sta示例
+import { rpc } from '@kit.IPCKit';
+
+class TestRemoteObject extends rpc.MessageOption {
+  constructor(syncFlags: int) {
+    super(syncFlags);
+  }
+}
+```
 
 ## constructor
 
@@ -155,7 +190,7 @@ A constructor used to create a MessageOption instance.
 constructor(syncFlags: int, waitTime: int)
 ```
 
-A constructor used to create a MessageOption instance.
+MessageOption构造函数。
 
 **起始版本：** 23
 
@@ -169,8 +204,23 @@ A constructor used to create a MessageOption instance.
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| syncFlags | int | 是 | Specifies whether the SendRequest is called synchronously (default) or asynchronously. |
-| waitTime | int | 是 | Maximum wait time for a RPC call, in seconds. The default value is **TF_WAIT_TIME**. |
+| syncFlags | int | 是 | 同步调用或异步调用标志，同步调用标志：0；异步调用标志：1。默认同步调用。 |
+| waitTime | int | 是 | 调用rpc最长等待时间（单位：秒）。&lt;br/&gt;默认值：8&lt;br/&gt;取值范围：(0, 3000] |
+
+## 示例
+
+```TypeScript
+// ArkTS-Sta示例
+import rpc from '@ohos.rpc';
+import hilog from 'ohos.hilog';
+import { BusinessError } from '@ohos.base';
+
+class TestRemoteObject extends rpc.MessageOption {
+  constructor(syncFlags: int, waitTime: int) {
+    super(syncFlags, waitTime);
+  }
+}
+```
 
 ## getFlags
 

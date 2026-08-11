@@ -1,6 +1,6 @@
 # HoverEffect
 
-定义组件悬浮效果的类型。
+Sets the hover effect of the component.
 
 **Since:** 8
 
@@ -16,7 +16,7 @@
 Auto
 ```
 
-使用组件的系统默认悬浮效果。
+Default hover effect.
 
 **Since:** 8
 
@@ -34,7 +34,7 @@ Auto
 Scale
 ```
 
-放大缩小的效果。
+Zoom-in and zoom-out effect.
 
 **Since:** 8
 
@@ -52,7 +52,7 @@ Scale
 Highlight
 ```
 
-背景淡入淡出的强调效果。
+Background fade-in and fade-out effect.
 
 **Since:** 8
 
@@ -70,7 +70,7 @@ Highlight
 None
 ```
 
-不设置效果。
+No effect.
 
 **Since:** 8
 

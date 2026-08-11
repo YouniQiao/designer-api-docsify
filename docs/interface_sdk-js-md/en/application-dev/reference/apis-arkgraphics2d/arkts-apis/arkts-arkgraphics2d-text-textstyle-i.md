@@ -1,7 +1,7 @@
 # TextStyle
 
-文本样式，用于控制文本的视觉表现属性，包括字体、颜色、字号、间距、装饰线和阴影等。TextStyle通过[ParagraphBuilder](arkts-arkgraphics2d-text-paragraphbuilder-c.md)的  
-[pushStyle](arkts-arkgraphics2d-text-paragraphbuilder-c.md#pushstyle)方法应用到后续添加的文本内容，与[ParagraphStyle](arkts-arkgraphics2d-text-paragraphstyle-i.md)（控制段落级别属性）配合使用。同一段落中可通过多次pushStyle实现对不同文本片段应用不同样式。
+Represents a text style, which controls the visual appearance attributes of text, including font, color, font size,spacing, decoration lines, and shadows. TextStyle is applied to subsequently added text content through the  
+[pushStyle](arkts-arkgraphics2d-text-paragraphbuilder-c.md#pushstyle) method of [ParagraphBuilder](arkts-arkgraphics2d-text-paragraphbuilder-c.md), and works together with [ParagraphStyle](arkts-arkgraphics2d-text-paragraphstyle-i.md) (which controls paragraph-level attributes). Within the same paragraph, you can call pushStyle multiple times to apply different styles to different text segments.
 
 **Since:** 12
 
@@ -23,7 +23,7 @@ import { text } from 'kits/@kit.ArkGraphics2D';
 backgroundRect?: RectStyle
 ```
 
-文本矩形框样式。当需要为文本添加背景矩形框（如设置背景色、圆角等）时传入。
+Text rectangle style. Pass this parameter when you need to add a background rectangle to text (such as setting the background color, rounded corners, etc.).
 
 **Type:** [RectStyle](arkts-arkgraphics2d-text-rectstyle-i.md)
 
@@ -43,7 +43,7 @@ backgroundRect?: RectStyle
 badgeType?: TextBadgeType
 ```
 
-设置文本排版时是否使能上标或下标。TEXT_SUPERSCRIPT表示使能上标，TEXT_SUBSCRIPT表示使能下标，默认值为TEXT_BADGE_NONE表示不使能。
+Sets whether to use superscript or subscript in text layout. **TEXT_SUPERSCRIPT** indicates that superscript is enabled, and **TEXT_SUBSCRIPT** indicates that subscript is enabled. The default value is **TEXT_BADGE_NONE**,indicating that neither superscript nor subscript is enabled.
 
 **Type:** [TextBadgeType](arkts-arkgraphics2d-text-textbadgetype-e.md)
 
@@ -63,7 +63,7 @@ badgeType?: TextBadgeType
 baseline?: TextBaseline
 ```
 
-文本基线类型，默认为ALPHABETIC。
+Text baseline type. The default value is **ALPHABETIC**.
 
 **Type:** [TextBaseline](arkts-arkgraphics2d-text-textbaseline-e.md)
 
@@ -83,7 +83,7 @@ baseline?: TextBaseline
 baselineShift?: double
 ```
 
-文本基线的垂直偏移距离，浮点数，单位为物理像素px，默认为0.0。
+Vertical offset distance of the text baseline, in physical pixels (px). The default value is **0.0**.
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：double
 
@@ -103,7 +103,7 @@ baselineShift?: double
 color?: common2D.Color
 ```
 
-文字颜色，默认为白色。
+Text color. The default color is white.
 
 **Type:** common2D.Color
 
@@ -123,7 +123,7 @@ color?: common2D.Color
 decoration?: Decoration
 ```
 
-装饰线设置，默认不使用装饰线。
+Text decoration. By default, no decoration is used.
 
 **Type:** [Decoration](arkts-arkgraphics2d-text-decoration-i.md)
 
@@ -143,7 +143,7 @@ decoration?: Decoration
 ellipsis?: string
 ```
 
-省略号文本，表示省略号生效后使用该字段值替换省略号部分，默认为空字符串，即使用系统默认省略号…（U+2026）。与ParagraphStyle的tab属性共同配置时，tab属性无效。
+Ellipsis text. When the ellipsis takes effect, this field value replaces the ellipsis portion. The default value is an empty string, which uses the system default ellipsis … (U+2026). When configured together with the tab attribute of ParagraphStyle, the tab attribute does not take effect.
 
 **Type:** string
 
@@ -163,7 +163,7 @@ ellipsis?: string
 ellipsisMode?: EllipsisMode
 ```
 
-省略号类型，默认为END，行尾省略号。
+Ellipsis type. The default value is **END**, indicating that the ellipsis is at the end of a line.
 
 **Type:** [EllipsisMode](../../apis-arkui/arkts-apis/arkts-arkui-enums-ellipsismode-e.md)
 
@@ -183,7 +183,7 @@ ellipsisMode?: EllipsisMode
 fontEdging?: drawing.FontEdging
 ```
 
-绘制文本的边缘处理方式，默认值为ANTI_ALIAS。
+Edge processing mode for drawing texts. The default value is **ANTI_ALIAS**.
 
 **Type:** drawing.FontEdging
 
@@ -205,7 +205,7 @@ fontEdging?: drawing.FontEdging
 fontFamilies?: Array<string>
 ```
 
-字体家族名称列表，默认为空，匹配系统字体。使用自定义字体时，需将加载字体时指定的名称填入此列表中。当与fontTypefaces同时设置时，fontTypefaces优先级更高，fontFamilies不生效。
+List of font family names. The default value is empty, which matches the system font. When using a custom font,specify the name used when loading the font in this list. When set together with fontTypefaces, fontTypefaces takes precedence and fontFamilies does not take effect.
 
 **Type:** Array&lt;string&gt;
 
@@ -225,7 +225,7 @@ fontFamilies?: Array<string>
 fontFeatures?: Array<FontFeature>
 ```
 
-文本字体特征数组。当需要启用或禁用特定字体特性（如连字、字距调整等）时传入。
+Array of text font features. Pass this parameter when you need to enable or disable specific font features (such as ligatures, kerning adjustment, etc.).
 
 **Type:** Array&lt;FontFeature&gt;
 
@@ -245,7 +245,7 @@ fontFeatures?: Array<FontFeature>
 fontSize?: double
 ```
 
-字体大小，浮点数，默认为14.0，单位为物理像素px。
+Font size, a floating-point value with a default value of **14.0**, measured in physical pixels (px).
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：double
 
@@ -265,7 +265,7 @@ fontSize?: double
 fontStyle?: FontStyle
 ```
 
-字体样式，默认为常规样式。
+Font style. The default value is **NORMAL**.
 
 **Type:** [FontStyle](arkts-arkgraphics2d-text-fontstyle-e.md)
 
@@ -285,9 +285,9 @@ fontStyle?: FontStyle
 fontTypefaces?: Array<drawing.Typeface>
 ```
 
-指定排版字体对象数组，用于优先使用指定的字体对象进行文本塑形，跳过字体匹配流程。当数组中某个字体对象无法塑形部分文字时，未能塑形的文字将使用系统字体进行塑形。默认为空数组，表示不指定字体对象，使用默认字体匹配流程。
+Array of specified typesetting font objects, used to prioritize the specified font objects for text shaping and skip the font matching process. When a font object in the array cannot shape some characters, the unshaped characters will be shaped using the system font. The default value is an empty array, indicating that no font object is specified and the default font matching process is used.
 
-当fontTypefaces与[TextStyle](arkts-arkgraphics2d-text-textstyle-i.md).fontFamilies同时设置时，fontTypefaces优先级更高。
+When fontTypefaces is set together with [TextStyle](arkts-arkgraphics2d-text-textstyle-i.md).fontFamilies, fontTypefaces takes precedence.
 
 **Type:** Array&lt;drawing.Typeface&gt;
 
@@ -309,7 +309,7 @@ fontTypefaces?: Array<drawing.Typeface>
 fontVariations?: Array<FontVariation>
 ```
 
-可变字体属性数组。当需要调整可变字体的可变轴参数（如字重轴、字宽轴等）时传入。
+Array of variable font properties. Pass this parameter when you need to adjust the variable axis parameters of a variable font (such as the font weight axis, font width axis, etc.).
 
 **Type:** Array&lt;FontVariation&gt;
 
@@ -329,7 +329,7 @@ fontVariations?: Array<FontVariation>
 fontWeight?: FontWeight
 ```
 
-字重，默认为W400。 在&lt;!--RP1--&gt;OpenHarmony 6.1&lt;!--RP1End--&gt;之前，仅系统字体中的可变字体支持字重调节；从&lt;!--RP1--&gt;OpenHarmony 6.1&lt;!--RP1End--&gt;开始，系统字体与三方注册字体中的可变字体均支持字重调节。非可变字体设置字重值小于semi-bold（即W600）时字体粗细无变化，设置字重值大于等于semi-bold（即W600）时可能会触发伪加粗效果。
+Font weight. The default value is W400. Before &lt;!--RP1--&gt;OpenHarmony 6.1&lt;!--RP1End--&gt;, only variable fonts in system fonts support font weight adjustment. Since &lt;!--RP1--&gt;OpenHarmony 6.1&lt;!--RP1End--&gt;, variable fonts in both system fonts and third-party registered fonts support font weight adjustment. For non-variable fonts, setting a font weight value less than semi-bold (W600) results in no change in font thickness, while setting a font weight value greater than or equal to semi-bold (W600) may trigger a pseudo-bold effect.
 
 **Type:** [FontWeight](../../apis-arkui/arkts-apis/arkts-arkui-fontweight-e.md)
 
@@ -349,7 +349,7 @@ fontWeight?: FontWeight
 fontWidth?: FontWidth
 ```
 
-字体宽度，默认为NORMAL。
+Font width. The default value is **NORMAL**.
 
 **Type:** [FontWidth](arkts-arkgraphics2d-text-fontwidth-e.md)
 
@@ -369,7 +369,7 @@ fontWidth?: FontWidth
 halfLeading?: boolean
 ```
 
-true表示将行间距平分至行的顶部与底部，false则不平分，默认为false。
+Whether half leading is enabled. Half leading is the leading split in half and applied equally to the top and bottom edges. The value **true** means that half leading is enabled, and **false** means the opposite. The default value is **false**.
 
 **Type:** boolean
 
@@ -389,7 +389,7 @@ true表示将行间距平分至行的顶部与底部，false则不平分，默�
 heightOnly?: boolean
 ```
 
-true表示根据字体大小和heightScale设置文本框的高度，false表示根据行高和行距设置文本框高度，默认为false。
+The value **true** means the text box height is set based on the font size and heightScale, and **false** means the text box height is set based on the line height and line spacing. The default value is **false**.
 
 **Type:** boolean
 
@@ -409,7 +409,7 @@ true表示根据字体大小和heightScale设置文本框的高度，false表示
 heightScale?: double
 ```
 
-行高缩放倍数，浮点数，默认为1.0，heightOnly为true时生效。
+Scale factor of the line height. The value is a floating point number. The default value is **1.0**. This parameter is valid only when **heightOnly** is set to** true**.
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：double
 
@@ -429,7 +429,7 @@ heightScale?: double
 letterSpacing?: double
 ```
 
-字符间距，正数拉开字符距离，如果为负数则拉近字符距离，浮点数，单位为物理像素px，默认为0.0。
+Character spacing, a floating-point value in physical pixels (px) with a default value of **0.0**. A positive value widens the character gap, while a negative value narrows it.
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：double
 
@@ -449,7 +449,7 @@ letterSpacing?: double
 lineHeightMaximum?: double
 ```
 
-行高上限，单位为物理像素px。若同时应用行高缩放，行高上限在[TextStyle](arkts-arkgraphics2d-text-textstyle-i.md).heightScale大于0时生效。取值为正数浮点数，默认值为Number.MAX_VALUE。
+Maximum line height, in physical pixels (px). If the line height is scaled, the maximum line height takes effect when [TextStyle](arkts-arkgraphics2d-text-textstyle-i.md).heightScale is greater than 0. The value is a positive floating point number. The default value is **Number.MAX_VALUE**.
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：double
 
@@ -469,7 +469,7 @@ lineHeightMaximum?: double
 lineHeightMinimum?: double
 ```
 
-行高下限，单位为物理像素px。若同时应用行高缩放，行高下限在[TextStyle](arkts-arkgraphics2d-text-textstyle-i.md).heightScale大于0时生效。取值范围为非负浮点数，默认值为0。
+Minimum line height, in physical pixels (px). If the line height is scaled, the minimum line height takes effect when [TextStyle](arkts-arkgraphics2d-text-textstyle-i.md).heightScale is greater than 0. The value is a non-negative floating point number. The default value is **0**.
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：double
 
@@ -489,7 +489,7 @@ lineHeightMinimum?: double
 lineHeightStyle?: LineHeightStyle
 ```
 
-行高缩放基数样式。默认为FONT_SIZE。
+Scaling base style of the line height. The default value is **FONT_SIZE**.
 
 **Type:** [LineHeightStyle](../../apis-arkui/arkts-apis/arkts-arkui-styledstring-lineheightstyle-c.md)
 
@@ -509,7 +509,8 @@ lineHeightStyle?: LineHeightStyle
 locale?: string
 ```
 
-语言类型，例如'en-Latn'代表英文(拉丁文字)，'zh-Hans'代表简体中文，'zh-Hant'代表繁体中文。支持language-script格式的两段式语言标签，language遵循ISO 639-1规范，script遵循ISO 15924规范。未指定locale或者设置为空字符串或为undefined时，默认locale为'zh-Hans'。
+Language type. For example, **'en-Latn'** indicates English (Latin script), **'zh-Hans'** indicates Simplified Chinese, and **'zh-Hant'** indicates Traditional Chinese. Supports two-segment language tags in the language-script format, where language complies with the ISO 639-1 standard and script complies with the ISO 15924standard. If the locale is not specified, set to an empty string, or set to **undefined**, the default locale is  
+**'zh-Hans'**.
 
 **Type:** string
 
@@ -529,7 +530,7 @@ locale?: string
 textShadows?: Array<TextShadow>
 ```
 
-文本阴影数组。当需要为文本添加阴影效果时传入。
+Array of text shadows. Pass this parameter when you need to add shadow effects to text.
 
 **Type:** Array&lt;TextShadow&gt;
 
@@ -549,7 +550,7 @@ textShadows?: Array<TextShadow>
 wordSpacing?: double
 ```
 
-单词间距，浮点数，单位为物理像素px，默认为0.0。
+Word spacing, a floating-point value in physical pixels (px) with a default value of **0.0**.
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：double
 

@@ -1,6 +1,6 @@
 # LayoutStyle
 
-[Scrollable](TabsAttribute.barMode)模式下不滚动时的页签排布方式枚举。
+Declare the layout style of the tab bar items.
 
 **Since:** 23
 
@@ -16,7 +16,7 @@
 ALWAYS_CENTER = 0
 ```
 
-当页签内容超过TabBar宽度时，TabBar可滚动。当页签内容不超过TabBar宽度时，TabBar不可滚动，页签紧凑居中。
+If the tab content exceeds the tab bar width, the tabs are scrollable.If not, the tabs are compactly centered on the tab bar and not scrollable.
 
 **Since:** 23
 
@@ -34,7 +34,7 @@ ALWAYS_CENTER = 0
 ALWAYS_AVERAGE_SPLIT = 1
 ```
 
-当页签内容超过TabBar宽度时，TabBar可滚动。当页签内容不超过TabBar宽度时，TabBar不可滚动，且所有页签平均分配TabBar宽度。
+If the tab content exceeds the tab bar width, the tabs are scrollable.If not, the tabs are not scrollable, and the width of the tab bar is evenly distributed among all tabs.
 
 **Since:** 23
 
@@ -52,7 +52,7 @@ ALWAYS_AVERAGE_SPLIT = 1
 SPACE_BETWEEN_OR_CENTER = 2
 ```
 
-当页签内容超过TabBar宽度时，TabBar可滚动。当页签内容不超过TabBar宽度但超过TabBar宽度一半时，TabBar不可滚动，页签紧凑居中。当页签内容不超过TabBar宽度一半时，TabBar不可滚动，保证页签居中排列在TabBar宽度一半，且间距相同。
+If the tab content exceeds the tab bar width, the tabs are scrollable. If the tab content exceeds half the width of the tab bar but is still within the tab bar width, the tabs are compactly centered and not scrollable.If the tab content does not exceed half the width of the tab bar, the tabs are centered within half the width of the tab bar with even spacing between them and are not scrollable.
 
 **Since:** 23
 

@@ -1,6 +1,6 @@
 # RichEditorGesture
 
-用户手势事件。
+User gesture event.
 
 **Since:** 11
 
@@ -16,8 +16,9 @@
 onDoubleClick?: Callback<GestureEvent>
 ```
 
-双击事件回调函数，在用户双击操作完成时触发。回调参数为  
-[GestureEvent](../../../reference/apis-arkui/arkui-ts/ts-gesture-common.md#gestureevent对象说明)对象，包含手势事件信息。
+[GestureEvent](../arkts-apis/arkts-arkui-gesture-gestureevent-i.md/arkts-arkui-gesture-gestureevent-i.md) indicates the double-tap event.
+
+Callback event when the double-tap is complete.
 
 **Type:** [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;GestureEvent&gt;
 

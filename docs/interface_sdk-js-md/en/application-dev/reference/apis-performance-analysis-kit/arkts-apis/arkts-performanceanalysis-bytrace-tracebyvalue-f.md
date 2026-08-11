@@ -6,7 +6,7 @@
 function traceByValue(name: string, count: number): void
 ```
 
-标记预追踪耗时任务的数值变量，该变量的数值会不断变化。traceByValue可独立使用，用于记录某个数值变量的变化轨迹。
+Defines a numeric variable that indicates the number of timeslice trace tasks.
 
 **Since:** 7
 
@@ -24,8 +24,8 @@ function traceByValue(name: string, count: number): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| name | string | Yes | 数值变量的名称。 |
-| count | number | Yes | 数值变量的值。 |
+| name | string | Yes | Name of the numeric variable. |
+| count | number | Yes | Value of the numeric variable. |
 
 ## Examples
 

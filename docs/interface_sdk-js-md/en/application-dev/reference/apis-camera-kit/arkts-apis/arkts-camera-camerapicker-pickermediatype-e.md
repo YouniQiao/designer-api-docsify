@@ -1,6 +1,6 @@
 # PickerMediaType
 
-枚举，相机选择器的媒体类型。
+Enumerates the media types displayed in the camera picker.
 
 **Since:** 11
 
@@ -16,7 +16,7 @@
 PHOTO = 'photo'
 ```
 
-拍照模式。
+Photo mode.
 
 **Since:** 11
 
@@ -34,7 +34,7 @@ PHOTO = 'photo'
 VIDEO = 'video'
 ```
 
-录制模式。
+Video mode.
 
 **Since:** 11
 

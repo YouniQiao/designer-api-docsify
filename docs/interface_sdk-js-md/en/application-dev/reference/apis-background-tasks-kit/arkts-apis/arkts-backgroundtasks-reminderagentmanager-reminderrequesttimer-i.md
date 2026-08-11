@@ -2,7 +2,7 @@
 
 ReminderRequestTimer extends ReminderRequest
 
-倒计时实例对象，用于设置提醒的时间。
+Defines a reminder for a scheduled timer.
 
 **Inheritance/Implementation:** ReminderRequestTimer extends [ReminderRequest](arkts-backgroundtasks-reminderagentmanager-reminderrequest-i.md)
 
@@ -26,9 +26,9 @@ import { reminderAgentManager } from 'kits/@kit.BackgroundTasksKit';
 repeatCount?: int
 ```
 
-重复次数，默认值为0，无限次重复。需和repeatInterval一起使用。
+Number of repetitions. The default value is **0**, indicating infinite repetitions. This parameter must be used together with **repeatInterval**.
 
-范围：[0, +∞)。超出范围返回错误码401。
+The value range is [0, +∞). If the value is out of range, error code 401 is returned.
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
@@ -48,9 +48,9 @@ repeatCount?: int
 repeatInterval?: long
 ```
 
-重复周期，无默认值，未赋值时，无重复周期。需和repeatCount一起使用。
+Repeat interval. There is no default value. If no value is set, there is no repeat interval. This parameter must be used together with **repeatCount**.
 
-单位：s，范围：[86400, +∞)。超出范围返回错误码401。
+The value range is [86400, +∞), in seconds. If the value is out of range, error code 401 is returned.
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：long
 
@@ -70,9 +70,9 @@ repeatInterval?: long
 triggerTimeInSeconds: long
 ```
 
-指明倒计时的秒数。
+Number of seconds in the countdown timer.
 
-单位：s
+Unit: s
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：long
 

@@ -1,7 +1,6 @@
 # Theme
 
-当前生效的主题风格对象，可从  
-[onWillApplyTheme](../../../reference/apis-arkui/arkui-ts/ts-custom-component-lifecycle.md#onwillapplytheme12)中获取。
+Defines the struct of Theme.
 
 **Since:** 23
 
@@ -23,7 +22,7 @@ import { CustomColors, ThemeControl, Colors, CustomDarkColors, Theme, CustomThem
 colors: Colors
 ```
 
-主题颜色资源。
+Define tokens associated with color resources.
 
 **Type:** [Colors](arkts-arkui-arkui-theme-colors-i.md)
 

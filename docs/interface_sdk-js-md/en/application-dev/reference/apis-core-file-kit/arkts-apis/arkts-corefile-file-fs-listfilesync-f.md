@@ -15,9 +15,9 @@ declare function listFileSync(
 ): string[]
 ```
 
-默认以同步方式列出当前目录下所有文件名和目录名。支持过滤。
+Lists the names of all files and directories in the current directory. This API returns the result synchronously.Filtering is supported.
 
-可通过配置options中recursion参数实现递归列出所有文件的相对路径，相对路径以“/”开头。
+You can configure the **recursion** parameter in **options** to recursively list the relative paths of all files. The relative path starts with a slash (/).
 
 **Since:** 9
 
@@ -33,14 +33,14 @@ declare function listFileSync(
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| path | string | Yes | 目录的应用沙箱路径。 |
-| options | [ListFileOptions](arkts-corefile-file-fs-listfileoptions-i.md) | No | 文件过滤选项。默认不进行过滤。<br>**Since:** 11 |
+| path | string | Yes | Application sandbox path of the directory. |
+| options | [ListFileOptions](arkts-corefile-file-fs-listfileoptions-i.md) | No | Options for filtering files. The files are not filtered by default.<br>**Since:** 11 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| string[] | 返回文件名数组，默认以'utf-8'编码。 |
+| string[] | File name array, which is encoded in UTF-8 format by default. |
 
 **Error codes:**
 

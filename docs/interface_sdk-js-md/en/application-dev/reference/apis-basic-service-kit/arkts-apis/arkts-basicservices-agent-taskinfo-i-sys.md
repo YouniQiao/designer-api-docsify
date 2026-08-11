@@ -1,6 +1,6 @@
 # TaskInfo
 
-查询结果的任务信息数据结构，提供普通查询和系统查询，两种字段的可见范围不同。
+Defines the data structure of the task information for query. The fields available vary depending on the query type.
 
 **Since:** 10
 

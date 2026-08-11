@@ -1,6 +1,6 @@
 # @ohos.nearlink.manager
 
-提供管理星闪设备的方法。
+Provides methods to manage NearLink devices.
 
 **Since:** 26.0.0
 
@@ -24,36 +24,36 @@ import { manager } from 'kits/@kit.ConnectivityKit';
 
 | Name | Description |
 | --- | --- |
-| [getLocalName](arkts-connectivity-manager-getlocalname-f.md#getlocalname) | 获取本地设备的名称。 |
-| [getPairedDevices](arkts-connectivity-manager-getpaireddevices-f.md#getpaireddevices) | 获取已与当前设备配对的设备列表。如果用户有ohos.permission.GET_NEARLINK_PEER_MAC权限，则返回真实设备地址。否则，返回随机的设备地址 |
-| [getState](arkts-connectivity-manager-getstate-f.md#getstate) | 获取星闪状态。 |
-| [isNearLinkSupported](arkts-connectivity-manager-isnearlinksupported-f.md#isnearlinksupported) | 检查当前设备是否支持星闪。 |
-| [offStateChange](arkts-connectivity-manager-offstatechange-f.md#offstatechange) | 取消订阅状态变更事件。 |
-| [onStateChange](arkts-connectivity-manager-onstatechange-f.md#onstatechange) | 订阅状态变更事件。 |
+| [getLocalName](arkts-connectivity-manager-getlocalname-f.md#getlocalname) | Gets the local device's name. |
+| [getPairedDevices](arkts-connectivity-manager-getpaireddevices-f.md#getpaireddevices) | Gets the list of devices that have been paired with the current device.If the user has the ohos.permission.GET_NEARLINK_PEER_MAC permission, the real device address is returned.Otherwise, a random device address is returned. |
+| [getState](arkts-connectivity-manager-getstate-f.md#getstate) | Gets the NearLink state. |
+| [isNearLinkSupported](arkts-connectivity-manager-isnearlinksupported-f.md#isnearlinksupported) | Check whether the current device supports NearLink. |
+| [offStateChange](arkts-connectivity-manager-offstatechange-f.md#offstatechange) | Unsubscribes from state change events. |
+| [onStateChange](arkts-connectivity-manager-onstatechange-f.md#onstatechange) | Subscribes to state change events. |
 
 <!--Del-->
 ### Functions（系统接口）
 
 | Name | Description |
 | --- | --- |
-| [disable](arkts-connectivity-manager-disable-f-sys.md#disable) | 关闭星闪。 |
-| [enable](arkts-connectivity-manager-enable-f-sys.md#enable) | 开启星闪。 |
-| [factoryReset](arkts-connectivity-manager-factoryreset-f-sys.md#factoryreset) | 恢复星闪设置。 |
-| [getLocalAddress](arkts-connectivity-manager-getlocaladdress-f-sys.md#getlocaladdress) | 获取本端设备的MAC地址。 |
-| [setConnectionMode](arkts-connectivity-manager-setconnectionmode-f-sys.md#setconnectionmode) | 设置设备的NearLink连接模式。 |
+| [disable](arkts-connectivity-manager-disable-f-sys.md#disable) | Turns off NearLink. |
+| [enable](arkts-connectivity-manager-enable-f-sys.md#enable) | Turns on NearLink. |
+| [factoryReset](arkts-connectivity-manager-factoryreset-f-sys.md#factoryreset) | Restores NearLink settings. |
+| [getLocalAddress](arkts-connectivity-manager-getlocaladdress-f-sys.md#getlocaladdress) | Gets the MAC address of the local device. |
+| [setConnectionMode](arkts-connectivity-manager-setconnectionmode-f-sys.md#setconnectionmode) | Sets the NearLink connection mode for a device. |
 <!--DelEnd-->
 
 ### Enums
 
 | Name | Description |
 | --- | --- |
-| [NearlinkState](arkts-connectivity-manager-nearlinkstate-e.md) | 星闪状态的枚举。 |
+| [NearlinkState](arkts-connectivity-manager-nearlinkstate-e.md) | The enum of NearLink state. |
 
 <!--Del-->
 ### Enums（系统接口）
 
 | Name | Description |
 | --- | --- |
-| [ConnectionMode](arkts-connectivity-manager-connectionmode-e-sys.md) | 连接模式的枚举。 |
+| [ConnectionMode](arkts-connectivity-manager-connectionmode-e-sys.md) | The enum of connection mode. |
 <!--DelEnd-->
 

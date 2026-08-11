@@ -14,9 +14,9 @@ function getMainThreadStackTrace(): string
 
 Get stack trace of main thread.
 
-**Since:** 24
+**Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta only, since version 24.
+**ArkTS mode:** ArkTS-Sta only, since version 26.0.0.
 
 <!--Device-util-function getMainThreadStackTrace(): string--><!--Device-util-function getMainThreadStackTrace(): string-End-->
 

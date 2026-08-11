@@ -1,11 +1,5 @@
 # isFlashReminderEnabled
 
-## 导入模块
-
-```TypeScript
-import { accessibility } from 'kits/@kit.AccessibilityKit';
-```
-
 ## isFlashReminderEnabled
 
 ```TypeScript

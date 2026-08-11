@@ -1,15 +1,6 @@
 # ArkTS API
 
 - [@ohos.arkui.modifier](arkts-arkui-modifier.md)
-- [@ohos.enterprise.EnterpriseAdminExtensionAbility](arkts-enterprise-enterpriseadminextensionability.md)
-  - [EnterpriseAdminExtensionAbility](arkts-enterprise-enterpriseadminextensionability-enterpriseadminextensionability-c.md)
-- [@ohos.intl](arkts-intl.md)
-  - [Collator](arkts-intl-collator-c.md)
-  - [DateTimeFormat](arkts-intl-datetimeformat-c.md)
-  - [NumberFormat](arkts-intl-numberformat-c.md)
-  - [CollatorOptions](arkts-intl-collatoroptions-i.md)
-  - [DateTimeOptions](arkts-intl-datetimeoptions-i.md)
-  - [NumberOptions](arkts-intl-numberoptions-i.md)
 - [lib.es2015](arkts-lib-es2015.md)
 - [lib.es2015.collection](arkts-lib-es2015-collection.md)
   - [Map](arkts-lib-es2015-collection-map-i.md)
@@ -420,21 +411,3 @@
   - [Uncapitalize](arkts-uncapitalize-t.md)
   - [Uppercase](arkts-uppercase-t.md)
 - [index](arkts-index.md)
-- application
-  - [AppServiceExtensionContext](arkts-appserviceextensioncontext.md)
-    - [AppServiceExtensionContext](arkts-appserviceextensioncontext-c.md)
-  - [ServiceExtensionContext](arkts-serviceextensioncontext.md)
-    <!--Del-->
-    - [ServiceExtensionContext(system api)](arkts-serviceextensioncontext-c-sys.md)<!--DelEnd-->
-  - [UIServiceExtensionContext](arkts-uiserviceextensioncontext.md)
-    <!--Del-->
-    - [UIServiceExtensionContext(system api)](arkts-uiserviceextensioncontext-c-sys.md)<!--DelEnd-->
-- arkui
-  - [environment](arkts-environment.md)
-    - [Environment](arkts-environment-environment-c.md)
-    - [EnvPropsOptions](arkts-environment-envpropsoptions-i.md)
-  - [persistentStorage](arkts-persistentstorage.md)
-    - [PersistentStorage](arkts-persistentstorage-persistentstorage-c.md)
-    - [PersistPropsOptions](arkts-persistentstorage-persistpropsoptions-i.md)
-    - [FromJSONType](arkts-fromjsontype-t.md)
-    - [ToJSONType](arkts-tojsontype-t.md)

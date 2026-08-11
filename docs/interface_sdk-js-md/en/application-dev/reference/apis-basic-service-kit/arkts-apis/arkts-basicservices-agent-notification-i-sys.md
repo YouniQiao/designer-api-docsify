@@ -1,6 +1,6 @@
 # Notification
 
-通知栏自定义信息。
+Describes the custom information of the notification bar.
 
 **Since:** 15
 

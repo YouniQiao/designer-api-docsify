@@ -12,12 +12,6 @@ Defines the PiP status data.
 
 **系统接口：** 此接口为系统接口。
 
-## 导入模块
-
-```TypeScript
-import { camera } from 'kits/@kit.CameraKit';
-```
-
 ## centerPointOffset
 
 ```TypeScript
@@ -26,7 +20,7 @@ centerPointOffset: Point
 
 Offset of PiP.
 
-**类型：** [Point](arkts-camera-camera-point-i.md)
+**类型：** [Point](../../apis-test-kit/arkts-apis/arkts-test-uitest-point-i.md)
 
 **起始版本：** 20
 

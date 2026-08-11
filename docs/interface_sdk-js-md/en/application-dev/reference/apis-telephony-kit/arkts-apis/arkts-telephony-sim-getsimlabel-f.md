@@ -33,10 +33,10 @@ Obtains the SIM card label.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 8300999 | Unknown error code. |
-| 8300002 | Operation failed. Cannot connect to service. |
-| 8300003 | System internal error. |
-| 8300001 | Invalid parameter value. |
+| [8300999](../errorcode-telephony.md#8300999-internal-error) | Unknown error code. |
+| [8300002](../errorcode-telephony.md#8300002-service-connection-error) | Operation failed. Cannot connect to service. |
+| [8300003](../errorcode-telephony.md#8300003-system-internal-error) | System internal error. |
+| [8300001](../errorcode-telephony.md#8300001-input-parameter-value-out-of-range) | Invalid parameter value. |
 
 ## Examples
 
@@ -56,7 +56,7 @@ sim.getSimLabel(0, (err: BusinessError, data: sim.SimLabel) => {
 function getSimLabel(slotId: int): Promise<SimLabel>
 ```
 
-获取SIM卡标签名称
+Obtains the SIM card label.
 
 **Since:** 20
 
@@ -70,22 +70,22 @@ function getSimLabel(slotId: int): Promise<SimLabel>
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| slotId | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | 卡槽索引号 |
+| slotId | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | SIM card slot ID. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;SimLabel&gt; | 返回SIM卡标签： |
+| Promise&lt;SimLabel&gt; | Promise used to return the SIM card label. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 8300999 | Unknown error code. |
-| 8300002 | Operation failed. Cannot connect to service. |
-| 8300003 | System internal error. |
-| 8300001 | Invalid parameter value. |
+| [8300999](../errorcode-telephony.md#8300999-internal-error) | Unknown error code. |
+| [8300002](../errorcode-telephony.md#8300002-service-connection-error) | Operation failed. Cannot connect to service. |
+| [8300003](../errorcode-telephony.md#8300003-system-internal-error) | System internal error. |
+| [8300001](../errorcode-telephony.md#8300001-input-parameter-value-out-of-range) | Invalid parameter value. |
 
 ## Examples
 

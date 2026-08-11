@@ -1,6 +1,6 @@
 # AlertDialogParamWithButtons
 
-继承自[AlertDialogParam](arkts-arkui-alertdialogparam-i.md)。
+Inherited from [AlertDialogParam](arkts-arkui-alertdialogparam-i.md).
 
 **Inheritance/Implementation:** AlertDialogParamWithButtons extends [AlertDialogParam](arkts-arkui-alertdialogparam-i.md)
 
@@ -18,7 +18,9 @@
 primaryButton: AlertDialogButtonBaseOptions
 ```
 
-主要Button的使能状态、默认焦点、按钮风格、文本内容、文本色、按钮背景色和点击回调。在弹窗获焦且未进行tab键走焦时，该按钮默认响应Enter键，且多重弹窗可自动获焦连续响应。默认响应Enter键能力在defaultFocus为true时不生效。 具体使用方式请参考[示例7](../../../reference/apis-arkui/arkui-ts/ts-methods-alert-dialog-box.md#示例7自定义背景模糊效果参数) 。
+Information about the primary button, including the enabling status, default focus, button style, text content, text color, button background color, and click callback. When the dialog box has focus and focus has not been shifted using the **Tab** key, the button responds to the **Enter** key by default, and multiple dialog boxes can gain focus consecutively to respond automatically. The default response to the **Enter** key does not work when   
+**defaultFocus** is set to **true**. For details, see   
+[Example 7](../../../reference/apis-arkui/arkui-ts/ts-methods-alert-dialog-box.md#example-7-customizing-the-background-blur-effect).
 
 **Type:** [AlertDialogButtonBaseOptions](arkts-arkui-alertdialog-alertdialogbuttonbaseoptions-i.md)
 
@@ -38,7 +40,7 @@ primaryButton: AlertDialogButtonBaseOptions
 secondaryButton: AlertDialogButtonBaseOptions
 ```
 
-次要Button的使能状态、默认焦点、按钮风格、文本内容、文本色、按钮背景色和点击回调。
+Information about the secondary button, including the enabling status, default focus, button style, text content, text color, button background color, and click callback.
 
 **Type:** [AlertDialogButtonBaseOptions](arkts-arkui-alertdialog-alertdialogbuttonbaseoptions-i.md)
 

@@ -1,6 +1,6 @@
 # DialogCustomOptions
 
-自定义样式对话框的选项。对话内容作为present()方法的第一个参数提供。不在此选项对象中。
+Options for the custom-style dialog.The dialog content is provided as the first parameter of present() method,not inside this options object.
 
 **Inheritance/Implementation:** DialogCustomOptions extends [DialogBaseOptions](arkts-arkui-dialog-dialogbaseoptions-i.md)
 
@@ -24,7 +24,7 @@ import { DialogButtonOrientation, DialogState, DialogResult, DialogBaseControlle
 customStyle?: boolean
 ```
 
-是否开启自定义样式。
+Whether to enable the custom style.
 
 **Type:** boolean
 

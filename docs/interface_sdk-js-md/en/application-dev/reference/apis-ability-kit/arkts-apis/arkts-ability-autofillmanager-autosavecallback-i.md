@@ -1,6 +1,6 @@
 # AutoSaveCallback
 
-当保存请求完成时所触发的回调接口。
+Implements callbacks triggered when auto-save is complete.
 
 **Since:** 11
 
@@ -22,7 +22,7 @@ import { autoFillManager } from 'kits/@kit.AbilityKit';
 onFailure(): void
 ```
 
-当保存请求失败时，该回调被调用。
+Called when auto save request is failed to be handled.
 
 **Since:** 11
 
@@ -42,7 +42,11 @@ onFailure(): void
 onFailure: OnFailureFn
 ```
 
-当保存请求失败时，该回调被调用。
+Called when auto-save fails.
+
+**NOTE：**
+
+Starting from API version 23, the original **onFailure()** API is changed to a property, but its usage remains unchanged.
 
 **Since:** 23
 
@@ -62,7 +66,7 @@ onFailure: OnFailureFn
 onSuccess(): void
 ```
 
-当保存请求成功时，该回调被调用。
+Called when auto save request is successfully handled.
 
 **Since:** 11
 
@@ -82,7 +86,11 @@ onSuccess(): void
 onSuccess: OnSuccessFn
 ```
 
-当保存请求成功时，该回调被调用。
+Called when auto-save is successful.
+
+**NOTE：**
+
+Starting from API version 23, the original **onSuccess()** API is changed to a property, but its usage remains unchanged.
 
 **Since:** 23
 

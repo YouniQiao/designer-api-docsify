@@ -1,5 +1,7 @@
 # MenuItemOptions
 
+Defines the option of MenuItem.
+
 **Since:** 23
 
 **ArkTS mode:** ArkTS-Sta only, since version 23.
@@ -14,9 +16,7 @@
 builder?: CustomBuilder
 ```
 
-用于构建二级菜单。
-
-**原子化服务API（仅ArkTS-Dyn）：** 从API version 11开始，该接口支持在原子化服务中使用。
+Create the submenu.
 
 **Type:** [CustomBuilder](../arkts-components/arkts-arkui-custombuilder-t.md)
 
@@ -36,9 +36,7 @@ builder?: CustomBuilder
 content?: ResourceStr
 ```
 
-MenuItem的内容。
-
-**原子化服务API（仅ArkTS-Dyn）：** 从API version 11开始，该接口支持在原子化服务中使用。
+Defines the content string display info.
 
 **Type:** [ResourceStr](arkts-arkui-resourcestr-t.md)
 
@@ -58,9 +56,7 @@ MenuItem的内容。
 endIcon?: ResourceStr
 ```
 
-MenuItem的末尾图标。不支持Symbol图标。使用Symbol图标时，须使用symbolEndIcon。
-
-**原子化服务API（仅ArkTS-Dyn）：** 从API version 11开始，该接口支持在原子化服务中使用。
+Defines the end display image info.
 
 **Type:** [ResourceStr](arkts-arkui-resourcestr-t.md)
 
@@ -80,9 +76,7 @@ MenuItem的末尾图标。不支持Symbol图标。使用Symbol图标时，须使
 labelInfo?: ResourceStr
 ```
 
-MenuItem结束的标签信息，如快捷方式Ctrl+C等。
-
-**原子化服务API（仅ArkTS-Dyn）：** 从API version 11开始，该接口支持在原子化服务中使用。
+Defines the end label info like shortcut.
 
 **Type:** [ResourceStr](arkts-arkui-resourcestr-t.md)
 
@@ -102,9 +96,7 @@ MenuItem结束的标签信息，如快捷方式Ctrl+C等。
 startIcon?: ResourceStr
 ```
 
-MenuItem的起始图标。不支持Symbol图标。使用Symbol图标时，须使用symbolStartIcon。 
-
-**原子化服务API（仅ArkTS-Dyn）：** 从API version 11开始，该接口支持在原子化服务中使用。
+Defines the start display image info.
 
 **Type:** [ResourceStr](arkts-arkui-resourcestr-t.md)
 
@@ -124,9 +116,7 @@ MenuItem的起始图标。不支持Symbol图标。使用Symbol图标时，须使
 symbolEndIcon?: SymbolGlyphModifier
 ```
 
-MenuItem末尾的Symbol图标。配置该项时，原先endIcon图标不显示。
-
-**原子化服务API（仅ArkTS-Dyn）：** 从API version 12开始，该接口支持在原子化服务中使用。
+Defines the end display symbol info.
 
 **Type:** [SymbolGlyphModifier](../arkts-components/arkts-arkui-symbolglyphmodifier-t.md)
 
@@ -146,9 +136,7 @@ MenuItem末尾的Symbol图标。配置该项时，原先endIcon图标不显示�
 symbolStartIcon?: SymbolGlyphModifier
 ```
 
-MenuItem起始的Symbol图标。配置该项时，原先startIcon图标不显示。
-
-**原子化服务API（仅ArkTS-Dyn）：** 从API version 12开始，该接口支持在原子化服务中使用。
+Defines the start display symbol info.
 
 **Type:** [SymbolGlyphModifier](../arkts-components/arkts-arkui-symbolglyphmodifier-t.md)
 

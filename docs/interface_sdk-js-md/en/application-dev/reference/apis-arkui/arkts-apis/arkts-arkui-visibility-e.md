@@ -1,6 +1,6 @@
 # Visibility
 
-定义组件的可见性及布局占位状态。
+Defines the visibility and layout placeholder status of the component.
 
 **Since:** 7
 
@@ -16,7 +16,7 @@
 Visible
 ```
 
-显示。
+The component is visible.
 
 **Since:** 7
 
@@ -36,7 +36,7 @@ Visible
 Hidden
 ```
 
-隐藏，但参与布局进行占位。
+The component is hidden, and a placeholder is used for it in the layout.
 
 **Since:** 7
 
@@ -56,7 +56,7 @@ Hidden
 None
 ```
 
-隐藏，但不参与布局，不进行占位。
+The component is hidden. It is not involved in the layout, and no placeholder is used for it.
 
 **Since:** 7
 

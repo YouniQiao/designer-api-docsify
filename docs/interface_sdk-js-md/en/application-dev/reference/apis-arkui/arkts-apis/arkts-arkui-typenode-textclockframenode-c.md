@@ -1,6 +1,6 @@
 # TextClockFrameNode
 
-定义TextClock类型的FrameNode。
+Define the TextClock type of FrameNode.
 
 **Inheritance/Implementation:** TextClockFrameNode extends [TypedFrameNode<TextClockAttribute>](TypedFrameNode<TextClockAttribute>)
 
@@ -18,7 +18,7 @@
 abstract initialize(options?: TextClockOptions): TextClockAttribute
 ```
 
-初始化TextClock类型的FrameNode。
+Initialize TextClock FrameNode.
 
 **Since:** 23
 

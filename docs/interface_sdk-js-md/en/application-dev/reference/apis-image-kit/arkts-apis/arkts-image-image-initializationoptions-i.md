@@ -1,6 +1,6 @@
 # InitializationOptions
 
-PixelMap的初始化选项。
+Defines PixelMap initialization options.
 
 **Since:** 8
 
@@ -22,7 +22,7 @@ import { image } from 'kits/@kit.ImageKit';
 alphaType?: AlphaType
 ```
 
-透明度。默认值为IMAGE_ALPHA_TYPE_PREMUL。
+Alpha type. The default value is **IMAGE_ALPHA_TYPE_PREMUL**.
 
 **Type:** [AlphaType](arkts-image-image-alphatype-e.md)
 
@@ -44,7 +44,7 @@ alphaType?: AlphaType
 editable?: boolean
 ```
 
-图像像素是否可被编辑。true表示可被编辑，false表示不可被编辑。设为false时，可提升图像的渲染和传输性能，但是图像不可被二次编辑。例如，writePixels操作将失败。默认值为false。
+Whether the image pixels are editable. **true** if editable, **false** otherwise. The value **false** provides better image rendering and transmission performance. The default value is **false**.
 
 **Type:** boolean
 
@@ -66,7 +66,7 @@ editable?: boolean
 pixelFormat?: PixelMapFormat
 ```
 
-生成的PixelMap的像素格式。默认值为RGBA_8888。
+Pixel format of the generated PixelMap. The default value is **RGBA_8888**.
 
 **Type:** [PixelMapFormat](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-multimedia-movingphotoview-pixelmapformat-e.md)
 
@@ -88,7 +88,7 @@ pixelFormat?: PixelMapFormat
 scaleMode?: ScaleMode
 ```
 
-缩放模式。默认值为FIT_TARGET_SIZE。
+Scale mode. The default value is **0**.
 
 **Type:** [ScaleMode](arkts-image-image-scalemode-e.md)
 
@@ -110,7 +110,7 @@ scaleMode?: ScaleMode
 size: Size
 ```
 
-创建的图片尺寸，宽高值必须为正整数。
+Image size.
 
 **Type:** [Size](../../apis-arkui/arkts-apis/arkts-arkui-window-size-i.md)
 
@@ -132,7 +132,7 @@ size: Size
 srcPixelFormat?: PixelMapFormat
 ```
 
-传入的缓冲区数据的像素格式。默认值为BGRA_8888。
+Pixel format of the passed-in buffer data. The default value is **BGRA_8888**.
 
 **Type:** [PixelMapFormat](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-multimedia-movingphotoview-pixelmapformat-e.md)
 

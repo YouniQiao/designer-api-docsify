@@ -10,12 +10,6 @@
 
 **系统能力：** SystemCapability.Utils.Lang
 
-## 导入模块
-
-```TypeScript
-import { Decimal } from 'kits/@kit.ArkTS';
-```
-
 ## crypto
 
 ```TypeScript

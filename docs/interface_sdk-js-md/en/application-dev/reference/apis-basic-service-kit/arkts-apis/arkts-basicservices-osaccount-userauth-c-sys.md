@@ -1,6 +1,6 @@
 # UserAuth (System API)
 
-用户认证类。
+Provides APIs for user authentication.
 
 **Since:** 8
 
@@ -29,7 +29,7 @@ auth(
     ): Uint8Array
 ```
 
-认证当前用户。
+Performs authentication of the current user.
 
 **Since:** 8
 
@@ -47,16 +47,16 @@ auth(
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| challenge | Uint8Array | Yes | 指示挑战值，挑战值为一个随机数，用于提升安全性。 |
-| authType | [AuthType](arkts-basicservices-osaccount-authtype-e-sys.md) | Yes | 指示认证类型。 |
-| authTrustLevel | [AuthTrustLevel](arkts-basicservices-osaccount-authtrustlevel-e-sys.md) | Yes | 指示认证结果的信任级别。 |
-| callback | [IUserAuthCallback](arkts-basicservices-osaccount-iuserauthcallback-i-sys.md) | Yes | 回调对象，返回认证结果。 |
+| challenge | Uint8Array | Yes | Challenge value, which is a random number used to improve security. |
+| authType | [AuthType](arkts-basicservices-osaccount-authtype-e-sys.md) | Yes | Authentication credential type. |
+| authTrustLevel | [AuthTrustLevel](arkts-basicservices-osaccount-authtrustlevel-e-sys.md) | Yes | Trust level of the authentication result. |
+| callback | [IUserAuthCallback](arkts-basicservices-osaccount-iuserauthcallback-i-sys.md) | Yes | Callback used to return the authentication result. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Uint8Array | 返回取消的上下文ID。 |
+| Uint8Array | ID of the context for canceling the authentication. |
 
 **Error codes:**
 
@@ -64,26 +64,26 @@ auth(
 | --- | --- |
 | 12300091 | Cross-device communication failed.<br>**Applicable version:** 20 and later |
 | 12300090 | Cross-device capability not supported.<br>**Applicable version:** 20 and later |
-| 12300120 | The credentials are no longer valid.<br>**Applicable version:** 23 and later |
+| [12300120](../../apis-basic-services-kit/errorcode-account.md#12300120-credential-expired) | The credentials are no longer valid.<br>**Applicable version:** 23 and later |
 | 12300211 | Server unreachable.<br>**Applicable version:** 12 and later |
-| 201 | Permission denied. |
-| 12300114 | The authentication service works abnormally.<br>**Applicable version:** 12 and later |
-| 202 | Not system application. |
-| 12300113 | The authentication service does not exist.<br>**Applicable version:** 12 and later |
-| 12300112 | The authentication service is busy. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
+| [12300114](../../apis-basic-services-kit/errorcode-account.md#12300114-authentication-service-abnormal) | The authentication service works abnormally.<br>**Applicable version:** 12 and later |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system application. |
+| [12300113](../../apis-basic-services-kit/errorcode-account.md#12300113-authentication-service-not-found) | The authentication service does not exist.<br>**Applicable version:** 12 and later |
+| [12300112](../../apis-basic-services-kit/errorcode-account.md#12300112-authentication-service-does-not-respond) | The authentication service is busy. |
 | 12300119 | Multi-factor authentication failed.<br>**Applicable version:** 20 and later |
-| 12300117 | PIN is expired.<br>**Applicable version:** 12 and later |
+| [12300117](../../apis-basic-services-kit/errorcode-account.md#12300117-pin-expired) | PIN is expired.<br>**Applicable version:** 12 and later |
 | 12300020 | Device hardware abnormal.<br>**Applicable version:** 20 and later |
-| 12300106 | The authentication type is not supported. |
-| 12300105 | The trust level is not supported. |
-| 12300111 | The authentication time out. |
-| 12300110 | The authentication is locked. |
-| 12300013 | Network exception.<br>**Applicable version:** 12 and later |
-| 12300109 | The authentication, enrollment, or update operation is canceled. |
-| 12300002 | Invalid challenge, authType or authTrustLevel. |
-| 12300001 | The system service works abnormally. |
-| 12300102 | The credential does not exist. |
-| 12300101 | The credential is incorrect. |
+| [12300106](../../apis-basic-services-kit/errorcode-account.md#12300106-authentication-type-not-supported) | The authentication type is not supported. |
+| [12300105](../../apis-basic-services-kit/errorcode-account.md#12300105-trust-level-not-supported) | The trust level is not supported. |
+| [12300111](../../apis-basic-services-kit/errorcode-account.md#12300111-authentication-timed-out) | The authentication time out. |
+| [12300110](../../apis-basic-services-kit/errorcode-account.md#12300110-authentication-locked) | The authentication is locked. |
+| [12300013](../../apis-basic-services-kit/errorcode-account.md#12300013-network-exception) | Network exception.<br>**Applicable version:** 12 and later |
+| [12300109](../../apis-basic-services-kit/errorcode-account.md#12300109-authentication-credential-enrollment-or-update-canceled) | The authentication, enrollment, or update operation is canceled. |
+| [12300002](../../apis-basic-services-kit/errorcode-account.md#12300002-invalid-parameter) | Invalid challenge, authType or authTrustLevel. |
+| [12300001](../../apis-basic-services-kit/errorcode-account.md#12300001-system-service-abnormal) | The system service works abnormally. |
+| [12300102](../../apis-basic-services-kit/errorcode-account.md#12300102-credential-not-found) | The credential does not exist. |
+| [12300101](../../apis-basic-services-kit/errorcode-account.md#12300101-incorrect-credential) | The credential is incorrect. |
 
 ## Examples
 
@@ -119,7 +119,7 @@ auth(
     ): Uint8Array
 ```
 
-基于指定的挑战值、认证类型（如口令、人脸、指纹等）、认证可信等级以及可选参数（如账号标识、认证意图等）进行身份认证。
+Starts user authentication based on the specified challenge value, authentication type (PIN, facial, or fingerprint authentication), authentication trust level, and optional parameters (such as the account ID and authentication intent).
 
 **Since:** 12
 
@@ -137,17 +137,17 @@ auth(
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| challenge | Uint8Array | Yes | 指示挑战值，挑战值为一个随机数，用于防止重放攻击，提升安全性。 |
-| authType | [AuthType](arkts-basicservices-osaccount-authtype-e-sys.md) | Yes | 指示认证类型。 |
-| authTrustLevel | [AuthTrustLevel](arkts-basicservices-osaccount-authtrustlevel-e-sys.md) | Yes | 指示认证结果的信任级别。 |
-| options | [AuthOptions](arkts-basicservices-osaccount-authoptions-i-sys.md) | Yes | 指示认证用户的可选参数集合。 |
-| callback | [IUserAuthCallback](arkts-basicservices-osaccount-iuserauthcallback-i-sys.md) | Yes | 回调对象，返回认证结果。 |
+| challenge | Uint8Array | Yes | Challenge value, which is a random number used to prevent replay attacks and improve security. |
+| authType | [AuthType](arkts-basicservices-osaccount-authtype-e-sys.md) | Yes | Authentication credential type. |
+| authTrustLevel | [AuthTrustLevel](arkts-basicservices-osaccount-authtrustlevel-e-sys.md) | Yes | Trust level of the authentication result. |
+| options | [AuthOptions](arkts-basicservices-osaccount-authoptions-i-sys.md) | Yes | Optional parameters for the authentication. |
+| callback | [IUserAuthCallback](arkts-basicservices-osaccount-iuserauthcallback-i-sys.md) | Yes | Callback used to return the authentication result. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Uint8Array | 返回取消的上下文ID。 |
+| Uint8Array | ID of the context for canceling the authentication. |
 
 **Error codes:**
 
@@ -155,27 +155,27 @@ auth(
 | --- | --- |
 | 12300091 | Cross-device communication failed.<br>**Applicable version:** 20 and later |
 | 12300090 | Cross-device capability not supported.<br>**Applicable version:** 20 and later |
-| 12300120 | The credentials are no longer valid.<br>**Applicable version:** 23 and later |
+| [12300120](../../apis-basic-services-kit/errorcode-account.md#12300120-credential-expired) | The credentials are no longer valid.<br>**Applicable version:** 23 and later |
 | 12300211 | Server unreachable. |
-| 201 | Permission denied. |
-| 12300114 | The authentication service works abnormally. |
-| 202 | Not system application. |
-| 12300113 | The authentication service does not exist. |
-| 12300112 | The authentication service is busy. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
+| [12300114](../../apis-basic-services-kit/errorcode-account.md#12300114-authentication-service-abnormal) | The authentication service works abnormally. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system application. |
+| [12300113](../../apis-basic-services-kit/errorcode-account.md#12300113-authentication-service-not-found) | The authentication service does not exist. |
+| [12300112](../../apis-basic-services-kit/errorcode-account.md#12300112-authentication-service-does-not-respond) | The authentication service is busy. |
 | 12300119 | Multi-factor authentication failed.<br>**Applicable version:** 20 and later |
-| 12300117 | PIN is expired. |
+| [12300117](../../apis-basic-services-kit/errorcode-account.md#12300117-pin-expired) | PIN is expired. |
 | 12300020 | Device hardware abnormal.<br>**Applicable version:** 20 and later |
-| 12300106 | The authentication type is not supported. |
-| 12300105 | The trust level is not supported. |
-| 12300111 | The authentication timeout. |
-| 12300110 | The authentication is locked. |
-| 12300013 | Network exception. |
-| 12300109 | The authentication, enrollment, or update operation is canceled. |
-| 12300003 | Account not found. |
-| 12300002 | Invalid challenge, authType, authTrustLevel or options. |
-| 12300001 | The system service works abnormally. |
-| 12300102 | The credential does not exist. |
-| 12300101 | The credential is incorrect. |
+| [12300106](../../apis-basic-services-kit/errorcode-account.md#12300106-authentication-type-not-supported) | The authentication type is not supported. |
+| [12300105](../../apis-basic-services-kit/errorcode-account.md#12300105-trust-level-not-supported) | The trust level is not supported. |
+| [12300111](../../apis-basic-services-kit/errorcode-account.md#12300111-authentication-timed-out) | The authentication timeout. |
+| [12300110](../../apis-basic-services-kit/errorcode-account.md#12300110-authentication-locked) | The authentication is locked. |
+| [12300013](../../apis-basic-services-kit/errorcode-account.md#12300013-network-exception) | Network exception. |
+| [12300109](../../apis-basic-services-kit/errorcode-account.md#12300109-authentication-credential-enrollment-or-update-canceled) | The authentication, enrollment, or update operation is canceled. |
+| [12300003](../../apis-basic-services-kit/errorcode-account.md#12300003-account-not-found) | Account not found. |
+| [12300002](../../apis-basic-services-kit/errorcode-account.md#12300002-invalid-parameter) | Invalid challenge, authType, authTrustLevel or options. |
+| [12300001](../../apis-basic-services-kit/errorcode-account.md#12300001-system-service-abnormal) | The system service works abnormally. |
+| [12300102](../../apis-basic-services-kit/errorcode-account.md#12300102-credential-not-found) | The credential does not exist. |
+| [12300101](../../apis-basic-services-kit/errorcode-account.md#12300101-incorrect-credential) | The credential is incorrect. |
 
 ## Examples
 
@@ -226,7 +226,7 @@ authUser(
     ): Uint8Array
 ```
 
-认证指定用户。使用callback异步回调。
+Performs authentication of the specified user. This API uses an asynchronous callback to return the result.
 
 **Since:** 8
 
@@ -244,17 +244,17 @@ authUser(
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| userId | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | 指示用户身份。 |
-| challenge | Uint8Array | Yes | 指示挑战值，挑战值为一个随机数，用于提升安全性。 |
-| authType | [AuthType](arkts-basicservices-osaccount-authtype-e-sys.md) | Yes | 指示认证类型。 |
-| authTrustLevel | [AuthTrustLevel](arkts-basicservices-osaccount-authtrustlevel-e-sys.md) | Yes | 指示认证结果的信任级别。 |
-| callback | [IUserAuthCallback](arkts-basicservices-osaccount-iuserauthcallback-i-sys.md) | Yes | 回调对象，返回认证结果。 |
+| userId | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | User ID. |
+| challenge | Uint8Array | Yes | Challenge value, which is a random number used to improve security. |
+| authType | [AuthType](arkts-basicservices-osaccount-authtype-e-sys.md) | Yes | Authentication credential type. |
+| authTrustLevel | [AuthTrustLevel](arkts-basicservices-osaccount-authtrustlevel-e-sys.md) | Yes | Trust level of the authentication result. |
+| callback | [IUserAuthCallback](arkts-basicservices-osaccount-iuserauthcallback-i-sys.md) | Yes | Callback used to return the authentication result. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Uint8Array | 返回取消的上下文ID。 |
+| Uint8Array | ID of the context for canceling the authentication. |
 
 **Error codes:**
 
@@ -262,27 +262,27 @@ authUser(
 | --- | --- |
 | 12300091 | Cross-device communication failed.<br>**Applicable version:** 20 and later |
 | 12300090 | Cross-device capability not supported.<br>**Applicable version:** 20 and later |
-| 12300120 | The credentials are no longer valid.<br>**Applicable version:** 23 and later |
+| [12300120](../../apis-basic-services-kit/errorcode-account.md#12300120-credential-expired) | The credentials are no longer valid.<br>**Applicable version:** 23 and later |
 | 12300211 | Server unreachable.<br>**Applicable version:** 12 and later |
-| 201 | Permission denied. |
-| 12300114 | The authentication service works abnormally.<br>**Applicable version:** 12 and later |
-| 202 | Not system application. |
-| 12300113 | The authentication service does not exist.<br>**Applicable version:** 12 and later |
-| 12300112 | The authentication service is busy. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
+| [12300114](../../apis-basic-services-kit/errorcode-account.md#12300114-authentication-service-abnormal) | The authentication service works abnormally.<br>**Applicable version:** 12 and later |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system application. |
+| [12300113](../../apis-basic-services-kit/errorcode-account.md#12300113-authentication-service-not-found) | The authentication service does not exist.<br>**Applicable version:** 12 and later |
+| [12300112](../../apis-basic-services-kit/errorcode-account.md#12300112-authentication-service-does-not-respond) | The authentication service is busy. |
 | 12300119 | Multi-factor authentication failed.<br>**Applicable version:** 20 and later |
-| 12300117 | PIN is expired.<br>**Applicable version:** 12 and later |
+| [12300117](../../apis-basic-services-kit/errorcode-account.md#12300117-pin-expired) | PIN is expired.<br>**Applicable version:** 12 and later |
 | 12300020 | Device hardware abnormal.<br>**Applicable version:** 20 and later |
-| 12300106 | The authentication type is not supported. |
-| 12300105 | The trust level is not supported. |
-| 12300111 | The authentication timeout. |
-| 12300110 | The authentication is locked. |
-| 12300013 | Network exception.<br>**Applicable version:** 12 and later |
-| 12300109 | The authentication, enrollment, or update operation is canceled. |
-| 12300003 | Account not found.<br>**Applicable version:** 12 and later |
-| 12300002 | Invalid challenge, authType or authTrustLevel. |
-| 12300001 | The system service works abnormally. |
-| 12300102 | The credential does not exist. |
-| 12300101 | The credential is incorrect. |
+| [12300106](../../apis-basic-services-kit/errorcode-account.md#12300106-authentication-type-not-supported) | The authentication type is not supported. |
+| [12300105](../../apis-basic-services-kit/errorcode-account.md#12300105-trust-level-not-supported) | The trust level is not supported. |
+| [12300111](../../apis-basic-services-kit/errorcode-account.md#12300111-authentication-timed-out) | The authentication timeout. |
+| [12300110](../../apis-basic-services-kit/errorcode-account.md#12300110-authentication-locked) | The authentication is locked. |
+| [12300013](../../apis-basic-services-kit/errorcode-account.md#12300013-network-exception) | Network exception.<br>**Applicable version:** 12 and later |
+| [12300109](../../apis-basic-services-kit/errorcode-account.md#12300109-authentication-credential-enrollment-or-update-canceled) | The authentication, enrollment, or update operation is canceled. |
+| [12300003](../../apis-basic-services-kit/errorcode-account.md#12300003-account-not-found) | Account not found.<br>**Applicable version:** 12 and later |
+| [12300002](../../apis-basic-services-kit/errorcode-account.md#12300002-invalid-parameter) | Invalid challenge, authType or authTrustLevel. |
+| [12300001](../../apis-basic-services-kit/errorcode-account.md#12300001-system-service-abnormal) | The system service works abnormally. |
+| [12300102](../../apis-basic-services-kit/errorcode-account.md#12300102-credential-not-found) | The credential does not exist. |
+| [12300101](../../apis-basic-services-kit/errorcode-account.md#12300101-incorrect-credential) | The credential is incorrect. |
 
 ## Examples
 
@@ -313,7 +313,7 @@ try {
 cancelAuth(contextID: Uint8Array): void
 ```
 
-取消指定的认证操作。
+Cancels an authentication.
 
 **Since:** 8
 
@@ -331,17 +331,17 @@ cancelAuth(contextID: Uint8Array): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| contextID | Uint8Array | Yes | 指示身份验证上下文ID，此ID动态生成没有具体值。 |
+| contextID | Uint8Array | Yes | ID of the authentication context. The context ID is dynamically generated. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameter types. |
-| 201 | Permission denied. |
-| 12300002 | Invalid contextId. |
-| 202 | Not system application. |
-| 12300001 | The system service works abnormally. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameter types. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
+| [12300002](../../apis-basic-services-kit/errorcode-account.md#12300002-invalid-parameter) | Invalid contextId. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system application. |
+| [12300001](../../apis-basic-services-kit/errorcode-account.md#12300001-system-service-abnormal) | The system service works abnormally. |
 
 ## Examples
 
@@ -371,7 +371,7 @@ try {
 constructor()
 ```
 
-创建用户认证的实例。
+A constructor used to create an instance for user authentication.
 
 **Since:** 8
 
@@ -387,7 +387,7 @@ constructor()
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 202 | Not system application. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system application. |
 
 ## Examples
 
@@ -407,7 +407,7 @@ ArkTS-Sta:
 getAvailableStatus(authType: AuthType, authTrustLevel: AuthTrustLevel): int
 ```
 
-获取指定认证类型和认证可信等级的认证能力的可用状态。
+Obtains the available status of the authentication capability corresponding to the specified authentication type and trust level.
 
 **Since:** 8
 
@@ -425,25 +425,25 @@ getAvailableStatus(authType: AuthType, authTrustLevel: AuthTrustLevel): int
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| authType | [AuthType](arkts-basicservices-osaccount-authtype-e-sys.md) | Yes | 认证类型。 |
-| authTrustLevel | [AuthTrustLevel](arkts-basicservices-osaccount-authtrustlevel-e-sys.md) | Yes | 认证的可信等级。 |
+| authType | [AuthType](arkts-basicservices-osaccount-authtype-e-sys.md) | Yes | Authentication credential type. |
+| authTrustLevel | [AuthTrustLevel](arkts-basicservices-osaccount-authtrustlevel-e-sys.md) | Yes | Trust level of the authentication. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| ArkTS-Dyn: number  <br>ArkTS-Sta：int | 返回认证能力的可用状态。 |
+| ArkTS-Dyn: number  <br>ArkTS-Sta：int | Available status of the authentication capability. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameter types. |
-| 201 | Permission denied. |
-| 12300002 | Invalid authType or authTrustLevel. |
-| 202 | Not system application. |
-| 12300001 | The system service works abnormally. |
-| 12300117 | PIN is expired. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameter types. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
+| [12300002](../../apis-basic-services-kit/errorcode-account.md#12300002-invalid-parameter) | Invalid authType or authTrustLevel. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system application. |
+| [12300001](../../apis-basic-services-kit/errorcode-account.md#12300001-system-service-abnormal) | The system service works abnormally. |
+| [12300117](../../apis-basic-services-kit/errorcode-account.md#12300117-pin-expired) | PIN is expired. |
 
 ## Examples
 
@@ -468,7 +468,7 @@ try {
 getProperty(request: GetPropertyRequest, callback: AsyncCallback<ExecutorProperty>): void
 ```
 
-基于指定的请求信息获取属性。使用callback异步回调。
+Obtains the executor property based on the request. This API uses an asynchronous callback to return the result.
 
 **Since:** 8
 
@@ -486,18 +486,18 @@ getProperty(request: GetPropertyRequest, callback: AsyncCallback<ExecutorPropert
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| request | [GetPropertyRequest](arkts-basicservices-osaccount-getpropertyrequest-i-sys.md) | Yes | 请求信息，包括认证类型和属性类型列表。 |
-| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;ExecutorProperty&gt; | Yes | 回调函数。如果获取成功，err为null，data为执行器属性信息；否则为错误对象。 |
+| request | [GetPropertyRequest](arkts-basicservices-osaccount-getpropertyrequest-i-sys.md) | Yes | Request information, including the authentication credential type and property list. |
+| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;ExecutorProperty&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **null** and **data** is the executor property information obtained. Otherwise, **err** is an error object. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 12300003 | Account not found.<br>**Applicable version:** 12 and later |
-| 201 | Permission denied. |
-| 12300002 | Invalid request. |
-| 202 | Not system application. |
-| 12300001 | The system service works abnormally. |
+| [12300003](../../apis-basic-services-kit/errorcode-account.md#12300003-account-not-found) | Account not found.<br>**Applicable version:** 12 and later |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
+| [12300002](../../apis-basic-services-kit/errorcode-account.md#12300002-invalid-parameter) | Invalid request. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system application. |
+| [12300001](../../apis-basic-services-kit/errorcode-account.md#12300001-system-service-abnormal) | The system service works abnormally. |
 | 12300020 | Device hardware abnormal.<br>**Applicable version:** 23 and later |
 
 ## Examples
@@ -535,7 +535,7 @@ try {
 getProperty(request: GetPropertyRequest): Promise<ExecutorProperty>
 ```
 
-基于指定的请求信息获取属性。使用Promise异步回调。
+Obtains the executor property based on the request. This API uses a promise to return the result.
 
 **Since:** 8
 
@@ -553,23 +553,23 @@ getProperty(request: GetPropertyRequest): Promise<ExecutorProperty>
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| request | [GetPropertyRequest](arkts-basicservices-osaccount-getpropertyrequest-i-sys.md) | Yes | 请求信息，包括认证类型和属性类型列表。 |
+| request | [GetPropertyRequest](arkts-basicservices-osaccount-getpropertyrequest-i-sys.md) | Yes | Request information, including the authentication credential type and property list. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;ExecutorProperty&gt; | Promise对象，返回执行器属性信息。 |
+| Promise&lt;ExecutorProperty&gt; | Promise used to return the executor property. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 12300003 | Account not found.<br>**Applicable version:** 12 and later |
-| 201 | Permission denied. |
-| 12300002 | Invalid request. |
-| 202 | Not system application. |
-| 12300001 | The system service works abnormally. |
+| [12300003](../../apis-basic-services-kit/errorcode-account.md#12300003-account-not-found) | Account not found.<br>**Applicable version:** 12 and later |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
+| [12300002](../../apis-basic-services-kit/errorcode-account.md#12300002-invalid-parameter) | Invalid request. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system application. |
+| [12300001](../../apis-basic-services-kit/errorcode-account.md#12300001-system-service-abnormal) | The system service works abnormally. |
 | 12300020 | Device hardware abnormal.<br>**Applicable version:** 23 and later |
 
 ## Examples
@@ -605,7 +605,7 @@ try {
 getPropertyByCredentialId(credentialId: Uint8Array, keys: Array<GetPropertyType>): Promise<ExecutorProperty>
 ```
 
-基于凭据id获取关联执行器的指定属性信息。使用Promise异步回调。
+Obtains the specified property information of the associated executor based on the credential ID. This API uses a  promise to return the result.
 
 **Since:** 14
 
@@ -623,24 +623,24 @@ getPropertyByCredentialId(credentialId: Uint8Array, keys: Array<GetPropertyType>
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| credentialId | Uint8Array | Yes | 指示凭据索引。 |
-| keys | Array&lt;GetPropertyType&gt; | Yes | 指示要查询的属性类型数组。 |
+| credentialId | Uint8Array | Yes | Credential ID. |
+| keys | Array&lt;GetPropertyType&gt; | Yes | Property type array to be queried. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;ExecutorProperty&gt; | Promise对象，返回执行器的属性信息。 |
+| Promise&lt;ExecutorProperty&gt; | Promise used to return the executor attributes. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 201 | Permission denied. |
-| 12300002 | Invalid keys. |
-| 202 | Not system application. |
-| 12300001 | The system service works abnormally. |
-| 12300102 | The credential does not exist. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
+| [12300002](../../apis-basic-services-kit/errorcode-account.md#12300002-invalid-parameter) | Invalid keys. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system application. |
+| [12300001](../../apis-basic-services-kit/errorcode-account.md#12300001-system-service-abnormal) | The system service works abnormally. |
+| [12300102](../../apis-basic-services-kit/errorcode-account.md#12300102-credential-not-found) | The credential does not exist. |
 | 12300020 | Device hardware abnormal.<br>**Applicable version:** 23 and later |
 
 ## Examples
@@ -694,7 +694,7 @@ ArkTS-Sta:
 getVersion(): int
 ```
 
-返回版本信息。
+Obtains this version number.
 
 **Since:** 8
 
@@ -710,13 +710,13 @@ getVersion(): int
 
 | Type | Description |
 | --- | --- |
-| ArkTS-Dyn: number  <br>ArkTS-Sta：int | 返回版本信息。 |
+| ArkTS-Dyn: number  <br>ArkTS-Sta：int | Version number obtained. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 202 | Not system application. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system application. |
 
 ## Examples
 
@@ -732,7 +732,7 @@ console.info('getVersion version = ' + version);
 prepareRemoteAuth(remoteNetworkId: string): Promise<void>
 ```
 
-准备远端认证。使用Promise异步回调。
+Prepares for remote authentication. This API uses a promise to return the result.
 
 **Since:** 12
 
@@ -750,13 +750,13 @@ prepareRemoteAuth(remoteNetworkId: string): Promise<void>
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| remoteNetworkId | string | Yes | 远端网络Id。 |
+| remoteNetworkId | string | Yes | Remote network ID. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise对象，无返回结果的Promise对象。 |
+| Promise&lt;void&gt; | Promise that returns no value. |
 
 **Error codes:**
 
@@ -764,11 +764,11 @@ prepareRemoteAuth(remoteNetworkId: string): Promise<void>
 | --- | --- |
 | 12300091 | Cross-device communication failed.<br>**Applicable version:** 20 and later |
 | 12300090 | Cross-device capability not supported.<br>**Applicable version:** 20 and later |
-| 12300111 | Operation timeout.<br>**Applicable version:** 20 and later |
-| 201 | Permission denied. |
-| 12300002 | Invalid remoteNetworkId. |
-| 202 | Not system application. |
-| 12300001 | System service exception. |
+| [12300111](../../apis-basic-services-kit/errorcode-account.md#12300111-authentication-timed-out) | Operation timeout.<br>**Applicable version:** 20 and later |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
+| [12300002](../../apis-basic-services-kit/errorcode-account.md#12300002-invalid-parameter) | Invalid remoteNetworkId. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system application. |
+| [12300001](../../apis-basic-services-kit/errorcode-account.md#12300001-system-service-abnormal) | System service exception. |
 
 ## Examples
 
@@ -801,7 +801,7 @@ distributedDeviceMgr.getAvailableDeviceList().then((data: Array<distributedDevic
 setProperty(request: SetPropertyRequest, callback: AsyncCallback<void>): void
 ```
 
-设置可用于初始化算法的属性。使用callback异步回调。
+Sets the property for the initialization algorithm. This API uses an asynchronous callback to return the result.
 
 **Since:** 8
 
@@ -819,18 +819,18 @@ setProperty(request: SetPropertyRequest, callback: AsyncCallback<void>): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| request | [SetPropertyRequest](arkts-basicservices-osaccount-setpropertyrequest-i-sys.md) | Yes | 请求信息，包括认证类型和要设置的密钥值。 |
-| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | 回调函数。如果设置成功，err为null，否则为错误对象。 |
+| request | [SetPropertyRequest](arkts-basicservices-osaccount-setpropertyrequest-i-sys.md) | Yes | Request information, including the authentication credential type and the key value to set. |
+| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **null**. Otherwise, **err** is an error object. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameter types. |
-| 201 | Permission denied. |
-| 12300002 | Invalid request. |
-| 202 | Not system application. |
-| 12300001 | The system service works abnormally. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameter types. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
+| [12300002](../../apis-basic-services-kit/errorcode-account.md#12300002-invalid-parameter) | Invalid request. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system application. |
+| [12300001](../../apis-basic-services-kit/errorcode-account.md#12300001-system-service-abnormal) | The system service works abnormally. |
 
 ## Examples
 
@@ -863,7 +863,7 @@ try {
 setProperty(request: SetPropertyRequest): Promise<void>
 ```
 
-设置可用于初始化算法的属性。使用Promise异步回调。
+Sets the property for the initialization algorithm. This API uses a promise to return the result.
 
 **Since:** 8
 
@@ -881,23 +881,23 @@ setProperty(request: SetPropertyRequest): Promise<void>
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| request | [SetPropertyRequest](arkts-basicservices-osaccount-setpropertyrequest-i-sys.md) | Yes | 请求信息，包括身份验证类型和要设置的密钥值。 |
+| request | [SetPropertyRequest](arkts-basicservices-osaccount-setpropertyrequest-i-sys.md) | Yes | Request information, including the authentication credential type and the key value to set. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise对象，无返回结果的Promise对象。 |
+| Promise&lt;void&gt; | Promise that returns no value. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameter types. |
-| 201 | Permission denied. |
-| 12300002 | Invalid request. |
-| 202 | Not system application. |
-| 12300001 | The system service works abnormally. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameter types. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
+| [12300002](../../apis-basic-services-kit/errorcode-account.md#12300002-invalid-parameter) | Invalid request. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system application. |
+| [12300001](../../apis-basic-services-kit/errorcode-account.md#12300001-system-service-abnormal) | The system service works abnormally. |
 
 ## Examples
 

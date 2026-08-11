@@ -12,7 +12,7 @@ import { fileShare } from 'kits/@kit.CoreFileKit';
 function persistPermission(policies: Array<PolicyInfo>): Promise<void>
 ```
 
-对所选择的多个文件或目录URI进行持久化授权，使用Promise异步回调。
+Set persistence permissions for the URI
 
 **Since:** 11
 
@@ -28,22 +28,22 @@ function persistPermission(policies: Array<PolicyInfo>): Promise<void>
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| policies | Array&lt;PolicyInfo&gt; | Yes | 需要持久化授权的URI策略信息数组。 |
+| policies | Array&lt;PolicyInfo&gt; | Yes | Policy information to grant permission on URIs. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise对象，无返回结果。 |
+| Promise&lt;void&gt; | the promise returned by the function. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error.Possible causes:1.Mandatory parameters are left unspecified; &lt;br&gt;2.Incorrect parameter types. |
-| 801 | Capability not supported. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error.Possible causes:1.Mandatory parameters are left unspecified; &lt;br&gt;2.Incorrect parameter types. |
+| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. |
 | 13900001 | Operation not permitted. |
-| 201 | Permission verification failed, usually the result returned by VerifyAccessToken. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed, usually the result returned by VerifyAccessToken. |
 | 13900042 | Out of memory |
 
 ## Examples

@@ -6,7 +6,7 @@
 export declare function rememberVariable<T>(initialValue: RememberInitialType<T>): MutableVariable<T>
 ```
 
-创建状态变量。
+Create variable within @Builder functions or build().
 
 **Since:** 23
 
@@ -24,11 +24,11 @@ export declare function rememberVariable<T>(initialValue: RememberInitialType<T>
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| initialValue | [RememberInitialType](arkts-arkui-rememberinitialtype-t.md)&lt;T&gt; | Yes | 状态变量的初始值。 |
+| initialValue | [RememberInitialType](arkts-arkui-rememberinitialtype-t.md)&lt;T&gt; | Yes | directly pass primitives or use callback to pass class, interface and builtins. The callback is only executed once. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [MutableVariable](arkts-arkui-remember-mutablevariable-i.md)&lt;T&gt; | 返回状态变量。 |
+| [MutableVariable](arkts-arkui-remember-mutablevariable-i.md)&lt;T&gt; | mutable state variable. |
 

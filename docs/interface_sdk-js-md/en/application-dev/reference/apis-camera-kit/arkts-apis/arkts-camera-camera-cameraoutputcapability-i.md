@@ -1,6 +1,6 @@
 # CameraOutputCapability
 
-相机输出能力项。
+Describes the camera output capability.
 
 **Since:** 10
 
@@ -22,7 +22,7 @@ import { camera } from 'kits/@kit.CameraKit';
 readonly photoProfiles: Array<Profile>
 ```
 
-支持的拍照配置信息集合。
+Supported photo profiles.
 
 **Type:** Array&lt;Profile&gt;
 
@@ -42,7 +42,7 @@ readonly photoProfiles: Array<Profile>
 readonly previewProfiles: Array<Profile>
 ```
 
-支持的预览配置信息集合。
+Supported preview profiles.
 
 **Type:** Array&lt;Profile&gt;
 
@@ -62,7 +62,7 @@ readonly previewProfiles: Array<Profile>
 readonly supportedMetadataObjectTypes: Array<MetadataObjectType>
 ```
 
-支持的metadata流类型信息集合。
+Supported metadata object types.
 
 **Type:** Array&lt;MetadataObjectType&gt;
 
@@ -82,7 +82,7 @@ readonly supportedMetadataObjectTypes: Array<MetadataObjectType>
 readonly videoProfiles: Array<VideoProfile>
 ```
 
-支持的录像配置信息集合。
+Supported video profiles.
 
 **Type:** Array&lt;VideoProfile&gt;
 

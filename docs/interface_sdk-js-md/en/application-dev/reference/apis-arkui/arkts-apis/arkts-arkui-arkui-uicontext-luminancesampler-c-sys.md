@@ -1,10 +1,11 @@
 # LuminanceSampler (System API)
 
-设置背景亮度取色参数、注册亮度变化监听回调、取消注册监听回调。
+Sets the background luminance color picking parameters, registers the luminance change listening callback, and unregisters the listening callback.
 
-> **说明：**
+> **NOTE：**
 > 
-> 以下API需先使用UIContext中的[getLuminanceSampler](arkts-arkui-arkui-uicontext-uicontext-c-sys.md#getluminancesampler)方法获取到LuminanceSampler对象，再通过该对象调用对应方法。
+> In the following API examples, you must first use [getLuminanceSampler](arkts-arkui-arkui-uicontext-uicontext-c-sys.md#getluminancesampler) in
+> **UIContext** to obtain a **LuminanceSampler** object, and then call the APIs using the obtained object.
 
 **Since:** 23
 
@@ -28,7 +29,7 @@ import { OverlayManager, FrameCallback, ResolvedUIContext, NodeRenderStateChange
 offBackgroundLuminanceChange(samplingCallback?: Callback<number>): void
 ```
 
-取消注册取色监听回调。未指定回调时，取消所有监听。
+Unregisters the callback for listening to color picking. If no callback is specified, all listeners are canceled.
 
 **Since:** 23
 
@@ -46,7 +47,7 @@ offBackgroundLuminanceChange(samplingCallback?: Callback<number>): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| samplingCallback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;number&gt; | No | 监听回调。 |
+| samplingCallback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;number&gt; | No | Callback to unregister. |
 
 ## onBackgroundLuminanceChange
 
@@ -54,9 +55,10 @@ offBackgroundLuminanceChange(samplingCallback?: Callback<number>): void
 onBackgroundLuminanceChange(samplingCallback: Callback<number>): void
 ```
 
-设置取色监听回调。
+Registers the callback for listening to color picking.
 
-回调的触发条件：背景亮度根据[setBackgroundLuminanceSamplingConfigs](arkts-arkui-arkui-uicontext-luminancesampler-c-sys.md#setbackgroundluminancesamplingconfigs)接口设置的亮阈值和暗阈值分为三个区间，[0，暗阈值)，[暗阈值，亮阈值]，(亮阈值，255]。背景亮度所在区间发生变化（或者首次注册监听回调），并且距离上次取色的时间间隔达到设置的取色时间间隔时触发取色回调，并返回当前背景亮度。
+The background luminance is divided into three ranges based on the luminance threshold and dark threshold set by the [setBackgroundLuminanceSamplingConfigs](arkts-arkui-arkui-uicontext-luminancesampler-c-sys.md#setbackgroundluminancesamplingconfigs) API:  
+[0, Dark threshold], (Dark threshold, Luminance threshold], and (Luminance threshold, 255]. The callback is triggered when the background luminance range changes (or the listener callback is registered for the first time)and the interval between the current color picking and the last color picking reaches the specified interval, and the current background luminance is returned.
 
 **Since:** 23
 
@@ -74,7 +76,7 @@ onBackgroundLuminanceChange(samplingCallback: Callback<number>): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| samplingCallback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;number&gt; | Yes | 监听回调。触发同时返回当前背景亮度。&lt;br/&gt;**说明：**监听回调里不能调用 [offBackgroundLuminanceChange](LuminanceSampler#off)。 |
+| samplingCallback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;number&gt; | Yes | Callback used to return the current background luminance.&lt;br&gt;Note: [offBackgroundLuminanceChange](LuminanceSampler#off) cannot be called in the listening callback. |
 
 ## setBackgroundLuminanceSamplingConfigs
 
@@ -82,7 +84,7 @@ onBackgroundLuminanceChange(samplingCallback: Callback<number>): void
 setBackgroundLuminanceSamplingConfigs(configs: BackgroundLuminanceSamplingConfigs): void
 ```
 
-设置取色参数配置。当亮度阈值不在指定范围内或暗阈值大于亮阈值将抛出异常。
+Sets the color picking parameters. If the luminance threshold is not within the specified range or the dark threshold is greater than the luminance threshold, an exception is thrown.
 
 **Since:** 23
 
@@ -100,11 +102,11 @@ setBackgroundLuminanceSamplingConfigs(configs: BackgroundLuminanceSamplingConfig
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| configs | [BackgroundLuminanceSamplingConfigs](arkts-arkui-arkui-uicontext-backgroundluminancesamplingconfigs-i-sys.md) | Yes | 取色参数。 |
+| configs | [BackgroundLuminanceSamplingConfigs](arkts-arkui-arkui-uicontext-backgroundluminancesamplingconfigs-i-sys.md) | Yes | Color picking parameters. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 100001 | Internal error. &lt;br&gt; 1. Incorrect parameter values. &lt;br&gt; 2. Incorrect parameters types. |
+| [100001](../errorcode-internal.md#100001-internal-error) | Internal error. &lt;br&gt; 1. Incorrect parameter values. &lt;br&gt; 2. Incorrect parameters types. |
 

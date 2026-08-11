@@ -1,11 +1,5 @@
 # getRealActiveTime
 
-## 导入模块
-
-```TypeScript
-import { systemTime } from 'kits/@kit.BasicServicesKit';
-```
-
 ## getRealActiveTime
 
 ```TypeScript

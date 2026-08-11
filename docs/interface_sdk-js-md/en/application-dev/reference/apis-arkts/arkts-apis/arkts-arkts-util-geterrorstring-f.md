@@ -12,7 +12,7 @@ import { util } from 'kits/@kit.ArkTS';
 function getErrorString(errno: number): string
 ```
 
-获取系统错误码的详细信息。
+Obtains detailed information about a system error code.
 
 **Since:** 7
 
@@ -30,13 +30,13 @@ function getErrorString(errno: number): string
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| errno | number | Yes | 生成的错误码。 |
+| errno | number | Yes | Error code generated. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| string | 错误码的详细信息。 |
+| string | Detailed information about the error code. |
 
 ## Examples
 

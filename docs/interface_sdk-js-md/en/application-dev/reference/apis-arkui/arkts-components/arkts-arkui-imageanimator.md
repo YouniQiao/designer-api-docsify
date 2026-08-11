@@ -1,14 +1,13 @@
 # ImageAnimator
 
-提供帧动画组件来实现逐帧播放图片的能力，可以配置需要播放的图片列表，每张图片可以配置时长。
+The **ImageAnimator** component enables images to be played a frame-by-frame basis. The list of images to be played
+as well as the duration of each image can be configured.
 
-> **说明：**
->
-> - 该组件从API版本26.0.0开始支持[WithTheme]{@link ./with_theme}。
+> **NOTE**
 
-## 子组件
+## Child Components
 
-无
+Not supported
 
 ## ImageAnimator
 
@@ -16,7 +15,7 @@
 ImageAnimator()
 ```
 
-返回ImageAnimator。
+ImageAnimator is returned.
 
 **Since:** 7
 

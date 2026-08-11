@@ -1,6 +1,6 @@
 # Stream
 
-文件流，在调用Stream的方法前，需要先通过createStream()方法（同步或异步）来构建一个Stream实例。
+Provides a stream for file operations. Before calling any API of the **Stream** class, use **createStream()** to create a **Stream** instance synchronously or asynchronously.
 
 **Since:** 6
 
@@ -20,7 +20,7 @@
 close(): Promise<void>
 ```
 
-关闭文件流，使用Promise异步回调。
+Closes the file stream. This API uses a promise to return the result.
 
 **Since:** 7
 
@@ -38,7 +38,7 @@ close(): Promise<void>
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise对象。返回表示异步关闭文件流的结果。 |
+| Promise&lt;void&gt; | Promise that returns the file stream closed. |
 
 ## Examples
 
@@ -59,7 +59,7 @@ ss.close().then(() => {
 close(callback: AsyncCallback<void>): void
 ```
 
-异步关闭文件流，使用callback异步回调。
+Closes the file stream. This API uses an asynchronous callback to return the result.
 
 **Since:** 7
 
@@ -77,7 +77,7 @@ close(callback: AsyncCallback<void>): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | 异步关闭文件流之后的回调。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback invoked when the file stream is closed asynchronously. |
 
 ## Examples
 
@@ -96,7 +96,7 @@ ss.close((err: BusinessError) => {
 closeSync(): void
 ```
 
-同步关闭文件流。
+Closes the file stream. This API returns the result synchronously.
 
 **Since:** 6
 
@@ -124,7 +124,7 @@ ss.closeSync();
 flush(): Promise<void>
 ```
 
-刷新文件流，使用Promise异步回调。
+Flushes the file stream. This API uses a promise to return the result.
 
 **Since:** 7
 
@@ -142,7 +142,7 @@ flush(): Promise<void>
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise对象。返回表示异步刷新文件流的结果。 |
+| Promise&lt;void&gt; | Promise that returns the file stream flushed. |
 
 ## Examples
 
@@ -163,7 +163,7 @@ ss.flush().then(() => {
 flush(callback: AsyncCallback<void>): void
 ```
 
-异步刷新文件流，使用callback异步回调。
+Flushes the file stream. This API uses an asynchronous callback to return the result.
 
 **Since:** 7
 
@@ -181,7 +181,7 @@ flush(callback: AsyncCallback<void>): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | 异步刷新文件流后的回调函数。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback invoked when the file stream is asynchronously flushed. |
 
 ## Examples
 
@@ -200,7 +200,7 @@ ss.flush((err: BusinessError) => {
 flushSync(): void
 ```
 
-同步刷新文件流。
+Flushes the file stream. This API returns the result synchronously.
 
 **Since:** 7
 
@@ -235,7 +235,7 @@ read(
   ): Promise<ReadOut>
 ```
 
-从流文件读取数据，使用Promise异步回调。
+Reads data from a stream file. This API uses a promise to return the result.
 
 **Since:** 7
 
@@ -253,14 +253,14 @@ read(
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| buffer | ArrayBuffer | Yes | 用于读取文件的缓冲区。 |
-| options | {       position?: number;       offset?: number;       length?: number;     } | No | 支持如下选项：&lt;br/&gt;-?offset，number类型，表示将数据读取到缓冲区的位置，即相对于缓冲区首地址的偏移，单位为Byte。可选，默认为0。&lt;br/&gt;-? length，number类型，表示期望读取数据的长度。可选，默认缓冲区长度减去偏移长度，单位为Byte。&lt;br/&gt;-?position，number类型，表示期望读取文件的位置。可选，默认从当前位置开始读，单位为Byte 。&lt;br/&gt;约束：offset+length<=buffer.size。 |
+| buffer | ArrayBuffer | Yes | Buffer used to store the file read. |
+| options | {       position?: number;       offset?: number;       length?: number;     } | No | The options are as follows:&lt;br&gt;- **offset** (number): position to store the data read in the buffer relative to the start address of the buffer, in bytes. This parameter is optional. The default value is **0**.&lt;br&gt;- **length** (number): length of the data to read. This parameter is optional. The default value is the buffer length minus the offset, in bytes.&lt;br&gt;- **position** (number): position of the data to read in the file. This parameter is optional. By default, data is read from the current position, in bytes.&lt;br&gt; Constraints: offset + length <= Buffer size |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;ReadOut&gt; | Promise对象。返回读取的结果。 |
+| Promise&lt;ReadOut&gt; | Promise that returns the data read. |
 
 ## Examples
 
@@ -329,7 +329,7 @@ read(
   ): void
 ```
 
-从流文件读取数据，使用callback异步回调。
+Reads data from a stream file. This API uses an asynchronous callback to return the result.
 
 **Since:** 7
 
@@ -347,9 +347,9 @@ read(
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| buffer | ArrayBuffer | Yes | 用于读取文件的缓冲区。 |
-| options | {       position?: number;       offset?: number;       length?: number;     } | Yes | 支持如下选项：&lt;br/&gt;-?offset，number类型，表示将数据读取到缓冲区的位置，即相对于缓冲区首地址的偏移，单位为Byte。可选，默认为0。&lt;br/&gt;-? length，number类型，表示期望读取数据的长度，单位为Byte。可选，默认缓冲区长度减去偏移长度。&lt;br/&gt;-?position，number类型，表示期望读取文件的位置，单位为Byte。可选，默认从当前位置开始读 。&lt;br/&gt;约束：offset+length<=buffer.size。 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;ReadOut&gt; | Yes | 异步从流文件读取数据之后的回调。 |
+| buffer | ArrayBuffer | Yes | Buffer used to store the file read. |
+| options | {       position?: number;       offset?: number;       length?: number;     } | Yes | The options are as follows:&lt;br&gt;- **offset** (number): position to store the data read in the buffer relative to the start address of the buffer, in bytes. This parameter is optional. The default value is **0**.&lt;br&gt;- **length** (number): length of the data to read, in bytes. This parameter is optional. The default value is the buffer length minus the offset.&lt;br&gt;- **position** (number): position of the data to read in the file, in bytes. This parameter is optional. By default, data is read from the current position.&lt;br&gt; Constraints: offset + length <= Buffer size |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;ReadOut&gt; | Yes | Callback invoked when data is read asynchronously from the stream file. |
 
 ## Examples
 
@@ -390,7 +390,7 @@ readSync(
   ): number
 ```
 
-以同步方法从流文件读取数据。
+Reads data from a stream file. This API returns the result synchronously.
 
 **Since:** 7
 
@@ -408,14 +408,14 @@ readSync(
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| buffer | ArrayBuffer | Yes | 用于读取文件的缓冲区。 |
-| options | {       position?: number;       offset?: number;       length?: number;     } | No | 支持如下选项：&lt;br/&gt;-?offset，number类型，表示将数据读取到缓冲区的位置，即相对于缓冲区首地址的偏移，单位为Byte。可选，默认为0。&lt;br/&gt;-? length，number类型，表示期望读取数据的长度。可选，默认缓冲区长度减去偏移长度，单位为Byte。&lt;br/&gt;-?position，number类型，表示期望读取文件的位置，单位为Byte。可选，默认从当前位置开始读 。&lt;br/&gt;约束：offset+length<=buffer.size。 |
+| buffer | ArrayBuffer | Yes | Buffer used to store the file read. |
+| options | {       position?: number;       offset?: number;       length?: number;     } | No | The options are as follows:&lt;br&gt;- **offset** (number): position to store the data read in the buffer relative to the start address of the buffer, in bytes. This parameter is optional. The default value is **0**.&lt;br&gt;- **length** (number): length of the data to read. This parameter is optional. The default value is the buffer length minus the offset, in bytes.&lt;br&gt;- **position** (number): position of the data to read in the file, in bytes. This parameter is optional. By default, data is read from the current position.&lt;br&gt; Constraints: offset + length <= Buffer size |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| number | 实际读取的长度，单位为Byte。 |
+| number | Length of the data read, in bytes. |
 
 ## Examples
 
@@ -449,7 +449,7 @@ write(
   ): Promise<number>
 ```
 
-将数据写入流文件，使用Promise异步回调。
+Writes data to a stream file. This API uses a promise to return the result.
 
 **Since:** 7
 
@@ -467,14 +467,14 @@ write(
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| buffer | ArrayBuffer \| string | Yes | 待写入文件的数据，可来自缓冲区或字符串。 |
-| options | {       offset?: number;       length?: number;       position?: number;       encoding?: string;     } | No | 支持如下选项：&lt;br/&gt;-?offset，number类型，表示期望写入数据的位置相对于数据首地址的偏移，单位为Byte。可选，默认为0。&lt;br/&gt;-?length， number类型，表示期望写入数据的长度，单位为Byte。可选，默认缓冲区长度减去偏移长度。&lt;br/&gt;-?position，number类型，表示期望写入文件的位置，单位为Byte。可选，默认从当前位置开始写。&lt;br/&gt;- ?encoding，string类型，当数据是string类型时有效，表示数据的编码方式，默认?'utf-8'。仅支持?'utf-8'。&lt;br/&gt;约束：offset+length<=buffer.size。 |
+| buffer | ArrayBuffer \| string | Yes | Data to write. It can be a string or data from a buffer. |
+| options | {       offset?: number;       length?: number;       position?: number;       encoding?: string;     } | No | The options are as follows:&lt;br&gt;- **offset** (number): offset of the write position relative to the start address of the data, in bytes. This parameter is optional. The default value is **0**.&lt;br &gt;- **length** (number): length of the data to write, in bytes. This parameter is optional. The default value is the buffer length minus the offset.&lt;br&gt;- **position** (number): start position to write the data into the file, in bytes. This parameter is optional. By default, data is written from the current position.&lt;br&gt;- **encoding** (string): format of the data to be encoded when the data is a string. The default value is **'utf-8'**, which is the only value supported.&lt;br&gt;Constraints: offset + length <= Buffer size |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;number&gt; | Promise对象。返回实际写入的长度，单位为Byte。 |
+| Promise&lt;number&gt; | Promise that returns the length of the data written, in bytes. |
 
 ## Examples
 
@@ -541,7 +541,7 @@ write(
   ): void
 ```
 
-将数据写入流文件，使用callback异步回调。
+Writes data to a stream file. This API uses an asynchronous callback to return the result.
 
 **Since:** 7
 
@@ -559,9 +559,9 @@ write(
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| buffer | ArrayBuffer \| string | Yes | 待写入文件的数据，可来自缓冲区或字符串。 |
-| options | {       offset?: number;       length?: number;       position?: number;       encoding?: string;     } | Yes | 支持如下选项：&lt;br/&gt;-?offset，number类型，表示期望写入数据的位置相对于数据首地址的偏移，单位为Byte。可选，默认为0。&lt;br/&gt;-?length， number类型，表示期望写入数据的长度，单位为Byte。可选，默认缓冲区长度减去偏移长度。&lt;br/&gt;-?position，number类型，表示期望写入文件的位置，单位为Byte。可选，默认从当前位置开始写。&lt;br/&gt;- ?encoding，string类型，当数据是string类型时有效，表示数据的编码方式，默认?'utf-8'。仅支持?'utf-8'。&lt;br/&gt;约束：offset+length<=buffer.size。 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;number&gt; | Yes | 异步写入完成后执行的回调函数，返回实际写入的长度，单位为Byte。 |
+| buffer | ArrayBuffer \| string | Yes | Data to write. It can be a string or data from a buffer. |
+| options | {       offset?: number;       length?: number;       position?: number;       encoding?: string;     } | Yes | The options are as follows:&lt;br&gt;- **offset** (number): offset of the write position relative to the start address of the data, in bytes. This parameter is optional. The default value is **0**.&lt;br &gt;- **length** (number): length of the data to write, in bytes. This parameter is optional. The default value is the buffer length minus the offset.&lt;br&gt;- **position** (number): start position to write the data into the file, in bytes. This parameter is optional. By default, data is written from the current position.&lt;br&gt;- **encoding** (string): format of the data to be encoded when the data is a string. The default value is **'utf-8'**, which is the only value supported.&lt;br&gt;Constraints: offset + length <= Buffer size |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;number&gt; | Yes | Callback invoked when the data is written asynchronously, which is used to return the length of the data written, in bytes. |
 
 ## Examples
 
@@ -601,7 +601,7 @@ writeSync(
   ): number
 ```
 
-以同步方法将数据写入流文件。
+Writes data to a stream file. This API returns the result synchronously.
 
 **Since:** 7
 
@@ -619,14 +619,14 @@ writeSync(
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| buffer | ArrayBuffer \| string | Yes | 待写入文件的数据，可来自缓冲区或字符串。 |
-| options | {       offset?: number;       length?: number;       position?: number;       encoding?: string;     } | No | 支持如下选项：&lt;br/&gt;-?offset，number类型，表示期望写入数据的位置相对于数据首地址的偏移，单位为Byte。可选，默认为0。&lt;br/&gt;-?length， number类型，表示期望写入数据的长度。可选，默认缓冲区长度减去偏移长度。&lt;br/&gt;-?position，number类型，表示期望写入文件的位置，单位为Byte。可选，默认从当前位置开始写。&lt;br/&gt;-? encoding，string类型，当数据是string类型时有效，表示数据的编码方式，默认?'utf-8'。仅支持?'utf-8'。&lt;br/&gt;约束：offset+length<=buffer.size。 |
+| buffer | ArrayBuffer \| string | Yes | Data to write. It can be a string or data from a buffer. |
+| options | {       offset?: number;       length?: number;       position?: number;       encoding?: string;     } | No | The options are as follows:&lt;br&gt;- **offset** (number): offset of the write position relative to the start address of the data, in bytes. This parameter is optional. The default value is **0**.&lt;br &gt;- **length** (number): length of the data to write. This parameter is optional. The default value is the buffer length minus the offset.&lt;br&gt;- **position** (number): start position to write the data into the file, in bytes. This parameter is optional. By default, data is written from the current position.&lt;br&gt;- **encoding** ( string): format of the data to be encoded when the data is a string. The default value is **'utf-8'**, which is the only value supported.&lt;br&gt;Constraints: offset + length <= Buffer size |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| number | 实际写入的长度，单位为Byte。 |
+| number | Length of the data written in the file, in bytes. |
 
 ## Examples
 

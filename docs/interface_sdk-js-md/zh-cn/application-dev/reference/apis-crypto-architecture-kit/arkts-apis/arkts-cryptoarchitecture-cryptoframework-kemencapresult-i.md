@@ -10,12 +10,6 @@ KEM封装结果。
 
 **系统能力：** SystemCapability.Security.CryptoFramework.Cipher
 
-## 导入模块
-
-```TypeScript
-import { cryptoFramework } from 'kits/@kit.CryptoArchitectureKit';
-```
-
 ## sharedSecret
 
 ```TypeScript

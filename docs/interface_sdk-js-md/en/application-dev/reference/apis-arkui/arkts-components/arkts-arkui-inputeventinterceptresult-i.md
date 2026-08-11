@@ -1,6 +1,7 @@
 # InputEventInterceptResult
 
-输入事件拦截结果接口，用于监听器回调[InputEventListener](arkts-arkui-inputeventlistener-t.md)返回是否拦截的决策。
+Input event interception result interface, used by the listener callback  
+[InputEventListener](arkts-arkui-inputeventlistener-t.md) to return the interception decision.
 
 **Since:** 26.0.0
 
@@ -16,11 +17,11 @@
 action: InputEventInterceptAction
 ```
 
-输入事件拦截动作。
+Input event interception action.
 
-CONTINUE：允许事件继续传递到UI框架。
+**CONTINUE**: The event is allowed to continue being passed to the UI framework.
 
-BLOCK：阻止事件传递到UI框架。
+**BLOCK**: The event is blocked from being passed to the UI framework.
 
 **Type:** [InputEventInterceptAction](../arkts-apis/arkts-arkui-inputeventinterceptaction-e.md)
 

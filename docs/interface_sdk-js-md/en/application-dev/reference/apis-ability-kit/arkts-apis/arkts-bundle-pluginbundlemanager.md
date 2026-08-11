@@ -1,6 +1,6 @@
 # @ohos.bundle.pluginBundleManager
 
-本模块提供应用对自分发插件的管理能力，包括安装、卸载本地插件。
+This module is used to manage plugins for applications.
 
 **Since:** 26.0.0
 
@@ -24,14 +24,14 @@ import { pluginBundleManager } from 'kits/@kit.AbilityKit';
 
 | Name | Description |
 | --- | --- |
-| [getAllLocalPluginInfoForSelf](arkts-ability-pluginbundlemanager-getalllocalplugininfoforself-f.md#getalllocalplugininfoforself) | 查询当前应用中所有自分发插件的信息。使用Promise异步回调。 |
-| [installLocalPlugin](arkts-ability-pluginbundlemanager-installlocalplugin-f.md#installlocalplugin) | 为当前应用安装自分发插件（即应用通过自有渠道分发、自主管理的插件）。使用Promise异步回调。 |
-| [uninstallLocalPlugin](arkts-ability-pluginbundlemanager-uninstalllocalplugin-f.md#uninstalllocalplugin) | 卸载当前应用已通过自分发方式安装的指定插件。使用Promise异步回调。 |
+| [getAllLocalPluginInfoForSelf](arkts-ability-pluginbundlemanager-getalllocalplugininfoforself-f.md#getalllocalplugininfoforself) | Obtains information about all local plugins installed on the current application. |
+| [installLocalPlugin](arkts-ability-pluginbundlemanager-installlocalplugin-f.md#installlocalplugin) | Install the plugin for self application. |
+| [uninstallLocalPlugin](arkts-ability-pluginbundlemanager-uninstalllocalplugin-f.md#uninstalllocalplugin) | Uninstall the plugin for self application. |
 
 ### Types
 
 | Name | Description |
 | --- | --- |
-| [PluginBundleInfo](arkts-ability-pluginbundlemanager-pluginbundleinfo-t.md) | 插件信息。 |
-| [PluginModuleInfo](arkts-ability-pluginbundlemanager-pluginmoduleinfo-t.md) | 插件的模块信息。 |
+| [PluginBundleInfo](arkts-ability-pluginbundlemanager-pluginbundleinfo-t.md) | Indicates the information about a plugin. |
+| [PluginModuleInfo](arkts-ability-pluginbundlemanager-pluginmoduleinfo-t.md) | Indicates the plugin module info. |
 

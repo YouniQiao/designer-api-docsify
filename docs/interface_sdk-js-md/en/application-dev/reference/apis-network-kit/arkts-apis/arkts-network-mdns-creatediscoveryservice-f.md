@@ -41,7 +41,7 @@ Create an mDNS based discovery service with context and serviceType.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. |
 
 ## Examples
 

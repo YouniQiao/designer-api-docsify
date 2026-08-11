@@ -6,5 +6,5 @@
 
 | Name | Description |
 | --- | --- |
-| [ContinuationExtraParams](arkts-ability-continuationextraparams-continuationextraparams-i.md) | 流转管理入口中设备选择模块所需的过滤参数，可以作为  [startContinuationDeviceManager](arkts-ability-continuationmanager-startcontinuationdevicemanager-f.md#startcontinuationdevicemanager)的入参。 |
+| [ContinuationExtraParams](arkts-ability-continuationextraparams-continuationextraparams-i.md) | The ContinuationExtraParams module provides the filter parameters required by the device selection module in the continuation management entry. These filter parameters can be used as an input parameter of  [startContinuationDeviceManager](arkts-ability-continuationmanager-startcontinuationdevicemanager-f.md#startcontinuationdevicemanager). |
 

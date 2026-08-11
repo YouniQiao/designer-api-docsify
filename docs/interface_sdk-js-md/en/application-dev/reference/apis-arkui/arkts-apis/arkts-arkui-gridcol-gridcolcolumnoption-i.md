@@ -1,6 +1,6 @@
 # GridColColumnOption
 
-用于自定义指定在不同宽度设备类型上，栅格子组件占据的栅格数量单位。
+Defines the option in int unit of grid-container child component.
 
 **Since:** 23
 
@@ -16,7 +16,7 @@
 lg?: int
 ```
 
-在栅格大小为lg的设备上，栅格容器组件的栅格列数。
+Grid Col Column Option lg
 
 **Type:** int
 
@@ -36,7 +36,7 @@ lg?: int
 md?: int
 ```
 
-在栅格大小为md的设备上，栅格容器组件的栅格列数。
+Grid Col Column Option md
 
 **Type:** int
 
@@ -56,7 +56,7 @@ md?: int
 sm?: int
 ```
 
-在栅格大小为sm的设备上，栅格容器组件的栅格列数。
+Grid Col Column Option sm
 
 **Type:** int
 
@@ -76,7 +76,7 @@ sm?: int
 xl?: int
 ```
 
-在栅格大小为xl的设备上，栅格容器组件的栅格列数。
+Grid Col Column Option xl
 
 **Type:** int
 
@@ -96,7 +96,7 @@ xl?: int
 xs?: int
 ```
 
-在栅格大小为xs的设备上，栅格容器组件的栅格列数。
+Grid Col Column Option xs
 
 **Type:** int
 
@@ -116,7 +116,7 @@ xs?: int
 xxl?: int
 ```
 
-在栅格大小为xxl的设备上，栅格容器组件的栅格列数。
+Grid Col Column Option xxl
 
 **Type:** int
 

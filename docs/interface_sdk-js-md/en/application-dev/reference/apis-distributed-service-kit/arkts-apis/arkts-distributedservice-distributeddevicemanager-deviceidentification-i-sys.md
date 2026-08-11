@@ -1,6 +1,6 @@
 # DeviceIdentification (System API)
 
-用于分布式设备识别的结构体。
+Struct for distributed device identification.
 
 **Since:** 24
 
@@ -24,7 +24,7 @@ import { distributedDeviceManager } from 'kits/@kit.DistributedServiceKit';
 deviceId: string
 ```
 
-应用获取的匿名化设备ID。
+Anonymized device ID for application.
 
 **Type:** string
 
@@ -46,7 +46,7 @@ deviceId: string
 udid: string
 ```
 
-设备唯一标识。
+Unique device ID (UDID).
 
 **Type:** string
 

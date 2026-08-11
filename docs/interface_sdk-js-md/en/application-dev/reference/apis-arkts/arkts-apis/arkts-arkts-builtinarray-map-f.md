@@ -24,7 +24,7 @@ Calls a defined callback function on each element of an array, and returns an ar
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | self | FixedArray&lt;boolean&gt; | Yes | The array to map. |
-| callbackfn | (value: boolean, index: int, array: FixedArray&lt;boolean&gt;)      =&gt; boolean | Yes | A function that accepts up to three arguments. The map method calls the callbackfn function one time for each element in the array. |
+| callbackfn | (value: boolean, index: int, array: FixedArray&lt;boolean&gt;)      =&gt; boolean | Yes | A function that accepts up to three arguments. The map method calls the callbackfn function one time for each element in the array. |
 
 **Return value:**
 
@@ -90,7 +90,7 @@ Calls a defined callback function on each element of an array, and returns an ar
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | self | FixedArray&lt;short&gt; | Yes | The array to map. |
-| callbackfn | (value: short, index: int, array: FixedArray&lt;short&gt;)      =&gt; short | Yes | A function that accepts up to three arguments. The map method calls the callbackfn function one time for each element in the array. |
+| callbackfn | (value: short, index: int, array: FixedArray&lt;short&gt;)      =&gt; short | Yes | A function that accepts up to three arguments. The map method calls the callbackfn function one time for each element in the array. |
 
 **Return value:**
 
@@ -189,7 +189,7 @@ Calls a defined callback function on each element of an array, and returns an ar
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | self | FixedArray&lt;float&gt; | Yes | The array to map. |
-| callbackfn | (value: float, index: int, array: FixedArray&lt;float&gt;)      =&gt; float | Yes | A function that accepts up to three arguments. The map method calls the callbackfn function one time for each element in the array. |
+| callbackfn | (value: float, index: int, array: FixedArray&lt;float&gt;)      =&gt; float | Yes | A function that accepts up to three arguments. The map method calls the callbackfn function one time for each element in the array. |
 
 **Return value:**
 
@@ -222,7 +222,7 @@ Calls a defined callback function on each element of an array, and returns an ar
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | self | FixedArray&lt;double&gt; | Yes | The array to map. |
-| callbackfn | (value: double, index: int, array: FixedArray&lt;double&gt;)      =&gt; double | Yes | A function that accepts up to three arguments. The map method calls the callbackfn function one time for each element in the array. |
+| callbackfn | (value: double, index: int, array: FixedArray&lt;double&gt;)      =&gt; double | Yes | A function that accepts up to three arguments. The map method calls the callbackfn function one time for each element in the array. |
 
 **Return value:**
 

@@ -1,6 +1,6 @@
 # CalendarAlign
 
-对齐方式类型。
+The type of alignment between entry and calendar.
 
 **Since:** 23
 
@@ -16,7 +16,7 @@
 START = 0
 ```
 
-设置选择器与入口组件的对齐方式为左对齐。
+The value of calendar align type start.
 
 **Since:** 23
 
@@ -34,7 +34,7 @@ START = 0
 CENTER = 1
 ```
 
-设置选择器与入口组件的对齐方式为居中对齐。
+The value of calendar align type center.
 
 **Since:** 23
 
@@ -52,7 +52,7 @@ CENTER = 1
 END = 2
 ```
 
-设置选择器与入口组件的对齐方式为右对齐。
+The value of calendar align type end.
 
 **Since:** 23
 

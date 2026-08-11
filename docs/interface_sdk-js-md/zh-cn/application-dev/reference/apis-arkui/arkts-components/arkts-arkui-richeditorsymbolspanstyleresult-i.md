@@ -20,7 +20,7 @@ SymbolSpan组件动效策略。
 
 默认值：SymbolEffectStrategy.NONE。
 
-**类型：** [SymbolEffectStrategy](arkts-arkui-symboleffectstrategy-e.md)
+**类型：** [SymbolEffectStrategy](../arkts-apis/arkts-arkui-symbolglyph-symboleffectstrategy-e.md)
 
 **起始版本：** 11
 
@@ -120,7 +120,7 @@ SymbolSpan组件渲染策略。
 
 默认值：SymbolRenderingStrategy.SINGLE。
 
-**类型：** [SymbolRenderingStrategy](arkts-arkui-symbolrenderingstrategy-e.md)
+**类型：** [SymbolRenderingStrategy](../arkts-apis/arkts-arkui-symbolglyph-symbolrenderingstrategy-e.md)
 
 **起始版本：** 11
 

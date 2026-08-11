@@ -1,6 +1,6 @@
 # StatisticInfo (System API)
 
-端云同步的统计信息。
+Represents the device-cloud sync statistics.
 
 **Since:** 12
 
@@ -24,7 +24,7 @@ import { cloudData } from 'kits/@kit.ArkData';
 inserted: int
 ```
 
-本地新增且未同步到云端的数据条数，如返回值为2，表示本地新增2条数据且还未同步到云端。
+Number of data records that are added locally and have not been synced to the cloud. For example, the value **2**indicates that the table has two data records that are added locally but not synced to the cloud.
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
@@ -44,7 +44,7 @@ inserted: int
 normal: int
 ```
 
-端云一致的数据条数。如返回值为2，表示本地与云端一致的数据为2条。
+Number of consistent data records between the device and the cloud. For example, the value **2** indicates that table has two data records that are consistent between the device and the cloud.
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
@@ -64,7 +64,8 @@ normal: int
 table: string
 ```
 
-查询的表名。如返回值为"cloud_notes"，表示查询结果是表名为"cloud_notes"的同步信息。
+Name of the table queried. For example, the value **cloud_notes** indicates that the sync information of the   
+**cloud_notes** table is queried.
 
 **Type:** string
 
@@ -84,7 +85,8 @@ table: string
 updated: int
 ```
 
-云端同步之后，本地或云端修改还未同步的数据条数，如返回值为2，表示本地或云端修改还有2条数据未同步。
+Number of data records that are modified locally or on the cloud but have not been synced. For example, the value  
+**2** indicates that the table has two data records that are updated locally or on the cloud but not synced.
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 

@@ -1,6 +1,6 @@
 # ActionType (System API)
 
-动作序列类型
+Type of action sequence.
 
 **Since:** 26.0.0
 
@@ -18,7 +18,7 @@
 LANDSCAPE_PORTRAIT_SWITCH = 0
 ```
 
-横竖屏旋转
+Landscape-to-Portrait switching.
 
 **Since:** 26.0.0
 
@@ -36,7 +36,7 @@ LANDSCAPE_PORTRAIT_SWITCH = 0
 PATROL_MODE = 1
 ```
 
-巡桌模式
+Action of patrol on the ground.
 
 **Since:** 26.0.0
 
@@ -54,7 +54,7 @@ PATROL_MODE = 1
 GREET_MODE = 2
 ```
 
-迎人模式
+Action of greeting the owner.
 
 **Since:** 26.0.0
 
@@ -72,7 +72,7 @@ GREET_MODE = 2
 HEAD_UP = 3
 ```
 
-仰头
+Action of tilting head up.
 
 **Since:** 26.0.0
 
@@ -90,7 +90,7 @@ HEAD_UP = 3
 HEAD_UP_SLIGHTLY = 4
 ```
 
-微抬
+Action of tilting head up slightly.
 
 **Since:** 26.0.0
 
@@ -108,7 +108,7 @@ HEAD_UP_SLIGHTLY = 4
 EYE_LEVEL = 5
 ```
 
-平视
+Action of looking straight ahead.
 
 **Since:** 26.0.0
 
@@ -126,7 +126,7 @@ EYE_LEVEL = 5
 HEAD_DOWN_SLIGHTLY = 6
 ```
 
-微低
+Action of tilting head down slightly.
 
 **Since:** 26.0.0
 
@@ -144,7 +144,7 @@ HEAD_DOWN_SLIGHTLY = 6
 HEAD_DOWN = 7
 ```
 
-下俯到底
+Action of tilting head down completely.
 
 **Since:** 26.0.0
 
@@ -162,7 +162,7 @@ HEAD_DOWN = 7
 HEAD_WIGGLE = 8
 ```
 
-晃头
+Action of wiggling head.
 
 **Since:** 26.0.0
 
@@ -180,7 +180,7 @@ HEAD_WIGGLE = 8
 NOD = 9
 ```
 
-点头
+Action of nodding.
 
 **Since:** 26.0.0
 
@@ -198,7 +198,7 @@ NOD = 9
 HEAD_SHAKE = 10
 ```
 
-摇头
+Action of shaking head.
 
 **Since:** 26.0.0
 
@@ -216,7 +216,7 @@ HEAD_SHAKE = 10
 HAPPY = 1000
 ```
 
-开心动作
+Action of happy.
 
 **Since:** 26.0.0
 
@@ -234,7 +234,7 @@ HAPPY = 1000
 ANGRY = 1001
 ```
 
-生气动作
+Action of angry.
 
 **Since:** 26.0.0
 
@@ -252,7 +252,7 @@ ANGRY = 1001
 SAD = 1002
 ```
 
-悲伤动作
+Action of sad.
 
 **Since:** 26.0.0
 
@@ -270,7 +270,7 @@ SAD = 1002
 SCARED = 1003
 ```
 
-惊吓动作
+Action of scared.
 
 **Since:** 26.0.0
 
@@ -288,7 +288,7 @@ SCARED = 1003
 DANCE = 2000
 ```
 
-舞蹈动作
+Action of dance.
 
 **Since:** 26.0.0
 
@@ -306,7 +306,7 @@ DANCE = 2000
 ACTING_CUTE = 2001
 ```
 
-卖萌动作
+Action of acting cute.
 
 **Since:** 26.0.0
 
@@ -324,7 +324,7 @@ ACTING_CUTE = 2001
 CELEBRATE = 2002
 ```
 
-庆祝动作
+Action of celebrate.
 
 **Since:** 26.0.0
 
@@ -342,7 +342,7 @@ CELEBRATE = 2002
 WAKEUP = 2003
 ```
 
-唤醒动作
+Action of wakeup.
 
 **Since:** 26.0.0
 
@@ -360,7 +360,7 @@ WAKEUP = 2003
 SLEEP = 2004
 ```
 
-休眠动作
+Action of sleep.
 
 **Since:** 26.0.0
 
@@ -378,7 +378,7 @@ SLEEP = 2004
 LOW_POWER = 2005
 ```
 
-低电量动作
+Action of low power.
 
 **Since:** 26.0.0
 
@@ -396,7 +396,7 @@ LOW_POWER = 2005
 THINKING = 2006
 ```
 
-思考中动作
+Action of thinking.
 
 **Since:** 26.0.0
 

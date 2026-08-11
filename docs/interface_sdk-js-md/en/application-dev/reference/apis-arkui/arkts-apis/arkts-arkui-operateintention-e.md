@@ -1,6 +1,6 @@
 # OperateIntention
 
-智慧手势原始操作意图枚举。
+Define the smart gesture's operation intention.
 
 **Since:** 26.0.0
 
@@ -16,7 +16,7 @@
 TAP = 0
 ```
 
-敲一敲。
+Tap intention.
 
 **Since:** 26.0.0
 
@@ -36,7 +36,7 @@ TAP = 0
 SLIDE_FORWARD = 1
 ```
 
-划一划。
+Slide forward intention.
 
 **Since:** 26.0.0
 
@@ -56,7 +56,7 @@ SLIDE_FORWARD = 1
 BACK_PRESS = 2
 ```
 
-翻腕。
+Back press intention.
 
 **Since:** 26.0.0
 

@@ -1,11 +1,5 @@
 # offAVMusicTemplateCreate（系统接口）
 
-## 导入模块
-
-```TypeScript
-import { avMusicTemplate } from 'kits/@kit.AVSessionKit';
-```
-
 ## offAVMusicTemplateCreate
 
 ```TypeScript
@@ -38,7 +32,7 @@ function offAVMusicTemplateCreate(callback?: Callback<AVMusicTemplateDescriptor>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 801 | Capability not supported.function offAVMusicTemplateCreate can not work correctly due to limited device capabilities. |
-| 201 | Permission verify failed. |
-| 202 | Not System App. |
+| [801](../../errorcode-universal.md#801-该设备不支持此api) | Capability not supported.function offAVMusicTemplateCreate can not work correctly due to limited device capabilities. |
+| [201](../../errorcode-universal.md#201-权限校验失败) | Permission verify failed. |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not System App. |
 

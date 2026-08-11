@@ -10,12 +10,6 @@ Web原生消息连接的信息对象。
 
 **系统能力：** SystemCapability.Web.Webview.Core
 
-## 导入模块
-
-```TypeScript
-import { ConnectionInfo } from 'kits/@kit.ArkWeb';
-```
-
 ## bundleName
 
 ```TypeScript

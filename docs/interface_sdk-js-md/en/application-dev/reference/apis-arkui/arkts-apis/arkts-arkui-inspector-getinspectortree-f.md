@@ -12,9 +12,7 @@ import { inspector } from 'kits/@kit.ArkUI';
 function getInspectorTree(): RecordData
 ```
 
-获取组件树及组件属性。
-
-此接口仅用于对应用的测试。由于耗时长，不建议测试之外的场景使用。
+Get components tree.
 
 **Since:** 23
 
@@ -30,5 +28,5 @@ function getInspectorTree(): RecordData
 
 | Type | Description |
 | --- | --- |
-| [RecordData](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-recorddata-t.md) | 组件树及组件属性列表的JSON对象。组件中每个字段的含义请参考getInspectorInfo的返回值说明。 |
+| [RecordData](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-recorddata-t.md) |  |
 

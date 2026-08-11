@@ -1,6 +1,6 @@
 # Position
 
-坐标位置：在全局坐标系中，以主屏左上角为原点。在相对坐标系中，以指定屏幕左上角为原点。
+Describes a coordinate position. In the global coordinate system, the origin is the top-left corner of the primary screen. In the relative coordinate system, the origin is the top-left corner of the specified screen.
 
 **Since:** 20
 
@@ -22,7 +22,7 @@ import { display } from 'kits/@kit.ArkUI';
 x: long
 ```
 
-相对原点的横坐标，单位为px，该参数应为32位有符号整数，输入浮点数时向下取整。
+X coordinate relative to the origin, measured in px. The value must be a 32-bit signed integer, and floating-point numbers are rounded down.
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：long
 
@@ -40,7 +40,7 @@ x: long
 y: long
 ```
 
-相对原点的纵坐标，单位为px，该参数应为32位有符号整数，输入浮点数时向下取整。
+Y coordinate relative to the origin, measured in px. The value must be a 32-bit signed integer, and floating-point numbers are rounded down.
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：long
 

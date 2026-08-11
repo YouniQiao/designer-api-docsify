@@ -1,10 +1,10 @@
 # OutlineStyle
 
-外描边样式。
+Enumerates outline styles.
 
-**Since:** 12
+**Since:** 11
 
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
+**ArkTS mode:** ArkTS-Dyn only, since version 11.
 
 <!--Device-unnamed-declare enum OutlineStyle--><!--Device-unnamed-declare enum OutlineStyle-End-->
 
@@ -16,17 +16,17 @@
 SOLID = 0
 ```
 
-显示为一条实线。
+Solid border.
 
-**Since:** 12
+**Since:** 11
 
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
+**ArkTS mode:** ArkTS-Dyn only, since version 11.
 
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
-**Widget capability:** This API can be used in ArkTS widgets since API version 12.
+**Widget capability:** This API can be used in ArkTS widgets since API version 11.
 
 <!--Device-OutlineStyle-SOLID = 0--><!--Device-OutlineStyle-SOLID = 0-End-->
 
@@ -38,17 +38,17 @@ SOLID = 0
 DASHED = 1
 ```
 
-显示为一系列短的方形虚线。
+Dashed border.
 
-**Since:** 12
+**Since:** 11
 
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
+**ArkTS mode:** ArkTS-Dyn only, since version 11.
 
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
-**Widget capability:** This API can be used in ArkTS widgets since API version 12.
+**Widget capability:** This API can be used in ArkTS widgets since API version 11.
 
 <!--Device-OutlineStyle-DASHED = 1--><!--Device-OutlineStyle-DASHED = 1-End-->
 
@@ -62,15 +62,15 @@ DOTTED = 2
 
 Dotted border. The radius of a dot is half of **outlineWidth**.
 
-**Since:** 12
+**Since:** 11
 
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
+**ArkTS mode:** ArkTS-Dyn only, since version 11.
 
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
-**Widget capability:** This API can be used in ArkTS widgets since API version 12.
+**Widget capability:** This API can be used in ArkTS widgets since API version 11.
 
 <!--Device-OutlineStyle-DOTTED = 2--><!--Device-OutlineStyle-DOTTED = 2-End-->
 

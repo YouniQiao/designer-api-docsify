@@ -1,8 +1,5 @@
 # checkboxgroup
 
-多选框群组，用于控制多选框全选或者不全选状态。
-
-
 ## Summary
 
 ### Functions
@@ -15,20 +12,20 @@
 
 | Name | Description |
 | --- | --- |
-| [CheckBoxGroupConfiguration](arkts-arkui-checkboxgroup-checkboxgroupconfiguration-i.md) | CheckboxGroup的内容修饰器配置对象，用于配置CheckboxGroup的内容和样式。 |
-| [CheckboxGroupAttribute](arkts-arkui-checkboxgroup-checkboxgroupattribute-i.md) | 除支持[通用属性](../../apis-ability-kit/arkts-apis/arkts-app-ability-common.md/arkts-app-ability-common.md)外，还支持以下属性： |
-| [CheckboxGroupOptions](arkts-arkui-checkboxgroup-checkboxgroupoptions-i.md) | 多选框群组的信息。 |
-| [CheckboxGroupResult](arkts-arkui-checkboxgroup-checkboxgroupresult-i.md) | 多选框群组的名称和状态。 |
+| [CheckBoxGroupConfiguration](arkts-arkui-checkboxgroup-checkboxgroupconfiguration-i.md) | CheckBoxGroupConfiguration used by content modifier. |
+| [CheckboxGroupAttribute](arkts-arkui-checkboxgroup-checkboxgroupattribute-i.md) | Defines the CheckboxGroup component attributes. |
+| [CheckboxGroupOptions](arkts-arkui-checkboxgroup-checkboxgroupoptions-i.md) | Defines the options of CheckboxGroup. |
+| [CheckboxGroupResult](arkts-arkui-checkboxgroup-checkboxgroupresult-i.md) | Defines the options of CheckboxGroupResult. |
 
 ### Enums
 
 | Name | Description |
 | --- | --- |
-| [SelectStatus](arkts-arkui-checkboxgroup-selectstatus-e.md) | 多选框群组的选中状态。 |
+| [SelectStatus](arkts-arkui-checkboxgroup-selectstatus-e.md) | CheckboxGroup SelectStatus |
 
 ### Types
 
 | Name | Description |
 | --- | --- |
-| [OnCheckboxGroupChangeCallback](arkts-arkui-oncheckboxgroupchangecallback-t.md) | 多选框群组的信息。 |
+| [OnCheckboxGroupChangeCallback](arkts-arkui-oncheckboxgroupchangecallback-t.md) | Defines a CheckboxGroup callback when onChange.Anonymous Object Rectification. |
 

@@ -12,8 +12,8 @@ import { notificationExtensionSubscription } from 'kits/@kit.NotificationKit';
 function getAllSubscriptionBundles(): Promise<BundleOption[]>
 ```
 
-获取所有具有ohos.permission.SUBSCRIBE_NOTIFICATION权限并且实现了  
-[NotificationSubscriberExtensionAbility](arkts-notification-application-notificationsubscriberextensionability-notificationsubscriberextensionability-c.md)的应用列表。使用Promise异步回调。
+Obtains all applications that have requested the ohos.permission.SUBSCRIBE_NOTIFICATION permission and implemented  
+ [NotificationSubscriberExtensionAbility](arkts-notification-application-notificationsubscriberextensionability-notificationsubscriberextensionability-c.md). This API uses a promise to return the result.
 
 **Since:** 22
 
@@ -31,16 +31,16 @@ function getAllSubscriptionBundles(): Promise<BundleOption[]>
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;BundleOption[]&gt; | Promise对象，返回所有具有 ohos.permission.SUBSCRIBE_NOTIFICATION权限并且实现了 NotificationSubscriberExtensionAbility的应用列表。 |
+| Promise&lt;BundleOption[]&gt; | Promise used to return the applications that have requested the ohos.permission.SUBSCRIBE_NOTIFICATION permission and implemented NotificationSubscriberExtensionAbility. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 201 | Permission denied. |
-| 1600001 | Internal error. |
-| 202 | Not system application to call the interface. |
-| 1600003 | Failed to connect to the service. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
+| [1600001](../errorcode-notification.md#1600001-internal-error) | Internal error. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system application to call the interface. |
+| [1600003](../errorcode-notification.md#1600003-failed-to-connect-to-the-notification-service) | Failed to connect to the service. |
 
 ## Examples
 
@@ -48,7 +48,7 @@ function getAllSubscriptionBundles(): Promise<BundleOption[]>
 notificationExtensionSubscription.getAllSubscriptionBundles().then((data: notificationExtensionSubscription.BundleOption[]) => {
   console.info(`getAllSubscriptionBundles successfully. Data: ${JSON.stringify(data)}`);
 }).catch((err: BusinessError) => {
-  console.error(`getAllSubscriptionBundles fail, code is ${err.code}, message is ${err.message}`);
+  console.error(`getAllSubscriptionBundles fail: ${JSON.stringify(err)}`);
 });
 ```
 

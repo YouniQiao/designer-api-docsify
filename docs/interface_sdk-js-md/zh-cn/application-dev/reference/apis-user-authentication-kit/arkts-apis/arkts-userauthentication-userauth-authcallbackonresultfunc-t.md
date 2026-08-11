@@ -18,5 +18,5 @@ type AuthCallbackOnResultFunc = (result: UserAuthResult) => void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| result | [UserAuthResult](arkts-userauthentication-userauth-userauthresult-i.md) | 是 | Authentication result information. |
+| result | [UserAuthResult](../../apis-background-tasks-kit/arkts-apis/arkts-backgroundtasks-backgroundtaskmanager-userauthresult-e.md) | 是 | Authentication result information. |
 

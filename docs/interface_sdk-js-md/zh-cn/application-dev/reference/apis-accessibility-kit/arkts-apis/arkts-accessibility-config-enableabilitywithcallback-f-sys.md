@@ -1,11 +1,5 @@
 # enableAbilityWithCallback（系统接口）
 
-## 导入模块
-
-```TypeScript
-import { config } from 'kits/@kit.AccessibilityKit';
-```
-
 ## enableAbilityWithCallback
 
 ```TypeScript
@@ -46,10 +40,10 @@ function enableAbilityWithCallback(name: string, capability: Array<accessibility
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 201 | Permission verification failed. The application does not have the permission required to call the API. |
-| 202 | Permission verification failed. A non-system application calls a system API. |
-| 9300001 | Invalid bundle name or ability name. |
-| 9300002 | Target ability already enabled. |
+| [201](../../errorcode-universal.md#201-权限校验失败) | Permission verification failed. The application does not have the permission required to call the API. |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed. A non-system application calls a system API. |
+| [9300001](../errorcode-accessibility.md#9300001-输入无效的包名称或者ability名称) | Invalid bundle name or ability name. |
+| [9300002](../errorcode-accessibility.md#9300002-目标ability已启用) | Target ability already enabled. |
 
 ## 示例
 

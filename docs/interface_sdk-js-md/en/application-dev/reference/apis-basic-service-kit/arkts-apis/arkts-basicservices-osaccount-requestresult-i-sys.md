@@ -1,6 +1,6 @@
 # RequestResult (System API)
 
-表示请求结果的信息。
+Defines the request result information.
 
 **Since:** 8
 
@@ -24,7 +24,7 @@ import { osAccount } from 'kits/@kit.BasicServicesKit';
 credentialId?: Uint8Array
 ```
 
-指示凭据索引，默认为空。
+Credential ID, which is left blank by default.
 
 **Type:** Uint8Array
 

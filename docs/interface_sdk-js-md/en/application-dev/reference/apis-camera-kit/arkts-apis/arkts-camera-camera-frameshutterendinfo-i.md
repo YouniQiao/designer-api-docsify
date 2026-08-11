@@ -1,6 +1,6 @@
 # FrameShutterEndInfo
 
-拍照曝光结束信息。
+Describes the frame shutter end information during capture.
 
 **Since:** 12
 
@@ -22,7 +22,7 @@ import { camera } from 'kits/@kit.CameraKit';
 captureId: int
 ```
 
-拍照的ID。
+ID of this capture action.
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 

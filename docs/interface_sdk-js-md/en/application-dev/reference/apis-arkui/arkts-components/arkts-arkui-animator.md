@@ -1,6 +1,6 @@
 # Animator
 
-定义Animator组件。
+Defines Animator Component.
 
 ## Animator
 
@@ -8,7 +8,7 @@
 Animator(value: string)
 ```
 
-构造器参数。
+Constructor parameters
 
 **Since:** 7
 

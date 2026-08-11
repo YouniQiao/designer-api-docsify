@@ -1,11 +1,5 @@
 # getSimState
 
-## 导入模块
-
-```TypeScript
-import { sim } from 'kits/@kit.TelephonyKit';
-```
-
 ## getSimState
 
 ```TypeScript
@@ -33,11 +27,11 @@ Obtains the state of the SIM card in a specified slot.
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. |
-| 8300999 | Unknown error. |
-| 8300002 | Service connection failed. |
-| 8300003 | System internal error. |
-| 8300001 | Invalid parameter value. |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. |
+| [8300999](../errorcode-telephony.md#8300999-内部错误) | Unknown error. |
+| [8300002](../errorcode-telephony.md#8300002-服务连接失败) | Service connection failed. |
+| [8300003](../errorcode-telephony.md#8300003-系统内部错误) | System internal error. |
+| [8300001](../errorcode-telephony.md#8300001-输入参数不在处理范围内) | Invalid parameter value. |
 
 ## 示例
 
@@ -83,11 +77,11 @@ Obtains the state of the SIM card in a specified slot.
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. |
-| 8300999 | Unknown error. |
-| 8300002 | Service connection failed. |
-| 8300003 | System internal error. |
-| 8300001 | Invalid parameter value. |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. |
+| [8300999](../errorcode-telephony.md#8300999-内部错误) | Unknown error. |
+| [8300002](../errorcode-telephony.md#8300002-服务连接失败) | Service connection failed. |
+| [8300003](../errorcode-telephony.md#8300003-系统内部错误) | System internal error. |
+| [8300001](../errorcode-telephony.md#8300001-输入参数不在处理范围内) | Invalid parameter value. |
 
 ## 示例
 

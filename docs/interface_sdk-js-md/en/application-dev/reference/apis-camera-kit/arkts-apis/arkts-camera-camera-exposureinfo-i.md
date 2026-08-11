@@ -1,6 +1,6 @@
 # ExposureInfo
 
-曝光信息对象。
+Describes the exposure information object.
 
 **Since:** 24
 
@@ -22,7 +22,7 @@ import { camera } from 'kits/@kit.CameraKit';
 readonly exposureTime?: int
 ```
 
-曝光时间值。单位：微秒。
+Exposure time, in microseconds.
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 

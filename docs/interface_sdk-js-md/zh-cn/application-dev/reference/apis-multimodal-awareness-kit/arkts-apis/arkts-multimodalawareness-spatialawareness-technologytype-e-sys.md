@@ -1,6 +1,6 @@
 # TechnologyType（系统接口）
 
-Enum for distance measurement technology types.
+提供输入信号的类型。接口根据输入信号类型，执行对应算法。
 
 **起始版本：** 23
 
@@ -18,7 +18,7 @@ Enum for distance measurement technology types.
 BLE_RSSI = 0
 ```
 
-indicates Bluetooth Low Energy (BLE) technology
+表示蓝牙强度。
 
 **起始版本：** 23
 
@@ -38,7 +38,7 @@ indicates Bluetooth Low Energy (BLE) technology
 WIFI_RSSI = 1
 ```
 
-indicates Wi-Fi technology
+表示WIFI强度。
 
 **起始版本：** 23
 
@@ -58,7 +58,7 @@ indicates Wi-Fi technology
 ULTRASOUND = 2
 ```
 
-indicates ultrasound technology
+表示超声强度。
 
 **起始版本：** 23
 
@@ -78,7 +78,7 @@ indicates ultrasound technology
 NEAR_LINK = 3
 ```
 
-indicates NearLink technology
+表示星闪强度。
 
 **起始版本：** 23
 
@@ -98,7 +98,7 @@ indicates NearLink technology
 WIFI_BLE_RSSI = 4
 ```
 
-indicates Wi-Fi and Bluetooth technology
+表示WIFI和蓝牙强度。
 
 **起始版本：** 23
 

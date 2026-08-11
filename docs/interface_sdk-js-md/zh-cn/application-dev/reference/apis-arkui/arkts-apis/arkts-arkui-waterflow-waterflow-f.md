@@ -32,7 +32,7 @@ export declare function WaterFlow(
 
 | 类型 | 说明 |
 | --- | --- |
-| [WaterFlowAttribute](arkts-arkui-waterflow-waterflowattribute-i.md) |  |
+| [WaterFlowAttribute](../arkts-components/arkts-arkui-waterflow-attribute.md) |  |
 
 
 ## WaterFlow
@@ -69,5 +69,5 @@ export declare function WaterFlow(
 
 | 类型 | 说明 |
 | --- | --- |
-| [WaterFlowAttribute](arkts-arkui-waterflow-waterflowattribute-i.md) | WaterFlow的属性。 |
+| [WaterFlowAttribute](../arkts-components/arkts-arkui-waterflow-attribute.md) | WaterFlow的属性。 |
 

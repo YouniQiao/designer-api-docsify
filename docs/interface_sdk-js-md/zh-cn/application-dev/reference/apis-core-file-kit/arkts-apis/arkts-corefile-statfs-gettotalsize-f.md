@@ -1,11 +1,5 @@
 # getTotalSize
 
-## 导入模块
-
-```TypeScript
-import { statfs } from 'kits/@kit.CoreFileKit';
-```
-
 ## getTotalSize
 
 ```TypeScript

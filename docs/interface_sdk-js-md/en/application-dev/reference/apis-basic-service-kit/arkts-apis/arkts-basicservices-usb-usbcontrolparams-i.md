@@ -1,6 +1,6 @@
 # USBControlParams
 
-控制传输参数。
+Represents control transfer parameters.
 
 **Since:** 8
 
@@ -26,7 +26,7 @@ import { usb } from 'kits/@kit.BasicServicesKit';
 data: Uint8Array
 ```
 
-用于写入或读取的缓冲区。
+Buffer for writing or reading data.
 
 **Type:** Uint8Array
 
@@ -48,7 +48,7 @@ data: Uint8Array
 index: number
 ```
 
-请求参数value对应的索引值。
+Index of the request parameter value.
 
 **Type:** number
 
@@ -70,7 +70,7 @@ index: number
 reqType: USBControlRequestType
 ```
 
-请求控制类型。
+Control request type.
 
 **Type:** [USBControlRequestType](arkts-basicservices-usb-usbcontrolrequesttype-e.md)
 
@@ -92,7 +92,7 @@ reqType: USBControlRequestType
 request: number
 ```
 
-请求类型。
+Request type.
 
 **Type:** number
 
@@ -114,7 +114,7 @@ request: number
 target: USBRequestTargetType
 ```
 
-请求目标类型。
+Request target type.
 
 **Type:** [USBRequestTargetType](arkts-basicservices-usb-usbrequesttargettype-e.md)
 
@@ -136,7 +136,7 @@ target: USBRequestTargetType
 value: number
 ```
 
-请求参数。
+Request parameter value.
 
 **Type:** number
 

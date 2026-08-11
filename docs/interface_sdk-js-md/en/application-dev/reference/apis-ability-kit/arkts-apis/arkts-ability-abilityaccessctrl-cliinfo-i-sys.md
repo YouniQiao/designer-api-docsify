@@ -1,6 +1,6 @@
 # CliInfo (System API)
 
-表示CLI（Command Line Interface，命令行界面）信息。
+Represents CLI (Command Line Interface) information.
 
 **Since:** 26.0.0
 
@@ -24,7 +24,7 @@ import { Context, Permissions, PermissionRequestResult } from 'kits/@kit.Ability
 cliName: string
 ```
 
-CLI名称。该字段不能为空，且长度不能超过256个字符。
+CLI name. This field cannot be empty and its length cannot exceed 256 characters.
 
 **Type:** string
 
@@ -46,7 +46,7 @@ CLI名称。该字段不能为空，且长度不能超过256个字符。
 subCliName: string
 ```
 
-CLI子命令名称。该字段可以为空，但长度不能超过256个字符。
+CLI sub-command name. This field can be empty, but its length cannot exceed 256 characters.
 
 **Type:** string
 

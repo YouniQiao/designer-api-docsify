@@ -1,31 +1,40 @@
 # NavDestination
 
-作为子页面的根容器，用于显示[Navigation]{@link navigation}的内容区。
+**NavDestination** is the root container of a destination page and represents the content area of the
+[Navigation]{@link navigation} component.
 
-> **说明：**
+> **NOTE**
 
-> - 该组件从API version 11开始默认支持安全区避让特性(默认值为：expandSafeArea([SafeAreaType.SYSTEM],
-> [SafeAreaEdge.TOP, SafeAreaEdge.BOTTOM]))，开发者可以重写该属性覆盖默认行为，API version 11之前的版本需配合[expandSafeArea]{@link common}属性实现
-> 安全区避让。
+> - Since API version 11, this component supports the safe area attribute by default, with the default attribute
+> value being **expandSafeArea([SafeAreaType.SYSTEM], [SafeAreaEdge.TOP, SafeAreaEdge.BOTTOM])**. You can override
+> this attribute to change the default behavior. In earlier versions, you need to use the
+> [expandSafeArea]{@link common} attribute to implement the safe area feature.
 >
-> - NavDestination组件必须配合Navigation使用，作为Navigation目的页面的根节点，单独使用只能作为普通容器组件，不具备路由相关属性能力。
+> - The **NavDestination** component must be used in conjunction with the **Navigation** component to act as the root
+> node for the navigation destination page. When used alone, it can only function as a standard container component
+> and does not possess any routing-related attributes or capabilities.
 >
-> - 如果路由栈中间页面的生命周期发生变化，跳转之前的栈顶NavDestination的生命周期(onWillShow, onShown, onHidden, onWillDisappear)与跳转之后的栈顶
-> NavDestination的生命周期(onWillShow, onShown, onHidden, onWillDisappear)均在最后触发。
+> - If the lifecycle of an intermediate page in the routing stack changes, the lifecycle callbacks (**onWillShow**,
+> **onShown**, **onHidden**, **onWillDisappear**) of the top **NavDestination** in the stack both before and after
+> the navigation will be triggered last in the sequence.
 >
-> - NavDestination未设置主副标题并且没有返回键时，不显示标题栏。
+> - If no main title or subtitle is set for **NavDestination** and there is no back button, the title bar is not
+> displayed.
 >
-> - 不建议设置位置、大小等布局相关属性，可能会造成页面显示异常。例如在NavDestination上添加[zIndex]{@link CommonMethod#zIndex}属性时，会覆盖掉系统设置的层级，可能导致出现显示异常。
+> - Avoid setting layout-related attributes such as the position and size. They may result in display issues on the
+> page. For example, do not apply the [zIndex]{@link CommonMethod#zIndex} attribute to a **NavDestination**
+> component. This will override the system-defined stacking order and may cause display anomalies.
 
-## 子组件
+## Child Components
 
-> **说明：**
+> **NOTE：**
 > 
-> - 子组件类型：系统组件和自定义组件，支持渲染控制类型（[if/else](docroot://ui/rendering-control/arkts-rendering-control-ifelse.md)、
-> [ForEach](docroot://ui/rendering-control/arkts-rendering-control-foreach.md)和
-> [LazyForEach](docroot://ui/rendering-control/arkts-rendering-control-lazyforeach.md)）。
+> - Allowed child component types: built-in and custom components, including rendering control types (
+> [if/else](docroot://ui/rendering-control/arkts-rendering-control-ifelse.md),
+> [ForEach](docroot://ui/rendering-control/arkts-rendering-control-foreach.md), and
+> [LazyForEach](docroot://ui/rendering-control/arkts-rendering-control-lazyforeach.md)).
 > 
-> - 子组件个数：多个。
+> - Number of child components: multiple.
 
 ## NavDestination
 
@@ -33,7 +42,7 @@
 NavDestination()
 ```
 
-创建[Navigation]{@link navigation}子页面的根容器。
+Creates the root container for a subpage in [Navigation]{@link navigation}.
 
 **Since:** 9
 

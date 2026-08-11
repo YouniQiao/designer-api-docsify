@@ -58,7 +58,7 @@ Blocks the default event.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 100017 | Component does not support prevent function. |
+| [100017](../errorcode-event.md#100017-component-does-not-support-default-event-prevention) | Component does not support prevent function. |
 
 ## stopPropagation
 

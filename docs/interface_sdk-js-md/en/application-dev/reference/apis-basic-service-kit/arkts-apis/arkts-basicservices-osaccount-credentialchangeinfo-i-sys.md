@@ -1,6 +1,6 @@
 # CredentialChangeInfo (System API)
 
-表示凭据变更信息。
+Defines the credential change information.
 
 **Since:** 23
 
@@ -24,7 +24,7 @@ import { osAccount } from 'kits/@kit.BasicServicesKit';
 accountId: int
 ```
 
-表示系统账号标识。
+OS account ID.
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
@@ -44,7 +44,7 @@ accountId: int
 addedCredentialId?: Uint8Array
 ```
 
-表示添加的凭据ID，添加凭据和更新凭据操作都会返回该ID。默认为undefined。
+Credential ID. An ID is returned when a credential is added or updated. which is **undefined** by default.
 
 **Type:** Uint8Array
 
@@ -64,7 +64,7 @@ addedCredentialId?: Uint8Array
 changeType: CredentialChangeType
 ```
 
-表示凭据变更的类型。
+Credential change type.
 
 **Type:** [CredentialChangeType](arkts-basicservices-osaccount-credentialchangetype-e-sys.md)
 
@@ -84,7 +84,7 @@ changeType: CredentialChangeType
 credentialType: AuthType
 ```
 
-表示凭据类型。
+Credential type.
 
 **Type:** [AuthType](arkts-basicservices-osaccount-authtype-e-sys.md)
 
@@ -104,7 +104,7 @@ credentialType: AuthType
 deletedCredentialId?: Uint8Array
 ```
 
-表示删除的凭据ID，删除凭据和更新凭据操作都会返回该ID。默认为undefined。
+Credential ID. An ID is returned when a credential is deleted or updated. which is **undefined** by default.
 
 **Type:** Uint8Array
 
@@ -124,7 +124,7 @@ deletedCredentialId?: Uint8Array
 isSilent: boolean
 ```
 
-表示是否为静默变更，静默变更表示变更由系统在后台自动地发起。
+Whether the change is silent. A silent change is automatically initiated by the system in the background.
 
 **Type:** boolean
 

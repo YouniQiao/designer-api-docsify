@@ -1,6 +1,6 @@
 # AvoidAreaInfo
 
-用于表示窗口避让区的信息。
+Represents the information about the avoidance area of the window.
 
 **Since:** 12
 
@@ -22,7 +22,7 @@ import { uiExtension } from 'kits/@kit.ArkUI';
 area: window.AvoidArea
 ```
 
-窗口内容避让区域。
+Avoidance area for the content of the window.
 
 **Type:** window.AvoidArea
 
@@ -44,7 +44,7 @@ area: window.AvoidArea
 type: window.AvoidAreaType
 ```
 
-窗口避让区类型。
+Type of the avoidance area of the window.
 
 **Type:** window.AvoidAreaType
 

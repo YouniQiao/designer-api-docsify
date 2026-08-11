@@ -1,6 +1,13 @@
 # OnscreenAwarenessCap（系统接口）
 
-Defines onscreen awareness capabilities (including but not limited to awareness in a reading scenario and OCR).
+屏上感知能力（包括但不限于阅读场景感知、OCR识别等功能）。
+
+参数约束说明：
+
+用户可通过能力项（capList）或分组 ID（groupId）使用屏上感知功能。
+
+* 逻辑关系：capList 与 groupId 互为补充必填项, 至少需提供其一，且不为空。  
+* 校验规则：调用接口时，系统会单独检测capList和groupId。
 
 **起始版本：** 23
 
@@ -12,19 +19,13 @@ Defines onscreen awareness capabilities (including but not limited to awareness 
 
 **系统接口：** 此接口为系统接口。
 
-## 导入模块
-
-```TypeScript
-import { onScreen } from 'kits/@kit.MultimodalAwarenessKit';
-```
-
 ## capList
 
 ```TypeScript
 capList?: string[]
 ```
 
-Capability list, including the capabilities for obtaining page content, page link, and text selection.
+表示能力集合，包含页面内容、页面链接、文本选择等能力。具体能力项见下表。
 
 **类型：** string[]
 
@@ -46,7 +47,7 @@ Capability list, including the capabilities for obtaining page content, page lin
 groupId?: string
 ```
 
-Service group ID.
+业务分组ID。具体分组ID见下表。
 
 **类型：** string
 

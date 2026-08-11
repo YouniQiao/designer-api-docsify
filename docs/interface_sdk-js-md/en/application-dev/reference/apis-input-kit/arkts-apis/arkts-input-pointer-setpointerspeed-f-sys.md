@@ -12,7 +12,7 @@ import { pointer } from 'kits/@kit.InputKit';
 function setPointerSpeed(speed: int, callback: AsyncCallback<void>): void
 ```
 
-设置鼠标移动速度，使用callback异步回调。
+Sets the mouse pointer speed. This API uses an asynchronous callback to return the result.
 
 **Since:** 9
 
@@ -28,15 +28,15 @@ function setPointerSpeed(speed: int, callback: AsyncCallback<void>): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| speed | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | 鼠标移动速度，范围1-20，默认为10。 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | 回调函数。当设置鼠标移动速度成功，err为undefined，否则为错误对象。 |
+| speed | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | Mouse pointer speed. The value ranges from **1** to **20**. The default value is **10**. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined**. Otherwise, **err** is an error object. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; 3. Parameter verification failed. |
-| 202 | Permission denied, non-system app called system api.<br>**Applicable version:** 12 and later |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; 3. Parameter verification failed. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission denied, non-system app called system api.<br>**Applicable version:** 12 and later |
 
 ## Examples
 
@@ -52,16 +52,15 @@ struct Index {
       Text()
         .onClick(() => {
           try {
-            // Set the mouse pointer speed.
             pointer.setPointerSpeed(5, (error: BusinessError) => {
               if (error) {
-                console.error(`Failed to set pointer speed, Code: ${(error as BusinessError).code}, message: ${(error as BusinessError).message}.`);
+                console.error(`Set pointer speed failed, error: ${JSON.stringify(error, [`code`, `message`])}`);
                 return;
               }
-              console.info(`Succeeded in setting pointer speed.`);
+              console.info(`Set pointer speed success`);
             });
           } catch (error) {
-            console.error(`Failed to set pointer speed, Code: ${(error as BusinessError).code}, message: ${(error as BusinessError).message}.`);
+            console.error(`Set pointer speed failed, error: ${JSON.stringify(error, [`code`, `message`])}`);
           }
         })
     }
@@ -76,7 +75,7 @@ struct Index {
 function setPointerSpeed(speed: int): Promise<void>
 ```
 
-设置鼠标移动速度，使用Promise异步回调。
+Sets the mouse pointer speed. This API uses a promise to return the result.
 
 **Since:** 9
 
@@ -92,20 +91,20 @@ function setPointerSpeed(speed: int): Promise<void>
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| speed | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | 鼠标移动速度，范围1-20，默认为10。 |
+| speed | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | Mouse pointer speed. The value ranges from **1** to **20**. The default value is **10**. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise对象，无返回结果。 |
+| Promise&lt;void&gt; | Promise that returns no value. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; 3. Parameter verification failed. |
-| 202 | Permission denied, non-system app called system api.<br>**Applicable version:** 12 and later |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; 3. Parameter verification failed. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission denied, non-system app called system api.<br>**Applicable version:** 12 and later |
 
 ## Examples
 
@@ -121,14 +120,13 @@ struct Index {
       Text()
         .onClick(() => {
           try {
-            // Set the mouse pointer speed.
             pointer.setPointerSpeed(5).then(() => {
-              console.info(`Succeeded in setting pointer speed.`);
+              console.info(`Set pointer speed success`);
             }).catch((error: BusinessError) => {
-              console.error(`Failed to set pointer speed, Code: ${(error as BusinessError).code}, message: ${(error as BusinessError).message}.`);
+              console.error(`Set pointer failed, error: ${JSON.stringify(error, [`code`, `message`])}`);
             })
           } catch (error) {
-            console.error(`Failed to set pointer speed, Code: ${(error as BusinessError).code}, message: ${(error as BusinessError).message}.`);
+            console.error(`Set pointer speed failed, error: ${JSON.stringify(error, [`code`, `message`])}`);
           }
         })
     }

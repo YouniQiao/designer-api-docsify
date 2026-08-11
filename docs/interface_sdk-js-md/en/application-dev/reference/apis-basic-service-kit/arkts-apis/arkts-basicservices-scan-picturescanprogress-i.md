@@ -1,6 +1,6 @@
 # PictureScanProgress
 
-定义图片扫描进度的接口。
+Defines the progress of scanning pictures.
 
 **Since:** 20
 
@@ -22,7 +22,7 @@ import { scan } from 'kits/@kit.BasicServicesKit';
 isFinal: boolean
 ```
 
-是否是本次扫描的最后一张图片。true表示是最后一张图片，false表示不是最后一张图片。
+Whether the picture is the last one to be scanned. The value **true** indicates that the picture is the last one to be scanned, and **false** indicates that the picture is not the last one.
 
 **Type:** boolean
 
@@ -40,7 +40,7 @@ isFinal: boolean
 pictureFd: int
 ```
 
-扫描图片的文件描述符。
+File descriptor of the scanned picture.
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
@@ -58,7 +58,7 @@ pictureFd: int
 progress: int
 ```
 
-当前进度百分比，范围从0~100。单位：百分比。
+Progress percentage, whose value ranges from 0 to 100. Unit: %
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 

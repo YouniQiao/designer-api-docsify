@@ -12,21 +12,22 @@ import { usbManager } from 'kits/@kit.MDMKit';
 function addDisallowedUsbDevices(admin: Want, usbDevices: Array<UsbDeviceType>): void
 ```
 
-添加禁止使用的USB设备类型。
+Adds disallowed USB device types.
 
-**使用场景**：
+Use cases:
 
-- 企业安全管理场景，需要禁用特定类型的USB设备  
-- 防止数据泄露：禁用USB存储设备类型  
-- 设备管理员需要根据安全策略，禁止使用某些类型的USB设备  
-- 配合[removeDisallowedUsbDevices](arkts-mdm-usbmanager-removedisallowedusbdevices-f.md#removedisallowedusbdevices)接口实现USB设备类型的动态管理
+- Disable specific types of USB devices in enterprise security management scenarios.  
+- Prevent data leaks by disabling USB storage device types.  
+- Enable device administrators to prohibit the use of certain USB device types based on security policies.  
+- Work with the [removeDisallowedUsbDevices](arkts-mdm-usbmanager-removedisallowedusbdevices-f.md#removedisallowedusbdevices) API to implement dynamic  
+management of USB device types.
 
-> **说明：**
+> **NOTE：**
 > 
-> 推荐使用[addDisallowedPermissiveUsbDevices](arkts-mdm-usbmanager-adddisallowedpermissiveusbdevices-f.md#adddisallowedpermissiveusbdevices)接口。
-> 以下情况下，调用本接口会报策略冲突：
+> The [addDisallowedPermissiveUsbDevices](arkts-mdm-usbmanager-adddisallowedpermissiveusbdevices-f.md#adddisallowedpermissiveusbdevices) API is recommended.
+> A policy conflict is reported when this API is called in the following scenarios:
 
-1. 已经通过[setDisallowedPolicy](arkts-mdm-restrictions-setdisallowedpolicy-f.md#setdisallowedpolicy)接口禁用了设备USB能力。2. 已经通过[addAllowedUsbDevices](arkts-mdm-usbmanager-addallowedusbdevices-f.md#addallowedusbdevices)接口添加了USB设备可用名单。3. 已经通过[setDisallowedPolicyForAccount](arkts-mdm-restrictions-setdisallowedpolicyforaccount-f.md#setdisallowedpolicyforaccount)接口禁用了某用户USB存储设备写入能力。4. 已经通过[addDisallowedPermissiveUsbDevices](arkts-mdm-usbmanager-adddisallowedpermissiveusbdevices-f.md#adddisallowedpermissiveusbdevices)接口添加了禁止使用的USB设备类型。
+1. The USB capability of the device has been disabled via [setDisallowedPolicy](arkts-mdm-restrictions-setdisallowedpolicy-f.md#setdisallowedpolicy).2. The available USB devices have been added through [addAllowedUsbDevices](arkts-mdm-usbmanager-addallowedusbdevices-f.md#addallowedusbdevices).3. The USB storage write capability has been disabled for specific users via [setDisallowedPolicyForAccount](arkts-mdm-restrictions-setdisallowedpolicyforaccount-f.md#setdisallowedpolicyforaccount).4. Disallowed USB device types have been added via [addDisallowedPermissiveUsbDevices](arkts-mdm-usbmanager-adddisallowedpermissiveusbdevices-f.md#adddisallowedpermissiveusbdevices).
 
 **Since:** 14
 
@@ -44,18 +45,18 @@ function addDisallowedUsbDevices(admin: Want, usbDevices: Array<UsbDeviceType>):
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| admin | [Want](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-want-want-c.md) | Yes | 企业设备管理扩展组件。Want中必须包含企业设备管理扩展能力的abilityName和所在应用的bundleName。 |
-| usbDevices | Array&lt;UsbDeviceType&gt; | Yes | 要添加的USB设备类型的数组，UsbDeviceType信息可以通过 [getDevices](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-usbmanager-getdevices-f.md/arkts-basicservices-usbmanager-getdevices-f.md#getdevices)接口获取。USB设备禁用名单数组长度上限为200，若当前禁用名单中已有100个USB设备ID，则只允许再添 加100个。 |
+| admin | [Want](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-want-want-c.md) | Yes | EnterpriseAdminExtensionAbility. **Want** must contain the ability name of the EnterpriseAdminExtensionAbility and the bundle name of the application. |
+| usbDevices | Array&lt;UsbDeviceType&gt; | Yes | Array of the USB devices to be added, which can be obtained through [getDevices](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-usbmanager-getdevices-f.md/arkts-basicservices-usbmanager-getdevices-f.md#getdevices). The maximum number of USB devices is 200. If there are already 100 USB device IDs, only 100 more can be added. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
-| 9200010 | A conflict policy has been configured. |
-| 201 | Permission verification failed. The application does not have the permission required to call the API. |
-| 9200001 | The application is not an administrator application of the device. |
-| 9200002 | The administrator application does not have permission to manage the device. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| [9200010](../errorcode-enterpriseDeviceManager.md#9200010-policy-conflict) | A conflict policy has been configured. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed. The application does not have the permission required to call the API. |
+| [9200001](../errorcode-enterpriseDeviceManager.md#9200001-deviceadmin-not-enabled) | The application is not an administrator application of the device. |
+| [9200002](../errorcode-enterpriseDeviceManager.md#9200002-permission-denied) | The administrator application does not have permission to manage the device. |
 
 ## Examples
 
@@ -70,10 +71,10 @@ let wantTemp: Want = {
 };
 try {
   let usbDevices: Array<usbManager.UsbDeviceType> = [{
-    baseClass: 8,
-    subClass: 0,
-    protocol: 0,
-    descriptor: usbManager.Descriptor.INTERFACE
+      baseClass: 8,
+      subClass: 0,
+      protocol: 0,
+      descriptor: usbManager.Descriptor.INTERFACE
   }];
   usbManager.addDisallowedUsbDevices(wantTemp, usbDevices);
   console.info(`Succeeded in adding disallowed USB devices.`);

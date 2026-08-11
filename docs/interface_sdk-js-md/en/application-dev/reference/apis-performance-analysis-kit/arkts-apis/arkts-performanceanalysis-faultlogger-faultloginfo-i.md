@@ -1,6 +1,6 @@
 # FaultLogInfo
 
-故障信息数据结构，获取到的故障信息的数据结构。
+Defines the data structure of the fault log information.
 
 **Since:** 8
 
@@ -24,7 +24,7 @@ import { FaultLogger } from 'kits/@kit.PerformanceAnalysisKit';
 fullLog: string
 ```
 
-故障日志全文。
+Full log text.
 
 **Type:** string
 
@@ -44,7 +44,7 @@ fullLog: string
 module: string
 ```
 
-发生故障的模块。
+Module on which the fault occurred.
 
 **Type:** string
 
@@ -64,7 +64,7 @@ module: string
 pid: number
 ```
 
-故障进程的进程id。
+Process ID of the faulty process.
 
 **Type:** number
 
@@ -84,7 +84,7 @@ pid: number
 reason: string
 ```
 
-发生故障的原因。
+Reason for the fault.
 
 **Type:** string
 
@@ -104,7 +104,7 @@ reason: string
 summary: string
 ```
 
-故障的概要。
+Summary of the fault.
 
 **Type:** string
 
@@ -124,7 +124,7 @@ summary: string
 timestamp: number
 ```
 
-日志生成时的毫秒级时间戳。
+Millisecond-level timestamp when the log was generated.
 
 **Type:** number
 
@@ -144,7 +144,7 @@ timestamp: number
 type: FaultType
 ```
 
-故障类型。
+Fault type.
 
 **Type:** [FaultType](arkts-performanceanalysis-faultlogger-faulttype-e.md)
 
@@ -164,7 +164,7 @@ type: FaultType
 uid: number
 ```
 
-故障进程的用户id。
+User ID of the faulty process.
 
 **Type:** number
 

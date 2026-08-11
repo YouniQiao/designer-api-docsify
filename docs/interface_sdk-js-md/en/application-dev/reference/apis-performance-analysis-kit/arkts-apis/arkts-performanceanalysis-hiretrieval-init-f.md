@@ -12,7 +12,7 @@ import { hiRetrieval } from 'kits/@kit.PerformanceAnalysisKit';
 function init(): void
 ```
 
-初始化应用灰度模块。多实例应用不支持调用此接口。
+Init the HiRetrieval functionality.
 
 **Since:** 26.0.0
 

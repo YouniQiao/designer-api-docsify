@@ -1,6 +1,6 @@
 # PostMessageOptions
 
-明确数据传递过程中需要转移所有权的对象，这些对象必须是ArrayBuffer，在发送方的上下文中将变为不可用，仅在接收方可用。
+Defines the object for which the ownership is to be transferred during data transfer. The object must be an ArrayBuffer instance.After the ownership is transferred, the object becomes unavailable in the sender and can be used only in the receiver.
 
 **Since:** 7
 
@@ -22,7 +22,7 @@ import { MessageEvents, PostMessageOptions, MessageEvent, Priority, WorkerEventT
 transfer?: Object[]
 ```
 
-ArrayBuffer数组，用于传递所有权。该数组中不可传入null。
+ArrayBuffer array used to transfer the ownership. The array cannot be null.
 
 **Type:** Object[]
 

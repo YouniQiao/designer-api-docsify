@@ -23,12 +23,6 @@ Audio/Video播放demo可参考：[音频播放开发指导](../../../media/media
 
 **系统能力：** SystemCapability.Multimedia.Media.AVPlayer
 
-## 导入模块
-
-```TypeScript
-import { media } from 'kits/@kit.MediaKit';
-```
-
 ## addSubtitleFromFd
 
 ArkTS-Dyn:
@@ -71,8 +65,8 @@ addSubtitleFromFd(fd: int, offset?: long, length?: long): Promise<void>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 401 | The parameter check failed. Return by promise. |
-| 5400102 | Operation not allowed. Return by promise. |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | The parameter check failed. Return by promise. |
+| [5400102](../errorcode-media.md#5400102-当前状态不支持此操作) | Operation not allowed. Return by promise. |
 
 ## addSubtitleFromUrl
 
@@ -108,8 +102,8 @@ addSubtitleFromUrl(url: string): Promise<void>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 401 | The parameter check failed. Return by promise. |
-| 5400102 | Operation not allowed. Return by promise. |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | The parameter check failed. Return by promise. |
+| [5400102](../errorcode-media.md#5400102-当前状态不支持此操作) | Operation not allowed. Return by promise. |
 
 ## deselectTrack
 
@@ -151,8 +145,8 @@ deselectTrack(index: int): Promise<void>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 401 | The parameter check failed. Return by promise. |
-| 5400102 | Operation not allowed. Return by promise. |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | The parameter check failed. Return by promise. |
+| [5400102](../errorcode-media.md#5400102-当前状态不支持此操作) | Operation not allowed. Return by promise. |
 
 ## getLoadedTimeRanges
 
@@ -320,7 +314,7 @@ getSelectedTracks(): Promise<Array<int>>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 5400102 | Operation not allowed. |
+| [5400102](../errorcode-media.md#5400102-当前状态不支持此操作) | Operation not allowed. |
 
 ## getTrackDescription
 
@@ -350,7 +344,7 @@ getTrackDescription(callback: AsyncCallback<Array<MediaDescription>>): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 5400102 | Operation not allowed. Return by callback. |
+| [5400102](../errorcode-media.md#5400102-当前状态不支持此操作) | Operation not allowed. Return by callback. |
 
 ## getTrackDescription
 
@@ -380,7 +374,7 @@ getTrackDescription(): Promise<Array<MediaDescription>>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 5400102 | Operation not allowed. Return by promise. |
+| [5400102](../errorcode-media.md#5400102-当前状态不支持此操作) | Operation not allowed. Return by promise. |
 
 ## getTrackSelectionFilter
 
@@ -410,7 +404,7 @@ getTrackSelectionFilter(): Promise<TrackSelectionFilter>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 5400102 | Operation not allowed. |
+| [5400102](../errorcode-media.md#5400102-当前状态不支持此操作) | Operation not allowed. |
 
 ## pause
 
@@ -440,7 +434,7 @@ pause(callback: AsyncCallback<void>): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 5400102 | Operation not allowed. Return by callback. |
+| [5400102](../errorcode-media.md#5400102-当前状态不支持此操作) | Operation not allowed. Return by callback. |
 
 ## pause
 
@@ -470,7 +464,7 @@ pause(): Promise<void>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 5400102 | Operation not allowed. Return by promise. |
+| [5400102](../errorcode-media.md#5400102-当前状态不支持此操作) | Operation not allowed. Return by promise. |
 
 ## play
 
@@ -500,7 +494,7 @@ play(callback: AsyncCallback<void>): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 5400102 | Operation not allowed. Return by callback. |
+| [5400102](../errorcode-media.md#5400102-当前状态不支持此操作) | Operation not allowed. Return by callback. |
 
 ## play
 
@@ -530,7 +524,7 @@ play(): Promise<void>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 5400102 | Operation not allowed. Return by promise. |
+| [5400102](../errorcode-media.md#5400102-当前状态不支持此操作) | Operation not allowed. Return by promise. |
 
 ## prepare
 
@@ -560,8 +554,8 @@ prepare(callback: AsyncCallback<void>): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 5400102 | Operation not allowed. Return by callback. |
-| 5400106 | Unsupported format. Return by callback. |
+| [5400102](../errorcode-media.md#5400102-当前状态不支持此操作) | Operation not allowed. Return by callback. |
+| [5400106](../errorcode-media.md#5400106-不支持的规格) | Unsupported format. Return by callback. |
 
 ## prepare
 
@@ -594,8 +588,8 @@ prepare(): Promise<void>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 5400102 | Operation not allowed. Return by promise. |
-| 5400106 | Unsupported format. Return by promise. |
+| [5400102](../errorcode-media.md#5400102-当前状态不支持此操作) | Operation not allowed. Return by promise. |
+| [5400106](../errorcode-media.md#5400106-不支持的规格) | Unsupported format. Return by promise. |
 
 ## release
 
@@ -625,7 +619,7 @@ release(callback: AsyncCallback<void>): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 5400102 | Operation not allowed. Return by callback. |
+| [5400102](../errorcode-media.md#5400102-当前状态不支持此操作) | Operation not allowed. Return by callback. |
 
 ## release
 
@@ -655,7 +649,7 @@ release(): Promise<void>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 5400102 | Operation not allowed. Return by promise. |
+| [5400102](../errorcode-media.md#5400102-当前状态不支持此操作) | Operation not allowed. Return by promise. |
 
 ## reset
 
@@ -685,7 +679,7 @@ reset(callback: AsyncCallback<void>): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 5400102 | Operation not allowed. Return by callback. |
+| [5400102](../errorcode-media.md#5400102-当前状态不支持此操作) | Operation not allowed. Return by callback. |
 
 ## reset
 
@@ -715,7 +709,7 @@ reset(): Promise<void>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 5400102 | Operation not allowed. Return by promise. |
+| [5400102](../errorcode-media.md#5400102-当前状态不支持此操作) | Operation not allowed. Return by promise. |
 
 ## seek
 
@@ -753,7 +747,7 @@ seek(timeMs: int, mode?: SeekMode): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | timeMs | ArkTS-Dyn: number  <br>ArkTS-Sta：int | 是 | 指定的跳转时间节点，单位毫秒（ms），取值范围为 [0, [duration](../../../reference/apis-media-kit/arkts-apis-media-AVPlayer.md#属性)]。&lt;br&gt;当模式为 [SEEK_CONTINUOUS](@ohos.multimedia.media:media.SeekMode)时，可以取值-1，表示SEEK_CONTINUOUS模式结束。该值必须为整数。 |
-| mode | [SeekMode](../../apis-arkui/arkts-components/arkts-arkui-seekmode-e.md) | 否 | 基于视频I帧的跳转模式，默认为SEEK_PREV_SYNC模式，**仅在视频资源播放时设置**。 |
+| mode | [SeekMode](../../apis-arkui/arkts-apis/arkts-arkui-video-seekmode-e.md) | 否 | 基于视频I帧的跳转模式，默认为SEEK_PREV_SYNC模式，**仅在视频资源播放时设置**。 |
 
 ## seekToDefaultPosition
 
@@ -777,7 +771,7 @@ seekToDefaultPosition(): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 5400102 | Operation not allowed. Return by callback. |
+| [5400102](../errorcode-media.md#5400102-当前状态不支持此操作) | Operation not allowed. Return by callback. |
 
 ## selectTrack
 
@@ -822,8 +816,8 @@ selectTrack(index: int, mode?: SwitchMode): Promise<void>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 401 | The parameter check failed. Return by promise. |
-| 5400102 | Operation not allowed. Return by promise. |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | The parameter check failed. Return by promise. |
+| [5400102](../errorcode-media.md#5400102-当前状态不支持此操作) | Operation not allowed. Return by promise. |
 
 ## setMediaMuted
 
@@ -849,7 +843,7 @@ setMediaMuted(mediaType: MediaType, muted: boolean): Promise<void>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| mediaType | [MediaType](../../apis-arkweb/arkts-apis/arkts-arkweb-webview-mediatype-e.md) | 是 | 媒体类型枚举。&lt;br&gt;**API version 12-19**：仅支持设置MEDIA_TYPE_AUD。&lt;br&gt;**API version 20及以后**：增 加支持设置MEDIA_TYPE_VID。 |
+| mediaType | [MediaType](arkts-media-multimedia-media-mediatype-e.md) | 是 | 媒体类型枚举。&lt;br&gt;**API version 12-19**：仅支持设置MEDIA_TYPE_AUD。&lt;br&gt;**API version 20及以后**：增 加支持设置MEDIA_TYPE_VID。 |
 | muted | boolean | 是 | API version 12-19**：仅支持设置音频播放策略，表示音频是否静音播放。true为静音播放，false为取消静音播放。&lt;br&gt; **API version 20及以后**：增加支持设置视频播放策略，表示视频画面是否关闭。true为关闭画面，false为恢复画面。 |
 
 **返回值：**
@@ -862,8 +856,8 @@ setMediaMuted(mediaType: MediaType, muted: boolean): Promise<void>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 401 | The parameter check failed. Return by promise. |
-| 5400102 | Operation not allowed. Return by promise. |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | The parameter check failed. Return by promise. |
+| [5400102](../errorcode-media.md#5400102-当前状态不支持此操作) | Operation not allowed. Return by promise. |
 
 ## setMediaSource
 
@@ -900,8 +894,8 @@ setMediaSource(src: MediaSource, strategy?: PlaybackStrategy): Promise<void>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt;2. Incorrect parameter types. 3.Parameter verification failed. |
-| 5400102 | Operation not allowed. Return by promise. |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt;2. Incorrect parameter types. 3.Parameter verification failed. |
+| [5400102](../errorcode-media.md#5400102-当前状态不支持此操作) | Operation not allowed. Return by promise. |
 
 ## setPlaybackStrategy
 
@@ -937,8 +931,8 @@ setPlaybackStrategy(strategy: PlaybackStrategy): Promise<void>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1. Incorrect parameter types. 2. Parameter verification failed. |
-| 5400102 | Operation not allowed. Return by promise. |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1. Incorrect parameter types. 2. Parameter verification failed. |
+| [5400102](../errorcode-media.md#5400102-当前状态不支持此操作) | Operation not allowed. Return by promise. |
 
 ## setTrackSelectionFilter
 
@@ -974,7 +968,7 @@ setTrackSelectionFilter(filter : TrackSelectionFilter): Promise<void>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 5400102 | Operation not allowed. |
+| [5400102](../errorcode-media.md#5400102-当前状态不支持此操作) | Operation not allowed. |
 
 ## setVolume
 
@@ -1035,7 +1029,7 @@ stop(callback: AsyncCallback<void>): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 5400102 | Operation not allowed. Return by callback. |
+| [5400102](../errorcode-media.md#5400102-当前状态不支持此操作) | Operation not allowed. Return by callback. |
 
 ## stop
 
@@ -1065,5 +1059,5 @@ stop(): Promise<void>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 5400102 | Operation not allowed. Return by promise. |
+| [5400102](../errorcode-media.md#5400102-当前状态不支持此操作) | Operation not allowed. Return by promise. |
 

@@ -6,7 +6,7 @@
 function setDoNotDisturbDate(date: DoNotDisturbDate, callback: AsyncCallback<void>): void
 ```
 
-设置免打扰时间（Callback形式）。
+Sets the DND time. This API uses an asynchronous callback to return the result.
 
 **Since:** 8
 
@@ -28,8 +28,8 @@ function setDoNotDisturbDate(date: DoNotDisturbDate, callback: AsyncCallback<voi
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| date | [DoNotDisturbDate](arkts-notification-notificationmanager-donotdisturbdate-i-sys.md) | Yes | 免打扰时间选项。 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | 设置免打扰时间回调函数。 |
+| date | [DoNotDisturbDate](arkts-notification-notificationmanager-donotdisturbdate-i-sys.md) | Yes | DND time to set. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. |
 
 
 ## setDoNotDisturbDate
@@ -38,7 +38,7 @@ function setDoNotDisturbDate(date: DoNotDisturbDate, callback: AsyncCallback<voi
 function setDoNotDisturbDate(date: DoNotDisturbDate): Promise<void>
 ```
 
-设置免打扰时间（Promise形式）。
+Sets the DND time. This API uses a promise to return the result.
 
 **Since:** 8
 
@@ -60,13 +60,13 @@ function setDoNotDisturbDate(date: DoNotDisturbDate): Promise<void>
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| date | [DoNotDisturbDate](arkts-notification-notificationmanager-donotdisturbdate-i-sys.md) | Yes | 免打扰时间选项。 |
+| date | [DoNotDisturbDate](arkts-notification-notificationmanager-donotdisturbdate-i-sys.md) | Yes | DND time to set. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | 无返回结果的Promise对象。 |
+| Promise&lt;void&gt; | Promise that returns no value. |
 
 
 ## setDoNotDisturbDate
@@ -75,7 +75,7 @@ function setDoNotDisturbDate(date: DoNotDisturbDate): Promise<void>
 function setDoNotDisturbDate(date: DoNotDisturbDate, userId: number, callback: AsyncCallback<void>): void
 ```
 
-指定用户设置免打扰时间（Callback形式）。
+Sets the DND time for a specified user. This API uses an asynchronous callback to return the result.
 
 **Since:** 8
 
@@ -97,9 +97,9 @@ function setDoNotDisturbDate(date: DoNotDisturbDate, userId: number, callback: A
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| date | [DoNotDisturbDate](arkts-notification-notificationmanager-donotdisturbdate-i-sys.md) | Yes | 免打扰时间选项。 |
-| userId | number | Yes | 设置免打扰时间的用户ID。 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | 设置免打扰时间回调函数。 |
+| date | [DoNotDisturbDate](arkts-notification-notificationmanager-donotdisturbdate-i-sys.md) | Yes | DND time to set. |
+| userId | number | Yes | ID of the user for whom you want to set the DND time. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. |
 
 
 ## setDoNotDisturbDate
@@ -108,7 +108,7 @@ function setDoNotDisturbDate(date: DoNotDisturbDate, userId: number, callback: A
 function setDoNotDisturbDate(date: DoNotDisturbDate, userId: number): Promise<void>
 ```
 
-指定用户设置免打扰时间（Promise形式）。
+Sets the DND time for a specified user. This API uses a promise to return the result.
 
 **Since:** 8
 
@@ -130,12 +130,12 @@ function setDoNotDisturbDate(date: DoNotDisturbDate, userId: number): Promise<vo
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| date | [DoNotDisturbDate](arkts-notification-notificationmanager-donotdisturbdate-i-sys.md) | Yes | 免打扰时间选项。 |
-| userId | number | Yes | 设置免打扰时间的用户ID。 |
+| date | [DoNotDisturbDate](arkts-notification-notificationmanager-donotdisturbdate-i-sys.md) | Yes | DND time to set. |
+| userId | number | Yes | ID of the user for whom you want to set the DND time. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | 无返回结果的Promise对象。 |
+| Promise&lt;void&gt; | Promise that returns no value. |
 

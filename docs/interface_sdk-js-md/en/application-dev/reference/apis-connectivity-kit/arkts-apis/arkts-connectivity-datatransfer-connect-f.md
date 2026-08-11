@@ -12,7 +12,7 @@ import { dataTransfer } from 'kits/@kit.ConnectivityKit';
 function connect(params: ConnectionParams): Promise<void>
 ```
 
-连接服务端。如果连接成功，则可以向服务端发送数据。
+Connects to a server. If the connection is successful, data can be sent to the server.
 
 **Since:** 26.0.0
 
@@ -30,22 +30,22 @@ function connect(params: ConnectionParams): Promise<void>
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| params | [ConnectionParams](arkts-connectivity-datatransfer-connectionparams-i.md) | Yes | 连接参数 |
+| params | [ConnectionParams](arkts-connectivity-datatransfer-connectionparams-i.md) | Yes | Indicates the connection params. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | 返回promise对象。 |
+| Promise&lt;void&gt; | Returns the promise object. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 801 | Capability not supported because the chip does not support it. |
+| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported because the chip does not support it. |
 | 36100003 | NearLink disabled. |
 | 36100099 | Operation failed. |
-| 201 | Permission denied. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
 | 36100044 | NearLink standard UUID not allowed. |
 | 36100043 | Invalid UUID. |
 | 36100041 | Invalid address. |

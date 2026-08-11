@@ -20,7 +20,7 @@ type UrlCbFn = (value: string, key: string, searchParams: URLParams) => void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | string | 是 | 当前遍历到的键值。 |
+| value | string | 是 | 当前遍历到的值。 |
 | key | string | 是 | 当前遍历到的键名。 |
 | searchParams | [URLParams](arkts-arkts-url-urlparams-c.md) | 是 | 当前调用[forEach](arkts-arkts-url-urlparams-c.md#foreach)方法的实例对象。 |
 

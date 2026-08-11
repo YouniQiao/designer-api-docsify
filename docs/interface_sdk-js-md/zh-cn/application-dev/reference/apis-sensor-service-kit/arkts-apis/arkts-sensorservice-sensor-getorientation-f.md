@@ -1,11 +1,5 @@
 # getOrientation
 
-## 导入模块
-
-```TypeScript
-import { sensor } from 'kits/@kit.SensorServiceKit';
-```
-
 ## getOrientation
 
 ```TypeScript
@@ -33,14 +27,16 @@ function getOrientation(rotationMatrix: Array<double>, callback: AsyncCallback<A
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt; 2. Incorrect parameter types; 3. Parameter verification failed. |
-| 14500101 | Service exception. Possible causes: 1. Sensor hdf service exception; &lt;br&gt; 2. Sensor service ipc exception;3. Sensor data channel exception. |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| [14500101](../errorcode-sensor.md#14500101-传感器服务异常) | Service exception. Possible causes: 1. Sensor hdf service exception; &lt;br&gt; 2. Sensor service ipc exception;3. Sensor data channel exception. |
 
 ## 示例
 
+ArkTS-Dyn示例：
+
 ```TypeScript
-import { sensor } from '@kit.SensorServiceKit';
 import { BusinessError } from '@kit.BasicServicesKit';
+import { sensor } from '@kit.SensorServiceKit';
 
 // 使用try catch对可能出现的异常进行捕获
 try {
@@ -60,6 +56,32 @@ try {
     console.info("Succeeded in getting data. Z: " + data[0]);
     console.info("Succeeded in getting data. X: " + data[1]);
     console.info("Succeeded in getting data. Y: " + data[2]);
+  })
+} catch (error) {
+  let e: BusinessError = error as BusinessError;
+  console.error(`Failed to get orientation. Code: ${e.code}, message: ${e.message}`);
+}
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+import { sensor } from '@kit.SensorServiceKit';
+
+// 使用try catch对可能出现的异常进行捕获
+try {
+  let preRotationMatrix = [
+    1, 0, 0,
+    0, 0.87, -0.50,
+    0, 0.50, 0.87
+  ];
+  sensor.getOrientation(preRotationMatrix, (err: BusinessError<void> | null, data: Array<double> | undefined) => {
+    if (err) {
+      console.error(`Failed to get orientation. Code: ${err?.code}, message: ${err?.message}`);
+      return;
+    }
+    console.info('Succeeded getting orientation: ' + JSON.stringify(data));
   })
 } catch (error) {
   let e: BusinessError = error as BusinessError;
@@ -100,14 +122,16 @@ function getOrientation(rotationMatrix: Array<double>): Promise<Array<double>>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt; 2. Incorrect parameter types; 3. Parameter verification failed. |
-| 14500101 | Service exception. Possible causes: 1. Sensor hdf service exception; &lt;br&gt; 2. Sensor service ipc exception;3. Sensor data channel exception. |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| [14500101](../errorcode-sensor.md#14500101-传感器服务异常) | Service exception. Possible causes: 1. Sensor hdf service exception; &lt;br&gt; 2. Sensor service ipc exception;3. Sensor data channel exception. |
 
 ## 示例
 
+ArkTS-Dyn示例：
+
 ```TypeScript
-import { sensor } from '@kit.SensorServiceKit';
 import { BusinessError } from '@kit.BasicServicesKit';
+import { sensor } from '@kit.SensorServiceKit';
 
 // 使用try catch对可能出现的异常进行捕获
 try {
@@ -127,6 +151,31 @@ try {
 } catch (error) {
   let e: BusinessError = error as BusinessError;
   console.error(`Failed to getOrientation Code: ${e.code}, message: ${e.message}`);
+}
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+import { sensor } from '@kit.SensorServiceKit';
+
+// 使用try catch对可能出现的异常进行捕获
+try {
+  let preRotationMatrix = [
+    1, 0, 0,
+    0, 0.87, -0.50,
+    0, 0.50, 0.87
+  ];
+  const promise = sensor.getOrientation(preRotationMatrix);
+  promise.then((data) => {
+    console.info('Succeeded getting orientation: ' + JSON.stringify(data));
+  }, (err) => {
+    console.error(`Failed to getOrientatin. Code: ${err.code}, message: ${err.message}`);
+  });
+} catch (error) {
+  let e: BusinessError = error as BusinessError;
+  console.error(`Failed to getOrientatin Code: ${e.code}, message: ${e.message}`);
 }
 ```
 

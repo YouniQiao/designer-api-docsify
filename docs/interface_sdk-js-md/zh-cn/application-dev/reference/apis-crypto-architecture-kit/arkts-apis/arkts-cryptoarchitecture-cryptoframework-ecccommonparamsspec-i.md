@@ -16,12 +16,6 @@
 - API版本12+：SystemCapability.Security.CryptoFramework.Key.AsymKey
 - API版本10-11：SystemCapability.Security.CryptoFramework
 
-## 导入模块
-
-```TypeScript
-import { cryptoFramework } from 'kits/@kit.CryptoArchitectureKit';
-```
-
 ## a
 
 ```TypeScript
@@ -96,7 +90,7 @@ g: Point
 
 指定基点g。
 
-**类型：** [Point](../../apis-camera-kit/arkts-apis/arkts-camera-camera-point-i.md)
+**类型：** [Point](../../apis-test-kit/arkts-apis/arkts-test-uitest-point-i.md)
 
 **起始版本：** 10
 

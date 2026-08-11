@@ -1,6 +1,6 @@
 # CustomElement
 
-“我的主页”自定义元素的定义。继承自[OperResult](arkts-avsession-avmusictemplate-operresult-i.md)。
+Custom elements of mine page.
 
 **Inheritance/Implementation:** CustomElement extends [OperResult](arkts-avsession-avmusictemplate-operresult-i.md)
 
@@ -24,7 +24,7 @@ import { avMusicTemplate } from 'kits/@kit.AVSessionKit';
 customCompilations?: Compilation[]
 ```
 
-合集数组。
+Compilations of categories
 
 **Type:** [Compilation](arkts-avsession-avmusictemplate-compilation-i.md)[]
 
@@ -44,7 +44,7 @@ customCompilations?: Compilation[]
 settings?: SettingItem[]
 ```
 
-设置项数组。
+Settings information
 
 **Type:** [SettingItem](arkts-avsession-avmusictemplate-settingitem-i.md)[]
 
@@ -64,7 +64,7 @@ settings?: SettingItem[]
 tabs?: MediaTab[]
 ```
 
-标签页信息。
+Tab pages information
 
 **Type:** [MediaTab](arkts-avsession-avmusictemplate-mediatab-i.md)[]
 
@@ -84,7 +84,7 @@ tabs?: MediaTab[]
 userInfo?: UserInfo
 ```
 
-用户信息。
+User information
 
 **Type:** [UserInfo](../../apis-arkdata/arkts-apis/arkts-arkdata-distributeddata-userinfo-i.md)
 

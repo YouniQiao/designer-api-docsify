@@ -33,15 +33,9 @@ Obtain the all device descriptions in NNRT.
 ## Examples
 
 ```TypeScript
-try {
-  let allDevices = mindSporeLite.getAllNNRTDeviceDescriptions();
-  if (allDevices == null || allDevices.length === 0) {
-    console.error('Failed to get NNRT device descriptions. Result: null or empty array');
-  } else {
-    console.info(`Succeeded in getting NNRT device descriptions. Device count: ${allDevices.length}`);
-  }
-} catch (error) {
-  console.error(`Failed to get NNRT device descriptions. Error: ${error}`);
+let allDevices = mindSporeLite.getAllNNRTDeviceDescriptions();
+if (allDevices == null) {
+  console.error('MS_LITE_LOG: getAllNNRTDeviceDescriptions is NULL.');
 }
 ```
 

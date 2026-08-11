@@ -9,4 +9,4 @@ Provides RenderNode capabilities of ArkUI on the native side, such as RenderNode
 
 | Name | Description |
 | -- | -- |
-| [native_render.h](capi-native-render-h.md) | Provides type definitions for <b>NativeRenderNode</b> APIs. |
+| [native_render.h](capi-native-render-h.md) | Declares the APIs of **NativeRender**. For details, see {@link Building a Rendering Node}. |

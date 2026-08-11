@@ -1,6 +1,6 @@
 # NavigationOptions
 
-路由栈操作选项。
+Indicates the options of stack operation.
 
 **Since:** 23
 
@@ -16,11 +16,7 @@
 animated?: boolean
 ```
 
-是否支持转场动画。
-
-true：支持转场动画；false：不支持转场动画。
-
-默认值：true
+Indicates whether the transition is animated.
 
 **Type:** boolean
 
@@ -40,7 +36,7 @@ true：支持转场动画；false：不支持转场动画。
 launchMode?: LaunchMode
 ```
 
-路由栈的操作模式。默认值： LaunchMode.STANDARD。
+Indicates the launchMode of stack operation.Default value: LaunchMode.STANDARD.
 
 **Type:** [LaunchMode](../arkts-components/arkts-arkui-launchmode-e.md)
 

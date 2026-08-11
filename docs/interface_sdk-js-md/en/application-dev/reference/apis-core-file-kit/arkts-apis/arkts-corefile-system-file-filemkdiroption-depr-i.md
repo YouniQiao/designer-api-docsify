@@ -1,6 +1,6 @@
 # FileMkdirOption
 
-可选项类型，支持mkdir接口使用。
+Defines the options used in mkdir().
 
 **Since:** 3
 
@@ -18,7 +18,7 @@
 complete?: () => void
 ```
 
-接口调用结束的回调函数。
+Callback invoked when the API call is complete.
 
 **Since:** 3
 
@@ -36,7 +36,11 @@ complete?: () => void
 fail?: (data: string, code: number) => void
 ```
 
-接口调用失败的回调函数。
+Callback invoked when the API call fails.  
+**data** indicates the error information.  
+**code** indicates the returned error code:  
+**202**: invalid parameter  
+**300**: I/O error
 
 **Since:** 3
 
@@ -61,7 +65,7 @@ fail?: (data: string, code: number) => void
 success?: () => void
 ```
 
-接口调用成功的回调函数。
+Callback invoked when the API call is successful.
 
 **Since:** 3
 
@@ -79,7 +83,7 @@ success?: () => void
 recursive?: boolean
 ```
 
-是否递归创建该目录的上级目录，缺省为false。true为递归创建，false是不递归创建。
+Whether to recursively create the upper-level directory of the specified directory. The default value is **false**.The value **true** means to create upper-level directory recursively; the value false means the opposite.
 
 **Type:** boolean
 
@@ -99,7 +103,7 @@ recursive?: boolean
 uri: string
 ```
 
-目录URI。由于轻量级穿戴设备底层文件系统的限制，该值必须满足以下要求：1. URI 中不得包含以下特殊字符：\"*+,:;&lt;=&gt;?[]|\x7F等。2. 最大允许字符长度为128个字符。
+URI of the directory. Restricted by the underlying file system of lite wearables, the value must meet the following requirements:1. The URI cannot contain the following special characters: \"*+,:;&lt;=&gt;?[]|\x7F.2. The value can contain a maximum of 128 characters.
 
 **Type:** string
 

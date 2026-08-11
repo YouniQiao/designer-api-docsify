@@ -12,7 +12,8 @@ import { appManager } from 'kits/@kit.AbilityKit';
 function getForegroundApplications(callback: AsyncCallback<Array<AppStateData>>): void
 ```
 
-获取当前所有前台应用的信息。该应用信息由[AppStateData](arkts-ability-appmanager-appstatedata-t.md)定义。使用callback异步回调。
+Obtains applications that are running in the foreground. The application information is defined by  
+[AppStateData](arkts-ability-appmanager-appstatedata-t.md). This API uses an asynchronous callback to return the result.
 
 **Since:** 9
 
@@ -30,16 +31,16 @@ function getForegroundApplications(callback: AsyncCallback<Array<AppStateData>>)
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;AppStateData&gt;&gt; | Yes | 以回调方式返回接口运行结果及应用状态数据数组，可进行错误处理或其他自定义处理。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;AppStateData&gt;&gt; | Yes | Callback used to return the API call result and an array holding the application state data. You can perform error handling or custom processing in this callback. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
-| 16000050 | Internal error. |
-| 201 | Permission denied. |
-| 202 | Not system application. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| [16000050](../errorcode-ability.md#16000050-internal-error) | Internal error. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system application. |
 
 ## Examples
 
@@ -71,7 +72,8 @@ try {
 function getForegroundApplications(): Promise<Array<AppStateData>>
 ```
 
-获取当前所有前台应用的信息。该应用信息由[AppStateData](arkts-ability-appmanager-appstatedata-t.md)定义。使用Promise异步回调。
+Obtains applications that are running in the foreground. The application information is defined by  
+[AppStateData](arkts-ability-appmanager-appstatedata-t.md). This API uses a promise to return the result.
 
 **Since:** 9
 
@@ -89,15 +91,15 @@ function getForegroundApplications(): Promise<Array<AppStateData>>
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;Array&lt;AppStateData&gt;&gt; | 返回前台进程应用程序的数组。 |
+| Promise&lt;Array&lt;AppStateData&gt;&gt; | Promise used to return an array holding the application state data. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 16000050 | Internal error. |
-| 201 | Permission denied. |
-| 202 | Not system application. |
+| [16000050](../errorcode-ability.md#16000050-internal-error) | Internal error. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system application. |
 
 ## Examples
 

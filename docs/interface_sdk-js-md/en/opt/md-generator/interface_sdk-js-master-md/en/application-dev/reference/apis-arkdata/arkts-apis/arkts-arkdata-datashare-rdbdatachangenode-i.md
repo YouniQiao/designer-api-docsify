@@ -1,0 +1,69 @@
+# RdbDataChangeNode
+
+Represents the RDB data change result. The data returned by the callback is not larger than 10 MB in size.
+
+**Since:** 10
+
+<!--Device-dataShare-interface RdbDataChangeNode--><!--Device-dataShare-interface RdbDataChangeNode-End-->
+
+**System capability:** SystemCapability.DistributedDataManager.DataShare.Consumer
+
+## Modules to Import
+
+```TypeScript
+import { dataShare } from 'kits/@kit.ArkData';
+```
+
+## data
+
+```TypeScript
+data: Array<string>
+```
+
+Data of the callback. If an error occurs during callback data processing, the callback will not be triggered.
+
+**Type:** Array&lt;string&gt;
+
+**Since:** 10
+
+**Model restriction:** This API can be used only in the stage model.
+
+<!--Device-RdbDataChangeNode-data: Array<string>--><!--Device-RdbDataChangeNode-data: Array<string>-End-->
+
+**System capability:** SystemCapability.DistributedDataManager.DataShare.Consumer
+
+## templateId
+
+```TypeScript
+templateId: TemplateId
+```
+
+ID of the template that triggers the callback.
+
+**Type:** [TemplateId](arkts-arkdata-datashare-templateid-i.md)
+
+**Since:** 10
+
+**Model restriction:** This API can be used only in the stage model.
+
+<!--Device-RdbDataChangeNode-templateId: TemplateId--><!--Device-RdbDataChangeNode-templateId: TemplateId-End-->
+
+**System capability:** SystemCapability.DistributedDataManager.DataShare.Consumer
+
+## uri
+
+```TypeScript
+uri: string
+```
+
+URI of the callback.
+
+**Type:** string
+
+**Since:** 10
+
+**Model restriction:** This API can be used only in the stage model.
+
+<!--Device-RdbDataChangeNode-uri: string--><!--Device-RdbDataChangeNode-uri: string-End-->
+
+**System capability:** SystemCapability.DistributedDataManager.DataShare.Consumer

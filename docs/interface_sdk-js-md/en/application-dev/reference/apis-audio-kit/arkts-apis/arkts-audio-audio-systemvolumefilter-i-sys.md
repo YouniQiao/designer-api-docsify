@@ -1,6 +1,6 @@
 # SystemVolumeFilter (System API)
 
-系统音量过滤器信息。
+Describes the system volume filter.
 
 **Since:** 26.0.0
 
@@ -24,7 +24,7 @@ import { audio } from 'kits/@kit.AudioKit';
 uid: int
 ```
 
-应用程序uid。
+Application UID.
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 

@@ -1,11 +1,5 @@
 # getOAID
 
-## 导入模块
-
-```TypeScript
-import { identifier } from 'kits/@kit.AdsKit';
-```
-
 ## getOAID
 
 ```TypeScript
@@ -38,7 +32,7 @@ function getOAID(callback: AsyncCallback<string>): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 17300001 | System internal error. |
+| [17300001](../errorcode-oaid.md#17300001-系统内部错误) | System internal error. |
 
 ## 示例
 
@@ -88,7 +82,7 @@ function getOAID(): Promise<string>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 17300001 | System internal error. |
+| [17300001](../errorcode-oaid.md#17300001-系统内部错误) | System internal error. |
 
 ## 示例
 

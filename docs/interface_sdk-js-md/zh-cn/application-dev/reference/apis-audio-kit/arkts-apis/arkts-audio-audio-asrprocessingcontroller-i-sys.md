@@ -10,12 +10,6 @@
 
 **系统接口：** 此接口为系统接口。
 
-## 导入模块
-
-```TypeScript
-import { audio } from 'kits/@kit.AudioKit';
-```
-
 ## getAsrAecMode
 
 ```TypeScript
@@ -44,8 +38,8 @@ Get ASR AEC mode.
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 202 | Caller is not a system application. |
-| 6800104 | Operation not allowed. |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Caller is not a system application. |
+| [6800104](../errorcode-audio.md#6800104-参数选项不支持) | Operation not allowed. |
 
 ## 示例
 
@@ -81,8 +75,8 @@ Get ASR noise suppression mode.
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 202 | Caller is not a system application. |
-| 6800104 | Operation not allowed. |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Caller is not a system application. |
+| [6800104](../errorcode-audio.md#6800104-参数选项不支持) | Operation not allowed. |
 
 ## 示例
 
@@ -118,8 +112,8 @@ Get ASR whisper detection mode.
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 202 | Caller is not a system application. |
-| 6800104 | Operation not allowed. |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Caller is not a system application. |
+| [6800104](../errorcode-audio.md#6800104-参数选项不支持) | Operation not allowed. |
 
 ## 示例
 
@@ -155,8 +149,8 @@ Query whether user is whispering.
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 202 | Caller is not a system application. |
-| 6800104 | Operation not allowed. |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Caller is not a system application. |
+| [6800104](../errorcode-audio.md#6800104-参数选项不支持) | Operation not allowed. |
 
 ## 示例
 
@@ -198,10 +192,10 @@ Set ASR AEC mode.
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
-| 6800101 | Parameter verification failed. |
-| 202 | Caller is not a system application. |
-| 6800104 | Operation not allowed. |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
+| [6800101](../errorcode-audio.md#6800101-无效入参) | Parameter verification failed. |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Caller is not a system application. |
+| [6800104](../errorcode-audio.md#6800104-参数选项不支持) | Operation not allowed. |
 
 ## 示例
 
@@ -243,10 +237,10 @@ Set ASR noise suppression mode.
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
-| 6800101 | Parameter verification failed. |
-| 202 | Caller is not a system application. |
-| 6800104 | Operation not allowed. |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
+| [6800101](../errorcode-audio.md#6800101-无效入参) | Parameter verification failed. |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Caller is not a system application. |
+| [6800104](../errorcode-audio.md#6800104-参数选项不支持) | Operation not allowed. |
 
 ## 示例
 
@@ -289,10 +283,10 @@ Set ASR voice control mode.
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1.Mandatory parameters unspecified. 2.Incorrect parameter types. |
-| 6800101 | Parameter verification failed. |
-| 202 | Caller is not a system application. |
-| 6800104 | Operation not allowed. |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1.Mandatory parameters unspecified. 2.Incorrect parameter types. |
+| [6800101](../errorcode-audio.md#6800101-无效入参) | Parameter verification failed. |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Caller is not a system application. |
+| [6800104](../errorcode-audio.md#6800104-参数选项不支持) | Operation not allowed. |
 
 ## 示例
 
@@ -335,10 +329,10 @@ Set ASR voice mute mode.
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1.Mandatory parameters unspecified. 2.Incorrect parameter types. |
-| 6800101 | Parameter verification failed. |
-| 202 | Caller is not a system application. |
-| 6800104 | Operation not allowed. |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1.Mandatory parameters unspecified. 2.Incorrect parameter types. |
+| [6800101](../errorcode-audio.md#6800101-无效入参) | Parameter verification failed. |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Caller is not a system application. |
+| [6800104](../errorcode-audio.md#6800104-参数选项不支持) | Operation not allowed. |
 
 ## 示例
 
@@ -380,10 +374,10 @@ Set ASR whisper detection mode.
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1.Mandatory parameters unspecified. 2.Incorrect parameter types. |
-| 6800101 | Parameter verification failed. |
-| 202 | Caller is not a system application. |
-| 6800104 | Operation not allowed. |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1.Mandatory parameters unspecified. 2.Incorrect parameter types. |
+| [6800101](../errorcode-audio.md#6800101-无效入参) | Parameter verification failed. |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Caller is not a system application. |
+| [6800104](../errorcode-audio.md#6800104-参数选项不支持) | Operation not allowed. |
 
 ## 示例
 

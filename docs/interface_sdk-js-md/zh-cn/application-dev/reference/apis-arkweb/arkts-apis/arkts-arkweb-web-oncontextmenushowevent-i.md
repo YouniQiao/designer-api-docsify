@@ -36,7 +36,7 @@ result: WebContextMenuResult
 
 The menu corresponding event is passed to the kernel.
 
-**类型：** [WebContextMenuResult](../arkts-components/arkts-arkweb-webcontextmenuresult-c.md)
+**类型：** [WebContextMenuResult](arkts-arkweb-web-webcontextmenuresult-c.md)
 
 **起始版本：** 23
 

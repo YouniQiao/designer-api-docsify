@@ -1,11 +1,5 @@
 # onTrackingStateChange
 
-## 导入模块
-
-```TypeScript
-import { mechanicManager } from 'kits/@kit.MechanicKit';
-```
-
 ## onTrackingStateChange
 
 ```TypeScript
@@ -32,5 +26,5 @@ Subscribes to tracking events.
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 33300001 | Service exception. |
+| [33300001](../errorcode-mechanic.md#33300001-系统错误) | Service exception. |
 

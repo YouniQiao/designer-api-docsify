@@ -4,7 +4,7 @@
 type OnLargestContentfulPaintCallback = (largestContentfulPaint: LargestContentfulPaint) => void
 ```
 
-网页绘制页面最大内容度量信息的回调。
+Defines a callback invoked when the largest content paint occurs on the web page.
 
 **Since:** 12
 
@@ -20,5 +20,5 @@ type OnLargestContentfulPaintCallback = (largestContentfulPaint: LargestContentf
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| largestContentfulPaint | [LargestContentfulPaint](../arkts-apis/arkts-arkweb-web-largestcontentfulpaint-i.md) | Yes | 网页绘制页面最大内容度量的详细信息。 |
+| largestContentfulPaint | [LargestContentfulPaint](../arkts-apis/arkts-arkweb-web-largestcontentfulpaint-i.md) | Yes | Information about the largest content paint. |
 

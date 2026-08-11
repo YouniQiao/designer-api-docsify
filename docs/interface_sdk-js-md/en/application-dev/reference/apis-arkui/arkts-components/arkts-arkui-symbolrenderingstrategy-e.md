@@ -1,6 +1,6 @@
 # SymbolRenderingStrategy
 
-渲染模式的枚举值。
+The symbol rendering strategy.
 
 **Since:** 11
 
@@ -16,11 +16,11 @@
 SINGLE = 0
 ```
 
-单色模式（默认值）。
+Single-color mode (default value).
 
-可以设置一个或者多个颜色，默认为黑色。
+The default color is black.
 
-当设置多个颜色时，仅生效第一个颜色。
+You can set one or multiple colors, but only the first color will be applied.
 
 **Since:** 11
 
@@ -42,11 +42,13 @@ SINGLE = 0
 MULTIPLE_COLOR = 1
 ```
 
-多色模式。
+Multi-color mode.
 
-最多可以设置三个颜色。当只设置一个颜色时，修改symbol图标的第一层颜色，其他颜色保持默认颜色。
+A maximum of three colors can be set. If only one color is set, it updates the color of the first layer, leaving other colors at their default values.
 
-颜色设置顺序与图标分层顺序匹配，当颜色数量大于图标分层时，多余的颜色不生效。
+The sequence of color settings matches the layering order of the symbol; any colors beyond the number of symbol layers will not take effect.
+
+Only color values are accepted. Opacity settings do not take effect.
 
 **Since:** 11
 
@@ -68,11 +70,11 @@ MULTIPLE_COLOR = 1
 MULTIPLE_OPACITY = 2
 ```
 
-分层模式。
+Layered mode.
 
-默认为黑色，可以设置一个或者多个颜色。当设置多个颜色时，仅生效第一个颜色。
+The default color is black. You can set one or multiple colors, but only the first color will be applied.
 
-不透明度与图层相关，symbol通用图标的默认第一层透明度为100%、第二层透明度为50%、第三层透明度为20%。当设置的颜色包含透明度时，设置的透明度与每个图层的默认透明度进行叠加。
+Opacity is predefined for the layers: 100% for the first layer, 50% for the second layer, and 20% for the third layer.
 
 **Since:** 11
 

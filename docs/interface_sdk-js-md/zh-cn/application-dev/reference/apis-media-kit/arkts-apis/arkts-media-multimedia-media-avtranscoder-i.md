@@ -17,12 +17,6 @@
 
 **系统能力：** SystemCapability.Multimedia.Media.AVTranscoder
 
-## 导入模块
-
-```TypeScript
-import { media } from 'kits/@kit.MediaKit';
-```
-
 ## addWatermark
 
 ArkTS-Dyn:
@@ -64,10 +58,10 @@ add a watermark for the AVTranscoder. This API uses a promise to return the resu
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 5400102 | Operation not allowed. Return by promise. |
-| 5400103 | IO error. Return by promise. |
-| 5400105 | Service died. Return by promise. |
-| 5400108 | The parameter check failed, parameter value out of range. |
+| [5400102](../errorcode-media.md#5400102-当前状态不支持此操作) | Operation not allowed. Return by promise. |
+| [5400103](../errorcode-media.md#5400103-出现io错误) | IO error. Return by promise. |
+| [5400105](../errorcode-media.md#5400105-播放服务死亡) | Service died. Return by promise. |
+| [5400108](../errorcode-media.md#5400108-参数超过取值范围) | The parameter check failed, parameter value out of range. |
 
 ## cancel
 
@@ -100,9 +94,9 @@ cancel(): Promise<void>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 5400102 | Operation not allowed. Return by promise. |
-| 5400103 | IO error. Return by promise. |
-| 5400105 | Service died. Return by promise. |
+| [5400102](../errorcode-media.md#5400102-当前状态不支持此操作) | Operation not allowed. Return by promise. |
+| [5400103](../errorcode-media.md#5400103-出现io错误) | IO error. Return by promise. |
+| [5400105](../errorcode-media.md#5400105-播放服务死亡) | Service died. Return by promise. |
 
 ## off('complete')
 
@@ -303,14 +297,14 @@ on(type:'error', callback: ErrorCallback):void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 401 | The parameter check failed. |
-| 801 | Capability not supported. |
-| 5400102 | Operation not allowed. |
-| 5400103 | I/O error. |
-| 5400101 | No memory. |
-| 5400106 | Unsupported format. |
-| 5400104 | Time out. |
-| 5400105 | Service died. |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | The parameter check failed. |
+| [801](../../errorcode-universal.md#801-该设备不支持此api) | Capability not supported. |
+| [5400102](../errorcode-media.md#5400102-当前状态不支持此操作) | Operation not allowed. |
+| [5400103](../errorcode-media.md#5400103-出现io错误) | I/O error. |
+| [5400101](../errorcode-media.md#5400101-内存分配失败) | No memory. |
+| [5400106](../errorcode-media.md#5400106-不支持的规格) | Unsupported format. |
+| [5400104](../errorcode-media.md#5400104-操作超时) | Time out. |
+| [5400105](../errorcode-media.md#5400105-播放服务死亡) | Service died. |
 
 ## on('progressUpdate')
 
@@ -389,14 +383,14 @@ An application can subscribe to only one AVTranscoder error event.When the appli
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 401 | The parameter check failed. |
-| 801 | Capability not supported. |
-| 5400102 | Operation not allowed. |
-| 5400103 | I/O error. |
-| 5400101 | No memory. |
-| 5400106 | Unsupported format. |
-| 5400104 | Time out. |
-| 5400105 | Service died. |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | The parameter check failed. |
+| [801](../../errorcode-universal.md#801-该设备不支持此api) | Capability not supported. |
+| [5400102](../errorcode-media.md#5400102-当前状态不支持此操作) | Operation not allowed. |
+| [5400103](../errorcode-media.md#5400103-出现io错误) | I/O error. |
+| [5400101](../errorcode-media.md#5400101-内存分配失败) | No memory. |
+| [5400106](../errorcode-media.md#5400106-不支持的规格) | Unsupported format. |
+| [5400104](../errorcode-media.md#5400104-操作超时) | Time out. |
+| [5400105](../errorcode-media.md#5400105-播放服务死亡) | Service died. |
 
 ## onProgressUpdate
 
@@ -450,9 +444,9 @@ pause(): Promise<void>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 5400102 | Operation not allowed. Return by promise. |
-| 5400103 | IO error. Return by promise. |
-| 5400105 | Service died. Return by promise. |
+| [5400102](../errorcode-media.md#5400102-当前状态不支持此操作) | Operation not allowed. Return by promise. |
+| [5400103](../errorcode-media.md#5400103-出现io错误) | IO error. Return by promise. |
+| [5400105](../errorcode-media.md#5400105-播放服务死亡) | Service died. Return by promise. |
 
 ## prepare
 
@@ -488,11 +482,11 @@ prepare(config: AVTranscoderConfig): Promise<void>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 401 | The parameter check failed. Return by promise. |
-| 5400102 | Operation not allowed. Return by promise. |
-| 5400103 | IO error. Return by promise. |
-| 5400106 | Unsupported format. Returned by promise. |
-| 5400105 | Service died. Return by promise. |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | The parameter check failed. Return by promise. |
+| [5400102](../errorcode-media.md#5400102-当前状态不支持此操作) | Operation not allowed. Return by promise. |
+| [5400103](../errorcode-media.md#5400103-出现io错误) | IO error. Return by promise. |
+| [5400106](../errorcode-media.md#5400106-不支持的规格) | Unsupported format. Returned by promise. |
+| [5400105](../errorcode-media.md#5400105-播放服务死亡) | Service died. Return by promise. |
 
 ## release
 
@@ -524,8 +518,8 @@ release(): Promise<void>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 5400102 | Operation not allowed. Return by promise. |
-| 5400105 | Service died. Return by promise. |
+| [5400102](../errorcode-media.md#5400102-当前状态不支持此操作) | Operation not allowed. Return by promise. |
+| [5400105](../errorcode-media.md#5400105-播放服务死亡) | Service died. Return by promise. |
 
 ## resume
 
@@ -557,9 +551,9 @@ resume(): Promise<void>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 5400102 | Operation not allowed. Return by promise. |
-| 5400103 | IO error. Return by promise. |
-| 5400105 | Service died. Return by promise. |
+| [5400102](../errorcode-media.md#5400102-当前状态不支持此操作) | Operation not allowed. Return by promise. |
+| [5400103](../errorcode-media.md#5400103-出现io错误) | IO error. Return by promise. |
+| [5400105](../errorcode-media.md#5400105-播放服务死亡) | Service died. Return by promise. |
 
 ## start
 
@@ -591,9 +585,9 @@ start(): Promise<void>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 5400102 | Operation not allowed. Return by promise. |
-| 5400103 | IO error. Return by promise. |
-| 5400105 | Service died. Return by promise. |
+| [5400102](../errorcode-media.md#5400102-当前状态不支持此操作) | Operation not allowed. Return by promise. |
+| [5400103](../errorcode-media.md#5400103-出现io错误) | IO error. Return by promise. |
+| [5400105](../errorcode-media.md#5400105-播放服务死亡) | Service died. Return by promise. |
 
 ## fdDst
 

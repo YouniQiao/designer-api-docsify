@@ -1,11 +1,5 @@
 # createPluginModuleContextForHostBundle（系统接口）
 
-## 导入模块
-
-```TypeScript
-import { application } from 'kits/@kit.AbilityKit';
-```
-
 ## createPluginModuleContextForHostBundle
 
 ```TypeScript
@@ -48,26 +42,29 @@ export function createPluginModuleContextForHostBundle(context: Context, pluginB
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 201 | Permission denied. |
-| 202 | Permission denied, non-system app called system api. |
+| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission denied, non-system app called system api. |
 
 ## 示例
 
 ```TypeScript
-import { AbilityConstant, UIAbility, application, common, Want } from '@kit.AbilityKit';
+import { AbilityConstant, UIAbility, application, common, Context, Want } from '@kit.AbilityKit';
 import { BusinessError } from '@kit.BasicServicesKit';
 
 export default class EntryAbility extends UIAbility {
   onCreate(want: Want, launchParam: AbilityConstant.LaunchParam): void {
     let moduleContext: common.Context;
     try {
-      application.createPluginModuleContextForHostBundle(this.context, 'com.example.pluginBundleName', 'pluginModuleName', 'com.example.hostBundleName')
+      application.createPluginModuleContextForHostBundle(this.context, 'com.example.pluginBundleName',
+        'pluginModuleName', 'com.example.hostBundleName')
         .then((data: common.Context) => {
           moduleContext = data;
           console.info('createPluginModuleContextForHostBundle success!');
         })
-        .catch((error: BusinessError) => {
-          console.error(`createPluginModuleContextForHostBundle failed, error.code: ${error.code}, error.message: ${error.message}`);
+        .catch((error: Error) => {
+          let code: number = (error as BusinessError).code;
+          let message: string = (error as BusinessError).message;
+          console.error(`createPluginModuleContextForHostBundle failed, error.code: ${code}, error.message: ${message}`);
         });
     } catch (error: BusinessError) {
       console.error(`createPluginModuleContextForHostBundle failed, error.code: ${error.code}, error.message: ${error.message}`);

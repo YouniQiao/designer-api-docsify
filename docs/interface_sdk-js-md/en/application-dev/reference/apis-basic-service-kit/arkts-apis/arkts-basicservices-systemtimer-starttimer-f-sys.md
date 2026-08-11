@@ -12,7 +12,7 @@ import { systemTimer } from 'kits/@kit.BasicServicesKit';
 function startTimer(timer: long, triggerTime: long, callback: AsyncCallback<void>): void
 ```
 
-开启定时器，使用callback异步回调。
+Starts a timer. This API uses an asynchronous callback to return the result.
 
 **Since:** 7
 
@@ -28,16 +28,16 @@ function startTimer(timer: long, triggerTime: long, callback: AsyncCallback<void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| timer | ArkTS-Dyn: number  <br>ArkTS-Sta：long | Yes | 定时器的ID。 |
-| triggerTime | ArkTS-Dyn: number  <br>ArkTS-Sta：long | Yes | 定时器的触发时间，单位：毫秒。&lt;br/&gt;若定时器类型包含了TIMER_TYPE_REALTIME，该triggerTime应为系统启动时间，建议通过 [systemDateTime.getUptime(STARTUP)](arkts-basicservices-systemdatetime-getuptime-f.md#getuptime)获取；&lt;br/&gt;若定时器类型不包含 TIMER_TYPE_REALTIME，该triggerTime应为墙上时间，建议通过 [systemDateTime.getTime()](arkts-basicservices-systemdatetime-gettime-f.md#gettime)获取。 |
-| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | 回调函数。 |
+| timer | ArkTS-Dyn: number  <br>ArkTS-Sta：long | Yes | ID of the timer. |
+| triggerTime | ArkTS-Dyn: number  <br>ArkTS-Sta：long | Yes | Time when the timer is triggered, in milliseconds.&lt;br&gt;If **TIMER_TYPE_REALTIME** is set as the timer type, the value of **triggerTime** is the system startup time, which can be obtained by calling [systemDateTime.getUptime(STARTUP)](arkts-basicservices-systemdatetime-getuptime-f.md#getuptime).&lt;br&gt;If **TIMER_TYPE_REALTIME** is not set, the value of **triggerTime** is the wall time, which can be obtained by calling [systemDateTime.getTime()](arkts-basicservices-systemdatetime-gettime-f.md#gettime). |
+| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. Possible causes: &lt;br&gt; 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameter types. |
-| 202 | Permission verification failed. A non-system application calls a system API. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: &lt;br&gt; 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameter types. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
 
 ## Examples
 
@@ -77,7 +77,7 @@ try {
 function startTimer(timer: long, triggerTime: long): Promise<void>
 ```
 
-开启定时器，使用Promise进行异步回调。
+Starts a timer. This API uses a promise to return the result.
 
 **Since:** 7
 
@@ -93,21 +93,21 @@ function startTimer(timer: long, triggerTime: long): Promise<void>
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| timer | ArkTS-Dyn: number  <br>ArkTS-Sta：long | Yes | 定时器的ID。 |
-| triggerTime | ArkTS-Dyn: number  <br>ArkTS-Sta：long | Yes | 定时器的触发时间，单位：毫秒。&lt;br/&gt;若定时器类型包含了TIMER_TYPE_REALTIME，该triggerTime应为系统启动时间，建议通过 [systemDateTime.getUptime(STARTUP)](arkts-basicservices-systemdatetime-getuptime-f.md#getuptime)获取；&lt;br/&gt;若定时器类型不包含 TIMER_TYPE_REALTIME，该triggerTime应为墙上时间，建议通过 [systemDateTime.getTime()](arkts-basicservices-systemdatetime-gettime-f.md#gettime)获取。 |
+| timer | ArkTS-Dyn: number  <br>ArkTS-Sta：long | Yes | ID of the timer. |
+| triggerTime | ArkTS-Dyn: number  <br>ArkTS-Sta：long | Yes | Time when the timer is triggered, in milliseconds.&lt;br&gt;If **TIMER_TYPE_REALTIME** is set as the timer type, the value of **triggerTime** is the system startup time, which can be obtained by calling [systemDateTime.getUptime(STARTUP)](arkts-basicservices-systemdatetime-getuptime-f.md#getuptime).&lt;br&gt;If **TIMER_TYPE_REALTIME** is not set, the value of **triggerTime** is the wall time, which can be obtained by calling [systemDateTime.getTime()](arkts-basicservices-systemdatetime-gettime-f.md#gettime). |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | 无返回结果的Promise对象。 |
+| Promise&lt;void&gt; | Promise that returns no value. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. Possible causes: &lt;br&gt; 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameter types. |
-| 202 | Permission verification failed. A non-system application calls a system API. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: &lt;br&gt; 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameter types. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
 
 ## Examples
 

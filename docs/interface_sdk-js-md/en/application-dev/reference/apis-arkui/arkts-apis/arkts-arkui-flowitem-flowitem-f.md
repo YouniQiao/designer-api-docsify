@@ -8,7 +8,7 @@ export declare function FlowItem(
 ): FlowItemAttribute
 ```
 
-创建瀑布流子组件。
+Defines FlowItem Component
 
 **Since:** 23
 
@@ -24,7 +24,7 @@ export declare function FlowItem(
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| content_ | [CustomBuilder](../arkts-components/arkts-arkui-custombuilder-t.md) | No | 容器内容。 |
+| content_ | [CustomBuilder](../arkts-components/arkts-arkui-custombuilder-t.md) | No | container |
 
 **Return value:**
 
@@ -42,11 +42,11 @@ export declare function FlowItem(
 ): FlowItemAttribute
 ```
 
-定义FlowItem组件。
+Defines FlowItem Component.
 
-**Since:** 26.0.0
+**Since:** 26.1.0
 
-**ArkTS mode:** ArkTS-Sta only, since version 26.0.0.
+**ArkTS mode:** ArkTS-Sta only, since version 26.1.0.
 
 **Decorator:** @Builder
 
@@ -60,12 +60,12 @@ export declare function FlowItem(
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| style_ | [CustomBuilderT](../arkts-components/arkts-arkui-custombuildert-t.md)&lt;FlowItemAttribute&gt; | Yes | 用于创建FlowItem的样式 |
+| style_ | [CustomBuilderT](../arkts-components/arkts-arkui-custombuildert-t.md)&lt;FlowItemAttribute&gt; | Yes | The style to create a FlowItem. |
 | content_ | [CustomBuilder](../arkts-components/arkts-arkui-custombuilder-t.md) | No |  |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [FlowItemAttribute](../arkts-components/arkts-arkui-flowitem-attribute.md) | FlowItem的属性。 |
+| [FlowItemAttribute](../arkts-components/arkts-arkui-flowitem-attribute.md) | The attribute of the FlowItem. |
 

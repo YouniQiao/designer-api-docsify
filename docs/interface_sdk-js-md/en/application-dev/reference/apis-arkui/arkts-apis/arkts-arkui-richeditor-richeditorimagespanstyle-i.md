@@ -1,6 +1,6 @@
 # RichEditorImageSpanStyle
 
-图片样式。
+Defines the span image style.
 
 **Since:** 23
 
@@ -16,7 +16,7 @@
 layoutStyle?: RichEditorLayoutStyle
 ```
 
-图片布局风格。
+RichEditor ImageSpan Layout Style.
 
 **Type:** [RichEditorLayoutStyle](../arkts-components/arkts-arkui-richeditorlayoutstyle-i.md)
 
@@ -36,7 +36,7 @@ layoutStyle?: RichEditorLayoutStyle
 objectFit?: ImageFit
 ```
 
-图片缩放类型。
+image fit.
 
 **Type:** [ImageFit](arkts-arkui-imagefit-e.md)
 
@@ -59,9 +59,9 @@ size?: [
     ]
 ```
 
-图片的宽度和高度，单位为px。默认值：size的默认值与objectFit的值有关，不同的objectFit值对应的size默认值也不同。objectFit的值为Cover时，图片高度为组件高度减去组件上下内边距，图片宽度为组件宽度减去组件左右内边距。
+image size.
 
-**Type:** [         Dimension,         Dimension     ]
+**Type:** [         Dimension,         Dimension     ]
 
 **Since:** 23
 
@@ -79,7 +79,7 @@ size?: [
 verticalAlign?: ImageSpanAlignment
 ```
 
-图片垂直对齐方式。
+image vertical align.
 
 **Type:** [ImageSpanAlignment](arkts-arkui-imagespanalignment-e.md)
 

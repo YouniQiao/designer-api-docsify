@@ -1,5 +1,7 @@
 # Local
 
+Defining Local annotation Local is the internal state of a component, which enables the variables in the custom component to observe changes.
+
 **Since:** 23
 
 **ArkTS mode:** ArkTS-Sta only, since version 23.

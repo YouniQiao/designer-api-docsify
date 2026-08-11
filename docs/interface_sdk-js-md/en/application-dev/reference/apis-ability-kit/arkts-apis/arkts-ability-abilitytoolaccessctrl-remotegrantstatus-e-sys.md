@@ -1,6 +1,6 @@
 # RemoteGrantStatus (System API)
 
-远程授权状态。
+Remote grant status.
 
 **Since:** 26.1.0
 
@@ -18,7 +18,7 @@
 ENABLE = 0x01
 ```
 
-启用远程授权。
+Enable remote grant.
 
 **Since:** 26.1.0
 
@@ -36,7 +36,7 @@ ENABLE = 0x01
 DISABLE = 0x02
 ```
 
-禁用远程授权。
+Disable remote grant.
 
 **Since:** 26.1.0
 

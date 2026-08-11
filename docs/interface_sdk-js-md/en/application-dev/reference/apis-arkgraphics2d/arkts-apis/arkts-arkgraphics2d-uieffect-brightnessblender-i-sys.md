@@ -1,6 +1,6 @@
 # BrightnessBlender (System API)
 
-提亮混合器，用于将提亮效果添加到指定的组件上。在调用BrightnessBlender前，需要先通过createBrightnessBlender创建一个BrightnessBlender实例。
+Brightness blender, used to add a brightness effect to a specified component.Before calling BrightnessBlender, you need to first create a BrightnessBlender instance through createBrightnessBlender.
 
 **Since:** 12
 
@@ -24,7 +24,7 @@ import { uiEffect } from 'kits/@kit.ArkGraphics2D';
 cubicRate: double
 ```
 
-灰度调整的三阶系数。 取值范围为[-20, 20]，超出边界会在实现时自动截断。
+Third-order coefficient for grayscale adjustment. The value range is [-20, 20].Values outside the range will be clamped during implementation.
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：double
 
@@ -46,7 +46,7 @@ cubicRate: double
 degree: double
 ```
 
-灰度调整的比例。 取值范围为[-20, 20]，超出边界会在实现时自动截断。
+Grayscale adjustment ratio. The value range is [-20, 20].Values outside the range will be clamped during implementation.
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：double
 
@@ -68,7 +68,7 @@ degree: double
 fraction: double
 ```
 
-提亮效果的混合比例。 取值范围为[0, 1]，超出边界会在实现时自动截断。
+Blending ratio for the brightness effect. The value range is [0, 1].Values outside the range will be clamped during implementation.
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：double
 
@@ -90,7 +90,7 @@ fraction: double
 linearRate: double
 ```
 
-灰度调整的线性系数。 取值范围为[-20, 20]，超出边界会在实现时自动截断。
+Linear coefficient for grayscale adjustment. The value range is [-20, 20].Values outside the range will be clamped during implementation.
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：double
 
@@ -112,7 +112,7 @@ linearRate: double
 negativeCoefficient: [double, double, double]
 ```
 
-基于基准饱和度的RGB负向调整参数。 每个number的取值范围为[-20, 20]，超出边界会在实现时自动截断。
+Negative RGB adjustment coefficients based on the base saturation. The value range for each number is [-20, 20].Values outside the range will be clamped during implementation.
 
 **Type:** ArkTS-Dyn: [number, number, number]  <br>ArkTS-Sta：[double, double, double]
 
@@ -134,7 +134,7 @@ negativeCoefficient: [double, double, double]
 positiveCoefficient: [double, double, double]
 ```
 
-基于基准饱和度的RGB正向调整参数。 每个number的取值范围为[-20, 20]，超出边界会在实现时自动截断。
+Positive RGB adjustment coefficients based on the base saturation. The value range for each number is [-20, 20].Values outside the range will be clamped during implementation.
 
 **Type:** ArkTS-Dyn: [number, number, number]  <br>ArkTS-Sta：[double, double, double]
 
@@ -156,7 +156,7 @@ positiveCoefficient: [double, double, double]
 quadraticRate: double
 ```
 
-灰度调整的二阶系数。 取值范围为[-20, 20]，超出边界会在实现时自动截断。
+Second-order coefficient for grayscale adjustment. The value range is [-20, 20].Values outside the range will be clamped during implementation.
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：double
 
@@ -178,7 +178,7 @@ quadraticRate: double
 saturation: double
 ```
 
-提亮的基准饱和度。 取值范围为[0, 20]，超出边界会在实现时自动截断。
+Base saturation for brightness. The value range is [0, 20].Values outside the range will be clamped during implementation.
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：double
 

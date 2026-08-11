@@ -1,6 +1,6 @@
 # WebResourceResponse
 
-Web组件资源响应对象。
+Defines the Web resource response.
 
 **Since:** 8
 
@@ -34,7 +34,7 @@ Constructor.
 getReasonMessage(): string
 ```
 
-获取资源响应的状态码描述。
+Gets the reason message.
 
 **Since:** 8
 
@@ -50,7 +50,7 @@ getReasonMessage(): string
 
 | Type | Description |
 | --- | --- |
-| string | 返回资源响应的状态码描述。 |
+| string | Return the reason message. |
 
 ## getResponseCode
 
@@ -58,7 +58,7 @@ getReasonMessage(): string
 getResponseCode(): number
 ```
 
-获取资源响应的状态码。
+Gets the response code.
 
 **Since:** 8
 
@@ -74,7 +74,7 @@ getResponseCode(): number
 
 | Type | Description |
 | --- | --- |
-| number | 返回资源响应的状态码。 |
+| number | Return the response code. |
 
 ## getResponseData
 
@@ -82,7 +82,7 @@ getResponseCode(): number
 getResponseData(): string
 ```
 
-获取资源响应数据。
+Gets the response data.
 
 **Since:** 8
 
@@ -98,7 +98,7 @@ getResponseData(): string
 
 | Type | Description |
 | --- | --- |
-| string | 返回资源响应数据。 |
+| string | Return the response data. |
 
 ## getResponseDataEx
 
@@ -106,7 +106,7 @@ getResponseData(): string
 getResponseDataEx(): string | number | ArrayBuffer | Resource | undefined
 ```
 
-获取资源响应数据，支持多种数据类型。
+Gets the response data.
 
 **Since:** 13
 
@@ -128,7 +128,7 @@ getResponseDataEx(): string | number | ArrayBuffer | Resource | undefined
 getResponseEncoding(): string
 ```
 
-获取资源响应的编码。
+Gets the response encoding.
 
 **Since:** 8
 
@@ -144,7 +144,7 @@ getResponseEncoding(): string
 
 | Type | Description |
 | --- | --- |
-| string | 返回资源响应的编码。 |
+| string | Return the response encoding. |
 
 ## getResponseHeader
 
@@ -152,7 +152,7 @@ getResponseEncoding(): string
 getResponseHeader(): Array<Header>
 ```
 
-获取资源响应头。
+Gets the response headers.
 
 **Since:** 8
 
@@ -168,7 +168,7 @@ getResponseHeader(): Array<Header>
 
 | Type | Description |
 | --- | --- |
-| Array&lt;Header&gt; | 返回资源响应头。 |
+| Array&lt;Header&gt; | Return the response headers. |
 
 ## getResponseIsReady
 
@@ -176,7 +176,7 @@ getResponseHeader(): Array<Header>
 getResponseIsReady(): boolean
 ```
 
-获取响应数据是否已准备就绪。
+Gets whether the response is ready.
 
 **Since:** 13
 
@@ -190,7 +190,7 @@ getResponseIsReady(): boolean
 
 | Type | Description |
 | --- | --- |
-| boolean | `true`表示响应数据已准备好，`false`表示未准备好。 |
+| boolean | True indicates the response data is ready and false is not ready. |
 
 ## getResponseMimeType
 
@@ -198,7 +198,7 @@ getResponseIsReady(): boolean
 getResponseMimeType(): string
 ```
 
-获取资源响应的媒体（MIME）类型。
+Gets the response MIME type.
 
 **Since:** 8
 
@@ -214,7 +214,7 @@ getResponseMimeType(): string
 
 | Type | Description |
 | --- | --- |
-| string | 返回资源响应的媒体（MIME）类型。 |
+| string | Return the response MIME type. |
 
 ## setReasonMessage
 
@@ -222,7 +222,7 @@ getResponseMimeType(): string
 setReasonMessage(reason: string): void
 ```
 
-设置资源响应的状态码描述。
+Sets the reason message.
 
 **Since:** 9
 
@@ -238,7 +238,7 @@ setReasonMessage(reason: string): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| reason | string | Yes | 要设置的资源响应的状态码描述。 |
+| reason | string | Yes | the reason message. |
 
 ## setResponseCode
 
@@ -246,7 +246,7 @@ setReasonMessage(reason: string): void
 setResponseCode(code: number): void
 ```
 
-设置资源响应的状态码。
+Sets the response code.
 
 **Since:** 9
 
@@ -262,7 +262,7 @@ setResponseCode(code: number): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| code | number | Yes | 要设置的资源响应的状态码。 |
+| code | number | Yes | the response code. |
 
 ## setResponseData
 
@@ -270,7 +270,7 @@ setResponseCode(code: number): void
 setResponseData(data: string | number | Resource | ArrayBuffer): void
 ```
 
-设置资源响应数据。
+Sets the response data.
 
 **Since:** 9
 
@@ -286,7 +286,7 @@ setResponseData(data: string | number | Resource | ArrayBuffer): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| data | string \| number \| Resource \| ArrayBuffer | Yes | 要设置的资源响应数据。 string表示HTML格式的字符串。 number表示文件句柄，此句柄由系统的Web组件负责关闭。 Resource表示应用rawfile目录下文件资源.<br>**Since:** 9 - 10 |
+| data | string \| number \| Resource \| ArrayBuffer | Yes | the response data. string type indicate strings in HTML format. number type indicate file handle. Resource type indicate \\$rawfile resource. ArrayBuffer type indicate binary data.<br>**Since:** 11 |
 
 ## setResponseEncoding
 
@@ -294,7 +294,7 @@ setResponseData(data: string | number | Resource | ArrayBuffer): void
 setResponseEncoding(encoding: string): void
 ```
 
-设置资源响应的编码。
+Sets the response encoding.
 
 **Since:** 9
 
@@ -310,7 +310,7 @@ setResponseEncoding(encoding: string): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| encoding | string | Yes | 要设置的资源响应的编码。 |
+| encoding | string | Yes | the response encoding. |
 
 ## setResponseHeader
 
@@ -318,7 +318,7 @@ setResponseEncoding(encoding: string): void
 setResponseHeader(header: Array<Header>): void
 ```
 
-设置资源响应头。
+Sets the response headers.
 
 **Since:** 9
 
@@ -334,7 +334,7 @@ setResponseHeader(header: Array<Header>): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| header | Array&lt;Header&gt; | Yes | 要设置的资源响应头。 |
+| header | Array&lt;Header&gt; | Yes | the response headers. |
 
 ## setResponseIsReady
 
@@ -342,7 +342,7 @@ setResponseHeader(header: Array<Header>): void
 setResponseIsReady(IsReady: boolean): void
 ```
 
-设置资源响应数据是否已经就绪。
+Sets the response is ready or not.
 
 **Since:** 9
 
@@ -358,7 +358,7 @@ setResponseIsReady(IsReady: boolean): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| IsReady | boolean | Yes | 资源响应数据是否已经就绪。 |
+| IsReady | boolean | Yes | whether the response is ready. |
 
 ## setResponseMimeType
 
@@ -366,7 +366,7 @@ setResponseIsReady(IsReady: boolean): void
 setResponseMimeType(mimeType: string): void
 ```
 
-设置资源响应的媒体（MIME）类型。
+Sets the response MIME type.
 
 **Since:** 9
 
@@ -382,5 +382,5 @@ setResponseMimeType(mimeType: string): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| mimeType | string | Yes | 要设置的资源响应的媒体（MIME）类型。 |
+| mimeType | string | Yes | the response MIME type. |
 

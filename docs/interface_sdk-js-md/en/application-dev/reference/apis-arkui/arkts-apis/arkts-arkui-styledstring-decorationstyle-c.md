@@ -1,6 +1,6 @@
 # DecorationStyle
 
-文本装饰线样式对象说明。
+Defines DecorationStyle.
 
 **Since:** 23
 
@@ -16,7 +16,7 @@
 constructor(value: DecorationStyleInterface)
 ```
 
-文本装饰线样式的构造函数。
+constructor.
 
 **Since:** 23
 
@@ -32,15 +32,13 @@ constructor(value: DecorationStyleInterface)
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | [DecorationStyleInterface](arkts-arkui-decorationstyleinterface-i.md) | Yes | 文本装饰线设置项。&lt;br/&gt;默认值：&lt;br/&gt;{&lt;br/&gt; type: TextDecorationType.None,&lt;br/&gt; color: Color.Black,&lt;br/&gt; style: TextDecorationStyle.SOLID &lt;br/&gt;} |
+| value | [DecorationStyleInterface](arkts-arkui-decorationstyleinterface-i.md) | Yes | text decoration value. |
 
 ## constructor
 
 ```TypeScript
 constructor(value: DecorationStyleInterface, options?: DecorationOptions)
 ```
-
-文本装饰线样式的构造函数，包含额外配置选项。
 
 **Since:** 26.0.0
 
@@ -56,8 +54,8 @@ constructor(value: DecorationStyleInterface, options?: DecorationOptions)
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | [DecorationStyleInterface](arkts-arkui-decorationstyleinterface-i.md) | Yes | 文本装饰线设置项。&lt;br/&gt;默认值：&lt;br/&gt;{&lt;br/&gt; type: TextDecorationType.None,&lt;br/&gt; color: Color.Black,&lt;br/&gt; style: TextDecorationStyle.SOLID, &lt;br/&gt; thicknessScale: 1.0&lt;br/&gt;} |
-| options | [DecorationOptions](arkts-arkui-styledstring-decorationoptions-i.md) | No | 文本装饰线额外配置选项。&lt;br/&gt;默认值：&lt;br/&gt;{&lt;br/&gt; enableMultiType: undefined&lt;br/&gt;} |
+| value | [DecorationStyleInterface](arkts-arkui-decorationstyleinterface-i.md) | Yes | text decoration value. |
+| options | [DecorationOptions](arkts-arkui-styledstring-decorationoptions-i.md) | No | decoration options. |
 
 ## color
 
@@ -65,7 +63,7 @@ constructor(value: DecorationStyleInterface, options?: DecorationOptions)
 readonly color?: ResourceColor
 ```
 
-获取属性字符串的文本装饰线颜色。
+Get the decorationColor of the StyledString.
 
 **Type:** [ResourceColor](arkts-arkui-resourcecolor-t.md)
 
@@ -85,7 +83,7 @@ readonly color?: ResourceColor
 readonly options?: DecorationOptions
 ```
 
-获取属性字符串的文本装饰线样式的额外配置选项。
+Get the DecorationOptions of the StyledString.
 
 **Type:** [DecorationOptions](arkts-arkui-styledstring-decorationoptions-i.md)
 
@@ -105,7 +103,7 @@ readonly options?: DecorationOptions
 readonly style?: TextDecorationStyle
 ```
 
-获取属性字符串的文本装饰线样式。
+Get the decorationStyle of the StyledString.
 
 **Type:** [TextDecorationStyle](arkts-arkui-textdecorationstyle-e.md)
 
@@ -125,7 +123,7 @@ readonly style?: TextDecorationStyle
 readonly thicknessScale?: double
 ```
 
-获取属性字符串的文本装饰线粗细缩放值。
+Get the thickness scale of the StyledString.
 
 **Type:** double
 
@@ -145,7 +143,7 @@ readonly thicknessScale?: double
 readonly type: TextDecorationType
 ```
 
-获取属性字符串的文本装饰线类型。
+Get the text decoration type of the StyledString.
 
 **Type:** [TextDecorationType](arkts-arkui-textdecorationtype-e.md)
 

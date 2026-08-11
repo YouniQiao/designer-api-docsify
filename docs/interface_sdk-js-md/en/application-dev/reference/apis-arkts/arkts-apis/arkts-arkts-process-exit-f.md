@@ -12,9 +12,9 @@ import { process } from 'kits/@kit.ArkTS';
 function exit(code: number): void
 ```
 
-终止程序。
+Terminates this process.
 
-请谨慎使用此接口。调用此接口后应用将退出。如果输入参数非0，可能会导致数据丢失或出现未定义的运行异常。
+Exercise caution when using this API. After this API is called, the application exits. If the input parameter is not 0, data loss or exceptions may occur.
 
 **Since:** 7
 
@@ -32,7 +32,7 @@ function exit(code: number): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| code | number | Yes | 进程的退出码。 |
+| code | number | Yes | Exit code of the process. |
 
 ## Examples
 

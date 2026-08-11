@@ -23,12 +23,6 @@ InputMethodSetting提供输入法配置与查询能力，面向前台应用提�
 
 **系统能力：** SystemCapability.MiscServices.InputMethodFramework
 
-## 导入模块
-
-```TypeScript
-import { inputMethod } from 'kits/@kit.IMEKit';
-```
-
 ## displayOptionalInputMethod
 
 ```TypeScript
@@ -133,15 +127,32 @@ getAllInputMethods(callback: AsyncCallback<Array<InputMethodProperty>>): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 12800001 | bundle manager error. |
-| 12800008 | input method manager service error. Possible cause: a system error, such as null pointer, IPC exception. |
+| [12800001](../errorcode-inputmethod-framework.md#12800001-包管理服务异常) | bundle manager error. |
+| [12800008](../errorcode-inputmethod-framework.md#12800008-输入法管理服务异常) | input method manager service error. Possible cause: a system error, such as null pointer, IPC exception. |
 
 ## 示例
+
+ArkTS-Dyn示例:
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
 
 inputMethod.getSetting().getAllInputMethods((err: BusinessError, data: Array<inputMethod.InputMethodProperty>) => {
+  if (err) {
+    console.error(`Failed to getAllInputMethods, code: ${err.code}, message: ${err.message}`);
+    return;
+  }
+  console.info('Succeeded in getting all inputMethods.');
+});
+```
+
+ArkTS-Sta示例:
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+let inputMethodSetting: inputMethod.InputMethodSetting = inputMethod.getSetting();
+
+inputMethodSetting.getAllInputMethods((err?: BusinessError, data?: Array<inputMethod.InputMethodProperty>) => {
   if (err) {
     console.error(`Failed to getAllInputMethods, code: ${err.code}, message: ${err.message}`);
     return;
@@ -176,10 +187,12 @@ getAllInputMethods(): Promise<Array<InputMethodProperty>>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 12800001 | bundle manager error. |
-| 12800008 | input method manager service error. Possible cause: a system error, such as null pointer, IPC exception. |
+| [12800001](../errorcode-inputmethod-framework.md#12800001-包管理服务异常) | bundle manager error. |
+| [12800008](../errorcode-inputmethod-framework.md#12800008-输入法管理服务异常) | input method manager service error. Possible cause: a system error, such as null pointer, IPC exception. |
 
 ## 示例
+
+ArkTS-Dyn示例:
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -187,6 +200,19 @@ import { BusinessError } from '@kit.BasicServicesKit';
 inputMethod.getSetting().getAllInputMethods().then((data: Array<inputMethod.InputMethodProperty>) => {
   console.info('Succeeded in getting all inputMethods.');
 }).catch((err: BusinessError) => {
+  console.error(`Failed to getAllInputMethods, code: ${err.code}, message: ${err.message}`);
+})
+```
+
+ArkTS-Sta示例:
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+let inputMethodSetting: inputMethod.InputMethodSetting = inputMethod.getSetting();
+
+inputMethodSetting.getAllInputMethods().then((data: Array<inputMethod.InputMethodProperty>) => {
+  console.info('Succeeded in getting all inputMethods.');
+}).catch((err: BusinessError): void=> {
   console.error(`Failed to getAllInputMethods, code: ${err.code}, message: ${err.message}`);
 })
 ```
@@ -217,8 +243,8 @@ getAllInputMethodsSync(): Array<InputMethodProperty>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 12800001 | bundle manager error. |
-| 12800008 | input method manager service error. Possible cause: a system error, such as null pointer, IPC exception. |
+| [12800001](../errorcode-inputmethod-framework.md#12800001-包管理服务异常) | bundle manager error. |
+| [12800008](../errorcode-inputmethod-framework.md#12800008-输入法管理服务异常) | input method manager service error. Possible cause: a system error, such as null pointer, IPC exception. |
 
 ## 示例
 
@@ -252,10 +278,12 @@ getInputMethodState(): Promise<EnabledState>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 12800004 | not an input method application. |
-| 12800008 | input method manager service error. Possible cause: a system error, such as null pointer, IPC exception. |
+| [12800004](../errorcode-inputmethod-framework.md#12800004-不是输入法应用) | not an input method application. |
+| [12800008](../errorcode-inputmethod-framework.md#12800008-输入法管理服务异常) | input method manager service error. Possible cause: a system error, such as null pointer, IPC exception. |
 
 ## 示例
+
+ArkTS-Dyn示例:
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -264,7 +292,20 @@ inputMethod.getSetting().getInputMethodState().then((status: inputMethod.Enabled
   console.info(`Succeeded in getInputMethodState, status: ${status}`);
 }).catch((err: BusinessError) => {
   console.error(`Failed to getInputMethodState, code: ${err.code}, message: ${err.message}`);
-});
+})
+```
+
+ArkTS-Sta示例:
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+let inputMethodSetting: inputMethod.InputMethodSetting = inputMethod.getSetting();
+
+inputMethodSetting.getInputMethodState().then((status: inputMethod.EnabledState) => {
+  console.info(`Succeeded in getInputMethodState, status: ${status}`);
+}).catch((err: BusinessError): void=> {
+  console.error(`Failed to getInputMethodState, code: ${err.code}, message: ${err.message}`);
+})
 ```
 
 ## getInputMethods
@@ -294,16 +335,33 @@ getInputMethods(enable: boolean, callback: AsyncCallback<Array<InputMethodProper
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
-| 12800001 | bundle manager error. |
-| 12800008 | input method manager service error. Possible cause: a system error, such as null pointer, IPC exception. |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
+| [12800001](../errorcode-inputmethod-framework.md#12800001-包管理服务异常) | bundle manager error. |
+| [12800008](../errorcode-inputmethod-framework.md#12800008-输入法管理服务异常) | input method manager service error. Possible cause: a system error, such as null pointer, IPC exception. |
 
 ## 示例
+
+ArkTS-Dyn示例:
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
 
 inputMethod.getSetting().getInputMethods(true, (err: BusinessError, data: Array<inputMethod.InputMethodProperty>) => {
+  if (err) {
+    console.error(`Failed to getInputMethods, code: ${err.code}, message: ${err.message}`);
+    return;
+  }
+  console.info('Succeeded in getting inputMethods.');
+});
+```
+
+ArkTS-Sta示例:
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+let inputMethodSetting: inputMethod.InputMethodSetting = inputMethod.getSetting();
+
+inputMethodSetting.getInputMethods(true, (err?: BusinessError, data?: Array<inputMethod.InputMethodProperty>) => {
   if (err) {
     console.error(`Failed to getInputMethods, code: ${err.code}, message: ${err.message}`);
     return;
@@ -344,11 +402,13 @@ getInputMethods(enable: boolean): Promise<Array<InputMethodProperty>>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
-| 12800001 | bundle manager error. |
-| 12800008 | input method manager service error. Possible cause: a system error, such as null pointer, IPC exception. |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
+| [12800001](../errorcode-inputmethod-framework.md#12800001-包管理服务异常) | bundle manager error. |
+| [12800008](../errorcode-inputmethod-framework.md#12800008-输入法管理服务异常) | input method manager service error. Possible cause: a system error, such as null pointer, IPC exception. |
 
 ## 示例
+
+ArkTS-Dyn示例:
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -356,6 +416,20 @@ import { BusinessError } from '@kit.BasicServicesKit';
 inputMethod.getSetting().getInputMethods(true).then((data: Array<inputMethod.InputMethodProperty>) => {
   console.info('Succeeded in getting inputMethods.');
 }).catch((err: BusinessError) => {
+  console.error(`Failed to getInputMethods, code: ${err.code}, message: ${err.message}`);
+})
+```
+
+ArkTS-Sta示例:
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+let inputMethodSetting: inputMethod.InputMethodSetting = inputMethod.getSetting();
+
+
+inputMethodSetting.getInputMethods(true).then((data: Array<inputMethod.InputMethodProperty>) => {
+  console.info('Succeeded in getting inputMethods.');
+}).catch((err: BusinessError): void=> {
   console.error(`Failed to getInputMethods, code: ${err.code}, message: ${err.message}`);
 })
 ```
@@ -392,9 +466,9 @@ getInputMethodsSync(enable: boolean): Array<InputMethodProperty>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
-| 12800001 | bundle manager error. |
-| 12800008 | input method manager service error. Possible cause: a system error, such as null pointer, IPC exception. |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
+| [12800001](../errorcode-inputmethod-framework.md#12800001-包管理服务异常) | bundle manager error. |
+| [12800008](../errorcode-inputmethod-framework.md#12800008-输入法管理服务异常) | input method manager service error. Possible cause: a system error, such as null pointer, IPC exception. |
 
 ## 示例
 
@@ -428,10 +502,12 @@ listCurrentInputMethodSubtype(callback: AsyncCallback<Array<InputMethodSubtype>>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 12800001 | bundle manager error. |
-| 12800008 | input method manager service error. Possible cause: a system error, such as null pointer, IPC exception. |
+| [12800001](../errorcode-inputmethod-framework.md#12800001-包管理服务异常) | bundle manager error. |
+| [12800008](../errorcode-inputmethod-framework.md#12800008-输入法管理服务异常) | input method manager service error. Possible cause: a system error, such as null pointer, IPC exception. |
 
 ## 示例
+
+ArkTS-Dyn示例:
 
 ```TypeScript
 import { InputMethodSubtype } from '@kit.IMEKit';
@@ -439,6 +515,22 @@ import { BusinessError } from '@kit.BasicServicesKit';
 
 let inputMethodSetting: inputMethod.InputMethodSetting = inputMethod.getSetting();
 inputMethodSetting.listCurrentInputMethodSubtype((err: BusinessError, data: Array<InputMethodSubtype>) => {
+  if (err) {
+    console.error(`Failed to listCurrentInputMethodSubtype, code: ${err.code}, message: ${err.message}`);
+    return;
+  }
+  console.info('Succeeded in listing currentInputMethodSubtype.');
+});
+```
+
+ArkTS-Sta示例:
+
+```TypeScript
+import { InputMethodSubtype } from '@kit.IMEKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let inputMethodSetting = inputMethod.getSetting();
+inputMethodSetting.listCurrentInputMethodSubtype((err?: BusinessError, data?: Array<InputMethodSubtype>) => {
   if (err) {
     console.error(`Failed to listCurrentInputMethodSubtype, code: ${err.code}, message: ${err.message}`);
     return;
@@ -473,10 +565,12 @@ listCurrentInputMethodSubtype(): Promise<Array<InputMethodSubtype>>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 12800001 | bundle manager error. |
-| 12800008 | input method manager service error. Possible cause: a system error, such as null pointer, IPC exception. |
+| [12800001](../errorcode-inputmethod-framework.md#12800001-包管理服务异常) | bundle manager error. |
+| [12800008](../errorcode-inputmethod-framework.md#12800008-输入法管理服务异常) | input method manager service error. Possible cause: a system error, such as null pointer, IPC exception. |
 
 ## 示例
+
+ArkTS-Dyn示例:
 
 ```TypeScript
 import { InputMethodSubtype } from '@kit.IMEKit';
@@ -487,6 +581,21 @@ let inputMethodSetting: inputMethod.InputMethodSetting = inputMethod.getSetting(
 inputMethodSetting.listCurrentInputMethodSubtype().then((data: Array<InputMethodSubtype>) => {
   console.info('Succeeded in listing currentInputMethodSubtype.');
 }).catch((err: BusinessError) => {
+  console.error(`Failed to listCurrentInputMethodSubtype, code: ${err.code}, message: ${err.message}`);
+})
+```
+
+ArkTS-Sta示例:
+
+```TypeScript
+import { InputMethodSubtype } from '@kit.IMEKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let inputMethodSetting = inputMethod.getSetting();
+
+inputMethodSetting.listCurrentInputMethodSubtype().then((data: Array<InputMethodSubtype>) => {
+  console.info('Succeeded in listing currentInputMethodSubtype.');
+}).catch((err: BusinessError): void=> {
   console.error(`Failed to listCurrentInputMethodSubtype, code: ${err.code}, message: ${err.message}`);
 })
 ```
@@ -599,11 +708,13 @@ listInputMethodSubtype(
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types; 3.Parameter verification failed. |
-| 12800001 | bundle manager error. |
-| 12800008 | input method manager service error. Possible cause: a system error, such as null pointer, IPC exception. |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types; 3.Parameter verification failed. |
+| [12800001](../errorcode-inputmethod-framework.md#12800001-包管理服务异常) | bundle manager error. |
+| [12800008](../errorcode-inputmethod-framework.md#12800008-输入法管理服务异常) | input method manager service error. Possible cause: a system error, such as null pointer, IPC exception. |
 
 ## 示例
+
+ArkTS-Dyn示例:
 
 ```TypeScript
 import { InputMethodSubtype } from '@kit.IMEKit';
@@ -612,6 +723,8 @@ import { BusinessError } from '@kit.BasicServicesKit';
 let inputMethodProperty: inputMethod.InputMethodProperty = {
   name: 'com.example.keyboard',
   id: 'propertyId',
+  packageName: 'com.example.keyboard',
+  methodId: 'propertyId',
 }
 let inputMethodSetting: inputMethod.InputMethodSetting = inputMethod.getSetting();
 
@@ -623,6 +736,26 @@ inputMethodSetting.listInputMethodSubtype(inputMethodProperty,
     }
     console.info('Succeeded in listing inputMethodSubtype.');
   });
+```
+
+ArkTS-Sta示例:
+
+```TypeScript
+import { InputMethodSubtype } from '@kit.IMEKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let inputMethodProperty: inputMethod.InputMethodProperty = {
+  name: 'com.example.kikakeyboard',
+  id: 'propertyId',
+}
+let inputMethodSetting = inputMethod.getSetting();
+inputMethodSetting.listInputMethodSubtype(inputMethodProperty, (err?: BusinessError, data?: Array<InputMethodSubtype>) => {
+  if (err) {
+    console.error(`Failed to showSoftKeyboard, code: ${err.code}, message: ${err.message}`);
+    return;
+  }
+  console.info('Succeeded in listing inputMethodSubtype.');
+});
 ```
 
 ## listInputMethodSubtype
@@ -657,11 +790,13 @@ listInputMethodSubtype(inputMethodProperty: InputMethodProperty): Promise<Array<
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types; 3.Parameter verification failed. |
-| 12800001 | bundle manager error. |
-| 12800008 | input method manager service error. Possible cause: a system error, such as null pointer, IPC exception. |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types; 3.Parameter verification failed. |
+| [12800001](../errorcode-inputmethod-framework.md#12800001-包管理服务异常) | bundle manager error. |
+| [12800008](../errorcode-inputmethod-framework.md#12800008-输入法管理服务异常) | input method manager service error. Possible cause: a system error, such as null pointer, IPC exception. |
 
 ## 示例
+
+ArkTS-Dyn示例:
 
 ```TypeScript
 import { InputMethodSubtype } from '@kit.IMEKit';
@@ -670,12 +805,32 @@ import { BusinessError } from '@kit.BasicServicesKit';
 let inputMethodProperty: inputMethod.InputMethodProperty = {
   name: 'com.example.keyboard',
   id: 'propertyId',
+  packageName: 'com.example.keyboard',
+  methodId: 'propertyId',
 }
 let inputMethodSetting: inputMethod.InputMethodSetting = inputMethod.getSetting();
 
 inputMethodSetting.listInputMethodSubtype(inputMethodProperty).then((data: Array<InputMethodSubtype>) => {
   console.info('Succeeded in listing inputMethodSubtype.');
 }).catch((err: BusinessError) => {
+  console.error(`Failed to listInputMethodSubtype, code: ${err.code}, message: ${err.message}`);
+})
+```
+
+ArkTS-Sta示例:
+
+```TypeScript
+import { InputMethodSubtype } from '@kit.IMEKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let inputMethodProperty: inputMethod.InputMethodProperty = {
+  name: 'com.example.kikakeyboard',
+  id: 'propertyId',
+}
+let inputMethodSetting = inputMethod.getSetting();
+inputMethodSetting.listInputMethodSubtype(inputMethodProperty).then((data: Array<InputMethodSubtype>) => {
+  console.info('Succeeded in listing inputMethodSubtype.');
+}).catch((err: BusinessError): void=> {
   console.error(`Failed to listInputMethodSubtype, code: ${err.code}, message: ${err.message}`);
 })
 ```
@@ -733,6 +888,13 @@ offImeChange(callback?: ImeChangeCallback): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | callback | [ImeChangeCallback](arkts-ime-inputmethod-imechangecallback-t.md) | 否 | the callback called when the current input method changes, when subscriber unsubscribes all callback functions, this parameter can be left blank. |
+
+## 示例
+
+```TypeScript
+let inputMethodSetting: inputMethod.InputMethodSetting = inputMethod.getSetting();
+inputMethodSetting.offImeChange();
+```
 
 ## on('imeChange')
 
@@ -794,6 +956,17 @@ onImeChange(callback: ImeChangeCallback): void
 | --- | --- | --- | --- |
 | callback | [ImeChangeCallback](arkts-ime-inputmethod-imechangecallback-t.md) | 是 | the callback called when the current input method changes. |
 
+## 示例
+
+```TypeScript
+import { InputMethodSubtype } from '@kit.IMEKit';
+let inputMethodSetting: inputMethod.InputMethodSetting = inputMethod.getSetting();
+
+inputMethodSetting.onImeChange((inputMethodProperty: inputMethod.InputMethodProperty, inputMethodSubtype: InputMethodSubtype) => {
+  console.info('Succeeded in subscribing imeChange:', 'inputMethodProperty:', inputMethodProperty, 'inputMethodSubtype:', inputMethodSubtype);
+});
+```
+
 ## showOptionalInputMethods
 
 ```TypeScript
@@ -824,7 +997,7 @@ showOptionalInputMethods(callback: AsyncCallback<boolean>): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 12800008 | input method manager service error. Possible cause: a system error, such as null pointer, IPC exception. |
+| [12800008](../errorcode-inputmethod-framework.md#12800008-输入法管理服务异常) | input method manager service error. Possible cause: a system error, such as null pointer, IPC exception. |
 
 ## 示例
 
@@ -874,7 +1047,7 @@ showOptionalInputMethods(): Promise<boolean>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 12800008 | input method manager service error. Possible cause: a system error, such as null pointer, IPC exception. |
+| [12800008](../errorcode-inputmethod-framework.md#12800008-输入法管理服务异常) | input method manager service error. Possible cause: a system error, such as null pointer, IPC exception. |
 
 ## 示例
 

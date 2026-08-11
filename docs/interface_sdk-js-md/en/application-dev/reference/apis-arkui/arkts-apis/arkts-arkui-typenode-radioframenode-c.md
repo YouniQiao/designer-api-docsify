@@ -1,6 +1,6 @@
 # RadioFrameNode
 
-定义Radio类型的FrameNode。
+Define the Radio type of FrameNode.
 
 **Inheritance/Implementation:** RadioFrameNode extends [TypedFrameNode<RadioAttribute>](TypedFrameNode<RadioAttribute>)
 
@@ -18,7 +18,7 @@
 abstract initialize(value: RadioOptions): RadioAttribute
 ```
 
-初始化Radio类型的FrameNode。
+Initialize Radio FrameNode.
 
 **Since:** 23
 

@@ -12,7 +12,7 @@ import { autoStartupManager } from 'kits/@kit.AbilityKit';
 function offSystemAutoStartup(callback?: AutoStartupCallback): void
 ```
 
-注销监听应用组件开机自启动状态变化的回调函数。
+Unregister listener that watches for all applications auto startup state.
 
 **Since:** 23
 
@@ -30,13 +30,13 @@ function offSystemAutoStartup(callback?: AutoStartupCallback): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AutoStartupCallback](arkts-ability-autostartupcallback-i-sys.md) | No | 监听应用组件开机自启动状态变化的回调对象。 |
+| callback | [AutoStartupCallback](arkts-ability-autostartupcallback-i-sys.md) | No | Auto startup callback. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 16000050 | Connect to system server failed. |
-| 201 | Permission denied, interface caller does not have permission "ohos.permission.MANAGE_APP_BOOT". |
-| 202 | Permission denied, non-system app called system api. |
+| [16000050](../errorcode-ability.md#16000050-internal-error) | Connect to system server failed. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied, interface caller does not have permission "ohos.permission.MANAGE_APP_BOOT". |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission denied, non-system app called system api. |
 

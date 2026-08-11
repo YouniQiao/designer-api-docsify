@@ -1,6 +1,6 @@
 # OperationType (System API)
 
-操作类型。
+Operation type.
 
 **Since:** 26.0.0
 
@@ -18,7 +18,7 @@
 CLI = 0x01
 ```
 
-命令行操作。
+CLI operation.
 
 **Since:** 26.0.0
 
@@ -36,7 +36,7 @@ CLI = 0x01
 API = 0x02
 ```
 
-API操作。
+API operation.
 
 **Since:** 26.0.0
 

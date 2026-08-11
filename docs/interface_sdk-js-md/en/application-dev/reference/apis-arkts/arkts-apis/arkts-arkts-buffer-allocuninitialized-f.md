@@ -12,7 +12,7 @@ import { buffer } from 'kits/@kit.ArkTS';
 function allocUninitialized(size: int): Buffer
 ```
 
-创建指定大小未初始化的Buffer对象。内存不从缓冲池分配，适用于需要创建较大Buffer或希望精确控制内存分配的场景，如一次性分配较大内存区域（避免缓冲池可能导致的内存碎片累积和缓存性能损耗）。创建的Buffer的内容未知，需要使用[fill](arkts-arkts-buffer-buffer-c.md#fill)函数来初始化Buffer对象。
+Creates a **Buffer** object of the specified size, without initializing it. This API does not allocate memory from the buffer pool.You need to use [fill()](arkts-arkts-buffer-buffer-c.md#fill) to initialize the **Buffer** object created.
 
 **Since:** 9
 
@@ -28,13 +28,13 @@ function allocUninitialized(size: int): Buffer
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| size | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | 指定的Buffer对象长度，单位：字节。 |
+| size | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | Size of the **Buffer** object to create, in bytes. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [Buffer](arkts-arkts-buffer-buffer-c.md) | 未初始化的Buffer实例。 |
+| [Buffer](arkts-arkts-buffer-buffer-c.md) | Uninitialized **Buffer** object. |
 
 ## Examples
 

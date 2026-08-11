@@ -12,7 +12,7 @@ import { reminderAgentManager } from 'kits/@kit.BackgroundTasksKit';
 function addNotificationSlot(slot: NotificationSlot, callback: AsyncCallback<void>): void
 ```
 
-添加通知渠道。使用callback异步回调。
+Adds a notification slot. This API uses an asynchronous callback to return the result.
 
 **Since:** 9
 
@@ -26,14 +26,14 @@ function addNotificationSlot(slot: NotificationSlot, callback: AsyncCallback<voi
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| slot | [NotificationSlot](../../apis-notification-kit/arkts-apis/arkts-notification-notificationslot-notificationslot-i.md) | Yes | 通知渠道实例，仅支持设置其notificationType属性。 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | 回调函数。 当添加NotificationSlot成功，err为undefined；否则为错误对象。 |
+| slot | [NotificationSlot](../../apis-notification-kit/arkts-apis/arkts-notification-notificationslot-notificationslot-i.md) | Yes | Notification slot instance. Only the **notificationType** property can be set. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. If the notification slot is added, **err** is **undefined**. Otherwise, **err** is an error object. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | If the input parameter is not valid parameter. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | If the input parameter is not valid parameter. |
 
 ## Examples
 
@@ -62,7 +62,7 @@ reminderAgentManager.addNotificationSlot(mySlot, (err: BusinessError) => {
 function addNotificationSlot(slot: NotificationSlot): Promise<void>
 ```
 
-添加通知渠道。使用Promise异步回调。
+Adds a notification slot. This API uses a promise to return the result.
 
 **Since:** 9
 
@@ -76,19 +76,19 @@ function addNotificationSlot(slot: NotificationSlot): Promise<void>
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| slot | [NotificationSlot](../../apis-notification-kit/arkts-apis/arkts-notification-notificationslot-notificationslot-i.md) | Yes | 通知渠道实例，仅支持设置其notificationType属性。 |
+| slot | [NotificationSlot](../../apis-notification-kit/arkts-apis/arkts-notification-notificationslot-notificationslot-i.md) | Yes | Notification slot instance. Only the **notificationType** property can be set. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | 无返回结果的Promise对象。 |
+| Promise&lt;void&gt; | Promise that returns no value. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | If the input parameter is not valid parameter. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | If the input parameter is not valid parameter. |
 
 ## Examples
 

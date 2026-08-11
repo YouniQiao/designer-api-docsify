@@ -208,7 +208,7 @@ scrollEffectOptions?: ScrollEffectOptions
 
 标题栏滑动模糊效果选项。
 
-**类型：** [ScrollEffectOptions](../arkts-components/arkts-arkui-scrolleffectoptions-i.md)
+**类型：** [ScrollEffectOptions](arkts-arkui-navigation-scrolleffectoptions-i.md)
 
 **起始版本：** 26.0.0
 

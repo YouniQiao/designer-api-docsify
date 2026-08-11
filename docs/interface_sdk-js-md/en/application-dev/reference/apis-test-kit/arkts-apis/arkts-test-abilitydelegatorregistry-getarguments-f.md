@@ -12,7 +12,7 @@ import { abilityDelegatorRegistry } from 'kits/@kit.TestKit';
 function getArguments(): AbilityDelegatorArgs
 ```
 
-获取单元测试参数[AbilityDelegatorArgs](arkts-test-abilitydelegatorregistry-abilitydelegatorargs-t.md)对象。
+Obtains an [AbilityDelegatorArgs](arkts-test-abilitydelegatorregistry-abilitydelegatorargs-t.md) object.
 
 **Since:** 9
 
@@ -35,9 +35,7 @@ function getArguments(): AbilityDelegatorArgs
 ```TypeScript
 import { abilityDelegatorRegistry } from '@kit.TestKit';
 
-// Obtain the AbilityDelegatorArgs object of the application.
 let args = abilityDelegatorRegistry.getArguments();
-// Print the test parameter information.
 console.info(`getArguments bundleName: ${args.bundleName}`);
 console.info(`getArguments parameters: ${JSON.stringify(args.parameters)}`);
 console.info(`getArguments testCaseNames: ${args.testCaseNames}`);

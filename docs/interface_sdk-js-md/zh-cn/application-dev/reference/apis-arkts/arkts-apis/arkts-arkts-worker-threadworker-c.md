@@ -36,12 +36,6 @@ onAllErrors接口与onerror接口之间的行为差异如下：
 
 **系统能力：** SystemCapability.Utils.Lang
 
-## 导入模块
-
-```TypeScript
-import { MessageEvents, PostMessageOptions, MessageEvent, Priority, WorkerEventTarget, ThreadWorkerPriority, ThreadWorkerGlobalScope, DedicatedWorkerGlobalScope, ErrorEvent, Event, EventListener, WorkerOptions, EventTarget, WorkerEventListener } from 'kits/@kit.ArkTS';
-```
-
 ## addEventListener
 
 ```TypeScript
@@ -71,8 +65,8 @@ addEventListener(type: string, listener: WorkerEventListener): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 10200005 | The called API is not supported in the worker thread. |
-| 10200004 | The Worker instance is not running. |
+| [10200005](../errorcode-utils.md#10200005-worker不支持某api) | The called API is not supported in the worker thread. |
+| [10200004](../errorcode-utils.md#10200004-worker处于非运行状态) | The Worker instance is not running. |
 
 ## 示例
 
@@ -119,8 +113,8 @@ ThreadWorker构造函数。
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 10200003 | Worker initialization failed. |
-| 10200007 | The worker file path is invalid. |
+| [10200003](../errorcode-utils.md#10200003-worker初始化失败) | Worker initialization failed. |
+| [10200007](../errorcode-utils.md#10200007-worker文件路径异常) | The worker file path is invalid. |
 
 ## 示例
 
@@ -168,7 +162,7 @@ dispatchEvent(event: Event): boolean
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 10200004 | The Worker instance is not running. |
+| [10200004](../errorcode-utils.md#10200004-worker处于非运行状态) | The Worker instance is not running. |
 
 ## 示例
 
@@ -216,8 +210,8 @@ off(type: string, listener?: WorkerEventListener): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 10200005 | The called API is not supported in the worker thread. |
-| 10200004 | The Worker instance is not running. |
+| [10200005](../errorcode-utils.md#10200005-worker不支持某api) | The called API is not supported in the worker thread. |
+| [10200004](../errorcode-utils.md#10200004-worker处于非运行状态) | The Worker instance is not running. |
 
 ## 示例
 
@@ -276,8 +270,8 @@ on(type: string, listener: WorkerEventListener): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 10200005 | The called API is not supported in the worker thread. |
-| 10200004 | The Worker instance is not running. |
+| [10200005](../errorcode-utils.md#10200005-worker不支持某api) | The called API is not supported in the worker thread. |
+| [10200004](../errorcode-utils.md#10200004-worker处于非运行状态) | The Worker instance is not running. |
 
 ## 示例
 
@@ -302,7 +296,7 @@ workerInstance.dispatchEvent({type: "alert", timeStamp: 0}); // timeStamp暂未�
 onAllErrors?: ErrorCallback
 ```
 
-回调函数。表示Worker线程生命周期内发生异常被调用的事件处理程序，处理程序在宿主线程中执行。
+回调函数。表示Worker线程生命周期内发生异常被调用的事件处理程序，处理程序在宿主线程中执行。默认值为undefined。
 
 **起始版本：** 18
 
@@ -318,8 +312,8 @@ onAllErrors?: ErrorCallback
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 10200005 | The called API is not supported in the worker thread. |
-| 10200004 | The Worker instance is not running. |
+| [10200005](../errorcode-utils.md#10200005-worker不支持某api) | The called API is not supported in the worker thread. |
+| [10200004](../errorcode-utils.md#10200004-worker处于非运行状态) | The Worker instance is not running. |
 
 ## once
 
@@ -350,8 +344,8 @@ once(type: string, listener: WorkerEventListener): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 10200005 | The called API is not supported in the worker thread. |
-| 10200004 | The Worker instance is not running. |
+| [10200005](../errorcode-utils.md#10200005-worker不支持某api) | The called API is not supported in the worker thread. |
+| [10200004](../errorcode-utils.md#10200004-worker处于非运行状态) | The Worker instance is not running. |
 
 ## 示例
 
@@ -396,8 +390,8 @@ onerror?: (err: ErrorEvent) => void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 10200005 | The called API is not supported in the worker thread. |
-| 10200004 | The Worker instance is not running. |
+| [10200005](../errorcode-utils.md#10200005-worker不支持某api) | The called API is not supported in the worker thread. |
+| [10200004](../errorcode-utils.md#10200004-worker处于非运行状态) | The Worker instance is not running. |
 
 ## onexit
 
@@ -427,8 +421,8 @@ onexit?: (code: number) => void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 10200005 | The called API is not supported in the worker thread. |
-| 10200004 | The Worker instance is not running. |
+| [10200005](../errorcode-utils.md#10200005-worker不支持某api) | The called API is not supported in the worker thread. |
+| [10200004](../errorcode-utils.md#10200004-worker处于非运行状态) | The Worker instance is not running. |
 
 ## onmessage
 
@@ -458,8 +452,8 @@ onmessage?: (event: MessageEvents) => void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 10200005 | The called API is not supported in the worker thread. |
-| 10200004 | The Worker instance is not running. |
+| [10200005](../errorcode-utils.md#10200005-worker不支持某api) | The called API is not supported in the worker thread. |
+| [10200004](../errorcode-utils.md#10200004-worker处于非运行状态) | The Worker instance is not running. |
 
 ## onmessageerror
 
@@ -489,8 +483,8 @@ onmessageerror?: (event: MessageEvents) => void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 10200005 | The called API is not supported in the worker thread. |
-| 10200004 | The Worker instance is not running. |
+| [10200005](../errorcode-utils.md#10200005-worker不支持某api) | The called API is not supported in the worker thread. |
+| [10200004](../errorcode-utils.md#10200004-worker处于非运行状态) | The Worker instance is not running. |
 
 ## postMessage
 
@@ -521,8 +515,8 @@ postMessage(message: Object, transfer: ArrayBuffer[]): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 10200006 | An exception occurred during serialization. |
-| 10200004 | The Worker instance is not running. |
+| [10200006](../errorcode-utils.md#10200006-worker传输信息序列化异常) | An exception occurred during serialization. |
+| [10200004](../errorcode-utils.md#10200004-worker处于非运行状态) | The Worker instance is not running. |
 
 ## 示例
 
@@ -628,8 +622,8 @@ postMessage(message: Object, options?: PostMessageOptions): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 10200006 | An exception occurred during serialization. |
-| 10200004 | The Worker instance is not running. |
+| [10200006](../errorcode-utils.md#10200006-worker传输信息序列化异常) | An exception occurred during serialization. |
+| [10200004](../errorcode-utils.md#10200004-worker处于非运行状态) | The Worker instance is not running. |
 
 ## 示例
 
@@ -675,8 +669,8 @@ postMessageWithSharedSendable(message: Object, transfer?: ArrayBuffer[]): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 10200006 | An exception occurred during serialization. |
-| 10200004 | The Worker instance is not running. |
+| [10200006](../errorcode-utils.md#10200006-worker传输信息序列化异常) | An exception occurred during serialization. |
+| [10200004](../errorcode-utils.md#10200004-worker处于非运行状态) | The Worker instance is not running. |
 
 ## 示例
 
@@ -750,7 +744,7 @@ registerGlobalCallObject(instanceName: string, globalCallObject: Object): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 10200004 | The Worker instance is not running. |
+| [10200004](../errorcode-utils.md#10200004-worker处于非运行状态) | The Worker instance is not running. |
 
 ## 示例
 
@@ -821,7 +815,7 @@ removeAllListener(): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 10200004 | The Worker instance is not running. |
+| [10200004](../errorcode-utils.md#10200004-worker处于非运行状态) | The Worker instance is not running. |
 
 ## 示例
 
@@ -865,7 +859,7 @@ removeEventListener(type: string, callback?: WorkerEventListener): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 10200004 | The Worker instance is not running. |
+| [10200004](../errorcode-utils.md#10200004-worker处于非运行状态) | The Worker instance is not running. |
 
 ## 示例
 
@@ -890,7 +884,7 @@ workerInstance.removeEventListener("alert");
 terminate(): void
 ```
 
-销毁Worker线程，终止Worker接收消息。
+由宿主线程主动销毁Worker线程并停止Worker线程接收消息。
 
 **起始版本：** 9
 
@@ -906,7 +900,7 @@ terminate(): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 10200004 | The Worker instance is not running. |
+| [10200004](../errorcode-utils.md#10200004-worker处于非运行状态) | The Worker instance is not running. |
 
 ## 示例
 
@@ -946,7 +940,7 @@ unregisterGlobalCallObject(instanceName?: string): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 10200004 | The Worker instance is not running. |
+| [10200004](../errorcode-utils.md#10200004-worker处于非运行状态) | The Worker instance is not running. |
 
 ## 示例
 

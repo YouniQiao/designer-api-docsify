@@ -1,6 +1,6 @@
 # RotationAxesStateChangeInfo (System API)
 
-旋转轴状态变更信息
+Rotation axes state change information.
 
 **Since:** 20
 
@@ -24,7 +24,7 @@ import { mechanicManager } from 'kits/@kit.MechanicKit';
 mechId: int
 ```
 
-机械设备唯一ID
+ID of the mechanical device.
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 

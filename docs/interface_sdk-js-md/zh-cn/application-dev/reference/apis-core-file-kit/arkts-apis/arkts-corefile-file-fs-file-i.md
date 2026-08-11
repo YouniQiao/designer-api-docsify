@@ -10,12 +10,6 @@
 
 **系统能力：** SystemCapability.FileManagement.File.FileIO
 
-## 导入模块
-
-```TypeScript
-import { Options, ReaderIteratorResult, Watcher, ReadTextOptions, WatchEventListener, TaskSignal, WriteOptions, ListFileExtOptions, DfsListeners, Filter, ReadOptions, ListFileOptions, WatchEvent, FileFilter, ConflictFiles } from 'kits/@kit.CoreFileKit';
-```
-
 ## getParent
 
 ```TypeScript
@@ -96,6 +90,8 @@ lock(exclusive?: boolean): Promise<void>
 
 ## 示例
 
+ArkTS-Dyn示例：
+
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
 
@@ -104,6 +100,23 @@ let file = fileIo.openSync(filePath, fileIo.OpenMode.READ_WRITE | fileIo.OpenMod
 file.lock(true).then(() => {
   console.info(`Succeeded in locking file.`);
 }).catch((err: BusinessError) => {
+  console.error(`Failed to lock file. Code: ${err.code}, message: ${err.message}`);
+}).finally(() => {
+  fileIo.closeSync(file);
+});
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let filePath = pathDir + "/test.txt";
+let file = fileIo.openSync(filePath,fileIo.OpenMode.READ_WRITE |fileIo.OpenMode.CREATE);
+file.lock(true).then(() => {
+  console.info('Succeeded in locking file');
+}).catch((error: Error) => {
+  let err: BusinessError = error as BusinessError;
   console.error(`Failed to lock file. Code: ${err.code}, message: ${err.message}`);
 }).finally(() => {
   fileIo.closeSync(file);
@@ -145,6 +158,8 @@ lock(callback: AsyncCallback<void>): void
 
 ## 示例
 
+ArkTS-Dyn示例：
+
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
 
@@ -155,6 +170,23 @@ file.lock((err: BusinessError) => {
     console.error(`Failed to lock file. Code: ${err.code}, message: ${err.message}`);
   } else {
     console.info(`Succeeded in locking file.`);
+  }
+  fileIo.closeSync(file);
+});
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let filePath = pathDir + "/test.txt";
+let file = fileIo.openSync(filePath,fileIo.OpenMode.READ_WRITE |fileIo.OpenMode.CREATE);
+file.lock((err: BusinessError | null) => {
+  if (err) {
+    console.error(`Failed to lock file. Code: ${err.code}, message: ${err.message}`);
+  } else {
+    console.info('Succeeded in locking file');
   }
   fileIo.closeSync(file);
 });
@@ -196,6 +228,8 @@ lock(exclusive: boolean, callback: AsyncCallback<void>): void
 
 ## 示例
 
+ArkTS-Dyn示例：
+
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
 
@@ -206,6 +240,23 @@ file.lock(true, (err: BusinessError) => {
     console.error(`Failed to lock file. Code: ${err.code}, message: ${err.message}`);
   } else {
     console.info(`Succeeded in locking file.`);
+  }
+  fileIo.closeSync(file);
+});
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let filePath = pathDir + "/test.txt";
+let file = fileIo.openSync(filePath,fileIo.OpenMode.READ_WRITE |fileIo.OpenMode.CREATE);
+file.lock(true, (err: BusinessError | null) => {
+  if (err) {
+    console.error(`Failed to lock file. Code: ${err.code}, message: ${err.message}`);
+  } else {
+    console.info('Succeeded in locking file');
   }
   fileIo.closeSync(file);
 });

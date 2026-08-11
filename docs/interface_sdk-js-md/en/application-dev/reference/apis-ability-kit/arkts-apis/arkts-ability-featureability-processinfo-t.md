@@ -4,7 +4,7 @@
 export type ProcessInfo = _ProcessInfo
 ```
 
-进程信息。
+Defines a ProcessInfo object.
 
 **Since:** 9
 

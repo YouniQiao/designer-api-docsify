@@ -10,12 +10,6 @@ Provides element information of the click area. related to {@link getLastHitTest
 
 **系统能力：** SystemCapability.Web.Webview.Core
 
-## 导入模块
-
-```TypeScript
-import { webview } from 'kits/@kit.ArkWeb';
-```
-
 ## extra
 
 ```TypeScript

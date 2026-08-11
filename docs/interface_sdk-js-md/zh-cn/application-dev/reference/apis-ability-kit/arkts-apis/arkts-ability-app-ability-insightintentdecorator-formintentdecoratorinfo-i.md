@@ -13,12 +13,6 @@ FormIntentDecoratorInfo继承自[IntentDecoratorInfo](arkts-ability-app-ability-
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 
-## 导入模块
-
-```TypeScript
-import { InsightIntentFunction, InsightIntentForm, InsightIntentLink, InsightIntentEntity, LinkParamCategory, InsightIntentPage, InsightIntentEntry, InsightIntentFunctionMethod } from 'kits/@kit.AbilityKit';
-```
-
 ## formName
 
 ```TypeScript

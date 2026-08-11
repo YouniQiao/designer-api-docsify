@@ -4,7 +4,7 @@
 declare type Matrix4Transit = import('../api/@ohos.matrix4').default.Matrix4Transit
 ```
 
-为普通方法导入Matrix4Transit类型对象。
+Import the Matrix4Transit type object for common method.
 
 **Since:** 20
 

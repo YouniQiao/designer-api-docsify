@@ -10,12 +10,6 @@
 
 **系统能力：** SystemCapability.Multimedia.Image.ImageSource
 
-## 导入模块
-
-```TypeScript
-import { image } from 'kits/@kit.ImageKit';
-```
-
 ## cropAndScaleStrategy
 
 ```TypeScript
@@ -84,7 +78,7 @@ desiredPixelFormat?: PixelMapFormat
 
 解码的像素格式。默认值为RGBA_8888。仅支持设置：RGBA_8888、BGRA_8888和RGB_565。有透明通道图片格式不支持设置RGB_565，如PNG、GIF、ICO和WEBP。
 
-**类型：** [PixelMapFormat](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-multimedia-movingphotoview-pixelmapformat-e.md)
+**类型：** [PixelMapFormat](arkts-image-image-pixelmapformat-e.md)
 
 **起始版本：** 7
 
@@ -108,7 +102,7 @@ desiredRegion?: Region
 
 注意：若解码接口同时传入了desiredSize参数与desiredRegion参数，需进一步传入cropAndScaleStrategy参数指定缩放与裁剪的先后顺序，推荐设置CROP_FIRST。
 
-**类型：** [Region](../../apis-arkgraphics2d/arkts-apis/arkts-arkgraphics2d-drawing-region-c.md)
+**类型：** [Region](arkts-image-image-region-i.md)
 
 **起始版本：** 7
 

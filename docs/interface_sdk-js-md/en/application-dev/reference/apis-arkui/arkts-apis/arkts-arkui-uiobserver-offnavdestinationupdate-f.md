@@ -15,7 +15,7 @@ export function offNavDestinationUpdate(
   ): void
 ```
 
-取消监听NavDestination组件的状态变化。
+Removes a callback function that was previously registered with `onNavDestinationUpdate`.
 
 **Since:** 23
 
@@ -31,8 +31,8 @@ export function offNavDestinationUpdate(
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| options | [NavDestinationSwitchObserverOptions](arkts-arkui-uiobserver-navdestinationswitchobserveroptions-i.md) | Yes | 指定监听的Navigation的id。 |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;NavDestinationInfo&gt; | No | 回调函数。返回当前的NavDestination组件状态。 |
+| options | [NavDestinationSwitchObserverOptions](arkts-arkui-uiobserver-navdestinationswitchobserveroptions-i.md) | Yes | The options object. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;NavDestinationInfo&gt; | No | The callback function to remove. If not provided, all callbacks for the given event type and navigation ID will be removed. |
 
 
 ## offNavDestinationUpdate
@@ -41,7 +41,7 @@ export function offNavDestinationUpdate(
 export function offNavDestinationUpdate(callback?: Callback<NavDestinationInfo>): void
 ```
 
-取消监听NavDestination组件的状态变化。
+Removes a callback function that was previously registered with `onNavDestinationUpdate`.
 
 **Since:** 23
 
@@ -57,5 +57,5 @@ export function offNavDestinationUpdate(callback?: Callback<NavDestinationInfo>)
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;NavDestinationInfo&gt; | No | 回调函数。返回当前的NavDestination组件状态。 |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;NavDestinationInfo&gt; | No | The callback function to remove. If not provided, all callbacks for the given event type will be removed. |
 

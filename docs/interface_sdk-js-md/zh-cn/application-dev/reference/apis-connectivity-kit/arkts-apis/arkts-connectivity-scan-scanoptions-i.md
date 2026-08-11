@@ -10,12 +10,6 @@
 
 **系统能力：** SystemCapability.Communication.NearLink.Base
 
-## 导入模块
-
-```TypeScript
-import { scan } from 'kits/@kit.ConnectivityKit';
-```
-
 ## duration
 
 ```TypeScript
@@ -44,7 +38,7 @@ scanMode?: ScanMode
 
 扫描模式。如果未设置“scanMode”，则默认值为“SCAN_MODE_LOW_POWER”。默认值： SCAN_MODE_LOW_POWER。
 
-**类型：** [ScanMode](arkts-connectivity-bluetooth-scanmode-e.md)
+**类型：** [ScanMode](arkts-connectivity-scan-scanmode-e.md)
 
 **起始版本：** 26.0.0
 

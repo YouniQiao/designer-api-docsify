@@ -1,6 +1,6 @@
 # BadgePosition
 
-提示点显示位置。
+Defines the badge position property.
 
 **Since:** 23
 

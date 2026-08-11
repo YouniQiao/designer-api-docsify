@@ -28,12 +28,6 @@ Configuration配置包括语言-文字-国家地区、横竖屏、颜色模式�
 
 **系统能力：** SystemCapability.Global.ResourceManager
 
-## 导入模块
-
-```TypeScript
-import { resourceManager } from 'kits/@kit.LocalizationKit';
-```
-
 ## 汇总
 
 ### 函数

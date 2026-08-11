@@ -1,11 +1,5 @@
 # setDownloadInfoListSize
 
-## 导入模块
-
-```TypeScript
-import { cacheDownload } from 'kits/@kit.BasicServicesKit';
-```
-
 ## setDownloadInfoListSize
 
 ```TypeScript
@@ -34,11 +28,27 @@ function setDownloadInfoListSize(size: long): void
 
 ## 示例
 
+ArkTS-Dyn示例：
+
 ```TypeScript
-import { cacheDownload, BusinessError } from '@kit.BasicServicesKit';
+import { BusinessError } from '@kit.BasicServicesKit';
 
 try {
   // 设置下载信息列表大小。  
+  cacheDownload.setDownloadInfoListSize(2048);
+} catch (error) {
+  let err: BusinessError = error as BusinessError;
+  console.error(`Failed to set download information list size. err code: ${err.code}, err message: ${err.message}`);
+}
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+try {
+  // 设置下载信息列表大小。
   cacheDownload.setDownloadInfoListSize(2048);
 } catch (error) {
   let err: BusinessError = error as BusinessError;

@@ -1,6 +1,6 @@
 # ComponentType
 
-表示图像的组件类型的枚举。
+Enumerates the color component types of images.
 
 **Since:** 9
 
@@ -16,7 +16,7 @@
 YUV_Y = 1
 ```
 
-亮度信息。
+Luminance component.
 
 **Since:** 9
 
@@ -32,7 +32,7 @@ YUV_Y = 1
 YUV_U = 2
 ```
 
-色度信息。
+Chrominance component.
 
 **Since:** 9
 
@@ -48,7 +48,7 @@ YUV_U = 2
 YUV_V = 3
 ```
 
-色度信息。
+Chrominance component.
 
 **Since:** 9
 
@@ -64,7 +64,7 @@ YUV_V = 3
 JPEG = 4
 ```
 
-JPEG 类型。
+JPEG type.
 
 **Since:** 9
 

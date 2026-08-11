@@ -12,10 +12,11 @@ import { startupManager } from 'kits/@kit.AbilityKit';
 function removeStartupTaskResult(startupTask: string): void
 ```
 
-删除指定启动任务或so预加载任务的初始化结果。
+Removes the initialization result of a startup task or .so file preloading task.
 
-- 输入为启动任务名时，删除指定启动任务的初始化结果。  
-- 输入为so文件时，将该so文件置为未加载，缓存中已加载的so文件不会被移除。
+- If a startup task name is passed, the initialization result of that startup task is removed.  
+- If a .so file is passed, the .so file is set to the unloaded state, but the loaded .so file in the cache is not  
+removed.
 
 **Since:** 12
 
@@ -31,13 +32,13 @@ function removeStartupTaskResult(startupTask: string): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| startupTask | string | Yes | 启动任务[StartupTask](arkts-ability-app-appstartup-startuptask-startuptask-c.md)的名称或预加载so名称。 |
+| startupTask | string | Yes | Name of the [StartupTask](arkts-ability-app-appstartup-startuptask-startuptask-c.md) or name of the .so file to be preloaded. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types. |
 
 ## Examples
 

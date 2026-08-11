@@ -1,7 +1,6 @@
 # WantAgentInfo
 
-定义触发WantAgent所需要的信息，可以作为  
-[getWantAgent](../../../reference/apis-ability-kit/js-apis-app-ability-wantAgent.md#wantagentgetwantagent)的入参创建指定的WantAgent对象。
+Defines the information required for triggering a WantAgent object. The information can be used as an input parameter in [getWantAgent](../../../reference/apis-ability-kit/js-apis-app-ability-wantAgent.md#wantagentgetwantagent) to obtain a specified WantAgent object.
 
 **Since:** 7
 
@@ -17,7 +16,7 @@
 actionFlags?: Array<abilityWantAgent.WantAgentFlags>
 ```
 
-动作执行属性。
+Array of flags for using the WantAgent object.
 
 **Type:** Array&lt;abilityWantAgent.WantAgentFlags&gt;
 
@@ -37,7 +36,7 @@ actionFlags?: Array<abilityWantAgent.WantAgentFlags>
 actionType?: abilityWantAgent.OperationType
 ```
 
-动作类型。
+Operation type.
 
 **Type:** abilityWantAgent.OperationType
 
@@ -57,7 +56,7 @@ actionType?: abilityWantAgent.OperationType
 extraInfo?: { [key: string]: any }
 ```
 
-额外数据。
+Extra information.
 
 **Type:** { [key: string]: any }
 
@@ -77,7 +76,8 @@ extraInfo?: { [key: string]: any }
 extraInfos?: Record<string, Object>
 ```
 
-额外数据。推荐使用该属性替代extraInfo，设置该属性后，extraInfo不再生效。
+Extra information. You are advised to use this property to replace **extraInfo**. When this property is set,  
+**extraInfo** does not take effect.
 
 **Type:** [Record](../../apis-default/arkts-apis/arkts-record-t.md)&lt;string, Object&gt;
 
@@ -97,9 +97,9 @@ extraInfos?: Record<string, Object>
 operationType?: wantAgent.OperationType
 ```
 
-动作类型。
+Operation type.
 
-从API version 7 开始支持，从API version 11 开始废弃，建议使用actionType&lt;sup&gt;11+&lt;/sup&gt;替代。
+This attribute is supported since API version 7 and deprecated since API version 11. You are advised to use actionType&lt;sup&gt;11+&lt;/sup&gt; instead.
 
 **Type:** wantAgent.OperationType
 
@@ -123,7 +123,7 @@ operationType?: wantAgent.OperationType
 requestCode: int
 ```
 
-开发者自定义的请求码，用于标识将被执行的动作。
+Custom request code, which is used to identify the operation to execute.
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
@@ -143,9 +143,9 @@ requestCode: int
 wantAgentFlags?: Array<wantAgent.WantAgentFlags>
 ```
 
-动作执行属性。
+Array of flags for using the WantAgent object.
 
-从API version 7 开始支持，从API version 11 开始废弃，建议使用actionFlags&lt;sup&gt;11+&lt;/sup&gt;替代。
+This attribute is supported since API version 7 and deprecated since API version 11. You are advised to use actionFlags&lt;sup&gt;11+&lt;/sup&gt; instead.
 
 **Type:** Array&lt;wantAgent.WantAgentFlags&gt;
 
@@ -169,7 +169,7 @@ wantAgentFlags?: Array<wantAgent.WantAgentFlags>
 wants: Array<Want>
 ```
 
-将被执行的动作列表。wants数组为预留能力，当前只支持一个want。传入多个时只取wants数组的第一个成员。
+Array of all Want objects. Currently, only one Want is supported. The array is reserved for future capability expansion. If multiple values are passed in, only the first member in the array is used.
 
 **Type:** Array&lt;[Want](arkts-ability-app-ability-want-want-c.md)&gt;
 

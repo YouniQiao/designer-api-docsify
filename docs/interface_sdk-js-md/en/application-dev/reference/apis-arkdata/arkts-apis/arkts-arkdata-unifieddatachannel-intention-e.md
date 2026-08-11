@@ -1,6 +1,6 @@
 # Intention
 
-UDMF已经支持的数据通路枚举类型。其主要用途是标识各种UDMF数据通路所面向的不同业务场景。
+Enumerates the data channel types supported by the UDMF. It is used to identify different service scenarios, to which the UDMF data channels apply.
 
 **Since:** 10
 
@@ -16,9 +16,7 @@ UDMF已经支持的数据通路枚举类型。其主要用途是标识各种UDMF
 DATA_HUB = 'DataHub'
 ```
 
-公共数据通路。
-
-**适用场景：** 适用于在公共数据共享场景下使用UDMF来跨应用数据共享。
+Public data channel.
 
 **Since:** 10
 
@@ -38,9 +36,9 @@ DATA_HUB = 'DataHub'
 DRAG = 'Drag'
 ```
 
-拖拽类型数据通道。
+Channel in which data can be dragged and dropped.
 
-**适用场景：** 适用于在拖拽场景下使用UDMF来跨应用数据共享。
+**Use scenario**: This API is used to share data across applications in drag-and-drop scenarios.
 
 **Since:** 14
 
@@ -58,9 +56,9 @@ DRAG = 'Drag'
 SYSTEM_SHARE = 'SystemShare'
 ```
 
-系统分享类型数据通道。
+Data channel of the system sharing type.
 
-**适用场景：** 适用于在系统分享场景下使用UDMF来跨应用数据共享。
+**Use scenario**: This API is used to share data across applications in system sharing scenarios.
 
 **Since:** 20
 
@@ -78,9 +76,9 @@ SYSTEM_SHARE = 'SystemShare'
 PICKER = 'Picker'
 ```
 
-Picker类型数据通道。
+Data channel of the picker type.
 
-**适用场景：** 适用于在Picker选择器场景下使用UDMF来跨应用数据共享。
+**Use scenario**: This API is used to share data across applications in the scenarios where a picker is used.
 
 **Since:** 20
 
@@ -98,9 +96,9 @@ Picker类型数据通道。
 MENU = 'Menu'
 ```
 
-菜单类型数据通道。
+Data channel of the menu type.
 
-**适用场景：** 适用于在右键菜单场景下使用UDMF来跨应用数据共享。
+**Use scenario**: This API is used to share data across applications in the shortcut menu.
 
 **Since:** 20
 

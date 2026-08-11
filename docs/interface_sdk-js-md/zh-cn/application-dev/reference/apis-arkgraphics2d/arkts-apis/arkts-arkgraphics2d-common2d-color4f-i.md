@@ -10,12 +10,6 @@ ARGB格式的颜色描述。
 
 **系统能力：** SystemCapability.Graphics.Drawing
 
-## 导入模块
-
-```TypeScript
-import { common2D } from 'kits/@kit.ArkGraphics2D';
-```
-
 ## alpha
 
 ```TypeScript

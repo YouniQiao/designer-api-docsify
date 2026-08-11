@@ -1,11 +1,5 @@
 # applyQuickFix（系统接口）
 
-## 导入模块
-
-```TypeScript
-import { quickFixManager } from 'kits/@kit.AbilityKit';
-```
-
 ## applyQuickFix
 
 ```TypeScript
@@ -37,11 +31,11 @@ function applyQuickFix(hapModuleQuickFixFiles: Array<string>, callback: AsyncCal
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types. |
-| 18500008 | Internal error. |
-| 18500002 | Invalid patch package. |
-| 201 | Permission denied. |
-| 202 | Not system application. |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types. |
+| [18500008](../errorcode-ability.md#18500008-快速修复内部错误) | Internal error. |
+| [18500002](../errorcode-ability.md#18500002-指定的补丁包无效) | Invalid patch package. |
+| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not system application. |
 
 ## 示例
 
@@ -99,11 +93,11 @@ function applyQuickFix(hapModuleQuickFixFiles: Array<string>): Promise<void>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types. |
-| 18500008 | Internal error. |
-| 18500002 | Invalid patch package. |
-| 201 | Permission denied. |
-| 202 | Not system application. |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types. |
+| [18500008](../errorcode-ability.md#18500008-快速修复内部错误) | Internal error. |
+| [18500002](../errorcode-ability.md#18500002-指定的补丁包无效) | Invalid patch package. |
+| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not system application. |
 
 ## 示例
 

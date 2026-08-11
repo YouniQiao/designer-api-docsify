@@ -12,7 +12,7 @@ import { proxyChannelManager } from 'kits/@kit.DistributedServiceKit';
 function closeProxyChannel(channelId: int): void
 ```
 
-关闭已打开的代理通道。
+Closes a proxy channel that has been opened.
 
 **Since:** 20
 
@@ -30,18 +30,18 @@ function closeProxyChannel(channelId: int): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| channelId | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | 打开代理通道时获取的channelId。 |
+| channelId | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | Channel ID obtained when the proxy channel is opened. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 801 | Capability not supported because bluetooth proxy function has been trimmed.<br>**Applicable version:** 26.0.0 and later |
-| 32390006 | Parameter error. |
-| 201 | Permission denied. |
-| 32390004 | ChannelId is invalid or unavailable. |
-| 32390100 | Internal error. |
-| 32390101 | Call is restricted. |
+| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported because bluetooth proxy function has been trimmed.<br>**Applicable version:** 26.0.0 and later |
+| [32390006](../../apis-distributedservice-kit/errorcode-proxyChannelManager.md#32390006-parameter-verification-error) | Parameter error. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
+| [32390004](../../apis-distributedservice-kit/errorcode-proxyChannelManager.md#32390004-invalid-or-unavailable-channel-id) | ChannelId is invalid or unavailable. |
+| [32390100](../../apis-distributedservice-kit/errorcode-proxyChannelManager.md#32390100-internal-error) | Internal error. |
+| [32390101](../../apis-distributedservice-kit/errorcode-proxyChannelManager.md#32390101-call-restricted) | Call is restricted. |
 
 ## Examples
 
@@ -54,15 +54,15 @@ import { BusinessError } from '@kit.BasicServicesKit';
 struct Index {
   build() {
     RelativeContainer() {
-      Button('Test')
+      Button ('Test')
         .onClick(() => {
           // The following sample code uses try/catch as an example.
           try {
-            proxyChannelManager.closeProxyChannel(channelId); // Obtain channelId from the promise returned by openProxyChannel.
+            proxyChannelManager.closeProxyChannel(1); // Assume that the channel ID is 1.
           } catch (err) {
             let error = err as BusinessError;
-            console.error(`Failed to close proxy channel. Code: ${error.code}, message: ${error.message}`);
-            // If error.code is undefined and error.message is "Cannot read property closeProxyChannel of undefined", the current image does not support this API.
+            console.error(`getErr: ${error.code} ${error.message}`);
+            // If code:undefined message:"Cannot read property closeProxyChannel of undefined" is displayed, this API is not supported in the current image.
           }
         })
     }

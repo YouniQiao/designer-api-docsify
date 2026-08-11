@@ -1,6 +1,6 @@
 # RatioLimit
 
-标准悬浮窗的宽高比限制范围。宽高比比值由窗口矩形区域的宽除以高获得。
+Provides the aspect ratio range of the float view. The aspect ratio is obtained by dividing the width of the rectangular area of the window by its height.
 
 **Since:** 26.0.0
 
@@ -22,7 +22,7 @@ import { floatView } from 'kits/@kit.ArkUI';
 maxRatio: double
 ```
 
-标准悬浮窗的宽高比最大值。
+Maximum aspect ratio of the float view.
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：double
 
@@ -42,7 +42,7 @@ maxRatio: double
 minRatio: double
 ```
 
-标准悬浮窗的宽高比最小值。
+Minimum aspect ratio of the float view.
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：double
 

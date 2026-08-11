@@ -4,7 +4,7 @@
 declare type OnCheckboxChangeCallback = (value: boolean) => void
 ```
 
-选中的状态。
+Represents the callback invoked when the selected state of the check box changes.
 
 **Since:** 18
 
@@ -24,5 +24,5 @@ declare type OnCheckboxChangeCallback = (value: boolean) => void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | boolean | Yes | 返回true表示已选中。返回false表示未选中。 |
+| value | boolean | Yes | Whether the check box is selected. The value **true** means that the check box is selected, and **false** means the opposite. |
 

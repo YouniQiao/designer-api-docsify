@@ -1,6 +1,6 @@
 # EnrolledCredInfo (System API)
 
-表示已注册凭据的信息。
+Defines enrolled credential information.
 
 **Since:** 8
 
@@ -24,7 +24,7 @@ import { osAccount } from 'kits/@kit.BasicServicesKit';
 authSubType: AuthSubType
 ```
 
-指示认证凭据子类型。
+Authentication credential subtype.
 
 **Type:** [AuthSubType](arkts-basicservices-osaccount-authsubtype-e-sys.md)
 
@@ -44,7 +44,7 @@ authSubType: AuthSubType
 authType: AuthType
 ```
 
-身份验证凭据类型。
+Authentication credential type.
 
 **Type:** [AuthType](arkts-basicservices-osaccount-authtype-e-sys.md)
 
@@ -64,7 +64,7 @@ authType: AuthType
 credentialId: Uint8Array
 ```
 
-指示凭据索引，默认为空。
+Credential ID, which is left blank by default.
 
 **Type:** Uint8Array
 
@@ -84,7 +84,7 @@ credentialId: Uint8Array
 isAbandoned?: boolean
 ```
 
-指示凭据是否废弃。废弃后的凭据可能作为备份凭据保存一段时间。true表示已废弃，false表示未废弃。默认为undefined，表示是否废弃未定义。
+Whether the credential is abandoned. The abandoned credential may be stored as a backup credential for a period of time. The value **true** indicates that the credential is abandoned, and the value **false** indicates the opposite. The default value is **undefined**.
 
 **Type:** boolean
 
@@ -104,7 +104,7 @@ isAbandoned?: boolean
 templateId: Uint8Array
 ```
 
-指示凭据模板ID。
+Authentication credential template ID.
 
 **Type:** Uint8Array
 
@@ -124,7 +124,7 @@ templateId: Uint8Array
 validityPeriod?: long
 ```
 
-指示凭据有效期，单位为ms。默认为undefined，表示有效期未定义。
+Credential validity period, in milliseconds. The default value is **undefined**.
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：long
 

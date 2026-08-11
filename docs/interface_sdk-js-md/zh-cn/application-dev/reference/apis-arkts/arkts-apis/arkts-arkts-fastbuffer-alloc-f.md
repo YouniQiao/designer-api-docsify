@@ -1,11 +1,5 @@
 # alloc
 
-## 导入模块
-
-```TypeScript
-import { fastbuffer } from 'kits/@kit.ArkTS';
-```
-
 ## alloc
 
 ```TypeScript

@@ -12,7 +12,7 @@ import { proxyChannelManager } from 'kits/@kit.DistributedServiceKit';
 function offReceiveData(channelId: int, callback?: Callback<DataInfo>): void
 ```
 
-取消订阅数据接收事件，停止接收数据。
+Unsubscribes from data receiving events.
 
 **Since:** 23
 
@@ -30,16 +30,16 @@ function offReceiveData(channelId: int, callback?: Callback<DataInfo>): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| channelId | int | Yes | 打开代理通道时获取的channelId。 |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;DataInfo&gt; | No | 注册的回调函数。如果为空、undefined、null，则取消订阅所有的数据接收事件。 如果不为空，传入最后一次注册的回调函数。 |
+| channelId | int | Yes | Channel ID obtained when the proxy channel is opened. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;DataInfo&gt; | No | Registered callback, If the value is empty, **undefined**, or **null**, all callbacks of data receiving events are unregistered. If the value is not empty, the last registered callback is used. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 32390006 | Parameter error. |
-| 201 | Permission denied. |
-| 32390004 | ChannelId is invalid or unavailable. |
-| 32390100 | Internal error. |
-| 32390101 | Call is restricted. |
+| [32390006](../../apis-distributedservice-kit/errorcode-proxyChannelManager.md#32390006-parameter-verification-error) | Parameter error. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
+| [32390004](../../apis-distributedservice-kit/errorcode-proxyChannelManager.md#32390004-invalid-or-unavailable-channel-id) | ChannelId is invalid or unavailable. |
+| [32390100](../../apis-distributedservice-kit/errorcode-proxyChannelManager.md#32390100-internal-error) | Internal error. |
+| [32390101](../../apis-distributedservice-kit/errorcode-proxyChannelManager.md#32390101-call-restricted) | Call is restricted. |
 

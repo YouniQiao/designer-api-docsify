@@ -1,6 +1,6 @@
 # WithEnvAttribute
 
-定义WithEnv组件的属性功能。
+Define the WithEnv attribute functions.
 
 **Since:** 26.0.0
 
@@ -22,7 +22,7 @@ import { WithEnvAttribute, WithEnv } from 'kits/@kit.ArkUI';
 customEnv<T>(key: CustomEnvKey<T>,  value: T): WithEnvAttribute
 ```
 
-设置作用域内可被后代自定义组件读取的自定义环境变量。
+Defining Custom Environment Variables
 
 **Since:** 26.0.0
 
@@ -40,14 +40,14 @@ customEnv<T>(key: CustomEnvKey<T>,  value: T): WithEnvAttribute
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| key | [CustomEnvKey](../arkts-components/arkts-arkui-customenvkey-c.md)&lt;T&gt; | Yes | 自定义环境变量的键。 |
-| value | T | Yes | 自定义环境变量的值。value的类型T对应CustomEnvKey&lt;T&gt;的类型T。 |
+| key | [CustomEnvKey](../arkts-components/arkts-arkui-customenvkey-c.md)&lt;T&gt; | Yes | Key for custom environment variables. |
+| value | T | Yes | Value of custom environment variables. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [WithEnvAttribute](arkts-arkui-arkui-withenv-withenvattribute-c.md) | WithEnvAttribute对象。 |
+| [WithEnvAttribute](arkts-arkui-arkui-withenv-withenvattribute-c.md) | WithEnvAttribute object. |
 
 ## env
 
@@ -55,7 +55,7 @@ customEnv<T>(key: CustomEnvKey<T>,  value: T): WithEnvAttribute
 env<T>(key: WritableSystemEnvKey<T>, value: T): WithEnvAttribute
 ```
 
-设置作用域内的系统环境变量。当前正式支持的系统环境变量键为WritableEnvKey.FONT_SCALE、WritableEnvKey.DIRECTION。
+Defining System Environment Variables
 
 **Since:** 26.0.0
 
@@ -73,12 +73,12 @@ env<T>(key: WritableSystemEnvKey<T>, value: T): WithEnvAttribute
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| key | [WritableSystemEnvKey](../arkts-components/arkts-arkui-writablesystemenvkey-c.md)&lt;T&gt; | Yes | 系统环境变量键。当前正式支持WritableEnvKey.FONT_SCALE和WritableEnvKey.DIRECTION。 |
-| value | T | Yes | 系统环境变量值。value的类型T对应WritableSystemEnvKey&lt;T&gt;中的类型T。当key为WritableEnvKey.FONT_SCALE时，value类型为number；当key为WritableEnvKey.DIRECTION时，value类型为Direction。 |
+| key | [WritableSystemEnvKey](../arkts-components/arkts-arkui-writablesystemenvkey-c.md)&lt;T&gt; | Yes | Key for system environment variables. |
+| value | T | Yes | Value of system environment variables. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [WithEnvAttribute](arkts-arkui-arkui-withenv-withenvattribute-c.md) | WithEnvAttribute对象。 |
+| [WithEnvAttribute](arkts-arkui-arkui-withenv-withenvattribute-c.md) | WithEnvAttribute object. |
 

@@ -1,6 +1,6 @@
 # LeakWatcherConfig
 
-LeakWatcherConfig�������ͣ������а�����������ڴ�й©���Ŀ��������ԡ�
+Defines the **LeakWatcherConfig** object, which contains multiple configurable properties for memory leak monitoring.
 
 **Since:** 24
 
@@ -22,13 +22,11 @@ import { jsLeakWatcher } from 'kits/@kit.PerformanceAnalysisKit';
 bgLeakCountThreshold?: int
 ```
 
-Ӧ���ں�̨й©�����ﵽ�趨ֵ����dump��ȡֵ��ΧΪ[0, +��)��
+Threshold for the number of leak objects in a background application. Dump is triggered when this threshold is reached.
 
-GC/Dump�׶Σ����ڵ���1ʱ����Dump��
+During the GC/Dump phase, dump is triggered when the value is greater than or equal to 1.
 
-��ֵĬ��Ϊ1��
-
-���벻��ȡֵ��Χ�ڵ�ֵʱ��ʹ��Ĭ��ֵ��
+The default threshold is **1**.
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
@@ -46,15 +44,9 @@ GC/Dump�׶Σ����ڵ���1ʱ����Dump��
 checkInterval?: int
 ```
 
-ÿ��й©�����ʱ�䣬��λ��ms��ȡֵ��ΧΪ[90000, +��)��
+Interval between each round of leak detection, in milliseconds.
 
-Ĭ��Ϊ90000ms��
-
-���Ӧ��������Զ�������ʱ��С��Ĭ��ֵ��JSLeakWatcherǿ�ƽ��������ΪĬ��ֵ��
-
-��ǰjsLeakWatcherй©������ܿ����ϴ󣬻ᵼ��Ӧ�ÿ��٣���������ò��������ٿ���Ƶ�ʡ�
-
-���벻��ȡֵ��Χ�ڵ�ֵʱ��ʹ��Ĭ��ֵ��
+The default value is 30 seconds.
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
@@ -72,15 +64,13 @@ checkInterval?: int
 dumpHeapWaitTimeMs?: int
 ```
 
-�ӳ�ִ��dump����֤GC�ܵ�����ִ������ִ��dump���ӳټ��С�ڵ���й©�����ʱ�䣬��λ��ms��ȡֵ��ΧΪ[0, +��)��
+Delay interval for executing dump. This parameter ensures that GC can be scheduled and executed before dump. The delay interval is less than or equal to the leak detection interval, in milliseconds.
 
-�����ӳ�ʱ������й©���ʱ����Ĭ����й©���ʱ������һ�¡�
+If the configured delay exceeds the leak detection interval, the delay defaults to that of the leak detection interval.
 
-��������й©���󽫲��ᴥ��dump��
+If no new leaked object exists, dump will not be triggered.
 
-GC������Ĭ���ӳ�5��ִ��dump��
-
-���벻��ȡֵ��Χ�ڵ�ֵʱ��ʹ��Ĭ��ֵ��
+By default, the dump is performed 5 seconds after the GC ends.
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
@@ -98,15 +88,15 @@ GC������Ĭ���ӳ�5��ִ��dump��
 exclusionList?: Array<string>
 ```
 
-���˲�����Ķ���������
+Class name of the object to be excluded from monitoring.
 
-������Window��CustomComponent��Ability���������Ӱ������������͵Ĺ��ˡ�
+This parameter applies only to custom components and does not affect the filtering of other component types.
 
-���ڻ�������ʱ�޷����й��ˣ�ֻ�ڿ���̬��Ч��
+If obfuscation occurs, filtering cannot be performed. This parameter takes effect only in the development state.
 
-�������ͻ���ȼ���ID�б� > ��������
+Configuration item conflict priority: ID list > trustlist.
 
-Ĭ��Ϊ�����顣
+The default value is an empty array.
 
 **Type:** Array&lt;string&gt;
 
@@ -124,13 +114,11 @@ exclusionList?: Array<string>
 fgLeakCountThreshold?: int
 ```
 
-Ӧ����ǰ̨й©�����ﵽ�趨ֵ����dump��ȡֵ��ΧΪ[0, +��)��
+Threshold for the number of leaked objects in a foreground application. Dump is triggered when this threshold is reached.
 
-GC/Dump�׶Σ����ڵ���5ʱ����Dump��
+During the GC/Dump phase, dump is triggered when the value is greater than or equal to 5.
 
-��ֵĬ��Ϊ5��
-
-���벻��ȡֵ��Χ�ڵ�ֵʱ��ʹ��Ĭ��ֵ��
+The default threshold is **5**.
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
@@ -148,11 +136,9 @@ GC/Dump�׶Σ����ڵ���5ʱ����Dump��
 maxStoredHeapDumps?: int
 ```
 
-���dump���������ȡֵ��ΧΪ(0, 10]��������̿ռ�ռ����������ɾ��ʱ�����С��rawheap��jsleaklist�ļ���
+Maximum number of dump files that can be saved. To prevent the disk space from being used up, the .rawheap and.jsleaklist files with the minimum timestamp are deleted when the number of dump files exceeds the maximum.
 
-Ĭ�ϱ���10��rawheap��10��jsleaklist�ļ���
-
-���벻��ȡֵ��Χ�ڵ�ֵʱ��ʹ��Ĭ��ֵ��
+By default, 10 .rawheap files and 10 .jsleaklist files are saved.
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
@@ -170,9 +156,9 @@ maxStoredHeapDumps?: int
 monitorObjectTypes: MonitorObjectType
 ```
 
-�����������͡�
+Type of the monitored object.
 
-Ĭ�ϼ������������͡�
+By default, all component types are monitored.
 
 **Type:** [MonitorObjectType](arkts-performanceanalysis-jsleakwatcher-monitorobjecttype-e.md)
 
@@ -190,13 +176,13 @@ monitorObjectTypes: MonitorObjectType
 objectUniqueIDs?: Array<int>
 ```
 
-�����й©����ID�б���
+List of IDs of monitored objects.
 
-ֻ�������Զ������������Ӱ������������͵ļ�⡣
+This parameter applies only to custom components and does not affect the monitoring of other component types.
 
-���磺�����������õĶ�������ID���Զ���ID�б�������ֵͬʱ����Ч�Զ���ID�б�������
+For example, if the object class name ID set in the trustlist is the same as that in the custom ID list, the custom ID list takes effect.
 
-Ĭ��Ϊ�����顣
+The default value is an empty array.
 
 **Type:** ArkTS-Dyn: Array&lt;number&gt;  <br>ArkTS-Sta：Array&lt;int&gt;
 

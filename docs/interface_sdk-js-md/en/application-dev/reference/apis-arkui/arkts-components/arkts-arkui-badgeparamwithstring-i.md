@@ -1,6 +1,6 @@
 # BadgeParamWithString
 
-BadgeParamWithNumber继承自[BadgeParam](arkts-arkui-badgeparam-i.md)，具有BadgeParam的全部属性。
+Inherits from [BadgeParam](arkts-arkui-badgeparam-i.md) and has all attributes of **BadgeParam**.
 
 **Inheritance/Implementation:** BadgeParamWithString extends [BadgeParam](arkts-arkui-badgeparam-i.md)
 
@@ -18,13 +18,11 @@ BadgeParamWithNumber继承自[BadgeParam](arkts-arkui-badgeparam-i.md)，具有B
 value: ResourceStr
 ```
 
-提示内容的文本字符串。
+Text string of the badge content.
 
-**说明：**
+**NOTE：**
 
-value为空字符串时不显示文本，仅显示圆点标记。
-
-从API version 20开始，支持ResourceStr类型。
+The ResourceStr type is supported since API version 20.
 
 **Type:** [ResourceStr](../arkts-apis/arkts-arkui-resourcestr-t.md)
 

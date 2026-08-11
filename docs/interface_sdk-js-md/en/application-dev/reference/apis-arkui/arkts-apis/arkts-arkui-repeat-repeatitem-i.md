@@ -1,6 +1,6 @@
 # RepeatItem
 
-数据项类型。
+Construct a new type for each item.
 
 **Since:** 23
 
@@ -16,7 +16,7 @@
 index: int
 ```
 
-当前数据项对应的索引。取值限定为整数。
+index of each item.
 
 **Type:** int
 
@@ -36,7 +36,7 @@ index: int
 item: T
 ```
 
-arr中每一个数据项。T为开发者传入的数据类型。
+The origin data.
 
 **Type:** T
 

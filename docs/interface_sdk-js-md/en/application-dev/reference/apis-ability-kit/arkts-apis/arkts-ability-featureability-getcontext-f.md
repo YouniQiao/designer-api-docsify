@@ -12,7 +12,7 @@ import { featureAbility } from 'kits/@kit.AbilityKit';
 function getContext(): Context
 ```
 
-获取应用上下文。
+Obtains the application context.
 
 **Since:** 6
 
@@ -28,7 +28,7 @@ function getContext(): Context
 
 | Type | Description |
 | --- | --- |
-| [Context](../../apis-mind-spore-lite-kit/arkts-apis/arkts-mindsporelite-mindsporelite-context-i.md) | 返回应用程序上下文。 |
+| [Context](../../apis-mind-spore-lite-kit/arkts-apis/arkts-mindsporelite-mindsporelite-context-i.md) | Application context. |
 
 ## Examples
 

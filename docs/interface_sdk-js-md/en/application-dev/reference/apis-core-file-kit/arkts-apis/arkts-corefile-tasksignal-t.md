@@ -4,7 +4,7 @@
 type TaskSignal = fileIo.TaskSignal
 ```
 
-拷贝中断信号。
+Provides APIs for interrupting a copy task.
 
 **Since:** 23
 

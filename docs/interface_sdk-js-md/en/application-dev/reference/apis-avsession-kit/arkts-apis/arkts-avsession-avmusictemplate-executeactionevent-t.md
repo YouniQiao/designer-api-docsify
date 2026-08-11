@@ -4,7 +4,7 @@
 type ExecuteActionEvent = (actionType: string, params: string) => Promise<string>
 ```
 
-执行操作事件。使用Promise异步回调。
+The execute action event.
 
 **Since:** 23
 
@@ -20,12 +20,12 @@ type ExecuteActionEvent = (actionType: string, params: string) => Promise<string
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| actionType | string | Yes | 动作类型。 |
-| params | string | Yes |  |
+| actionType | string | Yes | action type |
+| params | string | Yes | params |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;string&gt; | Promise对象，返回执行操作的结果字符串。 |
+| Promise&lt;string&gt; | (string) returned through promise |
 

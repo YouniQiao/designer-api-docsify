@@ -1,8 +1,8 @@
 # SlotType
 
-通知渠道类型。
+Enumerates the notification slot types.
 
-不同类型对应不同的SlotLevel，决定通知的提醒行为。
+Different types correspond to different [SlotLevel](arkts-notification-notificationmanager-slotlevel-e.md) values,determining the reminder behavior of the notification.
 
 **Since:** 9
 
@@ -18,7 +18,7 @@
 EMERGENCY_INFORMATION = 10
 ```
 
-紧急事件。
+Emergency event.
 
 **Since:** 12
 

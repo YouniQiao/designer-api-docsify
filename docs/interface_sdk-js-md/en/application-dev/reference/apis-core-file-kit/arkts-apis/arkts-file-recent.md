@@ -1,10 +1,10 @@
 # @ohos.file.recent
 
-该模块提供最近访问列表插入、移除、查询等常用能力。
+The **file.recent** module provides APIs for managing the list of recently accessed files.
 
-> **说明：**
+> **NOTE：**
 > 
-> - 当前只支持文件管理器调用。
+> - Currently, the APIs of this module can be called only by **FileManager**.
 
 **Since:** 10
 
@@ -33,9 +33,9 @@ import { recent } from 'kits/@kit.CoreFileKit';
 
 | Name | Description |
 | --- | --- |
-| [add](arkts-corefile-recent-add-f-sys.md#add) | 将uri对应的文件加入最近访问列表。 |
-| [listFile](arkts-corefile-recent-listfile-f-sys.md#listfile) | 查询最近访问列表中文件信息。 |
-| [remove](arkts-corefile-recent-remove-f-sys.md#remove) | 将uri对应的文件从最近访问列表中移除。 |
+| [add](arkts-corefile-recent-add-f-sys.md#add) | Adds the file of the specified URI to the recent file list. |
+| [listFile](arkts-corefile-recent-listfile-f-sys.md#listfile) | Lists the files that are accessed recently. |
+| [remove](arkts-corefile-recent-remove-f-sys.md#remove) | Removes the file of the specified URI from the recent file list. |
 <!--DelEnd-->
 
 <!--Del-->
@@ -43,6 +43,6 @@ import { recent } from 'kits/@kit.CoreFileKit';
 
 | Name | Description |
 | --- | --- |
-| [FileInfo](arkts-corefile-recent-fileinfo-i-sys.md) | 最近访问列表文件信息。 |
+| [FileInfo](arkts-corefile-recent-fileinfo-i-sys.md) | Represents information about the recent file list. |
 <!--DelEnd-->
 

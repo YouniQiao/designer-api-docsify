@@ -34,7 +34,7 @@ drawBehind Method. Executed before drawing associated Node.
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| drawContext | [DrawContext](../arkts-apis/arkts-arkui-graphics-drawcontext-c.md) | 是 | The drawContext used to draw. |
+| drawContext | [DrawContext](../arkts-apis/arkts-arkui-drawcontext-t.md) | 是 | The drawContext used to draw. |
 
 ## drawContent
 
@@ -60,7 +60,7 @@ drawContent Method. Executed when associated Node is drawing, the default drawCo
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| drawContext | [DrawContext](../arkts-apis/arkts-arkui-graphics-drawcontext-c.md) | 是 | The drawContext used to draw. |
+| drawContext | [DrawContext](../arkts-apis/arkts-arkui-drawcontext-t.md) | 是 | The drawContext used to draw. |
 
 ## drawForeground
 
@@ -86,7 +86,7 @@ drawForeground(drawContext: DrawContext): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| drawContext | [DrawContext](../arkts-apis/arkts-arkui-graphics-drawcontext-c.md) | 是 | 用来绘制的drawContext |
+| drawContext | [DrawContext](../arkts-apis/arkts-arkui-drawcontext-t.md) | 是 | 用来绘制的drawContext |
 
 ## drawFront
 
@@ -112,7 +112,7 @@ drawFront Method. Executed after drawing associated Node.
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| drawContext | [DrawContext](../arkts-apis/arkts-arkui-graphics-drawcontext-c.md) | 是 | The drawContext used to draw. |
+| drawContext | [DrawContext](../arkts-apis/arkts-arkui-drawcontext-t.md) | 是 | The drawContext used to draw. |
 
 ## drawOverlay
 
@@ -142,7 +142,7 @@ drawOverlay(drawContext: DrawContext): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| drawContext | [DrawContext](../arkts-apis/arkts-arkui-graphics-drawcontext-c.md) | 是 | 用于绘制的drawContext |
+| drawContext | [DrawContext](../arkts-apis/arkts-arkui-drawcontext-t.md) | 是 | 用于绘制的drawContext |
 
 ## invalidate
 

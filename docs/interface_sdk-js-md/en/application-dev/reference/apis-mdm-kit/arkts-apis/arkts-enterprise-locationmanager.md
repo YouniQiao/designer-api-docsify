@@ -1,12 +1,13 @@
-# @ohos.enterprise.locationManager(位置服务管理)
+# @ohos.enterprise.locationManager(Location Service Management)
 
-本模块提供设备位置服务策略管理的能力，包括设置和查询位置服务开关策略等。
+The **locationManager** module provides location service management capabilities for devices, including setting and obtaining the location service policy.
 
-**使用场景**：适用于企业设备管理场景，管理员可通过此模块统一管控设备位置服务策略。
+**Use cases:**This module is applicable to enterprise device management scenarios, where administrators can centrally manage location service policies for devices.
 
-> **说明：**
+> **NOTE：**
 > 
-> 本模块接口仅对设备管理应用开放，且调用接口前需激活设备管理应用，具体请参考[MDM Kit开发指南](../../../mdm/mdm-kit-guide.md)。
+> The APIs of this module can be called only by a device administrator application that is enabled. For details, see
+> [MDM Kit Development](../../../mdm/mdm-kit-guide.md).
 
 **Since:** 12
 
@@ -30,13 +31,13 @@ import { locationManager } from 'kits/@kit.MDMKit';
 
 | Name | Description |
 | --- | --- |
-| [getLocationPolicy](arkts-mdm-locationmanager-getlocationpolicy-f.md#getlocationpolicy) | 查询位置服务管理策略。可在企业设备管理应用中检查当前设备的位置服务策略状态，用于策略合规性验证或策略调整前的状态确认。适用于确认当前策略配置、设备管理应用启动时读取策略状态、排查位置服务问题时检查策略等场景。 |
-| [getLocationPolicy](arkts-mdm-locationmanager-getlocationpolicy-f.md#getlocationpolicy-1) | 查询位置服务管理策略。可在企业设备管理应用中检查当前设备的位置服务策略状态，用于策略合规性验证或策略调整前的状态确认。适用于确认当前策略配置、设备管理应用启动时读取策略状态、排查位置服务问题时检查策略等场景。 |
-| [setLocationPolicy](arkts-mdm-locationmanager-setlocationpolicy-f.md#setlocationpolicy) | 设置位置服务管理策略。可用于企业管控场景，如：在涉密区域禁用位置服务以保护信息安全，或在物流配送应用中强制开启位置服务以追踪设备位置。 |
+| [getLocationPolicy](arkts-mdm-locationmanager-getlocationpolicy-f.md#getlocationpolicy) | Queries the location service policy. |
+| [getLocationPolicy](arkts-mdm-locationmanager-getlocationpolicy-f.md#getlocationpolicy-1) | Queries the location service policy. This API can be used in enterprise device administrator applications to check the current location service policy state of the device, for policy compliance verification or state confirmation before policy adjustment. It is suitable for scenarios such as confirming the current policy configuration, reading the policy state when the device administrator application starts, and checking the policy when troubleshooting location service issues. |
+| [setLocationPolicy](arkts-mdm-locationmanager-setlocationpolicy-f.md#setlocationpolicy) | Sets a location service policy. This API can be used in enterprise management and control scenarios. For example,you can disable the location service in confidential areas to protect information security, or forcibly enable the location service in logistics and distribution applications to track device locations.  > **NOTE：** >  > - Disabled: Set this option when privacy protection or power saving is required. >  > - Forced on: Set this option in scenarios such as device security tracking and asset management. >  > - Default: This option removes policy restrictions and allows the user to control the setting independently. |
 
 ### Enums
 
 | Name | Description |
 | --- | --- |
-| [LocationPolicy](arkts-mdm-locationmanager-locationpolicy-e.md) | 位置服务策略值。 |
+| [LocationPolicy](arkts-mdm-locationmanager-locationpolicy-e.md) | Enumerates the location service policies. |
 

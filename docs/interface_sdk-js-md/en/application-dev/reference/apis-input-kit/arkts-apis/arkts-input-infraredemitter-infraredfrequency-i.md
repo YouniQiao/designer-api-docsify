@@ -1,6 +1,6 @@
 # InfraredFrequency
 
-红外信号的频率范围。
+Defines the frequency range of IR signals.
 
 **Since:** 15
 
@@ -22,7 +22,7 @@ import { infraredEmitter } from 'kits/@kit.InputKit';
 max: long
 ```
 
-最大支持频率，单位：Hz。
+Maximum frequency, in Hz.
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：long
 
@@ -40,7 +40,7 @@ max: long
 min: long
 ```
 
-最小支持频率，单位：Hz。
+Minimum frequency, in Hz.
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：long
 

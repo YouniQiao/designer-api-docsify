@@ -1,6 +1,6 @@
 # URI
 
-构造一个URI对象，并提供URI比较、路径规范化、查询参数操作、路径段追加和URI类型判断等方法。
+URI Represents a Uniform Resource Identifier (URI) reference.
 
 **Since:** 8
 
@@ -22,7 +22,7 @@ import { uri } from 'kits/@kit.ArkTS';
 addEncodedSegment(pathSegment: string): URI
 ```
 
-将已编码的字段追加到当前URI的path字段中，创建新URI对象并返回，保持原有URI对象不变。
+Appends an encoded field to the path component of this URI to create a new URI and returns the new URI,while keeping the existing URI unchanged.
 
 **Since:** 12
 
@@ -38,13 +38,13 @@ addEncodedSegment(pathSegment: string): URI
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| pathSegment | string | Yes | 需要追加到路径部分的编码字段。 |
+| pathSegment | string | Yes | Encoding path segment to be added. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [URI](arkts-arkts-uri-uri-c.md) | 返回已追加字段的URI对象。 |
+| [URI](arkts-arkts-uri-uri-c.md) | After adding, return the URI object. |
 
 ## Examples
 
@@ -60,7 +60,7 @@ console.info(newRoute.toString()); // http://www.test.com/my%20image.jpg
 addQueryValue(key: string, value: string): URI
 ```
 
-在当前URI对象上添加查询参数后返回新的URI对象，保持原有URI对象不变。
+Adds a query parameter to this URI to create a new URI, while keeping the existing URI unchanged.
 
 **Since:** 12
 
@@ -76,14 +76,14 @@ addQueryValue(key: string, value: string): URI
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| key | string | Yes | 需要添加查询参数的名称。 |
-| value | string | Yes | 需要添加查询参数的值。 |
+| key | string | Yes | Key of the query parameter. |
+| value | string | Yes | Value of the query parameter. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [URI](arkts-arkts-uri-uri-c.md) | 返回添加查询部分后的URI对象。 |
+| [URI](arkts-arkts-uri-uri-c.md) | Return URI object. |
 
 ## Examples
 
@@ -99,7 +99,7 @@ console.info(newRoute.toString()); // https://www.test.com?param1=hello%20world
 addSegment(pathSegment: string): URI
 ```
 
-对指定字段进行编码，并将其追加到当前URI对象的path中，创建并返回新的URI对象，保持原有URI对象不变。
+Encodes a given field, appends it to the path component of this URI to create a new URI, and returns the new URI,while keeping the existing URI unchanged.
 
 **Since:** 12
 
@@ -115,13 +115,13 @@ addSegment(pathSegment: string): URI
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| pathSegment | string | Yes | 需要追加到路径部分的字段。 |
+| pathSegment | string | Yes | path segment to be added. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [URI](arkts-arkts-uri-uri-c.md) | 返回已追加字段的URI对象。 |
+| [URI](arkts-arkts-uri-uri-c.md) | After adding, return the URI object. |
 
 ## Examples
 
@@ -137,7 +137,7 @@ console.info(newRoute.toString()); // http://www.test.com/my%20image.jpg
 checkHierarchical(): boolean
 ```
 
-判断此URI是否为分层的URI，方案特定部分以“/”开头的URI为分层的URI。相对URI也是分层的。
+Checks whether this URI is a hierarchical URI. The URI that starts with a slash (/) in scheme-specific-part is a hierarchical URI. Relative URIs are also hierarchical.
 
 **Since:** 12
 
@@ -153,7 +153,7 @@ checkHierarchical(): boolean
 
 | Type | Description |
 | --- | --- |
-| boolean | 如果是分层的URI返回true，否则返回false。 |
+| boolean | Return true as Hierarchical, otherwise return false. |
 
 ## Examples
 
@@ -170,7 +170,7 @@ console.info(`${uriInstance1.checkHierarchical()}`); // false
 checkIsAbsolute(): boolean
 ```
 
-判断URI是否为绝对URI，即是否包含scheme组件。
+Checks whether this URI is an absolute URI (whether the scheme component is defined).
 
 **Since:** 8
 
@@ -186,7 +186,7 @@ checkIsAbsolute(): boolean
 
 | Type | Description |
 | --- | --- |
-| boolean | 如果是绝对URI返回true，否则返回false。 |
+| boolean | boolean Indicates whether the URI is an absolute URI (whether the scheme component is defined). |
 
 ## Examples
 
@@ -203,7 +203,7 @@ console.info(`${uriInstance1.checkIsAbsolute()}`); // false
 checkOpaque(): boolean
 ```
 
-判断此URI是否为不透明URI，方案特定部分不以“/”开头的URI为不透明的URI。
+Checks whether this URI is an opaque URI. The URI that does not start with a slash (/) is an opaque URI.
 
 **Since:** 12
 
@@ -219,7 +219,7 @@ checkOpaque(): boolean
 
 | Type | Description |
 | --- | --- |
-| boolean | 如果是不透明的URI返回true，否则返回false。 |
+| boolean | Return true as Opaque, otherwise return false. |
 
 ## Examples
 
@@ -236,7 +236,7 @@ console.info(`${uriInstance1.checkOpaque()}`); // true
 checkRelative(): boolean
 ```
 
-判断此URI是否为相对URI，相对URI指的是不包含协议(scheme)部分的URI。
+Determine whether URI is Relative.
 
 **Since:** 12
 
@@ -252,7 +252,7 @@ checkRelative(): boolean
 
 | Type | Description |
 | --- | --- |
-| boolean | 如果是相对URI返回true，否则返回false。 |
+| boolean | Return true as Relative, otherwise return false. |
 
 ## Examples
 
@@ -269,7 +269,7 @@ console.info(`${uriInstance1.checkRelative()}`); // true
 clearQuery(): URI
 ```
 
-清除URI路径查询部分，并创建一个新的URI对象返回，同时保持原有URI对象不变。
+Clears the query component of this URI to create a new URI, while keeping the existing URI object unchanged.
 
 **Since:** 12
 
@@ -285,7 +285,7 @@ clearQuery(): URI
 
 | Type | Description |
 | --- | --- |
-| [URI](arkts-arkts-uri-uri-c.md) | 返回一个已被清除查询部分的URI对象。 |
+| [URI](arkts-arkts-uri-uri-c.md) | After clearing, return the URI object. |
 
 ## Examples
 
@@ -300,7 +300,7 @@ console.info(uriInstance.clearQuery().toString()); // https://www.test.com
 constructor(uri: string)
 ```
 
-构造函数用于创建URI对象，将输入的URI字符串按照RFC3986规范解析并分解为scheme、userInfo、host、port、path、query和fragment等组件。
+A constructor used to create a URI instance.
 
 **Since:** 8
 
@@ -316,13 +316,13 @@ constructor(uri: string)
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| uri | string | Yes | 需要解析的URI字符串，需符合RFC3986规范标准。 |
+| uri | string | Yes | Input object. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 10200002 | Invalid uri string. |
+| [10200002](../errorcode-utils.md#10200002-parameter-parsing-error) | Invalid uri string. |
 
 ## Examples
 
@@ -341,7 +341,7 @@ new uri.URI('https://username:password@host:8080');
 static createFromParts(scheme: string, ssp: string, fragment: string): URI
 ```
 
-根据提供的协议、方案以及片段创建一个新的URI对象。
+Creates a URI based on the provided scheme, scheme-specific-part, and fragment components.
 
 **Since:** 12
 
@@ -357,15 +357,15 @@ static createFromParts(scheme: string, ssp: string, fragment: string): URI
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| scheme | string | Yes | 此URI协议部分。该参数需符合URI协议标准。 |
-| ssp | string | Yes | 此URI的方案特定部分，即位于协议分隔符“:”和片段分隔符“#”之间的所有内容，这部分将被编码。 |
-| fragment | string | Yes | 此URI的片段部分，即“#”符号后面的内容，如果未定义则为空，这部分也将被编码。 |
+| scheme | string | Yes | of the URI. |
+| ssp | string | Yes | scheme-specific-part, everything between the scheme separator (':') and the fragment separator ('#'), which will get encoded. |
+| fragment | string | Yes | fragment, everything after the '#', null if undefined, will get encoded. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [URI](arkts-arkts-uri-uri-c.md) | 返回由给定协议、协议特定部分和片段创建的URI对象。 |
+| [URI](arkts-arkts-uri-uri-c.md) | Return Uri consisting of a given scheme, SSP, and fragment. |
 
 ## Examples
 
@@ -380,7 +380,7 @@ console.info(uriInstance.toString()); // mailto:no%20body#top
 equals(other: URI): boolean
 ```
 
-判断此URI是否与其他URI对象相等。
+Check whether this URI is equivalent to other URI objects.
 
 **Since:** 8
 
@@ -398,13 +398,13 @@ equals(other: URI): boolean
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| other | [URI](arkts-arkts-uri-uri-c.md) | Yes | 需要比较的URI对象。 |
+| other | [URI](arkts-arkts-uri-uri-c.md) | Yes | other other URI object to be compared |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| boolean | 返回true表示相等，否则返回false。 |
+| boolean | boolean Tests whether this URI is equivalent to other URI objects. |
 
 ## Examples
 
@@ -420,7 +420,7 @@ uriInstance.equals(uriInstance1); // true
 equalsTo(other: URI): boolean
 ```
 
-判断此URI是否与其他URI对象相等。
+Checks whether this URI is the same as another URI object.
 
 **Since:** 9
 
@@ -436,13 +436,13 @@ equalsTo(other: URI): boolean
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| other | [URI](arkts-arkts-uri-uri-c.md) | Yes | 需要比较的URI对象。 |
+| other | [URI](arkts-arkts-uri-uri-c.md) | Yes | URI object to compare. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| boolean | 返回true表示相等，否则返回false。 |
+| boolean | boolean Tests whether this URI is equivalent to other URI objects. |
 
 ## Examples
 
@@ -458,7 +458,7 @@ let result = uriInstance.equalsTo(uriInstance1); // true
 getBooleanQueryValue(key: string, defaultValue: boolean): boolean
 ```
 
-根据指定键名，搜索此URI查询字符串并返回其对应的布尔类型值。
+Obtains the value of the Boolean type of a query parameter in this URI.
 
 **Since:** 12
 
@@ -474,14 +474,14 @@ getBooleanQueryValue(key: string, defaultValue: boolean): boolean
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| key | string | Yes | 要获取的查询参数的名称。 |
-| defaultValue | boolean | Yes | 设置查询参数中未包含指定键时返回的值。 |
+| key | string | Yes | Indicates the key value to be queried. |
+| defaultValue | boolean | Yes | The default value returned when the key has no query parameters. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| boolean | 如果指定的查询参数不存在，则返回defaultValue的值；查询参数对应第一个值为“false”或者“0”返回false，否则返回true。 |
+| boolean | Query returns defaultValue if the key does not exist. Query returns false if the value of the key is "false" or "0", otherwise returns true. |
 
 ## Examples
 
@@ -504,7 +504,7 @@ console.info(`${uriInstance4.getBooleanQueryValue("active", true)}`); // true
 getLastSegment(): string
 ```
 
-获取此URI路径的最后一个段。每个段代表路径中的一个部分，通常通过“/”来进行分隔。对于以斜杠结尾的或者没有路径的部分不计入段。
+Obtains the last segment of this URI.
 
 **Since:** 12
 
@@ -520,7 +520,7 @@ getLastSegment(): string
 
 | Type | Description |
 | --- | --- |
-| string | 返回此URI路径中的最后一个段，如果路径为空则返回null。 |
+| string | Returns the last decoded segment, or null if the path is empty. |
 
 ## Examples
 
@@ -535,7 +535,7 @@ console.info(uriInstance.getLastSegment()); // image.jpg
 getQueryNames(): string[]
 ```
 
-获取URI查询部分中所有不重复的键。查询参数出现在问号“?”之后，由键值对组成，键和值用等号“=”连接，键值对间用与号“&”分隔。
+Obtains all non-repeated keys in the query component of this URI.
 
 **Since:** 12
 
@@ -551,7 +551,7 @@ getQueryNames(): string[]
 
 | Type | Description |
 | --- | --- |
-| string[] | 返回URI查询部分中所有不重复的已解码参数名集合。 |
+| string[] | Return a set of decoded names. |
 
 ## Examples
 
@@ -567,9 +567,7 @@ console.info(paramNames.toString()); // param1,param2
 getQueryValue(key: string): string
 ```
 
-根据给定的查询关键词，从URI查询参数部分中提取出该关键词对应的第一个值，若查询参数中存在已编码过的内容，需将对应Key进行解码后获取Value。
-
-查询参数在问号“?”后，由键值对组成。键和值用等号“=”连接，键值对用与号“&”分隔。
+Obtains the first value of a given key from the query component of this URI. If the query component contains encoded content,this API decodes the key before obtaining the value.
 
 **Since:** 12
 
@@ -585,13 +583,13 @@ getQueryValue(key: string): string
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| key | string | Yes | 此URI查询参数的名称。 |
+| key | string | Yes | Key of the query parameter. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| string | 返回经解码处理后的URI查询参数的第一个值，若未找到对应值则返回null对象。 |
+| string | Return decoded value. |
 
 ## Examples
 
@@ -609,7 +607,7 @@ console.info(uriInstance1.getQueryValue('abc')) // null
 getQueryValue(key: string): string | null
 ```
 
-从当前 URI 的查询组件中获取指定键的第一个值。如果查询组件包含编码内容，此 API 会在获取值之前对键进行解码。
+Obtains the first value of a given key from the query component of this URI. If the query component contains encoded content,this API decodes the key before obtaining the value.
 
 **Since:** 23
 
@@ -625,13 +623,13 @@ getQueryValue(key: string): string | null
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| key | string | Yes | 查询参数的键。 |
+| key | string | Yes | Key of the query parameter. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| string | 返回解码后的值，如果未找到对应的值则返回 null 对象。 |
+| string | Return decoded value, If no corresponding value is found return a null object. |
 
 ## getQueryValues
 
@@ -639,9 +637,7 @@ getQueryValue(key: string): string | null
 getQueryValues(key: string): string[]
 ```
 
-获取URI中查询参数指定键的所有值。如果查询参数已编码，需先解码键再获取值。
-
-查询参数是出现在问号“?”之后的部分，由键值对组成，键和值用等号“=”连接，键值对间用与号“&”分隔。
+Obtains the values of a given key from the query component of this URI.
 
 **Since:** 12
 
@@ -657,13 +653,13 @@ getQueryValues(key: string): string[]
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| key | string | Yes | 指定键的名称。 |
+| key | string | Yes | Key of the URI query parameter. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| string[] | 返回此URI中查询参数内指定键对应所有值的集合，若没有找到则返回一个空字符串数组[]。 |
+| string[] | Return a set of decoded values. |
 
 ## Examples
 
@@ -679,7 +675,7 @@ console.info(JSON.stringify(uriInstance.getQueryValues("abc"))); // []
 getSegment(): string[]
 ```
 
-获取此URI中已解码的所有路径段。
+Gets the decoded path segments.
 
 **Since:** 12
 
@@ -695,7 +691,7 @@ getSegment(): string[]
 
 | Type | Description |
 | --- | --- |
-| string[] | 返回此URI中已解码的所有路径段，各段前后均不含 “/”。 |
+| string[] | Return decoded path segments, each without a leading or trailing "/". |
 
 ## Examples
 
@@ -710,17 +706,7 @@ console.info(uriInstance.getSegment().toString()); // path,to,image.jpg
 normalize(): URI
 ```
 
-规范化此URI的路径。
-
-> **说明：**
-> 
-> 如果此URI是不透明的，或者其路径已经是规范形式，则返回该URI。否则将构造一个新的URI，该URI与当前URI相同，唯一的区别是其路径通过规范化当前URI的路径来计算，具体规则如下：
-> 
-> 1.移除所有的 .（点）段。
-> 
-> 2.如果 ..（双点）段前面有一个非 .. 段，则将这两个段一起移除。重复此步骤，直到不再适用为止。
-> 
-> 如果路径规范化后以 ..（双点）段开头，这表明之前没有足够的非 .. 段可以移除，因此路径将以 .. 段开始。
+Normalizes the path of this URI.
 
 **Since:** 8
 
@@ -736,7 +722,7 @@ normalize(): URI
 
 | Type | Description |
 | --- | --- |
-| [URI](arkts-arkts-uri-uri-c.md) | 返回一个path被规范化后的URI对象。 |
+| [URI](arkts-arkts-uri-uri-c.md) | URI Used to normalize the path of this URI and return a URI object whose path has been normalized. |
 
 ## Examples
 
@@ -759,7 +745,7 @@ console.info(uri2.path); // /../../patch/path2/path3
 toString(): string
 ```
 
-将URI转化为编码后的字符串。
+Converts this URI into an encoded string.
 
 **Since:** 8
 
@@ -775,7 +761,7 @@ toString(): string
 
 | Type | Description |
 | --- | --- |
-| string | 返回URI的字符串序列化。 |
+| string | URI in a serialized string. |
 
 ## Examples
 
@@ -790,7 +776,7 @@ let result1 = result.toString(); // https://username:password@host:8080/director
 authority: string
 ```
 
-获取和设置此URI的解码授权组件部分，若无此部分则返回null对象。
+Gets/Sets the decoding permission component part of this URI.
 
 **Type:** string
 
@@ -810,7 +796,7 @@ authority: string
 encodedAuthority: string
 ```
 
-获取和设置URI的编码授权组件部分，若无此部分则返回null对象。
+Gets/Sets the encoded authority part of this URI.
 
 **Type:** string
 
@@ -830,7 +816,7 @@ encodedAuthority: string
 encodedFragment: string
 ```
 
-获取和设置URI的编码片段部分，若无此部分则返回null对象。
+Gets/Sets the encoded fragment part of this URI, everything after the '#'.
 
 **Type:** string
 
@@ -850,7 +836,7 @@ encodedFragment: string
 encodedPath: string
 ```
 
-获取和设置URI的编码路径部分，若无此部分则返回null对象。
+Gets/Sets the encoded path portion of the URI.
 
 **Type:** string
 
@@ -870,7 +856,7 @@ encodedPath: string
 encodedQuery: string
 ```
 
-获取和设置URI的编码查询部分，若无此部分则返回null对象。
+Gets/Sets the encoded query component from this URI.
 
 **Type:** string
 
@@ -890,7 +876,7 @@ encodedQuery: string
 encodedSSP: string
 ```
 
-获取和设置URI的编码方案特定部分，若无此部分则返回null对象。
+Gets/Sets the scheme-specific part of this URI, i.e. everything between the scheme separator ':' and the fragment separator '#'.
 
 **Type:** string
 
@@ -910,7 +896,7 @@ encodedSSP: string
 encodedUserInfo: string
 ```
 
-获取和设置URI的编码用户信息部分，若无此部分则返回null对象。
+Gets/Sets Obtains the encoded user information part of the URI.
 
 **Type:** string
 
@@ -930,7 +916,7 @@ encodedUserInfo: string
 fragment: string
 ```
 
-获取和设置URI的片段部分，若无此部分则返回null对象。
+Gets/Sets the fragment part of the URI.
 
 **Type:** string
 
@@ -950,7 +936,7 @@ fragment: string
 host: string
 ```
 
-获取 URI 的主机名部分（不带端口），若无此部分则返回null对象。
+Gets the hostname portion of the URI without a port.
 
 **Type:** string
 
@@ -970,7 +956,7 @@ host: string
 path: string
 ```
 
-获取和设置URI的路径部分，若无此部分则返回null对象。
+Gets/Sets the path portion of the URI.
 
 **Type:** string
 
@@ -990,7 +976,7 @@ path: string
 port: string
 ```
 
-获取URI的端口部分，若无此部分则返回-1。
+Gets the port portion of the URI.
 
 **Type:** string
 
@@ -1010,7 +996,7 @@ port: string
 query: string
 ```
 
-获取和设置URI的查询部分，若无此部分则返回null对象。
+Gets/Sets the query portion of the URI
 
 **Type:** string
 
@@ -1030,7 +1016,7 @@ query: string
 scheme: string
 ```
 
-获取和设置URI的方案部分，若无此部分则返回null对象。方案名以字母开头，只能包含字母、数字、加号(+)、减号(-)和点号(.)。
+Gets/Sets the protocol part of the URI.
 
 **Type:** string
 
@@ -1050,7 +1036,7 @@ scheme: string
 ssp: string
 ```
 
-获取和设置URI的解码方案特定部分，方案特定部分是URI的一部分，它包含了特定于协议或方案的信息。
+Gets/Sets the decoding scheme-specific part of the URI.
 
 **Type:** string
 
@@ -1070,7 +1056,7 @@ ssp: string
 userInfo: string
 ```
 
-获取和设置URI的用户信息部分，若无此部分则返回null对象。
+Gets/Sets Obtains the user information part of the URI.
 
 **Type:** string
 

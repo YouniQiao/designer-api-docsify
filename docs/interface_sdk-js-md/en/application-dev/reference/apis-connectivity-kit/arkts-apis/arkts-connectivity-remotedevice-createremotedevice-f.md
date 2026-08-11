@@ -12,7 +12,7 @@ import { remoteDevice } from 'kits/@kit.ConnectivityKit';
 function createRemoteDevice(address: string): RemoteDevice
 ```
 
-创建远端设备实例。
+Creates a remote device instance.
 
 **Since:** 26.0.0
 
@@ -28,18 +28,18 @@ function createRemoteDevice(address: string): RemoteDevice
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| address | string | Yes | 设备地址。例如，“11:22:33:AA:BB:FF” &lt;br&gt;长度必须为17，由16进制数字和冒号组成，形如 "11:22:33:AA:BB:FF"。 |
+| address | string | Yes | Indicates the device address. &lt;br&gt;The length must be 17, The value consists of hexadecimal digits and colons (:), for example, 11:22:33:AA:BB:FF. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [RemoteDevice](arkts-connectivity-remotedevice-remotedevice-i.md) | 返回近链路远程设备实例。 |
+| [RemoteDevice](arkts-connectivity-remotedevice-remotedevice-i.md) | Returns a near link remote device instance. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 801 | Capability not supported because the chip does not support it. |
+| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported because the chip does not support it. |
 | 36100041 | Invalid address. |
 

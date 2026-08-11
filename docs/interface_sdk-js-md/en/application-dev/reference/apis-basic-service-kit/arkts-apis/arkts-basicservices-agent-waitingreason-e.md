@@ -1,6 +1,6 @@
 # WaitingReason
 
-枚举，定义任务等待的原因。
+Enumerates the reasons why a task is waiting.
 
 **Since:** 20
 
@@ -16,7 +16,7 @@
 TASK_QUEUE_FULL = 0x00
 ```
 
-表示任务因任务队列已满而进入等待状态。
+The task queue is full.
 
 **Since:** 20
 
@@ -32,7 +32,7 @@ TASK_QUEUE_FULL = 0x00
 NETWORK_NOT_MATCH = 0x01
 ```
 
-表示任务因所需网络条件不满足而进入等待状态。
+The required network conditions are not met.
 
 **Since:** 20
 
@@ -48,7 +48,7 @@ NETWORK_NOT_MATCH = 0x01
 APP_BACKGROUND = 0x02
 ```
 
-表示任务因应用长时间处于后台而进入等待状态。
+The application has been running in the background for a long time.
 
 **Since:** 20
 
@@ -64,7 +64,7 @@ APP_BACKGROUND = 0x02
 USER_INACTIVATED = 0x03
 ```
 
-表示任务因所属用户处于非激活状态而进入等待状态。
+The user is inactive.
 
 **Since:** 20
 

@@ -1,6 +1,6 @@
 # CertificateDialogPageType
 
-表示证书管理对话框的页面类型。
+Enumerates the page types of the certificate management dialog box.
 
 **Since:** 13
 
@@ -16,7 +16,7 @@
 PAGE_MAIN = 1
 ```
 
-证书管理应用主页面。
+Main page of the Certificate Manager application.
 
 **Since:** 13
 
@@ -34,7 +34,7 @@ PAGE_MAIN = 1
 PAGE_CA_CERTIFICATE = 2
 ```
 
-CA证书列表页面。
+CA certificate list page.
 
 **Since:** 13
 
@@ -52,7 +52,7 @@ CA证书列表页面。
 PAGE_CREDENTIAL = 3
 ```
 
-凭据列表页面。
+Credential list page.
 
 **Since:** 13
 
@@ -70,7 +70,7 @@ PAGE_CREDENTIAL = 3
 PAGE_INSTALL_CERTIFICATE = 4
 ```
 
-安装证书页面。
+Certificate installation page.
 
 **Since:** 13
 

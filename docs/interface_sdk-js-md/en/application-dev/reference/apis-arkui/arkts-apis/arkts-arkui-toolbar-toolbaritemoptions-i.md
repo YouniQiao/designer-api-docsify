@@ -1,6 +1,6 @@
 # ToolBarItemOptions
 
-用于配置ToolBarItem的可选参数，主要通过placement设置工具栏项在标题栏的放置位置。
+ToolBarItem constructor options.
 
 **Since:** 23
 
@@ -16,7 +16,7 @@
 placement?: ToolBarItemPlacement
 ```
 
-设置工具栏项的放置位置。默认值: ToolBarItemPlacement.TOP_BAR_LEADING
+Vertical layout element spacing.
 
 **Type:** [ToolBarItemPlacement](../arkts-components/arkts-arkui-toolbaritemplacement-e.md)
 

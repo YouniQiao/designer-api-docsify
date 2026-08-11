@@ -9,7 +9,7 @@ type QueryFn = (
 ) => void
 ```
 
-查询操作的属性类型。
+Callback function called when querying one or more data records in the database.
 
 **Since:** 23
 

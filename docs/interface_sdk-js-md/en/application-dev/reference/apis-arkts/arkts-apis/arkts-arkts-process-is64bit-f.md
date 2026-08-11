@@ -12,7 +12,7 @@ import { process } from 'kits/@kit.ArkTS';
 function is64Bit(): boolean
 ```
 
-检查运行环境是否为 64 位。
+Checks whether this process is running in a 64-bit environment.
 
 **Since:** 8
 
@@ -28,7 +28,7 @@ function is64Bit(): boolean
 
 | Type | Description |
 | --- | --- |
-| boolean | 返回判断结果。如果运行环境是 64 位则返回 true； 否则返回 false。 |
+| boolean | Check result. The value **true** is returned if the process is running in a 64-bit environment; otherwise, **false** is returned. |
 
 ## Examples
 

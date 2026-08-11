@@ -1,6 +1,6 @@
 # Method (System API)
 
-SSAP方法。
+Describes the SSAP method.
 
 **Since:** 26.0.0
 
@@ -24,7 +24,7 @@ import { ssap } from 'kits/@kit.ConnectivityKit';
 methodUuid: string
 ```
 
-方法实例的UUID长度必须为36，由16进制数字字符和连字符共36个字符组成，形如“FFFFFFFF-1234-5678-ABCD-000000001234”，代表128比特标识。&lt;br&gt;不允许使用NearLink标准UUID。
+The UUID of a method instance.The length must be 36, The value consists of 36 hexadecimal digits and hyphens (-),for example, FFFFFFFF-1234-5678-ABCD-000000001234, indicating a 128-bit identifier.&lt;br&gt;NearLink standard UUIDs are not allowed.
 
 **Type:** string
 
@@ -46,7 +46,7 @@ methodUuid: string
 parameter?: ArrayBuffer
 ```
 
-方法实例的参数
+The parameter of a method instance.
 
 **Type:** ArrayBuffer
 
@@ -68,7 +68,7 @@ parameter?: ArrayBuffer
 result?: ArrayBuffer
 ```
 
-方法实例的结果
+The result of a method instance.
 
 **Type:** ArrayBuffer
 
@@ -90,7 +90,7 @@ result?: ArrayBuffer
 serviceUuid: string
 ```
 
-方法所属的{@link Service}实例的UUID长度必须为36，由16进制数字字符和连字符共36个字符组成，形如“FFFFFFFF-1234-5678-ABCD-000000001234”，代表128比特标识。&lt;br&gt;不允许使用NearLink标准UUID。
+The UUID of the {@link Service} instance to which the method belongs The length must be 36, The value consists of 36 hexadecimal digits and hyphens (-),for example, FFFFFFFF-1234-5678-ABCD-000000001234, indicating a 128-bit identifier.&lt;br&gt;NearLink standard UUIDs are not allowed.
 
 **Type:** string
 

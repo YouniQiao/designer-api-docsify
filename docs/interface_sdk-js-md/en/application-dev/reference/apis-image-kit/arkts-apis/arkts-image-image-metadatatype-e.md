@@ -1,6 +1,6 @@
 # MetadataType
 
-表示图片元数据类型的枚举。
+Enumerates image metadata types.
 
 **Since:** 13
 
@@ -16,7 +16,7 @@
 EXIF_METADATA = 1
 ```
 
-exif数据。
+Exif data.
 
 **Since:** 13
 
@@ -32,7 +32,7 @@ exif数据。
 FRAGMENT_METADATA = 2
 ```
 
-水印裁剪图元数据。
+Fragment map metadata.
 
 **Since:** 13
 
@@ -48,7 +48,7 @@ FRAGMENT_METADATA = 2
 GIF_METADATA = 5
 ```
 
-GIF图片元数据。
+GIF image metadata.
 
 **Since:** 20
 
@@ -64,7 +64,7 @@ GIF图片元数据。
 HEIFS_METADATA = 15
 ```
 
-HEIF序列图片元数据。
+Metadata of a HEIFS image.
 
 **Since:** 23
 
@@ -82,7 +82,7 @@ HEIF序列图片元数据。
 DNG_METADATA = 16
 ```
 
-DNG图片元数据。
+Metadata of a DNG image.
 
 **Since:** 24
 
@@ -100,7 +100,7 @@ DNG图片元数据。
 WEBP_METADATA = 17
 ```
 
-WebP图片元数据。
+Metadata of a WebP image.
 
 **Since:** 24
 
@@ -118,7 +118,7 @@ WebP图片元数据。
 PNG_METADATA = 19
 ```
 
-PNG图片元数据。
+Metadata of a PNG image.
 
 **Since:** 26.0.0
 
@@ -136,7 +136,7 @@ PNG图片元数据。
 JFIF_METADATA = 20
 ```
 
-JFIF图片元数据。
+Metadata of a JFIF image.
 
 **Since:** 26.0.0
 
@@ -154,7 +154,7 @@ JFIF图片元数据。
 TIFF_METADATA = 21
 ```
 
-TIFF图片元数据。
+Metadata of a TIFF image.
 
 **Since:** 26.0.0
 
@@ -172,7 +172,7 @@ TIFF图片元数据。
 XMP_METADATA = 22
 ```
 
-XMP图片元数据。
+XMP metadata.
 
 **Since:** 26.0.0
 
@@ -190,7 +190,7 @@ XMP图片元数据。
 AVIS_METADATA = 23
 ```
 
-AVIS图片元数据。
+Metadata of a Avis image.
 
 **Since:** 26.0.0
 

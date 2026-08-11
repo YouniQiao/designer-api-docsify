@@ -12,13 +12,7 @@ import { taskpool } from 'kits/@kit.ArkTS';
 function executePeriodically(period: number, task: Task, priority?: Priority): void
 ```
 
-周期任务每隔period时长执行一次。当前执行模式支持设置任务优先级，可通过cancel取消任务。
-
-> **说明：**
-> 
-> - 周期任务不能是任务组任务、串行队列任务或异步队列任务。
-> - 同一个周期任务不能多次调用该接口。
-> - 执行的任务不能拥有依赖关系。
+Executes a task periodically. In this execution mode, you can set the task priority and call **cancel()** to cancel the execution. A periodic task cannot be a task in a task group, serial queue, or asynchronous queue. It cannot call **execute()** again or have a dependency relationship.
 
 **Since:** 12
 
@@ -34,19 +28,19 @@ function executePeriodically(period: number, task: Task, priority?: Priority): v
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| period | number | Yes | 周期时长。单位：ms。period值必须要大于等于0。 |
-| task | [Task](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-agent-task-i.md) | Yes | 需要周期执行的任务。 |
-| priority | [Priority](arkts-arkts-taskpool-priority-e.md) | No | 周期执行的任务的优先级，该参数默认值为**taskpool.Priority.MEDIUM**。 |
+| period | number | Yes | Execution period, in ms. The value must be greater than or equal to 0. The value should be an integer. &lt;br&gt;Unit:milliseconds. |
+| task | [Task](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-agent-task-i.md) | Yes | Task to be executed. |
+| priority | [Priority](arkts-arkts-taskpool-priority-e.md) | No | Priority of the task. The default value is **taskpool.Priority.MEDIUM**. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 10200057 | The task cannot be executed by two APIs.<br>**Applicable version:** 18 and later |
-| 10200014 | The function is not marked as concurrent. |
-| 10200028 | The period is less than zero. |
-| 10200050 | The concurrent task has been executed and cannot be executed periodically. |
-| 10200006 | An exception occurred during serialization. |
+| [10200057](../errorcode-utils.md#10200057-task-cannot-be-executed-by-two-apis) | The task cannot be executed by two APIs.<br>**Applicable version:** 18 and later |
+| [10200014](../errorcode-utils.md#10200014-nonconcurrent-function-error) | The function is not marked as concurrent. |
+| [10200028](../errorcode-utils.md#10200028-delay-less-than-zero) | The period is less than zero. |
+| [10200050](../errorcode-utils.md#10200050-concurrent-task-that-has-been-executed-cannot-be-executed-periodically) | The concurrent task has been executed and cannot be executed periodically. |
+| [10200006](../errorcode-utils.md#10200006-worker-data-serialization-exception) | An exception occurred during serialization. |
 
 ## Examples
 
@@ -96,7 +90,7 @@ taskpoolTest();
 function executePeriodically<A extends Array<Object>, R>(period: number, task: GenericsTask<A, R>, priority?: Priority): void
 ```
 
-周期执行泛型任务，使用Promise异步回调。executePeriodically任务的类型校验与GenericsTask的构造类型相关联，参数类型和返回值类型需与new GenericsTask时指定的类型保持一致。
+Executes a generic task periodically, without verifying the parameter type and return value type of the task.The verification of the **executePeriodically** task works in conjunction with **new GenericsTask**, requiring that the parameter and return value types match those specified in **new GenericsTask**.
 
 **Since:** 13
 
@@ -112,19 +106,19 @@ function executePeriodically<A extends Array<Object>, R>(period: number, task: G
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| period | number | Yes | 周期时长。单位：ms。period值必须要大于等于0。 |
-| task | [GenericsTask](arkts-arkts-taskpool-genericstask-c.md)&lt;A, R&gt; | Yes | 需要周期执行的泛型任务。 |
-| priority | [Priority](arkts-arkts-taskpool-priority-e.md) | No | 周期执行的任务的优先级，该参数默认值为**taskpool.Priority.MEDIUM**。 |
+| period | number | Yes | Execution period, in ms. The value must be greater than or equal to 0. The value should be an integer. &lt;br&gt;Unit:milliseconds. |
+| task | [GenericsTask](arkts-arkts-taskpool-genericstask-c.md)&lt;A, R&gt; | Yes | Generic task to be executed periodically. |
+| priority | [Priority](arkts-arkts-taskpool-priority-e.md) | No | Priority of the task. The default value is **taskpool.Priority.MEDIUM**. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 10200057 | The task cannot be executed by two APIs.<br>**Applicable version:** 18 and later |
-| 10200014 | The function is not marked as concurrent. |
-| 10200028 | The period is less than zero. |
-| 10200050 | The concurrent task has been executed and cannot be executed periodically. |
-| 10200006 | An exception occurred during serialization. |
+| [10200057](../errorcode-utils.md#10200057-task-cannot-be-executed-by-two-apis) | The task cannot be executed by two APIs.<br>**Applicable version:** 18 and later |
+| [10200014](../errorcode-utils.md#10200014-nonconcurrent-function-error) | The function is not marked as concurrent. |
+| [10200028](../errorcode-utils.md#10200028-delay-less-than-zero) | The period is less than zero. |
+| [10200050](../errorcode-utils.md#10200050-concurrent-task-that-has-been-executed-cannot-be-executed-periodically) | The concurrent task has been executed and cannot be executed periodically. |
+| [10200006](../errorcode-utils.md#10200006-worker-data-serialization-exception) | An exception occurred during serialization. |
 
 ## Examples
 

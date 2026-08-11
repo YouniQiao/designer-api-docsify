@@ -1,6 +1,6 @@
 # AutoFillPopupConfig (System API)
 
-自动填充气泡弹窗的尺寸和位置信息。
+The module describes the size and position information of an auto-fill pop-up.
 
 **Since:** 12
 
@@ -18,7 +18,7 @@
 placement?: PopupPlacement
 ```
 
-气泡弹窗位置，不设置则不更新。
+Position of the auto-fill pop-up. If this parameter is not set, the position is not updated.
 
 **Type:** [PopupPlacement](arkts-ability-autofillmanager-popupplacement-t-sys.md)
 
@@ -40,7 +40,7 @@ placement?: PopupPlacement
 popupSize?: PopupSize
 ```
 
-气泡弹窗的宽和高，不设置则不更新。
+Width and height of the auto-fill pop-up. If this parameter is not set, the width and height are not updated.
 
 **Type:** [PopupSize](arkts-ability-autofillmanager-popupsize-t-sys.md)
 

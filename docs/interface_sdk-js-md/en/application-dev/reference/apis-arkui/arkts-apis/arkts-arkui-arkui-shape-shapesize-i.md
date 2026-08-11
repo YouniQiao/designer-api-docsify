@@ -1,6 +1,6 @@
 # ShapeSize
 
-形状的尺寸参数。
+Interface for shape size properties.
 
 **Since:** 23
 
@@ -22,13 +22,7 @@ import { RectShape, CircleShape, EllipseShape, PathShape } from 'kits/@kit.ArkUI
 height?: double | string
 ```
 
-形状的高度。 
-
-类型为number时取值范围是[0, +∞)，string时是[Length](arkts-arkui-length-t.md)。 
-
-单位：vp
-
-取值为异常值时按照0vp处理。
+Defines the height of Shape.
 
 **Type:** double \| string
 
@@ -48,13 +42,7 @@ height?: double | string
 width?: double | string
 ```
 
-形状的宽度。
-
-类型为number时取值范围是[0, +∞)，string时是[Length](arkts-arkui-length-t.md)。 
-
-单位：vp
-
-取值为异常值时按照0vp处理。
+Defines the width of Shape.
 
 **Type:** double \| string
 

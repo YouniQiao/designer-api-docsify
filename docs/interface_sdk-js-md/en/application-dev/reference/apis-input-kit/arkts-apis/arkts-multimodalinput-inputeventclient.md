@@ -1,10 +1,6 @@
 # @ohos.multimodalInput.inputEventClient(Input Event Injection)
 
-输入事件注入模块，提供输入按键、鼠标/触控板、触屏输入事件注入能力。
-
-> **说明：**
-> 
-> - 本模块接口为系统接口。
+The **inputEventClient** module provides the capability of injecting key, mouse/touchpad, and touchscreen events.
 
 **Since:** 26.0.0
 
@@ -26,27 +22,27 @@ import { inputEventClient } from 'kits/@kit.InputKit';
 
 | Name | Description |
 | --- | --- |
-| [createKeyboardController](arkts-input-inputeventclient-createkeyboardcontroller-f.md#createkeyboardcontroller) | 创建键盘控制器，用于模拟按键操作。使用Promise异步回调。 |
-| [createMouseController](arkts-input-inputeventclient-createmousecontroller-f.md#createmousecontroller) | 创建鼠标控制器，用于模拟鼠标操作。使用Promise异步回调。 |
-| [createTouchController](arkts-input-inputeventclient-createtouchcontroller-f.md#createtouchcontroller) | 创建触控控制器，用于模拟触控操作。使用Promise异步回调。 |
-| [injectEvent](arkts-input-inputeventclient-injectevent-f.md#injectevent) | 按键(包括单个按键和组合键)注入。 |
-| [injectEvent](arkts-input-inputeventclient-injectevent-f.md#injectevent-1) | 按键(包括单个按键和组合键)注入。 |
-| [injectKeyEvent](arkts-input-inputeventclient-injectkeyevent-f.md#injectkeyevent) | 按键(包括单个按键和组合键)事件注入。 |
-| [injectMouseEvent](arkts-input-inputeventclient-injectmouseevent-f.md#injectmouseevent) | 鼠标/触控板事件注入。 |
-| [injectTouchEvent](arkts-input-inputeventclient-injecttouchevent-f.md#injecttouchevent) | 触屏输入事件注入。 |
-| [permitInjection](arkts-input-inputeventclient-permitinjection-f.md#permitinjection) | 允许事件注入权限。 |
+| [createKeyboardController](arkts-input-inputeventclient-createkeyboardcontroller-f.md#createkeyboardcontroller) | Creates a keyboard controller for simulating key operations. This API uses a promise to return the result. |
+| [createMouseController](arkts-input-inputeventclient-createmousecontroller-f.md#createmousecontroller) | Creates a mouse controller for simulating mouse operations. This API uses a promise to return the result. |
+| [createTouchController](arkts-input-inputeventclient-createtouchcontroller-f.md#createtouchcontroller) | Creates a touch controller for simulating touch operations. This API uses a promise to return the result. |
+| [injectEvent](arkts-input-inputeventclient-injectevent-f.md#injectevent) | Injects keys (including single keys and combination keys). |
+| [injectEvent](arkts-input-inputeventclient-injectevent-f.md#injectevent-1) | Inject system keys. |
+| [injectKeyEvent](arkts-input-inputeventclient-injectkeyevent-f.md#injectkeyevent) | Injects key events (for both single keys and combination keys). |
+| [injectMouseEvent](arkts-input-inputeventclient-injectmouseevent-f.md#injectmouseevent) | Injects a mouse/touchpad event. |
+| [injectTouchEvent](arkts-input-inputeventclient-injecttouchevent-f.md#injecttouchevent) | Injects a touch event. |
+| [permitInjection](arkts-input-inputeventclient-permitinjection-f.md#permitinjection) | Specifies whether to authorize event injection. |
 
 ### Interfaces
 
 | Name | Description |
 | --- | --- |
-| [KeyEvent](arkts-input-inputeventclient-keyevent-i.md) | 按键注入描述信息。 |
-| [KeyEventData](arkts-input-inputeventclient-keyeventdata-i.md) | 按键注入描述信息。 |
-| [KeyEventInfo](arkts-input-inputeventclient-keyeventinfo-i.md) | 定义用户注入的按键事件信息。 |
-| [KeyboardController](arkts-input-inputeventclient-keyboardcontroller-i.md) | 提供模拟按键操作的功能。模拟按键操作序列必须满足以下要求：  1. 按键只能在抬起状态下被按下，或者在该按键是最近按下的按键且未抬起的情况下被按下。2. 按键只能在被按下后才能抬起。3. 最多可以同时按下并保持五个按键。 |
-| [MouseController](arkts-input-inputeventclient-mousecontroller-i.md) | 提供模拟鼠标操作的功能。模拟鼠标操作序列必须满足以下要求：  1. 鼠标按键只能在抬起状态下被按下。2. 鼠标按键只能在被按下后才能抬起。3. 有效的轴事件序列必须先调用beginAxis开始事件，然后调用零次或多次updateAxis更新事件，最后调用endAxis结束事件。4. 同一时间只能有一个进行中的轴事件序列。 |
-| [MouseEventData](arkts-input-inputeventclient-mouseeventdata-i.md) | 鼠标注入描述信息。 |
-| [TouchController](arkts-input-inputeventclient-touchcontroller-i.md) | 提供模拟触控操作的功能。模拟触控操作序列必须满足以下要求：  1. 所有触点的displayId必须相同。2. 每个触点都必须以`touchDown()`开始，以`touchUp()`结束，中间可包含多个`touchMove()`。 |
-| [TouchEventData](arkts-input-inputeventclient-toucheventdata-i.md) | 触屏注入描述信息。 |
-| [TouchPoint](arkts-input-inputeventclient-touchpoint-i.md) | 表示屏幕上的单个触点信息。 |
+| [KeyEvent](arkts-input-inputeventclient-keyevent-i.md) | Defines the key event to inject. |
+| [KeyEventData](arkts-input-inputeventclient-keyeventdata-i.md) | Defines the key event to inject. |
+| [KeyEventInfo](arkts-input-inputeventclient-keyeventinfo-i.md) | Defines the key event information injected by the user. |
+| [KeyboardController](arkts-input-inputeventclient-keyboardcontroller-i.md) | Provides the capability of simulating key operations. The simulated key operation sequence must meet the following requirements:  1. A key can only be pressed when it is in the released state, or when it is the most recently pressed key and has not been released.2. A key can only be released after it has been pressed.3. A maximum of five keys can be pressed and held simultaneously. |
+| [MouseController](arkts-input-inputeventclient-mousecontroller-i.md) | Provides the capability of simulating mouse operations. The simulated mouse operation sequence must meet the following requirements:  1. A mouse button can be pressed only when it is in the released state.2. A mouse button can only be released after it has been pressed.3. A valid axis event sequence must begin with a **beginAxis** call, followed by zero or more **updateAxis** calls,and end with an **endAxis** call.4. Only one axis event sequence can be in progress at a time. |
+| [MouseEventData](arkts-input-inputeventclient-mouseeventdata-i.md) | Defines the mouse event data. |
+| [TouchController](arkts-input-inputeventclient-touchcontroller-i.md) | Provides the capability of simulating touch operations. The simulated touch operation sequence must meet the following requirements:  1. All touch points must share the same **displayId**.2. Each touch point must begin with a **touchDown()** call, followed by zero or more **touchMove()** calls, and end with an **touchUp()** call. |
+| [TouchEventData](arkts-input-inputeventclient-toucheventdata-i.md) | Defines the touch event data. |
+| [TouchPoint](arkts-input-inputeventclient-touchpoint-i.md) | Represents information about a single touch point on the display. |
 

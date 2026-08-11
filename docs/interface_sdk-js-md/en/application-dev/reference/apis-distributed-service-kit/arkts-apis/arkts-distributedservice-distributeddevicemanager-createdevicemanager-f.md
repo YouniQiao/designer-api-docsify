@@ -12,7 +12,7 @@ import { distributedDeviceManager } from 'kits/@kit.DistributedServiceKit';
 function createDeviceManager(bundleName: string): DeviceManager
 ```
 
-创建一个设备管理实例。设备管理实例是分布式设备管理方法的调用入口。用于获取可信设备和本地设备的相关信息。
+Creates a **DeviceManager** instance. The **DeviceManager** instance is the entry for invoking the APIs for distributed device management. It can be used to obtain information about trusted devices and local devices.
 
 **Since:** 10
 
@@ -26,19 +26,19 @@ function createDeviceManager(bundleName: string): DeviceManager
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| bundleName | string | Yes | 指示应用程序的Bundle名称。长度范围1~255字符。 |
+| bundleName | string | Yes | Bundle name of the application. The value is a string of 1 to 255 characters. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [DeviceManager](arkts-distributedservice-distributeddevicemanager-devicemanager-i.md) | 返回设备管理器对象实例。 |
+| [DeviceManager](arkts-distributedservice-distributeddevicemanager-devicemanager-i.md) | DeviceManager** instance created. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter type; 3. Parameter verification failed. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter type; 3. Parameter verification failed. |
 
 ## Examples
 

@@ -1,6 +1,6 @@
 # NestedScrollOptionsExt
 
-通过NestedScrollOptionsExt可以设置上下左右四个方向的嵌套滚动规则。
+Implements a **NestedScrollOptionsExt** object to set up, down, left, and right nested scrolling options.
 
 **Since:** 14
 
@@ -16,9 +16,9 @@
 scrollDown?: NestedScrollMode
 ```
 
-可滚动组件往下滚动时的嵌套滚动选项。
+Nested scrolling options when the component scrolls down.
 
-默认值：NestedScrollMode.SELF_FIRST。
+Default value: **NestedScrollMode.SELF_FIRST**.
 
 **Type:** [NestedScrollMode](../../apis-arkui/arkts-apis/arkts-arkui-nestedscrollmode-e.md)
 
@@ -36,9 +36,9 @@ scrollDown?: NestedScrollMode
 scrollLeft?: NestedScrollMode
 ```
 
-可滚动组件往左滚动时的嵌套滚动选项。
+Nested scrolling options when the component scrolls left.
 
-默认值：NestedScrollMode.SELF_FIRST。
+Default value: **NestedScrollMode.SELF_FIRST**.
 
 **Type:** [NestedScrollMode](../../apis-arkui/arkts-apis/arkts-arkui-nestedscrollmode-e.md)
 
@@ -56,9 +56,9 @@ scrollLeft?: NestedScrollMode
 scrollRight?: NestedScrollMode
 ```
 
-可滚动组件往右滚动时的嵌套滚动选项。
+Nested scrolling options when the component scrolls right.
 
-默认值：NestedScrollMode.SELF_FIRST。
+Default value: **NestedScrollMode.SELF_FIRST**.
 
 **Type:** [NestedScrollMode](../../apis-arkui/arkts-apis/arkts-arkui-nestedscrollmode-e.md)
 
@@ -76,9 +76,9 @@ scrollRight?: NestedScrollMode
 scrollUp?: NestedScrollMode
 ```
 
-可滚动组件往上滚动时的嵌套滚动选项。
+Nested scrolling options when the component scrolls up.
 
-默认值：NestedScrollMode.SELF_FIRST。
+Default value: **NestedScrollMode.SELF_FIRST**.
 
 **Type:** [NestedScrollMode](../../apis-arkui/arkts-apis/arkts-arkui-nestedscrollmode-e.md)
 

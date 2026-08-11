@@ -12,7 +12,7 @@ import { mechanicManager } from 'kits/@kit.MechanicKit';
 function getCameraTrackingLayout(): CameraTrackingLayout
 ```
 
-获取当前摄像头跟踪布局
+Obtains the camera tracking layout of this mechanical device.
 
 **Since:** 20
 
@@ -26,21 +26,20 @@ function getCameraTrackingLayout(): CameraTrackingLayout
 
 | Type | Description |
 | --- | --- |
-| [CameraTrackingLayout](arkts-mechanic-mechanicmanager-cameratrackinglayout-e.md) | 返回当前布局 |
+| [CameraTrackingLayout](arkts-mechanic-mechanicmanager-cameratrackinglayout-e.md) | Camera tracking layout obtained. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 33300001 | Service exception. |
-| 33300002 | Device not connected. |
+| [33300001](../errorcode-mechanic.md#33300001-system-error) | Service exception. |
+| [33300002](../errorcode-mechanic.md#33300002-device-not-connected) | Device not connected. |
 
 ## Examples
 
 ```TypeScript
 console.info('Query layout');
-// Call getCameraTrackingLayout to obtain the current camera tracking layout.
 let layout = mechanicManager.getCameraTrackingLayout();
-console.info(`'Succeeded in querying layout, current layout:' ${layout}`);
+console.info(`'Query layout successful, current layout:' ${layout}`);
 ```
 

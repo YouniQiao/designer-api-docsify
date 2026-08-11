@@ -20,7 +20,7 @@ import { font } from 'kits/@kit.ArkUI';
 name: string
 ```
 
-别名名称。
+Font set name.
 
 **Type:** string
 
@@ -40,9 +40,7 @@ name: string
 weight: double
 ```
 
-当weight>0时表示此字体集只包含所指定weight的字体，当weight=0时，表示此字体集包含所有字体。
-
-可返回的值有0、100、400、700、900。
+Weight the font set contains only fonts with, if weight = 0,this font set can contain fonts with any weight.
 
 **Type:** double
 

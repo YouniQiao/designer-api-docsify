@@ -1,6 +1,6 @@
 # EventType (System API)
 
-系统事件类型枚举。
+Enumerate system event types.
 
 **Since:** 9
 
@@ -18,7 +18,7 @@
 FAULT = 1
 ```
 
-错误事件类型。
+Error event.
 
 **Since:** 9
 
@@ -36,7 +36,7 @@ FAULT = 1
 STATISTIC = 2
 ```
 
-统计事件类型。
+Statistic event.
 
 **Since:** 9
 
@@ -54,7 +54,7 @@ STATISTIC = 2
 SECURITY = 3
 ```
 
-安全事件类型。
+Security event.
 
 **Since:** 9
 
@@ -72,7 +72,7 @@ SECURITY = 3
 BEHAVIOR = 4
 ```
 
-用户行为事件类型。
+User behavior event.
 
 **Since:** 9
 

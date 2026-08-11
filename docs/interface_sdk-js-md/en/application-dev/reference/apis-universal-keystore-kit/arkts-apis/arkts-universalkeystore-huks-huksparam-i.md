@@ -1,6 +1,6 @@
 # HuksParam
 
-调用接口使用的options中的properties数组中的param。
+Defines the **param** field in the **properties** array of **options** used in the APIs.
 
 **Since:** 8
 
@@ -22,7 +22,7 @@ import { huks } from 'kits/@kit.UniversalKeystoreKit';
 tag: HuksTag
 ```
 
-标签。
+Tag.
 
 **Type:** [HuksTag](arkts-universalkeystore-huks-hukstag-e.md)
 
@@ -42,7 +42,7 @@ tag: HuksTag
 value: boolean | number | bigint | Uint8Array
 ```
 
-标签对应值。
+Value of the tag.
 
 **Type:** boolean \| number \| bigint \| Uint8Array
 

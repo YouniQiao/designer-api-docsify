@@ -1,11 +1,5 @@
 # offSessionCreate
 
-## 导入模块
-
-```TypeScript
-import { avSession } from 'kits/@kit.AVSessionKit';
-```
-
 ## offSessionCreate
 
 ```TypeScript
@@ -34,8 +28,8 @@ Unregister session create callback
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 6600101 | Session service exception. |
-| 201 | permission denied. |
+| [6600101](../errorcode-avsession.md#6600101-会话服务端异常) | Session service exception. |
+| [201](../../errorcode-universal.md#201-权限校验失败) | permission denied. |
 
 ## 示例
 
@@ -59,5 +53,9 @@ struct Index {
     .height('100%')
   }
 }
+```
+
+```TypeScript
+avSession.offSessionCreate();
 ```
 

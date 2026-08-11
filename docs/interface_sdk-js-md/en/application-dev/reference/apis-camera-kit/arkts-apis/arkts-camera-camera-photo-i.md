@@ -1,6 +1,6 @@
 # Photo
 
-全质量图对象。
+Photo defines a full-quality image object.
 
 **Since:** 11
 

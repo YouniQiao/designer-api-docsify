@@ -1,6 +1,7 @@
 # ChildProcess
 
-开发者自定义子进程的基类。通过[childProcessManager](arkts-app-ability-childprocessmanager.md)启动子进程时，需要继承此类并重写入口方法。
+ChildProcess is the base class for you to customize child processes. When starting a child process through  
+[childProcessManager](arkts-app-ability-childprocessmanager.md), you must inherit this class and override the entrypoint method.
 
 **Since:** 11
 
@@ -22,7 +23,8 @@ import { ChildProcess } from 'kits/@kit.AbilityKit';
 onStart(args?: ChildProcessArgs): void
 ```
 
-子进程的入口方法，通过[childProcessManager](arkts-app-ability-childprocessmanager.md)启动子进程后调用。
+Entrypoint method of the child process. This callback is triggered when the child process is started through  
+[childProcessManager](arkts-app-ability-childprocessmanager.md).
 
 **Since:** 11
 
@@ -38,7 +40,7 @@ onStart(args?: ChildProcessArgs): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| args | [ChildProcessArgs](arkts-ability-app-ability-childprocessargs-childprocessargs-i.md) | No | 传递到子进程的参数。 |
+| args | [ChildProcessArgs](arkts-ability-app-ability-childprocessargs-childprocessargs-i.md) | No | Parameters transferred to the child process. |
 
 ## Examples
 

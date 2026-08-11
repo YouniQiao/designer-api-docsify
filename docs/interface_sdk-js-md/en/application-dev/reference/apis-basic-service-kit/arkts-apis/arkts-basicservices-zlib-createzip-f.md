@@ -12,7 +12,7 @@ import { zlib } from 'kits/@kit.BasicServicesKit';
 function createZip(): Promise<Zip>
 ```
 
-创建压缩解压缩对象实例。使用Promise异步回调。
+Creates this **Zip** instance. This API uses a promise to return the result.
 
 **Since:** 12
 
@@ -28,7 +28,7 @@ function createZip(): Promise<Zip>
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;Zip&gt; | Promise对象。返回压缩解压缩对象实例。 |
+| Promise&lt;Zip&gt; | Promise used to return the **Zip** instance created. |
 
 ## Examples
 

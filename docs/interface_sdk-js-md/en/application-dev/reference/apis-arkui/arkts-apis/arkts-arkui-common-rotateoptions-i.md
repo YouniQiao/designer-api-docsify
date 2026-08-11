@@ -1,6 +1,6 @@
 # RotateOptions
 
-组件旋转参数。
+The param of rotate.
 
 **Since:** 23
 
@@ -16,9 +16,7 @@
 angle: double | string
 ```
 
-旋转角度。取值为正时相对于旋转轴方向顺时针转动，取值为负时相对于旋转轴方向逆时针转动。取值可为string类型，如'90deg'。
-
-默认值：0
+The param of angle.
 
 **Type:** double \| string
 
@@ -38,11 +36,7 @@ angle: double | string
 centerX?: double | string
 ```
 
-变换中心点x轴坐标。表示组件变换中心点（即锚点）的x方向坐标。取值可为string类型，如'50'，'50%'。
-
-单位：vp
-
-默认值：'50%'
+X coordinate of the transformation center point (anchor). Unit is vp.
 
 **Type:** double \| string
 
@@ -62,11 +56,7 @@ centerX?: double | string
 centerY?: double | string
 ```
 
-变换中心点y轴坐标。表示组件变换中心点（即锚点）的y方向坐标。取值可为string类型，如'50'，'50%'。
-
-单位：vp
-
-默认值：'50%'
+Y coordinate of the transformation center point (anchor). Unit is vp.
 
 **Type:** double \| string
 
@@ -86,11 +76,7 @@ centerY?: double | string
 centerZ?: double
 ```
 
-z轴锚点，即3D旋转中心点的z轴分量。
-
-默认值：0
-
-单位：px
+Z-axis anchor, that is, the z-component of the 3D rotation center point.
 
 **Type:** double
 
@@ -112,11 +98,7 @@ z轴锚点，即3D旋转中心点的z轴分量。
 perspective?: double
 ```
 
-相机放置的z轴坐标。数值大小表示视距，即相机到z=0平面的距离。取值的正负决定了相机观察的方向。当perspective=0，系统会自动计算适合的相机z轴位置，取值为负数。
-
-默认值：0
-
-单位：px
+Distance from the user to the z=0 plane.The axis and center of rotation are set based on the coordinate system,which remains where it is when the component is moved.
 
 **Type:** double
 
@@ -138,9 +120,7 @@ perspective?: double
 x?: double
 ```
 
-旋转轴向量x坐标。
-
-默认值：0
+X coordinate of the rotation axis vector.
 
 **Type:** double
 
@@ -160,9 +140,7 @@ x?: double
 y?: double
 ```
 
-旋转轴向量y坐标。
-
-默认值：0
+Y coordinate of the rotation axis vector.
 
 **Type:** double
 
@@ -182,9 +160,7 @@ y?: double
 z?: double
 ```
 
-旋转轴向量z坐标。
-
-默认值：0
+Z coordinate of the rotation axis vector.
 
 **Type:** double
 

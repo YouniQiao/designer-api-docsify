@@ -54,7 +54,7 @@ status: NativeEmbedParamStatus
 
 param元素的状态变化类型。
 
-**类型：** [NativeEmbedParamStatus](../arkts-apis/arkts-arkweb-web-nativeembedparamstatus-e.md)
+**类型：** [NativeEmbedParamStatus](arkts-arkweb-nativeembedparamstatus-e.md)
 
 **起始版本：** 21
 

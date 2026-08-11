@@ -56,7 +56,7 @@ getDirection(): PanDirection
 
 | 类型 | 说明 |
 | --- | --- |
-| [PanDirection](arkts-arkui-gesture-pandirection-e.md) | 滑动方向。 |
+| [PanDirection](arkts-arkui-pandirection-e.md) | 滑动方向。 |
 
 ## getDistance
 
@@ -104,7 +104,7 @@ setDirection(value: PanDirection): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | [PanDirection](arkts-arkui-gesture-pandirection-e.md) | 是 | 用于指定触发滑动的手势方向，此枚举值支持逻辑与(&)和逻辑或（\|）运算。&lt;br/&gt;默认值：PanDirection.All |
+| value | [PanDirection](arkts-arkui-pandirection-e.md) | 是 | 用于指定触发滑动的手势方向，此枚举值支持逻辑与(&)和逻辑或（\|）运算。&lt;br/&gt;默认值：PanDirection.All |
 
 ## setDistance
 

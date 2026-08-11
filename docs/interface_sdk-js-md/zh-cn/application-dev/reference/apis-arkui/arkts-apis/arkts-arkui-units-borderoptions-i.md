@@ -82,7 +82,7 @@ radius?: BorderRadiuses | Length | LocalizedBorderRadiuses
 
 设置边框圆角半径。
 
-**类型：** [BorderRadiuses](arkts-arkui-units-borderradiuses-i.md) \| Length \| LocalizedBorderRadiuses
+**类型：** [BorderRadiuses](arkts-arkui-borderradiuses-t.md) \| Length \| LocalizedBorderRadiuses
 
 **起始版本：** 23
 

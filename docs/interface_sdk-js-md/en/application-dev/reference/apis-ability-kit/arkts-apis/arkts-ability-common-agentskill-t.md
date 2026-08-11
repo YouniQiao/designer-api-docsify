@@ -4,7 +4,7 @@
 export type AgentSkill = _AgentSkill
 ```
 
-AgentCard中的技能表示特定的 skills、专业知识和熟练程度用于执行任务或解决问题的代理。
+Skills in an AgentCard represent the specific abilities, expertise, and proficiencies that an agent possesses for performing tasks or solving problems.
 
 **Since:** 24
 

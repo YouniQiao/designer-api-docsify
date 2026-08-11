@@ -16,12 +16,6 @@
 
 **系统能力：** SystemCapability.Multimedia.Audio.Core
 
-## 导入模块
-
-```TypeScript
-import { audio } from 'kits/@kit.AudioKit';
-```
-
 ## activateAudioSession
 
 ```TypeScript
@@ -56,9 +50,9 @@ activateAudioSession(strategy: AudioSessionStrategy): Promise<void>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1.Mandatory parameters unspecified. 2.Incorrect parameter types. |
-| 6800101 | Parameter verification failed. |
-| 6800301 | System error. Possible causes: 1.Focus preemption failure. 2.Audio server process died. |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1.Mandatory parameters unspecified. 2.Incorrect parameter types. |
+| [6800101](../errorcode-audio.md#6800101-无效入参) | Parameter verification failed. |
+| [6800301](../errorcode-audio.md#6800301-系统处理异常) | System error. Possible causes: 1.Focus preemption failure. 2.Audio server process died. |
 
 ## clearSelectedMediaInputDevice
 
@@ -86,7 +80,7 @@ clearSelectedMediaInputDevice(): Promise<void>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 6800301 | Audio client call audio service error, System error. |
+| [6800301](../errorcode-audio.md#6800301-系统处理异常) | Audio client call audio service error, System error. |
 
 ## deactivateAudioSession
 
@@ -116,7 +110,7 @@ deactivateAudioSession(): Promise<void>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 6800301 | System error. Possible causes: 1.The audio session is not existed or has been released. 2.Audio server process died. |
+| [6800301](../errorcode-audio.md#6800301-系统处理异常) | System error. Possible causes: 1.The audio session is not existed or has been released. 2.Audio server process died. |
 
 ## enableMuteSuggestionWhenMixWithOthers
 
@@ -154,8 +148,8 @@ enableMuteSuggestionWhenMixWithOthers(enable: boolean): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 6800103 | Function is called without setting {@link #AudioSessionScene} or called after audio session activation. |
-| 6800301 | Audio client call audio service error, system internal error. |
+| [6800103](../errorcode-audio.md#6800103-状态不支持) | Function is called without setting {@link #AudioSessionScene} or called after audio session activation. |
+| [6800301](../errorcode-audio.md#6800301-系统处理异常) | Audio client call audio service error, system internal error. |
 
 ## getAvailableDevices
 
@@ -189,8 +183,8 @@ getAvailableDevices(deviceUsage: DeviceUsage): AudioDeviceDescriptors
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 6800101 | Parameter verification failed. |
-| 6800301 | Audio client call audio service error, System error. |
+| [6800101](../errorcode-audio.md#6800101-无效入参) | Parameter verification failed. |
+| [6800301](../errorcode-audio.md#6800301-系统处理异常) | Audio client call audio service error, System error. |
 
 ## getBluetoothAndNearlinkPreferredRecordCategory
 
@@ -219,7 +213,7 @@ getBluetoothAndNearlinkPreferredRecordCategory(): BluetoothAndNearlinkPreferredR
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 6800301 | Audio client call audio service error, System error. |
+| [6800301](../errorcode-audio.md#6800301-系统处理异常) | Audio client call audio service error, System error. |
 
 ## getDefaultOutputDevice
 
@@ -241,14 +235,14 @@ getDefaultOutputDevice(): DeviceType
 
 | 类型 | 说明 |
 | --- | --- |
-| [DeviceType](../../apis-avsession-kit/arkts-apis/arkts-avsession-avsession-devicetype-e.md) | 设备类型。 &lt;br&gt;仅支持以下设备：EARPIECE（听筒）、SPEAKER（扬声器）和DEFAULT（系统默认设备）。 |
+| [DeviceType](../../apis-localization-kit/arkts-apis/arkts-localization-resourcemanager-devicetype-e.md) | 设备类型。 &lt;br&gt;仅支持以下设备：EARPIECE（听筒）、SPEAKER（扬声器）和DEFAULT（系统默认设备）。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 6800103 | Operation not permit at current state. Return by promise. |
-| 6800101 | Parameter verification failed. |
+| [6800103](../errorcode-audio.md#6800103-状态不支持) | Operation not permit at current state. Return by promise. |
+| [6800101](../errorcode-audio.md#6800101-无效入参) | Parameter verification failed. |
 
 ## getSelectedMediaInputDevice
 
@@ -276,7 +270,7 @@ getSelectedMediaInputDevice(): AudioDeviceDescriptor
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 6800301 | Audio client call audio service error, System error. |
+| [6800301](../errorcode-audio.md#6800301-系统处理异常) | Audio client call audio service error, System error. |
 
 ## isAudioSessionActivated
 
@@ -355,8 +349,8 @@ off(type: 'audioSessionDeactivated', callback?: Callback<AudioSessionDeactivated
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
-| 6800101 | Parameter verification failed. |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
+| [6800101](../errorcode-audio.md#6800101-无效入参) | Parameter verification failed. |
 
 ## off('audioSessionStateChanged')
 
@@ -385,8 +379,8 @@ off(type: 'audioSessionStateChanged', callback?: Callback<AudioSessionStateChang
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 6800101 | Parameter verification failed. |
-| 6800301 | Audio client call audio service error, System error. |
+| [6800101](../errorcode-audio.md#6800101-无效入参) | Parameter verification failed. |
+| [6800301](../errorcode-audio.md#6800301-系统处理异常) | Audio client call audio service error, System error. |
 
 ## off('currentOutputDeviceChanged')
 
@@ -415,8 +409,8 @@ off(type: 'currentOutputDeviceChanged', callback?: Callback<CurrentOutputDeviceC
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 6800101 | Parameter verification failed. |
-| 6800301 | Audio client call audio service error, System error. |
+| [6800101](../errorcode-audio.md#6800101-无效入参) | Parameter verification failed. |
+| [6800301](../errorcode-audio.md#6800301-系统处理异常) | Audio client call audio service error, System error. |
 
 ## off('availableDeviceChange')
 
@@ -445,7 +439,7 @@ off(type: 'availableDeviceChange', callback?: Callback<DeviceChangeAction>): voi
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 6800301 | Audio client call audio service error, System error. |
+| [6800301](../errorcode-audio.md#6800301-系统处理异常) | Audio client call audio service error, System error. |
 
 ## off('currentInputDeviceChanged')
 
@@ -474,7 +468,7 @@ off(type: 'currentInputDeviceChanged', callback?: Callback<CurrentInputDeviceCha
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 6800301 | Audio client call audio service error, System error. |
+| [6800301](../errorcode-audio.md#6800301-系统处理异常) | Audio client call audio service error, System error. |
 
 ## offAudioSessionDeactivated
 
@@ -505,7 +499,7 @@ offAudioSessionDeactivated(callback?: Callback<AudioSessionDeactivatedEvent>): v
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 6800101 | Parameter verification failed.<br>**适用版本：** 23+ |
+| [6800101](../errorcode-audio.md#6800101-无效入参) | Parameter verification failed.<br>**适用版本：** 23+ |
 
 ## offAudioSessionStateChanged
 
@@ -533,8 +527,8 @@ Unsubscribes to audio session deactivated event.
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 6800101 | Parameter verification failed. |
-| 6800301 | Audio client call audio service error, System error. |
+| [6800101](../errorcode-audio.md#6800101-无效入参) | Parameter verification failed. |
+| [6800301](../errorcode-audio.md#6800301-系统处理异常) | Audio client call audio service error, System error. |
 
 ## offAvailableDeviceChange
 
@@ -562,7 +556,7 @@ Unsubscribes to available device change events.
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 6800301 | Audio client call audio service error, System error. |
+| [6800301](../errorcode-audio.md#6800301-系统处理异常) | Audio client call audio service error, System error. |
 
 ## offCurrentInputDeviceChanged
 
@@ -590,7 +584,7 @@ Unsubscribes current input device change events.
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 6800301 | Audio client call audio service error, System error. |
+| [6800301](../errorcode-audio.md#6800301-系统处理异常) | Audio client call audio service error, System error. |
 
 ## offCurrentOutputDeviceChanged
 
@@ -618,8 +612,8 @@ Unsubscribes output device change event callback.
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 6800101 | Parameter verification failed. |
-| 6800301 | Audio client call audio service error, System error. |
+| [6800101](../errorcode-audio.md#6800101-无效入参) | Parameter verification failed. |
+| [6800301](../errorcode-audio.md#6800301-系统处理异常) | Audio client call audio service error, System error. |
 
 ## on('audioSessionDeactivated')
 
@@ -650,8 +644,8 @@ on(type: 'audioSessionDeactivated', callback: Callback<AudioSessionDeactivatedEv
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1.Mandatory parameters unspecified. 2.Incorrect parameter types. |
-| 6800101 | Parameter verification failed. |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1.Mandatory parameters unspecified. 2.Incorrect parameter types. |
+| [6800101](../errorcode-audio.md#6800101-无效入参) | Parameter verification failed. |
 
 ## on('audioSessionStateChanged')
 
@@ -680,9 +674,9 @@ on(type: 'audioSessionStateChanged', callback: Callback<AudioSessionStateChanged
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 6800102 | Allocate memory failed. |
-| 6800101 | Parameter verification failed. |
-| 6800301 | Audio client call audio service error, System error. |
+| [6800102](../errorcode-audio.md#6800102-分配内存失败) | Allocate memory failed. |
+| [6800101](../errorcode-audio.md#6800101-无效入参) | Parameter verification failed. |
+| [6800301](../errorcode-audio.md#6800301-系统处理异常) | Audio client call audio service error, System error. |
 
 ## on('currentOutputDeviceChanged')
 
@@ -711,9 +705,9 @@ on(type: 'currentOutputDeviceChanged', callback: Callback<CurrentOutputDeviceCha
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 6800102 | Allocate memory failed. |
-| 6800101 | Parameter verification failed. |
-| 6800301 | Audio client call audio service error, System error. |
+| [6800102](../errorcode-audio.md#6800102-分配内存失败) | Allocate memory failed. |
+| [6800101](../errorcode-audio.md#6800101-无效入参) | Parameter verification failed. |
+| [6800301](../errorcode-audio.md#6800301-系统处理异常) | Audio client call audio service error, System error. |
 
 ## on('availableDeviceChange')
 
@@ -743,8 +737,8 @@ on(type: 'availableDeviceChange', deviceUsage: DeviceUsage, callback: Callback<D
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 6800101 | Parameter verification failed. |
-| 6800301 | Audio client call audio service error, System error. |
+| [6800101](../errorcode-audio.md#6800101-无效入参) | Parameter verification failed. |
+| [6800301](../errorcode-audio.md#6800301-系统处理异常) | Audio client call audio service error, System error. |
 
 ## on('currentInputDeviceChanged')
 
@@ -773,8 +767,8 @@ on(type: 'currentInputDeviceChanged', callback: Callback<CurrentInputDeviceChang
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 6800101 | Parameter verification failed. |
-| 6800301 | Audio client call audio service error, System error. |
+| [6800101](../errorcode-audio.md#6800101-无效入参) | Parameter verification failed. |
+| [6800301](../errorcode-audio.md#6800301-系统处理异常) | Audio client call audio service error, System error. |
 
 ## onAudioSessionDeactivated
 
@@ -805,7 +799,7 @@ Listens for audio session deactivated event. When the audio session is deactivat
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 6800101 | Parameter verification failed.<br>**适用版本：** 23+ |
+| [6800101](../errorcode-audio.md#6800101-无效入参) | Parameter verification failed.<br>**适用版本：** 23+ |
 
 ## onAudioSessionStateChanged
 
@@ -833,9 +827,9 @@ Listens for audio session state change event. When the audio session state chang
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 6800102 | Allocate memory failed. |
-| 6800101 | Parameter verification failed. |
-| 6800301 | Audio client call audio service error, System error. |
+| [6800102](../errorcode-audio.md#6800102-分配内存失败) | Allocate memory failed. |
+| [6800101](../errorcode-audio.md#6800101-无效入参) | Parameter verification failed. |
+| [6800301](../errorcode-audio.md#6800301-系统处理异常) | Audio client call audio service error, System error. |
 
 ## onAvailableDeviceChange
 
@@ -864,8 +858,8 @@ Subscribes to available device change events. When a device is connected/disconn
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 6800101 | Parameter verification failed. |
-| 6800301 | Audio client call audio service error, System error. |
+| [6800101](../errorcode-audio.md#6800101-无效入参) | Parameter verification failed. |
+| [6800301](../errorcode-audio.md#6800301-系统处理异常) | Audio client call audio service error, System error. |
 
 ## onCurrentInputDeviceChanged
 
@@ -893,8 +887,8 @@ Subscribes input device change event callback. The event is triggered when curre
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 6800101 | Parameter verification failed. |
-| 6800301 | Audio client call audio service error, System error. |
+| [6800101](../errorcode-audio.md#6800101-无效入参) | Parameter verification failed. |
+| [6800301](../errorcode-audio.md#6800301-系统处理异常) | Audio client call audio service error, System error. |
 
 ## onCurrentOutputDeviceChanged
 
@@ -922,9 +916,9 @@ Subscribes output device change event callback.The event is triggered when devic
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 6800102 | Allocate memory failed. |
-| 6800101 | Parameter verification failed. |
-| 6800301 | Audio client call audio service error, System error. |
+| [6800102](../errorcode-audio.md#6800102-分配内存失败) | Allocate memory failed. |
+| [6800101](../errorcode-audio.md#6800101-无效入参) | Parameter verification failed. |
+| [6800301](../errorcode-audio.md#6800301-系统处理异常) | Audio client call audio service error, System error. |
 
 ## selectMediaInputDevice
 
@@ -971,8 +965,8 @@ selectMediaInputDevice(inputAudioDevice: AudioDeviceDescriptor): Promise<void>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 6800101 | Parameter verification failed, for example, the selected device does not exist. |
-| 6800301 | Audio client call audio service error, System error. |
+| [6800101](../errorcode-audio.md#6800101-无效入参) | Parameter verification failed, for example, the selected device does not exist. |
+| [6800301](../errorcode-audio.md#6800301-系统处理异常) | Audio client call audio service error, System error. |
 
 ## setAudioSessionBehavior
 
@@ -1012,8 +1006,8 @@ setAudioSessionBehavior(behavior: int): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 6800103 | Operation not permitted in the current state. |
-| 6800101 | Parameter verification failed. |
+| [6800103](../errorcode-audio.md#6800103-状态不支持) | Operation not permitted in the current state. |
+| [6800101](../errorcode-audio.md#6800101-无效入参) | Parameter verification failed. |
 
 ## setAudioSessionScene
 
@@ -1041,9 +1035,9 @@ setAudioSessionScene(scene: AudioSessionScene): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 6800103 | Operation not permit at current state. |
-| 6800101 | Parameter verification failed. |
-| 6800301 | Audio client call audio service error, System error. |
+| [6800103](../errorcode-audio.md#6800103-状态不支持) | Operation not permit at current state. |
+| [6800101](../errorcode-audio.md#6800101-无效入参) | Parameter verification failed. |
+| [6800301](../errorcode-audio.md#6800301-系统处理异常) | Audio client call audio service error, System error. |
 
 ## setBluetoothAndNearlinkPreferredRecordCategory
 
@@ -1087,8 +1081,8 @@ setBluetoothAndNearlinkPreferredRecordCategory(category: BluetoothAndNearlinkPre
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 6800101 | Parameter verification failed. |
-| 6800301 | Audio client call audio service error, System error. |
+| [6800101](../errorcode-audio.md#6800101-无效入参) | Parameter verification failed. |
+| [6800301](../errorcode-audio.md#6800301-系统处理异常) | Audio client call audio service error, System error. |
 
 ## setCapturerMuteHint
 
@@ -1132,7 +1126,7 @@ setCapturerMuteHint(mute: boolean): Promise<void>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 6800103 | Operation not permitted at current state, there is no audio capturer running. |
+| [6800103](../errorcode-audio.md#6800103-状态不支持) | Operation not permitted at current state, there is no audio capturer running. |
 
 ## setDefaultOutputDevice
 
@@ -1163,7 +1157,7 @@ setDefaultOutputDevice(deviceType: DeviceType): Promise<void>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| deviceType | [DeviceType](../../apis-avsession-kit/arkts-apis/arkts-avsession-avsession-devicetype-e.md) | 是 | 设备类型。 &lt;br&gt;仅支持以下设备：EARPIECE（听筒）、SPEAKER（扬声器）和DEFAULT（系统默认设备）。 |
+| deviceType | [DeviceType](../../apis-localization-kit/arkts-apis/arkts-localization-resourcemanager-devicetype-e.md) | 是 | 设备类型。 &lt;br&gt;仅支持以下设备：EARPIECE（听筒）、SPEAKER（扬声器）和DEFAULT（系统默认设备）。 |
 
 **返回值：**
 
@@ -1175,9 +1169,9 @@ setDefaultOutputDevice(deviceType: DeviceType): Promise<void>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 6800102 | Allocate memory failed. Return by promise. |
-| 6800101 | Parameter verification failed. Return by promise. |
-| 6800301 | Audio client call audio service error, System error. |
+| [6800102](../errorcode-audio.md#6800102-分配内存失败) | Allocate memory failed. Return by promise. |
+| [6800101](../errorcode-audio.md#6800101-无效入参) | Parameter verification failed. Return by promise. |
+| [6800301](../errorcode-audio.md#6800301-系统处理异常) | Audio client call audio service error, System error. |
 
 ## setMediaOutputDevice
 
@@ -1210,7 +1204,7 @@ setMediaOutputDevice(deviceType: DeviceType): Promise<void>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| deviceType | [DeviceType](../../apis-avsession-kit/arkts-apis/arkts-avsession-avsession-devicetype-e.md) | 是 | 设备类型。 &lt;br&gt;仅支持以下设备：SPEAKER（扬声器）和DEFAULT（系统默认设备）。 |
+| deviceType | [DeviceType](../../apis-localization-kit/arkts-apis/arkts-localization-resourcemanager-devicetype-e.md) | 是 | 设备类型。 &lt;br&gt;仅支持以下设备：SPEAKER（扬声器）和DEFAULT（系统默认设备）。 |
 
 **返回值：**
 
@@ -1222,6 +1216,6 @@ setMediaOutputDevice(deviceType: DeviceType): Promise<void>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 6800101 | Parameter verification failed, for example, the selected device type is not supported. |
-| 6800301 | System error. Possible causes: 1.Internal variable memory allocation failed. 2.Audio server process died. 3.Speaker device is not available. |
+| [6800101](../errorcode-audio.md#6800101-无效入参) | Parameter verification failed, for example, the selected device type is not supported. |
+| [6800301](../errorcode-audio.md#6800301-系统处理异常) | System error. Possible causes: 1.Internal variable memory allocation failed. 2.Audio server process died. 3.Speaker device is not available. |
 

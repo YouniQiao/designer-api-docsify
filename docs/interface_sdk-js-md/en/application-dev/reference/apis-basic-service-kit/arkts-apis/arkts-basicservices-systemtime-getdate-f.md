@@ -12,7 +12,7 @@ import { systemTime } from 'kits/@kit.BasicServicesKit';
 function getDate(callback: AsyncCallback<Date>): void
 ```
 
-获取当前系统日期，使用callback异步回调。
+Obtains the current system date. This API uses an asynchronous callback to return the result.
 
 **Since:** 8
 
@@ -20,7 +20,7 @@ function getDate(callback: AsyncCallback<Date>): void
 
 **Deprecated since:** 9
 
-**Substitutes:** [@ohos.systemDateTime:systemDateTime.getDate](arkts-basicservices-systemdatetime-getdate-f.md#getdate)
+**Substitutes:** [@ohos.systemDateTime:systemDateTime.setDate](arkts-basicservices-systemdatetime-setdate-f-sys.md#setdate)
 
 <!--Device-systemTime-function getDate(callback: AsyncCallback<Date>): void--><!--Device-systemTime-function getDate(callback: AsyncCallback<Date>): void-End-->
 
@@ -30,7 +30,7 @@ function getDate(callback: AsyncCallback<Date>): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;Date&gt; | Yes | 回调函数，返回当前系统日期。 |
+| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;Date&gt; | Yes | Callback used to return the current system date. |
 
 **Error codes:**
 
@@ -64,7 +64,7 @@ try {
 function getDate(): Promise<Date>
 ```
 
-获取当前系统日期，使用Promise异步回调。
+Obtains the current system date. This API uses a promise to return the result.
 
 **Since:** 8
 
@@ -82,7 +82,7 @@ function getDate(): Promise<Date>
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;Date&gt; | Promise对象，返回当前系统日期。 |
+| Promise&lt;Date&gt; | Promise used to return the current system date. |
 
 **Error codes:**
 

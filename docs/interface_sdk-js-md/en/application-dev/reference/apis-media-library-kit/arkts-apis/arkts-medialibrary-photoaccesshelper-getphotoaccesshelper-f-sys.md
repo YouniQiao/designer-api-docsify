@@ -46,8 +46,8 @@ Obtains a PhotoAccessHelper instance for the specified user, letting you access 
 | Error Code ID | Error Message |
 | --- | --- |
 | 13900020 | Invalid argument |
-| 201 | Permission denied |
-| 202 | Called by non-system application |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Called by non-system application |
 
 ## Examples
 
@@ -112,7 +112,7 @@ Obtains a PhotoAccessHelper instance for accessing and modifying media files in 
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 201 | Permission denied |
-| 202 | Called by non-system application |
-| 23800151 | Scene parameters validate failed, possible causes: &lt;br&gt;1. userId is invalid. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Called by non-system application |
+| [23800151](../errorcode-medialibrary.md#23800151-failed-to-verify-scene-parameters) | Scene parameters validate failed, possible causes: &lt;br&gt;1. userId is invalid. |
 

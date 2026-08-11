@@ -6,7 +6,7 @@ typedef struct ArkUI_RenderNodeClipOption ArkUI_RenderNodeClipOption
 
 ## Overview
 
-Render node clip option.
+Defines a render node clipping option.
 
 **Since**: 20
 

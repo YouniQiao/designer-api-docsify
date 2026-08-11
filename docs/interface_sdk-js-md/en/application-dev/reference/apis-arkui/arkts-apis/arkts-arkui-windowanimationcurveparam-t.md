@@ -4,7 +4,7 @@
 declare type WindowAnimationCurveParam = Array<double>
 ```
 
-动画曲线参数。
+Defines the window animation curve param.
 
 **Since:** 20
 

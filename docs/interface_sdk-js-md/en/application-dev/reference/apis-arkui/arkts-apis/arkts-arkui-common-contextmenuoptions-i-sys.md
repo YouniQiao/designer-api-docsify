@@ -44,7 +44,7 @@ Sets the edgeLight animation Mode of the menu.
 
 **Type:** [EdgeLightMode](../arkts-components/arkts-arkui-edgelightmode-e-sys.md)
 
-**Default:** DistortionMode.EDGELIGHT_DISABLED
+**Default:** EdgeLightMode.EDGELIGHT_DISABLED
 
 **Since:** 26.0.0
 

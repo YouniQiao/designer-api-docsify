@@ -22,9 +22,9 @@ import { ActionResult, ShowNotificationOptions } from 'kits/@kit.NotificationKit
 clickAction?: ActionResult
 ```
 
-通知被点击后触发的行为。
+Action triggered when the notification is clicked.
 
-从API version 7开始不再维护。
+This API is deprecated since API version 7.
 
 **Type:** [ActionResult](arkts-notification-system-notification-actionresult-i.md)
 
@@ -44,7 +44,7 @@ clickAction?: ActionResult
 contentText?: string
 ```
 
-通知内容。
+Notification content.
 
 **Type:** string
 
@@ -64,7 +64,7 @@ contentText?: string
 contentTitle?: string
 ```
 
-通知标题。
+Notification title.
 
 **Type:** string
 

@@ -1,6 +1,6 @@
 # SideBarPosition
 
-侧边栏显示位置。
+Sets the sidebar position of showing
 
 **Since:** 23
 

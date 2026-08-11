@@ -1,6 +1,6 @@
 # ReminderRequest
 
-代理提醒对象，用于设置提醒类型、响铃时长等具体信息。
+Defines the request for publishing a reminder.
 
 **Since:** 9
 
@@ -22,13 +22,10 @@ import { reminderAgentManager } from 'kits/@kit.BackgroundTasksKit';
 forceDistributed?: boolean
 ```
 
-通知是否强制进行全场景跨设备协同显示，默认为false。具体请参考  
-[NotificationRequest.forceDistributed](../../apis-notification-kit/arkts-apis/arkts-notification-notificationrequest-notificationrequest-i-sys.md/arkts-notification-notificationrequest-notificationrequest-i-sys.md#forcedistributed)
-
-- 设置为true时：通知将在所有协同设备上显示。  
-- 设置为false时：通知将按照协同管控名单显示。
-
-**系统接口：** 此接口为系统接口。
+Whether notifications are forcibly displayed in all scenarios across devices. The default value is **false**. For details, see  
+[NotificationRequest.forceDistributed](../../apis-notification-kit/arkts-apis/arkts-notification-notificationrequest-notificationrequest-i-sys.md/arkts-notification-notificationrequest-notificationrequest-i-sys.md#forcedistributed)  
+- **true**: Notifications are displayed on all collaboration devices.  
+- **false**: Notifications are displayed on the applications that are on the collaborative management list.
 
 **Type:** boolean
 
@@ -50,13 +47,10 @@ forceDistributed?: boolean
 notDistributed?: boolean
 ```
 
-通知是否不进行全场景跨设备协同显示，默认为false。具体请参考  
-[NotificationRequest.notDistributed](../../apis-notification-kit/arkts-apis/arkts-notification-notificationrequest-notificationrequest-i-sys.md/arkts-notification-notificationrequest-notificationrequest-i-sys.md#notdistributed)
-
-- 设置为true时：通知仅在本设备上显示。  
-- 设置为false时：通知将在所有协同设备上显示。
-
-**系统接口：** 此接口为系统接口。
+Whether notifications are not displayed in all scenarios across devices. The default value is **false**. For details, see  
+[NotificationRequest.notDistributed](../../apis-notification-kit/arkts-apis/arkts-notification-notificationrequest-notificationrequest-i-sys.md/arkts-notification-notificationrequest-notificationrequest-i-sys.md#notdistributed)  
+- **true**: Notifications are displayed only on the local device.  
+- **false**: Notifications are displayed on all collaborative devices.
 
 **Type:** boolean
 

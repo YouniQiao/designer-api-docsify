@@ -20,12 +20,6 @@ Matrix4的使用场景包括：
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
-## 导入模块
-
-```TypeScript
-import { matrix4 } from 'kits/@kit.ArkUI';
-```
-
 ## 汇总
 
 ### 函数

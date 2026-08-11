@@ -1,11 +1,5 @@
 # getPoliciesSync
 
-## 导入模块
-
-```TypeScript
-import { browser } from 'kits/@kit.MDMKit';
-```
-
 ## getPoliciesSync
 
 ```TypeScript
@@ -41,31 +35,8 @@ function getPoliciesSync(admin: Want, appId: string): string
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
-| 9200001 | The application is not an administrator application of the device. |
-
-## 示例
-
-```TypeScript
-import { browser } from '@kit.MDMKit';
-import { Want } from '@kit.AbilityKit';
-
-let wantTemp: Want = {
-  // 需根据实际情况进行替换
-  bundleName: 'com.example.myapplication',
-  abilityName: 'EnterpriseAdminAbility'
-};
-
-// 此处参数appId的赋值应替换为开发者自己指定的浏览器的应用ID
-let appId: string = 'com.example.******_******/******5t5CoBM=';
-
-try {
-  let result: string = browser.getPoliciesSync(wantTemp, appId);
-  console.info(`Succeeded in getting browser policies, result : ${JSON.stringify(result)}`);
-} catch(err) {
-  console.error(`Failed to get browser policies. Code is ${err.code}, message is ${err.message}`);
-}
-```
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| [9200001](../errorcode-enterpriseDeviceManager.md#9200001-应用没有激活成设备管理器) | The application is not an administrator application of the device. |
 
 
 ## getPoliciesSync
@@ -103,20 +74,26 @@ function getPoliciesSync(admin: Want | null, appId: string): string
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
-| 9200001 | The application is not an administrator application of the device. |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| [9200001](../errorcode-enterpriseDeviceManager.md#9200001-应用没有激活成设备管理器) | The application is not an administrator application of the device. |
 
 ## 示例
 
 ```TypeScript
 import { browser } from '@kit.MDMKit';
+import { Want } from '@kit.AbilityKit';
+
+let wantTemp: Want = {
+  // 需根据实际情况进行替换
+  bundleName: 'com.example.myapplication',
+  abilityName: 'EnterpriseAdminAbility'
+};
 
 // 此处参数appId的赋值应替换为开发者自己指定的浏览器的应用ID
 let appId: string = 'com.example.******_******/******5t5CoBM=';
 
 try {
-  // 参数需根据实际情况进行替换
-  let result: string = browser.getPoliciesSync(null, appId);
+  let result: string = browser.getPoliciesSync(wantTemp, appId);
   console.info(`Succeeded in getting browser policies, result : ${JSON.stringify(result)}`);
 } catch(err) {
   console.error(`Failed to get browser policies. Code is ${err.code}, message is ${err.message}`);

@@ -40,11 +40,15 @@ Requests to publish a widget to the widget host (usually the home screen). This 
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types; 3.Parameter verification failed. |
-| 16501000 | An internal functional error occurred. |
-| 16500050 | IPC connection error. |
-| 202 | The application is not a system application. |
-| 16500100 | Failed to obtain the configuration information. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types; 3.Parameter verification failed. |
+| [16501002](../errorcode-form.md#16501002-too-many-widgets) | The number of forms exceeds the upper limit.<br>**Applicable version:** 26.1.0 and later |
+| 16501018 | This form does not support publishing.<br>**Applicable version:** 26.1.0 and later |
+| 16501017 | There is no space to publish form.<br>**Applicable version:** 26.1.0 and later |
+| [16501000](../errorcode-form.md#16501000-internal-function-error) | An internal functional error occurred. |
+| [16500050](../errorcode-form.md#16500050-ipc-failure) | IPC connection error. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | The application is not a system application. |
+| [16501008](../errorcode-form.md#16501008-adding-a-widget-to-the-home-screen-times-out) | Waiting for the form addition to the desktop timed out.<br>**Applicable version:** 26.1.0 and later |
+| [16500100](../errorcode-form.md#16500100-failed-to-obtain-widget-configuration-information) | Failed to obtain the configuration information. |
 
 
 ## requestPublishForm
@@ -76,11 +80,15 @@ Requests to publish a widget to the widget host (usually the home screen). This 
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types; 3.Parameter verification failed. |
-| 16501000 | An internal functional error occurred. |
-| 16500050 | IPC connection error. |
-| 202 | The application is not a system application. |
-| 16500100 | Failed to obtain the configuration information. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types; 3.Parameter verification failed. |
+| [16501002](../errorcode-form.md#16501002-too-many-widgets) | The number of forms exceeds the upper limit.<br>**Applicable version:** 26.1.0 and later |
+| 16501018 | This form does not support publishing.<br>**Applicable version:** 26.1.0 and later |
+| 16501017 | There is no space to publish form.<br>**Applicable version:** 26.1.0 and later |
+| [16501000](../errorcode-form.md#16501000-internal-function-error) | An internal functional error occurred. |
+| [16500050](../errorcode-form.md#16500050-ipc-failure) | IPC connection error. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | The application is not a system application. |
+| [16501008](../errorcode-form.md#16501008-adding-a-widget-to-the-home-screen-times-out) | Waiting for the form addition to the desktop timed out.<br>**Applicable version:** 26.1.0 and later |
+| [16500100](../errorcode-form.md#16500100-failed-to-obtain-widget-configuration-information) | Failed to obtain the configuration information. |
 
 
 ## requestPublishForm
@@ -118,9 +126,13 @@ Requests to publish a widget to the widget host (usually the home screen). This 
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types; 3.Parameter verification failed. |
-| 16501000 | An internal functional error occurred. |
-| 16500050 | IPC connection error. |
-| 202 | The application is not a system application. |
-| 16500100 | Failed to obtain the configuration information. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types; 3.Parameter verification failed. |
+| [16501002](../errorcode-form.md#16501002-too-many-widgets) | The number of forms exceeds the upper limit.<br>**Applicable version:** 26.1.0 and later |
+| 16501018 | This form does not support publishing.<br>**Applicable version:** 26.1.0 and later |
+| 16501017 | There is no space to publish form.<br>**Applicable version:** 26.1.0 and later |
+| [16501000](../errorcode-form.md#16501000-internal-function-error) | An internal functional error occurred. |
+| [16500050](../errorcode-form.md#16500050-ipc-failure) | IPC connection error. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | The application is not a system application. |
+| [16501008](../errorcode-form.md#16501008-adding-a-widget-to-the-home-screen-times-out) | Waiting for the form addition to the desktop timed out.<br>**Applicable version:** 26.1.0 and later |
+| [16500100](../errorcode-form.md#16500100-failed-to-obtain-widget-configuration-information) | Failed to obtain the configuration information. |
 

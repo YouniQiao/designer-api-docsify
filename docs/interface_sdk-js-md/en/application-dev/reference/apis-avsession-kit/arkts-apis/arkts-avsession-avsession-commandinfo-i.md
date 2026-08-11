@@ -1,6 +1,6 @@
 # CommandInfo
 
-定义要发送到会话的命令信息。
+The definition of command information to be sent to the session
 
 **Since:** 22
 
@@ -22,7 +22,7 @@ import { avSession } from 'kits/@kit.AVSessionKit';
 callerBundleName?: string
 ```
 
-调用方应用包名。
+Caller bundle name.
 
 **Type:** string
 
@@ -40,7 +40,7 @@ callerBundleName?: string
 callerDeviceId?: string
 ```
 
-调用方设备ID。
+Caller device id.
 
 **Type:** string
 
@@ -58,7 +58,7 @@ callerDeviceId?: string
 callerModuleName?: string
 ```
 
-调用方应用模块名。
+Caller module name.
 
 **Type:** string
 
@@ -76,7 +76,7 @@ callerModuleName?: string
 callerType?: CallerType
 ```
 
-调用方来源。
+Caller type.
 
 **Type:** [CallerType](arkts-avsession-avsession-callertype-e.md)
 

@@ -1,8 +1,8 @@
 # TimeOptions
 
-TimeOptions定义时间选择器的选项。
+TimeOptions defines options for the time picker.
 
-继承于[CommonOptions](arkts-arkui-arkui-advanced-datepickercomponent-commonoptions-c.md)。
+Inherits from [CommonOptions](arkts-arkui-arkui-advanced-datepickercomponent-commonoptions-c.md).
 
 **Inheritance/Implementation:** TimeOptions extends [CommonOptions](arkts-arkui-arkui-advanced-datepickercomponent-commonoptions-c.md)
 
@@ -26,9 +26,9 @@ import { DisplayMode, TimeFormat, DatePickerComponent, DateMode, DatePickerCompo
 format?: TimeFormat
 ```
 
-定义时间选择器的格式。
+Defines the format of the time picker.
 
-默认值：TimeFormat.HOUR_MINUTE
+Default value: TimeFormat.HOUR_MINUTE
 
 **Type:** [TimeFormat](arkts-arkui-arkui-advanced-datepickercomponent-timeformat-e.md)
 
@@ -50,12 +50,12 @@ format?: TimeFormat
 useMilitaryTime?: boolean
 ```
 
-指定是否使用24小时制显示时间。
+Specifies whether to display time in 24-hour format.
 
-- true：时间以24小时制展示。  
-- false：时间以12小时制展示。
+- true: Time is displayed in 24-hour format.  
+- false: Time is displayed in 12-hour format.
 
-默认值：false
+Default value: false
 
 **Type:** boolean
 

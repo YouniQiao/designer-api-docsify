@@ -612,7 +612,7 @@ Sets the alignment rules in the relative container.&lt;br&gt;This API is valid o
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | [AlignRuleOption](arkts-arkui-common-alignruleoption-i.md) \| LocalizedAlignRuleOptions \| undefined | 是 |  |
+| value | [AlignRuleOption](../arkts-components/arkts-arkui-alignruleoption-i.md) \| LocalizedAlignRuleOptions \| undefined | 是 |  |
 
 **返回值：**
 
@@ -763,7 +763,7 @@ default backdropBlur(radius: double | undefined, options?: BlurOptions, sysOptio
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | radius | double \| undefined | 是 | 为当前组件添加背景模糊效果，入参为模糊半径，模糊半径越大越模糊，为0时不模糊。&lt;br/&gt;当radius的值为undefined时，恢复为默认无模糊的 背景。 |
-| options | [BlurOptions](../arkts-components/arkts-arkui-bluroptions-i.md) | 否 | 灰阶模糊参数。对图像中的黑白色进行色阶调整，使其趋于灰色更为柔和美观，对图像中的彩色调整没有效果。&lt;br/&gt;默认值：grayscale: [0,0] |
+| options | [BlurOptions](arkts-arkui-common-bluroptions-i.md) | 否 | 灰阶模糊参数。对图像中的黑白色进行色阶调整，使其趋于灰色更为柔和美观，对图像中的彩色调整没有效果。&lt;br/&gt;默认值：grayscale: [0,0] |
 | sysOptions | [SystemAdaptiveOptions](../arkts-components/arkts-arkui-systemadaptiveoptions-i.md) | 否 | 系统自适应调节参数。&lt;br/&gt;默认值：{ disableSystemAdaptation: false } |
 
 **返回值：**
@@ -923,7 +923,7 @@ default backgroundEffect(options: BackgroundEffectOptions | undefined, sysOption
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| options | [BackgroundEffectOptions](../arkts-components/arkts-arkui-backgroundeffectoptions-i.md) \| undefined | 是 | 设置组件背景属性包括：饱和度，亮度，颜色。&lt;br/&gt;当options的值为undefined时，恢复为无效果的背 景。 |
+| options | [BackgroundEffectOptions](arkts-arkui-common-backgroundeffectoptions-i.md) \| undefined | 是 | 设置组件背景属性包括：饱和度，亮度，颜色。&lt;br/&gt;当options的值为undefined时，恢复为无效果的背 景。 |
 | sysOptions | [SystemAdaptiveOptions](../arkts-components/arkts-arkui-systemadaptiveoptions-i.md) | 否 |  |
 
 **返回值：**
@@ -1236,7 +1236,7 @@ Binds a context menu to this component, which is displayed when the user long-pr
 | --- | --- | --- | --- |
 | content | [CustomBuilder](../arkts-components/arkts-arkui-custombuilder-t.md) \| undefined | 是 | Indicates the content of context menu. |
 | responseType | [ResponseType](arkts-arkui-responsetype-e.md) \| undefined | 是 | Indicates response type of context menu, Long pressing with a mouse device is not supported. |
-| options | [ContextMenuOptions](../arkts-components/arkts-arkui-contextmenuoptions-i.md) | 否 | Indicates the options of context menu. |
+| options | [ContextMenuOptions](arkts-arkui-common-contextmenuoptions-i.md) | 否 | Indicates the options of context menu. |
 
 **返回值：**
 
@@ -1268,7 +1268,7 @@ Binds a context menu to the component, whose visibility is subject to the isShow
 | --- | --- | --- | --- |
 | isShow | boolean \| Bindable&lt;boolean&gt; \| undefined | 是 | Menu display switch, supports incoming twoway binding parameters. true means display content, false means hide content, default is false. &lt;p&gt;&lt;strong&gt;NOTE&lt;/strong&gt;: &lt;br&gt;The menu can be displayed properly only when the related page has been constructed. If this parameter is set to true before the construction is complete, display issues, such as misplacement, distortion, or failure to pop up, may occur. To trigger dragging by long presses is not supported. &lt;/p&gt; |
 | content | [CustomBuilder](../arkts-components/arkts-arkui-custombuilder-t.md) \| undefined | 是 | Indicates the content of context menu. |
-| options | [ContextMenuOptions](../arkts-components/arkts-arkui-contextmenuoptions-i.md) | 否 | Indicates the options of context menu. |
+| options | [ContextMenuOptions](arkts-arkui-common-contextmenuoptions-i.md) | 否 | Indicates the options of context menu. |
 
 **返回值：**
 
@@ -1301,7 +1301,7 @@ Binds a context menu to the component, whose visibility is subject to the isShow
 | --- | --- | --- | --- |
 | isShow | boolean \| Bindable&lt;boolean&gt; \| undefined | 是 | Menu display switch, supports incoming two-way binding parameters. true means display content, false means hide content, default is false. &lt;p&gt;&lt;strong&gt;NOTE&lt;/strong&gt;: &lt;br&gt;The menu can be displayed properly only when the related page has been constructed. If this parameter is set to true before the construction is complete, display issues, such as misplacement, distortion, or failure to pop up, may occur. Dragging via long press is not supported. &lt;/p&gt; |
 | content | [CustomBuilder](../arkts-components/arkts-arkui-custombuilder-t.md) \| Array&lt;MenuElement&gt; \| undefined | 是 | Indicates the content of context menu. |
-| options | [ContextMenuOptions](../arkts-components/arkts-arkui-contextmenuoptions-i.md) | 否 | Indicates the options of context menu. |
+| options | [ContextMenuOptions](arkts-arkui-common-contextmenuoptions-i.md) | 否 | Indicates the options of context menu. |
 
 **返回值：**
 
@@ -1334,7 +1334,7 @@ Binds a context menu to this component, which is displayed when the user long-pr
 | --- | --- | --- | --- |
 | content | [CustomBuilder](../arkts-components/arkts-arkui-custombuilder-t.md) \| Array&lt;MenuElement&gt; \| undefined | 是 | Indicates the content of context menu. |
 | responseType | [ResponseType](arkts-arkui-responsetype-e.md) \| undefined | 是 | Indicates response type of context menu. Long pressing with a mouse device is not supported. |
-| options | [ContextMenuOptions](../arkts-components/arkts-arkui-contextmenuoptions-i.md) | 否 | Indicates the options of context menu. |
+| options | [ContextMenuOptions](arkts-arkui-common-contextmenuoptions-i.md) | 否 | Indicates the options of context menu. |
 
 **返回值：**
 
@@ -1365,7 +1365,7 @@ Binds a context menu to this component, which is displayed when the user long-pr
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | content | [CustomBuilderT](../arkts-components/arkts-arkui-custombuildert-t.md)&lt;[ResponseType](arkts-arkui-responsetype-e.md)&gt; \| undefined | 是 | Indicates the content of context menu. Undefined means unbinding. |
-| options | [ContextMenuOptions](../arkts-components/arkts-arkui-contextmenuoptions-i.md) | 否 | Indicates the options of context menu. |
+| options | [ContextMenuOptions](arkts-arkui-common-contextmenuoptions-i.md) | 否 | Indicates the options of context menu. |
 
 **返回值：**
 
@@ -1397,7 +1397,7 @@ Binds a context menu to this component, which is displayed when the user long-pr
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | content | [CustomBuilderT](../arkts-components/arkts-arkui-custombuildert-t.md)&lt;[ResponseType](arkts-arkui-responsetype-e.md)&gt; \| Array&lt;MenuElement&gt; \| undefined | 是 | Indicates the content of context menu. Undefined means unbinding. |
-| options | [ContextMenuOptions](../arkts-components/arkts-arkui-contextmenuoptions-i.md) | 否 | Indicates the options of context menu. |
+| options | [ContextMenuOptions](arkts-arkui-common-contextmenuoptions-i.md) | 否 | Indicates the options of context menu. |
 
 **返回值：**
 
@@ -1588,7 +1588,7 @@ Defines how the component's content (including the content of it child component
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | [BlendMode](arkts-arkui-common-blendmode-e.md) \| undefined | 是 | Blend mode. &lt;br&gt;Default value: **BlendMode.NONE**. &lt;br&gt;**NOTE：**&lt;br&gt;When **BlendMode.NONE** is used, the blend effect is **BlendMode.SRC_OVER** by default, and **BlendApplyType** does not take effect. |
+| value | [BlendMode](../arkts-components/arkts-arkui-blendmode-e.md) \| undefined | 是 | Blend mode. &lt;br&gt;Default value: **BlendMode.NONE**. &lt;br&gt;**NOTE：**&lt;br&gt;When **BlendMode.NONE** is used, the blend effect is **BlendMode.SRC_OVER** by default, and **BlendApplyType** does not take effect. |
 | type | [BlendApplyType](../arkts-components/arkts-arkui-blendapplytype-e.md) | 否 | Whether the blend mode is implemented offscreen. &lt;br&gt;Default value: **BlendApplyType.FAST**. &lt;br&gt;**NOTE：**&lt;br&gt;1. **BlendApplyType.FAST**: The blend mode is not implemented offscreen. &lt;br&gt;2. **BlendApplyType.OFFSCREEN**: An offscreen canvas of the size of the current component is created. The content of the current component (including child components) is then drawn onto the offscreen canvas, and blended with the existing content on the canvas below using the specified blend mode. This approach may cause issues with screen capture for APIs such as linearGradientBlur&lt;sup&gt;12+&lt;/sup&gt;, backgroundEffect, and brightness. |
 
 **返回值：**
@@ -1620,7 +1620,7 @@ Adds the content blurring effect for the current component. The input parameter 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | blurRadius | double \| undefined | 是 | value indicates radius of backdrop blur. |
-| options | [BlurOptions](../arkts-components/arkts-arkui-bluroptions-i.md) | 否 | options indicates blur options. |
+| options | [BlurOptions](arkts-arkui-common-bluroptions-i.md) | 否 | options indicates blur options. |
 | sysOptions | [SystemAdaptiveOptions](../arkts-components/arkts-arkui-systemadaptiveoptions-i.md) | 否 | system adaptive options. |
 
 **返回值：**
@@ -2355,7 +2355,7 @@ Set the selectable area drag preview options.
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | value | [DragPreviewOptions](../arkts-components/arkts-arkui-dragpreviewoptions-i.md) \| undefined | 是 | preview options value. |
-| options | [DragInteractionOptions](../arkts-components/arkts-arkui-draginteractionoptions-i.md) | 否 | drag interaction options value. |
+| options | [DragInteractionOptions](arkts-arkui-common-draginteractionoptions-i.md) | 否 | drag interaction options value. |
 
 **返回值：**
 
@@ -3899,7 +3899,7 @@ Register accessibility action intercept callback,when accessibility action is to
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [AccessibilityActionInterceptCallback](../arkts-components/arkts-arkui-accessibilityactioninterceptcallback-t.md) \| undefined | 是 | accessibility action intercept callback function |
+| callback | [AccessibilityActionInterceptCallback](arkts-arkui-accessibilityactioninterceptcallback-t.md) \| undefined | 是 | accessibility action intercept callback function |
 
 **返回值：**
 
@@ -3959,7 +3959,7 @@ Trigger a accessibility hover event.
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [AccessibilityCallback](arkts-arkui-accessibilitycallback-t.md) \| undefined | 是 | A callback instance used when the component is touched after accessibility mode is enabled. |
+| callback | [AccessibilityCallback](../arkts-components/arkts-arkui-accessibilitycallback-t.md) \| undefined | 是 | A callback instance used when the component is touched after accessibility mode is enabled. |
 
 **返回值：**
 
@@ -4754,7 +4754,7 @@ Binds a custom gesture recognizer judgment callback to the component.
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [GestureRecognizerJudgeBeginCallback](arkts-arkui-gesturerecognizerjudgebegincallback-t.md) \| undefined | 是 | A callback instance used when a gesture bound to this component will be accepted. |
+| callback | [GestureRecognizerJudgeBeginCallback](../arkts-components/arkts-arkui-gesturerecognizerjudgebegincallback-t.md) \| undefined | 是 | A callback instance used when a gesture bound to this component will be accepted. |
 
 **返回值：**
 
@@ -4788,7 +4788,7 @@ Binds a custom gesture recognizer judgment callback to the component.
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [GestureRecognizerJudgeBeginCallback](arkts-arkui-gesturerecognizerjudgebegincallback-t.md) \| undefined | 是 | A callback instance used when a gesture bound to this component will be accepted. |
+| callback | [GestureRecognizerJudgeBeginCallback](../arkts-components/arkts-arkui-gesturerecognizerjudgebegincallback-t.md) \| undefined | 是 | A callback instance used when a gesture bound to this component will be accepted. |
 | exposeInnerGesture | boolean \| undefined | 是 | This parameter is a flag. This flag determines whether to expose internal gestures. The default value is false. |
 
 **返回值：**
@@ -5149,7 +5149,7 @@ Register one callback which will be executed when all gesture recognizers are co
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [TouchTestDoneCallback](arkts-arkui-touchtestdonecallback-t.md) \| undefined | 是 | A callback instance used when all gesture recognizers are collected. |
+| callback | [TouchTestDoneCallback](../arkts-components/arkts-arkui-touchtestdonecallback-t.md) \| undefined | 是 | A callback instance used when all gesture recognizers are collected. |
 
 **返回值：**
 
@@ -6209,7 +6209,7 @@ Enable or disable specific smart gesture shortcuts, and set response priorities 
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| options | [SmartGestureShortcutOptions](arkts-arkui-common-smartgestureshortcutoptions-i.md) | 否 | Options for configuring smart gesture shortcuts. |
+| options | [SmartGestureShortcutOptions](../arkts-components/arkts-arkui-smartgestureshortcutoptions-i.md) | 否 | Options for configuring smart gesture shortcuts. |
 
 **返回值：**
 
@@ -6534,7 +6534,7 @@ default transition(value: TransitionEffect | undefined): this
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | [TransitionEffect](arkts-arkui-common-transitioneffect-c.md) \| undefined | 是 | 设置组件插入时显示和删除时隐藏的过渡效果。&lt;br/&gt;**说明：** &lt;br/&gt;详细描述 [TransitionEffect](../arkts-components/arkts-arkui-transitioneffect-c.md/arkts-arkui-transitioneffect-c.md)对象说明。&lt;br/&gt;当value的值为undefined时，无过渡效果。 |
+| value | [TransitionEffect](../arkts-components/arkts-arkui-transitioneffect-c.md) \| undefined | 是 | 设置组件插入时显示和删除时隐藏的过渡效果。&lt;br/&gt;**说明：** &lt;br/&gt;详细描述 [TransitionEffect](../arkts-components/arkts-arkui-transitioneffect-c.md/arkts-arkui-transitioneffect-c.md)对象说明。&lt;br/&gt;当value的值为undefined时，无过渡效果。 |
 
 **返回值：**
 
@@ -6564,7 +6564,7 @@ default transition(effect: TransitionEffect | undefined, onFinish: TransitionFin
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| effect | [TransitionEffect](arkts-arkui-common-transitioneffect-c.md) \| undefined | 是 | 设置组件插入时显示和删除时隐藏的过渡效果。&lt;br/&gt;**说明：** &lt;br/&gt;详细描述 [TransitionEffect](../arkts-components/arkts-arkui-transitioneffect-c.md/arkts-arkui-transitioneffect-c.md)对象说明。&lt;br/&gt;当value的值为undefined时，无过渡效果。 |
+| effect | [TransitionEffect](../arkts-components/arkts-arkui-transitioneffect-c.md) \| undefined | 是 | 设置组件插入时显示和删除时隐藏的过渡效果。&lt;br/&gt;**说明：** &lt;br/&gt;详细描述 [TransitionEffect](../arkts-components/arkts-arkui-transitioneffect-c.md/arkts-arkui-transitioneffect-c.md)对象说明。&lt;br/&gt;当value的值为undefined时，无过渡效果。 |
 | onFinish | [TransitionFinishCallback](arkts-arkui-transitionfinishcallback-t.md) \| undefined | 是 | 转场动画结束回调。 |
 
 **返回值：**

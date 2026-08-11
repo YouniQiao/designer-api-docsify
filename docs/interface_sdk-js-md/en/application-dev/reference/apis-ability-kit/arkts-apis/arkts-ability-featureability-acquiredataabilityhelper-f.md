@@ -12,13 +12,15 @@ import { featureAbility } from 'kits/@kit.AbilityKit';
 function acquireDataAbilityHelper(uri: string): DataAbilityHelper
 ```
 
-获取dataAbilityHelper对象。
+Obtains a dataAbilityHelper object.
 
-> **说明：**
+> **NOTE：**
 > 
-> 组件启动规则详见：[组件启动规则（FA模型）](../../../application-models/component-startup-rules-fa.md)。
+> For details about the startup rules for the components in the FA model, see
+> [Component Startup Rules (FA Model)](../../../application-models/component-startup-rules-fa.md).
 > 
-> 跨应用访问dataAbility，对端应用需配置关联启动。
+> To access a DataAbility of another application, the target application must be configured with associated startup
+> (**AssociateWakeUp** set to **true**).
 
 **Since:** 7
 
@@ -34,13 +36,13 @@ function acquireDataAbilityHelper(uri: string): DataAbilityHelper
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| uri | string | Yes | 表示要打开的文件的路径。 |
+| uri | string | Yes | URI of the file to open. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [DataAbilityHelper](arkts-ability-dataabilityhelper-dataabilityhelper-i.md) | 用来协助其他Ability访问DataAbility的工具类。 |
+| [DataAbilityHelper](arkts-ability-dataabilityhelper-dataabilityhelper-i.md) | A utility class used to help other abilities access the Data ability. |
 
 ## Examples
 

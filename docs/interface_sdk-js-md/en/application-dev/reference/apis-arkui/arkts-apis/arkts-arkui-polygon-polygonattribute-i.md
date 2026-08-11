@@ -1,6 +1,6 @@
 # PolygonAttribute
 
-多边形绘制组件属性。
+Provides attribute for Polygon.
 
 **Inheritance/Implementation:** PolygonAttribute extends [CommonShapeMethod](arkts-arkui-arkui-shape-commonshapemethod-c.md)
 
@@ -18,7 +18,7 @@
 default attributeModifier(modifier: AttributeModifier<PolygonAttribute> | AttributeModifier<CommonMethod> | undefined): this
 ```
 
-调用attributeModifier。
+Call attributeModifier.
 
 **Since:** 23
 
@@ -48,7 +48,7 @@ default attributeModifier(modifier: AttributeModifier<PolygonAttribute> | Attrib
 default points(value: Array<ShapePoint> | undefined): this
 ```
 
-设置多边形的顶点坐标列表，支持[attributeModifier](../../../reference/apis-arkui/arkui-ts/ts-universal-attributes-attribute-modifier.md#attributemodifier)动态设置属性方法。异常值按照默认值处理。
+Called when the vertex coordinate list of a polygon is set.
 
 **Since:** 23
 
@@ -64,7 +64,7 @@ default points(value: Array<ShapePoint> | undefined): this
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | Array&lt;ShapePoint&gt; \| undefined | Yes | 多边形的顶点坐标列表。使用时传入一个二维数组，每个子数组表示一个顶点的[x, y]坐标。 &lt;br/&gt;默认值：[]（空数组）&lt;br/&gt;默认单位：vp &lt;br/&gt;异常值undefined和null按照默认值处理。 |
+| value | Array&lt;ShapePoint&gt; \| undefined | Yes |  |
 
 **Return value:**
 
@@ -78,11 +78,11 @@ default points(value: Array<ShapePoint> | undefined): this
 default setPolygonOptions(options?: PolygonOptions): this
 ```
 
-设置Polygon构造参数。
+Set Polygon options.
 
-**Since:** 26.0.0
+**Since:** 26.1.0
 
-**ArkTS mode:** ArkTS-Sta only, since version 26.0.0.
+**ArkTS mode:** ArkTS-Sta only, since version 26.1.0.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -94,11 +94,11 @@ default setPolygonOptions(options?: PolygonOptions): this
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| options | [PolygonOptions](../arkts-components/arkts-arkui-polygonoptions-i.md) | No | Polygon绘制区域。&lt;br/&gt;异常值undefined和null按照无效值处理，本次设置不生效。 |
+| options | [PolygonOptions](../arkts-components/arkts-arkui-polygonoptions-i.md) | No | Polygon constructor options. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| this | 返回PolygonAttribute实例。 |
+| this | Returns the instance of the PolygonAttribute. |
 

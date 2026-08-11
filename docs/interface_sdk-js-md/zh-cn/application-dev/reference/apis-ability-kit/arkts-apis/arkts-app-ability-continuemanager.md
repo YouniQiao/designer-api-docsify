@@ -14,12 +14,6 @@ continueManager提供了应用跨端迁移的管理能力，如获取应用跨�
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Mission
 
-## 导入模块
-
-```TypeScript
-import { continueManager } from 'kits/@kit.AbilityKit';
-```
-
 ## 汇总
 
 ### 函数

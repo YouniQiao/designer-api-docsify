@@ -12,7 +12,7 @@ import { hiTraceChain } from 'kits/@kit.PerformanceAnalysisKit';
 function isValid(id: HiTraceId): boolean
 ```
 
-判断HiTraceId是否有效，同步接口。
+Checks whether a **HiTraceId** instance is valid. This API returns the result synchronously.
 
 **Since:** 8
 
@@ -26,13 +26,13 @@ function isValid(id: HiTraceId): boolean
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| id | [HiTraceId](arkts-performanceanalysis-hitracechain-hitraceid-i.md) | Yes | 需要判断是否有效的HiTraceId实例。 |
+| id | [HiTraceId](arkts-performanceanalysis-hitracechain-hitraceid-i.md) | Yes | HiTraceId** instance. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| boolean | true：HiTraceId有效；false：HiTraceId无效。 |
+| boolean | The value **true** indicates that **HiTraceId** is valid, and **false** indicates the opposite. |
 
 ## Examples
 

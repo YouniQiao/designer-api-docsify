@@ -12,7 +12,7 @@ import { sendableContextManager } from 'kits/@kit.AbilityKit';
 function convertToApplicationContext(sendableContext: SendableContext): common.ApplicationContext
 ```
 
-将SendableContext对象转换为ApplicationContext。
+Converts a SendableContext object to an ApplicationContext object.
 
 **Since:** 12
 
@@ -42,7 +42,7 @@ function convertToApplicationContext(sendableContext: SendableContext): common.A
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | If the input parameter invalid. Possible causes: 1.Incorrect parameter types; 2.Parameter verification failed. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | If the input parameter invalid. Possible causes: 1.Incorrect parameter types; 2.Parameter verification failed. |
 
 ## Examples
 

@@ -1,11 +1,5 @@
 # share（系统接口）
 
-## 导入模块
-
-```TypeScript
-import { cloudData } from 'kits/@kit.ArkData';
-```
-
 ## share
 
 ```TypeScript
@@ -40,9 +34,9 @@ function share(
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
-| 801 | Capability not supported. |
-| 202 | Permission verification failed, application which is not a system application uses system API. |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| [801](../../errorcode-universal.md#801-该设备不支持此api) | Capability not supported. |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed, application which is not a system application uses system API. |
 
 ## 示例
 
@@ -62,14 +56,14 @@ participants.push({
     shareable: false
   },
   attachInfo: ''
-});
-cloudData.sharing.share('sharing_resource_test', participants, (err: BusinessError, result) => {
+})
+cloudData.sharing.share('sharing_resource_test', participants, ((err: BusinessError|null, result) => {
   if (err) {
     console.error(`share failed, code is ${err.code},message is ${err.message}`);
     return;
   }
   console.info(`share succeeded, result: ${result}`);
-});
+}))
 ```
 
 
@@ -111,9 +105,9 @@ function share(
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
-| 801 | Capability not supported. |
-| 202 | Permission verification failed, application which is not a system application uses system API. |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| [801](../../errorcode-universal.md#801-该设备不支持此api) | Capability not supported. |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed, application which is not a system application uses system API. |
 
 ## 示例
 
@@ -133,11 +127,11 @@ participants.push({
     shareable: false
   },
   attachInfo: ''
-});
+})
 cloudData.sharing.share('sharing_resource_test', participants).then((result) => {
   console.info(`share success, result: ${result}`);
-}).catch((err: BusinessError) => {
+}).catch((err) => {
   console.error(`share failed, code is ${err.code},message is ${err.message}`);
-});
+})
 ```
 

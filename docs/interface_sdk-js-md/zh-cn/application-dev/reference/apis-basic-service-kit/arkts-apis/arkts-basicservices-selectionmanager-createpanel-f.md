@@ -1,11 +1,5 @@
 # createPanel
 
-## 导入模块
-
-```TypeScript
-import { selectionManager } from 'kits/@kit.BasicServicesKit';
-```
-
 ## createPanel
 
 ```TypeScript
@@ -44,10 +38,12 @@ function createPanel(ctx: Context, info: PanelInfo): Promise<Panel>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 33600001 | Selection service exception. |
-| 33600003 | The application calling the API does not match the application selected in the system settings. |
+| [33600001](../../apis-basic-services-kit/errorcode-selection.md#33600001-划词服务调用异常) | Selection service exception. |
+| [33600003](../../apis-basic-services-kit/errorcode-selection.md#33600003-调用接口的应用与系统设置中选择的应用不匹配) | The application calling the API does not match the application selected in the system settings. |
 
 ## 示例
+
+ArkTS-Dyn示例：
 
 ```TypeScript
 import { selectionManager, SelectionExtensionAbility, PanelInfo, PanelType, BusinessError } from '@kit.BasicServicesKit';
@@ -86,6 +82,55 @@ class ServiceExtAbility extends SelectionExtensionAbility {
         console.info('Succeed in creating panel.');
       }).catch((err: BusinessError) => {
         console.error(`Failed to create panel. Error code: ${err.code}, error message: ${err.message}`);
+    });
+    return new SelectionAbilityStub('remote');
+  }
+}
+export default ServiceExtAbility;
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+import SelectionExtensionAbility from '@ohos.selectionInput.SelectionExtensionAbility';
+import { PanelInfo, PanelType } from '@ohos.selectionInput.SelectionPanel';
+import selectionManager from '@ohos.selectionInput.selectionManager';
+import rpc from '@ohos.rpc';
+import { Want } from '@kit.AbilityKit';
+
+class SelectionAbilityStub extends rpc.RemoteObject {
+  constructor(descriptor: string) {
+    super(descriptor);
+  }
+  onRemoteMessageRequest(
+    code: number,
+    data: rpc.MessageSequence,
+    reply: rpc.MessageSequence,
+    options: rpc.MessageOption
+  ): boolean | Promise<boolean> {
+    return true;
+  }
+}
+
+class ServiceExtAbility extends SelectionExtensionAbility {
+  onConnect(want: Want): rpc.RemoteObject {
+    // 配置划词面板信息，包括面板类型、位置和尺寸
+    let panelInfo: PanelInfo = {
+      panelType: PanelType.MENU_PANEL,
+      x: 0,
+      y: 0,
+      width: 500,
+      height: 200
+    };
+    let selectionPanel: selectionManager.Panel | undefined = undefined;
+    // 创建划词面板
+    selectionManager.createPanel(this.context, panelInfo)
+      .then((panel: selectionManager.Panel) => {
+        selectionPanel = panel;
+        console.info('Succeed in creating panel.');
+      }).catch((err) => {
+      console.error(`Failed to create panel. Error code: ${err.code}, error message: ${err.message}`);
     });
     return new SelectionAbilityStub('remote');
   }

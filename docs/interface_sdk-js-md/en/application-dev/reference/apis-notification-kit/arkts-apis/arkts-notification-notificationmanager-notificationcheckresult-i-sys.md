@@ -1,6 +1,6 @@
 # NotificationCheckResult (System API)
 
-通知校验结果。
+Describes the result of check notifications.
 
 **Since:** 10
 
@@ -24,7 +24,11 @@ import { notificationManager } from 'kits/@kit.NotificationKit';
 code: int
 ```
 
-0-display，1-no display。
+Result code.
+
+**0**: display.
+
+**1**: no display.
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
@@ -46,7 +50,7 @@ code: int
 message: string
 ```
 
-结果信息。
+Result.
 
 **Type:** string
 

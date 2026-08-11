@@ -1,10 +1,10 @@
 # @ohos.bundle.appControl
 
-本模块提供应用拦截能力。对应用设置处置状态后，应用会被禁止运行；用户点击桌面图标时，会根据应用的处置状态，跳转到对应的页面。本模块支持对应用的处置状态进行设置、获取、删除。
+The module provides APIs for setting, obtaining, and deleting the disposed status of an application. An application in the disposed status is forbidden to run. When a user clicks the application icon on the home screen, the corresponding page is displayed based on the disposal intent.
 
-> **说明：**
+> **NOTE：**
 > 
-> 本模块为系统接口。
+> The APIs provided by this module are system APIs.
 
 **Since:** 9
 
@@ -29,23 +29,23 @@ import { appControl } from 'kits/@kit.AbilityKit';
 
 | Name | Description |
 | --- | --- |
-| [deleteDisposedStatus](arkts-ability-appcontrol-deletedisposedstatus-f-sys.md#deletedisposedstatus) | 删除应用的处置状态。使用callback异步回调，成功返回null，失败返回对应错误信息。 |
-| [deleteDisposedStatus](arkts-ability-appcontrol-deletedisposedstatus-f-sys.md#deletedisposedstatus-1) | 删除应用的处置状态。使用promise异步回调，成功返回null，失败返回对应错误信息。 |
-| [deleteDisposedStatusSync](arkts-ability-appcontrol-deletedisposedstatussync-f-sys.md#deletedisposedstatussync) | 以同步方法删除指定应用或分身应用的处置状态。成功返回null，失败抛出对应异常。 |
-| [deleteUninstallDisposedRule](arkts-ability-appcontrol-deleteuninstalldisposedrule-f-sys.md#deleteuninstalldisposedrule) | 删除指定应用或分身应用的卸载处置规则。 |
-| [getAllDisposedRules](arkts-ability-appcontrol-getalldisposedrules-f-sys.md#getalldisposedrules) | 获取当前用户下已设置的所有拦截规则。 |
-| [getDisposedRule](arkts-ability-appcontrol-getdisposedrule-f-sys.md#getdisposedrule) | 获取指定应用或分身应用已设置的拦截规则。 |
-| [getDisposedRulesByBundle](arkts-ability-appcontrol-getdisposedrulesbybundle-f-sys.md#getdisposedrulesbybundle) | 获取指定应用程序包设置的所有拦截规则。 |
-| [getDisposedStatus](arkts-ability-appcontrol-getdisposedstatus-f-sys.md#getdisposedstatus) | 获取指定应用的处置状态。使用callback异步回调，成功返回应用的处置状态，失败返回对应错误信息。 |
-| [getDisposedStatus](arkts-ability-appcontrol-getdisposedstatus-f-sys.md#getdisposedstatus-1) | 获取指定应用已设置的处置状态。使用Promise异步回调，成功返回应用的处置状态，失败返回对应错误信息。 |
-| [getDisposedStatusSync](arkts-ability-appcontrol-getdisposedstatussync-f-sys.md#getdisposedstatussync) | 以同步方法获取指定应用已设置的处置状态。成功返回应用的处置状态，失败抛出对应异常。 |
-| [getUninstallDisposedRule](arkts-ability-appcontrol-getuninstalldisposedrule-f-sys.md#getuninstalldisposedrule) | 获取指定应用或分身应用已设置的优先级最高的卸载处置规则。 |
-| [setDisposedRule](arkts-ability-appcontrol-setdisposedrule-f-sys.md#setdisposedrule) | 设置指定应用或分身应用的拦截规则。 |
-| [setDisposedRules](arkts-ability-appcontrol-setdisposedrules-f-sys.md#setdisposedrules) | 批量设置指定应用或分身应用的拦截规则。 |
-| [setDisposedStatus](arkts-ability-appcontrol-setdisposedstatus-f-sys.md#setdisposedstatus) | 设置应用的处置状态。使用callback异步回调。成功返回null，失败返回对应错误信息。 |
-| [setDisposedStatus](arkts-ability-appcontrol-setdisposedstatus-f-sys.md#setdisposedstatus-1) | 设置应用的处置状态。使用Promise异步回调。成功返回null，失败返回对应错误信息。 |
-| [setDisposedStatusSync](arkts-ability-appcontrol-setdisposedstatussync-f-sys.md#setdisposedstatussync) | 以同步方法设置应用的处置状态。成功返回null，失败抛出对应异常。 |
-| [setUninstallDisposedRule](arkts-ability-appcontrol-setuninstalldisposedrule-f-sys.md#setuninstalldisposedrule) | 设置指定应用或分身应用的卸载处置规则。 |
+| [deleteDisposedStatus](arkts-ability-appcontrol-deletedisposedstatus-f-sys.md#deletedisposedstatus) | Deletes the disposed status for an application. This API uses an asynchronous callback to return the result. If the operation is successful, **null** is returned. If the operation fails, an error message is returned. |
+| [deleteDisposedStatus](arkts-ability-appcontrol-deletedisposedstatus-f-sys.md#deletedisposedstatus-1) | Deletes the disposed status for an application. This API uses a promise to return the result. If the operation is successful, **null** is returned. If the operation fails, an error message is returned. |
+| [deleteDisposedStatusSync](arkts-ability-appcontrol-deletedisposedstatussync-f-sys.md#deletedisposedstatussync) | Deletes the disposed status for an application or an application clone. This API returns the result synchronously.If the operation is successful, **null** is returned. If the operation fails, an error message is returned. |
+| [deleteUninstallDisposedRule](arkts-ability-appcontrol-deleteuninstalldisposedrule-f-sys.md#deleteuninstalldisposedrule) | Deletes an uninstallation disposed rule for an application or an application clone. |
+| [getAllDisposedRules](arkts-ability-appcontrol-getalldisposedrules-f-sys.md#getalldisposedrules) | Obtains all the disposed rules set for the current user. |
+| [getDisposedRule](arkts-ability-appcontrol-getdisposedrule-f-sys.md#getdisposedrule) | Obtains the disposed rule of an application or an application clone. |
+| [getDisposedRulesByBundle](arkts-ability-appcontrol-getdisposedrulesbybundle-f-sys.md#getdisposedrulesbybundle) | Query all disposed rules under the current user for the specified bundle name. |
+| [getDisposedStatus](arkts-ability-appcontrol-getdisposedstatus-f-sys.md#getdisposedstatus) | Obtains the disposed status of an application. This API uses an asynchronous callback to return the result. If the operation is successful, the disposed status of the application is returned. If the operation fails, an error message is returned. |
+| [getDisposedStatus](arkts-ability-appcontrol-getdisposedstatus-f-sys.md#getdisposedstatus-1) | Obtains the disposed status of an application. This API uses a promise to return the result. If the operation is successful, the disposed status of the application is returned. If the operation fails, an error message is returned. |
+| [getDisposedStatusSync](arkts-ability-appcontrol-getdisposedstatussync-f-sys.md#getdisposedstatussync) | Obtains the disposed status of an application. This API returns the result synchronously. If the operation is successful, the disposed status of the application is returned. If the operation fails, an error message is returned. |
+| [getUninstallDisposedRule](arkts-ability-appcontrol-getuninstalldisposedrule-f-sys.md#getuninstalldisposedrule) | Obtains the uninstallation disposed rule of an application or an application clone. |
+| [setDisposedRule](arkts-ability-appcontrol-setdisposedrule-f-sys.md#setdisposedrule) | Sets the disposed rule for an application or an application clone. |
+| [setDisposedRules](arkts-ability-appcontrol-setdisposedrules-f-sys.md#setdisposedrules) | Sets disposed rules in batches for an application or an application clone. |
+| [setDisposedStatus](arkts-ability-appcontrol-setdisposedstatus-f-sys.md#setdisposedstatus) | Sets the disposed status for an application. This API uses an asynchronous callback to return the result. If the operation is successful, **null** is returned. If the operation fails, an error message is returned. |
+| [setDisposedStatus](arkts-ability-appcontrol-setdisposedstatus-f-sys.md#setdisposedstatus-1) | Sets the disposed status for an application. This API uses a promise to return the result. If the operation is successful, **null** is returned. If the operation fails, an error message is returned. |
+| [setDisposedStatusSync](arkts-ability-appcontrol-setdisposedstatussync-f-sys.md#setdisposedstatussync) | Sets the disposed status for an application. This API returns the result synchronously. If the operation is successful, **null** is returned. If the operation fails, an error message is returned. |
+| [setUninstallDisposedRule](arkts-ability-appcontrol-setuninstalldisposedrule-f-sys.md#setuninstalldisposedrule) | Sets an uninstallation disposed rule for an application or an application clone. |
 <!--DelEnd-->
 
 <!--Del-->
@@ -53,9 +53,9 @@ import { appControl } from 'kits/@kit.AbilityKit';
 
 | Name | Description |
 | --- | --- |
-| [DisposedRule](arkts-ability-appcontrol-disposedrule-i-sys.md) | 标识拦截规则。 |
-| [DisposedRuleConfiguration](arkts-ability-appcontrol-disposedruleconfiguration-i-sys.md) | 标识批量设置拦截规则的配置。 |
-| [UninstallDisposedRule](arkts-ability-appcontrol-uninstalldisposedrule-i-sys.md) | 标识卸载处置规则。 |
+| [DisposedRule](arkts-ability-appcontrol-disposedrule-i-sys.md) | Defines a disposed rule. |
+| [DisposedRuleConfiguration](arkts-ability-appcontrol-disposedruleconfiguration-i-sys.md) | Describes the configurations for setting disposed rules in batches. |
+| [UninstallDisposedRule](arkts-ability-appcontrol-uninstalldisposedrule-i-sys.md) | Describes an uninstallation disposed rule. |
 <!--DelEnd-->
 
 <!--Del-->
@@ -63,9 +63,10 @@ import { appControl } from 'kits/@kit.AbilityKit';
 
 | Name | Description |
 | --- | --- |
-| [ComponentType](arkts-ability-appcontrol-componenttype-e-sys.md) | 标识功能组件类型。 |
-| [ControlType](arkts-ability-appcontrol-controltype-e-sys.md) | 标识拦截指定应用程序的不同策略。 |
-| [DisposedType](arkts-ability-appcontrol-disposedtype-e-sys.md) | 标识拦截应用程序的方式，例如禁用应用的全部能力、禁用应用的指定能力、或者不禁用。 |
-| [UninstallComponentType](arkts-ability-appcontrol-uninstallcomponenttype-e-sys.md) | 标识卸载时功能组件类型。 |
+| [ComponentType](arkts-ability-appcontrol-componenttype-e-sys.md) | Enumerates the types of application components that function as the displayed page. |
+| [ControlType](arkts-ability-appcontrol-controltype-e-sys.md) | Enumerates the control type of application disposal. |
+| [DisposedType](arkts-ability-appcontrol-disposedtype-e-sys.md) | Enumerates the types of application disposals. |
+| [PageJumpMode](arkts-ability-appcontrol-pagejumpmode-e-sys.md) | Enumerates the page jump modes used when an application is blocked. |
+| [UninstallComponentType](arkts-ability-appcontrol-uninstallcomponenttype-e-sys.md) | Enumerates the types of abilities during uninstallation. |
 <!--DelEnd-->
 

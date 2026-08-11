@@ -1,6 +1,6 @@
 # TableDetails
 
-描述数据库表执行端云同步任务上传和下载的统计信息。
+Defines a struct for statistics of device-cloud upload and download tasks of a database table.
 
 **Since:** 10
 
@@ -22,7 +22,7 @@ import { relationalStore } from 'kits/@kit.ArkData';
 download: Statistic
 ```
 
-表示数据库表中端云同步下载过程的统计信息。
+Describes the {@code Statistic} details of the download process.
 
 **Type:** [Statistic](arkts-arkdata-relationalstore-statistic-i.md)
 
@@ -40,7 +40,7 @@ download: Statistic
 upload: Statistic
 ```
 
-表示数据库表中端云同步上传过程的统计信息。
+Describes the {@code Statistic} details of the upload process.
 
 **Type:** [Statistic](arkts-arkdata-relationalstore-statistic-i.md)
 

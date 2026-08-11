@@ -1,6 +1,6 @@
 # ConfigOption
 
-此接口提供了应用打点的配置选项。
+Provides the configuration items for application event logging.
 
 **Since:** 7
 
@@ -20,7 +20,7 @@
 disable?: boolean
 ```
 
-应用打点功能开关，默认值为false。配置值为true表示关闭打点功能，false表示不关闭打点功能。
+Application event logging switch. The value **true** means to disable the application event logging function, and the value **false** means the opposite.
 
 **Type:** boolean
 
@@ -42,7 +42,7 @@ disable?: boolean
 maxStorage?: string
 ```
 
-打点数据本地存储文件所在目录的配额大小，默认限额为“10MB”。所在目录大小超出限额后会对目录进行清理操作，会按从旧到新的顺序逐个删除打点数据文件，直到目录大小不超出限额时停止。
+Maximum size of the event file storage directory. The default value is **10MB**. If the specified size is exceeded, the oldest event logging files in the directory will be deleted to free up space.
 
 **Type:** string
 

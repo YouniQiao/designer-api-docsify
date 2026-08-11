@@ -106,7 +106,7 @@ space?: FlexSpaceOptions
 
 所有子组件在Flex容器主轴或交叉轴的间距。
 
-**类型：** [FlexSpaceOptions](../arkts-components/arkts-arkui-flexspaceoptions-i.md)
+**类型：** [FlexSpaceOptions](arkts-arkui-flex-flexspaceoptions-i.md)
 
 **默认值：** {main: LengthMetrics.px(0), cross: LengthMetrics.px(0)}
 

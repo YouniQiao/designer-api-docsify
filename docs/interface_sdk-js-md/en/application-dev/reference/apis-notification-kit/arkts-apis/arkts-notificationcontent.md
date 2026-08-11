@@ -1,34 +1,40 @@
 # notificationContent(Some notification types and content)
 
+The **NotificationContent** defines the content structure of a notification and provides content description API
+ of multiple notification types. When an application needs to publish a notification, it can select the
+ corresponding content type API to construct the notification content based on the display requirements (such as
+ plain text, long text, multi-line text, picture, or live view).
+
+
 ## Summary
 
 ### Interfaces
 
 | Name | Description |
 | --- | --- |
-| [NotificationBasicContent](arkts-notification-notificationcontent-notificationbasiccontent-i.md) | 描述普通文本通知，用于展示标题和正文内容，是其他通知类型的基础内容结构。其他通知类型（如长文本、多行文本、图片、实况窗）均继承本接口，在此基础上扩展各自特有字段。 |
-| [NotificationButton](arkts-notification-notificationcontent-notificationbutton-i.md) | 描述通知按钮，用于在实况窗中展示可交互的按钮。 |
-| [NotificationCapsule](arkts-notification-notificationcontent-notificationcapsule-i.md) | 描述通知胶囊，用于在实况窗中展示胶囊形态。 |
-| [NotificationContent](arkts-notification-notificationcontent-notificationcontent-i.md) | 通知内容。 |
-| [NotificationLongTextContent](arkts-notification-notificationcontent-notificationlongtextcontent-i.md) | 描述长文本通知。继承自[NotificationBasicContent](arkts-notification-notificationcontent-notificationbasiccontent-i.md)。 |
-| [NotificationMultiLineContent](arkts-notification-notificationcontent-notificationmultilinecontent-i.md) | 描述多行文本通知。继承自[NotificationBasicContent](arkts-notification-notificationcontent-notificationbasiccontent-i.md)。 |
-| [NotificationPictureContent](arkts-notification-notificationcontent-notificationpicturecontent-i.md) | 描述附有图片的通知。继承自[NotificationBasicContent](arkts-notification-notificationcontent-notificationbasiccontent-i.md)。 |
-| [NotificationProgress](arkts-notification-notificationcontent-notificationprogress-i.md) | 描述通知进度，用于在实况窗中展示进度条信息。 |
-| [NotificationSystemLiveViewContent](arkts-notification-notificationcontent-notificationsystemliveviewcontent-i.md) | 描述系统实况窗通知内容，用于在实况窗中展示实时状态信息。不支持三方应用直接创建该类型通知，可以由系统代理创建系统实况窗类型通知后，三方应用发布同ID的通知来更新指定内容。继承自[NotificationBasicContent](arkts-notification-notificationcontent-notificationbasiccontent-i.md)。 |
-| [NotificationTime](arkts-notification-notificationcontent-notificationtime-i.md) | 描述通知计时信息。 |
+| [NotificationBasicContent](arkts-notification-notificationcontent-notificationbasiccontent-i.md) | Describes the basic text notification, which is used to display the title and body content. It serves as the basic content structure for other notification types. Other notification types (such as long text, multi-line text, picture, and live view) inherit this API and extend their own specific fields on this basis. |
+| [NotificationButton](arkts-notification-notificationcontent-notificationbutton-i.md) | Describes the notification button, which is used to display an interactive button in the live view.  > **NOTE：** >  > The actual display effect depends on the device capabilities and the notification center UI style. |
+| [NotificationCapsule](arkts-notification-notificationcontent-notificationcapsule-i.md) | Describes the notification capsule, which is used to display the capsule form in the live view.  > **NOTE：** >  > The actual display effect depends on the device capabilities and the notification center UI style. |
+| [NotificationContent](arkts-notification-notificationcontent-notificationcontent-i.md) | Describes the notification contents. |
+| [NotificationLongTextContent](arkts-notification-notificationcontent-notificationlongtextcontent-i.md) | Describes the long text notification. This API is inherited from NotificationBasicContent.  > **NOTE：** >  > - When this notification type forms a group notification with other notifications, its display effect defaults > to the collapsed state, and the displayed title and body are the **title** and **text** inherited from > NotificationBasicContent. When this notification type is displayed alone and does not form a group notification > with other notifications, its display effect defaults to the expanded state, where the displayed title is the > expanded title **expandedTitle**, and the displayed body content is the long text **longText**. >  > - When a user taps a group notification to view the notification details, the display effect of this > notification changes to the expanded state. >  > - The actual display effect depends on the device capabilities and the notification center UI style. |
+| [NotificationMultiLineContent](arkts-notification-notificationcontent-notificationmultilinecontent-i.md) | Describes the multi-line text notification. This API is inherited from NotificationBasicContent.  > **NOTE：** >  > - When this notification type forms a group notification with other notifications, its display effect defaults > to the collapsed state, and the displayed title and body are the **title** and **text** inherited from > NotificationBasicContent. When this notification type is displayed alone and does not form a group notification > with other notifications, its display effect defaults to the expanded state, where the displayed title is the > expanded title **longTitle**, and the multi-line text content **lines** is displayed as the body. >  > - When a user taps a group notification to view the notification details, the display effect of this > notification changes to the expanded state. >  > - The actual display effect depends on the device capabilities and the notification center UI style. |
+| [NotificationPictureContent](arkts-notification-notificationcontent-notificationpicturecontent-i.md) | Describes the picture-attached notification. This API is inherited from NotificationBasicContent.  > **NOTE：** >  > - When this notification type forms a group notification with other notifications, its display effect defaults > to the collapsed state, and the displayed title and body are the **title** and **text** inherited from > NotificationBasicContent. When this notification type is displayed alone and does not form a group notification > with other notifications, its display effect defaults to the expanded state, where the displayed title is the > expanded title **expandedTitle**, and the displayed body is the **text** inherited from > NotificationBasicContent and the picture content **picture** of this type. >  > - When a user taps a group notification to view the notification details, the display effect of this > notification changes to the expanded state. >  > - The actual display effect depends on the device capabilities and the notification center UI style. |
+| [NotificationProgress](arkts-notification-notificationcontent-notificationprogress-i.md) | Describes the notification progress, which is used to display progress bar information in the live view.  > **NOTE：** >  > The actual display effect depends on the device capabilities and the notification center UI style. |
+| [NotificationSystemLiveViewContent](arkts-notification-notificationcontent-notificationsystemliveviewcontent-i.md) | Describes the system live view notification content, which is used to display real-time status information in the live view. Third-party applications are not supported to directly create this notification type. After the system proxy creates a system live view notification, a third-party application can publish a notification with the same ID to update the specified content. This API is inherited from NotificationBasicContent.  > **NOTE：** >  > The actual display effect depends on the device capabilities and the notification center UI style. |
+| [NotificationTime](arkts-notification-notificationcontent-notificationtime-i.md) | Describes the notification timing information.  > **NOTE：** >  > The actual display effect depends on the device capabilities and the notification center UI style. |
 
 <!--Del-->
 ### Interfaces（系统接口）
 
 | Name | Description |
 | --- | --- |
-| [NotificationBasicContent](arkts-notification-notificationcontent-notificationbasiccontent-i-sys.md) | 描述普通文本通知，用于展示标题和正文内容，是其他通知类型的基础内容结构。其他通知类型（如长文本、多行文本、图片、实况窗）均继承本接口，在此基础上扩展各自特有字段。 |
-| [NotificationCapsule](arkts-notification-notificationcontent-notificationcapsule-i-sys.md) | 描述通知胶囊，用于在实况窗中展示胶囊形态。 |
-| [NotificationContent](arkts-notification-notificationcontent-notificationcontent-i-sys.md) | 通知内容。 |
-| [NotificationIconButton](arkts-notification-notificationcontent-notificationiconbutton-i-sys.md) | 描述系统通知按钮。 |
-| [NotificationLiveViewContent](arkts-notification-notificationcontent-notificationliveviewcontent-i-sys.md) | 描述普通实况通知。继承自[NotificationBasicContent](arkts-notification-notificationcontent-notificationbasiccontent-i.md)。 |
-| [NotificationMultiLineContent](arkts-notification-notificationcontent-notificationmultilinecontent-i-sys.md) | 描述多行文本通知。继承自[NotificationBasicContent](arkts-notification-notificationcontent-notificationbasiccontent-i.md)。 |
-| [NotificationSystemLiveViewContent](arkts-notification-notificationcontent-notificationsystemliveviewcontent-i-sys.md) | 描述系统实况窗通知内容，用于在实况窗中展示实时状态信息。不支持三方应用直接创建该类型通知，可以由系统代理创建系统实况窗类型通知后，三方应用发布同ID的通知来更新指定内容。继承自[NotificationBasicContent](arkts-notification-notificationcontent-notificationbasiccontent-i.md)。 |
+| [NotificationBasicContent](arkts-notification-notificationcontent-notificationbasiccontent-i-sys.md) | Describes the basic text notification, which is used to display the title and body content. It serves as the basic content structure for other notification types. Other notification types (such as long text, multi-line text, picture, and live view) inherit this API and extend their own specific fields on this basis. |
+| [NotificationCapsule](arkts-notification-notificationcontent-notificationcapsule-i-sys.md) | Describes the notification capsule, which is used to display the capsule form in the live view.  > **NOTE：** >  > The actual display effect depends on the device capabilities and the notification center UI style. |
+| [NotificationContent](arkts-notification-notificationcontent-notificationcontent-i-sys.md) | Describes the notification contents. |
+| [NotificationIconButton](arkts-notification-notificationcontent-notificationiconbutton-i-sys.md) | Describes the system notification button. |
+| [NotificationLiveViewContent](arkts-notification-notificationcontent-notificationliveviewcontent-i-sys.md) | Describes the normal live notification content. This API inherits from NotificationBasicContent. |
+| [NotificationMultiLineContent](arkts-notification-notificationcontent-notificationmultilinecontent-i-sys.md) | Describes the multi-line text notification. This API is inherited from NotificationBasicContent.  > **NOTE：** >  > - When this notification type forms a group notification with other notifications, its display effect defaults > to the collapsed state, and the displayed title and body are the **title** and **text** inherited from > NotificationBasicContent. When this notification type is displayed alone and does not form a group notification > with other notifications, its display effect defaults to the expanded state, where the displayed title is the > expanded title **longTitle**, and the multi-line text content **lines** is displayed as the body. >  > - When a user taps a group notification to view the notification details, the display effect of this > notification changes to the expanded state. >  > - The actual display effect depends on the device capabilities and the notification center UI style. |
+| [NotificationSystemLiveViewContent](arkts-notification-notificationcontent-notificationsystemliveviewcontent-i-sys.md) | Describes the system live view notification content, which is used to display real-time status information in the live view. Third-party applications are not supported to directly create this notification type. After the system proxy creates a system live view notification, a third-party application can publish a notification with the same ID to update the specified content. This API is inherited from NotificationBasicContent.  > **NOTE：** >  > The actual display effect depends on the device capabilities and the notification center UI style. |
 <!--DelEnd-->
 
 <!--Del-->
@@ -36,8 +42,8 @@
 
 | Name | Description |
 | --- | --- |
-| [LiveViewStatus](arkts-notification-notificationcontent-liveviewstatus-e-sys.md) | 描述普通实况通知的状态。 |
-| [LiveViewTypes](arkts-notification-notificationcontent-liveviewtypes-e-sys.md) | 描述实况通知的类型。 |
+| [LiveViewStatus](arkts-notification-notificationcontent-liveviewstatus-e-sys.md) | Enumerates the statuses of the common live view. |
+| [LiveViewTypes](arkts-notification-notificationcontent-liveviewtypes-e-sys.md) | Enumerates live view types. |
 <!--DelEnd-->
 
 <!--Del-->
@@ -45,6 +51,6 @@
 
 | Name | Description |
 | --- | --- |
-| [IconType](arkts-notification-icontype-t-sys.md) | 描述图标的类型。 |
+| [IconType](arkts-notification-icontype-t-sys.md) | Describes the icon types. |
 <!--DelEnd-->
 

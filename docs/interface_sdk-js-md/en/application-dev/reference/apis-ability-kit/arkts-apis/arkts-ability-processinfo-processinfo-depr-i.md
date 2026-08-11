@@ -1,6 +1,7 @@
 # ProcessInfo
 
-定义进程信息，可以通过[getProcessInfo](../../../reference/apis-ability-kit/js-apis-inner-app-context.md#contextgetprocessinfo7)获取当前Ability运行的进程信息。
+The module defines process information. You can use  
+[getProcessInfo](../../../reference/apis-ability-kit/js-apis-inner-app-context.md#contextgetprocessinfo7) to obtain information about the processes running on the current ability.
 
 **Since:** 7
 
@@ -16,7 +17,7 @@
 pid: int
 ```
 
-进程ID。
+The id of the current process
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
@@ -34,7 +35,7 @@ pid: int
 processName: string
 ```
 
-进程名称。
+The name of the current process
 
 **Type:** string
 

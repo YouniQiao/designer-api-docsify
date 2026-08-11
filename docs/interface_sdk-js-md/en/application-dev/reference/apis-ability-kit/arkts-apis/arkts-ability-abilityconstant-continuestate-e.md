@@ -1,7 +1,7 @@
 # ContinueState
 
-流转状态枚举值。用于表示当前应用任务流转的状态。可配合[UIAbilityContext](arkts-ability-uiabilitycontext-c.md)的  
-[setMissionContinueState](arkts-ability-uiabilitycontext-c.md#setmissioncontinuestate)方法进行设置。
+Enumerates the mission continuation states of the application. It is used in the  
+[setMissionContinueState](arkts-ability-uiabilitycontext-c.md#setmissioncontinuestate) API of [UIAbilityContext](arkts-ability-uiabilitycontext-c.md).
 
 **Since:** 10
 
@@ -17,7 +17,7 @@
 ACTIVE = 0
 ```
 
-指示当前应用任务流转处于激活状态。
+Mission continuation is activated for the current application.
 
 **Since:** 10
 
@@ -37,7 +37,7 @@ ACTIVE = 0
 INACTIVE = 1
 ```
 
-指示当前应用任务流转处于未激活状态。
+Mission continuation is not activated for the current application.
 
 **Since:** 10
 

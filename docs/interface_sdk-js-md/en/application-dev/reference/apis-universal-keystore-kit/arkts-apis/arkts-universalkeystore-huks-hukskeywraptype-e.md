@@ -1,6 +1,6 @@
 # HuksKeyWrapType
 
-表示密钥加密类型（加密导出或导入密钥）的枚举。
+Enumerates the key encryption types (exporting or importing keys).
 
 **Since:** 20
 
@@ -16,7 +16,7 @@
 HUKS_KEY_WRAP_TYPE_HUK_BASED = 2
 ```
 
-硬件唯一密钥加密类型。&lt;!--Del--&gt;（暂不支持）&lt;!--DelEnd--&gt;
+Hardware unique key encryption type. &lt;!--Del--&gt;(not supported currently)&lt;!--DelEnd--&gt;
 
 **Since:** 20
 

@@ -1,6 +1,7 @@
-# @ohos.advertising.AdsServiceExtensionAbility(广告扩展服务)
+# @ohos.advertising.AdsServiceExtensionAbility(ExtensionAbility for Ads)
 
-本模块为设备厂商提供广告扩展能力，设备厂商可自主实现请求广告的回调。
+The AdsServiceExtensionAbility module provides ExtensionAbilities for the ads service. Device vendors can implement
+ the callbacks for ads requests.
 
 
 ## Modules to Import
@@ -16,12 +17,12 @@ import { RespCallback } from 'kits/@kit.AdsKit';
 
 | Name | Description |
 | --- | --- |
-| [AdsServiceExtensionAbility](arkts-ads-advertising-adsserviceextensionability-adsserviceextensionability-c-sys.md) | 本模块为设备厂商提供广告扩展能力，设备厂商可自主实现单广告位请求和多广告位请求的业务逻辑。 |
+| [AdsServiceExtensionAbility](arkts-ads-advertising-adsserviceextensionability-adsserviceextensionability-c-sys.md) | Provides the capability of integrating advertising services with vendors. |
 <!--DelEnd-->
 
 ### Interfaces
 
 | Name | Description |
 | --- | --- |
-| [RespCallback](arkts-ads-advertising-adsserviceextensionability-respcallback-i.md) | 广告请求回调。 |
+| [RespCallback](arkts-ads-advertising-adsserviceextensionability-respcallback-i.md) | Ad request callback. |
 

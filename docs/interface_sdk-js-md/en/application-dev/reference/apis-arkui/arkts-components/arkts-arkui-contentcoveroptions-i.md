@@ -1,8 +1,8 @@
 # ContentCoverOptions
 
-继承自[BindOptions](arkts-arkui-bindoptions-i.md)。
+Inherited from [BindOptions](arkts-arkui-bindoptions-i.md).
 
-全屏模态页面内容选项。
+Provides content options of the modal.
 
 **Inheritance/Implementation:** ContentCoverOptions extends [BindOptions](arkts-arkui-bindoptions-i.md)
 
@@ -20,7 +20,7 @@
 enableSafeArea?: boolean
 ```
 
-全屏模态是否适配安全区域，true表示全屏模态适配安全区域，将内容限制在安全区内，避让导航条和状态栏，false表示不做处理，和之前的样式保持一致。默认值为false。
+Whether the full-screen modal adapts to the safe area. **true** indicates the full-screen modal adapts to the safe area, restricting content within the safe area and avoiding the navigation and status bars. **false** indicates no processing is applied, maintaining the same style as before. The default value is **false**.
 
 **Type:** boolean
 
@@ -44,13 +44,13 @@ enableSafeArea?: boolean
 modalTransition?: ModalTransition
 ```
 
-全屏模态页面的系统转场方式。
+System transition mode of the modal.
 
-默认值：ModalTransition.DEFAULT。
+Default value: **ModalTransition.DEFAULT**.
 
-**说明：**
+**NOTE：**
 
-与transition同时设置时，此属性不生效。
+This property has no effect when it is set together with **transition**.
 
 **Type:** [ModalTransition](arkts-arkui-modaltransition-e.md)
 
@@ -74,11 +74,12 @@ modalTransition?: ModalTransition
 onWillDismiss?: Callback<DismissContentCoverAction>
 ```
 
-全屏模态页面交互式关闭回调函数。
+Callback invoked to prevent a user attempt to dismiss the modal.
 
-**说明：**
+**NOTE：**
 
-当用户执行back事件关闭交互操作时，如果注册该回调函数，则不会立刻关闭。在回调函数中可以通过reason得到阻拦关闭页面的操作类型，从而根据原因选择是否关闭全屏模态页面。在onWillDismiss回调中，不能再做onWillDismiss拦截。
+After this callback is registered, touching the back button does not immediately dismiss the modal. You can use the  
+**reason** parameter to determine the type of operation that triggers the dismiss and decide whether to dismiss the modal based on the reason. Nesting **onWillDismiss** callbacks is not allowed.
 
 **Type:** [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;DismissContentCoverAction&gt;
 
@@ -100,7 +101,7 @@ onWillDismiss?: Callback<DismissContentCoverAction>
 transition?: TransitionEffect
 ```
 
-全屏模态页面的自定义转场方式。
+Custom transition mode of the modal.
 
 **Type:** [TransitionEffect](../arkts-apis/arkts-arkui-common-transitioneffect-c.md)
 

@@ -12,7 +12,7 @@ import { bundleManager } from 'kits/@kit.AbilityKit';
 function getExtResource(bundleName: string): Promise<Array<string>>
 ```
 
-根据给定的bundleName获得扩展资源对应的moduleNames。使用Promise异步回调。
+Obtains the module names corresponding to the extended resources based on the given bundle name. This API uses a promise to return the result.
 
 **Since:** 12
 
@@ -30,23 +30,23 @@ function getExtResource(bundleName: string): Promise<Array<string>>
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| bundleName | string | Yes | 要查询扩展资源的应用名称。 |
+| bundleName | string | Yes | Bundle name based on which the extended resources are to be queried. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;Array&lt;string&gt;&gt; | Promise对象，返回接口运行结果及扩展资源对应的moduleNames。 |
+| Promise&lt;Array&lt;string&gt;&gt; | Promise used to return the API call result and the module names corresponding to the extended resources. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types. |
-| 17700303 | Failed to obtain extended resources. |
-| 201 | Permission denied. |
-| 202 | Permission denied, non-system app called system api. |
-| 17700001 | The specified bundleName is not found. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types. |
+| [17700303](../errorcode-bundle.md#17700303-failed-to-obtain-extended-resources) | Failed to obtain extended resources. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission denied, non-system app called system api. |
+| [17700001](../errorcode-bundle.md#17700001-bundle-name-does-not-exist) | The specified bundleName is not found. |
 
 ## Examples
 
@@ -60,7 +60,7 @@ let bundleName: string = 'com.ohos.demo';
 try {
   bundleManager.getExtResource(bundleName).then((modules: Array<string>) => {
     for (let i = 0; i < modules.length; i++) {
-      hilog.info(0x0000, 'testTag', 'getExtResource item: %{public}s', modules[i]);
+      hilog.info(0x0000, 'testTag', 'getExtResource item: %s', modules[i]);
     }
   }).catch((err: BusinessError) => {
     hilog.error(0x0000, 'testTag', 'getExtResource failed. Cause: %{public}s', err.message);

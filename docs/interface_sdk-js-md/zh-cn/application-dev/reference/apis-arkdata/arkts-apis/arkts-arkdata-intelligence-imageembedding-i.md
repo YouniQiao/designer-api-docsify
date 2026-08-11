@@ -12,12 +12,6 @@
 
 **系统能力：** SystemCapability.DistributedDataManager.DataIntelligence.Core
 
-## 导入模块
-
-```TypeScript
-import { intelligence } from 'kits/@kit.ArkData';
-```
-
 ## getEmbedding
 
 ArkTS-Dyn:
@@ -58,11 +52,13 @@ getEmbedding(image: Image): Promise<Array<double>>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types. |
-| 801 | Capability not supported. |
-| 31300000 | Inner error. |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types. |
+| [801](../../errorcode-universal.md#801-该设备不支持此api) | Capability not supported. |
+| [31300000](../errorcode-intelligence.md#31300000-服务内部异常) | Inner error. |
 
 ## 示例
+
+ArkTS-Dyn示例：
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -78,6 +74,23 @@ imageEmbedding.loadModel().then(() => {
       console.error(`Failed to get Embedding. Code: ${err.code}, message: ${err.message}`);
     })
 }).catch((err: BusinessError) => {
+  console.error(`Failed to load Model. Code: ${err.code}, message: ${err.message}`);
+})
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+imageEmbedding?.loadModel().then(() => {
+  let image = 'file://<packageName>/data/storage/el2/base/haps/entry/files/xxx.jpg';
+  imageEmbedding?.getEmbedding(image)
+    .then((data: Array<double>) => {
+      console.info("Succeeded in getting Embedding");
+    })
+    .catch((err) => {
+      console.error(`Failed to get Embedding. Code: ${err.code}, message: ${err.message}`);
+    })
+}).catch((err) => {
   console.error(`Failed to load Model. Code: ${err.code}, message: ${err.message}`);
 })
 ```
@@ -113,10 +126,12 @@ loadModel(): Promise<void>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 801 | Capability not supported. |
-| 31300000 | Inner error. |
+| [801](../../errorcode-universal.md#801-该设备不支持此api) | Capability not supported. |
+| [31300000](../errorcode-intelligence.md#31300000-服务内部异常) | Inner error. |
 
 ## 示例
+
+ArkTS-Dyn示例：
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -127,6 +142,19 @@ imageEmbedding.loadModel()
     console.info("Succeeded in loading Model");
   })
   .catch((err: BusinessError) => {
+    console.error(`Failed to load Model. Code: ${err.code}, message: ${err.message}`);
+  })
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+// imageEmbedding需先通过intelligence.getImageEmbeddingModel获取
+imageEmbedding?.loadModel()
+  .then(() => {
+    console.info("Succeeded in loading Model");
+  })
+  .catch((err) => {
     console.error(`Failed to load Model. Code: ${err.code}, message: ${err.message}`);
   })
 ```
@@ -157,10 +185,12 @@ releaseModel(): Promise<void>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 801 | Capability not supported. |
-| 31300000 | Inner error. |
+| [801](../../errorcode-universal.md#801-该设备不支持此api) | Capability not supported. |
+| [31300000](../errorcode-intelligence.md#31300000-服务内部异常) | Inner error. |
 
 ## 示例
+
+ArkTS-Dyn示例：
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -171,6 +201,19 @@ imageEmbedding.releaseModel()
     console.info("Succeeded in releasing Model");
   })
   .catch((err: BusinessError) => {
+    console.error(`Failed to release Model. Code: ${err.code}, message: ${err.message}`);
+  })
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+// imageEmbedding需先通过intelligence.getImageEmbeddingModel获取
+imageEmbedding?.releaseModel()
+  .then(() => {
+    console.info("Succeeded in releasing Model");
+  })
+  .catch((err) => {
     console.error(`Failed to release Model. Code: ${err.code}, message: ${err.message}`);
   })
 ```

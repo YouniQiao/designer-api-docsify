@@ -1,6 +1,6 @@
 # ImageSpanAlignment
 
-The alignment of ImageSpan
+The alignment mode of the image relative to the line height.
 
 **Since:** 10
 
@@ -13,10 +13,10 @@ The alignment of ImageSpan
 ## BASELINE
 
 ```TypeScript
-BASELINE = 0
+BASELINE
 ```
 
-Indicating that the bottom of the ImageSpan should be aligned with the baseline of the surrounding text.
+The image is bottom aligned with the text baseline.
 
 **Since:** 10
 
@@ -26,17 +26,17 @@ Indicating that the bottom of the ImageSpan should be aligned with the baseline 
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
-<!--Device-ImageSpanAlignment-BASELINE = 0--><!--Device-ImageSpanAlignment-BASELINE = 0-End-->
+<!--Device-ImageSpanAlignment-BASELINE--><!--Device-ImageSpanAlignment-BASELINE-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## BOTTOM
 
 ```TypeScript
-BOTTOM = 1
+BOTTOM
 ```
 
-Indicating that the bottom of the ImageSpan should be aligned with the bottom of the surrounding text.
+The image is bottom aligned with the line.
 
 **Since:** 10
 
@@ -46,17 +46,17 @@ Indicating that the bottom of the ImageSpan should be aligned with the bottom of
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
-<!--Device-ImageSpanAlignment-BOTTOM = 1--><!--Device-ImageSpanAlignment-BOTTOM = 1-End-->
+<!--Device-ImageSpanAlignment-BOTTOM--><!--Device-ImageSpanAlignment-BOTTOM-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## CENTER
 
 ```TypeScript
-CENTER = 2
+CENTER
 ```
 
-Indicating that the center of the ImageSpan should be aligned with the center of the surrounding text.
+The image is centered aligned with the line.
 
 **Since:** 10
 
@@ -66,17 +66,17 @@ Indicating that the center of the ImageSpan should be aligned with the center of
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
-<!--Device-ImageSpanAlignment-CENTER = 2--><!--Device-ImageSpanAlignment-CENTER = 2-End-->
+<!--Device-ImageSpanAlignment-CENTER--><!--Device-ImageSpanAlignment-CENTER-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## TOP
 
 ```TypeScript
-TOP = 3
+TOP
 ```
 
-Indicating that the top of the ImageSpan should be aligned with the top of the surrounding text.
+The image is top aligned with the line.
 
 **Since:** 10
 
@@ -86,17 +86,17 @@ Indicating that the top of the ImageSpan should be aligned with the top of the s
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
-<!--Device-ImageSpanAlignment-TOP = 3--><!--Device-ImageSpanAlignment-TOP = 3-End-->
+<!--Device-ImageSpanAlignment-TOP--><!--Device-ImageSpanAlignment-TOP-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## FOLLOW_PARAGRAPH
 
 ```TypeScript
-FOLLOW_PARAGRAPH = 4
+FOLLOW_PARAGRAPH
 ```
 
-按照段落TextVerticalAlign的对齐方式来布局
+The alignment mode follows the parent component of the **Text** component.
 
 **Since:** 20
 
@@ -106,7 +106,7 @@ FOLLOW_PARAGRAPH = 4
 
 **Atomic service API:** This API can be used in atomic services since API version 20.
 
-<!--Device-ImageSpanAlignment-FOLLOW_PARAGRAPH = 4--><!--Device-ImageSpanAlignment-FOLLOW_PARAGRAPH = 4-End-->
+<!--Device-ImageSpanAlignment-FOLLOW_PARAGRAPH--><!--Device-ImageSpanAlignment-FOLLOW_PARAGRAPH-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 

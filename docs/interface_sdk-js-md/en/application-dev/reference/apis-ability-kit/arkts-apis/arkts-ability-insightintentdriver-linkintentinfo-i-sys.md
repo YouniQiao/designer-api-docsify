@@ -1,7 +1,7 @@
 # LinkIntentInfo (System API)
 
-LinkIntentInfo用于描述  
-[@InsightIntentLink](../../../reference/apis-ability-kit/js-apis-app-ability-InsightIntentDecorator.md#insightintentlink)装饰器支持的参数，例如应用间跳转需要的uri信息。
+Describes the parameters supported by the  
+[@InsightIntentLink](../../../reference/apis-ability-kit/js-apis-app-ability-InsightIntentDecorator.md#insightintentlink) decorator, such as the URI required for application redirection.
 
 **Since:** 20
 
@@ -25,7 +25,7 @@ import { insightIntentDriver } from 'kits/@kit.AbilityKit';
 readonly uri: string
 ```
 
-表示意图的uri信息。
+URI of an intent.
 
 **Type:** string
 

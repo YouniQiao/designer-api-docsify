@@ -8,17 +8,11 @@
 
 **废弃版本：** 20
 
-**替代接口：** [Intl.PluralRulesOptions](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/PluralRules/PluralRules#options)
+**替代接口：** [Intl.PluralRulesOptions](arkts-intl.md#intl.pluralrulesoptions)
 
 <!--Device-intl-export interface PluralRulesOptions--><!--Device-intl-export interface PluralRulesOptions-End-->
 
 **系统能力：** SystemCapability.Global.I18n
-
-## 导入模块
-
-```TypeScript
-import { intl } from 'kits/@kit.LocalizationKit';
-```
 
 ## localeMatcher
 

@@ -1,6 +1,6 @@
 # UsbDeviceId
 
-USB设备ID信息。
+Represents the USB device identity information.
 
 **Since:** 12
 
@@ -22,7 +22,7 @@ import { usbManager } from 'kits/@kit.MDMKit';
 productId: number
 ```
 
-产品ID。
+Product ID.
 
 **Type:** number
 
@@ -42,7 +42,7 @@ productId: number
 vendorId: number
 ```
 
-厂商ID。
+Vendor ID.
 
 **Type:** number
 

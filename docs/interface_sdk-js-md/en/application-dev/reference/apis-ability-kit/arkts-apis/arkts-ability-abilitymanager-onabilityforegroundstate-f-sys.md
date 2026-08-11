@@ -12,7 +12,7 @@ import { abilityManager } from 'kits/@kit.AbilityKit';
 function onAbilityForegroundState(observer: AbilityForegroundStateObserver): void
 ```
 
-注册Ability的启动和退出的观测器。
+Register Ability foreground or background state observer.
 
 **Since:** 23
 
@@ -30,13 +30,13 @@ function onAbilityForegroundState(observer: AbilityForegroundStateObserver): voi
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| observer | [AbilityForegroundStateObserver](arkts-ability-abilitymanager-abilityforegroundstateobserver-t-sys.md) | Yes | Ability状态观测器，用于观测Ability的启动和退出。 |
+| observer | [AbilityForegroundStateObserver](arkts-ability-abilitymanager-abilityforegroundstateobserver-t-sys.md) | Yes | The ability foreground state observer. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 16000050 | Connect to system server failed. |
-| 201 | Permission denied. |
-| 202 | Not system application. |
+| [16000050](../errorcode-ability.md#16000050-internal-error) | Connect to system server failed. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not System App. Interface caller is not a system app. |
 

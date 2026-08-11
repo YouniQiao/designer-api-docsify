@@ -1,6 +1,6 @@
 # VertexMode
 
-顶点绘制的连接方式枚举。
+Enumerates the connection modes for vertex drawing.
 
 **Since:** 23
 
@@ -16,7 +16,7 @@
 TRIANGLES_VERTEXMODE = 0
 ```
 
-顶点按顺序每三个一组，分别构成独立的三角形。
+Every three vertices come from different triangles.
 
 **Since:** 23
 
@@ -32,7 +32,7 @@ TRIANGLES_VERTEXMODE = 0
 TRIANGLESSTRIP_VERTEXMODE = 1
 ```
 
-连续的三角形共享一条边，对于连续表面效率高。
+Consecutive triangles share one edge. It is efficient for continuous surfaces.
 
 **Since:** 23
 
@@ -48,7 +48,7 @@ TRIANGLESSTRIP_VERTEXMODE = 1
 TRIANGLESFAN_VERTEXMODE = 2
 ```
 
-所有三角形共享一个顶点。适用于绘制圆形/扇形的场景。
+All triangles share one vertex. It is suitable for circles and sectors.
 
 **Since:** 23
 

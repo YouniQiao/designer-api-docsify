@@ -1,6 +1,6 @@
 # ApplicationInfo
 
-应用程序信息。
+The module defines the application information.
 
 **Since:** 9
 
@@ -16,8 +16,7 @@
 readonly flags?: int
 ```
 
-标识当前应用和当前用户之间的状态集合，每一位表示一个特定的布尔状态，取值参考  
-[ApplicationInfoFlag](arkts-ability-bundlemanager-applicationinfoflag-e-sys.md)。
+Indicates the flags of the application.
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 

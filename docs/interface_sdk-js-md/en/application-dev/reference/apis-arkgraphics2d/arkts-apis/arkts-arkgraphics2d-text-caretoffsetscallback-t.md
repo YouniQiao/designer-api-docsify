@@ -4,7 +4,7 @@
 type CaretOffsetsCallback = (offset: double, index: int, leadingEdge: boolean) => boolean
 ```
 
-将文本行中每个字符的偏移量和索引值作为参数的回调方法。
+Defines the callback used to receive the offset and index of each character in a text line object as its parameters.
 
 **Since:** 18
 
@@ -20,13 +20,13 @@ type CaretOffsetsCallback = (offset: double, index: int, leadingEdge: boolean) =
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| offset | ArkTS-Dyn: number  <br>ArkTS-Sta：double | Yes | Offset of each character in a text line. The value is a floating point number. |
+| offset | ArkTS-Dyn: number  <br>ArkTS-Sta：double | Yes | Offset of each character in the text line, which is a floating-point value, in physical pixels (px). |
 | index | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | Index of each character in a text line. The value is an integer. |
-| leadingEdge | boolean | Yes | Whether the cursor is located at the front of the character. The value true means that the cursor is located at the front of the character, that is, the offset does not contain the character width. The value false means that the cursor is located at the rear of the character, that is, the offset contains the character width. |
+| leadingEdge | boolean | Yes | Whether the cursor is located at the front of the character. The value **true** means that the cursor is located at the front of the character, that is, the offset does not contain the character width. The value **false** means that the cursor is located at the rear of the character, that is, the offset contains the character width. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| boolean | 表示是否停止调用该回调函数，true表示停止调用该回调函数，false表示继续调用该回调函数。 |
+| boolean | Whether to stop calling the callback. The value **true** means to stop calling the callback, and **false** means to continue calling the callback. |
 

@@ -12,12 +12,12 @@ import { dlpPermission } from 'kits/@kit.DataProtectionKit';
 function installDLPSandbox(bundleName: string, access: DLPFileAccess, userId: number, uri: string): Promise<DLPSandboxInfo>
 ```
 
-安装一个应用的DLP沙箱。DLP沙箱为受保护的DLP文件创建独立的运行环境，与原应用进程隔离，确保数据在授权范围内安全流转。沙箱应用继承原应用的功能但仅能访问授权的DLP文件。使用Promise异步回调。
+Installs a DLP sandbox application for an application. The DLP sandbox creates an independent running environment for protected DLP files, which is isolated from the original application process. This ensures that data is securely transferred within the authorized scope. The sandbox application inherits the functions of the original application but can access only authorized DLP files. This API uses a promise to return the result.
 
-调用installDLPSandbox成功后必须在使用完毕后调用  
-[uninstallDLPSandbox](arkts-dataprotection-dlppermission-uninstalldlpsandbox-f-sys.md#uninstalldlpsandbox)卸载沙箱。
+After calling **installDLPSandbox** to install a sandbox, the system must call   
+[uninstallDLPSandbox](arkts-dataprotection-dlppermission-uninstalldlpsandbox-f-sys.md#uninstalldlpsandbox)to uninstall the sandbox after using it.
 
-DLP文件管理应用打开受保护文件前，需要先为目标应用安装DLP沙箱。
+Before a DLP file management application opens a protected file, the system needs to install a DLP sandbox for the target application.
 
 **Since:** 10
 
@@ -35,39 +35,45 @@ DLP文件管理应用打开受保护文件前，需要先为目标应用安装DL
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| bundleName | string | Yes | 应用包名。最小7字节，最大128字节。超出范围时抛出错误码401。 |
-| access | [DLPFileAccess](arkts-dataprotection-dlppermission-dlpfileaccess-e.md) | Yes | DLP文件授权类型。设置不同的授权类型将决定用户对DLP文件的访问权限范围。 |
-| userId | number | Yes | 当前的用户ID，通过账号子系统获取的系统账号ID，默认主用户ID：100。&lt;br&gt;取值范围为[0, 2&lt;sup&gt;31&lt;/sup&gt;-1]，超出范围将被截断。当传入参数值小于0 时，输出错误日志。 |
-| uri | string | Yes | DLP文件的URI。不超过4095字节。超出范围时抛出错误码401。 |
+| bundleName | string | Yes | Bundle name of the application. The value contains 7 to 128 bytes. If the value is out of range, error code 401 is thrown. |
+| access | [DLPFileAccess](arkts-dataprotection-dlppermission-dlpfileaccess-e.md) | Yes | Permission on the DLP file. The permissions on a DLP file determine the access scope of the file. |
+| userId | number | Yes | Current user ID, which is the system account ID obtained by the account subsystem. The default super user ID is **100**.&lt;br&gt;The value range is [0, 2&lt;sup&gt;31&lt;/sup&gt;-1]. If the value is out of range, the excess part will be truncated. If the value of the passed parameter is less than 0, an error log is generated. |
+| uri | string | Yes | URI of the DLP file. The value contains up to 4095 bytes. If the value is out of range, error code 401 is thrown. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;DLPSandboxInfo&gt; | Promise对象。安装沙箱应用，返回应用沙箱信息。 |
+| Promise&lt;DLPSandboxInfo&gt; | Promise used to return the information about the sandbox application installed. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. |
-| 19100001 | Invalid parameter value. |
-| 19100011 | The system ability works abnormally. |
-| 201 | Permission denied. |
-| 202 | Non-system applications use system APIs. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. |
+| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported because car not support DLP feature.<br>**Applicable version:** 26.1.0 and later |
+| [19100001](../errorcode-dlp.md#19100001-invalid-parameter) | Invalid parameter value. |
+| [19100011](../errorcode-dlp.md#19100011-system-service-abnormal) | The system ability works abnormally. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Non-system applications use system APIs. |
 
 ## Examples
 
 ```TypeScript
 import { dlpPermission } from '@kit.DataProtectionKit';
+import { BusinessError } from '@kit.BasicServicesKit';
 
-let uri = 'file://docs/storage/Users/currentUser/Desktop/test.txt.dlp';
-dlpPermission.installDLPSandbox('com.ohos.note', dlpPermission.DLPFileAccess.READ_ONLY, 100,
-  uri).then((dlpSandboxInfo: dlpPermission.DLPSandboxInfo) => {
-  console.info('dlpSandboxInfo: ', JSON.stringify(dlpSandboxInfo));
-}).catch((error: BusinessError)=> {
-  console.error(error.message);
-}); // Install a DLP sandbox application.
+async function ExampleFunction() {
+  try {
+    let uri = 'file://docs/storage/Users/currentUser/Desktop/test.txt.dlp';
+    let res: dlpPermission.DLPSandboxInfo =
+      await dlpPermission.installDLPSandbox('com.ohos.note', dlpPermission.DLPFileAccess.READ_ONLY, 100,
+        uri); // Install a DLP sandbox application.
+    console.info('res', JSON.stringify(res));
+  } catch (err) {
+    console.error('error', (err as BusinessError).code, (err as BusinessError).message); // Throw an error if the operation fails.
+  }
+}
 ```
 
 
@@ -77,12 +83,12 @@ dlpPermission.installDLPSandbox('com.ohos.note', dlpPermission.DLPFileAccess.REA
 function installDLPSandbox(bundleName: string, access: DLPFileAccess, userId: number, uri: string, callback: AsyncCallback<DLPSandboxInfo>): void
 ```
 
-安装一个应用的DLP沙箱。使用callback异步回调。调用成功后，系统为应用创建DLP沙箱环境并返回沙箱信息。
+Installs a DLP sandbox application for an application. This API uses an asynchronous callback to return the result. After the API is called, the system creates a DLP sandbox for the application and returns the sandbox information.
 
-调用installDLPSandbox成功后必须在使用完毕后调用  
-[uninstallDLPSandbox](arkts-dataprotection-dlppermission-uninstalldlpsandbox-f-sys.md#uninstalldlpsandbox)卸载沙箱。
+After calling **installDLPSandbox** to install a sandbox, the system must call   
+[uninstallDLPSandbox](arkts-dataprotection-dlppermission-uninstalldlpsandbox-f-sys.md#uninstalldlpsandbox)to uninstall the sandbox after using it.
 
-DLP文件管理应用打开受保护文件前，需要先为目标应用安装DLP沙箱。
+Before a DLP file management application opens a protected file, the system needs to install a DLP sandbox for the target application.
 
 **Since:** 10
 
@@ -100,34 +106,40 @@ DLP文件管理应用打开受保护文件前，需要先为目标应用安装DL
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| bundleName | string | Yes | 应用包名。最小7字节，最大128字节。超出范围时抛出错误码401。 |
-| access | [DLPFileAccess](arkts-dataprotection-dlppermission-dlpfileaccess-e.md) | Yes | DLP文件授权类型。设置不同的授权类型将决定用户对DLP文件的访问权限范围。 |
-| userId | number | Yes | 当前的用户ID，通过账号子系统获取的系统账号ID，默认主用户ID：100。&lt;br&gt;取值范围为[0, 2&lt;sup&gt;31&lt;/sup&gt;-1]，超出范围将被截断。当传入参数值小于0 时，输出错误日志。 |
-| uri | string | Yes | DLP文件的URI。不超过4095字节。超出范围时抛出错误码401。 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;DLPSandboxInfo&gt; | Yes | 回调函数。当安装DLP沙箱成功，err为undefined，data为获取到的沙箱信息；否则为错误对象。 |
+| bundleName | string | Yes | Bundle name of the application. The value contains 7 to 128 bytes. If the value is out of range, error code 401 is thrown. |
+| access | [DLPFileAccess](arkts-dataprotection-dlppermission-dlpfileaccess-e.md) | Yes | Permission on the DLP file. The permissions on a DLP file determine the access scope of the file. |
+| userId | number | Yes | Current user ID, which is the system account ID obtained by the account subsystem. The default super user ID is **100**.&lt;br&gt;The value range is [0, 2&lt;sup&gt;31&lt;/sup&gt;-1]. If the value is out of range, the excess part will be truncated. If the value of the passed parameter is less than 0, an error log is generated. |
+| uri | string | Yes | URI of the DLP file. The value contains up to 4095 bytes. If the value is out of range, error code 401 is thrown. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;DLPSandboxInfo&gt; | Yes | Callback used to return the result. If the DLP sandbox installation is successful, **err** is **undefined**, and **data** is the sandbox information obtained. Otherwise, **err** is an error object. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. |
-| 19100001 | Invalid parameter value. |
-| 19100011 | The system ability works abnormally. |
-| 201 | Permission denied. |
-| 202 | Non-system applications use system APIs. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. |
+| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported because car not support DLP feature.<br>**Applicable version:** 26.1.0 and later |
+| [19100001](../errorcode-dlp.md#19100001-invalid-parameter) | Invalid parameter value. |
+| [19100011](../errorcode-dlp.md#19100011-system-service-abnormal) | The system ability works abnormally. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Non-system applications use system APIs. |
 
 ## Examples
 
 ```TypeScript
 import { dlpPermission } from '@kit.DataProtectionKit';
+import { BusinessError } from '@kit.BasicServicesKit';
 
 let uri = 'file://docs/storage/Users/currentUser/Desktop/test.txt.dlp';
-dlpPermission.installDLPSandbox('com.ohos.note', dlpPermission.DLPFileAccess.READ_ONLY, 100, uri, (err, res) => {
-  if (err) {
-    console.error('installDLPSandbox error,', err.code, err.message);
-  } else {
-    console.info('res', JSON.stringify(res));
-  }
-}); // Install a DLP sandbox application.
+try {
+  dlpPermission.installDLPSandbox('com.ohos.note', dlpPermission.DLPFileAccess.READ_ONLY, 100, uri, (err, res) => {
+    if (err !== undefined) {
+      console.error('installDLPSandbox error,', err.code, err.message);
+    } else {
+      console.info('res', JSON.stringify(res));
+    }
+  }); // Install a DLP sandbox application.
+} catch (err) {
+  console.error('installDLPSandbox error,', (err as BusinessError).code, (err as BusinessError).message);
+}
 ```
 

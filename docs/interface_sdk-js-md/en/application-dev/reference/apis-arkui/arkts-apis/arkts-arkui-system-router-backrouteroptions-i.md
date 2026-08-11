@@ -1,6 +1,6 @@
 # BackRouterOptions
 
-定义路由器返回的选项。
+Defines the parameters for routing back.
 
 **Since:** 7
 
@@ -26,7 +26,7 @@ import { BackRouterOptions, DisableAlertBeforeBackPageOptions, RouterOptions, Ro
 params?: Object
 ```
 
-返回时要同时传递到目标页面的数据。
+Data that needs to be passed to the target page during redirection.
 
 **Type:** Object
 
@@ -48,7 +48,7 @@ params?: Object
 uri?: string
 ```
 
-返回到指定uri的界面，如果页面栈上没有uri页面，则不响应该情况。如果uri未设置，则返回上一页。
+URI of the page to return to. If the specified page does not exist in the page stack, the application does not respond. If this parameter is not set, the application returns to the previous page.
 
 **Type:** string
 

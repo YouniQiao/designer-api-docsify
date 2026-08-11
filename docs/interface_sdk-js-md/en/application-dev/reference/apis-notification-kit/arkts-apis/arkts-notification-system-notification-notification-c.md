@@ -1,6 +1,6 @@
 # Notification
 
-提供通知管理的能力。
+Manages notifications.
 
 **Since:** 3
 
@@ -26,7 +26,7 @@ import { ActionResult, ShowNotificationOptions } from 'kits/@kit.NotificationKit
 static show(options?: ShowNotificationOptions): void
 ```
 
-显示通知。
+Displays the notification.
 
 **Since:** 3
 
@@ -44,5 +44,5 @@ static show(options?: ShowNotificationOptions): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| options | [ShowNotificationOptions](arkts-notification-system-notification-shownotificationoptions-i.md) | No | 通知标题。 |
+| options | [ShowNotificationOptions](arkts-notification-system-notification-shownotificationoptions-i.md) | No | Notification title. |
 

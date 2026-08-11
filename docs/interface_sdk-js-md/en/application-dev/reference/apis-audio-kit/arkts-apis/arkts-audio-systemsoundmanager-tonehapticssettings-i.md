@@ -1,6 +1,6 @@
 # ToneHapticsSettings
 
-系统铃音的振动设置。
+Haptics settings in tone scenario.
 
 **Since:** 14
 
@@ -22,7 +22,7 @@ import { systemSoundManager } from 'kits/@kit.AudioKit';
 hapticsUri?: string
 ```
 
-振动URI。
+Haptics uri. Users can set/get this parameter when {@link ToneHapticsSettings#mode} is{@link ToneHapticsMode#NON_SYC}. In other cases, this uri is useless and should be ignored.
 
 **Type:** string
 
@@ -40,7 +40,7 @@ hapticsUri?: string
 mode: ToneHapticsMode
 ```
 
-铃音振动模式。
+Haptics mode.
 
 **Type:** [ToneHapticsMode](arkts-audio-systemsoundmanager-tonehapticsmode-e.md)
 

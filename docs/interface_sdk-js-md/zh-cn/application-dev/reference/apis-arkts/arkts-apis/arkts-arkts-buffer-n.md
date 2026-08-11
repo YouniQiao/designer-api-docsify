@@ -11,12 +11,6 @@ Buffer对象用于表示固定长度的字节序列，是专门存放二进制�
 
 **系统能力：** SystemCapability.Utils.Lang
 
-## 导入模块
-
-```TypeScript
-import { buffer } from 'kits/@kit.ArkTS';
-```
-
 ## 汇总
 
 ### 函数
@@ -27,7 +21,7 @@ import { buffer } from 'kits/@kit.ArkTS';
 | [allocUninitializedFromPool](arkts-arkts-buffer-allocuninitializedfrompool-f.md#allocuninitializedfrompool) | 创建指定大小未初始化的Buffer对象。内存从缓冲池分配，缓冲池为预分配的内存区域，适用于创建较小Buffer时减少频繁内存分配的开销，提升性能。对于需要独立内存的场景，建议使用[allocUninitialized](arkts-arkts-buffer-allocuninitialized-f.md#allocuninitialized)。创建的Buffer内容未知，需要使用[fill](arkts-arkts-buffer-buffer-c.md#fill)函数来初始化Buffer对象。 |
 | [allocUninitialized](arkts-arkts-buffer-allocuninitialized-f.md#allocuninitialized) | 创建指定大小未初始化的Buffer对象。内存不从缓冲池分配，适用于需要创建较大Buffer或希望精确控制内存分配的场景，如一次性分配较大内存区域（避免缓冲池可能导致的内存碎片累积和缓存性能损耗）。创建的Buffer的内容未知，需要使用[fill](arkts-arkts-buffer-buffer-c.md#fill)函数来初始化Buffer对象。 |
 | [byteLength](arkts-arkts-buffer-bytelength-f.md#bytelength) | 根据不同的编码格式，返回指定数据的字节数。 |
-| [byteLength](arkts-arkts-buffer-bytelength-f.md#bytelength-1) | 根据不同的编码格式，返回指定字符串的字节数。 |
+| [byteLength](arkts-arkts-buffer-bytelength-f.md#bytelength-1) | 根据不同的编码格式，返回指定数据的字节数。 |
 | [concat](arkts-arkts-buffer-concat-f.md#concat) | 将数组中的内容复制（默认复制全部内容，或复制指定字节长度）到新的Buffer对象中并返回。 |
 | [from](arkts-arkts-buffer-from-f.md#from) | 根据指定数组创建新的Buffer对象，数组中的每个元素作为对应位置的字节存储。 |
 | [from](arkts-arkts-buffer-from-f.md#from-1) | 创建与`arrayBuffer`共享内存的指定长度的Buffer对象。共享内存意味着Buffer与arrayBuffer引用同一块内存区域，对Buffer数据的修改将同步反映到arrayBuffer中，反之亦然（注意：此方式避免内存拷贝，提升性能，但需注意内存释放时机）。 |

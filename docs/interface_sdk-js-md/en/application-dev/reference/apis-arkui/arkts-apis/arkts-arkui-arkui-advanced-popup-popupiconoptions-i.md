@@ -1,6 +1,6 @@
 # PopupIconOptions
 
-PopupIconOptions定义图标的属性。
+Defines the popup icon options
 
 **Since:** 23
 
@@ -22,9 +22,7 @@ import { Popup, PopupOptions, PopupButtonOptions, PopupIconOptions, PopupTextOpt
 borderRadius?: Length | BorderRadiuses
 ```
 
-设置图标圆角。
-
-默认值：`\$r('sys.float.ohos_id_corner_radius_default_s')`
+Set the icon border radius.
 
 **Type:** [Length](arkts-arkui-length-t.md) \| BorderRadiuses
 
@@ -46,9 +44,7 @@ borderRadius?: Length | BorderRadiuses
 fillColor?: ResourceColor
 ```
 
-设置图标填充颜色。仅针对svg图源生效。 
-
-默认不改变图标颜色。
+Set the icon fill color.
 
 **Type:** [ResourceColor](arkts-arkui-resourcecolor-t.md)
 
@@ -68,9 +64,7 @@ fillColor?: ResourceColor
 height?: Dimension
 ```
 
-设置图标高度。
-
-默认值：32VP
+Set the icon height.
 
 **Type:** [Dimension](arkts-arkui-dimension-t.md)
 
@@ -92,11 +86,7 @@ height?: Dimension
 image?: ResourceStr
 ```
 
-设置图标内容。
-
-**ArkTS模式：** 该接口仅适用于ArkTS-Sta。
-
-**ArkTS-Sta起始版本：** 23
+Set the icon image.
 
 **Type:** [ResourceStr](arkts-arkui-resourcestr-t.md)
 
@@ -116,9 +106,7 @@ image?: ResourceStr
 width?: Dimension
 ```
 
-设置图标宽度。
-
-默认值：32VP
+Set the icon width.
 
 **Type:** [Dimension](arkts-arkui-dimension-t.md)
 

@@ -10,12 +10,6 @@ Represents a download task, You can use this object to operate the corresponding
 
 **系统能力：** SystemCapability.Web.Webview.Core
 
-## 导入模块
-
-```TypeScript
-import { webview } from 'kits/@kit.ArkWeb';
-```
-
 ## cancel
 
 ```TypeScript
@@ -64,7 +58,7 @@ Deserialize web download from typed array.
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1. Incorrect parameter types. &lt;br&gt;2. Parameter verification failed. |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1. Incorrect parameter types. &lt;br&gt;2. Parameter verification failed. |
 
 ## getCurrentSpeed
 
@@ -398,7 +392,7 @@ Pause the web download.
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 17100019 | The download task is not started yet. |
+| [17100019](../errorcode-webview.md#17100019-下载还没开始) | The download task is not started yet. |
 
 ## resume
 
@@ -420,7 +414,7 @@ Resume the web download.Use WebDownloadManager.resumeDownload to resume deserial
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 17100016 | The download task is not paused. |
+| [17100016](../errorcode-webview.md#17100016-下载任务没有处于暂停状态) | The download task is not paused. |
 
 ## serialize
 
@@ -470,5 +464,5 @@ Start the web download.Used in onBeforeDownload, If you want to start the curren
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1. Incorrect parameter types. &lt;br&gt;2. Parameter verification failed. |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1. Incorrect parameter types. &lt;br&gt;2. Parameter verification failed. |
 

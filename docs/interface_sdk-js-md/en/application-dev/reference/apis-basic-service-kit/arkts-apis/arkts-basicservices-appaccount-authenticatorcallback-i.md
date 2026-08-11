@@ -1,10 +1,11 @@
 # AuthenticatorCallback
 
-OAuth认证器回调接口。
+Provides OAuth authenticator callbacks.
 
-> **说明：**
+> **NOTE：**
 > 
-> 从API version 8开始支持，从API version 9开始废弃。建议使用[AuthCallback](arkts-basicservices-appaccount-authcallback-i.md)替代。
+> This API is supported since API version 8 and deprecated since API version 9. You are advised to use
+> [AuthCallback](arkts-basicservices-appaccount-authcallback-i.md) instead.
 
 **Since:** 8
 
@@ -30,11 +31,11 @@ import { appAccount } from 'kits/@kit.BasicServicesKit';
 onRequestRedirected: (request: Want) => void
 ```
 
-通知请求被跳转。
+Called to redirect a request.
 
-> **说明：**
+> **NOTE：**
 > 
-> 从API version 8开始支持，从API version 9开始废弃。建议使用[onRequestRedirected](#onrequestredirected9)替代。
+> This API is supported since API version 8 and deprecated since API version 9. Use [onRequestRedirected](#onrequestredirected9) instead.
 
 **Since:** 8
 
@@ -86,11 +87,11 @@ class MyAuthenticator extends appAccount.Authenticator {
 onResult: (code: number, result: { [key: string]: any }) => void
 ```
 
-通知请求结果。
+Called to return the result of an authentication request.
 
-> **说明：**
+> **NOTE：**
 > 
-> 从API version 8开始支持，从API version 9开始废弃。建议使用[onResult](#onresult9)替代。
+> This API is supported since API version 8 and deprecated since API version 9. Use [onResult](#onresult9) instead.
 
 **Since:** 8
 
@@ -110,23 +111,4 @@ onResult: (code: number, result: { [key: string]: any }) => void
 | --- | --- | --- | --- |
 | code | number | Yes |  |
 | result | { [key: string]: any } | Yes |  |
-
-## Examples
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let appAccountManager: appAccount.AppAccountManager = appAccount.createAppAccountManager();
-let sessionId = '1234';
-appAccountManager.getAuthenticatorCallback(sessionId).then((callback: appAccount.AuthenticatorCallback) => {
-  callback.onResult(appAccount.ResultCode.SUCCESS, {
-    name: 'LiSi',
-    owner: 'com.example.accountjsdemo',
-    authType: 'getSocialData',
-    token: 'xxxxxx'
-  });
-}).catch((err: BusinessError) => {
-  console.error(`getAuthenticatorCallback err: code is ${err.code}, message is ${err.message}`);
-});
-```
 

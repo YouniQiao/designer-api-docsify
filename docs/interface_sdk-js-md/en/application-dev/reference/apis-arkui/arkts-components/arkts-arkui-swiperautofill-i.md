@@ -1,6 +1,6 @@
 # SwiperAutoFill
 
-自适应属性。
+Describes the auto-fill attribute.
 
 **Since:** 10
 
@@ -16,9 +16,9 @@
 minSize: VP
 ```
 
-设置元素显示最小宽度。
+Minimum width of the element.
 
-默认值：0
+Default value: **0**
 
 **Type:** [VP](../arkts-apis/arkts-arkui-vp-t.md)
 

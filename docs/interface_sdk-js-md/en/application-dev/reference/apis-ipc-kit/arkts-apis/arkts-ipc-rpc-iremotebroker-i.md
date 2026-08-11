@@ -1,6 +1,6 @@
 # IRemoteBroker
 
-远端对象的代理持有者。用于获取代理对象。
+Represents the holder of a remote proxy object. It is used to obtain a proxy object.
 
 **Since:** 7
 
@@ -22,7 +22,7 @@ import { rpc } from 'kits/@kit.IPCKit';
 asObject(): IRemoteObject
 ```
 
-需派生类实现，获取代理或远端对象。
+Obtains a proxy or remote object. This API must be implemented by its derived classes.
 
 **Since:** 7
 
@@ -36,7 +36,7 @@ asObject(): IRemoteObject
 
 | Type | Description |
 | --- | --- |
-| [IRemoteObject](arkts-ipc-rpc-iremoteobject-c.md) | 如果调用者是RemoteObject对象，则直接返回本身；如果调用者是[RemoteProxy]{ |
+| [IRemoteObject](arkts-ipc-rpc-iremoteobject-c.md) | Returns the **RemoteObject** if it is the caller; returns the [IRemoteObject]{ |
 
 ## Examples
 

@@ -1,6 +1,6 @@
 # CollaborateEventInfo
 
-协同事件信息。
+Collaboration event information.
 
 **Since:** 18
 
@@ -22,7 +22,7 @@ import { abilityConnectionManager } from 'kits/@kit.DistributedServiceKit';
 eventMsg?: string
 ```
 
-表示协同事件的消息内容。
+Content of a collaboration event.
 
 **Type:** string
 
@@ -42,7 +42,7 @@ eventMsg?: string
 eventType: CollaborateEventType
 ```
 
-表示协同事件的类型。
+Collaboration event type.
 
 **Type:** [CollaborateEventType](arkts-distributedservice-abilityconnectionmanager-collaborateeventtype-e.md)
 

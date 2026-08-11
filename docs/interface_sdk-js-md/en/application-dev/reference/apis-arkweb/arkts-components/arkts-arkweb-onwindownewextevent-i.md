@@ -1,6 +1,6 @@
 # OnWindowNewExtEvent
 
-Defines the triggered callback when web page requires the user to create a window.
+Callback invoked when the web page requests the user to create a window.
 
 **Since:** 23
 
@@ -16,7 +16,7 @@ Defines the triggered callback when web page requires the user to create a windo
 handler: ControllerHandler
 ```
 
-Lets you set the WebviewController instance for creating a new window.
+**WebviewController** instance for setting the new window.
 
 **Type:** [ControllerHandler](arkts-arkweb-controllerhandler-c.md)
 
@@ -36,7 +36,7 @@ Lets you set the WebviewController instance for creating a new window.
 isAlert: boolean
 ```
 
-true indicates the request to create a dialog and false indicates a new tab.
+The value **true** indicates that a dialog box is requested to be created, and the value **false** indicates that a new tab page is requested to be created.
 
 **Type:** boolean
 
@@ -56,7 +56,7 @@ true indicates the request to create a dialog and false indicates a new tab.
 isUserTrigger: boolean
 ```
 
-true indicates that it is triggered by the user, and false indicates that it is triggered by a non-user.
+Whether the creation is triggered by the user. The value **true** means that the creation is triggered by the user,and **false** means the opposite.
 
 **Type:** boolean
 
@@ -76,7 +76,7 @@ true indicates that it is triggered by the user, and false indicates that it is 
 navigationPolicy: NavigationPolicy
 ```
 
-The navigation policy causing the new web view to be created.
+Window opening mode when the web page requests a user to create a new window.
 
 **Type:** [NavigationPolicy](arkts-arkweb-navigationpolicy-e.md)
 
@@ -96,7 +96,7 @@ The navigation policy causing the new web view to be created.
 targetUrl: string
 ```
 
-Destination URL.
+URL to be opened in the new window.
 
 **Type:** string
 
@@ -116,7 +116,7 @@ Destination URL.
 windowFeatures: WindowFeatures
 ```
 
-Contains the attributes that a webpage requests from its containing web view, the parameters of window.open.
+Feature information of the new window requested to be created by the web page.
 
 **Type:** [WindowFeatures](arkts-arkweb-windowfeatures-i.md)
 

@@ -1,6 +1,6 @@
 # FileSystemRequestConfig (System API)
 
-配置系统执行碎片清理所需的参数。
+Parameters required to perform garbage collection (GC).
 
 **Since:** 23
 
@@ -24,7 +24,7 @@ import { backup } from 'kits/@kit.CoreFileKit';
 triggerType: int
 ```
 
-指定碎片清理的触发类型，取值0表示执行存储器件碎片清理。
+Specifies the trigger type for garbage collection (0-default Device GC).
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
@@ -46,7 +46,7 @@ triggerType: int
 waitTime: int
 ```
 
-执行碎片清理的最大允许时间，单位为秒，取值范围为0至300。
+Sets the maximum wait time (in seconds) for GC operation.
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
@@ -68,7 +68,7 @@ waitTime: int
 writeSize: int
 ```
 
-碎片清理的目标大小，单位为MB，取值范围为0至2097152。
+Defines the target size (in MBytes) for garbage collection.
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 

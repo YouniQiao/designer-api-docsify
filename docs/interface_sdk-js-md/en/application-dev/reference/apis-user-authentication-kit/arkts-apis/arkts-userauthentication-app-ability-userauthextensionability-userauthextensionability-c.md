@@ -1,6 +1,6 @@
 # UserAuthExtensionAbility (System API)
 
-用户认证扩展能力组件
+The class of user authentication extension ability.
 
 **Inheritance/Implementation:** UserAuthExtensionAbility extends [UIExtensionAbility](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-uiextensionability-uiextensionability-c.md/arkts-ability-app-ability-uiextensionability-uiextensionability-c.md)
 

@@ -1,17 +1,18 @@
-# @ohos.enterprise.deviceInfo(设备信息管理)
+# @ohos.enterprise.deviceInfo(Device Information Management)
 
-本模块提供企业设备信息管理能力，支持获取设备序列号、设备名称、SIM卡信息等。企业管理员可通过此模块查询设备详细信息，实现设备资产的统一管理和追踪。
+This module provides APIs for enterprise device information management, including obtaining device serial numbers,device names, and SIM card information. Enterprise administrators can use this module to query device details,enabling unified management and tracking of device assets.
 
-**使用场景：**
+**Use cases:**
 
-- 设备资产管理与追踪  
-- 企业设备合规性检查  
-- 设备信息采集与统计  
-- 故障诊断与设备识别
+- Device asset management and tracking  
+- Enterprise device compliance check  
+- Device information collection and statistics  
+- Fault diagnosis and device identification
 
-> **说明：**
+> **NOTE：**
 > 
-> 本模块接口仅对设备管理应用开放，且调用接口前需激活设备管理应用，具体请参考[MDM Kit开发指南](../../../mdm/mdm-kit-guide.md)。
+> The APIs of this module can be called only by a device administrator application that is enabled. For details, see
+> [MDM Kit Development](../../../mdm/mdm-kit-guide.md).
 
 **Since:** 12
 
@@ -33,11 +34,11 @@ import { deviceInfo } from 'kits/@kit.MDMKit';
 
 | Name | Description |
 | --- | --- |
-| [getDeviceInfo](arkts-mdm-deviceinfo-getdeviceinfo-f.md#getdeviceinfo) | 获取设备信息。 |
-| [getDeviceName](arkts-mdm-deviceinfo-getdevicename-f.md#getdevicename) | 获取设备名称，使用callback异步回调。 |
-| [getDeviceName](arkts-mdm-deviceinfo-getdevicename-f.md#getdevicename-1) | 获取设备名称，使用Promise异步回调。 |
-| [getDeviceSerial](arkts-mdm-deviceinfo-getdeviceserial-f.md#getdeviceserial) | 获取设备序列号，使用callback异步回调。 |
-| [getDeviceSerial](arkts-mdm-deviceinfo-getdeviceserial-f.md#getdeviceserial-1) | 获取设备序列号，使用Promise异步回调。 |
-| [getDisplayVersion](arkts-mdm-deviceinfo-getdisplayversion-f.md#getdisplayversion) | 获取设备版本号，使用callback异步回调。 |
-| [getDisplayVersion](arkts-mdm-deviceinfo-getdisplayversion-f.md#getdisplayversion-1) | 获取设备版本号，使用Promise异步回调。 |
+| [getDeviceInfo](arkts-mdm-deviceinfo-getdeviceinfo-f.md#getdeviceinfo) | Obtains device information. |
+| [getDeviceName](arkts-mdm-deviceinfo-getdevicename-f.md#getdevicename) | Obtains the device name. This API uses an asynchronous callback to return the result. |
+| [getDeviceName](arkts-mdm-deviceinfo-getdevicename-f.md#getdevicename-1) | Obtains the device name. This API uses a promise to return the result. |
+| [getDeviceSerial](arkts-mdm-deviceinfo-getdeviceserial-f.md#getdeviceserial) | Obtains the device serial number. This API uses an asynchronous callback to return the result. |
+| [getDeviceSerial](arkts-mdm-deviceinfo-getdeviceserial-f.md#getdeviceserial-1) | Obtains the device serial number. This API uses a promise to return the result. |
+| [getDisplayVersion](arkts-mdm-deviceinfo-getdisplayversion-f.md#getdisplayversion) | Obtains the device version number. This API uses an asynchronous callback to return the result. |
+| [getDisplayVersion](arkts-mdm-deviceinfo-getdisplayversion-f.md#getdisplayversion-1) | Obtains the device version number. This API uses a promise to return the result. |
 

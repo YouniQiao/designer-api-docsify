@@ -1,6 +1,6 @@
 # Operation (System API)
 
-用户操作
+Enumerates the user operations.
 
 **Since:** 20
 
@@ -18,7 +18,7 @@
 CONNECT = 0
 ```
 
-连接操作
+Connection operation.
 
 **Since:** 20
 
@@ -36,7 +36,7 @@ CONNECT = 0
 DISCONNECT = 1
 ```
 
-断开操作
+Disconnection operation.
 
 **Since:** 20
 

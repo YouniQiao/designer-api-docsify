@@ -1,11 +1,5 @@
 # ArcScrollBar
 
-## 导入模块
-
-```TypeScript
-import { ArcScrollBarAttribute, ArcScrollBar } from 'kits/@kit.ArkUI';
-```
-
 ## ArcScrollBar
 
 ```TypeScript
@@ -36,7 +30,7 @@ export declare function ArcScrollBar(
 
 | 类型 | 说明 |
 | --- | --- |
-| [ArcScrollBarAttribute](arkts-arkui-arkui-arcscrollbar-arcscrollbarattribute-c.md) |  |
+| [ArcScrollBarAttribute](arkts-arkui-arkui-arcscrollbar-arcscrollbarattribute-i.md) |  |
 
 
 ## ArcScrollBar
@@ -73,5 +67,5 @@ export declare function ArcScrollBar(
 
 | 类型 | 说明 |
 | --- | --- |
-| [ArcScrollBarAttribute](arkts-arkui-arkui-arcscrollbar-arcscrollbarattribute-c.md) | ArcScrollBar的属性。 |
+| [ArcScrollBarAttribute](arkts-arkui-arkui-arcscrollbar-arcscrollbarattribute-i.md) | ArcScrollBar的属性。 |
 

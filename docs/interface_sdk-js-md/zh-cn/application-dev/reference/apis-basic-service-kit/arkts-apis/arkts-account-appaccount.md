@@ -10,12 +10,6 @@
 
 **系统能力：** SystemCapability.Account.AppAccount
 
-## 导入模块
-
-```TypeScript
-import { appAccount } from 'kits/@kit.BasicServicesKit';
-```
-
 ## 汇总
 
 ### 函数

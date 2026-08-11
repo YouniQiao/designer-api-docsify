@@ -1,6 +1,6 @@
 # SystemPanelStatus (System API)
 
-系统面板状态。
+System panel status.
 
 **Since:** 26.0.0
 
@@ -24,7 +24,7 @@ import { inputMethodSystemPanelManager } from 'kits/@kit.IMEKit';
 inputType: InputMethodInputType
 ```
 
-输入法的输入类型。
+The input type of the input method.
 
 **Type:** [InputMethodInputType](arkts-ime-inputmethodsystempanelmanager-inputmethodinputtype-e-sys.md)
 
@@ -46,7 +46,7 @@ inputType: InputMethodInputType
 isPanelRaised: boolean
 ```
 
-系统面板是否需要抬起。
+Whether the system panel needs to be raised.
 
 **Type:** boolean
 
@@ -68,7 +68,7 @@ isPanelRaised: boolean
 needFuncButton: boolean
 ```
 
-系统面板的功能按钮是否需要。
+Whether the system panel's function button is needed.
 
 **Type:** boolean
 
@@ -90,7 +90,7 @@ needFuncButton: boolean
 panelFlag: PanelFlag
 ```
 
-输入法软键盘面板的面板标志。
+The panel flag of the input method's soft keyboard panel.
 
 **Type:** [PanelFlag](arkts-ime-inputmethod-panel-panelflag-e.md)
 

@@ -18,7 +18,7 @@ controller: RichEditorController
 
 富文本控制器。
 
-**类型：** [RichEditorController](arkts-arkui-richeditor-richeditorcontroller-c.md)
+**类型：** [RichEditorController](../arkts-components/arkts-arkui-richeditorcontroller-c.md)
 
 **起始版本：** 23
 

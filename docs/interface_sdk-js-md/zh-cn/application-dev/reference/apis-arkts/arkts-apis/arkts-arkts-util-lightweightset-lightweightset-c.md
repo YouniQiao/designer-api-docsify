@@ -1,6 +1,6 @@
 # LightWeightSet
 
-LightWeightSet可用于存储一系列值的集合，存储元素中value值唯一。
+LightWeightSet可用于存储一系列值，存储元素中value唯一。
 
 **起始版本：** 8
 
@@ -9,12 +9,6 @@ LightWeightSet可用于存储一系列值的集合，存储元素中value值唯�
 <!--Device-unnamed-declare class LightWeightSet<T>--><!--Device-unnamed-declare class LightWeightSet<T>-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
-
-## 导入模块
-
-```TypeScript
-import { LightWeightSet } from 'kits/@kit.ArkTS';
-```
 
 ## $_iterator
 
@@ -38,7 +32,18 @@ $_iterator(): IterableIterator<T>
 
 | 类型 | 说明 |
 | --- | --- |
-| [IterableIterator](arkts-arkts-iterator-iterableiterator-i.md)&lt;T&gt; | 返回遍历LightWeightSet中所有元素的迭代器对象，每一项为容器中的元素值。 |
+| IterableIterator&lt;T&gt; | 返回遍历LightWeightSet中所有元素的迭代器对象，每一项为容器中的元素值。 |
+
+## 示例
+
+```TypeScript
+let lightWeightSet: LightWeightSet<string> = new LightWeightSet<string>();
+lightWeightSet.add("squirrel");
+lightWeightSet.add("sparrow");
+for (let item of lightWeightSet) {
+  console.info("value:" + item);
+}
+```
 
 ## [Symbol.iterator]
 
@@ -62,13 +67,13 @@ $_iterator(): IterableIterator<T>
 
 | 类型 | 说明 |
 | --- | --- |
-| [IterableIterator](arkts-arkts-iterator-iterableiterator-i.md)&lt;T&gt; | 返回遍历LightWeightSet中所有元素的迭代器对象，每一项为容器中的元素值。 |
+| IterableIterator&lt;T&gt; | 返回遍历LightWeightSet中所有元素的迭代器对象，每一项为容器中的元素值。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 10200011 | The Symbol.iterator method cannot be bound. |
+| [10200011](../errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) | The Symbol.iterator method cannot be bound. |
 
 ## 示例
 
@@ -134,13 +139,13 @@ add(obj: T): boolean
 
 | 类型 | 说明 |
 | --- | --- |
-| boolean | 成功添加元素返回true，要添加的元素已存在时返回false。 |
+| boolean | 成功添加元素返回true，否则返回false。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 10200011 | The add method cannot be bound. |
+| [10200011](../errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) | The add method cannot be bound. |
 
 ## 示例
 
@@ -179,13 +184,13 @@ addAll(set: LightWeightSet<T>): boolean
 
 | 类型 | 说明 |
 | --- | --- |
-| boolean | 成功添加元素返回true，否则返回false。 |
+| boolean | 成功添加元素返回true，要添加的元素已存在时返回false。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 10200011 | The addAll method cannot be bound. |
+| [10200011](../errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) | The addAll method cannot be bound. |
 
 ## 示例
 
@@ -223,7 +228,7 @@ clear(): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 10200011 | The clear method cannot be bound. |
+| [10200011](../errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) | The clear method cannot be bound. |
 
 ## 示例
 
@@ -259,7 +264,7 @@ LightWeightSet的构造函数。
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 10200012 | The LightWeightSet's constructor cannot be directly invoked. |
+| [10200012](../errorcode-utils.md#10200012-构造函数调用异常) | The LightWeightSet's constructor cannot be directly invoked. |
 
 ## 示例
 
@@ -290,13 +295,13 @@ entries(): IterableIterator<[T, T]>
 
 | 类型 | 说明 |
 | --- | --- |
-| [IterableIterator](arkts-arkts-iterator-iterableiterator-i.md)&lt;[T, T]&gt; | 返回包含LightWeightSet中所有键值对的迭代器对象，每一项为[key, value]结构的数组。 |
+| IterableIterator&lt;[T, T]&gt; | 返回包含LightWeightSet中所有键值对的迭代器对象，每一项为[key, value]结构的数组。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 10200011 | The entries method cannot be bound. |
+| [10200011](../errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) | The entries method cannot be bound. |
 
 ## 示例
 
@@ -349,7 +354,7 @@ equal(obj: Object): boolean
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| obj | Object | 是 | 比较对象。 |
+| obj | Object | 是 | 与当前容器比较元素构成是否相同的对象，可为仅含string或number的LightWeightSet或数组。 |
 
 **返回值：**
 
@@ -361,7 +366,7 @@ equal(obj: Object): boolean
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 10200011 | The equal method cannot be bound. |
+| [10200011](../errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) | The equal method cannot be bound. |
 
 ## 示例
 
@@ -381,7 +386,7 @@ console.info("result:", result);  // result: true
 forEach(callbackFn: (value?: T, key?: T, set?: LightWeightSet<T>) => void, thisArg?: Object): void
 ```
 
-通过回调函数来遍历LightWeightSet实例对象上的元素以及元素对应的下标。不建议在forEach函数中使用add、remove、removeAt方法，会导致死循环等不可预知的风险，可使用for循环来进行插入和删除。
+通过回调函数来遍历LightWeightSet实例对象上的元素。不建议在forEach函数中使用add、remove、removeAt方法，会导致死循环等不可预知的风险，可使用for循环来进行插入和删除。
 
 **起始版本：** 8
 
@@ -404,7 +409,7 @@ forEach(callbackFn: (value?: T, key?: T, set?: LightWeightSet<T>) => void, thisA
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 10200011 | The forEach method cannot be bound. |
+| [10200011](../errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) | The forEach method cannot be bound. |
 
 ## 示例
 
@@ -455,6 +460,20 @@ forEach(callbackFn: LightWeightSetForEachCb<T>): void
 | --- | --- | --- | --- |
 | callbackFn | [LightWeightSetForEachCb](arkts-arkts-lightweightsetforeachcb-t.md)&lt;T&gt; | 是 | 对每个元素执行的回调函数。 |
 
+## 示例
+
+```TypeScript
+import { LightWeightSetForEachCb } from '@kit.ArkTS';
+
+let lightWeightSet: LightWeightSet<string> = new LightWeightSet<string>();
+lightWeightSet.add("sparrow");
+lightWeightSet.add("gull");
+let lightWeightSetCb: LightWeightSetForEachCb<string> = (value: string, key: string, set: LightWeightSet<string>) => {
+  console.info("value: " + value, " key: " + key);
+};
+lightWeightSet.forEach(lightWeightSetCb);
+```
+
 ## getIndexOf
 
 ArkTS-Dyn:
@@ -495,7 +514,7 @@ getIndexOf(key: T): int
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 10200011 | The getIndexOf method cannot be bound. |
+| [10200011](../errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) | The getIndexOf method cannot be bound. |
 
 ## 示例
 
@@ -542,7 +561,7 @@ getValueAt(index: number): T
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 10200011 | The getValueAt method cannot be bound. |
+| [10200011](../errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) | The getValueAt method cannot be bound. |
 
 ## 示例
 
@@ -619,7 +638,7 @@ has(key: T): boolean
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 10200011 | The has method cannot be bound. |
+| [10200011](../errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) | The has method cannot be bound. |
 
 ## 示例
 
@@ -665,7 +684,7 @@ hasAll(set: LightWeightSet<T>): boolean
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 10200011 | The hasAll method cannot be bound. |
+| [10200011](../errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) | The hasAll method cannot be bound. |
 
 ## 示例
 
@@ -714,8 +733,8 @@ increaseCapacityTo(minimumCapacity: int): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 10200011 | The increaseCapacityTo method cannot be bound. |
-| 10200001 | The value of minimumCapacity is out of range. |
+| [10200011](../errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) | The increaseCapacityTo method cannot be bound. |
+| [10200001](../errorcode-utils.md#10200001-参数范围越界错误) | The value of minimumCapacity is out of range. |
 
 ## 示例
 
@@ -753,7 +772,7 @@ isEmpty(): boolean
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 10200011 | The isEmpty method cannot be bound. |
+| [10200011](../errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) | The isEmpty method cannot be bound. |
 
 ## 示例
 
@@ -798,7 +817,7 @@ remove(key: T): T
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 10200011 | The remove method cannot be bound. |
+| [10200011](../errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) | The remove method cannot be bound. |
 
 ## 示例
 
@@ -841,6 +860,15 @@ remove(key: T): T | undefined
 | --- | --- |
 | T | 如果存在则返回被删除的值，否则返回undefined。 |
 
+## 示例
+
+```TypeScript
+let lightWeightSet: LightWeightSet<string> = new LightWeightSet<string>();
+lightWeightSet.add("squirrel");
+lightWeightSet.add("sparrow");
+let result = lightWeightSet.remove("sparrow");
+```
+
 ## removeAt
 
 ArkTS-Dyn:
@@ -881,7 +909,7 @@ removeAt(index: int): boolean
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 10200011 | The removeAt method cannot be bound. |
+| [10200011](../errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) | The removeAt method cannot be bound. |
 
 ## 示例
 
@@ -922,7 +950,7 @@ toArray(): Array<T>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 10200011 | The toArray method cannot be bound. |
+| [10200011](../errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) | The toArray method cannot be bound. |
 
 ## 示例
 
@@ -993,13 +1021,13 @@ values(): IterableIterator<T>
 
 | 类型 | 说明 |
 | --- | --- |
-| [IterableIterator](arkts-arkts-iterator-iterableiterator-i.md)&lt;T&gt; | 返回包含LightWeightSet中所有value的迭代器对象。 |
+| IterableIterator&lt;T&gt; | 返回包含LightWeightSet中所有value的迭代器对象。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 10200011 | The values method cannot be bound. |
+| [10200011](../errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) | The values method cannot be bound. |
 
 ## 示例
 

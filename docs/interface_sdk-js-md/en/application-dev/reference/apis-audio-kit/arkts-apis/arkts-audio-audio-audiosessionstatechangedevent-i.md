@@ -1,6 +1,6 @@
 # AudioSessionStateChangedEvent
 
-音频会话状态变更事件。
+Describes the event indicating that the audio session state changes.
 
 **Since:** 20
 
@@ -22,7 +22,7 @@ import { audio } from 'kits/@kit.AudioKit';
 stateChangeHint: AudioSessionStateChangeHint
 ```
 
-音频会话状态变更提示。
+Hint for the audio session state change.
 
 **Type:** [AudioSessionStateChangeHint](arkts-audio-audio-audiosessionstatechangehint-e.md)
 

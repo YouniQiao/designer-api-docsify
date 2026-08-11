@@ -1,6 +1,6 @@
 # HTML
 
-HTML类型数据，是[Text](arkts-arkdata-unifieddatachannel-text-c.md)的子类，用于描述超文本标记语言数据。
+Represents the HTML data. It is a child class of [Text](arkts-arkdata-unifieddatachannel-text-c.md).
 
 **Inheritance/Implementation:** HTML extends [Text](arkts-arkdata-unifieddatachannel-text-c.md)
 
@@ -24,7 +24,7 @@ import { unifiedDataChannel } from 'kits/@kit.ArkData';
 set htmlContent(value: string)
 ```
 
-html格式内容。
+Indicates the content of html, with html tags
 
 **Type:** string
 
@@ -46,7 +46,7 @@ html格式内容。
 plainContent?: string
 ```
 
-去除html标签后的纯文本内容，非必填字段，默认值为空字符串。
+Plaintext without HTML tags. This parameter is optional. The default value is an empty string.
 
 **Type:** string
 
@@ -68,8 +68,7 @@ plainContent?: string
 set uriAuthorizationPolicies(value: Array<UriPermission> | undefined)
 ```
 
-用于拖拽场景的URI授权策略。默认值为READ（仅读授权），仅在img标签等场景下生效。只针对单个record使用，优先级最高，具体策略见  
-[UriPermission](arkts-arkdata-unifieddatachannel-uripermission-e.md)。
+Defines URI authorization policies for drag intention.
 
 **Type:** Array&lt;UriPermission&gt;
 

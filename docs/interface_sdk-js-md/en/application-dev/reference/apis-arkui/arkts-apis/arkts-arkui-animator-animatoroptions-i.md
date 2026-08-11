@@ -1,6 +1,6 @@
 # AnimatorOptions
 
-定义动画选项。
+Defines the animator options.
 
 **Since:** 23
 
@@ -22,9 +22,7 @@ import { AnimatorOptions, SimpleAnimatorOptions, AnimatorResult } from 'kits/@ki
 begin: double
 ```
 
-动画插值起点。
-
-默认值：0
+Starting point of animator interpolation.The default value is 0.
 
 **Type:** double
 
@@ -44,7 +42,7 @@ begin: double
 delay: int
 ```
 
-动画延时播放时长，单位毫秒，设置为0时，表示不延时。设置为负数时动画提前播放，如果提前播放的时长大于动画总时长，动画直接过渡到终点。
+Delay for the animation start. The default value indicates no delay.The default value is 0.
 
 **Type:** int
 
@@ -64,7 +62,7 @@ delay: int
 direction: "normal" | "reverse" | "alternate" | "alternate-reverse"
 ```
 
-动画播放模式。
+The animation playback mode.The default value is "normal".
 
 **Type:** "normal" \| "reverse" \| "alternate" \| "alternate-reverse"
 
@@ -84,7 +82,7 @@ direction: "normal" | "reverse" | "alternate" | "alternate-reverse"
 duration: int
 ```
 
-动画播放的时长，单位毫秒。
+Duration of the animation, in milliseconds.The default value is 0.
 
 **Type:** int
 
@@ -104,7 +102,7 @@ duration: int
 easing: string
 ```
 
-动画插值曲线，非法字符串时取:"ease"。
+Time curve of the animation. For details about the supported types.linear The animation speed keeps unchanged.ease The animation starts and ends at a low speed, cubic-bezier(0.25, 0.1, 0.25, 1.0).ease-in The animation starts at a low speed, cubic-bezier(0.42, 0.0, 1.0, 1.0).ease-out The animation ends at a low speed, cubic-bezier(0.0, 0.0, 0.58, 1.0).ease-in-out The animation starts and ends at a low speed, cubic-bezier(0.42, 0.0, 0.58, 1.0).fast-out-slow-in Standard curve, cubic-bezier(0.4, 0.0, 0.2, 1.0).linear-out-slow-in Deceleration curve, cubic-bezier(0.0, 0.0, 0.2, 1.0).fast-out-linear-in Acceleration curve, cubic-bezier(0.4, 0.0, 1.0, 1.0).friction Damping curve, cubic-bezier(0.2, 0.0, 0.2, 1.0).extreme-deceleration Extreme deceleration curve, cubic-bezier(0.0, 0.0, 0.0, 1.0).sharp Sharp curve, cubic-bezier(0.33, 0.0, 0.67, 1.0).rhythm Rhythm curve, cubic-bezier(0.7, 0.0, 0.2, 1.0).smooth Smooth curve, cubic-bezier(0.4, 0.0, 0.4, 1.0).cubic-bezier(x1, y1, x2, y2) You can customize an animation speed curve in the cubic-bezier() function.The x and y values of each input parameter must be between 0 and 1.Step curve. The number must be set and only an integer is supported, step-position is optional.It can be set to start or end. The default value is end.interpolating-spring(velocity, mass, stiffness, damping), interpolating spring curve.The default value is ease.
 
 **Type:** string
 
@@ -124,7 +122,7 @@ easing: string
 end: double
 ```
 
-动画插值终点。
+Ending point of Dynamic Interpolation The default value is 1.
 
 **Type:** double
 
@@ -144,7 +142,7 @@ end: double
 fill: "none" | "forwards" | "backwards" | "both"
 ```
 
-动画执行后是否恢复到初始状态，动画执行后，动画结束时的状态（在最后一个关键帧中定义）将保留。
+Whether to resume to the initial state after the animation is executed.none: The initial state is restored after the animation is executed.forwards: The state at the end of the animation (defined in the last key frame)is retained after the animation is executed.
 
 **Type:** "none" \| "forwards" \| "backwards" \| "both"
 
@@ -164,7 +162,7 @@ fill: "none" | "forwards" | "backwards" | "both"
 iterations: int
 ```
 
-动画播放次数。设置为0时不播放，设置为-1时无限次播放，设置大于0时为播放次数。
+Number of times the animation will be played.Number indicates a fixed number of playback operations, and -1 an unlimited number of playback operations.The default value is 1.
 
 **Type:** int
 

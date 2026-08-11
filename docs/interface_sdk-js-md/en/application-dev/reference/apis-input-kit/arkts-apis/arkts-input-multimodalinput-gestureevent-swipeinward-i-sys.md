@@ -1,6 +1,6 @@
 # SwipeInward (System API)
 
-向内滑动事件。
+Defines an inward swipe event.
 
 **Since:** 12
 
@@ -24,7 +24,7 @@ import { SwipeInward, FourFingersSwipe, Pinch, ActionType, Rotate, ThreeFingersT
 type: ActionType
 ```
 
-表示向内滑动事件的类型，固定为SwipeInward。
+Type of the inward swipe event. The value is fixed at **SwipeInward**.
 
 **Type:** [ActionType](../../apis-avsession-kit/arkts-apis/arkts-avsession-avmusictemplate-actiontype-t.md)
 
@@ -44,7 +44,7 @@ type: ActionType
 x: int
 ```
 
-滑动事件触发点的横坐标，单位为像素。
+X-coordinate of the swipe event trigger point, in pixels.
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
@@ -64,7 +64,7 @@ x: int
 y: int
 ```
 
-滑动事件触发点的纵坐标，单位为像素。
+Y-coordinate of the swipe event trigger point, in pixels.
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 

@@ -1,6 +1,6 @@
 # Direction
 
-规则链。
+Enumerates the direction chains to which the rule applies.
 
 **Since:** 12
 
@@ -16,7 +16,7 @@
 INPUT = 0
 ```
 
-输入链。
+Input chain.
 
 **Since:** 12
 
@@ -34,7 +34,7 @@ INPUT = 0
 OUTPUT = 1
 ```
 
-输出链。
+Output chain.
 
 **Since:** 12
 
@@ -52,7 +52,7 @@ OUTPUT = 1
 FORWARD = 2
 ```
 
-转发链。
+Forward chain.
 
 **Since:** 15
 

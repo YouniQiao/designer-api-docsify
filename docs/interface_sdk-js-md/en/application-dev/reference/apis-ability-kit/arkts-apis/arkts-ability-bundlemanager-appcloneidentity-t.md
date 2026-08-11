@@ -4,7 +4,7 @@
 export type AppCloneIdentity = _BundleInfo.AppCloneIdentity
 ```
 
-描述应用包的身份信息。
+Describes the identity information of an application clone.
 
 **Since:** 15
 

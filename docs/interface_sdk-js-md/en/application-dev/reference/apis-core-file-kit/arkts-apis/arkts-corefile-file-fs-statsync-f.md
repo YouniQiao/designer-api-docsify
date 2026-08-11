@@ -12,7 +12,7 @@ import { Options, ReaderIteratorResult, Watcher, ReadTextOptions, WatchEventList
 declare function statSync(file: string | number): Stat
 ```
 
-以同步方法获取文件或目录详细属性信息。
+Obtains detailed attribute information of a file or directory. This API returns the result synchronously.
 
 **Since:** 9
 
@@ -28,13 +28,13 @@ declare function statSync(file: string | number): Stat
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| file | string \| number | Yes | 文件或目录的应用沙箱路径path、URI或已打开的文件描述符fd。&lt;br&gt;**说明：**从API version 22开始，支持传入URI。 |
+| file | string \| number | Yes | Application sandbox path, URI, or FD of the file or directory.&lt;br&gt;**Note：**: URIs can be passed since API version 22. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [Stat](arkts-corefile-fileio-stat-i.md) | 表示文件或目录的具体信息。 |
+| [Stat](arkts-corefile-fileio-stat-i.md) | Detailed information of a file or directory. |
 
 **Error codes:**
 

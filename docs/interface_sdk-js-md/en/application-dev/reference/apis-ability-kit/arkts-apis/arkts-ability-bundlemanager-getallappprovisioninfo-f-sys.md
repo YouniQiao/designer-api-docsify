@@ -12,7 +12,7 @@ import { bundleManager } from 'kits/@kit.AbilityKit';
 function getAllAppProvisionInfo(userId?: int): Promise<Array<AppProvisionInfo>>
 ```
 
-根据userId获取指定用户下所有应用的[Provision](arkts-appprovisioninfo.md)配置文件信息。使用Promise异步回调。
+Obtains the [provision](arkts-appprovisioninfo.md) configuration file information of all applications based on the given user ID. This API uses a promise to return the result.
 
 **Since:** 23
 
@@ -30,21 +30,21 @@ function getAllAppProvisionInfo(userId?: int): Promise<Array<AppProvisionInfo>>
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| userId | ArkTS-Dyn: number  <br>ArkTS-Sta：int | No | 表示用户ID，可以通过 [getOsAccountLocalId](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-osaccount-accountmanager-i.md/arkts-basicservices-osaccount-accountmanager-i.md#getosaccountlocalid) 获取。&lt;br&gt;默认值：调用方所在用户ID。&lt;br&gt;取值范围：大于等于0。 |
+| userId | ArkTS-Dyn: number  <br>ArkTS-Sta：int | No | User ID, which can be obtained by calling [getOsAccountLocalId](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-osaccount-accountmanager-i.md/arkts-basicservices-osaccount-accountmanager-i.md#getosaccountlocalid) .&lt;br&gt;The default value is the user ID of the caller.&lt;br&gt;The value must be greater than or equal to 0. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;Array&lt;AppProvisionInfo&gt;&gt; | Promise对象，返回应用的provision配置文件信息。 |
+| Promise&lt;Array&lt;AppProvisionInfo&gt;&gt; | Promise used to return the provision profile obtained. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 201 | Permission denied. |
-| 202 | Permission denied. A non-system application is not allowed to call a system API. |
-| 17700004 | The specified user id is not found. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission denied. A non-system application is not allowed to call a system API. |
+| [17700004](../errorcode-bundle.md#17700004-user-id-does-not-exist) | The specified user id is not found. |
 
 ## Examples
 

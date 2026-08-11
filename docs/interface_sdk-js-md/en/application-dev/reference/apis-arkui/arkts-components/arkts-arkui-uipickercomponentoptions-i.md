@@ -1,6 +1,6 @@
 # UIPickerComponentOptions
 
-UIPickerComponent容器的参数说明。
+Describes the parameters of the **UIPickerComponent** container.
 
 **Since:** 22
 
@@ -16,15 +16,15 @@ UIPickerComponent容器的参数说明。
 selectedIndex?: number
 ```
 
-选中项的索引值，用于指定初始选中的选项。
+Index of the selected item.
 
-> 取值范围：[0, 子组件的个数-1]内的整数。不在取值范围内时，使用默认值；设置小数时，使用向下取整后的整数。
+Value range: an integer in the range of [0, Number of child components – 1]. If the value is not within the value range, the default value is used. If a decimal number is set, the integer part after rounding down is used.
 
-> 默认值：0。当需要组件初始显示特定选项时传入此参数。
+Default value: 0
 
-> **说明：**
-> 
-> 统计子组件的个数时，不包含Row容器内的子组件，Row容器及其子组件共同视为1个子组件。
+NOTE
+
+When counting the number of child components, the **Row** container and its child components are counted as one child component.
 
 **Type:** number
 

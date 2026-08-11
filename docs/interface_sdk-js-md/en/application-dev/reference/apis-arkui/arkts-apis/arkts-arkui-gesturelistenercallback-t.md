@@ -4,7 +4,7 @@
 export declare type GestureListenerCallback = (info: GestureTriggerInfo) => void
 ```
 
-定义UIObserver监听指定手势触发信息时使用的回调类型。
+Defines the callback type used in UIObserver to monitor specific gesture triggered information.
 
 **Since:** 26.0.0
 

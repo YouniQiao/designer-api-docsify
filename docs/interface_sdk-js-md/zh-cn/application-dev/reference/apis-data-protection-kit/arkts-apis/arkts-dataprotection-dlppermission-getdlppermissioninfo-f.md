@@ -1,11 +1,5 @@
 # getDLPPermissionInfo
 
-## 导入模块
-
-```TypeScript
-import { dlpPermission } from 'kits/@kit.DataProtectionKit';
-```
-
 ## getDLPPermissionInfo
 
 ```TypeScript
@@ -34,9 +28,9 @@ function getDLPPermissionInfo(): Promise<DLPPermissionInfo>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 19100001 | Invalid parameter value. |
-| 19100006 | No permission to call this API, which is available only for DLP sandbox applications. |
-| 19100011 | The system ability works abnormally. |
+| [19100001](../errorcode-dlp.md#19100001-入参错误) | Invalid parameter value. |
+| [19100006](../errorcode-dlp.md#19100006-非dlp沙箱应用) | No permission to call this API, which is available only for DLP sandbox applications. |
+| [19100011](../errorcode-dlp.md#19100011-系统服务工作异常) | The system ability works abnormally. |
 
 ## 示例
 
@@ -83,10 +77,10 @@ function getDLPPermissionInfo(callback: AsyncCallback<DLPPermissionInfo>): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1. Incorrect parameter types. |
-| 19100001 | Invalid parameter value. |
-| 19100006 | No permission to call this API, which is available only for DLP sandbox applications. |
-| 19100011 | The system ability works abnormally. |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1. Incorrect parameter types. |
+| [19100001](../errorcode-dlp.md#19100001-入参错误) | Invalid parameter value. |
+| [19100006](../errorcode-dlp.md#19100006-非dlp沙箱应用) | No permission to call this API, which is available only for DLP sandbox applications. |
+| [19100011](../errorcode-dlp.md#19100011-系统服务工作异常) | The system ability works abnormally. |
 
 ## 示例
 

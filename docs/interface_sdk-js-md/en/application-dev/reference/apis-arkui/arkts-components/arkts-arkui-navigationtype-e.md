@@ -1,6 +1,6 @@
 # NavigationType
 
-路由的跳转方式。
+Navigation type.
 
 **Since:** 7
 
@@ -20,9 +20,12 @@
 Push
 ```
 
-跳转到应用内的指定页面。
+Navigates to the specified page in the application.
 
-**说明：**<br/
+**NOTE：**
+
+This API is supported since API version 7 and deprecated since API version 13. You are advised to use  
+[pushPath](../arkts-apis/arkts-arkui-navigation-navpathstack-c.md/arkts-arkui-navigation-navpathstack-c.md#pushpath) instead.
 
 **Since:** 7
 
@@ -44,6 +47,13 @@ Push
 Back
 ```
 
+Returns to the specified page. If the specified page does not exist in the stack, no response is returned. If no page is specified, the previous page is returned to.
+
+**NOTE：**
+
+This API is supported since API version 7 and deprecated since API version 13. You are advised to use  
+[pop](../arkts-apis/arkts-arkui-navigation-navpathstack-c.md/arkts-arkui-navigation-navpathstack-c.md#pop) instead.
+
 **Since:** 7
 
 **ArkTS mode:** ArkTS-Dyn only, since version 7.
@@ -63,6 +73,13 @@ Back
 ```TypeScript
 Replace
 ```
+
+Replaces the current page with another one in the application and destroys the current page.
+
+**NOTE：**
+
+This API is supported since API version 7 and deprecated since API version 13. You are advised to use  
+[replacePath](../arkts-apis/arkts-arkui-navigation-navpathstack-c.md/arkts-arkui-navigation-navpathstack-c.md#replacepath) instead.
 
 **Since:** 7
 

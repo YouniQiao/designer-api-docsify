@@ -1,6 +1,6 @@
 # InsightIntentInfo (System API)
 
-意图信息，表示设备中意图的具体参数配置。
+Defines the intent information, which is the specific parameter configuration of the intent in the device.
 
 **Since:** 20
 
@@ -24,7 +24,7 @@ import { insightIntentDriver } from 'kits/@kit.AbilityKit';
 readonly bundleName: string
 ```
 
-表示应用包名称。
+Bundle name of the application.
 
 **Type:** string
 
@@ -46,7 +46,7 @@ readonly bundleName: string
 readonly developType?: DevelopType
 ```
 
-表示意图的开发方式。
+Development mode of the intent.
 
 **Type:** [DevelopType](arkts-ability-insightintentdriver-developtype-e-sys.md)
 
@@ -68,7 +68,7 @@ readonly developType?: DevelopType
 readonly displayDescription: string
 ```
 
-表示在意图框架中显示的意图描述。
+Description of the intent displayed in the InsightIntent framework.
 
 **Type:** string
 
@@ -90,7 +90,7 @@ readonly displayDescription: string
 readonly displayName: string
 ```
 
-表示在意图框架中显示的意图名称。
+Name of the intent displayed in the InsightIntent framework.
 
 **Type:** string
 
@@ -112,8 +112,8 @@ readonly displayName: string
 readonly domain: string
 ```
 
-表示意图垂域，用于将意图按垂直领域分类（例如：视频、音乐、游戏），取值范围参见  
-[各垂域的智慧分发特性列表](https://developer.huawei.com/consumer/cn/doc/service/intents-ai-distribution-characteristic-0000001901922213#section2656133582215)中的垂域字段。
+Vertical domain of the intent. It is used to categorize intents by vertical fields (for example, video, music,and games). For details about the value range, see the vertical domain fields in  
+[smart distribution features in different vertical domains](https://developer.huawei.com/consumer/en/doc/service/intents-ai-distribution-characteristic-0000001901922213#section2656133582215).
 
 **Type:** string
 
@@ -135,7 +135,7 @@ readonly domain: string
 readonly entities: Array<EntityInfo>
 ```
 
-表示意图包含的实体信息。
+Entity information contained in the intent.
 
 **Type:** Array&lt;EntityInfo&gt;
 
@@ -157,7 +157,7 @@ readonly entities: Array<EntityInfo>
 readonly icon: string
 ```
 
-表示意图图标。
+Icon of the intent.
 
 **Type:** string
 
@@ -179,7 +179,7 @@ readonly icon: string
 readonly intentName: string
 ```
 
-表示意图名称。
+Intent name.
 
 **Type:** string
 
@@ -201,11 +201,12 @@ readonly intentName: string
 readonly intentType: InsightIntentType
 ```
 
-表示通过意图装饰器定义的意图类型。
+Type of intent defined by the intent decorator.
 
-**说明：**
+**NOTE：**
 
-对于使用配置文件开发的意图，该字段返回值默认为[@InsightIntentEntry](./js-apis-app-ability-InsightIntentDecorator.md#insightintententry)类型装饰器。
+For intents developed using a configuration file, the return value of this field is  
+[@InsightIntentEntry](./js-apis-app-ability-InsightIntentDecorator.md#insightintententry) by default.
 
 **Type:** [InsightIntentType](arkts-ability-insightintentdriver-insightintenttype-e-sys.md)
 
@@ -227,7 +228,7 @@ readonly intentType: InsightIntentType
 readonly intentVersion: string
 ```
 
-意图版本号，当意图能力演进时，可通过版本号进行区分和管理。
+Version number of the intent. It is used to distinguish and manage intents when their capabilities evolve.
 
 **Type:** string
 
@@ -249,7 +250,7 @@ readonly intentVersion: string
 readonly keywords: string[]
 ```
 
-表示意图的搜索关键字。
+Search keywords for the intent.
 
 **Type:** string[]
 
@@ -271,7 +272,7 @@ readonly keywords: string[]
 readonly llmDescription: string
 ```
 
-表示意图的功能，用于大型语言模型理解该意图。
+Function of an intent, which helps large language models understand the intent.
 
 **Type:** string
 
@@ -293,7 +294,7 @@ readonly llmDescription: string
 readonly moduleName: string
 ```
 
-表示模块名称。
+Module name.
 
 **Type:** string
 
@@ -315,7 +316,7 @@ readonly moduleName: string
 readonly parameters: Record<string, Object>
 ```
 
-表示意图参数的数据格式声明，用于意图调用时定义入参的数据格式。
+Data format of intent parameters, which is used to define the input data format during intent calls.
 
 **Type:** [Record](../../apis-default/arkts-apis/arkts-record-t.md)&lt;string, Object&gt;
 
@@ -337,7 +338,7 @@ readonly parameters: Record<string, Object>
 readonly result: Record<string, Object>
 ```
 
-表示意图调用返回的结果。
+Execution result returned.
 
 **Type:** [Record](../../apis-default/arkts-apis/arkts-record-t.md)&lt;string, Object&gt;
 
@@ -359,7 +360,7 @@ readonly result: Record<string, Object>
 readonly schema: string
 ```
 
-标准意图名称，如果在标准意图列表中存在schema与intentVersion字段均匹配的意图，则按照标准意图处理。
+Standard intent name. If an intent in the standard intent list matches both the **schema** and **intentVersion**fields, it is processed as a standard intent.
 
 **Type:** string
 
@@ -381,11 +382,12 @@ readonly schema: string
 readonly subIntentInfo: LinkIntentInfo | PageIntentInfo | FunctionIntentInfo | FormIntentInfo | EntryIntentInfo
 ```
 
-表示特定意图装饰器的意图信息。 
+Intent information for specific intent decorators.
 
-**说明：**
+**NOTE：**
 
-对于使用配置文件开发的意图，该字段返回值默认为[EntryIntentInfo](#entryintentinfo20)。
+For intents developed using a configuration file, the return value of this field is  
+[EntryIntentInfo](#entryintentinfo20) by default.
 
 **Type:** [LinkIntentInfo](arkts-ability-insightintentdriver-linkintentinfo-i-sys.md) \| PageIntentInfo \| FunctionIntentInfo \| FormIntentInfo \| EntryIntentInfo
 
@@ -407,7 +409,7 @@ readonly subIntentInfo: LinkIntentInfo | PageIntentInfo | FunctionIntentInfo | F
 readonly subIntentInfoForConfiguration?: SubIntentInfoForConfiguration
 ```
 
-表示使用配置文件开发的意图的特有信息。
+Unique information about the intent developed using a configuration file.
 
 **Type:** [SubIntentInfoForConfiguration](arkts-ability-insightintentdriver-subintentinfoforconfiguration-i-sys.md)
 

@@ -1,6 +1,6 @@
 # AVCastPickerState
 
-投播组件设备列表状态参数选项。
+Definition of av cast picker state
 
 **Since:** 11
 
@@ -13,8 +13,10 @@
 ## STATE_APPEARING
 
 ```TypeScript
-STATE_APPEARING = 0
+STATE_APPEARING
 ```
+
+The picker starts showing.
 
 **Since:** 11
 
@@ -22,15 +24,17 @@ STATE_APPEARING = 0
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
-<!--Device-AVCastPickerState-STATE_APPEARING = 0--><!--Device-AVCastPickerState-STATE_APPEARING = 0-End-->
+<!--Device-AVCastPickerState-STATE_APPEARING--><!--Device-AVCastPickerState-STATE_APPEARING-End-->
 
 **System capability:** SystemCapability.Multimedia.AVSession.AVCast
 
 ## STATE_DISAPPEARING
 
 ```TypeScript
-STATE_DISAPPEARING = 1
+STATE_DISAPPEARING
 ```
+
+The picker finishes presenting.
 
 **Since:** 11
 
@@ -38,7 +42,7 @@ STATE_DISAPPEARING = 1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
-<!--Device-AVCastPickerState-STATE_DISAPPEARING = 1--><!--Device-AVCastPickerState-STATE_DISAPPEARING = 1-End-->
+<!--Device-AVCastPickerState-STATE_DISAPPEARING--><!--Device-AVCastPickerState-STATE_DISAPPEARING-End-->
 
 **System capability:** SystemCapability.Multimedia.AVSession.AVCast
 

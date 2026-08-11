@@ -1,6 +1,6 @@
 # ParallelStrategy
 
-ParallelStrategy作为[Options](arkts-basicservices-zlib-options-i.md)的一个属性，用于指定压缩或解压时的串行或并行策略。
+ParallelStrategy
 
 **Since:** 18
 
@@ -16,7 +16,7 @@ ParallelStrategy作为[Options](arkts-basicservices-zlib-options-i.md)的一个�
 PARALLEL_STRATEGY_SEQUENTIAL = 0
 ```
 
-默认值，串行压缩/解压策略。
+Serial compression/decompression strategy (default).
 
 **Since:** 18
 
@@ -34,7 +34,7 @@ PARALLEL_STRATEGY_SEQUENTIAL = 0
 PARALLEL_STRATEGY_PARALLEL_DECOMPRESSION = 1
 ```
 
-并行解压策略。
+Parallel decompression strategy.
 
 **Since:** 18
 

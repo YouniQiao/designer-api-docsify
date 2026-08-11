@@ -1,11 +1,5 @@
 # publishReminder
 
-## 导入模块
-
-```TypeScript
-import { reminderAgentManager } from 'kits/@kit.BackgroundTasksKit';
-```
-
 ## publishReminder
 
 ```TypeScript
@@ -42,12 +36,14 @@ function publishReminder(reminderReq: ReminderRequest, callback: AsyncCallback<i
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 401 | If the input parameter is not valid parameter. |
-| 1700001 | Notification is not enabled. |
-| 201 | Permission denied. |
-| 1700002 | The number of reminders exceeds the limit. |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | If the input parameter is not valid parameter. |
+| [1700001](../../apis-backgroundtasks-kit/errorcode-reminderAgentManager.md#1700001-通知使能未开启) | Notification is not enabled. |
+| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
+| [1700002](../../apis-backgroundtasks-kit/errorcode-reminderAgentManager.md#1700002-提醒数量超出限制) | The number of reminders exceeds the limit. |
 
 ## 示例
+
+ArkTS-Dyn示例：
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -65,6 +61,29 @@ reminderAgentManager.publishReminder(timer, (err: BusinessError, reminderId: num
     console.info("callback, reminderId = " + reminderId);
   }
 });
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+import { reminderAgentManager } from '@kit.BackgroundTasksKit';
+
+// publishReminder回调
+let publishCallback = (err: BusinessError | null, reminderId: int | undefined | null): void => {
+  if (err) {
+    console.error(`Failed to publish reminder. Code is ${err.code}, message is ${err.message}`);
+  } else {
+    console.info(`Succeeded in publishing reminder, id is ${JSON.stringify(reminderId)}.`);
+  }
+}
+
+let timer: reminderAgentManager.ReminderRequestTimer = {
+  reminderType: reminderAgentManager.ReminderType.REMINDER_TYPE_TIMER,
+  triggerTimeInSeconds: 10
+}
+
+reminderAgentManager.publishReminder(timer, publishCallback);
 ```
 
 
@@ -109,12 +128,14 @@ function publishReminder(reminderReq: ReminderRequest): Promise<int>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 401 | If the input parameter is not valid parameter. |
-| 1700001 | Notification is not enabled. |
-| 201 | Permission denied. |
-| 1700002 | The number of reminders exceeds the limit. |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | If the input parameter is not valid parameter. |
+| [1700001](../../apis-backgroundtasks-kit/errorcode-reminderAgentManager.md#1700001-通知使能未开启) | Notification is not enabled. |
+| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
+| [1700002](../../apis-backgroundtasks-kit/errorcode-reminderAgentManager.md#1700002-提醒数量超出限制) | The number of reminders exceeds the limit. |
 
 ## 示例
+
+ArkTS-Dyn示例：
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -129,6 +150,23 @@ reminderAgentManager.publishReminder(timer).then((reminderId: number) => {
   console.info("promise, reminderId = " + reminderId);
 }).catch((err: BusinessError) => {
   console.error("promise err code:" + err.code + " message:" + err.message);
+});
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+import { reminderAgentManager } from '@kit.BackgroundTasksKit';
+
+let timer: reminderAgentManager.ReminderRequestTimer = {
+  reminderType: reminderAgentManager.ReminderType.REMINDER_TYPE_TIMER,
+  triggerTimeInSeconds: 10
+}
+
+reminderAgentManager.publishReminder(timer).then((reminderId: int) => {
+  console.info(`Succeeded in publishing reminder, reminderId is  ${JSON.stringify(reminderId)}.`);
+}).catch((err): void => {
+  console.error(`Failed to publish reminder. Code is ${err.code}, message is ${err.message}`);
 });
 ```
 

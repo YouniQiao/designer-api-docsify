@@ -12,7 +12,7 @@ import { serialManager } from 'kits/@kit.BasicServicesKit';
 function getAttribute(portId: int): Readonly<SerialAttribute>
 ```
 
-获取指定串口的配置参数。
+Obtains the configuration parameters of a specified serial port.
 
 **Since:** 19
 
@@ -26,22 +26,22 @@ function getAttribute(portId: int): Readonly<SerialAttribute>
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| portId | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | 目标设备的端口号，来自[getPortList](arkts-basicservices-serialmanager-getportlist-f.md#getportlist)获取的串口参数SerialPort。 |
+| portId | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | Port number of the target device, which is obtained from the serial port parameter SerialPort returned by [getPortList](arkts-basicservices-serialmanager-getportlist-f.md#getportlist). |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [Readonly](../../apis-default/arkts-apis/arkts-readonly-t.md)&lt;SerialAttribute&gt; | 返回串口的配置参数。 |
+| [Readonly](../../apis-default/arkts-apis/arkts-readonly-t.md)&lt;SerialAttribute&gt; | Configuration parameters of the serial port. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
-| 31400005 | The serial port device is not opened. Call the open API first. |
-| 31400003 | PortId does not exist. |
-| 31400001 | Serial port management exception. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| [31400005](../../apis-basic-services-kit/errorcode-usb.md#31400005-device-not-opened) | The serial port device is not opened. Call the open API first. |
+| [31400003](../../apis-basic-services-kit/errorcode-usb.md#31400003-port-number-not-exist) | PortId does not exist. |
+| [31400001](../../apis-basic-services-kit/errorcode-usb.md#31400001-serial-port-service-error) | Serial port management exception. |
 
 ## Examples
 
@@ -55,8 +55,8 @@ import { serialManager } from '@kit.BasicServicesKit';
 function getAttribute() {
   let portList: serialManager.SerialPort[] = serialManager.getPortList();
   console.info('usbSerial portList: ' + JSON.stringify(portList));
-  if (!portList || portList.length === 0) {
-    console.error('usbSerial portList is empty');
+  if (portList === undefined || portList.length === 0) {
+    console.info('usbSerial portList is empty');
     return;
   }
   let portId: number = portList[0].portId;
@@ -65,8 +65,8 @@ function getAttribute() {
   if (!serialManager.hasSerialRight(portId)) {
     serialManager.requestSerialRight(portId).then(result => {
       if (!result) {
-        // If the application does not have the access permission and the user does not grant the permission, the application exits.
-        console.error('user is not granted the operation permission');
+        // If the application does not have the access permission and is not granted by the user, the application exits.
+        console.info('user is not granted the operation  permission');
         return;
       } else {
         console.info('grant permission successfully');
@@ -93,14 +93,6 @@ function getAttribute() {
     }
   } catch (error) {
     console.error('getAttribute usbSerial error, ' + JSON.stringify(error));
-  }
-
-  // Close the serial port device.
-  try {
-    serialManager.close(portId);
-    console.info('close usbSerial success, portId: ' + portId);
-  } catch (error) {
-    console.error('close usbSerial error, ' + JSON.stringify(error));
   }
 }
 ```

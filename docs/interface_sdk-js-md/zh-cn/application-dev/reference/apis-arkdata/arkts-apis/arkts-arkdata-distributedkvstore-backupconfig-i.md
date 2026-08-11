@@ -10,12 +10,6 @@
 
 **系统能力：** SystemCapability.DistributedDataManager.KVStore.Core
 
-## 导入模块
-
-```TypeScript
-import { distributedKVStore } from 'kits/@kit.ArkData';
-```
-
 ## fileName
 
 ```TypeScript

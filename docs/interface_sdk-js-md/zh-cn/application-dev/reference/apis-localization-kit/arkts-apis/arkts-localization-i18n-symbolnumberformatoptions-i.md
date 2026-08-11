@@ -2,7 +2,7 @@
 
 创建自定义符号数字格式化对象时的可选配置项。继承自Intl.NumberFormatOptions，支持Intl.NumberFormatOptions的所有配置项，并且功能与其一致。
 
-**继承/实现关系：** SymbolNumberFormatOptions extends [Intl.NumberFormatOptions](../../apis-arkts/arkts-apis/arkts-arkts-intl-numberformatoptions-i.md/arkts-arkts-intl-numberformatoptions-i.md)
+**继承/实现关系：** SymbolNumberFormatOptions extends [Intl.NumberFormatOptions](Intl.NumberFormatOptions)
 
 **起始版本：** 26.0.0
 
@@ -11,12 +11,6 @@
 <!--Device-i18n-export interface SymbolNumberFormatOptions extends Intl.NumberFormatOptions--><!--Device-i18n-export interface SymbolNumberFormatOptions extends Intl.NumberFormatOptions-End-->
 
 **系统能力：** SystemCapability.Global.I18n
-
-## 导入模块
-
-```TypeScript
-import { i18n } from 'kits/@kit.LocalizationKit';
-```
 
 ## groupingSeparator
 

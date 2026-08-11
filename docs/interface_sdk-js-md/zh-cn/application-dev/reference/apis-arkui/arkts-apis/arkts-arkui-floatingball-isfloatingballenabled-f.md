@@ -1,11 +1,5 @@
 # isFloatingBallEnabled
 
-## 导入模块
-
-```TypeScript
-import { floatingBall } from 'kits/@kit.ArkUI';
-```
-
 ## isFloatingBallEnabled
 
 ```TypeScript
@@ -31,7 +25,8 @@ function isFloatingBallEnabled(): boolean
 ## 示例
 
 ```TypeScript
-// 判断当前设备是否支持闪控球功能
+// xxx.ets
+
 let enable: boolean = floatingBall.isFloatingBallEnabled();
 console.info('Floating ball enabled is: ' + enable);
 ```

@@ -1,11 +1,5 @@
 # acquireDataAbilityHelper
 
-## 导入模块
-
-```TypeScript
-import { particleAbility } from 'kits/@kit.AbilityKit';
-```
-
 ## acquireDataAbilityHelper
 
 ```TypeScript

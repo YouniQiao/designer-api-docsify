@@ -1,6 +1,6 @@
 # PrintPageRange
 
-定义打印范围的接口。
+Defines the print range.
 
 **Since:** 11
 
@@ -22,7 +22,7 @@ import { print } from 'kits/@kit.BasicServicesKit';
 endPage?: int
 ```
 
-表示结束页。默认值为待打印文件的最大页数。
+End page. The default value is the maximum number of pages of the file to be printed.
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
@@ -40,7 +40,7 @@ endPage?: int
 pages?: Array<int>
 ```
 
-表示待打印的页面范围的集合。默认值为空。
+Page range set of the file to print. The default value is empty.
 
 **Type:** ArkTS-Dyn: Array&lt;number&gt;  <br>ArkTS-Sta：Array&lt;int&gt;
 
@@ -58,7 +58,7 @@ pages?: Array<int>
 startPage?: int
 ```
 
-表示起始页。默认值为1。
+Start page. The default value is **1**.
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 

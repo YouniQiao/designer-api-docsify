@@ -1,8 +1,8 @@
 # CanvasRenderingContext2D
 
-CanvasRenderingContext2D对象与Canvas组件绑定后，可在Canvas组件上绘制，绘制对象可以是形状、文本、图片等。
+Draw context object for the Canvas component.
 
-**Inheritance/Implementation:** CanvasRenderingContext2D extends [CanvasRenderer](arkts-arkui-canvasrenderer-c.md)
+**Inheritance/Implementation:** CanvasRenderingContext2D extends [CanvasRenderer](../arkts-components/arkts-arkui-canvasrenderer-c.md/arkts-arkui-canvasrenderer-c.md)
 
 **Since:** 23
 
@@ -18,7 +18,7 @@ CanvasRenderingContext2D对象与Canvas组件绑定后，可在Canvas组件上�
 constructor(settings?: RenderingContextSettings, unit?: LengthMetricsUnit)
 ```
 
-构造Canvas画布对象，支持配置CanvasRenderingContext2D对象的参数和单位模式。
+Constructor of the canvas drawing context object, which is used to create a drawing context object.
 
 **Since:** 23
 
@@ -34,8 +34,8 @@ constructor(settings?: RenderingContextSettings, unit?: LengthMetricsUnit)
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| settings | [RenderingContextSettings](arkts-arkui-canvas-renderingcontextsettings-c.md) | No | 用来配置CanvasRenderingContext2D对象的参数， 见RenderingContextSettings。 异常值undefined和null按RenderingContextSettings的默认值处理。 |
-| unit | [LengthMetricsUnit](arkts-arkui-lengthmetricsunit-t.md) | No | 用来配置CanvasRenderingContext2D对象的单位模式， 配置后无法更改。异常值undefined、NaN和Infinity按默认值处理。默认值：DEFAULT。 |
+| settings | [RenderingContextSettings](arkts-arkui-canvas-renderingcontextsettings-c.md) | No | Drawing attribute. For details, see {@link RenderingContextSettings}. |
+| unit | [LengthMetricsUnit](arkts-arkui-lengthmetricsunit-t.md) | No | the unit mode |
 
 ## getContext2DFromDrawingContext
 
@@ -43,14 +43,7 @@ constructor(settings?: RenderingContextSettings, unit?: LengthMetricsUnit)
 static getContext2DFromDrawingContext(drawingContext: DrawingRenderingContext, options?: RenderingContextOptions): CanvasRenderingContext2D
 ```
 
-从一个DrawingRenderingContext对象中获取一个CanvasRenderingContext2D对象，该CanvasRenderingContext2D对象与入参的DrawingRenderingContext对象绑定了相同的Canvas组件。
-
-> **说明：**
-> 
-> - 从该接口获取的CanvasRenderingContext2D对象不允许作为参数创建Canvas组件，
-> 否则会导致应用崩溃。
-> 
-> - 当入参的DrawingRenderingContext对象未绑定Canvas组件时，将返回错误码。
+Retrieves a 2D rendering context from the specified drawing context.
 
 **Since:** 23
 
@@ -66,20 +59,20 @@ static getContext2DFromDrawingContext(drawingContext: DrawingRenderingContext, o
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| drawingContext | [DrawingRenderingContext](arkts-arkui-drawingrenderingcontext-c.md) | Yes | 一个DrawingRenderingContext类型的对象。 |
-| options | [RenderingContextOptions](arkts-arkui-renderingcontextoptions-i.md) | No | 渲染上下文的配置选项。 默认值：{ antialias: false }。 |
+| drawingContext | [DrawingRenderingContext](../arkts-components/arkts-arkui-drawingrenderingcontext-c.md) | Yes | A drawing rendering context. |
+| options | [RenderingContextOptions](../arkts-components/arkts-arkui-renderingcontextoptions-i.md) | No | options of the 2D rendering context. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [CanvasRenderingContext2D](arkts-arkui-canvasrenderingcontext2d-c.md) | 返回一个CanvasRenderingContext2D对象， 其与入参的DrawingRenderingContext绑定了相同的Canvas组件。 |
+| [CanvasRenderingContext2D](../arkts-components/arkts-arkui-canvasrenderingcontext2d-c.md) | Returns a 2D rendering context that is bound to the same canvas component as the input drawingContext. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 103702 | The drawingContext is not bound to a canvas component. @static |
+| [103702](../errorcode-canvas.md#103702-drawing-context-is-not-bound-to-any-canvas-component) | The drawingContext is not bound to a canvas component. @static |
 
 ## offAttach
 
@@ -87,7 +80,7 @@ static getContext2DFromDrawingContext(drawingContext: DrawingRenderingContext, o
 offAttach(callback?: VoidCallback): void
 ```
 
-取消订阅CanvasRenderingContext2D与Canvas组件发生绑定的场景。
+Unregister the listener that watches if the canvasrenderingcontext2d attached to the Canvas frameNode.
 
 **Since:** 23
 
@@ -103,13 +96,13 @@ offAttach(callback?: VoidCallback): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [VoidCallback](arkts-arkui-voidcallback-t.md) | No | 为空表示取消所有订阅CanvasRenderingContext2D与Canvas组件 发生绑定后触发的回调。非空则取消订阅发生绑定对应的回调。 异常值undefined或null按无效值处理。 |
+| callback | [VoidCallback](arkts-arkui-voidcallback-t.md) | No | Indicates the listener. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Input parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Input parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
 
 ## offDetach
 
@@ -117,7 +110,7 @@ offAttach(callback?: VoidCallback): void
 offDetach(callback?: VoidCallback): void
 ```
 
-取消订阅CanvasRenderingContext2D与Canvas组件解除绑定的场景。
+Unregister the listener that watches if the canvasrenderingcontext2d detached from the Canvas frameNode.
 
 **Since:** 23
 
@@ -133,13 +126,13 @@ offDetach(callback?: VoidCallback): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [VoidCallback](arkts-arkui-voidcallback-t.md) | No | 为空代表取消所有订阅CanvasRenderingContext2D与Canvas组件 解除绑定后触发的回调。非空代表取消订阅解除绑定对应的回调。 异常值undefined或null按无效值处理。 |
+| callback | [VoidCallback](arkts-arkui-voidcallback-t.md) | No | Indicates the listener. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Input parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Input parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
 
 ## onAttach
 
@@ -147,17 +140,7 @@ offDetach(callback?: VoidCallback): void
 onAttach(callback: VoidCallback): void
 ```
 
-订阅CanvasRenderingContext2D与Canvas组件发生绑定的场景。
-
-> **说明：**
-> 
-> CanvasRenderingContext2D对象在同一时间只能与一个Canvas组件绑定。
-> 当CanvasRenderingContext2D对象和Canvas组件发生绑定时，会触发'onAttach'回调，
-> 表示可以获取到canvas。
-> 避免在'onAttach'中执行绘制方法，应保证Canvas组件已经'onReady'再进行绘制。
-> 触发'onAttach'回调的一般场景：
-> 1、Canvas组件创建时绑定CanvasRenderingContext2D对象;
-> 2、CanvasRenderingContext2D对象新绑定一个Canvas组件时。
+Register the listener that watches if the canvasrenderingcontext2d attached to the Canvas frameNode.
 
 **Since:** 23
 
@@ -173,13 +156,13 @@ onAttach(callback: VoidCallback): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [VoidCallback](arkts-arkui-voidcallback-t.md) | Yes | 订阅CanvasRenderingContext2D与Canvas组件发生绑定后 触发的回调。异常值undefined或null按无效值处理。 |
+| callback | [VoidCallback](arkts-arkui-voidcallback-t.md) | Yes | Indicates the listener. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Input parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Input parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
 
 ## onDetach
 
@@ -187,15 +170,7 @@ onAttach(callback: VoidCallback): void
 onDetach(callback: VoidCallback): void
 ```
 
-订阅CanvasRenderingContext2D与Canvas组件解除绑定的场景。
-
-> **说明：**
-> 
-> 当CanvasRenderingContext2D对象和Canvas组件解除绑定时，会触发'onDetach'回调，
-> 表示应停止绘制行为。
-> 触发'onDetach'回调的一般场景：
-> 1、Canvas组件销毁时解除绑定CanvasRenderingContext2D对象;
-> 2、CanvasRenderingContext2D对象新绑定一个Canvas组件，会先解除已有的绑定。
+Register the listener that watches if the canvasrenderingcontext2d detached from the Canvas frameNode.
 
 **Since:** 23
 
@@ -211,13 +186,13 @@ onDetach(callback: VoidCallback): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [VoidCallback](arkts-arkui-voidcallback-t.md) | Yes | 订阅CanvasRenderingContext2D与Canvas组件解除绑定后 触发的回调。异常值undefined或null按无效值处理。 |
+| callback | [VoidCallback](arkts-arkui-voidcallback-t.md) | Yes | Indicates the listener. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Input parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Input parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
 
 ## startImageAnalyzer
 
@@ -225,13 +200,7 @@ onDetach(callback: VoidCallback): void
 startImageAnalyzer(config: ImageAnalyzerConfig): Promise<void>
 ```
 
-配置并启动AI分析功能，使用Promise异步回调。使用前需先设置enableAnalyzer为true，启用图像AI分析能力。该方法调用时，将截取调用时刻的画面帧进行分析，使用时需注意启动分析的时机，避免出现画面和分析内容不一致的情况。未执行完重复调用该方法会触发错误回调。
-
-> **说明：**
-> 
-> 分析类型不支持动态修改。
-> 当检测到画面有变化时，分析结果将自动销毁，可重新调用本接口启动分析。
-> 该特性依赖设备能力，不支持该能力的情况下，将返回错误码。
+Start image analyzer.
 
 **Since:** 23
 
@@ -247,21 +216,21 @@ startImageAnalyzer(config: ImageAnalyzerConfig): Promise<void>
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| config | [ImageAnalyzerConfig](arkts-arkui-imageanalyzerconfig-i.md) | Yes | 执行AI分析所需要的入参，用于配置AI分析功能。 异常值undefined或null按无效值处理。 |
+| config | [ImageAnalyzerConfig](arkts-arkui-imageanalyzerconfig-i.md) | Yes | Image analyzer config. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise对象，无返回结果。 |
+| Promise&lt;void&gt; | The promise returned by the function. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 110001 | Image analysis feature is not supported. |
-| 110003 | Image analysis is stopped. |
-| 110002 | Image analysis is currently being executed. |
+| [110001](../arkui-ts/errorcode-image-analyzer.md#110001-ai-image-analysis-not-supported) | Image analysis feature is not supported. |
+| [110003](../arkui-ts/errorcode-image-analyzer.md#110003-ai-image-analysis-terminated) | Image analysis is stopped. |
+| [110002](../arkui-ts/errorcode-image-analyzer.md#110002-ai-image-analysis-already-in-progress) | Image analysis is currently being executed. |
 
 ## stopImageAnalyzer
 
@@ -269,12 +238,7 @@ startImageAnalyzer(config: ImageAnalyzerConfig): Promise<void>
 stopImageAnalyzer(): void
 ```
 
-停止AI分析功能，AI分析展示的内容将被销毁。
-
-> **说明：**
-> 
-> 在startImageAnalyzer方法未返回结果时调用本方法，会触发其错误回调。
-> 该特性依赖设备能力。
+Stop image analyzer.
 
 **Since:** 23
 
@@ -292,7 +256,7 @@ stopImageAnalyzer(): void
 toDataURL(type?: string, quality?: double): string
 ```
 
-生成一个包含图片展示的URL，该接口存在内存拷贝行为，高耗时，应避免频繁使用。
+Generate a character string in the data url format.
 
 **Since:** 23
 
@@ -308,14 +272,14 @@ toDataURL(type?: string, quality?: double): string
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | string | No | 用于指定图像格式。可选参数为："image/png"，"image/jpeg"， "image/webp"。异常值undefined或null按默认值处理。默认值：image/png。 |
-| quality | double | No | 在指定图片格式为image/jpeg或image/webp的情况下， 可以从0到1的区间内选择图片的质量。如果超出取值范围， 将会使用默认值0.92。异常值undefined、null、NaN和Infinity按默认值处理。 默认值：0.92。 |
+| type | string | No | Image format. The default value is image/png. |
+| quality | double | No | If the image format is image/jpeg or image/webp, you can select the image quality from 0 to 1. If the value is out of the range, the default value 0.92 is used. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| string | 图像的URL地址。 |
+| string |  |
 
 ## canvas
 
@@ -323,7 +287,7 @@ toDataURL(type?: string, quality?: double): string
 get canvas(): FrameNode | null
 ```
 
-获取和CanvasRenderingContext2D关联的Canvas组件的FrameNode实例。可用于监听关联的Canvas组件的可见状态。默认值：null。
+Frame node of the canvas. The default value is null.
 
 **Type:** [FrameNode](arkts-arkui-framenode-c.md)
 
@@ -343,7 +307,7 @@ get canvas(): FrameNode | null
 get height(): double
 ```
 
-组件高度，默认单位：vp。
+The default value is 0, which is bound to the height of the specified canvas. The value is read-only.
 
 **Type:** double
 
@@ -363,7 +327,7 @@ get height(): double
 get width(): double
 ```
 
-组件宽度，默认单位：vp。
+The default value is 0, which is bound to the width of the specified canvas. The value is read-only.
 
 **Type:** double
 

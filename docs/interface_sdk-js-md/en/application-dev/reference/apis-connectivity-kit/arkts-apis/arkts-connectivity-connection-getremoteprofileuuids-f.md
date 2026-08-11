@@ -37,10 +37,10 @@ Obtains the profile UUIDs supported by the remote device.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Invalid parameter. |
-| 801 | Capability not supported. |
-| 201 | Permission denied. |
-| 202 | Non-system applications are not allowed to use system APIs.<br>**Applicable version:** 10 - 11 |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Invalid parameter. |
+| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Non-system applications are not allowed to use system APIs.<br>**Applicable version:** 10 - 11 |
 | 2900001 | Service stopped. |
 | 2900003 | Bluetooth disabled. |
 | 2900099 | Operation failed. |
@@ -95,10 +95,10 @@ Obtains the profile UUIDs supported by the remote device.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Invalid parameter. |
-| 801 | Capability not supported. |
-| 201 | Permission denied. |
-| 202 | Non-system applications are not allowed to use system APIs.<br>**Applicable version:** 10 - 11 |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Invalid parameter. |
+| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Non-system applications are not allowed to use system APIs.<br>**Applicable version:** 10 - 11 |
 | 2900001 | Service stopped. |
 | 2900003 | Bluetooth disabled. |
 | 2900099 | Operation failed. |

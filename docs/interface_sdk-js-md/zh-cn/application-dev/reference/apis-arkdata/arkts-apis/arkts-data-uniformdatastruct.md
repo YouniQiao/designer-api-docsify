@@ -13,12 +13,6 @@
 
 **系统能力：** SystemCapability.DistributedDataManager.UDMF.Core
 
-## 导入模块
-
-```TypeScript
-import { uniformDataStruct } from 'kits/@kit.ArkData';
-```
-
 ## 汇总
 
 ### 接口

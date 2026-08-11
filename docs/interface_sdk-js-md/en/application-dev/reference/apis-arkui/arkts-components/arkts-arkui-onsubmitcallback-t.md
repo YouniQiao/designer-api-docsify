@@ -4,7 +4,7 @@
 declare type OnSubmitCallback = (enterKey: EnterKeyType, event: SubmitEvent) => void
 ```
 
-提交回调。
+Defines the callback for submission.
 
 **Since:** 18
 
@@ -22,6 +22,6 @@ declare type OnSubmitCallback = (enterKey: EnterKeyType, event: SubmitEvent) => 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| enterKey | [EnterKeyType](../arkts-apis/arkts-arkui-textinput-enterkeytype-e.md) | Yes | 输入法回车键类型。 |
-| event | [SubmitEvent](arkts-arkui-submitevent-i.md) | Yes | 提交事件。可以控制是否收起键盘。 |
+| enterKey | [EnterKeyType](../arkts-apis/arkts-arkui-textinput-enterkeytype-e.md) | Yes | Type of the Enter key. |
+| event | [SubmitEvent](arkts-arkui-submitevent-i.md) | Yes | Submit event. It can be used to control whether to dismiss the keyboard. |
 

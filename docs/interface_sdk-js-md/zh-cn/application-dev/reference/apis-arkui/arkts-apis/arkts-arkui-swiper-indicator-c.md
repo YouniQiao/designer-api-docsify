@@ -113,7 +113,7 @@ static dot(): DotIndicator
 
 | 类型 | 说明 |
 | --- | --- |
-| [DotIndicator](../arkts-components/arkts-arkui-dotindicator-c.md) | 圆点指示器对象，用于设置Swiper组件的圆点导航样式。 |
+| [DotIndicator](arkts-arkui-swiper-dotindicator-c.md) | 圆点指示器对象，用于设置Swiper组件的圆点导航样式。 |
 
 ## end
 

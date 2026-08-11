@@ -12,7 +12,7 @@ import { request } from 'kits/@kit.BasicServicesKit';
 function getTask(context: BaseContext, id: string, token?: string): Promise<Task>
 ```
 
-根据任务id查询任务。使用Promise异步回调。
+Obtains task information based on the task ID. This API uses a promise to return the result.
 
 **Since:** 11
 
@@ -26,21 +26,21 @@ function getTask(context: BaseContext, id: string, token?: string): Promise<Task
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| context | [BaseContext](../../apis-ability-kit/arkts-apis/arkts-ability-basecontext-c.md) | Yes | 基于应用程序的上下文。 |
-| id | string | Yes | 任务id。 |
-| token | string | No | 任务查询token。默认值为空。 |
+| context | [BaseContext](../../apis-ability-kit/arkts-apis/arkts-ability-basecontext-c.md) | Yes | Application-based context. |
+| id | string | Yes | Task ID. |
+| token | string | No | Token for task query. The default value is empty. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;Task&gt; | Promise对象。返回任务配置信息的Promise对象。 |
+| Promise&lt;Task&gt; | Promise used to return the created task. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. Possible causes: &lt;br&gt; 1. Missing mandatory parameters. &lt;br&gt; 2. Incorrect parameter type. &lt;br&gt; 3. Parameter verification failed. |
-| 21900006 | Task removed or not found. |
-| 13400003 | Task service ability error. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: &lt;br&gt; 1. Missing mandatory parameters. &lt;br&gt; 2. Incorrect parameter type. &lt;br&gt; 3. Parameter verification failed. |
+| [21900006](../../apis-basic-services-kit/errorcode-request.md#21900006-task-not-found) | Task removed or not found. |
+| [13400003](../../apis-basic-services-kit/errorcode-request.md#13400003-service-error) | Task service ability error. |
 

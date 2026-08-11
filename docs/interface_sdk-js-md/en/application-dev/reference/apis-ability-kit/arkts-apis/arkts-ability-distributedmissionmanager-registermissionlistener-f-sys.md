@@ -12,7 +12,7 @@ import { distributedMissionManager } from 'kits/@kit.AbilityKit';
 function registerMissionListener(parameter: MissionDeviceInfo, options: MissionCallback, callback: AsyncCallback<void>): void
 ```
 
-注册任务状态监听。使用callback异步回调。
+Registers a mission status listener. This API uses an asynchronous callback to return the result.
 
 **Since:** 9
 
@@ -32,16 +32,16 @@ function registerMissionListener(parameter: MissionDeviceInfo, options: MissionC
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| parameter | [MissionDeviceInfo](arkts-ability-missiondeviceinfo-i-sys.md) | Yes | 注册监听时的设备信息。 |
-| options | [MissionCallback](arkts-ability-missioncallbacks-missioncallback-i-sys.md) | Yes | 注册的回调方法。 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | 回调函数，注册监听成功，err为undefined，否则为错误对象。 |
+| parameter | [MissionDeviceInfo](arkts-ability-missiondeviceinfo-i-sys.md) | Yes | Information about the device to listen for. |
+| options | [MissionCallback](arkts-ability-missioncallbacks-missioncallback-i-sys.md) | Yes | Callback to register. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. If the listener is registered, **err** is **undefined**; otherwise, **err** is an error object. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; 3. Parameter verification failed. |
-| 201 | Permission denied. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; 3. Parameter verification failed. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
 
 ## Examples
 
@@ -89,7 +89,7 @@ try {
 function registerMissionListener(parameter: MissionDeviceInfo, options: MissionCallback): Promise<void>
 ```
 
-注册任务状态监听。使用promise异步回调。
+Registers a mission status listener. This API uses a promise to return the result.
 
 **Since:** 9
 
@@ -109,21 +109,21 @@ function registerMissionListener(parameter: MissionDeviceInfo, options: MissionC
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| parameter | [MissionDeviceInfo](arkts-ability-missiondeviceinfo-i-sys.md) | Yes | 注册监听时的设备信息。 |
-| options | [MissionCallback](arkts-ability-missioncallbacks-missioncallback-i-sys.md) | Yes | 注册的回调方法。 |
+| parameter | [MissionDeviceInfo](arkts-ability-missiondeviceinfo-i-sys.md) | Yes | Information about the device to listen for. |
+| options | [MissionCallback](arkts-ability-missioncallbacks-missioncallback-i-sys.md) | Yes | Callback to register. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | 无返回结果的Promise对象。 |
+| Promise&lt;void&gt; | Promise that returns no value. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; 3. Parameter verification failed. |
-| 201 | Permission denied. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; 3. Parameter verification failed. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
 
 ## Examples
 

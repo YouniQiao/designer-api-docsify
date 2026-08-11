@@ -1,6 +1,6 @@
 # SplitConfig
 
-管理文本分块的配置信息。
+Manages text chunk process configurations.
 
 **Since:** 15
 
@@ -22,7 +22,7 @@ import { intelligence } from 'kits/@kit.ArkData';
 overlapRatio: double
 ```
 
-相邻分块之间的重叠比率。范围为[0,1]，0表示重叠比率最低，1表示重叠比率最高。较高的重叠比率适用于需要保持语义连贯性的长文本场景，较低的比率适用于需要减少重复计算的短文本场景。
+The ratio of overlap between adjacent chunks.
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：double
 
@@ -40,7 +40,7 @@ overlapRatio: double
 size: int
 ```
 
-分块的最大大小，取值为非负整数。较小的size值适用于需要精细化分块或处理内存受限场景，较大的size值适用于处理大数据量时减少分块数量。
+The maximun size of chunks.
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 

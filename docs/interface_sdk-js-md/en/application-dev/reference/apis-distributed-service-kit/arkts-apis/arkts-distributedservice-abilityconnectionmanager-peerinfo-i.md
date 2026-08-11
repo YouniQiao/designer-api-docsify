@@ -1,6 +1,6 @@
 # PeerInfo
 
-应用协同信息。
+Defines the application collaboration information.
 
 **Since:** 18
 
@@ -22,7 +22,7 @@ import { abilityConnectionManager } from 'kits/@kit.DistributedServiceKit';
 abilityName: string
 ```
 
-对端应用的组件名。
+Ability name of the peer application.
 
 **Type:** string
 
@@ -42,7 +42,7 @@ abilityName: string
 bundleName: string
 ```
 
-对端应用的包名。
+Bundle name of the application.
 
 **Type:** string
 
@@ -62,7 +62,7 @@ bundleName: string
 deviceId: string
 ```
 
-对端设备ID。
+Peer device ID.
 
 **Type:** string
 
@@ -82,7 +82,7 @@ deviceId: string
 moduleName: string
 ```
 
-对端应用的模块名。
+Module name of the peer application.
 
 **Type:** string
 
@@ -102,7 +102,7 @@ moduleName: string
 serviceName?: string
 ```
 
-应用设置的服务名称。
+Service name for the application.
 
 **Type:** string
 

@@ -4,7 +4,7 @@
 export type UIServiceExtensionConnectCallback = _UIServiceExtensionConnectCallback.default
 ```
 
-在连接指定的UIServiceExtensionAbility服务时作为入参，用于提供UIServiceExtensionAbility连接回调数据能力。
+Defines the connection callback. It is used as an input parameter for connection to a UIServiceExtensionAbility, to  provide the callback for the connection.
 
 **Since:** 14
 

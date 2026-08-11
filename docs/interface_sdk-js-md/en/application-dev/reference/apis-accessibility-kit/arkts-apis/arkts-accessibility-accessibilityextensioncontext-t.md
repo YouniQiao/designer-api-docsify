@@ -4,7 +4,8 @@
 export type AccessibilityExtensionContext = _AccessibilityExtensionContext.default
 ```
 
-表示辅助功能扩展的上下文环境，请参考[AccessibilityExtensionContext](arkts-accessibility-accessibilityextensioncontext-t.md)。
+Defines the context of the accessibility extension. For details, see   
+[AccessibilityExtensionContext](arkts-accessibility-accessibilityextensioncontext-t.md).
 
 **Since:** 10
 

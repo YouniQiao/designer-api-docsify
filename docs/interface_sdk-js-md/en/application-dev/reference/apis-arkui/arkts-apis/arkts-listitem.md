@@ -6,23 +6,23 @@
 
 | Name | Description |
 | --- | --- |
-| [ExtendableListItem](arkts-arkui-listitem-extendablelistitem-c.md) | 可扩展的ListItem组件。 |
-| [ListItemSwipeActionManager](arkts-arkui-listitem-listitemswipeactionmanager-c.md) | ListItem划出菜单的管理器。 |
+| [ExtendableListItem](arkts-arkui-listitem-extendablelistitem-c.md) | Defines the Extendable ListItem. |
+| [ListItemSwipeActionManager](arkts-arkui-listitem-listitemswipeactionmanager-c.md) | The swipe action manager. |
 
 ### Interfaces
 
 | Name | Description |
 | --- | --- |
-| [ListItemOptions](arkts-arkui-listitem-listitemoptions-i.md) | ListItem组件参数。 |
-| [SwipeActionItem](arkts-arkui-listitem-swipeactionitem-i.md) | SwipeActionOptions的滑动操作项。 |
-| [SwipeActionOptions](arkts-arkui-listitem-swipeactionoptions-i.md) | swipeAction属性的滑动操作选项。 |
+| [ListItemOptions](arkts-arkui-listitem-listitemoptions-i.md) | Defines the list item options. |
+| [SwipeActionItem](arkts-arkui-listitem-swipeactionitem-i.md) | Defines the swipe action item for SwipeActionOptions. |
+| [SwipeActionOptions](arkts-arkui-listitem-swipeactionoptions-i.md) | Defines the SwipeActionOption of swipeAction attribute method. |
 
 ### Enums
 
 | Name | Description |
 | --- | --- |
-| [ListItemStyle](arkts-arkui-listitem-listitemstyle-e.md) | List组件卡片样式枚举。 |
-| [ListItemSwipeActionDirection](arkts-arkui-listitem-listitemswipeactiondirection-e.md) | ListItem划出菜单的展开方向。 |
-| [SwipeActionState](arkts-arkui-listitem-swipeactionstate-e.md) | 列表项滑动状态枚举。 |
-| [SwipeEdgeEffect](arkts-arkui-listitem-swipeedgeeffect-e.md) | 滑动效果枚举。 |
+| [ListItemStyle](arkts-arkui-listitem-listitemstyle-e.md) | Defines the list item style. |
+| [ListItemSwipeActionDirection](arkts-arkui-listitem-listitemswipeactiondirection-e.md) | Declare enum ListItemSwipeActionDirection. |
+| [SwipeActionState](arkts-arkui-listitem-swipeactionstate-e.md) | Declare enum SwipeActionState. |
+| [SwipeEdgeEffect](arkts-arkui-listitem-swipeedgeeffect-e.md) | Sliding effect |
 

@@ -12,7 +12,7 @@ import { dataShare } from 'kits/@kit.ArkData';
 function createDataShareHelper(context: Context, uri: string, callback: AsyncCallback<DataShareHelper>): void
 ```
 
-创建DataShareHelper实例。使用callback异步回调。
+Creates a **DataShareHelper** instance. This API uses an asynchronous callback to return the result.
 
 **Since:** 9
 
@@ -28,17 +28,17 @@ function createDataShareHelper(context: Context, uri: string, callback: AsyncCal
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| context | [Context](../../apis-ability-kit/arkts-apis/arkts-ability-context-c.md) | Yes | 应用的上下文环境。 |
-| uri | string | Yes | 要连接的服务端应用的路径。 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;DataShareHelper&gt; | Yes | 回调函数。当创建DataShareHelper实例成功，err为undefined，data为获取到的 DataShareHelper实例；否则为错误对象。 |
+| context | [Context](../../apis-ability-kit/arkts-apis/arkts-ability-context-c.md) | Yes | Context of the application. |
+| uri | string | Yes | URI of the server application to connect. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;DataShareHelper&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined** and **data** is the **DataShareHelper** instance created. Otherwise, **err** is an error object. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error.Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameters types. |
-| 15700010 | The DataShareHelper fails to be initialized. |
-| 202 | Permission verification failed. A non-system application calls a system API.<br>**Applicable version:** 19 and later |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error.Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameters types. |
+| [15700010](../errorcode-datashare.md#15700010-failed-to-create-a-datasharehelper) | The DataShareHelper fails to be initialized. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API.<br>**Applicable version:** 19 and later |
 
 ## Examples
 
@@ -54,7 +54,7 @@ export default class EntryAbility extends UIAbility {
     try {
       dataShare.createDataShareHelper(context, uri, (err:BusinessError, data:dataShare.DataShareHelper) => {
         if (err !== undefined) {
-          console.error(`Failed to create DataShareHelper. Code: ${err.code}, message: ${err.message}`);
+          console.error(`createDataShareHelper error: code: ${err.code}, message: ${err.message} `);
           return;
         }
         console.info("createDataShareHelper succeed, data : " + data);
@@ -63,10 +63,10 @@ export default class EntryAbility extends UIAbility {
     } catch (err) {
       let code = (err as BusinessError).code;
       let message = (err as BusinessError).message;
-      console.error(`Failed to create DataShareHelper. Code: ${code}, message: ${message}`);
+      console.error(`createDataShareHelper error: code: ${code}, message: ${message} `);
     };
-  }
-}
+  };
+};
 ```
 
 
@@ -81,7 +81,7 @@ function createDataShareHelper(
   ): void
 ```
 
-创建DataShareHelper实例，通过DataShareHelperOptions指定是否通过代理访问。使用callback异步回调。
+Creates a **DataShareHelper** instance. **DataShareHelperOptions** specifies whether **DataShareHelper** is in proxy mode. This API uses an asynchronous callback to return the result.
 
 **Since:** 10
 
@@ -106,9 +106,9 @@ function createDataShareHelper(
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error.Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameters types. |
-| 15700010 | The DataShareHelper fails to be initialized. |
-| 202 | Permission verification failed. A non-system application calls a system API.<br>**Applicable version:** 19 and later |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error.Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameters types. |
+| [15700010](../errorcode-datashare.md#15700010-failed-to-create-a-datasharehelper) | The DataShareHelper fails to be initialized. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API.<br>**Applicable version:** 19 and later |
 
 ## Examples
 
@@ -124,7 +124,7 @@ export default class EntryAbility extends UIAbility {
     try {
       dataShare.createDataShareHelper(context, uri, {isProxy : true}, (err:BusinessError, data:dataShare.DataShareHelper) => {
         if (err !== undefined) {
-          console.error(`Failed to create DataShareHelper. Code: ${err.code}, message: ${err.message}`);
+          console.error(`createDataShareHelper error: code: ${err.code}, message: ${err.message} `);
           return;
         }
         console.info("createDataShareHelper succeed, data : " + data);
@@ -133,10 +133,10 @@ export default class EntryAbility extends UIAbility {
     } catch (err) {
       let code = (err as BusinessError).code;
       let message = (err as BusinessError).message;
-      console.error(`Failed to create DataShareHelper. Code: ${code}, message: ${message}`);
+      console.error(`createDataShareHelper error: code: ${code}, message: ${message} `);
     };
-  }
-}
+  };
+};
 ```
 
 
@@ -150,7 +150,7 @@ function createDataShareHelper(
   ): Promise<DataShareHelper>
 ```
 
-创建DataShareHelper实例，通过DataShareHelperOptions指定是否通过代理访问。使用Promise异步回调。
+Creates a **DataShareHelper** instance. **DataShareHelperOptions** specifies whether **DataShareHelper** is in proxy mode. This API uses a promise to return the result.
 
 **Since:** 9
 
@@ -166,23 +166,23 @@ function createDataShareHelper(
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| context | [Context](../../apis-ability-kit/arkts-apis/arkts-ability-context-c.md) | Yes | 应用的上下文环境。 |
-| uri | string | Yes | 要连接的服务端应用的路径。 |
-| options | [DataShareHelperOptions](arkts-arkdata-datashare-datasharehelperoptions-i.md) | No | 可选配置。指定[DataShareHelper](arkts-arkdata-datashare-datasharehelperoptions-i.md)是否在代理模式 下，指定非静默访问时的等待拉起时间。如果不设置，则表示[DataShareHelper](arkts-arkdata-datashare-datasharehelperoptions-i.md)不在代理模式下，且非静默访问时的等待拉起时间 为2秒。如果uri以datashareproxy为开头，则必须设置options的isProxy参数，否则DataShareHelper创建失败返回错误。<br>**Since:** 10 |
+| context | [Context](../../apis-ability-kit/arkts-apis/arkts-ability-context-c.md) | Yes | Context of the application. |
+| uri | string | Yes | URI of the server application to connect. |
+| options | [DataShareHelperOptions](arkts-arkdata-datashare-datasharehelperoptions-i.md) | No | Optional configuration of the **DataShareHelper** instance. It specifies whether [DataShareHelper](arkts-arkdata-datashare-datasharehelperoptions-i.md) is in proxy mode and the waiting time for starting the data provider process in non-silent access mode.If this parameter is not set, [DataShareHelper](arkts-arkdata-datashare-datasharehelperoptions-i.md) is not in proxy mode and the waiting time for starting the data provider process in non-silent access mode is 2 seconds.If the URI starts with **datashareproxy**, the **isProxy** parameter in **options** must be set. Otherwise, **DataShareHelper** will fail to be created and an error will be returned.<br>**Since:** 10 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;DataShareHelper&gt; | Promise对象。返回DataShareHelper实例。 |
+| Promise&lt;DataShareHelper&gt; | Promise used to return the **DataShareHelper** instance created. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error.Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameters types. |
-| 15700010 | The DataShareHelper fails to be initialized. |
-| 202 | Permission verification failed. A non-system application calls a system API.<br>**Applicable version:** 19 and later |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error.Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameters types. |
+| [15700010](../errorcode-datashare.md#15700010-failed-to-create-a-datasharehelper) | The DataShareHelper fails to be initialized. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API.<br>**Applicable version:** 19 and later |
 
 ## Examples
 
@@ -200,14 +200,14 @@ export default class EntryAbility extends UIAbility {
         console.info("createDataShareHelper succeed, data : " + data);
         dataShareHelper = data;
       }).catch((err: BusinessError) => {
-        console.error(`Failed to create DataShareHelper. Code: ${err.code}, message: ${err.message}`);
+        console.error(`createDataShareHelper error: code: ${err.code}, message: ${err.message} `);
       });
     } catch (err) {
       let code = (err as BusinessError).code;
       let message = (err as BusinessError).message;
-      console.error(`Failed to create DataShareHelper. Code: ${code}, message: ${message}`);
+      console.error(`createDataShareHelper error: code: ${code}, message: ${message} `);
     };
-  }
-}
+  };
+};
 ```
 

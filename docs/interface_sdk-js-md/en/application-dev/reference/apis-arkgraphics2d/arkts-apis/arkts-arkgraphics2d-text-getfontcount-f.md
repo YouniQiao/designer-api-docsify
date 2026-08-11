@@ -12,9 +12,9 @@ import { text } from 'kits/@kit.ArkGraphics2D';
 function getFontCount(path: string | Resource) : int
 ```
 
-根据字体文件路径获取包含的字体文件数。
+Obtains the number of font files contained in a font file based on the font file path.
 
-如果字体文件未找到、字体文件路径无效、字体文件无权限或者文件非字体格式，返回0。
+Returns **0** if the font file is not found, the font file path is invalid, the font file does not have the required permission, or the file is not in the font format.
 
 **Since:** 23
 
@@ -32,13 +32,13 @@ function getFontCount(path: string | Resource) : int
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| path | string \| Resource | Yes | 需要查询的字体文件的路径，应为 "file:// + 字体文件绝对路径" 或 \\$rawfile('工程中resources/rawfile目录下的文件名称')。 |
+| path | string \| Resource | Yes | Path of the font file to query, which must be "file:// + absolute path of the font file" or \\$rawfile('file name in the resources/rawfile directory of the project'). |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| ArkTS-Dyn: number  <br>ArkTS-Sta：int | 包含字体数量。 |
+| ArkTS-Dyn: number  <br>ArkTS-Sta：int | Number of fonts. |
 
 ## Examples
 

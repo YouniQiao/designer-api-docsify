@@ -1,0 +1,134 @@
+# UnifiedDataProperties
+
+Defines the properties of the data records in the unified data object, including the timestamp, tag, pasting range,and additional data.
+
+**Since:** 12
+
+<!--Device-unifiedDataChannel-class UnifiedDataProperties--><!--Device-unifiedDataChannel-class UnifiedDataProperties-End-->
+
+**System capability:** SystemCapability.DistributedDataManager.UDMF.Core
+
+## Modules to Import
+
+```TypeScript
+import { unifiedDataChannel } from 'kits/@kit.ArkData';
+```
+
+## getDelayData
+
+```TypeScript
+getDelayData?: GetDelayData
+```
+
+Callback for obtaining the deferred data. Currently, it can be used only in the pasteboard application of the same device. The default value is **undefined**.
+
+**Since:** 12
+
+**Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-UnifiedDataProperties-getDelayData?: GetDelayData--><!--Device-UnifiedDataProperties-getDelayData?: GetDelayData-End-->
+
+**System capability:** SystemCapability.DistributedDataManager.UDMF.Core
+
+## extras
+
+```TypeScript
+extras?: Record<string, object>
+```
+
+Object of the dictionary type used to set other properties. The default value is an empty dictionary object.
+
+**Type:** [Record](../../apis-default/arkts-apis/arkts-record-t.md)&lt;string, object&gt;
+
+**Since:** 12
+
+**Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-UnifiedDataProperties-extras?: Record<string, object>--><!--Device-UnifiedDataProperties-extras?: Record<string, object>-End-->
+
+**System capability:** SystemCapability.DistributedDataManager.UDMF.Core
+
+## shareOptions
+
+```TypeScript
+shareOptions?: ShareOptions
+```
+
+Range, in which [UnifiedData](arkts-arkdata-unifieddatachannel-unifieddataproperties-c.md) can be used. The default value is   
+**CROSS_APP**.
+
+**Type:** [ShareOptions](arkts-arkdata-unifieddatachannel-shareoptions-e.md)
+
+**Since:** 12
+
+**Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-UnifiedDataProperties-shareOptions?: ShareOptions--><!--Device-UnifiedDataProperties-shareOptions?: ShareOptions-End-->
+
+**System capability:** SystemCapability.DistributedDataManager.UDMF.Core
+
+## tag
+
+```TypeScript
+tag?: string
+```
+
+Customized tag. The default value is an empty string.
+
+**Type:** string
+
+**Since:** 12
+
+**Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-UnifiedDataProperties-tag?: string--><!--Device-UnifiedDataProperties-tag?: string-End-->
+
+**System capability:** SystemCapability.DistributedDataManager.UDMF.Core
+
+## timestamp
+
+```TypeScript
+readonly timestamp?: Date
+```
+
+Timestamp when [UnifiedData](arkts-arkdata-unifieddatachannel-unifieddataproperties-c.md) is generated. The default value is January 1, 1970 (UTC).
+
+**Type:** Date
+
+**Since:** 12
+
+**Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-UnifiedDataProperties-readonly timestamp?: Date--><!--Device-UnifiedDataProperties-readonly timestamp?: Date-End-->
+
+**System capability:** SystemCapability.DistributedDataManager.UDMF.Core
+
+## uriAuthorizationPolicies
+
+```TypeScript
+uriAuthorizationPolicies?: Array<UriPermission>
+```
+
+Defines URI authorization policies for drag intention.
+
+**Type:** Array&lt;UriPermission&gt;
+
+**Since:** 26.0.0
+
+**Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API:** This API can be used in atomic services since API version 26.0.0.
+
+<!--Device-UnifiedDataProperties-uriAuthorizationPolicies?: Array<UriPermission>--><!--Device-UnifiedDataProperties-uriAuthorizationPolicies?: Array<UriPermission>-End-->
+
+**System capability:** SystemCapability.DistributedDataManager.UDMF.Core

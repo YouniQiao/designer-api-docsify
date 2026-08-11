@@ -1,11 +1,5 @@
 # @ohos.app.ability.UIServiceExtensionAbility
 
-## 导入模块
-
-```TypeScript
-import { UIServiceExtensionAbility } from 'kits/@kit.AbilityKit';
-```
-
 ## 汇总
 
 <!--Del-->

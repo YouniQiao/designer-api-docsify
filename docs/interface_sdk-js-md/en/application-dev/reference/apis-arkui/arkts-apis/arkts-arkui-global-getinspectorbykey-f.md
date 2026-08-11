@@ -6,7 +6,7 @@
 export declare function getInspectorByKey(id: string): string
 ```
 
-根据id获取组件的所有属性。
+Obtains all attributes of the component with the specified ID.
 
 **Since:** 11
 
@@ -22,7 +22,7 @@ export declare function getInspectorByKey(id: string): string
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| id | string | Yes | ID为声明组件时通过id或者key方法传入的参数。 |
+| id | string | Yes | ID of the component whose attributes are to be obtained. |
 
 **Return value:**
 

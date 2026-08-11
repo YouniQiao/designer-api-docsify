@@ -1,11 +1,5 @@
 # @ohos.app.ability.AbilityStage
 
-## 导入模块
-
-```TypeScript
-import { AbilityStage } from 'kits/@kit.AbilityKit';
-```
-
 ## 汇总
 
 ### 类

@@ -1,25 +1,32 @@
 # SaveButton
 
-安全控件的保存控件系统接口，适用于应用需要临时获取媒体库访问权限以保存图片或视频的场景，例如图片保存到相册、媒体内容导出等。
-应用集成保存控件后，用户首次使用该控件时，保存控件会展示弹窗供用户确认。用户点击允许后，应用获取访问媒体库接口的临时授权，相关接口请参见
-[Interface (PhotoAccessHelper)]{@link @ohos.file.photoAccessHelper:photoAccessHelper.PhotoAccessHelper}；用户拒绝或关闭弹窗时，本次
-* 不授权，应用不会获得媒体库接口访问权限。后续使用无需弹窗授权。
-在API version 19及之前的版本中，授权持续时间为10秒；在API version 20及之后的版本中，授权持续时间为1分钟。
-开发者应在授权有效期内调用媒体库接口获取文件句柄，并完成创建媒体资源等需要临时授权的操作。授权到期后，已通过授权获取的文件句柄仍可继续进行读写操作，不受授权时间限制。
-<br>**说明**</br>
-<ul><li>
+**SaveButton** is a system API for the save security control. It applies to scenarios where apps need temporary media
+library access permissions to save images or videos, such as saving images to albums and exporting media content.
+After the **SaveButton** component is integrated into an app, a confirmation dialog will appear when the user taps
+the component for the first time. If the user allows access, the app obtains temporary authorization to call media
+library APIs. For related APIs, see
+[Interface (PhotoAccessHelper)]{@link @ohos.file.photoAccessHelper:photoAccessHelper.PhotoAccessHelper}. If the user
+denies access or dismisses the dialog, authorization will not be granted for this operation. No more dialog box is
+displayed for authorization.
+<br>
+For API version 19 and earlier, the authorization duration is 10 seconds. For API version 20 and later, the
+authorization duration is 1 minute.
+You need to call media library APIs to obtain file handles and complete temporary-authorized operations such as
+creating media resources within the authorization period. After authorization expires, existing file handles acquired
+during the valid period remain available for read and write operations.
+<br>**Description**</br>
 
-## 核心枚举类型</li>
+## Key Enums
 
-&lt;li&gt;&lt;/li&gt;&lt;li&gt;**[SaveIconStyle]{@link SaveIconStyle}：** 保存控件图标风格枚举，用于指定控件展示的图标风格。&lt;/li&gt;&lt;li&gt;**[SaveDescription]{@link SaveDescription}：** 保存控件文本描述枚举，用于指定控件展示的文本描述。&lt;/li&gt;&lt;li&gt;**[SaveButtonOnClickResult]{@link SaveButtonOnClickResult}：** 保存控件点击结果枚举，用于表示点击后授权是否成功。&lt;/li&gt;&lt;li&gt;&lt;/li&gt;&lt;li&gt;
+&lt;li&gt;[SaveIconStyle]{@link SaveIconStyle}: Enumeration of icon styles for the save button. Specifies the icon style displayed.&lt;/li&gt;&lt;li&gt;[SaveDescription]{@link SaveDescription}: Enumeration of text descriptions for the save button. Specifies the text description displayed.&lt;/li&gt;&lt;li&gt;[SaveButtonOnClickResult]{@link SaveButtonOnClickResult}: Enumeration of click results for the save button.Indicates whether authorization succeeds after a click.&lt;/li&gt;
 
-## 核心接口类型</li>
+## Key APIs
 
-&lt;li&gt;&lt;/li&gt;&lt;li&gt;**[SaveButtonOptions]{@link SaveButtonOptions}：** 保存控件配置对象，用于指定图标、文字和按钮类型等元素属性。&lt;/li&gt;&lt;li&gt;**[SaveButtonCallback]{@link SaveButtonCallback}：** 保存控件点击回调类型，用于返回点击事件、授权结果和错误信息。&lt;/li&gt;&lt;li&gt;&lt;/li&gt;&lt;li&gt;
+&lt;li&gt;[SaveButtonOptions]{@link SaveButtonOptions}: Configuration object for the save button. Defines properties including icon, text and button type.&lt;/li&gt;&lt;li&gt;[SaveButtonCallback]{@link SaveButtonCallback}: Callback for save button clicks. Returns click events,authorization results and error messages.&lt;/li&gt;
 
-## 子组件</li>
+## Child Components
 
-&lt;li&gt;&lt;/li&gt;&lt;li&gt;不支持。&lt;/li&gt;&lt;/ul&gt;
+&lt;li&gt;Not supported.&lt;/li&gt;&lt;/ul&gt;
 
 ## SaveButton
 
@@ -27,7 +34,7 @@
 SaveButton()
 ```
 
-默认创建带有图标、文本、背景的保存控件。用户首次使用保存控件时会展示弹窗，在点击允许后自动授权，应用会获取访问媒体库接口的临时授权。后续使用无需弹窗授权。&lt;br&gt;在API version 19及之前的版本中，授权持续时间为10秒。授权到期后，已通过授权获取的文件句柄仍可继续进行读写操作，不受授权时间限制。&lt;br&gt;在API version 20及之后的版本中，授权持续时间为1分钟。授权到期后，已通过授权获取的文件句柄仍可继续进行读写操作，不受授权时间限制。&lt;br&gt;**说明：**&lt;/br&gt;&lt;ul&gt;&lt;li&gt;为避免控件样式不合法导致授权失败，请开发者先了解安全控件样式的[约束与限制](docroot://security/AccessToken/security-component-overview.md#约束与限制)。&lt;/li&gt;&lt;/ul&gt;
+Creates a **SaveButton** component with an icon, text, and background. When the user taps the save button for the first time, a dialog will pop up. Once the user grants permission, the app obtains temporary authorization to access media library APIs. No dialog box will appear for subsequent uses.&lt;br&gt;In API version 19 or earlier, authorization remains valid for 10 seconds. After authorization expires, existing file handles acquired during the valid period remain available for read and write operations.&lt;br&gt;In API version 20 or later, authorization remains valid for 1 minute. After authorization expires, existing file handles acquired during the valid period remain available for read and write operations.&lt;br&gt;**Description**&lt;/br&gt;&lt;ul&gt;&lt;li&gt;You may want to learn the [restrictions on security component styles](docroot://security/AccessToken/security-component-overview.md#constraints) to avoid authorization failures caused by incompliant styles.&lt;/li&gt;&lt;/ul&gt;
 
 **Since:** 10
 
@@ -47,7 +54,8 @@ SaveButton()
 SaveButton(options: SaveButtonOptions)
 ```
 
-创建包含指定图标、文本或按钮类型的保存控件。用户首次使用保存控件时会展示弹窗，在点击允许后自动授权，应用会获取访问媒体库接口的临时授权。后续使用无需弹窗授权。在API version 19及之前的版本中，授权持续时间为10秒。授权到期后，已通过授权获取的文件句柄仍可继续进行读写操作，不受授权时间限制。在API version 20及之后的版本中，授权持续时间为1分钟。授权到期后，已通过授权获取的文件句柄仍可继续进行读写操作，不受授权时间限制。&lt;br&gt;**说明：**&lt;/br&gt;&lt;ul&gt;&lt;li&gt;为避免控件样式不合法导致授权失败，请开发者先了解安全控件样式的[约束与限制](docroot://security/AccessToken/security-component-overview.md#约束与限制)。&lt;/li&gt;&lt;/ul&gt;
+Creates a save button with the specified icon, text and button type. When the user taps the save button for the first time, a dialog will pop up. Once the user grants permission, the app obtains temporary authorization to access media library APIs. No dialog box will appear for subsequent uses.&lt;br&gt;In API version 19 or earlier, authorization remains valid for 10 seconds. After authorization expires, existing file handles acquired during the valid period remain available for read and write operations.&lt;br&gt;In API version 20 or later, authorization remains valid for 1 minute. After authorization expires, existing file handles acquired during the valid period remain available for read and write operations.&lt;br&gt;**Description**&lt;/br&gt;&lt;ul&gt;&lt;li&gt;You may want to learn the  
+[restrictions on security component styles](docroot://security/AccessToken/security-component-overview.md#constraints)to avoid authorization failures caused by incompliant styles.&lt;/li&gt;&lt;/ul&gt;
 
 **Since:** 10
 
@@ -65,7 +73,7 @@ SaveButton(options: SaveButtonOptions)
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| options | [SaveButtonOptions](arkts-arkui-savebuttonoptions-i.md) | Yes | 保存控件的配置选项，用于指定图标、文本和按钮类型等元素属性。 <br>建议至少显式设置 icon 或 text 中的一项，以确保用户能明确理解控件用途；若两者都不传，控件显示为默认样式。 |
+| options | [SaveButtonOptions](arkts-arkui-savebuttonoptions-i.md) | Yes | Configuration options for the save button, used to set properties such as icon, text and button type. <br>You are advised to explicitly set at least one of **icon** and **text** to help users identify the button. If both are not specified, the component uses the default style. |
 
 ## Summary
 

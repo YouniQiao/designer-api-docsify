@@ -12,12 +12,6 @@
 
 **系统接口：** 此接口为系统接口。
 
-## 导入模块
-
-```TypeScript
-import { Context, Permissions, PermissionRequestResult } from 'kits/@kit.AbilityKit';
-```
-
 ## cliPermissionStatus
 
 ```TypeScript
@@ -48,7 +42,7 @@ requiredCliPermission: Permissions
 
 调用CLI所需的CLI权限。
 
-**类型：** [Permissions](arkts-ability-permissions-t.md)
+**类型：** Permissions
 
 **起始版本：** 26.0.0
 
@@ -70,7 +64,7 @@ usedPermissions: Array<Permissions>
 
 由requiredCliPermission映射出的运行时权限列表。
 
-**类型：** Array&lt;[Permissions](arkts-ability-permissions-t.md)&gt;
+**类型：** Array&lt;Permissions&gt;
 
 **起始版本：** 26.0.0
 

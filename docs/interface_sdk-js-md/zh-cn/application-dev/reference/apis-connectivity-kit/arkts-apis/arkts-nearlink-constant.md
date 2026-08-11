@@ -12,12 +12,6 @@ nearlinkConstant的定义。
 
 **系统能力：** SystemCapability.Communication.NearLink.Base
 
-## 导入模块
-
-```TypeScript
-import { nearlinkConstant } from 'kits/@kit.ConnectivityKit';
-```
-
 ## 汇总
 
 ### 枚举

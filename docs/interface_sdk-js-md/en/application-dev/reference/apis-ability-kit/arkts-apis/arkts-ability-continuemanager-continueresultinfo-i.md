@@ -1,6 +1,6 @@
 # ContinueResultInfo
 
-注册或注销回调函数返回的快速拉起的结果。
+Describes the quick start result returned by the callback.
 
 **Since:** 18
 
@@ -22,9 +22,9 @@ import { continueManager } from 'kits/@kit.AbilityKit';
 resultInfo?: string
 ```
 
-操作结果的说明。
+Description of the operation result.
 
-此接口仅可在Stage模型下使用。
+This API can be used only in the stage model.
 
 **Type:** string
 
@@ -44,7 +44,7 @@ resultInfo?: string
 resultState: ContinueStateCode
 ```
 
-操作结果状态码。
+Status code of the operation result.
 
 **Type:** [ContinueStateCode](arkts-ability-continuemanager-continuestatecode-e.md)
 

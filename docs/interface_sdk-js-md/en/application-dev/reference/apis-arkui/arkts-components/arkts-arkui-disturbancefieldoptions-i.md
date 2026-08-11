@@ -1,6 +1,6 @@
 # DisturbanceFieldOptions
 
-设置粒子扰动场参数。
+Defines particle disturbance Field params.
 
 **Since:** 12
 
@@ -16,9 +16,9 @@
 feather?: number
 ```
 
-羽化值，表示场从中心点到场边缘的衰减程度，取值范围0到100的整数，如果0则表示场是一个刚体，所有范围内的粒子都被排斥在外。羽化值越大场的缓和程度越大，场范围内出现越多靠近中心点的粒子。
+Feather value, which represents the degree of attenuation from the center of the field to its edges. The value is an integer ranging from 0 to 100. A value of 0 indicates that the field is rigid, and all particles within its range are repelled. The higher the feather value, the more gradual the field becomes, resulting in more particles close to the center point appearing within the field's range.
 
-默认值为0。
+Default value: **0**.
 
 **Type:** number
 
@@ -42,9 +42,9 @@ feather?: number
 noiseAmplitude?: number
 ```
 
-噪声振幅，噪声的波动的范围，振幅越大噪音之间差异越大。取值大于等于0。
+Noise amplitude, which indicates the range of noise fluctuations. The greater the amplitude, the greater the difference between the noises. The value is greater than or equal to 0.
 
-默认值1。
+Default value: **1**.
 
 **Type:** number
 
@@ -68,9 +68,9 @@ noiseAmplitude?: number
 noiseFrequency?: number
 ```
 
-噪声频率，频率越大噪声越细腻，取值大于等于0。
+Noise frequency. The higher the frequency, the finer the noise. The value is greater than or equal to 0.
 
-默认值1。
+Default value: **1**.
 
 **Type:** number
 
@@ -94,9 +94,9 @@ noiseFrequency?: number
 noiseScale?: number
 ```
 
-噪声尺度，用于控制噪声图案的整体大小，取值大于等于0。
+Noise scale, used to control the overall size of the noise pattern. The value is greater than or equal to 0.
 
-默认值1。
+Default value: **1**.
 
 **Type:** number
 
@@ -120,11 +120,11 @@ noiseScale?: number
 position?: PositionT<number>
 ```
 
-场的位置。
+Position of the field.
 
-默认值{x:0，y:0}。
+Default value: {x:0, y:0}.
 
-x、y的取值范围：(-∞, +∞)。
+Value range of **x** and **y**: (-∞, +∞).
 
 **Type:** [PositionT](../arkts-apis/arkts-arkui-positiont-t.md)&lt;number&gt;
 
@@ -148,9 +148,9 @@ x、y的取值范围：(-∞, +∞)。
 shape?: DisturbanceFieldShape
 ```
 
-场的形状。
+Shape of the field.
 
-默认为DisturbanceFieldShape.RECT。
+Default value: **DisturbanceFieldShape.RECT**
 
 **Type:** [DisturbanceFieldShape](arkts-arkui-disturbancefieldshape-e.md)
 
@@ -174,11 +174,11 @@ shape?: DisturbanceFieldShape
 size?: SizeT<number>
 ```
 
-场的大小。
+Size of the field.
 
-默认值 {width:0，height:0}。
+Default value: {width:0, height:0}.
 
-width和height的取值范围：[0, +∞)。
+Value range of **width** and **height**: [0, +∞).
 
 **Type:** [SizeT](../arkts-apis/arkts-arkui-graphics-sizet-i.md)&lt;number&gt;
 
@@ -202,9 +202,10 @@ width和height的取值范围：[0, +∞)。
 strength?: number
 ```
 
-场强，表示场从中心向外的排斥力的强度，默认值0。正数表示排斥力方向朝外，负数表示吸引力，方向朝内。
+Field strength, which indicates the intensity of the repulsive force from the center outward. The default value is   
+**0**. Positive values indicate a repulsive force directed outward, while negative values indicate an attractive force directed inward.
 
-取值范围：(-∞, +∞)。
+Value range: (-∞, +∞).
 
 **Type:** number
 

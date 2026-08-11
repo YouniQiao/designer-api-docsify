@@ -1,15 +1,14 @@
 # TextInput
 
-单行文本输入框组件，用于接收用户的单行文本输入。支持多种输入类型（如文本、密码、邮箱、数字等）、自定义样式（字体、颜色、下划线、装饰线等）、输入过滤、密码输入模式、自动填充等功能，适用于登录注册、搜索、表单填写等多种场景。能够解决文本
-输入验证、格式化、安全输入等常见需求，简化开发流程、提升用户体验并增强数据安全性。
+The **TextInput** component provides single-line text input.
 
-> **说明：**
+> **NOTE**
 >
-> 该组件仅支持单文本样式，若需实现富文本样式，建议使用[RichEditor]{@link ./rich_editor}组件。
+> This component supports plain text only. For rich text, use the [RichEditor]{@link ./rich_editor} component.
 
-## 子组件
+## Child Components
 
-无
+Not supported
 
 ## TextInput
 
@@ -17,7 +16,7 @@
 TextInput(value?: TextInputOptions)
 ```
 
-定义单行文本输入组件构造函数。
+Defines the constructor of TextInput.
 
 **Since:** 7
 
@@ -33,7 +32,7 @@ TextInput(value?: TextInputOptions)
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | [TextInputOptions](arkts-arkui-textinputoptions-i.md) | No | TextInput组件参数。默认值undefined。不设置该参数时，输入框初始化为空。 |
+| value | [TextInputOptions](arkts-arkui-textinputoptions-i.md) | No | Parameters of the **TextInput** component. |
 
 ## Summary
 

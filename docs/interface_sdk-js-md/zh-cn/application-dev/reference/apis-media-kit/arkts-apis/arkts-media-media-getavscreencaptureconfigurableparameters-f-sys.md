@@ -1,11 +1,5 @@
 # getAVScreenCaptureConfigurableParameters（系统接口）
 
-## 导入模块
-
-```TypeScript
-import { media } from 'kits/@kit.MediaKit';
-```
-
 ## getAVScreenCaptureConfigurableParameters
 
 ```TypeScript
@@ -40,8 +34,8 @@ get Configurations which user can changes from AVScreenCapture server
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 202 | Called from Non-System applications. Return by promise. |
-| 5400109 | Sessions not exist. Return by promise. |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Called from Non-System applications. Return by promise. |
+| [5400109](../errorcode-media.md#5400109-会话id不存在) | Sessions not exist. Return by promise. |
 
 ## 示例
 

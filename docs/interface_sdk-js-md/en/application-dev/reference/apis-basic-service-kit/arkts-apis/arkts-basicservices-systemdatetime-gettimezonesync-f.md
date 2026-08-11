@@ -12,7 +12,7 @@ import { systemDateTime } from 'kits/@kit.BasicServicesKit';
 function getTimezoneSync(): string
 ```
 
-获取系统时区，使用同步方式。
+Obtains the system time zone in synchronous mode.
 
 **Since:** 10
 
@@ -26,7 +26,7 @@ function getTimezoneSync(): string
 
 | Type | Description |
 | --- | --- |
-| string | 返回系统时区。具体可见[支持的系统时区](../../../reference/apis-basic-services-kit/js-apis-date-time.md#支持的系统时区)。 |
+| string | System time zone. For details, see [Supported System Time Zones](../../../reference/apis-basic-services-kit/js-apis-date-time.md#supported-system-time-zones) . |
 
 ## Examples
 

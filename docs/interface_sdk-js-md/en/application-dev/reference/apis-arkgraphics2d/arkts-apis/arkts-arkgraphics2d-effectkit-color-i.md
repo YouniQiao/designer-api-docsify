@@ -1,6 +1,6 @@
 # Color
 
-颜色类，用于保存取色的结果，适用于配合ColorPicker获取图像主色、占比最多颜色、饱和度最高颜色等场景，可帮助开发者便捷地获取和传递图像取色结果。
+A color class used to store the color picking result. It is suitable for scenarios such as obtaining the main color, the color with the largest proportion, and the color with the highest saturation from an image in conjunction with ColorPicker, helping developers conveniently obtain and pass image color picking results.
 
 **Since:** 9
 
@@ -22,7 +22,7 @@ import { effectKit } from 'kits/@kit.ArkGraphics2D';
 alpha: int
 ```
 
-透明通道分量值，取值范围为[0x0, 0xFF]。
+Alpha component value. Value range: [0x0, 0xFF].
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
@@ -44,7 +44,7 @@ alpha: int
 blue: int
 ```
 
-蓝色分量值，取值范围为[0x0, 0xFF]。
+Blue component value. Value range: [0x0, 0xFF].
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
@@ -66,7 +66,7 @@ blue: int
 green: int
 ```
 
-绿色分量值，取值范围为[0x0, 0xFF]。
+Green component value. Value range: [0x0, 0xFF].
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
@@ -88,7 +88,7 @@ green: int
 red: int
 ```
 
-红色分量值，取值范围为[0x0, 0xFF]。
+Red component value. Value range: [0x0, 0xFF].
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 

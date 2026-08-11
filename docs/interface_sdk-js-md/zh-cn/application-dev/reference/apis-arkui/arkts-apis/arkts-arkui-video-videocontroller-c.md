@@ -129,7 +129,7 @@ setCurrentTime(value: double, seekMode?: SeekMode): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | value | double | 是 | 视频播放进度位置，单位：秒。 |
-| seekMode | [SeekMode](../arkts-components/arkts-arkui-seekmode-e.md) | 否 | 跳转模式。 |
+| seekMode | [SeekMode](arkts-arkui-video-seekmode-e.md) | 否 | 跳转模式。 |
 
 ## start
 

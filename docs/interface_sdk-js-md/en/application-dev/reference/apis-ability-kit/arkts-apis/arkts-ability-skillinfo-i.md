@@ -1,10 +1,10 @@
 # SkillInfo
 
-提供Skill的相关信息。Skill是一个可安装的能力单位，可以被发现并由Agent框架调用。
+Provides information about a skill.A skill is an independent functional unit that can be called by an agent application.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
 
 <!--Device-unnamed-export interface SkillInfo--><!--Device-unnamed-export interface SkillInfo-End-->
 
@@ -16,13 +16,13 @@
 readonly abilityName: string
 ```
 
-Skill关联的ability名称。
+Indicates the ability name associated with the skill.
 
 **Type:** string
 
 **Since:** 26.0.0
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -38,13 +38,13 @@ Skill关联的ability名称。
 readonly bundleName: string
 ```
 
-Skill的应用名称。
+Indicates the bundle name of the skill.
 
 **Type:** string
 
 **Since:** 26.0.0
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -60,13 +60,13 @@ Skill的应用名称。
 readonly description?: string
 ```
 
-Skill的描述信息。
+Indicates the description of the skill.
 
 **Type:** string
 
 **Since:** 26.0.0
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -82,13 +82,13 @@ Skill的描述信息。
 readonly moduleName: string
 ```
 
-Skill的模块名称。
+Indicates the module name of the skill.
 
 **Type:** string
 
 **Since:** 26.0.0
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -104,13 +104,13 @@ Skill的模块名称。
 readonly permissions?: Array<string>
 ```
 
-Skill所需的权限。
+Indicates the permissions required by the skill.
 
 **Type:** Array&lt;string&gt;
 
 **Since:** 26.0.0
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -126,13 +126,13 @@ Skill所需的权限。
 readonly requestPermissions?: Array<string>
 ```
 
-表示应用包中requestPermissions下声明的权限。
+Indicates the permissions declared under requestPermissions in the module manifest.
 
 **Type:** Array&lt;string&gt;
 
 **Since:** 26.0.0
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -148,13 +148,13 @@ readonly requestPermissions?: Array<string>
 readonly skillName: string
 ```
 
-Skill名称。
+Indicates the name of the skill.
 
 **Type:** string
 
 **Since:** 26.0.0
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -170,13 +170,13 @@ Skill名称。
 readonly skillPath: string
 ```
 
-Skill的安装包路径。
+Indicates the skill path of the skill.
 
 **Type:** string
 
 **Since:** 26.0.0
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -192,13 +192,13 @@ Skill的安装包路径。
 readonly skillType: SkillType
 ```
 
-Skill类型。
+Indicates the type of the skill.
 
 **Type:** [SkillType](arkts-ability-skillmanager-skilltype-t.md)
 
 **Since:** 26.0.0
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -214,13 +214,13 @@ Skill类型。
 readonly srcEntries?: Array<string>
 ```
 
-Skill的srcEntries信息。
+Indicates the source entries of the skill.
 
 **Type:** Array&lt;string&gt;
 
 **Since:** 26.0.0
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -230,25 +230,69 @@ Skill的srcEntries信息。
 
 **System capability:** SystemCapability.BundleManager.BundleFramework.Core
 
+## version
+
+```TypeScript
+readonly version?: string
+```
+
+Indicates the semantic version of the skill.
+
+**Type:** string
+
+**Since:** 26.0.0
+
+**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
+
+**Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API:** This API can be used in atomic services since API version 26.0.0.
+
+<!--Device-SkillInfo-readonly version?: string--><!--Device-SkillInfo-readonly version?: string-End-->
+
+**System capability:** SystemCapability.BundleManager.BundleFramework.Core
+
 ## versionCode
 
 ```TypeScript
 readonly versionCode: long
 ```
 
-Skill的版本号。
+Indicates the version code of the skill.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：long
+**Type:** long
 
 **Since:** 26.0.0
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
 <!--Device-SkillInfo-readonly versionCode: long--><!--Device-SkillInfo-readonly versionCode: long-End-->
+
+**System capability:** SystemCapability.BundleManager.BundleFramework.Core
+
+## visibility
+
+```TypeScript
+readonly visibility?: string
+```
+
+Indicates the visibility of the skill.
+
+**Type:** string
+
+**Since:** 26.0.0
+
+**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
+
+**Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API:** This API can be used in atomic services since API version 26.0.0.
+
+<!--Device-SkillInfo-readonly visibility?: string--><!--Device-SkillInfo-readonly visibility?: string-End-->
 
 **System capability:** SystemCapability.BundleManager.BundleFramework.Core
 

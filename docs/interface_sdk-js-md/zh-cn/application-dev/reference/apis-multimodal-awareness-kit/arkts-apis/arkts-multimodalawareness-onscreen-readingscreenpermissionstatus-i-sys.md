@@ -1,6 +1,6 @@
 # ReadingScreenPermissionStatus（系统接口）
 
-Returns the status of the permission for reading screen information.
+读取屏幕信息的授权状态。
 
 **起始版本：** 23
 
@@ -12,19 +12,13 @@ Returns the status of the permission for reading screen information.
 
 **系统接口：** 此接口为系统接口。
 
-## 导入模块
-
-```TypeScript
-import { onScreen } from 'kits/@kit.MultimodalAwarenessKit';
-```
-
 ## readingCode
 
 ```TypeScript
 readingCode?: int
 ```
 
-If the screen information cannot be read, the corresponding status code will be returned.
+如果屏幕无法读取，将返回相应的状态码。
 
 **类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
@@ -46,7 +40,11 @@ If the screen information cannot be read, the corresponding status code will be 
 readingState: int
 ```
 
-Whether screen reading is allowed. **0**: no; **1**: yes.
+表示是否允许读屏。
+
+0：不允许读屏。
+
+1：允许读屏。
 
 **类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 

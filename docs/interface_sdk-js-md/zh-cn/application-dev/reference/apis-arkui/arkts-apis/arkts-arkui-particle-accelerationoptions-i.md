@@ -26,7 +26,7 @@ angle?: ParticlePropertyOptions
 
 **原子化服务API（仅ArkTS-Dyn）：** 从API version 11开始，该接口支持在原子化服务中使用。
 
-**类型：** [ParticlePropertyOptions](../arkts-components/arkts-arkui-particlepropertyoptions-i.md)
+**类型：** [ParticlePropertyOptions](arkts-arkui-particle-particlepropertyoptions-i.md)
 
 **起始版本：** 23
 
@@ -50,7 +50,7 @@ speed?: ParticlePropertyOptions
 
 **原子化服务API（仅ArkTS-Dyn）：** 从API version 11开始，该接口支持在原子化服务中使用。
 
-**类型：** [ParticlePropertyOptions](../arkts-components/arkts-arkui-particlepropertyoptions-i.md)
+**类型：** [ParticlePropertyOptions](arkts-arkui-particle-particlepropertyoptions-i.md)
 
 **起始版本：** 23
 

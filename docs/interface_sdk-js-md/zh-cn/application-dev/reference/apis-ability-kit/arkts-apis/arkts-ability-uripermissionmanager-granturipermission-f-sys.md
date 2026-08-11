@@ -1,11 +1,5 @@
 # grantUriPermission（系统接口）
 
-## 导入模块
-
-```TypeScript
-import { uriPermissionManager } from 'kits/@kit.AbilityKit';
-```
-
 ## grantUriPermission
 
 ```TypeScript
@@ -52,14 +46,14 @@ function grantUriPermission(
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types. |
-| 801 | Capability not supported.<br>**适用版本：** 19+ |
-| 16000050 | Internal error. |
-| 16000060 | A sandbox application cannot grant URI permission. |
-| 201 | Permission denied. |
-| 202 | Not System App. Interface caller is not a system app. |
-| 16000058 | Invalid URI flag. |
-| 16000059 | Invalid URI type. |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types. |
+| [801](../../errorcode-universal.md#801-该设备不支持此api) | Capability not supported.<br>**适用版本：** 19+ |
+| [16000050](../errorcode-ability.md#16000050-内部错误) | Internal error. |
+| [16000060](../errorcode-ability.md#16000060-不支持沙箱应用授权uri) | A sandbox application cannot grant URI permission. |
+| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not System App. Interface caller is not a system app. |
+| [16000058](../errorcode-ability.md#16000058-指定的uri-flag无效) | Invalid URI flag. |
+| [16000059](../errorcode-ability.md#16000059-指定的uri类型无效) | Invalid URI type. |
 
 ## 示例
 
@@ -75,17 +69,18 @@ fileIo.mkdir(path, (err) => {
     console.error(`mkdir failed, err code: ${err.code}, err msg: ${err.message}.`);
     return;
   }
-  console.info(`mkdir success.`);
-  let uri = fileUri.getUriFromPath(path);
-  // 授权URI给指定应用
-  uriPermissionManager.grantUriPermission(uri, wantConstant.Flags.FLAG_AUTH_READ_URI_PERMISSION, targetBundleName,
-    (error) => {
-      if (error && error.code !== 0) {
-        console.error(`grantUriPermission failed, err code: ${error.code}, err msg: ${error.message}.`);
-        return;
-      }
-      console.info(`grantUriPermission success.`);
-    });
+});
+console.info(`mkdir success.`);
+let uri = fileUri.getUriFromPath(path);
+// 授权URI给指定应用
+uriPermissionManager.grantUriPermission(uri, wantConstant.Flags.FLAG_AUTH_READ_URI_PERMISSION, targetBundleName,
+  (error) => {
+    if (error && error.code !== 0) {
+      console.error(`grantUriPermission failed, err code: ${error.code}, err msg: ${error.message}.`);
+      return;
+    }
+    console.info(`grantUriPermission success.`);
+  });
 });
 ```
 
@@ -138,13 +133,42 @@ function grantUriPermission(
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 801 | Capability not supported. |
-| 16000050 | Connect to system server failed. |
-| 16000060 | A sandbox application cannot grant URI permission. |
-| 201 | Permission denied. |
-| 202 | Not System App. Interface caller is not a system app. |
-| 16000058 | Invalid URI flag. |
-| 16000059 | Invalid URI type. |
+| [801](../../errorcode-universal.md#801-该设备不支持此api) | Capability not supported. |
+| [16000050](../errorcode-ability.md#16000050-内部错误) | Connect to system server failed. |
+| [16000060](../errorcode-ability.md#16000060-不支持沙箱应用授权uri) | A sandbox application cannot grant URI permission. |
+| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not System App. Interface caller is not a system app. |
+| [16000058](../errorcode-ability.md#16000058-指定的uri-flag无效) | Invalid URI flag. |
+| [16000059](../errorcode-ability.md#16000059-指定的uri类型无效) | Invalid URI type. |
+
+## 示例
+
+ArkTS-Sta示例：
+
+```TypeScript
+'use static'
+import { uriPermissionManager, wantConstant } from '@kit.AbilityKit';
+import { fileIo, fileUri } from '@kit.CoreFileKit';
+
+let targetBundleName = 'com.example.test_case1'
+let path = 'file://com.example.test_case1/data/storage/el2/base/haps/entry_test/files/newDir';
+fileIo.mkdir(path, (err) => {
+  if (err) {
+    console.error(`mkdir failed, err code: ${err.code}, err msg: ${err.message}.`);
+  } else {
+    console.info(`mkdir success.`);
+  }
+});
+let uri = fileUri.getUriFromPath(path);
+uriPermissionManager.grantUriPermission(uri, wantConstant.Flags.FLAG_AUTH_READ_URI_PERMISSION, targetBundleName,
+  (error) => {
+    if (error && error.code !== 0) {
+      console.error(`grantUriPermission failed, err code: ${error.code}, err msg: ${error.message}.`);
+      return;
+    }
+    console.info(`grantUriPermission success.`);
+  });
+```
 
 
 ## grantUriPermission
@@ -193,14 +217,14 @@ function grantUriPermission(uri: string, flag: wantConstant.Flags, targetBundleN
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types. |
-| 801 | Capability not supported.<br>**适用版本：** 19+ |
-| 16000050 | Internal error. |
-| 16000060 | A sandbox application cannot grant URI permission. |
-| 201 | Permission denied. |
-| 202 | Not System App. Interface caller is not a system app. |
-| 16000058 | Invalid URI flag. |
-| 16000059 | Invalid URI type. |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types. |
+| [801](../../errorcode-universal.md#801-该设备不支持此api) | Capability not supported.<br>**适用版本：** 19+ |
+| [16000050](../errorcode-ability.md#16000050-内部错误) | Internal error. |
+| [16000060](../errorcode-ability.md#16000060-不支持沙箱应用授权uri) | A sandbox application cannot grant URI permission. |
+| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not System App. Interface caller is not a system app. |
+| [16000058](../errorcode-ability.md#16000058-指定的uri-flag无效) | Invalid URI flag. |
+| [16000059](../errorcode-ability.md#16000059-指定的uri类型无效) | Invalid URI type. |
 
 ## 示例
 
@@ -269,13 +293,42 @@ Grant URI to another application
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 801 | Capability not supported. |
-| 16000050 | Connect to system server failed. |
-| 16000060 | A sandbox application cannot grant URI permission. |
-| 201 | Permission denied. |
-| 202 | Not System App. Interface caller is not a system app. |
-| 16000058 | Invalid URI flag. |
-| 16000059 | Invalid URI type. |
+| [801](../../errorcode-universal.md#801-该设备不支持此api) | Capability not supported. |
+| [16000050](../errorcode-ability.md#16000050-内部错误) | Connect to system server failed. |
+| [16000060](../errorcode-ability.md#16000060-不支持沙箱应用授权uri) | A sandbox application cannot grant URI permission. |
+| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not System App. Interface caller is not a system app. |
+| [16000058](../errorcode-ability.md#16000058-指定的uri-flag无效) | Invalid URI flag. |
+| [16000059](../errorcode-ability.md#16000059-指定的uri类型无效) | Invalid URI type. |
+
+## 示例
+
+ArkTS-Sta示例：
+
+```TypeScript
+'use static'
+import { uriPermissionManager, wantConstant } from '@kit.AbilityKit';
+import { fileIo, fileUri } from '@kit.CoreFileKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let targetBundleName = 'com.example.test_case1'
+let path = 'file://com.example.test_case1/data/storage/el2/base/haps/entry_test/files/newDir';
+
+fileIo.mkdir(path, (err) => {
+  if (err) {
+    console.error(`mkdir failed, err code: ${err.code}, err msg: ${err.message}.`);
+  } else {
+    console.info(`mkdir succeed.`);
+  }
+});
+let uri = fileUri.getUriFromPath(path);
+uriPermissionManager.grantUriPermission(uri, wantConstant.Flags.FLAG_AUTH_READ_URI_PERMISSION, targetBundleName)
+  .then((data) => {
+    console.info(`Verification succeeded, data: ${data}.`);
+  }).catch((err: BusinessError<void>): void => {
+  console.error(`Verification failed, err code: ${err.code}, err msg: ${err.message}.`);
+});
+```
 
 
 ## grantUriPermission
@@ -327,17 +380,19 @@ function grantUriPermission(uri: string, flag: wantConstant.Flags, targetBundleN
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types. |
-| 801 | Capability not supported.<br>**适用版本：** 19+ |
-| 16000081 | Failed to obtain the target application information. |
-| 16000050 | Internal error. |
-| 16000060 | A sandbox application cannot grant URI permission. |
-| 201 | Permission denied. |
-| 202 | Not System App. Interface caller is not a system app. |
-| 16000058 | Invalid URI flag. |
-| 16000059 | Invalid URI type. |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types. |
+| [801](../../errorcode-universal.md#801-该设备不支持此api) | Capability not supported.<br>**适用版本：** 19+ |
+| [16000081](../errorcode-ability.md#16000081-获取目标应用信息失败) | Failed to obtain the target application information. |
+| [16000050](../errorcode-ability.md#16000050-内部错误) | Internal error. |
+| [16000060](../errorcode-ability.md#16000060-不支持沙箱应用授权uri) | A sandbox application cannot grant URI permission. |
+| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not System App. Interface caller is not a system app. |
+| [16000058](../errorcode-ability.md#16000058-指定的uri-flag无效) | Invalid URI flag. |
+| [16000059](../errorcode-ability.md#16000059-指定的uri类型无效) | Invalid URI type. |
 
 ## 示例
+
+ArkTS-Dyn示例：
 
 ```TypeScript
 import { AbilityConstant, UIAbility, Want, wantConstant, uriPermissionManager } from '@kit.AbilityKit';
@@ -352,7 +407,7 @@ export default class EntryAbility extends UIAbility {
     let targetBundleName: string = 'com.example.demo1';
     let filePath: string = this.context.filesDir + "/test.txt";
     let uri: string = fileUri.getUriFromPath(filePath);
-    // 授予主应用URI权限
+    // 授权URI权限至主应用程序
     try {
       let appCloneIndex: number = 0;
       uriPermissionManager.grantUriPermission(uri, wantConstant.Flags.FLAG_AUTH_READ_URI_PERMISSION, targetBundleName,
@@ -366,7 +421,7 @@ export default class EntryAbility extends UIAbility {
       console.error(`grantUriPermission failed. error: ${JSON.stringify(error)}.`);
     }
 
-    // 授予分身应用URI权限
+    // 授权URI权限至分身应用程序
     try {
       let appCloneIndex: number = 1;
       uriPermissionManager.grantUriPermission(uri, wantConstant.Flags.FLAG_AUTH_READ_URI_PERMISSION, targetBundleName,
@@ -374,6 +429,53 @@ export default class EntryAbility extends UIAbility {
         .then(() => {
           console.info('grantUriPermission succeeded.');
         }).catch((error: BusinessError) => {
+        console.error(`grantUriPermission failed. error: ${JSON.stringify(error)}.`);
+      });
+    } catch (error) {
+      console.error(`grantUriPermission failed. error: ${JSON.stringify(error)}.`);
+    }
+  }
+}
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+'use static'
+import { AbilityConstant, UIAbility, Want, wantConstant, uriPermissionManager } from '@kit.AbilityKit';
+import { fileUri } from '@kit.CoreFileKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+export default class EntryAbility extends UIAbility {
+  onCreate(want: Want, launchParam: AbilityConstant.LaunchParam): void {
+  }
+
+  onForeground(): void {
+    let targetBundleName: string = 'com.example.demo1';
+    let filePath: string = this.context.filesDir + "/test.txt";
+    let uri: string = fileUri.getUriFromPath(filePath);
+    // 授权URI权限至主应用程序
+    try {
+      let appCloneIndex: int = 0;
+      uriPermissionManager.grantUriPermission(uri, wantConstant.Flags.FLAG_AUTH_READ_URI_PERMISSION, targetBundleName,
+        appCloneIndex)
+        .then(() => {
+          console.info('grantUriPermission succeeded.');
+        }).catch((error: BusinessError<void>): void => {
+        console.error(`grantUriPermission failed. error: ${JSON.stringify(error)}.`);
+      });
+    } catch (error) {
+      console.error(`grantUriPermission failed. error: ${JSON.stringify(error)}.`);
+    }
+
+    // 授权URI权限至分身应用程序
+    try {
+      let appCloneIndex: int = 1;
+      uriPermissionManager.grantUriPermission(uri, wantConstant.Flags.FLAG_AUTH_READ_URI_PERMISSION, targetBundleName,
+        appCloneIndex)
+        .then(() => {
+          console.info('grantUriPermission succeeded.');
+        }).catch((error: BusinessError<void>): void => {
         console.error(`grantUriPermission failed. error: ${JSON.stringify(error)}.`);
       });
     } catch (error) {

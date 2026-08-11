@@ -1,6 +1,6 @@
 # PulseSymbolEffect
 
-PulseSymbolEffect继承自父类SymbolEffect。
+Defines PulseSymbolEffect class.
 
 **Inheritance/Implementation:** PulseSymbolEffect extends [SymbolEffect](../arkts-components/arkts-arkui-symboleffect-c.md/arkts-arkui-symboleffect-c.md)
 

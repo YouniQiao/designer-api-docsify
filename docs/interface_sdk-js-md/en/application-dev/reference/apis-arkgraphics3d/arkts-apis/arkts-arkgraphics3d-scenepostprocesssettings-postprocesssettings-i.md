@@ -1,6 +1,6 @@
 # PostProcessSettings
 
-定义后处理设置.
+Post-processing settings, which are used to configure the image processing effect after camera rendering,including tone mapping, bloom, vignetting, and chromatic aberration.This is used as the postProcess attribute of Camera.
 
 **Since:** 12
 
@@ -16,7 +16,7 @@
 bloom?: BloomSettings
 ```
 
-后处理设置的泛光设置
+Bloom settings of the post processing settings. The default value is undefined.
 
 **Type:** [BloomSettings](arkts-arkgraphics3d-scenepostprocesssettings-bloomsettings-i.md)
 
@@ -34,11 +34,11 @@ bloom?: BloomSettings
 colorFringe?: ColorFringeSettings
 ```
 
-后处理设置的色晕设置
+Color fringe settings of the post processing settings.
 
 **Type:** [ColorFringeSettings](arkts-arkgraphics3d-scenepostprocesssettings-colorfringesettings-i.md)
 
-**Default:** 色晕默认启用
+**Default:** undefined
 
 **Since:** 22
 
@@ -54,7 +54,7 @@ colorFringe?: ColorFringeSettings
 toneMapping?: ToneMappingSettings
 ```
 
-后处理设置的色调映射设置.
+Tone mapping settings of the post processing settings. The default value is undefined.
 
 **Type:** [ToneMappingSettings](arkts-arkgraphics3d-scenepostprocesssettings-tonemappingsettings-i.md)
 
@@ -72,11 +72,11 @@ toneMapping?: ToneMappingSettings
 vignette?: VignetteSettings
 ```
 
-后处理设置的暗角设置
+Vignette settings of the post processing settings.
 
 **Type:** [VignetteSettings](arkts-arkgraphics3d-scenepostprocesssettings-vignettesettings-i.md)
 
-**Default:** 暗角默认启用
+**Default:** undefined
 
 **Since:** 22
 

@@ -12,7 +12,7 @@ import { fileShare } from 'kits/@kit.CoreFileKit';
 function checkPersistentPermission(policies: Array<PolicyInfo>): Promise<Array<boolean>>
 ```
 
-校验所选择的多个文件或目录URI是否已持久化授权，使用Promise异步回调。
+Check persistent permissions for the URI.
 
 **Since:** 17
 
@@ -26,20 +26,20 @@ function checkPersistentPermission(policies: Array<PolicyInfo>): Promise<Array<b
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| policies | Array&lt;PolicyInfo&gt; | Yes | 需要校验持久化授权状态的URI策略信息数组。 |
+| policies | Array&lt;PolicyInfo&gt; | Yes | Policy information to grant permission on URIs. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;Array&lt;boolean&gt;&gt; | Promise对象，返回URI权限的持久化状态数组。 |
+| Promise&lt;Array&lt;boolean&gt;&gt; | Returns the persistent state of uri permissions. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error.Possible causes:1.Mandatory parameters are left unspecified; &lt;br&gt;2.Incorrect parameter types. |
-| 801 | Capability not supported. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error.Possible causes:1.Mandatory parameters are left unspecified; &lt;br&gt;2.Incorrect parameter types. |
+| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. |
 | 13900042 | Out of memory |
 
 ## Examples

@@ -1,6 +1,6 @@
 # HuksSessionHandle
 
-HUKS handle结构体。
+Defines the struct for a HUKS handle.
 
 **Since:** 9
 
@@ -22,8 +22,8 @@ import { huks } from 'kits/@kit.UniversalKeystoreKit';
 challenge?: Uint8Array
 ```
 
-表示  
-[initSession](arkts-universalkeystore-huks-initsession-f.md#initsession)操作之后获取到的challenge信息。默认为undefined。
+Challenge obtained after the  
+[initSession](arkts-universalkeystore-huks-initsession-f.md#initsession)operation. The default value is **undefined**.
 
 **Type:** Uint8Array
 
@@ -43,7 +43,7 @@ challenge?: Uint8Array
 handle: number
 ```
 
-表示无符号整数类型的handle值。
+Handle of the unsigned integer type.
 
 **Type:** number
 

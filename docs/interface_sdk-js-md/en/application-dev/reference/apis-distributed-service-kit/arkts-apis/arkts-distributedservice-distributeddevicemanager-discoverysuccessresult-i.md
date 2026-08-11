@@ -1,6 +1,6 @@
 # DiscoverySuccessResult
 
-设备发现成功，发现的设备信息。
+Discovery successful result.
 
 **Since:** 23
 
@@ -22,7 +22,7 @@ import { distributedDeviceManager } from 'kits/@kit.DistributedServiceKit';
 device: DeviceBasicInfo
 ```
 
-分布式设备基本信息。
+Basic description information of a distributed device.
 
 **Type:** [DeviceBasicInfo](arkts-distributedservice-distributeddevicemanager-devicebasicinfo-i.md)
 

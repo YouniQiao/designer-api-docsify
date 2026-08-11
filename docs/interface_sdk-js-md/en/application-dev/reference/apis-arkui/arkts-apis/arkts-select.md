@@ -1,15 +1,5 @@
 # select
 
-提供下拉选择菜单，让用户在多个选项间选择。
- > **说明：**
- >
- > - 本模块同时支持ArkTS-Dyn、ArkTS-Sta。
- >
- > -
- ###### 子组件
- 无
-
-
 ## Summary
 
 ### Functions
@@ -22,30 +12,30 @@
 
 | Name | Description |
 | --- | --- |
-| [MenuItemConfiguration](arkts-arkui-select-menuitemconfiguration-i.md) | 菜单项配置接口，用于ContentModifier中。 |
-| [MenuOutlineOptions](arkts-arkui-select-menuoutlineoptions-i.md) | 菜单外描边选项。 |
-| [SelectAttribute](arkts-arkui-select-selectattribute-i.md) | 除支持[通用属性](../../apis-ability-kit/arkts-apis/arkts-app-ability-common.md/arkts-app-ability-common.md)外，还支持以下属性： |
-| [SelectOption](arkts-arkui-select-selectoption-i.md) | 下拉菜单项的信息。 |
+| [MenuItemConfiguration](arkts-arkui-select-menuitemconfiguration-i.md) | MenuItemConfiguration used by menu item content modifier. |
+| [MenuOutlineOptions](arkts-arkui-select-menuoutlineoptions-i.md) | The declare of menuOutlineOptions. |
+| [SelectAttribute](arkts-arkui-select-selectattribute-i.md) | Defines the Select component attributes. |
+| [SelectOption](arkts-arkui-select-selectoption-i.md) | The declare of selectOption. |
 
 <!--Del-->
 ### Interfaces（系统接口）
 
 | Name | Description |
 | --- | --- |
-| [SelectAttribute](arkts-arkui-select-selectattribute-i-sys.md) | 除支持[通用属性](../../apis-ability-kit/arkts-apis/arkts-app-ability-common.md/arkts-app-ability-common.md)外，还支持以下属性： |
+| [SelectAttribute](arkts-arkui-select-selectattribute-i-sys.md) | Defines the Select component attributes. |
 <!--DelEnd-->
 
 ### Enums
 
 | Name | Description |
 | --- | --- |
-| [ArrowPosition](arkts-arkui-select-arrowposition-e.md) | 箭头的位置。 |
-| [AvoidanceMode](arkts-arkui-select-avoidancemode-e.md) | 定义Select下拉菜单的避让模式。 |
-| [MenuAlignType](arkts-arkui-select-menualigntype-e.md) | 定义Select组件下拉菜单与Select组件本身的对齐方式。 |
+| [ArrowPosition](arkts-arkui-select-arrowposition-e.md) | The enum for arrow position in the select |
+| [AvoidanceMode](arkts-arkui-select-avoidancemode-e.md) | Enumeration of avoidance modes for the Select dropdown menu |
+| [MenuAlignType](arkts-arkui-select-menualigntype-e.md) | The type of alignment between select and menu. |
 
 ### Types
 
 | Name | Description |
 | --- | --- |
-| [OnSelectCallback](arkts-arkui-onselectcallback-t.md) | Select组件选择项的回调函数类型。 |
+| [OnSelectCallback](arkts-arkui-onselectcallback-t.md) | Callback of selecting an item from the select event. |
 

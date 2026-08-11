@@ -1,6 +1,6 @@
 # PermissionDialogDetail (System API)
 
-表示单条命令的权限弹窗信息。
+Represents the permission dialog information of a single command.
 
 **Since:** 26.0.0
 
@@ -24,7 +24,7 @@ import { Context, Permissions, PermissionRequestResult } from 'kits/@kit.Ability
 authResult: string
 ```
 
-授权结果字符串。
+Authorization result string.
 
 **Type:** string
 
@@ -46,7 +46,7 @@ authResult: string
 needPermissionDialog: boolean
 ```
 
-当前CLI命令是否需要权限弹窗，true表示需要权限弹窗，false表示不需要权限弹窗。
+Whether the current CLI command requires a permission dialog. The value **true** indicates that a permission dialog is required, and **false** indicates that no permission dialog is required.
 
 **Type:** boolean
 
@@ -68,7 +68,7 @@ needPermissionDialog: boolean
 permissionNameList: Array<Permissions>
 ```
 
-发起CLI相关操作的智能体当前未满足的权限名称列表。若相关权限不满足，CLI将无法拉起，或拉起后的CLI进程无法获得对应权限。
+List of permission names that the agent initiating CLI-related operations currently does not satisfy. If the related permissions are not satisfied, the CLI cannot be started, or the started CLI process cannot obtain the corresponding permissions.
 
 **Type:** Array&lt;[Permissions](arkts-ability-permissions-t.md)&gt;
 
@@ -90,7 +90,7 @@ permissionNameList: Array<Permissions>
 statusList: Array<PermissionDecisionStatus>
 ```
 
-权限决策状态列表。
+List of permission decision statuses.
 
 **Type:** Array&lt;PermissionDecisionStatus&gt;
 

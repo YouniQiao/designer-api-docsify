@@ -1,6 +1,6 @@
 # NestedScrollInfo
 
-嵌套可滚动容器组件信息
+Indicates the nested scrollable container components.
 
 **Since:** 23
 
@@ -16,7 +16,7 @@
 child: Scroller
 ```
 
-可滚动容器组件的控制器，child对应的组件需要是parent对应组件的子组件，且组件间存在嵌套滚动关系。
+The controller of child scrollable container component.
 
 **Type:** [Scroller](../arkts-components/arkts-arkui-scroller-c.md)
 
@@ -36,7 +36,7 @@ child: Scroller
 parent: Scroller
 ```
 
-可滚动容器组件的控制器。
+The controller of parent scrollable container component.
 
 **Type:** [Scroller](../arkts-components/arkts-arkui-scroller-c.md)
 

@@ -16,7 +16,7 @@ Define the controller to interact with a custom keyboard, related to the {@link 
 close(): void
 ```
 
-Close the custom keyboard.
+Closes this custom keyboard.
 
 **Since:** 12
 
@@ -32,7 +32,7 @@ Close the custom keyboard.
 constructor()
 ```
 
-Constructor.
+Constructs a **WebKeyboardController** API.
 
 **Since:** 12
 
@@ -50,7 +50,7 @@ Constructor.
 deleteBackward(length: number): void
 ```
 
-Delete text from front to back.
+Deletes a specified number of characters backward in a **Web** component text box.
 
 **Since:** 12
 
@@ -64,7 +64,7 @@ Delete text from front to back.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| length | number | Yes | length of text, which will be deleted from front to back. |
+| length | number | Yes | Length of characters to delete backward in a **Web** component text box.&lt;br&gt;Value range: [-2147483648, 2147483647]. If the parameter value exceeds the character length, all characters after the cursor are deleted by default. If the parameter value is a negative number, the deletion is not performed. |
 
 ## deleteForward
 
@@ -72,7 +72,7 @@ Delete text from front to back.
 deleteForward(length: number): void
 ```
 
-Delete text from back to front.
+Deletes a specified number of characters forward in a **Web** component text box.
 
 **Since:** 12
 
@@ -86,7 +86,7 @@ Delete text from back to front.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| length | number | Yes | length of text, which will be deleted from back to front. |
+| length | number | Yes | Length of characters to delete forward in a **Web** component text box.&lt;br&gt;Value range: [-2147483648, 2147483647]. If the parameter value exceeds the character length, all characters before the cursor are deleted by default. If the parameter value is a negative number, the deletion is not performed. |
 
 ## insertText
 
@@ -94,7 +94,7 @@ Delete text from back to front.
 insertText(text: string): void
 ```
 
-Insert text into Editor.
+Inserts characters into the **Web** component text box.
 
 **Since:** 12
 
@@ -108,7 +108,7 @@ Insert text into Editor.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| text | string | Yes | text which will be inserted. |
+| text | string | Yes | Characters to insert into the **Web** component text box. |
 
 ## sendFunctionKey
 
@@ -116,7 +116,8 @@ Insert text into Editor.
 sendFunctionKey(key: number): void
 ```
 
-Send the function of the key.
+Inserts a function key. Currently, only the Enter key type is supported.For details about the value, see  
+[EnterKeyType](../../apis-ime-kit/arkts-apis/arkts-ime-inputmethod-enterkeytype-e.md/arkts-ime-inputmethod-enterkeytype-e.md).
 
 **Since:** 12
 
@@ -130,5 +131,5 @@ Send the function of the key.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| key | number | Yes | action indicates the "enter" key related to the {@link inputMethodEngine} |
+| key | number | Yes | Function key to insert into the **Web** component text box. Currently, only the Enter key is supported. |
 

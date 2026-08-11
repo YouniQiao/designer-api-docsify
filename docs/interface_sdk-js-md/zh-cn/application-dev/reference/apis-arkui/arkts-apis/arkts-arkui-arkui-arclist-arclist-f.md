@@ -1,11 +1,5 @@
 # ArcList
 
-## 导入模块
-
-```TypeScript
-import { ArcListItemAttribute, ArcList, ArcListItem, ArcListAttribute } from 'kits/@kit.ArkUI';
-```
-
 ## ArcList
 
 ```TypeScript

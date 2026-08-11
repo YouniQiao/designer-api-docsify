@@ -1,6 +1,6 @@
 # ReminderLevel（系统接口）
 
-Enumerates comfort reminder levels required for triggering specific alert ringtones.
+触发特定提醒铃声所需的舒适提醒级别枚举。
 
 **起始版本：** 26.0.0
 
@@ -18,7 +18,7 @@ Enumerates comfort reminder levels required for triggering specific alert ringto
 WEAK_REMINDER = 0
 ```
 
-Weak reminder level.
+弱提醒级别。
 
 **起始版本：** 26.0.0
 
@@ -38,7 +38,7 @@ Weak reminder level.
 NORMAL_REMINDER = 1
 ```
 
-Normal reminder level.
+普通提醒级别。
 
 **起始版本：** 26.0.0
 

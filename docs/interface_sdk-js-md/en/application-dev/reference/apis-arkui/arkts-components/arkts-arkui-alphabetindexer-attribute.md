@@ -1,14 +1,14 @@
 # AlphabetIndexer properties/events
 
-[width](../arkts-apis/arkts-arkui-common-commonmethod-i.md/arkts-arkui-common-commonmethod-i.md#width)属性设置"auto"时表示自适应宽度，宽度会随索引项最大宽度变化。
+When the [width](../arkts-apis/arkts-arkui-common-commonmethod-i.md/arkts-arkui-common-commonmethod-i.md#width) attribute is set to **"auto"**, the width is adaptive. This means that the width will adjust according to the maximum width of the index items.
 
-[padding](../arkts-apis/arkts-arkui-common-commonmethod-i.md/arkts-arkui-common-commonmethod-i.md#padding)属性默认为4vp。
+The default value of the [padding](../arkts-apis/arkts-arkui-common-commonmethod-i.md/arkts-arkui-common-commonmethod-i.md#padding) attribute is 4 vp.
 
-文本最大的字体缩放倍数[maxFontScale](../arkts-apis/arkts-arkui-text-textattribute-i.md/arkts-arkui-text-textattribute-i.md#maxfontscale)和最小的字体缩放倍数[minFontScale](../arkts-apis/arkts-arkui-text-textattribute-i.md/arkts-arkui-text-textattribute-i.md#minfontscale)皆为1，不跟随系统字体大小调节变化。
+The [maxFontScale](../arkts-apis/arkts-arkui-text-textattribute-i.md/arkts-arkui-text-textattribute-i.md#maxfontscale) and [minFontScale](../arkts-apis/arkts-arkui-text-textattribute-i.md/arkts-arkui-text-textattribute-i.md#minfontscale) attributes are both set to a constant value of 1, which means that they do not change with the system font size.
 
-除支持[通用属性](../../apis-ability-kit/arkts-apis/arkts-app-ability-common.md/arkts-app-ability-common.md)外，还支持以下属性：
+In addition to the [universal attributes](../../apis-ability-kit/arkts-apis/arkts-app-ability-common.md/arkts-app-ability-common.md), the following attributes are supported.
 
-除支持[通用事件](../../apis-ability-kit/arkts-apis/arkts-app-ability-common.md/arkts-app-ability-common.md)外，还支持以下事件：
+In addition to the [universal events](../../apis-ability-kit/arkts-apis/arkts-app-ability-common.md/arkts-app-ability-common.md), the following events are supported.
 
 **Inheritance/Implementation:** AlphabetIndexerAttribute extends [CommonMethod<AlphabetIndexerAttribute>](CommonMethod<AlphabetIndexerAttribute>)
 
@@ -26,7 +26,7 @@
 alignStyle(value: IndexerAlign, offset?: Length)
 ```
 
-设置索引条提示弹窗的对齐样式。
+Sets the alignment style of the indexer pop-up window.
 
 **Since:** 7
 
@@ -42,8 +42,8 @@ alignStyle(value: IndexerAlign, offset?: Length)
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | [IndexerAlign](../arkts-apis/arkts-arkui-alphabetindexer-indexeralign-e.md) | Yes | 索引条提示弹窗的对齐样式，支持弹窗显示在索引条右侧和左侧。&lt;br/&gt;默认值：IndexerAlign.END |
-| offset | [Length](../arkts-apis/arkts-arkui-length-t.md) | No | 提示弹窗与索引条之间间距，大于等于0为有效值，在不设置或设置为小于0的情况下间距与popupPosition.x相同。与 [popupPosition](AlphabetIndexerAttribute#popupPosition)同时设置时，水平方向上offset生效，竖直方向上popupPosition.y生 效。<br>**Since:** 10 |
+| value | [IndexerAlign](../arkts-apis/arkts-arkui-alphabetindexer-indexeralign-e.md) | Yes | Alignment style of the indexer pop-up window. The pop-up window can be displayed on the right or left of the indexer.&lt;br&gt;Default value: **IndexerAlign.END |
+| offset | [Length](../arkts-apis/arkts-arkui-length-t.md) | No | Spacing between the pop-up window and the alphabetic index bar. A value greater than or equal to **0** is valid. If this parameter is set to a value less than **0** or is not set, the spacing is the same as **popupPosition**. When this parameter and [popupPosition](AlphabetIndexerAttribute#popupPosition) are set at the same time, **offset** takes effect in the horizontal direction, and **popupPosition.y** takes effect in the vertical direction.<br>**Since:** 10 |
 
 ## autoCollapse
 
@@ -51,21 +51,15 @@ alignStyle(value: IndexerAlign, offset?: Length)
 autoCollapse(value: boolean)
 ```
 
-设置是否使用自适应折叠模式。
+Sets whether to enable the adaptive collapse behavior for the indexer.
 
-如果索引项第一项为“#”，当除去第一项后剩余索引项数量 <= 9时，选择全显示模式（所有索引项完整显示）；9 < 剩余索引项数量 &lt;= 13时，根据索引条高度自适应选择全显示模式或者短折叠模式；剩余索引项数量 &gt; 13时，根据索引条高度自适应选择短折叠模式或者长折叠模式。
+When the first index item is **"#"**: Remaining items ≤ 9: Full display mode; 9 &lt; Remaining items ≤ 13: Adapts between full display and short collapse modes based on the indexer height; remaining items &gt; 13: Adapts between short and long collapse modes based on the indexer height.
 
-如果索引项第一项不为“#”，当所有索引项数量 &lt;= 9时，选择全显示模式（所有索引项完整显示）；9 < 所有索引项数量 <= 13时，根据索引条高度自适应选择全显示模式或者短折叠模式；所有索引项数量 > 13时，根据索引条高度自适应选择短折叠模式或者长折叠模式。
+When the first index item is not **"#"**: All items ≤ 9: Full display mode; 9 &lt; All items ≤ 13: Adapts between full display and short collapse modes based on the indexer height; all items &gt; 13: Adapts between short and long collapse modes based on the indexer height.
 
-> **说明：**
+> **NOTE：**
 
-&gt;&lt; 所有索引项数量 <= 13时，根据索引条高度自适应选择全显示模式或者短折叠模式；所有索引项数量 > 13时，根据索引条高度自适应选择短折叠模式或者长折叠模式。
-
-&gt;&lt;= 13时，根据索引条高度自适应选择全显示模式或者短折叠模式；所有索引项数量 &gt; 13时，根据索引条高度自适应选择短折叠模式或者长折叠模式。
-
-> **说明：**
-
-> 从API version 12开始，该接口支持在[attributeModifier](arkts-arkui-commonmethod-c.md#attributemodifier)中调用。
+> This API can be called within [attributeModifier](arkts-arkui-commonmethod-c.md#attributemodifier) since API version 12.
 
 **Since:** 11
 
@@ -83,7 +77,7 @@ autoCollapse(value: boolean)
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | boolean | Yes | 是否使用自适应折叠模式。&lt;br/&gt;默认值：&lt;br /&gt;API version 12之前：false &lt;br /&gt;API version 12及之后：true &lt;br/&gt; true：使用自适应折叠模式。&lt;br/&gt;false：不使用自适应折叠模式。 |
+| value | boolean | Yes | Whether to auto-collapse or expand the indexer bar.&lt;br&gt;Default value:&lt;br&gt;Before API version 12: **false**&lt;br&gt;Since API version 12: **true**&lt;br&gt;**true**: Enable the adaptive collapse behavior.&lt;br&gt; **false**: Disable the adaptive collapse behavior. |
 
 ## color
 
@@ -91,7 +85,7 @@ autoCollapse(value: boolean)
 color(value: ResourceColor)
 ```
 
-设置未选中项文本颜色。
+Sets the text color for unselected items.
 
 **Since:** 7
 
@@ -107,7 +101,7 @@ color(value: ResourceColor)
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | [ResourceColor](../arkts-apis/arkts-arkui-resourcecolor-t.md) | Yes | 未选中项文本颜色。&lt;br/&gt;默认值：0x99182431，显示为略带透明的棕色。 |
+| value | [ResourceColor](../arkts-apis/arkts-arkui-resourcecolor-t.md) | Yes | Text color of unselected items.&lt;br&gt;Default value: **0x99182431**, which is a slightly transparent brown. |
 
 ## enableHapticFeedback
 
@@ -115,7 +109,7 @@ color(value: ResourceColor)
 enableHapticFeedback(value: boolean)
 ```
 
-设置是否开启触控反馈。开启后，在手指触摸或滑动选中索引项时会触发振动反馈。
+Sets whether to enable haptic feedback.
 
 **Since:** 12
 
@@ -133,7 +127,7 @@ enableHapticFeedback(value: boolean)
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | boolean | Yes | 是否支持触控反馈。&lt;br/&gt;true：支持触控反馈。&lt;br/&gt;false：不支持触控反馈。&lt;br/&gt;默认值：true&lt;br/&gt;开启触控反馈时，需要在工程的 [module.json5](../../../quick-start/module-configuration-file.md)中配置requestPermissions字段开启振动权限，配置如下：&lt;br/&gt;" requestPermissions": [{"name": "ohos.permission.VIBRATE"}] |
+| value | boolean | Yes | Whether to enable haptic feedback.&lt;br&gt;**true**: To enable haptic feedback.&lt;br&gt;**false**: Not to enable haptic feedback.&lt;br&gt;Default value: **true**&lt;br&gt;To enable haptic feedback, you must declare the **ohos.permission.VIBRATE** permission under **requestPermissions** in the [module.json5](../../../quick-start/module-configuration-file.md) file of the project.&lt;br&gt;"requestPermissions" : [{"name": "ohos.permission.VIBRATE"}] |
 
 ## font
 
@@ -141,7 +135,7 @@ enableHapticFeedback(value: boolean)
 font(value: Font)
 ```
 
-设置未选中项文本样式。
+Sets the text style for unselected items.
 
 **Since:** 7
 
@@ -157,7 +151,7 @@ font(value: Font)
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | [Font](../arkts-apis/arkts-arkui-arkui-uicontext-font-c.md) | Yes | 未选中索引项文本样式。&lt;br/&gt;默认值：&lt;br/&gt;API version 11及以前：&lt;br/&gt;{&lt;br/&gt;size:'12.0fp',&lt;br/&gt; style: FontStyle.Normal,&lt;br/&gt; weight:FontWeight.Regular,&lt;br/&gt; family:'HarmonyOS Sans'&lt;br/&gt;}&lt;br/&gt;API version 12及以后：&lt;br/ &gt;{&lt;br/&gt;size:'10.0vp',&lt;br/&gt; style:FontStyle.Normal,&lt;br/&gt; weight:FontWeight.Medium,&lt;br/&gt; family:'HarmonyOS Sans'&lt; br/&gt;} |
+| value | [Font](../arkts-apis/arkts-arkui-arkui-uicontext-font-c.md) | Yes | Text style of unselected items.&lt;br&gt;Default value:&lt;br&gt;API version 11 and earlier:&lt;br&gt;{&lt;br&gt; size:'12.0fp',&lt;br&gt; style:FontStyle.Normal,&lt;br&gt; weight:FontWeight.Regular,&lt;br&gt; family:'HarmonyOS Sans'&lt;br&gt;}&lt;br&gt; API version 12 and later:&lt;br&gt;{&lt;br&gt;size:'10.0vp',&lt;br&gt; style:FontStyle.Normal,&lt;br&gt; weight:FontWeight.Medium,&lt;br&gt; family:'HarmonyOS Sans'&lt;br&gt;} |
 
 ## itemBorderRadius
 
@@ -165,7 +159,7 @@ font(value: Font)
 itemBorderRadius(value: number)
 ```
 
-设置索引项背板圆角半径。
+Sets the radius of the index background border corners in the alphabetic index bar.
 
 **Since:** 12
 
@@ -183,7 +177,7 @@ itemBorderRadius(value: number)
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | number | Yes | 设置索引项背板圆角半径。&lt;br/&gt;。 &lt;br&gt;单位为：vp。 |
+| value | number | Yes | &lt;br&gt;Unit: vp. - Radius of the index background border corners in the alphabetic index bar.&lt;br&gt;Default value: **8vp**&lt;br&gt;This parameter cannot be set in percentage. If the value specified is less than **0**, **0** is used.&lt;br&gt;The radius of the index background border corners in the alphabetic index bar is automatically adaptive (radius of the index corners + 4 vp). |
 
 ## itemSize
 
@@ -191,7 +185,7 @@ itemBorderRadius(value: number)
 itemSize(value: string | number)
 ```
 
-设置索引项区域大小。
+Sets the size of the index item area.
 
 **Since:** 7
 
@@ -207,7 +201,7 @@ itemSize(value: string | number)
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | string \| number | Yes | 索引项区域大小，索引项区域为正方形，即正方形边长。不支持设置为百分比。&lt;br/&gt;实际取值会受到组件尺寸的约束，索引项宽度最大为组件宽度-左右 [padding](../arkts-apis/arkts-arkui-common-commonmethod-i.md/arkts-arkui-common-commonmethod-i.md#padding)，索引项高度最大为（组件高度-上下[padding](../arkts-apis/arkts-arkui-common-commonmethod-i.md/arkts-arkui-common-commonmethod-i.md#padding)）/索引项个数。传入值小于等于0时，按照 默认值处理。&lt;br/&gt;默认值：16.0&lt;br/&gt;单位：vp |
+| value | string \| number | Yes | Size of the index item area, which is a square, meaning the side length of the square. This attribute cannot be set in percentage.&lt;br&gt;The actual value is restricted by the component size. The maximum width of an index item is the component width minus the left and right [padding](../arkts-apis/arkts-arkui-common-commonmethod-i.md/arkts-arkui-common-commonmethod-i.md#padding), and the maximum height of an index item is (component height minus the top and bottom [padding](../arkts-apis/arkts-arkui-common-commonmethod-i.md/arkts-arkui-common-commonmethod-i.md#padding))/number of index items. If the input value is less than or equal to 0, the default value is used.&lt;br&gt;Default value: **16.0**&lt;br&gt;Unit: vp |
 
 ## onPopupSelect
 
@@ -215,7 +209,7 @@ itemSize(value: string | number)
 onPopupSelect(callback: OnAlphabetIndexerPopupSelectCallback)
 ```
 
-提示弹窗二级索引选中事件，回调参数为当前选中二级索引项索引。仅在[usingPopup](#usingpopup)为true时触发。
+Triggered when a secondary index item in the pop-up window is selected. The callback parameter is the index of the selected secondary index item.
 
 **Since:** 8
 
@@ -231,7 +225,7 @@ onPopupSelect(callback: OnAlphabetIndexerPopupSelectCallback)
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [OnAlphabetIndexerPopupSelectCallback](../arkts-apis/arkts-arkui-onalphabetindexerpopupselectcallback-t.md) | Yes | 回调函数，用于处理提示弹窗二级索引选中事件。 需先设置[usingPopup](#usingpopup)为true。<br>**Since:** 18 |
+| callback | [OnAlphabetIndexerPopupSelectCallback](../arkts-apis/arkts-arkui-onalphabetindexerpopupselectcallback-t.md) | Yes | Event triggered when a secondary index item in the pop- up window is selected.<br>**Since:** 18 |
 
 ## onRequestPopupData
 
@@ -239,7 +233,7 @@ onPopupSelect(callback: OnAlphabetIndexerPopupSelectCallback)
 onRequestPopupData(callback: OnAlphabetIndexerRequestPopupDataCallback)
 ```
 
-设置提示弹窗二级索引项内容事件，回调参数为当前选中项索引，回调返回值为提示弹窗需显示的二级索引项内容。
+Triggered for a secondary index item content event in the pop-up window. The callback parameter is the index of the selected secondary index item. The return value is the secondary index item content to be displayed in the pop-up window.
 
 **Since:** 8
 
@@ -255,7 +249,7 @@ onRequestPopupData(callback: OnAlphabetIndexerRequestPopupDataCallback)
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [OnAlphabetIndexerRequestPopupDataCallback](arkts-arkui-onalphabetindexerrequestpopupdatacallback-t.md) | Yes | 回调函数，用于提供提示弹窗二级索引项内容。 需先设置[usingPopup](#usingpopup)为true。<br>**Since:** 18 |
+| callback | [OnAlphabetIndexerRequestPopupDataCallback](arkts-arkui-onalphabetindexerrequestpopupdatacallback-t.md) | Yes | Callback for setting the secondary index item content event in the pop-up window.<br>**Since:** 18 |
 
 ## onSelect
 
@@ -263,7 +257,7 @@ onRequestPopupData(callback: OnAlphabetIndexerRequestPopupDataCallback)
 onSelect(callback: OnAlphabetIndexerSelectCallback)
 ```
 
-索引项选中事件，回调参数为当前选中项索引。
+Triggered when an index item is selected, with the callback parameter being the index of the currently selected item.
 
 **Since:** 8
 
@@ -279,7 +273,7 @@ onSelect(callback: OnAlphabetIndexerSelectCallback)
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [OnAlphabetIndexerSelectCallback](../arkts-apis/arkts-arkui-onalphabetindexerselectcallback-t.md) | Yes | 回调函数，用于处理索引项选中事件。<br>**Since:** 18 |
+| callback | [OnAlphabetIndexerSelectCallback](../arkts-apis/arkts-arkui-onalphabetindexerselectcallback-t.md) | Yes | Event triggered when an index item is selected.<br>**Since:** 18 |
 
 ## onSelected
 
@@ -287,11 +281,9 @@ onSelect(callback: OnAlphabetIndexerSelectCallback)
 onSelected(callback: (index: number) => void)
 ```
 
-注册索引项选中事件回调，回调参数为当前选中项索引。
+Triggered when an index item is selected, with the callback parameter being the index of the currently selected item.
 
-> **说明：**
-
-> 从API version 7开始支持，从API version 8开始废弃，建议使用[onSelect](AlphabetIndexerAttribute#onSelect)替代。
+> **NOTE：**
 
 **Since:** 7
 
@@ -309,7 +301,7 @@ onSelected(callback: (index: number) => void)
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | (index: number) =&gt; void | Yes | 当前选中的索引。 |
+| callback | (index: number) =&gt; void | Yes | Index of the selected item. |
 
 ## popupBackground
 
@@ -317,17 +309,17 @@ onSelected(callback: (index: number) => void)
 popupBackground(value: ResourceColor)
 ```
 
-设置提示弹窗背景颜色。
+Sets the background color for the pop-up window.
 
-该接口未被主动调用或参数value传入undefined时：
+If this API is not called or the **value** parameter is set to **undefined**:
 
-API version 11及以前版本，提示弹窗背景颜色默认为0xFFFFFFFF，显示为白色。
+In API version 11 and earlier versions, the default background color of the pop-up is **0xFFFFFFFF**, which is white.
 
-对于API version 12至API version 24版本，默认为#66808080，显示为半透明的灰色。
+In API versions 12 to 24, the default background color is **#66808080**, which is translucent gray.
 
-从API版本26.0.0开始，如果[popupBackground](AlphabetIndexerAttribute#popupBackground)  
-[popupBackgroundBlurStyle](AlphabetIndexerAttribute#popupBackgroundBlurStyle)均未被主动调用或参数value传入undefined，高档、中档算力设备默认显示为沉浸式材质  
-[ImmersiveStyle](../../../reference/apis-arkui/arkts-apis-uimaterial.md#immersivestyle)的THIN样式，低档算力设备默认显示为白色背景。
+Since API version 26.0.0, if neither **popupBackground** nor  
+[popupBackgroundBlurStyle](AlphabetIndexerAttribute#popupBackgroundBlurStyle) is called or the **value**parameter is set to **undefined**, the **THIN** style of  
+**[ImmersiveStyle](../../../reference/apis-arkui/arkts-apis-uimaterial.md#immersivestyle)** is displayed by default on devices with high- and mid-level computing power, and the white background is displayed by default on devices with low-level computing power. If **popupBackgroundBlurStyle** is called and the **value** parameter is set to a valid value, the background color of the pop-up is **#66808080** by default, which is translucent gray.
 
 **Since:** 7
 
@@ -343,7 +335,7 @@ API version 11及以前版本，提示弹窗背景颜色默认为0xFFFFFFFF，�
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | [ResourceColor](../arkts-apis/arkts-arkui-resourcecolor-t.md) | Yes | 提示弹窗背景颜色。&lt;br/&gt;弹窗的背景模糊材质效果会对背景色产生影响，可通过设置 [popupBackgroundBlurStyle](AlphabetIndexerAttribute#popupBackgroundBlurStyle)属性值为NONE关闭背景模糊材质效果。&lt;br/&gt; |
+| value | [ResourceColor](../arkts-apis/arkts-arkui-resourcecolor-t.md) | Yes | Background color of the pop-up window.&lt;br&gt;The background blur effect of the pop-up text can affect the background color. You can disable the effect by setting [popupBackgroundBlurStyle](AlphabetIndexerAttribute#popupBackgroundBlurStyle) to **NONE**.&lt;br&gt; |
 
 ## popupBackgroundBlurStyle
 
@@ -351,8 +343,8 @@ API version 11及以前版本，提示弹窗背景颜色默认为0xFFFFFFFF，�
 popupBackgroundBlurStyle(value: BlurStyle)
 ```
 
-设置提示弹窗的背景模糊材质。API版本26.0.0之前版本，未通过该接口设置时，默认为组件普通材质模糊，对应取值为BlurStyle中的COMPONENT_REGULAR。从API版本26.0.0开始，  
-[popupBackground](AlphabetIndexerAttribute#popupBackground)和popupBackgroundBlurStyle均未被主动调用或者传入undefined时，在高档、中档算力设备默认显示为沉浸式材质[ImmersiveStyle](../../../reference/apis-arkui/arkts-apis-uimaterial.md#immersivestyle)的THIN样式，低档算力设备默认显示为白色背景。
+Sets the background blur style of the pop-up window. In versions earlier than API version 26.0.0, if this API is not called, the **COMPONENT_REGULAR** value in **BlurStyle** is used by default. Since API version 26.0.0, if neither [popupBackground](AlphabetIndexerAttribute#popupBackground) nor **popupBackgroundBlurStyle** is called or the value is **undefined**, the **THIN** style of  
+[ImmersiveStyle](../../../reference/apis-arkui/arkts-apis-uimaterial.md#immersivestyle) is used by default on devices with high- and mid-level computing power, and the white background is used by default on devices with low-level computing power.
 
 **Since:** 12
 
@@ -370,7 +362,7 @@ popupBackgroundBlurStyle(value: BlurStyle)
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | [BlurStyle](arkts-arkui-blurstyle-e.md) | Yes | 设置提示弹窗的背景模糊材质。&lt;br/&gt;弹窗的背景模糊材质效果会对背景色 [popupBackground](AlphabetIndexerAttribute#popupBackground)产生影响，可通过设置属性值为NONE关闭背景模糊材质效果。 |
+| value | [BlurStyle](arkts-arkui-blurstyle-e.md) | Yes | Background blur style of the pop-up window.&lt;br&gt;The background blur effect can affect [popupBackground](AlphabetIndexerAttribute#popupBackground). You can disable the effect by setting it to **NONE**. |
 
 ## popupColor
 
@@ -378,7 +370,7 @@ popupBackgroundBlurStyle(value: BlurStyle)
 popupColor(value: ResourceColor)
 ```
 
-设置提示弹窗一级索引项文本颜色。
+Sets the text color for the primary index item in the pop-up window.
 
 **Since:** 7
 
@@ -394,7 +386,7 @@ popupColor(value: ResourceColor)
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | [ResourceColor](../arkts-apis/arkts-arkui-resourcecolor-t.md) | Yes | 提示弹窗一级索引项文本颜色。&lt;br/&gt;默认值：0xFF007DFF，显示为蓝色。 |
+| value | [ResourceColor](../arkts-apis/arkts-arkui-resourcecolor-t.md) | Yes | Text color of the primary index item in the pop-up window.&lt;br&gt;Default value: **0xFF007DFF**, which is blue. |
 
 ## popupFont
 
@@ -402,7 +394,7 @@ popupColor(value: ResourceColor)
 popupFont(value: Font)
 ```
 
-设置提示弹窗一级索引文本样式。
+Sets the text style for the primary index item in the pop-up window.
 
 **Since:** 7
 
@@ -418,7 +410,7 @@ popupFont(value: Font)
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | [Font](../arkts-apis/arkts-arkui-arkui-uicontext-font-c.md) | Yes | 提示弹窗一级索引文本样式。&lt;br/&gt;默认值：&lt;br/&gt;{&lt;br/&gt;size:'24.0vp',&lt;br/&gt; style:FontStyle.Normal,&lt;br/&gt; weight: FontWeight.Medium,&lt;br/&gt; family:'HarmonyOS Sans'&lt;br/&gt;} |
+| value | [Font](../arkts-apis/arkts-arkui-arkui-uicontext-font-c.md) | Yes | Text style of the primary index item in the pop-up window.&lt;br&gt;Default value:&lt;br&gt;{&lt;br&gt;size:' 24.0vp',&lt;br&gt; style:FontStyle.Normal,&lt;br&gt; weight:FontWeight.Medium,&lt;br&gt; family:'HarmonyOS Sans'&lt;br&gt;} |
 
 ## popupItemBackgroundColor
 
@@ -426,7 +418,7 @@ popupFont(value: Font)
 popupItemBackgroundColor(value: ResourceColor)
 ```
 
-设置提示弹窗二级索引项背景颜色。
+Sets the background color for the secondary index item in the pop-up window.
 
 **Since:** 10
 
@@ -444,7 +436,7 @@ popupItemBackgroundColor(value: ResourceColor)
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | [ResourceColor](../arkts-apis/arkts-arkui-resourcecolor-t.md) | Yes | 提示弹窗二级索引项背景颜色。 &lt;br/&gt;默认值：&lt;br /&gt;API version 11及以前：#FFFFFFFF，显示为白色。&lt;br /&gt;API version 12及以后：#00000000，显示为透明色。 |
+| value | [ResourceColor](../arkts-apis/arkts-arkui-resourcecolor-t.md) | Yes | Background color of the secondary index item in the pop-up window.&lt;br&gt;Default value:&lt;br&gt;API version 11 and earlier: **#FFFFFFFF**, which is white.&lt;br&gt;API version 12 and later: **#00000000**, which is transparent. |
 
 ## popupItemBorderRadius
 
@@ -452,7 +444,7 @@ popupItemBackgroundColor(value: ResourceColor)
 popupItemBorderRadius(value: number)
 ```
 
-设置提示弹窗索引项背板圆角半径。
+Sets the radius of the index border corners in the pop-up window.
 
 **Since:** 12
 
@@ -470,7 +462,7 @@ popupItemBorderRadius(value: number)
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | number | Yes | 设置提示弹窗索引项背板圆角半径。 默认值：24vp 不支持百分比，小于0时按照0设置。 提示弹窗背板圆角自适应变化（索引项圆角半径+4vp）。 &lt;br&gt;单位为：vp。 |
+| value | number | Yes | Radius of the index background border corners in the pop-up window. &lt;br&gt;Unit: vp. **24vp**.&lt;br&gt;This parameter cannot be set in percentage. If the value specified is less than **0**, **0** is used.&lt;br&gt;The radius of the index background border corners in the pop-up window is automatically adaptive ( radius of the index corners + 4 vp). |
 
 ## popupItemFont
 
@@ -478,7 +470,7 @@ popupItemBorderRadius(value: number)
 popupItemFont(value: Font)
 ```
 
-设置提示弹窗二级索引项文本样式。
+Sets the text style for the secondary index item in the pop-up window.
 
 **Since:** 10
 
@@ -496,7 +488,7 @@ popupItemFont(value: Font)
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | [Font](../arkts-apis/arkts-arkui-arkui-uicontext-font-c.md) | Yes | 提示弹窗二级索引项文本样式。 &lt;br/&gt;默认值：&lt;br/&gt;{&lt;br/&gt;size:24,&lt;br/&gt;weight:FontWeight.Medium&lt;br/&gt;} |
+| value | [Font](../arkts-apis/arkts-arkui-arkui-uicontext-font-c.md) | Yes | Text style of the secondary index item in the pop-up window.&lt;br&gt;Default value:&lt;br&gt;{&lt;br&gt;size :24,&lt;br&gt;weight:FontWeight.Medium&lt;br&gt;} |
 
 ## popupPosition
 
@@ -504,7 +496,7 @@ popupItemFont(value: Font)
 popupPosition(value: Position)
 ```
 
-设置提示弹窗相对于索引条上边框中点的位置。
+Sets the position of the pop-up window relative to the center of the indexer's top border.
 
 **Since:** 8
 
@@ -520,7 +512,7 @@ popupPosition(value: Position)
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | [Position](../arkts-apis/arkts-arkui-display-position-i.md) | Yes | 弹出窗口相对于索引条上边框中点的位置。与[alignStyle](#alignstyle)同时设置时， 水平方向由[alignStyle](#alignstyle)的offset参数控制，竖直方向上value.y生效。&lt;br/&gt;默认值：{x: 60.0, y: 48.0}&lt;br/&gt;单位：vp |
+| value | [Position](../arkts-apis/arkts-arkui-display-position-i.md) | Yes | Position of the pop-up window relative to the center of the indexer's top border.&lt;br&gt; Default value: **{x: 60.0, y: 48.0} |
 
 ## popupSelectedColor
 
@@ -528,7 +520,7 @@ popupPosition(value: Position)
 popupSelectedColor(value: ResourceColor)
 ```
 
-设置提示弹窗二级索引选中项文本颜色。
+Sets the text color for the selected secondary index item in the pop-up window.
 
 **Since:** 10
 
@@ -546,7 +538,7 @@ popupSelectedColor(value: ResourceColor)
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | [ResourceColor](../arkts-apis/arkts-arkui-resourcecolor-t.md) | Yes | 提示弹窗二级索引选中项文本颜色。 &lt;br/&gt;默认值：#FF182431，显示为深暗蓝色。 |
+| value | [ResourceColor](../arkts-apis/arkts-arkui-resourcecolor-t.md) | Yes | Text color of the selected secondary index items in the pop-up window.&lt;br&gt;Default value: **#FF182431**, which is dark blue. |
 
 ## popupTitleBackground
 
@@ -554,7 +546,7 @@ popupSelectedColor(value: ResourceColor)
 popupTitleBackground(value: ResourceColor)
 ```
 
-设置提示弹窗一级索引项背景颜色。
+Sets the background color for the primary index item in the pop-up window.
 
 **Since:** 12
 
@@ -572,7 +564,7 @@ popupTitleBackground(value: ResourceColor)
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | [ResourceColor](../arkts-apis/arkts-arkui-resourcecolor-t.md) | Yes | 设置提示弹窗一级索引项背景颜色。&lt;br/&gt;默认值：&lt;br/&gt;提示弹窗只有一个索引项：#00FFFFFF。&lt;br/&gt;提示弹窗有多个索引项：#0c182431。 |
+| value | [ResourceColor](../arkts-apis/arkts-arkui-resourcecolor-t.md) | Yes | Background color for the primary index item in the pop-up window.&lt;br&gt;Default value :&lt;br&gt;If the pop-up window has only one index: **#00FFFFFF**.&lt;br&gt;If the pop-up window has multiple indexes: **#0c182431**. |
 
 ## popupUnselectedColor
 
@@ -580,7 +572,7 @@ popupTitleBackground(value: ResourceColor)
 popupUnselectedColor(value: ResourceColor)
 ```
 
-设置提示弹窗二级索引未选中项文本颜色。
+Sets the text color for the unselected secondary index items in the pop-up window.
 
 **Since:** 10
 
@@ -598,7 +590,7 @@ popupUnselectedColor(value: ResourceColor)
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | [ResourceColor](../arkts-apis/arkts-arkui-resourcecolor-t.md) | Yes | 提示弹窗二级索引未选中项文本颜色。 &lt;br/&gt;默认值：#FF182431，显示为深暗蓝色。 |
+| value | [ResourceColor](../arkts-apis/arkts-arkui-resourcecolor-t.md) | Yes | Text color of the unselected secondary index items in the pop-up window.&lt;br&gt; Default value: **#FF182431**, which is dark blue. |
 
 ## selected
 
@@ -606,9 +598,10 @@ popupUnselectedColor(value: ResourceColor)
 selected(index: number)
 ```
 
-设置选中项索引值。与[AlphabetIndexerOptions](#alphabetindexeroptions18对象说明)中的selected同时设置时，该属性的优先级更高。
+Sets the index of the selected item.
 
-从API version 10开始，该参数支持[\$\$](../../../ui/state-management/arkts-two-way-sync.md)双向绑定变量。
+Since API version 10, this parameter supports two-way binding through  
+[\$\$](../../../ui/state-management/arkts-two-way-sync.md).
 
 **Since:** 8
 
@@ -624,7 +617,7 @@ selected(index: number)
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| index | number | Yes | 选中项索引值。&lt;br/&gt;取值范围：[0, [arrayValue](arkts-arkui-alphabetindexeroptions-i.md).length-1] &lt;br/&gt;若超出索引值范围，则取默认值0。&lt;br/&gt;默认值：0 |
+| index | number | Yes | Index of the selected item.&lt;br&gt;Value range: [0, [arrayValue](arkts-arkui-alphabetindexeroptions-i.md).length – 1]&lt;br&gt;Default value: **0 |
 
 ## selectedBackgroundColor
 
@@ -632,7 +625,7 @@ selected(index: number)
 selectedBackgroundColor(value: ResourceColor)
 ```
 
-设置选中项背景颜色。
+Sets the background color of the selected item.
 
 **Since:** 7
 
@@ -648,7 +641,7 @@ selectedBackgroundColor(value: ResourceColor)
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | [ResourceColor](../arkts-apis/arkts-arkui-resourcecolor-t.md) | Yes | 选中项背景颜色。&lt;br/&gt;默认值：0x1A007DFF，显示为半透明的蓝绿色。 |
+| value | [ResourceColor](../arkts-apis/arkts-arkui-resourcecolor-t.md) | Yes | Background color of the selected item.&lt;br&gt;Default value: **0x1A007DFF**, which is semi-transparent blue-green. |
 
 ## selectedColor
 
@@ -656,7 +649,7 @@ selectedBackgroundColor(value: ResourceColor)
 selectedColor(value: ResourceColor)
 ```
 
-设置选中项文本颜色。
+Sets the text color for the selected item.
 
 **Since:** 7
 
@@ -672,7 +665,7 @@ selectedColor(value: ResourceColor)
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | [ResourceColor](../arkts-apis/arkts-arkui-resourcecolor-t.md) | Yes | 选中项文本颜色。&lt;br/&gt;默认值：0xFF007DFF，显示为蓝色。 |
+| value | [ResourceColor](../arkts-apis/arkts-arkui-resourcecolor-t.md) | Yes | Text color of the selected item.&lt;br&gt;Default value: **0xFF007DFF**, which is blue. |
 
 ## selectedFont
 
@@ -680,7 +673,7 @@ selectedColor(value: ResourceColor)
 selectedFont(value: Font)
 ```
 
-设置选中项文本样式。
+Sets the text style for the selected item.
 
 **Since:** 7
 
@@ -696,7 +689,7 @@ selectedFont(value: Font)
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | [Font](../arkts-apis/arkts-arkui-arkui-uicontext-font-c.md) | Yes | 选中项文本样式。&lt;br/&gt;默认值：&lt;br/&gt;API version 11及以前：&lt;br/&gt;{&lt;br/&gt;size:'12.0fp',&lt;br/&gt; style: FontStyle.Normal,&lt;br/&gt; weight:FontWeight.Regular,&lt;br/&gt; family:'HarmonyOS Sans'&lt;br/&gt;}&lt;br/&gt;API version 12及以后：&lt;br/ &gt;{&lt;br/&gt;size:'10.0vp',&lt;br/&gt; style:FontStyle.Normal,&lt;br/&gt; weight:FontWeight.Medium,&lt;br/&gt; family:'HarmonyOS Sans'&lt; br/&gt;} |
+| value | [Font](../arkts-apis/arkts-arkui-arkui-uicontext-font-c.md) | Yes | Text style of the selected item.&lt;br&gt;Default value:&lt;br&gt;API version 11 and earlier:&lt;br&gt;{&lt;br&gt; size:'12.0fp',&lt;br&gt; style:FontStyle.Normal,&lt;br&gt; weight:FontWeight.Regular,&lt;br&gt; family:'HarmonyOS Sans'&lt;br&gt;}&lt;br&gt; API version 12 and later:&lt;br&gt;{&lt;br&gt;size:'10.0vp',&lt;br&gt; style:FontStyle.Normal,&lt;br&gt; weight:FontWeight.Medium,&lt;br&gt; family:'HarmonyOS Sans'&lt;br&gt;} |
 
 ## usingPopup
 
@@ -704,7 +697,7 @@ selectedFont(value: Font)
 usingPopup(value: boolean)
 ```
 
-设置是否显示提示弹窗。
+Sets whether to display the pop-up window.
 
 **Since:** 7
 
@@ -720,5 +713,5 @@ usingPopup(value: boolean)
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | boolean | Yes | 是否显示提示弹窗。&lt;br/&gt;默认值：false &lt;br/&gt;true：显示提示弹窗。&lt;br/&gt;false：不显示提示弹窗。 |
+| value | boolean | Yes | Whether to display the pop-up window.&lt;br&gt;Default value: **false**.&lt;br&gt;**true**: Display the pop-up window.&lt;br&gt;**false**: Do not display the pop-up window. |
 

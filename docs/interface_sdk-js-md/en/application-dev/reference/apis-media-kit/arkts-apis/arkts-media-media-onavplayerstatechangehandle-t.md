@@ -4,7 +4,7 @@
 type OnAVPlayerStateChangeHandle = (state: AVPlayerState, reason: StateChangeReason) => void
 ```
 
-播放状态机切换事件回调方法。
+Describes the callback invoked for the AVPlayer state change event.
 
 **Since:** 12
 
@@ -20,6 +20,6 @@ type OnAVPlayerStateChangeHandle = (state: AVPlayerState, reason: StateChangeRea
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| state | [AVPlayerState](arkts-media-media-avplayerstate-t.md) | Yes | 当前播放状态。 |
-| reason | [StateChangeReason](arkts-media-media-statechangereason-e.md) | Yes | 当前播放状态的切换原因。 |
+| state | [AVPlayerState](arkts-media-media-avplayerstate-t.md) | Yes | State of the AVPlayer. |
+| reason | [StateChangeReason](arkts-media-media-statechangereason-e.md) | Yes | Reason for the state change. |
 

@@ -1,6 +1,6 @@
 # MediaTab
 
-媒体标签页的定义。
+The definition of the tab page.
 
 **Since:** 23
 
@@ -22,7 +22,7 @@ import { avMusicTemplate } from 'kits/@kit.AVSessionKit';
 extraDataJson?: string
 ```
 
-标签页上的附加内容。
+Additional content on tab page.
 
 **Type:** string
 
@@ -42,7 +42,7 @@ extraDataJson?: string
 tabIcon?: image.PixelMap
 ```
 
-标签页的图标（接入模板时在主界面的标签页中必填）。
+The tab page icon, main page required.
 
 **Type:** image.PixelMap
 
@@ -62,7 +62,7 @@ tabIcon?: image.PixelMap
 tabId: string
 ```
 
-标签页的标识。
+Unique ID of the tab page.
 
 **Type:** string
 
@@ -82,7 +82,7 @@ tabId: string
 tabName: string
 ```
 
-标签页的名称。
+The tab page name.
 
 **Type:** string
 

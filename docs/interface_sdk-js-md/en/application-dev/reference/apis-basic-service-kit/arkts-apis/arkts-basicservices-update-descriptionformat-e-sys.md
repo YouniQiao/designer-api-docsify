@@ -1,6 +1,6 @@
 # DescriptionFormat (System API)
 
-描述文件格式。
+Enumerates description file formats.
 
 **Since:** 9
 
@@ -18,7 +18,7 @@
 STANDARD = 0
 ```
 
-标准格式。适合需要完整描述信息的场景。
+Standard format. This format is applicable to scenarios where complete description is required.
 
 **Since:** 9
 
@@ -36,7 +36,7 @@ STANDARD = 0
 SIMPLIFIED = 1
 ```
 
-简易格式。适合仅需精简描述信息的场景。
+Simple format. This format is applicable to scenarios where only simplified description is required.
 
 **Since:** 9
 

@@ -412,12 +412,12 @@ Receives status change notifications of a specified network.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 2101008 | The callback already exists. |
-| 401 | Parameter error. |
-| 2100002 | Failed to connect to the service. |
-| 2100003 | System internal error. |
-| 201 | Permission denied. |
-| 2101022 | The number of requests exceeded the maximum allowed. |
+| [2101008](../errorcode-net-connection.md#2101008-callback-already-exists) | The callback already exists. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. |
+| [2100002](../errorcode-net-connection.md#2100002-service-connection-failure) | Failed to connect to the service. |
+| [2100003](../errorcode-net-connection.md#2100003-system-internal-error) | System internal error. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
+| [2101022](../errorcode-net-connection.md#2101022-number-of-requests-exceeding-the-maximum) | The number of requests exceeded the maximum allowed. |
 
 ## Examples
 
@@ -459,10 +459,10 @@ Cancels listening for network status changes.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. |
-| 2100002 | Failed to connect to the service. |
-| 2100003 | System internal error. |
-| 2101007 | The callback does not exist. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. |
+| [2100002](../errorcode-net-connection.md#2100002-service-connection-failure) | Failed to connect to the service. |
+| [2100003](../errorcode-net-connection.md#2100003-system-internal-error) | System internal error. |
+| [2101007](../errorcode-net-connection.md#2101007-callback-not-exist) | The callback does not exist. |
 
 ## Examples
 

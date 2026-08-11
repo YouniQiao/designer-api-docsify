@@ -1,6 +1,6 @@
 # CdsmClient
 
-管理CDSM客户端实例。在调用任何CDSM客户端方法之前，您必须使用{@link createCdsmClient}来创建CDSM客户端实例。
+Manages a CDSM client instance. Before invoking any CDSM client method,you must use {@link createCdsmClient} to create a CDSM client instance.
 
 **Since:** 26.0.0
 
@@ -22,7 +22,7 @@ import { cdsm } from 'kits/@kit.ConnectivityKit';
 getCdsmInfo(): CdsmInfo
 ```
 
-获取合作设备集合信息。
+Gets the coordinated devices set information.
 
 **Since:** 26.0.0
 
@@ -40,7 +40,7 @@ getCdsmInfo(): CdsmInfo
 
 | Type | Description |
 | --- | --- |
-| [CdsmInfo](arkts-connectivity-cdsm-cdsminfo-i.md) | 返回合作设备集信息。 |
+| [CdsmInfo](arkts-connectivity-cdsm-cdsminfo-i.md) | Returns the coordinated devices set information. |
 
 **Error codes:**
 
@@ -48,7 +48,7 @@ getCdsmInfo(): CdsmInfo
 | --- | --- |
 | 36100003 | NearLink disabled. |
 | 36100099 | Operation failed. |
-| 201 | Permission denied. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
 
 ## offCdsmInfoChange
 
@@ -56,7 +56,7 @@ getCdsmInfo(): CdsmInfo
 offCdsmInfoChange(callback?: Callback<CdsmInfo>): void
 ```
 
-取消订阅协作设备集信息变更事件。
+Unsubscribes from coordinated devices set information change event.
 
 **Since:** 26.0.0
 
@@ -72,7 +72,7 @@ offCdsmInfoChange(callback?: Callback<CdsmInfo>): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;CdsmInfo&gt; | No | 用于监听合作设备集信息的回调。 |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;CdsmInfo&gt; | No | Callback used to listen for the coordinated devices set information. |
 
 ## onCdsmInfoChange
 
@@ -80,9 +80,9 @@ offCdsmInfoChange(callback?: Callback<CdsmInfo>): void
 onCdsmInfoChange(callback: Callback<CdsmInfo>): void
 ```
 
-订阅协作设备集信息变更事件。
+Subscribes to coordinated devices set information change event.
 
-只有授予了ohos.permission.NEARLINK_ACCESS权限的应用程序才能访问此事件。如果应用被赋予了ohos.permission.GET_NEARLINK_PEER_MAC权限。回调返回真实设备地址，否则返回随机设备地址。
+This event is accessible only to applications that granted the ohos.permission.NEARLINK_ACCESS permission.If the application is granted the ohos.permission.GET_NEARLINK_PEER_MAC permission,the callback returns the real device address; otherwise, a random device address is returned.
 
 **Since:** 26.0.0
 
@@ -98,5 +98,5 @@ onCdsmInfoChange(callback: Callback<CdsmInfo>): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;CdsmInfo&gt; | Yes | 用于监听合作设备集信息的回调。 |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;CdsmInfo&gt; | Yes | Callback used to listen for the coordinated devices set information. |
 

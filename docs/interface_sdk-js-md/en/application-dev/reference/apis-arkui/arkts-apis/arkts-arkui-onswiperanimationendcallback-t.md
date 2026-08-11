@@ -4,7 +4,7 @@
 export type OnSwiperAnimationEndCallback = (index: int, extraInfo: SwiperAnimationEvent) => void
 ```
 
-切换动画结束时触发的回调。
+Defines a swiper callback when onAnimationEnd.
 
 **Since:** 23
 
@@ -20,6 +20,6 @@ export type OnSwiperAnimationEndCallback = (index: int, extraInfo: SwiperAnimati
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| index | int | Yes | 当前显示元素的索引。多列Swiper时，index为最左侧组件的索引。 取值范围为全体整数 取值限定为整数。 |
-| extraInfo | [SwiperAnimationEvent](../arkts-components/arkts-arkui-swiperanimationevent-i.md) | Yes | 动画相关信息，只返回主轴方向上当前显示元素相对于Swiper起始位置的位移。 |
+| index | int | Yes | The index value of the swiper page that when animation end. The value range is all integers The value should be an integer. |
+| extraInfo | [SwiperAnimationEvent](../arkts-components/arkts-arkui-swiperanimationevent-i.md) | Yes | The extra callback info. |
 

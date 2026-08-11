@@ -15,12 +15,6 @@
 
 **系统能力：** SystemCapability.Test.PerfTest
 
-## 导入模块
-
-```TypeScript
-import { PerfTestStrategy, PerfMetric, PerfTest, PerfMeasureResult } from 'kits/@kit.TestKit';
-```
-
 ## actionCode
 
 ```TypeScript

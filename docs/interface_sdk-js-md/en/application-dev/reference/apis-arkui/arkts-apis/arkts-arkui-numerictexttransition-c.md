@@ -1,8 +1,9 @@
 # NumericTextTransition
 
-数字翻牌动效。仅限正整数，不支持小数和负数。不支持渐变色和Text跑马灯模式。不支持选中，[copyOption](arkts-arkui-text-textattribute-i.md#copyoption)属性无效。当文本存在子组件时或通过属性字符串设置时，数字翻牌失效。
+Implements a flip animation for numeric text. It applies only to positive integers (decimals and negative numbers are not supported). Gradient colors and text marquee mode are not supported. Text selection is not supported, and the  
+[copyOption](arkts-arkui-text-textattribute-i.md#copyoption) property is ineffective. The flip animation fails if the text contains child components or is set via a styled string.
 
-NumericTextTransition继承自[ContentTransition](arkts-arkui-contenttransition-c.md)。
+**NumericTextTransition** inherits from [ContentTransition](arkts-arkui-contenttransition-c.md).
 
 **Inheritance/Implementation:** NumericTextTransition extends [ContentTransition](arkts-arkui-contenttransition-c.md)
 
@@ -20,7 +21,7 @@ NumericTextTransition继承自[ContentTransition](arkts-arkui-contenttransition-
 constructor(options?: NumericTextTransitionOptions)
 ```
 
-用于创建NumericTextTransition对象的构造函数。
+A constructor used to create a **NumericTextTransition** object.
 
 **Since:** 20
 
@@ -38,7 +39,7 @@ constructor(options?: NumericTextTransitionOptions)
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| options | [NumericTextTransitionOptions](arkts-arkui-numerictexttransitionoptions-i.md) | No | 设置数字翻牌动效。 默认值继承 [NumericTextTransitionOptions](arkts-arkui-numerictexttransitionoptions-i.md)。 |
+| options | [NumericTextTransitionOptions](arkts-arkui-numerictexttransitionoptions-i.md) | No | Options of the numeric flip animation. The default value is inherited from [NumericTextTransitionOptions](arkts-arkui-numerictexttransitionoptions-i.md). |
 
 ## enableBlur
 
@@ -46,13 +47,13 @@ constructor(options?: NumericTextTransitionOptions)
 enableBlur?: boolean
 ```
 
-是否开启翻牌模糊效果。
+Whether to enable the blur effect for the flip animation.
 
-默认值：false
+Default value: **false**
 
-true：开启翻牌模糊效果。
+**true**: Enable the blur effect.
 
-false：不开启翻牌模糊效果。
+**false**: Disable the blur effect.
 
 **Type:** boolean
 
@@ -74,9 +75,9 @@ false：不开启翻牌模糊效果。
 flipDirection?: FlipDirection
 ```
 
-翻牌方向。
+Direction of the flip animation.
 
-默认值：FlipDirection.DOWN
+Default value: **FlipDirection.DOWN**
 
 **Type:** [FlipDirection](arkts-arkui-textcommon-flipdirection-e.md)
 

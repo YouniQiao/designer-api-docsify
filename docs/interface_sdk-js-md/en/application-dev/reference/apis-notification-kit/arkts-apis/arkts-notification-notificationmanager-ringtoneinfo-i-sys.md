@@ -1,6 +1,6 @@
 # RingtoneInfo (System API)
 
-描述自定义铃声信息。
+Describes the custom ringtone information.
 
 **Since:** 21
 
@@ -24,7 +24,7 @@ import { notificationManager } from 'kits/@kit.NotificationKit';
 ringtoneFileName?: string
 ```
 
-铃声的文件名称。
+File name of the ringtone.
 
 **Type:** string
 
@@ -44,7 +44,7 @@ ringtoneFileName?: string
 ringtoneTitle?: string
 ```
 
-铃声的标题。
+Title of the ringtone.
 
 **Type:** string
 
@@ -64,7 +64,7 @@ ringtoneTitle?: string
 ringtoneType: RingtoneType
 ```
 
-铃声的类型。
+Type of the ringtone.
 
 **Type:** [RingtoneType](../../apis-audio-kit/arkts-apis/arkts-audio-systemsoundmanager-ringtonetype-e.md)
 
@@ -84,7 +84,7 @@ ringtoneType: RingtoneType
 ringtoneUri?: string
 ```
 
-铃声的URI。
+URI of the ringtone.
 
 **Type:** string
 

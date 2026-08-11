@@ -1,6 +1,6 @@
 # RichText properties/events
 
-定义RichText属性函数。
+Defines the RichText attribute functions.
 
 **Inheritance/Implementation:** RichTextAttribute extends [CommonMethod<RichTextAttribute>](CommonMethod<RichTextAttribute>)
 
@@ -18,7 +18,7 @@
 onComplete(callback: () => void)
 ```
 
-当富文本加载结束时触发。
+Triggered when the RichText loading ends.
 
 **Since:** 8
 
@@ -42,7 +42,7 @@ onComplete(callback: () => void)
 onStart(callback: () => void)
 ```
 
-当富文本加载开始时触发。
+Triggered when the RichText loading starts.
 
 **Since:** 8
 

@@ -1,6 +1,6 @@
 # DockInfo
 
-快捷栏中的应用信息。
+Describes information about an application in the shortcut bar.
 
 **Since:** 24
 
@@ -22,7 +22,7 @@ import { applicationManager } from 'kits/@kit.MDMKit';
 abilityName: string
 ```
 
-应用的Ability名称。
+Ability name of the application.
 
 **Type:** string
 
@@ -42,7 +42,7 @@ abilityName: string
 bundleName: string
 ```
 
-应用的包名。
+Bundle name of the application.
 
 **Type:** string
 
@@ -62,7 +62,7 @@ bundleName: string
 index: number
 ```
 
-应用在快捷栏中的位置索引。
+Location index of the application in the shortcut bar.
 
 **Type:** number
 

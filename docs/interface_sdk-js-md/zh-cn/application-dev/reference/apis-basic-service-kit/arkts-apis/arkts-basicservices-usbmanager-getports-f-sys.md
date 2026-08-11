@@ -1,11 +1,5 @@
 # getPorts（系统接口）
 
-## 导入模块
-
-```TypeScript
-import { usbManager } from 'kits/@kit.BasicServicesKit';
-```
-
 ## getPorts
 
 ```TypeScript

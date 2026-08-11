@@ -1,6 +1,6 @@
 # PackageConfig (System API)
 
-pack.info的包信息。
+PackageConfig: the package info class.
 
 **Since:** 9
 
@@ -18,7 +18,7 @@ pack.info的包信息。
 readonly deliveryWithInstall: boolean
 ```
 
-是否跟随应用一起安装。true表示跟随应用一起安装，false表示不跟随应用一起安装。
+Whether it should be installed together with the application. **true** if it should be installed together with the application, **false** otherwise.
 
 **Type:** boolean
 
@@ -38,7 +38,7 @@ readonly deliveryWithInstall: boolean
 readonly deviceTypes: Array<string>
 ```
 
-包支持的设备类型。
+Device types supported by the bundle.
 
 **Type:** Array&lt;string&gt;
 
@@ -58,7 +58,7 @@ readonly deviceTypes: Array<string>
 readonly moduleType: string
 ```
 
-包的module类型。
+Module type of the bundle.
 
 **Type:** string
 
@@ -78,7 +78,7 @@ readonly moduleType: string
 readonly name: string
 ```
 
-包的名称。
+Bundle name.
 
 **Type:** string
 

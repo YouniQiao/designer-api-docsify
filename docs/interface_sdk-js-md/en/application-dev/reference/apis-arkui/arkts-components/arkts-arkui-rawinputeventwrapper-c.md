@@ -1,20 +1,21 @@
 # RawInputEventWrapper
 
-原始输入事件包装器类。
+Raw input event wrapper class.
 
-提供统一的接口来访问不同类型的输入事件，确保类型安全和向后兼容性。
+Provides a unified interface to access different types of input events, ensuring type safety and backward compatibility.
 
-此类封装了原始的MouseEvent、TouchEvent或KeyEvent对象，并通过类型安全的方法访问。
+This class encapsulates either a raw **MouseEvent**, **TouchEvent**, or **KeyEvent** object and provides type-safe methods for access.
 
-此类为抽象类，开发者无法自行创建实例。系统会在触发输入事件监听器时自动创建实例并传递回调函数。
+This class is an abstract class. Developers cannot create instances on their own. The system automatically creates an instance and passes it to the callback when the input event listener is triggered.
 
-> **说明：**
+> **NOTE：**
 > 
-> 由于监听器在事件派发给具体组件之前执行，事件中的一些字段将无法提供有效值：如触发对象[target](arkts-arkui-eventtarget-i.md)、相对于组件的坐标
-> [x](arkts-arkui-mouseevent-i.md#x)和[y](arkts-arkui-mouseevent-i.md#y)、[getCurrentLocalPosition](arkts-arkui-touchobject-i.md#getcurrentlocalposition)和
-> [stopPropagation](arkts-arkui-touchevent-i.md#stoppropagation)方法、TouchEvent的[preventDefault](arkts-arkui-touchevent-i.md#preventdefault)和
-> [getHistoricalPoints](arkts-arkui-touchevent-i.md#gethistoricalpoints)方法以及KeyEvent的[metaKey](arkts-arkui-keyevent-i.md#metakey)属性和
-> [getModifierKeyState](arkts-arkui-keyevent-i.md#getmodifierkeystate)方法。
+> Since the listener is executed before events are dispatched to specific components, some fields in the event will
+> not provide valid values: the trigger object [target](arkts-arkui-eventtarget-i.md), coordinates relative to the component
+> [x](arkts-arkui-mouseevent-i.md#x) and [y](arkts-arkui-mouseevent-i.md#y), [getCurrentLocalPosition](arkts-arkui-touchobject-i.md#getcurrentlocalposition)
+> and [stopPropagation](arkts-arkui-touchevent-i.md#stoppropagation) methods, [preventDefault](arkts-arkui-touchevent-i.md#preventdefault) and
+> [getHistoricalPoints](arkts-arkui-touchevent-i.md#gethistoricalpoints) methods of **TouchEvent**, as well as the [metaKey](arkts-arkui-keyevent-i.md#metakey)
+> attribute and [getModifierKeyState](arkts-arkui-keyevent-i.md#getmodifierkeystate) method of **KeyEvent**.
 
 **Since:** 26.0.0
 
@@ -30,7 +31,7 @@
 asKeyEvent(): KeyEvent | null
 ```
 
-获取按键事件。
+Obtains the key event.
 
 **Since:** 26.0.0
 
@@ -56,7 +57,7 @@ asKeyEvent(): KeyEvent | null
 asMouseEvent(): MouseEvent | null
 ```
 
-获取鼠标事件。
+Obtains the mouse event.
 
 **Since:** 26.0.0
 
@@ -82,7 +83,7 @@ asMouseEvent(): MouseEvent | null
 asTouchEvent(): TouchEvent | null
 ```
 
-获取触摸事件。
+Obtains the touch event.
 
 **Since:** 26.0.0
 
@@ -108,7 +109,7 @@ asTouchEvent(): TouchEvent | null
 isKeyEvent(): boolean
 ```
 
-判断是否为按键事件。
+Checks whether the event is a key event.
 
 **Since:** 26.0.0
 
@@ -126,7 +127,7 @@ isKeyEvent(): boolean
 
 | Type | Description |
 | --- | --- |
-| boolean | 判断是否为按键事件，如果是按键事件则返回true，否则返回false。 |
+| boolean | Whether it is a key event. Returns **true** if it is a key event, and **false** otherwise. |
 
 ## isMouseEvent
 
@@ -134,7 +135,7 @@ isKeyEvent(): boolean
 isMouseEvent(): boolean
 ```
 
-判断是否为鼠标事件。
+Checks whether the event is a mouse event.
 
 **Since:** 26.0.0
 
@@ -152,7 +153,7 @@ isMouseEvent(): boolean
 
 | Type | Description |
 | --- | --- |
-| boolean | 判断是否为鼠标事件，如果是鼠标事件则返回true，否则返回false。 |
+| boolean | Whether it is a mouse event. Returns **true** if it is a mouse event, and **false** otherwise. |
 
 ## isTouchEvent
 
@@ -160,7 +161,7 @@ isMouseEvent(): boolean
 isTouchEvent(): boolean
 ```
 
-判断是否为触摸事件。
+Checks whether the event is a touch event.
 
 **Since:** 26.0.0
 
@@ -178,5 +179,5 @@ isTouchEvent(): boolean
 
 | Type | Description |
 | --- | --- |
-| boolean | 判断是否为触摸事件，如果是触摸事件则返回true，否则返回false。 |
+| boolean | Whether it is a touch event. Returns **true** if it is a touch event, and **false** otherwise. |
 

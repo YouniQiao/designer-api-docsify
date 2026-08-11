@@ -1,6 +1,6 @@
 # FlipDirection
 
-翻牌方向。默认值为DOWN。
+Enumerates the directions of the flip animation. The default value is **DOWN**.
 
 **Since:** 20
 
@@ -16,7 +16,7 @@
 DOWN = 0
 ```
 
-内容往下翻。
+Content flips downward.
 
 **Since:** 20
 
@@ -36,7 +36,7 @@ DOWN = 0
 UP = 1
 ```
 
-内容往上翻。
+Content flips upward.
 
 **Since:** 20
 

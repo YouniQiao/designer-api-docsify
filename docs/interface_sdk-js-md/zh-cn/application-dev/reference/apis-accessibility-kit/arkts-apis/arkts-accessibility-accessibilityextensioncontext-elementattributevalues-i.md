@@ -426,7 +426,7 @@ hotArea: Rect
 
 元素的可触摸区域。
 
-**类型：** [Rect](../../apis-form-kit/arkts-apis/arkts-form-forminfo-rect-i.md)
+**类型：** [Rect](../../apis-test-kit/arkts-apis/arkts-test-uitest-rect-i.md)
 
 **起始版本：** 12
 
@@ -732,7 +732,7 @@ rect: Rect
 
 元素的面积。
 
-**类型：** [Rect](../../apis-form-kit/arkts-apis/arkts-form-forminfo-rect-i.md)
+**类型：** [Rect](../../apis-test-kit/arkts-apis/arkts-test-uitest-rect-i.md)
 
 **起始版本：** 9
 
@@ -786,7 +786,7 @@ screenRect: Rect
 
 元素的显示区域。
 
-**类型：** [Rect](../../apis-form-kit/arkts-apis/arkts-form-forminfo-rect-i.md)
+**类型：** [Rect](../../apis-test-kit/arkts-apis/arkts-test-uitest-rect-i.md)
 
 **起始版本：** 9
 

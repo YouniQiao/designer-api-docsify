@@ -1,29 +1,34 @@
-# @ohos.enterprise.restrictions(限制类策略)
+# @ohos.enterprise.restrictions(Restrictions)
 
-本模块提供设置通用限制类策略能力。可以全局禁用和解除禁用蓝牙、HDC、USB、Wi-Fi、蜂窝数据、相机、麦克风等特性。
+This **restrictions** module provides APIs for disallowing general features of devices. You can globally disable and re-enable features such as Bluetooth, HDC, USB, Wi-Fi, cellular data, camera, and microphone.
 
-**使用场景**：
+**Use cases**
 
-- 企业设备管理场景下，管理员需要对员工设备进行功能限制，防止数据泄露或非授权使用。  
-- BYOD（Bring Your Own Device）场景下，企业空间需要限制设备功能以符合企业安全策略。  
-- 设备安全管控场景下，需要禁用特定功能以保护企业敏感信息。
+- In enterprise device management scenarios, administrators need to restrict functions on employee devices to prevent  
+data leaks or unauthorized use.  
+- In Bring Your Own Device (BYOD) scenarios, the enterprise space needs to restrict device functions to comply with  
+enterprise security policies.  
+- In device security control scenarios, specific functions need to be disabled to protect sensitive enterprise  
+information.
 
-**能解决的问题**：
+**Problems that can be solved**
 
-- 防止员工通过蓝牙、USB等方式传输企业敏感数据。  
-- 限制设备调试能力（HDC）以提升设备安全性。  
-- 控制网络访问能力（Wi-Fi、蜂窝数据等）以符合企业网络策略。  
-- 管理设备多媒体能力（相机、麦克风等）以保护隐私和企业机密。
+- Prevent employees from transferring sensitive enterprise data via Bluetooth, USB, or other means.  
+- Restrict device debugging capabilities (HDC) to enhance device security.  
+- Control network access (Wi-Fi, cellular data, and so on) to comply with enterprise network policies.  
+- Manage device multimedia capabilities (camera, microphone, and so on) to protect privacy and enterprise  
+confidentiality
 
-**带来的收益**：
+**Benefits**
 
-- 提升企业设备安全性，降低数据泄露风险。  
-- 满足企业合规要求，符合安全审计标准。  
-- 实现精细化的设备功能管控，平衡安全与使用体验。
+- Enhance enterprise device security and reduces the risk of data leaks.  
+- Meet compliance requirements and align with security audit standards.  
+- Enable fine-grained device function control, balancing security and user experience.
 
-> **说明：**
+> **NOTE：**
 > 
-> 本模块接口仅对设备管理应用开放，且调用接口前需激活设备管理应用，具体请参考[MDM Kit开发指南](../../../mdm/mdm-kit-guide.md)。
+> The APIs of this module can be called only by a device administrator application that is enabled. For details, see
+> [MDM Kit Development](../../../mdm/mdm-kit-guide.md).
 
 **Since:** 12
 
@@ -45,44 +50,44 @@ import { restrictions } from 'kits/@kit.MDMKit';
 
 | Name | Description |
 | --- | --- |
-| [addDisallowedListForAccount](arkts-mdm-restrictions-adddisallowedlistforaccount-f.md#adddisallowedlistforaccount) | 为指定用户添加禁止使用某特性的应用名单。指定用户下，添加到名单中的应用不允许使用指定的特性能力。 |
-| [disableMicrophone](arkts-mdm-restrictions-disablemicrophone-f.md#disablemicrophone) | 使设备禁用或启用麦克风。 |
-| [getDisallowedListForAccount](arkts-mdm-restrictions-getdisallowedlistforaccount-f.md#getdisallowedlistforaccount) | 获取指定用户禁止使用某特性的应用名单。 |
-| [getDisallowedPolicy](arkts-mdm-restrictions-getdisallowedpolicy-f.md#getdisallowedpolicy) | 查询某特性是否被禁用。 |
-| [getDisallowedPolicy](arkts-mdm-restrictions-getdisallowedpolicy-f.md#getdisallowedpolicy-1) | 查询指定设备特性是否被禁用。 |
-| [getDisallowedPolicyForAccount](arkts-mdm-restrictions-getdisallowedpolicyforaccount-f.md#getdisallowedpolicyforaccount) | 获取指定用户的某特性状态。 |
-| [getDisallowedPolicyForAccount](arkts-mdm-restrictions-getdisallowedpolicyforaccount-f.md#getdisallowedpolicyforaccount-1) | 获取指定用户的某特性状态。 |
-| [getUserRestricted](arkts-mdm-restrictions-getuserrestricted-f.md#getuserrestricted) | 获取设置项的禁用状态。 |
-| [getUserRestricted](arkts-mdm-restrictions-getuserrestricted-f.md#getuserrestricted-1) | 获取设置项的禁用状态 |
-| [getUserRestrictedForAccount](arkts-mdm-restrictions-getuserrestrictedforaccount-f.md#getuserrestrictedforaccount) | 获取指定用户设置项的禁用状态。 |
-| [getUserRestrictedForAccount](arkts-mdm-restrictions-getuserrestrictedforaccount-f.md#getuserrestrictedforaccount-1) | 获取指定用户设置项的禁用状态。 |
-| [isFingerprintAuthDisabled](arkts-mdm-restrictions-isfingerprintauthdisabled-f.md#isfingerprintauthdisabled) | 查询指纹认证是否被禁用。 |
-| [isHdcDisabled](arkts-mdm-restrictions-ishdcdisabled-f.md#ishdcdisabled) | 查询HDC是否被禁用。使用callback异步回调。 |
-| [isHdcDisabled](arkts-mdm-restrictions-ishdcdisabled-f.md#ishdcdisabled-1) | 查询HDC是否被禁用。使用Promise异步回调。 |
-| [isMicrophoneDisabled](arkts-mdm-restrictions-ismicrophonedisabled-f.md#ismicrophonedisabled) | 查询麦克风是否被禁用。 |
-| [isPrinterDisabled](arkts-mdm-restrictions-isprinterdisabled-f.md#isprinterdisabled) | 查询设备打印能力是否被禁用。使用callback异步回调。 |
-| [isPrinterDisabled](arkts-mdm-restrictions-isprinterdisabled-f.md#isprinterdisabled-1) | 查询设备打印能力是否被禁用。使用Promise异步回调。 |
-| [removeDisallowedListForAccount](arkts-mdm-restrictions-removedisallowedlistforaccount-f.md#removedisallowedlistforaccount) | 为指定用户移除禁止使用某特性的应用名单。 |
-| [setDisallowedPolicy](arkts-mdm-restrictions-setdisallowedpolicy-f.md#setdisallowedpolicy) | 设置禁用/启用某特性。 |
-| [setDisallowedPolicy](arkts-mdm-restrictions-setdisallowedpolicy-f.md#setdisallowedpolicy-1) | 设置禁用/启用指定设备特性，禁用后相关设备特性无法被使用。 |
-| [setDisallowedPolicyForAccount](arkts-mdm-restrictions-setdisallowedpolicyforaccount-f.md#setdisallowedpolicyforaccount) | 设置禁用/启用指定用户的某特性。 |
-| [setDisallowedPolicyForAccount](arkts-mdm-restrictions-setdisallowedpolicyforaccount-f.md#setdisallowedpolicyforaccount-1) | 设置禁用/启用指定用户的某特性。 |
-| [setFingerprintAuthDisabled](arkts-mdm-restrictions-setfingerprintauthdisabled-f.md#setfingerprintauthdisabled) | 禁用或启用指纹认证。 |
-| [setHdcDisabled](arkts-mdm-restrictions-sethdcdisabled-f.md#sethdcdisabled) | 使设备禁用或启用[HDC](../../../../device-dev/subsystems/subsys-toolchain-hdc-guide.md)。使用callback异步回调。 |
-| [setHdcDisabled](arkts-mdm-restrictions-sethdcdisabled-f.md#sethdcdisabled-1) | 使设备禁用或启用HDC。使用Promise异步回调。 |
-| [setPrinterDisabled](arkts-mdm-restrictions-setprinterdisabled-f.md#setprinterdisabled) | 使设备禁用或启用打印能力。使用callback异步回调。 |
-| [setPrinterDisabled](arkts-mdm-restrictions-setprinterdisabled-f.md#setprinterdisabled-1) | 使设备禁用或启用打印能力。使用Promise异步回调。 |
-| [setUserRestriction](arkts-mdm-restrictions-setuserrestriction-f.md#setuserrestriction) | 设置用户行为的限制规则。 |
-| [setUserRestriction](arkts-mdm-restrictions-setuserrestriction-f.md#setuserrestriction-1) | 设置用户行为的限制规则。 |
-| [setUserRestrictionForAccount](arkts-mdm-restrictions-setuserrestrictionforaccount-f.md#setuserrestrictionforaccount) | 设置指定用户行为的限制规则。 |
-| [setUserRestrictionForAccount](arkts-mdm-restrictions-setuserrestrictionforaccount-f.md#setuserrestrictionforaccount-1) | 限制指定用户修改指定的设置项。 |
+| [addDisallowedListForAccount](arkts-mdm-restrictions-adddisallowedlistforaccount-f.md#adddisallowedlistforaccount) | Adds a list of applications that are not allowed to use a feature for a specified user. |
+| [disableMicrophone](arkts-mdm-restrictions-disablemicrophone-f.md#disablemicrophone) | Enables or disables the microphone. |
+| [getDisallowedListForAccount](arkts-mdm-restrictions-getdisallowedlistforaccount-f.md#getdisallowedlistforaccount) | Obtains the list of applications that are not allowed to use a feature for a specified user. |
+| [getDisallowedPolicy](arkts-mdm-restrictions-getdisallowedpolicy-f.md#getdisallowedpolicy) | Queries whether a feature is disabled. |
+| [getDisallowedPolicy](arkts-mdm-restrictions-getdisallowedpolicy-f.md#getdisallowedpolicy-1) | Queries whether a specified device feature is disabled. |
+| [getDisallowedPolicyForAccount](arkts-mdm-restrictions-getdisallowedpolicyforaccount-f.md#getdisallowedpolicyforaccount) | Obtains the status of a feature for a specified user. |
+| [getDisallowedPolicyForAccount](arkts-mdm-restrictions-getdisallowedpolicyforaccount-f.md#getdisallowedpolicyforaccount-1) | Obtains the status of a feature for a specified user. |
+| [getUserRestricted](arkts-mdm-restrictions-getuserrestricted-f.md#getuserrestricted) | Obtains the disabled status of a setting item. |
+| [getUserRestricted](arkts-mdm-restrictions-getuserrestricted-f.md#getuserrestricted-1) | Obtains the disabled status of the specified device setting item. |
+| [getUserRestrictedForAccount](arkts-mdm-restrictions-getuserrestrictedforaccount-f.md#getuserrestrictedforaccount) | Obtains the disabled status of a setting item for a specified user. |
+| [getUserRestrictedForAccount](arkts-mdm-restrictions-getuserrestrictedforaccount-f.md#getuserrestrictedforaccount-1) | Obtains the disabled status of a setting item for a specified user. |
+| [isFingerprintAuthDisabled](arkts-mdm-restrictions-isfingerprintauthdisabled-f.md#isfingerprintauthdisabled) | Queries whether fingerprint authentication is disabled. |
+| [isHdcDisabled](arkts-mdm-restrictions-ishdcdisabled-f.md#ishdcdisabled) | Queries whether HDC is disabled. This API uses an asynchronous callback to return the result. |
+| [isHdcDisabled](arkts-mdm-restrictions-ishdcdisabled-f.md#ishdcdisabled-1) | Queries whether HDC is disabled. This API uses a promise to return the result. |
+| [isMicrophoneDisabled](arkts-mdm-restrictions-ismicrophonedisabled-f.md#ismicrophonedisabled) | Queries whether the microphone is disabled. |
+| [isPrinterDisabled](arkts-mdm-restrictions-isprinterdisabled-f.md#isprinterdisabled) | Queries whether the printing capability of a device is disabled. This API uses an asynchronous callback to return the result. |
+| [isPrinterDisabled](arkts-mdm-restrictions-isprinterdisabled-f.md#isprinterdisabled-1) | Queries whether the printing capability of a device is disabled. This API uses a promise to return the result. |
+| [removeDisallowedListForAccount](arkts-mdm-restrictions-removedisallowedlistforaccount-f.md#removedisallowedlistforaccount) | Removes the list of applications that are not allowed to use a feature for a specified user. |
+| [setDisallowedPolicy](arkts-mdm-restrictions-setdisallowedpolicy-f.md#setdisallowedpolicy) | Disallows a feature.  > **NOTE：** >  > This API applies a device-level restriction policy that affects all users of the device. To set a restriction > policy for a specific user, use the > [setDisallowedPolicyForAccount](arkts-mdm-restrictions-setdisallowedpolicyforaccount-f.md#setdisallowedpolicyforaccount) API. |
+| [setDisallowedPolicy](arkts-mdm-restrictions-setdisallowedpolicy-f.md#setdisallowedpolicy-1) | Enables or disables a specified device feature. Once disabled, the feature cannot be used. |
+| [setDisallowedPolicyForAccount](arkts-mdm-restrictions-setdisallowedpolicyforaccount-f.md#setdisallowedpolicyforaccount) | Disallows a feature for a specified user. |
+| [setDisallowedPolicyForAccount](arkts-mdm-restrictions-setdisallowedpolicyforaccount-f.md#setdisallowedpolicyforaccount-1) | Disallows a feature for a specified user. |
+| [setFingerprintAuthDisabled](arkts-mdm-restrictions-setfingerprintauthdisabled-f.md#setfingerprintauthdisabled) | Enables or disables fingerprint authentication. |
+| [setHdcDisabled](arkts-mdm-restrictions-sethdcdisabled-f.md#sethdcdisabled) | Enables or disables [HDC](../../../../device-dev/subsystems/subsys-toolchain-hdc-guide.md). This API uses an asynchronous callback to return the result. |
+| [setHdcDisabled](arkts-mdm-restrictions-sethdcdisabled-f.md#sethdcdisabled-1) | Enables or disables HDC on a device. This API uses a promise to return the result. |
+| [setPrinterDisabled](arkts-mdm-restrictions-setprinterdisabled-f.md#setprinterdisabled) | Enables or disables the printing capability of the device. This API uses an asynchronous callback to return the result. |
+| [setPrinterDisabled](arkts-mdm-restrictions-setprinterdisabled-f.md#setprinterdisabled-1) | Enables or disables the printing capability of the device. This API uses a promise to return the result. |
+| [setUserRestriction](arkts-mdm-restrictions-setuserrestriction-f.md#setuserrestriction) | Sets restrictions on user behaviors. |
+| [setUserRestriction](arkts-mdm-restrictions-setuserrestriction-f.md#setuserrestriction-1) | Restricts users from modifying specified device setting items. |
+| [setUserRestrictionForAccount](arkts-mdm-restrictions-setuserrestrictionforaccount-f.md#setuserrestrictionforaccount) | Sets restrictions on specified user behaviors. |
+| [setUserRestrictionForAccount](arkts-mdm-restrictions-setuserrestrictionforaccount-f.md#setuserrestrictionforaccount-1) | Restricts a specified user from modifying specified setting items. |
 
 ### Enums
 
 | Name | Description |
 | --- | --- |
-| [FeatureForAccount](arkts-mdm-restrictions-featureforaccount-e.md) | 可为指定用户设置禁用/启用的特性的枚举。 |
-| [FeatureForDevice](arkts-mdm-restrictions-featurefordevice-e.md) | 设备特性枚举。 |
-| [SettingsForAccount](arkts-mdm-restrictions-settingsforaccount-e.md) | 用户设置项枚举。 |
-| [SettingsForDevice](arkts-mdm-restrictions-settingsfordevice-e.md) | 设备设置项枚举。 |
+| [FeatureForAccount](arkts-mdm-restrictions-featureforaccount-e.md) | Enumerates the features that can be disabled or enabled for a specified user. |
+| [FeatureForDevice](arkts-mdm-restrictions-featurefordevice-e.md) | Enumerates device features. |
+| [SettingsForAccount](arkts-mdm-restrictions-settingsforaccount-e.md) | Enumerates user setting items. |
+| [SettingsForDevice](arkts-mdm-restrictions-settingsfordevice-e.md) | Enumerates device setting items. |
 

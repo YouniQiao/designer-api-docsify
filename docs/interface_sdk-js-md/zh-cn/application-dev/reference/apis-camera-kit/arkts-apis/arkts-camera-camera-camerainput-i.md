@@ -12,12 +12,6 @@
 
 **系统能力：** SystemCapability.Multimedia.Camera.Core
 
-## 导入模块
-
-```TypeScript
-import { camera } from 'kits/@kit.CameraKit';
-```
-
 ## close
 
 ```TypeScript
@@ -46,7 +40,7 @@ close(callback: AsyncCallback<void>): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 7400201 | Camera service fatal error. |
+| [7400201](../errorcode-camera.md#7400201-相机服务异常) | Camera service fatal error. |
 
 ## close
 
@@ -76,7 +70,7 @@ close(): Promise<void>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 7400201 | Camera service fatal error. |
+| [7400201](../errorcode-camera.md#7400201-相机服务异常) | Camera service fatal error. |
 
 ## getPhysicalCameraOrientation
 
@@ -187,7 +181,7 @@ off(type: 'cameraOcclusionDetection', callback?: AsyncCallback<CameraOcclusionDe
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 202 | Not System Application.<br>**适用版本：** 12 - 22 |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not System Application.<br>**适用版本：** 12 - 22 |
 
 ## offCameraOcclusionDetection
 
@@ -297,7 +291,7 @@ on(type: 'cameraOcclusionDetection', callback: AsyncCallback<CameraOcclusionDete
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 202 | Not System Application.<br>**适用版本：** 12 - 22 |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not System Application.<br>**适用版本：** 12 - 22 |
 
 ## onCameraOcclusionDetection
 
@@ -372,9 +366,9 @@ open(callback: AsyncCallback<void>): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 7400201 | Camera service fatal error. |
-| 7400107 | Can not use camera cause of conflict. |
-| 7400108 | Camera disabled cause of security reason. |
+| [7400201](../errorcode-camera.md#7400201-相机服务异常) | Camera service fatal error. |
+| [7400107](../errorcode-camera.md#7400107-相机冲突) | Can not use camera cause of conflict. |
+| [7400108](../errorcode-camera.md#7400108-安全策略无法使用相机) | Camera disabled cause of security reason. |
 
 ## open
 
@@ -404,10 +398,10 @@ open(): Promise<void>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 7400102 | Operation not allowed. |
-| 7400201 | Camera service fatal error. |
-| 7400107 | Can not use camera cause of conflict. |
-| 7400108 | Camera disabled cause of security reason. |
+| [7400102](../errorcode-camera.md#7400102-非法操作) | Operation not allowed. |
+| [7400201](../errorcode-camera.md#7400201-相机服务异常) | Camera service fatal error. |
+| [7400107](../errorcode-camera.md#7400107-相机冲突) | Can not use camera cause of conflict. |
+| [7400108](../errorcode-camera.md#7400108-安全策略无法使用相机) | Camera disabled cause of security reason. |
 
 ## open
 
@@ -443,9 +437,9 @@ open(isSecureEnabled: boolean): Promise<bigint>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 7400201 | Camera service fatal error. |
-| 7400107 | Can not use camera cause of conflict. |
-| 7400108 | Camera disabled cause of security reason. |
+| [7400201](../errorcode-camera.md#7400201-相机服务异常) | Camera service fatal error. |
+| [7400107](../errorcode-camera.md#7400107-相机冲突) | Can not use camera cause of conflict. |
+| [7400108](../errorcode-camera.md#7400108-安全策略无法使用相机) | Camera disabled cause of security reason. |
 
 ## open
 
@@ -481,10 +475,10 @@ open(type: CameraConcurrentType): Promise<void>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 7400102 | Operation not allowed. |
-| 7400201 | Camera service fatal error. |
-| 7400107 | Can not use camera cause of conflict. |
-| 7400108 | Camera disabled cause of security reason. |
+| [7400102](../errorcode-camera.md#7400102-非法操作) | Operation not allowed. |
+| [7400201](../errorcode-camera.md#7400201-相机服务异常) | Camera service fatal error. |
+| [7400107](../errorcode-camera.md#7400107-相机冲突) | Can not use camera cause of conflict. |
+| [7400108](../errorcode-camera.md#7400108-安全策略无法使用相机) | Camera disabled cause of security reason. |
 
 ## usePhysicalCameraOrientation
 
@@ -514,6 +508,6 @@ usePhysicalCameraOrientation(isUsed: boolean): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 7400102 | Operation not allowed. |
-| 7400201 | Camera service fatal error. |
+| [7400102](../errorcode-camera.md#7400102-非法操作) | Operation not allowed. |
+| [7400201](../errorcode-camera.md#7400201-相机服务异常) | Camera service fatal error. |
 

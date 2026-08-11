@@ -1,6 +1,6 @@
 # OnscreenAwarenessOptions（系统接口）
 
-Defines the list of onscreen awareness parameters, which is used to obtain onscreen information in specific scenarios. For example, a window ID is provided to collect application UI content and links.
+屏上感知参数列表，用于特定场景下获取屏上信息，如提供窗口ID用以采集应用界面内容和链接。
 
 **起始版本：** 23
 
@@ -12,21 +12,15 @@ Defines the list of onscreen awareness parameters, which is used to obtain onscr
 
 **系统接口：** 此接口为系统接口。
 
-## 导入模块
-
-```TypeScript
-import { onScreen } from 'kits/@kit.MultimodalAwarenessKit';
-```
-
 ## parameters
 
 ```TypeScript
 parameters?: Record<string, Object>
 ```
 
-List of awareness parameters. The parameter result is a key-value data object.
+感知参数列表，参数结果是key-value数据对象。
 
-**类型：** [Record](../../apis-default/arkts-apis/arkts-record-t.md)&lt;string, Object&gt;
+**类型：** Record&lt;string, Object&gt;
 
 **起始版本：** 23
 

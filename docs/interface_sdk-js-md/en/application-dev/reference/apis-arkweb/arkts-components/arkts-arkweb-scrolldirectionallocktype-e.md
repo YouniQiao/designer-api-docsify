@@ -1,6 +1,6 @@
 # ScrollDirectionalLockType
 
-定义滑动方向锁定的场景类型。
+Enum defining the scope of directional lock behavior in the WebView, used with {@link enableScrollDirectionalLock}.
 
 **Since:** 26.0.0
 
@@ -16,7 +16,7 @@
 ALL = 0
 ```
 
-所有场景都支持滑动锁定。
+Applies directional lock across all scroll contexts.This includes both nested and flat scroll scenarios.
 
 **Since:** 26.0.0
 
@@ -34,7 +34,7 @@ ALL = 0
 NESTED_SCROLL = 1
 ```
 
-嵌套滚动场景下支持滑动锁定。
+Applies directional lock only within nested scroll scenarios.This is the default behavior in ArkWeb to improve UX in complex scroll hierarchies.
 
 **Since:** 26.0.0
 

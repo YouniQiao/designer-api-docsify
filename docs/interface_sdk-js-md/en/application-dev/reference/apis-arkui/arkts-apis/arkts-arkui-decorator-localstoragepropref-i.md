@@ -16,7 +16,7 @@ Defining LocalStoragePropRef annotation LocalStoragePropRef is an annotation whi
 property: string
 ```
 
-用于标识LocalStorage的属性。
+The give property in LocalStorage.
 
 **Type:** string
 

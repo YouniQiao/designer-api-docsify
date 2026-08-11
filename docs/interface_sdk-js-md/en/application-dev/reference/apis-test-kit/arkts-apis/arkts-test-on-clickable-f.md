@@ -26,7 +26,7 @@ Specifies the clickable status of the target Component.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| b | boolean | No | the clickable status.Set it default true if null or undefined. |
+| b | boolean | No | the clickable status. &lt;br&gt;Default value: true |
 
 **Return value:**
 

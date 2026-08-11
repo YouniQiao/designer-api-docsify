@@ -1,11 +1,5 @@
 # killProcessesInBatch（系统接口）
 
-## 导入模块
-
-```TypeScript
-import { appManager } from 'kits/@kit.AbilityKit';
-```
-
 ## killProcessesInBatch
 
 ```TypeScript
@@ -43,13 +37,15 @@ function killProcessesInBatch(pids: Array<int>): Promise<void>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
-| 801 | Capability not supported. |
-| 16000050 | Internal error. |
-| 201 | Permission denied. |
-| 202 | Not system application. |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| [801](../../errorcode-universal.md#801-该设备不支持此api) | Capability not supported. |
+| [16000050](../errorcode-ability.md#16000050-内部错误) | Internal error. |
+| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not system application. |
 
 ## 示例
+
+ArkTS-Dyn示例：
 
 ```TypeScript
 import { appManager } from '@kit.AbilityKit';
@@ -60,7 +56,30 @@ try {
   appManager.killProcessesInBatch(pids).then(() => {
     console.info(`killProcessesInBatch success`);
   }).catch((err: BusinessError) => {
-    console.error(`killProcessesInBatch fail, err: ${JSON.stringify(err)}`);
+    console.error(`killProcessesInBatch fail, err: ${err.code}, ${err.message}`);
+  });
+} catch (paramError) {
+  let code = (paramError as BusinessError).code;
+  let message = (paramError as BusinessError).message;
+  console.error(`[appManager] killProcessesInBatch error: ${code}, ${message}`);
+}
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+'use static'
+import { appManager } from '@kit.AbilityKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+try {
+  let pids: Array<int> = [100, 101, 102];
+  appManager.killProcessesInBatch(pids).then(() => {
+    console.info(`killProcessesInBatch success`);
+  }).catch((paramError) => {
+    let code = (paramError as BusinessError).code;
+    let message = (paramError as BusinessError).message;
+    console.error(`killProcessesInBatch fail, err: ${code}, ${message}`);
   });
 } catch (paramError) {
   let code = (paramError as BusinessError).code;

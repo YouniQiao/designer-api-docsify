@@ -1,19 +1,15 @@
 # AVPlayer
 
-播放管理类，用于管理和播放媒体资源。在调用AVPlayer的方法前，需要先通过  
-[createAVPlayer()](arkts-media-media-createavplayer-f.md#createavplayer)构建一个AVPlayer实例。
+AVPlayer is a playback management class. It provides APIs to manage and play media assets. Before calling any API in AVPlayer, you must use   
+[createAVPlayer()](arkts-media-media-createavplayer-f.md#createavplayer) to create an AVPlayer instance.
 
-在使用AVPlayer实例的方法时，建议开发者注册相关回调，主动获取当前状态变化。  
-[on('stateChange')](media.AVPlayer.on(type: 'stateChange', callback: OnAVPlayerStateChangeHandle))：监听播放状态机AVPlayerState切换。[on('error')](media.AVPlayer.on(type: 'error', callback: ErrorCallback))：监听错误事件。
+When using the AVPlayer instance, you are advised to register the following callbacks to proactively obtain status changes: [on('stateChange')](media.AVPlayer.on(type: 'stateChange', callback: OnAVPlayerStateChangeHandle)): listens for AVPlayer state changes. [on('error')](media.AVPlayer.on(type: 'error', callback: ErrorCallback)):listens for error events.
 
-应用需要按照实际业务需求合理使用AVPlayer对象，按需创建并及时释放，避免持有过多AVPlayer实例导致内存消耗过大，否则在一定情况下可能导致系统终止应用。
+Applications must properly manage AVPlayer instances according to their specific needs, creating and freeing them when necessary. Holding too many AVPlayer instances can lead to high memory usage, and in some cases, the system might terminate applications to free up resources.
 
-Audio/Video播放demo可参考：[音频播放开发指导](../../../media/media/using-avplayer-for-playback.md)、  
-[视频播放开发指导](../../../media/media/video-playback.md)。
-
-> **说明：**
-> 
-> - 本Interface首批API从API version 9开始支持。
+For details about the audio and video playback demo, see   
+[Audio Playback](../../../media/media/using-avplayer-for-playback.md) and   
+[Video Playback](../../../media/media/video-playback.md).
 
 **Since:** 9
 
@@ -28,6 +24,42 @@ Audio/Video播放demo可参考：[音频播放开发指导](../../../media/media
 ```TypeScript
 import { media } from 'kits/@kit.MediaKit';
 ```
+
+## enableCameraPostprocessing
+
+```TypeScript
+enableCameraPostprocessing(): Promise<void>
+```
+
+Enable the post-processing function of Camera for video playback.
+
+**Since:** 26.0.0
+
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
+
+**Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API:** This API can be used in atomic services since API version 26.0.0.
+
+<!--Device-AVPlayer-enableCameraPostprocessing(): Promise<void>--><!--Device-AVPlayer-enableCameraPostprocessing(): Promise<void>-End-->
+
+**System capability:** SystemCapability.Multimedia.Media.AVPlayer
+
+**System API:** This is a system API.
+
+**Return value:**
+
+| Type | Description |
+| --- | --- |
+| Promise&lt;void&gt; | Promise that returns no value. |
+
+**Error codes:**
+
+| Error Code ID | Error Message |
+| --- | --- |
+| [5400102](../errorcode-media.md#5400102-unsupported-operation) | Operation not allowed. Return by promise. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Called from Non-System applications. Return by promise. |
+| [5400105](../errorcode-media.md#5400105-play-service-dead) | Service died. |
 
 ## forceLoadVideo
 
@@ -65,21 +97,17 @@ Specifies whether to forcibly load the video. This API can be called only when t
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 202 | Called from Non-System applications. Return by promise. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Called from Non-System applications. Return by promise. |
 
-## getCurrentTrack
+## enableStartFrameRateOpt
 
-ArkTS-Dyn:
 ```TypeScript
-getCurrentTrack(trackType: MediaType): Promise<number>
+enableStartFrameRateOpt?: boolean
 ```
 
-ArkTS-Sta:
-```TypeScript
-getCurrentTrack(trackType: MediaType): Promise<int>
-```
+Whether a slower synchronization policy is used at the start of playback to reduce subjective image jitter caused by insufficient frame rate. Default value: false, means that the slower synchronization policy will not be used.
 
-Obtains the selected track by the specified media type. This API can be called only when the AVPlayer is in the prepared, playing, or paused state. This API uses a promise to return the result.
+**Type:** boolean
 
 **Since:** 26.0.0
 
@@ -87,31 +115,9 @@ Obtains the selected track by the specified media type. This API can be called o
 
 **Model restriction:** This API can be used only in the stage model.
 
-<!--Device-AVPlayer-getCurrentTrack(trackType: MediaType): Promise<int>--><!--Device-AVPlayer-getCurrentTrack(trackType: MediaType): Promise<int>-End-->
+<!--Device-AVPlayer-enableStartFrameRateOpt?: boolean--><!--Device-AVPlayer-enableStartFrameRateOpt?: boolean-End-->
 
 **System capability:** SystemCapability.Multimedia.Media.AVPlayer
 
 **System API:** This is a system API.
-
-**Parameters:**
-
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| trackType | [MediaType](../../apis-arkweb/arkts-apis/arkts-arkweb-webview-mediatype-e.md) | Yes | specified media Type, see [MediaType](#MediaType). |
-
-**Return value:**
-
-| Type | Description |
-| --- | --- |
-| ArkTS-Dyn: Promise&lt;number&gt;  <br>ArkTS-Sta：Promise&lt;int&gt; | A Promise instance used to return selected track index. |
-
-**Error codes:**
-
-| Error Code ID | Error Message |
-| --- | --- |
-| 5400102 | Operation not allowed. Return by promise. |
-| 5400103 | I/O error. Return by promise. |
-| 5400101 | No memory. Return by promise. |
-| 202 | Called from Non-System applications. Return by promise. |
-| 5400105 | Service died. Return by promise. |
 

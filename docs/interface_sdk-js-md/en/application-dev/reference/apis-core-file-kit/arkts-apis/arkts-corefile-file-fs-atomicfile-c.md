@@ -1,10 +1,10 @@
 # AtomicFile
 
-AtomicFile是一个用于对文件进行原子读写操作的类。
+AtomicFile is a class used to perform atomic read and write operations on files.
 
-在写操作时，通过写入临时文件，并在写入成功后将其重命名到原始文件位置来确保写入文件的完整性；而在写入失败时删除临时文件，不修改原始文件内容。
+A temporary file is written and renamed to the original file location, which ensures file integrity. If the write operation fails, the temporary file is deleted without modifying the original file content.
 
-使用者可以自行调用finishWrite或failWrite来完成文件内容的写入或回滚。
+You can call **finishWrite()** or **failWrite()** to write or roll back file content.
 
 **Since:** 15
 
@@ -26,7 +26,7 @@ import { Options, ReaderIteratorResult, Watcher, ReadTextOptions, WatchEventList
 constructor(path: string)
 ```
 
-对于给定路径的文件创建一个AtomicFile类。
+Creates an **AtomicFile** class for a file in a specified path.
 
 **Since:** 15
 
@@ -40,13 +40,13 @@ constructor(path: string)
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| path | string | Yes | 文件的沙箱路径。 |
+| path | string | Yes | Application sandbox path of the file. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. Possible causes:1.Mandatory parameters are left unspecified; &lt;br&gt;2.Incorrect parameter types. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes:1.Mandatory parameters are left unspecified; &lt;br&gt;2.Incorrect parameter types. |
 
 ## delete
 
@@ -54,7 +54,7 @@ constructor(path: string)
 delete(): void
 ```
 
-删除AtomicFile类，会删除原始文件和临时文件。
+Deletes the **AtomicFile** class, including the original files and temporary files.
 
 **Since:** 15
 
@@ -78,6 +78,7 @@ delete(): void
 
 ```TypeScript
 import { common } from '@kit.AbilityKit';
+import { fileIo as fs} from '@kit.CoreFileKit';
 import { util } from '@kit.ArkTS';
 
 // Obtain the context from the component and ensure that the return value of this.getUIContext().getHostContext() is UIAbilityContext.
@@ -85,7 +86,7 @@ let context = this.getUIContext().getHostContext() as common.UIAbilityContext;
 let pathDir = context.filesDir;
 
 try {
-  let file = new fileIo.AtomicFile(`${pathDir}/read.txt`);
+  let file = new fs.AtomicFile(`${pathDir}/read.txt`);
   let writeStream = file.startWrite();
   writeStream.write("hello, world", "utf-8", ()=> {
     file.finishWrite();
@@ -93,8 +94,8 @@ try {
       let data = file.readFully();
       let decoder = util.TextDecoder.create('utf-8');
       let str = decoder.decodeToString(new Uint8Array(data));
+      console.info('AtomicFile readFully str is: ' + str);
       file.delete();
-      console.info(`Succeeded in delete atomicfile.`);
     },1000);
   })
 } catch (err) {
@@ -108,7 +109,7 @@ try {
 failWrite(): void
 ```
 
-文件写入失败后调用，将执行文件回滚操作。
+Rolls back the file after the file fails to be written.
 
 **Since:** 15
 
@@ -128,16 +129,17 @@ failWrite(): void
 
 ```TypeScript
 import { common } from '@kit.AbilityKit';
+import { fileIo as fs} from '@kit.CoreFileKit';
 
 // Obtain the context from the component and ensure that the return value of this.getUIContext().getHostContext() is UIAbilityContext.
 let context = this.getUIContext().getHostContext() as common.UIAbilityContext;
 let pathDir = context.filesDir;
 
-let file = new fileIo.AtomicFile(`${pathDir}/write.txt`);
+let file = new fs.AtomicFile(`${pathDir}/write.txt`);
 try {
   let writeStream = file.startWrite();
   writeStream.write("hello, world", "utf-8", ()=> {
-    console.info(`Succeeded in writing atomicFile.`);
+    console.info('AtomicFile write succeed!');
   })
 } catch (err) {
   file.failWrite();
@@ -151,7 +153,7 @@ try {
 finishWrite(): void
 ```
 
-在完成对startWrite返回流的写入操作时调用，表示文件写入成功。
+Finishes writing file data when the write operation is complete.
 
 **Since:** 15
 
@@ -171,13 +173,14 @@ finishWrite(): void
 
 ```TypeScript
 import { common } from '@kit.AbilityKit';
+import { fileIo as fs} from '@kit.CoreFileKit';
 
 // Obtain the context from the component and ensure that the return value of this.getUIContext().getHostContext() is UIAbilityContext.
 let context = this.getUIContext().getHostContext() as common.UIAbilityContext;
 let pathDir = context.filesDir;
 
 try {
-  let file = new fileIo.AtomicFile(`${pathDir}/write.txt`);
+  let file = new fs.AtomicFile(`${pathDir}/write.txt`);
   let writeStream = file.startWrite();
   writeStream.write("hello, world", "utf-8", ()=> {
     file.finishWrite();
@@ -193,9 +196,9 @@ try {
 getBaseFile(): File
 ```
 
-通过AtomicFile对象获取文件对象。
+Obtains the file object through the **AtomicFile** object.
 
-文件描述符fd需要由用户调用close方法关闭。
+The FD needs to be closed by calling **close()**.
 
 **Since:** 15
 
@@ -209,7 +212,7 @@ getBaseFile(): File
 
 | Type | Description |
 | --- | --- |
-| [File](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-request-file-i.md) | 打开的File对象。 |
+| [File](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-request-file-i.md) | File object opened. |
 
 **Error codes:**
 
@@ -224,18 +227,19 @@ getBaseFile(): File
 
 ```TypeScript
 import { common } from '@kit.AbilityKit';
+import { fileIo as fs} from '@kit.CoreFileKit';
 
 // Obtain the context from the component and ensure that the return value of this.getUIContext().getHostContext() is UIAbilityContext.
 let context = this.getUIContext().getHostContext() as common.UIAbilityContext;
 let pathDir = context.filesDir;
 
 try {
-  let atomicFile = new fileIo.AtomicFile(`${pathDir}/write.txt`);
+  let atomicFile = new fs.AtomicFile(`${pathDir}/write.txt`);
   let writeStream = atomicFile.startWrite();
   writeStream.write("hello, world", "utf-8", ()=> {
     atomicFile.finishWrite();
-    let file = atomicFile.getBaseFile();
-    console.info(`Succeeded in getting base file. fd: ${file.fd}, path: ${file.path}, name:${file.name}`);
+    let File = atomicFile.getBaseFile();
+    console.info('AtomicFile getBaseFile File.fd is: ' + File.fd + ' path: ' + File.path + ' name: ' + File.name);
   })
 } catch (err) {
   console.error(`Failed to get baseFile. Code: ${err.code}, message: ${err.message}`);
@@ -248,7 +252,7 @@ try {
 openRead(): ReadStream
 ```
 
-创建一个读文件流。
+Creates a **ReadStream** instance.
 
 **Since:** 15
 
@@ -262,7 +266,7 @@ openRead(): ReadStream
 
 | Type | Description |
 | --- | --- |
-| [ReadStream](arkts-corefile-fileio-readstream-c.md) | 文件可读流。 |
+| [ReadStream](arkts-corefile-fileio-readstream-c.md) | ReadStream** instance obtained. |
 
 **Error codes:**
 
@@ -277,13 +281,14 @@ openRead(): ReadStream
 
 ```TypeScript
 import { common } from '@kit.AbilityKit';
+import { fileIo as fs} from '@kit.CoreFileKit';
 
 // Obtain the context from the component and ensure that the return value of this.getUIContext().getHostContext() is UIAbilityContext.
 let context = this.getUIContext().getHostContext() as common.UIAbilityContext;
 let pathDir = context.filesDir;
 
 try {
-  let file = new fileIo.AtomicFile(`${pathDir}/read.txt`);
+  let file = new fs.AtomicFile(`${pathDir}/read.txt`);
   let writeStream = file.startWrite();
   writeStream.write("hello, world", "utf-8", ()=> {
     file.finishWrite();
@@ -292,10 +297,10 @@ try {
       readStream.on('readable', () => {
         const data = readStream.read();
         if (!data) {
-          console.error(`Failed to read atomicfile, data is null.`);
+          console.error('AtomicFile read data is null.');
           return;
         }
-        console.info(`Succeeded in reading atomicfile, data is: ${data}`);
+        console.info('AtomicFile read data is: ' + data);
       });
     },1000);
   })
@@ -310,7 +315,7 @@ try {
 readFully(): ArrayBuffer
 ```
 
-读取文件全部内容。
+Reads all content of a file.
 
 **Since:** 15
 
@@ -324,7 +329,7 @@ readFully(): ArrayBuffer
 
 | Type | Description |
 | --- | --- |
-| ArrayBuffer | 文件的全部内容。 |
+| ArrayBuffer | Full content of a file. |
 
 **Error codes:**
 
@@ -337,6 +342,7 @@ readFully(): ArrayBuffer
 
 ```TypeScript
 import { common } from '@kit.AbilityKit';
+import { fileIo as fs} from '@kit.CoreFileKit';
 import { util, buffer } from '@kit.ArkTS';
 
 // Obtain the context from the component and ensure that the return value of this.getUIContext().getHostContext() is UIAbilityContext.
@@ -344,7 +350,7 @@ let context = this.getUIContext().getHostContext() as common.UIAbilityContext;
 let pathDir = context.filesDir;
 
 try {
-  let file = new fileIo.AtomicFile(`${pathDir}/read.txt`);
+  let file = new fs.AtomicFile(`${pathDir}/read.txt`);
   let writeStream = file.startWrite();
   writeStream.write("hello, world", "utf-8", ()=> {
     file.finishWrite();
@@ -352,7 +358,7 @@ try {
       let data = file.readFully();
       let decoder = util.TextDecoder.create('utf-8');
       let str = decoder.decodeToString(new Uint8Array(data));
-      console.info(`Succeeded in reading atomicfile fully, str is: ${str}`);
+      console.info('AtomicFile readFully str is: ' + str);
     },1000);
   })
 } catch (err) {
@@ -366,11 +372,11 @@ try {
 startWrite(): WriteStream
 ```
 
-对文件开始新的写入操作。将返回一个WriteStream，用于在其中写入新的文件数据。
+Starts to write new file data in the **WriteStream** object returned.
 
-当文件不存在时新建文件。
+If the file does not exist, create a file.
 
-在写入文件完成后，写入成功需要调用finishWrite()，写入失败需要调用failWrite()。
+Call **finishWrite()** if the write operation is successful; call **failWrite()** if the write operation fails.
 
 **Since:** 15
 
@@ -384,7 +390,7 @@ startWrite(): WriteStream
 
 | Type | Description |
 | --- | --- |
-| [WriteStream](arkts-corefile-fileio-writestream-c.md) | 文件可写流。 |
+| [WriteStream](arkts-corefile-fileio-writestream-c.md) | WriteStream** instance obtained. |
 
 **Error codes:**
 
@@ -400,17 +406,18 @@ startWrite(): WriteStream
 
 ```TypeScript
 import { common } from '@kit.AbilityKit';
+import { fileIo as fs} from '@kit.CoreFileKit';
 
 // Obtain the context from the component and ensure that the return value of this.getUIContext().getHostContext() is UIAbilityContext.
 let context = this.getUIContext().getHostContext() as common.UIAbilityContext;
 let pathDir = context.filesDir;
 
 try {
-  let file = new fileIo.AtomicFile(`${pathDir}/write.txt`);
+  let file = new fs.AtomicFile(`${pathDir}/write.txt`);
   let writeStream = file.startWrite();
   writeStream.write("hello, world", "utf-8", ()=> {
     file.finishWrite();
-    console.info(`Succeeded in writing atomicfile finished.`);
+    console.info('AtomicFile write finished!');
   })
 } catch (err) {
   console.error(`Failed to AtomicFile. Code: ${err.code}, message: ${err.message}`);

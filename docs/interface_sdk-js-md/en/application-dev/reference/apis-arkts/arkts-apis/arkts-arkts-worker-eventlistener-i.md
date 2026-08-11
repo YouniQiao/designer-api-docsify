@@ -1,6 +1,6 @@
 # EventListener
 
-事件监听类用于处理事件。
+Implements event listening.
 
 **Since:** 7
 
@@ -26,7 +26,7 @@ import { MessageEvents, PostMessageOptions, MessageEvent, Priority, WorkerEventT
 (evt: Event): void | Promise<void>
 ```
 
-指定要调用的回调函数。
+Specifies the callback to invoke.
 
 **Since:** 7
 
@@ -44,7 +44,7 @@ import { MessageEvents, PostMessageOptions, MessageEvent, Priority, WorkerEventT
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| evt | [Event](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-event-c.md) | Yes | evt evt 回调的事件类。 |
+| evt | [Event](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-event-c.md) | Yes | evt evt Event class for the callback to invoke. |
 
 ## Examples
 

@@ -12,7 +12,7 @@ import { print } from 'kits/@kit.BasicServicesKit';
 function offPrinterInfoQuery(callback?: PrinterInfoQueryCallback): void
 ```
 
-查询到的打印机信息的Unregister事件回调。
+Unregister event callback for the printer info queried.
 
 **Since:** 24
 
@@ -32,12 +32,12 @@ function offPrinterInfoQuery(callback?: PrinterInfoQueryCallback): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [PrinterInfoQueryCallback](arkts-basicservices-print-printerinfoquerycallback-t-sys.md) | No | 查询到的打印机信息的回调函数。 |
+| callback | [PrinterInfoQueryCallback](arkts-basicservices-print-printerinfoquerycallback-t-sys.md) | No | The callback function for the printer info queried. &lt;br&gt;The callback function for the printer info queried. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 201 | the application does not have permission to call this function. |
-| 202 | not system application. |
+| [201](../../errorcode-universal.md#201-permission-denied) | the application does not have permission to call this function. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | not system application. |
 

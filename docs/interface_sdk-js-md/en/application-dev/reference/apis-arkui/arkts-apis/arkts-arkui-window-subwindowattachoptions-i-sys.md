@@ -1,6 +1,6 @@
 # SubWindowAttachOptions (System API)
 
-子窗与主窗保持相对位置不变时的参数。
+Describes the parameters used to maintain the relative position between the child window and the main window.
 
 **Since:** 24
 
@@ -24,7 +24,7 @@ import { window } from 'kits/@kit.ArkUI';
 currentLayoutMode?: string
 ```
 
-子窗当前布局模式，用于控制应用定制的UI效果。若不传，则默认为空字符串。
+Current layout mode of the child window, which is used to control the UI effect customized by the application. If this parameter is not passed, the default value is an empty string.
 
 **Type:** string
 
@@ -46,15 +46,15 @@ currentLayoutMode?: string
 isIntersectedHeightLimit?: boolean
 ```
 
-是否使用处于协同关系中两个窗口的高度限制的交集。
+Whether to use the intersection of the height limits of both windows in the attachment.
 
 **Type:** boolean
 
 **Default:** false
 
-**Since:** 24
+**Since:** 26.0.0
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 24.
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -70,15 +70,15 @@ isIntersectedHeightLimit?: boolean
 isIntersectedWidthLimit?: boolean
 ```
 
-是否使用处于协同关系中两个窗口的宽度限制的交集。
+Whether to use the intersection of the width limits of both windows in the attachment.
 
 **Type:** boolean
 
 **Default:** false
 
-**Since:** 24
+**Since:** 26.0.0
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 24.
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -94,7 +94,7 @@ isIntersectedWidthLimit?: boolean
 parentWindowSizeChangeCallback?: Callback<Size>
 ```
 
-父窗大小变化的回调。绑定后立即回调一次，后续父窗大小变化时通知。默认不传，无法收到父窗大小变化通知。
+Callback triggered when the parent window size changes. The callback is triggered immediately after the binding,and notifications are sent when the parent window size changes. By default, this parameter is not passed, and notifications about the parent window size changes cannot be received.
 
 **Type:** [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;Size&gt;
 
@@ -116,7 +116,7 @@ parentWindowSizeChangeCallback?: Callback<Size>
 parentWindowStatusChangeCallback?: Callback<WindowStatusType>
 ```
 
-父窗模式变化的回调。绑定后立即回调一次，后续父窗模式变化时通知。默认不传，无法收到父窗模式变化通知。
+Callback triggered when the parent window mode changes. The callback is triggered immediately after the binding,and notifications are sent when the parent window mode changes. By default, this parameter is not passed, and notifications about the parent window mode changes cannot be received.
 
 **Type:** [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;WindowStatusType&gt;
 

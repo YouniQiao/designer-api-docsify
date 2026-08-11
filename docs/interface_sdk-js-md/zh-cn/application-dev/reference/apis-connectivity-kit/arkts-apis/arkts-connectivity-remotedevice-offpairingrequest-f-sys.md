@@ -1,11 +1,5 @@
 # offPairingRequest（系统接口）
 
-## 导入模块
-
-```TypeScript
-import { remoteDevice } from 'kits/@kit.ConnectivityKit';
-```
-
 ## offPairingRequest
 
 ```TypeScript
@@ -36,6 +30,6 @@ function offPairingRequest(callback?: Callback<PairingRequestParam>): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 801 | Capability not supported because the chip does not support it. |
-| 36100099 | Operation failed. |
+| [801](../../errorcode-universal.md#801-该设备不支持此api) | Capability not supported because the chip does not support it. |
+| [36100099](../errorcode-nearlink-service.md#36100099-操作失败) | Operation failed. |
 

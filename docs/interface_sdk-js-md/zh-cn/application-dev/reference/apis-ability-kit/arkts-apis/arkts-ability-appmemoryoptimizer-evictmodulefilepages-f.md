@@ -1,11 +1,5 @@
 # evictModuleFilePages
 
-## 导入模块
-
-```TypeScript
-import { appMemoryOptimizer } from 'kits/@kit.AbilityKit';
-```
-
 ## evictModuleFilePages
 
 ```TypeScript
@@ -42,6 +36,6 @@ function evictModuleFilePages(moduleNames: Array<string>): Promise<void>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 16000164 | 解析配置文件失败。 |
-| 16000163 | 文件类型错误。配置文件中evictFilePages数组中的文件名未以.so、.hap或.hsp 结尾。 |
+| [16000164](../errorcode-ability.md#16000164-解析配置文件失败) | 解析配置文件失败。 |
+| [16000163](../errorcode-ability.md#16000163-文件类型错误) | 文件类型错误。配置文件中evictFilePages数组中的文件名未以.so、.hap或.hsp 结尾。 |
 

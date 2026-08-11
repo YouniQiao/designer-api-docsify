@@ -1,6 +1,6 @@
 # LayoutDirection
 
-系统的布局方向类型。
+Defines the LayoutDirection of device.
 
 **Since:** 23
 
@@ -16,7 +16,7 @@
 RTL = 0
 ```
 
-从右向左布局。
+Elements are laid out from right to left.
 
 **Since:** 23
 
@@ -34,7 +34,7 @@ RTL = 0
 LTR = 1
 ```
 
-从左向右布局。
+Elements are laid out from left to right.
 
 **Since:** 23
 
@@ -52,7 +52,7 @@ LTR = 1
 Auto = 2
 ```
 
-自动布局，跟随系统。
+Elements are laid out from auto.
 
 **Since:** 23
 

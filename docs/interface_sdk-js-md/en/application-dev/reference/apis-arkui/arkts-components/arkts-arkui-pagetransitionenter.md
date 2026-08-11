@@ -8,7 +8,7 @@ Defines PageTransitionEnter Component.
 PageTransitionEnter(value: PageTransitionOptions)
 ```
 
-设置当前页面的自定义入场动效。
+Sets the page entrance animation.
 
 **Since:** 7
 
@@ -24,7 +24,7 @@ PageTransitionEnter(value: PageTransitionOptions)
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | [PageTransitionOptions](../arkts-apis/arkts-arkui-pagetransition-pagetransitionoptions-i.md) | Yes | 配置入场动效的参数。 |
+| value | [PageTransitionOptions](../arkts-apis/arkts-arkui-pagetransition-pagetransitionoptions-i.md) | Yes | pageTransition options |
 
 ## PageTransitionEnter
 
@@ -32,7 +32,7 @@ PageTransitionEnter(value: PageTransitionOptions)
 PageTransitionEnter(event: PageTransitionCallback)
 ```
 
-逐帧回调，直到入场动画结束，progress从0变化到1。
+Invoked on a per-frame basis until the entrance animation is complete, with the **progress** parameter changing from 0 to 1.
 
 **Since:** 7
 
@@ -48,7 +48,7 @@ PageTransitionEnter(event: PageTransitionCallback)
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| event | [PageTransitionCallback](../arkts-apis/arkts-arkui-pagetransitioncallback-t.md) | Yes | 入场动画的逐帧回调直到入场动画结束，progress从0变化到1。 |
+| event | [PageTransitionCallback](../arkts-apis/arkts-arkui-pagetransitioncallback-t.md) | Yes | Callback invoked on a per-frame basis until the entrance animation is complete, with the **progress** parameter changing from 0 to 1. |
 
 ## Summary
 

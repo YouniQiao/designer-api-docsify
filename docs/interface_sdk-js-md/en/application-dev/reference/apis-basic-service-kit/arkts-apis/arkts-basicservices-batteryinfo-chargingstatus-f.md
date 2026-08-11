@@ -12,7 +12,7 @@ import { batteryInfo } from 'kits/@kit.BasicServicesKit';
 function chargingStatus(): BatteryChargeState
 ```
 
-表示当前设备电池的充电状态。
+Battery charging state of the current device.
 
 **Since:** 23
 
@@ -26,5 +26,5 @@ function chargingStatus(): BatteryChargeState
 
 | Type | Description |
 | --- | --- |
-| [BatteryChargeState](arkts-basicservices-batteryinfo-batterychargestate-e.md) | 返回当前设备电池的充电状态。 |
+| [BatteryChargeState](arkts-basicservices-batteryinfo-batterychargestate-e.md) | Returns the battery charging state of the current device. |
 

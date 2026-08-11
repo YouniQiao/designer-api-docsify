@@ -12,7 +12,7 @@ import { process } from 'kits/@kit.ArkTS';
 function isAppUid(v: number): boolean
 ```
 
-判断 uid 是否属于应用程序。
+Checks whether a UID belongs to this application.
 
 **Since:** 8
 
@@ -30,13 +30,13 @@ function isAppUid(v: number): boolean
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| v | number | Yes | 应用程序的 uid。 |
+| v | number | Yes | UID. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| boolean | 返回判断结果。如果是应用程序的 uid 则返回 true； 否则返回 false。 |
+| boolean | Check result. The value **true** is returned if the UID belongs to the application; otherwise, **false** is returned. |
 
 ## Examples
 

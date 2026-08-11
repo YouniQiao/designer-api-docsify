@@ -1,6 +1,6 @@
 # WallpaperType
 
-定义壁纸的枚举类型。
+Indicates wallpaper type.
 
 **Since:** 7
 
@@ -16,7 +16,7 @@
 WALLPAPER_SYSTEM
 ```
 
-主屏幕壁纸标识。
+Indicates the home screen wallpaper.
 
 **Since:** 7
 
@@ -32,7 +32,7 @@ WALLPAPER_SYSTEM
 WALLPAPER_LOCKSCREEN
 ```
 
-锁屏壁纸标识。
+Indicates the lock screen wallpaper.
 
 **Since:** 7
 

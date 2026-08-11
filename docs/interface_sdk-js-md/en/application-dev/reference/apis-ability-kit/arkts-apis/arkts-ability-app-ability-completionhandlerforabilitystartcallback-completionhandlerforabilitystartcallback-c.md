@@ -1,6 +1,7 @@
 # CompletionHandlerForAbilityStartCallback
 
-CompletionHandlerForAbilityStartCallback提供了onRequestSuccess和onRequestFailure两个回调函数属性，分别在拉起指定类型的Ability组件成功和失败时回调。
+CompletionHandlerForAbilityStartCallback provides two callback functions, **onRequestSuccess** and  
+**onRequestFailure**, which are invoked when launching the specified ability succeeds or fails, respectively.
 
 **Since:** 21
 
@@ -22,9 +23,9 @@ import { CompletionHandlerForAbilityStartCallback, AbilityStartFailureCode } fro
 onRequestFailure?: OnRequestFailureFn
 ```
 
-拉起指定类型的Ability组件失败时的回调函数。 
+Callback invoked when launching the specified ability fails.
 
-从API version 21开始，该接口支持在原子化服务中使用。
+This API can be used in atomic services since API version 21.
 
 **Since:** 21
 
@@ -44,9 +45,9 @@ onRequestFailure?: OnRequestFailureFn
 onRequestSuccess?: OnRequestSuccessFn
 ```
 
-拉起指定类型的Ability组件成功时的回调函数。
+Callback invoked when the specified ability is successfully launched.
 
-从API version 21开始，该接口支持在原子化服务中使用。
+This API can be used in atomic services since API version 21.
 
 **Since:** 21
 

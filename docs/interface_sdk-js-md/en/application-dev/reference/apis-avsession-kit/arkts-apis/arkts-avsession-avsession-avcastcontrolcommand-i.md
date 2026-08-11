@@ -1,6 +1,6 @@
 # AVCastControlCommand
 
-投播控制器接受的命令的对象描述。
+The definition of cast command to be sent to the session
 
 **Since:** 10
 
@@ -22,7 +22,7 @@ import { avSession } from 'kits/@kit.AVSessionKit';
 command: AVCastControlCommandType
 ```
 
-命令。每种命令对应的参数不同，具体的对应关系可查阅[AVCastControlCommandType](arkts-avsession-avsession-avcastcontrolcommandtype-t.md)。
+The command value {@link AVCastControlCommandType}
 
 **Type:** [AVCastControlCommandType](arkts-avsession-avsession-avcastcontrolcommandtype-t.md)
 
@@ -42,7 +42,7 @@ command: AVCastControlCommandType
 parameter?: media.PlaybackSpeed | double | string | LoopMode
 ```
 
-命令对应的参数。
+Parameter carried in the command.The seek command must carry the number parameter.The setVolume command must carry the number parameter.The toggleFavorite command must carry the {@link AVMediaDescription.assetId} parameter.The setSpeed command must carry the {@link #media.PlaybackSpeed} parameter.The setLoopMode command must carry the {@link LoopMode} parameter.Other commands do not need to carry parameters.
 
 **Type:** ArkTS-Dyn: media.PlaybackSpeed \| number \| string \| LoopMode  <br>ArkTS-Sta：media.PlaybackSpeed \| double \| string \| LoopMode
 

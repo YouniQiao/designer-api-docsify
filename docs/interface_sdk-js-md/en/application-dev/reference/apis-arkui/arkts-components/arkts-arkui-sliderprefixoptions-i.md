@@ -1,6 +1,6 @@
 # SliderPrefixOptions
 
-Slider前缀组件无障碍信息参数。
+Provides accessibility configuration of the slider prefix.
 
 **Inheritance/Implementation:** SliderPrefixOptions extends [SliderCustomContentOptions](arkts-arkui-slidercustomcontentoptions-i.md)
 

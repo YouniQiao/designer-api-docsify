@@ -1,11 +1,5 @@
 # @ohos.app.ability.ApplicationStateChangeCallback
 
-## 导入模块
-
-```TypeScript
-import { ApplicationStateChangeCallback } from 'kits/@kit.AbilityKit';
-```
-
 ## 汇总
 
 ### 接口

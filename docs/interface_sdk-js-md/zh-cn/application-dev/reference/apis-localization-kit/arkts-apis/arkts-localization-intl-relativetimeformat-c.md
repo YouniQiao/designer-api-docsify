@@ -8,17 +8,11 @@
 
 **废弃版本：** 20
 
-**替代接口：** [Intl.RelativeTimeFormat](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/RelativeTimeFormat)
+**替代接口：** [Intl.RelativeTimeFormat](arkts-intl.md#intl.relativetimeformat)
 
 <!--Device-intl-export class RelativeTimeFormat--><!--Device-intl-export class RelativeTimeFormat-End-->
 
 **系统能力：** SystemCapability.Global.I18n
-
-## 导入模块
-
-```TypeScript
-import { intl } from 'kits/@kit.LocalizationKit';
-```
 
 ## constructor
 
@@ -107,7 +101,7 @@ format(value: double, unit: string): string
 
 **废弃版本：** 20
 
-**替代接口：** [Intl.RelativeTimeFormat.format](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/RelativeTimeFormat/format)
+**替代接口：** [Intl.RelativeTimeFormat.format](arkts-intl.md#intl.relativetimeformat.format)
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 

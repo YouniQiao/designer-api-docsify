@@ -6,7 +6,7 @@
 function publish(request: NotificationRequest, userId: number, callback: AsyncCallback<void>): void
 ```
 
-发布通知给指定的用户。使用callback异步回调。
+Publishes a notification to a specified user. This API uses an asynchronous callback to return the result.
 
 **Since:** 8
 
@@ -28,9 +28,9 @@ function publish(request: NotificationRequest, userId: number, callback: AsyncCa
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| request | [NotificationRequest](arkts-notification-notificationrequest-notificationrequest-i-sys.md) | Yes | 用于设置要发布通知的内容和相关配置信息。 |
-| userId | number | Yes | 用户ID。 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | 被指定的回调方法。 |
+| request | [NotificationRequest](arkts-notification-notificationrequest-notificationrequest-i-sys.md) | Yes | Content and related configuration of the notification to publish. |
+| userId | number | Yes | User ID. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. |
 
 
 ## publish
@@ -39,7 +39,7 @@ function publish(request: NotificationRequest, userId: number, callback: AsyncCa
 function publish(request: NotificationRequest, userId: number): Promise<void>
 ```
 
-发布通知给指定的用户。使用Promise异步回调。
+Publishes a notification to a specified user. This API uses a promise to return the result.
 
 **Since:** 8
 
@@ -61,12 +61,12 @@ function publish(request: NotificationRequest, userId: number): Promise<void>
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| request | [NotificationRequest](arkts-notification-notificationrequest-notificationrequest-i-sys.md) | Yes | 用于设置要发布通知的内容和相关配置信息。 |
-| userId | number | Yes | 用户ID。 |
+| request | [NotificationRequest](arkts-notification-notificationrequest-notificationrequest-i-sys.md) | Yes | Content and related configuration of the notification to publish. |
+| userId | number | Yes | User ID. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise对象。无返回结果的Promise对象。 |
+| Promise&lt;void&gt; | Promise that returns no value. |
 

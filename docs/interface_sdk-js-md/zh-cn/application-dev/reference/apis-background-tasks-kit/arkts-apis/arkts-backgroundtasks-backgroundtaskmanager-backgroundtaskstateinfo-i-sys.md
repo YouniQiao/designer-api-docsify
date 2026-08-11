@@ -12,12 +12,6 @@
 
 **系统接口：** 此接口为系统接口。
 
-## 导入模块
-
-```TypeScript
-import { backgroundTaskManager } from 'kits/@kit.BackgroundTasksKit';
-```
-
 ## appIndex
 
 ```TypeScript
@@ -48,7 +42,7 @@ authResult?: UserAuthResult
 
 授权结果。
 
-**类型：** [UserAuthResult](../../apis-user-authentication-kit/arkts-apis/arkts-userauthentication-userauth-userauthresult-i.md)
+**类型：** [UserAuthResult](arkts-backgroundtasks-backgroundtaskmanager-userauthresult-e.md)
 
 **起始版本：** 22
 

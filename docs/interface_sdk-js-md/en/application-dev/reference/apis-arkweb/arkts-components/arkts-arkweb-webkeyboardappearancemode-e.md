@@ -1,6 +1,6 @@
 # WebKeyboardAppearanceMode
 
-提供给{@链接键盘外观}的枚举类型，用于设置Web键盘外观模式。
+Enum type supplied to {@link keyboardAppearance} for setting the web keyboard appearance mode.
 
 **Since:** 26.0.0
 
@@ -16,7 +16,7 @@
 NONE_IMMERSIVE = 0
 ```
 
-默认皮肤模式，没有沉浸式风格。
+Default skin mode, no immersive style.
 
 **Since:** 26.0.0
 
@@ -34,7 +34,7 @@ NONE_IMMERSIVE = 0
 IMMERSIVE = 1
 ```
 
-没有沉浸式风格
+No immersive style.
 
 **Since:** 26.0.0
 
@@ -52,7 +52,7 @@ IMMERSIVE = 1
 LIGHT_IMMERSIVE = 2
 ```
 
-浅色沉浸式风格。
+Light immersive style.
 
 **Since:** 26.0.0
 
@@ -70,7 +70,7 @@ LIGHT_IMMERSIVE = 2
 DARK_IMMERSIVE = 3
 ```
 
-深色沉浸式风格。
+Dark immersive style.
 
 **Since:** 26.0.0
 

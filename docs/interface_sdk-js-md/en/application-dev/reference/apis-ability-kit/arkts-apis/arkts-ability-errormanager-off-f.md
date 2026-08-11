@@ -12,9 +12,9 @@ import { errorManager } from 'kits/@kit.AbilityKit';
 function off(type: 'error', observerId: number, callback: AsyncCallback<void>): void
 ```
 
-注销错误观测器。使用callback异步返回。
+Unregisters an error observer. This API uses an asynchronous callback to return the result.
 
-仅在主线程中使用。使用线程出错时，将抛出错误码，因此建议使用try-catch逻辑进行处理。
+This API can only be used in the main thread. If a thread error occurs, an error code is thrown. You are advised to handle it with try-catch logic.
 
 **Since:** 9
 
@@ -30,16 +30,16 @@ function off(type: 'error', observerId: number, callback: AsyncCallback<void>): 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'error' | Yes | 填写'error'，表示错误观测器。 |
-| observerId | number | Yes | 由on方法返回的观测器的index值。没有具体的单位。 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | 表示指定的回调方法。 |
+| type | 'error' | Yes | Event type. It is fixed at **'error'**. |
+| observerId | number | Yes | Index of the observer returned by **on()**. There is no specific unit. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | 参数错误。可能的原因：1. 必填参数未填写； 2. 参数类型不正确；3. 参数校验失败。 |
-| 16000003 | 指定的ID不存在。 |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| [16000003](../errorcode-ability.md#16000003-id-does-not-exist) | The specified ID does not exist. |
 
 ## Examples
 
@@ -71,9 +71,9 @@ try {
 function off(type: 'error', observerId: number): Promise<void>
 ```
 
-注销错误观测器。使用Promise异步返回。
+Unregisters an error observer. This API uses a promise to return the result.
 
-仅在主线程中使用。使用线程出错时，将抛出错误码，因此建议使用try-catch逻辑进行处理。
+This API can only be used in the main thread. If a thread error occurs, an error code is thrown. You are advised to handle it with try-catch logic.
 
 **Since:** 9
 
@@ -89,21 +89,21 @@ function off(type: 'error', observerId: number): Promise<void>
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'error' | Yes | 填写'error'，表示错误观测器。 |
-| observerId | number | Yes | 由on方法返回的观测器的index值。没有具体的单位。 |
+| type | 'error' | Yes | Event type. It is fixed at **'error'**. |
+| observerId | number | Yes | Index of the observer returned by **on()**. There is no specific unit. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise对象。无返回结果的Promise对象。 |
+| Promise&lt;void&gt; | Promise that returns no value. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | 参数错误。可能的原因：1. 必填参数未填写； 2. 参数类型不正确；3. 参数校验失败。 |
-| 16000003 | 指定的ID不存在。 |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| [16000003](../errorcode-ability.md#16000003-id-does-not-exist) | The specified ID does not exist. |
 
 ## Examples
 
@@ -135,9 +135,9 @@ try {
 function off(type: 'loopObserver', observer?: LoopObserver): void
 ```
 
-注销主线程消息处理监听器。
+Unregisters an observer for the message processing duration of the main thread.
 
-仅在主线程中使用。使用线程出错时，将抛出错误码，因此建议使用try-catch逻辑进行处理。
+This API can only be used in the main thread. If a thread error occurs, an error code is thrown. You are advised to handle it with try-catch logic.
 
 **Since:** 12
 
@@ -153,16 +153,14 @@ function off(type: 'loopObserver', observer?: LoopObserver): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'loopObserver' | Yes | 填写'loopObserver'，表示应用主线程观测器。 |
-| observer | [LoopObserver](arkts-ability-loopobserver-i.md) | No | 应用主线程观测器标志。 |
+| type | 'loopObserver' | Yes | Event type. It is fixed at **'loopObserver'**, indicating an observer for the message processing duration of the main thread. |
+| observer | [LoopObserver](arkts-ability-loopobserver-i.md) | No | Observer to unregister. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | 参数错误。可能的原因：1. 必填参数未填写； 2. 参数类型不正确；3. 参数校验失败。 |
-| 16200001 | 请在主线程中调用。 |
-| 16300004 | 观测器不存在。 |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
 
 ## Examples
 
@@ -179,9 +177,9 @@ errorManager.off("loopObserver");
 function off(type: 'unhandledRejection', observer?: UnhandledRejectionObserver): void
 ```
 
-注销被拒绝promise监听器。
+Unregisters an observer for the promise rejection.
 
-仅在主线程中使用。使用线程出错时，将抛出错误码，因此建议使用try-catch逻辑进行处理。
+This API can only be used in the main thread. If a thread error occurs, an error code is thrown. You are advised to handle it with try-catch logic.
 
 **Since:** 12
 
@@ -197,16 +195,16 @@ function off(type: 'unhandledRejection', observer?: UnhandledRejectionObserver):
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'unhandledRejection' | Yes | 填写'unhandledRejection'，表示注册被拒绝promise监听器。 |
-| observer | [UnhandledRejectionObserver](arkts-ability-errormanager-unhandledrejectionobserver-t.md) | No | 注册了被拒绝promise监听器。建议使用该参数，缺省时默认清除所有通过on注册的相同env的observer，否则删除指定 observer。 |
+| type | 'unhandledRejection' | Yes | Event type. It is fixed at **'unhandledRejection'**, indicating an observer for the promise rejection. |
+| observer | [UnhandledRejectionObserver](arkts-ability-errormanager-unhandledrejectionobserver-t.md) | No | Observer to unregister. You are advised to use this parameter. If omitted, all observers registered with the same environment through **on** are unregistered by default. Otherwise, the specified observer is unregistered. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | 参数错误。可能的原因：1. 必填参数未填写； 2. 参数类型不正确；3. 参数校验失败。 |
-| 16200001 | 请在主线程中调用。 |
-| 16300004 | 观测器不存在。 |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| [16200001](../errorcode-ability.md#16200001-caller-released) | If the caller is invalid. |
+| [16300004](../errorcode-ability.md#16300004-observer-does-not-exist) | If the observer does not exist |
 
 ## Examples
 
@@ -265,9 +263,9 @@ errorManager.off("unhandledRejection", observer);
 function off(type: 'globalUnhandledRejectionDetected', observer?: GlobalObserver): void
 ```
 
-注销被拒绝promise监听器，注销后无法监听进程中的promise异常。
+Unregisters a rejected promise observer. After the deregistration, promise exceptions in the process cannot be listened for.
 
-如果传入的回调不在通过on方法注册的回调队列中，将抛出16300004错误码，因此建议使用try-catch逻辑进行处理。
+If the observer passed in is not in the observer queue registered via the **on** API, error code 16300004 is thrown. Therefore, you are advised to handle this using **try-catch** logic.
 
 **Since:** 18
 
@@ -283,16 +281,16 @@ function off(type: 'globalUnhandledRejectionDetected', observer?: GlobalObserver
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'globalUnhandledRejectionDetected' | Yes | 填写'globalUnhandledRejectionDetected'，表示注册被拒绝promise监听器。 |
-| observer | [GlobalObserver](arkts-ability-errormanager-globalobserver-t.md) | No | 由on接口注册的被拒绝promise的callback。建议使用该参数，缺省时默认清除所有通过on注册的相同env的callback，否则删除指定 callback。 |
+| type | 'globalUnhandledRejectionDetected' | Yes | Event type. It is fixed at **'globalUnhandledRejectionDetected'**, indicating an observer for the promise rejection. |
+| observer | [GlobalObserver](arkts-ability-errormanager-globalobserver-t.md) | No | Observer registered by the **on** API. You are advised to use this parameter. If omitted, all observers registered with the same environment through **on** are unregistered by default. Otherwise, the specified observer is unregistered. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | 参数错误。可能的原因：1. 必填参数未填写； 2. 参数类型不正确；3. 参数校验失败。 |
-| 16200001 | 调用者无效。 |
-| 16300004 | 观测器不存在。 |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| [16200001](../errorcode-ability.md#16200001-caller-released) | If the caller is invalid. |
+| [16300004](../errorcode-ability.md#16300004-observer-does-not-exist) | If the observer does not exist |
 
 ## Examples
 
@@ -327,11 +325,11 @@ errorManager.off("globalUnhandledRejectionDetected", promiseFunc);
 function off(type: 'freeze', observer?: FreezeObserver): void
 ```
 
-取消之前注册的应用主线程freeze监听。
+Unregisters an observer for the main thread freeze event of the application.
 
-仅在主线程中使用。使用线程出错时，将抛出错误码，因此建议使用try-catch逻辑进行处理。
+This API can only be used in the main thread. If a thread error occurs, an error code is thrown. You are advised to handle it with try-catch logic.
 
-如果传入的回调与通过on方法注册回调不一致，将抛出16300004错误码，因此建议使用try-catch逻辑进行处理。
+If the observer passed in does not match the observer registered via the **on** API, error code 16300004 is thrown.Therefore, you are advised to handle this using **try-catch** logic.
 
 **Since:** 18
 
@@ -347,15 +345,15 @@ function off(type: 'freeze', observer?: FreezeObserver): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'freeze' | Yes | 填写'freeze'，表示应用主线程freeze观测器。 |
-| observer | [FreezeObserver](arkts-ability-errormanager-freezeobserver-t.md) | No | 由on接口注册的freeze监听的callback。建议使用该参数，如果参数不填会直接清空callback，否则删除指定的callback。 |
+| type | 'freeze' | Yes | Event type. It is fixed at **'freeze'**, indicating an observer for the freeze event of the main thread. |
+| observer | [FreezeObserver](arkts-ability-errormanager-freezeobserver-t.md) | No | Observer to unregister. You are advised to use this parameter. If omitted, all observers registered with the same environment through **on** are unregistered by default. Otherwise, the specified observer is unregistered. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | 参数错误。可能的原因：1. 必填参数未填写； 2. 参数类型不正确；3. 参数校验失败。 |
-| 16300004 | 观测器不存在。 |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| [16300004](../errorcode-ability.md#16300004-observer-does-not-exist) | If the observer does not exist |
 
 ## Examples
 
@@ -376,9 +374,9 @@ errorManager.off("freeze", freezeCallback);
 function off(type: 'globalErrorOccurred', observer?: GlobalObserver): void
 ```
 
-注销错误观测器，注销之前注册在同一线程的callback全局监听。
+Unregisters a global error observer. Once unregistered, global listening cannot be implemented.
 
-如果传入的回调不在通过on方法注册的回调队列中，将抛出16300004错误码，因此建议使用try-catch逻辑进行处理。
+If the observer passed in is not in the observer queue registered via the **on** API, error code 16300004 is thrown. Therefore, you are advised to handle this using **try-catch** logic.
 
 **Since:** 18
 
@@ -394,16 +392,16 @@ function off(type: 'globalErrorOccurred', observer?: GlobalObserver): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'globalErrorOccurred' | Yes | 填写'globalErrorOccurred'，表示错误观测器。 |
-| observer | [GlobalObserver](arkts-ability-errormanager-globalobserver-t.md) | No | 由on方法注册的callback。建议使用该参数，缺省时默认清除所有通过on注册的相同env的callback，否则删除指定callback。 |
+| type | 'globalErrorOccurred' | Yes | Event type. It is fixed at **'globalErrorOccurred'**. |
+| observer | [GlobalObserver](arkts-ability-errormanager-globalobserver-t.md) | No | Observer registered by the **on** API. You are advised to use this parameter. If omitted, all observers registered with the same environment through **on** are unregistered by default. Otherwise, the specified observer is unregistered. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | 参数错误。可能的原因：1. 必填参数未填写； 2. 参数类型不正确；3. 参数校验失败。 |
-| 16200001 | 调用者无效。 |
-| 16300004 | 观测器不存在。 |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| [16200001](../errorcode-ability.md#16200001-caller-released) | If the caller is invalid. |
+| [16300004](../errorcode-ability.md#16300004-observer-does-not-exist) | If the observer does not exist |
 
 ## Examples
 

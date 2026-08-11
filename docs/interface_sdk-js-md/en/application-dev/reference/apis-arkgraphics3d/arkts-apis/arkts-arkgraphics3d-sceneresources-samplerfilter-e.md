@@ -1,6 +1,6 @@
 # SamplerFilter
 
-采样器过滤模式
+Enumerates the filtering modes of a sampler.The filtering mode determines the interpolation method used when sampling textures,controlling how final pixel colors are calculated during texture scaling or deformation.
 
 **Since:** 20
 
@@ -16,7 +16,7 @@
 NEAREST = 0
 ```
 
-使用最近邻过滤
+Uses nearest-neighbor interpolation, which is fast but can result in jagged edges.
 
 **Since:** 20
 
@@ -32,7 +32,7 @@ NEAREST = 0
 LINEAR = 1
 ```
 
-使用线性过滤
+Uses linear interpolation, providing a smoother appearance but with a slight performance cost.
 
 **Since:** 20
 

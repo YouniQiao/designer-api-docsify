@@ -12,12 +12,14 @@ import { usbManager } from 'kits/@kit.BasicServicesKit';
 function claimInterface(pipe: USBDevicePipe, iface: USBInterface, force?: boolean): int
 ```
 
-声明对USB设备某个接口的控制权。
+Claims a USB device interface.
 
-> **说明：**
+> **NOTE：**
 > 
-> 在USB编程中，claim interface是一个常见操作，指的是应用程序请求操作系统将某个USB接口从内核驱动中释放并交由用户空间程序控制。&lt;br&gt;
-> > 下面用到的claim通信接口都表示claim interface操作。
+> In USB programming, **claimInterface** is a common operation, which indicates that an application requests the
+> operating system to release a USB interface from the kernel driver and hand over the USB interface to a user
+> space program for control.&lt;br&gt;
+> > All the **claim** communication interfaces used below refer to the claim interface operations.
 
 **Since:** 9
 
@@ -31,22 +33,22 @@ function claimInterface(pipe: USBDevicePipe, iface: USBInterface, force?: boolea
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| pipe | [USBDevicePipe](arkts-basicservices-usbmanager-usbdevicepipe-i.md) | Yes | 用于确定总线号和设备地址，需要调用[usbManager.connectDevice](arkts-basicservices-usbmanager-connectdevice-f.md#connectdevice)获取。 |
-| iface | [USBInterface](arkts-basicservices-usb-usbinterface-i.md) | Yes | 用于确定需要获取接口的索引，需要调用[usbManager.getDevices](arkts-basicservices-usbmanager-getdevices-f.md#getdevices)获取设备信息并通过id确定唯一接口。 |
-| force | boolean | No | 可选参数，是否强制获取。默认值为false?，表示不强制获取，用户按需选择。 |
+| pipe | [USBDevicePipe](arkts-basicservices-usbmanager-usbdevicepipe-i.md) | Yes | USB device pipe, which is used to determine the bus number and device address. You need to call [usbManager.connectDevice](arkts-basicservices-usbmanager-connectdevice-f.md#connectdevice) to obtain its value. |
+| iface | [USBInterface](arkts-basicservices-usb-usbinterface-i.md) | Yes | USB interface. You can use [usbManager.getDevices](arkts-basicservices-usbmanager-getdevices-f.md#getdevices) to obtain device information and identify the USB interface based on the ID. |
+| force | boolean | No | Whether to forcibly claim a USB interface. The default value is **false**, which means not to forcibly claim a USB interface. You can set the value as required. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| ArkTS-Dyn: number  <br>ArkTS-Sta：int | claim通信接口成功返回0；claim通信接口失败返回其他错误码如下： |
+| ArkTS-Dyn: number  <br>ArkTS-Sta：int | Returns **0** if the **claim** interface is called successfully; returns an error code otherwise. The error codes are as follows: |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. Possible causes:  &lt;br&gt;1.Mandatory parameters are left unspecified.  &lt;br&gt;2.Incorrect parameter types. |
-| 801 | Capability not supported.<br>**Applicable version:** 18 and later |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes:  &lt;br&gt;1.Mandatory parameters are left unspecified.  &lt;br&gt;2.Incorrect parameter types. |
+| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported.<br>**Applicable version:** 18 and later |
 
 ## Examples
 
@@ -58,10 +60,10 @@ function claimInterface() {
     return;
   }
 
-  let device: usbManager.USBDevice = devicesList?.[0];
+  let device: usbManager.USBDevice = devicesList[0];
   usbManager.requestRight(device.name);
   let devicepipe: usbManager.USBDevicePipe = usbManager.connectDevice(device);
-  let interfaces: usbManager.USBInterface = device.configs?.[0]?.interfaces?.[0];
+  let interfaces: usbManager.USBInterface = device.configs[0].interfaces[0];
   let ret: number= usbManager.claimInterface(devicepipe, interfaces);
   console.info(`claimInterface = ${ret}`);
 }

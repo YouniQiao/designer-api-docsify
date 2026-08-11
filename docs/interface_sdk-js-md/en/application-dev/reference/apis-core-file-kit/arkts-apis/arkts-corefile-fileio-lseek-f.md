@@ -12,7 +12,7 @@ import { Options, ReaderIteratorResult, Watcher, ReadTextOptions, WatchEventList
 function lseek(fd: int, offset: long, whence?: WhenceType): long
 ```
 
-调整文件偏移指针位置。
+Adjusts the position of the file offset pointer.
 
 **Since:** 23
 
@@ -26,15 +26,15 @@ function lseek(fd: int, offset: long, whence?: WhenceType): long
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| fd | int | Yes | 文件描述符。 |
-| offset | long | Yes | 相对偏移位置，单位为Byte。 |
-| whence | [WhenceType](arkts-corefile-fileio-whencetype-e.md) | No | 偏移指针相对位置类型。不指定则默认为文件起始位置处。 |
+| fd | int | Yes | File descriptor. |
+| offset | long | Yes | Relative offset, in bytes. |
+| whence | [WhenceType](arkts-corefile-fileio-whencetype-e.md) | No | Where to start the offset. If this parameter is not specified, the file start position is used by default. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| long | 当前文件偏移指针位置（相对于文件头的偏移量，单位为Byte）。 |
+| long | Position of the current offset as measured from the beginning of the file, in bytes. |
 
 **Error codes:**
 

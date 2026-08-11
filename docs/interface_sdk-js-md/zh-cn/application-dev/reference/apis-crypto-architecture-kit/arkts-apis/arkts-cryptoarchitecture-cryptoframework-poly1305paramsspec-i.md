@@ -29,12 +29,6 @@
 
 **系统能力：** SystemCapability.Security.CryptoFramework.Cipher
 
-## 导入模块
-
-```TypeScript
-import { cryptoFramework } from 'kits/@kit.CryptoArchitectureKit';
-```
-
 ## aad
 
 ```TypeScript
@@ -43,7 +37,7 @@ aad: DataBlob
 
 指明加解密参数aad。
 
-**类型：** [DataBlob](arkts-cryptoarchitecture-cryptoframework-datablob-i.md)
+**类型：** [DataBlob](../../apis-device-certificate-kit/arkts-apis/arkts-devicecertificate-cert-datablob-i.md)
 
 **起始版本：** 22
 
@@ -63,7 +57,7 @@ authTag: DataBlob
 
 指定加解密参数authTag，长度为16字节。
 
-**类型：** [DataBlob](arkts-cryptoarchitecture-cryptoframework-datablob-i.md)
+**类型：** [DataBlob](../../apis-device-certificate-kit/arkts-apis/arkts-devicecertificate-cert-datablob-i.md)
 
 **起始版本：** 22
 
@@ -83,7 +77,7 @@ iv: DataBlob
 
 Nonce（通过iv字段传入），长度为12字节。
 
-**类型：** [DataBlob](arkts-cryptoarchitecture-cryptoframework-datablob-i.md)
+**类型：** [DataBlob](../../apis-device-certificate-kit/arkts-apis/arkts-devicecertificate-cert-datablob-i.md)
 
 **起始版本：** 22
 

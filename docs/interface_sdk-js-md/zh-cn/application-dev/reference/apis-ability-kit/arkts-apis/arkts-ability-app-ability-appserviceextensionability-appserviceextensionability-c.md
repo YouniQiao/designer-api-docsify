@@ -12,12 +12,6 @@ AppServiceExtensionAbility模块提供后台服务相关扩展能力，包括后
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 
-## 导入模块
-
-```TypeScript
-import { AppServiceExtensionAbility } from 'kits/@kit.AbilityKit';
-```
-
 ## onConnect
 
 ```TypeScript
@@ -53,6 +47,8 @@ onConnect(want: Want): rpc.RemoteObject
 
 ## 示例
 
+ArkTS-Dyn示例：
+
 ```TypeScript
 import { AppServiceExtensionAbility, Want } from '@kit.AbilityKit';
 import { rpc } from '@kit.IPCKit';
@@ -65,12 +61,38 @@ class StubTest extends rpc.RemoteObject {
     super(des);
   }
 
-  onRemoteMessageRequest(code: number, data: rpc.MessageSequence, reply: rpc.MessageSequence, options: rpc.MessageOption): boolean {
-    return true;
+  onConnect(code: number, data: rpc.MessageSequence, reply: rpc.MessageSequence, option: rpc.MessageOption) {
   }
 }
 
 export default class AppServiceExtAbility extends AppServiceExtensionAbility {
+  onConnect(want: Want) {
+    hilog.info(0x0000, TAG, `onConnect, want: ${want.abilityName}`);
+    return new StubTest('test');
+  }
+}
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+'use static'
+import { AppServiceExtensionAbility, Want } from '@kit.AbilityKit';
+import rpc from '@ohos.rpc';
+import { hilog } from '@kit.PerformanceAnalysisKit';
+
+const TAG: string = '[AppServiceExtAbility]';
+
+class StubTest extends rpc.RemoteObject {
+  constructor(des: string) {
+    super(des);
+  }
+
+  onConnect(code: int, data: rpc.MessageSequence, reply: rpc.MessageSequence, option: rpc.MessageOption) {
+  }
+}
+
+class AppServiceExtAbility extends AppServiceExtensionAbility {
   onConnect(want: Want) {
     hilog.info(0x0000, TAG, `onConnect, want: ${want.abilityName}`);
     return new StubTest('test');

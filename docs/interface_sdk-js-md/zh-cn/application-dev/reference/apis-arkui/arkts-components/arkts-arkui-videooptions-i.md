@@ -20,7 +20,7 @@ controller?: VideoController
 
 默认值：不设置视频控制器。
 
-**类型：** [VideoController](arkts-arkui-videocontroller-c.md)
+**类型：** [VideoController](../arkts-apis/arkts-arkui-video-videocontroller-c.md)
 
 **起始版本：** 7
 
@@ -119,7 +119,7 @@ posterOptions?: PosterOptions
 
 设置视频播放的首帧送显选项，可以控制视频是否支持首帧送显。当需要开启首帧送显功能时传入此参数，不传入时默认不启用首帧送显。
 
-**类型：** [PosterOptions](arkts-arkui-posteroptions-i.md)
+**类型：** [PosterOptions](../arkts-apis/arkts-arkui-video-posteroptions-i.md)
 
 **起始版本：** 18
 

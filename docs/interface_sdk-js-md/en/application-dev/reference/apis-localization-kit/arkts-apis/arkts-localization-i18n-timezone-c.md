@@ -1,6 +1,6 @@
 # TimeZone
 
-提供时区相关的能力，包括时区名称翻译、偏移量获取和跳变规则获取等。
+Provides the API for accessing TimeZone name, rawOffset and offset information.
 
 **Since:** 23
 
@@ -22,7 +22,7 @@ import { i18n } from 'kits/@kit.LocalizationKit';
 static getAppDefaultTimeZone(): TimeZone
 ```
 
-获取应用使用的默认时区对象。若调用[setAppDefaultTimeZoneById](arkts-localization-i18n-timezone-c.md#setappdefaulttimezonebyid)设置了默认时区，则返回设置的默认时区对象；否则，返回系统时区对象。
+Obtains the default time zone object used by an application. If the default time zone has been set by calling setAppDefaultTimeZoneById,the default time zone object is returned. Otherwise, the system time zone object is returned.
 
 **Since:** 26.0.0
 
@@ -40,7 +40,7 @@ static getAppDefaultTimeZone(): TimeZone
 
 | Type | Description |
 | --- | --- |
-| [TimeZone](arkts-localization-i18n-timezone-c.md) | 应用使用的默认时区对象。 |
+| [TimeZone](arkts-localization-i18n-timezone-c.md) | TimeZone object, first set by application, then system time zone, last GMT time zone. |
 
 ## getAvailableIDs
 
@@ -48,7 +48,7 @@ static getAppDefaultTimeZone(): TimeZone
 static getAvailableIDs(): Array<string>
 ```
 
-获取系统支持的时区ID列表。
+Obtains the list of time zone IDs supported by the system.
 
 **Since:** 23
 
@@ -64,7 +64,7 @@ static getAvailableIDs(): Array<string>
 
 | Type | Description |
 | --- | --- |
-| Array&lt;string&gt; | 系统支持的时区ID列表。 |
+| Array&lt;string&gt; | List of time zone IDs supported by the system. |
 
 ## getAvailableZoneCityIDs
 
@@ -72,7 +72,7 @@ static getAvailableIDs(): Array<string>
 static getAvailableZoneCityIDs(): Array<string>
 ```
 
-获取系统支持的时区城市ID列表。
+Obtains the list of time zone city IDs supported by the system.
 
 **Since:** 23
 
@@ -88,7 +88,7 @@ static getAvailableZoneCityIDs(): Array<string>
 
 | Type | Description |
 | --- | --- |
-| Array&lt;string&gt; | 系统支持的时区城市ID列表。 |
+| Array&lt;string&gt; | List of time zone city IDs supported by the system. |
 
 ## getCityDisplayName
 
@@ -96,7 +96,7 @@ static getAvailableZoneCityIDs(): Array<string>
 static getCityDisplayName(cityID: string, locale: string): string
 ```
 
-获取时区城市名称在指定语言下的翻译。
+Obtains time zone city display name in the specified language.
 
 **Since:** 23
 
@@ -112,14 +112,14 @@ static getCityDisplayName(cityID: string, locale: string): string
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| cityID | string | Yes | 时区城市ID。 |
-| locale | string | Yes | [表示区域ID的字符串](../../../internationalization/i18n-locale-culture.md#实现原理)，由语言、脚本、国家地区组 成。 |
+| cityID | string | Yes | Time zone city ID. |
+| locale | string | Yes | System locale, which consists of the language, script, and country/region. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| string | 时区城市名称在指定语言下的翻译。 |
+| string | Time zone city display name in the specified language. |
 
 ## getDisplayName
 
@@ -127,7 +127,7 @@ static getCityDisplayName(cityID: string, locale: string): string
 getDisplayName(locale?: string, isDST?: boolean): string
 ```
 
-获取时区对象名称在指定语言下的翻译。
+Obtains time zone display name in the specified language.
 
 **Since:** 23
 
@@ -143,14 +143,14 @@ getDisplayName(locale?: string, isDST?: boolean): string
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| locale | string | No | [表示区域ID的字符串](../../../internationalization/i18n-locale-culture.md#实现原理)，由语言、脚本、国家地区 组成。默认值：系统当前区域ID。 |
-| isDST | boolean | No | true表示显示夏令时信息，false表示不显示夏令时信息。默认值：false。 |
+| locale | string | No | System locale, which consists of the language, script, and country/region. The default value is the current system locale. |
+| isDST | boolean | No | Whether DST information is displayed. The value "true" indicates that DST information is displayed, and the value "false" indicates the opposite. The default value is false. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| string | 时区对象名称在指定语言下的翻译。 |
+| string | Time zone display name in the specified language. |
 
 ## getID
 
@@ -158,7 +158,7 @@ getDisplayName(locale?: string, isDST?: boolean): string
 getID(): string
 ```
 
-获取时区对象的ID。
+Obtains the ID of the specified TimeZone object.
 
 **Since:** 23
 
@@ -174,7 +174,7 @@ getID(): string
 
 | Type | Description |
 | --- | --- |
-| string | 时区对象对应的时区ID。 |
+| string | Time zone ID corresponding to the TimeZone object. |
 
 ## getOffset
 
@@ -182,7 +182,7 @@ getID(): string
 getOffset(date?: double): int
 ```
 
-获取某一时刻时区对象所表示时区的偏移量。
+Obtains the offset of the specified time zone at the specified time.
 
 **Since:** 23
 
@@ -198,13 +198,13 @@ getOffset(date?: double): int
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| date | double | No | 待计算时区偏移量的时刻，单位为毫秒（ms）。默认值：系统时间。 |
+| date | double | No | Specified time, in milliseconds. The default value is the system time. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| int | 时区的偏移量，单位为毫秒（ms）。当处于夏令时时，时区偏移量为时区原始偏移量加夏令时偏移量。 |
+| int | Time zone offset, in milliseconds. When the DST is used, the time zone offset is the raw time zone offset plus the DST offset. |
 
 ## getRawOffset
 
@@ -212,7 +212,7 @@ getOffset(date?: double): int
 getRawOffset(): int
 ```
 
-获取时区对象所表示时区的原始偏移量。
+Obtains the raw offset of the specified time zone.
 
 **Since:** 23
 
@@ -228,7 +228,7 @@ getRawOffset(): int
 
 | Type | Description |
 | --- | --- |
-| int | 时区的原始偏移量，单位为毫秒（ms）。 |
+| int | Raw offset of the time zone, in milliseconds. |
 
 ## getTimezoneFromCity
 
@@ -236,7 +236,7 @@ getRawOffset(): int
 static getTimezoneFromCity(cityID: string): TimeZone
 ```
 
-创建对应时区城市的时区对象。
+Creates a TimeZone object corresponding to the specified time zone city.
 
 **Since:** 23
 
@@ -252,13 +252,13 @@ static getTimezoneFromCity(cityID: string): TimeZone
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| cityID | string | Yes | 时区城市ID，要求是系统支持的时区城市ID。 |
+| cityID | string | Yes | Time zone city ID. The value must be a time zone city ID supported by the system. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [TimeZone](arkts-localization-i18n-timezone-c.md) | 时区城市对应的时区对象。 |
+| [TimeZone](arkts-localization-i18n-timezone-c.md) | TimeZone object corresponding to the specified time zone city ID. |
 
 ## getTimezonesByLocation
 
@@ -266,7 +266,7 @@ static getTimezoneFromCity(cityID: string): TimeZone
 static getTimezonesByLocation(longitude: double, latitude: double): Array<TimeZone>
 ```
 
-创建地理位置对应的时区对象数组。
+Creates an array of TimeZone objects corresponding to the specified location.
 
 **Since:** 23
 
@@ -282,21 +282,21 @@ static getTimezonesByLocation(longitude: double, latitude: double): Array<TimeZo
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| longitude | double | Yes | 经度，范围[-180, 179.9)，东经取正值，西经取负值。 |
-| latitude | double | Yes | 纬度，范围[-90, 89.9)，北纬取正值，南纬取负值。 |
+| longitude | double | Yes | Longitude. The value range is [-180, 179.9). A positive value is used for east longitude and a negative value is used for west longitude. |
+| latitude | double | Yes | Latitude. The value range is [-90, 89.9). A positive value is used for north latitude and a negative value is used for south latitude. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Array&lt;[TimeZone](arkts-localization-i18n-timezone-c.md)&gt; | 时区对象数组，数组中对象对应的时区为该地理位置推荐的时区。 |
+| Array&lt;[TimeZone](arkts-localization-i18n-timezone-c.md)&gt; | TimeZone objects corresponding to the specified location. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
-| 890001 | Invalid parameter. Possible causes: Parameter verification failed. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
+| [890001](../errorcode-i18n.md#890001-parameter-error) | Invalid parameter. Possible causes: Parameter verification failed. |
 
 ## getZoneRules
 
@@ -304,7 +304,7 @@ static getTimezonesByLocation(longitude: double, latitude: double): Array<TimeZo
 public getZoneRules(): ZoneRules
 ```
 
-获取时区跳变规则，时区的跳变逻辑参考[夏令时跳变](../../../internationalization/i18n-dst-transition.md)。
+Get the zone rules object corresponds to the timezone objects.
 
 **Since:** 23
 
@@ -320,7 +320,7 @@ public getZoneRules(): ZoneRules
 
 | Type | Description |
 | --- | --- |
-| [ZoneRules](arkts-localization-i18n-zonerules-c.md) | 时区跳变规则，包含跳变的时间点、跳变前后的偏移量信息。 |
+| [ZoneRules](arkts-localization-i18n-zonerules-c.md) | Returns a ZoneRuels object which defines timezone offset changing rule. |
 
 ## isDaylightSavingTime
 
@@ -328,7 +328,7 @@ public getZoneRules(): ZoneRules
 public isDaylightSavingTime(date: Date): boolean
 ```
 
-判断指定的时间日期是否处于夏令时。
+Check if the given date use daylight saving time. The calculation will be based on the matched time zone rules.
 
 **Since:** 26.0.0
 
@@ -346,13 +346,13 @@ public isDaylightSavingTime(date: Date): boolean
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| date | Date | Yes | 时间日期。 &lt;br&gt;**说明：** &lt;br&gt;月份从0开始计数，0表示一月。 |
+| date | Date | Yes | Date and time. Note: The month starts from **0**, indicating January. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| boolean | 是否处于夏令时。true表示处于夏令时，false表示不处于夏令时。 |
+| boolean | true if the date use daylight saving time, and false otherwise. |
 
 ## setAppDefaultTimeZoneById
 
@@ -360,11 +360,7 @@ public isDaylightSavingTime(date: Date): boolean
 static setAppDefaultTimeZoneById(zoneID: string): void
 ```
 
-设置当前应用的默认时区，在应用运行时生命周期内有效。
-
-> **说明：**
-> 
-> 进行日期时间格式化时，若未指定时区，会优先使用应用设置的默认时区。
+Sets the default time zone for the current app, the value will be used on the application's runtime lifecycle.When the date time formatting function is used, the default time zone ID of the app is used preferentially.
 
 **Since:** 26.0.0
 
@@ -382,11 +378,11 @@ static setAppDefaultTimeZoneById(zoneID: string): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| zoneID | string | Yes | 应用设置默认的时区ID，如："Asia/Shanghai"。 |
+| zoneID | string | Yes | Time zone ID that set default for app. for example, "Asia/Shanghai". &lt;br&gt; Time zone ID supported by the system |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 8900001 | Invalid parameter. Possible causes: Parameter verification failed. |
+| [8900001](../errorcode-i18n.md#8900001-parameter-verification-error) | Invalid parameter. Possible causes: Parameter verification failed. |
 

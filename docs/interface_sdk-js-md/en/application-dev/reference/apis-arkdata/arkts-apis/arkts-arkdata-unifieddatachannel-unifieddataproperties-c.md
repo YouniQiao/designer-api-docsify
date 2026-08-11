@@ -1,6 +1,6 @@
 # UnifiedDataProperties
 
-定义统一数据对象中所有数据记录的属性，包含时间戳、标签、粘贴范围以及一些附加数据等。
+Defines the properties of the data records in the unified data object, including the timestamp, tag, pasting range,and additional data.
 
 **Since:** 12
 
@@ -22,7 +22,7 @@ import { unifiedDataChannel } from 'kits/@kit.ArkData';
 getDelayData?: GetDelayData
 ```
 
-延迟获取数据回调。当前只支持同设备剪贴板场景，当用户从剪贴板读取数据时触发该回调。非必填字段，默认值为undefined。
+Callback for obtaining the deferred data. Currently, it can be used only in the pasteboard application of the same device. The default value is **undefined**.
 
 **Since:** 12
 
@@ -42,7 +42,7 @@ getDelayData?: GetDelayData
 extras?: Record<string, object>
 ```
 
-是一个字典类型对象，用于设置其他附加属性数据。非必填字段，默认值为空字典对象。
+Object of the dictionary type used to set other properties. The default value is an empty dictionary object.
 
 **Type:** [Record](../../apis-default/arkts-apis/arkts-record-t.md)&lt;string, object&gt;
 
@@ -64,7 +64,8 @@ extras?: Record<string, object>
 shareOptions?: ShareOptions
 ```
 
-指示[UnifiedData](arkts-arkdata-unifieddatachannel-unifieddata-c.md)支持的设备内使用范围，非必填字段，默认值为CROSS_APP。
+Range, in which [UnifiedData](arkts-arkdata-unifieddatachannel-unifieddataproperties-c.md) can be used. The default value is   
+**CROSS_APP**.
 
 **Type:** [ShareOptions](arkts-arkdata-unifieddatachannel-shareoptions-e.md)
 
@@ -86,7 +87,7 @@ shareOptions?: ShareOptions
 tag?: string
 ```
 
-用户自定义标签。非必填字段，默认值为空字符串。
+Customized tag. The default value is an empty string.
 
 **Type:** string
 
@@ -108,7 +109,7 @@ tag?: string
 readonly timestamp?: Date
 ```
 
-[UnifiedData](arkts-arkdata-unifieddatachannel-unifieddata-c.md)的生成时间戳。默认值为1970年1月1日（UTC）。
+Timestamp when [UnifiedData](arkts-arkdata-unifieddatachannel-unifieddataproperties-c.md) is generated. The default value is January 1, 1970 (UTC).
 
 **Type:** Date
 
@@ -130,7 +131,7 @@ readonly timestamp?: Date
 uriAuthorizationPolicies?: Array<UriPermission>
 ```
 
-用于拖拽场景的URI授权策略。默认值为READ+WRITE+PERSIST，只对单次数据生效，优先级较低，具体策略见[UriPermission](arkts-arkdata-unifieddatachannel-uripermission-e.md)。
+Defines URI authorization policies for drag intention.
 
 **Type:** Array&lt;UriPermission&gt;
 

@@ -1,6 +1,6 @@
 # TextContentControllerOptions
 
-Defines the span options of TextContentController.
+Provides configuration options for text insertion operations in text input components.
 
 **Since:** 15
 
@@ -16,7 +16,7 @@ Defines the span options of TextContentController.
 offset?: number
 ```
 
-the offset that add a text at.
+Insertion position for the text.
 
 **Type:** number
 

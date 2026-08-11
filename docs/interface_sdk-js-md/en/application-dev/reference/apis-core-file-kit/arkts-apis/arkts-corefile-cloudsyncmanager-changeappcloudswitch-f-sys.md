@@ -12,7 +12,7 @@ import { cloudSyncManager } from 'kits/@kit.CoreFileKit';
 function changeAppCloudSwitch(accountId: string, bundleName: string, status: boolean): Promise<void>
 ```
 
-异步方法修改应用的端云文件同步开关。使用Promise异步回调。
+Changes the device-cloud file sync switch for an application. This API uses a promise to return the result.
 
 **Since:** 10
 
@@ -28,23 +28,23 @@ function changeAppCloudSwitch(accountId: string, bundleName: string, status: boo
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| accountId | string | Yes | 账号Id。 |
-| bundleName | string | Yes | 应用包名。 |
-| status | boolean | Yes | 修改的应用云同步开关状态。true为打开；false为关闭。 |
+| accountId | string | Yes | Account ID. |
+| bundleName | string | Yes | Bundle name. |
+| status | boolean | Yes | State of the cloud-device file sync switch to set. The value **true** means to enable this function; the value **false** means the opposite. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise对象，无返回结果。 |
+| Promise&lt;void&gt; | Promise that returns no value. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | The input parameter is invalid.Possible causes:1.Mandatory parameters are left unspecified; &lt;br&gt;2.Incorrect parameter types. |
-| 201 | Permission verification failed. |
-| 202 | The caller is not a system application. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | The input parameter is invalid.Possible causes:1.Mandatory parameters are left unspecified; &lt;br&gt;2.Incorrect parameter types. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | The caller is not a system application. |
 
 ## Examples
 
@@ -67,7 +67,7 @@ cloudSyncManager.changeAppCloudSwitch(accountId, bundleName, true).then(() => {
 function changeAppCloudSwitch(accountId: string, bundleName: string, status: boolean, callback: AsyncCallback<void>): void
 ```
 
-异步方法修改应用的端云文件同步开关。使用callback异步回调。
+Changes the device-cloud file sync switch for an application. This API uses an asynchronous callback to return the result.
 
 **Since:** 10
 
@@ -83,18 +83,18 @@ function changeAppCloudSwitch(accountId: string, bundleName: string, status: boo
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| accountId | string | Yes | 账号Id。 |
-| bundleName | string | Yes | 应用包名 |
-| status | boolean | Yes | 修改的应用云同步开关状态。true为打开；false为关闭。 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | 回调函数。异步修改应用的端云文件同步开关之后。 |
+| accountId | string | Yes | Account ID. |
+| bundleName | string | Yes | Bundle name of the application. |
+| status | boolean | Yes | State of the cloud-device file sync switch to set. The value **true** means to enable this function; the value **false** means the opposite. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result of changing the device-cloud file sync switch for an application. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | The input parameter is invalid.Possible causes:1.Mandatory parameters are left unspecified; &lt;br&gt;2.Incorrect parameter types. |
-| 201 | Permission verification failed. |
-| 202 | The caller is not a system application. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | The input parameter is invalid.Possible causes:1.Mandatory parameters are left unspecified; &lt;br&gt;2.Incorrect parameter types. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | The caller is not a system application. |
 
 ## Examples
 

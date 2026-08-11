@@ -1,11 +1,5 @@
 # removeWatcher（系统接口）
 
-## 导入模块
-
-```TypeScript
-import { hiSysEvent } from 'kits/@kit.PerformanceAnalysisKit';
-```
-
 ## removeWatcher
 
 ```TypeScript
@@ -30,16 +24,16 @@ function removeWatcher(watcher: Watcher): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| watcher | [Watcher](../../apis-core-file-kit/arkts-apis/arkts-corefile-watcher-t.md) | 是 | 系统事件订阅者对象。 |
+| watcher | [Watcher](../../apis-core-file-kit/arkts-apis/arkts-corefile-file-fs-watcher-i.md) | 是 | 系统事件订阅者对象。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. 3. Parameter verification failed. |
-| 11200201 | The watcher does not exist. |
-| 201 | Permission denied. An attempt was made to read system event forbidden by permission: ohos.permission.READ_DFX_SYSEVENT. |
-| 202 | System API is not allowed called by Non-system application. |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. 3. Parameter verification failed. |
+| [11200201](../errorcode-hisysevent-sys.md#11200201-系统事件监听者不存在) | The watcher does not exist. |
+| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. An attempt was made to read system event forbidden by permission: ohos.permission.READ_DFX_SYSEVENT. |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | System API is not allowed called by Non-system application. |
 
 ## 示例
 

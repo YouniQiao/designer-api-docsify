@@ -1,6 +1,6 @@
 # SpanStyle
 
-属性字符串样式。
+Describes the span style.
 
 **Since:** 12
 
@@ -16,9 +16,9 @@
 length: number
 ```
 
-设置属性字符串样式的长度。
+Length of the styled string style.
 
-当length的值小于0或超出字符串长度与start的差值时，按字符串长度与start的差值处理。
+If the value is less than 0 or exceeds the difference between the string length and the value of **start**, it is treated as the difference between the string length and the value of **start**.
 
 **Type:** number
 
@@ -40,7 +40,7 @@ length: number
 start: number
 ```
 
-匹配属性字符串样式的开始位置。
+Start position of the styled string style.
 
 **Type:** number
 
@@ -62,7 +62,7 @@ start: number
 styledKey: StyledStringKey
 ```
 
-样式类型的枚举值。
+Style key.
 
 **Type:** [StyledStringKey](arkts-arkui-styledstring-styledstringkey-e.md)
 
@@ -84,7 +84,7 @@ styledKey: StyledStringKey
 styledValue: StyledStringValue
 ```
 
-用于设置属性字符串样式的样式对象。
+Style object.
 
 **Type:** [StyledStringValue](arkts-arkui-styledstringvalue-t.md)
 

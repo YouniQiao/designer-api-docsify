@@ -7,7 +7,7 @@ type BatchUpdateFn = (
 ) => void
 ```
 
-批量更新操作的属性类型。
+Callback function called when updating multiple data records in the database.
 
 **Since:** 23
 

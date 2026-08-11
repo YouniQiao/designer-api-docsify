@@ -1,6 +1,6 @@
 # ContinuousAuthParam (System API)
 
-持续认证参数。用于配置订阅持续认证状态时的相关参数，如指定订阅的目标模板。
+Defines continuous authentication parameters. They are used to configure parameters related to the subscription to the continuous authentication status, for example, specifying the target template to be subscribed to.
 
 **Since:** 23
 
@@ -24,7 +24,7 @@ import { companionDeviceAuth } from 'kits/@kit.UserAuthenticationKit';
 templateId?: Uint8Array
 ```
 
-模板ID。用于指定订阅的目标模板。若不指定此参数，默认订阅当前用户下全部模板的持续认证状态。指定具体模板ID时，仅订阅该模板的认证状态变化。
+Template ID. It is used to specify the target template to be subscribed to. If this parameter is not specified,the continuous authentication status of all templates of the current user is subscribed to by default. If a specific template ID is specified, only the authentication status change of the template is subscribed to.
 
 **Type:** Uint8Array
 

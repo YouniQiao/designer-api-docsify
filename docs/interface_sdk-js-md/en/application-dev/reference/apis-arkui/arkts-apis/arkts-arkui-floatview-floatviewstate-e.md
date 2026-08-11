@@ -1,6 +1,6 @@
 # FloatViewState
 
-标准悬浮窗状态的枚举。
+Enumerates the states of the float view.
 
 **Since:** 26.0.0
 
@@ -16,7 +16,7 @@
 STARTED = 1
 ```
 
-标准悬浮窗已启动并显示。
+The float view has been started and displayed.
 
 **Since:** 26.0.0
 
@@ -34,8 +34,7 @@ STARTED = 1
 HIDDEN = 2
 ```
 
-标准悬浮窗已隐藏。上滑进入多任务界面时触发、使用  
-[setFloatViewVisibilityInApp](arkts-arkui-floatview-floatviewcontroller-i.md#setfloatviewvisibilityinapp)接口设置了应用在前台时隐藏标准悬浮窗且应用处于前台时触发。
+The float view has been hidden. This event is triggered when the user swipes up to enter the multitasking screen or when the [setFloatViewVisibilityInApp](arkts-arkui-floatview-floatviewcontroller-i.md#setfloatviewvisibilityinapp) API is called to hide the float view when the application is in the foreground and the application is in the foreground.
 
 **Since:** 26.0.0
 
@@ -53,7 +52,7 @@ HIDDEN = 2
 STOPPED = 3
 ```
 
-标准悬浮窗已停止。
+The float view has been stopped.
 
 **Since:** 26.0.0
 
@@ -71,7 +70,7 @@ STOPPED = 3
 IN_SIDEBAR = 4
 ```
 
-标准悬浮窗在侧边栏中。
+The float view is in the sidebar.
 
 **Since:** 26.0.0
 
@@ -89,7 +88,7 @@ IN_SIDEBAR = 4
 IN_FLOATING_BALL = 5
 ```
 
-标准悬浮窗切换为闪控球。
+The float view is switched to the floating ball.
 
 **Since:** 26.0.0
 
@@ -107,7 +106,7 @@ IN_FLOATING_BALL = 5
 ERROR = 6
 ```
 
-标准悬浮窗发生异常。
+An exception occurs in the float view.
 
 **Since:** 26.0.0
 

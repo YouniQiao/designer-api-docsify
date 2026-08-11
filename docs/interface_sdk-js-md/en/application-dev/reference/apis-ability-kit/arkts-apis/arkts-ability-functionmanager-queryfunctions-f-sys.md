@@ -38,7 +38,7 @@ Query all available functions.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 201 | Permission denied. |
-| 202 | Not system application. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system application. |
 | 35600050 | System Error. 1. Connect to system service failed; 2.System service failed to communicate with dependency module. |
 

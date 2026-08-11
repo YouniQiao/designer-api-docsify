@@ -12,7 +12,7 @@ import { errorManager } from 'kits/@kit.AbilityKit';
 function onFreeze(observer: FreezeObserver): void
 ```
 
-注册冻屏事件观测器。此函数只能在主线程中调用。请注意，每个进程只支持注册一个观测器。如果多次注册，后注册的将覆盖之前的。
+Register an observer for freeze event.This function can only be called from main thread.Please note that each process only supports registering one observer.If you register multiple times, the later one will overwrite the previous one.
 
 **Since:** 24
 
@@ -26,12 +26,12 @@ function onFreeze(observer: FreezeObserver): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| observer | [FreezeObserver](arkts-ability-errormanager-freezeobserver-t.md) | Yes | 应用主线程freeze观测器。 |
+| observer | [FreezeObserver](arkts-ability-errormanager-freezeobserver-t.md) | Yes | The freeze event observer. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | 参数错误。可能的原因：1. 必填参数未填写； 2. 参数类型不正确；3. 参数校验失败。 |
-| 16200001 | 调用者无效。 |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| [16200001](../errorcode-ability.md#16200001-caller-released) | If the caller is invalid. |
 

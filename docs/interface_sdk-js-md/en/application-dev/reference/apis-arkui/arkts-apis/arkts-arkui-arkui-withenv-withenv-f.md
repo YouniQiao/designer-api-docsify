@@ -14,7 +14,7 @@ export declare function WithEnv(
 ): WithEnvAttribute
 ```
 
-WithEnv组件用于为子组件树设置局部环境变量作用域。开发者可以通过该组件为后代组件提供自定义环境变量，或设置系统环境变量。
+Define the WithEnv component that allows setting environment properties for child components.
 
 **Since:** 26.0.0
 
@@ -30,7 +30,7 @@ WithEnv组件用于为子组件树设置局部环境变量作用域。开发者�
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| content_ | [CustomBuilder](../arkts-components/arkts-arkui-custombuilder-t.md) | No | 组件的内容。 |
+| content_ | [CustomBuilder](../arkts-components/arkts-arkui-custombuilder-t.md) | No | the content of the component |
 
 **Return value:**
 

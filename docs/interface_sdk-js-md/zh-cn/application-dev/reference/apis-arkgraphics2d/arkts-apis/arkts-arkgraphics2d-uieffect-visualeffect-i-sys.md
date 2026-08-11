@@ -10,12 +10,6 @@ VisualEffect效果类，用于将背景颜色混合、边框光照、颜色渐�
 
 **系统能力：** SystemCapability.Graphics.Drawing
 
-## 导入模块
-
-```TypeScript
-import { uiEffect } from 'kits/@kit.ArkGraphics2D';
-```
-
 ## backgroundColorBlender
 
 ```TypeScript
@@ -50,14 +44,42 @@ backgroundColorBlender(blender: BrightnessBlender): VisualEffect
 
 ## 示例
 
+ArkTS-Dyn示例：
+
 ```TypeScript
-import { uiEffect } from '@kit.ArkGraphics2D';
-let blender: uiEffect.BrightnessBlender =
+let blender : uiEffect.BrightnessBlender =
   uiEffect.createBrightnessBlender({cubicRate:1.0, quadraticRate:1.0, linearRate:1.0, degree:1.0, saturation:1.0,
-    positiveCoefficient:[2.3, 4.5, 2.0], negativeCoefficient:[0.5, 2.0, 0.5], fraction:0.0});
-let visualEffect = uiEffect.createEffect();
-// 将混合器添加至组件上以改变组件背景颜色
-visualEffect.backgroundColorBlender(blender);
+    positiveCoefficient:[2.3, 4.5, 2.0], negativeCoefficient:[0.5, 2.0, 0.5], fraction:0.0})
+visualEffect.backgroundColorBlender(blender)
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+import { Entry, Component, Context, Column, Color, Stack, State, Row, Text, $r } from '@kit.ArkUI'
+import uiEffect from '@ohos.graphics.uiEffect'
+import { BrightnessBlenderParam } from '@ohos.graphics.uiEffect'
+import type common2D from '@ohos.graphics.common2D'
+
+@Entry
+@Component
+struct BackgroundColorBlender {
+  @State bgOptions: uiEffect.Blender = uiEffect.createBrightnessBlender({
+    cubicRate: 0.5, quadraticRate: 0.5, linearRate: 0.5, degree: 0.5, saturation: 0.5,
+    positiveCoefficient: [1.0, 1.0, 1.0] as [double, double, double],
+    negativeCoefficient: [1.0, 1.0, 1.0] as [double, double ,double],
+    fraction: 0.5
+  } as BrightnessBlenderParam)
+
+  build() {
+    Stack() {
+      Column() {
+        Text("BrightnessBlender").fontSize(50).fontColor(Color.Red)
+      }.backgroundColor(Color.Blue)
+      .visualEffect(uiEffect.createEffect().backgroundColorBlender(this.bgOptions))
+    }
+  }
+}
 ```
 
 ## borderLight
@@ -105,24 +127,26 @@ borderLight(lightPosition: common2D.Point3d, lightColor: common2D.Color, lightIn
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 202 | 权限校验失败，非系统应用调用系统接口。 |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | 权限校验失败，非系统应用调用系统接口。 |
 
 ## 示例
 
+ArkTS-Dyn示例：
+
 ```TypeScript
-import { common2D, uiEffect } from '@kit.ArkGraphics2D';
+import { common2D, uiEffect } from '@kit.ArkGraphics2D'
 
 @Entry
 @Component
 struct Index {
-  @State borderLightPosition: common2D.Point3d = {
-    x: 0, y: 0, z: 2
-  };
-  @State borderLightColor: common2D.Color = {
-    red: 1, green: 1, blue: 1, alpha: 1
-  };
-  @State lightIntensity: number = 1;
-  @State borderWidth_: number = 20;
+  @State point1:common2D.Point3d = {
+    x:0,y:0,z:2
+  }
+  @State color1:common2D.Color = {
+    red:1,green:1,blue:1,alpha:1
+  }
+  @State lightIntensity1:number = 1
+  @State borderWidth:number = 20
 
   build() {
     Column() {
@@ -135,9 +159,58 @@ struct Index {
           .width('646px')
           .height('900px')
           .borderRadius(10)
-          // 为圆角矩形组件边框添加3D光照效果
-          .visualEffect(uiEffect.createEffect().borderLight(this.borderLightPosition, this.borderLightColor, this.lightIntensity,
-            this.borderWidth_))
+          .visualEffect(uiEffect.createEffect().borderLight(this.point1, this.color1, this.lightIntensity1,
+            this.borderWidth))
+      }
+      .width('100%')
+      .height('55%')
+    }
+    .height('100%')
+    .width('100%')
+    .justifyContent(FlexAlign.Center)
+    .backgroundColor('#555')
+  }
+}
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+import {
+  Entry,
+  Component,
+  State,
+  Column,
+  Stack,
+  Image,
+  $r,
+  FlexAlign
+} from '@kit.ArkUI';
+
+import uiEffect from '@ohos.graphics.uiEffect'
+import {common2D} from '@kit.ArkGraphics2D'
+
+@Entry
+@Component
+struct Index {
+  @State lightIntensity1:double = 1
+  @State borderWidth_:double = 20
+
+  build() {
+    Column() {
+      Stack() {
+        Image($r('app.media.man'))
+          .width('646px')
+          .height('900px')
+          .borderRadius(10)
+        Column()
+          .width('646px')
+          .height('900px')
+          .borderRadius(10)
+          .visualEffect(uiEffect.createEffect().borderLight(
+            { x:0.0, y:0.0, z:2.0 } as common2D.Point3d,
+            { red:255, blue:255, green:255, alpha:255 } as common2D.Color,
+            this.lightIntensity1, this.borderWidth_))
       }
       .width('100%')
       .height('55%')
@@ -195,12 +268,14 @@ colorGradient(colors: Array<Color>, positions: Array<common2D.Point>, strengths:
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 202 | 权限校验失败，非系统应用调用系统接口。 |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | 权限校验失败，非系统应用调用系统接口。 |
 
 ## 示例
 
+ArkTS-Dyn示例：
+
 ```TypeScript
-import { common2D, uiEffect } from '@kit.ArkGraphics2D';
+import { common2D, uiEffect } from "@kit.ArkGraphics2D"
 
 @Entry
 @Component
@@ -208,7 +283,6 @@ struct ColorGradientExample {
   build() {
     Stack() {
       Stack() {}
-      // 此方法为组件添加颜色渐变效果
       .visualEffect(uiEffect.createEffect()
         .colorGradient(
           [
@@ -227,11 +301,40 @@ struct ColorGradientExample {
           uiEffect.Mask.createRippleMask({x: 0.5, y: 0.5}, 0.2, 0.1)
         )
       )
-      .width('1024px')
-      .height('1024px')
+      .width("1024px")
+      .height("1024px")
     }
-    .width('100%')
-    .height('100%')
+    .width("100%")
+    .height("100%")
+  }
+}
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+import { Entry, Component, Column, Stack, State, Row, $r } from '@kit.ArkUI'
+import uiEffect from '@ohos.graphics.uiEffect'
+import type common2D from '@ohos.graphics.common2D'
+
+@Entry
+@Component
+struct ColorGradient {
+  @State colors: Array<uiEffect.Color> = [
+    {red: 1.0, green: 0.8, blue: 0.5, alpha: 0.8} as uiEffect.Color,
+    {red: 1.0, green: 1.0, blue: 0.5, alpha: 1.0} as uiEffect.Color
+  ]
+  @State positions: Array<common2D.Point> = [
+    {x: 0.2, y: 0.2} as common2D.Point,
+    {x: 0.8, y: 0.6} as common2D.Point]
+  @State strengths: Array<double> = [0.3, 0.3]
+
+  build() {
+    Column() {
+      Row().width("100%").height("100%")
+        .backgroundFilter(uiEffect.createFilter().colorGradient(this.colors.map((v: uiEffect.Color) => v),
+          this.positions.map((v: common2D.Point) => v), this.strengths.map((v: double) => v)))
+    }
   }
 }
 ```
@@ -262,41 +365,13 @@ distortionCollapse(distortionParam: DistortionParam): VisualEffect
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| distortionParam | [DistortionParam](../../apis-arkui/arkts-apis/arkts-arkui-distortioncomponent-distortionparam-i-sys.md) | 是 | 非线性形变效果的参数。 |
+| distortionParam | [DistortionParam](../../apis-arkui/arkts-components/arkts-arkui-distortionparam-i-sys.md) | 是 | 非线性形变效果的参数。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
 | [VisualEffect](../../apis-arkui/arkts-components/arkts-arkui-visualeffect-t.md) | 返回添加了非线性形变效果的VisualEffect。 |
-
-## 示例
-
-```TypeScript
-import { uiEffect } from '@kit.ArkGraphics2D';
-
-@Entry
-@Component
-struct Index {
-  private distortionParam: DistortionParam = {
-    topLeft: {x: 0.09, y: 0.007},
-    topRight: {x: 0.91, y: 0.007},
-    bottomRight: {x: 1.09, y: 0.702},
-    bottomLeft: {x: -0.09, y: 0.702},
-    barrelDistortion: {x: 0.551, y: 0.551, z: 0.092, w: 0.092},
-  }
-
-  build() {
-    Column() {
-      Image($r('app.media.man')).width('80%').height('80%')
-        .visualEffect(uiEffect.createEffect().distortionCollapse(this.distortionParam))
-    }
-    .justifyContent(FlexAlign.Center)
-    .height('100%')
-    .width('100%')
-  }
-}
-```
 
 ## liquidMaterial
 
@@ -336,7 +411,7 @@ liquidMaterial(param : LiquidMaterialEffectParam, useEffectMask: Mask, distortMa
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 202 | 权限校验失败，非系统应用调用系统接口。 |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | 权限校验失败，非系统应用调用系统接口。 |
 
 ## 示例
 
@@ -357,17 +432,17 @@ struct Index {
   @State tintColorB: number = 1.;
   @State tintColorA: number = 1.;
 
-  private getMaterialVisualEffect(): uiEffect.VisualEffect {
+  private GetMaterialVisualEffect(): uiEffect.VisualEffect {
     let effect: uiEffect.VisualEffect = uiEffect.createEffect();
     effect.liquidMaterial({
       enable: true,
-      distortProgress: this.distortProgress,
+      distortProgress : this.distortProgress,
       rippleProgress: this.rippleProgress,
       distortFactor: this.distortFactor,
-      materialFactor: this.materialFactor,
-      refractionFactor: this.refractionFactor,
+      materialFactor : this.materialFactor,
+      refractionFactor : this.refractionFactor,
       reflectionFactor: this.reflectionFactor,
-      tintColor: [this.tintColorR, this.tintColorG, this.tintColorB, this.tintColorA],
+      tintColor : [this.tintColorR, this.tintColorG, this.tintColorB, this.tintColorA],
       ripplePosition: undefined,
     },
       uiEffect.Mask.createUseEffectMask(true),
@@ -383,15 +458,15 @@ struct Index {
           .height(553 + 'px')
           .width(553 + 'px')
           .borderRadius(12)
-          .visualEffect(this.getMaterialVisualEffect())
+          .visualEffect(this.GetMaterialVisualEffect())
       }
       .backgroundEffect({
         radius: 15,
       }, { disableSystemAdaptation: true })
-      .width('100%').height('100%').align(Alignment.Center)
+      .width("100%").height("100%").align(Alignment.Center)
     }
     .backgroundImage($r('app.media.bg6'), ImageRepeat.NoRepeat)
-    .width('100%').height('100%').align(Alignment.Center)
+    .width("100%").height("100%").align(Alignment.Center)
   }
 }
 ```

@@ -24,7 +24,7 @@ import { UploadResponse, RequestData, DownloadRequestOptions, DownloadResponse, 
 complete?: () => void
 ```
 
-接口调用结束的回调函数。
+Called when API call is complete.
 
 **Since:** 3
 
@@ -44,7 +44,7 @@ complete?: () => void
 fail?: (data: any, code: number) => void
 ```
 
-接口调用失败的回调函数。返回header信息与HTTP状态码。
+Called when API call has failed. Header information and HTTP status code returned when the upload task fails.
 
 **Since:** 3
 
@@ -71,7 +71,7 @@ fail?: (data: any, code: number) => void
 success?: (data: OnDownloadCompleteResponse) => void
 ```
 
-接口调用成功的回调函数。
+Called when API call is successful.
 
 **Since:** 3
 
@@ -97,7 +97,7 @@ success?: (data: OnDownloadCompleteResponse) => void
 token: string
 ```
 
-download 接口返回的结果 token。
+Result token returned by the download API.
 
 **Type:** string
 

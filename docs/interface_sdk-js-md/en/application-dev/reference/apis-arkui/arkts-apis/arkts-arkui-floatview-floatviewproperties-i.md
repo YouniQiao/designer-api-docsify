@@ -1,6 +1,6 @@
 # FloatViewProperties
 
-标准悬浮窗窗口的属性。
+Provides the properties of the float view.
 
 **Since:** 26.0.0
 
@@ -22,12 +22,11 @@ import { floatView } from 'kits/@kit.ArkUI';
 avoidArea: window.AvoidArea
 ```
 
-标准悬浮窗内容的避让区域。
+Avoid area for the content of the float view.
 
-**注意：**
+Note:
 
-通过[setUIContext()](arkts-arkui-floatview-floatviewcontroller-i.md#setuicontext)或  
-[setUIContextByName()](arkts-arkui-floatview-floatviewcontroller-i.md#setuicontextbyname)加载的页面中，位于避让区域的组件将不响应手势事件，添加需要手势响应事件的组件时，请注意避让这些区域。
+On the page loaded by [setUIContext](arkts-arkui-floatview-floatviewcontroller-i.md#setuicontext), components in the avoid area do not respond to gesture events. When adding components that require gesture response events, avoid the area.
 
 **Type:** window.AvoidArea
 
@@ -47,7 +46,7 @@ avoidArea: window.AvoidArea
 displayId: int
 ```
 
-标准悬浮窗所在屏幕ID。取值限定为整数。
+ID of the display where the float view is located.
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
@@ -67,7 +66,7 @@ displayId: int
 inSidebar: boolean
 ```
 
-标准悬浮窗是否在侧边栏中。true为在侧边栏中，false为不在侧边栏中。
+Whether the float view is in the sidebar. **true**: in the sidebar; **false**: not in the sidebar.
 
 **Type:** boolean
 
@@ -87,7 +86,7 @@ inSidebar: boolean
 templateType: FloatViewTemplateType
 ```
 
-标准悬浮窗的模板类型。
+Template type of the float view.
 
 **Type:** [FloatViewTemplateType](arkts-arkui-floatview-floatviewtemplatetype-e.md)
 
@@ -107,7 +106,7 @@ templateType: FloatViewTemplateType
 windowId: int
 ```
 
-标准悬浮窗窗口ID。取值限定为整数。
+Float view ID.
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
@@ -127,7 +126,7 @@ windowId: int
 windowRect: window.Rect
 ```
 
-标准悬浮窗窗口矩形区域。
+Rectangle area of the float view.
 
 **Type:** window.Rect
 
@@ -147,7 +146,7 @@ windowRect: window.Rect
 windowScale: double
 ```
 
-标准悬浮窗窗口缩放比例。
+Scale factor of the float view.
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：double
 

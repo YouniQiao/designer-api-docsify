@@ -4,7 +4,7 @@
 declare type OnScrollEdgeCallback = (side: Edge) => void
 ```
 
-滚动到边缘时触发的回调。
+Represents the callback triggered when scrolling reaches an edge.
 
 **Since:** 18
 
@@ -22,5 +22,5 @@ declare type OnScrollEdgeCallback = (side: Edge) => void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| side | [Edge](../arkts-apis/arkts-arkui-edge-e.md) | Yes | 滚动到的边缘位置。竖直方向滚动时，Edge.Top和Edge.Start表示起始边缘，Edge.Bottom和Edge.End表示末尾边缘。水平方向滚动时，Edge.Center表示水平方 向起始位置，Edge.Baseline表示水平方向末尾位置。 |
+| side | [Edge](../arkts-apis/arkts-arkui-edge-e.md) | Yes | Edge position to scroll to. |
 

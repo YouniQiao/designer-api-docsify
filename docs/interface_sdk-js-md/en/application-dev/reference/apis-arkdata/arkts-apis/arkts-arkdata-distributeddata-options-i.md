@@ -1,6 +1,6 @@
 # Options
 
-用于提供创建数据库的配置信息。
+Provides KV store configuration.
 
 **Since:** 7
 
@@ -20,7 +20,7 @@
 autoSync?: boolean
 ```
 
-设置数据库文件是否自动同步。默认为false，即手动同步。
+Whether to automatically synchronize database files. The default value is **false**, which means the database files are manually synchronized.
 
 ohos.permission.DISTRIBUTED_DATASYNC
 
@@ -46,7 +46,7 @@ ohos.permission.DISTRIBUTED_DATASYNC
 backup?: boolean
 ```
 
-设置数据库文件是否备份，默认为true，即备份。
+Whether to back up the KV store. The default value is **true**, which means to back up the KV store.
 
 **Type:** boolean
 
@@ -68,7 +68,7 @@ backup?: boolean
 createIfMissing?: boolean
 ```
 
-当数据库文件不存在时是否创建数据库，默认为true，即创建。
+Whether to create a KV store if the database file does not exist. The default value is **true**, which means to create a KV store.
 
 **Type:** boolean
 
@@ -90,7 +90,7 @@ createIfMissing?: boolean
 encrypt?: boolean
 ```
 
-设置数据库文件是否加密，默认为false，即不加密。
+Whether to encrypt the KV store. The default value is **false**, which means the KV store is not encrypted.
 
 **Type:** boolean
 
@@ -112,7 +112,7 @@ encrypt?: boolean
 kvStoreType?: KVStoreType
 ```
 
-设置要创建的数据库类型，默认为DEVICE_COLLABORATION，即多设备协同数据库。
+Type of the KV store to create. The default value is **DEVICE_COLLABORATION**, which indicates a device KV store.
 
 **Type:** [KVStoreType](arkts-arkdata-distributeddata-kvstoretype-e.md)
 
@@ -134,7 +134,7 @@ kvStoreType?: KVStoreType
 schema?: Schema
 ```
 
-设置定义存储在数据库中的值，默认为undefined，即不使用schema。
+Schema that defines the values stored in the KV store. The default value is **undefined**, which means no schema is used.
 
 **Type:** [Schema](arkts-arkdata-distributedkvstore-schema-c.md)
 
@@ -156,7 +156,7 @@ schema?: Schema
 securityLevel?: SecurityLevel
 ```
 
-设置数据库安全级别(S1-S4)。
+Security level (S1 to S4) of the KV store.
 
 **Type:** [SecurityLevel](arkts-arkdata-distributedkvstore-securitylevel-e.md)
 

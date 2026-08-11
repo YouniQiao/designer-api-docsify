@@ -1,6 +1,6 @@
 # SafeAreaType
 
-扩展安全区域的枚举类型。
+Enumerates the types for expanding layout safe areas.
 
 **Since:** 10
 
@@ -16,7 +16,7 @@
 SYSTEM = 0
 ```
 
-系统默认非安全区域，包括状态栏、导航栏。
+Default non-safe area of the system, including the status bar and navigation bar.
 
 **Since:** 10
 
@@ -36,7 +36,7 @@ SYSTEM = 0
 CUTOUT = 1
 ```
 
-设备的非安全区域，例如刘海屏或挖孔屏区域。
+Device-specific non-safe area, such as the notch area or camera cutout area.
 
 **Since:** 10
 
@@ -56,7 +56,7 @@ CUTOUT = 1
 KEYBOARD = 2
 ```
 
-软键盘区域。
+Soft keyboard area.
 
 **Since:** 10
 

@@ -1,11 +1,5 @@
 # subscribeReminderState
 
-## 导入模块
-
-```TypeScript
-import { reminderAgentManager } from 'kits/@kit.BackgroundTasksKit';
-```
-
 ## subscribeReminderState
 
 ```TypeScript
@@ -42,10 +36,12 @@ function subscribeReminderState(callback: Callback<Array<ReminderState>>): Promi
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 201 | Permission denied. |
-| 1700007 | If the input parameter is not valid parameter. |
+| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
+| [1700007](../../apis-backgroundtasks-kit/errorcode-reminderAgentManager.md#1700007-参数错误) | If the input parameter is not valid parameter. |
 
 ## 示例
+
+ArkTS-Dyn示例：
 
 ```TypeScript
 import { reminderAgentManager } from '@kit.BackgroundTasksKit';
@@ -58,6 +54,22 @@ function reminderStateCallback(states: Array<reminderAgentManager.ReminderState>
 reminderAgentManager.subscribeReminderState(reminderStateCallback).then(() => {
   console.info('subscribe succeed');
 }).catch((err: BusinessError) => {
+  console.error('promise err code:' + err.code + ' message:' + err.message);
+});
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+import { reminderAgentManager } from '@kit.BackgroundTasksKit';
+
+function reminderStateCallback(states: Array<reminderAgentManager.ReminderState>) {
+  console.info('length is : ' + states.length);
+}
+
+reminderAgentManager.subscribeReminderState(reminderStateCallback).then(() => {
+  console.info('subscribe succeeded');
+}).catch((err): void => {
   console.error('promise err code:' + err.code + ' message:' + err.message);
 });
 ```

@@ -12,7 +12,7 @@ import { restrictions } from 'kits/@kit.MDMKit';
 function getUserRestricted(admin: Want, settingsItem: string): boolean
 ```
 
-获取设置项的禁用状态。
+Obtains the disabled status of a setting item.
 
 **Since:** 20
 
@@ -34,22 +34,22 @@ function getUserRestricted(admin: Want, settingsItem: string): boolean
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| admin | [Want](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-want-want-c.md) | Yes | 企业设备管理扩展组件。Want中必须包含企业设备管理扩展能力的abilityName和所在应用的bundleName。 |
-| settingsItem | string | Yes | 指定设置项。&lt;br/&gt;- setEthernetIp：修改以太网IP地址，当前仅支持PC/2in1设备使用。&lt;br/&gt;- setDeviceName：修改设备名称， 当前仅支持PC/2in1设备、手机、平板使用。PC/2in1设备设置中关于本机、蓝牙、多设备协同->星闪中的设备名称。手机、平板设备设置中关于本机、蓝牙、个人热点的设备名称。&lt;br/&gt;- setBiometricsAndScreenLock：修改锁屏密码，当前仅支持PC/2in1设备、手机、平板使用。 |
+| admin | [Want](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-want-want-c.md) | Yes | EnterpriseAdminExtensionAbility. **Want** must contain the ability name of the EnterpriseAdminExtensionAbility and the bundle name of the application. |
+| settingsItem | string | Yes | Setting item. &lt;br&gt;- **setEthernetIp**: Ethernet IP address configuration, currently supported only on PCs/2-in-1 devices. &lt;br&gt;- **setDeviceName**: device name configuration, currently supported only on PCs/2-in-1 devices, smartphones, and tablets. When it is disabled, the device name cannot be modified in the following settings: **About**, **Bluetooth**, and **More connectivity options** > **NearLink** on PCs/2-in-1 devices, and **About**, **Bluetooth**, and **Personal hotspot** on smartphones and tablets. &lt;br&gt;- **setBiometricsAndScreenLock**: screen lock password configuration, currently supported only on PCs/2-in- 1 devices, smartphones, and tablets. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| boolean | 返回指定设置项的禁用状态，true表示已禁用，false表示未禁用。 |
+| boolean | Disabled status of the specified setting item. The value **true** means the item is disabled; the value **false** means the opposite. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 201 | Permission verification failed. The application does not have the permission required to call the API. |
-| 9200001 | The application is not an administrator application of the device. |
-| 9200002 | The administrator application does not have permission to manage the device. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed. The application does not have the permission required to call the API. |
+| [9200001](../errorcode-enterpriseDeviceManager.md#9200001-deviceadmin-not-enabled) | The application is not an administrator application of the device. |
+| [9200002](../errorcode-enterpriseDeviceManager.md#9200002-permission-denied) | The administrator application does not have permission to manage the device. |
 
 ## Examples
 
@@ -79,7 +79,7 @@ try {
 function getUserRestricted(admin: Want | null, settingsItem: SettingsForDevice): boolean
 ```
 
-获取设置项的禁用状态
+Obtains the disabled status of the specified device setting item.
 
 **Since:** 26.0.0
 
@@ -98,20 +98,20 @@ function getUserRestricted(admin: Want | null, settingsItem: SettingsForDevice):
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | admin | [Want](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-want-want-c.md) \| null | Yes | EnterpriseAdminExtensionAbility. **Want** must contain the ability name of the. EnterpriseAdminExtensionAbility and the bundle name of the application.&lt;br&gt;If the device has multiple MDM applications, you can pass **admin** to query the corresponding policies. If **null** is passed, the policies that actually take effect on the device are returned. |
-| settingsItem | [SettingsForDevice](arkts-mdm-restrictions-settingsfordevice-e.md) | Yes | 指定设置项。 |
+| settingsItem | [SettingsForDevice](arkts-mdm-restrictions-settingsfordevice-e.md) | Yes | Device setting item to be queried. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| boolean | 返回指定设置项的禁用状态，true表示已禁用，false表示未禁用。 |
+| boolean | Disabled status of the specified device setting item. The value **true** means the item is disabled; the value **false** means the opposite. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 801 | Capability not supported. Failed to call the API due to limited device capabilities. |
-| 201 | Permission verification failed. The application does not have the permission required to call the API. |
-| 9200001 | The application is not an administrator application of the device. |
-| 9200002 | The administrator application does not have permission to manage the device. |
+| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. Failed to call the API due to limited device capabilities. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed. The application does not have the permission required to call the API. |
+| [9200001](../errorcode-enterpriseDeviceManager.md#9200001-deviceadmin-not-enabled) | The application is not an administrator application of the device. |
+| [9200002](../errorcode-enterpriseDeviceManager.md#9200002-permission-denied) | The administrator application does not have permission to manage the device. |
 

@@ -10,12 +10,6 @@ wantConstant模块提供want中操作want常数和解释Flags说明的能力。
 
 **系统能力：** SystemCapability.Ability.AbilityBase
 
-## 导入模块
-
-```TypeScript
-import { wantConstant } from 'kits/@kit.AbilityKit';
-```
-
 ## 汇总
 
 ### 枚举

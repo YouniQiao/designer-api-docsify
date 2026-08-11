@@ -12,7 +12,7 @@ import { display } from 'kits/@kit.ArkUI';
 function getDisplayByIdSync(displayId: long): Display
 ```
 
-根据displayId获取对应的Display对象。
+Obtains a Display object based on the display ID.
 
 **Since:** 12
 
@@ -28,24 +28,26 @@ function getDisplayByIdSync(displayId: long): Display
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| displayId | ArkTS-Dyn: number  <br>ArkTS-Sta：long | Yes | 屏幕ID。该参数仅支持整数输入，该参数大于等于0。需要确保displayId准确才能成功获取到对应结果。可以通过 [WindowProperties](arkts-arkui-window-windowproperties-i.md)的displayId属性获取到准确的displayId作为入参。 |
+| displayId | ArkTS-Dyn: number  <br>ArkTS-Sta：long | Yes | Display ID. The value must be an integer greater than or equal to 0. An object can be obtained only when the passed-in display ID is correct. You can use the value of the **displayId** property in [WindowProperties](arkts-arkui-window-windowproperties-i.md) as the input parameter. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [Display](arkts-arkui-display-display-i.md) | 返回displayId对应的Display对象。 |
+| [Display](arkts-arkui-display-display-i.md) | Display object. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. 3. Parameter verification failed. |
-| 1400003 | This display manager service works abnormally. Possible causes: Display is null, display id corresponding display does not exist. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. 3. Parameter verification failed. |
+| [1400003](../errorcode-display.md#1400003-abnormal-display-manager-service) | This display manager service works abnormally. Possible causes: Display is null, display id corresponding display does not exist. |
 
 ## Examples
 
 ```TypeScript
+import { display } from '@kit.ArkUI';
+
 let displayClass: display.Display | null = null;
 
 try {

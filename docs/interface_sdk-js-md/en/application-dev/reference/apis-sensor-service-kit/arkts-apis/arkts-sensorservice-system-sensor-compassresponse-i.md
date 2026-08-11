@@ -1,6 +1,6 @@
 # CompassResponse
 
-罗盘数据改变后的回调函数的响应对象，包含设备面对的方向度数。
+Defines a **CompassResponse** object.
 
 **Since:** 3
 
@@ -26,7 +26,7 @@ import { OnBodyStateResponse, subscribeAccelerometerOptions, ProximityResponse, 
 direction: number
 ```
 
-设备面对的方向度数。单位：度（°）。取值范围：[0, 360)，0表示朝北。取值为实际上报物理量。
+Direction of the device, in degrees.
 
 **Type:** number
 

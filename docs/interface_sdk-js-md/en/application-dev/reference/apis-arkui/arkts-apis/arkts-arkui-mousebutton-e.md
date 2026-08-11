@@ -1,6 +1,6 @@
 # MouseButton
 
-定义鼠标按键的类型。
+Enumerates the mouse button types.
 
 **Since:** 8
 
@@ -16,7 +16,7 @@
 Left
 ```
 
-鼠标左键。
+Left button on the mouse.
 
 **Since:** 8
 
@@ -34,7 +34,7 @@ Left
 Right
 ```
 
-鼠标右键。
+Right button on the mouse.
 
 **Since:** 8
 
@@ -52,7 +52,7 @@ Right
 Middle
 ```
 
-鼠标中键。
+Middle button on the mouse.
 
 **Since:** 8
 
@@ -70,7 +70,7 @@ Middle
 Back
 ```
 
-鼠标左侧后退键。
+Back button on the left of the mouse.
 
 **Since:** 8
 
@@ -88,7 +88,7 @@ Back
 Forward
 ```
 
-鼠标左侧前进键。
+Forward button on the left of the mouse.
 
 **Since:** 8
 
@@ -106,7 +106,7 @@ Forward
 None
 ```
 
-无按键。
+No button.
 
 **Since:** 8
 

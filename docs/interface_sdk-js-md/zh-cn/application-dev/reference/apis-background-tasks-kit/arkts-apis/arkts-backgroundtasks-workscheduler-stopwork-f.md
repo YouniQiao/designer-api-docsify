@@ -1,11 +1,5 @@
 # stopWork
 
-## 导入模块
-
-```TypeScript
-import { workScheduler } from 'kits/@kit.BackgroundTasksKit';
-```
-
 ## stopWork
 
 ```TypeScript
@@ -35,13 +29,15 @@ function stopWork(work: WorkInfo, needCancel?: boolean): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 9700004 | Check on workInfo failed. |
-| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameters types; 3. Parameter verification failed. |
-| 9700001 | Memory operation failed. |
-| 9700002 | Failed to write data into parcel. Possible reasons: 1. Invalid parameters; 2. Failed to apply for memory. |
-| 9700003 | System service operation failed. |
+| [9700004](../../apis-backgroundtasks-kit/errorcode-workScheduler.md#9700004-workinfo校验失败) | Check on workInfo failed. |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameters types; 3. Parameter verification failed. |
+| [9700001](../../apis-backgroundtasks-kit/errorcode-workScheduler.md#9700001-内存操作失败) | Memory operation failed. |
+| [9700002](../../apis-backgroundtasks-kit/errorcode-workScheduler.md#9700002-parcel读写操作失败) | Failed to write data into parcel. Possible reasons: 1. Invalid parameters; 2. Failed to apply for memory. |
+| [9700003](../../apis-backgroundtasks-kit/errorcode-workScheduler.md#9700003-系统服务失败) | System service operation failed. |
 
 ## 示例
+
+ArkTS-Dyn示例：
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -63,6 +59,35 @@ let workInfo: workScheduler.WorkInfo = {
 }
 try {
   // 停止延迟任务，false表示只停止不移除任务
+  workScheduler.stopWork(workInfo, false);
+  console.info('workschedulerLog stopWork success');
+} catch (error) {
+  console.error(`workschedulerLog stopWork failed. code is ${(error as BusinessError).code} message is ${(error as BusinessError).message}`);
+}
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+import { workScheduler } from '@kit.BackgroundTasksKit';
+
+const parameter: Record<string, int | double | string | boolean> = {
+  'mykey0': 1,
+  'mykey1': 'string value',
+  'mykey2': true,
+  'mykey3': 1.5
+};
+let workInfo: workScheduler.WorkInfo = {
+  workId: 1,
+  batteryStatus: workScheduler.BatteryStatus.BATTERY_STATUS_LOW,
+  isRepeat: false,
+  isPersisted: true,
+  bundleName: 'com.example.myapplication',
+  abilityName: 'MyExtension',
+  parameters: parameter
+}
+try {
   workScheduler.stopWork(workInfo, false);
   console.info('workschedulerLog stopWork success');
 } catch (error) {

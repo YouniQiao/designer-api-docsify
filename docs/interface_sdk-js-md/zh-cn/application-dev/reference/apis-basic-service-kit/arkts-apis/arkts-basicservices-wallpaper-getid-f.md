@@ -1,11 +1,5 @@
 # getId
 
-## 导入模块
-
-```TypeScript
-import { wallpaper } from 'kits/@kit.BasicServicesKit';
-```
-
 ## getId
 
 ```TypeScript

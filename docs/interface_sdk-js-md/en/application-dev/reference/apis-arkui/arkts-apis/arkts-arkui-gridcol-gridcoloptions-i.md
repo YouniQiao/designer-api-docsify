@@ -1,6 +1,6 @@
 # GridColOptions
 
-设置栅格列布局组件布局选项。
+Defines the options of grid-container child component.
 
 **Since:** 23
 
@@ -16,7 +16,7 @@
 offset?: int | GridColColumnOption
 ```
 
-栅格子组件相对于原本位置偏移的列数。
+Sets the offset of current gird-container item.
 
 **Type:** int \| GridColColumnOption
 
@@ -36,7 +36,7 @@ offset?: int | GridColColumnOption
 order?: int | GridColColumnOption
 ```
 
-元素的序号，根据栅格子组件的序号，从小到大对栅格子组件做排序。
+Sets the order of current gird-container item.
 
 **Type:** int \| GridColColumnOption
 
@@ -56,7 +56,7 @@ order?: int | GridColColumnOption
 span?: int | GridColColumnOption
 ```
 
-栅格子组件占用栅格容器组件的列数。span为0表示该元素不参与布局计算，即不会被渲染。
+Sets the span of current gird-container item.
 
 **Type:** int \| GridColColumnOption
 

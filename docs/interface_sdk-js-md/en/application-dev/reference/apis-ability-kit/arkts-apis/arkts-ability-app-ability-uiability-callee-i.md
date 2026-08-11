@@ -1,6 +1,6 @@
 # Callee
 
-系统为UIAbility创建的后台通信对象，Callee UIAbility（被调用方）可以通过Callee对象接收Caller对象发送的数据。
+Background communication object created by the system for the UIAbility, known as the Callee UIAbility (Callee), which is capable of receiving data sent from the Caller object.
 
 **Since:** 9
 
@@ -22,7 +22,7 @@ import { Callee, Caller, OnReleaseCallback, OnRemoteStateChangeCallback, CalleeC
 off(method: string): void
 ```
 
-解除通用组件服务端注册消息通知callback。
+Unregisters a caller notification callback, which is invoked when the target UIAbility registers a function.
 
 **Since:** 9
 
@@ -38,15 +38,15 @@ off(method: string): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| method | string | Yes | 已注册的通知事件字符串。 |
+| method | string | Yes | Registered notification message string. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
-| 16200005 | The method has not been registered. |
-| 16000050 | Internal error. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| [16200005](../errorcode-ability.md#16200005-method-not-registered) | The method has not been registered. |
+| [16000050](../errorcode-ability.md#16000050-internal-error) | Internal error. |
 
 ## Examples
 
@@ -73,7 +73,7 @@ export default class MainUIAbility extends UIAbility {
 on(method: string, callback: CalleeCallback): void
 ```
 
-通用组件服务端注册消息通知callback。
+Registers a caller notification callback, which is invoked when the target UIAbility registers a function.
 
 **Since:** 9
 
@@ -89,16 +89,16 @@ on(method: string, callback: CalleeCallback): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| method | string | Yes | 由Caller和Callee双方约定好的方法名，Callee方通过该字段区分消息类型。 |
-| callback | [CalleeCallback](arkts-ability-app-ability-uiability-calleecallback-i.md) | Yes | 一个[rpc.MessageSequence](../../apis-ipc-kit/arkts-apis/arkts-ipc-rpc-messagesequence-c.md/arkts-ipc-rpc-messagesequence-c.md)类型入参的js通知同步回调函数, 回 调函数至少要返回一个空的[rpc.Parcelable](../../apis-ipc-kit/arkts-apis/arkts-ipc-rpc-parcelable-i.md/arkts-ipc-rpc-parcelable-i.md)数据对象, 其他视为函数执行错误。 |
+| method | string | Yes | Method name agreed upon by the Caller UIAbility and Callee UIAbility, used by the Callee UIAbility to identify the type of message. |
+| callback | [CalleeCallback](arkts-ability-app-ability-uiability-calleecallback-i.md) | Yes | JS notification synchronization callback of the [rpc.MessageSequence](../../apis-ipc-kit/arkts-apis/arkts-ipc-rpc-messagesequence-c.md/arkts-ipc-rpc-messagesequence-c.md) type. The callback must return at least one empty [rpc.Parcelable](../../apis-ipc-kit/arkts-apis/arkts-ipc-rpc-parcelable-i.md/arkts-ipc-rpc-parcelable-i.md) object. Otherwise, the function execution fails. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
-| 16200004 | The method has been registered. |
-| 16000050 | Internal error. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| [16200004](../errorcode-ability.md#16200004-method-registered) | The method has been registered. |
+| [16000050](../errorcode-ability.md#16000050-internal-error) | Internal error. |
 
 ## Examples
 

@@ -2,7 +2,7 @@
 
 ## Overview
 
-The error code in i18n.
+Provides the error codes returned by internationalization APIs.
 
 **Library**: libohi18n.so
 

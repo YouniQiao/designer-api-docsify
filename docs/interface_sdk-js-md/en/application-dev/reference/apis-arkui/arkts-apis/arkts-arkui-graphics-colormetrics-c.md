@@ -1,6 +1,6 @@
 # ColorMetrics
 
-用于混合颜色。
+Defines the ColorMetrics class.
 
 **Since:** 23
 
@@ -10,13 +10,43 @@
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
+## autoRefresh
+
+```TypeScript
+autoRefresh(value: boolean): ColorMetrics
+```
+
+Sets automatic refresh for the ColorMetrics object.When enabled, the color values of objects created with ColorMetrics.resourceColor() are automatically updated when the system configuration changes.
+
+**Since:** 26.0.0
+
+**ArkTS mode:** ArkTS-Sta only, since version 26.0.0.
+
+**Model restriction:** This API can be used only in the stage model.
+
+<!--Device-ColorMetrics-autoRefresh(value: boolean): ColorMetrics--><!--Device-ColorMetrics-autoRefresh(value: boolean): ColorMetrics-End-->
+
+**System capability:** SystemCapability.ArkUI.ArkUI.Full
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| value | boolean | Yes | Whether to automatically refresh the color value when system configuration changes. &lt;br&gt;If this parameter is set to true, the color values of objects created using ColorMetrics.resourceColor() are automatically updated when the system configuration changes. If set to false, the color values of objects created by ColorMetrics.resourceColor() are not automatically updated. The default value is false. |
+
+**Return value:**
+
+| Type | Description |
+| --- | --- |
+| [ColorMetrics](arkts-arkui-graphics-colormetrics-c.md) | Returns the ColorMetrics object for chaining. |
+
 ## blendColor
 
 ```TypeScript
 blendColor(overlayColor: ColorMetrics): ColorMetrics
 ```
 
-在当前颜色的上方叠加上一层指定的颜色（overlayColor），并返回混合后的新颜色。
+blend color
 
 **Since:** 23
 
@@ -32,19 +62,19 @@ blendColor(overlayColor: ColorMetrics): ColorMetrics
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| overlayColor | [ColorMetrics](arkts-arkui-graphics-colormetrics-c.md) | Yes | 要叠加在上方的颜色对象。alpha属性决定叠加强度。1.0表示完全覆盖，0.0表示完全透明，混合结果为原色。 |
+| overlayColor | [ColorMetrics](arkts-arkui-graphics-colormetrics-c.md) | Yes | overlay color |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [ColorMetrics](arkts-arkui-graphics-colormetrics-c.md) | 新的颜色对象，其red、green、blue和alpha通道均为当前颜色与叠加颜色混合后的结果值。 |
+| [ColorMetrics](arkts-arkui-graphics-colormetrics-c.md) | ColorMetrics class |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. The type of the input parameter is not ColorMetrics. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. The type of the input parameter is not ColorMetrics. |
 
 ## colorWithSpace
 
@@ -52,7 +82,7 @@ blendColor(overlayColor: ColorMetrics): ColorMetrics
 static colorWithSpace(colorSpace: ColorSpace, red: double, green: double, blue: double, alpha?: double): ColorMetrics
 ```
 
-使用colorSpace和rgba实例化ColorMetrics类。只有部分属性支持在display-p3 colorSpace中设置颜色。
+Instantiate the ColorMetrics class using colorSpace and rgba.Only some properties support setting color in display-p3 colorSpace.
 
 **Since:** 23
 
@@ -68,17 +98,17 @@ static colorWithSpace(colorSpace: ColorSpace, red: double, green: double, blue: 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| colorSpace | [ColorSpace](arkts-arkui-colorspace-e.md) | Yes | 颜色空间，用于指定颜色的色彩空间。使用ColorSpace.DISPLAY_P3，需要对应窗口调用 [setWindowColorSpace](../../../reference/apis-arkui/arkts-apis-window-Window.md#setwindowcolorspace9-1)接口，将当前窗 口设置为广色域模式。 |
-| red | double | Yes | 颜色的R分量（红色），值是0~1的浮动数值。 |
-| green | double | Yes | 颜色的G分量（绿色），值是0~1的浮动数值。 |
-| blue | double | Yes | 颜色的B分量（蓝色），值是0~1的浮动数值。 |
-| alpha | double | No | 颜色的A分量（透明度），值是0.0~1.0的浮点数，默认值为1.0，不透明。 |
+| colorSpace | [ColorSpace](arkts-arkui-colorspace-e.md) | Yes | colorSpace of color. |
+| red | double | Yes | red value of rgba. The range of the red channel is [0, 1]. |
+| green | double | Yes | green value of rgba. The range of the green channel is [0, 1]. |
+| blue | double | Yes | blue value of rgba. The range of the blue channel is [0, 1]. |
+| alpha | double | No | alpha value of rgba. The range of the alpha channel is [0, 1]. The default value is 1. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [ColorMetrics](arkts-arkui-graphics-colormetrics-c.md) | ColorMetrics类的实例。 |
+| [ColorMetrics](arkts-arkui-graphics-colormetrics-c.md) | ColorMetrics class |
 
 ## numeric
 
@@ -86,7 +116,7 @@ static colorWithSpace(colorSpace: ColorSpace, red: double, green: double, blue: 
 static numeric(value: int): ColorMetrics
 ```
 
-使用颜色编号实例化ColorMetrics类
+Instantiate the ColorMetrics class using color number
 
 **Since:** 23
 
@@ -102,13 +132,13 @@ static numeric(value: int): ColorMetrics
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | int | Yes | HEX格式颜色。&lt;br/&gt;取值范围：支持rgb或者argb。 &lt;br&gt;取值限定为整数。 |
+| value | int | Yes | color number. &lt;br&gt;The value should be an integer. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [ColorMetrics](arkts-arkui-graphics-colormetrics-c.md) | ColorMetrics 类的实例。 |
+| [ColorMetrics](arkts-arkui-graphics-colormetrics-c.md) | ColorMetrics class |
 
 ## resourceColor
 
@@ -116,7 +146,7 @@ static numeric(value: int): ColorMetrics
 static resourceColor(color: ResourceColor): ColorMetrics
 ```
 
-使用资源格式颜色实例化 ColorMetrics 类。
+Instantiate the ColorMetrics class using ResourceColor
 
 **Since:** 23
 
@@ -132,20 +162,20 @@ static resourceColor(color: ResourceColor): ColorMetrics
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| color | [ResourceColor](arkts-arkui-resourcecolor-t.md) | Yes | 资源格式颜色。 |
+| color | [ResourceColor](arkts-arkui-resourcecolor-t.md) | Yes | resource color |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [ColorMetrics](arkts-arkui-graphics-colormetrics-c.md) | ColorMetrics 类的实例。 |
+| [ColorMetrics](arkts-arkui-graphics-colormetrics-c.md) | ColorMetrics class |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 180003 | Failed to obtain the color resource. |
-| 401 | Parameter error. Possible cause: 1. The type of the input color parameter is not ResourceColor. 2. The format of the input color string is not RGB or RGBA. |
+| [180003](../errorcode-event.md#180003-input-event-is-not-a-cloned-event) | Failed to obtain the color resource. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible cause: 1. The type of the input color parameter is not ResourceColor. 2. The format of the input color string is not RGB or RGBA. |
 
 ## rgba
 
@@ -153,7 +183,7 @@ static resourceColor(color: ResourceColor): ColorMetrics
 static rgba(red: double, green: double, blue: double, alpha?: double): ColorMetrics
 ```
 
-使用颜色rgb实例化ColorMetrics类
+Instantiate the ColorMetrics class using color rgb
 
 **Since:** 23
 
@@ -169,16 +199,16 @@ static rgba(red: double, green: double, blue: double, alpha?: double): ColorMetr
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| red | double | Yes | 颜色的R分量（红色），值是0~255的整数。 |
-| green | double | Yes | 颜色的G分量（绿色），值是0~255的整数。 |
-| blue | double | Yes | 颜色的B分量（蓝色），值是0~255的整数。 |
-| alpha | double | No | 颜色的A分量（透明度），值是0.0~1.0的浮点数，默认值为1.0，不透明。&lt;br/&gt; **说明：** alpha小于0为全透明，大于1为不透明。 |
+| red | double | Yes | red value of rgba. |
+| green | double | Yes | green value of rgba. |
+| blue | double | Yes | blue value of rgba. |
+| alpha | double | No | opacity value of rgba. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [ColorMetrics](arkts-arkui-graphics-colormetrics-c.md) | ColorMetrics 类的实例。 |
+| [ColorMetrics](arkts-arkui-graphics-colormetrics-c.md) | ColorMetrics class |
 
 ## BLACK
 
@@ -186,7 +216,7 @@ static rgba(red: double, green: double, blue: double, alpha?: double): ColorMetr
 public static readonly BLACK: int
 ```
 
-黑色。取值限定为整数。
+Black.The value should be an integer.
 
 **Type:** int
 
@@ -206,7 +236,7 @@ public static readonly BLACK: int
 public static readonly BLUE: int
 ```
 
-蓝色。取值限定为整数。
+Blue.The value should be an integer.
 
 **Type:** int
 
@@ -226,7 +256,7 @@ public static readonly BLUE: int
 public static readonly BROWN: int
 ```
 
-棕色。取值限定为整数。
+Brown.The value should be an integer.
 
 **Type:** int
 
@@ -246,7 +276,7 @@ public static readonly BROWN: int
 public static readonly GRAY: int
 ```
 
-灰色。取值限定为整数。
+Gray.The value should be an integer.
 
 **Type:** int
 
@@ -266,7 +296,7 @@ public static readonly GRAY: int
 public static readonly GREEN: int
 ```
 
-绿色。取值限定为整数。
+Green.The value should be an integer.
 
 **Type:** int
 
@@ -286,7 +316,7 @@ public static readonly GREEN: int
 public static readonly GREY: int
 ```
 
-灰色。取值限定为整数。
+Grey.The value should be an integer.
 
 **Type:** int
 
@@ -306,7 +336,7 @@ public static readonly GREY: int
 public static readonly ORANGE: int
 ```
 
-橘色。取值限定为整数。
+Orange.The value should be an integer.
 
 **Type:** int
 
@@ -326,7 +356,7 @@ public static readonly ORANGE: int
 public static readonly PINK: int
 ```
 
-粉色。取值限定为整数。
+Pink.The value should be an integer.
 
 **Type:** int
 
@@ -346,7 +376,7 @@ public static readonly PINK: int
 public static readonly RED: int
 ```
 
-红色。取值限定为整数。
+Red.The value should be an integer.
 
 **Type:** int
 
@@ -366,7 +396,7 @@ public static readonly RED: int
 public static readonly TRANSPARENT: string
 ```
 
-透明度。
+Transparent.
 
 **Type:** string
 
@@ -386,7 +416,7 @@ public static readonly TRANSPARENT: string
 public static readonly WHITE: int
 ```
 
-白色。取值限定为整数。
+White.The value should be an integer.
 
 **Type:** int
 
@@ -406,7 +436,7 @@ public static readonly WHITE: int
 public static readonly YELLOW: int
 ```
 
-黄色。取值限定为整数。
+Yellow.The value should be an integer.
 
 **Type:** int
 
@@ -426,6 +456,8 @@ public static readonly YELLOW: int
 get alpha(): int
 ```
 
+Get opacity value of the ColorMetrics.
+
 **Type:** int
 
 **Since:** 23
@@ -443,6 +475,8 @@ get alpha(): int
 ```TypeScript
 get blue(): int
 ```
+
+Get blue value of the ColorMetrics.
 
 **Type:** int
 
@@ -462,7 +496,7 @@ get blue(): int
 get color(): string
 ```
 
-获取ColorMetrics的颜色，返回的是rgba字符串的格式。
+Get color of the ColorMetrics.
 
 **Type:** string
 
@@ -482,6 +516,8 @@ get color(): string
 get green(): int
 ```
 
+Get green value of the ColorMetrics.
+
 **Type:** int
 
 **Since:** 23
@@ -499,6 +535,8 @@ get green(): int
 ```TypeScript
 get red(): int
 ```
+
+Get red value of the ColorMetrics.
 
 **Type:** int
 

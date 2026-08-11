@@ -1,6 +1,6 @@
 # OnFoldStatusChangeInfo
 
-当折叠状态改变的时候回调，仅在横屏状态下生效。
+Information when onFolderStateChange.
 
 **Since:** 23
 
@@ -16,7 +16,7 @@
 foldStatus: FoldStatus
 ```
 
-当前设备的折叠状态。
+Folder state.
 
 Anonymous Object Rectification
 

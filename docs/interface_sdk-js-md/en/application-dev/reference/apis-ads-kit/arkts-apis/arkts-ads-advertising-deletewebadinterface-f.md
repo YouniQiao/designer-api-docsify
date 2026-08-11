@@ -12,7 +12,7 @@ import { advertising } from 'kits/@kit.AdsKit';
 function deleteWebAdInterface(controller: web_webview.WebviewController, needRefresh: boolean): void
 ```
 
-删除通过registerWebAdInterface注入的广告JavaScript对象（该接口仅对部分系统预置应用开放）。
+Deletes the ad JavaScript object injected through **registerWebAdInterface**(this API is only open to some pre-installed system applications).
 
 **Since:** 16
 
@@ -28,15 +28,15 @@ function deleteWebAdInterface(controller: web_webview.WebviewController, needRef
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| controller | web_webview.WebviewController | Yes | Web组件控制器。 |
-| needRefresh | boolean | Yes | 是否需要刷新页面（true: 需要；false: 不需要）。 |
+| controller | web_webview.WebviewController | Yes | Web component controller. |
+| needRefresh | boolean | Yes | Whether to refresh the page (true: yes; false: no). |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Invalid input parameter. Possible causes: Mandatory parameters are left unspecified. |
-| 21800001 | System internal error. |
+| [401](../errorcode-ads.md#401-incorrect-ads-request-parameter) | Invalid input parameter. Possible causes: Mandatory parameters are left unspecified. |
+| [21800001](../errorcode-ads.md#21800001-internal-system-error) | System internal error. |
 
 ## Examples
 

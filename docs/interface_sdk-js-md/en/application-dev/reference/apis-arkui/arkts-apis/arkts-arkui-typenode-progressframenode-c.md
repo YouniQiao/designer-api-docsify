@@ -1,6 +1,6 @@
 # ProgressFrameNode
 
-定义Progress类型的FrameNode。
+Define the Progress type of FrameNode.
 
 **Inheritance/Implementation:** ProgressFrameNode extends [TypedFrameNode<ProgressAttribute>](TypedFrameNode<ProgressAttribute>)
 
@@ -18,7 +18,7 @@
 abstract initialize(value: ProgressOptions): ProgressAttribute
 ```
 
-初始化Progress类型的FrameNode。
+Initialize Progress FrameNode.
 
 **Since:** 23
 

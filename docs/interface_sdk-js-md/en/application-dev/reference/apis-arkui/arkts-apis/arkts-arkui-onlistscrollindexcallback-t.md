@@ -4,7 +4,7 @@
 export type OnListScrollIndexCallback = (start: int, end: int, center: int) => void
 ```
 
-List组件可见区域item变化事件的回调类型。
+Defines the callback type used in onScrollIndex.
 
 **Since:** 26.0.0
 
@@ -20,7 +20,7 @@ List组件可见区域item变化事件的回调类型。
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| start | int | Yes | List显示区域内第一个子组件的索引值。 |
-| end | int | Yes | List显示区域内最后一个子组件的索引值。 |
-| center | int | Yes | List显示区域内中间位置子组件的索引值。 |
+| start | int | Yes | the first index in visible content. |
+| end | int | Yes | the last index in visible content. |
+| center | int | Yes | the center index in visible content. |
 

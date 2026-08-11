@@ -1,6 +1,6 @@
 # RichEditorSymbolSpanOptions
 
-设置SymbolSpan组件的偏移位置和样式。
+Sets the offset and style of the **SymbolSpan** component.
 
 **Since:** 11
 
@@ -16,9 +16,9 @@
 offset?: number
 ```
 
-添加SymbolSpan的位置。省略时，添加到所有内容的最后。
+Position of the symbol span to be added. If this parameter is omitted, the span is added to the end of all content.
 
-如果值小于0，添加到所有内容的最前面；如果值大于所有内容的长度，添加到所有内容的最后面。
+If the value is less than 0, the span is added to the beginning of all content. If the value is greater than the length of all content, the span is added to the end of all content.
 
 **Type:** number
 
@@ -40,7 +40,7 @@ offset?: number
 style?: RichEditorSymbolSpanStyle
 ```
 
-SymbolSpan样式信息。当需要自定义SymbolSpan的颜色、大小、粗细、渲染策略等样式时传入此参数；省略时，使用系统默认样式信息。
+Style of the symbol span. If this parameter is left empty, the default style will be used.
 
 **Type:** [RichEditorSymbolSpanStyle](../arkts-apis/arkts-arkui-richeditor-richeditorsymbolspanstyle-i.md)
 

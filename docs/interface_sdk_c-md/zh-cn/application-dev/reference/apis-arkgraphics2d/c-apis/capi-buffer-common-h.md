@@ -31,6 +31,8 @@
 | [OH_NativeBuffer_MetadataKey](#oh_nativebuffer_metadatakey) | OH_NativeBuffer_MetadataKey | 表示OH_NativeBuffer的描述信息的键值，如HDR元数据，ROI元数据等。 |
 | [OH_NativeBuffer_Format](#oh_nativebuffer_format) | OH_NativeBuffer_Format | OH_NativeBuffer格式的枚举。 |
 | [OH_NativeBuffer_TransformType](#oh_nativebuffer_transformtype) | OH_NativeBuffer_TransformType | OH_NativeBuffer转换类型的枚举。 |
+| [OH_NativeBuffer_VideoDimensionType](#oh_nativebuffer_videodimensiontype) | OH_NativeBuffer_VideoDimensionType | 视频维度类型枚举。 |
+| [OH_NativeBuffer_3D_MetadataKey](#oh_nativebuffer_3d_metadatakey) | OH_NativeBuffer_3D_MetadataKey | 表示NativeBuffer的3D元数据枚举属性。 |
 
 ## 枚举类型说明
 
@@ -125,23 +127,23 @@ OH_NativeBuffer格式的枚举。
 | NATIVEBUFFER_PIXEL_FMT_CLUT8 = 0 |  |
 | NATIVEBUFFER_PIXEL_FMT_CLUT1 |  |
 | NATIVEBUFFER_PIXEL_FMT_CLUT4 |  |
-| NATIVEBUFFER_PIXEL_FMT_RGBA_5658,                 /// < RGBA5658 format */ |  |
-| NATIVEBUFFER_PIXEL_FMT_RGBX_4444,                 /// < RGBX4444 format */ |  |
-| NATIVEBUFFER_PIXEL_FMT_RGBA_4444,                 /// < RGBA4444 format */ |  |
-| NATIVEBUFFER_PIXEL_FMT_RGB_444,                   /// < RGB444 format */ |  |
-| NATIVEBUFFER_PIXEL_FMT_RGBX_5551,                 /// < RGBX5551 format */ |  |
-| NATIVEBUFFER_PIXEL_FMT_RGBA_5551,                 /// < RGBA5551 format */ |  |
-| NATIVEBUFFER_PIXEL_FMT_RGB_555,                   /// < RGB555 format */ |  |
-| NATIVEBUFFER_PIXEL_FMT_RGBX_8888,                 /// < RGBX8888 format */ |  |
-| NATIVEBUFFER_PIXEL_FMT_RGBA_8888,                 /// < RGBA8888 format */ |  |
-| NATIVEBUFFER_PIXEL_FMT_RGB_888,                   /// < RGB888 format */ |  |
-| NATIVEBUFFER_PIXEL_FMT_BGR_565,                   /// < BGR565 format */ |  |
-| NATIVEBUFFER_PIXEL_FMT_BGRX_4444,                 /// < BGRX4444 format */ |  |
-| NATIVEBUFFER_PIXEL_FMT_BGRA_4444,                 /// < BGRA4444 format */ |  |
-| NATIVEBUFFER_PIXEL_FMT_BGRX_5551,                 /// < BGRX5551 format */ |  |
-| NATIVEBUFFER_PIXEL_FMT_BGRA_5551,                 /// < BGRA5551 format */ |  |
-| NATIVEBUFFER_PIXEL_FMT_BGRX_8888,                 /// < BGRX8888 format */ |  |
-| NATIVEBUFFER_PIXEL_FMT_BGRA_8888,                 /// < BGRA8888 format */ |  |
+| NATIVEBUFFER_PIXEL_FMT_RGBA_5658,                 /// < RGBA5658格式。 */ |  |
+| NATIVEBUFFER_PIXEL_FMT_RGBX_4444,                 /// < RGBX4444格式。 */ |  |
+| NATIVEBUFFER_PIXEL_FMT_RGBA_4444,                 /// < RGBA4444格式。 */ |  |
+| NATIVEBUFFER_PIXEL_FMT_RGB_444,                   /// < RGB444格式。 */ |  |
+| NATIVEBUFFER_PIXEL_FMT_RGBX_5551,                 /// < RGBX5551格式。 */ |  |
+| NATIVEBUFFER_PIXEL_FMT_RGBA_5551,                 /// < RGBA5551格式。 */ |  |
+| NATIVEBUFFER_PIXEL_FMT_RGB_555,                   /// < RGB555格式。 */ |  |
+| NATIVEBUFFER_PIXEL_FMT_RGBX_8888,                 /// < RGBX8888格式。 */ |  |
+| NATIVEBUFFER_PIXEL_FMT_RGBA_8888,                 /// < RGBA8888格式。 */ |  |
+| NATIVEBUFFER_PIXEL_FMT_RGB_888,                   /// < RGB888格式。 */ |  |
+| NATIVEBUFFER_PIXEL_FMT_BGR_565,                   /// < BGR565格式。 */ |  |
+| NATIVEBUFFER_PIXEL_FMT_BGRX_4444,                 /// < BGRX4444格式。 */ |  |
+| NATIVEBUFFER_PIXEL_FMT_BGRA_4444,                 /// < BGRA4444格式。 */ |  |
+| NATIVEBUFFER_PIXEL_FMT_BGRX_5551,                 /// < BGRX5551格式。 */ |  |
+| NATIVEBUFFER_PIXEL_FMT_BGRA_5551,                 /// < BGRA5551格式。 */ |  |
+| NATIVEBUFFER_PIXEL_FMT_BGRX_8888,                 /// < BGRX8888格式。 */ |  |
+| NATIVEBUFFER_PIXEL_FMT_BGRA_8888,                 /// < BGRA8888格式。 */ |  |
 | /** |  |
 | NATIVEBUFFER_PIXEL_FMT_YUV_422_I |  |
 | NATIVEBUFFER_PIXEL_FMT_YCBCR_422_SP |  |
@@ -195,5 +197,44 @@ OH_NativeBuffer转换类型的枚举。
 | NATIVEBUFFER_FLIP_H_ROT270,           /**< 水平翻转并旋转270度 */ | NATIVEBUFFER_FLIP_V_ROT180,           /**< 垂直翻转并旋转180度 |
 | NATIVEBUFFER_FLIP_V_ROT270,           /**< 垂直翻转并旋转270度 */ | NATIVEBUFFER_FLIP_H_ROT270,           /**< 水平翻转并旋转270度 |
 | } OH_NativeBuffer_TransformType; | NATIVEBUFFER_FLIP_V_ROT270,           /**< 垂直翻转并旋转270度 |
+
+### OH_NativeBuffer_VideoDimensionType
+
+```c
+enum OH_NativeBuffer_VideoDimensionType
+```
+
+**描述**
+
+视频维度类型枚举。
+
+**系统能力：** SystemCapability.Graphic.Graphic2D.NativeBuffer
+
+**起始版本：** 26.0.0
+
+| 枚举项 | 描述 |
+| -- | -- |
+| OH_VIDEO_DIM_TYPE_2D = 0 | 二维视频 |
+| OH_VIDEO_DIM_TYPE_3D_SBS | 三维视频，格式：左右排列 |
+| OH_VIDEO_DIM_TYPE_3D_TAB | 三维视频，格式：上下排列 |
+| OH_VIDEO_DIM_TYPE_BUTT | 无效的视频维度类型 |
+
+### OH_NativeBuffer_3D_MetadataKey
+
+```c
+enum OH_NativeBuffer_3D_MetadataKey
+```
+
+**描述**
+
+表示NativeBuffer的3D元数据枚举属性。
+
+**系统能力：** SystemCapability.Graphic.Graphic2D.NativeBuffer
+
+**起始版本：** 26.0.0
+
+| 枚举项 | 描述 |
+| -- | -- |
+| OH_VIDEO_DIM_TYPE | value: NativeBuffer的视频维度类型 |
 
 

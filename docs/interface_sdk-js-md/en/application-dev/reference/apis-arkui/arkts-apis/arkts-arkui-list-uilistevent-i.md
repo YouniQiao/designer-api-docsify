@@ -1,8 +1,6 @@
 # UIListEvent
 
-frameNode中[getEvent('List')](../../../reference/apis-arkui/js-apis-arkui-frameNode.md#geteventlist19)方法的返回值，可用于给List节点设置滚动事件。
-
-UIListEvent继承于[UIScrollableCommonEvent](arkts-arkui-common-uiscrollablecommonevent-i.md)。
+Defines a UIListEvent which is used to set different common event to target component.
 
 **Inheritance/Implementation:** UIListEvent extends [UIScrollableCommonEvent](arkts-arkui-common-uiscrollablecommonevent-i.md)
 
@@ -20,9 +18,7 @@ UIListEvent继承于[UIScrollableCommonEvent](arkts-arkui-common-uiscrollablecom
 setOnDidScroll(callback: OnScrollCallback | undefined): void
 ```
 
-设置[onDidScroll](../../../reference/apis-arkui/arkui-ts/ts-container-scrollable-common.md#ondidscroll12)事件的回调。
-
-方法入参为undefined时，会重置事件回调。
+Set or reset the callback which is triggered when List view did scroll.
 
 **Since:** 26.0.0
 
@@ -38,7 +34,7 @@ setOnDidScroll(callback: OnScrollCallback | undefined): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [OnScrollCallback](../arkts-components/arkts-arkui-onscrollcallback-t.md) \| undefined | Yes | onDidScroll事件的回调函数。 |
+| callback | [OnScrollCallback](../arkts-components/arkts-arkui-onscrollcallback-t.md) \| undefined | Yes | callback function, triggered when the List view did scroll. Passing undefined will unregister the callback. |
 
 ## setOnScrollIndex
 
@@ -46,9 +42,7 @@ setOnDidScroll(callback: OnScrollCallback | undefined): void
 setOnScrollIndex(callback: OnListScrollIndexCallback | undefined): void
 ```
 
-设置[onScrollIndex](onScrollIndex)事件的回调。
-
-方法入参为undefined时，会重置事件回调。
+Set or reset the callback which is triggered when the start, end, or center positions of the display change.
 
 **Since:** 26.0.0
 
@@ -64,7 +58,7 @@ setOnScrollIndex(callback: OnListScrollIndexCallback | undefined): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [OnListScrollIndexCallback](arkts-arkui-onlistscrollindexcallback-t.md) \| undefined | Yes | onScrollIndex事件的回调函数。 |
+| callback | [OnListScrollIndexCallback](arkts-arkui-onlistscrollindexcallback-t.md) \| undefined | Yes | callback function, triggered when the start, end, or center positions of the display change. Passing undefined will unregister the callback. |
 
 ## setOnScrollVisibleContentChange
 
@@ -72,9 +66,7 @@ setOnScrollIndex(callback: OnListScrollIndexCallback | undefined): void
 setOnScrollVisibleContentChange(callback: OnScrollVisibleContentChangeCallback | undefined): void
 ```
 
-设置[onScrollVisibleContentChange](onScrollVisibleContentChange)事件的回调。
-
-方法入参为undefined时，会重置事件回调。
+Set or reset the callback which is triggered when the list visible content changes.
 
 **Since:** 26.0.0
 
@@ -90,7 +82,7 @@ setOnScrollVisibleContentChange(callback: OnScrollVisibleContentChangeCallback |
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [OnScrollVisibleContentChangeCallback](arkts-arkui-onscrollvisiblecontentchangecallback-t.md) \| undefined | Yes | onScrollVisibleContentChange事件的回调函数。 |
+| callback | [OnScrollVisibleContentChangeCallback](arkts-arkui-onscrollvisiblecontentchangecallback-t.md) \| undefined | Yes | callback function, triggered when the list visible content changes. Passing undefined will unregister the callback. |
 
 ## setOnWillScroll
 
@@ -98,9 +90,7 @@ setOnScrollVisibleContentChange(callback: OnScrollVisibleContentChangeCallback |
 setOnWillScroll(callback: OnWillScrollCallback | undefined): void
 ```
 
-设置[onWillScroll](../../../reference/apis-arkui/arkui-ts/ts-container-scrollable-common.md#onwillscroll12)事件的回调。
-
-方法入参为undefined时，会重置事件回调。
+Set or reset the callback which is triggered when the List will scroll.
 
 **Since:** 26.0.0
 
@@ -116,5 +106,5 @@ setOnWillScroll(callback: OnWillScrollCallback | undefined): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [OnWillScrollCallback](../arkts-components/arkts-arkui-onwillscrollcallback-t.md) \| undefined | Yes | onWillScroll事件的回调函数。 |
+| callback | [OnWillScrollCallback](../arkts-components/arkts-arkui-onwillscrollcallback-t.md) \| undefined | Yes | The callback will be triggered when the List will scroll. Passing undefined will unregister the callback. |
 

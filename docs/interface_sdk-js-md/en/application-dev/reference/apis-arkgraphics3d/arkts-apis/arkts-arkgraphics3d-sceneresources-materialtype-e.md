@@ -1,6 +1,6 @@
 # MaterialType
 
-材质类型枚举.
+Enumerates the material types in a scene. The material type defines how materials in a scene are rendered.
 
 **Since:** 12
 
@@ -16,7 +16,7 @@
 SHADER = 1
 ```
 
-材质类型是Shader.
+Shader-defined.
 
 **Since:** 12
 
@@ -32,7 +32,7 @@ SHADER = 1
 METALLIC_ROUGHNESS = 2
 ```
 
-材质是基于物理的金属粗糙度材质.
+Metallic-Roughness model based on Physically Based Rendering (PBR), simulating realistic material lighting effects through metallicity and roughness parameters.
 
 **Since:** 20
 
@@ -48,7 +48,7 @@ METALLIC_ROUGHNESS = 2
 UNLIT = 3
 ```
 
-材质是无光照材质.
+Material that is not affected by lighting.
 
 **Since:** 23
 
@@ -64,7 +64,7 @@ UNLIT = 3
 OCCLUSION = 4
 ```
 
-材质是遮挡材质
+Occlusion material: occludes other objects in the scene but does not occlude the environment.
 
 **Since:** 23
 

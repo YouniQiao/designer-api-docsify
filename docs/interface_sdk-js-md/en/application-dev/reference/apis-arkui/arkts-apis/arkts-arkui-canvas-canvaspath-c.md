@@ -282,5 +282,5 @@ Draw rounded Rectangular Paths
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 103701 | Parameter error. Possible causes: &lt;br&gt; 1. The param radii is a list that has zero or more than four elements. &lt;br&gt; 2. The param radii contains negative value. |
+| [103701](../errorcode-canvas.md#103701-parameter-error) | Parameter error. Possible causes: &lt;br&gt; 1. The param radii is a list that has zero or more than four elements. &lt;br&gt; 2. The param radii contains negative value. |
 

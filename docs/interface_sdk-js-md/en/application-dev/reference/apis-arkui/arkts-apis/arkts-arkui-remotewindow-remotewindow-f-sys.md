@@ -8,7 +8,7 @@ export declare function RemoteWindow(
 ): RemoteWindowAttribute
 ```
 
-远程控制窗口组件，可以通过此组件控制应用窗口，提供启动退出过程中控件动画和应用窗口联动动画的能力。
+Defines RemoteWindow Component.
 
 **Since:** 23
 
@@ -26,7 +26,7 @@ export declare function RemoteWindow(
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| target | [WindowAnimationTarget](arkts-arkui-remotewindow-windowanimationtarget-i-sys.md) | Yes | 需要控制的动画窗口的描述。 |
+| target | [WindowAnimationTarget](arkts-arkui-remotewindow-windowanimationtarget-i-sys.md) | Yes | The target for the window animation. |
 
 **Return value:**
 

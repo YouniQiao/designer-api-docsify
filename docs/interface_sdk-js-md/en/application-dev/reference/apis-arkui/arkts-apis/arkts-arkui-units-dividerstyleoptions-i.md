@@ -1,6 +1,6 @@
 # DividerStyleOptions
 
-分割线样式属性集合, 用于描述分割线相关信息。
+Defines the struct of DividerStyleOptions.
 
 **Since:** 23
 
@@ -16,7 +16,7 @@
 color?: ResourceColor
 ```
 
-分割线的颜色。
+The color of Divider.
 
 **Type:** [ResourceColor](arkts-arkui-resourcecolor-t.md)
 
@@ -36,7 +36,7 @@ color?: ResourceColor
 endMargin?: LengthMetrics
 ```
 
-分割线与菜单侧边结束端的距离。
+The endMargin of Divider.
 
 **Type:** [LengthMetrics](arkts-arkui-lengthmetrics-t.md)
 
@@ -56,7 +56,7 @@ endMargin?: LengthMetrics
 mode?: DividerMode
 ```
 
-设置分割线模式。
+The mode of Divider.
 
 **Type:** [DividerMode](arkts-arkui-dividermode-e.md)
 
@@ -76,7 +76,7 @@ mode?: DividerMode
 startMargin?: LengthMetrics
 ```
 
-分割线与菜单侧边起始端的距离。
+The startMargin of Divider.
 
 **Type:** [LengthMetrics](arkts-arkui-lengthmetrics-t.md)
 
@@ -96,7 +96,7 @@ startMargin?: LengthMetrics
 strokeWidth?: LengthMetrics
 ```
 
-分割线的线宽。
+The strokeWidth of Divider.
 
 **Type:** [LengthMetrics](arkts-arkui-lengthmetrics-t.md)
 

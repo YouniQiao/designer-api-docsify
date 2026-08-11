@@ -1,6 +1,6 @@
 # ErrorCode (System API)
 
-表示端云同步过程的状态。请使用枚举名而非枚举值。
+Enumerates the device-cloud sync states. Use the enum name rather than the enum value.
 
 **Since:** 11
 
@@ -18,7 +18,7 @@
 SUCCESS = 0
 ```
 
-表示端云同步过程成功。
+The device-cloud sync is successful.
 
 **Since:** 11
 
@@ -36,7 +36,7 @@ SUCCESS = 0
 UNKNOWN_ERROR = 1
 ```
 
-表示端云同步过程中遇到未知错误。
+An unknown error occurs during the device-cloud sync process.
 
 **Since:** 11
 
@@ -54,7 +54,7 @@ UNKNOWN_ERROR = 1
 NETWORK_ERROR = 2
 ```
 
-表示端云同步过程中遇到网络错误。
+A network error occurs during the device-cloud sync process.
 
 **Since:** 11
 
@@ -72,7 +72,7 @@ NETWORK_ERROR = 2
 CLOUD_DISABLED = 3
 ```
 
-表示云同步开关未开启，请检查云空间同步开关状态。
+Cloud sync is disabled.
 
 **Since:** 11
 
@@ -90,7 +90,7 @@ CLOUD_DISABLED = 3
 LOCKED_BY_OTHERS = 4
 ```
 
-表示有其他设备正在进行端云同步，本设备无法进行端云同步。请确保无其他设备占用端云资源后，再使用本设备进行端云同步任务。
+The device-cloud sync of another device is being performed.The sync of the local device can be performed only when the device-cloud resources are available.
 
 **Since:** 11
 
@@ -108,7 +108,7 @@ LOCKED_BY_OTHERS = 4
 RECORD_LIMIT_EXCEEDED = 5
 ```
 
-表示本次端云同步需要同步的条目或大小超出最大值。由云端配置最大值。
+The number of records or size of the data to be synced exceeds the maximum.The maximum value is configured on the cloud.
 
 **Since:** 11
 
@@ -126,7 +126,7 @@ RECORD_LIMIT_EXCEEDED = 5
 NO_SPACE_FOR_ASSET = 6
 ```
 
-表示云空间剩余空间小于待同步的资产大小。
+The remaining cloud space is less than the size of the data to be synced.
 
 **Since:** 11
 

@@ -4,7 +4,7 @@
 declare type OnContainerCallback = () => void
 ```
 
-容器回调函数类型，用于定义绑定在树节点上的子组件回调。
+Set subcomponent binded on tree item.
 
 **Since:** 26.0.0
 

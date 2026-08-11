@@ -1,6 +1,6 @@
 # SelectionContainerOptions
 
-组件初始化配置项。
+Describes the initialization options of the SelectionContainer component.
 
 **Since:** 26.0.0
 
@@ -22,7 +22,7 @@ import { SelectionContainerInstance, SelectionContainer, OnMenuItemClickWithText
 controller: SelectionContainerController
 ```
 
-SelectionContainer控制器。
+SelectionContainer controller.
 
 **Type:** [SelectionContainerController](arkts-arkui-arkui-components-selectioncontainer-selectioncontainercontroller-c.md)
 

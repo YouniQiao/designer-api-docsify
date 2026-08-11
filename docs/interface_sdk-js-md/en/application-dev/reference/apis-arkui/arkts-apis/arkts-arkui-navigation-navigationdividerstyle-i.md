@@ -1,6 +1,6 @@
 # NavigationDividerStyle
 
-Navigation分割线颜色及上下边距。
+Define the style of the Navigation divider.
 
 **Since:** 23
 
@@ -16,7 +16,7 @@ Navigation分割线颜色及上下边距。
 color?: ResourceColor
 ```
 
-分割线的颜色。默认值： #33000000, 灰色。
+Define the color of the navigation divider.Default value: # 33000000, Gray.
 
 **Type:** [ResourceColor](arkts-arkui-resourcecolor-t.md)
 
@@ -36,7 +36,7 @@ color?: ResourceColor
 endMargin?: Length
 ```
 
-分割线与侧边栏底端的距离。单位：vp。单位为： vp。 默认值： 0。
+Define the end margin of the navigation divider.Unit: vp. Default value: 0.
 
 **Type:** [Length](arkts-arkui-length-t.md)
 
@@ -56,7 +56,7 @@ endMargin?: Length
 startMargin?: Length
 ```
 
-分割线与侧边栏顶端的距离。单位为： vp。 默认值： 0。
+Define the start margin of the navigation divider.Unit: vp. Default value: 0.
 
 **Type:** [Length](arkts-arkui-length-t.md)
 

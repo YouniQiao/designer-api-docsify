@@ -1,11 +1,5 @@
 # startOptimizeSpace（系统接口）
 
-## 导入模块
-
-```TypeScript
-import { cloudSync } from 'kits/@kit.CoreFileKit';
-```
-
 ## startOptimizeSpace
 
 ```TypeScript
@@ -46,13 +40,15 @@ startOptimizeSpace的使用和stopOptimizeSpace方法调用一一对应，重复
 | 错误码ID | 错误信息 |
 | --- | --- |
 | 22400005 | Inner error. |
-| 401 | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2 .Incorrect parameter types. |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2 .Incorrect parameter types. |
 | 22400006 | The same task is already in progress. |
-| 201 | Permission verification failed, usually the result returned by VerifyAccessToken. |
-| 202 | Permission verification failed, application which is not a system application uses system API. |
+| [201](../../errorcode-universal.md#201-权限校验失败) | Permission verification failed, usually the result returned by VerifyAccessToken. |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed, application which is not a system application uses system API. |
 | 13600001 | IPC error. |
 
 ## 示例
+
+ArkTS-Dyn示例：
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -71,6 +67,28 @@ cloudSync.startOptimizeSpace(para, callback).then(() => {
   console.info("start optimize space");
 }).catch((err: BusinessError) => {
   console.error(`start optimize space failed with error message: ${err.message}, error code: ${err.code}`);
+});
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let para:cloudSync.OptimizeSpaceParam = {totalSize: 1073741824, agingDays: 30};
+let callback = (data:cloudSync.OptimizeSpaceProgress): void => {
+  if (data.state == cloudSync.OptimizeState.FAILED) {
+    console.info("optimize space failed");
+  } else if (data.state == cloudSync.OptimizeState.COMPLETED && data.progress == 100) {
+    console.info("optimize space successfully");
+  } else if (data.state == cloudSync.OptimizeState.RUNNING) {
+    console.info("optimize space progress: " + data.progress);
+  }
+}
+cloudSync.startOptimizeSpace(para, callback).then<void>((): void => {
+  console.info("start optimize space");
+}).catch((err: BusinessError<void>): void => {
+  console.error("start optimize space failed with error message: " + err.message + ", error code: " + err.code);
 });
 ```
 

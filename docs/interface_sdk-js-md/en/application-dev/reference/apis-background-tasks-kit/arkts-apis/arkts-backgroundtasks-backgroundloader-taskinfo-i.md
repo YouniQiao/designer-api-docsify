@@ -1,10 +1,10 @@
 # TaskInfo
 
-任务信息
+Represents the background load task information, which is used to register task.
 
-**Since:** 26.1.0
+**Since:** 26.0.0
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.1.0.
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
 <!--Device-backgroundLoader-export interface TaskInfo--><!--Device-backgroundLoader-export interface TaskInfo-End-->
 
@@ -22,13 +22,13 @@ import { backgroundLoader } from 'kits/@kit.BackgroundTasksKit';
 abilityName: string
 ```
 
-组件名称
+Ability name in the bundle.
 
 **Type:** string
 
-**Since:** 26.1.0
+**Since:** 26.0.0
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.1.0.
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -42,13 +42,13 @@ abilityName: string
 taskId: int
 ```
 
-任务id取值范围为全体整数。
+Id of the background load task.
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
-**Since:** 26.1.0
+**Since:** 26.0.0
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.1.0.
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
 

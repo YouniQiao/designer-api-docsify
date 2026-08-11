@@ -30,11 +30,3 @@ Create a VPN observer.
 | --- | --- |
 | [VpnObserver](arkts-network-vpnextension-vpnobserver-i.md) | The VpnObserver instance. |
 
-## Examples
-
-```TypeScript
-import { vpnExtension } from '@kit.NetworkKit';
-
-let vpnObserver: vpnExtension.VpnObserver = vpnExtension.createVpnObserver();
-```
-

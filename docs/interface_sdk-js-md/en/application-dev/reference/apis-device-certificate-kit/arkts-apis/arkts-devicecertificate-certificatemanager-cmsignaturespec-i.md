@@ -1,6 +1,6 @@
 # CMSignatureSpec
 
-表示签名、验签操作使用的参数集合，包括密钥使用目的、填充方式和摘要算法。
+Represents a set of parameters used for signing or signature verification, including the key usage purpose, padding mode, and digest algorithm.
 
 **Since:** 11
 
@@ -22,7 +22,7 @@ import { certificateManager } from 'kits/@kit.DeviceCertificateKit';
 digest?: CmKeyDigest
 ```
 
-表示摘要算法的枚举。默认值： CM_DIGEST_SHA256，表示使用SHA256摘要算法。
+Digest algorithm.Default value: CM_DIGEST_SHA256: indicates that the SHA256 digest algorithm is used.
 
 **Type:** [CmKeyDigest](arkts-devicecertificate-certificatemanager-cmkeydigest-e.md)
 
@@ -40,7 +40,7 @@ digest?: CmKeyDigest
 padding?: CmKeyPadding
 ```
 
-表示填充方式的枚举默认值： CM_PADDING_PSS，表示使用PSS填充方式。
+Enumeration representing the padding mode.Default value: CM_PADDING_PSS: indicates that the PSS filling mode is used.
 
 **Type:** [CmKeyPadding](arkts-devicecertificate-certificatemanager-cmkeypadding-e.md)
 
@@ -58,7 +58,7 @@ padding?: CmKeyPadding
 purpose: CmKeyPurpose
 ```
 
-表示密钥使用目的的枚举。
+Purpose of using the key.
 
 **Type:** [CmKeyPurpose](arkts-devicecertificate-certificatemanager-cmkeypurpose-e.md)
 

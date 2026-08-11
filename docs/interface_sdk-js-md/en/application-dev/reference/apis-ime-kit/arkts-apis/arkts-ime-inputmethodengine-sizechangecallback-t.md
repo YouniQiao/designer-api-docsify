@@ -4,7 +4,7 @@
 export type SizeChangeCallback = (size: window.Size, keyboardArea?: KeyboardArea) => void
 ```
 
-当输入法面板大小变化时触发的回调。
+Callback triggered when the size of the input method panel changes.
 
 **Since:** 15
 
@@ -18,6 +18,6 @@ export type SizeChangeCallback = (size: window.Size, keyboardArea?: KeyboardArea
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| size | window.Size | Yes | 当前面板大小。 |
-| keyboardArea | [KeyboardArea](arkts-ime-inputmethodengine-keyboardarea-i.md) | No | 当前面板中可作为键盘区域的大小。当需要获取或监听键盘区域变化时传入此参数，不传入时默认为undefined（不返回键盘区域信息）。 |
+| size | window.Size | Yes | Panel size. |
+| keyboardArea | [KeyboardArea](arkts-ime-inputmethodengine-keyboardarea-i.md) | No | Size of the keyboard area. |
 

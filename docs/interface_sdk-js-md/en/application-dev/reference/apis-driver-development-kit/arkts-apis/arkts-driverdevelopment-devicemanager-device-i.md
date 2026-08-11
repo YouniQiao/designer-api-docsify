@@ -1,6 +1,6 @@
 # Device
 
-外设信息。
+Represents the peripheral device information.
 
 **Since:** 10
 
@@ -22,7 +22,7 @@ import { deviceManager } from 'kits/@kit.DriverDevelopmentKit';
 busType: BusType
 ```
 
-总线类型。
+Bus type.
 
 **Type:** [BusType](arkts-driverdevelopment-devicemanager-bustype-e.md)
 
@@ -40,7 +40,7 @@ busType: BusType
 description: string
 ```
 
-设备描述。
+Description of the peripheral device.
 
 **Type:** string
 
@@ -58,7 +58,7 @@ description: string
 deviceId: long
 ```
 
-设备ID。
+ID of the peripheral device.
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：long
 

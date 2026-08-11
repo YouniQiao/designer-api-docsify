@@ -18,12 +18,6 @@ UiDriver类为uitest测试框架的总入口，提供控件匹配/查找，按�
 
 **系统能力：** SystemCapability.Test.UiTest
 
-## 导入模块
-
-```TypeScript
-import { ResizeDirection, WindowMode, PenMode, PenKeyOperation, Driver, MatchPattern, UiDirection, TouchOptions, ComponentEventType, PointerMatrix, WindowChangeType, Component, ON, PenKey, Rect, InputTextMode, UIEventObserver, WindowFilter, WindowChangeOptions, UiWindow, TouchPadSwipeOptions, Point, KeyOptions, DisplayRotation, UIElementInfo, PenKeyOperationOptions, ComponentEventOptions, MouseButton, On } from 'kits/@kit.TestKit';
-```
-
 ## assertComponentExist
 
 ```TypeScript
@@ -65,9 +59,9 @@ assertComponentExist(by: By): Promise<void>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 17000003 | if the assertion failed. |
-| 401 | if the input parameters are invalid. |
-| 17000002 | The API does not support concurrent calls. |
+| [17000003](../errorcode-uitest.md#17000003-断言失败) | if the assertion failed. |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | if the input parameters are invalid. |
+| [17000002](../errorcode-uitest.md#17000002-接口不支持并发调用) | The API does not support concurrent calls. |
 
 ## 示例
 
@@ -599,7 +593,7 @@ import { KeyCode } from '@kit.InputKit';
 
 async function demo() {
   let driver: UiDriver = UiDriver.create();
-  await driver.triggerKey(KeyCode.KEYCODE_BACK); // 返回键。
+  await driver.triggerKey(KeyCode.KEYCODE_BACK); // 返回键
 }
 ```
 

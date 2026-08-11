@@ -4,7 +4,7 @@
 type PairingState = nearlinkConstant.PairingState
 ```
 
-配对状态。
+Indicates the pairing state.
 
 **Since:** 26.0.0
 

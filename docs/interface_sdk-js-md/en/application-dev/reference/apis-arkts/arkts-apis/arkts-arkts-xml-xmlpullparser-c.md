@@ -1,6 +1,6 @@
 # XmlPullParser
 
-XmlPullParser接口用于解析现有的XML文件。
+The XmlPullParser interface is used to parse the existing xml file.
 
 **Since:** 8
 
@@ -22,7 +22,7 @@ import { xml } from 'kits/@kit.ArkTS';
 constructor(buffer: ArrayBuffer | DataView, encoding?: string)
 ```
 
-构造并返回一个XmlPullParser对象。
+Creates and returns an XmlPullParser object.
 
 **Since:** 8
 
@@ -38,8 +38,8 @@ constructor(buffer: ArrayBuffer | DataView, encoding?: string)
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| buffer | ArrayBuffer \| DataView | Yes | 用于解析的XML文本信息。 |
-| encoding | string | No | 编码格式，默认'utf-8'（目前仅支持'utf-8'）。 |
+| buffer | ArrayBuffer \| DataView | Yes | A instance, the new XmlPullParser with. |
+| encoding | string | No | [encoding='utf8'] this is its encoding. |
 
 ## Examples
 
@@ -58,7 +58,7 @@ let that = new xml.XmlPullParser(uint8Array.buffer as object as ArrayBuffer, 'UT
 parse(option: ParseOptions): void
 ```
 
-该接口用于解析XML。
+Starts parsing the XML file.
 
 **Since:** 8
 
@@ -78,7 +78,7 @@ parse(option: ParseOptions): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| option | [ParseOptions](arkts-arkts-json-parseoptions-i.md) | Yes | XML解析选项。 |
+| option | [ParseOptions](arkts-arkts-json-parseoptions-i.md) | Yes | Parse options for XmlPullParser, the interface including two Boolean variables and three callback functions. |
 
 ## Examples
 
@@ -118,7 +118,7 @@ that.parse(options);
 parseXml(option: ParseOptions): void
 ```
 
-解析XML。
+Parses XML information.
 
 **Since:** 14
 
@@ -134,5 +134,5 @@ parseXml(option: ParseOptions): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| option | [ParseOptions](arkts-arkts-json-parseoptions-i.md) | Yes | XML解析选项。 |
+| option | [ParseOptions](arkts-arkts-json-parseoptions-i.md) | Yes | XML parsing options. |
 

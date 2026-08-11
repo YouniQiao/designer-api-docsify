@@ -1,12 +1,14 @@
 # @ohos.deviceInfo
 
-本模块提供终端设备信息查询，开发者不可配置。
+The **deviceInfo** module provides terminal device information query, which cannot be configured by developers.
 
-> **说明：**
+> **NOTE：**
 > 
-> 本模块首批接口从API version 6开始支持。后续版本的新增接口，采用上角标单独标记接口的起始版本。
-> 部分参数返回值为default的，会在正式发布的版本中配置。
-> 本模块接口返回设备常量信息，建议应用只调用一次，不需要频繁调用。
+> The initial APIs of this module are supported since API version 6. Newly added APIs
+> will be marked with a superscript to indicate their earliest API version.
+> Some parameters whose return value is the default value are not yet available.
+> The APIs of this module return information about device getants. You are not expected to call these APIs
+> frequently.
 
 **Since:** 24
 
@@ -26,10 +28,16 @@ import { deviceInfo } from 'kits/@kit.BasicServicesKit';
 
 ## Summary
 
+### Functions
+
+| Name | Description |
+| --- | --- |
+| [apiAvailable](arkts-basicservices-deviceinfo-apiavailable-f.md#apiavailable) | Checks whether a specified API version is available on the current device.This API provides compatibility check across different OpenHarmony/Distribution OS versions.A suitable version check method is automatically selected based on the input format and supported API versions. |
+
 ### Enums
 
 | Name | Description |
 | --- | --- |
-| [DeviceTypes](arkts-basicservices-deviceinfo-devicetypes-e.md) | 设备类型枚举值，可用于校验deviceType的返回值。 |
-| [PerformanceClassLevel](arkts-basicservices-deviceinfo-performanceclasslevel-e.md) | 表示设备能力定级的枚举。 |
+| [DeviceTypes](arkts-basicservices-deviceinfo-devicetypes-e.md) | Enumerates device types, which can be used to verify the return value of **deviceType**. |
+| [PerformanceClassLevel](arkts-basicservices-deviceinfo-performanceclasslevel-e.md) | Enumerates the device capability levels. |
 

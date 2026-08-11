@@ -12,13 +12,7 @@ import { sensor } from 'kits/@kit.SensorServiceKit';
 function getGeomagneticDip(inclinationMatrix: Array<number>, callback: AsyncCallback<number>): void
 ```
 
-根据倾斜矩阵计算地磁倾斜角，使用Callback异步方式返回结果。
-
-> **说明：**
-> 
-> 从API version 8 开始支持，从API version 9 开始废弃，建议使用
-> [sensor.getInclination](arkts-sensorservice-sensor-getinclination-f.md#getinclination)
-> 替代。
+Obtains the magnetic dip based on the inclination matrix. This API uses an asynchronous callback to return the result.
 
 **Since:** 8
 
@@ -36,8 +30,8 @@ function getGeomagneticDip(inclinationMatrix: Array<number>, callback: AsyncCall
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| inclinationMatrix | Array&lt;number&gt; | Yes | 表示倾斜矩阵。 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;number&gt; | Yes | 异步返回地磁倾斜角，单位为弧度。 |
+| inclinationMatrix | Array&lt;number&gt; | Yes | Inclination matrix. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;number&gt; | Yes | Callback used to return the magnetic dip, in radians. |
 
 ## Examples
 
@@ -61,12 +55,7 @@ sensor.getGeomagneticDip([1, 0, 0, 0, 1, 0, 0, 0, 1], (err: BusinessError, data:
 function getGeomagneticDip(inclinationMatrix: Array<number>): Promise<number>
 ```
 
-根据倾斜矩阵计算地磁倾斜角，使用Promise异步方式返回结果。
-
-> **说明：**
-> 
-> 从API version 8 开始支持，从API version 9 开始废弃，建议使用
-> [sensor.getInclination](arkts-sensorservice-sensor-getinclination-f.md#getinclination)替代。
+Obtains the magnetic dip based on the inclination matrix. This API uses a promise to return the result.
 
 **Since:** 8
 
@@ -84,13 +73,13 @@ function getGeomagneticDip(inclinationMatrix: Array<number>): Promise<number>
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| inclinationMatrix | Array&lt;number&gt; | Yes | 表示倾斜矩阵。 |
+| inclinationMatrix | Array&lt;number&gt; | Yes | Inclination matrix. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;number&gt; | 使用异步方式返回地磁倾斜角，单位为弧度。 |
+| Promise&lt;number&gt; | Promise used to return the magnetic dip, in radians. |
 
 ## Examples
 

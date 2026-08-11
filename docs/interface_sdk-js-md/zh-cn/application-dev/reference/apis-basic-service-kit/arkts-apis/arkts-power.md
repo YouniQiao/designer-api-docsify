@@ -10,12 +10,6 @@
 
 **系统能力：** SystemCapability.PowerManager.PowerManager.Core
 
-## 导入模块
-
-```TypeScript
-import { power } from 'kits/@kit.BasicServicesKit';
-```
-
 ## 汇总
 
 ### 函数

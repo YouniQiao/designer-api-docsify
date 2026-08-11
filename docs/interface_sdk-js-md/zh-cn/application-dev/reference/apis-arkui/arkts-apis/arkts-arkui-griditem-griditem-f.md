@@ -32,7 +32,7 @@ export declare function GridItem(
 
 | 类型 | 说明 |
 | --- | --- |
-| [GridItemAttribute](arkts-arkui-griditem-griditemattribute-i.md) |  |
+| [GridItemAttribute](../arkts-components/arkts-arkui-griditem-attribute.md) |  |
 
 
 ## GridItem
@@ -69,5 +69,5 @@ export declare function GridItem(
 
 | 类型 | 说明 |
 | --- | --- |
-| [GridItemAttribute](arkts-arkui-griditem-griditemattribute-i.md) | The attribute of the GridItem. |
+| [GridItemAttribute](../arkts-components/arkts-arkui-griditem-attribute.md) | The attribute of the GridItem. |
 

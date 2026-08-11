@@ -36,13 +36,14 @@ Subscribes to a system event to obtain the encoded metadata. The application nee
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 32100001 | Internal handling failed. |
-| 32100004 | Subscribe Failed. Possible causes: &lt;br&gt;1. Abnormal system capability. &lt;br&gt;2. IPC communication abnormality. &lt;br&gt;3. Algorithm loading exception. |
+| [32100001](../../apis-multimodalawareness-kit/errorcode-metadataBinding.md#32100001-file-creation-failed) | Internal handling failed. |
+| [32100004](../../apis-multimodalawareness-kit/errorcode-metadataBinding.md#32100004-subscription-failed) | Subscribe Failed. Possible causes: &lt;br&gt;1. Abnormal system capability. &lt;br&gt;2. IPC communication abnormality. &lt;br&gt;3. Algorithm loading exception. |
 
 ## Examples
 
 ```TypeScript
 import { metadataBinding } from '@kit.MultimodalAwarenessKit';
+import { BusinessError } from '@kit.BasicServicesKit';
 
 let bundleName: string = '';
 try {

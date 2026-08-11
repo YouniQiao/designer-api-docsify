@@ -1,6 +1,6 @@
 # SearchButtonParams
 
-搜索框末尾搜索按钮设置项。
+Sets the search button located next to the search text box.
 
 **Since:** 18
 
@@ -22,7 +22,7 @@ import { SearchParams, AtomicServiceSearch, SearchButtonParams, OperationParams,
 options?: SearchButtonOptions
 ```
 
-配置搜索框文本样式。默认值：`{fontSize: '16fp',fontColor: '#ff3f97e9'}`。
+Font of the search text box. Default value: **{fontSize: '16fp',fontColor: '#ff3f97e9'}**
 
 **Type:** [SearchButtonOptions](../arkts-components/arkts-arkui-searchbuttonoptions-i.md)
 
@@ -42,7 +42,7 @@ options?: SearchButtonOptions
 searchButtonValue: ResourceStr
 ```
 
-搜索框末尾搜索按钮文本内容。
+Text on the search button located next to the search text box.
 
 **Type:** [ResourceStr](arkts-arkui-resourcestr-t.md)
 

@@ -1,6 +1,6 @@
 # SceneResourceType
 
-场景资源类型枚举.
+The enum of SceneResource type.
 
 **Since:** 12
 
@@ -16,7 +16,7 @@
 UNKNOWN = 0
 ```
 
-资源是Unknown类型.
+The resource is an Unknown.
 
 **Since:** 12
 
@@ -32,7 +32,7 @@ UNKNOWN = 0
 NODE = 1
 ```
 
-资源是Node类型.
+The resource is a Node.
 
 **Since:** 12
 
@@ -48,7 +48,7 @@ NODE = 1
 ENVIRONMENT = 2
 ```
 
-资源是Environment类型.
+The resource is an Environment.
 
 **Since:** 12
 
@@ -64,7 +64,7 @@ ENVIRONMENT = 2
 MATERIAL = 3
 ```
 
-资源是Material类型.
+The resource is a Material.
 
 **Since:** 12
 
@@ -80,7 +80,7 @@ MATERIAL = 3
 MESH = 4
 ```
 
-资源是Mesh类型.
+The resource is a Mesh.
 
 **Since:** 12
 
@@ -96,7 +96,7 @@ MESH = 4
 ANIMATION = 5
 ```
 
-资源是Animation类型.
+The resource is an Animation.
 
 **Since:** 12
 
@@ -112,7 +112,7 @@ ANIMATION = 5
 SHADER = 6
 ```
 
-资源是Shader类型.
+The resource is a Shader.
 
 **Since:** 12
 
@@ -128,7 +128,7 @@ SHADER = 6
 IMAGE = 7
 ```
 
-资源是Image类型.
+The resource is an Image.
 
 **Since:** 12
 
@@ -144,7 +144,7 @@ IMAGE = 7
 MESH_RESOURCE = 8
 ```
 
-资源是MeshResource类型
+The resource is a mesh resource
 
 **Since:** 18
 
@@ -160,7 +160,7 @@ MESH_RESOURCE = 8
 EFFECT = 9
 ```
 
-资源是Effect类型.
+The resource is an Effect.
 
 **Since:** 21
 

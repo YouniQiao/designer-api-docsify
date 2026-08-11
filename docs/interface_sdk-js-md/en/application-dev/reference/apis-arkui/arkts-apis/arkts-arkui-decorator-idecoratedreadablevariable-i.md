@@ -1,6 +1,6 @@
 # IDecoratedReadableVariable
 
-定义状态变量接口
+Define decorated variable interface.
 
 **Since:** 23
 
@@ -16,7 +16,7 @@
 get(): T
 ```
 
-获取变量的值
+Get the state variable.
 
 **Since:** 23
 
@@ -32,5 +32,5 @@ get(): T
 
 | Type | Description |
 | --- | --- |
-| T | 变量的值 |
+| T | value of this variable |
 

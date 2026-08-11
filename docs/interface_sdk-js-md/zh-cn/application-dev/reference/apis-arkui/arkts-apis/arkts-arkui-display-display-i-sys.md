@@ -13,12 +13,6 @@
 
 **系统能力：** SystemCapability.WindowManager.WindowManager.Core
 
-## 导入模块
-
-```TypeScript
-import { display } from 'kits/@kit.ArkUI';
-```
-
 ## hasImmersiveWindow
 
 ```TypeScript
@@ -47,12 +41,14 @@ hasImmersiveWindow(callback: AsyncCallback<boolean>): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 801 | Capability not supported. Failed to call the API due to limited device capabilities. |
-| 1400001 | Invalid display or screen. |
-| 1400003 | This display manager service works abnormally. |
-| 202 | Permission verification failed. A non-system application calls a system API. |
+| [801](../../errorcode-universal.md#801-该设备不支持此api) | Capability not supported. Failed to call the API due to limited device capabilities. |
+| [1400001](../errorcode-display.md#1400001-无效的显示设备) | Invalid display or screen. |
+| [1400003](../errorcode-display.md#1400003-系统服务工作异常) | This display manager service works abnormally. |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed. A non-system application calls a system API. |
 
 ## 示例
+
+ArkTS-Dyn示例：
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -69,6 +65,24 @@ displayClass.hasImmersiveWindow((err: BusinessError, data: boolean) => {
     return;
   }
   console.info(`Succeeded in checking whether there is immersive window. data: ${data}`);
+});
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+import { display } from '@kit.ArkUI';
+
+let displayClass: display.Display | null = null;
+displayClass = display.getDefaultDisplaySync();
+displayClass.hasImmersiveWindow((err: BusinessError | null, data) => {
+    const errCode = err?.code;
+    if (errCode) {
+      console.error(`Failed to check whether there is immersive window. Code: ${err?.code} , message: ${err?.message}`);
+      return;
+    }
+    console.info(`Succeeded in checking whether there is immersive window. data: ${data}`);
 });
 ```
 
@@ -100,12 +114,14 @@ hasImmersiveWindow(): Promise<boolean>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 801 | Capability not supported. Failed to call the API due to limited device capabilities. |
-| 1400001 | Invalid display or screen. |
-| 1400003 | This display manager service works abnormally. |
-| 202 | Permission verification failed. A non-system application calls a system API. |
+| [801](../../errorcode-universal.md#801-该设备不支持此api) | Capability not supported. Failed to call the API due to limited device capabilities. |
+| [1400001](../errorcode-display.md#1400001-无效的显示设备) | Invalid display or screen. |
+| [1400003](../errorcode-display.md#1400003-系统服务工作异常) | This display manager service works abnormally. |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed. A non-system application calls a system API. |
 
 ## 示例
+
+ArkTS-Dyn示例：
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -119,7 +135,23 @@ let promise = displayClass.hasImmersiveWindow();
 promise.then((data) => {
   console.info(`Succeeded in checking whether there is immersive window. data: ${data}`);
 }).catch((err: BusinessError) => {
-  console.error(`Failed to check whether there is immersive window. Code: ${err.code}, message: ${err.message}`);
-});
+  console.error(`Failed to check whether there is immersive window. Code: ${err.code} , message: ${err.message}`);
+})
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+import { display } from '@kit.ArkUI';
+
+let displayClass: display.Display | null = null;
+displayClass = display.getDefaultDisplaySync();
+let promise = displayClass.hasImmersiveWindow();
+promise.then((data: boolean) => {
+  console.info(`Succeeded in checking whether there is immersive window. data: ${data}`);
+}).catch((err: Error) => {
+  console.error(`Failed to check whether there is immersive window. Code: ${err?.code} , message: ${err?.message}`);
+})
 ```
 

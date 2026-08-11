@@ -10,18 +10,18 @@ import { ArcListItemAttribute, ArcList, ArcListItem, ArcListAttribute } from 'ki
 
 ```TypeScript
 export declare function ArcList(
-    options?: ArkListOptions, 
+    options?: ArkListOptions,
     content_?: CustomBuilder,
 ): ArcListAttribute
 ```
 
-创建弧形列表实例，传入弧形列表配置项参数。
+Defines ArcList Component.
 
 **Since:** 23
 
 **ArkTS mode:** ArkTS-Sta only, since version 23.
 
-<!--Device-unnamed-export declare function ArcList(    options?: ArkListOptions,     content_?: CustomBuilder,): ArcListAttribute--><!--Device-unnamed-export declare function ArcList(    options?: ArkListOptions,     content_?: CustomBuilder,): ArcListAttribute-End-->
+<!--Device-unnamed-export declare function ArcList(    options?: ArkListOptions,    content_?: CustomBuilder,): ArcListAttribute--><!--Device-unnamed-export declare function ArcList(    options?: ArkListOptions,    content_?: CustomBuilder,): ArcListAttribute-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Circle
 
@@ -48,11 +48,11 @@ export declare function ArcList(
 ): ArcListAttribute
 ```
 
-定义ArcList组件。
+Defines ArcList Component.
 
-**Since:** 26.0.0
+**Since:** 26.1.0
 
-**ArkTS mode:** ArkTS-Sta only, since version 26.0.0.
+**ArkTS mode:** ArkTS-Sta only, since version 26.1.0.
 
 **Decorator:** @Builder
 
@@ -73,5 +73,5 @@ export declare function ArcList(
 
 | Type | Description |
 | --- | --- |
-| [ArcListAttribute](arkts-arkui-arkui-arclist-arclistattribute-c.md) | ArcList的属性。 |
+| [ArcListAttribute](arkts-arkui-arkui-arclist-arclistattribute-c.md) | The attribute of the ArcList. |
 

@@ -1,6 +1,6 @@
 # CloudFileCache
 
-云盘文件缓存对象，用来支撑文件管理应用原文件下载流程。
+Provides APIs for the file manager application to download files from the Drive Kit to a local device.
 
 **Since:** 11
 
@@ -16,13 +16,43 @@
 import { cloudSync } from 'kits/@kit.CoreFileKit';
 ```
 
+## cleanAllFileCache
+
+```TypeScript
+cleanAllFileCache(): Promise<void>
+```
+
+Clean all downloaded files except those not yet migrated to the cloud or those that are being written to.
+
+**Since:** 26.0.0
+
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
+
+**Model restriction:** This API can be used only in the stage model.
+
+<!--Device-CloudFileCache-cleanAllFileCache(): Promise<void>--><!--Device-CloudFileCache-cleanAllFileCache(): Promise<void>-End-->
+
+**System capability:** SystemCapability.FileManagement.DistributedFileService.CloudSync.Core
+
+**Return value:**
+
+| Type | Description |
+| --- | --- |
+| Promise&lt;void&gt; | Promise that returns no value. |
+
+**Error codes:**
+
+| Error Code ID | Error Message |
+| --- | --- |
+| 13900010 | Try again. |
+
 ## cleanFileCache
 
 ```TypeScript
 cleanFileCache(uri: string): void
 ```
 
-同步方法删除文件缓存。
+Deletes a cache file. This API returns the result synchronously.
 
 **Since:** 20
 
@@ -36,7 +66,7 @@ cleanFileCache(uri: string): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| uri | string | Yes | 待删除缓存文件的URI。 |
+| uri | string | Yes | URI of the cache file to delete. |
 
 **Error codes:**
 
@@ -68,34 +98,6 @@ try {
 }
 ```
 
-## cleanFileCache
-
-```TypeScript
-cleanFileCache(): Promise<void>
-```
-
-**Since:** 26.0.0
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
-
-**Model restriction:** This API can be used only in the stage model.
-
-<!--Device-CloudFileCache-cleanFileCache(): Promise<void>--><!--Device-CloudFileCache-cleanFileCache(): Promise<void>-End-->
-
-**System capability:** SystemCapability.FileManagement.DistributedFileService.CloudSync.Core
-
-**Return value:**
-
-| Type | Description |
-| --- | --- |
-| Promise&lt;void&gt; | Return Promise. |
-
-**Error codes:**
-
-| Error Code ID | Error Message |
-| --- | --- |
-| 13900010 | Try again. |
-
 ## constructor
 
 ```TypeScript
@@ -116,7 +118,7 @@ A constructor used to create a **CloudFileCache** instance. Data is not shared b
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | The input parameter is invalid.Possible causes:Incorrect parameter types. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | The input parameter is invalid.Possible causes:Incorrect parameter types. |
 
 ## Examples
 
@@ -135,6 +137,8 @@ ArkTS-Sta:
 ```TypeScript
 getCachedTotalSize(): Promise<long>
 ```
+
+Query the total size of cached files.
 
 **Since:** 26.0.0
 
@@ -164,7 +168,7 @@ getCachedTotalSize(): Promise<long>
 off(event: 'progress', callback?: Callback<DownloadProgress>): void
 ```
 
-云盘文件缓存对象移除'progress'类型的指定callback回调。
+Removes the specified callback from the device-cloud file cache progress.
 
 **Since:** 11
 
@@ -178,14 +182,14 @@ off(event: 'progress', callback?: Callback<DownloadProgress>): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| event | 'progress' | Yes | 取消订阅的事件类型，取值为'progress'（同步过程事件）。 |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;DownloadProgress&gt; | No | 回调函数。云文件下载过程事件。若填写，将视为取消指定的回调函数；否则为取消当前订阅的所有回调函数。 |
+| event | 'progress' | Yes | Event type. The value is **progress**, which indicates the sync progress event. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;DownloadProgress&gt; | No | Callback used to return the file download progress. If this parameter is not specified, this API unregisters all callbacks for the download progress event. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | The input parameter is invalid.Possible causes:1.Mandatory parameters are left unspecified; &lt;br&gt;2.Incorrect parameter types. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | The input parameter is invalid.Possible causes:1.Mandatory parameters are left unspecified; &lt;br&gt;2.Incorrect parameter types. |
 | 13600001 | IPC error |
 
 ## Examples
@@ -214,8 +218,8 @@ try {
 off(event: 'batchDownload', callback?: Callback<MultiDownloadProgress>): void
 ```
 
-云盘文件缓存对象移除由  
-[on](cloudSync.CloudFileCache#on(event: 'batchDownload', callback: Callback&lt;MultiDownloadProgress&gt;))接口添加的云文件批量缓存过程事件的监听。
+Removes the listener added via the  
+[on](cloudSync.CloudFileCache#on(event: 'batchDownload', callback: Callback&lt;MultiDownloadProgress&gt;)) API for file batch downloads.
 
 **Since:** 20
 
@@ -229,8 +233,8 @@ off(event: 'batchDownload', callback?: Callback<MultiDownloadProgress>): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| event | 'batchDownload' | Yes | 取消订阅的事件类型，取值为'batchDownload'，表示批量缓存过程事件。 |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;MultiDownloadProgress&gt; | No | 回调函数。云文件批量缓存过程事件。如果填写此参数，将取消指定的回调函数；否则，将取消当前订阅的相同事件类型的所有回 调函数。 |
+| event | 'batchDownload' | Yes | Event type. The value is **'batchDownload'**, indicating the batch download event. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;MultiDownloadProgress&gt; | No | Callback used to return the download progress of a file. If this parameter is set, the specified callback will be canceled; otherwise, all currently subscribed callbacks of the same event type will be canceled. |
 
 **Error codes:**
 
@@ -313,7 +317,7 @@ Unsubscribes from cloud file cache download progress event.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | The input parameter is invalid.Possible causes:Incorrect parameter types. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | The input parameter is invalid.Possible causes:Incorrect parameter types. |
 | 13600001 | IPC error |
 
 ## on
@@ -322,7 +326,7 @@ Unsubscribes from cloud file cache download progress event.
 on(event: 'progress', callback: Callback<DownloadProgress>): void
 ```
 
-添加云盘文件缓存过程事件监听。
+Registers a listener for the download progress of a file from the Drive Kit.
 
 **Since:** 11
 
@@ -336,14 +340,14 @@ on(event: 'progress', callback: Callback<DownloadProgress>): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| event | 'progress' | Yes | 订阅的事件类型，取值为'progress'（下载过程事件）。 |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;DownloadProgress&gt; | Yes | 回调函数。云文件下载过程事件。 |
+| event | 'progress' | Yes | Event. The value is **progress**, which indicates the download progress event of a cloud file. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;DownloadProgress&gt; | Yes | Callback used to return the file download progress. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | The input parameter is invalid.Possible causes:1.Mandatory parameters are left unspecified; &lt;br&gt;2.Incorrect parameter types. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | The input parameter is invalid.Possible causes:1.Mandatory parameters are left unspecified; &lt;br&gt;2.Incorrect parameter types. |
 | 13600001 | IPC error |
 
 ## Examples
@@ -370,7 +374,7 @@ try {
 on(event: 'batchDownload', callback: Callback<MultiDownloadProgress>): void
 ```
 
-添加云文件批量缓存事件的监听。
+Registers a listener for the batch download of a file from the Drive Kit.
 
 **Since:** 20
 
@@ -384,8 +388,8 @@ on(event: 'batchDownload', callback: Callback<MultiDownloadProgress>): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| event | 'batchDownload' | Yes | 订阅的事件类型，取值为'batchDownload'，表示批量缓存过程事件。 |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;MultiDownloadProgress&gt; | Yes | 回调函数。云文件批量缓存过程事件。 |
+| event | 'batchDownload' | Yes | Event type. The value is **'batchDownload'**, indicating the batch download event. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;MultiDownloadProgress&gt; | Yes | Callback used to return the download progress of a file. |
 
 **Error codes:**
 
@@ -472,7 +476,7 @@ Subscribes to cloud file cache download progress change event.This method uses a
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | The input parameter is invalid.Possible causes: &lt;br&gt;1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | The input parameter is invalid.Possible causes: &lt;br&gt;1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
 | 13600001 | IPC error |
 
 ## start
@@ -481,7 +485,7 @@ Subscribes to cloud file cache download progress change event.This method uses a
 start(uri: string): Promise<void>
 ```
 
-异步方法启动云盘文件缓存。使用Promise异步回调。
+Starts downloading a file from the Drive Kit to the local device. This API uses a promise to return the result.
 
 **Since:** 11
 
@@ -495,19 +499,19 @@ start(uri: string): Promise<void>
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| uri | string | Yes | 待下载文件uri。 |
+| uri | string | Yes | URI of the file to download. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise对象，无返回结果。 |
+| Promise&lt;void&gt; | Promise that returns no value. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | The input parameter is invalid.Possible causes:1.Mandatory parameters are left unspecified; &lt;br&gt;2.Incorrect parameter types. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | The input parameter is invalid.Possible causes:1.Mandatory parameters are left unspecified; &lt;br&gt;2.Incorrect parameter types. |
 | 13900002 | No such file or directory. |
 | 14000002 | Invalid uri. |
 | 13900025 | No space left on device. |
@@ -525,7 +529,7 @@ let uri = fileUri.getUriFromPath(path);
 
 try {
   fileCache.on('progress', (pg: cloudSync.DownloadProgress) => {
-    console.info("download state: " + pg.state);
+    console.info("download state:" + pg.state);
   });
 } catch (e) {
   const error = e as BusinessError;
@@ -545,7 +549,7 @@ fileCache.start(uri).then(() => {
 start(uri: string, callback: AsyncCallback<void>): void
 ```
 
-异步方法启动云盘文件缓存。使用callback异步回调。
+Starts downloading a file from the Drive Kit to the local device. This API uses an asynchronous callback to return the result.
 
 **Since:** 11
 
@@ -559,14 +563,14 @@ start(uri: string, callback: AsyncCallback<void>): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| uri | string | Yes | 待下载文件uri。 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | 回调函数。异步启动云文件下载。 |
+| uri | string | Yes | URI of the file to download. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to start downloading a cloud file asynchronously. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | The input parameter is invalid.Possible causes:1.Mandatory parameters are left unspecified; &lt;br&gt;2.Incorrect parameter types. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | The input parameter is invalid.Possible causes:1.Mandatory parameters are left unspecified; &lt;br&gt;2.Incorrect parameter types. |
 | 13900002 | No such file or directory. |
 | 14000002 | Invalid uri. |
 | 13900025 | No space left on device. |
@@ -603,9 +607,9 @@ ArkTS-Sta:
 startBatch(uris: Array<string>, fileType?: DownloadFileType): Promise<long>
 ```
 
-启动云文件批量缓存。使用Promise异步回调。
+Starts the batch download of a file from the Drive Kit. This API uses a promise to return the result.
 
-不同的批量缓存任务可以通过接口返回的任务ID区分。
+Different batch download tasks can be distinguished by the task ID returned.
 
 **Since:** 20
 
@@ -619,14 +623,14 @@ startBatch(uris: Array<string>, fileType?: DownloadFileType): Promise<long>
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| uris | Array&lt;string&gt; | Yes | URI列表，一次调用最多支持传入400个URI，超过报错22400004。 |
-| fileType | [DownloadFileType](arkts-corefile-cloudsync-downloadfiletype-e.md) | No | 文件类型，默认值为CONTENT类型。 |
+| uris | Array&lt;string&gt; | Yes | URI list. A maximum of 400 URIs can be transferred at a time. An error (22400004) will be thrown if the number of URIs exceeds 400. |
+| fileType | [DownloadFileType](arkts-corefile-cloudsync-downloadfiletype-e.md) | No | File type. The default value is **CONTENT**. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| ArkTS-Dyn: Promise&lt;number&gt;  <br>ArkTS-Sta：Promise&lt;long&gt; | Promise对象，返回启动的云文件批量缓存任务的ID。 |
+| ArkTS-Dyn: Promise&lt;number&gt;  <br>ArkTS-Sta：Promise&lt;long&gt; | Promise used to return the ID of the batch download task. |
 
 **Error codes:**
 
@@ -683,20 +687,20 @@ When **stop()** is called, the current file download process terminates, and dow
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| uri | string | Yes | 待下载文件uri。 |
-| needClean | boolean | No | 是否删除已下载的文件。默认值为false表示不删除；true表示删除。&lt;br&gt;从API version12开始支持该参数。<br>**Since:** 12 |
+| uri | string | Yes | URI of the file to download. |
+| needClean | boolean | No | Whether to delete the downloaded files. The default value **false** means not to delete the downloaded files; the value **true** means the opposite.&lt;br&gt;This parameter is available since API version 12.<br>**Since:** 12 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise对象，无返回结果。 |
+| Promise&lt;void&gt; | Promise that returns no value. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | The input parameter is invalid.Possible causes:1.Mandatory parameters are left unspecified; &lt;br&gt;2.Incorrect parameter types. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | The input parameter is invalid.Possible causes:1.Mandatory parameters are left unspecified; &lt;br&gt;2.Incorrect parameter types. |
 | 13900002 | No such file or directory. |
 | 14000002 | Invalid uri. |
 | 13600001 | IPC error. |
@@ -724,9 +728,9 @@ fileCache.stop(uri, true).then(() => {
 stop(uri: string, callback: AsyncCallback<void>): void
 ```
 
-异步方法停止云盘文件缓存。使用callback异步回调。
+Stops downloading a file from the Drive Kit to the local device. This API uses an asynchronous callback to return the result.
 
-调用stop接口，当前文件下载流程会终止，不删除缓存文件，再次调用start接口重新启动下载。
+When **stop()** is called, the current file download process terminates, and downloaded files are retained. You can call **start()** to resume the download.
 
 **Since:** 11
 
@@ -740,14 +744,14 @@ stop(uri: string, callback: AsyncCallback<void>): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| uri | string | Yes | 待下载文件uri。 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | 回调函数。异步停止云文件下载。 |
+| uri | string | Yes | URI of the file to download. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to stop downloading a cloud file asynchronously. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | The input parameter is invalid.Possible causes:1.Mandatory parameters are left unspecified; &lt;br&gt;2.Incorrect parameter types. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | The input parameter is invalid.Possible causes:1.Mandatory parameters are left unspecified; &lt;br&gt;2.Incorrect parameter types. |
 | 13900002 | No such file or directory. |
 | 14000002 | Invalid uri. |
 | 13600001 | IPC error. |
@@ -783,9 +787,9 @@ ArkTS-Sta:
 stopBatch(downloadId: long, needClean?: boolean): Promise<void>
 ```
 
-停止由[startBatch](arkts-corefile-cloudsync-cloudfilecache-c.md#startbatch)启动的云文件批量缓存任务。使用Promise异步回调。
+Stops the batch download task enabled by [startBatch](arkts-corefile-cloudsync-cloudfilecache-c.md#startbatch) of a file from the Drive Kit. This API uses a promise to return the result.
 
-调用stopBatch接口会终止当前文件批量缓存流程，未下载完成的缓存文件是否删除由needClean参数决定。
+When **stopBatch()** is called, the batch download terminates. The **needClean** parameter determines whether to delete incompletely downloaded files.
 
 **Since:** 20
 
@@ -799,14 +803,14 @@ stopBatch(downloadId: long, needClean?: boolean): Promise<void>
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| downloadId | ArkTS-Dyn: number  <br>ArkTS-Sta：long | Yes | 需要停止缓存的任务ID。 |
-| needClean | boolean | No | 是否删除未完成缓存的文件。默认值为false表示不删除；true表示删除。 |
+| downloadId | ArkTS-Dyn: number  <br>ArkTS-Sta：long | Yes | ID of the download task to be stopped. |
+| needClean | boolean | No | Whether to delete incompletely downloaded files. The default value **false** means not to delete the files; the value **true** means the opposite. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise对象，无返回结果。 |
+| Promise&lt;void&gt; | Promise that returns no value. |
 
 **Error codes:**
 

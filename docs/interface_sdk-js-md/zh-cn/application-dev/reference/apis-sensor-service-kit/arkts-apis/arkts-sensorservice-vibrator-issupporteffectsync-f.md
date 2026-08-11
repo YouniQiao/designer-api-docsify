@@ -1,11 +1,5 @@
 # isSupportEffectSync
 
-## 导入模块
-
-```TypeScript
-import { vibrator } from 'kits/@kit.SensorServiceKit';
-```
-
 ## isSupportEffectSync
 
 ```TypeScript
@@ -40,8 +34,8 @@ function isSupportEffectSync(effectId: string): boolean
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt; 2. Incorrect parameter types; 3. Parameter verification failed. |
-| 14600101 | Device operation failed. |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| [14600101](../errorcode-vibrator.md#14600101-操作设备失败) | Device operation failed. |
 
 ## 示例
 

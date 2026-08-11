@@ -1,6 +1,6 @@
 # DirectionalEdgesT
 
-边缘宽度类型，用于描述组件边缘不同方向的宽度。支持全球化。
+Defines the DirectionalEdgesT interface.
 
 **Since:** 23
 
@@ -16,7 +16,7 @@
 bottom: T
 ```
 
-底部边缘的属性。
+Bottom property.
 
 **Type:** T
 
@@ -36,7 +36,7 @@ bottom: T
 end: T
 ```
 
-终止边缘的属性。在LTR的方向下，为右边缘，在RTL的方向下，为左边缘。
+End property.
 
 **Type:** T
 
@@ -56,7 +56,7 @@ end: T
 start: T
 ```
 
-起始边缘的属性。在LTR的方向下，为左边缘，在RTL的方向下，为右边缘。
+Start property.
 
 **Type:** T
 
@@ -76,7 +76,7 @@ start: T
 top: T
 ```
 
-顶部边缘的属性。
+Top property.
 
 **Type:** T
 

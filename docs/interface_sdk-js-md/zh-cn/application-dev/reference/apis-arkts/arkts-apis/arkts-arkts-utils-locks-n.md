@@ -4,7 +4,7 @@
 
 由于ArkTS语言支持异步操作，阻塞锁容易产生死锁问题，因此我们在ArkTS中仅支持异步锁（非阻塞式锁）。
 
-使用异步锁的方法需要标记为async，调用方需要await修饰调用，才能保证时序正确。因此会导致外层调用函数全部标记成async。
+使用异步锁的方法需要标记为async，调用方需要使用await等待调用结果，才能保证时序正确。因此会导致外层调用函数全部标记成async。
 
 **起始版本：** 12
 
@@ -13,12 +13,6 @@
 <!--Device-utils-namespace locks--><!--Device-utils-namespace locks-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
-
-## 导入模块
-
-```TypeScript
-import { ArkTSUtils } from 'kits/@kit.ArkTS';
-```
 
 ## 汇总
 

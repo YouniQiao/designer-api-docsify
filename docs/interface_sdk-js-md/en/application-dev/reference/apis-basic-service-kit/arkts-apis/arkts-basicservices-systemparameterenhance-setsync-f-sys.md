@@ -12,15 +12,7 @@ import { systemParameterEnhance } from 'kits/@kit.BasicServicesKit';
 function setSync(key: string, value: string): void
 ```
 
-设置系统参数key对应的值。
-
-> **说明：**
-> 
-> setSync和set方法都用于设置系统参数值：
-> - setSync：同步方法，直接设置系统参数并立即返回，适用于简单同步场景。
-> - set：异步方法，使用callback或Promise异步返回结果，适用于需要异步处理的场景。
-> 
-> 开发者应根据具体场景选择合适的方法。
+Sets a value for the specified key. This API uses a promise to return the result.
 
 **Since:** 9
 
@@ -36,17 +28,17 @@ function setSync(key: string, value: string): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| key | string | Yes | 待设置的系统参数key。最大长度128字节，只允许字母数字加"."，"-"，"@"，":"或"_"，不允许".."。 |
-| value | string | Yes | 待设置的系统参数值。最大长度96字节（包括结束符）。 |
+| key | string | Yes | Target key. The value can contain a maximum of 128 bytes. Only letters, digits, periods (.), hyphens (-), at signs (@), colons (:), and underscores (_) are allowed. |
+| value | string | Yes | Value to set. The value can contain a maximum of 96 bytes (including the end character). |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.incorrect parameter types; 3.parameter verification failed. |
-| 14700102 | Invalid system parameter value. |
-| 14700103 | The operation on the system permission is denied. |
-| 14700104 | System internal error such as out memory or deadlock. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.incorrect parameter types; 3.parameter verification failed. |
+| [14700102](../../apis-basic-services-kit/errorcode-system-parameterV9.md#14700102-invalid-system-parameter-value) | Invalid system parameter value. |
+| [14700103](../../apis-basic-services-kit/errorcode-device-info.md#14700103-operation-permission-denied) | The operation on the system permission is denied. |
+| [14700104](../../apis-basic-services-kit/errorcode-system-parameterV9.md#14700104-internal-system-error-including-out-of-memory-and-deadlock) | System internal error such as out memory or deadlock. |
 
 ## Examples
 

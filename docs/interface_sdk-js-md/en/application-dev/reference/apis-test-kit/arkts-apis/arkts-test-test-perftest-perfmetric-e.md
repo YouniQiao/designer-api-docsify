@@ -1,37 +1,17 @@
 # PerfMetric
 
-框架支持采集的性能指标。
-
-> **说明：**
-> 
-> 
-> 1. 以上指标均用于采集指定应用进程的性能数据，非系统整机性能数据。
-> 2. CPU（CPU_LOAD/CPU_USAGE）、内存（MEMORY_RSS/MEMORY_PSS）数据采集说明如下：
-> - 测试过程中，代码段执行开始前和代码段执行结束后，会分别采集指定应用进程的CPU和内存数据，因此测试过程中需要保证被测应用进程一直存在。
-> 
-> 
-> 3. 应用启动时延（APP_START_RESPONSE_TIME/APP_START_COMPLETE_TIME）数据采集说明如下：
-> - 应用启动时延数据受系统打点上报限制，开始时间为点击事件上报时间点，响应时延结束时间为点击后系统响应首帧的上屏时间点（首帧显示在屏幕上的时间点），完成时延结束时间为应用启动后的首帧上屏时间点，与端到端用户感知时延存在差异。
-> 
-> - 应用启动时延数据采集支持的场景：桌面点击应用图标启动、Dock栏点击应用图标启动、应用中心点击应用图标启动。
-> 
-> - 单次测试期间，仅第一次指定应用启动的时延数据会被采集。
-> 
-> 
-> 4. 页面切换时延（PAGE_SWITCH_COMPLETE_TIME）数据采集说明如下：
-> - 页面切换时延计算受系统打点上报限制，开始时间为点击事件上报时间点，完成时延结束时间为页面切换后的首帧上屏时间点，与端到端用户感知时延存在差异。
-> 
-> - 页面切换时延数据采集支持的场景：Router、Navigation控件内的页面切换。
-> 
-> - 单次测试期间，仅指定应用内第一次页面切换的时延数据会被采集。
-> 
-> 
-> 5. 列表滑动帧率（LIST_SWIPE_FPS）数据采集说明如下：
-> - 列表滑动帧率：指的是在列表滑动时，屏幕每秒钟渲染更新帧的次数。
-> 
-> - 列表滑动帧率数据采集支持的场景：ArkUI子系统List、Grid、Scroll、WaterFlow滚动控件列表的滑动。
-> 
-> - 单次测试期间，仅指定应用内第一次列表滑动的帧率数据会被采集。
+APP_START_COMPLETE_TIME**):  
+> - Application startup latency data is subject to the system logging and reporting and may be different from what end users perceive. The start time is when the tap event is reported, the end time of the response latency is when the first frame is displayed on the screen after the tap, and the end time of the completion latency is when the first frame is displayed on the screen after the application is started.
+> - Application startup latency data can be collected in the following scenarios: tapping an application icon on the home screen, tapping an application icon on the dock bar, and tapping an application icon in the application center.
+> - During a test, only the first startup latency of the specified application is collected.
+> 4. Description of collecting the page switching latency data (**PAGE_SWITCH_COMPLETE_TIME**):
+> - Page switching latency calculation is subject to the system logging and reporting and may be different from what end users perceive. The start time is when the tap event is reported, and the end time is when the first frame is displayed on the screen after the page switching.
+> - Page switching latency data can be collected in the **Router** and **Navigation** components.
+> - During a test, only the first page switching latency in the specified application is collected.
+> 5. Description of collecting the list scrolling frame rate (**LIST_SWIPE_FPS**):
+> - **LIST_SWIPE_FPS**: The number of frames rendered and updated on the screen per second when the list is scrolled.
+> - Supported scenarios: list scrolling of the **List**, **Grid**, **Scroll**, and **WaterFlow** components in the ArkUI subsystem.
+> - During a test, only the first list scrolling frame rate in the specified application is collected.
 
 **Since:** 20
 
@@ -47,7 +27,7 @@
 DURATION = 0
 ```
 
-代码段执行耗时，单位：ms。
+Execution duration of a code segment, in milliseconds.
 
 **Since:** 20
 
@@ -65,7 +45,7 @@ DURATION = 0
 CPU_LOAD = 1
 ```
 
-应用进程CPU负载，取值为百分比。
+CPU load of the application process, in percentage.
 
 **Since:** 20
 
@@ -83,7 +63,7 @@ CPU_LOAD = 1
 CPU_USAGE = 2
 ```
 
-应用进程CPU使用率，取值为百分比。
+CPU usage of the application process, in percentage.
 
 **Since:** 20
 
@@ -101,7 +81,7 @@ CPU_USAGE = 2
 MEMORY_RSS = 3
 ```
 
-代码段单次执行结束时，应用进程占用物理内存（含共享库），单位：KB。
+Physical memory (including the shared library) occupied by the application process when a code segment is executed, in KB.
 
 **Since:** 20
 
@@ -119,7 +99,7 @@ MEMORY_RSS = 3
 MEMORY_PSS = 4
 ```
 
-代码段单次执行结束时，应用进程占用物理内存（按比例分摊共享库），单位：KB。
+Physical memory (the proportionally allocated memory occupied by shared libraries) occupied by the application process when a code segment is executed, in KB.
 
 **Since:** 20
 
@@ -137,7 +117,9 @@ MEMORY_PSS = 4
 APP_START_RESPONSE_TIME = 5
 ```
 
-应用启动的响应时延，单位：ms。
+Response latency of application startup, in milliseconds.
+
+Marks:1) Delay calculation is restricted by system dotting reporting. The start time is the time when the click event is reported,and the end time of the response delay is the time when the system responds to the first frame after the click.It is different from the end-to-end user-perceived delay.2) Application start delay can be collected in the following scenarios: clicking the application icon on the desktop;clicking the application on the Multi-Task Center; clicking the application icon on the Dock;clicking the application icon on the application center.3) This metric does not support the test of current application.4) During the test, only the data of the first startup of the specified application can be collected.
 
 **Since:** 20
 
@@ -155,7 +137,9 @@ APP_START_RESPONSE_TIME = 5
 APP_START_COMPLETE_TIME = 6
 ```
 
-应用启动的完成时延，单位：ms。
+Completion latency of application startup, in milliseconds.
+
+Marks:1) Delay calculation is restricted by system dotting reporting. The start time is the time when the click event is reported,and the end time of the completion delay is the time when the first frame is displayed after the application is started.It is different from the end-to-end user-perceived delay.2) Application start delay can be collected in the following scenarios: clicking the application icon on the desktop;clicking the application on the Multi-Task Center; clicking the application icon on the Dock;clicking the application icon on the application center.3) This metric does not support the test of current application.4) During the test, only the data of the first start of specified application can be collected.
 
 **Since:** 20
 
@@ -173,7 +157,9 @@ APP_START_COMPLETE_TIME = 6
 PAGE_SWITCH_COMPLETE_TIME = 7
 ```
 
-应用内页面切换的完成时延，单位：ms。
+Completion latency of page switching in an application, in milliseconds.
+
+Marks:1) Delay calculation is restricted by system dotting and reporting. The start time is the time when the click event is reported,and the end time of the completion delay is the time when the first frame is displayed after page is switched.It is different from the end-to-end user-perceived delay.2) Page switching delay can be collected in the page switchover scenario of the Router or Navigation component.3) During the test, only the data of the first page switching in specified application can be collected.
 
 **Since:** 20
 
@@ -191,7 +177,9 @@ PAGE_SWITCH_COMPLETE_TIME = 7
 LIST_SWIPE_FPS = 8
 ```
 
-应用内列表滑动的帧率，单位：fps(每秒帧数)。
+List scrolling frame rate in an application, in frames per second (fps).
+
+Mark:1) List sliding frame rate: refers to the frequency at which the screen can be refreshed when the list is sliding.Only the sliding frame rate of the List, grid, scroll, and waterflow scroll components of ArkUI subsystems can be collected.2) During the test, only the data of the first sliding of the component in specified application can be collected.
 
 **Since:** 20
 

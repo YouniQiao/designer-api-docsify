@@ -12,7 +12,7 @@ import { appManager } from 'kits/@kit.AbilityKit';
 function offAbilityFirstFrameStateChange(observer?: AbilityFirstFrameStateObserver): void
 ```
 
-取消注册监听Ability首帧绘制完成事件观察者对象。
+Unregister ability first frame state observer.
 
 **Since:** 23
 
@@ -30,13 +30,13 @@ function offAbilityFirstFrameStateChange(observer?: AbilityFirstFrameStateObserv
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| observer | [AbilityFirstFrameStateObserver](arkts-ability-appmanager-abilityfirstframestateobserver-t-sys.md) | No | 表示待取消的Ability首帧绘制完成事件观察者对象，不填表示取消所有监听对象。 |
+| observer | [AbilityFirstFrameStateObserver](arkts-ability-appmanager-abilityfirstframestateobserver-t-sys.md) | No | The ability first frame state observer. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 16000050 | Internal error. |
-| 201 | Permission denied. |
-| 202 | Not system application. |
+| [16000050](../errorcode-ability.md#16000050-internal-error) | Internal error. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system application. |
 

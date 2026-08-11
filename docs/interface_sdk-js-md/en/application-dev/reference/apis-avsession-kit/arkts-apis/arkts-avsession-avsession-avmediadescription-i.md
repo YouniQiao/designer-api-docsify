@@ -1,6 +1,6 @@
 # AVMediaDescription
 
-播放列表媒体元数据的相关属性。
+The description of the media for an item in the playlist of the session
 
 **Since:** 10
 
@@ -22,7 +22,7 @@ import { avSession } from 'kits/@kit.AVSessionKit';
 albumCoverUri?: string
 ```
 
-播放列表媒体专辑封面URI。
+The album cover uri of this media
 
 **Type:** string
 
@@ -42,7 +42,7 @@ albumCoverUri?: string
 albumTitle?: string
 ```
 
-播放列表媒体专辑标题。
+The album title of this media
 
 **Type:** string
 
@@ -62,7 +62,7 @@ albumTitle?: string
 appName?: string
 ```
 
-播放列表提供的应用的名字。
+Application name.
 
 **Type:** string
 
@@ -82,7 +82,7 @@ appName?: string
 artist?: string
 ```
 
-播放列表媒体专辑作者。
+The artist of this media.
 
 **Type:** string
 
@@ -102,11 +102,7 @@ artist?: string
 assetId: string
 ```
 
-媒体ID。媒体信息的唯一标识，由应用自定义。
-
-- 该属性发生变化则其他元数据属性都将被刷新。  
-- 若该属性维持不变，且不设置相应的媒体元数据信息，那么将不会更新对应的媒体元数据信息。  
-- 当该属性设为空值时，调用[setAVMetadata](arkts-avsession-avsession-avsession-i.md#setavmetadata)方法将失败，返回错误码6600101。
+Unique ID used to represent this media.
 
 **Type:** string
 
@@ -126,7 +122,7 @@ assetId: string
 creditsPosition?: int
 ```
 
-播放列表媒体的片尾播放位置。
+Media credits position, described by milliseconds.
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
@@ -146,7 +142,7 @@ creditsPosition?: int
 dataSrc?: media.AVDataSrcDescriptor
 ```
 
-播放列表数据源描述。
+DataSource descriptor. The caller ensures the fileSize and callback are valid.
 
 **Type:** media.AVDataSrcDescriptor
 
@@ -164,7 +160,7 @@ dataSrc?: media.AVDataSrcDescriptor
 description?: string
 ```
 
-播放列表媒体描述的文本。
+The description of this media
 
 **Type:** string
 
@@ -184,9 +180,7 @@ description?: string
 displayTags?: int
 ```
 
-媒体资源的金标类型，取值参考[DisplayTag](arkts-avsession-avsession-displaytag-e.md)。
-
-在使用了cast+协议的音频投播场景下，不支持使用该属性。
+The display tags supported by application to be displayed on media center
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
@@ -206,7 +200,7 @@ displayTags?: int
 drmScheme?: string
 ```
 
-播放列表媒体支持的DRM方案，由uuid表示。
+The drm scheme supported by this resource which is represented by uuid.
 
 **Type:** string
 
@@ -224,7 +218,7 @@ drmScheme?: string
 duration?: int
 ```
 
-播放列表媒体播放时长。
+The duration of this media, described by milliseconds.
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
@@ -244,16 +238,7 @@ duration?: int
 extras?: {[key: string]: Object}
 ```
 
-播放列表媒体额外字段。
-
-从API版本26.0.0开始，DLNA投播场景下支持将[ExtraKey](arkts-avsession-avsession-extrakey-e.md)中DLNA_CURRENT_URI_METADATA和DLNA_DIDL_LITE两个键的值传递给对端设备，键值对的值需传入符合XML格式的字符串。如传入入参`{[avSession.ExtraKey.DLNA_CURRENT_URI_METADATA]: '&lt;xxtv&gt;...&lt;/xxtv&gt;'}`。
-
-- 非DLNA投播场景不生效。  
-- 非字符串类型不生效。  
-- 非XML格式会触发  
-[on('castControlIoError')](avSession.AVCastController.on(type: 'castControlIoError', callback: ErrorCallback))回调并返回错误码6612000。错误码的详细介绍请参见[媒体会话管理错误码](../../../reference/apis-avsession-kit/errorcode-avsession.md)。  
-- 通过extras字段，在[ExtraKey](arkts-avsession-avsession-extrakey-e.md)中通过DLNA_CURRENT_URI_METADATA和DLNA_DIDL_LITE键传入的字符串总长度需小于40960字  
-节。
+Any additional attributes that can be represented as key-value pairs
 
 **Type:** {[key: string]: Object}
 
@@ -271,7 +256,7 @@ extras?: {[key: string]: Object}
 fdSrc?: media.AVFileDescriptor
 ```
 
-播放列表媒体本地文件的句柄。
+Media file descriptor.
 
 **Type:** media.AVFileDescriptor
 
@@ -291,7 +276,7 @@ fdSrc?: media.AVFileDescriptor
 launchClientData?: string
 ```
 
-投播过程中应用程序向接收方发送的自定义数据。
+Custom data sent by the application to the receiver during casting.
 
 **Type:** string
 
@@ -311,9 +296,7 @@ launchClientData?: string
 lyricContent?: string
 ```
 
-播放列表媒体歌词内容。
-
-字符串长度需小于40960字节。
+The lyric content of the media, it should be in standard lyric format
 
 **Type:** string
 
@@ -333,7 +316,7 @@ lyricContent?: string
 lyricUri?: string
 ```
 
-播放列表媒体歌词URI。
+The lyric uri of the media.
 
 **Type:** string
 
@@ -353,16 +336,7 @@ lyricUri?: string
 mediaImage?: image.PixelMap | string
 ```
 
-设置播放列表媒体图片像素数据。
-
-在使用了cast+协议的音视频投播场景下，该字段用于给对端设备设置媒体专辑封面。
-
-当入参为string类型时：
-
-- 只支持使用网络URI设置封面，不支持本地URI。  
-- 其作用与albumCoverUri属性功能相同，且优先级高于albumCoverUri。
-
-从API version 23开始，支持入参为image.PixelMap类型给对端设备设置媒体信息。
+The image of this media asset displayed in the media center.It can be a {@link PixelMap} or a URI formatted string,
 
 **Type:** image.PixelMap \| string
 
@@ -382,7 +356,7 @@ mediaImage?: image.PixelMap | string
 mediaSize?: int
 ```
 
-播放列表媒体的大小。
+The size of this media.
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
@@ -402,7 +376,7 @@ mediaSize?: int
 mediaType?: string
 ```
 
-播放列表媒体类型。
+The type of this media, such as video, audio and so on.
 
 **Type:** string
 
@@ -422,7 +396,7 @@ mediaType?: string
 mediaUri?: string
 ```
 
-播放列表媒体URI。
+The uri of the media, used to locate the media in some special cases
 
 **Type:** string
 
@@ -442,7 +416,7 @@ mediaUri?: string
 pcmSrc?: boolean
 ```
 
-播放列表是否使用PCM数据源。true表示使用PCM数据源，false表示不使用PCM数据源。
+Source type that supports PCM casting.The application can send PCM data directly to the system through audio APIs, without using AVSession to set data.
 
 **Type:** boolean
 
@@ -462,7 +436,7 @@ pcmSrc?: boolean
 startPosition?: int
 ```
 
-播放列表媒体起始播放位置。音视频投播场景中，在投播直播资源时，此字段应置空或赋值为0。
+Media start position, described by milliseconds.
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
@@ -482,7 +456,7 @@ startPosition?: int
 subtitle?: string
 ```
 
-子标题。
+The subtitle of the media, used for display
 
 **Type:** string
 
@@ -502,7 +476,7 @@ subtitle?: string
 title?: string
 ```
 
-标题。
+The title of this media, for display in media center.
 
 **Type:** string
 

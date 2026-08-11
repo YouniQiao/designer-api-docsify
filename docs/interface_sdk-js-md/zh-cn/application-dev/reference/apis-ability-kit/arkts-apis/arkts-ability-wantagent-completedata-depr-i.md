@@ -94,7 +94,7 @@ info: WantAgent
 
 触发的wantAgent。
 
-**类型：** [WantAgent](arkts-ability-wantagent-t.md)
+**类型：** [WantAgent](../../apis-background-tasks-kit/arkts-apis/arkts-backgroundtasks-reminderagent-wantagent-i.md)
 
 **起始版本：** 7
 

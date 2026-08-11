@@ -16,12 +16,6 @@
 
 **系统能力：** SystemCapability.Multimedia.Audio.Volume
 
-## 导入模块
-
-```TypeScript
-import { audio } from 'kits/@kit.AudioKit';
-```
-
 ## forceVolumeKeyControlType
 
 ArkTS-Dyn:
@@ -59,10 +53,10 @@ Interface for forcibly setting the volume type by pressing the volume key.
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 6800101 | Parameter verification failed. |
-| 201 | Permission denied. |
-| 202 | Not system App. |
-| 6800301 | Crash or blocking occurs in system process. |
+| [6800101](../errorcode-audio.md#6800101-无效入参) | Parameter verification failed. |
+| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not system App. |
+| [6800301](../errorcode-audio.md#6800301-系统处理异常) | Crash or blocking occurs in system process. |
 
 ## 示例
 
@@ -113,8 +107,8 @@ getActiveStreamsVolumeInfo(): ActiveStreamsVolumeInfoArray
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 202 | Not system App. |
-| 6800301 | System error, crash or blocking occurs in system process. |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not system App. |
+| [6800301](../errorcode-audio.md#6800301-系统处理异常) | System error, crash or blocking occurs in system process. |
 
 ## getAppVolumePercentageForUid
 
@@ -158,16 +152,16 @@ Get the volume for specified app with range from 0 to 100. Applications with sam
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 6800101 | Parameter verification failed. |
-| 201 | Permission denied. |
-| 202 | Not system App. |
+| [6800101](../errorcode-audio.md#6800101-无效入参) | Parameter verification failed. |
+| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not system App. |
 
 ## 示例
 
 ```TypeScript
-let uid: number = 20010041; // 应用ID。
+let uid = 20010041; // 应用ID。
 
-audioVolumeManager.getAppVolumePercentageForUid(20010041).then((value: number) => {
+audioVolumeManager.getAppVolumePercentageForUid(20010041).then((value) => {
   console.info(`app volume is ${value}.`);
 });
 ```
@@ -206,8 +200,8 @@ Obtains volume type by stream type.
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 6800101 | Parameter verification failed. |
-| 202 | Not system App. |
+| [6800101](../errorcode-audio.md#6800101-无效入参) | Parameter verification failed. |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not system App. |
 
 ## getMaxSystemVolume
 
@@ -249,8 +243,8 @@ Obtains the maximum volume allowed for a volume type.
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 6800101 | Parameter verification failed. |
-| 202 | Not system App. |
+| [6800101](../errorcode-audio.md#6800101-无效入参) | Parameter verification failed. |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not system App. |
 
 ## getMinSystemVolume
 
@@ -292,8 +286,8 @@ Obtains the minimum volume allowed for a volume type.
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 6800101 | Parameter verification failed. |
-| 202 | Not system App. |
+| [6800101](../errorcode-audio.md#6800101-无效入参) | Parameter verification failed. |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not system App. |
 
 ## getMinSystemVolumePercentage
 
@@ -335,8 +329,8 @@ Gets the minimum system volume percentage application can set for specified volu
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 6800101 | Parameter verification failed. |
-| 202 | Not system App. |
+| [6800101](../errorcode-audio.md#6800101-无效入参) | Parameter verification failed. |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not system App. |
 
 ## 示例
 
@@ -384,8 +378,8 @@ Obtains stream types by volume type.
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 6800101 | Parameter verification failed. |
-| 202 | Not system App. |
+| [6800101](../errorcode-audio.md#6800101-无效入参) | Parameter verification failed. |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not system App. |
 
 ## getSupportedAudioVolumeTypes
 
@@ -415,7 +409,7 @@ Obtains system supported volume types.
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 202 | Not system App. |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not system App. |
 
 ## getSystemVolume
 
@@ -457,8 +451,8 @@ Obtains the volume of a volume type.
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 6800101 | Parameter verification failed. |
-| 202 | Not system App. |
+| [6800101](../errorcode-audio.md#6800101-无效入参) | Parameter verification failed. |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not system App. |
 
 ## getSystemVolumeByUid
 
@@ -501,9 +495,9 @@ Obtains the volume of streams in specific uid application.
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 6800101 | Parameter verification failed. |
-| 202 | Not system App. |
-| 6800301 | Crash or blocking occurs in system process. |
+| [6800101](../errorcode-audio.md#6800101-无效入参) | Parameter verification failed. |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not system App. |
+| [6800301](../errorcode-audio.md#6800301-系统处理异常) | Crash or blocking occurs in system process. |
 
 ## getSystemVolumePercentage
 
@@ -545,8 +539,8 @@ Gets the current system volume percentage for specified volume type.
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 6800101 | Parameter verification failed. |
-| 202 | Not system App. |
+| [6800101](../errorcode-audio.md#6800101-无效入参) | Parameter verification failed. |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not system App. |
 
 ## 示例
 
@@ -672,8 +666,8 @@ Get the volume group list for a networkId.
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
-| 6800101 | Parameter verification failed. |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
+| [6800101](../errorcode-audio.md#6800101-无效入参) | Parameter verification failed. |
 
 ## 示例
 
@@ -719,7 +713,7 @@ Gets the volume db value that system calculate by volume type, volume level and 
 | --- | --- | --- | --- |
 | volumeType | [AudioVolumeType](arkts-audio-audio-audiovolumetype-e-sys.md) | 是 | Audio volume type. |
 | volumeLevel | ArkTS-Dyn: number  <br>ArkTS-Sta：int | 是 | Volume level to set. |
-| device | [DeviceType](../../apis-avsession-kit/arkts-apis/arkts-avsession-avsession-devicetype-e.md) | 是 | Output device type. |
+| device | [DeviceType](../../apis-localization-kit/arkts-apis/arkts-localization-resourcemanager-devicetype-e.md) | 是 | Output device type. |
 
 **返回值：**
 
@@ -731,8 +725,8 @@ Gets the volume db value that system calculate by volume type, volume level and 
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 6800101 | Parameter verification failed. |
-| 202 | Not system App. |
+| [6800101](../errorcode-audio.md#6800101-无效入参) | Parameter verification failed. |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not system App. |
 
 ## isAppVolumeMutedForUid
 
@@ -777,14 +771,14 @@ Checks whether the app volume is muted. If there are multiple callers setting mu
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 6800101 | Parameter verification failed. |
-| 201 | Permission denied. |
-| 202 | Not system App. |
+| [6800101](../errorcode-audio.md#6800101-无效入参) | Parameter verification failed. |
+| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not system App. |
 
 ## 示例
 
 ```TypeScript
-let uid: number = 20010041; // 应用ID。
+let uid = 20010041; // 应用ID。
 
 audioVolumeManager.isAppVolumeMutedForUid(uid, true).then((value: boolean) => {
   console.info(`app muted state is ${value}.`);
@@ -825,8 +819,8 @@ Checks whether a volume type is muted.
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 6800101 | Parameter verification failed. |
-| 202 | Not system App. |
+| [6800101](../errorcode-audio.md#6800101-无效入参) | Parameter verification failed. |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not system App. |
 
 ## off('appVolumeChangeForUid')
 
@@ -859,9 +853,9 @@ Unsubscribes to the app volume change events..
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 6800101 | Parameter verification failed. |
-| 201 | Permission denied. |
-| 202 | Not system App. |
+| [6800101](../errorcode-audio.md#6800101-无效入参) | Parameter verification failed. |
+| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not system App. |
 
 ## 示例
 
@@ -910,8 +904,8 @@ off(type: 'activeVolumeTypeChange', callback?: Callback<AudioVolumeType>): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 6800101 | Parameter verification failed. |
-| 202 | Not system App. |
+| [6800101](../errorcode-audio.md#6800101-无效入参) | Parameter verification failed. |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not system App. |
 
 ## 示例
 
@@ -958,8 +952,8 @@ Unsubscribes to the system volume change events.
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 6800101 | Parameter verification failed. |
-| 202 | Not system App. |
+| [6800101](../errorcode-audio.md#6800101-无效入参) | Parameter verification failed. |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not system App. |
 
 ## 示例
 
@@ -1005,8 +999,24 @@ Unsubscribes from active volume type changes.
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 6800101 | Parameter verification failed. |
-| 202 | Not system App. |
+| [6800101](../errorcode-audio.md#6800101-无效入参) | Parameter verification failed. |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not system App. |
+
+## 示例
+
+```TypeScript
+// 取消该事件的所有监听。
+audioVolumeManager.offActiveVolumeTypeChange();
+
+// 同一监听事件中，on方法和off方法传入callback参数一致，off方法取消对应on方法订阅的监听。
+let activeVolumeTypeChangeCallback = (volumeType: audio.AudioVolumeType) => {
+  console.info(`VolumeType of stream: ${volumeType} `);
+};
+
+audioVolumeManager.onActiveVolumeTypeChange(activeVolumeTypeChangeCallback);
+
+audioVolumeManager.offActiveVolumeTypeChange(activeVolumeTypeChangeCallback);
+```
 
 ## offAppVolumeChangeForUid
 
@@ -1038,9 +1048,27 @@ Unsubscribes to the app volume change events..
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 6800101 | Parameter verification failed. |
-| 201 | Permission denied. |
-| 202 | Not system App. |
+| [6800101](../errorcode-audio.md#6800101-无效入参) | Parameter verification failed. |
+| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not system App. |
+
+## 示例
+
+```TypeScript
+// 取消该事件的所有监听。
+audioVolumeManager.offAppVolumeChangeForUid();
+
+// 同一监听事件中，on方法和off方法传入callback参数一致，off方法取消对应on方法订阅的监听。
+let appVolumeChangeForUidCallback = (volumeEvent: audio.VolumeEvent) => {
+  console.info(`VolumeType of stream: ${volumeEvent.volumeType} `);
+  console.info(`Volume level: ${volumeEvent.volume} `);
+  console.info(`Whether to updateUI: ${volumeEvent.updateUi} `);
+};
+
+audioVolumeManager.onAppVolumeChangeForUid(appVolumeChangeForUidCallback);
+
+audioVolumeManager.offAppVolumeChangeForUid(appVolumeChangeForUidCallback);
+```
 
 ## offSystemVolumeChange
 
@@ -1070,8 +1098,24 @@ Unsubscribes to the system volume change events.
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 6800101 | Parameter verification failed. |
-| 202 | Not system App. |
+| [6800101](../errorcode-audio.md#6800101-无效入参) | Parameter verification failed. |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not system App. |
+
+## 示例
+
+```TypeScript
+// 取消该事件的所有监听。
+audioVolumeManager.offSystemVolumeChange();
+
+// 同一监听事件中，on方法和off方法传入callback参数一致，off方法取消对应on方法订阅的监听。
+let systemVolumeChangeCallback = (volumeEvent: audio.VolumeEvent) => {
+  console.info(`Succeeded in using on or off function, VolumeEvent: ${volumeEvent}.`);
+};
+
+audioVolumeManager.onSystemVolumeChange(systemVolumeChangeCallback);
+
+audioVolumeManager.offSystemVolumeChange(systemVolumeChangeCallback);
+```
 
 ## offSystemVolumeChangeByFilter
 
@@ -1103,8 +1147,8 @@ offSystemVolumeChangeByFilter(callback?: Callback<VolumeEvent>): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 6800101 | Parameter verification failed. |
-| 202 | Not system app. |
+| [6800101](../errorcode-audio.md#6800101-无效入参) | Parameter verification failed. |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not system app. |
 
 ## offVolumePercentageChange
 
@@ -1134,8 +1178,8 @@ Unsubscribes from system volume percentage change events.
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 6800101 | Parameter verification failed. |
-| 202 | Not system App. |
+| [6800101](../errorcode-audio.md#6800101-无效入参) | Parameter verification failed. |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not system App. |
 
 ## 示例
 
@@ -1188,9 +1232,9 @@ Listens for specified app volume change events.The app volume may changed by {@l
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 6800101 | Parameter verification failed. |
-| 201 | Permission denied. |
-| 202 | Not system App. |
+| [6800101](../errorcode-audio.md#6800101-无效入参) | Parameter verification failed. |
+| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not system App. |
 
 ## 示例
 
@@ -1233,8 +1277,8 @@ on(type: 'activeVolumeTypeChange', callback: Callback<AudioVolumeType>): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 6800101 | Parameter verification failed. |
-| 202 | Not system App. |
+| [6800101](../errorcode-audio.md#6800101-无效入参) | Parameter verification failed. |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not system App. |
 
 ## 示例
 
@@ -1273,8 +1317,8 @@ Listens for system volume change events. This method uses a callback to get volu
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 6800101 | Parameter verification failed. |
-| 202 | Not system App. |
+| [6800101](../errorcode-audio.md#6800101-无效入参) | Parameter verification failed. |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not system App. |
 
 ## 示例
 
@@ -1312,8 +1356,16 @@ Subscribes to active volume type changes.
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 6800101 | Parameter verification failed. |
-| 202 | Not system App. |
+| [6800101](../errorcode-audio.md#6800101-无效入参) | Parameter verification failed. |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not system App. |
+
+## 示例
+
+```TypeScript
+audioVolumeManager.onActiveVolumeTypeChange((volumeType: audio.AudioVolumeType) => {
+  console.info(`VolumeType of stream: ${volumeType} `);
+});
+```
 
 ## onAppVolumeChangeForUid
 
@@ -1346,9 +1398,21 @@ Listens for specified app volume change events.The app volume may changed by {@l
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 6800101 | Parameter verification failed. |
-| 201 | Permission denied. |
-| 202 | Not system App. |
+| [6800101](../errorcode-audio.md#6800101-无效入参) | Parameter verification failed. |
+| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not system App. |
+
+## 示例
+
+```TypeScript
+let uid: int = 20010041; // 应用ID。
+
+audioVolumeManager.onAppVolumeChangeForUid(uid, (volumeEvent: audio.VolumeEvent) => {
+  console.info(`VolumeType of stream: ${volumeEvent.volumeType} `);
+  console.info(`Volume level: ${volumeEvent.volume} `);
+  console.info(`Whether to updateUI: ${volumeEvent.updateUi} `);
+});
+```
 
 ## onSystemVolumeChange
 
@@ -1378,8 +1442,16 @@ Listens for system volume change events. This method uses a callback to get volu
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 6800101 | Parameter verification failed. |
-| 202 | Not system App. |
+| [6800101](../errorcode-audio.md#6800101-无效入参) | Parameter verification failed. |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not system App. |
+
+## 示例
+
+```TypeScript
+audioVolumeManager.onSystemVolumeChange((volumeEvent: audio.VolumeEvent) => {
+  console.info(`Succeeded in using on function, VolumeEvent: ${volumeEvent}.`);
+});
+```
 
 ## onSystemVolumeChangeByFilter
 
@@ -1412,8 +1484,8 @@ onSystemVolumeChangeByFilter(filter: SystemVolumeFilter, callback: Callback<Volu
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 6800101 | Parameter verification failed. |
-| 202 | Not a system app. |
+| [6800101](../errorcode-audio.md#6800101-无效入参) | Parameter verification failed. |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not a system app. |
 
 ## onVolumePercentageChange
 
@@ -1443,13 +1515,13 @@ Subscribes to system volume percentage change events.
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 6800101 | Parameter verification failed. |
-| 202 | Not system App. |
+| [6800101](../errorcode-audio.md#6800101-无效入参) | Parameter verification failed. |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not system App. |
 
 ## 示例
 
 ```TypeScript
-onVolumePercentageChange((volumeEvent: audio.VolumeEvent) => {
+audioVolumeManager.onVolumePercentageChange((volumeEvent: audio.VolumeEvent) => {
   console.info(`VolumeType of stream: ${volumeEvent.volumeType} `);
   console.info(`Volume level: ${volumeEvent.volume} `);
   console.info(`Volume percentage: ${volumeEvent.percentage} `);
@@ -1500,15 +1572,15 @@ Change mute state of specified application volume. If there are multiple callers
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 6800101 | Parameter verification failed. |
-| 201 | Permission denied. |
-| 202 | Not system App. |
-| 6800301 | Crash or blocking occurs in system process. |
+| [6800101](../errorcode-audio.md#6800101-无效入参) | Parameter verification failed. |
+| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not system App. |
+| [6800301](../errorcode-audio.md#6800301-系统处理异常) | Crash or blocking occurs in system process. |
 
 ## 示例
 
 ```TypeScript
-let uid: number = 20010041; // 应用ID。
+let uid = 20010041; // 应用ID。
 
 audioVolumeManager.setAppVolumeMutedForUid(uid, true).then(() => {
   console.info(`set app mute state success.`);
@@ -1558,16 +1630,16 @@ Sets the volume for specified app with range from 0 to 100. Applications with sa
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 6800101 | Parameter verification failed. |
-| 201 | Permission denied. |
-| 202 | Not system App. |
-| 6800301 | Crash or blocking occurs in system process. |
+| [6800101](../errorcode-audio.md#6800101-无效入参) | Parameter verification failed. |
+| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not system App. |
+| [6800301](../errorcode-audio.md#6800301-系统处理异常) | Crash or blocking occurs in system process. |
 
 ## 示例
 
 ```TypeScript
-let uid: number = 20010041; // 应用ID。
-let volume: number = 20;    // 要设置的音量值。
+let uid = 20010041; // 应用ID。
+let volume = 20;    // 要设置的音量值。
 
 audioVolumeManager.setAppVolumePercentageForUid(uid, volume).then(() => {
   console.info(`set app volume success.`);
@@ -1618,10 +1690,10 @@ Sets the volume for specific uid application. This method uses a promise to retu
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 6800101 | Parameter verification failed. |
-| 201 | Permission denied. |
-| 202 | Not system App. |
-| 6800301 | Crash or blocking occurs in system process. |
+| [6800101](../errorcode-audio.md#6800101-无效入参) | Parameter verification failed. |
+| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not system App. |
+| [6800301](../errorcode-audio.md#6800301-系统处理异常) | Crash or blocking occurs in system process. |
 
 ## setSystemVolumePercentage
 
@@ -1666,10 +1738,10 @@ Sets the system volume percentage, using an integer ranging from minimum system 
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 6800101 | Parameter verification failed, including volumeType or percentage param being out of range. |
-| 201 | Permission denied. |
-| 202 | Not system App. |
-| 6800301 | Crash or blocking occurs in system process. |
+| [6800101](../errorcode-audio.md#6800101-无效入参) | Parameter verification failed, including volumeType or percentage param being out of range. |
+| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not system App. |
+| [6800301](../errorcode-audio.md#6800301-系统处理异常) | Crash or blocking occurs in system process. |
 
 ## 示例
 

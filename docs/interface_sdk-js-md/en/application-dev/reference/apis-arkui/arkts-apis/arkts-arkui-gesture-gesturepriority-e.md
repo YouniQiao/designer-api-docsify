@@ -1,6 +1,6 @@
 # GesturePriority
 
-绑定手势的优先级。
+Creating an Object
 
 **Since:** 23
 
@@ -16,7 +16,7 @@
 NORMAL = 0
 ```
 
-普通优先级手势。
+The normal gesture priority.
 
 **Since:** 23
 
@@ -34,7 +34,7 @@ NORMAL = 0
 PRIORITY = 1
 ```
 
-高优先级手势。
+The high gesture priority.
 
 **Since:** 23
 

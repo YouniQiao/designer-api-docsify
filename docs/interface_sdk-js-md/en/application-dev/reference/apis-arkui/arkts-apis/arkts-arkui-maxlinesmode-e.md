@@ -1,6 +1,6 @@
 # MaxLinesMode
 
-TextArea组件在文本超长时显示效果。默认值为CLIP，按最大行截断显示。
+Enumerates the display effects of the **TextArea** component when text exceeds the maximum number of lines. The default value is **CLIP** (truncating text at the maximum line count).
 
 **Since:** 20
 
@@ -16,7 +16,7 @@ TextArea组件在文本超长时显示效果。默认值为CLIP，按最大行�
 CLIP = 0
 ```
 
-文本超长时按最大行截断显示。
+Text is clipped when it exceeds the maximum number of lines.
 
 **Since:** 20
 
@@ -36,7 +36,7 @@ CLIP = 0
 SCROLL = 1
 ```
 
-文本超长时可滚动显示。
+Text can be scrolled when it exceeds the maximum number of lines.
 
 **Since:** 20
 

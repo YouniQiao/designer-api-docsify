@@ -1,6 +1,6 @@
 # VibratorInfo
 
-表示查询的马达信息。通过[vibrator.getVibratorInfoSync](arkts-sensorservice-vibrator-getvibratorinfosync-f.md#getvibratorinfosync)返回此对象，用于获取设备马达能力和选择合适的马达触发振动。
+Defines the vibrator information.
 
 **Since:** 19
 
@@ -22,8 +22,7 @@ import { vibrator } from 'kits/@kit.SensorServiceKit';
 deviceId: int
 ```
 
-设备ID。可用于  
-[startVibration](arkts-sensorservice-vibrator-startvibration-f.md#startvibration)和[stopVibration](arkts-sensorservice-vibrator-stopvibration-f.md#stopvibration)等接口指定目标设备。
+Device ID.
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
@@ -41,7 +40,7 @@ deviceId: int
 deviceName: string
 ```
 
-设备名称。
+Device name.
 
 **Type:** string
 
@@ -59,7 +58,8 @@ deviceName: string
 isHdHapticSupported: boolean
 ```
 
-是否支持高清振动。true表示支持高清振动，可使用VibrateFromFile和VibrateFromPattern类型触发振动；false表示不支持，使用自定义振动类型可能效果不佳。
+Whether HD vibration is supported. The value **true** indicates that HD vibration is supported, and the value  
+**false** indicates the opposite.
 
 **Type:** boolean
 
@@ -77,7 +77,7 @@ isHdHapticSupported: boolean
 isLocalVibrator: boolean
 ```
 
-是否为本地设备。true表示本地设备，可直接触发振动；false表示远程设备，需在分布式场景下使用。
+Whether the device is a local device. The value **true** indicates that the device is a local device, and the value **false** indicates the opposite.
 
 **Type:** boolean
 
@@ -95,8 +95,7 @@ isLocalVibrator: boolean
 vibratorId: int
 ```
 
-马达ID。可用于  
-[startVibration](arkts-sensorservice-vibrator-startvibration-f.md#startvibration)和[stopVibration](arkts-sensorservice-vibrator-stopvibration-f.md#stopvibration)等接口指定目标马达。
+Vibrator ID.
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 

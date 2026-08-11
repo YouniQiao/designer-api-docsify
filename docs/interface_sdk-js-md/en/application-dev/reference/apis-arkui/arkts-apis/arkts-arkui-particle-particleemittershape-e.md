@@ -1,6 +1,6 @@
 # ParticleEmitterShape
 
-粒子发射器形状。
+Enumerates the emitter shapes of a particle.
 
 **Since:** 23
 
@@ -16,9 +16,7 @@
 RECTANGLE = 'rectangle'
 ```
 
-粒子发射器为矩形。
-
-**原子化服务API（仅ArkTS-Dyn）：** 从API version 11开始，该接口支持在原子化服务中使用。
+Rectangle.
 
 **Since:** 23
 
@@ -36,9 +34,7 @@ RECTANGLE = 'rectangle'
 CIRCLE = 'circle'
 ```
 
-粒子发射器为圆形。
-
-**原子化服务API（仅ArkTS-Dyn）：** 从API version 11开始，该接口支持在原子化服务中使用。
+Circle.
 
 **Since:** 23
 
@@ -56,9 +52,7 @@ CIRCLE = 'circle'
 ELLIPSE = 'ellipse'
 ```
 
-粒子发射器为椭圆形。
-
-**原子化服务API（仅ArkTS-Dyn）：** 从API version 11开始，该接口支持在原子化服务中使用。
+Ellipse.
 
 **Since:** 23
 
@@ -76,9 +70,7 @@ ELLIPSE = 'ellipse'
 ANNULUS = 'annulus'
 ```
 
-粒子发射器为环形。
-
-**原子化服务API（仅ArkTS-Dyn）：** 从API version 20开始，该接口支持在原子化服务中使用。
+Annulus.
 
 **Since:** 23
 

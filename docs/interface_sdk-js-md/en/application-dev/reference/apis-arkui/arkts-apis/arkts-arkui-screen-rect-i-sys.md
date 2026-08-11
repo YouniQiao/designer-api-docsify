@@ -1,6 +1,6 @@
 # Rect (System API)
 
-矩形信息。
+Describes the rectangle information.
 
 **Since:** 19
 
@@ -24,7 +24,7 @@ import { screen } from 'kits/@kit.ArkUI';
 height: long
 ```
 
-矩形的高度，单位为px，该参数应为整数。
+Height of the rectangle, in px. The value must be an integer.
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：long
 
@@ -44,7 +44,7 @@ height: long
 left: long
 ```
 
-矩形左上角顶点的X轴坐标，单位为px，该参数应为整数。
+X coordinate of the vertex in the top-left corner of the rectangle, in px. The value must be an integer.
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：long
 
@@ -64,7 +64,7 @@ left: long
 top: long
 ```
 
-矩形左上角顶点的Y轴坐标，单位为px，该参数应为整数。
+Y coordinate of the vertex in the top-left corner of the rectangle, in px. The value must be an integer.
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：long
 
@@ -84,7 +84,7 @@ top: long
 width: long
 ```
 
-矩形的宽度，单位为px，该参数应为整数。
+Width of the rectangle, in px. The value must be an integer.
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：long
 

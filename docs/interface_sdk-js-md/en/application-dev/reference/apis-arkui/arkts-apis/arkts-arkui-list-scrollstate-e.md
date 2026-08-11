@@ -1,6 +1,6 @@
 # ScrollState
 
-滑动状态枚举。
+Declare scroll status
 
 **Since:** 23
 

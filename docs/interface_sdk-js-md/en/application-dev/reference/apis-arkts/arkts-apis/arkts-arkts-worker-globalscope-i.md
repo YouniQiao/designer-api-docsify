@@ -1,6 +1,6 @@
 # GlobalScope
 
-Worker线程自身的运行环境，GlobalScope类继承WorkerEventTarget。
+Implements the running environment of the Worker thread. The GlobalScope class inherits from WorkerEventTarget.
 
 **Inheritance/Implementation:** GlobalScope extends [WorkerEventTarget](arkts-arkts-worker-workereventtarget-i.md)
 
@@ -24,7 +24,7 @@ import { MessageEvents, PostMessageOptions, MessageEvent, Priority, WorkerEventT
 onerror?: (ev: ErrorEvent) => void
 ```
 
-Worker在执行过程中发生异常被调用的回调函数，该回调函数在Worker线程中执行。其中ev类型为ErrorEvent，表示收到的异常数据。
+Called when an exception occurs during worker execution. The event handler is executed in the Worker thread.In the callback function, the ev type is ErrorEvent, indicating the received abnormal data.
 
 **Since:** 9
 
@@ -48,7 +48,7 @@ Worker在执行过程中发生异常被调用的回调函数，该回调函数�
 readonly name: string
 ```
 
-Worker的名字，new Worker时指定。
+Worker instance specified when there is a new Worker instance.
 
 **Type:** string
 
@@ -68,7 +68,7 @@ Worker的名字，new Worker时指定。
 readonly self: GlobalScope & typeof globalThis
 ```
 
-GlobalScope本身。
+GlobalScope itself.
 
 **Type:** [GlobalScope](arkts-arkts-worker-globalscope-i.md) & typeof globalThis
 

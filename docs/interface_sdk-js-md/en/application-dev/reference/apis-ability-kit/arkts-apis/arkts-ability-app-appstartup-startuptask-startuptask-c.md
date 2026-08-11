@@ -23,7 +23,7 @@ import { StartupTask } from 'kits/@kit.AbilityKit';
 init(context: AbilityStageContext): Promise<Any> | Promise<void>
 ```
 
-启动任务执行的初始化业务。
+Initializes current startup task.A developer could override this function to init current task and return a result for other tasks.
 
 **Since:** 23
 
@@ -39,13 +39,13 @@ init(context: AbilityStageContext): Promise<Any> | Promise<void>
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| context | [AbilityStageContext](arkts-ability-abilitystagecontext-c.md) | Yes | AbilityStage的上下文环境。 |
+| context | [AbilityStageContext](arkts-ability-abilitystagecontext-c.md) | Yes | Indicates ability stage context. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;Any&gt; | Promise对象，返回启动任务执行结果对象。 |
+| Promise&lt;Any&gt; | The result of initialization. |
 
 ## onDependencyCompleted
 
@@ -53,7 +53,7 @@ init(context: AbilityStageContext): Promise<Any> | Promise<void>
 onDependencyCompleted(dependency: string, result: Any): void
 ```
 
-当依赖的启动任务执行完成时该方法将会被调用。
+Called when specific dependent task complete.
 
 **Since:** 23
 
@@ -69,6 +69,6 @@ onDependencyCompleted(dependency: string, result: Any): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| dependency | string | Yes | 依赖的启动任务名称。 |
-| result | Any | Yes | 依赖启动任务执行的结果。 |
+| dependency | string | Yes | Indicates name of specific dependent startup task. |
+| result | Any | Yes | Indicates result of specific dependent startup task. |
 

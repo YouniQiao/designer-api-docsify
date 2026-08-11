@@ -1,11 +1,11 @@
 # PathDashStyle
 
-路径效果的绘制样式枚举。  
-| 名称 | 值 | 说明 |  
+Enumerates the drawing styles for path effects.  
+| Name | Value| Description |  
 | ------ | - | ------------------ |  
-| TRANSLATE | 0 | 不会随着路径旋转，只会平移。 |  
-| ROTATE | 1 | 随着路径的旋转而旋转。 |  
-| MORPH | 2 | 随着路径的旋转而旋转，并在转折处进行拉伸或压缩等操作以增加平滑度。 |
+| TRANSLATE | 0 | Translates only, not rotating with the path.|  
+| ROTATE | 1 | Rotates with the path.|  
+| MORPH | 2 | Rotates with the path and stretches or compresses at turns to enhance smoothness.|
 
 **Since:** 18
 

@@ -1,6 +1,6 @@
 # CustomSpanMetrics
 
-定义自定义绘制Span的尺寸信息接口。
+Defines the CustomSpanMetrics interface.
 
 **Since:** 12
 
@@ -16,11 +16,9 @@
 height?: number
 ```
 
-自定义绘制Span的高。
+Height of the custom span.
 
-默认值：不传入时默认取Text组件的fontSize值作为CustomSpan的高度。
-
-单位：[vp](../../../reference/apis-arkui/arkui-ts/ts-pixel-units.md#基本像素单位)
+Unit: [vp](../../apis-ability-kit/arkts-apis/arkts-app-ability-common.md/arkts-app-ability-common.md)
 
 **Type:** number
 
@@ -42,9 +40,9 @@ height?: number
 width: number
 ```
 
-自定义绘制Span的宽。
+Width of the custom span.
 
-单位：[vp](../../../reference/apis-arkui/arkui-ts/ts-pixel-units.md#基本像素单位)
+Unit: [vp](../../apis-ability-kit/arkts-apis/arkts-app-ability-common.md/arkts-app-ability-common.md)
 
 **Type:** number
 

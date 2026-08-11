@@ -1,6 +1,6 @@
 # FileInfo (System API)
 
-表示文件(夹)属性信息和接口能力。
+Provides APIs for managing file or directory attribute information.
 
 **Since:** 9
 
@@ -26,8 +26,7 @@ import { fileAccess } from 'kits/@kit.CoreFileKit';
 listFile(filter?: Filter): FileIterator
 ```
 
-以同步方法从某个目录，基于过滤器，获取下一级符合条件的文件(夹)信息的迭代器对象FileIterator，然后通过[next](arkts-corefile-fileaccess-fileiterator-i-sys.md#next)方法返回  
-[FileInfo](arkts-corefile-fileaccess-fileinfo-i-sys.md)。目前仅支持内置存储设备过滤，外置存储设备不支持过滤。
+Obtains a **FileIterator** object that lists the next-level files or directories matching the specified conditions of this directory. This API returns the result synchronously. [FileInfo](arkts-corefile-fileaccess-fileinfo-i-sys.md) is returned by [next()](arkts-corefile-fileaccess-fileiterator-i-sys.md#next). Currently, only built-in storage devices support the file filter.
 
 **Since:** 9
 
@@ -136,8 +135,8 @@ try {
 scanFile(filter?: Filter): FileIterator
 ```
 
-以同步方法从某个目录，基于过滤器，递归获取符合条件的文件信息的迭代器对象FileIterator，然后通过[next](arkts-corefile-fileaccess-fileiterator-i-sys.md#next)方法返回  
-[FileInfo](arkts-corefile-fileaccess-fileinfo-i-sys.md)。目前仅支持内置存储设备。
+Obtains a **FileIterator** object that recursively retrieves the files matching the specified conditions of this directory. This API returns the result synchronously. [FileInfo](arkts-corefile-fileaccess-fileinfo-i-sys.md) is returned by   
+[next()](arkts-corefile-fileaccess-fileiterator-i-sys.md#next). Currently, this API supports only built-in storage devices.
 
 **Since:** 9
 
@@ -244,7 +243,7 @@ try {
 fileName: string
 ```
 
-文件(夹)的名称。
+Name of the file or directory.
 
 **Type:** string
 
@@ -270,7 +269,7 @@ fileName: string
 mimeType: string
 ```
 
-文件(夹)的媒体资源类型。
+Multipurpose Internet Mail Extensions (MIME) type of the file or directory.
 
 **Type:** string
 
@@ -296,7 +295,7 @@ mimeType: string
 mode: number
 ```
 
-文件(夹)的权限信息。
+Permissions on the file or directory.
 
 **Type:** number
 
@@ -322,7 +321,7 @@ mode: number
 mtime: number
 ```
 
-文件(夹)的修改时间。自1970年1月1日起至目标时间的毫秒数。
+Time when the file or directory was last modified.&lt;br&gt;Unit: ms.
 
 **Type:** number
 
@@ -348,7 +347,7 @@ mtime: number
 relativePath: string
 ```
 
-文件(夹)的相对路径。
+Relative path of the file or directory.
 
 **Type:** string
 
@@ -374,7 +373,7 @@ relativePath: string
 size: number
 ```
 
-文件(夹)的大小。（单位：字节）
+Size of the file or directory.&lt;br&gt;Unit: Byte.
 
 **Type:** number
 
@@ -400,7 +399,7 @@ size: number
 uri: string
 ```
 
-文件(夹)的uri。
+URI of the file or directory.
 
 **Type:** string
 

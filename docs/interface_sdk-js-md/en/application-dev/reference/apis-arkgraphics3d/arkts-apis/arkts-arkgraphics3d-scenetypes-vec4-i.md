@@ -1,6 +1,6 @@
 # Vec4
 
-定义Vec4（四维向量）.
+A four-dimensional vector used to represent a point, a direction, or a vector transformation in 4D space.It consists of four components: x, y, z, and w. The fourth component (w) enhances normalization and convenience for various calculations and transformations.
 
 **Since:** 12
 
@@ -16,7 +16,7 @@
 w: double
 ```
 
-vec4的W分量.
+Component on the W axis. The value is a real number.
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：double
 
@@ -34,7 +34,7 @@ vec4的W分量.
 x: double
 ```
 
-vec4的X分量.
+Component on the X axis. The value is a real number.
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：double
 
@@ -52,7 +52,7 @@ vec4的X分量.
 y: double
 ```
 
-vec4的Y分量.
+Component on the Y axis. The value is a real number.
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：double
 
@@ -70,7 +70,7 @@ vec4的Y分量.
 z: double
 ```
 
-vec4的Z分量.
+Component on the Z axis. The value is a real number.
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：double
 

@@ -1,6 +1,6 @@
 # CdsmInfo
 
-描述合作设备集信息。
+Describes the coordinated devices set information.
 
 **Since:** 26.0.0
 
@@ -22,7 +22,7 @@ import { cdsm } from 'kits/@kit.ConnectivityKit';
 members: CdsmMemberInfo[]
 ```
 
-合作设备集的成员。
+Indicates the members of coordinated devices set.
 
 **Type:** [CdsmMemberInfo](arkts-connectivity-cdsm-cdsmmemberinfo-i.md)[]
 

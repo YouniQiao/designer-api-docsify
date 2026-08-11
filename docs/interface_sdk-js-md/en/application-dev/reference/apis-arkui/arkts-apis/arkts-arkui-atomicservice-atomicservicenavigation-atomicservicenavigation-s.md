@@ -1,11 +1,7 @@
 # AtomicServiceNavigation
 
-作为Page页面的根容器使用，其内部默认包含了标题栏、内容区。其中，内容区在首页默认显示导航内容，在非首页显示  
-[NavDestination](../../apis-arkui/arkts-components/arkts-arkui-nav_destination-i)的子组件，首页和非首页通过路由进行切换。
-
-> **说明：**
-> 
-> 该组件从API version 12开始支持。后续版本的新增接口，采用上角标单独标记接口的起始版本。
+**AtomicServiceNavigation** is a component that serves as the root container of a page. By default, it includes a title bar, content area, and toolbar. The content area switches between the home page content (child components of  
+[NavDestination](../../apis-arkui/arkts-components/arkts-arkui-nav_destination-i)) and non-home page content through routing.
 
 **Since:** 12
 
@@ -29,7 +25,7 @@ import { GradientBackground, TitleBarType, MixMode, AtomicServiceNavigation, Sid
 navDestinationBuilder?: NavDestinationBuilder
 ```
 
-创建NavDestination组件所需要的Builder数据。默认值为空，即无内容展示。
+The builder of navDestination.
 
 **Since:** 12
 
@@ -49,7 +45,7 @@ navDestinationBuilder?: NavDestinationBuilder
 gradientBackground?: GradientBackground
 ```
 
-渐变背景色选项。设置时各字段的默认值见GradientBackground。
+The background with gradient colors of Navigation.
 
 **Type:** [GradientBackground](arkts-arkui-atomicservice-atomicservicenavigation-gradientbackground-i.md)
 
@@ -71,7 +67,7 @@ gradientBackground?: GradientBackground
 hideTitleBar?: boolean
 ```
 
-设置是否隐藏标题栏。默认为false。false表示显示标题栏，true表示隐藏标题栏。
+Hide navigation title bar.
 
 **Type:** boolean
 
@@ -93,7 +89,7 @@ hideTitleBar?: boolean
 menus?: CustomBuilder | Array<NavigationMenuItem>
 ```
 
-宽屏场景下用户自定义插入的布局样式。默认值为空，不显示任何样式。屏幕宽度低于600vp为非宽屏场景，大于等于600vp为宽屏场景。
+The layout style users defined and inserted.
 
 **Type:** [CustomBuilder](../arkts-components/arkts-arkui-custombuilder-t.md) \| Array&lt;NavigationMenuItem&gt;
 
@@ -115,7 +111,7 @@ menus?: CustomBuilder | Array<NavigationMenuItem>
 minContentWidth?: Dimension
 ```
 
-设置导航栏内容区最小宽度（双栏模式下生效）。默认值为360vp。
+Sets the minimum width of content.
 
 **Type:** [Dimension](arkts-arkui-dimension-t.md)
 
@@ -137,7 +133,7 @@ minContentWidth?: Dimension
 mode?: NavigationMode
 ```
 
-设置导航栏的显示模式。默认值为Auto。支持Stack、Split与Auto模式。
+Sets the mode of navigation.
 
 **Type:** [NavigationMode](arkts-arkui-navigation-navigationmode-e.md)
 
@@ -159,7 +155,7 @@ mode?: NavigationMode
 modeChangeCallback?: Callback<NavigationMode>
 ```
 
-当Navigation首次显示或者单双栏状态发生变化时触发该回调。默认值为空。
+Trigger callback when navigation mode changes.
 
 **Type:** [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;NavigationMode&gt;
 
@@ -179,7 +175,7 @@ modeChangeCallback?: Callback<NavigationMode>
 navBarWidth?: Length
 ```
 
-设置导航栏宽度。默认值为240vp。仅在Navigation组件分栏时生效。
+Sets the width of navigation bar.
 
 **Type:** [Length](arkts-arkui-length-t.md)
 
@@ -204,9 +200,9 @@ navBarWidthRange?: [
   ]
 ```
 
-设置导航栏最小和最大宽度（双栏模式下生效）。默认值：最小为240vp，最大为组件宽度的40%，且不大于432vp，如果只设置一个值，则未设置的值按照默认值计算。单位：vp。
+Sets the minimum width and the maximum width of navigation bar.
 
-**Type:** [     Dimension,     Dimension   ]
+**Type:** [     Dimension,     Dimension   ]
 
 **Since:** 12
 
@@ -226,7 +222,7 @@ navBarWidthRange?: [
 navPathStack?: NavPathStack
 ```
 
-路由栈信息。默认值为new NavPathStack()。
+the information of route page.Providers methods for controlling destination page in the stack.
 
 **Type:** [NavPathStack](arkts-arkui-navigation-navpathstack-c.md)
 
@@ -248,7 +244,7 @@ navPathStack?: NavPathStack
 navigationContent?: Callback<void>
 ```
 
-Navigation容器内容。默认值为空，无内容展示。
+the content of Navigation.
 
 **Type:** [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;void&gt;
 
@@ -270,7 +266,7 @@ Navigation容器内容。默认值为空，无内容展示。
 sideBarContent?: Callback<void>
 ```
 
-侧边栏的内容。默认值为空。
+Set side bar content.
 
 **Type:** [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;void&gt;
 
@@ -292,7 +288,7 @@ sideBarContent?: Callback<void>
 sideBarOptions?: SideBarOptions
 ```
 
-侧边栏的功能选项。默认值为{ sideBarBackground: \$r('sys.color.ohos_id_color_sub_background'), sideBarIcon: \$r('sys.symbol.open_sidebar') }。
+Set side bar options.
 
 **Type:** [SideBarOptions](arkts-arkui-atomicservice-atomicservicenavigation-sidebaroptions-i.md)
 
@@ -314,7 +310,7 @@ sideBarOptions?: SideBarOptions
 stateChangeCallback?: Callback<boolean>
 ```
 
-导航栏显示状态切换时触发该回调。true表示导航栏显示，false表示导航栏隐藏。默认值为空。
+Trigger callback when the visibility of navigation bar change.
 
 **Type:** [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;boolean&gt;
 
@@ -334,7 +330,7 @@ stateChangeCallback?: Callback<boolean>
 title?: ResourceStr
 ```
 
-设置页面标题。默认值为空字符串。当titleOptions的titleBarType字段设置为TitleBarType.ROUND_ICON或者TitleBarType.SQUARED_ICON，且设置了titleIcon时，title标题内容将不会显示。
+Sets the Navigation title.
 
 **Type:** [ResourceStr](arkts-arkui-resourcestr-t.md)
 
@@ -356,7 +352,7 @@ title?: ResourceStr
 titleOptions?: TitleOptions
 ```
 
-标题栏选项。默认值为{ isBlurEnabled: true }。当titleBarType字段设置为TitleBarType.ROUND_ICON或者TitleBarType.SQUARED_ICON，且设置了titleIcon时，title标题内容将不会显示。
+The color of Navigation's TitleBar.
 
 **Type:** [TitleOptions](arkts-arkui-atomicservice-atomicservicenavigation-titleoptions-i.md)
 

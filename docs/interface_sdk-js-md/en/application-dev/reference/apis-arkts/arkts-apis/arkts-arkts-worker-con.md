@@ -6,7 +6,7 @@
 const parentPort: DedicatedWorkerGlobalScope
 ```
 
-Worker线程用于与宿主线程通信的对象。
+The object used by the worker thread to communicate with the host thread.
 
 **Since:** 7
 
@@ -26,7 +26,7 @@ Worker线程用于与宿主线程通信的对象。
 const workerPort: ThreadWorkerGlobalScope
 ```
 
-Worker线程用于与宿主线程通信的对象。
+The object used by the worker thread to communicate with the host thread.
 
 **Since:** 9
 

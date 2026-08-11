@@ -12,7 +12,7 @@ import { performanceMonitor } from 'kits/@kit.ArkUI';
 function recordInputEventTime(type: ActionType, sourceType: SourceType, time: long): void
 ```
 
-记录动效场景开始前，用户输入触发事件类型与时间。
+recordInputEventTime monitoring an application scene.
 
 **Since:** 23
 
@@ -30,13 +30,13 @@ function recordInputEventTime(type: ActionType, sourceType: SourceType, time: lo
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | [ActionType](../../apis-avsession-kit/arkts-apis/arkts-avsession-avmusictemplate-actiontype-t.md) | Yes | 用户场景触发模式。 |
-| sourceType | [SourceType](../../apis-arkweb/arkts-apis/arkts-arkweb-webview-sourcetype-e.md) | Yes | 用户场景触发源。 |
-| time | long | Yes | 场景触发时间（ms），时间戳，例如1751508570794。若传零或负值将自动转化为当前系统时间，若传正值则正常使用。不正确的传参会导致用户操作响应时延指标异常。 |
+| type | [ActionType](../../apis-avsession-kit/arkts-apis/arkts-avsession-avmusictemplate-actiontype-t.md) | Yes | Indicates the scene input event type. |
+| sourceType | [SourceType](../../apis-arkweb/arkts-apis/arkts-arkweb-webview-sourcetype-e.md) | Yes | Indicates the scene input source type. |
+| time | long | Yes | Indicates the scene input time. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 202 | not system application. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | not system application. |
 

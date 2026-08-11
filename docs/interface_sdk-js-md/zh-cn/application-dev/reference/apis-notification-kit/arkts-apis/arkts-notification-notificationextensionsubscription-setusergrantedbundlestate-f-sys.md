@@ -31,8 +31,8 @@ function setUserGrantedBundleState(targetBundle: BundleOption,
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| targetBundle | [BundleOption](arkts-notification-notificationextensionsubscription-bundleoption-t.md) | 是 | 需要设置的目标应用信息。应用需要具有ohos.permission.SUBSCRIBE_NOTIFICATION权限， 并且实现[NotificationSubscriberExtensionAbility](arkts-notification-application-notificationsubscriberextensionability-notificationsubscriberextensionability-c.md)， 否则返回1600022错误码。 |
-| enabledBundles | [BundleOption](arkts-notification-notificationextensionsubscription-bundleoption-t.md)[] | 是 | 被授权的应用信息列表。 |
+| targetBundle | [BundleOption](arkts-notification-notificationcommondef-bundleoption-i.md) | 是 | 需要设置的目标应用信息。应用需要具有ohos.permission.SUBSCRIBE_NOTIFICATION权限， 并且实现[NotificationSubscriberExtensionAbility](arkts-notification-application-notificationsubscriberextensionability-notificationsubscriberextensionability-c.md)， 否则返回1600022错误码。 |
+| enabledBundles | [BundleOption](arkts-notification-notificationcommondef-bundleoption-i.md)[] | 是 | 被授权的应用信息列表。 |
 | enabled | boolean | 是 | 表示“已获取的本机通知”的应用授权状态是否启用，true表示已启用，false表示未启用。 |
 
 **返回值：**
@@ -45,13 +45,15 @@ function setUserGrantedBundleState(targetBundle: BundleOption,
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 201 | Permission denied. |
-| 1600001 | Internal error. |
-| 202 | Not system application to call the interface. |
-| 1600003 | Failed to connect to the service. |
-| 1600022 | The specified bundle is invalid. |
+| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
+| [1600001](../errorcode-notification.md#1600001-内部错误) | Internal error. |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not system application to call the interface. |
+| [1600003](../errorcode-notification.md#1600003-连接通知服务失败) | Failed to connect to the service. |
+| [1600022](../errorcode-notification.md#1600022-无效的包信息) | The specified bundle is invalid. |
 
 ## 示例
+
+ArkTS-Dyn示例：
 
 ```TypeScript
 let targetBundle: notificationExtensionSubscription.BundleOption =
@@ -69,6 +71,28 @@ notificationExtensionSubscription.setUserGrantedBundleState(targetBundle, enable
   console.info(`setUserGrantedBundleState successfully.`);
 }).catch((err: BusinessError) => {
   console.error(`setUserGrantedBundleState fail, code is ${err.code}, message is ${err.message}`);
+});
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+let targetBundle: notificationExtensionSubscription.BundleOption =
+  {
+    // 应改为开发者需要设置的目标应用信息
+    bundle: 'com.example.testnotification',
+  };
+let enabledBundles: notificationExtensionSubscription.BundleOption[] = [
+  // 应改为开发者需要授权的实际应用
+  { bundle: 'com.example.xxx', uid: 11111111 },
+  { bundle: 'com.example.xxxx', uid: 11111111 },
+  { bundle: 'com.example.xxxxx' },
+];
+notificationExtensionSubscription.setUserGrantedBundleState(targetBundle, enabledBundles, true).then(() => {
+  console.info(`setUserGrantedBundleState successfully.`);
+}).catch((err: Error): void => {
+  let error: BusinessError = err as BusinessError;
+  console.error(`getUserGrantedEnabledBundles fail, code is ${error.code}, message is ${error.message}`);
 });
 ```
 

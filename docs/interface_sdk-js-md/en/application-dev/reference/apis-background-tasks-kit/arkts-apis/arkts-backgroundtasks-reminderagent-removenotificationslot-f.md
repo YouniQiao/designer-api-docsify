@@ -12,7 +12,7 @@ import { reminderAgent } from 'kits/@kit.BackgroundTasksKit';
 function removeNotificationSlot(slotType: notification.SlotType, callback: AsyncCallback<void>): void
 ```
 
-删除目标NotificationSlot，使用callback方式实现异步调用。
+Removes a notification slot of a specified type. This API uses an asynchronous callback to return the result.
 
 **Since:** 7
 
@@ -30,15 +30,14 @@ function removeNotificationSlot(slotType: notification.SlotType, callback: Async
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| slotType | notification.SlotType | Yes | 目标notification.slot的类型。 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | 异步回调。 |
+| slotType | notification.SlotType | Yes | Type of the reminder notification slot to remove. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. |
 
 ## Examples
 
 ```TypeScript
+import notification from '@ohos.notification'
 import { BusinessError } from '@ohos.base';
-import notification from '@ohos.notification';
-import reminderAgent from '@ohos.reminderAgent';
 
 reminderAgent.removeNotificationSlot(notification.SlotType.CONTENT_INFORMATION, (err: BusinessError, data: void) => {
   console.info("removeNotificationSlot callback");
@@ -52,7 +51,7 @@ reminderAgent.removeNotificationSlot(notification.SlotType.CONTENT_INFORMATION, 
 function removeNotificationSlot(slotType: notification.SlotType): Promise<void>
 ```
 
-删除目标NotificationSlot，使用Promise方式实现异步调用。
+Removes a notification slot of a specified type. This API uses a promise to return the result.
 
 **Since:** 7
 
@@ -70,22 +69,21 @@ function removeNotificationSlot(slotType: notification.SlotType): Promise<void>
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| slotType | notification.SlotType | Yes | 目标notification.slot的类型。 |
+| slotType | notification.SlotType | Yes | Type of the reminder notification slot to remove. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise类型异步回调。 |
+| Promise&lt;void&gt; | Promise used to return the result. |
 
 ## Examples
 
 ```TypeScript
-import notification from '@ohos.notification';
-import reminderAgent from '@ohos.reminderAgent';
+import notification from '@ohos.notification'
 
 reminderAgent.removeNotificationSlot(notification.SlotType.CONTENT_INFORMATION).then(() => {
-  console.info("removeNotificationSlot promise");
+    console.info("removeNotificationSlot promise");
 });
 ```
 

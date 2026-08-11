@@ -16,12 +16,6 @@
 
 **系统能力：** SystemCapability.Multimedia.Audio.Renderer
 
-## 导入模块
-
-```TypeScript
-import { audio } from 'kits/@kit.AudioKit';
-```
-
 ## getTarget
 
 ```TypeScript
@@ -50,7 +44,7 @@ Gets the currently render target of this audio renderer.If the render target has
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 202 | Caller is not a system application. |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Caller is not a system application. |
 
 ## 示例
 
@@ -102,12 +96,12 @@ Sets the render target of this audio renderer.This function can only be called w
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 6800103 | Operation not permit at running and release state. |
-| 6800101 | Parameter verification failed. |
-| 201 | Permission denied. |
-| 202 | Caller is not a system application. |
-| 6800301 | Audio client call audio service error, System error. |
-| 6800104 | Current renderer is not supported to set target. |
+| [6800103](../errorcode-audio.md#6800103-状态不支持) | Operation not permit at running and release state. |
+| [6800101](../errorcode-audio.md#6800101-无效入参) | Parameter verification failed. |
+| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Caller is not a system application. |
+| [6800301](../errorcode-audio.md#6800301-系统处理异常) | Audio client call audio service error, System error. |
+| [6800104](../errorcode-audio.md#6800104-参数选项不支持) | Current renderer is not supported to set target. |
 
 ## 示例
 

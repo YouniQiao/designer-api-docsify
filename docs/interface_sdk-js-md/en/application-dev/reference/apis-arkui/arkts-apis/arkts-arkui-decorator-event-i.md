@@ -1,5 +1,7 @@
 # Event
 
+Defining Event annotation Event is used to decorate the callback method is a standard, indicating that the child component needs to pass in the callback for updating the data source.
+
 **Since:** 23
 
 **ArkTS mode:** ArkTS-Sta only, since version 23.

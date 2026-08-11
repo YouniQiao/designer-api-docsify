@@ -4,7 +4,7 @@
 declare type OnDidChangeCallback = (rangeBefore: TextRange, rangeAfter: TextRange) => void
 ```
 
-文本变换后回调。
+Represents the callback invoked after text changes.
 
 **Since:** 12
 

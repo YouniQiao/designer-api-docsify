@@ -1,11 +1,5 @@
 # createKeyboardDelegate
 
-## 导入模块
-
-```TypeScript
-import { inputMethodEngine } from 'kits/@kit.IMEKit';
-```
-
 ## createKeyboardDelegate
 
 ```TypeScript

@@ -1,6 +1,6 @@
 # CertChainBuildResult
 
-表示证书链创建结果。
+Represents the certificate chain build result.
 
 **Since:** 12
 
@@ -22,7 +22,7 @@ import { cert } from 'kits/@kit.DeviceCertificateKit';
 readonly certChain: X509CertChain
 ```
 
-生成的证书链对象。
+Certificate chain object created.
 
 **Type:** [X509CertChain](arkts-devicecertificate-cert-x509certchain-i.md)
 
@@ -42,7 +42,7 @@ readonly certChain: X509CertChain
 readonly validationResult: CertChainValidationResult
 ```
 
-证书链校验结果。
+Result of the certificate chain validation.
 
 **Type:** [CertChainValidationResult](arkts-devicecertificate-cert-certchainvalidationresult-i.md)
 

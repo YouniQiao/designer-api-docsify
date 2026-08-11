@@ -1,6 +1,6 @@
 # NotificationSubscriber (System API)
 
-提供订阅者接收到新通知、取消通知等的回调方法。
+Provides callback methods for subscribers to receive and cancel notifications.
 
 **Since:** 7
 
@@ -18,7 +18,7 @@
 onBadgeChanged?:(data: BadgeNumberCallbackData) => void
 ```
 
-回调返回监听到的应用角标数量变化。
+Listens for changes of the application badge number.
 
 **Since:** 10
 
@@ -42,7 +42,7 @@ onBadgeChanged?:(data: BadgeNumberCallbackData) => void
 onBatchCancel?: (data: Array<SubscribeCallbackData>) => void
 ```
 
-批量删除的通知信息。
+Called for batch deletion.
 
 **Since:** 11
 
@@ -66,7 +66,7 @@ onBatchCancel?: (data: Array<SubscribeCallbackData>) => void
 onCancel?:(data: SubscribeCallbackData) => void
 ```
 
-需要取消的通知信息。
+Called when a notification is canceled.
 
 **Since:** 7
 
@@ -90,7 +90,7 @@ onCancel?:(data: SubscribeCallbackData) => void
 onConnect?:() => void
 ```
 
-订阅完成的回调。
+Called when subscription is complete.
 
 **Since:** 7
 
@@ -108,7 +108,7 @@ onConnect?:() => void
 onConsume?:(data: SubscribeCallbackData) => void
 ```
 
-新接收到的通知信息。
+Called when a new notification is received.
 
 **Since:** 7
 
@@ -132,7 +132,7 @@ onConsume?:(data: SubscribeCallbackData) => void
 onDestroy?:() => void
 ```
 
-服务失联的回调。
+Called when the service is disconnected.
 
 **Since:** 7
 
@@ -150,7 +150,7 @@ onDestroy?:() => void
 onDisconnect?:() => void
 ```
 
-取消订阅的回调。
+Called when unsubscription is complete.
 
 **Since:** 7
 
@@ -168,7 +168,7 @@ onDisconnect?:() => void
 onDoNotDisturbChanged?: (mode: notificationManager.DoNotDisturbDate) => void
 ```
 
-回调返回免打扰时间选项变更。
+Called when the DND time settings are changed.
 
 **Since:** 11
 
@@ -192,7 +192,7 @@ onDoNotDisturbChanged?: (mode: notificationManager.DoNotDisturbDate) => void
 onDoNotDisturbDateChange?: (mode: notification.DoNotDisturbDate) => void
 ```
 
-回调返回免打扰时间选项变更。
+Called when the DND time settings are changed.
 
 **Since:** 8
 
@@ -220,7 +220,7 @@ onDoNotDisturbDateChange?: (mode: notification.DoNotDisturbDate) => void
 onEnabledNotificationChanged?:(callbackData: EnabledNotificationCallbackData) => void
 ```
 
-回调返回监听到的应用信息。
+Listens for the notification enabled state changes.
 
 **Since:** 8
 
@@ -244,7 +244,7 @@ onEnabledNotificationChanged?:(callbackData: EnabledNotificationCallbackData) =>
 onEnabledPriorityByBundleChanged?: (callbackData: EnabledPriorityNotificationByBundleCallbackData) => void
 ```
 
-返回应用通知优先级开关状态。
+Called when the enabling state of the application priority notification changes.
 
 **Since:** 23
 
@@ -268,7 +268,7 @@ onEnabledPriorityByBundleChanged?: (callbackData: EnabledPriorityNotificationByB
 onEnabledPriorityChanged?: (callbackData: EnabledPriorityNotificationCallbackData) => void
 ```
 
-返回通知优先级总开关状态。
+Called when the enabling state of the priority notification changes.
 
 **Since:** 23
 
@@ -292,7 +292,7 @@ onEnabledPriorityChanged?: (callbackData: EnabledPriorityNotificationCallbackDat
 onEnabledSilentReminderChanged?: EnabledSilentReminderChangedCallback
 ```
 
-返回应用通知静默提醒的使能状态变化。
+Returns the changes of the enabling state of the application's silent reminder.
 
 **Since:** 24
 
@@ -312,7 +312,8 @@ onEnabledSilentReminderChanged?: EnabledSilentReminderChangedCallback
 onNotificationSwitchChanged?: NotificationSwitchChangedCallback
 ```
 
-返回由[notificationManager.setNotificationSwitch](arkts-notification-notificationmanager-setnotificationswitch-f-sys.md#setnotificationswitch)接口设置的通知开关状态变化。
+Returns the changes of the notification switch status set by  
+[notificationManager.setNotificationSwitch](arkts-notification-notificationmanager-setnotificationswitch-f-sys.md#setnotificationswitch).
 
 **Since:** 26.0.0
 
@@ -332,7 +333,7 @@ onNotificationSwitchChanged?: NotificationSwitchChangedCallback
 onSystemUpdate?: SystemUpdateCallback
 ```
 
-返回携带系统属性值的通知信息。
+Returns notification information containing the system property value.
 
 **Since:** 23
 
@@ -352,7 +353,7 @@ onSystemUpdate?: SystemUpdateCallback
 onUpdate?:(data: NotificationSortingMap) => void
 ```
 
-最新的通知排序列表。
+Called when notification sorting is updated. Not supported currently.
 
 **Since:** 7
 
@@ -376,7 +377,7 @@ onUpdate?:(data: NotificationSortingMap) => void
 onBadgeEnabledChanged?: BadgeEnabledChangedCallback
 ```
 
-返回应用角标的使能状态变化。
+Returns the changes of the enabling state of the application's badge.
 
 **Type:** [BadgeEnabledChangedCallback](arkts-notification-notificationsubscriber-badgeenabledchangedcallback-i-sys.md)
 

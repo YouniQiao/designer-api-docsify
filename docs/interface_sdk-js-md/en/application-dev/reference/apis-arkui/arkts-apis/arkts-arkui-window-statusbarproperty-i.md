@@ -1,6 +1,6 @@
 # StatusBarProperty
 
-状态栏的属性。在获取状态栏属性信息时返回。
+Describes the properties of the status bar. These properties are returned when you query the status bar's configuration details.
 
 **Since:** 18
 
@@ -22,7 +22,7 @@ import { window } from 'kits/@kit.ArkUI';
 contentColor: string
 ```
 
-状态栏文字颜色，固定为ARGB格式，如：`#E5FFFFFF`。
+Color of the text on the status bar. The value is in ARGB format, for example, **#E5FFFFFF**.
 
 **Type:** string
 

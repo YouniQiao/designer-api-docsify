@@ -2,7 +2,7 @@
 
 ReminderRequestCalendar extends ReminderRequest
 
-日历实例对象，用于设置提醒的时间。
+Defines a reminder for a calendar event.
 
 **Inheritance/Implementation:** ReminderRequestCalendar extends [ReminderRequest](arkts-backgroundtasks-reminderagentmanager-reminderrequest-i.md)
 
@@ -26,7 +26,7 @@ import { reminderAgentManager } from 'kits/@kit.BackgroundTasksKit';
 dateTime: LocalDateTime
 ```
 
-指明提醒的目标时间。
+Reminder time.
 
 **Type:** [LocalDateTime](arkts-backgroundtasks-reminderagentmanager-localdatetime-i.md)
 
@@ -44,7 +44,7 @@ dateTime: LocalDateTime
 daysOfWeek?: Array<int>
 ```
 
-指明每周哪几天需要重复提醒。范围为周一到周日，对应数字为1到7，默认为空。
+Days of a week when the reminder repeats. The value ranges from 1 to 7, corresponding to the data from Monday to Sunday. This parameter is left empty by default.
 
 **Type:** ArkTS-Dyn: Array&lt;number&gt;  <br>ArkTS-Sta：Array&lt;int&gt;
 
@@ -62,7 +62,7 @@ daysOfWeek?: Array<int>
 endDateTime?: LocalDateTime
 ```
 
-指明提醒的结束时间。
+End time of the reminder.
 
 **Type:** [LocalDateTime](arkts-backgroundtasks-reminderagentmanager-localdatetime-i.md)
 
@@ -80,7 +80,7 @@ endDateTime?: LocalDateTime
 repeatDays?: Array<int>
 ```
 
-指明重复提醒的日期，范围：[1, 31]，默认为空。需和repeatMonths一起使用。
+Day in which the reminder repeats. The value range is [1, 31]. This parameter is left empty by default. This parameter must be used together with **repeatMonths**.
 
 **Type:** ArkTS-Dyn: Array&lt;number&gt;  <br>ArkTS-Sta：Array&lt;int&gt;
 
@@ -98,7 +98,7 @@ repeatDays?: Array<int>
 repeatMonths?: Array<int>
 ```
 
-指明重复提醒的月份，范围：[1, 12]，默认为空。需和repeatDays一起使用。
+Month in which the reminder repeats. The value range is [1, 12]. This parameter is left empty by default. This parameter must be used together with **repeatDays**.
 
 **Type:** ArkTS-Dyn: Array&lt;number&gt;  <br>ArkTS-Sta：Array&lt;int&gt;
 

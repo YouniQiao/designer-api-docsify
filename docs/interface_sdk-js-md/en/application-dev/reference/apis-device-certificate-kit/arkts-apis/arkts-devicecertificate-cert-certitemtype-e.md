@@ -1,6 +1,6 @@
 # CertItemType
 
-表示获取证书字段的枚举。
+Enumerates the certificate fields that can be obtained.
 
 **Since:** 10
 
@@ -16,7 +16,7 @@
 CERT_ITEM_TYPE_TBS = 0
 ```
 
-表示获取证书的待签名信息。
+Information to be signed.
 
 **Since:** 10
 
@@ -34,7 +34,7 @@ CERT_ITEM_TYPE_TBS = 0
 CERT_ITEM_TYPE_PUBLIC_KEY = 1
 ```
 
-表示获取证书的公钥信息。
+Public key of the certificate.
 
 **Since:** 10
 
@@ -52,7 +52,7 @@ CERT_ITEM_TYPE_PUBLIC_KEY = 1
 CERT_ITEM_TYPE_ISSUER_UNIQUE_ID = 2
 ```
 
-表示获取证书的颁发者唯一编号。
+Unique ID of the certificate issuer.
 
 **Since:** 10
 
@@ -70,7 +70,7 @@ CERT_ITEM_TYPE_ISSUER_UNIQUE_ID = 2
 CERT_ITEM_TYPE_SUBJECT_UNIQUE_ID = 3
 ```
 
-表示获取证书的主体唯一编号。
+Unique ID of the certificate subject.
 
 **Since:** 10
 
@@ -88,7 +88,7 @@ CERT_ITEM_TYPE_SUBJECT_UNIQUE_ID = 3
 CERT_ITEM_TYPE_EXTENSIONS = 4
 ```
 
-表示获取证书的扩展域信息。
+Certificate extensions, each of which is identified by a unique object identifier (OID).
 
 **Since:** 10
 

@@ -10,12 +10,6 @@ class ComponentUtils
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
-## 导入模块
-
-```TypeScript
-import { OverlayManager, FrameCallback, ResolvedUIContext, NodeRenderStateChangeCallback, MediaQuery, OverlayManagerOptions, TextMenuController, UIObserver, Font, KeyboardAvoidMode, MarqueeDynamicSyncScene, PromptAction, NodeRenderState, UIContext, TextSelectionClearPolicy, SwiperDynamicSyncScene, Router, MarqueeDynamicSyncSceneType, DialogPresenter, Magnifier, ContextMenuController, UIInspector, CursorController, SwiperDynamicSyncSceneType, AtomicServiceBar, PageInfo, TargetInfo, ComponentUtils, DragController, MeasureUtils, NodeIdentity } from 'kits/@kit.ArkUI';
-```
-
 ## getRectangleById
 
 ```TypeScript
@@ -50,5 +44,5 @@ Provide the ability to obtain the coordinates and size of component drawing area
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 100001 | UI execution context not found. |
+| [100001](../errorcode-internal.md#100001-接口调用异常错误码) | UI execution context not found. |
 

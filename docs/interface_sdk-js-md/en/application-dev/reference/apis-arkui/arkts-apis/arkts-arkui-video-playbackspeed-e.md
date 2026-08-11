@@ -1,6 +1,6 @@
 # PlaybackSpeed
 
-视频播放倍速选项。
+playback speed.
 
 **Since:** 23
 
@@ -16,7 +16,7 @@
 Speed_Forward_0_75_X = '0.75'
 ```
 
-0.75倍速播放。
+0.75x speed playback.
 
 **Since:** 23
 
@@ -34,7 +34,7 @@ Speed_Forward_0_75_X = '0.75'
 Speed_Forward_1_00_X = '1.00'
 ```
 
-1.00倍速播放。
+1.00x speed playback.
 
 **Since:** 23
 
@@ -52,7 +52,7 @@ Speed_Forward_1_00_X = '1.00'
 Speed_Forward_1_25_X = '1.25'
 ```
 
-1.25倍速播放。
+1.25x speed playback.
 
 **Since:** 23
 
@@ -70,7 +70,7 @@ Speed_Forward_1_25_X = '1.25'
 Speed_Forward_1_75_X = '1.75'
 ```
 
-1.75倍速播放。
+1.75x speed playback.
 
 **Since:** 23
 
@@ -88,7 +88,7 @@ Speed_Forward_1_75_X = '1.75'
 Speed_Forward_2_00_X = '2.00'
 ```
 
-2.00倍速播放。
+2.00x speed playback.
 
 **Since:** 23
 
@@ -106,7 +106,7 @@ Speed_Forward_2_00_X = '2.00'
 SPEED_FORWARD_0_50_X = '0.50'
 ```
 
-0.50倍速播放。
+0.50x speed playback.
 
 **Since:** 23
 
@@ -124,7 +124,7 @@ SPEED_FORWARD_0_50_X = '0.50'
 SPEED_FORWARD_1_50_X = '1.50'
 ```
 
-1.50倍速播放。
+1.50x speed playback.
 
 **Since:** 23
 
@@ -142,7 +142,7 @@ SPEED_FORWARD_1_50_X = '1.50'
 SPEED_FORWARD_3_00_X = '3.00'
 ```
 
-3.00倍速播放。
+3.00x speed playback.
 
 **Since:** 23
 
@@ -160,7 +160,7 @@ SPEED_FORWARD_3_00_X = '3.00'
 SPEED_FORWARD_0_25_X = '0.25'
 ```
 
-0.25倍速播放。
+0.25x speed playback.
 
 **Since:** 23
 
@@ -178,7 +178,7 @@ SPEED_FORWARD_0_25_X = '0.25'
 SPEED_FORWARD_0_125_X = '0.125'
 ```
 
-0.125倍速播放。
+0.125x speed playback.
 
 **Since:** 23
 

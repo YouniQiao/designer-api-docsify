@@ -1,28 +1,37 @@
 # Tabs
 
-通过页签进行内容视图切换的容器组件，每个页签对应一个内容视图。适用于应用底部导航栏、顶部页签切换、侧边栏导航等需要在不同内容视图间快速切换的场景。使用Tabs组件可以简化多视图导航的实现，提升用户切换效率。
+The **Tabs** component is a container component that allows users to switch between content views through tabs. Each
+tab page corresponds to a content view.
 
-> **说明：**
+> **NOTE**
+>
+> -
+>
+> - Since API version 11, this component supports the safe area avoidance feature. The default value of the
+> [expandSafeArea]{}
+> **expandSafeArea([SafeAreaType.SYSTEM], [SafeAreaEdge.BOTTOM])**. You can override the default behavior by
+> rewriting this attribute. For versions earlier than API version 11, you need to manually implement safe area
+> avoidance together with the **expandSafeArea** attribute.
 
-> - 该组件从API version 11开始，支持安全区域避让特性，其[expandSafeArea]{@link CommonMethod#expandSafeArea}属性的默认值为expandSafeArea(
-> [SafeAreaType.SYSTEM], [SafeAreaEdge.BOTTOM])。开发者可通过重写该属性覆盖默认行为。对于API version 11之前的版本，则需配合expandSafeArea属性手动实现安全区域避
-> 让。
+## Child Components
 
-## 子组件
+Only the child component [TabContent]{@link tab_content} and rendering control types  
+[if/else](docroot://ui/rendering-control/arkts-rendering-control-ifelse.md) and  
+[ForEach](docroot://ui/rendering-control/arkts-rendering-control-foreach.md) are supported. You are advised not to use custom components as child components. If **if/else** or **ForEach** is used, only **TabContent** can be used as the child component. You are advised not to use custom components as child components.
 
-仅支持子组件[TabContent]{@link tab_content}，以及渲染控制类型  
-[if/else](docroot://ui/rendering-control/arkts-rendering-control-ifelse.md)和  
-[ForEach](docroot://ui/rendering-control/arkts-rendering-control-foreach.md)，不建议自定义组件作为子组件。并且if/else和ForEach下也仅支持TabContent作为子组件，不建议自定义组件作为子组件。
-
-> **说明：**
+> **NOTE：**
 > 
-> Tabs子组件设置了通用属性[visibility]{@link CommonMethod#visibility}的值为None，或者设置值为Hidden时，对应子组件不显示，但依然会在视窗内占位。
+> If the child component has the **visibility** attribute set to **None** or **Hidden**, it is hidden but still takes
+> up space in the layout.
 > 
-> 已经显示的Tabs子组件TabContent后续隐藏时不会被销毁，若需要页面懒加载和释放，可以参考
-> [示例13](docroot://reference/apis-arkui/arkui-ts/ts-container-tabs.md#示例13页面懒加载和释放)。
+> When a displayed **Tabs** child component **TabContent** is hidden, it is not destroyed. For details about how to
+> implement lazy loading and release on the page, see
+> [Example 13](docroot://reference/apis-arkui/arkui-ts/ts-container-tabs.md#example-13-implementing-lazy-loading-and-resource-release-of-pages).
 > 
-> Tabs设置[height]{@link CommonMethod#height(value: Length)}为auto时，可根据子组件高度自适应高度大小。设置
-> [width]{@link CommonMethod#width(value: Length)}为auto时，可根据子组件宽度自适应宽度大小。
+> 
+> If [height]{@link CommonMethod#height(value: Length)} is set to **auto** for **Tabs**, the tab height can be
+> automatically adjusted based on that of the child component. When [width]{@link CommonMethod#width(value: Length)}
+> is set to **auto**, the tab width can be automatically adjusted based on that of the child component.
 
 ## Tabs
 
@@ -30,7 +39,7 @@
 Tabs(options?: TabsOptions)
 ```
 
-创建Tabs容器。
+Create a **Tabs** container.
 
 **Since:** 7
 
@@ -46,7 +55,7 @@ Tabs(options?: TabsOptions)
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| options | [TabsOptions](../arkts-apis/arkts-arkui-tabs-tabsoptions-i.md) | No | Tabs组件参数。 默认值：undefined，不设置参数时使用默认配置。 |
+| options | [TabsOptions](../arkts-apis/arkts-arkui-tabs-tabsoptions-i.md) | No | Options of the **Tabs** component. |
 
 ## Summary
 

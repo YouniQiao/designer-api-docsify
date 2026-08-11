@@ -1,11 +1,5 @@
 # concat
 
-## 导入模块
-
-```TypeScript
-import { fastbuffer } from 'kits/@kit.ArkTS';
-```
-
 ## concat
 
 ```TypeScript
@@ -45,7 +39,7 @@ function concat(list: FastBuffer[] | Uint8Array[], totalLength?: number): FastBu
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 10200001 | Range error. Possible causes: The value of the parameter is not within the specified range. |
+| [10200001](../errorcode-utils.md#10200001-参数范围越界错误) | Range error. Possible causes: The value of the parameter is not within the specified range. |
 
 ## 示例
 

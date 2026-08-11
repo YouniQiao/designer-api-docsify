@@ -1,11 +1,5 @@
 # terminateSelf
 
-## 导入模块
-
-```TypeScript
-import { featureAbility } from 'kits/@kit.AbilityKit';
-```
-
 ## terminateSelf
 
 ```TypeScript

@@ -1,6 +1,6 @@
 # AudioSessionDeactivatedEvent
 
-音频会话停用事件。
+Describes the event indicating that an audio session is deactivated.
 
 **Since:** 12
 
@@ -22,7 +22,7 @@ import { audio } from 'kits/@kit.AudioKit';
 reason: AudioSessionDeactivatedReason
 ```
 
-音频会话停用原因。
+Reason for deactivating an audio session.
 
 **Type:** [AudioSessionDeactivatedReason](arkts-audio-audio-audiosessiondeactivatedreason-e.md)
 

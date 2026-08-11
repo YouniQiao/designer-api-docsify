@@ -42,14 +42,16 @@ function setGeofenceEnabled(enabled: boolean): Promise<void>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 1600012 | No memory space. |
-| 201 | Permission denied. |
-| 1600001 | Internal error. |
-| 202 | Not system application to call the interface. |
-| 1600002 | Marshalling or unmarshalling error. |
-| 1600003 | Failed to connect to the service. |
+| [1600012](../errorcode-notification.md#1600012-内存空间不足) | No memory space. |
+| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
+| [1600001](../errorcode-notification.md#1600001-内部错误) | Internal error. |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not system application to call the interface. |
+| [1600002](../errorcode-notification.md#1600002-序列化或反序列化错误) | Marshalling or unmarshalling error. |
+| [1600003](../errorcode-notification.md#1600003-连接通知服务失败) | Failed to connect to the service. |
 
 ## 示例
+
+ArkTS-Dyn示例：
 
 ```TypeScript
 import { hilog } from '@kit.PerformanceAnalysisKit';
@@ -59,6 +61,19 @@ notificationManager.setGeofenceEnabled(true).then(() => {
   hilog.info(0x0000, 'testTag', '%{public}s', 'setGeofenceEnabled success');
 }).catch((err: BusinessError) => {
   hilog.error(0x0000, 'testTag', '%{public}s',`setGeofenceEnabled failed, code is ${err.code}, message is ${err.message}`);
+});
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+notificationManager.setGeofenceEnabled(true).then(() => {
+    console.info('setGeofenceEnabled success');
+}).catch((err: Error) => {
+    let error: BusinessError = err as BusinessError;
+    console.error(`setGeofenceEnabled failed, code is ${error.code}, message is ${error.message}`);
 });
 ```
 

@@ -9,7 +9,7 @@ export declare function ForEach<T = Any>(arr: Array<T>,
 ): ForEachAttribute
 ```
 
-定义ForEach组件。
+Defines ForEach Component.
 
 **Since:** 23
 
@@ -25,15 +25,15 @@ export declare function ForEach<T = Any>(arr: Array<T>,
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| arr | Array&lt;T&gt; | Yes | 在UI中使用的数组集合。 |
-| itemGenerator | [ItemGeneratorFunc](arkts-arkui-itemgeneratorfunc-t.md)&lt;T&gt; | Yes | 项生成函数。 |
-| keyGenerator | [KeyGeneratorFunc](arkts-arkui-keygeneratorfunc-t.md)&lt;T&gt; | No | 键生成函数。 |
+| arr | Array&lt;T&gt; | Yes | the array collection to be used in UI. |
+| itemGenerator | [ItemGeneratorFunc](arkts-arkui-itemgeneratorfunc-t.md)&lt;T&gt; | Yes | item generator function. |
+| keyGenerator | [KeyGeneratorFunc](arkts-arkui-keygeneratorfunc-t.md)&lt;T&gt; | No | key generator function. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [ForEachAttribute](arkts-arkui-foreach-foreachattribute-i.md) | ForEach的属性。 |
+| [ForEachAttribute](arkts-arkui-foreach-foreachattribute-i.md) | The attribute of ForEach. |
 
 
 ## ForEach
@@ -44,11 +44,11 @@ export declare function ForEach(
 ): ForEachAttribute
 ```
 
-定义ForEach组件。需要在组件属性设置开始时调用setForEachOptions，并在组件属性设置结束时调用applyAttributeFinish。
+Defines ForEach Component. It requires calling setForEachOptions at start of component attribute set-up,and it requires calling applyAttributesFinish at end of component attribute set-up.
 
-**Since:** 26.0.0
+**Since:** 26.1.0
 
-**ArkTS mode:** ArkTS-Sta only, since version 26.0.0.
+**ArkTS mode:** ArkTS-Sta only, since version 26.1.0.
 
 **Decorator:** @Builder
 
@@ -62,11 +62,11 @@ export declare function ForEach(
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| style | [CustomBuilderT](../arkts-components/arkts-arkui-custombuildert-t.md)&lt;ForEachAttribute&gt; | Yes | 用于设置ForEach属性的回调。 |
+| style | [CustomBuilderT](../arkts-components/arkts-arkui-custombuildert-t.md)&lt;ForEachAttribute&gt; | Yes | callback to set up ForEach's attributes. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [ForEachAttribute](arkts-arkui-foreach-foreachattribute-i.md) | ForEach属性实例。 |
+| [ForEachAttribute](arkts-arkui-foreach-foreachattribute-i.md) | The attribute of ForEach. |
 

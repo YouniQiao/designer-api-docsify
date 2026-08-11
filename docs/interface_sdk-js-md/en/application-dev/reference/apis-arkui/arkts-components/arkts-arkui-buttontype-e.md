@@ -1,29 +1,39 @@
 # ButtonType
 
-按钮的类型。
+Enumerates the button types.
 
-> **说明：**
+> **NOTE：**
 > 
-> - 按钮圆角通过
-> [通用属性borderRadius](../arkts-apis/arkts-arkui-common-commonmethod-i.md/arkts-arkui-common-commonmethod-i.md#borderradius)设置。
+> - The corner radius of the rounded rectangle button is set using the universal attribute
+> [borderRadius](../arkts-apis/arkts-arkui-common-commonmethod-i.md/arkts-arkui-common-commonmethod-i.md#borderradius).
 > 
-> - 当按钮类型为Capsule时，borderRadius设置不生效，按钮圆角始终为宽、高中较小值的一半。
+> - For a button of the **Capsule** type, the **borderRadius** settings do not take effect, and the radius of its
+> rounded corner is always half of the button height or width, whichever is smaller.
 > 
-> - 当按钮类型为Circle时，若同时设置了宽和高，则borderRadius不生效，且按钮半径为宽高中较小值的一半；若只设置宽、高中的一个，则borderRadius不生效，且按钮半径为所设宽或所设高值的一半；若不设置宽高，则
-> borderRadius为按钮半径；若borderRadius的值为负，则borderRadius的值按照0处理。
+> - For a button of the **Circle** type: (1) If both its width and height are set, **borderRadius** does not take
+> effect, and the button radius is half of the width or height (whichever is smaller). (2) If either its width or
+> height is set, **borderRadius** does not take effect, and the button radius is half of the set width or height. (3)
+> If neither its width nor height is set, the button radius is as specified by **borderRadius**; if **borderRadius**
+> is set to a negative value, the value **0** will be used.
 > 
-> - 按钮文本通过[fontSize](ButtonAttribute#fontSize)、[fontColor](ButtonAttribute#fontColor)、
-> [fontStyle](ButtonAttribute#fontStyle)、[fontFamily](ButtonAttribute#fontFamily)、
-> [fontWeight](ButtonAttribute#fontWeight)进行设置。
+> - The button text is set using [fontSize](ButtonAttribute#fontSize),
+> [fontColor](ButtonAttribute#fontColor), [fontStyle](ButtonAttribute#fontStyle),
+> [fontFamily](ButtonAttribute#fontFamily), and [fontWeight](ButtonAttribute#fontWeight).
 > 
-> - 设置[颜色渐变](../../apis-ability-kit/arkts-apis/arkts-app-ability-common.md/arkts-app-ability-common.md)需先设置[backgroundColor](../arkts-apis/arkts-arkui-common-commonmethod-i.md/arkts-arkui-common-commonmethod-i.md#backgroundcolor)为透明色。
+> - Before setting the [gradient color](../../apis-ability-kit/arkts-apis/arkts-app-ability-common.md/arkts-app-ability-common.md), you need to set
+> [backgroundColor](../arkts-apis/arkts-arkui-common-commonmethod-i.md/arkts-arkui-common-commonmethod-i.md#backgroundcolor) to transparent.
 > 
-> - 在不设置borderRadius时，圆角矩形按钮的圆角大小保持默认值不变。圆角大小不会随按钮高度变化而变化，和controlSize属性有关，controlSize为NORMAL时圆角大小20vp，controlSize为
-> SMALL时圆角大小14vp。
+> - When **borderRadius** is not set, the corner radius of the rounded rectangle button remains at the default value.
+> In this case, the corner radius does not change with the button height and is subject to the **controlSize**
+> property. When **controlSize** is **NORMAL**, the corner radius is 20 vp; when **controlSize** is **SMALL**, the
+> corner radius is 14 vp.
 > 
-> - 设置Button的[border](../arkts-apis/arkts-arkui-common-commonmethod-i.md/arkts-arkui-common-commonmethod-i.md#border)时，会有默认的
-> [borderRadius](../arkts-apis/arkts-arkui-common-commonmethod-i.md/arkts-arkui-common-commonmethod-i.md#borderradius)值。如果同时使用
-> `border`和`borderRadius`，需将`borderRadius`放在`border`之后，以确保`borderRadius`不会被`border`中的默认`radius`覆盖。
+> - When [border](../arkts-apis/arkts-arkui-common-commonmethod-i.md/arkts-arkui-common-commonmethod-i.md#border) is set for the
+> button, a default
+> [borderRadius](../arkts-apis/arkts-arkui-common-commonmethod-i.md/arkts-arkui-common-commonmethod-i.md#borderradius) value is
+> automatically applied. When both **border** and **borderRadius** attributes are used, **borderRadius** must be
+> specified after **border** to prevent the border radius from being overridden by the default radius value in the
+> border style.
 
 **Since:** 7
 
@@ -39,7 +49,7 @@
 Capsule
 ```
 
-胶囊型按钮（圆角默认为高度的一半）。
+Capsule-type button (the round corner is half of the height by default).
 
 **Since:** 7
 
@@ -59,7 +69,7 @@ Capsule
 Circle
 ```
 
-圆形按钮。
+Circular button.
 
 **Since:** 7
 
@@ -79,7 +89,7 @@ Circle
 Normal
 ```
 
-普通按钮（默认不带圆角）。
+Normal button, with no rounded corners by default.
 
 **Since:** 7
 
@@ -99,7 +109,7 @@ Normal
 ROUNDED_RECTANGLE = 3
 ```
 
-圆角矩形按钮（在不设置borderRadius时，默认值：controlSize为NORMAL，圆角大小20vp，controlSize为SMALL，圆角大小14vp）。
+Rounded rectangle button (default value: when **controlSize** is **NORMAL**, the corner radius is 20 vp; when controlSize is **SMALL**, the corner radius is 14 vp).
 
 **Since:** 15
 

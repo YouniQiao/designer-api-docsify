@@ -1,11 +1,5 @@
 # getLength
 
-## 导入模块
-
-```TypeScript
-import { router } from 'kits/@kit.ArkUI';
-```
-
 ## getLength
 
 ```TypeScript

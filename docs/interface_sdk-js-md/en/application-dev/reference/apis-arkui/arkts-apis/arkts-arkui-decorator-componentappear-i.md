@@ -1,6 +1,6 @@
 # ComponentAppear
 
-定义ComponentAppear方法装饰器。
+Define ComponentAppear Method Decorator.
 
 **Since:** 24
 

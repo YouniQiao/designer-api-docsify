@@ -1,6 +1,6 @@
 # UnlitShadowAlphaMaterial (System API)
 
-无光照阴影透明度材质资源。此材质继承自[Material](arkts-arkgraphics3d-sceneresources-material-i.md)，仅绘制材质表面阴影。材质启用[Blend](arkts-arkgraphics3d-sceneresources-blend-i.md)属性时，可与背景融合模拟透明效果。
+This material inherits from [Material](arkts-arkgraphics3d-sceneresources-material-i.md) and draws only the surface shadows.When the [Blend](arkts-arkgraphics3d-sceneresources-blend-i.md) property is enabled, the material can be blended with the background to simulate transparency.
 
 **Inheritance/Implementation:** UnlitShadowAlphaMaterial extends [Material](arkts-arkgraphics3d-sceneresources-material-i.md)
 
@@ -20,7 +20,7 @@
 baseColor: MaterialProperty
 ```
 
-UnlitShadowAlphaMaterial的基础颜色因子.factor.xyzw的值定义rgba颜色
+Color information of the shadow on the surface of a transparent material.
 
 **Type:** [MaterialProperty](arkts-arkgraphics3d-sceneresources-materialproperty-i.md)
 

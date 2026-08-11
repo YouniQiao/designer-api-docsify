@@ -1,6 +1,6 @@
 # SizeT
 
-用于设置宽高的属性。
+Defines the Size property.
 
 **Since:** 23
 
@@ -16,7 +16,7 @@
 height: T
 ```
 
-高度的属性。
+Height property.
 
 **Type:** T
 
@@ -36,7 +36,7 @@ height: T
 width: T
 ```
 
-宽度的属性。
+Width property.
 
 **Type:** T
 

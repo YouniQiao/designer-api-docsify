@@ -1,11 +1,5 @@
 # getRectangleById
 
-## 导入模块
-
-```TypeScript
-import { componentUtils } from 'kits/@kit.ArkUI';
-```
-
 ## getRectangleById
 
 ```TypeScript
@@ -54,12 +48,12 @@ function getRectangleById(id: string): ComponentInfo
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 100001 | UI execution context not found. |
+| [100001](../errorcode-internal.md#100001-接口调用异常错误码) | UI execution context not found. |
 
 ## 示例
 
 ```TypeScript
 import { componentUtils } from '@kit.ArkUI';
-let modePosition:componentUtils.ComponentInfo = componentUtils.getRectangleById('onClick');
+let modePosition:componentUtils.ComponentInfo = componentUtils.getRectangleById("onClick");
 ```
 

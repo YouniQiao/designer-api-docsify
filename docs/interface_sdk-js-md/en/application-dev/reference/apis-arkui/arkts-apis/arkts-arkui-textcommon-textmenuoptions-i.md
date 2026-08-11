@@ -1,6 +1,6 @@
 # TextMenuOptions
 
-菜单选项。
+Defines text menu options.
 
 **Since:** 23
 
@@ -16,9 +16,7 @@
 showMode?: TextMenuShowMode
 ```
 
-菜单的显示模式。
-
-默认值：TextMenuShowMode.DEFAULT
+Text menu show mode.
 
 **Type:** [TextMenuShowMode](arkts-arkui-textcommon-textmenushowmode-e.md)
 

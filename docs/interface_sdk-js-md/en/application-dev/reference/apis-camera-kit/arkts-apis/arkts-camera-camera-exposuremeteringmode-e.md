@@ -1,6 +1,6 @@
 # ExposureMeteringMode
 
-枚举，曝光测光模式。
+Enumerates the exposure metering modes.
 
 **Since:** 24
 
@@ -16,7 +16,7 @@
 MATRIX = 0
 ```
 
-矩阵测光模式。对画面广泛区域进行测光，适合拍摄自然风光。
+Matrix metering mode. A wide area of the screen is selected, which is ideal for shooting natural landscapes.
 
 **Since:** 24
 
@@ -34,7 +34,7 @@ MATRIX = 0
 CENTER = 1
 ```
 
-中心测光模式。对整个画面进行测光，但最大比重分配给中央区域，适合拍摄人像。
+Center-weighted metering mode. Metering is performed on the entire image, with the center allocated with the maximum weight, which is ideal for shooting portraits.
 
 **Since:** 24
 
@@ -52,7 +52,7 @@ CENTER = 1
 SPOT = 2
 ```
 
-点测光模式。对画面测光点周围约2.5%进行测光，专注于特定微小区域的光线，如被摄主体的眼睛。
+Spot metering mode. Metering is performed around 2.5% of the metering points, focusing on the light in a specific small area, such as the eyes of the subject.
 
 **Since:** 24
 

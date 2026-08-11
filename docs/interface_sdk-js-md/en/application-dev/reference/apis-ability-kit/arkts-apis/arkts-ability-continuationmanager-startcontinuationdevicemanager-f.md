@@ -12,7 +12,7 @@ import { continuationManager } from 'kits/@kit.AbilityKit';
 function startContinuationDeviceManager(token: number, callback: AsyncCallback<void>): void
 ```
 
-拉起设备选择模块，可显示组网内可选择设备列表信息，无过滤条件，使用AsyncCallback方式作为异步方法。
+Starts the device selection module to show the list of available devices on the network. This API does not involve any filter parameters and uses an asynchronous callback to return the result.
 
 **Since:** 9
 
@@ -34,17 +34,17 @@ function startContinuationDeviceManager(token: number, callback: AsyncCallback<v
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| token | number | Yes | 注册后的token。 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | 回调函数。当模块选择完成，err为undefined，否则返回错误对象。 |
+| token | number | Yes | Token obtained after the registration of the continuation management service. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. If the module is started, **err** is **undefined**; otherwise, **err** is an error object. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; 3. Parameter verification failed. |
-| 201 | Permission denied. |
-| 16600001 | The system ability works abnormally. |
-| 16600002 | The specified token or callback is not registered. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; 3. Parameter verification failed. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
+| [16600001](../errorcode-DistributedSchedule.md#16600001-the-system-ability-works-abnormally) | The system ability works abnormally. |
+| [16600002](../errorcode-DistributedSchedule.md#16600002-the-specified-token-or-callback-is-not-registered) | The specified token or callback is not registered. |
 
 ## Examples
 
@@ -76,7 +76,7 @@ function startContinuationDeviceManager(
   ): void
 ```
 
-拉起设备选择模块，可显示组网内可选择设备列表信息，使用AsyncCallback方式作为异步方法。
+Starts the device selection module to show the list of available devices on the network. This API uses an asynchronous callback to return the result.
 
 **Since:** 9
 
@@ -98,18 +98,18 @@ function startContinuationDeviceManager(
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| token | number | Yes | 注册后的token。 |
-| options | [ContinuationExtraParams](arkts-ability-continuationmanager-continuationextraparams-t.md) | Yes | 过滤可选择设备列表的额外参数。 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | 回调函数。当模块选择完成，err为undefined，否则返回错误对象。 |
+| token | number | Yes | Token obtained after the registration of the continuation management service. |
+| options | [ContinuationExtraParams](arkts-ability-continuationmanager-continuationextraparams-t.md) | Yes | Extra parameters used to filter the list of available devices. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. If the module is started, **err** is **undefined**; otherwise, **err** is an error object. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; 3. Parameter verification failed. |
-| 201 | Permission denied. |
-| 16600001 | The system ability works abnormally. |
-| 16600002 | The specified token or callback is not registered. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; 3. Parameter verification failed. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
+| [16600001](../errorcode-DistributedSchedule.md#16600001-the-system-ability-works-abnormally) | The system ability works abnormally. |
+| [16600002](../errorcode-DistributedSchedule.md#16600002-the-specified-token-or-callback-is-not-registered) | The specified token or callback is not registered. |
 
 ## Examples
 
@@ -142,7 +142,7 @@ try {
 function startContinuationDeviceManager(token: number, options?: ContinuationExtraParams): Promise<void>
 ```
 
-拉起设备选择模块，可显示组网内可选择设备列表信息，使用Promise方式作为异步方法。
+Starts the device selection module to show the list of available devices on the network. This API uses a promise to  return the result.
 
 **Since:** 9
 
@@ -164,23 +164,23 @@ function startContinuationDeviceManager(token: number, options?: ContinuationExt
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| token | number | Yes | 注册后的token。 |
-| options | [ContinuationExtraParams](arkts-ability-continuationmanager-continuationextraparams-t.md) | No | 过滤可选择设备列表的额外参数，该参数可缺省。 |
+| token | number | Yes | Token obtained after the registration of the continuation management service. |
+| options | [ContinuationExtraParams](arkts-ability-continuationmanager-continuationextraparams-t.md) | No | Extra parameters used to filter the list of available devices. This parameter can be null. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise形式返回接口调用结果。 |
+| Promise&lt;void&gt; | Promise used to return the result. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1. Incorrect parameter types; &lt;br&gt;2. Parameter verification failed; |
-| 201 | Permission denied. |
-| 16600001 | The system ability works abnormally. |
-| 16600002 | The specified token or callback is not registered. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Incorrect parameter types; &lt;br&gt;2. Parameter verification failed; |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
+| [16600001](../errorcode-DistributedSchedule.md#16600001-the-system-ability-works-abnormally) | The system ability works abnormally. |
+| [16600002](../errorcode-DistributedSchedule.md#16600002-the-specified-token-or-callback-is-not-registered) | The specified token or callback is not registered. |
 
 ## Examples
 

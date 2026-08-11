@@ -6,7 +6,7 @@
 function createKVManager(config: KVManagerConfig, callback: AsyncCallback<KVManager>): void
 ```
 
-创建一个KVManager对象实例，用于管理数据库对象，使用callback异步回调。
+Creates a **KVManager** instance to manage KV stores. This API uses an asynchronous callback to return the result.
 
 **Since:** 7
 
@@ -24,8 +24,8 @@ function createKVManager(config: KVManagerConfig, callback: AsyncCallback<KVMana
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| config | [KVManagerConfig](arkts-arkdata-distributedkvstore-kvmanagerconfig-i.md) | Yes | 提供KVManager实例的配置信息，包括调用方的Bundle名称和用户信息。 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;KVManager&gt; | Yes | 回调函数。返回创建的KVManager对象实例。 |
+| config | [KVManagerConfig](arkts-arkdata-distributedkvstore-kvmanagerconfig-i.md) | Yes | Configuration of the **KVManager** instance, including the bundle name and user information of the caller. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;KVManager&gt; | Yes | Callback used to return the **KVManager** instance created. |
 
 ## Examples
 
@@ -44,7 +44,7 @@ try {
             console.log("Failed to create KVManager: "  + JSON.stringify(err));
             return;
         }
-        console.log("Succeeded in creating KVManager");
+        console.log("Created KVManager successfully");
         kvManager = manager;
     });
 } catch (e) {
@@ -59,7 +59,7 @@ try {
 function createKVManager(config: KVManagerConfig): Promise<KVManager>
 ```
 
-创建一个KVManager对象实例，用于管理数据库对象，使用Promise异步回调。
+Creates a **KVManager** instance to manage KV stores. This API uses a promise to return the result.
 
 **Since:** 7
 
@@ -77,13 +77,13 @@ function createKVManager(config: KVManagerConfig): Promise<KVManager>
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| config | [KVManagerConfig](arkts-arkdata-distributedkvstore-kvmanagerconfig-i.md) | Yes | 提供KVManager实例的配置信息，包括调用方的包名和用户信息。 |
+| config | [KVManagerConfig](arkts-arkdata-distributedkvstore-kvmanagerconfig-i.md) | Yes | Configuration of the **KVManager** instance, including the bundle name and user information of the caller. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;KVManager&gt; | Promise对象。返回创建的KVManager对象实例。 |
+| Promise&lt;KVManager&gt; | Promise used to return the **KVManager** instance created. |
 
 ## Examples
 
@@ -97,7 +97,7 @@ try {
     }
   }
   distributedData.createKVManager(kvManagerConfig).then((manager) => {
-    console.log("Succeeded in creating KVManager");
+    console.log("Created KVManager successfully");
     kvManager = manager;
   }).catch((err) => {
     console.error("Failed to create KVManager: " + JSON.stringify(err));

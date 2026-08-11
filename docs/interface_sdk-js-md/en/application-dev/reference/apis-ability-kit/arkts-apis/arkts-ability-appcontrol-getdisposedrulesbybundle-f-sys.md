@@ -12,7 +12,7 @@ import { appControl } from 'kits/@kit.AbilityKit';
 function getDisposedRulesByBundle(bundleName: string): Array<DisposedRuleConfiguration>
 ```
 
-获取指定应用程序包设置的所有拦截规则。
+Query all disposed rules under the current user for the specified bundle name.
 
 **Since:** 23
 
@@ -32,19 +32,19 @@ function getDisposedRulesByBundle(bundleName: string): Array<DisposedRuleConfigu
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| bundleName | string | Yes | 表示设置拦截规则的应用程序包的包名。 |
+| bundleName | string | Yes | Indicates the bundle name of the setter that sets the disposed rules. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Array&lt;DisposedRuleConfiguration&gt; | 指定应用程序包已设置的拦截规则。 |
+| Array&lt;DisposedRuleConfiguration&gt; | Returns disposed rules. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 801 | Capability not supported. |
-| 201 | Permission denied. |
-| 202 | Permission denied. A non-system application is not allowed to call a system API. |
+| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission denied. A non-system application is not allowed to call a system API. |
 

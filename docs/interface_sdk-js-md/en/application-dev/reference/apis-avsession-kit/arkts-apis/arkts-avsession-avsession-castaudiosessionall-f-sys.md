@@ -42,9 +42,9 @@ Cast all the media audio to the remote devices or cast back local device
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 6600101 | Session service exception. |
-| 6600102 | The session does not exist. |
-| 201 | permission denied |
-| 202 | Not System App. |
-| 6600104 | The remote session connection failed. |
+| [6600101](../errorcode-avsession.md#6600101-session-service-exception) | Session service exception. |
+| [6600102](../errorcode-avsession.md#6600102-session-does-not-exist) | The session does not exist. |
+| [201](../../errorcode-universal.md#201-permission-denied) | permission denied |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not System App. |
+| [6600104](../errorcode-avsession.md#6600104-remote-session-connection-failure) | The remote session connection failed. |
 

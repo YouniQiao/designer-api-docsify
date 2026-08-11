@@ -1,6 +1,6 @@
 # RichEditorImageSpanOptions
 
-设置图片的偏移位置和图片样式信息。
+Defines the image span options of RichEditor.
 
 **Since:** 23
 
@@ -16,7 +16,7 @@
 onHover?: OnHoverCallback
 ```
 
-鼠标悬停触发回调。省略时，不执行相关行为。
+RichEditor onHover.
 
 **Since:** 23
 
@@ -34,7 +34,7 @@ onHover?: OnHoverCallback
 gesture?: RichEditorGesture
 ```
 
-行为触发回调。省略时，仅使用系统默认行为。
+RichEditor gesture.
 
 **Type:** [RichEditorGesture](../arkts-components/arkts-arkui-richeditorgesture-i.md)
 
@@ -54,7 +54,7 @@ gesture?: RichEditorGesture
 imageStyle?: RichEditorImageSpanStyle
 ```
 
-图片样式。
+image style.
 
 **Type:** [RichEditorImageSpanStyle](../arkts-components/arkts-arkui-richeditorimagespanstyle-i.md)
 
@@ -74,9 +74,7 @@ imageStyle?: RichEditorImageSpanStyle
 offset?: int
 ```
 
-添加图片的位置。省略时，添加到所有内容的末尾。
-
-当值小于0时，设置在所有内容最前面；当值大于所有内容长度时，设置在所有内容最后面。
+the offset that add image span at.
 
 **Type:** int
 

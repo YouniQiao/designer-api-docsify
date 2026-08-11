@@ -12,7 +12,7 @@ import { hichecker } from 'kits/@kit.PerformanceAnalysisKit';
 function getRule() : bigint
 ```
 
-��ȡ��ǰ�̹߳��򡢽��̹��򡢸澯����ĺϼ���
+Obtains a collection of thread, process, and alarm rules that have been added.
 
 **Since:** 8
 
@@ -26,7 +26,7 @@ function getRule() : bigint
 
 | Type | Description |
 | --- | --- |
-| bigint | ��ǰϵͳ�����ӵĹ��� |
+| bigint | Collection of added rules. |
 
 ## Examples
 
@@ -35,6 +35,6 @@ function getRule() : bigint
 hichecker.addCheckRule(hichecker.RULE_CAUTION_PRINT_LOG);
 
 // Obtain the collection of added rules.
-hichecker.getRule(); // return 1n;
+hichecker.getRule();   // return 1n;
 ```
 

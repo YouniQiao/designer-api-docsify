@@ -12,11 +12,12 @@ import { appManager } from 'kits/@kit.AbilityKit';
 function setKeepAliveForAppServiceExtension(bundleName: string, enabled: boolean): Promise<void>
 ```
 
-为AppServiceExtensionAbility设置保活或取消保活。使用Promise异步回调。该接口在PC/2in1中可正常调用，在其他设备类型中返回801错误码。
+Sets or cancels the keep-alive status for an AppServiceExtensionAbility. This API uses a promise to return the result.This API can be properly called on PCs/2-in-1 devices. If it is called on other devices, error code 801 is returned.
 
-> **说明：**
+> **NOTE：**
 > 
-> - 仅当应用安装在userId为1的用户下，且应用中entry类型的HAP的module.json5配置文件中的mainElement字段配置为AppServiceExtensionAbility时，该接口才生效。
+> - This API takes effect only when the application is installed under the user with **userId** of 1 and the
+> **mainElement** field in the **module.json5** file of the entry HAP is set to **AppServiceExtensionAbility**.
 
 **Since:** 20
 
@@ -34,27 +35,27 @@ function setKeepAliveForAppServiceExtension(bundleName: string, enabled: boolean
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| bundleName | string | Yes | 表示要设置保活的应用包名。 |
-| enabled | boolean | Yes | 表示是否进行应用保活。true表示保活，false表示不保活。 |
+| bundleName | string | Yes | Bundle name. |
+| enabled | boolean | Yes | Whether to keep the application alive or cancel its keep-alive status. **true** to keep, **false** otherwise. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise对象。无返回结果的Promise对象。 |
+| Promise&lt;void&gt; | Promise that returns no value. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 801 | Capability not supported. |
-| 16000081 | Failed to obtain the target application information. |
-| 16000050 | Internal error. |
-| 16000204 | The target bundle is not in u1. |
-| 201 | Permission denied. |
-| 202 | Not system application. |
-| 16000202 | Invalid main element type. |
-| 16000203 | Cannot change the keep-alive status. |
+| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. |
+| [16000081](../errorcode-ability.md#16000081-failed-to-obtain-the-target-application-information) | Failed to obtain the target application information. |
+| [16000050](../errorcode-ability.md#16000050-internal-error) | Internal error. |
+| [16000204](../errorcode-ability.md#16000204-application-is-not-installed-for-the-user-with-userid-of-1) | The target bundle is not in u1. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system application. |
+| [16000202](../errorcode-ability.md#16000202-keepalive-can-be-set-only-for-an-extensionability-of-the-appservice-type) | Invalid main element type. |
+| [16000203](../errorcode-ability.md#16000203-cannot-change-the-keepalive-status-of-an-appserviceextensionability) | Cannot change the keep-alive status. |
 
 ## Examples
 

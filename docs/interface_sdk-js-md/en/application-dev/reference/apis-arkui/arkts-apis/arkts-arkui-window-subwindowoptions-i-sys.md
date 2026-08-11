@@ -1,6 +1,6 @@
 # SubWindowOptions
 
-子窗口创建参数。
+Describes the parameters used for creating a child window.
 
 **Since:** 11
 
@@ -22,7 +22,7 @@ import { window } from 'kits/@kit.ArkUI';
 isTopmost?: boolean
 ```
 
-子窗口是否启用置顶属性。true表示子窗口置顶，false表示子窗口不置顶。不设置，则默认为false。
+Whether the child window is topmost. **true** if topmost, **false** otherwise. The default value is **false**.
 
 **Type:** boolean
 

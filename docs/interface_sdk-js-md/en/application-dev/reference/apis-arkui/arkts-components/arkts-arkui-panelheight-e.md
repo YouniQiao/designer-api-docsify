@@ -1,6 +1,6 @@
 # PanelHeight
 
-自定义内容显示区域的枚举。
+Enum for custom content display area.
 
 **Since:** 10
 
@@ -18,7 +18,7 @@
 WRAP_CONTENT = 'wrapContent'
 ```
 
-PanelType的类型为CUSTOM时，自适应内容高度。
+The Panel adapts to the content height.
 
 **Since:** 10
 

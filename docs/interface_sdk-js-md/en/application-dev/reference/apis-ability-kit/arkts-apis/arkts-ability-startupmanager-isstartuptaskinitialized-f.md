@@ -12,7 +12,7 @@ import { startupManager } from 'kits/@kit.AbilityKit';
 function isStartupTaskInitialized(startupTask: string): boolean
 ```
 
-获取指定启动任务或so预加载任务是否已初始化。
+Checks whether a startup task or .so file preloading task is initialized.
 
 **Since:** 12
 
@@ -28,19 +28,19 @@ function isStartupTaskInitialized(startupTask: string): boolean
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| startupTask | string | Yes | 启动任务[StartupTask](arkts-ability-app-appstartup-startuptask-startuptask-c.md)的名称或预加载so名称。 |
+| startupTask | string | Yes | Name of the [StartupTask](arkts-ability-app-appstartup-startuptask-startuptask-c.md) or name of the .so file to be preloaded. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| boolean | 返回布尔值，true表示该启动任务或so预加载任务已执行完成，false表示该启动任务或so预加载任务尚未执行完成。 |
+| boolean | Check result for whether the task is initialized. **true** if initialized, **false** otherwise. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types. |
 
 ## Examples
 

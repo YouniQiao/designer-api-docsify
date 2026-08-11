@@ -1,6 +1,6 @@
 # ModifierKey
 
-输入法修饰键类型。
+Enumerates the input method modifier keys.
 
 **Since:** 10
 
@@ -16,7 +16,7 @@
 CTRL
 ```
 
-表示键盘上Ctrl键。
+Ctrl key on the keyboard.
 
 **Since:** 10
 
@@ -36,7 +36,7 @@ CTRL
 SHIFT
 ```
 
-表示键盘上Shift键。
+Shift key on the keyboard.
 
 **Since:** 10
 
@@ -56,7 +56,7 @@ SHIFT
 ALT
 ```
 
-表示键盘上Alt键。
+Alt key on the keyboard.
 
 **Since:** 10
 

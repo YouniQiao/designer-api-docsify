@@ -18,12 +18,6 @@ URI遵循RFC3986规范标准，不支持非标准场景解析。
 
 **系统能力：** SystemCapability.Utils.Lang
 
-## 导入模块
-
-```TypeScript
-import { uri } from 'kits/@kit.ArkTS';
-```
-
 ## 汇总
 
 ### 类

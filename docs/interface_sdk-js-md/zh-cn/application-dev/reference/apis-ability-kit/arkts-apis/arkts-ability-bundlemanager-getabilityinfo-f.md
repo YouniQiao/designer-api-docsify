@@ -1,11 +1,5 @@
 # getAbilityInfo
 
-## 导入模块
-
-```TypeScript
-import { bundleManager } from 'kits/@kit.AbilityKit';
-```
-
 ## getAbilityInfo
 
 ```TypeScript
@@ -43,10 +37,12 @@ function getAbilityInfo(uri: string, abilityFlags: int): Promise<Array<AbilityIn
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 201 | Permission denied. |
-| 17700003 | The ability is not found. |
+| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
+| [17700003](../errorcode-bundle.md#17700003-指定的abilityname不存在) | The ability is not found. |
 
 ## 示例
+
+ArkTS-Dyn示例:
 
 ```TypeScript
 import { bundleManager } from '@kit.AbilityKit';
@@ -60,6 +56,32 @@ try {
   bundleManager.getAbilityInfo(uri, abilityFlags).then((data) => {
     hilog.info(0x0000, 'testTag', 'getAbilityInfo successfully. Data: %{public}s', JSON.stringify(data));
   }).catch((err: BusinessError) => {
+    let message = (err as BusinessError).message;
+    hilog.error(0x0000, 'testTag', 'getAbilityInfo failed. Cause: %{public}s', message);
+  });
+} catch (err) {
+  let message = (err as BusinessError).message;
+  hilog.error(0x0000, 'testTag', 'getAbilityInfo failed. Cause: %{public}s', message);
+}
+```
+
+ArkTS-Sta示例:
+
+```TypeScript
+'use static'
+
+import { bundleManager } from '@kit.AbilityKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+import { hilog } from '@kit.PerformanceAnalysisKit';
+
+// 代码中使用的uri需为应用实际设置的资源标识符URI。
+let abilityFlags = bundleManager.AbilityFlag.GET_ABILITY_INFO_WITH_APPLICATION;
+let uri = "https://www.example.com";
+
+try {
+  bundleManager.getAbilityInfo(uri, abilityFlags).then((data: Array<bundleManager.AbilityInfo>) => {
+    hilog.info(0x0000, 'testTag', 'getAbilityInfo successfully. Data: %{public}s', JSON.stringify(data));
+  }).catch((err: Error) => {
     let message = (err as BusinessError).message;
     hilog.error(0x0000, 'testTag', 'getAbilityInfo failed. Cause: %{public}s', message);
   });

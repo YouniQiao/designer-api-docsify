@@ -15,9 +15,9 @@ declare function listFile(
 ): Promise<string[]>
 ```
 
-默认列出当前目录下所有文件名和目录名。支持过滤。使用promise异步回调。
+Lists the names of all files and directories in the current path. Filtering is supported. This API uses a promise to return the result.
 
-可通过配置options中recursion参数实现递归列出所有文件的相对路径，相对路径以“/”开头。
+You can configure the **recursion** parameter in **options** to recursively list the relative paths of all files. The relative path starts with a slash (/).
 
 **Since:** 9
 
@@ -33,14 +33,14 @@ declare function listFile(
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| path | string | Yes | 目录的应用沙箱路径。 |
-| options | [ListFileOptions](arkts-corefile-file-fs-listfileoptions-i.md) | No | 文件过滤选项。默认不进行过滤。<br>**Since:** 11 |
+| path | string | Yes | Application sandbox path of the directory. |
+| options | [ListFileOptions](arkts-corefile-file-fs-listfileoptions-i.md) | No | Options for filtering files. The files are not filtered by default.<br>**Since:** 11 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;string[]&gt; | Promise对象。返回文件名数组，默认以'utf-8'编码。 default. |
+| Promise&lt;string[]&gt; | Promise used to return the file name array, which is encoded in UTF-8 format by default. |
 
 **Error codes:**
 
@@ -59,9 +59,9 @@ declare function listFile(
 declare function listFile(path: string, callback: AsyncCallback<string[]>): void
 ```
 
-默认列出当前目录下所有文件名和目录名。支持过滤。使用callback异步回调。
+Lists the names of all files and directories in the current path. Filtering is supported. This API uses an asynchronous callback to return the result.
 
-可通过配置options中recursion参数实现递归列出所有文件的相对路径，相对路径以“/”开头。
+You can configure the **recursion** parameter in **options** to recursively list the relative paths of all files. The relative path starts with a slash (/).
 
 **Since:** 9
 
@@ -77,8 +77,8 @@ declare function listFile(path: string, callback: AsyncCallback<string[]>): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| path | string | Yes | 目录的应用沙箱路径。 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;string[]&gt; | Yes | 异步列出文件名数组之后的回调，默认以'utf-8'编码。 |
+| path | string | Yes | Application sandbox path of the directory. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;string[]&gt; | Yes | Callback used to return the file names listed. The files are encoded in UTF-8 by default. |
 
 **Error codes:**
 
@@ -101,9 +101,9 @@ declare function listFile(
 ): void
 ```
 
-默认列出当前目录下所有文件名和目录名。支持过滤。使用callback异步回调。
+Lists the names of all files and directories in the current path. Filtering is supported. This API uses an asynchronous callback to return the result.
 
-可通过配置options中recursion参数实现递归列出所有文件的相对路径，相对路径以“/”开头。
+You can configure the **recursion** parameter in **options** to recursively list the relative paths of all files. The relative path starts with a slash (/).
 
 **Since:** 9
 
@@ -119,9 +119,9 @@ declare function listFile(
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| path | string | Yes | 目录的应用沙箱路径。 |
-| options | [ListFileOptions](arkts-corefile-file-fs-listfileoptions-i.md) | Yes | 文件过滤选项。默认不进行过滤。<br>**Since:** 11 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;string[]&gt; | Yes | 异步列出文件名数组之后的回调，默认以'utf-8'编码。 |
+| path | string | Yes | Application sandbox path of the directory. |
+| options | [ListFileOptions](arkts-corefile-file-fs-listfileoptions-i.md) | Yes | Options for filtering files. The files are not filtered by default.<br>**Since:** 11 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;string[]&gt; | Yes | Callback used to return the file names listed. The files are encoded in UTF-8 by default. |
 
 **Error codes:**
 

@@ -1,6 +1,6 @@
 # PermissionUsageFlag (System API)
 
-表示使用记录的查询方式的枚举。
+Enumerates the modes for querying the permission usage records.
 
 **Since:** 9
 
@@ -18,7 +18,7 @@
 FLAG_PERMISSION_USAGE_SUMMARY = 0
 ```
 
-表示查询总览数据。
+Query the permission usage summary.
 
 **Since:** 9
 
@@ -36,7 +36,7 @@ FLAG_PERMISSION_USAGE_SUMMARY = 0
 FLAG_PERMISSION_USAGE_DETAIL = 1
 ```
 
-表示查询详细数据。
+Query detailed permission usage records.
 
 **Since:** 9
 

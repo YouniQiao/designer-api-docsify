@@ -1,11 +1,5 @@
 # releaseDeviceManager
 
-## 导入模块
-
-```TypeScript
-import { distributedDeviceManager } from 'kits/@kit.DistributedServiceKit';
-```
-
 ## releaseDeviceManager
 
 ```TypeScript
@@ -32,8 +26,8 @@ function releaseDeviceManager(deviceManager: DeviceManager): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
-| 11600101 | Failed to execute the function. |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| [11600101](../../apis-distributedservice-kit/errorcode-device-manager.md#11600101-服务调用异常) | Failed to execute the function. |
 
 ## 示例
 

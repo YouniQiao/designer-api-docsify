@@ -12,7 +12,7 @@ import { window } from 'kits/@kit.ArkUI';
 function setWindowLayoutMode(mode: WindowLayoutMode, callback: AsyncCallback<void>): void
 ```
 
-设置窗口布局模式，使用callback异步回调。
+Sets the window layout mode. This API uses an asynchronous callback to return the result.
 
 **Since:** 9
 
@@ -30,16 +30,16 @@ function setWindowLayoutMode(mode: WindowLayoutMode, callback: AsyncCallback<voi
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| mode | [WindowLayoutMode](arkts-arkui-window-windowlayoutmode-e-sys.md) | Yes | 设置的窗口布局模式。 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | 回调信息。 |
+| mode | [WindowLayoutMode](arkts-arkui-window-windowlayoutmode-e-sys.md) | Yes | Window layout mode to set. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 1300003 | This window manager service works abnormally. |
-| 401 | Parameter error. Possible cause: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
-| 202 | Permission verification failed. A non-system application calls a system API.<br>**Applicable version:** 12 and later |
+| [1300003](../errorcode-window.md#1300003-abnormal-window-manager-service) | This window manager service works abnormally. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible cause: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API.<br>**Applicable version:** 12 and later |
 
 ## Examples
 
@@ -67,7 +67,7 @@ try {
 function setWindowLayoutMode(mode: WindowLayoutMode): Promise<void>
 ```
 
-设置窗口布局模式，使用Promise异步回调。
+Sets the window layout mode. This API uses a promise to return the result.
 
 **Since:** 9
 
@@ -85,21 +85,21 @@ function setWindowLayoutMode(mode: WindowLayoutMode): Promise<void>
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| mode | [WindowLayoutMode](arkts-arkui-window-windowlayoutmode-e-sys.md) | Yes | 设置的窗口布局模式。 |
+| mode | [WindowLayoutMode](arkts-arkui-window-windowlayoutmode-e-sys.md) | Yes | Window layout mode to set. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | 无返回结果的Promise对象。 |
+| Promise&lt;void&gt; | Promise that returns no value. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 1300003 | This window manager service works abnormally. |
-| 401 | Parameter error. Possible cause: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
-| 202 | Permission verification failed. A non-system application calls a system API.<br>**Applicable version:** 12 and later |
+| [1300003](../errorcode-window.md#1300003-abnormal-window-manager-service) | This window manager service works abnormally. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible cause: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API.<br>**Applicable version:** 12 and later |
 
 ## Examples
 

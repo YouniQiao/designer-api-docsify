@@ -10,12 +10,6 @@ Defines the screen capture parameters.
 
 **系统能力：** SystemCapability.Multimedia.Media.AVScreenCapture
 
-## 导入模块
-
-```TypeScript
-import { media } from 'kits/@kit.MediaKit';
-```
-
 ## audioBitrate
 
 ```TypeScript

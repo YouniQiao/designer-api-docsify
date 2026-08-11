@@ -12,9 +12,8 @@ import { featureAbility } from 'kits/@kit.AbilityKit';
 function terminateSelfWithResult(parameter: AbilityResult, callback: AsyncCallback<void>): void
 ```
 
-停止当前的Ability。使用callback异步回调。如果该Ability是通过调用  
-[startAbilityForResult](arkts-ability-featureability-startabilityforresult-f.md#startabilityforresult)接口被拉起的，调用terminateSelfWithResult接口时会将结果返回给调用者，如果该Ability不是通过调用  
-[startAbilityForResult](arkts-ability-featureability-startabilityforresult-f.md#startabilityforresult)接口被拉起的，调用terminateSelfWithResult接口时不会有结果返回给调用者。
+Terminates this ability. This API uses an asynchronous callback to return the result. If the ability is started by calling  
+[startAbilityForResult](arkts-ability-featureability-startabilityforresult-f.md#startabilityforresult), the result is returned to the caller when **terminateSelfWithResult** is called. Otherwise, no result is returned to the caller when **terminateSelfWithResult** is called.
 
 **Since:** 7
 
@@ -30,8 +29,8 @@ function terminateSelfWithResult(parameter: AbilityResult, callback: AsyncCallba
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| parameter | [AbilityResult](arkts-ability-abilityresult-abilityresult-i.md) | Yes | 表示停止Ability之后返回的结果。 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | 回调函数。当停止当前Ability成功，err为undefined，否则为错误对象。 |
+| parameter | [AbilityResult](arkts-ability-abilityresult-abilityresult-i.md) | Yes | Result returned after the ability is terminated. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined**; otherwise, **err** is an error object. |
 
 ## Examples
 
@@ -77,9 +76,8 @@ featureAbility.terminateSelfWithResult(
 function terminateSelfWithResult(parameter: AbilityResult): Promise<void>
 ```
 
-停止当前的Ability。使用Promise异步回调。如果该Ability是通过调用  
-[startAbilityForResult](arkts-ability-featureability-startabilityforresult-f.md#startabilityforresult)接口被拉起的，调用terminateSelfWithResult接口时会将结果返回给调用者，如果该Ability不是通过调用  
-[startAbilityForResult](arkts-ability-featureability-startabilityforresult-f.md#startabilityforresult)接口被拉起的，调用terminateSelfWithResult接口时不会有结果返回给调用者。
+Terminates this ability. This API uses a promise to return the result. If the ability is started by calling  
+[startAbilityForResult](arkts-ability-featureability-startabilityforresult-f.md#startabilityforresult), the result is returned to the caller when **terminateSelfWithResult** is called. Otherwise, no result is returned to the caller when **terminateSelfWithResult** is called.
 
 **Since:** 7
 
@@ -95,13 +93,13 @@ function terminateSelfWithResult(parameter: AbilityResult): Promise<void>
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| parameter | [AbilityResult](arkts-ability-abilityresult-abilityresult-i.md) | Yes | 表示停止Ability之后返回的结果。 |
+| parameter | [AbilityResult](arkts-ability-abilityresult-abilityresult-i.md) | Yes | Result returned after the ability is terminated. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise对象。无返回结果的Promise对象。 |
+| Promise&lt;void&gt; | Promise that returns no value. |
 
 ## Examples
 

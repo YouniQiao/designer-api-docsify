@@ -4,9 +4,9 @@
 export type GlobalObserver = (reason: GlobalError) => void
 ```
 
-定义异常监听，可以作为  
-[errorManager.on('globalErrorOccurred')](errorManager.on(type: 'globalErrorOccurred', observer: GlobalObserver))和  
-[errorManager.on('globalUnhandledRejectionDetected')](errorManager.on(type: 'globalUnhandledRejectionDetected', observer: GlobalObserver))的入参监听当前应用主线程事件处理事件。
+Defines an exception observer that can be used as an input parameter for   
+[errorManager.on('globalErrorOccurred')](errorManager.on(type: 'globalErrorOccurred', observer: GlobalObserver))and   
+[errorManager.on('globalUnhandledRejectionDetected')](errorManager.on(type: 'globalUnhandledRejectionDetected', observer: GlobalObserver))to monitor event processing on the main thread of the current application.
 
 **Since:** 18
 
@@ -22,5 +22,5 @@ export type GlobalObserver = (reason: GlobalError) => void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| reason | [GlobalError](arkts-ability-errormanager-globalerror-i.md) | Yes | 有关异常事件名字、消息、错误堆栈信息、异常线程名称和类型的对象。 |
+| reason | [GlobalError](arkts-ability-errormanager-globalerror-i.md) | Yes | Object related to the exception event name, message, error stack information, exception thread name, and exception thread type. |
 

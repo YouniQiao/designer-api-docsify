@@ -4,7 +4,7 @@
 type AsyncLockCallback<T> = () => T | Promise<T>
 ```
 
-这是一个补充类型别名，表示lockAsync函数所有重载中的回调。
+Type of callback for asyncLock operation.
 
 **Since:** 12
 

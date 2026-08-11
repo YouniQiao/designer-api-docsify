@@ -1,6 +1,6 @@
 # NavPathInfo
 
-路由页面信息。
+Provides the navigation page information.
 
 **Since:** 10
 
@@ -16,7 +16,7 @@
 constructor(name: string, param: unknown, onPop?: import('../api/@ohos.base').Callback<PopInfo>, isEntry?: boolean)
 ```
 
-创建NavPathInfo对象。
+Creates a **NavPathInfo** object.
 
 **Since:** 10
 
@@ -34,10 +34,10 @@ constructor(name: string, param: unknown, onPop?: import('../api/@ohos.base').Ca
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| name | string | Yes | NavDestination页面名称。该名称匹配开发者设置的路由表中的name，包括以下两种：&lt;br/&gt;1. 自定义路由表，开发者通过 [navDestination](NavigationAttribute#navDestination)方法传递。&lt;br/&gt;2. 系统路由表，通过routerMap中的name设置，可参考 [示例2](../../../reference/apis-arkui/arkui-ts/ts-basic-components-navigation.md#示例2使用导航控制器方法)。 |
-| param | unknown | Yes | 开发者设置的NavDestination页面详细参数，unknown可以是用户自定义的类型。 |
-| onPop | import('../api/@ohos.base').Callback&lt;PopInfo&gt; | No | NavDestination页面触发 [pop](arkts-arkui-navpathstack-c.md#pop)、 [popToName](arkts-arkui-navpathstack-c.md#poptoname)、 [popToIndex](arkts-arkui-navpathstack-c.md#poptoindex)时返回的回调。仅 [pop](arkts-arkui-navpathstack-c.md#pop)、 [popToName](arkts-arkui-navpathstack-c.md#poptoname)、 [popToIndex](arkts-arkui-navpathstack-c.md#poptoindex)中设置result参数后触 发。<br>**Since:** 11 |
-| isEntry | boolean | No | 标记NavDestination是否为入口页面。&lt;br/&gt;true：NavDestination是入口页面；false：NavDestination不是入口页面。&lt;br/ &gt;默认值：false &lt;br/&gt;标记清理时机：1. 在当前navDestination页面触发一次全局返回事件。2. 应用退至后台。&lt;br/&gt;**说明：**&lt;br/&gt;入口NavDestination不响应应用内的全局 back事件，直接触发应用间的全局back事件。<br>**Since:** 12 |
+| name | string | Yes | Name of the navigation destination page. The name matches the name in the following route tables:&lt;br&gt;1. Custom route table, which is passed via the [navDestination](NavigationAttribute#navDestination) method.&lt;br&gt;2. System route table, which is set by **name** in **routerMap**. For details, please refer to [Example 2: Using NavPathStack APIs](../../../reference/apis-arkui/arkui-ts/ts-basic-components-navigation.md#example-2-using-navpathstack-apis). |
+| param | unknown | Yes | Detailed parameters for the custom **NavDestination** page. The **unknown** type can be replaced with a user-defined type. |
+| onPop | import('../api/@ohos.base').Callback&lt;PopInfo&gt; | No | Callback returned when [pop](arkts-arkui-navpathstack-c.md#pop), [popToName](arkts-arkui-navpathstack-c.md#poptoname), or [popToIndex](arkts-arkui-navpathstack-c.md#poptoindex) is called on the navigation destination page. It is triggered only when the **result** parameter is set in [pop](arkts-arkui-navpathstack-c.md#pop), [popToName](arkts-arkui-navpathstack-c.md#poptoname), or [popToIndex](arkts-arkui-navpathstack-c.md#poptoindex).<br>**Since:** 11 |
+| isEntry | boolean | No | Whether the navigation destination page is the entry page.&lt;br&gt;**true**: yes; **false**: no&lt;br&gt;Default value: **false**&lt;br&gt;The value of this parameter is reviewed or reset under the following conditions:&lt;br&gt;1. A global return event is triggered on the current navigation destination page.&lt;br&gt; 2. The application is switched to the background.&lt;br&gt;**NOTE：**&lt;br&gt;The navigation destination page serving as an entry does not respond to the in-app global back events; instead, it directly triggers the global back event between applications.<br>**Since:** 12 |
 
 ## isEntry
 
@@ -45,17 +45,19 @@ constructor(name: string, param: unknown, onPop?: import('../api/@ohos.base').Ca
 isEntry?: boolean
 ```
 
-标记NavDestination是否为入口页面。
+Whether the navigation destination page is the entry page.
 
-true：NavDestination是入口页面；false：NavDestination不是入口页面。
+**true**: yes; **false**: no
 
-默认值：false
+Default value: **false**
 
-标记清理时机：1. 在当前navDestination页面触发一次全局back事件。2. 应用退至后台。
+The value of this parameter is reviewed or reset under the following conditions:
 
-**说明：**
+1. A global back event is triggered on the current navigation destination page.2. The application is switched to the background.
 
-入口NavDestination不响应应用内的全局back事件，直接触发应用间的全局back事件。
+**NOTE：**
+
+The navigation destination page serving as an entry does not respond to the in-app global back events; instead, it directly triggers the global back event between applications.
 
 **Type:** boolean
 
@@ -77,9 +79,9 @@ true：NavDestination是入口页面；false：NavDestination不是入口页面�
 name: string
 ```
 
-NavDestination页面名称。该名称匹配开发者设置的路由表中的name，包括以下两种：
+Name of the navigation destination page. The name matches the name in the following route tables:
 
-1. 自定义路由表，开发者通过[navDestination](NavigationAttribute#navDestination)方法传递。2. 系统路由表，通过routerMap中的name设置，可参考[示例2](../../../reference/apis-arkui/arkui-ts/ts-basic-components-navigation.md#示例2使用导航控制器方法)。
+1. Custom route table, which is passed via the [navDestination](NavigationAttribute#navDestination) method.2. System route table, which is set by **name** in **routerMap**. For details, please refer to [Example 2: Using NavPathStack APIs](../../../reference/apis-arkui/arkui-ts/ts-basic-components-navigation.md#example-2-using-navpathstack-apis).
 
 **Type:** string
 
@@ -101,7 +103,7 @@ NavDestination页面名称。该名称匹配开发者设置的路由表中的nam
 navDestinationId?: string
 ```
 
-NavDestination页面唯一标识符，该id由系统默认生成且全局唯一，通过[getPathStack](arkts-arkui-navpathstack-c.md#getpathstack)接口可读取，但不可以主动赋新值。
+Unique ID of the navigation destination page. This ID is system-generated and globally unique. It can be obtained using the [getPathStack](arkts-arkui-navpathstack-c.md#getpathstack) API and should not be manually reassigned.
 
 **Type:** string
 
@@ -123,12 +125,12 @@ NavDestination页面唯一标识符，该id由系统默认生成且全局唯一�
 onPop?: import('../api/@ohos.base').Callback<PopInfo>
 ```
 
-NavDestination页面触发[pop](arkts-arkui-navpathstack-c.md#pop)、  
-[popToName](arkts-arkui-navpathstack-c.md#poptoname)、  
-[popToIndex](arkts-arkui-navpathstack-c.md#poptoindex)时返回的回调。仅  
-[pop](arkts-arkui-navpathstack-c.md#pop)、  
-[popToName](arkts-arkui-navpathstack-c.md#poptoname)、  
-[popToIndex](arkts-arkui-navpathstack-c.md#poptoindex)中设置result参数后触发。
+Callback returned when [pop](arkts-arkui-navpathstack-c.md#pop),  
+[popToName](arkts-arkui-navpathstack-c.md#poptoname), or  
+[popToIndex](arkts-arkui-navpathstack-c.md#poptoindex) is called on the navigation destination page. It is triggered only when the **result** parameter is set in  
+[pop](arkts-arkui-navpathstack-c.md#pop),  
+[popToName](arkts-arkui-navpathstack-c.md#poptoname), or  
+[popToIndex](arkts-arkui-navpathstack-c.md#poptoindex).
 
 **Type:** import('../api/@ohos.base').Callback&lt;PopInfo&gt;
 
@@ -150,7 +152,7 @@ NavDestination页面触发[pop](arkts-arkui-navpathstack-c.md#pop)、
 param?: unknown
 ```
 
-开发者设置的NavDestination页面详细参数，unknown可以是用户自定义的类型。
+Detailed parameters for the custom **NavDestination** page. The **unknown** type can be replaced with a user-defined type.
 
 **Type:** unknown
 

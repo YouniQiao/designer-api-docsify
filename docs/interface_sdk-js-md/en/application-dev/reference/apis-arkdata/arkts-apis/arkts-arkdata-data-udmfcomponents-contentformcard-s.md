@@ -1,6 +1,6 @@
 # ContentFormCard
 
-内容卡片控件，用于在应用内展示标题、描述、内容图片、应用信息等。
+Defines a content form card.
 
 **Since:** 23
 
@@ -24,7 +24,7 @@ import { ContentFormCard, FormType } from 'kits/@kit.ArkData';
 build(): void
 ```
 
-构建组件的方法。
+The method to build component.
 
 **Since:** 23
 
@@ -44,7 +44,7 @@ build(): void
 contentFormData: uniformDataStruct.ContentForm
 ```
 
-内容卡片数据。
+Data of the form card.
 
 **Type:** uniformDataStruct.ContentForm
 
@@ -64,7 +64,7 @@ contentFormData: uniformDataStruct.ContentForm
 formHeight?: double
 ```
 
-卡片高度，当contentFormData中的title为空字符串时，卡片高度为传入的值，否则其范围在设置的内容卡片类型默认宽度的0.8 ~ 1.2倍之间，当formType为TYPE_SMALL时，其范围在设置的内容卡片类型默认宽度的0.4 ~ 1.2倍之间。单位为vp。
+Height of the content form card. The unit of measurement is vp.
 
 **Type:** double
 
@@ -84,7 +84,7 @@ formHeight?: double
 formType: FormType
 ```
 
-内容卡片类型，影响内容卡片的大小。
+Type of the form card.
 
 **Type:** [FormType](arkts-arkdata-data-udmfcomponents-formtype-e.md)
 
@@ -104,7 +104,7 @@ formType: FormType
 formWidth?: double
 ```
 
-卡片宽度，其范围在设置的内容卡片类型默认宽度的0.8 ~ 1.2倍之间，当formType为TYPE_SMALL时，其范围在设置的内容卡片类型默认宽度的0.4 ~ 1.2倍之间。单位为vp。
+Width of the content form card. The unit of measurement is vp.
 
 **Type:** double
 
@@ -124,7 +124,7 @@ formWidth?: double
 handleOnClick?: Function
 ```
 
-点击事件回调函数。
+Callback to be invoked when the form card is tapped.
 
 **Type:** Function
 

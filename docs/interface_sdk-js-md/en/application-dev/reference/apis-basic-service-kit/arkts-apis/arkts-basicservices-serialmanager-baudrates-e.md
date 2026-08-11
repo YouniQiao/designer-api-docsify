@@ -16,7 +16,7 @@ Enumerates the baud rates.
 BAUDRATE_50 = 50
 ```
 
-传输波特率为50。
+The baud rate is 50 bit/s.
 
 **Since:** 19
 
@@ -32,7 +32,7 @@ BAUDRATE_50 = 50
 BAUDRATE_75 = 75
 ```
 
-传输波特率为75。
+The baud rate is 75 bit/s.
 
 **Since:** 19
 
@@ -48,7 +48,7 @@ BAUDRATE_75 = 75
 BAUDRATE_110 = 110
 ```
 
-传输波特率为110。
+The baud rate is 110 bit/s.
 
 **Since:** 19
 
@@ -64,7 +64,7 @@ BAUDRATE_110 = 110
 BAUDRATE_134 = 134
 ```
 
-传输波特率为134。
+The baud rate is 134 bit/s.
 
 **Since:** 19
 
@@ -80,7 +80,7 @@ BAUDRATE_134 = 134
 BAUDRATE_150 = 150
 ```
 
-传输波特率为150。
+The baud rate is 150 bit/s.
 
 **Since:** 19
 
@@ -96,7 +96,7 @@ BAUDRATE_150 = 150
 BAUDRATE_200 = 200
 ```
 
-传输波特率为200。
+The baud rate is 200 bit/s.
 
 **Since:** 19
 
@@ -112,7 +112,7 @@ BAUDRATE_200 = 200
 BAUDRATE_300 = 300
 ```
 
-传输波特率为300。
+The baud rate is 300 bit/s.
 
 **Since:** 19
 
@@ -128,7 +128,7 @@ BAUDRATE_300 = 300
 BAUDRATE_600 = 600
 ```
 
-传输波特率为600。
+The baud rate is 600 bit/s.
 
 **Since:** 19
 
@@ -144,7 +144,7 @@ BAUDRATE_600 = 600
 BAUDRATE_1200 = 1200
 ```
 
-传输波特率为1200。
+The baud rate is 1200 bit/s.
 
 **Since:** 19
 
@@ -160,7 +160,7 @@ BAUDRATE_1200 = 1200
 BAUDRATE_1800 = 1800
 ```
 
-传输波特率为1800。
+The baud rate is 1800 bit/s.
 
 **Since:** 19
 
@@ -176,7 +176,7 @@ BAUDRATE_1800 = 1800
 BAUDRATE_2400 = 2400
 ```
 
-传输波特率为2400。
+The baud rate is 2400 bit/s.
 
 **Since:** 19
 
@@ -192,7 +192,7 @@ BAUDRATE_2400 = 2400
 BAUDRATE_4800 = 4800
 ```
 
-传输波特率为4800。
+The baud rate is 4800 bit/s.
 
 **Since:** 19
 
@@ -208,7 +208,7 @@ BAUDRATE_4800 = 4800
 BAUDRATE_9600 = 9600
 ```
 
-传输波特率为9600。
+The baud rate is 9600 bit/s.
 
 **Since:** 19
 
@@ -224,7 +224,7 @@ BAUDRATE_9600 = 9600
 BAUDRATE_19200 = 19200
 ```
 
-传输波特率为19200。
+The baud rate is 19200 bit/s.
 
 **Since:** 19
 
@@ -240,7 +240,7 @@ BAUDRATE_19200 = 19200
 BAUDRATE_38400 = 38400
 ```
 
-传输波特率为38400。
+The baud rate is 38400 bit/s.
 
 **Since:** 19
 
@@ -256,7 +256,7 @@ BAUDRATE_38400 = 38400
 BAUDRATE_57600 = 57600
 ```
 
-传输波特率为57600。
+The baud rate is 57600 bit/s.
 
 **Since:** 19
 
@@ -272,7 +272,7 @@ BAUDRATE_57600 = 57600
 BAUDRATE_115200 = 115200
 ```
 
-传输波特率为115200。
+The baud rate is 115200 bit/s.
 
 **Since:** 19
 
@@ -288,7 +288,7 @@ BAUDRATE_115200 = 115200
 BAUDRATE_230400 = 230400
 ```
 
-传输波特率为230400。
+The baud rate is 230400 bit/s.
 
 **Since:** 19
 
@@ -304,7 +304,7 @@ BAUDRATE_230400 = 230400
 BAUDRATE_460800 = 460800
 ```
 
-传输波特率为460800。
+The baud rate is 460800 bit/s.
 
 **Since:** 19
 
@@ -320,7 +320,7 @@ BAUDRATE_460800 = 460800
 BAUDRATE_500000 = 500000
 ```
 
-传输波特率为500000。
+The baud rate is 500000 bit/s.
 
 **Since:** 19
 
@@ -336,7 +336,7 @@ BAUDRATE_500000 = 500000
 BAUDRATE_576000 = 576000
 ```
 
-传输波特率为576000。
+The baud rate is 576000 bit/s.
 
 **Since:** 19
 
@@ -352,7 +352,7 @@ BAUDRATE_576000 = 576000
 BAUDRATE_921600 = 921600
 ```
 
-传输波特率为921600。
+The baud rate is 921600 bit/s.
 
 **Since:** 19
 
@@ -368,7 +368,7 @@ BAUDRATE_921600 = 921600
 BAUDRATE_1000000 = 1000000
 ```
 
-传输波特率为1000000。
+The baud rate is 1000000 bit/s.
 
 **Since:** 19
 
@@ -384,7 +384,7 @@ BAUDRATE_1000000 = 1000000
 BAUDRATE_1152000 = 1152000
 ```
 
-传输波特率为1152000。
+The baud rate is 1152000 bit/s.
 
 **Since:** 19
 
@@ -400,7 +400,7 @@ BAUDRATE_1152000 = 1152000
 BAUDRATE_1500000 = 1500000
 ```
 
-传输波特率为1500000。
+The baud rate is 1500000 bit/s.
 
 **Since:** 19
 
@@ -416,7 +416,7 @@ BAUDRATE_1500000 = 1500000
 BAUDRATE_2000000 = 2000000
 ```
 
-传输波特率为2000000。
+The baud rate is 2000000 bit/s.
 
 **Since:** 19
 
@@ -432,7 +432,7 @@ BAUDRATE_2000000 = 2000000
 BAUDRATE_2500000 = 2500000
 ```
 
-传输波特率为2500000。
+The baud rate is 2500000 bit/s.
 
 **Since:** 19
 
@@ -448,7 +448,7 @@ BAUDRATE_2500000 = 2500000
 BAUDRATE_3000000 = 3000000
 ```
 
-传输波特率为3000000。
+The baud rate is 3000000 bit/s.
 
 **Since:** 19
 
@@ -464,7 +464,7 @@ BAUDRATE_3000000 = 3000000
 BAUDRATE_3500000 = 3500000
 ```
 
-传输波特率为3500000。
+The baud rate is 3500000 bit/s.
 
 **Since:** 19
 
@@ -480,7 +480,7 @@ BAUDRATE_3500000 = 3500000
 BAUDRATE_4000000 = 4000000
 ```
 
-传输波特率为4000000。
+The baud rate is 4000000 bit/s.
 
 **Since:** 19
 

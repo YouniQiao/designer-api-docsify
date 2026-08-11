@@ -1,6 +1,6 @@
 # CaptureFilterOptions
 
-待录制的播放音频流的筛选信息。
+Defines the options for filtering the played audio streams to be recorded.
 
 **Since:** 10
 

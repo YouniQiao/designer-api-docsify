@@ -40,10 +40,10 @@ Obtains the country code of this device.
 import wifi from '@ohos.wifi';
 
 try {
-  let code = wifi.getCountryCode();
-  console.info("code:" + code);
+	let code = wifi.getCountryCode();
+	console.info("code:" + code);
 }catch(error){
-  console.error("failed:" + JSON.stringify(error));
+	console.error("failed:" + JSON.stringify(error));
 }
 ```
 

@@ -1,6 +1,6 @@
 # Module (System API)
 
-表示获取信息的模块的枚举。
+Enumerates the modules from which information is obtained.
 
 **Since:** 8
 
@@ -18,7 +18,7 @@
 FACE_AUTH = 1
 ```
 
-表示从人脸认证获取的信息。
+Facial authentication module.
 
 **Since:** 8
 

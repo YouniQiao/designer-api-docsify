@@ -1,11 +1,5 @@
 # @ohos.app.ability.AtomicServiceOptions
 
-## 导入模块
-
-```TypeScript
-import { AtomicServiceOptions } from 'kits/@kit.AbilityKit';
-```
-
 ## 汇总
 
 ### 类

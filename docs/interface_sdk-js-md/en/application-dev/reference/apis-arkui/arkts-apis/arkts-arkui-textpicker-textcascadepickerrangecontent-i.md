@@ -1,6 +1,6 @@
 # TextCascadePickerRangeContent
 
-多列联动数据选择器的数据选项内容。
+Define the contents of text cascade picker.
 
 **Since:** 23
 
@@ -16,7 +16,7 @@
 children?: TextCascadePickerRangeContent[]
 ```
 
-联动数据。
+Linkage data.
 
 **Type:** [TextCascadePickerRangeContent](../arkts-components/arkts-arkui-textcascadepickerrangecontent-i.md)[]
 
@@ -36,9 +36,9 @@ children?: TextCascadePickerRangeContent[]
 text: string | Resource
 ```
 
-文本信息。
+Text information.
 
-**说明：**当文本长度大于列宽时，文本被截断。
+&lt;p&gt;&lt;strong&gt;NOTE&lt;/strong&gt;:If the text length exceeds the column width, the text will be truncated.&lt;/p&gt;
 
 **Type:** string \| Resource
 

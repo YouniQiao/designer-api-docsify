@@ -1,11 +1,5 @@
 # setPointerStyleSync
 
-## 导入模块
-
-```TypeScript
-import { pointer } from 'kits/@kit.InputKit';
-```
-
 ## setPointerStyleSync
 
 ```TypeScript
@@ -28,16 +22,18 @@ function setPointerStyleSync(windowId: int, pointerStyle: PointerStyle): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | windowId | ArkTS-Dyn: number  <br>ArkTS-Sta：int | 是 | 窗口ID。取值范围为大于等于0的整数。&lt;br&gt;窗口ID合法并且对应窗口存在时，可以设置窗口的鼠标光标样式。&lt;br&gt;窗口ID合法但窗口不存在时，也可以设置鼠标光标样式。&lt;br&gt;设置 结果可通过[getPointerStyleSync](arkts-input-pointer-getpointerstylesync-f.md#getpointerstylesync)获取。 |
-| pointerStyle | [PointerStyle](../../apis-arkui/arkts-components/arkts-arkui-pointerstyle-t.md) | 是 | 鼠标样式。 |
+| pointerStyle | [PointerStyle](../../apis-arkui/arkts-apis/arkts-arkui-pointerstyle-t.md) | 是 | 鼠标样式。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; 3. Parameter verification failed. |
-| 202 | Permission denied, non-system app called system api. &lt;br&gt; When the windowId value is -1, the system permission is required to set the global style.  **ArkTS模式：** 该错误码仅适用于ArkTS-Sta。 |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; 3. Parameter verification failed. |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission denied, non-system app called system api. &lt;br&gt; When the windowId value is -1, the system permission is required to set the global style.  **ArkTS模式：** 该错误码仅适用于ArkTS-Sta。 |
 
 ## 示例
+
+ArkTS-Dyn示例:
 
 ```TypeScript
 import { pointer } from '@kit.InputKit';
@@ -70,6 +66,35 @@ struct Index {
               console.error(`Failed to set pointer style, Code: ${(error as BusinessError).code}, message: ${(error as BusinessError).message}.`);
             }
           });
+        })
+    }
+  }
+}
+```
+
+ArkTS-Sta示例:
+
+```TypeScript
+import { Entry, Text, RelativeContainer, Component } from '@kit.ArkUI';
+import { pointer } from '@kit.InputKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+@Entry
+@Component
+struct Index {
+  build() {
+    RelativeContainer() {
+      Text()
+        .onClick(() => {
+          // 此次根据实际获取窗口id
+          let windowId: int = 100;
+          try {
+            // 同步设置鼠标指针样式
+            pointer.setPointerStyleSync(windowId, pointer.PointerStyle.CROSS);
+            console.info(`Succeeded in setting pointer style.`);
+          } catch (error) {
+            console.error(`Failed to get pointer size, Code: ${(error as BusinessError).code}, message: ${(error as BusinessError).message}.`);
+          }
         })
     }
   }

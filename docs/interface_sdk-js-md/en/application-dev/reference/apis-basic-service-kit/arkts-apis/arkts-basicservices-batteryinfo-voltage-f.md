@@ -12,7 +12,7 @@ import { batteryInfo } from 'kits/@kit.BasicServicesKit';
 function voltage(): int
 ```
 
-表示当前设备电池的电压，单位微伏。
+Battery voltage of the device, in unit of microvolt.
 
 **Since:** 23
 
@@ -26,5 +26,5 @@ function voltage(): int
 
 | Type | Description |
 | --- | --- |
-| int | 返回当前设备电池的电压，单位微伏。 |
+| int | Returns the battery voltage of the device, in unit of microvolt. |
 

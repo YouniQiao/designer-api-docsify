@@ -12,7 +12,7 @@ import { i18n } from 'kits/@kit.LocalizationKit';
 export function getDisplayLanguage(language: string, locale: string, sentenceCase?: boolean): string
 ```
 
-获取指定语言的本地化显示文本。
+Obtains the localized script for the specified language.
 
 **Since:** 7
 
@@ -30,13 +30,13 @@ export function getDisplayLanguage(language: string, locale: string, sentenceCas
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| language | string | Yes | 指定语言。 |
-| locale | string | Yes | [表示区域ID的字符串](../../../internationalization/i18n-locale-culture.md#实现原理)，由语言、脚本、国家地区组成。 |
-| sentenceCase | boolean | No | true表示按照首字母大写的格式显示文本，false表示按照区域默认的大小写格式显示文本。默认值：true。 |
+| language | string | Yes | Specified language. |
+| locale | string | Yes | [System locale](../../../internationalization/i18n-locale-culture.md#how-it-works), which consists of the language, script, and country/region. |
+| sentenceCase | boolean | No | Whether to use sentence case to display the text. The value **true** means to display the text in title case format, and the value **false** means to display the text in the default case format of the locale. The default value is **true**. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| string | 指定语言的本地化显示文本。 |
+| string | Localized script for the specified language. |
 

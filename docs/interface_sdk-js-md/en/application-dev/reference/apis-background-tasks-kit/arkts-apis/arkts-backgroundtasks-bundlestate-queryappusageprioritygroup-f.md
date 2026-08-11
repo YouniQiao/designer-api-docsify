@@ -35,8 +35,7 @@ The priority defined in a priority group restricts the resource usage of an appl
 ## Examples
 
 ```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-import { bundleState } from '@kit.BackgroundTasksKit';
+import { BusinessError } from '@ohos.base';
 
 bundleState.queryAppUsagePriorityGroup((err: BusinessError, res: number) => {
   if(err) {
@@ -77,8 +76,7 @@ The priority defined in a priority group restricts the resource usage of an appl
 ## Examples
 
 ```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-import { bundleState } from '@kit.BackgroundTasksKit';
+import { BusinessError } from '@ohos.base';
 
 bundleState.queryAppUsagePriorityGroup().then((res: number) => {
   console.info('BUNDLE_ACTIVE QueryPackageGroup promise succeeded. result: ' + JSON.stringify(res));

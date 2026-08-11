@@ -1,6 +1,6 @@
 # BaseDialogOptions
 
-弹窗的选项。
+Dialog base options
 
 **Since:** 23
 

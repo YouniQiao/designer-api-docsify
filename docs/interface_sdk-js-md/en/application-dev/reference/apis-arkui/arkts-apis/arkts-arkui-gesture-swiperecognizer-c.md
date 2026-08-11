@@ -1,6 +1,6 @@
 # SwipeRecognizer
 
-快滑手势识别器对象，继承于[GestureRecognizer](arkts-arkui-gesturerecognizer-c.md)。
+Defines the swipe gesture recognizer.
 
 **Inheritance/Implementation:** SwipeRecognizer extends [GestureRecognizer](arkts-arkui-gesturerecognizer-c.md)
 
@@ -18,7 +18,7 @@
 getDirection(): SwipeDirection
 ```
 
-返回预设快滑手势识别器触发快滑手势滑动方向。
+Returns the swipe gesture's direction.
 
 **Since:** 23
 
@@ -34,7 +34,7 @@ getDirection(): SwipeDirection
 
 | Type | Description |
 | --- | --- |
-| [SwipeDirection](arkts-arkui-gesture-swipedirection-e.md) | 预设快滑手势识别器触发快滑手势滑动方向。 |
+| [SwipeDirection](arkts-arkui-gesture-swipedirection-e.md) | the direction of the swipe gesture. |
 
 ## getVelocityThreshold
 
@@ -42,7 +42,7 @@ getDirection(): SwipeDirection
 getVelocityThreshold(): double
 ```
 
-返回预设快滑手势识别器识别滑动最小速度阈值。
+Returns the swipe gesture's speed.The unit is vp/s.
 
 **Since:** 23
 
@@ -58,5 +58,5 @@ getVelocityThreshold(): double
 
 | Type | Description |
 | --- | --- |
-| double | 预设快滑手势识别器识别滑动最小速度阈值，单位为vp/s。&lt;br/&gt;取值范围：[0, +∞) |
+| double | the velocity threshold of the swipe gesture. |
 

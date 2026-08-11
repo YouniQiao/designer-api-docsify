@@ -1,6 +1,6 @@
 # SymbolRenderingStrategy
 
-渲染模式的枚举值。
+The symbol rendering strategy.
 
 **Since:** 23
 
@@ -16,7 +16,7 @@
 SINGLE = 0
 ```
 
-单色渲染策略。
+The single rendering strategy.
 
 **Since:** 23
 
@@ -34,7 +34,7 @@ SINGLE = 0
 MULTIPLE_COLOR = 1
 ```
 
-多色渲染策略，最多可设置三种颜色，仅设置一种颜色时更新第一层颜色，其余保持默认值。仅支持颜色值，透明度设置不生效。
+The multiple color rendering strategy.
 
 **Since:** 23
 
@@ -52,7 +52,7 @@ MULTIPLE_COLOR = 1
 MULTIPLE_OPACITY = 2
 ```
 
-分层渲染策略，默认颜色为黑色，可设置一种或多种颜色，但仅应用第一种颜色。预定义透明度：第一层100%，第二层50%，第三层20%。
+The multiple opacity rendering strategy.
 
 **Since:** 23
 

@@ -10,12 +10,6 @@
 
 **系统能力：** SystemCapability.MiscServices.Pasteboard
 
-## 导入模块
-
-```TypeScript
-import { pasteboard } from 'kits/@kit.BasicServicesKit';
-```
-
 ## additions
 
 ```TypeScript
@@ -24,7 +18,7 @@ additions: Record<string, object>
 
 设置其他附加属性数据。不支持动态追加属性，只能通过重新赋值的方式修改附加值，具体见相关示例setProperty， 默认为空。
 
-**类型：** [Record](../../apis-default/arkts-apis/arkts-record-t.md)&lt;string, object&gt;
+**类型：** Record&lt;string, object&gt;
 
 **起始版本：** 7
 

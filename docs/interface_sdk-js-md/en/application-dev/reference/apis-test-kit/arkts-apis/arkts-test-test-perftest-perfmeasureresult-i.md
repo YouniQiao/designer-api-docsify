@@ -1,6 +1,6 @@
 # PerfMeasureResult
 
-性能指标对应测量结果数据。
+Represents the measurement result data corresponding to the performance metric.
 
 **Since:** 20
 
@@ -22,7 +22,7 @@ import { PerfTestStrategy, PerfMetric, PerfTest, PerfMeasureResult } from 'kits/
 readonly average: double
 ```
 
-各轮测量数据平均值（剔除为-1的数据后计算）。
+Average value of the measurement data of each round (the value **-1** is excluded).
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：double
 
@@ -42,7 +42,7 @@ readonly average: double
 readonly maximum: double
 ```
 
-各轮测量数据最大值（剔除为-1的数据后计算）。
+Maximum value of the measurement data of each round (the value **-1** is excluded).
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：double
 
@@ -62,7 +62,7 @@ readonly maximum: double
 readonly metric: PerfMetric
 ```
 
-被测性能指标。
+Performance metric to test.
 
 **Type:** [PerfMetric](arkts-test-test-perftest-perfmetric-e.md)
 
@@ -82,7 +82,7 @@ readonly metric: PerfMetric
 readonly minimum: double
 ```
 
-各轮测量数据最小值（剔除为-1的数据后计算）。
+Minimum value of the measurement data of each round (the value **-1** is excluded).
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：double
 
@@ -102,7 +102,7 @@ readonly minimum: double
 readonly roundValues: Array<double>
 ```
 
-被测性能指标的各轮测量数据值，单位与对应PerfMetric指标一致。当数据采集失败时返回-1。
+Measurement data value of each round of the tested performance metric. The unit is the same as that of the corresponding {@link PerfMetric}. If data collection fails, the value **-1** is returned.
 
 **Type:** ArkTS-Dyn: Array&lt;number&gt;  <br>ArkTS-Sta：Array&lt;double&gt;
 

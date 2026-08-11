@@ -4,7 +4,7 @@
 declare type OnChangeCallback = (value: boolean) => void
 ```
 
-操作复选框/开关/单选按钮时的回调函数。
+Callback function when operate the checkbox/switch/radio.
 
 **Since:** 26.0.0
 
@@ -20,5 +20,5 @@ declare type OnChangeCallback = (value: boolean) => void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | boolean | Yes | 复选框/开关/单选按钮的值。 |
+| value | boolean | Yes | The value of checkbox/switch/radio. |
 

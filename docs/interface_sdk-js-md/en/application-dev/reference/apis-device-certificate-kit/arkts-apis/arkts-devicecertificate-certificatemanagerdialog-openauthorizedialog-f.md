@@ -12,7 +12,7 @@ import { certificateManagerDialog } from 'kits/@kit.DeviceCertificateKit';
 function openAuthorizeDialog(context: common.Context): Promise<string>
 ```
 
-打开证书管理对话框的证书凭据授权页面。在弹出的页面中，用户可以为应用授权使用证书凭据。调用成功后，应用可通过接口返回的授权证书凭据uri进行签名、验签和查询详情操作。使用Promise异步回调。
+Opens the authorization page of the certificate management dialog box to grant a credential to the application.After the API is successfully called, the app can use the URI of the authorization certificate returned by the API to sign, verify the signature, and query details.This API uses a promise to return the result.
 
 **Since:** 20
 
@@ -30,23 +30,23 @@ function openAuthorizeDialog(context: common.Context): Promise<string>
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| context | common.Context | Yes | 表示应用的上下文信息。 |
+| context | common.Context | Yes | Context of the application. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;string&gt; | Promise对象。表示返回授权证书uri的结果，最大长度为256字节。 |
+| Promise&lt;string&gt; | Promise used to return the URI of the certificate authorized. The value contains up to 256 bytes. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1. A mandatory parameter is left unspecified. 2. Incorrect parameter type. 3. Parameter verification failed. |
-| 801 | The certificate management application Hap is not preinstalled in the system, and the capability is not supported.<br>**Applicable version:** 26.0.0 and later |
-| 29700001 | Internal error. Possible causes: 1. IPC communication failed; &lt;br&gt;2. Memory operation error; 3. File operation error. Please try again. |
-| 29700002 | The user cancels the authorization. |
-| 201 | Permission verification failed. The application does not have the permission required to call the API. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. A mandatory parameter is left unspecified. 2. Incorrect parameter type. 3. Parameter verification failed. |
+| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | The certificate management application Hap is not preinstalled in the system, and the capability is not supported.<br>**Applicable version:** 26.0.0 and later |
+| [29700001](../errorcode-certManagerDialog.md#29700001-internal-error) | Internal error. Possible causes: 1. IPC communication failed; &lt;br&gt;2. Memory operation error; 3. File operation error. Please try again. |
+| [29700002](../errorcode-certManagerDialog.md#29700002-operation-canceled) | The user cancels the authorization. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed. The application does not have the permission required to call the API. |
 
 ## Examples
 
@@ -59,15 +59,14 @@ import { UIContext } from '@kit.ArkUI';
 /* context is application context information, which is obtained by the caller. The context here is only an example. */
 let context: common.Context = new UIContext().getHostContext() as common.Context;
 try {
-  certificateManagerDialog.openAuthorizeDialog(context).then((uri: string) => {
-    console.info(`Succeeded in authorizing certificate, uri: ${uri}`)
-  }).catch((error: Error) => {
-    let err = error as BusinessError;
-    console.error(`Failed to authorize certificate. Code: ${err.code}, message: ${err.message}`);
-  });
+    certificateManagerDialog.openAuthorizeDialog(context).then((uri: string) => {
+        console.info(`Success to authorize certificate, uri: ${uri}`)
+    }).catch((err: BusinessError) => {
+        console.error(`Failed to authorize certificate. Code: ${err.code}, message: ${err.message}`);
+    });
 } catch (err) {
-  let error = err as BusinessError;
-  console.error(`Failed to authorize certificate. Code: ${error.code}, message: ${error.message}`);
+    let error = err as BusinessError;
+    console.error(`Failed to authorize certificate. Code: ${error.code}, message: ${error.message}`);
 }
 ```
 
@@ -78,7 +77,7 @@ try {
 function openAuthorizeDialog(context: common.Context, authorizeRequest: AuthorizeRequest): Promise<CertReference>
 ```
 
-打开证书管理对话框的证书凭据授权页面。在弹出的页面中，用户可以为应用授权使用证书凭据。调用成功后，应用可通过接口返回的授权证书凭据uri进行签名、验签和查询详情操作。可授权的证书类型包括应用证书凭据、用户证书凭据和USB Key证书凭据。使用Promise异步回调。
+Opens the Certificate Credential Authorization page of the Certificate Management dialog box. On the page that is displayed, you can authorize the application to use certificate credentials. After the API is called successfully,the app can use the URI of the authorization certificate returned by the API to sign, verify the signature, and query details. The types of certificates that can be authorized include application certificate credentials, user certificate credentials, and USB Key certificate credentials. Using Promise Asynchronous Callbacks.
 
 **Since:** 22
 
@@ -96,25 +95,25 @@ function openAuthorizeDialog(context: common.Context, authorizeRequest: Authoriz
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| context | common.Context | Yes | 表示应用的上下文信息。 |
-| authorizeRequest | [AuthorizeRequest](arkts-devicecertificate-certificatemanagerdialog-authorizerequest-i.md) | Yes | 表示授权请求信息。 |
+| context | common.Context | Yes | Context of the application. |
+| authorizeRequest | [AuthorizeRequest](arkts-devicecertificate-certificatemanagerdialog-authorizerequest-i.md) | Yes | Authorization request information. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;CertReference&gt; | Promise对象，返回授权证书引用的结果。 |
+| Promise&lt;CertReference&gt; | Promise used to return the result of the authorization certificate reference. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 801 | Capability not supported. |
-| 29700007 | No available certificate for authorization. Possible causes: 1. No certificate matches the filter criteria; 2. All certificates have been deleted. |
-| 29700006 | Indicates that the input parameters validation failed. for example, the parameter format is incorrect or the value range is invalid. |
-| 29700001 | Internal error. Possible causes: 1. IPC communication failed; &lt;br&gt;2. Memory operation error; 3. File operation error; 4. Call other service failed. Please try again. |
-| 29700002 | The user cancels the authorization. |
-| 201 | Permission verification failed. The application does not have the permission required to call the API. |
+| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. |
+| [29700007](../errorcode-certManagerDialog.md#29700007-no-available-authorization-certificate) | No available certificate for authorization. Possible causes: 1. No certificate matches the filter criteria; 2. All certificates have been deleted. |
+| [29700006](../errorcode-certManagerDialog.md#29700006-failed-to-validate-the-input-parameter) | Indicates that the input parameters validation failed. for example, the parameter format is incorrect or the value range is invalid. |
+| [29700001](../errorcode-certManagerDialog.md#29700001-internal-error) | Internal error. Possible causes: 1. IPC communication failed; &lt;br&gt;2. Memory operation error; 3. File operation error; 4. Call other service failed. Please try again. |
+| [29700002](../errorcode-certManagerDialog.md#29700002-operation-canceled) | The user cancels the authorization. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed. The application does not have the permission required to call the API. |
 
 ## Examples
 
@@ -134,16 +133,15 @@ let certTypes: Array<certificateManagerDialog.CertificateType> = [
 let certPurpose: certificateManager.CertificatePurpose = certificateManager.CertificatePurpose.PURPOSE_DEFAULT;
 let authorizeRequest: certificateManagerDialog.AuthorizeRequest = { certTypes: certTypes, certPurpose: certPurpose };
 try {
-  certificateManagerDialog.openAuthorizeDialog(context, authorizeRequest).then((certReference: certificateManagerDialog.CertReference) => {
-    let reference = certReference;
-    console.info(`Succeeded in opening authorize dialog.`)
-  }).catch((error: Error) => {
-    let err = error as BusinessError;
-    console.error(`Failed to open authorize dialog. Code: ${err.code}, message: ${err.message}`);
-  });
+    certificateManagerDialog.openAuthorizeDialog(context, authorizeRequest).then((certReference: certificateManagerDialog.CertReference) => {
+      let reference = certReference;
+      console.info(`Success to open authorize dialog.`)
+    }).catch((err: BusinessError) => {
+        console.error(`Failed to open authorize dialog. Code: ${err.code}, message: ${err.message}`);
+    });
 } catch (err) {
-  let error = err as BusinessError;
-  console.error(`Failed to open authorize dialog. Code: ${error.code}, message: ${error.message}`);
+    let error = err as BusinessError;
+    console.error(`Failed to open authorize dialog. Code: ${error.code}, message: ${error.message}`);
 }
 ```
 

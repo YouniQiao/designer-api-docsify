@@ -12,7 +12,7 @@ import { notificationManager } from 'kits/@kit.NotificationKit';
 function getAllNotificationEnabledBundles(): Promise<Array<BundleOption>>
 ```
 
-获取允许通知的应用列表。使用Promise异步回调。
+Obtains a list of applications that allow notifications. This API uses a promise to return the result.
 
 **Since:** 12
 
@@ -30,17 +30,17 @@ function getAllNotificationEnabledBundles(): Promise<Array<BundleOption>>
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;Array&lt;BundleOption&gt;&gt; | 返回允许通知的应用列表。 |
+| Promise&lt;Array&lt;BundleOption&gt;&gt; | Returns a list of applications that allow notifications. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 201 | Permission denied. |
-| 1600001 | Internal error. |
-| 202 | Not system application to call the interface. |
-| 1600002 | Marshalling or unmarshalling error. |
-| 1600003 | Failed to connect to the service. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
+| [1600001](../errorcode-notification.md#1600001-internal-error) | Internal error. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system application to call the interface. |
+| [1600002](../errorcode-notification.md#1600002-marshalling-or-unmarshalling-error) | Marshalling or unmarshalling error. |
+| [1600003](../errorcode-notification.md#1600003-failed-to-connect-to-the-notification-service) | Failed to connect to the service. |
 
 ## Examples
 
@@ -65,7 +65,7 @@ notificationManager.getAllNotificationEnabledBundles().then((data: Array<notific
 function getAllNotificationEnabledBundles(userId: int): Promise<Array<BundleOption>>
 ```
 
-获取指定用户下允许通知的应用列表。使用Promise异步回调。
+Obtains the list of applications that are allowed to publish notifications by a specified user. This API uses a promise to return the result.
 
 **Since:** 23
 
@@ -83,24 +83,24 @@ function getAllNotificationEnabledBundles(userId: int): Promise<Array<BundleOpti
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| userId | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | 要获取允许通知的应用列表的用户。 |
+| userId | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | Target user. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;Array&lt;BundleOption&gt;&gt; | 返回允许通知的应用列表。 |
+| Promise&lt;Array&lt;BundleOption&gt;&gt; | Returns a list of applications that allow notifications. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 1600008 | The user does not exist. |
-| 201 | Permission denied. |
-| 1600001 | Internal error. |
-| 202 | Not system application to call the interface. |
-| 1600002 | Marshalling or unmarshalling error. |
-| 1600003 | Failed to connect to the service. |
+| [1600008](../errorcode-notification.md#1600008-user-not-found) | The user does not exist. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
+| [1600001](../errorcode-notification.md#1600001-internal-error) | Internal error. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system application to call the interface. |
+| [1600002](../errorcode-notification.md#1600002-marshalling-or-unmarshalling-error) | Marshalling or unmarshalling error. |
+| [1600003](../errorcode-notification.md#1600003-failed-to-connect-to-the-notification-service) | Failed to connect to the service. |
 
 ## Examples
 

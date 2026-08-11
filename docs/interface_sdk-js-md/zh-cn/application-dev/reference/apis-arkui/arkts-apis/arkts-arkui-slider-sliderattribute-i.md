@@ -526,7 +526,7 @@ default showSteps(value: boolean | undefined, options?: SliderShowStepOptions | 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | value | boolean \| undefined | 是 | 当前是否显示步长刻度值。取值为undefined时，按默认值处理。&lt;br/&gt;true：显示刻度值；false：不显示刻度值。&lt;br /&gt;默认值： false |
-| options | [SliderShowStepOptions](../arkts-components/arkts-arkui-slidershowstepoptions-i.md) \| undefined | 否 | 刻度点无障碍文本的配置选项，用于设置与无障碍功能相关的属性。取值为undefined时，默认使用当前刻度点的值作 为无障碍文本信息。&lt;br/&gt;默认值：null |
+| options | [SliderShowStepOptions](arkts-arkui-slider-slidershowstepoptions-i.md) \| undefined | 否 | 刻度点无障碍文本的配置选项，用于设置与无障碍功能相关的属性。取值为undefined时，默认使用当前刻度点的值作 为无障碍文本信息。&lt;br/&gt;默认值：null |
 
 **返回值：**
 

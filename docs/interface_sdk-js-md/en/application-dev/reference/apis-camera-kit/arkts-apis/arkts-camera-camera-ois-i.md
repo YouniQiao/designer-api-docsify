@@ -48,8 +48,8 @@ Sets the OIS mode.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 7400102 | Operation not allowed, the inputDevice or the session is abnormal. |
-| 7400103 | Session not config. |
+| [7400102](../errorcode-camera.md#7400102-invalid-operation) | Operation not allowed, the inputDevice or the session is abnormal. |
+| [7400103](../errorcode-camera.md#7400103-session-not-configured) | Session not config. |
 
 ## setOISModeCustom
 
@@ -88,6 +88,6 @@ Sets custom OIS bias values for each axis.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 7400102 | Operation not allowed, the inputDevice or the session is abnormal. |
-| 7400103 | Session not config. |
+| [7400102](../errorcode-camera.md#7400102-invalid-operation) | Operation not allowed, the inputDevice or the session is abnormal. |
+| [7400103](../errorcode-camera.md#7400103-session-not-configured) | Session not config. |
 

@@ -30,18 +30,3 @@ Sets timeout configuration for all tasks.Used when task-specific timeout configu
 | --- | --- | --- | --- |
 | options | [TimeoutOptions](arkts-basicservices-cachedownload-timeoutoptions-i.md) | No | Task timeout configuration. &lt;br&gt;Default value: Refer to the default value of TimeoutOptions. |
 
-## Examples
-
-```TypeScript
-try {
-  // Set the global timeout options of a task.
-  cacheDownload.setGlobalTimeoutOptions({
-    networkCheckTimeout: 20,
-    httpTotalTimeout: 60,
-  })
-  cacheDownload.download("https://www.example.com", {});
-} catch (err) {
-  console.error(`Failed to download the resource. err code: ${err?.code}, err message: ${err?.message}`);
-}
-```
-

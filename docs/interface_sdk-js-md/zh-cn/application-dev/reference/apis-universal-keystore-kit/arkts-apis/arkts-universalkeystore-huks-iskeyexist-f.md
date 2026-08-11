@@ -1,11 +1,5 @@
 # isKeyExist
 
-## 导入模块
-
-```TypeScript
-import { huks } from 'kits/@kit.UniversalKeystoreKit';
-```
-
 ## isKeyExist
 
 ```TypeScript

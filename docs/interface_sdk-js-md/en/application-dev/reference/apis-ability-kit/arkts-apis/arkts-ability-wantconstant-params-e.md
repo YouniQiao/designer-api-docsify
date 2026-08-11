@@ -1,6 +1,6 @@
 # Params
 
-want的Params操作的常量。
+Defines **Params** (specifying the action that can be performed) in the Want.
 
 **Since:** 9
 
@@ -16,9 +16,9 @@ want的Params操作的常量。
 ABILITY_BACK_TO_OTHER_MISSION_STACK = 'ability.params.backToOtherMissionStack'
 ```
 
-表示是否支持跨任务链返回。
+Whether redirection back across mission stacks is supported.
 
-该参数用于控制跨应用的UIAbility返回逻辑，其核心作用是改变用户执行返回键时的应用跳转行为。例如现有UIAbility A和UIAbility B，当前前台显示的是UIAbility A，随后系统服务又拉起UIAbility B（同时在Want的Params字段配置该参数为true），那么，当UIAbility B退出时，会返回到UIAbility A（即返回到最近一次的访问任务）。如果未配置该参数，则默认直接返回桌面。需要注意的是，该字段仅支持系统设置，三方应用传入该字段不生效。
+This parameter controls the redirection-back logic across applications, altering the application transition behavior when the user presses the back button. For example, if UIAbility A is currently displayed and UIAbility B is launched with this parameter set to **true**, exiting UIAbility B will return to UIAbility A. If this parameter is not set, the system defaults to returning to the home screen. Note that this parameter is only supported for system applications and does not take effect for third-party applications.
 
 **Since:** 9
 
@@ -36,7 +36,7 @@ ABILITY_BACK_TO_OTHER_MISSION_STACK = 'ability.params.backToOtherMissionStack'
 ABILITY_RECOVERY_RESTART = 'ohos.ability.params.abilityRecoveryRestart'
 ```
 
-表示当前Ability是否发生了故障恢复重启。
+Whether the ability has been restarted due to a fault.
 
 **Since:** 10
 
@@ -54,9 +54,10 @@ ABILITY_RECOVERY_RESTART = 'ohos.ability.params.abilityRecoveryRestart'
 CONTENT_TITLE_KEY = 'ohos.extra.param.key.contentTitle'
 ```
 
-表示原子化服务分享的标题。
+Title for sharing in an atomic service.
 
-在跨端分享的[onShare](arkts-ability-app-ability-uiability-uiability-c.md#onshare)回调中，开发者可通过该字段设置分享的标题。
+You can set the sharing title using this field in the  
+[onShare](arkts-ability-app-ability-uiability-uiability-c.md#onshare) callback.
 
 **Since:** 10
 
@@ -74,9 +75,10 @@ CONTENT_TITLE_KEY = 'ohos.extra.param.key.contentTitle'
 SHARE_ABSTRACT_KEY = 'ohos.extra.param.key.shareAbstract'
 ```
 
-表示原子化服务分享的内容摘要。
+Content abstract for sharing in an atomic service.
 
-在跨端分享的[onShare](arkts-ability-app-ability-uiability-uiability-c.md#onshare)回调中，开发者可通过该字段设置分享的摘要。
+You can set the sharing abstract using this field in the  
+[onShare](arkts-ability-app-ability-uiability-uiability-c.md#onshare) callback.
 
 **Since:** 10
 
@@ -94,9 +96,10 @@ SHARE_ABSTRACT_KEY = 'ohos.extra.param.key.shareAbstract'
 SHARE_URL_KEY = 'ohos.extra.param.key.shareUrl'
 ```
 
-表示原子化服务分享的URL链接。
+URL link for sharing in an atomic service.
 
-在跨端分享的[onShare](arkts-ability-app-ability-uiability-uiability-c.md#onshare)回调中，开发者可通过该字段设置分享的URL链接。
+You can set the URL link using this field in the  
+[onShare](arkts-ability-app-ability-uiability-uiability-c.md#onshare) callback.
 
 **Since:** 10
 
@@ -114,7 +117,7 @@ SHARE_URL_KEY = 'ohos.extra.param.key.shareUrl'
 SUPPORT_CONTINUE_PAGE_STACK_KEY = 'ohos.extra.param.key.supportContinuePageStack'
 ```
 
-表示在跨端迁移过程中是否迁移页面栈信息。默认值为true，表示在跨端迁移过程中自动迁移页面栈信息。
+Whether to migrate the page stack information during cross-device migration. The default value is **true**,indicating that the page stack information is automatically migrated during cross-device migration.
 
 **Since:** 10
 
@@ -132,7 +135,7 @@ SUPPORT_CONTINUE_PAGE_STACK_KEY = 'ohos.extra.param.key.supportContinuePageStack
 SUPPORT_CONTINUE_SOURCE_EXIT_KEY = 'ohos.extra.param.key.supportContinueSourceExit'
 ```
 
-表示跨端迁移源端应用是否退出。默认值为true，表示在跨端迁移过程中源端应用自动退出。
+Whether the source application exits during cross-device migration. The default value is** true**, indicating that the source application automatically exits during cross-device migration.
 
 **Since:** 10
 
@@ -150,8 +153,7 @@ SUPPORT_CONTINUE_SOURCE_EXIT_KEY = 'ohos.extra.param.key.supportContinueSourceEx
 SHOW_MODE_KEY = 'ohos.extra.param.key.showMode'
 ```
 
-表示[EmbeddableUIAbility](arkts-ability-app-ability-embeddableuiability-embeddableuiability-c.md)的显示模式，值为枚举类型  
-[ShowMode](arkts-ability-wantconstant-showmode-e.md)
+Display mode of the [EmbeddableUIAbility](arkts-ability-app-ability-embeddableuiability-embeddableuiability-c.md).The value is an enumerated value of [ShowMode](arkts-ability-wantconstant-showmode-e.md).
 
 **Since:** 12
 
@@ -169,7 +171,8 @@ SHOW_MODE_KEY = 'ohos.extra.param.key.showMode'
 PARAMS_STREAM = 'ability.params.stream'
 ```
 
-表示授权给目标方的文件URI列表。对应的value必须是string类型的文件URI数组。文件URI的获取参考[fileUri](../../apis-core-file-kit/arkts-apis/arkts-corefile-fileuri-geturifrompath-f.md/arkts-corefile-fileuri-geturifrompath-f.md#geturifrompath) 。该字段需要与文件URI读写[Flags](arkts-ability-wantconstant-flags-e.md)配合使用。
+List of file URIs authorized to the target. The value must be an array of file URIs of the string type. For details about how to obtain the file URI, see [fileUri](../../apis-core-file-kit/arkts-apis/arkts-corefile-fileuri-geturifrompath-f.md/arkts-corefile-fileuri-geturifrompath-f.md#geturifrompath). This field must be used in conjunction with file URI  
+[read/write flag](arkts-ability-wantconstant-flags-e.md).
 
 **Since:** 12
 
@@ -187,7 +190,7 @@ PARAMS_STREAM = 'ability.params.stream'
 APP_CLONE_INDEX_KEY = 'ohos.extra.param.key.appCloneIndex'
 ```
 
-表示分身应用索引。
+Index of an application clone.
 
 **Since:** 12
 
@@ -205,10 +208,11 @@ APP_CLONE_INDEX_KEY = 'ohos.extra.param.key.appCloneIndex'
 CALLER_REQUEST_CODE = 'ohos.extra.param.key.callerRequestCode'
 ```
 
-表示应用拉起的请求码。
+Request code
 
-当调用[startAbilityForResult](arkts-ability-uiabilitycontext-c.md#startabilityforresult)或  
-[openLink](arkts-ability-uiabilitycontext-c.md#openlink)拉起目标方Ability时，需要目标方返回结果。为了确保目标方能够将结果准确返回到调用方，系统会自动生成唯一的requestCode，以标识本次调用。
+that uniquely identifies the caller of  
+[startAbilityForResult](arkts-ability-uiabilitycontext-c.md#startabilityforresult) or  
+[openLink](arkts-ability-uiabilitycontext-c.md#openlink). When either of the APIs is called to  start an ability, the target ability returns the result to the caller based on the request code.
 
 **Since:** 12
 
@@ -226,9 +230,9 @@ CALLER_REQUEST_CODE = 'ohos.extra.param.key.callerRequestCode'
 PAGE_PATH = 'ohos.param.atomicservice.pagePath'
 ```
 
-表示原子化服务的页面路径。
+Page path for an atomic service.
 
-如果原子化服务的页面跳转是通过[router](../../../ui/arkts-routing.md)实现的，可以使用该参数指定跳转的页面，例如"library/ets/pages/menu"。
+If page redirection in an atomic service is implemented using [router](../../../ui/arkts-routing.md), you can use this parameter to specify the target page, for example, **library/ets/pages/menu**.
 
 **Since:** 12
 
@@ -246,9 +250,11 @@ PAGE_PATH = 'ohos.param.atomicservice.pagePath'
 ROUTER_NAME = 'ohos.param.atomicservice.routerName'
 ```
 
-表示原子化服务的页面路由名称，即进行页面跳转时指定的页面名称。
+Router name for page redirection in an atomic service.
 
-如果原子化服务的页面跳转是通过[Navigation](../../../ui/arkts-navigation-architecture.md)实现的，可以通过ROUTER_NAME、PAGE_SOURCE_FILE及BUILD_FUNCTION联合使用指定跳转的页面。
+If page redirection in an atomic service is implemented using  
+[Navigation](../../../ui/arkts-navigation-architecture.md), you can use **ROUTER_NAME**, **PAGE_SOURCE_FILE**, and  
+**BUILD_FUNCTION** together to specify the target page.
 
 **Since:** 12
 
@@ -266,9 +272,11 @@ ROUTER_NAME = 'ohos.param.atomicservice.routerName'
 PAGE_SOURCE_FILE = 'ohos.param.atomicservice.pageSourceFile'
 ```
 
-表示原子化服务的页面源文件。
+Source file for the page in an atomic service.
 
-如果原子化服务的页面跳转是通过[Navigation](../../../ui/arkts-navigation-architecture.md)实现的，可以通过ROUTER_NAME、PAGE_SOURCE_FILE及BUILD_FUNCTION联合使用指定跳转的页面。
+If page redirection in an atomic service is implemented using  
+[Navigation](../../../ui/arkts-navigation-architecture.md), you can use **ROUTER_NAME**, **PAGE_SOURCE_FILE**, and  
+**BUILD_FUNCTION** together to specify the target page.
 
 **Since:** 12
 
@@ -286,9 +294,11 @@ PAGE_SOURCE_FILE = 'ohos.param.atomicservice.pageSourceFile'
 BUILD_FUNCTION = 'ohos.param.atomicservice.buildFunction'
 ```
 
-表示原子化服务的生成函数。
+Build function for the page in an atomic service.
 
-如果原子化服务的页面跳转是通过[Navigation](../../../ui/arkts-navigation-architecture.md)实现的，可以通过ROUTER_NAME、PAGE_SOURCE_FILE及BUILD_FUNCTION联合使用指定跳转的页面。
+If page redirection in an atomic service is implemented using  
+[Navigation](../../../ui/arkts-navigation-architecture.md), you can use **ROUTER_NAME**, **PAGE_SOURCE_FILE**, and  
+**BUILD_FUNCTION** together to specify the target page.
 
 **Since:** 12
 
@@ -306,9 +316,9 @@ BUILD_FUNCTION = 'ohos.param.atomicservice.buildFunction'
 SUB_PACKAGE_NAME = 'ohos.param.atomicservice.subpackageName'
 ```
 
-表示原子化服务的分包名。应用程序包支持多模块开发，每个应用程序包可能包含多个HAP或HSP。原子化服务为了实现快速启动效果，对HAP和HSP文件大小做了限制，并同时优化了启动机制，原子化服务的这种多模块开发方式称为“分包”。
+Sub-package name for an atomic service. Application packages can be developed with multiple modules, and each package may include one or multiple HAPs or HSPs. To enhance the launch speed, atomic services restrict the size of HAP and HSP files and optimize the startup process. This modular development approach is known as sub-packaging.
 
-打开原子化服务的时候，可以通过设置该参数拉起对应的分包。
+When you open an atomic service, you can use this parameter to activate the specific sub-package.
 
 **Since:** 12
 
@@ -326,9 +336,9 @@ SUB_PACKAGE_NAME = 'ohos.param.atomicservice.subpackageName'
 APP_INSTANCE_KEY = 'ohos.extra.param.key.appInstance'
 ```
 
-表示具体的应用实例。
+Specific application instance.
 
-在[应用创建多实例](../../../quick-start/multiInstance.md)时，系统会为每个实例分配唯一的标识。应用跳转时，开发者可以通过设置该参数指定希望跳转到的已创建的应用实例。
+When you create [multiple instances](../../../quick-start/multiInstance.md) of an application, the system assigns a unique ID to each instance. During application transitions, you can use this parameter to specify which created application instance you want to transition to.
 
 **Since:** 14
 
@@ -344,9 +354,10 @@ APP_INSTANCE_KEY = 'ohos.extra.param.key.appInstance'
 CREATE_APP_INSTANCE_KEY = 'ohos.extra.param.key.createAppInstance'
 ```
 
-表示是否创建新应用实例。默认为false，表示不创建新应用实例。
+Whether to create an application instance. The default value is **false**, indicating that no new application instance is created.
 
-开发者可以通过设置该参数为true拉起新的应用实例。需要注意的是，被拉起的应用需要支持多实例，参考[应用创建多实例](../../../quick-start/multiInstance.md)。
+You can set this parameter to **true** to launch a new application instance. Note that the application to be launched must support multiple instances. For details, see  
+[Creating an Application Multi-Instance](../../../quick-start/multiInstance.md).
 
 **Since:** 14
 
@@ -362,7 +373,7 @@ CREATE_APP_INSTANCE_KEY = 'ohos.extra.param.key.createAppInstance'
 CALLER_APP_CLONE_INDEX = 'ohos.param.callerAppCloneIndex'
 ```
 
-表示拉起方应用的分身索引。
+Clone index of the caller.
 
 **Since:** 14
 
@@ -378,7 +389,7 @@ CALLER_APP_CLONE_INDEX = 'ohos.param.callerAppCloneIndex'
 DESTINATION_PLUGIN_ABILITY = 'ohos.params.pluginAbility'
 ```
 
-指示目标Ability是插件Ability。
+The target ability is a plugin ability.
 
 **Since:** 19
 
@@ -394,9 +405,10 @@ DESTINATION_PLUGIN_ABILITY = 'ohos.params.pluginAbility'
 APP_LAUNCH_TRUSTLIST = 'ohos.params.appLaunchTrustList'
 ```
 
-表示隐式启动时的应用过滤列表。
+Filter list of applications for implicit launch.
 
-隐式启动时仅匹配列表中的应用，值为string类型的[AppIdentifier](./bundleManager/BundleInfo:BundleInfo.AppIdentifier)数组，过滤列表最多支持50个应用，传入空数组不生效。
+Only applications in the list are matched during implicit launch. The value is an array of  
+[AppIdentifier](./bundleManager/BundleInfo:BundleInfo.AppIdentifier) of the string type. The filter list supports a maximum of 50 applications. Passing an empty array will have no effect.
 
 **Since:** 17
 
@@ -414,9 +426,9 @@ APP_LAUNCH_TRUSTLIST = 'ohos.params.appLaunchTrustList'
 ATOMIC_SERVICE_SHARE_ROUTER = 'ohos.params.atomicservice.shareRouter'
 ```
 
-表示被拉起的原子化服务的页面栈信息。仅当拉起方为UIAbilityContext，被拉起方为原子化服务时生效。
+Page stack information of the atomic service being launched. This parameter takes effect only when the caller is a UIAbilityContext and the callee is an atomic service.
 
-例如，某原子化服务中包含首页和第2页，如果希望直接拉起原子化服务的第2页，可以在拉起原子化服务时通过该字段传递第2页的页面栈信息。
+For example, if an atomic service contains a home page and a second page, and you want to directly launch the second page, you can pass the page stack information of the second page through this field when launching the atomic service.
 
 **Since:** 20
 
@@ -434,15 +446,15 @@ ATOMIC_SERVICE_SHARE_ROUTER = 'ohos.params.atomicservice.shareRouter'
 LAUNCH_REASON_MESSAGE = 'ohos.params.launchReasonMessage'
 ```
 
-表示应用拉起的原因。
+Reason for launching the application.
 
-调用方必须为系统应用，且需要申请ohos.permission.SET_LAUNCH_REASON_MESSAGE权限。当前取值支持：
+The caller must be a system application and must request the ohos.permission.SET_LAUNCH_REASON_MESSAGE permission. The following values are supported:
 
-"ReasonMessage_SystemShare"：表示系统分享拉起。
+**ReasonMessage_SystemShare**: The application is launched through system sharing.
 
-"ReasonMessage_DesktopShortcut"：表示桌面快捷方式拉起。
+**ReasonMessage_DesktopShortcut**: The application is launched through a home screen shortcut.
 
-"ReasonMessage_Notification"：表示通知拉起。
+**ReasonMessage_Notification**: The application is launched through a notification.
 
 **Since:** 18
 
@@ -460,9 +472,10 @@ LAUNCH_REASON_MESSAGE = 'ohos.params.launchReasonMessage'
 ABILITY_UNIFIED_DATA_KEY = 'ohos.param.ability.udKey'
 ```
 
-表示基于[UDMF](../../apis-arkdata/arkts-apis/arkts-data-unifieddatachannel.md/arkts-data-unifieddatachannel.md)进行文件分享时使用的唯一标识。该字段只允许系统应用设置，三方应用可以读取。
+Unique identifier for file sharing based on [UDMF](../../apis-arkdata/arkts-apis/arkts-data-unifieddatachannel.md/arkts-data-unifieddatachannel.md).This field can only be set by system applications, but third-party applications can read it.
 
-当Want中存在URI授权Flag字段（即[FLAG_AUTH_READ_URI_PERMISSION](arkts-ability-wantconstant-flags-e.md)或[FLAG_AUTH_WRITE_URI_PERMISSION](arkts-ability-wantconstant-flags-e.md)），且同时存在PARAMS_STREAM字段时，该字段将不生效。
+If the Want contains a URI authorization flag (for example, [FLAG_AUTH_READ_URI_PERMISSION](arkts-ability-wantconstant-flags-e.md) or  
+[FLAG_AUTH_WRITE_URI_PERMISSION](arkts-ability-wantconstant-flags-e.md)) and the **PARAMS_STREAM** field is also present, this field does not take effect.
 
 **Since:** 20
 

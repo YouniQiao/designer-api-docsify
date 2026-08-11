@@ -22,5 +22,5 @@ HashMap中forEach方法的回调函数。
 | --- | --- | --- | --- |
 | value | V | 是 | 当前遍历到的元素键值对的值。 |
 | key | K | 是 | 当前遍历到的元素键值对的键。 |
-| map | [HashMap](arkts-arkts-util-hashmap-hashmap-c.md)&lt;K, V&gt; | 是 | 当前调用forEach方法的实例对象，默认值为当前实例对象。 |
+| map | [HashMap](arkts-arkts-util-hashmap-hashmap-c.md)&lt;K, V&gt; | 是 | 当前调用forEach方法的HashMap实例对象，默认值为当前实例对象。 |
 

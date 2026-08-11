@@ -1,6 +1,6 @@
 # PairingType
 
-配对类型的枚举。
+Enum for the pairing type.
 
 **Since:** 26.0.0
 
@@ -16,7 +16,7 @@
 NO_PASSKEY_CONFIRMATION = 0
 ```
 
-如果没有通行密钥，用户需要接受或拒绝配对请求。
+Without passkey, the user needs to accept or reject the pairing request.
 
 **Since:** 26.0.0
 
@@ -34,7 +34,7 @@ NO_PASSKEY_CONFIRMATION = 0
 PAIRING_TYPE_PASSCODE = 1
 ```
 
-用户需要输入对端设备显示的passcode。
+The user needs to enter the passcode displayed on the peer device.
 
 **Since:** 26.0.0
 
@@ -52,7 +52,7 @@ PAIRING_TYPE_PASSCODE = 1
 PAIRING_TYPE_NUMBER_COMPARE = 2
 ```
 
-用户需要比较两台设备上显示的数字。
+The user needs to compare the number displayed on both devices.
 
 **Since:** 26.0.0
 

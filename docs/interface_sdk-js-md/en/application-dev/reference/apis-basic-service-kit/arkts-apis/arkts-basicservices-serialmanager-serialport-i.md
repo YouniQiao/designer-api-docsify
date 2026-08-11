@@ -1,6 +1,6 @@
 # SerialPort
 
-串口参数。
+Represents the parameters of a serial port.
 
 **Since:** 19
 
@@ -22,7 +22,7 @@ import { serialManager } from 'kits/@kit.BasicServicesKit';
 deviceName: string
 ```
 
-串口设备名称。
+Serial port device name.
 
 **Type:** string
 
@@ -40,7 +40,7 @@ deviceName: string
 portId: int
 ```
 
-端口号。
+Port number.
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 

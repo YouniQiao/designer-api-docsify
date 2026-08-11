@@ -4,7 +4,7 @@
 type ValueType = string | image.PixelMap | Want | ArrayBuffer
 ```
 
-用于表示允许的数据字段类型。
+Indicates type of value.
 
 **Since:** 9
 
@@ -18,8 +18,8 @@ type ValueType = string | image.PixelMap | Want | ArrayBuffer
 
 | Type | Description |
 | --- | --- |
-| string | 表示string的类型。 |
-| image.PixelMap | 表示[image.PixelMap]{ |
-| Want | 表示[Want]{ |
-| ArrayBuffer | 表示ArrayBuffer的类型。 |
+| string | The value is of the string type. |
+| image.PixelMap | The value is of the [image.PixelMap]{ |
+| Want | The value is of the [Want]{ |
+| ArrayBuffer | The value is of the **ArrayBuffer** type. |
 

@@ -47,5 +47,5 @@ onResponse?: (notificationId: int, buttonOptions: ButtonOptions) => void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | notificationId | ArkTS-Dyn: number  <br>ArkTS-Sta：int | 是 |  |
-| buttonOptions | [ButtonOptions](../../apis-arkui/arkts-apis/arkts-arkui-button-buttonoptions-i.md) | 是 |  |
+| buttonOptions | [ButtonOptions](../../apis-arkui/arkts-apis/arkts-arkui-arkui-advanced-dialog-buttonoptions-c.md) | 是 |  |
 

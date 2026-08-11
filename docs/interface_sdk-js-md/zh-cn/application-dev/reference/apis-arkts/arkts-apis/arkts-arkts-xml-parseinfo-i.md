@@ -10,12 +10,6 @@
 
 **系统能力：** SystemCapability.Utils.Lang
 
-## 导入模块
-
-```TypeScript
-import { xml } from 'kits/@kit.ArkTS';
-```
-
 ## getAttributeCount
 
 ArkTS-Dyn:
@@ -30,7 +24,7 @@ getAttributeCount(): int
 
 ArkTS-Sta: getAttributeCount(): int
 
-获取当前开始标记的属性数。
+当前开始标记的属性数量，用于遍历和处理XML属性。
 
 **起始版本：** 8
 
@@ -46,7 +40,7 @@ ArkTS-Sta: getAttributeCount(): int
 
 | 类型 | 说明 |
 | --- | --- |
-| ArkTS-Dyn: number  <br>ArkTS-Sta：int |  |
+| ArkTS-Dyn: number  <br>ArkTS-Sta：int | 当前开始标记的属性数量，用于遍历和处理XML属性。 |
 
 ## 示例
 
@@ -98,7 +92,7 @@ ArkTS-Sta: getColumnNumber(): int
 
 | 类型 | 说明 |
 | --- | --- |
-| ArkTS-Dyn: number  <br>ArkTS-Sta：int | 返回当前列号。 |
+| ArkTS-Dyn: number  <br>ArkTS-Sta：int | 当前元素的列号（从1开始），用于定位XML解析位置。 |
 
 ## 示例
 
@@ -154,7 +148,7 @@ ArkTS-Sta: getDepth(): int
 
 | 类型 | 说明 |
 | --- | --- |
-| ArkTS-Dyn: number  <br>ArkTS-Sta：int | 返回元素的当前深度。 |
+| ArkTS-Dyn: number  <br>ArkTS-Sta：int | 元素的嵌套深度（从0开始），用于判断XML层级结构。 |
 
 ## 示例
 
@@ -210,7 +204,7 @@ ArkTS-Sta: getLineNumber(): int
 
 | 类型 | 说明 |
 | --- | --- |
-| ArkTS-Dyn: number  <br>ArkTS-Sta：int | 返回当前行号。 |
+| ArkTS-Dyn: number  <br>ArkTS-Sta：int | 当前元素的行号（从1开始），用于定位XML解析位置。 |
 
 ## 示例
 
@@ -254,7 +248,7 @@ getName(): string
 
 | 类型 | 说明 |
 | --- | --- |
-| string | 返回当前元素名称。 |
+| string | 当前元素的名称（不包含命名空间前缀），用于标识XML元素。 |
 
 ## 示例
 
@@ -330,7 +324,7 @@ console.info(str);
 getPrefix(): string
 ```
 
-获取当前元素前缀。
+获取当前元素的命名空间前缀。
 
 **起始版本：** 8
 
@@ -346,7 +340,7 @@ getPrefix(): string
 
 | 类型 | 说明 |
 | --- | --- |
-| string | 返回当前元素前缀。 |
+| string | 返回当前元素的命名空间前缀，如果元素没有命名空间前缀则返回空字符串。 |
 
 ## 示例
 
@@ -394,7 +388,7 @@ getText(): string
 
 | 类型 | 说明 |
 | --- | --- |
-| string | 返回当前事件的文本内容。 |
+| string | 当前事件的文本内容（如标签值、注释等），用于获取解析的XML数据。 |
 
 ## 示例
 
@@ -470,7 +464,7 @@ console.info(str);
 isWhitespace(): boolean
 ```
 
-判断当前事件是否仅包含空格字符。
+判断当前事件是否只包含空格字符。
 
 **起始版本：** 8
 

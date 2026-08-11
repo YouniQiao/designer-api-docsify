@@ -12,26 +12,34 @@ import { update } from 'kits/@kit.BasicServicesKit';
 function getRestorer(): Restorer
 ```
 
-获取恢复出厂设置对象，用于执行恢复出厂设置相关操作。调用此方法后，系统返回Restorer工具类对象，提供三种恢复出厂方式：
+Obtains a **Restorer** object for restoring factory settings. After this API is called, the system returns the   
+**Restorer** utility object. Three factory reset methods are provided:
 
-- factoryReset（普通恢复出厂，用于清除用户数据分区。详见[术语](../../../basic-services/update/update-kit-term.md)）。  
-- forceFactoryReset（强制恢复出厂，用于清除用户数据分区并同步清除文件密钥。详见[术语](../../../basic-services/update/update-kit-term.md)）。  
-- deepFactoryReset（深度恢复出厂，用于通过scope参数指定清除范围：DATA仅清除用户数据分区，DATA_AND_OS同时清除用户数据和操作系统分区。详见[术语](../../../basic-services/update/update-kit-term.md)）。
+- **factoryReset**: Common factory reset. Only data in the user partition is cleared in this mode. For details, see  
+[Upgrading Service Terms](../../../basic-services/update/update-kit-term.md).  
+- **forceFactoryReset**: Forcible factory reset. Both data in the user partition and file keys are cleared in this  
+ mode. For details, see [Upgrading Service Terms](../../../basic-services/update/update-kit-term.md).  
+- **deepFactoryReset**: Deep factory reset. Data in the scope specified by **scope** is cleared in this mode.   
+**DATA**: Clear data in the user partition only; **DATA_AND_OS**: Clear data in both the user partition and OS partition. For details, see [Upgrading Service Terms](../../../basic-services/update/update-kit-term.md).
 
-获取对象后可调用相应方法执行恢复出厂操作，设备将重启恢复到出厂初始状态。
+After obtaining the object, you can call the corresponding method to restore the device to its factory settings. The device will restart and restore to its initial factory settings.
 
-**原理说明**：
+**Overview**
 
-该方法通过系统服务接口获取恢复出厂设置对象，封装了数据分区清除、密钥清除、系统分区清理等核心功能。
+This API obtains a **Restorer** object through the system service interface, and encapsulates core functions such as data partition clearing, key clearing, and system partition clearing.
 
-**约束和限制**：
+**Constraints**
 
-- 恢复出厂操作不可逆，将永久删除用户数据，需提前提醒用户备份重要数据。  
-- 调用factoryReset，deepFactoryReset和getDeepFactoryResetInfo接口时，需要权限ohos.permission.FACTORY_RESET。  
-- 调用forceFactoryReset接口时，需要权限ohos.permission.FORCE_FACTORY_RESET。  
-- 操作过程中设备会自动重启，应用需做好状态保存。  
-- 深度恢复出厂(deepFactoryReset)耗时较长（根据设备存储容量，可能需要1-4小时），必须确保设备电量充足(建议电量>50%)。  
-- 建议在用户通过对话框或界面点击确认按钮后，再执行恢复出厂操作。
+- Restoring factory settings is irreversible and will permanently delete user data. Therefore, remind users to back  
+up important data in advance.  
+- The **ohos.permission.FACTORY_RESET** permission is required for calling **factoryReset**, **deepFactoryReset**,   
+and **getDeepFactoryResetInfo**.  
+- The **ohos.permission.FORCE_FACTORY_RESET** permission is required for calling **forceFactoryReset**.  
+- During the operation, the device automatically restarts. The app status needs to be saved.  
+- **deepFactoryReset** takes a long time (1 to 4 hours depending on the device storage capacity). Ensure that the   
+device has sufficient battery power (recommended battery level: > 50%).  
+- You are advised to perform the factory reset operation after clicking the confirmation button in the dialog box   
+or on the screen.
 
 **Since:** 9
 
@@ -47,18 +55,21 @@ function getRestorer(): Restorer
 
 | Type | Description |
 | --- | --- |
-| [Restorer](arkts-basicservices-update-restorer-i-sys.md) | 用于执行恢复出厂设置相关操作的工具类对象。 |
+| [Restorer](arkts-basicservices-update-restorer-i-sys.md) | Utility object used to perform factory reset operations. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 202 | Permission verification failed. A non-system application calls a system API. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
 
 ## Examples
 
 ```TypeScript
-// Obtain a Restorer object for restoring factory settings.
-  let factoryRestorer = update.getRestorer();
+try {
+  let restorer = update.getRestorer();
+} catch(error) {
+  console.error(`Fail to get restorer: ${error}`);
+}
 ```
 

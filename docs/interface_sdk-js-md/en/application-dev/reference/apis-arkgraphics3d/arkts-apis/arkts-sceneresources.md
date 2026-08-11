@@ -6,52 +6,52 @@
 
 | Name | Description |
 | --- | --- |
-| [Animation](arkts-arkgraphics3d-sceneresources-animation-i.md) | 动画资源. |
-| [Blend](arkts-arkgraphics3d-sceneresources-blend-i.md) | 混合接口. |
-| [Effect](arkts-arkgraphics3d-sceneresources-effect-i.md) | 特效资源. |
-| [Environment](arkts-arkgraphics3d-sceneresources-environment-i.md) | 环境资源. |
-| [Image](arkts-arkgraphics3d-sceneresources-image-i.md) | 图像资源. |
-| [ImageStream](arkts-arkgraphics3d-sceneresources-imagestream-i.md) | 图像流资源. |
-| [Material](arkts-arkgraphics3d-sceneresources-material-i.md) | 材质资源. |
-| [MaterialProperty](arkts-arkgraphics3d-sceneresources-materialproperty-i.md) | 材质属性接口. |
-| [Mesh](arkts-arkgraphics3d-sceneresources-mesh-i.md) | 网格节点拥有的网格实例 |
-| [MeshResource](arkts-arkgraphics3d-sceneresources-meshresource-i.md) | 几何节点的网络数据描述资源 |
-| [MetallicRoughnessMaterial](arkts-arkgraphics3d-sceneresources-metallicroughnessmaterial-i.md) | 基于物理的金属粗糙度材质资源. |
-| [Morpher](arkts-arkgraphics3d-sceneresources-morpher-i.md) | 定义用于指定节点几何体形变目标的Morpher接口. |
-| [OcclusionMaterial](arkts-arkgraphics3d-sceneresources-occlusionmaterial-i.md) | 遮挡材质资源 |
-| [RenderSort](arkts-arkgraphics3d-sceneresources-rendersort-i.md) | 渲染排序层。在渲染槽中，层可以定义排序层顺序。可用值为0-63（0最先，63最后）。默认id值为32。典型用法：1. 将渲染排序层设置为对使用深度测试但未写入深度的对象进行渲染。2. 始终首先渲染角色和/或相机对象以剔除大部分视图。3. 对平面层进行排序。 |
-| [Sampler](arkts-arkgraphics3d-sceneresources-sampler-i.md) | 采样器接口 |
-| [SceneResource](arkts-arkgraphics3d-sceneresources-sceneresource-i.md) | 定义被其他3D资源扩展的场景资源. |
-| [Shader](arkts-arkgraphics3d-sceneresources-shader-i.md) | 着色器资源. |
-| [ShaderMaterial](arkts-arkgraphics3d-sceneresources-shadermaterial-i.md) | 着色器材质资源. |
-| [SubMesh](arkts-arkgraphics3d-sceneresources-submesh-i.md) | 子网格资源. |
-| [UnlitMaterial](arkts-arkgraphics3d-sceneresources-unlitmaterial-i.md) | 无光照材质资源 |
+| [Animation](arkts-arkgraphics3d-sceneresources-animation-i.md) | Animation resource, which inherits from [SceneResource](arkts-arkgraphics3d-sceneresources-sceneresource-i.md). |
+| [Blend](arkts-arkgraphics3d-sceneresources-blend-i.md) | Controls the transparency of materials. |
+| [Effect](arkts-arkgraphics3d-sceneresources-effect-i.md) | Effect resource. |
+| [Environment](arkts-arkgraphics3d-sceneresources-environment-i.md) | Environment resource, which inherits from [SceneResource](arkts-arkgraphics3d-sceneresources-sceneresource-i.md). |
+| [Image](arkts-arkgraphics3d-sceneresources-image-i.md) | Image resource. |
+| [ImageStream](arkts-arkgraphics3d-sceneresources-imagestream-i.md) | ImageStream resource. |
+| [Material](arkts-arkgraphics3d-sceneresources-material-i.md) | Material resource, which inherits from [SceneResource](arkts-arkgraphics3d-sceneresources-sceneresource-i.md). |
+| [MaterialProperty](arkts-arkgraphics3d-sceneresources-materialproperty-i.md) | Defines the textures, property factors, and texture samplers used by a material. |
+| [Mesh](arkts-arkgraphics3d-sceneresources-mesh-i.md) | The mesh instance owned by the mesh node |
+| [MeshResource](arkts-arkgraphics3d-sceneresources-meshresource-i.md) | The mesh data description resource for the geometry node |
+| [MetallicRoughnessMaterial](arkts-arkgraphics3d-sceneresources-metallicroughnessmaterial-i.md) | Material resource for creating realistic appearances, using the Metallic-Roughness model based on PBR.It simulates the surface lighting and reflection effects of different materials like metal and plastic by adjusting metallicity and roughness parameters. It inherits from [Material](arkts-arkgraphics3d-sceneresources-material-i.md). |
+| [Morpher](arkts-arkgraphics3d-sceneresources-morpher-i.md) | Defines the deformation of 3D models by adjusting the weights of different deformation targets to create dynamic effects. |
+| [OcclusionMaterial](arkts-arkgraphics3d-sceneresources-occlusionmaterial-i.md) | Occlusion material resource |
+| [RenderSort](arkts-arkgraphics3d-sceneresources-rendersort-i.md) | Describes the order in which materials are rendered, controlling the sequence of drawing in the rendering pipeline. |
+| [Sampler](arkts-arkgraphics3d-sceneresources-sampler-i.md) | Describes the sampling modes used during texture sampling. |
+| [SceneResource](arkts-arkgraphics3d-sceneresources-sceneresource-i.md) | Define scene resource extended by other 3d resource. |
+| [Shader](arkts-arkgraphics3d-sceneresources-shader-i.md) | Shader resource, which inherits from [SceneResource](arkts-arkgraphics3d-sceneresources-sceneresource-i.md). |
+| [ShaderMaterial](arkts-arkgraphics3d-sceneresources-shadermaterial-i.md) | Shader material resource. |
+| [SubMesh](arkts-arkgraphics3d-sceneresources-submesh-i.md) | Sub mesh resource. |
+| [UnlitMaterial](arkts-arkgraphics3d-sceneresources-unlitmaterial-i.md) | Unlit material resource |
 
 <!--Del-->
 ### Interfaces（系统接口）
 
 | Name | Description |
 | --- | --- |
-| [UnlitShadowAlphaMaterial](arkts-arkgraphics3d-sceneresources-unlitshadowalphamaterial-i-sys.md) | 无光照阴影透明度材质资源。此材质继承自[Material](arkts-arkgraphics3d-sceneresources-material-i.md)，仅绘制材质表面阴影。材质启用[Blend](arkts-arkgraphics3d-sceneresources-blend-i.md)属性时，可与背景融合模拟透明效果。 |
+| [UnlitShadowAlphaMaterial](arkts-arkgraphics3d-sceneresources-unlitshadowalphamaterial-i-sys.md) | This material inherits from [Material](arkts-arkgraphics3d-sceneresources-material-i.md) and draws only the surface shadows.When the [Blend](arkts-arkgraphics3d-sceneresources-blend-i.md) property is enabled, the material can be blended with the background to simulate transparency. |
 <!--DelEnd-->
 
 ### Enums
 
 | Name | Description |
 | --- | --- |
-| [CullMode](arkts-arkgraphics3d-sceneresources-cullmode-e.md) | PBR材质剔除模式枚举. |
-| [EnvironmentBackgroundType](arkts-arkgraphics3d-sceneresources-environmentbackgroundtype-e.md) | 环境背景类型枚举. |
-| [MaterialType](arkts-arkgraphics3d-sceneresources-materialtype-e.md) | 材质类型枚举. |
-| [PolygonMode](arkts-arkgraphics3d-sceneresources-polygonmode-e.md) | 多边形模式枚举. |
-| [SamplerAddressMode](arkts-arkgraphics3d-sceneresources-sampleraddressmode-e.md) | 采样器的寻址模式 |
-| [SamplerFilter](arkts-arkgraphics3d-sceneresources-samplerfilter-e.md) | 采样器过滤模式 |
-| [SceneResourceType](arkts-arkgraphics3d-sceneresources-sceneresourcetype-e.md) | 场景资源类型枚举. |
+| [CullMode](arkts-arkgraphics3d-sceneresources-cullmode-e.md) | Enumerates the culling modes of PBR materials. You can improve rendering performance and visual quality by determining whether the front or back faces of objects are culled. |
+| [EnvironmentBackgroundType](arkts-arkgraphics3d-sceneresources-environmentbackgroundtype-e.md) | The enum of environment background type. |
+| [MaterialType](arkts-arkgraphics3d-sceneresources-materialtype-e.md) | Enumerates the material types in a scene. The material type defines how materials in a scene are rendered. |
+| [PolygonMode](arkts-arkgraphics3d-sceneresources-polygonmode-e.md) | The enum of polygon mode. |
+| [SamplerAddressMode](arkts-arkgraphics3d-sceneresources-sampleraddressmode-e.md) | Enumerates the sampler addressing modes, which are used to control how texture coordinates are handled when they go beyond the [0, 1] range. |
+| [SamplerFilter](arkts-arkgraphics3d-sceneresources-samplerfilter-e.md) | Enumerates the filtering modes of a sampler.The filtering mode determines the interpolation method used when sampling textures,controlling how final pixel colors are calculated during texture scaling or deformation. |
+| [SceneResourceType](arkts-arkgraphics3d-sceneresources-sceneresourcetype-e.md) | The enum of SceneResource type. |
 
 <!--Del-->
 ### Enums（系统接口）
 
 | Name | Description |
 | --- | --- |
-| [MaterialType](arkts-arkgraphics3d-sceneresources-materialtype-e-sys.md) | 材质类型枚举. |
+| [MaterialType](arkts-arkgraphics3d-sceneresources-materialtype-e-sys.md) | Enumerates the material types in a scene. The material type defines how materials in a scene are rendered. |
 <!--DelEnd-->
 

@@ -1,6 +1,6 @@
 # ColorContent
 
-指定颜色填充内容。
+Defines the content for color filling.
 
 **Since:** 15
 
@@ -16,8 +16,7 @@
 static readonly ORIGIN: ColorContent
 ```
 
-重置[fillColor](ImageAttribute#fillColor(value: ResourceColor))接口，效果上与不设置  
-[fillColor](ImageAttribute#fillColor(value: ResourceColor))一致。
+Resets the [fillColor](ImageAttribute#fillColor(value: ResourceColor)) API, effectively the same as not setting [fillColor](ImageAttribute#fillColor(value: ResourceColor)).
 
 **Type:** [ColorContent](../arkts-apis/arkts-arkui-image-colorcontent-c.md)
 

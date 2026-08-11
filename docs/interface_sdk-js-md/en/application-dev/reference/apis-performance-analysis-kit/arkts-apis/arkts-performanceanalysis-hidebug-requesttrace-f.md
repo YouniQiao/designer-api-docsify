@@ -12,7 +12,7 @@ import { hidebug } from 'kits/@kit.PerformanceAnalysisKit';
 function requestTrace(config: RequestTraceConfig): Promise<string>
 ```
 
-��ȡ��ǰ���̵�trace��Ϣ������Ӧ��tag��ͼ�񴰿�tag��cpu���Ⱥ�binder�ں���Ϣ��ʹ��Promise�첽�ص����ɼ�trace���ص�.sys�ļ���Ŀ¼�����洢3�ݣ��������ڵ���3��ʱ�ٴε��ýӿڻ��׳�������11400120��
+Requests trace collection with the specified configuration.
 
 **Since:** 24
 
@@ -30,21 +30,21 @@ function requestTrace(config: RequestTraceConfig): Promise<string>
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| config | [RequestTraceConfig](arkts-performanceanalysis-hidebug-requesttraceconfig-i.md) | Yes | trace�ɼ�������Ϣ�� |
+| config | [RequestTraceConfig](arkts-performanceanalysis-hidebug-requesttraceconfig-i.md) | Yes | Trace request configuration. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;string&gt; | Promise���󣬷�����.sys��Ϊ��׺��trace�ļ���Ӧ��ɳ��·���� |
+| Promise&lt;string&gt; | Returns the path of the trace file. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 11400302 | Resource unavailable. |
-| 11400104 | Remote service exception. |
-| 11400120 | Trace storage limit reached. |
+| [11400302](../errorcode-hiviewdfx-hidebug-trace.md#11400302-trace-collection-exceeds-the-resource-quota) | Resource unavailable. |
+| [11400104](../errorcode-hiviewdfx-hidebug-cpuusage.md#11400104-abnormal-cpu-usage) | Remote service exception. |
+| [11400120](../errorcode-hiviewdfx-hidebug-trace.md#11400120-trace-file-storage-limit-reached) | Trace storage limit reached. |
 
 ## Examples
 

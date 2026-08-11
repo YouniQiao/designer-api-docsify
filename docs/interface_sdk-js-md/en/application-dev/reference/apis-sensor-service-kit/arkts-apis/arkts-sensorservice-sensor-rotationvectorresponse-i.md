@@ -1,6 +1,6 @@
 # RotationVectorResponse
 
-旋转矢量传感器数据，继承于[Response](arkts-sensorservice-sensor-response-i.md)。
+Describes the rotation vector sensor data. It extends from [Response](arkts-sensorservice-sensor-response-i.md).
 
 **Inheritance/Implementation:** RotationVectorResponse extends [Response](arkts-sensorservice-sensor-response-i.md)
 
@@ -24,7 +24,7 @@ import { sensor } from 'kits/@kit.SensorServiceKit';
 w: double
 ```
 
-旋转矢量的标量分量，描述设备相对于某个参考方向的旋转状态。单位：弧度（rad）。
+Scalar, which describes the rotation status of the device relative to a reference direction, in radians
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：double
 
@@ -42,7 +42,7 @@ w: double
 x: double
 ```
 
-旋转矢量的x轴分量，表示设备旋转状态在x轴方向的投影。
+X-component of the rotation vector.
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：double
 
@@ -60,7 +60,7 @@ x: double
 y: double
 ```
 
-旋转矢量的y轴分量，表示设备旋转状态在y轴方向的投影。
+Y-component of the rotation vector.
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：double
 
@@ -78,7 +78,7 @@ y: double
 z: double
 ```
 
-旋转矢量的z轴分量，表示设备旋转状态在z轴方向的投影。
+Z-component of the rotation vector.
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：double
 

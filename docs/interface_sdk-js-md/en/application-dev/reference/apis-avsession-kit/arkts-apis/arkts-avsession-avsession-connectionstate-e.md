@@ -1,6 +1,6 @@
 # ConnectionState
 
-连接状态枚举。
+Define the device connection state.
 
 **Since:** 10
 
@@ -16,7 +16,7 @@
 STATE_CONNECTING = 0
 ```
 
-设备连接中。
+A connection state indicating the device is in the process of connecting.
 
 **Since:** 10
 
@@ -34,7 +34,7 @@ STATE_CONNECTING = 0
 STATE_CONNECTED = 1
 ```
 
-设备连接成功。
+A connection state indicating the device is connected.
 
 **Since:** 10
 
@@ -52,7 +52,7 @@ STATE_CONNECTED = 1
 STATE_DISCONNECTED = 6
 ```
 
-设备断开连接。
+The default connection state indicating the device is disconnected.
 
 **Since:** 10
 

@@ -1,11 +1,5 @@
 # setScreenOffTime（系统接口）
 
-## 导入模块
-
-```TypeScript
-import { power } from 'kits/@kit.BasicServicesKit';
-```
-
 ## setScreenOffTime
 
 ```TypeScript
@@ -37,19 +31,19 @@ function setScreenOffTime(timeout: long): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1. Parameter verification failed. |
-| 801 | Capability not supported. This API cannot work in car devices.<br>**适用版本：** 26.1.0+ |
-| 201 | Permission verification failed. The application does not have the permission required to call the API.<br>**适用版本：** 19+ |
-| 202 | Permission verification failed. A non-system application calls a system API. |
-| 4900101 | Failed to connect to the service. |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1. Parameter verification failed. |
+| [801](../../errorcode-universal.md#801-该设备不支持此api) | Capability not supported. This API cannot work in car devices.<br>**适用版本：** 26.1.0+ |
+| [201](../../errorcode-universal.md#201-权限校验失败) | Permission verification failed. The application does not have the permission required to call the API.<br>**适用版本：** 19+ |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed. A non-system application calls a system API. |
+| [4900101](../../apis-basic-services-kit/errorcode-power.md#4900101-连接服务失败) | Failed to connect to the service. |
 
 ## 示例
 
 ```TypeScript
 try {
     power.setScreenOffTime(30000);
-} catch (err) {
-    console.error(`Failed to set screen off time. Code: ${err.code}, message: ${err.message}`);
+} catch(err) {
+    console.error('set screen off time failed, err: ' + err);
 }
 ```
 

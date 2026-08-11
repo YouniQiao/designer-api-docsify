@@ -1,6 +1,6 @@
 # Flags
 
-Flags说明。用于表示处理Want的方式。
+Enumerates the flags that specify how the Want will be handled.
 
 **Since:** 6
 
@@ -20,7 +20,7 @@ Flags说明。用于表示处理Want的方式。
 FLAG_AUTH_PERSISTABLE_URI_PERMISSION = 0x00000040
 ```
 
-指示URI上可能持久化的授权。
+Grants the permission to make the URI persistent.
 
 **Since:** 6
 
@@ -40,7 +40,7 @@ FLAG_AUTH_PERSISTABLE_URI_PERMISSION = 0x00000040
 FLAG_AUTH_PREFIX_URI_PERMISSION = 0x00000080
 ```
 
-按照前缀匹配的方式验证URI权限。
+Grants the permission to verify URIs by prefix matching.
 
 **Since:** 6
 
@@ -60,7 +60,7 @@ FLAG_AUTH_PREFIX_URI_PERMISSION = 0x00000080
 FLAG_ABILITY_CONTINUATION_REVERSIBLE = 0x00000400
 ```
 
-表示迁移是可拉回的。
+Indicates that ability continuation is reversible.
 
 **Since:** 6
 

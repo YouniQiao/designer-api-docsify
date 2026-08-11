@@ -12,19 +12,15 @@ import { LevelMode, ImmersiveMode, LevelOrder } from 'kits/@kit.ArkUI';
 function showActionMenu(options: ActionMenuOptions, callback: AsyncCallback<ActionMenuSuccessResponse>): void
 ```
 
-创建并显示操作菜单，菜单响应结果使用callback异步回调返回。
+Creates and displays an action menu. This API uses an asynchronous callback to return the result.
 
-> **说明：**
+> **NOTE：**
 > 
-> - 从API version 9开始支持，从API version 18开始废弃，建议使用[showActionMenu](arkts-apis-uicontext-promptaction.md#showactionmenu11)替代。
-showActionMenu需先通过[UIContext](arkts-apis-uicontext-uicontext.md)中的  
-[getPromptAction](arkts-apis-uicontext-uicontext.md#getpromptaction)方法获取  
-[PromptAction](arkts-apis-uicontext-promptaction.md)对象，然后通过该对象进行调用。且直接使用showActionMenu可能导致  
-[UI上下文不明确](../../ui/arkts-global-interface.md#ui上下文不明确)的问题。  
+> - This API is supported since API version 9 and deprecated since API version 18.
+You are advised to use [showActionMenu](arkts-apis-uicontext-promptaction.md#showactionmenu11) instead. Before calling this API, you need to obtain the [PromptAction](arkts-apis-uicontext-promptaction.md) object  using the [getPromptAction](arkts-apis-uicontext-uicontext.md#getpromptaction) method in [UIContext](arkts-apis-uicontext-uicontext.md). Directly using **showActionMenu** can lead to the issue of [ambiguous UI context](../../ui/arkts-global-interface.md#ambiguous-ui-context).  
 > 
-> - 从API version 11开始，可以通过使用[UIContext](arkts-apis-uicontext-uicontext.md)中的
-[getPromptAction](arkts-apis-uicontext-uicontext.md#getpromptaction)方法获取当前UI上下文关联的  
-[PromptAction](arkts-apis-uicontext-promptaction.md)对象。
+> - Since API version 11, you can use the [getPromptAction](arkts-apis-uicontext-uicontext.md#getpromptaction) API
+in [UIContext](arkts-apis-uicontext-uicontext.md) to obtain the [PromptAction](arkts-apis-uicontext-promptaction.md) object  associated with the current UI context.
 
 **Since:** 9
 
@@ -44,15 +40,15 @@ showActionMenu需先通过[UIContext](arkts-apis-uicontext-uicontext.md)中的
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| options | [ActionMenuOptions](arkts-arkui-prompt-actionmenuoptions-i.md) | Yes | 操作菜单选项。 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;ActionMenuSuccessResponse&gt; | Yes | 回调函数。弹出操作菜单成功时，err为undefined， data为获取到的操作菜单响应结果；失败时，err为错误对象。 |
+| options | [ActionMenuOptions](arkts-arkui-prompt-actionmenuoptions-i.md) | Yes | Action menu options. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;ActionMenuSuccessResponse&gt; | Yes | Callback used to return the result. On success, **err** is **undefined** and **data** contains the action menu response. On failure, **err** provides error details. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 100001 | Internal error. |
-| 401 | Parameter error. Possible causes: &lt;br&gt; 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameters types. &lt;br&gt; 3. Parameter verification failed. |
+| [100001](../errorcode-internal.md#100001-internal-error) | Internal error. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: &lt;br&gt; 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameters types. &lt;br&gt; 3. Parameter verification failed. |
 
 ## Examples
 
@@ -167,19 +163,15 @@ struct Index {
 function showActionMenu(options: ActionMenuOptions): Promise<ActionMenuSuccessResponse>
 ```
 
-创建并显示操作菜单，菜单响应后通过Promise返回结果。
+Creates and displays an action menu in the given settings. This API uses a promise to return the result.
 
-> **说明：**
+> **NOTE：**
 > 
-> - 从API version 9开始支持，从API version 18开始废弃，建议使用[showActionMenu](arkts-apis-uicontext-promptaction.md#showactionmenu)替代。
-showActionMenu需先通过[UIContext](arkts-apis-uicontext-uicontext.md)中的  
-[getPromptAction](arkts-apis-uicontext-uicontext.md#getpromptaction)方法获取  
-[PromptAction](arkts-apis-uicontext-promptaction.md)对象，然后通过该对象进行调用。且直接使用showActionMenu可能导致  
-[UI上下文不明确](../../ui/arkts-global-interface.md#ui上下文不明确)的问题。  
+> - This API is supported since API version 9 and deprecated since API version 18.
+You are advised to use [showActionMenu](arkts-apis-uicontext-promptaction.md#showactionmenu) instead. Before calling this API, you need to obtain the [PromptAction](arkts-apis-uicontext-promptaction.md) object using the [getPromptAction](arkts-apis-uicontext-uicontext.md#getpromptaction) method in [UIContext](arkts-apis-uicontext-uicontext.md). Directly using **showActionMenu** can lead to the issue of [ambiguous UI context](../../ui/arkts-global-interface.md#ambiguous-ui-context).  
 > 
-> - 从API version 10开始，可以通过使用[UIContext](arkts-apis-uicontext-uicontext.md)中的
-[getPromptAction](arkts-apis-uicontext-uicontext.md#getpromptaction)方法获取当前UI上下文关联的  
-[PromptAction](arkts-apis-uicontext-promptaction.md)对象。
+> - Since API version 10, you can use the [getPromptAction](arkts-apis-uicontext-uicontext.md#getpromptaction)
+API in [UIContext](arkts-apis-uicontext-uicontext.md) to obtain the [PromptAction](arkts-apis-uicontext-promptaction.md) object associated with the current UI context.
 
 **Since:** 9
 
@@ -199,20 +191,20 @@ showActionMenu需先通过[UIContext](arkts-apis-uicontext-uicontext.md)中的
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| options | [ActionMenuOptions](arkts-arkui-prompt-actionmenuoptions-i.md) | Yes | 操作菜单选项。 |
+| options | [ActionMenuOptions](arkts-arkui-prompt-actionmenuoptions-i.md) | Yes | Promise that returns the action menu response. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;ActionMenuSuccessResponse&gt; | Promise对象，返回菜单的响应结果。 |
+| Promise&lt;ActionMenuSuccessResponse&gt; | Promise that returns the action menu response. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 100001 | Internal error. |
-| 401 | Parameter error. Possible causes: &lt;br&gt; 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameters types. &lt;br&gt; 3. Parameter verification failed. |
+| [100001](../errorcode-internal.md#100001-internal-error) | Internal error. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: &lt;br&gt; 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameters types. &lt;br&gt; 3. Parameter verification failed. |
 
 ## Examples
 

@@ -1,6 +1,6 @@
 # CertResult
 
-表示执行结果的枚举。
+Enumerates the error codes.
 
 **Since:** 9
 
@@ -16,7 +16,7 @@
 INVALID_PARAMS = 401
 ```
 
-非法入参。
+Invalid parameters.
 
 **Since:** 9
 
@@ -34,7 +34,7 @@ INVALID_PARAMS = 401
 NOT_SUPPORT = 801
 ```
 
-操作不支持。
+This operation is not supported.
 
 **Since:** 9
 
@@ -52,7 +52,7 @@ NOT_SUPPORT = 801
 ERR_OUT_OF_MEMORY = 19020001
 ```
 
-内存错误。
+Memory error.
 
 **Since:** 9
 
@@ -70,7 +70,7 @@ ERR_OUT_OF_MEMORY = 19020001
 ERR_RUNTIME_ERROR = 19020002
 ```
 
-运行时外部错误。
+Runtime error.
 
 **Since:** 9
 
@@ -88,7 +88,7 @@ ERR_RUNTIME_ERROR = 19020002
 ERR_PARAMETER_CHECK_FAILED = 19020003
 ```
 
-参数检查失败。
+Parameter check failed.
 
 **Since:** 20
 
@@ -106,7 +106,7 @@ ERR_PARAMETER_CHECK_FAILED = 19020003
 ERR_CRYPTO_OPERATION = 19030001
 ```
 
-调用三方算法库API出错。
+Crypto operation error.
 
 **Since:** 9
 
@@ -124,7 +124,7 @@ ERR_CRYPTO_OPERATION = 19030001
 ERR_CERT_SIGNATURE_FAILURE = 19030002
 ```
 
-证书签名验证错误。
+The certificate signature verification failed.
 
 **Since:** 9
 
@@ -142,7 +142,7 @@ ERR_CERT_SIGNATURE_FAILURE = 19030002
 ERR_CERT_NOT_YET_VALID = 19030003
 ```
 
-证书尚未生效。
+The certificate has not taken effect.
 
 **Since:** 9
 
@@ -160,7 +160,7 @@ ERR_CERT_NOT_YET_VALID = 19030003
 ERR_CERT_HAS_EXPIRED = 19030004
 ```
 
-证书过期。
+The certificate has expired.
 
 **Since:** 9
 
@@ -178,7 +178,7 @@ ERR_CERT_HAS_EXPIRED = 19030004
 ERR_UNABLE_TO_GET_ISSUER_CERT_LOCALLY = 19030005
 ```
 
-无法获取证书的颁发者。
+Failed to obtain the certificate issuer.
 
 **Since:** 9
 
@@ -196,7 +196,7 @@ ERR_UNABLE_TO_GET_ISSUER_CERT_LOCALLY = 19030005
 ERR_KEYUSAGE_NO_CERTSIGN = 19030006
 ```
 
-证书的密钥用途不含证书签名。
+The key cannot be used for signing a certificate.
 
 **Since:** 9
 
@@ -214,7 +214,7 @@ ERR_KEYUSAGE_NO_CERTSIGN = 19030006
 ERR_KEYUSAGE_NO_DIGITAL_SIGNATURE = 19030007
 ```
 
-证书的密钥用途不含数字签名。
+The key cannot be used for a digital signature.
 
 **Since:** 9
 
@@ -232,7 +232,7 @@ ERR_KEYUSAGE_NO_DIGITAL_SIGNATURE = 19030007
 ERR_MAYBE_WRONG_PASSWORD = 19030008
 ```
 
-私钥密码可能不正确。
+The password for the private key may be incorrect.
 
 **Since:** 18
 
@@ -250,7 +250,7 @@ ERR_MAYBE_WRONG_PASSWORD = 19030008
 ERR_CERT_UNTRUSTED = 19030009
 ```
 
-证书不受信任。
+Untrusted certificate.
 
 **Since:** 26.0.0
 
@@ -270,7 +270,7 @@ ERR_CERT_UNTRUSTED = 19030009
 ERR_CERT_HAS_REVOKED = 19030010
 ```
 
-证书已被吊销。
+The certificate has been revoked.
 
 **Since:** 26.0.0
 
@@ -290,7 +290,7 @@ ERR_CERT_HAS_REVOKED = 19030010
 ERR_UNKNOWN_CRITICAL_EXTENSION = 19030011
 ```
 
-未知的关键扩展。
+Unsupported critical extension.
 
 **Since:** 26.0.0
 
@@ -310,7 +310,7 @@ ERR_UNKNOWN_CRITICAL_EXTENSION = 19030011
 ERR_CERT_HOSTNAME_MISMATCH = 19030012
 ```
 
-证书主机名不匹配。
+Hostname mismatch in the certificate.
 
 **Since:** 26.0.0
 
@@ -330,7 +330,7 @@ ERR_CERT_HOSTNAME_MISMATCH = 19030012
 ERR_CERT_EMAIL_ADDRESS_MISMATCH = 19030013
 ```
 
-证书邮箱地址不匹配。
+Email address mismatch in the certificate.
 
 **Since:** 26.0.0
 
@@ -350,7 +350,7 @@ ERR_CERT_EMAIL_ADDRESS_MISMATCH = 19030013
 ERR_CERT_KEYUSAGE_MISMATCH = 19030014
 ```
 
-证书密钥用途不匹配。
+Key usage mismatch in the certificate.
 
 **Since:** 26.0.0
 
@@ -370,7 +370,7 @@ ERR_CERT_KEYUSAGE_MISMATCH = 19030014
 ERR_CRL_NOT_FOUND = 19030015
 ```
 
-无法获取证书吊销列表。
+Failed to obtain the certificate revocation list.
 
 **Since:** 26.0.0
 
@@ -390,7 +390,7 @@ ERR_CRL_NOT_FOUND = 19030015
 ERR_CRL_NOT_YET_VALID = 19030016
 ```
 
-证书吊销列表尚未生效。
+The certificate revocation list has not taken effect.
 
 **Since:** 26.0.0
 
@@ -410,7 +410,7 @@ ERR_CRL_NOT_YET_VALID = 19030016
 ERR_CRL_HAS_EXPIRED = 19030017
 ```
 
-证书吊销列表已过期。
+The certificate revocation list has expired.
 
 **Since:** 26.0.0
 
@@ -430,7 +430,7 @@ ERR_CRL_HAS_EXPIRED = 19030017
 ERR_CRL_SIGNATURE_FAILURE = 19030018
 ```
 
-证书吊销列表签名验证失败。
+Failed to verify the signature of the certificate revocation list.
 
 **Since:** 26.0.0
 
@@ -450,7 +450,7 @@ ERR_CRL_SIGNATURE_FAILURE = 19030018
 ERR_CRL_ISSUER_NOT_FOUND = 19030019
 ```
 
-无法获取证书吊销列表颁发者。
+Failed to find the issuer of the certificate revocation list.
 
 **Since:** 26.0.0
 
@@ -470,7 +470,7 @@ ERR_CRL_ISSUER_NOT_FOUND = 19030019
 ERR_OCSP_RESPONSE_NOT_FOUND = 19030020
 ```
 
-无法获取在线证书状态协议（OCSP）响应。
+Failed to obtain the OCSP response.
 
 **Since:** 26.0.0
 
@@ -490,7 +490,7 @@ ERR_OCSP_RESPONSE_NOT_FOUND = 19030020
 ERR_OCSP_RESPONSE_INVALID = 19030021
 ```
 
-OCSP响应无效。
+Invalid OCSP response.
 
 **Since:** 26.0.0
 
@@ -510,7 +510,7 @@ OCSP响应无效。
 ERR_OCSP_SIGNATURE_FAILURE = 19030022
 ```
 
-OCSP签名验证失败。
+Failed to verify the OCSP signature.
 
 **Since:** 26.0.0
 
@@ -530,7 +530,7 @@ OCSP签名验证失败。
 ERR_OCSP_CERT_STATUS_UNKNOWN = 19030023
 ```
 
-OCSP证书状态未知。
+Unknown OCSP certificate status.
 
 **Since:** 26.0.0
 
@@ -550,7 +550,7 @@ OCSP证书状态未知。
 ERR_NETWORK_TIMEOUT = 19030024
 ```
 
-网络连接超时。
+Network connection timed out.
 
 **Since:** 26.0.0
 

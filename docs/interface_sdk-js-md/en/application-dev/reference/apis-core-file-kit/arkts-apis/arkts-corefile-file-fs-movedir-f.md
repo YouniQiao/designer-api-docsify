@@ -12,11 +12,11 @@ import { Options, ReaderIteratorResult, Watcher, ReadTextOptions, WatchEventList
 declare function moveDir(src: string, dest: string, mode?: number): Promise<void>
 ```
 
-移动源目录至目标路径下，使用promise异步回调。
+Moves the source directory to the destination directory. This API uses a promise to return the result.
 
-> **说明：**
+> **NOTE：**
 > 
-> 该接口不支持在分布式文件路径下操作。
+> This API is not supported in a distributed directory.
 
 **Since:** 10
 
@@ -30,15 +30,15 @@ declare function moveDir(src: string, dest: string, mode?: number): Promise<void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| src | string | Yes | 源目录的应用沙箱路径。 |
-| dest | string | Yes | 目标目录的应用沙箱路径。 |
-| mode | number | No | 移动模式，默认值为0。&lt;br/&gt;- mode为0，目录级别抛异常。若目标目录下存在与源目录名冲突的非空目录，则抛出异常。&lt;br/&gt;- mode为1，文件级别抛异常。目标目录下存在与 源目录名冲突的目录，若冲突目录下存在同名文件，则抛出异常。源目录下未冲突的文件全部移动至目标目录下，目标目录下未冲突文件将继续保留，且冲突文件信息将在抛出异常的data属性中以Array&lt; [ConflictFiles](arkts-corefile-file-fs-conflictfiles-i.md)&gt;形式提供。&lt;br/&gt;- mode为2，文件级别强制覆盖。目标目录下存在与源目录名冲突的目录，若冲突目录下存在同名文件，则强制覆盖冲突目录下所有同名文件 ，未冲突文件将继续保留。&lt;br/&gt;- mode为3，目录级别强制覆盖。移动源目录至目标目录下，目标目录下移动的目录内容与源目录完全一致。若目标目录下存在与源目录名冲突的目录，该目录下的所有原始文件将被删除。 |
+| src | string | Yes | Application sandbox path of the source directory. |
+| dest | string | Yes | Application sandbox path of the destination directory. |
+| mode | number | No | Move mode. The default value is **0**.&lt;br&gt;- **0**: Throw an exception if a directory conflict occurs.&lt;br&gt; An exception will be thrown if the destination directory contains a non-empty directory with the same name as the source directory.&lt;br&gt;- **1**: Throw an exception if a file conflict occurs.&lt;br&gt; An exception will be thrown if the destination directory contains a directory with the same name as the source directory, and a file with the same name exists in the conflict directory. All the non-conflicting files in the source directory will be moved to the destination directory, and the non-conflicting files in the destination directory will be retained. The data attribute in the error returned provides information about the conflicting files in the Array&lt; [ConflictFiles](arkts-corefile-file-fs-conflictfiles-i.md)&gt; format.&lt;br&gt;- **2**: Forcibly overwrite the conflicting files in the destination directory.&lt;br&gt; When the destination directory contains a directory with the same name as the source directory, the files with the same names in the destination directory are overwritten forcibly; the files without conflicts in the destination directory are retained.&lt;br&gt;- **3**: Forcibly overwrite the conflicting directory.&lt;br &gt; The source directory is moved to the destination directory, and the content of the moved directory is the same as that of the source directory. If the destination directory contains a directory with the same name as the source directory, all original files in the directory will be deleted. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise对象。无返回值。 |
+| Promise&lt;void&gt; | Promise that returns no value. |
 
 **Error codes:**
 
@@ -85,9 +85,9 @@ Moves the source directory to the destination directory. This API uses an asynch
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| src | string | Yes | 源目录的应用沙箱路径。 |
-| dest | string | Yes | 目标目录的应用沙箱路径。 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | 异步移动目录之后的回调。 |
+| src | string | Yes | Application sandbox path of the source directory. |
+| dest | string | Yes | Application sandbox path of the destination directory. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. |
 
 **Error codes:**
 
@@ -119,13 +119,13 @@ Moves the source directory to the destination directory. This API uses an asynch
 declare function moveDir(src: string, dest: string, callback: AsyncCallback<void, Array<ConflictFiles>>): void
 ```
 
-移动源目录至目标路径下。使用callback异步回调。
+Moves the source directory to the destination directory. This API uses an asynchronous callback to return the result.
 
-移动模式为目录级别抛异常。当目标目录下存在与源目录名冲突的目录，则抛出异常。
+An exception will be thrown if a directory conflict occurs, that is, the destination directory contains a directory with the same name as the source directory.
 
-> **说明：**
+> **NOTE：**
 > 
-> 该接口不支持在分布式文件路径下操作。
+> This API is not supported in a distributed directory.
 
 **Since:** 10
 
@@ -139,9 +139,9 @@ declare function moveDir(src: string, dest: string, callback: AsyncCallback<void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| src | string | Yes | 源目录的应用沙箱路径。 |
-| dest | string | Yes | 目标目录的应用沙箱路径。 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void, Array&lt;ConflictFiles&gt;&gt; | Yes | 异步移动目录之后的回调。 |
+| src | string | Yes | Application sandbox path of the source directory. |
+| dest | string | Yes | Application sandbox path of the destination directory. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void, Array&lt;ConflictFiles&gt;&gt; | Yes | Callback used to return the result. |
 
 **Error codes:**
 
@@ -156,7 +156,7 @@ declare function moveDir(src: string, dest: string, callback: AsyncCallback<void
 declare function moveDir(src: string, dest: string, mode: number, callback: AsyncCallback<void>): void
 ```
 
-移动源目录至目标路径下，支持设置移动模式。使用callback异步回调。
+Moves the source directory to the destination directory. You can set the move mode.This API uses an asynchronous callback to return the result.
 
 **Since:** 10
 
@@ -170,9 +170,9 @@ declare function moveDir(src: string, dest: string, mode: number, callback: Asyn
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| src | string | Yes | 源目录的应用沙箱路径。 |
-| dest | string | Yes | 目标目录的应用沙箱路径。 |
-| mode | number | Yes | 移动模式，默认值为0。&lt;br/&gt;- mode为0，目录级别抛异常。若目标目录下存在与源目录名冲突的非空目录，则抛出异常。&lt;br/&gt;- mode为1，文件级别抛异常。目标目录下存在与 源目录名冲突的目录，若冲突目录下存在同名文件，则抛出异常。源目录下未冲突的文件全部移动至目标目录下，目标目录下未冲突文件将继续保留，且冲突文件信息将在抛出异常的data属性中以Array&lt; [ConflictFiles](arkts-corefile-file-fs-conflictfiles-i.md)&gt;形式提供。&lt;br/&gt;- mode为2，文件级别强制覆盖。目标目录下存在与源目录名冲突的目录，若冲突目录下存在同名文件，则强制覆盖冲突目录下所有同名文件 ，未冲突文件将继续保留。&lt;br/&gt;- mode为3，目录级别强制覆盖。移动源目录至目标目录下，目标目录下移动的目录内容与源目录完全一致。若目标目录下存在与源目录名冲突的目录，该目录下的所有原始文件将被删除。 |
+| src | string | Yes | Application sandbox path of the source directory. |
+| dest | string | Yes | Application sandbox path of the destination directory. |
+| mode | number | Yes | Move mode. The default value is 0. &lt;br&gt;0: Throw an exception if a directory conflict occurs. &lt;br&gt;An exception will be thrown if the destination directory contains a non-empty directory with &lt;br&gt;the same name as the source directory. &lt;br&gt;1: Throw an exception if a file conflict occurs. &lt;br&gt;An exception will be thrown if the destination directory contains a directory with &lt;br&gt;the same name as the source directory, and a file with the same name exists in the conflict directory. &lt;br&gt;All the non-conflicting files in the source directory will be moved to the destination directory, &lt;br&gt;and the non-conflicting files in the destination directory will be retained. &lt;br&gt;The data attribute in the error returned provides information about the conflicting files in &lt;br&gt;the Array&lt;ConflictFiles&gt; format. &lt;br&gt;2: Forcibly overwrite the conflicting files in the destination directory. &lt;br&gt;When the destination directory contains a directory with the same name as the source directory, &lt;br&gt;the files with the same names in the destination directory are overwritten forcibly; &lt;br&gt;the files without conflicts in the destination directory are retained. &lt;br&gt;3: Forcibly overwrite the conflicting directory. &lt;br&gt;The source directory is moved to the destination directory, and the content of the moved directory is the &lt;br&gt;same as that of the source directory. If the destination directory contains a directory with the same name &lt;br&gt;as the source directory, all original files in the directory will be deleted. |
 | callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Return the callback function. |
 
 **Error codes:**
@@ -205,11 +205,11 @@ declare function moveDir(src: string, dest: string, mode: number, callback: Asyn
 declare function moveDir(src: string, dest: string, mode: number, callback: AsyncCallback<void, Array<ConflictFiles>>): void
 ```
 
-移动源目录至目标路径下，支持设置移动模式。使用callback异步回调。
+Moves the source directory to the destination directory. You can set the move mode. This API uses an asynchronous callback to return the result.
 
-> **说明：**
+> **NOTE：**
 > 
-> 该接口不支持在分布式文件路径下操作。
+> This API is not supported in a distributed directory.
 
 **Since:** 10
 
@@ -223,10 +223,10 @@ declare function moveDir(src: string, dest: string, mode: number, callback: Asyn
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| src | string | Yes | 源目录的应用沙箱路径。 |
-| dest | string | Yes | 目标目录的应用沙箱路径。 |
-| mode | number | Yes | 移动模式，默认值为0。&lt;br/&gt;- mode为0，目录级别抛异常。若目标目录下存在与源目录名冲突的非空目录，则抛出异常。&lt;br/&gt;- mode为1，文件级别抛异常。目标目录下存在与 源目录名冲突的目录，若冲突目录下存在同名文件，则抛出异常。源目录下未冲突的文件全部移动至目标目录下，目标目录下未冲突文件将继续保留，且冲突文件信息将在抛出异常的data属性中以Array&lt; [ConflictFiles](arkts-corefile-file-fs-conflictfiles-i.md)&gt;形式提供。&lt;br/&gt;- mode为2，文件级别强制覆盖。目标目录下存在与源目录名冲突的目录，若冲突目录下存在同名文件，则强制覆盖冲突目录下所有同名文件 ，未冲突文件将继续保留。&lt;br/&gt;- mode为3，目录级别强制覆盖。移动源目录至目标目录下，目标目录下移动的目录内容与源目录完全一致。若目标目录下存在与源目录名冲突的目录，该目录下的所有原始文件将被删除。 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void, Array&lt;ConflictFiles&gt;&gt; | Yes | 异步移动目录之后的回调。 |
+| src | string | Yes | Application sandbox path of the source directory. |
+| dest | string | Yes | Application sandbox path of the destination directory. |
+| mode | number | Yes | Move mode. The default value is **0**.&lt;br&gt;- **0**: Throw an exception if a directory conflict occurs.&lt;br&gt; An exception will be thrown if the destination directory contains a directory with the same name as the source directory.&lt;br&gt;- **1**: Throw an exception if a file conflict occurs.&lt;br&gt; An exception will be thrown if the destination directory contains a directory with the same name as the source directory, and a file with the same name exists in the conflict directory. All the non-conflicting files in the source directory will be moved to the destination directory, and the non-conflicting files in the destination directory will be retained. The data attribute in the error returned provides information about the conflicting files in the Array&lt; [ConflictFiles](arkts-corefile-file-fs-conflictfiles-i.md)&gt; format.&lt;br&gt;- **2**: Forcibly overwrite the conflicting files in the destination directory.&lt;br&gt; When the destination directory contains a directory with the same name as the source directory, the files with the same names in the destination directory are overwritten forcibly; the files without conflicts in the destination directory are retained.&lt;br&gt;- **3**: Forcibly overwrite the conflicting directory.&lt;br &gt; The source directory is moved to the destination directory, and the content of the moved directory is the same as that of the source directory. If the destination directory contains a directory with the same name as the source directory, all original files in the directory will be deleted. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void, Array&lt;ConflictFiles&gt;&gt; | Yes | Callback used to return the result. |
 
 **Error codes:**
 

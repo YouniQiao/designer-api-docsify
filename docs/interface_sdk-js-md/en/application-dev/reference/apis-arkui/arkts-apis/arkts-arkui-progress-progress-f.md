@@ -8,7 +8,7 @@ export declare function Progress(
 ): ProgressAttribute
 ```
 
-创建进度条组件。
+Defines the Progress component.
 
 **Since:** 23
 
@@ -24,7 +24,7 @@ export declare function Progress(
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| options | [ProgressOptions](../arkts-components/arkts-arkui-progressoptions-i.md) | Yes | 按进度条类型不同，设置不同属性的进度条组件参数。 |
+| options | [ProgressOptions](../arkts-components/arkts-arkui-progressoptions-i.md) | Yes | progress options. |
 
 **Return value:**
 
@@ -41,11 +41,11 @@ export declare function Progress(
 ): ProgressAttribute
 ```
 
-定义Progress组件。
+Defines Progress Component.
 
-**Since:** 26.0.0
+**Since:** 26.1.0
 
-**ArkTS mode:** ArkTS-Sta only, since version 26.0.0.
+**ArkTS mode:** ArkTS-Sta only, since version 26.1.0.
 
 **Decorator:** @Builder
 
@@ -59,7 +59,7 @@ export declare function Progress(
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| style | [CustomBuilderT](../arkts-components/arkts-arkui-custombuildert-t.md)&lt;ProgressAttribute&gt; | Yes | Progress属性实例。 |
+| style | [CustomBuilderT](../arkts-components/arkts-arkui-custombuildert-t.md)&lt;ProgressAttribute&gt; | Yes | Progress attribute instance |
 
 **Return value:**
 

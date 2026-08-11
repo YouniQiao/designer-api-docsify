@@ -1,0 +1,429 @@
+# AudioRecorder
+
+> **说明：**
+> 
+> 从API version 6开始支持，从API version 9开始废弃，建议使用[AVRecorder](arkts-media-media-n.md)替代。
+
+音频录制管理类，用于录制音频媒体。在调用AudioRecorder的方法前，需要先通过  
+[createAudioRecorder()](arkts-media-media-createaudiorecorder-f.md#createaudiorecorder) 构建一个AudioRecorder实例。
+
+**起始版本：** 6
+
+**废弃版本：** 9
+
+**替代接口：** [@ohos.multimedia.media:media](arkts-media-media-n.md)
+
+<!--Device-unnamed-interface AudioRecorder--><!--Device-unnamed-interface AudioRecorder-End-->
+
+**系统能力：** SystemCapability.Multimedia.Media.AudioRecorder
+
+## on('prepare' | 'start' | 'pause' | 'resume' | 'stop' | 'release' | 'reset')
+
+```TypeScript
+on(type: 'prepare' | 'start' | 'pause' | 'resume' | 'stop' | 'release' | 'reset', callback: () => void): void
+```
+
+开始订阅音频录制事件。
+
+> **说明：**
+> > 从API version 6开始支持，从API version 9开始废弃，建议使用
+> [AVRecorder.on('stateChange')](@ohos.multimedia.media:media.AVRecorder.on(type: 'stateChange', callback: OnAVRecorderStateChangeHandler))
+> 替代。
+
+**起始版本：** 6
+
+**废弃版本：** 9
+
+**替代接口：** @ohos.multimedia.media:media.AVRecorder.on(type:
+
+<!--Device-AudioRecorder-on(type: 'prepare' | 'start' | 'pause' | 'resume' | 'stop' | 'release' | 'reset', callback: () => void): void--><!--Device-AudioRecorder-on(type: 'prepare' | 'start' | 'pause' | 'resume' | 'stop' | 'release' | 'reset', callback: () => void): void-End-->
+
+**系统能力：** SystemCapability.Multimedia.Media.AudioRecorder
+
+**参数：**
+
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| type | 'prepare' \| 'start' \| 'pause' \| 'resume' \| 'stop' \| 'release' \| 'reset' | 是 | 录制事件回调类型，支持的事件包括：' prepare' \| 'start' \| 'pause' \| ’resume‘ \| 'stop' \| 'release' \|
+| callback | () =&gt; void | 是 |
+
+## on('prepare' | 'start' | 'pause' | 'resume' | 'stop' | 'release' | 'reset')
+
+```TypeScript
+on(type: 'prepare' | 'start' | 'pause' | 'resume' | 'stop' | 'release' | 'reset', callback: () => void): void
+```
+
+开始订阅音频录制事件。
+
+> **说明：**
+> > 从API version 6开始支持，从API version 9开始废弃，建议使用
+> [AVRecorder.on('stateChange')](@ohos.multimedia.media:media.AVRecorder.on(type: 'stateChange', callback: OnAVRecorderStateChangeHandler))
+> 替代。
+
+**起始版本：** 6
+
+**废弃版本：** 9
+
+**替代接口：** @ohos.multimedia.media:media.AVRecorder.on(type:
+
+<!--Device-AudioRecorder-on(type: 'prepare' | 'start' | 'pause' | 'resume' | 'stop' | 'release' | 'reset', callback: () => void): void--><!--Device-AudioRecorder-on(type: 'prepare' | 'start' | 'pause' | 'resume' | 'stop' | 'release' | 'reset', callback: () => void): void-End-->
+
+**系统能力：** SystemCapability.Multimedia.Media.AudioRecorder
+
+**参数：**
+
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| type | 'prepare' \| 'start' \| 'pause' \| 'resume' \| 'stop' \| 'release' \| 'reset' | 是 | 录制事件回调类型，支持的事件包括：' prepare' \| 'start' \| 'pause' \| ’resume‘ \| 'stop' \| 'release' \|
+| callback | () =&gt; void | 是 |
+
+## on('prepare' | 'start' | 'pause' | 'resume' | 'stop' | 'release' | 'reset')
+
+```TypeScript
+on(type: 'prepare' | 'start' | 'pause' | 'resume' | 'stop' | 'release' | 'reset', callback: () => void): void
+```
+
+开始订阅音频录制事件。
+
+> **说明：**
+> > 从API version 6开始支持，从API version 9开始废弃，建议使用
+> [AVRecorder.on('stateChange')](@ohos.multimedia.media:media.AVRecorder.on(type: 'stateChange', callback: OnAVRecorderStateChangeHandler))
+> 替代。
+
+**起始版本：** 6
+
+**废弃版本：** 9
+
+**替代接口：** @ohos.multimedia.media:media.AVRecorder.on(type:
+
+<!--Device-AudioRecorder-on(type: 'prepare' | 'start' | 'pause' | 'resume' | 'stop' | 'release' | 'reset', callback: () => void): void--><!--Device-AudioRecorder-on(type: 'prepare' | 'start' | 'pause' | 'resume' | 'stop' | 'release' | 'reset', callback: () => void): void-End-->
+
+**系统能力：** SystemCapability.Multimedia.Media.AudioRecorder
+
+**参数：**
+
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| type | 'prepare' \| 'start' \| 'pause' \| 'resume' \| 'stop' \| 'release' \| 'reset' | 是 | 录制事件回调类型，支持的事件包括：' prepare' \| 'start' \| 'pause' \| ’resume‘ \| 'stop' \| 'release' \|
+| callback | () =&gt; void | 是 |
+
+## on('prepare' | 'start' | 'pause' | 'resume' | 'stop' | 'release' | 'reset')
+
+```TypeScript
+on(type: 'prepare' | 'start' | 'pause' | 'resume' | 'stop' | 'release' | 'reset', callback: () => void): void
+```
+
+开始订阅音频录制事件。
+
+> **说明：**
+> > 从API version 6开始支持，从API version 9开始废弃，建议使用
+> [AVRecorder.on('stateChange')](@ohos.multimedia.media:media.AVRecorder.on(type: 'stateChange', callback: OnAVRecorderStateChangeHandler))
+> 替代。
+
+**起始版本：** 6
+
+**废弃版本：** 9
+
+**替代接口：** @ohos.multimedia.media:media.AVRecorder.on(type:
+
+<!--Device-AudioRecorder-on(type: 'prepare' | 'start' | 'pause' | 'resume' | 'stop' | 'release' | 'reset', callback: () => void): void--><!--Device-AudioRecorder-on(type: 'prepare' | 'start' | 'pause' | 'resume' | 'stop' | 'release' | 'reset', callback: () => void): void-End-->
+
+**系统能力：** SystemCapability.Multimedia.Media.AudioRecorder
+
+**参数：**
+
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| type | 'prepare' \| 'start' \| 'pause' \| 'resume' \| 'stop' \| 'release' \| 'reset' | 是 | 录制事件回调类型，支持的事件包括：' prepare' \| 'start' \| 'pause' \| ’resume‘ \| 'stop' \| 'release' \|
+| callback | () =&gt; void | 是 |
+
+## on('prepare' | 'start' | 'pause' | 'resume' | 'stop' | 'release' | 'reset')
+
+```TypeScript
+on(type: 'prepare' | 'start' | 'pause' | 'resume' | 'stop' | 'release' | 'reset', callback: () => void): void
+```
+
+开始订阅音频录制事件。
+
+> **说明：**
+> > 从API version 6开始支持，从API version 9开始废弃，建议使用
+> [AVRecorder.on('stateChange')](@ohos.multimedia.media:media.AVRecorder.on(type: 'stateChange', callback: OnAVRecorderStateChangeHandler))
+> 替代。
+
+**起始版本：** 6
+
+**废弃版本：** 9
+
+**替代接口：** @ohos.multimedia.media:media.AVRecorder.on(type:
+
+<!--Device-AudioRecorder-on(type: 'prepare' | 'start' | 'pause' | 'resume' | 'stop' | 'release' | 'reset', callback: () => void): void--><!--Device-AudioRecorder-on(type: 'prepare' | 'start' | 'pause' | 'resume' | 'stop' | 'release' | 'reset', callback: () => void): void-End-->
+
+**系统能力：** SystemCapability.Multimedia.Media.AudioRecorder
+
+**参数：**
+
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| type | 'prepare' \| 'start' \| 'pause' \| 'resume' \| 'stop' \| 'release' \| 'reset' | 是 | 录制事件回调类型，支持的事件包括：' prepare' \| 'start' \| 'pause' \| ’resume‘ \| 'stop' \| 'release' \|
+| callback | () =&gt; void | 是 |
+
+## on('prepare' | 'start' | 'pause' | 'resume' | 'stop' | 'release' | 'reset')
+
+```TypeScript
+on(type: 'prepare' | 'start' | 'pause' | 'resume' | 'stop' | 'release' | 'reset', callback: () => void): void
+```
+
+开始订阅音频录制事件。
+
+> **说明：**
+> > 从API version 6开始支持，从API version 9开始废弃，建议使用
+> [AVRecorder.on('stateChange')](@ohos.multimedia.media:media.AVRecorder.on(type: 'stateChange', callback: OnAVRecorderStateChangeHandler))
+> 替代。
+
+**起始版本：** 6
+
+**废弃版本：** 9
+
+**替代接口：** @ohos.multimedia.media:media.AVRecorder.on(type:
+
+<!--Device-AudioRecorder-on(type: 'prepare' | 'start' | 'pause' | 'resume' | 'stop' | 'release' | 'reset', callback: () => void): void--><!--Device-AudioRecorder-on(type: 'prepare' | 'start' | 'pause' | 'resume' | 'stop' | 'release' | 'reset', callback: () => void): void-End-->
+
+**系统能力：** SystemCapability.Multimedia.Media.AudioRecorder
+
+**参数：**
+
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| type | 'prepare' \| 'start' \| 'pause' \| 'resume' \| 'stop' \| 'release' \| 'reset' | 是 | 录制事件回调类型，支持的事件包括：' prepare' \| 'start' \| 'pause' \| ’resume‘ \| 'stop' \| 'release' \|
+| callback | () =&gt; void | 是 |
+
+## on('prepare' | 'start' | 'pause' | 'resume' | 'stop' | 'release' | 'reset')
+
+```TypeScript
+on(type: 'prepare' | 'start' | 'pause' | 'resume' | 'stop' | 'release' | 'reset', callback: () => void): void
+```
+
+开始订阅音频录制事件。
+
+> **说明：**
+> > 从API version 6开始支持，从API version 9开始废弃，建议使用
+> [AVRecorder.on('stateChange')](@ohos.multimedia.media:media.AVRecorder.on(type: 'stateChange', callback: OnAVRecorderStateChangeHandler))
+> 替代。
+
+**起始版本：** 6
+
+**废弃版本：** 9
+
+**替代接口：** @ohos.multimedia.media:media.AVRecorder.on(type:
+
+<!--Device-AudioRecorder-on(type: 'prepare' | 'start' | 'pause' | 'resume' | 'stop' | 'release' | 'reset', callback: () => void): void--><!--Device-AudioRecorder-on(type: 'prepare' | 'start' | 'pause' | 'resume' | 'stop' | 'release' | 'reset', callback: () => void): void-End-->
+
+**系统能力：** SystemCapability.Multimedia.Media.AudioRecorder
+
+**参数：**
+
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| type | 'prepare' \| 'start' \| 'pause' \| 'resume' \| 'stop' \| 'release' \| 'reset' | 是 | 录制事件回调类型，支持的事件包括：' prepare' \| 'start' \| 'pause' \| ’resume‘ \| 'stop' \| 'release' \|
+| callback | () =&gt; void | 是 |
+
+## on('error')
+
+```TypeScript
+on(type: 'error', callback: ErrorCallback): void
+```
+
+开始订阅音频录制错误事件，当上报error错误事件后，用户需处理error事件，退出录制操作。
+
+> **说明：**
+> > 从API version 6开始支持，从API version 9开始废弃，建议使用
+> [AVRecorder.on('error')](@ohos.multimedia.media:media.AVRecorder.on(type: 'error', callback: ErrorCallback))
+> 替代。
+
+**起始版本：** 6
+
+**废弃版本：** 9
+
+**替代接口：** @ohos.multimedia.media:media.AVRecorder.on(type:
+
+<!--Device-AudioRecorder-on(type: 'error', callback: ErrorCallback): void--><!--Device-AudioRecorder-on(type: 'error', callback: ErrorCallback): void-End-->
+
+**系统能力：** SystemCapability.Multimedia.Media.AudioRecorder
+
+**参数：**
+
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| type | 'error' | 是 |
+| callback | [ErrorCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-errorcallback-i.md) | 是 |
+
+## pause
+
+```TypeScript
+pause(): void
+```
+
+暂停录制，需要在'start'事件成功触发后，才能调用pause方法。
+
+> **说明：**
+> > 从API version 6开始支持，从API version 9开始废弃，建议使用
+> [AVRecorder.pause](@ohos.multimedia.media:media.AVRecorder.pause(callback: AsyncCallback&lt;void&gt;))替代。
+
+**起始版本：** 6
+
+**废弃版本：** 9
+
+**替代接口：** @ohos.multimedia.media:media.AVRecorder.pause(callback:
+
+<!--Device-AudioRecorder-pause(): void--><!--Device-AudioRecorder-pause(): void-End-->
+
+**系统能力：** SystemCapability.Multimedia.Media.AudioRecorder
+
+## prepare
+
+```TypeScript
+prepare(config: AudioRecorderConfig): void
+```
+
+录音准备。
+
+> **说明：**
+> > 从API version 6开始支持，从API version 9开始废弃，建议使用
+> [AVRecorder.prepare](@ohos.multimedia.media:media.AVRecorder.prepare(config: AVRecorderConfig, callback: AsyncCallback&lt;void&gt;))
+> 替代。
+
+**起始版本：** 6
+
+**废弃版本：** 9
+
+**替代接口：** @ohos.multimedia.media:media.AVRecorder.prepare(config:
+
+**需要权限：** ohos.permission.MICROPHONE
+
+<!--Device-AudioRecorder-prepare(config: AudioRecorderConfig): void--><!--Device-AudioRecorder-prepare(config: AudioRecorderConfig): void-End-->
+
+**系统能力：** SystemCapability.Multimedia.Media.AudioRecorder
+
+**参数：**
+
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| config | [AudioRecorderConfig](arkts-media-multimedia-media-audiorecorderconfig-i.md) | 是 |
+
+**错误码：**
+
+| 错误码ID |
+| --- |
+| [201](../../errorcode-universal.md#201-权限校验失败) |
+
+## release
+
+```TypeScript
+release(): void
+```
+
+释放录音资源。
+
+> **说明：**
+> > 从API version 6开始支持，从API version 9开始废弃，建议使用
+> [AVRecorder.release](@ohos.multimedia.media:media.AVRecorder.release(callback: AsyncCallback&lt;void&gt;))替代。
+
+**起始版本：** 6
+
+**废弃版本：** 9
+
+**替代接口：** @ohos.multimedia.media:media.AVRecorder.release(callback:
+
+<!--Device-AudioRecorder-release(): void--><!--Device-AudioRecorder-release(): void-End-->
+
+**系统能力：** SystemCapability.Multimedia.Media.AudioRecorder
+
+## reset
+
+```TypeScript
+reset(): void
+```
+
+重置录音。
+
+进行重置录音之前，需要先调用stop()停止录音。重置录音之后，需要调用prepare()设置录音参数项，才能再次进行录音。
+
+> **说明：**
+> > 从API version 6开始支持，从API version 9开始废弃，建议使用
+> [AVRecorder.reset](@ohos.multimedia.media:media.AVRecorder.reset(callback: AsyncCallback&lt;void&gt;))替代。
+
+**起始版本：** 6
+
+**废弃版本：** 9
+
+**替代接口：** @ohos.multimedia.media:media.AVRecorder.reset(callback:
+
+<!--Device-AudioRecorder-reset(): void--><!--Device-AudioRecorder-reset(): void-End-->
+
+**系统能力：** SystemCapability.Multimedia.Media.AudioRecorder
+
+## resume
+
+```TypeScript
+resume(): void
+```
+
+恢复录制，需要在'pause'事件成功触发后，才能调用resume方法。
+
+> **说明：**
+> > 从API version 6开始支持，从API version 9开始废弃，建议使用
+> [AVRecorder.resume](@ohos.multimedia.media:media.AVRecorder.resume(callback: AsyncCallback&lt;void&gt;))替代。
+
+**起始版本：** 6
+
+**废弃版本：** 9
+
+**替代接口：** @ohos.multimedia.media:media.AVRecorder.resume(callback:
+
+<!--Device-AudioRecorder-resume(): void--><!--Device-AudioRecorder-resume(): void-End-->
+
+**系统能力：** SystemCapability.Multimedia.Media.AudioRecorder
+
+## start
+
+```TypeScript
+start(): void
+```
+
+开始录制，需在'prepare'事件成功触发后，才能调用start方法。
+
+> **说明：**
+> > 从API version 6开始支持，从API version 9开始废弃，建议使用
+> [AVRecorder.start](@ohos.multimedia.media:media.AVRecorder.start(callback: AsyncCallback&lt;void&gt;))替代。
+
+**起始版本：** 6
+
+**废弃版本：** 9
+
+**替代接口：** @ohos.multimedia.media:media.AVRecorder.start(callback:
+
+<!--Device-AudioRecorder-start(): void--><!--Device-AudioRecorder-start(): void-End-->
+
+**系统能力：** SystemCapability.Multimedia.Media.AudioRecorder
+
+## stop
+
+```TypeScript
+stop(): void
+```
+
+停止录音。
+
+> **说明：**
+> > 从API version 6开始支持，从API version 9开始废弃，建议使用
+> [AVRecorder.stop](@ohos.multimedia.media:media.AVRecorder.stop(callback: AsyncCallback&lt;void&gt;))替代。
+
+**起始版本：** 6
+
+**废弃版本：** 9
+
+**替代接口：** @ohos.multimedia.media:media.AVRecorder.stop(callback:
+
+<!--Device-AudioRecorder-stop(): void--><!--Device-AudioRecorder-stop(): void-End-->
+
+**系统能力：** SystemCapability.Multimedia.Media.AudioRecorder

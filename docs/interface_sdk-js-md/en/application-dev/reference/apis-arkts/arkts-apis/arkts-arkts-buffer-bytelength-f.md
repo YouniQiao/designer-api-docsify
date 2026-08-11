@@ -15,7 +15,7 @@ function byteLength(
   ): number
 ```
 
-根据不同的编码格式，返回指定数据的字节数。
+Obtains the number of bytes of a string based on the encoding format.
 
 **Since:** 9
 
@@ -31,14 +31,14 @@ function byteLength(
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| string | string \| Buffer \| TypedArray \| DataView \| ArrayBuffer \| SharedArrayBuffer | Yes | 要计算字节长度的字符串或其他数据对象。 |
-| encoding | [BufferEncoding](arkts-arkts-fastbuffer-bufferencoding-t.md) | No | 编码格式（string参数为string类型时才有意义）。默认值：'utf8'。 |
+| string | string \| Buffer \| TypedArray \| DataView \| ArrayBuffer \| SharedArrayBuffer | Yes | Target string. |
+| encoding | [BufferEncoding](arkts-arkts-fastbuffer-bufferencoding-t.md) | No | Encoding format. The default value is **'utf8'**. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| number | 返回指定字符串的字节数。 |
+| number | Number of bytes of the string. |
 
 ## Examples
 
@@ -60,7 +60,7 @@ function byteLength(
   ): int
 ```
 
-根据不同的编码格式，返回指定字符串的字节数。
+Obtains the number of bytes of a string based on the encoding format.
 
 **Since:** 23
 
@@ -76,12 +76,12 @@ function byteLength(
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| doc | string \| Buffer \| TypedArray \| DataView \| ArrayBuffer | Yes | 指定字符串。 |
-| encoding | [BufferEncoding](arkts-arkts-fastbuffer-bufferencoding-t.md) | No | 编码格式。默认值：'utf8'。 |
+| doc | string \| Buffer \| TypedArray \| DataView \| ArrayBuffer | Yes | Target string. |
+| encoding | [BufferEncoding](arkts-arkts-fastbuffer-bufferencoding-t.md) | No | Encoding format of the string. The default value is 'utf8'. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| int | 返回指定字符串的字节数 |
+| int | The number of bytes contained within `string` |
 

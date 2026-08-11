@@ -1,6 +1,6 @@
 # StrutStyle
 
-支柱样式，用于控制绘制文本的行间距、基线对齐方式以及其他与行高相关的属性，默认不开启。
+Describes the strut style, which determines the line spacing, baseline alignment mode, and other properties related to the line height when drawing texts. The strut style is disabled by default.
 
 **Since:** 12
 
@@ -22,7 +22,7 @@ import { text } from 'kits/@kit.ArkGraphics2D';
 enabled?: boolean
 ```
 
-是否启用支柱样式，true表示使用，false表示不使用，默认为false。
+Whether to enable the strut style. The value **true** means to enable the strut style, and **false** means the opposite. The default value is **false**.
 
 **Type:** boolean
 
@@ -42,7 +42,7 @@ enabled?: boolean
 fontFamilies?: Array<string>
 ```
 
-字体家族名称列表，默认为空，匹配系统字体。
+Array of font families. By default, the array is empty, indicating that all system fonts are matched.
 
 **Type:** Array&lt;string&gt;
 
@@ -62,7 +62,7 @@ fontFamilies?: Array<string>
 fontSize?: double
 ```
 
-字体大小，浮点数，默认为14.0，单位为物理像素px。
+Font size, a floating-point value with a default value of **14.0**, measured in physical pixels (px).
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：double
 
@@ -82,7 +82,7 @@ fontSize?: double
 fontStyle?: FontStyle
 ```
 
-字体样式，默认为常规样式。
+Font style. The default value is **NORMAL**.
 
 **Type:** [FontStyle](arkts-arkgraphics2d-text-fontstyle-e.md)
 
@@ -102,7 +102,7 @@ fontStyle?: FontStyle
 fontWeight?: FontWeight
 ```
 
-字重，默认为W400。在&lt;!--RP1--&gt;OpenHarmony 6.1&lt;!--RP1End--&gt;之前，仅系统字体中的可变字体支持字重调节；从&lt;!--RP1--&gt;OpenHarmony 6.1&lt;!--RP1End--&gt;开始，系统字体与三方注册字体中的可变字体均支持字重调节。非可变字体设置字重值小于W600时字体粗细无变化，设置字重值大于等于W600时可能会触发伪加粗效果。
+Font weight. The default value is **W400**. Before &lt;!--RP1--&gt;OpenHarmony 6.1&lt;!--RP1End--&gt;, only variable fonts in system fonts support font weight adjustment. Since &lt;!--RP1--&gt;OpenHarmony 6.1&lt;!--RP1End--&gt;, both system fonts and variable fonts in third-party registered fonts support font weight adjustment. For non-variable fonts, the font thickness does not change when the font weight value is set to less than **W600**, and a faux bold effect may be triggered when the font weight value is set to **W600** or greater.
 
 **Type:** [FontWeight](../../apis-arkui/arkts-apis/arkts-arkui-fontweight-e.md)
 
@@ -122,7 +122,7 @@ fontWeight?: FontWeight
 fontWidth?: FontWidth
 ```
 
-字体宽度，默认为NORMAL。
+Font width. The default value is **NORMAL**.
 
 **Type:** [FontWidth](arkts-arkgraphics2d-text-fontwidth-e.md)
 
@@ -142,7 +142,7 @@ fontWidth?: FontWidth
 forceHeight?: boolean
 ```
 
-是否所有行都将使用支柱的高度，true表示使用，false表示不使用，默认为false。
+Whether to forcibly use the strut height for all lines. The value **true** means to forcibly use the strut height for all lines, and **false** means the opposite. The default value is **false**.
 
 **Type:** boolean
 
@@ -162,7 +162,7 @@ forceHeight?: boolean
 halfLeading?: boolean
 ```
 
-true表示将行间距平分至行的顶部与底部，false则不平分，默认为false。
+Whether half leading is enabled. Half leading is the leading split in half and applied equally to the top and bottom edges. The value **true** means that half leading is enabled, and **false** means the opposite. The default value is **false**.
 
 **Type:** boolean
 
@@ -182,7 +182,7 @@ true表示将行间距平分至行的顶部与底部，false则不平分，默�
 height?: double
 ```
 
-行高缩放倍数，浮点数，默认为1.0。
+Scale factor of the line height. The value is a floating point number. The default value is **1.0**.
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：double
 
@@ -202,7 +202,7 @@ height?: double
 heightOverride?: boolean
 ```
 
-是否覆盖高度，true表示覆盖，false表示不覆盖，默认为false。
+Whether to override the height. The value **true** means to override the height, and **false** means the opposite. The default value is **false**.
 
 **Type:** boolean
 
@@ -222,7 +222,8 @@ heightOverride?: boolean
 leading?: double
 ```
 
-自定义应用于支柱的行距，浮点数，单位为物理像素px，默认为-1.0。
+Custom line spacing applied to the strut, a floating-point value in physical pixels (px), with a default value of  
+**-1.0**.
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：double
 

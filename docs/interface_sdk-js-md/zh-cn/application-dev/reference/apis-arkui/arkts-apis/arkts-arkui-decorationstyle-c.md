@@ -34,7 +34,7 @@ constructor(value: DecorationStyleInterface)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | [DecorationStyleInterface](arkts-arkui-decorationstyleinterface-i.md) | 是 | 文本装饰线设置项。 |
+| value | [DecorationStyleInterface](arkts-arkui-styledstring-decorationstyleinterface-i.md) | 是 | 文本装饰线设置项。 |
 
 ## constructor
 
@@ -60,7 +60,7 @@ constructor(value: DecorationStyleInterface, options?: DecorationOptions)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | [DecorationStyleInterface](arkts-arkui-decorationstyleinterface-i.md) | 是 | 文本装饰线设置项。 |
+| value | [DecorationStyleInterface](arkts-arkui-styledstring-decorationstyleinterface-i.md) | 是 | 文本装饰线设置项。 |
 | options | [DecorationOptions](arkts-arkui-styledstring-decorationoptions-i.md) | 否 | 文本装饰线额外配置选项。 |
 
 ## color
@@ -159,7 +159,7 @@ readonly type: TextDecorationType
 
 获取属性字符串的文本装饰线类型。
 
-**类型：** [TextDecorationType](arkts-arkui-textdecorationtype-e.md)
+**类型：** [TextDecorationType](../../apis-arkgraphics2d/arkts-apis/arkts-arkgraphics2d-text-textdecorationtype-e.md)
 
 **起始版本：** 12
 

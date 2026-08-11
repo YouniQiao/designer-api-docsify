@@ -1,9 +1,9 @@
 # BoidsSimWorld (System API)
 
-群组模拟世界接口. 提供群组模拟的播放控制和组件管理.
+The Boids simulation world object, used to manage the lifecycle and components of the Boids simulation.
 
-> **说明：**
-> 使用以下接口前，需先通过[BoidsSimPlugin.getDefaultBoidsSimWorld](arkts-arkgraphics3d-sceneboidssim-boidssimplugin-c-sys.md#getdefaultboidssimworld)获取群组模拟世界实例。
+> **NOTE：**
+> Before using the following APIs, you need to obtain the Boids simulation world instance through BoidsSimPlugin.getDefaultBoidsSimWorld.
 
 **Since:** 26.0.0
 
@@ -21,7 +21,7 @@
 addBoidsSimComponent(node: Node, param: BoidsSimParameters): void
 ```
 
-在指定节点上添加群组模拟组件.
+Adds a flock behavior component at the specified node.
 
 **Since:** 26.0.0
 
@@ -39,8 +39,8 @@ addBoidsSimComponent(node: Node, param: BoidsSimParameters): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| node | [Node](arkts-arkgraphics3d-scenenodes-node-i.md) | Yes | 要添加组件的节点 |
-| param | [BoidsSimParameters](arkts-arkgraphics3d-sceneboidssim-boidssimparameters-i-sys.md) | Yes | 群组模拟参数 |
+| node | [Node](arkts-arkgraphics3d-scenenodes-node-i.md) | Yes | Node of the target scene. |
+| param | [BoidsSimParameters](arkts-arkgraphics3d-sceneboidssim-boidssimparameters-i-sys.md) | Yes | Flock behavior parameters. |
 
 ## addBoidsSimGravityComponent
 
@@ -48,7 +48,7 @@ addBoidsSimComponent(node: Node, param: BoidsSimParameters): void
 addBoidsSimGravityComponent(node: Node, param: BoidsSimGravityParameters): void
 ```
 
-在指定节点上添加引力场组件.
+Adds an attraction field component at the specified node.
 
 **Since:** 26.0.0
 
@@ -66,8 +66,8 @@ addBoidsSimGravityComponent(node: Node, param: BoidsSimGravityParameters): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| node | [Node](arkts-arkgraphics3d-scenenodes-node-i.md) | Yes | 要添加组件的节点 |
-| param | [BoidsSimGravityParameters](arkts-arkgraphics3d-sceneboidssim-boidssimgravityparameters-i-sys.md) | Yes | 引力场参数 |
+| node | [Node](arkts-arkgraphics3d-scenenodes-node-i.md) | Yes | Node of the target scene. |
+| param | [BoidsSimGravityParameters](arkts-arkgraphics3d-sceneboidssim-boidssimgravityparameters-i-sys.md) | Yes | Attraction field parameters. |
 
 ## addBoidsSimRepulsionComponent
 
@@ -75,7 +75,7 @@ addBoidsSimGravityComponent(node: Node, param: BoidsSimGravityParameters): void
 addBoidsSimRepulsionComponent(node: Node, param: BoidsSimRepulsionParameters): void
 ```
 
-在指定节点上添加斥力场组件.
+Adds a repulsion field component at the specified node.
 
 **Since:** 26.0.0
 
@@ -93,8 +93,8 @@ addBoidsSimRepulsionComponent(node: Node, param: BoidsSimRepulsionParameters): v
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| node | [Node](arkts-arkgraphics3d-scenenodes-node-i.md) | Yes | 要添加组件的节点 |
-| param | [BoidsSimRepulsionParameters](arkts-arkgraphics3d-sceneboidssim-boidssimrepulsionparameters-i-sys.md) | Yes | 斥力场参数 |
+| node | [Node](arkts-arkgraphics3d-scenenodes-node-i.md) | Yes | Node of the target scene. |
+| param | [BoidsSimRepulsionParameters](arkts-arkgraphics3d-sceneboidssim-boidssimrepulsionparameters-i-sys.md) | Yes | Repulsion field parameters. |
 
 ## getBoidsSimComponent
 
@@ -102,7 +102,7 @@ addBoidsSimRepulsionComponent(node: Node, param: BoidsSimRepulsionParameters): v
 getBoidsSimComponent(node: Node): BoidsSimParameters | null
 ```
 
-获取指定节点上的群组模拟组件参数.
+Gets the flock behavior parameters on the specified node.
 
 **Since:** 26.0.0
 
@@ -120,13 +120,13 @@ getBoidsSimComponent(node: Node): BoidsSimParameters | null
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| node | [Node](arkts-arkgraphics3d-scenenodes-node-i.md) | Yes | 要查询的节点 |
+| node | [Node](arkts-arkgraphics3d-scenenodes-node-i.md) | Yes | Node of the target scene. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [BoidsSimParameters](arkts-arkgraphics3d-sceneboidssim-boidssimparameters-i-sys.md) | 群组模拟参数，如果未找到则返回null |
+| [BoidsSimParameters](arkts-arkgraphics3d-sceneboidssim-boidssimparameters-i-sys.md) | Returns the flock behavior parameters, or null if the node does not have this component mounted. |
 
 ## getBoidsSimGravityComponent
 
@@ -134,7 +134,7 @@ getBoidsSimComponent(node: Node): BoidsSimParameters | null
 getBoidsSimGravityComponent(node: Node): BoidsSimGravityParameters | null
 ```
 
-获取指定节点上的引力场组件参数.
+Gets the attraction field parameters on the specified node.
 
 **Since:** 26.0.0
 
@@ -152,13 +152,13 @@ getBoidsSimGravityComponent(node: Node): BoidsSimGravityParameters | null
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| node | [Node](arkts-arkgraphics3d-scenenodes-node-i.md) | Yes | 要查询的节点 |
+| node | [Node](arkts-arkgraphics3d-scenenodes-node-i.md) | Yes | Node of the target scene. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [BoidsSimGravityParameters](arkts-arkgraphics3d-sceneboidssim-boidssimgravityparameters-i-sys.md) | 引力场参数，如果未找到则返回null |
+| [BoidsSimGravityParameters](arkts-arkgraphics3d-sceneboidssim-boidssimgravityparameters-i-sys.md) | Returns the attraction field parameters, or null if the node does not have this component mounted. |
 
 ## getBoidsSimRepulsionComponent
 
@@ -166,7 +166,7 @@ getBoidsSimGravityComponent(node: Node): BoidsSimGravityParameters | null
 getBoidsSimRepulsionComponent(node: Node): BoidsSimRepulsionParameters | null
 ```
 
-获取指定节点上的斥力场组件参数.
+Gets the repulsion field parameters on the specified node.
 
 **Since:** 26.0.0
 
@@ -184,13 +184,13 @@ getBoidsSimRepulsionComponent(node: Node): BoidsSimRepulsionParameters | null
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| node | [Node](arkts-arkgraphics3d-scenenodes-node-i.md) | Yes | 要查询的节点 |
+| node | [Node](arkts-arkgraphics3d-scenenodes-node-i.md) | Yes | Node of the target scene. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [BoidsSimRepulsionParameters](arkts-arkgraphics3d-sceneboidssim-boidssimrepulsionparameters-i-sys.md) | 斥力场参数，如果未找到则返回null |
+| [BoidsSimRepulsionParameters](arkts-arkgraphics3d-sceneboidssim-boidssimrepulsionparameters-i-sys.md) | Returns the repulsion field parameters, or null if the node does not have this component mounted. |
 
 ## pause
 
@@ -198,7 +198,7 @@ getBoidsSimRepulsionComponent(node: Node): BoidsSimRepulsionParameters | null
 pause(): void
 ```
 
-暂停模拟.
+Pauses the Boids simulation.
 
 **Since:** 26.0.0
 
@@ -218,7 +218,7 @@ pause(): void
 play(): void
 ```
 
-开始或恢复模拟.
+Starts or resumes the Boids simulation.
 
 **Since:** 26.0.0
 
@@ -238,7 +238,7 @@ play(): void
 removeBoidsSimComponent(node: Node): void
 ```
 
-从指定节点移除群组模拟组件.
+Removes the flock behavior component from the specified node.
 
 **Since:** 26.0.0
 
@@ -256,7 +256,7 @@ removeBoidsSimComponent(node: Node): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| node | [Node](arkts-arkgraphics3d-scenenodes-node-i.md) | Yes | 要移除组件的节点 |
+| node | [Node](arkts-arkgraphics3d-scenenodes-node-i.md) | Yes | Node of the target scene. |
 
 ## removeBoidsSimGravityComponent
 
@@ -264,7 +264,7 @@ removeBoidsSimComponent(node: Node): void
 removeBoidsSimGravityComponent(node: Node): void
 ```
 
-从指定节点移除引力场组件.
+Removes the attraction field component on the specified node.
 
 **Since:** 26.0.0
 
@@ -282,7 +282,7 @@ removeBoidsSimGravityComponent(node: Node): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| node | [Node](arkts-arkgraphics3d-scenenodes-node-i.md) | Yes | 要移除组件的节点 |
+| node | [Node](arkts-arkgraphics3d-scenenodes-node-i.md) | Yes | Node of the target scene. |
 
 ## removeBoidsSimRepulsionComponent
 
@@ -290,7 +290,7 @@ removeBoidsSimGravityComponent(node: Node): void
 removeBoidsSimRepulsionComponent(node: Node): void
 ```
 
-从指定节点移除斥力场组件.
+Removes the repulsion field component from the specified node.
 
 **Since:** 26.0.0
 
@@ -308,7 +308,7 @@ removeBoidsSimRepulsionComponent(node: Node): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| node | [Node](arkts-arkgraphics3d-scenenodes-node-i.md) | Yes | 要移除组件的节点 |
+| node | [Node](arkts-arkgraphics3d-scenenodes-node-i.md) | Yes | Node of the target scene. |
 
 ## setBoidsSimComponent
 
@@ -316,7 +316,7 @@ removeBoidsSimRepulsionComponent(node: Node): void
 setBoidsSimComponent(node: Node, param: BoidsSimParameters): void
 ```
 
-更新指定节点上的群组模拟组件参数.
+Updates the flock behavior component on the specified node.
 
 **Since:** 26.0.0
 
@@ -334,8 +334,8 @@ setBoidsSimComponent(node: Node, param: BoidsSimParameters): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| node | [Node](arkts-arkgraphics3d-scenenodes-node-i.md) | Yes | 要更新的节点 |
-| param | [BoidsSimParameters](arkts-arkgraphics3d-sceneboidssim-boidssimparameters-i-sys.md) | Yes | 群组模拟参数 |
+| node | [Node](arkts-arkgraphics3d-scenenodes-node-i.md) | Yes | Node of the target scene. |
+| param | [BoidsSimParameters](arkts-arkgraphics3d-sceneboidssim-boidssimparameters-i-sys.md) | Yes | Flock behavior parameters. |
 
 ## setBoidsSimGravityComponent
 
@@ -343,7 +343,7 @@ setBoidsSimComponent(node: Node, param: BoidsSimParameters): void
 setBoidsSimGravityComponent(node: Node, param: BoidsSimGravityParameters): void
 ```
 
-更新指定节点上的引力场组件参数.
+Updates the attraction field component on the specified node.
 
 **Since:** 26.0.0
 
@@ -361,8 +361,8 @@ setBoidsSimGravityComponent(node: Node, param: BoidsSimGravityParameters): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| node | [Node](arkts-arkgraphics3d-scenenodes-node-i.md) | Yes | 要更新的节点 |
-| param | [BoidsSimGravityParameters](arkts-arkgraphics3d-sceneboidssim-boidssimgravityparameters-i-sys.md) | Yes | 引力场参数 |
+| node | [Node](arkts-arkgraphics3d-scenenodes-node-i.md) | Yes | Node of the target scene. |
+| param | [BoidsSimGravityParameters](arkts-arkgraphics3d-sceneboidssim-boidssimgravityparameters-i-sys.md) | Yes | Attraction field parameters. |
 
 ## setBoidsSimRepulsionComponent
 
@@ -370,7 +370,7 @@ setBoidsSimGravityComponent(node: Node, param: BoidsSimGravityParameters): void
 setBoidsSimRepulsionComponent(node: Node, param: BoidsSimRepulsionParameters): void
 ```
 
-更新指定节点上的斥力场组件参数.
+Updates the repulsion field component on the specified node.
 
 **Since:** 26.0.0
 
@@ -388,8 +388,8 @@ setBoidsSimRepulsionComponent(node: Node, param: BoidsSimRepulsionParameters): v
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| node | [Node](arkts-arkgraphics3d-scenenodes-node-i.md) | Yes | 要更新的节点 |
-| param | [BoidsSimRepulsionParameters](arkts-arkgraphics3d-sceneboidssim-boidssimrepulsionparameters-i-sys.md) | Yes | 斥力场参数 |
+| node | [Node](arkts-arkgraphics3d-scenenodes-node-i.md) | Yes | Node of the target scene. |
+| param | [BoidsSimRepulsionParameters](arkts-arkgraphics3d-sceneboidssim-boidssimrepulsionparameters-i-sys.md) | Yes | Repulsion field parameters. |
 
 ## stop
 
@@ -397,7 +397,7 @@ setBoidsSimRepulsionComponent(node: Node, param: BoidsSimRepulsionParameters): v
 stop(): void
 ```
 
-停止模拟并重置所有boid到初始状态.
+Stops the Boids simulation and resets the state.
 
 **Since:** 26.0.0
 
@@ -417,7 +417,7 @@ stop(): void
 get isPlaying(): boolean
 ```
 
-模拟是否正在播放.
+Whether the current simulation is playing.
 
 **Type:** boolean
 

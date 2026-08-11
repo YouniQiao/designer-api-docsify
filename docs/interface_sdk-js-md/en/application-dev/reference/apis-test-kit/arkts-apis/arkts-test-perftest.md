@@ -1,15 +1,14 @@
 # @ohos.test.PerfTest
 
-PerfTest提供白盒性能测试能力，供开发者在测试场景使用。支持对指定代码段或指定场景自动化执行测试，并采集耗时、CPU、内存、时延、帧率等性能数据。
- > **说明：**
- >
- > - 本模块首批接口从API version 20开始支持。后续版本的新增接口，采用上角标单独标记接口的起始版本。
- >
- > - 本模块接口在<!--RP1-->[单元测试框架](../../../application-test/unittest-guidelines.md)<!--RP1End-->中使用。
- >
- > - 本模块接口不支持并发调用。
- >
- > - 本模块接口适用于手机、平板、PC/2in1、智慧屏、车机。
+PerfTest provides white-box performance test capabilities in test scenarios. It can automatically execute tests on
+ specified code segments or scenarios and collect performance data such as time required, CPU usage, memory usage,
+ latency, and frame rate.
+ > **NOTE**
+ > - The initial APIs of this module are supported since API version 20.
+ Newly added APIs will be marked with a superscript to indicate their earliest API version.
+ > - The APIs of this module can be used only in <!--RP1-->[JsUnit](../../application-test/unittest-guidelines.md)<!--RP1End-->.
+ > - The APIs of this module do not support concurrent calls.
+ > - The APIs of this module are applicable to phones, tablets, PCs/2-in-1 devices, smart TVs, and head units.
 
 
 ## Modules to Import
@@ -24,18 +23,18 @@ import { PerfTestStrategy, PerfMetric, PerfTest, PerfMeasureResult } from 'kits/
 
 | Name | Description |
 | --- | --- |
-| [PerfTest](arkts-test-test-perftest-perftest-c.md) | PerfTest类为白盒性能测试框架的总入口，提供测试任务创建、测试代码段执行和数据采集、测量结果获取等能力。通过{@link create}创建实例。 |
+| [PerfTest](arkts-test-test-perftest-perftest-c.md) | Represents the general entry of the white-box performance test framework.It provides capabilities such as test task creation, test code segment execution, data collection, and measurement result obtaining. |
 
 ### Interfaces
 
 | Name | Description |
 | --- | --- |
-| [PerfMeasureResult](arkts-test-test-perftest-perfmeasureresult-i.md) | 性能指标对应测量结果数据。 |
-| [PerfTestStrategy](arkts-test-test-perftest-perfteststrategy-i.md) | 性能测试执行策略。 |
+| [PerfMeasureResult](arkts-test-test-perftest-perfmeasureresult-i.md) | Represents the measurement result data corresponding to the performance metric. |
+| [PerfTestStrategy](arkts-test-test-perftest-perfteststrategy-i.md) | Represents the performance test strategy.  > **NOTE：** >  > The input parameter type of the **actionCode** and **resetCode** attributes is **Callback\&lt;boolean&gt;**. You need to call > this callback in the code segment to notify the framework that the code segment execution is complete. Otherwise, the > code segment execution times out. The callback parameter is of the **Boolean** type. The value **true** indicates that > the code segment execution meets the expectation, and **false** indicates the opposite. |
 
 ### Enums
 
 | Name | Description |
 | --- | --- |
-| [PerfMetric](arkts-test-test-perftest-perfmetric-e.md) | 框架支持采集的性能指标。 |
+| [PerfMetric](arkts-test-test-perftest-perfmetric-e.md) | APP_START_COMPLETE_TIME**):  > - Application startup latency data is subject to the system logging and reporting and may be different from what end users perceive. The start time is when the tap event is reported, the end time of the response latency is when the first frame is displayed on the screen after the tap, and the end time of the completion latency is when the first frame is displayed on the screen after the application is started. > - Application startup latency data can be collected in the following scenarios: tapping an application icon on the home screen, tapping an application icon on the dock bar, and tapping an application icon in the application center. > - During a test, only the first startup latency of the specified application is collected. > 4. Description of collecting the page switching latency data (**PAGE_SWITCH_COMPLETE_TIME**): > - Page switching latency calculation is subject to the system logging and reporting and may be different from what end users perceive. The start time is when the tap event is reported, and the end time is when the first frame is displayed on the screen after the page switching. > - Page switching latency data can be collected in the **Router** and **Navigation** components. > - During a test, only the first page switching latency in the specified application is collected. > 5. Description of collecting the list scrolling frame rate (**LIST_SWIPE_FPS**): > - **LIST_SWIPE_FPS**: The number of frames rendered and updated on the screen per second when the list is scrolled. > - Supported scenarios: list scrolling of the **List**, **Grid**, **Scroll**, and **WaterFlow** components in the ArkUI subsystem. > - During a test, only the first list scrolling frame rate in the specified application is collected. |
 

@@ -1,7 +1,7 @@
 # Timeout
 
-任务的超时配置。任务处于等待状态的时间不参与计算，上传下载任务会存在以下任务等待的原因:  
-[WaitingReason&lt;sup&gt;20+&lt;/sup&gt;](arkts-basicservices-agent-waitingreason-e.md)。
+Defines the timeout configuration of a task. The task waiting duration is not counted. For details about the waiting reasons, see   
+[WaitingReason&lt;sup&gt;20+&lt;/sup&gt;](arkts-basicservices-agent-waitingreason-e.md).
 
 **Since:** 20
 
@@ -23,7 +23,7 @@ import { request } from 'kits/@kit.BasicServicesKit';
 connectionTimeout?: int
 ```
 
-任务连接超时时间，单位为秒。连接超时是指客户端与服务器建立连接的最大耗时。若不设置则使用默认值60秒，允许设置的最小值为1秒。
+Task connection timeout interval, in seconds. The connection timeout interval indicates the maximum time required for establishing a connection between the client and server. If this parameter is not set, the default value **60** is used. The minimum value is **1**.
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
@@ -41,7 +41,7 @@ connectionTimeout?: int
 totalTimeout?: int
 ```
 
-任务总超时时间，单位为秒。总超时包括建立连接、发送请求和接收响应的全部时间。未指定时使用默认值604800秒（1周）。允许设置的最小值为1秒，最大值为604800秒（1周）。
+Total timeout interval of a task, in seconds. The total timeout interval includes the time required for establishing a connection, sending a request, and receiving a response. If this parameter is not set, the default value **604800** is used. The minimum value is **1**, and the maximum value is **604800** (that is, one week).
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 

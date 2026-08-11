@@ -12,6 +12,8 @@ import { bundle } from 'kits/@kit.AbilityKit';
 function getNameForUid(uid: number, callback: AsyncCallback<string>): void
 ```
 
+Obtains bundle name by the given uid.
+
 **Since:** 8
 
 **ArkTS mode:** ArkTS-Dyn only, since version 8.
@@ -28,7 +30,7 @@ function getNameForUid(uid: number, callback: AsyncCallback<string>): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| uid | number | Yes | @param { AsyncCallback&lt;string&gt; } callback |
+| uid | number | Yes | Indicates the UID of an application. |
 | callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;string&gt; | Yes |  |
 
 
@@ -38,7 +40,7 @@ function getNameForUid(uid: number, callback: AsyncCallback<string>): void
 function getNameForUid(uid: number): Promise<string>
 ```
 
-通过uid获取对应的Bundle名称，使用Promise异步回调。
+Obtains the bundle name based on a UID. This API uses a promise to return the result.
 
 **Since:** 8
 
@@ -56,7 +58,7 @@ function getNameForUid(uid: number): Promise<string>
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| uid | number | Yes | 要查询的uid。 |
+| uid | number | Yes | UID based on which the bundle name is to obtain. |
 
 **Return value:**
 

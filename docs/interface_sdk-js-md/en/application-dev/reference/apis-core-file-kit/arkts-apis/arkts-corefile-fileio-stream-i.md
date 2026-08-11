@@ -1,7 +1,9 @@
 # Stream
 
-文件流，提供流式读写文件数据的能力，使用完毕后需调用close关闭。在调用Stream的方法前，需要先通过[fileIo.createStream](arkts-corefile-fileio-createstream-f.md#createstream)方法或者  
-[fileIo.fdopenStream](arkts-corefile-fileio-fdopenstream-f.md#fdopenstream)（同步或异步）来构建一个Stream实例。
+Provides APIs for stream operations, such as reading and writing data streams of files. After using an API of the  
+**Stream** class, you need to call **close** to close the file stream. Before calling an API of the  
+ **Stream** class, you need to create a **Stream** instance by using  
+ [fileIo.createStream](arkts-corefile-fileio-createstream-f.md#createstream) or [fileIo.fdopenStream](arkts-corefile-fileio-fdopenstream-f.md#fdopenstream).
 
 **Since:** 23
 
@@ -23,7 +25,7 @@ import { Options, ReaderIteratorResult, Watcher, ReadTextOptions, WatchEventList
 close(): Promise<void>
 ```
 
-关闭文件流，关闭后不可再用于读写等操作。使用Promise异步回调。
+Closes the file stream. After the stream is closed, it cannot be used for read or write operations.This API uses a promise to return the result.
 
 **Since:** 23
 
@@ -37,7 +39,7 @@ close(): Promise<void>
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise对象，无返回结果。 |
+| Promise&lt;void&gt; | Promise that returns no value. |
 
 **Error codes:**
 
@@ -56,7 +58,7 @@ close(): Promise<void>
 close(callback: AsyncCallback<void>): void
 ```
 
-关闭文件流，关闭后不可再用于读写等操作。使用callback异步回调。
+Closes the file stream. After the stream is closed, it cannot be used for read or write operations. This API uses an asynchronous callback to return the result.
 
 **Since:** 23
 
@@ -70,7 +72,7 @@ close(callback: AsyncCallback<void>): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | 回调函数。当关闭文件流成功，err为undefined，否则为错误对象。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. If the file stream is closed successfully, **err** is **undefined**; otherwise, **err** is an error object. |
 
 **Error codes:**
 
@@ -89,7 +91,7 @@ close(callback: AsyncCallback<void>): void
 closeSync(): void
 ```
 
-同步关闭文件流，关闭后不可再用于读写等操作。
+Closes the file stream synchronously. After the stream is closed, it cannot be used for read or write operations.
 
 **Since:** 23
 
@@ -116,7 +118,7 @@ closeSync(): void
 flush(): Promise<void>
 ```
 
-刷新文件流。使用Promise异步回调。
+Flushes all data from this stream. This API uses a promise to return the result.
 
 **Since:** 23
 
@@ -130,7 +132,7 @@ flush(): Promise<void>
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise对象，无返回结果。 |
+| Promise&lt;void&gt; | Promise that returns no value. |
 
 **Error codes:**
 
@@ -155,7 +157,7 @@ flush(): Promise<void>
 flush(callback: AsyncCallback<void>): void
 ```
 
-异步刷新文件流。使用callback异步回调。
+Flushes the file stream. This API returns the result asynchronously. This API uses an asynchronous callback to return the result.
 
 **Since:** 23
 
@@ -169,7 +171,7 @@ flush(callback: AsyncCallback<void>): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | 回调函数。当刷新文件流成功，err为undefined，否则为错误对象。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. If the file stream is refreshed successfully, **err** is **undefined**; otherwise, **err** is an error object. |
 
 **Error codes:**
 
@@ -194,7 +196,7 @@ flush(callback: AsyncCallback<void>): void
 flushSync(): void
 ```
 
-同步刷新文件流。
+Flushes the file stream. This API returns the result synchronously.
 
 **Since:** 23
 
@@ -230,7 +232,7 @@ read(
   ): Promise<long>
 ```
 
-从流文件读取数据，返回实际读取的字节数。使用Promise异步回调。
+Reads data from a stream file and returns the number of bytes read. This API uses a promise to return the result.
 
 **Since:** 23
 
@@ -244,14 +246,14 @@ read(
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| buffer | ArrayBuffer | Yes | 用于读取文件的缓冲区。 |
-| options | [ReadOptions](arkts-corefile-file-fs-readoptions-i.md) | No | 支持如下选项：&lt;br/&gt;- length，number类型，表示期望读取数据的长度，单位为Byte。可选，默认缓冲区长度。&lt;br/&gt;- offset， number类型，表示期望读取文件的位置，单位为Byte。可选，默认从当前位置开始读。 |
+| buffer | ArrayBuffer | Yes | Buffer used to store the file read. |
+| options | [ReadOptions](arkts-corefile-file-fs-readoptions-i.md) | No | The options are as follows: &lt;br&gt;- **length** (number): length of the data to read, in bytes. This parameter is optional. The default value is the buffer length. &lt;br&gt;- **offset** (number): position of the data to read in the file, in bytes. This parameter is optional. By default, data is read from the current position. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;long&gt; | Promise对象，返回读取的结果，单位为Byte。 |
+| Promise&lt;long&gt; | Promise used to return the data read, in bytes. |
 
 **Error codes:**
 
@@ -274,7 +276,7 @@ read(
 read(buffer: ArrayBuffer, callback: AsyncCallback<long>): void
 ```
 
-从流文件读取数据，返回实际读取的字节数。使用callback异步回调。
+Reads data from a stream file and returns the number of bytes read. This API uses an asynchronous callback to return the result.
 
 **Since:** 23
 
@@ -288,8 +290,8 @@ read(buffer: ArrayBuffer, callback: AsyncCallback<long>): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| buffer | ArrayBuffer | Yes | 用于读取文件的缓冲区。 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;long&gt; | Yes | 回调函数，返回读取的结果，单位为Byte。 |
+| buffer | ArrayBuffer | Yes | Buffer used to store the file read. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;long&gt; | Yes | Callback used to return the data read, in bytes. |
 
 **Error codes:**
 
@@ -315,7 +317,7 @@ read(
   ): void
 ```
 
-从流文件读取数据，支持配置读取选项，返回实际读取的字节数。使用callback异步回调。
+Reads data from a stream file and returns the number of bytes read. The read options can be configured. This API uses an asynchronous callback to return the result.
 
 **Since:** 23
 
@@ -329,9 +331,9 @@ read(
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| buffer | ArrayBuffer | Yes | 用于读取文件的缓冲区。 |
-| options | [ReadOptions](arkts-corefile-file-fs-readoptions-i.md) | Yes | 支持如下选项：&lt;br/&gt;- length，number类型，表示期望读取数据的长度，单位为Byte。可选，默认缓冲区长度。&lt;br/&gt;- offset， number类型，表示期望读取文件的位置，单位为Byte。可选，默认从当前位置开始读取。 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;long&gt; | Yes | 回调函数，返回读取的结果，单位为Byte。 |
+| buffer | ArrayBuffer | Yes | Buffer used to store the file read. |
+| options | [ReadOptions](arkts-corefile-file-fs-readoptions-i.md) | Yes | The options are as follows: &lt;br&gt;- **length** (number): length of the data to read, in bytes. This parameter is optional. The default value is the buffer length. &lt;br&gt;- **offset** (number): position of the data to read in the file, in bytes. This parameter is optional. By default, data is read from the current position. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;long&gt; | Yes | Callback used to return the data read, in bytes. |
 
 **Error codes:**
 
@@ -356,7 +358,7 @@ readSync(
   ): long
 ```
 
-以同步方法从流文件读取数据，返回实际读取的字节数。
+Reads data from a stream file synchronously and returns the number of bytes read.
 
 **Since:** 23
 
@@ -370,14 +372,14 @@ readSync(
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| buffer | ArrayBuffer | Yes | 用于读取文件的缓冲区。 |
-| options | [ReadOptions](arkts-corefile-file-fs-readoptions-i.md) | No | 支持如下选项：&lt;br/&gt;- length，number类型，表示期望读取数据的长度，单位为Byte。可选，默认缓冲区长度。&lt;br/&gt;- offset， number类型，表示期望读取文件的位置，单位为Byte。可选，默认从当前位置开始读。&lt;br/&gt; |
+| buffer | ArrayBuffer | Yes | Buffer used to store the file read. |
+| options | [ReadOptions](arkts-corefile-file-fs-readoptions-i.md) | No | The options are as follows: &lt;br&gt;- **length** (number): length of the data to read, in bytes. This parameter is optional. The default value is the buffer length. &lt;br&gt;- **offset** (number): position of the data to read in the file, in bytes. This parameter is optional. By default, data is read from the current position. &lt;br&gt; |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| long | 实际读取的长度，单位为Byte。 |
+| long | Length of the data read, in bytes. |
 
 **Error codes:**
 
@@ -403,7 +405,7 @@ write(
   ): Promise<long>
 ```
 
-将数据写入流文件，返回实际写入的字节数。使用Promise异步回调。
+Writes data to a stream file and returns the number of bytes written.This API uses a promise to return the result.
 
 **Since:** 23
 
@@ -417,14 +419,14 @@ write(
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| buffer | ArrayBuffer \| string | Yes | 待写入文件的数据，可来自缓冲区或字符串。 |
-| options | [WriteOptions](arkts-corefile-file-fs-writeoptions-i.md) | No | 支持如下选项：&lt;br/&gt;- length，number类型，表示期望写入数据的长度，单位为Byte。默认缓冲区长度。&lt;br/&gt;- offset， number类型，表示期望写入文件的位置，单位为Byte。可选，默认从当前位置开始写。&lt;br/&gt;- encoding，string类型，当数据是string类型时有效， 表示数据的编码方式，默认 'utf-8'。仅支持 'utf-8'。 |
+| buffer | ArrayBuffer \| string | Yes | Data to write. It can be a string or data from a buffer. |
+| options | [WriteOptions](arkts-corefile-file-fs-writeoptions-i.md) | No | The options are as follows: &lt;br&gt;- **length** (number): length of the data to write, in bytes. The default value is the buffer length. &lt;br&gt;- **offset** (number): start position to write the data in the file, in bytes. This parameter is optional. By default, data is written from the current position. &lt;br&gt;- **encoding** (string): format of the data to be encoded when the data is a string. The default value is **'utf-8'**, which is the only value supported. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;long&gt; | Promise对象，返回实际写入的长度，单位为Byte。 |
+| Promise&lt;long&gt; | Promise used to return the length of the data written, in bytes. |
 
 **Error codes:**
 
@@ -449,7 +451,7 @@ write(
 write(buffer: ArrayBuffer | string, callback: AsyncCallback<long>): void
 ```
 
-将数据写入流文件，返回实际写入的字节数。使用callback异步回调。
+Writes data to a stream file and returns the number of bytes written. This API uses an asynchronous callback to return the result.
 
 **Since:** 23
 
@@ -463,8 +465,8 @@ write(buffer: ArrayBuffer | string, callback: AsyncCallback<long>): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| buffer | ArrayBuffer \| string | Yes | 待写入文件的数据，可来自缓冲区或字符串。 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;long&gt; | Yes | 回调函数，返回实际写入的数据长度，单位为Byte。 |
+| buffer | ArrayBuffer \| string | Yes | Data to write. It can be a string or data from a buffer. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;long&gt; | Yes | Callback used to return the length of the data written, in bytes. |
 
 **Error codes:**
 
@@ -493,7 +495,7 @@ write(
   ): void
 ```
 
-将数据写入流文件，支持配置写入选项，返回实际写入的字节数。使用callback异步回调。
+Writes data to a stream file and returns the number of bytes written. The write options can be configured.This API uses an asynchronous callback to return the result.
 
 **Since:** 23
 
@@ -507,9 +509,9 @@ write(
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| buffer | ArrayBuffer \| string | Yes | 待写入文件的数据，可来自缓冲区或字符串。 |
-| options | [WriteOptions](arkts-corefile-file-fs-writeoptions-i.md) | Yes | 支持如下选项：&lt;br/&gt;- length，number类型，表示期望写入数据的长度，单位为Byte。可选，默认缓冲区长度。&lt;br/&gt;- offset， number类型，表示期望写入文件的位置，单位为Byte。可选，默认从当前位置开始写。&lt;br/&gt;- encoding，string类型，当数据是string类型时有效，表示数据的编码方式， 默认 'utf-8'。仅支持 'utf-8'。 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;long&gt; | Yes | 回调函数，返回实际写入的数据长度，单位为Byte。 |
+| buffer | ArrayBuffer \| string | Yes | Data to write. It can be a string or data from a buffer. |
+| options | [WriteOptions](arkts-corefile-file-fs-writeoptions-i.md) | Yes | The options are as follows: &lt;br&gt;- **length** (number): length of the data to write, in bytes. This parameter is optional. The default value is the buffer length. &lt;br&gt;- **offset** (number): start position to write the data in the file, in bytes. This parameter is optional. By default, data is written from the current position. &lt;br&gt;- **encoding** (string): format of the data to be encoded when the data is a string. The default value is **'utf-8'**, which is the only value supported. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;long&gt; | Yes | Callback used to return the length of the data written, in bytes. |
 
 **Error codes:**
 
@@ -537,7 +539,7 @@ writeSync(
   ): long
 ```
 
-以同步方法将数据写入流文件，返回实际写入的字节数。
+Writes data to a stream file synchronously and returns the number of bytes written.
 
 **Since:** 23
 
@@ -551,14 +553,14 @@ writeSync(
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| buffer | ArrayBuffer \| string | Yes | 待写入文件的数据，可来自缓冲区或字符串。 |
-| options | [WriteOptions](arkts-corefile-file-fs-writeoptions-i.md) | No | 支持如下选项：&lt;br/&gt;- length，number类型，表示期望写入数据的长度，单位为Byte。可选，默认缓冲区长度。&lt;br/&gt;- offset， number类型，表示期望写入文件的位置，单位为Byte。可选，默认从当前位置开始写。&lt;br/&gt;- encoding，string类型，当数据是string类型时有效，表示数据的编码方式， 默认 'utf-8'。仅支持 'utf-8'。 |
+| buffer | ArrayBuffer \| string | Yes | Data to write. It can be a string or data from a buffer. |
+| options | [WriteOptions](arkts-corefile-file-fs-writeoptions-i.md) | No | The options are as follows: &lt;br&gt;- **length** (number): length of the data to write, in bytes. This parameter is optional. The default value is the buffer length. &lt;br&gt;- **offset** (number): start position to write the data in the file, in bytes. This parameter is optional. By default, data is written from the current position. &lt;br&gt;- **encoding** (string): format of the data to be encoded when the data is a string. The default value is **'utf-8'**, which is the only value supported. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| long | 实际写入的长度，单位为Byte。 |
+| long | Length of the data written in the file, in bytes. |
 
 **Error codes:**
 

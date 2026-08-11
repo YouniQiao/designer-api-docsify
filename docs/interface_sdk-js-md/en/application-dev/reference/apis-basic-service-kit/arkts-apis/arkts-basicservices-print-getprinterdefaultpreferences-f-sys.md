@@ -12,7 +12,7 @@ import { print } from 'kits/@kit.BasicServicesKit';
 function getPrinterDefaultPreferences(printerId: string): Promise<PrinterPreferences>
 ```
 
-按打印机ID获取默认首选项。
+Get default preferences by printer ID.
 
 **Since:** 24
 
@@ -32,7 +32,7 @@ function getPrinterDefaultPreferences(printerId: string): Promise<PrinterPrefere
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| printerId | string | Yes | 打印机ID。 |
+| printerId | string | Yes | Indicates the printer ID. &lt;br&gt;Added printer ID in the system. |
 
 **Return value:**
 
@@ -44,7 +44,7 @@ function getPrinterDefaultPreferences(printerId: string): Promise<PrinterPrefere
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 13100005 | Can not find the printer or printer's ppd file in system. |
-| 201 | the application does not have permission to call this function. |
-| 202 | not system application. |
+| [13100005](../../apis-basic-services-kit/errorcode-print.md#13100005-invalid-printer) | Can not find the printer or printer's ppd file in system. |
+| [201](../../errorcode-universal.md#201-permission-denied) | the application does not have permission to call this function. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | not system application. |
 

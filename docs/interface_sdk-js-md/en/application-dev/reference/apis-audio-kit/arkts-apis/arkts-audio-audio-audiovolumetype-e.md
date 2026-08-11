@@ -1,6 +1,6 @@
 # AudioVolumeType
 
-表示音频音量类型的枚举。
+Enumerates the audio volume types.
 
 **Since:** 7
 
@@ -16,7 +16,7 @@
 VOICE_CALL = 0
 ```
 
-语音电话。
+Audio volume type for voice calls.
 
 **Since:** 8
 
@@ -32,7 +32,7 @@ VOICE_CALL = 0
 RINGTONE = 2
 ```
 
-铃声。
+Audio volume type for ringtones.
 
 **Since:** 7
 
@@ -48,7 +48,7 @@ RINGTONE = 2
 MEDIA = 3
 ```
 
-媒体。
+Audio volume type for media purpose.
 
 **Since:** 7
 
@@ -64,7 +64,7 @@ MEDIA = 3
 ALARM = 4
 ```
 
-闹钟。
+Audio volume type for alarming.
 
 **Since:** 10
 
@@ -80,7 +80,7 @@ ALARM = 4
 ACCESSIBILITY = 5
 ```
 
-无障碍。
+Audio volume type for accessibility.
 
 **Since:** 10
 
@@ -96,7 +96,7 @@ ACCESSIBILITY = 5
 VOICE_ASSISTANT = 9
 ```
 
-语音助手。
+Audio volume type for voice assistant.
 
 **Since:** 8
 

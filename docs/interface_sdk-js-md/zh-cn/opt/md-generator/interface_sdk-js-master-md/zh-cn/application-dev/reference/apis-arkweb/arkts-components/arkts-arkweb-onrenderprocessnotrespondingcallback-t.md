@@ -1,0 +1,19 @@
+# OnRenderProcessNotRespondingCallback
+
+```TypeScript
+type OnRenderProcessNotRespondingCallback = (data : RenderProcessNotRespondingData) => void
+```
+
+The callback of render process not responding.
+
+**起始版本：** 12
+
+<!--Device-unnamed-type OnRenderProcessNotRespondingCallback = (data : RenderProcessNotRespondingData) => void--><!--Device-unnamed-type OnRenderProcessNotRespondingCallback = (data : RenderProcessNotRespondingData) => void-End-->
+
+**系统能力：** SystemCapability.Web.Webview.Core
+
+**参数：**
+
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| data | [RenderProcessNotRespondingData](arkts-arkweb-renderprocessnotrespondingdata-i.md) | 是 |

@@ -1,6 +1,6 @@
 # HuksReturnResult
 
-调用接口返回的result。
+Represents the result returned.
 
 **Since:** 9
 
@@ -22,7 +22,7 @@ import { huks } from 'kits/@kit.UniversalKeystoreKit';
 certChains?: Array<string>
 ```
 
-表示证书链数据。默认为undefined。
+Certificate chain information. The default value is **undefined**.
 
 **Type:** Array&lt;string&gt;
 
@@ -42,8 +42,8 @@ certChains?: Array<string>
 outData?: Uint8Array
 ```
 
-表示  
-[initSession](arkts-universalkeystore-huks-initsession-f.md#initsession)操作之后获取到的challenge信息。默认为undefined。
+Challenge obtained after the  
+[initSession](arkts-universalkeystore-huks-initsession-f.md#initsession)operation. The default value is **undefined**.
 
 **Type:** Uint8Array
 
@@ -63,8 +63,8 @@ outData?: Uint8Array
 properties?: Array<HuksParam>
 ```
 
-表示  
-[initSession](arkts-universalkeystore-huks-initsession-f.md#initsession)操作之后获取到的challenge信息。默认为undefined。
+Challenge obtained after the  
+[initSession](arkts-universalkeystore-huks-initsession-f.md#initsession)operation. The default value is **undefined**.
 
 **Type:** Array&lt;HuksParam&gt;
 
@@ -84,7 +84,7 @@ properties?: Array<HuksParam>
 sharedSecret?: Uint8Array
 ```
 
-定义共享密钥。
+Shared key.
 
 **Type:** Uint8Array
 

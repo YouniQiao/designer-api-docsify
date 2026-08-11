@@ -1,6 +1,6 @@
 # ListItemStyle
 
-ListItem组件卡片样式枚举。
+Enumerates the card styles of the List component.
 
 **Since:** 10
 
@@ -16,7 +16,7 @@ ListItem组件卡片样式枚举。
 NONE = 0
 ```
 
-无样式。
+No style.
 
 **Since:** 10
 
@@ -36,7 +36,7 @@ NONE = 0
 CARD = 1
 ```
 
-显示默认卡片样式。
+Show default style.
 
 **Since:** 10
 

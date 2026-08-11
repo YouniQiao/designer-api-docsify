@@ -10,12 +10,6 @@ USB配置，一个[USBDevice](arkts-basicservices-usbmanager-usbdevice-i.md)中�
 
 **系统能力：** SystemCapability.USB.USBManager
 
-## 导入模块
-
-```TypeScript
-import { usbManager } from 'kits/@kit.BasicServicesKit';
-```
-
 ## attributes
 
 ```TypeScript

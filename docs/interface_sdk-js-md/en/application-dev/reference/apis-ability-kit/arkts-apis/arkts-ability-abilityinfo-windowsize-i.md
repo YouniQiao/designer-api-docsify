@@ -1,8 +1,8 @@
 # WindowSize
 
-描述窗口尺寸。
+Describes the window size.
 
-**原子化服务API：** 从API version 11开始，该接口支持在原子化服务中使用。
+**Atomic service API**: This API can be used in atomic services since API version 11.
 
 **Since:** 9
 
@@ -18,7 +18,7 @@
 readonly maxWindowHeight: long
 ```
 
-表示自由窗口状态下窗口的最大高度，高度单位为vp。
+Maximum height of the window in free window mode. The unit is vp.
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：long
 
@@ -38,7 +38,7 @@ readonly maxWindowHeight: long
 readonly maxWindowRatio: double
 ```
 
-表示自由窗口状态下窗口的最大宽高比；取值范围0-1，例如：0.12。
+Maximum aspect ratio of the window in free window mode. The value ranges from 0 to 1. An example value is 0.12.
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：double
 
@@ -58,7 +58,7 @@ readonly maxWindowRatio: double
 readonly maxWindowWidth: long
 ```
 
-表示自由窗口状态下窗口的最大宽度，宽度单位为vp。
+Maximum width of the window in free window mode. The unit is vp.
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：long
 
@@ -78,7 +78,7 @@ readonly maxWindowWidth: long
 readonly minWindowHeight: long
 ```
 
-表示自由窗口状态下窗口的最小高度，高度单位为vp。
+Minimum height of the window in free window mode. The unit is vp.
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：long
 
@@ -98,7 +98,7 @@ readonly minWindowHeight: long
 readonly minWindowRatio: double
 ```
 
-表示自由窗口状态下窗口的最小宽高比；取值范围0-1，例如：0.5。
+Minimum aspect ratio of the window in free window mode. The value ranges from 0 to 1. An example value is 0.5.
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：double
 
@@ -118,7 +118,7 @@ readonly minWindowRatio: double
 readonly minWindowWidth: long
 ```
 
-表示自由窗口状态下窗口的最小宽度，宽度单位为vp。
+Minimum width of the window in free window mode. The unit is vp.
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：long
 

@@ -10,12 +10,6 @@ LightWeightMap可用于存储具有关联关系的key-value键值对，其中key
 
 **系统能力：** SystemCapability.Utils.Lang
 
-## 导入模块
-
-```TypeScript
-import { LightWeightMap } from 'kits/@kit.ArkTS';
-```
-
 ## $_iterator
 
 ```TypeScript
@@ -38,7 +32,30 @@ $_iterator(): IterableIterator<[K, V]>
 
 | 类型 | 说明 |
 | --- | --- |
-| [IterableIterator](arkts-arkts-iterator-iterableiterator-i.md)&lt;[K, V]&gt; | LightWeightMap的迭代器。 |
+| IterableIterator&lt;[K, V]&gt; | LightWeightMap的迭代器。 |
+
+## 示例
+
+```TypeScript
+let lightWeightMap: LightWeightMap<string, int> = new LightWeightMap<string, int>();
+lightWeightMap.set("squirrel", 123);
+lightWeightMap.set("sparrow", 356);
+
+// 使用方法一：
+for (let item of lightWeightMap) {
+  console.info("key:" + item[0]);
+  console.info("value:" + item[1]);
+}
+
+// 使用方法二：
+let iter = lightWeightMap.$_iterator();
+let temp: IteratorResult<[string, int]> = iter.next();
+while(!temp.done) {
+  console.info("key:" + temp.value![0]);
+  console.info("value:" + temp.value![1]);
+  temp = iter.next();
+}
+```
 
 ## [Symbol.iterator]
 
@@ -62,13 +79,13 @@ $_iterator(): IterableIterator<[K, V]>
 
 | 类型 | 说明 |
 | --- | --- |
-| [IterableIterator](arkts-arkts-iterator-iterableiterator-i.md)&lt;[K, V]&gt; | 返回一个迭代器。 |
+| IterableIterator&lt;[K, V]&gt; | 返回一个迭代器。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 10200011 | The Symbol.iterator method cannot be bound. |
+| [10200011](../errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) | The Symbol.iterator method cannot be bound. |
 
 ## 示例
 
@@ -134,12 +151,25 @@ clear(): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 10200011 | The clear method cannot be bound. |
+| [10200011](../errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) | The clear method cannot be bound. |
 
 ## 示例
 
+ArkTS-Dyn示例：
+
 ```TypeScript
 let lightWeightMap = new LightWeightMap<string, number>();
+lightWeightMap.set("squirrel", 123);
+lightWeightMap.set("sparrow", 356);
+lightWeightMap.clear();
+let result = lightWeightMap.isEmpty();
+console.info("result:", result);  // result: true
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+let lightWeightMap: LightWeightMap<string, int> = new LightWeightMap<string, int>();
 lightWeightMap.set("squirrel", 123);
 lightWeightMap.set("sparrow", 356);
 lightWeightMap.clear();
@@ -169,12 +199,20 @@ LightWeightMap的构造函数，创建一个空的LightWeightMap实例。
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 10200012 | The LightWeightMap's constructor cannot be directly invoked. |
+| [10200012](../errorcode-utils.md#10200012-构造函数调用异常) | The LightWeightMap's constructor cannot be directly invoked. |
 
 ## 示例
 
+ArkTS-Dyn示例：
+
 ```TypeScript
 let lightWeightMap = new LightWeightMap<string, number>();
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+let lightWeightMap: LightWeightMap<string, int> = new LightWeightMap<string, int>();
 ```
 
 ## entries
@@ -199,13 +237,13 @@ entries(): IterableIterator<[K, V]>
 
 | 类型 | 说明 |
 | --- | --- |
-| [IterableIterator](arkts-arkts-iterator-iterableiterator-i.md)&lt;[K, V]&gt; | 返回包含此映射中所有键值对的迭代器对象。 |
+| IterableIterator&lt;[K, V]&gt; | 返回包含此映射中所有键值对的迭代器对象。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 10200011 | The entries method cannot be bound. |
+| [10200011](../errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) | The entries method cannot be bound. |
 
 ## 示例
 
@@ -225,6 +263,32 @@ while (!temp.done) {
 ```TypeScript
 // 不建议在entries中使用set、setValueAt、remove、removeAt方法，会导致死循环等不可预知的风险，可使用for循环来进行插入和删除。
 let lightWeightMap = new LightWeightMap<string, number>();
+for(let i = 0; i < 10; i++) {
+  lightWeightMap.set("sparrow" + i, 123);
+}
+for(let i = 0; i < 10; i++) {
+  lightWeightMap.remove("sparrow" + i);
+}
+```
+
+ArkTS-Dyn示例：
+
+```TypeScript
+let lightWeightMap: LightWeightMap<string, int> = new LightWeightMap<string, int>();
+lightWeightMap.set("squirrel", 123);
+lightWeightMap.set("sparrow", 356);
+let iter = lightWeightMap.entries();
+let temp: IteratorResult<[string, int]> = iter.next();
+while(!temp.done) {
+  console.info("key:" + temp.value![0]);
+  console.info("value:" + temp.value![1]);
+  temp = iter.next();
+}
+```
+
+```TypeScript
+// 不建议在entries中使用set、setValueAt、remove、removeAt方法，会导致死循环等不可预知的风险，可使用for循环来进行插入和删除。
+let lightWeightMap: LightWeightMap<string, int> = new LightWeightMap<string, int>();
 for(let i = 0; i < 10; i++) {
   lightWeightMap.set("sparrow" + i, 123);
 }
@@ -262,7 +326,7 @@ forEach(callbackFn: (value?: V, key?: K, map?: LightWeightMap<K, V>) => void, th
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 10200011 | The forEach method cannot be bound. |
+| [10200011](../errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) | The forEach method cannot be bound. |
 
 ## 示例
 
@@ -294,7 +358,7 @@ for (let i = 0; i < 10; i++) {
 forEach(callbackFn: LightWeightMapCbFn<K, V>): void
 ```
 
-通过回调函数来遍历实例对象上的元素及其下标。
+通过回调函数来遍历实例对象上的元素及其键值对信息。
 
 **起始版本：** 23
 
@@ -310,7 +374,24 @@ forEach(callbackFn: LightWeightMapCbFn<K, V>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callbackFn | [LightWeightMapCbFn](arkts-arkts-lightweightmapcbfn-t.md)&lt;K, V&gt; | 是 | 回调函数。 |
+| callbackFn | [LightWeightMapCbFn](arkts-arkts-lightweightmapcbfn-t.md)&lt;K, V&gt; | 是 | 回调函数，用于遍历LightWeightMap实例中的元素及下标。 |
+
+## 示例
+
+```TypeScript
+import { LightWeightMapCbFn } from '@kit.ArkTS';
+
+let lightWeightMap: LightWeightMap<string, int> = new LightWeightMap<string, int>();
+lightWeightMap.set("sparrow", 123);
+lightWeightMap.set("test", 987);
+lightWeightMap.set("gull", 357);
+let lightWeightMapCb: LightWeightMapCbFn<string, int> = (value: int, key: string, map: LightWeightMap<string, int>) => {
+  console.info("value: " + value, " key: " + key);
+};
+lightWeightMap.forEach(lightWeightMapCb);
+// value:123 key:sparrow
+// value:357 key:gull
+```
 
 ## get
 
@@ -346,7 +427,7 @@ get(key: K): V
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 10200011 | The get method cannot be bound. |
+| [10200011](../errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) | The get method cannot be bound. |
 
 ## 示例
 
@@ -364,7 +445,7 @@ console.info("result:", result);  // result: 356
 get(key: K): V | undefined
 ```
 
-获取指定key所对应的value。
+获取指定key所对应的value。当key为number类型且值大于INT32_MAX或小于INT32_MIN时，结果可能与预期不一致。
 
 **起始版本：** 23
 
@@ -387,6 +468,16 @@ get(key: K): V | undefined
 | 类型 | 说明 |
 | --- | --- |
 | V | 如果存在与key关联的值则返回该值，否则返回undefined。 |
+
+## 示例
+
+```TypeScript
+let lightWeightMap: LightWeightMap<string, int> = new LightWeightMap<string, int>();
+lightWeightMap.set("squirrel", 123);
+lightWeightMap.set("sparrow", 356);
+let result = lightWeightMap.get("sparrow");
+console.info("result:", result);  // result: 356
+```
 
 ## getIndexOfKey
 
@@ -428,12 +519,24 @@ getIndexOfKey(key: K): int
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 10200011 | The getIndexOfKey method cannot be bound. |
+| [10200011](../errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) | The getIndexOfKey method cannot be bound. |
 
 ## 示例
 
+ArkTS-Dyn示例：
+
 ```TypeScript
 let lightWeightMap = new LightWeightMap<string, number>();
+lightWeightMap.set("squirrel", 123);
+lightWeightMap.set("sparrow", 356);
+let result = lightWeightMap.getIndexOfKey("sparrow");
+console.info("result:", result);  // result: 0
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+let lightWeightMap: LightWeightMap<string, int> = new LightWeightMap<string, int>();
 lightWeightMap.set("squirrel", 123);
 lightWeightMap.set("sparrow", 356);
 let result = lightWeightMap.getIndexOfKey("sparrow");
@@ -480,12 +583,24 @@ getIndexOfValue(value: V): int
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 10200011 | The getIndexOfValue method cannot be bound. |
+| [10200011](../errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) | The getIndexOfValue method cannot be bound. |
 
 ## 示例
 
+ArkTS-Dyn示例：
+
 ```TypeScript
 let lightWeightMap = new LightWeightMap<string, number>();
+lightWeightMap.set("squirrel", 123);
+lightWeightMap.set("sparrow", 356);
+let result = lightWeightMap.getIndexOfValue(123);
+console.info("result:", result);  // result: 1
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+let lightWeightMap: LightWeightMap<string, int> = new LightWeightMap<string, int>();
 lightWeightMap.set("squirrel", 123);
 lightWeightMap.set("sparrow", 356);
 let result = lightWeightMap.getIndexOfValue(123);
@@ -526,12 +641,13 @@ getKeyAt(index: number): K
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 10200011 | The getKeyAt method cannot be bound. |
-| 10200001 | The value of index is out of range. |
+| [10200011](../errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) | The getKeyAt method cannot be bound. |
+| [10200001](../errorcode-utils.md#10200001-参数范围越界错误) | The value of index is out of range. |
 
 ## 示例
 
 ```TypeScript
+// 不建议在keys中使用set、setValueAt、remove、removeAt方法，会导致死循环等不可预知的风险，可使用for循环来进行插入和删除。
 let lightWeightMap = new LightWeightMap<string, number>();
 lightWeightMap.set("squirrel", 123);
 lightWeightMap.set("sparrow", 356);
@@ -561,7 +677,7 @@ getKeyAt(index: int): K | undefined
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| index | int | 是 | 所查找的下标。需要小于等于int32_max即2147483647。 取值限定为整数。 |
+| index | int | 是 | 所查找的下标。需要小于等于INT32_MAX即2147483647。 取值限定为整数。 |
 
 **返回值：**
 
@@ -573,7 +689,17 @@ getKeyAt(index: int): K | undefined
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 10200001 | The value of index is out of range. |
+| [10200001](../errorcode-utils.md#10200001-参数范围越界错误) | The value of index is out of range. |
+
+## 示例
+
+```TypeScript
+let lightWeightMap: LightWeightMap<string, int> = new LightWeightMap<string, int>();
+lightWeightMap.set("squirrel", 123);
+lightWeightMap.set("sparrow", 356);
+let result = lightWeightMap.getKeyAt(1);
+console.info("result:", result);  // result: squirrel
+```
 
 ## getValueAt
 
@@ -609,12 +735,13 @@ getValueAt(index: number): V
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 10200011 | The getValueAt method cannot be bound. |
-| 10200001 | The value of index is out of range. |
+| [10200011](../errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) | The getValueAt method cannot be bound. |
+| [10200001](../errorcode-utils.md#10200001-参数范围越界错误) | The value of index is out of range. |
 
 ## 示例
 
 ```TypeScript
+// 不建议在values中使用set、setValueAt、remove、removeAt方法，会导致死循环等不可预知的风险，可使用for循环来进行插入和删除。
 let lightWeightMap = new LightWeightMap<string, number>();
 lightWeightMap.set("squirrel", 123);
 lightWeightMap.set("sparrow", 356);
@@ -644,7 +771,7 @@ getValueAt(index: int): V | undefined
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| index | int | 是 | 指定下标。需要小于等于int32_max即2147483647。 取值限定为整数。 |
+| index | int | 是 | 要删除的元素的下标位置。取值范围：[0, length-1]，需小于等于INT32_MAX即2147483647。 取值限定为整数。 |
 
 **返回值：**
 
@@ -656,7 +783,17 @@ getValueAt(index: int): V | undefined
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 10200001 | The value of index is out of range. |
+| [10200001](../errorcode-utils.md#10200001-参数范围越界错误) | The value of index is out of range. |
+
+## 示例
+
+```TypeScript
+let lightWeightMap: LightWeightMap<string, int> = new LightWeightMap<string, int>();
+lightWeightMap.set("squirrel", 123);
+lightWeightMap.set("sparrow", 356);
+let result = lightWeightMap.getValueAt(1);
+console.info("result:", result);  // result: 123
+```
 
 ## hasAll
 
@@ -692,9 +829,11 @@ hasAll(map: LightWeightMap<K, V>): boolean
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 10200011 | The hasAll method cannot be bound. |
+| [10200011](../errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) | The hasAll method cannot be bound. |
 
 ## 示例
+
+ArkTS-Dyn示例：
 
 ```TypeScript
 let lightWeightMap = new LightWeightMap<string, number>();
@@ -703,6 +842,18 @@ lightWeightMap.set("sparrow", 356);
 let targetMap = new LightWeightMap<string, number>();
 targetMap.set("sparrow", 356);
 let result = lightWeightMap.hasAll(targetMap); 
+console.info("result = ", result); // result = true
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+let lightWeightMap: LightWeightMap<string, int> = new LightWeightMap<string, int>();
+lightWeightMap.set("squirrel", 123);
+lightWeightMap.set("sparrow", 356);
+let map = new LightWeightMap<string, int>();
+map.set("sparrow", 356);
+let result = lightWeightMap.hasAll(map);
 console.info("result = ", result); // result = true
 ```
 
@@ -740,15 +891,25 @@ hasKey(key: K): boolean
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 10200011 | The hasKey method cannot be bound. |
+| [10200011](../errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) | The hasKey method cannot be bound. |
 
 ## 示例
+
+ArkTS-Dyn示例：
 
 ```TypeScript
 let lightWeightMap = new LightWeightMap<string, number>();
 lightWeightMap.set("squirrel", 123);
 let result = lightWeightMap.hasKey("squirrel");
 console.info("result:", result);  // result: true
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+let lightWeightMap: LightWeightMap<string, int> = new LightWeightMap<string, int>();
+lightWeightMap.set("squirrel", 123);
+let result = lightWeightMap.hasKey("squirrel");
 ```
 
 ## hasValue
@@ -785,12 +946,23 @@ hasValue(value: V): boolean
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 10200011 | The hasValue method cannot be bound. |
+| [10200011](../errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) | The hasValue method cannot be bound. |
 
 ## 示例
 
+ArkTS-Dyn示例：
+
 ```TypeScript
 let lightWeightMap = new LightWeightMap<string, number>();
+lightWeightMap.set("squirrel", 123);
+let result = lightWeightMap.hasValue(123);
+console.info("result:", result);  // result: true
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+let lightWeightMap: LightWeightMap<string, int> = new LightWeightMap<string, int>();
 lightWeightMap.set("squirrel", 123);
 let result = lightWeightMap.hasValue(123);
 console.info("result:", result);  // result: true
@@ -830,12 +1002,21 @@ increaseCapacityTo(minimumCapacity: int): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 10200011 | The increaseCapacityTo method cannot be bound. |
+| [10200011](../errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) | The increaseCapacityTo method cannot be bound. |
 
 ## 示例
 
+ArkTS-Dyn示例：
+
 ```TypeScript
 let lightWeightMap = new LightWeightMap<string, number>();
+lightWeightMap.increaseCapacityTo(10);
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+let lightWeightMap: LightWeightMap<string, int> = new LightWeightMap<string, int>();
 lightWeightMap.increaseCapacityTo(10);
 ```
 
@@ -867,12 +1048,22 @@ isEmpty(): boolean
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 10200011 | The isEmpty method cannot be bound. |
+| [10200011](../errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) | The isEmpty method cannot be bound. |
 
 ## 示例
 
+ArkTS-Dyn示例：
+
 ```TypeScript
-let lightWeightMap = new LightWeightMap<string, number>();
+const lightWeightMap = new LightWeightMap<string, number>();
+let result = lightWeightMap.isEmpty();
+console.info("result:", result);  // result: true
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+const lightWeightMap: LightWeightMap<string, int> = new LightWeightMap<string, int>();
 let result = lightWeightMap.isEmpty();
 console.info("result:", result);  // result: true
 ```
@@ -899,24 +1090,41 @@ keys(): IterableIterator<K>
 
 | 类型 | 说明 |
 | --- | --- |
-| [IterableIterator](arkts-arkts-iterator-iterableiterator-i.md)&lt;K&gt; | 返回一个迭代器。 |
+| IterableIterator&lt;K&gt; | 返回一个迭代器。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 10200011 | The keys method cannot be bound. |
+| [10200011](../errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) | The keys method cannot be bound. |
 
 ## 示例
 
+ArkTS-Dyn示例：
+
 ```TypeScript
-// 不建议在keys中使用set、setValueAt、remove、removeAt方法，会导致死循环等不可预知的风险，可使用for循环来进行插入和删除。
 let lightWeightMap = new LightWeightMap<string, number>();
 lightWeightMap.set("squirrel", 123);
 lightWeightMap.set("sparrow", 356);
 let keys = lightWeightMap.keys();
 for (let key of keys) {
   console.info("key:", key);
+}
+// key: sparrow
+// key: squirrel
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+let lightWeightMap: LightWeightMap<string, int> = new LightWeightMap<string, int>();
+lightWeightMap.set("squirrel", 123);
+lightWeightMap.set("sparrow", 356);
+let iter = lightWeightMap.keys();
+let temp: IteratorResult<string> = iter.next();
+while(!temp.done) {
+  console.info("value:" + temp.value);
+  temp = iter.next();
 }
 // key: sparrow
 // key: squirrel
@@ -956,7 +1164,7 @@ remove(key: K): V
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 10200011 | The remove method cannot be bound. |
+| [10200011](../errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) | The remove method cannot be bound. |
 
 ## 示例
 
@@ -973,7 +1181,7 @@ console.info("result:", result);  // result: 356
 remove(key: K): V | undefined
 ```
 
-删除指定key映射的元素。
+删除指定key映射的元素。当key为number类型且值大于INT32_MAX或小于INT32_MIN时，结果可能与预期不一致。
 
 **起始版本：** 23
 
@@ -996,6 +1204,16 @@ remove(key: K): V | undefined
 | 类型 | 说明 |
 | --- | --- |
 | V | 如果删除了元素则返回该元素的值，否则返回undefined。 |
+
+## 示例
+
+```TypeScript
+let lightWeightMap: LightWeightMap<string, number> = new LightWeightMap<string, number>();
+lightWeightMap.set("squirrel", 123);
+lightWeightMap.set("sparrow", 356);
+lightWeightMap.remove("sparrow");
+console.info("result:", result);  // result: 356
+```
 
 ## removeAt
 
@@ -1037,12 +1255,24 @@ removeAt(index: int): boolean
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 10200011 | The removeAt method cannot be bound. |
+| [10200011](../errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) | The removeAt method cannot be bound. |
 
 ## 示例
 
+ArkTS-Dyn示例：
+
 ```TypeScript
 let lightWeightMap = new LightWeightMap<string, number>();
+lightWeightMap.set("squirrel", 123);
+lightWeightMap.set("sparrow", 356);
+let result = lightWeightMap.removeAt(1);
+console.info("result:", result);  // result: true
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+let lightWeightMap: LightWeightMap<string, int> = new LightWeightMap<string, int>();
 lightWeightMap.set("squirrel", 123);
 lightWeightMap.set("sparrow", 356);
 let result = lightWeightMap.removeAt(1);
@@ -1084,12 +1314,22 @@ set(key: K, value: V): Object
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 10200011 | The set method cannot be bound. |
+| [10200011](../errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) | The set method cannot be bound. |
 
 ## 示例
 
+ArkTS-Dyn示例：
+
 ```TypeScript
 let lightWeightMap = new LightWeightMap<string, number>();
+let result = lightWeightMap.set("squirrel", 123);
+console.info("result:", result);  // result: squirrel:123
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+let lightWeightMap: LightWeightMap<string, int> = new LightWeightMap<string, int>();
 let result = lightWeightMap.set("squirrel", 123);
 console.info("result:", result);  // result: squirrel:123
 ```
@@ -1122,9 +1362,11 @@ setAll(map: LightWeightMap<K, V>): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 10200011 | The setAll method cannot be bound. |
+| [10200011](../errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) | The setAll method cannot be bound. |
 
 ## 示例
+
+ArkTS-Dyn示例：
 
 ```TypeScript
 let lightWeightMap = new LightWeightMap<string, number>();
@@ -1132,6 +1374,18 @@ lightWeightMap.set("squirrel", 123);
 lightWeightMap.set("sparrow", 356);
 let map = new LightWeightMap<string, number>();
 map.setAll(lightWeightMap);   // 将lightWeightMap中所有的元素添加到map中
+let result = map.get("sparrow");
+console.info("result:", result);  // result: 356
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+let lightWeightMap: LightWeightMap<string, int> = new LightWeightMap<string, int>();
+lightWeightMap.set("squirrel", 123);
+lightWeightMap.set("sparrow", 356);
+let map: LightWeightMap<string, int> = new LightWeightMap<string, int>();
+map.setAll(lightWeightMap); // 将lightWeightMap中所有的元素添加到map中
 let result = map.get("sparrow");
 console.info("result:", result);  // result: 356
 ```
@@ -1177,13 +1431,25 @@ setValueAt(index: int, newValue: V): boolean
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 10200011 | The setValueAt method cannot be bound. |
-| 10200001 | The value of index is out of range. |
+| [10200011](../errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) | The setValueAt method cannot be bound. |
+| [10200001](../errorcode-utils.md#10200001-参数范围越界错误) | The value of index is out of range. |
 
 ## 示例
 
+ArkTS-Dyn示例：
+
 ```TypeScript
 let lightWeightMap = new LightWeightMap<string, number>();
+lightWeightMap.set("squirrel", 123);
+lightWeightMap.set("sparrow", 356);
+lightWeightMap.setValueAt(1, 3546);
+console.info("result:", lightWeightMap.get("squirrel"));  // result: 3546
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+let lightWeightMap: LightWeightMap<string, int> = new LightWeightMap<string, int>();
 lightWeightMap.set("squirrel", 123);
 lightWeightMap.set("sparrow", 356);
 lightWeightMap.setValueAt(1, 3546);
@@ -1218,12 +1484,24 @@ toString(): String
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 10200011 | The toString method cannot be bound. |
+| [10200011](../errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) | The toString method cannot be bound. |
 
 ## 示例
 
+ArkTS-Dyn示例：
+
 ```TypeScript
 let lightWeightMap = new LightWeightMap<string, number>();
+lightWeightMap.set("squirrel", 123);
+lightWeightMap.set("sparrow", 356);
+let result = lightWeightMap.toString();
+console.info("result:", result);  // result: sparrow:356,squirrel:123
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+let lightWeightMap: LightWeightMap<string, int> = new LightWeightMap<string, int>();
 lightWeightMap.set("squirrel", 123);
 lightWeightMap.set("sparrow", 356);
 let result = lightWeightMap.toString();
@@ -1252,24 +1530,41 @@ values(): IterableIterator<V>
 
 | 类型 | 说明 |
 | --- | --- |
-| [IterableIterator](arkts-arkts-iterator-iterableiterator-i.md)&lt;V&gt; | 返回一个迭代器。 |
+| IterableIterator&lt;V&gt; | 返回一个迭代器。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 10200011 | The values method cannot be bound. |
+| [10200011](../errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) | The values method cannot be bound. |
 
 ## 示例
 
+ArkTS-Dyn示例：
+
 ```TypeScript
-// 不建议在values中使用set、setValueAt、remove、removeAt方法，会导致死循环等不可预知的风险，可使用for循环来进行插入和删除。
 let lightWeightMap = new LightWeightMap<string, number>();
 lightWeightMap.set("squirrel", 123);
 lightWeightMap.set("sparrow", 356);
 let values = lightWeightMap.values();
 for (let value of values) {
   console.info("value:", value);
+}
+// value: 356
+// value: 123
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+let lightWeightMap: LightWeightMap<string, int> = new LightWeightMap<string, int>();
+lightWeightMap.set("squirrel", 123);
+lightWeightMap.set("sparrow", 356);
+let iter = lightWeightMap.values();
+let temp: IteratorResult<int> = iter.next();
+while(!temp.done) {
+  console.info("value:" + temp.value);
+  temp = iter.next();
 }
 // value: 356
 // value: 123

@@ -18,7 +18,7 @@ Enum for distortion animation mode.
 DISTORTION_AUTO = 0
 ```
 
-Adaptive implementation of edgeLight animation
+Adaptive implementation of distortion animation
 
 **Since:** 26.0.0
 

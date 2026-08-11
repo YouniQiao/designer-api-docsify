@@ -99,7 +99,7 @@ regularSize: [
 
 大小规则的GridItem在Grid中占的行数和列数，只支持占1行1列即[1, 1]。
 
-**类型：** [         int,         int     ]
+**类型：** [         int,         int     ]
 
 **起始版本：** 23
 

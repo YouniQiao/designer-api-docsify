@@ -1,6 +1,6 @@
 # CommonController
 
-公共控制器，可以控制promptAction相关组件。
+The class used to control common dialog.
 
 **Since:** 23
 
@@ -22,7 +22,7 @@ import { LevelMode, ImmersiveMode, LevelOrder } from 'kits/@kit.ArkUI';
 close(): void
 ```
 
-关闭显示的自定义弹窗，若已关闭，则不生效。
+Close the corresponding common dialog.
 
 **Since:** 23
 
@@ -40,7 +40,7 @@ close(): void
 constructor()
 ```
 
-控制器的构造函数。
+The constructor.
 
 **Since:** 23
 
@@ -58,7 +58,7 @@ constructor()
 getState(): CommonState
 ```
 
-获取自定义弹窗的状态。
+Get the state.
 
 **Since:** 23
 
@@ -74,5 +74,5 @@ getState(): CommonState
 
 | Type | Description |
 | --- | --- |
-| [CommonState](arkts-arkui-promptaction-commonstate-e.md) | 返回对应的弹窗状态。 |
+| [CommonState](arkts-arkui-promptaction-commonstate-e.md) | return the state. |
 

@@ -1,6 +1,6 @@
 # GeneralNameType
 
-X.509中定义的GeneralName类型的枚举，这些类型可出现在“使用者备用名称”（Subject Alternative Name）及其他扩展项中。
+Enumerates the types of GeneralName as defined in X.509, which can appear in Subject Alternative Name and other extensions.
 
 **Since:** 12
 
@@ -16,7 +16,7 @@ X.509中定义的GeneralName类型的枚举，这些类型可出现在“使用�
 GENERAL_NAME_TYPE_OTHER_NAME = 0
 ```
 
-表示其他名称。
+Indicates an otherName.
 
 **Since:** 12
 
@@ -34,7 +34,7 @@ GENERAL_NAME_TYPE_OTHER_NAME = 0
 GENERAL_NAME_TYPE_RFC822_NAME = 1
 ```
 
-表示电子邮件地址。
+Indicates an email address.
 
 **Since:** 12
 
@@ -52,7 +52,7 @@ GENERAL_NAME_TYPE_RFC822_NAME = 1
 GENERAL_NAME_TYPE_DNS_NAME = 2
 ```
 
-表示一个DNS名称。
+Indicates a DNS name.
 
 **Since:** 12
 
@@ -70,7 +70,7 @@ GENERAL_NAME_TYPE_DNS_NAME = 2
 GENERAL_NAME_TYPE_X400_ADDRESS = 3
 ```
 
-表示X.400地址。
+Indicates an X.400 address.
 
 **Since:** 12
 
@@ -88,7 +88,7 @@ GENERAL_NAME_TYPE_X400_ADDRESS = 3
 GENERAL_NAME_TYPE_DIRECTORY_NAME = 4
 ```
 
-表示一个目录名称。
+Indicates a directory name.
 
 **Since:** 12
 
@@ -106,7 +106,7 @@ GENERAL_NAME_TYPE_DIRECTORY_NAME = 4
 GENERAL_NAME_TYPE_EDI_PARTY_NAME = 5
 ```
 
-表示特定的EDI实体。
+Indicates an Electronic Data Interchange (EDI) entity.
 
 **Since:** 12
 
@@ -124,7 +124,7 @@ GENERAL_NAME_TYPE_EDI_PARTY_NAME = 5
 GENERAL_NAME_TYPE_UNIFORM_RESOURCE_ID = 6
 ```
 
-表示一个统一资源标识符。
+Indicates a uniform resource identifier.
 
 **Since:** 12
 
@@ -142,7 +142,7 @@ GENERAL_NAME_TYPE_UNIFORM_RESOURCE_ID = 6
 GENERAL_NAME_TYPE_IP_ADDRESS = 7
 ```
 
-表示一个IP地址。
+Indicates an IP address.
 
 **Since:** 12
 
@@ -160,7 +160,7 @@ GENERAL_NAME_TYPE_IP_ADDRESS = 7
 GENERAL_NAME_TYPE_REGISTERED_ID = 8
 ```
 
-表示一个已注册的对象标识符。
+Indicates a registered object identifier.
 
 **Since:** 12
 

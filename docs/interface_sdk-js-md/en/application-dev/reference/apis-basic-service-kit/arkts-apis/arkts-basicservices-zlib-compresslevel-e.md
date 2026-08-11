@@ -1,6 +1,6 @@
 # CompressLevel
 
-压缩等级。
+CompressLevel
 
 **Since:** 7
 
@@ -16,7 +16,7 @@
 COMPRESS_LEVEL_NO_COMPRESSION = 0
 ```
 
-压缩率为0压缩等级。
+Compress level 0 that indicates uncompressed.
 
 **Since:** 7
 
@@ -34,7 +34,7 @@ COMPRESS_LEVEL_NO_COMPRESSION = 0
 COMPRESS_LEVEL_BEST_SPEED = 1
 ```
 
-最佳速度压缩等级。
+Compression level 1 that gives the best speed.
 
 **Since:** 7
 
@@ -52,7 +52,7 @@ COMPRESS_LEVEL_BEST_SPEED = 1
 COMPRESS_LEVEL_BEST_COMPRESSION = 9
 ```
 
-最佳压缩等级。
+Compression level 9 that gives the best compression.
 
 **Since:** 7
 
@@ -70,7 +70,7 @@ COMPRESS_LEVEL_BEST_COMPRESSION = 9
 COMPRESS_LEVEL_DEFAULT_COMPRESSION = -1
 ```
 
-默认压缩等级。
+Default compression level.
 
 **Since:** 7
 

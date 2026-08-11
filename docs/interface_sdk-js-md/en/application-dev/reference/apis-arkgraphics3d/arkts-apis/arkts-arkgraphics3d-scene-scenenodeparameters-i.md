@@ -1,6 +1,6 @@
 # SceneNodeParameters
 
-场景节点参数类型.
+The scene node parameters type.
 
 **Since:** 12
 
@@ -16,7 +16,7 @@
 name: string
 ```
 
-场景节点参数的名称.
+The name of the scene node parameters.
 
 **Type:** string
 
@@ -34,7 +34,7 @@ name: string
 path?: string
 ```
 
-场景节点参数的路径.
+The path of the scene node parameters.
 
 **Type:** string
 

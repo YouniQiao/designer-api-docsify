@@ -1,11 +1,5 @@
 # onAnimationReduceStateChange
 
-## 导入模块
-
-```TypeScript
-import { accessibility } from 'kits/@kit.AccessibilityKit';
-```
-
 ## onAnimationReduceStateChange
 
 ```TypeScript

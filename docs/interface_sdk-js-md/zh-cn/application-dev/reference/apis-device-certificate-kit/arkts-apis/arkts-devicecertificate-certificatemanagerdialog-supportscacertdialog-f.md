@@ -1,11 +1,5 @@
 # supportsCACertDialog
 
-## 导入模块
-
-```TypeScript
-import { certificateManagerDialog } from 'kits/@kit.DeviceCertificateKit';
-```
-
 ## supportsCACertDialog
 
 ```TypeScript
@@ -34,7 +28,7 @@ function supportsCACertDialog(): boolean
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 29700001 | Internal error. Possible causes: 1. IPC communication failed; &lt;br&gt;2. Memory operation error; 3. File operation error. Please try again. |
+| [29700001](../errorcode-certManagerDialog.md#29700001-内部错误) | Internal error. Possible causes: 1. IPC communication failed; &lt;br&gt;2. Memory operation error; 3. File operation error. Please try again. |
 
 ## 示例
 

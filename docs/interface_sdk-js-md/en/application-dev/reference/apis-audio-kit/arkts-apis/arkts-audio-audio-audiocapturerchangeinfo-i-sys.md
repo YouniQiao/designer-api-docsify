@@ -1,6 +1,6 @@
 # AudioCapturerChangeInfo
 
-描述音频采集器更改信息。
+Describes the audio capturer change event.
 
 **Since:** 9
 
@@ -22,7 +22,9 @@ import { audio } from 'kits/@kit.AudioKit';
 readonly capturerState: AudioState
 ```
 
-**Type:** [AudioState](../../apis-media-kit/arkts-apis/arkts-media-audiostate-t.md)
+Audio state.
+
+**Type:** [AudioState](../../apis-media-kit/arkts-apis/arkts-media-media-audiostate-t.md)
 
 **Since:** 9
 

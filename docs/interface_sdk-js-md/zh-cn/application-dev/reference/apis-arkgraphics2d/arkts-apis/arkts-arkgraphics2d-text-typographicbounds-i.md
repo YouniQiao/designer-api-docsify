@@ -26,12 +26,6 @@
 
 **系统能力：** SystemCapability.Graphics.Drawing
 
-## 导入模块
-
-```TypeScript
-import { text } from 'kits/@kit.ArkGraphics2D';
-```
-
 ## ascent
 
 ```TypeScript

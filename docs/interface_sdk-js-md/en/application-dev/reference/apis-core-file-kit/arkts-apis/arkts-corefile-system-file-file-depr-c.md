@@ -1,6 +1,6 @@
 # File
 
-文件类。
+File
 
 **Since:** 3
 
@@ -18,7 +18,7 @@
 static access(options: FileAccessOption): void
 ```
 
-判断指定文件或目录是否存在。
+Checks whether a file or directory exists.
 
 **Since:** 3
 
@@ -36,88 +36,7 @@ static access(options: FileAccessOption): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| options | [FileAccessOption](arkts-corefile-system-file-fileaccessoption-depr-i.md) | Yes | 接口选项。 |
-
-## Examples
-
-ArkTS example:
-
-```TypeScript
-import file from '@system.file';
-
-export default {    
-  access() {        
-    file.access({            
-      uri: 'internal://app/test',            
-      success: function() {                
-        console.info('call access success.');            
-      },            
-      fail: function(data, code) {                
-        console.error('call fail callback fail, code: ' + code + ', data: ' + data);            
-      },        
-    });    
-  }
-}
-```
-
-JS example:
-
-```TypeScript
-<!-- xxx.hml -->
-<div class="container">
-  <text class="title" style="font-size: 30px;">test</text>
-  <input type="button" value="access" class="button" onclick="access"></input>
-</div>
-```
-
-```TypeScript
-/* xxx.css */
-.container {
-  display: flex;
-  justify-content: column;
-  align-items: center;
-  left: 0px;
-  top: 0px;
-  width: 454px;
-  height: 454px;
-}
-
-.title {
-  font-size: 100px;
-  text-align: center;
-  width: 200px;
-  height: 100px;
-}
-
-.button {
-  font-size: 30px;
-  text-align: center;
-  width: 250px;
-  height: 60px;
-  background-color: #0078D7;
-  color: white;
-  border-radius: 5px;
-}
-```
-
-```TypeScript
-// xxx.js
-import file from '@system.file';
-
-export default {    
-  access() {        
-    file.access({            
-      uri: 'internal://app/test',            
-      success: function() {                
-        console.info('call access success.');            
-      },            
-      fail: function(data, code) {                
-        console.error('call fail callback fail, code: ' + code + ', data: ' + data);            
-      },        
-    });    
-  }
-}
-```
+| options | [FileAccessOption](arkts-corefile-system-file-fileaccessoption-depr-i.md) | Yes | Options for checking whether a file or directory exists. |
 
 ## copy
 
@@ -125,7 +44,7 @@ export default {
 static copy(options: FileCopyOption): void
 ```
 
-将指定文件拷贝并存储到指定位置。
+Copies a file to the given URI.
 
 **Since:** 3
 
@@ -143,90 +62,7 @@ static copy(options: FileCopyOption): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| options | [FileCopyOption](arkts-corefile-system-file-filecopyoption-depr-i.md) | Yes | 接口选项。 |
-
-## Examples
-
-ArkTS example:
-
-```TypeScript
-import file from '@system.file';
-
-export default {    
-  copy() {        
-    file.copy({            
-      srcUri: 'internal://app/file.txt',            
-      dstUri: 'internal://app/file_copy.txt',            
-      success: function(uri) {                
-        console.info('call success callback success');            
-      },            
-      fail: function(data, code) {                
-        console.error('call fail callback fail, code: ' + code + ', data: ' + data);            
-      },
-    });    
-  }
-}
-```
-
-JS example:
-
-```TypeScript
-<!-- xxx.hml -->
-<div class="container">
-  <text class="title" style="font-size: 30px;">test</text>
-  <input type="button" value="copy" class="button" onclick="copy"></input>
-</div>
-```
-
-```TypeScript
-/* xxx.css */
-.container {
-  display: flex;
-  justify-content: column;
-  align-items: center;
-  left: 0px;
-  top: 0px;
-  width: 454px;
-  height: 454px;
-}
-
-.title {
-  font-size: 100px;
-  text-align: center;
-  width: 200px;
-  height: 100px;
-}
-
-.button {
-  font-size: 30px;
-  text-align: center;
-  width: 250px;
-  height: 60px;
-  background-color: #0078D7;
-  color: white;
-  border-radius: 5px;
-}
-```
-
-```TypeScript
-// xxx.js
-import file from '@system.file';
-
-export default {    
-  copy() {        
-    file.copy({            
-      srcUri: 'internal://app/file.txt',            
-      dstUri: 'internal://app/file_copy.txt',            
-      success: function(uri) {                
-        console.info('call success callback success');            
-      },            
-      fail: function(data, code) {                
-        console.error('call fail callback fail, code: ' + code + ', data: ' + data);            
-      },
-    });    
-  }
-}
-```
+| options | [FileCopyOption](arkts-corefile-system-file-filecopyoption-depr-i.md) | Yes | Options for copying the files. |
 
 ## delete
 
@@ -234,7 +70,7 @@ export default {
 static delete(options: FileDeleteOption): void
 ```
 
-删除本地文件。
+Deletes a local file.
 
 **Since:** 3
 
@@ -252,88 +88,7 @@ static delete(options: FileDeleteOption): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| options | [FileDeleteOption](arkts-corefile-system-file-filedeleteoption-depr-i.md) | Yes | 接口选项。 |
-
-## Examples
-
-ArkTS example:
-
-```TypeScript
-import file from '@system.file';
-
-export default {    
-  delete() {        
-    file.delete({            
-      uri: 'internal://app/my_file',            
-      success: function() {                
-        console.info('call delete success.');            
-      },            
-      fail: function(data, code) {                
-        console.error('call fail callback fail, code: ' + code + ', data: ' + data);            
-      },
-    });    
-  }
-}
-```
-
-JS example:
-
-```TypeScript
-<!-- xxx.hml -->
-<div class="container">
-  <text class="title" style="font-size: 30px;">test</text>
-  <input type="button" value="delete" class="button" onclick="delete"></input>
-</div>
-```
-
-```TypeScript
-/* xxx.css */
-.container {
-  display: flex;
-  justify-content: column;
-  align-items: center;
-  left: 0px;
-  top: 0px;
-  width: 454px;
-  height: 454px;
-}
-
-.title {
-  font-size: 100px;
-  text-align: center;
-  width: 200px;
-  height: 100px;
-}
-
-.button {
-  font-size: 30px;
-  text-align: center;
-  width: 250px;
-  height: 60px;
-  background-color: #0078D7;
-  color: white;
-  border-radius: 5px;
-}
-```
-
-```TypeScript
-// xxx.js
-import file from '@system.file';
-
-export default {    
-  delete() {        
-    file.delete({            
-      uri: 'internal://app/my_file',            
-      success: function() {                
-        console.info('call delete success.');            
-      },            
-      fail: function(data, code) {                
-        console.error('call fail callback fail, code: ' + code + ', data: ' + data);            
-      },
-    });    
-  }
-}
-```
+| options | [FileDeleteOption](arkts-corefile-system-file-filedeleteoption-depr-i.md) | Yes | Options for deleting a local file. |
 
 ## get
 
@@ -341,7 +96,7 @@ export default {
 static get(options: FileGetOption): void
 ```
 
-获取指定本地文件的信息。
+Obtains information about a local file.
 
 **Since:** 3
 
@@ -359,88 +114,7 @@ static get(options: FileGetOption): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| options | [FileGetOption](arkts-corefile-system-file-filegetoption-depr-i.md) | Yes | 接口选项。 |
-
-## Examples
-
-ArkTS example:
-
-```TypeScript
-import file from '@system.file';
-
-export default {    
-  get() {        
-    file.get({            
-      uri: 'internal://app/file',            
-      success: function(data) {                
-        console.info(data.uri);            
-      },            
-      fail: function(data, code) {                
-        console.error('call fail callback fail, code: ' + code + ', data: ' + data);            
-      },
-    });    
-  }
-}
-```
-
-JS example:
-
-```TypeScript
-<!-- xxx.hml -->
-<div class="container">
-  <text class="title" style="font-size: 30px;">test</text>
-  <input type="button" value="get" class="button" onclick="get"></input>
-</div>
-```
-
-```TypeScript
-/* xxx.css */
-.container {
-  display: flex;
-  justify-content: column;
-  align-items: center;
-  left: 0px;
-  top: 0px;
-  width: 454px;
-  height: 454px;
-}
-
-.title {
-  font-size: 100px;
-  text-align: center;
-  width: 200px;
-  height: 100px;
-}
-
-.button {
-  font-size: 30px;
-  text-align: center;
-  width: 250px;
-  height: 60px;
-  background-color: #0078D7;
-  color: white;
-  border-radius: 5px;
-}
-```
-
-```TypeScript
-// xxx.js
-import file from '@system.file';
-
-export default {    
-  get() {        
-    file.get({            
-      uri: 'internal://app/file',            
-      success: function(data) {                
-        console.info(data.uri);            
-      },            
-      fail: function(data, code) {                
-        console.error('call fail callback fail, code: ' + code + ', data: ' + data);            
-      },
-    });    
-  }
-}
-```
+| options | [FileGetOption](arkts-corefile-system-file-filegetoption-depr-i.md) | Yes | Options for obtaining information about a local file. |
 
 ## list
 
@@ -448,7 +122,7 @@ export default {
 static list(options: FileListOption): void
 ```
 
-获取指定路径下全部文件的列表。
+Obtains all files in the specified directory.
 
 **Since:** 3
 
@@ -466,88 +140,7 @@ static list(options: FileListOption): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| options | [FileListOption](arkts-corefile-system-file-filelistoption-depr-i.md) | Yes | 接口选项。 |
-
-## Examples
-
-ArkTS example:
-
-```TypeScript
-import file from '@system.file';
-
-export default {    
-  list() {        
-    file.list({            
-      uri: 'internal://app/pic',            
-      success: function(data) {                
-        console.info(JSON.stringify(data.fileList));            
-      },            
-      fail: function(data, code) {                
-        console.error('call fail callback fail, code: ' + code + ', data: ' + data);            
-      },        
-    });    
-  }
-}
-```
-
-JS example:
-
-```TypeScript
-<!-- xxx.hml -->
-<div class="container">
-  <text class="title" style="font-size: 30px;">test</text>
-  <input type="button" value="list" class="button" onclick="list"></input>
-</div>
-```
-
-```TypeScript
-/* xxx.css */
-.container {
-  display: flex;
-  justify-content: column;
-  align-items: center;
-  left: 0px;
-  top: 0px;
-  width: 454px;
-  height: 454px;
-}
-
-.title {
-  font-size: 100px;
-  text-align: center;
-  width: 200px;
-  height: 100px;
-}
-
-.button {
-  font-size: 30px;
-  text-align: center;
-  width: 250px;
-  height: 60px;
-  background-color: #0078D7;
-  color: white;
-  border-radius: 5px;
-}
-```
-
-```TypeScript
-// xxx.js
-import file from '@system.file';
-
-export default {    
-  list() {        
-    file.list({            
-      uri: 'internal://app/pic',            
-      success: function(data) {                
-        console.info(JSON.stringify(data.fileList));            
-      },            
-      fail: function(data, code) {                
-        console.error('call fail callback fail, code: ' + code + ', data: ' + data);            
-      },        
-    });    
-  }
-}
-```
+| options | [FileListOption](arkts-corefile-system-file-filelistoption-depr-i.md) | Yes | Options for obtaining all files in the specified directory. |
 
 ## mkdir
 
@@ -555,7 +148,7 @@ export default {
 static mkdir(options: FileMkdirOption): void
 ```
 
-创建指定目录。
+Creates a directory.
 
 **Since:** 3
 
@@ -573,88 +166,7 @@ static mkdir(options: FileMkdirOption): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| options | [FileMkdirOption](arkts-corefile-system-file-filemkdiroption-depr-i.md) | Yes | 接口选项。 |
-
-## Examples
-
-ArkTS example:
-
-```TypeScript
-import file from '@system.file';
-
-export default {    
-  mkdir() {        
-    file.mkdir({            
-      uri: 'internal://app/test_directory',            
-      success: function() {                
-        console.info('call mkdir success.');            
-      },            
-      fail: function(data, code) {                
-        console.error('call fail callback fail, code: ' + code + ', data: ' + data);            
-      },
-    });    
-  }
-}
-```
-
-JS example:
-
-```TypeScript
-<!-- xxx.hml -->
-<div class="container">
-  <text class="title" style="font-size: 30px;">test</text>
-  <input type="button" value="mkdir" class="button" onclick="mkdir"></input>
-</div>
-```
-
-```TypeScript
-/* xxx.css */
-.container {
-  display: flex;
-  justify-content: column;
-  align-items: center;
-  left: 0px;
-  top: 0px;
-  width: 454px;
-  height: 454px;
-}
-
-.title {
-  font-size: 100px;
-  text-align: center;
-  width: 200px;
-  height: 100px;
-}
-
-.button {
-  font-size: 30px;
-  text-align: center;
-  width: 250px;
-  height: 60px;
-  background-color: #0078D7;
-  color: white;
-  border-radius: 5px;
-}
-```
-
-```TypeScript
-// xxx.js
-import file from '@system.file';
-
-export default {    
-  mkdir() {        
-    file.mkdir({            
-      uri: 'internal://app/test_directory',            
-      success: function() {                
-        console.info('call mkdir success.');            
-      },            
-      fail: function(data, code) {                
-        console.error('call fail callback fail, code: ' + code + ', data: ' + data);            
-      },
-    });    
-  }
-}
-```
+| options | [FileMkdirOption](arkts-corefile-system-file-filemkdiroption-depr-i.md) | Yes | Options for creating a directory. |
 
 ## move
 
@@ -662,7 +174,7 @@ export default {
 static move(options: FileMoveOption): void
 ```
 
-将指定文件移动到其他指定位置。
+Moves a specified file to a given location.
 
 **Since:** 3
 
@@ -680,90 +192,7 @@ static move(options: FileMoveOption): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| options | [FileMoveOption](arkts-corefile-system-file-filemoveoption-depr-i.md) | Yes | 文件过滤选项。默认不进行过滤。 |
-
-## Examples
-
-ArkTS example:
-
-```TypeScript
-import file from '@system.file';
-
-export default {    
-  move() {        
-    file.move({            
-      srcUri: 'internal://app/myfiles1',            
-      dstUri: 'internal://app/myfiles2',            
-      success: function(uri) {                
-        console.info('call success callback success');            
-      },            
-      fail: function(data, code) {                
-        console.error('call fail callback fail, code: ' + code + ', data: ' + data);            
-      },        
-    });    
-  }
-}
-```
-
-JS example:
-
-```TypeScript
-<!-- xxx.hml -->
-<div class="container">
-  <text class="title" style="font-size: 30px;">test</text>
-  <input type="button" value="move" class="button" onclick="move"></input>
-</div>
-```
-
-```TypeScript
-/* xxx.css */
-.container {
-  display: flex;
-  justify-content: column;
-  align-items: center;
-  left: 0px;
-  top: 0px;
-  width: 454px;
-  height: 454px;
-}
-
-.title {
-  font-size: 100px;
-  text-align: center;
-  width: 200px;
-  height: 100px;
-}
-
-.button {
-  font-size: 30px;
-  text-align: center;
-  width: 250px;
-  height: 60px;
-  background-color: #0078D7;
-  color: white;
-  border-radius: 5px;
-}
-```
-
-```TypeScript
-// xxx.js
-import file from '@system.file';
-
-export default {
-  move() {
-    file.move({
-      srcUri: 'internal://app/myfiles1',
-      dstUri: 'internal://app/myfiles2',
-      success: function(uri) {
-        console.info('call success callback success');
-      },
-      fail: function(data, code) {
-        console.error('call fail callback fail, code: ' + code + ', data: ' + data);
-      },
-    });
-  }
-}
-```
+| options | [FileMoveOption](arkts-corefile-system-file-filemoveoption-depr-i.md) | Yes | Options for moving the files. |
 
 ## readArrayBuffer
 
@@ -771,7 +200,7 @@ export default {
 static readArrayBuffer(options: FileReadArrayBufferOption): void
 ```
 
-从指定文件中读取Buffer内容。仅支持文本文档读写。
+Reads buffer data from a file. Only text files can be read and written.
 
 **Since:** 3
 
@@ -789,92 +218,7 @@ static readArrayBuffer(options: FileReadArrayBufferOption): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| options | [FileReadArrayBufferOption](arkts-corefile-system-file-filereadarraybufferoption-depr-i.md) | Yes | 接口选项。 |
-
-## Examples
-
-ArkTS example:
-
-```TypeScript
-import file from '@system.file';
-
-export default {    
-  readArrayBuffer() {        
-    file.readArrayBuffer({            
-      uri: 'internal://app/test',            
-      position: 10,            
-      length: 200,            
-      success: function(data) {                
-        console.info('call readArrayBuffer success: ' + data.buffer);            
-      },            
-      fail: function(data, code) {                
-        console.error('call fail callback fail, code: ' + code + ', data: ' + data);            
-      },
-    });    
-  }
-}
-```
-
-JS example:
-
-```TypeScript
-<!-- xxx.hml -->
-<div class="container">
-  <text class="title" style="font-size: 30px;">test</text>
-  <input type="button" value="readArrayBuffer" class="button" onclick="readArrayBuffer"></input>
-</div>
-```
-
-```TypeScript
-/* xxx.css */
-.container {
-  display: flex;
-  justify-content: column;
-  align-items: center;
-  left: 0px;
-  top: 0px;
-  width: 454px;
-  height: 454px;
-}
-
-.title {
-  font-size: 100px;
-  text-align: center;
-  width: 200px;
-  height: 100px;
-}
-
-.button {
-  font-size: 30px;
-  text-align: center;
-  width: 250px;
-  height: 60px;
-  background-color: #0078D7;
-  color: white;
-  border-radius: 5px;
-}
-```
-
-```TypeScript
-// xxx.js
-import file from '@system.file';
-
-export default {    
-  readArrayBuffer() {        
-    file.readArrayBuffer({            
-      uri: 'internal://app/test',            
-      position: 10,            
-      length: 200,            
-      success: function(data) {                
-        console.info('call readArrayBuffer success: ' + data.buffer);            
-      },            
-      fail: function(data, code) {                
-        console.error('call fail callback fail, code: ' + code + ', data: ' + data);            
-      },
-    });    
-  }
-}
-```
+| options | [FileReadArrayBufferOption](arkts-corefile-system-file-filereadarraybufferoption-depr-i.md) | Yes | Options for reading buffer data from a file. |
 
 ## readText
 
@@ -882,7 +226,7 @@ export default {
 static readText(options: FileReadTextOption): void
 ```
 
-从指定文件中读取文本内容。仅支持文本文档读写。
+Reads text from a file. Only text files can be read and written.
 
 **Since:** 3
 
@@ -900,88 +244,7 @@ static readText(options: FileReadTextOption): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| options | [FileReadTextOption](arkts-corefile-system-file-filereadtextoption-depr-i.md) | Yes | 接口选项。 |
-
-## Examples
-
-ArkTS example:
-
-```TypeScript
-import file from '@system.file';
-
-export default {    
-  readText() {        
-    file.readText({            
-      uri: 'internal://app/text.txt',            
-      success: function(data) {                
-        console.info('call readText success: ' + data.text);            
-      },            
-      fail: function(data, code) {                
-        console.error('call fail callback fail, code: ' + code + ', data: ' + data);            
-      },        
-    });    
-  }
-}
-```
-
-JS example:
-
-```TypeScript
-<!-- xxx.hml -->
-<div class="container">
-  <text class="title" style="font-size: 30px;">test</text>
-  <input type="button" value="readText" class="button" onclick="readText"></input>
-</div>
-```
-
-```TypeScript
-/* xxx.css */
-.container {
-  display: flex;
-  justify-content: column;
-  align-items: center;
-  left: 0px;
-  top: 0px;
-  width: 454px;
-  height: 454px;
-}
-
-.title {
-  font-size: 100px;
-  text-align: center;
-  width: 200px;
-  height: 100px;
-}
-
-.button {
-  font-size: 30px;
-  text-align: center;
-  width: 250px;
-  height: 60px;
-  background-color: #0078D7;
-  color: white;
-  border-radius: 5px;
-}
-```
-
-```TypeScript
-// xxx.js
-import file from '@system.file';
-
-export default {    
-  readText() {        
-    file.readText({            
-      uri: 'internal://app/text.txt',            
-      success: function(data) {                
-        console.info('call readText success: ' + data.text);            
-      },            
-      fail: function(data, code) {                
-        console.error('call fail callback fail, code: ' + code + ', data: ' + data);            
-      },        
-    });    
-  }
-}
-```
+| options | [FileReadTextOption](arkts-corefile-system-file-filereadtextoption-depr-i.md) | Yes | Options for reading text from a file. |
 
 ## rmdir
 
@@ -989,7 +252,7 @@ export default {
 static rmdir(options: FileRmdirOption): void
 ```
 
-删除指定目录。
+Deletes a directory.
 
 **Since:** 3
 
@@ -1007,88 +270,7 @@ static rmdir(options: FileRmdirOption): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| options | [FileRmdirOption](arkts-corefile-system-file-filermdiroption-depr-i.md) | Yes | 接口选项。 |
-
-## Examples
-
-ArkTS example:
-
-```TypeScript
-import file from '@system.file';
-
-export default {    
-  rmdir() {        
-    file.rmdir({            
-      uri: 'internal://app/test_directory',            
-      success: function() {                
-        console.info('call rmdir success.');            
-      },            
-      fail: function(data, code) {                
-        console.error('call fail callback fail, code: ' + code + ', data: ' + data);            
-      },
-    });    
-  }
-}
-```
-
-JS example:
-
-```TypeScript
-<!-- xxx.hml -->
-<div class="container">
-  <text class="title" style="font-size: 30px;">test</text>
-  <input type="button" value="rmdir" class="button" onclick="rmdir"></input>
-</div>
-```
-
-```TypeScript
-/* xxx.css */
-.container {
-  display: flex;
-  justify-content: column;
-  align-items: center;
-  left: 0px;
-  top: 0px;
-  width: 454px;
-  height: 454px;
-}
-
-.title {
-  font-size: 100px;
-  text-align: center;
-  width: 200px;
-  height: 100px;
-}
-
-.button {
-  font-size: 30px;
-  text-align: center;
-  width: 250px;
-  height: 60px;
-  background-color: #0078D7;
-  color: white;
-  border-radius: 5px;
-}
-```
-
-```TypeScript
-// xxx.js
-import file from '@system.file';
-
-export default {    
-  rmdir() {        
-    file.rmdir({            
-      uri: 'internal://app/test_directory',            
-      success: function() {                
-        console.info('call rmdir success.');            
-      },            
-      fail: function(data, code) {                
-        console.error('call fail callback fail, code: ' + code + ', data: ' + data);            
-      },
-    });    
-  }
-}
-```
+| options | [FileRmdirOption](arkts-corefile-system-file-filermdiroption-depr-i.md) | Yes | Options for deleting a directory. |
 
 ## writeArrayBuffer
 
@@ -1096,7 +278,7 @@ export default {
 static writeArrayBuffer(options: FileWriteArrayBufferOption): void
 ```
 
-写Buffer内容到指定文件。仅支持文本文档读写。
+Writes buffer data into a file. Only text files can be read and written.
 
 **Since:** 3
 
@@ -1114,90 +296,7 @@ static writeArrayBuffer(options: FileWriteArrayBufferOption): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| options | [FileWriteArrayBufferOption](arkts-corefile-system-file-filewritearraybufferoption-depr-i.md) | Yes | 接口选项。 |
-
-## Examples
-
-ArkTS example:
-
-```TypeScript
-import file from '@system.file';
-
-export default {    
-  writeArrayBuffer() {       
-    file.writeArrayBuffer({           
-      uri: 'internal://app/test',           
-      buffer: new Uint8Array(8),// The buffer is of the Uint8Array type.
-      success: function() {                
-        console.info('call writeArrayBuffer success.');            
-      },           
-      fail: function(data, code) {                
-        console.error('call fail callback fail, code: ' + code + ', data: ' + data);            
-      },
-    });    
-  }
-}
-```
-
-JS example:
-
-```TypeScript
-<!-- xxx.hml -->
-<div class="container">
-  <text class="title" style="font-size: 30px;">test</text>
-  <input type="button" value="writeArrayBuffer" class="button" onclick="writeArrayBuffer"></input>
-</div>
-```
-
-```TypeScript
-/* xxx.css */
-.container {
-  display: flex;
-  justify-content: column;
-  align-items: center;
-  left: 0px;
-  top: 0px;
-  width: 454px;
-  height: 454px;
-}
-
-.title {
-  font-size: 100px;
-  text-align: center;
-  width: 200px;
-  height: 100px;
-}
-
-.button {
-  font-size: 30px;
-  text-align: center;
-  width: 250px;
-  height: 60px;
-  background-color: #0078D7;
-  color: white;
-  border-radius: 5px;
-}
-```
-
-```TypeScript
-// xxx.js
-import file from '@system.file';
-
-export default {    
-  writeArrayBuffer() {       
-    file.writeArrayBuffer({           
-      uri: 'internal://app/test',           
-      buffer: new Uint8Array(8),// The buffer is of the Uint8Array type.
-      success: function() {                
-        console.info('call writeArrayBuffer success.');            
-      },           
-      fail: function(data, code) {                
-        console.error('call fail callback fail, code: ' + code + ', data: ' + data);            
-      },
-    });    
-  }
-}
-```
+| options | [FileWriteArrayBufferOption](arkts-corefile-system-file-filewritearraybufferoption-depr-i.md) | Yes | Options for writing buffer data into a file. |
 
 ## writeText
 
@@ -1205,7 +304,7 @@ export default {
 static writeText(options: FileWriteTextOption): void
 ```
 
-写文本内容到指定文件。仅支持文本文档读写。
+Writes text into a file. Only text files can be read and written.
 
 **Since:** 3
 
@@ -1223,88 +322,5 @@ static writeText(options: FileWriteTextOption): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| options | [FileWriteTextOption](arkts-corefile-system-file-filewritetextoption-depr-i.md) | Yes | 接口选项。 |
-
-## Examples
-
-ArkTS example:
-
-```TypeScript
-import file from '@system.file';
-
-export default {    
-  writeText() {        
-    file.writeText({            
-      uri: 'internal://app/test.txt',            
-      text: 'Text that just for test.',            
-      success: function() {                
-        console.info('call writeText success.');            
-      },            
-      fail: function(data, code) {                
-        console.error('call fail callback fail, code: ' + code + ', data: ' + data);            
-      },        
-    });    
-  }
-}
-```
-
-JS example:
-
-```TypeScript
-<!-- xxx.hml -->
-<div class="container">
-  <text class="title" style="font-size: 30px;">test</text>
-  <input type="button" value="writeText" class="button" onclick="writeText"></input>
-</div>
-```
-
-```TypeScript
-/* xxx.css */
-.container {
-  display: flex;
-  justify-content: column;
-  align-items: center;
-  left: 0px;
-  top: 0px;
-  width: 454px;
-  height: 454px;
-}
-
-.title {
-  font-size: 100px;
-  text-align: center;
-  width: 200px;
-  height: 100px;
-}
-
-.button {
-  font-size: 30px;
-  text-align: center;
-  width: 250px;
-  height: 60px;
-  background-color: #0078D7;
-  color: white;
-  border-radius: 5px;
-}
-```
-
-```TypeScript
-// xxx.js
-import file from '@system.file';
-
-export default {    
-  writeText() {        
-    file.writeText({            
-      uri: 'internal://app/test.txt',            
-      text: 'Text that just for test.',            
-      success: function() {                
-        console.info('call writeText success.');            
-      },            
-      fail: function(data, code) {                
-        console.error('call fail callback fail, code: ' + code + ', data: ' + data);            
-      },        
-    });    
-  }
-}
-```
+| options | [FileWriteTextOption](arkts-corefile-system-file-filewritetextoption-depr-i.md) | Yes | Options for writing text into a file. |
 

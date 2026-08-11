@@ -14,12 +14,6 @@ WindowExtensionAbility类。
 
 **系统接口：** 此接口为系统接口。
 
-## 导入模块
-
-```TypeScript
-import { WindowExtensionContext } from 'kits/@kit.ArkUI';
-```
-
 ## onConnect
 
 ```TypeScript

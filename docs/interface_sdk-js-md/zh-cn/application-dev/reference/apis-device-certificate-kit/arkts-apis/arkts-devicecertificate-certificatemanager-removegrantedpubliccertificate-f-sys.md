@@ -1,11 +1,5 @@
 # removeGrantedPublicCertificate（系统接口）
 
-## 导入模块
-
-```TypeScript
-import { certificateManager } from 'kits/@kit.DeviceCertificateKit';
-```
-
 ## removeGrantedPublicCertificate
 
 ```TypeScript
@@ -45,11 +39,11 @@ function removeGrantedPublicCertificate(keyUri: string, clientAppUid: int) : Pro
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 401 | Parameter verification failed. &lt;br&gt; Possible causes: the URI is null or the URI format is wrong. |
-| 201 | Permission verification failed. &lt;br&gt; The application does not have the permission required to call the API. |
-| 17500002 | Indicates that the certificate does not exist. |
-| 202 | Permission verification failed. A non-system application calls a system API. |
-| 17500001 | Internal error. Possible causes: 1. IPC communication failed; &lt;br&gt;2. Memory operation error; 3. File operation error. Please try again. |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter verification failed. &lt;br&gt; Possible causes: the URI is null or the URI format is wrong. |
+| [201](../../errorcode-universal.md#201-权限校验失败) | Permission verification failed. &lt;br&gt; The application does not have the permission required to call the API. |
+| [17500002](../errorcode-certManager.md#17500002-证书不存在) | Indicates that the certificate does not exist. |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed. A non-system application calls a system API. |
+| [17500001](../errorcode-certManager.md#17500001-内部错误) | Internal error. Possible causes: 1. IPC communication failed; &lt;br&gt;2. Memory operation error; 3. File operation error. Please try again. |
 
 ## 示例
 

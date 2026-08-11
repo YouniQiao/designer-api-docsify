@@ -6,7 +6,7 @@
 function removeAll(bundle: BundleOption, callback: AsyncCallback<void>): void
 ```
 
-删除指定应用的所有通知（Callback形式）。
+Removes all notifications for a specified application. This API uses an asynchronous callback to return the result.
 
 **Since:** 7
 
@@ -28,8 +28,8 @@ function removeAll(bundle: BundleOption, callback: AsyncCallback<void>): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| bundle | [BundleOption](arkts-notification-notificationextensionsubscription-bundleoption-t.md) | Yes | 指定应用的包信息。 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | 删除指定应用的所有通知回调函数。 |
+| bundle | [BundleOption](arkts-notification-notificationextensionsubscription-bundleoption-t.md) | Yes | Bundle information of the application. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. |
 
 
 ## removeAll
@@ -38,7 +38,7 @@ function removeAll(bundle: BundleOption, callback: AsyncCallback<void>): void
 function removeAll(callback: AsyncCallback<void>): void
 ```
 
-删除所有通知（Callback形式）。
+Removes all notifications. This API uses an asynchronous callback to return the result.
 
 **Since:** 7
 
@@ -60,7 +60,7 @@ function removeAll(callback: AsyncCallback<void>): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | 删除所有通知回调函数。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. |
 
 
 ## removeAll
@@ -69,7 +69,7 @@ function removeAll(callback: AsyncCallback<void>): void
 function removeAll(userId: number, callback: AsyncCallback<void>): void
 ```
 
-删除指定用户下的所有通知（callback形式）。
+Removes all notifications for a specified user. This API uses an asynchronous callback to return the result.
 
 **Since:** 8
 
@@ -91,8 +91,8 @@ function removeAll(userId: number, callback: AsyncCallback<void>): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| userId | number | Yes | 用户ID。 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | 删除指定用户所有通知回调函数。 |
+| userId | number | Yes | User ID. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. |
 
 
 ## removeAll
@@ -101,7 +101,7 @@ function removeAll(userId: number, callback: AsyncCallback<void>): void
 function removeAll(userId: number): Promise<void>
 ```
 
-删除指定用户下的所有通知（Promise形式）。
+Removes all notifications for a specified user. This API uses a promise to return the result.
 
 **Since:** 8
 
@@ -123,13 +123,13 @@ function removeAll(userId: number): Promise<void>
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| userId | number | Yes | 用户ID。 |
+| userId | number | Yes | User ID. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | 无返回结果的Promise对象。 |
+| Promise&lt;void&gt; | Promise that returns no value. |
 
 
 ## removeAll
@@ -138,7 +138,7 @@ function removeAll(userId: number): Promise<void>
 function removeAll(bundle?: BundleOption): Promise<void>
 ```
 
-删除指定应用的所有通知（Promise形式）。
+Removes all notifications for a specified application. This API uses a promise to return the result.
 
 **Since:** 7
 
@@ -160,11 +160,11 @@ function removeAll(bundle?: BundleOption): Promise<void>
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| bundle | [BundleOption](arkts-notification-notificationextensionsubscription-bundleoption-t.md) | No | 指定应用的包信息。默认为空，表示删除所有通知。 |
+| bundle | [BundleOption](arkts-notification-notificationextensionsubscription-bundleoption-t.md) | No | Bundle information of the application. By default, this parameter is left empty, indicating that all notifications will be removed. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | 无返回结果的Promise对象。 |
+| Promise&lt;void&gt; | Promise that returns no value. |
 

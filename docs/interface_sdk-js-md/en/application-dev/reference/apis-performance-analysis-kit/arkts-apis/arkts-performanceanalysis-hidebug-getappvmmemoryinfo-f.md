@@ -12,7 +12,7 @@ import { hidebug } from 'kits/@kit.PerformanceAnalysisKit';
 function getAppVMMemoryInfo(): VMMemoryInfo
 ```
 
-��ȡVM�ڴ������Ϣ��
+Obtains VM memory information.
 
 **Since:** 12
 
@@ -26,7 +26,7 @@ function getAppVMMemoryInfo(): VMMemoryInfo
 
 | Type | Description |
 | --- | --- |
-| [VMMemoryInfo](arkts-performanceanalysis-hidebug-vmmemoryinfo-i.md) | ����VM�ڴ���Ϣ�� |
+| [VMMemoryInfo](arkts-performanceanalysis-hidebug-vmmemoryinfo-i.md) | VM memory information. |
 
 ## Examples
 

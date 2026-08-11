@@ -1,6 +1,6 @@
 # ImageData
 
-ImageData对象可以存储canvas渲染的像素数据。
+Image data object
 
 **Since:** 23
 
@@ -16,7 +16,7 @@ ImageData对象可以存储canvas渲染的像素数据。
 constructor(width: double, height: double, data?: Uint8ClampedArray, unit?: LengthMetricsUnit)
 ```
 
-创建宽为width，高为height，像素为data的ImageData，如果data未定义，则填充值全为0的一维数组，支持使用unit配置ImageData对象的单位模式。
+Create an ImageData object based on the input parameters.
 
 **Since:** 23
 
@@ -32,10 +32,10 @@ constructor(width: double, height: double, data?: Uint8ClampedArray, unit?: Leng
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| width | double | Yes | 矩形区域宽度，默认单位为vp。&lt;br&gt;异常值NaN和Infinity按0处理。 |
-| height | double | Yes | 矩形区域高度，默认单位为vp。&lt;br&gt;异常值NaN和Infinity按0处理。 |
-| data | [Uint8ClampedArray](../../apis-arkts/arkts-apis/arkts-arkts-typeduarrays-uint8clampedarray-c.md) | No | 一维数组，保存了相应的颜色数据，数据值范围为0到255。 &lt;br&gt;传入异常值undefined时，data为undefined。&lt;br&gt;默认值：值全为0的一维数组 |
-| unit | [LengthMetricsUnit](arkts-arkui-lengthmetricsunit-t.md) | No | 用来配置ImageData对象的单位模式，配置后无法动态更改， 配置方法同[CanvasRenderingContext2D](../../../reference/apis-arkui/arkui-ts/ts-canvasrenderingcontext2d.md)。 &lt;br&gt;异常值undefined、NaN和Infinity按默认值处理。&lt;br&gt;默认值：DEFAULT |
+| width | double | Yes | Width of the image. |
+| height | double | Yes | Height of the image. |
+| data | [Uint8ClampedArray](../../apis-arkts/arkts-apis/arkts-arkts-typeduarrays-uint8clampedarray-c.md) | No | Data of the image. If this parameter is not specified, the default value is a black rectangular image. |
+| unit | [LengthMetricsUnit](arkts-arkui-lengthmetricsunit-t.md) | No | the unit mode |
 
 ## data
 
@@ -43,7 +43,7 @@ constructor(width: double, height: double, data?: Uint8ClampedArray, unit?: Leng
 get data(): Uint8ClampedArray | undefined
 ```
 
-一维数组，保存了相应的颜色数据，数据值范围为0到255。
+Array containing image pixel data
 
 **Type:** [Uint8ClampedArray](../../apis-arkts/arkts-apis/arkts-arkts-typeduarrays-uint8clampedarray-c.md)
 
@@ -63,7 +63,7 @@ get data(): Uint8ClampedArray | undefined
 get height(): int
 ```
 
-矩形区域实际像素高度。&lt;br&gt;单位为px。
+Height of the image.
 
 **Type:** int
 
@@ -83,7 +83,7 @@ get height(): int
 get width(): int
 ```
 
-矩形区域实际像素宽度。&lt;br&gt;单位为px。
+Width of the image.
 
 **Type:** int
 

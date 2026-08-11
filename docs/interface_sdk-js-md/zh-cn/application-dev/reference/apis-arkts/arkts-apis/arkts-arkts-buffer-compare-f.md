@@ -1,11 +1,5 @@
 # compare
 
-## 导入模块
-
-```TypeScript
-import { buffer } from 'kits/@kit.ArkTS';
-```
-
 ## compare
 
 ```TypeScript
@@ -81,4 +75,17 @@ function compare(buf1: Buffer | Uint8Array, buf2: Buffer | Uint8Array): int
 | 类型 | 说明 |
 | --- | --- |
 | int | 如果buf1与buf2相同，则返回0。&lt;br/&gt;如果排序时buf1位于buf2之后，则返回1。&lt;br/&gt;如果排序时buf1位于buf2之前，则返回-1。 |
+
+## 示例
+
+```TypeScript
+import { buffer } from '@kit.ArkTS';
+
+let buf1 = buffer.from('1234');
+let buf2 = buffer.from('0123');
+let res = buffer.compare(buf1, buf2);
+
+console.info(Number(res).toString());
+// 输出结果：1
+```
 

@@ -12,7 +12,7 @@ import { pointer } from 'kits/@kit.InputKit';
 function isPointerVisibleSync(): boolean
 ```
 
-获取当前窗口鼠标光标的显示状态，使用同步方式。
+Checks whether the mouse pointer is visible in the current window. This API returns the result synchronously.
 
 **Since:** 10
 
@@ -26,7 +26,7 @@ function isPointerVisibleSync(): boolean
 
 | Type | Description |
 | --- | --- |
-| boolean | 返回鼠标光标显示或隐藏状态。true代表显示状态，false代表隐藏状态。 |
+| boolean | Visible status of the mouse pointer. The value **true** indicates that the mouse pointer is visible, and the value **false** indicates the opposite. |
 
 ## Examples
 
@@ -42,9 +42,9 @@ struct Index {
         .onClick(() => {
           try {
             let visible: boolean = pointer.isPointerVisibleSync();
-            console.info(`Succeeded in getting pointer visible, visible: ${JSON.stringify(visible)}.`);
+            console.info(`Get pointer visible success, visible: ${JSON.stringify(visible)}`);
           } catch (error) {
-            console.error(`Failed to get pointer visible, Code: ${(error as BusinessError).code}, message: ${(error as BusinessError).message}.`);
+            console.error(`Get pointer visible failed, error: ${JSON.stringify(error, [`code`, `message`])}`);
           }
         })
     }

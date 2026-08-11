@@ -1,6 +1,6 @@
 # TextDecorationStyle
 
-装饰线样式枚举。
+Enumerates the text decoration styles.
 
 **Since:** 12
 
@@ -16,7 +16,7 @@
 SOLID = 0
 ```
 
-实线。
+Solid style.
 
 **Since:** 12
 
@@ -34,7 +34,7 @@ SOLID = 0
 DOUBLE = 1
 ```
 
-双层线。
+Double style.
 
 **Since:** 12
 
@@ -52,7 +52,7 @@ DOUBLE = 1
 DOTTED = 2
 ```
 
-点状线。
+Dotted style.
 
 **Since:** 12
 
@@ -70,7 +70,7 @@ DOTTED = 2
 DASHED = 3
 ```
 
-虚线。
+Dashed style.
 
 **Since:** 12
 
@@ -88,7 +88,7 @@ DASHED = 3
 WAVY = 4
 ```
 
-波浪线。
+Wavy style.
 
 **Since:** 12
 

@@ -1,6 +1,6 @@
 # FloatViewRectChangeInfo
 
-标准悬浮窗矩形区域变化信息。
+Provides the rectangle area change information of the float view.
 
 **Since:** 26.0.0
 
@@ -22,13 +22,13 @@ import { floatView } from 'kits/@kit.ArkUI';
 reason: string
 ```
 
-标准悬浮窗矩形区域变化的原因。原因和对应含义如下：
+Reason for the change of the rectangle area of the float view. The reasons and their meanings are as follows:
 
-"POSITION_CHANGE"：位置变化
+**"POSITION_CHANGE"**: The position changes.
 
-"SIZE_CHANGE"：大小变化
+**"SIZE_CHANGE"**: The size changes.
 
-"RECT_CHANGE"：位置大小同时变化
+**"RECT_CHANGE"**: Both the position and size change.
 
 **Type:** string
 
@@ -48,7 +48,7 @@ reason: string
 windowRect: window.Rect
 ```
 
-标准悬浮窗窗口矩形区域。
+Rectangle area of the float view.
 
 **Type:** window.Rect
 
@@ -68,7 +68,7 @@ windowRect: window.Rect
 windowScale: double
 ```
 
-标准悬浮窗窗口缩放比例。
+Scale factor of the float view.
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：double
 

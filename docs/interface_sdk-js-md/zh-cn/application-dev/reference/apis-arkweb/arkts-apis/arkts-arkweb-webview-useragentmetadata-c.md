@@ -10,12 +10,6 @@ Holds User-Agent metadata information and uses to generate User-Agent client hin
 
 **系统能力：** SystemCapability.Web.Webview.Core
 
-## 导入模块
-
-```TypeScript
-import { webview } from 'kits/@kit.ArkWeb';
-```
-
 ## getArchitecture
 
 ```TypeScript

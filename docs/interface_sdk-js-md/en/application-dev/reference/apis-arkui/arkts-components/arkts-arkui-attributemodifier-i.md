@@ -68,7 +68,7 @@ Defines the focused update attribute function.
 applyHoveredAttribute?(instance: T) : void
 ```
 
-定义悬停更新属性函数。
+Defines the function that updates the hovered attribute.
 
 **Since:** 26.0.0
 

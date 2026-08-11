@@ -1,6 +1,6 @@
 # ScrollToIndexOptions
 
-滑动到指定Index的参数选项。
+Provides parameters for scrolling to a specific index.
 
 **Since:** 12
 
@@ -16,7 +16,7 @@
 extraOffset?: LengthMetrics
 ```
 
-滚动到指定索引的额外偏移量。
+Extra offset for scrolling to a specified index.
 
 **Type:** [LengthMetrics](../arkts-apis/arkts-arkui-lengthmetrics-t.md)
 

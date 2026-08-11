@@ -74,7 +74,7 @@ reusePool?: ReusePoolOwnership
 
 在自定义组件上配置全局复用池的类型，适用于应用中存在多个同类型可复用自定义组件、需要在组件实例间共享或隔离复用资源以提升复用效率的场景。如果不传入，则全局复用池不会生效。reusePool需与poolAccepts配合使用，reusePool参数被设置时，poolAccepts必须为非空数组，否则全局复用不生效。
 
-**类型：** [ReusePoolOwnership](../arkts-apis/arkts-arkui-customcomponent-reusepoolownership-e.md)
+**类型：** [ReusePoolOwnership](arkts-arkui-reusepoolownership-t.md)
 
 **默认值：** perInstance
 

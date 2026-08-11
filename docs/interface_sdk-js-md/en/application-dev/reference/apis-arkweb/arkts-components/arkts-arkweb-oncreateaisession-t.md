@@ -4,7 +4,7 @@
 type OnCreateAISession = (id: string, params: string, result: OnAISessionCallback) => boolean
 ```
 
-AI会话创建回调函数类型。允许自定义模型初始化和结果处理。
+Triggered when an AI session is created.Allows custom model initialization and result handling.Return `true` to bypass the default system behavior;return `false` to proceed with the default logic.
 
 **Since:** 26.0.0
 
@@ -28,5 +28,5 @@ AI会话创建回调函数类型。允许自定义模型初始化和结果处理
 
 | Type | Description |
 | --- | --- |
-| boolean | `true`表示使用自定义逻辑，跳过系统默认行为；`false`表示继续执行系统默认逻辑。 |
+| boolean | Whether to use custom logic. `true` = use custom, `false` = proceed with default. |
 

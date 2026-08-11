@@ -1,8 +1,9 @@
 # PiPController
 
-画中画控制器实例。用于启动、停止画中画以及更新回调注册等。
+Implements a PiP controller that starts, stops, or updates a PiP window and registers callbacks.
 
-下列API示例中都需先使用[PiPWindow.create()](arkts-arkui-pipwindow-create-f.md#create)方法获取到PiPController实例，再通过此实例调用对应方法。
+Before calling any of the following APIs, you must use  
+[PiPWindow.create()](arkts-arkui-pipwindow-create-f.md#create) to create a PiPController instance.
 
 **Since:** 11
 
@@ -24,7 +25,7 @@ import { PiPWindow } from 'kits/@kit.ArkUI';
 isPiPSupported(): boolean
 ```
 
-判断当前设备是否支持画中画功能。
+Returns a Boolean value that indicates whether picture-in-picture is supported
 
 **Since:** 18
 
@@ -40,12 +41,12 @@ isPiPSupported(): boolean
 
 | Type | Description |
 | --- | --- |
-| boolean | 当前设备是否支持画中画功能。true表示支持，false表示不支持。 |
+| boolean | True if picture-in-picture is supported, otherwise false |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 202 | Not System App. Interface caller is not a system app. |
-| 1300014 | PiP internal error. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not System App. Interface caller is not a system app. |
+| [1300014](../errorcode-window.md#1300014-pip-internal-error) | PiP internal error. |
 

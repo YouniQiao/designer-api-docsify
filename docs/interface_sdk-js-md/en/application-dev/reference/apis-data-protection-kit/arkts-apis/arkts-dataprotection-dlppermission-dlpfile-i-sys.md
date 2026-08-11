@@ -1,7 +1,8 @@
 # DLPFile (System API)
 
-管理DLPFile的实例，表示一个DLP文件对象，需要通过  
-[generateDLPFile](arkts-dataprotection-dlppermission-generatedlpfile-f-sys.md#generatedlpfile)/[openDLPFile](arkts-dataprotection-dlppermission-opendlpfile-f-sys.md#opendlpfile)获取DLPFile的实例。DLPFile对象代表一个已打开的DLP文件句柄，封装了对DLP文件的所有操作接口。对象在使用完毕后必须调用[closeDLPFile](arkts-dataprotection-dlppermission-dlpfile-i-sys.md#closedlpfile)方法释放资源，避免文件句柄泄漏。DLPFile对象在跨进程传递时，需要进行授权。
+Provides APIs for managing DLP files. A **DLPFile** instance indicates a DLP file object. You can use   
+[generateDLPFile](arkts-dataprotection-dlppermission-generatedlpfile-f-sys.md#generatedlpfile)or [openDLPFile](arkts-dataprotection-dlppermission-opendlpfile-f-sys.md#opendlpfile) to obtain a **DLPFile** instance. The **DLPFile** object represents an opened DLP file handle, which encapsulates all operation APIs for DLP files. After using the object, the system must call the   
+[closeDLPFile](arkts-dataprotection-dlppermission-dlpfile-i-sys.md#closedlpfile) API to release resources to prevent file handle leaks.Authorization is required when the **DLPFile** object is transferred across processes.
 
 **Since:** 10
 
@@ -25,12 +26,12 @@ import { dlpPermission } from 'kits/@kit.DataProtectionKit';
 addDLPLinkFile(linkFileName: string): Promise<void>
 ```
 
-在FUSE文件系统(Filesystem in Userspace)添加link文件。FUSE是一种用户空间文件系统框架，允许在用户空间实现自定义文件系统逻辑。link文件是FUSE中映射到DLP密文的虚拟文件，对该文件的读写操作会同步到实际DLP文件。使用Promise异步回调。
+Adds a link file to the Filesystem in Userspace (FUSE). FUSE allows you to implement custom logic of the file system in user space. The link file is a virtual file in the FUSE, which is used to map to the DLP file. The read and write on the link file will be synchronized to the actual DLP file. This API uses a promise to return the result.
 
-在调用addDLPLinkFile后需要调用  
-[deleteDLPLinkFile](arkts-dataprotection-dlppermission-dlpfile-i-sys.md#deletedlplinkfile)移除DLP link文件。
+After calling **addDLPLinkFile** to add a link file, the system needs to call   
+[deleteDLPLinkFile](arkts-dataprotection-dlppermission-dlpfile-i-sys.md#deletedlplinkfile) to remove the DLP link file.
 
-DLP应用需要通过标准文件接口访问加密文件内容时，先添加link文件将DLP文件映射为虚拟明文文件，应用可像操作普通文件一样读写该link文件。
+When a DLP application needs to access a DLP file using a standard file API, it can add a link file as the virtual plaintext file to map the DLP file, and then perform read and write on the link file as it does on a common file.
 
 **Since:** 10
 
@@ -48,24 +49,25 @@ DLP应用需要通过标准文件接口访问加密文件内容时，先添加li
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| linkFileName | string | Yes | 用于FUSE文件系统的link文件名。不超过255字节。超出范围时抛出错误码401。 |
+| linkFileName | string | Yes | Name of the link file in the FUSE. The value contains up to 255 bytes. If the value is out of range, error code 401 is thrown. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise对象。无返回结果的Promise对象。 |
+| Promise&lt;void&gt; | Promise that returns no value. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. |
-| 19100001 | Invalid parameter value. |
-| 19100011 | The system ability works abnormally. |
-| 201 | Permission denied. |
-| 202 | Non-system applications use system APIs. |
-| 19100009 | Failed to operate the DLP file. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. |
+| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported because car not support DLP feature.<br>**Applicable version:** 26.1.0 and later |
+| [19100001](../errorcode-dlp.md#19100001-invalid-parameter) | Invalid parameter value. |
+| [19100011](../errorcode-dlp.md#19100011-system-service-abnormal) | The system ability works abnormally. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Non-system applications use system APIs. |
+| [19100009](../errorcode-dlp.md#19100009-failed-to-operate-the-dlp-file) | Failed to operate the DLP file. |
 
 ## Examples
 
@@ -73,6 +75,7 @@ DLP应用需要通过标准文件接口访问加密文件内容时，先添加li
 import { dlpPermission } from '@kit.DataProtectionKit';
 import { fileIo } from '@kit.CoreFileKit';
 import { bundleManager } from '@kit.AbilityKit';
+import { BusinessError } from '@kit.BasicServicesKit';
 
 async function ExampleFunction() {
   let uri = 'file://docs/storage/Users/currentUser/Desktop/test.txt.dlp';
@@ -82,21 +85,28 @@ async function ExampleFunction() {
   let bundleName = 'com.ohos.note';
   let userId = 100;
   let dlpFile: dlpPermission.DLPFile | undefined = undefined;
-  
-  let data = bundleManager.getBundleInfoSync(bundleName, bundleFlags, userId);
-  appId = data.signatureInfo.appId;
 
-  file = fileIo.openSync(uri).fd;
-  dlpFile = await dlpPermission.openDLPFile(file, appId); // Open a DLP file.
-  await dlpFile.addDLPLinkFile('test.txt.dlp.link'); // Add a link file.
+  try {
+    let data = bundleManager.getBundleInfoSync(bundleName, bundleFlags, userId);
+    appId = data.signatureInfo.appId;
+  } catch (err) {
+    console.error('error', err.code, err.message);
+    return;
+  }
 
-  await dlpFile?.closeDLPFile(); // Close the DLP object.
-  if (file) {
-    fileIo.closeSync(file);
+  try {
+    file = fileIo.openSync(uri).fd;
+    dlpFile = await dlpPermission.openDLPFile(file, appId); // Open a DLP file.
+    await dlpFile.addDLPLinkFile('test.txt.dlp.link'); // Add a link file.
+  } catch (err) {
+    console.error('error', (err as BusinessError).code, (err as BusinessError).message); // Throw an error if the operation fails.
+  } finally {
+    dlpFile?.closeDLPFile(); // Close the DLP object.
+    if (file) {
+      fileIo.closeSync(file);
+    }
   }
 }
-
-ExampleFunction();
 ```
 
 ## addDLPLinkFile
@@ -105,12 +115,12 @@ ExampleFunction();
 addDLPLinkFile(linkFileName: string, callback: AsyncCallback<void>): void
 ```
 
-在FUSE文件系统添加link文件。使用callback异步回调。调用成功后，在FUSE文件系统中创建一个映射到DLP文件密文的虚拟文件。
+Adds a link file to the FUSE. This API uses an asynchronous callback to return the result. After this API is successfully called, a virtual file used to map the DLP file is created in the FUSE.
 
-在调用addDLPLinkFile后需要调用  
-[deleteDLPLinkFile](arkts-dataprotection-dlppermission-dlpfile-i-sys.md#deletedlplinkfile)移除DLP link文件。
+After calling **addDLPLinkFile** to add a link file, the system needs to call   
+[deleteDLPLinkFile](arkts-dataprotection-dlppermission-dlpfile-i-sys.md#deletedlplinkfile) to remove the DLP link file.
 
-DLP应用需要通过标准文件接口访问加密文件内容时使用此接口。
+This API is called when a DLP application needs to access a DLP file using a standard file API.
 
 **Since:** 10
 
@@ -128,19 +138,20 @@ DLP应用需要通过标准文件接口访问加密文件内容时使用此接�
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| linkFileName | string | Yes | 用于FUSE文件系统的link文件名。不超过255字节。超出范围时抛出错误码401。 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | 回调函数，用于接收添加link文件的结果。 |
+| linkFileName | string | Yes | Name of the link file in the FUSE. The value contains up to 255 bytes. If the value is out of range, error code 401 is thrown. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to receive the result of adding a link file. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. |
-| 19100001 | Invalid parameter value. |
-| 19100011 | The system ability works abnormally. |
-| 201 | Permission denied. |
-| 202 | Non-system applications use system APIs. |
-| 19100009 | Failed to operate the DLP file. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. |
+| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported because car not support DLP feature.<br>**Applicable version:** 26.1.0 and later |
+| [19100001](../errorcode-dlp.md#19100001-invalid-parameter) | Invalid parameter value. |
+| [19100011](../errorcode-dlp.md#19100011-system-service-abnormal) | The system ability works abnormally. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Non-system applications use system APIs. |
+| [19100009](../errorcode-dlp.md#19100009-failed-to-operate-the-dlp-file) | Failed to operate the DLP file. |
 
 ## Examples
 
@@ -148,6 +159,7 @@ DLP应用需要通过标准文件接口访问加密文件内容时使用此接�
 import { dlpPermission } from '@kit.DataProtectionKit';
 import { fileIo } from '@kit.CoreFileKit';
 import { bundleManager } from '@kit.AbilityKit';
+import { BusinessError } from '@kit.BasicServicesKit';
 
 async function ExampleFunction() {
   let uri = 'file://docs/storage/Users/currentUser/Desktop/test.txt.dlp';
@@ -157,24 +169,34 @@ async function ExampleFunction() {
   let bundleName = 'com.ohos.note';
   let userId = 100;
   let dlpFile: dlpPermission.DLPFile | undefined = undefined;
-  
-  let data = bundleManager.getBundleInfoSync(bundleName, bundleFlags, userId);
-  appId = data.signatureInfo.appId;
 
-  file = fileIo.openSync(uri).fd;
-  dlpFile = await dlpPermission.openDLPFile(file, appId); // Open a DLP file.
-  dlpFile.addDLPLinkFile('test.txt.dlp.link', async (err, res) => {
-    if (err) {
-      console.error('addDLPLinkFile error,', err.code, err.message);
-    } else {
-      console.info('res', JSON.stringify(res));
-    }
+  try {
+    let data = bundleManager.getBundleInfoSync(bundleName, bundleFlags, userId);
+    appId = data.signatureInfo.appId;
+  } catch (err) {
+    console.error('error', err.code, err.message);
+  }
+
+  try {
+    file = fileIo.openSync(uri).fd;
+    dlpFile = await dlpPermission.openDLPFile(file, appId); // Open a DLP file.
+    dlpFile.addDLPLinkFile('test.txt.dlp.link', async (err, res) => {
+      if (err !== undefined) {
+        console.error('addDLPLinkFile error,', err.code, err.message);
+      } else {
+        console.info('res', JSON.stringify(res));
+      }
+      await dlpFile?.closeDLPFile(); // Close the DLP object.
+      fileIo.closeSync(file);
+    });
+  } catch (err) {
+    console.error('addDLPLinkFile error,', (err as BusinessError).code, (err as BusinessError).message);
     await dlpFile?.closeDLPFile(); // Close the DLP object.
-    fileIo.closeSync(file);
-  }); // Add a link file.
+    if (file) {
+      fileIo.closeSync(file);
+    }
+  }
 }
-
-ExampleFunction();
 ```
 
 ## closeDLPFile
@@ -183,15 +205,16 @@ ExampleFunction();
 closeDLPFile(): Promise<void>
 ```
 
-关闭DLPFile，释放对象。使用Promise异步回调。
+Closes a **DLPFile** object. This API uses a promise to return the result.
 
-调用[openDLPFile](arkts-dataprotection-dlppermission-opendlpfile-f-sys.md#opendlpfile)成功后返回DLPFile对象，必须在使用完毕后调用closeDLPFile()释放资源。
+After calling [openDLPFile](arkts-dataprotection-dlppermission-opendlpfile-f-sys.md#opendlpfile) to return a  
+**DLPFile** object, the system must call **closeDLPFile()** to release resources after using the object.
 
-文件所有者决定关闭DLP文件时使用此接口。
+This API is used when the file owner decides to close a DLP file.
 
-> **说明：**
+> **NOTE：**
 > 
-> dlpFile不再使用，应该关闭释放内存，且对象不应继续使用。
+> If a DLP file is no longer used, close the **dlpFile** object to release the memory.
 
 **Since:** 10
 
@@ -209,17 +232,18 @@ closeDLPFile(): Promise<void>
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise对象。无返回结果的Promise对象。 |
+| Promise&lt;void&gt; | Promise that returns no value. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 19100001 | Invalid parameter value. |
-| 19100011 | The system ability works abnormally. |
-| 201 | Permission denied. |
-| 202 | Non-system applications use system APIs. |
-| 19100009 | Failed to operate the DLP file. |
+| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported because car not support DLP feature.<br>**Applicable version:** 26.1.0 and later |
+| [19100001](../errorcode-dlp.md#19100001-invalid-parameter) | Invalid parameter value. |
+| [19100011](../errorcode-dlp.md#19100011-system-service-abnormal) | The system ability works abnormally. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Non-system applications use system APIs. |
+| [19100009](../errorcode-dlp.md#19100009-failed-to-operate-the-dlp-file) | Failed to operate the DLP file. |
 
 ## Examples
 
@@ -227,6 +251,7 @@ closeDLPFile(): Promise<void>
 import { dlpPermission } from '@kit.DataProtectionKit';
 import { fileIo } from '@kit.CoreFileKit';
 import { bundleManager } from '@kit.AbilityKit';
+import { BusinessError } from '@kit.BasicServicesKit';
 
 async function ExampleFunction() {
   let uri = 'file://docs/storage/Users/currentUser/Desktop/test.txt.dlp';
@@ -237,19 +262,25 @@ async function ExampleFunction() {
   let userId = 100;
   let dlpFile: dlpPermission.DLPFile | undefined = undefined;
 
-  let data = bundleManager.getBundleInfoSync(bundleName, bundleFlags, userId);
-  appId = data.signatureInfo.appId;
+  try {
+    let data = bundleManager.getBundleInfoSync(bundleName, bundleFlags, userId);
+    appId = data.signatureInfo.appId;
+  } catch (err) {
+    console.error('error', err.code, err.message);
+  }
 
-  file = fileIo.openSync(uri).fd;
-  dlpFile = await dlpPermission.openDLPFile(file, appId); // Open a DLP file.
-
-  await dlpFile?.closeDLPFile(); // Close the DLP object.
-  if (file) {
-    fileIo.closeSync(file);
+  try {
+    file = fileIo.openSync(uri).fd;
+    dlpFile = await dlpPermission.openDLPFile(file, appId); // Open a DLP file.
+  } catch (err) {
+    console.error('error', (err as BusinessError).code, (err as BusinessError).message); // Throw an error if the operation fails.
+  } finally {
+    dlpFile?.closeDLPFile(); // Close the DLP object.
+    if (file) {
+      fileIo.closeSync(file);
+    }
   }
 }
-
-ExampleFunction();
 ```
 
 ## closeDLPFile
@@ -258,15 +289,15 @@ ExampleFunction();
 closeDLPFile(callback: AsyncCallback<void>): void
 ```
 
-关闭DLPFile，释放对象，使用callback异步回调。
+Closes a **DLPFile** object. This API uses an asynchronous callback to return the result.
 
-调用openDLPFile()成功后返回DLPFile对象，必须在使用完毕后调用closeDLPFile()释放资源。
+After calling **openDLPFile()** to return a **DLPFile** object, the system must call **closeDLPFile()** to release resources after using the object.
 
-文件所有者决定关闭DLP文件时使用此接口。
+This API is used when the file owner decides to close a DLP file.
 
-> **说明：**
+> **NOTE：**
 > 
-> dlpFile不再使用，应该关闭释放内存，且对象不应继续使用。
+> If a DLP file is no longer used, close the **dlpFile** instance to release the memory.
 
 **Since:** 10
 
@@ -284,18 +315,19 @@ closeDLPFile(callback: AsyncCallback<void>): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | 回调函数，用于接收关闭DLPFile的结果。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to receive the result of closing a **DLPFile** object. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1. Incorrect parameter types. |
-| 19100001 | Invalid parameter value. |
-| 19100011 | The system ability works abnormally. |
-| 201 | Permission denied. |
-| 202 | Non-system applications use system APIs. |
-| 19100009 | Failed to operate the DLP file. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Incorrect parameter types. |
+| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported because car not support DLP feature.<br>**Applicable version:** 26.1.0 and later |
+| [19100001](../errorcode-dlp.md#19100001-invalid-parameter) | Invalid parameter value. |
+| [19100011](../errorcode-dlp.md#19100011-system-service-abnormal) | The system ability works abnormally. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Non-system applications use system APIs. |
+| [19100009](../errorcode-dlp.md#19100009-failed-to-operate-the-dlp-file) | Failed to operate the DLP file. |
 
 ## Examples
 
@@ -303,6 +335,7 @@ closeDLPFile(callback: AsyncCallback<void>): void
 import { dlpPermission } from '@kit.DataProtectionKit';
 import { fileIo } from '@kit.CoreFileKit';
 import { bundleManager } from '@kit.AbilityKit';
+import { BusinessError } from '@kit.BasicServicesKit';
 
 async function ExampleFunction() {
   let uri = 'file://docs/storage/Users/currentUser/Desktop/test.txt.dlp';
@@ -313,22 +346,31 @@ async function ExampleFunction() {
   let userId = 100;
   let dlpFile: dlpPermission.DLPFile | undefined = undefined;
 
-  let data = bundleManager.getBundleInfoSync(bundleName, bundleFlags, userId);
-  appId = data.signatureInfo.appId;
+  try {
+    let data = bundleManager.getBundleInfoSync(bundleName, bundleFlags, userId);
+    appId = data.signatureInfo.appId;
+  } catch (err) {
+    console.error('error', err.code, err.message);
+  }
 
-  file = fileIo.openSync(uri).fd;
-  dlpFile = await dlpPermission.openDLPFile(file, appId); // Open a DLP file.
-  dlpFile.closeDLPFile((err, res) => {// Close the DLP file.
-    if (err) {
-      console.error('closeDLPFile error,', err.code, err.message);
-    } else {
-      console.info('res', JSON.stringify(res));
+  try {
+    file = fileIo.openSync(uri).fd;
+    dlpFile = await dlpPermission.openDLPFile(file, appId); // Open a DLP file.
+    dlpFile.closeDLPFile((err, res) => {// Close the DLP file.
+      if (err !== undefined) {
+        console.error('closeDLPFile error,', err.code, err.message);
+      } else {
+        console.info('res', JSON.stringify(res));
+      }
+      fileIo.closeSync(file);
+    });
+  } catch (err) {
+    console.error('error,', (err as BusinessError).code, (err as BusinessError).message);
+    if (file) {
+      fileIo.closeSync(file);
     }
-    fileIo.closeSync(file);
-  });
+  }
 }
-
-ExampleFunction();
 ```
 
 ## deleteDLPLinkFile
@@ -337,11 +379,12 @@ ExampleFunction();
 deleteDLPLinkFile(linkFileName: string): Promise<void>
 ```
 
-删除FUSE文件系统中创建的link文件。使用Promise异步回调。调用成功后，从FUSE文件系统中移除指定的link文件。
+Deletes a link file from the FUSE. This API uses a promise to return the result. After the API is successfully called, the specified link file is deleted from the FUSE.
 
-在调用deleteDLPLinkFile前需要调用[addDLPLinkFile](arkts-dataprotection-dlppermission-dlpfile-i-sys.md#adddlplinkfile)添加DLP link文件。
+Before calling **deleteDLPLinkFile**, the system must call   
+[addDLPLinkFile](arkts-dataprotection-dlppermission-dlpfile-i-sys.md#adddlplinkfile) to add a DLP link file.
 
-DLP文件访问结束后清理link文件映射时使用此接口。
+This API is used to clear the link file mapping after DLP file access is complete.
 
 **Since:** 10
 
@@ -359,24 +402,25 @@ DLP文件访问结束后清理link文件映射时使用此接口。
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| linkFileName | string | Yes | 用于FUSE文件系统的link文件名。不超过255字节。超出范围时抛出错误码401。 |
+| linkFileName | string | Yes | Name of the link file in the FUSE. The value contains up to 255 bytes. If the value is out of range, error code 401 is thrown. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise对象。无返回结果的Promise对象。 |
+| Promise&lt;void&gt; | Promise that returns no value. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. |
-| 19100001 | Invalid parameter value. |
-| 19100011 | The system ability works abnormally. |
-| 201 | Permission denied. |
-| 202 | Non-system applications use system APIs. |
-| 19100009 | Failed to operate the DLP file. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. |
+| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported because car not support DLP feature.<br>**Applicable version:** 26.1.0 and later |
+| [19100001](../errorcode-dlp.md#19100001-invalid-parameter) | Invalid parameter value. |
+| [19100011](../errorcode-dlp.md#19100011-system-service-abnormal) | The system ability works abnormally. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Non-system applications use system APIs. |
+| [19100009](../errorcode-dlp.md#19100009-failed-to-operate-the-dlp-file) | Failed to operate the DLP file. |
 
 ## Examples
 
@@ -384,6 +428,7 @@ DLP文件访问结束后清理link文件映射时使用此接口。
 import { dlpPermission } from '@kit.DataProtectionKit';
 import { fileIo } from '@kit.CoreFileKit';
 import { bundleManager } from '@kit.AbilityKit';
+import { BusinessError } from '@kit.BasicServicesKit';
 
 async function ExampleFunction() {
   let uri = 'file://docs/storage/Users/currentUser/Desktop/test.txt.dlp';
@@ -394,21 +439,27 @@ async function ExampleFunction() {
   let userId = 100;
   let dlpFile: dlpPermission.DLPFile | undefined = undefined;
 
-  let data = bundleManager.getBundleInfoSync(bundleName, bundleFlags, userId);
-  appId = data.signatureInfo.appId;
+  try {
+    let data = bundleManager.getBundleInfoSync(bundleName, bundleFlags, userId);
+    appId = data.signatureInfo.appId;
+  } catch (err) {
+    console.error('error', err.code, err.message);
+  }
 
-  file = fileIo.openSync(uri).fd;
-  dlpFile = await dlpPermission.openDLPFile(file, appId); // Open a DLP file.
-  await dlpFile.addDLPLinkFile('test.txt.dlp.link'); // Add a link file.
-  await dlpFile.deleteDLPLinkFile('test.txt.dlp.link'); // Delete a link file.
-  
-  await dlpFile?.closeDLPFile(); // Close the DLP object.
-  if (file) {
-    fileIo.closeSync(file);
+  try {
+    file = fileIo.openSync(uri).fd;
+    dlpFile = await dlpPermission.openDLPFile(file, appId); // Open a DLP file.
+    await dlpFile.addDLPLinkFile('test.txt.dlp.link'); // Add a link file.
+    await dlpFile.deleteDLPLinkFile('test.txt.dlp.link'); // Delete a link file.
+  } catch (err) {
+    console.error('error', (err as BusinessError).code, (err as BusinessError).message); // Throw an error if the operation fails.
+  } finally {
+    await dlpFile?.closeDLPFile(); // Close the DLP object.
+    if (file) {
+      fileIo.closeSync(file);
+    }
   }
 }
-
-ExampleFunction();
 ```
 
 ## deleteDLPLinkFile
@@ -417,11 +468,12 @@ ExampleFunction();
 deleteDLPLinkFile(linkFileName: string, callback: AsyncCallback<void>): void
 ```
 
-删除FUSE文件系统中创建的link文件，使用callback异步回调。调用成功后，从FUSE文件系统中移除指定的link文件。
+Deletes a link file from the FUSE. This API uses an asynchronous callback to return the result. After the API is successfully called, the specified link file is deleted from the FUSE.
 
-在调用deleteDLPLinkFile前需要调用[addDLPLinkFile](arkts-dataprotection-dlppermission-dlpfile-i-sys.md#adddlplinkfile)添加DLP link文件。
+Before calling **deleteDLPLinkFile**, the system must call   
+[addDLPLinkFile](arkts-dataprotection-dlppermission-dlpfile-i-sys.md#adddlplinkfile) to add a DLP link file.
 
-DLP文件访问结束后清理link文件映射时使用此接口。
+This API is used to clear the link file mapping after DLP file access is complete.
 
 **Since:** 10
 
@@ -439,19 +491,20 @@ DLP文件访问结束后清理link文件映射时使用此接口。
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| linkFileName | string | Yes | 用于FUSE文件系统的link文件名。不超过255字节。超出范围时抛出错误码401。 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | 回调函数，用于接收删除link文件的结果。 |
+| linkFileName | string | Yes | Name of the link file in the FUSE. The value contains up to 255 bytes. If the value is out of range, error code 401 is thrown. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to receive the result of deleting a link file. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. |
-| 19100001 | Invalid parameter value. |
-| 19100011 | The system ability works abnormally. |
-| 201 | Permission denied. |
-| 202 | Non-system applications use system APIs. |
-| 19100009 | Failed to operate the DLP file. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. |
+| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported because car not support DLP feature.<br>**Applicable version:** 26.1.0 and later |
+| [19100001](../errorcode-dlp.md#19100001-invalid-parameter) | Invalid parameter value. |
+| [19100011](../errorcode-dlp.md#19100011-system-service-abnormal) | The system ability works abnormally. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Non-system applications use system APIs. |
+| [19100009](../errorcode-dlp.md#19100009-failed-to-operate-the-dlp-file) | Failed to operate the DLP file. |
 
 ## Examples
 
@@ -459,6 +512,7 @@ DLP文件访问结束后清理link文件映射时使用此接口。
 import { dlpPermission } from '@kit.DataProtectionKit';
 import { fileIo } from '@kit.CoreFileKit';
 import { bundleManager } from '@kit.AbilityKit';
+import { BusinessError } from '@kit.BasicServicesKit';
 
 async function ExampleFunction() {
   let uri = 'file://docs/storage/Users/currentUser/Desktop/test.txt.dlp';
@@ -469,24 +523,34 @@ async function ExampleFunction() {
   let userId = 100;
   let dlpFile: dlpPermission.DLPFile | undefined = undefined;
 
-  let data = bundleManager.getBundleInfoSync(bundleName, bundleFlags, userId);
-  appId = data.signatureInfo.appId;
+  try {
+    let data = bundleManager.getBundleInfoSync(bundleName, bundleFlags, userId);
+    appId = data.signatureInfo.appId;
+  } catch (err) {
+    console.error('error', err.code, err.message);
+  }
 
-  file = fileIo.openSync(uri).fd;
-  dlpFile = await dlpPermission.openDLPFile(file, appId); // Open a DLP file.
-  await dlpFile.addDLPLinkFile('test.txt.dlp.link'); // Add a link file.
-  dlpFile.deleteDLPLinkFile('test.txt.dlp.link', async (err, res) => { // Delete a link file.
-    if (err) {
-      console.error('deleteDLPLinkFile error,', err.code, err.message);
-    } else {
-      console.info('res', JSON.stringify(res));
-    }
+  try {
+    file = fileIo.openSync(uri).fd;
+    dlpFile = await dlpPermission.openDLPFile(file, appId); // Open a DLP file.
+    await dlpFile.addDLPLinkFile('test.txt.dlp.link'); // Add a link file.
+    dlpFile.deleteDLPLinkFile('test.txt.dlp.link', async (err, res) => { // Delete a link file.
+      if (err !== undefined) {
+        console.error('deleteDLPLinkFile error,', err.code, err.message);
+      } else {
+        console.info('res', JSON.stringify(res));
+      }
+      await dlpFile?.closeDLPFile(); // Close the DLP object.
+      fileIo.closeSync(file);
+    });
+  } catch (err) {
+    console.error('error,', (err as BusinessError).code, (err as BusinessError).message);
     await dlpFile?.closeDLPFile(); // Close the DLP object.
-    fileIo.closeSync(file);
-  });
+    if (file) {
+      fileIo.closeSync(file);
+    }
+  }
 }
-
-ExampleFunction();
 ```
 
 ## recoverDLPFile
@@ -495,9 +559,9 @@ ExampleFunction();
 recoverDLPFile(plaintextFd: number): Promise<void>
 ```
 
-移除DLP文件的权限控制，恢复成明文文件。使用Promise异步回调。
+Recovers the plaintext of a DLP file. This API uses a promise to return the result.
 
-文件所有者决定取消文件的DLP保护时使用此接口，将其转换为普通文件以便自由分享。
+This API is used when the file owner decides to disable the DLP protection for a file and convert it into a common file for free sharing.
 
 **Since:** 10
 
@@ -515,30 +579,31 @@ recoverDLPFile(plaintextFd: number): Promise<void>
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| plaintextFd | number | Yes | 目标明文文件的fd。取值范围为[0, 2&lt;sup&gt;31&lt;/sup&gt;-1]。当fd小于0时，打印错误日志，函数停止运行；当fd大于2&lt;sup&gt;31&lt;/sup &gt;-1时，fd的值被截断。 |
+| plaintextFd | number | Yes | FD of the target plaintext file. The value range is [0, 2&lt;sup&gt;31&lt;/sup&gt;-1]. If the value of **fd** is less than 0, an error log is generated, and the function stops running. If the value of **fd** is greater than 2&lt;sup&gt;31&lt;/sup&gt;-1, the excess part will be truncated. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise对象。无返回结果的Promise对象。 |
+| Promise&lt;void&gt; | Promise that returns no value. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 19100003 | Credential task time out. |
-| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. |
-| 19100002 | Credential service busy due to too many tasks or duplicate tasks. |
-| 19100001 | Invalid parameter value. |
-| 19100005 | Credential authentication server error. |
-| 19100004 | Credential service error. |
-| 19100011 | The system ability works abnormally. |
-| 201 | Permission denied. |
-| 19100010 | The DLP file is read only. |
-| 202 | Non-system applications use system APIs. |
-| 19100009 | Failed to operate the DLP file. |
-| 19100008 | The file is not a DLP file. |
+| [19100003](../errorcode-dlp.md#19100003-encryptiondecryption-timeout) | Credential task time out. |
+| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported because car not support DLP feature.<br>**Applicable version:** 26.1.0 and later |
+| [19100002](../errorcode-dlp.md#19100002-encryption-and-decryption-error) | Credential service busy due to too many tasks or duplicate tasks. |
+| [19100001](../errorcode-dlp.md#19100001-invalid-parameter) | Invalid parameter value. |
+| [19100005](../errorcode-dlp.md#19100005-credential-authentication-server-error) | Credential authentication server error. |
+| [19100004](../errorcode-dlp.md#19100004-credential-service-error) | Credential service error. |
+| [19100011](../errorcode-dlp.md#19100011-system-service-abnormal) | The system ability works abnormally. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
+| [19100010](../errorcode-dlp.md#19100010-readonly-dlp-file) | The DLP file is read only. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Non-system applications use system APIs. |
+| [19100009](../errorcode-dlp.md#19100009-failed-to-operate-the-dlp-file) | Failed to operate the DLP file. |
+| [19100008](../errorcode-dlp.md#19100008-nondlp-file) | The file is not a DLP file. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. |
 
 ## Examples
 
@@ -546,6 +611,7 @@ recoverDLPFile(plaintextFd: number): Promise<void>
 import { dlpPermission } from '@kit.DataProtectionKit';
 import { fileIo } from '@kit.CoreFileKit';
 import { bundleManager } from '@kit.AbilityKit';
+import { BusinessError } from '@kit.BasicServicesKit';
 
 async function ExampleFunction() {
   let uri = 'file://docs/storage/Users/currentUser/Desktop/test.txt.dlp';
@@ -557,23 +623,30 @@ async function ExampleFunction() {
   let userId = 100;
   let dlpFile: dlpPermission.DLPFile | undefined = undefined;
 
-  let data = bundleManager.getBundleInfoSync(bundleName, bundleFlags, userId);
-  appId = data.signatureInfo.appId;
-
-  file = fileIo.openSync(uri).fd;
-  destFile = fileIo.openSync('file://docs/storage/Users/currentUser/Desktop/dest.txt').fd;
-  dlpFile = await dlpPermission.openDLPFile(file, appId); // Open a DLP file.
-  await dlpFile.recoverDLPFile(destFile); // Recover the plaintext of a DLP file.
-  await dlpFile?.closeDLPFile(); // Close the DLP object.
-  if (file) {
-    fileIo.closeSync(file);
+  try {
+    let data = bundleManager.getBundleInfoSync(bundleName, bundleFlags, userId);
+    appId = data.signatureInfo.appId;
+  } catch (err) {
+    console.error('error', err.code, err.message);
   }
-  if (destFile) {
-    fileIo.closeSync(destFile);
+
+  try {
+    file = fileIo.openSync(uri).fd;
+    destFile = fileIo.openSync('destUri').fd;
+    dlpFile = await dlpPermission.openDLPFile(file, appId); // Open a DLP file.
+    await dlpFile.recoverDLPFile(destFile); // Recover the plaintext of a DLP file.
+  } catch (err) {
+    console.error('error', (err as BusinessError).code, (err as BusinessError).message); // Throw an error if the operation fails.
+  } finally {
+    dlpFile?.closeDLPFile(); // Close the DLP object.
+    if (file) {
+      fileIo.closeSync(file);
+    }
+    if (destFile) {
+      fileIo.closeSync(destFile);
+    }
   }
 }
-
-ExampleFunction();
 ```
 
 ## recoverDLPFile
@@ -582,9 +655,9 @@ ExampleFunction();
 recoverDLPFile(plaintextFd: number, callback: AsyncCallback<void>): void
 ```
 
-移除DLP文件的权限控制，恢复成明文文件，使用callback异步回调。
+Recovers the plaintext of a DLP file. This API uses an asynchronous callback to return the result.
 
-文件所有者决定取消文件的DLP保护时使用此接口。
+This API is used when the file owner decides to disable the DLP protection for a file.
 
 **Since:** 10
 
@@ -602,25 +675,26 @@ recoverDLPFile(plaintextFd: number, callback: AsyncCallback<void>): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| plaintextFd | number | Yes | 目标明文文件的fd。取值范围为[0, 2&lt;sup&gt;31&lt;/sup&gt;-1]。当fd小于0时，打印错误日志，函数停止运行；当fd大于2&lt;sup&gt;31&lt;/sup &gt;-1时，fd的值被截断。 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | 回调函数，用于接收恢复明文文件的结果。回调参数包括：err（错误对象，成功时为undefined）。 |
+| plaintextFd | number | Yes | FD of the target plaintext file. The value range is [0, 2&lt;sup&gt;31&lt;/sup&gt;-1]. If the value of **fd** is less than 0, an error log is generated, and the function stops running. If the value of **fd** is greater than 2&lt;sup&gt;31&lt;/sup&gt;-1, the excess part will be truncated. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to receive the result of recovering the plaintext of a DLP file. The callback parameter is **err**. **err** is **undefined** when the operation is successful; otherwise, **err** is an error object. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 19100003 | Credential task time out. |
-| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. |
-| 19100002 | Credential service busy due to too many tasks or duplicate tasks. |
-| 19100001 | Invalid parameter value. |
-| 19100005 | Credential authentication server error. |
-| 19100004 | Credential service error. |
-| 19100011 | The system ability works abnormally. |
-| 201 | Permission denied. |
-| 19100010 | The DLP file is read only. |
-| 202 | Non-system applications use system APIs. |
-| 19100009 | Failed to operate the DLP file. |
-| 19100008 | The file is not a DLP file. |
+| [19100003](../errorcode-dlp.md#19100003-encryptiondecryption-timeout) | Credential task time out. |
+| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported because car not support DLP feature.<br>**Applicable version:** 26.1.0 and later |
+| [19100002](../errorcode-dlp.md#19100002-encryption-and-decryption-error) | Credential service busy due to too many tasks or duplicate tasks. |
+| [19100001](../errorcode-dlp.md#19100001-invalid-parameter) | Invalid parameter value. |
+| [19100005](../errorcode-dlp.md#19100005-credential-authentication-server-error) | Credential authentication server error. |
+| [19100004](../errorcode-dlp.md#19100004-credential-service-error) | Credential service error. |
+| [19100011](../errorcode-dlp.md#19100011-system-service-abnormal) | The system ability works abnormally. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
+| [19100010](../errorcode-dlp.md#19100010-readonly-dlp-file) | The DLP file is read only. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Non-system applications use system APIs. |
+| [19100009](../errorcode-dlp.md#19100009-failed-to-operate-the-dlp-file) | Failed to operate the DLP file. |
+| [19100008](../errorcode-dlp.md#19100008-nondlp-file) | The file is not a DLP file. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. |
 
 ## Examples
 
@@ -628,6 +702,7 @@ recoverDLPFile(plaintextFd: number, callback: AsyncCallback<void>): void
 import { dlpPermission } from '@kit.DataProtectionKit';
 import { fileIo } from '@kit.CoreFileKit';
 import { bundleManager } from '@kit.AbilityKit';
+import { BusinessError } from '@kit.BasicServicesKit';
 
 async function ExampleFunction() {
   let uri = 'file://docs/storage/Users/currentUser/Desktop/test.txt.dlp';
@@ -639,25 +714,38 @@ async function ExampleFunction() {
   let userId = 100;
   let dlpFile: dlpPermission.DLPFile | undefined = undefined;
 
-  let data = bundleManager.getBundleInfoSync(bundleName, bundleFlags, userId);
-  appId = data.signatureInfo.appId;
+  try {
+    let data = bundleManager.getBundleInfoSync(bundleName, bundleFlags, userId);
+    appId = data.signatureInfo.appId;
+  } catch (err) {
+    console.error('error', err.code, err.message);
+  }
 
-  file = fileIo.openSync(uri).fd;
-  destFile = fileIo.openSync('destUri').fd;
-  dlpFile = await dlpPermission.openDLPFile(file, appId); // Open a DLP file.
-  dlpFile.recoverDLPFile(destFile, async (err, res) => { // Recover the plaintext of a DLP file.
-    if (err) {
-      console.error('recoverDLPFile error,', err.code, err.message);
-    } else {
-      console.info('res', JSON.stringify(res));
-    }
+  try {
+    file = fileIo.openSync(uri).fd;
+    destFile = fileIo.openSync('destUri').fd;
+    dlpFile = await dlpPermission.openDLPFile(file, appId); // Open a DLP file.
+    dlpFile.recoverDLPFile(destFile, async (err, res) => { // Recover the plaintext of a DLP file.
+      if (err !== undefined) {
+        console.error('recoverDLPFile error,', err.code, err.message);
+      } else {
+        console.info('res', JSON.stringify(res));
+      }
+      await dlpFile?.closeDLPFile(); // Close the DLP object.
+      fileIo.closeSync(file);
+      fileIo.closeSync(destFile);
+    });
+  } catch (err) {
+    console.error('error,', (err as BusinessError).code, (err as BusinessError).message);
     await dlpFile?.closeDLPFile(); // Close the DLP object.
-    fileIo.closeSync(file);
-    fileIo.closeSync(destFile);
-  });
+    if (file) {
+      fileIo.closeSync(file);
+    }
+    if (destFile) {
+      fileIo.closeSync(destFile);
+    }
+  }
 }
-
-ExampleFunction();
 ```
 
 ## replaceDLPLinkFile
@@ -666,9 +754,9 @@ ExampleFunction();
 replaceDLPLinkFile(linkFileName: string): Promise<void>
 ```
 
-替换link文件。使用Promise异步回调。调用成功后，使用新的link文件名替换当前link文件。需要先创建link文件并停止FUSE读写，才能执行此操作。
+Replaces a link file. This API uses a promise to return the result. After the API is successfully called, the current link file is replaced with the new link file. Before performing this operation, you need to create a link file and stop the read and write operation on the FUSE.
 
-需要切换访问不同的DLP文件时，通过替换link文件实现文件映射的切换。
+When you need to access a different DLP file, you can replace the link file to change the file mapping.
 
 **Since:** 10
 
@@ -686,24 +774,25 @@ replaceDLPLinkFile(linkFileName: string): Promise<void>
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| linkFileName | string | Yes | 用于FUSE文件系统的link文件名。不超过255字节。超出范围时抛出错误码401。 |
+| linkFileName | string | Yes | Name of the link file in the FUSE. The value contains up to 255 bytes. If the value is out of range, error code 401 is thrown. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise对象。无返回结果的Promise对象。 |
+| Promise&lt;void&gt; | Promise that returns no value. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. |
-| 19100001 | Invalid parameter value. |
-| 19100011 | The system ability works abnormally. |
-| 201 | Permission denied. |
-| 202 | Non-system applications use system APIs. |
-| 19100009 | Failed to operate the DLP file. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. |
+| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported because car not support DLP feature.<br>**Applicable version:** 26.1.0 and later |
+| [19100001](../errorcode-dlp.md#19100001-invalid-parameter) | Invalid parameter value. |
+| [19100011](../errorcode-dlp.md#19100011-system-service-abnormal) | The system ability works abnormally. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Non-system applications use system APIs. |
+| [19100009](../errorcode-dlp.md#19100009-failed-to-operate-the-dlp-file) | Failed to operate the DLP file. |
 
 ## Examples
 
@@ -711,6 +800,7 @@ replaceDLPLinkFile(linkFileName: string): Promise<void>
 import { dlpPermission } from '@kit.DataProtectionKit';
 import { fileIo } from '@kit.CoreFileKit';
 import { bundleManager } from '@kit.AbilityKit';
+import { BusinessError } from '@kit.BasicServicesKit';
 
 async function ExampleFunction() {
   let uri = 'file://docs/storage/Users/currentUser/Desktop/test.txt.dlp';
@@ -721,23 +811,29 @@ async function ExampleFunction() {
   let userId = 100;
   let dlpFile: dlpPermission.DLPFile | undefined = undefined;
 
-  let data = bundleManager.getBundleInfoSync(bundleName, bundleFlags, userId);
-  appId = data.signatureInfo.appId;
+  try {
+    let data = bundleManager.getBundleInfoSync(bundleName, bundleFlags, userId);
+    appId = data.signatureInfo.appId;
+  } catch (err) {
+    console.error('error', err.code, err.message);
+  }
 
-  file = fileIo.openSync(uri).fd;
-  dlpFile = await dlpPermission.openDLPFile(file, appId); // Open a DLP file.
-  await dlpFile.addDLPLinkFile('test.txt.dlp.link'); // Add a link file.
-  await dlpFile.stopFuseLink(); // Stop the read and write on the link file.
-  await dlpFile.replaceDLPLinkFile('test_new.txt.dlp.link'); // Replace a link file.
-  await dlpFile.resumeFuseLink(); // Resume read/write on the link file.
-  
-  await dlpFile?.closeDLPFile(); // Close the DLP object.
-  if (file) {
-    fileIo.closeSync(file);
+  try {
+    file = fileIo.openSync(uri).fd;
+    dlpFile = await dlpPermission.openDLPFile(file, appId); // Open a DLP file.
+    await dlpFile.addDLPLinkFile('test.txt.dlp.link'); // Add a link file.
+    await dlpFile.stopFuseLink(); // Stop the read and write on the FUSE.
+    await dlpFile.replaceDLPLinkFile('test_new.txt.dlp.link'); // Replace a link file.
+    await dlpFile.resumeFuseLink(); // Resume read/write on the link file.
+  } catch (err) {
+    console.error('error', (err as BusinessError).code, (err as BusinessError).message); // Throw an error if the operation fails.
+  } finally {
+    await dlpFile?.closeDLPFile(); // Close the DLP object.
+    if (file) {
+      fileIo.closeSync(file);
+    }
   }
 }
-
-ExampleFunction();
 ```
 
 ## replaceDLPLinkFile
@@ -746,9 +842,9 @@ ExampleFunction();
 replaceDLPLinkFile(linkFileName: string, callback: AsyncCallback<void>): void
 ```
 
-替换link文件，使用callback异步回调。调用成功后，使用新的link文件名替换当前link文件。
+Replaces a link file. This API uses an asynchronous callback to return the result. After the API is successfully called, the current link file is replaced with the new link file.
 
-需要切换访问不同的DLP文件时替换link文件。需要先创建link文件并停止FUSE读写，才能执行此操作。
+When you need to access a different DLP file, you can replace the link file. Before performing this operation, you need to create a link file and stop the read and write operation on the FUSE.
 
 **Since:** 10
 
@@ -766,19 +862,20 @@ replaceDLPLinkFile(linkFileName: string, callback: AsyncCallback<void>): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| linkFileName | string | Yes | 用于FUSE文件系统的link文件名。不超过255字节。超出范围时抛出错误码401。 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | 回调函数，用于接收替换link文件的结果。回调参数包括：err（错误对象，成功时为undefined）。 |
+| linkFileName | string | Yes | Name of the link file in the FUSE. The value contains up to 255 bytes. If the value is out of range, error code 401 is thrown. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to receive the result of replacing a link file. The callback parameter is **err**. **err** is **undefined** when the operation is successful; otherwise, **err** is an error object. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. |
-| 19100001 | Invalid parameter value. |
-| 19100011 | The system ability works abnormally. |
-| 201 | Permission denied. |
-| 202 | Non-system applications use system APIs. |
-| 19100009 | Failed to operate the DLP file. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. |
+| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported because car not support DLP feature.<br>**Applicable version:** 26.1.0 and later |
+| [19100001](../errorcode-dlp.md#19100001-invalid-parameter) | Invalid parameter value. |
+| [19100011](../errorcode-dlp.md#19100011-system-service-abnormal) | The system ability works abnormally. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Non-system applications use system APIs. |
+| [19100009](../errorcode-dlp.md#19100009-failed-to-operate-the-dlp-file) | Failed to operate the DLP file. |
 
 ## Examples
 
@@ -786,6 +883,7 @@ replaceDLPLinkFile(linkFileName: string, callback: AsyncCallback<void>): void
 import { dlpPermission } from '@kit.DataProtectionKit';
 import { fileIo } from '@kit.CoreFileKit';
 import { bundleManager } from '@kit.AbilityKit';
+import { BusinessError } from '@kit.BasicServicesKit';
 
 async function ExampleFunction() {
   let uri = 'file://docs/storage/Users/currentUser/Desktop/test.txt.dlp';
@@ -796,26 +894,36 @@ async function ExampleFunction() {
   let userId = 100;
   let dlpFile: dlpPermission.DLPFile | undefined = undefined;
 
-  let data = bundleManager.getBundleInfoSync(bundleName, bundleFlags, userId);
-  appId = data.signatureInfo.appId;
+  try {
+    let data = bundleManager.getBundleInfoSync(bundleName, bundleFlags, userId);
+    appId = data.signatureInfo.appId;
+  } catch (err) {
+    console.error('error', err.code, err.message);
+  }
 
-  file = fileIo.openSync(uri).fd;
-  dlpFile = await dlpPermission.openDLPFile(file, appId); // Open a DLP file.
-  await dlpFile.addDLPLinkFile('test.txt.dlp.link'); // Add a link file.
-  await dlpFile.stopFuseLink(); // Stop the read and write on the link file.
-  dlpFile.replaceDLPLinkFile('test_new.txt.dlp.link', async (err, res) => { // Replace a link file.
-    if (err) {
-      console.error('replaceDLPLinkFile error,', err.code, err.message);
-    } else {
-      console.info('res', JSON.stringify(res));
-      await dlpFile?.resumeFuseLink(); // Resume the read and write on the link file.
-    }
+  try {
+    file = fileIo.openSync(uri).fd;
+    dlpFile = await dlpPermission.openDLPFile(file, appId); // Open a DLP file.
+    await dlpFile.addDLPLinkFile('test.txt.dlp.link'); // Add a link file.
+    await dlpFile.stopFuseLink(); // Stop the read and write on the FUSE.
+    dlpFile.replaceDLPLinkFile('test_new.txt.dlp.link', async (err, res) => { // Replace a link file.
+      if (err !== undefined) {
+        console.error('replaceDLPLinkFile error,', err.code, err.message);
+      } else {
+        console.info('res', JSON.stringify(res));
+        await dlpFile?.resumeFuseLink(); // Resume the read and write on the FUSE.
+      }
+      await dlpFile?.closeDLPFile(); // Close the DLP object.
+      fileIo.closeSync(file);
+    });
+  } catch (err) {
+    console.error('error,', (err as BusinessError).code, (err as BusinessError).message);
     await dlpFile?.closeDLPFile(); // Close the DLP object.
-    fileIo.closeSync(file);
-  });
+    if (file) {
+      fileIo.closeSync(file);
+    }
+  }
 }
-
-ExampleFunction();
 ```
 
 ## resumeFuseLink
@@ -824,11 +932,12 @@ ExampleFunction();
 resumeFuseLink(): Promise<void>
 ```
 
-恢复FUSE关联读写。使用Promise异步回调。调用成功后，恢复对link文件的读写操作。 
+Resumes the read and write on the FUSE. This API uses a promise to return the result. After the API is successfully called, the read and write on the link file are resumed.
 
-必须在调用[stopFuseLink](arkts-dataprotection-dlppermission-dlpfile-i-sys.md#stopfuselink)暂停读写后才能调用此方法恢复读写功能。
+This API can be called to resume read and write only after   
+[stopFuseLink](arkts-dataprotection-dlppermission-dlpfile-i-sys.md#stopfuselink) is called to stop the read and write operations.
 
-link文件替换完成后，需要恢复读写关联以继续正常的文件访问。
+After the link file is replaced, the read and write need to be resumed for normal file access.
 
 **Since:** 10
 
@@ -846,17 +955,18 @@ link文件替换完成后，需要恢复读写关联以继续正常的文件访�
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise对象。无返回结果的Promise对象。 |
+| Promise&lt;void&gt; | Promise that returns no value. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 19100001 | Invalid parameter value. |
-| 19100011 | The system ability works abnormally. |
-| 201 | Permission denied. |
-| 202 | Non-system applications use system APIs. |
-| 19100009 | Failed to operate the DLP file. |
+| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported because car not support DLP feature.<br>**Applicable version:** 26.1.0 and later |
+| [19100001](../errorcode-dlp.md#19100001-invalid-parameter) | Invalid parameter value. |
+| [19100011](../errorcode-dlp.md#19100011-system-service-abnormal) | The system ability works abnormally. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Non-system applications use system APIs. |
+| [19100009](../errorcode-dlp.md#19100009-failed-to-operate-the-dlp-file) | Failed to operate the DLP file. |
 
 ## Examples
 
@@ -864,6 +974,7 @@ link文件替换完成后，需要恢复读写关联以继续正常的文件访�
 import { dlpPermission } from '@kit.DataProtectionKit';
 import { fileIo } from '@kit.CoreFileKit';
 import { bundleManager } from '@kit.AbilityKit';
+import { BusinessError } from '@kit.BasicServicesKit';
 
 async function ExampleFunction() {
   let uri = 'file://docs/storage/Users/currentUser/Desktop/test.txt.dlp';
@@ -874,22 +985,28 @@ async function ExampleFunction() {
   let userId = 100;
   let dlpFile: dlpPermission.DLPFile | undefined = undefined;
 
-  let data = bundleManager.getBundleInfoSync(bundleName, bundleFlags, userId);
-  appId = data.signatureInfo.appId;
+  try {
+    let data = bundleManager.getBundleInfoSync(bundleName, bundleFlags, userId);
+    appId = data.signatureInfo.appId;
+  } catch (err) {
+    console.error('error', err.code, err.message);
+  }
 
-  file = fileIo.openSync(uri).fd;
-  dlpFile = await dlpPermission.openDLPFile(file, appId); // Open a DLP file.
-  await dlpFile.addDLPLinkFile('test.txt.dlp.link'); // Add a link file.
-  await dlpFile.stopFuseLink(); // Stop the read and write on the link file.
-  await dlpFile.resumeFuseLink(); // Resume read/write on the link file.
-  
-  await dlpFile?.closeDLPFile(); // Close the DLP object.
-  if (file) {
-    fileIo.closeSync(file);
+  try {
+    file = fileIo.openSync(uri).fd;
+    dlpFile = await dlpPermission.openDLPFile(file, appId); // Open a DLP file.
+    await dlpFile.addDLPLinkFile('test.txt.dlp.link'); // Add a link file.
+    await dlpFile.stopFuseLink(); // Stop the read and write on the FUSE.
+    await dlpFile.resumeFuseLink(); // Resume read/write on the link file.
+  } catch (err) {
+    console.error('error', (err as BusinessError).code, (err as BusinessError).message); // Throw an error if the operation fails.
+  } finally {
+    dlpFile?.closeDLPFile(); // Close the DLP object.
+    if (file) {
+      fileIo.closeSync(file);
+    }
   }
 }
-
-ExampleFunction();
 ```
 
 ## resumeFuseLink
@@ -898,11 +1015,12 @@ ExampleFunction();
 resumeFuseLink(callback: AsyncCallback<void>): void
 ```
 
-恢复FUSE关联读写，使用callback异步回调。调用成功后，恢复对link文件的读写操作。
+Resumes the read and write on the FUSE. This API uses an asynchronous callback to return the result. After the API is successfully called, the read and write on the link file are resumed.
 
-必须在调用[stopFuseLink](arkts-dataprotection-dlppermission-dlpfile-i-sys.md#stopfuselink)暂停读写后才能调用此方法恢复读写功能。
+This API can be called to resume read and write only after   
+[stopFuseLink](arkts-dataprotection-dlppermission-dlpfile-i-sys.md#stopfuselink) is called to stop the read and write operations.
 
-link文件替换完成后需要恢复读写关联。
+After the link file is replaced, the read and write need to be resumed.
 
 **Since:** 10
 
@@ -920,18 +1038,19 @@ link文件替换完成后需要恢复读写关联。
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | 回调函数，用于接收恢复FUSE关联的结果。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to receive the result of resuming the read and write on the FUSE. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1. Incorrect parameter types. |
-| 19100001 | Invalid parameter value. |
-| 19100011 | The system ability works abnormally. |
-| 201 | Permission denied. |
-| 202 | Non-system applications use system APIs. |
-| 19100009 | Failed to operate the DLP file. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Incorrect parameter types. |
+| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported because car not support DLP feature.<br>**Applicable version:** 26.1.0 and later |
+| [19100001](../errorcode-dlp.md#19100001-invalid-parameter) | Invalid parameter value. |
+| [19100011](../errorcode-dlp.md#19100011-system-service-abnormal) | The system ability works abnormally. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Non-system applications use system APIs. |
+| [19100009](../errorcode-dlp.md#19100009-failed-to-operate-the-dlp-file) | Failed to operate the DLP file. |
 
 ## Examples
 
@@ -939,6 +1058,7 @@ link文件替换完成后需要恢复读写关联。
 import { dlpPermission } from '@kit.DataProtectionKit';
 import { fileIo } from '@kit.CoreFileKit';
 import { bundleManager } from '@kit.AbilityKit';
+import { BusinessError } from '@kit.BasicServicesKit';
 
 async function ExampleFunction() {
   let uri = 'file://docs/storage/Users/currentUser/Desktop/test.txt.dlp';
@@ -949,25 +1069,35 @@ async function ExampleFunction() {
   let userId = 100;
   let dlpFile: dlpPermission.DLPFile | undefined = undefined;
 
-  let data = bundleManager.getBundleInfoSync(bundleName, bundleFlags, userId);
-  appId = data.signatureInfo.appId;
+  try {
+    let data = bundleManager.getBundleInfoSync(bundleName, bundleFlags, userId);
+    appId = data.signatureInfo.appId;
+  } catch (err) {
+    console.error('error', err.code, err.message);
+  }
 
-  file = fileIo.openSync(uri).fd;
-  dlpFile = await dlpPermission.openDLPFile(file, appId); // Open a DLP file.
-  await dlpFile.addDLPLinkFile('test.txt.dlp.link'); // Add a link file.
-  await dlpFile.stopFuseLink(); // Stop the read and write on the link file.
-  dlpFile.resumeFuseLink(async (err, res) => {
-    if (err) {
-      console.error('resumeFuseLink error,', err.code, err.message);
-    } else {
-      console.info('res', JSON.stringify(res));
-    }
+  try {
+    file = fileIo.openSync(uri).fd;
+    dlpFile = await dlpPermission.openDLPFile(file, appId); // Open a DLP file.
+    await dlpFile.addDLPLinkFile('test.txt.dlp.link'); // Add a link file.
+    await dlpFile.stopFuseLink(); // Stop the read and write on the FUSE.
+    dlpFile.resumeFuseLink(async (err, res) => {
+      if (err !== undefined) {
+        console.error('resumeFuseLink error,', err.code, err.message);
+      } else {
+        console.info('res', JSON.stringify(res));
+      }
+      await dlpFile?.closeDLPFile(); // Close the DLP object.
+      fileIo.closeSync(file);
+    });
+  } catch (err) {
+    console.error('resumeFuseLink error,', (err as BusinessError).code, (err as BusinessError).message);
     await dlpFile?.closeDLPFile(); // Close the DLP object.
-    fileIo.closeSync(file);
-  }); // Resume read/write on the link file.
+    if (file) {
+      fileIo.closeSync(file);
+    }
+  }
 }
-
-ExampleFunction();
 ```
 
 ## stopFuseLink
@@ -976,11 +1106,12 @@ ExampleFunction();
 stopFuseLink(): Promise<void>
 ```
 
-停止FUSE关联读写。使用Promise异步回调。调用成功后，暂停对link文件的读写操作。
+Stops the read and write on the FUSE. This API uses a promise to return the result. After the API is successfully called, the read and write on the link file are stopped.
 
-调用stopFuseLink暂停FUSE关联读写后，必须调用[resumeFuseLink](arkts-dataprotection-dlppermission-dlpfile-i-sys.md#resumefuselink)恢复读写功能。
+After calling **stopFuseLink** to stop the read and write operations on the FUSE, the system must call   
+[resumeFuseLink](arkts-dataprotection-dlppermission-dlpfile-i-sys.md#resumefuselink) to resume the read and write operations.
 
-在删除link文件前，需要先停止关联读写以确保文件操作安全。
+Before deleting a link file, stop the read and write to ensure secure file operations.
 
 **Since:** 10
 
@@ -998,17 +1129,18 @@ stopFuseLink(): Promise<void>
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise对象。无返回结果的Promise对象。 |
+| Promise&lt;void&gt; | Promise that returns no value. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 19100001 | Invalid parameter value. |
-| 19100011 | The system ability works abnormally. |
-| 201 | Permission denied. |
-| 202 | Non-system applications use system APIs. |
-| 19100009 | Failed to operate the DLP file. |
+| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported because car not support DLP feature.<br>**Applicable version:** 26.1.0 and later |
+| [19100001](../errorcode-dlp.md#19100001-invalid-parameter) | Invalid parameter value. |
+| [19100011](../errorcode-dlp.md#19100011-system-service-abnormal) | The system ability works abnormally. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Non-system applications use system APIs. |
+| [19100009](../errorcode-dlp.md#19100009-failed-to-operate-the-dlp-file) | Failed to operate the DLP file. |
 
 ## Examples
 
@@ -1016,6 +1148,7 @@ stopFuseLink(): Promise<void>
 import { dlpPermission } from '@kit.DataProtectionKit';
 import { fileIo } from '@kit.CoreFileKit';
 import { bundleManager } from '@kit.AbilityKit';
+import { BusinessError } from '@kit.BasicServicesKit';
 
 async function ExampleFunction() {
   let uri = 'file://docs/storage/Users/currentUser/Desktop/test.txt.dlp';
@@ -1026,20 +1159,27 @@ async function ExampleFunction() {
   let userId = 100;
   let dlpFile: dlpPermission.DLPFile | undefined = undefined;
 
-  let data = bundleManager.getBundleInfoSync(bundleName, bundleFlags, userId);
-  appId = data.signatureInfo.appId;
+  try {
+    let data = bundleManager.getBundleInfoSync(bundleName, bundleFlags, userId);
+    appId = data.signatureInfo.appId;
+  } catch (err) {
+    console.error('error', err.code, err.message);
+  }
 
-  file = fileIo.openSync(uri).fd;
-  dlpFile = await dlpPermission.openDLPFile(file, appId); // Open a DLP file.
-  await dlpFile.addDLPLinkFile('test.txt.dlp.link'); // Add a link file.
-  await dlpFile.stopFuseLink(); // Stop the read and write on the link file.
-  await dlpFile?.closeDLPFile(); // Close the DLP object.
-  if (file) {
-    fileIo.closeSync(file);
+  try {
+    file = fileIo.openSync(uri).fd;
+    dlpFile = await dlpPermission.openDLPFile(file, appId) // Open a DLP file.
+    dlpFile.addDLPLinkFile('test.txt.dlp.link'); // Add a link file.
+    dlpFile.stopFuseLink(); // Stop read/write on the link file.
+  } catch (err) {
+    console.error('error', (err as BusinessError).code, (err as BusinessError).message); // Throw an error if the operation fails.
+  } finally {
+    dlpFile?.closeDLPFile(); // Close the DLP object.
+    if (file) {
+      fileIo.closeSync(file);
+    }
   }
 }
-
-ExampleFunction();
 ```
 
 ## stopFuseLink
@@ -1048,11 +1188,12 @@ ExampleFunction();
 stopFuseLink(callback: AsyncCallback<void>): void
 ```
 
-停止FUSE关联读写。使用callback异步回调。调用成功后，暂停对link文件的读写操作。
+Stops the read and write on the FUSE. This API uses an asynchronous callback to return the result. After the API is successfully called, the read and write on the link file are stopped.
 
-调用stopFuseLink暂停FUSE关联读写后，必须调用[resumeFuseLink](arkts-dataprotection-dlppermission-dlpfile-i-sys.md#resumefuselink)恢复读写功能。
+After calling **stopFuseLink** to stop the read and write operations on the FUSE, the system must call   
+[resumeFuseLink](arkts-dataprotection-dlppermission-dlpfile-i-sys.md#resumefuselink) to resume the read and write operations.
 
-删除link文件前需要暂停读写关联。
+Before deleting a link file, stop the read and write.
 
 **Since:** 10
 
@@ -1070,18 +1211,19 @@ stopFuseLink(callback: AsyncCallback<void>): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | 回调函数，用于接收停止FUSE关联的结果。回调参数包括：err（错误对象，成功时为undefined）。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to receive the result of stopping read and write on the FUSE. The callback parameter is **err**. **err** is **undefined** when the operation is successful; otherwise, **err** is an error object. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1. Incorrect parameter types. |
-| 19100001 | Invalid parameter value. |
-| 19100011 | The system ability works abnormally. |
-| 201 | Permission denied. |
-| 202 | Non-system applications use system APIs. |
-| 19100009 | Failed to operate the DLP file. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Incorrect parameter types. |
+| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported because car not support DLP feature.<br>**Applicable version:** 26.1.0 and later |
+| [19100001](../errorcode-dlp.md#19100001-invalid-parameter) | Invalid parameter value. |
+| [19100011](../errorcode-dlp.md#19100011-system-service-abnormal) | The system ability works abnormally. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Non-system applications use system APIs. |
+| [19100009](../errorcode-dlp.md#19100009-failed-to-operate-the-dlp-file) | Failed to operate the DLP file. |
 
 ## Examples
 
@@ -1089,6 +1231,7 @@ stopFuseLink(callback: AsyncCallback<void>): void
 import { dlpPermission } from '@kit.DataProtectionKit';
 import { fileIo } from '@kit.CoreFileKit';
 import { bundleManager } from '@kit.AbilityKit';
+import { BusinessError } from '@kit.BasicServicesKit';
 
 async function ExampleFunction() {
   let uri = 'file://docs/storage/Users/currentUser/Desktop/test.txt.dlp';
@@ -1099,24 +1242,34 @@ async function ExampleFunction() {
   let userId = 100;
   let dlpFile: dlpPermission.DLPFile | undefined = undefined;
 
-  let data = bundleManager.getBundleInfoSync(bundleName, bundleFlags, userId);
-  appId = data.signatureInfo.appId;
+  try {
+    let data = bundleManager.getBundleInfoSync(bundleName, bundleFlags, userId);
+    appId = data.signatureInfo.appId;
+  } catch (err) {
+    console.error('error', err.code, err.message);
+  }
 
-  file = fileIo.openSync(uri).fd;
-  dlpFile = await dlpPermission.openDLPFile(file, appId); // Open a DLP file.
-  await dlpFile.addDLPLinkFile('test.txt.dlp.link'); // Add a link file.
-  dlpFile.stopFuseLink(async (err, res) => {
-    if (err) {
-      console.error('stopFuseLink error,', err.code, err.message);
-    } else {
-      console.info('res', JSON.stringify(res));
-    }
+  try {
+    file = fileIo.openSync(uri).fd;
+    dlpFile = await dlpPermission.openDLPFile(file, appId); // Open a DLP file.
+    await dlpFile.addDLPLinkFile('test.txt.dlp.link'); // Add a link file.
+    dlpFile.stopFuseLink(async (err, res) => {
+      if (err !== undefined) {
+        console.error('stopFuseLink error,', err.code, err.message);
+      } else {
+        console.info('res', JSON.stringify(res));
+      }
+      await dlpFile?.closeDLPFile(); // Close the DLP object.
+      fileIo.closeSync(file);
+    });
+  } catch (err) {
+    console.error('stopFuseLink error,', (err as BusinessError).code, (err as BusinessError).message);
     await dlpFile?.closeDLPFile(); // Close the DLP object.
-    fileIo.closeSync(file);
-  }); // Stop read/write on the link file.
+    if (file) {
+      fileIo.closeSync(file);
+    }
+  }
 }
-
-ExampleFunction();
 ```
 
 ## dlpProperty
@@ -1125,7 +1278,7 @@ ExampleFunction();
 dlpProperty: DLPProperty
 ```
 
-表示DLP文件授权相关信息。
+Authorized user information.
 
 **Type:** [DLPProperty](arkts-dataprotection-dlppermission-dlpproperty-i.md)
 

@@ -1,15 +1,13 @@
 # Stepper
 
-步骤导航器组件，适用于引导用户按照步骤完成任务的导航场景。
+The **Stepper** component provides a step navigator, suitable for guiding users through a step-by-step task
+completion process.
 
-> **说明：**
+> **NOTE**
 
-> - 从API version 8开始支持，从API version 22开始废弃，建议使用[Swiper]{@link swiper}替代。详细示例请参考
-> [示例2](docroot://reference/apis-arkui/arkui-ts/ts-basic-components-stepper.md#示例2使用swiper替代stepper)。
+## Child Components
 
-## 子组件
-
-仅能包含子组件[StepperItem]{@link stepper_item}。
+Only the child component [StepperItem]{@link stepper_item} is supported.
 
 ## Stepper
 
@@ -17,7 +15,9 @@
 Stepper(value?: { index?: number })
 ```
 
-Called when the stepper component is used.
+Creates a **Stepper** component.
+
+> **NOTE：**
 
 **Since:** 8
 

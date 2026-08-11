@@ -1,6 +1,6 @@
 # SliderFrameNode
 
-定义Slider类型的FrameNode。
+Define the Slider type of FrameNode.
 
 **Inheritance/Implementation:** SliderFrameNode extends [TypedFrameNode<SliderAttribute>](TypedFrameNode<SliderAttribute>)
 
@@ -18,7 +18,7 @@
 abstract initialize(options?: SliderOptions): SliderAttribute
 ```
 
-初始化Slider类型的FrameNode。
+Initialize Slider FrameNode.
 
 **Since:** 23
 

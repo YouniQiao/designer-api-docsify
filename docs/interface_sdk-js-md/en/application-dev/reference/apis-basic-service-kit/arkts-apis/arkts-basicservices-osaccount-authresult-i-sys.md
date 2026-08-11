@@ -1,6 +1,6 @@
 # AuthResult (System API)
 
-表示认证结果的信息。
+Defines the authentication result information.
 
 **Since:** 8
 
@@ -24,7 +24,7 @@ import { osAccount } from 'kits/@kit.BasicServicesKit';
 accountId?: int
 ```
 
-指示系统账号标识，默认为undefined。
+OS account ID, which is **undefined** by default.
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
@@ -44,7 +44,7 @@ accountId?: int
 credentialId?: Uint8Array
 ```
 
-指示凭据ID，默认为空。
+Credential ID, which is left blank by default.
 
 **Type:** Uint8Array
 
@@ -64,7 +64,7 @@ credentialId?: Uint8Array
 freezingTime?: int
 ```
 
-指示冻结时间，单位为ms，默认为-1。
+Freezing time, in milliseconds. The default value is **-1**.
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
@@ -84,7 +84,7 @@ freezingTime?: int
 nextPhaseFreezingTime?: int
 ```
 
-指示下次冻结时间，单位为ms，默认为undefined。
+Next freezing time, in milliseconds. The default value is **undefined**.
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
@@ -104,7 +104,7 @@ nextPhaseFreezingTime?: int
 pinValidityPeriod?: long
 ```
 
-指示认证有效期，单位为ms，默认为undefined。
+Authentication validity period, in milliseconds. The default value is **undefined**.
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：long
 
@@ -124,7 +124,7 @@ pinValidityPeriod?: long
 remainTimes?: int
 ```
 
-指示剩余次数，默认为-1。
+Number of remaining authentication times, which is **-1** by default.
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
@@ -144,7 +144,7 @@ remainTimes?: int
 token?: Uint8Array
 ```
 
-指示认证令牌，默认为空。
+Authentication token, which is left blank by default.
 
 **Type:** Uint8Array
 

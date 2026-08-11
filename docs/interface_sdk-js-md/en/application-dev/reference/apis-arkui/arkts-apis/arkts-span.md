@@ -6,5 +6,5 @@
 
 | Name | Description |
 | --- | --- |
-| [TextBackgroundStyle](arkts-arkui-span-textbackgroundstyle-i.md) | 定义span的背景样式。 |
+| [TextBackgroundStyle](arkts-arkui-span-textbackgroundstyle-i.md) | Define the background style of span. |
 

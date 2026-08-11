@@ -1,10 +1,11 @@
 # PluginComponent
 
-提供外部应用组件嵌入式显示功能，即外部应用提供的UI可在本应用内显示。适用于需要跨应用复用UI组件的场景，如嵌入其他应用的页面或卡片，实现应用间的界面协同与数据交互。如需通过跨进程通信实现更新，请参考[@ohos.pluginComponent]{@link @ohos.pluginComponent}。
+The **PluginComponent** allows an application to display external UI from another application. To implement update
+through inter-process communication (IPC), see [@ohos.pluginComponent]{@link @ohos.pluginComponent}.
 
-## 子组件
+## Child Components
 
-不支持
+Not supported
 
 ## PluginComponent
 
@@ -12,7 +13,7 @@
 PluginComponent(options: PluginComponentOptions)
 ```
 
-创建插件组件，用于显示外部应用提供的UI。
+Creates a **PluginComponent** to display the UI provided by an external application.
 
 **Since:** 9
 
@@ -28,7 +29,7 @@ PluginComponent(options: PluginComponentOptions)
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| options | [PluginComponentOptions](arkts-arkui-plugincomponentoptions-i-sys.md) | Yes | 插件组件选项 |
+| options | [PluginComponentOptions](arkts-arkui-plugincomponentoptions-i-sys.md) | Yes | Configuration options of the **PluginComponent**. |
 
 ## Summary
 

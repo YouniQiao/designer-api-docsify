@@ -1,6 +1,6 @@
 # Binding
 
-只读数据绑定的泛型类，可以绑定任意类型的数据。
+Represents the generic class for read-only data binding, which can bind data of any type.
 
 **Since:** 20
 
@@ -22,7 +22,7 @@ import { Binding, ComponentReuse, CustomComponentLifecycleState, ComponentInacti
 get value(): T
 ```
 
-提供get访问器，用于获取绑定的值。
+Obtains a bound value.
 
 **Type:** T
 

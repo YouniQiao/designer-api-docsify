@@ -1,12 +1,15 @@
-# @ohos.selectionInput.selectionManager(划词管理)
+# @ohos.selectionInput.selectionManager(Word Selection Management)
 
-本模块提供划词管理能力，包括创建面板、显示面板、移动面板、隐藏面板、销毁面板、监听鼠标/触控板划词事件、获取选中文本等。典型使用流程如下：1. 调用on('selectionCompleted')订阅划词完成事件。2. 在回调中调用getSelectionContent获取选中文本。3. 调用createPanel创建划词面板。4. 调用setUiContent加载页面内容。5. 调用moveToGlobalDisplay移动面板到指定位置。6. 调用show显示面板。7. 调用destroyPanel销毁面板。8. 调用off('selectionCompleted')取消订阅划词完成事件。
+This module provides word selection management capabilities, including creating, displaying, moving, hiding, and destroying panels, listening for word selection events using a mouse or touchpad, and retrieving the selected text.The typical usage process is as follows:1. Call [on('selectionCompleted')](selectionManager.on) to subscribe to the selection completion event.2. In the callback, call [getSelectionContent](arkts-basicservices-selectionmanager-getselectioncontent-f.md#getselectioncontent) to obtain the selected text.3. Call [createPanel](arkts-basicservices-selectionmanager-createpanel-f.md#createpanel) to create a word selection panel.4. Call [setUiContent](arkts-basicservices-selectionmanager-panel-i.md#setuicontent) to load the page content.5. Call [moveToGlobalDisplay](arkts-basicservices-selectionmanager-panel-i.md#movetoglobaldisplay) to move the panel to the specified position.6. Call [show](arkts-basicservices-selectionmanager-panel-i.md#show) to display the panel.7. Call [destroyPanel](arkts-basicservices-selectionmanager-destroypanel-f.md#destroypanel) to destroy the panel.8. Call [off('selectionCompleted')](selectionManager.off) to unsubscribe from the selection completion event.
 
-> **说明：**
+> **NOTE：**
 > 
-> - 本模块仅支持PC/2in1设备。开发者可通过canIUse('SystemCapability.SelectionInput.Selection')判断当前设备是否支持该功能。
-> - 仅支持集成了划词扩展的应用调用，划词扩展的实现请参见
-> [SelectionExtensionAbility](arkts-selectioninput-selectionextensionability.md)。
+> - This module is supported only on PCs/2-in-1 devices. You can use
+> **canIUse('SystemCapability.SelectionInput.Selection')** to check whether the current device supports this
+> function.
+> - APIs of this module can be called only by apps that integrate the extension ability for word selection. For
+> details about how to implement the extension ability for word selection, see
+> [SelectionExtensionAbility](arkts-selectioninput-selectionextensionability.md).
 
 **Since:** 24
 
@@ -30,24 +33,24 @@ import { selectionManager } from 'kits/@kit.BasicServicesKit';
 
 | Name | Description |
 | --- | --- |
-| [createPanel](arkts-basicservices-selectionmanager-createpanel-f.md#createpanel) | 创建划词面板，用于向用户展示业务相关的操作界面或文本处理结果，使用完毕后需调用[destroyPanel](arkts-basicservices-selectionmanager-destroypanel-f.md#destroypanel)销毁面板释放资源。使用Promise异步回调。  单个划词应用仅允许创建一个[MENU_PANEL](arkts-basicservices-selectioninput-selectionpanel-paneltype-e.md)和一个  [MAIN_PANEL](arkts-basicservices-selectioninput-selectionpanel-paneltype-e.md)。 |
-| [destroyPanel](arkts-basicservices-selectionmanager-destroypanel-f.md#destroypanel) | 销毁划词面板。与[createPanel](arkts-basicservices-selectionmanager-createpanel-f.md#createpanel)搭配使用，用于销毁由createPanel()创建的面板对象。使用Promise异步回调。 |
-| [getSelectionContent](arkts-basicservices-selectionmanager-getselectioncontent-f.md#getselectioncontent) | 获取选中文本的内容。使用Promise异步回调。需在  [on('selectionCompleted')](selectionManager.on(type: 'selectionCompleted', callback: Callback&lt;SelectionInfo&gt;))回调中调用，且仅在划词完成事件触发后有效。 |
-| [off](arkts-basicservices-selectionmanager-off-f.md#off) | 取消订阅划词完成事件，与  [on('selectionCompleted')](selectionManager.on(type: 'selectionCompleted', callback: Callback&lt;SelectionInfo&gt;))搭配使用。 |
-| [offSelectionComplete](arkts-basicservices-selectionmanager-offselectioncomplete-f.md#offselectioncomplete) | 取消订阅划词完成事件，与[onSelectionComplete](selectionManager.onSelectionComplete(callback: Callback&lt;SelectionInfo&gt;))搭配使用。 |
-| [on](arkts-basicservices-selectionmanager-on-f.md#on) | 订阅划词完成事件，与  [off('selectionCompleted')](selectionManager.off(type: 'selectionCompleted', callback?: Callback&lt;SelectionInfo&gt;))搭配使用取消订阅。 |
-| [onSelectionComplete](arkts-basicservices-selectionmanager-onselectioncomplete-f.md#onselectioncomplete) | 订阅划词完成事件，与[offSelectionComplete](selectionManager.offSelectionComplete(callback?: Callback&lt;SelectionInfo&gt;))搭配使用取消订阅。 |
+| [createPanel](arkts-basicservices-selectionmanager-createpanel-f.md#createpanel) | Creates a word selection panel, which is used to display the service-related operation UI or text processing result. After the panel is used, call [destroyPanel](arkts-basicservices-selectionmanager-destroypanel-f.md#destroypanel) to destroy the panel and release resources. This API uses a promise to return the result.  Only one [MENU_PANEL](arkts-basicservices-selectioninput-selectionpanel-paneltype-e.md) and one  [MAIN_PANEL](arkts-basicservices-selectioninput-selectionpanel-paneltype-e.md) can be created for one word selection application. |
+| [destroyPanel](arkts-basicservices-selectionmanager-destroypanel-f.md#destroypanel) | Destroys the word selection panel. This API is used together with [createPanel](arkts-basicservices-selectionmanager-createpanel-f.md#createpanel)to destroy the panel object created by **createPanel()**. This API uses a promise to return the result. |
+| [getSelectionContent](arkts-basicservices-selectionmanager-getselectioncontent-f.md#getselectioncontent) | Obtains the content of the selected text. This API uses a promise to return the result. This API must be called in the  [on('selectionCompleted')](selectionManager.on(type: 'selectionCompleted', callback: Callback&lt;SelectionInfo&gt;))callback and is valid only after the word selection completion event is triggered. |
+| [off](arkts-basicservices-selectionmanager-off-f.md#off) | Unsubscribes from the word selection completion event. This API is used together with  [on('selectionCompleted')](selectionManager.on(type: 'selectionCompleted', callback: Callback&lt;SelectionInfo&gt;)). |
+| [offSelectionComplete](arkts-basicservices-selectionmanager-offselectioncomplete-f.md#offselectioncomplete) | Unregisters the callback used to listen for the word selection completion event. This API uses an asynchronous callback to return the result.  **ArkTS mode:** This API applies only to ArkTS-Sta. |
+| [on](arkts-basicservices-selectionmanager-on-f.md#on) | Subscribes to the word selection completion event. This API is used together with  [off('selectionCompleted')](selectionManager.off(type: 'selectionCompleted', callback?: Callback&lt;SelectionInfo&gt;)).  [off('selectionCompleted')](selectionManager.off(type: 'selectionCompleted', callback?: Callback&lt;SelectionInfo&gt;))is used to unsubscribe from the event. |
+| [onSelectionComplete](arkts-basicservices-selectionmanager-onselectioncomplete-f.md#onselectioncomplete) | Registers a callback to listen for the word selection completion event. This API uses an asynchronous callback to return the result.  **ArkTS mode:** This API applies only to ArkTS-Sta. |
 
 ### Interfaces
 
 | Name | Description |
 | --- | --- |
-| [Panel](arkts-basicservices-selectionmanager-panel-i.md) | 划词面板对象，通过[createPanel](arkts-basicservices-selectionmanager-createpanel-f.md#createpanel)创建，提供面板内容设置、显示、隐藏、移动及事件订阅等管理能力，适用于在划词完成后向用户展示自定义操作界面的场景。 |
-| [SelectionInfo](arkts-basicservices-selectionmanager-selectioninfo-i.md) | 划词事件信息。 |
+| [Panel](arkts-basicservices-selectionmanager-panel-i.md) | Describes a **Panel** object, which is created using [createPanel](arkts-basicservices-selectionmanager-createpanel-f.md#createpanel). This method can be used to set, display, hide, and move the panel, as well as subscribe to events. It is applicable to scenarios where a custom operation UI needs to be displayed to users after word selection is complete. |
+| [SelectionInfo](arkts-basicservices-selectionmanager-selectioninfo-i.md) | Defines the information of a word selection event. |
 
 ### Enums
 
 | Name | Description |
 | --- | --- |
-| [SelectionType](arkts-basicservices-selectionmanager-selectiontype-e.md) | 定义划词方式枚举值。  \| 名称 \| 值 \| 说明 \|  \| ------------ \| -- \| ------------------ \|  \| MOUSE_MOVE \| 1 \| 鼠标或触控板滑动划词。 \|  \| DOUBLE_CLICK \| 2 \| 鼠标或触控板双击划词。 \|  \| TRIPLE_CLICK \| 3 \| 鼠标或触控板三击划词。 \| |
+| [SelectionType](arkts-basicservices-selectionmanager-selectiontype-e.md) | Enumerates the word selection types.  \| Name \| Value\| Description \|  \| ------------ \| -- \| ------------------ \|  \| MOUSE_MOVE \| 1 \| Word selection by sliding the mouse or touchpad. \|  \| DOUBLE_CLICK \| 2 \| Word selection by double-clicking the mouse or touchpad. \|  \| TRIPLE_CLICK \| 3 \| Word selection by triple-clicking the mouse or touchpad. \| |
 

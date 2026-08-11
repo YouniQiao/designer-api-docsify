@@ -1,11 +1,5 @@
 # getProfileByAbilitySync
 
-## 导入模块
-
-```TypeScript
-import { bundleManager } from 'kits/@kit.AbilityKit';
-```
-
 ## getProfileByAbilitySync
 
 ```TypeScript
@@ -43,11 +37,11 @@ function getProfileByAbilitySync(moduleName: string, abilityName: string, metada
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types. |
-| 17700029 | The specified ability is disabled. |
-| 17700024 | Failed to get the profile because there is no profile in the HAP. |
-| 17700002 | The specified moduleName is not existed. |
-| 17700003 | The specified abilityName is not existed. |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types. |
+| [17700029](../errorcode-bundle.md#17700029-指定的ability被禁用) | The specified ability is disabled. |
+| [17700024](../errorcode-bundle.md#17700024-没有相应的配置文件) | Failed to get the profile because there is no profile in the HAP. |
+| [17700002](../errorcode-bundle.md#17700002-指定的modulename不存在) | The specified moduleName is not existed. |
+| [17700003](../errorcode-bundle.md#17700003-指定的abilityname不存在) | The specified abilityName is not existed. |
 
 ## 示例
 

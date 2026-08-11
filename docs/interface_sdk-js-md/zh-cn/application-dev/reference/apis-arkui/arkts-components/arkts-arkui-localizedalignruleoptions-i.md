@@ -86,7 +86,7 @@ end?: LocalizedHorizontalAlignParam
 
 设置横向对齐方式的参数，LTR模式时为右对齐，RTL模式时为左对齐。
 
-**类型：** [LocalizedHorizontalAlignParam](../arkts-apis/arkts-arkui-common-localizedhorizontalalignparam-i.md)
+**类型：** [LocalizedHorizontalAlignParam](arkts-arkui-localizedhorizontalalignparam-i.md)
 
 **起始版本：** 12
 
@@ -108,7 +108,7 @@ middle?: LocalizedHorizontalAlignParam
 
 设置横向居中对齐方式的参数。
 
-**类型：** [LocalizedHorizontalAlignParam](../arkts-apis/arkts-arkui-common-localizedhorizontalalignparam-i.md)
+**类型：** [LocalizedHorizontalAlignParam](arkts-arkui-localizedhorizontalalignparam-i.md)
 
 **起始版本：** 12
 
@@ -130,7 +130,7 @@ start?: LocalizedHorizontalAlignParam
 
 设置横向对齐方式的参数，LTR模式时为左对齐，RTL模式时为右对齐。
 
-**类型：** [LocalizedHorizontalAlignParam](../arkts-apis/arkts-arkui-common-localizedhorizontalalignparam-i.md)
+**类型：** [LocalizedHorizontalAlignParam](arkts-arkui-localizedhorizontalalignparam-i.md)
 
 **起始版本：** 12
 

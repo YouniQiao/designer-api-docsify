@@ -1,11 +1,5 @@
 # minimizeWindowWithAnimation（系统接口）
 
-## 导入模块
-
-```TypeScript
-import { windowAnimationManager } from 'kits/@kit.ArkUI';
-```
-
 ## minimizeWindowWithAnimation
 
 ```TypeScript

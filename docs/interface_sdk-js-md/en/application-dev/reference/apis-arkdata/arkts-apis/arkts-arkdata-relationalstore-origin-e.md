@@ -1,6 +1,6 @@
 # Origin
 
-表示数据来源。请使用枚举名称而非枚举值。
+Enumerates the data sources. Use the enum name rather than the enum value.
 
 **Since:** 11
 
@@ -16,7 +16,7 @@
 LOCAL = 0
 ```
 
-表示本地数据。
+Indicates the data source is local.
 
 **Since:** 11
 
@@ -32,7 +32,7 @@ LOCAL = 0
 CLOUD = 1
 ```
 
-表示云端同步的数据。
+Indicates the data source is cloud.
 
 **Since:** 11
 
@@ -48,7 +48,7 @@ CLOUD = 1
 REMOTE = 2
 ```
 
-表示端端同步的数据。
+Indicates the data source is remote.
 
 **Since:** 11
 

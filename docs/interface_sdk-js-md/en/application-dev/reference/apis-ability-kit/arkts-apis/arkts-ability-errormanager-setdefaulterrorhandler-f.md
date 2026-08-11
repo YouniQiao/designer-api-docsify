@@ -12,11 +12,12 @@ import { errorManager } from 'kits/@kit.AbilityKit';
 function setDefaultErrorHandler(defaultHandler?: ErrorHandler) : ErrorHandler
 ```
 
-发生JS_CRASH异常时，支持链式回调，返回上一次注册的处理器，仅限主线程调用。
+Returns the previously registered handler when a JavaScript crash exception occurs. It can only be used in the main thread.
 
-如果传入非法参数或在子线程调用，将抛出错误码并返回undefined，因此建议使用try-catch逻辑进行处理。
+If an invalid parameter is passed or the API is called from a child thread, an error code is thrown and   
+**undefined** is returned. You are advised to handle it with try-catch logic.
 
-若接口参数为空，后续注册的处理器将无法与前序已注册的处理器建立关联，从而中断链式调用。
+If the API parameter is empty, subsequently registered handlers are not able to establish a connection with previously registered handlers, thereby breaking the chain call mechanism.
 
 **Since:** 21
 
@@ -32,19 +33,19 @@ function setDefaultErrorHandler(defaultHandler?: ErrorHandler) : ErrorHandler
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| defaultHandler | [ErrorHandler](arkts-ability-errormanager-errorhandler-t.md) | No | 新注册的错误处理器，缺省时默认值为空。 |
+| defaultHandler | [ErrorHandler](arkts-ability-errormanager-errorhandler-t.md) | No | Newly registered error handler. The default value is empty. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [ErrorHandler](arkts-ability-errormanager-errorhandler-t.md) | 返回上一次注册的错误处理器。 |
+| [ErrorHandler](arkts-ability-errormanager-errorhandler-t.md) | Previously registered error handler. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 16000205 | API未在主线程中调用。 |
+| [16000205](../errorcode-ability.md#16000205-api-not-called-in-main-thread) | The API is not called on the main thread. |
 
 ## Examples
 

@@ -1,6 +1,6 @@
 # ProgressStatus
 
-进度条的当前状态。
+Current state of the progress indicator.
 
 **Since:** 10
 
@@ -16,7 +16,7 @@
 LOADING
 ```
 
-加载中。
+Loading.
 
 **Since:** 10
 
@@ -36,7 +36,7 @@ LOADING
 PROGRESSING
 ```
 
-进度更新中。
+Progressing.
 
 **Since:** 10
 

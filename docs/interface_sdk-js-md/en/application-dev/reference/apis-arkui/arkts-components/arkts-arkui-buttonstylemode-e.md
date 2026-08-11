@@ -1,6 +1,6 @@
 # ButtonStyleMode
 
-按钮的重要程度。
+Enumerates the button importance levels.
 
 **Since:** 11
 
@@ -16,7 +16,7 @@
 NORMAL = 0
 ```
 
-普通按钮（一般界面操作），适用于取消、关闭等非关键交互。
+Normal button (used to direct the user to a common task).
 
 **Since:** 11
 
@@ -38,7 +38,7 @@ NORMAL = 0
 EMPHASIZED = 1
 ```
 
-强调按钮（用于强调当前操作），适用于提交表单、确认删除等关键操作。
+Emphasized button (used to direct the user to the most important task).
 
 **Since:** 11
 
@@ -60,7 +60,7 @@ EMPHASIZED = 1
 TEXTUAL = 2
 ```
 
-文本按钮（纯文本，无背景颜色），适用于次要操作或不需要强调的场景。
+Text button (displayed as simple text without any background color).
 
 **Since:** 11
 

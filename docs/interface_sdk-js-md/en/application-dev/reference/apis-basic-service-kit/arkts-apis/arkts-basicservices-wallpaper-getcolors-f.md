@@ -12,7 +12,7 @@ import { wallpaper } from 'kits/@kit.BasicServicesKit';
 function getColors(wallpaperType: WallpaperType, callback: AsyncCallback<Array<RgbaColor>>): void
 ```
 
-获取指定类型壁纸的主要颜色信息。
+Obtains the wallpaper colors for the wallpaper of the specified type. Returns rgbaColor type of array callback function.
 
 **Since:** 7
 
@@ -28,8 +28,8 @@ function getColors(wallpaperType: WallpaperType, callback: AsyncCallback<Array<R
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| wallpaperType | [WallpaperType](arkts-basicservices-wallpaper-wallpapertype-e.md) | Yes |  |
-| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;RgbaColor&gt;&gt; | Yes | 回调函数，返回壁纸的主要颜色信息。 |
+| wallpaperType | [WallpaperType](arkts-basicservices-wallpaper-wallpapertype-e.md) | Yes | indicates the wallpaper type. |
+| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;RgbaColor&gt;&gt; | Yes | the callback of getColors. |
 
 ## Examples
 
@@ -52,7 +52,7 @@ wallpaper.getColors(wallpaper.WallpaperType.WALLPAPER_SYSTEM, (error: BusinessEr
 function getColors(wallpaperType: WallpaperType): Promise<Array<RgbaColor>>
 ```
 
-获取指定类型壁纸的主要颜色信息。
+Obtains the wallpaper colors for the wallpaper of the specified type. Returns rgbaColor type of array callback function.
 
 **Since:** 7
 
@@ -68,13 +68,13 @@ function getColors(wallpaperType: WallpaperType): Promise<Array<RgbaColor>>
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| wallpaperType | [WallpaperType](arkts-basicservices-wallpaper-wallpapertype-e.md) | Yes |  |
+| wallpaperType | [WallpaperType](arkts-basicservices-wallpaper-wallpapertype-e.md) | Yes | indicates the wallpaper type. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;Array&lt;RgbaColor&gt;&gt; | 返回壁纸的主要颜色信息。 |
+| Promise&lt;Array&lt;RgbaColor&gt;&gt; | the promise returned by the function. |
 
 ## Examples
 

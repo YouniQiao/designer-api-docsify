@@ -4,7 +4,7 @@
 export type NotificationPictureContent = _NotificationPictureContent
 ```
 
-附有图片的通知。
+Describes the picture-attached notification.
 
 **Since:** 9
 

@@ -25,7 +25,7 @@ import { AtomicServiceOptions } from 'kits/@kit.AbilityKit';
 completionHandlerForAtomicService?: CompletionHandlerForAtomicService
 ```
 
-打开原子化服务结果的操作类，用于接收打开原子化服务的结果。
+Operation class for receiving the result of opening an atomic service.
 
 **Type:** [CompletionHandlerForAtomicService](arkts-ability-app-ability-completionhandlerforatomicservice-completionhandlerforatomicservice-c.md)
 
@@ -47,7 +47,7 @@ completionHandlerForAtomicService?: CompletionHandlerForAtomicService
 flags?: int
 ```
 
-系统处理该次启动的方式。例如通过wantConstant.Flags.FLAG_INSTALL_ON_DEMAND表示使用免安装能力。
+Mode in which the system processes the startup. For example, **wantConstant.Flags.FLAG_INSTALL_ON_DEMAND**indicates that the installation-free capability is used.
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
@@ -69,7 +69,7 @@ flags?: int
 parameters?: Record<string, Object>
 ```
 
-表示额外参数描述。具体描述参考[Want](arkts-ability-app-ability-want-want-c.md)中parameters字段描述。
+Additional parameters. For details, see the **parameters** field in [Want](arkts-ability-app-ability-want-want-c.md).
 
 **Type:** [Record](../../apis-default/arkts-apis/arkts-record-t.md)&lt;string, Object&gt;
 

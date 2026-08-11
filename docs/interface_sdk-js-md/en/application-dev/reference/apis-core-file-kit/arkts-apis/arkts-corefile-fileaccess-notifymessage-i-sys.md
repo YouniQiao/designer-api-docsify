@@ -1,6 +1,6 @@
 # NotifyMessage (System API)
 
-通知回调函数的值。
+Represents the notification message.
 
 **Since:** 10
 
@@ -28,7 +28,7 @@ import { fileAccess } from 'kits/@kit.CoreFileKit';
 type: NotifyType
 ```
 
-变更的通知类型。
+Notification type.
 
 **Type:** [NotifyType](arkts-corefile-cloudsync-notifytype-e.md)
 
@@ -54,7 +54,7 @@ type: NotifyType
 uris: Array<string>
 ```
 
-所变更文件的uri集合，目前仅支持单条通知，后序支持多条通知。
+URIs of the changed files. Currently, only one notification is supported. A collection of multiple notifications will be supported in later versions.
 
 **Type:** Array&lt;string&gt;
 

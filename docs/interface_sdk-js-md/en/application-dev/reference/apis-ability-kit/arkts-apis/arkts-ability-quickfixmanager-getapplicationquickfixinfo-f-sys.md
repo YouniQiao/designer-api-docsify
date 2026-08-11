@@ -12,7 +12,7 @@ import { quickFixManager } from 'kits/@kit.AbilityKit';
 function getApplicationQuickFixInfo(bundleName: string, callback: AsyncCallback<ApplicationQuickFixInfo>): void
 ```
 
-获取应用的快速修复信息。使用callback异步回调。
+Obtains the quick fix information of the application. This API uses an asynchronous callback to return the result.
 
 **Since:** 9
 
@@ -30,18 +30,18 @@ function getApplicationQuickFixInfo(bundleName: string, callback: AsyncCallback<
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| bundleName | string | Yes | 应用Bundle名称。 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;ApplicationQuickFixInfo&gt; | Yes | 回调函数。返回应用的快速修复信息。 |
+| bundleName | string | Yes | Bundle name. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;ApplicationQuickFixInfo&gt; | Yes | Callback used to return the quick fix information. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types. |
-| 18500008 | Internal error. |
-| 201 | Permission denied. |
-| 202 | Not system application. |
-| 18500001 | The bundle does not exist or no patch has been applied. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types. |
+| [18500008](../errorcode-ability.md#18500008-internal-error) | Internal error. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system application. |
+| [18500001](../errorcode-ability.md#18500001-invalid-bundle-name) | The bundle does not exist or no patch has been applied. |
 
 ## Examples
 
@@ -70,7 +70,7 @@ try {
 function getApplicationQuickFixInfo(bundleName: string): Promise<ApplicationQuickFixInfo>
 ```
 
-获取应用的快速修复信息。使用Promise异步回调。
+Obtains the quick fix information of the application. This API uses a promise to return the result.
 
 **Since:** 9
 
@@ -88,23 +88,23 @@ function getApplicationQuickFixInfo(bundleName: string): Promise<ApplicationQuic
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| bundleName | string | Yes | 应用Bundle名称。 |
+| bundleName | string | Yes | Bundle name. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;ApplicationQuickFixInfo&gt; | Promise对象。返回应用的快速修复信息。 |
+| Promise&lt;ApplicationQuickFixInfo&gt; | Promise used to return the quick fix information. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types. |
-| 18500008 | Internal error. |
-| 201 | Permission denied. |
-| 202 | Not system application. |
-| 18500001 | The bundle does not exist or no patch has been applied. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types. |
+| [18500008](../errorcode-ability.md#18500008-internal-error) | Internal error. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system application. |
+| [18500001](../errorcode-ability.md#18500001-invalid-bundle-name) | The bundle does not exist or no patch has been applied. |
 
 ## Examples
 

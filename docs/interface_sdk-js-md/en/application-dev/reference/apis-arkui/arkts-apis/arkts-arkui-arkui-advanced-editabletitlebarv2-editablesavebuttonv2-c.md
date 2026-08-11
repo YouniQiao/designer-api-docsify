@@ -1,6 +1,6 @@
 # EditableSaveButtonV2
 
-保存按钮配置类，使用@ObservedV2装饰器，支持状态观察。
+Declaration of the save button configuration.
 
 **Since:** 26.0.0
 
@@ -24,7 +24,7 @@ import { EditableSaveButtonV2, EditableTitleBarStyleV2Options, EditableTitleBarS
 constructor(options?: EditableSaveButtonV2Options)
 ```
 
-EditableSaveButtonV2的构造函数。
+Constructor of EditableSaveButtonV2.
 
 **Since:** 26.0.0
 
@@ -40,7 +40,7 @@ EditableSaveButtonV2的构造函数。
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| options | [EditableSaveButtonV2Options](arkts-arkui-arkui-advanced-editabletitlebarv2-editablesavebuttonv2options-i.md) | No | 保存按钮配置选项。 |
+| options | [EditableSaveButtonV2Options](arkts-arkui-arkui-advanced-editabletitlebarv2-editablesavebuttonv2options-i.md) | No | The options of the save button |
 
 ## onAction
 
@@ -48,7 +48,7 @@ EditableSaveButtonV2的构造函数。
 public onAction?: OnActionCallback
 ```
 
-点击保存按钮的回调函数。未设置时点击按钮无响应。
+Callback function when click on the save button.
 
 **Since:** 26.0.0
 
@@ -66,13 +66,7 @@ public onAction?: OnActionCallback
 public defaultFocus: boolean
 ```
 
-是否默认获取焦点。
-
-true：获焦。
-
-false：不获焦。
-
-默认值：false。
+Whether to get focus by default.
 
 **Type:** boolean
 
@@ -94,13 +88,7 @@ false：不获焦。
 public isRequired: boolean
 ```
 
-是否显示保存按钮。
-
-true：显示保存按钮。
-
-false：不显示保存按钮。
-
-默认值：true。
+Whether to show the save button.
 
 **Type:** boolean
 

@@ -4,7 +4,7 @@
 declare type StyledStringMarshallCallback = (marshallableVal: StyledStringMarshallingValue) => ArrayBuffer
 ```
 
-属性字符串[StyledStringMarshallingValue](arkts-arkui-styledstringmarshallingvalue-t-sys.md)序列化回调类型。
+Defines a callback for marshalling [StyledStringMarshallingValue](arkts-arkui-styledstringmarshallingvalue-t-sys.md).
 
 **Since:** 19
 
@@ -22,11 +22,11 @@ declare type StyledStringMarshallCallback = (marshallableVal: StyledStringMarsha
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| marshallableVal | [StyledStringMarshallingValue](arkts-arkui-styledstringmarshallingvalue-t-sys.md) | Yes | 属性字符串中需要自定义序列化的UserDataSpan对象。开发者在回调函数中根据此参数的类型，选择对应的序列化接口将 其转换为ArrayBuffer。 |
+| marshallableVal | [StyledStringMarshallingValue](arkts-arkui-styledstringmarshallingvalue-t-sys.md) | Yes | Object to be marshaled. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| ArrayBuffer | [StyledStringMarshallingValue]{ |
+| ArrayBuffer | Marshaled data of [StyledStringMarshallingValue]{ |
 

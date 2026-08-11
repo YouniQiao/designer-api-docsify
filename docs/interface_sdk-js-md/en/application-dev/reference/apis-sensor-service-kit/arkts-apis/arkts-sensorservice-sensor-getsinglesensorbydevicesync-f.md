@@ -12,7 +12,7 @@ import { sensor } from 'kits/@kit.SensorServiceKit';
 function getSingleSensorByDeviceSync(type: SensorId, deviceId?: int): Array<Sensor>
 ```
 
-同步获取指定设备和类型的传感器信息。如果存在外设且未指定设备ID，获取到的传感器将是所有符合指定传感器类型的本地和外设传感器。如果不存在外设，则仅获取本地的传感器。
+Obtains information about the sensor of a specific type.
 
 **Since:** 19
 
@@ -26,14 +26,14 @@ function getSingleSensorByDeviceSync(type: SensorId, deviceId?: int): Array<Sens
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | [SensorId](arkts-sensorservice-sensor-sensorid-e.md) | Yes | 指定传感器类型。 |
-| deviceId | ArkTS-Dyn: number  <br>ArkTS-Sta：int | No | 设备ID，默认为查询本地设备，默认值为-1，表示本地设备，设备ID需通过 [getSensorList](arkts-sensorservice-sensor-getsensorlist-f.md#getsensorlist)查询或者监听设备上下线接口 [sensorStatusChange](arkts-sensorservice-sensor-on-f.md#on)获取。 |
+| type | [SensorId](arkts-sensorservice-sensor-sensorid-e.md) | Yes | Sensor type. |
+| deviceId | ArkTS-Dyn: number  <br>ArkTS-Sta：int | No | Device ID. The default value is **-1**, indicating the local device. You can use [getSensorList](arkts-sensorservice-sensor-getsensorlist-f.md#getsensorlist) or [sensorStatusChange](sensor.on(type: 'sensorStatusChange', callback: Callback&lt;SensorStatusEvent&gt;)) to obtain the device ID. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Array&lt;Sensor&gt; | 传感器属性列表。 |
+| Array&lt;Sensor&gt; | Sensor attribute list. |
 
 ## Examples
 

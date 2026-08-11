@@ -6,7 +6,7 @@ typedef struct ArkUI_RenderNode* ArkUI_RenderNodeHandle
 
 ## Overview
 
-Handle to ArkUI native render node object.
+Defines a render node pointer.
 
 **Since**: 20
 

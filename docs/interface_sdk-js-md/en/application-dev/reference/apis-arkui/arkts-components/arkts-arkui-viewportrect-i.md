@@ -1,10 +1,11 @@
 # ViewportRect
 
-用于描述Viewport的绘制属性。
+Describes the options of the viewport.
 
-> **说明：**
+> **NOTE：**
 > 
-> 为规范匿名对象的定义，API 18版本修改了此处的元素定义。其中，保留了历史匿名对象的起始版本信息，会出现外层元素@since版本号高于内层元素版本号的情况，但这不影响接口的使用。
+> To standardize anonymous object definitions, the element definitions here have been revised in API version 18.
+> While historical version information is preserved for anonymous objects, there may be cases where the outer element's @since version number is higher than inner elements'. This does not affect interface usability.
 
 **Since:** 18
 
@@ -20,13 +21,13 @@
 height?: Length
 ```
 
-形状视口的高度，取值范围≥0。
+Height of the viewport. The value must be greater than or equal to 0.
 
-默认值：0
+Default value: **0**
 
-默认单位：vp
+Default unit: vp
 
-异常值undefined、null、NaN和Infinity按照默认值处理。
+Invalid values are treated as the default value.
 
 **Type:** [Length](../arkts-apis/arkts-arkui-length-t.md)
 
@@ -48,13 +49,13 @@ height?: Length
 width?: Length
 ```
 
-形状视口的宽度，取值范围≥0。
+Width of the viewport. The value must be greater than or equal to 0.
 
-默认值：0
+Default value: **0**
 
-默认单位：vp
+Default unit: vp
 
-异常值undefined、null、NaN和Infinity按照默认值处理。
+Invalid values are treated as the default value.
 
 **Type:** [Length](../arkts-apis/arkts-arkui-length-t.md)
 
@@ -76,13 +77,13 @@ width?: Length
 x?: Length
 ```
 
-形状视口起始点的水平坐标。
+Horizontal coordinate of the start point of the viewport.
 
-默认值：0
+Default value: **0**
 
-默认单位：vp
+Default unit: vp
 
-异常值undefined、null、NaN和Infinity按照默认值处理。
+Invalid values are treated as the default value.
 
 **Type:** [Length](../arkts-apis/arkts-arkui-length-t.md)
 
@@ -104,13 +105,13 @@ x?: Length
 y?: Length
 ```
 
-形状视口起始点的垂直坐标。
+Vertical coordinate of the start point of the viewport.
 
-默认值：0
+Default value: **0**
 
-默认单位：vp
+Default unit: vp
 
-异常值undefined、null、NaN和Infinity按照默认值处理。
+Invalid values are treated as the default value.
 
 **Type:** [Length](../arkts-apis/arkts-arkui-length-t.md)
 

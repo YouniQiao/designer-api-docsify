@@ -1,8 +1,8 @@
 # PlayParameters
 
-表示音频池播放参数设置。
+Describes the playback parameters of the sound pool.
 
-通过设置播放相关参数，来控制播放的音量，循环次数，播放优先级等参数。
+These parameters are used to control the playback volume, number of loops, and priority.
 
 **Since:** 10
 
@@ -18,9 +18,9 @@
 leftVolume?: double
 ```
 
-设置左声道音量。设置范围为[0.0, 1.0]，默认值为1.0。
+Volume of the left channel. The value range is [0.0, 1.0], and the default value is **1.0**.
 
-当音量超过边界值时自动设置为边界值。
+When the volume exceeds the boundary value, the boundary value is automatically used.
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：double
 
@@ -38,15 +38,15 @@ leftVolume?: double
 loop?: int
 ```
 
-设置循环次数。
+Number of loops.
 
-当loop≥0时，实际播放次数为loop+1。
+If this parameter is set to a value greater than or equal to 0, the number of times the content is actually played is the value of **loop** plus 1.
 
-当loop＜0时，表示一直循环。
+If this parameter is set to a value less than 0, the content is played repeatedly.
 
-默认值：0，表示仅播放一次。
+The default value is **0**, indicating that the content is played only once.
 
-当loop为浮点数时只截取整数部分。
+If this parameter is set to a floating-point number, only the integer part is used.
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
@@ -64,7 +64,7 @@ loop?: int
 pitch?: double
 ```
 
-Pitch of the sound. The value ranges from 0.25 to 4.0 with a step size of 0.001. The Deault pitch is 1.0.
+Pitch of the sound. The value ranges from 0.25 to 4.0 with a step size of 0.001. The default value is 1.0.
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：double
 
@@ -84,11 +84,11 @@ Pitch of the sound. The value ranges from 0.25 to 4.0 with a step size of 0.001.
 priority?: int
 ```
 
-音频流播放的优先级。0为最低优先级，数值越大优先级越高。
+Priority for playing an audio stream. The value **0** indicates the lowest priority. A larger value indicates a higher priority.
 
-通过相互比较数值大小确定播放优先级，设置范围为大于等于0的整数。默认值为0。 
+The playback priority is determined by comparing the values. The value must be an integer greater than or equal to 0. The default value is **0**.
 
-当优先级为负数时自动设置为0，为浮点数时只截取整数部分。
+If this parameter is set to a negative value, it is automatically set to 0. If this parameter is set to a floating point number, only the integer part is used.
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
@@ -106,7 +106,7 @@ priority?: int
 rate?: int
 ```
 
-设置音频播放的倍速，具体倍速范围参照[AudioRendererRate](../../../reference/apis-audio-kit/arkts-apis-audio-e.md)。默认值：0。
+Playback rate. For details, see [AudioRendererRate](../../../reference/apis-audio-kit/arkts-apis-audio-e.md). Default value: **0**
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
@@ -124,9 +124,9 @@ rate?: int
 rightVolume?: double
 ```
 
-设置右声道音量（当前不支持左右分别设置，将以左声道音量为准）。设置范围为[0.0, 1.0]，默认值为1.0。
+Volume of the right channel. (Currently, the volume cannot be set separately for the left and right channels. The volume set for the left channel is used.) The value range is [0.0, 1.0], and the default value is **1.0**.
 
-当音量超过边界值时自动设置为边界值。
+When the volume exceeds the boundary value, the boundary value is automatically used.
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：double
 

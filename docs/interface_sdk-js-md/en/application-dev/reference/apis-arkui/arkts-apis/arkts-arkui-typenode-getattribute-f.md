@@ -6,7 +6,7 @@
 export function getAttribute(node: FrameNode, nodeType: 'Text'): TextAttribute | undefined
 ```
 
-获取Text节点的属性。若该节点非ArkTS语言创建，则需要设置是否支持跨语言访问，如果不支持跨语言访问，则返回undefined。该接口不支持声明式方式创建的节点。
+Obtains the attributes of a **Text** node. If the node is not created using ArkTS, cross-language access must be enabled; otherwise, **undefined** is returned. This API does not support declaratively created nodes.
 
 **Since:** 20
 
@@ -24,14 +24,14 @@ export function getAttribute(node: FrameNode, nodeType: 'Text'): TextAttribute |
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| node | [FrameNode](arkts-arkui-framenode-c.md) | Yes | 获取属性时所需的目标节点。 |
-| nodeType | 'Text' | Yes | 获取Text节点类型的属性。 |
+| node | [FrameNode](arkts-arkui-framenode-c.md) | Yes | Target node from which to obtain attributes. |
+| nodeType | 'Text' | Yes | Node type. Set to **'Text'**. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [TextAttribute](../arkts-components/arkts-arkui-text-attribute.md) | Text节点类型的属性，若获取失败，则返回undefined。 |
+| [TextAttribute](../arkts-components/arkts-arkui-text-attribute.md) | Attributes of the **Text** node, or **undefined** if they fail to be obtained. |
 
 
 ## getAttribute
@@ -40,7 +40,7 @@ export function getAttribute(node: FrameNode, nodeType: 'Text'): TextAttribute |
 export function getAttribute(node: FrameNode, nodeType: 'Column'): ColumnAttribute | undefined
 ```
 
-获取Column节点的属性。若该节点非ArkTS语言创建，则需要设置是否支持跨语言访问，如果不支持跨语言访问，则返回undefined。该接口不支持声明式方式创建的节点。
+Obtains the attributes of a **Column** node. If the node is not created using ArkTS, cross-language access must be enabled; otherwise, **undefined** is returned. This API does not support declaratively created nodes.
 
 **Since:** 20
 
@@ -58,14 +58,14 @@ export function getAttribute(node: FrameNode, nodeType: 'Column'): ColumnAttribu
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| node | [FrameNode](arkts-arkui-framenode-c.md) | Yes | 获取属性时所需的目标节点。 |
-| nodeType | 'Column' | Yes | 获取Column节点类型的属性。 |
+| node | [FrameNode](arkts-arkui-framenode-c.md) | Yes | Target node from which to obtain attributes. |
+| nodeType | 'Column' | Yes | Node type. Set to **'Column'**. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [ColumnAttribute](../arkts-components/arkts-arkui-column-attribute.md) | Column节点类型的属性，若获取失败，则返回undefined。 |
+| [ColumnAttribute](../arkts-components/arkts-arkui-column-attribute.md) | Attributes of the **Column** node, or **undefined** if they fail to be obtained. |
 
 
 ## getAttribute
@@ -74,7 +74,7 @@ export function getAttribute(node: FrameNode, nodeType: 'Column'): ColumnAttribu
 export function getAttribute(node: FrameNode, nodeType: 'Row'): RowAttribute | undefined
 ```
 
-获取Row节点的属性。若该节点非ArkTS语言创建，则需要设置是否支持跨语言访问，如果不支持跨语言访问，则返回undefined。该接口不支持声明式方式创建的节点。
+Obtains the attributes of a **Row** node. If the node is not created using ArkTS, cross-language access must be enabled; otherwise, **undefined** is returned. This API does not support declaratively created nodes.
 
 **Since:** 20
 
@@ -92,14 +92,14 @@ export function getAttribute(node: FrameNode, nodeType: 'Row'): RowAttribute | u
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| node | [FrameNode](arkts-arkui-framenode-c.md) | Yes | 获取属性时所需的目标节点。 |
-| nodeType | 'Row' | Yes | 获取Row节点类型的属性。 |
+| node | [FrameNode](arkts-arkui-framenode-c.md) | Yes | Target node from which to obtain attributes. |
+| nodeType | 'Row' | Yes | Node type. Set to **'Row'**. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [RowAttribute](../arkts-components/arkts-arkui-row-attribute.md) | Row节点类型的属性，若获取失败，则返回undefined。 |
+| [RowAttribute](../arkts-components/arkts-arkui-row-attribute.md) | Attributes of the **Row** node, or **undefined** if they fail to be obtained. |
 
 
 ## getAttribute
@@ -108,7 +108,7 @@ export function getAttribute(node: FrameNode, nodeType: 'Row'): RowAttribute | u
 export function getAttribute(node: FrameNode, nodeType: 'Stack'): StackAttribute | undefined
 ```
 
-获取Stack节点的属性。若该节点非ArkTS语言创建，则需要设置是否支持跨语言访问，如果不支持跨语言访问，则返回undefined。该接口不支持声明式方式创建的节点。
+Obtains the attributes of a **Stack** node. If the node is not created using ArkTS, cross-language access must be enabled; otherwise, **undefined** is returned. This API does not support declaratively created nodes.
 
 **Since:** 20
 
@@ -126,14 +126,14 @@ export function getAttribute(node: FrameNode, nodeType: 'Stack'): StackAttribute
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| node | [FrameNode](arkts-arkui-framenode-c.md) | Yes | 获取属性时所需的目标节点。 |
-| nodeType | 'Stack' | Yes | 获取Stack节点类型的属性。 |
+| node | [FrameNode](arkts-arkui-framenode-c.md) | Yes | Target node from which to obtain attributes. |
+| nodeType | 'Stack' | Yes | Node type. Set to **'Stack'**. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [StackAttribute](../arkts-components/arkts-arkui-stack-attribute.md) | Stack节点类型的属性，若获取失败，则返回undefined。 |
+| [StackAttribute](../arkts-components/arkts-arkui-stack-attribute.md) | Attributes of the **Stack** node, or **undefined** if they fail to be obtained. |
 
 
 ## getAttribute
@@ -142,7 +142,7 @@ export function getAttribute(node: FrameNode, nodeType: 'Stack'): StackAttribute
 export function getAttribute(node: FrameNode, nodeType: 'Flex'): FlexAttribute | undefined
 ```
 
-获取Flex节点的属性。若该节点非ArkTS语言创建，则需要设置是否支持跨语言访问，如果不支持跨语言访问，则返回undefined。该接口不支持声明式方式创建的节点。
+Obtains the Flex node attributes. If the node is not created using ArkTS, cross-language access must be enabled;otherwise, **undefined** is returned. This API does not support declaratively created nodes.
 
 **Since:** 20
 
@@ -160,14 +160,14 @@ export function getAttribute(node: FrameNode, nodeType: 'Flex'): FlexAttribute |
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| node | [FrameNode](arkts-arkui-framenode-c.md) | Yes | 获取属性时所需的目标节点。 |
-| nodeType | 'Flex' | Yes | 获取Flex节点类型的属性。 |
+| node | [FrameNode](arkts-arkui-framenode-c.md) | Yes | Target node from which to obtain attributes. |
+| nodeType | 'Flex' | Yes | Flex node type. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [FlexAttribute](../arkts-components/arkts-arkui-flex-attribute.md) | Flex节点类型的属性，若获取失败，则返回undefined。 |
+| [FlexAttribute](../arkts-components/arkts-arkui-flex-attribute.md) | Flex node type. If the operation fails, undefined is returned. |
 
 
 ## getAttribute
@@ -176,7 +176,7 @@ export function getAttribute(node: FrameNode, nodeType: 'Flex'): FlexAttribute |
 export function getAttribute(node: FrameNode, nodeType: 'Swiper'): SwiperAttribute | undefined
 ```
 
-获取Swiper节点的属性。若该节点非ArkTS语言创建，则需要设置是否支持跨语言访问，如果不支持跨语言访问，则返回undefined。该接口不支持声明式方式创建的节点。
+Obtains the attributes of a **Swiper** node. If the node is not created using ArkTS, cross-language access must be enabled; otherwise, **undefined** is returned. This API does not support declaratively created nodes.
 
 **Since:** 20
 
@@ -194,14 +194,14 @@ export function getAttribute(node: FrameNode, nodeType: 'Swiper'): SwiperAttribu
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| node | [FrameNode](arkts-arkui-framenode-c.md) | Yes | 获取属性时所需的目标节点。 |
-| nodeType | 'Swiper' | Yes | 获取Swiper节点类型的属性。 |
+| node | [FrameNode](arkts-arkui-framenode-c.md) | Yes | Target node from which to obtain attributes. |
+| nodeType | 'Swiper' | Yes | Node type. Set to **'Swiper'**. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [SwiperAttribute](../arkts-components/arkts-arkui-swiper-attribute.md) | Swiper节点类型的属性，若获取失败，则返回undefined。 |
+| [SwiperAttribute](../arkts-components/arkts-arkui-swiper-attribute.md) | Properties of the **Swiper** node, or **undefined** if they fail to be obtained. |
 
 
 ## getAttribute
@@ -210,7 +210,7 @@ export function getAttribute(node: FrameNode, nodeType: 'Swiper'): SwiperAttribu
 export function getAttribute(node: FrameNode, nodeType: 'Progress'): ProgressAttribute | undefined
 ```
 
-获取Progress节点的属性。若该节点非ArkTS语言创建，则需要设置是否支持跨语言访问，如果不支持跨语言访问，则返回undefined。该接口不支持声明式方式创建的节点。
+Obtains the attributes of a **Progress** node. If the node is not created using ArkTS, cross-language access must be enabled; otherwise, **undefined** is returned. This API does not support declaratively created nodes.
 
 **Since:** 20
 
@@ -228,14 +228,14 @@ export function getAttribute(node: FrameNode, nodeType: 'Progress'): ProgressAtt
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| node | [FrameNode](arkts-arkui-framenode-c.md) | Yes | 获取属性时所需的目标节点。 |
-| nodeType | 'Progress' | Yes | 获取Progress节点类型的属性。 |
+| node | [FrameNode](arkts-arkui-framenode-c.md) | Yes | Target node from which to obtain attributes. |
+| nodeType | 'Progress' | Yes | Node type. Set to **'Progress'**. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [ProgressAttribute](../arkts-components/arkts-arkui-progress-attribute.md) | Progress节点类型的属性，若获取失败，则返回undefined。 |
+| [ProgressAttribute](../arkts-components/arkts-arkui-progress-attribute.md) | Properties of the **Progress** node, or **undefined** if they fail to be obtained. |
 
 
 ## getAttribute
@@ -244,7 +244,7 @@ export function getAttribute(node: FrameNode, nodeType: 'Progress'): ProgressAtt
 function getAttribute(node: FrameNode, nodeType: 'Scroll'): ScrollAttribute | undefined
 ```
 
-获取Scroll节点的属性。若该节点非ArkTS语言创建，则需要设置是否支持跨语言访问，如果不支持跨语言访问，则返回undefined。该接口不支持声明式方式创建的节点。
+Obtains the attributes of a **Scroll** node. If the node is not created using ArkTS, cross-language access must be enabled; otherwise, **undefined** is returned. This API does not support declaratively created nodes.
 
 **Since:** 15
 
@@ -262,14 +262,14 @@ function getAttribute(node: FrameNode, nodeType: 'Scroll'): ScrollAttribute | un
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| node | [FrameNode](arkts-arkui-framenode-c.md) | Yes | 获取属性时所需的目标节点。 |
-| nodeType | 'Scroll' | Yes | 获取Scroll节点类型的属性。 |
+| node | [FrameNode](arkts-arkui-framenode-c.md) | Yes | Target node from which to obtain attributes. |
+| nodeType | 'Scroll' | Yes | Node type. Set to **'Scroll'**. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [ScrollAttribute](../arkts-components/arkts-arkui-scroll-attribute.md) | Scroll节点类型的属性，若获取失败，则返回undefined。 |
+| [ScrollAttribute](../arkts-components/arkts-arkui-scroll-attribute.md) | Attributes of the **Scroll** node, or **undefined** if they fail to be obtained. |
 
 
 ## getAttribute
@@ -278,7 +278,7 @@ function getAttribute(node: FrameNode, nodeType: 'Scroll'): ScrollAttribute | un
 export function getAttribute(node: FrameNode, nodeType: 'RelativeContainer'): RelativeContainerAttribute | undefined
 ```
 
-获取RelativeContainer节点的属性。若该节点非ArkTS语言创建，则需要设置是否支持跨语言访问，如果不支持跨语言访问，则返回undefined。该接口不支持声明式方式创建的节点。
+Obtains the attributes of a **RelativeContainer** node. If the node is not created using ArkTS, cross-language access must be enabled; otherwise, **undefined** is returned. This API does not support declaratively created nodes.
 
 **Since:** 20
 
@@ -296,14 +296,14 @@ export function getAttribute(node: FrameNode, nodeType: 'RelativeContainer'): Re
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| node | [FrameNode](arkts-arkui-framenode-c.md) | Yes | 获取属性时所需的目标节点。 |
-| nodeType | 'RelativeContainer' | Yes | 获取RelativeContainer节点类型的属性。 |
+| node | [FrameNode](arkts-arkui-framenode-c.md) | Yes | Target node from which to obtain attributes. |
+| nodeType | 'RelativeContainer' | Yes | Node type. Set to **'RelativeContainer'**. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [RelativeContainerAttribute](../arkts-components/arkts-arkui-relativecontainer-attribute.md) | RelativeContainer节点类型的属性，若获取失败，则返回undefined。 |
+| [RelativeContainerAttribute](../arkts-components/arkts-arkui-relativecontainer-attribute.md) | Attributes of the **RelativeContainer** node, or **undefined** if they fail to be obtained. |
 
 
 ## getAttribute
@@ -312,7 +312,7 @@ export function getAttribute(node: FrameNode, nodeType: 'RelativeContainer'): Re
 export function getAttribute(node: FrameNode, nodeType: 'LoadingProgress'): LoadingProgressAttribute | undefined
 ```
 
-获取[LoadingProgress](../../apis-arkui/arkts-components/arkts-arkui-loading_progress-i)节点的属性。若该节点非ArkTS语言创建，则需要设置是否支持跨语言访问，如果不支持跨语言访问，则返回undefined。该接口不支持声明式方式创建的节点。
+Obtains the attributes of a [LoadingProgress](../../apis-arkui/arkts-components/arkts-arkui-loading_progress-i) node. If the node is not created using ArkTS, cross-language access must be enabled; otherwise, **undefined** is returned. This API does not support declaratively created nodes.
 
 **Since:** 20
 
@@ -330,14 +330,14 @@ export function getAttribute(node: FrameNode, nodeType: 'LoadingProgress'): Load
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| node | [FrameNode](arkts-arkui-framenode-c.md) | Yes | 获取属性时所需的目标节点。 |
-| nodeType | 'LoadingProgress' | Yes | 获取LoadingProgress节点类型的属性。 |
+| node | [FrameNode](arkts-arkui-framenode-c.md) | Yes | Target node from which to obtain attributes. |
+| nodeType | 'LoadingProgress' | Yes | Node type. Set to **'LoadingProgress'**. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [LoadingProgressAttribute](../arkts-components/arkts-arkui-loadingprogress-attribute.md) | LoadingProgress节点类型的属性，若获取失败，则返回undefined。 |
+| [LoadingProgressAttribute](../arkts-components/arkts-arkui-loadingprogress-attribute.md) | Properties of the **LoadingProgress** node, or **undefined** if they fail to be obtained. |
 
 
 ## getAttribute
@@ -346,7 +346,7 @@ export function getAttribute(node: FrameNode, nodeType: 'LoadingProgress'): Load
 export function getAttribute(node: FrameNode, nodeType: 'Image'): ImageAttribute | undefined
 ```
 
-获取Image节点的属性。若该节点非ArkTS语言创建，则需要设置是否支持跨语言访问，如果不支持跨语言访问，则返回undefined。该接口不支持声明式方式创建的节点。
+Obtains the attributes of an **Image** node. If the node is not created using ArkTS, cross-language access must be enabled; otherwise, **undefined** is returned. This API does not support declaratively created nodes.
 
 **Since:** 20
 
@@ -364,14 +364,14 @@ export function getAttribute(node: FrameNode, nodeType: 'Image'): ImageAttribute
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| node | [FrameNode](arkts-arkui-framenode-c.md) | Yes | 获取属性时所需的目标节点。 |
-| nodeType | 'Image' | Yes | 获取Image节点类型的属性。 |
+| node | [FrameNode](arkts-arkui-framenode-c.md) | Yes | Target node from which to obtain attributes. |
+| nodeType | 'Image' | Yes | Node type. Set to **'Image'**. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [ImageAttribute](../arkts-components/arkts-arkui-image-attribute.md) | Image节点类型的属性，若获取失败，则返回undefined。 |
+| [ImageAttribute](../arkts-components/arkts-arkui-image-attribute.md) | Properties of the **Image** node, or **undefined** if they fail to be obtained. |
 
 
 ## getAttribute
@@ -380,7 +380,7 @@ export function getAttribute(node: FrameNode, nodeType: 'Image'): ImageAttribute
 export function getAttribute(node: FrameNode, nodeType: 'List'): ListAttribute | undefined
 ```
 
-获取List节点的属性。若该节点非ArkTS语言创建，则需要设置是否支持跨语言访问，如果不支持跨语言访问，则返回undefined。该接口不支持声明式方式创建的节点。
+Obtains the attributes of a **List** node. If the node is not created using ArkTS, cross-language access must be enabled; otherwise, **undefined** is returned. This API does not support declaratively created nodes.
 
 **Since:** 20
 
@@ -398,14 +398,14 @@ export function getAttribute(node: FrameNode, nodeType: 'List'): ListAttribute |
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| node | [FrameNode](arkts-arkui-framenode-c.md) | Yes | 获取属性时所需的目标节点。 |
-| nodeType | 'List' | Yes | 获取List节点类型的属性。 |
+| node | [FrameNode](arkts-arkui-framenode-c.md) | Yes | Target node from which to obtain attributes. |
+| nodeType | 'List' | Yes | Node type. Set to **'List'**. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [ListAttribute](../arkts-components/arkts-arkui-list-attribute.md) | List节点类型的属性，若获取失败，则返回undefined。 |
+| [ListAttribute](../arkts-components/arkts-arkui-list-attribute.md) | Attributes of the **List** node, or **undefined** if they fail to be obtained. |
 
 
 ## getAttribute
@@ -414,7 +414,7 @@ export function getAttribute(node: FrameNode, nodeType: 'List'): ListAttribute |
 export function getAttribute(node: FrameNode, nodeType: 'ListItem'): ListItemAttribute | undefined
 ```
 
-获取ListItem节点的属性。若该节点非ArkTS语言创建，则需要设置是否支持跨语言访问，如果不支持跨语言访问，则返回undefined。该接口不支持声明式方式创建的节点。
+Obtains the attributes of a **ListItem** node. If the node is not created using ArkTS, cross-language access must be enabled; otherwise, **undefined** is returned. This API does not support declaratively created nodes.
 
 **Since:** 20
 
@@ -432,14 +432,14 @@ export function getAttribute(node: FrameNode, nodeType: 'ListItem'): ListItemAtt
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| node | [FrameNode](arkts-arkui-framenode-c.md) | Yes | 获取属性时所需的目标节点。 |
-| nodeType | 'ListItem' | Yes | 获取ListItem节点类型的属性。 |
+| node | [FrameNode](arkts-arkui-framenode-c.md) | Yes | Target node from which to obtain attributes. |
+| nodeType | 'ListItem' | Yes | Node type. Set to **'ListItem'**. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [ListItemAttribute](../arkts-components/arkts-arkui-listitem-attribute.md) | ListItem节点类型的属性，若获取失败，则返回undefined。 |
+| [ListItemAttribute](../arkts-components/arkts-arkui-listitem-attribute.md) | Attributes of the **ListItem** node, or **undefined** if they fail to be obtained. |
 
 
 ## getAttribute
@@ -448,7 +448,7 @@ export function getAttribute(node: FrameNode, nodeType: 'ListItem'): ListItemAtt
 export function getAttribute(node: FrameNode, nodeType: 'TextInput'): TextInputAttribute | undefined
 ```
 
-获取TextInput节点的属性。若该节点非ArkTS语言创建，则需要设置是否支持跨语言访问，如果不支持跨语言访问，则返回undefined。该接口不支持声明式方式创建的节点。
+Obtains the attributes of a **TextInput** node. If the node is not created using ArkTS, cross-language access must be enabled; otherwise, **undefined** is returned. This API does not support declaratively created nodes.
 
 **Since:** 20
 
@@ -466,14 +466,14 @@ export function getAttribute(node: FrameNode, nodeType: 'TextInput'): TextInputA
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| node | [FrameNode](arkts-arkui-framenode-c.md) | Yes | 获取属性时所需的目标节点。 |
-| nodeType | 'TextInput' | Yes | 获取TextInput节点类型的属性。 |
+| node | [FrameNode](arkts-arkui-framenode-c.md) | Yes | Target node from which to obtain attributes. |
+| nodeType | 'TextInput' | Yes | Node type. Set to **'TextInput'**. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [TextInputAttribute](../arkts-components/arkts-arkui-textinput-attribute.md) | TextInput节点类型的属性，若获取失败，则返回undefined。 |
+| [TextInputAttribute](../arkts-components/arkts-arkui-textinput-attribute.md) | Properties of the **TextInput** node, or **undefined** if they fail to be obtained. |
 
 
 ## getAttribute
@@ -482,7 +482,7 @@ export function getAttribute(node: FrameNode, nodeType: 'TextInput'): TextInputA
 export function getAttribute(node: FrameNode, nodeType: 'Button'): ButtonAttribute | undefined
 ```
 
-获取Button节点的属性。若该节点非ArkTS语言创建，则需要设置是否支持跨语言访问，如果不支持跨语言访问，则返回undefined。该接口不支持声明式方式创建的节点。
+Obtains the attributes of a **Button** node. If the node is not created using ArkTS, cross-language access must be enabled; otherwise, **undefined** is returned. This API does not support declaratively created nodes.
 
 **Since:** 20
 
@@ -500,14 +500,14 @@ export function getAttribute(node: FrameNode, nodeType: 'Button'): ButtonAttribu
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| node | [FrameNode](arkts-arkui-framenode-c.md) | Yes | 获取属性时所需的目标节点。 |
-| nodeType | 'Button' | Yes | 获取Button节点类型的属性。 |
+| node | [FrameNode](arkts-arkui-framenode-c.md) | Yes | Target node from which to obtain attributes. |
+| nodeType | 'Button' | Yes | Node type. Set to **'Button'**. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [ButtonAttribute](../arkts-components/arkts-arkui-button-attribute.md) | Button节点类型的属性，若获取失败，则返回undefined。 |
+| [ButtonAttribute](../arkts-components/arkts-arkui-button-attribute.md) | Attributes of the **Button** node, or **undefined** if they fail to be obtained. |
 
 
 ## getAttribute
@@ -516,7 +516,7 @@ export function getAttribute(node: FrameNode, nodeType: 'Button'): ButtonAttribu
 export function getAttribute(node: FrameNode, nodeType: 'ListItemGroup'): ListItemGroupAttribute | undefined
 ```
 
-获取ListItemGroup节点的属性。若该节点非ArkTS语言创建，则需要设置是否支持跨语言访问，如果不支持跨语言访问，则返回undefined。该接口不支持声明式方式创建的节点。
+Obtains the attributes of a **ListItemGroup** node. If the node is not created using ArkTS, cross-language access must be enabled; otherwise, **undefined** is returned. This API does not support declaratively created nodes.
 
 **Since:** 20
 
@@ -534,14 +534,14 @@ export function getAttribute(node: FrameNode, nodeType: 'ListItemGroup'): ListIt
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| node | [FrameNode](arkts-arkui-framenode-c.md) | Yes | 获取属性时所需的目标节点。 |
-| nodeType | 'ListItemGroup' | Yes | 获取ListItemGroup节点类型的属性。 |
+| node | [FrameNode](arkts-arkui-framenode-c.md) | Yes | Target node from which to obtain attributes. |
+| nodeType | 'ListItemGroup' | Yes | Node type. Set to **'ListItemGroup'**. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [ListItemGroupAttribute](../arkts-components/arkts-arkui-listitemgroup-attribute.md) | ListItemGroup节点类型的属性，若获取失败，则返回undefined。 |
+| [ListItemGroupAttribute](../arkts-components/arkts-arkui-listitemgroup-attribute.md) | Attributes of the **ListItemGroup** node, or **undefined** if they fail to be obtained. |
 
 
 ## getAttribute
@@ -550,7 +550,7 @@ export function getAttribute(node: FrameNode, nodeType: 'ListItemGroup'): ListIt
 export function getAttribute(node: FrameNode, nodeType: 'WaterFlow'): WaterFlowAttribute | undefined
 ```
 
-获取WaterFlow节点的属性。若该节点非ArkTS语言创建，则需要设置是否支持跨语言访问，如果不支持跨语言访问，则返回undefined。该接口不支持声明式方式创建的节点。
+Obtains the attributes of a **WaterFlow** node. If the node is not created using ArkTS, cross-language access must be enabled; otherwise, **undefined** is returned. This API does not support declaratively created nodes.
 
 **Since:** 20
 
@@ -568,14 +568,14 @@ export function getAttribute(node: FrameNode, nodeType: 'WaterFlow'): WaterFlowA
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| node | [FrameNode](arkts-arkui-framenode-c.md) | Yes | 获取属性时所需的目标节点。 |
-| nodeType | 'WaterFlow' | Yes | 获取WaterFlow节点类型的属性。 |
+| node | [FrameNode](arkts-arkui-framenode-c.md) | Yes | Target node from which to obtain attributes. |
+| nodeType | 'WaterFlow' | Yes | Node type. Set to **'WaterFlow'**. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [WaterFlowAttribute](../arkts-components/arkts-arkui-waterflow-attribute.md) | WaterFlow节点类型的属性，若获取失败，则返回undefined。 |
+| [WaterFlowAttribute](../arkts-components/arkts-arkui-waterflow-attribute.md) | Properties of the **WaterFlow** node, or **undefined** if they fail to be obtained. |
 
 
 ## getAttribute
@@ -584,7 +584,7 @@ export function getAttribute(node: FrameNode, nodeType: 'WaterFlow'): WaterFlowA
 export function getAttribute(node: FrameNode, nodeType: 'FlowItem'): FlowItemAttribute | undefined
 ```
 
-获取FlowItem节点的属性。若该节点非ArkTS语言创建，则需要设置是否支持跨语言访问，如果不支持跨语言访问，则返回undefined。该接口不支持声明式方式创建的节点。
+Obtains the attributes of a **FlowItem** node. If the node is not created using ArkTS, cross-language access must be enabled; otherwise, **undefined** is returned. This API does not support declaratively created nodes.
 
 **Since:** 20
 
@@ -602,14 +602,14 @@ export function getAttribute(node: FrameNode, nodeType: 'FlowItem'): FlowItemAtt
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| node | [FrameNode](arkts-arkui-framenode-c.md) | Yes | 获取属性时所需的目标节点。 |
-| nodeType | 'FlowItem' | Yes | 获取FlowItem节点类型的属性。 |
+| node | [FrameNode](arkts-arkui-framenode-c.md) | Yes | Target node from which to obtain attributes. |
+| nodeType | 'FlowItem' | Yes | Node type. Set to **'FlowItem'**. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [FlowItemAttribute](../arkts-components/arkts-arkui-flowitem-attribute.md) | FlowItem节点类型的属性，若获取失败，则返回undefined。 |
+| [FlowItemAttribute](../arkts-components/arkts-arkui-flowitem-attribute.md) | Properties of the **FlowItem** node, or **undefined** if they fail to be obtained. |
 
 
 ## getAttribute
@@ -618,7 +618,7 @@ export function getAttribute(node: FrameNode, nodeType: 'FlowItem'): FlowItemAtt
 export function getAttribute(node: FrameNode, nodeType: 'XComponent'): XComponentAttribute | undefined
 ```
 
-获取XComponent节点的属性。若该节点非ArkTS语言创建，则需要设置是否支持跨语言访问，如果不支持跨语言访问，则返回undefined。该接口不支持声明式方式创建的节点。
+Obtain the attributes of an **XComponent** node. If the node is not created using ArkTS, cross-language access must be enabled; otherwise, **undefined** is returned. This API does not support declaratively created nodes.
 
 **Since:** 20
 
@@ -636,14 +636,14 @@ export function getAttribute(node: FrameNode, nodeType: 'XComponent'): XComponen
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| node | [FrameNode](arkts-arkui-framenode-c.md) | Yes | 获取属性时所需的目标节点。 |
-| nodeType | 'XComponent' | Yes | 获取XComponent节点类型的属性。 |
+| node | [FrameNode](arkts-arkui-framenode-c.md) | Yes | Target node from which to obtain attributes. |
+| nodeType | 'XComponent' | Yes | Node type. Set to **'XComponent'**. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [XComponentAttribute](../arkts-components/arkts-arkui-xcomponent-attribute.md) | XComponent节点类型的属性，若获取失败，则返回undefined。 |
+| [XComponentAttribute](../arkts-components/arkts-arkui-xcomponent-attribute.md) | Properties of the **XComponent** node, or **undefined** if they fail to be obtained. |
 
 
 ## getAttribute
@@ -652,7 +652,7 @@ export function getAttribute(node: FrameNode, nodeType: 'XComponent'): XComponen
 export function getAttribute(node: FrameNode, nodeType: 'Checkbox'): CheckboxAttribute | undefined
 ```
 
-获取Checkbox节点的属性。若该节点非ArkTS语言创建，则需要设置是否支持跨语言访问，如果不支持跨语言访问，则返回undefined。该接口不支持声明式方式创建的节点。
+Obtains the attributes of a **Checkbox** node. If the node is not created using ArkTS, cross-language access must be enabled; otherwise, **undefined** is returned. This API does not support declaratively created nodes.
 
 **Since:** 20
 
@@ -670,14 +670,14 @@ export function getAttribute(node: FrameNode, nodeType: 'Checkbox'): CheckboxAtt
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| node | [FrameNode](arkts-arkui-framenode-c.md) | Yes | 获取属性时所需的目标节点。 |
-| nodeType | 'Checkbox' | Yes | 获取Checkbox节点类型的属性。 |
+| node | [FrameNode](arkts-arkui-framenode-c.md) | Yes | Target node from which to obtain attributes. |
+| nodeType | 'Checkbox' | Yes | Node type. Set to **'Checkbox'**. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [CheckboxAttribute](../arkts-components/arkts-arkui-checkbox-attribute.md) | Checkbox节点类型的属性，若获取失败，则返回undefined。 |
+| [CheckboxAttribute](../arkts-components/arkts-arkui-checkbox-attribute.md) | Attributes of the **Checkbox** node, or **undefined** if they fail to be obtained. |
 
 
 ## getAttribute
@@ -686,7 +686,7 @@ export function getAttribute(node: FrameNode, nodeType: 'Checkbox'): CheckboxAtt
 export function getAttribute(node: FrameNode, nodeType: 'Radio'): RadioAttribute | undefined
 ```
 
-获取Radio节点的属性。若该节点非ArkTS语言创建，则需要设置是否支持跨语言访问，如果不支持跨语言访问，则返回undefined。该接口不支持声明式方式创建的节点。
+Obtains the attributes of a **Radio** node. If the node is not created using ArkTS, cross-language access must be enabled; otherwise, **undefined** is returned. This API does not support declaratively created nodes.
 
 **Since:** 20
 
@@ -704,14 +704,14 @@ export function getAttribute(node: FrameNode, nodeType: 'Radio'): RadioAttribute
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| node | [FrameNode](arkts-arkui-framenode-c.md) | Yes | 获取属性时所需的目标节点。 |
-| nodeType | 'Radio' | Yes | 获取Radio节点类型的属性。 |
+| node | [FrameNode](arkts-arkui-framenode-c.md) | Yes | Target node from which to obtain attributes. |
+| nodeType | 'Radio' | Yes | Node type. Set to **'Radio'**. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [RadioAttribute](../arkts-components/arkts-arkui-radio-attribute.md) | Radio节点类型的属性，若获取失败，则返回undefined。 |
+| [RadioAttribute](../arkts-components/arkts-arkui-radio-attribute.md) | Properties of the **Radio** node, or **undefined** if they fail to be obtained. |
 
 
 ## getAttribute
@@ -720,7 +720,7 @@ export function getAttribute(node: FrameNode, nodeType: 'Radio'): RadioAttribute
 export function getAttribute(node: FrameNode, nodeType: 'Slider'): SliderAttribute | undefined
 ```
 
-获取Slider节点的属性。若该节点非ArkTS语言创建，则需要设置是否支持跨语言访问，如果不支持跨语言访问，则返回undefined。该接口不支持声明式方式创建的节点。
+Obtains the attributes of a **Slider** node. If the node is not created using ArkTS, cross-language access must be enabled; otherwise, **undefined** is returned. This API does not support declaratively created nodes.
 
 **Since:** 20
 
@@ -738,14 +738,14 @@ export function getAttribute(node: FrameNode, nodeType: 'Slider'): SliderAttribu
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| node | [FrameNode](arkts-arkui-framenode-c.md) | Yes | 获取属性时所需的目标节点。 |
-| nodeType | 'Slider' | Yes | 获取Slider节点类型的属性。 |
+| node | [FrameNode](arkts-arkui-framenode-c.md) | Yes | Target node from which to obtain attributes. |
+| nodeType | 'Slider' | Yes | Node type. Set to **'Slider'**. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [SliderAttribute](../arkts-components/arkts-arkui-slider-attribute.md) | Slider节点类型的属性，若获取失败，则返回undefined。 |
+| [SliderAttribute](../arkts-components/arkts-arkui-slider-attribute.md) | Properties of the **Slider** node, or **undefined** if they fail to be obtained. |
 
 
 ## getAttribute
@@ -754,7 +754,7 @@ export function getAttribute(node: FrameNode, nodeType: 'Slider'): SliderAttribu
 export function getAttribute(node: FrameNode, nodeType: 'Toggle'): ToggleAttribute | undefined
 ```
 
-获取Toggle节点的属性。若该节点非ArkTS语言创建，则需要设置是否支持跨语言访问，如果不支持跨语言访问，则返回undefined。该接口不支持声明式方式创建的节点。
+Obtains the attributes of a **Toggle** node. If the node is not created using ArkTS, cross-language access must be enabled; otherwise, **undefined** is returned. This API does not support declaratively created nodes.
 
 **Since:** 20
 
@@ -772,14 +772,14 @@ export function getAttribute(node: FrameNode, nodeType: 'Toggle'): ToggleAttribu
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| node | [FrameNode](arkts-arkui-framenode-c.md) | Yes | 获取属性时所需的目标节点。 |
-| nodeType | 'Toggle' | Yes | 获取Toggle节点类型的属性。 |
+| node | [FrameNode](arkts-arkui-framenode-c.md) | Yes | Target node from which to obtain attributes. |
+| nodeType | 'Toggle' | Yes | Node type. Set to **'Toggle'**. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [ToggleAttribute](../arkts-components/arkts-arkui-toggle-attribute.md) | Toggle节点类型的属性，若获取失败，则返回undefined。 |
+| [ToggleAttribute](../arkts-components/arkts-arkui-toggle-attribute.md) | Properties of the **Toggle** node, or **undefined** if they fail to be obtained. |
 
 
 ## getAttribute
@@ -788,7 +788,7 @@ export function getAttribute(node: FrameNode, nodeType: 'Toggle'): ToggleAttribu
 export function getAttribute(node: FrameNode, nodeType: 'TextArea'): TextAreaAttribute | undefined
 ```
 
-获取TextArea节点的属性。若该节点非ArkTS语言创建，则需要设置是否支持跨语言访问，如果不支持跨语言访问，则返回undefined。该接口不支持声明式方式创建的节点。
+Obtains the attributes of a **TextArea** node. If the node is not created using ArkTS, cross-language access must be enabled; otherwise, **undefined** is returned. This API does not support declaratively created nodes.
 
 **Since:** 20
 
@@ -806,14 +806,14 @@ export function getAttribute(node: FrameNode, nodeType: 'TextArea'): TextAreaAtt
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| node | [FrameNode](arkts-arkui-framenode-c.md) | Yes | 获取属性时所需的目标节点。 |
-| nodeType | 'TextArea' | Yes | 获取TextArea节点类型的属性。 |
+| node | [FrameNode](arkts-arkui-framenode-c.md) | Yes | Target node from which to obtain attributes. |
+| nodeType | 'TextArea' | Yes | Node type. Set to **'TextArea'**. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [TextAreaAttribute](../arkts-components/arkts-arkui-textarea-attribute.md) | TextArea节点类型的属性，若获取失败，则返回undefined。 |
+| [TextAreaAttribute](../arkts-components/arkts-arkui-textarea-attribute.md) | Properties of the **TextArea** node, or **undefined** if they fail to be obtained. |
 
 
 ## getAttribute
@@ -822,7 +822,7 @@ export function getAttribute(node: FrameNode, nodeType: 'TextArea'): TextAreaAtt
 export function getAttribute(node: FrameNode, nodeType: 'Grid'): GridAttribute | undefined
 ```
 
-获取Grid节点的属性。若该节点非ArkTS语言创建，则需要设置是否支持跨语言访问，如果不支持跨语言访问，则返回undefined。该接口不支持声明式方式创建的节点。
+Obtains the attributes of a **Grid** node. If the node is not created using ArkTS, cross-language access must be enabled; otherwise, **undefined** is returned. This API does not support declaratively created nodes.
 
 **Since:** 20
 
@@ -840,14 +840,14 @@ export function getAttribute(node: FrameNode, nodeType: 'Grid'): GridAttribute |
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| node | [FrameNode](arkts-arkui-framenode-c.md) | Yes | 获取属性时所需的目标节点。 |
-| nodeType | 'Grid' | Yes | 获取Grid节点类型的属性。 |
+| node | [FrameNode](arkts-arkui-framenode-c.md) | Yes | Target node from which to obtain attributes. |
+| nodeType | 'Grid' | Yes | Node type. Set to **'Grid'**. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [GridAttribute](../arkts-components/arkts-arkui-grid-attribute.md) | Grid节点类型的属性，若获取失败，则返回undefined。 |
+| [GridAttribute](../arkts-components/arkts-arkui-grid-attribute.md) | Properties of the **Grid** node, or **undefined** if they fail to be obtained. |
 
 
 ## getAttribute
@@ -856,7 +856,7 @@ export function getAttribute(node: FrameNode, nodeType: 'Grid'): GridAttribute |
 export function getAttribute(node: FrameNode, nodeType: 'GridItem'): GridItemAttribute | undefined
 ```
 
-获取GridItem节点的属性。若该节点非ArkTS语言创建，则需要设置是否支持跨语言访问，如果不支持跨语言访问，则返回undefined。该接口不支持声明式方式创建的节点。
+Obtains the attributes of a **GridItem** node. If the node is not created using ArkTS, cross-language access must be enabled; otherwise, **undefined** is returned. This API does not support declaratively created nodes.
 
 **Since:** 20
 
@@ -874,12 +874,12 @@ export function getAttribute(node: FrameNode, nodeType: 'GridItem'): GridItemAtt
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| node | [FrameNode](arkts-arkui-framenode-c.md) | Yes | 获取属性时所需的目标节点。 |
-| nodeType | 'GridItem' | Yes | 获取GridItem节点类型的属性。 |
+| node | [FrameNode](arkts-arkui-framenode-c.md) | Yes | Target node from which to obtain attributes. |
+| nodeType | 'GridItem' | Yes | Node type. Set to **'GridItem'**. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [GridItemAttribute](../arkts-components/arkts-arkui-griditem-attribute.md) | GridItem节点类型的属性，若获取失败，则返回undefined。 |
+| [GridItemAttribute](../arkts-components/arkts-arkui-griditem-attribute.md) | Properties of the **GridItem** node, or **undefined** if they fail to be obtained. |
 

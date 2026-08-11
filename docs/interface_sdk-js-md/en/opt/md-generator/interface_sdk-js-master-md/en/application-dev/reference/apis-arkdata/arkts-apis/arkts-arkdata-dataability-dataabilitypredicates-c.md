@@ -1,0 +1,973 @@
+# DataAbilityPredicates
+
+Provides APIs for creating diverse query conditions.
+
+**Since:** 7
+
+<!--Device-dataAbility-class DataAbilityPredicates--><!--Device-dataAbility-class DataAbilityPredicates-End-->
+
+**System capability:** SystemCapability.DistributedDataManager.DataShare.Core
+
+## Modules to Import
+
+```TypeScript
+import { dataAbility } from 'kits/@kit.ArkData';
+```
+
+## and
+
+```TypeScript
+and(): DataAbilityPredicates
+```
+
+Creates a **DataAbilityPredicates** object to add the AND condition.
+
+**Since:** 7
+
+<!--Device-DataAbilityPredicates-and(): DataAbilityPredicates--><!--Device-DataAbilityPredicates-and(): DataAbilityPredicates-End-->
+
+**System capability:** SystemCapability.DistributedDataManager.DataShare.Core
+
+**Return value:**
+
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| [DataAbilityPredicates](arkts-arkdata-dataability-dataabilitypredicates-c.md) |
+
+## Examples
+
+```TypeScript
+dataAbilityPredicates.equalTo("NAME", "Lisa")
+    .and()
+    .equalTo("SALARY", 200.5)
+```
+
+## beginWrap
+
+```TypeScript
+beginWrap(): DataAbilityPredicates
+```
+
+Creates a **DataAbilityPredicates** object to add a left parenthesis. This API is similar to "(" in an SQL statement and must be used with **endWrap**.
+
+**Since:** 7
+
+<!--Device-DataAbilityPredicates-beginWrap(): DataAbilityPredicates--><!--Device-DataAbilityPredicates-beginWrap(): DataAbilityPredicates-End-->
+
+**System capability:** SystemCapability.DistributedDataManager.DataShare.Core
+
+**Return value:**
+
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| [DataAbilityPredicates](arkts-arkdata-dataability-dataabilitypredicates-c.md) |
+
+## Examples
+
+```TypeScript
+dataAbilityPredicates.equalTo("NAME", "lisi")
+    .beginWrap()
+    .equalTo("AGE", 18)
+    .or()
+    .equalTo("SALARY", 200.5)
+    .endWrap()
+```
+
+## beginsWith
+
+```TypeScript
+beginsWith(field: string, value: string): DataAbilityPredicates
+```
+
+Creates a **DataAbilityPredicates** object to search for the records in the specified column that begin with the given value.
+
+This API is similar to the percent sign (%) in SQL statements.
+
+**Since:** 7
+
+<!--Device-DataAbilityPredicates-beginsWith(field: string, value: string): DataAbilityPredicates--><!--Device-DataAbilityPredicates-beginsWith(field: string, value: string): DataAbilityPredicates-End-->
+
+**System capability:** SystemCapability.DistributedDataManager.DataShare.Core
+
+**Parameters:**
+
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| field | string | Yes |
+| value | string | Yes |
+
+**Return value:**
+
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| [DataAbilityPredicates](arkts-arkdata-dataability-dataabilitypredicates-c.md) |
+
+## Examples
+
+```TypeScript
+dataAbilityPredicates.beginsWith("NAME", "os")
+```
+
+## between
+
+```TypeScript
+between(field: string, low: ValueType, high: ValueType): DataAbilityPredicates
+```
+
+Creates a **DataAbilityPredicates** object to search for the records in the specified column that are within the given range.
+
+**Since:** 7
+
+<!--Device-DataAbilityPredicates-between(field: string, low: ValueType, high: ValueType): DataAbilityPredicates--><!--Device-DataAbilityPredicates-between(field: string, low: ValueType, high: ValueType): DataAbilityPredicates-End-->
+
+**System capability:** SystemCapability.DistributedDataManager.DataShare.Core
+
+**Parameters:**
+
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| field | string | Yes |
+| low | [ValueType](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-pasteboard-valuetype-t.md) | Yes |
+| high | [ValueType](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-pasteboard-valuetype-t.md) | Yes |
+
+**Return value:**
+
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| [DataAbilityPredicates](arkts-arkdata-dataability-dataabilitypredicates-c.md) |
+
+## Examples
+
+```TypeScript
+dataAbilityPredicates.between("AGE", 10, 50)
+```
+
+## contains
+
+```TypeScript
+contains(field: string, value: string): DataAbilityPredicates
+```
+
+Creates a **DataAbilityPredicates** object to search for the records in the specified column that contain the given value.
+
+**Since:** 7
+
+<!--Device-DataAbilityPredicates-contains(field: string, value: string): DataAbilityPredicates--><!--Device-DataAbilityPredicates-contains(field: string, value: string): DataAbilityPredicates-End-->
+
+**System capability:** SystemCapability.DistributedDataManager.DataShare.Core
+
+**Parameters:**
+
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| field | string | Yes |
+| value | string | Yes |
+
+**Return value:**
+
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| [DataAbilityPredicates](arkts-arkdata-dataability-dataabilitypredicates-c.md) |
+
+## Examples
+
+```TypeScript
+dataAbilityPredicates.contains("NAME", "os")
+```
+
+## distinct
+
+```TypeScript
+distinct(): DataAbilityPredicates
+```
+
+Creates a **DataAbilityPredicates** object to filter out duplicate records.
+
+**Since:** 7
+
+<!--Device-DataAbilityPredicates-distinct(): DataAbilityPredicates--><!--Device-DataAbilityPredicates-distinct(): DataAbilityPredicates-End-->
+
+**System capability:** SystemCapability.DistributedDataManager.DataShare.Core
+
+**Return value:**
+
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| [DataAbilityPredicates](arkts-arkdata-dataability-dataabilitypredicates-c.md) |
+
+## Examples
+
+```TypeScript
+dataAbilityPredicates.equalTo("NAME", "Rose").distinct()
+```
+
+## endWrap
+
+```TypeScript
+endWrap(): DataAbilityPredicates
+```
+
+Creates a **DataAbilityPredicates** object to add a right parenthesis. This API is similar to ")" in an SQL statement and must be used with **beginWrap**.
+
+**Since:** 7
+
+<!--Device-DataAbilityPredicates-endWrap(): DataAbilityPredicates--><!--Device-DataAbilityPredicates-endWrap(): DataAbilityPredicates-End-->
+
+**System capability:** SystemCapability.DistributedDataManager.DataShare.Core
+
+**Return value:**
+
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| [DataAbilityPredicates](arkts-arkdata-dataability-dataabilitypredicates-c.md) |
+
+## Examples
+
+```TypeScript
+dataAbilityPredicates.equalTo("NAME", "lisi")
+    .beginWrap()
+    .equalTo("AGE", 18)
+    .or()
+    .equalTo("SALARY", 200.5)
+    .endWrap()
+```
+
+## endsWith
+
+```TypeScript
+endsWith(field: string, value: string): DataAbilityPredicates
+```
+
+Creates a **DataAbilityPredicates** object to search for the records in the specified column that end with the given value.
+
+This API is similar to the percent sign (%) in SQL statements.
+
+**Since:** 7
+
+<!--Device-DataAbilityPredicates-endsWith(field: string, value: string): DataAbilityPredicates--><!--Device-DataAbilityPredicates-endsWith(field: string, value: string): DataAbilityPredicates-End-->
+
+**System capability:** SystemCapability.DistributedDataManager.DataShare.Core
+
+**Parameters:**
+
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| field | string | Yes |
+| value | string | Yes |
+
+**Return value:**
+
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| [DataAbilityPredicates](arkts-arkdata-dataability-dataabilitypredicates-c.md) |
+
+## Examples
+
+```TypeScript
+dataAbilityPredicates.endsWith("NAME", "se")
+```
+
+## equalTo
+
+```TypeScript
+equalTo(field: string, value: ValueType): DataAbilityPredicates
+```
+
+Creates a **DataAbilityPredicates** object to search for the records in the specified column that are equal to the given value.
+
+This API is similar to the SQL equal to (=) operator.
+
+**Since:** 7
+
+<!--Device-DataAbilityPredicates-equalTo(field: string, value: ValueType): DataAbilityPredicates--><!--Device-DataAbilityPredicates-equalTo(field: string, value: ValueType): DataAbilityPredicates-End-->
+
+**System capability:** SystemCapability.DistributedDataManager.DataShare.Core
+
+**Parameters:**
+
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| field | string | Yes |
+| value | [ValueType](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-pasteboard-valuetype-t.md) | Yes |
+
+**Return value:**
+
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| [DataAbilityPredicates](arkts-arkdata-dataability-dataabilitypredicates-c.md) |
+
+## Examples
+
+```TypeScript
+dataAbilityPredicates.equalTo("NAME", "lisi")
+```
+
+## glob
+
+```TypeScript
+glob(field: string, value: string): DataAbilityPredicates
+```
+
+Creates a **DataAbilityPredicates** object to search for the records in the specified column that match the given string. Different from **like**, the input parameters of this API are case-sensitive.
+
+**Since:** 7
+
+<!--Device-DataAbilityPredicates-glob(field: string, value: string): DataAbilityPredicates--><!--Device-DataAbilityPredicates-glob(field: string, value: string): DataAbilityPredicates-End-->
+
+**System capability:** SystemCapability.DistributedDataManager.DataShare.Core
+
+**Parameters:**
+
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| field | string | Yes |
+| value | string | Yes |
+
+**Return value:**
+
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| [DataAbilityPredicates](arkts-arkdata-dataability-dataabilitypredicates-c.md) |
+
+## Examples
+
+```TypeScript
+dataAbilityPredicates.glob("NAME", "?h*g")
+
+// Only the records whose value is "Lisa" in the "name" column are matched.
+dataAbilityPredicates.glob("NAME", "Lisa")
+
+// Only the records whose value is "lisa" in the "name" column are matched.
+dataAbilityPredicates.glob("NAME", "lisa")
+```
+
+## greaterThan
+
+```TypeScript
+greaterThan(field: string, value: ValueType): DataAbilityPredicates
+```
+
+Creates a **DataAbilityPredicates** object to search for the records in the specified column that are greater than the given value.
+
+**Since:** 7
+
+<!--Device-DataAbilityPredicates-greaterThan(field: string, value: ValueType): DataAbilityPredicates--><!--Device-DataAbilityPredicates-greaterThan(field: string, value: ValueType): DataAbilityPredicates-End-->
+
+**System capability:** SystemCapability.DistributedDataManager.DataShare.Core
+
+**Parameters:**
+
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| field | string | Yes |
+| value | [ValueType](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-pasteboard-valuetype-t.md) | Yes |
+
+**Return value:**
+
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| [DataAbilityPredicates](arkts-arkdata-dataability-dataabilitypredicates-c.md) |
+
+## Examples
+
+```TypeScript
+dataAbilityPredicates.greaterThan("AGE", 18)
+```
+
+## greaterThanOrEqualTo
+
+```TypeScript
+greaterThanOrEqualTo(field: string, value: ValueType): DataAbilityPredicates
+```
+
+Creates a **DataAbilityPredicates** object to search for the records in the specified column that are greater than or equal to the given value.
+
+**Since:** 7
+
+<!--Device-DataAbilityPredicates-greaterThanOrEqualTo(field: string, value: ValueType): DataAbilityPredicates--><!--Device-DataAbilityPredicates-greaterThanOrEqualTo(field: string, value: ValueType): DataAbilityPredicates-End-->
+
+**System capability:** SystemCapability.DistributedDataManager.DataShare.Core
+
+**Parameters:**
+
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| field | string | Yes |
+| value | [ValueType](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-pasteboard-valuetype-t.md) | Yes |
+
+**Return value:**
+
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| [DataAbilityPredicates](arkts-arkdata-dataability-dataabilitypredicates-c.md) |
+
+## Examples
+
+```TypeScript
+dataAbilityPredicates.greaterThanOrEqualTo("AGE", 18)
+```
+
+## groupBy
+
+```TypeScript
+groupBy(fields: Array<string>): DataAbilityPredicates
+```
+
+Creates a **DataAbilityPredicates** object to group the query results based on the specified columns.
+
+**Since:** 7
+
+<!--Device-DataAbilityPredicates-groupBy(fields: Array<string>): DataAbilityPredicates--><!--Device-DataAbilityPredicates-groupBy(fields: Array<string>): DataAbilityPredicates-End-->
+
+**System capability:** SystemCapability.DistributedDataManager.DataShare.Core
+
+**Parameters:**
+
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| fields | Array&lt;string&gt; | Yes |
+
+**Return value:**
+
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| [DataAbilityPredicates](arkts-arkdata-dataability-dataabilitypredicates-c.md) |
+
+## Examples
+
+```TypeScript
+dataAbilityPredicates.groupBy(["AGE", "NAME"])
+```
+
+## in
+
+```TypeScript
+in(field: string, value: Array<ValueType>): DataAbilityPredicates
+```
+
+Creates a **DataAbilityPredicates** object to search for the records in the specified column that are in the given range.
+
+**Since:** 7
+
+<!--Device-DataAbilityPredicates-in(field: string, value: Array<ValueType>): DataAbilityPredicates--><!--Device-DataAbilityPredicates-in(field: string, value: Array<ValueType>): DataAbilityPredicates-End-->
+
+**System capability:** SystemCapability.DistributedDataManager.DataShare.Core
+
+**Parameters:**
+
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| field | string | Yes |
+| value | Array&lt;ValueType&gt; | Yes |
+
+**Return value:**
+
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| [DataAbilityPredicates](arkts-arkdata-dataability-dataabilitypredicates-c.md) |
+
+## Examples
+
+```TypeScript
+dataAbilityPredicates.in("AGE", [18, 20])
+```
+
+## indexedBy
+
+```TypeScript
+indexedBy(field: string): DataAbilityPredicates
+```
+
+Creates a **DataAbilityPredicates** object to specify the index column. Before calling this API, you need to create an index column.
+
+**Since:** 7
+
+<!--Device-DataAbilityPredicates-indexedBy(field: string): DataAbilityPredicates--><!--Device-DataAbilityPredicates-indexedBy(field: string): DataAbilityPredicates-End-->
+
+**System capability:** SystemCapability.DistributedDataManager.DataShare.Core
+
+**Parameters:**
+
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| field | string | Yes |
+
+**Return value:**
+
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| [DataAbilityPredicates](arkts-arkdata-dataability-dataabilitypredicates-c.md) |
+
+## Examples
+
+```TypeScript
+import { UIAbility } from '@kit.AbilityKit';
+import { dataAbility, relationalStore } from '@kit.ArkData';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+export default class EntryAbility extends UIAbility {
+  async onCreate(): Promise<void> {
+    let store: relationalStore.RdbStore | undefined = undefined;
+    let context = this.context;
+
+    try {
+      const STORE_CONFIG: relationalStore.StoreConfig = {
+        name: 'RdbTest.db', // Database file name.
+        securityLevel: relationalStore.SecurityLevel.S3,
+      };
+      // Table structure: EMPLOYEE (NAME, AGE, SALARY, CODES)
+      const SQL_CREATE_TABLE =
+        'CREATE TABLE IF NOT EXISTS EMPLOYEE (ID INTEGER PRIMARY KEY AUTOINCREMENT, NAME TEXT NOT NULL, AGE INTEGER, SALARY REAL, CODES BLOB)'; // SQL statement for creating a data table.
+      store = await relationalStore.getRdbStore(context, STORE_CONFIG);
+      console.info('Succeeded in getting RdbStore.');
+      await store.executeSql(SQL_CREATE_TABLE); // Create a data table.
+    } catch (e) {
+      const err = e as BusinessError;
+      console.error(`Failed to get RdbStore. Code:${err.code}, message:${err.message}`);
+    }
+
+    if (!store) {
+      return;
+    }
+
+    // Create an index.
+    const SQL_CREATE_INDEX = 'CREATE INDEX SALARY_INDEX ON EMPLOYEE(SALARY)'
+    await store.executeSql(SQL_CREATE_INDEX);
+    // ...
+
+    let dataAbilityPredicates = new dataAbility.DataAbilityPredicates()
+    dataAbilityPredicates.indexedBy("SALARY_INDEX")
+
+    //  ...
+  }
+}
+```
+
+## isNotNull
+
+```TypeScript
+isNotNull(field: string): DataAbilityPredicates
+```
+
+Creates a **DataAbilityPredicates** object to search for the records in the specified column that are not  
+**null**.
+
+**Since:** 7
+
+<!--Device-DataAbilityPredicates-isNotNull(field: string): DataAbilityPredicates--><!--Device-DataAbilityPredicates-isNotNull(field: string): DataAbilityPredicates-End-->
+
+**System capability:** SystemCapability.DistributedDataManager.DataShare.Core
+
+**Parameters:**
+
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| field | string | Yes |
+
+**Return value:**
+
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| [DataAbilityPredicates](arkts-arkdata-dataability-dataabilitypredicates-c.md) |
+
+## Examples
+
+```TypeScript
+dataAbilityPredicates.isNotNull("NAME")
+```
+
+## isNull
+
+```TypeScript
+isNull(field: string): DataAbilityPredicates
+```
+
+Creates a **DataAbilityPredicates** object to search for the records in the specified column that are **null**.
+
+**Since:** 7
+
+<!--Device-DataAbilityPredicates-isNull(field: string): DataAbilityPredicates--><!--Device-DataAbilityPredicates-isNull(field: string): DataAbilityPredicates-End-->
+
+**System capability:** SystemCapability.DistributedDataManager.DataShare.Core
+
+**Parameters:**
+
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| field | string | Yes |
+
+**Return value:**
+
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| [DataAbilityPredicates](arkts-arkdata-dataability-dataabilitypredicates-c.md) |
+
+## Examples
+
+```TypeScript
+dataAbilityPredicates.isNull("NAME")
+```
+
+## lessThan
+
+```TypeScript
+lessThan(field: string, value: ValueType): DataAbilityPredicates
+```
+
+Creates a **DataAbilityPredicates** object to search for the records in the specified column that are less than the given value.
+
+**Since:** 7
+
+<!--Device-DataAbilityPredicates-lessThan(field: string, value: ValueType): DataAbilityPredicates--><!--Device-DataAbilityPredicates-lessThan(field: string, value: ValueType): DataAbilityPredicates-End-->
+
+**System capability:** SystemCapability.DistributedDataManager.DataShare.Core
+
+**Parameters:**
+
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| field | string | Yes |
+| value | [ValueType](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-pasteboard-valuetype-t.md) | Yes |
+
+**Return value:**
+
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| [DataAbilityPredicates](arkts-arkdata-dataability-dataabilitypredicates-c.md) |
+
+## Examples
+
+```TypeScript
+dataAbilityPredicates.lessThan("AGE", 20)
+```
+
+## lessThanOrEqualTo
+
+```TypeScript
+lessThanOrEqualTo(field: string, value: ValueType): DataAbilityPredicates
+```
+
+Creates a **DataAbilityPredicates** object to search for the records in the specified column that are less than or equal to the given value.
+
+**Since:** 7
+
+<!--Device-DataAbilityPredicates-lessThanOrEqualTo(field: string, value: ValueType): DataAbilityPredicates--><!--Device-DataAbilityPredicates-lessThanOrEqualTo(field: string, value: ValueType): DataAbilityPredicates-End-->
+
+**System capability:** SystemCapability.DistributedDataManager.DataShare.Core
+
+**Parameters:**
+
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| field | string | Yes |
+| value | [ValueType](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-pasteboard-valuetype-t.md) | Yes |
+
+**Return value:**
+
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| [DataAbilityPredicates](arkts-arkdata-dataability-dataabilitypredicates-c.md) |
+
+## Examples
+
+```TypeScript
+dataAbilityPredicates.lessThanOrEqualTo("AGE", 20)
+```
+
+## like
+
+```TypeScript
+like(field: string, value: string): DataAbilityPredicates
+```
+
+Creates a **DataAbilityPredicates** object to search for the records in the specified column that are similar to the given value.
+
+This API is similar to the SQL **like** statement.
+
+**Since:** 7
+
+<!--Device-DataAbilityPredicates-like(field: string, value: string): DataAbilityPredicates--><!--Device-DataAbilityPredicates-like(field: string, value: string): DataAbilityPredicates-End-->
+
+**System capability:** SystemCapability.DistributedDataManager.DataShare.Core
+
+**Parameters:**
+
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| field | string | Yes |
+| value | string | Yes |
+
+**Return value:**
+
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| [DataAbilityPredicates](arkts-arkdata-dataability-dataabilitypredicates-c.md) |
+
+## Examples
+
+```TypeScript
+dataAbilityPredicates.like("NAME", "%os%")
+```
+
+## limitAs
+
+```TypeScript
+limitAs(value: number): DataAbilityPredicates
+```
+
+Creates a **DataAbilityPredicates** object to limit the number of records.
+
+**Since:** 7
+
+<!--Device-DataAbilityPredicates-limitAs(value: number): DataAbilityPredicates--><!--Device-DataAbilityPredicates-limitAs(value: number): DataAbilityPredicates-End-->
+
+**System capability:** SystemCapability.DistributedDataManager.DataShare.Core
+
+**Parameters:**
+
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| value | number | Yes |
+
+**Return value:**
+
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| [DataAbilityPredicates](arkts-arkdata-dataability-dataabilitypredicates-c.md) |
+
+## Examples
+
+```TypeScript
+dataAbilityPredicates.equalTo("NAME", "Rose").limitAs(3)
+```
+
+## notBetween
+
+```TypeScript
+notBetween(field: string, low: ValueType, high: ValueType): DataAbilityPredicates
+```
+
+Creates a **DataAbilityPredicates** object to search for the records in the specified column that are out of the given range.
+
+**Since:** 7
+
+<!--Device-DataAbilityPredicates-notBetween(field: string, low: ValueType, high: ValueType): DataAbilityPredicates--><!--Device-DataAbilityPredicates-notBetween(field: string, low: ValueType, high: ValueType): DataAbilityPredicates-End-->
+
+**System capability:** SystemCapability.DistributedDataManager.DataShare.Core
+
+**Parameters:**
+
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| field | string | Yes |
+| low | [ValueType](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-pasteboard-valuetype-t.md) | Yes |
+| high | [ValueType](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-pasteboard-valuetype-t.md) | Yes |
+
+**Return value:**
+
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| [DataAbilityPredicates](arkts-arkdata-dataability-dataabilitypredicates-c.md) |
+
+## Examples
+
+```TypeScript
+dataAbilityPredicates.notBetween("AGE", 10, 50)
+```
+
+## notEqualTo
+
+```TypeScript
+notEqualTo(field: string, value: ValueType): DataAbilityPredicates
+```
+
+Creates a **DataAbilityPredicates** object to search for the records in the specified column that are not equal to the given value.
+
+This API is similar to the SQL not equal (!=) operator.
+
+**Since:** 7
+
+<!--Device-DataAbilityPredicates-notEqualTo(field: string, value: ValueType): DataAbilityPredicates--><!--Device-DataAbilityPredicates-notEqualTo(field: string, value: ValueType): DataAbilityPredicates-End-->
+
+**System capability:** SystemCapability.DistributedDataManager.DataShare.Core
+
+**Parameters:**
+
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| field | string | Yes |
+| value | [ValueType](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-pasteboard-valuetype-t.md) | Yes |
+
+**Return value:**
+
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| [DataAbilityPredicates](arkts-arkdata-dataability-dataabilitypredicates-c.md) |
+
+## Examples
+
+```TypeScript
+dataAbilityPredicates.notEqualTo("NAME", "lisi")
+```
+
+## notIn
+
+```TypeScript
+notIn(field: string, value: Array<ValueType>): DataAbilityPredicates
+```
+
+Creates a **DataAbilityPredicates** object to search for the records in the specified column that are out of the given range.
+
+**Since:** 7
+
+<!--Device-DataAbilityPredicates-notIn(field: string, value: Array<ValueType>): DataAbilityPredicates--><!--Device-DataAbilityPredicates-notIn(field: string, value: Array<ValueType>): DataAbilityPredicates-End-->
+
+**System capability:** SystemCapability.DistributedDataManager.DataShare.Core
+
+**Parameters:**
+
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| field | string | Yes |
+| value | Array&lt;ValueType&gt; | Yes |
+
+**Return value:**
+
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| [DataAbilityPredicates](arkts-arkdata-dataability-dataabilitypredicates-c.md) |
+
+## Examples
+
+```TypeScript
+dataAbilityPredicates.notIn("NAME", ["Lisa", "Rose"])
+```
+
+## offsetAs
+
+```TypeScript
+offsetAs(rowOffset: number): DataAbilityPredicates
+```
+
+Creates a **DataAbilityPredicates** object to set the start position of the query result. This API must be used together with **limitAs**. Otherwise, no result will be returned. To query all rows after the specified offset,pass in **-1** in **limitAs**.
+
+**Since:** 7
+
+<!--Device-DataAbilityPredicates-offsetAs(rowOffset: number): DataAbilityPredicates--><!--Device-DataAbilityPredicates-offsetAs(rowOffset: number): DataAbilityPredicates-End-->
+
+**System capability:** SystemCapability.DistributedDataManager.DataShare.Core
+
+**Parameters:**
+
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| rowOffset | number | Yes |
+
+**Return value:**
+
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| [DataAbilityPredicates](arkts-arkdata-dataability-dataabilitypredicates-c.md) |
+
+## Examples
+
+```TypeScript
+// Display the three data records following the first three records.
+dataAbilityPredicates.equalTo("NAME", "Rose").offsetAs(3).limitAs(3)
+```
+
+## or
+
+```TypeScript
+or(): DataAbilityPredicates
+```
+
+Creates a **DataAbilityPredicates** object to add the OR condition.
+
+This API is similar to the SQL **or** operator.
+
+**Since:** 7
+
+<!--Device-DataAbilityPredicates-or(): DataAbilityPredicates--><!--Device-DataAbilityPredicates-or(): DataAbilityPredicates-End-->
+
+**System capability:** SystemCapability.DistributedDataManager.DataShare.Core
+
+**Return value:**
+
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| [DataAbilityPredicates](arkts-arkdata-dataability-dataabilitypredicates-c.md) |
+
+## Examples
+
+```TypeScript
+dataAbilityPredicates.equalTo("NAME", "Lisa")
+    .or()
+    .equalTo("NAME", "Rose")
+```
+
+## orderByAsc
+
+```TypeScript
+orderByAsc(field: string): DataAbilityPredicates
+```
+
+Creates a **DataAbilityPredicates** object to sort the records in the specified column in ascending order. When there are multiple **orderByAsc**s, the first **orderByAsc** used has the highest priority.
+
+**Since:** 7
+
+<!--Device-DataAbilityPredicates-orderByAsc(field: string): DataAbilityPredicates--><!--Device-DataAbilityPredicates-orderByAsc(field: string): DataAbilityPredicates-End-->
+
+**System capability:** SystemCapability.DistributedDataManager.DataShare.Core
+
+**Parameters:**
+
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| field | string | Yes |
+
+**Return value:**
+
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| [DataAbilityPredicates](arkts-arkdata-dataability-dataabilitypredicates-c.md) |
+
+## Examples
+
+```TypeScript
+// Sort data by name first; for the records with the same name, sort them by age; for the records with the same name and age, sort them by salary in ascending order.
+dataAbilityPredicates.orderByAsc("NAME").orderByAsc("AGE").orderByAsc("SALARY")
+```
+
+## orderByDesc
+
+```TypeScript
+orderByDesc(field: string): DataAbilityPredicates
+```
+
+Creates a **DataAbilityPredicates** object to sort the records in the specified column in descending order. When there are multiple **orderByDesc**s, the first **orderByDesc** used has the highest priority.
+
+**Since:** 7
+
+<!--Device-DataAbilityPredicates-orderByDesc(field: string): DataAbilityPredicates--><!--Device-DataAbilityPredicates-orderByDesc(field: string): DataAbilityPredicates-End-->
+
+**System capability:** SystemCapability.DistributedDataManager.DataShare.Core
+
+**Parameters:**
+
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| field | string | Yes |
+
+**Return value:**
+
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| [DataAbilityPredicates](arkts-arkdata-dataability-dataabilitypredicates-c.md) |
+
+## Examples
+
+```TypeScript
+// Sort the data by age first. For the data records with the same age, sort them by salary.
+dataAbilityPredicates.orderByDesc("AGE").orderByDesc("SALARY")
+```

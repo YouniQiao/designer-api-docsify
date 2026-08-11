@@ -1,6 +1,6 @@
 # Parameter (System API)
 
-无障碍节点元素执行特定操作时，为操作提供具体设置的参数值。详见[AccessibilityAction](../../apis-arkui/arkts-apis/arkts-arkui-common-accessibilityaction-e.md/arkts-arkui-common-accessibilityaction-e.md)（无障碍节点元素可执行的操作）。
+Sets the parameter for a specific operation when the accessibility node element executes this operation. For details,see [AccessibilityAction](../../apis-arkui/arkts-apis/arkts-arkui-common-accessibilityaction-e.md/arkts-arkui-common-accessibilityaction-e.md) (executable actions for accessibility node elements).
 
 **Since:** 20
 
@@ -62,7 +62,7 @@ Indicates the action for AccessibilityAction.EXECUTE_CUSTOM_ACTION.
 injectActionType?: InjectActionType
 ```
 
-设置注入的动作。
+Injection action.
 
 **Type:** [InjectActionType](arkts-accessibility-accessibility-injectactiontype-e-sys.md)
 
@@ -84,7 +84,7 @@ injectActionType?: InjectActionType
 offset?: string
 ```
 
-设置光标的偏移量，如：'1'。
+Cursor offset, for example, **'1'**.
 
 **Type:** string
 
@@ -104,7 +104,7 @@ offset?: string
 scrollType?: string
 ```
 
-组件滚动类型，包括'fullScreen'（全屏）和'halfScreen'（半屏）。
+Scroll type of the component. The options are **'fullScreen'** and **'halfScreen'**.
 
 **Type:** string
 
@@ -124,7 +124,7 @@ scrollType?: string
 selectTextBegin?: string
 ```
 
-选定组件内文本时的起始坐标，如：'2'。
+Start coordinate of the selected text in the component, for example, **'2'**.
 
 **Type:** string
 
@@ -144,7 +144,7 @@ selectTextBegin?: string
 selectTextEnd?: string
 ```
 
-选定组件内文本时的结束坐标，如：'8'。
+End coordinate of the selected text in the component, for example, **'8'**.
 
 **Type:** string
 
@@ -164,7 +164,7 @@ selectTextEnd?: string
 selectTextInForWard?: boolean
 ```
 
-表示选定组件内文本时是否向前选择。true表示向前选择，false表示不向前选择。
+Whether to forward select the text within the component. The value **true** indicates to forward select the text, and the value **false** indicates the opposite.
 
 **Type:** boolean
 
@@ -184,7 +184,7 @@ selectTextInForWard?: boolean
 setText?: string
 ```
 
-设置组件文本时文本内容。
+Text content of the component.
 
 **Type:** string
 
@@ -204,7 +204,7 @@ setText?: string
 spanId?: string
 ```
 
-对超链接文本进行点击操作时文本编号。
+ID of the hyperlink wrapped by the span tag.
 
 **Type:** string
 

@@ -1,14 +1,15 @@
 # TypefaceArguments
 
-提供字体属性配置的类，用于配置可变字体的属性参数（如字重维度等轴标签及对应属性值）。
+This module defines a struct for setting typeface arguments.
 
-> **说明：**
+> **NOTE：**
 > 
-> - 本Class首批接口从API version 20开始支持。
+> - The initial APIs of this class are supported since API version 20.
 > 
-> - 本模块使用屏幕物理像素单位px。
+> - This module uses the physical pixel unit, px.
 > 
-> - 本模块为单线程模型策略，需要调用方自行管理线程安全和上下文状态的切换。
+> - The module operates under a single-threaded model. The caller needs to manage thread safety and context state
+> transitions.
 
 **Since:** 20
 
@@ -30,7 +31,7 @@ import { drawing } from 'kits/@kit.ArkGraphics2D';
 addVariation(axis: string, value: number)
 ```
 
-给字体属性添加可变维度轴标签及对应的属性值。
+Defines the typeface weight.
 
 **Since:** 20
 
@@ -53,7 +54,7 @@ addVariation(axis: string, value: number)
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 25900001 | Parameter error. Possible causes: Incorrect parameter range. |
+| [25900001](../errorcode-drawing.md#25900001-abnormal-parameter-value) | Parameter error. Possible causes: Incorrect parameter range. |
 
 ## addVariation
 
@@ -86,7 +87,7 @@ Adds variation axis for the TypefaceArguments.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 25900001 | Parameter error. Possible causes: Incorrect parameter range. |
+| [25900001](../errorcode-drawing.md#25900001-abnormal-parameter-value) | Parameter error. Possible causes: Incorrect parameter range. |
 
 ## constructor
 
@@ -94,7 +95,7 @@ Adds variation axis for the TypefaceArguments.
 constructor()
 ```
 
-字体属性的构造函数。
+Constructor for typeface arguments.
 
 **Since:** 20
 

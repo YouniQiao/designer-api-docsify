@@ -4,7 +4,7 @@
 export type ConnectOptions = _ConnectOptions
 ```
 
-在连接指定的后台服务时作为入参，用于接收与后台服务的连接状态。
+Defines the connection options. It is used as an input parameter for connection to a background service, to receive  the connection status with the background service.
 
 **Since:** 9
 

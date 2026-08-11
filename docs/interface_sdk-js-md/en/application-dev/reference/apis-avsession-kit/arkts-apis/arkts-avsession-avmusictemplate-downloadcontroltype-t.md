@@ -4,7 +4,7 @@
 type DownloadControlType = 'startDownload' | 'deleteDownload' | 'resumeDownload' | 'pauseDownload'
 ```
 
-定义下载操作的控制类型，包括开始下载、删除下载、恢复下载和暂停下载。该类型可取的值为下表字符串。
+Download control type startDownload & deleteDownload, resumeDownload, pauseDownload.
 
 **Since:** 23
 

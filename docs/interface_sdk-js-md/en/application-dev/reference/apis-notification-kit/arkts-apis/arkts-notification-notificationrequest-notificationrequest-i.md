@@ -1,6 +1,6 @@
 # NotificationRequest
 
-定义了通知请求的数据结构，用于描述一条通知的全部信息，包括通知内容、标识、展示样式、交互行为等。
+Defines the data structure of a notification request, which is used to describe all information about a notification, including the notification content, identifier, display style, and interaction behavior.
 
 **Since:** 7
 
@@ -16,7 +16,7 @@
 actionButtons?: Array<NotificationActionButton>
 ```
 
-通知按钮，默认为空。一条通知中最多包含两个按钮。从API version 16开始，`wearable`设备一条通知最多包含三个按钮。
+Notification button. This parameter is left empty by default. A notification can contain a maximum of two buttons. Since API version 16, a notification can contain a maximum of three buttons for wearables.
 
 **Type:** Array&lt;[NotificationActionButton](arkts-notification-notificationactionbutton-notificationactionbutton-i.md)&gt;
 
@@ -34,7 +34,7 @@ actionButtons?: Array<NotificationActionButton>
 appMessageId?: string
 ```
 
-应用发送通知携带的唯一标识字段，用于通知去重。如果同一应用通过本地和云端等不同途径发布携带相同appMessageId的通知，设备只展示一条消息，之后收到的重复通知会被静默去重，不展示、不提醒。去重标识仅在通知发布的24小时内有效，超过24小时或者设备重启失效。大小不超过202字节，超出部分会被截断。默认为空。
+Unique identifier field carried when an application sends a notification, used for notification deduplication.If the same application publishes notifications carrying the same **appMessageId** through different channels such as local and cloud, the device displays only one message, and subsequent duplicate notifications received will be silently deduplicated without being displayed or alerted. The deduplication identifier is valid only within 24hours after the notification is published, and becomes invalid after 24 hours or after the device restarts. The size does not exceed 202 bytes, and the excess part will be truncated. The value is empty by default.
 
 **Type:** string
 
@@ -52,13 +52,7 @@ appMessageId?: string
 autoDeletedTime?: long
 ```
 
-通知定时清除时间。设置该参数可使通知在指定时间后自动清除。默认值为0。传入小于0的值或过去的时间值，该参数不生效。
-
-数据格式：时间戳。
-
-单位：毫秒。
-
-例如，希望某通知存留3秒（3000ms）后对其进行清除，则对应的清除时间为：new Date().getTime() + 3000。
+Scheduled auto-delete time for the notification. You can set this parameter to automatically delete the notification after the specified time. Default value: **0**. This parameter does not take effect if a value less than 0 or a past time is passed in.Data format: timestamp. Unit: millisecond. For example, to delete a notification after it has been retained for3 seconds (3000 ms), the corresponding deletion time is: **new Date().getTime()** + 3000.
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：long
 
@@ -76,7 +70,7 @@ autoDeletedTime?: long
 badgeIconStyle?: int
 ```
 
-通知角标类型。预留能力，暂未支持。
+Notification badge type. Not supported currently.
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
@@ -94,13 +88,13 @@ badgeIconStyle?: int
 badgeNumber?: long
 ```
 
-应用图标上显示的通知数，该数量累计展示，默认值为0。
+Number of notifications displayed on the application icon. The value is accumulated. The default value is **0**.
 
-当`badgeNumber`取值小于或等于0时，将忽略本次角标设定。
+If the value of **badgeNumber** is less than or equal to 0, the badge number is not displayed;
 
-当角标累加设定个数取值大于99时，通知角标将显示99+。
+if the value is greater than 99, **99+** is displayed on the badge.
 
-例如，应用发布3条通知，`badgeNumber`依次设置为2、0、3，应用将依次展示为2、2、5。
+For example, if an application publishes three notifications, and `badgeNumber` is set to **2**, **0**, and **3** in sequence, the application displays **2**, **2**, and **5** accordingly.
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：long
 
@@ -118,7 +112,7 @@ badgeNumber?: long
 color?: long
 ```
 
-通知背景颜色。预留能力，暂未支持。
+Background color of the notification. Not supported currently.
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：long
 
@@ -136,7 +130,7 @@ color?: long
 colorEnabled?: boolean
 ```
 
-通知背景颜色是否使能。预留能力，暂未支持。
+Whether the notification background color can be enabled. Not supported currently.
 
 **Type:** boolean
 
@@ -154,7 +148,7 @@ colorEnabled?: boolean
 content: NotificationContent
 ```
 
-通知展示内容。包括通知标题、正文等。
+Notification display content, including the notification title and body.
 
 **Type:** [NotificationContent](arkts-notification-notificationcontent-notificationcontent-i.md)
 
@@ -172,7 +166,7 @@ content: NotificationContent
 readonly creatorBundleName?: string
 ```
 
-创建通知的应用名称。
+Name of the application that creates the notification.
 
 **Type:** string
 
@@ -190,7 +184,7 @@ readonly creatorBundleName?: string
 readonly creatorPid?: int
 ```
 
-创建通知的PID。
+PID used for creating the notification.
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
@@ -208,7 +202,7 @@ readonly creatorPid?: int
 readonly creatorUid?: int
 ```
 
-创建通知的应用UID。
+UID of the application that creates the notification.
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
@@ -226,7 +220,7 @@ readonly creatorUid?: int
 readonly creatorUserId?: int
 ```
 
-创建通知的用户ID。
+ID of the user who creates the notification.
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
@@ -244,11 +238,7 @@ readonly creatorUserId?: int
 deliveryTime?: long
 ```
 
-通知发送时间。系统自动生成，无需开发者配置。
-
-数据格式：时间戳。
-
-单位：毫秒。
+Notification delivery time. This parameter is automatically generated by the system and does not require configuration. Data format: timestamp. Unit: millisecond.
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：long
 
@@ -266,7 +256,7 @@ deliveryTime?: long
 distributedOption?: DistributedOptions
 ```
 
-分布式通知的选项。预留能力，暂未支持。
+Distributed notification options. Not supported currently.
 
 **Type:** [DistributedOptions](arkts-notification-notificationrequest-distributedoptions-i.md)
 
@@ -284,12 +274,13 @@ distributedOption?: DistributedOptions
 extraInfo?: { [key: string]: any }
 ```
 
-扩展参数。为应用提供定制服务。默认为空。
+Extended parameters, used to provide custom services for applications. This parameter is left blank by default.
 
-以下Key由系统赋值，开发者手动修改也不会生效，系统在数据传递时会自动修改为实际值。
+The key value is assigned by the system. Manual modification does not take effect. The system automatically changes the value to the actual value during data transmission.
 
-- 'ohos.notificationManager.wantUri'：用户点击通知时传递给应用的[Want](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-want-want-c.md/arkts-ability-app-ability-want-want-c.md) 中的uri字段，使用  
-[getActiveNotifications](arkts-notification-notification-getactivenotifications-depr-f.md#getactivenotifications)接口获取该信息。
+- **ohos.notificationManager.wantUri**: **uri** field in the [Want](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-want-want-c.md/arkts-ability-app-ability-want-want-c.md) object,   
+which is passed to the application when the user taps a notification. This field can be obtained via the   
+[getActiveNotifications](arkts-notification-notification-getactivenotifications-depr-f.md#getactivenotifications)API call.
 
 **Type:** { [key: string]: any }
 
@@ -307,7 +298,7 @@ extraInfo?: { [key: string]: any }
 groupName?: string
 ```
 
-通知所属组。当不同通知的groupName相同时，这些通知将成组展示。大小不超过202字节，超出部分会被截断。默认为空。
+Group to which the notification belongs. When different notifications have the same **groupName**, these notifications will be displayed as a group. The size does not exceed 202 bytes, and the excess part will be truncated. The value is empty by default.
 
 **Type:** string
 
@@ -325,7 +316,7 @@ groupName?: string
 readonly hashCode?: string
 ```
 
-通知唯一标识。
+Unique ID of the notification.
 
 **Type:** string
 
@@ -343,7 +334,7 @@ readonly hashCode?: string
 id?: int
 ```
 
-通知ID，默认值为0。若已存在相同ID的通知，则更新该通知；若不存在相同ID的通知，则创建新的通知。
+Notification ID. The default value is **0**. If a notification with the same ID exists, the notification is updated. If no notification with the same ID exists, a new notification is created.
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
@@ -361,10 +352,13 @@ id?: int
 isAlertOnce?: boolean
 ```
 
-发布或更新该通知时，是否只进行一次通知提醒，默认值为false。
+Whether to send a notification only once when the notification is published or updated. The default value is   
+**false**.
 
-- true：仅首次发布通知时进行提醒，后续更新该通知时，提醒方式变更为[LEVEL_LOW](arkts-notification-notificationmanager-slotlevel-e.md)。  
-- false：每次均按照配置的通知提醒方式进行提醒。
+- **true**: A notification is sent only when the notification is published for the first time. For subsequent   
+update, the notification mode is changed to   
+[LEVEL_LOW](arkts-notification-notificationmanager-slotlevel-e.md).  
+- **false**: A notification is sent based on the configured notification mode.
 
 **Type:** boolean
 
@@ -382,7 +376,7 @@ isAlertOnce?: boolean
 isCountDown?: boolean
 ```
 
-是否显示倒计时时间。预留能力，暂未支持。
+Whether to display the countdown time. Not supported currently.
 
 **Type:** boolean
 
@@ -400,7 +394,7 @@ isCountDown?: boolean
 isFloatingIcon?: boolean
 ```
 
-是否显示状态栏图标。预留能力，暂未支持。
+Whether the notification is displayed as a floating icon in the status bar. Not supported currently.
 
 **Type:** boolean
 
@@ -418,7 +412,7 @@ isFloatingIcon?: boolean
 isOngoing?: boolean
 ```
 
-预留能力，暂未支持。
+Not supported currently.
 
 **Type:** boolean
 
@@ -436,7 +430,7 @@ isOngoing?: boolean
 isStopwatch?: boolean
 ```
 
-是否显示已用时间。预留能力，暂未支持。
+Whether to display the stopwatch. Not supported currently.
 
 **Type:** boolean
 
@@ -454,7 +448,7 @@ isStopwatch?: boolean
 isUnremovable?: boolean
 ```
 
-预留能力，暂未支持。
+Not supported currently.
 
 **Type:** boolean
 
@@ -472,11 +466,7 @@ isUnremovable?: boolean
 label?: string
 ```
 
-通知标签。
-
-label字段的功能类似于id，可以单独使用，也可与id结合共同作为通知的标识。优先推荐使用id。
-
-如果发布通知时label不为空，那么在更新或删除该通知时，也需要指定相应的label。大小不超过202字节，超出部分会被截断。默认为空。
+Notification label. The **label** field functions similarly to an ID and can be used alone or combined with the ID to serve as the notification identifier. It is recommended to use the ID. If the **label** is not empty when a notification is published, the corresponding **label** must also be specified when the notification is updated or deleted. The size does not exceed 202 bytes, and the excess part will be truncated. The value is empty by default.
 
 **Type:** string
 
@@ -494,8 +484,8 @@ label字段的功能类似于id，可以单独使用，也可与id结合共同�
 largeIcon?: image.PixelMap
 ```
 
-通知大图标，默认为空。图标像素的总字节数不超过192KB（图标像素的总字节数通过  
-[getPixelBytesNumber](../../apis-image-kit/arkts-apis/arkts-image-image-pixelmap-i.md/arkts-image-image-pixelmap-i.md#getpixelbytesnumber)获取），超出后设置不生效。未设置`largeIcon`时，通知将不展示大图标。建议图标像素长宽为128*128。实际显示效果依赖于设备能力和通知中心UI样式。
+Large notification icon. This parameter is left empty by default. The total number of the icon pixel bytes cannot exceed 192 KB (which is obtained through  
+[getPixelBytesNumber](../../apis-image-kit/arkts-apis/arkts-image-image-pixelmap-i.md/arkts-image-image-pixelmap-i.md#getpixelbytesnumber)). The setting does not take effect if the limit is exceeded. When **largeIcon** is not set, the notification does not display a large icon. The recommended icon size is 128 × 128 pixels. The display effect depends on the device capability and notification center UI style.
 
 **Type:** image.PixelMap
 
@@ -513,14 +503,16 @@ largeIcon?: image.PixelMap
 notificationFlags?: NotificationFlags
 ```
 
-通知标志位设置，默认为空。从API version 23开始成为可写参数，设置该参数可削减通知的提醒方式，当通知渠道类型为  
-[LIVE_VIEW](arkts-notification-notificationmanager-slottype-e.md)时，该参数设置不生效。
+Notification flags. The default value is empty. This parameter is writable since API version 23. You can set this parameter to reduce the notification modes. This parameter does not take effect when the notification slot type is LIVE_VIEW.
 
 **Type:** [NotificationFlags](arkts-notification-notificationflags-notificationflags-i.md)
 
 **Since:** 8
 
 **ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
+
+**Model restriction:** 
+- API version 23 and later: This API can be used in both the stage model and FA model.
 
 <!--Device-NotificationRequest-notificationFlags?: NotificationFlags--><!--Device-NotificationRequest-notificationFlags?: NotificationFlags-End-->
 
@@ -532,7 +524,7 @@ notificationFlags?: NotificationFlags
 notificationSlotType?: notificationManager.SlotType
 ```
 
-通知渠道类型，默认值为OTHER_TYPES。不同渠道类型的通知提醒方式不同。
+Notification slot type. The default value is **OTHER_TYPES**. The notification reminder mode varies depending on the notification slot type.
 
 **Type:** notificationManager.SlotType
 
@@ -550,10 +542,7 @@ notificationSlotType?: notificationManager.SlotType
 overlayIcon?: image.PixelMap
 ```
 
-通知重叠图标，默认为空。图标像素的总字节数不超过192KB（图标像素的总字节数通过  
-[getPixelBytesNumber](../../apis-image-kit/arkts-apis/arkts-image-image-pixelmap-i.md/arkts-image-image-pixelmap-i.md#getpixelbytesnumber)获取），超出后设置不生效。未设置`overlayIcon`时，通知将不展示重叠图标。
-
-此接口只在[notificationSlotType](arkts-notification-notificationrequest-notificationrequest-i.md)类型设置为SOCIAL_COMMUNICATION时生效。建议图标像素长宽为128*128。实际显示效果依赖于设备能力和通知中心UI样式。
+Notification overlay icon. This parameter is left empty by default. The total bytes of the icon pixels cannot exceed 192 KB.
 
 **Type:** image.PixelMap
 
@@ -571,7 +560,7 @@ overlayIcon?: image.PixelMap
 priorityNotificationType?: notificationManager.PriorityNotificationType
 ```
 
-通知优先级类型，默认值为OTHER。设置该参数可使通知置顶，并且在通知中心以突出方式显示。&lt;!--RP2--&gt;&lt;!--RP2End--&gt;实际显示效果依赖于设备能力和通知中心UI样式。
+Notification priority type. The default value is **OTHER**. If this parameter is set, the notification is pinned on the top and displayed in a highlighted manner in the notification center. The actual display effect depends on the device capability and notification center UI style.
 
 **Type:** notificationManager.PriorityNotificationType
 
@@ -591,9 +580,7 @@ priorityNotificationType?: notificationManager.PriorityNotificationType
 removalWantAgent?: WantAgent
 ```
 
-封装了应用的行为意图，移除通知时触发该行为，默认为空。
-
-当前不支持跳转UIAbility，只支持发布公共事件（即[WantAgentInfo](../../apis-ability-kit/arkts-apis/arkts-ability-wantagentinfo-wantagentinfo-i.md/arkts-ability-wantagentinfo-wantagentinfo-i.md)的actionType字段取值为4）。
+Behavior intent of an application, which is triggered when a notification is removed. This parameter is left empty by default. Currently, redirection to UIAbility is not supported. Only common events can be published (that is, the **actionType** field of WantAgentInfo is set to **4**).
 
 **Type:** [WantAgent](../../apis-ability-kit/arkts-apis/arkts-ability-wantagent-t.md)
 
@@ -611,7 +598,7 @@ removalWantAgent?: WantAgent
 showDeliveryTime?: boolean
 ```
 
-是否显示分发时间。预留能力，暂未支持。
+Whether to display the time when the notification is delivered. Not supported currently.
 
 **Type:** boolean
 
@@ -629,7 +616,7 @@ showDeliveryTime?: boolean
 slotType?: notification.SlotType
 ```
 
-通知渠道类型，默认值为OTHER_TYPES。
+Notification slot type. The default value is **OTHER_TYPES**.
 
 **Type:** notification.SlotType
 
@@ -651,8 +638,8 @@ slotType?: notification.SlotType
 smallIcon?: image.PixelMap
 ```
 
-通知小图标，默认为空。图标像素的总字节数不超过192KB（图标像素的总字节数通过  
-[getPixelBytesNumber](../../apis-image-kit/arkts-apis/arkts-image-image-pixelmap-i.md/arkts-image-image-pixelmap-i.md#getpixelbytesnumber)获取），超出后设置不生效。未设置`smallIcon`时，通知将展示应用默认图标。建议图标像素长宽为128*128。实际显示效果依赖于设备能力和通知中心UI样式。
+Small notification icon. This parameter is left empty by default. The total number of the icon pixel bytes cannot exceed 192 KB (which is obtained through  
+[getPixelBytesNumber](../../apis-image-kit/arkts-apis/arkts-image-image-pixelmap-i.md/arkts-image-image-pixelmap-i.md#getpixelbytesnumber)). The setting does not take effect if the limit is exceeded. When **smallIcon** is not set, the notification displays the default application icon. The recommended icon size is 128 × 128 pixels. The display effect depends on the device capability and notification center UI style.
 
 **Type:** image.PixelMap
 
@@ -670,13 +657,16 @@ smallIcon?: image.PixelMap
 sound?: string
 ```
 
-应用通知自定义铃声资源路径，默认为空。支持两种音频资源来源：
+Path of the custom application notification ringtone resource. By default, this parameter is left empty. The following two types of audio resources are supported:
 
-- 资源文件：应用预置的音频文件，资源文件必须放在resources/rawfile目录下，使用时直接传入文件名。  
-- 沙箱文件：网络下载或者用户生成的音频文件，必须放在沙箱文件目录EL1区域的files目录或  
-者其子目录下，传入格式为uri::{fileUri}，其中fileUri是通过[getUriFromPath](../../apis-core-file-kit/arkts-apis/arkts-corefile-fileuri-geturifrompath-f.md/arkts-corefile-fileuri-geturifrompath-f.md#geturifrompath)获取的路径。例如，应用将下载的音频资源demo.mp3传入沙箱文件目录/data/storage/el1/base/files/，通过getUriFromPath获取的路径为file://{bundleName}/data/storage/el1/base/files/demo.mp3，使用该路径发布通知即可播放应用下载的音频资源。
+- Resource file: Audio file preconfigured in the application. It must be stored in the **resources/rawfile**   
+directory. To use the resource file, directly pass the file name.  
+- Sandbox file: Audio file downloaded from the network or generated by the user. It must be stored in the **files**  
+directory or its subdirectory in the EL1 area of the   
+[sandbox file directory](../../../file-management/app-sandbox-directory.md#application-sandbox-directory-and-application-sandbox-path). The input format is **uri::{fileUri}**, where **fileUri** is the path obtained through   
+[getUriFromPath](../../apis-core-file-kit/arkts-apis/arkts-corefile-fileuri-geturifrompath-f.md/arkts-corefile-fileuri-geturifrompath-f.md#geturifrompath). For example, if an application transfers the downloaded audio resource demo.mp3 to the sandbox file directory /data/storage/el1/base/files/, the path obtained through **getUriFromPath** is **file://{bundleName}/data/storage/el1/base/files/demo.mp3**. You can use this path to release a notification to play the audio resource downloaded by the application.
 
-支持m4a、aac、mp3、ogg、wav、flac、amr等格式。
+Supported formats: M4A, AAC, MP3, OGG, WAV, FLAC, and AMR.
 
 **Type:** string
 
@@ -694,10 +684,11 @@ sound?: string
 tapDismissed?: boolean
 ```
 
-点击通知携带的wantAgent或actionButtons时，该通知是否自动清除。当通知携带wantAgent或actionButtons时该字段生效。默认值为true。
+Whether the notification is automatically cleared when the notification carries **wantAgent** or **actionButtons**.This parameter is valid only when the notification carries **wantAgent** or **actionButtons**. The default value is  
+**true**.
 
-- true：点击通知或按钮后，自动删除当前通知。  
-- false：点击通知或按钮后，保留当前通知。
+- **true**: The current notification is automatically cleared after the notification or button is tapped.  
+- **false**: The current notification is retained after the notification or button is tapped.
 
 **Type:** boolean
 
@@ -715,7 +706,7 @@ tapDismissed?: boolean
 template?: NotificationTemplate
 ```
 
-通知模板，默认为空。
+Notification template. This parameter is left empty by default.
 
 **Type:** [NotificationTemplate](arkts-notification-notificationtemplate-notificationtemplate-i.md)
 
@@ -733,10 +724,12 @@ template?: NotificationTemplate
 updateOnly?: boolean
 ```
 
-是否仅更新通知，默认值为false。
+Whether to update notifications only. The default value is **false**.
 
-- true：若已存在相同ID的通知，则更新该通知；若不存在相同ID的通知，则更新失败，并且不创建新的通知。  
-- false：若已存在相同ID的通知，则更新该通知；若不存在相同ID的通知，则创建新的通知。
+- **true**: If a notification with the same ID exists, the notification is updated. If no notification with the   
+same ID exists, the update fails and no new notification is created.  
+- **false**: If a notification with the same ID exists, the notification is updated. If no notification with the   
+same ID exists, a new notification is created.
 
 **Type:** boolean
 
@@ -754,7 +747,7 @@ updateOnly?: boolean
 wantAgent?: WantAgent
 ```
 
-封装了应用的行为意图，点击通知时触发该行为，默认为空。
+Behavior intent of an application, which is triggered when a notification is clicked. This parameter is left empty by default.
 
 **Type:** [WantAgent](../../apis-ability-kit/arkts-apis/arkts-ability-wantagent-t.md)
 

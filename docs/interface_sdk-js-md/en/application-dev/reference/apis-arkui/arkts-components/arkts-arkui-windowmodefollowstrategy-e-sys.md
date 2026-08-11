@@ -1,6 +1,6 @@
 # WindowModeFollowStrategy (System API)
 
-表示不同类型的WindowModeFollowStrategy的枚举。
+Enumerates the following strategies of the window mode.
 
 **Since:** 18
 
@@ -18,7 +18,7 @@
 FOLLOW_HOST_WINDOW_MODE = 0
 ```
 
-跟随宿主窗口模式。
+The window mode follows the host.
 
 **Since:** 18
 
@@ -38,7 +38,7 @@ FOLLOW_HOST_WINDOW_MODE = 0
 FOLLOW_UI_EXTENSION_ABILITY_WINDOW_MODE = 1
 ```
 
-跟随UIExtensionAbility。
+The window mode follows the UIExtensionAbility.
 
 **Since:** 18
 

@@ -12,7 +12,7 @@ import { wallpaper } from 'kits/@kit.BasicServicesKit';
 function getMinHeightSync(): int
 ```
 
-获取壁纸的最小高度值。
+Obtains the minimum height of the wallpaper. in pixels. returns 0 if no wallpaper has been set.
 
 **Since:** 9
 
@@ -28,13 +28,13 @@ function getMinHeightSync(): int
 
 | Type | Description |
 | --- | --- |
-| ArkTS-Dyn: number  <br>ArkTS-Sta：int | 返回壁纸的最小高度值，单位是像素。如果返回值等于0，说明没有设置壁纸，调用者应该使用默认显示的高度值代替。 |
+| ArkTS-Dyn: number  <br>ArkTS-Sta：int | the number returned by the function. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 202 | permission verification failed, application which is not a system application uses system API. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | permission verification failed, application which is not a system application uses system API. |
 
 ## Examples
 

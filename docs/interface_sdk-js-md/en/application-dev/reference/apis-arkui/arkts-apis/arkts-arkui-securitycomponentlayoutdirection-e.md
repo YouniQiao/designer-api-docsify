@@ -1,6 +1,6 @@
 # SecurityComponentLayoutDirection
 
-安全控件上图标和文字的排列方向。
+Enumerates the layout directions of the icon and text on a security component.
 
 **Since:** 10
 
@@ -16,7 +16,7 @@
 HORIZONTAL = 0
 ```
 
-安全控件上图标和文字分布的方向为水平排列。
+The icon and text on the security component are arranged horizontally.
 
 **Since:** 10
 
@@ -36,7 +36,7 @@ HORIZONTAL = 0
 VERTICAL = 1
 ```
 
-安全控件上图标和文字分布的方向为垂直排列。
+The icon and text on the security component are arranged vertically.
 
 **Since:** 10
 

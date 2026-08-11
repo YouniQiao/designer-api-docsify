@@ -1,6 +1,6 @@
 # ContinuousTaskDetailedCancelReason
 
-长时任务取消详细原因。
+Describes the detailed reason for canceling a continuous task.
 
 **Since:** 26.0.0
 
@@ -16,7 +16,7 @@
 USER_CANCEL_REMOVE_NOTIFICATION = 3
 ```
 
-用户移除通知。
+User removal notification.
 
 **Since:** 26.0.0
 
@@ -34,7 +34,7 @@ USER_CANCEL_REMOVE_NOTIFICATION = 3
 SYSTEM_CANCEL_DATA_TRANSFER_LOW_SPEED = 4
 ```
 
-申请DATA_TRANSFER类型长时任务，但是数据传输速率低。
+A continuous task of the **DATA_TRANSFER** type is requested, but the data transmission rate is low.
 
 **Since:** 26.0.0
 
@@ -52,7 +52,7 @@ SYSTEM_CANCEL_DATA_TRANSFER_LOW_SPEED = 4
 SYSTEM_CANCEL_AUDIO_PLAYBACK_NOT_RUNNING = 6
 ```
 
-申请AUDIO_PLAYBACK类型长时任务，但是未播放音视频。
+A continuous task of the **AUDIO_PLAYBACK** type is requested, but the audio and video are not played.
 
 **Since:** 26.0.0
 
@@ -70,7 +70,7 @@ SYSTEM_CANCEL_AUDIO_PLAYBACK_NOT_RUNNING = 6
 SYSTEM_CANCEL_AUDIO_RECORDING_NOT_RUNNING = 7
 ```
 
-申请AUDIO_RECORDING类型长时任务，但是未录制。
+A continuous task of the **AUDIO_RECORDING** type is requested, but audio recording is not in progress.
 
 **Since:** 26.0.0
 
@@ -88,7 +88,7 @@ SYSTEM_CANCEL_AUDIO_RECORDING_NOT_RUNNING = 7
 SYSTEM_CANCEL_NOT_USE_LOCATION = 8
 ```
 
-申请LOCATION类型长时任务，但是未使用定位导航。
+A continuous task of the **LOCATION** type is requested, but the location service is not in use.
 
 **Since:** 26.0.0
 
@@ -106,7 +106,7 @@ SYSTEM_CANCEL_NOT_USE_LOCATION = 8
 SYSTEM_CANCEL_NOT_USE_BLUETOOTH = 9
 ```
 
-申请BLUETOOTH_INTERACTION类型长时任务，但是未使用蓝牙相关业务。
+A continuous task of the **BLUETOOTH_INTERACTION** type is requested, but Bluetooth is not in use.
 
 **Since:** 26.0.0
 
@@ -124,7 +124,7 @@ SYSTEM_CANCEL_NOT_USE_BLUETOOTH = 9
 SYSTEM_CANCEL_NOT_USE_MULTI_DEVICE = 10
 ```
 
-申请MULTI_DEVICE_CONNECTION类型长时任务，但是未使用多设备互联。
+A continuous task of the **MULTI_DEVICE_CONNECTION** type is requested, but the multi-device connection service is not in use.
 
 **Since:** 26.0.0
 
@@ -142,7 +142,7 @@ SYSTEM_CANCEL_NOT_USE_MULTI_DEVICE = 10
 SYSTEM_CANCEL_USE_ILLEGALLY = 11
 ```
 
-使用非法类型的长时任务，如申请AUDIO_PLAYBACK类型长时任务，但是使用音视频播放及定位导航业务。
+A continuous task of an invalid type is used. For example, a continuous task of the **AUDIO_PLAYBACK** type is requested, but the audio playback and location services are in use.
 
 **Since:** 26.0.0
 
@@ -160,7 +160,7 @@ SYSTEM_CANCEL_USE_ILLEGALLY = 11
 SYSTEM_CANCEL_DATA_TRANSFER_NOT_UPDATE = 12
 ```
 
-申请DATA_TRANSFER类型长时任务，但是进度长时间（首次更新超过10分钟）未更新。
+A continuous task of the **DATA_TRANSFER** type is requested, but the progress is not updated for a long time (the first update takes more than 10 minutes).
 
 **Since:** 26.0.0
 
@@ -178,7 +178,7 @@ SYSTEM_CANCEL_DATA_TRANSFER_NOT_UPDATE = 12
 SYSTEM_CANCEL_VOIP_NOT_RUNNING = 13
 ```
 
-申请VOIP类型长时任务，但是未检测到音频流或者录音流。
+A continuous task of the **VOIP** type is requested, but no audio stream or recording stream is in progress.
 
 **Since:** 26.0.0
 
@@ -196,7 +196,7 @@ SYSTEM_CANCEL_VOIP_NOT_RUNNING = 13
 SYSTEM_CANCEL_USER_UNAUTHORIZED = 14
 ```
 
-申请特殊场景类型长时任务，但是用户未授权。
+A continuous task of the special scenario type is requested, but the user is not authorized.
 
 **Since:** 26.0.0
 

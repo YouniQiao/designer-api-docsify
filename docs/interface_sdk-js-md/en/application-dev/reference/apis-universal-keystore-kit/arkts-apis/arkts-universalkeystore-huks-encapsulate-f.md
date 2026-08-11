@@ -13,7 +13,7 @@ function encapsulate(keyAlias: string, params: HuksParam[],
       sharedKeyAlias?: string, sharedKeyParams?: HuksParam[]): Promise<HuksReturnResult>
 ```
 
-后量子加密密钥封装操作，支持HUKS密钥管理或由应用程序本身决定。如果应用程序选择管理密钥，对称密钥携带在HuksReturnResult的outData字段中。
+Post-Quantum Cryptography key encapsulation operation, supporting key management by HUKS or by the application itself. If the application chooses to manage the key,the symmetric key is carried in the outData field of HuksReturnResult.
 
 **Since:** 26.0.0
 
@@ -29,34 +29,34 @@ function encapsulate(keyAlias: string, params: HuksParam[],
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| keyAlias | string | Yes | 后量子加密算法的密钥名称 |
-| params | [HuksParam](arkts-universalkeystore-huks-huksparam-i.md)[] | Yes | 表示封装属性 |
-| sharedKeyAlias | string | No | 封装密钥的密钥别名。 如果使用HUKS进行密钥管理，则必须指定该参数。 如果应用程序自己管理密钥，则忽略此参数 |
-| sharedKeyParams | [HuksParam](arkts-universalkeystore-huks-huksparam-i.md)[] | No | 表示封装的密钥的属性。 如果使用HUKS进行密钥管理，则必须指定该参数。 如果应用程序自己管理密钥，则忽略此参数 |
+| keyAlias | string | Yes | indicates the name of the key for the Post-Quantum Cryptography algorithm. |
+| params | [HuksParam](arkts-universalkeystore-huks-huksparam-i.md)[] | Yes | indicates the encapsulation properties. |
+| sharedKeyAlias | string | No | indicates the key alias of the encapsulated key. If HUKS is used for key management, this parameter must be specified. If the application manages the key itself, this parameter is ignored. |
+| sharedKeyParams | [HuksParam](arkts-universalkeystore-huks-huksparam-i.md)[] | No | indicates the properties of the encapsulated key. If HUKS is used for key management, this parameter must be specified. If the application manages the key itself, this parameter is ignored. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;HuksReturnResult&gt; | 函数返回的promise。 |
+| Promise&lt;HuksReturnResult&gt; | The promise returned by the function. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 801 | API is not supported. |
-| 12000018 | The input parameter is invalid. |
-| 12000017 | The key with the same alias already exists. |
+| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | API is not supported. |
+| [12000018](../errorcode-huks.md#12000018-invalid-input-parameter) | The input parameter is invalid. |
+| [12000017](../errorcode-huks.md#12000017-duplicate-key-alias) | The key with the same alias already exists. |
 | 12000016 | The screen lock password is not set. |
-| 12000006 | The algorithm engine reported an error, please check the input parameters. |
-| 12000005 | IPC communication failed. |
-| 12000004 | File operation failed. |
-| 12000003 | The algorithm parameters are invalid, please check the algorithm parameters. |
-| 12000002 | Algorithm parameters are missing, please check the algorithm parameters. |
-| 12000001 | Algorithm mode is not supported |
-| 12000015 | Failed to obtain the security information via UserIAM. |
-| 12000014 | Memory is insufficient. |
-| 12000013 | Queried credential does not exist |
-| 12000012 | Device environment or input parameters are abnormal. |
-| 12000011 | The queried key does not exist, please check the key-related parameters. |
+| [12000006](../errorcode-huks.md#12000006-algorithm-library-operation-failed) | The algorithm engine reported an error, please check the input parameters. |
+| [12000005](../errorcode-huks.md#12000005-ipc-error) | IPC communication failed. |
+| [12000004](../errorcode-huks.md#12000004-file-error) | File operation failed. |
+| [12000003](../errorcode-huks.md#12000003-invalid-key-algorithm-parameter) | The algorithm parameters are invalid, please check the algorithm parameters. |
+| [12000002](../errorcode-huks.md#12000002-missing-key-algorithm-parameter) | Algorithm parameters are missing, please check the algorithm parameters. |
+| [12000001](../errorcode-huks.md#12000001-feature-not-supported) | Algorithm mode is not supported |
+| [12000015](../errorcode-huks.md#12000015-failed-to-invoke-other-system-services) | Failed to obtain the security information via UserIAM. |
+| [12000014](../errorcode-huks.md#12000014-insufficient-memory) | Memory is insufficient. |
+| [12000013](../errorcode-huks.md#12000013-the-credential-does-not-exist) | Queried credential does not exist |
+| [12000012](../errorcode-huks.md#12000012-external-error) | Device environment or input parameters are abnormal. |
+| [12000011](../errorcode-huks.md#12000011-the-entity-does-not-exist) | The queried key does not exist, please check the key-related parameters. |
 

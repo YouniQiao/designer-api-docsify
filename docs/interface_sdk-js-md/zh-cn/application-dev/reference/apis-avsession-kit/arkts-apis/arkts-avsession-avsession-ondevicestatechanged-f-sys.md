@@ -1,11 +1,5 @@
 # onDeviceStateChanged（系统接口）
 
-## 导入模块
-
-```TypeScript
-import { avSession } from 'kits/@kit.AVSessionKit';
-```
-
 ## onDeviceStateChanged
 
 ```TypeScript
@@ -36,6 +30,6 @@ Registers a system callback for the device connection phase.The callback include
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 201 | Permission denied. |
-| 202 | Not System App. |
+| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not System App. |
 

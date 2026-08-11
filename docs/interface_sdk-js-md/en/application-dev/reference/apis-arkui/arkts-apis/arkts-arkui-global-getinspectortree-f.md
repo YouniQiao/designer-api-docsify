@@ -6,7 +6,7 @@
 export declare function getInspectorTree(): Object
 ```
 
-获取当前组件树。
+Get components tree.
 
 **Since:** 11
 

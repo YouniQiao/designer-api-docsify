@@ -1,6 +1,6 @@
 # ImmersiveOptions
 
-沉浸式材质参数。
+Immersive material parameters.
 
 **Since:** 26.0.0
 
@@ -22,13 +22,13 @@ import { uiMaterial } from 'kits/@kit.ArkUI';
 applyShadow?: boolean
 ```
 
-是否添加材质的阴影效果。
+Whether to add a shadow effect for a material.
 
-当该参数为true时，材质中的阴影效果固定生效，优先于[shadow](arkts-arkui-common-commonmethod-i.md#shadow)通用属性。当该参数为false时，shadow通用属性生效，材质的阴影效果不生效。
+If this parameter is set to **true**, the added shadow effect in the material always takes effect, which takes precedence over the general [shadow](arkts-arkui-common-commonmethod-i.md#shadow) attribute. If this parameter is set to **false**, only the general shadow attribute takes effect.
 
-**说明：**该参数仅对所有档位的算力设备的显示效果生效。
+Note: This parameter takes effect only for the display effect of devices with all levels of computing power.
 
-默认值：true
+Default value: **true**
 
 **Type:** boolean
 
@@ -50,25 +50,27 @@ applyShadow?: boolean
 colorInvert?: boolean
 ```
 
-设置了材质对象的节点的子树是否自动适配材质到背景色的反色。
+Whether the subtree of the node of the material object automatically adapts the material to the complementary color of the background color.
 
-若为false，则不会自动反色。
+**false** indicates the material is not automatically adapted to the complementary color of the background color.
 
-若为true，则只有材质参数足够薄时才会自动反色。具体能反色的材质由系统定义，材质样式至少为THIN或ULTRA_THIN，且与设置应用的沉浸光感的强弱配置相关。材质越薄、沉浸光感越强，越容易符合反色材质的要求。
+**true** indicates that the material is automatically adapted to the complementary color of the background color only when the material layer is thin enough. The materials that can be adapted to the complementary color are defined by the system. Such materials must have at least the **THIN** or **ULTRA_THIN** style, and are related to the strength configuration of the immersive light effect of the application. The thinner the material and the stronger the immersive light effect, the more likely the material meets the requirements for adapting to the complementary color.
 
-自动反色能力仅对部分属性接口设置特殊资源值时生效，生效的属性接口包括：Text组件的[fontColor](arkts-arkui-text-textattribute-i.md#fontcolor)，Button组件的  
-[fontColor](arkts-arkui-button-buttonattribute-i.md#fontcolor)，SymbolGlyph组件的  
-[fontColor](arkts-arkui-symbolglyph-symbolglyphattribute-i.md#fontcolor)，Image组件的  
-[fillColor](arkts-arkui-image-imageattribute-i.md#fillcolor)，Search组件的  
-[placeholderColor](arkts-arkui-search-searchattribute-i.md#placeholdercolor)、[fontColor](arkts-arkui-search-searchattribute-i.md#fontcolor)、  
-[searchIcon](arkts-arkui-search-searchattribute-i.md#searchicon)中的图标颜色、[cancelButton](arkts-arkui-search-searchattribute-i.md#cancelbutton)中的图标颜色、  
-[caretStyle](arkts-arkui-search-searchattribute-i.md#caretstyle)中的光标颜色，TabContent组件的  
-[tabBar](arkts-arkui-tabcontent-tabcontentattribute-i.md#tabbar)属性使用  
-[BottomTabBarStyle](arkts-arkui-tabcontent-bottomtabbarstyle-c.md)样式时其中的文本和图标颜色。
+The capability of automatically adapting the material to the complementary color takes effect only when special resource values are set for some attribute APIs. The attribute APIs include   
+[fontColor](arkts-arkui-text-textattribute-i.md#fontcolor) of the **Text** component,   
+[fontColor](arkts-arkui-button-buttonattribute-i.md#fontcolor) of the **Button** component,   
+[fontColor](arkts-arkui-symbolglyph-symbolglyphattribute-i.md#fontcolor) of the **SymbolGlyph** component,   
+[fillColor](arkts-arkui-image-imageattribute-i.md#fillcolor) of the **Image** component, icon colors in   
+[placeholderColor](arkts-arkui-search-searchattribute-i.md#placeholdercolor), [fontColor](arkts-arkui-search-searchattribute-i.md#fontcolor), and   
+[searchIcon](arkts-arkui-search-searchattribute-i.md#searchicon) of the **Search** component, icon colors in   
+[cancelButton](arkts-arkui-search-searchattribute-i.md#cancelbutton), caret colors in   
+[caretStyle](arkts-arkui-search-searchattribute-i.md#caretstyle), and text and icon colors in   
+[tabBar](arkts-arkui-tabcontent-tabcontentattribute-i.md#tabbar) of the   
+**TabContent** component when the [BottomTabBarStyle](arkts-arkui-tabcontent-bottomtabbarstyle-c.md) style is used.
 
-**说明：**该参数仅对高档和中档算力设备的显示效果生效。
+Note: This parameter takes effect only for the display effect of devices with high- and mid-level computing power.
 
-默认值：false
+Default value: **false**
 
 **Type:** boolean
 
@@ -90,11 +92,11 @@ colorInvert?: boolean
 interactive?: boolean
 ```
 
-是否为设置材质的组件设置交互形变效果。
+Whether to set an interactive deformation effect for the component with a material set.
 
-**说明：**该参数对所有档位的算力设备的显示效果生效。
+Note: This parameter takes effect for the display effect of devices with all levels of computing power.
 
-默认值：false
+Default value: **false**
 
 **Type:** boolean
 
@@ -116,11 +118,11 @@ interactive?: boolean
 lightEffect?: LightEffectOptions | null
 ```
 
-是否为设置材质的组件设置光感交互反馈效果。当该参数为null时，禁用光感交互反馈效果。
+Whether to set a light sensing interaction feedback effect for the component with a material set. If this parameter is set to null, the light sensing interaction feedback effect is disabled.
 
-**说明：**该参数对所有档位的算力设备的显示效果生效。
+Note: This parameter takes effect for the display effect of devices with all levels of computing power.
 
-默认值：undefined，不设置光感交互反馈效果。
+Default value: **undefined**, indicating that the light sensing interaction feedback effect is not set.
 
 **Type:** [LightEffectOptions](arkts-arkui-uimaterial-lighteffectoptions-i.md) \| null
 
@@ -140,11 +142,11 @@ lightEffect?: LightEffectOptions | null
 materialColor?: ResourceColor
 ```
 
-材质层赋色，该参数会为材质滤镜再混合一层纯色效果。该颜色需要带一定的透明度值，不能为纯不透明的颜色，否则会将材质滤镜效果完全遮挡。
+Coloring of the material layer. This parameter is used to add a pure color effect for the material filter. The pure color must have a certain transparency value and cannot be completely opaque. Otherwise, the material filter effect will be completely blocked.
 
-**说明：**该参数仅对高档和中档算力设备的显示效果生效。
+Note: This parameter takes effect only for the display effect of devices with high- and mid-level computing power.
 
-默认值：Color.Transparent
+Default value: **Color.Transparent**
 
 **Type:** [ResourceColor](arkts-arkui-resourcecolor-t.md)
 
@@ -166,11 +168,11 @@ materialColor?: ResourceColor
 style?: ImmersiveStyle
 ```
 
-材质样式。不同样式对应不同的材质参数，影响材质的厚度。
+Material style. Different styles correspond to different material parameters, which affect the material thickness.
 
-**说明：**该参数仅对高档和中档算力设备的显示效果生效。
+Note: This parameter takes effect only for the display effect of devices with high- and mid-level computing power.
 
-默认值：ImmersiveStyle.REGULAR
+Default value: **ImmersiveStyle.REGULAR**
 
 **Type:** [ImmersiveStyle](arkts-arkui-uimaterial-immersivestyle-e.md)
 

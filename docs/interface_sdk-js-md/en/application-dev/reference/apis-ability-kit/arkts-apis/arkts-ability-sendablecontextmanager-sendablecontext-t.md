@@ -4,7 +4,7 @@
 export type SendableContext = _SendableContext
 ```
 
-SendableContext二级模块
+Level-2 module SendableContext.
 
 **Since:** 12
 

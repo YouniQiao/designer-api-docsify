@@ -1,6 +1,6 @@
 # DocFlavor
 
-打印数据来源形式的枚举。
+Enumerates the data source types for printing.
 
 **Since:** 23
 
@@ -16,7 +16,7 @@
 FILE_DESCRIPTOR = 0
 ```
 
-表示文件数据。
+File data.
 
 **Since:** 23
 
@@ -34,7 +34,7 @@ FILE_DESCRIPTOR = 0
 BYTES = 1
 ```
 
-表示二进制数据。
+Binary data.
 
 **Since:** 23
 

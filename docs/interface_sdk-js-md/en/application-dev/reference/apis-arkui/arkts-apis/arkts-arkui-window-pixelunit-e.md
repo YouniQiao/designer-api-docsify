@@ -1,9 +1,9 @@
 # PixelUnit
 
-像素单位枚举。
+Enumerates the pixel units.
 
-物理像素单位和虚拟像素单位换算可使用[px2vp](../../../reference/apis-arkui/arkts-apis-uicontext-uicontext.md#px2vp12)和  
-[vp2px](../../../reference/apis-arkui/arkts-apis-uicontext-uicontext.md#vp2px12)。
+You can use [px2vp](../arkts-components/arkts-arkui-common-px2vp-f.md/arkts-arkui-common-px2vp-f.md#px2vp) and  
+[vp2px](../arkts-components/arkts-arkui-common-vp2px-f.md/arkts-arkui-common-vp2px-f.md#vp2px) to convert between physical pixels and virtual pixels.
 
 **Since:** 22
 
@@ -19,7 +19,7 @@
 PX = 0
 ```
 
-物理像素单位（px）。
+Physical pixel unit (px).
 
 **Since:** 22
 
@@ -35,7 +35,7 @@ PX = 0
 VP = 1
 ```
 
-虚拟像素单位（vp）。
+Virtual pixel unit (vp).
 
 **Since:** 22
 

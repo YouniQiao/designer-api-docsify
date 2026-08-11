@@ -1,6 +1,6 @@
 # RectChangeOptions
 
-窗口矩形（窗口位置及窗口大小）变化返回的值及变化原因。
+Describes the value and reason returned upon a window rectangle (position and size) change.
 
 **Since:** 12
 
@@ -22,7 +22,7 @@ import { window } from 'kits/@kit.ArkUI';
 reason: RectChangeReason
 ```
 
-窗口矩形变化的原因。
+Reason for the window rectangle change.
 
 **Type:** [RectChangeReason](arkts-arkui-uiextension-rectchangereason-e.md)
 

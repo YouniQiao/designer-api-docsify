@@ -20,9 +20,9 @@ Navigation页面跳转前的拦截回调。
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| from | [NavPathInfo](../arkts-components/arkts-arkui-navpathinfo-c.md) \| NavBar | 是 | Navigation页面跳转前的拦截回调。 <br>取值约束:参数值为navBar，则表示跳转前的页面为Navigation首页。 |
-| to | [NavPathInfo](../arkts-components/arkts-arkui-navpathinfo-c.md) \| NavBar | 是 | Navigation页面跳转前的拦截回调。 <br>取值约束:参数值为navBar，则表示跳转前的页面为Navigation首页。 |
+| from | [NavPathInfo](arkts-arkui-navigation-navpathinfo-c.md) \| NavBar | 是 | Navigation页面跳转前的拦截回调。 <br>取值约束:参数值为navBar，则表示跳转前的页面为Navigation首页。 |
+| to | [NavPathInfo](arkts-arkui-navigation-navpathinfo-c.md) \| NavBar | 是 | Navigation页面跳转前的拦截回调。 <br>取值约束:参数值为navBar，则表示跳转前的页面为Navigation首页。 |
 | pathStack | [NavPathStack](arkts-arkui-navigation-navpathstack-c.md) | 是 | 页面栈。 |
-| operation | [NavigationOperation](../arkts-components/arkts-arkui-navigationoperation-e.md) | 是 | 当前页面跳转类型。 |
+| operation | [NavigationOperation](arkts-arkui-navigation-navigationoperation-e.md) | 是 | 当前页面跳转类型。 |
 | isAnimated | boolean | 是 | 页面跳转是否有动画。 |
 

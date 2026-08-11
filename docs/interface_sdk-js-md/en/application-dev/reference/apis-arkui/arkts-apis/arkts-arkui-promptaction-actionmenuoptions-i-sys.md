@@ -1,6 +1,6 @@
 # ActionMenuOptions
 
-操作菜单的选项。
+ActionMenu options.
 
 **Since:** 23
 

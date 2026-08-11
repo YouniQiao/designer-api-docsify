@@ -1,6 +1,6 @@
 # QueryEntityParam
 
-查询实体的参数。
+Parameter for query entity.
 
 **Since:** 26.0.0
 
@@ -22,7 +22,7 @@ import { insightIntent } from 'kits/@kit.AbilityKit';
 parameters?: Record<string, Object>
 ```
 
-根据属性查询实体时的参数。
+Indicates the parameters when querying entities by property.
 
 **Type:** [Record](../../apis-default/arkts-apis/arkts-record-t.md)&lt;string, Object&gt;
 
@@ -44,7 +44,7 @@ parameters?: Record<string, Object>
 queryType: QueryType
 ```
 
-查询类型。
+The query type.
 
 **Type:** [QueryType](arkts-ability-insightintent-querytype-e.md)
 

@@ -1,18 +1,12 @@
 # off
 
-## 导入模块
-
-```TypeScript
-import { stationary } from 'kits/@kit.MultimodalAwarenessKit';
-```
-
 ## off
 
 ```TypeScript
 function off(activity: ActivityType, event: ActivityEvent, callback?: Callback<ActivityResponse>): void
 ```
 
-Unsubscribes from the device status.
+设备状态管理，取消订阅设备状态服务。取消订阅后，将停止接收该状态相关的回调函数调用。调用off()时需要使用与on()相同的activity和event参数，才能正确取消对应的订阅。
 
 **起始版本：** 9
 
@@ -26,9 +20,9 @@ Unsubscribes from the device status.
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| activity | [ActivityType](arkts-multimodalawareness-stationary-activitytype-t.md) | 是 | Device status type. |
-| event | [ActivityEvent](arkts-multimodalawareness-stationary-activityevent-e.md) | 是 | Event type. |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;ActivityResponse&gt; | 否 | Callback used to receive reported data. If no value or **undefined** is passed, all callbacks associated with the specified event in the process will be unregistered. |
+| activity | [ActivityType](arkts-multimodalawareness-stationary-activitytype-t.md) | 是 | 设备状态能力类型。 |
+| event | [ActivityEvent](arkts-multimodalawareness-stationary-activityevent-e.md) | 是 | 事件类型。 |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;ActivityResponse&gt; | 否 | 要移除的回调函数。未传递callback参数或传递undefined时，移除该进程下订阅该类型的所有callback。 |
 
 ## 示例
 

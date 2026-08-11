@@ -1,11 +1,5 @@
 # getAVSession
 
-## 导入模块
-
-```TypeScript
-import { avSession } from 'kits/@kit.AVSessionKit';
-```
-
 ## getAVSession
 
 ```TypeScript
@@ -42,8 +36,8 @@ function getAVSession(context: Context): Promise<AVSession>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 6600101 | Session service exception. |
-| 6600102 | The session does not exist. |
+| [6600101](../errorcode-avsession.md#6600101-会话服务端异常) | Session service exception. |
+| [6600102](../errorcode-avsession.md#6600102-会话不存在) | The session does not exist. |
 
 ## 示例
 

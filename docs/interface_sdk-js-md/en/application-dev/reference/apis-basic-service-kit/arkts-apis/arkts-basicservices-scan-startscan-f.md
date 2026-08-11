@@ -12,7 +12,7 @@ import { scan } from 'kits/@kit.BasicServicesKit';
 function startScan(scannerId: string, batchMode: boolean): Promise<void>
 ```
 
-开始扫描。使用Promise异步回调。
+Starts scanning. This API uses a promise to return the result.
 
 **Since:** 20
 
@@ -28,20 +28,20 @@ function startScan(scannerId: string, batchMode: boolean): Promise<void>
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| scannerId | string | Yes | 扫描仪的ID。 |
-| batchMode | boolean | Yes | 是否使用批处理模式。true表示使用批处理模式，false表示不使用批处理模式。 |
+| scannerId | string | Yes | Scanner ID. |
+| batchMode | boolean | Yes | Whether to use the batch processing mode. The value **true** indicates that the batch processing mode is used, and **false** indicates the opposite. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise对象，无返回结果。 |
+| Promise&lt;void&gt; | Promise that returns no value. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 201 | Permission denied. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
 
 ## Examples
 

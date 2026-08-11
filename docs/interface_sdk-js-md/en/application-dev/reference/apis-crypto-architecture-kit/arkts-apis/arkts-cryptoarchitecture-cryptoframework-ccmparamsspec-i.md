@@ -1,14 +1,15 @@
 # CcmParamsSpec
 
-加解密参数[ParamsSpec](arkts-cryptoarchitecture-cryptoframework-paramsspec-i.md)的子类，封装使用CCM AEAD模式进行加密或解密的参数，需要IV、AAD和认证标签。它是[ParamsSpec](arkts-cryptoarchitecture-cryptoframework-paramsspec-i.md)的子类，用于在对称加解密时作为  
-[init()](arkts-cryptoarchitecture-cryptoframework-cipher-i.md#init)方法的参数。
+Encapsulates the parameters for encryption or decryption using the CCM AEAD mode, which requires an IV, AAD, and an authentication tag. It is a child class of [ParamsSpec](arkts-cryptoarchitecture-cryptoframework-paramsspec-i.md) and used as a parameter in  
+[init()](arkts-cryptoarchitecture-cryptoframework-cipher-i.md#init) for symmetric encryption or decryption.
 
-&lt;br&gt;适用于CCM模式。
+&lt;br&gt;Applies to the CCM mode.
 
-> **说明：**
+> **NOTE：**
 > 
-> 传入[init()](arkts-cryptoarchitecture-cryptoframework-cipher-i.md#init)方法前需
-> 要指定其algName属性（来源于父类[ParamsSpec](arkts-cryptoarchitecture-cryptoframework-paramsspec-i.md)）。
+> Before passing a value to
+> [init()](arkts-cryptoarchitecture-cryptoframework-cipher-i.md#init), specify
+> **algName** for its parent class [ParamsSpec](arkts-cryptoarchitecture-cryptoframework-paramsspec-i.md).
 
 **Inheritance/Implementation:** CcmParamsSpec extends [ParamsSpec](arkts-cryptoarchitecture-cryptoframework-paramsspec-i.md)
 
@@ -34,7 +35,7 @@ import { cryptoFramework } from 'kits/@kit.CryptoArchitectureKit';
 aad: DataBlob
 ```
 
-指明加解密参数aad。aad最小长度为1字节，最大为2048字节。
+AAD for encryption and decryption. The AAD value contains 1 to 2,048 bytes.
 
 **Type:** [DataBlob](arkts-cryptoarchitecture-cryptoframework-datablob-i.md)
 
@@ -56,14 +57,15 @@ aad: DataBlob
 authTag: DataBlob
 ```
 
-指明加解密参数authTag，长度为12字节。
+Authentication tag, which is of 12 bytes.
 
-&lt;br&gt;加密时，需从  
-[doFinal()](arkts-cryptoarchitecture-cryptoframework-cipher-i.md#dofinal)或  
-[doFinalSync()](arkts-cryptoarchitecture-cryptoframework-cipher-i.md#dofinalsync)输出的  
-[DataBlob](arkts-cryptoarchitecture-cryptoframework-datablob-i.md)中提取末尾12字节，作为解密时  
-[init()](arkts-cryptoarchitecture-cryptoframework-cipher-i.md#init)或  
-[initSync()](arkts-cryptoarchitecture-cryptoframework-cipher-i.md#initsync)方法中CcmParamsSpec的authTag。
+&lt;br&gt;When CCM mode is used for encryption, you need to extract the last 12 bytes from the  
+[DataBlob](arkts-cryptoarchitecture-cryptoframework-datablob-i.md) returned by  
+[doFinal()](arkts-cryptoarchitecture-cryptoframework-cipher-i.md#dofinal) or  
+[doFinalSync()](arkts-cryptoarchitecture-cryptoframework-cipher-i.md#dofinalsync) and use them as **authTag** in  
+**CcmParamsSpec** for  
+[init()](arkts-cryptoarchitecture-cryptoframework-cipher-i.md#init) or  
+[initSync()](arkts-cryptoarchitecture-cryptoframework-cipher-i.md#initsync) during decryption.
 
 **Type:** [DataBlob](arkts-cryptoarchitecture-cryptoframework-datablob-i.md)
 
@@ -85,7 +87,7 @@ authTag: DataBlob
 iv: DataBlob
 ```
 
-指明加解密参数iv，仅支持7字节。若传入iv长度超过7字节，超出范围将被截断。
+IV for encryption and decryption. Only 7 bytes are supported. If the length of the input **iv** parameter exceeds7 bytes, the excess part will be truncated.
 
 **Type:** [DataBlob](arkts-cryptoarchitecture-cryptoframework-datablob-i.md)
 

@@ -10,12 +10,6 @@
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
-## 导入模块
-
-```TypeScript
-import { DrawableDescriptor, AnimatedDrawableDescriptor, AnimationStopMode, AnimationOptions, AnimationController, DrawableDescriptorLoadedResult, LayeredDrawableDescriptor, PictureDrawableDescriptor, PixelMapDrawableDescriptor, HdrCompositionConfig } from 'kits/@kit.ArkUI';
-```
-
 ## getPixelMap
 
 ```TypeScript
@@ -124,7 +118,7 @@ load(): Promise<DrawableDescriptorLoadedResult>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 111001 | resource loading failed. |
+| [111001](../errorcode-drawable-descriptor.md#111001-资源加载失败) | resource loading failed. |
 
 ## loadSync
 
@@ -158,7 +152,7 @@ loadSync(): DrawableDescriptorLoadedResult
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 111001 | resource loading failed. |
+| [111001](../errorcode-drawable-descriptor.md#111001-资源加载失败) | resource loading failed. |
 
 ## release
 

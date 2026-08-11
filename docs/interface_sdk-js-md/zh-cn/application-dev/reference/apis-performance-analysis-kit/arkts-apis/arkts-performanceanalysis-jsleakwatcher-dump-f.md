@@ -1,11 +1,5 @@
 # dump
 
-## 导入模块
-
-```TypeScript
-import { jsLeakWatcher } from 'kits/@kit.PerformanceAnalysisKit';
-```
-
 ## dump
 
 ```TypeScript

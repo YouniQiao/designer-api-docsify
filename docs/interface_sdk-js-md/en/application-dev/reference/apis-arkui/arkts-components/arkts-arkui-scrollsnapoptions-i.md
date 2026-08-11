@@ -1,6 +1,6 @@
 # ScrollSnapOptions
 
-限位滚动模式对象。
+Defines a scroll snapping mode object.
 
 **Since:** 10
 
@@ -16,9 +16,9 @@
 enableSnapToEnd?: boolean
 ```
 
-在Scroll组件限位滚动模式下，该属性设置为true后，不允许Scroll在最后一页和末尾间自由滑动，该属性设置为false后，允许Scroll在最后一页和末尾间自由滑动。
+Whether to enable the snap to end feature. When scroll snapping is defined for the &lt;em&gt;Scroll&lt;/em&gt; component,setting this parameter to &lt;em&gt;false&lt;/em&gt; enables the component to scroll between the end and the last page.
 
-&lt;p&gt;&lt;strong&gt;说明&lt;/strong&gt;&lt;br&gt;1. 该属性值默认为true。&lt;br&gt;2. 该属性仅当snapPagination属性为Array\&lt;Dimension\&gt;时生效，不支持Dimension。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;NOTE&lt;/strong&gt;&lt;br&gt;1. Default value: &lt;em&gt;true&lt;/em&gt;&lt;br&gt;2. This attribute takes effect only when &lt;em&gt;snapPagination&lt;/em&gt;is set to a value of the &lt;em&gt;Array\&lt;Dimension\&gt;&lt;/em&gt; type;it does not work with values of the &lt;em&gt;Dimension&lt;/em&gt; type.&lt;/p&gt;
 
 **Type:** boolean
 
@@ -42,9 +42,9 @@ enableSnapToEnd?: boolean
 enableSnapToStart?: boolean
 ```
 
-在Scroll组件限位滚动模式下，该属性设置为true后，不允许Scroll在开头和第一页间自由滑动，该属性设置为false后，允许Scroll在开头和第一页间自由滑动。
+Whether to enable the snap to start feature. When scroll snapping is defined for the &lt;em&gt;Scroll&lt;/em&gt; component,setting this parameter to &lt;em&gt;false&lt;/em&gt; enables the component to scroll between the start and the first page.
 
-&lt;p&gt;&lt;strong&gt;说明&lt;/strong&gt;&lt;br&gt;1. 该属性值默认为true。&lt;br&gt;2. 该属性仅当snapPagination属性为Array\&lt;Dimension\&gt;时生效，不支持Dimension。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;NOTE&lt;/strong&gt;&lt;br&gt;1. Default value: &lt;em&gt;true&lt;/em&gt;&lt;br&gt;2. This attribute takes effect only when &lt;em&gt;snapPagination&lt;/em&gt;is set to a value of the &lt;em&gt;Array\&lt;Dimension\&gt;&lt;/em&gt; type;it does not work with values of the &lt;em&gt;Dimension&lt;/em&gt; type.&lt;/p&gt;
 
 **Type:** boolean
 
@@ -68,7 +68,7 @@ enableSnapToStart?: boolean
 snapAlign: ScrollSnapAlign
 ```
 
-限位滚动时的对齐方式。
+Alignment mode for the scroll snap position.
 
 **Type:** [ScrollSnapAlign](arkts-arkui-scrollsnapalign-e.md)
 
@@ -92,9 +92,9 @@ snapAlign: ScrollSnapAlign
 snapPagination?: Dimension | Array<Dimension>
 ```
 
-限位滚动时的分页点。
+Pagination points for scroll snapping.
 
-&lt;p&gt;&lt;strong&gt;说明&lt;/strong&gt;&lt;br&gt;1.当属性为Dimension时，Dimension表示每页的大小，系统按照该大小进行分页。&lt;br&gt;2.当属性为Array\&lt;Dimension\&gt;时，每个Dimension表示分页点，系统按照分页点进行分页。每个Dimension的范围为[0,可滑动距离]。&lt;br&gt;3.当该属性不填或者Dimension为小于等于0的输入时，按异常值，无限位滚动处理。当该属性值为Array\&lt;Dimension\&gt;数组时，数组中的数值必须为单调递增。&lt;br&gt;4.当输入为百分比时，实际的大小为Scroll组件的视口与百分比数值之积。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;NOTE&lt;/strong&gt;&lt;br&gt;1. If the value is of the Dimension type, it indicates the size of each page,and the system will paginate based on this size.&lt;br&gt;2. If the value is of the Array\&lt;Dimension\&gt; type, each &lt;em&gt;Dimension&lt;/em&gt; represents a pagination point,and the system will paginate accordingly.Each &lt;em&gt;Dimension&lt;/em&gt; value must be within the [0, scrollable distance] range.&lt;br&gt;3. If this parameter is not set or &lt;em&gt;Dimension&lt;/em&gt; is set to a value less than or equal to 0,the value is regarded as an invalid value.In this case, there is no scroll snapping. When the value is of the Array\&lt;Dimension\&gt; type,the items in the array must be monotonically increasing.&lt;br&gt;4. When the value is a percentage,the actual size is the product of the viewport of the &lt;em&gt;Scroll&lt;/em&gt; component and the percentage value.&lt;/p&gt;
 
 **Type:** [Dimension](../arkts-apis/arkts-arkui-dimension-t.md) \| Array&lt;[Dimension](../arkts-apis/arkts-arkui-dimension-t.md)&gt;
 

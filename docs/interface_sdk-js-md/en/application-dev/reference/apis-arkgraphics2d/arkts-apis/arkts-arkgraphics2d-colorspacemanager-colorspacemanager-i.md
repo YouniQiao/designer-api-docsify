@@ -1,8 +1,8 @@
 # ColorSpaceManager
 
-当前色域对象实例。
+Implements management of color space objects.
 
-下列API示例中都需先使用[create()](arkts-arkgraphics2d-colorspacemanager-create-f.md#create)获取到ColorSpaceManager实例，再通过此实例调用对应方法。
+Before calling any of the following APIs, you must use [create()](arkts-arkgraphics2d-colorspacemanager-create-f.md#create) to create a color space manager.
 
 **Since:** 9
 
@@ -24,7 +24,7 @@ import { colorSpaceManager } from 'kits/@kit.ArkGraphics2D';
 getColorSpaceName(): ColorSpace
 ```
 
-获取色域类型。
+Obtains the color space type.
 
 **Since:** 9
 
@@ -38,23 +38,21 @@ getColorSpaceName(): ColorSpace
 
 | Type | Description |
 | --- | --- |
-| [ColorSpace](../../apis-arkui/arkts-apis/arkts-arkui-window-colorspace-e.md) | 返回色域类型枚举值。 |
+| [ColorSpace](../../apis-arkui/arkts-apis/arkts-arkui-window-colorspace-e.md) | Color space type. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 18600001 | The parameter value is abnormal.<br>**Applicable version:** 9 - 22 |
+| [18600001](../errorcode-colorspace-manager.md#18600001-abnormal-parameter-value) | The parameter value is abnormal.<br>**Applicable version:** 9 - 22 |
 
 ## Examples
 
 ```TypeScript
 try {
-  // Obtain the color space type.
-  let spaceName = colorSpace.getColorSpaceName();
-  console.info(`spaceName: ` + spaceName.toString());
+    let spaceName = colorSpace.getColorSpaceName();
 } catch (err) {
-  console.error(`Failed to get colorSpace's name. Code: ${err.code}, message: ${err.message}`);
+    console.error(`Fail to get colorSpace's name. Cause: ` + JSON.stringify(err));
 }
 ```
 
@@ -70,7 +68,7 @@ ArkTS-Sta:
 getGamma(): double
 ```
 
-获取色域gamma值。
+Obtains the gamma of the color space.
 
 **Since:** 9
 
@@ -84,23 +82,21 @@ getGamma(): double
 
 | Type | Description |
 | --- | --- |
-| ArkTS-Dyn: number  <br>ArkTS-Sta：double | 返回色域gamma值。 |
+| ArkTS-Dyn: number  <br>ArkTS-Sta：double | Gamma of the color space. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 18600001 | The parameter value is abnormal.<br>**Applicable version:** 9 - 22 |
+| [18600001](../errorcode-colorspace-manager.md#18600001-abnormal-parameter-value) | The parameter value is abnormal.<br>**Applicable version:** 9 - 22 |
 
 ## Examples
 
 ```TypeScript
 try {
-  // Obtain the gamma value of the color space.
-  let gamma = colorSpace.getGamma();
-  console.info(`gamma: ` + gamma.toString());
+    let gamma = colorSpace.getGamma();
 } catch (err) {
-  console.error(`Failed to get gamma. Code: ${err.code}, message: ${err.message}`);
+    console.error(`Failed to get gamma. Cause: ` + JSON.stringify(err));
 }
 ```
 
@@ -116,7 +112,7 @@ ArkTS-Sta:
 getWhitePoint(): Array<double>
 ```
 
-获取色域白点值。
+Obtains the coordinates of the white point in the color space.
 
 **Since:** 9
 
@@ -130,23 +126,21 @@ getWhitePoint(): Array<double>
 
 | Type | Description |
 | --- | --- |
-| ArkTS-Dyn: Array&lt;number&gt;  <br>ArkTS-Sta：Array&lt;double&gt; | 返回色域白点值[x, y]。 |
+| ArkTS-Dyn: Array&lt;number&gt;  <br>ArkTS-Sta：Array&lt;double&gt; | Coordinates [x, y] of the white point. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 18600001 | The parameter value is abnormal.<br>**Applicable version:** 9 - 22 |
+| [18600001](../errorcode-colorspace-manager.md#18600001-abnormal-parameter-value) | The parameter value is abnormal.<br>**Applicable version:** 9 - 22 |
 
 ## Examples
 
 ```TypeScript
 try {
-  // Obtain the white point value of the color space.
-  let point = colorSpace.getWhitePoint();
-  console.info(`point: ` + point.toString());
+    let point = colorSpace.getWhitePoint();
 } catch (err) {
-  console.error(`Failed to get white point. Code: ${err.code}, message: ${err.message}`);
+    console.error(`Failed to get white point. Cause: ` + JSON.stringify(err));
 }
 ```
 

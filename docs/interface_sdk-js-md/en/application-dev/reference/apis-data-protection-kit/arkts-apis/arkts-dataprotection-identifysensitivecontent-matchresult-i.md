@@ -1,6 +1,6 @@
 # MatchResult
 
-表示敏感内容的识别结果。
+Displays the identification result of sensitive content.
 
 **Since:** 21
 
@@ -22,7 +22,7 @@ import { identifySensitiveContent } from 'kits/@kit.DataProtectionKit';
 readonly matchContent: string
 ```
 
-表示匹配到的敏感内容片段，即文件中实际匹配到关键字或正则表达式的文本内容。
+Matched sensitive content segment, that is, the text content matched by keyword or regular expression.
 
 **Type:** string
 
@@ -40,7 +40,7 @@ readonly matchContent: string
 readonly matchNumber: number
 ```
 
-表示匹配内容的总数。
+Total number of matched items.
 
 **Type:** number
 
@@ -58,7 +58,7 @@ readonly matchNumber: number
 readonly sensitiveLabel: string
 ```
 
-表示识别策略的标签，与输入策略中的sensitiveLabel对应，用于标识匹配结果对应的识别策略。
+Label of an identification policy,which corresponds to sensitiveLabel in the input policy and is used to label the policy used to identify the matching result.
 
 **Type:** string
 

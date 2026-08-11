@@ -1,6 +1,6 @@
 # FlexSpaceOptions
 
-设置Flex容器的子组件在主轴或交叉轴的间距。
+Defines the spacing between child components along the main axis or cross axis of the Flex component.
 
 **Since:** 23
 
@@ -16,7 +16,7 @@
 cross?: LengthMetrics
 ```
 
-Flex容器交叉轴上的space。
+Space on the main axis of the Flex component.
 
 **Type:** [LengthMetrics](arkts-arkui-graphics-lengthmetrics-c.md)
 
@@ -36,7 +36,7 @@ Flex容器交叉轴上的space。
 main?: LengthMetrics
 ```
 
-Flex容器主轴上的space。
+Space on the main axis of the Flex component.
 
 **Type:** [LengthMetrics](arkts-arkui-graphics-lengthmetrics-c.md)
 

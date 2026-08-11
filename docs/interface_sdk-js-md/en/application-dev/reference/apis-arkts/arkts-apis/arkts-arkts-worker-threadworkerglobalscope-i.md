@@ -1,6 +1,6 @@
 # ThreadWorkerGlobalScope
 
-Worker线程用于与宿主线程通信的类。其中postMessage接口用于向宿主线程发送消息，close接口用于销毁Worker线程。ThreadWorkerGlobalScope类继承GlobalScope9+。
+Implements communication between the Worker thread and the host thread. The postMessage API is used to send messages to the host thread, and the close API is used to terminate the Worker thread. The ThreadWorkerGlobalScope class inherits from GlobalScope9+.
 
 **Inheritance/Implementation:** ThreadWorkerGlobalScope extends [GlobalScope](arkts-arkts-worker-globalscope-i.md)
 
@@ -24,7 +24,7 @@ import { MessageEvents, PostMessageOptions, MessageEvent, Priority, WorkerEventT
 callGlobalCallObjectMethod(instanceName: string, methodName: string, timeout: number, ...args: Object[]): Object
 ```
 
-Worker线程调用宿主线程上注册的对象的指定方法，此调用对Worker线程同步，对宿主线程异步，返回值通过数据拷贝传递。
+Calls a method of an object registered with the host thread. This API is called by the Worker thread.The invoking is synchronous for the Worker thread and asynchronous for the host thread. The return value is transferred through serialization.
 
 **Since:** 11
 
@@ -40,26 +40,26 @@ Worker线程调用宿主线程上注册的对象的指定方法，此调用对Wo
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| instanceName | string | Yes | 注册对象时使用的键，用于在宿主线程中查找对象。 |
-| methodName | string | Yes | 在已注册对象上调用的方法名。该方法不能使用async修饰， 也不能基于底层异步机制返回结果，否则会抛出异常。 |
-| timeout | number | Yes | 表示从Worker线程发起调用开始到在主线程中执行目标方法的最大等待时间， 单位为ms，取整数，取值范围为[1-5000]。也可取特殊值0，此时表示本次调用等待时间为5000ms。 该值应为整数。 &lt;br&gt;单位：ms。 |
-| args | Object[] | Yes | 注册对象上所调用方法的参数数组。 |
+| instanceName | string | Yes | Key used for registration. It is used to search for the object in the host thread. |
+| methodName | string | Yes | Name of the method to call. Note that the method cannot be modified by async or generator, or return results asynchronously by using the asynchronous mechanism at the bottom layer. Otherwise, an exception is thrown. |
+| timeout | number | Yes | Maximum duration that the current synchronous invoking waits, in ms. The value is an integer ranging from 1 to 5000. The value 0 means that the 5000 ms duration is used. The value should be an integer. &lt;br&gt;Unit:ms. |
+| args | Object[] | Yes | the method argument called on registered globalCallObject. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Object | 返回值为调用方法在宿主线程的返回值，无返回值时返回void。 |
+| Object | Return the result of method if it has a return value, otherwise return void. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 10200019 | The globalCallObject is not registered. |
-| 10200006 | An exception occurred during serialization. |
-| 10200021 | The global call exceeds the timeout. |
-| 10200004 | The Worker instance is not running. |
-| 10200020 | The method to be called is not callable or is an async method or a generator. |
+| [10200019](../errorcode-utils.md#10200019-failed-to-call-an-api-of-an-unregistered-object) | The globalCallObject is not registered. |
+| [10200006](../errorcode-utils.md#10200006-worker-data-serialization-exception) | An exception occurred during serialization. |
+| [10200021](../errorcode-utils.md#10200021-waiting-for-a-global-call-times-out) | The global call exceeds the timeout. |
+| [10200004](../errorcode-utils.md#10200004-worker-instance-is-not-running) | The Worker instance is not running. |
+| [10200020](../errorcode-utils.md#10200020-failed-to-call-an-api-of-a-registered-object) | The method to be called is not callable or is an async method or a generator. |
 
 ## Examples
 
@@ -116,7 +116,7 @@ workerPort.onmessage = (e: MessageEvents): void => {
 close(): void
 ```
 
-销毁Worker线程，终止Worker接收消息。
+Terminates the Worker thread to stop it from receiving messages.
 
 **Since:** 9
 
@@ -132,7 +132,7 @@ close(): void
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 10200004 | The Worker instance is not running. |
+| [10200004](../errorcode-utils.md#10200004-worker-instance-is-not-running) | The Worker instance is not running. |
 
 ## Examples
 
@@ -160,7 +160,7 @@ workerPort.onmessage = (e: MessageEvents): void => {
 onmessage?: (this: ThreadWorkerGlobalScope, ev: MessageEvents) => void
 ```
 
-当Worker线程收到来自其宿主线程通过postMessage接口发送的消息时调用的事件处理程序，该事件处理程序在Worker线程中执行。其中this指调用者对象本身ThreadWorkerGlobalScope，ev类型为MessageEvents，表示收到的消息数据。
+Called when the Worker thread receives a message sent by the host thread through postMessage.The event handler is executed in the Worker thread. In the callback function, this indicates the caller's ThreadWorkerGlobalScope, and the ev type is MessageEvents, indicating the received message data.
 
 **Since:** 9
 
@@ -183,8 +183,8 @@ onmessage?: (this: ThreadWorkerGlobalScope, ev: MessageEvents) => void
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 10200005 | The called API is not supported in the worker thread. |
-| 10200004 | The Worker instance is not running. |
+| [10200005](../errorcode-utils.md#10200005-api-not-supported-in-the-worker-thread) | The called API is not supported in the worker thread. |
+| [10200004](../errorcode-utils.md#10200004-worker-instance-is-not-running) | The Worker instance is not running. |
 
 ## onmessageerror
 
@@ -192,7 +192,7 @@ onmessage?: (this: ThreadWorkerGlobalScope, ev: MessageEvents) => void
 onmessageerror?: (this: ThreadWorkerGlobalScope, ev: MessageEvents) => void
 ```
 
-当Worker线程收到一条无法被反序列化的消息时调用的事件处理程序，该事件处理程序在Worker线程中执行。其中this指调用者对象本身ThreadWorkerGlobalScope，ev类型为MessageEvents，表示收到的消息数据。
+Called when the Worker thread receives a message that cannot be deserialized. The event handler is executed in the Worker thread. In the callback function, this indicates the caller's ThreadWorkerGlobalScope,and the ev type is MessageEvents, indicating the received message data.
 
 **Since:** 9
 
@@ -215,8 +215,8 @@ onmessageerror?: (this: ThreadWorkerGlobalScope, ev: MessageEvents) => void
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 10200005 | The called API is not supported in the worker thread. |
-| 10200004 | The Worker instance is not running. |
+| [10200005](../errorcode-utils.md#10200005-api-not-supported-in-the-worker-thread) | The called API is not supported in the worker thread. |
+| [10200004](../errorcode-utils.md#10200004-worker-instance-is-not-running) | The Worker instance is not running. |
 
 ## postMessage
 
@@ -224,7 +224,7 @@ onmessageerror?: (this: ThreadWorkerGlobalScope, ev: MessageEvents) => void
 postMessage(messageObject: Object, transfer: ArrayBuffer[]): void
 ```
 
-Worker线程通过转移对象所有权的方式向宿主线程发送消息。
+Sends a message from the Worker thread to the host thread by transferring object ownership.
 
 **Since:** 9
 
@@ -240,15 +240,15 @@ Worker线程通过转移对象所有权的方式向宿主线程发送消息。
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| messageObject | Object | Yes | 发送至宿主线程的数据，该数据对象必须是可序列化对象。 支持的参数类型请参考序列化支持类型。 |
-| transfer | ArrayBuffer[] | Yes | 表示可转移的ArrayBuffer实例对象数组，该数组中对象的所有权 会被转移到宿主线程，转移后该对象仅在宿主线程中可用。该数组不可传入null。 |
+| messageObject | Object | Yes | Data to be sent to the host thread. The data object must be sequenceable. For details about the supported parameter types, see Sequenceable Data Types. |
+| transfer | ArrayBuffer[] | Yes | ArrayBuffer instance holding an array of objects for which the ownership is transferred to the host thread. After the transfer, the objects are available only in the host thread. The array cannot be null. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 10200006 | An exception occurred during serialization. |
-| 10200004 | The Worker instance is not running. |
+| [10200006](../errorcode-utils.md#10200006-worker-data-serialization-exception) | An exception occurred during serialization. |
+| [10200004](../errorcode-utils.md#10200004-worker-instance-is-not-running) | The Worker instance is not running. |
 
 ## Examples
 
@@ -280,7 +280,7 @@ workerPort.onmessage = (e: MessageEvents): void => {
 postMessage(messageObject: Object, options?: PostMessageOptions): void
 ```
 
-Worker线程通过转移对象所有权或拷贝数据的方式向宿主线程发送消息。
+Sends a message from the Worker thread to the host thread by transferring object ownership or copying data.
 
 **Since:** 9
 
@@ -296,15 +296,15 @@ Worker线程通过转移对象所有权或拷贝数据的方式向宿主线程�
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| messageObject | Object | Yes | 发送至宿主线程的数据，该数据对象必须是可序列化对象。 支持的参数类型请参考序列化支持类型。 |
-| options | [PostMessageOptions](arkts-arkts-worker-postmessageoptions-i.md) | No | 当填入该参数时，其作用与传入ArrayBuffer[]相同， 该数组中对象的所有权会被转移到宿主线程，在Worker线程中将变为不可用，仅在宿主线程中可用。 若不填入该参数，默认设置为undefined，通过拷贝数据的方式传输信息到宿主线程。 |
+| messageObject | Object | Yes | Data to be sent to the host thread. The data object must be sequenceable. For details about the supported parameter types, see Sequenceable Data Types. |
+| options | [PostMessageOptions](arkts-arkts-worker-postmessageoptions-i.md) | No | If this parameter is specified, it functions the same as ArrayBuffer[]. Specifically, the ownership of the objects in the array is transferred to the host thread and becomes unavailable in the Worker thread. The objects are available only in the host thread. If this parameter is not specified, the default value undefined is used, and information is transferred to the host thread by copying data. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 10200006 | An exception occurred during serialization. |
-| 10200004 | The Worker instance is not running. |
+| [10200006](../errorcode-utils.md#10200006-worker-data-serialization-exception) | An exception occurred during serialization. |
+| [10200004](../errorcode-utils.md#10200004-worker-instance-is-not-running) | The Worker instance is not running. |
 
 ## Examples
 
@@ -335,7 +335,7 @@ workerPort.onmessage = (e: MessageEvents): void => {
 postMessageAtFront?(message: Object, priority: Priority, transfer?: ArrayBuffer[]): void
 ```
 
-Worker线程通过转移对象所有权的方式向宿主线程发送插队消息，并插入到对应优先级队列的队头。除Worker线程向主线程发送的场景外，该接口与postMessage功能一致。
+Sends a message from the Worker thread to the main thread by transferring object ownership,and inserted into the head of the corresponding priority queue.Except for the worker thread to the main thread,this interface has the same function as postMessage.
 
 **Since:** 26.0.0
 
@@ -353,16 +353,16 @@ Worker线程通过转移对象所有权的方式向宿主线程发送插队消�
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| message | Object | Yes | 发送至宿主线程的数据，该数据对象必须是可序列化或可共享。 支持的序列化类型请参考序列化支持类型。 支持的共享类型请参考Sendable支持的数据类型。 |
-| priority | [Priority](arkts-arkts-taskpool-priority-e.md) | Yes | Worker EventHandler的优先级。 |
-| transfer | ArrayBuffer[] | No | 表示可转移的ArrayBuffer实例对象数组，该数组中对象的所有权 会被转移到主线程，转移后该对象仅在主线程中可用。该数组不可传入null。 |
+| message | Object | Yes | Data to be sent to the main thread. The data object must be sequenceable or sendable. For details about the supported sequenceable types, see Sequenceable Data Types. For details about the supported sendable types, see Sendable Data Types. |
+| priority | [Priority](arkts-arkts-taskpool-priority-e.md) | Yes | Priority of the Worker EventHandler. |
+| transfer | ArrayBuffer[] | No | ArrayBuffer instance holding an array of objects for which the ownership is transferred to the main thread. After the transfer, the objects are available only in the main thread. The array cannot be null. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 10200006 | An exception occurred during serialization. |
-| 10200004 | The Worker instance is not running. |
+| [10200006](../errorcode-utils.md#10200006-worker-data-serialization-exception) | An exception occurred during serialization. |
+| [10200004](../errorcode-utils.md#10200004-worker-instance-is-not-running) | The Worker instance is not running. |
 
 ## postMessageWithSharedSendable
 
@@ -370,7 +370,7 @@ Worker线程通过转移对象所有权的方式向宿主线程发送插队消�
 postMessageWithSharedSendable(message: Object, transfer?: ArrayBuffer[]): void
 ```
 
-Worker线程向宿主线程发送消息，消息中的Sendable对象通过引用传递，非Sendable对象通过拷贝数据的方式传递。
+Sends a message from the Worker thread to the host thread. In the message, a sendable object is passed by reference,and a non-sendable object is passed by serialization.
 
 **Since:** 12
 
@@ -386,15 +386,15 @@ Worker线程向宿主线程发送消息，消息中的Sendable对象通过引用
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| message | Object | Yes | 发送至宿主线程的数据，该数据对象必须是可序列化或可共享。 支持的序列化类型请参考序列化支持类型。 支持的共享类型请参考Sendable支持的数据类型。 |
-| transfer | ArrayBuffer[] | No | 表示可转移的ArrayBuffer实例对象数组，该数组中对象的所有权 会被转移到宿主线程，转移后该对象仅在宿主线程中可用。该数组不可传入null。默认值为空数组。 |
+| message | Object | Yes | Data to be sent to the host thread. The data object must be sequenceable or sendable. For details about the supported sequenceable types, see Sequenceable Data Types. For details about the supported sendable types, see Sendable Data Types. |
+| transfer | ArrayBuffer[] | No | ArrayBuffer instance holding an array of objects for which the ownership is transferred to the host thread. After the transfer, the objects are available only in the host thread. The array cannot be null. The default value is an empty array. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 10200006 | An exception occurred during serialization. |
-| 10200004 | The Worker instance is not running. |
+| [10200006](../errorcode-utils.md#10200006-worker-data-serialization-exception) | An exception occurred during serialization. |
+| [10200004](../errorcode-utils.md#10200004-worker-instance-is-not-running) | The Worker instance is not running. |
 
 ## Examples
 

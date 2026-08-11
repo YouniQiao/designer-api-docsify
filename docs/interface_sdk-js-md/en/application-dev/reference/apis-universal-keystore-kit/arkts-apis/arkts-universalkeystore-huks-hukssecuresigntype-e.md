@@ -1,6 +1,6 @@
 # HuksSecureSignType
 
-表示生成或导入密钥时，指定该密钥的签名类型。
+Enumerates the signature types of the key generated or imported.
 
 **Since:** 9
 
@@ -16,11 +16,11 @@
 HUKS_SECURE_SIGN_WITH_AUTHINFO = 1
 ```
 
-表示签名类型为携带认证信息。生成或导入密钥时指定该字段，则在使用密钥进行签名时，对待签名的数据添加认证信息后进行签名。
+The signature carries authentication information. This field is specified when a key is generated or imported.When the key is used for signing, the data will be added with the authentication information and then be signed.
 
-**注意：**
+**NOTE：**
 
-携带的认证信息包含身份信息，开发者需在其隐私声明中对此身份信息的使用目的、存留策略和销毁方式进行说明。
+The carried authentication information includes identity information. You need to describe the purpose, retention policy, and destruction method of the identity information in the privacy statement.
 
 **Since:** 9
 

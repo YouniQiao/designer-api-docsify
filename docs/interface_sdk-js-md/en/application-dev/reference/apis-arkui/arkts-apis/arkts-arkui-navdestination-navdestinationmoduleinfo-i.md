@@ -1,10 +1,10 @@
 # NavDestinationModuleInfo
 
-NavDestination的模块信息
+The module info of NavDestination
 
-**Since:** 26.0.0
+**Since:** 26.1.0
 
-**ArkTS mode:** ArkTS-Sta only, since version 26.0.0.
+**ArkTS mode:** ArkTS-Sta only, since version 26.1.0.
 
 <!--Device-unnamed-export declare interface NavDestinationModuleInfo--><!--Device-unnamed-export declare interface NavDestinationModuleInfo-End-->
 
@@ -16,13 +16,13 @@ NavDestination的模块信息
 moduleName: string
 ```
 
-NavDestination的模块名称
+The module name of NavDestination
 
 **Type:** string
 
-**Since:** 26.0.0
+**Since:** 26.1.0
 
-**ArkTS mode:** ArkTS-Sta only, since version 26.0.0.
+**ArkTS mode:** ArkTS-Sta only, since version 26.1.0.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -36,13 +36,13 @@ NavDestination的模块名称
 pagePath: string
 ```
 
-NavDestination的源文件路径
+The source file path of NavDestination
 
 **Type:** string
 
-**Since:** 26.0.0
+**Since:** 26.1.0
 
-**ArkTS mode:** ArkTS-Sta only, since version 26.0.0.
+**ArkTS mode:** ArkTS-Sta only, since version 26.1.0.
 
 **Model restriction:** This API can be used only in the stage model.
 

@@ -1,6 +1,6 @@
 # PanDirection
 
-与SwipeDirection不同，PanDirection没有角度限制。
+Creating an Object
 
 **Since:** 23
 
@@ -16,7 +16,7 @@
 None = 0
 ```
 
-任何方向都不可触发滑动手势事件。
+Default.
 
 **Since:** 23
 
@@ -34,7 +34,7 @@ None = 0
 Left = 1
 ```
 
-向左滑动。
+Sliding left.
 
 **Since:** 23
 
@@ -52,7 +52,7 @@ Left = 1
 Right = 2
 ```
 
-向右滑动。
+Sliding right.
 
 **Since:** 23
 
@@ -70,7 +70,7 @@ Right = 2
 Horizontal = 3
 ```
 
-水平方向。
+Sliding horizontally.
 
 **Since:** 23
 
@@ -88,7 +88,7 @@ Horizontal = 3
 Up = 4
 ```
 
-向上滑动。
+Sliding up.
 
 **Since:** 23
 
@@ -106,7 +106,7 @@ Up = 4
 UP_LEFT = 5
 ```
 
-向上或左滑动。
+Sliding up or left.
 
 **Since:** 23
 
@@ -124,7 +124,7 @@ UP_LEFT = 5
 UP_RIGHT = 6
 ```
 
-向上或右滑动。
+Sliding up or right.
 
 **Since:** 23
 
@@ -142,7 +142,7 @@ UP_RIGHT = 6
 UP_HORIZONTAL = 7
 ```
 
-向上或水平滑动。
+Sliding up or horizontally.
 
 **Since:** 23
 
@@ -160,7 +160,7 @@ UP_HORIZONTAL = 7
 Down = 8
 ```
 
-向下滑动。
+Sliding down.
 
 **Since:** 23
 
@@ -178,7 +178,7 @@ Down = 8
 DOWN_LEFT = 9
 ```
 
-向下或左滑动。
+Sliding down or left.
 
 **Since:** 23
 
@@ -196,7 +196,7 @@ DOWN_LEFT = 9
 DOWN_RIGHT = 10
 ```
 
-向下或右滑动。
+Sliding down or right.
 
 **Since:** 23
 
@@ -214,7 +214,7 @@ DOWN_RIGHT = 10
 DOWN_HORIZONTAL = 11
 ```
 
-向下或水平滑动。
+Sliding down or horizontally.
 
 **Since:** 23
 
@@ -232,7 +232,7 @@ DOWN_HORIZONTAL = 11
 Vertical = 12
 ```
 
-竖直方向。
+Sliding vertical.
 
 **Since:** 23
 
@@ -250,7 +250,7 @@ Vertical = 12
 VERTICAL_LEFT = 13
 ```
 
-竖直或左滑动。
+Sliding vertical or left.
 
 **Since:** 23
 
@@ -268,7 +268,7 @@ VERTICAL_LEFT = 13
 VERTICAL_RIGHT = 14
 ```
 
-竖直或右滑动。
+Sliding vertical or right.
 
 **Since:** 23
 
@@ -286,7 +286,7 @@ VERTICAL_RIGHT = 14
 All = 15
 ```
 
-所有方向。
+Sliding in all directions.
 
 **Since:** 23
 

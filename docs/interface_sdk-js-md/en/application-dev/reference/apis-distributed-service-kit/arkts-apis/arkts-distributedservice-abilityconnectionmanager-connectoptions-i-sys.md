@@ -1,6 +1,6 @@
 # ConnectOptions
 
-应用连接时所需的连接选项。
+Connection options for the application.
 
 **Since:** 18
 
@@ -22,7 +22,7 @@ import { abilityConnectionManager } from 'kits/@kit.DistributedServiceKit';
 needReceiveStream?: boolean
 ```
 
-接收流数据的配置选项。需要开启WiFi。
+Receive Stream Data Configuration Options. WiFi needs to be turned on.
 
 **Type:** boolean
 
@@ -44,7 +44,7 @@ needReceiveStream?: boolean
 needSendStream?: boolean
 ```
 
-发送流数据的配置选项。需要开启WiFi。
+Send Stream Data Configuration Options. WiFi needs to be turned on.
 
 **Type:** boolean
 

@@ -1,11 +1,5 @@
 # getAbilityIcon
 
-## 导入模块
-
-```TypeScript
-import { bundle } from 'kits/@kit.AbilityKit';
-```
-
 ## getAbilityIcon
 
 ```TypeScript

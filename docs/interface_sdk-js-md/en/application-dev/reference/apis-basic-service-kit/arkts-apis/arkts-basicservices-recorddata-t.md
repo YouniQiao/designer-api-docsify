@@ -4,7 +4,7 @@
 export type RecordData = undefined | null | Object | Record<string, RecordData> | Array<RecordData>
 ```
 
-RecordData 是一个联合类型，用于层级和每层数量都不确定的对象结构。
+RecordData is a union type used for object structures with uncertain levels and quantities at each level.
 
 **Since:** 23
 
@@ -16,9 +16,9 @@ RecordData 是一个联合类型，用于层级和每层数量都不确定的对
 
 | Type | Description |
 | --- | --- |
-| undefined | 未定义类型。 |
-| null | 空类型。 |
-| Object | 对象类型。 |
-| Record&lt;string, RecordData&gt; | 带有字符串键和RecordData值的记录类型。 |
-| Array&lt;RecordData&gt; | 包含RecordData元素的数组类型。 |
+| undefined | Undefined type. |
+| null | Null type. |
+| Object | Object type. |
+| Record&lt;string, RecordData&gt; | Record type with string keys and RecordData values. |
+| Array&lt;RecordData&gt; | Array type containing RecordData elements. |
 

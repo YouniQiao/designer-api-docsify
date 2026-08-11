@@ -1,11 +1,5 @@
 # setFontScale（系统接口）
 
-## 导入模块
-
-```TypeScript
-import { uiAppearance } from 'kits/@kit.ArkUI';
-```
-
 ## setFontScale
 
 ```TypeScript
@@ -42,7 +36,7 @@ function setFontScale(fontScale: double): Promise<void>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 500001 | Internal error. |
-| 201 | Permission denied. |
-| 202 | Permission verification failed. A non-system application calls a system API. |
+| [500001](../errorcode-uiappearance.md#500001-内部错误) | Internal error. |
+| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed. A non-system application calls a system API. |
 

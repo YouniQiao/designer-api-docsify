@@ -4,7 +4,7 @@
 export type Callback<T> = (data: T) => void
 ```
 
-通用回调函数。开发者在使用时，可自定义data的类型，回调将返回对应类型的信息。
+Defines a common callback. You can set **data** to customize the data type of the information returned by the callback.
 
 **Since:** 23
 
@@ -18,5 +18,5 @@ export type Callback<T> = (data: T) => void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| data | T | Yes | 接口调用时的公共回调信息。 |
+| data | T | Yes | Common callback information. |
 

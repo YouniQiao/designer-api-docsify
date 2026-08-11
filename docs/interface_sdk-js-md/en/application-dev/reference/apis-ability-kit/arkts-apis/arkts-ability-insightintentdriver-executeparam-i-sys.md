@@ -1,6 +1,6 @@
 # ExecuteParam (System API)
 
-执行意图调用的参数。
+Defines the parameter used to execute an intent call.
 
 **Since:** 11
 
@@ -24,8 +24,8 @@ import { insightIntentDriver } from 'kits/@kit.AbilityKit';
 abilityName: string
 ```
 
-意图调用Ability名称。 如果通过  
-[@InsightIntentLink](../../../reference/apis-ability-kit/js-apis-app-ability-InsightIntentDecorator.md#insightintentlink)装饰器定义的意图来实现应用跳转，此字段传空字符串即可。
+Name of the ability to be called. If an intent defined by the  
+[@InsightIntentLink](../../../reference/apis-ability-kit/js-apis-app-ability-InsightIntentDecorator.md#insightintentlink) decorator is used to implement application redirection, this parameter can be left empty.
 
 **Type:** string
 
@@ -47,7 +47,7 @@ abilityName: string
 bundleName: string
 ```
 
-意图调用Ability所属的应用名称。
+Name of the bundle to which the ability to be called belongs.
 
 **Type:** string
 
@@ -69,7 +69,7 @@ bundleName: string
 deviceId?: string
 ```
 
-设备标识。获取路径：{@link @ohos.distributedDeviceManager:distributedDeviceManager.DeviceManager#getAvailableDeviceListSync}
+Indicates the device identifier. Obtained from {@link @ohos.distributedDeviceManager:distributedDeviceManager.DeviceManager#getAvailableDeviceListSync}
 
 **Type:** string
 
@@ -91,7 +91,8 @@ deviceId?: string
 displayId?: long
 ```
 
-意图调用时指定的物理屏幕id，该参数应为整数，仅在executeMode为UI_ABILITY_FOREGROUND时生效。
+Physical screen ID specified during intent call. The value must be an integer. This parameter is valid only when  
+**executeMode** is set to **UI_ABILITY_FOREGROUND**.
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：long
 
@@ -113,8 +114,8 @@ displayId?: long
 executeMode: insightIntent.ExecuteMode
 ```
 
-意图调用执行模式。 如果通过  
-[@InsightIntentLink](../../../reference/apis-ability-kit/js-apis-app-ability-InsightIntentDecorator.md#insightintentlink)装饰器定义的意图来实现应用跳转，此字段需填写（可填任意符合定义的值），但实际不会生效。
+Intent execution mode. If an intent defined by the  
+[@InsightIntentLink](../../../reference/apis-ability-kit/js-apis-app-ability-InsightIntentDecorator.md#insightintentlink) decorator is used to implement application redirection, this parameter must be filled (with any value that conforms to the definition), although it will not actually take effect.
 
 **Type:** insightIntent.ExecuteMode
 
@@ -136,11 +137,11 @@ executeMode: insightIntent.ExecuteMode
 flags?: int
 ```
 
-意图调用时，意图调用方给意图执行方授权的uris的[flags](arkts-ability-wantconstant-flags-e.md)。 
+[Flags](arkts-ability-wantconstant-flags-e.md) of the URIs authorized by the intent caller to the intent executor during the call.
 
-**说明：**
+**NOTE：**
 
-该参数仅支持FLAG_AUTH_READ_URI_PERMISSION、FLAG_AUTH_WRITE_URI_PERMISSION、FLAG_AUTH_READ_URI_PERMISSION|FLAG_AUTH_WRITE_URI_PERMISSION。
+This parameter supports only **FLAG_AUTH_READ_URI_PERMISSION**, **FLAG_AUTH_WRITE_URI_PERMISSION**, and FLAG_AUTH_READ_URI_PERMISSION|
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
@@ -162,7 +163,7 @@ flags?: int
 insightIntentName: string
 ```
 
-意图调用名称。
+Intent name.
 
 **Type:** string
 
@@ -184,7 +185,7 @@ insightIntentName: string
 insightIntentParam: Record<string, Object>
 ```
 
-意图调用参数。
+Intent call parameter.
 
 **Type:** [Record](../../apis-default/arkts-apis/arkts-record-t.md)&lt;string, Object&gt;
 
@@ -206,7 +207,7 @@ insightIntentParam: Record<string, Object>
 moduleName: string
 ```
 
-意图调用Ability所属的模块名称。
+Name of the module to which the ability belongs.
 
 **Type:** string
 
@@ -228,8 +229,8 @@ moduleName: string
 uris?: Array<string>
 ```
 
-意图调用时，意图调用方给意图执行方授权的URI列表。 如果通过  
-[@InsightIntentLink](../../../reference/apis-ability-kit/js-apis-app-ability-InsightIntentDecorator.md#insightintentlink)装饰器定义的意图来实现应用跳转，此字段必选，仅读取数组第一个元素作为[openLink](arkts-ability-uiabilitycontext-c.md#openlink)的URI。
+List of URIs authorized by the intent caller to the intent executor during the call. If an intent defined by the  
+[@InsightIntentLink](../../../reference/apis-ability-kit/js-apis-app-ability-InsightIntentDecorator.md#insightintentlink) decorator is used to implement application redirection, this field is mandatory. Only the first element in the array is read as the URI of [openLink](arkts-ability-uiabilitycontext-c.md#openlink).
 
 **Type:** Array&lt;string&gt;
 
@@ -251,11 +252,11 @@ uris?: Array<string>
 userId?: int
 ```
 
-目标意图所属的用户ID。
+ID of the user to which the intent belongs.
 
-**说明：**
+**NOTE：**
 
-如果调用方应用的用户ID与目标意图所属的用户ID不同，则需要申请权限`ohos.permission.INTERACT_ACROSS_LOCAL_ACCOUNTS`。
+If the user ID of the calling application is different from the user ID of the intent, the calling application must request the ohos.permission.INTERACT_ACROSS_LOCAL_ACCOUNTS permission.
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 

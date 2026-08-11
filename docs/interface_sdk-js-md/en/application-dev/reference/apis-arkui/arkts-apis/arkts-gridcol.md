@@ -6,6 +6,6 @@
 
 | Name | Description |
 | --- | --- |
-| [GridColColumnOption](arkts-arkui-gridcol-gridcolcolumnoption-i.md) | 用于自定义指定在不同宽度设备类型上，栅格子组件占据的栅格数量单位。 |
-| [GridColOptions](arkts-arkui-gridcol-gridcoloptions-i.md) | 设置栅格列布局组件布局选项。 |
+| [GridColColumnOption](arkts-arkui-gridcol-gridcolcolumnoption-i.md) | Defines the option in int unit of grid-container child component. |
+| [GridColOptions](arkts-arkui-gridcol-gridcoloptions-i.md) | Defines the options of grid-container child component. |
 

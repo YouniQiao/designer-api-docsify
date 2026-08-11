@@ -1,6 +1,6 @@
 # BatteryHealthState
 
-表示电池健康状态的枚举。
+Enumerates battery health states.
 
 **Since:** 23
 
@@ -16,7 +16,7 @@
 UNKNOWN
 ```
 
-表示电池健康状态未知。
+Unknown state.
 
 **Since:** 23
 
@@ -32,7 +32,7 @@ UNKNOWN
 GOOD
 ```
 
-表示电池健康状态为正常。
+The battery is in the healthy state.
 
 **Since:** 23
 
@@ -48,7 +48,7 @@ GOOD
 OVERHEAT
 ```
 
-表示电池健康状态为过热。
+The battery is overheated.
 
 **Since:** 23
 
@@ -64,7 +64,7 @@ OVERHEAT
 OVERVOLTAGE
 ```
 
-表示电池健康状态为过压。
+The battery voltage is over high.
 
 **Since:** 23
 
@@ -80,7 +80,7 @@ OVERVOLTAGE
 COLD
 ```
 
-表示电池健康状态为低温。
+The battery temperature is low.
 
 **Since:** 23
 
@@ -96,7 +96,7 @@ COLD
 DEAD
 ```
 
-表示电池健康状态为僵死状态。
+The battery is dead.
 
 **Since:** 23
 

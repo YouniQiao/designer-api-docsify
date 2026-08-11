@@ -20,7 +20,7 @@ A struct that describes all transient task information. The struct returns all t
 
 | Name | Description |
 | -- | -- |
-| int32_t remainingQuota |  |
-| [TransientTask_DelaySuspendInfo](capi-transienttask-transienttask-delaysuspendinfo.md) transientTasks[TRANSIENT_TASK_MAX_NUM] |  |
+| int32_t remainingQuota | Remaining quota of the current day, in ms.<br>**Since**: 20 |
+| [TransientTask_DelaySuspendInfo](capi-transienttask-transienttask-delaysuspendinfo.md) transientTasks[TRANSIENT_TASK_MAX_NUM] | The info of delay suspend<br>**Since**: 20 |
 
 

@@ -12,12 +12,6 @@ This interface is used to notify the listener of any device Spatialization or He
 
 **系统接口：** 此接口为系统接口。
 
-## 导入模块
-
-```TypeScript
-import { audio } from 'kits/@kit.AudioKit';
-```
-
 ## deviceDescriptor
 
 ```TypeScript

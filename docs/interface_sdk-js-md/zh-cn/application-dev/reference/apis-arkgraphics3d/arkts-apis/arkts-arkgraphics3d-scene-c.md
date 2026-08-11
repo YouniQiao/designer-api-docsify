@@ -253,7 +253,7 @@ importScene(name: string, scene: Scene, parent: Node | null): Node
 static load(uri? : ResourceStr): Promise<Scene>
 ```
 
-从ResourceStr创建新场景.如果未提供uri，将返回空场景.
+通过传入的资源路径加载资源，使用Promise异步回调。调用后，应该在Scene使用完毕时调用[destroy](arkts-arkgraphics3d-scene-c.md#destroy)释放资源，否则可能导致资源泄漏。
 
 **起始版本：** 12
 
@@ -267,13 +267,13 @@ static load(uri? : ResourceStr): Promise<Scene>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| uri | [ResourceStr](../../apis-arkui/arkts-apis/arkts-arkui-resourcestr-t.md) | 否 | 创建场景的资源 |
+| uri | [ResourceStr](../../apis-arkui/arkts-apis/arkts-arkui-resourcestr-t.md) | 否 | 待加载的模型文件资源路径，默认值为undefined。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;[Scene](arkts-arkgraphics3d-scene-c.md)&gt; | 返回创建的场景 |
+| Promise&lt;[Scene](arkts-arkgraphics3d-scene-c.md)&gt; | Promise对象，返回场景对象。 |
 
 ## renderFrame
 

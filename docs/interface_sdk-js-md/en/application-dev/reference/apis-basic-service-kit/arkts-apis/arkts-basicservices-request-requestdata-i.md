@@ -1,6 +1,6 @@
 # RequestData
 
-[UploadConfig](arkts-basicservices-request-uploadconfig-i.md)中的表单数据。
+Describes the form data in [UploadConfig](arkts-basicservices-request-uploadconfig-i.md).
 
 **Since:** 6
 
@@ -22,7 +22,7 @@ import { request } from 'kits/@kit.BasicServicesKit';
 name: string
 ```
 
-表示表单元素的名称。
+Name of a form element.
 
 **Type:** string
 
@@ -40,7 +40,7 @@ name: string
 value: string
 ```
 
-表示表单元素的值。
+Value of a form element.
 
 **Type:** string
 

@@ -4,7 +4,7 @@
 type ToneHapticsAttrsArray = Array<ToneHapticsAttrs>
 ```
 
-系统铃音的振动属性数组。
+Type definition of tone haptics array.
 
 **Since:** 14
 

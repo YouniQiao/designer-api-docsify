@@ -1,6 +1,6 @@
 # SubscribeType
 
-订阅类型枚举。
+Enumerates the subscription types.
 
 **Since:** 7
 
@@ -20,7 +20,7 @@
 SUBSCRIBE_TYPE_LOCAL = 0
 ```
 
-表示订阅本地数据变更。
+Local data changes.
 
 **Since:** 7
 
@@ -40,7 +40,7 @@ SUBSCRIBE_TYPE_LOCAL = 0
 SUBSCRIBE_TYPE_REMOTE = 1
 ```
 
-表示订阅远端数据变更。
+Remote data changes.
 
 **Since:** 7
 
@@ -60,7 +60,7 @@ SUBSCRIBE_TYPE_REMOTE = 1
 SUBSCRIBE_TYPE_ALL = 2
 ```
 
-表示订阅远端和本地数据变更。
+Local and remote data changes.
 
 **Since:** 7
 

@@ -1,11 +1,5 @@
 # getApplicationContextInstance
 
-## 导入模块
-
-```TypeScript
-import { application } from 'kits/@kit.AbilityKit';
-```
-
 ## getApplicationContextInstance
 
 ```TypeScript
@@ -36,7 +30,7 @@ export function getApplicationContextInstance(): ApplicationContext
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 16000050 | Internal error. Possible causes: Memory operation error. |
+| [16000050](../errorcode-ability.md#16000050-内部错误) | Internal error. Possible causes: Memory operation error. |
 
 ## 示例
 

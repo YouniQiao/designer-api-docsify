@@ -12,7 +12,7 @@ import { advertising } from 'kits/@kit.AdsKit';
 function registerWebAdInterface(controller: web_webview.WebviewController, context: common.UIAbilityContext): void
 ```
 
-注入广告JavaScript对象到Web组件中（该接口仅对部分系统预置应用开放）。
+Injects an ad JavaScript object to the **Web** component(this API is only open to some pre-installed system applications).
 
 **Since:** 12
 
@@ -28,15 +28,15 @@ function registerWebAdInterface(controller: web_webview.WebviewController, conte
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| controller | web_webview.WebviewController | Yes | Web组件控制器。 |
-| context | common.UIAbilityContext | Yes | UIAbility的上下文环境。 |
+| controller | web_webview.WebviewController | Yes | Web component controller. |
+| context | common.UIAbilityContext | Yes | Context of the UIAbility. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Invalid input parameter. Possible causes: 1. Mandatory parameters are left unspecified. |
-| 21800001 | System internal error. |
+| [401](../errorcode-ads.md#401-incorrect-ads-request-parameter) | Invalid input parameter. Possible causes: 1. Mandatory parameters are left unspecified. |
+| [21800001](../errorcode-ads.md#21800001-internal-system-error) | System internal error. |
 
 ## Examples
 
@@ -75,7 +75,7 @@ function registerWebAdInterface(controller: web_webview.WebviewController, conte
     needRefresh: boolean): void
 ```
 
-注入广告JavaScript对象到Web组件中（该接口仅对部分系统预置应用开放）。
+Injects an ad JavaScript object to the **Web** component(this API is only open to some pre-installed system applications).
 
 **Since:** 16
 
@@ -91,16 +91,16 @@ function registerWebAdInterface(controller: web_webview.WebviewController, conte
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| controller | web_webview.WebviewController | Yes | Web组件控制器。 |
-| context | common.UIAbilityContext | Yes | UIAbility的上下文环境。 |
-| needRefresh | boolean | Yes | 是否需要刷新页面（true: 需要；false: 不需要）。 |
+| controller | web_webview.WebviewController | Yes | Web component controller. |
+| context | common.UIAbilityContext | Yes | Context of the UIAbility. |
+| needRefresh | boolean | Yes | Whether to refresh the page (true: yes; false: no). |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Invalid input parameter. Possible causes: Mandatory parameters are left unspecified. |
-| 21800001 | System internal error. |
+| [401](../errorcode-ads.md#401-incorrect-ads-request-parameter) | Invalid input parameter. Possible causes: Mandatory parameters are left unspecified. |
+| [21800001](../errorcode-ads.md#21800001-internal-system-error) | System internal error. |
 
 ## Examples
 

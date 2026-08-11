@@ -6,7 +6,7 @@
 declare function fchmod(fd: number, mode: number): Promise<void>
 ```
 
-基于文件描述符改变文件权限，使用Promise异步回调。
+Changes file permissions based on the file descriptor. This API uses a promise to return the result.
 
 **Since:** 7
 
@@ -22,14 +22,14 @@ declare function fchmod(fd: number, mode: number): Promise<void>
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| fd | number | Yes | 待改变文件的文件描述符。 |
-| mode | number | Yes | 若创建文件，则指定文件的权限，可给定如下权限，以按位或的方式追加权限。&lt;br/&gt;-?0o700：所有者具有读、写及可执行权限。&lt;br/&gt;-?0o400：所有者具有读权限。&lt;br/&gt;-? 0o200：所有者具有写权限。&lt;br/&gt;-?0o100：所有者具有可执行权限。&lt;br/&gt;-?0o070：所有用户组具有读、写及可执行权限。&lt;br/&gt;-?0o040：所有用户组具有读权限。&lt;br/&gt;-?0o020：所有用户组具有 写权限。&lt;br/&gt;-?0o010：所有用户组具有可执行权限。&lt;br/&gt;-?0o007：其余用户具有读、写及可执行权限。&lt;br/&gt;-?0o004：其余用户具有读权限。&lt;br/&gt;-?0o002：其余用户具有写权限。&lt;br/&gt;-?0 o001：其余用户具有可执行权限。 |
+| fd | number | Yes | File descriptor of the target file. |
+| mode | number | Yes | Permissions on the file. You can specify multiple permissions, separated using a bitwise OR operator (\|).&lt;br&gt;- **0o700**: The owner has the read, write, and execute permissions.&lt;br&gt;- **0o400**: The owner has the read permission.&lt;br&gt;- **0o200**: The owner has the write permission.&lt;br&gt;- **0o100**: The owner has the execute permission.&lt;br&gt;- **0o070**: The user group has the read, write, and execute permissions.&lt;br&gt;- **0o040**: The user group has the read permission.&lt;br&gt;- **0o020**: The user group has the write permission.&lt;br&gt;- **0o010**: The user group has the execute permission.&lt;br&gt;- **0o007**: Other users have the read, write, and execute permissions.&lt;br&gt;- **0o004**: Other users have the read permission.&lt;br&gt;- **0o002**: Other users have the write permission.&lt;br&gt;- **0o001**: Other users have the execute permission. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise对象。无返回值。 |
+| Promise&lt;void&gt; | Promise that returns no value. |
 
 
 ## fchmod
@@ -38,7 +38,7 @@ declare function fchmod(fd: number, mode: number): Promise<void>
 declare function fchmod(fd: number, mode: number, callback: AsyncCallback<void>): void
 ```
 
-基于文件描述符改变文件权限，使用callback异步回调。
+Changes file permissions based on the file descriptor. This API uses an asynchronous callback to return the result.
 
 **Since:** 7
 
@@ -54,7 +54,7 @@ declare function fchmod(fd: number, mode: number, callback: AsyncCallback<void>)
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| fd | number | Yes | 待改变文件的文件描述符。 |
-| mode | number | Yes | 若创建文件，则指定文件的权限，可给定如下权限，以按位或的方式追加权限。&lt;br/&gt;-?0o700：所有者具有读、写及可执行权限。&lt;br/&gt;-?0o400：所有者具有读权限。&lt;br/&gt;-? 0o200：所有者具有写权限。&lt;br/&gt;-?0o100：所有者具有可执行权限。&lt;br/&gt;-?0o070：所有用户组具有读、写及可执行权限。&lt;br/&gt;-?0o040：所有用户组具有读权限。&lt;br/&gt;-?0o020：所有用户组具有 写权限。&lt;br/&gt;-?0o010：所有用户组具有可执行权限。&lt;br/&gt;-?0o007：其余用户具有读、写及可执行权限。&lt;br/&gt;-?0o004：其余用户具有读权限。&lt;br/&gt;-?0o002：其余用户具有写权限。&lt;br/&gt;-?0 o001：其余用户具有可执行权限。 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | 异步改变文件权限之后的回调。 |
+| fd | number | Yes | File descriptor of the target file. |
+| mode | number | Yes | Permissions on the file. You can specify multiple permissions, separated using a bitwise OR operator (\|).&lt;br&gt;- **0o700**: The owner has the read, write, and execute permissions.&lt;br&gt;- **0o400**: The owner has the read permission.&lt;br&gt;- **0o200**: The owner has the write permission.&lt;br&gt;- **0o100**: The owner has the execute permission.&lt;br&gt;- **0o070**: The user group has the read, write, and execute permissions.&lt;br&gt;- **0o040**: The user group has the read permission.&lt;br&gt;- **0o020**: The user group has the write permission.&lt;br&gt;- **0o010**: The user group has the execute permission.&lt;br&gt;- **0o007**: Other users have the read, write, and execute permissions.&lt;br&gt;- **0o004**: Other users have the read permission.&lt;br&gt;- **0o002**: Other users have the write permission.&lt;br&gt;- **0o001**: Other users have the execute permission. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback invoked when the file permissions are changed asynchronously. |
 

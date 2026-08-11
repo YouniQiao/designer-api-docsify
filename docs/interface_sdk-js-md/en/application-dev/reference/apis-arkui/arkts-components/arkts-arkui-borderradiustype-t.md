@@ -4,7 +4,7 @@
 type BorderRadiusType = Length | BorderRadiuses | LocalizedBorderRadiuses
 ```
 
-圆角类型。
+Enumerates the border corner radius types.
 
 **Since:** 19
 
@@ -20,7 +20,7 @@ type BorderRadiusType = Length | BorderRadiuses | LocalizedBorderRadiuses
 
 | Type | Description |
 | --- | --- |
-| Length | 长度类型，用于描述尺寸单位。 |
-| BorderRadiuses | 圆角类型，用于描述组件边框圆角半径。 |
-| LocalizedBorderRadiuses | 圆角类型，用于描述组件边框圆角半径 |
+| Length | Size unit. |
+| BorderRadiuses | Corner radius of a component's border. |
+| LocalizedBorderRadiuses | Localized corner radius of a component's border. |
 

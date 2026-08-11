@@ -12,7 +12,7 @@ import { workScheduler } from 'kits/@kit.BackgroundTasksKit';
 function stopWork(work: WorkInfo, needCancel?: boolean): void
 ```
 
-取消延迟任务。
+Stops a deferred task.
 
 **Since:** 9
 
@@ -28,18 +28,18 @@ function stopWork(work: WorkInfo, needCancel?: boolean): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| work | [WorkInfo](arkts-backgroundtasks-workscheduler-workinfo-i.md) | Yes | 要停止或移除的延迟任务。 |
-| needCancel | boolean | No | 是否需要移除任务。&lt;br&gt;true表示停止并移除，false表示只停止不移除。默认为false。 |
+| work | [WorkInfo](arkts-backgroundtasks-workscheduler-workinfo-i.md) | Yes | Deferred task to stop. |
+| needCancel | boolean | No | Whether to clear the task while stopping it.&lt;br&gt;The value **true** means to clear the task while stopping it, and **false** means to stop the task only. The default value is **false**. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 9700004 | Check on workInfo failed. |
-| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameters types; 3. Parameter verification failed. |
-| 9700001 | Memory operation failed. |
-| 9700002 | Failed to write data into parcel. Possible reasons: 1. Invalid parameters; 2. Failed to apply for memory. |
-| 9700003 | System service operation failed. |
+| [9700004](../../apis-backgroundtasks-kit/errorcode-workScheduler.md#9700004-workinfo-verification-failure) | Check on workInfo failed. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameters types; 3. Parameter verification failed. |
+| [9700001](../../apis-backgroundtasks-kit/errorcode-workScheduler.md#9700001-memory-operation-failure) | Memory operation failed. |
+| [9700002](../../apis-backgroundtasks-kit/errorcode-workScheduler.md#9700002-parcel-operation-failure) | Failed to write data into parcel. Possible reasons: 1. Invalid parameters; 2. Failed to apply for memory. |
+| [9700003](../../apis-backgroundtasks-kit/errorcode-workScheduler.md#9700003-system-service-failure) | System service operation failed. |
 
 ## Examples
 

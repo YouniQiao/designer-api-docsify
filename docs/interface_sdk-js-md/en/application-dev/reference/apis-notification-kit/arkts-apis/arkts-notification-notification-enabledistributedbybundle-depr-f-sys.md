@@ -6,7 +6,7 @@
 function enableDistributedByBundle(bundle: BundleOption, enable: boolean, callback: AsyncCallback<void>): void
 ```
 
-设置指定应用是否支持分布式通知（Callback形式）。
+Sets whether a specified application supports distributed notifications.This API uses an asynchronous callback to return the result.
 
 **Since:** 8
 
@@ -28,9 +28,9 @@ function enableDistributedByBundle(bundle: BundleOption, enable: boolean, callba
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| bundle | [BundleOption](arkts-notification-notificationextensionsubscription-bundleoption-t.md) | Yes | 应用的包信息。 |
-| enable | boolean | Yes | 是否支持。 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | 应用程序是否支持分布式通知的回调函数。 |
+| bundle | [BundleOption](arkts-notification-notificationextensionsubscription-bundleoption-t.md) | Yes | Bundle information of the application. |
+| enable | boolean | Yes | Whether the device supports distributed notifications. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. |
 
 
 ## enableDistributedByBundle
@@ -39,7 +39,7 @@ function enableDistributedByBundle(bundle: BundleOption, enable: boolean, callba
 function enableDistributedByBundle(bundle: BundleOption, enable: boolean): Promise<void>
 ```
 
-设置指定应用是否支持分布式通知（Promise形式）。
+Sets whether a specified application supports distributed notifications.This API uses a promise to return the result.
 
 **Since:** 8
 
@@ -61,12 +61,12 @@ function enableDistributedByBundle(bundle: BundleOption, enable: boolean): Promi
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| bundle | [BundleOption](arkts-notification-notificationextensionsubscription-bundleoption-t.md) | Yes | 应用的包。 |
-| enable | boolean | Yes | 是否支持。 |
+| bundle | [BundleOption](arkts-notification-notificationextensionsubscription-bundleoption-t.md) | Yes | Application bundle. |
+| enable | boolean | Yes | Whether the device supports distributed notifications. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | 无返回结果的Promise对象。 |
+| Promise&lt;void&gt; | Promise that returns no value. |
 

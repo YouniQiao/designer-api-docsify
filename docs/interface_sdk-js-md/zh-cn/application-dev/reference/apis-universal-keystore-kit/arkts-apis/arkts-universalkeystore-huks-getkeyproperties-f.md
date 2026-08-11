@@ -1,11 +1,5 @@
 # getKeyProperties
 
-## 导入模块
-
-```TypeScript
-import { huks } from 'kits/@kit.UniversalKeystoreKit';
-```
-
 ## getKeyProperties
 
 ```TypeScript

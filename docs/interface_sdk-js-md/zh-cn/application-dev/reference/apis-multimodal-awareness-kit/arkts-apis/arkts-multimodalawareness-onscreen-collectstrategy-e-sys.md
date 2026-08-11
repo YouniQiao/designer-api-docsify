@@ -1,6 +1,6 @@
 # CollectStrategy（系统接口）
 
-Defines a page information collection policy.
+页面信息收集策略。
 
 **起始版本：** 23
 
@@ -18,7 +18,7 @@ Defines a page information collection policy.
 ALLOW = 1 << 0
 ```
 
-Collection is supported.
+应用支持采集。
 
 **起始版本：** 23
 
@@ -38,7 +38,7 @@ Collection is supported.
 SPLIT_SCREEN = 1 << 1
 ```
 
-Collection policy of the split-screen window on the application.
+应用分屏窗口采集策略。
 
 **起始版本：** 23
 
@@ -58,7 +58,7 @@ Collection policy of the split-screen window on the application.
 UNSUPPORTED_APP = 1 << 2
 ```
 
-Automatic collection is not supported.
+应用不支持自动采集。
 
 **起始版本：** 23
 
@@ -78,7 +78,7 @@ Automatic collection is not supported.
 PRIVATE_WINDOW = 1 << 3
 ```
 
-Privacy window of the application.
+应用隐私窗口。
 
 **起始版本：** 23
 
@@ -98,7 +98,7 @@ Privacy window of the application.
 ANCO_APP = 1 << 4
 ```
 
-VM application, which is a non-HarmonyOS application.
+虚拟机应用，非鸿蒙应用。
 
 **起始版本：** 23
 
@@ -118,7 +118,7 @@ VM application, which is a non-HarmonyOS application.
 ALLOW_USER_CHANGE = 1 << 5
 ```
 
-Collection policies can be configured.
+应用的采集策略可配置。
 
 **起始版本：** 23
 
@@ -138,7 +138,7 @@ Collection policies can be configured.
 BUSINESS_APP = 1 << 6
 ```
 
-Application data can be collected.
+应用数据可采集。
 
 **起始版本：** 23
 
@@ -158,7 +158,7 @@ Application data can be collected.
 FLOAT_SCREEN = 1 << 7
 ```
 
-Floating window.
+悬浮窗口。
 
 **起始版本：** 23
 
@@ -178,7 +178,7 @@ Floating window.
 PIP_SCREEN = 1 << 8
 ```
 
-Picture-in-picture mode.
+画中画模式。
 
 **起始版本：** 23
 
@@ -198,7 +198,7 @@ Picture-in-picture mode.
 LAUNCHER = 1 << 9
 ```
 
-Desktop application.
+桌面应用。
 
 **起始版本：** 23
 

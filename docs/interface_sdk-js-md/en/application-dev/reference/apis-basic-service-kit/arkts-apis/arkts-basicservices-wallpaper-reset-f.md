@@ -12,7 +12,7 @@ import { wallpaper } from 'kits/@kit.BasicServicesKit';
 function reset(wallpaperType: WallpaperType, callback: AsyncCallback<void>): void
 ```
 
-移除指定类型的壁纸，恢复为默认显示的壁纸。
+Removes a wallpaper of the specified type and restores the default one.
 
 **Since:** 7
 
@@ -30,8 +30,8 @@ function reset(wallpaperType: WallpaperType, callback: AsyncCallback<void>): voi
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| wallpaperType | [WallpaperType](arkts-basicservices-wallpaper-wallpapertype-e.md) | Yes |  |
-| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | 回调函数，移除壁纸成功，error为undefined，否则返回error信息。 |
+| wallpaperType | [WallpaperType](arkts-basicservices-wallpaper-wallpapertype-e.md) | Yes | indicates the wallpaper type. |
+| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | the callback of reset. |
 
 ## Examples
 
@@ -54,7 +54,7 @@ wallpaper.reset(wallpaper.WallpaperType.WALLPAPER_SYSTEM, (error: BusinessError)
 function reset(wallpaperType: WallpaperType): Promise<void>
 ```
 
-移除指定类型的壁纸，恢复为默认显示的壁纸。
+Removes a wallpaper of the specified type and restores the default one.
 
 **Since:** 7
 
@@ -72,13 +72,13 @@ function reset(wallpaperType: WallpaperType): Promise<void>
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| wallpaperType | [WallpaperType](arkts-basicservices-wallpaper-wallpapertype-e.md) | Yes |  |
+| wallpaperType | [WallpaperType](arkts-basicservices-wallpaper-wallpapertype-e.md) | Yes | indicates the wallpaper type. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | 无返回结果的Promise对象。 |
+| Promise&lt;void&gt; | the promise returned by the function. |
 
 ## Examples
 

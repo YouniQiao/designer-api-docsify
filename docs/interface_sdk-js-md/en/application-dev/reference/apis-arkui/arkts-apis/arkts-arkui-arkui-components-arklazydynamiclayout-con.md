@@ -6,7 +6,7 @@
 export declare const LazyDynamicLayoutInstance: LazyDynamicLayoutAttribute
 ```
 
-定义LazyDynamicLayout组件实例。
+Defines LazyDynamicLayout Component instance.
 
 **Since:** 26.0.0
 

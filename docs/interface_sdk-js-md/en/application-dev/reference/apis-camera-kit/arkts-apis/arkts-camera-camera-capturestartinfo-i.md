@@ -1,6 +1,6 @@
 # CaptureStartInfo
 
-拍照开始信息。
+Describes the capture start information.
 
 **Since:** 11
 
@@ -22,7 +22,7 @@ import { camera } from 'kits/@kit.CameraKit';
 captureId: int
 ```
 
-拍照的ID。
+ID of this capture action.
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
@@ -42,7 +42,7 @@ captureId: int
 time: long
 ```
 
-预估的单次拍照底层出sensor采集帧时间，如果上报-1，代表没有预估时间。
+Estimated duration when the sensor captures frames at the bottom layer in a single capture. If **-1** is reported, there is no estimated duration.
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：long
 

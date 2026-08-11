@@ -1,6 +1,6 @@
 # WebNetErrorList
 
-ArkWeb的网络协议栈错误列表。
+Web net error list.
 
 **Since:** 23
 
@@ -16,7 +16,7 @@ ArkWeb的网络协议栈错误列表。
 NET_OK = 0
 ```
 
-访问正常。
+Normal.
 
 **Since:** 23
 
@@ -32,7 +32,7 @@ NET_OK = 0
 ERR_IO_PENDING = -1
 ```
 
-异步IO操作尚未完成。
+An asynchronous IO operation is not yet complete. This usually does not indicate a fatal error. Typically this error will be generated as a notification to wait for some external notification that the IO operation finally completed.
 
 **Since:** 23
 
@@ -48,7 +48,7 @@ ERR_IO_PENDING = -1
 ERR_FAILED = -2
 ```
 
-一般性的错误。
+A generic failure occurred.
 
 **Since:** 23
 
@@ -64,7 +64,7 @@ ERR_FAILED = -2
 ERR_ABORTED = -3
 ```
 
-操作已被中止。
+An operation was aborted (due to user action).
 
 **Since:** 23
 
@@ -80,7 +80,7 @@ ERR_ABORTED = -3
 ERR_INVALID_ARGUMENT = -4
 ```
 
-参数无效。
+An argument to the function is incorrect.
 
 **Since:** 23
 
@@ -96,7 +96,7 @@ ERR_INVALID_ARGUMENT = -4
 ERR_INVALID_HANDLE = -5
 ```
 
-文件描述符的句柄是无效的。
+The handle or file descriptor is invalid.
 
 **Since:** 23
 
@@ -112,7 +112,7 @@ ERR_INVALID_HANDLE = -5
 ERR_FILE_NOT_FOUND = -6
 ```
 
-文件未找到。
+The file or directory cannot be found.
 
 **Since:** 23
 
@@ -128,7 +128,7 @@ ERR_FILE_NOT_FOUND = -6
 ERR_TIMED_OUT = -7
 ```
 
-操作超时。
+An operation timed out.
 
 **Since:** 23
 
@@ -144,7 +144,7 @@ ERR_TIMED_OUT = -7
 ERR_FILE_TOO_LARGE = -8
 ```
 
-文件过大。
+The file is too large.
 
 **Since:** 23
 
@@ -160,7 +160,7 @@ ERR_FILE_TOO_LARGE = -8
 ERR_UNEXPECTED = -9
 ```
 
-遇到了未被预期或未被特定处理的问题。
+An unexpected error. This may be caused by a programming mistake or an invalid assumption.
 
 **Since:** 23
 
@@ -176,7 +176,7 @@ ERR_UNEXPECTED = -9
 ERR_ACCESS_DENIED = -10
 ```
 
-访问除了网络以外的资源被拒绝。
+Permission to access a resource, other than the network, was denied.
 
 **Since:** 23
 
@@ -192,7 +192,7 @@ ERR_ACCESS_DENIED = -10
 ERR_NOT_IMPLEMENTED = -11
 ```
 
-功能未实现，导致操作失败。
+The operation failed because of unimplemented functionality.
 
 **Since:** 23
 
@@ -208,7 +208,7 @@ ERR_NOT_IMPLEMENTED = -11
 ERR_INSUFFICIENT_RESOURCES = -12
 ```
 
-系统或程序执行所需的资源不足。
+There were not enough resources to complete the operation.
 
 **Since:** 23
 
@@ -224,7 +224,7 @@ ERR_INSUFFICIENT_RESOURCES = -12
 ERR_OUT_OF_MEMORY = -13
 ```
 
-内存溢出。
+Memory allocation failed.
 
 **Since:** 23
 
@@ -240,7 +240,7 @@ ERR_OUT_OF_MEMORY = -13
 ERR_UPLOAD_FILE_CHANGED = -14
 ```
 
-上传文件失败，因为文件的修改时间不符合预期。
+The file upload failed because the file's modification time was different from the expectation.
 
 **Since:** 23
 
@@ -256,7 +256,7 @@ ERR_UPLOAD_FILE_CHANGED = -14
 ERR_SOCKET_NOT_CONNECTED = -15
 ```
 
-长连接断开。
+The socket is not connected.
 
 **Since:** 23
 
@@ -272,7 +272,7 @@ ERR_SOCKET_NOT_CONNECTED = -15
 ERR_FILE_EXISTS = -16
 ```
 
-文件已存在。
+The file already exists.
 
 **Since:** 23
 
@@ -288,7 +288,7 @@ ERR_FILE_EXISTS = -16
 ERR_FILE_PATH_TOO_LONG = -17
 ```
 
-文件路径或者文件名过长。
+The path or file name is too long.
 
 **Since:** 23
 
@@ -304,7 +304,7 @@ ERR_FILE_PATH_TOO_LONG = -17
 ERR_FILE_NO_SPACE = -18
 ```
 
-磁盘没有足够空间。
+Not enough room left on the disk.
 
 **Since:** 23
 
@@ -320,7 +320,7 @@ ERR_FILE_NO_SPACE = -18
 ERR_FILE_VIRUS_INFECTED = -19
 ```
 
-文件包含病毒。
+The file has a virus.
 
 **Since:** 23
 
@@ -336,7 +336,7 @@ ERR_FILE_VIRUS_INFECTED = -19
 ERR_BLOCKED_BY_CLIENT = -20
 ```
 
-客户端已阻止该请求。
+The client chose to block the request.
 
 **Since:** 23
 
@@ -352,7 +352,7 @@ ERR_BLOCKED_BY_CLIENT = -20
 ERR_NETWORK_CHANGED = -21
 ```
 
-网络发生变化。
+The network changed.
 
 **Since:** 23
 
@@ -368,7 +368,7 @@ ERR_NETWORK_CHANGED = -21
 ERR_BLOCKED_BY_ADMINISTRATOR = -22
 ```
 
-被管理员阻止。
+The request was blocked by the URL block list configured by the domain administrator.
 
 **Since:** 23
 
@@ -384,7 +384,7 @@ ERR_BLOCKED_BY_ADMINISTRATOR = -22
 ERR_SOCKET_CONNECTED = -23
 ```
 
-socket已经处于连接状态。
+The socket is already connected.
 
 **Since:** 23
 
@@ -400,7 +400,7 @@ socket已经处于连接状态。
 ERR_UPLOAD_STREAM_REWIND_NOT_SUPPORTED = -25
 ```
 
-由于重试或重定向，需要重新读取上传流，但上传流不支持该操作，因此上传失败。
+The upload failed because the upload stream needed to be re-read, due to a retry or a redirect, but the upload stream doesn't support that operation.
 
 **Since:** 23
 
@@ -416,7 +416,7 @@ ERR_UPLOAD_STREAM_REWIND_NOT_SUPPORTED = -25
 ERR_CONTEXT_SHUT_DOWN = -26
 ```
 
-因为上下文已关闭导致请求失败。
+The request failed because the URLRequestContext is shutting down, or has been shut down.
 
 **Since:** 23
 
@@ -432,7 +432,7 @@ ERR_CONTEXT_SHUT_DOWN = -26
 ERR_BLOCKED_BY_RESPONSE = -27
 ```
 
-请求失败，因为响应不满足要求（例如“X-Frame-Options”和“Content Security Policy”检查以及“Cross Origin Resource Policy”）。
+The request failed because the response was delivered along with requirements which are not met ('X-Frame-Options' and 'Content-Security-Policy' ancestor checks and 'Cross-Origin-Resource-Policy' for instance).
 
 **Since:** 23
 
@@ -448,7 +448,7 @@ ERR_BLOCKED_BY_RESPONSE = -27
 ERR_CLEARTEXT_NOT_PERMITTED = -29
 ```
 
-该请求被系统策略阻止，不允许部分或全部明文请求。
+The request was blocked by system policy disallowing some or all cleartext requests.
 
 **Since:** 23
 
@@ -464,7 +464,7 @@ ERR_CLEARTEXT_NOT_PERMITTED = -29
 ERR_BLOCKED_BY_CSP = -30
 ```
 
-请求被内容安全策略阻止。
+The request was blocked by a Content Security Policy.
 
 **Since:** 23
 
@@ -480,7 +480,7 @@ ERR_BLOCKED_BY_CSP = -30
 ERR_H2_OR_QUIC_REQUIRED = -31
 ```
 
-由于没有HTTP/2或QUIC会话，请求被阻止。
+The request was blocked because of no H/2 or QUIC session.
 
 **Since:** 23
 
@@ -496,7 +496,7 @@ ERR_H2_OR_QUIC_REQUIRED = -31
 ERR_BLOCKED_BY_ORB = -32
 ```
 
-请求被 CORB 或 ORB 阻止。
+The request was blocked by CORB or ORB.
 
 **Since:** 23
 
@@ -512,7 +512,7 @@ ERR_BLOCKED_BY_ORB = -32
 ERR_CONNECTION_CLOSED = -100
 ```
 
-连接已关闭（对应于TCP FIN）。
+A connection was closed (corresponding to a TCP FIN).
 
 **Since:** 23
 
@@ -528,7 +528,7 @@ ERR_CONNECTION_CLOSED = -100
 ERR_CONNECTION_RESET = -101
 ```
 
-连接被重置（对应于TCP RST）。
+A connection was reset (corresponding to a TCP RST).
 
 **Since:** 23
 
@@ -544,7 +544,7 @@ ERR_CONNECTION_RESET = -101
 ERR_CONNECTION_REFUSED = -102
 ```
 
-连接被拒绝。
+A connection attempt was refused.
 
 **Since:** 23
 
@@ -560,7 +560,7 @@ ERR_CONNECTION_REFUSED = -102
 ERR_CONNECTION_ABORTED = -103
 ```
 
-由于未接收到发送数据的ACK，连接超时。这可能包括一个未得到ACK的FIN数据包。
+A connection timed out as a result of not receiving an ACK for data sent.This can include a FIN packet that did not get ACK'd.
 
 **Since:** 23
 
@@ -576,7 +576,7 @@ ERR_CONNECTION_ABORTED = -103
 ERR_CONNECTION_FAILED = -104
 ```
 
-连接失败。
+A connection attempt failed.
 
 **Since:** 23
 
@@ -592,7 +592,7 @@ ERR_CONNECTION_FAILED = -104
 ERR_NAME_NOT_RESOLVED = -105
 ```
 
-域名无法解析。
+The host name could not be resolved.
 
 **Since:** 23
 
@@ -608,7 +608,7 @@ ERR_NAME_NOT_RESOLVED = -105
 ERR_INTERNET_DISCONNECTED = -106
 ```
 
-网络断开连接。
+The Internet connection has been lost.
 
 **Since:** 23
 
@@ -624,7 +624,7 @@ ERR_INTERNET_DISCONNECTED = -106
 ERR_SSL_PROTOCOL_ERROR = -107
 ```
 
-SSL 协议错误。
+An SSL protocol error occurred.
 
 **Since:** 23
 
@@ -640,7 +640,7 @@ SSL 协议错误。
 ERR_ADDRESS_INVALID = -108
 ```
 
-IP地址或端口号无效（例如，无法连接到IP地址0或端口0）。
+The IP address or port number is invalid (e.g., cannot connect to the IP address 0 or the port 0).
 
 **Since:** 23
 
@@ -656,7 +656,7 @@ IP地址或端口号无效（例如，无法连接到IP地址0或端口0）。
 ERR_ADDRESS_UNREACHABLE = -109
 ```
 
-无法访问IP地址。这通常意味着没有到指定主机或网络的路由。
+The IP address is unreachable. This usually means that there is no route to the specified host or network.
 
 **Since:** 23
 
@@ -672,7 +672,7 @@ ERR_ADDRESS_UNREACHABLE = -109
 ERR_SSL_CLIENT_AUTH_CERT_NEEDED = -110
 ```
 
-服务器指定需要客户端提供SSL证书来校验身份。
+The server requested a client certificate for SSL client authentication.
 
 **Since:** 23
 
@@ -688,7 +688,7 @@ ERR_SSL_CLIENT_AUTH_CERT_NEEDED = -110
 ERR_TUNNEL_CONNECTION_FAILED = -111
 ```
 
-无法建立通过代理的隧道连接。
+A tunnel connection through the proxy could not be established.
 
 **Since:** 23
 
@@ -704,7 +704,7 @@ ERR_TUNNEL_CONNECTION_FAILED = -111
 ERR_NO_SSL_VERSIONS_ENABLED = -112
 ```
 
-不支持SSL协议的任何版本。
+No SSL protocol versions are enabled.
 
 **Since:** 23
 
@@ -720,7 +720,7 @@ ERR_NO_SSL_VERSIONS_ENABLED = -112
 ERR_SSL_VERSION_OR_CIPHER_MISMATCH = -113
 ```
 
-客户端和服务器不支持通用的SSL协议版本或密码套件。
+The client and server don't support a common SSL protocol version or cipher suite.
 
 **Since:** 23
 
@@ -736,7 +736,7 @@ ERR_SSL_VERSION_OR_CIPHER_MISMATCH = -113
 ERR_SSL_RENEGOTIATION_REQUESTED = -114
 ```
 
-服务器请求重新协商（rehandshake）。
+The server requested a renegotiation (rehandshake).
 
 **Since:** 23
 
@@ -752,7 +752,7 @@ ERR_SSL_RENEGOTIATION_REQUESTED = -114
 ERR_PROXY_AUTH_UNSUPPORTED = -115
 ```
 
-代理请求身份验证（隧道连接使用不支持的方法）。
+The proxy requested authentication (for tunnel establishment) with an unsupported method.
 
 **Since:** 23
 
@@ -768,7 +768,7 @@ ERR_PROXY_AUTH_UNSUPPORTED = -115
 ERR_BAD_SSL_CLIENT_AUTH_CERT = -117
 ```
 
-SSL 客户端证书错误。
+The SSL handshake failed because of a bad or missing client certificate.
 
 **Since:** 23
 
@@ -784,7 +784,7 @@ SSL 客户端证书错误。
 ERR_CONNECTION_TIMED_OUT = -118
 ```
 
-连接超时。
+A connection attempt timed out.
 
 **Since:** 23
 
@@ -800,7 +800,7 @@ ERR_CONNECTION_TIMED_OUT = -118
 ERR_HOST_RESOLVER_QUEUE_TOO_LARGE = -119
 ```
 
-挂起的DNS解析太多，因此队列中的请求被中止。
+There are too many pending DNS resolves, so a request in the queue was aborted.
 
 **Since:** 23
 
@@ -816,7 +816,7 @@ ERR_HOST_RESOLVER_QUEUE_TOO_LARGE = -119
 ERR_SOCKS_CONNECTION_FAILED = -120
 ```
 
-无法为目标主机建立与 SOCKS 代理服务器的连接。
+Failed establishing a connection to the SOCKS proxy server for a target host.
 
 **Since:** 23
 
@@ -832,7 +832,7 @@ ERR_SOCKS_CONNECTION_FAILED = -120
 ERR_SOCKS_CONNECTION_HOST_UNREACHABLE = -121
 ```
 
-域名不可达。
+The SOCKS proxy server failed establishing connection to the target host because that host is unreachable.
 
 **Since:** 23
 
@@ -848,7 +848,7 @@ ERR_SOCKS_CONNECTION_HOST_UNREACHABLE = -121
 ERR_ALPN_NEGOTIATION_FAILED = -122
 ```
 
-协商备用协议的请求失败。
+The request to negotiate an alternate protocol failed.
 
 **Since:** 23
 
@@ -864,7 +864,7 @@ ERR_ALPN_NEGOTIATION_FAILED = -122
 ERR_SSL_NO_RENEGOTIATION = -123
 ```
 
-对方发送了SSL no_renegotiation警报消息。
+The peer sent an SSL no_renegotiation alert message.
 
 **Since:** 23
 
@@ -880,7 +880,7 @@ ERR_SSL_NO_RENEGOTIATION = -123
 ERR_WINSOCK_UNEXPECTED_WRITTEN_BYTES = -124
 ```
 
-Winsock有时会报告写入的数据多于传递的数据。这可能是由于LSP损坏。
+Winsock sometimes reports more data written than passed. This is probably due to a broken LSP.
 
 **Since:** 23
 
@@ -896,7 +896,7 @@ Winsock有时会报告写入的数据多于传递的数据。这可能是由于L
 ERR_SSL_DECOMPRESSION_FAILURE_ALERT = -125
 ```
 
-SSL对等端向本端发送了致命的解压失败警报。当对等方错误地认为它支持DEFLATE压缩时，通常会发生这种情况。
+An SSL peer sent us a fatal decompression_failure alert. This typically occurs when a peer selects DEFLATE compression in the mistaken belief that it supports it.
 
 **Since:** 23
 
@@ -912,7 +912,7 @@ SSL对等端向本端发送了致命的解压失败警报。当对等方错误�
 ERR_SSL_BAD_RECORD_MAC_ALERT = -126
 ```
 
-SSL对等端向本端发送了致命的bad_record_mac警报。一个对DEFLATE支持有问题的服务器可能发生这个情况。
+An SSL peer sent us a fatal bad_record_mac alert. This has been observed from servers with buggy DEFLATE support.
 
 **Since:** 23
 
@@ -928,7 +928,7 @@ SSL对等端向本端发送了致命的bad_record_mac警报。一个对DEFLATE�
 ERR_PROXY_AUTH_REQUESTED = -127
 ```
 
-代理请求身份验证（用于隧道建立）。
+The proxy requested authentication (for tunnel establishment).
 
 **Since:** 23
 
@@ -944,7 +944,7 @@ ERR_PROXY_AUTH_REQUESTED = -127
 ERR_PROXY_CONNECTION_FAILED = -130
 ```
 
-无法创建到代理服务器的连接。域名解析或连接套接字时出错。请注意，这不包括HTTP代理的实际“CONNECT”方法期间的故障。
+Could not create a connection to the proxy server. An error occurred either in resolving its name, or in connecting a socket to it.Note that this does NOT include failures during the actual "CONNECT" method of an HTTP proxy.
 
 **Since:** 23
 
@@ -960,7 +960,7 @@ ERR_PROXY_CONNECTION_FAILED = -130
 ERR_MANDATORY_PROXY_CONFIGURATION_FAILED = -131
 ```
 
-无法使用强制代理配置。目前，这意味着无法获取、解析或执行强制的PAC脚本。
+A mandatory proxy configuration could not be used. Currently this means that a mandatory PAC script could not be fetched, parsed or executed.
 
 **Since:** 23
 
@@ -976,7 +976,7 @@ ERR_MANDATORY_PROXY_CONFIGURATION_FAILED = -131
 ERR_PRECONNECT_MAX_SOCKET_LIMIT = -133
 ```
 
-在预连接时，已经达到了套接字池的最大套接字限制。因此不需要尝试预连接更多的套接字。
+We've hit the max socket limit for the socket pool while preconnecting. We don't bother trying to preconnect more sockets.
 
 **Since:** 23
 
@@ -992,7 +992,7 @@ ERR_PRECONNECT_MAX_SOCKET_LIMIT = -133
 ERR_SSL_CLIENT_AUTH_PRIVATE_KEY_ACCESS_DENIED = -134
 ```
 
-使用SSL客户端证书私钥的权限被拒绝。
+The permission to use the SSL client certificate's private key was denied.
 
 **Since:** 23
 
@@ -1008,7 +1008,7 @@ ERR_SSL_CLIENT_AUTH_PRIVATE_KEY_ACCESS_DENIED = -134
 ERR_SSL_CLIENT_AUTH_CERT_NO_PRIVATE_KEY = -135
 ```
 
-SSL客户端证书没有私钥。
+The SSL client certificate has no private key.
 
 **Since:** 23
 
@@ -1024,7 +1024,7 @@ SSL客户端证书没有私钥。
 ERR_PROXY_CERTIFICATE_INVALID = -136
 ```
 
-HTTPS 代理提供的证书无效。
+The certificate presented by the HTTPS Proxy was invalid.
 
 **Since:** 23
 
@@ -1040,7 +1040,7 @@ HTTPS 代理提供的证书无效。
 ERR_NAME_RESOLUTION_FAILED = -137
 ```
 
-域名解析时出错（DNS）。
+An error occurred when trying to do a name resolution (DNS).
 
 **Since:** 23
 
@@ -1056,7 +1056,7 @@ ERR_NAME_RESOLUTION_FAILED = -137
 ERR_NETWORK_ACCESS_DENIED = -138
 ```
 
-网络被禁用。
+Permission to access the network was denied. This is used to distinguish errors that were most likely caused by a firewall from other access denied errors. See also ERR_ACCESS_DENIED.
 
 **Since:** 23
 
@@ -1072,7 +1072,7 @@ ERR_NETWORK_ACCESS_DENIED = -138
 ERR_TEMPORARILY_THROTTLED = -139
 ```
 
-因节流而取消了此请求以避免DDOS。
+The request throttler module cancelled this request to avoid DDOS.
 
 **Since:** 23
 
@@ -1088,7 +1088,7 @@ ERR_TEMPORARILY_THROTTLED = -139
 ERR_HTTPS_PROXY_TUNNEL_RESPONSE_REDIRECT = -140
 ```
 
-通过HTTPS代理创建SSL隧道连接的请求收到302（响应正文可能包括请求失败原因的描述）。
+A request to create an SSL tunnel connection through the HTTPS proxy received a 302 (temporary redirect) response. The response body might include a description of why the request failed.
 
 **Since:** 23
 
@@ -1104,7 +1104,7 @@ ERR_HTTPS_PROXY_TUNNEL_RESPONSE_REDIRECT = -140
 ERR_SSL_CLIENT_AUTH_SIGNATURE_FAILED = -141
 ```
 
-无法使用客户端证书的私钥对SSL客户端身份验证握手的CertificateVerify数据进行签名。
+We were unable to sign the CertificateVerify data of an SSL client auth handshake with the client certificate's private key.Possible causes for this include the user implicitly or explicitly denying access to the private key, the private key may not be valid for signing, the key may be relying on a cached handle which is no longer valid, or the CSP won't allow arbitrary data to be signed.
 
 **Since:** 23
 
@@ -1120,7 +1120,7 @@ ERR_SSL_CLIENT_AUTH_SIGNATURE_FAILED = -141
 ERR_MSG_TOO_BIG = -142
 ```
 
-消息太大，无法传输。（例如，超过大小阈值的UDP消息）。
+The message was too large for the transport. (for example a UDP message which exceeds size threshold).
 
 **Since:** 23
 
@@ -1136,7 +1136,7 @@ ERR_MSG_TOO_BIG = -142
 ERR_WS_PROTOCOL_ERROR = -145
 ```
 
-WebSocket协议错误。表示由于帧格式错误或其他协议冲突，正在终止连接。
+Websocket protocol error. Indicates that we are terminating the connection due to a malformed frame or other protocol violation.
 
 **Since:** 23
 
@@ -1152,7 +1152,7 @@ WebSocket协议错误。表示由于帧格式错误或其他协议冲突，正�
 ERR_ADDRESS_IN_USE = -147
 ```
 
-尝试绑定已在使用的地址时返回。
+Returned when attempting to bind an address that is already in use.
 
 **Since:** 23
 
@@ -1168,7 +1168,7 @@ ERR_ADDRESS_IN_USE = -147
 ERR_SSL_HANDSHAKE_NOT_COMPLETED = -148
 ```
 
-由于SSL握手尚未完成，操作失败。
+An operation failed because the SSL handshake has not completed.
 
 **Since:** 23
 
@@ -1184,7 +1184,7 @@ ERR_SSL_HANDSHAKE_NOT_COMPLETED = -148
 ERR_SSL_BAD_PEER_PUBLIC_KEY = -149
 ```
 
-SSL 公钥错误。
+SSL peer's public key is invalid.
 
 **Since:** 23
 
@@ -1200,7 +1200,7 @@ SSL 公钥错误。
 ERR_SSL_PINNED_KEY_NOT_IN_CERT_CHAIN = -150
 ```
 
-收到的证书与内置域名指定的公钥不匹配。
+The certificate didn't match the built-in public key pins for the host name.The pins are set in net/http/transport_security_state.cc and require that one of a set of public keys exist on the path from the leaf to the root.
 
 **Since:** 23
 
@@ -1216,7 +1216,7 @@ ERR_SSL_PINNED_KEY_NOT_IN_CERT_CHAIN = -150
 ERR_CLIENT_AUTH_CERT_TYPE_UNSUPPORTED = -151
 ```
 
-服务器对客户端证书的请求不包含本机支持的任何类型。
+Server request for client certificate did not contain any types we support.
 
 **Since:** 23
 
@@ -1232,7 +1232,7 @@ ERR_CLIENT_AUTH_CERT_TYPE_UNSUPPORTED = -151
 ERR_SSL_DECRYPT_ERROR_ALERT = -153
 ```
 
-SSL对等端向本端发送了致命的decrypt_error警报。当对等方无法正确验证签名（在CertificateVerify或ServerKeyExchange中）或验证Finished消息时，通常会发生这种情况。
+An SSL peer sent us a fatal decrypt_error alert. This typically occurs when a peer could not correctly verify a signature (in CertificateVerify or ServerKeyExchange) or validate a Finished message.
 
 **Since:** 23
 
@@ -1248,7 +1248,7 @@ SSL对等端向本端发送了致命的decrypt_error警报。当对等方无法�
 ERR_WS_THROTTLE_QUEUE_TOO_LARGE = -154
 ```
 
-挂起的WebSocketJob实例太多，因此没有将新Job推送到队列中。
+There are too many pending WebSocketJob instances, so the new job was not pushed to the queue.
 
 **Since:** 23
 
@@ -1264,7 +1264,7 @@ ERR_WS_THROTTLE_QUEUE_TOO_LARGE = -154
 ERR_SSL_SERVER_CERT_CHANGED = -156
 ```
 
-SSL服务器证书在重新协商中更改。
+The SSL server certificate changed in a renegotiation.
 
 **Since:** 23
 
@@ -1280,7 +1280,7 @@ SSL服务器证书在重新协商中更改。
 ERR_SSL_UNRECOGNIZED_NAME_ALERT = -159
 ```
 
-SSL服务器向本端发送了致命的未识别名称警报。
+The SSL server sent us a fatal unrecognized_name alert.
 
 **Since:** 23
 
@@ -1296,7 +1296,7 @@ SSL服务器向本端发送了致命的未识别名称警报。
 ERR_SOCKET_SET_RECEIVE_BUFFER_SIZE_ERROR = -160
 ```
 
-未能按请求设置套接字的接收缓冲区大小。
+Failed to set the socket's receive buffer size as requested.
 
 **Since:** 23
 
@@ -1312,7 +1312,7 @@ ERR_SOCKET_SET_RECEIVE_BUFFER_SIZE_ERROR = -160
 ERR_SOCKET_SET_SEND_BUFFER_SIZE_ERROR = -161
 ```
 
-未能按请求设置套接字的发送缓冲区大小。
+Failed to set the socket's send buffer size as requested.
 
 **Since:** 23
 
@@ -1328,7 +1328,7 @@ ERR_SOCKET_SET_SEND_BUFFER_SIZE_ERROR = -161
 ERR_SOCKET_RECEIVE_BUFFER_SIZE_UNCHANGEABLE = -162
 ```
 
-尽管setsockopt返回了成功的代码，但未能按请求设置套接字的接收缓冲区大小。
+Failed to set the socket's receive buffer size as requested, despite success return code from setsockopt.
 
 **Since:** 23
 
@@ -1344,7 +1344,7 @@ ERR_SOCKET_RECEIVE_BUFFER_SIZE_UNCHANGEABLE = -162
 ERR_SOCKET_SEND_BUFFER_SIZE_UNCHANGEABLE = -163
 ```
 
-尽管setsockopt返回了成功的代码，但未能按请求设置套接字的发送缓冲区大小。
+Failed to set the socket's send buffer size as requested, despite success return code from setsockopt.
 
 **Since:** 23
 
@@ -1360,7 +1360,7 @@ ERR_SOCKET_SEND_BUFFER_SIZE_UNCHANGEABLE = -163
 ERR_SSL_CLIENT_AUTH_CERT_BAD_FORMAT = -164
 ```
 
-无法将客户端证书从平台存储导入SSL库。
+Failed to import a client certificate from the platform store into the SSL library.
 
 **Since:** 23
 
@@ -1376,7 +1376,7 @@ ERR_SSL_CLIENT_AUTH_CERT_BAD_FORMAT = -164
 ERR_ICANN_NAME_COLLISION = -166
 ```
 
-将主机名解析为包含IPv4地址“127.0.53.53”的IP地址列表。这是ICANN建议的一个特殊IP地址，用于表示存在名称冲突，并提醒管理员注意潜在问题。
+Resolving a hostname to an IP address list included the IPv4 address"127.0.53.53". This is a special IP address which ICANN has recommended to indicate there was a name collision, and alert admins to a potential problem.
 
 **Since:** 23
 
@@ -1392,7 +1392,7 @@ ERR_ICANN_NAME_COLLISION = -166
 ERR_SSL_SERVER_CERT_BAD_FORMAT = -167
 ```
 
-SSL服务器提供了一个无法解码的证书。这不是证书错误代码，因为没有X509Certificate对象可用。此错误是致命的。
+The SSL server presented a certificate which could not be decoded. This is not a certificate error code as no X509Certificate object is available. This error is fatal.
 
 **Since:** 23
 
@@ -1408,7 +1408,7 @@ SSL服务器提供了一个无法解码的证书。这不是证书错误代码�
 ERR_CT_STH_PARSING_FAILED = -168
 ```
 
-Certificate Transparency: 解析signed tree head失败。
+Certificate Transparency: Received a signed tree head that failed to parse.
 
 **Since:** 23
 
@@ -1424,7 +1424,7 @@ Certificate Transparency: 解析signed tree head失败。
 ERR_CT_STH_INCOMPLETE = -169
 ```
 
-Certificate Transparency: 解析signed tree head成功，但是缺少了一些信息。
+Certificate Transparency: Received a signed tree head whose JSON parsing was OK but was missing some of the fields.
 
 **Since:** 23
 
@@ -1440,7 +1440,7 @@ Certificate Transparency: 解析signed tree head成功，但是缺少了一些�
 ERR_UNABLE_TO_REUSE_CONNECTION_FOR_PROXY_AUTH = -170
 ```
 
-在使用AuthController生成凭据之前，尝试重新使用连接发送代理身份验证凭据失败。调用方应使用新连接重新使用控制器。
+The attempt to reuse a connection to send proxy auth credentials failed before the AuthController was used to generate credentials. The caller should reuse the controller with a new connection. This error is only used internally by the network stack.
 
 **Since:** 23
 
@@ -1456,7 +1456,7 @@ ERR_UNABLE_TO_REUSE_CONNECTION_FOR_PROXY_AUTH = -170
 ERR_CT_CONSISTENCY_PROOF_PARSING_FAILED = -171
 ```
 
-Certificate Transparency: 一致性验证解析失败。
+Certificate Transparency: Failed to parse the received consistency proof.
 
 **Since:** 23
 
@@ -1472,7 +1472,7 @@ Certificate Transparency: 一致性验证解析失败。
 ERR_SSL_OBSOLETE_CIPHER = -172
 ```
 
-SSL服务器需要一个不受支持的密码套件，该套件已被删除。此错误将在密码套件删除后立即在一个或两个版本的回退中临时发出信号，之后回退将被删除。
+The SSL server required an unsupported cipher suite that has since been removed. This error will temporarily be signaled on a fallback for one or two releases immediately following a cipher suite's removal, after which the fallback will be removed.
 
 **Since:** 23
 
@@ -1488,7 +1488,7 @@ SSL服务器需要一个不受支持的密码套件，该套件已被删除。�
 ERR_WS_UPGRADE = -173
 ```
 
-当WebSocket握手成功完成并且连接已升级时，URLRequest将被取消，并返回此错误代码。
+When a WebSocket handshake is done successfully and the connection has been upgraded, the URLRequest is cancelled with this error code.
 
 **Since:** 23
 
@@ -1504,7 +1504,7 @@ ERR_WS_UPGRADE = -173
 ERR_READ_IF_READY_NOT_IMPLEMENTED = -174
 ```
 
-套接字ReadIfReady支持未实现。
+Socket ReadIfReady support is not implemented. This error should not be user visible, because the normal Read() method is used as a fallback.
 
 **Since:** 23
 
@@ -1520,7 +1520,7 @@ ERR_READ_IF_READY_NOT_IMPLEMENTED = -174
 ERR_NO_BUFFER_SPACE = -176
 ```
 
-没有可用的套接字缓冲区空间。
+No socket buffer space is available.
 
 **Since:** 23
 
@@ -1536,7 +1536,7 @@ ERR_NO_BUFFER_SPACE = -176
 ERR_SSL_CLIENT_AUTH_NO_COMMON_ALGORITHMS = -177
 ```
 
-在本端的客户端证书私钥和服务器的首选项之间没有共同的签名算法。
+There were no common signature algorithms between our client certificate private key and the server's preferences.
 
 **Since:** 23
 
@@ -1552,7 +1552,7 @@ ERR_SSL_CLIENT_AUTH_NO_COMMON_ALGORITHMS = -177
 ERR_EARLY_DATA_REJECTED = -178
 ```
 
-TLS 1.3 early data 被服务器拒绝。这将在从套接字返回任何数据之前接收。应在禁用early data的情况下重试请求。
+TLS 1.3 early data was rejected by the server. This will be received before any data is returned from the socket. The request should be retried with early data disabled.
 
 **Since:** 23
 
@@ -1568,7 +1568,7 @@ TLS 1.3 early data 被服务器拒绝。这将在从套接字返回任何数据�
 ERR_WRONG_VERSION_ON_EARLY_DATA = -179
 ```
 
-TLS 1.3 early data 版本错误。
+TLS 1.3 early data was offered, but the server responded with TLS 1.2 or earlier. This is an internal error code to account for a backwards-compatibility issue with early data and TLS 1.2. It will be received before any data is returned from the socket. The request should be retried with early data disabled.See https://tools.ietf.org/html/rfc8446#appendix-D.3 for details.
 
 **Since:** 23
 
@@ -1584,7 +1584,7 @@ TLS 1.3 early data 版本错误。
 ERR_TLS13_DOWNGRADE_DETECTED = -180
 ```
 
-TLS 1.3已启用，但已协商更低的版本，服务器返回一个值，表示它支持TLS 1.3。这是TLS 1.3中安全检查的一部分，但也可能表明用户使用了一个有问题的TLS-terminating代理。
+TLS 1.3 was enabled, but a lower version was negotiated and the server returned a value indicating it supported TLS 1.3. This is part of a security check in TLS 1.3, but it may also indicate the user is behind a buggy TLS-terminating proxy which implemented TLS 1.2 incorrectly.
 
 **Since:** 23
 
@@ -1600,7 +1600,7 @@ TLS 1.3已启用，但已协商更低的版本，服务器返回一个值，表�
 ERR_SSL_KEY_USAGE_INCOMPATIBLE = -181
 ```
 
-服务器的证书具有与协商的TLS密钥交换方法不兼容的keyUsage扩展。
+The server's certificate has a keyUsage extension incompatible with the negotiated TLS key exchange method.
 
 **Since:** 23
 
@@ -1616,7 +1616,7 @@ ERR_SSL_KEY_USAGE_INCOMPATIBLE = -181
 ERR_INVALID_ECH_CONFIG_LIST = -182
 ```
 
-无法解析通过DNS获取的ECHConfigList。
+The ECHConfigList fetched over DNS cannot be parsed.
 
 **Since:** 23
 
@@ -1632,7 +1632,7 @@ ERR_INVALID_ECH_CONFIG_LIST = -182
 ERR_ECH_NOT_NEGOTIATED = -183
 ```
 
-ECH已启用，但服务器无法解密加密的ClientHello。
+ECH was enabled, but the server was unable to decrypt the encrypted ClientHello.
 
 **Since:** 23
 
@@ -1648,7 +1648,7 @@ ECH已启用，但服务器无法解密加密的ClientHello。
 ERR_ECH_FALLBACK_CERTIFICATE_INVALID = -184
 ```
 
-ECH已启用，服务器无法解密加密的ClientHello，并且没有提供对公用名称有效的证书。
+ECH was enabled, the server was unable to decrypt the encrypted ClientHello,and additionally did not present a certificate valid for the public name.
 
 **Since:** 23
 
@@ -1664,7 +1664,7 @@ ECH已启用，服务器无法解密加密的ClientHello，并且没有提供对
 ERR_CERT_COMMON_NAME_INVALID = -200
 ```
 
-服务器响应时使用的证书的公用名称与主机名不匹配。这可能意味着：1.攻击者已将本端的流量重定向到他们的服务器，并提供了他们知道私钥的证书。2.服务器配置错误，使用错误的证书进行响应。3.用户在无线网络上，并被重定向到网络的登录页面。4.操作系统使用了DNS搜索后缀，服务器在地址栏中没有缩写名称的证书。
+The server responded with a certificate whose common name did not match the host name. This could mean:1. An attacker has redirected our traffic to their server and is  presenting a certificate for which they know the private key.2. The server is misconfigured and responding with the wrong cert.3. The user is on a wireless network and is being redirected to the  network's login page.4. The OS has used a DNS search suffix and the server doesn't have  a certificate for the abbreviated name in the address bar.
 
 **Since:** 23
 
@@ -1680,9 +1680,7 @@ ERR_CERT_COMMON_NAME_INVALID = -200
 ERR_CERT_DATE_INVALID = -201
 ```
 
-证书已过期。这可能意味着：
-
-1.攻击者正在出示一个旧证书，他们已设法获得该证书的私钥。2.服务器配置错误，没有提供有效的证书。3.设备的时钟错了。
+The server responded with a certificate that, by our clock, appears to either not yet be valid or to have expired. This could mean:1. An attacker is presenting an old certificate for which they have  managed to obtain the private key.2. The server is misconfigured and is not presenting a valid cert.3. Our clock is wrong.
 
 **Since:** 23
 
@@ -1698,7 +1696,7 @@ ERR_CERT_DATE_INVALID = -201
 ERR_CERT_AUTHORITY_INVALID = -202
 ```
 
-未信任的证书签发机构。这可能意味着：1.攻击者已将真实的证书替换为包含其公钥并由其同伙签名的证书。2.服务器操作员拥有来自本端不知道但应该信任的CA的合法证书。3.服务器提供了一个自签名证书，无法抵御主动攻击者。
+The server responded with a certificate that is signed by an authority we don't trust. The could mean:1. An attacker has substituted the real certificate for a cert that  contains their public key and is signed by their cousin.2. The server operator has a legitimate certificate from a CA we don't  know about, but should trust.3. The server is presenting a self-signed certificate, providing no  defense against active attackers (but foiling passive attackers).
 
 **Since:** 23
 
@@ -1714,7 +1712,7 @@ ERR_CERT_AUTHORITY_INVALID = -202
 ERR_CERT_CONTAINS_ERRORS = -203
 ```
 
-证书中包含错误。
+The server responded with a certificate that contains errors.This error is not recoverable.MSDN describes this error as follows: "The SSL certificate contains errors."NOTE: It's unclear how this differs from ERR_CERT_INVALID. For consistency,use that code instead of this one from now on.
 
 **Since:** 23
 
@@ -1730,7 +1728,7 @@ ERR_CERT_CONTAINS_ERRORS = -203
 ERR_CERT_NO_REVOCATION_MECHANISM = -204
 ```
 
-证书无撤销机制，实际上，此证书不能被吊销。
+The certificate has no mechanism for determining if it is revoked. In effect, this certificate cannot be revoked.
 
 **Since:** 23
 
@@ -1746,7 +1744,7 @@ ERR_CERT_NO_REVOCATION_MECHANISM = -204
 ERR_CERT_UNABLE_TO_CHECK_REVOCATION = -205
 ```
 
-此网站的安全证书的吊销信息不可用。这可能意味着：1.一个攻击者破坏了证书中的私钥，并阻止了本端发现证书已被吊销的尝试。2.证书未被吊销，但吊销服务器正忙或不可用。
+Revocation information for the security certificate for this site is not available. This could mean:1. An attacker has compromised the private key in the certificate and is  blocking our attempt to find out that the cert was revoked.2. The certificate is unrevoked, but the revocation server is busy or  unavailable.
 
 **Since:** 23
 
@@ -1762,7 +1760,7 @@ ERR_CERT_UNABLE_TO_CHECK_REVOCATION = -205
 ERR_CERT_REVOKED = -206
 ```
 
-证书已撤销。本端有能力忽略这个错误，但这可能不是本端应该做的事情。
+The server responded with a certificate has been revoked.We have the capability to ignore this error, but it is probably not the thing to do.
 
 **Since:** 23
 
@@ -1778,7 +1776,7 @@ ERR_CERT_REVOKED = -206
 ERR_CERT_INVALID = -207
 ```
 
-证书无效。
+The server responded with a certificate that is invalid.This error is not recoverable.MSDN describes this error as follows: "The SSL certificate is invalid."
 
 **Since:** 23
 
@@ -1794,7 +1792,7 @@ ERR_CERT_INVALID = -207
 ERR_CERT_WEAK_SIGNATURE_ALGORITHM = -208
 ```
 
-服务器使用弱签名算法签名的证书作为响应。
+The server responded with a certificate that is signed using a weak signature algorithm.
 
 **Since:** 23
 
@@ -1810,7 +1808,7 @@ ERR_CERT_WEAK_SIGNATURE_ALGORITHM = -208
 ERR_CERT_NON_UNIQUE_NAME = -210
 ```
 
-证书中指定的域名不是唯一的。
+The host name specified in the certificate is not unique.
 
 **Since:** 23
 
@@ -1826,7 +1824,7 @@ ERR_CERT_NON_UNIQUE_NAME = -210
 ERR_CERT_WEAK_KEY = -211
 ```
 
-服务器以包含弱密钥（例如，RSA密钥太小）的证书作为响应。
+The server responded with a certificate that contains a weak key (e.g.a too-small RSA key).
 
 **Since:** 23
 
@@ -1842,7 +1840,7 @@ ERR_CERT_WEAK_KEY = -211
 ERR_CERT_NAME_CONSTRAINT_VIOLATION = -212
 ```
 
-违反证书名称约束。
+The certificate claimed DNS names that are in violation of name constraints.
 
 **Since:** 23
 
@@ -1858,7 +1856,7 @@ ERR_CERT_NAME_CONSTRAINT_VIOLATION = -212
 ERR_CERT_VALIDITY_TOO_LONG = -213
 ```
 
-证书有效期过长。
+The certificate's validity period is too long.
 
 **Since:** 23
 
@@ -1874,7 +1872,7 @@ ERR_CERT_VALIDITY_TOO_LONG = -213
 ERR_CERTIFICATE_TRANSPARENCY_REQUIRED = -214
 ```
 
-此连接需要Certificate Transparency，但服务器未提供符合策略的CT信息。
+Certificate Transparency was required for this connection, but the server did not provide CT information that complied with the policy.
 
 **Since:** 23
 
@@ -1890,7 +1888,7 @@ ERR_CERTIFICATE_TRANSPARENCY_REQUIRED = -214
 ERR_CERT_SYMANTEC_LEGACY = -215
 ```
 
-证书链接到不再受信任的旧版Symantec根证书。
+The certificate chained to a legacy Symantec root that is no longer trusted.
 
 **Since:** 23
 
@@ -1906,7 +1904,7 @@ ERR_CERT_SYMANTEC_LEGACY = -215
 ERR_CERT_KNOWN_INTERCEPTION_BLOCKED = -217
 ```
 
-已知该证书被设备所有者以外的实体用于拦截。
+The certificate is known to be used for interception by an entity other the device owner.
 
 **Since:** 23
 
@@ -1922,7 +1920,7 @@ ERR_CERT_KNOWN_INTERCEPTION_BLOCKED = -217
 ERR_SSL_OBSOLETE_VERSION_OR_CIPHER = -218
 ```
 
-连接使用过时版本的 SSL/TLS 或密码。
+The connection uses an obsolete version of SSL/TLS or cipher.
 
 **Since:** 23
 
@@ -1938,7 +1936,7 @@ ERR_SSL_OBSOLETE_VERSION_OR_CIPHER = -218
 ERR_CERT_END = -219
 ```
 
-紧跟在上一个证书错误代码之后的值。
+The value immediately past the last certificate error code.
 
 **Since:** 23
 
@@ -1954,7 +1952,7 @@ ERR_CERT_END = -219
 ERR_INVALID_URL = -300
 ```
 
-非法URL。
+The URL is invalid.
 
 **Since:** 23
 
@@ -1970,7 +1968,7 @@ ERR_INVALID_URL = -300
 ERR_DISALLOWED_URL_SCHEME = -301
 ```
 
-不允许使用的URL scheme。
+The scheme of the URL is disallowed.
 
 **Since:** 23
 
@@ -1986,7 +1984,7 @@ ERR_DISALLOWED_URL_SCHEME = -301
 ERR_UNKNOWN_URL_SCHEME = -302
 ```
 
-未知 scheme。
+The scheme of the URL is unknown.
 
 **Since:** 23
 
@@ -2002,7 +2000,7 @@ ERR_UNKNOWN_URL_SCHEME = -302
 ERR_INVALID_REDIRECT = -303
 ```
 
-试图加载URL导致重定向到无效的URL。
+Attempting to load an URL resulted in a redirect to an invalid URL.
 
 **Since:** 23
 
@@ -2018,7 +2016,7 @@ ERR_INVALID_REDIRECT = -303
 ERR_TOO_MANY_REDIRECTS = -310
 ```
 
-重定向过多。
+Attempting to load an URL resulted in too many redirects.
 
 **Since:** 23
 
@@ -2034,7 +2032,7 @@ ERR_TOO_MANY_REDIRECTS = -310
 ERR_UNSAFE_REDIRECT = -311
 ```
 
-不安全的重定向。
+Attempting to load an URL resulted in an unsafe redirect (e.g., a redirect to file:// is considered unsafe).
 
 **Since:** 23
 
@@ -2050,7 +2048,7 @@ ERR_UNSAFE_REDIRECT = -311
 ERR_UNSAFE_PORT = -312
 ```
 
-不安全的端口。
+Attempting to load an URL with an unsafe port number.
 
 **Since:** 23
 
@@ -2066,7 +2064,7 @@ ERR_UNSAFE_PORT = -312
 ERR_INVALID_RESPONSE = -320
 ```
 
-非法返回。
+The server's response was invalid.
 
 **Since:** 23
 
@@ -2082,7 +2080,7 @@ ERR_INVALID_RESPONSE = -320
 ERR_INVALID_CHUNKED_ENCODING = -321
 ```
 
-分块传输编码错误。
+Error in chunked transfer encoding.
 
 **Since:** 23
 
@@ -2098,7 +2096,7 @@ ERR_INVALID_CHUNKED_ENCODING = -321
 ERR_METHOD_UNSUPPORTED = -322
 ```
 
-方法不支持。
+The server did not support the request method.
 
 **Since:** 23
 
@@ -2114,7 +2112,7 @@ ERR_METHOD_UNSUPPORTED = -322
 ERR_UNEXPECTED_PROXY_AUTH = -323
 ```
 
-意外的代理身份验证。
+The response was 407 (Proxy Authentication Required), yet we did not send the request to a proxy.
 
 **Since:** 23
 
@@ -2130,7 +2128,7 @@ ERR_UNEXPECTED_PROXY_AUTH = -323
 ERR_EMPTY_RESPONSE = -324
 ```
 
-空返回错误。
+The server closed the connection without sending any data.
 
 **Since:** 23
 
@@ -2146,7 +2144,7 @@ ERR_EMPTY_RESPONSE = -324
 ERR_RESPONSE_HEADERS_TOO_BIG = -325
 ```
 
-HTTP响应标头过大。
+The headers section of the response is too large.
 
 **Since:** 23
 
@@ -2162,7 +2160,7 @@ HTTP响应标头过大。
 ERR_PAC_SCRIPT_FAILED = -327
 ```
 
-PAC 脚本错误。
+The evaluation of the PAC script failed.
 
 **Since:** 23
 
@@ -2178,7 +2176,7 @@ PAC 脚本错误。
 ERR_REQUEST_RANGE_NOT_SATISFIABLE = -328
 ```
 
-请求范围不可满足。
+The response was 416 (Requested range not satisfiable) and the server cannot satisfy the range requested.
 
 **Since:** 23
 
@@ -2194,7 +2192,7 @@ ERR_REQUEST_RANGE_NOT_SATISFIABLE = -328
 ERR_MALFORMED_IDENTITY = -329
 ```
 
-用于身份验证的标识无效。
+The identity used for authentication is invalid.
 
 **Since:** 23
 
@@ -2210,7 +2208,7 @@ ERR_MALFORMED_IDENTITY = -329
 ERR_CONTENT_DECODING_FAILED = -330
 ```
 
-响应正文的内容解码失败。
+Content decoding of the response body failed.
 
 **Since:** 23
 
@@ -2226,7 +2224,7 @@ ERR_CONTENT_DECODING_FAILED = -330
 ERR_NETWORK_IO_SUSPENDED = -331
 ```
 
-操作无法完成，因为所有网络IO都已挂起。
+An operation could not be completed because all network IO is suspended.
 
 **Since:** 23
 
@@ -2242,7 +2240,7 @@ ERR_NETWORK_IO_SUSPENDED = -331
 ERR_SYN_REPLY_NOT_RECEIVED = -332
 ```
 
-在流上未接收到SYN_REPLY的情况下接收到的FLIP数据。
+FLIP data received without receiving a SYN_REPLY on the stream.
 
 **Since:** 23
 
@@ -2258,7 +2256,7 @@ ERR_SYN_REPLY_NOT_RECEIVED = -332
 ERR_ENCODING_CONVERSION_FAILED = -333
 ```
 
-将响应转换为目标编码失败。
+Converting the response to target encoding failed.
 
 **Since:** 23
 
@@ -2274,7 +2272,7 @@ ERR_ENCODING_CONVERSION_FAILED = -333
 ERR_UNRECOGNIZED_FTP_DIRECTORY_LISTING_FORMAT = -334
 ```
 
-无法识别的 ftp 目录列表格式。
+The server sent an FTP directory listing in a format we do not understand.
 
 **Since:** 23
 
@@ -2290,7 +2288,7 @@ ERR_UNRECOGNIZED_FTP_DIRECTORY_LISTING_FORMAT = -334
 ERR_NO_SUPPORTED_PROXIES = -336
 ```
 
-没有支持的代理。
+There are no supported proxies in the provided list.
 
 **Since:** 23
 
@@ -2306,7 +2304,7 @@ ERR_NO_SUPPORTED_PROXIES = -336
 ERR_HTTP2_PROTOCOL_ERROR = -337
 ```
 
-HTTP/2协议错误。
+There is an HTTP/2 protocol error.
 
 **Since:** 23
 
@@ -2322,7 +2320,7 @@ HTTP/2协议错误。
 ERR_INVALID_AUTH_CREDENTIALS = -338
 ```
 
-无效的身份验证凭据。
+Credentials could not be established during HTTP Authentication.
 
 **Since:** 23
 
@@ -2338,7 +2336,7 @@ ERR_INVALID_AUTH_CREDENTIALS = -338
 ERR_UNSUPPORTED_AUTH_SCHEME = -339
 ```
 
-不支持的身份验证方案。
+An HTTP Authentication scheme was tried which is not supported on this machine.
 
 **Since:** 23
 
@@ -2354,7 +2352,7 @@ ERR_UNSUPPORTED_AUTH_SCHEME = -339
 ERR_ENCODING_DETECTION_FAILED = -340
 ```
 
-编码检测失败。
+Detecting the encoding of the response failed.
 
 **Since:** 23
 
@@ -2370,7 +2368,7 @@ ERR_ENCODING_DETECTION_FAILED = -340
 ERR_MISSING_AUTH_CREDENTIALS = -341
 ```
 
-缺少身份验证凭据。
+(GSSAPI) No Kerberos credentials were available during HTTP Authentication.
 
 **Since:** 23
 
@@ -2386,7 +2384,7 @@ ERR_MISSING_AUTH_CREDENTIALS = -341
 ERR_UNEXPECTED_SECURITY_LIBRARY_STATUS = -342
 ```
 
-意外的安全库状态。
+An unexpected, but documented, SSPI or GSSAPI status code was returned.
 
 **Since:** 23
 
@@ -2402,7 +2400,7 @@ ERR_UNEXPECTED_SECURITY_LIBRARY_STATUS = -342
 ERR_MISCONFIGURED_AUTH_ENVIRONMENT = -343
 ```
 
-配置错误的身份验证环境。
+The environment was not set up correctly for authentication (for example, no KDC could be found or the principal is unknown).
 
 **Since:** 23
 
@@ -2418,7 +2416,7 @@ ERR_MISCONFIGURED_AUTH_ENVIRONMENT = -343
 ERR_UNDOCUMENTED_SECURITY_LIBRARY_STATUS = -344
 ```
 
-未记录的SSPI或GSSAPI状态码。
+An undocumented SSPI or GSSAPI status code was returned.
 
 **Since:** 23
 
@@ -2434,7 +2432,7 @@ ERR_UNDOCUMENTED_SECURITY_LIBRARY_STATUS = -344
 ERR_RESPONSE_BODY_TOO_BIG_TO_DRAIN = -345
 ```
 
-响应体太大。
+The HTTP response was too big to drain.
 
 **Since:** 23
 
@@ -2450,7 +2448,7 @@ ERR_RESPONSE_BODY_TOO_BIG_TO_DRAIN = -345
 ERR_RESPONSE_HEADERS_MULTIPLE_CONTENT_LENGTH = -346
 ```
 
-HTTP响应包含了多个不同的Content-Length响应头。
+The HTTP response contained multiple distinct Content-Length headers.
 
 **Since:** 23
 
@@ -2466,7 +2464,7 @@ HTTP响应包含了多个不同的Content-Length响应头。
 ERR_INCOMPLETE_HTTP2_HEADERS = -347
 ```
 
-不完整的HTTP/2标头。
+HTTP/2 headers have been received, but not all of them - status or version headers are missing, so we're expecting additional frames to complete them.
 
 **Since:** 23
 
@@ -2482,7 +2480,7 @@ ERR_INCOMPLETE_HTTP2_HEADERS = -347
 ERR_PAC_NOT_IN_DHCP = -348
 ```
 
-PAC 不在 DHCP 中。
+No PAC URL configuration could be retrieved from DHCP. This can indicate either a failure to retrieve the DHCP configuration, or that there was no PAC URL configured in DHCP.
 
 **Since:** 23
 
@@ -2498,7 +2496,7 @@ PAC 不在 DHCP 中。
 ERR_RESPONSE_HEADERS_MULTIPLE_CONTENT_DISPOSITION = -349
 ```
 
-响应标头多重内容处置。
+The HTTP response contained multiple Content-Disposition headers.
 
 **Since:** 23
 
@@ -2514,7 +2512,7 @@ ERR_RESPONSE_HEADERS_MULTIPLE_CONTENT_DISPOSITION = -349
 ERR_RESPONSE_HEADERS_MULTIPLE_LOCATION = -350
 ```
 
-多个位置的响应标头。
+The HTTP response contained multiple Location headers.
 
 **Since:** 23
 
@@ -2530,7 +2528,7 @@ ERR_RESPONSE_HEADERS_MULTIPLE_LOCATION = -350
 ERR_HTTP2_SERVER_REFUSED_STREAM = -351
 ```
 
-HTTP/2 服务器拒绝流。
+HTTP/2 server refused the request without processing, and sent either a GOAWAY frame with error code NO_ERROR and Last-Stream-ID lower than the stream id corresponding to the request indicating that this request has not been processed yet, or a RST_STREAM frame with error code REFUSED_STREAM.Client MAY retry (on a different connection). See RFC7540 Section 8.1.4.
 
 **Since:** 23
 
@@ -2546,7 +2544,7 @@ HTTP/2 服务器拒绝流。
 ERR_HTTP2_PING_FAILED = -352
 ```
 
-HTTP/2 ping失败。
+HTTP/2 server didn't respond to the PING message.
 
 **Since:** 23
 
@@ -2562,7 +2560,7 @@ HTTP/2 ping失败。
 ERR_CONTENT_LENGTH_MISMATCH = -354
 ```
 
-当连接关闭时，HTTP 响应主体传输的字节数少于 Content-Length 头中公布的字节数。
+The HTTP response body transferred fewer bytes than were advertised by the Content-Length header when the connection is closed.
 
 **Since:** 23
 
@@ -2578,7 +2576,7 @@ ERR_CONTENT_LENGTH_MISMATCH = -354
 ERR_INCOMPLETE_CHUNKED_ENCODING = -355
 ```
 
-HTTP 响应体使用分块编码传输，但在连接关闭时从未发送终止零长度块。
+The HTTP response body is transferred with Chunked-Encoding, but the terminating zero-length chunk was never sent when the connection is closed.
 
 **Since:** 23
 
@@ -2594,7 +2592,7 @@ HTTP 响应体使用分块编码传输，但在连接关闭时从未发送终止
 ERR_QUIC_PROTOCOL_ERROR = -356
 ```
 
-存在QUIC协议错误。
+There is a QUIC protocol error.
 
 **Since:** 23
 
@@ -2610,7 +2608,7 @@ ERR_QUIC_PROTOCOL_ERROR = -356
 ERR_RESPONSE_HEADERS_TRUNCATED = -357
 ```
 
-HTTP 头部信息被文件结束符（EOF）截断。
+The HTTP headers were truncated by an EOF.
 
 **Since:** 23
 
@@ -2626,7 +2624,7 @@ HTTP 头部信息被文件结束符（EOF）截断。
 ERR_QUIC_HANDSHAKE_FAILED = -358
 ```
 
-QUIC 加密握手失败。这意味着服务器无法读取发送的任何请求，因此它们可能会被重新发送。
+The QUIC crypto handshake failed. This means that the server was unable to read any requests sent, so they may be resent.
 
 **Since:** 23
 
@@ -2642,7 +2640,7 @@ QUIC 加密握手失败。这意味着服务器无法读取发送的任何请求
 ERR_HTTP2_INADEQUATE_TRANSPORT_SECURITY = -360
 ```
 
-传输安全性不适合HTTP/2版本。
+Transport security is inadequate for the HTTP/2 version.
 
 **Since:** 23
 
@@ -2658,7 +2656,7 @@ ERR_HTTP2_INADEQUATE_TRANSPORT_SECURITY = -360
 ERR_HTTP2_FLOW_CONTROL_ERROR = -361
 ```
 
-对等方违反了HTTP/2流控制。
+The peer violated HTTP/2 flow control.
 
 **Since:** 23
 
@@ -2674,7 +2672,7 @@ ERR_HTTP2_FLOW_CONTROL_ERROR = -361
 ERR_HTTP2_FRAME_SIZE_ERROR = -362
 ```
 
-对等方发送了大小不正确的HTTP/2帧。
+The peer sent an improperly sized HTTP/2 frame.
 
 **Since:** 23
 
@@ -2690,7 +2688,7 @@ ERR_HTTP2_FRAME_SIZE_ERROR = -362
 ERR_HTTP2_COMPRESSION_ERROR = -363
 ```
 
-压缩HTTP/2 头部信息的解码或编码失败。
+Decoding or encoding of compressed HTTP/2 headers failed.
 
 **Since:** 23
 
@@ -2706,7 +2704,7 @@ ERR_HTTP2_COMPRESSION_ERROR = -363
 ERR_PROXY_AUTH_REQUESTED_WITH_NO_CONNECTION = -364
 ```
 
-请求的代理身份验证没有有效的客户端套接字句柄。
+Proxy Auth Requested without a valid Client Socket Handle.
 
 **Since:** 23
 
@@ -2722,7 +2720,7 @@ ERR_PROXY_AUTH_REQUESTED_WITH_NO_CONNECTION = -364
 ERR_HTTP_1_1_REQUIRED = -365
 ```
 
-在 HTTP/2 会话中收到 HTTP_1_1_REQUIRED 错误代码。
+HTTP_1_1_REQUIRED error code received on HTTP/2 session.
 
 **Since:** 23
 
@@ -2738,7 +2736,7 @@ ERR_HTTP_1_1_REQUIRED = -365
 ERR_PROXY_HTTP_1_1_REQUIRED = -366
 ```
 
-在通过 HTTP/2 会话代理时收到 HTTP_1_1_REQUIRED 错误代码。
+HTTP_1_1_REQUIRED error code received on HTTP/2 session to proxy.
 
 **Since:** 23
 
@@ -2754,7 +2752,7 @@ ERR_PROXY_HTTP_1_1_REQUIRED = -366
 ERR_PAC_SCRIPT_TERMINATED = -367
 ```
 
-PAC 脚本已终止并必须重新加载。
+The PAC script terminated fatally and must be reloaded.
 
 **Since:** 23
 
@@ -2770,7 +2768,7 @@ PAC 脚本已终止并必须重新加载。
 ERR_INVALID_HTTP_RESPONSE = -370
 ```
 
-服务器应返回 HTTP/1.x 响应，但未返回。而不是将其视为 HTTP/0.9，返回此错误。
+The server was expected to return an HTTP/1.x response, but did not. Rather than treat it as HTTP/0.9, this error is returned.
 
 **Since:** 23
 
@@ -2786,7 +2784,7 @@ ERR_INVALID_HTTP_RESPONSE = -370
 ERR_CONTENT_DECODING_INIT_FAILED = -371
 ```
 
-内容解码初始化失败。
+Initializing content decoding failed.
 
 **Since:** 23
 
@@ -2802,7 +2800,7 @@ ERR_CONTENT_DECODING_INIT_FAILED = -371
 ERR_HTTP2_RST_STREAM_NO_ERROR_RECEIVED = -372
 ```
 
-收到带有 NO_ERROR 错误代码的 HTTP/2 RST_STREAM 帧。此错误应由 HTTP/2 代码内部处理，而不应超过 SpdyStream 层。
+Received HTTP/2 RST_STREAM frame with NO_ERROR error code. This error should be handled internally by HTTP/2 code, and should not make it above the SpdyStream layer.
 
 **Since:** 23
 
@@ -2818,7 +2816,7 @@ ERR_HTTP2_RST_STREAM_NO_ERROR_RECEIVED = -372
 ERR_HTTP2_PUSHED_STREAM_NOT_AVAILABLE = -373
 ```
 
-请求声明的推送流不再可用。
+The pushed stream claimed by the request is no longer available.
 
 **Since:** 23
 
@@ -2834,7 +2832,7 @@ ERR_HTTP2_PUSHED_STREAM_NOT_AVAILABLE = -373
 ERR_HTTP2_CLAIMED_PUSHED_STREAM_RESET_BY_SERVER = -374
 ```
 
-已声明推送的流，随后服务器将其重置。发生这种情况时，应该重试请求。
+A pushed stream was claimed and later reset by the server. When this happens,the request should be retried.
 
 **Since:** 23
 
@@ -2850,7 +2848,7 @@ ERR_HTTP2_CLAIMED_PUSHED_STREAM_RESET_BY_SERVER = -374
 ERR_TOO_MANY_RETRIES = -375
 ```
 
-由于身份验证或证书无效，HTTP事务重试次数过多。
+An HTTP transaction was retried too many times due for authentication or invalid certificates.
 
 **Since:** 23
 
@@ -2866,7 +2864,7 @@ ERR_TOO_MANY_RETRIES = -375
 ERR_HTTP2_STREAM_CLOSED = -376
 ```
 
-在已关闭的流上收到一个 HTTP/2 帧。
+Received an HTTP/2 frame on a closed stream.
 
 **Since:** 23
 
@@ -2882,7 +2880,7 @@ ERR_HTTP2_STREAM_CLOSED = -376
 ERR_HTTP2_CLIENT_REFUSED_STREAM = -377
 ```
 
-客户端拒绝了一个 HTTP/2 流。
+Client is refusing an HTTP/2 stream.
 
 **Since:** 23
 
@@ -2898,7 +2896,7 @@ ERR_HTTP2_CLIENT_REFUSED_STREAM = -377
 ERR_HTTP2_PUSHED_RESPONSE_DOES_NOT_MATCH = -378
 ```
 
-基于匹配的 URL 和请求头，一个 HTTP/2 推送的流被请求所接收，但是推送的响应头并不匹配请求。
+A pushed HTTP/2 stream was claimed by a request based on matching URL and request headers, but the pushed response headers do not match the request.
 
 **Since:** 23
 
@@ -2914,7 +2912,7 @@ ERR_HTTP2_PUSHED_RESPONSE_DOES_NOT_MATCH = -378
 ERR_HTTP_RESPONSE_CODE_FAILURE = -379
 ```
 
-服务器返回了 non-2xx 的HTTP响应代码。
+The server returned a non-2xx HTTP response code.
 
 **Since:** 23
 
@@ -2930,7 +2928,7 @@ ERR_HTTP_RESPONSE_CODE_FAILURE = -379
 ERR_QUIC_UNKNOWN_CERT_ROOT = -380
 ```
 
-在 QUIC 连接上展示的证书未链接到已知根证书，并且连接到的原始服务器不在允许未知根证书的域名列表中。
+The certificate presented on a QUIC connection does not chain to a known root and the origin connected to is not on a list of domains where unknown roots are allowed.
 
 **Since:** 23
 
@@ -2946,7 +2944,7 @@ ERR_QUIC_UNKNOWN_CERT_ROOT = -380
 ERR_QUIC_GOAWAY_REQUEST_CAN_BE_RETRIED = -381
 ```
 
-已接收到一个 GOAWAY 帧，表明请求未得到处理，因此可以安全地在不同的连接上重试。
+A GOAWAY frame has been received indicating that the request has not been processed and is therefore safe to retry on a different connection.
 
 **Since:** 23
 
@@ -2962,7 +2960,7 @@ ERR_QUIC_GOAWAY_REQUEST_CAN_BE_RETRIED = -381
 ERR_TOO_MANY_ACCEPT_CH_RESTARTS = -382
 ```
 
-ACCEPT_CH 重启已被触发太多次。
+The ACCEPT_CH restart has been triggered too many times.
 
 **Since:** 23
 
@@ -2978,7 +2976,7 @@ ACCEPT_CH 重启已被触发太多次。
 ERR_INCONSISTENT_IP_ADDRESS_SPACE = -383
 ```
 
-在相同的请求期间，远程端点的 IP 地址空间与先前观察到的值不同。任何受影响的请求的缓存条目都应被标记为无效。
+The IP address space of the remote endpoint differed from the previous observed value during the same request. Any cache entry for the affected request should be invalidated.
 
 **Since:** 23
 
@@ -2994,7 +2992,7 @@ ERR_INCONSISTENT_IP_ADDRESS_SPACE = -383
 ERR_CACHED_IP_ADDRESS_SPACE_BLOCKED_BY_LOCAL_NETWORK_ACCESS_POLICY = -384
 ```
 
-缓存的远程端点的 IP 地址空间被本地网络访问检查所阻止。
+The IP address space of the cached remote endpoint is blocked by local network access check.
 
 **Since:** 23
 
@@ -3010,7 +3008,7 @@ ERR_CACHED_IP_ADDRESS_SPACE_BLOCKED_BY_LOCAL_NETWORK_ACCESS_POLICY = -384
 ERR_CACHE_MISS = -400
 ```
 
-缓存中没有请求的条目。
+The cache does not have the requested entry.
 
 **Since:** 23
 
@@ -3026,7 +3024,7 @@ ERR_CACHE_MISS = -400
 ERR_CACHE_READ_FAILURE = -401
 ```
 
-无法从磁盘缓存中读取。
+Unable to read from the disk cache.
 
 **Since:** 23
 
@@ -3042,7 +3040,7 @@ ERR_CACHE_READ_FAILURE = -401
 ERR_CACHE_WRITE_FAILURE = -402
 ```
 
-无法写入磁盘缓存。
+Unable to write to the disk cache.
 
 **Since:** 23
 
@@ -3058,7 +3056,7 @@ ERR_CACHE_WRITE_FAILURE = -402
 ERR_CACHE_OPERATION_UNSUPPORTED = -403
 ```
 
-此条目不支持此操作。
+The operation is not supported for this entry.
 
 **Since:** 23
 
@@ -3074,7 +3072,7 @@ ERR_CACHE_OPERATION_UNSUPPORTED = -403
 ERR_CACHE_OPEN_FAILURE = -404
 ```
 
-磁盘缓存无法打开此条目。
+The disk cache is unable to open this entry.
 
 **Since:** 23
 
@@ -3090,7 +3088,7 @@ ERR_CACHE_OPEN_FAILURE = -404
 ERR_CACHE_CREATE_FAILURE = -405
 ```
 
-磁盘缓存无法创建此条目。
+The disk cache is unable to create this entry.
 
 **Since:** 23
 
@@ -3106,7 +3104,7 @@ ERR_CACHE_CREATE_FAILURE = -405
 ERR_CACHE_RACE = -406
 ```
 
-多个事务正在竞相创建磁盘缓存条目。
+Multiple transactions are racing to create disk cache entries.
 
 **Since:** 23
 
@@ -3122,7 +3120,7 @@ ERR_CACHE_RACE = -406
 ERR_CACHE_CHECKSUM_READ_FAILURE = -407
 ```
 
-缓存无法读取条目上的校验和记录。
+The cache was unable to read a checksum record on an entry.
 
 **Since:** 23
 
@@ -3138,7 +3136,7 @@ ERR_CACHE_CHECKSUM_READ_FAILURE = -407
 ERR_CACHE_CHECKSUM_MISMATCH = -408
 ```
 
-缓存发现一个具有无效校验和的条目。
+The cache found an entry with an invalid checksum.
 
 **Since:** 23
 
@@ -3154,7 +3152,7 @@ ERR_CACHE_CHECKSUM_MISMATCH = -408
 ERR_CACHE_LOCK_TIMEOUT = -409
 ```
 
-HTTP缓存的内部错误代码。
+Internal error code for the HTTP cache.
 
 **Since:** 23
 
@@ -3170,7 +3168,7 @@ HTTP缓存的内部错误代码。
 ERR_CACHE_AUTH_FAILURE_AFTER_READ = -410
 ```
 
-在事务读取某些数据后收到质询，但凭据不可用。
+Received a challenge after the transaction has read some data, and the credentials aren't available.
 
 **Since:** 23
 
@@ -3186,7 +3184,7 @@ ERR_CACHE_AUTH_FAILURE_AFTER_READ = -410
 ERR_CACHE_ENTRY_NOT_SUITABLE = -411
 ```
 
-HTTP缓存的内部不完全错误代码。
+Internal not-quite error code for the HTTP cache.
 
 **Since:** 23
 
@@ -3202,7 +3200,7 @@ HTTP缓存的内部不完全错误代码。
 ERR_CACHE_DOOM_FAILURE = -412
 ```
 
-磁盘缓存无法删除此条目。
+The disk cache is unable to doom this entry.
 
 **Since:** 23
 
@@ -3218,7 +3216,7 @@ ERR_CACHE_DOOM_FAILURE = -412
 ERR_CACHE_OPEN_OR_CREATE_FAILURE = -413
 ```
 
-磁盘缓存无法打开或创建此条目。
+The disk cache is unable to open or create this entry.
 
 **Since:** 23
 
@@ -3234,7 +3232,7 @@ ERR_CACHE_OPEN_OR_CREATE_FAILURE = -413
 ERR_INSECURE_RESPONSE = -501
 ```
 
-服务器的响应不安全（例如，存在证书错误）。
+The server's response was insecure (e.g. there was a cert error).
 
 **Since:** 23
 
@@ -3250,7 +3248,7 @@ ERR_INSECURE_RESPONSE = -501
 ERR_NO_PRIVATE_KEY_FOR_CERT = -502
 ```
 
-尝试导入客户端证书失败，因为用户的密钥数据库缺少相应的私钥。
+An attempt to import a client certificate failed, as the user's key database lacked a corresponding private key.
 
 **Since:** 23
 
@@ -3266,7 +3264,7 @@ ERR_NO_PRIVATE_KEY_FOR_CERT = -502
 ERR_ADD_USER_CERT_FAILED = -503
 ```
 
-向操作系统证书数据库添加证书时发生错误。
+An error adding a certificate to the OS certificate database.
 
 **Since:** 23
 
@@ -3282,7 +3280,7 @@ ERR_ADD_USER_CERT_FAILED = -503
 ERR_INVALID_SIGNED_EXCHANGE = -504
 ```
 
-处理已签名的交换时发生错误。
+An error occurred while handling a signed exchange.
 
 **Since:** 23
 
@@ -3298,7 +3296,7 @@ ERR_INVALID_SIGNED_EXCHANGE = -504
 ERR_INVALID_WEB_BUNDLE = -505
 ```
 
-处理Web Bundle源时发生错误。
+An error occurred while handling a Web Bundle source.
 
 **Since:** 23
 
@@ -3314,7 +3312,7 @@ ERR_INVALID_WEB_BUNDLE = -505
 ERR_TRUST_TOKEN_OPERATION_FAILED = -506
 ```
 
-执行Trust Tokens协议操作的请求失败（原因包括：预置条件失败、内部错误、不良响应）。
+A Trust Tokens protocol operation-executing request failed for one of a number of reasons (precondition failure, internal error, bad response).
 
 **Since:** 23
 
@@ -3330,7 +3328,7 @@ ERR_TRUST_TOKEN_OPERATION_FAILED = -506
 ERR_TRUST_TOKEN_OPERATION_SUCCESS_WITHOUT_SENDING_REQUEST = -507
 ```
 
-在处理一个与Trust Tokens协议相关的操作执行请求时，系统能够执行该请求中的Trust Tokens操作，但并没有将请求发送到其指定的目的地。
+When handling a Trust Tokens protocol operation-executing request, the system was able to execute the request's Trust Tokens operation without sending the request to its destination.
 
 **Since:** 23
 
@@ -3346,7 +3344,7 @@ ERR_TRUST_TOKEN_OPERATION_SUCCESS_WITHOUT_SENDING_REQUEST = -507
 ERR_FTP_FAILED = -601
 ```
 
-FTP控制连接命令失败的通用错误。
+A generic error for failed FTP control connection command.If possible, please use or add a more specific error code.
 
 **Since:** 23
 
@@ -3362,7 +3360,7 @@ FTP控制连接命令失败的通用错误。
 ERR_FTP_SERVICE_UNAVAILABLE = -602
 ```
 
-服务器目前无法满足请求。这是一个临时错误。FTP响应代码421。
+The server cannot fulfill the request at this point. This is a temporary error.FTP response code 421.
 
 **Since:** 23
 
@@ -3378,7 +3376,7 @@ ERR_FTP_SERVICE_UNAVAILABLE = -602
 ERR_FTP_TRANSFER_ABORTED = -603
 ```
 
-服务器已中止传输。FTP响应代码426。
+The server has aborted the transfer.FTP response code 426.
 
 **Since:** 23
 
@@ -3394,7 +3392,7 @@ ERR_FTP_TRANSFER_ABORTED = -603
 ERR_FTP_FILE_BUSY = -604
 ```
 
-文件正在使用中，或在打开文件时发生了一些其他临时错误条件。FTP响应代码450。
+The file is busy, or some other temporary error condition on opening the file.FTP response code 450.
 
 **Since:** 23
 
@@ -3410,7 +3408,7 @@ ERR_FTP_FILE_BUSY = -604
 ERR_FTP_SYNTAX_ERROR = -605
 ```
 
-由于语法错误，服务器拒绝了本端的命令。FTP响应代码500、501。
+Server rejected our command because of syntax errors.FTP response codes 500, 501.
 
 **Since:** 23
 
@@ -3426,7 +3424,7 @@ ERR_FTP_SYNTAX_ERROR = -605
 ERR_FTP_COMMAND_UNSUPPORTED = -606
 ```
 
-服务器不支持本端发出的命令。FTP响应代码502、504。
+Server does not support the command we issued.FTP response codes 502, 504.
 
 **Since:** 23
 
@@ -3442,7 +3440,7 @@ ERR_FTP_COMMAND_UNSUPPORTED = -606
 ERR_FTP_BAD_COMMAND_SEQUENCE = -607
 ```
 
-服务器拒绝了本端的命令，因为本端没有按照正确的顺序发出命令。FTP响应代码503。
+Server rejected our command because we didn't issue the commands in right order.FTP response code 503.
 
 **Since:** 23
 
@@ -3458,7 +3456,7 @@ ERR_FTP_BAD_COMMAND_SEQUENCE = -607
 ERR_PKCS12_IMPORT_BAD_PASSWORD = -701
 ```
 
-由于密码不正确，PKCS #12 导入失败。
+PKCS #12 import failed due to incorrect password.
 
 **Since:** 23
 
@@ -3474,7 +3472,7 @@ ERR_PKCS12_IMPORT_BAD_PASSWORD = -701
 ERR_PKCS12_IMPORT_FAILED = -702
 ```
 
-由于其他错误，PKCS #12 导入失败。
+PKCS #12 import failed due to other error.
 
 **Since:** 23
 
@@ -3490,7 +3488,7 @@ ERR_PKCS12_IMPORT_FAILED = -702
 ERR_IMPORT_CA_CERT_NOT_CA = -703
 ```
 
-CA导入失败-不是CA证书。
+CA import failed - not a CA cert.
 
 **Since:** 23
 
@@ -3506,7 +3504,7 @@ CA导入失败-不是CA证书。
 ERR_IMPORT_CERT_ALREADY_EXISTS = -704
 ```
 
-导入失败-数据库中已存在证书。
+Import failed - certificate already exists in database.
 
 **Since:** 23
 
@@ -3522,7 +3520,7 @@ ERR_IMPORT_CERT_ALREADY_EXISTS = -704
 ERR_IMPORT_CA_CERT_FAILED = -705
 ```
 
-由于其他错误，CA导入失败。
+CA import failed due to some other error.
 
 **Since:** 23
 
@@ -3538,7 +3536,7 @@ ERR_IMPORT_CA_CERT_FAILED = -705
 ERR_IMPORT_SERVER_CERT_FAILED = -706
 ```
 
-由于某些内部错误，服务器证书导入失败。
+Server certificate import failed due to some internal error.
 
 **Since:** 23
 
@@ -3554,7 +3552,7 @@ ERR_IMPORT_SERVER_CERT_FAILED = -706
 ERR_PKCS12_IMPORT_INVALID_MAC = -707
 ```
 
-PKCS #12 导入失败，因为 MAC（消息认证码）无效。
+PKCS #12 import failed due to invalid MAC.
 
 **Since:** 23
 
@@ -3570,7 +3568,7 @@ PKCS #12 导入失败，因为 MAC（消息认证码）无效。
 ERR_PKCS12_IMPORT_INVALID_FILE = -708
 ```
 
-PKCS #12 导入失败，因为文件无效或已损坏。
+PKCS #12 import failed due to invalid/corrupt file.
 
 **Since:** 23
 
@@ -3586,7 +3584,7 @@ PKCS #12 导入失败，因为文件无效或已损坏。
 ERR_PKCS12_IMPORT_UNSUPPORTED = -709
 ```
 
-由于不支持的特性，PKCS #12 导入失败。
+PKCS #12 import failed due to unsupported features.
 
 **Since:** 23
 
@@ -3602,7 +3600,7 @@ ERR_PKCS12_IMPORT_UNSUPPORTED = -709
 ERR_KEY_GENERATION_FAILED = -710
 ```
 
-密钥生成失败。
+Key generation failed.
 
 **Since:** 23
 
@@ -3618,7 +3616,7 @@ ERR_KEY_GENERATION_FAILED = -710
 ERR_PRIVATE_KEY_EXPORT_FAILED = -712
 ```
 
-无法导出私钥。
+Failure to export private key.
 
 **Since:** 23
 
@@ -3634,7 +3632,7 @@ ERR_PRIVATE_KEY_EXPORT_FAILED = -712
 ERR_SELF_SIGNED_CERT_GENERATION_FAILED = -713
 ```
 
-自签名证书生成失败。
+Self-signed certificate generation failed.
 
 **Since:** 23
 
@@ -3650,7 +3648,7 @@ ERR_SELF_SIGNED_CERT_GENERATION_FAILED = -713
 ERR_CERT_DATABASE_CHANGED = -714
 ```
 
-证书数据库已发生某种更改。
+The certificate database changed in some way.
 
 **Since:** 23
 
@@ -3666,7 +3664,7 @@ ERR_CERT_DATABASE_CHANGED = -714
 ERR_CERT_VERIFIER_CHANGED = -716
 ```
 
-证书验证配置已发生某种更改。
+The certificate verifier configuration changed in some way.
 
 **Since:** 23
 
@@ -3682,7 +3680,7 @@ ERR_CERT_VERIFIER_CHANGED = -716
 ERR_DNS_MALFORMED_RESPONSE = -800
 ```
 
-DNS解析程序收到格式错误的响应。
+DNS resolver received a malformed response.
 
 **Since:** 23
 
@@ -3698,7 +3696,7 @@ DNS解析程序收到格式错误的响应。
 ERR_DNS_SERVER_REQUIRES_TCP = -801
 ```
 
-DNS服务器需要TCP。
+DNS server requires TCP.
 
 **Since:** 23
 
@@ -3714,7 +3712,7 @@ DNS服务器需要TCP。
 ERR_DNS_SERVER_FAILED = -802
 ```
 
-DNS服务器失败。对于以下所有错误情况，都会返回此错误。1 - 格式错误 - 名称服务器无法解释查询。2 - 服务器故障 - 名称服务器由于自身问题无法处理这个查询。4 - 未实现 - 名称服务器不支持请求的查询类型。5 - 拒绝 - 名称服务器出于策略原因拒绝执行指定的操作。
+DNS server failed. This error is returned for all of the following error conditions:1 - Format error - The name server was unable to interpret the query.2 - Server failure - The name server was unable to process this query  due to a problem with the name server.4 - Not Implemented - The name server does not support the requested  kind of query.5 - Refused - The name server refuses to perform the specified  operation for policy reasons.
 
 **Since:** 23
 
@@ -3730,7 +3728,7 @@ DNS服务器失败。对于以下所有错误情况，都会返回此错误。1 
 ERR_DNS_TIMED_OUT = -803
 ```
 
-DNS事务超时。
+DNS transaction timed out.
 
 **Since:** 23
 
@@ -3746,7 +3744,7 @@ DNS事务超时。
 ERR_DNS_CACHE_MISS = -804
 ```
 
-对于只查询本地源的查找，在缓存或其他本地源中未找到该条目。
+The entry was not found in cache or other local sources, for lookups where only local sources were queried.
 
 **Since:** 23
 
@@ -3762,7 +3760,7 @@ ERR_DNS_CACHE_MISS = -804
 ERR_DNS_SEARCH_EMPTY = -805
 ```
 
-后缀搜索列表规则阻止了给定主机名的解析。
+Suffix search list rules prevent resolution of the given host name.
 
 **Since:** 23
 
@@ -3778,7 +3776,7 @@ ERR_DNS_SEARCH_EMPTY = -805
 ERR_DNS_SORT_ERROR = -806
 ```
 
-未能根据RFC3484对地址进行排序。
+Failed to sort addresses according to RFC3484.
 
 **Since:** 23
 
@@ -3794,7 +3792,7 @@ ERR_DNS_SORT_ERROR = -806
 ERR_DNS_SECURE_RESOLVER_HOSTNAME_RESOLUTION_FAILED = -808
 ```
 
-未能解析DNS-over-HTTPS服务器的主机名。
+Failed to resolve the hostname of a DNS-over-HTTPS server.
 
 **Since:** 23
 
@@ -3810,7 +3808,7 @@ ERR_DNS_SECURE_RESOLVER_HOSTNAME_RESOLUTION_FAILED = -808
 ERR_DNS_NAME_HTTPS_ONLY = -809
 ```
 
-DNS已识别请求因不安全的连接（HTTP/WS）而被禁止。应用程序应该像处理HTTP重定向一样处理这个错误，将连接重定向到安全的HTTPS或WSS。
+DNS identified the request as disallowed for insecure connection (http/ws).Error should be handled as if an HTTP redirect was received to redirect to https or wss.
 
 **Since:** 23
 
@@ -3826,7 +3824,7 @@ DNS已识别请求因不安全的连接（HTTP/WS）而被禁止。应用程序�
 ERR_DNS_REQUEST_CANCELED = -810
 ```
 
-与此任务相关的所有 DNS 请求已被取消。
+All DNS requests associated with this job have been cancelled.
 
 **Since:** 23
 
@@ -3842,7 +3840,7 @@ ERR_DNS_REQUEST_CANCELED = -810
 ERR_DNS_NO_MATCHING_SUPPORTED_ALPN = -811
 ```
 
-HTTPS记录的主机名解析未能使用受支持协议的ALPN值进行解析。
+The hostname resolution of HTTPS record was expected to be resolved with alpn values of supported protocols, but did not.
 
 **Since:** 23
 

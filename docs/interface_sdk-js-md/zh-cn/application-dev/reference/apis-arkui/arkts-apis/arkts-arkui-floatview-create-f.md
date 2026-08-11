@@ -1,11 +1,5 @@
 # create
 
-## 导入模块
-
-```TypeScript
-import { floatView } from 'kits/@kit.ArkUI';
-```
-
 ## create
 
 ```TypeScript
@@ -40,16 +34,15 @@ function create(config: FloatViewConfiguration): Promise<FloatViewController>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 801 | Capability not supported. Possible cause: Call the API on unsupported device. |
-| 1300002 | This window state is abnormal. Possible cause: 1. This window context is abnormal. 2. System error, such as a null pointer, insufficient memory or a JS engine exception. |
-| 1300016 | Parameter error. Possible cause: Invalid template type. |
+| [801](../../errorcode-universal.md#801-该设备不支持此api) | Capability not supported. Possible cause: Call the API on unsupported device. |
+| [1300002](../errorcode-window.md#1300002-窗口状态异常) | This window state is abnormal. Possible cause: 1. This window context is abnormal. 2. System error, such as a null pointer, insufficient memory or a JS engine exception. |
+| [1300016](../errorcode-window.md#1300016-参数校验错误) | Parameter error. Possible cause: Invalid template type. |
 
 ## 示例
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
 import { common } from '@kit.AbilityKit';
-import { floatView } from '@kit.ArkUI';
 
 @Entry
 @Component
@@ -58,20 +51,18 @@ struct Index {
   aboutToAppear(): void {
     // 请在组件内获取context，确保this.getUIContext().getHostContext()返回的结果为UIAbilityContext
     let ctx = this.getUIContext().getHostContext() as common.UIAbilityContext;
-    // 创建闪控窗配置对象
     let config: floatView.FloatViewConfiguration = {
       context: ctx,
       templateType: floatView.FloatViewTemplateType.ROUNDED_RECTANGLE
     };
     try {
-      // 创建闪控窗控制器
       floatView.create(config).then((data: floatView.FloatViewController) => {
         this.floatViewController = data;
         console.info(`Succeeded in creating float view controller. Data: ${data}`);
       }).catch((err: BusinessError): void => {
         console.error(`Failed to create float view controller. Cause:${err.code}, message:${err.message}`);
       });
-    } catch (e) {
+    } catch(e) {
       console.error(`Failed to create float view controller. Cause:${e.code}, message:${e.message}`);
     }
   }

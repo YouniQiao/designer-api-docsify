@@ -12,15 +12,13 @@ import { i18n } from 'kits/@kit.LocalizationKit';
 export function addPreferredLanguage(language: string, index?: int): boolean
 ```
 
-在系统偏好语言列表的指定位置添加偏好语言。
+Adds a preferred language to the specified position on the preferred language list.
 
 **Since:** 8
 
 **ArkTS mode:** ArkTS-Dyn only, since version 8.
 
 **Deprecated since:** 9
-
-**Substitutes:** [i18n.System.addPreferredLanguage](arkts-localization-i18n-system-c-sys.md#addpreferredlanguage)
 
 **Required permissions:** ohos.permission.UPDATE_CONFIGURATION
 
@@ -32,12 +30,12 @@ export function addPreferredLanguage(language: string, index?: int): boolean
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| language | string | Yes | 待添加的偏好语言。 |
-| index | int | No | 偏好语言的添加位置。默认值：系统偏好语言列表长度。 |
+| language | string | Yes | Preferred language to add. |
+| index | int | No | Position to which the preferred language is added. The default value is the length of the preferred language list. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| boolean | true表示添加成功，false表示添加失败。 |
+| boolean | true** if the operation is successful, and **false** otherwise. |
 

@@ -1,6 +1,6 @@
 # EventPriority
 
-表示事件的优先级。
+Enumerates the event priorities.
 
 **Since:** 7
 
@@ -16,7 +16,7 @@
 IMMEDIATE = 0
 ```
 
-表示事件先于HIGH优先级投递。
+The event will be emitted before high-priority events.
 
 **Since:** 7
 
@@ -34,7 +34,7 @@ IMMEDIATE = 0
 HIGH
 ```
 
-表示事件先于LOW优先级投递。
+The event will be emitted before low-priority events.
 
 **Since:** 7
 
@@ -52,7 +52,7 @@ HIGH
 LOW
 ```
 
-表示事件先于IDLE优先级投递，事件的默认优先级是LOW。
+The event will be emitted before idle-priority events. By default, an event is in LOW priority.
 
 **Since:** 7
 
@@ -70,7 +70,7 @@ LOW
 IDLE
 ```
 
-表示在没有其他事件的情况下，才投递该事件。
+The event will be emitted after all the other events.
 
 **Since:** 7
 

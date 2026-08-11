@@ -1,6 +1,6 @@
 # MarqueeStartPolicy
 
-Marquee的滚动方式，可选择默认持续滚动或条件触发滚动。
+Enumerates the marquee scrolling modes.
 
 **Since:** 18
 
@@ -16,7 +16,7 @@ Marquee的滚动方式，可选择默认持续滚动或条件触发滚动。
 DEFAULT = 0
 ```
 
-默认持续滚动。
+The marquee scrolls continuously. Default value.
 
 **Since:** 18
 
@@ -36,7 +36,7 @@ DEFAULT = 0
 ON_FOCUS = 1
 ```
 
-获焦以及鼠标悬浮时开始滚动。
+The marquee starts scrolling when it has focus or when the mouse hovers over it.
 
 **Since:** 18
 

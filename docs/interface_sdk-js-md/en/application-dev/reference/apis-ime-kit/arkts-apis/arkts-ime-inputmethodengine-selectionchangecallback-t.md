@@ -4,7 +4,7 @@
 export type SelectionChangeCallback = (oldBegin: int, oldEnd: int, newBegin: int, newEnd: int) => void
 ```
 
-文本选择范围变化（selectionChange）事件的回调函数类型，用于定义该事件触发时执行的回调函数格式。
+The callback of 'selectionChange' event.
 
 **Since:** 23
 
@@ -18,8 +18,8 @@ export type SelectionChangeCallback = (oldBegin: int, oldEnd: int, newBegin: int
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| oldBegin | int | Yes | oldBegin为变化前被选中文本的起始下标。 |
-| oldEnd | int | Yes | oldEnd为变化前被选中文本的终止下标。 |
-| newBegin | int | Yes | newBegin为变化后被选中文本的起始下标。 |
-| newEnd | int | Yes | newEnd为变化后被选中文本的终止下标。 |
+| oldBegin | int | Yes | the old begin of the selected text. |
+| oldEnd | int | Yes | the old end of the selected text. |
+| newBegin | int | Yes | the new begin of the selected text. |
+| newEnd | int | Yes | the new end of the selected text. |
 

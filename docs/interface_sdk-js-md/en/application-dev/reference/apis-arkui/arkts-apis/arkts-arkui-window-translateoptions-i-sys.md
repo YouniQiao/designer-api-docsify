@@ -1,6 +1,6 @@
 # TranslateOptions (System API)
 
-平移参数。
+Describes the translation parameters.
 
 **Since:** 9
 
@@ -24,7 +24,7 @@ import { window } from 'kits/@kit.ArkUI';
 x?: double
 ```
 
-X轴的平移参数。该参数为浮点数，默认值为0.0，单位为px。
+Distance to translate along the x-axis. The value is a floating-point number, the default value is 0.0, and the unit is px.
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：double
 
@@ -44,7 +44,7 @@ X轴的平移参数。该参数为浮点数，默认值为0.0，单位为px。
 y?: double
 ```
 
-Y轴的平移参数。该参数为浮点数，默认值为0.0，单位为px。
+Distance to translate along the y-axis. The value is a floating-point number, the default value is 0.0, and the unit is px.
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：double
 
@@ -64,7 +64,7 @@ Y轴的平移参数。该参数为浮点数，默认值为0.0，单位为px。
 z?: double
 ```
 
-Z轴的平移参数。该参数为浮点数，默认值为0.0，单位为px。
+Distance to translate along the z-axis. The value is a floating-point number, the default value is 0.0, and the unit is px.
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：double
 

@@ -1,11 +1,5 @@
 # springMotion
 
-## 导入模块
-
-```TypeScript
-import { curves } from 'kits/@kit.ArkUI';
-```
-
 ## springMotion
 
 ```TypeScript
@@ -36,5 +30,5 @@ export function springMotion(response?: double, dampingFraction?: double, overla
 
 | 类型 | 说明 |
 | --- | --- |
-| [ICurve](arkts-arkui-curves-icurve-i.md) | 曲线对象。 &lt;br&gt;**说明:** &lt;br&gt;弹性动画曲线为物理曲线，[animation]{ |
+| [ICurve](arkts-arkui-icurve-t.md) | 曲线对象。 &lt;br&gt;**说明:** &lt;br&gt;弹性动画曲线为物理曲线，[animation]{ |
 

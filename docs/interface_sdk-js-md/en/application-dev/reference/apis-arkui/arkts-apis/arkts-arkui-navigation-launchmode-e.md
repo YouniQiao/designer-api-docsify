@@ -1,6 +1,6 @@
 # LaunchMode
 
-路由栈操作模式。
+Defines the mode of stack operation.
 
 **Since:** 23
 
@@ -16,9 +16,7 @@
 STANDARD = 0
 ```
 
-系统默认的栈操作模式。
-
-push操作会将指定的NavDestination入栈；replace操作会将当前栈顶NavDestination替换。
+The default mode of stack operation.
 
 **Since:** 23
 
@@ -36,7 +34,7 @@ push操作会将指定的NavDestination入栈；replace操作会将当前栈顶N
 MOVE_TO_TOP_SINGLETON = 1
 ```
 
-从栈底向栈顶查找，如果指定的名称已经存在，则将对应的NavDestination页面移到栈顶（replace操作会将最后的栈顶替换成指定的NavDestination），否则行为和STANDARD一致。
+When the NavDestination with a specified name exists, it will be moved to top of stack,otherwise, the behavior will be consistent with the STANDARD mode.
 
 **Since:** 23
 
@@ -54,7 +52,7 @@ MOVE_TO_TOP_SINGLETON = 1
 POP_TO_SINGLETON = 2
 ```
 
-从栈底向栈顶查找，如果指定的名称已经存在，则将其上方的NavDestination页面全部移除（replace操作会将最后的栈顶替换成指定的NavDestination），否则行为和STANDARD一致。
+When the NavDestination with a specified name exists, the stack will pop until that NavDestination,otherwise, the behavior will be consistent with the STANDARD mode.
 
 **Since:** 23
 
@@ -72,7 +70,7 @@ POP_TO_SINGLETON = 2
 NEW_INSTANCE = 3
 ```
 
-创建新的NavDestination实例。与STANDARD模式相比，该方法不会复用栈中同名实例。并且指定该模式时，新创建的页面默认会执行push动效。
+Forced to create a new NavDestination instance.
 
 **Since:** 23
 

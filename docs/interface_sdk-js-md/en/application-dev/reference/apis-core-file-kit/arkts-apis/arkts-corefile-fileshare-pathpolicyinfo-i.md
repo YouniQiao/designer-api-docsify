@@ -1,6 +1,6 @@
 # PathPolicyInfo
 
-需要查询的文件或目录的信息。
+Policy information to manager permissions on a path.
 
 **Since:** 15
 
@@ -22,7 +22,7 @@ import { fileShare } from 'kits/@kit.CoreFileKit';
 operationMode: OperationMode
 ```
 
-需要查询的文件或目录访问模式。
+Indicates the mode of operation for the path.
 
 **Type:** [OperationMode](arkts-corefile-fileshare-operationmode-e.md)
 
@@ -40,7 +40,7 @@ operationMode: OperationMode
 path: string
 ```
 
-需要查询的文件或目录路径。
+Indicates the path of the policy information.
 
 **Type:** string
 

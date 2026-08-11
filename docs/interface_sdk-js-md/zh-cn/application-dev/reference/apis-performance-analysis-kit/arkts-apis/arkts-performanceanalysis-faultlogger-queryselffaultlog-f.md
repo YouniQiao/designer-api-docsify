@@ -1,11 +1,5 @@
 # querySelfFaultLog
 
-## 导入模块
-
-```TypeScript
-import { FaultLogger } from 'kits/@kit.PerformanceAnalysisKit';
-```
-
 ## querySelfFaultLog
 
 ```TypeScript

@@ -42,7 +42,7 @@ Constructor.
 saveCookie()
 ```
 
-保存cookie。
+Saves the cookies.
 
 **Since:** 8
 
@@ -62,7 +62,7 @@ saveCookie()
 setCookie()
 ```
 
-设置cookie。
+Sets the cookie.
 
 **Since:** 8
 

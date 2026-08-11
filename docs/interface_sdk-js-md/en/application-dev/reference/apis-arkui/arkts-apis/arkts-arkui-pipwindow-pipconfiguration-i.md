@@ -1,6 +1,6 @@
 # PiPConfiguration
 
-创建画中画控制器时的参数。
+Defines the parameters for creating a PiP controller.
 
 **Since:** 11
 
@@ -22,7 +22,7 @@ import { PiPWindow } from 'kits/@kit.ArkUI';
 componentController: XComponentController
 ```
 
-表示原始[XComponent](../../apis-arkui/arkts-components/arkts-arkui-xcomponent-i)控制器。
+Original [XComponent](arkts-arkui-xcomponent-xcomponent-f.md#xcomponent) controller.
 
 **Type:** [XComponentController](../arkts-components/arkts-arkui-xcomponentcontroller-c.md)
 
@@ -42,8 +42,10 @@ componentController: XComponentController
 contentHeight?: int
 ```
 
-原始内容高度，单位为px。用于确定画中画窗口比例。当  
-[使用typeNode的方式](arkts-arkui-pipwindow-create-f.md#create)创建PiPController时，不传值则默认为1080。当[不使用typeNode的方式](arkts-arkui-pipwindow-create-f.md#create)创建PiPController时，不传值则默认为[XComponent](arkts-arkui-xcomponent-xcomponent-f.md#xcomponent)组件的高度。
+Height of the original content, in px. It is used to determine the aspect ratio of the PiP window. When the PiP controller is created in  
+[typeNode mode](arkts-arkui-pipwindow-create-f.md#create), the default value is 1080. When the PiP controller is created  
+[not in typeNode mode](arkts-arkui-pipwindow-create-f.md#create), the default value is the height of the  
+[XComponent](arkts-arkui-xcomponent-xcomponent-f.md#xcomponent).
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
@@ -63,8 +65,10 @@ contentHeight?: int
 contentWidth?: int
 ```
 
-原始内容宽度，单位为px。用于确定画中画窗口比例。当  
-[使用typeNode的方式](arkts-arkui-pipwindow-create-f.md#create)创建PiPController时，不传值则默认为1920。当[不使用typeNode的方式](arkts-arkui-pipwindow-create-f.md#create)创建PiPController时，不传值则默认为[XComponent](arkts-arkui-xcomponent-xcomponent-f.md#xcomponent)组件的宽度。
+Width of the original content, in px. It is used to determine the aspect ratio of the PiP window. When the PiP controller is created in  
+[typeNode mode](arkts-arkui-pipwindow-create-f.md#create), the default value is 1920. When the PiP controller is created  
+[not in typeNode mode](arkts-arkui-pipwindow-create-f.md#create), the default value is the width of the  
+[XComponent](arkts-arkui-xcomponent-xcomponent-f.md#xcomponent).
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
@@ -84,7 +88,7 @@ contentWidth?: int
 context: BaseContext
 ```
 
-表示上下文环境。
+Context environment.
 
 **Type:** [BaseContext](../../apis-ability-kit/arkts-apis/arkts-ability-basecontext-c.md)
 
@@ -104,7 +108,7 @@ context: BaseContext
 controlGroups?: Array<PiPControlGroup>
 ```
 
-画中画控制面板的可选控件组列表，应用可以对此进行配置以决定是否显示。应用未配置时，面板显示基础控件（如视频播放控件组的播放/暂停控件）；应用选择配置时，则最多可以选择三个控件，超出三个create接口抛出401错误码。
+A list of optional component groups of the PiP controller. An application can configure whether to display these optional components. If this parameter is not set for the application, the panel displays basic components (such as the play/pause component of the video playback component group). If this parameter is set for the application,a maximum of three components can be selected. If more than three controls are selected, error code 401 is reported by the API.
 
 **Type:** Array&lt;PiPControlGroup&gt;
 
@@ -124,15 +128,15 @@ controlGroups?: Array<PiPControlGroup>
 cornerAdsorptionEnabled?: boolean
 ```
 
-是否开启画中画四角吸附功能。当开启画中画四角吸附功能后，屏幕将被划分为四个热区：以屏幕的上下中线和左右中线为界，形成左上、右上、左下、右下四个区域。画中画拉起时会根据上次画中画消失的位置出现在屏幕对应的角落，用户拖动窗口时可自由移动，松手后则会自动吸附在屏幕边缘。
+Whether the PiP window automatically snaps to screen corners. When this feature is enabled, the screen is divided into four hot zones (top-left, top-right, bottom-left, and bottom-right). When users lift their finger while dragging the PiP window within a hot zone, the PiP window is automatically snapped to the nearest corner.
 
-true：表示开启画中画四角吸附功能。
+**true**: enables corner snapping.
 
-false：表示关闭画中画四角吸附功能。
+**false**: disables corner snapping.
 
-不传值则为默认值true。
+The default value is **true**.
 
-该接口在Phone、Tablet设备上可正常调用，在其他设备上不生效。
+This API can be properly called on phones and tablets. If it is called on other device types, it has no effect.
 
 **Type:** boolean
 
@@ -154,7 +158,7 @@ false：表示关闭画中画四角吸附功能。
 customUIController?: NodeController
 ```
 
-自定义UI控制器，用于实现在画中画界面的自定义UI功能。此参数不填时，默认不使用自定义UI功能
+Custom UI controller, which is used to implement the custom UI features on the PiP page. If this parameter is left empty, the custom UI features are not used by default.
 
 **Type:** [NodeController](arkts-arkui-nodecontroller-c.md)
 
@@ -174,15 +178,15 @@ customUIController?: NodeController
 defaultWindowSizeType?: int
 ```
 
-当前应用第一次拉起画中画的窗口大小。
+Size of the PiP window that the current app starts for the first time.
 
-0：代表不设置大小。按照上个应用的画中画关闭前的大小启动；
+**0**: no size is set. The PiP window is started based on the size before the PiP window of the previous application is closed.
 
-1：代表小窗；
+**1**: small window.
 
-2：代表大窗；
+**2**: large window.
 
-不传值则为默认值0。
+If no value is passed, **0** is used.
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
@@ -202,7 +206,7 @@ defaultWindowSizeType?: int
 handleId?: int
 ```
 
-navigation控件下的子页面ID，点击"恢复全屏窗口"按钮后，恢复到指定的页面。只适用于UIAbility使用[Navigation](arkts-arkui-navigation-navigation-f.md#navigation)管理页面的场景，可以设置为Navigation下的子页面ID。默认为-1，恢复Navigation栈顶页面。推荐使用方法[getUniqueId()](../arkts-components/arkts-arkui-basecustomcomponent-c.md/arkts-arkui-basecustomcomponent-c.md#getuniqueid)获取页面ID。使用[Navigation](arkts-arkui-navigation-navigation-f.md#navigation)模块内页面路由时，推荐使用[系统路由表](../../../ui/arkts-navigation-cross-package.md#系统路由表)，否则可能会出现[getUniqueId()](../arkts-components/arkts-arkui-basecustomcomponent-c.md/arkts-arkui-basecustomcomponent-c.md#getuniqueid)获取页面ID不准确的情况。
+ID of the subpage under the **Navigation** component. After the Full-screen Window button is touched,the specified page is restored. This parameter applies only in scenarios where the UIAbility uses [Navigation](arkts-arkui-navigation-navigation-f.md#navigation) to manage pages. It can be set to any subpage ID within the Navigation hierarchy. The default value is **-1**, indicating that the topmost page in the Navigation stack is restored. You are advised to use [getUniqueId()](../arkts-components/arkts-arkui-basecustomcomponent-c.md/arkts-arkui-basecustomcomponent-c.md#getuniqueid) to obtain the page ID. When you use page routing provided by [Navigation](arkts-arkui-navigation-navigation-f.md#navigation), you are advised to use the [system routing table](../../../ui/arkts-navigation-cross-package.md#system-routing-table).Otherwise, the page ID obtained by calling [getUniqueId()](../arkts-components/arkts-arkui-basecustomcomponent-c.md/arkts-arkui-basecustomcomponent-c.md#getuniqueid)may be incorrect.
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
@@ -224,7 +228,7 @@ navigation控件下的子页面ID，点击"恢复全屏窗口"按钮后，恢复
 localStorage?: LocalStorage
 ```
 
-页面级别的UI状态存储单元。多实例下可用来跟踪主窗实例的UI状态存储对象，不传值则无法通过画中画窗口获取主窗的UI状态存储对象。
+A page-level UI state storage unit. In multi-instance scenarios, it can be used to track the UI state storage object of the main window instance. If no value is passed, you cannot retrieve the main window's UI storage object through the PiP window.
 
 **Type:** [LocalStorage](arkts-arkui-localstorage-c.md)
 
@@ -244,13 +248,9 @@ localStorage?: LocalStorage
 navigationId?: string
 ```
 
-navigation控件ID，不传值则默认不需要缓存页面。
+ID of the **Navigation** component. If no value is passed, the page does not need to be cached.
 
-1、UIAbility使用[Navigation](arkts-arkui-navigation-navigation-f.md#navigation)管理页面时，需要设置Navigation控件的id属性，并将该id设置给画中画控制器，确保还原场景下能够从画中画窗口恢复到原页面。
-
-2、UIAbility使用[Router](arkts-router.md)管理页面时，无需设置navigationId。
-
-3、UIAbility只有单页面时，无需设置navigationId，还原场景下也能够从画中画窗口恢复到原页面。
+1. When the UIAbility uses [Navigation](arkts-arkui-navigation-navigation-f.md#navigation) to manage pages,set the ID of the **Navigation** component for the PiP controller.This ensures that the original page can be restored from the PiP window.2. When the UIAbility uses [Router](arkts-router.md) to manage pages,you do not need to set the ID of the **Navigation** component for the PiP controller.3. If the UIAbility has only one page, you do not need to set the navigation ID.The original page can be restored from the PiP window.
 
 **Type:** string
 
@@ -270,7 +270,7 @@ navigation控件ID，不传值则默认不需要缓存页面。
 templateType?: PiPTemplateType
 ```
 
-模板类型，用以区分视频播放、视频通话、视频会议或视频直播，不传值则默认为视频播放模板。
+Template type, which is used to distinguish video playback, video call, video meeting, and live broadcast scenarios. If no value is passed, the video playback template is used by default.
 
 **Type:** [PiPTemplateType](arkts-arkui-pipwindow-piptemplatetype-e.md)
 

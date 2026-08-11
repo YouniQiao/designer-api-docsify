@@ -1,6 +1,6 @@
 # CheckboxGroupAttribute
 
-除支持[通用属性](../../apis-ability-kit/arkts-apis/arkts-app-ability-common.md/arkts-app-ability-common.md)外，还支持以下属性：
+Defines the CheckboxGroup component attributes.
 
 **Inheritance/Implementation:** CheckboxGroupAttribute extends [CommonMethod](arkts-arkui-common-commonmethod-i.md)
 
@@ -19,7 +19,7 @@ default attributeModifier(
         modifier: AttributeModifier<CheckboxGroupAttribute> | AttributeModifier<CommonMethod> | undefined): this
 ```
 
-设置CheckboxGroup的属性修饰器。
+Set the attribute modifier of checkbox group.
 
 **Since:** 23
 
@@ -35,7 +35,7 @@ default attributeModifier(
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| modifier | [AttributeModifier](../arkts-components/arkts-arkui-attributemodifier-i.md)&lt;[CheckboxGroupAttribute](arkts-arkui-checkboxgroup-checkboxgroupattribute-i.md)&gt; \| AttributeModifier&lt;CommonMethod&gt; \| undefined | Yes | CheckboxGroup的属性修饰器。&lt;br/&gt;CheckboxGroupAttribute：当前组件的[属性](../arkts-components/arkts-arkui-checkboxgroup-attribute.md/arkts-arkui-checkboxgroup-attribute.md)&lt;br/&gt;CommonMethod： [通用属性](../../apis-ability-kit/arkts-apis/arkts-app-ability-common.md/arkts-app-ability-common.md) |
+| modifier | [AttributeModifier](../arkts-components/arkts-arkui-attributemodifier-i.md)&lt;[CheckboxGroupAttribute](arkts-arkui-checkboxgroup-checkboxgroupattribute-i.md)&gt; \| AttributeModifier&lt;CommonMethod&gt; \| undefined | Yes | The attribute modifier of checkbox group. |
 
 **Return value:**
 
@@ -49,8 +49,7 @@ default attributeModifier(
 default checkboxShape(value: CheckBoxShape | undefined): this
 ```
 
-设置CheckboxGroup组件形状，包括圆形和圆角方形。与  
-[checkboxShape](../../../reference/apis-arkui/arkui-ts/ts-basic-components-checkboxgroup copy.md#checkboxshape12)&lt;sup&gt;12+&lt;/sup&gt;相比，shape参数新增了对undefined类型的支持。
+Setting the shape of checkbox group.
 
 **Since:** 23
 
@@ -66,7 +65,7 @@ default checkboxShape(value: CheckBoxShape | undefined): this
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | [CheckBoxShape](arkts-arkui-checkboxshape-e.md) \| undefined | Yes | 设置CheckboxGroup组件形状，包括圆形和圆角方形。&lt;br/&gt;当shape的值为undefined时，默认值为 CheckBoxShape.CIRCLE。&lt;br /&gt;**说明：**&lt;br/&gt;CheckboxGroup组件将按照设置的形状显示。&lt;br/&gt;CheckboxGroup内所有未单独设置shape类型的Checkbox，其 形状将与CheckboxGroup保持一致。&lt;br/&gt;CheckboxGroup内已单独设置shape类型的Checkbox，其形状将优先于CheckboxGroup的设置，按照自身设置显示。 |
+| value | [CheckBoxShape](arkts-arkui-checkboxshape-e.md) \| undefined | Yes | The configuration of checkbox group shape. |
 
 **Return value:**
 
@@ -80,7 +79,7 @@ default checkboxShape(value: CheckBoxShape | undefined): this
 default contentModifier(modifier: ContentModifier<CheckBoxGroupConfiguration> | undefined): this
 ```
 
-设置CheckboxGroup的内容修饰器。
+Set the content modifier of checkboxgroup.
 
 **Since:** 23
 
@@ -96,7 +95,7 @@ default contentModifier(modifier: ContentModifier<CheckBoxGroupConfiguration> | 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| modifier | [ContentModifier](../arkts-components/arkts-arkui-contentmodifier-i.md)&lt;CheckBoxGroupConfiguration&gt; \| undefined | Yes | CheckboxGroup的内容修饰器。 |
+| modifier | [ContentModifier](../arkts-components/arkts-arkui-contentmodifier-i.md)&lt;CheckBoxGroupConfiguration&gt; \| undefined | Yes | The content modifier of checkboxgroup. |
 
 **Return value:**
 
@@ -110,7 +109,7 @@ default contentModifier(modifier: ContentModifier<CheckBoxGroupConfiguration> | 
 default mark(value: MarkStyle | undefined): this
 ```
 
-设置多选框内部图标样式。
+Set the mark style of checkbox.
 
 **Since:** 23
 
@@ -126,7 +125,7 @@ default mark(value: MarkStyle | undefined): this
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | [MarkStyle](arkts-arkui-markstyle-i.md) \| undefined | Yes | 多选框内部图标样式。&lt;br/&gt;当style的值为undefined时，维持上次取值。 |
+| value | [MarkStyle](arkts-arkui-markstyle-i.md) \| undefined | Yes | The style configuration of checkboxgroup mark. |
 
 **Return value:**
 
@@ -140,7 +139,7 @@ default mark(value: MarkStyle | undefined): this
 default onChange(callback: OnCheckboxGroupChangeCallback | undefined): this
 ```
 
-CheckboxGroup的选中状态或群组内的Checkbox的选中状态发生变化时，触发回调。
+Called when the selection status changes.Anonymous Object Rectification.
 
 **Since:** 23
 
@@ -156,7 +155,7 @@ CheckboxGroup的选中状态或群组内的Checkbox的选中状态发生变化�
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [OnCheckboxGroupChangeCallback](arkts-arkui-oncheckboxgroupchangecallback-t.md) \| undefined | Yes | 多选框群组的信息。 |
+| callback | [OnCheckboxGroupChangeCallback](arkts-arkui-oncheckboxgroupchangecallback-t.md) \| undefined | Yes |  |
 
 **Return value:**
 
@@ -170,11 +169,7 @@ CheckboxGroup的选中状态或群组内的Checkbox的选中状态发生变化�
 default selectAll(isAllSelected: boolean | undefined | Bindable<boolean>): this
 ```
 
-设置是否全选。若同组的[Checkbox](arkts-arkui-checkbox-checkbox-f.md#checkbox)显式设置了select属性，则Checkbox的优先级高。
-
-在与带有缓存功能的组件（如[List](../../apis-arkts/arkts-apis/arkts-arkts-util-list-list-c.md/arkts-arkts-util-list-list-c.md)）配合使用时，未创建的Checkbox选中状态需由开发者控制。
-
-该属性支持Bindable双向绑定变量。
+setting whether all checkbox is selected.
 
 **Since:** 23
 
@@ -190,7 +185,7 @@ default selectAll(isAllSelected: boolean | undefined | Bindable<boolean>): this
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| isAllSelected | boolean \| undefined \| Bindable&lt;boolean&gt; | Yes | 是否全选。&lt;br/&gt;默认值：false&lt;br/&gt;值为true时，多选框群组将全部被选中；值为 false时，多选框群组将全部取消选中。 |
+| isAllSelected | boolean \| undefined \| Bindable&lt;boolean&gt; | Yes |  |
 
 **Return value:**
 
@@ -204,7 +199,7 @@ default selectAll(isAllSelected: boolean | undefined | Bindable<boolean>): this
 default selectedColor(value: ResourceColor | undefined): this
 ```
 
-设置被选中或部分选中状态的颜色。与[selectedColor](arkts-arkui-checkboxgroup-checkboxgroupattribute-i.md#selectedcolor)相比，resColor参数新增了对undefined类型的支持。
+setting the display color of checkbox.
 
 **Since:** 23
 
@@ -220,7 +215,7 @@ default selectedColor(value: ResourceColor | undefined): this
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | [ResourceColor](arkts-arkui-resourcecolor-t.md) \| undefined | Yes | 被选中或部分选中状态的颜色。&lt;br/&gt;当resColor的值为undefined时，默认值：\\$r(' sys.color.ohos_id_color_text_primary_activated')&lt;br/&gt;异常值按照默认值处理。 |
+| value | [ResourceColor](arkts-arkui-resourcecolor-t.md) \| undefined | Yes |  |
 
 **Return value:**
 
@@ -228,14 +223,43 @@ default selectedColor(value: ResourceColor | undefined): this
 | --- | --- |
 | this |  |
 
+## setCheckboxGroupOptions
+
+```TypeScript
+default setCheckboxGroupOptions(options?: CheckboxGroupOptions): this
+```
+
+Set checkboxgroup options.
+
+**Since:** 26.1.0
+
+**ArkTS mode:** ArkTS-Sta only, since version 26.1.0.
+
+**Model restriction:** This API can be used only in the stage model.
+
+<!--Device-CheckboxGroupAttribute-default setCheckboxGroupOptions(options?: CheckboxGroupOptions): this--><!--Device-CheckboxGroupAttribute-default setCheckboxGroupOptions(options?: CheckboxGroupOptions): this-End-->
+
+**System capability:** SystemCapability.ArkUI.ArkUI.Full
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| options | [CheckboxGroupOptions](arkts-arkui-checkboxgroup-checkboxgroupoptions-i.md) | No | checkboxgroup constructor options |
+
+**Return value:**
+
+| Type | Description |
+| --- | --- |
+| this | Returns the instance of the CheckboxGroupAttribute. |
+
 ## unselectedColor
 
 ```TypeScript
 default unselectedColor(value: ResourceColor | undefined): this
 ```
 
-设置非选中状态边框颜色。与  
-[unselectedColor](../../../reference/apis-arkui/arkui-ts/ts-basic-components-checkboxgroup copy.md#unselectedcolor10)&lt;sup&gt;10+&lt;/sup&gt;相比，resColor参数新增了对undefined类型的支持。
+Set the display border color of unselected checkbox.
 
 **Since:** 23
 
@@ -251,7 +275,7 @@ default unselectedColor(value: ResourceColor | undefined): this
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | [ResourceColor](arkts-arkui-resourcecolor-t.md) \| undefined | Yes | 非选中状态边框颜色。&lt;br/&gt;当value的值为undefined时，默认值：\\$r(' sys.color.ohos_id_color_switch_outline_off')。 |
+| value | [ResourceColor](arkts-arkui-resourcecolor-t.md) \| undefined | Yes | The color of border when checkboxgroup unselected. |
 
 **Return value:**
 

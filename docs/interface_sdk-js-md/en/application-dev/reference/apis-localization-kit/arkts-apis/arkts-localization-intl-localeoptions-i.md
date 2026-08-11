@@ -1,11 +1,11 @@
 # LocaleOptions
 
-> 从API version 6开始支持，从API version 20开始废弃，以calendar为例，
-> 区域初始化配置项。从API version 9开始，LocaleOptions属性由必填改为可选。
+Options for initializing the **Locale** object. Since API version 9, the **LocaleOptions** attribute is changed from mandatory to optional.
 
-> **说明：**
+> **NOTE：**
 > 
-> - calendar：不同取值的含义请参考[设置日历和历法表1](../../../internationalization/i18n-calendar.md)。
+> - For details about **calendar**, see Table 1 in
+> [Calendar Setting](../../../internationalization/i18n-calendar.md).
 
 **Since:** 6
 
@@ -13,7 +13,7 @@
 
 **Deprecated since:** 20
 
-**Substitutes:** [Intl.LocaleOptions](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/Locale/Locale#options)
+**Substitutes:** [Intl.LocaleOptions](arkts-intl.md#intl.localeoptions)
 
 <!--Device-intl-export interface LocaleOptions--><!--Device-intl-export interface LocaleOptions-End-->
 
@@ -31,9 +31,9 @@ import { intl } from 'kits/@kit.LocalizationKit';
 calendar?: string
 ```
 
-历法参数，取值包括：
+Calendar parameter. The value can be:
 
-"buddhist", "chinese", "coptic", "dangi", "ethioaa", "ethiopic", "gregory", "hebrew", "indian", "islamic", "islamic-umalqura", "islamic-tbla", "islamic-civil", "islamic-rgsa", "iso8601", "japanese", "persian", "roc", "islamicc"。
+"buddhist", "chinese", "coptic", "dangi", "ethioaa", "ethiopic", "gregory", "hebrew", "indian", "islamic", "islamic-umalqura", "islamic-tbla", "islamic-civil", "islamic-rgsa", "iso8601", "japanese", "persian", "roc",or "islamicc".
 
 **Type:** string
 
@@ -43,7 +43,7 @@ calendar?: string
 
 **Deprecated since:** 20
 
-**Substitutes:** [Intl.LocaleOptions.calendar](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/Locale/Locale#calendar)
+**Substitutes:** [Intl.LocaleOptions.calendar](arkts-intl.md#intl.localeoptions.calendar)
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -59,13 +59,13 @@ calendar?: string
 caseFirst?: string
 ```
 
-区域的排序规则是否考虑大小写，取值包括：
+Whether case is taken into account for the locale's collation rules. The value can be:
 
-"upper"：大写排前面。
+**upper**: Uppercase letters come first.
 
-"lower"：小写排前面。
+**lower**: Lowercase letters come first.
 
-"false"：使用区域默认的大小写排序规则。
+**false**: The default collation rules of the locale are used.
 
 **Type:** string
 
@@ -91,39 +91,39 @@ caseFirst?: string
 collation?: string
 ```
 
-区域的排序规则，取值包括：
+Collation rules for the locale. The value can be:
 
-"big5han"：拉丁字母使用的拼音排序。
+**big5han**: Pinyin sorting for Latin letters.
 
-"compat"：兼容性排序，仅用于阿拉伯语。
+**compat**: compatibility sorting, only for Arabic.
 
-"dict"：词典风格排序，仅用于僧伽罗语。
+**dict**: dictionary-style sorting, only for Singhalese.
 
-"direct"：二进制码点排序。
+**direct**: binary code point sorting.
 
-"ducet"：按Unicode排序元素表排序。
+**ducet**: sorting according to the Unicode collation element table.
 
-"eor"：按欧洲排序规则排序。
+**eor**: sorting according to the European collation rules.
 
-"gb2312"：拼音排序，仅用于中文排序。
+**gb2312**: Pinyin sorting, only for Chinese.
 
-"phonebk"：电话本风格排序。
+**phonebk**: phone book-style sorting.
 
-"phonetic"：发音排序。
+**phonetic**: phonetic sorting.
 
-"pinyin"：拼音排序。
+**pinyin**: Pinyin sorting.
 
-"reformed"：瑞典语排序。
+**reformed**: reformed sorting, only for Swedish.
 
-"searchjl"：韩语初始辅音搜索的特殊排序。
+**searchjl**: special sorting for Korean initial consonant search.
 
-"stroke"：汉语的笔画排序。
+**stroke**: stroke sorting for Chinese.
 
-"trad"：传统风格排序，如西班牙语。
+**trad**: traditional-style sorting, for example, Spanish.
 
-"unihan"：统一汉字排序，用于日语、韩语、中文等汉字排序。
+**unihan**: radical-stroke sorting for Han characters, only for Chinese, Japanese, and Korean.
 
-"zhuyin"：注音排序，仅用于中文排序。
+**zhuyin**: Zhuyin sorting, only for Chinese.
 
 **Type:** string
 
@@ -133,7 +133,7 @@ collation?: string
 
 **Deprecated since:** 20
 
-**Substitutes:** [Intl.LocaleOptions.collation](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/Locale/Locale#collation)
+**Substitutes:** [Intl.LocaleOptions.collation](arkts-intl.md#intl.localeoptions.collation)
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -149,9 +149,9 @@ collation?: string
 hourCycle?: string
 ```
 
-时制格式，取值包括：
+Hour cycle. The value can be:
 
-"h11", "h12", "h23", "h24"。
+"h11", "h12", "h23", or  "h24".
 
 **Type:** string
 
@@ -177,9 +177,15 @@ hourCycle?: string
 numberingSystem?: string
 ```
 
-数字系统，取值包括：
+Numbering system. The value can be:
 
-"adlm", "ahom", "arab", "arabext", "bali", "beng", "bhks", "brah", "cakm", "cham", "deva", "diak", "fullwide", "gong", "gonm", "gujr", "guru", "hanidec", "hmng", "hmnp", "java", "kali", "khmr", "knda", "lana", "lanatham", "laoo", "latn", "lepc", "limb", "mathbold", "mathdbl", "mathmono", "mathsanb", "mathsans", "mlym", "modi", "mong", "mroo", "mtei", "mymr", "mymrshan", "mymrtlng", "newa", "nkoo", "olck", "orya", "osma", "rohg", "saur", "segment", "shrd", "sind", "sinh", "sora", "sund", "takr", "talu", "tamldec", "telu", "thai", "tibt", "tirh", "vaii", "wara", "wcho"。
+**adlm**, **ahom**, **arab**, **arabext**, **bali**, **beng**, **bhks**, **brah**, **cakm**, **cham**, **deva**,   
+**diak**, **fullwide**, **gong**, **gonm**, **gujr**, **guru**, **hanidec**, **hmng**, **hmnp**, **java**,   
+**kali**, **khmr**, **knda**, **lana**, **lanatham**, **laoo**, **latn**, **lepc**, **limb**, **mathbold**,   
+**mathdbl**, **mathmono**, **mathsanb**, **mathsans**, **mlym**, **modi**, **mong**, **mroo**, **mtei**, **mymr**,   
+**mymrshan**, **mymrtlng**, **newa**, **nkoo**, **olck**, **orya**, **osma**, **rohg**, **saur**, **segment**,   
+**shrd**, **sind**, **sinh**, **sora**, **sund**, **takr**, **talu**, **tamldec**, **telu**, **thai**, **tibt**,   
+**tirh**, **vaii**, **wara**, or **wcho**.
 
 **Type:** string
 
@@ -205,7 +211,7 @@ numberingSystem?: string
 numeric?: boolean
 ```
 
-true表示将数字字符视为数字进行排序处理，false表示将数字字符视为普通字符进行排序处理。例如设置为true时，字符串“21”和字符串“123”比较，相当于数字21和123比较。默认值：false。
+Whether to treat numeric characters as numbers for sorting. The value true means to treat numeric characters as numbers for sorting, and the value **false** means to treat numeric characters as ordinary characters for sorting. For example, when this parameter is set to **true**, comparing the string **21** with the string **123**is equivalent to comparing the number 21 with the number 123. The default value is **false**.
 
 **Type:** boolean
 

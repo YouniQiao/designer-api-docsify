@@ -1,6 +1,6 @@
 # VibratorStatusEvent
 
-振动设备上线、下线状态事件信息。当马达设备上线或下线时，通过[vibrator.on](arkts-sensorservice-vibrator-on-f.md#on)回调传递此对象。
+Defines the vibrator status change event.
 
 **Since:** 19
 
@@ -22,8 +22,7 @@ import { vibrator } from 'kits/@kit.SensorServiceKit';
 deviceId: int
 ```
 
-设备的ID。可用于  
-[startVibration](arkts-sensorservice-vibrator-startvibration-f.md#startvibration)和[stopVibration](arkts-sensorservice-vibrator-stopvibration-f.md#stopvibration)等接口指定目标设备。
+Device ID.
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
@@ -41,7 +40,7 @@ deviceId: int
 isVibratorOnline: boolean
 ```
 
-指示设备的上线和下线状态。true表示设备上线，可用于触发振动；false表示设备下线，此时该设备的振动不可用。
+Vibrator status. The value **true** indicates that the device is online, and the value **false** indicates the opposite.
 
 **Type:** boolean
 
@@ -59,7 +58,7 @@ isVibratorOnline: boolean
 timestamp: long
 ```
 
-报告事件的时间戳。单位：ms。
+Event timestamp, in ms.
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：long
 
@@ -77,7 +76,7 @@ timestamp: long
 vibratorCount: int
 ```
 
-设备上的马达的数量。
+Number of vibrators on the device.
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 

@@ -12,7 +12,7 @@ import { scan } from 'kits/@kit.BasicServicesKit';
 function startScannerDiscovery(): Promise<void>
 ```
 
-开始发现扫描仪。使用Promise异步回调。
+Starts scanner discovery. This API uses a promise to return the result.
 
 **Since:** 20
 
@@ -28,13 +28,13 @@ function startScannerDiscovery(): Promise<void>
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise对象，无返回结果。 |
+| Promise&lt;void&gt; | Promise that returns no value. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 201 | Permission denied. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
 
 ## Examples
 

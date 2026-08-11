@@ -1,11 +1,5 @@
 # getBundleStats（系统接口）
 
-## 导入模块
-
-```TypeScript
-import { storageStatistics } from 'kits/@kit.CoreFileKit';
-```
-
 ## getBundleStats
 
 ```TypeScript
@@ -38,18 +32,19 @@ function getBundleStats(packageName: string, callback: AsyncCallback<BundleStats
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 401 | The input parameter is invalid. |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | The input parameter is invalid. |
 | 13600008 | No such object. |
-| 201 | Permission verification failed. |
-| 202 | The caller is not a system application. |
+| [201](../../errorcode-universal.md#201-权限校验失败) | Permission verification failed. |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | The caller is not a system application. |
 | 13600001 | IPC error. |
 | 13900042 | Unknown error. |
 
 ## 示例
 
+ArkTS-Dyn示例：
+
 ```TypeScript
 import { bundleResourceManager } from '@kit.AbilityKit';
-import { storageStatistics } from '@kit.CoreFileKit';
 import { BusinessError } from '@kit.BasicServicesKit';
 import { hilog } from '@kit.PerformanceAnalysisKit';
 
@@ -61,17 +56,43 @@ try {
 
   let packageName:string = bundleName;
   let index:number = resourceInfo.appIndex;
-  storageStatistics.getBundleStats(packageName, (err: BusinessError, bundleStats: storageStatistics.BundleStats) => {
+  storageStatistics.getBundleStats(packageName, (err: BusinessError, BundleStats: storageStatistics.BundleStats) => {
     if (err) {
-      console.error(`getBundleStats failed with err, code is: ${err.code}, message is: ${err.message}`);
+      hilog.error(0x0000, 'testTag', 'getBundleStats failed with err: %{public}s', JSON.stringify(err));
     } else {
-      hilog.info(0x0000, 'testTag', 'getBundleStats successfully. BundleStats: %{public}s', JSON.stringify(bundleStats));
+      hilog.info(0x0000, 'testTag', 'getBundleStats successfully. BundleStats: %{public}s', JSON.stringify(BundleStats));
     }
   }, index);
-
 } catch (err) {
   let message = (err as BusinessError).message;
-  console.error(`getBundleResourceInfo failed with err, message is: ${message}`);
+  hilog.error(0x0000, 'testTag', 'getBundleResourceInfo failed with err: %{public}s', message);
+}
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+import { bundleResourceManager } from '@kit.AbilityKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+import { hilog } from '@kit.PerformanceAnalysisKit';
+
+let bundleName = "com.example.myapplication";
+let bundleFlags = bundleResourceManager.ResourceFlag.GET_RESOURCE_INFO_ALL;
+try {
+  let resourceInfo = bundleResourceManager.getBundleResourceInfo(bundleName, bundleFlags);
+  hilog.info(0x0000, 'testTag', 'getBundleResourceInfo successfully. Data label: %{public}s', JSON.stringify(resourceInfo.label));
+  let packageName:string = bundleName;
+  let index:int = resourceInfo.appIndex;
+  storageStatistics.getBundleStats(packageName, (err: BusinessError, BundleStats: storageStatistics.BundleStats): void => {
+    if (err) {
+      hilog.error(0x0000, 'testTag', 'getBundleStats failed with err: %{public}s', JSON.stringify(err));
+    } else {
+      hilog.info(0x0000, 'testTag', 'getBundleStats successfully. BundleStats: %{public}s', JSON.stringify(BundleStats));
+    }
+  }, index);
+} catch (err) {
+  let message = (err as BusinessError).message;
+  hilog.error(0x0000, 'testTag', 'getBundleResourceInfo failed with err: %{public}s', message);
 }
 ```
 
@@ -113,18 +134,19 @@ function getBundleStats(packageName: string, index?: int): Promise<BundleStats>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 401 | The input parameter is invalid. |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | The input parameter is invalid. |
 | 13600008 | No such object. |
-| 201 | Permission verification failed. |
-| 202 | The caller is not a system application. |
+| [201](../../errorcode-universal.md#201-权限校验失败) | Permission verification failed. |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | The caller is not a system application. |
 | 13600001 | IPC error. |
 | 13900042 | Unknown error. |
 
 ## 示例
 
+ArkTS-Dyn示例：
+
 ```TypeScript
 import { bundleResourceManager } from '@kit.AbilityKit';
-import { storageStatistics } from '@kit.CoreFileKit';
 import { BusinessError } from '@kit.BasicServicesKit';
 import { hilog } from '@kit.PerformanceAnalysisKit';
 
@@ -136,15 +158,42 @@ try {
 
   let packageName:string = bundleName;
   let index:number = resourceInfo.appIndex;
-  storageStatistics.getBundleStats(packageName, index).then((bundleStats: storageStatistics.BundleStats) => {
-    hilog.info(0x0000, 'testTag', 'getBundleStats successfully. BundleStats: %{public}s', JSON.stringify(bundleStats));
+  storageStatistics.getBundleStats(packageName, index).then((BundleStats: storageStatistics.BundleStats) => {
+    hilog.info(0x0000, 'testTag', 'getBundleStats successfully. BundleStats: %{public}s', JSON.stringify(BundleStats));
   }).catch((err: BusinessError) => {
-    console.error(`getBundleStats failed with err, code is: ${err.code}, message is: ${err.message}`);
+    hilog.error(0x0000, 'testTag', 'getBundleStats failed with err: %{public}s', JSON.stringify(err));
   });
 
 } catch (err) {
   let message = (err as BusinessError).message;
-  console.error(`getBundleResourceInfo failed with err, message is: ${message}`);
+  hilog.error(0x0000, 'testTag', 'getBundleResourceInfo failed with err: %{public}s', message);
+}
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+import { bundleResourceManager } from '@kit.AbilityKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+import { hilog } from '@kit.PerformanceAnalysisKit';
+
+let bundleName = "com.example.myapplication";
+let bundleFlags = bundleResourceManager.ResourceFlag.GET_RESOURCE_INFO_ALL;
+try {
+  let resourceInfo = bundleResourceManager.getBundleResourceInfo(bundleName, bundleFlags);
+  hilog.info(0x0000, 'testTag', 'getBundleResourceInfo successfully. Data label: %{public}s', JSON.stringify(resourceInfo.label));
+
+  let packageName:string = bundleName;
+  let index:int = resourceInfo.appIndex;
+  storageStatistics.getBundleStats(packageName, index).then((BundleStats: storageStatistics.BundleStats): void => {
+    hilog.info(0x0000, 'testTag', 'getBundleStats successfully. BundleStats: %{public}s', JSON.stringify(BundleStats));
+  }).catch((err: BusinessError): void => {
+    hilog.error(0x0000, 'testTag', 'getBundleStats failed with err: %{public}s', JSON.stringify(err));
+  });
+
+} catch (err) {
+  let message = (err as BusinessError).message;
+  hilog.error(0x0000, 'testTag', 'getBundleResourceInfo failed with err: %{public}s', message);
 }
 ```
 

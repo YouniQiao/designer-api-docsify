@@ -1,6 +1,6 @@
 # FontStyle
 
-字体样式枚举。
+Enumerates the font styles.
 
 **Since:** 12
 
@@ -16,7 +16,7 @@
 NORMAL = 0
 ```
 
-常规样式。
+Normal.
 
 **Since:** 12
 
@@ -34,7 +34,7 @@ NORMAL = 0
 ITALIC = 1
 ```
 
-斜体。如果当前字体没有可用的斜体版本，会选用倾斜体替代。
+Italic. If no italic version is available for the current font, the oblique version will be used instead.
 
 **Since:** 12
 
@@ -52,7 +52,7 @@ ITALIC = 1
 OBLIQUE = 2
 ```
 
-倾斜体。如果当前字体没有可用的倾斜体版本，会选用斜体替代。
+Oblique. If no oblique version is available for the current font, the italic version will be used instead.
 
 **Since:** 12
 

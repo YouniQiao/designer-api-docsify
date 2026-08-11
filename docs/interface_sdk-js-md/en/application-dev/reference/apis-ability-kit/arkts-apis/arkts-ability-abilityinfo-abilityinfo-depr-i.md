@@ -1,11 +1,12 @@
 # AbilityInfo
 
-Ability信息，未做特殊说明的属性，均通过  
-[bundle.getAbilityInfo](arkts-ability-bundle-getabilityinfo-f.md#getabilityinfo)获取。
+The module provides information about an ability. Unless otherwise specified, the information is obtained through  
+[bundle.getAbilityInfo](arkts-ability-bundle-getabilityinfo-f.md#getabilityinfo).
 
-> **说明：**
+> **NOTE：**
 > 
-> 从API version 9开始，该模块不再维护，建议使用[bundleManager-AbilityInfo](arkts-ability-abilityinfo-abilityinfo-depr-i.md)替代。
+> The APIs of this module have been deprecated since API version 9. You are advised to use
+> [bundleManager-AbilityInfo](arkts-ability-abilityinfo-abilityinfo-depr-i.md) instead.
 
 **Since:** 7
 
@@ -25,9 +26,10 @@ Ability信息，未做特殊说明的属性，均通过
 readonly applicationInfo: ApplicationInfo
 ```
 
-应用程序的配置信息。
+Application configuration information.
 
-通过调用[bundle.getAbilityInfo](arkts-ability-bundle-getabilityinfo-f.md#getabilityinfo)接口时，传入GET_ABILITY_INFO_WITH_APPLICATION获取。
+The value is obtained by passing in GET_ABILITY_INFO_WITH_APPLICATION to  
+[bundle.getAbilityInfo](arkts-ability-bundle-getabilityinfo-f.md#getabilityinfo).
 
 **Type:** [ApplicationInfo](arkts-ability-applicationinfo-applicationinfo-depr-i.md)
 
@@ -51,9 +53,9 @@ readonly applicationInfo: ApplicationInfo
 readonly backgroundModes: number
 ```
 
-表示后台服务的类型。
+Background service mode of the ability.
 
-**模型约束：** 此接口仅可在FA模型下使用。
+**Model restriction**: This API can be used only in the FA model.
 
 **Type:** number
 
@@ -77,7 +79,7 @@ readonly backgroundModes: number
 readonly bundleName: string
 ```
 
-应用Bundle名称。
+Bundle name.
 
 **Type:** string
 
@@ -101,7 +103,7 @@ readonly bundleName: string
 readonly description: string
 ```
 
-Ability的描述。
+Ability description.
 
 **Type:** string
 
@@ -125,7 +127,7 @@ Ability的描述。
 readonly descriptionId: number
 ```
 
-Ability的描述的资源id值。
+ID of the ability description.
 
 **Type:** number
 
@@ -149,7 +151,7 @@ Ability的描述的资源id值。
 readonly deviceCapabilities: Array<string>
 ```
 
-Ability需要的设备能力。
+Device capabilities required for the ability.
 
 **Type:** Array&lt;string&gt;
 
@@ -171,7 +173,7 @@ Ability需要的设备能力。
 readonly deviceTypes: Array<string>
 ```
 
-Ability支持的设备类型。
+Device types supported by the ability.
 
 **Type:** Array&lt;string&gt;
 
@@ -195,7 +197,7 @@ Ability支持的设备类型。
 readonly enabled: boolean
 ```
 
-Ability是否可用，取值为true表示Ability可用，取值为false表示Ability不可用。
+Whether the ability is enabled. **true** if enabled, **false** otherwise.
 
 **Type:** boolean
 
@@ -219,9 +221,9 @@ Ability是否可用，取值为true表示Ability可用，取值为false表示Abi
 readonly formEnabled: boolean
 ```
 
-判断Ability是否提供卡片能力，取值为true表示Ability提供卡片能力，取值为false表示Ability不提供卡片能力。
+Whether the ability provides the service widget capability. **true** if the ability provides the service widget capability, **false** otherwise.
 
-**模型约束：** 此接口仅可在FA模型下使用。
+**Model restriction**: This API can be used only in the FA model.
 
 **Type:** boolean
 
@@ -245,7 +247,7 @@ readonly formEnabled: boolean
 readonly icon: string
 ```
 
-Ability的图标资源文件索引。
+Index of the ability icon resource file.
 
 **Type:** string
 
@@ -269,7 +271,7 @@ Ability的图标资源文件索引。
 readonly iconId: number
 ```
 
-Ability的图标的资源id值。
+ID of the ability icon.
 
 **Type:** number
 
@@ -293,7 +295,7 @@ Ability的图标的资源id值。
 readonly isVisible: boolean
 ```
 
-判断Ability是否可以被其他应用调用，取值为true表示Ability可以被其他应用调用，取值为false表示Ability不可以被其他应用调用。
+Whether the ability can be called by other applications. **true** if the ability can be called by other applications, **false** otherwise.
 
 **Type:** boolean
 
@@ -317,7 +319,7 @@ readonly isVisible: boolean
 readonly label: string
 ```
 
-Ability对用户显示的名称。
+Ability name visible to users.
 
 **Type:** string
 
@@ -341,7 +343,7 @@ Ability对用户显示的名称。
 readonly labelId: number
 ```
 
-Ability的标签的资源id值。
+ID of the ability label.
 
 **Type:** number
 
@@ -365,7 +367,7 @@ Ability的标签的资源id值。
 readonly launchMode: bundle.LaunchMode
 ```
 
-Ability的启动模式。
+Ability launch mode.
 
 **Type:** bundle.LaunchMode
 
@@ -389,9 +391,10 @@ Ability的启动模式。
 readonly metaData: Array<CustomizeData>
 ```
 
-Ability的元信息。
+Metadata of the ability.
 
-通过调用[bundle.getAbilityInfo](arkts-ability-bundle-getabilityinfo-f.md#getabilityinfo)接口时，传入GET_ABILITY_INFO_WITH_METADATA获取。
+The value is obtained by passing in GET_ABILITY_INFO_WITH_METADATA to  
+[bundle.getAbilityInfo](arkts-ability-bundle-getabilityinfo-f.md#getabilityinfo).
 
 **Type:** Array&lt;[CustomizeData](arkts-ability-customizedata-customizedata-depr-i.md)&gt;
 
@@ -415,7 +418,7 @@ Ability的元信息。
 readonly moduleName: string
 ```
 
-Ability所属的HAP的名称。
+Name of the HAP file to which the ability belongs.
 
 **Type:** string
 
@@ -439,7 +442,7 @@ Ability所属的HAP的名称。
 readonly name: string
 ```
 
-Ability名称。
+Ability name.
 
 **Type:** string
 
@@ -463,7 +466,7 @@ Ability名称。
 readonly orientation: bundle.DisplayOrientation
 ```
 
-Ability的显示模式。
+Ability display orientation.
 
 **Type:** bundle.DisplayOrientation
 
@@ -487,9 +490,10 @@ Ability的显示模式。
 readonly permissions: Array<string>
 ```
 
-被其他应用Ability调用时需要申请的权限集合。
+Permissions required for other applications to call the ability.
 
-通过调用[bundle.getAbilityInfo](arkts-ability-bundle-getabilityinfo-f.md#getabilityinfo)接口时，传入GET_ABILITY_INFO_WITH_PERMISSION获取。
+The value is obtained by passing in GET_ABILITY_INFO_WITH_PERMISSION to  
+[bundle.getAbilityInfo](arkts-ability-bundle-getabilityinfo-f.md#getabilityinfo).
 
 **Type:** Array&lt;string&gt;
 
@@ -513,7 +517,7 @@ readonly permissions: Array<string>
 readonly process: string
 ```
 
-Ability的进程名称。
+Process name of the ability.
 
 **Type:** string
 
@@ -537,9 +541,9 @@ Ability的进程名称。
 readonly readPermission: string
 ```
 
-读取Ability数据所需的权限。
+Permission required for reading the ability data.
 
-**模型约束：** 此接口仅可在FA模型下使用。
+**Model restriction**: This API can be used only in the FA model.
 
 **Type:** string
 
@@ -563,9 +567,9 @@ readonly readPermission: string
 readonly subType: bundle.AbilitySubType
 ```
 
-Ability中枚举使用的模板的子类型。
+Subtype of the template that can be used by the ability.
 
-**模型约束：** 此接口仅可在FA模型下使用。
+**Model restriction**: This API can be used only in the FA model.
 
 **Type:** bundle.AbilitySubType
 
@@ -589,9 +593,9 @@ Ability中枚举使用的模板的子类型。
 readonly targetAbility: string
 ```
 
-当前Ability重用的目标Ability。
+Target ability that the ability alias points to.
 
-**模型约束：** 此接口仅可在FA模型下使用。
+**Model restriction**: This API can be used only in the FA model.
 
 **Type:** string
 
@@ -615,9 +619,9 @@ readonly targetAbility: string
 readonly type: bundle.AbilityType
 ```
 
-Ability类型。
+Ability type.
 
-**模型约束：** 此接口仅可在FA模型下使用。
+**Model restriction**: This API can be used only in the FA model.
 
 **Type:** bundle.AbilityType
 
@@ -641,9 +645,9 @@ Ability类型。
 readonly uri: string
 ```
 
-获取Ability的统一资源标识符（URI）。
+URI of the ability.
 
-**模型约束：** 此接口仅可在FA模型下使用。
+**Model restriction**: This API can be used only in the FA model.
 
 **Type:** string
 
@@ -667,9 +671,9 @@ readonly uri: string
 readonly writePermission: string
 ```
 
-向Ability写数据所需的权限。
+Permission required for writing data to the ability.
 
-**模型约束：** 此接口仅可在FA模型下使用。
+**Model restriction**: This API can be used only in the FA model.
 
 **Type:** string
 

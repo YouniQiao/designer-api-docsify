@@ -1,11 +1,5 @@
 # isShortcutSupported
 
-## 导入模块
-
-```TypeScript
-import { shortcutManager } from 'kits/@kit.AbilityKit';
-```
-
 ## isShortcutSupported
 
 ```TypeScript

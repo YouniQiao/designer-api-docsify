@@ -1,6 +1,6 @@
 # DistributedType
 
-描述表的分布式类型的枚举。请使用枚举名称而非枚举值。
+Enumerates the distributed database table types. Use the enum name rather than the enum value.
 
 **Since:** 10
 
@@ -16,7 +16,9 @@
 DISTRIBUTED_DEVICE = 0
 ```
 
-表示在不同设备之间分布式的数据库表。
+Distributed database table synced between devices.
+
+SystemCapability.DistributedDataManager.RelationalStore.Core
 
 **Since:** 10
 
@@ -32,7 +34,9 @@ DISTRIBUTED_DEVICE = 0
 DISTRIBUTED_CLOUD = 1
 ```
 
-表示在设备和云端之间分布式的数据库表。
+Distributed database table synced between a device and the cloud.
+
+SystemCapability.DistributedDataManager.CloudSync.Client
 
 **Since:** 10
 

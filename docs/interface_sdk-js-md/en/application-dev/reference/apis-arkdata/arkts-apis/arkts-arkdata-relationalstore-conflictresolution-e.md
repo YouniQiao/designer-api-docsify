@@ -1,6 +1,6 @@
 # ConflictResolution
 
-插入和修改接口的冲突解决模式。请使用枚举名称而非枚举值。
+Enumerates the resolutions used when a conflict occurs during data insertion or modification. Use the enum name rather than the enum value.
 
 **Since:** 10
 
@@ -16,7 +16,7 @@
 ON_CONFLICT_NONE = 0
 ```
 
-表示当冲突发生时，不做任何处理。
+No operation is performed.
 
 **Since:** 10
 
@@ -32,7 +32,7 @@ ON_CONFLICT_NONE = 0
 ON_CONFLICT_ROLLBACK = 1
 ```
 
-表示当冲突发生时，中止SQL语句并回滚当前事务。
+Abort the SQL statement and roll back the current transaction.
 
 **Since:** 10
 
@@ -48,7 +48,7 @@ ON_CONFLICT_ROLLBACK = 1
 ON_CONFLICT_ABORT = 2
 ```
 
-表示当冲突发生时，中止当前SQL语句，并撤销当前 SQL 语句所做的任何更改，但是由同一事务中先前的 SQL 语句引起的更改被保留并且事务保持活动状态。
+Abort the current SQL statement and revert any changes made by the current SQL statement. However, the changes made by the previous SQL statement in the same transaction are retained and the transaction remains active.
 
 **Since:** 10
 
@@ -64,7 +64,7 @@ ON_CONFLICT_ABORT = 2
 ON_CONFLICT_FAIL = 3
 ```
 
-表示当冲突发生时，中止当前 SQL 语句。但它不会撤销失败的 SQL 语句的先前更改，也不会结束事务。
+Abort the current SQL statement. The **FAIL** resolution does not revert previous changes made by the failed SQL statement or end the transaction.
 
 **Since:** 10
 
@@ -80,7 +80,7 @@ ON_CONFLICT_FAIL = 3
 ON_CONFLICT_IGNORE = 4
 ```
 
-表示当冲突发生时，跳过包含违反约束的行并继续处理 SQL 语句的后续行。
+Skip the rows that contain constraint violations and continue to process the subsequent rows of the SQL statement.
 
 **Since:** 10
 
@@ -96,7 +96,7 @@ ON_CONFLICT_IGNORE = 4
 ON_CONFLICT_REPLACE = 5
 ```
 
-表示当冲突发生时，在插入或更新当前行之前删除导致约束违例的预先存在的行，并且命令会继续正常执行。
+Delete pre-existing rows that cause the constraint violation before inserting or updating the current row, and continue to execute the command normally.
 
 **Since:** 10
 

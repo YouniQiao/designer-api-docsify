@@ -2,7 +2,7 @@
 
 ## Overview
 
-Provides the API for obtaining timezone offset transition information.
+Provides the capability of obtaining time zone information.
 
 **Library**: libohi18n.so
 
@@ -20,10 +20,10 @@ Provides the API for obtaining timezone offset transition information.
 | -- | -- | -- |
 | [DateTimeRule](capi-i18n-datetimerule.md) | DateTimeRule | Defines the date and time rules to specify a date and time. |
 | [InitialTimeZoneRule](capi-i18n-initialtimezonerule.md) | InitialTimeZoneRule | Defines the initial rule of a timezone which has no clear start time. |
-| [TimeArrayTimeZoneRule](capi-i18n-timearraytimezonerule.md) | TimeArrayTimeZoneRule | Defines a set of timezone rules by the rule effective time array. |
-| [AnnualTimeZoneRule](capi-i18n-annualtimezonerule.md) | AnnualTimeZoneRule | Defines a set of timezone rules by specifying the start year when the rules come into effect and end. |
-| [TimeZoneRules](capi-i18n-timezonerules.md) | TimeZoneRules | Defines a set of timezone rules of a timezone. |
-| [TimeZoneRuleQuery](capi-i18n-timezonerulequery.md) | TimeZoneRuleQuery | Defines the query information and query result. |
+| [TimeArrayTimeZoneRule](capi-i18n-timearraytimezonerule.md) | TimeArrayTimeZoneRule | Defines time zone rule defined by the start timestamp array. |
+| [AnnualTimeZoneRule](capi-i18n-annualtimezonerule.md) | AnnualTimeZoneRule | Defines the time zone rule that takes effect annually. |
+| [TimeZoneRules](capi-i18n-timezonerules.md) | TimeZoneRules | A complete time zone rule includes the start time zone rule, time zone rule defined by the start timestamparray, and time zone rule that takes effect every year. It can comprehensively describe both the historical andfuture rules of a time zone. |
+| [TimeZoneRuleQuery](capi-i18n-timezonerulequery.md) | TimeZoneRuleQuery | Used to input the query information and receive the query result. |
 
 ### Enum
 
@@ -70,10 +70,10 @@ Enumerates the types of rules for defining dates.
 
 | Enum item | Description |
 | -- | -- |
-| DOM = 0 | Indicates that a day is specified by day_of_month. |
-| DOW = 1 | Indicates that a day is specified by day_of_week. |
-| DOW_GEQ_DOM = 2 | Indicates that a day is specified by day_of_week on or after day_of_month. |
-| DOW_LEQ_DOM = 3 | Indicates that a day is specified by day_of_week on or before day_of_month. |
+| DOM = 0 | Indicates that day of the month. For example, October 16 in 2025 is the 16th day of October. |
+| DOW = 1 | Indicates that weekday of the month. For example, October 16 in 2025 is the third Thursday of October. |
+| DOW_GEQ_DOM = 2 | Indicates that first weekday after the specified day of the month.For example, October 16 in 2025 is the first Thursday after the 13th, 14th, or 15th day of October. |
+| DOW_LEQ_DOM = 3 | Indicates that last weekday before the specified day of the month.For example, October 16 in 2025 is the last Thursday before the 20th day of October. |
 
 ### TimeRuleType
 
@@ -89,9 +89,9 @@ Enumerates the types of rules for defining time.
 
 | Enum item | Description |
 | -- | -- |
-| WALL_TIME = 0 | Indicates that time is specified by wall time. |
-| STANDARD_TIME = 1 | Indicates that time is specified by standard time. |
-| UTC_TIME = 2 | Indicates that time is specified by UTC time. |
+| WALL_TIME = 0 | Indicates that local clock time (not subject to time zone offset). |
+| STANDARD_TIME = 1 | Indicates that local standard time (not subject to DST offset). |
+| UTC_TIME = 2 | Indicates that world standard time (UTC time). |
 
 
 ## Function description
@@ -112,7 +112,7 @@ Obtains the timezone rules by timezone ID.
 
 | Parameter | Description |
 | -- | -- |
-| const char* timeZoneID | Indicates the timezone ID, such as "Asia/Shanghai". |
+| const char* timeZoneID | Indicates the timezone ID, such as **Asia/Shanghai**. |
 | [TimeZoneRules](capi-i18n-timezonerules.md)* rules | Indicates the TimeZoneRules[TimeZoneRules](capi-i18n-timezonerules.md) of timezoneID. |
 
 **Returns**:
@@ -338,8 +338,8 @@ Obtain the effective start time of a specific rule in the TimeArrayTimeZoneRule.
 | Parameter | Description |
 | -- | -- |
 | [TimeArrayTimeZoneRule](capi-i18n-timearraytimezonerule.md)* rule | Indicates the rule defined by TimeArrayTimeZoneRule[TimeArrayTimeZoneRule](capi-i18n-timearraytimezonerule.md). |
-| int32_t index | Indicates the rule index. |
-| double* result | the start time of the rule. |
+| int32_t index | Index of the start time. Value range: [0, rule.numStartTimes - 1]. |
+| double* result | Time when the rule takes effect, in milliseconds. The value is Unix timestamp. |
 
 **Returns**:
 

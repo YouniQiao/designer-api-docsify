@@ -1,6 +1,6 @@
 # DataDeleteOperation
 
-删除单个数据。
+Defines delete operation.
 
 **Since:** 23
 
@@ -16,7 +16,7 @@
 count?: int
 ```
 
-删除数据数量，默认为1。
+Count of deleted data in one operation.Only validate for ADD and DELETE.
 
 **Type:** int
 
@@ -38,7 +38,7 @@ count?: int
 index: int
 ```
 
-起始删除位置索引值。取值范围是[0, 数据源长度-1]。
+Index of deleted data.
 
 **Type:** int
 
@@ -58,7 +58,7 @@ index: int
 type: DataOperationType
 ```
 
-数据删除类型。
+How to operate deleted data.
 
 **Type:** [DataOperationType](arkts-arkui-lazyforeach-dataoperationtype-e.md)
 

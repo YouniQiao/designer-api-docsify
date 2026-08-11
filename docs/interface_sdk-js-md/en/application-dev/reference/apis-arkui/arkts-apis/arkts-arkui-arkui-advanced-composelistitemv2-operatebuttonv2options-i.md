@@ -1,6 +1,6 @@
 # OperateButtonV2Options
 
-声明接口OperateButtonV2Options
+Declare interface OperateButtonV2Options
 
 **Since:** 26.0.0
 
@@ -22,7 +22,7 @@ import { OperateCheckV2Options, ComposeListItemV2, IconTypeV2, OperateIconV2, Op
 accessibilityDescription?: ResourceStr
 ```
 
-按钮的无障碍描述。
+The accessibilityDescription of the button.
 
 **Type:** [ResourceStr](arkts-arkui-resourcestr-t.md)
 
@@ -42,7 +42,7 @@ accessibilityDescription?: ResourceStr
 accessibilityLevel?: string
 ```
 
-按钮的无障碍重要性。
+The accessibilityLevel of the button.
 
 **Type:** string
 
@@ -64,7 +64,7 @@ accessibilityLevel?: string
 accessibilityText?: ResourceStr
 ```
 
-按钮的无障碍文本属性。
+The accessibilityText of the button.
 
 **Type:** [ResourceStr](arkts-arkui-resourcestr-t.md)
 
@@ -84,7 +84,7 @@ accessibilityText?: ResourceStr
 text?: ResourceStr
 ```
 
-按钮文本。
+The text on the button.
 
 **Type:** [ResourceStr](arkts-arkui-resourcestr-t.md)
 

@@ -1,6 +1,6 @@
 # NotificationUserInput
 
-保存用户输入的通知消息。
+The **NotificationUserInput** module provides APIs for defining the notification user input.
 
 **Since:** 8
 
@@ -16,7 +16,7 @@
 inputKey: string
 ```
 
-用户输入时用于标识此输入的key。
+Key to identify the user input.
 
 **Type:** string
 

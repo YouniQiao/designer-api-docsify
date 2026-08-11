@@ -1,6 +1,6 @@
 # SyncMode
 
-指数据库同步模式。
+Defines the database sync mode.
 
 **Since:** 8
 
@@ -20,7 +20,7 @@
 SYNC_MODE_PUSH = 0
 ```
 
-表示数据从本地设备推送到远程设备。
+Data is pushed from a local device to a remote device.
 
 **Since:** 8
 
@@ -40,7 +40,7 @@ SYNC_MODE_PUSH = 0
 SYNC_MODE_PULL = 1
 ```
 
-表示数据从远程设备拉至本地设备。
+Data is pulled from a remote device to a local device.
 
 **Since:** 8
 

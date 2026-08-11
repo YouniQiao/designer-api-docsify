@@ -13,12 +13,6 @@ FormIntentInfo用于描述
 
 **系统接口：** 此接口为系统接口。
 
-## 导入模块
-
-```TypeScript
-import { insightIntentDriver } from 'kits/@kit.AbilityKit';
-```
-
 ## abilityName
 
 ```TypeScript
@@ -47,7 +41,7 @@ Ability名称。
 readonly formName: string
 ```
 
-表示[FormExtensionAbility](../../apis-form-kit/arkts-apis/arkts-app-form-formextensionability.md/arkts-app-form-formextensionability.md)绑定的卡片名称。
+表示[FormExtensionAbility](@ohos.app.form.FormExtensionAbility)绑定的卡片名称。
 
 **类型：** string
 

@@ -10,12 +10,6 @@
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 
-## 导入模块
-
-```TypeScript
-import { dialogRequest } from 'kits/@kit.AbilityKit';
-```
-
 ## height
 
 ```TypeScript

@@ -1,6 +1,6 @@
 # SelectActionProposal
 
-类SelectActionProposal。
+Class SelectActionProposal.
 
 **Inheritance/Implementation:** SelectActionProposal extends [TargetedGestureProposal](arkts-arkui-arkui-uicontext-targetedgestureproposal-c.md)
 
@@ -24,7 +24,7 @@ import { OverlayManager, FrameCallback, ResolvedUIContext, NodeRenderStateChange
 constructor(node: FrameNode)
 ```
 
-SelectActionProposal构造函数。
+SelectActionProposal constructor.
 
 **Since:** 26.0.0
 
@@ -40,5 +40,5 @@ SelectActionProposal构造函数。
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| node | [FrameNode](arkts-arkui-framenode-t.md) | Yes | 响应选择操作的节点。 |
+| node | [FrameNode](../arkts-components/arkts-arkui-framenode-t.md) | Yes | The node responding to select action. |
 

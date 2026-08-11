@@ -12,12 +12,6 @@
 
 **系统能力：** SystemCapability.MultimodalInput.Input.Core
 
-## 导入模块
-
-```TypeScript
-import { MouseAction, AxisValue, MouseEvent, Button, MouseToolType, Axis } from 'kits/@kit.InputKit';
-```
-
 ## action
 
 ```TypeScript
@@ -82,7 +76,7 @@ button: Button
 
 鼠标按键。
 
-**类型：** [Button](arkts-input-multimodalinput-mouseevent-button-e.md)
+**类型：** [Button](../../apis-arkui/arkts-apis/arkts-arkui-typenode-button-t.md)
 
 **起始版本：** 9
 
@@ -238,7 +232,7 @@ pressedButtons: Button[]
 
 当前处于按下状态的鼠标按键。
 
-**类型：** [Button](arkts-input-multimodalinput-mouseevent-button-e.md)[]
+**类型：** [Button](../../apis-arkui/arkts-apis/arkts-arkui-typenode-button-t.md)[]
 
 **起始版本：** 9
 

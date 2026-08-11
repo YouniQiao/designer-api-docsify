@@ -10,12 +10,6 @@
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
-## 导入模块
-
-```TypeScript
-import { OverlayManager, FrameCallback, ResolvedUIContext, NodeRenderStateChangeCallback, MediaQuery, OverlayManagerOptions, TextMenuController, UIObserver, Font, KeyboardAvoidMode, MarqueeDynamicSyncScene, PromptAction, NodeRenderState, UIContext, TextSelectionClearPolicy, SwiperDynamicSyncScene, Router, MarqueeDynamicSyncSceneType, DialogPresenter, Magnifier, ContextMenuController, UIInspector, CursorController, SwiperDynamicSyncSceneType, AtomicServiceBar, PageInfo, TargetInfo, ComponentUtils, DragController, MeasureUtils, NodeIdentity } from 'kits/@kit.ArkUI';
-```
-
 ## dismiss
 
 ```TypeScript
@@ -50,8 +44,8 @@ Dismisses a dialog box.Accepts either the dialog ID (returned by present) or the
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 103301 | Dialog content error. The ComponentContent is incorrect. |
-| 103303 | Dialog content not found. The ComponentContent cannot be found. |
+| [103301](../errorcode-promptAction.md#103301-自定义弹窗内容节点错误) | Dialog content error. The ComponentContent is incorrect. |
+| [103303](../errorcode-promptAction.md#103303-无法找到内容节点对应的自定义弹窗) | Dialog content not found. The ComponentContent cannot be found. |
 
 ## present
 
@@ -87,8 +81,8 @@ Presents a fixed-style dialog box.
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 103306 | The dialog cannot be opened due to node mount failure. |
-| 103308 | The dialog cannot be opened due to subwindow create failure. |
+| [103306](../errorcode-promptAction.md#103306-节点挂载失败导致无法打开弹出框) | The dialog cannot be opened due to node mount failure. |
+| [103308](../errorcode-promptAction.md#103308-子窗口创建失败导致无法打开弹出框) | The dialog cannot be opened due to subwindow create failure. |
 
 ## present
 
@@ -131,10 +125,10 @@ isModal = true and showInSubWindow = true cannot be used at the same time.
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 103301 | Dialog content error. The ComponentContent is incorrect. |
-| 103302 | Dialog content already exist. The ComponentContent has already been opened. |
-| 103306 | The dialog cannot be opened due to node mount failure. |
-| 103308 | The dialog cannot be opened due to subwindow create failure. |
+| [103301](../errorcode-promptAction.md#103301-自定义弹窗内容节点错误) | Dialog content error. The ComponentContent is incorrect. |
+| [103302](../errorcode-promptAction.md#103302-内容节点对应自定义弹窗已存在) | Dialog content already exist. The ComponentContent has already been opened. |
+| [103306](../errorcode-promptAction.md#103306-节点挂载失败导致无法打开弹出框) | The dialog cannot be opened due to node mount failure. |
+| [103308](../errorcode-promptAction.md#103308-子窗口创建失败导致无法打开弹出框) | The dialog cannot be opened due to subwindow create failure. |
 
 ## update
 
@@ -171,6 +165,6 @@ Updates a presented custom dialog box.
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 103301 | Dialog content error. The ComponentContent is incorrect. |
-| 103303 | Dialog content not found. The ComponentContent cannot be found. |
+| [103301](../errorcode-promptAction.md#103301-自定义弹窗内容节点错误) | Dialog content error. The ComponentContent is incorrect. |
+| [103303](../errorcode-promptAction.md#103303-无法找到内容节点对应的自定义弹窗) | Dialog content not found. The ComponentContent cannot be found. |
 

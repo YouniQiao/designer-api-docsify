@@ -1,6 +1,6 @@
 # AbilityInfo
 
-Ability信息。
+The module defines the ability information.
 
 **Since:** 9
 
@@ -16,7 +16,7 @@ Ability信息。
 readonly appIndex: int
 ```
 
-应用包的分身索引标识，仅在[分身应用](../../../quick-start/app-clone.md)中生效。
+Index of an application clone. It takes effect only for [application clones](../../../quick-start/app-clone.md).
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
@@ -34,11 +34,14 @@ readonly appIndex: int
 readonly applicationInfo: ApplicationInfo
 ```
 
-应用程序的配置信息&lt;!--Del--&gt;，可以通过调用  
-[queryAbilityInfo](arkts-ability-bundlemanager-queryabilityinfo-f-sys.md#queryabilityinfo)接口，abilityFlags参数传入GET_ABILITY_INFO_WITH_APPLICATION获取&lt;!--DelEnd--&gt;。
+Application configuration information &lt;!--Del--&gt;. The information can be obtained by passing in  
+**GET_ABILITY_INFO_WITH_APPLICATION** to the **abilityFlags** parameter of  
+[queryAbilityInfo](arkts-ability-bundlemanager-queryabilityinfo-f-sys.md#queryabilityinfo)&lt;!--DelEnd--&gt;.
 
-[getBundleInfoForSelf](arkts-ability-bundlemanager-getbundleinfoforself-f.md#getbundleinfoforself)或者  
-[getBundleInfo](arkts-ability-bundlemanager-getbundleinfo-f.md#getbundleinfo)接口获取AbilityInfo信息时不会返回该字段内容，可以通过获取[bundleInfo](arkts-ability-bundleinfo-i.md).appInfo对象来获取相关信息。
+This field is not returned when the  
+[getBundleInfoForSelf](arkts-ability-bundlemanager-getbundleinfoforself-f.md#getbundleinfoforself)or  
+[getBundleInfo](arkts-ability-bundlemanager-getbundleinfo-f.md#getbundleinfo)is used to obtain ability information. You can obtain the related information by obtaining the  
+[bundleInfo](arkts-ability-bundleinfo-i.md).appInfo object.
 
 **Type:** [ApplicationInfo](arkts-ability-applicationinfo-i.md)
 
@@ -58,7 +61,7 @@ readonly applicationInfo: ApplicationInfo
 readonly bundleName: string
 ```
 
-应用Bundle名称。
+Bundle name.
 
 **Type:** string
 
@@ -78,7 +81,8 @@ readonly bundleName: string
 readonly description: string
 ```
 
-Ability的描述，对应[module.json5](../../../quick-start/module-configuration-file.md)中abilities下配置的description字段，用于描述当前ability提供的页面内容和功能作用。
+Ability description, which describes the content and functions of the current ability. It corresponds to the  
+**description** field under **abilities** in the [module.json5](../../../quick-start/module-configuration-file.md)file.
 
 **Type:** string
 
@@ -98,7 +102,7 @@ Ability的描述，对应[module.json5](../../../quick-start/module-configuratio
 readonly descriptionId: long
 ```
 
-Ability的描述资源id，是编译构建时根据应用配置abilities下的description自动生成的资源id。
+Resource ID of the ability description. It is automatically generated during compilation and build based on the description configured in **abilities** of the application.
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：long
 
@@ -118,7 +122,8 @@ Ability的描述资源id，是编译构建时根据应用配置abilities下的de
 readonly deviceTypes: Array<string>
 ```
 
-Ability支持的设备类型，来源于module.json5配置的[deviceTypes](../../../quick-start/module-configuration-file.md#devicetypes标签)。
+Device types supported by the ability. The value is derived from that of  
+[deviceTypes](../../../quick-start/module-configuration-file.md#devicetypes) in the **module.json5** file.
 
 **Type:** Array&lt;string&gt;
 
@@ -138,7 +143,9 @@ Ability支持的设备类型，来源于module.json5配置的[deviceTypes](../..
 readonly enabled: boolean
 ```
 
-Ability是否可用，可用表示可以拉起或者查询，不可用时调用[getAbilityInfo](arkts-ability-bundlemanager-getabilityinfo-f.md#getabilityinfo)查询ability需要携带GET_ABILITY_INFO_WITH_DISABLE的AbilityFlag，取值为true表示Ability可用，取值为false表示Ability不可用。
+Whether the ability is available, that is, whether it can be started or queried. **true** if available, **false**otherwise. If the ability is unavailable, you must call  
+[getAbilityInfo](arkts-ability-bundlemanager-getabilityinfo-f.md#getabilityinfo) with **AbilityFlag** set to  
+**GET_ABILITY_INFO_WITH_DISABLE** to query the ability.
 
 **Type:** boolean
 
@@ -158,9 +165,9 @@ Ability是否可用，可用表示可以拉起或者查询，不可用时调用[
 readonly excludeFromDock: boolean
 ```
 
-判断Ability是否可以在dock区域隐藏图标，取值为true表示可以隐藏，取值为false不可以隐藏。
+Whether the ability icon can be hidden in the dock area. **true** if the ability icon can be hidden in the dock area, **false** otherwise.
 
-**说明：** 该字段不生效。
+Note: This field does not take effect.
 
 **Type:** boolean
 
@@ -180,7 +187,7 @@ readonly excludeFromDock: boolean
 readonly exported: boolean
 ```
 
-判断Ability是否可以被其他应用拉起，取值为true表示Ability可以被其他应用拉起，取值为false表示Ability不可以被其他应用拉起。
+Whether the ability can be launched by other applications. **true** if the ability can be launched by other applications, **false** otherwise.
 
 **Type:** boolean
 
@@ -200,7 +207,8 @@ readonly exported: boolean
 readonly icon: string
 ```
 
-Ability的图标资源描述符，对应[module.json5](../../../quick-start/module-configuration-file.md)中abilities下配置的icon字段。
+Resource descriptor of the ability icon. It corresponds to the **icon** field under **abilities** in the  
+[module.json5](../../../quick-start/module-configuration-file.md) file.
 
 **Type:** string
 
@@ -220,7 +228,7 @@ Ability的图标资源描述符，对应[module.json5](../../../quick-start/modu
 readonly iconId: long
 ```
 
-Ability的图标资源id，是编译构建时根据应用配置abilities下的icon自动生成的资源id。
+Resource ID of the ability icon. It is automatically generated during compilation and build based on the icon configured in **abilities** of the application.
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：long
 
@@ -240,10 +248,10 @@ Ability的图标资源id，是编译构建时根据应用配置abilities下的ic
 readonly label: string
 ```
 
-Ability对用户显示的名称的资源描述符，对应[module.json5](../../../quick-start/module-configuration-file.md)中abilities下配置的label字段。
+Resource descriptor of the ability name visible to users. It corresponds to the **label** field under **abilities**in the [module.json5](../../../quick-start/module-configuration-file.md) file.
 
-**说明：** 从API version 20开始，如果是通过
-[bundleManager.getAbilityInfo](arkts-ability-bundlemanager-getabilityinfo-f.md#getabilityinfo)获取Ability信息，该字段为Ability对用户显示的名称。
+Note: Starting from API version 20, if  
+[bundleManager.getAbilityInfo](arkts-ability-bundlemanager-getabilityinfo-f.md#getabilityinfo) is used to obtain ability information, this field is the ability name visible to users.
 
 **Type:** string
 
@@ -263,7 +271,7 @@ Ability对用户显示的名称的资源描述符，对应[module.json5](../../.
 readonly labelId: long
 ```
 
-Ability的标签资源id，是编译构建时根据应用配置abilities下的label自动生成的资源id。
+Resource ID of the ability label. It is automatically generated during compilation and build based on the label configured in **abilities** of the application.
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：long
 
@@ -283,7 +291,8 @@ Ability的标签资源id，是编译构建时根据应用配置abilities下的la
 readonly launchType: bundleManager.LaunchType
 ```
 
-Ability的启动模式，在启动的时候是否以多实例启动，详情参考[启动模式枚举](arkts-ability-bundlemanager-launchtype-e.md) 。
+Ability launch mode, that is, whether it can be started in multiton mode. For details, see  
+[LaunchType](arkts-ability-bundlemanager-launchtype-e.md).
 
 **Type:** bundleManager.LaunchType
 
@@ -303,9 +312,10 @@ Ability的启动模式，在启动的时候是否以多实例启动，详情参�
 readonly metadata: Array<Metadata>
 ```
 
-Ability的元信息。可以配置成系统定义的参数，使用系统提供的能力，例如[快捷方式](../../../quick-start/module-configuration-file.md#shortcuts标签)、  
-[窗口元数据配置](../../../windowmanager/window-config-m.md)等。也可以自定义配置参数，通过调用  
-[getBundleInfoForSelf](arkts-ability-bundlemanager-getbundleinfoforself-f.md#getbundleinfoforself)接口，bundleFlags参数传入GET_BUNDLE_INFO_WITH_HAP_MODULE、GET_BUNDLE_INFO_WITH_ABILITY和GET_BUNDLE_INFO_WITH_METADATA获取。
+Metadata of the ability. You can configure the system-defined parameters to use the capabilities provided by the system, for example, [shortcuts](../../../quick-start/module-configuration-file.md#shortcuts) and  
+[window metadata configuration](../../../windowmanager/window-config-m.md). You can also customize the parameters and call  
+[getBundleInfoForSelf](arkts-ability-bundlemanager-getbundleinfoforself-f.md#getbundleinfoforself)to obtain the parameters by passing **GET_BUNDLE_INFO_WITH_HAP_MODULE**, **GET_BUNDLE_INFO_WITH_ABILITY**, and  
+**GET_BUNDLE_INFO_WITH_METADATA** to **bundleFlags**.
 
 **Type:** Array&lt;[Metadata](arkts-ability-metadata-i.md)&gt;
 
@@ -325,7 +335,7 @@ Ability的元信息。可以配置成系统定义的参数，使用系统提供�
 readonly moduleName: string
 ```
 
-Ability所属的模块名称。
+Module name to which the ability belongs.
 
 **Type:** string
 
@@ -345,7 +355,7 @@ Ability所属的模块名称。
 readonly name: string
 ```
 
-Ability名称。
+Ability name.
 
 **Type:** string
 
@@ -365,8 +375,9 @@ Ability名称。
 readonly orientation: bundleManager.DisplayOrientation
 ```
 
-Ability的显示模式。来源于[module.json5](../../../quick-start/module-configuration-file.md)中abilities标签下配置的orientation字段，如果module.json5配置文件中orientation配置枚举，orientation属性有值且非0，取值详情参考  
-[显示模式枚举](arkts-ability-bundlemanager-displayorientation-e.md)；如果配置文件中配置的是资源索引，orientation属性值为0。
+Ability display orientation. It is derived from the **orientation** field under **abilities** in the  
+[module.json5](../../../quick-start/module-configuration-file.md) file. If **orientation** in the file is set to an enumerated value, this property is a non-zero value. For details about the available values, see  
+[displayOrientation](arkts-ability-bundlemanager-displayorientation-e.md). If **orientation** in the file is set to a resource index, the value of this property is **0**.
 
 **Type:** bundleManager.DisplayOrientation
 
@@ -386,7 +397,9 @@ Ability的显示模式。来源于[module.json5](../../../quick-start/module-con
 readonly orientationId: long
 ```
 
-Ability的显示模式资源id。来源于[module.json5](../../../quick-start/module-configuration-file.md)中abilities标签下的orientation字段，如果module.json5配置文件中orientation配置枚举，orientationId属性值为0；如果配置文件中配置的是资源索引，orientationId属性值为非0，为编译构建时生成的资源id索引。当orientationId不为0时表示当前显示模式为自定义配置，需要使用orientationId去资源管理获取对应的资源，当orientationId为0时表示未配置资源。
+Resource ID of the ability display mode. It is derived from the **orientation** field under **abilities** in the  
+[module.json5](../../../quick-start/module-configuration-file.md) file. If the **orientation** field in the file is set to an enumerated value, **orientationId** is **0**. If the **orientation** field is set to a resource index,  
+**orientationId** is a non-zero value, which is the resource ID generated during building. If **orientationId** is set to a value other than **0**, the current display mode is customized, and this ID must be used to obtain the corresponding resource from the resource manager module. If **orientationId** is set to **0**, no resource is configured.
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：long
 
@@ -406,7 +419,7 @@ Ability的显示模式资源id。来源于[module.json5](../../../quick-start/mo
 readonly permissions: Array<string>
 ```
 
-被其他应用拉起/访问时，其他应用需要申请的权限集合，只有当前AbilityInfo的exported为true，即当前Ability可以被其他应用拉起时，才会查看其他应用是否存在拉起/访问的权限。
+Array of permissions that other applications must request to start or access this ability. The system checks whether the caller has these permissions only if the **exported** property in **AbilityInfo** is **true** (meaning that the ability allows itself to be started by other applications).
 
 **Type:** Array&lt;string&gt;
 
@@ -426,7 +439,7 @@ readonly permissions: Array<string>
 readonly process: string
 ```
 
-Ability的进程名称。
+Process name of the ability.
 
 **Type:** string
 
@@ -446,9 +459,9 @@ Ability的进程名称。
 readonly readPermission: string
 ```
 
-读取Ability数据所需的权限。
+Permission required for reading the ability data.
 
-**模型约束：** 此接口仅可在FA模型下使用。
+**Model restriction**: This API can be used only in the FA model.
 
 **Type:** string
 
@@ -468,7 +481,8 @@ readonly readPermission: string
 readonly skills: Array<Skill>
 ```
 
-Ability的Skills信息，标识UIAbility组件或者ExtensionAbility组件能够接收的[Want](../../../application-models/want-overview.md)的特征。
+Skills information of the ability. It represents the feature set of  
+[wants](../../../application-models/want-overview.md) that can be received by the UIAbility or ExtensionAbility.
 
 **Type:** Array&lt;[Skill](arkts-ability-skill-i.md)&gt;
 
@@ -488,7 +502,7 @@ Ability的Skills信息，标识UIAbility组件或者ExtensionAbility组件能够
 readonly supportWindowModes: Array<bundleManager.SupportWindowMode>
 ```
 
-Ability支持的窗口模式。
+Window modes supported by the ability.
 
 **Type:** Array&lt;bundleManager.SupportWindowMode&gt;
 
@@ -508,9 +522,9 @@ Ability支持的窗口模式。
 readonly type: bundleManager.AbilityType
 ```
 
-Ability类型。
+Ability type.
 
-**模型约束：** 此接口仅可在FA模型下使用。
+**Model restriction**: This API can be used only in the FA model.
 
 **Type:** bundleManager.AbilityType
 
@@ -530,9 +544,9 @@ Ability类型。
 readonly uri: string
 ```
 
-获取Ability的统一资源标识符（URI）。
+URI of the ability.
 
-**模型约束：** 此接口仅可在FA模型下使用。
+**Model restriction**: This API can be used only in the FA model.
 
 **Type:** string
 
@@ -552,7 +566,7 @@ readonly uri: string
 readonly windowSize: WindowSize
 ```
 
-Ability窗口尺寸。
+Window size.
 
 **Type:** [WindowSize](arkts-ability-abilityinfo-windowsize-i.md)
 
@@ -572,9 +586,9 @@ Ability窗口尺寸。
 readonly writePermission: string
 ```
 
-向Ability写数据所需的权限。
+Permission required for writing data to the ability.
 
-**模型约束：** 此接口仅可在FA模型下使用。
+**Model restriction**: This API can be used only in the FA model.
 
 **Type:** string
 

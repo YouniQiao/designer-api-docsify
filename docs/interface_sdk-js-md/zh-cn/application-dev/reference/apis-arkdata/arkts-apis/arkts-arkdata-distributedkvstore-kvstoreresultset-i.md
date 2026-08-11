@@ -19,12 +19,6 @@ KVStoreResultSet实例不会实时刷新。使用结果集后，如果数据库�
 
 **系统能力：** SystemCapability.DistributedDataManager.KVStore.Core
 
-## 导入模块
-
-```TypeScript
-import { distributedKVStore } from 'kits/@kit.ArkData';
-```
-
 ## getCount
 
 ArkTS-Dyn:
@@ -57,6 +51,8 @@ getCount(): int
 
 ## 示例
 
+ArkTS-Dyn示例：
+
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
 
@@ -67,12 +63,32 @@ try {
     console.info('getResultSet succeed.');
     resultSet = result;
     count = resultSet.getCount();
-    console.info('getCount succeed:' + count);
+    console.info(`getCount succeed:` + count);
   }).catch((err: BusinessError) => {
     console.error(`Failed to get resultset. Code: ${err.code}, message: ${err.message}`);
   });
 } catch (err) {
-  let error = err as BusinessError;
+  console.error(`Failed to get count. Code: ${error.code}, message: ${error.message}`);
+}
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+try {
+  let resultSet: distributedKVStore.KVStoreResultSet;
+  let count: int;
+  kvStore!.getResultSet('batch_test_string_key').then((result: distributedKVStore.KVStoreResultSet) => {
+    console.info('getResultSet succeed.');
+    resultSet = result;
+    count = resultSet.getCount();
+    console.info(`getCount succeed:` + count);
+  }).catch((err) => {
+    console.error(`Failed to get resultset. Code: ${err.code}, message: ${err.message}`);
+  });
+} catch (err) {
   console.error(`Failed to get count. Code: ${error.code}, message: ${error.message}`);
 }
 ```
@@ -99,9 +115,11 @@ getEntry(): Entry
 
 | 类型 | 说明 |
 | --- | --- |
-| [Entry](../../apis-arkui/arkts-apis/arkts-arkui-customcomponent-entry-i.md) | 返回键值对。 |
+| [Entry](arkts-arkdata-distributeddata-entry-i.md) | 返回键值对。 |
 
 ## 示例
+
+ArkTS-Dyn示例：
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -112,12 +130,31 @@ try {
     console.info('getResultSet succeed.');
     resultSet = result;
     let entry = resultSet.getEntry();
-    console.info('getEntry succeed:' + JSON.stringify(entry));
+    console.info(`getEntry succeed:` + JSON.stringify(entry));
   }).catch((err: BusinessError) => {
     console.error(`Failed to get resultset. Code: ${err.code}, message: ${err.message}`);
   });
 } catch (err) {
-  let error = err as BusinessError;
+  console.error(`Failed to get entry. Code: ${error.code}, message: ${error.message}`);
+}
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+try {
+  let resultSet: distributedKVStore.KVStoreResultSet;
+  kvStore!.getResultSet('batch_test_string_key').then((result: distributedKVStore.KVStoreResultSet) => {
+    console.info('getResultSet succeed.');
+    resultSet = result;
+    let entry = resultSet.getEntry();
+    console.info(`getEntry succeed:` + JSON.stringify(entry));
+  }).catch((err) => {
+    console.error(`Failed to get resultset. Code: ${err.code}, message: ${err.message}`);
+  });
+} catch (err) {
   console.error(`Failed to get entry. Code: ${error.code}, message: ${error.message}`);
 }
 ```
@@ -155,6 +192,8 @@ getPosition(): int
 
 ## 示例
 
+ArkTS-Dyn示例：
+
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
 
@@ -165,12 +204,32 @@ try {
     console.info('getResultSet succeeded.');
     resultSet = result;
     position = resultSet.getPosition();
-    console.info('getPosition succeed:' + position);
+    console.info(`getPosition succeed:` + position);
   }).catch((err: BusinessError) => {
     console.error(`Failed to get resultset. Code: ${err.code}, message: ${err.message}`);
   });
 } catch (err) {
-  let error = err as BusinessError;
+  console.error(`Failed to get position. Code: ${error.code}, message: ${error.message}`);
+}
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+try {
+  let resultSet: distributedKVStore.KVStoreResultSet;
+  let position: int;
+  kvStore!.getResultSet('batch_test_string_key').then((result: distributedKVStore.KVStoreResultSet) => {
+    console.info('getResultSet succeeded.');
+    resultSet = result;
+    position = resultSet.getPosition();
+    console.info(`getPosition succeed:` + position);
+  }).catch((err) => {
+    console.error(`Failed to get resultset. Code: ${err.code}, message: ${err.message}`);
+  });
+} catch (err) {
   console.error(`Failed to get position. Code: ${error.code}, message: ${error.message}`);
 }
 ```
@@ -201,6 +260,8 @@ isAfterLast(): boolean
 
 ## 示例
 
+ArkTS-Dyn示例：
+
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
 
@@ -210,12 +271,31 @@ try {
     console.info('getResultSet succeed.');
     resultSet = result;
     let isAfterLast = resultSet.isAfterLast();
-    console.info('Check isAfterLast succeed:' + isAfterLast);
+    console.info(`Check isAfterLast succeed:` + isAfterLast);
   }).catch((err: BusinessError) => {
     console.error(`Failed to get resultset. Code: ${err.code}, message: ${err.message}`);
   });
 } catch (err) {
-  let error = err as BusinessError;
+  console.error(`Failed to check isAfterLast. Code: ${error.code}, message: ${error.message}`);
+}
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+try {
+  let resultSet: distributedKVStore.KVStoreResultSet;
+  kvStore!.getResultSet('batch_test_string_key').then((result: distributedKVStore.KVStoreResultSet) => {
+    console.info('getResultSet succeed.');
+    resultSet = result;
+    let isafterlast = resultSet.isAfterLast();
+    console.info(`Check isAfterLast succeed:` + isafterlast);
+  }).catch((err: BusinessError) => {
+    console.error(`Failed to get resultset. Code: ${err.code}, message: ${err.message}`);
+  });
+} catch (err) {
   console.error(`Failed to check isAfterLast. Code: ${error.code}, message: ${error.message}`);
 }
 ```
@@ -246,6 +326,8 @@ isBeforeFirst(): boolean
 
 ## 示例
 
+ArkTS-Dyn示例：
+
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
 
@@ -255,12 +337,31 @@ try {
     console.info('getResultSet succeed.');
     resultSet = result;
     let isBeforeFirst = resultSet.isBeforeFirst();
-    console.info('Check isBeforeFirst succeed: ' + isBeforeFirst);
+    console.info(`Check isBeforeFirst succeed: ` + isBeforeFirst);
   }).catch((err: BusinessError) => {
     console.error(`Failed to get resultset. Code: ${err.code}, message: ${err.message}`);
   });
 } catch (err) {
-  let error = err as BusinessError;
+  console.error(`Failed to check isBeforeFirst. Code: ${error.code}, message: ${error.message}`);
+}
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+try {
+  let resultSet: distributedKVStore.KVStoreResultSet;
+  kvStore!.getResultSet('batch_test_string_key').then((result: distributedKVStore.KVStoreResultSet) => {
+    console.info('getResultSet succeed.');
+    resultSet = result;
+    let isbeforefirst = resultSet.isBeforeFirst();
+    console.info(`Check isBeforeFirst succeed: ` + isbeforefirst);
+  }).catch((err: BusinessError) => {
+    console.error(`Failed to get resultset. Code: ${err.code}, message: ${err.message}`);
+  });
+} catch (err) {
   console.error(`Failed to check isBeforeFirst. Code: ${error.code}, message: ${error.message}`);
 }
 ```
@@ -291,6 +392,8 @@ isFirst(): boolean
 
 ## 示例
 
+ArkTS-Dyn示例：
+
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
 
@@ -301,12 +404,32 @@ try {
     console.info('getResultSet succeed.');
     resultSet = result;
     isFirst = resultSet.isFirst();
-    console.info('Check isFirst succeed:' + isFirst);
+    console.info(`Check isFirst succeed:` + isFirst);
   }).catch((err: BusinessError) => {
     console.error(`Failed to get resultset. Code: ${err.code}, message: ${err.message}`);
   });
 } catch (err) {
-  let error = err as BusinessError;
+  console.error(`Failed to check isFirst. Code: ${error.code}, message: ${error.message}`);
+}
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+try {
+  let resultSet: distributedKVStore.KVStoreResultSet;
+  let isfirst: boolean;
+  kvStore!.getResultSet('batch_test_string_key').then((result: distributedKVStore.KVStoreResultSet) => {
+    console.info('getResultSet succeed.');
+    resultSet = result;
+    isfirst = resultSet.isFirst();
+    console.info(`Check isFirst succeed:` + isfirst);
+  }).catch((err: BusinessError) => {
+    console.error(`Failed to get resultset. Code: ${err.code}, message: ${err.message}`);
+  });
+} catch (err) {
   console.error(`Failed to check isFirst. Code: ${error.code}, message: ${error.message}`);
 }
 ```
@@ -337,6 +460,8 @@ isLast(): boolean
 
 ## 示例
 
+ArkTS-Dyn示例：
+
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
 
@@ -347,12 +472,32 @@ try {
     console.info('getResultSet succeed.');
     resultSet = result;
     isLast = resultSet.isLast();
-    console.info('Check isLast succeed: ' + isLast);
+    console.info(`Check isLast succeed: ` + isLast);
   }).catch((err: BusinessError) => {
     console.error(`Failed to get resultset. Code: ${err.code}, message: ${err.message}`);
   });
 } catch (err) {
-  let error = err as BusinessError;
+  console.error(`Failed to check isLast. Code: ${error.code}, message: ${error.message}`);
+}
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+try {
+  let resultSet: distributedKVStore.KVStoreResultSet;
+  let islast: boolean;
+  kvStore!.getResultSet('batch_test_string_key').then((result: distributedKVStore.KVStoreResultSet) => {
+    console.info('getResultSet succeed.');
+    resultSet = result;
+    islast = resultSet.isLast();
+    console.info(`Check isLast succeed: ` + islast);
+  }).catch((err: BusinessError) => {
+    console.error(`Failed to get resultset. Code: ${err.code}, message: ${err.message}`);
+  });
+} catch (err) {
   console.error(`Failed to check isLast. Code: ${error.code}, message: ${error.message}`);
 }
 ```
@@ -397,9 +542,11 @@ move(offset: int): boolean
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 401 | Parameter error.Possible causes:1.Mandatory parameters are left unspecified; &lt;br&gt;2.Incorrect parameters types. |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error.Possible causes:1.Mandatory parameters are left unspecified; &lt;br&gt;2.Incorrect parameters types. |
 
 ## 示例
+
+ArkTS-Dyn示例：
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -413,6 +560,28 @@ try {
     moved = resultSet.move(2); // 若当前位置为0，将读取位置从绝对位置为0的位置移动2行，即移动到绝对位置为2，行数为3的位置
     console.info(`Succeeded in moving.moved = ${moved}`);
   }).catch((err: BusinessError) => {
+    console.error(`Failed to get resultSet. Code: ${err.code}, message: ${err.message}`);
+  });
+} catch (err) {
+  let error = err as BusinessError;
+  console.error(`Failed to move. Code: ${error.code}, message: ${error.message}`);
+}
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+try {
+  let resultSet: distributedKVStore.KVStoreResultSet;
+  let moved: boolean;
+  kvStore!.getResultSet('batch_test_string_key').then((result: distributedKVStore.KVStoreResultSet) => {
+    console.info('Succeeded in getting resultSet');
+    resultSet = result;
+    moved = resultSet.move(2); // 若当前位置为0，将读取位置从绝对位置为0的位置移动2行，即移动到绝对位置为2，行数为3的位置
+    console.info(`Succeeded in moving.moved = ${moved}`);
+  }).catch((err) => {
     console.error(`Failed to get resultSet. Code: ${err.code}, message: ${err.message}`);
   });
 } catch (err) {
@@ -447,6 +616,8 @@ moveToFirst(): boolean
 
 ## 示例
 
+ArkTS-Dyn示例：
+
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
 
@@ -457,12 +628,32 @@ try {
     console.info('getResultSet succeed.');
     resultSet = result;
     moved = resultSet.moveToFirst();
-    console.info('moveToFirst succeed: ' + moved);
+    console.info(`moveToFirst succeed: ` + moved);
   }).catch((err: BusinessError) => {
     console.error(`Failed to get resultset. Code: ${err.code}, message: ${err.message}`);
   });
 } catch (err) {
-  let error = err as BusinessError;
+  console.error(`Failed to move to first. Code: ${error.code}, message: ${error.message}`);
+}
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+try {
+  let resultSet: distributedKVStore.KVStoreResultSet;
+  let moved: boolean;
+  kvStore!.getResultSet('batch_test_string_key').then((result: distributedKVStore.KVStoreResultSet) => {
+    console.info('getResultSet succeed.');
+    resultSet = result;
+    moved = resultSet.moveToFirst();
+    console.info(`moveToFirst succeed: ` + moved);
+  }).catch((err) => {
+    console.error(`Failed to get resultset. Code: ${err.code}, message: ${err.message}`);
+  });
+} catch (err) {
   console.error(`Failed to move to first. Code: ${error.code}, message: ${error.message}`);
 }
 ```
@@ -493,6 +684,8 @@ moveToLast(): boolean
 
 ## 示例
 
+ArkTS-Dyn示例：
+
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
 
@@ -503,12 +696,32 @@ try {
     console.info('getResultSet succeed.');
     resultSet = result;
     moved = resultSet.moveToLast();
-    console.info('moveToLast succeed:' + moved);
+    console.info(`moveToLast succeed:` + moved);
   }).catch((err: BusinessError) => {
     console.error(`Failed to get resultset. Code: ${err.code}, message: ${err.message}`);
   });
 } catch (err) {
-  let error = err as BusinessError;
+  console.error(`Failed to move to last. Code: ${error.code}, message: ${error.message}`);
+}
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+try {
+  let resultSet: distributedKVStore.KVStoreResultSet;
+  let moved: boolean;
+  kvStore!.getResultSet('batch_test_string_key').then((result: distributedKVStore.KVStoreResultSet) => {
+    console.info('getResultSet succeed.');
+    resultSet = result;
+    moved = resultSet.moveToLast();
+    console.info(`moveToLast succeed:` + moved);
+  }).catch((err) => {
+    console.error(`Failed to get resultset. Code: ${err.code}, message: ${err.message}`);
+  });
+} catch (err) {
   console.error(`Failed to move to last. Code: ${error.code}, message: ${error.message}`);
 }
 ```
@@ -539,6 +752,8 @@ moveToNext(): boolean
 
 ## 示例
 
+ArkTS-Dyn示例：
+
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
 
@@ -550,13 +765,35 @@ try {
     resultSet = result;
     do {
       moved = resultSet.moveToNext();
-      console.info('moveToNext succeed: ' + moved);
+      console.info(`moveToNext succeed: ` + moved);
     } while (moved);
   }).catch((err: BusinessError) => {
     console.error(`Failed to get resultset. Code: ${err.code}, message: ${err.message}`);
   });
 } catch (err) {
-  let error = err as BusinessError;
+  console.error(`Failed to move to next. Code: ${error.code}, message: ${error.message}`);
+}
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+try {
+  let resultSet: distributedKVStore.KVStoreResultSet;
+  let moved: boolean;
+  kvStore!.getResultSet('batch_test_string_key').then((result: distributedKVStore.KVStoreResultSet) => {
+    console.info('getResultSet succeed.');
+    resultSet = result;
+    do {
+      moved = resultSet.moveToNext();
+      console.info(`moveToNext succeed: ` + moved);
+    } while (moved)
+  }).catch((err) => {
+    console.error(`Failed to get resultset. Code: ${err.code}, message: ${err.message}`);
+  });
+} catch (err) {
   console.error(`Failed to move to next. Code: ${error.code}, message: ${error.message}`);
 }
 ```
@@ -601,9 +838,11 @@ moveToPosition(position: int): boolean
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 401 | Parameter error.Possible causes:1.Mandatory parameters are left unspecified; &lt;br&gt;2.Incorrect parameters types. |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error.Possible causes:1.Mandatory parameters are left unspecified; &lt;br&gt;2.Incorrect parameters types. |
 
 ## 示例
+
+ArkTS-Dyn示例：
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -617,6 +856,28 @@ try {
     moved = resultSet.moveToPosition(1);
     console.info(`Succeeded in moving to position.moved=${moved}`);
   }).catch((err: BusinessError) => {
+    console.error(`Failed to get resultSet. Code: ${err.code}, message: ${err.message}`);
+  });
+} catch (err) {
+  let error = err as BusinessError;
+  console.error(`Failed to move to position. Code: ${error.code}, message: ${error.message}`);
+}
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+try {
+  let resultSet: distributedKVStore.KVStoreResultSet;
+  let moved: boolean;
+  kvStore!.getResultSet('batch_test_string_key').then((result: distributedKVStore.KVStoreResultSet) => {
+    console.info('Succeeded in getting resultSet');
+    resultSet = result;
+    moved = resultSet.moveToPosition(1);
+    console.info(`Succeeded in moving to position.moved=${moved}`);
+  }).catch((err) => {
     console.error(`Failed to get resultSet. Code: ${err.code}, message: ${err.message}`);
   });
 } catch (err) {
@@ -651,6 +912,8 @@ moveToPrevious(): boolean
 
 ## 示例
 
+ArkTS-Dyn示例：
+
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
 
@@ -662,12 +925,33 @@ try {
     resultSet = result;
     moved = resultSet.moveToLast();
     moved = resultSet.moveToPrevious();
-    console.info('moveToPrevious succeed:' + moved);
+    console.info(`moveToPrevious succeed:` + moved);
   }).catch((err: BusinessError) => {
     console.error(`Failed to get resultset. Code: ${err.code}, message: ${err.message}`);
   });
 } catch (err) {
-  let error = err as BusinessError;
+  console.error(`Failed to move to previous. Code: ${error.code}, message: ${error.message}`);
+}
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+try {
+  let resultSet: distributedKVStore.KVStoreResultSet;
+  let moved: boolean;
+  kvStore!.getResultSet('batch_test_string_key').then((result: distributedKVStore.KVStoreResultSet) => {
+    console.info('getResultSet succeed.');
+    resultSet = result;
+    moved = resultSet.moveToLast();
+    moved = resultSet.moveToPrevious();
+    console.info(`moveToPrevious succeed:` + moved);
+  }).catch((err) => {
+    console.error(`Failed to get resultset. Code: ${err.code}, message: ${err.message}`);
+  });
+} catch (err) {
   console.error(`Failed to move to previous. Code: ${error.code}, message: ${error.message}`);
 }
 ```

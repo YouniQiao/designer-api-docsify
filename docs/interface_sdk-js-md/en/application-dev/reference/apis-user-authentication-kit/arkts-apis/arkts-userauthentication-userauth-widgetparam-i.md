@@ -1,6 +1,6 @@
 # WidgetParam
 
-用户认证界面配置相关参数。该接口用于配置认证界面的显示样式和交互方式，包括标题、导航按钮文本、窗口模式等。通过合理配置这些参数，可以为用户提供清晰的认证引导和良好的交互体验。
+Represents the information presented on the user authentication page. This API is used to configure the display style and interaction mode of the authentication screen, including the title, navigation button text, and window mode. By properly setting these parameters, you can provide clear authentication guidance and good interaction experience for users.
 
 **Since:** 10
 
@@ -22,7 +22,7 @@ import { userAuth } from 'kits/@kit.UserAuthenticationKit';
 navigationButtonText?: string
 ```
 
-导航按键的说明文本，最大长度为60字符。点击该按钮可触发应用自定义的操作，如跳转到自定义认证页面或取消认证等。在单指纹、单人脸场景下支持，从API版本18开始，增加支持人脸+指纹组合认证场景。默认为不展示自定义导航按键。
+Description text of the navigation button, with a maximum length of 60 characters. Tapping this button triggers custom application operations, such as navigating to a custom authentication page or canceling authentication.This parameter is supported in single-fingerprint and single-face authentication scenarios. Since API version 18,it is also supported in combined face-and-fingerprint authentication. By default, the custom navigation button is not displayed.
 
 **Type:** string
 
@@ -42,7 +42,7 @@ navigationButtonText?: string
 title: string
 ```
 
-用户认证界面的标题，建议传入认证目的，例如用于支付、登录应用等，不支持传空字串，最大长度为500字符。标题会显示在认证界面，帮助用户理解当前认证的目的，提升用户信任度和配合度。
+Title of the user authentication page, which cannot be empty or exceed 500 characters in length. You are advised to set it to the authentication purpose, such as payment or application login. The title is displayed on the authentication screen to help users understand the purpose of the current authentication, improving user trust and cooperation.
 
 **Type:** string
 
@@ -62,10 +62,10 @@ title: string
 uiContext?: Context
 ```
 
-以模应用弹窗方式显示身份认证对话框，从API版本18开始，支持在2in1设备上使用。传入有效的uiContext后，认证对话框将以模应用弹窗方式显示，认证结果返回后应用需先获取控件释放消息（订阅  
-[on('authTip')](userAuth.UserAuthInstance.on(type: 'authTip', callback: AuthTipCallback))并等待收到authTipInfo.tipCode为WIDGET_RELEASED的回调）才能弹出其他窗口。如果没有此参数或其他类型的设备，身份认证对话框将以模系统弹窗方式显示，此时控件释放后应用可直接进行后续操作。
+Used to display an application modal dialog for authentication. Since API version 18, this parameter is supported on 2-in-1 devices. When a valid **uiContext** is passed, the authentication dialog box is displayed as an application modal dialog. After the authentication result is returned, the application must first obtain the widget release message (subscribe to  
+[on('authTip')](userAuth.UserAuthInstance.on(type: 'authTip', callback: AuthTipCallback)) and wait for the callback where **authTipInfo.tipCode** is **WIDGET_RELEASED**) before displaying other windows. If this parameter is not provided or if the device is of another type, the authentication dialog box is displayed as a system modal dialog. In this case, the application can directly perform follow-up procedures after the widget is released.
 
-**默认值：** 以模系统弹窗方式显示身份认证对话框。
+**Default value:** The authentication dialog box is displayed as a system modal dialog.
 
 **Type:** [Context](../../apis-ability-kit/arkts-apis/arkts-ability-context-c.md)
 

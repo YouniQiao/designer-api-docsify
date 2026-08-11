@@ -4,7 +4,7 @@
 type Rounding = 0 | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8
 ```
 
-表示可设置的舍入类型。
+The type used to set rounding
 
 **Since:** 12
 

@@ -15,7 +15,7 @@ declare function listFileExtSync(
 ): string[]
 ```
 
-以同步方法列出目录下所有文件名，支持通过自定义过滤函数对文件名进行过滤。可通过配置options中recursion参数实现递归列出所有文件的相对路径，相对路径以“/”开头。
+Lists all file names in a directory. This API returns the result synchronously.This API supports recursive listing of all file names and custom file name filtering.The returned result starts with a slash (/) and contains the subdirectory.
 
 **Since:** 26.0.0
 
@@ -31,8 +31,8 @@ declare function listFileExtSync(
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| path | string | Yes | 目录的应用沙箱路径。 |
-| options | [ListFileExtOptions](arkts-corefile-file-fs-listfileextoptions-i.md) | No | 文件过滤选项。默认不进行过滤。 |
+| path | string | Yes | Application sandbox path of the directory. |
+| options | [ListFileExtOptions](arkts-corefile-file-fs-listfileextoptions-i.md) | No | Options for filtering files. The files are not filtered by default. |
 
 **Return value:**
 

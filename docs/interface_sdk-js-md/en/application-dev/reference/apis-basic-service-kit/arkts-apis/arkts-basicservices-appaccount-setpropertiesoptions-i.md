@@ -1,6 +1,6 @@
 # SetPropertiesOptions
 
-表示用于设置属性的选项。
+Represents the options for setting authenticator properties.
 
 **Since:** 9
 
@@ -22,7 +22,7 @@ import { appAccount } from 'kits/@kit.BasicServicesKit';
 parameters?: Record<string, Object>
 ```
 
-自定义参数对象，默认为空。
+Custom parameter object. By default, no value is passed in.
 
 **Type:** [Record](../../apis-default/arkts-apis/arkts-record-t.md)&lt;string, Object&gt;
 
@@ -40,7 +40,7 @@ parameters?: Record<string, Object>
 properties?: Record<string, Object>
 ```
 
-属性对象，默认为空。
+Property object. By default, no value is passed in.
 
 **Type:** [Record](../../apis-default/arkts-apis/arkts-record-t.md)&lt;string, Object&gt;
 

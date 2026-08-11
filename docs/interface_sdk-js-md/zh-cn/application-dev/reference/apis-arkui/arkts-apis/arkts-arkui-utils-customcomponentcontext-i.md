@@ -32,7 +32,7 @@ getReusePool(): IReusePool | undefined
 
 | 类型 | 说明 |
 | --- | --- |
-| [IReusePool](arkts-arkui-utils-ireusepool-i.md) | Returns the recyclepool instance. |
+| [IReusePool](arkts-arkui-arkui-statemanagement-ireusepool-i.md) | Returns the recyclepool instance. |
 
 ## registerActiveAndInactiveCallback
 

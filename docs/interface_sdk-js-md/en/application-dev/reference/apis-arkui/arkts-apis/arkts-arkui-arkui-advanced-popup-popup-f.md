@@ -12,6 +12,8 @@ import { Popup, PopupOptions, PopupButtonOptions, PopupIconOptions, PopupTextOpt
 export declare function Popup(options: PopupOptions): void
 ```
 
+Build function of popup. This component is implemented based on state management V1.
+
 **Since:** 23
 
 **ArkTS mode:** ArkTS-Sta only, since version 23.
@@ -28,5 +30,5 @@ export declare function Popup(options: PopupOptions): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| options | [PopupOptions](arkts-arkui-arkui-advanced-popup-popupoptions-i.md) | Yes | 定义Popup组件的类型。 |
+| options | [PopupOptions](arkts-arkui-arkui-advanced-popup-popupoptions-i.md) | Yes | popup option. |
 

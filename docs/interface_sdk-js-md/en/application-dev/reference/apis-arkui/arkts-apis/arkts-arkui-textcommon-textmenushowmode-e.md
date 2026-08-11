@@ -1,6 +1,6 @@
 # TextMenuShowMode
 
-菜单的显示模式。
+Defines text menu show mode.
 
 **Since:** 23
 
@@ -16,7 +16,7 @@
 DEFAULT = 0
 ```
 
-显示在当前窗口中。
+Display the text selection menu in the current window.
 
 **Since:** 23
 
@@ -34,22 +34,7 @@ DEFAULT = 0
 PREFER_WINDOW = 1
 ```
 
-优先显示在独立窗口中，若不支持独立窗口，则显示在当前窗口中。
-
-**说明：**
-
-除应用主窗口、应用子窗口、系统模态窗口及系统桌面类型的窗口外，其他类型的窗口不支持将文本选择菜单显示在独立窗口中。
-
-在预览器中不支持将文本选择菜单显示在独立窗口中。
-
-在[UIExtension](../../../reference/apis-arkui/js-apis-arkui-uiExtension.md)中不支持将文本选择菜单显示在独立窗口中。
-
-当文本类组件已经显示在子窗类型的[Popup](../../../reference/apis-arkui/arkui-ts/ohos-arkui-advanced-Popup.md)、  
-[Dialog](../../../reference/apis-arkui/arkui-ts/ohos-arkui-advanced-Dialog.md)、  
-[Toast](../../../ui/arkts-create-toast.md)、  
-[Menu](../../../reference/apis-arkui/arkui-ts/ts-basic-components-menu.md)中时，不支持将其对应的文本选择菜单显示在独立窗口中。
-
-当TextInput、TextArea可支持拉起AutoFill时，不支持将其对应的文本选择菜单显示在独立窗口中。
+Prefer to display the text selection menu in a separate window and continue to display it within the current window if a separate window is not supported
 
 **Since:** 23
 

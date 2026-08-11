@@ -10,9 +10,3 @@ DeviceManager 服务进程退出信息。
 
 **系统能力：** SystemCapability.DistributedHardware.DeviceManager
 
-## 导入模块
-
-```TypeScript
-import { distributedDeviceManager } from 'kits/@kit.DistributedServiceKit';
-```
-

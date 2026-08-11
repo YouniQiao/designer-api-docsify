@@ -1,6 +1,6 @@
 # Progress
 
-任务进度的数据结构。
+Describes the data structure of the task progress.
 
 **Since:** 10
 
@@ -22,7 +22,7 @@ import { request } from 'kits/@kit.BasicServicesKit';
 readonly extras?: object
 ```
 
-交互的额外内容，例如：来自服务器的响应的header和body。默认值为空。
+Extra information of the task, for example, the header and body of the response from the server. The default value is empty.
 
 **Type:** object
 
@@ -42,7 +42,7 @@ readonly extras?: object
 readonly index: int
 ```
 
-任务中当前正在处理的文件索引。
+Index of the file that is being processed in the task.
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
@@ -62,7 +62,7 @@ readonly index: int
 readonly processed: long
 ```
 
-任务中当前文件的已处理数据大小，单位为字节（B）。
+Size of processed data in the current file in the task, in bytes.
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：long
 
@@ -82,7 +82,7 @@ readonly processed: long
 readonly sizes: Array<long>
 ```
 
-任务中文件的大小，单位为字节（B）。在下载过程中，若服务器使用chunk方式传输导致无法从请求头中获取文件总大小时，sizes为 -1。
+Size of a file in a task, in bytes. If the server uses the chunk mode for data transmission and the total file size cannot be obtained from the request header, the value of **sizes** is treated as **-1**.
 
 **Type:** ArkTS-Dyn: Array&lt;number&gt;  <br>ArkTS-Sta：Array&lt;long&gt;
 
@@ -102,7 +102,7 @@ readonly sizes: Array<long>
 readonly state: State
 ```
 
-任务当前的状态。
+Current task status.
 
 **Type:** [State](arkts-basicservices-agent-state-e.md)
 

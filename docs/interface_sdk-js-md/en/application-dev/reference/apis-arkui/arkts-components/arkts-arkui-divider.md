@@ -1,15 +1,14 @@
 # Divider
 
-提供分割线组件，分割不同内容块/内容元素。
-
-> **说明：**
-
-> 如果出现分割线粗细不一或者消失的问题，请参考
-> [组件级像素取整常见问题](docroot://reference/apis-arkui/arkui-ts/ts-universal-attributes-pixelRoundForComponent.md#常见问题)。
-
-## 子组件
-
-无
+The **Divider** component is used to separate content blocks and content elements.
+> **NOTE**
+>
+> If the divider appears with inconsistent thickness or becomes invisible, follow the instructions in
+> [FAQs](docroot://reference/apis-arkui/arkui-ts/ts-universal-attributes-pixelRoundForComponent.md#faqs).
+>
+> **Child Components**
+>
+> Not supported
 
 ## Divider
 
@@ -17,7 +16,7 @@
 Divider()
 ```
 
-创建分割线组件。
+Creates a **Divider** component.
 
 **Since:** 7
 

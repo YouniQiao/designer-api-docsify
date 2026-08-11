@@ -1,6 +1,6 @@
 # LeadingMarginPlaceholder
 
-前导边距占位符，用于表示文本段落左侧与组件边缘之间的距离。
+Defines the leading margin placeholder of a paragraph.
 
 **Since:** 23
 
@@ -16,7 +16,7 @@
 pixelMap: PixelMap
 ```
 
-图片内容。
+Placeholder pixelMap.
 
 **Type:** [PixelMap](../arkts-components/arkts-arkui-pixelmap-t.md)
 
@@ -39,9 +39,9 @@ size: [
     ]
 ```
 
-图片大小，不支持设置百分比。
+Placeholder size.
 
-**Type:** [         Dimension,         Dimension     ]
+**Type:** [         Dimension,         Dimension     ]
 
 **Since:** 23
 

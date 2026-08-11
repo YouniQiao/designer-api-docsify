@@ -12,7 +12,7 @@ import { volumeManager } from 'kits/@kit.CoreFileKit';
 function unmount(volumeId: string, callback: AsyncCallback<void>): void
 ```
 
-卸载指定卷设备，使用callback异步回调。
+Unmounts a volume. This API uses an asynchronous callback to return the result.
 
 **Since:** 9
 
@@ -30,17 +30,17 @@ function unmount(volumeId: string, callback: AsyncCallback<void>): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| volumeId | string | Yes | 卷设备id。 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | 卸载指定卷设备之后的回调。 |
+| volumeId | string | Yes | Volume ID. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback invoked when the specified volume is unmounted. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | The input parameter is invalid.Possible causes: 1.Mandatory parameters are left unspecified; &lt;br&gt;2.Incorrect parameter types. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | The input parameter is invalid.Possible causes: 1.Mandatory parameters are left unspecified; &lt;br&gt;2.Incorrect parameter types. |
 | 13600008 | No such object. |
-| 201 | Permission verification failed. |
-| 202 | The caller is not a system application. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | The caller is not a system application. |
 | 13600005 | Incorrect volume state. |
 | 13600004 | Failed to unmount. |
 | 13600002 | Not supported filesystem. |
@@ -54,7 +54,7 @@ function unmount(volumeId: string, callback: AsyncCallback<void>): void
 function unmount(volumeId: string): Promise<void>
 ```
 
-卸载指定卷设备，使用Promise异步回调。
+Unmounts a volume. This API uses a promise to return the result.
 
 **Since:** 9
 
@@ -72,22 +72,22 @@ function unmount(volumeId: string): Promise<void>
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| volumeId | string | Yes | 卷设备id。 |
+| volumeId | string | Yes | Volume ID. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | 无返回结果的Promise对象。 |
+| Promise&lt;void&gt; | Promise that returns no value. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | The input parameter is invalid.Possible causes: 1.Mandatory parameters are left unspecified; &lt;br&gt;2.Incorrect parameter types. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | The input parameter is invalid.Possible causes: 1.Mandatory parameters are left unspecified; &lt;br&gt;2.Incorrect parameter types. |
 | 13600008 | No such object. |
-| 201 | Permission verification failed. |
-| 202 | The caller is not a system application. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | The caller is not a system application. |
 | 13600005 | Incorrect volume state. |
 | 13600004 | Failed to unmount. |
 | 13600002 | Not supported filesystem. |

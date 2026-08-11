@@ -13,13 +13,13 @@ function on(type: 'BundleStatusChange',
     bundleStatusCallback: BundleStatusCallback, callback: AsyncCallback<string>): void
 ```
 
-注册Callback。
+Registers a callback to receive bundle status changes. This API uses an asynchronous callback to return the result.
 
-> **说明：**
+> **NOTE：**
 > 
-> 从API version 8开始支持，从API version 9开始废弃，建议使用
+> This API has been supported since API version 8 and deprecated since API version 9. You are advised to use
 > [on](@ohos.bundle.bundleMonitor:bundleMonitor.on(type: BundleChangedEvent, callback: Callback&lt;BundleChangedInfo&gt;))
-> 替代。
+> instead.
 
 **Since:** 8
 
@@ -41,9 +41,9 @@ function on(type: 'BundleStatusChange',
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'BundleStatusChange' | Yes | 指示应执行命令，只支持BundleStatusChange。 |
-| bundleStatusCallback | [BundleStatusCallback](arkts-ability-bundlestatuscallback-t-sys.md) | Yes | 指示要注册的回调。 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;string&gt; | Yes | 程序启动作为入参的回调函数，返回正确结果或错误信息。 |
+| type | 'BundleStatusChange' | Yes | Event type. Only **BundleStatusChange** is supported. |
+| bundleStatusCallback | [BundleStatusCallback](arkts-ability-bundlestatuscallback-t-sys.md) | Yes | Callback to register. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;string&gt; | Yes | Callback used to return a successful result or error Callback to register. |
 
 
 ## on('BundleStatusChange')
@@ -52,13 +52,13 @@ function on(type: 'BundleStatusChange',
 function on(type: 'BundleStatusChange', bundleStatusCallback: BundleStatusCallback): Promise<string>
 ```
 
-注册Callback。
+Registers a callback to receive bundle status changes. This API uses an asynchronous callback to return the result.
 
-> **说明：**
+> **NOTE：**
 > 
-> 从API version 8开始支持，从API version 9开始废弃，建议使用
+> This API has been supported since API version 8 and deprecated since API version 9. You are advised to use
 > [on](@ohos.bundle.bundleMonitor:bundleMonitor.on(type: BundleChangedEvent, callback: Callback&lt;BundleChangedInfo&gt;))
-> 替代。
+> instead.
 
 **Since:** 8
 
@@ -80,12 +80,12 @@ function on(type: 'BundleStatusChange', bundleStatusCallback: BundleStatusCallba
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'BundleStatusChange' | Yes | 指示应执行命令，只支持BundleStatusChange。 |
-| bundleStatusCallback | [BundleStatusCallback](arkts-ability-bundlestatuscallback-t-sys.md) | Yes | 指示要注册的回调。 |
+| type | 'BundleStatusChange' | Yes | Event type. Only **BundleStatusChange** is supported. |
+| bundleStatusCallback | [BundleStatusCallback](arkts-ability-bundlestatuscallback-t-sys.md) | Yes | Callback to register. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;string&gt; | Promise形式返回正确结果或错误信息。 |
+| Promise&lt;string&gt; | Promise used to return a successful result or error information. |
 

@@ -1,7 +1,7 @@
 # KvStoreResultSet
 
-提供获取KVStore数据库结果集的相关方法，包括查询和移动数据读取位置等。在调用KvStoreResultSet的方法前，需要先通过  
-[getKVStore](arkts-arkdata-distributedkvstore-kvmanager-i.md#getkvstore)构建一个KVStore实例。
+Provides APIs to obtain the KV store result sets, and query and move the data read position.Before calling any method in **KvStoreResultSet**, you must use  
+[getKVStore](arkts-arkdata-distributedkvstore-kvmanager-i.md#getkvstore) to obtain a **KVStore** object.
 
 **Since:** 7
 
@@ -21,7 +21,7 @@
 getCount(): number
 ```
 
-获取结果集中的总行数。
+Obtains the total number of rows in the result set.
 
 **Since:** 8
 
@@ -39,7 +39,7 @@ getCount(): number
 
 | Type | Description |
 | --- | --- |
-| number | 返回数据的总行数。 |
+| number | Total number of rows obtained. |
 
 ## Examples
 
@@ -66,7 +66,7 @@ try {
 getEntry(): Entry
 ```
 
-从当前位置获取对应的键值对。
+Obtains the KV pair from the current position.
 
 **Since:** 8
 
@@ -84,7 +84,7 @@ getEntry(): Entry
 
 | Type | Description |
 | --- | --- |
-| [Entry](../../apis-arkui/arkts-apis/arkts-arkui-customcomponent-entry-i.md) | 返回键值对。 |
+| [Entry](../../apis-arkui/arkts-apis/arkts-arkui-customcomponent-entry-i.md) | KV pair obtained. |
 
 ## Examples
 
@@ -111,7 +111,7 @@ try {
 getPosition(): number
 ```
 
-获取结果集中当前的读取位置。
+Obtains the current data read position (position from which data is read) in the result set.
 
 **Since:** 8
 
@@ -129,7 +129,7 @@ getPosition(): number
 
 | Type | Description |
 | --- | --- |
-| number | 返回当前读取位置。 |
+| number | Current data read position obtained. |
 
 ## Examples
 
@@ -156,7 +156,7 @@ try {
 isAfterLast(): boolean
 ```
 
-检查读取位置是否在最后一行之后。
+Checks whether the data read position is after the last row.
 
 **Since:** 8
 
@@ -174,7 +174,7 @@ isAfterLast(): boolean
 
 | Type | Description |
 | --- | --- |
-| boolean | 返回true表示读取位置在最后一行之后；返回false表示读取位置不在最后一行之后。 |
+| boolean | Returns **true** if the data read position is after the last row; returns **false** otherwise. |
 
 ## Examples
 
@@ -201,7 +201,7 @@ try {
 isBeforeFirst(): boolean
 ```
 
-检查读取位置是否在第一行之前。
+Checks whether the data read position is before the first row.
 
 **Since:** 8
 
@@ -219,7 +219,7 @@ isBeforeFirst(): boolean
 
 | Type | Description |
 | --- | --- |
-| boolean | 返回true表示读取位置在第一行之前；返回false表示读取位置不在第一行之前。 |
+| boolean | Returns **true** if the data read position is before the first row; returns **false** otherwise. |
 
 ## Examples
 
@@ -246,7 +246,7 @@ try {
 isFirst(): boolean
 ```
 
-检查读取位置是否为第一行。
+Checks whether the data read position is the first row.
 
 **Since:** 8
 
@@ -264,7 +264,7 @@ isFirst(): boolean
 
 | Type | Description |
 | --- | --- |
-| boolean | 返回true表示读取位置为第一行；返回false表示读取位置不是第一行。 |
+| boolean | Returns **true** if the first row is being read; returns **false** otherwise. |
 
 ## Examples
 
@@ -291,7 +291,7 @@ try {
 isLast(): boolean
 ```
 
-检查读取位置是否为最后一行。
+Checks whether the data read position is the last row.
 
 **Since:** 8
 
@@ -309,7 +309,7 @@ isLast(): boolean
 
 | Type | Description |
 | --- | --- |
-| boolean | 返回true表示读取位置为最后一行；返回false表示读取位置不是最后一行。 |
+| boolean | Returns **true** if the last row is being read; returns **false** otherwise. |
 
 ## Examples
 
@@ -336,7 +336,7 @@ try {
 move(offset: number): boolean
 ```
 
-将读取位置移动到当前位置的相对偏移量。
+Moves the data read position with the specified offset from the current position.
 
 **Since:** 8
 
@@ -354,13 +354,13 @@ move(offset: number): boolean
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| offset | number | Yes | 表示与当前位置的相对偏移量，负偏移表示向后移动，正偏移表示向前移动。 |
+| offset | number | Yes | Offset to move the data read position. A negative value means to move backward, and a positive value means to move forward. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| boolean | 返回true表示操作成功；返回false则表示操作失败。 |
+| boolean | Returns **true** if the operation is successful; returns **false** otherwise. |
 
 ## Examples
 
@@ -387,7 +387,7 @@ try {
 moveToFirst(): boolean
 ```
 
-将读取位置移动到第一行。如果结果集为空，则返回false。
+Moves the data read position to the first row. If the result set is empty, **false** will be returned.
 
 **Since:** 8
 
@@ -405,7 +405,7 @@ moveToFirst(): boolean
 
 | Type | Description |
 | --- | --- |
-| boolean | 返回true表示操作成功；返回false则表示操作失败。 |
+| boolean | Returns **true** if the operation is successful; returns **false** otherwise. |
 
 ## Examples
 
@@ -432,7 +432,7 @@ try {
 moveToLast(): boolean
 ```
 
-将读取位置移动到最后一行。如果结果集为空，则返回false。
+Moves the data read position to the last row. If the result set is empty, **false** will be returned.
 
 **Since:** 8
 
@@ -450,7 +450,7 @@ moveToLast(): boolean
 
 | Type | Description |
 | --- | --- |
-| boolean | 返回true表示操作成功；返回false则表示操作失败。 |
+| boolean | Returns **true** if the operation is successful; returns **false** otherwise. |
 
 ## Examples
 
@@ -477,7 +477,7 @@ try {
 moveToNext(): boolean
 ```
 
-将读取位置移动到下一行。如果结果集为空，则返回false。
+Moves the data read position to the next row. If the result set is empty, **false** will be returned.
 
 **Since:** 8
 
@@ -495,7 +495,7 @@ moveToNext(): boolean
 
 | Type | Description |
 | --- | --- |
-| boolean | 返回true表示操作成功；返回false则表示操作失败。 |
+| boolean | Returns **true** if the operation is successful; returns **false** otherwise. |
 
 ## Examples
 
@@ -522,7 +522,7 @@ try {
 moveToPosition(position: number): boolean
 ```
 
-将读取位置从 0 移动到绝对位置。
+Moves the data read position from 0 to an absolute position.
 
 **Since:** 8
 
@@ -540,13 +540,13 @@ moveToPosition(position: number): boolean
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| position | number | Yes | 表示绝对位置。 |
+| position | number | Yes | Absolute position to move to. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| boolean | 返回true表示操作成功；返回false则表示操作失败。 |
+| boolean | Returns **true** if the operation is successful; returns **false** otherwise. |
 
 ## Examples
 
@@ -573,7 +573,7 @@ try {
 moveToPrevious(): boolean
 ```
 
-将读取位置移动到上一行。如果结果集为空，则返回false。
+Moves the data read position to the previous row. If the result set is empty, **false** will be returned.
 
 **Since:** 8
 
@@ -591,7 +591,7 @@ moveToPrevious(): boolean
 
 | Type | Description |
 | --- | --- |
-| boolean | 返回true表示操作成功；返回false则表示操作失败。 |
+| boolean | Returns **true** if the operation is successful; returns **false** otherwise. |
 
 ## Examples
 

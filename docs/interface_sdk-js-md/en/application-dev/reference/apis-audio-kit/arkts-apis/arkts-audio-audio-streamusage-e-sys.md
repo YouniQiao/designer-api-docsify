@@ -1,6 +1,6 @@
 # StreamUsage
 
-表示播放音频流类型的枚举。
+Enumerates the types of audio streams played.
 
 **Since:** 7
 
@@ -106,7 +106,7 @@ Voice call assistant type. This type is only used for call assistant functionali
 STREAM_USAGE_ANNOUNCEMENT = 22
 ```
 
-Announcement alarm usage.
+Announcement usage.
 
 **Since:** 24
 
@@ -126,7 +126,7 @@ Announcement alarm usage.
 STREAM_USAGE_EMERGENCY = 23
 ```
 
-Emergency alarm usage.
+Emergency usage.
 
 **Since:** 24
 
@@ -135,6 +135,28 @@ Emergency alarm usage.
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-StreamUsage-STREAM_USAGE_EMERGENCY = 23--><!--Device-StreamUsage-STREAM_USAGE_EMERGENCY = 23-End-->
+
+**System capability:** SystemCapability.Multimedia.Audio.Core
+
+**System API:** This is a system API.
+
+## STREAM_USAGE_VOICE_ASSISTANT_SYSTEM
+
+```TypeScript
+STREAM_USAGE_VOICE_ASSISTANT_SYSTEM = 27
+```
+
+Voice assistant broadcast usage for system app.
+
+**Since:** 26.0.0
+
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
+
+**Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API:** This API can be used in atomic services since API version 26.0.0.
+
+<!--Device-StreamUsage-STREAM_USAGE_VOICE_ASSISTANT_SYSTEM = 27--><!--Device-StreamUsage-STREAM_USAGE_VOICE_ASSISTANT_SYSTEM = 27-End-->
 
 **System capability:** SystemCapability.Multimedia.Audio.Core
 

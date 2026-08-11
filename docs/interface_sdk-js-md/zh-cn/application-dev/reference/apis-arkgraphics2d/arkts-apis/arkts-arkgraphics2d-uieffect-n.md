@@ -13,12 +13,6 @@
 
 **系统能力：** SystemCapability.Graphics.Drawing
 
-## 导入模块
-
-```TypeScript
-import { uiEffect } from 'kits/@kit.ArkGraphics2D';
-```
-
 ## 汇总
 
 ### 函数

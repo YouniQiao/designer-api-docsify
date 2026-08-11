@@ -1,6 +1,6 @@
 # ScrollEffectOptions
 
-定义标题栏的滑动模糊效果选项。
+Defines the scroll effect options for the title bar.
 
 **Since:** 26.0.0
 
@@ -16,7 +16,7 @@
 blurEffectiveEndOffset?: LengthMetrics
 ```
 
-达到标题栏最终模糊样式的最大滑动距离。当用户滑动距离达到该值时，模糊效果达到最终状态。默认值： 8vp。
+The maximum sliding distance of the content area to enable the final blur style of the title bar.Default value: 8vp.
 
 **Type:** [LengthMetrics](../arkts-apis/arkts-arkui-graphics-lengthmetrics-c.md)
 
@@ -38,7 +38,7 @@ blurEffectiveEndOffset?: LengthMetrics
 blurEffectiveStartOffset?: LengthMetrics
 ```
 
-启用标题栏滚动模糊效果的最小滑动距离。当用户滑动距离超过该值时，开始应用模糊效果。默认值： 0vp。
+The minimum sliding distance of the content area to enable the title bar sliding blur effect.Default value: 0vp.
 
 **Type:** [LengthMetrics](../arkts-apis/arkts-arkui-graphics-lengthmetrics-c.md)
 
@@ -60,7 +60,7 @@ blurEffectiveStartOffset?: LengthMetrics
 scrollEffectType?: ScrollEffectType
 ```
 
-标题栏滚动模糊效果类型。默认值： ScrollEffectType.COMMON_BLUR。
+Title bar scroll blur style.Default value: ScrollEffectType.COMMON_BLUR.
 
 **Type:** [ScrollEffectType](../arkts-apis/arkts-arkui-navigation-scrolleffecttype-e.md)
 

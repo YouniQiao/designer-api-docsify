@@ -1,6 +1,6 @@
 # RenderProcessNotRespondingReason
 
-Enum type supplied to {@link RenderProcessNotRespondingData} when onRenderProcessNotResponding is called.
+Enumerates the reasons why the rendering process does not respond.
 
 **Since:** 12
 
@@ -16,7 +16,7 @@ Enum type supplied to {@link RenderProcessNotRespondingData} when onRenderProces
 INPUT_TIMEOUT = 0
 ```
 
-Timeout for input sent to render process.
+The input event response sent to the rendering process times out.
 
 **Since:** 12
 
@@ -32,7 +32,7 @@ Timeout for input sent to render process.
 NAVIGATION_COMMIT_TIMEOUT = 1
 ```
 
-Timeout for navigation commit.
+The navigation for loading a new web page times out.
 
 **Since:** 12
 

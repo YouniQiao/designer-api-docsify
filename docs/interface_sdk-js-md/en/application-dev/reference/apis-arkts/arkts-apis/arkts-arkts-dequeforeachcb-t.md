@@ -4,7 +4,7 @@
 export type DequeForEachCb<T> = (value: T, index: int, deque: Deque<T>) => void
 ```
 
-Deque中forEach方法的回调函数。
+The type of Deque forEach callback function.
 
 **Since:** 23
 
@@ -20,7 +20,7 @@ Deque中forEach方法的回调函数。
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | T | Yes | 当前遍历到的元素。 |
-| index | int | Yes | 当前遍历到的下标值。 |
-| deque | [Deque](arkts-arkts-util-deque-deque-c.md)&lt;T&gt; | Yes | 当前调用forEach方法的实例对象。 |
+| value | T | Yes | The current element being processed |
+| index | int | Yes | The index of the current element |
+| deque | [Deque](arkts-arkts-util-deque-deque-c.md)&lt;T&gt; | Yes | The Deque instance being traversed |
 

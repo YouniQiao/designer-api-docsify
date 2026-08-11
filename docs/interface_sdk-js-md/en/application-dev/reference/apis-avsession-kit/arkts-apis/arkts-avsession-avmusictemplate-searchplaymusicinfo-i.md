@@ -1,6 +1,6 @@
 # SearchPlayMusicInfo
 
-搜播的音频信息的定义。
+The definition of SearchPlayMusicInfo.
 
 **Since:** 23
 
@@ -22,7 +22,7 @@ import { avMusicTemplate } from 'kits/@kit.AVSessionKit';
 description?: string
 ```
 
-对音频的描述。
+Other descriptions of the Media.
 
 **Type:** string
 
@@ -42,7 +42,7 @@ description?: string
 displayName?: string
 ```
 
-音频的显示名称。
+displayName of the Media.
 
 **Type:** string
 
@@ -56,13 +56,33 @@ displayName?: string
 
 **System capability:** SystemCapability.Multimedia.AVSession.AVMusicTemplate
 
+## extras
+
+```TypeScript
+extras?: string
+```
+
+extras of the Media.
+
+**Type:** string
+
+**Since:** 26.1.0
+
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.1.0.
+
+**Model restriction:** This API can be used only in the stage model.
+
+<!--Device-SearchPlayMusicInfo-extras?: string--><!--Device-SearchPlayMusicInfo-extras?: string-End-->
+
+**System capability:** SystemCapability.Multimedia.AVSession.AVMusicTemplate
+
 ## items
 
 ```TypeScript
 items: SearchPlayMusicItem[]
 ```
 
-音频列表。
+list of music
 
 **Type:** [SearchPlayMusicItem](arkts-avsession-avmusictemplate-searchplaymusicitem-i.md)[]
 
@@ -82,7 +102,7 @@ items: SearchPlayMusicItem[]
 playMode?: string
 ```
 
-音频的播放模式。
+playMode of the Media.
 
 **Type:** string
 
@@ -102,7 +122,7 @@ playMode?: string
 playMusicOnly?: boolean
 ```
 
-是否仅执行播放音乐的操作。true表示是，false表示否。无默认值。
+playMusicOnly of the Media.
 
 **Type:** boolean
 

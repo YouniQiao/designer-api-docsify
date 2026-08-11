@@ -12,7 +12,7 @@ import { power } from 'kits/@kit.BasicServicesKit';
 function getPowerMode(): DevicePowerMode
 ```
 
-获取当前设备的电源模式。
+Obtains the power mode of this device.
 
 **Since:** 9
 
@@ -26,7 +26,7 @@ function getPowerMode(): DevicePowerMode
 
 | Type | Description |
 | --- | --- |
-| [DevicePowerMode](arkts-basicservices-power-devicepowermode-e.md) | 电源模式。 |
+| [DevicePowerMode](arkts-basicservices-power-devicepowermode-e.md) | Power mode. |
 
 ## Examples
 

@@ -1,6 +1,6 @@
 # HuksKeyPadding
 
-表示填充算法。
+Enumerates the padding algorithms.
 
 **Since:** 8
 
@@ -16,7 +16,7 @@
 HUKS_PADDING_NONE = 0
 ```
 
-表示不使用填充算法。
+No padding algorithm is used.
 
 **Since:** 8
 
@@ -34,7 +34,7 @@ HUKS_PADDING_NONE = 0
 HUKS_PADDING_OAEP = 1
 ```
 
-表示使用OAEP填充算法。
+Optimal Asymmetric Encryption Padding (OAEP).
 
 **Since:** 8
 
@@ -54,7 +54,7 @@ HUKS_PADDING_OAEP = 1
 HUKS_PADDING_PSS = 2
 ```
 
-表示使用PSS填充算法。
+Probabilistic Signature Scheme (PSS).
 
 **Since:** 8
 
@@ -74,7 +74,7 @@ HUKS_PADDING_PSS = 2
 HUKS_PADDING_PKCS1_V1_5 = 3
 ```
 
-表示使用PKCS1_V1_5填充算法。
+Public Key Cryptography Standards (PKCS) #1 v1.5.
 
 **Since:** 8
 
@@ -94,7 +94,7 @@ HUKS_PADDING_PKCS1_V1_5 = 3
 HUKS_PADDING_PKCS5 = 4
 ```
 
-表示使用PKCS5填充算法。
+PKCS #5.
 
 **Since:** 8
 
@@ -114,7 +114,7 @@ HUKS_PADDING_PKCS5 = 4
 HUKS_PADDING_PKCS7 = 5
 ```
 
-表示使用PKCS7填充算法。
+PKCS #7.
 
 **Since:** 8
 
@@ -132,7 +132,7 @@ HUKS_PADDING_PKCS7 = 5
 HUKS_PADDING_ISO_IEC_9796_2 = 6
 ```
 
-表示使用ISO_IEC_9796_2填充算法&lt;!--Del--&gt;（暂不支持）&lt;!--DelEnd--&gt;。
+ISO_IEC_9796_2&lt;!--Del--&gt; (not supported currently)&lt;!--DelEnd--&gt;.
 
 **Since:** 12
 
@@ -150,7 +150,7 @@ HUKS_PADDING_ISO_IEC_9796_2 = 6
 HUKS_PADDING_ISO_IEC_9797_1 = 7
 ```
 
-表示使用ISO_IEC_9797_1填充算法&lt;!--Del--&gt;（暂不支持）&lt;!--DelEnd--&gt;。
+ISO_IEC_9797_1&lt;!--Del--&gt; (not supported currently)&lt;!--DelEnd--&gt;.
 
 **Since:** 12
 

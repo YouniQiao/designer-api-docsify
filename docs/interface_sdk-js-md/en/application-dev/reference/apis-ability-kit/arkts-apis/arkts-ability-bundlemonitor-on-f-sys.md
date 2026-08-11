@@ -12,7 +12,7 @@ import { bundleMonitor } from 'kits/@kit.AbilityKit';
 function on(type: BundleChangedEvent, callback: Callback<BundleChangedInfo>): void
 ```
 
-注册监听应用的安装、卸载、更新。使用callback异步回调。
+Register to monitor the installation status
 
 **Since:** 9
 
@@ -30,16 +30,16 @@ function on(type: BundleChangedEvent, callback: Callback<BundleChangedInfo>): vo
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | [BundleChangedEvent](arkts-ability-bundlemonitor-bundlechangedevent-t-sys.md) | Yes | 注册监听的事件类型。 |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;BundleChangedInfo&gt; | Yes | 回调函数，当回调成功时，err为undefined，data为应用变更信息；否则为错误对象。 |
+| type | [BundleChangedEvent](arkts-ability-bundlemonitor-bundlechangedevent-t-sys.md) | Yes | Indicates the command should be implement. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;BundleChangedInfo&gt; | Yes | Indicates the callback to be register. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types. |
-| 201 | Verify permission denied. |
-| 202 | Permission denied, non-system app called system api. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Verify permission denied. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission denied, non-system app called system api. |
 
 ## Examples
 

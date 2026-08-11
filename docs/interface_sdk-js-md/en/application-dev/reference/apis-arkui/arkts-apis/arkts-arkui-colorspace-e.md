@@ -1,6 +1,6 @@
 # ColorSpace
 
-定义了颜色空间的类型，用于指定颜色显示的模式。
+Enumerates color space types for specifying color rendering modes.
 
 **Since:** 20
 
@@ -16,7 +16,7 @@
 SRGB = 0
 ```
 
-SRGB颜色空间，适用于大多数显示设备。
+Standard RGB color space, suitable for most display devices.
 
 **Since:** 20
 
@@ -36,7 +36,7 @@ SRGB颜色空间，适用于大多数显示设备。
 DISPLAY_P3 = 1
 ```
 
-Display-P3颜色空间，具有更广的色域，适用于高端显示设备。
+Display P3 color space with wider gamut, designed for high-end display devices.
 
 **Since:** 20
 

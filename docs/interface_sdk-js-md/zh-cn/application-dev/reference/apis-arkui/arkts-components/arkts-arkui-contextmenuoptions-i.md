@@ -298,7 +298,7 @@ backgroundEffect?: BackgroundEffectOptions
 
 背景效果参数。
 
-**类型：** [BackgroundEffectOptions](arkts-arkui-backgroundeffectoptions-i.md)
+**类型：** [BackgroundEffectOptions](../arkts-apis/arkts-arkui-common-backgroundeffectoptions-i.md)
 
 **起始版本：** 18
 
@@ -927,7 +927,7 @@ preview?: MenuPreviewMode | CustomBuilder
 - 当未设置preview参数或preview参数设置为MenuPreviewMode.NONE时，enableArrow参数生效。  
 - 当preview参数设置为MenuPreviewMode.IMAGE或CustomBuilder时，enableArrow为true时也不显示箭头。
 
-**类型：** [MenuPreviewMode](arkts-arkui-menupreviewmode-e.md) \| CustomBuilder
+**类型：** [MenuPreviewMode](../arkts-apis/arkts-arkui-common-menupreviewmode-e.md) \| CustomBuilder
 
 **默认值：** MenuPreviewMode.NONE
 
@@ -957,7 +957,7 @@ previewAnimationOptions?: ContextMenuAnimationOptions
 
 倍率设置参数小于等于0时，不生效。
 
-**类型：** [ContextMenuAnimationOptions](arkts-arkui-contextmenuanimationoptions-i.md)
+**类型：** [ContextMenuAnimationOptions](../arkts-apis/arkts-arkui-common-contextmenuanimationoptions-i.md)
 
 **默认值：** { scale: [0.95, 1.1], transition: undefined, hoverScale: undefined } [since 12]
 
@@ -1021,7 +1021,7 @@ previewScaleMode?: PreviewScaleMode
 
 预览图的最大宽高不会超过预览图最大可布局区域（窗口大小减去上下左右的安全边距）。
 
-**类型：** [PreviewScaleMode](../arkts-apis/arkts-arkui-common-previewscalemode-e.md)
+**类型：** [PreviewScaleMode](arkts-arkui-previewscalemode-e.md)
 
 **默认值：** PreviewScaleMode.AUTO
 
@@ -1139,7 +1139,7 @@ transition?: TransitionEffect
 
 当设置transition自定义动效时，菜单的默认显示和退出动效不生效。
 
-**类型：** [TransitionEffect](../arkts-apis/arkts-arkui-common-transitioneffect-c.md)
+**类型：** [TransitionEffect](arkts-arkui-transitioneffect-c.md)
 
 **起始版本：** 12
 

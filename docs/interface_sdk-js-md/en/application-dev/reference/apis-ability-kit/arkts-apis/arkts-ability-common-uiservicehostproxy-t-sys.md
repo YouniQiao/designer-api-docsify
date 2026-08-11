@@ -4,7 +4,7 @@
 export type UIServiceHostProxy = _UIServiceHostProxy.default
 ```
 
-UIServiceHostProxy二级模块。
+Level-2 module UIServiceHostProxy.
 
 **Since:** 14
 

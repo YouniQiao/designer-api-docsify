@@ -1,6 +1,6 @@
 # DataBlob
 
-二进制数据的封装接口，核心字段data为Uint8Array类型。
+Encapsulates binary data. The core field **data** is of the Uint8Array type.
 
 **Since:** 9
 
@@ -22,7 +22,7 @@ import { cert } from 'kits/@kit.DeviceCertificateKit';
 data: Uint8Array
 ```
 
-表示数据内容。
+Indicates the content of the data blob.
 
 **Type:** Uint8Array
 

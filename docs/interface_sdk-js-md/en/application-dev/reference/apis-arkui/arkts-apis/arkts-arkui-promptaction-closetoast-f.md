@@ -12,13 +12,7 @@ import { LevelMode, ImmersiveMode, LevelOrder } from 'kits/@kit.ArkUI';
 export function closeToast(toastId: int): void
 ```
 
-关闭即时反馈。
-
-> **说明：**
-> 
-> 直接使用closeToast可能导致[UI上下文不明确](../../../ui/arkts-global-interface.md#ui上下文不明确)的问题，建议使用UIContext中的getPromptAction
-> 方法获取到PromptAction对象，再通过该对象调用
-> [closeToast](../../../reference/apis-arkui/arkts-apis-uicontext-promptaction.md#closetoast18)实现。
+Close the notification text.
 
 **Since:** 23
 
@@ -34,13 +28,13 @@ export function closeToast(toastId: int): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| toastId | int | Yes | openToast返回的id。 |
+| toastId | int | Yes | the toast id returned by openToast. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 100001 | Internal error. |
-| 401 | Parameter error. Possible causes: &lt;br&gt; 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameters types. &lt;br&gt; 3. Parameter verification failed. |
-| 103401 | Cannot find the toast. |
+| [100001](../errorcode-internal.md#100001-internal-error) | Internal error. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: &lt;br&gt; 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameters types. &lt;br&gt; 3. Parameter verification failed. |
+| [103401](../errorcode-promptAction.md#103401-toast-not-found) | Cannot find the toast. |
 

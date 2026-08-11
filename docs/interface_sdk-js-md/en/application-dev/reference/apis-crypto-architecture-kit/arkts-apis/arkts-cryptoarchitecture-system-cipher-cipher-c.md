@@ -1,6 +1,6 @@
 # Cipher
 
-提供加解密接口。
+Defines the cipher functions.
 
 **Since:** 3
 
@@ -26,7 +26,7 @@ import { CipherAesOptions, CipherResponse, CipherRsaOptions } from 'kits/@kit.Cr
 static aes(options: CipherAesOptions): void
 ```
 
-使用AES对数据进行加密或解密。
+Encrypts or decrypts data using AES.
 
 **Since:** 3
 
@@ -44,7 +44,7 @@ static aes(options: CipherAesOptions): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| options | [CipherAesOptions](arkts-cryptoarchitecture-system-cipher-cipheraesoptions-i.md) | Yes | AES 加解密参数。 |
+| options | [CipherAesOptions](arkts-cryptoarchitecture-system-cipher-cipheraesoptions-i.md) | Yes | AES options. |
 
 ## rsa
 
@@ -52,7 +52,7 @@ static aes(options: CipherAesOptions): void
 static rsa(options: CipherRsaOptions): void
 ```
 
-使用RSA对数据进行加密或解密。
+Encrypts or decrypts data using RSA.
 
 **Since:** 3
 
@@ -70,5 +70,5 @@ static rsa(options: CipherRsaOptions): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| options | [CipherRsaOptions](arkts-cryptoarchitecture-system-cipher-cipherrsaoptions-i.md) | Yes | RSA 加解密参数。 |
+| options | [CipherRsaOptions](arkts-cryptoarchitecture-system-cipher-cipherrsaoptions-i.md) | Yes | RSA options. |
 

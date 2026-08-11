@@ -1,6 +1,6 @@
 # SystemEnvKey
 
-系统环境变量Key的基类。
+Defines the class of System Env Key.
 
 **Since:** 26.0.0
 
@@ -16,7 +16,7 @@
 protected constructor()
 ```
 
-用于创建该类的实例对象。
+constructor.
 
 **Since:** 26.0.0
 

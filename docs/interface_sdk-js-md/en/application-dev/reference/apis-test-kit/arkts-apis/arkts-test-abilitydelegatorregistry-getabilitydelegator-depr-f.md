@@ -6,7 +6,7 @@
 function getAbilityDelegator(): AbilityDelegator
 ```
 
-获取应用程序的AbilityDelegator对象。
+Obtains the **AbilityDelegator** object of the application.
 
 **Since:** 8
 

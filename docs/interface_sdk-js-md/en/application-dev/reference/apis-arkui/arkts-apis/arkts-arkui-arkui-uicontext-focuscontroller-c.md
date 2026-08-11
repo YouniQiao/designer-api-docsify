@@ -65,7 +65,7 @@ clear focus to the root container.
 isActive(): boolean
 ```
 
-获取焦点样式是否处于激活态。
+Get whether the focus style is active.
 
 **Since:** 23
 
@@ -111,9 +111,9 @@ request focus to the specific component.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 150002 | This component has an unfocusable ancestor. |
-| 150003 | the component is not on tree or does not exist. |
-| 150001 | the component cannot be focused. |
+| [150002](../errorcode-focus.md#150002-ancestor-component-not-focusable) | This component has an unfocusable ancestor. |
+| [150003](../errorcode-focus.md#150003-component-does-not-exist) | the component is not on tree or does not exist. |
+| [150001](../errorcode-focus.md#150001-component-not-focusable) | the component cannot be focused. |
 
 ## setAutoFocusTransfer
 
@@ -121,7 +121,7 @@ request focus to the specific component.
 setAutoFocusTransfer(isAutoFocusTransfer: boolean): void
 ```
 
-设置是否开启自动焦点转移。
+Set whether to enable autofocus transfer.
 
 **Since:** 23
 
@@ -145,7 +145,7 @@ setAutoFocusTransfer(isAutoFocusTransfer: boolean): void
 setKeyProcessingMode(mode: KeyProcessingMode): void
 ```
 
-设置组件无法处理按键事件时的按键事件处理优先级。
+Set the priority of key event processing when component cannot handle the key event..
 
 **Since:** 23
 

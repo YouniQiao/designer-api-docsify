@@ -1,6 +1,6 @@
 # AxisValue
 
-鼠标轴类型和轴的值。
+Defines the mouse axis type and axis value.
 
 **Since:** 9
 
@@ -22,7 +22,7 @@ import { MouseAction, AxisValue, MouseEvent, Button, MouseToolType, Axis } from 
 axis: Axis
 ```
 
-鼠标轴类型。
+Mouse axis type.
 
 **Type:** [Axis](../../apis-arkui/arkts-apis/arkts-arkui-enums-axis-e.md)
 
@@ -40,7 +40,7 @@ axis: Axis
 value: int
 ```
 
-鼠标轴的值。
+Mouse axis value.
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 

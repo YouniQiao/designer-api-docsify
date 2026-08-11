@@ -1,6 +1,6 @@
 # IDecoratedImmutableVariable
 
-定义只读状态变量接口
+Define decorated immutable variable interface.
 
 **Inheritance/Implementation:** IDecoratedImmutableVariable extends [IDecoratedReadableVariable<T>](IDecoratedReadableVariable<T>)
 

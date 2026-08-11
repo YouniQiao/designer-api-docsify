@@ -1,6 +1,6 @@
 # Position
 
-窗口或组件的位置。
+Describes the position of the window or component.
 
 **Since:** 20
 
@@ -22,7 +22,7 @@ import { window } from 'kits/@kit.ArkUI';
 x: int
 ```
 
-x坐标，单位为px，该参数应为整数。
+X coordinate, in px. The value must be an integer.
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
@@ -40,7 +40,7 @@ x坐标，单位为px，该参数应为整数。
 y: int
 ```
 
-y坐标，单位为px，该参数应为整数。
+Y coordinate, in px. The value must be an integer.
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 

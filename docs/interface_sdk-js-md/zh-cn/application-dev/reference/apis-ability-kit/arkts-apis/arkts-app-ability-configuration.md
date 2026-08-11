@@ -1,11 +1,5 @@
 # @ohos.app.ability.Configuration
 
-## 导入模块
-
-```TypeScript
-import { Configuration } from 'kits/@kit.AbilityKit';
-```
-
 ## 汇总
 
 ### 接口

@@ -12,7 +12,7 @@ import { screen } from 'kits/@kit.ArkUI';
 function destroyVirtualScreen(screenId:long, callback: AsyncCallback<void>): void
 ```
 
-销毁虚拟屏幕，使用callback异步回调。
+Destroys a virtual screen. This API uses an asynchronous callback to return the result.
 
 **Since:** 9
 
@@ -28,30 +28,28 @@ function destroyVirtualScreen(screenId:long, callback: AsyncCallback<void>): voi
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| screenId | ArkTS-Dyn: number  <br>ArkTS-Sta：long | Yes | 屏幕的id，该参数仅支持整数输入。 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | 回调函数。当销毁虚拟屏幕成功，err为undefined，否则为错误对象。 |
+| screenId | ArkTS-Dyn: number  <br>ArkTS-Sta：long | Yes | ID of the virtual screen. The value must be an integer. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. If the virtual screen is destroyed, **err** is **undefined**; otherwise, **err** is an error object. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt;2. Incorrect parameter types. |
-| 1400001 | Invalid display or screen. |
-| 1400002 | Unauthorized operation. |
-| 202 | Permission verification failed. A non-system application calls a system API. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt;2. Incorrect parameter types. |
+| [1400001](../errorcode-display.md#1400001-invalid-display-or-screen) | Invalid display or screen. |
+| [1400002](../errorcode-display.md#1400002-unauthorized-operation) | Unauthorized operation. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
 
 ## Examples
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
 
-// Obtain the screen ID using getAllScreens() or from the return value of createVirtualScreen().
-let screenId: number = 1; // Virtual screen ID.
-// Destroy the virtual screen.
+let screenId: number = 1;
 screen.destroyVirtualScreen(screenId, (err: BusinessError) => {
   const errCode: number = err.code;
   if (errCode) {
-    console.error(`Failed to destroy the virtual screen. Code: ${err.code}, message: ${err.message}`);
+    console.error(`Failed to destroy the virtual screen. Code:${err.code}, message is ${err.message}`);
     return;
   }
   console.info('Succeeded in destroying the virtual screen.');
@@ -65,7 +63,7 @@ screen.destroyVirtualScreen(screenId, (err: BusinessError) => {
 function destroyVirtualScreen(screenId:long): Promise<void>
 ```
 
-销毁虚拟屏幕，使用Promise异步回调。
+Destroys a virtual screen. This API uses a promise to return the result.
 
 **Since:** 9
 
@@ -81,35 +79,33 @@ function destroyVirtualScreen(screenId:long): Promise<void>
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| screenId | ArkTS-Dyn: number  <br>ArkTS-Sta：long | Yes | 屏幕的id，该参数仅支持整数输入。 |
+| screenId | ArkTS-Dyn: number  <br>ArkTS-Sta：long | Yes | ID of the virtual screen. The value must be an integer. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | 无返回结果的Promise对象。 |
+| Promise&lt;void&gt; | Promise that returns no value. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt;2. Incorrect parameter types. |
-| 1400001 | Invalid display or screen. |
-| 1400002 | Unauthorized operation. |
-| 202 | Permission verification failed. A non-system application calls a system API. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt;2. Incorrect parameter types. |
+| [1400001](../errorcode-display.md#1400001-invalid-display-or-screen) | Invalid display or screen. |
+| [1400002](../errorcode-display.md#1400002-unauthorized-operation) | Unauthorized operation. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
 
 ## Examples
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
 
-// Obtain the screen ID using getAllScreens() or from the return value of createVirtualScreen().
-let screenId: number = 1; // Virtual screen ID.
-// Destroy the virtual screen.
+let screenId: number = 1;
 screen.destroyVirtualScreen(screenId).then(() => {
   console.info('Succeeded in destroying the virtual screen.');
 }).catch((err: BusinessError) => {
-  console.error(`Failed to destroy the virtual screen. Code: ${err.code}, message: ${err.message}`);
+  console.error(`Failed to destroy the virtual screen.Code:${err.code}, message is ${err.message}`);
 });
 ```
 

@@ -12,12 +12,13 @@ import { dialogRequest } from 'kits/@kit.AbilityKit';
 function getRequestCallback(want: Want): RequestCallback
 ```
 
-从Want中获取请求方的RequestCallback。
+Obtains the request callback from Want.
 
-> **说明：**
+> **NOTE：**
 > 
-> 该接口可以在ServiceExtensionAbility下使用，如果ServiceExtensionAbility实现了模态弹框，则能从Want中获取请求方的RequestCallback。其他场景使用该接口，均无法获取返回
-> 值。
+> This API can be used by a ServiceExtensionAbility. If the ServiceExtensionAbility implements modal dialog boxes,
+> the request callback can be obtained from Want. If this API is used in other scenarios, no return value is
+> obtained.
 
 **Since:** 9
 
@@ -31,19 +32,19 @@ function getRequestCallback(want: Want): RequestCallback
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| want | [Want](arkts-ability-app-ability-want-want-c.md) | Yes | 表示发起方请求弹框时传入的want信息。 |
+| want | [Want](arkts-ability-app-ability-want-want-c.md) | Yes | Want passed in the request for a modal dialog box. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [RequestCallback](arkts-ability-dialogrequest-requestcallback-i.md) | 请求方RequestCallback，用于设置返回结果。 |
+| [RequestCallback](arkts-ability-dialogrequest-requestcallback-i.md) | RequestCallback object obtained, which is used to set the return result. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
 
 ## Examples
 

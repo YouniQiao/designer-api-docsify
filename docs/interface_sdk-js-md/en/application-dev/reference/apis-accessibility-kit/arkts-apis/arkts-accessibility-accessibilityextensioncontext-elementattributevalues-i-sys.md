@@ -1,6 +1,6 @@
 # ElementAttributeValues
 
-节点元素具备的属性名称及属性值类型信息。
+Provides attribute names and value types of a node element.
 
 **Since:** 9
 
@@ -16,7 +16,7 @@
 accessibilityStateDescription?: string
 ```
 
-元素的自定义无障碍状态播报文本信息。
+Custom accessibility state broadcast text of an element.
 
 **Type:** string
 
@@ -38,7 +38,7 @@ accessibilityStateDescription?: string
 accessibilityVisible?: boolean
 ```
 
-表示元素是否是无障碍可见的。true表示元素是无障碍可见的，false表示元素是无障碍不可见的，默认值为true。
+Whether the element is accessibility visible. **true** means the element is accessibility visible and **false** means the element is accessibility invisible. The default value is **true**.
 
 **Type:** boolean
 
@@ -60,7 +60,7 @@ accessibilityVisible?: boolean
 belongTreeId?: int
 ```
 
-表示元素所属的组件树ID。默认值为-1。
+Component tree ID that the element belongs to. The default value is **-1**.
 
 **Type:** int
 
@@ -82,7 +82,7 @@ belongTreeId?: int
 childrenIds?: Array<long>
 ```
 
-表示元素的子组件ID。
+ID of the child component of the element.
 
 **Type:** Array&lt;long&gt;
 
@@ -104,7 +104,7 @@ childrenIds?: Array<long>
 childrenTreeId?: int
 ```
 
-表示元素的子组件树ID。默认值为-1。
+Child component tree ID of the element. The default value is **-1**.
 
 **Type:** int
 
@@ -126,7 +126,7 @@ childrenTreeId?: int
 currentItem?: AccessibilityGrid
 ```
 
-表示当前元素所在网格中的位置。
+Position of the current element in the grid.
 
 **Type:** [AccessibilityGrid](arkts-accessibility-accessibilityextensioncontext-accessibilitygrid-i-sys.md)
 
@@ -170,7 +170,7 @@ Indicates the custom actions supported by the component.
 isEssential?: boolean
 ```
 
-表示元素对用户是否是必需的。true表示元素是必需的，false表示元素不是必需的，默认值为false。
+Whether the element is mandatory for the user. The value **true** indicates that the element is mandatory, and the value **false** indicates that the element is not mandatory. The default value is **false**.
 
 **Type:** boolean
 
@@ -192,7 +192,7 @@ isEssential?: boolean
 mainWindowId?: int
 ```
 
-表示元素的主窗口ID。默认值为-1。
+ID of the main window of the element. The default value is **-1**.
 
 **Type:** int
 
@@ -214,7 +214,7 @@ mainWindowId?: int
 navDestinationId?: long
 ```
 
-表示元素所关联的导航目标ID。默认值为-1。
+ID of the navigation target associated with the element. The default value is **-1**.
 
 **Type:** long
 
@@ -236,7 +236,7 @@ navDestinationId?: long
 parentId?: long
 ```
 
-表示元素的父组件ID。默认值为-1。
+ID of the parent component of the element. The default value is **-1**.
 
 **Type:** long
 
@@ -252,13 +252,35 @@ parentId?: long
 
 **System API:** This is a system API.
 
+## sourceType
+
+```TypeScript
+sourceType?: AccessibilitySourceType
+```
+
+Indicates the source of this element.
+
+**Type:** [AccessibilitySourceType](arkts-accessibility-accessibility-accessibilitysourcetype-e-sys.md)
+
+**Since:** 26.0.0
+
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
+
+**Model restriction:** This API can be used only in the stage model.
+
+<!--Device-ElementAttributeValues-sourceType?: AccessibilitySourceType--><!--Device-ElementAttributeValues-sourceType?: AccessibilitySourceType-End-->
+
+**System capability:** SystemCapability.BarrierFree.Accessibility.Core
+
+**System API:** This is a system API.
+
 ## span
 
 ```TypeScript
 span?: AccessibilitySpan[]
 ```
 
-表示元素在网格布局中所跨越的行列范围数组。
+Array of the row and column ranges spanned by the element in the grid layout.
 
 **Type:** [AccessibilitySpan](arkts-accessibility-accessibilityextensioncontext-accessibilityspan-i-sys.md)[]
 

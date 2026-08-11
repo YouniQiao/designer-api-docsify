@@ -1,6 +1,6 @@
 # LeadingMarginSpanDrawInfo
 
-自定义绘制信息。
+Provides the custom drawing information.
 
 **Since:** 22
 
@@ -16,11 +16,11 @@
 baseline: number
 ```
 
-当前行的基线与组件上边缘的距离。
+Distance from the baseline of the current line to the component's upper edge.
 
-单位：[px](../../../reference/apis-arkui/arkui-ts/ts-pixel-units.md#基本像素单位)
+Unit: [px](../../apis-ability-kit/arkts-apis/arkts-app-ability-common.md/arkts-app-ability-common.md)
 
-取值范围：大于等于0。
+The value must be greater than or equal to 0.
 
 **Type:** number
 
@@ -42,11 +42,11 @@ baseline: number
 bottom: number
 ```
 
-行底与组件上边缘的距离。
+Distance from the bottom of the current line to the component's upper edge.
 
-单位：[px](../../../reference/apis-arkui/arkui-ts/ts-pixel-units.md#基本像素单位)
+Unit: [px](../../apis-ability-kit/arkts-apis/arkts-app-ability-common.md/arkts-app-ability-common.md)
 
-取值范围：大于等于0。
+The value must be greater than or equal to 0.
 
 **Type:** number
 
@@ -68,7 +68,7 @@ bottom: number
 direction: TextDirection
 ```
 
-文本内容的方向。
+Direction of the text content.
 
 **Type:** [TextDirection](../../apis-arkgraphics2d/arkts-apis/arkts-arkgraphics2d-text-textdirection-e.md)
 
@@ -90,9 +90,9 @@ direction: TextDirection
 end: number
 ```
 
-当前行的结束索引。
+End index of the current line.
 
-取值范围：大于等于0。
+The value must be greater than or equal to 0.
 
 **Type:** number
 
@@ -114,9 +114,9 @@ end: number
 first: boolean
 ```
 
-当前行是否是段落的首行。
+Whether the current line is the first line of the paragraph.
 
-true：首行；false：非首行。
+**true**: first line; **false**: non-first line.
 
 **Type:** boolean
 
@@ -138,9 +138,9 @@ true：首行；false：非首行。
 start: number
 ```
 
-当前行的起始索引。
+Start index of the current line.
 
-取值范围：大于等于0。
+The value must be greater than or equal to 0.
 
 **Type:** number
 
@@ -162,11 +162,11 @@ start: number
 top: number
 ```
 
-行顶与组件上边缘的距离。
+Distance from the top of the current line to the component's upper edge.
 
-单位：[px](../../../reference/apis-arkui/arkui-ts/ts-pixel-units.md#基本像素单位)
+Unit: [px](../../apis-ability-kit/arkts-apis/arkts-app-ability-common.md/arkts-app-ability-common.md)
 
-取值范围：大于等于0。
+The value must be greater than or equal to 0.
 
 **Type:** number
 
@@ -188,11 +188,12 @@ top: number
 x: number
 ```
 
-当前行相对于组件的水平偏移。direction为RTL时，返回当前行右侧与组件右边缘的距离。
+Horizontal offset of the current line relative to the component. For right-to-left (RTL) scripts (direction set to  
+**RTL**), this value represents the distance between the right side of the current line and the component's right edge.
 
-单位：[px](../../../reference/apis-arkui/arkui-ts/ts-pixel-units.md#基本像素单位)
+Unit: [px](../../apis-ability-kit/arkts-apis/arkts-app-ability-common.md/arkts-app-ability-common.md)
 
-取值范围：大于等于0。
+The value must be greater than or equal to 0.
 
 **Type:** number
 

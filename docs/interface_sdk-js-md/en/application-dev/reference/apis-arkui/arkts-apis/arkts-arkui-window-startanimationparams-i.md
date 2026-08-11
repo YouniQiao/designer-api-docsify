@@ -1,10 +1,10 @@
 # StartAnimationParams
 
-启动动画配置。
+Describes the parameters for the startup animation.
 
-仅对同应用的不同ability间跳转生效。
+The configuration is valid only for transitions between different abilities within the same application.
 
-仅对全屏应用生效。
+The configuration is valid only full-screen applications.
 
 **Since:** 20
 

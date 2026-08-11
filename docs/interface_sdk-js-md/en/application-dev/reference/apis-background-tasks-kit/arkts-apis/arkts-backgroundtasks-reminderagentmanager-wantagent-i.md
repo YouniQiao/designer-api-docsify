@@ -1,6 +1,6 @@
 # WantAgent
 
-跳转目标的ability信息。
+Defines the information about the redirected-to ability.
 
 **Since:** 9
 
@@ -22,7 +22,7 @@ import { reminderAgentManager } from 'kits/@kit.BackgroundTasksKit';
 abilityName: string
 ```
 
-指明跳转目标的ability名称。
+Name of the target ability.
 
 **Type:** string
 
@@ -40,7 +40,7 @@ abilityName: string
 parameters?: Record<string, Object>
 ```
 
-需要传递到目标的参数。
+Parameters to be transferred to the target.
 
 **Type:** [Record](../../apis-default/arkts-apis/arkts-record-t.md)&lt;string, Object&gt;
 
@@ -58,7 +58,7 @@ parameters?: Record<string, Object>
 pkgName: string
 ```
 
-指明跳转目标的包名。
+Name of the target package.
 
 **Type:** string
 
@@ -76,7 +76,7 @@ pkgName: string
 uri?: string
 ```
 
-指明跳转目标的uri信息。
+URI of the target ability.
 
 **Type:** string
 

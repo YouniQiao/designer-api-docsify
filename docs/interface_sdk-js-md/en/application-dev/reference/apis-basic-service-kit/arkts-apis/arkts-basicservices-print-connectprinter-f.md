@@ -12,7 +12,7 @@ import { print } from 'kits/@kit.BasicServicesKit';
 function connectPrinter(printerId: string, callback: AsyncCallback<void>): void
 ```
 
-通过打印机ID连接打印机，使用callback异步回调。
+Connects to a printer by printer ID. This API uses an asynchronous callback to return the result.
 
 **Since:** 20
 
@@ -30,15 +30,15 @@ function connectPrinter(printerId: string, callback: AsyncCallback<void>): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| printerId | string | Yes | 打印机ID。 |
-| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | 通过打印机ID异步连接打印机的回调。 |
+| printerId | string | Yes | Printer ID. |
+| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback to be invoked when a printer is connected. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 201 | the application does not have permission to call this function. |
-| 202 | not system application<br>**Applicable version:** 10 - 19 |
+| [201](../../errorcode-universal.md#201-permission-denied) | the application does not have permission to call this function. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | not system application<br>**Applicable version:** 10 - 19 |
 
 ## Examples
 
@@ -63,7 +63,7 @@ print.connectPrinter(printerId, (err: BusinessError) => {
 function connectPrinter(printerId: string): Promise<void>
 ```
 
-通过打印机ID连接打印机，使用Promise异步回调。
+Connects to a printer by printer ID. This API uses a promise to return the result.
 
 **Since:** 20
 
@@ -81,20 +81,20 @@ function connectPrinter(printerId: string): Promise<void>
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| printerId | string | Yes | 打印机ID |
+| printerId | string | Yes | Printer ID. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise对象，无返回结果。 |
+| Promise&lt;void&gt; | Promise that returns no value. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 201 | the application does not have permission to call this function. |
-| 202 | not system application<br>**Applicable version:** 10 - 19 |
+| [201](../../errorcode-universal.md#201-permission-denied) | the application does not have permission to call this function. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | not system application<br>**Applicable version:** 10 - 19 |
 
 ## Examples
 

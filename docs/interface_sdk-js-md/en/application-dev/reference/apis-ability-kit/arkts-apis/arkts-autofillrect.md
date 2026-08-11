@@ -2,11 +2,9 @@
 
 ## Summary
 
-<!--Del-->
-### Interfaces（系统接口）
+### Interfaces
 
 | Name | Description |
 | --- | --- |
-| [AutoFillRect](arkts-ability-autofillrect-i-sys.md) | 用于自动填充的矩形区域。 |
-<!--DelEnd-->
+| [AutoFillRect](arkts-ability-autofillrect-i.md) | AutoFillRect describes the rectangle used for auto-fill. |
 

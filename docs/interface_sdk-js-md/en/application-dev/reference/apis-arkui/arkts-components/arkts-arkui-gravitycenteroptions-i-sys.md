@@ -1,6 +1,6 @@
 # GravityCenterOptions (System API)
 
-定义引力中心的参数。
+Defines the parameters of the center of gravity.
 
 **Since:** 26.0.0
 
@@ -18,7 +18,7 @@
 gravityCenter?: boolean
 ```
 
-指定当前组件是否为引力中心。 默认值： 非。
+Specifies whether the current component is the center of gravity.&lt;br&gt;Default value:false.
 
 **Type:** boolean
 
@@ -40,7 +40,7 @@ gravityCenter?: boolean
 gravityIntensity?: double
 ```
 
-定义引力中心吸引力/排斥力的引力强度。 负数是排斥力，正数是吸引力。 默认值： 0。
+Defines the gravitational strength of the attraction/repulsion force at the gravitational center.&lt;br&gt;Default value:0.&lt;br&gt;Negative numbers are repulsion, positive numbers are attractionn.
 
 **Type:** double
 

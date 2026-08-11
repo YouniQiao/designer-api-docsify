@@ -1,6 +1,6 @@
 # TabBarIconStyle
 
-Label图标样式对象。
+Represents a label icon style object.
 
 **Since:** 12
 
@@ -16,13 +16,13 @@ Label图标样式对象。
 selectedColor?: ResourceColor
 ```
 
-设置Label图标选中时的颜色。
+Color of the label icon when it is selected.
 
-默认值：#FF007DFF
+Default value: **#FF007DFF**
 
-**说明：**
+**NOTE：**
 
-仅对svg图源生效，设置后会替换svg图片的填充颜色。
+This attribute only applies to an SVG image. Once set, the fill color will replace that of the SVG image.
 
 **Type:** [ResourceColor](../arkts-apis/arkts-arkui-resourcecolor-t.md)
 
@@ -46,13 +46,13 @@ selectedColor?: ResourceColor
 unselectedColor?: ResourceColor
 ```
 
-设置Label图标未选中时的颜色。
+Color of the label icon when it is not selected.
 
-默认值：#33182431
+Default value: **#33182431**
 
-**说明：**
+**NOTE：**
 
-仅对svg图源生效，设置后会替换svg图片的填充颜色。
+This attribute only applies to an SVG image. Once set, the fill color will replace that of the SVG image.
 
 **Type:** [ResourceColor](../arkts-apis/arkts-arkui-resourcecolor-t.md)
 

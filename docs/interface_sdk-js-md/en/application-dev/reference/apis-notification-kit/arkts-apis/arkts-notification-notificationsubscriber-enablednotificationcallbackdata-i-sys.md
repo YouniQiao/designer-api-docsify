@@ -1,6 +1,6 @@
 # EnabledNotificationCallbackData (System API)
 
-应用使能状态变化的回调函数类型。
+Returns the changes of the application enabling state.
 
 **Since:** 8
 
@@ -18,7 +18,7 @@
 readonly bundle: string
 ```
 
-应用的包名。
+Bundle name of the application.
 
 **Type:** string
 
@@ -38,9 +38,9 @@ readonly bundle: string
 readonly enable: boolean
 ```
 
-应用通知使能状态。  
-- true：允许。  
-- false：禁止。
+Whether the application notification is enabled.  
+- **true**: enabled.  
+- **false**: disabled.
 
 **Type:** boolean
 
@@ -60,7 +60,7 @@ readonly enable: boolean
 readonly uid: int
 ```
 
-应用的uid。
+UID of the application.
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 

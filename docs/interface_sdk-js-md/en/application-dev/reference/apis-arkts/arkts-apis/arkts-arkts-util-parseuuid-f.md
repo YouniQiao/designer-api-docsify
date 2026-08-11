@@ -38,5 +38,5 @@ Parse a UUID from the string standard representation as described in the RFC 412
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 10200002 | Invalid uuid string. |
+| [10200002](../errorcode-utils.md#10200002-parameter-parsing-error) | Invalid uuid string. |
 

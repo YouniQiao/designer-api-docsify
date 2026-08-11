@@ -26,7 +26,7 @@ export declare function PluginComponent(
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| options | [PluginComponentOptions](../arkts-components/arkts-arkui-plugincomponentoptions-i-sys.md) | 是 | 定义用于构造插件组件的选项。 |
+| options | [PluginComponentOptions](arkts-arkui-plugincomponent-plugincomponentoptions-i-sys.md) | 是 | 定义用于构造插件组件的选项。 |
 
 **返回值：**
 

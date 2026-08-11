@@ -1,6 +1,6 @@
 # CoordinatesOptions
 
-设置坐标选项对象，用于指定坐标系的变换方向。
+Describes the coordinate options.
 
 **Since:** 8
 
@@ -22,7 +22,7 @@ import { sensor } from 'kits/@kit.SensorServiceKit';
 x: int
 ```
 
-x坐标方向，用于指定旋转矩阵变换在x轴的方向。
+X coordinate direction.
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
@@ -40,7 +40,7 @@ x坐标方向，用于指定旋转矩阵变换在x轴的方向。
 y: int
 ```
 
-y坐标方向，用于指定旋转矩阵变换在y轴的方向。
+Y coordinate direction.
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 

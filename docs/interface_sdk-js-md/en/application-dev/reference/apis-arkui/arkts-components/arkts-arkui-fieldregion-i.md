@@ -1,6 +1,6 @@
 # FieldRegion
 
-用于设置粒子场的区域信息。
+Defines the area information of the particle field.
 
 **Since:** 22
 

@@ -7,6 +7,6 @@
 
 | Name | Description |
 | --- | --- |
-| [PermissionDef](arkts-ability-permissiondef-i-sys.md) | [module.json5配置文件](../../../quick-start/module-configuration-file.md)中定义的权限详细信息，通过接口  [bundleManager.getPermissionDef](arkts-ability-bundlemanager-getpermissiondef-f-sys.md#getpermissiondef)获取。 |
+| [PermissionDef](arkts-ability-permissiondef-i-sys.md) | The module provides permission details defined in the  [module.json5](../../../quick-start/module-configuration-file.md) file. The information can be obtained using  [bundleManager.getPermissionDef](arkts-ability-bundlemanager-getpermissiondef-f-sys.md#getpermissiondef).  > **NOTE：** >  > The APIs provided by this module are system APIs. |
 <!--DelEnd-->
 

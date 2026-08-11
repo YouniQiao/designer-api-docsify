@@ -12,9 +12,7 @@ import { errorManager } from 'kits/@kit.AbilityKit';
 function setDefaultFreezeObserver(defaultObserver?: FreezeObserver) : FreezeObserver
 ```
 
-设置默认冻屏观测器。此函数将在通过errorManager.on注册的回调函数执行后立即执行。可用于替代errorManager.on实现链式调用。如果为某个模块设置空观测器，将导致调用链中断。
-
-此API必须在主线程中调用。
+Set the default freeze observer, This function will be executed right after the callback function registered through errorManager.on is executed. You can use it to implement chain calls instead of errorManager.on.If an empty observer is set for a certain module, it will cause the call chain to be interrupted.This API must be called in the main thread.
 
 **Since:** 26.0.0
 
@@ -32,17 +30,17 @@ function setDefaultFreezeObserver(defaultObserver?: FreezeObserver) : FreezeObse
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| defaultObserver | [FreezeObserver](arkts-ability-errormanager-freezeobserver-t.md) | No | 默认冻屏观测器。 |
+| defaultObserver | [FreezeObserver](arkts-ability-errormanager-freezeobserver-t.md) | No | The default freeze observer. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [FreezeObserver](arkts-ability-errormanager-freezeobserver-t.md) | 返回原来的默认冻屏观测器。 |
+| [FreezeObserver](arkts-ability-errormanager-freezeobserver-t.md) | Returns the original default freeze observer. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 16000205 | API未在主线程中调用。 |
+| [16000205](../errorcode-ability.md#16000205-api-not-called-in-main-thread) | The API is not called on the main thread. |
 

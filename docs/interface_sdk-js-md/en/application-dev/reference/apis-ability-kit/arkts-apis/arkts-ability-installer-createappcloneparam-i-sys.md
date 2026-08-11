@@ -1,6 +1,6 @@
 # CreateAppCloneParam (System API)
 
-创建分身应用可指定的参数信息。
+Describes the parameters used for creating an application clone.
 
 **Since:** 12
 
@@ -24,7 +24,7 @@ import { installer } from 'kits/@kit.AbilityKit';
 appIndex?: int
 ```
 
-指定创建分身应用的索引值。默认值：当前可用的最小索引值。
+Index of the clone. The default value is the currently available minimum index.
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
@@ -44,8 +44,8 @@ appIndex?: int
 userId?: int
 ```
 
-指定创建分身应用所在的用户ID，可以通过  
-[getOsAccountLocalId接口](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-osaccount-accountmanager-i.md/arkts-basicservices-osaccount-accountmanager-i.md#getosaccountlocalid)获取。默认值：调用方所在用户。
+ID of the user for whom the clone is to be created. You can obtain the user ID by calling  
+[getOsAccountLocalId](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-osaccount-accountmanager-i.md/arkts-basicservices-osaccount-accountmanager-i.md#getosaccountlocalid). The default value is the user ID of the caller.
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 

@@ -1,6 +1,6 @@
 # RetentionPolicy
 
-描述注解类型保留策略的枚举类型。其枚举值和Retention结合使用，以指定注解的生命周期。
+Enum for Retention annotation field type.
 
 **Since:** 24
 
@@ -16,7 +16,7 @@
 SOURCE = 'source'
 ```
 
-注解将在编译期被移除。
+Enumerated value, which is used to identify source annotations.
 
 **Since:** 24
 
@@ -34,7 +34,7 @@ SOURCE = 'source'
 BYTECODE = 'bytecode'
 ```
 
-注解将保留到编译产物中。
+Enumerated value, which is used to identify bytecode annotations.
 
 **Since:** 24
 

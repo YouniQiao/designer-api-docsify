@@ -12,12 +12,6 @@
 
 **系统能力：** SystemCapability.Window.SessionManager
 
-## 导入模块
-
-```TypeScript
-import { PiPWindow } from 'kits/@kit.ArkUI';
-```
-
 ## getPiPSettingSwitch
 
 ```TypeScript
@@ -46,25 +40,23 @@ getPiPSettingSwitch(): Promise<boolean>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 801 | Capability not supported. Failed to call the API due to limited device capabilities. |
-| 1300014 | PiP internal error. Possible cause: The PiP controller has been destroyed. |
+| [801](../../errorcode-universal.md#801-该设备不支持此api) | Capability not supported. Failed to call the API due to limited device capabilities. |
+| [1300014](../errorcode-window.md#1300014-画中画内部错误) | PiP internal error. Possible cause: The PiP controller has been destroyed. |
 
 ## 示例
 
 ```TypeScript
 let pipSwitchStatus: boolean | undefined = undefined;
 try {
-  // 获取自动启动画中画开关状态
   let promise : Promise<boolean> = this.pipController.getPiPSettingSwitch();
   promise.then((data) => {
-    // 保存获取到的开关状态
     pipSwitchStatus = data;
     console.info('Succeeded in getting pip switch status. switchStatus: ' + JSON.stringify(data));
-  }).catch((err: BusinessError) => {
-    console.error(`Failed to get pip switch status. Code: ${err.code}, message: ${err.message}`);
+  }).catch((err: BusinessError): void => {
+    console.error(`Failed to get pip switch status. Cause code: ${err.code}, message: ${err.message}`);
   });
 } catch (exception) {
-  console.error(`Failed to get pip switch status. Code: ${exception.code}, message: ${exception.message}`);
+  console.error(`Failed to get pip switch status. Cause code: ${exception.code}, message: ${exception.message}`);
 }
 ```
 
@@ -96,25 +88,23 @@ getPiPWindowInfo(): Promise<PiPWindowInfo>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 801 | Capability not supported. Failed to call the API due to limited device capabilities. |
-| 1300014 | PiP internal error. Possible causes: &lt;br&gt;1.The PiP controller has been destroyed. &lt;br&gt;2.The PiP window is not created or has been destroyed. |
+| [801](../../errorcode-universal.md#801-该设备不支持此api) | Capability not supported. Failed to call the API due to limited device capabilities. |
+| [1300014](../errorcode-window.md#1300014-画中画内部错误) | PiP internal error. Possible causes: &lt;br&gt;1.The PiP controller has been destroyed. &lt;br&gt;2.The PiP window is not created or has been destroyed. |
 
 ## 示例
 
 ```TypeScript
 let pipWindowInfo: PiPWindow.PiPWindowInfo | undefined = undefined;
 try {
-  // 获取画中画窗口信息
   let promise : Promise<PiPWindow.PiPWindowInfo> = this.pipController.getPiPWindowInfo();
   promise.then((data) => {
-    // 保存获取到的画中画窗口信息
     pipWindowInfo = data;
     console.info('Success in get pip window info. Info: ' + JSON.stringify(data));
-  }).catch((err: BusinessError) => {
-    console.error(`Failed to get pip window info. Code: ${err.code}, message: ${err.message}`);
+  }).catch((err: BusinessError): void => {
+    console.error(`Failed to get pip window info. Cause code: ${err.code}, message: ${err.message}`);
   });
 } catch (exception) {
-  console.error(`Failed to get pip window info. Code: ${exception.code}, message: ${exception.message}`);
+  console.error(`Failed to get pip window info. Cause code: ${exception.code}, message: ${exception.message}`);
 }
 ```
 
@@ -146,24 +136,22 @@ isPiPActive(): Promise<boolean>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 1300014 | PiP internal error. Possible causes: &lt;br&gt;1.The PiP controller has been destroyed. &lt;br&gt;2.The PiP window is not created or has been destroyed. |
+| [1300014](../errorcode-window.md#1300014-画中画内部错误) | PiP internal error. Possible causes: &lt;br&gt;1.The PiP controller has been destroyed. &lt;br&gt;2.The PiP window is not created or has been destroyed. |
 
 ## 示例
 
 ```TypeScript
 let pipActiveStatus: boolean | undefined = undefined;
 try {
-  // 获取画中画的可见状态
   let promise : Promise<boolean> | undefined = this.pipController?.isPiPActive();
   promise?.then((data) => {
-    // 保存获取到的画中画可见状态
     pipActiveStatus = data;
     console.info('Succeeded in getting pip active status. activeStatus: ' + JSON.stringify(data));
-  }).catch((err: BusinessError) => {
-    console.error(`Failed to get pip active status. Code: ${err.code}, message: ${err.message}`);
+  }).catch((err: BusinessError): void => {
+    console.error(`Failed to get pip active status. Cause code: ${err.code}, message: ${err.message}`);
   });
 } catch (exception) {
-  console.error(`Failed to get pip active status. Code: ${exception.code}, message: ${exception.message}`);
+  console.error(`Failed to get pip active status. Cause code: ${exception.code}, message: ${exception.message}`);
 }
 ```
 
@@ -194,7 +182,6 @@ off(type: 'stateChange'): void
 ## 示例
 
 ```TypeScript
-// 关闭画中画生命周期状态变化的监听
 this.pipController.off('stateChange');
 ```
 
@@ -226,7 +213,6 @@ off(type: 'controlPanelActionEvent'): void
 ## 示例
 
 ```TypeScript
-// 关闭画中画控制面板控件动作事件的监听
 this.pipController.off('controlPanelActionEvent');
 ```
 
@@ -261,7 +247,6 @@ off(type: 'controlEvent', callback?: Callback<ControlEventParam>): void
 let callbackFunc = (event: PiPWindow.ControlEventParam) => {
   console.info(`receive control event: ${event.controlType}, ${event.status}`);
 }
-// 关闭画中画控制面板控件动作事件的监听
 this.pipController.off('controlEvent', callbackFunc);
 ```
 
@@ -294,7 +279,7 @@ off(type: 'pipWindowSizeChange', callback?: Callback<PiPWindowSize>): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 801 | Capability not supported. Failed to call the API due to limited device capabilities. |
+| [801](../../errorcode-universal.md#801-该设备不支持此api) | Capability not supported. Failed to call the API due to limited device capabilities. |
 
 ## 示例
 
@@ -306,7 +291,7 @@ try {
   // 通过on接口开启监听
   this.pipController.on('pipWindowSizeChange', callback);
 } catch (exception) {
-  console.error(`Failed to enable the listener for pip window size changes. Code: ${exception.code}, message: ${exception.message}`);
+  console.error(`Failed to enable the listener for pip window size changes. Cause code: ${exception.code}, message: ${exception.message}`);
 }
 
 try {
@@ -315,7 +300,7 @@ try {
   // 如果通过on开启多个callback进行监听，同时关闭所有监听：
   this.pipController.off('pipWindowSizeChange');
 } catch (exception) {
-  console.error(`Failed to disable the listener for pip window size changes. Code: ${exception.code}, message: ${exception.message}`);
+  console.error(`Failed to disable the listener for pip window size changes. Cause code: ${exception.code}, message: ${exception.message}`);
 }
 ```
 
@@ -350,7 +335,6 @@ off(type: 'activeStatusChange', callback?: Callback<boolean>): void
 let callback = (activeStatus: boolean) => {
   console.info(`pip window is visible: ${activeStatus}`);
 }
-// 关闭画中画窗口可见状态变化事件的监听
 this.pipController.off('activeStatusChange', callback);
 ```
 
@@ -380,8 +364,8 @@ offActiveStatusChange(callback?: Callback<boolean>): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 801 | Capability not supported. function offActiveStatusChange(callback) can not work correctly due to limited device capabilities. |
-| 1300014 | PiP internal error. |
+| [801](../../errorcode-universal.md#801-该设备不支持此api) | Capability not supported. function offActiveStatusChange(callback) can not work correctly due to limited device capabilities. |
+| [1300014](../errorcode-window.md#1300014-画中画内部错误) | PiP internal error. |
 
 ## offControlEvent
 
@@ -405,6 +389,15 @@ offControlEvent(callback?: Callback<ControlEventParam>): void
 | --- | --- | --- | --- |
 | callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;ControlEventParam&gt; | 否 | 描述画中画控制面板控件动作事件回调。如果未传入参数，解除画中画控制面板控件动作事件的所有回调。 |
 
+## 示例
+
+```TypeScript
+let callbackFunc = (event: PiPWindow.ControlEventParam) => {
+  console.info(`receive control event: ${event.controlType}, ${event.status}`);
+}
+this.pipController.offControlEvent(callbackFunc);
+```
+
 ## offControlPanelActionEvent
 
 ```TypeScript
@@ -420,6 +413,12 @@ offControlPanelActionEvent(): void
 <!--Device-PiPController-offControlPanelActionEvent(): void--><!--Device-PiPController-offControlPanelActionEvent(): void-End-->
 
 **系统能力：** SystemCapability.Window.SessionManager
+
+## 示例
+
+```TypeScript
+this.pipController.offControlPanelActionEvent();
+```
 
 ## offPipWindowSizeChange
 
@@ -447,7 +446,30 @@ offPipWindowSizeChange(callback?: Callback<PiPWindowSize>): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 801 | Capability not supported. Failed to call the API due to limited device capabilities. |
+| [801](../../errorcode-universal.md#801-该设备不支持此api) | Capability not supported. Failed to call the API due to limited device capabilities. |
+
+## 示例
+
+```TypeScript
+const callback = (size: PiPWindow.PiPWindowSize) => {
+  // ...
+}
+try {
+  // 通过on接口开启监听
+  this.pipController.onPipWindowSizeChange(callback);
+} catch (exception) {
+  console.error(`Failed to enable the listener for pip window size changes. Cause code: ${exception.code}, message: ${exception.message}`);
+}
+
+try {
+  // 关闭指定callback的监听
+  this.pipController.offPipWindowSizeChange(callback);
+  // 如果通过on开启多个callback进行监听，同时关闭所有监听：
+  this.pipController.offPipWindowSizeChange();
+} catch (exception) {
+  console.error(`Failed to disable the listener for pip window size changes. Cause code: ${exception.code}, message: ${exception.message}`);
+}
+```
 
 ## offStateChange
 
@@ -464,6 +486,12 @@ offStateChange(): void
 <!--Device-PiPController-offStateChange(): void--><!--Device-PiPController-offStateChange(): void-End-->
 
 **系统能力：** SystemCapability.Window.SessionManager
+
+## 示例
+
+```TypeScript
+this.pipController.offStateChange();
+```
 
 ## on('stateChange')
 
@@ -493,7 +521,6 @@ on(type: 'stateChange', callback: (state: PiPState, reason: string) => void): vo
 ## 示例
 
 ```TypeScript
-// 开启画中画生命周期状态变化的监听
 this.pipController.on('stateChange', (state: PiPWindow.PiPState, reason: string) => {
   let curState: string = '';
   switch (state) {
@@ -551,7 +578,6 @@ on(type: 'controlPanelActionEvent', callback: ControlPanelActionEventCallback): 
 ## 示例
 
 ```TypeScript
-// 开启画中画控制面板控件动作事件的监听
 this.pipController.on('controlPanelActionEvent', (event: PiPWindow.PiPActionEventType, status?: number) => {
   switch (event) {
     case 'playbackStateChanged':
@@ -608,7 +634,6 @@ on(type: 'controlEvent', callback: Callback<ControlEventParam>): void
 ## 示例
 
 ```TypeScript
-// 开启画中画控制面板控件动作事件的监听
 this.pipController.on('controlEvent', (control) => {
   switch (control.controlType) {
     case PiPWindow.PiPControlType.VIDEO_PLAY_PAUSE:
@@ -666,19 +691,18 @@ on(type: 'pipWindowSizeChange', callback: Callback<PiPWindowSize>): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 801 | Capability not supported. Failed to call the API due to limited device capabilities. |
-| 1300014 | PiP internal error. |
+| [801](../../errorcode-universal.md#801-该设备不支持此api) | Capability not supported. Failed to call the API due to limited device capabilities. |
+| [1300014](../errorcode-window.md#1300014-画中画内部错误) | PiP internal error. |
 
 ## 示例
 
 ```TypeScript
 try {
-  // 开启画中画窗口尺寸变化事件的监听
   this.pipController.on('pipWindowSizeChange', (size: PiPWindow.PiPWindowSize) => {
     console.info('Succeeded in enabling the listener for pip window size changes. size: ' + JSON.stringify(size));
   });
 } catch (exception) {
-  console.error(`Failed to enable the listener for pip window size changes. Code: ${exception.code}, message: ${exception.message}`);
+  console.error(`Failed to enable the listener for pip window size changes. Cause code: ${exception.code}, message: ${exception.message}`);
 }
 ```
 
@@ -713,7 +737,6 @@ on(type: 'activeStatusChange', callback: Callback<boolean>): void
 let callback = (activeStatus: boolean) => {
   console.info(`pip window is visible: ${activeStatus}`);
 }
-// 开启画中画窗口可见状态变化事件的监听
 this.pipController.on('activeStatusChange', callback);
 ```
 
@@ -743,8 +766,17 @@ onActiveStatusChange(callback: Callback<boolean>): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 801 | Capability not supported. function onActiveStatusChange(callback) can not work correctly due to limited device capabilities. |
-| 1300014 | PiP internal error. Possible cause: The PiP controller has been destroyed. |
+| [801](../../errorcode-universal.md#801-该设备不支持此api) | Capability not supported. function onActiveStatusChange(callback) can not work correctly due to limited device capabilities. |
+| [1300014](../errorcode-window.md#1300014-画中画内部错误) | PiP internal error. Possible cause: The PiP controller has been destroyed. |
+
+## 示例
+
+```TypeScript
+let callback = (activeStatus: boolean) => {
+  console.info(`pip window is visible: ${activeStatus}`);
+}
+this.pipController.onActiveStatusChange(callback);
+```
 
 ## onControlEvent
 
@@ -768,6 +800,37 @@ onControlEvent(callback: Callback<ControlEventParam>): void
 | --- | --- | --- | --- |
 | callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;ControlEventParam&gt; | 是 | 描述画中画控制面板控件动作事件回调。 |
 
+## 示例
+
+```TypeScript
+this.pipController.onControlEvent((control) => {
+  switch (control.controlType) {
+    case PiPWindow.PiPControlType.VIDEO_PLAY_PAUSE:
+      if (control.status === PiPWindow.PiPControlStatus.PAUSE) {
+        // 停止视频
+      } else if (control.status === PiPWindow.PiPControlStatus.PLAY) {
+        // 播放视频
+      }
+      break;
+    case PiPWindow.PiPControlType.VIDEO_NEXT:
+      // 切换到下一个视频
+      break;
+    case PiPWindow.PiPControlType.VIDEO_PREVIOUS:
+      // 切换到上一个视频
+      break;
+    case PiPWindow.PiPControlType.FAST_FORWARD:
+      // 视频进度快进
+      break;
+    case PiPWindow.PiPControlType.FAST_BACKWARD:
+      // 视频进度后退
+      break;
+    default:
+      break;
+  }
+  console.info('registerControlEventCallback, controlType:' + control.controlType + ', status' + control.status);
+});
+```
+
 ## onControlPanelActionEvent
 
 ```TypeScript
@@ -789,6 +852,37 @@ onControlPanelActionEvent(callback: ControlPanelActionEventCallback): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | callback | [ControlPanelActionEventCallback](arkts-arkui-pipwindow-controlpanelactioneventcallback-t.md) | 是 | Used to handle {'controlPanelActionEvent'} command. |
+
+## 示例
+
+```TypeScript
+this.pipController.onControlPanelActionEvent((event: PiPWindow.PiPActionEventType, status?: int) => {
+  switch (event) {
+    case 'playbackStateChanged':
+      if (status === 0) {
+        // 停止视频
+      } else if (status === 1) {
+        // 播放视频
+      }
+      break;
+    case 'nextVideo':
+      // 切换到下一个视频
+      break;
+    case 'previousVideo':
+      // 切换到上一个视频
+      break;
+    case 'fastForward':
+      // 视频进度快进
+      break;
+    case 'fastBackward':
+      // 视频进度后退
+      break;
+    default:
+      break;
+  }
+  console.info('registerActionEventCallback, event:' + event);
+});
+```
 
 ## onPipWindowSizeChange
 
@@ -816,8 +910,20 @@ onPipWindowSizeChange(callback: Callback<PiPWindowSize>): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 801 | Capability not supported. Failed to call the API due to limited device capabilities. |
-| 1300014 | PiP internal error. Possible cause: The PiP controller has been destroyed. |
+| [801](../../errorcode-universal.md#801-该设备不支持此api) | Capability not supported. Failed to call the API due to limited device capabilities. |
+| [1300014](../errorcode-window.md#1300014-画中画内部错误) | PiP internal error. Possible cause: The PiP controller has been destroyed. |
+
+## 示例
+
+```TypeScript
+try {
+  this.pipController.onPipWindowSizeChange((size: PiPWindow.PiPWindowSize) => {
+    console.info('Succeeded in enabling the listener for pip window size changes. size: ' + JSON.stringify(size));
+  });
+} catch (exception) {
+  console.error(`Failed to enable the listener for pip window size changes. Cause code: ${exception.code}, message: ${exception.message}`);
+}
+```
 
 ## onStateChange
 
@@ -840,6 +946,37 @@ onStateChange(callback: StateChangeCallback): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | callback | [StateChangeCallback](arkts-arkui-pipwindow-statechangecallback-t.md) | 是 | 描述画中画生命周期状态变化回调。 |
+
+## 示例
+
+```TypeScript
+this.pipController.onStateChange((state: PiPWindow.PiPState, reason: string) => {
+  let curState: string = '';
+  switch (state) {
+    case PiPWindow.PiPState.ABOUT_TO_START:
+      curState = 'ABOUT_TO_START';
+      break;
+    case PiPWindow.PiPState.STARTED:
+      curState = 'STARTED';
+      break;
+    case PiPWindow.PiPState.ABOUT_TO_STOP:
+      curState = 'ABOUT_TO_STOP';
+      break;
+    case PiPWindow.PiPState.STOPPED:
+      curState = 'STOPPED';
+      break;
+    case PiPWindow.PiPState.ABOUT_TO_RESTORE:
+      curState = 'ABOUT_TO_RESTORE';
+      break;
+    case PiPWindow.PiPState.ERROR:
+      curState = 'ERROR';
+      break;
+    default:
+      break;
+  }
+  console.info('stateChange:' + curState + ' reason:' + reason);
+});
+```
 
 ## setAutoStartEnabled
 
@@ -871,7 +1008,7 @@ setAutoStartEnabled(enable: boolean): void
 
 ```TypeScript
 let enable: boolean = true;
-this.pipController.setAutoStartEnabled(enable); // 设置应用主窗退后台时自动启动画中画
+this.pipController.setAutoStartEnabled(enable);
 ```
 
 ## setPiPControlEnabled
@@ -904,7 +1041,7 @@ setPiPControlEnabled(controlType: PiPControlType, enabled: boolean): void
 ```TypeScript
 let controlType: PiPWindow.PiPControlType = PiPWindow.PiPControlType.VIDEO_PLAY_PAUSE; // 视频播放控制面板中播放/暂停控件。
 let enabled: boolean = false; // 视频播放控制面板中播放/暂停控件为禁用状态。
-this.pipController.setPiPControlEnabled(controlType, enabled); // 设置控制面板控件使能状态
+this.pipController.setPiPControlEnabled(controlType, enabled);
 ```
 
 ## startPiP
@@ -935,20 +1072,20 @@ startPiP(): Promise<void>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 1300034 | This operation conflicts with other floating windows. Possible cause: App has already started float view.<br>**适用版本：** 26.0.0+ |
-| 1300015 | Repeated PiP operation. |
-| 1300014 | PiP internal error. Possible cause: Internal error, failed to show the PiP window. such as insufficient resources or abnormal window service. |
-| 1300013 | Failed to create the PiP window. Possible causes: &lt;br&gt;1.PiP configuration parameters are invalid, such as pipOption or context is null. &lt;br&gt;2.The XComponentController or main window is null. &lt;br&gt;3.The main window is not shown (non-auto-start scenario). &lt;br&gt;4.Navigation component operation failed. |
-| 1300012 | The PiP window state is abnormal. Possible causes: &lt;br&gt;1.The PiP controller has been destroyed. &lt;br&gt;2.The PiP window is not created or has been destroyed. |
+| [1300034](../errorcode-window.md#1300034-闪控窗与其他悬浮窗口操作冲突) | This operation conflicts with other floating windows. Possible cause: App has already started float view.<br>**适用版本：** 26.0.0+ |
+| [1300015](../errorcode-window.md#1300015-重复操作画中画) | Repeated PiP operation. |
+| [1300014](../errorcode-window.md#1300014-画中画内部错误) | PiP internal error. Possible cause: Internal error, failed to show the PiP window. such as insufficient resources or abnormal window service. |
+| [1300013](../errorcode-window.md#1300013-创建画中画窗口失败) | Failed to create the PiP window. Possible causes: &lt;br&gt;1.PiP configuration parameters are invalid, such as pipOption or context is null. &lt;br&gt;2.The XComponentController or main window is null. &lt;br&gt;3.The main window is not shown (non-auto-start scenario). &lt;br&gt;4.Navigation component operation failed. |
+| [1300012](../errorcode-window.md#1300012-画中画窗口状态异常) | The PiP window state is abnormal. Possible causes: &lt;br&gt;1.The PiP controller has been destroyed. &lt;br&gt;2.The PiP window is not created or has been destroyed. |
 
 ## 示例
 
 ```TypeScript
 // 开发者可根据pipController的定义方式自行实现pipController的调用
-let promise : Promise<void> = this.pipController.startPiP(); // 启动画中画
+let promise : Promise<void> = this.pipController.startPiP();
 promise.then(() => {
   console.info(`Succeeded in starting pip.`);
-}).catch((err: BusinessError) => {
+}).catch((err: BusinessError): void => {
   console.error(`Failed to start pip. Cause:${err.code}, message:${err.message}`);
 });
 ```
@@ -981,17 +1118,17 @@ stopPiP(): Promise<void>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 1300011 | Failed to destroy the PiP window. Possible cause: Internal error, the window type is not a PiP window. |
-| 1300015 | Repeated PiP operation. |
-| 1300012 | The PiP window state is abnormal. Possible cause: The PiP window is not created or has been destroyed. |
+| [1300011](../errorcode-window.md#1300011-销毁画中画窗口失败) | Failed to destroy the PiP window. Possible cause: Internal error, the window type is not a PiP window. |
+| [1300015](../errorcode-window.md#1300015-重复操作画中画) | Repeated PiP operation. |
+| [1300012](../errorcode-window.md#1300012-画中画窗口状态异常) | The PiP window state is abnormal. Possible cause: The PiP window is not created or has been destroyed. |
 
 ## 示例
 
 ```TypeScript
-let promise : Promise<void> = this.pipController.stopPiP(); // 停止画中画
+let promise : Promise<void> = this.pipController.stopPiP();
 promise.then(() => {
   console.info(`Succeeded in stopping pip.`);
-}).catch((err: BusinessError) => {
+}).catch((err: BusinessError): void => {
   console.error(`Failed to stop pip. Cause:${err.code}, message:${err.message}`);
 });
 ```
@@ -1030,21 +1167,43 @@ updateContentNode(contentNode: typeNode.XComponent): Promise<void>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 801 | Capability not supported. Failed to call the API due to limited device capabilities. |
-| 1300014 | PiP internal error. Possible cause: The PiP controller has been destroyed. |
+| [801](../../errorcode-universal.md#801-该设备不支持此api) | Capability not supported. Failed to call the API due to limited device capabilities. |
+| [1300014](../errorcode-window.md#1300014-画中画内部错误) | PiP internal error. Possible cause: The PiP controller has been destroyed. |
 
 ## 示例
+
+ArkTS-Dyn示例：
 
 ```TypeScript
 import { typeNode, UIContext } from '@kit.ArkUI';
 
-let context: UIContext = this.getUIContext(); // 通过this.getUIContext()获取UIContext
+let context: UIContext | undefined = undefined; // 可传入UIContext或在布局中通过this.getUIContext()为context赋有效值
 
 try {
-  let contentNode = typeNode.createNode(context, "XComponent"); // 创建XComponent节点用于渲染画中画内容
-  this.pipController.updateContentNode(contentNode); // 更新画中画节点内容
+  let contentNode = typeNode.createNode(context, "XComponent");
+  this.pipController.updateContentNode(contentNode);
 } catch (exception) {
-  console.error(`Failed to update content node. Code: ${exception.code}, message: ${exception.message}`);
+  console.error(`Failed to update content node. Cause: ${exception.code}, message: ${exception.message}`);
+}
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+import { typeNode } from 'arkui.FrameNode';
+import { UIContext } from '@ohos.arkui.UIContext';
+import { XComponentController, XComponentOptions } from '@ohos.arkui.component';
+
+try {
+  let context: UIContext = this.getUIContext(); // 可传入UIContext或在布局中通过this.getUIContext()为context赋有效值
+  let options: XComponentOptions = {
+    type: XComponentType.SURFACE,
+    controller: new XComponentController()
+  }
+  let contentNode: typeNode.XComponent = typeNode.createXComponentNodeWithOptions(context, options);
+  this.pipController?.updateContentNode(contentNode);
+} catch (exception) {
+  console.error(`Failed to update content node. Cause: ${exception.code}, message: ${exception.message}`);
 }
 ```
 
@@ -1081,10 +1240,20 @@ updateContentSize(width: int, height: int): void
 
 ## 示例
 
+ArkTS-Dyn示例：
+
 ```TypeScript
 let width: number = 540; // 假设当前内容宽度变为540px。
 let height: number = 960; // 假设当前内容高度变为960px。
-this.pipController.updateContentSize(width, height); // 更新画中画窗口内容尺寸
+this.pipController.updateContentSize(width, height);
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+let width: int = 540; // 假设当前内容宽度变为540px。
+let height: int = 960; // 假设当前内容高度变为960px。
+this.pipController.updateContentSize(width, height);
 ```
 
 ## updatePiPControlStatus
@@ -1117,6 +1286,6 @@ updatePiPControlStatus(controlType: PiPControlType, status: PiPControlStatus): v
 ```TypeScript
 let controlType: PiPWindow.PiPControlType = PiPWindow.PiPControlType.VIDEO_PLAY_PAUSE; // 视频播放控制面板中播放/暂停控件。
 let status: PiPWindow.PiPControlStatus = PiPWindow.PiPControlStatus.PLAY; // 视频播放控制面板中播放/暂停控件为播放状态。
-this.pipController.updatePiPControlStatus(controlType, status); // 更新控制面板控件状态
+this.pipController.updatePiPControlStatus(controlType, status);
 ```
 

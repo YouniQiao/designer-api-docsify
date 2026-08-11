@@ -1,11 +1,5 @@
 # updateConnectStatus
 
-## 导入模块
-
-```TypeScript
-import { continuationManager } from 'kits/@kit.AbilityKit';
-```
-
 ## updateConnectStatus
 
 ```TypeScript

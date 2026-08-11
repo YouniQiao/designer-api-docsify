@@ -1,6 +1,6 @@
 # Summary
 
-描述统一数据对象的数据摘要，包括数据类型和大小。
+Summarizes the data information of the **unifiedData** object, including the data type and size.
 
 **Since:** 10
 
@@ -22,7 +22,7 @@ import { unifiedDataChannel } from 'kits/@kit.ArkData';
 get overview(): Record<string, long>
 ```
 
-统一数据对象中所有类型与该类型数据记录大小的映射关系，其中数据大小单位为Byte。当获取到的统一数据对象为空时，此overview属性值为空。
+Indicates the overview information of unifiedData.
 
 **Type:** ArkTS-Dyn: [Record](../../apis-default/arkts-apis/arkts-record-t.md)&lt;string, number&gt;  <br>ArkTS-Sta：[Record](../../apis-default/arkts-apis/arkts-record-t.md)&lt;string, long&gt;
 
@@ -44,8 +44,7 @@ get overview(): Record<string, long>
 set summary(value: Record<string, long>)
 ```
 
-是一个字典类型对象，key表示数据类型（见  
-[UniformDataType](arkts-arkdata-uniformtypedescriptor-uniformdatatype-e.md)），value为统一数据对象中该类型记录大小总和（单位：Byte）。
+A map for each type and data size, key is data type, value is the corresponding data size
 
 **Type:** ArkTS-Dyn: [Record](../../apis-default/arkts-apis/arkts-record-t.md)&lt;string, number&gt;  <br>ArkTS-Sta：[Record](../../apis-default/arkts-apis/arkts-record-t.md)&lt;string, long&gt;
 
@@ -67,7 +66,7 @@ set summary(value: Record<string, long>)
 set totalSize(value: long)
 ```
 
-统一数据对象内记录总大小（单位：Byte）。
+Total data size of data in Bytes
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：long
 

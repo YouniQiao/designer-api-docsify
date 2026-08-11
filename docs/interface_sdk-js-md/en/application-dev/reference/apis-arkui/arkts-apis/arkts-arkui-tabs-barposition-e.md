@@ -1,6 +1,6 @@
 # BarPosition
 
-Tabs页签位置枚举。
+Declare the location of the bar chart.
 
 **Since:** 23
 
@@ -16,7 +16,7 @@ Tabs页签位置枚举。
 Start
 ```
 
-vertical属性方法设置为true时，页签位于容器左侧；vertical属性方法设置为false时，页签位于容器顶部。
+When the vertical attribute method is set to true, the tab is on the left of the container.When the vertical property method is set to false, the tab is at the top of the container.
 
 **Since:** 23
 
@@ -34,7 +34,7 @@ vertical属性方法设置为true时，页签位于容器左侧；vertical属性
 End
 ```
 
-vertical属性方法设置为true时，页签位于容器右侧；vertical属性方法设置为false时，页签位于容器底部。
+When the vertical attribute method is set to true, the tab is located on the right of the container.When the vertical property method is set to false, the tab is at the bottom of the container.
 
 **Since:** 23
 

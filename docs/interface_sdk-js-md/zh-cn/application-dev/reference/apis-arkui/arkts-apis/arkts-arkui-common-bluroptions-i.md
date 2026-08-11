@@ -21,7 +21,7 @@ grayscale: [
 
 Fuzzy gray scale parameter. Undefined value means no grayscale.
 
-**类型：** [         double,         double     ] \| undefined
+**类型：** [         double,         double     ] \| undefined
 
 **起始版本：** 23
 

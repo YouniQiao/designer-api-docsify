@@ -1,6 +1,6 @@
 # DecorationStyleResult
 
-后端返回的文本装饰线样式信息。
+Defines the font decoration result.
 
 **Since:** 23
 
@@ -16,7 +16,7 @@
 color: ResourceColor
 ```
 
-装饰线颜色。
+Font decoration color.
 
 **Type:** [ResourceColor](arkts-arkui-resourcecolor-t.md)
 
@@ -36,7 +36,7 @@ color: ResourceColor
 style?: TextDecorationStyle
 ```
 
-装饰线样式。
+The style value of the decoration property object.
 
 **Type:** [TextDecorationStyle](arkts-arkui-textdecorationstyle-e.md)
 
@@ -56,7 +56,7 @@ style?: TextDecorationStyle
 thicknessScale?: double
 ```
 
-装饰线粗细缩放比例。
+The thicknessScale value of the decoration property object.
 
 **Type:** double
 
@@ -76,7 +76,7 @@ thicknessScale?: double
 type: TextDecorationType
 ```
 
-装饰线类型。
+Font decoration type.
 
 **Type:** [TextDecorationType](arkts-arkui-textdecorationtype-e.md)
 

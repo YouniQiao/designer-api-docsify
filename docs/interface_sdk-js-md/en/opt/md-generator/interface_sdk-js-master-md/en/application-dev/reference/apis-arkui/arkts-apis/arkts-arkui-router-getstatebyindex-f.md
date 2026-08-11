@@ -1,0 +1,62 @@
+# getStateByIndex
+
+## Modules to Import
+
+```TypeScript
+import { router } from 'kits/@kit.ArkUI';
+```
+
+## getStateByIndex
+
+```TypeScript
+function getStateByIndex(index: number): RouterState | undefined
+```
+
+Obtains the status information about a page by its index.
+
+> **NOTE：**
+> 
+> - Since API version 12, you can use the
+> [getRouter](../../../reference/apis-arkui/arkts-apis-uicontext-uicontext.md#getrouter) API in
+> [UIContext](arkts-arkui-uicontext.md) to obtain the [Router](arkts-arkui-uicontext.md) object associated
+> with the current UI context.
+
+**Since:** 12
+
+**Deprecated since:** 18
+
+**Substitutes:** [@ohos.arkui.UIContext:Router#getStateByIndex](arkts-arkui-arkui-uicontext-router-c.md#getstatebyindex)
+
+**Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-router-function getStateByIndex(index: number): RouterState | undefined--><!--Device-router-function getStateByIndex(index: number): RouterState | undefined-End-->
+
+**System capability:** SystemCapability.ArkUI.ArkUI.Full
+
+**Parameters:**
+
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| index | number | Yes |
+
+**Return value:**
+
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| [RouterState](arkts-arkui-system-router-routerstate-i.md) |
+
+## Examples
+
+```TypeScript
+import { router } from '@kit.ArkUI';
+
+let options: router.RouterState | undefined = router.getStateByIndex(1);
+if (options != undefined) {
+  console.info('index = ' + options.index);
+  console.info('name = ' + options.name);
+  console.info('path = ' + options.path);
+  console.info(`params = ${JSON.stringify(options.params)}`);
+}
+```

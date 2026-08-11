@@ -37,7 +37,7 @@ Uses new to create Polyline.Anonymous Object Rectification.
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| options | [PolylineOptions](arkts-arkui-polylineoptions-i.md) | 否 | Poly line options |
+| options | [PolylineOptions](../arkts-apis/arkts-arkui-polyline-polylineoptions-i.md) | 否 | Poly line options |
 
 ## Polyline
 
@@ -63,7 +63,7 @@ Polyline(options?: PolylineOptions)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| options | [PolylineOptions](arkts-arkui-polylineoptions-i.md) | 否 | Polyline绘制区域，用于设置Polyline组件的宽度和高度。当需要指定Polyline的绘制区域大小时传入此参数，不传入时使用默认宽度和高度（均 为0）。 <br>异常值undefined和null按照无效值处理，本次设置不生效。 |
+| options | [PolylineOptions](../arkts-apis/arkts-arkui-polyline-polylineoptions-i.md) | 否 | Polyline绘制区域，用于设置Polyline组件的宽度和高度。当需要指定Polyline的绘制区域大小时传入此参数，不传入时使用默认宽度和高度（均 为0）。 <br>异常值undefined和null按照无效值处理，本次设置不生效。 |
 
 ## 汇总
 

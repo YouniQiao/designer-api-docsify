@@ -1,6 +1,7 @@
 # USBInterface
 
-一个[USBConfiguration](arkts-basicservices-usbmanager-usbconfiguration-i.md)中可以含有多个USBInterface，每个USBInterface提供一个功能。
+Represents a USB interface. One [USBConfiguration](arkts-basicservices-usbmanager-usbconfiguration-i.md) object can contain multiple *  
+*USBInterface** instances, each providing a specific function.
 
 **Since:** 9
 
@@ -22,7 +23,7 @@ import { usbManager } from 'kits/@kit.BasicServicesKit';
 alternateSetting: int
 ```
 
-在同一个接口中的多个描述符中进行切换设置。值的大小表示支持可选模式个数，其中0表示不支持可选模式。
+Settings for alternating between descriptors of the same USB interface. The value size indicates the number of optional modes. The value 0 indicates that no optional mode is supported.
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
@@ -40,7 +41,7 @@ alternateSetting: int
 clazz: int
 ```
 
-设备类型。
+Device type.
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
@@ -58,7 +59,7 @@ clazz: int
 endpoints: Array<USBEndpoint>
 ```
 
-当前接口所包含的端点。
+Endpoints that belong to the USB interface.
 
 **Type:** Array&lt;USBEndpoint&gt;
 
@@ -76,7 +77,7 @@ endpoints: Array<USBEndpoint>
 id: int
 ```
 
-接口的唯一标识。
+Unique ID of the USB interface.
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
@@ -94,7 +95,7 @@ id: int
 name: string
 ```
 
-接口名称。
+Interface name.
 
 **Type:** string
 
@@ -112,7 +113,7 @@ name: string
 protocol: int
 ```
 
-接口的协议。
+Interface protocol.
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
@@ -130,7 +131,7 @@ protocol: int
 subClass: int
 ```
 
-设备子类。
+Device subclass.
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 

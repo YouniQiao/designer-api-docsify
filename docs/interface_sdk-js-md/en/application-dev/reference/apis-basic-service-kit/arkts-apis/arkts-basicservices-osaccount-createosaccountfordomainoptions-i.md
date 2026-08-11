@@ -1,6 +1,6 @@
 # CreateOsAccountForDomainOptions (System API)
 
-表示用于创建与指定域账号绑定的系统账号的可选参数。继承自[CreateOsAccountOptions](arkts-basicservices-osaccount-createosaccountoptions-i-sys.md)。
+Represents a set of optional parameters for creating an OS account bound to the specified domain account. It inherits from [CreateOsAccountOptions](arkts-basicservices-osaccount-createosaccountoptions-i-sys.md).
 
 **Inheritance/Implementation:** CreateOsAccountForDomainOptions extends [CreateOsAccountOptions](arkts-basicservices-osaccount-createosaccountoptions-i-sys.md)
 

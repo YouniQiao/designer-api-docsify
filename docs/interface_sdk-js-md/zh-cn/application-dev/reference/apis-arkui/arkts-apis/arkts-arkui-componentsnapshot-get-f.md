@@ -1,11 +1,5 @@
 # get
 
-## 导入模块
-
-```TypeScript
-import { componentSnapshot } from 'kits/@kit.ArkUI';
-```
-
 ## get
 
 ```TypeScript
@@ -50,8 +44,8 @@ function get(id: string, callback: AsyncCallback<image.PixelMap>, options?: Snap
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 100001 | Invalid ID. |
-| 401 | Parameter error. Possible causes: &lt;br&gt; 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameters types. &lt;br&gt; 3. Parameter verification failed. |
+| [100001](../errorcode-internal.md#100001-接口调用异常错误码) | Invalid ID. |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: &lt;br&gt; 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameters types. &lt;br&gt; 3. Parameter verification failed. |
 
 ## 示例
 
@@ -146,8 +140,8 @@ function get(id: string, options?: SnapshotOptions): Promise<image.PixelMap>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 100001 | Invalid ID. |
-| 401 | Parameter error. Possible causes: &lt;br&gt; 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameters types. &lt;br&gt; 3. Parameter verification failed. |
+| [100001](../errorcode-internal.md#100001-接口调用异常错误码) | Invalid ID. |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: &lt;br&gt; 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameters types. &lt;br&gt; 3. Parameter verification failed. |
 
 ## 示例
 

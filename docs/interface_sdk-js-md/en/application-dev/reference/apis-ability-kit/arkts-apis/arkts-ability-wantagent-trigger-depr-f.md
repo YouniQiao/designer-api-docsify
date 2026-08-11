@@ -6,7 +6,7 @@
 function trigger(agent: WantAgent, triggerInfo: TriggerInfo, callback?: Callback<CompleteData>): void
 ```
 
-主动激发WantAgent实例。使用callback异步回调。
+Triggers a WantAgent.
 
 **Since:** 7
 
@@ -26,9 +26,9 @@ function trigger(agent: WantAgent, triggerInfo: TriggerInfo, callback?: Callback
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| agent | [WantAgent](arkts-ability-wantagent-t.md) | Yes | WantAgent对象。 |
-| triggerInfo | [TriggerInfo](arkts-ability-triggerinfo-triggerinfo-i.md) | Yes | TriggerInfo对象。 |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;CompleteData&gt; | No | 主动激发WantAgent实例的回调方法。 |
+| agent | [WantAgent](arkts-ability-wantagent-t.md) | Yes | to trigger. |
+| triggerInfo | [TriggerInfo](arkts-ability-triggerinfo-triggerinfo-i.md) | Yes | parameters. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;CompleteData&gt; | No | Indicates the callback method to be called after the {@link WantAgent} is triggered. |
 
 ## Examples
 

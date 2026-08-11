@@ -1,11 +1,5 @@
 # onActiveStateChange（系统接口）
 
-## 导入模块
-
-```TypeScript
-import { privacyManager } from 'kits/@kit.AbilityKit';
-```
-
 ## onActiveStateChange
 
 ```TypeScript
@@ -42,18 +36,38 @@ function onActiveStateChange(
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| permissionList | Array&lt;[Permissions](arkts-ability-permissions-t.md)&gt; | 是 | 订阅的权限名列表。为空时表示订阅所有的权限使用状态变化。传入无效值时返回错误码12100001。 &lt;br&gt;取值约束：数组长度不能超过1024。 |
+| permissionList | Array&lt;Permissions&gt; | 是 | 订阅的权限名列表。为空时表示订阅所有的权限使用状态变化。传入无效值时返回错误码12100001。 &lt;br&gt;取值约束：数组长度不能超过1024。 |
 | callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;ActiveChangeResponse&gt; | 是 | 回调函数，返回订阅指定权限使用状态变更事件的对象。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 12100008 | Out of memory. |
-| 201 | Permission denied. Interface caller does not have permission "ohos.permission.PERMISSION_USED_STATS". |
-| 12100001 | Invalid parameter. The permissionList exceeds the size limit, or the permissionNames in the list are all invalid. |
-| 202 | Not system app. Interface caller is not a system app. |
-| 12100004 | The API is used repeatedly with the same input. |
-| 12100005 | The registration time has exceeded the limit. |
-| 12100007 | Service exception. |
+| [12100008](../errorcode-access-token.md#12100008-内存申请失败) | Out of memory. |
+| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. Interface caller does not have permission "ohos.permission.PERMISSION_USED_STATS". |
+| [12100001](../errorcode-access-token.md#12100001-入参错误) | Invalid parameter. The permissionList exceeds the size limit, or the permissionNames in the list are all invalid. |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not system app. Interface caller is not a system app. |
+| [12100004](../errorcode-access-token.md#12100004-接口未配套使用) | The API is used repeatedly with the same input. |
+| [12100005](../errorcode-access-token.md#12100005-监听器数量超过限制) | The registration time has exceeded the limit. |
+| [12100007](../errorcode-access-token.md#12100007-系统服务工作异常) | Service exception. |
+
+## 示例
+
+```TypeScript
+import { privacyManager, Permissions } from '@kit.AbilityKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let permissionList: Array<Permissions> = [];
+try {
+  privacyManager.onActiveStateChange(permissionList, (data: privacyManager.ActiveChangeResponse) => {
+    console.debug('receive permission state change');
+    console.debug(`data calling tokenId: ${data.callingTokenId}, tokenId: ${data.tokenId}`);
+    console.debug(`data permission name: ${data.permissionName}, deviceId: ${data.deviceId}`);
+    console.debug(`data active status: ${data.activeStatus}, used type: ${data.usedType}`);
+  });
+} catch (err) {
+    let error = err as BusinessError;
+    console.error(`Catch errcode: ${error.code}, message: ${error.message}`);
+}
+```
 

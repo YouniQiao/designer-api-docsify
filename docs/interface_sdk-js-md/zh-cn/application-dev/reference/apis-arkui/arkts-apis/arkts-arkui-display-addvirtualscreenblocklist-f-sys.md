@@ -1,11 +1,5 @@
 # addVirtualScreenBlocklist（系统接口）
 
-## 导入模块
-
-```TypeScript
-import { display } from 'kits/@kit.ArkUI';
-```
-
 ## addVirtualScreenBlocklist
 
 ```TypeScript
@@ -40,12 +34,14 @@ function addVirtualScreenBlocklist(windowIds: Array<int>): Promise<void>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. 3. Parameter verification failed. |
-| 801 | Capability not supported. Function addVirtualScreenBlocklist can not work correctly due to limited device capabilities. |
-| 1400003 | This display manager service works abnormally. |
-| 202 | Permission verification failed. A non-system application calls a system API. |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. 3. Parameter verification failed. |
+| [801](../../errorcode-universal.md#801-该设备不支持此api) | Capability not supported. Function addVirtualScreenBlocklist can not work correctly due to limited device capabilities. |
+| [1400003](../errorcode-display.md#1400003-系统服务工作异常) | This display manager service works abnormally. |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed. A non-system application calls a system API. |
 
 ## 示例
+
+ArkTS-Dyn示例：
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -65,6 +61,30 @@ export default class EntryAbility extends UIAbility {
     }).catch((err: BusinessError) => {
       console.error(`Failed to add virtual screen blocklist. Code: ${err.code}, message: ${err.message}`);
     });
+  }
+}
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+import { display, window } from '@kit.ArkUI';
+
+export default class EntryAbility extends UIAbility {
+  // ...
+  onWindowStageCreate(windowStage: window.WindowStage) {
+    // ...
+    let windowId = windowStage.getMainWindowSync().getWindowProperties().id; // 获取窗口ID
+    let windowIds = [windowId];
+
+    // 将窗口添加到禁止投屏显示的名单
+    let promise = display.addVirtualScreenBlocklist(windowIds);
+    promise.then(() => {
+      console.info('Succeeded in adding virtual screen blocklist.');
+    }).catch((err: Error) => {
+      console.error(`Failed to add virtual screen blocklist. Code: ${err?.code} , message: ${err?.message}`);
+    })
   }
 }
 ```

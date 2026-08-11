@@ -4,7 +4,7 @@
 export type EventHub = _EventHub.default
 ```
 
-EventHub是系统提供的基于发布-订阅模式实现的事件通信机制。
+Defines EventHub, which is an event communication mechanism based on the publish-subscribe pattern.
 
 **Since:** 9
 

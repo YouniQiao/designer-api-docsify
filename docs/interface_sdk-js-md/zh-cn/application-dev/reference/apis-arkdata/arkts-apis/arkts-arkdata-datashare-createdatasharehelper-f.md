@@ -1,11 +1,5 @@
 # createDataShareHelper
 
-## 导入模块
-
-```TypeScript
-import { dataShare } from 'kits/@kit.ArkData';
-```
-
 ## createDataShareHelper
 
 ```TypeScript
@@ -36,9 +30,9 @@ function createDataShareHelper(context: Context, uri: string, callback: AsyncCal
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 401 | Parameter error.Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameters types. |
-| 15700010 | The DataShareHelper fails to be initialized. |
-| 202 | Permission verification failed. A non-system application calls a system API.<br>**适用版本：** 19+ |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error.Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameters types. |
+| [15700010](../errorcode-datashare.md#15700010-创建datasharehelper异常) | The DataShareHelper fails to be initialized. |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed. A non-system application calls a system API.<br>**适用版本：** 19+ |
 
 ## 示例
 
@@ -106,9 +100,9 @@ function createDataShareHelper(
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 401 | Parameter error.Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameters types. |
-| 15700010 | The DataShareHelper fails to be initialized. |
-| 202 | Permission verification failed. A non-system application calls a system API.<br>**适用版本：** 19+ |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error.Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameters types. |
+| [15700010](../errorcode-datashare.md#15700010-创建datasharehelper异常) | The DataShareHelper fails to be initialized. |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed. A non-system application calls a system API.<br>**适用版本：** 19+ |
 
 ## 示例
 
@@ -180,9 +174,9 @@ function createDataShareHelper(
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 401 | Parameter error.Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameters types. |
-| 15700010 | The DataShareHelper fails to be initialized. |
-| 202 | Permission verification failed. A non-system application calls a system API.<br>**适用版本：** 19+ |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error.Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameters types. |
+| [15700010](../errorcode-datashare.md#15700010-创建datasharehelper异常) | The DataShareHelper fails to be initialized. |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed. A non-system application calls a system API.<br>**适用版本：** 19+ |
 
 ## 示例
 

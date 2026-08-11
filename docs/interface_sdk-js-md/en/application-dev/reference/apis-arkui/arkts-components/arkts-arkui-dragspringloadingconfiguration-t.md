@@ -4,7 +4,7 @@
 declare type DragSpringLoadingConfiguration = import('../api/@ohos.arkui.dragController').default.DragSpringLoadingConfiguration
 ```
 
-定义拖拽的悬停检测配置参数的接口。
+Defines the configuration parameters for drag hover detection.
 
 **Since:** 20
 

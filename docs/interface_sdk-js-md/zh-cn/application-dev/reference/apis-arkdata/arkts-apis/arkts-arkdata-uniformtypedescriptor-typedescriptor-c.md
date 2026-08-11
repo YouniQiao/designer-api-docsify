@@ -10,12 +10,6 @@
 
 **系统能力：** SystemCapability.DistributedDataManager.UDMF.Core
 
-## 导入模块
-
-```TypeScript
-import { uniformTypeDescriptor } from 'kits/@kit.ArkData';
-```
-
 ## belongsTo
 
 ```TypeScript
@@ -50,25 +44,47 @@ belongsTo(type: string): boolean
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 401 | Parameter error. Possible causes:1.Mandatory parameters are left unspecified; &lt;br&gt;2.Incorrect parameter types; &lt;br&gt;3. Parameter verification failed. |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes:1.Mandatory parameters are left unspecified; &lt;br&gt;2.Incorrect parameter types; &lt;br&gt;3. Parameter verification failed. |
 
 ## 示例
+
+ArkTS-Dyn示例：
+
+```TypeScript
+import { uniformTypeDescriptor } from '@kit.ArkData';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+try{
+    let typeObj : uniformTypeDescriptor.TypeDescriptor = uniformTypeDescriptor.getTypeDescriptor('general.type-script');
+    let ret = typeObj.belongsTo('general.source-code');
+    if(ret) {
+        console.info('type general.type-script belongs to type general.source-code');
+    }
+} catch(e) {
+    let error: BusinessError = e as BusinessError;
+    console.error(`belongsTo throws an exception. code is ${error.code}, message is ${error.message} `);
+}
+```
+
+ArkTS-Sta示例：
 
 ```TypeScript
 import { uniformTypeDescriptor } from '@kit.ArkData';
 import { BusinessError } from '@kit.BasicServicesKit';
 
 try {
-  // 获取TypeDescriptor对象
-  let typeObj: uniformTypeDescriptor.TypeDescriptor = uniformTypeDescriptor.getTypeDescriptor('general.type-script');
-  // 判断是否归属指定类型
-  let ret = typeObj.belongsTo('general.source-code');
-  if (ret) {
-    console.info('type general.type-script belongs to type general.source-code');
-  }
-} catch (e) {
-  let error: BusinessError = e as BusinessError;
-  console.error(`belongsTo throws an exception. code is ${error.code}, message is ${error.message} `);
+    let typeObj : uniformTypeDescriptor.TypeDescriptor | null = uniformTypeDescriptor.getTypeDescriptor('general.type-script');
+    if (!typeObj) {
+        console.info('TypeDescriptor not found');
+        return;
+    }
+    let ret = typeObj.belongsTo('general.source-code');
+    if(ret) {
+        console.info('type general.type-script belongs to type general.source-code');
+    }
+} catch(e) {
+    let error: BusinessError = e as BusinessError;
+    console.info(`belongsTo throws an exception. code is ${error.code}, message is ${error.message} `);
 }
 ```
 
@@ -106,9 +122,11 @@ equals(typeDescriptor: TypeDescriptor): boolean
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 401 | Parameter error. Possible causes:1.Mandatory parameters are left unspecified; &lt;br&gt;2.Incorrect parameter types; &lt;br&gt;3. Parameter verification failed. |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes:1.Mandatory parameters are left unspecified; &lt;br&gt;2.Incorrect parameter types; &lt;br&gt;3. Parameter verification failed. |
 
 ## 示例
+
+ArkTS-Dyn示例：
 
 ```TypeScript
 import { uniformTypeDescriptor } from '@kit.ArkData';
@@ -124,6 +142,32 @@ try {
 } catch (e) {
   let error: BusinessError = e as BusinessError;
   console.error(`throws an exception. code is ${error.code}, message is ${error.message} `);
+}
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+import { uniformTypeDescriptor } from '@kit.ArkData';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+try {
+  let typeA: uniformTypeDescriptor.TypeDescriptor | null = uniformTypeDescriptor.getTypeDescriptor('general.type-script');
+  if (!typeA) {
+    console.info('TypeDescriptor not found');
+    return;
+  }
+  let typeB: uniformTypeDescriptor.TypeDescriptor | null = uniformTypeDescriptor.getTypeDescriptor('general.python-script');
+  if (!typeB) {
+    console.info('TypeDescriptor not found');
+    return;
+  }
+  if (!typeA.equals(typeB)) {
+    console.info('typeA is not equal to typeB');
+  }
+} catch (e) {
+  let error: BusinessError = e as BusinessError;
+  console.info(`throws an exception. code is ${error.code}, message is ${error.message} `);
 }
 ```
 
@@ -161,9 +205,11 @@ isHigherLevelType(type: string): boolean
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 401 | Parameter error. Possible causes:1.Mandatory parameters are left unspecified; &lt;br&gt;2.Incorrect parameter types; &lt;br&gt;3. Parameter verification failed. |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes:1.Mandatory parameters are left unspecified; &lt;br&gt;2.Incorrect parameter types; &lt;br&gt;3. Parameter verification failed. |
 
 ## 示例
+
+ArkTS-Dyn示例：
 
 ```TypeScript
 import { uniformTypeDescriptor } from '@kit.ArkData';
@@ -179,6 +225,27 @@ try {
 } catch (e) {
   let error: BusinessError = e as BusinessError;
   console.error(`isHigherLevelType throws an exception. code is ${error.code}, message is ${error.message} `);
+}
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+import { uniformTypeDescriptor } from '@kit.ArkData';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+try {
+  let typeObj: uniformTypeDescriptor.TypeDescriptor | null = uniformTypeDescriptor.getTypeDescriptor('general.source-code');
+  if (!typeObj) {
+    console.info('TypeDescriptor not found');
+  }
+  let ret = typeObj.isHigherLevelType('general.type-script');
+  if (ret) {
+    console.info('type general.source-code is higher level type of type general.type-script');
+  }
+} catch (e) {
+  let error: BusinessError = e as BusinessError;
+  console.info(`isHigherLevelType throws an exception. code is ${error.code}, message is ${error.message} `);
 }
 ```
 
@@ -216,24 +283,47 @@ isLowerLevelType(type: string): boolean
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 401 | Parameter error. Possible causes:1.Mandatory parameters are left unspecified; &lt;br&gt;2.Incorrect parameter types; &lt;br&gt;3. Parameter verification failed. |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes:1.Mandatory parameters are left unspecified; &lt;br&gt;2.Incorrect parameter types; &lt;br&gt;3. Parameter verification failed. |
 
 ## 示例
+
+ArkTS-Dyn示例：
+
+```TypeScript
+import { uniformTypeDescriptor } from '@kit.ArkData';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+try{
+    let typeObj : uniformTypeDescriptor.TypeDescriptor = uniformTypeDescriptor.getTypeDescriptor('general.type-script');
+    let ret = typeObj.isLowerLevelType('general.source-code');
+    if(ret) {
+        console.info('type general.type-script is lower level type of type general.source-code');
+    }
+} catch(e) {
+    let error: BusinessError = e as BusinessError;
+    console.error(`isLowerLevelType throws an exception. code is ${error.code}, message is ${error.message} `);
+}
+```
+
+ArkTS-Sta示例：
 
 ```TypeScript
 import { uniformTypeDescriptor } from '@kit.ArkData';
 import { BusinessError } from '@kit.BasicServicesKit';
 
 try {
-  // 获取TypeDescriptor对象
-  let typeObj: uniformTypeDescriptor.TypeDescriptor = uniformTypeDescriptor.getTypeDescriptor('general.type-script');
-  let ret = typeObj.isLowerLevelType('general.source-code');
-  if (ret) {
-    console.info('type general.type-script is lower level type of type general.source-code');
-  }
-} catch (e) {
-  let error: BusinessError = e as BusinessError;
-  console.error(`isLowerLevelType throws an exception. code is ${error.code}, message is ${error.message} `);
+    let typeObj : uniformTypeDescriptor.TypeDescriptor | null = uniformTypeDescriptor.getTypeDescriptor('general.source-code');
+    if (!typeObj) {
+        console.info('TypeDescriptor not found');
+        return;
+    }
+    let ret = typeObj.isLowerLevelType('general.source-code');
+    if(ret) {
+        console.info('type general.source-code is lower level type of type general.type-script');
+    }
+} catch(e) {
+    let error: BusinessError = e as BusinessError;
+    console.info(`isLowerLevelType throws an exception. code is ${error.code}, message is ${error.message} `);
 }
 ```
 

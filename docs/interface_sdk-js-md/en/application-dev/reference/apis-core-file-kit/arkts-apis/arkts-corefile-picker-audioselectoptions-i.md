@@ -1,6 +1,6 @@
 # AudioSelectOptions
 
-音频选择选项。
+Defines options for selecting audio clips.
 
 **Since:** 23
 

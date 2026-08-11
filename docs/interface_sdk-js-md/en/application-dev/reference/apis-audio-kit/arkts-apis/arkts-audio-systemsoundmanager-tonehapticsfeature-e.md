@@ -1,11 +1,6 @@
 # ToneHapticsFeature
 
-枚举，系统振动风格定义。
-
-| 名称 | 值 | 说明 |  
-| ----------------------------- | -- | -------------------- |  
-| STANDARD| 0 | 标准振动风格。 |  
-| GENTLE | 1 | 轻柔振动风格。 |
+Definition of haptics feature in tone scenario.
 
 **Since:** 13
 

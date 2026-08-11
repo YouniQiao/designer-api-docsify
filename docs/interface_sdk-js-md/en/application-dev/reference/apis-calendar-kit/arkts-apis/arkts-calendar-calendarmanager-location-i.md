@@ -1,6 +1,6 @@
 # Location
 
-日程地点。
+Describes the event location.
 
 **Since:** 10
 
@@ -22,7 +22,7 @@ import { calendarManager } from 'kits/@kit.CalendarKit';
 latitude?: number
 ```
 
-地点纬度。取值范围[-90, 90]，默认为undefined。超过取值范围地图将无法正常显示。
+Latitude of the location. The value range is [-90, 90]. The default value is **undefined**. If the value is out of the range, the map cannot be displayed properly.
 
 **Type:** number
 
@@ -42,7 +42,7 @@ latitude?: number
 location?: string
 ```
 
-日程地点。不填时，默认为undefined。
+Location, with a maximum of 5,000 characters. If this parameter is not specified, the default value is an empty string.
 
 **Type:** string
 
@@ -62,7 +62,7 @@ location?: string
 longitude?: number
 ```
 
-地点经度。取值范围[-180, 180]，默认为undefined。超过取值范围地图将无法正常显示。
+Longitude of the location. The value range is [-180, 180]. The default value is **undefined**. If the value is out of the range, the map cannot be displayed properly.
 
 **Type:** number
 

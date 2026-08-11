@@ -1,11 +1,5 @@
 # getAllDesktopShortcutInfo
 
-## 导入模块
-
-```TypeScript
-import { shortcutManager } from 'kits/@kit.AbilityKit';
-```
-
 ## getAllDesktopShortcutInfo
 
 ```TypeScript
@@ -40,8 +34,65 @@ function getAllDesktopShortcutInfo(userId: int): Promise<Array<ShortcutInfo>>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types. |
-| 201 | Verify permission denied. |
-| 202 | Permission denied, non-system app called system api. |
-| 17700004 | The specified user ID is not found. |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types. |
+| [201](../../errorcode-universal.md#201-权限校验失败) | Verify permission denied. |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission denied, non-system app called system api. |
+| [17700004](../errorcode-bundle.md#17700004-指定的用户不存在) | The specified user ID is not found. |
+
+## 示例
+
+ArkTS-Dyn示例:
+
+```TypeScript
+import { shortcutManager } from '@kit.AbilityKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+@Entry
+@Component
+struct ShortcutExample {
+  build() {
+    Column({ space: 20 }) {
+      Row({ space: 20 }) {
+        Button('getall').onClick(() => {
+          try {
+            shortcutManager.getAllDesktopShortcutInfo(100)
+              .then((data: shortcutManager.ShortcutInfo[]) => {
+                console.info("Shortcut data is " + JSON.stringify(data));
+              }).catch((err: BusinessError) => {
+              console.error(`getAllDesktopShortcutInfo errData is errCode:${err.code}  message:${err.message}`);
+            });
+          } catch (error) {
+            let code = (error as BusinessError).code;
+            let message = (error as BusinessError).message;
+            console.error(`getAllDesktopShortcutInfo error is errCode:${code}  message:${message}`);
+          }
+        })
+      }
+    }
+  }
+}
+```
+
+ArkTS-Sta示例:
+
+```TypeScript
+'use static'
+
+import { shortcutManager } from '@kit.AbilityKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+// 代码中使用的useId需为应用实际的用户ID。
+try {
+  shortcutManager.getAllDesktopShortcutInfo(100);
+    .then((data: shortcutManager.ShortcutInfo[]) => {
+      console.info("getAllDesktopShortcutInfo Shortcut data is " + JSON.stringify(data));
+    }).catch((err: Error) => {
+      console.error(`getAllDesktopShortcutInfo errData is errCode:${(err as BusinessError).code}  message:${(err as BusinessError).message}`);
+    });
+} catch (error) {
+  let code = (error as BusinessError).code;
+  let message = (error as BusinessError).message;
+  console.error(`getAllDesktopShortcutInfo error is errCode:${code}  message:${message}`);
+}
+```
 

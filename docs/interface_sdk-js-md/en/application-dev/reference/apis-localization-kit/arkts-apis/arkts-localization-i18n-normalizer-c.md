@@ -1,6 +1,6 @@
 # Normalizer
 
-提供文本标准化的能力。
+Provides the API for text encoding normalization.
 
 **Since:** 23
 
@@ -22,7 +22,7 @@ import { i18n } from 'kits/@kit.LocalizationKit';
 static getInstance(mode: NormalizerMode): Normalizer
 ```
 
-获取文本标准化对象。
+Obtains a Normalizer object.
 
 **Since:** 23
 
@@ -38,19 +38,19 @@ static getInstance(mode: NormalizerMode): Normalizer
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| mode | [NormalizerMode](arkts-localization-i18n-normalizermode-e.md) | Yes | 文本标准化范式。 |
+| mode | [NormalizerMode](arkts-localization-i18n-normalizermode-e.md) | Yes | Text normalization mode. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [Normalizer](arkts-localization-i18n-normalizer-c.md) | 返回指定范式的文本标准化对象。 |
+| [Normalizer](arkts-localization-i18n-normalizer-c.md) | Normalizer object for text normalization. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
 
 ## normalize
 
@@ -58,7 +58,7 @@ static getInstance(mode: NormalizerMode): Normalizer
 normalize(text: string): string
 ```
 
-对字符串进行标准化处理。
+Normalizes input strings.
 
 **Since:** 23
 
@@ -74,17 +74,17 @@ normalize(text: string): string
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| text | string | Yes | 输入文本。 |
+| text | string | Yes | Input strings. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| string | 标准化处理后的字符串。 |
+| string | Normalized strings. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
 

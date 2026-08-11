@@ -1,11 +1,5 @@
 # getErrorInfo
 
-## 导入模块
-
-```TypeScript
-import { huksExternalCrypto } from 'kits/@kit.UniversalKeystoreKit';
-```
-
 ## getErrorInfo
 
 ```TypeScript

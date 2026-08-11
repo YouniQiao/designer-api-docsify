@@ -1,10 +1,11 @@
 # LongPressGestureInterface
 
-用于触发长按手势事件，触发长按手势的最少手指数为1，默认最短长按时间为500毫秒。可配置duration参数控制最短长按时长。
+**LongPressGesture** is used to trigger a long press gesture. This gesture requires one or more fingers to be held down for a specified duration, which is 500 ms by default and can be adjusted using the **duration** parameter.
 
-> **说明：**
+> **NOTE：**
 > 
-> 从API version 18开始，部分设备会优先响应系统的双指长按手势，导致应用的双指长按手势不生效。
+> Since API version 18, on some devices, the system's two-finger long press gesture may take precedence, causing
+> the application's two-finger long press gesture to be ineffective.
 
 **Inheritance/Implementation:** LongPressGestureInterface extends [GestureInterface<LongPressGestureInterface>](GestureInterface<LongPressGestureInterface>)
 
@@ -22,13 +23,14 @@
 (value?: { fingers?: number; repeat?: boolean; duration?: number }): LongPressGestureInterface
 ```
 
-创建长按手势对象。继承自[GestureInterface&lt;T&gt;](arkts-arkui-gestureinterface-i.md)。
+Creates a long press gesture. Inherits from [GestureInterface&lt;T&gt;](arkts-arkui-gestureinterface-i.md).
 
-当组件默认支持可拖拽时，如Text、TextInput、TextArea、HyperLink、Image和RichEditor等组件。长按手势与拖拽会出现冲突，事件优先级如下：
+In components that support drag actions by default, such as **Text**, **TextInput**, **TextArea**, **HyperLink**,  
+**Image**, and **RichEditor**, the long press gesture may conflict with the drag action. If this occurs, the event priority is determined as follows:
 
-当长按触发时间小于500毫秒时，系统优先响应长按事件而非拖拽事件。
+If the long press duration is less than 500 milliseconds, the system prioritizes the long press event over the drag event.
 
-当长按触发时间达到或超过500毫秒时，系统优先响应拖拽事件而非长按事件。
+If the long press duration reaches or exceeds 500 milliseconds, the system prioritizes the drag event over the long press event.
 
 **Since:** 7
 
@@ -44,7 +46,7 @@
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | { fingers?: number; repeat?: boolean; duration?: number } | No | 设置长按手势参数。&lt;br&gt; - fingers：触发长按的最少手指数，最小值为1，&nbsp;最大值为10。&lt;br/&gt;默认值：1 &lt;br&gt; - repeat：是否连续触发事件回调。true表示连续触发事件回调，false表示不连续触发事件回调。&lt;br/&gt;默认值：false &lt;br&gt; - duration：触发长按的最短时间，单位为毫秒（ms）。&lt;br/&gt;默认值：500 |
+| value | { fingers?: number; repeat?: boolean; duration?: number } | No | Parameters for the long press gesture. &lt;br&gt; - **fingers**: minimum number of fingers to trigger a long press gesture. The value ranges from 1 to 10. &lt;br&gt;Default value: **1**. &lt;br&gt; - **repeat**: whether to continuously trigger the event callback. The value **true** means to continuously trigger the event callback, and **false** means the opposite.&lt;br&gt;Default value: **false**. &lt;br&gt; - **duration**: minimum hold-down time, in ms.&lt;br&gt;Default value: **500**. |
 
 **Return value:**
 
@@ -58,13 +60,14 @@
 (options?: LongPressGestureHandlerOptions): LongPressGestureInterface
 ```
 
-创建长按手势对象。与[LongPressGesture](arkts-arkui-longpressgestureinterface-i.md))}相比，options参数新增了对isFingerCountLimited参数，表示是否检查触摸屏幕的手指数量。
+Creates a long press gesture. Compared with [LongPressGesture](arkts-arkui-longpressgestureinterface-i.md))}, this API adds the **isFingerCountLimited** parameter to **options**, which determines whether to enforce the exact number of fingers touching the screen.
 
-当组件默认支持可拖拽时，如Text、TextInput、TextArea、HyperLink、Image和RichEditor等组件。长按手势与拖拽会出现冲突，事件优先级如下：
+In components that support drag actions by default, such as **Text**, **TextInput**, **TextArea**, **HyperLink**,  
+**Image**, and **RichEditor**, the long press gesture may conflict with the drag action. If this occurs, the event priority is determined as follows:
 
-当长按触发时间小于500毫秒时，系统优先响应长按事件而非拖拽事件。
+If the long press duration is less than 500 milliseconds, the system prioritizes the long press event over the drag event.
 
-当长按触发时间达到或超过500毫秒时，系统优先响应拖拽事件而非长按事件。
+If the long press duration reaches or exceeds 500 milliseconds, the system prioritizes the drag event over the long press event.
 
 **Since:** 15
 
@@ -82,7 +85,7 @@
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| options | [LongPressGestureHandlerOptions](arkts-arkui-gesture-longpressgesturehandleroptions-i.md) | No | 长按手势处理器配置参数。 |
+| options | [LongPressGestureHandlerOptions](arkts-arkui-gesture-longpressgesturehandleroptions-i.md) | No | Parameters of the long press gesture handler. |
 
 **Return value:**
 
@@ -96,7 +99,7 @@
 onAction(event: (event: GestureEvent) => void): LongPressGestureInterface
 ```
 
-设置长按手势识别成功回调。
+Registers the callback for successful long press gesture recognition.
 
 **Since:** 7
 
@@ -112,7 +115,7 @@ onAction(event: (event: GestureEvent) => void): LongPressGestureInterface
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| event | (event: GestureEvent) =&gt; void | Yes | 长按手势识别成功回调函数。 |
+| event | (event: GestureEvent) =&gt; void | Yes | Callback for successful long press gesture recognition. |
 
 **Return value:**
 
@@ -126,7 +129,7 @@ onAction(event: (event: GestureEvent) => void): LongPressGestureInterface
 onActionCancel(event: () => void): LongPressGestureInterface
 ```
 
-设置长按手势取消回调。长按手势识别成功后，接收到触摸取消事件时触发回调。不返回手势事件信息。
+Registers the callback for long press gesture cancellation. This callback is triggered when a touch cancellation event occurs after successful long press gesture recognition. No gesture event information is returned.
 
 **Since:** 7
 
@@ -142,7 +145,7 @@ onActionCancel(event: () => void): LongPressGestureInterface
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| event | () =&gt; void | Yes | 长按手势取消回调函数。 |
+| event | () =&gt; void | Yes | Callback for long press gesture cancellation. |
 
 **Return value:**
 
@@ -156,7 +159,7 @@ onActionCancel(event: () => void): LongPressGestureInterface
 onActionCancel(event: Callback<GestureEvent>): LongPressGestureInterface
 ```
 
-设置长按手势取消回调。长按手势识别成功后，接收到触摸取消事件时触发回调。返回手势事件信息。
+Registers the callback for long press gesture cancellation. This callback is triggered when a touch cancellation event occurs after successful long press gesture recognition. Gesture event information is returned.
 
 **Since:** 18
 
@@ -174,7 +177,7 @@ onActionCancel(event: Callback<GestureEvent>): LongPressGestureInterface
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| event | [Callback](../arkts-components/arkts-arkui-callback-i.md)&lt;GestureEvent&gt; | Yes | 长按手势取消回调函数。 |
+| event | [Callback](../arkts-components/arkts-arkui-callback-i.md)&lt;GestureEvent&gt; | Yes | Callback for long press gesture cancellation. |
 
 **Return value:**
 
@@ -188,7 +191,7 @@ onActionCancel(event: Callback<GestureEvent>): LongPressGestureInterface
 onActionEnd(event: (event: GestureEvent) => void): LongPressGestureInterface
 ```
 
-设置长按手势结束回调。长按手势识别成功后，最后一根手指抬起时触发回调。
+Registers the callback for long press gesture completion. This callback is triggered when all fingers are lifted after successful recognition.
 
 **Since:** 7
 
@@ -204,7 +207,7 @@ onActionEnd(event: (event: GestureEvent) => void): LongPressGestureInterface
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| event | (event: GestureEvent) =&gt; void | Yes | 长按手势结束回调函数。 |
+| event | (event: GestureEvent) =&gt; void | Yes | Callback for long press gesture completion. |
 
 **Return value:**
 

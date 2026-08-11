@@ -1,11 +1,5 @@
 # onAudioZoneSessionChange（系统接口）
 
-## 导入模块
-
-```TypeScript
-import { avSession } from 'kits/@kit.AVSessionKit';
-```
-
 ## onAudioZoneSessionChange
 
 ```TypeScript
@@ -37,6 +31,6 @@ function onAudioZoneSessionChange(userId: int, callback: Callback<AVSessionDescr
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 6600101 | Session service exception. |
-| 202 | Not System App. |
+| [6600101](../errorcode-avsession.md#6600101-会话服务端异常) | Session service exception. |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not System App. |
 

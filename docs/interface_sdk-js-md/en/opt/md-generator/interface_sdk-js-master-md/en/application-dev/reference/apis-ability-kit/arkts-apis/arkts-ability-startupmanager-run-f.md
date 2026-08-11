@@ -1,0 +1,164 @@
+# run
+
+## Modules to Import
+
+```TypeScript
+import { startupManager } from 'kits/@kit.AbilityKit';
+```
+
+## run
+
+```TypeScript
+function run(startupTasks: Array<string>, config?: StartupConfig): Promise<void>
+```
+
+Runs startup tasks or loads .so files.
+
+> **NOTE：**
+> 
+> This API cannot be used to run startup tasks defined in a feature-type HAP. To run those tasks, use
+> [startupManager.run](arkts-ability-startupmanager-run-f.md#run)
+> .
+
+**Since:** 12
+
+**Model restriction:** This API can be used only in the stage model.
+
+<!--Device-startupManager-function run(startupTasks: Array<string>, config?: StartupConfig): Promise<void>--><!--Device-startupManager-function run(startupTasks: Array<string>, config?: StartupConfig): Promise<void>-End-->
+
+**System capability:** SystemCapability.Ability.AppStartup
+
+**Parameters:**
+
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| startupTasks | Array&lt;string&gt; | Yes |
+| config | [StartupConfig](arkts-ability-app-appstartup-startupconfig-startupconfig-i.md) | No |
+
+**Return value:**
+
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| Promise&lt;void&gt; |
+
+**Error codes:**
+
+| Error Code ID |
+| --- |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [28800004](../errorcode-ability.md#28800004-executing-the-startup-task-times-out) |
+| [28800003](../errorcode-ability.md#28800003-error-occurs-during-task-startup) |
+| [28800002](../errorcode-ability.md#28800002-circular-dependencies-between-startup-tasks) |
+| [16000050](../errorcode-ability.md#16000050-internal-error) |
+| [28800001](../errorcode-ability.md#28800001-startup-task-or-dependency-not-found) |
+
+## Examples
+
+```TypeScript
+import { AbilityConstant, UIAbility, Want, startupManager } from '@kit.AbilityKit';
+import { hilog } from '@kit.PerformanceAnalysisKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+export default class EntryAbility extends UIAbility {
+  onCreate(want: Want, launchParam: AbilityConstant.LaunchParam): void {
+    hilog.info(0x0000, 'testTag', '%{public}s', 'Ability onCreate');
+    let startParams = ['StartupTask_001', 'libentry_001'];
+    try {
+      // Manually call the run method.
+      startupManager.run(startParams).then(() => {
+        console.info(`StartupTest startupManager run then, startParams = ${startParams}.`);
+      }).catch((error: BusinessError) => {
+        console.error(`StartupTest promise catch failed, error code: ${error.code}, error msg: ${error.message}.`);
+      });
+    } catch (error) {
+      let errMsg = (error as BusinessError).message;
+      let errCode = (error as BusinessError).code;
+      console.error(`Startup.run failed, err code: ${errCode}, err msg: ${errMsg}.`);
+    }
+  }
+
+  // ...
+}
+```
+
+
+## run
+
+```TypeScript
+function run(startupTasks: Array<string>, context: common.AbilityStageContext, config: StartupConfig): Promise<void>
+```
+
+Runs startup tasks or loads .so files. You can specify  
+[AbilityStageContext](arkts-ability-abilitystagecontext-c.md) for loading startup tasks. This API uses a promise to return the result.
+
+**Since:** 20
+
+**Model restriction:** This API can be used only in the stage model.
+
+<!--Device-startupManager-function run(startupTasks: Array<string>, context: common.AbilityStageContext, config: StartupConfig): Promise<void>--><!--Device-startupManager-function run(startupTasks: Array<string>, context: common.AbilityStageContext, config: StartupConfig): Promise<void>-End-->
+
+**System capability:** SystemCapability.Ability.AppStartup
+
+**Parameters:**
+
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| startupTasks | Array&lt;string&gt; | Yes |
+| context | common.AbilityStageContext | Yes |
+| config | [StartupConfig](arkts-ability-app-appstartup-startupconfig-startupconfig-i.md) | Yes |
+
+**Return value:**
+
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| Promise&lt;void&gt; |
+
+**Error codes:**
+
+| Error Code ID |
+| --- |
+| [28800004](../errorcode-ability.md#28800004-executing-the-startup-task-times-out) |
+| [28800003](../errorcode-ability.md#28800003-error-occurs-during-task-startup) |
+| [28800002](../errorcode-ability.md#28800002-circular-dependencies-between-startup-tasks) |
+| [16000050](../errorcode-ability.md#16000050-internal-error) |
+| [28800001](../errorcode-ability.md#28800001-startup-task-or-dependency-not-found) |
+
+## Examples
+
+```TypeScript
+import { AbilityStage, startupManager, StartupListener, StartupConfig } from '@kit.AbilityKit';
+import { hilog } from '@kit.PerformanceAnalysisKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+export default class MyAbilityStage extends AbilityStage {
+  onCreate(): void {
+    hilog.info(0x0000, 'testTag', 'AbilityStage onCreate');
+    let onCompletedCallback = (error: BusinessError<void>) => {
+      if (error) {
+        hilog.error(0x0000, 'testTag', 'onCompletedCallback error: %{public}s', JSON.stringify(error));
+      } else {
+        hilog.info(0x0000, 'testTag', 'onCompletedCallback: success.');
+      }
+    };
+    let startupListener: StartupListener = {
+      'onCompleted': onCompletedCallback
+    };
+    let config: StartupConfig = {
+      'timeoutMs': 10000,
+      'startupListener': startupListener
+    };
+
+    try {
+      // Manually call the run method.
+      startupManager.run(['StartupTask_001', 'libentry_001'], this.context, config).then(() => {
+        hilog.info(0x0000, 'testTag', '%{public}s', 'startupManager.run success');
+      }).catch((error: BusinessError<void>) => {
+        hilog.error(0x0000, 'testTag', 'startupManager.run promise catch error: %{public}s', JSON.stringify(error));
+      })
+    } catch (error) {
+      hilog.error(0x0000, 'testTag', 'startupManager.run catch error: %{public}s', JSON.stringify(error));
+    }
+  }
+  // ...
+}
+```

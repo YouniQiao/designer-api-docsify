@@ -1,6 +1,6 @@
 # LazyForEachReleaseStrategy
 
-资源释放策略枚举，用于配置LazyForEach待销毁节点的资源释放策略。
+Enumerates the release strategies for LazyForEach discarded nodes.
 
 **Since:** 26.0.0
 
@@ -16,7 +16,7 @@
 BATCH = 0
 ```
 
-在下一次空闲时段内释放所有被丢弃的节点。
+Release all discarded nodes during the next idle period.
 
 **Since:** 26.0.0
 
@@ -34,7 +34,7 @@ BATCH = 0
 PROGRESSIVE = 1
 ```
 
-在下一次空闲时段内，根据当前帧剩余时间逐个释放被丢弃的节点。未释放的节点将在后续空闲时段根据可用空闲时间继续释放。
+Release discarded nodes one by one during the next idle period based on the remaining time of the current frame. Unreleased nodes will continue to be released in subsequent idle periods based on the available idle time.
 
 **Since:** 26.0.0
 

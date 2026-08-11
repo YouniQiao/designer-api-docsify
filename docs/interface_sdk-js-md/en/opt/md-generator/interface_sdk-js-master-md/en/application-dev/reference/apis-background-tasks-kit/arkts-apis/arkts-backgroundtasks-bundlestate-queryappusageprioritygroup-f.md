@@ -1,0 +1,84 @@
+# queryAppUsagePriorityGroup
+
+## Modules to Import
+
+```TypeScript
+import { bundleState } from 'kits/@kit.BackgroundTasksKit';
+```
+
+## queryAppUsagePriorityGroup
+
+```TypeScript
+function queryAppUsagePriorityGroup(callback: AsyncCallback<number>): void
+```
+
+Queries the usage priority group of the calling application.
+
+The priority defined in a priority group restricts the resource usage of an application,for example, restricting the running of background tasks.
+
+**Since:** 7
+
+**Deprecated since:** 9
+
+<!--Device-bundleState-function queryAppUsagePriorityGroup(callback: AsyncCallback<number>): void--><!--Device-bundleState-function queryAppUsagePriorityGroup(callback: AsyncCallback<number>): void-End-->
+
+**System capability:** SystemCapability.ResourceSchedule.UsageStatistics.AppGroup
+
+**Parameters:**
+
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;number&gt; | Yes |
+
+## Examples
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+import { bundleState } from '@kit.BackgroundTasksKit';
+
+bundleState.queryAppUsagePriorityGroup((err: BusinessError, res: number) => {
+  if(err) {
+    console.error('BUNDLE_ACTIVE QueryPackageGroup callback failed. because: ' + err.code);
+  } else {
+    console.info('BUNDLE_ACTIVE QueryPackageGroup callback succeeded. result: ' + JSON.stringify(res));
+  }
+});
+```
+
+
+## queryAppUsagePriorityGroup
+
+```TypeScript
+function queryAppUsagePriorityGroup(): Promise<number>
+```
+
+Queries the usage priority group of the calling application.
+
+The priority defined in a priority group restricts the resource usage of an application,for example, restricting the running of background tasks.
+
+**Since:** 7
+
+**Deprecated since:** 9
+
+<!--Device-bundleState-function queryAppUsagePriorityGroup(): Promise<number>--><!--Device-bundleState-function queryAppUsagePriorityGroup(): Promise<number>-End-->
+
+**System capability:** SystemCapability.ResourceSchedule.UsageStatistics.AppGroup
+
+**Return value:**
+
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| Promise&lt;number&gt; |
+
+## Examples
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+import { bundleState } from '@kit.BackgroundTasksKit';
+
+bundleState.queryAppUsagePriorityGroup().then((res: number) => {
+  console.info('BUNDLE_ACTIVE QueryPackageGroup promise succeeded. result: ' + JSON.stringify(res));
+}).catch((err: BusinessError) => {
+  console.error('BUNDLE_ACTIVE QueryPackageGroup promise failed. because: ' + err.code);
+});
+```

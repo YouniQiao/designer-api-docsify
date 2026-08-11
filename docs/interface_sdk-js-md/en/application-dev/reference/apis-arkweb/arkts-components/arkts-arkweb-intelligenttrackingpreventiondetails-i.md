@@ -1,6 +1,6 @@
 # IntelligentTrackingPreventionDetails
 
-提供智能防跟踪拦截的详细信息。
+Defines the Intelligent Tracking Prevention details.
 
 **Since:** 12
 
@@ -16,7 +16,7 @@
 host: string
 ```
 
-网站域名。
+The host of website url.
 
 **Type:** string
 
@@ -36,7 +36,7 @@ host: string
 trackerHost: string
 ```
 
-追踪者域名。
+The host of tracker url.
 
 **Type:** string
 

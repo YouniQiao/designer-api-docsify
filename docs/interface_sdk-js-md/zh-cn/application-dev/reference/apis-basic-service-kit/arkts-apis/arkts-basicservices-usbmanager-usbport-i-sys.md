@@ -12,12 +12,6 @@ USB设备端口。
 
 **系统接口：** 此接口为系统接口。
 
-## 导入模块
-
-```TypeScript
-import { usbManager } from 'kits/@kit.BasicServicesKit';
-```
-
 ## id
 
 ```TypeScript
@@ -46,7 +40,7 @@ status: USBPortStatus
 
 USB端口角色。
 
-**类型：** [USBPortStatus](arkts-basicservices-usb-usbportstatus-i-sys.md)
+**类型：** [USBPortStatus](arkts-basicservices-usbmanager-usbportstatus-i-sys.md)
 
 **起始版本：** 9
 
@@ -66,7 +60,7 @@ supportedModes: PortModeType
 
 USB端口所支持的模式的数字组合掩码。
 
-**类型：** [PortModeType](arkts-basicservices-usb-portmodetype-e-sys.md)
+**类型：** [PortModeType](arkts-basicservices-usbmanager-portmodetype-e-sys.md)
 
 **起始版本：** 9
 

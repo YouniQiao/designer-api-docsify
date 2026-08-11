@@ -1,6 +1,6 @@
 # FrameNodeOptions
 
-FrameNode选项，可设置FrameNode是否支持多线程操作。
+FrameNode options for configuring node creation behavior.
 
 **Since:** 26.0.0
 
@@ -16,13 +16,7 @@ FrameNode选项，可设置FrameNode是否支持多线程操作。
 supportMultiThread?: boolean
 ```
 
-FrameNode是否支持多线程操作。
-
-true表示支持多线程操作，该节点可以在多线程场景中使用。
-
-false或不设置表示不支持多线程操作。
-
-默认为false。
+Whether to support multi-threaded operations for the FrameNode.When set to true, the node can be safely used in multi-threaded scenarios.
 
 **Type:** boolean
 

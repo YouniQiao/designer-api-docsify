@@ -1,10 +1,12 @@
 # PlaybackInfo
 
-用于描述当前视频播放的进度。
+Describes the current progress of video playback.
 
-> **说明：**
+> **NOTE：**
 > 
-> 为规范匿名对象的定义，API 18版本修改了此处的元素定义。其中，保留了历史匿名对象的起始版本信息，会出现外层元素@since版本号高于内层元素版本号的情况，但这不影响接口的使用。
+> To standardize anonymous object definitions, the element definitions here have been revised in API version 18.
+> While historical version information is preserved for anonymous objects, there may be cases where the outer
+> element's @since version number is higher than inner elements'. This does not affect interface usability.
 
 **Since:** 18
 
@@ -20,11 +22,11 @@
 time: number
 ```
 
-当前视频播放的进度。
+Callback that provides the current playback progress.
 
-单位：s
+Unit: second
 
-取值范围：[0,+∞)
+Value range: [0, +∞)
 
 **Type:** number
 

@@ -10,12 +10,6 @@
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 
-## 导入模块
-
-```TypeScript
-import { WantAgent } from 'kits/@kit.AbilityKit';
-```
-
 ## extraInfo
 
 ```TypeScript
@@ -24,7 +18,7 @@ extraInfo?: Record<string, Object>
 
 额外数据。
 
-**类型：** [Record](../../apis-default/arkts-apis/arkts-record-t.md)&lt;string, Object&gt;
+**类型：** Record&lt;string, Object&gt;
 
 **起始版本：** 9
 
@@ -84,7 +78,7 @@ info: WantAgent
 
 触发的wantAgent。
 
-**类型：** [WantAgent](arkts-ability-wantagent-t.md)
+**类型：** [WantAgent](../../apis-background-tasks-kit/arkts-apis/arkts-backgroundtasks-reminderagent-wantagent-i.md)
 
 **起始版本：** 9
 

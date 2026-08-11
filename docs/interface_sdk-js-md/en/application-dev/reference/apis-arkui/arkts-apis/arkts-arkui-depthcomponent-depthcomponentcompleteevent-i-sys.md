@@ -1,6 +1,6 @@
 # DepthComponentCompleteEvent (System API)
 
-背景资源加载成功的事件信息。
+Information about the background resource loaded successfully.
 
 **Since:** 26.0.0
 
@@ -18,7 +18,7 @@
 componentHeight: double
 ```
 
-组件高度，单位为vp。
+Component height.
 
 **Type:** double
 
@@ -40,7 +40,7 @@ componentHeight: double
 componentWidth: double
 ```
 
-组件宽度，单位为vp。
+Component width.
 
 **Type:** double
 

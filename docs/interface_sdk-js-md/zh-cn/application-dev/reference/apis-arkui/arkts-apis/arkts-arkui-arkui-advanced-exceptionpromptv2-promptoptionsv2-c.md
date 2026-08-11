@@ -12,12 +12,6 @@ Configuration parameter of ExceptionPromptV2.Use @ObservedV2 and @Trace to suppo
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
-## 导入模块
-
-```TypeScript
-import { MarginTypeV2, PromptOptionsV2, ExceptionPromptV2, PromptOptionsV2Config } from 'kits/@kit.ArkUI';
-```
-
 ## constructor
 
 ```TypeScript

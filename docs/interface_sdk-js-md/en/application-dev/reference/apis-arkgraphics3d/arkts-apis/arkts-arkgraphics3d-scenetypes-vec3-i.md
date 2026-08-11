@@ -1,6 +1,6 @@
 # Vec3
 
-定义Vec3（三维向量）.
+A three-dimensional vector used to represent a point, a direction, or a vector transformation in 3D space.It consists of three components: x, y, and z.
 
 **Since:** 12
 
@@ -16,7 +16,7 @@
 x: double
 ```
 
-vec3的X分量.
+Component on the X axis. The value is a real number.
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：double
 
@@ -34,7 +34,7 @@ vec3的X分量.
 y: double
 ```
 
-vec3的Y分量.
+Component on the Y axis. The value is a real number.
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：double
 
@@ -52,7 +52,7 @@ vec3的Y分量.
 z: double
 ```
 
-vec3的Z分量.
+Component on the Z axis. The value is a real number.
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：double
 

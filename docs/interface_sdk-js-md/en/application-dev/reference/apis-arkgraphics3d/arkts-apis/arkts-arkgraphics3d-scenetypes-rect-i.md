@@ -1,6 +1,6 @@
 # Rect
 
-定义矩形.
+Rectangle in a plane.
 
 **Since:** 12
 
@@ -16,7 +16,7 @@
 height: double
 ```
 
-矩形的高度, 单位为世界坐标系下的场景单位（例如cm、m、km等）.
+Rectangle height, in scene units of the world coordinate system (such as cm, m, km, etc.).The valid value range is greater than 0.
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：double
 
@@ -34,7 +34,7 @@ height: double
 width: double
 ```
 
-矩形的宽度, 单位为世界坐标系下的场景单位（例如cm、m、km等）.
+Rectangle width, in scene units of the world coordinate system (such as cm, m, km, etc.).The valid value range is greater than 0.
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：double
 
@@ -52,7 +52,7 @@ width: double
 x: double
 ```
 
-左上角x坐标, 单位为世界坐标系下的场景单位（例如cm、m、km等）.
+X component of the rectangle's bottom-left corner, in scene units of the world coordinate system (such as cm, m, km, etc.).The value can be any real number, and the specific range depends on the scene coordinate system settings.
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：double
 
@@ -70,7 +70,7 @@ x: double
 y: double
 ```
 
-左上角y坐标, 单位为世界坐标系下的场景单位（例如cm、m、km等）.
+Y component of the rectangle's bottom-left corner, in scene units of the world coordinate system (such as cm, m, km, etc.).The value can be any real number, and the specific range depends on the scene coordinate system settings.
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：double
 

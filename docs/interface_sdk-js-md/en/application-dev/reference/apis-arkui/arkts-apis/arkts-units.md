@@ -12,22 +12,22 @@
 
 | Name | Description |
 | --- | --- |
-| [AccessibilityActionOptions](arkts-arkui-accessibilityactionoptions-i.md) | 包含无障碍操作的参数的结构体。 |
-| [AccessibilityCustomAction](arkts-arkui-accessibilitycustomaction-i.md) | 定义AccessibilityCustomAction的结构体，可以在可访问性下的自定义操作处理中处理。 |
-| [AccessibilityNextFocusParams](arkts-arkui-accessibilitynextfocusparams-i.md) | 定义用于配置下一个可访问性焦点转换的参数的结构。 |
+| [AccessibilityActionOptions](arkts-arkui-accessibilityactionoptions-i.md) | Defines the struct of AccessibilityActionOptions that can affect operation under accessibility. |
+| [AccessibilityCustomAction](arkts-arkui-accessibilitycustomaction-i.md) | Defines struct of AccessibilityCustomAction that can be processed in custom action processing under accessibility. |
+| [AccessibilityNextFocusParams](arkts-arkui-accessibilitynextfocusparams-i.md) | Defines struct of the parameters used to configure the next accessibility focus transition. |
 | [AccessibilityOptions](arkts-arkui-accessibilityoptions-i.md) | Defines the struct of AccessibilityOptions. |
-| [Area](arkts-arkui-area-i.md) | 区域类型，用于存储元素所占的区域信息。 |
+| [Area](arkts-arkui-area-i.md) | Defines the area information of a component. |
 | [Bias](arkts-arkui-bias-i.md) | Defines the Bias. |
 | [BorderOptions](arkts-arkui-borderoptions-i.md) | Defines the options of border. |
-| [CacheCountInfo](arkts-arkui-cachecountinfo-i.md) | 定义缓存计数信息。 |
+| [CacheCountInfo](arkts-arkui-cachecountinfo-i.md) | Define cache count information. |
 | [ChainWeightOptions](arkts-arkui-chainweightoptions-i.md) | Defines the ChainWeightOptions interface. |
 | [ConstraintSizeOptions](arkts-arkui-constraintsizeoptions-i.md) | Defines the constrain size options. |
-| [Coordinate2D](arkts-arkui-coordinate2d-i.md) | 描述一个二维坐标。 |
+| [Coordinate2D](arkts-arkui-coordinate2d-i.md) | Describes a two-dimension coordinate. |
 | [DirectionalEdgesT](arkts-arkui-directionaledgest-i.md) | Defines the DirectionalEdgesT interface. |
 | [DividerStyleOptions](arkts-arkui-dividerstyleoptions-i.md) | Defines the struct of DividerStyleOptions. |
 | [Edges](arkts-arkui-edges-i.md) | Defines the Edges. |
-| [Font](arkts-arkui-font-i.md) | Defines the font used for text. |
-| [ItemFillPolicy](arkts-arkui-itemfillpolicy-i.md) | 定义一个适合WaterFlow、Grid、List和Swiper组件的响应式item布局。 |
+| [Font](arkts-arkui-font-i.md) | Sets the text style. |
+| [ItemFillPolicy](arkts-arkui-itemfillpolicy-i.md) | Define a responsive item layout suitable for WaterFlow, Grid, List,and Swiper components. |
 | [LocalizedBorderRadiuses](arkts-arkui-localizedborderradiuses-i.md) | Defines the localized border radius property. |
 | [LocalizedEdgeColors](arkts-arkui-localizededgecolors-i.md) | Defines the localized border color property. |
 | [LocalizedEdgeWidths](arkts-arkui-localizededgewidths-i.md) | Defines the localized border width property. |
@@ -35,11 +35,11 @@
 | [LocalizedPadding](arkts-arkui-localizedpadding-i.md) | Defines the localized padding property. |
 | [LocalizedPosition](arkts-arkui-localizedposition-i.md) | Defines the LocalizedPosition. |
 | [MarkStyle](arkts-arkui-markstyle-i.md) | Define the style of checkbox mark. |
-| [OutlineOptions](arkts-arkui-outlineoptions-i.md) | 定义外描边的参数选项 |
-| [Position](arkts-arkui-position-i.md) | 定义位置。 |
-| [ScrollBarMargin](arkts-arkui-scrollbarmargin-i.md) | 定义滚动条边距选项。 |
-| [SizeOptions](arkts-arkui-sizeoptions-i.md) | 定义尺寸选项。 |
-| [TouchPoint](arkts-arkui-touchpoint-i.md) | 配置跟手点坐标，不配置时，默认居中。 |
+| [OutlineOptions](arkts-arkui-outlineoptions-i.md) | Defines the options of outline. |
+| [Position](arkts-arkui-position-i.md) | Defines the position. |
+| [ScrollBarMargin](arkts-arkui-scrollbarmargin-i.md) | Define scrollbar margin options. |
+| [SizeOptions](arkts-arkui-sizeoptions-i.md) | Defines the size options. |
+| [TouchPoint](arkts-arkui-touchpoint-i.md) | Defines the coordinates of the touch point. If it is not set, the touch point is centered. |
 
 ### Types
 
@@ -47,21 +47,21 @@
 | --- | --- |
 | [ColorMetrics](arkts-arkui-colormetrics-t.md) | Defines ColorMetrics. |
 | [Degree](arkts-arkui-degree-t.md) | Defines the angle property with number in units of deg. |
-| [Dimension](arkts-arkui-dimension-t.md) | 定义具有数值和单位（vp\|px\|fp\|lpx\|%）以及资源的尺寸属性。 |
+| [Dimension](arkts-arkui-dimension-t.md) | Defines the dimension property with number with units(vp\|px\|fp\|lpx\|%), and resource. |
 | [EdgeWidth](arkts-arkui-edgewidth-t.md) | Defines the border width property. |
-| [FP](arkts-arkui-fp-t.md) | 定义长度属性，单位为fp。 |
-| [LPX](arkts-arkui-lpx-t.md) | 定义长度属性，单位为lpx。 |
-| [Length](arkts-arkui-length-t.md) | 定义包含字符串、数字和资源单位的长度属性。 |
+| [FP](arkts-arkui-fp-t.md) | Defines the length property with number in units of fp. |
+| [LPX](arkts-arkui-lpx-t.md) | Defines the length property with number in units of lpx. |
+| [Length](arkts-arkui-length-t.md) | Defines the length property with string, number and resource unit. |
 | [LengthMetrics](arkts-arkui-lengthmetrics-t.md) | Defines LengthMetrics. |
 | [LengthMetricsUnit](arkts-arkui-lengthmetricsunit-t.md) | Defines length metrics unit. |
 | [LocalizedMargin](arkts-arkui-localizedmargin-t.md) | Defines the localized margin property. |
 | [Margin](arkts-arkui-margin-t.md) | Defines the margin property. |
-| [PX](arkts-arkui-px-t.md) | 定义长度属性，单位为像素（px）。 |
-| [Percentage](arkts-arkui-percentage-t.md) | 定义长度属性，单位为百分比。 |
+| [PX](arkts-arkui-px-t.md) | Defines the length property with number in units of px. |
+| [Percentage](arkts-arkui-percentage-t.md) | Defines the length property with number in units of Percentage. |
 | [Resource](arkts-arkui-resource-t.md) | Defines the data type of the interface restriction. |
 | [ResourceColor](arkts-arkui-resourcecolor-t.md) | Defines the color which can use resource. |
 | [ResourceStr](arkts-arkui-resourcestr-t.md) | Defines the string which can use resource. |
-| [ResponsiveFillType](arkts-arkui-responsivefilltype-t.md) | 定义一个响应式item填充模式，可以在WaterFlow、Grid、List和Swiper组件中使用。 |
-| [VP](arkts-arkui-vp-t.md) | 定义长度属性，可以是数字或以 vp 为单位的数字。 |
-| [VoidCallback](arkts-arkui-voidcallback-t.md) | 定义VoidCallback。 |
+| [ResponsiveFillType](arkts-arkui-responsivefilltype-t.md) | Define a responsive item filling pattern that can be used in WaterFlow,Grid,List, and Swiper components. |
+| [VP](arkts-arkui-vp-t.md) | Defines the length property with number or number in units of vp. |
+| [VoidCallback](arkts-arkui-voidcallback-t.md) | Defines VoidCallback. |
 

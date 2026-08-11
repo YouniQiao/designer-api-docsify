@@ -1,17 +1,22 @@
 # ScrollBarOptions
 
-滚动条组件参数。
+Parameters of the **ScrollBar** component.
 
-> **说明：**
+> **NOTE：**
 > 
-> - ScrollBar组件用于显示并控制所绑定可滚动组件的滚动位置。设置子组件时，该子组件作为自定义滚动条滑块，并随可滚动组件的滚动位置移动。
+> - The **ScrollBar** component defines the behavior style of the scrollable area, and its child nodes define the
+> behavior style of the scrollbar.
 > 
-> - 滚动条组件与可滚动组件通过Scroller进行绑定，且只有当两者方向相同时，才能联动。一个可滚动组件可以绑定多个ScrollBar组件，一个ScrollBar组件只能绑定一个可滚动组件。
+> - This component is bound to a scrollable component through **scroller**, and can be used to scroll the scrollable
+> component only when their directions are the same. The **ScrollBar** component can be bound to only one scrollable
+> component, and vice versa.
 > 
-> - 从API version 12开始，ScrollBar组件没有子节点时，支持显示默认样式的滚动条。
+> - Since API version 12, the **ScrollBar** component displays a default scrollbar style when without child nodes.
 > 
-> - ScrollBar组件的显隐是通过BarState设置，组件内部会自动根据BarState设置调整opacity来控制显隐，因此ScrollBar组件设置
-> [opacity](../arkts-apis/arkts-arkui-common-commonmethod-i.md/arkts-arkui-common-commonmethod-i.md#opacity)属性不生效。
+> - The visibility of the **ScrollBar** component is set through **BarState**. The component automatically adjusts
+> **opacity** based on the **BarState** setting to control its visibility. Therefore, setting the
+> [opacity](../arkts-apis/arkts-arkui-common-commonmethod-i.md/arkts-arkui-common-commonmethod-i.md#opacity) attribute for the **ScrollBar**
+> component does not take effect.
 
 **Since:** 8
 
@@ -27,7 +32,7 @@
 direction?: ScrollBarDirection
 ```
 
-滚动条的方向，控制可滚动组件对应方向的滚动。&lt;br/&gt;默认值：ScrollBarDirection.Vertical
+Scrollbar direction in which scrollable components scroll.&lt;br&gt;Default value: **ScrollBarDirection.Vertical**
 
 **Type:** [ScrollBarDirection](arkts-arkui-scrollbardirection-e.md)
 
@@ -47,7 +52,7 @@ direction?: ScrollBarDirection
 scroller: Scroller
 ```
 
-可滚动组件的控制器。用于与可滚动组件进行绑定。
+Scroller, which can be bound to scrollable components for scrolling control.
 
 **Type:** [Scroller](../arkts-apis/arkts-arkui-scroll-scroller-c.md)
 
@@ -67,7 +72,7 @@ scroller: Scroller
 state?: BarState
 ```
 
-滚动条状态。&lt;br/&gt;默认值：BarState.Auto
+Scrollbar state.&lt;br&gt;Default value: **BarState.Auto**
 
 **Type:** [BarState](../arkts-apis/arkts-arkui-barstate-e.md)
 

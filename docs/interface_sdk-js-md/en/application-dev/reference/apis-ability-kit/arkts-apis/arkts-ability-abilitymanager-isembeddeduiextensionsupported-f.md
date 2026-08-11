@@ -12,7 +12,7 @@ import { abilityManager } from 'kits/@kit.AbilityKit';
 function isEmbeddedUIExtensionSupported(): boolean
 ```
 
-开发者通过调用该接口判断[EmbeddedUIExtensionAbility](../../../application-models/embeddeduiextensionability.md)是否可以在当前设备上使用。
+Indicates whether the current device supports EmbeddedUIExtensionAbility.
 
 **Since:** 26.0.0
 
@@ -28,5 +28,5 @@ function isEmbeddedUIExtensionSupported(): boolean
 
 | Type | Description |
 | --- | --- |
-| boolean | 当前设备是否支持[EmbeddedUIExtensionAbility](../../../application-models/embeddeduiextensionability.md)。返回 true表示当前设备支持；返回false表示当前设备不支持。 |
+| boolean | Returns { |
 

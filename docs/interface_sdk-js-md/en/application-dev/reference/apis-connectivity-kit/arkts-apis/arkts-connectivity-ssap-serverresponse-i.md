@@ -1,6 +1,6 @@
 # ServerResponse
 
-服务端对指定读或写请求的响应的参数。
+Describes the parameters of a response send by the server to a specified read or write request.
 
 **Since:** 26.0.0
 
@@ -22,7 +22,7 @@ import { ssap } from 'kits/@kit.ConnectivityKit';
 address: string
 ```
 
-设备地址。长度必须为17，由16进制数字和冒号组成，形如 "11:22:33:AA:BB:FF"。
+Indicates the device address.The length must be 17, The value consists of hexadecimal digits and colons (:), for example, 11:22:33:AA:BB:FF.
 
 **Type:** string
 
@@ -42,7 +42,7 @@ address: string
 requestId: int
 ```
 
-请求ID。取值范围为全体整数。
+The request ID.The value range is all integers.
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
@@ -62,7 +62,7 @@ requestId: int
 value: ArrayBuffer
 ```
 
-响应数据。
+Indicates the response data.
 
 **Type:** ArrayBuffer
 

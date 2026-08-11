@@ -1,6 +1,6 @@
 # CmsKeyAgreeRecipientInfo
 
-CMS封装数据的KeyAgree接收方信息。
+Represents KeyAgree recipient information for CMS enveloped data.
 
 **Since:** 22
 
@@ -22,7 +22,7 @@ import { cert } from 'kits/@kit.DeviceCertificateKit';
 cert: X509Cert
 ```
 
-EC证书。
+EC certificate.
 
 **Type:** [X509Cert](../../apis-network-kit/arkts-apis/arkts-network-http-x509cert-t.md)
 
@@ -42,7 +42,7 @@ EC证书。
 digestAlgorithm?: CmsKeyAgreeRecipientDigestAlgorithm
 ```
 
-KDF摘要算法，默认为SHA256。
+KDF digest algorithm. The default value is **SHA256**.
 
 **Type:** [CmsKeyAgreeRecipientDigestAlgorithm](arkts-devicecertificate-cert-cmskeyagreerecipientdigestalgorithm-e.md)
 

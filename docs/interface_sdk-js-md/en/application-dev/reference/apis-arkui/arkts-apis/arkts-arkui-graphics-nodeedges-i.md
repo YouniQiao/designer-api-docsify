@@ -1,6 +1,6 @@
 # NodeEdges
 
-用于设置边框的属性，属性包括边框风格、边框颜色、边框宽度、边框长度等。
+Defines the Edge property.
 
 **Since:** 23
 
@@ -16,7 +16,7 @@
 bottom: T
 ```
 
-底部边框的属性。
+Bottom property.
 
 **Type:** T
 
@@ -36,7 +36,7 @@ bottom: T
 left: T
 ```
 
-左侧边框的属性。
+Left property.
 
 **Type:** T
 
@@ -56,7 +56,7 @@ left: T
 right: T
 ```
 
-右侧边框的属性。
+Right property.
 
 **Type:** T
 
@@ -76,7 +76,7 @@ right: T
 top: T
 ```
 
-顶部边框的属性。
+Top property.
 
 **Type:** T
 

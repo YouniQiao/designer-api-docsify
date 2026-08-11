@@ -4,7 +4,7 @@
 export type NotificationLiveViewContent = _NotificationLiveViewContent
 ```
 
-描述普通实况通知。
+Describes the common live view.
 
 **Since:** 11
 

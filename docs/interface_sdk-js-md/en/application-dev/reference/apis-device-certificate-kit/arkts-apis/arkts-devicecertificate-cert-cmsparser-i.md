@@ -1,11 +1,12 @@
 # CmsParser
 
-提供解析、验签和解封装CMS消息的API。
+Provides APIs for parsing, verifying, and decrypting CMS messages.
 
-> **说明：**
+> **NOTE：**
 > 
-> PKCS #7是用于存储签名或加密数据的标准语法。注意CMS是PKCS #7的扩展，PKCS #7支持的数据类型包括数据、签名数据、封装数据、
-> 签名和封装数据、摘要数据、加密数据。常用于保护数据的完整性和机密性。
+> PKCS #7 is a standard syntax for storing signed or encrypted data. CMS is an extension of PKCS #7. PKCS #7
+> supports data types including data, signed data, enveloped data, signed and enveloped data, digested
+> data, and encrypted data. It is often used to protect data integrity and confidentiality.
 
 **Since:** 22
 
@@ -27,7 +28,7 @@ import { cert } from 'kits/@kit.DeviceCertificateKit';
 decryptEnvelopedData(config: CmsEnvelopedDecryptionConfig): Promise<Uint8Array>
 ```
 
-用于解密封装数据类型的CMS消息。使用Promise方式返回结果。
+Decrypts the CMS message of the **ENVELOPED_DATA** content type. This API uses a promise to return the result.
 
 **Since:** 22
 
@@ -43,22 +44,22 @@ decryptEnvelopedData(config: CmsEnvelopedDecryptionConfig): Promise<Uint8Array>
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| config | [CmsEnvelopedDecryptionConfig](arkts-devicecertificate-cert-cmsenvelopeddecryptionconfig-i.md) | Yes | CMS解密的配置。 |
+| config | [CmsEnvelopedDecryptionConfig](arkts-devicecertificate-cert-cmsenvelopeddecryptionconfig-i.md) | Yes | CMS decryption configuration. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;Uint8Array&gt; | Promise对象，返回解密结果。 |
+| Promise&lt;Uint8Array&gt; | Promise used to return the decryption result. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 19020002 | 运行时外部错误。可能的原因： &lt;br&gt;1. 内存拷贝失败； &lt;br&gt;2. 系统内部出现空指针； &lt;br&gt;3. 获取Native对象失败或参数转换失败。 |
-| 19020003 | 参数检查失败。可能的原因： &lt;br&gt;1. 私钥无效或不支持； &lt;br&gt;2. 接收者证书无效或不支持。 |
-| 19020001 | 内存错误。 |
-| 19030001 | 调用三方算法库API出错。 |
+| [19020002](../errorcode-cert.md#19020002-runtime-error) | Runtime error. Possible causes: &lt;br&gt;1. Memory copy failed; &lt;br&gt;2. A null pointer occurs inside the system; &lt;br&gt;3. Failed to obtain the native object or convert parameters. |
+| [19020003](../errorcode-cert.md#19020003-parameter-check-failure) | Parameter check failed. Possible causes: &lt;br&gt;1. The private key is invalid or not supported; &lt;br&gt;2. The recipient certificate is invalid or not supported. |
+| [19020001](../errorcode-cert.md#19020001-memory-error) | Memory malloc failed. |
+| [19030001](../errorcode-cert.md#19030001-crypto-operation-error) | Crypto operation error. |
 
 ## Examples
 
@@ -139,7 +140,7 @@ async function testCmsDecryptTest() {
     console.info('[XTS] Decrypt result: success, decPlainText = ' + decPlainText);
     console.info('decryptEnvelopedData result: success.');
   } catch (error) {
-    console.error(`decryptEnvelopedData failed: errCode: ${error.code}, errMsg: ${error.message}`);
+    console.error(`verifySignedData failed: errCode: ${error.code}, errMsg: ${error.message}`);
   }
 }
 ```
@@ -150,7 +151,7 @@ async function testCmsDecryptTest() {
 getCerts(type: CmsCertType): Promise<Array<X509Cert>>
 ```
 
-传入枚举值，用于从签名数据类型的CMS消息中获取证书。当前支持获取签名者证书或全部证书。使用Promise方式返回结果。
+Obtains the certificate from CMS message of the **SIGNED_DATA** type by passing enumerated values. The signer certificates or all certificates can be obtained. This API uses a promise to return the result.
 
 **Since:** 22
 
@@ -166,22 +167,22 @@ getCerts(type: CmsCertType): Promise<Array<X509Cert>>
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | [CmsCertType](arkts-devicecertificate-cert-cmscerttype-e.md) | Yes | 从cms中获取证书的类型。 |
+| type | [CmsCertType](arkts-devicecertificate-cert-cmscerttype-e.md) | Yes | Type of the certificate obtained from the CMS. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;Array&lt;X509Cert&gt;&gt; | Promise对象，返回证书集合。 |
+| Promise&lt;Array&lt;X509Cert&gt;&gt; | Promise used to return a certificate set. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 19020002 | 运行时外部错误。可能的原因： &lt;br&gt;1. 内存拷贝失败； &lt;br&gt;2. 系统内部出现空指针； &lt;br&gt;3. 获取Native对象失败或参数转换失败。 |
-| 19020003 | 参数检查失败。可能的原因： &lt;br&gt;1. type类型无效或不支持。 |
-| 19020001 | 内存错误。 |
-| 19030001 | 调用三方算法库API出错。 |
+| [19020002](../errorcode-cert.md#19020002-runtime-error) | Runtime error. Possible causes: &lt;br&gt;1. Memory copy failed; &lt;br&gt;2. A null pointer occurs inside the system; &lt;br&gt;3. Failed to obtain the native object or convert parameters. |
+| [19020003](../errorcode-cert.md#19020003-parameter-check-failure) | Parameter check failed. Possible causes: &lt;br&gt;1. The value of type is invalid or not supported. |
+| [19020001](../errorcode-cert.md#19020001-memory-error) | Memory malloc failed. |
+| [19030001](../errorcode-cert.md#19030001-crypto-operation-error) | Crypto operation error. |
 
 ## getContentData
 
@@ -189,7 +190,7 @@ getCerts(type: CmsCertType): Promise<Array<X509Cert>>
 getContentData(): Promise<Uint8Array>
 ```
 
-用于从签名数据类型的CMS消息中获取内容数据。使用Promise方式返回结果。
+Obtains the content data from CMS message of the **SIGNED_DATA** type. This API uses a promise to return the result.
 
 **Since:** 22
 
@@ -205,15 +206,15 @@ getContentData(): Promise<Uint8Array>
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;Uint8Array&gt; | Promise对象，返回CMS内容数据。 |
+| Promise&lt;Uint8Array&gt; | Promise used to return the content data. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 19020002 | 运行时外部错误。可能的原因： &lt;br&gt;1. 内存拷贝失败； &lt;br&gt;2. 系统内部出现空指针； &lt;br&gt;3. 获取Native对象失败或参数转换失败。 |
-| 19020001 | 内存错误。 |
-| 19030001 | 调用三方算法库API出错。 |
+| [19020002](../errorcode-cert.md#19020002-runtime-error) | Runtime error. Possible causes: &lt;br&gt;1. Memory copy failed; &lt;br&gt;2. A null pointer occurs inside the system; &lt;br&gt;3. Failed to obtain the native object or convert parameters. |
+| [19020001](../errorcode-cert.md#19020001-memory-error) | Memory malloc failed. |
+| [19030001](../errorcode-cert.md#19030001-crypto-operation-error) | Crypto operation error. |
 
 ## Examples
 
@@ -336,7 +337,7 @@ async function testCmsVerifyTest() {
 getContentType(): CmsContentType
 ```
 
-用于获取CMS内容类型。
+Obtains the CMS content type.
 
 **Since:** 22
 
@@ -352,15 +353,15 @@ getContentType(): CmsContentType
 
 | Type | Description |
 | --- | --- |
-| [CmsContentType](arkts-devicecertificate-cert-cmscontenttype-e.md) | 返回CMS内容类型。 |
+| [CmsContentType](arkts-devicecertificate-cert-cmscontenttype-e.md) | CMS content type. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 19020002 | 运行时外部错误。可能的原因： &lt;br&gt;1. 内存拷贝失败； &lt;br&gt;2. 系统内部出现空指针； &lt;br&gt;3. 获取Native对象失败或参数转换失败。 |
-| 19020001 | 内存错误。 |
-| 19030001 | 调用三方算法库API出错。 |
+| [19020002](../errorcode-cert.md#19020002-runtime-error) | Runtime error. Possible causes: &lt;br&gt;1. Memory copy failed; &lt;br&gt;2. A null pointer occurs inside the system; &lt;br&gt;3. Failed to obtain the native object or convert parameters. |
+| [19020001](../errorcode-cert.md#19020001-memory-error) | Memory malloc failed. |
+| [19030001](../errorcode-cert.md#19030001-crypto-operation-error) | Crypto operation error. |
 
 ## Examples
 
@@ -484,11 +485,12 @@ async function testCmsVerifyTest() {
 setRawData(data: Uint8Array | string, cmsFormat: CmsFormat): Promise<void>
 ```
 
-设置CMS消息数据。使用Promise方式返回结果。
+Set the CMS message data. This API uses a promise to return the result.
 
-> **说明：**
+> **NOTE：**
 > 
-> 支持PEM和DER格式的CMS消息。**string**对应PEM格式，**Uint8Array**对应DER格式。
+> CMS message in PEM and DER formats is supported. **string** corresponds to the PEM format, and **Uint8Array**
+> corresponds to the DER format.
 
 **Since:** 22
 
@@ -504,23 +506,23 @@ setRawData(data: Uint8Array | string, cmsFormat: CmsFormat): Promise<void>
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| data | Uint8Array \| string | Yes | CMS消息内容。 |
-| cmsFormat | [CmsFormat](arkts-devicecertificate-cert-cmsformat-e.md) | Yes | 指定输入的CMS格式。 |
+| data | Uint8Array \| string | Yes | CMS message content. |
+| cmsFormat | [CmsFormat](arkts-devicecertificate-cert-cmsformat-e.md) | Yes | Input CMS format. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise对象，无返回结果。 |
+| Promise&lt;void&gt; | Promise that returns no value. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 19020002 | 运行时外部错误。可能的原因： &lt;br&gt;1. 内存拷贝失败； &lt;br&gt;2. 系统内部出现空指针； &lt;br&gt;3. 获取Native对象失败或参数转换失败。 |
-| 19020003 | 参数检查失败。可能的原因： &lt;br&gt;1. 数据长度为零或过大； &lt;br&gt;2. cmsFormat类型无效或不支持。 |
-| 19020001 | 内存错误。 |
-| 19030001 | 调用三方算法库API出错。 |
+| [19020002](../errorcode-cert.md#19020002-runtime-error) | Runtime error. Possible causes: &lt;br&gt;1. Memory copy failed; &lt;br&gt;2. A null pointer occurs inside the system; &lt;br&gt;3. Failed to obtain the native object or convert parameters. |
+| [19020003](../errorcode-cert.md#19020003-parameter-check-failure) | Parameter check failed. Possible causes: &lt;br&gt;1. The length of the data is zero or too large; &lt;br&gt;2. The type of the cmsFormat is invalid or not supported. |
+| [19020001](../errorcode-cert.md#19020001-memory-error) | Memory malloc failed. |
+| [19030001](../errorcode-cert.md#19030001-crypto-operation-error) | Crypto operation error. |
 
 ## Examples
 
@@ -642,7 +644,7 @@ async function testCmsVerifyTest() {
 verifySignedData(config: CmsVerificationConfig): Promise<void>
 ```
 
-用于验证签名数据类型的CMS消息。使用Promise方式返回结果。
+Verifies the CMS message of the **SIGNED_DATA** content type. This API uses a promise to return the result.
 
 **Since:** 22
 
@@ -658,25 +660,25 @@ verifySignedData(config: CmsVerificationConfig): Promise<void>
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| config | [CmsVerificationConfig](arkts-devicecertificate-cert-cmsverificationconfig-i.md) | Yes | CMS验签配置内容。 |
+| config | [CmsVerificationConfig](arkts-devicecertificate-cert-cmsverificationconfig-i.md) | Yes | CMS signature verification configuration. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise对象，无返回结果。 |
+| Promise&lt;void&gt; | Promise that returns no value. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 19020002 | 运行时外部错误。可能的原因： &lt;br&gt;1. 内存拷贝失败； &lt;br&gt;2. 系统内部出现空指针； &lt;br&gt;3. 获取Native对象失败或参数转换失败。 |
-| 19020003 | 参数检查失败。可能的原因： &lt;br&gt;1. config的trustCerts为空； &lt;br&gt;2. config的contentData长度为零或过大； &lt;br&gt;3. config的contentDataFormat无效或不支持。 |
-| 19030003 | 证书尚未生效。 |
-| 19020001 | 内存错误。 |
-| 19030001 | 调用三方算法库API出错。 |
-| 19030004 | 证书过期。 |
-| 19030005 | 无法获取证书的颁发者。 |
+| [19020002](../errorcode-cert.md#19020002-runtime-error) | Runtime error. Possible causes: &lt;br&gt;1. Memory copy failed; &lt;br&gt;2. A null pointer occurs inside the system; &lt;br&gt;3. Failed to obtain the native object or convert parameters. |
+| [19020003](../errorcode-cert.md#19020003-parameter-check-failure) | Parameter check failed. Possible causes: &lt;br&gt;1. The trustCerts of config is empty; &lt;br&gt;2. The length of the contentData of config is zero or too large; &lt;br&gt;3. The contentDataFormat of config is invalid or not supported. |
+| [19030003](../errorcode-cert.md#19030003-certificate-has-not-taken-effect) | The certificate has not taken effect. |
+| [19020001](../errorcode-cert.md#19020001-memory-error) | Memory malloc failed. |
+| [19030001](../errorcode-cert.md#19030001-crypto-operation-error) | Crypto operation error. |
+| [19030004](../errorcode-cert.md#19030004-certificate-expired) | The certificate has expired. |
+| [19030005](../errorcode-cert.md#19030005-failed-to-obtain-the-certificate-issuer) | Failed to obtain the certificate issuer. |
 
 ## Examples
 

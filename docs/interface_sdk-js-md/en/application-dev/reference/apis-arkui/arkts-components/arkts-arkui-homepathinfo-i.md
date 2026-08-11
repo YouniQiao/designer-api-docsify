@@ -1,6 +1,6 @@
 # HomePathInfo
 
-主页NavDestination的信息。
+Defines the home page **NavDestination** information.
 
 **Since:** 20
 
@@ -16,7 +16,7 @@
 name: string
 ```
 
-主页NavDestination的页面名称。
+Name of the home page **NavDestination**.
 
 **Type:** string
 
@@ -38,7 +38,7 @@ name: string
 param?: Object
 ```
 
-主页NavDestination的页面详细参数。
+Detailed parameters of the home page **NavDestination**.
 
 **Type:** Object
 

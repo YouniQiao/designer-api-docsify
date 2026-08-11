@@ -16,12 +16,6 @@
 
 **系统能力：** SystemCapability.Multimedia.Audio.Capturer
 
-## 导入模块
-
-```TypeScript
-import { audio } from 'kits/@kit.AudioKit';
-```
-
 ## getAudioStreamId
 
 ArkTS-Dyn:
@@ -218,7 +212,7 @@ getAudioTimestampInfo(): Promise<AudioTimestampInfo>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 6800103 | Operation not permit at current state. |
+| [6800103](../errorcode-audio.md#6800103-状态不支持) | Operation not permit at current state. |
 
 ## getAudioTimestampInfoSync
 
@@ -246,7 +240,7 @@ getAudioTimestampInfoSync(): AudioTimestampInfo
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 6800103 | Operation not permit at current state. |
+| [6800103](../errorcode-audio.md#6800103-状态不支持) | Operation not permit at current state. |
 
 ## getBufferSize
 
@@ -616,7 +610,7 @@ getSupportedNoiseReductionModes(): Array<NoiseReductionMode>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 6800301 | Audio server process died. |
+| [6800301](../errorcode-audio.md#6800301-系统处理异常) | Audio server process died. |
 
 ## off('markReach')
 
@@ -691,7 +685,7 @@ off(type: 'stateChange', callback?: Callback<AudioState>): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 6800101 | Parameter verification failed. |
+| [6800101](../errorcode-audio.md#6800101-无效入参) | Parameter verification failed. |
 
 ## off('audioInterrupt')
 
@@ -719,8 +713,8 @@ off(type: 'audioInterrupt'): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
-| 6800101 | Parameter verification failed. |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
+| [6800101](../errorcode-audio.md#6800101-无效入参) | Parameter verification failed. |
 
 ## off('inputDeviceChange')
 
@@ -749,8 +743,8 @@ off(type: 'inputDeviceChange', callback?: Callback<AudioDeviceDescriptors>): voi
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
-| 6800101 | Parameter verification failed. |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
+| [6800101](../errorcode-audio.md#6800101-无效入参) | Parameter verification failed. |
 
 ## off('audioCapturerChange')
 
@@ -779,8 +773,8 @@ off(type: 'audioCapturerChange', callback?: Callback<AudioCapturerChangeInfo>): 
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
-| 6800101 | Parameter verification failed. |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
+| [6800101](../errorcode-audio.md#6800101-无效入参) | Parameter verification failed. |
 
 ## off('readData')
 
@@ -809,8 +803,8 @@ off(type: 'readData', callback?: Callback<ArrayBuffer>): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
-| 6800101 | Parameter verification failed. |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
+| [6800101](../errorcode-audio.md#6800101-无效入参) | Parameter verification failed. |
 
 ## offAudioCapturerChange
 
@@ -838,7 +832,7 @@ Unsubscribes audio capturer info change event callback.
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 6800101 | Parameter verification failed. |
+| [6800101](../errorcode-audio.md#6800101-无效入参) | Parameter verification failed. |
 
 ## offAudioInterrupt
 
@@ -882,7 +876,7 @@ Unsubscribes input device change event callback.
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 6800101 | Parameter verification failed. |
+| [6800101](../errorcode-audio.md#6800101-无效入参) | Parameter verification failed. |
 
 ## offMarkReach
 
@@ -954,7 +948,7 @@ Unsubscribes audio data callback.
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 6800101 | Parameter verification failed. |
+| [6800101](../errorcode-audio.md#6800101-无效入参) | Parameter verification failed. |
 
 ## offStateChange
 
@@ -982,7 +976,7 @@ Unsubscribes audio state change event callback.
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 6800101 | Parameter verification failed. |
+| [6800101](../errorcode-audio.md#6800101-无效入参) | Parameter verification failed. |
 
 ## on('markReach')
 
@@ -1090,8 +1084,8 @@ AudioCapturer对象在start事件时获取焦点，在pause、stop等事件时�
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
-| 6800101 | Parameter verification failed. |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
+| [6800101](../errorcode-audio.md#6800101-无效入参) | Parameter verification failed. |
 
 ## on('inputDeviceChange')
 
@@ -1120,8 +1114,8 @@ on(type: 'inputDeviceChange', callback: Callback<AudioDeviceDescriptors>): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
-| 6800101 | Parameter verification failed. |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
+| [6800101](../errorcode-audio.md#6800101-无效入参) | Parameter verification failed. |
 
 ## on('audioCapturerChange')
 
@@ -1150,8 +1144,8 @@ on(type: 'audioCapturerChange', callback: Callback<AudioCapturerChangeInfo>): vo
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
-| 6800101 | Parameter verification failed. |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
+| [6800101](../errorcode-audio.md#6800101-无效入参) | Parameter verification failed. |
 
 ## on('readData')
 
@@ -1184,8 +1178,8 @@ on(type: 'readData', callback: Callback<ArrayBuffer>): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
-| 6800101 | Parameter verification failed. |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
+| [6800101](../errorcode-audio.md#6800101-无效入参) | Parameter verification failed. |
 
 ## onAudioCapturerChange
 
@@ -1213,7 +1207,7 @@ Subscribes audio capturer info change event callback.The event is triggered when
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 6800101 | Parameter verification failed. |
+| [6800101](../errorcode-audio.md#6800101-无效入参) | Parameter verification failed. |
 
 ## onAudioInterrupt
 
@@ -1241,7 +1235,7 @@ Listens for audio interrupt events. This method uses a callback to get interrupt
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 6800101 | Parameter verification failed. |
+| [6800101](../errorcode-audio.md#6800101-无效入参) | Parameter verification failed. |
 
 ## onInputDeviceChange
 
@@ -1269,7 +1263,7 @@ Subscribes input device change event callback.The event is triggered when input 
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 6800101 | Parameter verification failed. |
+| [6800101](../errorcode-audio.md#6800101-无效入参) | Parameter verification failed. |
 
 ## onMarkReach
 
@@ -1343,7 +1337,7 @@ Subscribes audio data callback.The event is triggered when audio buffer is avail
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 6800101 | Parameter verification failed. |
+| [6800101](../errorcode-audio.md#6800101-无效入参) | Parameter verification failed. |
 
 ## onStateChange
 
@@ -1539,8 +1533,8 @@ setIndependentAudioSessionStrategy(strategy: AudioSessionStrategy, behavior: int
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 6800103 | Operation not permit at current state. |
-| 6800101 | Parameter verification failed. |
+| [6800103](../errorcode-audio.md#6800103-状态不支持) | Operation not permit at current state. |
+| [6800101](../errorcode-audio.md#6800101-无效入参) | Parameter verification failed. |
 
 ## setMuteHint
 
@@ -1586,7 +1580,7 @@ setMuteHint(mute: boolean): Promise<void>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 6800103 | Operation not permitted at current state, stream is not running. |
+| [6800103](../errorcode-audio.md#6800103-状态不支持) | Operation not permitted at current state, stream is not running. |
 
 ## setNoiseReductionMode
 
@@ -1616,10 +1610,10 @@ setNoiseReductionMode(noiseReductionMode: NoiseReductionMode): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 6800103 | Illegal state, audio capturer is in running or released state. |
-| 6800101 | Parameter verification failed. |
-| 6800301 | Audio server process died. |
-| 6800104 | The setted mode is not supported. |
+| [6800103](../errorcode-audio.md#6800103-状态不支持) | Illegal state, audio capturer is in running or released state. |
+| [6800101](../errorcode-audio.md#6800101-无效入参) | Parameter verification failed. |
+| [6800301](../errorcode-audio.md#6800301-系统处理异常) | Audio server process died. |
+| [6800104](../errorcode-audio.md#6800104-参数选项不支持) | The setted mode is not supported. |
 
 ## setWillMuteWhenInterrupted
 
@@ -1653,7 +1647,7 @@ setWillMuteWhenInterrupted(muteWhenInterrupted: boolean): Promise<void>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 6800103 | Operation not permitted at current state. |
+| [6800103](../errorcode-audio.md#6800103-状态不支持) | Operation not permitted at current state. |
 
 ## start
 

@@ -1,6 +1,6 @@
 # AudioDataCallbackResult
 
-表示音频数据回调结果的枚举。
+Enumerates the audio data callback results.
 
 **Since:** 12
 
@@ -16,7 +16,7 @@
 INVALID = -1
 ```
 
-表示该回调数据无效。
+The callback data is invalid.
 
 **Since:** 12
 
@@ -32,7 +32,7 @@ INVALID = -1
 VALID = 0
 ```
 
-表示该回调数据有效。
+The callback data is valid.
 
 **Since:** 12
 

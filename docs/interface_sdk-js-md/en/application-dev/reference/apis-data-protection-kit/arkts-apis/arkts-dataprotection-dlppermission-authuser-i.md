@@ -1,6 +1,6 @@
 # AuthUser
 
-表示授权用户数据。
+Represents the user authorization information.
 
 **Since:** 21
 
@@ -22,7 +22,7 @@ import { dlpPermission } from 'kits/@kit.DataProtectionKit';
 authAccount: string
 ```
 
-表示被授权用户账号。不超过255字节，超出此范围抛出错误码401。
+Account of the user who can access the DLP file. The value contains a maximum of 255 bytes. If the value is out of range, error code 401 is thrown.
 
 **Type:** string
 
@@ -40,7 +40,7 @@ authAccount: string
 authAccountType: AccountType
 ```
 
-表示被授权用户账号类型。
+Type of the account.
 
 **Type:** [AccountType](arkts-dataprotection-dlppermission-accounttype-e.md)
 
@@ -58,7 +58,7 @@ authAccountType: AccountType
 dlpFileAccess: DLPFileAccess
 ```
 
-表示被授予的权限。
+Permission granted to the user.
 
 **Type:** [DLPFileAccess](arkts-dataprotection-dlppermission-dlpfileaccess-e.md)
 
@@ -76,7 +76,7 @@ dlpFileAccess: DLPFileAccess
 permExpiryTime: number
 ```
 
-表示授权到期时间。取值范围大于等于0，超出此范围将被强转为非符号整数。单位：s。
+Time when the authorization expires. The value must be greater than or equal to 0. If the value is out of range, it will be forcibly converted to an unsigned integer. Unit: s.
 
 **Type:** number
 

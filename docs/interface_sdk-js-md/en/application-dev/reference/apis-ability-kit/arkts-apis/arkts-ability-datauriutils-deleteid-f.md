@@ -12,7 +12,7 @@ import { dataUriUtils } from 'kits/@kit.AbilityKit';
 function deleteId(uri: string): string
 ```
 
-删除指定uri路径末尾的ID。
+Deletes the ID from the end of a given URI.
 
 **Since:** 9
 
@@ -26,19 +26,19 @@ function deleteId(uri: string): string
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| uri | string | Yes | 表示要从中删除ID的uri对象。 |
+| uri | string | Yes | URI object from which the ID is to be deleted. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| string | 返回删除ID之后的uri对象。 |
+| string | URI object with the ID deleted. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
 
 ## Examples
 

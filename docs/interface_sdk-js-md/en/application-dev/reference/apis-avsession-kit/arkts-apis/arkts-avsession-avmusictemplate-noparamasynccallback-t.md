@@ -4,7 +4,7 @@
 type NoParamAsyncCallback = () => Promise<void>
 ```
 
-定义无参数的异步回调函数类型。使用Promise异步回调。
+Defines the basic callback.
 
 **Since:** 23
 

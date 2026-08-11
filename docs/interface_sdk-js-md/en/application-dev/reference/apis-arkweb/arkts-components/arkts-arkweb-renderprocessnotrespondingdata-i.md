@@ -1,6 +1,6 @@
 # RenderProcessNotRespondingData
 
-Defines the render process not responding info.
+Provides detailed information about the unresponsive rendering process.
 
 **Since:** 12
 
@@ -16,7 +16,7 @@ Defines the render process not responding info.
 jsStack: string
 ```
 
-JavaScript stack info of the webpage when render process not responding.
+JavaScript call stack information of the web page.
 
 **Type:** string
 
@@ -34,7 +34,7 @@ JavaScript stack info of the webpage when render process not responding.
 pid: number
 ```
 
-Process id of render process not responding.
+Process ID of the web page.
 
 **Type:** number
 
@@ -52,7 +52,7 @@ Process id of render process not responding.
 reason: RenderProcessNotRespondingReason
 ```
 
-Reason for the render process not responding.
+Reason why the rendering process does not respond.
 
 **Type:** [RenderProcessNotRespondingReason](arkts-arkweb-renderprocessnotrespondingreason-e.md)
 

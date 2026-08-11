@@ -1,6 +1,6 @@
 # CameraConcurrentInfo
 
-相机的输出并发能力信息。
+Describes the camera's concurrency information.
 
 **Since:** 18
 
@@ -22,7 +22,7 @@ import { camera } from 'kits/@kit.CameraKit';
 readonly device: CameraDevice
 ```
 
-相机并发设备。
+Concurrent camera device.
 
 **Type:** [CameraDevice](arkts-camera-camera-cameradevice-i.md)
 
@@ -42,7 +42,7 @@ readonly device: CameraDevice
 readonly modes: Array<SceneMode>
 ```
 
-相机支持的模式。
+Scene mode.
 
 **Type:** Array&lt;SceneMode&gt;
 
@@ -62,7 +62,7 @@ readonly modes: Array<SceneMode>
 readonly outputCapabilities: Array<CameraOutputCapability>
 ```
 
-相机对应模式的输出能力集。
+Output capabilities of the camera.
 
 **Type:** Array&lt;CameraOutputCapability&gt;
 
@@ -82,7 +82,7 @@ readonly outputCapabilities: Array<CameraOutputCapability>
 readonly type: CameraConcurrentType
 ```
 
-镜头并发类型。
+Concurrency type.
 
 **Type:** [CameraConcurrentType](arkts-camera-camera-cameraconcurrenttype-e.md)
 

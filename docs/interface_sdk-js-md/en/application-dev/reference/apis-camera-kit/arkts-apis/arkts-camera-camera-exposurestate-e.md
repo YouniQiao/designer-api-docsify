@@ -1,6 +1,6 @@
 # ExposureState
 
-枚举，曝光状态。
+Enumerates the exposure states.
 
 **Since:** 26.0.0
 
@@ -16,7 +16,7 @@
 EXPOSURE_STATE_SCAN = 0
 ```
 
-曝光处于扫描状态。
+Focusing.
 
 **Since:** 26.0.0
 
@@ -36,7 +36,7 @@ EXPOSURE_STATE_SCAN = 0
 EXPOSURE_STATE_CONVERGED = 1
 ```
 
-曝光已经收敛。
+Exposure converged.
 
 **Since:** 26.0.0
 

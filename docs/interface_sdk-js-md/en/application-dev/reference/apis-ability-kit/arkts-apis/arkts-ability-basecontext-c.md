@@ -1,6 +1,6 @@
 # BaseContext
 
-BaseContext抽象类用于表示继承的子类Context是Stage模型还是FA模型，是所有Context类型的父类。
+BaseContext is an abstract class that specifies whether a child class Context is used for the stage model or FA model. It is the parent class for all types of Context.
 
 **Since:** 8
 
@@ -16,8 +16,7 @@ BaseContext抽象类用于表示继承的子类Context是Stage模型还是FA模�
 stageMode: boolean
 ```
 
-表示是否Stage模型。&lt;br&gt;true：[Stage模型](../../../application-models/ability-terminology.md#stage模型)。&lt;br&gt;false：  
-[FA模型](../../../application-models/ability-terminology.md#fa模型)。
+Indicates the context is FA Mode or Stage Mode.
 
 **Type:** boolean
 

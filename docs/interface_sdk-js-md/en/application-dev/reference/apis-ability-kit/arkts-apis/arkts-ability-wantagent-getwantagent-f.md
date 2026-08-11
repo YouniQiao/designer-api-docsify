@@ -12,7 +12,9 @@ import { WantAgent } from 'kits/@kit.AbilityKit';
 function getWantAgent(info: WantAgentInfo, callback: AsyncCallback<WantAgent>): void
 ```
 
-创建WantAgent，使用callback异步回调。创建成功返回WantAgent对象，创建失败返回空值。
+Obtains a WantAgent object.This API uses an asynchronous callback to return the result.If the creation fails, a null WantAgent object is returned.
+
+&lt;p&gt;**NOTE：**:&lt;br&gt;Third-party applications can set only their own abilities.&lt;/p&gt;
 
 **Since:** 9
 
@@ -28,16 +30,16 @@ function getWantAgent(info: WantAgentInfo, callback: AsyncCallback<WantAgent>): 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| info | [WantAgentInfo](arkts-ability-wantagent-wantagentinfo-t.md) | Yes | 表示创建WantAgent所需的配置信息，包括目标UIAbility、操作类型、请求码等。三方应用在WantAgentInfo中只能设置本应用的UIAbility。 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;WantAgent&gt; | Yes | 回调函数。当创建WantAgent成功，err中code为0，data为创建的WantAgent；否则err会返回对应的错误码和错误信息。 |
+| info | [WantAgentInfo](arkts-ability-wantagent-wantagentinfo-t.md) | Yes | Information about the WantAgent object to obtain. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;WantAgent&gt; | Yes | Callback used to return the WantAgent object. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types. |
-| 16000007 | Service busy. There are concurrent tasks. Try again later. |
-| 16000151 | Invalid wantAgent object. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types. |
+| [16000007](../errorcode-ability.md#16000007-service-unresponsive) | Service busy. There are concurrent tasks. Try again later. |
+| [16000151](../errorcode-ability.md#16000151-invalid-wantagent-object) | Invalid wantAgent object. |
 
 ## Examples
 
@@ -99,7 +101,9 @@ try {
 function getWantAgent(info: WantAgentInfo): Promise<WantAgent>
 ```
 
-创建WantAgent。使用Promise异步回调。创建成功返回WantAgent对象，创建失败返回空值。
+Obtains a WantAgent object.This API uses a promise to return the result.If the creation fails, a null WantAgent object is returned.
+
+&lt;p&gt;**NOTE：**:&lt;br&gt;Third-party applications can set only their own abilities.&lt;/p&gt;
 
 **Since:** 9
 
@@ -115,21 +119,21 @@ function getWantAgent(info: WantAgentInfo): Promise<WantAgent>
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| info | [WantAgentInfo](arkts-ability-wantagent-wantagentinfo-t.md) | Yes | 表示创建WantAgent所需的配置信息，包括目标UIAbility、操作类型、请求码等。三方应用在WantAgentInfo中只能设置本应用的UIAbility。 |
+| info | [WantAgentInfo](arkts-ability-wantagent-wantagentinfo-t.md) | Yes | Information about the WantAgent object to obtain. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;WantAgent&gt; | Promise对象，返回创建的WantAgent。 |
+| Promise&lt;WantAgent&gt; | Promise used to return the WantAgent object. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types. |
-| 16000007 | Service busy. There are concurrent tasks. Try again later. |
-| 16000151 | Invalid wantAgent object. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types. |
+| [16000007](../errorcode-ability.md#16000007-service-unresponsive) | Service busy. There are concurrent tasks. Try again later. |
+| [16000151](../errorcode-ability.md#16000151-invalid-wantagent-object) | Invalid wantAgent object. |
 
 ## Examples
 

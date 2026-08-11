@@ -1,6 +1,6 @@
 # TimeType
 
-定义获取时间的枚举类型。
+Enumerates the types of time to obtain.
 
 **Since:** 10
 
@@ -16,7 +16,7 @@
 STARTUP = 0
 ```
 
-自系统启动以来经过的毫秒数，包括深度睡眠时间。
+Number of milliseconds elapsed since system startup, including the deep sleep time.
 
 **Since:** 10
 
@@ -32,7 +32,7 @@ STARTUP = 0
 ACTIVE = 1
 ```
 
-自系统启动以来经过的毫秒数，不包括深度睡眠时间。
+Number of milliseconds elapsed since system startup, excluding the deep sleep time.
 
 **Since:** 10
 

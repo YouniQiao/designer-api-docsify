@@ -1,6 +1,6 @@
 # NavBarPosition
 
-导航页位置。
+Position of the navigation page.
 
 **Since:** 9
 
@@ -16,7 +16,7 @@
 Start
 ```
 
-双栏显示时，主列在主轴方向首部。
+When two columns are displayed, the main column is at the start of the main axis.
 
 **Since:** 9
 
@@ -34,7 +34,7 @@ Start
 End
 ```
 
-双栏显示时，主列在主轴方向尾部。
+When two columns are displayed, the main column is at the end of the main axis.
 
 **Since:** 9
 

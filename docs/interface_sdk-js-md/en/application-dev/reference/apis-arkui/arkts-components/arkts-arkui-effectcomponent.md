@@ -1,20 +1,16 @@
 # EffectComponent
 
-特效合并容器组件，用于子节点特效绘制的合并，实现特效的绘制性能优化。
+The **EffectComponent** component defines combined special effects for child components to optimize the special 
+effect drawing performance.
 
-> **说明：**
+> **NOTE**
+
+> - The APIs provided by this component are system APIs.
 >
-> - 该组件从API Version 10开始支持。后续版本如有新增内容，则采用上角标单独标记该内容的起始版本。
+> - Currently, this component provides only combined background blur effects for child components.
 >
-> - 本模块为系统接口。
-
-> - 目前该组件仅支持子组件背景模糊效果的绘制合并优化。
->
-> - 在对子组件的背景模糊特效进行绘制合并时，需要将子组件的backgroundBlurStyle(BlurStyle)属性替换成useEffect(true)。
-
-## 子组件
-
-可以包含子组件。
+> - To use this component for combined background blur effects, first replace the **backgroundBlurStyle(BlurStyle)** 
+> attribute of the target child components with **useEffect(true)**.
 
 ## EffectComponent
 
@@ -22,7 +18,7 @@
 EffectComponent()
 ```
 
-创建特效绘制合并组件，用于对子组件背景模糊特效的绘制合并。
+Creates an **EffectComponent** component.
 
 **Since:** 10
 
@@ -42,7 +38,7 @@ EffectComponent()
 EffectComponent(options?: EffectComponentOptions)
 ```
 
-创建特效绘制合并组件，无参数或者参数为EffectLayer.None时用于对子组件背景模糊特效的绘制合并。有明确参数时表示当前渲染图层置于特殊图层。
+Creates an effect drawing and combination component. If no parameter is passed or the parameter is EffectLayer.None, the background blur effect of child components is combined. If a parameter is specified, the current rendering layer is placed on a special layer.
 
 **Since:** 20
 
@@ -60,7 +56,7 @@ EffectComponent(options?: EffectComponentOptions)
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| options | [EffectComponentOptions](../arkts-apis/arkts-arkui-effectcomponent-effectcomponentoptions-i-sys.md) | No | EffectComponent构造参数。 |
+| options | [EffectComponentOptions](../arkts-apis/arkts-arkui-effectcomponent-effectcomponentoptions-i-sys.md) | No | EffectComponent constructor parameter. |
 
 ## Summary
 

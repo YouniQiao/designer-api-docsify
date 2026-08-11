@@ -12,12 +12,13 @@ import { securityManager } from 'kits/@kit.MDMKit';
 function removeAllowedPermissionBundle(admin: Want, permission: string, applicationInstance: common.ApplicationInstance): void
 ```
 
-从权限使用例外名单中移除指定应用，移除后该应用不能继续使用对应的权限。
+Removes an application from the permission usage exception list. After the application is removed, it cannot use the corresponding permission any more.
 
-> **说明：**
+> **NOTE：**
 > 
-> 必须先通过[setDisallowedPermission](arkts-mdm-securitymanager-setdisallowedpermission-f.md#setdisallowedpermission)接口禁用权限后，才能从权限使用例外名单移除应用，否则返回错误码92010
-> 44。
+> The permission must first be disabled via the
+> [setDisallowedPermission](arkts-mdm-securitymanager-setdisallowedpermission-f.md#setdisallowedpermission) API before an application can be removed
+> from the permission usage exception list. Otherwise, error code 9201044 is returned.
 
 **Since:** 26.0.0
 
@@ -35,43 +36,17 @@ function removeAllowedPermissionBundle(admin: Want, permission: string, applicat
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| admin | [Want](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-want-want-c.md) | Yes | 企业设备管理扩展组件。Want中必须包含企业设备管理扩展能力的abilityName和所在应用的bundleName。 |
-| permission | string | Yes | 权限名称。 |
-| applicationInstance | common.ApplicationInstance | Yes | 需从权限使用例外名单移除的应用实例信息。 |
+| admin | [Want](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-want-want-c.md) | Yes | EnterpriseAdminExtensionAbility. **Want** must contain the ability name of the EnterpriseAdminExtensionAbility and the bundle name of the application. |
+| permission | string | Yes | Name of the permission. |
+| applicationInstance | common.ApplicationInstance | Yes | Information about the application instance to be removed from the permission exception list. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 9200012 | Parameter verification failed. |
-| 9201044 | This permission is not disallowed. Applications cannot be added to or removed from the trustlist. |
-| 201 | Permission verification failed. The application does not have the permission required to call the API. |
-| 9200001 | The application is not an administrator application of the device. |
-| 9200002 | The administrator application does not have permission to manage the device. |
-
-## Examples
-
-```TypeScript
-import { securityManager, common } from '@kit.MDMKit';
-import { Want } from '@kit.AbilityKit';
-
-let wantTemp: Want = {
-  // Replace with actual values.
-  bundleName: 'com.example.myapplication',
-  abilityName: 'EnterpriseAdminAbility'
-};
-// Replace with actual values.
-let permission: string = 'ohos.permission.CAMERA';
-let appInstance: common.ApplicationInstance = {
-  appIdentifier: '736498586',
-  appIndex: 0,
-  accountId: 100
-};
-try {
-  securityManager.removeAllowedPermissionBundle(wantTemp, permission, appInstance);
-  console.info(`Succeeded in removing allowed permission bundle.`);
-} catch(err) {
-  console.error(`Failed to remove allowed permission bundle. Code: ${err.code}, message: ${err.message}`);
-}
-```
+| [9200012](../errorcode-enterpriseDeviceManager.md#9200012-parameter-verification-failed) | Parameter verification failed. |
+| [9201044](../errorcode-enterpriseDeviceManager.md#9201044-specified-permission-not-disabled) | This permission is not disallowed. Applications cannot be added to or removed from the trustlist. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed. The application does not have the permission required to call the API. |
+| [9200001](../errorcode-enterpriseDeviceManager.md#9200001-deviceadmin-not-enabled) | The application is not an administrator application of the device. |
+| [9200002](../errorcode-enterpriseDeviceManager.md#9200002-permission-denied) | The administrator application does not have permission to manage the device. |
 

@@ -12,11 +12,7 @@ import { wallpaper } from 'kits/@kit.BasicServicesKit';
 function getPixelMap(wallpaperType: WallpaperType, callback: AsyncCallback<image.PixelMap>): void
 ```
 
-获取壁纸图片的像素图。
-
-> **说明：**
-> 
-> 从 API version 7开始支持，从API version 9开始废弃。
+Obtains the default pixel map of a wallpaper of the specified type. Returns the default pixel map.
 
 **Since:** 7
 
@@ -36,8 +32,8 @@ function getPixelMap(wallpaperType: WallpaperType, callback: AsyncCallback<image
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| wallpaperType | [WallpaperType](arkts-basicservices-wallpaper-wallpapertype-e.md) | Yes | 壁纸类型。 |
-| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;image.PixelMap&gt; | Yes | 回调函数，调用成功则返回壁纸图片的像素图对象，调用失败则返回error信息。 |
+| wallpaperType | [WallpaperType](arkts-basicservices-wallpaper-wallpapertype-e.md) | Yes | indicates the wallpaper type. |
+| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;image.PixelMap&gt; | Yes | the callback of getPixelMap. |
 
 ## Examples
 
@@ -61,11 +57,7 @@ wallpaper.getPixelMap(wallpaper.WallpaperType.WALLPAPER_SYSTEM, (error: Business
 function getPixelMap(wallpaperType: WallpaperType): Promise<image.PixelMap>
 ```
 
-获取壁纸图片的像素图。
-
-> **说明：**
-> 
-> 从 API version 7开始支持，从API version 9开始废弃。
+Obtains the default pixel map of a wallpaper of the specified type. Returns the default pixel map.
 
 **Since:** 7
 
@@ -85,13 +77,13 @@ function getPixelMap(wallpaperType: WallpaperType): Promise<image.PixelMap>
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| wallpaperType | [WallpaperType](arkts-basicservices-wallpaper-wallpapertype-e.md) | Yes | 壁纸类型。 |
+| wallpaperType | [WallpaperType](arkts-basicservices-wallpaper-wallpapertype-e.md) | Yes | indicates the wallpaper type. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;image.PixelMap&gt; | 调用成功则返回壁纸图片的像素图对象，调用失败则返回error信息。 |
+| Promise&lt;image.PixelMap&gt; | the promise returned by the function. |
 
 ## Examples
 

@@ -1,6 +1,6 @@
-# @ohos.multimodalAwareness.userStatus
+# @ohos.multimodalAwareness.userStatus(用户状态感知)
 
-The **UserStatus** module, designed for user state awareness, empowers the system to perceive specific conditions of users, such as determining their age group or recognizing environmental sounds, among other functions.
+本模块提供用户状态感知能力，包括年龄群组检测等功能。
 
 **起始版本：** 20
 
@@ -10,69 +10,63 @@ The **UserStatus** module, designed for user state awareness, empowers the syste
 
 **系统能力：** SystemCapability.MultimodalAwareness.UserStatus
 
-## 导入模块
-
-```TypeScript
-import { userStatus } from 'kits/@kit.MultimodalAwarenessKit';
-```
-
 ## 汇总
 
 ### 函数
 
 | 名称 | 说明 |
 | --- | --- |
-| [off](arkts-multimodalawareness-userstatus-off-f.md#off) | Disables the age group detection function.  > **NOTE：** >  > This API is supported only on some phones. Error code **33900003** is returned if it is called on unsupported > phones. |
-| [offUserAgeGroupDetected](arkts-multimodalawareness-userstatus-offuseragegroupdetected-f.md#offuseragegroupdetected) | Unsubscribe to age group detection feature. |
-| [on](arkts-multimodalawareness-userstatus-on-f.md#on) | Enables the age group detection function.  When the function is enabled, the application can recommend content based on the age group detection result.  > **NOTE：** >  > This API is supported only on some phones. Error code **801** is returned if it is called on unsupported phones. |
-| [onUserAgeGroupDetected](arkts-multimodalawareness-userstatus-onuseragegroupdetected-f.md#onuseragegroupdetected) | Subscribe to age group detection feature. |
+| [off](arkts-multimodalawareness-userstatus-off-f.md#off) | 取消订阅年龄群组检测功能。 |
+| [offUserAgeGroupDetected](arkts-multimodalawareness-userstatus-offuseragegroupdetected-f.md#offuseragegroupdetected) | 取消订阅年龄群组检测功能。 |
+| [on](arkts-multimodalawareness-userstatus-on-f.md#on) | 订阅年龄群组检测功能。  订阅成功后，可以获取用户年龄群组的分类结果，应用可根据此结果做相应的内容推荐。 |
+| [onUserAgeGroupDetected](arkts-multimodalawareness-userstatus-onuseragegroupdetected-f.md#onuseragegroupdetected) | 订阅年龄群组检测功能。 |
 
 <!--Del-->
 ### 函数（系统接口）
 
 | 名称 | 说明 |
 | --- | --- |
-| [configure](arkts-multimodalawareness-userstatus-configure-f-sys.md#configure) | Configures feature parameters. |
-| [queryCapabilities](arkts-multimodalawareness-userstatus-querycapabilities-f-sys.md#querycapabilities) | Queries device-supported atomic capabilities. |
-| [subscribe](arkts-multimodalawareness-userstatus-subscribe-f-sys.md#subscribe) | Subscribes to user status monitoring. |
-| [unsubscribe](arkts-multimodalawareness-userstatus-unsubscribe-f-sys.md#unsubscribe) | Unsubscribes from user status monitoring. |
+| [configure](arkts-multimodalawareness-userstatus-configure-f-sys.md#configure) | 配置特性参数。 |
+| [queryCapabilities](arkts-multimodalawareness-userstatus-querycapabilities-f-sys.md#querycapabilities) | 查询设备支持的原子能力。 |
+| [subscribe](arkts-multimodalawareness-userstatus-subscribe-f-sys.md#subscribe) | 订阅用户状态监测。 |
+| [unsubscribe](arkts-multimodalawareness-userstatus-unsubscribe-f-sys.md#unsubscribe) | 取消订阅用户状态监测。 |
 <!--DelEnd-->
 
 ### 接口
 
 | 名称 | 说明 |
 | --- | --- |
-| [UserClassification](arkts-multimodalawareness-userstatus-userclassification-i.md) | Defines the user age group detection result. |
+| [UserClassification](arkts-multimodalawareness-userstatus-userclassification-i.md) | 表示用户年龄群组分类检测结果。 |
 
 <!--Del-->
 ### 接口（系统接口）
 
 | 名称 | 说明 |
 | --- | --- |
-| [ComfortReminderData](arkts-multimodalawareness-userstatus-comfortreminderdata-i-sys.md) | Defines comfort reminder data. |
-| [DeviceInfo](arkts-multimodalawareness-userstatus-deviceinfo-i-sys.md) | Defines device information. |
-| [UserBlowData](arkts-multimodalawareness-userstatus-userblowdata-i-sys.md) | Defines user blow data. |
-| [UserEmotionData](arkts-multimodalawareness-userstatus-useremotiondata-i-sys.md) | Defines user emotion data. |
-| [UserFaceAngleData](arkts-multimodalawareness-userstatus-userfaceangledata-i-sys.md) | Defines user face angle data. |
-| [UserFacesData](arkts-multimodalawareness-userstatus-userfacesdata-i-sys.md) | Defines user face data. |
-| [UserGesturesData](arkts-multimodalawareness-userstatus-usergesturesdata-i-sys.md) | Defines user gesture data. |
-| [UserStatusData](arkts-multimodalawareness-userstatus-userstatusdata-i-sys.md) | Defines user status data. |
+| [ComfortReminderData](arkts-multimodalawareness-userstatus-comfortreminderdata-i-sys.md) | 舒适提醒数据。 |
+| [DeviceInfo](arkts-multimodalawareness-userstatus-deviceinfo-i-sys.md) | 设备信息。 |
+| [UserBlowData](arkts-multimodalawareness-userstatus-userblowdata-i-sys.md) | 用户吹气数据。 |
+| [UserEmotionData](arkts-multimodalawareness-userstatus-useremotiondata-i-sys.md) | 用户情绪数据。 |
+| [UserFaceAngleData](arkts-multimodalawareness-userstatus-userfaceangledata-i-sys.md) | 用户面部角度数据。 |
+| [UserFacesData](arkts-multimodalawareness-userstatus-userfacesdata-i-sys.md) | 用户面部数据。 |
+| [UserGesturesData](arkts-multimodalawareness-userstatus-usergesturesdata-i-sys.md) | 用户手势数据。 |
+| [UserStatusData](arkts-multimodalawareness-userstatus-userstatusdata-i-sys.md) | 用户状态数据。 |
 <!--DelEnd-->
 
 ### 枚举
 
 | 名称 | 说明 |
 | --- | --- |
-| [UserAgeGroup](arkts-multimodalawareness-userstatus-useragegroup-e.md) | Enumerates the user age groups, for example, child or adult. |
+| [UserAgeGroup](arkts-multimodalawareness-userstatus-useragegroup-e.md) | 表示用户具体的年龄分类群组，例如，儿童或成年人。 |
 
 <!--Del-->
 ### 枚举（系统接口）
 
 | 名称 | 说明 |
 | --- | --- |
-| [DeviceType](arkts-multimodalawareness-userstatus-devicetype-e-sys.md) | Enumerates device types. |
-| [ReminderLevel](arkts-multimodalawareness-userstatus-reminderlevel-e-sys.md) | Enumerates comfort reminder levels required for triggering specific alert ringtones. |
-| [UserStatusAtomicCap](arkts-multimodalawareness-userstatus-userstatusatomiccap-e-sys.md) | Enumerates user status atomic capabilities. |
-| [UserStatusFeature](arkts-multimodalawareness-userstatus-userstatusfeature-e-sys.md) | Enumerates user status detection features. |
+| [DeviceType](arkts-multimodalawareness-userstatus-devicetype-e-sys.md) | 设备类型枚举。 |
+| [ReminderLevel](arkts-multimodalawareness-userstatus-reminderlevel-e-sys.md) | 触发特定提醒铃声所需的舒适提醒级别枚举。 |
+| [UserStatusAtomicCap](arkts-multimodalawareness-userstatus-userstatusatomiccap-e-sys.md) | 用户状态原子能力枚举。 |
+| [UserStatusFeature](arkts-multimodalawareness-userstatus-userstatusfeature-e-sys.md) | 用户状态检测特性枚举。 |
 <!--DelEnd-->
 

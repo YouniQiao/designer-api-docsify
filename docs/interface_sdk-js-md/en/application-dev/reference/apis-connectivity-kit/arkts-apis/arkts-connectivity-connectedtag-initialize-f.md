@@ -28,7 +28,7 @@ Initializes the connected NFC tag.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 801 | Capability not supported. |
-| 3200101 | Connected NFC tag running state is abnormal in service. |
-| 201 | Permission denied. |
+| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. |
+| [3200101](../errorcode-nfc.md#3200101-abnormal-active-nfc-tag-status) | Connected NFC tag running state is abnormal in service. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
 

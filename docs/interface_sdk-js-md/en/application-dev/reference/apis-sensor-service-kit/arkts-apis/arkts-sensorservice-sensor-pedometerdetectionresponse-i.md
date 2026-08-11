@@ -1,6 +1,6 @@
 # PedometerDetectionResponse
 
-计步检测传感器数据，继承于[Response](arkts-sensorservice-sensor-response-i.md)。
+Describes the pedometer detection sensor data. It extends from [Response](arkts-sensorservice-sensor-response-i.md).
 
 **Inheritance/Implementation:** PedometerDetectionResponse extends [Response](arkts-sensorservice-sensor-response-i.md)
 
@@ -24,7 +24,7 @@ import { sensor } from 'kits/@kit.SensorServiceKit';
 scalar: double
 ```
 
-计步检测标量。取值范围：1（检测到计步事件，表示用户产生了计步行走的动作）或0（未检测到计步事件，表示用户没有发生运动）。
+Pedometer detection. This parameter specifies whether a user takes a step. The value **0** means that the user does not take a step, and **1** means that the user takes a step.
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：double
 

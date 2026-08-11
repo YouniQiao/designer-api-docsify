@@ -42,7 +42,7 @@ onAccept?: (value: DatePickerResult) => void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | [DatePickerResult](../arkts-apis/arkts-arkui-datepicker-datepickerresult-i.md) | 是 |  |
+| value | [DatePickerResult](arkts-arkui-datepickerresult-i.md) | 是 |  |
 
 ## onCancel
 
@@ -90,7 +90,7 @@ onChange?: (value: DatePickerResult) => void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | [DatePickerResult](../arkts-apis/arkts-arkui-datepicker-datepickerresult-i.md) | 是 |  |
+| value | [DatePickerResult](arkts-arkui-datepickerresult-i.md) | 是 |  |
 
 ## onDidAppear
 
@@ -364,7 +364,7 @@ backgroundEffect?: BackgroundEffectOptions
 > 未设置时不生效，此时弹窗背景模糊效果由backgroundBlurStyle决定；设置后将覆盖backgroundBlurStyle的效果。从API版本26.0.0开始，
 > 设置systemMaterial后backgroundEffect与backgroundBlurStyle均不生效。
 
-**类型：** [BackgroundEffectOptions](arkts-arkui-backgroundeffectoptions-i.md)
+**类型：** [BackgroundEffectOptions](../arkts-apis/arkts-arkui-common-backgroundeffectoptions-i.md)
 
 **起始版本：** 19
 
@@ -672,7 +672,7 @@ lunarSwitchStyle?: LunarSwitchStyle
 > &lt;br&gt;strokeColor: Color.White
 > &lt;br&gt;}
 
-**类型：** [LunarSwitchStyle](arkts-arkui-lunarswitchstyle-i.md)
+**类型：** [LunarSwitchStyle](../arkts-apis/arkts-arkui-datepicker-lunarswitchstyle-i.md)
 
 **默认值：** { selectedColor: $r('sys.color.ohos_id_color_text_primary_actived'), unselectedColor: $r('sys.color.ohos_id_color_switch_outline_off'), strokeColor: Color.White }.
 
@@ -724,7 +724,7 @@ offset?: Offset
 
 > 默认值：{ dx: 0 , dy: 0 }
 
-**类型：** [Offset](../arkts-apis/arkts-arkui-componentutils-offset-i.md)
+**类型：** [Offset](../arkts-apis/arkts-arkui-units-offset-i.md)
 
 **默认值：** { dx: 0 , dy: 0 } [since 11]
 

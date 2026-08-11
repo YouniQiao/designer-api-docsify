@@ -1,6 +1,6 @@
 # GridItemFrameNode
 
-定义GridItem类型的FrameNode。
+Define the GridItem type of FrameNode.
 
 **Inheritance/Implementation:** GridItemFrameNode extends [TypedFrameNode<GridItemAttribute>](TypedFrameNode<GridItemAttribute>)
 
@@ -18,7 +18,7 @@
 abstract initialize(options?: GridItemOptions): GridItemAttribute
 ```
 
-初始化GridItem类型的FrameNode。
+Initialize GridItem FrameNode.
 
 **Since:** 23
 
@@ -34,7 +34,7 @@ abstract initialize(options?: GridItemOptions): GridItemAttribute
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| options | [GridItemOptions](../arkts-components/arkts-arkui-griditemoptions-i.md) | No | Grid节点的选项。 |
+| options | [GridItemOptions](../arkts-components/arkts-arkui-griditemoptions-i.md) | No | Grid item options. |
 
 **Return value:**
 

@@ -1,11 +1,5 @@
 # getWallpaperByState（系统接口）
 
-## 导入模块
-
-```TypeScript
-import { wallpaper } from 'kits/@kit.BasicServicesKit';
-```
-
 ## getWallpaperByState
 
 ```TypeScript
@@ -44,9 +38,9 @@ function getWallpaperByState(wallpaperType: WallpaperType, foldState: FoldState,
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 401 | parameter error. Possible causes: 1.Mandatory parameters are left unspecified. 2.The type must be WallpaperType, parameter range must be WALLPAPER_LOCKSCREEN or WALLPAPER_SYSTEM. 3.The type must be FoldState, parameter range must be NORMAL or UNFOLD_ONCE_STATE or UNFOLD_TWICE_STATE. 4.The type must be RotateState, parameter range must be PORTRAIT or LANDSCAPE. |
-| 201 | permission denied. |
-| 202 | permission verification failed, application which is not a system application uses system API. |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | parameter error. Possible causes: 1.Mandatory parameters are left unspecified. 2.The type must be WallpaperType, parameter range must be WALLPAPER_LOCKSCREEN or WALLPAPER_SYSTEM. 3.The type must be FoldState, parameter range must be NORMAL or UNFOLD_ONCE_STATE or UNFOLD_TWICE_STATE. 4.The type must be RotateState, parameter range must be PORTRAIT or LANDSCAPE. |
+| [201](../../errorcode-universal.md#201-权限校验失败) | permission denied. |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | permission verification failed, application which is not a system application uses system API. |
 
 ## 示例
 

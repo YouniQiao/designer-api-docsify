@@ -6,7 +6,7 @@ typedef struct ArkUI_Vector2Property* ArkUI_Vector2PropertyHandle
 
 ## Overview
 
-Handle to the ArkUI native vector2 render property.
+Defines a 2D vector property pointer.
 
 **Since**: 20
 

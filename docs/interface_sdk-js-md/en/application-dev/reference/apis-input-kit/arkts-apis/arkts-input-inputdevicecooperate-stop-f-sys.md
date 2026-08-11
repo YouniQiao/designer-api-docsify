@@ -12,13 +12,7 @@ import { inputDeviceCooperate } from 'kits/@kit.InputKit';
 function stop(callback: AsyncCallback<void>): void
 ```
 
-停止键鼠穿越，使用callback异步回调。
-
-> **说明：**
-> 
-> 从 API version 9开始支持，从API version 23开始废弃。建议使用
-> [cooperate.deactivateCooperate](../../apis-distributed-service-kit/arkts-apis/arkts-distributedservice-cooperate-deactivatecooperate-f-sys.md/arkts-distributedservice-cooperate-deactivatecooperate-f-sys.md#deactivatecooperate)
-> 替代。
+Stops screen hopping. This API uses an asynchronous callback to return the result.
 
 **Since:** 9
 
@@ -38,14 +32,14 @@ function stop(callback: AsyncCallback<void>): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | 回调函数。当停止键鼠穿越成功，err为undefined，否则为错误对象。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback. If the operation is successful, **err** is **undefined**. Otherwise, **error** is an error object. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; 3. Parameter verification failed. |
-| 202 | Permission denied, non-system app called system api.<br>**Applicable version:** 12 and later |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; 3. Parameter verification failed. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission denied, non-system app called system api.<br>**Applicable version:** 12 and later |
 
 ## Examples
 
@@ -63,13 +57,13 @@ struct Index {
           try {
             inputDeviceCooperate.stop((error: BusinessError) => {
               if (error) {
-                console.error(`Failed to stop keyboard mouse crossing, Code: ${(error as BusinessError).code}, message: ${(error as BusinessError).message}.`);
+                console.error(`Stop Keyboard mouse crossing failed, error: ${JSON.stringify(error, [`code`, `message`])}`);
                 return;
               }
-              console.info(`Succeeded in stopping keyboard mouse crossing.`);
+              console.info(`Stop Keyboard mouse crossing success.`);
             });
           } catch (error) {
-            console.error(`Failed to stop keyboard mouse crossing, Code: ${(error as BusinessError).code}, message: ${(error as BusinessError).message}.`);
+            console.error(`Stop Keyboard mouse crossing failed, error: ${JSON.stringify(error, [`code`, `message`])}`);
           }
         })
     }
@@ -84,12 +78,7 @@ struct Index {
 function stop(): Promise<void>
 ```
 
-停止键鼠穿越，使用Promise异步回调。
-
-> **说明：**
-> 
-> 从 API version 9开始支持，从API version 23开始废弃。建议使用
-> [cooperate.deactivateCooperate](../../apis-distributed-service-kit/arkts-apis/arkts-distributedservice-cooperate-deactivatecooperate-f-sys.md/arkts-distributedservice-cooperate-deactivatecooperate-f-sys.md#deactivatecooperate)替代。
+Stops screen hopping. This API uses a promise to return the result.
 
 **Since:** 9
 
@@ -109,13 +98,13 @@ function stop(): Promise<void>
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise对象，无返回结果。 |
+| Promise&lt;void&gt; | Promise that returns no value. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 202 | Permission denied, non-system app called system api.<br>**Applicable version:** 12 and later |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission denied, non-system app called system api.<br>**Applicable version:** 12 and later |
 
 ## Examples
 
@@ -130,11 +119,15 @@ struct Index {
     RelativeContainer() {
       Text()
         .onClick(() => {
-          inputDeviceCooperate.stop().then(() => {
-            console.info(`Succeeded in stopping keyboard mouse crossing.`);
-          }).catch((error: BusinessError) => {
-            console.error(`Failed to stop keyboard mouse crossing, Code: ${(error as BusinessError).code}, message: ${(error as BusinessError).message}.`);
-          });
+          try {
+            inputDeviceCooperate.stop().then(() => {
+              console.info(`Stop Keyboard mouse crossing success.`);
+            }, (error: BusinessError) => {
+              console.error(`Stop Keyboard mouse crossing failed, error: ${JSON.stringify(error, [`code`, `message`])}`);
+            });
+          } catch (error) {
+            console.error(`Stop Keyboard mouse crossing failed, error: ${JSON.stringify(error, [`code`, `message`])}`);
+          }
         })
     }
   }

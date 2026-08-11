@@ -1,6 +1,10 @@
 # @ohos.distributedHardware.hardwareManager
 
-分布式硬件管理模块提供控制分布式硬件的能力，包括暂停、恢复和停止被控端分布式硬件业务。
+The **hardwareManager** module provides the capability of controlling distributed hardware, including pausing,resuming, and stopping the distributed hardware service on the controlled device.
+
+> **NOTE：**
+
+> The APIs provided by this module are system APIs.
 
 **Since:** 11
 
@@ -25,9 +29,9 @@ import { hardwareManager } from 'kits/@kit.DistributedServiceKit';
 
 | Name | Description |
 | --- | --- |
-| [pauseDistributedHardware](arkts-distributedservice-hardwaremanager-pausedistributedhardware-f-sys.md#pausedistributedhardware) | 暂停被控端分布式硬件业务。使用promise异步回调。 |
-| [resumeDistributedHardware](arkts-distributedservice-hardwaremanager-resumedistributedhardware-f-sys.md#resumedistributedhardware) | 恢复被控端分布式硬件业务。使用promise异步回调。 |
-| [stopDistributedHardware](arkts-distributedservice-hardwaremanager-stopdistributedhardware-f-sys.md#stopdistributedhardware) | 停止被控端分布式硬件业务。使用promise异步回调。 |
+| [pauseDistributedHardware](arkts-distributedservice-hardwaremanager-pausedistributedhardware-f-sys.md#pausedistributedhardware) | Pauses the distributed hardware service on the controlled device. This API uses a promise to return the result. |
+| [resumeDistributedHardware](arkts-distributedservice-hardwaremanager-resumedistributedhardware-f-sys.md#resumedistributedhardware) | Resumes the distributed hardware service on the controlled device. This API uses a promise to return the result. |
+| [stopDistributedHardware](arkts-distributedservice-hardwaremanager-stopdistributedhardware-f-sys.md#stopdistributedhardware) | Stops the distributed hardware service on the controlled device. This API uses a promise to return the result. |
 <!--DelEnd-->
 
 <!--Del-->
@@ -35,7 +39,7 @@ import { hardwareManager } from 'kits/@kit.DistributedServiceKit';
 
 | Name | Description |
 | --- | --- |
-| [HardwareDescriptor](arkts-distributedservice-hardwaremanager-hardwaredescriptor-i-sys.md) | 表示分布式硬件的描述信息。 |
+| [HardwareDescriptor](arkts-distributedservice-hardwaremanager-hardwaredescriptor-i-sys.md) | Represents the distributed hardware information. |
 <!--DelEnd-->
 
 <!--Del-->
@@ -43,7 +47,7 @@ import { hardwareManager } from 'kits/@kit.DistributedServiceKit';
 
 | Name | Description |
 | --- | --- |
-| [DistributedHardwareErrorCode](arkts-distributedservice-hardwaremanager-distributedhardwareerrorcode-e-sys.md) | 分布式硬件错误码的枚举。 |
-| [DistributedHardwareType](arkts-distributedservice-hardwaremanager-distributedhardwaretype-e-sys.md) | 表示分布式硬件类型。 |
+| [DistributedHardwareErrorCode](arkts-distributedservice-hardwaremanager-distributedhardwareerrorcode-e-sys.md) | Enumerates the error codes used for the distributed hardware. |
+| [DistributedHardwareType](arkts-distributedservice-hardwaremanager-distributedhardwaretype-e-sys.md) | Enumerates the types of the distributed hardware. |
 <!--DelEnd-->
 

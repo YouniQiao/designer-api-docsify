@@ -4,7 +4,7 @@
 type InflateBackInputCallback = (inDesc: object) => ArrayBuffer
 ```
 
-一个用于读取用户提供的输入数据的回调函数。当解压缩过程需要更多输入数据时，zlib 将调用此函数。此函数应从数据源读取数据并将其写入缓冲区中。
+A callback function for reading input data provided by a user. When the decompression process requires more input data, zlib will call this function. This function should read data from the data source to the buffer.
 
 **Since:** 12
 
@@ -20,11 +20,11 @@ type InflateBackInputCallback = (inDesc: object) => ArrayBuffer
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| inDesc | object | Yes | 用户定义数据对象。具体的类型和内容会根据实际的应用场景而有所不同，可能包括配置数据、文件句柄等。 |
+| inDesc | object | Yes | A universal user-defined data object. The specific type and content depend on the actual application scenario, which can include configuration data, file handles, etc. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| ArrayBuffer | 从输入数据源成功读取的内容缓冲区。 |
+| ArrayBuffer | Return the buffer successfully read by the data source through the input descriptor. |
 

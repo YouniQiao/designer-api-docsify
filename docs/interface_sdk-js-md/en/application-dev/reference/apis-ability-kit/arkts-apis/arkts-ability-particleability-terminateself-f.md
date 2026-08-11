@@ -12,7 +12,7 @@ import { particleAbility } from 'kits/@kit.AbilityKit';
 function terminateSelf(callback: AsyncCallback<void>): void
 ```
 
-销毁当前particleAbility。使用callback异步回调。
+Terminates this ParticleAbility. This API uses an asynchronous callback to return the result.
 
 **Since:** 7
 
@@ -28,7 +28,7 @@ function terminateSelf(callback: AsyncCallback<void>): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | 回调函数。当销毁当前particleAbility成功，err为undefined，否则为错误对象。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. If the ParticleAbility is terminated, **err** is **undefined**; otherwise, **err** is an error object. |
 
 ## Examples
 
@@ -51,7 +51,7 @@ particleAbility.terminateSelf(
 function terminateSelf(): Promise<void>
 ```
 
-销毁当前particleAbility。使用Promise异步回调。
+Terminates this ParticleAbility. This API uses a promise to return the result.
 
 **Since:** 7
 
@@ -67,7 +67,7 @@ function terminateSelf(): Promise<void>
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise对象。无返回结果的Promise对象。 |
+| Promise&lt;void&gt; | Promise used to return the result. Promise that returns no value. |
 
 ## Examples
 

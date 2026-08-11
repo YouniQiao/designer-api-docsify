@@ -13,12 +13,6 @@
 
 **系统能力：** SystemCapability.Window.SessionManager
 
-## 导入模块
-
-```TypeScript
-import { window } from 'kits/@kit.ArkUI';
-```
-
 ## rectType
 
 ```TypeScript
@@ -47,7 +41,7 @@ windowRect: Rect
 
 相对于屏幕或父窗坐标系的窗口矩形区域信息。
 
-**类型：** [Rect](../../apis-form-kit/arkts-apis/arkts-form-forminfo-rect-i.md)
+**类型：** [Rect](../../apis-test-kit/arkts-apis/arkts-test-uitest-rect-i.md)
 
 **起始版本：** 19
 

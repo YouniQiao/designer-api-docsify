@@ -1,6 +1,6 @@
 # pluginComponentManager
 
-插件组件管理器，提供插件组件的请求、推送和事件监听等管理能力。
+Plugin component manager interface.
 
 **Since:** 23
 
@@ -24,42 +24,42 @@ import { PluginComponentTemplate } from 'kits/@kit.ArkUI';
 
 | Name | Description |
 | --- | --- |
-| [push](arkts-arkui-plugincomponentmanager-push-f.md#push) | 组件提供方向组件使用方主动发送组件和数据。适用于提供方数据更新后需主动通知使用方刷新显示的场景。 |
-| [request](arkts-arkui-plugincomponentmanager-request-f.md#request) | 组件使用方向组件提供方主动请求组件。适用于使用方需按需获取提供方组件及数据的场景。 |
-| [on](arkts-arkui-plugincomponentmanager-on-f.md#on) | 提供方监听"request"类型的事件，给使用方返回通过request接口主动请求的数据；使用方监听"push"类型的事件，接收提供方通过push接口主动推送的数据。 |
+| [push](arkts-arkui-plugincomponentmanager-push-f.md#push) | Plugin component push method. |
+| [request](arkts-arkui-plugincomponentmanager-request-f.md#request) | Plugin component request method. |
+| [on](arkts-arkui-plugincomponentmanager-on-f.md#on) | Plugin component event listener. |
 
 <!--Del-->
 ### Functions（系统接口）
 
 | Name | Description |
 | --- | --- |
-| [push](arkts-arkui-plugincomponentmanager-push-f-sys.md#push-1) | 组件提供方向组件使用方主动发送组件与数据。组件使用方需通过onPush事件监听接收数据。 |
-| [request](arkts-arkui-plugincomponentmanager-request-f-sys.md#request-1) | 组件使用方向组件提供方主动请求组件。组件提供方需通过onRequest事件监听响应请求，并通过回调返回组件模板信息。 |
+| [push](arkts-arkui-plugincomponentmanager-push-f-sys.md#push-1) | Plugin component push method used to send the information of the template it provides. |
+| [request](arkts-arkui-plugincomponentmanager-request-f-sys.md#request-1) | Plugin component request method used to send a request for the information of the template it wants. |
 <!--DelEnd-->
 
 ### Interfaces
 
 | Name | Description |
 | --- | --- |
-| [PushParameters](arkts-arkui-plugincomponentmanager-pushparameters-i.md) | 使用pluginComponentManager.push方法时需要传递的参数。 |
-| [RequestParameters](arkts-arkui-plugincomponentmanager-requestparameters-i.md) | 使用pluginComponentManager.request方法时需要传递的参数。 |
-| [RequestCallbackParameters](arkts-arkui-plugincomponentmanager-requestcallbackparameters-i.md) | pluginComponentManager.request方法接收到的回调结果。 |
-| [RequestEventResult](arkts-arkui-plugincomponentmanager-requesteventresult-i.md) | 注册request监听方法后，接收到请求事件时回应请求的数据类型。 |
+| [PushParameters](arkts-arkui-plugincomponentmanager-pushparameters-i.md) | Plugin component push parameters. |
+| [RequestParameters](arkts-arkui-plugincomponentmanager-requestparameters-i.md) | Plugin component request parameters. |
+| [RequestCallbackParameters](arkts-arkui-plugincomponentmanager-requestcallbackparameters-i.md) | Plugin component request callback parameters. |
+| [RequestEventResult](arkts-arkui-plugincomponentmanager-requesteventresult-i.md) | Plugin component request event result value. |
 
 <!--Del-->
 ### Interfaces（系统接口）
 
 | Name | Description |
 | --- | --- |
-| [PushParameterForStage](arkts-arkui-plugincomponentmanager-pushparameterforstage-i-sys.md) | 用于设置Stage模型下使用pluginComponentManager.push方法时需要传递的参数。 |
-| [RequestParameterForStage](arkts-arkui-plugincomponentmanager-requestparameterforstage-i-sys.md) | 用于设置Stage模型下使用pluginComponentManager.request方法时需要传递的参数。 |
+| [PushParameterForStage](arkts-arkui-plugincomponentmanager-pushparameterforstage-i-sys.md) | Plugin component push parameters which is used in push function. |
+| [RequestParameterForStage](arkts-arkui-plugincomponentmanager-requestparameterforstage-i-sys.md) | Plugin component request parameters which is used in request function. |
 <!--DelEnd-->
 
 ### Types
 
 | Name | Description |
 | --- | --- |
-| [KVObject](arkts-arkui-plugincomponentmanager-kvobject-t.md) | 以键值对形式存储信息，符合JSON格式。 |
-| [OnPushEventCallback](arkts-arkui-plugincomponentmanager-onpusheventcallback-t.md) | 对应push事件的监听回调函数。 |
-| [OnRequestEventCallback](arkts-arkui-plugincomponentmanager-onrequesteventcallback-t.md) | 对应request事件的监听回调函数。 |
+| [KVObject](arkts-arkui-plugincomponentmanager-kvobject-t.md) | Defines KVObject. |
+| [OnPushEventCallback](arkts-arkui-plugincomponentmanager-onpusheventcallback-t.md) | Plugin component push event callback. |
+| [OnRequestEventCallback](arkts-arkui-plugincomponentmanager-onrequesteventcallback-t.md) | Plugin component request event callback. |
 

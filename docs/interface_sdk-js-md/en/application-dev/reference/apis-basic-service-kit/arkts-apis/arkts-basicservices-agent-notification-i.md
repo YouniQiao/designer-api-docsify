@@ -1,6 +1,6 @@
 # Notification
 
-通知栏自定义信息。
+Describes the custom information of the notification bar.
 
 **Since:** 15
 
@@ -22,7 +22,7 @@ import { request } from 'kits/@kit.BasicServicesKit';
 text?: string
 ```
 
-通知栏自定义正文。若不设置则使用默认显示方式。text长度上限为3072B。
+Custom body text, with a maximum of 3072 bytes. The default text is used if this parameter is not set.
 
 **Type:** string
 
@@ -40,7 +40,7 @@ text?: string
 title?: string
 ```
 
-通知栏自定义标题。若不设置则使用默认显示方式。title长度上限为1024B。
+Custom title, with a maximum of 1024 bytes. The default title is used if this parameter is not set.
 
 **Type:** string
 
@@ -58,15 +58,14 @@ title?: string
 visibility?: int
 ```
 
-设置任务的通知栏显示方式，通过[VISIBILITY常量](../../../reference/apis-basic-services-kit/js-apis-request.md#常量-1)的位运算方式决定显示方式，任务通知的显示方式，包括如下几种：
-
-- 仅显示完成通知，参数为VISIBILITY_COMPLETION或1，任务完成/失败后展示对应通知。  
-- 仅显示进度通知，参数为VISIBILITY_PROGRESS或2，任务在进行中显示进度通知，当任务下载成功/失败后会直接退出进度通知，不会显示完成通知。  
-- 显示进度通知/完成通知，参数为VISIBILITY_COMPLETION | VISIBILITY_PROGRESS或3，任务在进行中显示进度通知，当任务下载成功/失败后会退出进度通知，并显示完成通知。
-
-若不设置该参数，则根据gauge字段来判断；若无gauge字段，则仅显示完成通知。
-
-The value should be an integer.
+Task visibility mode for the notification bar, which is determined by bitwise operations on the  
+[VISIBILITY constant](../../../reference/apis-basic-services-kit/js-apis-request.md#constants-1). The options are as follows:  
+- Only the completion notification is displayed. The parameter is **VISIBILITY_COMPLETION** or **1**. The  
+corresponding notification is displayed after the task is complete or fails.  
+- Only the progress notification is displayed when the task is in progress. The parameter is  
+**VISIBILITY_PROGRESS** or **2**. Completion notification is not displayed when the download task is complete or fails.  
+- The progress notification and completion notification are displayed. The parameter is VISIBILITY_COMPLETION |  
+VISIBILITY_PROGRESS or **3**. The progress notification is displayed when the task is in progress. When the download task is complete or fails, the completion notification is displayed as well.If this parameter is not set, the **gauge** field is used for determination. If there is no **gauge** field,only the completion notification is displayed.The value should be an integer.
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
@@ -84,7 +83,7 @@ The value should be an integer.
 wantAgent?: WantAgent
 ```
 
-通知参数，用于实现点击任务通知后跳转的功能。默认值为空。
+Notification parameter, which is used to implement redirection after a task notification is tapped. The default value is empty.
 
 **Type:** [WantAgent](../../apis-ability-kit/arkts-apis/arkts-ability-wantagent-t.md)
 

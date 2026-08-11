@@ -12,7 +12,7 @@ import { inputDevice } from 'kits/@kit.InputKit';
 function off(type: 'change', listener?: Callback<DeviceListener>): void
 ```
 
-取消监听输入设备的热插拔事件。在应用退出前调用，取消监听。使用callback异步回调。
+Disables listening for device hot swap events. This API is called before the application exits. This API uses an asynchronous callback to return the result.
 
 **Since:** 9
 
@@ -26,12 +26,12 @@ function off(type: 'change', listener?: Callback<DeviceListener>): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'change' | Yes | 输入设备的事件类型，固定值为'change'。 |
-| listener | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;DeviceListener&gt; | No | 取消监听的回调函数，缺省时取消所有输入设备热插拔事件的监听。 |
+| type | 'change' | Yes | Event type. This field has a fixed value of **change**. |
+| listener | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;DeviceListener&gt; | No | Callback to unregister. If this parameter is left unspecified, listening for hot swap events of all input devices will be canceled. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
 

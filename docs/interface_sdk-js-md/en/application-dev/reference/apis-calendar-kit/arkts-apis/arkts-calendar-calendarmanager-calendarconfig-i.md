@@ -1,6 +1,6 @@
 # CalendarConfig
 
-日历配置信息。
+Describes the calendar configuration information.
 
 **Since:** 10
 
@@ -22,7 +22,7 @@ import { calendarManager } from 'kits/@kit.CalendarKit';
 color?: number | string
 ```
 
-设置Calendar颜色。值为number时取值范围为0x000000至0xFFFFFF或0x00000000至0xFFFFFFFF，值为string时长度为7或9，如'#FFFFFF'，'#FFFFFFFFF'。不设置时默认值为0xFF0A59F7，输入undefined或错误值时抛异常。
+Calendar color. If the value is a number, the value ranges from 0x000001 to 0xFFFFFF or from 0x00000001 to 0xFFFFFFFF.If the value is a string, the value contains 7 or 9 characters, for example, **#FFFFFF** or **#FFFFFFFF**. If this parameter is not set, the default value **0xFF0A59F7** is used.
 
 **Type:** number \| string
 
@@ -40,7 +40,7 @@ color?: number | string
 enableReminder?: boolean
 ```
 
-是否打开Calendar下所有Event提醒能力。当取值为true时，该Calendar下所有Event具备提醒能力；当取值为false时，不具备提醒能力，默认具备提醒能力。
+Whether to enable the reminder for events in the calendar. The value **true** means to enable the reminder for events in the calendar, and **false** means the opposite. The default value is **true**.
 
 **Type:** boolean
 

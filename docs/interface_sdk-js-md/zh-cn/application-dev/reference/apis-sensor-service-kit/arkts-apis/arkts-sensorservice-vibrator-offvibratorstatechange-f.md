@@ -1,11 +1,5 @@
 # offVibratorStateChange
 
-## 导入模块
-
-```TypeScript
-import { vibrator } from 'kits/@kit.SensorServiceKit';
-```
-
 ## offVibratorStateChange
 
 ```TypeScript
@@ -32,5 +26,27 @@ Unregister a callback function for vibrator plugin or unplug events.
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 14600101 | Device operation failed. |
+| [14600101](../errorcode-vibrator.md#14600101-操作设备失败) | Device operation failed. |
+
+## 示例
+
+```TypeScript
+import { vibrator } from '@kit.SensorServiceKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+// 回调函数 
+const vibratorStateChangeCallback = (data: vibrator.VibratorStatusEvent) => {
+  console.info('vibrator state callback info:', JSON.stringify(data));
+}
+// 使用try catch对可能出现的异常进行捕获
+try {
+  // 取消订阅 vibratorStateChange事件
+  vibrator.offVibratorStateChange('vibratorStateChange', vibratorStateChangeCallback);
+  // 取消订阅所有 vibratorStateChange事件
+  // vibrator.offVibratorStateChange
+} catch (error) {
+  let e: BusinessError = error as BusinessError;
+  console.error(`An unexpected error occurred. Code: ${e.code}, message: ${e.message}`);
+}
+```
 

@@ -1,6 +1,6 @@
 # ButtonLabelStyle
 
-按钮中文本的显示样式。
+ButtonLabelStyle object.
 
 **Since:** 23
 
@@ -16,9 +16,7 @@
 font?: Font
 ```
 
-设置label文本字体样式。
-
-默认值：默认值参考[Font](arkts-arkui-arkui-uicontext-font-c.md)。
+Font style.
 
 **Type:** [Font](arkts-arkui-font-i.md)
 
@@ -38,9 +36,7 @@ font?: Font
 heightAdaptivePolicy?: TextHeightAdaptivePolicy
 ```
 
-设置label文本自适应高度的方式。
-
-默认值：TextHeightAdaptivePolicy.MAX_LINES_FIRST
+Adapt text height option.
 
 **Type:** [TextHeightAdaptivePolicy](arkts-arkui-textheightadaptivepolicy-e.md)
 
@@ -60,7 +56,7 @@ heightAdaptivePolicy?: TextHeightAdaptivePolicy
 maxFontSize?: double | ResourceStr
 ```
 
-设置label文本最大显示字号。需配合minFontSize以及maxLines或布局大小限制使用。
+Max font size for adapted height.
 
 **Type:** double \| ResourceStr
 
@@ -80,9 +76,7 @@ maxFontSize?: double | ResourceStr
 maxLines?: int
 ```
 
-设置label文本的最大行数。如果指定此参数，则文本最多不会超过指定的行。如果有多余的文本，可以通过overflow来指定截断方式。
-
-默认值：1
+Label max lines.
 
 **Type:** int
 
@@ -102,11 +96,7 @@ maxLines?: int
 minFontSize?: double | ResourceStr
 ```
 
-设置label文本最小显示字号。需配合maxFontSize以及maxLines或布局大小限制使用。
-
-**说明：**
-
-minFontSize小于或等于0时，自适应字号不生效。
+Min font size for adapted height.
 
 **Type:** double \| ResourceStr
 
@@ -126,9 +116,7 @@ minFontSize小于或等于0时，自适应字号不生效。
 overflow?: TextOverflow
 ```
 
-设置label文本超长时的显示方式。文本截断是按字截断。例如，英文以单词为最小单位进行截断，若需要以字母为单位进行截断，可在字母间添加零宽空格。
-
-默认值：TextOverflow.Ellipsis
+overflow mode.
 
 **Type:** [TextOverflow](arkts-arkui-textoverflow-e.md)
 
@@ -148,13 +136,9 @@ overflow?: TextOverflow
 textAlign?: TextAlign
 ```
 
-设置内容的水平对齐模式。
+Set the horizontal center mode of the content.
 
-默认值：TextAlign.Start
-
-**设备差异：** 
-
-默认值是TextAlign.Start。在穿戴设备上，默认值为TextAlign.Center。
+Device Behavior Differences:Default value is TextAlign.Start.The default value on wearable devices is TextAlign.Center.
 
 **Type:** [TextAlign](arkts-arkui-textalign-e.md)
 

@@ -1,11 +1,5 @@
 # touch
 
-## 导入模块
-
-```TypeScript
-import { request } from 'kits/@kit.BasicServicesKit';
-```
-
 ## touch
 
 ```TypeScript
@@ -34,9 +28,25 @@ function touch(id: string, token: string, callback: AsyncCallback<TaskInfo>): vo
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 401 | Parameter error. Possible causes: &lt;br&gt; 1. Missing mandatory parameters. &lt;br&gt; 2. Incorrect parameter type. &lt;br&gt; 3. Parameter verification failed. |
-| 21900006 | Task removed or not found. |
-| 13400003 | Task service ability error. |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: &lt;br&gt; 1. Missing mandatory parameters. &lt;br&gt; 2. Incorrect parameter type. &lt;br&gt; 3. Parameter verification failed. |
+| [21900006](../../apis-basic-services-kit/errorcode-request.md#21900006-操作不存在的任务错误) | Task removed or not found. |
+| [13400003](../../apis-basic-services-kit/errorcode-request.md#13400003-服务异常) | Task service ability error. |
+
+## 示例
+
+ArkTS-Sta示例：
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+request.agent.touch("123456", "token", (err: BusinessError<void> | null, taskInfo: request.agent.TaskInfo | undefined) => {
+  if (err) {
+    console.error(`Failed to touch a upload task, Code: ${err.code}, message: ${err.message}`);
+    return;
+  }
+  console.info(`Succeeded in touching a upload task.`);
+});
+```
 
 
 ## touch
@@ -72,7 +82,21 @@ function touch(id: string, token: string): Promise<TaskInfo>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 401 | Parameter error. Possible causes: &lt;br&gt; 1. Missing mandatory parameters. &lt;br&gt; 2. Incorrect parameter type. &lt;br&gt; 3. Parameter verification failed. |
-| 21900006 | Task removed or not found. |
-| 13400003 | Task service ability error. |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: &lt;br&gt; 1. Missing mandatory parameters. &lt;br&gt; 2. Incorrect parameter type. &lt;br&gt; 3. Parameter verification failed. |
+| [21900006](../../apis-basic-services-kit/errorcode-request.md#21900006-操作不存在的任务错误) | Task removed or not found. |
+| [13400003](../../apis-basic-services-kit/errorcode-request.md#13400003-服务异常) | Task service ability error. |
+
+## 示例
+
+ArkTS-Sta示例：
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+request.agent.touch("123456", "token").then((taskInfo: request.agent.TaskInfo) => {
+  console.info(`Succeeded in touching a upload task. `);
+}).catch((err: Error) => {
+  console.error(`Failed to touch a upload task, Code: ${err.code}, message: ${err.message}`);
+});
+```
 

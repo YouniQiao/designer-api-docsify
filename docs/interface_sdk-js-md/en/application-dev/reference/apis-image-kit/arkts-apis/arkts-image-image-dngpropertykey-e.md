@@ -1,12 +1,6 @@
 # DngPropertyKey
 
-表示DNG图片信息的枚举。
-
-> **说明：**
-> 
-> - 关于字段的更详细描述请参考DNG协议文档DNG Specification 1.4.0.0。
-> 
-> - 返回字段类型具体参考[DngMetadata](arkts-image-image-dngmetadata-c.md)。
+Enumerates the properties available for the metadata of a DNG image.
 
 **Since:** 24
 
@@ -22,7 +16,7 @@
 DNG_VERSION = 'DNGVersion'
 ```
 
-DNG图片的版本号。
+The DNG version.
 
 **Since:** 24
 
@@ -40,7 +34,7 @@ DNG图片的版本号。
 DNG_BACKWARD_VERSION = 'DNGBackwardVersion'
 ```
 
-DNG文件向后兼容的最低版本号。
+The DNG backward version.
 
 **Since:** 24
 
@@ -58,7 +52,7 @@ DNG文件向后兼容的最低版本号。
 UNIQUE_CAMERA_MODEL = 'UniqueCameraModel'
 ```
 
-相机的唯一型号标识，用于区分不同设备。
+A unique camera model.
 
 **Since:** 24
 
@@ -76,7 +70,7 @@ UNIQUE_CAMERA_MODEL = 'UniqueCameraModel'
 LOCALIZED_CAMERA_MODEL = 'LocalizedCameraModel'
 ```
 
-本地化后的相机型号名称。
+A localized camera model.
 
 **Since:** 24
 
@@ -94,7 +88,7 @@ LOCALIZED_CAMERA_MODEL = 'LocalizedCameraModel'
 CFA_PLANE_COLOR = 'CFAPlaneColor'
 ```
 
-CFA各平面的颜色通道定义。
+The CFA (color filter array) plane color.
 
 **Since:** 24
 
@@ -112,7 +106,7 @@ CFA各平面的颜色通道定义。
 CFA_LAYOUT = 'CFALayout'
 ```
 
-CFA布局类型，如RGGB、BGGR等。
+The CFA (color filter array) layout.
 
 **Since:** 24
 
@@ -130,7 +124,7 @@ CFA布局类型，如RGGB、BGGR等。
 LINEARIZATION_TABLE = 'LinearizationTable'
 ```
 
-线性化查找表，用于将原始传感器值映射为线性光强度。
+The linearization table.
 
 **Since:** 24
 
@@ -148,7 +142,7 @@ LINEARIZATION_TABLE = 'LinearizationTable'
 BLACK_LEVEL_REPEAT_DIM = 'BlackLevelRepeatDim'
 ```
 
-黑电平重复维度。
+The black level repeat dimension.
 
 **Since:** 24
 
@@ -166,7 +160,7 @@ BLACK_LEVEL_REPEAT_DIM = 'BlackLevelRepeatDim'
 BLACK_LEVEL = 'BlackLevel'
 ```
 
-零光照下的编码电平，按CFA平面顺序排列。
+The zero light encoding level.
 
 **Since:** 24
 
@@ -184,7 +178,7 @@ BLACK_LEVEL = 'BlackLevel'
 BLACK_LEVEL_DELTA_H = 'BlackLevelDeltaH'
 ```
 
-水平方向黑电平校正增量。
+The black level delta H.
 
 **Since:** 24
 
@@ -202,7 +196,7 @@ BLACK_LEVEL_DELTA_H = 'BlackLevelDeltaH'
 BLACK_LEVEL_DELTA_V = 'BlackLevelDeltaV'
 ```
 
-垂直方向黑电平校正增量。
+The black level delta V.
 
 **Since:** 24
 
@@ -220,7 +214,7 @@ BLACK_LEVEL_DELTA_V = 'BlackLevelDeltaV'
 WHITE_LEVEL = 'WhiteLevel'
 ```
 
-白电平，表示传感器最大有效输出。
+The white level.
 
 **Since:** 24
 
@@ -238,7 +232,7 @@ WHITE_LEVEL = 'WhiteLevel'
 DEFAULT_SCALE = 'DefaultScale'
 ```
 
-默认缩放比例。
+The default scale.
 
 **Since:** 24
 
@@ -256,7 +250,7 @@ DEFAULT_SCALE = 'DefaultScale'
 DEFAULT_CROP_ORIGIN = 'DefaultCropOrigin'
 ```
 
-默认裁剪区域的左上角坐标（x, y）。
+The default crop origin.
 
 **Since:** 24
 
@@ -274,7 +268,7 @@ DEFAULT_CROP_ORIGIN = 'DefaultCropOrigin'
 DEFAULT_CROP_SIZE = 'DefaultCropSize'
 ```
 
-默认裁剪区域的宽度和高度。
+The default crop size.
 
 **Since:** 24
 
@@ -292,7 +286,7 @@ DEFAULT_CROP_SIZE = 'DefaultCropSize'
 COLOR_MATRIX1 = 'ColorMatrix1'
 ```
 
-第一校准光源下的色彩变换矩阵。
+A transformation matrix under the first calibration illuminant.
 
 **Since:** 24
 
@@ -310,7 +304,7 @@ COLOR_MATRIX1 = 'ColorMatrix1'
 COLOR_MATRIX2 = 'ColorMatrix2'
 ```
 
-第二校准光源下的色彩变换矩阵。
+A transformation matrix under the second calibration illuminant.
 
 **Since:** 24
 
@@ -328,7 +322,7 @@ COLOR_MATRIX2 = 'ColorMatrix2'
 CAMERA_CALIBRATION1 = 'CameraCalibration1'
 ```
 
-第一校准光源下的相机校准矩阵。
+A calibration matrix under the first calibration illuminant.
 
 **Since:** 24
 
@@ -346,7 +340,7 @@ CAMERA_CALIBRATION1 = 'CameraCalibration1'
 CAMERA_CALIBRATION2 = 'CameraCalibration2'
 ```
 
-第二校准光源下的相机校准矩阵。
+A calibration matrix under the second calibration illuminant.
 
 **Since:** 24
 
@@ -364,7 +358,7 @@ CAMERA_CALIBRATION2 = 'CameraCalibration2'
 REDUCTION_MATRIX1 = 'ReductionMatrix1'
 ```
 
-第一校准光源下的降维矩阵。
+A dimensionality reduction matrix under the first calibration illuminant.
 
 **Since:** 24
 
@@ -382,7 +376,7 @@ REDUCTION_MATRIX1 = 'ReductionMatrix1'
 REDUCTION_MATRIX2 = 'ReductionMatrix2'
 ```
 
-第二校准光源下的降维矩阵。
+A dimensionality reduction matrix under the second calibration illuminant.
 
 **Since:** 24
 
@@ -400,7 +394,7 @@ REDUCTION_MATRIX2 = 'ReductionMatrix2'
 ANALOG_BALANCE = 'AnalogBalance'
 ```
 
-模拟增益平衡系数。
+The analog balance.
 
 **Since:** 24
 
@@ -418,7 +412,7 @@ ANALOG_BALANCE = 'AnalogBalance'
 AS_SHOT_NEUTRAL = 'AsShotNeutral'
 ```
 
-拍摄时的中性白点。
+The as-shot neutral.
 
 **Since:** 24
 
@@ -436,7 +430,7 @@ AS_SHOT_NEUTRAL = 'AsShotNeutral'
 AS_SHOT_WHITEXY = 'AsShotWhiteXY'
 ```
 
-拍摄时白点的CIE x-y色度坐标。
+The as-shot white, encoded as X‑Y chromaticity coordinates.
 
 **Since:** 24
 
@@ -454,7 +448,7 @@ AS_SHOT_WHITEXY = 'AsShotWhiteXY'
 BASELINE_EXPOSURE = 'BaselineExposure'
 ```
 
-基准曝光补偿值，单位：EV。
+The baseline exposure.
 
 **Since:** 24
 
@@ -472,7 +466,7 @@ BASELINE_EXPOSURE = 'BaselineExposure'
 BASELINE_NOISE = 'BaselineNoise'
 ```
 
-基准噪声水平。
+The baseline noise.
 
 **Since:** 24
 
@@ -490,7 +484,7 @@ BASELINE_NOISE = 'BaselineNoise'
 BASELINE_SHARPNESS = 'BaselineSharpness'
 ```
 
-基准锐度增益。
+The baseline sharpness.
 
 **Since:** 24
 
@@ -508,7 +502,7 @@ BASELINE_SHARPNESS = 'BaselineSharpness'
 BAYER_GREEN_SPLIT = 'BayerGreenSplit'
 ```
 
-Bayer图像中两个绿色通道的分离程度。
+The Bayer green split.
 
 **Since:** 24
 
@@ -526,7 +520,7 @@ Bayer图像中两个绿色通道的分离程度。
 LINEAR_RESPONSE_LIMIT = 'LinearResponseLimit'
 ```
 
-线性响应上限，有效值范围为[0.0, 1.0]。
+The linear response limit.
 
 **Since:** 24
 
@@ -544,7 +538,7 @@ LINEAR_RESPONSE_LIMIT = 'LinearResponseLimit'
 CAMERA_SERIAL_NUMBER = 'CameraSerialNumber'
 ```
 
-相机序列号。
+The serial number of the camera.
 
 **Since:** 24
 
@@ -562,7 +556,7 @@ CAMERA_SERIAL_NUMBER = 'CameraSerialNumber'
 LENS_INFO = 'LensInfo'
 ```
 
-镜头信息。
+Information about the lens.
 
 **Since:** 24
 
@@ -580,7 +574,7 @@ LENS_INFO = 'LensInfo'
 CHROMA_BLUR_RADIUS = 'ChromaBlurRadius'
 ```
 
-色度模糊半径。单位：像素（px）。
+The chroma blur radius.
 
 **Since:** 24
 
@@ -598,7 +592,7 @@ CHROMA_BLUR_RADIUS = 'ChromaBlurRadius'
 ANTI_ALIAS_STRENGTH = 'AntiAliasStrength'
 ```
 
-抗锯齿滤波器强度。
+The anti-alias strength.
 
 **Since:** 24
 
@@ -616,7 +610,7 @@ ANTI_ALIAS_STRENGTH = 'AntiAliasStrength'
 SHADOW_SCALE = 'ShadowScale'
 ```
 
-阴影区域缩放因子。
+The shadow scale.
 
 **Since:** 24
 
@@ -634,7 +628,7 @@ SHADOW_SCALE = 'ShadowScale'
 DNG_PRIVATE_DATA = 'DNGPrivateData'
 ```
 
-厂商私有数据块。
+The private data.
 
 **Since:** 24
 
@@ -652,7 +646,7 @@ DNG_PRIVATE_DATA = 'DNGPrivateData'
 MAKER_NOTE_SAFETY = 'MakerNoteSafety'
 ```
 
-EXIF MakerNote 是否安全可保留。0：不安全，1：安全
+Whether the EXIF MakerNote tag is safe.
 
 **Since:** 24
 
@@ -670,7 +664,7 @@ EXIF MakerNote 是否安全可保留。0：不安全，1：安全
 CALIBRATION_ILLUMINANT1 = 'CalibrationIlluminant1'
 ```
 
-第一校准光源类型。
+The first calibration illuminant.
 
 **Since:** 24
 
@@ -688,7 +682,7 @@ CALIBRATION_ILLUMINANT1 = 'CalibrationIlluminant1'
 CALIBRATION_ILLUMINANT2 = 'CalibrationIlluminant2'
 ```
 
-第二校准光源类型。
+The second calibration illuminant.
 
 **Since:** 24
 
@@ -706,7 +700,7 @@ CALIBRATION_ILLUMINANT2 = 'CalibrationIlluminant2'
 BEST_QUALITY_SCALE = 'BestQualityScale'
 ```
 
-最佳画质缩放比例。
+The best quality scale.
 
 **Since:** 24
 
@@ -724,7 +718,7 @@ BEST_QUALITY_SCALE = 'BestQualityScale'
 RAW_DATA_UNIQUE_ID = 'RawDataUniqueID'
 ```
 
-原始图像数据的唯一标识符。
+The unique identifier of raw image data.
 
 **Since:** 24
 
@@ -742,7 +736,7 @@ RAW_DATA_UNIQUE_ID = 'RawDataUniqueID'
 ORIGINAL_RAW_FILE_NAME = 'OriginalRawFileName'
 ```
 
-原始RAW文件名。
+The original raw file name.
 
 **Since:** 24
 
@@ -760,7 +754,7 @@ ORIGINAL_RAW_FILE_NAME = 'OriginalRawFileName'
 ORIGINAL_RAW_FILE_DATA = 'OriginalRawFileData'
 ```
 
-原始RAW文件的完整数据。
+The original raw file data.
 
 **Since:** 24
 
@@ -778,7 +772,7 @@ ORIGINAL_RAW_FILE_DATA = 'OriginalRawFileData'
 ACTIVE_AREA = 'ActiveArea'
 ```
 
-有效图像区域。
+The active area.
 
 **Since:** 24
 
@@ -796,7 +790,7 @@ ACTIVE_AREA = 'ActiveArea'
 MASKED_AREAS = 'MaskedAreas'
 ```
 
-被遮蔽区域列表。
+The masked areas.
 
 **Since:** 24
 
@@ -814,7 +808,7 @@ MASKED_AREAS = 'MaskedAreas'
 AS_SHOT_ICC_PROFILE = 'AsShotICCProfile'
 ```
 
-拍摄时使用的ICC色彩配置文件。
+An ICC profile.
 
 **Since:** 24
 
@@ -832,7 +826,7 @@ AS_SHOT_ICC_PROFILE = 'AsShotICCProfile'
 AS_SHOT_PRE_PROFILE_MATRIX = 'AsShotPreProfileMatrix'
 ```
 
-应用ICC配置文件前的预变换矩阵。
+The as-shot pre-profile matrix.
 
 **Since:** 24
 
@@ -850,7 +844,7 @@ AS_SHOT_PRE_PROFILE_MATRIX = 'AsShotPreProfileMatrix'
 CURRENT_ICC_PROFILE = 'CurrentICCProfile'
 ```
 
-当前使用的ICC色彩配置文件。
+The current ICC profile.
 
 **Since:** 24
 
@@ -868,7 +862,7 @@ CURRENT_ICC_PROFILE = 'CurrentICCProfile'
 CURRENT_PRE_PROFILE_MATRIX = 'CurrentPreProfileMatrix'
 ```
 
-当前ICC配置文件前的预变换矩阵。
+The current pre-profile matrix.
 
 **Since:** 24
 
@@ -886,7 +880,7 @@ CURRENT_PRE_PROFILE_MATRIX = 'CurrentPreProfileMatrix'
 COLORIMETRIC_REFERENCE = 'ColorimetricReference'
 ```
 
-色度参考标准。
+The colorimetric reference.
 
 **Since:** 24
 
@@ -904,7 +898,7 @@ COLORIMETRIC_REFERENCE = 'ColorimetricReference'
 CAMERA_CALIBRATION_SIGNATURE = 'CameraCalibrationSignature'
 ```
 
-相机校准签名。
+The camera calibration signature.
 
 **Since:** 24
 
@@ -922,7 +916,7 @@ CAMERA_CALIBRATION_SIGNATURE = 'CameraCalibrationSignature'
 PROFILE_CALIBRATION_SIGNATURE = 'ProfileCalibrationSignature'
 ```
 
-配置文件校准签名。
+The profile calibration signature.
 
 **Since:** 24
 
@@ -940,7 +934,7 @@ PROFILE_CALIBRATION_SIGNATURE = 'ProfileCalibrationSignature'
 EXTRA_CAMERA_PROFILES = 'ExtraCameraProfiles'
 ```
 
-额外相机配置文件索引列表。
+The extra camera profiles.
 
 **Since:** 24
 
@@ -958,7 +952,7 @@ EXTRA_CAMERA_PROFILES = 'ExtraCameraProfiles'
 AS_SHOT_PROFILE_NAME = 'AsShotProfileName'
 ```
 
-拍摄时使用的配置文件名称。
+The "as-shot" camera profile.
 
 **Since:** 24
 
@@ -976,7 +970,7 @@ AS_SHOT_PROFILE_NAME = 'AsShotProfileName'
 NOISE_REDUCTION_APPLIED = 'NoiseReductionApplied'
 ```
 
-已应用的降噪强度级别。
+The applied noise reduction.
 
 **Since:** 24
 
@@ -994,7 +988,7 @@ NOISE_REDUCTION_APPLIED = 'NoiseReductionApplied'
 PROFILE_NAME = 'ProfileName'
 ```
 
-色彩配置文件名称。
+The profile name.
 
 **Since:** 24
 
@@ -1012,7 +1006,7 @@ PROFILE_NAME = 'ProfileName'
 PROFILE_HUE_SAT_MAP_DIMS = 'ProfileHueSatMapDims'
 ```
 
-色调/饱和度映射表维度。
+The profile hue/saturation map dimensions.
 
 **Since:** 24
 
@@ -1030,7 +1024,7 @@ PROFILE_HUE_SAT_MAP_DIMS = 'ProfileHueSatMapDims'
 PROFILE_HUE_SAT_MAP_DATA1 = 'ProfileHueSatMapData1'
 ```
 
-第一组色调/饱和度映射表数据。
+The first hue/saturation mapping table data.
 
 **Since:** 24
 
@@ -1048,7 +1042,7 @@ PROFILE_HUE_SAT_MAP_DATA1 = 'ProfileHueSatMapData1'
 PROFILE_HUE_SAT_MAP_DATA2 = 'ProfileHueSatMapData2'
 ```
 
-第二组色调/饱和度映射表数据。
+The second hue/saturation mapping table data.
 
 **Since:** 24
 
@@ -1066,7 +1060,7 @@ PROFILE_HUE_SAT_MAP_DATA2 = 'ProfileHueSatMapData2'
 PROFILE_TONE_CURVE = 'ProfileToneCurve'
 ```
 
-配置文件色调曲线。
+The profile tone curve.
 
 **Since:** 24
 
@@ -1084,7 +1078,7 @@ PROFILE_TONE_CURVE = 'ProfileToneCurve'
 PROFILE_EMBED_POLICY = 'ProfileEmbedPolicy'
 ```
 
-配置文件嵌入策略。
+The profile embed policy.
 
 **Since:** 24
 
@@ -1102,7 +1096,7 @@ PROFILE_EMBED_POLICY = 'ProfileEmbedPolicy'
 PROFILE_COPYRIGHT = 'ProfileCopyright'
 ```
 
-配置文件版权信息。
+The profile copyright.
 
 **Since:** 24
 
@@ -1120,7 +1114,7 @@ PROFILE_COPYRIGHT = 'ProfileCopyright'
 FORWARD_MATRIX1 = 'ForwardMatrix1'
 ```
 
-第一前向变换矩阵。
+The first forward matrix.
 
 **Since:** 24
 
@@ -1138,7 +1132,7 @@ FORWARD_MATRIX1 = 'ForwardMatrix1'
 FORWARD_MATRIX2 = 'ForwardMatrix2'
 ```
 
-第二前向变换矩阵。
+The second forward matrix.
 
 **Since:** 24
 
@@ -1156,7 +1150,7 @@ FORWARD_MATRIX2 = 'ForwardMatrix2'
 PREVIEW_APPLICATION_NAME = 'PreviewApplicationName'
 ```
 
-预览图生成应用程序名称。
+The preview application name.
 
 **Since:** 24
 
@@ -1174,7 +1168,7 @@ PREVIEW_APPLICATION_NAME = 'PreviewApplicationName'
 PREVIEW_APPLICATION_VERSION = 'PreviewApplicationVersion'
 ```
 
-预览图生成应用程序版本。
+The preview application version.
 
 **Since:** 24
 
@@ -1192,7 +1186,7 @@ PREVIEW_APPLICATION_VERSION = 'PreviewApplicationVersion'
 PREVIEW_SETTINGS_NAME = 'PreviewSettingsName'
 ```
 
-预览图处理设置名称。
+The preview settings name.
 
 **Since:** 24
 
@@ -1210,7 +1204,7 @@ PREVIEW_SETTINGS_NAME = 'PreviewSettingsName'
 PREVIEW_SETTINGS_DIGEST = 'PreviewSettingsDigest'
 ```
 
-预览图设置的MD5摘要。
+The preview settings digest.
 
 **Since:** 24
 
@@ -1228,7 +1222,7 @@ PREVIEW_SETTINGS_DIGEST = 'PreviewSettingsDigest'
 PREVIEW_COLOR_SPACE = 'PreviewColorSpace'
 ```
 
-预览图色彩空间。
+The preview color space.
 
 **Since:** 24
 
@@ -1246,7 +1240,7 @@ PREVIEW_COLOR_SPACE = 'PreviewColorSpace'
 PREVIEW_DATE_TIME = 'PreviewDateTime'
 ```
 
-预览图生成时间。
+The preview date time.
 
 **Since:** 24
 
@@ -1264,7 +1258,7 @@ PREVIEW_DATE_TIME = 'PreviewDateTime'
 RAW_IMAGE_DIGEST = 'RawImageDigest'
 ```
 
-原始图像数据的MD5摘要。
+An MD5 digest of the raw image data.
 
 **Since:** 24
 
@@ -1282,7 +1276,7 @@ RAW_IMAGE_DIGEST = 'RawImageDigest'
 ORIGINAL_RAW_FILE_DIGEST = 'OriginalRawFileDigest'
 ```
 
-原始RAW文件数据的MD5摘要。
+An MD5 digest of the data stored in the OriginalRawFileData.
 
 **Since:** 24
 
@@ -1300,7 +1294,7 @@ ORIGINAL_RAW_FILE_DIGEST = 'OriginalRawFileDigest'
 SUB_TILE_BLOCK_SIZE = 'SubTileBlockSize'
 ```
 
-图像分块存储，定义块的长和宽。
+The sub‑tile block size.
 
 **Since:** 24
 
@@ -1318,7 +1312,7 @@ SUB_TILE_BLOCK_SIZE = 'SubTileBlockSize'
 ROW_INTERLEAVE_FACTOR = 'RowInterleaveFactor'
 ```
 
-行交织因子。
+The row interleave factor.
 
 **Since:** 24
 
@@ -1336,7 +1330,7 @@ ROW_INTERLEAVE_FACTOR = 'RowInterleaveFactor'
 PROFILE_LOOK_TABLE_DIMS = 'ProfileLookTableDims'
 ```
 
-ProfileLookTableData的维度。
+The profile look table dimensions.
 
 **Since:** 24
 
@@ -1354,7 +1348,7 @@ ProfileLookTableData的维度。
 PROFILE_LOOK_TABLE_DATA = 'ProfileLookTableData'
 ```
 
-色彩表数据。
+The profile look table data.
 
 **Since:** 24
 
@@ -1372,7 +1366,7 @@ PROFILE_LOOK_TABLE_DATA = 'ProfileLookTableData'
 OPCODE_LIST1 = 'OpcodeList1'
 ```
 
-第一操作码列表。
+The first opcode list.
 
 **Since:** 24
 
@@ -1390,7 +1384,7 @@ OPCODE_LIST1 = 'OpcodeList1'
 OPCODE_LIST2 = 'OpcodeList2'
 ```
 
-第二操作码列表。
+The second opcode list.
 
 **Since:** 24
 
@@ -1408,7 +1402,7 @@ OPCODE_LIST2 = 'OpcodeList2'
 OPCODE_LIST3 = 'OpcodeList3'
 ```
 
-第三操作码列表。
+The third opcode list.
 
 **Since:** 24
 
@@ -1426,7 +1420,7 @@ OPCODE_LIST3 = 'OpcodeList3'
 NOISE_PROFILE = 'NoiseProfile'
 ```
 
-噪声剖面参数。
+The noise profile.
 
 **Since:** 24
 
@@ -1444,7 +1438,7 @@ NOISE_PROFILE = 'NoiseProfile'
 ORIGINAL_DEFAULT_FINAL_SIZE = 'OriginalDefaultFinalSize'
 ```
 
-原始默认最终输出尺寸（宽, 高）。
+The original default final size.
 
 **Since:** 24
 
@@ -1462,7 +1456,7 @@ ORIGINAL_DEFAULT_FINAL_SIZE = 'OriginalDefaultFinalSize'
 ORIGINAL_BEST_QUALITY_FINAL_SIZE = 'OriginalBestQualityFinalSize'
 ```
 
-原始最佳画质输出尺寸（宽, 高）。
+The original best quality final size.
 
 **Since:** 24
 
@@ -1480,7 +1474,7 @@ ORIGINAL_BEST_QUALITY_FINAL_SIZE = 'OriginalBestQualityFinalSize'
 ORIGINAL_DEFAULT_CROP_SIZE = 'OriginalDefaultCropSize'
 ```
 
-原始默认裁剪尺寸（宽, 高）。
+The original default crop size.
 
 **Since:** 24
 
@@ -1498,7 +1492,7 @@ ORIGINAL_DEFAULT_CROP_SIZE = 'OriginalDefaultCropSize'
 PROFILE_HUE_SAT_MAP_ENCODING = 'ProfileHueSatMapEncoding'
 ```
 
-色调/饱和度映射表编码方式。
+The profile hue/saturation map encoding.
 
 **Since:** 24
 
@@ -1516,7 +1510,7 @@ PROFILE_HUE_SAT_MAP_ENCODING = 'ProfileHueSatMapEncoding'
 PROFILE_LOOK_TABLE_ENCODING = 'ProfileLookTableEncoding'
 ```
 
-色彩表编码方式。
+The profile look table encoding.
 
 **Since:** 24
 
@@ -1534,7 +1528,7 @@ PROFILE_LOOK_TABLE_ENCODING = 'ProfileLookTableEncoding'
 BASELINE_EXPOSURE_OFFSET = 'BaselineExposureOffset'
 ```
 
-基准曝光偏移量，单位：EV。
+The baseline exposure offset.
 
 **Since:** 24
 
@@ -1552,7 +1546,7 @@ BASELINE_EXPOSURE_OFFSET = 'BaselineExposureOffset'
 DEFAULT_BLACK_RENDER = 'DefaultBlackRender'
 ```
 
-默认黑场渲染方式。
+The default black render.
 
 **Since:** 24
 
@@ -1570,7 +1564,7 @@ DEFAULT_BLACK_RENDER = 'DefaultBlackRender'
 NEW_RAW_IMAGE_DIGEST = 'NewRawImageDigest'
 ```
 
-修改后原始图像数据的新MD5摘要。
+A modified MD5 digest of the raw image data.
 
 **Since:** 24
 
@@ -1588,7 +1582,7 @@ NEW_RAW_IMAGE_DIGEST = 'NewRawImageDigest'
 RAW_TO_PREVIEW_GAIN = 'RawToPreviewGain'
 ```
 
-主RAW图与预览图之间的增益比。
+The gain between the main raw IFD and the preview IFD.
 
 **Since:** 24
 
@@ -1606,7 +1600,7 @@ RAW_TO_PREVIEW_GAIN = 'RawToPreviewGain'
 DEFAULT_USER_CROP = 'DefaultUserCrop'
 ```
 
-默认用户裁剪区域。
+The default user crop.
 
 **Since:** 24
 

@@ -1,11 +1,5 @@
 # unregisterWatermarkCallback
 
-## 导入模块
-
-```TypeScript
-import { print } from 'kits/@kit.BasicServicesKit';
-```
-
 ## unregisterWatermarkCallback
 
 ```TypeScript
@@ -36,7 +30,7 @@ function unregisterWatermarkCallback(callback?: WatermarkCallback): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 201 | the application does not have permission to call this function. |
+| [201](../../errorcode-universal.md#201-权限校验失败) | the application does not have permission to call this function. |
 
 ## 示例
 
@@ -45,7 +39,7 @@ import { print } from '@kit.BasicServicesKit';
 
 let watermarkCallback: print.WatermarkCallback = (jobId: string, fd: number) => {
     console.info('Watermark callback triggered, jobId: ' + jobId + ', fd: ' + fd);
-};
+}
 
 try {
     print.registerWatermarkCallback(watermarkCallback);
@@ -54,7 +48,7 @@ try {
     print.unregisterWatermarkCallback(watermarkCallback);
     console.info('unregisterWatermarkCallback success');
 } catch (error) {
-    console.error(`Failed to unregisterWatermarkCallback. Code: ${error.code}, message: ${error.message}`);
+    console.error('unregisterWatermarkCallback error: ' + JSON.stringify(error));
 }
 ```
 

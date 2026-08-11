@@ -1,6 +1,6 @@
 # GestureRecognizerState
 
-定义手势识别器状态。
+Enumerates the gesture recognizer states.
 
 **Since:** 12
 
@@ -16,7 +16,7 @@
 READY = 0
 ```
 
-准备状态。
+Ready.
 
 **Since:** 12
 
@@ -36,7 +36,7 @@ READY = 0
 DETECTING = 1
 ```
 
-检测状态。
+Detecting.
 
 **Since:** 12
 
@@ -56,7 +56,7 @@ DETECTING = 1
 PENDING = 2
 ```
 
-等待状态。
+Pending.
 
 **Since:** 12
 
@@ -76,7 +76,7 @@ PENDING = 2
 BLOCKED = 3
 ```
 
-阻塞状态。
+Blocked.
 
 **Since:** 12
 
@@ -96,7 +96,7 @@ BLOCKED = 3
 SUCCESSFUL = 4
 ```
 
-成功状态。
+Successful.
 
 **Since:** 12
 
@@ -116,7 +116,7 @@ SUCCESSFUL = 4
 FAILED = 5
 ```
 
-失败状态。
+Failed.
 
 **Since:** 12
 

@@ -1,6 +1,6 @@
 # CustomSpanMeasureInfo
 
-定义CustomSpanMeasureInfo接口。
+Defines the CustomSpanMeasureInfo interface.
 
 **Since:** 23
 
@@ -16,9 +16,7 @@
 fontSize: double
 ```
 
-设置文本字体大小。
-
-单位：[fp](../../../reference/apis-arkui/arkui-ts/ts-pixel-units.md#基本像素单位)
+Current component's fontSize value.The unit is fp.
 
 **Type:** double
 
@@ -38,7 +36,7 @@ fontSize: double
 layoutPolicy?: LayoutPolicy
 ```
 
-自定义Span的布局策略。
+The layoutPolicy of custom span.
 
 **Type:** [LayoutPolicy](../arkts-components/arkts-arkui-layoutpolicy-c.md)
 
@@ -58,7 +56,7 @@ layoutPolicy?: LayoutPolicy
 maxWidth?: double
 ```
 
-自定义Span的最大宽度。
+The max width constraint of custom span.The unit is px.
 
 **Type:** double
 

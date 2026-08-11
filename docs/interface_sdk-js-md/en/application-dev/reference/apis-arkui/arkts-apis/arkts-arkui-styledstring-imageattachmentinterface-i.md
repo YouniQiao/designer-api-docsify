@@ -16,7 +16,7 @@ Defines the ImageAttachmentInterface.
 colorFilter?: ColorFilterType
 ```
 
-设置属性字符串的图片颜色滤镜效果。
+Sets the color filter effect on the image attachment.
 
 **Type:** [ColorFilterType](arkts-arkui-colorfiltertype-t.md)
 
@@ -36,7 +36,7 @@ colorFilter?: ColorFilterType
 layoutStyle?: ImageAttachmentLayoutStyle
 ```
 
-设置图片布局。
+The Image Layout Style.
 
 **Type:** [ImageAttachmentLayoutStyle](arkts-arkui-imageattachmentlayoutstyle-i.md)
 
@@ -56,9 +56,7 @@ layoutStyle?: ImageAttachmentLayoutStyle
 objectFit?: ImageFit
 ```
 
-设置图片的缩放类型，当前枚举类型不支持ImageFit.MATRIX。
-
-默认值：ImageFit.Cover
+Image fit.
 
 **Type:** [ImageFit](arkts-arkui-imagefit-e.md)
 
@@ -78,9 +76,7 @@ objectFit?: ImageFit
 size?: SizeOptions
 ```
 
-设置图片大小，不支持百分比。
-
-size的默认值与objectFit的值有关，不同的objectFit的值对应size的默认值不同。比如当objectFit的值为Cover时，图片高度为组件高度减去组件上下的内边距，图片宽度为组件宽度减去组件左右的内边距。
+Image size.
 
 **Type:** [SizeOptions](arkts-arkui-sizeoptions-i.md)
 
@@ -100,7 +96,7 @@ size的默认值与objectFit的值有关，不同的objectFit的值对应size的
 value: PixelMap
 ```
 
-设置图片数据源。
+The content of the ImageAttachment.
 
 **Type:** [PixelMap](../arkts-components/arkts-arkui-pixelmap-t.md)
 
@@ -120,9 +116,7 @@ value: PixelMap
 verticalAlign?: ImageSpanAlignment
 ```
 
-设置图片基于文本的对齐方式。
-
-默认值：ImageSpanAlignment.BOTTOM
+Image vertical align.
 
 **Type:** [ImageSpanAlignment](arkts-arkui-imagespanalignment-e.md)
 

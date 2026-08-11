@@ -1,6 +1,6 @@
 # PointParticleParameters
 
-设置粒子半径。
+Defines the parameters for a point-like particle.
 
 **Since:** 23
 
@@ -16,9 +16,7 @@
 radius: VP
 ```
 
-粒子半径。
-
-默认值：0，小于0时取默认值0。
+Particle radius.
 
 **Type:** [VP](arkts-arkui-vp-t.md)
 

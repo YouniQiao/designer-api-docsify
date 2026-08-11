@@ -12,12 +12,6 @@ Device behavior differences: Only the mobile phone is supported. For other devic
 
 **系统能力：** SystemCapability.Web.Webview.Core
 
-## 导入模块
-
-```TypeScript
-import { webview } from 'kits/@kit.ArkWeb';
-```
-
 ## key
 
 ```TypeScript

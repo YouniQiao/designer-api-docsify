@@ -1,6 +1,6 @@
 # EditableTitleBarStyleV2
 
-标题栏样式配置类，使用@ObservedV2装饰器，支持状态观察。
+Declaration of the title bar style configuration.
 
 **Since:** 26.0.0
 
@@ -24,7 +24,7 @@ import { EditableSaveButtonV2, EditableTitleBarStyleV2Options, EditableTitleBarS
 constructor(options?: EditableTitleBarStyleV2Options)
 ```
 
-EditableTitleBarStyleV2的构造函数。
+Constructor of EditableTitleBarStyleV2.
 
 **Since:** 26.0.0
 
@@ -40,7 +40,7 @@ EditableTitleBarStyleV2的构造函数。
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| options | [EditableTitleBarStyleV2Options](arkts-arkui-arkui-advanced-editabletitlebarv2-editabletitlebarstylev2options-i.md) | No | 标题栏样式配置选项。 |
+| options | [EditableTitleBarStyleV2Options](arkts-arkui-arkui-advanced-editabletitlebarv2-editabletitlebarstylev2options-i.md) | No | The style options of the title bar |
 
 ## backgroundBlurStyle
 
@@ -48,9 +48,7 @@ EditableTitleBarStyleV2的构造函数。
 public backgroundBlurStyle?: BlurStyle
 ```
 
-标题栏背景模糊样式。
-
-默认值：BlurStyle.NONE，表示无模糊效果。
+Background blur style.
 
 **Type:** [BlurStyle](../arkts-components/arkts-arkui-blurstyle-e.md)
 
@@ -70,9 +68,7 @@ public backgroundBlurStyle?: BlurStyle
 public backgroundColor?: ResourceColor
 ```
 
-标题栏背景色。
-
-默认值：'#00000000'，表示背景透明。
+Background color.
 
 **Type:** [ResourceColor](arkts-arkui-resourcecolor-t.md)
 
@@ -92,17 +88,7 @@ public backgroundColor?: ResourceColor
 public contentMargin?: LocalizedMargin
 ```
 
-标题栏外边距，不支持设置负数。
-
-默认值：
-
-{
-
-start: LengthMetrics.resource(\$r('sys.float.margin_left')),
-
-end: LengthMetrics.resource(\$r('sys.float.margin_right'))
-
-}。
+Content margin, supports RTL layout.
 
 **Type:** [LocalizedMargin](arkts-arkui-localizedmargin-t.md)
 
@@ -122,9 +108,7 @@ end: LengthMetrics.resource(\$r('sys.float.margin_right'))
 public safeAreaEdges?: Array<SafeAreaEdge>
 ```
 
-扩展安全区域的方向。
-
-默认值：[SafeAreaEdge.TOP]。
+Indicates the edges of the safe area.
 
 **Type:** Array&lt;[SafeAreaEdge](../arkts-components/arkts-arkui-safeareaedge-e.md)&gt;
 
@@ -144,9 +128,7 @@ public safeAreaEdges?: Array<SafeAreaEdge>
 public safeAreaTypes?: Array<SafeAreaType>
 ```
 
-扩展安全区域的类型。
-
-默认值：[SafeAreaType.SYSTEM]。
+Indicates the types of the safe area.
 
 **Type:** Array&lt;[SafeAreaType](../arkts-components/arkts-arkui-safeareatype-e.md)&gt;
 

@@ -12,7 +12,7 @@ import { sensor } from 'kits/@kit.SensorServiceKit';
 function off(type: SensorId.ACCELEROMETER, callback?: Callback<AccelerometerResponse>): void
 ```
 
-取消订阅加速度传感器数据。当不再需要接收加速度传感器数据时调用此接口取消订阅。off取消订阅必须与on订阅成对出现。
+Unsubscribes from data of the acceleration sensor.
 
 **Since:** 9
 
@@ -30,43 +30,15 @@ function off(type: SensorId.ACCELEROMETER, callback?: Callback<AccelerometerResp
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | SensorId.ACCELEROMETER | Yes | 传感器类型，该值固定为SensorId.ACCELEROMETER。 |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;AccelerometerResponse&gt; | No | 需要取消订阅的回调函数，若无此参数，则取消订阅当前类型的所有回调函数。 |
+| type | SensorId.ACCELEROMETER | Yes | Sensor type. The value is fixed at **SensorId.ACCELEROMETER**. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;AccelerometerResponse&gt; | No | Callback used for unsubscription. If this parameter is not specified, all callbacks of the specified sensor type are unsubscribed from. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt; 2. Incorrect parameter types; 3. Parameter verification failed. |
-| 201 | Permission denied. |
-
-## Examples
-
-```TypeScript
-import { sensor } from '@kit.SensorServiceKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-function callback1(data: object) {
-  console.info('Succeeded in getting callback1 data: ' + JSON.stringify(data));
-}
-
-function callback2(data: object) {
-  console.info('Succeeded in getting callback2 data: ' + JSON.stringify(data));
-}
-
-// Use try catch to capture possible exceptions.
-try {
-  sensor.on(sensor.SensorId.ACCELEROMETER, callback1);
-  sensor.on(sensor.SensorId.ACCELEROMETER, callback2);
-  // Unsubscribe from callback1.
-  sensor.off(sensor.SensorId.ACCELEROMETER, callback1);
-  // Unsubscribe from all callbacks of the SensorId.ACCELEROMETER type.
-  sensor.off(sensor.SensorId.ACCELEROMETER);
-} catch (error) {
-  let e: BusinessError = error as BusinessError;
-  console.error(`Failed to invoke off. Code: ${e.code}, message: ${e.message}`);
-}
-```
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
 
 
 ## off
@@ -75,7 +47,7 @@ try {
 function off(type: SensorId.ACCELEROMETER, sensorInfoParam?: SensorInfoParam, callback?: Callback<AccelerometerResponse>): void
 ```
 
-取消订阅加速度传感器数据。当不再需要接收加速度传感器数据时调用此接口取消订阅。off取消订阅必须与on订阅成对出现。
+Unsubscribes from data of the acceleration sensor.
 
 **Since:** 19
 
@@ -93,76 +65,16 @@ function off(type: SensorId.ACCELEROMETER, sensorInfoParam?: SensorInfoParam, ca
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | SensorId.ACCELEROMETER | Yes | 传感器类型，该值固定为SensorId.ACCELEROMETER。 |
-| sensorInfoParam | [SensorInfoParam](arkts-sensorservice-sensor-sensorinfoparam-i.md) | No | 传感器传入设置参数，可指定deviceId和sensorIndex，用于取消指定设备上指定传感器的订阅。不传入时默认取消本地设备该类型所有传感器的订阅。 |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;AccelerometerResponse&gt; | No | 需要取消订阅的回调函数，若无此参数，则取消订阅当前类型的所有回调函数。 |
+| type | SensorId.ACCELEROMETER | Yes | Sensor type. The value is fixed at **SensorId.ACCELEROMETER**. |
+| sensorInfoParam | [SensorInfoParam](arkts-sensorservice-sensor-sensorinfoparam-i.md) | No | Sensor parameters, including **deviceId** and **sensorIndex**. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;AccelerometerResponse&gt; | No | Callback used for unsubscription. If this parameter is not specified, all callbacks of the specified sensor type are unsubscribed from. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 14500101 | Service exception. Possible causes: 1. Sensor hdf service exception; &lt;br&gt; 2. Sensor service ipc exception;3. Sensor data channel exception. |
-| 201 | Permission denied. |
-
-## Examples
-
-```TypeScript
-import { sensor } from '@kit.SensorServiceKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-enum Ret { OK, Failed = -1 }
-
-// Sensor callback
-const sensorCallback = (response: sensor.AccelerometerResponse) => {
-  console.info(`callback response: ${JSON.stringify(response)}`);
-}
-// Sensor type
-const sensorType = sensor.SensorId.ACCELEROMETER;
-const sensorInfoParam: sensor.SensorInfoParam = { deviceId: -1, sensorIndex: 0 };
-
-function sensorSubscribe(): Ret {
-  let ret: Ret = Ret.OK;
-  // Use try catch to capture possible exceptions.
-  try {
-    // Query all sensors.
-    const sensorList: sensor.Sensor[] = sensor.getSensorListSync();
-    if (!sensorList.length) {
-      return Ret.Failed;
-    }
-    // Obtain the target sensor based on the actual service logic.
-    const targetSensor = sensorList
-      // Filter all sensors with deviceId 1 and sensorId 2 as required. This example is for reference only. You need to adjust the filtering logic accordingly.
-      .filter((sensor: sensor.Sensor) => sensor.deviceId === 1 && sensor.sensorId === 2)
-      // Select the sensor with sensorIndex 0 among all sensors of the same type.
-      .find((sensor: sensor.Sensor) => sensor.sensorIndex === 0);
-    if (!targetSensor) {
-      return Ret.Failed;
-    }
-    sensorInfoParam.deviceId = targetSensor.deviceId;
-    sensorInfoParam.sensorIndex = targetSensor.sensorIndex;
-    // Subscribe to sensor events.
-    sensor.on(sensorType, sensorCallback, { sensorInfoParam });
-  } catch (error) {
-    let e: BusinessError = error as BusinessError;
-    console.error(`Failed to invoke sensor.on. Code: ${e.code}, message: ${e.message}`);
-    ret = Ret.Failed;
-  }
-  return ret;
-}
-
-function sensorUnsubscribe(): Ret {
-  let ret: Ret = Ret.OK;
-  // Use try catch to capture possible exceptions.
-  try {
-    sensor.off(sensorType, sensorInfoParam, sensorCallback);
-  } catch (error) {
-    let e: BusinessError = error as BusinessError;
-    console.error(`Failed to invoke sensor.off. Code: ${e.code}, message: ${e.message}`);
-    ret = Ret.Failed;
-  }
-  return ret;
-}
-```
+| [14500101](../errorcode-sensor.md#14500101-service-exception) | Service exception. Possible causes: 1. Sensor hdf service exception; &lt;br&gt; 2. Sensor service ipc exception;3. Sensor data channel exception. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
 
 
 ## off
@@ -171,7 +83,7 @@ function sensorUnsubscribe(): Ret {
 function off(type: SensorId.ACCELEROMETER_UNCALIBRATED, callback?: Callback<AccelerometerUncalibratedResponse>): void
 ```
 
-取消订阅未校准加速度传感器数据。当不再需要接收未校准加速度传感器数据时调用此接口取消订阅。off取消订阅必须与on订阅成对出现。
+Unsubscribes from data of the uncalibrated acceleration sensor.
 
 **Since:** 9
 
@@ -187,43 +99,15 @@ function off(type: SensorId.ACCELEROMETER_UNCALIBRATED, callback?: Callback<Acce
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | SensorId.ACCELEROMETER_UNCALIBRATED | Yes | 传感器类型，该值固定为SensorId.ACCELEROMETER_UNCALIBRATED。 |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;AccelerometerUncalibratedResponse&gt; | No | 需要取消订阅的回调函数，若无此参数，则取消订阅当前类型的所有回调函数。 |
+| type | SensorId.ACCELEROMETER_UNCALIBRATED | Yes | Sensor type. The value is fixed at **SensorId.ACCELEROMETER_UNCALIBRATED**. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;AccelerometerUncalibratedResponse&gt; | No | Callback used for unsubscription. If this parameter is not specified, all callbacks of the specified sensor type are unsubscribed from. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt; 2. Incorrect parameter types; 3. Parameter verification failed. |
-| 201 | Permission denied. |
-
-## Examples
-
-```TypeScript
-import { sensor } from '@kit.SensorServiceKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-function callback1(data: object) {
-  console.info('Succeeded in getting callback1 data: ' + JSON.stringify(data));
-}
-
-function callback2(data: object) {
-  console.info('Succeeded in getting callback2 data: ' + JSON.stringify(data));
-}
-
-// Use try catch to capture possible exceptions.
-try {
-  sensor.on(sensor.SensorId.ACCELEROMETER_UNCALIBRATED, callback1);
-  sensor.on(sensor.SensorId.ACCELEROMETER_UNCALIBRATED, callback2);
-  // Unsubscribe from callback1.
-  sensor.off(sensor.SensorId.ACCELEROMETER_UNCALIBRATED, callback1);
-  // Unsubscribe from all callbacks of the SensorId.ACCELEROMETER_UNCALIBRATED type.
-  sensor.off(sensor.SensorId.ACCELEROMETER_UNCALIBRATED);
-} catch (error) {
-  let e: BusinessError = error as BusinessError;
-  console.error(`Failed to invoke off. Code: ${e.code}, message: ${e.message}`);
-}
-```
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
 
 
 ## off
@@ -232,7 +116,7 @@ try {
 function off(type: SensorId.ACCELEROMETER_UNCALIBRATED, sensorInfoParam?: SensorInfoParam, callback?: Callback<AccelerometerUncalibratedResponse>): void
 ```
 
-取消订阅未校准加速度传感器数据。当不再需要接收未校准加速度传感器数据时调用此接口取消订阅。off取消订阅必须与on订阅成对出现。
+Unsubscribes from data of the uncalibrated acceleration sensor.
 
 **Since:** 19
 
@@ -248,76 +132,16 @@ function off(type: SensorId.ACCELEROMETER_UNCALIBRATED, sensorInfoParam?: Sensor
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | SensorId.ACCELEROMETER_UNCALIBRATED | Yes | 传感器类型，该值固定为SensorId.ACCELEROMETER_UNCALIBRATED。 |
-| sensorInfoParam | [SensorInfoParam](arkts-sensorservice-sensor-sensorinfoparam-i.md) | No | 传感器传入设置参数，可指定deviceId和sensorIndex，用于取消指定设备上指定传感器的订阅。不传入时默认取消本地设备该类型所有传感器的订阅。 |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;AccelerometerUncalibratedResponse&gt; | No | 需要取消订阅的回调函数，若无此参数，则取消订阅当前类型的所有回调函数。 |
+| type | SensorId.ACCELEROMETER_UNCALIBRATED | Yes | Sensor type. The value is fixed at **SensorId.ACCELEROMETER_UNCALIBRATED**. |
+| sensorInfoParam | [SensorInfoParam](arkts-sensorservice-sensor-sensorinfoparam-i.md) | No | Sensor parameters, including **deviceId** and **sensorIndex**. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;AccelerometerUncalibratedResponse&gt; | No | Callback used for unsubscription. If this parameter is not specified, all callbacks of the specified sensor type are unsubscribed from. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 14500101 | Service exception. Possible causes: 1. Sensor hdf service exception; &lt;br&gt; 2. Sensor service ipc exception;3. Sensor data channel exception. |
-| 201 | Permission denied. |
-
-## Examples
-
-```TypeScript
-import { sensor } from '@kit.SensorServiceKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-enum Ret { OK, Failed = -1 }
-
-// Sensor callback
-const sensorCallback = (response: sensor.AccelerometerUncalibratedResponse) => {
-  console.info(`callback response: ${JSON.stringify(response)}`);
-}
-// Sensor type
-const sensorType = sensor.SensorId.ACCELEROMETER_UNCALIBRATED;
-const sensorInfoParam: sensor.SensorInfoParam = { deviceId: -1, sensorIndex: 0 };
-
-function sensorSubscribe(): Ret {
-  let ret: Ret = Ret.OK;
-  // Use try catch to capture possible exceptions.
-  try {
-    // Query all sensors.
-    const sensorList: sensor.Sensor[] = sensor.getSensorListSync();
-    if (!sensorList.length) {
-      return Ret.Failed;
-    }
-    // Obtain the target sensor based on the actual service logic.
-    const targetSensor = sensorList
-      // Filter all sensors with deviceId 1 and sensorId 2 as required. This example is for reference only. You need to adjust the filtering logic accordingly.
-      .filter((sensor: sensor.Sensor) => sensor.deviceId === 1 && sensor.sensorId === 2)
-      // Select the sensor with sensorIndex 0 among all sensors of the same type.
-      .find((sensor: sensor.Sensor) => sensor.sensorIndex === 0);
-    if (!targetSensor) {
-      return Ret.Failed;
-    }
-    sensorInfoParam.deviceId = targetSensor.deviceId;
-    sensorInfoParam.sensorIndex = targetSensor.sensorIndex;
-    // Subscribe to sensor events.
-    sensor.on(sensorType, sensorCallback, { sensorInfoParam });
-  } catch (error) {
-    let e: BusinessError = error as BusinessError;
-    console.error(`Failed to invoke sensor.on. Code: ${e.code}, message: ${e.message}`);
-    ret = Ret.Failed;
-  }
-  return ret;
-}
-
-function sensorUnsubscribe(): Ret {
-  let ret: Ret = Ret.OK;
-  // Use try catch to capture possible exceptions.
-  try {
-    sensor.off(sensorType, sensorInfoParam, sensorCallback);
-  } catch (error) {
-    let e: BusinessError = error as BusinessError;
-    console.error(`Failed to invoke sensor.off. Code: ${e.code}, message: ${e.message}`);
-    ret = Ret.Failed;
-  }
-  return ret;
-}
-```
+| [14500101](../errorcode-sensor.md#14500101-service-exception) | Service exception. Possible causes: 1. Sensor hdf service exception; &lt;br&gt; 2. Sensor service ipc exception;3. Sensor data channel exception. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
 
 
 ## off
@@ -326,7 +150,7 @@ function sensorUnsubscribe(): Ret {
 function off(type: SensorId.AMBIENT_LIGHT, callback?: Callback<LightResponse>): void
 ```
 
-取消订阅环境光传感器数据。当不再需要接收环境光传感器数据时调用此接口取消订阅。off取消订阅必须与on订阅成对出现。
+Unsubscribes from data of the ambient light sensor.
 
 **Since:** 9
 
@@ -340,42 +164,14 @@ function off(type: SensorId.AMBIENT_LIGHT, callback?: Callback<LightResponse>): 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | SensorId.AMBIENT_LIGHT | Yes | 传感器类型，该值固定为SensorId.AMBIENT_LIGHT。 |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;LightResponse&gt; | No | 需要取消订阅的回调函数，若无此参数，则取消订阅当前类型的所有回调函数。 |
+| type | SensorId.AMBIENT_LIGHT | Yes | Sensor type. The value is fixed at **SensorId.AMBIENT_LIGHT**. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;LightResponse&gt; | No | Callback used for unsubscription. If this parameter is not specified, all callbacks of the specified sensor type are unsubscribed from. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt; 2. Incorrect parameter types; 3. Parameter verification failed. |
-
-## Examples
-
-```TypeScript
-import { sensor } from '@kit.SensorServiceKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-function callback1(data: object) {
-  console.info('Succeeded in getting callback1 data: ' + JSON.stringify(data));
-}
-
-function callback2(data: object) {
-  console.info('Succeeded in getting callback2 data: ' + JSON.stringify(data));
-}
-
-// Use try catch to capture possible exceptions.
-try {
-  sensor.on(sensor.SensorId.AMBIENT_LIGHT, callback1);
-  sensor.on(sensor.SensorId.AMBIENT_LIGHT, callback2);
-  // Unsubscribe from callback1.
-  sensor.off(sensor.SensorId.AMBIENT_LIGHT, callback1);
-  // Unsubscribe from all callbacks of the SensorId.AMBIENT_LIGHT type.
-  sensor.off(sensor.SensorId.AMBIENT_LIGHT);
-} catch (error) {
-  let e: BusinessError = error as BusinessError;
-  console.error(`Failed to invoke off. Code: ${e.code}, message: ${e.message}`);
-}
-```
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt; 2. Incorrect parameter types; 3. Parameter verification failed. |
 
 
 ## off
@@ -384,7 +180,7 @@ try {
 function off(type: SensorId.AMBIENT_LIGHT, sensorInfoParam?: SensorInfoParam, callback?: Callback<LightResponse>): void
 ```
 
-取消订阅环境光传感器数据。当不再需要接收环境光传感器数据时调用此接口取消订阅。off取消订阅必须与on订阅成对出现。
+Unsubscribes from data of the ambient light sensor.
 
 **Since:** 19
 
@@ -398,75 +194,15 @@ function off(type: SensorId.AMBIENT_LIGHT, sensorInfoParam?: SensorInfoParam, ca
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | SensorId.AMBIENT_LIGHT | Yes | 传感器类型，该值固定为SensorId.AMBIENT_LIGHT。 |
-| sensorInfoParam | [SensorInfoParam](arkts-sensorservice-sensor-sensorinfoparam-i.md) | No | 传感器传入设置参数，可指定deviceId和sensorIndex，用于取消指定设备上指定传感器的订阅。不传入时默认取消本地设备该类型所有传感器的订阅。 |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;LightResponse&gt; | No | 需要取消订阅的回调函数，若无此参数，则取消订阅当前类型的所有回调函数。 |
+| type | SensorId.AMBIENT_LIGHT | Yes | Sensor type. The value is fixed at **SensorId.AMBIENT_LIGHT**. |
+| sensorInfoParam | [SensorInfoParam](arkts-sensorservice-sensor-sensorinfoparam-i.md) | No | Sensor parameters, including **deviceId** and **sensorIndex**. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;LightResponse&gt; | No | Callback used for unsubscription. If this parameter is not specified, all callbacks of the specified sensor type are unsubscribed from. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 14500101 | Service exception. Possible causes: 1. Sensor hdf service exception; &lt;br&gt; 2. Sensor service ipc exception;3. Sensor data channel exception. |
-
-## Examples
-
-```TypeScript
-import { sensor } from '@kit.SensorServiceKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-enum Ret { OK, Failed = -1 }
-
-// Sensor callback
-const sensorCallback = (response: sensor.LightResponse) => {
-  console.info(`callback response: ${JSON.stringify(response)}`);
-}
-// Sensor type
-const sensorType = sensor.SensorId.AMBIENT_LIGHT;
-const sensorInfoParam: sensor.SensorInfoParam = { deviceId: -1, sensorIndex: 0 };
-
-function sensorSubscribe(): Ret {
-  let ret: Ret = Ret.OK;
-  // Use try catch to capture possible exceptions.
-  try {
-    // Query all sensors.
-    const sensorList: sensor.Sensor[] = sensor.getSensorListSync();
-    if (!sensorList.length) {
-      return Ret.Failed;
-    }
-    // Obtain the target sensor based on the actual service logic.
-    const targetSensor = sensorList
-      // Filter all sensors with deviceId 1 and sensorId 2 as required. This example is for reference only. You need to adjust the filtering logic accordingly.
-      .filter((sensor: sensor.Sensor) => sensor.deviceId === 1 && sensor.sensorId === 2)
-      // Select the sensor with sensorIndex 0 among all sensors of the same type.
-      .find((sensor: sensor.Sensor) => sensor.sensorIndex === 0);
-    if (!targetSensor) {
-      return Ret.Failed;
-    }
-    sensorInfoParam.deviceId = targetSensor.deviceId;
-    sensorInfoParam.sensorIndex = targetSensor.sensorIndex;
-    // Subscribe to sensor events.
-    sensor.on(sensorType, sensorCallback, { sensorInfoParam });
-  } catch (error) {
-    let e: BusinessError = error as BusinessError;
-    console.error(`Failed to invoke sensor.on. Code: ${e.code}, message: ${e.message}`);
-    ret = Ret.Failed;
-  }
-  return ret;
-}
-
-function sensorUnsubscribe(): Ret {
-  let ret: Ret = Ret.OK;
-  // Use try catch to capture possible exceptions.
-  try {
-    sensor.off(sensorType, sensorInfoParam, sensorCallback);
-  } catch (error) {
-    let e: BusinessError = error as BusinessError;
-    console.error(`Failed to invoke sensor.off. Code: ${e.code}, message: ${e.message}`);
-    ret = Ret.Failed;
-  }
-  return ret;
-}
-```
+| [14500101](../errorcode-sensor.md#14500101-service-exception) | Service exception. Possible causes: 1. Sensor hdf service exception; &lt;br&gt; 2. Sensor service ipc exception;3. Sensor data channel exception. |
 
 
 ## off
@@ -475,7 +211,7 @@ function sensorUnsubscribe(): Ret {
 function off(type: SensorId.AMBIENT_TEMPERATURE, callback?: Callback<AmbientTemperatureResponse>): void
 ```
 
-取消订阅温度传感器数据。当不再需要接收温度传感器数据时调用此接口取消订阅。off取消订阅必须与on订阅成对出现。
+Unsubscribes from data of the ambient temperature sensor.
 
 **Since:** 9
 
@@ -489,42 +225,14 @@ function off(type: SensorId.AMBIENT_TEMPERATURE, callback?: Callback<AmbientTemp
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | SensorId.AMBIENT_TEMPERATURE | Yes | 传感器类型，该值固定为SensorId.AMBIENT_TEMPERATURE。 |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;AmbientTemperatureResponse&gt; | No | 需要取消订阅的回调函数，若无此参数，则取消订阅当前类型的所有回调函数。 |
+| type | SensorId.AMBIENT_TEMPERATURE | Yes | Sensor type. The value is fixed at **SensorId.AMBIENT_TEMPERATURE**. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;AmbientTemperatureResponse&gt; | No | Callback used for unsubscription. If this parameter is not specified, all callbacks of the specified sensor type are unsubscribed from. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt; 2. Incorrect parameter types; 3. Parameter verification failed. |
-
-## Examples
-
-```TypeScript
-import { sensor } from '@kit.SensorServiceKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-function callback1(data: object) {
-  console.info('Succeeded in getting callback1 data: ' + JSON.stringify(data));
-}
-
-function callback2(data: object) {
-  console.info('Succeeded in getting callback2 data: ' + JSON.stringify(data));
-}
-
-// Use try catch to capture possible exceptions.
-try {
-  sensor.on(sensor.SensorId.AMBIENT_TEMPERATURE, callback1);
-  sensor.on(sensor.SensorId.AMBIENT_TEMPERATURE, callback2);
-  // Unsubscribe from callback1.
-  sensor.off(sensor.SensorId.AMBIENT_TEMPERATURE, callback1);
-  // Unsubscribe from all callbacks of the SensorId.AMBIENT_TEMPERATURE type.
-  sensor.off(sensor.SensorId.AMBIENT_TEMPERATURE);
-} catch (error) {
-  let e: BusinessError = error as BusinessError;
-  console.error(`Failed to invoke off. Code: ${e.code}, message: ${e.message}`);
-}
-```
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt; 2. Incorrect parameter types; 3. Parameter verification failed. |
 
 
 ## off
@@ -533,7 +241,7 @@ try {
 function off(type: SensorId.AMBIENT_TEMPERATURE, sensorInfoParam?: SensorInfoParam, callback?: Callback<AmbientTemperatureResponse>): void
 ```
 
-取消订阅温度传感器数据。当不再需要接收温度传感器数据时调用此接口取消订阅。off取消订阅必须与on订阅成对出现。
+Unsubscribes from data of the ambient temperature sensor.
 
 **Since:** 19
 
@@ -547,75 +255,15 @@ function off(type: SensorId.AMBIENT_TEMPERATURE, sensorInfoParam?: SensorInfoPar
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | SensorId.AMBIENT_TEMPERATURE | Yes | 传感器类型，该值固定为SensorId.AMBIENT_TEMPERATURE。 |
-| sensorInfoParam | [SensorInfoParam](arkts-sensorservice-sensor-sensorinfoparam-i.md) | No | 传感器传入设置参数，可指定deviceId和sensorIndex，用于取消指定设备上指定传感器的订阅。不传入时默认取消本地设备该类型所有传感器的订阅。 |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;AmbientTemperatureResponse&gt; | No | 需要取消订阅的回调函数，若无此参数，则取消订阅当前类型的所有回调函数。 |
+| type | SensorId.AMBIENT_TEMPERATURE | Yes | Sensor type. The value is fixed at **SensorId.AMBIENT_TEMPERATURE**. |
+| sensorInfoParam | [SensorInfoParam](arkts-sensorservice-sensor-sensorinfoparam-i.md) | No | Sensor parameters, including **deviceId** and **sensorIndex**. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;AmbientTemperatureResponse&gt; | No | Callback used for unsubscription. If this parameter is not specified, all callbacks of the specified sensor type are unsubscribed from. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 14500101 | Service exception. Possible causes: 1. Sensor hdf service exception; &lt;br&gt; 2. Sensor service ipc exception;3. Sensor data channel exception. |
-
-## Examples
-
-```TypeScript
-import { sensor } from '@kit.SensorServiceKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-enum Ret { OK, Failed = -1 }
-
-// Sensor callback
-const sensorCallback = (response: sensor.AmbientTemperatureResponse) => {
-  console.info(`callback response: ${JSON.stringify(response)}`);
-}
-// Sensor type
-const sensorType = sensor.SensorId.AMBIENT_TEMPERATURE;
-const sensorInfoParam: sensor.SensorInfoParam = { deviceId: -1, sensorIndex: 0 };
-
-function sensorSubscribe(): Ret {
-  let ret: Ret = Ret.OK;
-  // Use try catch to capture possible exceptions.
-  try {
-    // Query all sensors.
-    const sensorList: sensor.Sensor[] = sensor.getSensorListSync();
-    if (!sensorList.length) {
-      return Ret.Failed;
-    }
-    // Obtain the target sensor based on the actual service logic.
-    const targetSensor = sensorList
-      // Filter all sensors with deviceId 1 and sensorId 2 as required. This example is for reference only. You need to adjust the filtering logic accordingly.
-      .filter((sensor: sensor.Sensor) => sensor.deviceId === 1 && sensor.sensorId === 2)
-      // Select the sensor with sensorIndex 0 among all sensors of the same type.
-      .find((sensor: sensor.Sensor) => sensor.sensorIndex === 0);
-    if (!targetSensor) {
-      return Ret.Failed;
-    }
-    sensorInfoParam.deviceId = targetSensor.deviceId;
-    sensorInfoParam.sensorIndex = targetSensor.sensorIndex;
-    // Subscribe to sensor events.
-    sensor.on(sensorType, sensorCallback, { sensorInfoParam });
-  } catch (error) {
-    let e: BusinessError = error as BusinessError;
-    console.error(`Failed to invoke sensor.on. Code: ${e.code}, message: ${e.message}`);
-    ret = Ret.Failed;
-  }
-  return ret;
-}
-
-function sensorUnsubscribe(): Ret {
-  let ret: Ret = Ret.OK;
-  // Use try catch to capture possible exceptions.
-  try {
-    sensor.off(sensorType, sensorInfoParam, sensorCallback);
-  } catch (error) {
-    let e: BusinessError = error as BusinessError;
-    console.error(`Failed to invoke sensor.off. Code: ${e.code}, message: ${e.message}`);
-    ret = Ret.Failed;
-  }
-  return ret;
-}
-```
+| [14500101](../errorcode-sensor.md#14500101-service-exception) | Service exception. Possible causes: 1. Sensor hdf service exception; &lt;br&gt; 2. Sensor service ipc exception;3. Sensor data channel exception. |
 
 
 ## off
@@ -624,7 +272,7 @@ function sensorUnsubscribe(): Ret {
 function off(type: SensorId.BAROMETER, callback?: Callback<BarometerResponse>): void
 ```
 
-取消订阅气压计传感器数据。当不再需要接收气压计传感器数据时调用此接口取消订阅。off取消订阅必须与on订阅成对出现。
+Unsubscribes from data of the barometer sensor.
 
 **Since:** 9
 
@@ -638,42 +286,14 @@ function off(type: SensorId.BAROMETER, callback?: Callback<BarometerResponse>): 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | SensorId.BAROMETER | Yes | 传感器类型，该值固定为SensorId.BAROMETER。 |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;BarometerResponse&gt; | No |  |
+| type | SensorId.BAROMETER | Yes | Sensor type. The value is fixed at **SensorId.BAROMETER**. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;BarometerResponse&gt; | No | Callback used for unsubscription. If this parameter is not specified, all callbacks of the specified sensor type are unsubscribed from. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt; 2. Incorrect parameter types; 3. Parameter verification failed. |
-
-## Examples
-
-```TypeScript
-import { sensor } from '@kit.SensorServiceKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-function callback1(data: object) {
-    console.info('Succeeded in getting callback1 data: ' + JSON.stringify(data));
-}
-
-function callback2(data: object) {
-    console.info('Succeeded in getting callback2 data: ' + JSON.stringify(data));
-}
-
-// Use try catch to capture possible exceptions.
-try {
-    sensor.on(sensor.SensorId.BAROMETER, callback1);
-    sensor.on(sensor.SensorId.BAROMETER, callback2);
-    // Unsubscribe from callback1.
-    sensor.off(sensor.SensorId.BAROMETER, callback1);
-    // Unsubscribe from all callbacks of the SensorId.BAROMETER type.
-    sensor.off(sensor.SensorId.BAROMETER);
-} catch (error) {
-    let e: BusinessError = error as BusinessError;
-    console.error(`Failed to invoke off. Code: ${e.code}, message: ${e.message}`);
-}
-```
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt; 2. Incorrect parameter types; 3. Parameter verification failed. |
 
 
 ## off
@@ -682,7 +302,7 @@ try {
 function off(type: SensorId.BAROMETER, sensorInfoParam?: SensorInfoParam, callback?: Callback<BarometerResponse>): void
 ```
 
-取消订阅气压计传感器数据。当不再需要接收气压计传感器数据时调用此接口取消订阅。off取消订阅必须与on订阅成对出现。
+Unsubscribes from data of the barometer sensor.
 
 **Since:** 19
 
@@ -696,75 +316,15 @@ function off(type: SensorId.BAROMETER, sensorInfoParam?: SensorInfoParam, callba
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | SensorId.BAROMETER | Yes | 传感器类型，该值固定为SensorId.BAROMETER。 |
-| sensorInfoParam | [SensorInfoParam](arkts-sensorservice-sensor-sensorinfoparam-i.md) | No | 传感器传入设置参数，可指定deviceId和sensorIndex，用于取消指定设备上指定传感器的订阅。不传入时默认取消本地设备该类型所有传感器的订阅。 |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;BarometerResponse&gt; | No | 需要取消订阅的回调函数，若无此参数，则取消订阅当前类型的所有回调函数。 |
+| type | SensorId.BAROMETER | Yes | Sensor type. The value is fixed at **SensorId.BAROMETER**. |
+| sensorInfoParam | [SensorInfoParam](arkts-sensorservice-sensor-sensorinfoparam-i.md) | No | Sensor parameters, including **deviceId** and **sensorIndex**. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;BarometerResponse&gt; | No | Callback used for unsubscription. If this parameter is not specified, all callbacks of the specified sensor type are unsubscribed from. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 14500101 | Service exception. Possible causes: 1. Sensor hdf service exception; &lt;br&gt; 2. Sensor service ipc exception;3. Sensor data channel exception. |
-
-## Examples
-
-```TypeScript
-import { sensor } from '@kit.SensorServiceKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-enum Ret { OK, Failed = -1 }
-
-// Sensor callback
-const sensorCallback = (response: sensor.BarometerResponse) => {
-  console.info(`callback response: ${JSON.stringify(response)}`);
-}
-// Sensor type
-const sensorType = sensor.SensorId.BAROMETER;
-const sensorInfoParam: sensor.SensorInfoParam = { deviceId: -1, sensorIndex: 0 };
-
-function sensorSubscribe(): Ret {
-  let ret: Ret = Ret.OK;
-  // Use try catch to capture possible exceptions.
-  try {
-    // Query all sensors.
-    const sensorList: sensor.Sensor[] = sensor.getSensorListSync();
-    if (!sensorList.length) {
-      return Ret.Failed;
-    }
-    // Obtain the target sensor based on the actual service logic.
-    const targetSensor = sensorList
-      // Filter all sensors with deviceId 1 and sensorId 2 as required. This example is for reference only. You need to adjust the filtering logic accordingly.
-      .filter((sensor: sensor.Sensor) => sensor.deviceId === 1 && sensor.sensorId === 2)
-      // Select the sensor with sensorIndex 0 among all sensors of the same type.
-      .find((sensor: sensor.Sensor) => sensor.sensorIndex === 0);
-    if (!targetSensor) {
-      return Ret.Failed;
-    }
-    sensorInfoParam.deviceId = targetSensor.deviceId;
-    sensorInfoParam.sensorIndex = targetSensor.sensorIndex;
-    // Subscribe to sensor events.
-    sensor.on(sensorType, sensorCallback, { sensorInfoParam });
-  } catch (error) {
-    let e: BusinessError = error as BusinessError;
-    console.error(`Failed to invoke sensor.on. Code: ${e.code}, message: ${e.message}`);
-    ret = Ret.Failed;
-  }
-  return ret;
-}
-
-function sensorUnsubscribe(): Ret {
-  let ret: Ret = Ret.OK;
-  // Use try catch to capture possible exceptions.
-  try {
-    sensor.off(sensorType, sensorInfoParam, sensorCallback);
-  } catch (error) {
-    let e: BusinessError = error as BusinessError;
-    console.error(`Failed to invoke sensor.off. Code: ${e.code}, message: ${e.message}`);
-    ret = Ret.Failed;
-  }
-  return ret;
-}
-```
+| [14500101](../errorcode-sensor.md#14500101-service-exception) | Service exception. Possible causes: 1. Sensor hdf service exception; &lt;br&gt; 2. Sensor service ipc exception;3. Sensor data channel exception. |
 
 
 ## off
@@ -773,7 +333,7 @@ function sensorUnsubscribe(): Ret {
 function off(type: SensorId.GRAVITY, callback?: Callback<GravityResponse>): void
 ```
 
-取消订阅重力传感器数据。当不再需要接收重力传感器数据时调用此接口取消订阅。off取消订阅必须与on订阅成对出现。
+Unsubscribes from data of the gravity sensor.
 
 **Since:** 9
 
@@ -787,42 +347,14 @@ function off(type: SensorId.GRAVITY, callback?: Callback<GravityResponse>): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | SensorId.GRAVITY | Yes | 传感器类型，该值固定为SensorId.GRAVITY。 |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;GravityResponse&gt; | No | 需要取消订阅的回调函数，若无此参数，则取消订阅当前类型的所有回调函数。 |
+| type | SensorId.GRAVITY | Yes | Sensor type. The value is fixed at **SensorId.GRAVITY**. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;GravityResponse&gt; | No | Callback used for unsubscription. If this parameter is not specified, all callbacks of the specified sensor type are unsubscribed from. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt; 2. Incorrect parameter types; 3. Parameter verification failed. |
-
-## Examples
-
-```TypeScript
-import { sensor } from '@kit.SensorServiceKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-function callback1(data: object) {
-  console.info('Succeeded in getting callback1 data: ' + JSON.stringify(data));
-}
-
-function callback2(data: object) {
-  console.info('Succeeded in getting callback2 data: ' + JSON.stringify(data));
-}
-
-// Use try catch to capture possible exceptions.
-try {
-  sensor.on(sensor.SensorId.GRAVITY, callback1);
-  sensor.on(sensor.SensorId.GRAVITY, callback2);
-  // Unsubscribe from callback1.
-  sensor.off(sensor.SensorId.GRAVITY, callback1);
-  // Unsubscribe from all callbacks of the SensorId.GRAVITY type.
-  sensor.off(sensor.SensorId.GRAVITY);
-} catch (error) {
-  let e: BusinessError = error as BusinessError;
-  console.error(`Failed to invoke off. Code: ${e.code}, message: ${e.message}`);
-}
-```
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt; 2. Incorrect parameter types; 3. Parameter verification failed. |
 
 
 ## off
@@ -831,7 +363,7 @@ try {
 function off(type: SensorId.GRAVITY, sensorInfoParam?: SensorInfoParam, callback?: Callback<GravityResponse>): void
 ```
 
-取消订阅重力传感器数据。当不再需要接收重力传感器数据时调用此接口取消订阅。off取消订阅必须与on订阅成对出现。
+Unsubscribes from data of the gravity sensor.
 
 **Since:** 19
 
@@ -845,75 +377,15 @@ function off(type: SensorId.GRAVITY, sensorInfoParam?: SensorInfoParam, callback
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | SensorId.GRAVITY | Yes | 传感器类型，该值固定为SensorId.GRAVITY。 |
-| sensorInfoParam | [SensorInfoParam](arkts-sensorservice-sensor-sensorinfoparam-i.md) | No | 传感器传入设置参数，可指定deviceId和sensorIndex，用于取消指定设备上指定传感器的订阅。不传入时默认取消本地设备该类型所有传感器的订阅。 |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;GravityResponse&gt; | No | 需要取消订阅的回调函数，若无此参数，则取消订阅当前类型的所有回调函数。 |
+| type | SensorId.GRAVITY | Yes | Sensor type. The value is fixed at **SensorId.GRAVITY**. |
+| sensorInfoParam | [SensorInfoParam](arkts-sensorservice-sensor-sensorinfoparam-i.md) | No | Sensor parameters, including **deviceId** and **sensorIndex**. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;GravityResponse&gt; | No | Callback used for unsubscription. If this parameter is not specified, all callbacks of the specified sensor type are unsubscribed from. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 14500101 | Service exception. Possible causes: 1. Sensor hdf service exception; &lt;br&gt; 2. Sensor service ipc exception;3. Sensor data channel exception. |
-
-## Examples
-
-```TypeScript
-import { sensor } from '@kit.SensorServiceKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-enum Ret { OK, Failed = -1 }
-
-// Sensor callback
-const sensorCallback = (response: sensor.GravityResponse) => {
-  console.info(`callback response: ${JSON.stringify(response)}`);
-}
-// Sensor type
-const sensorType = sensor.SensorId.GRAVITY;
-const sensorInfoParam: sensor.SensorInfoParam = { deviceId: -1, sensorIndex: 0 };
-
-function sensorSubscribe(): Ret {
-  let ret: Ret = Ret.OK;
-  // Use try catch to capture possible exceptions.
-  try {
-    // Query all sensors.
-    const sensorList: sensor.Sensor[] = sensor.getSensorListSync();
-    if (!sensorList.length) {
-      return Ret.Failed;
-    }
-    // Obtain the target sensor based on the actual service logic.
-    const targetSensor = sensorList
-      // Filter all sensors with deviceId 1 and sensorId 2 as required. This example is for reference only. You need to adjust the filtering logic accordingly.
-      .filter((sensor: sensor.Sensor) => sensor.deviceId === 1 && sensor.sensorId === 2)
-      // Select the sensor with sensorIndex 0 among all sensors of the same type.
-      .find((sensor: sensor.Sensor) => sensor.sensorIndex === 0);
-    if (!targetSensor) {
-      return Ret.Failed;
-    }
-    sensorInfoParam.deviceId = targetSensor.deviceId;
-    sensorInfoParam.sensorIndex = targetSensor.sensorIndex;
-    // Subscribe to sensor events.
-    sensor.on(sensorType, sensorCallback, { sensorInfoParam });
-  } catch (error) {
-    let e: BusinessError = error as BusinessError;
-    console.error(`Failed to invoke sensor.on. Code: ${e.code}, message: ${e.message}`);
-    ret = Ret.Failed;
-  }
-  return ret;
-}
-
-function sensorUnsubscribe(): Ret {
-  let ret: Ret = Ret.OK;
-  // Use try catch to capture possible exceptions.
-  try {
-    sensor.off(sensorType, sensorInfoParam, sensorCallback);
-  } catch (error) {
-    let e: BusinessError = error as BusinessError;
-    console.error(`Failed to invoke sensor.off. Code: ${e.code}, message: ${e.message}`);
-    ret = Ret.Failed;
-  }
-  return ret;
-}
-```
+| [14500101](../errorcode-sensor.md#14500101-service-exception) | Service exception. Possible causes: 1. Sensor hdf service exception; &lt;br&gt; 2. Sensor service ipc exception;3. Sensor data channel exception. |
 
 
 ## off
@@ -922,7 +394,7 @@ function sensorUnsubscribe(): Ret {
 function off(type: SensorId.GYROSCOPE, callback?: Callback<GyroscopeResponse>): void
 ```
 
-取消订阅陀螺仪传感器数据。当不再需要接收陀螺仪传感器数据时调用此接口取消订阅。off取消订阅必须与on订阅成对出现。
+Unsubscribes from data of the gyroscope sensor.
 
 **Since:** 9
 
@@ -940,43 +412,15 @@ function off(type: SensorId.GYROSCOPE, callback?: Callback<GyroscopeResponse>): 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | SensorId.GYROSCOPE | Yes | 传感器类型，该值固定为SensorId.GYROSCOPE。 |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;GyroscopeResponse&gt; | No | 需要取消订阅的回调函数，若无此参数，则取消订阅当前类型的所有回调函数。 |
+| type | SensorId.GYROSCOPE | Yes | Sensor type. The value is fixed at **SensorId.GYROSCOPE**. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;GyroscopeResponse&gt; | No | Callback used for unsubscription. If this parameter is not specified, all callbacks of the specified sensor type are unsubscribed from. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt; 2. Incorrect parameter types; 3. Parameter verification failed. |
-| 201 | Permission denied. |
-
-## Examples
-
-```TypeScript
-import { sensor } from '@kit.SensorServiceKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-function callback1(data: object) {
-  console.info('Succeeded in getting callback1 data: ' + JSON.stringify(data));
-}
-
-function callback2(data: object) {
-  console.info('Succeeded in getting callback2 data: ' + JSON.stringify(data));
-}
-
-// Use try catch to capture possible exceptions.
-try {
-  sensor.on(sensor.SensorId.GYROSCOPE, callback1);
-  sensor.on(sensor.SensorId.GYROSCOPE, callback2);
-  // Unsubscribe from callback1.
-  sensor.off(sensor.SensorId.GYROSCOPE, callback1);
-  // Unsubscribe from all callbacks of the SensorId.GYROSCOPE type.
-  sensor.off(sensor.SensorId.GYROSCOPE);
-} catch (error) {
-  let e: BusinessError = error as BusinessError;
-  console.error(`Failed to invoke off. Code: ${e.code}, message: ${e.message}`);
-}
-```
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
 
 
 ## off
@@ -985,7 +429,7 @@ try {
 function off(type: SensorId.GYROSCOPE, sensorInfoParam?: SensorInfoParam, callback?: Callback<GyroscopeResponse>): void
 ```
 
-取消订阅陀螺仪传感器数据。当不再需要接收陀螺仪传感器数据时调用此接口取消订阅。off取消订阅必须与on订阅成对出现。
+Unsubscribes from data of the gyroscope sensor.
 
 **Since:** 19
 
@@ -1003,76 +447,16 @@ function off(type: SensorId.GYROSCOPE, sensorInfoParam?: SensorInfoParam, callba
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | SensorId.GYROSCOPE | Yes | 传感器类型，该值固定为SensorId.GYROSCOPE。 |
-| sensorInfoParam | [SensorInfoParam](arkts-sensorservice-sensor-sensorinfoparam-i.md) | No | 传感器传入设置参数，可指定deviceId和sensorIndex，用于取消指定设备上指定传感器的订阅。不传入时默认取消本地设备该类型所有传感器的订阅。 |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;GyroscopeResponse&gt; | No | 需要取消订阅的回调函数，若无此参数，则取消订阅当前类型的所有回调函数。 |
+| type | SensorId.GYROSCOPE | Yes | Sensor type. The value is fixed at **SensorId.GYROSCOPE**. |
+| sensorInfoParam | [SensorInfoParam](arkts-sensorservice-sensor-sensorinfoparam-i.md) | No | Sensor parameters, including **deviceId** and **sensorIndex**. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;GyroscopeResponse&gt; | No | Callback used for unsubscription. If this parameter is not specified, all callbacks of the specified sensor type are unsubscribed from. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 14500101 | Service exception. Possible causes: 1. Sensor hdf service exception; &lt;br&gt; 2. Sensor service ipc exception;3. Sensor data channel exception. |
-| 201 | Permission denied. |
-
-## Examples
-
-```TypeScript
-import { sensor } from '@kit.SensorServiceKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-enum Ret { OK, Failed = -1 }
-
-// Sensor callback
-const sensorCallback = (response: sensor.GyroscopeResponse) => {
-  console.info(`callback response: ${JSON.stringify(response)}`);
-}
-// Sensor type
-const sensorType = sensor.SensorId.GYROSCOPE;
-const sensorInfoParam: sensor.SensorInfoParam = { deviceId: -1, sensorIndex: 0 };
-
-function sensorSubscribe(): Ret {
-  let ret: Ret = Ret.OK;
-  // Use try catch to capture possible exceptions.
-  try {
-    // Query all sensors.
-    const sensorList: sensor.Sensor[] = sensor.getSensorListSync();
-    if (!sensorList.length) {
-      return Ret.Failed;
-    }
-    // Obtain the target sensor based on the actual service logic.
-    const targetSensor = sensorList
-      // Filter all sensors with deviceId 1 and sensorId 2 as required. This example is for reference only. You need to adjust the filtering logic accordingly.
-      .filter((sensor: sensor.Sensor) => sensor.deviceId === 1 && sensor.sensorId === 2)
-      // Select the sensor with sensorIndex 0 among all sensors of the same type.
-      .find((sensor: sensor.Sensor) => sensor.sensorIndex === 0);
-    if (!targetSensor) {
-      return Ret.Failed;
-    }
-    sensorInfoParam.deviceId = targetSensor.deviceId;
-    sensorInfoParam.sensorIndex = targetSensor.sensorIndex;
-    // Subscribe to sensor events.
-    sensor.on(sensorType, sensorCallback, { sensorInfoParam });
-  } catch (error) {
-    let e: BusinessError = error as BusinessError;
-    console.error(`Failed to invoke sensor.on. Code: ${e.code}, message: ${e.message}`);
-    ret = Ret.Failed;
-  }
-  return ret;
-}
-
-function sensorUnsubscribe(): Ret {
-  let ret: Ret = Ret.OK;
-  // Use try catch to capture possible exceptions.
-  try {
-    sensor.off(sensorType, sensorInfoParam, sensorCallback);
-  } catch (error) {
-    let e: BusinessError = error as BusinessError;
-    console.error(`Failed to invoke sensor.off. Code: ${e.code}, message: ${e.message}`);
-    ret = Ret.Failed;
-  }
-  return ret;
-}
-```
+| [14500101](../errorcode-sensor.md#14500101-service-exception) | Service exception. Possible causes: 1. Sensor hdf service exception; &lt;br&gt; 2. Sensor service ipc exception;3. Sensor data channel exception. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
 
 
 ## off
@@ -1081,7 +465,7 @@ function sensorUnsubscribe(): Ret {
 function off(type: SensorId.GYROSCOPE_UNCALIBRATED, callback?: Callback<GyroscopeUncalibratedResponse>): void
 ```
 
-取消订阅未校准陀螺仪传感器数据。当不再需要接收未校准陀螺仪传感器数据时调用此接口取消订阅。off取消订阅必须与on订阅成对出现。
+Unsubscribes from data of the uncalibrated gyroscope sensor.
 
 **Since:** 9
 
@@ -1097,43 +481,15 @@ function off(type: SensorId.GYROSCOPE_UNCALIBRATED, callback?: Callback<Gyroscop
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | SensorId.GYROSCOPE_UNCALIBRATED | Yes | 传感器类型，该值固定为SensorId.GYROSCOPE_UNCALIBRATED。 |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;GyroscopeUncalibratedResponse&gt; | No | 需要取消订阅的回调函数，若无此参数，则取消订阅当前类型的所有回调函数。 |
+| type | SensorId.GYROSCOPE_UNCALIBRATED | Yes | Sensor type. The value is fixed at **SensorId.GYROSCOPE_UNCALIBRATED**. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;GyroscopeUncalibratedResponse&gt; | No | Callback used for unsubscription. If this parameter is not specified, all callbacks of the specified sensor type are unsubscribed from. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt; 2. Incorrect parameter types; 3. Parameter verification failed. |
-| 201 | Permission denied. |
-
-## Examples
-
-```TypeScript
-import { sensor } from '@kit.SensorServiceKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-function callback1(data: object) {
-  console.info('Succeeded in getting callback1 data: ' + JSON.stringify(data));
-}
-
-function callback2(data: object) {
-  console.info('Succeeded in getting callback2 data: ' + JSON.stringify(data));
-}
-
-// Use try catch to capture possible exceptions.
-try {
-  sensor.on(sensor.SensorId.GYROSCOPE_UNCALIBRATED, callback1);
-  sensor.on(sensor.SensorId.GYROSCOPE_UNCALIBRATED, callback2);
-  // Unsubscribe from callback1.
-  sensor.off(sensor.SensorId.GYROSCOPE_UNCALIBRATED, callback1);
-  // Unsubscribe from all callbacks of the SensorId.GYROSCOPE_UNCALIBRATED type.
-  sensor.off(sensor.SensorId.GYROSCOPE_UNCALIBRATED);
-} catch (error) {
-  let e: BusinessError = error as BusinessError;
-  console.error(`Failed to invoke off. Code: ${e.code}, message: ${e.message}`);
-}
-```
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
 
 
 ## off
@@ -1142,7 +498,7 @@ try {
 function off(type: SensorId.GYROSCOPE_UNCALIBRATED, sensorInfoParam?: SensorInfoParam, callback?: Callback<GyroscopeUncalibratedResponse>): void
 ```
 
-取消订阅未校准陀螺仪传感器数据。
+Unsubscribes from data of the uncalibrated gyroscope sensor.
 
 **Since:** 19
 
@@ -1158,76 +514,16 @@ function off(type: SensorId.GYROSCOPE_UNCALIBRATED, sensorInfoParam?: SensorInfo
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | SensorId.GYROSCOPE_UNCALIBRATED | Yes | 传感器类型，该值固定为SensorId.GYROSCOPE_UNCALIBRATED。 |
-| sensorInfoParam | [SensorInfoParam](arkts-sensorservice-sensor-sensorinfoparam-i.md) | No | 传感器传入设置参数，可指定deviceId和sensorIndex，用于取消指定设备上指定传感器的订阅。不传入时默认取消本地设备该类型所有传感器的订阅。 |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;GyroscopeUncalibratedResponse&gt; | No | 需要取消订阅的回调函数，若无此参数，则取消订阅当前类型的所有回调函数。 |
+| type | SensorId.GYROSCOPE_UNCALIBRATED | Yes | Sensor type. The value is fixed at **SensorId.GYROSCOPE_UNCALIBRATED**. |
+| sensorInfoParam | [SensorInfoParam](arkts-sensorservice-sensor-sensorinfoparam-i.md) | No | Sensor parameters, including **deviceId** and **sensorIndex**. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;GyroscopeUncalibratedResponse&gt; | No | Callback used for unsubscription. If this parameter is not specified, all callbacks of the specified sensor type are unsubscribed from. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 14500101 | Service exception. Possible causes: 1. Sensor hdf service exception; &lt;br&gt; 2. Sensor service ipc exception;3. Sensor data channel exception. |
-| 201 | Permission denied. |
-
-## Examples
-
-```TypeScript
-import { sensor } from '@kit.SensorServiceKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-enum Ret { OK, Failed = -1 }
-
-// Sensor callback
-const sensorCallback = (response: sensor.GyroscopeUncalibratedResponse) => {
-  console.info(`callback response: ${JSON.stringify(response)}`);
-}
-// Sensor type
-const sensorType = sensor.SensorId.GYROSCOPE_UNCALIBRATED;
-const sensorInfoParam: sensor.SensorInfoParam = { deviceId: -1, sensorIndex: 0 };
-
-function sensorSubscribe(): Ret {
-  let ret: Ret = Ret.OK;
-  // Use try catch to capture possible exceptions.
-  try {
-    // Query all sensors.
-    const sensorList: sensor.Sensor[] = sensor.getSensorListSync();
-    if (!sensorList.length) {
-      return Ret.Failed;
-    }
-    // Obtain the target sensor based on the actual service logic.
-    const targetSensor = sensorList
-      // Filter all sensors with deviceId 1 and sensorId 2 as required. This example is for reference only. You need to adjust the filtering logic accordingly.
-      .filter((sensor: sensor.Sensor) => sensor.deviceId === 1 && sensor.sensorId === 2)
-      // Select the sensor with sensorIndex 0 among all sensors of the same type.
-      .find((sensor: sensor.Sensor) => sensor.sensorIndex === 0);
-    if (!targetSensor) {
-      return Ret.Failed;
-    }
-    sensorInfoParam.deviceId = targetSensor.deviceId;
-    sensorInfoParam.sensorIndex = targetSensor.sensorIndex;
-    // Subscribe to sensor events.
-    sensor.on(sensorType, sensorCallback, { sensorInfoParam });
-  } catch (error) {
-    let e: BusinessError = error as BusinessError;
-    console.error(`Failed to invoke sensor.on. Code: ${e.code}, message: ${e.message}`);
-    ret = Ret.Failed;
-  }
-  return ret;
-}
-
-function sensorUnsubscribe(): Ret {
-  let ret: Ret = Ret.OK;
-  // Use try catch to capture possible exceptions.
-  try {
-    sensor.off(sensorType, sensorInfoParam, sensorCallback);
-  } catch (error) {
-    let e: BusinessError = error as BusinessError;
-    console.error(`Failed to invoke sensor.off. Code: ${e.code}, message: ${e.message}`);
-    ret = Ret.Failed;
-  }
-  return ret;
-}
-```
+| [14500101](../errorcode-sensor.md#14500101-service-exception) | Service exception. Possible causes: 1. Sensor hdf service exception; &lt;br&gt; 2. Sensor service ipc exception;3. Sensor data channel exception. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
 
 
 ## off
@@ -1236,7 +532,7 @@ function sensorUnsubscribe(): Ret {
 function off(type: SensorId.HALL, callback?: Callback<HallResponse>): void
 ```
 
-取消订阅霍尔传感器数据。当不再需要接收霍尔传感器数据时调用此接口取消订阅。off取消订阅必须与on订阅成对出现。
+Unsubscribes from data of the Hall effect sensor.
 
 **Since:** 9
 
@@ -1250,42 +546,14 @@ function off(type: SensorId.HALL, callback?: Callback<HallResponse>): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | SensorId.HALL | Yes | 传感器类型，该值固定为SensorId.HALL。 |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;HallResponse&gt; | No | 需要取消订阅的回调函数，若无此参数，则取消订阅当前类型的所有回调函数。 |
+| type | SensorId.HALL | Yes | Sensor type. The value is fixed at **SensorId.HALL**. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;HallResponse&gt; | No | Callback used for unsubscription. If this parameter is not specified, all callbacks of the specified sensor type are unsubscribed from. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt; 2. Incorrect parameter types; 3. Parameter verification failed. |
-
-## Examples
-
-```TypeScript
-import { sensor } from '@kit.SensorServiceKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-function callback1(data: object) {
-  console.info('Succeeded in getting callback1 data: ' + JSON.stringify(data));
-}
-
-function callback2(data: object) {
-  console.info('Succeeded in getting callback2 data: ' + JSON.stringify(data));
-}
-
-// Use try catch to capture possible exceptions.
-try {
-  sensor.on(sensor.SensorId.HALL, callback1);
-  sensor.on(sensor.SensorId.HALL, callback2);
-  // Unsubscribe from callback1.
-  sensor.off(sensor.SensorId.HALL, callback1);
-  // Unsubscribe from all callbacks of the SensorId.HALL type.
-  sensor.off(sensor.SensorId.HALL);
-} catch (error) {
-  let e: BusinessError = error as BusinessError;
-  console.error(`Failed to invoke off. Code: ${e.code}, message: ${e.message}`);
-}
-```
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt; 2. Incorrect parameter types; 3. Parameter verification failed. |
 
 
 ## off
@@ -1294,7 +562,7 @@ try {
 function off(type: SensorId.HALL, sensorInfoParam?: SensorInfoParam, callback?: Callback<HallResponse>): void
 ```
 
-取消订阅霍尔传感器数据。当不再需要接收霍尔传感器数据时调用此接口取消订阅。off取消订阅必须与on订阅成对出现。
+Unsubscribes from data of the Hall effect sensor.
 
 **Since:** 19
 
@@ -1308,75 +576,15 @@ function off(type: SensorId.HALL, sensorInfoParam?: SensorInfoParam, callback?: 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | SensorId.HALL | Yes | 传感器类型，该值固定为SensorId.HALL。 |
-| sensorInfoParam | [SensorInfoParam](arkts-sensorservice-sensor-sensorinfoparam-i.md) | No | 传感器传入设置参数，可指定deviceId和sensorIndex，用于取消指定设备上指定传感器的订阅。不传入时默认取消本地设备该类型所有传感器的订阅。 |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;HallResponse&gt; | No | 需要取消订阅的回调函数，若无此参数，则取消订阅当前类型的所有回调函数。 |
+| type | SensorId.HALL | Yes | Sensor type. The value is fixed at **SensorId.HALL**. |
+| sensorInfoParam | [SensorInfoParam](arkts-sensorservice-sensor-sensorinfoparam-i.md) | No | Sensor parameters, including **deviceId** and **sensorIndex**. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;HallResponse&gt; | No | Callback used for unsubscription. If this parameter is not specified , all callbacks of the specified sensor type are unsubscribed from. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 14500101 | Service exception. Possible causes: 1. Sensor hdf service exception; &lt;br&gt; 2. Sensor service ipc exception;3. Sensor data channel exception. |
-
-## Examples
-
-```TypeScript
-import { sensor } from '@kit.SensorServiceKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-enum Ret { OK, Failed = -1 }
-
-// Sensor callback
-const sensorCallback = (response: sensor.HallResponse) => {
-  console.info(`callback response: ${JSON.stringify(response)}`);
-}
-// Sensor type
-const sensorType = sensor.SensorId.HALL;
-const sensorInfoParam: sensor.SensorInfoParam = { deviceId: -1, sensorIndex: 0 };
-
-function sensorSubscribe(): Ret {
-  let ret: Ret = Ret.OK;
-  // Use try catch to capture possible exceptions.
-  try {
-    // Query all sensors.
-    const sensorList: sensor.Sensor[] = sensor.getSensorListSync();
-    if (!sensorList.length) {
-      return Ret.Failed;
-    }
-    // Obtain the target sensor based on the actual service logic.
-    const targetSensor = sensorList
-      // Filter all sensors with deviceId 1 and sensorId 2 as required. This example is for reference only. You need to adjust the filtering logic accordingly.
-      .filter((sensor: sensor.Sensor) => sensor.deviceId === 1 && sensor.sensorId === 2)
-      // Select the sensor with sensorIndex 0 among all sensors of the same type.
-      .find((sensor: sensor.Sensor) => sensor.sensorIndex === 0);
-    if (!targetSensor) {
-      return Ret.Failed;
-    }
-    sensorInfoParam.deviceId = targetSensor.deviceId;
-    sensorInfoParam.sensorIndex = targetSensor.sensorIndex;
-    // Subscribe to sensor events.
-    sensor.on(sensorType, sensorCallback, { sensorInfoParam });
-  } catch (error) {
-    let e: BusinessError = error as BusinessError;
-    console.error(`Failed to invoke sensor.on. Code: ${e.code}, message: ${e.message}`);
-    ret = Ret.Failed;
-  }
-  return ret;
-}
-
-function sensorUnsubscribe(): Ret {
-  let ret: Ret = Ret.OK;
-  // Use try catch to capture possible exceptions.
-  try {
-    sensor.off(sensorType, sensorInfoParam, sensorCallback);
-  } catch (error) {
-    let e: BusinessError = error as BusinessError;
-    console.error(`Failed to invoke sensor.off. Code: ${e.code}, message: ${e.message}`);
-    ret = Ret.Failed;
-  }
-  return ret;
-}
-```
+| [14500101](../errorcode-sensor.md#14500101-service-exception) | Service exception. Possible causes: 1. Sensor hdf service exception; &lt;br&gt; 2. Sensor service ipc exception;3. Sensor data channel exception. |
 
 
 ## off
@@ -1385,7 +593,7 @@ function sensorUnsubscribe(): Ret {
 function off(type: SensorId.HEART_RATE, callback?: Callback<HeartRateResponse>): void
 ```
 
-取消订阅心率传感器数据。当不再需要接收心率传感器数据时调用此接口取消订阅。off取消订阅必须与on订阅成对出现。
+Unsubscribes from data of the heart rate sensor.
 
 **Since:** 9
 
@@ -1401,43 +609,15 @@ function off(type: SensorId.HEART_RATE, callback?: Callback<HeartRateResponse>):
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | SensorId.HEART_RATE | Yes | 传感器类型，该值固定为SensorId.HEART_RATE。 |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;HeartRateResponse&gt; | No | 需要取消订阅的回调函数，若无此参数，则取消订阅当前类型的所有回调函数。 |
+| type | SensorId.HEART_RATE | Yes | Sensor type. The value is fixed at **SensorId.HEART_RATE**. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;HeartRateResponse&gt; | No | Callback used for unsubscription. If this parameter is not specified, all callbacks of the specified sensor type are unsubscribed from. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt; 2. Incorrect parameter types; 3. Parameter verification failed. |
-| 201 | Permission denied. |
-
-## Examples
-
-```TypeScript
-import { sensor } from '@kit.SensorServiceKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-function callback1(data: object) {
-  console.info('Succeeded in getting callback1 data: ' + JSON.stringify(data));
-}
-
-function callback2(data: object) {
-  console.info('Succeeded in getting callback2 data: ' + JSON.stringify(data));
-}
-
-// Use try catch to capture possible exceptions.
-try {
-  sensor.on(sensor.SensorId.HEART_RATE, callback1);
-  sensor.on(sensor.SensorId.HEART_RATE, callback2);
-  // Unsubscribe from callback1.
-  sensor.off(sensor.SensorId.HEART_RATE, callback1);
-  // Unsubscribe from all callbacks of the SensorId.HEART_RATE type.
-  sensor.off(sensor.SensorId.HEART_RATE);
-} catch (error) {
-  let e: BusinessError = error as BusinessError;
-  console.error(`Failed to invoke off. Code: ${e.code}, message: ${e.message}`);
-}
-```
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
 
 
 ## off
@@ -1446,7 +626,7 @@ try {
 function off(type: SensorId.HEART_RATE, sensorInfoParam?: SensorInfoParam, callback?: Callback<HeartRateResponse>): void
 ```
 
-取消订阅心率传感器数据。当不再需要接收心率传感器数据时调用此接口取消订阅。off取消订阅必须与on订阅成对出现。
+Unsubscribes from data of the heart rate sensor.
 
 **Since:** 19
 
@@ -1462,76 +642,16 @@ function off(type: SensorId.HEART_RATE, sensorInfoParam?: SensorInfoParam, callb
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | SensorId.HEART_RATE | Yes | 传感器类型，该值固定为SensorId.HEART_RATE。 |
-| sensorInfoParam | [SensorInfoParam](arkts-sensorservice-sensor-sensorinfoparam-i.md) | No | 传感器传入设置参数，可指定deviceId和sensorIndex，用于取消指定设备上指定传感器的订阅。不传入时默认取消本地设备该类型所有传感器的订阅。 |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;HeartRateResponse&gt; | No | 需要取消订阅的回调函数，若无此参数，则取消订阅当前类型的所有回调函数。 |
+| type | SensorId.HEART_RATE | Yes | Sensor type. The value is fixed at **SensorId.HEART_RATE**. |
+| sensorInfoParam | [SensorInfoParam](arkts-sensorservice-sensor-sensorinfoparam-i.md) | No | Sensor parameters, including **deviceId** and **sensorIndex**. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;HeartRateResponse&gt; | No | Callback used for unsubscription. If this parameter is not specified, all callbacks of the specified sensor type are unsubscribed from. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 14500101 | Service exception. Possible causes: 1. Sensor hdf service exception; &lt;br&gt; 2. Sensor service ipc exception;3. Sensor data channel exception. |
-| 201 | Permission denied. |
-
-## Examples
-
-```TypeScript
-import { sensor } from '@kit.SensorServiceKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-enum Ret { OK, Failed = -1 }
-
-// Sensor callback
-const sensorCallback = (response: sensor.HeartRateResponse) => {
-  console.info(`callback response: ${JSON.stringify(response)}`);
-}
-// Sensor type
-const sensorType = sensor.SensorId.HEART_RATE;
-const sensorInfoParam: sensor.SensorInfoParam = { deviceId: -1, sensorIndex: 0 };
-
-function sensorSubscribe(): Ret {
-  let ret: Ret = Ret.OK;
-  // Use try catch to capture possible exceptions.
-  try {
-    // Query all sensors.
-    const sensorList: sensor.Sensor[] = sensor.getSensorListSync();
-    if (!sensorList.length) {
-      return Ret.Failed;
-    }
-    // Obtain the target sensor based on the actual service logic.
-    const targetSensor = sensorList
-      // Filter all sensors with deviceId 1 and sensorId 2 as required. This example is for reference only. You need to adjust the filtering logic accordingly.
-      .filter((sensor: sensor.Sensor) => sensor.deviceId === 1 && sensor.sensorId === 2)
-      // Select the sensor with sensorIndex 0 among all sensors of the same type.
-      .find((sensor: sensor.Sensor) => sensor.sensorIndex === 0);
-    if (!targetSensor) {
-      return Ret.Failed;
-    }
-    sensorInfoParam.deviceId = targetSensor.deviceId;
-    sensorInfoParam.sensorIndex = targetSensor.sensorIndex;
-    // Subscribe to sensor events.
-    sensor.on(sensorType, sensorCallback, { sensorInfoParam });
-  } catch (error) {
-    let e: BusinessError = error as BusinessError;
-    console.error(`Failed to invoke sensor.on. Code: ${e.code}, message: ${e.message}`);
-    ret = Ret.Failed;
-  }
-  return ret;
-}
-
-function sensorUnsubscribe(): Ret {
-  let ret: Ret = Ret.OK;
-  // Use try catch to capture possible exceptions.
-  try {
-    sensor.off(sensorType, sensorInfoParam, sensorCallback);
-  } catch (error) {
-    let e: BusinessError = error as BusinessError;
-    console.error(`Failed to invoke sensor.off. Code: ${e.code}, message: ${e.message}`);
-    ret = Ret.Failed;
-  }
-  return ret;
-}
-```
+| [14500101](../errorcode-sensor.md#14500101-service-exception) | Service exception. Possible causes: 1. Sensor hdf service exception; &lt;br&gt; 2. Sensor service ipc exception;3. Sensor data channel exception. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
 
 
 ## off
@@ -1540,7 +660,7 @@ function sensorUnsubscribe(): Ret {
 function off(type: SensorId.HUMIDITY, callback?: Callback<HumidityResponse>): void
 ```
 
-取消订阅湿度传感器数据。当不再需要接收湿度传感器数据时调用此接口取消订阅。off取消订阅必须与on订阅成对出现。
+Unsubscribes from data of the humidity sensor.
 
 **Since:** 9
 
@@ -1554,42 +674,14 @@ function off(type: SensorId.HUMIDITY, callback?: Callback<HumidityResponse>): vo
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | SensorId.HUMIDITY | Yes | 传感器类型，该值固定为SensorId.HUMIDITY。 |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;HumidityResponse&gt; | No | 需要取消订阅的回调函数，若无此参数，则取消订阅当前类型的所有回调函数。 |
+| type | SensorId.HUMIDITY | Yes | Sensor type. The value is fixed at **SensorId.HUMIDITY**. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;HumidityResponse&gt; | No | Callback used for unsubscription. If this parameter is not specified, all callbacks of the specified sensor type are unsubscribed from. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt; 2. Incorrect parameter types; 3. Parameter verification failed. |
-
-## Examples
-
-```TypeScript
-import { sensor } from '@kit.SensorServiceKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-function callback1(data: object) {
-  console.info('Succeeded in getting callback1 data: ' + JSON.stringify(data));
-}
-
-function callback2(data: object) {
-  console.info('Succeeded in getting callback2 data: ' + JSON.stringify(data));
-}
-
-// Use try catch to capture possible exceptions.
-try {
-  sensor.on(sensor.SensorId.HUMIDITY, callback1);
-  sensor.on(sensor.SensorId.HUMIDITY, callback2);
-  // Unsubscribe from callback1.
-  sensor.off(sensor.SensorId.HUMIDITY, callback1);
-  // Unsubscribe from all callbacks of the SensorId.HUMIDITY type.
-  sensor.off(sensor.SensorId.HUMIDITY);
-} catch (error) {
-  let e: BusinessError = error as BusinessError;
-  console.error(`Failed to invoke off. Code: ${e.code}, message: ${e.message}`);
-}
-```
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt; 2. Incorrect parameter types; 3. Parameter verification failed. |
 
 
 ## off
@@ -1598,7 +690,7 @@ try {
 function off(type: SensorId.HUMIDITY, sensorInfoParam?: SensorInfoParam, callback?: Callback<HumidityResponse>): void
 ```
 
-取消订阅湿度传感器数据。当不再需要接收湿度传感器数据时调用此接口取消订阅。off取消订阅必须与on订阅成对出现。
+Unsubscribes from data of the humidity sensor.
 
 **Since:** 19
 
@@ -1612,75 +704,15 @@ function off(type: SensorId.HUMIDITY, sensorInfoParam?: SensorInfoParam, callbac
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | SensorId.HUMIDITY | Yes | 传感器类型，该值固定为SensorId.HUMIDITY。 |
-| sensorInfoParam | [SensorInfoParam](arkts-sensorservice-sensor-sensorinfoparam-i.md) | No | 传感器传入设置参数，可指定deviceId和sensorIndex，用于取消指定设备上指定传感器的订阅。不传入时默认取消本地设备该类型所有传感器的订阅。 |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;HumidityResponse&gt; | No | 需要取消订阅的回调函数，若无此参数，则取消订阅当前类型的所有回调函数。 |
+| type | SensorId.HUMIDITY | Yes | Sensor type. The value is fixed at **SensorId.HUMIDITY**. |
+| sensorInfoParam | [SensorInfoParam](arkts-sensorservice-sensor-sensorinfoparam-i.md) | No | Sensor parameters, including **deviceId** and **sensorIndex**. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;HumidityResponse&gt; | No | Callback used for unsubscription. If this parameter is not specified, all callbacks of the specified sensor type are unsubscribed from. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 14500101 | Service exception. Possible causes: 1. Sensor hdf service exception; &lt;br&gt; 2. Sensor service ipc exception;3. Sensor data channel exception. |
-
-## Examples
-
-```TypeScript
-import { sensor } from '@kit.SensorServiceKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-enum Ret { OK, Failed = -1 }
-
-// Sensor callback
-const sensorCallback = (response: sensor.HumidityResponse) => {
-  console.info(`callback response: ${JSON.stringify(response)}`);
-}
-// Sensor type
-const sensorType = sensor.SensorId.HUMIDITY;
-const sensorInfoParam: sensor.SensorInfoParam = { deviceId: -1, sensorIndex: 0 };
-
-function sensorSubscribe(): Ret {
-  let ret: Ret = Ret.OK;
-  // Use try catch to capture possible exceptions.
-  try {
-    // Query all sensors.
-    const sensorList: sensor.Sensor[] = sensor.getSensorListSync();
-    if (!sensorList.length) {
-      return Ret.Failed;
-    }
-    // Obtain the target sensor based on the actual service logic.
-    const targetSensor = sensorList
-      // Filter all sensors with deviceId 1 and sensorId 2 as required. This example is for reference only. You need to adjust the filtering logic accordingly.
-      .filter((sensor: sensor.Sensor) => sensor.deviceId === 1 && sensor.sensorId === 2)
-      // Select the sensor with sensorIndex 0 among all sensors of the same type.
-      .find((sensor: sensor.Sensor) => sensor.sensorIndex === 0);
-    if (!targetSensor) {
-      return Ret.Failed;
-    }
-    sensorInfoParam.deviceId = targetSensor.deviceId;
-    sensorInfoParam.sensorIndex = targetSensor.sensorIndex;
-    // Subscribe to sensor events.
-    sensor.on(sensorType, sensorCallback, { sensorInfoParam });
-  } catch (error) {
-    let e: BusinessError = error as BusinessError;
-    console.error(`Failed to invoke sensor.on. Code: ${e.code}, message: ${e.message}`);
-    ret = Ret.Failed;
-  }
-  return ret;
-}
-
-function sensorUnsubscribe(): Ret {
-  let ret: Ret = Ret.OK;
-  // Use try catch to capture possible exceptions.
-  try {
-    sensor.off(sensorType, sensorInfoParam, sensorCallback);
-  } catch (error) {
-    let e: BusinessError = error as BusinessError;
-    console.error(`Failed to invoke sensor.off. Code: ${e.code}, message: ${e.message}`);
-    ret = Ret.Failed;
-  }
-  return ret;
-}
-```
+| [14500101](../errorcode-sensor.md#14500101-service-exception) | Service exception. Possible causes: 1. Sensor hdf service exception; &lt;br&gt; 2. Sensor service ipc exception;3. Sensor data channel exception. |
 
 
 ## off
@@ -1689,7 +721,7 @@ function sensorUnsubscribe(): Ret {
 function off(type: SensorId.LINEAR_ACCELEROMETER, callback?: Callback<LinearAccelerometerResponse>): void
 ```
 
-取消订阅线性加速度传感器数据。当不再需要接收线性加速度传感器数据时调用此接口取消订阅。off取消订阅必须与on订阅成对出现。
+Unsubscribes from data of the linear acceleration sensor.
 
 **Since:** 9
 
@@ -1705,43 +737,15 @@ function off(type: SensorId.LINEAR_ACCELEROMETER, callback?: Callback<LinearAcce
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | SensorId.LINEAR_ACCELEROMETER | Yes | 传感器类型，该值固定为SensorId.LINEAR_ACCELEROMETER。 |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;LinearAccelerometerResponse&gt; | No | 需要取消订阅的回调函数，若无此参数，则取消订阅当前类型的所有回调函数。 |
+| type | SensorId.LINEAR_ACCELEROMETER | Yes | Sensor type. The value is fixed at **SensorId.LINEAR_ACCELEROMETER**. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;LinearAccelerometerResponse&gt; | No | Callback used for unsubscription. If this parameter is not specified, all callbacks of the specified sensor type are unsubscribed from. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt; 2. Incorrect parameter types; 3. Parameter verification failed. |
-| 201 | Permission denied. |
-
-## Examples
-
-```TypeScript
-import { sensor } from '@kit.SensorServiceKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-function callback1(data: object) {
-  console.info('Succeeded in getting callback1 data: ' + JSON.stringify(data));
-}
-
-function callback2(data: object) {
-  console.info('Succeeded in getting callback2 data: ' + JSON.stringify(data));
-}
-
-// Use try catch to capture possible exceptions.
-try {
-  sensor.on(sensor.SensorId.LINEAR_ACCELEROMETER, callback1);
-  sensor.on(sensor.SensorId.LINEAR_ACCELEROMETER, callback2);
-  // Unsubscribe from callback1.
-  sensor.off(sensor.SensorId.LINEAR_ACCELEROMETER, callback1);
-  // Unsubscribe from all callbacks of the SensorId.LINEAR_ACCELEROMETER type.
-  sensor.off(sensor.SensorId.LINEAR_ACCELEROMETER);
-} catch (error) {
-  let e: BusinessError = error as BusinessError;
-  console.error(`Failed to invoke off. Code: ${e.code}, message: ${e.message}`);
-}
-```
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
 
 
 ## off
@@ -1750,7 +754,7 @@ try {
 function off(type: SensorId.LINEAR_ACCELEROMETER, sensorInfoParam?: SensorInfoParam, callback?: Callback<LinearAccelerometerResponse>): void
 ```
 
-取消订阅线性加速度传感器数据。当不再需要接收线性加速度传感器数据时调用此接口取消订阅。off取消订阅必须与on订阅成对出现。
+Unsubscribes from data of the linear acceleration sensor.
 
 **Since:** 19
 
@@ -1766,76 +770,16 @@ function off(type: SensorId.LINEAR_ACCELEROMETER, sensorInfoParam?: SensorInfoPa
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | SensorId.LINEAR_ACCELEROMETER | Yes | 传感器类型，该值固定为SensorId.LINEAR_ACCELEROMETER。 |
-| sensorInfoParam | [SensorInfoParam](arkts-sensorservice-sensor-sensorinfoparam-i.md) | No | 传感器传入设置参数，可指定deviceId和sensorIndex，用于取消指定设备上指定传感器的订阅。不传入时默认取消本地设备该类型所有传感器的订阅。 |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;LinearAccelerometerResponse&gt; | No | 需要取消订阅的回调函数，若无此参数，则取消订阅当前类型的所有回调函数。 |
+| type | SensorId.LINEAR_ACCELEROMETER | Yes | Sensor type. The value is fixed at **SensorId.LINEAR_ACCELEROMETER**. |
+| sensorInfoParam | [SensorInfoParam](arkts-sensorservice-sensor-sensorinfoparam-i.md) | No | Sensor parameters, including **deviceId** and **sensorIndex**. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;LinearAccelerometerResponse&gt; | No | Callback used for unsubscription. If this parameter is not specified, all callbacks of the specified sensor type are unsubscribed from. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 14500101 | Service exception. Possible causes: 1. Sensor hdf service exception; &lt;br&gt; 2. Sensor service ipc exception;3. Sensor data channel exception. |
-| 201 | Permission denied. |
-
-## Examples
-
-```TypeScript
-import { sensor } from '@kit.SensorServiceKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-enum Ret { OK, Failed = -1 }
-
-// Sensor callback
-const sensorCallback = (response: sensor.LinearAccelerometerResponse) => {
-  console.info(`callback response: ${JSON.stringify(response)}`);
-}
-// Sensor type
-const sensorType = sensor.SensorId.LINEAR_ACCELEROMETER;
-const sensorInfoParam: sensor.SensorInfoParam = { deviceId: -1, sensorIndex: 0 };
-
-function sensorSubscribe(): Ret {
-  let ret: Ret = Ret.OK;
-  // Use try catch to capture possible exceptions.
-  try {
-    // Query all sensors.
-    const sensorList: sensor.Sensor[] = sensor.getSensorListSync();
-    if (!sensorList.length) {
-      return Ret.Failed;
-    }
-    // Obtain the target sensor based on the actual service logic.
-    const targetSensor = sensorList
-      // Filter all sensors with deviceId 1 and sensorId 2 as required. This example is for reference only. You need to adjust the filtering logic accordingly.
-      .filter((sensor: sensor.Sensor) => sensor.deviceId === 1 && sensor.sensorId === 2)
-      // Select the sensor with sensorIndex 0 among all sensors of the same type.
-      .find((sensor: sensor.Sensor) => sensor.sensorIndex === 0);
-    if (!targetSensor) {
-      return Ret.Failed;
-    }
-    sensorInfoParam.deviceId = targetSensor.deviceId;
-    sensorInfoParam.sensorIndex = targetSensor.sensorIndex;
-    // Subscribe to sensor events.
-    sensor.on(sensorType, sensorCallback, { sensorInfoParam });
-  } catch (error) {
-    let e: BusinessError = error as BusinessError;
-    console.error(`Failed to invoke sensor.on. Code: ${e.code}, message: ${e.message}`);
-    ret = Ret.Failed;
-  }
-  return ret;
-}
-
-function sensorUnsubscribe(): Ret {
-  let ret: Ret = Ret.OK;
-  // Use try catch to capture possible exceptions.
-  try {
-    sensor.off(sensorType, sensorInfoParam, sensorCallback);
-  } catch (error) {
-    let e: BusinessError = error as BusinessError;
-    console.error(`Failed to invoke sensor.off. Code: ${e.code}, message: ${e.message}`);
-    ret = Ret.Failed;
-  }
-  return ret;
-}
-```
+| [14500101](../errorcode-sensor.md#14500101-service-exception) | Service exception. Possible causes: 1. Sensor hdf service exception; &lt;br&gt; 2. Sensor service ipc exception;3. Sensor data channel exception. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
 
 
 ## off
@@ -1844,7 +788,7 @@ function sensorUnsubscribe(): Ret {
 function off(type: SensorId.MAGNETIC_FIELD, callback?: Callback<MagneticFieldResponse>): void
 ```
 
-取消订阅磁场传感器数据。当不再需要接收磁场传感器数据时调用此接口取消订阅。off取消订阅必须与on订阅成对出现。
+Unsubscribes from data of the magnetic field sensor.
 
 **Since:** 9
 
@@ -1858,42 +802,14 @@ function off(type: SensorId.MAGNETIC_FIELD, callback?: Callback<MagneticFieldRes
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | SensorId.MAGNETIC_FIELD | Yes | 传感器类型，该值固定为SensorId.MAGNETIC_FIELD。 |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;MagneticFieldResponse&gt; | No | 需要取消订阅的回调函数，若无此参数，则取消订阅当前类型的所有回调函数。 |
+| type | SensorId.MAGNETIC_FIELD | Yes | Sensor type. The value is fixed at **SensorId.MAGNETIC_FIELD**. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;MagneticFieldResponse&gt; | No | Callback used for unsubscription. If this parameter is not specified, all callbacks of the specified sensor type are unsubscribed from. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt; 2. Incorrect parameter types; 3. Parameter verification failed. |
-
-## Examples
-
-```TypeScript
-import { sensor } from '@kit.SensorServiceKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-function callback1(data: object) {
-  console.info('Succeeded in getting callback1 data: ' + JSON.stringify(data));
-}
-
-function callback2(data: object) {
-  console.info('Succeeded in getting callback2 data: ' + JSON.stringify(data));
-}
-
-// Use try catch to capture possible exceptions.
-try {
-  sensor.on(sensor.SensorId.MAGNETIC_FIELD, callback1);
-  sensor.on(sensor.SensorId.MAGNETIC_FIELD, callback2);
-  // Unsubscribe from callback1.
-  sensor.off(sensor.SensorId.MAGNETIC_FIELD, callback1);
-  // Unsubscribe from all callbacks of the SensorId.MAGNETIC_FIELD type.
-  sensor.off(sensor.SensorId.MAGNETIC_FIELD);
-} catch (error) {
-  let e: BusinessError = error as BusinessError;
-  console.error(`Failed to invoke off. Code: ${e.code}, message: ${e.message}`);
-}
-```
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt; 2. Incorrect parameter types; 3. Parameter verification failed. |
 
 
 ## off
@@ -1902,7 +818,7 @@ try {
 function off(type: SensorId.MAGNETIC_FIELD, sensorInfoParam?: SensorInfoParam, callback?: Callback<MagneticFieldResponse>): void
 ```
 
-取消订阅磁场传感器数据。当不再需要接收磁场传感器数据时调用此接口取消订阅。off取消订阅必须与on订阅成对出现。
+Unsubscribes from data of the magnetic field sensor.
 
 **Since:** 19
 
@@ -1916,75 +832,15 @@ function off(type: SensorId.MAGNETIC_FIELD, sensorInfoParam?: SensorInfoParam, c
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | SensorId.MAGNETIC_FIELD | Yes | 传感器类型，该值固定为SensorId.MAGNETIC_FIELD。 |
-| sensorInfoParam | [SensorInfoParam](arkts-sensorservice-sensor-sensorinfoparam-i.md) | No | 传感器传入设置参数，可指定deviceId和sensorIndex，用于取消指定设备上指定传感器的订阅。不传入时默认取消本地设备该类型所有传感器的订阅。 |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;MagneticFieldResponse&gt; | No | 需要取消订阅的回调函数，若无此参数，则取消订阅当前类型的所有回调函数。 |
+| type | SensorId.MAGNETIC_FIELD | Yes | Sensor type. The value is fixed at **SensorId.MAGNETIC_FIELD**. |
+| sensorInfoParam | [SensorInfoParam](arkts-sensorservice-sensor-sensorinfoparam-i.md) | No | Sensor parameters, including **deviceId** and **sensorIndex**. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;MagneticFieldResponse&gt; | No | Callback used for unsubscription. If this parameter is not specified, all callbacks of the specified sensor type are unsubscribed from. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 14500101 | Service exception. Possible causes: 1. Sensor hdf service exception; &lt;br&gt; 2. Sensor service ipc exception;3. Sensor data channel exception. |
-
-## Examples
-
-```TypeScript
-import { sensor } from '@kit.SensorServiceKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-enum Ret { OK, Failed = -1 }
-
-// Sensor callback
-const sensorCallback = (response: sensor.MagneticFieldResponse) => {
-  console.info(`callback response: ${JSON.stringify(response)}`);
-}
-// Sensor type
-const sensorType = sensor.SensorId.MAGNETIC_FIELD;
-const sensorInfoParam: sensor.SensorInfoParam = { deviceId: -1, sensorIndex: 0 };
-
-function sensorSubscribe(): Ret {
-  let ret: Ret = Ret.OK;
-  // Use try catch to capture possible exceptions.
-  try {
-    // Query all sensors.
-    const sensorList: sensor.Sensor[] = sensor.getSensorListSync();
-    if (!sensorList.length) {
-      return Ret.Failed;
-    }
-    // Obtain the target sensor based on the actual service logic.
-    const targetSensor = sensorList
-      // Filter all sensors with deviceId 1 and sensorId 2 as required. This example is for reference only. You need to adjust the filtering logic accordingly.
-      .filter((sensor: sensor.Sensor) => sensor.deviceId === 1 && sensor.sensorId === 2)
-      // Select the sensor with sensorIndex 0 among all sensors of the same type.
-      .find((sensor: sensor.Sensor) => sensor.sensorIndex === 0);
-    if (!targetSensor) {
-      return Ret.Failed;
-    }
-    sensorInfoParam.deviceId = targetSensor.deviceId;
-    sensorInfoParam.sensorIndex = targetSensor.sensorIndex;
-    // Subscribe to sensor events.
-    sensor.on(sensorType, sensorCallback, { sensorInfoParam });
-  } catch (error) {
-    let e: BusinessError = error as BusinessError;
-    console.error(`Failed to invoke sensor.on. Code: ${e.code}, message: ${e.message}`);
-    ret = Ret.Failed;
-  }
-  return ret;
-}
-
-function sensorUnsubscribe(): Ret {
-  let ret: Ret = Ret.OK;
-  // Use try catch to capture possible exceptions.
-  try {
-    sensor.off(sensorType, sensorInfoParam, sensorCallback);
-  } catch (error) {
-    let e: BusinessError = error as BusinessError;
-    console.error(`Failed to invoke sensor.off. Code: ${e.code}, message: ${e.message}`);
-    ret = Ret.Failed;
-  }
-  return ret;
-}
-```
+| [14500101](../errorcode-sensor.md#14500101-service-exception) | Service exception. Possible causes: 1. Sensor hdf service exception; &lt;br&gt; 2. Sensor service ipc exception;3. Sensor data channel exception. |
 
 
 ## off
@@ -1993,7 +849,7 @@ function sensorUnsubscribe(): Ret {
 function off(type: SensorId.MAGNETIC_FIELD_UNCALIBRATED, callback?: Callback<MagneticFieldUncalibratedResponse>): void
 ```
 
-取消订阅未校准的磁场传感器数据。当不再需要接收未校准磁场传感器数据时调用此接口取消订阅。off取消订阅必须与on订阅成对出现。
+Unsubscribes from data of the uncalibrated magnetic field sensor.
 
 **Since:** 9
 
@@ -2007,42 +863,14 @@ function off(type: SensorId.MAGNETIC_FIELD_UNCALIBRATED, callback?: Callback<Mag
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | SensorId.MAGNETIC_FIELD_UNCALIBRATED | Yes | 传感器类型，该值固定为SensorId.MAGNETIC_FIELD_UNCALIBRATED。 |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;MagneticFieldUncalibratedResponse&gt; | No | 需要取消订阅的回调函数，若无此参数，则取消订阅当前类型的所有回调函数。 |
+| type | SensorId.MAGNETIC_FIELD_UNCALIBRATED | Yes | Sensor type. The value is fixed at **SensorId.MAGNETIC_FIELD_UNCALIBRATED**. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;MagneticFieldUncalibratedResponse&gt; | No | Callback used for unsubscription. If this parameter is not specified, all callbacks of the specified sensor type are unsubscribed from. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt; 2. Incorrect parameter types; 3. Parameter verification failed. |
-
-## Examples
-
-```TypeScript
-import { sensor } from '@kit.SensorServiceKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-function callback1(data: object) {
-  console.info('Succeeded in getting callback1 data: ' + JSON.stringify(data));
-}
-
-function callback2(data: object) {
-  console.info('Succeeded in getting callback2 data: ' + JSON.stringify(data));
-}
-
-// Use try catch to capture possible exceptions.
-try {
-  sensor.on(sensor.SensorId.MAGNETIC_FIELD_UNCALIBRATED, callback1);
-  sensor.on(sensor.SensorId.MAGNETIC_FIELD_UNCALIBRATED, callback2);
-  // Unsubscribe from callback1.
-  sensor.off(sensor.SensorId.MAGNETIC_FIELD_UNCALIBRATED, callback1);
-  // Unsubscribe from all callbacks of the SensorId.MAGNETIC_FIELD_UNCALIBRATED type.
-  sensor.off(sensor.SensorId.MAGNETIC_FIELD_UNCALIBRATED);
-} catch (error) {
-  let e: BusinessError = error as BusinessError;
-  console.error(`Failed to invoke off. Code: ${e.code}, message: ${e.message}`);
-}
-```
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt; 2. Incorrect parameter types; 3. Parameter verification failed. |
 
 
 ## off
@@ -2051,7 +879,7 @@ try {
 function off(type: SensorId.MAGNETIC_FIELD_UNCALIBRATED, sensorInfoParam?: SensorInfoParam, callback?: Callback<MagneticFieldUncalibratedResponse>): void
 ```
 
-取消订阅未校准的磁场传感器数据。当不再需要接收未校准磁场传感器数据时调用此接口取消订阅。off取消订阅必须与on订阅成对出现。
+Unsubscribes from data of the uncalibrated magnetic field sensor.
 
 **Since:** 19
 
@@ -2065,75 +893,15 @@ function off(type: SensorId.MAGNETIC_FIELD_UNCALIBRATED, sensorInfoParam?: Senso
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | SensorId.MAGNETIC_FIELD_UNCALIBRATED | Yes | 传感器类型，该值固定为SensorId.MAGNETIC_FIELD_UNCALIBRATED。 |
-| sensorInfoParam | [SensorInfoParam](arkts-sensorservice-sensor-sensorinfoparam-i.md) | No | 传感器传入设置参数，可指定deviceId和sensorIndex，用于取消指定设备上指定传感器的订阅。不传入时默认取消本地设备该类型所有传感器的订阅。 |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;MagneticFieldUncalibratedResponse&gt; | No | 需要取消订阅的回调函数，若无此参数，则取消订阅当前类型的所有回调函数。 |
+| type | SensorId.MAGNETIC_FIELD_UNCALIBRATED | Yes | Sensor type. The value is fixed at **SensorId.MAGNETIC_FIELD_UNCALIBRATED**. |
+| sensorInfoParam | [SensorInfoParam](arkts-sensorservice-sensor-sensorinfoparam-i.md) | No | Sensor parameters, including **deviceId** and **sensorIndex**. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;MagneticFieldUncalibratedResponse&gt; | No | Callback used for unsubscription. If this parameter is not specified, all callbacks of the specified sensor type are unsubscribed from. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 14500101 | Service exception. Possible causes: 1. Sensor hdf service exception; &lt;br&gt; 2. Sensor service ipc exception;3. Sensor data channel exception. |
-
-## Examples
-
-```TypeScript
-import { sensor } from '@kit.SensorServiceKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-enum Ret { OK, Failed = -1 }
-
-// Sensor callback
-const sensorCallback = (response: sensor.MagneticFieldUncalibratedResponse) => {
-  console.info(`callback response: ${JSON.stringify(response)}`);
-}
-// Sensor type
-const sensorType = sensor.SensorId.MAGNETIC_FIELD_UNCALIBRATED;
-const sensorInfoParam: sensor.SensorInfoParam = { deviceId: -1, sensorIndex: 0 };
-
-function sensorSubscribe(): Ret {
-  let ret: Ret = Ret.OK;
-  // Use try catch to capture possible exceptions.
-  try {
-    // Query all sensors.
-    const sensorList: sensor.Sensor[] = sensor.getSensorListSync();
-    if (!sensorList.length) {
-      return Ret.Failed;
-    }
-    // Obtain the target sensor based on the actual service logic.
-    const targetSensor = sensorList
-      // Filter all sensors with deviceId 1 and sensorId 2 as required. This example is for reference only. You need to adjust the filtering logic accordingly.
-      .filter((sensor: sensor.Sensor) => sensor.deviceId === 1 && sensor.sensorId === 2)
-      // Select the sensor with sensorIndex 0 among all sensors of the same type.
-      .find((sensor: sensor.Sensor) => sensor.sensorIndex === 0);
-    if (!targetSensor) {
-      return Ret.Failed;
-    }
-    sensorInfoParam.deviceId = targetSensor.deviceId;
-    sensorInfoParam.sensorIndex = targetSensor.sensorIndex;
-    // Subscribe to sensor events.
-    sensor.on(sensorType, sensorCallback, { sensorInfoParam });
-  } catch (error) {
-    let e: BusinessError = error as BusinessError;
-    console.error(`Failed to invoke sensor.on. Code: ${e.code}, message: ${e.message}`);
-    ret = Ret.Failed;
-  }
-  return ret;
-}
-
-function sensorUnsubscribe(): Ret {
-  let ret: Ret = Ret.OK;
-  // Use try catch to capture possible exceptions.
-  try {
-    sensor.off(sensorType, sensorInfoParam, sensorCallback);
-  } catch (error) {
-    let e: BusinessError = error as BusinessError;
-    console.error(`Failed to invoke sensor.off. Code: ${e.code}, message: ${e.message}`);
-    ret = Ret.Failed;
-  }
-  return ret;
-}
-```
+| [14500101](../errorcode-sensor.md#14500101-service-exception) | Service exception. Possible causes: 1. Sensor hdf service exception; &lt;br&gt; 2. Sensor service ipc exception;3. Sensor data channel exception. |
 
 
 ## off
@@ -2142,7 +910,7 @@ function sensorUnsubscribe(): Ret {
 function off(type: SensorId.ORIENTATION, callback?: Callback<OrientationResponse>): void
 ```
 
-取消订阅方向传感器数据。当不再需要接收方向传感器数据时调用此接口取消订阅。off取消订阅必须与on订阅成对出现。
+Unsubscribes from data of the orientation sensor.
 
 **Since:** 9
 
@@ -2158,42 +926,14 @@ function off(type: SensorId.ORIENTATION, callback?: Callback<OrientationResponse
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | SensorId.ORIENTATION | Yes | 传感器类型，该值固定为SensorId.ORIENTATION。 |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;OrientationResponse&gt; | No | 需要取消订阅的回调函数，若无此参数，则取消订阅当前类型的所有回调函数。 |
+| type | SensorId.ORIENTATION | Yes | Sensor type. The value is fixed at **SensorId.ORIENTATION**. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;OrientationResponse&gt; | No | Callback used for unsubscription. If this parameter is not specified, all callbacks of the specified sensor type are unsubscribed from. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt; 2. Incorrect parameter types; 3. Parameter verification failed. |
-
-## Examples
-
-```TypeScript
-import { sensor } from '@kit.SensorServiceKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-function callback1(data: object) {
-  console.info('Succeeded in getting callback1 data: ' + JSON.stringify(data));
-}
-
-function callback2(data: object) {
-  console.info('Succeeded in getting callback2 data: ' + JSON.stringify(data));
-}
-
-// Use try catch to capture possible exceptions.
-try {
-  sensor.on(sensor.SensorId.ORIENTATION, callback1);
-  sensor.on(sensor.SensorId.ORIENTATION, callback2);
-  // Unsubscribe from callback1.
-  sensor.off(sensor.SensorId.ORIENTATION, callback1);
-  // Unsubscribe from all callbacks of the SensorId.ORIENTATION type.
-  sensor.off(sensor.SensorId.ORIENTATION);
-} catch (error) {
-  let e: BusinessError = error as BusinessError;
-  console.error(`Failed to invoke off. Code: ${e.code}, message: ${e.message}`);
-}
-```
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt; 2. Incorrect parameter types; 3. Parameter verification failed. |
 
 
 ## off
@@ -2202,7 +942,7 @@ try {
 function off(type: SensorId.ORIENTATION, sensorInfoParam?: SensorInfoParam, callback?: Callback<OrientationResponse>): void
 ```
 
-取消订阅方向传感器数据。当不再需要接收方向传感器数据时调用此接口取消订阅。off取消订阅必须与on订阅成对出现。
+Unsubscribes from data of the orientation sensor.
 
 **Since:** 19
 
@@ -2218,75 +958,15 @@ function off(type: SensorId.ORIENTATION, sensorInfoParam?: SensorInfoParam, call
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | SensorId.ORIENTATION | Yes | 传感器类型，该值固定为SensorId.ORIENTATION。 |
-| sensorInfoParam | [SensorInfoParam](arkts-sensorservice-sensor-sensorinfoparam-i.md) | No | 传感器传入设置参数，可指定deviceId和sensorIndex，用于取消指定设备上指定传感器的订阅。不传入时默认取消本地设备该类型所有传感器的订阅。 |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;OrientationResponse&gt; | No | 需要取消订阅的回调函数，若无此参数，则取消订阅当前类型的所有回调函数。 |
+| type | SensorId.ORIENTATION | Yes | Sensor type. The value is fixed at **SensorId.ORIENTATION**. |
+| sensorInfoParam | [SensorInfoParam](arkts-sensorservice-sensor-sensorinfoparam-i.md) | No | Sensor parameters, including **deviceId** and **sensorIndex**. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;OrientationResponse&gt; | No | Callback used for unsubscription. If this parameter is not specified, all callbacks of the specified sensor type are unsubscribed from. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 14500101 | Service exception. Possible causes: 1. Sensor hdf service exception; &lt;br&gt; 2. Sensor service ipc exception;3. Sensor data channel exception. |
-
-## Examples
-
-```TypeScript
-import { sensor } from '@kit.SensorServiceKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-enum Ret { OK, Failed = -1 }
-
-// Sensor callback
-const sensorCallback = (response: sensor.OrientationResponse) => {
-  console.info(`callback response: ${JSON.stringify(response)}`);
-}
-// Sensor type
-const sensorType = sensor.SensorId.ORIENTATION;
-const sensorInfoParam: sensor.SensorInfoParam = { deviceId: -1, sensorIndex: 0 };
-
-function sensorSubscribe(): Ret {
-  let ret: Ret = Ret.OK;
-  // Use try catch to capture possible exceptions.
-  try {
-    // Query all sensors.
-    const sensorList: sensor.Sensor[] = sensor.getSensorListSync();
-    if (!sensorList.length) {
-      return Ret.Failed;
-    }
-    // Obtain the target sensor based on the actual service logic.
-    const targetSensor = sensorList
-      // Filter all sensors with deviceId 1 and sensorId 2 as required. This example is for reference only. You need to adjust the filtering logic accordingly.
-      .filter((sensor: sensor.Sensor) => sensor.deviceId === 1 && sensor.sensorId === 2)
-      // Select the sensor with sensorIndex 0 among all sensors of the same type.
-      .find((sensor: sensor.Sensor) => sensor.sensorIndex === 0);
-    if (!targetSensor) {
-      return Ret.Failed;
-    }
-    sensorInfoParam.deviceId = targetSensor.deviceId;
-    sensorInfoParam.sensorIndex = targetSensor.sensorIndex;
-    // Subscribe to sensor events.
-    sensor.on(sensorType, sensorCallback, { sensorInfoParam });
-  } catch (error) {
-    let e: BusinessError = error as BusinessError;
-    console.error(`Failed to invoke sensor.on. Code: ${e.code}, message: ${e.message}`);
-    ret = Ret.Failed;
-  }
-  return ret;
-}
-
-function sensorUnsubscribe(): Ret {
-  let ret: Ret = Ret.OK;
-  // Use try catch to capture possible exceptions.
-  try {
-    sensor.off(sensorType, sensorInfoParam, sensorCallback);
-  } catch (error) {
-    let e: BusinessError = error as BusinessError;
-    console.error(`Failed to invoke sensor.off. Code: ${e.code}, message: ${e.message}`);
-    ret = Ret.Failed;
-  }
-  return ret;
-}
-```
+| [14500101](../errorcode-sensor.md#14500101-service-exception) | Service exception. Possible causes: 1. Sensor hdf service exception; &lt;br&gt; 2. Sensor service ipc exception;3. Sensor data channel exception. |
 
 
 ## off
@@ -2295,7 +975,7 @@ function sensorUnsubscribe(): Ret {
 function off(type: SensorId.PEDOMETER, callback?: Callback<PedometerResponse>): void
 ```
 
-取消订阅计步器传感器数据。当不再需要接收计步器传感器数据时调用此接口取消订阅。off取消订阅必须与on订阅成对出现。
+Unsubscribes from data of the pedometer sensor.
 
 **Since:** 9
 
@@ -2311,43 +991,15 @@ function off(type: SensorId.PEDOMETER, callback?: Callback<PedometerResponse>): 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | SensorId.PEDOMETER | Yes | 传感器类型，该值固定为SensorId.PEDOMETER。 |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;PedometerResponse&gt; | No | 需要取消订阅的回调函数，若无此参数，则取消订阅当前类型的所有回调函数。 |
+| type | SensorId.PEDOMETER | Yes | Sensor type. The value is fixed at **SensorId.PEDOMETER**. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;PedometerResponse&gt; | No | Callback used for unsubscription. If this parameter is not specified, all callbacks of the specified sensor type are unsubscribed from. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt; 2. Incorrect parameter types; 3. Parameter verification failed. |
-| 201 | Permission denied. |
-
-## Examples
-
-```TypeScript
-import { sensor } from '@kit.SensorServiceKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-function callback1(data: object) {
-  console.info('Succeeded in getting callback1 data: ' + JSON.stringify(data));
-}
-
-function callback2(data: object) {
-  console.info('Succeeded in getting callback2 data: ' + JSON.stringify(data));
-}
-
-// Use try catch to capture possible exceptions.
-try {
-  sensor.on(sensor.SensorId.PEDOMETER, callback1);
-  sensor.on(sensor.SensorId.PEDOMETER, callback2);
-  // Unsubscribe from callback1.
-  sensor.off(sensor.SensorId.PEDOMETER, callback1);
-  // Unsubscribe from all callbacks of the SensorId.PEDOMETER type.
-  sensor.off(sensor.SensorId.PEDOMETER);
-} catch (error) {
-  let e: BusinessError = error as BusinessError;
-  console.error(`Failed to invoke off. Code: ${e.code}, message: ${e.message}`);
-}
-```
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
 
 
 ## off
@@ -2356,7 +1008,7 @@ try {
 function off(type: SensorId.PEDOMETER, sensorInfoParam?: SensorInfoParam, callback?: Callback<PedometerResponse>): void
 ```
 
-取消订阅计步器传感器数据。当不再需要接收计步器传感器数据时调用此接口取消订阅。off取消订阅必须与on订阅成对出现。
+Unsubscribes from data of the pedometer sensor.
 
 **Since:** 19
 
@@ -2372,76 +1024,16 @@ function off(type: SensorId.PEDOMETER, sensorInfoParam?: SensorInfoParam, callba
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | SensorId.PEDOMETER | Yes | 传感器类型，该值固定为SensorId.PEDOMETER。 |
-| sensorInfoParam | [SensorInfoParam](arkts-sensorservice-sensor-sensorinfoparam-i.md) | No | 传感器传入设置参数，可指定deviceId和sensorIndex，用于取消指定设备上指定传感器的订阅。不传入时默认取消本地设备该类型所有传感器的订阅。 |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;PedometerResponse&gt; | No | 需要取消订阅的回调函数，若无此参数，则取消订阅当前类型的所有回调函数。 |
+| type | SensorId.PEDOMETER | Yes | Sensor type. The value is fixed at **SensorId.PEDOMETER**. |
+| sensorInfoParam | [SensorInfoParam](arkts-sensorservice-sensor-sensorinfoparam-i.md) | No | Sensor parameters, including **deviceId** and **sensorIndex**. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;PedometerResponse&gt; | No | Callback used for unsubscription. If this parameter is not specified, all callbacks of the specified sensor type are unsubscribed from. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 14500101 | Service exception. Possible causes: 1. Sensor hdf service exception; &lt;br&gt; 2. Sensor service ipc exception;3. Sensor data channel exception. |
-| 201 | Permission denied |
-
-## Examples
-
-```TypeScript
-import { sensor } from '@kit.SensorServiceKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-enum Ret { OK, Failed = -1 }
-
-// Sensor callback
-const sensorCallback = (response: sensor.PedometerResponse) => {
-  console.info(`callback response: ${JSON.stringify(response)}`);
-}
-// Sensor type
-const sensorType = sensor.SensorId.PEDOMETER;
-const sensorInfoParam: sensor.SensorInfoParam = { deviceId: -1, sensorIndex: 0 };
-
-function sensorSubscribe(): Ret {
-  let ret: Ret = Ret.OK;
-  // Use try catch to capture possible exceptions.
-  try {
-    // Query all sensors.
-    const sensorList: sensor.Sensor[] = sensor.getSensorListSync();
-    if (!sensorList.length) {
-      return Ret.Failed;
-    }
-    // Obtain the target sensor based on the actual service logic.
-    const targetSensor = sensorList
-      // Filter all sensors with deviceId 1 and sensorId 2 as required. This example is for reference only. You need to adjust the filtering logic accordingly.
-      .filter((sensor: sensor.Sensor) => sensor.deviceId === 1 && sensor.sensorId === 2)
-      // Select the sensor with sensorIndex 0 among all sensors of the same type.
-      .find((sensor: sensor.Sensor) => sensor.sensorIndex === 0);
-    if (!targetSensor) {
-      return Ret.Failed;
-    }
-    sensorInfoParam.deviceId = targetSensor.deviceId;
-    sensorInfoParam.sensorIndex = targetSensor.sensorIndex;
-    // Subscribe to sensor events.
-    sensor.on(sensorType, sensorCallback, { sensorInfoParam });
-  } catch (error) {
-    let e: BusinessError = error as BusinessError;
-    console.error(`Failed to invoke sensor.on. Code: ${e.code}, message: ${e.message}`);
-    ret = Ret.Failed;
-  }
-  return ret;
-}
-
-function sensorUnsubscribe(): Ret {
-  let ret: Ret = Ret.OK;
-  // Use try catch to capture possible exceptions.
-  try {
-    sensor.off(sensorType, sensorInfoParam, sensorCallback);
-  } catch (error) {
-    let e: BusinessError = error as BusinessError;
-    console.error(`Failed to invoke sensor.off. Code: ${e.code}, message: ${e.message}`);
-    ret = Ret.Failed;
-  }
-  return ret;
-}
-```
+| [14500101](../errorcode-sensor.md#14500101-service-exception) | Service exception. Possible causes: 1. Sensor hdf service exception; &lt;br&gt; 2. Sensor service ipc exception;3. Sensor data channel exception. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied |
 
 
 ## off
@@ -2450,7 +1042,7 @@ function sensorUnsubscribe(): Ret {
 function off(type: SensorId.PEDOMETER_DETECTION, callback?: Callback<PedometerDetectionResponse>): void
 ```
 
-取消订阅计步检测器传感器数据。当不再需要接收计步检测器传感器数据时调用此接口取消订阅。off取消订阅必须与on订阅成对出现。
+Unsubscribes from data of the pedometer detection sensor.
 
 **Since:** 9
 
@@ -2466,43 +1058,15 @@ function off(type: SensorId.PEDOMETER_DETECTION, callback?: Callback<PedometerDe
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | SensorId.PEDOMETER_DETECTION | Yes | 传感器类型，该值固定为SensorId.PEDOMETER_DETECTION。 |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;PedometerDetectionResponse&gt; | No | 需要取消订阅的回调函数，若无此参数，则取消订阅当前类型的所有回调函数。 |
+| type | SensorId.PEDOMETER_DETECTION | Yes | Sensor type. The value is fixed at **SensorId.PEDOMETER_DETECTION**. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;PedometerDetectionResponse&gt; | No | Callback used for unsubscription. If this parameter is not specified, all callbacks of the specified sensor type are unsubscribed from. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt; 2. Incorrect parameter types; 3. Parameter verification failed. |
-| 201 | Permission denied. |
-
-## Examples
-
-```TypeScript
-import { sensor } from '@kit.SensorServiceKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-function callback1(data: object) {
-  console.info('Succeeded in getting callback1 data: ' + JSON.stringify(data));
-}
-
-function callback2(data: object) {
-  console.info('Succeeded in getting callback2 data: ' + JSON.stringify(data));
-}
-
-// Use try catch to capture possible exceptions.
-try {
-  sensor.on(sensor.SensorId.PEDOMETER_DETECTION, callback1);
-  sensor.on(sensor.SensorId.PEDOMETER_DETECTION, callback2);
-  // Unsubscribe from callback1.
-  sensor.off(sensor.SensorId.PEDOMETER_DETECTION, callback1);
-  // Unsubscribe from all callbacks of the SensorId.PEDOMETER_DETECTION type.
-  sensor.off(sensor.SensorId.PEDOMETER_DETECTION);
-} catch (error) {
-  let e: BusinessError = error as BusinessError;
-  console.error(`Failed to invoke off. Code: ${e.code}, message: ${e.message}`);
-}
-```
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
 
 
 ## off
@@ -2511,7 +1075,7 @@ try {
 function off(type: SensorId.PEDOMETER_DETECTION, sensorInfoParam?: SensorInfoParam, callback?: Callback<PedometerDetectionResponse>): void
 ```
 
-取消订阅计步检测器传感器数据。当不再需要接收计步检测器传感器数据时调用此接口取消订阅。off取消订阅必须与on订阅成对出现。
+Unsubscribes from data of the pedometer detection sensor.
 
 **Since:** 19
 
@@ -2527,76 +1091,16 @@ function off(type: SensorId.PEDOMETER_DETECTION, sensorInfoParam?: SensorInfoPar
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | SensorId.PEDOMETER_DETECTION | Yes | 传感器类型，该值固定为SensorId.PEDOMETER_DETECTION。 |
-| sensorInfoParam | [SensorInfoParam](arkts-sensorservice-sensor-sensorinfoparam-i.md) | No | 传感器传入设置参数，可指定deviceId和sensorIndex，用于取消指定设备上指定传感器的订阅。不传入时默认取消本地设备该类型所有传感器的订阅。 |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;PedometerDetectionResponse&gt; | No | 需要取消订阅的回调函数，若无此参数，则取消订阅当前类型的所有回调函数。 |
+| type | SensorId.PEDOMETER_DETECTION | Yes | Sensor type. The value is fixed at **SensorId.PEDOMETER_DETECTION**. |
+| sensorInfoParam | [SensorInfoParam](arkts-sensorservice-sensor-sensorinfoparam-i.md) | No | Sensor parameters, including **deviceId** and **sensorIndex**. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;PedometerDetectionResponse&gt; | No | Callback used for unsubscription. If this parameter is not specified, all callbacks of the specified sensor type are unsubscribed from. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 14500101 | Service exception. Possible causes: 1. Sensor hdf service exception; &lt;br&gt; 2. Sensor service ipc exception;3. Sensor data channel exception. |
-| 201 | Permission denied. |
-
-## Examples
-
-```TypeScript
-import { sensor } from '@kit.SensorServiceKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-enum Ret { OK, Failed = -1 }
-
-// Sensor callback
-const sensorCallback = (response: sensor.PedometerDetectionResponse) => {
-  console.info(`callback response: ${JSON.stringify(response)}`);
-}
-// Sensor type
-const sensorType = sensor.SensorId.PEDOMETER_DETECTION;
-const sensorInfoParam: sensor.SensorInfoParam = { deviceId: -1, sensorIndex: 0 };
-
-function sensorSubscribe(): Ret {
-  let ret: Ret = Ret.OK;
-  // Use try catch to capture possible exceptions.
-  try {
-    // Query all sensors.
-    const sensorList: sensor.Sensor[] = sensor.getSensorListSync();
-    if (!sensorList.length) {
-      return Ret.Failed;
-    }
-    // Obtain the target sensor based on the actual service logic.
-    const targetSensor = sensorList
-      // Filter all sensors with deviceId 1 and sensorId 2 as required. This example is for reference only. You need to adjust the filtering logic accordingly.
-      .filter((sensor: sensor.Sensor) => sensor.deviceId === 1 && sensor.sensorId === 2)
-      // Select the sensor with sensorIndex 0 among all sensors of the same type.
-      .find((sensor: sensor.Sensor) => sensor.sensorIndex === 0);
-    if (!targetSensor) {
-      return Ret.Failed;
-    }
-    sensorInfoParam.deviceId = targetSensor.deviceId;
-    sensorInfoParam.sensorIndex = targetSensor.sensorIndex;
-    // Subscribe to sensor events.
-    sensor.on(sensorType, sensorCallback, { sensorInfoParam });
-  } catch (error) {
-    let e: BusinessError = error as BusinessError;
-    console.error(`Failed to invoke sensor.on. Code: ${e.code}, message: ${e.message}`);
-    ret = Ret.Failed;
-  }
-  return ret;
-}
-
-function sensorUnsubscribe(): Ret {
-  let ret: Ret = Ret.OK;
-  // Use try catch to capture possible exceptions.
-  try {
-    sensor.off(sensorType, sensorInfoParam, sensorCallback);
-  } catch (error) {
-    let e: BusinessError = error as BusinessError;
-    console.error(`Failed to invoke sensor.off. Code: ${e.code}, message: ${e.message}`);
-    ret = Ret.Failed;
-  }
-  return ret;
-}
-```
+| [14500101](../errorcode-sensor.md#14500101-service-exception) | Service exception. Possible causes: 1. Sensor hdf service exception; &lt;br&gt; 2. Sensor service ipc exception;3. Sensor data channel exception. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
 
 
 ## off
@@ -2605,7 +1109,7 @@ function sensorUnsubscribe(): Ret {
 function off(type: SensorId.PROXIMITY, callback?: Callback<ProximityResponse>): void
 ```
 
-取消订阅接近光传感器数据。当不再需要接收接近光传感器数据时调用此接口取消订阅。off取消订阅必须与on订阅成对出现。
+Unsubscribes from data of the proximity sensor.
 
 **Since:** 9
 
@@ -2619,42 +1123,14 @@ function off(type: SensorId.PROXIMITY, callback?: Callback<ProximityResponse>): 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | SensorId.PROXIMITY | Yes | 传感器类型，该值固定为SensorId.PROXIMITY。 |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;ProximityResponse&gt; | No | 需要取消订阅的回调函数，若无此参数，则取消订阅当前类型的所有回调函数。 |
+| type | SensorId.PROXIMITY | Yes | Sensor type. The value is fixed at **SensorId.PROXIMITY**. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;ProximityResponse&gt; | No | Callback used for unsubscription. If this parameter is not specified, all callbacks of the specified sensor type are unsubscribed from. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt; 2. Incorrect parameter types; 3. Parameter verification failed. |
-
-## Examples
-
-```TypeScript
-import { sensor } from '@kit.SensorServiceKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-function callback1(data: object) {
-  console.info('Succeeded in getting callback1 data: ' + JSON.stringify(data));
-}
-
-function callback2(data: object) {
-  console.info('Succeeded in getting callback2 data: ' + JSON.stringify(data));
-}
-
-// Use try catch to capture possible exceptions.
-try {
-  sensor.on(sensor.SensorId.PROXIMITY, callback1);
-  sensor.on(sensor.SensorId.PROXIMITY, callback2);
-  // Unsubscribe from callback1.
-  sensor.off(sensor.SensorId.PROXIMITY, callback1);
-  // Unsubscribe from all callbacks of the SensorId.PROXIMITY type.
-  sensor.off(sensor.SensorId.PROXIMITY);
-} catch (error) {
-  let e: BusinessError = error as BusinessError;
-  console.error(`Failed to invoke off. Code: ${e.code}, message: ${e.message}`);
-}
-```
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt; 2. Incorrect parameter types; 3. Parameter verification failed. |
 
 
 ## off
@@ -2663,7 +1139,7 @@ try {
 function off(type: SensorId.PROXIMITY, sensorInfoParam?: SensorInfoParam, callback?: Callback<ProximityResponse>): void
 ```
 
-取消订阅接近光传感器数据。当不再需要接收接近光传感器数据时调用此接口取消订阅。off取消订阅必须与on订阅成对出现。
+Unsubscribes from data of the proximity sensor.
 
 **Since:** 19
 
@@ -2677,75 +1153,15 @@ function off(type: SensorId.PROXIMITY, sensorInfoParam?: SensorInfoParam, callba
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | SensorId.PROXIMITY | Yes | 传感器类型，该值固定为SensorId.PROXIMITY。 |
-| sensorInfoParam | [SensorInfoParam](arkts-sensorservice-sensor-sensorinfoparam-i.md) | No | 传感器传入设置参数，可指定deviceId和sensorIndex，用于取消指定设备上指定传感器的订阅。不传入时默认取消本地设备该类型所有传感器的订阅。 |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;ProximityResponse&gt; | No | 需要取消订阅的回调函数，若无此参数，则取消订阅当前类型的所有回调函数。 |
+| type | SensorId.PROXIMITY | Yes | Sensor type. The value is fixed at **SensorId.PROXIMITY**. |
+| sensorInfoParam | [SensorInfoParam](arkts-sensorservice-sensor-sensorinfoparam-i.md) | No | Sensor parameters, including **deviceId** and **sensorIndex**. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;ProximityResponse&gt; | No | Callback used for unsubscription. If this parameter is not specified, all callbacks of the specified sensor type are unsubscribed from. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 14500101 | Service exception. Possible causes: 1. Sensor hdf service exception; &lt;br&gt; 2. Sensor service ipc exception;3. Sensor data channel exception. |
-
-## Examples
-
-```TypeScript
-import { sensor } from '@kit.SensorServiceKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-enum Ret { OK, Failed = -1 }
-
-// Sensor callback
-const sensorCallback = (response: sensor.ProximityResponse) => {
-  console.info(`callback response: ${JSON.stringify(response)}`);
-}
-// Sensor type
-const sensorType = sensor.SensorId.PROXIMITY;
-const sensorInfoParam: sensor.SensorInfoParam = { deviceId: -1, sensorIndex: 0 };
-
-function sensorSubscribe(): Ret {
-  let ret: Ret = Ret.OK;
-  // Use try catch to capture possible exceptions.
-  try {
-    // Query all sensors.
-    const sensorList: sensor.Sensor[] = sensor.getSensorListSync();
-    if (!sensorList.length) {
-      return Ret.Failed;
-    }
-    // Obtain the target sensor based on the actual service logic.
-    const targetSensor = sensorList
-      // Filter all sensors with deviceId 1 and sensorId 2 as required. This example is for reference only. You need to adjust the filtering logic accordingly.
-      .filter((sensor: sensor.Sensor) => sensor.deviceId === 1 && sensor.sensorId === 2)
-      // Select the sensor with sensorIndex 0 among all sensors of the same type.
-      .find((sensor: sensor.Sensor) => sensor.sensorIndex === 0);
-    if (!targetSensor) {
-      return Ret.Failed;
-    }
-    sensorInfoParam.deviceId = targetSensor.deviceId;
-    sensorInfoParam.sensorIndex = targetSensor.sensorIndex;
-    // Subscribe to sensor events.
-    sensor.on(sensorType, sensorCallback, { sensorInfoParam });
-  } catch (error) {
-    let e: BusinessError = error as BusinessError;
-    console.error(`Failed to invoke sensor.on. Code: ${e.code}, message: ${e.message}`);
-    ret = Ret.Failed;
-  }
-  return ret;
-}
-
-function sensorUnsubscribe(): Ret {
-  let ret: Ret = Ret.OK;
-  // Use try catch to capture possible exceptions.
-  try {
-    sensor.off(sensorType, sensorInfoParam, sensorCallback);
-  } catch (error) {
-    let e: BusinessError = error as BusinessError;
-    console.error(`Failed to invoke sensor.off. Code: ${e.code}, message: ${e.message}`);
-    ret = Ret.Failed;
-  }
-  return ret;
-}
-```
+| [14500101](../errorcode-sensor.md#14500101-service-exception) | Service exception. Possible causes: 1. Sensor hdf service exception; &lt;br&gt; 2. Sensor service ipc exception;3. Sensor data channel exception. |
 
 
 ## off
@@ -2754,7 +1170,7 @@ function sensorUnsubscribe(): Ret {
 function off(type: SensorId.ROTATION_VECTOR, callback?: Callback<RotationVectorResponse>): void
 ```
 
-取消订阅旋转矢量传感器数据。当不再需要接收旋转矢量传感器数据时调用此接口取消订阅。off取消订阅必须与on订阅成对出现。
+Unsubscribes from data of the rotation vector sensor.
 
 **Since:** 9
 
@@ -2768,42 +1184,14 @@ function off(type: SensorId.ROTATION_VECTOR, callback?: Callback<RotationVectorR
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | SensorId.ROTATION_VECTOR | Yes | 传感器类型，该值固定为SensorId.ROTATION_VECTOR。 |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;RotationVectorResponse&gt; | No | 需要取消订阅的回调函数，若无此参数，则取消订阅当前类型的所有回调函数。 |
+| type | SensorId.ROTATION_VECTOR | Yes | Sensor type. The value is fixed at **SensorId.ROTATION_VECTOR**. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;RotationVectorResponse&gt; | No | Callback used for unsubscription. If this parameter is not specified, all callbacks of the specified sensor type are unsubscribed from. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt; 2. Incorrect parameter types; 3. Parameter verification failed. |
-
-## Examples
-
-```TypeScript
-import { sensor } from '@kit.SensorServiceKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-function callback1(data: object) {
-  console.info('Succeeded in getting callback1 data: ' + JSON.stringify(data));
-}
-
-function callback2(data: object) {
-  console.info('Succeeded in getting callback2 data: ' + JSON.stringify(data));
-}
-
-// Use try catch to capture possible exceptions.
-try {
-  sensor.on(sensor.SensorId.ROTATION_VECTOR, callback1);
-  sensor.on(sensor.SensorId.ROTATION_VECTOR, callback2);
-  // Unsubscribe from callback1.
-  sensor.off(sensor.SensorId.ROTATION_VECTOR, callback1);
-  // Unsubscribe from all callbacks of the SensorId.ROTATION_VECTOR type.
-  sensor.off(sensor.SensorId.ROTATION_VECTOR);
-} catch (error) {
-  let e: BusinessError = error as BusinessError;
-  console.error(`Failed to invoke off. Code: ${e.code}, message: ${e.message}`);
-}
-```
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt; 2. Incorrect parameter types; 3. Parameter verification failed. |
 
 
 ## off
@@ -2812,7 +1200,7 @@ try {
 function off(type: SensorId.ROTATION_VECTOR, sensorInfoParam?: SensorInfoParam, callback?: Callback<RotationVectorResponse>): void
 ```
 
-取消订阅旋转矢量传感器数据。当不再需要接收旋转矢量传感器数据时调用此接口取消订阅。off取消订阅必须与on订阅成对出现。
+Unsubscribes from data of the rotation vector sensor.
 
 **Since:** 19
 
@@ -2826,75 +1214,15 @@ function off(type: SensorId.ROTATION_VECTOR, sensorInfoParam?: SensorInfoParam, 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | SensorId.ROTATION_VECTOR | Yes | 传感器类型，该值固定为SensorId.ROTATION_VECTOR。 |
-| sensorInfoParam | [SensorInfoParam](arkts-sensorservice-sensor-sensorinfoparam-i.md) | No | 传感器传入设置参数，可指定deviceId和sensorIndex，用于取消指定设备上指定传感器的订阅。不传入时默认取消本地设备该类型所有传感器的订阅。 |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;RotationVectorResponse&gt; | No | 需要取消订阅的回调函数，若无此参数，则取消订阅当前类型的所有回调函数。 |
+| type | SensorId.ROTATION_VECTOR | Yes | Sensor type. The value is fixed at **SensorId.ROTATION_VECTOR**. |
+| sensorInfoParam | [SensorInfoParam](arkts-sensorservice-sensor-sensorinfoparam-i.md) | No | Sensor parameters, including **deviceId** and **sensorIndex**. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;RotationVectorResponse&gt; | No | Callback used for unsubscription. If this parameter is not specified, all callbacks of the specified sensor type are unsubscribed from. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 14500101 | Service exception. Possible causes: 1. Sensor hdf service exception; &lt;br&gt; 2. Sensor service ipc exception;3. Sensor data channel exception. |
-
-## Examples
-
-```TypeScript
-import { sensor } from '@kit.SensorServiceKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-enum Ret { OK, Failed = -1 }
-
-// Sensor callback
-const sensorCallback = (response: sensor.RotationVectorResponse) => {
-  console.info(`callback response: ${JSON.stringify(response)}`);
-}
-// Sensor type
-const sensorType = sensor.SensorId.ROTATION_VECTOR;
-const sensorInfoParam: sensor.SensorInfoParam = { deviceId: -1, sensorIndex: 0 };
-
-function sensorSubscribe(): Ret {
-  let ret: Ret = Ret.OK;
-  // Use try catch to capture possible exceptions.
-  try {
-    // Query all sensors.
-    const sensorList: sensor.Sensor[] = sensor.getSensorListSync();
-    if (!sensorList.length) {
-      return Ret.Failed;
-    }
-    // Obtain the target sensor based on the actual service logic.
-    const targetSensor = sensorList
-      // Filter all sensors with deviceId 1 and sensorId 2 as required. This example is for reference only. You need to adjust the filtering logic accordingly.
-      .filter((sensor: sensor.Sensor) => sensor.deviceId === 1 && sensor.sensorId === 2)
-      // Select the sensor with sensorIndex 0 among all sensors of the same type.
-      .find((sensor: sensor.Sensor) => sensor.sensorIndex === 0);
-    if (!targetSensor) {
-      return Ret.Failed;
-    }
-    sensorInfoParam.deviceId = targetSensor.deviceId;
-    sensorInfoParam.sensorIndex = targetSensor.sensorIndex;
-    // Subscribe to sensor events.
-    sensor.on(sensorType, sensorCallback, { sensorInfoParam });
-  } catch (error) {
-    let e: BusinessError = error as BusinessError;
-    console.error(`Failed to invoke sensor.on. Code: ${e.code}, message: ${e.message}`);
-    ret = Ret.Failed;
-  }
-  return ret;
-}
-
-function sensorUnsubscribe(): Ret {
-  let ret: Ret = Ret.OK;
-  // Use try catch to capture possible exceptions.
-  try {
-    sensor.off(sensorType, sensorInfoParam, sensorCallback);
-  } catch (error) {
-    let e: BusinessError = error as BusinessError;
-    console.error(`Failed to invoke sensor.off. Code: ${e.code}, message: ${e.message}`);
-    ret = Ret.Failed;
-  }
-  return ret;
-}
-```
+| [14500101](../errorcode-sensor.md#14500101-service-exception) | Service exception. Possible causes: 1. Sensor hdf service exception; &lt;br&gt; 2. Sensor service ipc exception;3. Sensor data channel exception. |
 
 
 ## off
@@ -2903,7 +1231,7 @@ function sensorUnsubscribe(): Ret {
 function off(type: SensorId.SIGNIFICANT_MOTION, callback?: Callback<SignificantMotionResponse>): void
 ```
 
-取消订阅有效运动传感器数据。当不再需要接收有效运动传感器数据时调用此接口取消订阅。off取消订阅必须与on订阅成对出现。
+Unsubscribes from valid motion sensor data.
 
 **Since:** 9
 
@@ -2917,42 +1245,14 @@ function off(type: SensorId.SIGNIFICANT_MOTION, callback?: Callback<SignificantM
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | SensorId.SIGNIFICANT_MOTION | Yes | 传感器类型，该值固定为SensorId.SIGNIFICANT_MOTION。 |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;SignificantMotionResponse&gt; | No | 需要取消订阅的回调函数，若无此参数，则取消订阅当前类型的所有回调函数。 |
+| type | SensorId.SIGNIFICANT_MOTION | Yes | Sensor type. The value is fixed at **SensorId.SIGNIFICANT_MOTION**. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;SignificantMotionResponse&gt; | No | Callback used for unsubscription. If this parameter is not specified, all callbacks of the specified sensor type are unsubscribed from. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt; 2. Incorrect parameter types; 3. Parameter verification failed. |
-
-## Examples
-
-```TypeScript
-import { sensor } from '@kit.SensorServiceKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-function callback1(data: object) {
-  console.info('Succeeded in getting callback1 data: ' + JSON.stringify(data));
-}
-
-function callback2(data: object) {
-  console.info('Succeeded in getting callback2 data: ' + JSON.stringify(data));
-}
-
-// Use try catch to capture possible exceptions.
-try {
-  sensor.on(sensor.SensorId.SIGNIFICANT_MOTION, callback1);
-  sensor.on(sensor.SensorId.SIGNIFICANT_MOTION, callback2);
-  // Unsubscribe from callback1.
-  sensor.off(sensor.SensorId.SIGNIFICANT_MOTION, callback1);
-  // Unsubscribe from all callbacks of the SensorId.SIGNIFICANT_MOTION type.
-  sensor.off(sensor.SensorId.SIGNIFICANT_MOTION);
-} catch (error) {
-  let e: BusinessError = error as BusinessError;
-  console.error(`Failed to invoke off. Code: ${e.code}, message: ${e.message}`);
-}
-```
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt; 2. Incorrect parameter types; 3. Parameter verification failed. |
 
 
 ## off
@@ -2961,7 +1261,7 @@ try {
 function off(type: SensorId.SIGNIFICANT_MOTION, sensorInfoParam?: SensorInfoParam, callback?: Callback<SignificantMotionResponse>): void
 ```
 
-取消订阅有效运动传感器数据。当不再需要接收有效运动传感器数据时调用此接口取消订阅。off取消订阅必须与on订阅成对出现。
+Unsubscribes from valid motion sensor data.
 
 **Since:** 19
 
@@ -2975,75 +1275,15 @@ function off(type: SensorId.SIGNIFICANT_MOTION, sensorInfoParam?: SensorInfoPara
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | SensorId.SIGNIFICANT_MOTION | Yes | 传感器类型，该值固定为SensorId.SIGNIFICANT_MOTION。 |
-| sensorInfoParam | [SensorInfoParam](arkts-sensorservice-sensor-sensorinfoparam-i.md) | No | 传感器传入设置参数，可指定deviceId和sensorIndex，用于取消指定设备上指定传感器的订阅。不传入时默认取消本地设备该类型所有传感器的订阅。 |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;SignificantMotionResponse&gt; | No | 需要取消订阅的回调函数，若无此参数，则取消订阅当前类型的所有回调函数。 |
+| type | SensorId.SIGNIFICANT_MOTION | Yes | Sensor type. The value is fixed at **SensorId.SIGNIFICANT_MOTION**. |
+| sensorInfoParam | [SensorInfoParam](arkts-sensorservice-sensor-sensorinfoparam-i.md) | No | Sensor parameters, including **deviceId** and **sensorIndex**. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;SignificantMotionResponse&gt; | No | Callback used for unsubscription. If this parameter is not specified, all callbacks of the specified sensor type are unsubscribed from. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 14500101 | Service exception. Possible causes: 1. Sensor hdf service exception; &lt;br&gt; 2. Sensor service ipc exception;3. Sensor data channel exception. |
-
-## Examples
-
-```TypeScript
-import { sensor } from '@kit.SensorServiceKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-enum Ret { OK, Failed = -1 }
-
-// Sensor callback
-const sensorCallback = (response: sensor.SignificantMotionResponse) => {
-  console.info(`callback response: ${JSON.stringify(response)}`);
-}
-// Sensor type
-const sensorType = sensor.SensorId.SIGNIFICANT_MOTION;
-const sensorInfoParam: sensor.SensorInfoParam = { deviceId: -1, sensorIndex: 0 };
-
-function sensorSubscribe(): Ret {
-  let ret: Ret = Ret.OK;
-  // Use try catch to capture possible exceptions.
-  try {
-    // Query all sensors.
-    const sensorList: sensor.Sensor[] = sensor.getSensorListSync();
-    if (!sensorList.length) {
-      return Ret.Failed;
-    }
-    // Obtain the target sensor based on the actual service logic.
-    const targetSensor = sensorList
-      // Filter all sensors with deviceId 1 and sensorId 2 as required. This example is for reference only. You need to adjust the filtering logic accordingly.
-      .filter((sensor: sensor.Sensor) => sensor.deviceId === 1 && sensor.sensorId === 2)
-      // Select the sensor with sensorIndex 0 among all sensors of the same type.
-      .find((sensor: sensor.Sensor) => sensor.sensorIndex === 0);
-    if (!targetSensor) {
-      return Ret.Failed;
-    }
-    sensorInfoParam.deviceId = targetSensor.deviceId;
-    sensorInfoParam.sensorIndex = targetSensor.sensorIndex;
-    // Subscribe to sensor events.
-    sensor.on(sensorType, sensorCallback, { sensorInfoParam });
-  } catch (error) {
-    let e: BusinessError = error as BusinessError;
-    console.error(`Failed to invoke sensor.on. Code: ${e.code}, message: ${e.message}`);
-    ret = Ret.Failed;
-  }
-  return ret;
-}
-
-function sensorUnsubscribe(): Ret {
-  let ret: Ret = Ret.OK;
-  // Use try catch to capture possible exceptions.
-  try {
-    sensor.off(sensorType, sensorInfoParam, sensorCallback);
-  } catch (error) {
-    let e: BusinessError = error as BusinessError;
-    console.error(`Failed to invoke sensor.off. Code: ${e.code}, message: ${e.message}`);
-    ret = Ret.Failed;
-  }
-  return ret;
-}
-```
+| [14500101](../errorcode-sensor.md#14500101-service-exception) | Service exception. Possible causes: 1. Sensor hdf service exception; &lt;br&gt; 2. Sensor service ipc exception;3. Sensor data channel exception. |
 
 
 ## off
@@ -3052,7 +1292,7 @@ function sensorUnsubscribe(): Ret {
 function off(type: SensorId.WEAR_DETECTION, callback?: Callback<WearDetectionResponse>): void
 ```
 
-取消订阅佩戴检测传感器数据。当不再需要接收佩戴检测传感器数据时调用此接口取消订阅。off取消订阅必须与on订阅成对出现。
+Unsubscribes from data of the wear detection sensor.
 
 **Since:** 9
 
@@ -3066,42 +1306,14 @@ function off(type: SensorId.WEAR_DETECTION, callback?: Callback<WearDetectionRes
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | SensorId.WEAR_DETECTION | Yes | 传感器类型，该值固定为SensorId.WEAR_DETECTION。 |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;WearDetectionResponse&gt; | No | 需要取消订阅的回调函数，若无此参数，则取消订阅当前类型的所有回调函数。 |
+| type | SensorId.WEAR_DETECTION | Yes | Sensor type. The value is fixed at **SensorId.WEAR_DETECTION**. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;WearDetectionResponse&gt; | No | Callback used for unsubscription. If this parameter is not specified, all callbacks of the specified sensor type are unsubscribed from. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt; 2. Incorrect parameter types; 3. Parameter verification failed. |
-
-## Examples
-
-```TypeScript
-import { sensor } from '@kit.SensorServiceKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-function callback1(data: object) {
-  console.info('Succeeded in getting callback1 data: ' + JSON.stringify(data));
-}
-
-function callback2(data: object) {
-  console.info('Succeeded in getting callback2 data: ' + JSON.stringify(data));
-}
-
-// Use try catch to capture possible exceptions.
-try {
-  sensor.on(sensor.SensorId.WEAR_DETECTION, callback1);
-  sensor.on(sensor.SensorId.WEAR_DETECTION, callback2);
-  // Unsubscribe from callback1.
-  sensor.off(sensor.SensorId.WEAR_DETECTION, callback1);
-  // Unsubscribe from all callbacks of the SensorId.WEAR_DETECTION type.
-  sensor.off(sensor.SensorId.WEAR_DETECTION);
-} catch (error) {
-  let e: BusinessError = error as BusinessError;
-  console.error(`Failed to invoke off. Code: ${e.code}, message: ${e.message}`);
-}
-```
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt; 2. Incorrect parameter types; 3. Parameter verification failed. |
 
 
 ## off
@@ -3110,7 +1322,7 @@ try {
 function off(type: SensorId.FUSION_PRESSURE, sensorInfoParam?: SensorInfoParam, callback?: Callback<FusionPressureResponse>): void
 ```
 
-取消订阅融合压力传感器数据。当不再需要接收融合压力传感器数据时调用此接口取消订阅。off取消订阅必须与on订阅成对出现。
+Unsubscribes from the fused pressure sensor data.
 
 **Since:** 22
 
@@ -3124,76 +1336,16 @@ function off(type: SensorId.FUSION_PRESSURE, sensorInfoParam?: SensorInfoParam, 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | SensorId.FUSION_PRESSURE | Yes | 传感器类型，该值固定为SensorId.FUSION_PRESSURE。 |
-| sensorInfoParam | [SensorInfoParam](arkts-sensorservice-sensor-sensorinfoparam-i.md) | No | 传感器传入设置参数，可指定deviceId和sensorIndex，用于取消指定设备上指定传感器的订阅。不传入时默认取消本地设备该类型所有传感器的订阅。 |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;FusionPressureResponse&gt; | No | 取消订阅的回调函数，若无此参数，则取消订阅当前类型的所有回调函数。 |
+| type | SensorId.FUSION_PRESSURE | Yes | Sensor type. The value is fixed at SensorId.FUSION_PRESSURE. |
+| sensorInfoParam | [SensorInfoParam](arkts-sensorservice-sensor-sensorinfoparam-i.md) | No | Sensor parameters, including **deviceId** and **sensorIndex**. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;FusionPressureResponse&gt; | No | Callback used for unsubscription. If this parameter is not specified, all callbacks of the specified sensor type are unsubscribed from. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt; 2. Incorrect parameter types; 3. Parameter verification failed. |
-| 14500101 | Service exception. Possible causes: 1. Sensor hdf service exception; &lt;br&gt; 2. Sensor service ipc exception;3. Sensor data channel exception. |
-
-## Examples
-
-```TypeScript
-import { sensor } from '@kit.SensorServiceKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-enum Ret { OK, Failed = -1 }
-
-// Sensor callback
-const sensorCallback = (response: sensor.FusionPressureResponse) => {
-  console.info(`callback response: ${JSON.stringify(response)}`);
-}
-// Sensor type
-const sensorType = sensor.SensorId.FUSION_PRESSURE;
-const sensorInfoParam: sensor.SensorInfoParam = { deviceId: -1, sensorIndex: 0 };
-
-function sensorSubscribe(): Ret {
-  let ret: Ret = Ret.OK;
-  // Use try catch to capture possible exceptions.
-  try {
-    // Query all sensors.
-    const sensorList: sensor.Sensor[] = sensor.getSensorListSync();
-    if (!sensorList.length) {
-      return Ret.Failed;
-    }
-    // Obtain the target sensor based on the actual service logic.
-    const targetSensor = sensorList
-      // Filter all sensors with deviceId 1 and sensorId 2 as required. This example is for reference only. You need to adjust the filtering logic accordingly.
-      .filter((sensor: sensor.Sensor) => sensor.deviceId === 1 && sensor.sensorId === 2)
-      // Select the sensor with sensorIndex 0 among all sensors of the same type.
-      .find((sensor: sensor.Sensor) => sensor.sensorIndex === 0);
-    if (!targetSensor) {
-      return Ret.Failed;
-    }
-    sensorInfoParam.deviceId = targetSensor.deviceId;
-    sensorInfoParam.sensorIndex = targetSensor.sensorIndex;
-    // Subscribe to sensor events.
-    sensor.on(sensorType, sensorCallback, { sensorInfoParam });
-  } catch (error) {
-    let e: BusinessError = error as BusinessError;
-    console.error(`Failed to invoke sensor.on. Code: ${e.code}, message: ${e.message}`);
-    ret = Ret.Failed;
-  }
-  return ret;
-}
-
-function sensorUnsubscribe(): Ret {
-  let ret: Ret = Ret.OK;
-  // Use try catch to capture possible exceptions.
-  try {
-    sensor.off(sensorType, sensorInfoParam, sensorCallback);
-  } catch (error) {
-    let e: BusinessError = error as BusinessError;
-    console.error(`Failed to invoke sensor.off. Code: ${e.code}, message: ${e.message}`);
-    ret = Ret.Failed;
-  }
-  return ret;
-}
-```
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| [14500101](../errorcode-sensor.md#14500101-service-exception) | Service exception. Possible causes: 1. Sensor hdf service exception; &lt;br&gt; 2. Sensor service ipc exception;3. Sensor data channel exception. |
 
 
 ## off
@@ -3202,7 +1354,7 @@ function sensorUnsubscribe(): Ret {
 function off(type: SensorId.WEAR_DETECTION, sensorInfoParam?: SensorInfoParam, callback?: Callback<WearDetectionResponse>): void
 ```
 
-取消订阅佩戴检测传感器数据。当不再需要接收佩戴检测传感器数据时调用此接口取消订阅。off取消订阅必须与on订阅成对出现。
+Unsubscribes from data of the wear detection sensor.
 
 **Since:** 19
 
@@ -3216,75 +1368,15 @@ function off(type: SensorId.WEAR_DETECTION, sensorInfoParam?: SensorInfoParam, c
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | SensorId.WEAR_DETECTION | Yes | 传感器类型，该值固定为SensorId.WEAR_DETECTION。 |
-| sensorInfoParam | [SensorInfoParam](arkts-sensorservice-sensor-sensorinfoparam-i.md) | No | 传感器传入设置参数，可指定deviceId和sensorIndex，用于取消指定设备上指定传感器的订阅。不传入时默认取消本地设备该类型所有传感器的订阅。 |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;WearDetectionResponse&gt; | No | 需要取消订阅的回调函数，若无此参数，则取消订阅当前类型的所有回调函数。 |
+| type | SensorId.WEAR_DETECTION | Yes | Sensor type. The value is fixed at **SensorId.WEAR_DETECTION**. |
+| sensorInfoParam | [SensorInfoParam](arkts-sensorservice-sensor-sensorinfoparam-i.md) | No | Sensor parameters, including **deviceId** and **sensorIndex**. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;WearDetectionResponse&gt; | No | Callback used for unsubscription. If this parameter is not specified, all callbacks of the specified sensor type are unsubscribed from. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 14500101 | Service exception. Possible causes: 1. Sensor hdf service exception; &lt;br&gt; 2. Sensor service ipc exception;3. Sensor data channel exception. |
-
-## Examples
-
-```TypeScript
-import { sensor } from '@kit.SensorServiceKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-enum Ret { OK, Failed = -1 }
-
-// Sensor callback
-const sensorCallback = (response: sensor.WearDetectionResponse) => {
-  console.info(`callback response: ${JSON.stringify(response)}`);
-}
-// Sensor type
-const sensorType = sensor.SensorId.WEAR_DETECTION;
-const sensorInfoParam: sensor.SensorInfoParam = { deviceId: -1, sensorIndex: 0 };
-
-function sensorSubscribe(): Ret {
-  let ret: Ret = Ret.OK;
-  // Use try catch to capture possible exceptions.
-  try {
-    // Query all sensors.
-    const sensorList: sensor.Sensor[] = sensor.getSensorListSync();
-    if (!sensorList.length) {
-      return Ret.Failed;
-    }
-    // Obtain the target sensor based on the actual service logic.
-    const targetSensor = sensorList
-      // Filter all sensors with deviceId 1 and sensorId 2 as required. This example is for reference only. You need to adjust the filtering logic accordingly.
-      .filter((sensor: sensor.Sensor) => sensor.deviceId === 1 && sensor.sensorId === 2)
-      // Select the sensor with sensorIndex 0 among all sensors of the same type.
-      .find((sensor: sensor.Sensor) => sensor.sensorIndex === 0);
-    if (!targetSensor) {
-      return Ret.Failed;
-    }
-    sensorInfoParam.deviceId = targetSensor.deviceId;
-    sensorInfoParam.sensorIndex = targetSensor.sensorIndex;
-    // Subscribe to sensor events.
-    sensor.on(sensorType, sensorCallback, { sensorInfoParam });
-  } catch (error) {
-    let e: BusinessError = error as BusinessError;
-    console.error(`Failed to invoke sensor.on. Code: ${e.code}, message: ${e.message}`);
-    ret = Ret.Failed;
-  }
-  return ret;
-}
-
-function sensorUnsubscribe(): Ret {
-  let ret: Ret = Ret.OK;
-  // Use try catch to capture possible exceptions.
-  try {
-    sensor.off(sensorType, sensorInfoParam, sensorCallback);
-  } catch (error) {
-    let e: BusinessError = error as BusinessError;
-    console.error(`Failed to invoke sensor.off. Code: ${e.code}, message: ${e.message}`);
-    ret = Ret.Failed;
-  }
-  return ret;
-}
-```
+| [14500101](../errorcode-sensor.md#14500101-service-exception) | Service exception. Possible causes: 1. Sensor hdf service exception; &lt;br&gt; 2. Sensor service ipc exception;3. Sensor data channel exception. |
 
 
 ## off
@@ -3293,7 +1385,7 @@ function sensorUnsubscribe(): Ret {
 function off(type: SensorType.SENSOR_TYPE_ID_ACCELEROMETER, callback?: Callback<AccelerometerResponse>): void
 ```
 
-取消订阅加速度传感器数据。off取消订阅必须与on订阅成对出现。
+Unsubscribes from sensor data changes.
 
 **Since:** 8
 
@@ -3313,22 +1405,8 @@ function off(type: SensorType.SENSOR_TYPE_ID_ACCELEROMETER, callback?: Callback<
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | SensorType.SENSOR_TYPE_ID_ACCELEROMETER | Yes | 要取消订阅的加速度传感器类型为SENSOR_TYPE_ID_ACCELEROMETER。 |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;AccelerometerResponse&gt; | No | 需要取消订阅的回调函数，若无此参数，则取消订阅当前类型的所有回调函数。 |
-
-## Examples
-
-```TypeScript
-import { sensor } from '@kit.SensorServiceKit';
-
-function callback(data: sensor.AccelerometerResponse) {
-  console.info('Succeeded in invoking off. X-coordinate component: ' + data.x);
-  console.info('Succeeded in invoking off. Y-coordinate component: ' + data.y);
-  console.info('Succeeded in invoking off. Z-coordinate component: ' + data.z);
-}
-
-sensor.off(sensor.SensorType.SENSOR_TYPE_ID_ACCELEROMETER, callback);
-```
+| type | SensorType.SENSOR_TYPE_ID_ACCELEROMETER | Yes | Type of the sensor to unsubscribe from, which is **SENSOR_TYPE_ID_ACCELEROMETER**. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;AccelerometerResponse&gt; | No | Callback used for unsubscription. If this parameter is not specified, all callbacks of the specified sensor type are unsubscribed from. |
 
 
 ## off
@@ -3338,7 +1416,7 @@ function off(type: SensorType.SENSOR_TYPE_ID_ACCELEROMETER_UNCALIBRATED,
     callback?: Callback<AccelerometerUncalibratedResponse>): void
 ```
 
-取消订阅未校准加速度传感器数据。off取消订阅必须与on订阅成对出现。
+Unsubscribes from sensor data changes.
 
 **Since:** 8
 
@@ -3358,25 +1436,8 @@ function off(type: SensorType.SENSOR_TYPE_ID_ACCELEROMETER_UNCALIBRATED,
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | SensorType.SENSOR_TYPE_ID_ACCELEROMETER_UNCALIBRATED | Yes | 要取消订阅的未校准加速度计传感器类型为SENSOR_TYPE_ID_ACCELEROMETER_UNCALIBRATED。 |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;AccelerometerUncalibratedResponse&gt; | No | 需要取消订阅的回调函数，若无此参数，则取消订阅当前类型的所有回调函数。 |
-
-## Examples
-
-```TypeScript
-import { sensor } from '@kit.SensorServiceKit';
-
-function callback(data: sensor.AccelerometerUncalibratedResponse) {
-  console.info('Succeeded in invoking off. X-coordinate component: ' + data.x);
-  console.info('Succeeded in invoking off. Y-coordinate component: ' + data.y);
-  console.info('Succeeded in invoking off. Z-coordinate component: ' + data.z);
-  console.info('Succeeded in invoking off. X-coordinate bias: ' + data.biasX);
-  console.info('Succeeded in invoking off. Y-coordinate bias: ' + data.biasY);
-  console.info('Succeeded in invoking off. Z-coordinate bias: ' + data.biasZ);
-}
-
-sensor.off(sensor.SensorType.SENSOR_TYPE_ID_ACCELEROMETER_UNCALIBRATED, callback);
-```
+| type | SensorType.SENSOR_TYPE_ID_ACCELEROMETER_UNCALIBRATED | Yes | Type of the sensor to unsubscribe from, which is **SENSOR_TYPE_ID_ACCELEROMETER_UNCALIBRATED**. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;AccelerometerUncalibratedResponse&gt; | No | Callback used for unsubscription. If this parameter is not specified, all callbacks of the specified sensor type are unsubscribed from. |
 
 
 ## off
@@ -3385,7 +1446,7 @@ sensor.off(sensor.SensorType.SENSOR_TYPE_ID_ACCELEROMETER_UNCALIBRATED, callback
 function off(type: SensorType.SENSOR_TYPE_ID_AMBIENT_LIGHT, callback?: Callback<LightResponse>): void
 ```
 
-取消订阅环境光传感器数据。off取消订阅必须与on订阅成对出现。
+Unsubscribes from sensor data changes.
 
 **Since:** 8
 
@@ -3403,20 +1464,8 @@ function off(type: SensorType.SENSOR_TYPE_ID_AMBIENT_LIGHT, callback?: Callback<
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | SensorType.SENSOR_TYPE_ID_AMBIENT_LIGHT | Yes | 要取消订阅的环境光传感器类型为SENSOR_TYPE_ID_AMBIENT_LIGHT。 |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;LightResponse&gt; | No | 需要取消订阅的回调函数，若无此参数，则取消订阅当前类型的所有回调函数。 |
-
-## Examples
-
-```TypeScript
-import { sensor } from '@kit.SensorServiceKit';
-
-function callback(data: sensor.LightResponse) {
-  console.info('Succeeded in invoking off. Illumination: ' + data.intensity);
-}
-
-sensor.off(sensor.SensorType.SENSOR_TYPE_ID_AMBIENT_LIGHT, callback);
-```
+| type | SensorType.SENSOR_TYPE_ID_AMBIENT_LIGHT | Yes | Type of the sensor to unsubscribe from, which is **SENSOR_TYPE_ID_AMBIENT_LIGHT**. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;LightResponse&gt; | No | Callback used for unsubscription. If this parameter is not specified, all callbacks of the specified sensor type are unsubscribed from. |
 
 
 ## off
@@ -3425,7 +1474,7 @@ sensor.off(sensor.SensorType.SENSOR_TYPE_ID_AMBIENT_LIGHT, callback);
 function off(type: SensorType.SENSOR_TYPE_ID_AMBIENT_TEMPERATURE, callback?: Callback<AmbientTemperatureResponse>): void
 ```
 
-取消订阅环境温度传感器数据。off取消订阅必须与on订阅成对出现。
+Unsubscribes from sensor data changes.
 
 **Since:** 8
 
@@ -3443,20 +1492,8 @@ function off(type: SensorType.SENSOR_TYPE_ID_AMBIENT_TEMPERATURE, callback?: Cal
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | SensorType.SENSOR_TYPE_ID_AMBIENT_TEMPERATURE | Yes | 要取消订阅的环境温度传感器类型为SENSOR_TYPE_ID_AMBIENT_TEMPERATURE。 |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;AmbientTemperatureResponse&gt; | No | 需要取消订阅的回调函数，若无此参数，则取消订阅当前类型的所有回调函数。 |
-
-## Examples
-
-```TypeScript
-import { sensor } from '@kit.SensorServiceKit';
-
-function callback(data: sensor.AmbientTemperatureResponse) {
-  console.info('Succeeded in invoking off. Temperature: ' + data.temperature);
-}
-
-sensor.off(sensor.SensorType.SENSOR_TYPE_ID_AMBIENT_TEMPERATURE, callback);
-```
+| type | SensorType.SENSOR_TYPE_ID_AMBIENT_TEMPERATURE | Yes | Type of the sensor to unsubscribe from, which is **SENSOR_TYPE_ID_AMBIENT_TEMPERATURE**. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;AmbientTemperatureResponse&gt; | No | Callback used for unsubscription. If this parameter is not specified, all callbacks of the specified sensor type are unsubscribed from. |
 
 
 ## off
@@ -3465,7 +1502,7 @@ sensor.off(sensor.SensorType.SENSOR_TYPE_ID_AMBIENT_TEMPERATURE, callback);
 function off(type: SensorType.SENSOR_TYPE_ID_BAROMETER, callback?: Callback<BarometerResponse>): void
 ```
 
-取消订阅气压计传感器数据。off取消订阅必须与on订阅成对出现。
+Unsubscribes from sensor data changes.
 
 **Since:** 8
 
@@ -3483,20 +1520,8 @@ function off(type: SensorType.SENSOR_TYPE_ID_BAROMETER, callback?: Callback<Baro
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | SensorType.SENSOR_TYPE_ID_BAROMETER | Yes | 要取消订阅的气压计传感器类型为SENSOR_TYPE_ID_BAROMETER。 |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;BarometerResponse&gt; | No | 需要取消订阅的回调函数，若无此参数，则取消订阅当前类型的所有回调函数。 |
-
-## Examples
-
-```TypeScript
-import { sensor } from '@kit.SensorServiceKit';
-
-function callback(data: sensor.BarometerResponse) {
-  console.info('Succeeded in invoking off. Atmospheric pressure: ' + data.pressure);
-}
-
-sensor.off(sensor.SensorType.SENSOR_TYPE_ID_BAROMETER, callback);
-```
+| type | SensorType.SENSOR_TYPE_ID_BAROMETER | Yes | Type of the sensor to unsubscribe from, which is **SENSOR_TYPE_ID_BAROMETER**. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;BarometerResponse&gt; | No | Callback used for unsubscription. If this parameter is not specified, all callbacks of the specified sensor type are unsubscribed from. |
 
 
 ## off
@@ -3505,7 +1530,7 @@ sensor.off(sensor.SensorType.SENSOR_TYPE_ID_BAROMETER, callback);
 function off(type: SensorType.SENSOR_TYPE_ID_GRAVITY, callback?: Callback<GravityResponse>): void
 ```
 
-取消订阅重力传感器数据。off取消订阅必须与on订阅成对出现。
+Unsubscribes from sensor data changes.
 
 **Since:** 8
 
@@ -3523,22 +1548,8 @@ function off(type: SensorType.SENSOR_TYPE_ID_GRAVITY, callback?: Callback<Gravit
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | SensorType.SENSOR_TYPE_ID_GRAVITY | Yes | 要取消订阅的重力传感器类型为SENSOR_TYPE_ID_GRAVITY。 |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;GravityResponse&gt; | No | 需要取消订阅的回调函数，若无此参数，则取消订阅当前类型的所有回调函数。 |
-
-## Examples
-
-```TypeScript
-import { sensor } from '@kit.SensorServiceKit';
-
-function callback(data: sensor.GravityResponse) {
-  console.info('Succeeded in invoking off. X-coordinate component: ' + data.x);
-  console.info('Succeeded in invoking off. Y-coordinate component: ' + data.y);
-  console.info('Succeeded in invoking off. Z-coordinate component: ' + data.z);
-}
-
-sensor.off(sensor.SensorType.SENSOR_TYPE_ID_GRAVITY, callback);
-```
+| type | SensorType.SENSOR_TYPE_ID_GRAVITY | Yes | Type of the sensor to unsubscribe from, which is **SENSOR_TYPE_ID_GRAVITY**. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;GravityResponse&gt; | No | Callback used for unsubscription. If this parameter is not specified, all callbacks of the specified sensor type are unsubscribed from. |
 
 
 ## off
@@ -3547,7 +1558,7 @@ sensor.off(sensor.SensorType.SENSOR_TYPE_ID_GRAVITY, callback);
 function off(type: SensorType.SENSOR_TYPE_ID_GYROSCOPE, callback?: Callback<GyroscopeResponse>): void
 ```
 
-取消订阅陀螺仪传感器数据。off取消订阅必须与on订阅成对出现。
+Unsubscribes from sensor data changes.
 
 **Since:** 8
 
@@ -3567,22 +1578,8 @@ function off(type: SensorType.SENSOR_TYPE_ID_GYROSCOPE, callback?: Callback<Gyro
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | SensorType.SENSOR_TYPE_ID_GYROSCOPE | Yes | 要取消订阅的陀螺仪传感器类型为SENSOR_TYPE_ID_GYROSCOPE。 |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;GyroscopeResponse&gt; | No | 需要取消订阅的回调函数，若无此参数，则取消订阅当前类型的所有回调函数。 |
-
-## Examples
-
-```TypeScript
-import { sensor } from '@kit.SensorServiceKit';
-
-function callback(data: sensor.GyroscopeResponse) {
-  console.info('Succeeded in invoking off. X-coordinate component: ' + data.x);
-  console.info('Succeeded in invoking off. Y-coordinate component: ' + data.y);
-  console.info('Succeeded in invoking off. Z-coordinate component: ' + data.z);
-}
-
-sensor.off(sensor.SensorType.SENSOR_TYPE_ID_GYROSCOPE, callback);
-```
+| type | SensorType.SENSOR_TYPE_ID_GYROSCOPE | Yes | Type of the sensor to unsubscribe from, which is **SENSOR_TYPE_ID_GYROSCOPE**. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;GyroscopeResponse&gt; | No | Callback used for unsubscription. If this parameter is not specified, all callbacks of the specified sensor type are unsubscribed from. |
 
 
 ## off
@@ -3591,7 +1588,7 @@ sensor.off(sensor.SensorType.SENSOR_TYPE_ID_GYROSCOPE, callback);
 function off(type: SensorType.SENSOR_TYPE_ID_GYROSCOPE_UNCALIBRATED, callback?: Callback<GyroscopeUncalibratedResponse>): void
 ```
 
-取消订阅未校准陀螺仪传感器数据。off取消订阅必须与on订阅成对出现。
+Unsubscribes from sensor data changes.
 
 **Since:** 8
 
@@ -3611,22 +1608,8 @@ function off(type: SensorType.SENSOR_TYPE_ID_GYROSCOPE_UNCALIBRATED, callback?: 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | SensorType.SENSOR_TYPE_ID_GYROSCOPE_UNCALIBRATED | Yes | 要取消订阅的未校准陀螺仪传感器类型为SENSOR_TYPE_ID_GYROSCOPE_UNCALIBRATED。 |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;GyroscopeUncalibratedResponse&gt; | No | 需要取消订阅的回调函数，若无此参数，则取消订阅当前类型的所有回调函数。 |
-
-## Examples
-
-```TypeScript
-import { sensor } from '@kit.SensorServiceKit';
-
-function callback(data: sensor.GyroscopeUncalibratedResponse) {
-  console.info('Succeeded in invoking off. X-coordinate component: ' + data.x);
-  console.info('Succeeded in invoking off. Y-coordinate component: ' + data.y);
-  console.info('Succeeded in invoking off. Z-coordinate component: ' + data.z);
-}
-
-sensor.off(sensor.SensorType.SENSOR_TYPE_ID_GYROSCOPE_UNCALIBRATED, callback);
-```
+| type | SensorType.SENSOR_TYPE_ID_GYROSCOPE_UNCALIBRATED | Yes | Type of the sensor to unsubscribe from, which is **SENSOR_TYPE_ID_GYROSCOPE_UNCALIBRATED**. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;GyroscopeUncalibratedResponse&gt; | No | Callback used for unsubscription. If this parameter is not specified, all callbacks of the specified sensor type are unsubscribed from. |
 
 
 ## off
@@ -3635,7 +1618,7 @@ sensor.off(sensor.SensorType.SENSOR_TYPE_ID_GYROSCOPE_UNCALIBRATED, callback);
 function off(type: SensorType.SENSOR_TYPE_ID_HALL, callback?: Callback<HallResponse>): void
 ```
 
-取消订阅霍尔传感器数据。off取消订阅必须与on订阅成对出现。
+Unsubscribes from sensor data changes.
 
 **Since:** 8
 
@@ -3653,20 +1636,8 @@ function off(type: SensorType.SENSOR_TYPE_ID_HALL, callback?: Callback<HallRespo
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | SensorType.SENSOR_TYPE_ID_HALL | Yes | 要取消订阅的霍尔传感器类型为SENSOR_TYPE_ID_HALL。 |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;HallResponse&gt; | No | 需要取消订阅的回调函数，若无此参数，则取消订阅当前类型的所有回调函数。 |
-
-## Examples
-
-```TypeScript
-import { sensor } from '@kit.SensorServiceKit';
-
-function callback(data: sensor.HallResponse) {
-  console.info('Succeeded in invoking off. Status: ' + data.status);
-}
-
-sensor.off(sensor.SensorType.SENSOR_TYPE_ID_HALL, callback);
-```
+| type | SensorType.SENSOR_TYPE_ID_HALL | Yes | Type of the sensor to unsubscribe from, which is **SENSOR_TYPE_ID_HALL**. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;HallResponse&gt; | No | Callback used for unsubscription. If this parameter is not specified, all callbacks of the specified sensor type are unsubscribed from. |
 
 
 ## off
@@ -3675,7 +1646,7 @@ sensor.off(sensor.SensorType.SENSOR_TYPE_ID_HALL, callback);
 function off(type: SensorType.SENSOR_TYPE_ID_HEART_RATE, callback?: Callback<HeartRateResponse>): void
 ```
 
-取消订阅心率传感器数据。off取消订阅必须与on订阅成对出现。
+Unsubscribes from sensor data changes.
 
 **Since:** 8
 
@@ -3695,20 +1666,8 @@ function off(type: SensorType.SENSOR_TYPE_ID_HEART_RATE, callback?: Callback<Hea
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | SensorType.SENSOR_TYPE_ID_HEART_RATE | Yes | 要取消订阅的心率传感器类型为SENSOR_TYPE_ID_HEART_RATE。 |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;HeartRateResponse&gt; | No | 需要取消订阅的回调函数，若无此参数，则取消订阅当前类型的所有回调函数。 |
-
-## Examples
-
-```TypeScript
-import { sensor } from '@kit.SensorServiceKit';
-
-function callback(data: sensor.HeartRateResponse) {
-  console.info('Succeeded in invoking off. Heart rate: ' + data.heartRate);
-}
-
-sensor.off(sensor.SensorType.SENSOR_TYPE_ID_HEART_RATE, callback);
-```
+| type | SensorType.SENSOR_TYPE_ID_HEART_RATE | Yes | Type of the sensor to unsubscribe from, which is **SENSOR_TYPE_ID_HEART_RATE**. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;HeartRateResponse&gt; | No | Callback used for unsubscription. If this parameter is not specified, all callbacks of the specified sensor type are unsubscribed from. |
 
 
 ## off
@@ -3717,7 +1676,7 @@ sensor.off(sensor.SensorType.SENSOR_TYPE_ID_HEART_RATE, callback);
 function off(type: SensorType.SENSOR_TYPE_ID_HUMIDITY, callback?: Callback<HumidityResponse>): void
 ```
 
-取消订阅湿度传感器数据。off取消订阅必须与on订阅成对出现。
+Unsubscribes from sensor data changes.
 
 **Since:** 8
 
@@ -3735,20 +1694,8 @@ function off(type: SensorType.SENSOR_TYPE_ID_HUMIDITY, callback?: Callback<Humid
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | SensorType.SENSOR_TYPE_ID_HUMIDITY | Yes | 要取消订阅的湿度传感器类型为SENSOR_TYPE_ID_HUMIDITY。 |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;HumidityResponse&gt; | No | 需要取消订阅的回调函数，若无此参数，则取消订阅当前类型的所有回调函数。 |
-
-## Examples
-
-```TypeScript
-import { sensor } from '@kit.SensorServiceKit';
-
-function callback(data: sensor.HumidityResponse) {
-  console.info('Succeeded in invoking off. Humidity: ' + data.humidity);
-}
-
-sensor.off(sensor.SensorType.SENSOR_TYPE_ID_HUMIDITY, callback);
-```
+| type | SensorType.SENSOR_TYPE_ID_HUMIDITY | Yes | Type of the sensor to unsubscribe from, which is **SENSOR_TYPE_ID_HUMIDITY**. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;HumidityResponse&gt; | No | Callback used for unsubscription. If this parameter is not specified, all callbacks of the specified sensor type are unsubscribed from. |
 
 
 ## off
@@ -3757,7 +1704,7 @@ sensor.off(sensor.SensorType.SENSOR_TYPE_ID_HUMIDITY, callback);
 function off(type: SensorType.SENSOR_TYPE_ID_LINEAR_ACCELERATION, callback?: Callback<LinearAccelerometerResponse>): void
 ```
 
-取消订阅线性加速度传感器数据。off取消订阅必须与on订阅成对出现。
+Unsubscribes from sensor data changes.
 
 **Since:** 8
 
@@ -3777,22 +1724,8 @@ function off(type: SensorType.SENSOR_TYPE_ID_LINEAR_ACCELERATION, callback?: Cal
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | SensorType.SENSOR_TYPE_ID_LINEAR_ACCELERATION | Yes | 要取消订阅的线性加速度传感器类型为SENSOR_TYPE_ID_LINEAR_ACCELERATION。 |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;LinearAccelerometerResponse&gt; | No | 需要取消订阅的回调函数，若无此参数，则取消订阅当前类型的所有回调函数。 |
-
-## Examples
-
-```TypeScript
-import { sensor } from '@kit.SensorServiceKit';
-
-function callback(data: sensor.LinearAccelerometerResponse) {
-  console.info('Succeeded in invoking off. X-coordinate component: ' + data.x);
-  console.info('Succeeded in invoking off. Y-coordinate component: ' + data.y);
-  console.info('Succeeded in invoking off. Z-coordinate component: ' + data.z);
-}
-
-sensor.off(sensor.SensorType.SENSOR_TYPE_ID_LINEAR_ACCELERATION, callback);
-```
+| type | SensorType.SENSOR_TYPE_ID_LINEAR_ACCELERATION | Yes | Type of the sensor to unsubscribe from, which is **SENSOR_TYPE_ID_LINEAR_ACCELERATION**. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;LinearAccelerometerResponse&gt; | No | Callback used for unsubscription. If this parameter is not specified, all callbacks of the specified sensor type are unsubscribed from. |
 
 
 ## off
@@ -3801,7 +1734,7 @@ sensor.off(sensor.SensorType.SENSOR_TYPE_ID_LINEAR_ACCELERATION, callback);
 function off(type: SensorType.SENSOR_TYPE_ID_MAGNETIC_FIELD, callback?: Callback<MagneticFieldResponse>): void
 ```
 
-取消订阅磁场传感器数据。off取消订阅必须与on订阅成对出现。
+Unsubscribes from sensor data changes.
 
 **Since:** 8
 
@@ -3819,22 +1752,8 @@ function off(type: SensorType.SENSOR_TYPE_ID_MAGNETIC_FIELD, callback?: Callback
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | SensorType.SENSOR_TYPE_ID_MAGNETIC_FIELD | Yes | 要取消订阅的磁场传感器类型为SENSOR_TYPE_ID_MAGNETIC_FIELD。 |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;MagneticFieldResponse&gt; | No | 需要取消订阅的回调函数，若无此参数，则取消订阅当前类型的所有回调函数。 |
-
-## Examples
-
-```TypeScript
-import { sensor } from '@kit.SensorServiceKit';
-
-function callback(data: sensor.MagneticFieldResponse) {
-  console.info('Succeeded in invoking off. X-coordinate component: ' + data.x);
-  console.info('Succeeded in invoking off. Y-coordinate component: ' + data.y);
-  console.info('Succeeded in invoking off. Z-coordinate component: ' + data.z);
-}
-
-sensor.off(sensor.SensorType.SENSOR_TYPE_ID_MAGNETIC_FIELD, callback);
-```
+| type | SensorType.SENSOR_TYPE_ID_MAGNETIC_FIELD | Yes | Type of the sensor to unsubscribe from, which is **SENSOR_TYPE_ID_MAGNETIC_FIELD**. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;MagneticFieldResponse&gt; | No | Callback used for unsubscription. If this parameter is not specified, all callbacks of the specified sensor type are unsubscribed from. |
 
 
 ## off
@@ -3843,7 +1762,7 @@ sensor.off(sensor.SensorType.SENSOR_TYPE_ID_MAGNETIC_FIELD, callback);
 function off(type: SensorType.SENSOR_TYPE_ID_MAGNETIC_FIELD_UNCALIBRATED, callback?: Callback<MagneticFieldUncalibratedResponse>): void
 ```
 
-取消订阅未校准磁场传感器数据。off取消订阅必须与on订阅成对出现。
+Unsubscribes from sensor data changes.
 
 **Since:** 8
 
@@ -3861,25 +1780,8 @@ function off(type: SensorType.SENSOR_TYPE_ID_MAGNETIC_FIELD_UNCALIBRATED, callba
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | SensorType.SENSOR_TYPE_ID_MAGNETIC_FIELD_UNCALIBRATED | Yes | 要取消订阅的未校准磁场传感器类型为SENSOR_TYPE_ID_MAGNETIC_FIELD_UNCALIBRATED。 |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;MagneticFieldUncalibratedResponse&gt; | No | 需要取消订阅的回调函数，若无此参数，则取消订阅当前类型的所有回调函数。 |
-
-## Examples
-
-```TypeScript
-import { sensor } from '@kit.SensorServiceKit';
-
-function callback(data: sensor.MagneticFieldUncalibratedResponse) {
-  console.info('Succeeded in invoking off. X-coordinate component: ' + data.x);
-  console.info('Succeeded in invoking off. Y-coordinate component: ' + data.y);
-  console.info('Succeeded in invoking off. Z-coordinate component: ' + data.z);
-  console.info('Succeeded in invoking off. X-coordinate bias: ' + data.biasX);
-  console.info('Succeeded in invoking off. Y-coordinate bias: ' + data.biasY);
-  console.info('Succeeded in invoking off. Z-coordinate bias: ' + data.biasZ);
-}
-
-sensor.off(sensor.SensorType.SENSOR_TYPE_ID_MAGNETIC_FIELD_UNCALIBRATED, callback);
-```
+| type | SensorType.SENSOR_TYPE_ID_MAGNETIC_FIELD_UNCALIBRATED | Yes | Type of the sensor to unsubscribe from, which is **SENSOR_TYPE_ID_MAGNETIC_FIELD_UNCALIBRATED**. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;MagneticFieldUncalibratedResponse&gt; | No | Callback used for unsubscription. If this parameter is not specified, all callbacks of the specified sensor type are unsubscribed from. |
 
 
 ## off
@@ -3888,7 +1790,7 @@ sensor.off(sensor.SensorType.SENSOR_TYPE_ID_MAGNETIC_FIELD_UNCALIBRATED, callbac
 function off(type: SensorType.SENSOR_TYPE_ID_ORIENTATION, callback?: Callback<OrientationResponse>): void
 ```
 
-取消订阅方向传感器数据。off取消订阅必须与on订阅成对出现。
+Unsubscribes from sensor data changes.
 
 **Since:** 8
 
@@ -3906,22 +1808,8 @@ function off(type: SensorType.SENSOR_TYPE_ID_ORIENTATION, callback?: Callback<Or
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | SensorType.SENSOR_TYPE_ID_ORIENTATION | Yes | 要取消订阅的方向传感器类型为SENSOR_TYPE_ID_ORIENTATION。 |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;OrientationResponse&gt; | No | 需要取消订阅的回调函数，若无此参数，则取消订阅当前类型的所有回调函数。 |
-
-## Examples
-
-```TypeScript
-import { sensor } from '@kit.SensorServiceKit';
-
-function callback(data: sensor.OrientationResponse) {
-  console.info('Succeeded in invoking off. The device rotates at an angle around the X axis: ' + data.beta);
-  console.info('Succeeded in invoking off. The device rotates at an angle around the Y axis: ' + data.gamma);
-  console.info('Succeeded in invoking off. The device rotates at an angle around the Z axis: ' + data.alpha);
-}
-
-sensor.off(sensor.SensorType.SENSOR_TYPE_ID_ORIENTATION, callback);
-```
+| type | SensorType.SENSOR_TYPE_ID_ORIENTATION | Yes | Type of the sensor to unsubscribe from, which is **SENSOR_TYPE_ID_ORIENTATION**. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;OrientationResponse&gt; | No | Callback used for unsubscription. If this parameter is not specified, all callbacks of the specified sensor type are unsubscribed from. |
 
 
 ## off
@@ -3930,7 +1818,7 @@ sensor.off(sensor.SensorType.SENSOR_TYPE_ID_ORIENTATION, callback);
 function off(type: SensorType.SENSOR_TYPE_ID_PEDOMETER, callback?: Callback<PedometerResponse>): void
 ```
 
-取消订阅计步传感器数据。off取消订阅必须与on订阅成对出现。
+Unsubscribes from sensor data changes.
 
 **Since:** 8
 
@@ -3950,20 +1838,8 @@ function off(type: SensorType.SENSOR_TYPE_ID_PEDOMETER, callback?: Callback<Pedo
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | SensorType.SENSOR_TYPE_ID_PEDOMETER | Yes | 要取消订阅的计步传感器类型为SENSOR_TYPE_ID_PEDOMETER。 |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;PedometerResponse&gt; | No | 需要取消订阅的回调函数，若无此参数，则取消订阅当前类型的所有回调函数。 |
-
-## Examples
-
-```TypeScript
-import { sensor } from '@kit.SensorServiceKit';
-
-function callback(data: sensor.PedometerResponse) {
-  console.info('Succeeded in invoking off. Steps: ' + data.steps);
-}
-
-sensor.off(sensor.SensorType.SENSOR_TYPE_ID_PEDOMETER, callback);
-```
+| type | SensorType.SENSOR_TYPE_ID_PEDOMETER | Yes | Type of the sensor to unsubscribe from, which is **SENSOR_TYPE_ID_PEDOMETER**. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;PedometerResponse&gt; | No | Callback used for unsubscription. If this parameter is not specified, all callbacks of the specified sensor type are unsubscribed from. |
 
 
 ## off
@@ -3972,7 +1848,7 @@ sensor.off(sensor.SensorType.SENSOR_TYPE_ID_PEDOMETER, callback);
 function off(type: SensorType.SENSOR_TYPE_ID_PEDOMETER_DETECTION, callback?: Callback<PedometerDetectionResponse>): void
 ```
 
-取消订阅计步检测传感器数据。off取消订阅必须与on订阅成对出现。
+Unsubscribes from sensor data changes.
 
 **Since:** 8
 
@@ -3992,20 +1868,8 @@ function off(type: SensorType.SENSOR_TYPE_ID_PEDOMETER_DETECTION, callback?: Cal
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | SensorType.SENSOR_TYPE_ID_PEDOMETER_DETECTION | Yes | 要取消订阅的计步检测传感器类型为SENSOR_TYPE_ID_PEDOMETER_DETECTION。 |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;PedometerDetectionResponse&gt; | No | 需要取消订阅的回调函数，若无此参数，则取消订阅当前类型的所有回调函数。 |
-
-## Examples
-
-```TypeScript
-import { sensor } from '@kit.SensorServiceKit';
-
-function callback(data: sensor.PedometerDetectionResponse) {
-  console.info('Succeeded in invoking off. Scalar data: ' + data.scalar);
-}
-
-sensor.off(sensor.SensorType.SENSOR_TYPE_ID_PEDOMETER_DETECTION, callback);
-```
+| type | SensorType.SENSOR_TYPE_ID_PEDOMETER_DETECTION | Yes | Type of the sensor to unsubscribe from, which is **SENSOR_TYPE_ID_PEDOMETER_DETECTION**. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;PedometerDetectionResponse&gt; | No | Callback used for unsubscription. If this parameter is not specified, all callbacks of the specified sensor type are unsubscribed from. |
 
 
 ## off
@@ -4014,7 +1878,7 @@ sensor.off(sensor.SensorType.SENSOR_TYPE_ID_PEDOMETER_DETECTION, callback);
 function off(type: SensorType.SENSOR_TYPE_ID_PROXIMITY, callback?: Callback<ProximityResponse>): void
 ```
 
-取消订阅接近光传感器数据。off取消订阅必须与on订阅成对出现。
+Unsubscribes from sensor data changes.
 
 **Since:** 8
 
@@ -4032,20 +1896,8 @@ function off(type: SensorType.SENSOR_TYPE_ID_PROXIMITY, callback?: Callback<Prox
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | SensorType.SENSOR_TYPE_ID_PROXIMITY | Yes | 要取消订阅的接近光传感器类型为SENSOR_TYPE_ID_PROXIMITY。 |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;ProximityResponse&gt; | No | 需要取消订阅的回调函数，若无此参数，则取消订阅当前类型的所有回调函数。 |
-
-## Examples
-
-```TypeScript
-import { sensor } from '@kit.SensorServiceKit';
-
-function callback(data: sensor.ProximityResponse) {
-  console.info('Succeeded in invoking off. Distance: ' + data.distance);
-}
-
-sensor.off(sensor.SensorType.SENSOR_TYPE_ID_PROXIMITY, callback);
-```
+| type | SensorType.SENSOR_TYPE_ID_PROXIMITY | Yes | Type of the sensor to unsubscribe from, which is **SENSOR_TYPE_ID_PROXIMITY**. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;ProximityResponse&gt; | No | Callback used for unsubscription. If this parameter is not specified, all callbacks of the specified sensor type are unsubscribed from. |
 
 
 ## off
@@ -4054,7 +1906,7 @@ sensor.off(sensor.SensorType.SENSOR_TYPE_ID_PROXIMITY, callback);
 function off(type: SensorType.SENSOR_TYPE_ID_ROTATION_VECTOR, callback?: Callback<RotationVectorResponse>): void
 ```
 
-取消订阅旋转矢量传感器数据。off取消订阅必须与on订阅成对出现。
+Unsubscribes from sensor data changes.
 
 **Since:** 8
 
@@ -4072,23 +1924,8 @@ function off(type: SensorType.SENSOR_TYPE_ID_ROTATION_VECTOR, callback?: Callbac
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | SensorType.SENSOR_TYPE_ID_ROTATION_VECTOR | Yes | 要取消订阅的旋转矢量传感器类型为SENSOR_TYPE_ID_ROTATION_VECTOR。 |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;RotationVectorResponse&gt; | No | 需要取消订阅的回调函数，若无此参数，则取消订阅当前类型的所有回调函数。 |
-
-## Examples
-
-```TypeScript
-import { sensor } from '@kit.SensorServiceKit';
-
-function callback(data: sensor.RotationVectorResponse) {
-  console.info('Succeeded in invoking off. X-coordinate component: ' + data.x);
-  console.info('Succeeded in invoking off. Y-coordinate component: ' + data.y);
-  console.info('Succeeded in invoking off. Z-coordinate component: ' + data.z);
-  console.info('Succeeded in invoking off. Scalar quantity: ' + data.w);
-}
-
-sensor.off(sensor.SensorType.SENSOR_TYPE_ID_ROTATION_VECTOR, callback);
-```
+| type | SensorType.SENSOR_TYPE_ID_ROTATION_VECTOR | Yes | Type of the sensor to unsubscribe from, which is **SENSOR_TYPE_ID_ROTATION_VECTOR**. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;RotationVectorResponse&gt; | No | Callback used for unsubscription. If this parameter is not specified, all callbacks of the specified sensor type are unsubscribed from. |
 
 
 ## off
@@ -4097,7 +1934,7 @@ sensor.off(sensor.SensorType.SENSOR_TYPE_ID_ROTATION_VECTOR, callback);
 function off(type: SensorType.SENSOR_TYPE_ID_SIGNIFICANT_MOTION, callback?: Callback<SignificantMotionResponse>): void
 ```
 
-取消订阅有效运动传感器数据。off取消订阅必须与on订阅成对出现。
+Unsubscribes from valid motion sensor data.
 
 **Since:** 8
 
@@ -4115,20 +1952,8 @@ function off(type: SensorType.SENSOR_TYPE_ID_SIGNIFICANT_MOTION, callback?: Call
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | SensorType.SENSOR_TYPE_ID_SIGNIFICANT_MOTION | Yes | 要取消订阅的有效运动传感器类型为SENSOR_TYPE_ID_SIGNIFICANT_MOTION。 |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;SignificantMotionResponse&gt; | No | 需要取消订阅的回调函数，若无此参数，则取消订阅当前类型的所有回调函数。 |
-
-## Examples
-
-```TypeScript
-import { sensor } from '@kit.SensorServiceKit';
-
-function callback(data: sensor.SignificantMotionResponse) {
-  console.info('Succeeded in invoking off. Scalar data: ' + data.scalar);
-}
-
-sensor.off(sensor.SensorType.SENSOR_TYPE_ID_SIGNIFICANT_MOTION, callback);
-```
+| type | SensorType.SENSOR_TYPE_ID_SIGNIFICANT_MOTION | Yes | Type of the sensor to unsubscribe from, which is **SENSOR_TYPE_ID_SIGNIFICANT_MOTION**. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;SignificantMotionResponse&gt; | No | Callback used for unsubscription. If this parameter is not specified, all callbacks of the specified sensor type are unsubscribed from. |
 
 
 ## off
@@ -4137,7 +1962,7 @@ sensor.off(sensor.SensorType.SENSOR_TYPE_ID_SIGNIFICANT_MOTION, callback);
 function off(type: SensorType.SENSOR_TYPE_ID_WEAR_DETECTION, callback?: Callback<WearDetectionResponse>): void
 ```
 
-取消订阅佩戴检测传感器数据。off取消订阅必须与on订阅成对出现。
+Unsubscribes from sensor data changes.
 
 **Since:** 8
 
@@ -4155,20 +1980,8 @@ function off(type: SensorType.SENSOR_TYPE_ID_WEAR_DETECTION, callback?: Callback
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | SensorType.SENSOR_TYPE_ID_WEAR_DETECTION | Yes | 要取消订阅的佩戴检测传感器类型为SENSOR_TYPE_ID_WEAR_DETECTION。 |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;WearDetectionResponse&gt; | No | 需要取消订阅的回调函数，若无此参数，则取消订阅当前类型的所有回调函数。 |
-
-## Examples
-
-```TypeScript
-import { sensor } from '@kit.SensorServiceKit';
-
-function accCallback(data: sensor.WearDetectionResponse) {
-  console.info('Succeeded in invoking off. Wear status: ' + data.value);
-}
-
-sensor.off(sensor.SensorType.SENSOR_TYPE_ID_WEAR_DETECTION, accCallback);
-```
+| type | SensorType.SENSOR_TYPE_ID_WEAR_DETECTION | Yes | Type of the sensor to unsubscribe from, which is **SENSOR_TYPE_ID_WEAR_DETECTION**. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;WearDetectionResponse&gt; | No | Callback used for unsubscription. If this parameter is not specified, all callbacks of the specified sensor type are unsubscribed from. |
 
 
 ## off('sensorStatusChange')
@@ -4177,7 +1990,7 @@ sensor.off(sensor.SensorType.SENSOR_TYPE_ID_WEAR_DETECTION, accCallback);
 function off(type: 'sensorStatusChange', callback?: Callback<SensorStatusEvent>): void
 ```
 
-取消监听传感器上线下线状态的变化。当不再需要感知传感器上下线状态时调用此接口取消监听。off取消监听必须与on监听成对出现。
+Disables listening for sensor status changes.
 
 **Since:** 19
 
@@ -4191,44 +2004,12 @@ function off(type: 'sensorStatusChange', callback?: Callback<SensorStatusEvent>)
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'sensorStatusChange' | Yes | 固定传入'sensorStatusChange',状态监听固定参数。 |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;SensorStatusEvent&gt; | No | sensor.on传入的回调函数，不传则取消所有监听。 |
+| type | 'sensorStatusChange' | Yes | Event type. The value **sensorStatusChange** indicates the sensor status change event. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;SensorStatusEvent&gt; | No | Callback passed to **sensor.on**. If this parameter is left unspecified, listening will be disabled for all callbacks. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 14500101 | Service exception. Possible causes: 1. Sensor hdf service exception; &lt;br&gt; 2. Sensor service ipc exception;3. Sensor data channel exception. |
-
-## Examples
-
-```TypeScript
-import { sensor } from '@kit.SensorServiceKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-// Use try catch to capture possible exceptions.
-try {
-  const statusChangeCallback = (data: sensor.SensorStatusEvent) => {
-    console.info('sensorStatusChange : ' + JSON.stringify(data));
-  }
-  const statusChangeCallback2 = (data: sensor.SensorStatusEvent) => {
-    console.info('sensorStatusChange2 : ' + JSON.stringify(data));
-  }
-  // Register two callback listeners for device online events.
-  sensor.on('sensorStatusChange', statusChangeCallback);
-  sensor.on('sensorStatusChange', statusChangeCallback2);
-  
-  // Unregister the first listener after 3 seconds.
-  setTimeout(() => {
-    sensor.off('sensorStatusChange', statusChangeCallback);
-  }, 3000);
-  // Unregister the other listener after 5 seconds.
-  setTimeout(() => {
-    sensor.off('sensorStatusChange');
-  }, 5000);
-} catch (error) {
-  let e: BusinessError = error as BusinessError;
-  console.error(`Failed to invoke on. Code: ${e.code}, message: ${e.message}`);
-}
-```
+| [14500101](../errorcode-sensor.md#14500101-service-exception) | Service exception. Possible causes: 1. Sensor hdf service exception; &lt;br&gt; 2. Sensor service ipc exception;3. Sensor data channel exception. |
 

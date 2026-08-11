@@ -1,12 +1,12 @@
 # Select
 
-提供下拉选择菜单，让用户在多个选项间选择。Select组件支持设置选项图标、自定义样式、分割线等，适用于需要在有限空间内展示多个选项供用户选择的场景。
+The **Select** component provides a drop-down menu that allows users to select among multiple options.
 
-> **说明：**
+> **NOTE**
 
-## 子组件
+## Child Components
 
-无
+Not supported
 
 ## Select
 
@@ -28,7 +28,7 @@ Select(options: Array<SelectOption>)
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| options | Array&lt;SelectOption&gt; | Yes | 设置下拉选项。 |
+| options | Array&lt;SelectOption&gt; | Yes | Options of the drop-down menu. |
 
 ## Summary
 

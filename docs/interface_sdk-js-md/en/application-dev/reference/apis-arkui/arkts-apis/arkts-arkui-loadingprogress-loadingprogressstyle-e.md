@@ -1,6 +1,6 @@
 # LoadingProgressStyle
 
-表示LoadingProgress的样式类型，不推荐使用。
+Load style of progress bar.
 
 **Since:** 23
 

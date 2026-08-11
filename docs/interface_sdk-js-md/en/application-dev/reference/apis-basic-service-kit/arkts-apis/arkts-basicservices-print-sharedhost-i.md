@@ -1,6 +1,6 @@
 # SharedHost
 
-定义共享设备信息的接口。
+Interface defining shared device information
 
 **Since:** 24
 
@@ -22,7 +22,7 @@ import { print } from 'kits/@kit.BasicServicesKit';
 ip: string
 ```
 
-表示共享设备的IP地址。
+IP address of the shared device.
 
 **Type:** string
 
@@ -42,7 +42,7 @@ ip: string
 shareName: string
 ```
 
-表示共享设备的主机名称。
+Share name of the shared device.
 
 **Type:** string
 
@@ -62,7 +62,7 @@ shareName: string
 workgroupName: string
 ```
 
-表示共享设备的工作组名称。
+Workgroup name of the shared device.
 
 **Type:** string
 

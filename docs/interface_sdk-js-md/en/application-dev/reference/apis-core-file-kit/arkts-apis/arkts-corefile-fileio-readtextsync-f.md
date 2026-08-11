@@ -13,7 +13,7 @@ declare function readTextSync(
 ): string
 ```
 
-以同步方法基于文本方式读取文件（即直接读取文件的文本内容）。
+Reads the text content of a file. This API returns the result synchronously.
 
 **Since:** 7
 
@@ -31,12 +31,12 @@ declare function readTextSync(
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| filePath | string | Yes | 待读取文件的应用沙箱路径。 |
-| options | {     position?: number;     length?: number;     encoding?: string;   } | No | 支持如下选项：&lt;br/&gt;-?position，number类型，表示期望读取文件的位置，单位为Byte。可选，默认从当前位置开始读取。&lt;br/&gt;-?length，number 类型，表示期望读取数据的长度，单位为Byte。可选，默认缓冲区长度减去偏移长度。&lt;br/&gt;-?encoding，string类型，当数据是?string?类型时有效，表示数据的编码方式，默认?'utf-8'，仅支持?'utf- 8'。 |
+| filePath | string | Yes | Application sandbox path of the file to read. |
+| options | {     position?: number;     length?: number;     encoding?: string;   } | No | The options are as follows:&lt;br&gt;- **position** (number): position of the data to read in the file, in bytes. This parameter is optional. By default, data is read from the current position.&lt;br&gt;- **length** (number): length of the data to read, in bytes. This parameter is optional. The default value is the buffer length minus the offset.&lt;br&gt;- **encoding** (string): format of the data to be encoded.&lt;br&gt;It is valid only when the data is of the string type.&lt;br&gt;The default value is **'utf-8'**, which is the only value supported. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| string | 返回读取文件的内容。 |
+| string | File content read. |
 

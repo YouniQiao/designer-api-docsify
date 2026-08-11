@@ -12,7 +12,7 @@ import { dialogSession } from 'kits/@kit.AbilityKit';
 function sendDialogResult(dialogSessionId: string, targetWant: Want, isAllowed: boolean): Promise<void>
 ```
 
-发送用户请求。使用Promise异步回调。
+Sends a request for a dialog box. This API uses a promise to return the result.
 
 **Since:** 11
 
@@ -30,25 +30,25 @@ function sendDialogResult(dialogSessionId: string, targetWant: Want, isAllowed: 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| dialogSessionId | string | Yes | 用户请求会话ID。 |
-| targetWant | [Want](arkts-ability-app-ability-want-want-c.md) | Yes | 用户请求目标。 |
-| isAllowed | boolean | Yes | 是否允许拉起目标Ability。true表示允许，false表示不允许。 |
+| dialogSessionId | string | Yes | Session ID. |
+| targetWant | [Want](arkts-ability-app-ability-want-want-c.md) | Yes | Target of the request. |
+| isAllowed | boolean | Yes | Whether the target ability can be started. **true** if allowed, **false** otherwise. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | 无返回结果的Promise对象。 |
+| Promise&lt;void&gt; | Promise that returns no value. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
-| 16000005 | The specified process does not have the permission. |
-| 16000006 | Cross-user operations are not allowed. |
-| 16000050 | Internal error. |
-| 202 | The application is not system-app, can not use system-api. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| [16000005](../errorcode-ability.md#16000005-process-permission-verification-failure) | The specified process does not have the permission. |
+| [16000006](../errorcode-ability.md#16000006-crossuser-operation-is-not-allowed) | Cross-user operations are not allowed. |
+| [16000050](../errorcode-ability.md#16000050-internal-error) | Internal error. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | The application is not system-app, can not use system-api. |
 
 
 ## sendDialogResult
@@ -57,7 +57,7 @@ function sendDialogResult(dialogSessionId: string, targetWant: Want, isAllowed: 
 function sendDialogResult(dialogSessionId: string, targetWant: Want, isAllowed: boolean, callback: AsyncCallback<void>): void
 ```
 
-发送用户请求。使用callback异步回调。
+Sends a request for a dialog box. This API uses an asynchronous callback to return the result.
 
 **Since:** 11
 
@@ -75,18 +75,18 @@ function sendDialogResult(dialogSessionId: string, targetWant: Want, isAllowed: 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| dialogSessionId | string | Yes | 用户请求会话ID。 |
-| targetWant | [Want](arkts-ability-app-ability-want-want-c.md) | Yes | 用户请求目标。 |
-| isAllowed | boolean | Yes | 是否允许拉起目标Ability。true表示允许，false表示不允许。 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | 回调函数。当发送用户请求成功，err为undefined，否则为错误对象。 |
+| dialogSessionId | string | Yes | Session ID. |
+| targetWant | [Want](arkts-ability-app-ability-want-want-c.md) | Yes | Target of the request. |
+| isAllowed | boolean | Yes | Whether the target ability can be started. **true** if allowed, **false** otherwise. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined**. Otherwise, **err** is an error object. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
-| 16000005 | The specified process does not have the permission. |
-| 16000006 | Cross-user operations are not allowed. |
-| 16000050 | Internal error. |
-| 202 | The application is not system-app, can not use system-api. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| [16000005](../errorcode-ability.md#16000005-process-permission-verification-failure) | The specified process does not have the permission. |
+| [16000006](../errorcode-ability.md#16000006-crossuser-operation-is-not-allowed) | Cross-user operations are not allowed. |
+| [16000050](../errorcode-ability.md#16000050-internal-error) | Internal error. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | The application is not system-app, can not use system-api. |
 

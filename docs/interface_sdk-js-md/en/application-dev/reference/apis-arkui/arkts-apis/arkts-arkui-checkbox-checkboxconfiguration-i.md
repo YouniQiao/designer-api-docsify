@@ -1,6 +1,6 @@
 # CheckBoxConfiguration
 
-开发者需要自定义class实现ContentModifier接口。继承自[CommonConfiguration](arkts-arkui-common-commonconfiguration-i.md)。
+CheckBoxConfiguration used by content modifier.
 
 **Inheritance/Implementation:** CheckBoxConfiguration extends [CommonConfiguration<CheckBoxConfiguration>](CommonConfiguration<CheckBoxConfiguration>)
 
@@ -18,7 +18,7 @@
 name: string
 ```
 
-当前多选框名称。
+Current name of checkbox.
 
 **Type:** string
 
@@ -38,11 +38,7 @@ name: string
 selected: boolean
 ```
 
-指示多选框是否被选中，值为true时，多选框被选中。值为false时，多选框未选中。
-
-如果select属性没有设置默认值是false。
-
-如果设置select属性，此值与设置select属性的值相同。
+Indicates whether the checkbox is selected.
 
 **Type:** boolean
 
@@ -62,7 +58,7 @@ selected: boolean
 triggerChange: Callback<boolean>
 ```
 
-触发多选框选中状态变化。true表示从未选中变为选中，false表示从选中变为未选中。
+Trigger checkbox select change.
 
 **Type:** [Callback](../arkts-components/arkts-arkui-callback-i.md)&lt;boolean&gt;
 

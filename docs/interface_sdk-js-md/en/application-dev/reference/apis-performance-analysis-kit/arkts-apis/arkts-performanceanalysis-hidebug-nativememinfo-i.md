@@ -1,6 +1,6 @@
 # NativeMemInfo
 
-����Ӧ�ý��̵��ڴ���Ϣ��
+Describes memory information of the application process.
 
 **Since:** 12
 
@@ -22,7 +22,7 @@ import { hidebug } from 'kits/@kit.PerformanceAnalysisKit';
 privateClean: bigint
 ```
 
-˽�иɾ��ڴ��С����KBΪ��λ�����㷽ʽ��/proc/{pid}/smaps_rollup: Private_Clean��
+Size of the private clean memory, in KB. The value of this parameter is obtained by reading the value of Private_Clean in the /proc/{pid}/smaps_rollup node.
 
 **Type:** bigint
 
@@ -40,7 +40,7 @@ privateClean: bigint
 privateDirty: bigint
 ```
 
-˽�����ڴ��С����KBΪ��λ�����㷽ʽ��/proc/{pid}/smaps_rollup: Private_Dirty��
+Size of the private dirty memory, in KB. The value of this parameter is obtained by reading the value of Private_Dirty in the /proc/{pid}/smaps_rollup node.
 
 **Type:** bigint
 
@@ -58,7 +58,7 @@ privateDirty: bigint
 pss: bigint
 ```
 
-ʵ��ռ�õ������ڴ��С(�������乲����ռ�õ��ڴ�)����KBΪ��λ�����㷽ʽ��/proc/{pid}/smaps_rollup: Pss + SwapPss��
+Size of the occupied physical memory (including the proportionally allocated memory occupied by the shared library), in KB. The value of this parameter is obtained by summing up the values of Pss and SwapPss in the/proc/{pid}/smaps_rollup node.
 
 **Type:** bigint
 
@@ -76,7 +76,7 @@ pss: bigint
 rss: bigint
 ```
 
-ʵ��ռ�õ������ڴ��С(����������ռ��)����KBΪ��λ�����㷽ʽ��/proc/{pid}/smaps_rollup: Rss��
+Size of the occupied physical memory (including the memory occupied by the shared library), in KB.The value of this parameter is obtained by reading the value of Rss in the /proc/{pid}/smaps_rollup node.
 
 **Type:** bigint
 
@@ -94,7 +94,7 @@ rss: bigint
 sharedClean: bigint
 ```
 
-�������ڴ��С����KBΪ��λ�����㷽ʽ��/proc/{pid}/smaps_rollup: Shared_Clean��
+Size of the shared clean memory, in KB. The value of this parameter is obtained by reading the value of Shared_Clean in the /proc/{pid}/smaps_rollup node.
 
 **Type:** bigint
 
@@ -112,7 +112,7 @@ sharedClean: bigint
 sharedDirty: bigint
 ```
 
-�������ڴ��С����KBΪ��λ�����㷽ʽ��/proc/{pid}/smaps_rollup: Shared_Dirty��
+Size of the shared dirty memory, in KB. The value of this parameter is obtained by reading the value of Shared_Dirty in the /proc/{pid}/smaps_rollup node.
 
 **Type:** bigint
 
@@ -130,7 +130,7 @@ sharedDirty: bigint
 vss: bigint
 ```
 
-ռ�õ������ڴ��С(������������ռ�õ��ڴ�)����KBΪ��λ�����㷽ʽ��/proc/{pid}/statm: size * 4��
+Size of the occupied virtual memory (including the memory occupied by the shared library), in KB. The value of this parameter is obtained by multiplying the value of size (number of memory pages) in the /proc/{pid}/statm node by the page size (4 KB per page).
 
 **Type:** bigint
 

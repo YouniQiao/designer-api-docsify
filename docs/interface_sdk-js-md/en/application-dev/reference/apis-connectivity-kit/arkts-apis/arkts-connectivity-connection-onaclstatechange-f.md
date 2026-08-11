@@ -36,20 +36,7 @@ Subscribe the event of acl state changed from a remote device.If the application
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 801 | Capability not supported. Failed to call the API when the short-range chip is not inserted on 2in1 device. |
-| 201 | Permission denied. |
+| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. Failed to call the API when the short-range chip is not inserted on 2in1 device. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
 | 2900099 | Internal system error. For example, IPC error. Detailed error messages can be used to assist in locating the problem. |
-
-## Examples
-
-```TypeScript
-function AclStateChangeEvent(aclStateResult: connection.AclStateResult) {
-    console.info('acl state changed:'+ JSON.stringify(aclStateResult));
-}
-try {
-    connection.onAclStateChange(AclStateChangeEvent);
-} catch (err) {
-    console.error(`errCode: ${err.code}, errMessage: ${err.message}`);
-}
-```
 

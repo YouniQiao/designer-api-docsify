@@ -24,7 +24,7 @@ Returns the index of the first element in the array where predicate is true, and
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | self | FixedArray&lt;boolean&gt; | Yes | The array to operate `findIndex` on. |
-| predicate | (value: boolean, index: int,      array: FixedArray&lt;boolean&gt;) =&gt; boolean | Yes | A function to execute on each value in the array. |
+| predicate | (value: boolean, index: int,      array: FixedArray&lt;boolean&gt;) =&gt; boolean | Yes | A function to execute on each value in the array. |
 
 **Return value:**
 
@@ -57,7 +57,7 @@ Returns the index of the first element in the array where predicate is true, and
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | self | FixedArray&lt;byte&gt; | Yes | The array to operate `findIndex` on. |
-| predicate | (value: byte, index: int, array: FixedArray&lt;byte&gt;)      =&gt; boolean | Yes | A function to execute on each value in the array. |
+| predicate | (value: byte, index: int, array: FixedArray&lt;byte&gt;)      =&gt; boolean | Yes | A function to execute on each value in the array. |
 
 **Return value:**
 
@@ -90,7 +90,7 @@ Returns the index of the first element in the array where predicate is true, and
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | self | FixedArray&lt;short&gt; | Yes | The array to operate `findIndex` on. |
-| predicate | (value: short, index: int, array: FixedArray&lt;short&gt;)      =&gt; boolean | Yes | A function to execute on each value in the array. |
+| predicate | (value: short, index: int, array: FixedArray&lt;short&gt;)      =&gt; boolean | Yes | A function to execute on each value in the array. |
 
 **Return value:**
 
@@ -123,7 +123,7 @@ Returns the index of the first element in the array where predicate is true, and
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | self | FixedArray&lt;int&gt; | Yes | The array to operate `findIndex` on. |
-| predicate | (value: int, index: int, array: FixedArray&lt;int&gt;)      =&gt; boolean | Yes | A function to execute on each value in the array. |
+| predicate | (value: int, index: int, array: FixedArray&lt;int&gt;)      =&gt; boolean | Yes | A function to execute on each value in the array. |
 
 **Return value:**
 
@@ -156,7 +156,7 @@ Returns the index of the first element in the array where predicate is true, and
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | self | FixedArray&lt;long&gt; | Yes | The array to operate `findIndex` on. |
-| predicate | (value: long, index: int, array: FixedArray&lt;long&gt;)      =&gt; boolean | Yes | A function to execute on each value in the array. |
+| predicate | (value: long, index: int, array: FixedArray&lt;long&gt;)      =&gt; boolean | Yes | A function to execute on each value in the array. |
 
 **Return value:**
 
@@ -189,7 +189,7 @@ Returns the index of the first element in the array where predicate is true, and
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | self | FixedArray&lt;float&gt; | Yes | The array to operate `findIndex` on. |
-| predicate | (value: float, index: int, array: FixedArray&lt;float&gt;)      =&gt; boolean | Yes | A function to execute on each value in the array. |
+| predicate | (value: float, index: int, array: FixedArray&lt;float&gt;)      =&gt; boolean | Yes | A function to execute on each value in the array. |
 
 **Return value:**
 
@@ -222,7 +222,7 @@ Returns the index of the first element in the array where predicate is true, and
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | self | FixedArray&lt;double&gt; | Yes | The array to operate `findIndex` on. |
-| predicate | (value: double, index: int, array: FixedArray&lt;double&gt;)      =&gt; boolean | Yes | A function to execute on each value in the array. |
+| predicate | (value: double, index: int, array: FixedArray&lt;double&gt;)      =&gt; boolean | Yes | A function to execute on each value in the array. |
 
 **Return value:**
 
@@ -255,7 +255,7 @@ Returns the index of the first element in the array where predicate is true, and
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | self | FixedArray&lt;char&gt; | Yes | The array to operate `findIndex` on. |
-| predicate | (value: char, index: int, array: FixedArray&lt;char&gt;)      =&gt; boolean | Yes | A function to execute on each value in the array. |
+| predicate | (value: char, index: int, array: FixedArray&lt;char&gt;)      =&gt; boolean | Yes | A function to execute on each value in the array. |
 
 **Return value:**
 

@@ -25,7 +25,7 @@ export declare function GridRow(
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| option | [GridRowOptions](arkts-arkui-gridrow-gridrowoptions-i.md) | 否 | 栅格布局子组件参数。 |
+| option | [GridRowOptions](../arkts-components/arkts-arkui-gridrowoptions-i.md) | 否 | 栅格布局子组件参数。 |
 | content_ | [CustomBuilder](../arkts-components/arkts-arkui-custombuilder-t.md) | 否 | container |
 
 **返回值：**

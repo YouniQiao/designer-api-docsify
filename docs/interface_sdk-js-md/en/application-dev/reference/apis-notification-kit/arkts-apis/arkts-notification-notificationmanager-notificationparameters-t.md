@@ -4,7 +4,7 @@
 export type NotificationParameters = _NotificationParameters
 ```
 
-描述通知请求中wantAgent的部分信息。
+Describes partial information about the **wantAgent** in the notification request.
 
 **Since:** 24
 

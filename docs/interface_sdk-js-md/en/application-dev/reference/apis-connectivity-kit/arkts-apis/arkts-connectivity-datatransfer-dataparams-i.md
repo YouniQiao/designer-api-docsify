@@ -1,6 +1,6 @@
 # DataParams
 
-数据参数说明。
+Describes the parameters for Data.
 
 **Since:** 26.0.0
 
@@ -22,7 +22,7 @@ import { dataTransfer } from 'kits/@kit.ConnectivityKit';
 address: string
 ```
 
-连接的设备地址。长度必须为17，由十六进制数字和冒号组成，例如：11:22:33:AA:BB:FF。
+Indicates the connected device address.The length must be 17, The value consists of hexadecimal digits and colons (:), for example, 11:22:33:AA:BB:FF.
 
 **Type:** string
 
@@ -42,7 +42,7 @@ address: string
 data: ArrayBuffer
 ```
 
-数据缓冲区。
+Indicates the data buffer.
 
 **Type:** ArrayBuffer
 
@@ -62,7 +62,7 @@ data: ArrayBuffer
 uuid: string
 ```
 
-服务ID。长度必须为36，由16进制数字字符和连字符共36个字符组成，形如“FFFFFFFF-1234-5678-ABCD-000000001234”，代表128比特标识。&lt;br&gt;禁止使用星闪标准服务UUID。
+Indicates the service UUID.The length must be 36, The value consists of 36 hexadecimal digits and hyphens (-),for example, FFFFFFFF-1234-5678-ABCD-000000001234, indicating a 128-bit identifier.&lt;br&gt;NearLink standard UUIDs are not allowed.
 
 **Type:** string
 

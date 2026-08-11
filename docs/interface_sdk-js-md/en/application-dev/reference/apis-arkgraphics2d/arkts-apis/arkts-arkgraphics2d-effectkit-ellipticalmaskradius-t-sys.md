@@ -7,7 +7,7 @@ type EllipticalMaskRadius = [
 ]
 ```
 
-定义椭圆形遮罩的半径。
+Defines the radius of the elliptical mask.
 
 **Since:** 23
 

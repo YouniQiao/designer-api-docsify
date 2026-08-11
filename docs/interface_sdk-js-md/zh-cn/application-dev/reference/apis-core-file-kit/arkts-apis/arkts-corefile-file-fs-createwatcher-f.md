@@ -1,11 +1,5 @@
 # createWatcher
 
-## 导入模块
-
-```TypeScript
-import { Options, ReaderIteratorResult, Watcher, ReadTextOptions, WatchEventListener, TaskSignal, WriteOptions, ListFileExtOptions, DfsListeners, Filter, ReadOptions, ListFileOptions, WatchEvent, FileFilter, ConflictFiles } from 'kits/@kit.CoreFileKit';
-```
-
 ## createWatcher
 
 ```TypeScript
@@ -34,7 +28,7 @@ declare function createWatcher(path: string, events: number, listener: WatchEven
 
 | 类型 | 说明 |
 | --- | --- |
-| [Watcher](arkts-corefile-watcher-t.md) | 返回Watcher对象。 |
+| [Watcher](arkts-corefile-file-fs-watcher-i.md) | 返回Watcher对象。 |
 
 **错误码：**
 

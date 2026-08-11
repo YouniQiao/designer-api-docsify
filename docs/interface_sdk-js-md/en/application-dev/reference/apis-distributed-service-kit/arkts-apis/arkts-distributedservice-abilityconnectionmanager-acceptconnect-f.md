@@ -12,7 +12,7 @@ import { abilityConnectionManager } from 'kits/@kit.DistributedServiceKit';
 function acceptConnect(sessionId: int, token: string): Promise<void>
 ```
 
-设备B上的应用，在创建协同会话成功并获得会话ID后，调用acceptConnect()方法接受连接。使用Promise异步回调。
+Accepts the UIAbility connection after a collaboration session is set up and the session ID is obtained.
 
 **Since:** 18
 
@@ -28,20 +28,20 @@ function acceptConnect(sessionId: int, token: string): Promise<void>
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| sessionId | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | 已创建的协同会话ID。 |
-| token | string | Yes | 设备A应用传入的token值。 |
+| sessionId | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | ID of the collaboration session. |
+| token | string | Yes | Token value passed by the application on device A. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | 无返回结果的Promise对象。 |
+| Promise&lt;void&gt; | Promise that returns no value. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. |
 
 ## Examples
 

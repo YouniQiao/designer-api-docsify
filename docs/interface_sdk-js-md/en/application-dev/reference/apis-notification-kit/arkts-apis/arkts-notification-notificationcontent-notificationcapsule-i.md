@@ -1,10 +1,10 @@
 # NotificationCapsule
 
-描述通知胶囊，用于在实况窗中展示胶囊形态。
+Describes the notification capsule, which is used to display the capsule form in the live view.
 
-> **说明：**
+> **NOTE：**
 > 
-> 实际显示效果依赖于设备能力和通知中心UI样式。
+> The actual display effect depends on the device capabilities and the notification center UI style.
 
 **Since:** 11
 
@@ -20,7 +20,8 @@
 backgroundColor?: string
 ```
 
-胶囊背景颜色。支持rgb、rgba或者argb的格式颜色。rgb格式颜色示例：'#ffffff'、'rgb(255, 100, 255)'。rgba格式颜色示例：'rgba(255, 100, 255, 0.5)'。argb格式颜色示例：'#ff000000'。大小不超过202字节，超出部分会被截断。默认为空。
+Capsule background color. Colors in rgb, rgba, or argb format are supported. Example of rgb format color:  
+**#ffffff**, **rgb(255, 100, 255)**. Example of rgba format color: **rgba(255, 100, 255, 0.5)**. Example of argb format color: **#ff000000**. The size does not exceed 202 bytes, and the excess part will be truncated.The value defaults to empty.
 
 **Type:** string
 
@@ -38,8 +39,7 @@ backgroundColor?: string
 icon?: image.PixelMap
 ```
 
-胶囊图标。图标像素的总字节数不超过192KB（图标像素的总字节数通过  
-[getPixelBytesNumber](../../apis-image-kit/arkts-apis/arkts-image-image-pixelmap-i.md/arkts-image-image-pixelmap-i.md#getpixelbytesnumber)获取），建议图标像素长宽为128*128。
+Capsule icon. The total bytes of the icon pixel does not exceed 192 KB (the total bytes of the icon pixel is obtained through getPixelBytesNumber). It is recommended that the icon pixel dimensions be 128 x 128.
 
 **Type:** image.PixelMap
 
@@ -57,7 +57,7 @@ icon?: image.PixelMap
 title?: string
 ```
 
-胶囊标题。大小不超过202字节，超出部分会被截断。默认为空。
+Capsule title. The size does not exceed 202 bytes, and the excess part will be truncated. The value defaults to empty.
 
 **Type:** string
 

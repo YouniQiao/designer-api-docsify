@@ -1,6 +1,6 @@
 # EventType
 
-Enumerates the control event types.
+定义控制事件的类型。
 
 **起始版本：** 20
 
@@ -16,7 +16,7 @@ Enumerates the control event types.
 SCROLL_TO_HOOK = 1
 ```
 
-Scrolling to the hook.
+表示滚动到hook点事件。
 
 **起始版本：** 20
 

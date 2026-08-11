@@ -16,12 +16,6 @@ MultiNavigation组件遵循默认的左起右清栈规则，这意味着从左�
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
-## 导入模块
-
-```TypeScript
-import { MultiNavPathStack, MultiNavigation, SplitPolicy } from 'kits/@kit.ArkUI';
-```
-
 ## build
 
 ```TypeScript

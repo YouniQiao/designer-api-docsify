@@ -4,7 +4,7 @@
 export type TreeSetForEachCb<T> = (value: T, key: T, set: TreeSet<T>) => void
 ```
 
-TreeSet的回调函数类型。
+The type of TreeSet callback function.
 
 **Since:** 23
 
@@ -20,7 +20,7 @@ TreeSet的回调函数类型。
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | T | Yes | 当前元素的值。 |
-| key | T | Yes | 当前元素的键（与value相同）。 |
-| set | [TreeSet](arkts-arkts-util-treeset-treeset-c.md)&lt;T&gt; | Yes | 当前正在遍历的TreeSet实例。 |
+| value | T | Yes | The value of current element |
+| key | T | Yes | The key of current element(same as value) |
+| set | [TreeSet](arkts-arkts-util-treeset-treeset-c.md)&lt;T&gt; | Yes | The TreeSet instance being traversed |
 

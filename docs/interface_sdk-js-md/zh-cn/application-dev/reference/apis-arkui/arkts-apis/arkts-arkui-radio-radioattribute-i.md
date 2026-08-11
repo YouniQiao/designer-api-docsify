@@ -159,7 +159,7 @@ default radioStyle(value?: RadioStyle | undefined): this
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | [RadioStyle](../arkts-components/arkts-arkui-radiostyle-i.md) \| undefined | 否 | 单选框选中状态和非选中状态的样式。 &lt;br/&gt; 未设置或设置undefined时，则按照RadioStyle中各参数的默认值配置。 |
+| value | [RadioStyle](arkts-arkui-radio-radiostyle-i.md) \| undefined | 否 | 单选框选中状态和非选中状态的样式。 &lt;br/&gt; 未设置或设置undefined时，则按照RadioStyle中各参数的默认值配置。 |
 
 **返回值：**
 

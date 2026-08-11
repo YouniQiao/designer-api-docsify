@@ -12,7 +12,7 @@ import { fileAccess } from 'kits/@kit.CoreFileKit';
 function getFileAccessAbilityInfo(callback: AsyncCallback<Array<Want>>): void
 ```
 
-以异步方法获取系统内extension配置为fileAccess类型的所有Want信息。使用callback异步回调。
+Obtains information about all Wants with **extension** set to **fileAccess** in the system. A Want contains information for starting an ability. This API uses an asynchronous callback to return the result.
 
 **Since:** 9
 
@@ -99,7 +99,7 @@ async function getFileAccessAbilityInfo() {
 function getFileAccessAbilityInfo(): Promise<Array<Want>>
 ```
 
-以异步方法获取系统内extension配置为fileAccess类型的所有Want信息。使用Promise异步回调。
+Obtains information about all Wants with **extension** set to **fileAccess** in the system. A Want contains information for starting an ability. This API uses a promise to return the result.
 
 **Since:** 9
 

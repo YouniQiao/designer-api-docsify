@@ -1,32 +1,7 @@
 # Panel
 
-Panel是输入法面板对象，提供面板页面加载、显示/隐藏、尺寸调整、位置移动、模式切换等功能。Panel实例通过InputMethodAbility的  
-[createPanel](arkts-ime-inputmethodengine-inputmethodability-i.md#createpanel)接口获取，使用完毕后需调用  
-[destroyPanel](arkts-ime-inputmethodengine-inputmethodability-i.md#destroypanel)销毁以释放资源。createPanel与destroyPanel必须配对调用。  
-**核心功能概述：**
-
-- **页面加载**：通过  
-[setUiContent](arkts-ime-inputmethodengine-panel-i.md#setuicontent)为面板加载键盘页面内容，支持加载普通页面和与LocalStorage关联的页面。  
-- **显示与隐藏**：通过[show](arkts-ime-inputmethodengine-panel-i.md#show)显示面板，通过  
-[hide](arkts-ime-inputmethodengine-panel-i.md#hide)隐藏面板。面板的显示/隐藏也可通过订阅on('show')/on('hide')事件监听状态变化。  
-- **尺寸与位置调整**：通过  
-[resize](arkts-ime-inputmethodengine-panel-i.md#resize)调整面板尺寸，通过  
-[moveTo](arkts-ime-inputmethodengine-panel-i.md#moveto)移动面板位置，通过  
-[startMoving](arkts-ime-inputmethodengine-panel-i.md#startmoving)拖拽移动面板，通过  
-[adjustPanelRect](arkts-ime-inputmethodengine-panel-i.md#adjustpanelrect)/  
-[updatePanelRect](arkts-ime-inputmethodengine-panel-i.md#updatepanelrect)/  
-[updateRegion](arkts-ime-inputmethodengine-panel-i.md#updateregion)调整面板区域。  
-- **模式设置**：通过[changeFlag](arkts-ime-inputmethodengine-panel-i.md#changeflag)切换面板固定态/浮动态，通过  
-[setPrivacyMode](arkts-ime-inputmethodengine-panel-i.md#setprivacymode)设置隐私模式，通过  
-[setImmersiveMode](arkts-ime-inputmethodengine-panel-i.md#setimmersivemode)/  
-[getImmersiveMode](arkts-ime-inputmethodengine-panel-i.md#getimmersivemode)设置/获取沉浸模式。  
-- **事件监听**：通过on('show')/on('hide')/on('sizeChange')监听面板状态变化事件。  
-**面板生命周期：**
-
-1. 在InputMethodAbility的[createPanel](arkts-ime-inputmethodengine-inputmethodability-i.md#createpanel)中创建Panel实例并指定面板类型和标志位。2. 调用[setUiContent](arkts-ime-inputmethodengine-panel-i.md#setuicontent)加载键盘页面内容。3. 调用[show](arkts-ime-inputmethodengine-panel-i.md#show)显示面板，用户可交互。4. 根据需要调用resize、moveTo、changeFlag等接口动态调整面板。5. 使用完毕后调用[destroyPanel](arkts-ime-inputmethodengine-inputmethodability-i.md#destroypanel)销毁面板，释放资源。
-
-下列API均需使用  
-[createPanel](arkts-ime-inputmethodengine-inputmethodability-i.md#createpanel)获取到Panel实例后，通过实例调用。
+In the following API examples, you must first use   
+[createPanel](arkts-ime-inputmethodengine-inputmethodability-i.md#createpanel)to obtain a **Panel** instance, and then call the APIs using the obtained instance.
 
 **Since:** 10
 
@@ -48,7 +23,16 @@ import { inputMethodEngine } from 'kits/@kit.IMEKit';
 off(type: 'sizeUpdate', callback?: SizeUpdateCallback): void
 ```
 
-通过Panel实例取消监听当前面板大小变化，停止callback异步回调。
+Disables listening for the panel size change. This API uses an asynchronous callback to return the result.
+
+> **NOTE：**
+> 
+> This API applies only to the panels of the **SOFT_KEYBOARD** type in the **FLG_FIXED** or **FLG_FLOATING**
+> state. When you call
+> [adjustPanelRect](arkts-ime-inputmethodengine-panel-i.md#adjustpanelrect)
+> to adjust the panel size, the system calculates the final value based on certain rules (for example, whether
+> the panel size exceeds the screen). This callback can be used to obtain the actual panel size to refresh the
+> panel layout.
 
 **Since:** 14
 
@@ -64,8 +48,8 @@ off(type: 'sizeUpdate', callback?: SizeUpdateCallback): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'sizeUpdate' | Yes | 监听当前面板的大小是否产生变化，固定值为'sizeUpdate'。 |
-| callback | [SizeUpdateCallback](arkts-ime-inputmethodengine-sizeupdatecallback-t-sys.md) | No | 回调函数。用于指定要取消监听的回调函数，如果不填则取消所有sizeUpdate监听。 |
+| type | 'sizeUpdate' | Yes | Event type, which is **'sizeUpdate'**. |
+| callback | [SizeUpdateCallback](arkts-ime-inputmethodengine-sizeupdatecallback-t-sys.md) | No | Callback used to return the size of the soft keyboard panel, including the width and height. |
 
 ## Examples
 
@@ -83,9 +67,9 @@ panel.off('sizeUpdate', (windowSize: window.Size, keyboardArea: inputMethodEngin
 offSizeUpdate(callback?: SizeUpdateCallback): void
 ```
 
-取消订阅面板尺寸更新（sizeUpdate）事件，停止监听输入法面板尺寸的变更动作, 使用callback异步回调。
+Unsubscribe 'sizeUpdate' event.
 
-&lt;p&gt;此接口仅支持固定或悬浮态的软键盘类型Panel。&lt;/p&gt;
+&lt;p&gt;It's only used for SOFT_KEYBOARD panel with FLG_FIXED and FLG_FLOATING.&lt;/p&gt;
 
 **Since:** 23
 
@@ -101,7 +85,7 @@ offSizeUpdate(callback?: SizeUpdateCallback): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [SizeUpdateCallback](arkts-ime-inputmethodengine-sizeupdatecallback-t-sys.md) | No | 回调函数。 可选参数，需取消的目标回调函数：传入指定回调函数实例时，仅取消该回调的订阅；不传入时，取消所有sizeUpdate事件的订阅。 |
+| callback | [SizeUpdateCallback](arkts-ime-inputmethodengine-sizeupdatecallback-t-sys.md) | No | optional, the callback called when the panel size updates. |
 
 ## on('sizeUpdate')
 
@@ -109,7 +93,16 @@ offSizeUpdate(callback?: SizeUpdateCallback): void
 on(type: 'sizeUpdate', callback: SizeUpdateCallback): void
 ```
 
-通过Panel实例监听当前面板大小变化，在变化发生时通过callback异步回调。
+Listens for the panel size change. This API uses an asynchronous callback to return the result.
+
+> **NOTE：**
+> 
+> This API applies only to the panels of the **SOFT_KEYBOARD** type in the **FLG_FIXED** or **FLG_FLOATING**
+> state. When you call
+> [adjustPanelRect](arkts-ime-inputmethodengine-panel-i.md#adjustpanelrect)
+> to adjust the panel size, the system calculates the final value based on certain rules (for example, whether
+> the panel size exceeds the screen). This callback can be used to obtain the actual panel size to refresh the
+> panel layout.
 
 **Since:** 14
 
@@ -125,8 +118,8 @@ on(type: 'sizeUpdate', callback: SizeUpdateCallback): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'sizeUpdate' | Yes | 监听当前面板的大小是否产生变化，固定取值为'sizeUpdate'。 |
-| callback | [SizeUpdateCallback](arkts-ime-inputmethodengine-sizeupdatecallback-t-sys.md) | Yes | 面板大小变化时的回调，参数包含当前软键盘面板的宽度和高度。 |
+| type | 'sizeUpdate' | Yes | Event type, which is **'sizeUpdate'**. |
+| callback | [SizeUpdateCallback](arkts-ime-inputmethodengine-sizeupdatecallback-t-sys.md) | Yes | Callback used to return the size of the soft keyboard panel, including the width and height. |
 
 ## Examples
 
@@ -145,9 +138,9 @@ panel.on('sizeUpdate', (windowSize: window.Size, keyboardArea: inputMethodEngine
 onSizeUpdate(callback: SizeUpdateCallback): void
 ```
 
-订阅面板尺寸更新（sizeUpdate）事件，当输入法面板尺寸发生变更时触发该事件，并执行指定的回调函数, 使用callback异步回调。
+Subscribe 'sizeUpdate' event.
 
-&lt;p&gt;此接口仅支持固定或悬浮态的软键盘类型Panel。&lt;/p&gt;
+&lt;p&gt;It's only used for SOFT_KEYBOARD panel with FLG_FIXED and FLG_FLOATING.&lt;/p&gt;
 
 **Since:** 23
 
@@ -163,7 +156,7 @@ onSizeUpdate(callback: SizeUpdateCallback): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [SizeUpdateCallback](arkts-ime-inputmethodengine-sizeupdatecallback-t-sys.md) | Yes | 面板尺寸更新时触发的回调函数，入参为面板尺寸信息对象。 |
+| callback | [SizeUpdateCallback](arkts-ime-inputmethodengine-sizeupdatecallback-t-sys.md) | Yes | the callback called when the panel size updates. |
 
 ## setShadow
 
@@ -177,7 +170,12 @@ ArkTS-Sta:
 setShadow(radius: double, color: string, offsetX: double, offsetY: double): void
 ```
 
-通过Panel实例设置输入法窗口阴影效果。
+Sets the shadow effect of the input method window.
+
+> **NOTE：**
+> 
+> Panels whose [PanelType](arkts-ime-inputmethodengine-paneltype-e.md) is **SOFT_KEYBOARD** and
+> [PanelFlag](arkts-ime-inputmethodengine-panelflag-e.md) is **FLG_FIXED** are not supported.
 
 **Since:** 22
 
@@ -193,18 +191,18 @@ setShadow(radius: double, color: string, offsetX: double, offsetY: double): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| radius | ArkTS-Dyn: number  <br>ArkTS-Sta：double | Yes | 窗口边缘阴影的模糊半径，单位px，取值范围[0.0, +∞)，0.0时关闭窗口边缘阴影。 |
-| color | string | Yes | 窗口边缘阴影的颜色，十六进制RGB或ARGB格式，不区分大小写，例如`#000000`或`#FF000000`。 |
-| offsetX | ArkTS-Dyn: number  <br>ArkTS-Sta：double | Yes | 窗口边缘阴影X轴的偏移量，单位px。正值向右偏移，负值向左偏移。 |
-| offsetY | ArkTS-Dyn: number  <br>ArkTS-Sta：double | Yes | 窗口边缘阴影Y轴的偏移量，单位px。正值向下偏移，负值向上偏移。 |
+| radius | ArkTS-Dyn: number  <br>ArkTS-Sta：double | Yes | Radius of the shadow. The value is a floating-point number greater than or equal to 0. 0, in px. The value **0.0** means that the shadow is disabled for the window borders. |
+| color | string | Yes | Color of the shadow. The value is a hexadecimal RGB or ARGB color code and is case insensitive, for example, `#000000` or `#FF000000`. |
+| offsetX | ArkTS-Dyn: number  <br>ArkTS-Sta：double | Yes | Offset of the shadow along the x-axis, in pixels. The value is a floating-point number. |
+| offsetY | ArkTS-Dyn: number  <br>ArkTS-Sta：double | Yes | Offset of the shadow along the y-axis, in pixels. The value is a floating-point number. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 12800017 | invalid panel type or panel flag. Possible causes: Panel's flag is FLG_FIXED. |
-| 202 | not system application. |
-| 12800013 | window manager service error. |
+| [12800017](../errorcode-inputmethod-framework.md#12800017-invalid-panel-type-or-panel-flag) | invalid panel type or panel flag. Possible causes: Panel's flag is FLG_FIXED. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | not system application. |
+| [12800013](../errorcode-inputmethod-framework.md#12800013-window-manager-service-error) | window manager service error. |
 
 ## Examples
 

@@ -1,6 +1,6 @@
 # Type
 
-Type表示base64的四种不同编码格式。
+The Type represents four different encoding formats for base64
 
 **Since:** 23
 
@@ -16,7 +16,7 @@ Type表示base64的四种不同编码格式。
 BASIC
 ```
 
-表示base64的编码格式为BASIC
+The value indicates that the encoding format of base64 is BASIC
 
 **Since:** 23
 
@@ -32,7 +32,7 @@ BASIC
 MIME
 ```
 
-表示base64的编码格式为MIME
+The value indicates that the encoding format of base64 is MIME
 
 **Since:** 23
 
@@ -48,7 +48,7 @@ MIME
 BASIC_URL_SAFE
 ```
 
-表示base64的编码格式为BASIC_URL_SAFE
+The value indicates that the encoding format of base64 is BASIC_URL_SAFE
 
 **Since:** 23
 
@@ -64,7 +64,7 @@ BASIC_URL_SAFE
 MIME_URL_SAFE
 ```
 
-表示base64的编码格式为MIME_URL_SAFE
+The value indicates that the encoding format of base64 is MIME_URL_SAFE
 
 **Since:** 23
 

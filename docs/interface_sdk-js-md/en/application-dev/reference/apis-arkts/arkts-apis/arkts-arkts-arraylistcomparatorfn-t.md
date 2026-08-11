@@ -4,7 +4,7 @@
 export type ArrayListComparatorFn<T> = (firstValue: T, secondValue: T) => double
 ```
 
-ArrayList中sort方法的比较器类型。
+This type specifies the comparator of sort in comparation.
 
 **Since:** 23
 
@@ -22,12 +22,12 @@ ArrayList中sort方法的比较器类型。
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| firstValue | T | Yes | 需要排序的前一项元素。 |
-| secondValue | T | Yes | 需要排序的后一项元素。 |
+| firstValue | T | Yes | firstValue (required) previous element. |
+| secondValue | T | Yes | secondValue (required) next element. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| ArkTS-Dyn: number  <br>ArkTS-Sta：double | number类型。 |
+| ArkTS-Dyn: number  <br>ArkTS-Sta：double | the number type |
 

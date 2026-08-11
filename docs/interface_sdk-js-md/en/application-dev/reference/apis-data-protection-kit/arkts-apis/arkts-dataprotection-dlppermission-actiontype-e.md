@@ -1,6 +1,6 @@
 # ActionType
 
-表示在文件设定的权限时间到期后所执行的动作枚举，默认为NOT_OPEN。
+Enumerates the actions to be performed when the file's permission expiration time is reached. The default value is **NOT_OPEN**.
 
 **Since:** 21
 
@@ -16,7 +16,7 @@
 NOT_OPEN = 0
 ```
 
-表示超过权限管控时间后，用户无权限打开DLP文件。
+Users are not allowed to open the DLP file when the file's permission expiration time is reached.
 
 **Since:** 21
 
@@ -32,7 +32,7 @@ NOT_OPEN = 0
 OPEN = 1
 ```
 
-表示超过权限管控时间后，登录账号仍可打开DLP文件，且拥有编辑权限。
+Logged-in accounts can still open and edit the DLP file when the file's permission expiration time is reached.
 
 **Since:** 21
 

@@ -12,7 +12,7 @@ import { cacheDownload } from 'kits/@kit.BasicServicesKit';
 function offDownloadSuccess(url: string, callback?: Callback<void>): void
 ```
 
-取消订阅预下载的完成事件。使用callback异步回调。
+Unsubscribes from the pre-download completion events. This API uses an asynchronous callback to return the result.
 
 **Since:** 23
 
@@ -26,8 +26,8 @@ function offDownloadSuccess(url: string, callback?: Callback<void>): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| url | string | Yes | 待注册回调的url，url字符串的最大长度为8192字节。 |
-| callback | [Callback](arkts-basicservices-base-callback-i.md)&lt;void&gt; | No | 回调函数。若不填该参数，表示url下的所有完成回调函数。 |
+| url | string | Yes | Callback URL to be registered, with a maximum of 8,192 bytes. |
+| callback | [Callback](arkts-basicservices-base-callback-i.md)&lt;void&gt; | No | Callback to unregister. If this parameter is left blank, all completion callback functions of the URL are unregistered. |
 
 ## Examples
 

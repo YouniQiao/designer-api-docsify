@@ -56,14 +56,10 @@ let modelFile = '/path/to/xxx.ms';
 mindSporeLite.loadTrainModelFromFile(modelFile).then((mindSporeLiteModel: mindSporeLite.Model) => {
   let modelInputs: mindSporeLite.MSTensor[] = mindSporeLiteModel.getInputs();
   if (modelInputs == null) {
-    console.error(`Failed to get model inputs. Model file: ${modelFile}, Result: null`);
-  } else if (modelInputs.length === 0) {
-    console.error(`Failed to get model inputs. Model file: ${modelFile}, Input count: 0`);
+    console.error('MS_LITE_ERR: getInputs failed.')
   } else {
-    console.info(`Succeeded in getting model inputs. Model file: ${modelFile}, Input name: ${modelInputs[0].name}`);
+    console.info(modelInputs[0].name);
   }
-}).catch((error: Error) => {
-  console.error(`Failed to load train model from file. Model file: ${modelFile}, Error: ${error.message}`);
-});
+})
 ```
 

@@ -10,12 +10,6 @@ ArcSwiper容器组件的控制器，可以将此对象绑定至ArcSwiper组件�
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Circle
 
-## 导入模块
-
-```TypeScript
-import { ArcSwiperAttribute, ArcSwiper, ArcDirection, ArcSwiperController, ArcDotIndicator } from 'kits/@kit.ArkUI';
-```
-
 ## constructor
 
 ```TypeScript

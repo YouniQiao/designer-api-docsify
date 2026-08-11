@@ -12,7 +12,7 @@ import { pasteboard } from 'kits/@kit.BasicServicesKit';
 function createWantRecord(want: Want): PasteDataRecord
 ```
 
-创建一条Want内容条目。
+Creates a **PasteDataRecord** object of the Want type.
 
 **Since:** 7
 
@@ -30,13 +30,13 @@ function createWantRecord(want: Want): PasteDataRecord
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| want | [Want](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-want-want-c.md) | Yes | Want内容。 |
+| want | [Want](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-want-want-c.md) | Yes | Want content. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [PasteDataRecord](arkts-basicservices-pasteboard-pastedatarecord-i.md) | 一条新建的Want内容条目。 |
+| [PasteDataRecord](arkts-basicservices-pasteboard-pastedatarecord-i.md) | New **PasteDataRecord** object of the Want type. |
 
 ## Examples
 

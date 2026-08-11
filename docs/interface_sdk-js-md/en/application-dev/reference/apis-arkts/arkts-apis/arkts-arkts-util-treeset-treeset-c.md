@@ -1,6 +1,6 @@
 # TreeSet
 
-TreeSet基于[TreeMap](arkts-util-treemap.md)实现，在TreeSet中，仅处理元素的值（value），不单独处理键（key）。TreeSet的每个元素在底层TreeMap中同时作为key和value存储，因此元素中value唯一且有序。
+TreeSet is implemented based on TreeMap. In TreeSet, only value objects are processed.TreeSet can be used to store values, each of which must be unique.
 
 **Since:** 8
 
@@ -22,7 +22,7 @@ import { TreeSet } from 'kits/@kit.ArkTS';
 $_iterator(): IterableIterator<T>
 ```
 
-返回一个迭代器，每一项都是一个JavaScript对象。
+returns an ES6 iterator.Each item of the iterator is a Javascript Object
 
 **Since:** 23
 
@@ -38,7 +38,7 @@ $_iterator(): IterableIterator<T>
 
 | Type | Description |
 | --- | --- |
-| [IterableIterator](arkts-arkts-iterator-iterableiterator-i.md)&lt;T&gt; | TreeSet的迭代器。 |
+| [IterableIterator](arkts-arkts-iterator-iterableiterator-i.md)&lt;T&gt; | an iterator for the TreeSet |
 
 ## [Symbol.iterator]
 
@@ -46,7 +46,7 @@ $_iterator(): IterableIterator<T>
 [Symbol.iterator](): IterableIterator<T>
 ```
 
-返回一个迭代器，迭代器的每一项为容器中的元素值。
+returns an ES6 iterator.Each item of the iterator is a Javascript Object
 
 **Since:** 8
 
@@ -62,13 +62,13 @@ $_iterator(): IterableIterator<T>
 
 | Type | Description |
 | --- | --- |
-| [IterableIterator](arkts-arkts-iterator-iterableiterator-i.md)&lt;T&gt; | 返回包含TreeSet中所有元素的迭代器。 |
+| [IterableIterator](arkts-arkts-iterator-iterableiterator-i.md)&lt;T&gt; |  |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 10200011 | The Symbol.iterator method cannot be bound. |
+| [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) | The Symbol.iterator method cannot be bound. |
 
 ## Examples
 
@@ -111,7 +111,7 @@ for(let i = 0; i < 10; i++) {
 add(value: T): boolean
 ```
 
-向容器中添加指定元素。不建议插入null值，可能会影响排序结果；添加自定义类型元素时，需确保TreeSet在构造时已提供比较函数。
+If the set does not contain the element, the specified element is added
 
 **Since:** 8
 
@@ -127,19 +127,19 @@ add(value: T): boolean
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | T | Yes | 向TreeSet中添加的值元素。 |
+| value | T | Yes | the element to add to the set |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| boolean | 成功添加新元素至容器返回true，当元素已存在时返回false。 |
+| boolean | whether the element was already present |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 10200011 | The add method cannot be bound. |
+| [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) | The add method cannot be bound. |
 
 ## Examples
 
@@ -155,7 +155,7 @@ console.info("result:", result); // result: true
 clear(): void
 ```
 
-清除容器中的所有元素，并将length置为0。
+Clears all element groups in a set
 
 **Since:** 8
 
@@ -171,7 +171,7 @@ clear(): void
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 10200011 | The clear method cannot be bound. |
+| [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) | The clear method cannot be bound. |
 
 ## Examples
 
@@ -190,7 +190,7 @@ console.info("result:", result); // result: true
 constructor(comparator?: (firstValue: T, secondValue: T) => boolean)
 ```
 
-TreeSet的构造函数，支持通过比较函数对元素进行升序或降序排序。当插入自定义类型时，必须提供比较函数。
+A constructor used to create a TreeSet object.
 
 **Since:** 8
 
@@ -206,13 +206,13 @@ TreeSet的构造函数，支持通过比较函数对元素进行升序或降序�
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| comparator | (firstValue: T, secondValue: T) =&gt; boolean | No | 比较函数。 comparator（可选）用户自定义的比较函数。 firstValue（必填）前一项元素。 secondValue（必填）后一项元素。 |
+| comparator | (firstValue: T, secondValue: T) =&gt; boolean | No | comparator comparator (Optional) User-defined comparison functions. firstValue (required) previous element. secondValue (required) next element. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 10200012 | The TreeSet's constructor cannot be directly invoked. |
+| [10200012](../errorcode-utils.md#10200012-constructor-calling-failure) | The TreeSet's constructor cannot be directly invoked. |
 
 ## Examples
 
@@ -262,7 +262,7 @@ console.info("treeSet: ", ts1.length);
 constructor(comparator?: TreeSetComparator<T>)
 ```
 
-TreeSet的构造函数，支持通过比较函数对元素进行升序或降序排序。当插入自定义类型时，必须提供比较函数。
+A constructor used to create a TreeSet object.
 
 **Since:** 23
 
@@ -278,7 +278,7 @@ TreeSet的构造函数，支持通过比较函数对元素进行升序或降序�
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| comparator | [TreeSetComparator](arkts-arkts-treesetcomparator-t.md)&lt;T&gt; | No | 比较函数。 comparator（可选）用户自定义的比较函数。 |
+| comparator | [TreeSetComparator](arkts-arkts-treesetcomparator-t.md)&lt;T&gt; | No | comparator comparator (Optional) User-defined comparison functions. |
 
 ## entries
 
@@ -286,7 +286,7 @@ TreeSet的构造函数，支持通过比较函数对元素进行升序或降序�
 entries(): IterableIterator<[T, T]>
 ```
 
-返回包含此容器中元素的新迭代器对象，每个元素以[value, value]的形式返回。
+Returns a new Iterator object that contains the [key, value] pairs for each element in the Set object in insertion order
 
 **Since:** 8
 
@@ -302,13 +302,13 @@ entries(): IterableIterator<[T, T]>
 
 | Type | Description |
 | --- | --- |
-| [IterableIterator](arkts-arkts-iterator-iterableiterator-i.md)&lt;[T, T]&gt; | 返回包含TreeSet中所有元素键值对的迭代器对象，每个键值对中键与值相同，均为元素本身。 |
+| [IterableIterator](arkts-arkts-iterator-iterableiterator-i.md)&lt;[T, T]&gt; |  |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 10200011 | The entries method cannot be bound. |
+| [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) | The entries method cannot be bound. |
 
 ## Examples
 
@@ -343,7 +343,7 @@ for(let i = 0; i < 10; i++) {
 forEach(callbackFn: (value?: T, key?: T, set?: TreeSet<T>) => void, thisArg?: Object): void
 ```
 
-通过回调函数来遍历实例对象上的元素。
+Executes a provided function once for each value in the Set object.
 
 **Since:** 8
 
@@ -359,14 +359,14 @@ forEach(callbackFn: (value?: T, key?: T, set?: TreeSet<T>) => void, thisArg?: Ob
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callbackFn | (value?: T, key?: T, set?: TreeSet&lt;T&gt;) =&gt; void | Yes | 遍历实例对象中每个元素时调用的回调函数，开发者可在回调中对元素及其下标进行自定义处理。 |
-| thisArg | Object | No | callbackFn被调用时用作this值。当需要在回调函数中使用特定的this上下文（如访问外部对象属性）时传入此参数。 不传入时默认值为当前实例对象，回调函数中的this指向TreeSet实例本身。 |
+| callbackFn | (value?: T, key?: T, set?: TreeSet&lt;T&gt;) =&gt; void | Yes | callbackFn callbackFn (required) A function that accepts up to three arguments. The function to be called for each element. |
+| thisArg | Object | No | thisArg thisArg (Optional) The value to be used as this value for when callbackFn is called. If thisArg is omitted, undefined is used as the this value. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 10200011 | The forEach method cannot be bound. |
+| [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) | The forEach method cannot be bound. |
 
 ## Examples
 
@@ -398,7 +398,7 @@ for(let i = 0; i < 10; i++) {
 forEach(callbackFn: TreeSetForEachCb<T>): void
 ```
 
-通过回调函数来遍历实例对象上的元素及其下标。
+Executes a provided function once for each value in the Set object.
 
 **Since:** 23
 
@@ -414,7 +414,7 @@ forEach(callbackFn: TreeSetForEachCb<T>): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callbackFn | [TreeSetForEachCb](arkts-arkts-treesetforeachcb-t.md)&lt;T&gt; | Yes | 回调函数。 |
+| callbackFn | [TreeSetForEachCb](arkts-arkts-treesetforeachcb-t.md)&lt;T&gt; | Yes | callbackFn |
 
 ## getFirstValue
 
@@ -422,7 +422,7 @@ forEach(callbackFn: TreeSetForEachCb<T>): void
 getFirstValue(): T
 ```
 
-获取容器中排序第一的元素，为空时返回undefined。
+Gets the first elements in a set
 
 **Since:** 8
 
@@ -438,14 +438,14 @@ getFirstValue(): T
 
 | Type | Description |
 | --- | --- |
-| T | 返回排序第一的数据，为空时返回undefined。 |
+| T | value or undefined |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 10200011 | The getFirstValue method cannot be bound. |
-| 10200010 | Container is empty.<br>**Applicable version:** 23 and later  **ArkTS mode:** This error code applies only to ArkTS-Sta. |
+| [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) | The getFirstValue method cannot be bound. |
+| [10200010](../errorcode-utils.md#10200010-empty-container) | Container is empty.<br>**Applicable version:** 23 and later  **ArkTS mode:** This error code applies only to ArkTS-Sta. |
 
 ## Examples
 
@@ -463,7 +463,7 @@ console.info("result:", result); // result: sparrow
 getHigherValue(key: T): T
 ```
 
-获取容器中比传入元素排序靠后一位的元素，为空时返回undefined。
+Returns the least element greater than or equal to the specified key if the key does not exist, undefined is returned
 
 **Since:** 8
 
@@ -479,19 +479,19 @@ getHigherValue(key: T): T
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| key | T | Yes | 作为查找基准的元素，用于定位排序中比该元素靠后一位的数据。 |
+| key | T | Yes | the key to compare against |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| T | 返回排序中传入元素后一位的数据。为空时返回undefined。 |
+| T | key or undefined |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 10200011 | The getHigherValue method cannot be bound. |
+| [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) | The getHigherValue method cannot be bound. |
 
 ## Examples
 
@@ -510,7 +510,7 @@ console.info("result:", result); // result: squirrel
 getHigherValue(key: T): T | undefined
 ```
 
-获取容器中比传入元素排序靠后一位的元素，如果key不存在，则返回undefined。
+Returns the least element greater than or equal to the specified key if the key does not exist, undefined is returned
 
 **Since:** 23
 
@@ -526,19 +526,19 @@ getHigherValue(key: T): T | undefined
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| key | T | Yes | 对比的元素值。 |
+| key | T | Yes | the key to compare against |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| T | 如果存在则返回指定key元素的后一位值，否则返回undefined。 |
+| T | the higher value of the given key's element if exists, undefined otherwise |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 10200010 | Container is empty. |
+| [10200010](../errorcode-utils.md#10200010-empty-container) | Container is empty. |
 
 ## getLastValue
 
@@ -546,7 +546,7 @@ getHigherValue(key: T): T | undefined
 getLastValue(): T
 ```
 
-获取容器中排序最后的数据，为空时返回undefined。
+Gets the last elements in a set
 
 **Since:** 8
 
@@ -562,14 +562,14 @@ getLastValue(): T
 
 | Type | Description |
 | --- | --- |
-| T | 返回排序最后的数据，为空时返回undefined。 |
+| T | value or undefined |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 10200011 | The getLastValue method cannot be bound. |
-| 10200010 | Container is empty.<br>**Applicable version:** 23 and later  **ArkTS mode:** This error code applies only to ArkTS-Sta. |
+| [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) | The getLastValue method cannot be bound. |
+| [10200010](../errorcode-utils.md#10200010-empty-container) | Container is empty.<br>**Applicable version:** 23 and later  **ArkTS mode:** This error code applies only to ArkTS-Sta. |
 
 ## Examples
 
@@ -587,7 +587,7 @@ console.info("result:", result); // result: squirrel
 getLowerValue(key: T): T
 ```
 
-获取容器中比传入元素排序靠前一位的元素，为空时返回undefined。
+Returns the greatest element smaller than or equal to the specified key if the key does not exist, undefined is returned
 
 **Since:** 8
 
@@ -603,19 +603,19 @@ getLowerValue(key: T): T
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| key | T | Yes | 作为查找基准的元素值，用于定位排序中比该元素靠前一位的数据。 |
+| key | T | Yes | the key to compare against |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| T | 返回排序中传入元素前一位的数据，为空时返回undefined。 |
+| T | key or undefined |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 10200011 | The getLowerValue method cannot be bound. |
+| [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) | The getLowerValue method cannot be bound. |
 
 ## Examples
 
@@ -634,7 +634,7 @@ console.info("result:", result); // result: gander
 getLowerValue(key: T): T | undefined
 ```
 
-获取容器中比传入元素排序靠前一位的元素，如果key不存在，则返回undefined。
+Returns the greatest element smaller than or equal to the specified key if the key does not exist, undefined is returned
 
 **Since:** 23
 
@@ -650,19 +650,19 @@ getLowerValue(key: T): T | undefined
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| key | T | Yes | 对比的元素值。 |
+| key | T | Yes | the key to compare against |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| T | 如果存在则返回指定key元素的前一位值，否则返回undefined。 |
+| T | the lower value of the given key's element if exists, undefined otherwise |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 10200010 | Container is empty. |
+| [10200010](../errorcode-utils.md#10200010-empty-container) | Container is empty. |
 
 ## has
 
@@ -670,7 +670,7 @@ getLowerValue(key: T): T | undefined
 has(value: T): boolean
 ```
 
-判断容器中是否包含指定元素。
+Returns whether the Set object contains the elements
 
 **Since:** 8
 
@@ -686,19 +686,19 @@ has(value: T): boolean
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | T | Yes | 要判断是否存在于容器中的目标元素。 |
+| value | T | Yes | the value to check for presence in the set |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| boolean | 包含指定元素返回true，不包含指定元素返回false。 |
+| boolean | the boolean type |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 10200011 | The has method cannot be bound. |
+| [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) | The has method cannot be bound. |
 
 ## Examples
 
@@ -715,7 +715,7 @@ console.info("result:", result); // result: true
 isEmpty(): boolean
 ```
 
-判断容器是否为空。
+Returns whether the Set object contains elements
 
 **Since:** 8
 
@@ -731,13 +731,13 @@ isEmpty(): boolean
 
 | Type | Description |
 | --- | --- |
-| boolean | 为空返回true，不为空返回false。 |
+| boolean | the boolean type |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 10200011 | The isEmpty method cannot be bound. |
+| [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) | The isEmpty method cannot be bound. |
 
 ## Examples
 
@@ -753,7 +753,7 @@ console.info("result:", result);  // result: true
 popFirst(): T
 ```
 
-删除容器中排序最前的数据，为空时返回undefined。
+Return and delete the first element, returns undefined if tree set is empty
 
 **Since:** 8
 
@@ -769,14 +769,14 @@ popFirst(): T
 
 | Type | Description |
 | --- | --- |
-| T | 返回删除的数据，为空时返回undefined。 |
+| T | first value or undefined |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 10200011 | The popFirst method cannot be bound. |
-| 10200010 | Container is empty.<br>**Applicable version:** 23 and later  **ArkTS mode:** This error code applies only to ArkTS-Sta. |
+| [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) | The popFirst method cannot be bound. |
+| [10200010](../errorcode-utils.md#10200010-empty-container) | Container is empty.<br>**Applicable version:** 23 and later  **ArkTS mode:** This error code applies only to ArkTS-Sta. |
 
 ## Examples
 
@@ -794,7 +794,7 @@ console.info("result:", result); // result: sparrow
 popLast(): T
 ```
 
-删除容器中排序最后的数据，为空时返回undefined。
+Return and delete the last element, returns undefined if tree set is empty
 
 **Since:** 8
 
@@ -810,14 +810,14 @@ popLast(): T
 
 | Type | Description |
 | --- | --- |
-| T | 返回删除的数据，为空时返回undefined。 |
+| T | last value or undefined |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 10200011 | The popLast method cannot be bound. |
-| 10200010 | Container is empty.<br>**Applicable version:** 23 and later  **ArkTS mode:** This error code applies only to ArkTS-Sta. |
+| [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) | The popLast method cannot be bound. |
+| [10200010](../errorcode-utils.md#10200010-empty-container) | Container is empty.<br>**Applicable version:** 23 and later  **ArkTS mode:** This error code applies only to ArkTS-Sta. |
 
 ## Examples
 
@@ -835,7 +835,7 @@ console.info("result:", result); // result: squirrel
 remove(value: T): boolean
 ```
 
-删除指定的元素。
+Remove a specified element from a Set object
 
 **Since:** 8
 
@@ -851,19 +851,19 @@ remove(value: T): boolean
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | T | Yes | 要从容器中删除的目标元素。 |
+| value | T | Yes | the element to remove from the set |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| boolean | 成功删除元素返回true，指定元素不存在返回false。 |
+| boolean | the boolean type(Is there contain this element) |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 10200011 | The remove method cannot be bound. |
+| [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) | The remove method cannot be bound. |
 
 ## Examples
 
@@ -881,7 +881,7 @@ console.info("result:", result); // result: true
 values(): IterableIterator<T>
 ```
 
-返回包含此容器中元素值的新迭代器对象。
+Returns a new Iterator object that contains the values contained in this set
 
 **Since:** 8
 
@@ -897,13 +897,13 @@ values(): IterableIterator<T>
 
 | Type | Description |
 | --- | --- |
-| [IterableIterator](arkts-arkts-iterator-iterableiterator-i.md)&lt;T&gt; | 返回包含TreeSet中所有元素的迭代器。 |
+| [IterableIterator](arkts-arkts-iterator-iterableiterator-i.md)&lt;T&gt; |  |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 10200011 | The values method cannot be bound. |
+| [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) | The values method cannot be bound. |
 
 ## Examples
 
@@ -925,7 +925,7 @@ for (let value of values) {
 length: number
 ```
 
-TreeSet的元素个数。
+Gets the element number of the TreeSet.
 
 **Type:** number
 

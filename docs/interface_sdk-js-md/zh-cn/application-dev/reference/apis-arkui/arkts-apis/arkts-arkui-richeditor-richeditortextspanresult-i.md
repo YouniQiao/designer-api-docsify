@@ -21,7 +21,7 @@ offsetInSpan: [
 
 文本Span内容里有效内容的起始和结束位置。
 
-**类型：** [         int,         int     ]
+**类型：** [         int,         int     ]
 
 **起始版本：** 23
 
@@ -121,7 +121,7 @@ textStyle: RichEditorTextStyleResult
 
 文本Span样式信息。
 
-**类型：** [RichEditorTextStyleResult](arkts-arkui-richeditor-richeditortextstyleresult-i.md)
+**类型：** [RichEditorTextStyleResult](../arkts-components/arkts-arkui-richeditortextstyleresult-i.md)
 
 **起始版本：** 23
 
@@ -143,7 +143,7 @@ url信息。
 
 默认值：undefined
 
-**类型：** [RichEditorUrlStyle](../arkts-components/arkts-arkui-richeditorurlstyle-i.md)
+**类型：** [RichEditorUrlStyle](arkts-arkui-richeditor-richeditorurlstyle-i.md)
 
 **起始版本：** 23
 

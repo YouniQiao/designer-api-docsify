@@ -12,11 +12,11 @@ import { networkManager } from 'kits/@kit.MDMKit';
 function getDomainFilterRules(admin: Want): Array<DomainFilterRule>
 ```
 
-查询设备域名过滤规则。适用于企业网络安全审计场景，例如检查当前域名过滤策略配置、审计域名访问控制规则、验证域名过滤规则是否正确执行、排查域名访问问题，帮助企业审核和验证域名访问控制策略，确保网络访问控制符合安全要求。
+Obtains domain name filtering rules. This API is suitable for enterprise network security audit scenarios, such as checking current domain name filtering policy configurations, auditing domain name access control rules, verifying whether domain name filtering rules are correctly executed, and troubleshooting domain name access issues. It helps enterprises review and validate domain name access control policies to ensure network access control complies with security requirements.
 
-API version 21及之前版本，仅支持IPv4。从API version 22开始，支持IPv4和IPv6。
+In API version 21 and earlier versions, only IPv4 is supported. IPv4 and IPv6 are supported since API version 22.
 
-从API version 23开始，支持[LogType](arkts-mdm-networkmanager-logtype-e.md)。
+[LogType](arkts-mdm-networkmanager-logtype-e.md) is supported since API version 23.
 
 **Since:** 12
 
@@ -34,22 +34,22 @@ API version 21及之前版本，仅支持IPv4。从API version 22开始，支持
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| admin | [Want](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-want-want-c.md) | Yes | 企业设备管理扩展组件。Want中必须包含企业设备管理扩展能力的abilityName和所在应用的bundleName。 |
+| admin | [Want](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-want-want-c.md) | Yes | EnterpriseAdminExtensionAbility. **Want** must contain the ability name of the EnterpriseAdminExtensionAbility and the bundle name of the application. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Array&lt;DomainFilterRule&gt; | 返回当前设备配置的域名过滤规则列表，当方法调用错误时会抛出异常。 |
+| Array&lt;DomainFilterRule&gt; | A list of domain name filtering rules configured for the device is returned. If the operation fails, an exception will be thrown. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
-| 201 | Permission verification failed. The application does not have the permission required to call the API. |
-| 9200001 | The application is not an administrator application of the device. |
-| 9200002 | The administrator application does not have permission to manage the device. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed. The application does not have the permission required to call the API. |
+| [9200001](../errorcode-enterpriseDeviceManager.md#9200001-deviceadmin-not-enabled) | The application is not an administrator application of the device. |
+| [9200002](../errorcode-enterpriseDeviceManager.md#9200002-permission-denied) | The administrator application does not have permission to manage the device. |
 
 ## Examples
 
@@ -65,7 +65,7 @@ let wantTemp: Want = {
 let domainFilterRule: Array<networkManager.DomainFilterRule>;
 try {
   domainFilterRule = networkManager.getDomainFilterRules(wantTemp);
-  console.info('Succeeded in getting domain filter rules');
+  console.info('Succeeded in getting  domain filter rules');
 } catch (err) {
   console.error(`Failed to get domain filter rules. Code: ${err.code}, message: ${err.message}`);
 }

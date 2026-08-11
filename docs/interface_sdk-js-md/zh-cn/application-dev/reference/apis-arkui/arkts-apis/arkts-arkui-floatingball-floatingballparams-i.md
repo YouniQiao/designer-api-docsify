@@ -10,12 +10,6 @@
 
 **系统能力：** SystemCapability.Window.SessionManager
 
-## 导入模块
-
-```TypeScript
-import { floatingBall } from 'kits/@kit.ArkUI';
-```
-
 ## backgroundColor
 
 ```TypeScript

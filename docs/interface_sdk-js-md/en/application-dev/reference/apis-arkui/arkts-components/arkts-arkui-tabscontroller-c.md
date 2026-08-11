@@ -1,6 +1,7 @@
 # TabsController
 
-Tabs组件的控制器，用于控制Tabs组件进行页签切换。不支持一个TabsController控制多个Tabs组件。
+Defines a tab controller, which is used to control switching of tabs. One **TabsController** cannot control multiple  
+**Tabs** components.
 
 **Since:** 7
 
@@ -16,7 +17,7 @@ Tabs组件的控制器，用于控制Tabs组件进行页签切换。不支持一
 changeIndex(value: number): void
 ```
 
-控制Tabs切换到指定页签。在需要通过按钮、下拉菜单或其他控件实现页签跳转功能时使用，例如点击“上一页”/“下一页”按钮切换页签。
+Switches to the specified tab.
 
 **Since:** 7
 
@@ -32,7 +33,7 @@ changeIndex(value: number): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | number | Yes | 页签在Tabs里的索引值，索引值从0开始。取值范围：[0, 页签总数-1]。设置范围外的值时按0处理。 |
+| value | number | Yes | Index of the tab. The value starts from 0.&lt;br&gt;**NOTE：**&lt;br&gt;If this parameter is set to a value less than 0 or greater than the maximum number, the default value **0** is used. |
 
 ## constructor
 
@@ -40,7 +41,7 @@ changeIndex(value: number): void
 constructor()
 ```
 
-TabsController的构造函数。
+A constructor used to create a **TabsController** object.
 
 **Since:** 7
 
@@ -58,16 +59,20 @@ TabsController的构造函数。
 preloadItems(indices: Optional<Array<number>>): Promise<void>
 ```
 
-控制Tabs预加载指定子节点。调用该接口后会一次性加载所有指定的子节点，因此为了性能考虑，建议分批加载子节点。适用于需要提前加载某些页签以提高切换性能的场景，如某些页签内容较复杂或资源较多时，可预加载以优化用户体验。
+Preloads child nodes. After this API is called, all specified child nodes will be loaded at once. Therefore, for performance considerations, it is recommended that you load child nodes in batches.
 
-> **说明：**
-
-> - Tabs的preloadItems需要在Tabs创建之后去调用，首次预加载推荐在Tabs的[onAppear](../arkts-apis/arkts-arkui-common-commonmethod-i.md/arkts-arkui-common-commonmethod-i.md#onappear)生命周期中去控制。
+> **NOTE：**
 > 
-> - 如果TabsController对象未绑定任何Tabs组件，直接调用该接口，会抛出JS异常。因此使用该接口时，建议通过try-catch捕获异常。
+> - **preloadItems** of **Tabs** needs to be called after **Tabs** is created. You are advised to control the first
+> preloading in the [onAppear](../arkts-apis/arkts-arkui-common-commonmethod-i.md/arkts-arkui-common-commonmethod-i.md#onappear) lifecycle of **Tabs**.
 > 
-> - 使用preloadItems预加载标签页时，若需自定义TabBar上的显示内容，推荐使用ComponentContent实现，使用示例请参考
-> [示例9](../../../reference/apis-arkui/arkui-ts/ts-container-tabcontent.md#示例9通过componentcontent设置tabbar)。
+> - If the **TabsController** object is not bound to any **Tabs** component, a JavaScript exception will be thrown
+> when this API is called. Therefore, you are advised to use **try-catch** to handle potential exceptions when
+> calling this API.
+> 
+> - When using **preloadItems** to preload tabs, you are advised to use **ComponentContent** to customize the
+> content displayed on the tab bar. For details, see
+> [Example 10](../../../reference/apis-arkui/arkui-ts/ts-container-tabcontent.md#example-10-setting-tabbar-using-componentcontent).
 
 **Since:** 12
 
@@ -85,19 +90,19 @@ preloadItems(indices: Optional<Array<number>>): Promise<void>
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| indices | [Optional](../arkts-apis/arkts-arkui-optional-t.md)&lt;Array&lt;number&gt;&gt; | Yes | 需预加载的子节点的下标数组。&lt;br/&gt;默认值：空数组。 |
+| indices | [Optional](../arkts-apis/arkts-arkui-optional-t.md)&lt;Array&lt;number&gt;&gt; | Yes | Array of indexes of the child nodes to preload.&lt;br&gt;The default value is an empty array. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise对象，无返回结果。 |
+| Promise&lt;void&gt; | Promise used to return the value. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter invalid. Possible causes: &lt;br&gt; 1. The parameter type is not Array&lt;number&gt;. &lt;br&gt; 2. The parameter is an empty array. &lt;br&gt; 3. The parameter contains an invalid index. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter invalid. Possible causes: &lt;br&gt; 1. The parameter type is not Array&lt;number&gt;. &lt;br&gt; 2. The parameter is an empty array. &lt;br&gt; 3. The parameter contains an invalid index. |
 
 ## setTabBarOpacity
 
@@ -105,15 +110,16 @@ preloadItems(indices: Optional<Array<number>>): Promise<void>
 setTabBarOpacity(opacity: number): void
 ```
 
-设置TabBar的不透明度。适用于需要调整TabBar显示透明度的场景，如TabBar渐隐渐显效果、降低TabBar视觉干扰突出内容等。
+Sets the opacity of the tab bar.
 
-> **说明：**
-
-> 当使用
-> [bindTabsToScrollable](../../../reference/apis-arkui/arkts-apis-uicontext-uicontext.md#bindtabstoscrollable13)或
-> [bindTabsToNestedScrollable](../../../reference/apis-arkui/arkts-apis-uicontext-uicontext.md#bindtabstonestedscrollable13)
-> 等接口绑定了Tabs组件和可滚动容器组件后，在滑动可滚动容器组件时，会触发所有与其绑定的Tabs组件的TabBar的显示和隐藏动效，调用setTabBarOpacity接口设置的TabBar不透明度会失效。因此不建议同时使用
-> bindTabsToScrollable、bindTabsToNestedScrollable和setTabBarOpacity接口。
+> **NOTE：**
+> 
+> When a **Tabs** component is bound to a scrollable container using APIs like
+> [bindTabsToScrollable](../../../reference/apis-arkui/arkts-apis-uicontext-uicontext.md#bindtabstoscrollable13)
+> or bindTabsToNestedScrollable](../arkts-apis-uicontext-uicontext.md#bindtabstonestedscrollable13), scrolling the
+> container will trigger the display and hide animations of the tab bar for all **Tabs** components bound to it. In
+> this case, any **TabBar** opacity set via the **setTabBarOpacity** API will be overridden. Therefore, avoid using
+> **bindTabsToScrollable**, **bindTabsToNestedScrollable**, and **setTabBarOpacity** simultaneously.
 
 **Since:** 13
 
@@ -131,7 +137,7 @@ setTabBarOpacity(opacity: number): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| opacity | number | Yes | 设置TabBar的不透明度，值为1.0表示完全不透明，值为0.0表示完全透明。取值范围为[0.0, 1.0]，设置的值小于0.0时，按0.0处理，设置的值大于1.0时，按1.0处理。&lt;br&gt; 默认值：1.0。 |
+| opacity | number | Yes | Opacity of the tab bar. The value range is [0.0, 1.0]. A value less than 0.0 is handed as **0.0**. A value greater than **1.0** is handed as **1.0**.&lt;br&gt; Default value: **1.0**. |
 
 ## setTabBarTranslate
 
@@ -139,15 +145,16 @@ setTabBarOpacity(opacity: number): void
 setTabBarTranslate(translate: TranslateOptions): void
 ```
 
-设置TabBar的平移距离。适用于需要实现TabBar动态位置调整的场景，如TabBar滑动隐藏显示效果、配合页面滚动实现沉浸式体验等。
+Sets the translation distance of the tab bar.
 
-> **说明：**
-
-> 当使用
-> [bindTabsToScrollable](../../../reference/apis-arkui/arkts-apis-uicontext-uicontext.md#bindtabstoscrollable13)或
-> [bindTabsToNestedScrollable](../../../reference/apis-arkui/arkts-apis-uicontext-uicontext.md#bindtabstonestedscrollable13)
-> 等接口绑定了Tabs组件和可滚动容器组件后，在滑动可滚动容器组件时，会触发所有与其绑定的Tabs组件的TabBar的显示和隐藏动效，调用setTabBarTranslate接口设置的TabBar平移距离会失效。因此不建议同时使
-> 用bindTabsToScrollable、bindTabsToNestedScrollable和setTabBarTranslate接口。
+> **NOTE：**
+> 
+> When a **Tabs** component is bound to a scrollable container using APIs like
+> [bindTabsToScrollable](../../../reference/apis-arkui/arkts-apis-uicontext-uicontext.md#bindtabstoscrollable13)
+> or bindTabsToNestedScrollable](../arkts-apis-uicontext-uicontext.md#bindtabstonestedscrollable13), scrolling the
+> container will trigger the display and hide animations of the tab bar for all **Tabs** components bound to it. In
+> this case, calling the **setTabBarTranslate** API has no effect. Therefore, avoid using **bindTabsToScrollable**,
+> **bindTabsToNestedScrollable**, and **setTabBarTranslate** simultaneously.
 
 **Since:** 13
 
@@ -165,5 +172,5 @@ setTabBarTranslate(translate: TranslateOptions): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| translate | [TranslateOptions](arkts-arkui-translateoptions-i.md) | Yes | 设置TabBar的平移距离。 |
+| translate | [TranslateOptions](arkts-arkui-translateoptions-i.md) | Yes | Translation distance of the tab bar. |
 

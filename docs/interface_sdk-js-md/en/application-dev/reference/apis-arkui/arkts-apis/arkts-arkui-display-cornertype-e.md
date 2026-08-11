@@ -1,6 +1,6 @@
 # CornerType
 
-屏幕圆角类型枚举。
+Enumerates the types of corners on the screen.
 
 **Since:** 23
 
@@ -16,7 +16,7 @@
 TOP_LEFT = 0
 ```
 
-屏幕左上方的圆角。
+Top-left corner of the screen.
 
 **Since:** 23
 
@@ -34,7 +34,7 @@ TOP_LEFT = 0
 TOP_RIGHT = 1
 ```
 
-屏幕右上方的圆角。
+Top-right corner of the screen.
 
 **Since:** 23
 
@@ -52,7 +52,7 @@ TOP_RIGHT = 1
 BOTTOM_RIGHT  = 2
 ```
 
-屏幕右下方的圆角。
+Bottom-right corner of the screen.
 
 **Since:** 23
 
@@ -70,7 +70,7 @@ BOTTOM_RIGHT  = 2
 BOTTOM_LEFT  = 3
 ```
 
-屏幕左下方的圆角。
+Bottom-left corner of the screen.
 
 **Since:** 23
 

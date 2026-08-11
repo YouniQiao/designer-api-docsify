@@ -10,12 +10,6 @@
 
 **系统能力：** SystemCapability.Advertising.Ads
 
-## 导入模块
-
-```TypeScript
-import { advertising } from 'kits/@kit.AdsKit';
-```
-
 ## onStatusChanged
 
 ```TypeScript

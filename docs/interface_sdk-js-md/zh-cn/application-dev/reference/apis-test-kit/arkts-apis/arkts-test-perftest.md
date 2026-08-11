@@ -12,12 +12,6 @@ PerfTest提供白盒性能测试能力，供开发者在测试场景使用。支
  > - 本模块接口适用于手机、平板、PC/2in1、智慧屏、车机。
 
 
-## 导入模块
-
-```TypeScript
-import { PerfTestStrategy, PerfMetric, PerfTest, PerfMeasureResult } from 'kits/@kit.TestKit';
-```
-
 ## 汇总
 
 ### 类

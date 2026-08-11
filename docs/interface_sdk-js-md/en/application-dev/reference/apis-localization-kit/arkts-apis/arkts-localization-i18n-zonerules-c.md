@@ -1,6 +1,6 @@
 # ZoneRules
 
-提供查询时区跳变规则的能力。
+Provides the API for obtaining timezone offset changing rules information.
 
 **Since:** 23
 
@@ -22,7 +22,7 @@ import { i18n } from 'kits/@kit.LocalizationKit';
 public nextTransition(date?: double): ZoneOffsetTransition
 ```
 
-获取指定时间的下一个时区跳变对象。
+Get the next timezone offset transition after date.
 
 **Since:** 23
 
@@ -38,11 +38,11 @@ public nextTransition(date?: double): ZoneOffsetTransition
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| date | double | No | 从1970年1月1日0时0分0秒到指定时间之间的毫秒数。 &lt;br&gt;默认值：系统时间。 |
+| date | double | No | Indicates milliseconds. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [ZoneOffsetTransition](arkts-localization-i18n-zoneoffsettransition-c.md) | 时区跳变对象。 |
+| [ZoneOffsetTransition](arkts-localization-i18n-zoneoffsettransition-c.md) | Returns a timezone offset transition after date. |
 

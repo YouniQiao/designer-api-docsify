@@ -1,6 +1,6 @@
 # GeometryType
 
-几何形状类型.
+Types of geometric shapes.
 
 **Since:** 18
 
@@ -16,7 +16,7 @@
 CUSTOM = 0
 ```
 
-自定义几何形状.
+A custom geometric shape.
 
 **Since:** 18
 
@@ -32,7 +32,7 @@ CUSTOM = 0
 CUBE = 1
 ```
 
-立方体.
+A cube.
 
 **Since:** 18
 
@@ -48,7 +48,7 @@ CUBE = 1
 PLANE = 2
 ```
 
-平面.
+A plane.
 
 **Since:** 18
 
@@ -64,7 +64,7 @@ PLANE = 2
 SPHERE = 3
 ```
 
-球体.
+A sphere.
 
 **Since:** 18
 
@@ -80,7 +80,7 @@ SPHERE = 3
 CYLINDER = 4
 ```
 
-圆柱体.
+A cylinder.
 
 **Since:** 23
 

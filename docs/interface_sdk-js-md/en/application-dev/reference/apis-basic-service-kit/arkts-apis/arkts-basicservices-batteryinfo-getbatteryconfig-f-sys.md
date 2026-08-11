@@ -12,7 +12,7 @@ import { batteryInfo } from 'kits/@kit.BasicServicesKit';
 function getBatteryConfig(sceneName: string): string
 ```
 
-按场景名称查询电池配置。
+Obtains the battery configuration based on the specified scenario.
 
 **Since:** 23
 
@@ -28,20 +28,20 @@ function getBatteryConfig(sceneName: string): string
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| sceneName | string | Yes | 设置场景名称；该参数必须为字符串类型。 |
+| sceneName | string | Yes | Scenario name. The value must be a string. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| string | 返回电池充电配置，否则返回""。 |
+| string | Operation result. The battery configuration is returned if the operation is successful. Otherwise, **""** is returned. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 5100101 | Failed to connect to the service. |
-| 202 | Permission verification failed. A non-system application calls a system API. |
+| [5100101](../../apis-basic-services-kit/errorcode-battery-info.md#5100101-service-connection-failure) | Failed to connect to the service. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
 
 ## Examples
 

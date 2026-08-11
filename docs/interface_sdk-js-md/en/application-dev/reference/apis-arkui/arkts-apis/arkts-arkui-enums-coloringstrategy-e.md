@@ -1,6 +1,6 @@
 # ColoringStrategy
 
-智能取色枚举类型。
+Common enum of color strategy
 
 **Since:** 23
 
@@ -16,7 +16,7 @@
 INVERT = 'invert'
 ```
 
-设置前景色为控件背景色的反色。仅支持在[foregroundColor](arkts-arkui-common-commonmethod-i.md#foregroundcolor)中设置该枚举。
+Use the inverse color strategy. Gets the inverse of the background color. Only applies to foregroundColor.
 
 **Since:** 23
 
@@ -34,8 +34,7 @@ INVERT = 'invert'
 AVERAGE = 'average'
 ```
 
-设置控件背景阴影色为控件背景阴影区域的平均色。仅支持在入参类型为ShadowOptions的  
-[shadow](arkts-arkui-common-commonmethod-i.md#shadow)中设置该枚举。
+Use the average color strategy. Get the average color of the background. Only applies to shadow.
 
 **Since:** 23
 
@@ -53,8 +52,7 @@ AVERAGE = 'average'
 PRIMARY = 'primary'
 ```
 
-设置控件背景阴影色为控件背景阴影区域的主色。仅支持在入参类型为ShadowOptions的  
-[shadow](arkts-arkui-common-commonmethod-i.md#shadow)中设置该枚举。
+Use the primary color strategy. Get the color that dominate the background color. Only applies to shadow.
 
 **Since:** 23
 

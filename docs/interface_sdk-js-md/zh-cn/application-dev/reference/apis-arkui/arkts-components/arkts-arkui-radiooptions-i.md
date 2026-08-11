@@ -64,7 +64,7 @@ indicatorType?: RadioIndicatorType
 
 配置单选框的选中样式。未设置时按照RadioIndicatorType.TICK进行显示。
 
-**类型：** [RadioIndicatorType](../arkts-apis/arkts-arkui-radio-radioindicatortype-e.md)
+**类型：** [RadioIndicatorType](arkts-arkui-radioindicatortype-e.md)
 
 **起始版本：** 12
 

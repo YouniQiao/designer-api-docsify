@@ -24,7 +24,7 @@ import { UploadResponse, RequestData, DownloadRequestOptions, DownloadResponse, 
 token: string
 ```
 
-表示下载的token，获取下载状态的依据。
+Download token, which is used to obtain the download status
 
 **Type:** string
 

@@ -1,6 +1,6 @@
 # LightWeightSet
 
-LightWeightSet可用于存储一系列值的集合，存储元素中value值唯一。
+LightWeightSet stores a set of values, each of which must be unique.
 
 **Since:** 8
 
@@ -22,7 +22,7 @@ import { LightWeightSet } from 'kits/@kit.ArkTS';
 $_iterator(): IterableIterator<T>
 ```
 
-返回一个迭代器，迭代器的每一项都是一个JavaScript对象。
+returns an ES6 iterator.Each item of the iterator is a Javascript Object
 
 **Since:** 23
 
@@ -38,7 +38,7 @@ $_iterator(): IterableIterator<T>
 
 | Type | Description |
 | --- | --- |
-| [IterableIterator](arkts-arkts-iterator-iterableiterator-i.md)&lt;T&gt; | 返回遍历LightWeightSet中所有元素的迭代器对象，每一项为容器中的元素值。 |
+| [IterableIterator](arkts-arkts-iterator-iterableiterator-i.md)&lt;T&gt; | an iterator for the LightWeightSet |
 
 ## [Symbol.iterator]
 
@@ -46,7 +46,7 @@ $_iterator(): IterableIterator<T>
 [Symbol.iterator](): IterableIterator<T>
 ```
 
-返回一个迭代器，迭代器的每一项都是一个JavaScript对象。不建议在Symbol.iterator中使用add、remove、removeAt方法，会导致死循环等不可预知的风险，可使用for循环来进行插入和删除。
+returns an ES6 iterator.Each item of the iterator is a Javascript Object
 
 **Since:** 8
 
@@ -62,13 +62,13 @@ $_iterator(): IterableIterator<T>
 
 | Type | Description |
 | --- | --- |
-| [IterableIterator](arkts-arkts-iterator-iterableiterator-i.md)&lt;T&gt; | 返回遍历LightWeightSet中所有元素的迭代器对象，每一项为容器中的元素值。 |
+| [IterableIterator](arkts-arkts-iterator-iterableiterator-i.md)&lt;T&gt; |  |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 10200011 | The Symbol.iterator method cannot be bound. |
+| [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) | The Symbol.iterator method cannot be bound. |
 
 ## Examples
 
@@ -112,7 +112,7 @@ for(let i = 0; i < 10; i++) {
 add(obj: T): boolean
 ```
 
-向容器中添加数据。若添加的元素已存在于容器中，则不会重复添加，返回false。
+Adds an element to this LightWeightSet.
 
 **Since:** 8
 
@@ -128,19 +128,19 @@ add(obj: T): boolean
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| obj | T | Yes | 添加的成员数据。若添加的值已存在于容器中，则不会重复添加。 |
+| obj | T | Yes | Target element. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| boolean | 成功添加元素返回true，要添加的元素已存在时返回false。 |
+| boolean | Operation result. The value **true** is returned if the element is added; otherwise, **false** is returned. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 10200011 | The add method cannot be bound. |
+| [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) | The add method cannot be bound. |
 
 ## Examples
 
@@ -156,7 +156,7 @@ console.info("result:", result);  // result: true
 addAll(set: LightWeightSet<T>): boolean
 ```
 
-将另一个容器的所有元素添加到当前容器。若源容器中的元素已存在于当前容器中，则跳过该元素不重复添加。
+Adds all elements in a LightWeightSet to this LightWeightSet.
 
 **Since:** 8
 
@@ -172,19 +172,19 @@ addAll(set: LightWeightSet<T>): boolean
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| set | [LightWeightSet](arkts-arkts-util-lightweightset-lightweightset-c.md)&lt;T&gt; | Yes | 提供添加元素的LightWeightSet。 |
+| set | [LightWeightSet](arkts-arkts-util-lightweightset-lightweightset-c.md)&lt;T&gt; | Yes | LightWeightSet whose elements are to be added to the current LightWeightSet. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| boolean | 成功添加元素返回true，否则返回false。 |
+| boolean | Operation result. The value **true** is returned if the element is added; otherwise, **false** is returned. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 10200011 | The addAll method cannot be bound. |
+| [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) | The addAll method cannot be bound. |
 
 ## Examples
 
@@ -205,7 +205,7 @@ console.info("result:", result);  // result: true
 clear(): void
 ```
 
-清除容器中的所有元素，并将length置为0。
+Clears this LightWeightSet and sets its length to **0**.
 
 **Since:** 8
 
@@ -221,7 +221,7 @@ clear(): void
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 10200011 | The clear method cannot be bound. |
+| [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) | The clear method cannot be bound. |
 
 ## Examples
 
@@ -240,7 +240,7 @@ console.info("result:", result);  // result: true
 constructor()
 ```
 
-LightWeightSet的构造函数。
+A constructor used to create a **LightWeightSet** instance.
 
 **Since:** 8
 
@@ -256,7 +256,7 @@ LightWeightSet的构造函数。
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 10200012 | The LightWeightSet's constructor cannot be directly invoked. |
+| [10200012](../errorcode-utils.md#10200012-constructor-calling-failure) | The LightWeightSet's constructor cannot be directly invoked. |
 
 ## Examples
 
@@ -270,7 +270,7 @@ let lightWeightSet = new LightWeightSet<number | string>();
 entries(): IterableIterator<[T, T]>
 ```
 
-返回包含此容器中所有元素对的新迭代器对象，每个元素对由相同值组成[value, value]。不建议在entries中使用add、remove、removeAt方法，会导致死循环等不可预知的风险，可使用for循环来进行插入和删除。
+Returns an iterator that contains all the elements in this LightWeightSet.
 
 **Since:** 8
 
@@ -286,13 +286,13 @@ entries(): IterableIterator<[T, T]>
 
 | Type | Description |
 | --- | --- |
-| [IterableIterator](arkts-arkts-iterator-iterableiterator-i.md)&lt;[T, T]&gt; | 返回包含LightWeightSet中所有键值对的迭代器对象，每一项为[key, value]结构的数组。 |
+| [IterableIterator](arkts-arkts-iterator-iterableiterator-i.md)&lt;[T, T]&gt; | Iterator obtained. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 10200011 | The entries method cannot be bound. |
+| [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) | The entries method cannot be bound. |
 
 ## Examples
 
@@ -325,11 +325,11 @@ for(let i = 0; i < 10; i++) {
 equal(obj: Object): boolean
 ```
 
-判断此容器与obj的构成元素是否相同。
+Checks whether the elements of this LightWeightSet are the same as those of **obj**.
 
-> **说明：**
+> **NOTE：**
 > 
-> 此接口从API version 8开始支持，从API version 12开始废弃。无替代接口。
+> This API is supported since API version 8 and deprecated since API version 12. There is no substitute API.
 
 **Since:** 8
 
@@ -345,19 +345,19 @@ equal(obj: Object): boolean
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| obj | Object | Yes | 比较对象。 |
+| obj | Object | Yes | LightWeightSet** instance to be used for comparison. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| boolean | 当obj为仅含string或number的LightWeightSet或数组，且对象内部元素构成相同时，返回true；其他情况返回false。 |
+| boolean | Returns **true** if **obj** is a LightWeightSet or an array containing only strings or numbers and the elements in them are the same; returns **false** in other cases. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 10200011 | The equal method cannot be bound. |
+| [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) | The equal method cannot be bound. |
 
 ## Examples
 
@@ -376,7 +376,7 @@ console.info("result:", result);  // result: true
 forEach(callbackFn: (value?: T, key?: T, set?: LightWeightSet<T>) => void, thisArg?: Object): void
 ```
 
-通过回调函数来遍历LightWeightSet实例对象上的元素以及元素对应的下标。不建议在forEach函数中使用add、remove、removeAt方法，会导致死循环等不可预知的风险，可使用for循环来进行插入和删除。
+Uses a callback to traverse the elements in this LightWeightSet and obtain their position indexes.
 
 **Since:** 8
 
@@ -392,14 +392,14 @@ forEach(callbackFn: (value?: T, key?: T, set?: LightWeightSet<T>) => void, thisA
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callbackFn | (value?: T, key?: T, set?: LightWeightSet&lt;T&gt;) =&gt; void | Yes | 回调函数，用于遍历LightWeightSet实例对象上的元素及其下标。 callbackFn（必填）接受最多三个参数的函数。 value 当前遍历到的元素的值，默认值为首个元素的值。 key 当前遍历到的元素（与value相同），默认值为首个元素。 set 当前调用forEach方法的实例对象，默认值为当前实例对象。 |
-| thisArg | Object | No | callbackFn被调用时用作this值。当需要改变回调函数中的this指向时传入此参数，不需要改变this指向时可省略。不传入时默认值为当前实例对象。 |
+| callbackFn | (value?: T, key?: T, set?: LightWeightSet&lt;T&gt;) =&gt; void | Yes | Callback invoked to traverse the elements in the LightWeightSet. |
+| thisArg | Object | No | Value of **this** to use when **callbackFn** is invoked. The default value is this instance. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 10200011 | The forEach method cannot be bound. |
+| [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) | The forEach method cannot be bound. |
 
 ## Examples
 
@@ -431,7 +431,7 @@ for(let i = 0; i < 10; i++) {
 forEach(callbackFn: LightWeightSetForEachCb<T>): void
 ```
 
-通过回调函数遍历实例对象中实际的key。不会对已删除的key执行回调。
+Executes the given callback function once for each real key in the map.It does not perform functions on deleted keys.
 
 **Since:** 23
 
@@ -447,7 +447,7 @@ forEach(callbackFn: LightWeightSetForEachCb<T>): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callbackFn | [LightWeightSetForEachCb](arkts-arkts-lightweightsetforeachcb-t.md)&lt;T&gt; | Yes | 对每个元素执行的回调函数。 |
+| callbackFn | [LightWeightSetForEachCb](arkts-arkts-lightweightsetforeachcb-t.md)&lt;T&gt; | Yes | A callback function to execute for each element. |
 
 ## getIndexOf
 
@@ -461,7 +461,7 @@ ArkTS-Sta:
 getIndexOf(key: T): int
 ```
 
-获取指定元素所对应的下标。
+Obtains the position index of the element with the specified key in this LightWeightSet.
 
 **Since:** 8
 
@@ -477,19 +477,19 @@ getIndexOf(key: T): int
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| key | T | Yes | 查找的指定key。 |
+| key | T | Yes | Key of the target element. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| ArkTS-Dyn: number  <br>ArkTS-Sta：int | 在LightWeightSet中指定数据的下标。若LightWeightSet中没有要查找的元素，则返回一个负值。 表示目标哈希值应该插入的位置，插入位置是从1开始计数的，负号表示这是一个插入位置而不是索引。 |
+| ArkTS-Dyn: number  <br>ArkTS-Sta：int | Position index of the element. If the element does not exist, a negative value is returned. The negative value consists of a minus sign and the position where the element (if available) should be. The position starts from 1. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 10200011 | The getIndexOf method cannot be bound. |
+| [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) | The getIndexOf method cannot be bound. |
 
 ## Examples
 
@@ -507,7 +507,7 @@ console.info("result:", result);  // result: 0
 getValueAt(index: number): T
 ```
 
-获取容器中指定下标对应的元素。
+Obtains the value of the element at the specified position in this LightWeightSet.
 
 **Since:** 8
 
@@ -523,19 +523,19 @@ getValueAt(index: number): T
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| index | number | Yes | 指定下标。需要小于等于INT32_MAX即2147483647。 |
+| index | number | Yes | Position index of the element. The value must be less than or equal to int32_max, that is , 2147483647. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| T | 返回指定下标位置的元素值。 |
+| T | Value obtained. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 10200011 | The getValueAt method cannot be bound. |
+| [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) | The getValueAt method cannot be bound. |
 
 ## getValueAt
 
@@ -543,7 +543,7 @@ getValueAt(index: number): T
 getValueAt(index: int): T | undefined
 ```
 
-获取LightWeightSet容器中指定下标位置的对象。
+Obtains the object at the location identified by index in an LightWeightSet container
 
 **Since:** 23
 
@@ -559,13 +559,13 @@ getValueAt(index: int): T | undefined
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| index | int | Yes | 检索值的下标位置。 |
+| index | int | Yes | The index position to retrieve the value from |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| T | 返回指定下标对应的值，如果下标超出范围则返回undefined。 |
+| T | the value at the specified index, or undefined if the index out of range |
 
 ## has
 
@@ -573,7 +573,7 @@ getValueAt(index: int): T | undefined
 has(key: T): boolean
 ```
 
-判断容器中是否包含指定元素。
+Checks whether this LightWeightSet has the specified key.
 
 **Since:** 8
 
@@ -589,19 +589,19 @@ has(key: T): boolean
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| key | T | Yes | 指定查找的元素，用于判断容器中是否包含该元素。 |
+| key | T | Yes | Target key. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| boolean | true表示容器中包含指定元素，false表示容器中不包含指定元素。 |
+| boolean | Check result. The value **true** is returned if the specified key is contained; otherwise, **false** is returned. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 10200011 | The has method cannot be bound. |
+| [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) | The has method cannot be bound. |
 
 ## Examples
 
@@ -618,7 +618,7 @@ console.info("result:", result);  // result: true
 hasAll(set: LightWeightSet<T>): boolean
 ```
 
-判断容器中是否包含指定set中的所有元素。当容器中存储的value为number类型且值大于INT32_MAX(2147483647)或小于INT32_MIN(-2147483648)时，判断结果可能与预期不一致，详见规格限制。
+Checks whether this LightWeightSet contains all elements of the specified LightWeightSet.
 
 **Since:** 8
 
@@ -634,19 +634,19 @@ hasAll(set: LightWeightSet<T>): boolean
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| set | [LightWeightSet](arkts-arkts-util-lightweightset-lightweightset-c.md)&lt;T&gt; | Yes | 用于判断当前容器是否包含其所有元素的目标集合。 |
+| set | [LightWeightSet](arkts-arkts-util-lightweightset-lightweightset-c.md)&lt;T&gt; | Yes | LightWeightSet** instance to be used for comparison. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| boolean | true表示容器中包含目标集合中的所有元素，false表示容器中不包含目标集合中的全部元素。 |
+| boolean | Check result. The value **true** is returned if all the elements in the specified LightWeightSet are contained; otherwise, **false** is returned. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 10200011 | The hasAll method cannot be bound. |
+| [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) | The hasAll method cannot be bound. |
 
 ## Examples
 
@@ -672,7 +672,7 @@ ArkTS-Sta:
 increaseCapacityTo(minimumCapacity: int): void
 ```
 
-将当前LightWeightSet扩容至指定容量。如果传入的容量值大于或等于当前LightWeightSet中的元素个数，将容量变更为新容量，小于则不会变更。
+Increases the capacity of this LightWeightSet. If the passed-in capacity is greater than or equal to the number of elements in this LightWeightSet, the capacity is changed to the new capacity. If the passed-in capacity is less than the number of elements in this LightWeightSet, the capacity is not changed.
 
 **Since:** 8
 
@@ -688,14 +688,14 @@ increaseCapacityTo(minimumCapacity: int): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| minimumCapacity | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | 需要容纳的元素数量。若传入值小于当前元素个数，则不会变更容量。 |
+| minimumCapacity | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | Minimum number of elements to accommodate in this LightWeightSet. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 10200011 | The increaseCapacityTo method cannot be bound. |
-| 10200001 | The value of minimumCapacity is out of range. |
+| [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) | The increaseCapacityTo method cannot be bound. |
+| [10200001](../errorcode-utils.md#10200001-value-out-of-range) | The value of minimumCapacity is out of range. |
 
 ## Examples
 
@@ -710,7 +710,7 @@ lightWeightSet.increaseCapacityTo(10);
 isEmpty(): boolean
 ```
 
-判断容器是否为空。
+Checks whether this LightWeightSet is empty (contains no element).
 
 **Since:** 8
 
@@ -726,13 +726,13 @@ isEmpty(): boolean
 
 | Type | Description |
 | --- | --- |
-| boolean | 为空返回true，不为空返回false。 |
+| boolean | Check result. The value **true** is returned if the LightWeightSet is empty; otherwise, **false** is returned. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 10200011 | The isEmpty method cannot be bound. |
+| [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) | The isEmpty method cannot be bound. |
 
 ## Examples
 
@@ -748,7 +748,7 @@ console.info("result:", result);  // result: true
 remove(key: T): T
 ```
 
-删除并返回指定元素。
+Removes an element of the specified key from this LightWeightSet.
 
 **Since:** 8
 
@@ -764,19 +764,19 @@ remove(key: T): T
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| key | T | Yes | 指定要删除的元素。 |
+| key | T | Yes | Key of the target element. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| T | 返回删除的元素。 |
+| T | Value of the element removed. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 10200011 | The remove method cannot be bound. |
+| [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) | The remove method cannot be bound. |
 
 ## Examples
 
@@ -794,7 +794,7 @@ console.info("result:", result);  // result: sparrow
 remove(key: T): T | undefined
 ```
 
-删除LightWeightSet容器中指定Object类型的对象。
+Deletes an object of a specified Object type from an LightWeightSet container
 
 **Since:** 23
 
@@ -810,13 +810,13 @@ remove(key: T): T | undefined
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| key | T | Yes | 待删除元素的key。 |
+| key | T | Yes | The key of the element to remove |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| T | 如果存在则返回被删除的值，否则返回undefined。 |
+| T | the removed value if it was present, undefined otherwise |
 
 ## removeAt
 
@@ -830,7 +830,7 @@ ArkTS-Sta:
 removeAt(index: int): boolean
 ```
 
-删除指定下标所对应的元素。
+Removes the element at the specified position from this LightWeightSet.
 
 **Since:** 8
 
@@ -846,19 +846,19 @@ removeAt(index: int): boolean
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| index | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | 指定下标，取值范围[0, length-1]，且需要小于等于INT32_MAX即2147483647。超出有效下标范围时返回false。 |
+| index | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | Position index of the element. The value must be less than or equal to int32_max, that is, 2 147483647. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| boolean | 成功删除元素返回true，指定下标不存在或超出范围时返回false。 |
+| boolean | Operation result. The value **true** is returned if the element is removed; otherwise, **false** is returned. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 10200011 | The removeAt method cannot be bound. |
+| [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) | The removeAt method cannot be bound. |
 
 ## Examples
 
@@ -876,7 +876,7 @@ console.info("result:", result);  // result: true
 toArray(): Array<T>
 ```
 
-获取包含此容器中所有元素的数组。
+Obtains an array that contains all objects in this LightWeightSet.
 
 **Since:** 8
 
@@ -892,13 +892,13 @@ toArray(): Array<T>
 
 | Type | Description |
 | --- | --- |
-| Array&lt;T&gt; | 返回包含此容器中所有元素的数组。 |
+| Array&lt;T&gt; | Array obtained. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 10200011 | The toArray method cannot be bound. |
+| [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) | The toArray method cannot be bound. |
 
 ## Examples
 
@@ -915,7 +915,7 @@ let result = lightWeightSet.toArray();
 toString(): String
 ```
 
-获取包含容器中所有元素的字符串。
+Obtains a string that contains all elements in this LightWeightSet.
 
 **Since:** 8
 
@@ -931,7 +931,7 @@ toString(): String
 
 | Type | Description |
 | --- | --- |
-| String | 返回包含容器中所有元素的字符串。 |
+| String | String obtained. |
 
 ## Examples
 
@@ -949,7 +949,7 @@ console.info("result:", result);  // result: sparrow,squirrel
 values(): IterableIterator<T>
 ```
 
-返回包含此集合中所有值的新迭代器对象。
+Returns an iterator that contains all the values in this LightWeightSet.
 
 **Since:** 8
 
@@ -965,13 +965,13 @@ values(): IterableIterator<T>
 
 | Type | Description |
 | --- | --- |
-| [IterableIterator](arkts-arkts-iterator-iterableiterator-i.md)&lt;T&gt; | 返回包含LightWeightSet中所有value的迭代器对象。 |
+| [IterableIterator](arkts-arkts-iterator-iterableiterator-i.md)&lt;T&gt; | Iterator obtained. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 10200011 | The values method cannot be bound. |
+| [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) | The values method cannot be bound. |
 
 ## Examples
 
@@ -993,7 +993,7 @@ for (let value of values) {
 length: number
 ```
 
-LightWeightSet的元素个数。
+Number of elements in a LightWeightSet.
 
 **Type:** number
 

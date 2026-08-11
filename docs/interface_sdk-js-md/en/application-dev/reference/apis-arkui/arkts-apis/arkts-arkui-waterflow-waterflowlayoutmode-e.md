@@ -1,6 +1,6 @@
 # WaterFlowLayoutMode
 
-声明瀑布流的布局模式。
+Declare layout modes of WaterFlow.
 
 **Since:** 23
 
@@ -16,7 +16,7 @@
 ALWAYS_TOP_DOWN = 0
 ```
 
-默认的从上到下的布局模式。视窗内的FlowItem依赖视窗上方所有FlowItem的布局信息。因此跳转或切换列数时，需要计算出上方所有的FlowItem的布局信息。
+Default layout mode where water flow items are arranged from top to bottom. Items in the viewport depend on the layout of all items above them.As such, in cases of redirection or switching the number of columns, the layout of all items above the viewport must be recalculated.
 
 **Since:** 23
 
@@ -34,9 +34,9 @@ ALWAYS_TOP_DOWN = 0
 SLIDING_WINDOW = 1
 ```
 
-移动窗口式的布局模式。只考虑视窗内的布局信息，对视窗上方的FlowItem没有依赖关系，因此向后跳转或切换列数时只需要布局视窗内的FlowItem。
+Sliding window mode. This mode only takes into account the layout in the viewport,without depending on water flow items above the viewport.
 
-&lt;p&gt;&lt;strong&gt;说明&lt;/strong&gt;&lt;br&gt; 1. 无动画跳转到较远的位置时，会以目标位置为基准，向前或向后布局FlowItem。这之后如果滑回跳转前的位置，内容的布局效果可能和之前不一致。这会导致跳转后回滑到顶部时，顶部节点可能不对齐。所以该布局模式下会在滑动到顶部后自动调整布局，保证顶部对齐。在有多个分组的情况下，会在滑动结束时调整在视窗内的分组。&lt;br&gt; 2. scroller的currentOffset接口返回的总偏移量在触发跳转或数据更新后不准确，在回滑到顶部时会重新校准。&lt;br&gt; 3. 如果在同一帧内调用跳转（如无动画的scrollToIndex、scrollEdge）和输入偏移量（如滑动手势或滚动动画），两者都会生效。&lt;br&gt; 4. 调用无动画的scrollToIndex进行跳转，如果跳转到较远位置（超过视窗内的FlowItem数量的位置）时，移动窗口模式对总偏移量进行估算。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;NOTE&lt;/strong&gt;&lt;br&gt; 1. During a non-animated redirection to a distant location, water flow items are laid out forward or backward based on the target position.If the user then swipes back to the position prior to the redirection, the layout of the content may not be consistent with its previous state.This can lead to misalignment of the top nodes when the user swipes back to the top after the redirection.To counteract this issue, in this layout mode, the layout will be automatically adjusted after reaching the top of the viewport to ensure that the top is aligned.If there are multiple sections, adjustments will be made to the sections within the viewport when scrolling ends.&lt;br&gt; 2. The total offset returned by the currentOffset API of scroller is inaccurate after a redirection or data update. This offset will be recalibrated when the user swipes back to the top.&lt;br&gt; 3. If a jump action (for example, by calling scrollToIndex without animation or scrollEdge) and an input offset (such as from a swipe gesture or a scrolling animation) are both initiated within the same frame, both will be executed.&lt;br&gt; 4. If the scrollToIndex API is called without animation to jump to a distant position (beyond the range of visible water flow items in the window),the total offset is calculated in the sliding window mode.&lt;/p&gt;
 
 **Since:** 23
 

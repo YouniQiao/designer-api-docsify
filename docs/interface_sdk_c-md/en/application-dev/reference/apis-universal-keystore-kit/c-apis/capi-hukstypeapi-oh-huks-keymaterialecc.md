@@ -1,12 +1,12 @@
 # OH_Huks_KeyMaterialEcc
 
 ```c
-struct OH_Huks_KeyMaterialEcc {...}
+typedef struct OH_Huks_KeyMaterialEcc {...} OH_Huks_KeyMaterialEcc
 ```
 
 ## Overview
 
-Defines the struct of an Elliptic Curve Cryptography (ECC) key.
+Defines the struct for an ECC key.
 
 **Since**: 9
 
@@ -24,6 +24,6 @@ Defines the struct of an Elliptic Curve Cryptography (ECC) key.
 | uint32_t keySize | Length of the key. |
 | uint32_t xSize | Length of **x**. |
 | uint32_t ySize | Length of **y**. |
-| uint32_t zSize | Length of **z**. |
+| uint32_t zSize | Length of **z**, which corresponds to the size of the private key d. |
 
 

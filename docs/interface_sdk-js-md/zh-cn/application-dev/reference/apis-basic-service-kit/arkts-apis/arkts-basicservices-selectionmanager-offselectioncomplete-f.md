@@ -1,11 +1,5 @@
 # offSelectionComplete
 
-## 导入模块
-
-```TypeScript
-import { selectionManager } from 'kits/@kit.BasicServicesKit';
-```
-
 ## offSelectionComplete
 
 ```TypeScript
@@ -29,4 +23,24 @@ function offSelectionComplete(callback?: Callback<SelectionInfo>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | callback | [Callback](arkts-basicservices-base-callback-i.md)&lt;SelectionInfo&gt; | 否 | 需要取消的回调函数（即之前通过onSelectionComplete方法订阅时的回调实例）。参数不填写时，取消订阅对应的所有回调事件。 |
+
+## 示例
+
+```TypeScript
+import selectionManager from '@ohos.selectionInput.selectionManager';
+
+// 定义划词完成事件回调函数，用于订阅和取消订阅
+let selectionChangeCallback = (info: selectionManager.SelectionInfo) => {
+  console.info(`Enter the callback function.`);
+};
+
+// 先订阅划词完成事件回调，为后续取消订阅做准备
+selectionManager.onSelectionComplete(selectionChangeCallback);
+try {
+  // 取消订阅划词完成事件
+  selectionManager.offSelectionComplete(selectionChangeCallback);
+} catch (err) {
+  console.error(`Failed to unregister selectionCompleted. Error code: ${err.code}, error message: ${err.message}`);
+}
+```
 

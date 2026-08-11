@@ -1,6 +1,10 @@
 # SubscribedAbstractProperty
 
-继承自[AbstractProperty&lt;T&gt;](arkts-arkui-abstractproperty-i.md)。
+SubscribedAbstractProperty&lt;T&gt; is the return value of
+
+- AppStorage static functions Link(), Prop(), SetAndLink(), and SetAndProp()  
+- LocalStorage member methods link(), prop(), setAndLink(), and setAndProp()  
+'T' can be boolean, string, number or custom class.Main functions see get() reads the linked AppStorage/LocalStorage property value,see set(newValue) write a new value to the synched AppStorage/LocalStorage property see aboutToBeDeleted() ends the sync relationship with the AppStorage/LocalStorage property The app must call this function before the SubscribedAbstractProperty&lt;T&gt; object goes out of scope.
 
 **Inheritance/Implementation:** SubscribedAbstractProperty extends [AbstractProperty<T>](AbstractProperty<T>)
 
@@ -18,9 +22,7 @@
 default aboutToBeDeleted(): void
 ```
 
-> **说明：**
-> 
-> 仅为了和动态Arkts接口保持一致，无实际功能。
+An app needs to call this function before the instance of SubscribedAbstractProperty goes out of scope / is subject to garbage collection. Its purpose is to unregister the variable from the two-way/one-way sync relationship that AppStorage/LocalStorage.link()/prop()and related functions create.
 
 **Since:** 23
 

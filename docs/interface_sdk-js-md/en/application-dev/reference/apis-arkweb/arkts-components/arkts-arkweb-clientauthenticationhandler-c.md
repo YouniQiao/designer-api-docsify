@@ -16,7 +16,7 @@ Defines the client certificate request result, related to {@link onClientAuthent
 cancel(): void
 ```
 
-取消证书请求事件。同时，相同host和port服务器的请求，不重复上报该事件。
+Cancel this certificate request.
 
 **Since:** 9
 
@@ -34,7 +34,7 @@ cancel(): void
 confirm(priKeyFile: string, certChainFile: string): void
 ```
 
-确认使用指定的私钥和客户端证书链。
+Confirm to use the specified private key and client certificate chain.
 
 **Since:** 9
 
@@ -59,7 +59,7 @@ confirm(priKeyFile: string, certChainFile: string): void
 confirm(authUri: string): void
 ```
 
-使用指定的凭据(从证书管理模块获得)。
+Confirm to use the authUri.The authUri can be obtained from certificate management.
 
 **Since:** 10
 
@@ -83,7 +83,7 @@ confirm(authUri: string): void
 confirm(identity: string, credentialTypeOrCertChainFile: CredentialType | string): void
 ```
 
-确认使用从证书管理模块获取的指定凭据和凭据类型。
+Confirm to use the identify of the certificate. The identify can be obtained from certificate management.
 
 **Since:** 22
 
@@ -104,7 +104,7 @@ confirm(identity: string, credentialTypeOrCertChainFile: CredentialType | string
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 801 | Capability not supported. |
+| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. |
 
 ## constructor
 

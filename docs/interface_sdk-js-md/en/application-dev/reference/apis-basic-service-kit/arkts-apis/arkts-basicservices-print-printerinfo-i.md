@@ -1,6 +1,6 @@
 # PrinterInfo
 
-定义打印信息的接口。
+Provides the printer information.
 
 **Since:** 24
 
@@ -22,7 +22,7 @@ import { print } from 'kits/@kit.BasicServicesKit';
 capability?: PrinterCapability
 ```
 
-表示打印机功能。
+Printer capability.
 
 **Type:** [PrinterCapability](arkts-basicservices-print-printercapability-i.md)
 
@@ -40,7 +40,7 @@ capability?: PrinterCapability
 description?: string
 ```
 
-表示打印机说明。
+Printer description.
 
 **Type:** string
 
@@ -58,7 +58,7 @@ description?: string
 options?: Object
 ```
 
-表示JSON对象字符串。
+Printer options. The value is a JSON object string.
 
 **Type:** Object
 
@@ -76,7 +76,7 @@ options?: Object
 printerIcon?: int
 ```
 
-表示打印机图标的资源ID。默认值为-1。
+Resource ID of the printer icon. The default value is **-1**.
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
@@ -94,7 +94,7 @@ printerIcon?: int
 printerId: string
 ```
 
-表示打印机ID。
+Printer ID.
 
 **Type:** string
 
@@ -112,7 +112,7 @@ printerId: string
 printerName: string
 ```
 
-表示打印机名称。
+Printer name.
 
 **Type:** string
 
@@ -130,7 +130,7 @@ printerName: string
 printerState: PrinterState
 ```
 
-表示当前打印机状态。
+Printer state.
 
 **Type:** [PrinterState](arkts-basicservices-print-printerstate-e.md)
 

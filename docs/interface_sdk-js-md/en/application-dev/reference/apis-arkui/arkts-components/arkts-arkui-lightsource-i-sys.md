@@ -1,6 +1,6 @@
 # LightSource (System API)
 
-一个组件支持添加1个光源。
+Each component allows for one light source.
 
 **Since:** 11
 
@@ -18,9 +18,9 @@
 color?: ResourceColor
 ```
 
-光源颜色。
+Light source color.
 
-默认值：Color.White
+Default value: **Color.White**
 
 **Type:** [ResourceColor](../arkts-apis/arkts-arkui-resourcecolor-t.md)
 
@@ -42,7 +42,7 @@ color?: ResourceColor
 intensity: number
 ```
 
-光源强度，建议取值范围0-1。当光源强度为0时，光源不发光。
+Intensity of the light source. The recommended value range is 0-1. When the intensity is **0**, the light source does not emit light.
 
 **Type:** number
 
@@ -64,7 +64,7 @@ intensity: number
 positionX: Dimension
 ```
 
-光源相对于当前组件的X坐标。
+X-coordinate of the light source relative to the current component.
 
 **Type:** [Dimension](../arkts-apis/arkts-arkui-dimension-t.md)
 
@@ -86,7 +86,7 @@ positionX: Dimension
 positionY: Dimension
 ```
 
-光源相对于当前组件的Y坐标。
+Y-coordinate of the light source relative to the current component.
 
 **Type:** [Dimension](../arkts-apis/arkts-arkui-dimension-t.md)
 
@@ -108,7 +108,7 @@ positionY: Dimension
 positionZ: Dimension
 ```
 
-光源高度。光源越高，照射范围越大。
+Height of the light source. The higher the light source, the broader the light distribution.
 
 **Type:** [Dimension](../arkts-apis/arkts-arkui-dimension-t.md)
 

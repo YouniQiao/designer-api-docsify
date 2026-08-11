@@ -1,6 +1,6 @@
 # Stack
 
-Stack基于数组的数据结构实现，特点是先进后出，只能在一端进行数据的插入和删除。
+Stack is implemented based on the array data structure.It follows the principle Last In First Out (LIFO) and supports data insertion and removal at one end.
 
 **Since:** 8
 
@@ -22,7 +22,7 @@ import { Stack } from 'kits/@kit.ArkTS';
 $_iterator(): IterableIterator<T>
 ```
 
-返回一个迭代器，每一项都是一个ArkTS对象。
+returns an iterator. Each item of the iterator is a ArkTS Object
 
 **Since:** 23
 
@@ -46,7 +46,7 @@ $_iterator(): IterableIterator<T>
 [Symbol.iterator](): IterableIterator<T>
 ```
 
-返回一个迭代器，迭代器的每一项为T类型的元素。
+returns an ES6 iterator.Each item of the iterator is a Javascript Object
 
 **Since:** 8
 
@@ -62,13 +62,13 @@ $_iterator(): IterableIterator<T>
 
 | Type | Description |
 | --- | --- |
-| [IterableIterator](arkts-arkts-iterator-iterableiterator-i.md)&lt;T&gt; | 返回一个迭代器，用于按栈的存储顺序依次遍历Stack中的所有元素。 |
+| [IterableIterator](arkts-arkts-iterator-iterableiterator-i.md)&lt;T&gt; |  |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 10200011 | The Symbol.iterator method cannot be bound. |
+| [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) | The Symbol.iterator method cannot be bound. |
 
 ## Examples
 
@@ -107,7 +107,7 @@ while(temp != undefined) {
 constructor()
 ```
 
-Stack的构造函数。调用后创建一个空的Stack实例对象，初始length为0。
+A constructor used to create a **Stack** instance.
 
 **Since:** 8
 
@@ -123,7 +123,7 @@ Stack的构造函数。调用后创建一个空的Stack实例对象，初始leng
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 10200012 | The Stack's constructor cannot be directly invoked. |
+| [10200012](../errorcode-utils.md#10200012-constructor-calling-failure) | The Stack's constructor cannot be directly invoked. |
 
 ## Examples
 
@@ -137,7 +137,7 @@ let stack = new Stack<number | string | Object>();
 forEach(callbackFn: (value: T, index?: number, stack?: Stack<T>) => void, thisArg?: Object): void
 ```
 
-按照从栈底到栈顶的顺序遍历Stack实例对象中每一个元素，对每个元素执行回调函数。
+Uses a callback to traverse each element in the **Stack** instance.
 
 **Since:** 8
 
@@ -153,14 +153,14 @@ forEach(callbackFn: (value: T, index?: number, stack?: Stack<T>) => void, thisAr
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callbackFn | (value: T, index?: number, stack?: Stack&lt;T&gt;) =&gt; void | Yes | 遍历每个元素时执行的回调函数。 |
-| thisArg | Object | No | callbackFn被调用时用作this值。不传入时默认值为当前实例对象。 |
+| callbackFn | (value: T, index?: number, stack?: Stack&lt;T&gt;) =&gt; void | Yes | Callback invoked to traverse the elements in the Stack. |
+| thisArg | Object | No | Value of **this** to use when **callbackFn** is invoked. The default value is this instance. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 10200011 | The forEach method cannot be bound. |
+| [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) | The forEach method cannot be bound. |
 
 ## Examples
 
@@ -185,7 +185,7 @@ stack.forEach((value : number, index: number) :void => {
 forEach(callbackfn: StackForEachCb<T>): void
 ```
 
-按照从栈底到栈顶的顺序遍历Stack实例对象中每一个元素，对每个元素执行回调函数。
+Executes a provided function once for each value in the Stack object.
 
 **Since:** 23
 
@@ -209,7 +209,7 @@ forEach(callbackfn: StackForEachCb<T>): void
 isEmpty(): boolean
 ```
 
-判断栈是否为空。
+Checks whether this Stack is empty (contains no elements).
 
 **Since:** 8
 
@@ -225,13 +225,13 @@ isEmpty(): boolean
 
 | Type | Description |
 | --- | --- |
-| boolean | 为空返回true，不为空返回false。 |
+| boolean | Returns **true** if the Stack is empty; returns **false** otherwise. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 10200011 | The isEmpty method cannot be bound. |
+| [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) | The isEmpty method cannot be bound. |
 
 ## Examples
 
@@ -257,7 +257,7 @@ ArkTS-Sta:
 locate(element: T): int
 ```
 
-查找指定元素首次出现的下标值，查找失败则返回-1。
+Obtains the index of the first occurrence of the specified element in this Stack.
 
 **Since:** 8
 
@@ -273,19 +273,19 @@ locate(element: T): int
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| element | T | Yes | 待查找的元素。 |
+| element | T | Yes | Target element. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| ArkTS-Dyn: number  <br>ArkTS-Sta：int | 对应元素下标值，查找失败则返回-1。 |
+| ArkTS-Dyn: number  <br>ArkTS-Sta：int | Index of the element. If no match is found, **-1** is returned. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 10200011 | The locate method cannot be bound. |
+| [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) | The locate method cannot be bound. |
 
 ## Examples
 
@@ -305,7 +305,7 @@ console.info("result:", result);  // result: 2
 peek(): T
 ```
 
-返回栈顶元素，栈为空时返回undefined。调用后栈的内容不变。
+Obtains the top element of this Stack. If the Stack is empty, **undefined** is returned.
 
 **Since:** 8
 
@@ -321,14 +321,14 @@ peek(): T
 
 | Type | Description |
 | --- | --- |
-| T | 返回栈顶元素，栈为空时返回undefined。 |
+| T | Element removed. If the Stack is empty, **undefined** is returned. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 10200011 | The peek method cannot be bound. |
-| 10200010 | Container is empty.<br>**Applicable version:** 23 and later  **ArkTS mode:** This error code applies only to ArkTS-Sta. |
+| [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) | The peek method cannot be bound. |
+| [10200010](../errorcode-utils.md#10200010-empty-container) | Container is empty.<br>**Applicable version:** 23 and later  **ArkTS mode:** This error code applies only to ArkTS-Sta. |
 
 ## Examples
 
@@ -348,7 +348,7 @@ console.info("result:", result);  // result: 2
 pop(): T
 ```
 
-删除栈顶元素并返回，栈为空时返回undefined。
+Removes the top element from this Stack.
 
 **Since:** 8
 
@@ -364,14 +364,14 @@ pop(): T
 
 | Type | Description |
 | --- | --- |
-| T | 返回栈顶元素，栈为空时返回undefined。 |
+| T | Element removed. If the Stack is empty, **undefined** is returned. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 10200011 | The pop method cannot be bound. |
-| 10200010 | Container is empty.<br>**Applicable version:** 23 and later  **ArkTS mode:** This error code applies only to ArkTS-Sta. |
+| [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) | The pop method cannot be bound. |
+| [10200010](../errorcode-utils.md#10200010-empty-container) | Container is empty.<br>**Applicable version:** 23 and later  **ArkTS mode:** This error code applies only to ArkTS-Sta. |
 
 ## Examples
 
@@ -392,7 +392,7 @@ console.info("result = " + result); // result = 4
 push(item: T): T
 ```
 
-在栈顶插入元素，并返回该元素。
+Adds an element at the top of this Stack.
 
 **Since:** 8
 
@@ -408,19 +408,19 @@ push(item: T): T
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| item | T | Yes | 需要在栈顶插入的元素。 |
+| item | T | Yes | Target element. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| T | 返回插入栈顶的元素。 |
+| T | Element added. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 10200011 | The push method cannot be bound. |
+| [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) | The push method cannot be bound. |
 
 ## Examples
 
@@ -443,7 +443,7 @@ console.info("length:", stack.length);  // length: 3
 length: number
 ```
 
-Stack的元素个数。
+Number of elements in a Stack.
 
 **Type:** number
 

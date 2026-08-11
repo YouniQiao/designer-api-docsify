@@ -12,7 +12,7 @@ import { abilityManager } from 'kits/@kit.AbilityKit';
 function getExtensionRunningInfos(upperLimit: int): Promise<Array<ExtensionRunningInfo>>
 ```
 
-获取关于运行扩展能力的信息。使用Promise异步回调。
+Obtains the ExtensionAbility running information. This API uses a promise to return the result.
 
 **Since:** 9
 
@@ -30,21 +30,21 @@ function getExtensionRunningInfos(upperLimit: int): Promise<Array<ExtensionRunni
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| upperLimit | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | 获取消息数量的最大限制，最大为2&lt;sup&gt;31&lt;/sup&gt;-1。 |
+| upperLimit | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | Maximum number of messages that can be obtained. The maximum value is 2&lt;sup&gt;31&lt;/sup&gt;-1. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;Array&lt;ExtensionRunningInfo&gt;&gt; | Promise对象，返回接口运行结果及运行扩展能力的信息。开发者可在此进行错误处理或其他自定义处理。 |
+| Promise&lt;Array&lt;ExtensionRunningInfo&gt;&gt; | Promise used to return the API call result and the ExtensionAbility running information. You can perform error handling or other custom processing. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
-| 16000050 | Internal error. |
-| 202 | Not system application. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| [16000050](../errorcode-ability.md#16000050-internal-error) | Internal error. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not System App. Interface caller is not a system app. |
 
 
 ## getExtensionRunningInfos
@@ -53,7 +53,7 @@ function getExtensionRunningInfos(upperLimit: int): Promise<Array<ExtensionRunni
 function getExtensionRunningInfos(upperLimit: int, callback: AsyncCallback<Array<ExtensionRunningInfo>>): void
 ```
 
-获取关于运行扩展能力的信息。使用callback异步回调。
+Obtains the ExtensionAbility running information. This API uses an asynchronous callback to return the result.
 
 **Since:** 9
 
@@ -71,14 +71,14 @@ function getExtensionRunningInfos(upperLimit: int, callback: AsyncCallback<Array
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| upperLimit | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | 获取消息数量的最大限制，最大为2&lt;sup&gt;31&lt;/sup&gt;-1。 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;ExtensionRunningInfo&gt;&gt; | Yes | 回调函数。当获取运行扩展能力的信息成功，err为undefined，data为获取到的运行扩展能力信息；否则为 错误对象。可进行错误处理或其他自定义处理。 |
+| upperLimit | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | Maximum number of messages that can be obtained. The maximum value is 2&lt;sup&gt;31&lt;/sup&gt;-1. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;ExtensionRunningInfo&gt;&gt; | Yes | Callback used to return the result. If the API call is successful, **err** is **undefined** and **data** is the ExtensionAbility running information obtained. Otherwise, **err** is an error object. You can perform error handling or other custom processing. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
-| 16000050 | Internal error. |
-| 202 | Not system application. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| [16000050](../errorcode-ability.md#16000050-internal-error) | Internal error. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not System App. Interface caller is not a system app. |
 

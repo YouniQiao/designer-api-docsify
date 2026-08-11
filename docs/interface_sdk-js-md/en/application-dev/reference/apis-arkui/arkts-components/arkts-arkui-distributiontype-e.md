@@ -1,6 +1,6 @@
 # DistributionType
 
-初始颜色随机值分布类型。
+Enumerates the color distribution types of a particle.
 
 **Since:** 12
 
@@ -16,7 +16,7 @@
 UNIFORM = 0
 ```
 
-初始颜色随机值分布为均匀分布。
+The initial color random values are distributed uniformly.
 
 **Since:** 12
 
@@ -36,7 +36,7 @@ UNIFORM = 0
 GAUSSIAN = 1
 ```
 
-初始颜色随机值分布为高斯分布。
+The initial color random values are distributed according to a Gaussian distribution.
 
 **Since:** 12
 

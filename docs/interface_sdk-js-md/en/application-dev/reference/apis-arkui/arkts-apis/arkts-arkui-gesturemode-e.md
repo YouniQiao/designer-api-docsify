@@ -1,6 +1,6 @@
 # GestureMode
 
-定义手势组的识别模式。
+Defines the recognition mode of a gesture group.
 
 **Since:** 7
 
@@ -16,9 +16,9 @@
 Sequence
 ```
 
-顺序识别，根据注册顺序依次进行手势识别，直到所有手势识别成功。如果任一手势识别失败，则后续手势识别均无法完成。
+Sequential recognition. Gestures are recognized in the registration sequence until all gestures are recognized successfully. If any gesture in the sequence fails recognition, subsequent gestures will not be recognized.
 
-在顺序识别手势组中，仅最后一个手势能响应onActionEnd事件。
+Only the last gesture in a sequentially recognized gesture group can trigger **onActionEnd**.
 
 **Since:** 7
 
@@ -36,7 +36,7 @@ Sequence
 Parallel
 ```
 
-并行识别，注册的手势同时识别，直到所有手势识别结束，手势识别互相不影响。
+Parallel recognition. Registered gestures are recognized concurrently until all gestures are recognized. The recognition result of each gesture does not affect each other.
 
 **Since:** 7
 
@@ -54,7 +54,7 @@ Parallel
 Exclusive
 ```
 
-互斥识别，注册的手势同时识别，若有一个手势识别成功，则结束手势识别，其他手势识别均失败。
+Exclusive recognition. All registered gestures are processed simultaneously. Once any gesture is recognized successfully, the recognition process ends, and all other gestures are deemed unrecognized.
 
 **Since:** 7
 

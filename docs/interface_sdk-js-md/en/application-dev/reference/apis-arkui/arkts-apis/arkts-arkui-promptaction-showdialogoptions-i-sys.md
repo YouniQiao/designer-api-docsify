@@ -1,6 +1,6 @@
 # ShowDialogOptions
 
-对话框的选项。
+Show dialog options.
 
 **Since:** 23
 

@@ -1,6 +1,7 @@
 # AbilityStageContext
 
-AbilityStageContext是AbilityStage的上下文环境，继承自[Context](arkts-ability-context-t.md)。AbilityStageContext提供允许访问特定于abilityStage的资源的能力，包括获取AbilityStage对应的ModuleInfo对象、环境变化对象。
+The AbilityStageContext module implements the context of an ability stage. It inherits from  
+[Context](arkts-ability-context-t.md).This module provides APIs for accessing a specific ability stage. You can use the APIs to obtain the ModuleInfo object and environment configuration of an ability stage.
 
 **Inheritance/Implementation:** AbilityStageContext extends [Context](arkts-ability-context-t.md)
 
@@ -18,7 +19,7 @@ AbilityStageContext是AbilityStage的上下文环境，继承自[Context](arkts-
 config: Configuration
 ```
 
-环境变量。
+Environment variables.
 
 **Type:** [Configuration](arkts-ability-app-ability-configuration-configuration-i.md)
 
@@ -40,7 +41,7 @@ config: Configuration
 currentHapModuleInfo: HapModuleInfo
 ```
 
-AbilityStage对应的ModuleInfo对象。
+ModuleInfo object corresponding to the ability stage.
 
 **Type:** [HapModuleInfo](arkts-ability-hapmoduleinfo-i.md)
 
@@ -62,7 +63,7 @@ AbilityStage对应的ModuleInfo对象。
 launchElement?: ElementName
 ```
 
-启动能力Stage的ElementName对象。
+Indicates launch ElementName object of the abilityStage.
 
 **Type:** [ElementName](arkts-ability-elementname-i.md)
 

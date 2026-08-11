@@ -1,6 +1,6 @@
 # MoreButtonOptions
 
-更多图标的菜单选项。
+Indicates the options of Navigation's Menu.
 
 **Since:** 23
 
@@ -16,7 +16,7 @@
 backgroundBlurStyle?: BlurStyle
 ```
 
-标题栏背景模糊样式，不设置时关闭背景模糊效果。
+Background blur style.
 
 **Type:** [BlurStyle](../arkts-components/arkts-arkui-blurstyle-e.md)
 
@@ -36,8 +36,7 @@ backgroundBlurStyle?: BlurStyle
 backgroundBlurStyleOptions?: BackgroundBlurStyleOptions
 ```
 
-标题栏背景模糊选项。  
-**说明：**只在设置了backgroundBlurStyle时生效。不建议与backgroundEffect同时使用。
+Background blur style options.
 
 **Type:** [BackgroundBlurStyleOptions](../arkts-components/arkts-arkui-backgroundblurstyleoptions-i.md)
 
@@ -57,8 +56,7 @@ backgroundBlurStyleOptions?: BackgroundBlurStyleOptions
 backgroundEffect?: BackgroundEffectOptions
 ```
 
-设置标题栏背景属性包括：模糊半径，亮度，饱和度，颜色等。  
-**说明：**不建议与backgroundBlurStyleOptions同时使用。
+Background effect options.
 
 **Type:** [BackgroundEffectOptions](../arkts-components/arkts-arkui-backgroundeffectoptions-i.md)
 

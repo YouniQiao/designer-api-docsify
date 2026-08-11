@@ -1,6 +1,6 @@
 # Vec2
 
-定义Vec2（二维向量）.
+A two-dimensional vector used to represent a point or a direction in 2D space.It consists of two components: x and y.
 
 **Since:** 12
 
@@ -16,7 +16,7 @@
 x: double
 ```
 
-vec2的X分量.
+Component on the X axis. The value is a real number.
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：double
 
@@ -34,7 +34,7 @@ vec2的X分量.
 y: double
 ```
 
-vec2的Y分量.
+Component on the Y axis. The value is a real number.
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：double
 

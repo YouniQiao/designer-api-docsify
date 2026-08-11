@@ -1,8 +1,8 @@
 # RichEditorUpdateImageSpanStyleOptions
 
-图片的样式选项。
+Image style options.
 
-继承自[RichEditorSpanStyleOptions](arkts-arkui-richeditorspanstyleoptions-i.md)。
+Inherits [RichEditorSpanStyleOptions](arkts-arkui-richeditorspanstyleoptions-i.md).
 
 **Inheritance/Implementation:** RichEditorUpdateImageSpanStyleOptions extends [RichEditorSpanStyleOptions](arkts-arkui-richeditorspanstyleoptions-i.md)
 
@@ -20,7 +20,7 @@
 imageStyle: RichEditorImageSpanStyle
 ```
 
-图片样式。
+Image style.
 
 **Type:** [RichEditorImageSpanStyle](arkts-arkui-richeditorimagespanstyle-i.md)
 

@@ -1,12 +1,12 @@
 # SignSpecItem
 
-表示签名验签参数的枚举。这些参数支持通过  
-[setSignSpec](arkts-cryptoarchitecture-cryptoframework-sign-i.md#setsignspec)、  
-[setVerifySpec](arkts-cryptoarchitecture-cryptoframework-verify-i.md#setverifyspec)接口设置，通过  
-[getSignSpec](arkts-cryptoarchitecture-cryptoframework-sign-i.md#getsignspec)、[getVerifySpec](arkts-cryptoarchitecture-cryptoframework-verify-i.md#getverifyspec)接口获取。
+Enumerates the signing and signature verification parameters, which can be set by using  
+[setSignSpec](arkts-cryptoarchitecture-cryptoframework-sign-i.md#setsignspec) and  
+[setVerifySpec](arkts-cryptoarchitecture-cryptoframework-verify-i.md#setverifyspec), and obtained by using [getSignSpec](arkts-cryptoarchitecture-cryptoframework-sign-i.md#getsignspec) and  
+[getVerifySpec](arkts-cryptoarchitecture-cryptoframework-verify-i.md#getverifyspec).
 
-&lt;br&gt;当前只支持RSA算法和SM2算法。详细规格请参考  
-[签名验签规格](../../../security/CryptoArchitectureKit/crypto-sign-sig-verify-overview.md)。
+&lt;br&gt;Currently, only RSA and SM2 are supported. For details, see  
+[Signing and Signature Verification Overview and Algorithm Specifications](../../../security/CryptoArchitectureKit/crypto-sign-sig-verify-overview.md).
 
 **Since:** 10
 
@@ -24,7 +24,7 @@
 PSS_MD_NAME_STR = 100
 ```
 
-表示RSA算法中，使用PSS模式时，消息摘要功能的算法名。
+Message digest algorithm used with the PSS padding mode in RSA.
 
 **Since:** 10
 
@@ -44,7 +44,7 @@ PSS_MD_NAME_STR = 100
 PSS_MGF_NAME_STR = 101
 ```
 
-表示RSA算法中，使用PSS模式时，掩码生成算法（目前仅支持MGF1）。
+Mask generation algorithm used with the PSS padding mode in RSA. Currently, only MGF1 is supported.
 
 **Since:** 10
 
@@ -64,7 +64,7 @@ PSS_MGF_NAME_STR = 101
 PSS_MGF1_MD_STR = 102
 ```
 
-表示RSA算法中，使用PSS模式时，MGF1掩码生成功能的消息摘要算法。
+Message digest algorithm for the MGF1 mask generation used with the PSS padding mode in RSA.
 
 **Since:** 10
 
@@ -84,18 +84,19 @@ PSS_MGF1_MD_STR = 102
 PSS_SALT_LEN_NUM = 103
 ```
 
-表示RSA算法中，使用PSS模式时，盐值的长度，长度以字节为单位。
+Length of the salt in bytes used with the PSS padding mode in RSA.
 
-&lt;br&gt;根据 FIPS 186-4 标准，sLen 应大于等于 0 且小于等于哈希长度。
+&lt;br&gt;According to the FIPS 186-4 standard, sLen should be greater than or equal to 0 and less than or equal to the hash length.
 
-&lt;br&gt;默认值：  
-- 对于签名操作，自动计算最大盐值长度。  
-- 对于验证操作，自动计算盐值长度。
+&lt;br&gt;Default values:  
+- For sign, automatically calculate the maximum salt length.  
+- For verify, automatically calculate the salt length.
 
-&lt;br&gt;特殊值：  
-- 对于签名操作，您也可以将值设置为 -1，以使用摘要长度作为盐值长度；或设置为 -2 或 -3，以自动计算最大盐值长度。推荐使用 -1。  
-- 对于验证操作，您也可以将值设置为 -1，以使用摘要长度作为盐值长度；设置为 -2，以自动计算盐值长度；或设置为 -3，以使用最大盐值长度。  
-推荐使用 -2。
+&lt;br&gt;Special values:  
+- For sign, you can also set the value to -1 to use the digest length as the salt length, and -2 or -3 to  
+automatically calculate the maximum salt length. The recommended value is -1.  
+- For verify, you can also set the value to -1 to use the digest length as the salt length, -2 to automatically  
+calculate the salt length, or -3 to use the maximum salt length. The recommended value is -2.
 
 **Since:** 10
 
@@ -115,7 +116,7 @@ PSS_SALT_LEN_NUM = 103
 PSS_TRAILER_FIELD_NUM = 104
 ```
 
-表示RSA算法中，使用PSS模式时，用于编码操作的整数。
+Trailer field used in the encoding operation when PSS padding mode is used in RSA.
 
 **Since:** 10
 
@@ -135,7 +136,7 @@ PSS_TRAILER_FIELD_NUM = 104
 SM2_USER_ID_UINT8ARR = 105
 ```
 
-表示SM2算法中，用户身份标识字段。
+User ID field in SM2.
 
 **Since:** 11
 
@@ -155,7 +156,7 @@ SM2_USER_ID_UINT8ARR = 105
 ML_DSA_DETERMINISTIC_BOOL = 106
 ```
 
-指示ML-DSA签名和验证过程中是否使用确定性签名。
+Indicates whether deterministic signing is used for the ML-DSA signing and verifying process.
 
 **Since:** 26.0.0
 
@@ -175,7 +176,7 @@ ML_DSA_DETERMINISTIC_BOOL = 106
 ML_DSA_MU_BOOL = 107
 ```
 
-指示ML-DSA签名和验证过程中的mu参数值。
+Indicates the mu parameter value for the ML-DSA signing and verifying process.
 
 **Since:** 26.0.0
 
@@ -195,7 +196,7 @@ ML_DSA_MU_BOOL = 107
 ML_DSA_CONTEXT_UINT8ARR = 108
 ```
 
-指示ML-DSA签名和验证过程中的上下文数据。
+Indicates the context data for the ML-DSA signing and verifying process.
 
 **Since:** 26.0.0
 

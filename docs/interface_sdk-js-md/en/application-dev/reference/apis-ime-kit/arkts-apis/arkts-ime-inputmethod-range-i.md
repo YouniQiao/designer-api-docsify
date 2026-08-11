@@ -1,6 +1,6 @@
 # Range
 
-文本的选中范围。
+Range of selected text.
 
 **Since:** 10
 
@@ -22,7 +22,7 @@ import { inputMethod } from 'kits/@kit.IMEKit';
 end: int
 ```
 
-选中文本的末字符在编辑框的索引值。该参数应为大于或等于0的整数，不超过文本实际长度，end值要大于start值。
+Indicates the index of the last character of the selected text.
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
@@ -40,7 +40,7 @@ end: int
 start: int
 ```
 
-选中文本的首字符在编辑框的索引值。该参数应为大于或等于0的整数，不超过文本实际长度。
+Indicates the index of the first character of the selected text.
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 

@@ -12,7 +12,7 @@ import { scan } from 'kits/@kit.BasicServicesKit';
 function getAddedScanners(): Promise<ScannerDevice[]>
 ```
 
-获取已添加的扫描仪（系统API）。使用Promise异步回调。
+Obtains the added scanners. This API uses a promise to return the result.
 
 **Since:** 20
 
@@ -36,8 +36,8 @@ function getAddedScanners(): Promise<ScannerDevice[]>
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 201 | Permission denied. |
-| 202 | Not system application. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system application. |
 
 ## Examples
 

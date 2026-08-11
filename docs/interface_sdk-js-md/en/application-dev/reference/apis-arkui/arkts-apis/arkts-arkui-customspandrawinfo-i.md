@@ -1,6 +1,6 @@
 # CustomSpanDrawInfo
 
-定义自定义绘制Span的绘制信息接口。
+Defines the CustomSpanDrawInfo interface.
 
 **Since:** 12
 
@@ -16,9 +16,9 @@
 baseline: number
 ```
 
-自定义绘制Span的所在行的基线偏移量。
+Baseline offset of the line where the custom span is located.
 
-单位：[px](../../../reference/apis-arkui/arkui-ts/ts-pixel-units.md#基本像素单位)
+Unit: [px](../../apis-ability-kit/arkts-apis/arkts-app-ability-common.md/arkts-app-ability-common.md)
 
 **Type:** number
 
@@ -40,9 +40,9 @@ baseline: number
 lineBottom: number
 ```
 
-自定义绘制Span相对于Text组件的下边距。
+Bottom margin of the custom span relative to the **Text** component.
 
-单位：[px](../../../reference/apis-arkui/arkui-ts/ts-pixel-units.md#基本像素单位)
+Unit: [px](../../apis-ability-kit/arkts-apis/arkts-app-ability-common.md/arkts-app-ability-common.md)
 
 **Type:** number
 
@@ -64,9 +64,9 @@ lineBottom: number
 lineTop: number
 ```
 
-自定义绘制Span相对于Text组件的上边距。
+Top margin of the custom span relative to the **Text** component.
 
-单位：[px](../../../reference/apis-arkui/arkui-ts/ts-pixel-units.md#基本像素单位)
+Unit: [px](../../apis-ability-kit/arkts-apis/arkts-app-ability-common.md/arkts-app-ability-common.md)
 
 **Type:** number
 
@@ -88,9 +88,9 @@ lineTop: number
 x: number
 ```
 
-自定义绘制Span相对于挂载组件的偏移。
+Offset of the custom span relative to the mounted component.
 
-单位：[px](../../../reference/apis-arkui/arkui-ts/ts-pixel-units.md#基本像素单位)
+Unit: [px](../../apis-ability-kit/arkts-apis/arkts-app-ability-common.md/arkts-app-ability-common.md)
 
 **Type:** number
 

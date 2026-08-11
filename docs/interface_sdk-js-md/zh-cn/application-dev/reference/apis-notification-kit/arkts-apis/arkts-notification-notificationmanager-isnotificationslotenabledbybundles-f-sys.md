@@ -43,13 +43,15 @@ function isNotificationSlotEnabledByBundles(bundles: Array<BundleOption>, type: 
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 801 | Capability not supported. |
-| 201 | Permission denied. |
-| 1600001 | Internal error. |
-| 202 | Not system application to call the interface. |
-| 1600003 | Failed to connect to the service. |
+| [801](../../errorcode-universal.md#801-该设备不支持此api) | Capability not supported. |
+| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
+| [1600001](../errorcode-notification.md#1600001-内部错误) | Internal error. |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not system application to call the interface. |
+| [1600003](../errorcode-notification.md#1600003-连接通知服务失败) | Failed to connect to the service. |
 
 ## 示例
+
+ArkTS-Dyn示例：
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -67,6 +69,28 @@ notificationManager.isNotificationSlotEnabledByBundles(
     });
 }).catch((err: BusinessError) => {
     console.error(`isNotificationSlotEnabledByBundles failed, code is ${err.code}, message is ${err.message}`);
+});
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+// 批量查询多个应用的实况窗开关状态
+const bundles: Array<notificationManager.BundleOption> = [
+    { bundle: 'bundleName1', uid: 10001 },
+    { bundle: 'bundleName2', uid: 10002 },
+];
+
+notificationManager.isNotificationSlotEnabledByBundles(
+    bundles, notificationManager.SlotType.LIVE_VIEW).then((data) => {
+    data.forEach((value: boolean, key: notificationManager.BundleOption) => {
+        console.info(`bundle: ${key.bundle}, enabled: ${value}`);
+    });
+}).catch((err: Error): void => {
+    let error: BusinessError = err as BusinessError;
+    console.error(`isNotificationSlotEnabledByBundles failed, code is ${error.code}, message is ${error.message}`);
 });
 ```
 

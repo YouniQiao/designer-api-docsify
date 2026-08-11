@@ -10,12 +10,6 @@
 
 **系统能力：** SystemCapability.Applications.CalendarData
 
-## 导入模块
-
-```TypeScript
-import { calendarManager } from 'kits/@kit.CalendarKit';
-```
-
 ## attendee
 
 ```TypeScript
@@ -208,7 +202,7 @@ location?: Location
 
 日程地点。不填时，默认为undefined。
 
-**类型：** [Location](../../apis-location-kit/arkts-apis/arkts-location-geolocationmanager-location-i.md)
+**类型：** [Location](../../apis-camera-kit/arkts-apis/arkts-camera-camera-location-i.md)
 
 **起始版本：** 10
 
@@ -349,7 +343,7 @@ type: EventType
 
 日程类型。
 
-**类型：** [EventType](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-screenlock-eventtype-t-sys.md)
+**类型：** [EventType](../../apis-arkts/arkts-apis/arkts-arkts-xml-eventtype-e.md)
 
 **起始版本：** 10
 

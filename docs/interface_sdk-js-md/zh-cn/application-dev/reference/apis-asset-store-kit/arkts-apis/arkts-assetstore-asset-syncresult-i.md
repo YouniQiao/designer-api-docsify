@@ -10,12 +10,6 @@
 
 **系统能力：** SystemCapability.Security.Asset
 
-## 导入模块
-
-```TypeScript
-import { asset } from 'kits/@kit.AssetStoreKit';
-```
-
 ## failedCount
 
 ```TypeScript

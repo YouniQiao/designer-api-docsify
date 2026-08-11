@@ -1,6 +1,6 @@
 # DeviceSelectResult (System API)
 
-伴随设备选择回调的返回结果。用于在设备选择回调中返回用户选择的设备信息和扩展上下文。
+Returns the result of companion device selection. It is used to return the device information and extended context selected by the user in the device selection callback.
 
 **Since:** 23
 
@@ -24,7 +24,8 @@ import { companionDeviceAuth } from 'kits/@kit.UserAuthenticationKit';
 deviceKeys: DeviceKey[]
 ```
 
-设备信息列表。包含用户选择的设备业务标识信息，每个DeviceKey包含设备ID类型、设备ID和设备用户ID。系统会根据这些信息执行后续的添加模板或认证操作。
+Device information list. It contains the device service identifier information selected by the user. Each  
+**DeviceKey** contains the device ID type, device ID, and device user ID. The system will perform subsequent operations such as adding a template or performing authentication based on this information.
 
 **Type:** [DeviceKey](arkts-userauthentication-companiondeviceauth-devicekey-i-sys.md)[]
 
@@ -46,7 +47,7 @@ deviceKeys: DeviceKey[]
 selectionContext?: Uint8Array
 ```
 
-设备选择上下文。携带JSON格式的扩展信息（具体字段由业务方自行定义），可用于传递设备选择过程中的额外参数。不提供此字段时默认为空，不携带扩展信息。
+Device selection context. It carries extension information in JSON format and can be used to pass additional parameters in the device selection process, such as authentication configuration and service scenario identifier.
 
 **Type:** Uint8Array
 

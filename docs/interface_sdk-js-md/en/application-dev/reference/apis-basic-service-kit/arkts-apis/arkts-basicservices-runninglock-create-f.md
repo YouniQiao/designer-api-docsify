@@ -12,7 +12,7 @@ import { runningLock } from 'kits/@kit.BasicServicesKit';
 function create(name: string, type: RunningLockType, callback: AsyncCallback<RunningLock>): void
 ```
 
-创建RunningLock锁。使用callback异步回调。
+Creates a {@link RunningLock} object. This API uses an asynchronous callback to return the result.
 
 **Since:** 9
 
@@ -28,16 +28,16 @@ function create(name: string, type: RunningLockType, callback: AsyncCallback<Run
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| name | string | Yes | 锁的名字；该参数必须为字符串类型。 |
-| type | [RunningLockType](arkts-basicservices-runninglock-runninglocktype-e.md) | Yes | 要创建的锁的类型；该参数必须是一个枚举类。 |
-| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;RunningLock&gt; | Yes | 回调函数。当创建锁成功，err为undefined，data为创建的RunningLock；否则为错误对象； AsyncCallback封装了一个RunningLock类型的类。 |
+| name | string | Yes | Name of the **RunningLock** object. The value must be a string. |
+| type | [RunningLockType](arkts-basicservices-runninglock-runninglocktype-e.md) | Yes | Type of the **RunningLock** object. The value must be an enum. |
+| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;RunningLock&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined** and data is the created **RunningLock** object. Otherwise, **err** is an error object. **AsyncCallback** has encapsulated an API of the **RunningLock** class. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1. Parameter verification failed. |
-| 201 | If the permission is denied. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Parameter verification failed. |
+| [201](../../errorcode-universal.md#201-permission-denied) | If the permission is denied. |
 
 ## Examples
 
@@ -58,7 +58,7 @@ runningLock.create('running_lock_test', runningLock.RunningLockType.PROXIMITY_SC
 function create(name: string, type: RunningLockType): Promise<RunningLock>
 ```
 
-创建RunningLock锁。使用Promise异步回调。
+Creates a {@link RunningLock} object. This API uses a promise to return the result.
 
 **Since:** 9
 
@@ -74,21 +74,21 @@ function create(name: string, type: RunningLockType): Promise<RunningLock>
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| name | string | Yes | 锁的名字；该参数必须为字符串类型。 |
-| type | [RunningLockType](arkts-basicservices-runninglock-runninglocktype-e.md) | Yes | 要创建的锁的类型；该参数必须是一个枚举类。 |
+| name | string | Yes | Name of the **RunningLock** object. The value must be a string. |
+| type | [RunningLockType](arkts-basicservices-runninglock-runninglocktype-e.md) | Yes | Type of the **RunningLock** object. The value must be an enum. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;RunningLock&gt; | Promise对象，返回RunningLock锁对象。 |
+| Promise&lt;RunningLock&gt; | Promise used to return the { |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1. Parameter verification failed. |
-| 201 | If the permission is denied. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Parameter verification failed. |
+| [201](../../errorcode-universal.md#201-permission-denied) | If the permission is denied. |
 
 ## Examples
 

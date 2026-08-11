@@ -1,6 +1,6 @@
 # UnionEffectContainerAttribute (System API)
 
-UnionEffectContainer属性，支持通用属性，支持宽高设置。
+Defines the UnionEffectContainer attribute functions.
 
 **Inheritance/Implementation:** UnionEffectContainerAttribute extends [CommonMethod](arkts-arkui-common-commonmethod-i.md)
 
@@ -53,7 +53,7 @@ Sets the attribute modifier for UnionEffectContainer.
 default pointLight(light: PointLightStyle): this
 ```
 
-设置点光源样式。
+Sets up point light source effects.
 
 **Since:** 23
 
@@ -71,7 +71,7 @@ default pointLight(light: PointLightStyle): this
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| light | [PointLightStyle](../arkts-components/arkts-arkui-pointlightstyle-i-sys.md) | Yes | 点光源样式。 |
+| light | [PointLightStyle](../arkts-components/arkts-arkui-pointlightstyle-i-sys.md) | Yes | The point light style. |
 
 **Return value:**
 
@@ -87,9 +87,9 @@ default setUnionEffectContainerOptions(options?: UnionEffectContainerOptions): t
 
 Set UnionEffectContainer options.
 
-**Since:** 26.0.0
+**Since:** 26.1.0
 
-**ArkTS mode:** ArkTS-Sta only, since version 26.0.0.
+**ArkTS mode:** ArkTS-Sta only, since version 26.1.0.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -117,7 +117,7 @@ Set UnionEffectContainer options.
 default unionMode(mode: UnionMode | undefined): this
 ```
 
-设置融合效果模式。
+Sets union Mode of the UnionEffectContainer.
 
 **Since:** 26.0.0
 
@@ -135,7 +135,7 @@ default unionMode(mode: UnionMode | undefined): this
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| mode | [UnionMode](arkts-arkui-unioneffectcontainer-unionmode-e-sys.md) \| undefined | Yes | 融合效果模式。 |
+| mode | [UnionMode](arkts-arkui-unioneffectcontainer-unionmode-e-sys.md) \| undefined | Yes | The Union mode. |
 
 **Return value:**
 

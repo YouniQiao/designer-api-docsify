@@ -1,11 +1,5 @@
 # compressFile
 
-## 导入模块
-
-```TypeScript
-import { zlib } from 'kits/@kit.BasicServicesKit';
-```
-
 ## compressFile
 
 ```TypeScript
@@ -41,9 +35,9 @@ function compressFile(inFile: string, outFile: string, options: Options, callbac
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types. |
-| 900001 | The input source file is invalid. |
-| 900002 | The input destination file is invalid. |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types. |
+| [900001](../../apis-basic-services-kit/errorcode-zlib.md#900001-传入的源文件错误) | The input source file is invalid. |
+| [900002](../../apis-basic-services-kit/errorcode-zlib.md#900002-传入的目标文件错误) | The input destination file is invalid. |
 
 ## 示例
 
@@ -61,7 +55,7 @@ let options: zlib.Options = {
 
 try {
   zlib.compressFile(inFile, outFile, options, (errData: BusinessError) => {
-    if (errData) {
+    if (errData !== null) {
       console.error(`compressFile errData is errCode:${errData.code}  message:${errData.message}`);
     } else {
       console.info(`compressFile success.`);
@@ -115,9 +109,9 @@ function compressFile(inFile: string, outFile: string, options: Options): Promis
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types. |
-| 900001 | The input source file is invalid. |
-| 900002 | The input destination file is invalid. |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types. |
+| [900001](../../apis-basic-services-kit/errorcode-zlib.md#900001-传入的源文件错误) | The input source file is invalid. |
+| [900002](../../apis-basic-services-kit/errorcode-zlib.md#900002-传入的目标文件错误) | The input destination file is invalid. |
 
 ## 示例
 

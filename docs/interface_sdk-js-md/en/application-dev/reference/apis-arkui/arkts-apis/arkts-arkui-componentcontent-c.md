@@ -114,7 +114,7 @@ Dispose the ComponentContent immediately.
 isDisposed(): boolean
 ```
 
-获取 ComponentContent 是否已被解绑。
+Get if the ComponentContent is disposed.
 
 **Since:** 26.0.0
 
@@ -130,7 +130,7 @@ isDisposed(): boolean
 
 | Type | Description |
 | --- | --- |
-| boolean | 如果 ComponentContent 已被解绑则返回 true，否则返回 false。 |
+| boolean | Returns true if the ComponentContent is disposed, false otherwise. |
 
 ## isTransferred
 
@@ -138,7 +138,7 @@ isDisposed(): boolean
 isTransferred(): boolean
 ```
 
-返回一个标志位，表示当前 ComponentContent 是否通过动态-静态转换获取。该转换包含两个方向：从动态转换为静态，以及从静态转换为动态。
+Returns a flag indicating whether the current ComponentContent was obtained through dynamic-static conversion,includes conversions in both directions: dynamic-to-static and static-to-dynamic.
 
 **Since:** 26.0.0
 
@@ -154,7 +154,7 @@ isTransferred(): boolean
 
 | Type | Description |
 | --- | --- |
-| boolean | 如果ComponentContent在动态和静态状态之间转换，则返回true。 否则返回false。 |
+| boolean | Returns true if the ComponentContent was converted between dynamic and static states, otherwise returns false. |
 
 ## recycle
 
@@ -180,7 +180,7 @@ Recycle the ComponentContent.
 reuse(param?: RecordData): void
 ```
 
-基于提供的参数复用ComponentContent。
+Reuse the ComponentContent based on the provided parameters.
 
 **Since:** 23
 
@@ -196,7 +196,7 @@ reuse(param?: RecordData): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| param | [RecordData](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-recorddata-t.md) | No | 用于复用ComponentContent的参数。该参数将直接用于ComponentContent中所有顶层自定义组件的复用，应该包含每个自定义组件的构造函数参数所需内容，否则，会导致未定义行为。调用此方法将同步触发内部自定义组件的aboutToReuse生命周期回调，并将该参数作为回调的入参。默认值为undefined，此时ComponentContent中的自定义组件将直接使用构造时的数据源。 |
+| param | [RecordData](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-recorddata-t.md) | No | Parameters for reusing ComponentContent. These parameters will be directly applied to the reuse of all top-level custom components in the ComponentContent. They should include the content required for the constructor parameters of each custom component; otherwise, undefined behavior may occur. Calling this method will synchronously trigger the aboutToReuse lifecycle callback of the internal custom components, with these parameters passed as the callback's input. The default value is undefined, in which case the custom components in the ComponentContent will directly use the data source from the construction phase. |
 
 ## update
 

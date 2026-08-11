@@ -1,8 +1,6 @@
 # NotificationSubscriberExtensionContext
 
-NotificationSubscriberExtensionContext模块提供通知订阅者扩展能力。
-
-NotificationSubscriberExtensionContext继承自ExtensionContext类，是NotificationSubscriberExtensionAbility的上下文。
+The **NotificationSubscriberExtensionContext** module provides the context for the **NotificationSubscriberExtensionAbility**.
 
 **Inheritance/Implementation:** NotificationSubscriberExtensionContext extends [ExtensionContext](../../apis-ability-kit/arkts-apis/arkts-ability-extensioncontext-c.md/arkts-ability-extensioncontext-c.md)
 

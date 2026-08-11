@@ -12,11 +12,14 @@ import { hidebug } from 'kits/@kit.PerformanceAnalysisKit';
 function getSharedDirty() : bigint
 ```
 
-��ȡ���̵Ĺ������ڴ��С���ӿ�ʵ�ַ�ʽ����ȡ/proc/{pid}/smaps_rollup�ڵ��е�Shared_Dirtyֵ��
+Obtains the size of the shared dirty memory of a process. This API is implemented by reading the value of  
+**Shared_Dirty** in the **\/proc/{pid}/smaps_rollup** node.
 
-> **ע��**
+> **NOTE：**
 > 
-> ����/proc/{pid}/smaps_rollup�Ķ�ȡ��ʱ�ϳ������鲻Ҫ�����߳���ʹ�øýӿڣ���ͨ��@ohos.taskpool��@ohos.worker�����첽�߳��Ա���Ӧ�ó��ֿ��١�
+> Reading the **\/proc/{pid}/smaps_rollup** node is time-consuming. Therefore, you are advised not to use this API
+> in the main thread. You can use this API in the asynchronous thread started by calling
+> [@ohos.taskpool](../../apis-arkts/arkts-apis/arkts-taskpool.md/arkts-taskpool.md) or [@ohos.worker](../../apis-arkts/arkts-apis/arkts-worker.md/arkts-worker.md) to avoid frame freezing.
 
 **Since:** 8
 
@@ -30,7 +33,7 @@ function getSharedDirty() : bigint
 
 | Type | Description |
 | --- | --- |
-| bigint | ���ؽ��̵Ĺ������ڴ��С����λΪKB�� |
+| bigint | Size of the shared dirty memory of the process, in KB. |
 
 ## Examples
 
@@ -38,6 +41,5 @@ function getSharedDirty() : bigint
 import { hidebug } from '@kit.PerformanceAnalysisKit';
 
 let sharedDirty: bigint = hidebug.getSharedDirty();
-console.info(`sharedDirty = ${sharedDirty}`);
 ```
 

@@ -1,11 +1,5 @@
 # getGeomagneticField
 
-## 导入模块
-
-```TypeScript
-import { sensor } from 'kits/@kit.SensorServiceKit';
-```
-
 ## getGeomagneticField
 
 ```TypeScript

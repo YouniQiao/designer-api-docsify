@@ -18,7 +18,7 @@ liveView?: NotificationLiveViewContent
 
 普通实况窗类型通知内容。
 
-**类型：** [NotificationLiveViewContent](arkts-notification-notificationmanager-notificationliveviewcontent-t-sys.md)
+**类型：** [NotificationLiveViewContent](arkts-notification-notificationcontent-notificationliveviewcontent-i-sys.md)
 
 **起始版本：** 11
 

@@ -592,7 +592,7 @@ default mode(value: NavigationMode | undefined): this
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | [NavigationMode](arkts-arkui-navigation-navigationmode-e.md) \| undefined | 是 |  |
+| value | [NavigationMode](../arkts-components/arkts-arkui-navigationmode-e.md) \| undefined | 是 |  |
 
 **返回值：**
 
@@ -697,7 +697,7 @@ default navBarWidthRange(value: [
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | [         Dimension,         Dimension     ] \| undefined | 是 | 导航页最小和最大宽度。&lt;br/&gt;参数非法或为undefined时，按默认值处理。 |
+| value | [         Dimension,         Dimension     ] \| undefined | 是 | 导航页最小和最大宽度。&lt;br/&gt;参数非法或为undefined时，按默认值处理。 |
 
 **返回值：**
 
@@ -977,7 +977,7 @@ default systemBarStyle(style: SystemBarStyle | undefined): this
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| style | [SystemBarStyle](../arkts-components/arkts-arkui-systembarstyle-t.md) \| undefined | 是 | 系统状态栏样式。&lt;br/&gt;取值为undefined时，无样式。 |
+| style | [SystemBarStyle](arkts-arkui-window-systembarstyle-i.md) \| undefined | 是 | 系统状态栏样式。&lt;br/&gt;取值为undefined时，无样式。 |
 
 **返回值：**
 
@@ -1014,7 +1014,7 @@ default title(value: ResourceStr | CustomBuilder | NavigationCommonTitle | Navig
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | value | [ResourceStr](arkts-arkui-resourcestr-t.md) \| CustomBuilder \| NavigationCommonTitle \| NavigationCustomTitle \| undefined | 是 |  |
-| options | [NavigationTitleOptions](arkts-arkui-navigation-navigationtitleoptions-i.md) \| undefined | 否 | 标题栏选项。 包含标题栏背景颜色、标题栏背景模糊样式及模糊选项、标题栏背景属性、标题栏布局方式、标题栏起始端内 间距、标题栏结束端内间距、主标题属性修改器、子标题属性修改器、是否响应悬停态。&lt;br/&gt;取值为undefined时，按NavigationTitleOptions中的默认值处理。 |
+| options | [NavigationTitleOptions](../arkts-components/arkts-arkui-navigationtitleoptions-i.md) \| undefined | 否 | 标题栏选项。 包含标题栏背景颜色、标题栏背景模糊样式及模糊选项、标题栏背景属性、标题栏布局方式、标题栏起始端内 间距、标题栏结束端内间距、主标题属性修改器、子标题属性修改器、是否响应悬停态。&lt;br/&gt;取值为undefined时，按NavigationTitleOptions中的默认值处理。 |
 
 **返回值：**
 

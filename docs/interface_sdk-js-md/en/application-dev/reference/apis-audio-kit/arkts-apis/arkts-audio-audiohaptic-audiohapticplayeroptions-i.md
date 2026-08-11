@@ -1,6 +1,6 @@
 # AudioHapticPlayerOptions
 
-音振播放器选项。
+Describes the options for the audio-haptic player.
 
 **Since:** 11
 
@@ -22,7 +22,7 @@ import { audioHaptic } from 'kits/@kit.AudioKit';
 muteAudio?: boolean
 ```
 
-是否将音频静音，true表示将音频静音，false表示正常播放声音。若不填该参数，则默认为false。
+Whether to mute the audio. **true** to mute, **false** otherwise. If this parameter is not specified, the default value **false** is used.
 
 **Type:** boolean
 
@@ -40,7 +40,7 @@ muteAudio?: boolean
 muteHaptics?: boolean
 ```
 
-是否禁止振动，true表示将禁止振动，false表示正常振动。若不填该参数，则默认为false。
+Whether to mute haptics feedback. **true** to mute, **false** otherwise. If this parameter is not specified, the default value **false** is used.
 
 **Type:** boolean
 

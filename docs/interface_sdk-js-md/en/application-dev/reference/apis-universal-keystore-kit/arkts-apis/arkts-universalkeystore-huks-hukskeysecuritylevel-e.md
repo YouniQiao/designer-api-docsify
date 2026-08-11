@@ -1,6 +1,6 @@
 # HuksKeySecurityLevel
 
-表示密钥安全级别的枚举。
+Enumerates the key security levels.
 
 **Since:** 26.0.0
 
@@ -16,7 +16,7 @@
 HUKS_KEY_SECURITY_LEVEL_TEE = 0
 ```
 
-密钥在可信执行环境中生成并使用。
+The key is generated and used in the trusted execution environment.
 
 **Since:** 26.0.0
 
@@ -34,7 +34,7 @@ HUKS_KEY_SECURITY_LEVEL_TEE = 0
 HUKS_KEY_SECURITY_LEVEL_SE = 1
 ```
 
-密钥在安全环境中生成并使用。
+The key is generated and used in the secure environment.
 
 **Since:** 26.0.0
 

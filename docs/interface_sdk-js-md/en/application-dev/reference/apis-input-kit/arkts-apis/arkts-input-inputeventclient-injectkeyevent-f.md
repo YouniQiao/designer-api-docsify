@@ -12,7 +12,7 @@ import { inputEventClient } from 'kits/@kit.InputKit';
 function injectKeyEvent(keyEvent: KeyEventData): void
 ```
 
-按键(包括单个按键和组合键)事件注入。
+Injects key events (for both single keys and combination keys).
 
 **Since:** 11
 
@@ -29,15 +29,15 @@ function injectKeyEvent(keyEvent: KeyEventData): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| keyEvent | [KeyEventData](arkts-input-inputeventclient-keyeventdata-i.md) | Yes | 按键事件注入描述信息。 |
+| keyEvent | [KeyEventData](arkts-input-inputeventclient-keyeventdata-i.md) | Yes | Key event to inject. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; 3. Parameter verification failed. |
-| 201 | Permission denied.<br>**Applicable version:** 12 and later |
-| 202 | SystemAPI permission error. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; 3. Parameter verification failed. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied.<br>**Applicable version:** 12 and later |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | SystemAPI permission error. |
 
 ## Examples
 
@@ -64,7 +64,6 @@ struct Index {
             }
 
             let eventDown: EventDown = { keyEvent: backKeyDown }
-            // Inject key event
             inputEventClient.injectKeyEvent(eventDown);
 
             let backKeyUp: inputEventClient.KeyEvent = {
@@ -79,10 +78,9 @@ struct Index {
             }
 
             let eventUp: EventUp = { keyEvent: backKeyUp }
-            // Inject key event
             inputEventClient.injectKeyEvent(eventUp);
           } catch (error) {
-            console.error(`Failed to inject KeyEvent, Code: ${(error as BusinessError).code}, message: ${(error as BusinessError).message}.`);
+            console.error(`Failed to inject KeyEvent, error: ${JSON.stringify(error, [`code`, `message`])}`);
           }
         })
     }

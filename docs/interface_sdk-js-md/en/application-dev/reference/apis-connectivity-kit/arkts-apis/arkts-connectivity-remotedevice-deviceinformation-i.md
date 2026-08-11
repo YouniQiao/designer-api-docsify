@@ -1,6 +1,6 @@
 # DeviceInformation
 
-描述远端设备信息。
+Describes the remote device information.
 
 **Since:** 26.0.0
 
@@ -22,7 +22,7 @@ import { remoteDevice } from 'kits/@kit.ConnectivityKit';
 manufacturerData: string
 ```
 
-远端设备的制造商数据最大长度为255。
+The manufacturer data of the remote device.The maximum length is 255.
 
 **Type:** string
 
@@ -42,7 +42,7 @@ manufacturerData: string
 modelData: string
 ```
 
-远程设备的模型数据。最大长度为255。
+The model data of the remote device.The maximum length is 255.
 
 **Type:** string
 

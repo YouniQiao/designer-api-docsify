@@ -1,11 +1,5 @@
 # isEncoding
 
-## 导入模块
-
-```TypeScript
-import { fastbuffer } from 'kits/@kit.ArkTS';
-```
-
 ## isEncoding
 
 ```TypeScript
@@ -28,7 +22,7 @@ function isEncoding(encoding: string): boolean
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| encoding | string | 是 | 编码格式，支持的格式范围为[BufferEncoding](arkts-arkts-fastbuffer-bufferencoding-t.md)。 |
+| encoding | string | 是 | 待判断是否为支持的编码格式。 |
 
 **返回值：**
 

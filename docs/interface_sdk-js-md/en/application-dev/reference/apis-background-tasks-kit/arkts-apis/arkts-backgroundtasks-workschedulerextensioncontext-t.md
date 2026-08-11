@@ -4,8 +4,8 @@
 export type WorkSchedulerExtensionContext = _WorkSchedulerExtensionContext
 ```
 
-WorkSchedulerExtensionContext是WorkSchedulerExtensionAbility的上下文环境，继承自  
-[ExtensionContext](../../apis-ability-kit/arkts-apis/arkts-ability-extensioncontext-c.md/arkts-ability-extensioncontext-c.md)。
+WorkSchedulerExtensionContext represents the context of WorkSchedulerExtensionAbility and is inherited from   
+[ExtensionContext](../../apis-ability-kit/arkts-apis/arkts-ability-extensioncontext-c.md/arkts-ability-extensioncontext-c.md).
 
 **Since:** 10
 

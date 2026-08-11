@@ -14,12 +14,6 @@ FileAccessHelper对象。
 
 **系统接口：** 此接口为系统接口。
 
-## 导入模块
-
-```TypeScript
-import { fileAccess } from 'kits/@kit.CoreFileKit';
-```
-
 ## access
 
 ```TypeScript
@@ -443,8 +437,8 @@ copyFile(sourceUri: string, destUri: string, fileName: string): Promise<string>
 | 13900023 | Text file busy |
 | 13900018 | Not a directory |
 | 13900019 | Is a directory |
-| 201 | Permission verification failed, usually the result returned by VerifyAccessToken |
-| 202 | Permission verification failed, application which is not a system application uses system API |
+| [201](../../errorcode-universal.md#201-权限校验失败) | Permission verification failed, usually the result returned by VerifyAccessToken |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed, application which is not a system application uses system API |
 | 13900030 | File name too long |
 | 13900024 | File too large |
 | 13900025 | No space left on device |
@@ -507,8 +501,8 @@ copyFile(sourceUri: string, destUri: string, fileName: string, callback: AsyncCa
 | 13900023 | Text file busy |
 | 13900018 | Not a directory |
 | 13900019 | Is a directory |
-| 201 | Permission verification failed, usually the result returned by VerifyAccessToken |
-| 202 | Permission verification failed, application which is not a system application uses system API |
+| [201](../../errorcode-universal.md#201-权限校验失败) | Permission verification failed, usually the result returned by VerifyAccessToken |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed, application which is not a system application uses system API |
 | 13900030 | File name too long |
 | 13900024 | File too large |
 | 13900025 | No space left on device |
@@ -1821,8 +1815,8 @@ moveFile(sourceUri: string, destUri: string, fileName: string): Promise<string>
 | 13900023 | Text file busy |
 | 13900018 | Not a directory |
 | 13900019 | Is a directory |
-| 201 | Permission verification failed, usually the result returned by VerifyAccessToken. |
-| 202 | Permission verification failed, application which is not a system application uses system API. |
+| [201](../../errorcode-universal.md#201-权限校验失败) | Permission verification failed, usually the result returned by VerifyAccessToken. |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed, application which is not a system application uses system API. |
 | 13900030 | File name too long |
 | 13900024 | File too large |
 | 13900025 | No space left on device |
@@ -1910,8 +1904,8 @@ moveFile(sourceUri: string, destUri: string, fileName: string, callback: AsyncCa
 | 13900023 | Text file busy |
 | 13900018 | Not a directory |
 | 13900019 | Is a directory |
-| 201 | Permission verification failed, usually the result returned by VerifyAccessToken. |
-| 202 | Permission verification failed, application which is not a system application uses system API. |
+| [201](../../errorcode-universal.md#201-权限校验失败) | Permission verification failed, usually the result returned by VerifyAccessToken. |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed, application which is not a system application uses system API. |
 | 13900030 | File name too long |
 | 13900024 | File too large |
 | 13900025 | No space left on device |
@@ -2006,8 +2000,8 @@ moveItem(sourceUri: string, destUri: string, force?: boolean): Promise<Array<Mov
 | 13900023 | Text file busy |
 | 13900018 | Not a directory |
 | 13900019 | Is a directory |
-| 201 | Permission verification failed, usually the result returned by VerifyAccessToken. |
-| 202 | Permission verification failed, application which is not a system application uses system API. |
+| [201](../../errorcode-universal.md#201-权限校验失败) | Permission verification failed, usually the result returned by VerifyAccessToken. |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed, application which is not a system application uses system API. |
 | 13900030 | File name too long |
 | 13900024 | File too large |
 | 13900025 | No space left on device |
@@ -2069,8 +2063,8 @@ moveItem(sourceUri: string, destUri: string, callback: AsyncCallback<Array<MoveR
 | 13900023 | Text file busy |
 | 13900018 | Not a directory |
 | 13900019 | Is a directory |
-| 201 | Permission verification failed, usually the result returned by VerifyAccessToken. |
-| 202 | Permission verification failed, application which is not a system application uses system API. |
+| [201](../../errorcode-universal.md#201-权限校验失败) | Permission verification failed, usually the result returned by VerifyAccessToken. |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed, application which is not a system application uses system API. |
 | 13900030 | File name too long |
 | 13900024 | File too large |
 | 13900025 | No space left on device |
@@ -2168,8 +2162,8 @@ moveItem(sourceUri: string, destUri: string, force: boolean, callback: AsyncCall
 | 13900023 | Text file busy |
 | 13900018 | Not a directory |
 | 13900019 | Is a directory |
-| 201 | Permission verification failed, usually the result returned by VerifyAccessToken. |
-| 202 | Permission verification failed, application which is not a system application uses system API. |
+| [201](../../errorcode-universal.md#201-权限校验失败) | Permission verification failed, usually the result returned by VerifyAccessToken. |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed, application which is not a system application uses system API. |
 | 13900030 | File name too long |
 | 13900024 | File too large |
 | 13900025 | No space left on device |

@@ -7,6 +7,6 @@
 
 | Name | Description |
 | --- | --- |
-| [AutoStartupCallback](arkts-ability-autostartupcallback-i-sys.md) | 应用设置为开机自启动时的回调函数。 |
+| [AutoStartupCallback](arkts-ability-autostartupcallback-i-sys.md) | The module defines the callback to be invoked when auto-startup is set or canceled for an application component. |
 <!--DelEnd-->
 

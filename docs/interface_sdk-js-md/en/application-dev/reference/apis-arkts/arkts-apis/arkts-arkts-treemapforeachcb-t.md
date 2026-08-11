@@ -4,7 +4,7 @@
 export type TreeMapForEachCb<K, V> = (value: V, key: K, map: TreeMap<K, V>) => void
 ```
 
-TreeMap的回调函数类型。
+The type of TreeMap callback function.
 
 **Since:** 23
 
@@ -20,7 +20,7 @@ TreeMap的回调函数类型。
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | V | Yes | 当前元素的值。 |
-| key | K | Yes | 当前元素的键。 |
-| map | [TreeMap](arkts-arkts-util-treemap-treemap-c.md)&lt;K, V&gt; | Yes | 当前正在遍历的TreeMap实例。 |
+| value | V | Yes | The value of current element |
+| key | K | Yes | The key of current element |
+| map | [TreeMap](arkts-arkts-util-treemap-treemap-c.md)&lt;K, V&gt; | Yes | The TreeMap instance being traversed |
 

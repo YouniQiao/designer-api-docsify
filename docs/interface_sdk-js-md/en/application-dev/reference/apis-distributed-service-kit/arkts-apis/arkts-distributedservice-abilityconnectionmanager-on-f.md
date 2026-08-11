@@ -13,7 +13,7 @@ function on(type: 'connect', sessionId: number,
         callback: Callback<EventCallbackInfo>): void
 ```
 
-注册connect事件的回调监听。使用callback异步回调。
+Enables listening for **connect** events. This API uses an asynchronous callback to return the result.
 
 **Since:** 18
 
@@ -29,15 +29,15 @@ function on(type: 'connect', sessionId: number,
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'connect' | Yes | 事件回调类型，支持的事件为'connect'，完成 [abilityConnectionManager.connect()](arkts-distributedservice-abilityconnectionmanager-connect-f.md#connect)调用，触发该事件。 |
-| sessionId | number | Yes | 创建的协同会话ID。 |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;EventCallbackInfo&gt; | Yes | 注册的回调函数。 |
+| type | 'connect' | Yes | Event type. This field has a fixed value of **connect**. This event is triggered when [abilityConnectionManager.connect()](arkts-distributedservice-abilityconnectionmanager-connect-f.md#connect) is called. |
+| sessionId | number | Yes | ID of the collaboration session. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;EventCallbackInfo&gt; | Yes | Registered callback function. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. |
 
 ## Examples
 
@@ -59,7 +59,7 @@ function on(type: 'disconnect', sessionId: number,
         callback: Callback<EventCallbackInfo>): void
 ```
 
-注册disconnect事件的回调监听。
+Enables listening for **disconnect** events.
 
 **Since:** 18
 
@@ -75,15 +75,15 @@ function on(type: 'disconnect', sessionId: number,
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'disconnect' | Yes | 事件回调类型，支持的事件为'disconnect'，完成 [abilityConnectionManager.disconnect()](arkts-distributedservice-abilityconnectionmanager-disconnect-f.md#disconnect)调用，触发该事件。 |
-| sessionId | number | Yes | 创建的协同会话ID。 |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;EventCallbackInfo&gt; | Yes | 注册的回调函数。 |
+| type | 'disconnect' | Yes | Event type. This field has a fixed value of **disconnect**. This event is triggered when [abilityConnectionManager.disconnect()](arkts-distributedservice-abilityconnectionmanager-disconnect-f.md#disconnect) is called. |
+| sessionId | number | Yes | ID of the collaboration session. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;EventCallbackInfo&gt; | Yes | Registered callback function. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. |
 
 ## Examples
 
@@ -105,7 +105,7 @@ function on(type: 'receiveMessage', sessionId: number,
         callback: Callback<EventCallbackInfo>): void
 ```
 
-注册receiveMessage事件的回调监听。
+Enables listening for **receiveMessage** events.
 
 **Since:** 18
 
@@ -121,15 +121,15 @@ function on(type: 'receiveMessage', sessionId: number,
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'receiveMessage' | Yes | 事件回调类型，支持的事件为'receiveMessage'，完成 [abilityConnectionManager.sendMessage()](arkts-distributedservice-abilityconnectionmanager-sendmessage-f.md#sendmessage)调用， 触发该事件。 |
-| sessionId | number | Yes | 创建的协同会话ID。 |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;EventCallbackInfo&gt; | Yes | 注册的回调函数。 |
+| type | 'receiveMessage' | Yes | Event type. This field has a fixed value of **receiveMessage**. This event is triggered when [abilityConnectionManager.sendMessage()](arkts-distributedservice-abilityconnectionmanager-sendmessage-f.md#sendmessage) is called. |
+| sessionId | number | Yes | ID of the collaboration session. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;EventCallbackInfo&gt; | Yes | Registered callback function. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. |
 
 ## Examples
 
@@ -151,7 +151,7 @@ function on(type: 'receiveData', sessionId: number,
         callback: Callback<EventCallbackInfo>): void
 ```
 
-注册receiveData事件的回调监听。
+Enables listening for **receiveData** events.
 
 **Since:** 18
 
@@ -167,15 +167,15 @@ function on(type: 'receiveData', sessionId: number,
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'receiveData' | Yes | 事件回调类型，支持的事件为'receiveData'，完成 [abilityConnectionManager.sendData()](arkts-distributedservice-abilityconnectionmanager-senddata-f.md#senddata)调用， 触发该事件。 |
-| sessionId | number | Yes | 创建的协同会话ID。 |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;EventCallbackInfo&gt; | Yes | 注册的回调函数。 |
+| type | 'receiveData' | Yes | Event type. This field has a fixed value of **receiveData**. This event is triggered when [abilityConnectionManager.sendData()](arkts-distributedservice-abilityconnectionmanager-senddata-f.md#senddata) is called. |
+| sessionId | number | Yes | ID of the collaboration session. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;EventCallbackInfo&gt; | Yes | Registered callback function. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. |
 
 ## Examples
 

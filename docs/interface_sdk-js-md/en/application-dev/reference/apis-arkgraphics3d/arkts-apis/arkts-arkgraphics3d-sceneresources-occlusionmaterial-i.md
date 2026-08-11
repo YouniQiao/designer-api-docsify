@@ -1,6 +1,6 @@
 # OcclusionMaterial
 
-遮挡材质资源
+Occlusion material resource
 
 **Inheritance/Implementation:** OcclusionMaterial extends [Material](arkts-arkgraphics3d-sceneresources-material-i.md)
 

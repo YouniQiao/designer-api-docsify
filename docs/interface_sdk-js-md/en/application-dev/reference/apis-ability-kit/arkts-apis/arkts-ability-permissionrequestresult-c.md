@@ -1,6 +1,7 @@
 # PermissionRequestResult
 
-PermissionRequestResult是权限申请的结果对象。开发者需先创建atManager实例，再调用requestPermissionsFromUser方法申请权限，该方法返回PermissionRequestResult对象，开发者可通过该对象的属性判断权限申请结果。权限申请整体流程及atManager的详细说明请参见[@ohos.abilityAccessCtrl (程序访问控制管理)](arkts-abilityaccessctrl.md)。
+PermissionRequestResult is the result object of a permission request. Developers need to first create an atManager instance, and then call the requestPermissionsFromUser method to request permissions. This method returns a PermissionRequestResult object, through which developers can determine the permission request result based on its properties. For details about the overall permission request process and atManager, see  
+[@ohos.abilityAccessCtrl (Application Access Control)](arkts-abilityaccessctrl.md).
 
 **Since:** 9
 
@@ -16,12 +17,13 @@ PermissionRequestResult是权限申请的结果对象。开发者需先创建atM
 authResults: Array<int>
 ```
 
-每个请求权限对应的授权结果。
+Authorization result corresponding to each requested permission.
 
-- -1：未授权。从API version 12开始，可结合dialogShownResults进一步判断原因：若dialogShownResults为true，表示用户在本次申请中明确拒绝；若为false，表示当前状态无需再弹  
-窗，通常需要用户前往系统设置修改。  
-- 0：已授权，应用可以继续访问与该权限关联的受保护资源。  
-- 2：请求无效，通常表示权限未声明、权限名非法，或未满足该权限的特殊申请条件。开发者应检查权限名、module.json中的权限声明以及对应权限的申请条件。
+- -1: Not authorized. Starting from API version 12, you can combine this with dialogShownResults to further  
+determine the reason: if dialogShownResults is true, it means the user explicitly denied the request this time; if false, it means the current state does not require a dialog to be shown, and the user usually needs to go to system settings to make changes.  
+- 0: Authorized, the application can continue to access protected resources associated with this permission.  
+- 2: Invalid request, usually indicating that the permission is not declared, the permission name is invalid, or  
+the special request conditions for this permission are not met. Developers should check the permission name, the permission declaration in module.json, and the request conditions for the corresponding permission.
 
 **Type:** ArkTS-Dyn: Array&lt;number&gt;  <br>ArkTS-Sta：Array&lt;int&gt;
 
@@ -43,12 +45,13 @@ authResults: Array<int>
 dialogShownResults?: Array<boolean>
 ```
 
-表示每个权限在本次申请过程中是否真正展示过授权弹窗。
+Indicates whether an authorization dialog was actually shown for each permission during this request process.
 
-- true：系统已展示授权弹窗。  
-- false：系统未展示弹窗，通常是因为权限当前状态、权限类型或系统策略不允许继续走弹窗授权链路。
+- true: The system has shown the authorization dialog.  
+- false: The system did not show a dialog, usually because the current permission state, permission type, or system  
+policy does not allow proceeding with the dialog authorization path.
 
-当authResults为-1时，结合本字段可进一步区分“本次被用户拒绝”与“当前已不再弹窗”。未返回该字段时，表示本次结果不包含授权弹窗展示状态。
+When authResults is -1, combining it with this field can further distinguish between "rejected by the user this time" and "dialog is no longer shown currently". If this field is not returned, it means this result does not include the authorization dialog display status.
 
 **Type:** Array&lt;boolean&gt;
 
@@ -70,19 +73,22 @@ dialogShownResults?: Array<boolean>
 errorReasons?: Array<int>
 ```
 
-每个权限申请对应的原因码。主要用于解释授权失败、请求无效或无法展示弹窗的具体原因。未返回该字段时，表示本次结果不包含原因码。
+Reason code corresponding to each permission request. Mainly used to explain the specific reasons for authorization failure, invalid request, or inability to show a dialog. If this field is not returned, it means this result does not include reason codes.
 
-- 0：本次申请合法。  
-- 1：权限名非法，请检查权限名格式和取值。  
-- 2：权限未声明，请在module.json中声明该权限。  
-- 3：不满足对应权限的申请条件，例如部分位置权限需要满足额外前提。当前仅位置权限涉及，包括  
-[ohos.permission.LOCATION](../../../security/AccessToken/permissions-for-all-user.md#ohospermissionlocation)与  
-[ohos.permission.APPROXIMATELY_LOCATION](../../../security/AccessToken/permissions-for-all-user.md#ohospermissionapproximately_location)。  
-- 4：用户未同意隐私声明，请引导用户同意隐私声明后再申请权限。  
-- 5：该权限不支持通过权限弹窗进行申请，可能是申请方式受限或被系统策略管控。请改用该权限支持的授权方式。  
-- 6：该权限为[manual_settings](../../../security/AccessToken/app-permission-mgmt-overview.md#manual_settings手动设置授权)类型，只  
-能通过设置页授权。从API version 21开始支持该原因码。  
-- 12：服务异常，请稍后重试。
+- 0: This request is valid.  
+- 1: Invalid permission name, please check the permission name format and value.  
+- 2: Permission not declared, please declare this permission in module.json.  
+- 3: The request conditions for the corresponding permission are not met, for example, some location permissions  
+require additional prerequisites. Currently only applies to location permissions, including  
+[ohos.permission.LOCATION](../../../security/AccessToken/permissions-for-all-user.md#ohospermissionlocation) and  
+[ohos.permission.APPROXIMATELY_LOCATION](../../../security/AccessToken/permissions-for-all-user.md#ohospermissionapproximately_location).  
+- 4: The user has not agreed to the privacy statement, please guide the user to agree to the privacy statement  
+before requesting permissions.  
+- 5: This permission does not support requesting via permission dialog; the request method may be restricted or  
+controlled by system policy. Please use the authorization method supported by this permission.  
+- 6: This permission is of the  
+[manual_settings](../../../security/AccessToken/app-permission-mgmt-overview.md#manual_settings-manual-authorization)type and can only be authorized through the settings page. This reason code is supported starting from API version21.  
+- 12: Service exception, please try again later.
 
 **Type:** ArkTS-Dyn: Array&lt;number&gt;  <br>ArkTS-Sta：Array&lt;int&gt;
 
@@ -104,7 +110,7 @@ errorReasons?: Array<int>
 permissions: Array<string>
 ```
 
-本次待申请的权限数组。
+Array of permissions to be requested this time. **Atomic service API:** Starting from API version 11, this API supports use in atomic services.
 
 **Type:** Array&lt;string&gt;
 

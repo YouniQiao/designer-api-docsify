@@ -12,12 +12,13 @@ import { browser } from 'kits/@kit.MDMKit';
 function setManagedBrowserPolicy(admin: Want, bundleName: string, policyName: string, policyValue: string): void
 ```
 
-为指定的浏览器设置浏览器策略，适用于企业统一管理员工浏览器行为的场景，例如配置浏览器安全策略等。成功后会发布系统公共事件  
-[COMMON_EVENT_MANAGED_BROWSER_POLICY_CHANGED](../../../reference/apis-basic-services-kit/common_event/commonEventManager-definitions.md#common_event_managed_browser_policy_changed)。
+Sets a browser policy for a specified browser. This API is applicable to scenarios where an enterprise needs to manage employees' browser behavior in a unified manner, such as configuring browser security policies. After the setting is successful, the system common event  
+[COMMON_EVENT_MANAGED_BROWSER_POLICY_CHANGED](../../../reference/apis-basic-services-kit/common_event/commonEventManager-definitions.md#common_event_managed_browser_policy_changed)is released.
 
-> **说明：**
+> **NOTE：**
 > 
-> 在多MDM应用场景下，针对同一浏览器的同一策略，一旦被首个Admin配置并生效，其他Admin将无法配置。
+> In multi-MDM application scenarios, once a policy for a specific browser is configured and takes effect by the
+> first admin, it can no longer be configured by other admins.
 
 **Since:** 15
 
@@ -35,19 +36,19 @@ function setManagedBrowserPolicy(admin: Want, bundleName: string, policyName: st
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| admin | [Want](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-want-want-c.md) | Yes | 企业设备管理扩展组件。Want中必须包含企业设备管理扩展能力的abilityName和所在应用的bundleName。 |
-| bundleName | string | Yes | 应用包名，用于指定浏览器，表示应用的唯一标识。 |
-| policyName | string | Yes | 浏览器策略名，由接口调用方和指定浏览器约定。 |
-| policyValue | string | Yes | 浏览器策略值。当此值为空字符串时，表示取消浏览器策略名对应浏览器子策略。 |
+| admin | [Want](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-want-want-c.md) | Yes | EnterpriseAdminExtensionAbility. **Want** must contain the ability name of the EnterpriseAdminExtensionAbility and the bundle name of the application. |
+| bundleName | string | Yes | Application bundle name, which is used to specify the browser. It uniquely identifies an application. |
+| policyName | string | Yes | Browser policy name, which is agreed upon by the API caller and the specified browser. |
+| policyValue | string | Yes | Browser policy value. If the value is an empty string, the policy corresponding to the policy name is removed. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
-| 201 | Permission verification failed. The application does not have the permission required to call the API. |
-| 9200001 | The application is not an administrator application of the device. |
-| 9200002 | The administrator application does not have permission to manage the device. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed. The application does not have the permission required to call the API. |
+| [9200001](../errorcode-enterpriseDeviceManager.md#9200001-deviceadmin-not-enabled) | The application is not an administrator application of the device. |
+| [9200002](../errorcode-enterpriseDeviceManager.md#9200002-permission-denied) | The administrator application does not have permission to manage the device. |
 
 ## Examples
 
@@ -61,11 +62,8 @@ let wantTemp: Want = {
   abilityName: 'EnterpriseAdminAbility'
 };
 // Replace with actual values.
-// Browser application bundle name.
 let bundleName: string = 'com.example.testbrowser';
-// Browser policy name.
 let policyName: string = 'InsecurePrivateNetworkRequestsAllowed';
-// Browser policy value.
 let policyValue: string = '{"level":"mandatory","scope":"machine","source":"platform","value":true}';
 
 try {

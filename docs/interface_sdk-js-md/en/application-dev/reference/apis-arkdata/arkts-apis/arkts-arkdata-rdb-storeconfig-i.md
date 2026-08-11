@@ -1,6 +1,6 @@
 # StoreConfig
 
-管理关系数据库配置。
+Defines the RDB store configuration.
 
 **Since:** 7
 
@@ -20,7 +20,7 @@
 name: string
 ```
 
-数据库文件名，不能为空字符串且不能包含路径分隔符/。
+Database file name.
 
 **Type:** string
 

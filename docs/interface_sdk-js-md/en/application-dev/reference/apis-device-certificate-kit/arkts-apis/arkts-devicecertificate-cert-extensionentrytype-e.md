@@ -1,6 +1,6 @@
 # ExtensionEntryType
 
-证书扩展项类型的枚举。
+Enumerates the entry types in certificate extensions that can be obtained.
 
 **Since:** 10
 
@@ -16,7 +16,7 @@
 EXTENSION_ENTRY_TYPE_ENTRY = 0
 ```
 
-整个扩展项。
+Entire extension entry.
 
 **Since:** 10
 
@@ -34,7 +34,7 @@ EXTENSION_ENTRY_TYPE_ENTRY = 0
 EXTENSION_ENTRY_TYPE_ENTRY_CRITICAL = 1
 ```
 
-扩展项的critical属性。
+Critical attribute (**critical** flag) of the extension entry.
 
 **Since:** 10
 
@@ -52,7 +52,7 @@ EXTENSION_ENTRY_TYPE_ENTRY_CRITICAL = 1
 EXTENSION_ENTRY_TYPE_ENTRY_VALUE = 2
 ```
 
-扩展项的值（扩展特定数据）。
+Value (extension-specific data) of the extension entry.
 
 **Since:** 10
 

@@ -1,6 +1,6 @@
 # DepthComponentOptions (System API)
 
-景深组件配置项。
+Defines the options of DepthComponent.
 
 **Since:** 26.0.0
 
@@ -12,13 +12,39 @@
 
 **System API:** This is a system API.
 
+## colorSpace
+
+```TypeScript
+colorSpace?: import('../api/@ohos.graphics.colorSpaceManager').default.ColorSpace
+```
+
+Color space of the background.
+
+**Type:** import('../api/@ohos.graphics.colorSpaceManager').default.ColorSpace
+
+**Default:** colorSpaceManager.ColorSpace.SRGB
+
+**Since:** 26.0.0
+
+**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
+
+**Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API:** This API can be used in atomic services since API version 26.0.0.
+
+<!--Device-DepthComponentOptions-colorSpace?: import('../api/@ohos.graphics.colorSpaceManager').default.ColorSpace--><!--Device-DepthComponentOptions-colorSpace?: import('../api/@ohos.graphics.colorSpaceManager').default.ColorSpace-End-->
+
+**System capability:** SystemCapability.ArkUI.ArkUI.Full
+
+**System API:** This is a system API.
+
 ## depthSpace
 
 ```TypeScript
 depthSpace?: DepthSpaceType
 ```
 
-景深空间类型。
+Depth space type.
 
 **Type:** [DepthSpaceType](../arkts-apis/arkts-arkui-depthcomponent-depthspacetype-e-sys.md)
 
@@ -44,7 +70,7 @@ depthSpace?: DepthSpaceType
 render3DScale?: double
 ```
 
-3D渲染窗口的缩放比例，同时作用于宽度和高度。取值范围：(0.0, 1.0]，超出该范围的值无效（继承之前的取值，如果之前未设置取默认值）。默认值：1.0。
+Scale factor for 3D rendering window, applied to both width and height. The value range is (0.0, 1.0]. Values outside this range are invalid and the default value is used.
 
 **Type:** double
 

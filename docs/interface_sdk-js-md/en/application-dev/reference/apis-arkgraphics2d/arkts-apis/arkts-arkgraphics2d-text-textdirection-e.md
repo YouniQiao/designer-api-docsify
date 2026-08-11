@@ -1,6 +1,6 @@
 # TextDirection
 
-文本排版方向枚举。
+Enumerates the text directions.
 
 **Since:** 12
 
@@ -16,7 +16,7 @@
 RTL = 0
 ```
 
-文本从右到左排版。
+Right to left (RTL).
 
 **Since:** 12
 
@@ -34,7 +34,7 @@ RTL = 0
 LTR = 1
 ```
 
-文本从左到右排版。
+Left to right (LTR).
 
 **Since:** 12
 

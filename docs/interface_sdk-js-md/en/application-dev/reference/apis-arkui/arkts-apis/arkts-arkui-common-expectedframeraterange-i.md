@@ -1,6 +1,6 @@
 # ExpectedFrameRateRange
 
-设置动画期望的帧率。
+Interface for ExpectedFrameRateRange.
 
 **Since:** 23
 
@@ -16,9 +16,7 @@
 expected: int
 ```
 
-期望的最优帧率，单位为帧/秒（fps）。
-
-取值范围为[min, max]。设置为0时，将跟随应用的帧率。
+The expected frame rate of dynamical callback rate range.The value should be between the minimum and maximum value.Otherwise, the actual callback rate will be dynamically adjusted to better align with other animation sources.
 
 **Type:** int
 
@@ -38,9 +36,7 @@ expected: int
 max: int
 ```
 
-期望的最大帧率，单位为帧/秒（fps）。
-
-取值范围为[min, 设备最大帧率]。
+The maximum animation drawing FPS.The maximum value should be greater than or equal to the minimum value.
 
 **Type:** int
 
@@ -60,9 +56,7 @@ max: int
 min: int
 ```
 
-期望的最小帧率，单位为帧/秒（fps）。
-
-取值范围为[0, 设备最大帧率]。
+The minimum animation drawing FPS.The minimum value should be less than or equal to the maximum value.
 
 **Type:** int
 

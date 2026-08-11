@@ -6,7 +6,7 @@
 const MAX_KEY_LENGTH: 80
 ```
 
-key的最大长度限制为80字节。
+Indicates the maximum length of a key (80 characters).
 
 **Since:** 6
 
@@ -22,7 +22,7 @@ key的最大长度限制为80字节。
 const MAX_VALUE_LENGTH: 8192
 ```
 
-value的最大长度限制为16MB。
+Indicates the maximum length of a string (8192 characters).
 
 **Since:** 6
 

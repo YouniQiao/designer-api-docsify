@@ -1,6 +1,7 @@
 # RatingConfiguration
 
-开发者需要自定义class实现ContentModifier接口。继承自[CommonConfiguration](../arkts-apis/arkts-arkui-common-commonconfiguration-i.md/arkts-arkui-common-commonconfiguration-i.md)。
+You need a custom class to implement the **ContentModifier** API. Inherits from   
+[CommonConfiguration](../arkts-apis/arkts-arkui-common-commonconfiguration-i.md/arkts-arkui-common-commonconfiguration-i.md).
 
 **Inheritance/Implementation:** RatingConfiguration extends [CommonConfiguration<RatingConfiguration>](CommonConfiguration<RatingConfiguration>)
 
@@ -18,9 +19,9 @@
 indicator: boolean
 ```
 
-评分条是否作为指示器使用。当值为true时，表示作为指示器；当值为false时，表示不作为指示器。
+Whether the rating bar is used as an indicator. **true**: used as an indicator. **false**: not used as an indicator.
 
-默认值：false
+Default value: **false**
 
 **Type:** boolean
 
@@ -42,17 +43,19 @@ indicator: boolean
 rating: number
 ```
 
-设置并接收评分值。
+Value to rate.
 
-默认值：0
+Default value: **0**
 
-取值范围： [0, stars]
+Value range: [0, stars]
 
-小于0取0，大于[stars](RatingAttribute#stars(value: number))取最大值stars。
+Values less than 0 are treated as **0**, and values greater than the value of   
+[stars](RatingAttribute#stars(value: number)) are treated as the value of **stars**.
 
-该参数支持[\$\$](../../../ui/state-management/arkts-two-way-sync.md)双向绑定变量。
+This parameter supports two-way binding through [\$\$](../../../ui/state-management/arkts-two-way-sync.md).
 
-该参数支持[!!](../../../ui/state-management/arkts-new-binding.md#系统组件参数双向绑定)双向绑定变量。
+This parameter supports two-way binding through   
+[!!](../../../ui/state-management/arkts-new-binding.md#two-way-binding-between-built-in-component-parameters).
 
 **Type:** number
 
@@ -74,9 +77,9 @@ rating: number
 stars: number
 ```
 
-评分条的星级总数。
+Total number of ratings.
 
-默认值：5
+Default value: **5**
 
 **Type:** number
 
@@ -98,9 +101,9 @@ stars: number
 stepSize: number
 ```
 
-评分条的评分步长。
+Step of an operation.
 
-默认值：0.5
+Default value: **0.5**
 
 **Type:** number
 
@@ -122,7 +125,7 @@ stepSize: number
 triggerChange: Callback<number>
 ```
 
-触发评分变化的回调，参数为新的评分值。
+Callback triggered when the rating value changes.
 
 **Type:** [Callback](arkts-arkui-callback-i.md)&lt;number&gt;
 

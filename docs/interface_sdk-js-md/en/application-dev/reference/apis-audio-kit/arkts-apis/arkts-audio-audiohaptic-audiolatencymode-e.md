@@ -1,6 +1,6 @@
 # AudioLatencyMode
 
-枚举，音频时延模式。
+Enumerates the audio latency modes.
 
 **Since:** 11
 
@@ -16,7 +16,7 @@
 AUDIO_LATENCY_MODE_NORMAL = 0
 ```
 
-普通时延模式。
+Normal latency mode.
 
 **Since:** 11
 
@@ -32,7 +32,8 @@ AUDIO_LATENCY_MODE_NORMAL = 0
 AUDIO_LATENCY_MODE_FAST = 1
 ```
 
-低时延模式。当音频文件过长时可能被截断，该特性与[SoundPool](../../apis-media-kit/arkts-apis/arkts-media-soundpool-soundpool-i.md/arkts-media-soundpool-soundpool-i.md)一致。
+Low latency mode. This mode is applicable to short audio files. A long audio file may be truncated in this mode. It functions the same as   
+[SoundPool](../../../reference/apis-media-kit/js-apis-inner-multimedia-soundPool.md#soundpool).
 
 **Since:** 11
 

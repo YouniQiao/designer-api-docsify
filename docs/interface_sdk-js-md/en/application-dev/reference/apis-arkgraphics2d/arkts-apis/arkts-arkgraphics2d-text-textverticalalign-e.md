@@ -1,6 +1,6 @@
 # TextVerticalAlign
 
-文本垂直对齐方式枚举。
+Enumerates the vertical alignment modes of text.
 
 **Since:** 20
 
@@ -16,7 +16,7 @@
 BASELINE = 0
 ```
 
-文本基线对齐。
+Aligned to the baseline.
 
 **Since:** 20
 
@@ -34,7 +34,7 @@ BASELINE = 0
 BOTTOM = 1
 ```
 
-文本底部对齐。
+Bottom-aligned.
 
 **Since:** 20
 
@@ -52,7 +52,7 @@ BOTTOM = 1
 CENTER = 2
 ```
 
-文本居中对齐。
+Center-aligned.
 
 **Since:** 20
 
@@ -70,7 +70,7 @@ CENTER = 2
 TOP = 3
 ```
 
-文本顶部对齐。
+Top-aligned.
 
 **Since:** 20
 

@@ -1,6 +1,6 @@
 # GrantStatus
 
-表示授权状态的枚举。
+Enumerates the permission grant states.
 
 **Since:** 8
 
@@ -16,7 +16,7 @@
 PERMISSION_DENIED = -1
 ```
 
-表示未授权。
+The permission is not granted.
 
 **Since:** 8
 
@@ -34,7 +34,7 @@ PERMISSION_DENIED = -1
 PERMISSION_GRANTED = 0
 ```
 
-表示已授权。
+The permission is granted.
 
 **Since:** 8
 

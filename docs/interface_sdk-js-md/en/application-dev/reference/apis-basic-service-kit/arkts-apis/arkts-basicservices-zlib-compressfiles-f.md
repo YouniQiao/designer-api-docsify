@@ -12,7 +12,7 @@ import { zlib } from 'kits/@kit.BasicServicesKit';
 function compressFiles(inFiles: Array<string>, outFile: string, options: Options): Promise<void>
 ```
 
-压缩指定的多个文件。使用Promise异步回调。
+Compresses multiple specified files. This API uses a promise to return the result.
 
 **Since:** 12
 
@@ -28,23 +28,23 @@ function compressFiles(inFiles: Array<string>, outFile: string, options: Options
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| inFiles | Array&lt;string&gt; | Yes | 指定压缩的文件夹路径或者文件路径，路径必须为沙箱路径，沙箱路径可以通过context获取，可参考[FA模型](../../apis-ability-kit/arkts-apis/arkts-ability-context-t.md/arkts-ability-context-t.md)， [Stage模型](../../apis-ability-kit/arkts-apis/arkts-ability-context-t.md/arkts-ability-context-t.md)。待压缩的文件夹不可为空，否则使用 [decompressFile](arkts-basicservices-zlib-decompressfile-f.md#decompressfile)对压缩后的文件解压时会报错。 |
-| outFile | string | Yes | 指定的压缩结果的文件路径。多个线程同时压缩文件时，outFile不能相同。 |
-| options | [Options](arkts-basicservices-zlib-options-i.md) | Yes | 压缩的配置参数。 |
+| inFiles | Array&lt;string&gt; | Yes | Path of the folder or file to compress. The path must be an application sandbox path, which can be obtained from the context. For details about the context, see [FA Model](../../apis-ability-kit/arkts-apis/arkts-ability-context-t.md/arkts-ability-context-t.md) and [Stage Model](../../apis-ability-kit/arkts-apis/arkts-ability-context-t.md/arkts-ability-context-t.md). The folder to compress cannot be empty. Otherwise, an error will be reported when [decompressFile](arkts-basicservices-zlib-decompressfile-f.md#decompressfile) is used to decompress the folder. |
+| outFile | string | Yes | Path of the compressed file. When multiple threads compress files at the same time, the values of **outFile** must be different. |
+| options | [Options](arkts-basicservices-zlib-options-i.md) | Yes | Compression parameters. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise对象，无返回值。 |
+| Promise&lt;void&gt; | Promise that returns no value. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types. |
-| 900001 | The input source file is invalid. |
-| 900002 | The input destination file is invalid. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types. |
+| [900001](../../apis-basic-services-kit/errorcode-zlib.md#900001-invalid-source-file) | The input source file is invalid. |
+| [900002](../../apis-basic-services-kit/errorcode-zlib.md#900002-invalid-destination-file) | The input destination file is invalid. |
 
 ## Examples
 

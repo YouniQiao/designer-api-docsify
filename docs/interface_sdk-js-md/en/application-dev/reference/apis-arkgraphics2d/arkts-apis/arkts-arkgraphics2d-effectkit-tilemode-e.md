@@ -1,10 +1,11 @@
 # TileMode
 
-着色器效果平铺模式的枚举。
+Enumerates the tile modes of the shader effect.
 
-> **说明：**
+> **NOTE：**
 > 
-> CPU渲染下，着色器平铺模式仅支持DECAL。GPU渲染下，DECAL、CLAMP、REPEAT、MIRROR模式均支持。
+> Under CPU rendering, the shader tile mode supports only DECAL.
+> Under GPU rendering, DECAL, CLAMP, REPEAT, and MIRROR modes are all supported.
 
 **Since:** 14
 
@@ -20,7 +21,7 @@
 CLAMP = 0
 ```
 
-如果着色器效果超出其原始边界，剩余区域使用着色器的边缘颜色填充。
+Replicates the edge color if the shader effect draws outside of its original boundary.
 
 **Since:** 14
 
@@ -36,7 +37,7 @@ CLAMP = 0
 REPEAT = 1
 ```
 
-在水平和垂直方向上重复着色器效果。
+Repeats the shader effect in both horizontal and vertical directions.
 
 **Since:** 14
 
@@ -52,7 +53,7 @@ REPEAT = 1
 MIRROR = 2
 ```
 
-在水平和垂直方向上重复着色器效果，交替镜像图像，以便相邻图像始终接合。
+Repeats the shader effect in both horizontal and vertical directions, alternating mirror images so that adjacent images always join.
 
 **Since:** 14
 
@@ -68,7 +69,7 @@ MIRROR = 2
 DECAL = 3
 ```
 
-仅在其原始边界内渲染着色器效果。
+Renders the shader effect only within the original boundary.
 
 **Since:** 14
 

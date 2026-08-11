@@ -20,7 +20,7 @@ import { font } from 'kits/@kit.ArkUI';
 family: string
 ```
 
-字体集名，字体文件中指定的"family"值。
+Font name related.
 
 **Type:** string
 
@@ -40,7 +40,7 @@ family: string
 language: string
 ```
 
-字体集所支持的语言类型，语言格式为bcp47。
+Language that font set support.
 
 **Type:** string
 

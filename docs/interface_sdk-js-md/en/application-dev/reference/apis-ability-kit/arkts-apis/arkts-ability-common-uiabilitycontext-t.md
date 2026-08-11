@@ -4,7 +4,7 @@
 export type UIAbilityContext = _UIAbilityContext.default
 ```
 
-[UIAbility](arkts-app-ability-uiability.md)组件上下文，继承自Context。
+Defines the context environment for the [UIAbility](arkts-app-ability-uiability.md). It inherits from Context.
 
 **Since:** 9
 

@@ -42,7 +42,7 @@ popupSize?: PopupSize
 
 气泡弹窗的宽和高，不设置则不更新。
 
-**类型：** [PopupSize](arkts-ability-autofillmanager-popupsize-t-sys.md)
+**类型：** [PopupSize](arkts-ability-autofillpopupconfig-popupsize-i-sys.md)
 
 **起始版本：** 12
 

@@ -1,12 +1,13 @@
-# @ohos.enterprise.browser(浏览器管理)
+# @ohos.enterprise.browser(Browser Management)
 
-本模块提供浏览器管理能力，包括设置/取消浏览器策略、获取浏览器策略等。适用于企业设备管理、员工上网行为管控、安全合规审计等场景。
+The **browser** module provides browser management, including setting, canceling, and obtaining browser policies. It is applicable to scenarios such as enterprise device management, employee online behavior management, and security compliance audit.
 
-浏览器策略指通过配置或管理浏览器行为的一系列规则和设置，以确保安全性、合规性、性能优化和用户体验的一致性。
+Browser policies are a collection of rules and settings that govern how a browser behaves, ensuring security,compliance, performance optimization, and a consistent user experience.
 
-> **说明：**
+> **NOTE：**
 > 
-> 本模块接口仅对设备管理应用开放，且调用接口前需激活设备管理应用，具体请参考[MDM Kit开发指南](../../../mdm/mdm-kit-guide.md)。
+> The APIs of this module can be called only by a device administrator application that is enabled. For details, see
+> [MDM Kit Development](../../../mdm/mdm-kit-guide.md).
 
 **Since:** 12
 
@@ -28,15 +29,15 @@ import { browser } from 'kits/@kit.MDMKit';
 
 | Name | Description |
 | --- | --- |
-| [getManagedBrowserPolicy](arkts-mdm-browser-getmanagedbrowserpolicy-f.md#getmanagedbrowserpolicy) | 通过应用包名获取指定浏览器的浏览器策略，适用于查询当前浏览器策略配置的场景，例如在企业设备管理应用中展示策略详情、验证策略是否生效等。 |
-| [getPolicies](arkts-mdm-browser-getpolicies-f.md#getpolicies) | 获取指定浏览器的策略，使用callback异步回调。 |
-| [getPolicies](arkts-mdm-browser-getpolicies-f.md#getpolicies-1) | 获取指定浏览器的策略，使用Promise异步回调。 |
-| [getPoliciesSync](arkts-mdm-browser-getpoliciessync-f.md#getpoliciessync) | 通过appid获取指定浏览器设置的策略，适用于查询当前浏览器策略配置的场景，例如在企业设备管理应用中展示策略详情、验证策略是否生效等。 |
-| [getPoliciesSync](arkts-mdm-browser-getpoliciessync-f.md#getpoliciessync-1) | 通过appid获取指定浏览器设置的策略，适用于查询当前浏览器策略配置的场景，例如在企业设备管理应用中展示策略详情、验证策略是否生效等。 |
-| [getSelfManagedBrowserPolicy](arkts-mdm-browser-getselfmanagedbrowserpolicy-f.md#getselfmanagedbrowserpolicy) | 获取当前设备浏览器策略。 |
-| [getSelfManagedBrowserPolicyVersion](arkts-mdm-browser-getselfmanagedbrowserpolicyversion-f.md#getselfmanagedbrowserpolicyversion) | 获取当前设备浏览器策略版本。 |
-| [setManagedBrowserPolicy](arkts-mdm-browser-setmanagedbrowserpolicy-f.md#setmanagedbrowserpolicy) | 为指定的浏览器设置浏览器策略，适用于企业统一管理员工浏览器行为的场景，例如配置浏览器安全策略等。成功后会发布系统公共事件  [COMMON_EVENT_MANAGED_BROWSER_POLICY_CHANGED](../../../reference/apis-basic-services-kit/common_event/commonEventManager-definitions.md#common_event_managed_browser_policy_changed)。 |
-| [setPolicies](arkts-mdm-browser-setpolicies-f.md#setpolicies) | 为指定的浏览器设置浏览策略，使用callback异步回调。 |
-| [setPolicies](arkts-mdm-browser-setpolicies-f.md#setpolicies-1) | 为指定的浏览器设置浏览策略，使用Promise异步回调。 |
-| [setPolicySync](arkts-mdm-browser-setpolicysync-f.md#setpolicysync) | 为指定的浏览器设置浏览器子策略，适用于企业统一管理员工浏览器行为的场景。 |
+| [getManagedBrowserPolicy](arkts-mdm-browser-getmanagedbrowserpolicy-f.md#getmanagedbrowserpolicy) | Obtains the policy of a specified browser based on the application bundle name. This API is applicable to scenarios where the current browser policy configuration needs to be queried, for example, displaying policy details in an enterprise device administrator application and verifying whether a policy has taken effect. |
+| [getPolicies](arkts-mdm-browser-getpolicies-f.md#getpolicies) | Obtains the policy of the specified browser. This API uses an asynchronous callback to return the result. |
+| [getPolicies](arkts-mdm-browser-getpolicies-f.md#getpolicies-1) | Obtains the policy of the specified browser. This API uses a promise to return the result. |
+| [getPoliciesSync](arkts-mdm-browser-getpoliciessync-f.md#getpoliciessync) | Obtains the browser policy by app ID. |
+| [getPoliciesSync](arkts-mdm-browser-getpoliciessync-f.md#getpoliciessync-1) | Obtains the policy set for a specified browser based on **appid**. This API is applicable to scenarios where the current browser policy configuration needs to be queried, for example, displaying policy details in an enterprise device administrator application and verifying whether a policy has taken effect. |
+| [getSelfManagedBrowserPolicy](arkts-mdm-browser-getselfmanagedbrowserpolicy-f.md#getselfmanagedbrowserpolicy) | Obtains the browser policy of the current device. |
+| [getSelfManagedBrowserPolicyVersion](arkts-mdm-browser-getselfmanagedbrowserpolicyversion-f.md#getselfmanagedbrowserpolicyversion) | Obtains the browser policy version of the current device. |
+| [setManagedBrowserPolicy](arkts-mdm-browser-setmanagedbrowserpolicy-f.md#setmanagedbrowserpolicy) | Sets a browser policy for a specified browser. This API is applicable to scenarios where an enterprise needs to manage employees' browser behavior in a unified manner, such as configuring browser security policies. After the setting is successful, the system common event  [COMMON_EVENT_MANAGED_BROWSER_POLICY_CHANGED](../../../reference/apis-basic-services-kit/common_event/commonEventManager-definitions.md#common_event_managed_browser_policy_changed)is released.  > **NOTE：** >  > In multi-MDM application scenarios, once a policy for a specific browser is configured and takes effect by the > first admin, it can no longer be configured by other admins. |
+| [setPolicies](arkts-mdm-browser-setpolicies-f.md#setpolicies) | Sets the browsing policy for a specified browser. This API uses an asynchronous callback to return the result. |
+| [setPolicies](arkts-mdm-browser-setpolicies-f.md#setpolicies-1) | Sets the browsing policy for a specified browser. This API uses a promise to return the result. |
+| [setPolicySync](arkts-mdm-browser-setpolicysync-f.md#setpolicysync) | Sets a browser sub-policy for a specified browser. This API is applicable to scenarios where an enterprise needs to manage employees' browser behavior in a unified manner. |
 

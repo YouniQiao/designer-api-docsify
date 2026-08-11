@@ -1,11 +1,5 @@
 # getPrimaryDisplaySync
 
-## 导入模块
-
-```TypeScript
-import { display } from 'kits/@kit.ArkUI';
-```
-
 ## getPrimaryDisplaySync
 
 ```TypeScript
@@ -34,7 +28,7 @@ function getPrimaryDisplaySync(): Display
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 1400001 | Invalid display or screen. Possible cause: Invalid display id. |
+| [1400001](../errorcode-display.md#1400001-无效的显示设备) | Invalid display or screen. Possible cause: Invalid display id. |
 
 ## 示例
 

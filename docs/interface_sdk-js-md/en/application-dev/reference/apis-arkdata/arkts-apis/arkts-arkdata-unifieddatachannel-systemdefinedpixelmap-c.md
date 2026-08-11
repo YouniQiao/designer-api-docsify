@@ -1,7 +1,6 @@
 # SystemDefinedPixelMap
 
-与系统侧定义的[PixelMap](../../apis-image-kit/arkts-apis/arkts-image-image-pixelmap-i.md/arkts-image-image-pixelmap-i.md)数据类型对应的图片数据类型，是  
-[SystemDefinedRecord](arkts-arkdata-unifieddatachannel-systemdefinedrecord-c.md)的子类，仅保存PixelMap的二进制数据。
+Represents the image data type corresponding to [PixelMap](../../apis-image-kit/arkts-apis/arkts-multimedia-image.md/arkts-multimedia-image.md) defined by the system. It is a child class of [SystemDefinedRecord](arkts-arkdata-unifieddatachannel-systemdefinedrecord-c.md) and holds only binary data of **PixelMap**.
 
 **Inheritance/Implementation:** SystemDefinedPixelMap extends [SystemDefinedRecord](arkts-arkdata-unifieddatachannel-systemdefinedrecord-c.md)
 
@@ -25,7 +24,7 @@ import { unifiedDataChannel } from 'kits/@kit.ArkData';
 set rawData(value: Uint8Array)
 ```
 
-PixelMap对象的二进制数据。
+Indicates the raw data of pixel map
 
 **Type:** Uint8Array
 

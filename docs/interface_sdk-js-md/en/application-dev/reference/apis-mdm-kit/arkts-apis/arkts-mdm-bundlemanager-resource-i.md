@@ -1,6 +1,6 @@
 # Resource
 
-资源相关信息，包括应用包名、应用模块名、资源id。
+Describes application resource information, including the bundle name, module name, and resource ID.
 
 **Since:** 20
 
@@ -22,7 +22,7 @@ import { bundleManager } from 'kits/@kit.MDMKit';
 bundleName: string
 ```
 
-应用的bundle名称。
+Bundle name of the application.
 
 **Type:** string
 
@@ -42,7 +42,7 @@ bundleName: string
 id: number
 ```
 
-资源的id值。
+Resource ID.
 
 **Type:** number
 
@@ -62,7 +62,7 @@ id: number
 moduleName: string
 ```
 
-应用的module名称。
+Module name of the application.
 
 **Type:** string
 

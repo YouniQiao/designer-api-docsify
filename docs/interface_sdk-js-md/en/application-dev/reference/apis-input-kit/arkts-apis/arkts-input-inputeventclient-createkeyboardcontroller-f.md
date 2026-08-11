@@ -12,7 +12,7 @@ import { inputEventClient } from 'kits/@kit.InputKit';
 function createKeyboardController(): Promise<KeyboardController>
 ```
 
-创建键盘控制器，用于模拟按键操作。使用Promise异步回调。
+Creates a keyboard controller for simulating key operations. This API uses a promise to return the result.
 
 **Since:** 26.0.0
 
@@ -30,39 +30,13 @@ function createKeyboardController(): Promise<KeyboardController>
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;KeyboardController&gt; | Promise对象，返回键盘控制器实例。 |
+| Promise&lt;KeyboardController&gt; | Promise used to return the keyboard controller instance. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 801 | Capability not supported. |
-| 3800001 | Input service exception. |
-| 201 | Permission verification failed. The application does not have the permission required to call the API. |
-
-## Examples
-
-```TypeScript
-import { inputEventClient } from '@kit.InputKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-@Entry
-@Component
-struct Index {
-  build() {
-    RelativeContainer() {
-      Text()
-        .onClick(() => {
-          inputEventClient.createKeyboardController()
-            .then(keyboardController => {
-              console.info('Succeeded in creating keyboard controller');
-            })
-            .catch((error: BusinessError) => {
-              console.error(`Failed to create keyboard controller. Code: ${error.code}, message: ${error.message}.`);
-            });
-        })
-    }
-  }
-}
-```
+| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. |
+| [3800001](../errorcode-infraredemitter.md#3800001-multimodal-input-service-internal-error) | Input service exception. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed. The application does not have the permission required to call the API. |
 

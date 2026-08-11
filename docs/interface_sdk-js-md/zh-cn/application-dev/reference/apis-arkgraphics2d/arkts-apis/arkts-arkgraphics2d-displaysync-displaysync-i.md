@@ -10,12 +10,6 @@
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
-## 导入模块
-
-```TypeScript
-import { displaySync } from 'kits/@kit.ArkGraphics2D';
-```
-
 ## off('frame')
 
 ```TypeScript
@@ -76,6 +70,19 @@ offFrame(callback?: Callback<IntervalInfo>): void
 | --- | --- | --- | --- |
 | callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;IntervalInfo&gt; | 否 | 订阅函数，参数不填时，默认取消全部订阅函数。 |
 
+## 示例
+
+```TypeScript
+let callback = (frameInfo: displaySync.IntervalInfo) => {
+    console.info("DisplaySync", 'TimeStamp:' + frameInfo.timestamp + ' TargetTimeStamp: ' + frameInfo.targetTimestamp);
+}
+
+backDisplaySync?.onFrame(callback)
+
+// 取消订阅函数
+backDisplaySync?.offFrame(callback)
+```
+
 ## on('frame')
 
 ```TypeScript
@@ -109,9 +116,6 @@ let callback = (frameInfo: displaySync.IntervalInfo) => {
 
 // 注册回调函数
 backDisplaySync?.on("frame", callback)
-
-// 生效回调函数
-backDisplaySync?.start()
 ```
 
 ## onFrame
@@ -135,6 +139,17 @@ onFrame(callback: Callback<IntervalInfo>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;IntervalInfo&gt; | 是 | 订阅函数。 |
+
+## 示例
+
+```TypeScript
+let callback = (frameInfo: displaySync.IntervalInfo) => {
+    console.info("DisplaySync", 'TimeStamp:' + frameInfo.timestamp + ' TargetTimeStamp: ' + frameInfo.targetTimestamp);
+}
+
+// 注册订阅函数
+backDisplaySync?.onFrame(callback)
+```
 
 ## setExpectedFrameRateRange
 
@@ -162,7 +177,7 @@ setExpectedFrameRateRange(rateRange: ExpectedFrameRateRange) : void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameters types. 3. Parameter verification failed. or check if ExpectedFrameRateRange is valid. |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameters types. 3. Parameter verification failed. or check if ExpectedFrameRateRange is valid. |
 
 ## 示例
 

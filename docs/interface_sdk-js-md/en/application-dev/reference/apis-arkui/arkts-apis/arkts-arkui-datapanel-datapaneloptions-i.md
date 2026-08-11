@@ -1,6 +1,6 @@
 # DataPanelOptions
 
-数据面板选项。
+Defines the options of DataPanel.
 
 **Since:** 23
 
@@ -16,9 +16,7 @@
 max?: double
 ```
 
-max大于0时，表示数据的最大值。  
-- max小于等于0时，max等于value数组各项的和，按比例显示。  
-默认值：100。
+Maximum value of the current data.Default value: 100.
 
 **Type:** double
 
@@ -38,7 +36,7 @@ max大于0时，表示数据的最大值。
 type?: DataPanelType
 ```
 
-数据面板的类型（不支持动态修改）。默认值：DataPanelType.Circle。
+DataPanel Type.Default value: DataPanelType.Circle.
 
 **Type:** [DataPanelType](../arkts-components/arkts-arkui-datapaneltype-e.md)
 
@@ -58,7 +56,7 @@ type?: DataPanelType
 values: double[]
 ```
 
-数据值列表，最多包含9个数据，大于9个数据则取前9个数据。若数据值小于0则置为0。
+Current data value. the max length is 9.
 
 **Type:** double[]
 

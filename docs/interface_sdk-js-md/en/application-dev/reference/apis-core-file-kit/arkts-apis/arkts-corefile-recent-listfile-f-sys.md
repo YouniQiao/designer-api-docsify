@@ -12,7 +12,7 @@ import { recent } from 'kits/@kit.CoreFileKit';
 function listFile(): Array<FileInfo>
 ```
 
-查询最近访问列表中文件信息。
+Lists the files that are accessed recently.
 
 **Since:** 10
 

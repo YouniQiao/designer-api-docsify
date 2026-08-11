@@ -1,6 +1,6 @@
 # CapStyle
 
-定义线帽样式的枚举，即画笔在绘制线段时，在线段头尾端点的样式。
+Enumerates the cap styles of a pen. The cap style defines the style of both ends of a line segment drawn by the pen.
 
 **Since:** 12
 
@@ -16,7 +16,7 @@
 FLAT_CAP = 0
 ```
 
-没有线帽样式，线条头尾端点处横切。
+There is no cap style. Both ends of the line segment are cut off square.
 
 **Since:** 12
 
@@ -32,7 +32,7 @@ FLAT_CAP = 0
 SQUARE_CAP = 1
 ```
 
-线帽的样式为方框，线条的头尾端点处多出一个方框，方框宽度和线段一样宽，高度是线段宽度的一半。
+Square cap style. Both ends have a square, the height of which is half of the width of the line segment, with the same width.
 
 **Since:** 12
 
@@ -48,7 +48,7 @@ SQUARE_CAP = 1
 ROUND_CAP = 2
 ```
 
-线帽的样式为圆弧，线条的头尾端点处多出一个半圆弧，半圆的直径与线段宽度一致。
+Round cap style. Both ends have a semicircle centered, the diameter of which is the same as the width of the line segment.
 
 **Since:** 12
 

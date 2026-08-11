@@ -6,19 +6,19 @@
 
 | Name | Description |
 | --- | --- |
-| [ToolBarItem](arkts-arkui-toolbar-toolbaritem-f.md#toolbaritem) | 定义ToolBarItem组件。 |
-| [ToolBarItem](arkts-arkui-toolbar-toolbaritem-f.md#toolbaritem-1) | 定义ToolBarItem组件。需要在组件属性设置开始时调用setToolBarItemOptions，并在组件属性设置结束时调用applyAttributeFinish。 |
+| [ToolBarItem](arkts-arkui-toolbar-toolbaritem-f.md#toolbaritem) | Defines ToolBarItem Component. |
+| [ToolBarItem](arkts-arkui-toolbar-toolbaritem-f.md#toolbaritem-1) | Defines ToolBarItem Component.It requires call setToolBarItemOptions at start of the component attribute set-up,and it requires call applyAttributeFinish at the end of the component attribute set-up. |
 
 ### Interfaces
 
 | Name | Description |
 | --- | --- |
-| [ToolBarItemAttribute](arkts-arkui-toolbar-toolbaritemattribute-i.md) | 定义ToolBarItem组件的属性方法。 |
-| [ToolBarItemOptions](arkts-arkui-toolbar-toolbaritemoptions-i.md) | 用于配置ToolBarItem的可选参数，主要通过placement设置工具栏项在标题栏的放置位置。 |
+| [ToolBarItemAttribute](arkts-arkui-toolbar-toolbaritemattribute-i.md) | Defines the ToolBarItem component attribute functions. |
+| [ToolBarItemOptions](arkts-arkui-toolbar-toolbaritemoptions-i.md) | ToolBarItem constructor options. |
 
 ### Enums
 
 | Name | Description |
 | --- | --- |
-| [ToolBarItemPlacement](arkts-arkui-toolbar-toolbaritemplacement-e.md) | 定义工具栏项在标题栏对应分栏的放置位置选项。 |
+| [ToolBarItemPlacement](arkts-arkui-toolbar-toolbaritemplacement-e.md) | Declare the placement of the toolbar item. |
 

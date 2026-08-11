@@ -1,0 +1,27 @@
+# IsoInfo
+
+感光度（ISO）参数信息。
+
+**起始版本：** 22
+
+<!--Device-camera-interface IsoInfo--><!--Device-camera-interface IsoInfo-End-->
+
+**系统能力：** SystemCapability.Multimedia.Camera.Core
+
+## iso
+
+```TypeScript
+readonly iso?: number
+```
+
+ISO value.
+
+**类型：** number
+
+**起始版本：** 22
+
+**原子化服务API：** 从API版本22开始，该接口支持在原子化服务API中使用。
+
+<!--Device-IsoInfo-readonly iso?: int--><!--Device-IsoInfo-readonly iso?: int-End-->
+
+**系统能力：** SystemCapability.Multimedia.Camera.Core

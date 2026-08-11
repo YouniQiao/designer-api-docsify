@@ -1,6 +1,6 @@
 # LayerMask
 
-定义节点的图层掩码.
+Defines the layer mask of the node.
 
 **Since:** 12
 
@@ -22,7 +22,7 @@ ArkTS-Sta:
 getEnabled(index: int): boolean
 ```
 
-获取图层掩码是否启用.
+Checks whether the mask is enabled for a layer of a given index.
 
 **Since:** 12
 
@@ -36,13 +36,13 @@ getEnabled(index: int): boolean
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| index | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | 图层掩码 |
+| index | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | Index of the layer. The value is an integer greater than or equal to 0. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| boolean | 图层掩码是否启用 |
+| boolean | Check result for whether the layer mask is enabled. true if enabled, false otherwise. |
 
 ## setEnabled
 
@@ -56,7 +56,7 @@ ArkTS-Sta:
 setEnabled(index: int, enabled: boolean): void
 ```
 
-设置图层掩码是否启用.
+Enables the mask of a layer of a given index.
 
 **Since:** 12
 
@@ -70,6 +70,6 @@ setEnabled(index: int, enabled: boolean): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| index | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | 图层掩码 |
-| enabled | boolean | Yes | 图层掩码是否启用 |
+| index | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | Index of the layer. The value is an integer greater than or equal to 0. |
+| enabled | boolean | Yes | Whether to enable the layer mask. true to enable, false otherwise. |
 

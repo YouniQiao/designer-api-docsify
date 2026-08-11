@@ -1,11 +1,5 @@
 # cancelReminder
 
-## 导入模块
-
-```TypeScript
-import { reminderAgent } from 'kits/@kit.BackgroundTasksKit';
-```
-
 ## cancelReminder
 
 ```TypeScript

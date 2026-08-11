@@ -1,11 +1,5 @@
 # getGraphicsMemorySync
 
-## 导入模块
-
-```TypeScript
-import { hidebug } from 'kits/@kit.PerformanceAnalysisKit';
-```
-
 ## getGraphicsMemorySync
 
 ```TypeScript
@@ -38,7 +32,7 @@ function getGraphicsMemorySync(): int
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 11400104 | Failed to get the application memory due to a remote exception. |
+| [11400104](../errorcode-hiviewdfx-hidebug-cpuusage.md#11400104-cpuusage统计异常) | Failed to get the application memory due to a remote exception. |
 
 ## 示例
 

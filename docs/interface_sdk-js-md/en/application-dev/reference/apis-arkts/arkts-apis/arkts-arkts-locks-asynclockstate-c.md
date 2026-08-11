@@ -1,6 +1,6 @@
 # AsyncLockState
 
-用于存储异步锁实例上当前执行的所有锁操作的信息的类。
+Information about all lock operations on the AsyncLock instance.
 
 **Since:** 12
 
@@ -22,7 +22,7 @@ import { ArkTSUtils } from 'kits/@kit.ArkTS';
 held: AsyncLockInfo[]
 ```
 
-持有的锁信息。
+Held locks information.
 
 **Type:** [AsyncLockInfo](arkts-arkts-locks-asynclockinfo-c.md)[]
 
@@ -42,7 +42,7 @@ held: AsyncLockInfo[]
 pending: AsyncLockInfo[]
 ```
 
-等待中的锁信息。
+Pending locks information.
 
 **Type:** [AsyncLockInfo](arkts-arkts-locks-asynclockinfo-c.md)[]
 

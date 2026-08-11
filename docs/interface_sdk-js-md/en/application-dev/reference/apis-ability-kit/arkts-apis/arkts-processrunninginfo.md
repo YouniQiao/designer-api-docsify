@@ -6,5 +6,5 @@
 
 | Name | Description |
 | --- | --- |
-| [ProcessRunningInfo](arkts-ability-processrunninginfo-i.md) | 运行进程信息，可以通过appManager中  [getProcessRunningInfos](arkts-ability-appmanager-getprocessrunninginfos-depr-f.md#getprocessrunninginfos)方法来获取运行进程信息。 |
+| [ProcessRunningInfo](arkts-ability-processrunninginfo-i.md) | The module defines the running information of a process. The information can be obtained through  [getProcessRunningInfos](arkts-ability-appmanager-getprocessrunninginfos-f-sys.md#getprocessrunninginfos) of appManager. |
 

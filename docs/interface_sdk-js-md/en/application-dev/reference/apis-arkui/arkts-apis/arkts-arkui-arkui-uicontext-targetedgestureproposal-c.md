@@ -1,6 +1,6 @@
 # TargetedGestureProposal
 
-类TargetedGestureProposal。
+Class TargetedGestureProposal.
 
 **Inheritance/Implementation:** TargetedGestureProposal extends [BaseGestureHandlingProposal](arkts-arkui-arkui-uicontext-basegesturehandlingproposal-c.md)
 
@@ -24,9 +24,9 @@ import { OverlayManager, FrameCallback, ResolvedUIContext, NodeRenderStateChange
 node: FrameNode
 ```
 
-手势处理的目标节点。该节点将接收并处理手势事件。
+The target frame node for gesture handling. This node will receive and process the gesture events.
 
-**Type:** [FrameNode](arkts-arkui-framenode-t.md)
+**Type:** [FrameNode](../arkts-components/arkts-arkui-framenode-t.md)
 
 **Since:** 26.0.0
 

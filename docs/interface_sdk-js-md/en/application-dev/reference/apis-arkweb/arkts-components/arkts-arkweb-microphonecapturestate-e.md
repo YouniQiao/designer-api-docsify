@@ -1,6 +1,6 @@
 # MicrophoneCaptureState
 
-定义麦克风使用状态的值。
+Enumerates the microphone capture states.
 
 **Since:** 23
 
@@ -16,7 +16,7 @@
 NONE = 0
 ```
 
-麦克风未工作。
+The microphone is not working.
 
 **Since:** 23
 
@@ -32,7 +32,7 @@ NONE = 0
 PAUSED = 1
 ```
 
-麦克风暂停中。
+The microphone is paused.
 
 **Since:** 23
 
@@ -48,7 +48,7 @@ PAUSED = 1
 ACTIVE = 2
 ```
 
-麦克风捕获中。
+The microphone is active.
 
 **Since:** 23
 

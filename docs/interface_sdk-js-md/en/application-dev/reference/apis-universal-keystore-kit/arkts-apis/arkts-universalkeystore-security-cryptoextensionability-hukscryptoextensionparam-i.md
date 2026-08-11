@@ -1,6 +1,6 @@
 # HuksCryptoExtensionParam
 
-定义调用接口的param类型。
+Defines the type of the param used for calling the API.
 
 **Since:** 26.0.0
 
@@ -22,7 +22,7 @@ import { HuksCryptoExtensionCertInfo, HuksCryptoExtensionResultCode, HuksCryptoE
 tag: huksExternalCrypto.HuksExternalCryptoTag | huks.HuksTag | number
 ```
 
-参数标签，用于区分参数。
+Parameter tag, which is used to distinguish parameters.
 
 **Type:** huksExternalCrypto.HuksExternalCryptoTag \| huks.HuksTag \| number
 
@@ -42,7 +42,7 @@ tag: huksExternalCrypto.HuksExternalCryptoTag | huks.HuksTag | number
 value: boolean | int | bigint | Uint8Array
 ```
 
-标签的值。
+Value of the tag.
 
 **Type:** boolean \| int \| bigint \| Uint8Array
 

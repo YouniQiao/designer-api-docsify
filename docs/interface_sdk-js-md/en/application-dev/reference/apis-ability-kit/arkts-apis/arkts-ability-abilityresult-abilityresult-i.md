@@ -1,6 +1,6 @@
 # AbilityResult
 
-定义UIAbility被拉起并退出后返回给调用方的结果码和数据。
+The module defines the result code and data returned to the caller when a started UIAbility is terminated.
 
 **Since:** 7
 
@@ -16,7 +16,7 @@
 resultCode: int
 ```
 
-目标方的UIAbility被拉起并退出后，目标方返回给拉起方的结果码。&lt;br/&gt;-?正常情况下，返回目标方传递的结果码。&lt;br/&gt;-?异常情况下，返回-1。
+Indicates the result code returned after the ability is destroyed. You can define the result code to identify an error.
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
@@ -36,7 +36,7 @@ resultCode: int
 want?: Want
 ```
 
-表示UIAbility被拉起并退出后返回的数据。
+Indicates the data returned after the ability is destroyed. You can define the data returned.This parameter can be null.
 
 **Type:** [Want](arkts-ability-app-ability-want-want-c.md)
 

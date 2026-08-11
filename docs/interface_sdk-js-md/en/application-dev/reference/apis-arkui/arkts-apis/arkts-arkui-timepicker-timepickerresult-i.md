@@ -1,6 +1,6 @@
 # TimePickerResult
 
-返回24小时制时间。
+Defines the struct of TimePickerResult.
 
 **Since:** 23
 
@@ -16,9 +16,7 @@
 hour: int
 ```
 
-选中时间的时。
-
-取值范围：[0-23]
+Hour portion of the selected time.
 
 **Type:** int
 
@@ -38,9 +36,7 @@ hour: int
 minute: int
 ```
 
-选中时间的分。
-
-取值范围：[0-59]
+Minute portion of the selected time.
 
 **Type:** int
 
@@ -60,9 +56,7 @@ minute: int
 second: int
 ```
 
-选中时间的秒。
-
-取值范围：[0-59]
+Second portion of the selected time.
 
 **Type:** int
 

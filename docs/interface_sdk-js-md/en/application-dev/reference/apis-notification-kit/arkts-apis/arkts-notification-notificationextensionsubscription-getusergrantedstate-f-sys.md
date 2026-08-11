@@ -12,7 +12,7 @@ import { notificationExtensionSubscription } from 'kits/@kit.NotificationKit';
 function getUserGrantedState(targetBundle: BundleOption): Promise<boolean>
 ```
 
-查询指定应用的“允许获取本机通知”的开关状态。使用Promise异步回调。
+Obtains the enabling state of the **Allow access to notifications on this device** switch of a specified application. This API uses a promise to return the result.
 
 **Since:** 22
 
@@ -30,23 +30,23 @@ function getUserGrantedState(targetBundle: BundleOption): Promise<boolean>
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| targetBundle | [BundleOption](arkts-notification-notificationextensionsubscription-bundleoption-t.md) | Yes | 需要查询的目标应用信息。应用需要具有ohos.permission.SUBSCRIBE_NOTIFICATION权限， 并且实现[NotificationSubscriberExtensionAbility](arkts-notification-application-notificationsubscriberextensionability-notificationsubscriberextensionability-c.md)， 否则返回1600022错误码。 |
+| targetBundle | [BundleOption](arkts-notification-notificationextensionsubscription-bundleoption-t.md) | Yes | Information about the target application. The application must have requested the ohos.permission.SUBSCRIBE_NOTIFICATION permission and implemented [NotificationSubscriberExtensionAbility](arkts-notification-application-notificationsubscriberextensionability-notificationsubscriberextensionability-c.md). Otherwise, error code 1600022 is returned. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;boolean&gt; | Promise对象，返回true表示目标应用的“允许获取本机通知”状态已启用； 返回false表示目标应用的“允许获取本机通知”状态未启用。 |
+| Promise&lt;boolean&gt; | Promise used to return the result. The value **true** indicates that the device notification access is enabled, and **false** indicates the opposite. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 201 | Permission denied. |
-| 1600001 | Internal error. |
-| 202 | Not system application to call the interface. |
-| 1600003 | Failed to connect to the service. |
-| 1600022 | The specified bundle is invalid. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
+| [1600001](../errorcode-notification.md#1600001-internal-error) | Internal error. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system application to call the interface. |
+| [1600003](../errorcode-notification.md#1600003-failed-to-connect-to-the-notification-service) | Failed to connect to the service. |
+| [1600022](../errorcode-notification.md#1600022-invalid-bundle-information) | The specified bundle is invalid. |
 
 ## Examples
 
@@ -63,7 +63,7 @@ notificationExtensionSubscription.getUserGrantedState(targetBundle).then((isOpen
     console.info('GrantedState false');
   }
 }).catch((err: BusinessError) => {
-  console.error(`getUserGrantedState fail, code is ${err.code}, message is ${err.message}`);
+  console.error(`getUserGrantedState fail: ${JSON.stringify(err)}`);
 });
 ```
 

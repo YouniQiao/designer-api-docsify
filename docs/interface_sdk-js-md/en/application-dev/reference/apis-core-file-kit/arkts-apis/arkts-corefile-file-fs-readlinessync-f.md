@@ -12,7 +12,7 @@ import { Options, ReaderIteratorResult, Watcher, ReadTextOptions, WatchEventList
 declare function readLinesSync(filePath: string, options?: Options): ReaderIterator
 ```
 
-以同步方式逐行读取文件的文本内容。
+Reads the text content of a file line by line. This API returns the result synchronously.
 
 **Since:** 11
 
@@ -26,14 +26,14 @@ declare function readLinesSync(filePath: string, options?: Options): ReaderItera
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| filePath | string | Yes | 文件的应用沙箱路径。 |
-| options | [Options](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-zlib-options-i.md) | No | 可选项。支持以下选项：&lt;br/&gt;- encoding，string类型，当数据是string类型时有效，表示数据的编码方式，默认'utf-8'，仅支持'utf-8' 。 |
+| filePath | string | Yes | Application sandbox path of the file. |
+| options | [Options](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-zlib-options-i.md) | No | Options for reading the text. The options are as follows:&lt;br&gt;- **encoding** (string): format of the data to be encoded.&lt;br&gt;It is valid only when the data is of the string type.&lt;br&gt;The default value is **'utf-8'**, which is the only value supported. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [ReaderIterator](arkts-corefile-file-fs-readeriterator-i.md) | 返回文件读取迭代器。 |
+| [ReaderIterator](arkts-corefile-file-fs-readeriterator-i.md) | ReaderIterator** object. |
 
 **Error codes:**
 

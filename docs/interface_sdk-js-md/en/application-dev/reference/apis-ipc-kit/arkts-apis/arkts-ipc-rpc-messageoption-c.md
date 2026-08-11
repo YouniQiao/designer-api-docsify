@@ -1,6 +1,6 @@
 # MessageOption
 
-公共消息选项，使用指定的标志类型，构造指定的MessageOption对象。
+Defines the options used to construct the **MessageOption** object.
 
 **Since:** 7
 
@@ -22,7 +22,7 @@ import { rpc } from 'kits/@kit.IPCKit';
 constructor(syncFlags?: number, waitTime?: number)
 ```
 
-MessageOption构造函数。
+A constructor used to create a **MessageOption** object.
 
 **Since:** 7
 
@@ -38,8 +38,8 @@ MessageOption构造函数。
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| syncFlags | number | No | 同步调用或异步调用标志。取值范围：{0, 1}。同步调用标志：0（当需要立即获取响应结果时选择）；异步调用标志：1（当不需要立即获取响应结果时选择）。不传入时默认为0 （同步调用）。 |
-| waitTime | number | No | 调用rpc最长等待时间（单位：秒）。&lt;br/&gt;默认值：8&lt;br/&gt;取值范围：(0, 3000]。当RPC调用耗时较长时，可适当增加等待时间；当需要快速响应时，可适当减少 等待时间。不传入时使用默认等待时间8秒。 |
+| syncFlags | number | No | Call flag to set. The options are as follows: 0 (synchronous call) and 1 (asynchronous call). The default value is **synchronous**. |
+| waitTime | number | No | Maximum wait time for an RPC call, in seconds. The default value is **TF_WAIT_TIME**. |
 
 ## Examples
 
@@ -59,7 +59,7 @@ class TestRemoteObject extends rpc.MessageOption {
 constructor(async?: boolean)
 ```
 
-MessageOption构造函数。
+A constructor used to create a **MessageOption** object.
 
 **Since:** 9
 
@@ -75,7 +75,7 @@ MessageOption构造函数。
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| async | boolean | No | 是否异步调用。true表示异步调用（当不需要立即获取响应结果时选择），false表示同步调用（当需要立即获取响应结果时选择）。不传入时默认为false（同步调用）。 |
+| async | boolean | No | Whether to execute the call asynchronously. The value **true** means to execute the call asynchronously; the value **false** means to execute the call synchronously. The default value is **synchronous**. |
 
 ## Examples
 
@@ -184,7 +184,7 @@ ArkTS-Sta:
 getFlags(): int
 ```
 
-获取同步调用或异步调用标志。
+Obtains the call flag, which can be synchronous or asynchronous.
 
 **Since:** 7
 
@@ -200,7 +200,7 @@ getFlags(): int
 
 | Type | Description |
 | --- | --- |
-| ArkTS-Dyn: number  <br>ArkTS-Sta：int | 调用成功返回同步调用或异步调用标志。同步调用标志：0，异步调用标志：1。 |
+| ArkTS-Dyn: number  <br>ArkTS-Sta：int | Call flag obtained. **0**: synchronous call flag; **1**: asynchronous call flag. |
 
 ## Examples
 
@@ -210,13 +210,13 @@ import { hilog } from '@kit.PerformanceAnalysisKit';
 
 try {
   let option = new rpc.MessageOption();
-  hilog.info(0x0000, 'testTag', 'Succeeded in creating object');
+  hilog.info(0x0000, 'testTag', 'create object successfully');
   let flag = option.getFlags();
-  hilog.info(0x0000, 'testTag', 'Succeeded in running getFlags, flag is ' + flag);
+  hilog.info(0x0000, 'testTag', 'run getFlags success, flag is ' + flag);
   option.setFlags(rpc.MessageOption.TF_ASYNC);
-  hilog.info(0x0000, 'testTag', 'Succeeded in running setFlags');
+  hilog.info(0x0000, 'testTag', 'run setFlags success');
   let flag2 = option.getFlags();
-  hilog.info(0x0000, 'testTag', 'Succeeded in running getFlags, flag2 is ' + flag2);
+  hilog.info(0x0000, 'testTag', 'run getFlags success, flag2 is ' + flag2);
 } catch (error) {
   hilog.error(0x0000, 'testTag', 'error ' + error);
 }
@@ -234,7 +234,7 @@ ArkTS-Sta:
 getWaitTime(): int
 ```
 
-获取rpc调用的最长等待时间。
+Obtains the maximum wait time for this RPC call.
 
 **Since:** 7
 
@@ -250,7 +250,7 @@ getWaitTime(): int
 
 | Type | Description |
 | --- | --- |
-| ArkTS-Dyn: number  <br>ArkTS-Sta：int | rpc最长等待时间（单位：秒）。 |
+| ArkTS-Dyn: number  <br>ArkTS-Sta：int | Return the maximum waiting time obtained by the RPC, in seconds. The default value is **TF_WAIT_TIME**. |
 
 ## Examples
 
@@ -261,10 +261,10 @@ import { hilog } from '@kit.PerformanceAnalysisKit';
 try {
   let option = new rpc.MessageOption();
   let time = option.getWaitTime();
-  hilog.info(0x0000, 'testTag', 'Succeeded in running getWaitTime, time is ' + time);
+  hilog.info(0x0000, 'testTag', 'run getWaitTime success, time is ' + time);
   option.setWaitTime(16);
   let time2 = option.getWaitTime();
-  hilog.info(0x0000, 'testTag', 'Succeeded in running getWaitTime, time is ' + time2);
+  hilog.info(0x0000, 'testTag', 'run getWaitTime success, time is ' + time2);
 } catch (error) {
   hilog.error(0x0000, 'testTag', 'error ' + error);
 }
@@ -276,8 +276,7 @@ try {
 isAsync(): boolean
 ```
 
-获取  
-[sendMessageRequest](arkts-ipc-rpc-iremoteobject-c.md#sendmessagerequest)调用中确定同步或是异步的标志。
+Checks whether **SendMessageRequest** is called synchronously or asynchronously.
 
 **Since:** 9
 
@@ -293,7 +292,7 @@ isAsync(): boolean
 
 | Type | Description |
 | --- | --- |
-| boolean | true：异步调用成功，false：同步调用成功。 |
+| boolean | Returns **true** if **SendMessageRequest** is called asynchronously; returns **false** if it is called synchronously. |
 
 ## Examples
 
@@ -315,8 +314,7 @@ try {
 setAsync(isAsync: boolean): void
 ```
 
-设置  
-[sendMessageRequest](arkts-ipc-rpc-iremoteobject-c.md#sendmessagerequest)调用中确定同步或是异步的标志。
+Sets whether **SendMessageRequest** is called synchronously or asynchronously.
 
 **Since:** 9
 
@@ -332,7 +330,7 @@ setAsync(isAsync: boolean): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| isAsync | boolean | Yes | true：表示异步调用标志，false：表示同步调用标志。 |
+| isAsync | boolean | Yes | Whether to execute the call asynchronously. The value **true** means to execute the call asynchronously; the value **false** means to execute the call synchronously. |
 
 ## Examples
 
@@ -360,7 +358,7 @@ ArkTS-Sta:
 setFlags(flags: int): void
 ```
 
-设置同步调用或异步调用标志。
+Sets the call flag, which can be synchronous or asynchronous.
 
 **Since:** 7
 
@@ -376,7 +374,7 @@ setFlags(flags: int): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| flags | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | 同步调用或异步调用标志。取值范围：{0, 1}。同步调用标志：0；异步调用标志：1。 |
+| flags | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | Call flag to set. **0**: synchronous call flag; **1**: asynchronous call flag. |
 
 ## Examples
 
@@ -387,9 +385,9 @@ import { hilog } from '@kit.PerformanceAnalysisKit';
 try {
   let option = new rpc.MessageOption();
   option.setFlags(rpc.MessageOption.TF_ASYNC);
-  hilog.info(0x0000, 'testTag', 'Succeeded in running setFlags');
+  hilog.info(0x0000, 'testTag', 'run setFlags success');
   let flag = option.getFlags();
-  hilog.info(0x0000, 'testTag', 'Succeeded in running getFlags, flag is ' + flag);
+  hilog.info(0x0000, 'testTag', 'run getFlags success, flag is ' + flag);
 } catch (error) {
   hilog.error(0x0000, 'testTag', 'error ' + error);
 }
@@ -407,7 +405,7 @@ ArkTS-Sta:
 setWaitTime(waitTime: int): void
 ```
 
-设置rpc调用最长等待时间。
+Sets the maximum wait time for this RPC call.
 
 **Since:** 7
 
@@ -423,7 +421,7 @@ setWaitTime(waitTime: int): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| waitTime | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | rpc调用最长等待时间（单位：秒），取值范围：(0，3000] |
+| waitTime | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | Indicates the maximum waiting time for RPC, in seconds. The upper limit is 3000 seconds. |
 
 ## Examples
 
@@ -435,7 +433,7 @@ try {
   let option = new rpc.MessageOption();
   option.setWaitTime(16);
   let time = option.getWaitTime();
-  hilog.info(0x0000, 'testTag', 'Succeeded in running getWaitTime, time is ' + time);
+  hilog.info(0x0000, 'testTag', 'run getWaitTime success, time is ' + time);
 } catch (error) {
   hilog.error(0x0000, 'testTag', 'error ' + error);
 }
@@ -447,8 +445,7 @@ try {
 static readonly TF_ACCEPT_FDS: number
 ```
 
-指示  
-[sendMessageRequest](arkts-ipc-rpc-iremoteobject-c.md#sendmessagerequest)接口可以传递文件描述符。
+Indication to **sendMessageRequest** for passing the file descriptor.
 
 **Type:** number
 
@@ -470,7 +467,7 @@ static readonly TF_ACCEPT_FDS: number
 static readonly TF_ASYNC: number
 ```
 
-异步调用标识。
+Asynchronous call.
 
 **Type:** number
 
@@ -492,7 +489,7 @@ static readonly TF_ASYNC: number
 static readonly TF_SYNC: number
 ```
 
-同步调用标识。
+Synchronous call.
 
 **Type:** number
 
@@ -514,7 +511,7 @@ static readonly TF_SYNC: number
 static readonly TF_WAIT_TIME: number
 ```
 
-RPC等待时间（单位：秒），IPC场景下无效。默认等待为8秒（不建议修改等待时间）。
+RPC wait time, in seconds. This parameter cannot be used in IPC. The default waiting time is 8 seconds. You are  advised not to change the waiting time.
 
 **Type:** number
 

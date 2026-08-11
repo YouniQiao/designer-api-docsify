@@ -1,16 +1,19 @@
 # WindowExtensionContext (System API)
 
-WindowExtensionContext模块是WindowExtensionAbility的上下文环境，继承自[ExtensionContext](../../apis-ability-kit/arkts-apis/arkts-ability-extensioncontext-c.md/arkts-ability-extensioncontext-c.md)。
+The WindowExtensionContext module provides the context environment for the WindowExtensionAbility. It inherits from  
+[ExtensionContext](../../apis-ability-kit/arkts-apis/arkts-ability-extensioncontext-c.md/arkts-ability-extensioncontext-c.md).
 
-WindowExtensionContext模块提供[WindowExtensionAbility](arkts-application-windowextensionability.md)具有的能力，包括启动Ability。
+The module provides the capabilities of the  
+[WindowExtensionAbility](arkts-application-windowextensionability.md), including starting the ability.
 
-> **说明：**
+> **NOTE：**
 > 
-> - 从API version 21开始废弃，推荐使用[UIExtensionContext](../../apis-ability-kit/arkts-apis/arkts-ability-uiextensioncontext-c.md/arkts-ability-uiextensioncontext-c.md)。
+> - This module is deprecated since API version 21. You are advised to use
+> [UIExtensionContext](../../apis-ability-kit/arkts-apis/arkts-ability-uiextensioncontext-c.md/arkts-ability-uiextensioncontext-c.md) instead.
 > 
-> - 本模块接口为系统接口。
+> - The APIs provided by this module are system APIs.
 > 
-> - 本模块接口仅可在Stage模型下使用。
+> - The APIs of this module can be used only in the stage model.
 
 **Inheritance/Implementation:** WindowExtensionContext extends [ExtensionContext](../../apis-ability-kit/arkts-apis/arkts-ability-extensioncontext-c.md/arkts-ability-extensioncontext-c.md)
 
@@ -32,13 +35,7 @@ WindowExtensionContext模块提供[WindowExtensionAbility](arkts-application-win
 startAbility(want: Want, options: StartOptions, callback: AsyncCallback<void>): void
 ```
 
-启动Ability，使用callback异步回调。
-
-> **说明：**
-> 
-> - 从API version 9开始支持，从API version 21开始废弃，推荐使用
-> [UIExtensionContext.startability](../../apis-ability-kit/arkts-apis/arkts-ability-uiextensioncontext-c.md/arkts-ability-uiextensioncontext-c.md#startability)
-> 。
+Starts an ability. This API uses an asynchronous callback to return the result.
 
 **Since:** 9
 
@@ -58,16 +55,16 @@ startAbility(want: Want, options: StartOptions, callback: AsyncCallback<void>): 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| want | [Want](../../apis-ability-kit/arkts-apis/arkts-ability-application-want-want-depr-c.md) | Yes | 启动Ability的want信息。 |
-| options | [StartOptions](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-startoptions-startoptions-c-sys.md) | Yes | 启动Ability所携带的参数。 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | callback形式返回启动结果。 |
+| want | [Want](../../apis-ability-kit/arkts-apis/arkts-ability-application-want-want-depr-c.md) | Yes | Want information about the target ability. |
+| options | [StartOptions](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-startoptions-startoptions-c-sys.md) | Yes | Parameters used for starting the ability. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. Possible cause: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
-| 202 | Permission verification failed. A non-system application calls a system API.<br>**Applicable version:** 12 and later |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible cause: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API.<br>**Applicable version:** 12 and later |
 
 ## startAbility
 
@@ -75,13 +72,7 @@ startAbility(want: Want, options: StartOptions, callback: AsyncCallback<void>): 
 startAbility(want: Want, options?: StartOptions): Promise<void>
 ```
 
-启动Ability，使用Promise异步回调。
-
-> **说明：**
-> 
-> - 从API version 9开始支持，从API version 21开始废弃，推荐使用
-> [UIExtensionContext.startability](../../apis-ability-kit/arkts-apis/arkts-ability-uiextensioncontext-c.md/arkts-ability-uiextensioncontext-c.md#startability)
-> 。
+Starts an ability. This API uses a promise to return the result.
 
 **Since:** 9
 
@@ -101,19 +92,19 @@ startAbility(want: Want, options?: StartOptions): Promise<void>
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| want | [Want](../../apis-ability-kit/arkts-apis/arkts-ability-application-want-want-depr-c.md) | Yes | Want类型参数，传入需要启动的ability的信息，如Ability名称，Bundle名称等。 |
-| options | [StartOptions](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-startoptions-startoptions-c-sys.md) | No | 启动Ability所携带的参数。 |
+| want | [Want](../../apis-ability-kit/arkts-apis/arkts-ability-application-want-want-depr-c.md) | Yes | Want information about the target ability, such as the ability name and bundle name. |
+| options | [StartOptions](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-startoptions-startoptions-c-sys.md) | No | Parameters used for starting the ability. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | 无返回结果的Promise对象。 |
+| Promise&lt;void&gt; | Promise that returns no value. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. Possible cause: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
-| 202 | Permission verification failed. A non-system application calls a system API.<br>**Applicable version:** 12 and later |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible cause: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API.<br>**Applicable version:** 12 and later |
 

@@ -1,6 +1,6 @@
 # HorizontalAlignParam
 
-定义相对容器的水平对齐规则。
+Defines the horizontal align rule of relative container.
 
 **Since:** 23
 

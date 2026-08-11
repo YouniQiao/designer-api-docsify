@@ -41,7 +41,7 @@ Obtains the context of 2D canvas drawing.Only parameters related to 2D canvas dr
 
 | Type | Description |
 | --- | --- |
-| [CanvasRenderingContext2D](arkts-arkui-canvasrenderingcontext2d-c.md) |  |
+| [CanvasRenderingContext2D](../arkts-components/arkts-arkui-canvasrenderingcontext2d-c.md) |  |
 
 ## getContext
 

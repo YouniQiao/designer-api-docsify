@@ -49,11 +49,11 @@ Generate a snapshot from a custom component builder.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 100001 | The builder is not a valid build function. |
-| 401 | Parameter error. Possible causes: &lt;br&gt; 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameters types. &lt;br&gt; 3. Parameter verification failed. |
-| 160003 | Unsupported color space or dynamic range mode in snapshot options. |
-| 160001 | An image component in builder is not ready for taking a snapshot. The check for the ready state is required when the checkImageStatus option is enabled. |
-| 160004 | isAuto(true) is not supported for offscreen node snapshots. |
+| [100001](../errorcode-internal.md#100001-internal-error) | The builder is not a valid build function. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: &lt;br&gt; 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameters types. &lt;br&gt; 3. Parameter verification failed. |
+| [160003](../errorcode-snapshot.md#160003-provided-color-space-or-dynamic-range-mode-is-not-supported) | Unsupported color space or dynamic range mode in snapshot options. |
+| [160001](../errorcode-snapshot.md#160001-image-loading-error) | An image component in builder is not ready for taking a snapshot. The check for the ready state is required when the checkImageStatus option is enabled. |
+| [160004](../errorcode-snapshot.md#160004-unsupported-isauto-setting-of-the-color-space-or-dynamic-range-mode-for-offscreen-node-snapshot) | isAuto(true) is not supported for offscreen node snapshots. |
 
 ## createFromBuilder
 
@@ -93,11 +93,11 @@ Generate a snapshot from a custom component builder.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 100001 | The builder is not a valid build function. |
-| 401 | Parameter error. Possible causes: &lt;br&gt; 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameters types. &lt;br&gt; 3. Parameter verification failed. |
-| 160003 | Unsupported color space or dynamic range mode in snapshot options. |
-| 160001 | An image component in builder is not ready for taking a snapshot. The check for the ready state is required when the checkImageStatus option is enabled. |
-| 160004 | isAuto(true) is not supported for offscreen node snapshots. |
+| [100001](../errorcode-internal.md#100001-internal-error) | The builder is not a valid build function. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: &lt;br&gt; 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameters types. &lt;br&gt; 3. Parameter verification failed. |
+| [160003](../errorcode-snapshot.md#160003-provided-color-space-or-dynamic-range-mode-is-not-supported) | Unsupported color space or dynamic range mode in snapshot options. |
+| [160001](../errorcode-snapshot.md#160001-image-loading-error) | An image component in builder is not ready for taking a snapshot. The check for the ready state is required when the checkImageStatus option is enabled. |
+| [160004](../errorcode-snapshot.md#160004-unsupported-isauto-setting-of-the-color-space-or-dynamic-range-mode-for-offscreen-node-snapshot) | isAuto(true) is not supported for offscreen node snapshots. |
 
 ## createFromComponent
 
@@ -137,11 +137,11 @@ Generate a snapshot from a custom component content.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 100001 | The builder is not a valid build function. |
-| 401 | Parameter error. Possible causes: &lt;br&gt; 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameters types. &lt;br&gt; 3. Parameter verification failed. |
-| 160003 | Unsupported color space or dynamic range mode in snapshot options. |
-| 160001 | An image component in builder is not ready for taking a snapshot. The check for the ready state is required when the checkImageStatus option is enabled. |
-| 160004 | isAuto(true) is not supported for offscreen node snapshots. |
+| [100001](../errorcode-internal.md#100001-internal-error) | The builder is not a valid build function. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: &lt;br&gt; 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameters types. &lt;br&gt; 3. Parameter verification failed. |
+| [160003](../errorcode-snapshot.md#160003-provided-color-space-or-dynamic-range-mode-is-not-supported) | Unsupported color space or dynamic range mode in snapshot options. |
+| [160001](../errorcode-snapshot.md#160001-image-loading-error) | An image component in builder is not ready for taking a snapshot. The check for the ready state is required when the checkImageStatus option is enabled. |
+| [160004](../errorcode-snapshot.md#160004-unsupported-isauto-setting-of-the-color-space-or-dynamic-range-mode-for-offscreen-node-snapshot) | isAuto(true) is not supported for offscreen node snapshots. |
 
 ## get
 
@@ -149,7 +149,7 @@ Generate a snapshot from a custom component content.
 get(id: string, callback: AsyncCallback<image.PixelMap>, options?: componentSnapshot.SnapshotOptions): void
 ```
 
-通过组件id获取组件截图。
+Get a component snapshot by component id.
 
 **Since:** 23
 
@@ -173,9 +173,9 @@ get(id: string, callback: AsyncCallback<image.PixelMap>, options?: componentSnap
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 100001 | Invalid ID. |
-| 401 | Parameter error. Possible causes: &lt;br&gt; 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameters types. &lt;br&gt; 3. Parameter verification failed. |
-| 160003 | Unsupported color space or dynamic range mode in snapshot options. |
+| [100001](../errorcode-internal.md#100001-internal-error) | Invalid ID. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: &lt;br&gt; 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameters types. &lt;br&gt; 3. Parameter verification failed. |
+| [160003](../errorcode-snapshot.md#160003-provided-color-space-or-dynamic-range-mode-is-not-supported) | Unsupported color space or dynamic range mode in snapshot options. |
 
 ## get
 
@@ -183,7 +183,7 @@ get(id: string, callback: AsyncCallback<image.PixelMap>, options?: componentSnap
 get(id: string, options?: componentSnapshot.SnapshotOptions): Promise<image.PixelMap> | null
 ```
 
-通过组件id获取组件截图。
+Get a component snapshot by component id.
 
 **Since:** 23
 
@@ -212,9 +212,9 @@ get(id: string, options?: componentSnapshot.SnapshotOptions): Promise<image.Pixe
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 100001 | Invalid ID. |
-| 401 | Parameter error. Possible causes: &lt;br&gt; 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameters types. &lt;br&gt; 3. Parameter verification failed. |
-| 160003 | Unsupported color space or dynamic range mode in snapshot options. |
+| [100001](../errorcode-internal.md#100001-internal-error) | Invalid ID. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: &lt;br&gt; 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameters types. &lt;br&gt; 3. Parameter verification failed. |
+| [160003](../errorcode-snapshot.md#160003-provided-color-space-or-dynamic-range-mode-is-not-supported) | Unsupported color space or dynamic range mode in snapshot options. |
 
 ## getSizeLimitation
 
@@ -222,7 +222,7 @@ get(id: string, options?: componentSnapshot.SnapshotOptions): Promise<image.Pixe
 getSizeLimitation(): componentSnapshot.SnapshotSizeLimitation
 ```
 
-查询组件截图大小限制。
+Query the size limitation for taking a component snapshot.
 
 **Since:** 26.0.0
 
@@ -275,10 +275,10 @@ Take a screenshot of the specified component in synchronous mode,this mode will 
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 100001 | Invalid ID. |
-| 160002 | Timeout. |
-| 401 | Parameter error. Possible causes: &lt;br&gt; 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameters types. &lt;br&gt; 3. Parameter verification failed. |
-| 160003 | Unsupported color space or dynamic range mode in snapshot options. |
+| [100001](../errorcode-internal.md#100001-internal-error) | Invalid ID. |
+| [160002](../errorcode-snapshot.md#160002-snapshot-timeout) | Timeout. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: &lt;br&gt; 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameters types. &lt;br&gt; 3. Parameter verification failed. |
+| [160003](../errorcode-snapshot.md#160003-provided-color-space-or-dynamic-range-mode-is-not-supported) | Unsupported color space or dynamic range mode in snapshot options. |
 
 ## getSyncWithUniqueId
 
@@ -315,10 +315,10 @@ Take a screenshot of the specified component in synchronous mode,this mode will 
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 100001 | Invalid ID. |
-| 160002 | Timeout. |
-| 401 | Parameter error. Possible causes: &lt;br&gt; 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameters types. &lt;br&gt; 3. Parameter verification failed. |
-| 160003 | Unsupported color space or dynamic range mode in snapshot options. |
+| [100001](../errorcode-internal.md#100001-internal-error) | Invalid ID. |
+| [160002](../errorcode-snapshot.md#160002-snapshot-timeout) | Timeout. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: &lt;br&gt; 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameters types. &lt;br&gt; 3. Parameter verification failed. |
+| [160003](../errorcode-snapshot.md#160003-provided-color-space-or-dynamic-range-mode-is-not-supported) | Unsupported color space or dynamic range mode in snapshot options. |
 
 ## getWithUniqueId
 
@@ -326,7 +326,7 @@ Take a screenshot of the specified component in synchronous mode,this mode will 
 getWithUniqueId(uniqueId: int, options?: componentSnapshot.SnapshotOptions): Promise<image.PixelMap> | null
 ```
 
-通过uniqueId获取组件截图。
+Get a component snapshot by uniqueId.
 
 **Since:** 23
 
@@ -355,7 +355,7 @@ getWithUniqueId(uniqueId: int, options?: componentSnapshot.SnapshotOptions): Pro
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 100001 | Invalid ID. |
-| 401 | Parameter error. Possible causes: &lt;br&gt; 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameters types. &lt;br&gt; 3. Parameter verification failed. |
-| 160003 | Unsupported color space or dynamic range mode in snapshot options. |
+| [100001](../errorcode-internal.md#100001-internal-error) | Invalid ID. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: &lt;br&gt; 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameters types. &lt;br&gt; 3. Parameter verification failed. |
+| [160003](../errorcode-snapshot.md#160003-provided-color-space-or-dynamic-range-mode-is-not-supported) | Unsupported color space or dynamic range mode in snapshot options. |
 

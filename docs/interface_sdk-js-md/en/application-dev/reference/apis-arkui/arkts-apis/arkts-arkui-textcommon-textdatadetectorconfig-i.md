@@ -1,7 +1,6 @@
 # TextDataDetectorConfig
 
-文本识别配置项。该配置只支持[Text](../../../reference/apis-arkui/arkui-ts/ts-basic-components-text.md)组件和  
-[RichEditor](../../../reference/apis-arkui/arkui-ts/ts-basic-components-richeditor.md)组件。
+Text data detector config.
 
 **Since:** 23
 
@@ -17,9 +16,7 @@
 color?: ResourceColor
 ```
 
-设置文本识别成功后的实体颜色。
-
-默认值：'#ff0a59f7'
+The color of AI entity.
 
 **Type:** [ResourceColor](arkts-arkui-resourcecolor-t.md)
 
@@ -39,19 +36,7 @@ color?: ResourceColor
 decoration?: DecorationStyleInterface
 ```
 
-设置文本识别成功后的实体装饰线样式。
-
-默认值：
-
-{
-
- type: TextDecorationType.Underline,
-
- color: 与实体颜色一致,
-
- style: TextDecorationStyle.SOLID
-
-}
+The decoration of AI entity.
 
 **Type:** [DecorationStyleInterface](arkts-arkui-decorationstyleinterface-i.md)
 
@@ -71,11 +56,7 @@ decoration?: DecorationStyleInterface
 enablePreviewMenu?: boolean
 ```
 
-设置是否开启文本识别长按显示预览菜单。true表示开启，false表示未开启。
-
-默认值：false
-
-当[copyOptions](../../../reference/apis-arkui/arkui-ts/ts-basic-components-richeditor.md#copyoptions)设置为None时，若enablePreviewMenu设置为true，长按AI实体也不能显示预览菜单。
+Used to set whether the preview window will be displayed when long-presses and selects a word.
 
 **Type:** boolean
 
@@ -95,7 +76,7 @@ enablePreviewMenu?: boolean
 onDetectResultUpdate?: Callback<string>
 ```
 
-文本识别成功后，触发onDetectResultUpdate回调。
+Text data detect result callback.
 
 **Type:** [Callback](../arkts-components/arkts-arkui-callback-i.md)&lt;string&gt;
 
@@ -115,7 +96,7 @@ onDetectResultUpdate?: Callback<string>
 types: TextDataDetectorType[] | undefined | null
 ```
 
-设置文本识别的实体类型。设置types为null或者undefined或者[]时，识别所有类型的实体，否则只识别指定类型的实体。
+Text data detector types. The default value is an empty array.Set to `undefined` or `null` will restore it to the default value.
 
 **Type:** TextDataDetectorType[] \| undefined \| null
 

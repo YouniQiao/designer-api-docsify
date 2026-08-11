@@ -1,6 +1,6 @@
 # BarStyle
 
-标题栏或工具栏的布局样式。NavDestination的工具栏不支持设置该属性。
+Declare BarStyle enum.
 
 **Since:** 23
 
@@ -16,7 +16,7 @@
 STANDARD = 0
 ```
 
-指定该模式的标题栏或工具栏与内容区采用上下布局。
+Standard style means that the bar and content area are column layouts.
 
 **Since:** 23
 
@@ -34,7 +34,7 @@ STANDARD = 0
 STACK = 1
 ```
 
-指定该模式的标题栏或工具栏与内容区采用层叠布局，标题栏或工具栏布局在内容区上层。
+Stack style means that the bar and content area are stack layouts.
 
 **Since:** 23
 
@@ -52,8 +52,7 @@ STACK = 1
 SAFE_AREA_PADDING = 2
 ```
 
-将指定该模式的标题栏或工具栏设置为  
-[组件级安全区](../../../reference/apis-arkui/arkui-ts/ts-universal-attributes-size.md#safeareapadding14)。
+SafeAreaPadding style means the bar height will be taken as content's safeAreaPadding.
 
 **Since:** 23
 

@@ -1,8 +1,8 @@
 # CsrAttribute
 
-定义CSR属性表示。
+Defines the CSR attribute representation.
 
-&lt;br&gt;CSR属性字段，当前仅支持字符串类型的属性字段，属性值添加到CSR中编码为utf-8。常见的type为challengePassword。
+&lt;br&gt;CSR attribute field. Currently, only string-type attribute fields are supported. The attribute value added to the CSR is encoded in UTF-8 format. The common type is challengePassword.
 
 **Since:** 18
 
@@ -24,7 +24,7 @@ import { cert } from 'kits/@kit.DeviceCertificateKit';
 type: string
 ```
 
-PKCS #9指定的扩展类型。
+Attribute type defined in PKCS #9.
 
 **Type:** string
 
@@ -44,7 +44,7 @@ PKCS #9指定的扩展类型。
 value: string
 ```
 
-属性值。
+Attribute value.
 
 **Type:** string
 

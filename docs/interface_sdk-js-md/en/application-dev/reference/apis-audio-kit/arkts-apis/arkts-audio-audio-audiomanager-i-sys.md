@@ -1,8 +1,9 @@
 # AudioManager
 
-音频音量和设备管理。
+This interface implements audio volume and device management.
 
-在使用AudioManager的接口之前，需先通过[getAudioManager](arkts-audio-audio-getaudiomanager-f.md#getaudiomanager)获取AudioManager实例。
+Before calling any API in AudioManager, you must use  
+[getAudioManager](arkts-audio-audio-getaudiomanager-f.md#getaudiomanager) to obtain an AudioManager instance.
 
 **Since:** 7
 
@@ -48,8 +49,8 @@ user disable the safe media volume state.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 201 | Permission denied. |
-| 202 | Not system App. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system App. |
 
 ## Examples
 
@@ -69,7 +70,7 @@ audioManager.disableSafeMediaVolume().then(() => {
 getCollaborativeManager(): AudioCollaborativeManager
 ```
 
-获取协同播放管理实例
+Obtains a collaborative playback management instance.
 
 **Since:** 20
 
@@ -85,13 +86,13 @@ getCollaborativeManager(): AudioCollaborativeManager
 
 | Type | Description |
 | --- | --- |
-| [AudioCollaborativeManager](arkts-audio-audio-audiocollaborativemanager-i-sys.md) | 协同播放管理实例 |
+| [AudioCollaborativeManager](arkts-audio-audio-audiocollaborativemanager-i-sys.md) | Returns a collaborative playback management instance. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 202 | Not system App. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system App. |
 
 ## getEffectManager
 
@@ -121,7 +122,7 @@ Obtains an {@link AudioEffectManager} instance.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 202 | Not system App. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system App. |
 
 ## Examples
 
@@ -166,9 +167,9 @@ Obtains the values of a certain key. This method uses a promise to return the qu
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
-| 6800101 | Parameter verification failed. |
-| 202 | Not system App. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
+| [6800101](../errorcode-audio.md#6800101-invalid-parameter) | Parameter verification failed. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system App. |
 
 ## Examples
 
@@ -182,38 +183,6 @@ audioManager.getExtraParameters('key_example', subKeys).then((value: Record<stri
   console.error(`Failed to get the audio extra parameters ${err}`);
 });
 ```
-
-## getRecordingManager
-
-```TypeScript
-getRecordingManager(): AudioRecordingManager
-```
-
-获取录音管理器实例。
-
-**Since:** 26.0.0
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
-
-**Model restriction:** This API can be used only in the stage model.
-
-<!--Device-AudioManager-getRecordingManager(): AudioRecordingManager--><!--Device-AudioManager-getRecordingManager(): AudioRecordingManager-End-->
-
-**System capability:** SystemCapability.Multimedia.Audio.Capturer
-
-**System API:** This is a system API.
-
-**Return value:**
-
-| Type | Description |
-| --- | --- |
-| [AudioRecordingManager](arkts-audio-audio-audiorecordingmanager-i-sys.md) | 返回音频记录管理器的实例。 |
-
-**Error codes:**
-
-| Error Code ID | Error Message |
-| --- | --- |
-| 202 | Caller is not a system application. |
 
 ## on('volumeChange')
 
@@ -294,7 +263,7 @@ audioManager.on('ringerModeChange', (ringerMode: audio.AudioRingMode) => {
 ## setAudioScene
 
 ```TypeScript
-setAudioScene(scene: AudioScene, callback: AsyncCallback<void> ): void
+setAudioScene(scene: AudioScene, callback: AsyncCallback<void>): void
 ```
 
 Sets the audio scene mode to change audio strategies. This method uses an asynchronous callback to return the result.
@@ -303,7 +272,7 @@ Sets the audio scene mode to change audio strategies. This method uses an asynch
 
 **ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
 
-<!--Device-AudioManager-setAudioScene(scene: AudioScene, callback: AsyncCallback<void> ): void--><!--Device-AudioManager-setAudioScene(scene: AudioScene, callback: AsyncCallback<void> ): void-End-->
+<!--Device-AudioManager-setAudioScene(scene: AudioScene, callback: AsyncCallback<void>): void--><!--Device-AudioManager-setAudioScene(scene: AudioScene, callback: AsyncCallback<void>): void-End-->
 
 **System capability:** SystemCapability.Multimedia.Audio.Communication
 
@@ -409,10 +378,10 @@ Sets extra audio parameters. This method uses a promise to return the result.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
-| 6800101 | Parameter verification failed. |
-| 201 | Permission denied. |
-| 202 | Not system App. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
+| [6800101](../errorcode-audio.md#6800101-invalid-parameter) | Parameter verification failed. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system App. |
 
 ## Examples
 

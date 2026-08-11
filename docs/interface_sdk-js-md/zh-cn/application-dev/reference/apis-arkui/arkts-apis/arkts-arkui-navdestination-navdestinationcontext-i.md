@@ -42,7 +42,7 @@ mode?: NavDestinationMode
 
 当前NavDestination的类型。
 
-**类型：** [NavDestinationMode](../arkts-components/arkts-arkui-navdestinationmode-e.md)
+**类型：** [NavDestinationMode](arkts-arkui-navdestination-navdestinationmode-e.md)
 
 **起始版本：** 26.0.0
 

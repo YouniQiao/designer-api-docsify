@@ -1,11 +1,5 @@
 # resourceToSendableResource
 
-## 导入模块
-
-```TypeScript
-import { sendableResourceManager } from 'kits/@kit.LocalizationKit';
-```
-
 ## resourceToSendableResource
 
 ```TypeScript
@@ -34,13 +28,13 @@ export function resourceToSendableResource(resource: Resource): SendableResource
 
 | 类型 | 说明 |
 | --- | --- |
-| [SendableResource](arkts-localization-sendableresource-sendableresource-i.md) | 转换后的SendableResource对象。 |
+| [SendableResource](arkts-localization-sendableresourcemanager-sendableresource-t.md) | 转换后的SendableResource对象。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1.Incorrect parameter types; 2.Parameter verification failed. |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1.Incorrect parameter types; 2.Parameter verification failed. |
 
 ## 示例
 

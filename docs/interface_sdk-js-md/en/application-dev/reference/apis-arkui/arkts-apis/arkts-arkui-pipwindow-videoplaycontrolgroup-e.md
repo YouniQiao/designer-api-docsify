@@ -1,6 +1,7 @@
 # VideoPlayControlGroup
 
-视频播放控件组枚举。仅当[PiPTemplateType](arkts-arkui-pipwindow-piptemplatetype-e.md)为VIDEO_PLAY时使用。
+Enumerates the video playback component groups. They are used only when  
+[PiPTemplateType](arkts-arkui-pipwindow-piptemplatetype-e.md) is set to **VIDEO_PLAY**.
 
 **Since:** 12
 
@@ -16,9 +17,9 @@
 VIDEO_PREVIOUS_NEXT = 101
 ```
 
-视频上一个/下一个控件组。
+Previous/Next component group for video playback.
 
-与视频快进/后退控件组为互斥控件组。如添加视频快进/后退控件组，则不可添加该控件组。
+This component group is mutually exclusive with the fast-forward/rewind component group. It cannot be added if the fast-forward/rewind component group is added.
 
 **Since:** 12
 
@@ -36,9 +37,9 @@ VIDEO_PREVIOUS_NEXT = 101
 FAST_FORWARD_BACKWARD = 102
 ```
 
-视频快进/后退控件组。
+Fast-forward/Rewind component group for video playback.
 
-与视频上一个/下一个控件组为互斥控件组。如添加视频上一个/下一个控件组，则不可添加该控件组。
+This component group is mutually exclusive with the previous/next component group. It cannot be added if the previous/next component group is added.
 
 **Since:** 12
 

@@ -1,11 +1,5 @@
 # queryAllPrinterExtensionInfos（系统接口）
 
-## 导入模块
-
-```TypeScript
-import { print } from 'kits/@kit.BasicServicesKit';
-```
-
 ## queryAllPrinterExtensionInfos
 
 ```TypeScript
@@ -36,22 +30,22 @@ function queryAllPrinterExtensionInfos(callback: AsyncCallback<Array<PrinterExte
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 201 | the application does not have permission to call this function. |
-| 202 | not system application |
+| [201](../../errorcode-universal.md#201-权限校验失败) | the application does not have permission to call this function. |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | not system application |
 
 ## 示例
 
 ```TypeScript
 import { print } from '@kit.BasicServicesKit';
-import { BusinessError } from '@kit.BasicServicesKit';
+import { BusinessError } from '@ohos.base';
 
-print.queryAllPrinterExtensionInfos((error: BusinessError, extensionInfos: print.PrinterExtensionInfo[]) => {
-    if (error) {
-        console.error(`Failed to query all printer extension infos. Code: ${error.code}, message: ${error.message}`);
+print.queryAllPrinterExtensionInfos((err: BusinessError, extensionInfos: print.PrinterExtensionInfo[]) => {
+    if (err) {
+        console.error('queryAllPrinterExtensionInfos err ' + JSON.stringify(err));
     } else {
         console.info('queryAllPrinterExtensionInfos success ' + JSON.stringify(extensionInfos));
     }
-});
+})
 ```
 
 
@@ -85,20 +79,20 @@ function queryAllPrinterExtensionInfos(): Promise<Array<PrinterExtensionInfo>>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 201 | the application does not have permission to call this function. |
-| 202 | not system application |
+| [201](../../errorcode-universal.md#201-权限校验失败) | the application does not have permission to call this function. |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | not system application |
 
 ## 示例
 
 ```TypeScript
 import { print } from '@kit.BasicServicesKit';
-import { BusinessError } from '@kit.BasicServicesKit';
+import { BusinessError } from '@ohos.base';
 
 print.queryAllPrinterExtensionInfos().then((extensionInfos: print.PrinterExtensionInfo[]) => {
     console.info('queryAllPrinterExtensionInfos success ' + JSON.stringify(extensionInfos));
     // ...
 }).catch((error: BusinessError) => {
-    console.error(`Failed to query all printer extension infos. Code: ${error.code}, message: ${error.message}`);
-});
+    console.error('failed to get AllPrinterExtension because ' + JSON.stringify(error));
+})
 ```
 

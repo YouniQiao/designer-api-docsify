@@ -1,11 +1,5 @@
 # cancel
 
-## 导入模块
-
-```TypeScript
-import { taskpool } from 'kits/@kit.ArkTS';
-```
-
 ## cancel
 
 ```TypeScript
@@ -40,9 +34,9 @@ function cancel(task: Task): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 10200015 | The task to cancel does not exist. |
-| 10200016 | The task to cancel is being executed.<br>**适用版本：** 9 - 17 |
-| 10200055 | The asyncRunner task has been canceled.<br>**适用版本：** 18+ |
+| [10200015](../errorcode-utils.md#10200015-取消不存在的任务错误) | The task to cancel does not exist. |
+| [10200016](../errorcode-utils.md#10200016-取消正在执行的任务错误) | The task to cancel is being executed.<br>**适用版本：** 9 - 17 |
+| [10200055](../errorcode-utils.md#10200055-异步任务被取消) | The asyncRunner task has been canceled.<br>**适用版本：** 18+ |
 
 
 ## cancel
@@ -74,7 +68,7 @@ function cancel(group: TaskGroup): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 10200018 | The task group to cancel does not exist. |
+| [10200018](../errorcode-utils.md#10200018-取消不存在的任务组错误) | The task group to cancel does not exist. |
 
 ## 示例
 
@@ -152,8 +146,8 @@ function cancel(taskId: number): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 10200015 | The task to cancel does not exist. |
-| 10200055 | The asyncRunner task has been canceled. |
+| [10200015](../errorcode-utils.md#10200015-取消不存在的任务错误) | The task to cancel does not exist. |
+| [10200055](../errorcode-utils.md#10200055-异步任务被取消) | The asyncRunner task has been canceled. |
 
 ## 示例
 

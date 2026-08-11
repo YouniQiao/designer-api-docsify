@@ -1,11 +1,5 @@
 # create
 
-## 导入模块
-
-```TypeScript
-import { runningLock } from 'kits/@kit.BasicServicesKit';
-```
-
 ## create
 
 ```TypeScript
@@ -36,17 +30,31 @@ function create(name: string, type: RunningLockType, callback: AsyncCallback<Run
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1. Parameter verification failed. |
-| 201 | If the permission is denied. |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1. Parameter verification failed. |
+| [201](../../errorcode-universal.md#201-权限校验失败) | If the permission is denied. |
 
 ## 示例
 
+ArkTS-Dyn示例：
+
 ```TypeScript
-runningLock.create('running_lock_test', runningLock.RunningLockType.PROXIMITY_SCREEN_CONTROL, (err: BusinessError, lock: runningLock.RunningLock) => {
-    if (err) {
-        console.error(`Failed to create running lock. Code: ${err.code}, message: ${err.message}`);
+runningLock.create('running_lock_test', runningLock.RunningLockType.PROXIMITY_SCREEN_CONTROL, (err: Error, lock: runningLock.RunningLock) => {
+    if (typeof err === 'undefined') {
+        console.info('created running lock: ' + lock);
     } else {
-        console.info('created running lock: ' + lock); // 创建并保存锁对象后，需要结合hold、unhold方法使用
+        console.error('create running lock failed, err: ' + err);
+    }
+});
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+runningLock.create('running_lock_test', runningLock.RunningLockType.PROXIMITY_SCREEN_CONTROL, (err: Error | null, lock: runningLock.RunningLock | undefined) => {
+    if (!err) {
+        console.info('created running lock: ' + lock);
+    } else {
+        console.error('create running lock failed, err: ' + err);
     }
 });
 ```
@@ -87,18 +95,18 @@ function create(name: string, type: RunningLockType): Promise<RunningLock>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1. Parameter verification failed. |
-| 201 | If the permission is denied. |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1. Parameter verification failed. |
+| [201](../../errorcode-universal.md#201-权限校验失败) | If the permission is denied. |
 
 ## 示例
 
 ```TypeScript
 runningLock.create('running_lock_test', runningLock.RunningLockType.PROXIMITY_SCREEN_CONTROL)
 .then((lock: runningLock.RunningLock) => {
-    console.info('created running lock: ' + lock); // 创建并保存锁对象后，需要结合hold、unhold方法使用
+    console.info('created running lock: ' + lock);
 })
-.catch((err: BusinessError) => {
-    console.error(`Failed to create running lock. Code: ${err.code}, message: ${err.message}`);
+.catch((err: Error) => {
+    console.error('create running lock failed, err: ' + err);
 });
 ```
 

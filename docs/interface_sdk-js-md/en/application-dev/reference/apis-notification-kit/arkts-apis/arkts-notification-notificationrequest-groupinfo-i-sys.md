@@ -1,6 +1,6 @@
 # GroupInfo (System API)
 
-组通知信息。
+Defines the group notification information.
 
 **Since:** 26.0.0
 
@@ -18,7 +18,7 @@
 groupTitle?: string
 ```
 
-通知成组后展示的组标题。当该通知是通知组中最新的一条通知时，该字段生效。默认为空。
+Group title displayed after notifications are grouped. This parameter is valid only when the notification is the latest one in the notification group.This parameter is left empty by default.
 
 **Type:** string
 
@@ -40,10 +40,10 @@ groupTitle?: string
 isGroupIcon?: boolean
 ```
 
-是否使用该通知[NotificationRequest](arkts-notification-notificationrequest-notificationrequest-i.md)中的smallIcon字段作为通知成组后展示的组图标。当该通知是通知组中最新的一条通知，且开发者传入smallIcon时，是否使用smallIcon作为组图标。默认值为false。
-
-- true：使用smallIcon作为组通知的图标。  
-- false：不使用smallIcon作为组通知的图标。
+Whether to use the **smallIcon** field in   
+[NotificationRequest](arkts-notification-notificationrequest-notificationrequest-i.md) as the group icon displayed after notifications are grouped. Whether to use the **smallIcon** field as the group icon when the notification is the latest one in the notification group and the **smallIcon** field is passed. The default value is **false**.  
+- **true**: yes.  
+- **false**: no.
 
 **Type:** boolean
 

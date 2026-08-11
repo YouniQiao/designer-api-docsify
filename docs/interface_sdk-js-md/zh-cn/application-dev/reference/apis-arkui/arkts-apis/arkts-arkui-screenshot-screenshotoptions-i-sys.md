@@ -12,12 +12,6 @@
 
 **系统接口：** 此接口为系统接口。
 
-## 导入模块
-
-```TypeScript
-import { screenshot } from 'kits/@kit.ArkUI';
-```
-
 ## displayId
 
 ```TypeScript
@@ -127,7 +121,7 @@ screenRect?: Rect
 
 表示截取图像的区域，不传值默认返回displayId所在逻辑屏的区域。
 
-**类型：** [Rect](../../apis-form-kit/arkts-apis/arkts-form-forminfo-rect-i.md)
+**类型：** [Rect](../../apis-test-kit/arkts-apis/arkts-test-uitest-rect-i.md)
 
 **起始版本：** 7
 

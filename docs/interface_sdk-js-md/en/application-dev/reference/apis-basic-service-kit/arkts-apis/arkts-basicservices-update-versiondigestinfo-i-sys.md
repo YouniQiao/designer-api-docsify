@@ -1,6 +1,6 @@
 # VersionDigestInfo (System API)
 
-版本摘要。
+Represents version digest information.
 
 **Since:** 9
 
@@ -24,7 +24,7 @@ import { update } from 'kits/@kit.BasicServicesKit';
 versionDigest: string
 ```
 
-版本摘要。长度范围[1，128]，单位：字符。从版本检查结果中获取，用于标识具体版本。超出范围时抛出异常。
+Version digest information. The value is a string of 1 to 128 characters. The value is obtained from the version check result and is used to identify a specific version. An exception is thrown if the value is out of range.
 
 **Type:** string
 

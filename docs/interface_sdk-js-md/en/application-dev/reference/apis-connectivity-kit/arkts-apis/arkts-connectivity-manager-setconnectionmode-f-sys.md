@@ -12,7 +12,7 @@ import { manager } from 'kits/@kit.ConnectivityKit';
 function setConnectionMode(mode: ConnectionMode, duration: int): Promise<void>
 ```
 
-设置设备的NearLink连接模式。
+Sets the NearLink connection mode for a device.
 
 **Since:** 26.0.0
 
@@ -32,23 +32,23 @@ function setConnectionMode(mode: ConnectionMode, duration: int): Promise<void>
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| mode | [ConnectionMode](arkts-connectivity-manager-connectionmode-e-sys.md) | Yes | 需要设置的NearLink连接模式 |
-| duration | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | 表示设置连接模式的持续时间（以秒为单位）。值为0表示无限制 &lt;br&gt;单位为： 秒，取值应为≥0的整数。 |
+| mode | [ConnectionMode](arkts-connectivity-manager-connectionmode-e-sys.md) | Yes | Indicates the NearLink connection mode to be set. |
+| duration | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | Indicates the duration in seconds for the setting mode. A value of 0 means unlimited. &lt;br&gt;Unit: Seconds, The value must be an integer greater than or equal to 0. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | 返回promise对象。 |
+| Promise&lt;void&gt; | Returns the promise object. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 801 | Capability not supported because the chip does not support it. |
+| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported because the chip does not support it. |
 | 36100003 | NearLink disabled. |
 | 36100099 | Operation failed. |
-| 201 | Permission denied. |
-| 202 | Non-system applications are not allowed to use system APIs. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Non-system applications are not allowed to use system APIs. |
 | 36100040 | Integer out of range. |
 

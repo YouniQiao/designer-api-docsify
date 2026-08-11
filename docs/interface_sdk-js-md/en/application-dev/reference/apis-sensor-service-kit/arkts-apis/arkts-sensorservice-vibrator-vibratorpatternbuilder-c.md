@@ -1,11 +1,6 @@
 # VibratorPatternBuilder
 
-提供添加长振、短振事件和生成VibratorPattern对象的方法。使用流程：先通过  
-[addContinuousEvent](arkts-sensorservice-vibrator-vibratorpatternbuilder-c.md#addcontinuousevent)或  
-[addTransientEvent](arkts-sensorservice-vibrator-vibratorpatternbuilder-c.md#addtransientevent)添加振动事件，再通过  
-[build](arkts-sensorservice-vibrator-vibratorpatternbuilder-c.md#build)方法生成VibratorPattern对象，最后将该对象作为  
-[VibrateFromPattern](arkts-sensorservice-vibrator-vibratefrompattern-i.md)的pattern参数传入  
-[vibrator.startVibration](arkts-sensorservice-vibrator-startvibration-f.md#startvibration)接口触发振动。当开发者需要通过灵活组合振动事件（长振和短振）构建自定义振动序列时使用此接口。适用于需要动态排列振动事件的交互反馈场景（如表情包拟真效果、游戏场景反馈），相比VibrateFromFile以文件描述符方式传递振动事件，VibratorPatternBuilder以振动事件数组形式传递，支持更灵活的振动事件排列组合。
+Provide methods for adding long or short vibration events and generate VibratorPattern objects.
 
 **Since:** 18
 
@@ -33,7 +28,7 @@ ArkTS-Sta:
 addContinuousEvent(time: int, duration: int, options?: ContinuousParam): VibratorPatternBuilder
 ```
 
-添加长振事件的方法。添加后使用build (#build18)方法生成VibratorPattern (#vibratorpattern18)对象。用于在自定义振动序列中添加一段持续振动事件，适用于需要持续振动反馈的场景（如引擎振动、拉弓振动等）。返回VibratorPatternBuilder对象，支持链式调用addContinuousEvent或addTransientEvent继续添加振动事件
+Adds a long vibration event as a **VibratorPattern** object.
 
 **Since:** 18
 
@@ -47,21 +42,21 @@ addContinuousEvent(time: int, duration: int, options?: ContinuousParam): Vibrato
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| time | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | 长振事件的起始时间。单位：ms。取值范围：[0,1800000]区间内所有整数。使用场景：用于指定长振事件在振动序列中的起始时间点，多个事件间time值不能重叠。 |
-| duration | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | 长振事件的持续时间。单位：ms。取值范围：(0,5000]区间内所有整数。 |
-| options | [ContinuousParam](arkts-sensorservice-vibrator-continuousparam-i.md) | No | 可选参数，用于指定长振事件的振动强度、频率、振动调节曲线和通道编号。不填时使用各参数的默认值（intensity默认100，frequency默认50，index 默认0）。 |
+| time | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | Start time of the long vibration event, in ms. The value range is [0, 1800000]. |
+| duration | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | Duration of the long vibration event, in ms. The value range is (0,5000]. |
+| options | [ContinuousParam](arkts-sensorservice-vibrator-continuousparam-i.md) | No | Optional parameters. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [VibratorPatternBuilder](arkts-sensorservice-vibrator-vibratorpatternbuilder-c.md) | 返回已添加连续振动事件的VibratorPatternBuilder对象。可用于继续链式调用addContinuousEvent或addTransientEvent添加 更多振动事件，最终通过[build]{ |
+| [VibratorPatternBuilder](arkts-sensorservice-vibrator-vibratorpatternbuilder-c.md) | VibratorPatternBuilder** object representing a long vibration event. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt; 2. Incorrect parameter types; 3. Parameter verification failed. |
 
 ## Examples
 
@@ -111,8 +106,7 @@ ArkTS-Sta:
 addTransientEvent(time: int, options?: TransientParam): VibratorPatternBuilder
 ```
 
-添加短振事件的方法, 添加后使用[build](arkts-sensorservice-vibrator-vibratorpatternbuilder-c.md#build)方法生成  
-[VibratorPattern](arkts-sensorservice-vibrator-vibratorpattern-i.md)对象。适用于点击、按键等短促振动反馈场景，返回VibratorPatternBuilder对象，支持链式调用继续添加振动事件。
+Adds a short vibration event as a **VibratorPattern** object.
 
 **Since:** 18
 
@@ -126,20 +120,20 @@ addTransientEvent(time: int, options?: TransientParam): VibratorPatternBuilder
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| time | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | 短振事件的起始时间。单位：ms。取值范围：[0,1800000]区间内所有整数。使用场景：用于指定短振事件在振动序列中的起始时间点，多个事件间time值不能重叠。 |
-| options | [TransientParam](arkts-sensorservice-vibrator-transientparam-i.md) | No | 可选参数，用于指定短振事件的振动强度、频率和通道编号。不填时使用各参数的默认值（intensity默认100，frequency默认50，index默认0）。 |
+| time | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | Start time of the short vibration event, in ms. The value range is [0, 1800000]. |
+| options | [TransientParam](arkts-sensorservice-vibrator-transientparam-i.md) | No | Optional parameters. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [VibratorPatternBuilder](arkts-sensorservice-vibrator-vibratorpatternbuilder-c.md) | 返回已添加短振事件的VibratorPatternBuilder对象。可用于继续链式调用addContinuousEvent或addTransientEvent添加更多 振动事件，最终通过[build]{ |
+| [VibratorPatternBuilder](arkts-sensorservice-vibrator-vibratorpatternbuilder-c.md) | VibratorPatternBuilder** object representing a short vibration event. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt; 2. Incorrect parameter types; 3. Parameter verification failed. |
 
 ## Examples
 
@@ -169,11 +163,7 @@ try {
 build(): VibratorPattern
 ```
 
-构造组合短事件或长事件的振动序列的方法。适用于需要将自定义振动事件组合为振动序列后，通过[VibrateFromPattern](arkts-sensorservice-vibrator-vibratefrompattern-i.md)触发马达振动的场景。需先通过  
-[addContinuousEvent](arkts-sensorservice-vibrator-vibratorpatternbuilder-c.md#addcontinuousevent)或  
-[addTransientEvent](arkts-sensorservice-vibrator-vibratorpatternbuilder-c.md#addtransientevent)添加振动事件后，再调用本方法生成VibratorPattern对象。返回VibratorPattern对象，包含振动序列的起始时间和振动事件数组。该对象可作为VibrateFromPattern的pattern参数传入  
-[startVibration](arkts-sensorservice-vibrator-startvibration-f.md#startvibration)接口触发振动。需先通过[addContinuousEvent](arkts-sensorservice-vibrator-vibratorpatternbuilder-c.md#addcontinuousevent)或  
-[addTransientEvent](arkts-sensorservice-vibrator-vibratorpatternbuilder-c.md#addtransientevent)添加至少一个振动事件后调用本方法，否则生成的VibratorPattern为空序列。
+Constructor used to create a **VibratorPattern** object, which determines the vibration sequence of short or long events.
 
 **Since:** 18
 
@@ -187,7 +177,7 @@ build(): VibratorPattern
 
 | Type | Description |
 | --- | --- |
-| [VibratorPattern](arkts-sensorservice-vibrator-vibratorpattern-i.md) | 振动序列对象。包含振动序列的起始时间和振动事件数组，可作为[VibrateFromPattern]{ |
+| [VibratorPattern](arkts-sensorservice-vibrator-vibratorpattern-i.md) | VibratorPattern** object. |
 
 ## Examples
 

@@ -1,11 +1,5 @@
 # on（系统接口）
 
-## 导入模块
-
-```TypeScript
-import { BundleStatusCallback } from 'kits/@kit.AbilityKit';
-```
-
 ## on('BundleStatusChange')
 
 ```TypeScript

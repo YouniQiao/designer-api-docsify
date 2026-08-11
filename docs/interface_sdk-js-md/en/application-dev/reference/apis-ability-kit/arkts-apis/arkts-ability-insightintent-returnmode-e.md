@@ -1,6 +1,6 @@
 # ReturnMode
 
-意图执行结果返回给意图拉起方的返回形式。
+Enumerates the modes that define how the execution result of an intent is returned to the intent initiator.
 
 **Since:** 23
 
@@ -16,9 +16,9 @@
 CALLBACK = 0
 ```
 
-表示意图执行结果将由[意图执行基类](arkts-ability-app-ability-insightintentexecutor-insightintentexecutor-c.md)中的  
-[onExecuteInUIAbilityForegroundMode](arkts-ability-app-ability-insightintentexecutor-insightintentexecutor-c.md#onexecuteinuiabilityforegroundmode)接口或  
-[onExecuteInUIExtensionAbility](arkts-ability-app-ability-insightintentexecutor-insightintentexecutor-c.md#onexecuteinuiextensionability)接口返回。
+The intent execution result is returned through the  
+[onExecuteInUIAbilityForegroundMode](arkts-ability-app-ability-insightintentexecutor-insightintentexecutor-c.md#onexecuteinuiabilityforegroundmode)or  
+[onExecuteInUIExtensionAbility](arkts-ability-app-ability-insightintentexecutor-insightintentexecutor-c.md#onexecuteinuiextensionability)API in the [intent execution base class](arkts-ability-app-ability-insightintentexecutor-insightintentexecutor-c.md).
 
 **Since:** 23
 
@@ -38,9 +38,10 @@ CALLBACK = 0
 FUNCTION = 1
 ```
 
-表示意图执行结果会延迟返回，直到开发者主动调用[意图提供方管理能力](arkts-app-ability-insightintentprovider.md)中的  
-[sendExecuteResult](arkts-ability-insightintentprovider-sendexecuteresult-f.md#sendexecuteresult)接口或  
-[sendIntentResult](arkts-ability-insightintentprovider-sendintentresult-f.md#sendintentresult)接口返回意图执行结果。
+The intent execution result is returned after the  
+[sendExecuteResult](arkts-ability-insightintentprovider-sendexecuteresult-f.md#sendexecuteresult) or  
+[sendIntentResult](arkts-ability-insightintentprovider-sendintentresult-f.md#sendintentresult) API in  
+[intent provider management](arkts-app-ability-insightintentprovider.md) is called.
 
 **Since:** 23
 

@@ -1,6 +1,6 @@
 # ContextMenuInputFieldType
 
-输入框类型。
+Enumerates the input field types.
 
 **Since:** 9
 
@@ -16,7 +16,7 @@
 None = 0
 ```
 
-非输入框。
+Non-input field.
 
 **Since:** 9
 
@@ -34,7 +34,7 @@ None = 0
 PlainText = 1
 ```
 
-纯文本类型，包括text、search、email等。
+Plain text field, such as the text, search, or email field.
 
 **Since:** 9
 
@@ -52,7 +52,7 @@ PlainText = 1
 Password = 2
 ```
 
-密码类型。
+Password field.
 
 **Since:** 9
 
@@ -70,7 +70,7 @@ Password = 2
 Number = 3
 ```
 
-数字类型。
+Number field.
 
 **Since:** 9
 
@@ -88,7 +88,7 @@ Number = 3
 Telephone = 4
 ```
 
-电话号码类型。
+Phone number field.
 
 **Since:** 9
 
@@ -106,7 +106,7 @@ Telephone = 4
 Other = 5
 ```
 
-其他类型。
+Field of any other type.
 
 **Since:** 9
 

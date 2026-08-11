@@ -1,6 +1,6 @@
 # LinkType
 
-链路类型。
+Enumerates the link types.
 
 **Since:** 20
 
@@ -16,7 +16,7 @@
 LINK_BR = 0
 ```
 
-蓝牙。
+Bluetooth.
 
 **Since:** 20
 

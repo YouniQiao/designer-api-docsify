@@ -1,6 +1,6 @@
 # PolylineOptions
 
-用于描述Polyline组件绘制属性。
+Define options used to construct a polyline.
 
 **Since:** 23
 
@@ -16,7 +16,7 @@
 height?: Length
 ```
 
-高度，取值范围≥0。&lt;br/&gt;默认值：0&lt;br/&gt;默认单位：vp&lt;br/&gt;异常值undefined、null、NaN和Infinity按照默认值处理。
+Polyline height.
 
 **Type:** [Length](arkts-arkui-length-t.md)
 
@@ -36,7 +36,7 @@ height?: Length
 width?: Length
 ```
 
-宽度，取值范围≥0。&lt;br/&gt;默认值：0&lt;br/&gt;默认单位：vp&lt;br/&gt;异常值undefined、null、NaN和Infinity按照默认值处理。
+Polyline width.
 
 **Type:** [Length](arkts-arkui-length-t.md)
 

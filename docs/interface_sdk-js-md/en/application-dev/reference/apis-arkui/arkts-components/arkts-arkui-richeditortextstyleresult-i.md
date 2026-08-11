@@ -1,12 +1,10 @@
 # RichEditorTextStyleResult
 
-后端返回的文本样式信息。
+Provides the text span style information returned by the backend.
 
-在RichEditorTextStyle中，fontWeight是设置字体粗细的输入参数。
+While **fontWeight** in **RichEditorTextStyle** sets the font weight, **fontWeight** in **RichEditorTextStyleResult**returns the set font weight after conversion to digits.
 
-而在RichEditorTextStyleResult中，会将之前设置的字体粗细转换为数字后返回。
-
-RichEditorSymbolSpanStyle和RichEditorSymbolSpanStyleResult中fontWeight的转换关系，与RichEditorTextStyle和RichEditorTextStyleResult中fontWeight的转换关系一致。
+Conversion relationship between fontWeight in RichEditorSymbolSpanStyle and RichEditorSymbolSpanStyleResult, the conversion relationship is the same as that of fontWeight in RichEditorTextStyle and RichEditorTextStyleResult.
 
 **Since:** 10
 
@@ -22,7 +20,7 @@ RichEditorSymbolSpanStyle和RichEditorSymbolSpanStyleResult中fontWeight的转�
 decoration: DecorationStyleResult
 ```
 
-文本装饰线样式信息。
+Text decorative line.
 
 **Type:** [DecorationStyleResult](../arkts-apis/arkts-arkui-decorationstyleresult-i.md)
 
@@ -44,7 +42,7 @@ decoration: DecorationStyleResult
 fontColor: ResourceColor
 ```
 
-文本颜色。
+Font color.
 
 **Type:** [ResourceColor](../arkts-apis/arkts-arkui-resourcecolor-t.md)
 
@@ -66,7 +64,7 @@ fontColor: ResourceColor
 fontFamily: string
 ```
 
-字体列表。
+Font family.
 
 **Type:** string
 
@@ -88,7 +86,7 @@ fontFamily: string
 fontFeature?: string
 ```
 
-文字特性效果。
+Font feature.
 
 **Type:** string
 
@@ -110,7 +108,7 @@ fontFeature?: string
 fontSize: number
 ```
 
-字体大小，默认单位为fp。
+Font size. The default unit is fp.
 
 **Type:** number
 
@@ -132,7 +130,7 @@ fontSize: number
 fontStyle: FontStyle
 ```
 
-字体样式。
+Font style.
 
 **Type:** [FontStyle](../../apis-arkgraphics2d/arkts-apis/arkts-arkgraphics2d-text-fontstyle-e.md)
 
@@ -154,7 +152,7 @@ fontStyle: FontStyle
 fontWeight: number
 ```
 
-字体粗细。
+Font weight.
 
 **Type:** number
 
@@ -176,11 +174,11 @@ fontWeight: number
 halfLeading?: boolean
 ```
 
-文本是否将行间距平分至行的顶部与底部。
+Whether half leading is enabled.
 
-true表示将行间距平分至行的顶部与底部，false则不平分。
+Whether half leading is enabled. Half leading is the leading split in half and applied equally to the top and bottom edges. The value **true** means that half leading is enabled, and **false** means the opposite.
 
-默认值：false。
+Default value: **false**
 
 **Type:** boolean
 
@@ -202,7 +200,7 @@ true表示将行间距平分至行的顶部与底部，false则不平分。
 letterSpacing?: number
 ```
 
-文本字符间距，默认单位为fp。
+Letter spacing. The default unit is fp.
 
 **Type:** number
 
@@ -224,7 +222,7 @@ letterSpacing?: number
 lineHeight?: number
 ```
 
-文本行高，默认单位为fp。
+Line height. The default unit is fp.
 
 **Type:** number
 
@@ -246,7 +244,7 @@ lineHeight?: number
 strokeColor?: ResourceColor
 ```
 
-文本描边颜色。
+Text stroke color.
 
 **Type:** [ResourceColor](../arkts-apis/arkts-arkui-resourcecolor-t.md)
 
@@ -268,9 +266,7 @@ strokeColor?: ResourceColor
 strokeJoinStyle?: StrokeJoinStyle
 ```
 
-文本描边拐角样式。
-
-默认值：StrokeJoinStyle.MITER_JOIN。
+Get the stroke join style of the text.
 
 **Type:** [StrokeJoinStyle](../arkts-apis/arkts-arkui-textcommon-strokejoinstyle-e.md)
 
@@ -292,9 +288,9 @@ strokeJoinStyle?: StrokeJoinStyle
 strokeWidth?: number
 ```
 
-文本描边宽度。
+Text stroke width.
 
-单位为[vp](../../../reference/apis-arkui/arkui-ts/ts-pixel-units.md#基本像素单位)。
+The unit is [vp](../../apis-ability-kit/arkts-apis/arkts-app-ability-common.md/arkts-app-ability-common.md).
 
 **Type:** number
 
@@ -316,7 +312,17 @@ strokeWidth?: number
 textBackgroundStyle?: TextBackgroundStyle
 ```
 
-文本背景样式。
+Text background style.
+
+Default value:
+
+{
+
+color: Color.Transparent,
+
+radius: 0
+
+}
 
 **Type:** [TextBackgroundStyle](../arkts-apis/arkts-arkui-span-textbackgroundstyle-i.md)
 
@@ -338,11 +344,11 @@ textBackgroundStyle?: TextBackgroundStyle
 textShadow?: Array<ShadowOptions>
 ```
 
-文字阴影效果。
+Text shadow.
 
-**说明：**
+**NOTE：**
 
-仅支持查询阴影模糊半径、颜色和偏移量。
+Only the shadow blur radius, shadow color, and shadow offset can be queried.
 
 **Type:** Array&lt;ShadowOptions&gt;
 

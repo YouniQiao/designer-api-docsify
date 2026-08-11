@@ -12,9 +12,9 @@ import { inputMethodEngine } from 'kits/@kit.IMEKit';
 function getInputMethodAbility(): InputMethodAbility
 ```
 
-获取输入法应用客户端实例[InputMethodAbility](arkts-ime-inputmethodengine-inputmethodability-i.md)（输入法能力对象），仅支持输入法应用调用。
+Obtains an [InputMethodAbility](arkts-ime-inputmethodengine-inputmethodability-i.md) instance for the input method. This API can be called only by an input method.
 
-输入法应用获取该实例后，可订阅软键盘显示/隐藏请求事件、创建/销毁输入法面板等。
+The input method can use the obtained instance to subscribe to a soft keyboard display/hide request event, create/destroy an input method panel, and the like.
 
 **Since:** 9
 
@@ -28,7 +28,7 @@ function getInputMethodAbility(): InputMethodAbility
 
 | Type | Description |
 | --- | --- |
-| [InputMethodAbility](arkts-ime-inputmethodengine-inputmethodability-i.md) | 输入法应用客户端。 |
+| [InputMethodAbility](arkts-ime-inputmethodengine-inputmethodability-i.md) | InputMethodAbility** instance. |
 
 ## Examples
 
@@ -43,7 +43,7 @@ let InputMethodAbility: inputMethodEngine.InputMethodAbility = inputMethodEngine
 function getInputMethodAbility(): InputMethodAbility | null
 ```
 
-获取输入法应用客户端实例[InputMethodAbility](arkts-ime-inputmethodengine-inputmethodability-i.md)（输入法能力对象），仅支持输入法应用调用。
+Get InputMethodAbility object to subscribe events about IME.
 
 **Since:** 23
 
@@ -57,5 +57,5 @@ function getInputMethodAbility(): InputMethodAbility | null
 
 | Type | Description |
 | --- | --- |
-| [InputMethodAbility](arkts-ime-inputmethodengine-inputmethodability-i.md) | 输入法应用客户端。 |
+| [InputMethodAbility](arkts-ime-inputmethodengine-inputmethodability-i.md) | the object of the InputMethodAbility. |
 

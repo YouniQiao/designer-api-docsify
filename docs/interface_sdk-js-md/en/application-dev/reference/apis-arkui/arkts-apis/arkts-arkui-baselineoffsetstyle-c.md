@@ -1,6 +1,6 @@
 # BaselineOffsetStyle
 
-文本基线偏移量对象说明。适用于需要微调文本垂直位置的场景，例如化学公式、数学表达式中的上下标文本与正常文本的对齐调整。
+Describes the text baseline offset style.
 
 **Since:** 12
 
@@ -16,7 +16,7 @@
 constructor(value: LengthMetrics)
 ```
 
-文本基线偏移的构造函数。
+A constructor used to create a text baseline offset style.
 
 **Since:** 12
 
@@ -34,7 +34,7 @@ constructor(value: LengthMetrics)
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | [LengthMetrics](arkts-arkui-lengthmetrics-t.md) | Yes | 文本基线偏移量设置项。如果LengthMetrics的unit值是PERCENT，该设置不生效。 |
+| value | [LengthMetrics](arkts-arkui-lengthmetrics-t.md) | Yes | Text baseline offset options. This API does not work if **unit** of **LengthMetrics** is percent. |
 
 ## baselineOffset
 
@@ -42,9 +42,9 @@ constructor(value: LengthMetrics)
 readonly baselineOffset: number
 ```
 
-获取属性字符串的文本基线偏移量。
+Text baseline offset.
 
-单位：[vp](../../../reference/apis-arkui/arkui-ts/ts-pixel-units.md#基本像素单位)
+Unit: [vp](../../apis-ability-kit/arkts-apis/arkts-app-ability-common.md/arkts-app-ability-common.md)
 
 **Type:** number
 

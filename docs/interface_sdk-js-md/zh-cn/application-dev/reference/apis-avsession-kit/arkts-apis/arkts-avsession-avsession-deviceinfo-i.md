@@ -10,12 +10,6 @@
 
 **系统能力：** SystemCapability.Multimedia.AVSession.Core
 
-## 导入模块
-
-```TypeScript
-import { avSession } from 'kits/@kit.AVSessionKit';
-```
-
 ## audioCapabilities
 
 ```TypeScript
@@ -104,7 +98,7 @@ deviceType: DeviceType
 
 播放设备的类型。
 
-**类型：** [DeviceType](arkts-avsession-avsession-devicetype-e.md)
+**类型：** [DeviceType](../../apis-localization-kit/arkts-apis/arkts-localization-resourcemanager-devicetype-e.md)
 
 **起始版本：** 10
 

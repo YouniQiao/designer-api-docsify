@@ -1,6 +1,6 @@
 # WindowFilter
 
-窗口的标志属性信息。
+Provides the flag attributes of this window.
 
 **Since:** 9
 
@@ -22,9 +22,7 @@ import { ResizeDirection, WindowMode, PenMode, PenKeyOperation, Driver, MatchPat
 active?: boolean
 ```
 
-窗口是否正与用户进行交互，true：交互状态，false：未交互状态，默认值为false。
-
-从API version 11开始，该接口支持在原子化服务中使用。
+Whether the window is interacting with the user. The value **true** indicates that the window is interacting with the user, and **false** indicates the opposite.
 
 **Type:** boolean
 
@@ -44,9 +42,9 @@ active?: boolean
 actived?: boolean
 ```
 
-窗口是否正与用户进行交互，true：交互状态，false：未交互状态，默认值为false。
+Whether the window is interacting with the user. The value **true** indicates that the window is interacting with the user, and **false** indicates the opposite.
 
-从API version 11开始废弃，建议使用active替代。
+This API is supported since API version 9 and deprecated since API version 11. You are advised to use{@link WindowFilter#active} instead.
 
 **Type:** boolean
 
@@ -68,9 +66,7 @@ actived?: boolean
 bundleName?: string
 ```
 
-窗口归属应用的包名，默认值为空，用于在多窗口场景下根据应用包名筛选目标窗口。
-
-从API version 11开始，该接口支持在原子化服务中使用。
+Bundle name of the application to which the window belongs, which is used to filter the target window in multi-window scenarios. This parameter is left empty by default.
 
 **Type:** string
 
@@ -90,9 +86,7 @@ bundleName?: string
 displayId?: int
 ```
 
-窗口所属的屏幕ID。取值大于或等于0的整数。默认值为设备默认屏幕ID。
-
-从API version 20开始，该接口支持在原子化服务中使用。
+ID of the display to which the window belongs. The value is an integer greater than or equal to 0. The default value is the default screen ID of the device.
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
@@ -112,9 +106,7 @@ displayId?: int
 focused?: boolean
 ```
 
-窗口是否处于获焦状态，true：获焦状态，false：未获焦状态，默认值为false。
-
-从API version 11开始，该接口支持在原子化服务中使用。
+Whether the window is focused. The value **true** indicates that the window is focused, and **false** indicates the  opposite. The default value is **false**.
 
 **Type:** boolean
 
@@ -134,7 +126,7 @@ focused?: boolean
 title?: string
 ```
 
-窗口的标题信息，默认值为空，用于在多窗口场景下根据窗口标题筛选目标窗口。 从API version 11开始，该接口支持在原子化服务中使用。
+Window title, which is used to filter the target window in multi-window scenarios. This parameter is left empty by default.
 
 **Type:** string
 

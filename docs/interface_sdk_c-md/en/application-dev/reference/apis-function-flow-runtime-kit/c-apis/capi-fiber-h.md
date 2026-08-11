@@ -2,7 +2,7 @@
 
 ## Overview
 
-Declares the fiber interfaces in C.
+Declares the fiber interfaces in C.A fiber is a lightweight user-mode thread that enables efficient task schedulingand context switching in user space.
 
 **Library**: libffrt.z.so
 
@@ -18,8 +18,8 @@ Declares the fiber interfaces in C.
 
 | Name | Description |
 | -- | -- |
-| [FFRT_C_API int ffrt_fiber_init(ffrt_fiber_t* fiber, void(\*func)(void*), void* arg, void* stack, size_t stack_size)](#ffrt_fiber_init) | Initializes a fiber.This function initializes a fiber structure, preparing it for execution. |
-| [FFRT_C_API void ffrt_fiber_switch(ffrt_fiber_t* from, ffrt_fiber_t* to)](#ffrt_fiber_switch) | Switch execution context between two fibers.Switches the execution context by saving the current context into the fiber specifiedby @c from and restoring the context from the fiber specified by @c to. |
+| [FFRT_C_API int ffrt_fiber_init(ffrt_fiber_t* fiber, void(\*func)(void*), void* arg, void* stack, size_t stack_size)](#ffrt_fiber_init) | Initializes a fiber.This function initializes a fiber structure, preparing it for execution.The caller is responsible for allocating the stack memory pointed to by`stack` and keeping it valid for the entire lifetime of the fiber. |
+| [FFRT_C_API void ffrt_fiber_switch(ffrt_fiber_t* from, ffrt_fiber_t* to)](#ffrt_fiber_switch) | Switches execution context between two fibers.Switches the execution context by saving the current context into the fiber specifiedby `from` and restoring the context from the fiber specified by `to`.Both `from` and `to` must point to fiber instances that have been initialized by[ffrt_fiber_init](capi-fiber-h.md#ffrt_fiber_init); otherwise the behavior is undefined. |
 
 ## Function description
 
@@ -31,7 +31,7 @@ FFRT_C_API int ffrt_fiber_init(ffrt_fiber_t* fiber, void(*func)(void*), void* ar
 
 **Description**
 
-Initializes a fiber.This function initializes a fiber structure, preparing it for execution.
+Initializes a fiber.This function initializes a fiber structure, preparing it for execution.The caller is responsible for allocating the stack memory pointed to by`stack` and keeping it valid for the entire lifetime of the fiber.
 
 **Since**: 20
 
@@ -43,13 +43,13 @@ Initializes a fiber.This function initializes a fiber structure, preparing it fo
 | void(\*func)(void\*) | Indicates the entry point function that the fiber will execute. |
 | void\* arg | Indicates the argument to be passed to the entry point function. |
 | void\* stack | Indicates the pointer to the memory region to be used as the fiber's stack. |
-| size_t stack_size | Indicates the size of the stack in bytes. |
+| size_t stack_size | Indicates the size of the stack in bytes. Must be large enough to hold the fiber context. |
 
 **Returns**:
 
 | Type | Description |
 | -- | -- |
-| FFRT_C_API int | <b>ffrt_success</b> if the fiber is initialized;<br>         <b>ffrt_error</b> otherwise. |
+| FFRT_C_API int | `ffrt_success` if the fiber is initialized;<br>         `ffrt_error_inval` if `stack_size` is too small to hold the fiber context. |
 
 ### ffrt_fiber_switch()
 
@@ -59,7 +59,7 @@ FFRT_C_API void ffrt_fiber_switch(ffrt_fiber_t* from, ffrt_fiber_t* to)
 
 **Description**
 
-Switch execution context between two fibers.Switches the execution context by saving the current context into the fiber specifiedby @c from and restoring the context from the fiber specified by @c to.
+Switches execution context between two fibers.Switches the execution context by saving the current context into the fiber specifiedby `from` and restoring the context from the fiber specified by `to`.Both `from` and `to` must point to fiber instances that have been initialized by[ffrt_fiber_init](capi-fiber-h.md#ffrt_fiber_init); otherwise the behavior is undefined.
 
 **Since**: 20
 
@@ -69,5 +69,10 @@ Switch execution context between two fibers.Switches the execution context by sa
 | -- | -- |
 | [ffrt_fiber_t](capi-ffrt-ffrt-fiber-t.md)* from | Indicates the pointer to the fiber into which the current context will be saved. |
 | [ffrt_fiber_t](capi-ffrt-ffrt-fiber-t.md)* to | Indicates the pointer to the fiber from which the context will be restored. |
+
+**Reference**:
+
+[ffrt_fiber_init](capi-fiber-h.md#ffrt_fiber_init)
+
 
 

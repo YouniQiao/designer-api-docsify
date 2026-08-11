@@ -1,8 +1,8 @@
 # SlotLevel
 
-通知级别。
+Enumerates the notification level.
 
-用于定义NotificationSlot的通知提醒行为级别，影响通知在状态栏的显示方式，是否展示横幅和提示音等。
+This API is used to define the notification reminder behavior level of NotificationSlot, affecting how the notification is displayed in the status bar, whether to show banners and alert sounds, etc.
 
 **Since:** 9
 
@@ -18,7 +18,7 @@
 LEVEL_NONE = 0
 ```
 
-表示关闭通知功能。
+Notification is disabled.
 
 **Since:** 9
 
@@ -34,7 +34,7 @@ LEVEL_NONE = 0
 LEVEL_MIN = 1
 ```
 
-表示通知功能已启用，状态栏中不显示通知图标，无横幅，无提示音。
+Notification is enabled, but the notification icon is not displayed in the status bar, with no alert tone and banner.
 
 **Since:** 9
 
@@ -50,7 +50,7 @@ LEVEL_MIN = 1
 LEVEL_LOW = 2
 ```
 
-表示通知功能已启用，状态栏中显示通知图标，无横幅，无提示音。
+Notification is enabled, and the notification icon is displayed in the status bar, with no alert tone and banner.
 
 **Since:** 9
 
@@ -66,7 +66,7 @@ LEVEL_LOW = 2
 LEVEL_DEFAULT = 3
 ```
 
-表示通知功能已启用，状态栏中显示通知图标，无横幅，有提示音。
+Notification is enabled, and the notification icon is displayed in the status bar, with an alert tone but no banner.
 
 **Since:** 9
 
@@ -82,7 +82,7 @@ LEVEL_DEFAULT = 3
 LEVEL_HIGH = 4
 ```
 
-表示通知功能已启用，状态栏中显示通知图标，有横幅，有提示音。
+Notification is enabled, and the notification icon is displayed in the status bar, with an alert tone and banner.
 
 **Since:** 9
 

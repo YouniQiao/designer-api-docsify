@@ -1,6 +1,6 @@
 # TextLayoutOptions
 
-文本布局选项。
+Defines the text layout options.
 
 **Since:** 20
 
@@ -16,7 +16,7 @@
 constraintWidth?: LengthMetrics
 ```
 
-设置被计算文本布局宽度。若不设置则宽度为单行布局所占最大宽度值。
+Layout width of the measured text. If not set, the width is the maximum width occupied by a single-line layout.
 
 **Type:** [LengthMetrics](arkts-arkui-lengthmetrics-t.md)
 

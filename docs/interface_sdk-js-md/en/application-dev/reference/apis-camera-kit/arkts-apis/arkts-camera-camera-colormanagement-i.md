@@ -1,8 +1,8 @@
 # ColorManagement
 
-ColorManagement继承自[ColorManagementQuery](arkts-camera-camera-colormanagementquery-i.md)。
+**ColorManagement** inherits from [ColorManagementQuery](arkts-camera-camera-colormanagementquery-i.md).
 
-色彩管理类，用于设置色彩空间参数。
+It provides the APIs for color space settings.
 
 **Inheritance/Implementation:** ColorManagement extends [ColorManagementQuery](arkts-camera-camera-colormanagementquery-i.md)
 
@@ -26,7 +26,7 @@ import { camera } from 'kits/@kit.CameraKit';
 getActiveColorSpace(): colorSpaceManager.ColorSpace
 ```
 
-获取当前设置的色彩空间。
+Obtains the color space in use.
 
 **Since:** 12
 
@@ -42,13 +42,13 @@ getActiveColorSpace(): colorSpaceManager.ColorSpace
 
 | Type | Description |
 | --- | --- |
-| colorSpaceManager.ColorSpace | 当前设置的色彩空间。 |
+| colorSpaceManager.ColorSpace | Color space. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 7400103 | Session not config. |
+| [7400103](../errorcode-camera.md#7400103-session-not-configured) | Session not config. |
 
 ## setColorSpace
 
@@ -56,42 +56,47 @@ getActiveColorSpace(): colorSpaceManager.ColorSpace
 setColorSpace(colorSpace: colorSpaceManager.ColorSpace): void
 ```
 
-设置色彩空间。
+Sets a color space.
 
-使用该接口前，必须先通过[getSupportedColorSpaces](arkts-camera-camera-colormanagementquery-i.md#getsupportedcolorspaces)获取当前设备所支持的ColorSpaces。该接口建议在[addOutput](arkts-camera-camera-session-i.md#addoutput)之后、  
-[commitConfig](arkts-camera-camera-session-i.md#commitconfig)之前调用，如果在[commitConfig](arkts-camera-camera-session-i.md#commitconfig)之后调用该接口，会导致相机会话配置耗时增加。
+Before the setting, call [getSupportedColorSpaces](arkts-camera-camera-colormanagementquery-i.md#getsupportedcolorspaces) to obtain the supported color spaces. You are advised to call this API after   
+[addOutput](arkts-camera-camera-session-i.md#addoutput) and before [commitConfig](arkts-camera-camera-session-i.md#commitconfig). If this API is called after [commitConfig](arkts-camera-camera-session-i.md#commitconfig), the camera session configuration will take a longer time.
 
-P3广色域与HDR高动态范围成像：
+P3 wide color gamut and HDR imaging:
 
-应用可以下发不同的色彩空间（ColorSpace）参数来支持P3广色域以及HDR的功能。若应用不主动设置色彩空间，拍照、录像模式均默认为SDR拍摄。
+An application can deliver different color space parameters to declare its support for P3 and HDR. If an application does not proactively set the color space, SDR is used by default in photo and video recording modes.
 
-应用针对不同模式使能HDR效果、设置的色彩空间以及设置相机输出流[Profile](arkts-camera-camera-profile-i.md)中的[CameraFormat](arkts-camera-camera-cameraformat-e.md)一一对应关系可参考下表。例如，在录像模式下若需要选择HDR拍摄，相机预览输出流和录像输出流[Profile](arkts-camera-camera-profile-i.md)中的[CameraFormat](arkts-camera-camera-cameraformat-e.md)可选择CAMERA_FORMAT_YCRCB_P010，色彩空间ColorSpace可选择设置BT2020_HLG_LIMIT。
+For different modes, enabling HDR, setting the color space, and configuring   
+[CameraFormat](arkts-camera-camera-cameraformat-e.md) in the camera output stream [profile](arkts-camera-camera-profile-i.md) should match. For details, see the table below. For example, to enable HDR in video recording mode, set   
+[CameraFormat](arkts-camera-camera-cameraformat-e.md) in the camera preview and video output stream   
+[profiles](arkts-camera-camera-profile-i.md) to **CAMERA_FORMAT_YCRCB_P010** and the color space to **BT2020_HLG_LIMIT**.
 
-在拍照模式下，若需要获取HDR高显效果的图片，可通过设置色彩空间（ColorSpace）为DISPLAY_P3或BT2020_HLG实现。其中BT2020_HLG能够表示更广的色域，需要搭配使用预览输出格式（Profile.format）P010（CAMERA_FORMAT_YCRCB_P010/CAMERA_FORMAT_YCBCR_P010）来提升图像质感。
+To obtain HDR images in photo mode, set the color space to **DISPLAY_P3** or **BT2020_HLG**. **BT2020_HLG** provides a wider color gamut, and should be used together with the **CameraFormat**, including   
+**CAMERA_FORMAT_YCRCB_P010** and **CAMERA_FORMAT_YCBCR_P010**, to improve the image quality.
 
-在录像模式下，通过设置色彩空间为H_LOG, 可以录制LOG视频（不支持前置与微距）。
+Since API version 23, you can call the   
+[getSupportedFullOutputCapability](arkts-camera-camera-cameramanager-i.md#getsupportedfulloutputcapability) API to check whether the preview format P010 is supported in photo mode.
 
-从API version 23开始，可以通过接口  
-[getSupportedFullOutputCapability](arkts-camera-camera-cameramanager-i.md#getsupportedfulloutputcapability)查询是否支持拍照模式下的预览P010格式。
+- If the application does not set the color space, the default color space in photo mode is SRGB when the   
+**CameraFormat** is **CAMERA_FORMAT_YUV_420_SP**, and the default color space is **BT2020_HLG** when the   
+**CameraFormat** is **CAMERA_FORMAT_YCRCB_P010** or **CAMERA_FORMAT_YCBCR_P010**.  
+- If the application sets the color space, in photo mode, the **CameraFormat** and **ColorSpace** must be   
+configured according to the following mapping table. Otherwise, an error code will be returned in   
+[setColorSpace](arkts-camera-camera-colormanagement-i.md#setcolorspace) or   
+[commitConfig](arkts-camera-camera-session-i.md#commitconfig).
 
-- 若应用不主动设置色彩空间，在拍照模式下，当预览输出格式为CAMERA_FORMAT_YUV_420_SP时，色彩空间默认为SRGB；当预览输出格式为CAMERA_FORMAT_YCRCB_P010/  
-CAMERA_FORMAT_YCBCR_P010时，色彩空间默认为BT2020_HLG。  
-- 若应用主动设置色彩空间，在拍照模式下，预览输出格式与色彩空间必须按照下列表格中的对应关系配置，若不满足则会在  
-[setColorSpace](arkts-camera-camera-colormanagement-i.md#setcolorspace)或[commitConfig](arkts-camera-camera-session-i.md#commitconfig)时返回错误码。
+Photo mode:
 
-拍照模式：
-
-| SDR/HDR拍摄 | 预览输出格式 | 色彩空间 |  
+| SDR/HDR Photo Capture | CameraFormat| ColorSpace|  
  |--------------------|------------| ------------|  
  | SDR(Default) | CAMERA_FORMAT_YUV_420_SP | SRGB |  
  | HDR P3 | CAMERA_FORMAT_YUV_420_SP | DISPLAY_P3 |  
  | HDR BT.2020 | CAMERA_FORMAT_YCRCB_P010,&lt;br&gt;CAMERA_FORMAT_YCBCR_P010 | BT2020_HLG |
 
-在录像模式下，使能SDR或HDR_VIVID拍摄效果时，CameraFormat与ColorSpace必须按照下列表格中的对应关系配置，若不满足表格中CameraFormat与ColorSpace配置，会导致预览异常等问题。
+In video recording mode, if SDR or HDR VIVID is enabled, the camera format and color space must be configured according to the relationships specified in the table below. Configurations that do not match the table will cause issues such as preview exceptions.
 
-录像模式：
+Recording mode:
 
-| SDR/HDR拍摄 | CameraFormat | ColorSpace |  
+| SDR/HDR Photo Capture | CameraFormat | ColorSpace |  
 |--------------------|--------------------------|------------------|  
 | SDR(Default) | CAMERA_FORMAT_YUV_420_SP | BT709_LIMIT |  
 | HDR_VIVID | CAMERA_FORMAT_YCRCB_P010 | BT2020_HLG_LIMIT,&lt;br&gt;BT2020_HLG |
@@ -116,8 +121,8 @@ CAMERA_FORMAT_YCBCR_P010时，色彩空间默认为BT2020_HLG。
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 7400101 | Parameter missing or parameter type incorrect. |
-| 7400102 | The colorSpace does not match the format. |
-| 7400103 | Session not config. |
-| 7400201 | Camera service fatal error. |
+| [7400101](../errorcode-camera.md#7400101-invalid-parameter) | Parameter missing or parameter type incorrect. |
+| [7400102](../errorcode-camera.md#7400102-invalid-operation) | The colorSpace does not match the format. |
+| [7400103](../errorcode-camera.md#7400103-session-not-configured) | Session not config. |
+| [7400201](../errorcode-camera.md#7400201-camera-service-error) | Camera service fatal error. |
 

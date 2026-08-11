@@ -1,6 +1,6 @@
 # TextEncoding
 
-枚举ArkUI文本布局查询接口支持的文本编码类型。
+Enumerates the text encoding types supported by ArkUI text layout query APIs.
 
 **Since:** 26.0.0
 
@@ -16,7 +16,7 @@
 TEXT_ENCODING_UTF8 = 0
 ```
 
-UTF-8编码。
+UTF-8 encoding.
 
 **Since:** 26.0.0
 
@@ -34,7 +34,7 @@ UTF-8编码。
 TEXT_ENCODING_UTF16 = 1
 ```
 
-UTF-16编码。
+UTF-16 encoding.
 
 **Since:** 26.0.0
 

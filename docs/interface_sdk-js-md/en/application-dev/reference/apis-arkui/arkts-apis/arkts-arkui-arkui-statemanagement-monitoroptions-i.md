@@ -1,6 +1,6 @@
 # MonitorOptions
 
-[addMonitor](arkts-arkui-arkui-statemanagement-uiutils-c.md#addmonitor)的可选参数，用于配置回调类型以及是否使能通配符能力。
+Defines the optional parameters for [addMonitor](arkts-arkui-arkui-statemanagement-uiutils-c.md#addmonitor), which are used to configure the callback type and whether to enable the wildcard capability.
 
 **Since:** 20
 
@@ -22,7 +22,8 @@ import { Binding, ComponentReuse, CustomComponentLifecycleState, ComponentInacti
 enableWildcard?: boolean
 ```
 
-配置当前addMonitor是否使能通配符能力。true表示使能，false表示关闭。默认值为false，即关闭。当关闭通配符能力，但路径中含有通配符时，该路径将视为不合法路径。
+Whether to enable the wildcard capability for this **addMonitor**. **true** to enable the wildcard capability, and  
+**false** means the opposite. The default value is **false**. If the wildcard capability is disabled but the path contains wildcards, the path is considered invalid.
 
 **Type:** boolean
 
@@ -46,7 +47,8 @@ enableWildcard?: boolean
 isSynchronous?: boolean
 ```
 
-配置当前回调函数是否为同步回调。true为同步回调。默认值为false，即异步回调。
+Whether the current callback is a synchronous callback. **true**: The current callback is a synchronous callback.  
+**false** (default value): The current callback is an asynchronous callback.
 
 **Type:** boolean
 

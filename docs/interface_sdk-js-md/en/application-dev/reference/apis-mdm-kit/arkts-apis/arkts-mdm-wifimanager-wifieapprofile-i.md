@@ -1,6 +1,6 @@
 # WifiEapProfile
 
-可扩展身份验证协议配置信息。
+Represents EAP profile (configuration) information.
 
 **Since:** 12
 
@@ -22,7 +22,7 @@ import { wifiManager } from 'kits/@kit.MDMKit';
 altSubjectMatch: string
 ```
 
-替代主题匹配。证书验证中，除了检查证书主域名，还检查证书的主题备用名称是否匹配。
+A string to match the alternate subject. In addition to checking the primary domain name of the certificate, the system checks whether the alternate subject name of the certificate matches the certificate.
 
 **Type:** string
 
@@ -42,7 +42,7 @@ altSubjectMatch: string
 anonymousIdentity: string
 ```
 
-匿名身份。
+Anonymous identity.
 
 **Type:** string
 
@@ -62,7 +62,7 @@ anonymousIdentity: string
 caCertAliases: string
 ```
 
-CA 证书别名。
+CA certificate alias.
 
 **Type:** string
 
@@ -82,7 +82,7 @@ CA 证书别名。
 caPath: string
 ```
 
-CA 证书路径。
+CA certificate path.
 
 **Type:** string
 
@@ -102,7 +102,7 @@ CA 证书路径。
 certEntry: Uint8Array
 ```
 
-客户端证书内容。当eapMethod为EAP_TLS时，如果该字段为空，则客户端证书别名不能为空。
+Client certificate content. When **eapMethod** is set to **EAP_TLS**, if this field is empty, the client certificate alias cannot be empty.
 
 **Type:** Uint8Array
 
@@ -122,7 +122,7 @@ certEntry: Uint8Array
 certPassword: string
 ```
 
-CA证书密码。
+CA certificate password.
 
 **Type:** string
 
@@ -142,7 +142,7 @@ CA证书密码。
 clientCertAliases: string
 ```
 
-客户端证书别名。当客户端证书内容为空时，客户端证书需先调用证书管理接口安装后传入别名。
+Client certificate alias. When the client certificate content is empty, the client certificate must be installed first via the certificate management API before passing in the alias.
 
 **Type:** string
 
@@ -162,7 +162,7 @@ clientCertAliases: string
 domainSuffixMatch: string
 ```
 
-域后缀匹配。
+A string to match the domain suffix.
 
 **Type:** string
 
@@ -182,7 +182,7 @@ domainSuffixMatch: string
 eapMethod: EapMethod
 ```
 
-EAP认证方式。
+EAP authentication method.
 
 **Type:** [EapMethod](../../apis-connectivity-kit/arkts-apis/arkts-connectivity-wifimanager-eapmethod-e.md)
 
@@ -202,7 +202,7 @@ EAP认证方式。
 eapSubId: number
 ```
 
-SIM卡的子ID。
+Sub-ID of the SIM card.
 
 **Type:** number
 
@@ -222,7 +222,7 @@ SIM卡的子ID。
 identity: string
 ```
 
-身份信息。当eapMethod为TLS时，该字段不能为空。
+Identity Information. This parameter cannot be empty when **eapMethod** is **TLS**.
 
 **Type:** string
 
@@ -242,7 +242,7 @@ identity: string
 password: string
 ```
 
-PWD类型，密码认证。无需服务器证书。
+Password Authentication (PWD). It enables password-based authentication and does not require a server certificate.
 
 **Type:** string
 
@@ -262,7 +262,8 @@ PWD类型，密码认证。无需服务器证书。
 phase2Method: Phase2Method
 ```
 
-第二阶段认证方式。只有eapMethod为EAP_PEAP或EAP_TTLS时需要填写。
+Phase 2 authentication method. This parameter is mandatory only when **eapMethod** is **EAP_PEAP** or  
+**EAP_TTLS**.
 
 **Type:** [Phase2Method](../../apis-network-kit/arkts-apis/arkts-network-eap-phase2method-e.md)
 
@@ -282,7 +283,7 @@ phase2Method: Phase2Method
 plmn: string
 ```
 
-凭证提供商。
+Credential provider.
 
 **Type:** string
 
@@ -302,7 +303,7 @@ plmn: string
 realm: string
 ```
 
-通行证凭证的领域。
+Realm for the passpoint credential.
 
 **Type:** string
 

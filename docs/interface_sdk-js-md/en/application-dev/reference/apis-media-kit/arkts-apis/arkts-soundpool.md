@@ -1,9 +1,10 @@
 # soundPool
 
-音频池提供了短音频的加载、播放、音量设置、循环设置、停止播放、资源卸载等功能。
- SoundPool需要和@ohos.multimedia.media配合使用，需要先通过
+The module provides APIs for loading, unloading, playing, and stopping playing sounds, setting the volume, and
+ setting the number of loops.
+ Before using these APIs, you must call
  [media.createSoundPool](../../../reference/apis-media-kit/arkts-apis-media-f.md)
- 完成音频池实例的创建。
+ to create a **SoundPool** instance.
 
 
 ## Summary
@@ -12,21 +13,21 @@
 
 | Name | Description |
 | --- | --- |
-| [ErrorInfo](arkts-media-soundpool-errorinfo-i.md) | 错误信息。 |
-| [PlayParameters](arkts-media-soundpool-playparameters-i.md) | 表示音频池播放参数设置。  通过设置播放相关参数，来控制播放的音量，循环次数，播放优先级等参数。 |
-| [SoundPool](arkts-media-soundpool-soundpool-i.md) | 音频池提供了系统声音的加载、播放、音量设置、循环设置、停止播放和资源卸载等功能，在调用SoundPool的接口前，需要先通过  [media.createSoundPool](../../../reference/apis-media-kit/arkts-apis-media-f.md)创建实例。 |
+| [ErrorInfo](arkts-media-soundpool-errorinfo-i.md) | Describes the error information. |
+| [PlayParameters](arkts-media-soundpool-playparameters-i.md) | Describes the playback parameters of the sound pool.  These parameters are used to control the playback volume, number of loops, and priority. |
+| [SoundPool](arkts-media-soundpool-soundpool-i.md) | Implements a sound pool that provides APIs for loading, unloading, playing, and stopping playing system sounds, setting the volume, and setting the number of loops. Before using these APIs, you must call  [media.createSoundPool](../../../reference/apis-media-kit/arkts-apis-media-f.md)to create a SoundPool instance.  > **NOTE：** >  > - When using the SoundPool instance, you are advised to register the following callbacks to proactively obtain > status changes: > > - [on('loadComplete')](SoundPool.on(type: 'loadComplete', callback: Callback&lt;int&gt;)): listens for the > event indicating that the resource loading is finished. You are advised to listen for this callback to ensure that > the audio is played after being loaded. > > - > [on('playFinishedWithStreamId')](SoundPool.on(type: 'playFinishedWithStreamId', callback: Callback&lt;int&gt;)): > listens for the event indicating that the playback is finished and returns the stream ID of the audio that finishes > playing. > > - [on('playFinished')](SoundPool.on(type: 'playFinishedWithStreamId', callback: Callback&lt;int&gt;)): listens > for the event indicating that the playback is finished. > > - [on('error')](SoundPool.on(type: 'error', callback: ErrorCallback)): listens for error events. > > - [on('errorOccurred')](SoundPool.on(type: 'errorOccurred', callback: Callback&lt;ErrorInfo&gt;)): listens for > error events and returns [errorInfo](arkts-media-soundpool-errorinfo-i.md). >  > - Currently, SoundPool does not support audio focus policies such as background playback and audio interruption, or > skipping the silent frames at the beginning and end of an audio file. For details about low-latency playback using > SoundPool, see > [Using SoundPool to Play Short Sounds (ArkTS)](../../../media/media/using-soundpool-for-playback.md). |
 
 <!--Del-->
 ### Interfaces（系统接口）
 
 | Name | Description |
 | --- | --- |
-| [PlayParameters](arkts-media-soundpool-playparameters-i-sys.md) | 表示音频池播放参数设置。  通过设置播放相关参数，来控制播放的音量，循环次数，播放优先级等参数。 |
+| [PlayParameters](arkts-media-soundpool-playparameters-i-sys.md) | Describes the playback parameters of the sound pool.  These parameters are used to control the playback volume, number of loops, and priority. |
 <!--DelEnd-->
 
 ### Enums
 
 | Name | Description |
 | --- | --- |
-| [ErrorType](arkts-media-soundpool-errortype-e.md) | 枚举，错误类型（用于区分错误发生阶段）。 |
+| [ErrorType](arkts-media-soundpool-errortype-e.md) | Enumerates the error types (used to distinguish error stages). |
 

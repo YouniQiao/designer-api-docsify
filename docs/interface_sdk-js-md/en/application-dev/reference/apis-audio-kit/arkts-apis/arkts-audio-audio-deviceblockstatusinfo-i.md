@@ -1,6 +1,6 @@
 # DeviceBlockStatusInfo
 
-描述音频设备被堵塞状态和设备信息。
+Describes the audio device blocked status and device information.
 
 **Since:** 13
 
@@ -22,7 +22,7 @@ import { audio } from 'kits/@kit.AudioKit';
 blockStatus: DeviceBlockStatus
 ```
 
-音频设备堵塞状态。
+Blocked status of the audio device.
 
 **Type:** [DeviceBlockStatus](arkts-audio-audio-deviceblockstatus-e.md)
 
@@ -40,7 +40,7 @@ blockStatus: DeviceBlockStatus
 devices: AudioDeviceDescriptors
 ```
 
-设备信息。
+Device information.
 
 **Type:** [AudioDeviceDescriptors](arkts-audio-audio-audiodevicedescriptors-t.md)
 

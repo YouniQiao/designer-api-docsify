@@ -16,7 +16,7 @@ EditMenuOptions
 onPrepareMenu?: OnPrepareMenuCallback
 ```
 
-当文本选择区域变化后显示菜单之前触发该回调，可在该回调中进行菜单数据设置。与onCreateMenu功能相似但触发时机不同：onCreateMenu在菜单创建时触发，适用于初始化菜单项；本接口在每次选择区域变化后、菜单显示前触发，适用于根据选择内容动态调整菜单。两者可同时使用。
+Callback before displaying the menu when the selection range changes.
 
 **Since:** 24
 
@@ -34,7 +34,7 @@ onPrepareMenu?: OnPrepareMenuCallback
 onCreateMenu: OnCreateMenuCallback | undefined
 ```
 
-在菜单创建时触发该回调，可在该回调中进行菜单数据设置。
+Passes the default menu, invokes before every display to generate a menu for triggering click events.If `undefined` is passed, the existing registered event will be removed.
 
 **Type:** [OnCreateMenuCallback](arkts-arkui-oncreatemenucallback-t.md) \| undefined
 
@@ -54,7 +54,7 @@ onCreateMenu: OnCreateMenuCallback | undefined
 onMenuItemClick: OnMenuItemClickCallback | undefined
 ```
 
-在菜单项被点击时触发该回调，用于处理菜单项的点击行为。
+Invoke upon clicking an item, capable of intercepting the default system menu execution behavior.If `undefined` is passed, the existing registered event will be removed.
 
 **Type:** [OnMenuItemClickCallback](arkts-arkui-onmenuitemclickcallback-t.md) \| undefined
 

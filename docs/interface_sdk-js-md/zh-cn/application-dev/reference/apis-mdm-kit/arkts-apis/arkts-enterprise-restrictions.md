@@ -33,12 +33,6 @@
 
 **系统能力：** SystemCapability.Customization.EnterpriseDeviceManager
 
-## 导入模块
-
-```TypeScript
-import { restrictions } from 'kits/@kit.MDMKit';
-```
-
 ## 汇总
 
 ### 函数

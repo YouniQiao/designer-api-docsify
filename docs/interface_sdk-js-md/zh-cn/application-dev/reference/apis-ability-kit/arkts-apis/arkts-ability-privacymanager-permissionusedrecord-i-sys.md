@@ -12,12 +12,6 @@
 
 **系统接口：** 此接口为系统接口。
 
-## 导入模块
-
-```TypeScript
-import { privacyManager } from 'kits/@kit.AbilityKit';
-```
-
 ## accessCount
 
 ```TypeScript
@@ -150,7 +144,7 @@ permissionName: Permissions
 
 权限名，用于标识当前统计记录对应的敏感权限。
 
-**类型：** [Permissions](arkts-ability-permissions-t.md)
+**类型：** Permissions
 
 **起始版本：** 9
 

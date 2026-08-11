@@ -16,7 +16,7 @@ Enum type supplied to {@link getMessageLevel} for receiving the console log leve
 Debug = 1
 ```
 
-调试级别。
+Debug level.
 
 **Since:** 8
 
@@ -34,7 +34,7 @@ Debug = 1
 Info = 2
 ```
 
-消息级别。
+Info level.
 
 **Since:** 8
 
@@ -52,7 +52,7 @@ Info = 2
 Warn = 3
 ```
 
-警告级别。
+Warn level.
 
 **Since:** 8
 
@@ -70,7 +70,7 @@ Warn = 3
 Error = 4
 ```
 
-错误级别。
+Error level.
 
 **Since:** 8
 
@@ -88,7 +88,7 @@ Error = 4
 Log = 5
 ```
 
-日志级别。
+Log level.
 
 **Since:** 8
 

@@ -6,7 +6,7 @@
 const DEFAULT_INTERRUPT_GROUP_ID: int
 ```
 
-Define default interrupt group id for audio
+Define default interrupt group id for audio.
 
 **Since:** 9
 
@@ -22,7 +22,7 @@ Define default interrupt group id for audio
 const DEFAULT_VOLUME_GROUP_ID: int
 ```
 
-Define default volume group id for audio
+Define default volume group id for audio.
 
 **Since:** 9
 

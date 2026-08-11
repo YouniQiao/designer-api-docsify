@@ -1,6 +1,6 @@
 # SwipeGesture
 
-用于触发快滑手势，滑动速度需大于速度阈值，默认最小速度为100vp/s。
+Defines SwipeGesture.
 
 **Inheritance/Implementation:** SwipeGesture extends [Gesture](arkts-arkui-gesture-gesture-c.md)
 
@@ -18,7 +18,7 @@
 static $_instantiate(factory: () => SwipeGesture, value?: SwipeGestureHandlerOptions): SwipeGesture
 ```
 
-设置快滑手势事件。继承自[Gesture](arkts-arkui-gesture-gesture-c.md)。
+Set the value.
 
 **Since:** 23
 
@@ -35,7 +35,7 @@ static $_instantiate(factory: () => SwipeGesture, value?: SwipeGestureHandlerOpt
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | factory | () =&gt; SwipeGesture | Yes |  |
-| value | [SwipeGestureHandlerOptions](arkts-arkui-gesture-swipegesturehandleroptions-i.md) | No | 快滑事件处理器配置参数。 |
+| value | [SwipeGestureHandlerOptions](arkts-arkui-gesture-swipegesturehandleroptions-i.md) | No |  |
 
 **Return value:**
 
@@ -49,7 +49,7 @@ static $_instantiate(factory: () => SwipeGesture, value?: SwipeGestureHandlerOpt
 onAction(event: Callback<GestureEvent>): this
 ```
 
-Swipe手势识别成功时触发回调。
+Slide gesture recognition success callback.
 
 **Since:** 23
 
@@ -65,7 +65,7 @@ Swipe手势识别成功时触发回调。
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| event | [Callback](../arkts-components/arkts-arkui-callback-i.md)&lt;GestureEvent&gt; | Yes | 手势事件回调函数。 |
+| event | [Callback](../arkts-components/arkts-arkui-callback-i.md)&lt;GestureEvent&gt; | Yes |  |
 
 **Return value:**
 

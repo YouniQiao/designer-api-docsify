@@ -4,7 +4,7 @@
 export type InterceptionCallback = (from: NavPathInfo | NavBar, to: NavPathInfo | NavBar, pathStack: NavPathStack, operation: NavigationOperation, isAnimated: boolean) => void
 ```
 
-Navigation页面跳转前的拦截回调。
+navigation interception callback.
 
 **Since:** 23
 
@@ -20,9 +20,9 @@ Navigation页面跳转前的拦截回调。
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| from | [NavPathInfo](../arkts-components/arkts-arkui-navpathinfo-c.md) \| NavBar | Yes | Navigation页面跳转前的拦截回调。 <br>取值约束:参数值为navBar，则表示跳转前的页面为Navigation首页。 |
-| to | [NavPathInfo](../arkts-components/arkts-arkui-navpathinfo-c.md) \| NavBar | Yes | Navigation页面跳转前的拦截回调。 <br>取值约束:参数值为navBar，则表示跳转前的页面为Navigation首页。 |
-| pathStack | [NavPathStack](arkts-arkui-navigation-navpathstack-c.md) | Yes | 页面栈。 |
-| operation | [NavigationOperation](../arkts-components/arkts-arkui-navigationoperation-e.md) | Yes | 当前页面跳转类型。 |
-| isAnimated | boolean | Yes | 页面跳转是否有动画。 |
+| from | [NavPathInfo](../arkts-components/arkts-arkui-navpathinfo-c.md) \| NavBar | Yes | Indicates the info of NavDestination or NavBar. <br>Value constraint:If the parameter value is navBar, the navigation home page is displayed. |
+| to | [NavPathInfo](../arkts-components/arkts-arkui-navpathinfo-c.md) \| NavBar | Yes | Indicates the info of NavDestination or NavBar. <br>Value constraint:If the parameter value is navBar, the navigation home page is displayed. |
+| pathStack | [NavPathStack](arkts-arkui-navigation-navpathstack-c.md) | Yes | The NavPathStack of current Navigation. |
+| operation | [NavigationOperation](../arkts-components/arkts-arkui-navigationoperation-e.md) | Yes | Indicates the type of navigation operation. |
+| isAnimated | boolean | Yes | Indicates whether the transition is animated. |
 

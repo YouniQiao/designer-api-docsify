@@ -4,7 +4,7 @@
 type CommandDataType = int | string | boolean
 ```
 
-表示命令的数据类型。
+Indicates the possible data types of the command.
 
 **Since:** 26.0.0
 

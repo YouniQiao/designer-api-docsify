@@ -1,6 +1,6 @@
 # KVStoreType
 
-KVStore数据库类型枚举。
+Enumerates the KV store types.
 
 **Since:** 7
 
@@ -20,9 +20,9 @@ KVStore数据库类型枚举。
 DEVICE_COLLABORATION = 0
 ```
 
-表示多设备协同数据库。
+Device KV store.
 
-**数据库特点：** 数据以设备的维度管理，不存在冲突；支持按照设备的维度查询数据。
+The device KV store manages data by device, which eliminates conflicts. Data can be queried by device.
 
 **Since:** 7
 
@@ -42,9 +42,9 @@ DEVICE_COLLABORATION = 0
 SINGLE_VERSION = 1
 ```
 
-表示单版本数据库。
+Single KV store.
 
-**数据库特点：** 数据不分设备，设备之间修改相同的key会覆盖。
+The single KV store does not differentiate data by device. If the same key is modified by different devices, the data will be overwritten.
 
 **Since:** 7
 
@@ -64,7 +64,7 @@ SINGLE_VERSION = 1
 MULTI_VERSION = 2
 ```
 
-表示多版本数据库。当前暂不支持使用此接口。
+Multi-version KV store. This type is not supported currently.
 
 **Since:** 7
 

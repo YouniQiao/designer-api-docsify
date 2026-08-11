@@ -86,7 +86,7 @@ XComponent(options: XComponentOptions)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| options | [XComponentOptions](arkts-arkui-xcomponentoptions-i.md) | 是 | 表示XComponent的选项。 |
+| options | [XComponentOptions](../arkts-apis/arkts-arkui-xcomponent-xcomponentoptions-i.md) | 是 | 表示XComponent的选项。 |
 
 ## XComponent
 

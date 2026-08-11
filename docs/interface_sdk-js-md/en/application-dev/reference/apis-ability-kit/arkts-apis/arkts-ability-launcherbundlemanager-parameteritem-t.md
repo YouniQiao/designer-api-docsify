@@ -4,7 +4,7 @@
 export type ParameterItem = _ParameterItem
 ```
 
-快捷方式配置信息中的自定义数据。
+Defines the custom data in the shortcut configuration.
 
 **Since:** 20
 

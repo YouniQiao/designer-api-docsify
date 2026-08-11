@@ -1,6 +1,6 @@
 # TextLayoutResult
 
-文本布局结果。
+Represents the text layout result.
 
 **Since:** 24
 
@@ -22,7 +22,7 @@ import { text } from 'kits/@kit.ArkGraphics2D';
 correctRect: TextRectSize
 ```
 
-布局后段落的矩形尺寸。
+Rectangle size of the paragraph after layout.
 
 **Type:** [TextRectSize](arkts-arkgraphics2d-text-textrectsize-i.md)
 
@@ -44,7 +44,7 @@ correctRect: TextRectSize
 fitStrRange: Array<Range>
 ```
 
-文本布局计算完成后能够完整显示的字符范围数组。
+Array of character ranges that can be completely displayed after text layout calculation.
 
 **Type:** Array&lt;Range&gt;
 

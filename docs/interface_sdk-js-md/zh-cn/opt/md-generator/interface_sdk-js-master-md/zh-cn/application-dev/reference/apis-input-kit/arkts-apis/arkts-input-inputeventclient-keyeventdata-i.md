@@ -1,0 +1,25 @@
+# KeyEventData
+
+按键注入描述信息。
+
+**起始版本：** 11
+
+<!--Device-inputEventClient-interface KeyEventData--><!--Device-inputEventClient-interface KeyEventData-End-->
+
+**系统能力：** SystemCapability.MultimodalInput.Input.InputSimulator
+
+## keyEvent
+
+```TypeScript
+keyEvent: KeyEvent
+```
+
+按键注入描述信息。
+
+**类型：** [KeyEvent](arkts-input-multimodalinput-keyevent-keyevent-i.md)
+
+**起始版本：** 11
+
+<!--Device-KeyEventData-keyEvent: KeyEvent--><!--Device-KeyEventData-keyEvent: KeyEvent-End-->
+
+**系统能力：** SystemCapability.MultimodalInput.Input.InputSimulator

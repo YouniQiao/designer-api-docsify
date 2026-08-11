@@ -1,6 +1,6 @@
 # ApplicationInfoFlag (System API)
 
-标识应用和用户之间的各种状态类型。
+Enumerates the application information flag, which describes the status between an application and user.
 
 **Since:** 12
 
@@ -18,7 +18,7 @@
 FLAG_INSTALLED = 0x00000001
 ```
 
-表示指定用户安装应用的状态为已安装状态。
+The application is installed for the specified user.
 
 **Since:** 12
 
@@ -36,7 +36,7 @@ FLAG_INSTALLED = 0x00000001
 FLAG_OTHER_INSTALLED = 0x00000010
 ```
 
-表示除指定用户外，其他用户的应用安装状态为已安装。
+The application is installed for users other than the specified user.
 
 **Since:** 15
 
@@ -54,7 +54,7 @@ FLAG_OTHER_INSTALLED = 0x00000010
 FLAG_PREINSTALLED_APP = 0x00000020
 ```
 
-表示应用的预置属性为预置应用。
+The application is a preinstalled application.
 
 **Since:** 15
 
@@ -72,7 +72,7 @@ FLAG_PREINSTALLED_APP = 0x00000020
 FLAG_PREINSTALLED_APP_UPDATE = 0x00000040
 ```
 
-表示该预置应用的更新状态为已更新。
+The preinstalled application is updated.
 
 **Since:** 15
 

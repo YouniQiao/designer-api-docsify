@@ -4,7 +4,7 @@
 type ScreenUnlockCallback = (finishCallback: WindowAnimationFinishedCallback) => void
 ```
 
-屏幕解锁时的回调。
+Callback function on unlocking the screen.
 
 **Since:** 23
 
@@ -20,5 +20,5 @@ type ScreenUnlockCallback = (finishCallback: WindowAnimationFinishedCallback) =>
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| finishCallback | [WindowAnimationFinishedCallback](arkts-arkui-windowanimationmanager-windowanimationfinishedcallback-i-sys.md) | Yes | 动画完成后的回调。 |
+| finishCallback | [WindowAnimationFinishedCallback](arkts-arkui-windowanimationmanager-windowanimationfinishedcallback-i-sys.md) | Yes | Animation finished callback. |
 

@@ -1,6 +1,6 @@
 # CommandPath
 
-用于设置路径绘制的指令。
+Defines the CommandPath.
 
 **Since:** 23
 
@@ -16,7 +16,7 @@
 commands: string
 ```
 
-路径绘制的指令字符串。像素单位的转换方法请参考[像素单位](../../apis-ability-kit/arkts-apis/arkts-app-ability-common.md/arkts-app-ability-common.md)。单位：px。
+The commands of CommandPath.
 
 **Type:** string
 

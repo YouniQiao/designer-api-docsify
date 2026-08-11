@@ -1,6 +1,6 @@
 # WindowSnapshotConfiguration
 
-主窗口截图的配置项。
+Describes the configuration of the main window screenshot.
 
 **Since:** 21
 
@@ -22,7 +22,7 @@ import { window } from 'kits/@kit.ArkUI';
 useCache?: boolean
 ```
 
-是否使用主窗口的已有截图。默认值为true。 true表示使用主窗口的已有截图，若主窗口无保存的截图，则使用主窗口的最新截图。false表示使用主窗口的最新截图。
+Whether the existing screenshot of the main window should be used. The default value is **true**. When it is set to **true**, the system uses the existing screenshot of the main window, or captures the latest screenshot if no existing screenshot is saved. When it is set to **false**, the system captures the latest screenshot of the main window.
 
 **Type:** boolean
 

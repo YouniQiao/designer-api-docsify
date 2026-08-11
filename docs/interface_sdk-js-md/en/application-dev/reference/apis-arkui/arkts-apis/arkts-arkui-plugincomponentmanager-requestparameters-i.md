@@ -1,6 +1,6 @@
 # RequestParameters
 
-使用pluginComponentManager.request方法时需要传递的参数。
+Plugin component request parameters.
 
 **Since:** 23
 
@@ -22,7 +22,7 @@ import { PluginComponentTemplate } from 'kits/@kit.ArkUI';
 data: KVObject
 ```
 
-组件数据，以键值对形式存储，用于传递给组件提供方的业务数据，键和值类型由业务定义。
+Defines data.
 
 **Type:** [KVObject](arkts-arkui-plugincomponentmanager-kvobject-t.md)
 
@@ -42,7 +42,7 @@ data: KVObject
 jsonPath?: string
 ```
 
-存放模板路径的external.json文件的路径。当需要通过外部配置文件直接加载模板而非通过request通信获取时传入此参数；当jsonPath字段不为空时不触发request通信，直接从external.json中读取模板路径。不传入或为空时，触发request通信向组件提供方请求模板。
+Defines jsonPath.
 
 **Type:** string
 
@@ -62,7 +62,7 @@ jsonPath?: string
 name: string
 ```
 
-请求组件名称。
+Defines name.
 
 **Type:** string
 
@@ -82,7 +82,7 @@ name: string
 want: Want
 ```
 
-组件提供方Ability信息。
+Defines want.
 
 **Type:** [Want](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-want-want-c.md)
 

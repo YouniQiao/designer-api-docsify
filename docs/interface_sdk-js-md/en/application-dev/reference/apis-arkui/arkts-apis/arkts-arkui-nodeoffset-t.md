@@ -4,7 +4,7 @@
 export type NodeOffset = Vector2
 ```
 
-用于设置组件或效果的偏移。
+Offset info.
 
 **Since:** 23
 

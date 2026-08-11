@@ -1,6 +1,6 @@
 # Vector2
 
-用于表示包含x和y两个值的向量。
+Defines a vector with two values.
 
 **Since:** 23
 
@@ -16,7 +16,7 @@
 x: double
 ```
 
-向量x轴方向的值。取值范围：(-∞, +∞)。
+Value for x-axis of the vector.
 
 **Type:** double
 
@@ -36,7 +36,7 @@ x: double
 y: double
 ```
 
-向量y轴方向的值。取值范围：(-∞, +∞)。
+Value for y-axis of the vector.
 
 **Type:** double
 

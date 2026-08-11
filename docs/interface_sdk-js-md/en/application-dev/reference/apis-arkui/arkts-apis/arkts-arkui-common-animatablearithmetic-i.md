@@ -1,6 +1,6 @@
 # AnimatableArithmetic
 
-该接口定义非number数据类型的动画运算规则。对非number类型的数据（如数组、结构体、颜色等）做动画，需要实现AnimatableArithmetic\&lt;T\&gt;接口中加法、减法、乘法和判断相等函数，使得该数据能参与动画的插值运算和识别该数据是否发生改变。即定义它们为实现了AnimatableArithmetic\&lt;T\&gt;接口的类型。
+The **AnimatableArithmetic** API defines the animation operation rules for non-number data types. To animate non-number data (such as arrays, structs,and colors), implement the addition, subtraction, multiplication, and equality judgment functions in the **AnimatableArithmetic\&lt;T\&gt;** API.In this way, the data can be involved in an interpolation operation of the animation and identify whether the data changes, that is, the non-number data is defined as the types that implement the **AnimatableArithmetic\&lt;T\&gt;** API.
 
 **Since:** 23
 
@@ -16,7 +16,7 @@
 equals(rhs: AnimatableArithmetic<T>): boolean
 ```
 
-定义该数据类型的相等判断规则。
+Defines the equality judgment rule of the data type.
 
 **Since:** 23
 
@@ -32,13 +32,13 @@ equals(rhs: AnimatableArithmetic<T>): boolean
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| rhs | [AnimatableArithmetic](../arkts-components/arkts-arkui-animatablearithmetic-i.md)&lt;T&gt; | Yes | 和自身比较相等的另一个数据对象。 |
+| rhs | [AnimatableArithmetic](../arkts-components/arkts-arkui-animatablearithmetic-i.md)&lt;T&gt; | Yes | another value |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| boolean | 是否相等。返回true表示相等，返回false表示不相等。 |
+| boolean | is equals |
 
 ## multiply
 
@@ -46,7 +46,7 @@ equals(rhs: AnimatableArithmetic<T>): boolean
 multiply(scale: double): AnimatableArithmetic<T>
 ```
 
-定义该数据类型的乘法运算规则。
+Defines the multiplication rule of the data type.
 
 **Since:** 23
 
@@ -62,13 +62,13 @@ multiply(scale: double): AnimatableArithmetic<T>
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| scale | double | Yes | 乘法运算的系数。 |
+| scale | double | Yes | scale value |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [AnimatableArithmetic](../arkts-components/arkts-arkui-animatablearithmetic-i.md)&lt;T&gt; | 乘法运算的结果。 |
+| [AnimatableArithmetic](../arkts-components/arkts-arkui-animatablearithmetic-i.md)&lt;T&gt; | new value which implements AnimatableArithmetic&lt;T&gt; interface |
 
 ## plus
 
@@ -76,7 +76,7 @@ multiply(scale: double): AnimatableArithmetic<T>
 plus(rhs: AnimatableArithmetic<T>): AnimatableArithmetic<T>
 ```
 
-定义数据类型的加法运算规则。
+Defines the addition rule of the data type.
 
 **Since:** 23
 
@@ -92,13 +92,13 @@ plus(rhs: AnimatableArithmetic<T>): AnimatableArithmetic<T>
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| rhs | [AnimatableArithmetic](../arkts-components/arkts-arkui-animatablearithmetic-i.md)&lt;T&gt; | Yes | 加法运算的对象。 |
+| rhs | [AnimatableArithmetic](../arkts-components/arkts-arkui-animatablearithmetic-i.md)&lt;T&gt; | Yes | another value |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [AnimatableArithmetic](../arkts-components/arkts-arkui-animatablearithmetic-i.md)&lt;T&gt; | 加法运算的结果。 |
+| [AnimatableArithmetic](../arkts-components/arkts-arkui-animatablearithmetic-i.md)&lt;T&gt; | new value which implements AnimatableArithmetic&lt;T&gt; interface |
 
 ## subtract
 
@@ -106,7 +106,7 @@ plus(rhs: AnimatableArithmetic<T>): AnimatableArithmetic<T>
 subtract(rhs: AnimatableArithmetic<T>): AnimatableArithmetic<T>
 ```
 
-定义该数据类型的减法运算规则。
+Defines the subtraction rule of the data type.
 
 **Since:** 23
 
@@ -122,11 +122,11 @@ subtract(rhs: AnimatableArithmetic<T>): AnimatableArithmetic<T>
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| rhs | [AnimatableArithmetic](../arkts-components/arkts-arkui-animatablearithmetic-i.md)&lt;T&gt; | Yes | 减法运算的对象。 |
+| rhs | [AnimatableArithmetic](../arkts-components/arkts-arkui-animatablearithmetic-i.md)&lt;T&gt; | Yes | another value |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [AnimatableArithmetic](../arkts-components/arkts-arkui-animatablearithmetic-i.md)&lt;T&gt; | 减法运算的结果。 |
+| [AnimatableArithmetic](../arkts-components/arkts-arkui-animatablearithmetic-i.md)&lt;T&gt; | new value which implements AnimatableArithmetic&lt;T&gt; interface |
 

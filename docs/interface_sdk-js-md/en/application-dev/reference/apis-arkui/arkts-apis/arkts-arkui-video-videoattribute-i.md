@@ -1,6 +1,6 @@
 # VideoAttribute
 
-用于播放视频文件并控制其播放状态的组件。
+Defines the Video attribute.
 
 **Inheritance/Implementation:** VideoAttribute extends [CommonMethod](arkts-arkui-common-commonmethod-i.md)
 
@@ -18,7 +18,7 @@
 default analyzerConfig(config: ImageAnalyzerConfig | undefined): this
 ```
 
-设置AI分析识别类型，包括主体识别、文字识别和对象查找等功能。
+Set image analyzer with config.
 
 **Since:** 23
 
@@ -34,7 +34,7 @@ default analyzerConfig(config: ImageAnalyzerConfig | undefined): this
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| config | [ImageAnalyzerConfig](arkts-arkui-imageanalyzerconfig-i.md) \| undefined | Yes | 设置AI分析识别类型。 取值为undefined时，与不设置表现一致。 |
+| config | [ImageAnalyzerConfig](arkts-arkui-imageanalyzerconfig-i.md) \| undefined | Yes |  |
 
 **Return value:**
 
@@ -48,7 +48,7 @@ default analyzerConfig(config: ImageAnalyzerConfig | undefined): this
 default attributeModifier(modifier: AttributeModifier<VideoAttribute> | AttributeModifier<CommonMethod> | undefined): this
 ```
 
-设置组件的动态属性。
+Call attributeModifier.
 
 **Since:** 23
 
@@ -64,7 +64,7 @@ default attributeModifier(modifier: AttributeModifier<VideoAttribute> | Attribut
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| modifier | [AttributeModifier](../arkts-components/arkts-arkui-attributemodifier-i.md)&lt;[VideoAttribute](arkts-arkui-video-videoattribute-i.md)&gt; \| AttributeModifier&lt;CommonMethod&gt; \| undefined | Yes | 动态设置Video组件的属性。 取值为undefined时，按当前组件的属性方法默认值处理。 |
+| modifier | [AttributeModifier](../arkts-components/arkts-arkui-attributemodifier-i.md)&lt;[VideoAttribute](arkts-arkui-video-videoattribute-i.md)&gt; \| AttributeModifier&lt;CommonMethod&gt; \| undefined | Yes |  |
 
 **Return value:**
 
@@ -78,7 +78,7 @@ default attributeModifier(modifier: AttributeModifier<VideoAttribute> | Attribut
 default autoPlay(value: boolean | undefined): this
 ```
 
-设置视频是否自动播放。true：开启自动播放；false：关闭自动播放。默认值：false，取值为undefined时，按默认值处理。
+Called when judging whether the video is played automatically.
 
 **Since:** 23
 
@@ -94,7 +94,7 @@ default autoPlay(value: boolean | undefined): this
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | boolean \| undefined | Yes | 是否自动播放。 |
+| value | boolean \| undefined | Yes |  |
 
 **Return value:**
 
@@ -108,7 +108,7 @@ default autoPlay(value: boolean | undefined): this
 default controls(value: boolean | undefined): this
 ```
 
-设置控制视频播放的控制栏是否显示。true：控制栏显示；false：控制栏不显示。默认值：true，取值为undefined时，按默认值处理。
+Called when judging whether the control bar is displayed.
 
 **Since:** 23
 
@@ -124,7 +124,7 @@ default controls(value: boolean | undefined): this
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | boolean \| undefined | Yes | 控制视频播放的控制栏是否显示。 |
+| value | boolean \| undefined | Yes |  |
 
 **Return value:**
 
@@ -138,7 +138,7 @@ default controls(value: boolean | undefined): this
 default enableAnalyzer(enable: boolean | undefined): this
 ```
 
-设置组件支持AI分析，当前支持主体识别、文字识别和对象查找等功能。使能后，视频播放暂停时自动进入分析状态，开始分析当前画面帧，视频继续播放后自动退出分析状态。不能和overlay属性同时使用，两者同时设置时overlay中CustomBuilder属性将失效。
+Enable image analyzer.
 
 **Since:** 23
 
@@ -154,7 +154,7 @@ default enableAnalyzer(enable: boolean | undefined): this
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| enable | boolean \| undefined | Yes | 是否启用AI分析功能。 true：开启AI分析功能；false：关闭AI分析功能。 默认值：false，取值为undefined时，按默认值处理。 |
+| enable | boolean \| undefined | Yes |  |
 
 **Return value:**
 
@@ -168,7 +168,7 @@ default enableAnalyzer(enable: boolean | undefined): this
 default enableShortcutKey(enabled: boolean | undefined): this
 ```
 
-设置组件支持快捷键响应。目前支持在组件获焦后响应空格键播放/暂停、上下方向键调整视频音量、左右方向键快进/快退。
+Indicates whether to response shortcut key. The default value is false.If the value is true, video will respond to the shortcut keys as follows:Space key: play/pause the video.Up/Down arrow key: turn up/down volume of the video.Right/Left arrow key: fast forward/backward the video.
 
 **Since:** 23
 
@@ -184,7 +184,7 @@ default enableShortcutKey(enabled: boolean | undefined): this
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| enabled | boolean \| undefined | Yes | 是否启用快捷键响应。 true：开启快捷键响应；false：关闭快捷键响应。 默认值：false，取值为undefined时，按默认值处理。 enabled设置为false且Video组件的控制栏显示时， 仍然可以通过左右方向键控制进度条快进或快退。 |
+| enabled | boolean \| undefined | Yes |  |
 
 **Return value:**
 
@@ -198,7 +198,7 @@ default enableShortcutKey(enabled: boolean | undefined): this
 default loop(value: boolean | undefined): this
 ```
 
-设置是否单个视频循环播放。true：开启循环播放；false：关闭循环播放。默认值：false，取值为undefined时，按默认值处理。
+Called when judging whether the video is played circular.
 
 **Since:** 23
 
@@ -214,7 +214,7 @@ default loop(value: boolean | undefined): this
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | boolean \| undefined | Yes | 是否单个视频循环播放。 |
+| value | boolean \| undefined | Yes |  |
 
 **Return value:**
 
@@ -228,7 +228,7 @@ default loop(value: boolean | undefined): this
 default muted(value: boolean | undefined): this
 ```
 
-设置视频是否静音。true：开启静音；false：关闭静音。默认值：false，取值为undefined时，按默认值处理。
+Called when judging whether the video is muted.
 
 **Since:** 23
 
@@ -244,7 +244,7 @@ default muted(value: boolean | undefined): this
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | boolean \| undefined | Yes | 视频是否静音。 |
+| value | boolean \| undefined | Yes |  |
 
 **Return value:**
 
@@ -258,7 +258,7 @@ default muted(value: boolean | undefined): this
 default objectFit(value: ImageFit | undefined): this
 ```
 
-设置视频的填充模式。默认值：Cover。约束：不支持ImageFit类型中的枚举值MATRIX，若设置，则作用效果与Cover一致。异常值：若设置异常值undefined、null，或不在ImageFit枚举范围内的值，作用效果均与Cover一致。取值为undefined时，按默认值处理。
+Called when determining the zoom type of the video source.
 
 **Since:** 23
 
@@ -274,7 +274,7 @@ default objectFit(value: ImageFit | undefined): this
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | [ImageFit](arkts-arkui-imagefit-e.md) \| undefined | Yes | 视频填充模式。 |
+| value | [ImageFit](arkts-arkui-imagefit-e.md) \| undefined | Yes |  |
 
 **Return value:**
 
@@ -288,7 +288,7 @@ default objectFit(value: ImageFit | undefined): this
 default onError(event: VoidCallback | ErrorCallback | undefined): this
 ```
 
-播放失败时触发该事件。
+Called when playback fails.
 
 **Since:** 23
 
@@ -304,7 +304,7 @@ default onError(event: VoidCallback | ErrorCallback | undefined): this
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| event | [VoidCallback](arkts-arkui-voidcallback-t.md) \| ErrorCallback \| undefined | Yes | 视频播放失败时的回调函数。其中ErrorCallback类型入参的回调函数用于接收异常信息， 回调返回的错误码详细介绍请参见Video组件错误码和Media错误码。 取值为undefined时，不使用回调函数。 |
+| event | [VoidCallback](arkts-arkui-voidcallback-t.md) \| ErrorCallback \| undefined | Yes |  |
 
 **Return value:**
 
@@ -318,7 +318,7 @@ default onError(event: VoidCallback | ErrorCallback | undefined): this
 default onFinish(event: VoidCallback | undefined): this
 ```
 
-播放结束时触发该事件。
+Called when the video playback ends.
 
 **Since:** 23
 
@@ -334,7 +334,7 @@ default onFinish(event: VoidCallback | undefined): this
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| event | [VoidCallback](arkts-arkui-voidcallback-t.md) \| undefined | Yes | 视频播放结束的回调函数。 取值为undefined时，不使用回调函数。 |
+| event | [VoidCallback](arkts-arkui-voidcallback-t.md) \| undefined | Yes |  |
 
 **Return value:**
 
@@ -348,7 +348,7 @@ default onFinish(event: VoidCallback | undefined): this
 default onFullscreenChange(callback: Callback<FullscreenInfo> | undefined): this
 ```
 
-在全屏播放与非全屏播放状态之间切换时触发该事件。
+Called when the video enters and exits the full screen.
 
 **Since:** 23
 
@@ -364,7 +364,7 @@ default onFullscreenChange(callback: Callback<FullscreenInfo> | undefined): this
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](../arkts-components/arkts-arkui-callback-i.md)&lt;FullscreenInfo&gt; \| undefined | Yes | 在全屏播放与非全屏播放状态之间切换时的回调函数。 取值为undefined时，不使用回调函数。 |
+| callback | [Callback](../arkts-components/arkts-arkui-callback-i.md)&lt;FullscreenInfo&gt; \| undefined | Yes |  |
 
 **Return value:**
 
@@ -378,7 +378,7 @@ default onFullscreenChange(callback: Callback<FullscreenInfo> | undefined): this
 default onPause(event: VoidCallback | undefined): this
 ```
 
-暂停时触发该事件。
+Called when the video is paused.
 
 **Since:** 23
 
@@ -394,7 +394,7 @@ default onPause(event: VoidCallback | undefined): this
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| event | [VoidCallback](arkts-arkui-voidcallback-t.md) \| undefined | Yes | 视频暂停的回调函数。 取值为undefined时，不使用回调函数。 |
+| event | [VoidCallback](arkts-arkui-voidcallback-t.md) \| undefined | Yes |  |
 
 **Return value:**
 
@@ -408,7 +408,7 @@ default onPause(event: VoidCallback | undefined): this
 default onPrepared(callback: Callback<PreparedInfo> | undefined): this
 ```
 
-视频准备完成时触发该事件。
+Called when the video preparation is complete.
 
 **Since:** 23
 
@@ -424,7 +424,7 @@ default onPrepared(callback: Callback<PreparedInfo> | undefined): this
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](../arkts-components/arkts-arkui-callback-i.md)&lt;PreparedInfo&gt; \| undefined | Yes | 视频准备完成时的回调函数。 取值为undefined时，不使用回调函数。 |
+| callback | [Callback](../arkts-components/arkts-arkui-callback-i.md)&lt;PreparedInfo&gt; \| undefined | Yes |  |
 
 **Return value:**
 
@@ -438,7 +438,7 @@ default onPrepared(callback: Callback<PreparedInfo> | undefined): this
 default onSeeked(callback: Callback<PlaybackInfo> | undefined): this
 ```
 
-操作进度条完成后，上报播放时间信息。
+Called when the playback time information is reported after the operation progress bar is completed.
 
 **Since:** 23
 
@@ -454,7 +454,7 @@ default onSeeked(callback: Callback<PlaybackInfo> | undefined): this
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](../arkts-components/arkts-arkui-callback-i.md)&lt;PlaybackInfo&gt; \| undefined | Yes | 操作进度条完成后的回调函数。 取值为undefined时，不使用回调函数。 |
+| callback | [Callback](../arkts-components/arkts-arkui-callback-i.md)&lt;PlaybackInfo&gt; \| undefined | Yes |  |
 
 **Return value:**
 
@@ -468,7 +468,7 @@ default onSeeked(callback: Callback<PlaybackInfo> | undefined): this
 default onSeeking(callback: Callback<PlaybackInfo> | undefined): this
 ```
 
-操作进度条过程时上报时间信息。
+Called when the time information is reported when the progress bar process is operated.
 
 **Since:** 23
 
@@ -484,7 +484,7 @@ default onSeeking(callback: Callback<PlaybackInfo> | undefined): this
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](../arkts-components/arkts-arkui-callback-i.md)&lt;PlaybackInfo&gt; \| undefined | Yes | 操作进度条过程时的回调函数。 取值为undefined时，不使用回调函数。 |
+| callback | [Callback](../arkts-components/arkts-arkui-callback-i.md)&lt;PlaybackInfo&gt; \| undefined | Yes |  |
 
 **Return value:**
 
@@ -498,7 +498,7 @@ default onSeeking(callback: Callback<PlaybackInfo> | undefined): this
 default onStart(event: VoidCallback | undefined): this
 ```
 
-播放时触发该事件。
+Called when the video is played.
 
 **Since:** 23
 
@@ -514,7 +514,7 @@ default onStart(event: VoidCallback | undefined): this
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| event | [VoidCallback](arkts-arkui-voidcallback-t.md) \| undefined | Yes | 视频播放的回调函数。 取值为undefined时，不使用回调函数。 |
+| event | [VoidCallback](arkts-arkui-voidcallback-t.md) \| undefined | Yes |  |
 
 **Return value:**
 
@@ -528,7 +528,7 @@ default onStart(event: VoidCallback | undefined): this
 default onStop(event: VoidCallback | undefined): this
 ```
 
-播放停止时触发该事件（当stop()方法被调用后触发）。
+Called when the video is stopped.
 
 **Since:** 23
 
@@ -544,7 +544,7 @@ default onStop(event: VoidCallback | undefined): this
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| event | [VoidCallback](arkts-arkui-voidcallback-t.md) \| undefined | Yes | 视频播放停止时的回调函数。 取值为undefined时，不使用回调函数。 |
+| event | [VoidCallback](arkts-arkui-voidcallback-t.md) \| undefined | Yes |  |
 
 **Return value:**
 
@@ -558,7 +558,7 @@ default onStop(event: VoidCallback | undefined): this
 default onUpdate(callback: Callback<PlaybackInfo> | undefined): this
 ```
 
-播放进度变化时触发该事件。
+Called when the playback progress changes.
 
 **Since:** 23
 
@@ -574,7 +574,7 @@ default onUpdate(callback: Callback<PlaybackInfo> | undefined): this
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](../arkts-components/arkts-arkui-callback-i.md)&lt;PlaybackInfo&gt; \| undefined | Yes | 播放进度变化时的回调函数。 取值为undefined时，不使用回调函数。 |
+| callback | [Callback](../arkts-components/arkts-arkui-callback-i.md)&lt;PlaybackInfo&gt; \| undefined | Yes |  |
 
 **Return value:**
 
@@ -588,11 +588,11 @@ default onUpdate(callback: Callback<PlaybackInfo> | undefined): this
 default setVideoOptions(value: VideoOptions): this
 ```
 
-设置Video选项。
+Set Video options.
 
-**Since:** 26.0.0
+**Since:** 26.1.0
 
-**ArkTS mode:** ArkTS-Sta only, since version 26.0.0.
+**ArkTS mode:** ArkTS-Sta only, since version 26.1.0.
 
 **Model restriction:** This API can be used only in the stage model.
 

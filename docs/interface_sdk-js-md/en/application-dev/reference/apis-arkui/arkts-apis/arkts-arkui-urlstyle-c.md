@@ -1,8 +1,8 @@
 # UrlStyle
 
-超链接对象说明。
+Describes the hyperlink style.
 
-默认颜色、字号、字重分别是'#ff0a59f7'、'16fp'、'FontWeight.Regular'，若属性字符串设置TextStyle，则TextStyle优先级更高。
+The default color, font size, and font weight are **'#ff0a59f7'**, **'16fp'**, and **'FontWeight.Regular'**,respectively. If the styled string has **TextStyle** set, the **TextStyle** settings take precedence.
 
 **Since:** 14
 
@@ -18,7 +18,7 @@
 constructor(url: string)
 ```
 
-超链接对象的构造函数。
+A constructor used to create a URL object.
 
 **Since:** 14
 
@@ -36,7 +36,7 @@ constructor(url: string)
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| url | string | Yes | 超链接URL设置项。需为有效的URL地址。 |
+| url | string | Yes | Options of the hyperlink. |
 
 ## url
 
@@ -44,7 +44,7 @@ constructor(url: string)
 readonly url: string
 ```
 
-获取属性字符串的超链接内容。
+Hyperlink content of the styled string.
 
 **Type:** string
 

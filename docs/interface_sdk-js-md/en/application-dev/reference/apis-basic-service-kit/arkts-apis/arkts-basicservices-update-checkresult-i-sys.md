@@ -1,6 +1,6 @@
 # CheckResult (System API)
 
-版本检查结果。
+Indicates the version check result.
 
 **Since:** 9
 
@@ -24,7 +24,8 @@ import { update } from 'kits/@kit.BasicServicesKit';
 isExistNewVersion: boolean
 ```
 
-是否有新版本。true表示有新版本，false表示没有新版本。
+Whether a new version is available. The value **true** indicates that a new version is available, and the value   
+**false** indicates the opposite.
 
 **Type:** boolean
 
@@ -44,7 +45,7 @@ isExistNewVersion: boolean
 newVersionInfo: NewVersionInfo
 ```
 
-新版本数据。
+Information about the new version.
 
 **Type:** [NewVersionInfo](arkts-basicservices-update-newversioninfo-i-sys.md)
 

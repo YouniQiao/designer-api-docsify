@@ -1,6 +1,6 @@
 # FileSpec
 
-表单项的文件信息。
+Provides the file information of a table item.
 
 **Since:** 10
 
@@ -22,7 +22,8 @@ import { request } from 'kits/@kit.BasicServicesKit';
 contentType?: string
 ```
 
-文件内容类型，默认值为文件名后缀。该选项会被填写到HTTP表单指定的Content-Type字段中。
+Content type of the file. The default value is the file name extension. This option is filled in the   
+**Content-Type** field specified in the HTTP form.
 
 **Type:** string
 
@@ -40,7 +41,7 @@ contentType?: string
 extras?: object
 ```
 
-文件信息的附加内容，该参数不会体现在HTTP请求中。默认值为空。
+Additional information. This parameter is not included in HTTP requests. The default value is empty.
 
 **Type:** object
 
@@ -60,7 +61,7 @@ extras?: object
 filename?: string
 ```
 
-文件名，默认值通过路径获取。
+File name. The default value is obtained from the file path.
 
 **Type:** string
 
@@ -80,9 +81,9 @@ filename?: string
 mimeType?: string
 ```
 
-文件的mimeType，通过文件名获取，默认值为文件名后缀。
+MIME type of the file, which is obtained from the file name. The default value is the file name extension.
 
-从 API version 18 开始废弃，建议使用contentType替代。
+This API is deprecated since API version 18. You are advised to use **contentType** instead.
 
 **Type:** string
 
@@ -106,27 +107,30 @@ mimeType?: string
 path: string
 ```
 
-文件路径。
+File path.
 
-- 相对路径，位于调用方的缓存路径下。
+- Relative path, which is in the cache directory of the caller.
 
-例如："./xxx/yyy/zzz.html"、"xxx/yyy/zzz.html"。
+Example: **./xxx/yyy/zzz.html** or **xxx/yyy/zzz.html**
 
-- internal协议路径，支持"internal://"及其子路径。internal为调用方（即传入的context）对应路径，"internal://cache"对应context.cacheDir。
+- Internal protocol path, which can be **internal://** or its subdirectory. **internal** indicates the cache   
+directory of the caller (that is, the input **context**), and **internal://cache** corresponds to   
+**context.cacheDir**.
 
-例如："internal://cache/path/to/file.txt"。
+Example: **internal://cache/path/to/file.txt**
 
-- 应用沙箱目录，只支持到base及其子目录下。
+- Application sandbox directory. Only the **base** directory and its subdirectories are supported.
 
-例如："/data/storage/el1/base/path/to/file.txt"。
+Example: **./data/storage/el1/base/path/to/file.txt**
 
-- file协议路径，必须匹配应用包名，只支持到base及其子目录下。
+- File protocol path, which must match the application bundle name. Only the **base** directory and its   
+subdirectories are supported.
 
-例如："file://com.example.test/data/storage/el2/base/file.txt"。
+Example: **file://com.example.test/data/storage/el2/base/file.txt**
 
-- 用户公共文件，仅支持上传任务。
+- Public files of users. Only upload tasks are supported.
 
-例如："file://media/Photo/path/to/file.img"。仅支持前台任务。
+Example: **file://media/Photo/path/to/file.img**. Only foreground tasks are supported.
 
 **Type:** string
 

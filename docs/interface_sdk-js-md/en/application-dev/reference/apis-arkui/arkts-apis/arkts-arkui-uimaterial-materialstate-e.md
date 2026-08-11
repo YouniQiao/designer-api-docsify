@@ -1,6 +1,6 @@
 # MaterialState
 
-材质使能状态枚举，表示应用级沉浸式系统材质配置的状态。
+Enumerates the material enabling states, indicating the states of the application-level immersive system material configuration.
 
 **Since:** 26.0.0
 
@@ -16,9 +16,9 @@
 DEFAULT = 0
 ```
 
-默认模式。[弹出框Dialog](../../../ui/arkts-base-dialog-overview.md)、[即时反馈（Toast）](../../../ui/arkts-create-toast.md)、  
-[AlphabetIndexer](alphabet_indexer)在组件本身未设置背景颜色、模糊参数和阴影参数时默认开启沉浸式系统材质；[Text](../../apis-arkgraphics2d/arkts-apis/arkts-graphics-text.md/arkts-graphics-text.md)设置  
-[copyOption](arkts-arkui-text-textattribute-i.md#copyoption)后长按或双击触发的文本菜单默认开启沉浸式系统材质；其他组件由应用主动设置。
+Default state. The immersive system material is enabled by default for the   
+[Dialog](../../../ui/arkts-base-dialog-overview.md), [Toast](../../../ui/arkts-create-toast.md), and   
+[AlphabetIndexer](alphabet_indexer) components if the background color, blur, and shadow are not set for the components. The immersive system material is enabled by default for the text menu triggered by long-pressing or double-clicking after [copyOption](arkts-arkui-text-textattribute-i.md#copyoption) is set in the [Text](../../apis-arkgraphics2d/arkts-apis/arkts-graphics-text.md/arkts-graphics-text.md) component.For other components, whether the immersive system material is enabled is set by the application.
 
 **Since:** 26.0.0
 
@@ -36,13 +36,14 @@ DEFAULT = 0
 ENABLE = 1
 ```
 
-使能模式。[弹出框Dialog](../../../ui/arkts-base-dialog-overview.md)、[即时反馈（Toast）](../../../ui/arkts-create-toast.md)、  
-[AlphabetIndexer](alphabet_indexer)、[ChipGroup](arkts-arkui-advanced-chipgroup.md)、  
-[Chip](arkts-arkui-advanced-chip.md)、[Select](arkts-arkui-select-select-f.md#select)、[菜单控制](../../apis-ability-kit/arkts-apis/arkts-app-ability-common.md/arkts-app-ability-common.md)、[Toggle](arkts-arkui-toggle-toggle-f.md#toggle)、  
-[SegmentButton](arkts-arkui-advanced-segmentbutton.md)、  
-[SegmentButtonV2](arkts-arkui-advanced-segmentbuttonv2.md)、[Slider](arkts-arkui-slider-slider-f.md#slider)、  
-[bindSheet](arkts-arkui-common-commonmethod-i.md#bindsheet)、[SelectionMenu](arkts-arkui-advanced-selectionmenu.md)组件默认开启沉浸式系统材质；  
-[Text](../../apis-arkgraphics2d/arkts-apis/arkts-graphics-text.md/arkts-graphics-text.md)设置[copyOption](arkts-arkui-text-textattribute-i.md#copyoption)后长按或双击触发的文本菜单默认开启沉浸式系统材质。此模式下，沉浸式系统材质样式生效的优先级高于组件本身设置的背景色、模糊、阴影和边框样式。其他组件需开发者主动设置。
+Enabled state. The immersive system material is enabled by default for the   
+[Dialog](../../../ui/arkts-base-dialog-overview.md), [Toast](../../../ui/arkts-create-toast.md),   
+[AlphabetIndexer](alphabet_indexer), [ChipGroup](arkts-arkui-advanced-chipgroup.md),   
+[Chip](arkts-arkui-advanced-chip.md), [Select](arkts-arkui-select-select-f.md#select), [Menu Control](../../apis-ability-kit/arkts-apis/arkts-app-ability-common.md/arkts-app-ability-common.md),   
+[Toggle](arkts-arkui-toggle-toggle-f.md#toggle), [SegmentButton](arkts-arkui-advanced-segmentbutton.md),   
+[SegmentButtonV2](arkts-arkui-advanced-segmentbuttonv2.md), [Slider](arkts-arkui-slider-slider-f.md#slider),   
+[bindSheet](arkts-arkui-common-commonmethod-i.md#bindsheet), and [SelectionMenu](arkts-arkui-advanced-selectionmenu.md). After   
+[copyOption](arkts-arkui-text-textattribute-i.md#copyoption) is set for the [Text](../../apis-arkgraphics2d/arkts-apis/arkts-graphics-text.md/arkts-graphics-text.md) component, the immersive system material is enabled by default for the text menu triggered by long-pressing or double-clicking. In this state, the immersive system material style takes precedence over the background color, blur, shadow, and border style set for the components. You need to set whether to enable the immersive system material for other components.
 
 **Since:** 26.0.0
 
@@ -60,7 +61,7 @@ ENABLE = 1
 DISABLE = 2
 ```
 
-禁用模式。所有组件禁止开启沉浸式系统材质，即使主动为组件设置沉浸式系统材质参数也不会生效。
+Disabled state. The immersive system material cannot be enabled for any component. Even if you set the immersive system material parameters for a component, the settings will not take effect.
 
 **Since:** 26.0.0
 

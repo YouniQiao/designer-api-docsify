@@ -1,6 +1,6 @@
 # LightEffectOptions
 
-沉浸式材质的光感交互反馈配置。用于自定义反馈光感的颜色。
+Provides the light sensing interaction feedback configuration for immersive materials. The configuration is used to customize the color of the light sensing feedback.
 
 **Since:** 26.0.0
 
@@ -22,9 +22,9 @@ import { uiMaterial } from 'kits/@kit.ArkUI';
 color?: ResourceColor
 ```
 
-自定义交互反馈光感的颜色。
+Custom color of the light sensing feedback.
 
-默认值：Color.White
+Default value: **Color.White**
 
 **Type:** [ResourceColor](arkts-arkui-resourcecolor-t.md)
 

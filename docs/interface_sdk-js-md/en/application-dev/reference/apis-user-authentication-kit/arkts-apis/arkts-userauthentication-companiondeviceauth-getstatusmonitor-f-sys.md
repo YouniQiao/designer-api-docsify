@@ -12,9 +12,7 @@ import { companionDeviceAuth } from 'kits/@kit.UserAuthenticationKit';
 function getStatusMonitor(localUserId: int): StatusMonitor
 ```
 
-获取状态监听器。用于获取指定用户的状态监听器对象，通过该对象可查询和订阅伴随设备的模板状态、持续认证状态、可添加设备状态等信息。
-
-生命周期：订阅在系统服务侧按用户维护。使用完毕应调用对应的off方法取消订阅以释放资源；应用进程退出时已注册的订阅会自动清理。
+Obtains the status monitor. This API is used to obtain the status monitor object of a specified user. The object can be used to query and subscribe to the template status, continuous authentication status, and available device status of the companion device.
 
 **Since:** 23
 
@@ -34,28 +32,27 @@ function getStatusMonitor(localUserId: int): StatusMonitor
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| localUserId | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | 本地用户ID。主设备上的用户标识，为非负整数，用于获取该用户对应的伴随设备状态监听器。传入不存在的用户ID时抛出异常，错误码为32600002。 |
+| localUserId | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | Local user ID. User ID on the primary device, which is a positive integer greater than or equal to 0. It is used to obtain the status monitor of the companion device corresponding to the user. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [StatusMonitor](arkts-userauthentication-companiondeviceauth-statusmonitor-i-sys.md) | 状态监听器对象。可用于查询模板状态（ [getTemplateStatus]{ |
+| [StatusMonitor](arkts-userauthentication-companiondeviceauth-statusmonitor-i-sys.md) | Status monitor object. It can be used to query the template status ( [getTemplateStatus]{ |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 32600001 | The system service is not working properly. Please try again later. |
-| 32600002 | The local user is not found. |
-| 201 | Permission denied. |
-| 202 | Not system application. |
+| [32600001](../errorcode-useriam.md#32600001-system-service-not-working-properly) | The system service is not working properly. Please try again later. |
+| [32600002](../errorcode-useriam.md#32600002-template-not-found) | The local user is not found. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system application. |
 
 ## Examples
 
 ```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-import { userAuth } from '@kit.UserAuthenticationKit';
+import { osAccount, BusinessError } from '@kit.BasicServicesKit';
 
 const localUserId = 100;
 try {
@@ -63,7 +60,7 @@ try {
   const continuousAuthParam: companionDeviceAuth.ContinuousAuthParam = {
     templateId: new Uint8Array([])
   };
-  const handler = (isAuthPassed: boolean, authTrustLevel?: userAuth.AuthTrustLevel): void => {
+  const handler = (isAuthPassed: boolean, authTrustLevel?: osAccount.AuthTrustLevel): void => {
     console.info('continuous auth changed');
     console.info(`isAuthPassed: ${isAuthPassed}`);
     if (authTrustLevel !== undefined) {

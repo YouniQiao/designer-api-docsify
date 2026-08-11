@@ -1,6 +1,6 @@
 # DataShareHelperOptions
 
-指定[DataShareHelper](arkts-arkdata-datashare-datasharehelperoptions-i.md)的可选参数，包含是否在代理模式下，以及非静默访问的拉起等待时间。
+Represents the optional parameters of [DataShareHelper](arkts-arkdata-datashare-datasharehelperoptions-i.md).
 
 **Since:** 10
 
@@ -22,8 +22,11 @@ import { dataShare } from 'kits/@kit.ArkData';
 isProxy?: boolean
 ```
 
-默认为false，如果为true，则要创建的[DataShareHelper](arkts-arkdata-datashare-datasharehelperoptions-i.md)处于代理模式，所有操作都不会打开数据提供者APP，除非数据库不存在，当数据库不存在时，  
-[createDataShareHelper](arkts-arkdata-datashare-createdatasharehelper-f.md#createdatasharehelper)会拉起数据提供者创建数据库。
+Whether the [DataShareHelper](arkts-arkdata-datashare-datasharehelperoptions-i.md) is in proxy mode. The default value is  
+**false**.
+
+If the value is **true**, the [DataShareHelper](arkts-arkdata-datashare-datasharehelperoptions-i.md) to be created is in proxy mode, and all operations will not open the data provider application unless the database does not exist. If the database does not exist,  
+[createDataShareHelper](arkts-arkdata-datashare-createdatasharehelper-f.md#createdatasharehelper)will start the data provider to create a database.
 
 **Type:** boolean
 
@@ -45,7 +48,7 @@ isProxy?: boolean
 waitTime?: int
 ```
 
-拉起数据提供者进程的等待时间（单位：秒），默认值为2秒。
+Waiting time for starting the data provider process, in seconds. The default value is **2**.
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 

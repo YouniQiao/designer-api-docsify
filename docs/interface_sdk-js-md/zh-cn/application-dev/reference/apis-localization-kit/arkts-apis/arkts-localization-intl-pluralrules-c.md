@@ -8,17 +8,11 @@
 
 **废弃版本：** 20
 
-**替代接口：** [Intl.PluralRules](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/PluralRules)
+**替代接口：** [Intl.PluralRules](arkts-intl.md#intl.pluralrules)
 
 <!--Device-intl-export class PluralRules--><!--Device-intl-export class PluralRules-End-->
 
 **系统能力：** SystemCapability.Global.I18n
-
-## 导入模块
-
-```TypeScript
-import { intl } from 'kits/@kit.LocalizationKit';
-```
 
 ## constructor
 
@@ -78,7 +72,7 @@ constructor(locale: string | Array<string>, options?: PluralRulesOptions)
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | locale | string \| Array&lt;string&gt; | 是 | 区域ID或区域ID数组。输入是区域ID数组时，使用第一个有效的区域ID。 |
-| options | [PluralRulesOptions](../../apis-arkts/arkts-apis/arkts-arkts-intl-pluralrulesoptions-i.md) | 否 | 创建单复数对象时设置的配置项。 &lt;br&gt;默认值：所有属性都取默认值时的配置项。 |
+| options | [PluralRulesOptions](arkts-localization-intl-pluralrulesoptions-i.md) | 否 | 创建单复数对象时设置的配置项。 &lt;br&gt;默认值：所有属性都取默认值时的配置项。 |
 
 ## 示例
 

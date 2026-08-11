@@ -1,6 +1,6 @@
 # AppAccountInfo
 
-表示应用账号信息。
+Defines application account information.
 
 **Since:** 7
 
@@ -22,7 +22,7 @@ import { appAccount } from 'kits/@kit.BasicServicesKit';
 name: string
 ```
 
-应用账号的名称。
+Name of the application account.
 
 **Type:** string
 
@@ -40,7 +40,7 @@ name: string
 owner: string
 ```
 
-应用账号所有者的包名。最大长度为1024个字符。
+Owner of the application account. The value is the bundle name of the application.
 
 **Type:** string
 

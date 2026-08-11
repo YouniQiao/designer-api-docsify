@@ -1,6 +1,6 @@
 # DialogButtonDirection
 
-警告弹窗中按钮的对齐方式。
+The arrangement of buttons in dialog.
 
 **Since:** 23
 
@@ -16,7 +16,7 @@
 AUTO = 0
 ```
 
-两个及以下按钮水平排布，两个以上为竖直排布。
+Two or fewer buttons are arranged horizontally,and two or more buttons are arranged vertically.
 
 **Since:** 23
 
@@ -34,7 +34,7 @@ AUTO = 0
 HORIZONTAL = 1
 ```
 
-按钮水平布局。
+Buttons are arranged horizontally.
 
 **Since:** 23
 
@@ -52,7 +52,7 @@ HORIZONTAL = 1
 VERTICAL = 2
 ```
 
-按钮竖直布局。
+Buttons are arranged vertically.
 
 **Since:** 23
 

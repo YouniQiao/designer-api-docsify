@@ -1,6 +1,6 @@
 # CommonShapeMethod
 
-常见的形状方法。
+Common shape method class
 
 **Since:** 23
 
@@ -22,7 +22,7 @@ import { RectShape, CircleShape, EllipseShape, PathShape } from 'kits/@kit.ArkUI
 fill(color: ResourceColor): this
 ```
 
-设置形状的填充区域的透明度，黑色表示完全透明，白色表示完全不透明。
+Sets the fill color of the shape.
 
 **Since:** 23
 
@@ -38,13 +38,13 @@ fill(color: ResourceColor): this
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| color | [ResourceColor](arkts-arkui-resourcecolor-t.md) | Yes | 形状的填充区域的透明度，黑色表示完全透明，白色表示完全不透明。 |
+| color | [ResourceColor](arkts-arkui-resourcecolor-t.md) | Yes |  |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| this | 返回当前对象。 |
+| this |  |
 
 ## offset
 
@@ -52,7 +52,7 @@ fill(color: ResourceColor): this
 offset(offset: Position): this
 ```
 
-设置相对于组件布局位置的坐标偏移。
+Sets coordinate offset relative to the layout completion position.
 
 **Since:** 23
 
@@ -68,13 +68,13 @@ offset(offset: Position): this
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| offset | [Position](arkts-arkui-position-i.md) | Yes | 相对于组件布局位置的坐标偏移。 |
+| offset | [Position](arkts-arkui-position-i.md) | Yes |  |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| this | 返回当前对象。 |
+| this |  |
 
 ## position
 
@@ -82,7 +82,7 @@ offset(offset: Position): this
 position(position: Position): this
 ```
 
-设置形状的位置。
+Sets the position of the shape.
 
 **Since:** 23
 
@@ -98,11 +98,11 @@ position(position: Position): this
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| position | [Position](arkts-arkui-position-i.md) | Yes | 设置形状的位置。 |
+| position | [Position](arkts-arkui-position-i.md) | Yes |  |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| this | 返回当前对象。 |
+| this |  |
 

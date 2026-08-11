@@ -1,6 +1,6 @@
 # TextRange
 
-文本范围。
+Defines range of text type component.
 
 **Since:** 23
 
@@ -16,7 +16,7 @@
 end?: int
 ```
 
-结束索引，从0开始。
+End offset.The value should be an integer.
 
 **Type:** int
 
@@ -38,7 +38,7 @@ end?: int
 start?: int
 ```
 
-起始索引，从0开始。
+Start offset.The value should be an integer.
 
 **Type:** int
 

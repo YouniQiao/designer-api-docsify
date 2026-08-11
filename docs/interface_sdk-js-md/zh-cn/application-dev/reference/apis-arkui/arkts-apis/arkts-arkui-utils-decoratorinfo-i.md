@@ -22,7 +22,7 @@ decoratorName: string
 
 当对象属性使用[@Trace](../../../ui/state-management-static/arkts-static-new-observedV2-and-trace.md)时，值为：`@Trace`。
 
-当对象经过[makeObserved](../../apis-arkts/arkts-apis/arkts-arkts-atomics-atomicreference-c.md/arkts-arkts-atomics-atomicreference-c.md#compareandswap)转换时，值为：`MakeObserved`。
+当对象经过[makeObserved](arkts-arkui-arkui-withenv-withenvattribute-i.md#env)转换时，值为：`MakeObserved`。
 
 当对象为被V1装饰器装饰的built-in类型时，值为对象关联的装饰器名称。
 
@@ -56,7 +56,7 @@ dependentInfo: ElementInfo[]
 
 使用该可观察对象的组件信息。若对象没有用在任何UI上，则返回空数组。
 
-**类型：** [ElementInfo](arkts-arkui-arkui-statemanagement-elementinfo-i.md)[]
+**类型：** [ElementInfo](arkts-arkui-utils-elementinfo-i.md)[]
 
 **起始版本：** 24
 

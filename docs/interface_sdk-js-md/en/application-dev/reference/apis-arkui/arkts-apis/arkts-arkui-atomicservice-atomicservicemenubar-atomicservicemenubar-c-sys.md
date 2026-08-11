@@ -1,10 +1,6 @@
 # AtomicServiceMenuBar (System API)
 
-依赖当前原子化服务的UI上下文，创建AtomicServiceMenuBar对象，用于操控右上角菜单功能胶囊的显隐状态。
-
-> **说明：**
-> 
-> 该组件从API version 23开始支持。后续版本的新增接口，采用上角标单独标记接口的起始版本。
+Creates an **AtomicServiceMenuBar** object based on the context of the current atomic service. The object is used to control the display of the menu function capsule in the upper right corner.
 
 **Since:** 23
 
@@ -28,7 +24,7 @@ import { AtomicServiceMenuBar } from 'kits/@kit.ArkUI';
 constructor(uiContext: UIContext)
 ```
 
-AtomicServiceMenuBar的构造函数。
+A constructor used to create an **AtomicServiceMenuBar** object.
 
 **Since:** 23
 
@@ -48,7 +44,7 @@ AtomicServiceMenuBar的构造函数。
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| uiContext | [UIContext](arkts-arkui-arkui-uicontext-uicontext-c-sys.md) | Yes | 当前原子化服务的UI上下文信息。 |
+| uiContext | [UIContext](arkts-arkui-arkui-uicontext-uicontext-c-sys.md) | Yes | Context information of the current atomic service. |
 
 ## setVisible
 
@@ -56,7 +52,7 @@ AtomicServiceMenuBar的构造函数。
 public setVisible(visible: boolean): void
 ```
 
-设置当前原子化服务菜单功能胶囊的显隐状态。
+Sets whether to display or hide the menu function capsule of the current atomic service.
 
 **Since:** 23
 
@@ -76,5 +72,5 @@ public setVisible(visible: boolean): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| visible | boolean | Yes | 菜单功能胶囊预期的状态。true表示显示菜单功能胶囊，false表示隐藏菜单功能胶囊。 |
+| visible | boolean | Yes | Expected status of the menu function capsule. true: The menu function capsule is displayed. false: The menu function capsule is hidden. |
 

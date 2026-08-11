@@ -1,11 +1,5 @@
 # isApplicationDisableForbidden（系统接口）
 
-## 导入模块
-
-```TypeScript
-import { bundleManager } from 'kits/@kit.AbilityKit';
-```
-
 ## isApplicationDisableForbidden
 
 ```TypeScript
@@ -46,11 +40,11 @@ function isApplicationDisableForbidden(bundleName: string, userId: int, appIndex
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 17700061 | The specified app index is invalid. |
-| 201 | Permission denied. |
-| 202 | Permission denied. Non-system APP calling system API. |
-| 17700004 | The specified user ID is not found. |
-| 17700001 | The specified bundle is not found. |
+| [17700061](../errorcode-bundle.md#17700061-指定的应用分身索引无效) | The specified app index is invalid. |
+| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission denied. Non-system APP calling system API. |
+| [17700004](../errorcode-bundle.md#17700004-指定的用户不存在) | The specified user ID is not found. |
+| [17700001](../errorcode-bundle.md#17700001-指定的bundlename不存在) | The specified bundle is not found. |
 
 ## 示例
 

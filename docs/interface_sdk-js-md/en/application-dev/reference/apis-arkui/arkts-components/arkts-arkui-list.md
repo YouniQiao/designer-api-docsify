@@ -1,67 +1,100 @@
 # List
 
-List是ArkUI中的列表容器组件，用于呈现连续、多行或多列的同类数据，例如图片和文本，支持垂直或水平滚动。配合LazyForEach或Repeat可实现懒加载，提升长列表场景下的启动速度并减少内存消耗；支持预加载以减少滚动丢帧、提
-升流畅性；支持单列/多列布局、分组列表、吸顶吸底等能力，适用于消息列表、商品列表、设置页面等场景。
+The **List** component provides a list container that presents a series of list items arranged in a column with the
+same width. It supports presentations of the same type of data in a multiple and coherent row style, for example,
+images or text.
 
-List的懒加载是指组件按需加载显示区域内的子组件。相比全量加载，使用懒加载可以提升应用启动速度，减少内存消耗。List和
-[ForEach](docroot://ui/rendering-control/arkts-rendering-control-foreach.md)、
-[LazyForEach](docroot://ui/rendering-control/arkts-rendering-control-lazyforeach.md)、
-[Repeat](docroot://ui/rendering-control/arkts-new-rendering-control-repeat.md)结合，懒加载能力存在差异：
+Lazy loading of **List** loads the child components in the visible area as required. Compared with full loading, lazy
+loading can improve the app startup speed and reduce the memory usage. The lazy loading capabilities vary when the
+**List** component is used together with
+[ForEach](docroot://ui/rendering-control/arkts-rendering-control-foreach.md),
+[LazyForEach](docroot://ui/rendering-control/arkts-rendering-control-lazyforeach.md), or
+[Repeat](docroot://ui/rendering-control/arkts-new-rendering-control-repeat.md).
 
-- 当List和ForEach结合，会一次性创建所有的子组件，在需要的时候布局和渲染屏幕范围内的节点。当用户滑动时，划出屏幕范围的节点不会下树销毁，划入屏幕范围的节点会布局和渲染。
-- 当List和LazyForEach结合，会一次性创建、布局、渲染屏幕范围的节点。当用户滑动时，划出屏幕范围的节点会下树销毁，划入屏幕范围的节点会创建、布局、渲染。
-- 当List和带[virtualScroll]{@link RepeatAttribute#virtualScroll}的Repeat结合，它的懒加载行为和LazyForEach一致。当List和不带virtualScroll的
-Repeat结合，它的懒加载行为和ForEach一致。
+- When **List** is used together with **ForEach**, all child nodes are created at a time. The nodes within the screen
+range are laid out and rendered when needed. When a user swipes, the nodes that are out of the screen range are not
+removed from the tree, and the nodes that are within the screen range are laid out and rendered.
+- When **List** is used together with **LazyForEach**, all nodes within the screen range are created, laid out, and
+rendered at a time. When a user swipes, the nodes that are out of the screen range are removed from the tree, and the
+nodes that are within the screen range are created, laid out, and rendered.
+- When the **List** component is used together with **Repeat** with
+[virtualScroll]{@link RepeatAttribute#virtualScroll}, the lazy loading behavior is the same as that of
+**LazyForEach**. When the **List** component is used together with **Repeat** without **virtualScroll**, the lazy
+loading behavior is the same as that of **ForEach**.
 
-如果可滚动组件嵌套List组件，并且滚动方向相同，List组件又没有设置主轴尺寸时，List组件会全量加载子组件，导致懒加载失效。该场景推荐使用List嵌套
-[ListItemGroup]{@link ./list_item_group}组件以优化性能。
+If a scrollable component is nested in a **List** component, their scrolling directions are the same, and the main
+axis size is not set for the **List** component, the **List** component loads all child components. As a result, lazy
+loading does not take effect. In this scenario, you are advised to use the [ListItemGroup]{@link list_item_group}
+component to optimize the performance.
 
-List的预加载是指除了加载显示区域内可见的子组件外，还支持在空闲时隙提前加载部分显示区域外不可见的子组件。使用预加载可以减少滚动丢帧，提升流畅性。预加载需要结合懒加载才会生效。List支持通过
-[cachedCount]{@link ListAttribute#cachedCount(value: number)}设置预加载的数量。默认会预加载显示区域上下各一屏子组件（最大预加载16行子组件）。List和
-[ForEach](docroot://ui/rendering-control/arkts-rendering-control-foreach.md)、
-[LazyForEach](docroot://ui/rendering-control/arkts-rendering-control-lazyforeach.md)、
-[Repeat](docroot://ui/rendering-control/arkts-new-rendering-control-repeat.md)结合，预加载能力存在差异：
+Preloading in **List** refers to loading not only the visible child components within the display area but also some
+invisible child components outside the display area during idle time. Preloading can reduce frame loss during
+scrolling and improve smoothness. Preloading takes effect only when lazy loading is used. You can set the number of
+components to be preloaded for the **List** component using
+[cachedCount]{@link ListAttribute#cachedCount(value: number)}. By default, child components equivalent to one screen
+above and below the visible area are preloaded (up to a maximum of 16 rows). The preloading capabilities vary when
+the **List** component is used together with
+[ForEach](docroot://ui/rendering-control/arkts-rendering-control-foreach.md),
+[LazyForEach](docroot://ui/rendering-control/arkts-rendering-control-lazyforeach.md), or
+[Repeat](docroot://ui/rendering-control/arkts-new-rendering-control-repeat.md).
 
-- 当List和ForEach结合，如果设置了cachedCount，除了会布局显示区域内子组件外，还会在空闲时隙预布局显示区域外cachedCount范围内的子组件。
-- 当List和LazyForEach结合，如果设置了cachedCount，除了会创建和布局显示区域内子组件外，还会在空闲时隙预创建和预布局显示区域外cachedCount范围内的子组件。
-- 当List和带[virtualScroll]{@link RepeatAttribute#virtualScroll}的Repeat结合，它的预加载行为和LazyForEach一致。当List和不带virtualScroll的
-Repeat结合，它的预加载行为和ForEach一致。
+- When the **List** component is used together with **ForEach** and **cachedCount** is set, in addition to laying out
+child components within the visible area, child components within the range of **cachedCount** outside the visible
+area are pre-laid out during idle time.
+- When the **List** component is used together with **LazyForEach** and **cachedCount** is set, in addition to
+creating and laying out child components within the display area, child components within the range of
+**cachedCount** outside the display area are pre-created and pre-laid out during idle time.
+- When the **List** component is used together with **Repeat** with
+[virtualScroll]{@link RepeatAttribute#virtualScroll}, the preloading behavior is the same as that of **LazyForEach**.
+When the **List** component is used together with **Repeat** without **virtualScroll**, the preloading behavior is
+the same as that of **ForEach**.
 
-> **说明：**
->
-> 组件内部已绑定手势实现跟手滚动等功能，需要增加自定义手势操作时请参考[手势拦截增强]{@link ./common}进行处理。
+> **NOTE**
 
-## 子组件
+> The component has been bound with gestures to implement functions such as follow-up scrolling. If you need to add
+> custom gestures, refer to [Gesture Blocking Enhancement]{@link common}.
 
-仅支持[ListItem]{@link ./list_item}、[ListItemGroup]{@link ./list_item_group}子组件和自定义组件。自定义组件在List下使用时，请使用ListItem或ListItemGroup作为自定义组件的顶层组件，请勿直接给自定义组件设置属性和事件方法，因为List通过ListItem或ListItemGroup管理子组件的布局和事件处理，直接设置可能导致部分功能无法正常生效。
+## Child Components
 
-支持通过渲染控制类型（[if/else](docroot://ui/rendering-control/arkts-rendering-control-ifelse.md)、  
-[ForEach](docroot://ui/rendering-control/arkts-rendering-control-foreach.md)、  
-[LazyForEach](docroot://ui/rendering-control/arkts-rendering-control-lazyforeach.md)和  
-[Repeat](docroot://ui/rendering-control/arkts-new-rendering-control-repeat.md)）动态生成子组件，更推荐使用LazyForEach或Repeat以优化性能。
+Only the [ListItem]{@link list_item} and [ListItemGroup]{@link list_item_group} child components and custom components are supported. When using custom components inside **List**, you are advised to wrap the custom component with a **ListItem** or **ListItemGroup** as the top-level container. Setting attributes or event methods directly on custom components is not recommended.
 
-> **说明：**
+Child components can be dynamically generated using rendering control types  
+[if/else](docroot://ui/rendering-control/arkts-rendering-control-ifelse.md),  
+[ForEach](docroot://ui/rendering-control/arkts-rendering-control-foreach.md),  
+[LazyForEach](docroot://ui/rendering-control/arkts-rendering-control-lazyforeach.md), and  
+[Repeat](docroot://ui/rendering-control/arkts-new-rendering-control-repeat.md). **LazyForEach** or **Repeat** is recommended to optimize performance.
+
+> **NOTE：**
 > 
-> 在处理大量子组件时遇到卡顿问题，请采用懒加载、缓存列表项、动态预加载、组件复用和布局优化等方法进行优化。
+> If performance lag occurs when you process a large number of child components, consider using lazy loading, list
+> item caching, dynamic preloading, component reuse, and layout optimization. For best practices, see
+> [Optimizing Frame Loss for Long List Loading](https://developer.huawei.com/consumer/en/doc/best-practices/bpta-best-practices-long-list).
 > 
-> 从API version 21开始，List单个子组件的宽高最大为16777216px；API version 20及之前，List单个子组件的宽高最大为1000000px。子组件超出该大小可能导致滚动或显示异常。
+> Starting from API version 21, the maximum width or height for a single child component inside a **List** container
+> is 16,777,216 px. In API version 20 and earlier versions, the limit was 1,000,000 px. If a child component exceeds
+> the applicable size limit, scrolling or display behavior may become abnormal.
 > 
-> List的子组件的索引值计算规则：
+> Below are the rules for calculating the indexes of the child components of **List**:
 > 
-> - 按子组件的顺序依次递增。
+> - The index increases in ascending order of child components.
 > 
-> - if/else语句中，只有条件成立的分支内的子组件会参与索引值计算，条件不成立的分支内子组件不计算索引值。
+> - In the **if/else** statement, only the child components for which the condition evaluates to true participate in
+> the index calculation.
 > 
-> - ForEach/LazyForEach/Repeat语句中，会计算展开所有子组件索引值。
+> - In the **ForEach**, **LazyForEach**, or **Repeat** statement, the indexes of all expanded subnodes are
+> calculated.
 > 
-> - [if/else](docroot://ui/rendering-control/arkts-rendering-control-ifelse.md)、
-> [ForEach](docroot://ui/rendering-control/arkts-rendering-control-foreach.md)、
-> [LazyForEach](docroot://ui/rendering-control/arkts-rendering-control-lazyforeach.md)和
-> [Repeat](docroot://ui/rendering-control/arkts-new-rendering-control-repeat.md)发生变化以后，会更新子组件索引值。
+> - After changes occur in [if/else](docroot://ui/rendering-control/arkts-rendering-control-ifelse.md),
+> [ForEach](docroot://ui/rendering-control/arkts-rendering-control-foreach.md),
+> [LazyForEach](docroot://ui/rendering-control/arkts-rendering-control-lazyforeach.md), and
+> [Repeat](docroot://ui/rendering-control/arkts-new-rendering-control-repeat.md), index values are updated
+> accordingly for child components.
 > 
-> - ListItemGroup作为一个整体计算一个索引值，ListItemGroup内部的ListItem不计算索引值。
+> - Each **ListItemGroup** component is taken as a whole and assigned an index, and the indexes of the list items
+> within are not included in the index calculation.
 > 
-> - List子组件的visibility属性设置为Hidden或None依然会计算索引值。
+> - Child components of **List** whose **visibility** attribute is set to **Hidden** or **None** are included in the
+> index calculation.
 
 ## List
 
@@ -69,7 +102,7 @@ Repeat结合，它的预加载行为和ForEach一致。
 List(options?: ListOptions)
 ```
 
-创建List列表容器。
+Creates a list container.
 
 **Since:** 7
 
@@ -87,7 +120,7 @@ List(options?: ListOptions)
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| options | [ListOptions](arkts-arkui-listoptions-i.md) | No | 设置List组件参数。不传入时使用默认配置。 |
+| options | [ListOptions](arkts-arkui-listoptions-i.md) | No | Options of the **List** component. |
 
 ## Summary
 

@@ -1,11 +1,5 @@
 # getMaterialInfo
 
-## 导入模块
-
-```TypeScript
-import { uiMaterial } from 'kits/@kit.ArkUI';
-```
-
 ## getMaterialInfo
 
 ```TypeScript

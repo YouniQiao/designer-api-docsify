@@ -11,12 +11,6 @@ DataShare管理工具实例，可使用此实例访问或管理服务端的数�
 
 **系统能力：** SystemCapability.DistributedDataManager.DataShare.Consumer
 
-## 导入模块
-
-```TypeScript
-import { dataShare } from 'kits/@kit.ArkData';
-```
-
 ## addTemplate
 
 ```TypeScript
@@ -49,10 +43,10 @@ addTemplate(uri: string, subscriberId: string, template: Template): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 401 | Parameter error.Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameters types. |
-| 15700013 | The DataShareHelper instance is already closed.<br>**适用版本：** 12+ |
-| 15700011 | The URI is not exist. |
-| 202 | Permission verification failed. A non-system application calls a system API.<br>**适用版本：** 12+ |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error.Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameters types. |
+| [15700013](../errorcode-datashare.md#15700013-datasharehelper实例被关闭) | The DataShareHelper instance is already closed.<br>**适用版本：** 12+ |
+| [15700011](../errorcode-datashare.md#15700011-uri不存在) | The URI is not exist. |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed. A non-system application calls a system API.<br>**适用版本：** 12+ |
 
 ## 示例
 
@@ -114,11 +108,13 @@ batchInsert(uri: string, values: Array<ValuesBucket>, callback: AsyncCallback<in
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 401 | Parameter error.Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameters types. |
-| 15700013 | The DataShareHelper instance is already closed.<br>**适用版本：** 12+ |
-| 202 | Permission verification failed. A non-system application calls a system API.<br>**适用版本：** 12+ |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error.Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameters types. |
+| [15700013](../errorcode-datashare.md#15700013-datasharehelper实例被关闭) | The DataShareHelper instance is already closed.<br>**适用版本：** 12+ |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed. A non-system application calls a system API.<br>**适用版本：** 12+ |
 
 ## 示例
+
+ArkTS-Dyn示例：
 
 ```TypeScript
 import { ValuesBucket } from '@kit.ArkData';
@@ -143,7 +139,35 @@ try {
   let code = (err as BusinessError).code;
   let message = (err as BusinessError).message;
   console.error(`Failed to batch insert. Code: ${code}, message: ${message}`);
-}
+};
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+import { ValuesBucket } from '@kit.ArkData';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let uri = ("datashare:///com.samples.datasharetest.DataShare");
+let vbs: Array<ValuesBucket> = [
+  { "name": "roe11", "age": 21, "salary": 20.5 }
+];
+
+try {
+  if (dataShareHelper != undefined) {
+    (dataShareHelper as dataShare.DataShareHelper).batchInsert(uri, vbs, (err: BusinessError | null, data: int | undefined) => {
+      if (err?.message) {
+        console.error(`Failed to batch insert. Code: ${err?.code}, message: ${err?.message}`);
+        return;
+      }
+      if (data != undefined) {
+        console.info("batchInsert succeed, data : " + data);
+      }
+    });
+  }
+} catch (err: BusinessError) {
+  console.error(`Failed to batch insert. Code: ${err.code}, message: ${err.message}`);
+};
 ```
 
 ## batchInsert
@@ -189,11 +213,13 @@ batchInsert(uri: string, values: Array<ValuesBucket>): Promise<int>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 401 | Parameter error.Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameters types. |
-| 15700013 | The DataShareHelper instance is already closed.<br>**适用版本：** 12+ |
-| 202 | Permission verification failed. A non-system application calls a system API.<br>**适用版本：** 12+ |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error.Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameters types. |
+| [15700013](../errorcode-datashare.md#15700013-datasharehelper实例被关闭) | The DataShareHelper instance is already closed.<br>**适用版本：** 12+ |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed. A non-system application calls a system API.<br>**适用版本：** 12+ |
 
 ## 示例
+
+ArkTS-Dyn示例：
 
 ```TypeScript
 import { ValuesBucket } from '@kit.ArkData';
@@ -216,7 +242,28 @@ try {
   let code = (err as BusinessError).code;
   let message = (err as BusinessError).message;
   console.error(`Failed to batch insert. Code: ${code}, message: ${message}`);
-}
+};
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+import { ValuesBucket } from '@kit.ArkData';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let uri = ("datashare:///com.samples.datasharetest.DataShare");
+let vbs: Array<ValuesBucket> = [
+  { "name": "roe11", "age": 21, "salary": 20.5 }
+]
+
+try {
+  if (dataShareHelper != undefined) {
+    let data: int = await (dataShareHelper as dataShare.DataShareHelper).batchInsert(uri, vbs);
+    console.info("batchInsert succeed, data : " + data);
+  }
+} catch (err: BusinessError) {
+  console.error(`Failed to batch insert. Code: ${err.code}, message: ${err.message}`);
+};
 ```
 
 ## batchUpdate
@@ -249,7 +296,7 @@ batchUpdate(operations: Record<string, Array<UpdateOperation>>): Promise<Record<
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| operations | [Record](../../apis-default/arkts-apis/arkts-record-t.md)&lt;string, Array&lt;UpdateOperation&gt;&gt; | 是 | 要更新数据的路径、筛选条件和数据集合。 |
+| operations | Record&lt;string, Array&lt;UpdateOperation&gt;&gt; | 是 | 要更新数据的路径、筛选条件和数据集合。 |
 
 **返回值：**
 
@@ -261,10 +308,10 @@ batchUpdate(operations: Record<string, Array<UpdateOperation>>): Promise<Record<
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 401 | Parameter error.Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameters types. |
-| 15700013 | The DataShareHelper instance is already closed. |
-| 202 | Permission verification failed. A non-system application calls a system API. |
-| 15700000 | Inner error. Possible causes: 1.The internal status is abnormal; 2.The interface is incorrectly used; 3.Permission configuration error; 4.A system error. |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error.Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameters types. |
+| [15700013](../errorcode-datashare.md#15700013-datasharehelper实例被关闭) | The DataShareHelper instance is already closed. |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed. A non-system application calls a system API. |
+| [15700000](../errorcode-datashare.md#15700000-内部错误) | Inner error. Possible causes: 1.The internal status is abnormal; 2.The interface is incorrectly used; 3.Permission configuration error; 4.A system error. |
 
 ## 示例
 
@@ -352,8 +399,8 @@ close(): Promise<void>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 202 | Permission verification failed. A non-system application calls a system API.<br>**适用版本：** 19+ |
-| 15700000 | Inner error. |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed. A non-system application calls a system API.<br>**适用版本：** 19+ |
+| [15700000](../errorcode-datashare.md#15700000-内部错误) | Inner error. |
 
 ## 示例
 
@@ -394,10 +441,10 @@ delTemplate(uri: string, subscriberId: string): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 401 | Parameter error.Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameters types. |
-| 15700013 | The DataShareHelper instance is already closed.<br>**适用版本：** 12+ |
-| 15700011 | The URI is not exist. |
-| 202 | Permission verification failed. A non-system application calls a system API.<br>**适用版本：** 12+ |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error.Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameters types. |
+| [15700013](../errorcode-datashare.md#15700013-datasharehelper实例被关闭) | The DataShareHelper instance is already closed.<br>**适用版本：** 12+ |
+| [15700011](../errorcode-datashare.md#15700011-uri不存在) | The URI is not exist. |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed. A non-system application calls a system API.<br>**适用版本：** 12+ |
 
 ## 示例
 
@@ -461,11 +508,13 @@ delete(uri: string, predicates: dataSharePredicates.DataSharePredicates, callbac
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 401 | Parameter error.Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameters types. |
-| 15700013 | The DataShareHelper instance is already closed.<br>**适用版本：** 12+ |
-| 202 | Permission verification failed. A non-system application calls a system API.<br>**适用版本：** 12+ |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error.Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameters types. |
+| [15700013](../errorcode-datashare.md#15700013-datasharehelper实例被关闭) | The DataShareHelper instance is already closed.<br>**适用版本：** 12+ |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed. A non-system application calls a system API.<br>**适用版本：** 12+ |
 
 ## 示例
+
+ArkTS-Dyn示例：
 
 ```TypeScript
 import { dataSharePredicates } from '@kit.ArkData';
@@ -488,7 +537,33 @@ try {
   let code = (err as BusinessError).code;
   let message = (err as BusinessError).message;
   console.error(`Failed to delete. Code: ${code}, message: ${message}`);
-}
+};
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+import { dataSharePredicates } from '@kit.ArkData';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let uri = ("datashare:///com.samples.datasharetest.DataShare");
+let da = new dataSharePredicates.DataSharePredicates();
+da.equalTo("name", "ZhangSan");
+try {
+  if (dataShareHelper != undefined) {
+    (dataShareHelper as dataShare.DataShareHelper).delete(uri, da, (err: BusinessError | null, data: int | undefined) => {
+      if (err?.message) {
+        console.error(`Failed to delete. Code: ${err?.code}, message: ${err?.message}`);
+        return;
+      }
+      if (data != undefined) {
+        console.info("delete succeed, data : " + data);
+      }
+    });
+  }
+} catch (err: BusinessError) {
+  console.error(`Failed to delete. Code: ${err.code}, message: ${err.message}`);
+};
 ```
 
 ## delete
@@ -536,11 +611,13 @@ delete(uri: string, predicates: dataSharePredicates.DataSharePredicates): Promis
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 401 | Parameter error.Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameters types. |
-| 15700013 | The DataShareHelper instance is already closed.<br>**适用版本：** 12+ |
-| 202 | Permission verification failed. A non-system application calls a system API.<br>**适用版本：** 12+ |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error.Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameters types. |
+| [15700013](../errorcode-datashare.md#15700013-datasharehelper实例被关闭) | The DataShareHelper instance is already closed.<br>**适用版本：** 12+ |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed. A non-system application calls a system API.<br>**适用版本：** 12+ |
 
 ## 示例
+
+ArkTS-Dyn示例：
 
 ```TypeScript
 import { dataSharePredicates } from '@kit.ArkData';
@@ -561,7 +638,26 @@ try {
   let code = (err as BusinessError).code;
   let message = (err as BusinessError).message;
   console.error(`Failed to delete. Code: ${code}, message: ${message}`);
-}
+};
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+import { dataSharePredicates } from '@kit.ArkData';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let uri = ("datashare:///com.samples.datasharetest.DataShare");
+let da = new dataSharePredicates.DataSharePredicates();
+da.equalTo("name", "ZhangSan");
+try {
+  if (dataShareHelper != undefined) {
+    let data: int = await (dataShareHelper as dataShare.DataShareHelper).delete(uri, da);
+    console.info("delete succeed, data : " + data);
+  }
+} catch (err: BusinessError) {
+  console.error(`Failed to delete. Code: ${err.code}, message: ${err.message}`);
+};
 ```
 
 ## denormalizeUri
@@ -593,9 +689,9 @@ denormalizeUri(uri: string, callback: AsyncCallback<string>): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 401 | Parameter error.Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameters types.<br>**适用版本：** 12+ |
-| 15700013 | The DataShareHelper instance is already closed.<br>**适用版本：** 12+ |
-| 202 | Permission verification failed. A non-system application calls a system API.<br>**适用版本：** 12+ |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error.Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameters types.<br>**适用版本：** 12+ |
+| [15700013](../errorcode-datashare.md#15700013-datasharehelper实例被关闭) | The DataShareHelper instance is already closed.<br>**适用版本：** 12+ |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed. A non-system application calls a system API.<br>**适用版本：** 12+ |
 
 ## 示例
 
@@ -648,9 +744,9 @@ denormalizeUri(uri: string): Promise<string>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 401 | Parameter error.Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameters types.<br>**适用版本：** 12+ |
-| 15700013 | The DataShareHelper instance is already closed.<br>**适用版本：** 12+ |
-| 202 | Permission verification failed. A non-system application calls a system API.<br>**适用版本：** 12+ |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error.Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameters types.<br>**适用版本：** 12+ |
+| [15700013](../errorcode-datashare.md#15700013-datasharehelper实例被关闭) | The DataShareHelper instance is already closed.<br>**适用版本：** 12+ |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed. A non-system application calls a system API.<br>**适用版本：** 12+ |
 
 ## 示例
 
@@ -698,10 +794,10 @@ getPublishedData(bundleName: string, callback: AsyncCallback<Array<PublishedItem
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 401 | Parameter error.Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameters types. |
-| 15700013 | The DataShareHelper instance is already closed.<br>**适用版本：** 12+ |
-| 15700012 | The data area does not exist. |
-| 202 | Permission verification failed. A non-system application calls a system API.<br>**适用版本：** 12+ |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error.Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameters types. |
+| [15700013](../errorcode-datashare.md#15700013-datasharehelper实例被关闭) | The DataShareHelper instance is already closed.<br>**适用版本：** 12+ |
+| [15700012](../errorcode-datashare.md#15700012-数据区不存在) | The data area does not exist. |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed. A non-system application calls a system API.<br>**适用版本：** 12+ |
 
 ## 示例
 
@@ -752,10 +848,10 @@ getPublishedData(bundleName: string): Promise<Array<PublishedItem>>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 401 | Parameter error.Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameters types. |
-| 15700013 | The DataShareHelper instance is already closed.<br>**适用版本：** 12+ |
-| 15700012 | The data area does not exist. |
-| 202 | Permission verification failed. A non-system application calls a system API.<br>**适用版本：** 12+ |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error.Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameters types. |
+| [15700013](../errorcode-datashare.md#15700013-datasharehelper实例被关闭) | The DataShareHelper instance is already closed.<br>**适用版本：** 12+ |
+| [15700012](../errorcode-datashare.md#15700012-数据区不存在) | The data area does not exist. |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed. A non-system application calls a system API.<br>**适用版本：** 12+ |
 
 ## 示例
 
@@ -805,11 +901,13 @@ insert(uri: string, value: ValuesBucket, callback: AsyncCallback<int>): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 401 | Parameter error.Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameters types. |
-| 15700013 | The DataShareHelper instance is already closed.<br>**适用版本：** 12+ |
-| 202 | Permission verification failed. A non-system application calls a system API.<br>**适用版本：** 12+ |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error.Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameters types. |
+| [15700013](../errorcode-datashare.md#15700013-datasharehelper实例被关闭) | The DataShareHelper instance is already closed.<br>**适用版本：** 12+ |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed. A non-system application calls a system API.<br>**适用版本：** 12+ |
 
 ## 示例
+
+ArkTS-Dyn示例：
 
 ```TypeScript
 import { ValuesBucket } from '@kit.ArkData';
@@ -841,7 +939,39 @@ try {
   let code = (err as BusinessError).code;
   let message = (err as BusinessError).message;
   console.error(`Failed to insert. Code: ${code}, message: ${message}`);
-}
+};
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+import { ValuesBucket } from '@kit.ArkData';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let uri = ("datashare:///com.samples.datasharetest.DataShare");
+let value1: string = "rose";
+let value2: int = 22;
+let value3: double = 200.5;
+const valueBucket: ValuesBucket = {
+  "name": value1,
+  "age": value2,
+  "salary": value3,
+};
+try {
+  if (dataShareHelper != undefined) {
+    (dataShareHelper as dataShare.DataShareHelper).insert(uri, valueBucket, (err: BusinessError | null, data: int | undefined) => {
+      if (err?.message) {
+        console.error(`Failed to insert. Code: ${err?.code}, message: ${err?.message}`);
+        return;
+      }
+      if (data != undefined) {
+        console.info("insert succeed, data : " + data);
+      }
+    });
+  }
+} catch (err: BusinessError) {
+  console.error(`Failed to insert. Code: ${err.code}, message: ${err.message}`);
+};
 ```
 
 ## insert
@@ -889,11 +1019,13 @@ insert(uri: string, value: ValuesBucket): Promise<int>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 401 | Parameter error.Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameters types. |
-| 15700013 | The DataShareHelper instance is already closed.<br>**适用版本：** 12+ |
-| 202 | Permission verification failed. A non-system application calls a system API.<br>**适用版本：** 12+ |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error.Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameters types. |
+| [15700013](../errorcode-datashare.md#15700013-datasharehelper实例被关闭) | The DataShareHelper instance is already closed.<br>**适用版本：** 12+ |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed. A non-system application calls a system API.<br>**适用版本：** 12+ |
 
 ## 示例
+
+ArkTS-Dyn示例：
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -923,7 +1055,32 @@ try {
   let code = (err as BusinessError).code;
   let message = (err as BusinessError).message;
   console.error(`Failed to insert. Code: ${code}, message: ${message}`);
-}
+};
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+import { ValuesBucket } from '@kit.ArkData';
+
+let uri = ("datashare:///com.samples.datasharetest.DataShare");
+let value1: string = "rose1";
+let value2: int = 21;
+let value3: double = 20.5;
+const valueBucket: ValuesBucket = {
+  "name": value1,
+  "age": value2,
+  "salary": value3,
+};
+try {
+  if (dataShareHelper != undefined) {
+    let data: int = await (dataShareHelper as dataShare.DataShareHelper).insert(uri, valueBucket);
+    console.info("insert succeed, data : " + data);
+  }
+} catch (err: BusinessError) {
+  console.error(`Failed to insert. Code: ${err.code}, message: ${err.message}`);
+};
 ```
 
 ## normalizeUri
@@ -955,9 +1112,9 @@ normalizeUri(uri: string, callback: AsyncCallback<string>): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 401 | Parameter error.Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameters types.<br>**适用版本：** 12+ |
-| 15700013 | The DataShareHelper instance is already closed.<br>**适用版本：** 12+ |
-| 202 | Permission verification failed. A non-system application calls a system API.<br>**适用版本：** 12+ |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error.Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameters types.<br>**适用版本：** 12+ |
+| [15700013](../errorcode-datashare.md#15700013-datasharehelper实例被关闭) | The DataShareHelper instance is already closed.<br>**适用版本：** 12+ |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed. A non-system application calls a system API.<br>**适用版本：** 12+ |
 
 ## 示例
 
@@ -968,7 +1125,7 @@ let uri = "datashare:///com.samples.datasharetest.DataShare";
 if (dataShareHelper != undefined) {
   (dataShareHelper as dataShare.DataShareHelper).normalizeUri(uri, (err: BusinessError, data: string) => {
     if (err !== undefined) {
-      console.info("normalizeUri failed, error message : " + err);
+      console.error(`Failed to normalize URI. Code: ${err.code}, message: ${err.message}`);
     } else {
       console.info("normalizeUri = " + data);
     }
@@ -1010,9 +1167,9 @@ normalizeUri(uri: string): Promise<string>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 401 | Parameter error.Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameters types.<br>**适用版本：** 12+ |
-| 15700013 | The DataShareHelper instance is already closed.<br>**适用版本：** 12+ |
-| 202 | Permission verification failed. A non-system application calls a system API.<br>**适用版本：** 12+ |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error.Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameters types.<br>**适用版本：** 12+ |
+| [15700013](../errorcode-datashare.md#15700013-datasharehelper实例被关闭) | The DataShareHelper instance is already closed.<br>**适用版本：** 12+ |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed. A non-system application calls a system API.<br>**适用版本：** 12+ |
 
 ## 示例
 
@@ -1024,7 +1181,7 @@ if (dataShareHelper != undefined) {
   (dataShareHelper as dataShare.DataShareHelper).normalizeUri(uri).then((data: string) => {
     console.info("normalizeUri = " + data);
   }).catch((err: BusinessError) => {
-    console.info("normalizeUri failed, error message : " + err);
+    console.error(`Failed to normalize URI. Code: ${err.code}, message: ${err.message}`);
   });
 }
 ```
@@ -1060,9 +1217,9 @@ notifyChange(uri: string, callback: AsyncCallback<void>): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 401 | Parameter error.Mandatory parameters are left unspecified.<br>**适用版本：** 12+ |
-| 15700013 | The DataShareHelper instance is already closed.<br>**适用版本：** 12+ |
-| 202 | Permission verification failed. A non-system application calls a system API.<br>**适用版本：** 12+ |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error.Mandatory parameters are left unspecified.<br>**适用版本：** 12+ |
+| [15700013](../errorcode-datashare.md#15700013-datasharehelper实例被关闭) | The DataShareHelper instance is already closed.<br>**适用版本：** 12+ |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed. A non-system application calls a system API.<br>**适用版本：** 12+ |
 
 ## 示例
 
@@ -1111,9 +1268,9 @@ notifyChange(uri: string): Promise<void>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 401 | Parameter error.Mandatory parameters are left unspecified.<br>**适用版本：** 12+ |
-| 15700013 | The DataShareHelper instance is already closed.<br>**适用版本：** 12+ |
-| 202 | Permission verification failed. A non-system application calls a system API.<br>**适用版本：** 12+ |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error.Mandatory parameters are left unspecified.<br>**适用版本：** 12+ |
+| [15700013](../errorcode-datashare.md#15700013-datasharehelper实例被关闭) | The DataShareHelper instance is already closed.<br>**适用版本：** 12+ |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed. A non-system application calls a system API.<br>**适用版本：** 12+ |
 
 ## 示例
 
@@ -1160,9 +1317,9 @@ notifyChange(data: ChangeInfo): Promise<void>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 401 | Parameter error.Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameters types. |
-| 15700013 | The DataShareHelper instance is already closed. |
-| 202 | Permission verification failed. A non-system application calls a system API. |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error.Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameters types. |
+| [15700013](../errorcode-datashare.md#15700013-datasharehelper实例被关闭) | The DataShareHelper instance is already closed. |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed. A non-system application calls a system API. |
 
 ## 示例
 
@@ -1213,9 +1370,9 @@ off(type: 'dataChange', uri: string, callback?: AsyncCallback<void>): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 401 | Parameter error.Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameters types.<br>**适用版本：** 12+ |
-| 15700013 | The DataShareHelper instance is already closed.<br>**适用版本：** 12+ |
-| 202 | Permission verification failed. A non-system application calls a system API.<br>**适用版本：** 12+ |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error.Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameters types.<br>**适用版本：** 12+ |
+| [15700013](../errorcode-datashare.md#15700013-datasharehelper实例被关闭) | The DataShareHelper instance is already closed.<br>**适用版本：** 12+ |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed. A non-system application calls a system API.<br>**适用版本：** 12+ |
 
 ## 示例
 
@@ -1262,9 +1419,9 @@ off(event: 'dataChange', type:SubscriptionType, uri: string, callback?: AsyncCal
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 401 | Parameter error.Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameters types. |
-| 15700013 | The DataShareHelper instance is already closed. |
-| 202 | Permission verification failed. A non-system application calls a system API. |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error.Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameters types. |
+| [15700013](../errorcode-datashare.md#15700013-datasharehelper实例被关闭) | The DataShareHelper instance is already closed. |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed. A non-system application calls a system API. |
 
 ## 示例
 
@@ -1323,9 +1480,9 @@ off(
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 401 | Parameter error.Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameters types. |
-| 15700013 | The DataShareHelper instance is already closed.<br>**适用版本：** 12+ |
-| 202 | Permission verification failed. A non-system application calls a system API.<br>**适用版本：** 12+ |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error.Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameters types. |
+| [15700013](../errorcode-datashare.md#15700013-datasharehelper实例被关闭) | The DataShareHelper instance is already closed.<br>**适用版本：** 12+ |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed. A non-system application calls a system API.<br>**适用版本：** 12+ |
 
 ## 示例
 
@@ -1379,9 +1536,9 @@ off(
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 401 | Parameter error.Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameters types. |
-| 15700013 | The DataShareHelper instance is already closed.<br>**适用版本：** 12+ |
-| 202 | Permission verification failed. A non-system application calls a system API.<br>**适用版本：** 12+ |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error.Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameters types. |
+| [15700013](../errorcode-datashare.md#15700013-datasharehelper实例被关闭) | The DataShareHelper instance is already closed.<br>**适用版本：** 12+ |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed. A non-system application calls a system API.<br>**适用版本：** 12+ |
 
 ## 示例
 
@@ -1427,8 +1584,21 @@ offDataChange(uri: string, callback?: Callback<void>): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 15700013 | The DataShareHelper instance is already closed. |
-| 202 | Permission verification failed. A non-system application calls a system API. |
+| [15700013](../errorcode-datashare.md#15700013-datasharehelper实例被关闭) | The DataShareHelper instance is already closed. |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed. A non-system application calls a system API. |
+
+## 示例
+
+```TypeScript
+let callback: () => void = (): void => {
+  console.info("**** Observer on callback ****");
+}
+let uri = ("datashare:///com.samples.datasharetest.DataShare");
+if (dataShareHelper != undefined) {
+  (dataShareHelper as dataShare.DataShareHelper).onDataChange(uri, callback);
+  (dataShareHelper as dataShare.DataShareHelper).offDataChange(uri, callback);
+}
+```
 
 ## offDataChange
 
@@ -1460,8 +1630,21 @@ offDataChange(type:SubscriptionType, uri: string, callback?: Callback<ChangeInfo
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 15700013 | The DataShareHelper instance is already closed. |
-| 202 | Permission verification failed. A non-system application calls a system API. |
+| [15700013](../errorcode-datashare.md#15700013-datasharehelper实例被关闭) | The DataShareHelper instance is already closed. |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed. A non-system application calls a system API. |
+
+## 示例
+
+```TypeScript
+let uri = ("datashare:///com.acts.datasharetest");
+export function callback(ChangeInfo:dataShare.ChangeInfo) {
+    console.info(' **** Observer callback **** ChangeInfo:' + JSON.stringify(ChangeInfo));
+}
+if (dataShareHelper !== undefined) {
+  (dataShareHelper as dataShare.DataShareHelper).onDataChange(dataShare.SubscriptionType.SUBSCRIPTION_TYPE_EXACT_URI, uri, callback);
+  (dataShareHelper as dataShare.DataShareHelper).offDataChange(dataShare.SubscriptionType.SUBSCRIPTION_TYPE_EXACT_URI, uri, callback);
+}
+```
 
 ## offPublishedDataChange
 
@@ -1503,8 +1686,21 @@ offPublishedDataChange(
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 15700013 | The DataShareHelper instance is already closed. |
-| 202 | Permission verification failed. A non-system application calls a system API. |
+| [15700013](../errorcode-datashare.md#15700013-datasharehelper实例被关闭) | The DataShareHelper instance is already closed. |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed. A non-system application calls a system API. |
+
+## 示例
+
+```TypeScript
+let offCallback: (node: dataShare.PublishedDataChangeNode) => void = (node:dataShare.PublishedDataChangeNode): void => {
+  console.info("**** Observer off callback ****");
+}
+let uris:Array<string> = ["city", "datashareproxy://com.acts.ohos.data.datasharetest/appInfo", "key2"];
+let subscriberId = '11';
+if (dataShareHelper != undefined) {
+  let result: Array<dataShare.OperationResult> = (dataShareHelper as dataShare.DataShareHelper).offPublishedDataChange(uris, subscriberId, offCallback);
+}
+```
 
 ## offRdbDataChange
 
@@ -1546,8 +1742,18 @@ offRdbDataChange(
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 15700013 | The DataShareHelper instance is already closed. |
-| 202 | Permission verification failed. A non-system application calls a system API. |
+| [15700013](../errorcode-datashare.md#15700013-datasharehelper实例被关闭) | The DataShareHelper instance is already closed. |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed. A non-system application calls a system API. |
+
+## 示例
+
+```TypeScript
+let uri = ("datashareproxy://com.samples.datasharetest.DataShare");
+let templateId:dataShare.TemplateId = {subscriberId:"11", bundleNameOfOwner:"com.acts.ohos.data.datasharetest"};
+if (dataShareHelper != undefined) {
+  let result: Array<dataShare.OperationResult> = (dataShareHelper as dataShare.DataShareHelper).offRdbDataChange([uri], templateId);
+}
+```
 
 ## on('dataChange')
 
@@ -1581,9 +1787,9 @@ on(type: 'dataChange', uri: string, callback: AsyncCallback<void>): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 401 | Parameter error.Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameters types.<br>**适用版本：** 12+ |
-| 15700013 | The DataShareHelper instance is already closed.<br>**适用版本：** 12+ |
-| 202 | Permission verification failed. A non-system application calls a system API.<br>**适用版本：** 12+ |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error.Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameters types.<br>**适用版本：** 12+ |
+| [15700013](../errorcode-datashare.md#15700013-datasharehelper实例被关闭) | The DataShareHelper instance is already closed.<br>**适用版本：** 12+ |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed. A non-system application calls a system API.<br>**适用版本：** 12+ |
 
 ## 示例
 
@@ -1630,9 +1836,9 @@ on(event: 'dataChange', type:SubscriptionType, uri: string, callback: AsyncCallb
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 401 | Parameter error.Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameters types. |
-| 15700013 | The DataShareHelper instance is already closed. |
-| 202 | Permission verification failed. A non-system application calls a system API. |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error.Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameters types. |
+| [15700013](../errorcode-datashare.md#15700013-datasharehelper实例被关闭) | The DataShareHelper instance is already closed. |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed. A non-system application calls a system API. |
 
 ## 示例
 
@@ -1690,9 +1896,9 @@ on(
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 401 | Parameter error.Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameters types. |
-| 15700013 | The DataShareHelper instance is already closed.<br>**适用版本：** 12+ |
-| 202 | Permission verification failed. A non-system application calls a system API.<br>**适用版本：** 12+ |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error.Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameters types. |
+| [15700013](../errorcode-datashare.md#15700013-datasharehelper实例被关闭) | The DataShareHelper instance is already closed.<br>**适用版本：** 12+ |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed. A non-system application calls a system API.<br>**适用版本：** 12+ |
 
 ## 示例
 
@@ -1701,7 +1907,7 @@ import { BusinessError } from '@kit.BasicServicesKit';
 
 let onCallback: (err: BusinessError, node: dataShare.RdbDataChangeNode) => void = (err: BusinessError, node:dataShare.RdbDataChangeNode): void => {
   if (!node.data.length) {
-    console.info("node.data is empty");
+    console.info("node.data.length is empty");
     return;
   }
   console.info("onCallback " + JSON.stringify(node.uri));
@@ -1761,9 +1967,9 @@ on(
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 401 | Parameter error.Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameters types. |
-| 15700013 | The DataShareHelper instance is already closed.<br>**适用版本：** 12+ |
-| 202 | Permission verification failed. A non-system application calls a system API.<br>**适用版本：** 12+ |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error.Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameters types. |
+| [15700013](../errorcode-datashare.md#15700013-datasharehelper实例被关闭) | The DataShareHelper instance is already closed.<br>**适用版本：** 12+ |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed. A non-system application calls a system API.<br>**适用版本：** 12+ |
 
 ## 示例
 
@@ -1819,8 +2025,20 @@ onDataChange(uri: string, callback: Callback<void>): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 15700013 | The DataShareHelper instance is already closed. |
-| 202 | Permission verification failed. A non-system application calls a system API. |
+| [15700013](../errorcode-datashare.md#15700013-datasharehelper实例被关闭) | The DataShareHelper instance is already closed. |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed. A non-system application calls a system API. |
+
+## 示例
+
+```TypeScript
+let onCallback: () => void = (): void => {
+  console.info("**** Observer on callback ****");
+}
+let uri = ("datashare:///com.samples.datasharetest.DataShare");
+if (dataShareHelper !== undefined) {
+  (dataShareHelper as dataShare.DataShareHelper).onDataChange(uri, onCallback);
+}
+```
 
 ## onDataChange
 
@@ -1852,8 +2070,20 @@ onDataChange(type:SubscriptionType, uri: string, callback: Callback<ChangeInfo>)
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 15700013 | The DataShareHelper instance is already closed. |
-| 202 | Permission verification failed. A non-system application calls a system API. |
+| [15700013](../errorcode-datashare.md#15700013-datasharehelper实例被关闭) | The DataShareHelper instance is already closed. |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed. A non-system application calls a system API. |
+
+## 示例
+
+```TypeScript
+let uri = ("datashare:///com.acts.datasharetest");
+export function callback(ChangeInfo:dataShare.ChangeInfo) {
+    console.info(' **** Observer callback **** ChangeInfo:' + JSON.stringify(ChangeInfo));
+}
+if (dataShareHelper !== undefined) {
+  (dataShareHelper as dataShare.DataShareHelper).onDataChange(dataShare.SubscriptionType.SUBSCRIPTION_TYPE_EXACT_URI, uri, callback);
+}
+```
 
 ## onPublishedDataChange
 
@@ -1895,8 +2125,31 @@ onPublishedDataChange(
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 15700013 | The DataShareHelper instance is already closed. |
-| 202 | Permission verification failed. A non-system application calls a system API. |
+| [15700013](../errorcode-datashare.md#15700013-datasharehelper实例被关闭) | The DataShareHelper instance is already closed. |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed. A non-system application calls a system API. |
+
+## 示例
+
+```TypeScript
+let onPublishCallback: (node: dataShare.PublishedDataChangeNode) => void = (node:dataShare.PublishedDataChangeNode): void => {
+  console.info("onPublishCallback node bundleName " + JSON.stringify(node.bundleName));
+  console.info("onPublishCallback node data size" + node.data.length);
+  for (let i = 0; i < node.data.length; i++) {
+    console.info("onPublishCallback node " + typeof node.data[i].data);
+    if (typeof node.data[i].data != 'string') {
+      let array: ArrayBuffer = node.data[i].data as ArrayBuffer;
+      let data: Uint8Array = new Uint8Array(array);
+      console.info("onPublishCallback " + i + " " + JSON.stringify(data));
+    }
+    console.info("onPublishCallback data " + i + " " + JSON.stringify(node.data[i]));
+  }
+}
+let uris:Array<string> = ['city', 'datashareproxy://com.acts.ohos.data.datasharetest/appInfo', 'key2'];
+let subscriberId = '11';
+if (dataShareHelper != undefined) {
+  let result: Array<dataShare.OperationResult> = (dataShareHelper as dataShare.DataShareHelper).onPublishedDataChange(uris, subscriberId, onPublishCallback);
+}
+```
 
 ## onRdbDataChange
 
@@ -1938,8 +2191,31 @@ onRdbDataChange(
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 15700013 | The DataShareHelper instance is already closed. |
-| 202 | Permission verification failed. A non-system application calls a system API. |
+| [15700013](../errorcode-datashare.md#15700013-datasharehelper实例被关闭) | The DataShareHelper instance is already closed. |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed. A non-system application calls a system API. |
+
+## 示例
+
+```TypeScript
+let onCallback: (node: dataShare.RdbDataChangeNode) => void = (node:dataShare.RdbDataChangeNode): void => {
+  if (!node.data.length) {
+    console.info("node.data.length is empty");
+    return;
+  }
+  console.info("onCallback " + JSON.stringify(node.uri));
+  console.info("onCallback " + JSON.stringify(node.templateId));
+  console.info("onCallback " + node.data.length);
+  for (let i = 0; i < node.data.length; i++) {
+    console.info("onCallback " + typeof node.data[i] + " " + node.data[i]);
+  }
+}
+
+let uri = ("datashareproxy://com.samples.datasharetest.DataShare");
+let templateId:dataShare.TemplateId = {subscriberId:"11", bundleNameOfOwner:"com.acts.ohos.data.datasharetest"};
+if (dataShareHelper != undefined) {
+  let result: Array<dataShare.OperationResult> = (dataShareHelper as dataShare.DataShareHelper).onRdbDataChange([uri], templateId, onCallback);
+}
+```
 
 ## publish
 
@@ -1990,10 +2266,10 @@ publish(
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 401 | Parameter error.Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameters types. |
-| 15700013 | The DataShareHelper instance is already closed.<br>**适用版本：** 12+ |
-| 15700012 | The data area is not exist. |
-| 202 | Permission verification failed. A non-system application calls a system API.<br>**适用版本：** 12+ |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error.Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameters types. |
+| [15700013](../errorcode-datashare.md#15700013-datasharehelper实例被关闭) | The DataShareHelper instance is already closed.<br>**适用版本：** 12+ |
+| [15700012](../errorcode-datashare.md#15700012-数据区不存在) | The data area is not exist. |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed. A non-system application calls a system API.<br>**适用版本：** 12+ |
 
 ## 示例
 
@@ -2052,10 +2328,10 @@ publish(
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 401 | Parameter error.Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameters types. |
-| 15700013 | The DataShareHelper instance is already closed.<br>**适用版本：** 12+ |
-| 15700012 | The data area is not exist. |
-| 202 | Permission verification failed. A non-system application calls a system API.<br>**适用版本：** 12+ |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error.Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameters types. |
+| [15700013](../errorcode-datashare.md#15700013-datasharehelper实例被关闭) | The DataShareHelper instance is already closed.<br>**适用版本：** 12+ |
+| [15700012](../errorcode-datashare.md#15700012-数据区不存在) | The data area is not exist. |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed. A non-system application calls a system API.<br>**适用版本：** 12+ |
 
 ## 示例
 
@@ -2118,10 +2394,10 @@ publish(data: Array<PublishedItem>, bundleName: string, version?: int): Promise<
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 401 | Parameter error.Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameters types. |
-| 15700013 | The DataShareHelper instance is already closed.<br>**适用版本：** 12+ |
-| 15700012 | The data area is not exist. |
-| 202 | Permission verification failed. A non-system application calls a system API.<br>**适用版本：** 12+ |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error.Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameters types. |
+| [15700013](../errorcode-datashare.md#15700013-datasharehelper实例被关闭) | The DataShareHelper instance is already closed.<br>**适用版本：** 12+ |
+| [15700012](../errorcode-datashare.md#15700012-数据区不存在) | The data area is not exist. |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed. A non-system application calls a system API.<br>**适用版本：** 12+ |
 
 ## 示例
 
@@ -2179,9 +2455,9 @@ query(
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 401 | Parameter error.Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameters types. |
-| 15700013 | The DataShareHelper instance is already closed.<br>**适用版本：** 12+ |
-| 202 | Permission verification failed. A non-system application calls a system API.<br>**适用版本：** 12+ |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error.Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameters types. |
+| [15700013](../errorcode-datashare.md#15700013-datasharehelper实例被关闭) | The DataShareHelper instance is already closed.<br>**适用版本：** 12+ |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed. A non-system application calls a system API.<br>**适用版本：** 12+ |
 
 ## 示例
 
@@ -2258,9 +2534,9 @@ query(
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 401 | Parameter error.Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameters types. |
-| 15700013 | The DataShareHelper instance is already closed.<br>**适用版本：** 12+ |
-| 202 | Permission verification failed. A non-system application calls a system API.<br>**适用版本：** 12+ |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error.Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameters types. |
+| [15700013](../errorcode-datashare.md#15700013-datasharehelper实例被关闭) | The DataShareHelper instance is already closed.<br>**适用版本：** 12+ |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed. A non-system application calls a system API.<br>**适用版本：** 12+ |
 
 ## 示例
 
@@ -2338,11 +2614,13 @@ update(
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 401 | Parameter error.Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameters types. |
-| 15700013 | The DataShareHelper instance is already closed.<br>**适用版本：** 12+ |
-| 202 | Permission verification failed. A non-system application calls a system API.<br>**适用版本：** 12+ |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error.Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameters types. |
+| [15700013](../errorcode-datashare.md#15700013-datasharehelper实例被关闭) | The DataShareHelper instance is already closed.<br>**适用版本：** 12+ |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed. A non-system application calls a system API.<br>**适用版本：** 12+ |
 
 ## 示例
+
+ArkTS-Dyn示例：
 
 ```TypeScript
 import { dataSharePredicates, ValuesBucket } from '@kit.ArkData';
@@ -2376,7 +2654,41 @@ try {
   let code = (err as BusinessError).code;
   let message = (err as BusinessError).message;
   console.error(`Failed to update. Code: ${code}, message: ${message}`);
-}
+};
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+import { dataSharePredicates, ValuesBucket } from '@kit.ArkData';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let uri = ("datashare:///com.samples.datasharetest.DataShare");
+let da = new dataSharePredicates.DataSharePredicates();
+da.equalTo("name", "ZhangSan");
+let value1: string = "roe1";
+let value2: int = 21;
+let value3: double = 20.5;
+const va: ValuesBucket = {
+  "name": value1,
+  "age": value2,
+  "salary": value3,
+};
+try {
+  if (dataShareHelper != undefined) {
+    (dataShareHelper as dataShare.DataShareHelper).update(uri, da, va, (err: BusinessError | null, data: int | undefined) => {
+      if (err?.message) {
+        console.error(`Failed to update. Code: ${err?.code}, message: ${err?.message}`);
+        return;
+      }
+      if (data != undefined) {
+        console.info("update succeed, data : " + data);
+      }
+    });
+  }
+} catch (err: BusinessError) {
+  console.error(`Failed to update. Code: ${err.code}, message: ${err.message}`);
+};
 ```
 
 ## update
@@ -2425,11 +2737,13 @@ update(uri: string, predicates: dataSharePredicates.DataSharePredicates, value: 
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 401 | Parameter error.Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameters types. |
-| 15700013 | The DataShareHelper instance is already closed.<br>**适用版本：** 12+ |
-| 202 | Permission verification failed. A non-system application calls a system API.<br>**适用版本：** 12+ |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error.Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameters types. |
+| [15700013](../errorcode-datashare.md#15700013-datasharehelper实例被关闭) | The DataShareHelper instance is already closed.<br>**适用版本：** 12+ |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed. A non-system application calls a system API.<br>**适用版本：** 12+ |
 
 ## 示例
+
+ArkTS-Dyn示例：
 
 ```TypeScript
 import { dataSharePredicates, ValuesBucket } from '@kit.ArkData';
@@ -2461,6 +2775,33 @@ try {
   let code = (err as BusinessError).code;
   let message = (err as BusinessError).message;
   console.error(`Failed to update. Code: ${code}, message: ${message}`);
-}
+};
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+import { dataSharePredicates, ValuesBucket } from '@kit.ArkData';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let uri = ("datashare:///com.samples.datasharetest.DataShare");
+let da = new dataSharePredicates.DataSharePredicates();
+da.equalTo("name", "ZhangSan");
+let value1: string = "roe1";
+let value2: int = 21;
+let value3: double = 20.5;
+const va: ValuesBucket = {
+  "name": value1,
+  "age": value2,
+  "salary": value3,
+};
+try {
+  if (dataShareHelper != undefined) {
+    let data: int = await (dataShareHelper as dataShare.DataShareHelper).update(uri, da, va);
+    console.info("update succeed, data : " + data);
+  }
+} catch (err: BusinessError) {
+  console.error(`Failed to update. Code: ${err.code}, message: ${err.message}`);
+};
 ```
 

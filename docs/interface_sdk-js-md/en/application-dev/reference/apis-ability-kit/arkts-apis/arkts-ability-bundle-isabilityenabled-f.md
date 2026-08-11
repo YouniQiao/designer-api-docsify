@@ -12,7 +12,7 @@ import { bundle } from 'kits/@kit.AbilityKit';
 function isAbilityEnabled(info: AbilityInfo, callback: AsyncCallback<boolean>): void
 ```
 
-根据给定的AbilityInfo查询ability是否已经启用，使用callback异步回调。
+Checks whether the ability that matches a given AbilityInfo object is enabled. This API uses an asynchronous callback to return the result.
 
 **Since:** 8
 
@@ -28,8 +28,8 @@ function isAbilityEnabled(info: AbilityInfo, callback: AsyncCallback<boolean>): 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| info | [AbilityInfo](arkts-ability-abilityinfo-abilityinfo-depr-i.md) | Yes | Ability的配置信息。 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;boolean&gt; | Yes | 回调函数，返回boolean代表是否启用。 |
+| info | [AbilityInfo](arkts-ability-abilityinfo-abilityinfo-depr-i.md) | Yes | Ability information. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;boolean&gt; | Yes | Callback used to return the result. **true** if enabled, **false** otherwise. |
 
 
 ## isAbilityEnabled
@@ -38,7 +38,7 @@ function isAbilityEnabled(info: AbilityInfo, callback: AsyncCallback<boolean>): 
 function isAbilityEnabled(info: AbilityInfo): Promise<boolean>
 ```
 
-根据给定的AbilityInfo查询ability是否已经启用，使用Promise异步回调。
+Checks whether the ability that matches a given AbilityInfo object is enabled. This API uses a promise to return the result.
 
 **Since:** 8
 
@@ -54,11 +54,11 @@ function isAbilityEnabled(info: AbilityInfo): Promise<boolean>
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| info | [AbilityInfo](arkts-ability-abilityinfo-abilityinfo-depr-i.md) | Yes | Ability的配置信息。 |
+| info | [AbilityInfo](arkts-ability-abilityinfo-abilityinfo-depr-i.md) | Yes | Ability information. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;boolean&gt; | Promise形式返回boolean代表是否启用。 |
+| Promise&lt;boolean&gt; | Promise used to return the result. **true** if enabled, **false** otherwise. |
 

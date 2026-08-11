@@ -1,6 +1,6 @@
 # MoveResult (System API)
 
-表示移动操作失败时的返回信息，移动成功时则没有返回信息。
+Represents the information returned when the move operation fails. If the operation is successful, no information is returned.
 
 **Since:** 11
 
@@ -26,7 +26,7 @@ import { fileAccess } from 'kits/@kit.CoreFileKit';
 destUri: string
 ```
 
-产生冲突的目标文件的 uri。如果非冲突导致的错误，则为空。
+URI of the conflicting file. If the error is not caused by a file conflict, **destUri** is empty.
 
 **Type:** string
 
@@ -52,7 +52,8 @@ destUri: string
 errCode: number
 ```
 
-错误码。接口抛出错误码的详细介绍请参见[文件管理错误码](../../../reference/apis-core-file-kit/errorcode-filemanagement.md)。
+Error code. For details about the error codes, see   
+[File Management Error Codes](../../../reference/apis-core-file-kit/errorcode-filemanagement.md).
 
 **Type:** number
 
@@ -78,7 +79,7 @@ errCode: number
 errMsg: string
 ```
 
-错误信息。
+Error message.
 
 **Type:** string
 
@@ -104,7 +105,7 @@ errMsg: string
 sourceUri: string
 ```
 
-源文件(夹) uri。
+URI of the source file or directory.
 
 **Type:** string
 

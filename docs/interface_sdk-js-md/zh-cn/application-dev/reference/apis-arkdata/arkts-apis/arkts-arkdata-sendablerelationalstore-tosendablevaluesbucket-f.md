@@ -1,11 +1,5 @@
 # toSendableValuesBucket
 
-## 导入模块
-
-```TypeScript
-import { sendableRelationalStore } from 'kits/@kit.ArkData';
-```
-
 ## toSendableValuesBucket
 
 ```TypeScript
@@ -38,8 +32,8 @@ function toSendableValuesBucket(valuesBucket: NonSendableBucket): ValuesBucket
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 401 | Parameter error. Possible causes: &lt;br&gt;1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; &lt;br&gt;3. Parameter verification failed. |
-| 14800000 | Inner error. |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: &lt;br&gt;1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; &lt;br&gt;3. Parameter verification failed. |
+| [14800000](../../apis-basic-services-kit/errorcode-settings.md#14800000-参数检查失败) | Inner error. |
 
 ## 示例
 

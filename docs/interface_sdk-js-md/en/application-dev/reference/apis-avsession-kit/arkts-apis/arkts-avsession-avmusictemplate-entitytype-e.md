@@ -1,6 +1,6 @@
 # EntityType
 
-表示媒体资源类型的枚举。
+Enumeration of media resource type.
 
 **Since:** 23
 
@@ -16,7 +16,7 @@
 UNKNOWN = 0
 ```
 
-未知的媒体资源类型。
+Unknown type.
 
 **Since:** 23
 
@@ -34,7 +34,7 @@ UNKNOWN = 0
 SINGLE = 1
 ```
 
-单曲类型。
+Single song type.
 
 **Since:** 23
 
@@ -52,7 +52,7 @@ SINGLE = 1
 SINGER = 2
 ```
 
-歌手类型。
+Singer type.
 
 **Since:** 23
 
@@ -70,7 +70,7 @@ SINGER = 2
 ALBUM = 3
 ```
 
-专辑类型。
+Album type.
 
 **Since:** 23
 
@@ -88,7 +88,7 @@ ALBUM = 3
 RANKING = 4
 ```
 
-排行榜类型。
+Ranking type.
 
 **Since:** 23
 
@@ -106,7 +106,7 @@ RANKING = 4
 BANNER = 5
 ```
 
-海报类型。
+Banner type.
 
 **Since:** 23
 
@@ -124,7 +124,7 @@ BANNER = 5
 RADIO_STATION = 6
 ```
 
-电台类型。
+Radio station type.
 
 **Since:** 23
 

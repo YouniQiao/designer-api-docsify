@@ -1,6 +1,6 @@
 # GyroscopeResponse
 
-陀螺仪传感器数据，继承于[Response](arkts-sensorservice-sensor-response-i.md)。
+Describes the gyroscope sensor data. It extends from [Response](arkts-sensorservice-sensor-response-i.md).
 
 **Inheritance/Implementation:** GyroscopeResponse extends [Response](arkts-sensorservice-sensor-response-i.md)
 
@@ -24,7 +24,7 @@ import { sensor } from 'kits/@kit.SensorServiceKit';
 x: double
 ```
 
-设备x轴方向的旋转角速度。单位：rad/s（弧度/秒）；取值为实际上报物理量。
+Angular velocity of rotation around the x-axis of the device, in rad/s. The value is equal to the reported physical quantity.
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：double
 
@@ -44,7 +44,7 @@ x: double
 y: double
 ```
 
-设备y轴方向的旋转角速度。单位：rad/s（弧度/秒）；取值为实际上报物理量。
+Angular velocity of rotation around the y-axis of the device, in rad/s. The value is equal to the reported physical quantity.
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：double
 
@@ -64,7 +64,7 @@ y: double
 z: double
 ```
 
-设备z轴方向的旋转角速度。单位：rad/s（弧度/秒）；取值为实际上报物理量。
+Angular velocity of rotation around the z-axis of the device, in rad/s. The value is equal to the reported physical quantity.
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：double
 

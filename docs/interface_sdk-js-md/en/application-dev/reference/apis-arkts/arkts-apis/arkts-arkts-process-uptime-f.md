@@ -12,7 +12,7 @@ import { process } from 'kits/@kit.ArkTS';
 function uptime(): number
 ```
 
-获取当前系统已运行的时间（以秒为单位）。
+Obtains the running time of the current system, in seconds.
 
 **Since:** 7
 
@@ -28,7 +28,7 @@ function uptime(): number
 
 | Type | Description |
 | --- | --- |
-| number | 当前系统已运行的时间。单位：秒。 |
+| number | Running time of the system, in seconds. |
 
 ## Examples
 

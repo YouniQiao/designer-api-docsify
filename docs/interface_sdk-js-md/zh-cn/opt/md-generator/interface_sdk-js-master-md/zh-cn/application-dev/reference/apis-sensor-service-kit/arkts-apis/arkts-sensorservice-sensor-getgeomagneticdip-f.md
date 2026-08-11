@@ -1,0 +1,97 @@
+# getGeomagneticDip
+
+## getGeomagneticDip
+
+```TypeScript
+function getGeomagneticDip(inclinationMatrix: Array<number>, callback: AsyncCallback<number>): void
+```
+
+根据倾斜矩阵计算地磁倾斜角，使用Callback异步方式返回结果。
+
+> **说明：**
+> 
+> 从API version 8 开始支持，从API version 9 开始废弃，建议使用
+> [sensor.getInclination](arkts-sensorservice-sensor-getinclination-f.md#getinclination)
+> 替代。
+
+**起始版本：** 8
+
+**废弃版本：** 9
+
+**替代接口：** [sensor.getInclination](arkts-sensorservice-sensor-getinclination-f.md#getinclination)(inclinationMatrix:
+
+<!--Device-sensor-function getGeomagneticDip(inclinationMatrix: Array<number>, callback: AsyncCallback<number>): void--><!--Device-sensor-function getGeomagneticDip(inclinationMatrix: Array<number>, callback: AsyncCallback<number>): void-End-->
+
+**系统能力：** SystemCapability.Sensors.Sensor
+
+**参数：**
+
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| inclinationMatrix | Array&lt;number&gt; | 是 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;number&gt; | 是 |
+
+## 示例
+
+```TypeScript
+import { sensor } from '@kit.SensorServiceKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+sensor.getGeomagneticDip([1, 0, 0, 0, 1, 0, 0, 0, 1], (err: BusinessError, data: number) => {
+  if (err) {
+    console.error(`Failed to register data. Code: ${err.code}, message: ${err.message}`);
+    return;
+  }
+  console.info("Succeeded in getting getGeomagneticDip interface get data: " + data);
+})
+```
+
+
+## getGeomagneticDip
+
+```TypeScript
+function getGeomagneticDip(inclinationMatrix: Array<number>): Promise<number>
+```
+
+根据倾斜矩阵计算地磁倾斜角，使用Promise异步方式返回结果。
+
+> **说明：**
+> 
+> 从API version 8 开始支持，从API version 9 开始废弃，建议使用
+> [sensor.getInclination](arkts-sensorservice-sensor-getinclination-f.md#getinclination)替代。
+
+**起始版本：** 8
+
+**废弃版本：** 9
+
+**替代接口：** [sensor.getInclination](arkts-sensorservice-sensor-getinclination-f.md#getinclination)(inclinationMatrix:
+
+<!--Device-sensor-function getGeomagneticDip(inclinationMatrix: Array<number>): Promise<number>--><!--Device-sensor-function getGeomagneticDip(inclinationMatrix: Array<number>): Promise<number>-End-->
+
+**系统能力：** SystemCapability.Sensors.Sensor
+
+**参数：**
+
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| inclinationMatrix | Array&lt;number&gt; | 是 |
+
+**返回值：**
+
+| 类型 |
+| --- |
+| Promise&lt;number&gt; |
+
+## 示例
+
+```TypeScript
+import { sensor } from '@kit.SensorServiceKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+const promise = sensor.getGeomagneticDip([1, 0, 0, 0, 1, 0, 0, 0, 1]);
+promise.then((data: number) => {
+  console.info('Succeeded in get GeomagneticDip_promise', data);
+}).catch((err: BusinessError) => {
+  console.error(`Failed to operate.`);
+})
+```

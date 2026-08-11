@@ -43,12 +43,6 @@
 
 **系统能力：** SystemCapability.Window.SessionManager
 
-## 导入模块
-
-```TypeScript
-import { floatView } from 'kits/@kit.ArkUI';
-```
-
 ## 汇总
 
 ### 函数

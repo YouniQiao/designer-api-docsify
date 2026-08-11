@@ -7,6 +7,6 @@
 
 | Name | Description |
 | --- | --- |
-| [AbilityForegroundStateObserver](arkts-ability-abilityforegroundstateobserver-i-sys.md) | 定义应用前后台状态监听。 |
+| [AbilityForegroundStateObserver](arkts-ability-abilityforegroundstateobserver-i-sys.md) | The module defines the listener used to listen for ability foreground and background state changes. |
 <!--DelEnd-->
 

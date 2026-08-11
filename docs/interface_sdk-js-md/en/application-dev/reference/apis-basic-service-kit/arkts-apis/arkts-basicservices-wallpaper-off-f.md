@@ -12,7 +12,7 @@ import { wallpaper } from 'kits/@kit.BasicServicesKit';
 function off(type: 'colorChange', callback?: (colors: Array<RgbaColor>, wallpaperType: WallpaperType) => void): void
 ```
 
-取消订阅壁纸颜色变化结果上报事件。不支持多线程并发调用。
+Unregisters a listener for wallpaper color changes.
 
 **Since:** 7
 
@@ -28,8 +28,8 @@ function off(type: 'colorChange', callback?: (colors: Array<RgbaColor>, wallpape
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'colorChange' | Yes |  |
-| callback | (colors: Array&lt;RgbaColor&gt;, wallpaperType: WallpaperType) =&gt; void | No |  |
+| type | 'colorChange' | Yes | incoming colorChange table delete receiver to pick up a color change wallpaper wallpaper color changes |
+| callback | (colors: Array&lt;RgbaColor&gt;, wallpaperType: WallpaperType) =&gt; void | No | provides dominant colors of the wallpaper. |
 
 ## Examples
 

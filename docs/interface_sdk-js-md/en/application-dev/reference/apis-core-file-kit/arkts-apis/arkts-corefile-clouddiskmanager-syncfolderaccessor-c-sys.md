@@ -1,6 +1,6 @@
 # SyncFolderAccessor (System API)
 
-同步根管理类，负责为系统文件管理应用提供获取三方网盘注册的同步根信息的能力。
+A sync root management class that enables the File Manager to access the sync root information registered by third-party cloud disks.
 
 **Since:** 21
 
@@ -24,7 +24,7 @@ import { cloudDiskManager } from 'kits/@kit.CoreFileKit';
 constructor()
 ```
 
-SyncFolderAccessor的构造函数，用于获取SyncFolderAccessor类的实例。
+A constructor used to create a **SyncFolderAccessor** instance.
 
 **Since:** 21
 
@@ -42,8 +42,8 @@ SyncFolderAccessor的构造函数，用于获取SyncFolderAccessor类的实例�
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 201 | Permission verification failed, |
-| 202 | Permission verification failed. application which is not a system application uses system API. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed, |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. application which is not a system application uses system API. |
 
 ## Examples
 
@@ -75,7 +75,7 @@ struct Index {
 getAllSyncFolders(): Promise<Array<SyncFolder>>
 ```
 
-获取所有注册的同步根信息。使用Promise异步回调。
+Obtains information about all registered sync roots. This API uses a promise to return the result.
 
 **Since:** 21
 
@@ -93,18 +93,18 @@ getAllSyncFolders(): Promise<Array<SyncFolder>>
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;Array&lt;SyncFolder&gt;&gt; | Promise对象。返回所有网盘应用的同步根列表。 |
+| Promise&lt;Array&lt;SyncFolder&gt;&gt; | Promise that returns the sync root list of all cloud disk applications. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 801 | Device not supported. |
-| 34400014 | Temporary failure. Retry is recommended (e.g., network issues). |
-| 34400015 | Cloud disk is not allowed on this device. |
-| 201 | Permission verification failed. |
-| 202 | Permission verification failed, application which is not a system application uses system API. |
-| 34400003 | IPC communication failed. |
+| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Device not supported. |
+| [34400014](../errorcode-clouddiskmanager-sys.md#34400014-system-internal-error) | Temporary failure. Retry is recommended (e.g., network issues). |
+| [34400015](../errorcode-clouddiskmanager-sys.md#34400015-cloud-disk-not-allowed) | Cloud disk is not allowed on this device. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed, application which is not a system application uses system API. |
+| [34400003](../errorcode-clouddiskmanager-sys.md#34400003-ipc-failed) | IPC communication failed. |
 
 ## Examples
 

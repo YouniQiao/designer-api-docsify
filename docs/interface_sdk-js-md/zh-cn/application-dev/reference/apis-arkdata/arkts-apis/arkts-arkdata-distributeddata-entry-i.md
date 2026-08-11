@@ -44,7 +44,7 @@ value: Value
 
 值对象。
 
-**类型：** [Value](arkts-arkdata-distributeddata-value-i.md)
+**类型：** [Value](../../apis-asset-store-kit/arkts-apis/arkts-assetstore-asset-value-t.md)
 
 **起始版本：** 7
 

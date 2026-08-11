@@ -1,6 +1,6 @@
 # ThreadInfo
 
-工作线程的内部信息。
+Describes the internal information about a worker thread.
 
 **Since:** 10
 
@@ -22,7 +22,7 @@ import { taskpool } from 'kits/@kit.ArkTS';
 priority?: Priority
 ```
 
-当前线程的优先级。如果返回为空，表示当前没有任务执行。不建议修改此值。
+Priority of the calling thread. If the return value is empty, no task is running. You are advised not to change the value.
 
 **Type:** [Priority](arkts-arkts-taskpool-priority-e.md)
 
@@ -42,7 +42,7 @@ priority?: Priority
 taskIds?: number[]
 ```
 
-在当前线程上运行的任务ID列表。如果返回为空，表示当前没有任务执行。不建议修改此值。
+IDs of tasks running on the calling thread. If the return value is empty, no task is running. You are advised not to change the value.
 
 **Type:** number[]
 
@@ -62,7 +62,7 @@ taskIds?: number[]
 tid: number
 ```
 
-工作线程的标识符。如果返回为空，表示当前没有任务执行。不建议修改此值。
+ID of the worker thread. If the return value is empty, no task is running. You are advised not to change the value.
 
 **Type:** number
 

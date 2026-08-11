@@ -34,7 +34,7 @@ disabledDateRange?: DateRange[]
 > 2. 若在日期区间内，结束日期早于开始日期，则该日期区间无效。
 > 3. 当在入口区选定某日期，通过上下箭头调整日期进行增加或减少操作时，若遇到禁用日期，系统将自动跳过整个禁用区间。
 
-**类型：** [DateRange](arkts-arkui-daterange-i.md)[]
+**类型：** [DateRange](../arkts-apis/arkts-arkui-common-daterange-i.md)[]
 
 **起始版本：** 19
 

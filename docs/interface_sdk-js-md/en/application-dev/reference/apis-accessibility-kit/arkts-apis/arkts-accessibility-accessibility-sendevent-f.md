@@ -12,7 +12,7 @@ import { accessibility } from 'kits/@kit.AccessibilityKit';
 function sendEvent(event: EventInfo, callback: AsyncCallback<void>): void
 ```
 
-发送无障碍事件，使用callback异步回调。
+Sends an accessibility event. This API uses an asynchronous callback to return the result.
 
 **Since:** 7
 
@@ -30,8 +30,8 @@ function sendEvent(event: EventInfo, callback: AsyncCallback<void>): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| event | [EventInfo](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-update-eventinfo-i-sys.md) | Yes | 辅助事件对象。 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | 回调函数，如果发送无障碍事件失败，则 AsyncCallback中err有数据返回。 |
+| event | [EventInfo](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-update-eventinfo-i-sys.md) | Yes | Accessibility event. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. If the operation fails, **err** that contains data is returned. |
 
 ## Examples
 
@@ -50,7 +50,7 @@ accessibility.sendEvent(eventInfo, (err: BusinessError) => {
     console.error(`failed to sendEvent, Code is ${err.code}, message is ${err.message}`);
     return;
   }
-  console.info(`succeeded in sending event, eventInfo is ${eventInfo}`);
+  console.info(`Succeeded in sendEvent, eventInfo is ${eventInfo}`);
 });
 ```
 
@@ -61,7 +61,7 @@ accessibility.sendEvent(eventInfo, (err: BusinessError) => {
 function sendEvent(event: EventInfo): Promise<void>
 ```
 
-发送无障碍事件，使用Promise异步回调。
+Sends an accessibility event. This API uses a promise to return the result.
 
 **Since:** 7
 
@@ -79,13 +79,13 @@ function sendEvent(event: EventInfo): Promise<void>
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| event | [EventInfo](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-update-eventinfo-i-sys.md) | Yes | 无障碍事件对象。 |
+| event | [EventInfo](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-update-eventinfo-i-sys.md) | Yes | Accessibility event. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise对象，无返回结果。 |
+| Promise&lt;void&gt; | Promise that returns no value. |
 
 ## Examples
 
@@ -100,7 +100,7 @@ let eventInfo: accessibility.EventInfo = ({
 });
 
 accessibility.sendEvent(eventInfo).then(() => {
-  console.info(`succeeded in sending event, eventInfo is ${eventInfo}`);
+  console.info(`Succeeded in send event,eventInfo is ${eventInfo}`);
 }).catch((err: BusinessError) => {
   console.error(`failed to sendEvent, Code is ${err.code}, message is ${err.message}`);
 });

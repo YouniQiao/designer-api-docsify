@@ -4,7 +4,7 @@
 declare type UIStatesChangeHandler = (node: FrameNode, currentUIStates: int) => void
 ```
 
-UI状态变化处理函数，返回当前UI状态，值为结果的所有当前状态枚举值或计算，并且可以确定状态通过执行&操作，如下。如果(currentStates & UIState.PRESSED == UIState.PRESSED)但是，请注意，对于正常的状态检查，应该直接使用equal。如果(currentStates == UIState.NORMAL)。
+UI state change handling function, it returns the current UI states, the value is the result of all current state enumeration values or calculations, and you can determine the state by performing the & operation as follows。if (currentStates & UIState.PRESSED == UIState.PRESSED)But, please be awared, for the normal state check, the equal should be used directly.if (currentStates == UIState.NORMAL)
 
 **Since:** 26.0.0
 
@@ -20,6 +20,6 @@ UI状态变化处理函数，返回当前UI状态，值为结果的所有当前�
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| node | [FrameNode](arkts-arkui-framenode-c.md) | Yes | 触发UI状态变化的节点。 |
-| currentUIStates | int | Yes | 回调触发时当前的UI状态。可以通过位与运算判断当前包含哪些[UIState](arkts-arkui-framenode-uistate-e.md)状态。位与运算方法：if (currentState & UIState.PRESSED == UIState.PRESSED)。一般的UIState状态检查可以直接判断：if (currentState == UIState.PRESSED)。 <br>取值限定为整数。 |
+| node | [FrameNode](arkts-arkui-framenode-c.md) | Yes | Current node which is triggering the state change. |
+| currentUIStates | int | Yes | Current UI states when the handler is triggered. |
 

@@ -12,7 +12,7 @@ import { cert } from 'kits/@kit.DeviceCertificateKit';
 function createCertCRLCollection(certs: Array<X509Cert>, crls?: Array<X509CRL>): CertCRLCollection
 ```
 
-表示创建证书和证书吊销列表集合对象，并返回相应的结果。
+Creates an object for a collection of X.509 certificates and CRLs.
 
 **Since:** 11
 
@@ -28,21 +28,21 @@ function createCertCRLCollection(certs: Array<X509Cert>, crls?: Array<X509CRL>):
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| certs | Array&lt;X509Cert&gt; | Yes | X509Cert数组。 |
-| crls | Array&lt;X509CRL&gt; | No | X509CRL数组。 |
+| certs | Array&lt;X509Cert&gt; | Yes | X.509 certificates. |
+| crls | Array&lt;X509CRL&gt; | No | Array of X509CRL. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [CertCRLCollection](arkts-devicecertificate-cert-certcrlcollection-i.md) | 表示证书和证书吊销列表集合对象。 |
+| [CertCRLCollection](arkts-devicecertificate-cert-certcrlcollection-i.md) | CertCRLCollection** object created. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | 参数错误。可能的原因： &lt;br&gt;1. 必填参数未指定； &lt;br&gt;2. 参数类型不正确； &lt;br&gt;3. 参数校验失败。 |
-| 19020001 | 内存错误。 |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Invalid parameters. Possible causes: &lt;br&gt;1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; &lt;br&gt;3. Parameter verification failed. |
+| [19020001](../errorcode-cert.md#19020001-memory-error) | Memory malloc failed. |
 
 ## Examples
 

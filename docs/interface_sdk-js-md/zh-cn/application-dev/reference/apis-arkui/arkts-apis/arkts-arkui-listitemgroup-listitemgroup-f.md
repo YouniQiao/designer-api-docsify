@@ -25,14 +25,14 @@ export declare function ListItemGroup(
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| options | [ListItemGroupOptions](arkts-arkui-listitemgroup-listitemgroupoptions-i.md) | 否 |  |
+| options | [ListItemGroupOptions](../arkts-components/arkts-arkui-listitemgroupoptions-i.md) | 否 |  |
 | content_ | [CustomBuilder](../arkts-components/arkts-arkui-custombuilder-t.md) | 否 | 容器内容。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| [ListItemGroupAttribute](../arkts-components/arkts-arkui-listitemgroup-attribute.md) |  |
+| [ListItemGroupAttribute](arkts-arkui-listitemgroup-listitemgroupattribute-i.md) |  |
 
 
 ## ListItemGroup
@@ -69,5 +69,5 @@ export declare function ListItemGroup(
 
 | 类型 | 说明 |
 | --- | --- |
-| [ListItemGroupAttribute](../arkts-components/arkts-arkui-listitemgroup-attribute.md) | ListItemGroup的属性。 |
+| [ListItemGroupAttribute](arkts-arkui-listitemgroup-listitemgroupattribute-i.md) | ListItemGroup的属性。 |
 

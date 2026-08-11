@@ -1,6 +1,6 @@
 # DismissSheetAction
 
-控制半模态的关闭。
+Component sheet dismiss
 
 **Since:** 23
 
@@ -16,7 +16,7 @@
 dismiss(): void
 ```
 
-半模态面板关闭回调函数。开发者需要退出时调用，不需要退出时无需调用。
+Defines sheet dismiss function
 
 **Since:** 23
 
@@ -34,15 +34,7 @@ dismiss(): void
 reason: DismissReason
 ```
 
-返回本次半模态页面退出的操作类型。
-
-**说明：**
-
-DismissReason.SLIDE只生效半模态侧边弹窗形态，表示右滑退出。若镜像场景则表示左滑退出。
-
-DismissReason.SLIDE_DOWN生效半模态底部弹窗形态和居中弹窗形态，表示下滑退出。
-
-半模态气泡弹窗形态无滑动退出能力。
+Dismiss reason type.
 
 **Type:** [DismissReason](../arkts-components/arkts-arkui-dismissreason-e.md)
 

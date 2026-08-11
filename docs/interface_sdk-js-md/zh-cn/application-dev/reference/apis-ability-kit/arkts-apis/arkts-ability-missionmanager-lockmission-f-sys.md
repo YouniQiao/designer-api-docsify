@@ -1,11 +1,5 @@
 # lockMission（系统接口）
 
-## 导入模块
-
-```TypeScript
-import { missionManager } from 'kits/@kit.AbilityKit';
-```
-
 ## lockMission
 
 ```TypeScript
@@ -31,16 +25,16 @@ function lockMission(missionId: int, callback: AsyncCallback<void>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | missionId | ArkTS-Dyn: number  <br>ArkTS-Sta：int | 是 | 任务ID。 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | 是 | 执行结果回调函数。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 执行结果回调函数。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
-| 201 | Permission denied. |
-| 16300001 | Mission not found. |
-| 202 | Not system application. |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
+| [16300001](../errorcode-ability.md#16300001-指定的任务不存在) | Mission not found. |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not system application. |
 
 ## 示例
 
@@ -52,7 +46,7 @@ import { BusinessError } from '@kit.BasicServicesKit';
 let testMissionId = 2;
 
 try {
-  missionManager.lockMission(testMissionId, (err: BusinessError, data: void) => {
+  missionManager.lockMission(testMissionId, (err: BusinessError | null, data: undefined) => {
     if (err) {
       console.error(`lockMission failed. Code: ${err.code}, message: ${err.message}.`);
     } else {
@@ -102,10 +96,10 @@ function lockMission(missionId: int): Promise<void>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
-| 201 | Permission denied. |
-| 16300001 | Mission not found. |
-| 202 | Not system application. |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
+| [16300001](../errorcode-ability.md#16300001-指定的任务不存在) | Mission not found. |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not system application. |
 
 ## 示例
 
@@ -117,10 +111,11 @@ import { BusinessError } from '@kit.BasicServicesKit';
 let testMissionId = 2;
 
 try {
-  missionManager.lockMission(testMissionId).then((data: void) => {
+  missionManager.lockMission(testMissionId).then((data) => {
     console.info(`lockMission successfully. Data: ${JSON.stringify(data)}`);
-  }).catch((error: BusinessError) => {
-    console.error(`lockMission failed. Code: ${error.code}, message: ${error.message}`);
+  }).catch((error: Error) => {
+    let err: BusinessError = error as BusinessError;
+    console.error(`lockMission failed. Code: ${err.code}, message: ${err.message}`);
   });
 } catch (error) {
   let err: BusinessError = error as BusinessError;

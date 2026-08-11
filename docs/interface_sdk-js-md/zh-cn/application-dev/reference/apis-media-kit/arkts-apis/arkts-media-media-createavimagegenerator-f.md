@@ -1,11 +1,5 @@
 # createAVImageGenerator
 
-## 导入模块
-
-```TypeScript
-import { media } from 'kits/@kit.MediaKit';
-```
-
 ## createAVImageGenerator
 
 ```TypeScript
@@ -32,7 +26,7 @@ function createAVImageGenerator(): Promise<AVImageGenerator>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 5400101 | No memory. Returned by promise. |
+| [5400101](../errorcode-media.md#5400101-内存分配失败) | No memory. Returned by promise. |
 
 ## 示例
 
@@ -79,7 +73,7 @@ Creates an **AVImageGenerator** instance. This API uses a promise to return the 
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 5400101 | No memory. Returned by promise. |
+| [5400101](../errorcode-media.md#5400101-内存分配失败) | No memory. Returned by promise. |
 
 
 ## createAVImageGenerator
@@ -108,7 +102,7 @@ function createAVImageGenerator(callback: AsyncCallback<AVImageGenerator>): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 5400101 | No memory. Returned by callback. |
+| [5400101](../errorcode-media.md#5400101-内存分配失败) | No memory. Returned by callback. |
 
 ## 示例
 
@@ -153,5 +147,5 @@ Creates an **AVImageGenerator** instance. This API uses an asynchronous callback
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 5400101 | No memory. Returned by callback. |
+| [5400101](../errorcode-media.md#5400101-内存分配失败) | No memory. Returned by callback. |
 

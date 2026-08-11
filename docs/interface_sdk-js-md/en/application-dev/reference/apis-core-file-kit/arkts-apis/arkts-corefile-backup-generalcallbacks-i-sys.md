@@ -1,6 +1,6 @@
 # GeneralCallbacks (System API)
 
-备份和恢复过程中的通用回调。备份服务通过这些回调向客户端通知备份或恢复阶段。
+General callbacks for both backup and restore procedure.The backup service will notify the client by these callbacks.
 
 **Since:** 10
 
@@ -24,7 +24,7 @@ import { backup } from 'kits/@kit.CoreFileKit';
 onBackupSizeReport?: OnBackupSizeReport
 ```
 
-备份服务返回结果或进度信息时触发的回调。返回框架扫描到的应用待备份数据量信息。
+Callback called when the backup_sa service return result information.The first return string parameter indicates the result of the scanned bundle datasize.
 
 **Since:** 18
 
@@ -42,7 +42,7 @@ onBackupSizeReport?: OnBackupSizeReport
 onFileReadyBatch?: OnFileReadyBatch
 ```
 
-备份服务向客户端发送文件时触发的回调。File参数表示发送给客户端的文件。返回的文件归备份服务所有，客户端关闭文件句柄后由备份服务清理。
+Callback called when the backup service tries to send files to the client.The File argument indicates a file to send to the client.The returned file is owned by the backup service and will be cleaned by the service once the file is closed.
 
 **Since:** 26.0.0
 
@@ -62,7 +62,7 @@ onFileReadyBatch?: OnFileReadyBatch
 | --- | --- |
 | 13900020 | Invalid argument |
 | 13900005 | I/O error |
-| 202 | Permission verification failed, application which is not a system application uses system API. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed, application which is not a system application uses system API. |
 | 13900025 | No space left on device |
 | 13600001 | IPC error |
 | 13900011 | Out of memory |
@@ -73,7 +73,7 @@ onFileReadyBatch?: OnFileReadyBatch
 onProcess(bundleName: string, process: string): void
 ```
 
-备份服务返回结果或进度信息时触发的回调。返回应用的处理结果或进度信息。
+Callback called when the backup_sa service return result information.The first return string parameter indicates the result of the bundle.
 
 **Since:** 12
 
@@ -91,19 +91,19 @@ onProcess(bundleName: string, process: string): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| bundleName | string | Yes | 触发回调的应用名称。 |
-| process | string | Yes | 应用备份或恢复的进度信息。 |
+| bundleName | string | Yes | the bundleName that triggers the callback. |
+| process | string | Yes | the process info of the bundle. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
 | 13900020 | Invalid argument |
-| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. 3.Parameter verification failed. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. 3.Parameter verification failed. |
 | 13900005 | I/O error |
 | 13500008 | Untar error |
 | 13900001 | Operation not permitted |
-| 202 | Permission verification failed, application which is not a system application uses system API. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed, application which is not a system application uses system API. |
 | 13500006 | Tar error |
 | 13900025 | No space left on device |
 | 13600001 | IPC error |
@@ -115,7 +115,7 @@ onProcess(bundleName: string, process: string): void
 onProcess: OnProcess
 ```
 
-备份服务返回结果或进度信息时触发的回调。返回应用的处理结果或进度信息。
+Callback called when the backup_sa service return result information.The first return string parameter indicates the result of the bundle.
 
 **Since:** 23
 
@@ -134,11 +134,11 @@ onProcess: OnProcess
 | Error Code ID | Error Message |
 | --- | --- |
 | 13900020 | Invalid argument |
-| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. 3.Parameter verification failed. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. 3.Parameter verification failed. |
 | 13900005 | I/O error |
 | 13500008 | Untar error |
 | 13900001 | Operation not permitted |
-| 202 | Permission verification failed, application which is not a system application uses system API. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed, application which is not a system application uses system API. |
 | 13500006 | Tar error |
 | 13900025 | No space left on device |
 | 13600001 | IPC error |
@@ -150,7 +150,7 @@ onProcess: OnProcess
 onResultReport(bundleName: string, result: string): void
 ```
 
-备份服务返回结果信息时触发的回调。第一个字符串参数表示触发回调的应用名称。第二个字符串参数表示应用的处理结果。
+Callback called when the backup service return result information.The first return string parameter indicates the bundleName that triggers the callback.The second return string parameter indicates the result of the bundle.
 
 **Since:** 12
 
@@ -168,16 +168,16 @@ onResultReport(bundleName: string, result: string): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| bundleName | string | Yes | 触发回调的应用名称。 |
-| result | string | Yes | 应用备份或恢复的结果信息。 |
+| bundleName | string | Yes | the bundleName that triggers the callback. |
+| result | string | Yes | the result of the bundle. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. 3.Parameter verification failed. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. 3.Parameter verification failed. |
 | 13900005 | I/O error |
-| 202 | Permission verification failed, application which is not a system application uses system API. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed, application which is not a system application uses system API. |
 | 13900025 | No space left on device |
 | 13600001 | IPC error |
 | 13900042 | Unknown error |
@@ -189,7 +189,7 @@ onResultReport(bundleName: string, result: string): void
 onResultReport: OnResultReport
 ```
 
-备份服务返回结果信息时触发的回调。第一个字符串参数表示触发回调的应用名称。第二个字符串参数表示应用的处理结果。
+Callback called when the backup service return result information.The first return string parameter indicates the bundleName that triggers the callback.The second return string parameter indicates the result of the bundle.
 
 **Since:** 23
 
@@ -207,9 +207,9 @@ onResultReport: OnResultReport
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. 3.Parameter verification failed. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. 3.Parameter verification failed. |
 | 13900005 | I/O error |
-| 202 | Permission verification failed, application which is not a system application uses system API. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed, application which is not a system application uses system API. |
 | 13900025 | No space left on device |
 | 13600001 | IPC error |
 | 13900042 | Unknown error |
@@ -221,7 +221,7 @@ onResultReport: OnResultReport
 onAllBundlesEnd: AsyncCallback<undefined>
 ```
 
-所有应用的备份或恢复完成或异常中止时触发的回调。
+Callback called when the all the bundles to backup/restore are done or aborted unexpectedly.
 
 **Type:** [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;undefined&gt;
 
@@ -241,7 +241,7 @@ onAllBundlesEnd: AsyncCallback<undefined>
 onBackupServiceDied: Callback<undefined>
 ```
 
-备份服务异常死亡时触发的回调。
+Callback called when the backup service dies unexpectedly.
 
 **Type:** [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;undefined&gt;
 
@@ -261,7 +261,7 @@ onBackupServiceDied: Callback<undefined>
 onBundleBegin: AsyncCallback<string, void | string>
 ```
 
-应用备份或恢复开始时触发的回调。第一个字符串参数表示应用名称。发生BusinessError时，第二个字符串参数返回对应的应用名称。
+Callback called when a backup/restore procedure for an bundle is started.The first return string parameter indicates the name of the bundle.The second return string parameter indicates that when BusinessError errors occur,the callback data is the name of the bundle.
 
 **Type:** [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;string, void \| string&gt;
 
@@ -281,7 +281,7 @@ onBundleBegin: AsyncCallback<string, void | string>
 onBundleEnd: AsyncCallback<string, void | string>
 ```
 
-应用备份或恢复成功结束或异常中止时触发的回调。第一个字符串参数表示应用名称。发生BusinessError时，第二个字符串参数返回对应的应用名称。
+Callback called when a backup/restore procedure for an bundle ends successfully or gets aborted unexpectedly.The first return string parameter indicates the name of the bundle.The second return string parameter indicates that when BusinessError errors occur,the callback data is the name of the bundle.
 
 **Type:** [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;string, void \| string&gt;
 
@@ -301,7 +301,7 @@ onBundleEnd: AsyncCallback<string, void | string>
 onFileReady: AsyncCallback<File>
 ```
 
-备份服务向客户端发送文件时触发的回调。File参数表示发送给客户端的文件。 返回的文件归备份服务所有，客户端关闭文件句柄后由备份服务清理。
+Callback called when the backup service tries to send files to the client.The File argument indicates a file to send to the client. The returned file is owned by the backup service and will be cleaned by the service once the file is closed.
 
 **Type:** [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;File&gt;
 
@@ -321,7 +321,7 @@ onFileReady: AsyncCallback<File>
 onMigrateResult?: AsyncCallback<string, void | string>
 ```
 
-文件迁移流程结束时触发的回调。第一个字符串参数表示应用名称。发生BusinessError时，第二个字符串参数返回对应的应用名称。
+Callback called when the migrate result is reported.The first return string parameter indicates the name of the bundle.The second return string parameter indicates that when BusinessError errors occur,the callback data is the name of the bundle.
 
 **Type:** [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;string, void \| string&gt;
 

@@ -1,6 +1,6 @@
 # RequestCallback
 
-用于设置模态弹框请求结果的callback接口。
+Provides a callback for setting the modal dialog box request result.
 
 **Since:** 9
 
@@ -22,7 +22,7 @@ import { dialogRequest } from 'kits/@kit.AbilityKit';
 setRequestResult(result: RequestResult): void
 ```
 
-设置请求结果
+Sets the result of the request for the modal dialog box.
 
 **Since:** 9
 
@@ -38,13 +38,13 @@ setRequestResult(result: RequestResult): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| result | [RequestResult](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-osaccount-requestresult-i-sys.md) | Yes | 模态弹框请求结果信息。 |
+| result | [RequestResult](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-osaccount-requestresult-i-sys.md) | Yes | Request result to set. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
 
 ## Examples
 

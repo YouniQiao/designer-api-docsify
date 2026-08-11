@@ -1,6 +1,6 @@
 # PinchGestureHandler
 
-捏合手势处理器对象类型。
+Defines a type of gesture handler object for pinch gestures.
 
 **Inheritance/Implementation:** PinchGestureHandler extends [GestureHandler<PinchGestureHandler>](GestureHandler<PinchGestureHandler>)
 
@@ -18,7 +18,7 @@
 constructor(options?: PinchGestureHandlerOptions)
 ```
 
-捏合手势处理器的构造函数。
+Constructor used to create a pinch gesture handler instance.
 
 **Since:** 12
 
@@ -36,7 +36,7 @@ constructor(options?: PinchGestureHandlerOptions)
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| options | [PinchGestureHandlerOptions](arkts-arkui-gesture-pinchgesturehandleroptions-i.md) | No | 捏合手势处理器配置参数。 |
+| options | [PinchGestureHandlerOptions](arkts-arkui-gesture-pinchgesturehandleroptions-i.md) | No | Parameters of the pinch gesture handler. |
 
 ## onActionCancel
 
@@ -44,7 +44,7 @@ constructor(options?: PinchGestureHandlerOptions)
 onActionCancel(event: Callback<void>): PinchGestureHandler
 ```
 
-设置捏合手势处理器取消回调。捏合手势处理器识别成功后，接收到触摸取消事件时触发回调。不返回手势事件信息。
+Sets the callback for pinch gesture cancellation. This callback is triggered when a touch cancellation event occurs after successful recognition. No gesture event information is returned.
 
 **Since:** 12
 
@@ -62,13 +62,13 @@ onActionCancel(event: Callback<void>): PinchGestureHandler
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| event | [Callback](../arkts-components/arkts-arkui-callback-i.md)&lt;void&gt; | Yes | 捏合手势处理器取消回调。不返回手势事件信息。 |
+| event | [Callback](../arkts-components/arkts-arkui-callback-i.md)&lt;void&gt; | Yes | Callback invoked when the pinch gesture is cancelled. No gesture event information is returned. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [PinchGestureHandler](arkts-arkui-pinchgesturehandler-c.md) | 返回当前捏合手势处理器对象。 |
+| [PinchGestureHandler](arkts-arkui-pinchgesturehandler-c.md) | Pinch gesture handler object. |
 
 ## onActionCancel
 
@@ -76,8 +76,8 @@ onActionCancel(event: Callback<void>): PinchGestureHandler
 onActionCancel(event: Callback<GestureEvent>): PinchGestureHandler
 ```
 
-设置捏合手势处理器取消回调。捏合手势处理器识别成功后，接收到触摸取消事件时触发回调。与  
-[onActionCancel](arkts-arkui-pinchgesturehandler-c.md#onactioncancel)接口相比，此接口返回手势事件信息。
+Sets the callback for pinch gesture cancellation. This callback is triggered when a touch cancellation event occurs after successful recognition. Compared with   
+[onActionCancel](arkts-arkui-pinchgesturehandler-c.md#onactioncancel), this API returns gesture event information.
 
 **Since:** 18
 
@@ -95,13 +95,13 @@ onActionCancel(event: Callback<GestureEvent>): PinchGestureHandler
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| event | [Callback](../arkts-components/arkts-arkui-callback-i.md)&lt;GestureEvent&gt; | Yes | 捏合手势处理器取消回调。返回手势事件信息。 |
+| event | [Callback](../arkts-components/arkts-arkui-callback-i.md)&lt;GestureEvent&gt; | Yes | Callback invoked when the pinch gesture is cancelled. Gesture event information is returned. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [PinchGestureHandler](arkts-arkui-pinchgesturehandler-c.md) | 返回当前捏合手势处理器对象。 |
+| [PinchGestureHandler](arkts-arkui-pinchgesturehandler-c.md) | Pinch gesture handler object. |
 
 ## onActionEnd
 
@@ -109,7 +109,7 @@ onActionCancel(event: Callback<GestureEvent>): PinchGestureHandler
 onActionEnd(event: Callback<GestureEvent>): PinchGestureHandler
 ```
 
-设置捏合手势处理器结束回调。捏合手势处理器识别成功后，手指抬起时触发回调。
+Sets the callback for pinch gesture recognition completion. This callback is triggered when all fingers are lifted after successful recognition.
 
 **Since:** 12
 
@@ -127,13 +127,13 @@ onActionEnd(event: Callback<GestureEvent>): PinchGestureHandler
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| event | [Callback](../arkts-components/arkts-arkui-callback-i.md)&lt;GestureEvent&gt; | Yes | 捏合手势处理器结束回调。 |
+| event | [Callback](../arkts-components/arkts-arkui-callback-i.md)&lt;GestureEvent&gt; | Yes | Callback invoked when pinch gesture recognition completes. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [PinchGestureHandler](arkts-arkui-pinchgesturehandler-c.md) | 返回当前捏合手势处理器对象。 |
+| [PinchGestureHandler](arkts-arkui-pinchgesturehandler-c.md) | Pinch gesture handler object. |
 
 ## onActionStart
 
@@ -141,7 +141,7 @@ onActionEnd(event: Callback<GestureEvent>): PinchGestureHandler
 onActionStart(event: Callback<GestureEvent>): PinchGestureHandler
 ```
 
-设置捏合手势处理器识别成功回调。
+Sets the callback for successful pinch gesture recognition.
 
 **Since:** 12
 
@@ -159,13 +159,13 @@ onActionStart(event: Callback<GestureEvent>): PinchGestureHandler
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| event | [Callback](../arkts-components/arkts-arkui-callback-i.md)&lt;GestureEvent&gt; | Yes | 捏合手势处理器识别成功回调。 |
+| event | [Callback](../arkts-components/arkts-arkui-callback-i.md)&lt;GestureEvent&gt; | Yes | Callback invoked upon successful pinch gesture recognition. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [PinchGestureHandler](arkts-arkui-pinchgesturehandler-c.md) | 返回当前捏合手势处理器对象。 |
+| [PinchGestureHandler](arkts-arkui-pinchgesturehandler-c.md) | Pinch gesture handler object. |
 
 ## onActionUpdate
 
@@ -173,7 +173,7 @@ onActionStart(event: Callback<GestureEvent>): PinchGestureHandler
 onActionUpdate(event: Callback<GestureEvent>): PinchGestureHandler
 ```
 
-设置捏合手势处理器更新回调。捏合手势处理器移动过程中触发回调。
+Sets the callback for pinch gesture movement updates. The callback is triggered when the pinch gesture moves.
 
 **Since:** 12
 
@@ -191,11 +191,11 @@ onActionUpdate(event: Callback<GestureEvent>): PinchGestureHandler
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| event | [Callback](../arkts-components/arkts-arkui-callback-i.md)&lt;GestureEvent&gt; | Yes | 捏合手势处理器更新回调。 |
+| event | [Callback](../arkts-components/arkts-arkui-callback-i.md)&lt;GestureEvent&gt; | Yes | Callback invoked during pinch gesture movement. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [PinchGestureHandler](arkts-arkui-pinchgesturehandler-c.md) | 返回当前捏合手势处理器对象。 |
+| [PinchGestureHandler](arkts-arkui-pinchgesturehandler-c.md) | Pinch gesture handler object. |
 

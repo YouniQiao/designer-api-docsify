@@ -12,8 +12,10 @@ import { selectionManager } from 'kits/@kit.BasicServicesKit';
 function on(type: 'selectionCompleted', callback: Callback<SelectionInfo>): void
 ```
 
-订阅划词完成事件，与  
-[off('selectionCompleted')](selectionManager.off(type: 'selectionCompleted', callback?: Callback&lt;SelectionInfo&gt;))搭配使用取消订阅。
+Subscribes to the word selection completion event. This API is used together with   
+[off('selectionCompleted')](selectionManager.off(type: 'selectionCompleted', callback?: Callback&lt;SelectionInfo&gt;)).
+
+[off('selectionCompleted')](selectionManager.off(type: 'selectionCompleted', callback?: Callback&lt;SelectionInfo&gt;))is used to unsubscribe from the event.
 
 **Since:** 24
 
@@ -27,14 +29,14 @@ function on(type: 'selectionCompleted', callback: Callback<SelectionInfo>): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'selectionCompleted' | Yes | 设置监听类型，固定取值为'selectionCompleted'。 |
-| callback | [Callback](arkts-basicservices-base-callback-i.md)&lt;SelectionInfo&gt; | Yes | 回调函数，返回划词事件信息[SelectionInfo](arkts-basicservices-selectionmanager-selectioninfo-i.md)。该回 调仅在用户通过鼠标或触控板选中文本（双击/三击/滑动）后按下Ctrl键时触发。 |
+| type | 'selectionCompleted' | Yes | Event type, which is **'selectionCompleted'**. |
+| callback | [Callback](arkts-basicservices-base-callback-i.md)&lt;SelectionInfo&gt; | Yes | Callback used to return [SelectionInfo](arkts-basicservices-selectionmanager-selectioninfo-i.md). This callback is triggered only when the user selects text using the mouse or touchpad (by double-clicking, triple-clicking, or sliding the left mouse button) and then presses **Ctrl**. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 33600003 | The application calling the API does not match the application selected in the system settings. |
+| [33600003](../../apis-basic-services-kit/errorcode-selection.md#33600003-api-caller-and-word-selection-application-mismatched) | The application calling the API does not match the application selected in the system settings. |
 
 ## Examples
 
@@ -42,12 +44,11 @@ function on(type: 'selectionCompleted', callback: Callback<SelectionInfo>): void
 import { selectionManager } from '@kit.BasicServicesKit';
 
 try {
-  // Subscribe to the word selection completion event.
   selectionManager.on('selectionCompleted', (info: selectionManager.SelectionInfo) => {
-    console.info('Enter the callback function.');
+    console.info(`Enter the callback function.`);
   });
 } catch (err) {
-  console.error(`Failed to register selectionCompleted callback. Error code: ${err.code}, error message: ${err.message}`);
+  console.error(`Failed to register selectionCompleted callback: ${err.code}, error message: ${err.message}`);
 }
 ```
 

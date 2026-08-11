@@ -1,12 +1,6 @@
 # DecorationStyleInterface
 
-文本装饰线样式接口对象说明。
-
-> **说明：**
-> 
-> 当文字的下边缘轮廓与装饰线位置相交时，会触发下划线避让规则，下划线将在这些字符处避让文字。常见“gjyqp”等英文字符。
-> 
-> 当文本装饰线的颜色设置为Color.Transparent时，装饰线颜色设置为跟随每行第一个字的字体颜色。当文本装饰线的颜色设置为透明色16进制对应值“#00FFFFFF”时，装饰线颜色设置为透明色。
+DecorationStyleInterface
 
 **Since:** 23
 
@@ -22,9 +16,7 @@
 color?: ResourceColor
 ```
 
-装饰线颜色。
-
-默认值：Color.Black
+The color value of the decoration property object.
 
 **Type:** [ResourceColor](arkts-arkui-resourcecolor-t.md)
 
@@ -44,9 +36,7 @@ color?: ResourceColor
 style?: TextDecorationStyle
 ```
 
-装饰线样式。
-
-默认值：TextDecorationStyle.SOLID
+The style value of the decoration property object.
 
 **Type:** [TextDecorationStyle](arkts-arkui-textdecorationstyle-e.md)
 
@@ -66,13 +56,7 @@ style?: TextDecorationStyle
 thicknessScale?: double
 ```
 
-装饰线粗细缩放。
-
-默认值：1.0
-
-取值范围：[0, +∞)
-
-**说明：** 负值按默认值处理。
+The thickness scale of the decoration
 
 **Type:** double
 
@@ -92,11 +76,7 @@ thicknessScale?: double
 type: TextDecorationType | undefined
 ```
 
-装饰线类型。
-
-默认值：TextDecorationType.None
-
-取值undefined时，按默认值处理。
+The type value of the decoration property object.
 
 **Type:** [TextDecorationType](arkts-arkui-textdecorationtype-e.md) \| undefined
 

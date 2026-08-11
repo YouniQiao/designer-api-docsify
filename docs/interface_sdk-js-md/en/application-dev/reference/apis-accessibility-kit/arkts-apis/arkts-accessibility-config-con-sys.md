@@ -6,7 +6,9 @@
 const audioBalance: Config<double>
 ```
 
-表示左右声道音量平衡的配置。取值范围为-1.0~1.0。默认值为0.0。
+Audio balance for the left and right audio channels. The value ranges from -1.0 to 1.0.
+
+Default value: **0.0**
 
 **Since:** 10
 
@@ -24,7 +26,9 @@ const audioBalance: Config<double>
 const audioMono: Config<boolean>
 ```
 
-表示单声道音频的配置。true表示已启用单声道音频，false表示未启用单声道音频，默认值为false。
+Whether to enable mono audio. The value **true** indicates that mono audio is enabled, and **false** indicates the opposite.
+
+Default value: **false**
 
 **Since:** 10
 
@@ -42,7 +46,7 @@ const audioMono: Config<boolean>
 const clickResponseTime: Config<ClickResponseTime>
 ```
 
-表示点击持续时间功能配置。
+Length of time required for a click.
 
 **Since:** 11
 
@@ -60,7 +64,9 @@ const clickResponseTime: Config<ClickResponseTime>
 const daltonizationState: Config<boolean>
 ```
 
-表示颜色滤镜功能启动状态。配合daltonizationColorFilter使用。true表示已启用颜色滤镜功能，false表示未启用颜色滤镜功能，默认值为false。
+Whether to enable daltonization. It must be used with **daltonizationColorFilter**. The value **true** indicates that daltonization is enabled, and **false** indicates the opposite.
+
+Default value: **false**
 
 **Since:** 11
 
@@ -78,7 +84,10 @@ const daltonizationState: Config<boolean>
 const ignoreRepeatClick: Config<boolean>
 ```
 
-表示忽略重复点击功能启用状态。配合repeatClickInterval使用。true表示已启用忽略重复点击功能，false表示未启用忽略重复点击功能，默认值为false。
+Whether to ignore repeated clicks. This parameter must be used together with **repeatClickInterval**. The value   
+**true** indicates that the feature of ignoring repeated clicks is enabled, and **false** indicates the opposite.
+
+Default value: **false**
 
 **Since:** 11
 
@@ -96,7 +105,7 @@ const ignoreRepeatClick: Config<boolean>
 const repeatClickInterval: Config<RepeatClickInterval>
 ```
 
-表示忽略重复点击功能配置。
+Interval between repeated clicks.
 
 **Since:** 11
 
@@ -132,7 +141,7 @@ Indicates the configuration of screen magnification.
 const shortkeyMultiTargets: Config<Array<string>>
 ```
 
-表示辅助扩展快捷键的列表配置。取值为辅助应用的名称，格式为：['bundleName/abilityName']。
+List of target applications for the accessibility shortcut keys. The value format is ['bundleName/abilityName'].
 
 **Since:** 11
 

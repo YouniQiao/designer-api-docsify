@@ -1,6 +1,6 @@
 # KeyboardInfo
 
-软键盘窗口信息。
+Describes the information about the soft keyboard window.
 
 **Since:** 18
 
@@ -22,7 +22,7 @@ import { window } from 'kits/@kit.ArkUI';
 animated?: boolean
 ```
 
-当前是否有显示/隐藏动画，true表示有动画，false表示没有。
+Whether there is a show/hide animation. **true** if there is a show/hide animation, **false** otherwise.
 
 **Type:** boolean
 
@@ -42,7 +42,7 @@ animated?: boolean
 beginRect: Rect
 ```
 
-动画开始前软键盘的位置和大小。
+Position and size of the soft keyboard before the animation starts.
 
 **Type:** [Rect](../../apis-form-kit/arkts-apis/arkts-form-forminfo-rect-i.md)
 
@@ -62,7 +62,7 @@ beginRect: Rect
 config?: WindowAnimationConfig
 ```
 
-动画配置信息。
+Animation configuration.
 
 **Type:** [WindowAnimationConfig](arkts-arkui-window-windowanimationconfig-i.md)
 
@@ -82,7 +82,7 @@ config?: WindowAnimationConfig
 endRect: Rect
 ```
 
-动画结束后软键盘的位置和大小。
+Position and size of the soft keyboard after the animation ends.
 
 **Type:** [Rect](../../apis-form-kit/arkts-apis/arkts-form-forminfo-rect-i.md)
 

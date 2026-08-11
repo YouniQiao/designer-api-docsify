@@ -1,6 +1,6 @@
 # AbilityState (System API)
 
-Ability的状态信息。
+Enumerates the ability states.
 
 **Since:** 8
 
@@ -22,7 +22,7 @@ Ability的状态信息。
 INITIAL = 0
 ```
 
-表示Ability为初始化状态。
+The ability is in the initial state.
 
 **Since:** 8
 
@@ -44,7 +44,7 @@ INITIAL = 0
 FOREGROUND = 9
 ```
 
-表示Ability处于前台。
+The ability is running in the foreground.
 
 **Since:** 8
 
@@ -66,7 +66,7 @@ FOREGROUND = 9
 BACKGROUND = 10
 ```
 
-表示Ability处于后台。
+The ability is running in the background.
 
 **Since:** 8
 
@@ -88,7 +88,7 @@ BACKGROUND = 10
 FOREGROUNDING = 11
 ```
 
-表示Ability处于前台调度中。
+The ability is being switched to the foreground.
 
 **Since:** 8
 
@@ -110,7 +110,7 @@ FOREGROUNDING = 11
 BACKGROUNDING = 12
 ```
 
-表示Ability处于后台调度中。
+The ability is being switched to the background.
 
 **Since:** 8
 

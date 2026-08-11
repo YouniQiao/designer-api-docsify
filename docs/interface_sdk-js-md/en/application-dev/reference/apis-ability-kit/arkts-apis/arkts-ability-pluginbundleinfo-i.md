@@ -1,6 +1,6 @@
 # PluginBundleInfo
 
-插件信息。
+Defines the plugin information.
 
 **Since:** 26.0.0
 
@@ -16,7 +16,7 @@
 readonly icon: string
 ```
 
-插件的图标。
+Plugin icon.
 
 **Type:** string
 
@@ -34,7 +34,7 @@ readonly icon: string
 readonly iconId: long
 ```
 
-插件图标的资源id值。
+Resource ID of the plugin icon.
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：long
 
@@ -52,7 +52,7 @@ readonly iconId: long
 readonly label: string
 ```
 
-插件的名称。
+Plugin name.
 
 **Type:** string
 
@@ -70,7 +70,7 @@ readonly label: string
 readonly labelId: long
 ```
 
-插件名称的资源id值。
+Resource ID of the plugin name.
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：long
 
@@ -88,7 +88,7 @@ readonly labelId: long
 readonly pluginBundleName: string
 ```
 
-安装插件的应用包名。
+Bundle name of the application for which the plugin is installed.
 
 **Type:** string
 
@@ -106,7 +106,7 @@ readonly pluginBundleName: string
 readonly pluginModuleInfos: Array<PluginModuleInfo>
 ```
 
-插件的模块信息。
+Module information of the plugin.
 
 **Type:** Array&lt;PluginModuleInfo&gt;
 
@@ -124,7 +124,7 @@ readonly pluginModuleInfos: Array<PluginModuleInfo>
 readonly versionCode: long
 ```
 
-插件的版本号。
+Version number of the plugin.
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：long
 
@@ -142,7 +142,7 @@ readonly versionCode: long
 readonly versionName: string
 ```
 
-插件的版本名称。
+Version name of the plugin.
 
 **Type:** string
 

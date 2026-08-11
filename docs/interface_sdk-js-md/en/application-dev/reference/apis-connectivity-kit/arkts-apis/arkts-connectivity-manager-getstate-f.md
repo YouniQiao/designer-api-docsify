@@ -12,7 +12,7 @@ import { manager } from 'kits/@kit.ConnectivityKit';
 function getState(): NearlinkState
 ```
 
-获取星闪状态。
+Gets the NearLink state.
 
 **Since:** 26.0.0
 
@@ -28,12 +28,12 @@ function getState(): NearlinkState
 
 | Type | Description |
 | --- | --- |
-| [NearlinkState](arkts-connectivity-manager-nearlinkstate-e.md) | 返回NearLink状态。 |
+| [NearlinkState](arkts-connectivity-manager-nearlinkstate-e.md) | Returns the NearLink state. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 801 | Capability not supported because the chip does not support it. |
+| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported because the chip does not support it. |
 | 36100099 | Operation failed. |
 

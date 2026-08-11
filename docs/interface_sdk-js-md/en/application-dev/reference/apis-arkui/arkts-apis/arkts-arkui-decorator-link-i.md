@@ -1,5 +1,7 @@
 # Link
 
+Defining Link annotation Link decorated variable creates two-way synchronization with a variable of its parent component.
+
 **Since:** 23
 
 **ArkTS mode:** ArkTS-Sta only, since version 23.

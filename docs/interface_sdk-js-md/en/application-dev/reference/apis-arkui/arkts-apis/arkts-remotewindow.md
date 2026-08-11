@@ -7,7 +7,7 @@
 
 | Name | Description |
 | --- | --- |
-| [RRect](arkts-arkui-remotewindow-rrect-i-sys.md) | 圆角矩形。 |
-| [WindowAnimationTarget](arkts-arkui-remotewindow-windowanimationtarget-i-sys.md) | 目标窗口，用来远程控制实现动画。 |
+| [RRect](arkts-arkui-remotewindow-rrect-i-sys.md) | Round rect. |
+| [WindowAnimationTarget](arkts-arkui-remotewindow-windowanimationtarget-i-sys.md) | Window animation target. |
 <!--DelEnd-->
 

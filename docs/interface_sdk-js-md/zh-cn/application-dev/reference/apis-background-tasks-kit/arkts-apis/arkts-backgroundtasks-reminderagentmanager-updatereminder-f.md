@@ -1,11 +1,5 @@
 # updateReminder
 
-## 导入模块
-
-```TypeScript
-import { reminderAgentManager } from 'kits/@kit.BackgroundTasksKit';
-```
-
 ## updateReminder
 
 ```TypeScript
@@ -41,11 +35,13 @@ function updateReminder(reminderId: int, reminderReq: ReminderRequest): Promise<
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 201 | Permission denied. |
-| 1700003 | The reminder does not exist. |
-| 1700007 | If the input parameter is not valid parameter. |
+| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
+| [1700003](../../apis-backgroundtasks-kit/errorcode-reminderAgentManager.md#1700003-提醒不存在) | The reminder does not exist. |
+| [1700007](../../apis-backgroundtasks-kit/errorcode-reminderAgentManager.md#1700007-参数错误) | If the input parameter is not valid parameter. |
 
 ## 示例
+
+ArkTS-Dyn示例：
 
 ```TypeScript
 import { reminderAgentManager } from '@kit.BackgroundTasksKit';
@@ -61,6 +57,24 @@ reminderAgentManager.updateReminder(reminderId, timer).then(() => {
   console.info("update reminder succeed");
 }).catch((err: BusinessError) => {
   console.error("promise err code:" + err.code + " message:" + err.message);
+});
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+import { reminderAgentManager } from '@kit.BackgroundTasksKit';
+
+let timer: reminderAgentManager.ReminderRequestTimer = {
+  reminderType: reminderAgentManager.ReminderType.REMINDER_TYPE_TIMER,
+  triggerTimeInSeconds: 10
+}
+
+let reminderId: int = 1;
+reminderAgentManager.updateReminder(reminderId, timer).then(() => {
+  console.info(`Succeeded in updating reminder.`);
+}).catch((err): void => {
+  console.error(`Failed to update reminder. Code is ${err.code}, message is ${err.message}`);
 });
 ```
 

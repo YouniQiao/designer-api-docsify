@@ -1,10 +1,10 @@
 # AudioHapticFileDescriptor
 
-描述音振文件描述符。
+Describes the audio-haptic file descriptor.
 
-> **注意：**
+> **NOTE：**
 > 
-> 开发者需要确保fd是可用的文件描述符，且offset和length的值都是正确的。
+> Ensure that **fd** is an available file descriptor and the values of **offset** and **length** are correct.
 
 **Since:** 20
 
@@ -26,7 +26,7 @@ import { audioHaptic } from 'kits/@kit.AudioKit';
 fd: int
 ```
 
-音振资源文件的文件描述符，通常大于等于0。
+File descriptor of the audio-haptic file, which is generally greater than or equal to 0.
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
@@ -44,7 +44,7 @@ fd: int
 length?: long
 ```
 
-读取数据的字节长度。默认情况下，长度为文件中从偏移量位置开始的剩余字节数。
+Number of bytes to read. By default, the length is the number of bytes remaining in the file from the offset position.
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：long
 
@@ -62,7 +62,7 @@ length?: long
 offset?: long
 ```
 
-文件中数据读取的偏移量，单位为字节。默认情况下，偏移量为0。
+Offset for reading data from the file, in bytes. By default, the offset is 0.
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：long
 

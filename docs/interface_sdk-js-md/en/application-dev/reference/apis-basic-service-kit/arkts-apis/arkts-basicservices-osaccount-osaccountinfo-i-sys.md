@@ -1,6 +1,6 @@
 # OsAccountInfo
 
-表示系统账号信息。
+Represents information about an OS account.
 
 **Since:** 7
 
@@ -22,9 +22,9 @@ import { osAccount } from 'kits/@kit.BasicServicesKit';
 isLoggedIn?: boolean
 ```
 
-是否登录。true表示已登录；false表示未登录。
+Whether the OS account is logged in. The value **true** means that the OS account has logged in; the value **false** means the opposite.
 
-此接口为系统接口，默认为false。
+This is a system API. The default value is **false**.
 
 **Type:** boolean
 
@@ -44,9 +44,9 @@ isLoggedIn?: boolean
 shortName?: string
 ```
 
-系统账号的短名称。
+Short name of the OS account.
 
-此接口为系统接口，默认为空。
+This is a system API and is left blank by default.
 
 **Type:** string
 

@@ -10,12 +10,6 @@
 
 **系统能力：** SystemCapability.Global.I18n
 
-## 导入模块
-
-```TypeScript
-import { i18n } from 'kits/@kit.LocalizationKit';
-```
-
 ## begin
 
 ```TypeScript

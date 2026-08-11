@@ -1,6 +1,6 @@
 # AlternateIconInfo
 
-描述应用备用图标信息。
+Describes the app backup icon information.
 
 **Since:** 26.0.0
 
@@ -16,13 +16,7 @@
 readonly enabled: boolean
 ```
 
-备用图标是否启用。
-
-true：表示当前备用图标启用。
-
-false：表示当前备用图标未启用。
-
-**说明：** 应用最多只能启用一个备用图标。
+Whether the backup icon is enabled.true: The current backup icon is enabled.false: The current backup icon is not enabled.
 
 **Type:** boolean
 
@@ -42,7 +36,7 @@ false：表示当前备用图标未启用。
 readonly iconId: long
 ```
 
-备用图标的资源id，是编译构建时根据应用配置的icon自动生成的资源id。
+Resource ID of the backup icon, which is automatically generated during compilation and build based on the icon configured in the app.
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：long
 
@@ -62,7 +56,7 @@ readonly iconId: long
 readonly iconName: string
 ```
 
-备用图标的名称。
+Name of the backup icon.
 
 **Type:** string
 

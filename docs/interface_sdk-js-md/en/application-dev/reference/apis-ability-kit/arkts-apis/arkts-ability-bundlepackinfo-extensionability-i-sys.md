@@ -1,6 +1,6 @@
 # ExtensionAbility (System API)
 
-描述extensionAbilities的配置信息。
+ExtensionAbility: the extension ability forms class.
 
 **Since:** 9
 
@@ -18,7 +18,7 @@
 readonly forms: Array<AbilityFormInfo>
 ```
 
-卡片信息。
+Widget information.
 
 **Type:** Array&lt;AbilityFormInfo&gt;
 
@@ -38,7 +38,7 @@ readonly forms: Array<AbilityFormInfo>
 readonly name: string
 ```
 
-表示该ExtensionAbility的名称。
+Name of the ExtensionAbility.
 
 **Type:** string
 

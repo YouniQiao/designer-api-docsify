@@ -1,6 +1,6 @@
 # UnlitMaterial
 
-无光照材质资源
+Unlit material resource
 
 **Inheritance/Implementation:** UnlitMaterial extends [Material](arkts-arkgraphics3d-sceneresources-material-i.md)
 
@@ -18,7 +18,7 @@
 baseColor: MaterialProperty
 ```
 
-无光照材质的基础颜色因子.factor.xyzw的值定义rgba颜色.
+Base color factor of unlit material.Value of factor.xyzw defines rgba color.
 
 **Type:** [MaterialProperty](arkts-arkgraphics3d-sceneresources-materialproperty-i.md)
 

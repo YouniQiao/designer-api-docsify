@@ -1,6 +1,6 @@
 # TabBarOptions
 
-页签选项。
+Array of tab bar container configurations.
 
 **Since:** 12
 
@@ -23,7 +23,7 @@ constructor(icon: ResourceStr | TabBarSymbol, text: ResourceStr,
     unselectedColor?: ResourceColor, selectedColor?: ResourceColor)
 ```
 
-TabBarOptions的构造函数。
+A constructor used to create a **TabBarOptions** instance.
 
 **Since:** 12
 
@@ -39,8 +39,8 @@ TabBarOptions的构造函数。
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| icon | [ResourceStr](arkts-arkui-resourcestr-t.md) \| TabBarSymbol | Yes | 页签内的图标内容。 |
-| text | [ResourceStr](arkts-arkui-resourcestr-t.md) | Yes | 页签内的文字内容。 |
-| unselectedColor | [ResourceColor](arkts-arkui-resourcecolor-t.md) | No | 未选择时的页签颜色，默认值为#99182431。 |
-| selectedColor | [ResourceColor](arkts-arkui-resourcecolor-t.md) | No | 已选择时的页签颜色，默认值为#FF007DFF。 |
+| icon | [ResourceStr](arkts-arkui-resourcestr-t.md) \| TabBarSymbol | Yes | Image for the tab. |
+| text | [ResourceStr](arkts-arkui-resourcestr-t.md) | Yes | Text of the tab. |
+| unselectedColor | [ResourceColor](arkts-arkui-resourcecolor-t.md) | No | Color of the tab when it is not selected. &lt;br&gt;Default value: **#99182431 |
+| selectedColor | [ResourceColor](arkts-arkui-resourcecolor-t.md) | No | Color of the tab when it is selected. &lt;br&gt;Default value: **#FF007DFF |
 

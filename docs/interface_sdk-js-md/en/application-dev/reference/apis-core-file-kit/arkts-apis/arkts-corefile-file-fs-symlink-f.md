@@ -12,11 +12,11 @@ import { Options, ReaderIteratorResult, Watcher, ReadTextOptions, WatchEventList
 declare function symlink(target: string, srcPath: string): Promise<void>
 ```
 
-基于文件路径创建符号链接，使用promise异步回调。
+Creates a symbolic link based on a file path. This API uses a promise to return the result.
 
-> **说明：**
+> **NOTE：**
 > 
-> 从API version 11开始，不支持三方应用使用。
+> Since API version 11, this API cannot be used by third-party applications.
 
 **Since:** 9
 
@@ -30,14 +30,14 @@ declare function symlink(target: string, srcPath: string): Promise<void>
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| target | string | Yes | 要链接的目标文件的应用沙箱路径。 |
-| srcPath | string | Yes | 符号链接文件的应用沙箱路径。 |
+| target | string | Yes | Application sandbox path of the target file. |
+| srcPath | string | Yes | Application sandbox path of the symbolic link. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise对象。无返回值。 |
+| Promise&lt;void&gt; | Promise that returns no value. |
 
 **Error codes:**
 
@@ -65,11 +65,11 @@ declare function symlink(target: string, srcPath: string): Promise<void>
 declare function symlink(target: string, srcPath: string, callback: AsyncCallback<void>): void
 ```
 
-基于文件路径创建符号链接，使用callback异步回调。
+Creates a symbolic link based on the file path. This API uses an asynchronous callback to return the result.
 
-> **说明：**
+> **NOTE：**
 > 
-> 从API version 11开始，不支持三方应用使用。
+> Since API version 11, this API cannot be used by third-party applications.
 
 **Since:** 9
 
@@ -83,9 +83,9 @@ declare function symlink(target: string, srcPath: string, callback: AsyncCallbac
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| target | string | Yes | 要链接的目标文件的应用沙箱路径。 |
-| srcPath | string | Yes | 符号链接文件的应用沙箱路径。 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | 异步创建符号链接信息之后的回调。 |
+| target | string | Yes | Application sandbox path of the target file. |
+| srcPath | string | Yes | Application sandbox path of the symbolic link. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. |
 
 **Error codes:**
 

@@ -48,7 +48,7 @@ asKeyEvent(): KeyEvent | null
 
 | 类型 | 说明 |
 | --- | --- |
-| [KeyEvent](../../apis-ime-kit/arkts-apis/arkts-ime-inputmethodengine-keyevent-i.md) | Key event object if it is a key event, or **null** otherwise. |
+| [KeyEvent](../arkts-apis/arkts-arkui-common-keyevent-i.md) | Key event object if it is a key event, or **null** otherwise. |
 
 ## asMouseEvent
 

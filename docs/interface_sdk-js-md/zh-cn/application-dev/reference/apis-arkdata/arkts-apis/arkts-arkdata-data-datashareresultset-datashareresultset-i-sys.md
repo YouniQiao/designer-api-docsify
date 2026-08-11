@@ -14,12 +14,6 @@
 
 **系统接口：** 此接口为系统接口。
 
-## 导入模块
-
-```TypeScript
-import { DataType } from 'kits/@kit.ArkData';
-```
-
 ## close
 
 ```TypeScript
@@ -243,20 +237,15 @@ getDataType(columnIndex: int): DataType
 
 | 类型 | 说明 |
 | --- | --- |
-| [DataType](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-file-photopickercomponent-datatype-e.md) | 返回指定列的类型。 |
+| [DataType](../../apis-ability-kit/arkts-apis/arkts-ability-screenlockfilemanager-datatype-e.md) | 返回指定列的类型。 |
 
 ## 示例
 
 ```TypeScript
 let columnIndex = 1;
 if (resultSet != undefined) {
-  let goToFirstRow = (resultSet as DataShareResultSet).goToFirstRow();
-  if (!goToFirstRow) {
-    console.error("failed to go to first row");
-  } else {
-    let getDataType = (resultSet as DataShareResultSet).getDataType(columnIndex);
-    console.info('resultSet.getDataType: ' + getDataType);
-  }
+  let getDataType = (resultSet as DataShareResultSet).getDataType(columnIndex);
+  console.info('resultSet.getDataType: ' + getDataType);
 }
 ```
 
@@ -306,12 +295,8 @@ getDouble(columnIndex: int): double
 let columnIndex = 1;
 if (resultSet != undefined) {
   let goToFirstRow = (resultSet as DataShareResultSet).goToFirstRow();
-  if (!goToFirstRow) {
-    console.error("failed to go to first row");
-  } else {
-    let getDouble = (resultSet as DataShareResultSet).getDouble(columnIndex);
-    console.info('resultSet.getDouble: ' + getDouble);
-  }
+  let getDouble = (resultSet as DataShareResultSet).getDouble(columnIndex);
+  console.info('resultSet.getDouble: ' + getDouble);
 }
 ```
 
@@ -361,12 +346,8 @@ getLong(columnIndex: int): long
 let columnIndex = 1;
 if (resultSet != undefined) {
   let goToFirstRow = (resultSet as DataShareResultSet).goToFirstRow();
-  if (!goToFirstRow) {
-    console.error("failed to go to first row");
-  } else {
-    let getLong = (resultSet as DataShareResultSet).getLong(columnIndex);
-    console.info('resultSet.getLong: ' + getLong);
-  }
+  let getLong = (resultSet as DataShareResultSet).getLong(columnIndex);
+  console.info('resultSet.getLong: ' + getLong);
 }
 ```
 
@@ -416,12 +397,8 @@ getString(columnIndex: int): string
 let columnIndex = 1;
 if (resultSet != undefined) {
   let goToFirstRow = (resultSet as DataShareResultSet).goToFirstRow();
-  if (!goToFirstRow) {
-    console.error("failed to go to first row");
-  } else {
-    let getString = (resultSet as DataShareResultSet).getString(columnIndex);
-    console.info('resultSet.getString: ' + getString);
-  }
+  let getString = (resultSet as DataShareResultSet).getString(columnIndex);
+  console.info('resultSet.getString: ' + getString);
 }
 ```
 

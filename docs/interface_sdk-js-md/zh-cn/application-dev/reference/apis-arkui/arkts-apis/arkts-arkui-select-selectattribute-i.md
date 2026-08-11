@@ -64,7 +64,7 @@ default arrowPosition(value: ArrowPosition | undefined): this
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | [ArrowPosition](../arkts-components/arkts-arkui-arrowposition-e.md) \| undefined | 是 | 下拉菜单项的文本与箭头之间的对齐方式。&lt;br/&gt;当value的值为undefined时，默认值：ArrowPosition.END |
+| value | [ArrowPosition](arkts-arkui-select-arrowposition-e.md) \| undefined | 是 | 下拉菜单项的文本与箭头之间的对齐方式。&lt;br/&gt;当value的值为undefined时，默认值：ArrowPosition.END |
 
 **返回值：**
 
@@ -125,7 +125,7 @@ default avoidance(mode: AvoidanceMode | undefined): this
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| mode | [AvoidanceMode](arkts-arkui-select-avoidancemode-e.md) \| undefined | 是 | 设置下拉菜单的避让模式。取值为undefined时，按默认值处理。&lt;br/&gt;默认值：AvoidanceMode.COVER_TARGET |
+| mode | [AvoidanceMode](../arkts-components/arkts-arkui-avoidancemode-e.md) \| undefined | 是 | 设置下拉菜单的避让模式。取值为undefined时，按默认值处理。&lt;br/&gt;默认值：AvoidanceMode.COVER_TARGET |
 
 **返回值：**
 
@@ -335,8 +335,8 @@ default menuAlign(alignType: MenuAlignType | undefined, offset?: Offset | undefi
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| alignType | [MenuAlignType](arkts-arkui-select-menualigntype-e.md) \| undefined | 是 | 对齐方式类型。&lt;br/&gt;当alignType的值为undefined时，默认值：MenuAlignType.START |
-| offset | [Offset](arkts-arkui-componentutils-offset-i.md) \| undefined | 否 | 按照对齐类型对齐后，下拉菜单相对下拉按钮的偏移量。&lt;br/&gt; 默认值：{dx: 0, dy: 0} |
+| alignType | [MenuAlignType](../arkts-components/arkts-arkui-menualigntype-e.md) \| undefined | 是 | 对齐方式类型。&lt;br/&gt;当alignType的值为undefined时，默认值：MenuAlignType.START |
+| offset | [Offset](arkts-arkui-units-offset-i.md) \| undefined | 否 | 按照对齐类型对齐后，下拉菜单相对下拉按钮的偏移量。&lt;br/&gt; 默认值：{dx: 0, dy: 0} |
 
 **返回值：**
 

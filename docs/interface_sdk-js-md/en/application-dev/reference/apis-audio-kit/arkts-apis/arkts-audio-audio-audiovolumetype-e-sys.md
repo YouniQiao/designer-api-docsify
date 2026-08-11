@@ -1,6 +1,6 @@
 # AudioVolumeType
 
-表示音频音量类型的枚举。
+Enumerates the audio volume types.
 
 **Since:** 7
 
@@ -16,7 +16,7 @@
 SYSTEM = 6
 ```
 
-Audio volume for system sound.
+Audio volume type for system sound.
 
 **Since:** 20
 
@@ -34,7 +34,7 @@ Audio volume for system sound.
 ULTRASONIC = 10
 ```
 
-Audio volume for ultrasonic.
+Audio volume type for ultrasonic.
 
 **Since:** 10
 
@@ -88,7 +88,7 @@ Audio volume type for navigation.
 ALL = 100
 ```
 
-Audio stream for all common.
+Audio volume type for all common.
 
 **Since:** 9
 

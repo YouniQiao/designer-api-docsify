@@ -1,6 +1,6 @@
 # MenuElement
 
-菜单项的图标、文本和交互信息。
+Configures icon, text, and interaction information of a menu item.
 
 **Since:** 7
 
@@ -16,7 +16,7 @@
 action: () => void
 ```
 
-点击菜单项的事件回调。
+Action triggered when a menu item is clicked.
 
 **Since:** 7
 
@@ -34,11 +34,11 @@ action: () => void
 enabled?: boolean
 ```
 
-菜单条目是否可进行交互。
+Whether to enable interactions with the menu item.
 
-true：菜单条目可以进行交互；false：菜单条目不可以进行交互。
+**true**: yes; **false**: no
 
-默认值：true
+Default value: **true**.
 
 **Type:** boolean
 
@@ -62,7 +62,7 @@ true：菜单条目可以进行交互；false：菜单条目不可以进行交�
 icon?: ResourceStr
 ```
 
-菜单项图标。
+Menu item icon.
 
 **Type:** [ResourceStr](../arkts-apis/arkts-arkui-resourcestr-t.md)
 
@@ -84,7 +84,7 @@ icon?: ResourceStr
 symbolIcon?: SymbolGlyphModifier
 ```
 
-设置菜单项图标。通过Modifier配置菜单项图标，若同时配置symbolIcon和icon的情况下，icon图标不显示。
+Icon of a menu item. You can configure the menu item icon using **Modifier**. If both **symbolIcon** and **icon** are configured, the icon is not displayed.
 
 **Type:** [SymbolGlyphModifier](arkts-arkui-symbolglyphmodifier-t.md)
 
@@ -106,7 +106,7 @@ symbolIcon?: SymbolGlyphModifier
 value: ResourceStr
 ```
 
-菜单项文本。
+Menu item text.
 
 **Type:** [ResourceStr](../arkts-apis/arkts-arkui-resourcestr-t.md)
 

@@ -1,6 +1,6 @@
 # AttendeeStatus
 
-会议日程参与者状态类型枚举。
+Enumerates the status types of an attendee.
 
 **Since:** 18
 
@@ -16,7 +16,7 @@
 UNKNOWN = 0
 ```
 
-参与者状态未知。
+The attendee status is unknown.
 
 **Since:** 18
 
@@ -34,7 +34,7 @@ UNKNOWN = 0
 TENTATIVE = 1
 ```
 
-参与者状态暂定。
+The attendee status is tentative.
 
 **Since:** 18
 
@@ -52,7 +52,7 @@ TENTATIVE = 1
 ACCEPTED = 2
 ```
 
-参与者已接受。
+The attendee has accepted the conference invitation.
 
 **Since:** 18
 
@@ -70,7 +70,7 @@ ACCEPTED = 2
 DECLINED = 3
 ```
 
-参与者已拒绝。
+The attendee has rejected the conference invitation.
 
 **Since:** 18
 
@@ -88,7 +88,7 @@ DECLINED = 3
 UNRESPONSIVE = 4
 ```
 
-参与者未响应。
+The attendee does not respond.
 
 **Since:** 18
 

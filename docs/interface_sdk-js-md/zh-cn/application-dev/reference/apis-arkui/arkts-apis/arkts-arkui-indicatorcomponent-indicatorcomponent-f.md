@@ -24,7 +24,7 @@ export declare function IndicatorComponent(
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| controller | [IndicatorComponentController](../arkts-components/arkts-arkui-indicatorcomponentcontroller-c.md) | 否 | IndicatorComponent constructor options |
+| controller | [IndicatorComponentController](arkts-arkui-indicatorcomponent-indicatorcomponentcontroller-c.md) | 否 | IndicatorComponent constructor options |
 
 **返回值：**
 

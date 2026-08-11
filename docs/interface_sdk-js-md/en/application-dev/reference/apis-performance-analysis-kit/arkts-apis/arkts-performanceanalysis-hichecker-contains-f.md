@@ -12,11 +12,7 @@ import { hichecker } from 'kits/@kit.PerformanceAnalysisKit';
 function contains(rule: bigint): boolean
 ```
 
-> **˵����**
-> 
-> ��API version 8��ʼ֧�֣���API version 9��ʼ����������ʹ��[hichecker.containsCheckRule](arkts-performanceanalysis-hichecker-containscheckrule-f.md#containscheckrule)�����
-
-��ǰ�����ӵĹ������Ƿ������ĳһ���ض��Ĺ����������Ĺ��򼶱�Ϊ�̼߳�������ڵ�ǰ�߳��н��в�ѯ��
+Checks whether the specified rule exists in the collection of added rules. If the rule is of the thread level, this operation is performed only on the current thread.
 
 **Since:** 8
 
@@ -34,13 +30,13 @@ function contains(rule: bigint): boolean
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| rule | bigint | Yes | ��Ҫ��ѯ�Ĺ��� |
+| rule | bigint | Yes | Rule to be checked. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| boolean | ��ѯ�����true ��ʾ���������ӣ�false ��ʾ����δ���ӡ� |
+| boolean | Check result. If the rule exists in the collection of added rules, **true** is returned; otherwise, **false** is returned. |
 
 ## Examples
 

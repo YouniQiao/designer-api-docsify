@@ -10,12 +10,6 @@
 
 **系统能力：** SystemCapability.BusManager.Serial
 
-## 导入模块
-
-```TypeScript
-import { serial } from 'kits/@kit.BasicServicesKit';
-```
-
 ## manufacturer
 
 ```TypeScript

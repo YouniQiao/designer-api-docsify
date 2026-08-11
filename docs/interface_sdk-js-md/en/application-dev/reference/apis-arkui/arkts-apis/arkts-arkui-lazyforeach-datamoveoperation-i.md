@@ -1,6 +1,6 @@
 # DataMoveOperation
 
-移动数据操作。
+Defines move&exchange operation.
 
 **Since:** 23
 
@@ -16,7 +16,7 @@
 index: MoveIndex
 ```
 
-移动位置。取值范围是[0, 数据源长度-1]。
+Index of moved data.
 
 **Type:** [MoveIndex](../arkts-components/arkts-arkui-moveindex-i.md)
 
@@ -36,7 +36,7 @@ index: MoveIndex
 key?: string
 ```
 
-为被移动的数据分配新的键值，默认使用原键值。
+Key of moved data.
 
 **Type:** string
 
@@ -56,7 +56,7 @@ key?: string
 type: DataOperationType
 ```
 
-数据移动类型。
+How to operate moved data.
 
 **Type:** [DataOperationType](arkts-arkui-lazyforeach-dataoperationtype-e.md)
 

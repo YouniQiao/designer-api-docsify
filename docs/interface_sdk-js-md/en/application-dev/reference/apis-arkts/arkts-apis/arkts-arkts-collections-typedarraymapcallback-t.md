@@ -5,7 +5,7 @@ type TypedArrayMapCallback<ElementType, ArrayType> =
     (value: ElementType, index: number, array: ArrayType) => ElementType
 ```
 
-ArkTS TypedArray转换映射函数类型。
+Describes the conversion mapping function of the ArkTS typed array.
 
 **Since:** 12
 
@@ -21,13 +21,13 @@ ArkTS TypedArray转换映射函数类型。
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | ElementType | Yes | 当前映射的ArkTS TypedArray元素。 |
-| index | number | Yes | 当前映射的ArkTS TypedArray元素索引，从0开始。 |
-| array | ArrayType | Yes | 当前映射的ArkTS TypedArray实例。 |
+| value | ElementType | Yes | Element that is being mapped in the ArkTS typed array. |
+| index | number | Yes | Index of the element. |
+| array | ArrayType | Yes | ArkTS typed array that is being mapped. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| ElementType | 转换后的元素值。 |
+| ElementType | The result of the mapping. |
 

@@ -1,6 +1,6 @@
 # Scenario
 
-Enumerates the scenarios of the onscreen content.
+定义屏上内容的场景类型。
 
 **起始版本：** 20
 
@@ -16,7 +16,7 @@ Enumerates the scenarios of the onscreen content.
 UNKNOWN = 0
 ```
 
-Unknown scenario.
+表示屏上内容所处场景未知。
 
 **起始版本：** 20
 
@@ -34,7 +34,7 @@ Unknown scenario.
 ARTICLE = 1
 ```
 
-Article scenario.
+表示屏上内容处于文章场景。
 
 **起始版本：** 20
 

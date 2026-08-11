@@ -1,6 +1,7 @@
 # EditorAttribute
 
-编辑框属性值。
+In the following API examples, you must first use   
+[getKeyboardDelegate](arkts-ime-inputmethodengine-getkeyboarddelegate-f.md#getkeyboarddelegate) to obtain a **KeyboardDelegate** instance, and then call the APIs using the obtained instance.
 
 **Since:** 8
 
@@ -22,9 +23,9 @@ import { inputMethodEngine } from 'kits/@kit.IMEKit';
 readonly fluidLightMode?: FluidLightMode
 ```
 
-流光模式。未设置或设置非法值时，默认不使用流光模式。
+Fluid light mode. If this attribute is not specified or is set to an invalid value, the fluid light mode is not used by default.
 
-该属性仅系统应用可以使用。
+This attribute is available only to system applications.
 
 **Type:** [FluidLightMode](arkts-ime-inputmethodengine-fluidlightmode-e-sys.md)
 

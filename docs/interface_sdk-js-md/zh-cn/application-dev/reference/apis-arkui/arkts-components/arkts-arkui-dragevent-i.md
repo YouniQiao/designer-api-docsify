@@ -67,8 +67,8 @@ getData(): UnifiedData
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 190002 | Data error. |
-| 190001 | Data not found. |
+| [190002](../errorcode-uicontext.md#190002-无效的回调函数) | Data error. |
+| [190001](../errorcode-uicontext.md#190001-无效的uicontext对象) | Data not found. |
 
 ## getDisplayId
 
@@ -262,7 +262,7 @@ getModifierKeyState?(keys: Array<string>): boolean
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1. Incorrect parameter types. 2. Parameter verification failed. |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1. Incorrect parameter types. 2. Parameter verification failed. |
 
 ## getPreviewRect
 
@@ -604,7 +604,7 @@ setDataLoadParams(dataLoadParams: DataLoadParams): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| dataLoadParams | [DataLoadParams](../arkts-apis/arkts-arkui-dataloadparams-t.md) | 是 | 落入操作时使用的数据加载参数。 |
+| dataLoadParams | [DataLoadParams](../../apis-arkdata/arkts-apis/arkts-arkdata-unifieddatachannel-dataloadparams-i.md) | 是 | 落入操作时使用的数据加载参数。 |
 
 ## setResult
 
@@ -668,8 +668,8 @@ startDataLoading(options: DataSyncOptions): string
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 401 | Parameter error. |
-| 190003 | Operation not allowed for current phase. |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. |
+| [190003](../errorcode-drag-event.md#190003-当前阶段不允许操作) | Operation not allowed for current phase. |
 
 ## autoHideComponentUniqueIds
 

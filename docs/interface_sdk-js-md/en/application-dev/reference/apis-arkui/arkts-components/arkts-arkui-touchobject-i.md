@@ -1,6 +1,6 @@
 # TouchObject
 
-触摸事件类型。
+Type of the touch event.
 
 **Since:** 7
 
@@ -16,7 +16,7 @@
 getCurrentLocalPosition?(): Coordinate2D
 ```
 
-获取点击位置相对于当前组件实时位置的左上角坐标。
+Gets the coordinates of the top-left corner of the current component based on its real-time position.
 
 **Since:** 26.0.0
 
@@ -34,7 +34,7 @@ getCurrentLocalPosition?(): Coordinate2D
 
 | Type | Description |
 | --- | --- |
-| [Coordinate2D](../arkts-apis/arkts-arkui-coordinate2d-i.md) | 点击位置相对于当前组件实时位置的左上角坐标。 |
+| [Coordinate2D](../arkts-apis/arkts-arkui-coordinate2d-i.md) | return the coordinates of the top-left corner of the current component based on its real-time position. |
 
 ## displayX
 
@@ -42,9 +42,9 @@ getCurrentLocalPosition?(): Coordinate2D
 displayX: number
 ```
 
-触摸点在当前应用屏幕坐标系中的X坐标。
+X coordinate of the touch point in the coordinate system of the current application screen.
 
-单位：vp
+Unit: vp.
 
 **Type:** number
 
@@ -66,9 +66,9 @@ displayX: number
 displayY: number
 ```
 
-触摸点在当前应用屏幕坐标系中的Y坐标。
+Y coordinate of the touch point in the coordinate system of the current application screen.
 
-单位：vp
+Unit: vp.
 
 **Type:** number
 
@@ -90,11 +90,12 @@ displayY: number
 globalDisplayX?: number
 ```
 
-触摸点在[全局坐标系](../../../windowmanager/window-terminology.md#全局坐标系)中的X坐标。
+X coordinate of the touch point in the  
+[global coordinate system](../../../windowmanager/window-terminology.md#global-coordinate-system).
 
-单位：vp
+Unit: vp.
 
-取值范围：[0, +∞)
+Value range: (-∞, +∞).
 
 **Type:** number
 
@@ -116,11 +117,12 @@ globalDisplayX?: number
 globalDisplayY?: number
 ```
 
-点击位置在[全局坐标系](../../../windowmanager/window-terminology.md#全局坐标系)中的Y坐标。
+Y coordinate of the touch point in the  
+[global coordinate system](../../../windowmanager/window-terminology.md#global-coordinate-system).
 
-单位：vp
+Unit: vp.
 
-取值范围：[0, +∞)
+Value range: (-∞, +∞).
 
 **Type:** number
 
@@ -142,7 +144,7 @@ globalDisplayY?: number
 hand?: InteractionHand
 ```
 
-表示事件是由左手点击还是右手点击触发。
+Whether the event was triggered by a left-hand or right-hand tap.
 
 **Type:** [InteractionHand](../arkts-apis/arkts-arkui-interactionhand-e.md)
 
@@ -164,9 +166,9 @@ hand?: InteractionHand
 height?: number
 ```
 
-当前手指按压区域的高度。
+Height of the finger contact area.
 
-单位：vp
+Unit: vp.
 
 **Type:** number
 
@@ -188,7 +190,7 @@ height?: number
 id: number
 ```
 
-手指唯一标识符。
+Unique identifier of a finger.
 
 **Type:** number
 
@@ -208,9 +210,9 @@ id: number
 pressedTime?: number
 ```
 
-当前手指按下的时间。
+Time when the finger is pressed.
 
-单位：ns
+Unit: ns
 
 **Type:** number
 
@@ -232,9 +234,9 @@ pressedTime?: number
 pressure?: number
 ```
 
-当前手指按压的压力值。
+Pressure value of finger contact.
 
-取值范围：[0,65535)，压力越大，值越大。
+Value range: [0, 65535), where higher values indicate stronger pressure.
 
 **Type:** number
 
@@ -256,9 +258,12 @@ pressure?: number
 screenX: number
 ```
 
-触摸点在当前应用窗口坐标系中的X坐标。
+X coordinate of the touch point in the coordinate system of the current application window.
 
-单位：vp
+Unit: vp.
+
+Note: This API is supported since API version 7 and deprecated since API version 10. You are advised to use  
+**windowX** instead.
 
 **Type:** number
 
@@ -280,9 +285,12 @@ screenX: number
 screenY: number
 ```
 
-触摸点在当前应用窗口坐标系中的Y坐标。
+Y coordinate of the touch point in the coordinate system of the current application window.
 
-单位：vp
+Unit: vp.
+
+Note: This API is supported since API version 7 and deprecated since API version 10. You are advised to use  
+**windowY** instead.
 
 **Type:** number
 
@@ -304,7 +312,7 @@ screenY: number
 type: TouchType
 ```
 
-触摸事件的类型。
+Type of the touch event.
 
 **Type:** [TouchType](../arkts-apis/arkts-arkui-touchtype-e.md)
 
@@ -324,9 +332,9 @@ type: TouchType
 width?: number
 ```
 
-当前手指按压区域的宽度。
+Width of the finger contact area.
 
-单位：vp
+Unit: vp.
 
 **Type:** number
 
@@ -348,9 +356,9 @@ width?: number
 windowX: number
 ```
 
-触摸点在当前应用窗口坐标系中的X坐标。
+X coordinate of the touch point in the coordinate system of the current application window.
 
-单位：vp
+Unit: vp.
 
 **Type:** number
 
@@ -372,9 +380,9 @@ windowX: number
 windowY: number
 ```
 
-触摸点在当前应用窗口坐标系中的Y坐标。
+Y coordinate of the touch point in the coordinate system of the current application window.
 
-单位：vp
+Unit: vp.
 
 **Type:** number
 
@@ -396,9 +404,10 @@ windowY: number
 x: number
 ```
 
-触摸点在事件响应组件为基准的[组件坐标系](../../../ui/arkui-glossary.md#组件坐标系)中的X坐标。
+X coordinate of the touch point in the  
+[component coordinate system](../../../ui/arkui-glossary.md#component-coordinate-system) based on the event-responsive component.
 
-单位：vp
+Unit: vp.
 
 **Type:** number
 
@@ -418,9 +427,10 @@ x: number
 y: number
 ```
 
-触摸点在事件响应组件为基准的[组件坐标系](../../../ui/arkui-glossary.md#组件坐标系)中的Y坐标。
+Y coordinate of the touch point in the  
+[component coordinate system](../../../ui/arkui-glossary.md#component-coordinate-system) based on the event-responsive component.
 
-单位：vp
+Unit: vp.
 
 **Type:** number
 

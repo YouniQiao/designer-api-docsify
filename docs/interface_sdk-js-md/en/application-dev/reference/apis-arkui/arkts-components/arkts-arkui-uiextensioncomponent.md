@@ -1,22 +1,27 @@
 # UIExtensionComponent
 
-**UIExtensionComponent**用于将其他应用提供的UI嵌入到本应用UI中。嵌入内容运行在另一个进程中，本应用不参与其布局和渲染。
+**UIExtensionComponent** is used to embed UIs provided by other applications in the local application UI. The
+embedded content runs in another process, and the local application does not participate in its layout and rendering.
 
-通常用于需要进程隔离的模块化开发场景。
+It is usually used in modular development scenarios where process isolation is required.
 
-## 约束
+## Constraints
 
-该组件不支持预览。
+This component does not support preview.
 
-待启动的能力必须是UIExtensionAbility，即带UI的扩展能力。关于如何实现UIExtensionAbility的详细信息，请参见[@ohos.app.ability.UIExtensionAbility（带UI的ExtensionAbility基类）]{@link @ohos.app.ability.UIExtensionAbility:UIExtensionAbility}。
+The ability to be started must be a UIExtensionAbility, an extension ability with UI. For details about how to implement a UIExtensionAbility, see  
+[@ohos.app.ability.UIExtensionAbility (Base Class for ExtensionAbilities with UI)]{@link @ohos.app.ability.UIExtensionAbility:UIExtensionAbility}.
 
-组件的宽高必须显式设置为非零有效值。
+The width and height of the component must be explicitly set to non-zero valid values.
 
-不支持到达边缘后继续滚动的场景。当**UIExtensionComponent**宿主和UIExtensionAbility都支持内容滚动时，基于手势的滚动会导致**UIExtensionComponent**内外同时响应，包括但不限于[Scroll]{@link ./scroll}、[Swiper]{@link ./swiper}、[List]{@link ./list}、[Grid]{@link ./grid}等可滚动容器。关于如何避免**UIExtensionComponent**内外同时滚动的详细信息，请参见[示例2](docroot://reference/apis-arkui/arkui-ts/ts-container-ui-extension-component-sys.md#example-2-isolating-scrolling-inside-and-outside-of-uiextensioncomponent)。
+The scenario where scrolling continues after the edge is reached is not supported. When both the  
+**UIExtensionComponent** host and the UIExtensionAbility support content scrolling, gesture-based scrolling will cause simultaneous responses from both inside and outside the **UIExtensionComponent**. This includes, but is not limited to, scrollable containers such as [Scroll]{@link ./scroll}, [Swiper]{@link ./swiper}, [List]{@link ./list},and [Grid]{@link ./grid}. For details about how to avoid the simultaneous scrolling inside and outside the  
+**UIExtensionComponent**, see  
+[Example 2](docroot://reference/apis-arkui/arkui-ts/ts-container-ui-extension-component-sys.md#example-2-isolating-scrolling-inside-and-outside-of-uiextensioncomponent).
 
-## 子组件
+## Child Components
 
-不支持
+Not supported
 
 ## UIExtensionComponent
 
@@ -27,7 +32,7 @@ UIExtensionComponent(
   )
 ```
 
-构造UIExtensionComponent。&lt;br/&gt;在使用UIExtensionComponent时调用。
+Construct the UIExtensionComponent.&lt;br/&gt;Called when the UIExtensionComponent is used.
 
 **Since:** 10
 
@@ -45,8 +50,8 @@ UIExtensionComponent(
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| want | import('../api/@ohos.app.ability.Want').default | Yes | 表示UIExtensionAbility的want |
-| options | [UIExtensionOptions](../arkts-apis/arkts-arkui-uiextensioncomponent-uiextensionoptions-i-sys.md) | No | UIExtensionComponentAttribute的构造配置 |
+| want | import('../api/@ohos.app.ability.Want').default | Yes | Ability to start. |
+| options | [UIExtensionOptions](../arkts-apis/arkts-arkui-uiextensioncomponent-uiextensionoptions-i-sys.md) | No | Construction parameters. |
 
 ## Summary
 

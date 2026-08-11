@@ -1,6 +1,6 @@
 # SqlInfo
 
-描述数据库执行的SQL语句的详细信息。
+Represents details about the SQL statement executed by the database.
 
 **Since:** 20
 
@@ -22,7 +22,7 @@ import { relationalStore } from 'kits/@kit.ArkData';
 args: Array<ValueType>
 ```
 
-表示执行SQL中的参数信息。
+Parameters in the SQL statements to be executed.
 
 **Type:** Array&lt;ValueType&gt;
 
@@ -40,7 +40,7 @@ args: Array<ValueType>
 sql: string
 ```
 
-表示执行的SQL语句。
+SQL statements to be executed.
 
 **Type:** string
 

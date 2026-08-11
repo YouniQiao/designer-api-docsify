@@ -1,11 +1,5 @@
 # getSystemInputMethodConfigAbility
 
-## 导入模块
-
-```TypeScript
-import { inputMethod } from 'kits/@kit.IMEKit';
-```
-
 ## getSystemInputMethodConfigAbility
 
 ```TypeScript
@@ -32,7 +26,7 @@ function getSystemInputMethodConfigAbility(): ElementName
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 12800008 | input method manager service error. Possible cause: a system error, such as null pointer, IPC exception. |
+| [12800008](../errorcode-inputmethod-framework.md#12800008-输入法管理服务异常) | input method manager service error. Possible cause: a system error, such as null pointer, IPC exception. |
 
 ## 示例
 

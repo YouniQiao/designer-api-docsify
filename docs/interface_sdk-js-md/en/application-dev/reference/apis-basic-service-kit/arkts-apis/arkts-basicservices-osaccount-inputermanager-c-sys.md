@@ -1,6 +1,6 @@
 # InputerManager (System API)
 
-凭据输入管理器。
+Provides APIs for managing credential inputers.
 
 **Since:** 9
 
@@ -24,7 +24,7 @@ import { osAccount } from 'kits/@kit.BasicServicesKit';
 static registerInputer(authType: AuthType, inputer: IInputer): void
 ```
 
-注册凭据输入器。
+Registers a credential inputer.
 
 **Since:** 9
 
@@ -42,20 +42,20 @@ static registerInputer(authType: AuthType, inputer: IInputer): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| authType | [AuthType](arkts-basicservices-osaccount-authtype-e-sys.md) | Yes | 认证类型。 |
-| inputer | [IInputer](arkts-basicservices-osaccount-iinputer-i-sys.md) | Yes | 凭据输入器，用于获取凭据。 |
+| authType | [AuthType](arkts-basicservices-osaccount-authtype-e-sys.md) | Yes | Authentication credential type. |
+| inputer | [IInputer](arkts-basicservices-osaccount-iinputer-i-sys.md) | Yes | Credential inputer to register. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameter types. |
-| 12300106 | The authentication type is not supported. |
-| 201 | Permission denied. |
-| 12300002 | Invalid authType or inputer. |
-| 202 | Not system application. |
-| 12300001 | The system service works abnormally. |
-| 12300103 | The credential inputer already exists. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameter types. |
+| [12300106](../../apis-basic-services-kit/errorcode-account.md#12300106-authentication-type-not-supported) | The authentication type is not supported. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
+| [12300002](../../apis-basic-services-kit/errorcode-account.md#12300002-invalid-parameter) | Invalid authType or inputer. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system application. |
+| [12300001](../../apis-basic-services-kit/errorcode-account.md#12300001-system-service-abnormal) | The system service works abnormally. |
+| [12300103](../../apis-basic-services-kit/errorcode-account.md#12300103-credential-inputer-already-exists) | The credential inputer already exists. |
 
 ## Examples
 
@@ -83,7 +83,7 @@ try {
 static unregisterInputer(authType: AuthType): void
 ```
 
-解注册凭据输入器。
+Unregisters a credential inputer.
 
 **Since:** 9
 
@@ -101,16 +101,16 @@ static unregisterInputer(authType: AuthType): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| authType | [AuthType](arkts-basicservices-osaccount-authtype-e-sys.md) | Yes | 认证类型。 |
+| authType | [AuthType](arkts-basicservices-osaccount-authtype-e-sys.md) | Yes | Authentication credential type. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameter types. |
-| 201 | Permission denied. |
-| 12300002 | Invalid authType. |
-| 202 | Not system application. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameter types. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
+| [12300002](../../apis-basic-services-kit/errorcode-account.md#12300002-invalid-parameter) | Invalid authType. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system application. |
 
 ## Examples
 

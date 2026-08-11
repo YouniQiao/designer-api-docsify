@@ -1,11 +1,5 @@
 # @ohos.multimodalInput.inputEvent(Input Event)
 
-## 导入模块
-
-```TypeScript
-import { InputEvent } from 'kits/@kit.InputKit';
-```
-
 ## 汇总
 
 ### 接口

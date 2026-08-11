@@ -4,7 +4,7 @@
 export type PluginModuleInfo = _PluginModuleInfo
 ```
 
-插件的模块信息。
+Indicates the plugin module info.
 
 **Since:** 26.0.0
 

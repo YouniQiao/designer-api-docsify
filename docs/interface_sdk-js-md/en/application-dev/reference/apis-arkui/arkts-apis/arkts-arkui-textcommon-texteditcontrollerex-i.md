@@ -1,8 +1,6 @@
 # TextEditControllerEx
 
-文本扩展编辑控制器。
-
-继承自[TextBaseController](arkts-arkui-textcommon-textbasecontroller-i.md)。
+Define the text extended editing controller.
 
 **Inheritance/Implementation:** TextEditControllerEx extends [TextBaseController](arkts-arkui-textcommon-textbasecontroller-i.md)
 
@@ -20,7 +18,7 @@
 getCaretOffset(): int | undefined
 ```
 
-返回当前光标所在位置。
+Get caret offset from controller.
 
 **Since:** 23
 
@@ -30,11 +28,13 @@ getCaretOffset(): int | undefined
 
 <!--Device-TextEditControllerEx-getCaretOffset(): int | undefined--><!--Device-TextEditControllerEx-getCaretOffset(): int | undefined-End-->
 
+**System capability:** SystemCapability.ArkUI.ArkUI.Full
+
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| int | 当前光标所在位置。 |
+| int |  |
 
 ## getPreviewText
 
@@ -42,7 +42,7 @@ getCaretOffset(): int | undefined
 getPreviewText(): PreviewText | undefined
 ```
 
-获取预上屏信息。
+Get PreviewText.
 
 **Since:** 23
 
@@ -58,7 +58,7 @@ getPreviewText(): PreviewText | undefined
 
 | Type | Description |
 | --- | --- |
-| [PreviewText](arkts-arkui-previewtext-i.md) | 预上屏信息。 |
+| [PreviewText](arkts-arkui-previewtext-i.md) | Return the PreviewText. |
 
 ## isEditing
 
@@ -66,7 +66,7 @@ getPreviewText(): PreviewText | undefined
 isEditing(): boolean | undefined
 ```
 
-获取当前富文本的编辑状态。
+Judge whether is in editing state
 
 **Since:** 23
 
@@ -82,7 +82,7 @@ isEditing(): boolean | undefined
 
 | Type | Description |
 | --- | --- |
-| boolean | true为编辑态，false为非编辑态。 |
+| boolean | true means that the component is in editing state, false means is non in editing status |
 
 ## setCaretOffset
 
@@ -90,7 +90,7 @@ isEditing(): boolean | undefined
 setCaretOffset(offset: int): boolean | undefined
 ```
 
-设置光标偏移位置。
+Set caret offset.
 
 **Since:** 23
 
@@ -106,13 +106,13 @@ setCaretOffset(offset: int): boolean | undefined
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| offset | int | Yes | 光标偏移位置。超出所有内容范围时，设置失败。 |
+| offset | int | Yes | caret offset. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| boolean | 光标是否设置成功。&lt;br/&gt;true表示光标设置成功，false表示设置失败。 |
+| boolean | Return true if the caret offset was successfully set, false otherwise. |
 
 ## stopEditing
 
@@ -120,7 +120,7 @@ setCaretOffset(offset: int): boolean | undefined
 stopEditing(): void
 ```
 
-退出编辑态。
+Stop editing state.
 
 **Since:** 23
 

@@ -1,6 +1,6 @@
 # SubTabBarStyle
 
-子页签样式。打开后在切换页签时会播放跳转动画。
+Implements the subtab style. A transition animation is played when the user switches between tabs.
 
 **Since:** 9
 
@@ -16,7 +16,7 @@
 board(value: BoardStyle): SubTabBarStyle
 ```
 
-设置选中子页签的背板风格。子页签的背板风格仅在水平模式下有效。
+Sets the background style (board style) of the selected subtab. It takes effect only in the horizontal layout.
 
 **Since:** 10
 
@@ -34,13 +34,13 @@ board(value: BoardStyle): SubTabBarStyle
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | [BoardStyle](arkts-arkui-boardstyle-i.md) | Yes | 选中子页签的背板风格对象，用于设置背板的圆角半径等样式。 |
+| value | [BoardStyle](arkts-arkui-boardstyle-i.md) | Yes | Background style object for the selected subtab. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [SubTabBarStyle](arkts-arkui-subtabbarstyle-c.md) | 返回SubTabBarStyle对象本身，用于链式调用。 |
+| [SubTabBarStyle](arkts-arkui-subtabbarstyle-c.md) | SubTabBarStyle** object. |
 
 ## constructor
 
@@ -48,7 +48,7 @@ board(value: BoardStyle): SubTabBarStyle
 constructor(content: ResourceStr)
 ```
 
-SubTabBarStyle的构造函数。
+Constructor used to create a **SubTabBarStyle** instance.
 
 **Since:** 9
 
@@ -64,7 +64,7 @@ SubTabBarStyle的构造函数。
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| content | [ResourceStr](../arkts-apis/arkts-arkui-resourcestr-t.md) | Yes | 页签内的文字内容。 |
+| content | [ResourceStr](../arkts-apis/arkts-arkui-resourcestr-t.md) | Yes | Text for the tab. |
 
 ## constructor
 
@@ -72,7 +72,7 @@ SubTabBarStyle的构造函数。
 constructor(content: ResourceStr | ComponentContent)
 ```
 
-SubTabBarStyle的构造函数。支持ComponentContent设置自定义内容。
+Constructor used to create a **SubTabBarStyle** instance. You can set custom content with **ComponentContent**.
 
 **Since:** 12
 
@@ -90,7 +90,7 @@ SubTabBarStyle的构造函数。支持ComponentContent设置自定义内容。
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| content | [ResourceStr](../arkts-apis/arkts-arkui-resourcestr-t.md) \| ComponentContent | Yes | 页签内的内容。&lt;br /&gt;**说明：**&lt;br /&gt;1.自定义内容不支持labelStyle属性。&lt;br /&gt;2.自定义内容超 出页签范围，则不显示超出部分。&lt;br /&gt;3.自定义内容小于页签范围，则会居中对齐。&lt;br /&gt;4.自定义内容异常或无可用显示组件，则显示空白。 |
+| content | [ResourceStr](../arkts-apis/arkts-arkui-resourcestr-t.md) \| ComponentContent | Yes | Content on the tab.&lt;br&gt;**NOTE：**&lt;br&gt;1. Custom content does not support the **labelStyle** attribute.&lt;br&gt;2. If the custom content exceeds the content box of the tab page, the excess part is not displayed.&lt;br&gt;3. If the custom content is within the content box of the tab page, it is aligned in the center.&lt;br&gt;4. If the custom content is abnormal or no display component is available, a blank area is displayed. |
 
 ## id
 
@@ -98,7 +98,7 @@ SubTabBarStyle的构造函数。支持ComponentContent设置自定义内容。
 id(value: string): SubTabBarStyle
 ```
 
-设置子页签的id。可用于通过TabsController查找或控制指定页签，以及在状态管理和事件处理中标识不同的页签。
+Sets the [ID](../arkts-apis/arkts-arkui-common-commonmethod-i.md/arkts-arkui-common-commonmethod-i.md#id) of the subtab.
 
 **Since:** 11
 
@@ -116,13 +116,13 @@ id(value: string): SubTabBarStyle
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | string | Yes | 子页签的id，用于标识和区分不同的页签。当需要通过代码控制特定页签的显示、隐藏或进行其他操作时，可设置此参数。id值需在同一Tabs组件内保持唯一。 |
+| value | string | Yes | [ID](../arkts-apis/arkts-arkui-common-commonmethod-i.md/arkts-arkui-common-commonmethod-i.md#id) of the subtab. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [SubTabBarStyle](arkts-arkui-subtabbarstyle-c.md) | 返回SubTabBarStyle对象本身，用于链式调用。 |
+| [SubTabBarStyle](arkts-arkui-subtabbarstyle-c.md) | SubTabBarStyle** object. |
 
 ## indicator
 
@@ -130,7 +130,7 @@ id(value: string): SubTabBarStyle
 indicator(value: IndicatorStyle): SubTabBarStyle
 ```
 
-设置选中子页签的下划线风格。子页签的下划线风格仅在水平模式下有效。
+Sets the indicator style of the selected subtab. It takes effect only in the horizontal layout.
 
 **Since:** 10
 
@@ -148,13 +148,13 @@ indicator(value: IndicatorStyle): SubTabBarStyle
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | [IndicatorStyle](arkts-arkui-indicatorstyle-i.md) | Yes | 选中子页签的下划线风格对象，用于设置下划线的颜色、高度、宽度、圆角半径等样式。 |
+| value | [IndicatorStyle](arkts-arkui-indicatorstyle-i.md) | Yes | Indicator style object for the selected subtab. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [SubTabBarStyle](arkts-arkui-subtabbarstyle-c.md) | 返回SubTabBarStyle对象本身。 |
+| [SubTabBarStyle](arkts-arkui-subtabbarstyle-c.md) | SubTabBarStyle** object. |
 
 ## indicator
 
@@ -162,8 +162,8 @@ indicator(value: IndicatorStyle): SubTabBarStyle
 indicator(value: IndicatorStyle | DrawableTabBarIndicator): SubTabBarStyle
 ```
 
-设置选中子页签的下划线风格。与[indicator](arkts-arkui-subtabbarstyle-c.md#indicator)相比，新增了图片格式的下划线风格，图片的显示效果参照  
-[ImageFit.Cover](../arkts-apis/arkts-arkui-enums-imagefit-e.md/arkts-arkui-enums-imagefit-e.md)。子页签的下划线风格仅在水平模式下有效。
+Sets the indicator style of the selected subtab. Compared with  
+[indicator](arkts-arkui-subtabbarstyle-c.md#indicator), the image format is added. For details about the display effect of the image, see [ImageFit.Cover](../arkts-apis/arkts-arkui-enums-imagefit-e.md/arkts-arkui-enums-imagefit-e.md). It takes effect only in the horizontal layout.
 
 **Since:** 22
 
@@ -181,13 +181,13 @@ indicator(value: IndicatorStyle | DrawableTabBarIndicator): SubTabBarStyle
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | [IndicatorStyle](arkts-arkui-indicatorstyle-i.md) \| DrawableTabBarIndicator | Yes | 选中子页签的下划线风格对象。&lt;br /&gt;IndicatorStyle：一般形式的下划线样式。&lt;br /&gt; DrawableTabBarIndicator：图片形式的下划线样式。 |
+| value | [IndicatorStyle](arkts-arkui-indicatorstyle-i.md) \| DrawableTabBarIndicator | Yes | Yes |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [SubTabBarStyle](arkts-arkui-subtabbarstyle-c.md) | 返回SubTabBarStyle对象本身，用于链式调用。 |
+| [SubTabBarStyle](arkts-arkui-subtabbarstyle-c.md) | SubTabBarStyle** object. |
 
 ## labelStyle
 
@@ -195,7 +195,7 @@ indicator(value: IndicatorStyle | DrawableTabBarIndicator): SubTabBarStyle
 labelStyle(value: LabelStyle): SubTabBarStyle
 ```
 
-设置子页签的label文本和字体的样式。子页签的label文本和字体的样式仅在水平模式下有效。
+Sets the style of the label text and font for the subtab.
 
 **Since:** 10
 
@@ -213,13 +213,13 @@ labelStyle(value: LabelStyle): SubTabBarStyle
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | [LabelStyle](arkts-arkui-labelstyle-i.md) | Yes | 子页签的label文本和字体的样式对象，用于设置文字的颜色、大小、字体、行数等属性。 |
+| value | [LabelStyle](arkts-arkui-labelstyle-i.md) | Yes | Style object for the label text and font of the subtab. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [SubTabBarStyle](arkts-arkui-subtabbarstyle-c.md) | 返回SubTabBarStyle对象本身，用于链式调用。 |
+| [SubTabBarStyle](arkts-arkui-subtabbarstyle-c.md) | SubTabBarStyle** object. |
 
 ## of
 
@@ -227,7 +227,7 @@ labelStyle(value: LabelStyle): SubTabBarStyle
 static of(content: ResourceStr): SubTabBarStyle
 ```
 
-SubTabBarStyle的静态构造函数。
+Static constructor used to create a **SubTabBarStyle** instance.
 
 **Since:** 10
 
@@ -245,13 +245,13 @@ SubTabBarStyle的静态构造函数。
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| content | [ResourceStr](../arkts-apis/arkts-arkui-resourcestr-t.md) | Yes | 页签内的文字内容。 |
+| content | [ResourceStr](../arkts-apis/arkts-arkui-resourcestr-t.md) | Yes | Text for the tab. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [SubTabBarStyle](arkts-arkui-subtabbarstyle-c.md) | 返回创建的SubTabBarStyle对象，用于设置子页签样式。 |
+| [SubTabBarStyle](arkts-arkui-subtabbarstyle-c.md) | SubTabBarStyle** object created. |
 
 ## of
 
@@ -259,7 +259,8 @@ SubTabBarStyle的静态构造函数。
 static of(content: ResourceStr | ComponentContent): SubTabBarStyle
 ```
 
-SubTabBarStyle的静态构造函数。支持ComponentContent设置自定义内容。
+Static constructor used to create a **SubTabBarStyle** instance. You can set custom content with  
+**ComponentContent**.
 
 **Since:** 12
 
@@ -277,13 +278,13 @@ SubTabBarStyle的静态构造函数。支持ComponentContent设置自定义内�
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| content | [ResourceStr](../arkts-apis/arkts-arkui-resourcestr-t.md) \| ComponentContent | Yes | 页签内的内容。支持ComponentContent设置自定义内容。&lt;br /&gt;**说明：**&lt;br /&gt;1.自定义内容不支持 labelStyle属性。&lt;br /&gt;2.自定义内容超出页签范围，则不显示超出部分。&lt;br /&gt;3.自定义内容小于页签范围，则会居中对齐。&lt;br /&gt;4.自定义内容异常或无可用显示组件，则显示空白。 |
+| content | [ResourceStr](../arkts-apis/arkts-arkui-resourcestr-t.md) \| ComponentContent | Yes | Content on the tab. You can set custom content with **ComponentContent**.&lt;br&gt;**NOTE：**&lt;br&gt;1. Custom content does not support the **labelStyle** attribute.&lt;br&gt;2. If the custom content exceeds the content box of the tab page, the excess part is not displayed.&lt;br&gt;3. If the custom content is within the content box of the tab page, it is aligned in the center.&lt;br&gt;4. If the custom content is abnormal or no display component is available, a blank area is displayed. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [SubTabBarStyle](arkts-arkui-subtabbarstyle-c.md) | 返回创建的SubTabBarStyle对象，用于设置子页签样式。 |
+| [SubTabBarStyle](arkts-arkui-subtabbarstyle-c.md) | SubTabBarStyle** object created. |
 
 ## padding
 
@@ -291,7 +292,7 @@ SubTabBarStyle的静态构造函数。支持ComponentContent设置自定义内�
 padding(value: Padding | Dimension): SubTabBarStyle
 ```
 
-设置子页签的内边距属性（不支持百分比设置）。使用Dimension时，四个方向内边距同时生效。
+Sets the padding of the subtab. It cannot be set in percentage. When the parameter is of the Dimension type, the value applies to all sides.
 
 **Since:** 10
 
@@ -309,13 +310,13 @@ padding(value: Padding | Dimension): SubTabBarStyle
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | [Padding](../arkts-apis/arkts-arkui-units-padding-i.md) \| Dimension | Yes | 子页签的内边距属性（不支持百分比设置），用于调整页签内容与边界的距离。&lt;br/&gt;取值范围：[0, +∞]&lt;br/&gt;异常值时取默认值。&lt;br /&gt;默认值： {left:8.0vp,right:8.0vp,top:17.0vp,bottom:18.0vp}&lt;br/&gt;**说明：**&lt;br/&gt;从API version 12开始， 参数支持[LocalizedPadding](ts-types.md#localizedpadding12)类型，支持镜像能力。 |
+| value | [Padding](../arkts-apis/arkts-arkui-units-padding-i.md) \| Dimension | Yes | Padding of the subtab.&lt;br&gt;Value range: [0, +∞]&lt;br&gt;Default value: **{left:8.0vp,right:8.0vp,top:17.0vp,bottom:18.0vp} |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [SubTabBarStyle](arkts-arkui-subtabbarstyle-c.md) | 返回SubTabBarStyle对象本身，用于链式调用。 |
+| [SubTabBarStyle](arkts-arkui-subtabbarstyle-c.md) | SubTabBarStyle** object. |
 
 ## padding
 
@@ -323,7 +324,7 @@ padding(value: Padding | Dimension): SubTabBarStyle
 padding(padding: LocalizedPadding): SubTabBarStyle
 ```
 
-设置子页签的内边距属性，支持镜像能力（不支持百分比设置）。
+Sets the padding of the subtab. This API supports mirroring but does not support percentage-based settings.
 
 **Since:** 12
 
@@ -341,13 +342,13 @@ padding(padding: LocalizedPadding): SubTabBarStyle
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| padding | [LocalizedPadding](../arkts-apis/arkts-arkui-units-localizedpadding-i.md) | Yes | 子页签的内边距属性（不支持百分比设置），用于调整页签内容与边界的距离，支持镜像能力。 &lt;br/&gt;取值范围：[0, +∞]&lt;br/&gt;异常值时取默认值。&lt;br /&gt;默认值： {start:LengthMetrics.vp(8),end:LengthMetrics.vp(8),&lt;br/&gt;top:LengthMetrics.vp(17),bottom:LengthMetrics.vp(18)} |
+| padding | [LocalizedPadding](../arkts-apis/arkts-arkui-units-localizedpadding-i.md) | Yes | Padding of the subtab.&lt;br&gt;Value range: [0, +∞]&lt;br&gt;Default value: **{start:LengthMetrics.vp(8),end:LengthMetrics.vp(8)**&lt;br&gt; **top:LengthMetrics.vp(17),bottom:LengthMetrics.vp(18)} |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [SubTabBarStyle](arkts-arkui-subtabbarstyle-c.md) | 返回SubTabBarStyle对象本身，用于链式调用。 |
+| [SubTabBarStyle](arkts-arkui-subtabbarstyle-c.md) | SubTabBarStyle** object. |
 
 ## selectedMode
 
@@ -355,7 +356,7 @@ padding(padding: LocalizedPadding): SubTabBarStyle
 selectedMode(value: SelectedMode): SubTabBarStyle
 ```
 
-设置选中子页签的显示方式。子页签的显示方式仅在水平模式下有效。
+Sets the display mode of the selected subtab. It takes effect only in the horizontal layout.
 
 **Since:** 10
 
@@ -373,11 +374,11 @@ selectedMode(value: SelectedMode): SubTabBarStyle
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | [SelectedMode](arkts-arkui-selectedmode-e.md) | Yes | 选中子页签的显示方式，用于控制子页签的选中效果样式。可选值：SelectedMode.INDICATOR（使用下划线模式，适用于需要明确指示选中状态的场景）、 SelectedMode.BOARD（使用背板模式，适用于需要突出选中页签的场景）。&lt;br /&gt;默认值：SelectedMode.INDICATOR |
+| value | [SelectedMode](arkts-arkui-selectedmode-e.md) | Yes | Display mode of the selected subtab.&lt;br&gt;Default value: **SelectedMode.INDICATOR |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [SubTabBarStyle](arkts-arkui-subtabbarstyle-c.md) | 返回SubTabBarStyle对象本身，用于链式调用。 |
+| [SubTabBarStyle](arkts-arkui-subtabbarstyle-c.md) | SubTabBarStyle** object. |
 

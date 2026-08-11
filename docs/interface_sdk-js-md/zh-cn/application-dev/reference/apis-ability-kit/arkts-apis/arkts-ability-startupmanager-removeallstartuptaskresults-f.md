@@ -1,11 +1,5 @@
 # removeAllStartupTaskResults
 
-## 导入模块
-
-```TypeScript
-import { startupManager } from 'kits/@kit.AbilityKit';
-```
-
 ## removeAllStartupTaskResults
 
 ```TypeScript
@@ -42,7 +36,7 @@ export default class EntryAbility extends UIAbility {
         hilog.error(0x0000, 'testTag', `StartupTask_001 promise catch failed, error code: ${error.code}, error msg: ${error.message}`);
       });
     } catch (error) {
-      hilog.error(0x0000, 'testTag', `startupManager.run failed, error code: ${error.code}, error msg: ${error.message}`);
+      hilog.error(0x0000, 'testTag', `StartupTask_001.run failed, error code: ${error.code}, error msg: ${error.message}`);
     }
   }
 
@@ -51,8 +45,10 @@ export default class EntryAbility extends UIAbility {
     startupManager.removeAllStartupTaskResults(); // 移除所有启动任务结果
 
     windowStage.loadContent('pages/Index', (err, data) => {
-      if (err.code) {
-        hilog.error(0x0000, 'testTag', `Failed to load the content. Cause error code: ${err.code}, error msg: ${err.message}`);
+      if (err) {
+        let error = err as BusinessError;
+        hilog.error(0x0000, 'testTag',
+          `Failed to load the content. err code: ${error.code}, err msg: ${error.message}`);
         return;
       }
       hilog.info(0x0000, 'testTag', 'Succeeded in loading the content. Data: %{public}s', JSON.stringify(data) ?? '');

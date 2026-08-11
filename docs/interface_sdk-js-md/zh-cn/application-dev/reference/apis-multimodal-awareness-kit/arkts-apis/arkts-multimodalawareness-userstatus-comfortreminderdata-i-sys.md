@@ -1,6 +1,6 @@
 # ComfortReminderData（系统接口）
 
-Defines comfort reminder data.
+舒适提醒数据。
 
 **继承/实现关系：** ComfortReminderData extends [UserStatusData](arkts-multimodalawareness-userstatus-userstatusdata-i-sys.md)
 
@@ -14,19 +14,13 @@ Defines comfort reminder data.
 
 **系统接口：** 此接口为系统接口。
 
-## 导入模块
-
-```TypeScript
-import { userStatus } from 'kits/@kit.MultimodalAwarenessKit';
-```
-
 ## eventType
 
 ```TypeScript
 eventType: int
 ```
 
-Event type.The value ranges from 0 to 1. 0: Gaze event, 1: Ambient sound event..
+事件类型。取值范围为0到1。0：注视事件，1：环境声音事件。
 
 **类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
@@ -48,7 +42,7 @@ Event type.The value ranges from 0 to 1. 0: Gaze event, 1: Ambient sound event..
 fusionReminderData: ReminderLevel
 ```
 
-Fusion reminder data.
+融合提醒数据。
 
 **类型：** [ReminderLevel](arkts-multimodalawareness-userstatus-reminderlevel-e-sys.md)
 
@@ -70,7 +64,7 @@ Fusion reminder data.
 swingReminderData: ReminderLevel
 ```
 
-Swing reminder data.
+摆动提醒数据。
 
 **类型：** [ReminderLevel](arkts-multimodalawareness-userstatus-reminderlevel-e-sys.md)
 

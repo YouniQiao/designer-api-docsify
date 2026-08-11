@@ -12,8 +12,8 @@ import { window } from 'kits/@kit.ArkUI';
 function getTopNavDestinationName(windowId: int): Promise<string>
 ```
 
-获取指定的前台窗口当前栈顶[Navigation](../../apis-arkui/arkts-components/arkts-arkui-navigation-i)中的  
-[NavDestination](../../apis-arkui/arkts-components/arkts-arkui-nav_destination-i)名称，使用Promise异步回调。
+Obtains the name of [NavDestination](arkts-arkui-navdestination-navdestination-f.md#navdestination) in the current top-level  
+[Navigation](arkts-arkui-navigation-navigation-f.md#navigation) component of the specified foreground window. This API uses a promise to return the result.
 
 **Since:** 20
 
@@ -29,23 +29,23 @@ function getTopNavDestinationName(windowId: int): Promise<string>
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| windowId | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | 窗口Id，用于指定要查询的窗口。该参数应为大于0的整数，小于等于0时会返回错误码1300016，如果指定的窗口不存在或生命周期不在前台，返回错误码为1300002。 |
+| windowId | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | ID of the window to query. This parameter must be an integer greater than 0. If it is less than or equal to 0, error code 1300016 is returned. If the specified window does not exist or is not in the foreground, error code 1300002 is returned. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;string&gt; | Promise对象。返回获取到的[NavDestination]{ |
+| Promise&lt;string&gt; | Promise used to return the [NavDestination]{ |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 1300003 | This window manager service works abnormally. |
-| 801 | Capability not supported. Failed to call the API due to limited device capabilities. |
-| 1300002 | This window state is abnormal. |
-| 1300016 | Parameter error. Possible cause: 1. Invalid parameter range. |
-| 202 | Permission verification failed, non-system application uses system API. |
+| [1300003](../errorcode-window.md#1300003-abnormal-window-manager-service) | This window manager service works abnormally. |
+| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. Failed to call the API due to limited device capabilities. |
+| [1300002](../errorcode-window.md#1300002-abnormal-window-state) | This window state is abnormal. |
+| [1300016](../errorcode-window.md#1300016-parameter-verification-error) | Parameter error. Possible cause: 1. Invalid parameter range. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed, non-system application uses system API. |
 
 ## Examples
 

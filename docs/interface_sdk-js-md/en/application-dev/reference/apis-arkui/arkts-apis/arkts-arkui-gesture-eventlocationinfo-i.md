@@ -1,6 +1,6 @@
 # EventLocationInfo
 
-用于点击手势获取点击位置坐标。
+The location info used in gesture event.
 
 **Since:** 23
 
@@ -16,7 +16,7 @@
 default getCurrentLocalPosition(): Coordinate2D
 ```
 
-获取点击位置相对于当前组件实时位置的左上角坐标。
+Gets the coordinates of the top-left corner of the current component based on its real-time position.
 
 **Since:** 26.0.0
 
@@ -32,7 +32,7 @@ default getCurrentLocalPosition(): Coordinate2D
 
 | Type | Description |
 | --- | --- |
-| [Coordinate2D](arkts-arkui-coordinate2d-i.md) | 获取点击位置相对于当前组件实时位置的左上角坐标。 |
+| [Coordinate2D](arkts-arkui-coordinate2d-i.md) | return the coordinates of the top-left corner of the current component based on its real-time position. |
 
 ## displayX
 
@@ -40,11 +40,7 @@ default getCurrentLocalPosition(): Coordinate2D
 displayX: double
 ```
 
-相对于屏幕的左上角X坐标。
-
-取值范围：[0, +∞) 
-
-单位：vp
+X-axis coordinates relative to the upper left corner of the screen.
 
 **Type:** double
 
@@ -64,11 +60,7 @@ displayX: double
 displayY: double
 ```
 
-相对于屏幕的左上角Y坐标。
-
-取值范围：[0, +∞) 
-
-单位：vp
+Y-axis coordinates relative to the upper left corner of the screen.
 
 **Type:** double
 
@@ -88,11 +80,7 @@ displayY: double
 globalDisplayX?: double
 ```
 
-在[全局坐标系](../../../windowmanager/window-terminology.md#全局坐标系)中的X坐标。
-
-取值范围：[0, +∞) 
-
-单位：vp
+X position of the point relative to the global display coordinate.
 
 **Type:** double
 
@@ -112,11 +100,7 @@ globalDisplayX?: double
 globalDisplayY?: double
 ```
 
-在[全局坐标系](../../../windowmanager/window-terminology.md#全局坐标系)中的Y坐标。
-
-取值范围：[0, +∞) 
-
-单位：vp
+Y position of the point relative to the global display coordinate.
 
 **Type:** double
 
@@ -136,11 +120,7 @@ globalDisplayY?: double
 windowX: double
 ```
 
-相对于窗口的左上角X坐标。
-
-取值范围：[0, +∞) 
-
-单位：vp
+X-axis coordinates relative to the upper left corner of the window.
 
 **Type:** double
 
@@ -160,11 +140,7 @@ windowX: double
 windowY: double
 ```
 
-相对于窗口的左上角Y坐标。
-
-取值范围：[0, +∞) 
-
-单位：vp
+Y-axis coordinates relative to the upper left corner of the window.
 
 **Type:** double
 
@@ -184,11 +160,7 @@ windowY: double
 x: double
 ```
 
-相对于组件左上角的X坐标。
-
-取值范围：[0, +∞) 
-
-单位：vp
+X-axis coordinates relative to the upper left corner of the component.
 
 **Type:** double
 
@@ -208,11 +180,7 @@ x: double
 y: double
 ```
 
-相对于组件左上角的Y坐标。
-
-取值范围：[0, +∞) 
-
-单位：vp
+Y-axis coordinates relative to the upper left corner of the component.
 
 **Type:** double
 

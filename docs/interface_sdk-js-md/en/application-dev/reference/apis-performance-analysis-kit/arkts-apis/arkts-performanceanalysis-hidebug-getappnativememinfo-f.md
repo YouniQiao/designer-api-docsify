@@ -12,13 +12,16 @@ import { hidebug } from 'kits/@kit.PerformanceAnalysisKit';
 function getAppNativeMemInfo(): NativeMemInfo
 ```
 
-��ȡӦ�ý����ڴ���Ϣ����ȡ/proc/{pid}/smaps_rollup��/proc/{pid}/statm�ڵ�����ݡ�
+Obtains the memory information of the application process. This API is implemented by reading data from the  
+**\/proc/{pid}/smaps_rollup and /proc/{pid}/statm** node.
 
-> **ע��**
+> **NOTE：**
 > 
-> ���ڶ�ȡ/proc/{pid}/smaps_rollup��ʱ�ϳ����Ƽ�ʹ���첽�ӿ�hidebug.getAppNativeMemInfoAsync���Ա���Ӧ�ö�֡�򿨶١�
+> Reading the **\/proc/{pid}/smaps_rollup** node takes a long time. You are advised to use the asynchronous API
+> [hidebug.getAppNativeMemInfoAsync](arkts-performanceanalysis-hidebug-getappnativememinfoasync-f.md#getappnativememinfoasync) to avoid frame loss or frame freezing.
 > 
-> �Ƽ�ʹ��hidebug.getRssInfo�ӿڻ�ȡӦ�õ�rssʹ����Ϣ��
+> You are advised to use the [hidebug.getRssInfo](arkts-performanceanalysis-hidebug-getrssinfo-f.md#getrssinfo) API to obtain the RSS information of an
+> application.
 
 **Since:** 12
 
@@ -32,7 +35,7 @@ function getAppNativeMemInfo(): NativeMemInfo
 
 | Type | Description |
 | --- | --- |
-| [NativeMemInfo](arkts-performanceanalysis-hidebug-nativememinfo-i.md) | Ӧ�ý����ڴ���Ϣ�� |
+| [NativeMemInfo](arkts-performanceanalysis-hidebug-nativememinfo-i.md) | Memory information of the application process. |
 
 ## Examples
 

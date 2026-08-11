@@ -1,6 +1,6 @@
 # SystemProperties
 
-定义系统环境变量枚举值
+Defining Environment variable enumeration value.
 
 **Since:** 22
 
@@ -16,7 +16,7 @@
 BREAK_POINT = 'system.arkui.breakpoint'
 ```
 
-系统断点环境变量key，用于获取窗口宽和高的断点
+System environmental breakpoint key that is used to obtain the width and height breakpoint value of the window.
 
 **Since:** 22
 
@@ -36,7 +36,7 @@ BREAK_POINT = 'system.arkui.breakpoint'
 WINDOW_AVOID_AREA = 'system.window.avoidarea'
 ```
 
-系统环境避让区域键，用于获取窗口的避让区域，单位为视点单位（vp）。
+System environmental avoidarea key that is used to obtain the avoid area of the window, measured in vp.
 
 **Since:** 26.0.0
 
@@ -56,7 +56,7 @@ WINDOW_AVOID_AREA = 'system.window.avoidarea'
 WINDOW_AVOID_AREA_PX = 'system.window.avoidarea.px'
 ```
 
-系统环境避让区域键，用于获取窗口的避让区域，单位为像素（px）。
+System environmental avoidarea key that is used to obtain the avoid area of the window, measured in px.
 
 **Since:** 26.0.0
 
@@ -76,7 +76,7 @@ WINDOW_AVOID_AREA_PX = 'system.window.avoidarea.px'
 WINDOW_SIZE = 'system.window.size'
 ```
 
-系统环境窗口大小键，用于获取窗口的尺寸，单位为视点单位（vp）。
+System environmental windowsize key that is used to obtain the size of the window, measured in vp.
 
 **Since:** 26.0.0
 
@@ -96,7 +96,7 @@ WINDOW_SIZE = 'system.window.size'
 WINDOW_SIZE_PX = 'system.window.size.px'
 ```
 
-系统环境窗口大小键，用于获取窗口的尺寸，单位为像素（px）。
+System environmental windowsize key that is used to obtain the size of the window, measured in px.
 
 **Since:** 26.0.0
 

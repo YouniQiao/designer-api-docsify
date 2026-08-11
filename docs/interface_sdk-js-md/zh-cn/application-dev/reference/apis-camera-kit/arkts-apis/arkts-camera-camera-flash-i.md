@@ -14,12 +14,6 @@ Flash继承自[FlashQuery](arkts-camera-camera-flashquery-i.md)。
 
 **系统能力：** SystemCapability.Multimedia.Camera.Core
 
-## 导入模块
-
-```TypeScript
-import { camera } from 'kits/@kit.CameraKit';
-```
-
 ## getFlashMode
 
 ```TypeScript
@@ -48,7 +42,7 @@ getFlashMode(): FlashMode
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 7400103 | Session not config. |
+| [7400103](../errorcode-camera.md#7400103-会话未配置) | Session not config. |
 
 ## offFlashStateChange
 
@@ -134,5 +128,5 @@ setFlashMode(flashMode: FlashMode): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 7400103 | Session not config. |
+| [7400103](../errorcode-camera.md#7400103-会话未配置) | Session not config. |
 

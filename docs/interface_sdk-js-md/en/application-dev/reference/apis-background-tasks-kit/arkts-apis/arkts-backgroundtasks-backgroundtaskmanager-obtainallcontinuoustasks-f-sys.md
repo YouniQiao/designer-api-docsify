@@ -12,7 +12,7 @@ import { backgroundTaskManager } from 'kits/@kit.BackgroundTasksKit';
 function obtainAllContinuousTasks(): Promise<ContinuousTaskInfo[]>
 ```
 
-获取所有长时任务信息，如长时任务ID、长时任务类型等。使用Promise异步回调。
+Obtains all continuous task information, including the task ID and type. This API uses a promise to return the result.
 
 **Since:** 23
 
@@ -32,15 +32,15 @@ function obtainAllContinuousTasks(): Promise<ContinuousTaskInfo[]>
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;ContinuousTaskInfo[]&gt; | Promise对象，返回所有长时任务信息。 |
+| Promise&lt;ContinuousTaskInfo[]&gt; | Promise that returns all continuous task information. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 9800004 | System service operation failed. |
-| 201 | Permission denied. |
-| 202 | Not System App. |
+| [9800004](../../apis-backgroundtasks-kit/errorcode-backgroundTaskMgr.md#9800004-system-service-failure) | System service operation failed. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not System App. |
 
 ## Examples
 

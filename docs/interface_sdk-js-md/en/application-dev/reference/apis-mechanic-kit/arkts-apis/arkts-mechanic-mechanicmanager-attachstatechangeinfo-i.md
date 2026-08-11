@@ -1,6 +1,6 @@
 # AttachStateChangeInfo
 
-设备吸附状态回调信息
+Callback information about the device attachment state change.
 
 **Since:** 20
 
@@ -40,7 +40,7 @@ Mechanical device information.
 state: AttachState
 ```
 
-吸附状态
+Device attachment state.
 
 **Type:** [AttachState](arkts-mechanic-mechanicmanager-attachstate-e.md)
 

@@ -10,12 +10,6 @@
 
 **系统能力：** SystemCapability.Applications.Contacts
 
-## 导入模块
-
-```TypeScript
-import { contact } from 'kits/@kit.ContactsKit';
-```
-
 ## filter
 
 ```TypeScript
@@ -42,7 +36,7 @@ filter?: ContactSelectionFilter
 isAutoDismissOnNavigation?: boolean
 ```
 
-联系人picker发生页面路由时是否自动关闭，比如应用退后台场景 默认值为false
+拉起picker的页面发生路由切换时是否允许自动关闭picker，true:允许自动关闭picker，false:不允许自动关闭picker，默认值为false。
 
 **类型：** boolean
 

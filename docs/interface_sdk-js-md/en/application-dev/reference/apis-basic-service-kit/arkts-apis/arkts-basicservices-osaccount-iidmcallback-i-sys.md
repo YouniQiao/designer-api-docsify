@@ -1,6 +1,6 @@
 # IIdmCallback (System API)
 
-表示身份管理回调类。
+Provides callbacks for IDM.
 
 **Since:** 8
 
@@ -30,7 +30,7 @@ ArkTS-Sta:
 onAcquireInfo?: (module: int, acquire: int, extraInfo: Uint8Array) => void
 ```
 
-身份管理信息获取回调函数。
+Called to acquire IDM information.
 
 **Since:** 8
 
@@ -78,7 +78,7 @@ ArkTS-Sta:
 onResult: (result: int, extraInfo: RequestResult) => void
 ```
 
-身份管理操作结果回调函数，返回结果码和请求结果信息。
+Called to return the result code and request result information.
 
 **Since:** 8
 

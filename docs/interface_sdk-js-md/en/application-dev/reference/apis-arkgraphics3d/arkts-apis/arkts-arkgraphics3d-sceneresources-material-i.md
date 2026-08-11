@@ -1,6 +1,6 @@
 # Material
 
-材质资源.
+Material resource, which inherits from [SceneResource](arkts-arkgraphics3d-sceneresources-sceneresource-i.md).
 
 **Inheritance/Implementation:** Material extends [SceneResource](arkts-arkgraphics3d-sceneresources-sceneresource-i.md)
 
@@ -18,7 +18,7 @@
 alphaCutoff?: double
 ```
 
-透明度截止值[0,1]. Enabled if < 1.
+Threshold of the alpha channel. If the alpha of a pixel is greater than or equal to this threshold, the pixel is rendered;otherwise, the pixel is not rendered. Setting a value less than 1 enables this mode. The value range is [0, 1].The default value is 1.
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：double
 
@@ -36,7 +36,7 @@ alphaCutoff?: double
 blend?: Blend
 ```
 
-控制是否启用混合
+Whether the material is transparent.The default value is false.
 
 **Type:** [Blend](arkts-arkgraphics3d-sceneresources-blend-i.md)
 
@@ -56,7 +56,7 @@ blend?: Blend
 cullMode?: CullMode
 ```
 
-剔除模式.
+Culling mode of the material, which can be used to determine whether to cull front or back faces.The default value is BACK.
 
 **Type:** [CullMode](arkts-arkgraphics3d-sceneresources-cullmode-e.md)
 
@@ -74,7 +74,7 @@ cullMode?: CullMode
 readonly materialType: MaterialType
 ```
 
-材质资源类型.
+Material type.
 
 **Type:** [MaterialType](../../apis-arkui/arkts-apis/arkts-arkui-uimaterial-materialtype-e.md)
 
@@ -92,11 +92,11 @@ readonly materialType: MaterialType
 polygonMode?: PolygonMode
 ```
 
-材质的多边形模式
+Polygon drawing mode of the model.The default value is FILL.
 
 **Type:** [PolygonMode](arkts-arkgraphics3d-sceneresources-polygonmode-e.md)
 
-**Default:** PolygonMode.FILL 填充多边形模式
+**Default:** PolygonMode.FILL
 
 **Since:** 23
 
@@ -112,7 +112,7 @@ polygonMode?: PolygonMode
 renderSort?: RenderSort
 ```
 
-层的渲染排序优先级.
+Rendering order, which determines the rendering sequence of materials in the rendering pipeline.The default layer ID is 32, and the default order within the layer is 0.
 
 **Type:** [RenderSort](arkts-arkgraphics3d-sceneresources-rendersort-i.md)
 
@@ -130,7 +130,7 @@ renderSort?: RenderSort
 shadowReceiver?: boolean
 ```
 
-定义材质是否可以接收阴影.
+Whether the material receives shadows. true if the material receives shadows, false otherwise.The default is false.
 
 **Type:** boolean
 

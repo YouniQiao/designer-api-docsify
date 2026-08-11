@@ -4,7 +4,7 @@
 export type TriggerInfo = _TriggerInfo
 ```
 
-TriggerInfo对象。
+Defines the TriggerInfo object.
 
 **Since:** 9
 

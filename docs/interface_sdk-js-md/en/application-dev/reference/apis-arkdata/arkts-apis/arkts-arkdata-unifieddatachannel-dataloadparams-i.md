@@ -1,8 +1,8 @@
 # DataLoadParams
 
-用于在延迟加载场景下描述发送方的数据加载策略。
+Defines the data loading policy for the data sender in the lazy loading scenario.
 
-当同时传入loadHandler和delayedDataLoadHandler时，优先使用delayedDataLoadHandler，loadHandler不生效。
+If both **loadHandler** and **delayedDataLoadHandler** are passed, **delayedDataLoadHandler** is preferentially used, and **loadHandler** does not take effect.
 
 **Since:** 20
 
@@ -24,7 +24,7 @@ import { unifiedDataChannel } from 'kits/@kit.ArkData';
 delayedDataLoadHandler?: DelayedDataLoadHandler
 ```
 
-表示用于延迟加载数据的异步处理函数。默认值为undefined，不填写时仅使用loadHandler。
+Indicates the callback function for deferred and non-blocking data loading.This handler is optional. If it is provided, it will take precedence over the synchronous DataLoadHandler (i.e., DataLoadHandler will be ignored).
 
 **Since:** 22
 
@@ -44,8 +44,7 @@ delayedDataLoadHandler?: DelayedDataLoadHandler
 loadHandler: DataLoadHandler
 ```
 
-表示用于延迟加载数据的处理函数。该处理函数为同步函数，适用于处理简单业务逻辑，若函数业务逻辑较复杂、执行时间较长（3s以上），推荐使用  
-[DelayedDataLoadHandler](arkts-arkdata-unifieddatachannel-delayeddataloadhandler-t.md)。
+Indicates the callback function for loading data.
 
 **Since:** 20
 
@@ -65,7 +64,7 @@ loadHandler: DataLoadHandler
 dataLoadInfo: DataLoadInfo
 ```
 
-用于描述当前发送方可生成的数据类型及数量信息。
+Indicates data loading information.
 
 **Type:** [DataLoadInfo](arkts-arkdata-unifieddatachannel-dataloadinfo-i.md)
 

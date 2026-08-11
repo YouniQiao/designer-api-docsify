@@ -1,18 +1,11 @@
 # TextSpanType
 
-[Span](../arkts-apis/arkts-arkui-span-span-f.md/arkts-arkui-span-span-f.md#span)类型信息。
+Provides the [span](../arkts-apis/arkts-arkui-span-span-f.md/arkts-arkui-span-span-f.md#span) type information.
 
-> **说明：**
+> **NOTE：**
 > 
-> 菜单类型的匹配顺序如下。例如，用户长按文本时，根据以下规则查找：
+> The system follows the priority order below when determining the menu type to display during text interactions:
 > 
-> 1. 查找是否注册了TextSpanType.TEXT、TextResponseType.LONG_PRESS菜单
-> 
-> 2. 查找是否注册了TextSpanType.TEXT、TextResponseType.DEFAULT菜单
-> 
-> 3. 查找是否注册了TextSpanType.DEFAULT、TextResponseType.LONG_PRESS菜单
-> 
-> 4. 查找是否注册了TextSpanType.DEFAULT、TextResponseType.DEFAULT菜单
 
 **Since:** 11
 
@@ -28,7 +21,7 @@
 TEXT = 0
 ```
 
-Span为文字类型。
+Text span.
 
 **Since:** 11
 
@@ -48,7 +41,7 @@ Span为文字类型。
 IMAGE = 1
 ```
 
-Span为图像类型。
+Image span.
 
 **Since:** 11
 
@@ -68,7 +61,7 @@ Span为图像类型。
 MIXED = 2
 ```
 
-Span为图文混合类型。
+Mixed span, which contains both text and imagery.
 
 **Since:** 11
 
@@ -88,7 +81,7 @@ Span为图文混合类型。
 DEFAULT = 3
 ```
 
-注册此类型菜单但未注册TEXT、IMAGE、MIXED菜单时，文字类型、图片类型、图文混合类型都会触发并显示此类型对应的菜单。
+When this type is registered but **TEXT**, **IMAGE**, or **MIXED** types are not registered, this type will be triggered and displayed for those registered types.
 
 **Since:** 15
 

@@ -12,7 +12,7 @@ import { distributedMissionManager } from 'kits/@kit.AbilityKit';
 function on(type: 'continueStateChange', callback: Callback<ContinueCallbackInfo>): void
 ```
 
-注册当前任务流转状态的监听。
+Subscribes to continuation state change events of the current mission.
 
 **Since:** 10
 
@@ -32,15 +32,15 @@ function on(type: 'continueStateChange', callback: Callback<ContinueCallbackInfo
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'continueStateChange' | Yes | 当前任务流转状态，取值为'continueStateChange'。 |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;ContinueCallbackInfo&gt; | Yes | 回调函数，返回当前任务的流转状态和流转信息。 |
+| type | 'continueStateChange' | Yes | Event type. The value **'continueStateChange'** indicates the continuation state change event of the current mission. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;ContinueCallbackInfo&gt; | Yes | Callback used to return the continuation state and information of the current mission.<br>**Since:** 11 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; 3. Parameter verification failed. |
-| 201 | Permission denied. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; 3. Parameter verification failed. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
 
 ## Examples
 

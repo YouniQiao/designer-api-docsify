@@ -1,6 +1,6 @@
 # ExecutorProperty (System API)
 
-提供执行器的属性。
+Defines the executor property.
 
 **Since:** 8
 
@@ -24,7 +24,7 @@ import { osAccount } from 'kits/@kit.BasicServicesKit';
 authSubType: AuthSubType
 ```
 
-指示认证凭据子类型。
+Authentication credential subtype.
 
 **Type:** [AuthSubType](arkts-basicservices-osaccount-authsubtype-e-sys.md)
 
@@ -44,7 +44,7 @@ authSubType: AuthSubType
 credentialLength?: int
 ```
 
-指示凭据长度，默认为undefined。查询生物信息等无定长属性的凭据时返回undefined。
+Credential length, which is **undefined** by default. When credentials with indefinite-length attributes such as biometric information are queried, **undefined** is returned.
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
@@ -64,7 +64,7 @@ credentialLength?: int
 enrollmentProgress?: string
 ```
 
-指示录入进度，默认为空。
+Enrollment progress, which is left blank by default.
 
 **Type:** string
 
@@ -84,7 +84,7 @@ enrollmentProgress?: string
 freezingTime?: int
 ```
 
-指示冻结时间，单位为ms，默认为-1。
+Freezing time, in milliseconds. The default value is **-1**.
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
@@ -104,7 +104,7 @@ freezingTime?: int
 nextPhaseFreezingTime?: int
 ```
 
-指示下次冻结时间，单位为ms，默认为undefined。
+Next freezing time, in milliseconds. The default value is **undefined**.
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
@@ -124,7 +124,7 @@ nextPhaseFreezingTime?: int
 remainTimes?: int
 ```
 
-指示剩余次数，默认为-1。
+Number of remaining authentication times, which is **-1** by default.
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
@@ -144,7 +144,7 @@ remainTimes?: int
 result: int
 ```
 
-指示结果。
+Result.
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
@@ -164,7 +164,7 @@ result: int
 sensorInfo?: string
 ```
 
-指示传感器信息，默认为空。
+Sensor information, which is left blank by default.
 
 **Type:** string
 

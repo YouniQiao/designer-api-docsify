@@ -1,14 +1,15 @@
 # MenuItem
 
-用来展示菜单中具体的菜单选项。
+The **MenuItem** component represents an item in a menu.
 
-> **说明：**
+> **NOTE**
+>
+> This component is supported since API version 9. Newly added APIs will be marked with a superscript to indicate 
+> their
 
-> - 该组件从API版本26.0.0开始支持[WithTheme]{@link with_theme}。
+## Child Components
 
-## 子组件
-
-无
+Not supported
 
 ## MenuItem
 
@@ -30,7 +31,7 @@ MenuItem(value?: MenuItemOptions | CustomBuilder)
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | [MenuItemOptions](../arkts-apis/arkts-arkui-menuitem-menuitemoptions-i.md) \| CustomBuilder | No | 包含设置MenuItem的各项信息。需要使用标准菜单项配置（如起始图标、内容、标签等）时选择MenuItemOptions；需要自定义菜单项的显示内容和布局时选择CustomBuilder。如果不传该参数，则创建空的MenuItem对象。 |
+| value | [MenuItemOptions](../arkts-apis/arkts-arkui-menuitem-menuitemoptions-i.md) \| CustomBuilder | No | Information about the menu item. |
 
 ## Summary
 

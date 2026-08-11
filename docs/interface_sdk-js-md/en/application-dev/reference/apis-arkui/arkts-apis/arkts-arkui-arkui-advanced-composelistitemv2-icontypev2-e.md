@@ -1,6 +1,6 @@
 # IconTypeV2
 
-列表左侧图标类型。
+Declare enum IconTypeV2
 
 **Since:** 26.0.0
 
@@ -16,7 +16,7 @@
 BADGE = 1
 ```
 
-左侧图标为badge类型。
+Badge type.
 
 **Since:** 26.0.0
 
@@ -34,7 +34,7 @@ BADGE = 1
 NORMAL_ICON = 2
 ```
 
-左侧图标为小图标类型。
+Normal icon type.
 
 **Since:** 26.0.0
 
@@ -52,7 +52,7 @@ NORMAL_ICON = 2
 SYSTEM_ICON = 3
 ```
 
-左侧图标为系统图标类型。
+System icon type.
 
 **Since:** 26.0.0
 
@@ -70,7 +70,7 @@ SYSTEM_ICON = 3
 HEAD_SCULPTURE = 4
 ```
 
-左侧图标为头像类型。
+HeadSculpture type.
 
 **Since:** 26.0.0
 
@@ -88,7 +88,7 @@ HEAD_SCULPTURE = 4
 APP_ICON = 5
 ```
 
-左侧图标为应用图标类型。
+App icon type.
 
 **Since:** 26.0.0
 
@@ -106,7 +106,7 @@ APP_ICON = 5
 PREVIEW = 6
 ```
 
-左侧图标为预览图类型。
+Preview type.
 
 **Since:** 26.0.0
 
@@ -124,7 +124,7 @@ PREVIEW = 6
 LONGITUDINAL = 7
 ```
 
-左侧图标为横向特殊比例。
+Longitudinal type.
 
 **Since:** 26.0.0
 
@@ -142,7 +142,7 @@ LONGITUDINAL = 7
 VERTICAL = 8
 ```
 
-左侧图标为竖向特殊比例。
+Vertical type.
 
 **Since:** 26.0.0
 

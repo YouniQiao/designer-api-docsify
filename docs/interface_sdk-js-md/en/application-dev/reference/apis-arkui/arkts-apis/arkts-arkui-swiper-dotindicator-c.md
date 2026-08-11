@@ -18,7 +18,7 @@ Define DotIndicator, the indicator type is dot.
 color(value: ResourceColor | undefined): this
 ```
 
-Swiper组件圆点导航指示器的颜色。
+Set the indicator color.
 
 **Since:** 23
 
@@ -34,7 +34,7 @@ Swiper组件圆点导航指示器的颜色。
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | [ResourceColor](arkts-arkui-resourcecolor-t.md) \| undefined | Yes | 设置Swiper组件圆点导航指示器的颜色。&lt;br/&gt;默认值：'#1A182431'，浅灰色。&lt;br/&gt;取值为undefined时，按默认值处 理。 |
+| value | [ResourceColor](arkts-arkui-resourcecolor-t.md) \| undefined | Yes | the indicator item color, default value is { #18243119 }, undefined means setting to default value. |
 
 **Return value:**
 
@@ -48,14 +48,7 @@ Swiper组件圆点导航指示器的颜色。
 constructor()
 ```
 
-DotIndicator的构造函数。
-
-> **说明：**
-> 
-> - 按压导航点时，导航点会放大至1.33倍显示，因此非按压态时导航点的可见范围边界至实际范围边界存在一定距离，该距离会随着itemWidth、itemHeight、selectedItemWidth、
-> selectedItemHeight等参数变大而变大。
-> 
-> - 若页面数量较多、圆点导航点超出页面时，建议使用maxDisplayCount设置导航点显示个数。
+Constructor.
 
 **Since:** 23
 
@@ -67,13 +60,43 @@ DotIndicator的构造函数。
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
+## indicatorIcon
+
+```TypeScript
+indicatorIcon(iconList: Array<IndicatorIconInfo> | undefined) : this
+```
+
+Set indicator icon.
+
+**Since:** 26.0.0
+
+**ArkTS mode:** ArkTS-Sta only, since version 26.0.0.
+
+**Model restriction:** This API can be used only in the stage model.
+
+<!--Device-DotIndicator-indicatorIcon(iconList: Array<IndicatorIconInfo> | undefined) : this--><!--Device-DotIndicator-indicatorIcon(iconList: Array<IndicatorIconInfo> | undefined) : this-End-->
+
+**System capability:** SystemCapability.ArkUI.ArkUI.Full
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| iconList | Array&lt;IndicatorIconInfo&gt; \| undefined | Yes | indicator items need to be set icon. |
+
+**Return value:**
+
+| Type | Description |
+| --- | --- |
+| this | return the DotIndicator. |
+
 ## itemHeight
 
 ```TypeScript
 itemHeight(value: Length | undefined): this
 ```
 
-Swiper组件圆点导航指示器的高。
+Set the indicator item height.
 
 **Since:** 23
 
@@ -89,7 +112,7 @@ Swiper组件圆点导航指示器的高。
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | [Length](arkts-arkui-length-t.md) \| undefined | Yes | 设置Swiper组件圆点导航指示器的高，不支持设置百分比。&lt;br/&gt;默认值：6&lt;br/&gt;单位：vp&lt;br/&gt;取值范围：(0, +∞)&lt;br/&gt;取值为 undefined时，按默认值处理。 |
+| value | [Length](arkts-arkui-length-t.md) \| undefined | Yes | the indicator item height, default value is 6.0_vp, undefined means setting to default value. |
 
 **Return value:**
 
@@ -103,7 +126,7 @@ Swiper组件圆点导航指示器的高。
 itemWidth(value: Length | undefined): this
 ```
 
-Swiper组件圆点导航指示器的宽。
+Set the indicator item width.
 
 **Since:** 23
 
@@ -119,7 +142,7 @@ Swiper组件圆点导航指示器的宽。
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | [Length](arkts-arkui-length-t.md) \| undefined | Yes | 设置Swiper组件圆点导航指示器的宽，不支持设置百分比。&lt;br/&gt;默认值：6&lt;br/&gt;单位：vp&lt;br/&gt;取值范围：(0, +∞)&lt;br/&gt;取值为 undefined时，按默认值处理。 |
+| value | [Length](arkts-arkui-length-t.md) \| undefined | Yes | the indicator item width, default value is 6.0_vp, undefined means setting to default value. |
 
 **Return value:**
 
@@ -133,7 +156,7 @@ Swiper组件圆点导航指示器的宽。
 mask(value: boolean | undefined): this
 ```
 
-是否显示Swiper组件圆点导航指示器的蒙版样式。
+Setting indicator style mask.
 
 **Since:** 23
 
@@ -149,7 +172,7 @@ mask(value: boolean | undefined): this
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | boolean \| undefined | Yes | 设置是否显示Swiper组件圆点导航指示器的蒙版样式。&lt;br/&gt;true表示显示Swiper组件圆点导航指示器的蒙版样式；false表示不显示。&lt;br/ &gt;默认值：false&lt;br/&gt;取值为undefined时，按默认值处理。 |
+| value | boolean \| undefined | Yes | the indicator item mask, default value is false, undefined means setting to default value. |
 
 **Return value:**
 
@@ -163,7 +186,7 @@ mask(value: boolean | undefined): this
 maxDisplayCount(maxDisplayCount: int | undefined): this
 ```
 
-圆点导航点指示器样式下，导航点显示个数最大值。
+Set the Indicator maxDisplayCount when selected.
 
 **Since:** 23
 
@@ -179,7 +202,7 @@ maxDisplayCount(maxDisplayCount: int | undefined): this
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| maxDisplayCount | int \| undefined | Yes | 设置圆点导航点指示器样式下，导航点显示个数最大值，当实际导航点个数大于最大导航点个数时，会生效超长效果样式，样式如 [示例5](../../../reference/apis-arkui/arkui-ts/ts-container-swiper copy.md#示例5设置圆点导航点超长显示)所示。&lt;br/&gt;取值范围：[6, 9]&lt;br /&gt;**说明：** &lt;br/&gt;1、超长显示场景，目前暂时不支持交互功能（包括：手指点击拖拽、鼠标操作等）。&lt;br/&gt;2、在超长显示场景下，中间页面对应的选中导航点的位置，并不是完全固定的，取决于之前的翻页操作序列。&lt;br/ &gt;3、当前仅支持displayCount为1的场景。&lt;br/&gt;取值为undefined时，等同于没有超长显示效果。 |
+| maxDisplayCount | int \| undefined | Yes | the indicator item maxDisplayCount when selected, default value is 6, undefined means setting to default value. |
 
 **Return value:**
 
@@ -193,7 +216,7 @@ maxDisplayCount(maxDisplayCount: int | undefined): this
 selectedColor(value: ResourceColor | undefined): this
 ```
 
-选中Swiper组件圆点导航指示器的颜色。
+Set the navigation point color.
 
 **Since:** 23
 
@@ -209,7 +232,7 @@ selectedColor(value: ResourceColor | undefined): this
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | [ResourceColor](arkts-arkui-resourcecolor-t.md) \| undefined | Yes | 设置选中Swiper组件圆点导航指示器的颜色。&lt;br/&gt;默认值：'#007DFF'，蓝色。&lt;br/&gt;取值为undefined时，按默认值处理 。 |
+| value | [ResourceColor](arkts-arkui-resourcecolor-t.md) \| undefined | Yes | the indicator item when selected, default value is { #007DFFFF }, undefined means setting to default value. |
 
 **Return value:**
 
@@ -223,7 +246,7 @@ selectedColor(value: ResourceColor | undefined): this
 selectedItemHeight(value: Length | undefined): this
 ```
 
-选中Swiper组件圆点导航指示器的高。
+Set the indicator item height when selected.
 
 **Since:** 23
 
@@ -239,7 +262,7 @@ selectedItemHeight(value: Length | undefined): this
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | [Length](arkts-arkui-length-t.md) \| undefined | Yes | 设置选中Swiper组件圆点导航指示器的高，不支持设置百分比。&lt;br/&gt;默认值：6&lt;br/&gt;单位：vp&lt;br/&gt;取值范围：(0, +∞)&lt;br/&gt;取值为 undefined时，按默认值处理。 |
+| value | [Length](arkts-arkui-length-t.md) \| undefined | Yes | the indicator item height when selected, default value is 6.0_vp, undefined means setting to default value. |
 
 **Return value:**
 
@@ -253,7 +276,7 @@ selectedItemHeight(value: Length | undefined): this
 selectedItemWidth(value: Length | undefined): this
 ```
 
-选中Swiper组件圆点导航指示器的宽。
+Set the indicator item width when selected.
 
 **Since:** 23
 
@@ -269,7 +292,7 @@ selectedItemWidth(value: Length | undefined): this
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | [Length](arkts-arkui-length-t.md) \| undefined | Yes | 设置选中Swiper组件圆点导航指示器的宽，不支持设置百分比。&lt;br/&gt;默认值：6&lt;br/&gt;单位：vp&lt;br/&gt;取值范围：(0, +∞)&lt;br/&gt;取值为 undefined时，按默认值处理。 |
+| value | [Length](arkts-arkui-length-t.md) \| undefined | Yes | the indicator item width when selected, default value is 6.0_vp, undefined means setting to default value. |
 
 **Return value:**
 
@@ -283,7 +306,7 @@ selectedItemWidth(value: Length | undefined): this
 space(space: LengthMetrics | undefined): this
 ```
 
-设置Swiper圆点导航点间距。
+Set the space between dots.
 
 **Since:** 23
 
@@ -299,7 +322,7 @@ space(space: LengthMetrics | undefined): this
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| space | [LengthMetrics](arkts-arkui-lengthmetrics-t.md) \| undefined | Yes | 设置圆点导航点间距，不支持设置百分比。&lt;br/&gt;默认值：PC/2in1设备上为10，其他设备为8。&lt;br/&gt;单位：vp&lt;br/&gt;取值范围： [0, +∞)&lt;br/&gt;取值为undefined时，按默认值处理。 |
+| space | [LengthMetrics](arkts-arkui-lengthmetrics-t.md) \| undefined | Yes | the space between dots, default value is 8.0_vp, undefined means setting to default value. |
 
 **Return value:**
 

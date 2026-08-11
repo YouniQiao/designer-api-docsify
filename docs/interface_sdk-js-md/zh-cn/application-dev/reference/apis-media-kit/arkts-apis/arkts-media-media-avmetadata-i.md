@@ -12,12 +12,6 @@ Defines the audio and video metadata. Parameters that are not declared as read-o
 
 **系统能力：** SystemCapability.Multimedia.Media.AVMetadataExtractor
 
-## 导入模块
-
-```TypeScript
-import { media } from 'kits/@kit.MediaKit';
-```
-
 ## album
 
 ```TypeScript
@@ -116,7 +110,7 @@ customInfo?: Record<string, string>
 
 Custom key-value mappings obtained from **moov.meta.list**.
 
-**类型：** [Record](../../apis-default/arkts-apis/arkts-record-t.md)&lt;string, string&gt;
+**类型：** Record&lt;string, string&gt;
 
 **起始版本：** 12
 
@@ -280,7 +274,7 @@ hdrType?: HdrType
 
 HDR type of the media asset. This parameter is not supported in AVRecorder settings.
 
-**类型：** [HdrType](arkts-media-media-hdrtype-e.md)
+**类型：** [HdrType](../../apis-arkui/arkts-apis/arkts-arkui-xcomponent-hdrtype-e.md)
 
 **起始版本：** 12
 
@@ -298,7 +292,7 @@ location?: Location
 
 Geographical location of the media asset.
 
-**类型：** [Location](../../apis-location-kit/arkts-apis/arkts-location-geolocationmanager-location-i.md)
+**类型：** [Location](../../apis-camera-kit/arkts-apis/arkts-camera-camera-location-i.md)
 
 **起始版本：** 12
 

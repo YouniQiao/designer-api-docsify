@@ -1,10 +1,10 @@
 # DisplayIntentType (System API)
 
-枚举截图显示意图类型。
+Enumerates the screenshot display intent type.
 
-**Since:** 24
+**Since:** 26.0.0
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 24.
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
 <!--Device-screenshot-enum DisplayIntentType--><!--Device-screenshot-enum DisplayIntentType-End-->
 
@@ -18,11 +18,11 @@
 CANONICAL = 0
 ```
 
-指定使用规范显示属性渲染屏幕截图，以优化HDR显示器上的演示输出。
+Specifies that the screenshot renders with canonical display attributes optimizing output for presentation on the HDR display.
 
-**Since:** 24
+**Since:** 26.0.0
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 24.
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -38,11 +38,11 @@ CANONICAL = 0
 LOCAL = 1
 ```
 
-指定使用本地显示属性渲染屏幕截图，以优化在捕获显示上的显示输出。
+Specifies that the screenshot renders with local display attributes optimizing output for presentation on the capture display.
 
-**Since:** 24
+**Since:** 26.0.0
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 24.
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
 

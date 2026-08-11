@@ -1,11 +1,5 @@
 # getSystemSoundManager
 
-## 导入模块
-
-```TypeScript
-import { systemSoundManager } from 'kits/@kit.AudioKit';
-```
-
 ## getSystemSoundManager
 
 ```TypeScript

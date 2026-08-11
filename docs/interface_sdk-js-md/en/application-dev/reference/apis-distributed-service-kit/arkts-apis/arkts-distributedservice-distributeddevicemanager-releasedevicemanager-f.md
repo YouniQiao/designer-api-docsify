@@ -12,7 +12,7 @@ import { distributedDeviceManager } from 'kits/@kit.DistributedServiceKit';
 function releaseDeviceManager(deviceManager: DeviceManager): void
 ```
 
-设备管理实例不再使用后，通过该方法释放DeviceManager实例。
+Releases a **DeviceManager** instance that is no longer used.
 
 **Since:** 10
 
@@ -26,14 +26,14 @@ function releaseDeviceManager(deviceManager: DeviceManager): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| deviceManager | [DeviceManager](arkts-distributedservice-distributeddevicemanager-devicemanager-i.md) | Yes | 设备管理器对象实例。 |
+| deviceManager | [DeviceManager](arkts-distributedservice-distributeddevicemanager-devicemanager-i.md) | Yes | DeviceManager** instance to release. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
-| 11600101 | Failed to execute the function. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| [11600101](../../apis-distributedservice-kit/errorcode-device-manager.md#11600101-service-invoking-exception) | Failed to execute the function. |
 
 ## Examples
 

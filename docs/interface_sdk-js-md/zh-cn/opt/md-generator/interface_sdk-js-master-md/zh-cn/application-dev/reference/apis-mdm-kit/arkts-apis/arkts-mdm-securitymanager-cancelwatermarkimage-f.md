@@ -1,0 +1,58 @@
+# cancelWatermarkImage
+
+## cancelWatermarkImage
+
+```TypeScript
+function cancelWatermarkImage(admin: Want, bundleName: string, accountId: number): void
+```
+
+取消指定用户的水印策略。当应用不再需要水印保护或需要更换水印时，企业可调用此接口取消水印策略。
+
+**起始版本：** 14
+
+**需要权限：** ohos.permission.ENTERPRISE_MANAGE_SECURITY
+
+**模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-securityManager-function cancelWatermarkImage(admin: Want, bundleName: string, accountId: number): void--><!--Device-securityManager-function cancelWatermarkImage(admin: Want, bundleName: string, accountId: number): void-End-->
+
+**系统能力：** SystemCapability.Customization.EnterpriseDeviceManager
+
+**参数：**
+
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| admin | [Want](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-want-want-c.md) | 是 |
+| bundleName | string | 是 |
+| accountId | number | 是 |
+
+**错误码：**
+
+| 错误码ID |
+| --- |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
+| [201](../../errorcode-universal.md#201-权限校验失败) |
+| [9200001](../errorcode-enterpriseDeviceManager.md#9200001-应用没有激活成设备管理器) |
+| [9200002](../errorcode-enterpriseDeviceManager.md#9200002-设备管理器权限不够) |
+
+## 示例
+
+```TypeScript
+import { securityManager } from '@kit.MDMKit';
+import { Want } from '@kit.AbilityKit';
+
+let wantTemp: Want = {
+  // 需根据实际情况进行替换
+  bundleName: 'com.example.myapplication',
+  abilityName: 'EnterpriseAdminAbility'
+};
+// 需根据实际情况进行替换
+let bundleName: string = 'com.example.myapplication';
+let accountId: number = 100;
+try {
+  securityManager.cancelWatermarkImage(wantTemp, bundleName, accountId);
+  console.info(`Succeeded in cancelling watermarkImage policy.`);
+} catch(err) {
+  console.error(`Failed to cancel watermarkImage policy. Code: ${err.code}, message: ${err.message}`);
+}
+```

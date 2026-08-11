@@ -1,6 +1,6 @@
 # VisualEffect
 
-VisualEffect效果类，用于将背景颜色混合、边框光照、颜色渐变等效果添加到组件上。在调用VisualEffect的方法前，需要先通过[createEffect](arkts-arkgraphics2d-uieffect-createeffect-f.md#createeffect)创建一个VisualEffect实例。
+VisualEffect class, used to apply background color blending, border lighting, color gradient, and other effects to a component. Before calling VisualEffect methods, you need to first create a VisualEffect instance through createEffect.
 
 **Since:** 12
 
@@ -22,7 +22,7 @@ import { uiEffect } from 'kits/@kit.ArkGraphics2D';
 backgroundColorBlender(blender: BrightnessBlender): VisualEffect
 ```
 
-用于改变组件背景颜色的blender，目前仅支持提亮混合器。
+A blender for changing the background color of the component. Currently, only the brightness blender is supported.
 
 **Since:** 12
 
@@ -40,23 +40,20 @@ backgroundColorBlender(blender: BrightnessBlender): VisualEffect
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| blender | [BrightnessBlender](arkts-arkgraphics2d-uieffect-brightnessblender-i-sys.md) | Yes | 用于混合背景颜色的blender。 |
+| blender | [BrightnessBlender](arkts-arkgraphics2d-uieffect-brightnessblender-i-sys.md) | Yes | The blender for blending the background color. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [VisualEffect](../../apis-arkui/arkts-components/arkts-arkui-visualeffect-t.md) | 返回添加了背景颜色更改效果的VisualEffect。 |
+| [VisualEffect](../../apis-arkui/arkts-components/arkts-arkui-visualeffect-t.md) | Returns the VisualEffect with the background color change effect attached. |
 
 ## Examples
 
 ```TypeScript
-import { uiEffect } from '@kit.ArkGraphics2D'
 let blender : uiEffect.BrightnessBlender =
   uiEffect.createBrightnessBlender({cubicRate:1.0, quadraticRate:1.0, linearRate:1.0, degree:1.0, saturation:1.0,
     positiveCoefficient:[2.3, 4.5, 2.0], negativeCoefficient:[0.5, 2.0, 0.5], fraction:0.0})
-let visualEffect = uiEffect.createEffect();
-// Add the blender to the component to change the component background color.
 visualEffect.backgroundColorBlender(blender)
 ```
 
@@ -74,7 +71,7 @@ borderLight(lightPosition: common2D.Point3d, lightColor: common2D.Color, lightIn
       borderWidth: double): VisualEffect
 ```
 
-为圆角矩形组件边框添加3D光照效果。
+Adds a 3D lighting effect to the border of a rounded rectangle component.
 
 **Since:** 20
 
@@ -90,22 +87,22 @@ borderLight(lightPosition: common2D.Point3d, lightColor: common2D.Color, lightIn
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| lightPosition | common2D.Point3d | Yes | 光源在组件空间的3D位置，[-1, -1, 0]为组件左上角，[1, 1, 0]为组件的右下角， z轴分量越大，光源离组件平面越远，可照射区域越大。 x轴分量取值范围为[-10, 10]，y轴分量取值范围为[-10, 10]，z轴分量取值范围为[0, 10]，超出范围会自动截断。 |
-| lightColor | common2D.Color | Yes | 光源颜色，各元素取值范围为[0, 1]，超出范围会自动截断。 |
-| lightIntensity | ArkTS-Dyn: number  <br>ArkTS-Sta：double | Yes | 光源强度，取值范围为[0, 1]，数值越大光源亮度越大，超出范围会自动截断。 |
-| borderWidth | ArkTS-Dyn: number  <br>ArkTS-Sta：double | Yes | 组件边框的受光宽度，取值范围为[0.0, 30.0]，超出范围会自动截断。 设置为0.0时，组件边框无光照效果，数值越大，光可照亮的区域越宽。 |
+| lightPosition | common2D.Point3d | Yes | The 3D position of the light source in the component space. [-1, -1, 0] is the top-left corner of the component, [1, 1, 0] is the bottom-right corner of the component. The larger the z-axis component, the farther the light source is from the component plane, and the larger the illuminated area. The x component range is [-10, 10], the y component range is [-10, 10], and the z component range is [0, 10]. Values outside the range will be automatically clamped. |
+| lightColor | common2D.Color | Yes | The color of the light source. Each component range is [0, 1]. Values outside the range will be automatically clamped. |
+| lightIntensity | ArkTS-Dyn: number  <br>ArkTS-Sta：double | Yes | The intensity of the light source. The value range is [0, 1]. A larger value indicates a brighter light source. Values outside the range will be automatically clamped. |
+| borderWidth | ArkTS-Dyn: number  <br>ArkTS-Sta：double | Yes | The illuminated width of the component border. The value range is [0.0, 30.0]. Values outside the range will be automatically clamped. Setting it to 0.0 results in no lighting effect on the component border; a larger value results in a wider illuminated area. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [VisualEffect](../../apis-arkui/arkts-components/arkts-arkui-visualeffect-t.md) | 返回了具有边框光照效果的VisualEffect。 |
+| [VisualEffect](../../apis-arkui/arkts-components/arkts-arkui-visualeffect-t.md) | Returns the VisualEffect with the border lighting effect attached. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 202 | 权限校验失败，非系统应用调用系统接口。 |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
 
 ## Examples
 
@@ -115,14 +112,14 @@ import { common2D, uiEffect } from '@kit.ArkGraphics2D'
 @Entry
 @Component
 struct Index {
-  @State borderLightPosition: common2D.Point3d = {
-    x: 0, y: 0, z: 2
+  @State point1:common2D.Point3d = {
+    x:0,y:0,z:2
   }
-  @State borderLightColor: common2D.Color = {
-    red: 1, green: 1, blue: 1, alpha: 1
+  @State color1:common2D.Color = {
+    red:1,green:1,blue:1,alpha:1
   }
-  @State lightIntensity: number = 1
-  @State borderWidth_: number = 20
+  @State lightIntensity1:number = 1
+  @State borderWidth:number = 20
 
   build() {
     Column() {
@@ -135,9 +132,8 @@ struct Index {
           .width('646px')
           .height('900px')
           .borderRadius(10)
-          // Add 3D lighting effect to the border of a rounded rectangle component.
-          .visualEffect(uiEffect.createEffect().borderLight(this.borderLightPosition, this.borderLightColor, this.lightIntensity,
-            this.borderWidth_))
+          .visualEffect(uiEffect.createEffect().borderLight(this.point1, this.color1, this.lightIntensity1,
+            this.borderWidth))
       }
       .width('100%')
       .height('55%')
@@ -164,7 +160,7 @@ colorGradient(colors: Array<Color>, positions: Array<common2D.Point>, strengths:
       alphaMask?: Mask): VisualEffect
 ```
 
-此方法为组件添加颜色渐变效果。
+Adds a color gradient effect to the component.
 
 **Since:** 20
 
@@ -180,27 +176,27 @@ colorGradient(colors: Array<Color>, positions: Array<common2D.Point>, strengths:
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| colors | Array&lt;Color&gt; | Yes | 颜色数组，用于实现多颜色渐变。 数组长度范围0到12，每个颜色值取值范围需大于等于0。数组长度为0或大于12， 或colors、positions和strengths的数组长度不一致，则无颜色渐变效果。 |
-| positions | Array&lt;common2D.Point&gt; | Yes | 位置数组，颜色对应的位置。 数组长度范围为0到12。数组长度为0或大于12，或colors、positions和strengths的数组长度不一致，则无颜色渐变效果。 |
-| strengths | ArkTS-Dyn: Array&lt;number&gt;  <br>ArkTS-Sta：Array&lt;double&gt; | Yes | 强度数组，表示颜色对应的强度。 数组长度范围为0到12，每一个强度值需大于等于0。数组长度为0或大于12，或colors、positions和strengths的数组长度不一致时，则无颜色渐变效果。 |
-| alphaMask | [Mask](arkts-arkgraphics2d-uieffect-mask-c-sys.md) | No | 遮罩alpha，颜色对应的alpha遮罩。可通过Mask类的创建方法 （如createRippleMask、createRadialGradientMask等）创建Mask实例。当需要控制颜色渐变效果的 透明度分布（如局部透明或动态透明效果）时传入此参数。不设置时，颜色渐变效果的透明度 完全由colors参数决定。 |
+| colors | Array&lt;Color&gt; | Yes | The color array for multi-color gradient. The array length range is [0, 12], and each color value must be greater than or equal to 0. If the array length is 0 or greater than 12, or if the array lengths of colors, positions, and strengths are not equal, there will be no color gradient effect. |
+| positions | Array&lt;common2D.Point&gt; | Yes | The position array, corresponding to the positions of colors. The array length range is [0, 12]. If the array length is 0 or greater than 12, or if the array lengths of colors, positions, and strengths are not equal, there will be no color gradient effect. |
+| strengths | ArkTS-Dyn: Array&lt;number&gt;  <br>ArkTS-Sta：Array&lt;double&gt; | Yes | The strength array, corresponding to the intensity of colors. The array length range is [0, 12], and each strength value must be greater than or equal to 0. If the array length is 0 or greater than 12, or if the array lengths of colors, positions, and strengths are not equal, there will be no color gradient effect. |
+| alphaMask | [Mask](arkts-arkgraphics2d-uieffect-mask-c-sys.md) | No | The alpha mask corresponding to the colors. A Mask instance can be created through Mask creation methods (such as createRippleMask, createRadialGradientMask, etc.). Pass this parameter when you need to control the transparency distribution of the color gradient effect (such as local transparency or dynamic transparency effects). If not set, the transparency of the color gradient effect is entirely determined by the colors parameter. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [VisualEffect](../../apis-arkui/arkts-components/arkts-arkui-visualeffect-t.md) | 返回具有颜色渐变效果的VisualEffect。 |
+| [VisualEffect](../../apis-arkui/arkts-components/arkts-arkui-visualeffect-t.md) | Returns the VisualEffect with the color gradient effect attached. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 202 | 权限校验失败，非系统应用调用系统接口。 |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
 
 ## Examples
 
 ```TypeScript
-import { common2D, uiEffect } from '@kit.ArkGraphics2D'
+import { common2D, uiEffect } from "@kit.ArkGraphics2D"
 
 @Entry
 @Component
@@ -208,7 +204,6 @@ struct ColorGradientExample {
   build() {
     Stack() {
       Stack() {}
-      // Adds a color gradient effect to the component.
       .visualEffect(uiEffect.createEffect()
         .colorGradient(
           [
@@ -242,9 +237,9 @@ struct ColorGradientExample {
 distortionCollapse(distortionParam: DistortionParam): VisualEffect
 ```
 
-为组件添加非线性形变效果。典型应用场景包括页面坍塌动画、窗口关闭特效、卡片翻转动画、场景过渡效果等。
+Adds a nonlinear deformation effect to the component. Typical application scenarios include page collapse animations, window close effects, card flip animations, scene transition effects, etc.
 
-1. 该视效支持控件范围外的绘制，但仍会受到父控件Clip的影响。2. 因包含前景Filter，未与EffectComponent组合使用时不兼容组件自身及子组件的部分视效（如BrightnessBlender或systemMaterial）。3. 支持对系统材质进行扭曲，但是与EffectComponent组合使用时，会导致系统材质的背景扭曲。4. 调用distortionCollapse时，会创建与形变后区域等大的离屏画布，再将当前组件（含子组件） 的内容绘制到离屏画布上，再对画布上的已有内容进行形变绘制。5. 使用该实现方式时，如果不与EffectComponent组合使用，将导致systemMaterial、 backgroundEffect、brightness、blur等需要截屏的接口无法截取到正确的画面。
+NOTE1. This visual effect supports drawing outside the bounds of the control, but it is still subject to the clipping (Clip) of the parent control.2. Because it contains a foreground Filter, some visual effects of the component itself and its child components (e.g., BrightnessBlender or systemMaterial) are incompatible when not used in combination  with the EffectComponent.3. It supports distorting the system material, but when used in combination with the EffectComponent, it will cause the background of the system material to be distorted.4. When calling distortionCollapse, an offscreen canvas equal in size to the deformed area will be created. The content of the current component (including child components) is then drawn onto this offscreen canvas, and the existing content on the canvas is drawn with deformation.5. When using this implementation without combining with the EffectComponent, interfaces that require screen  capture, such as systemMaterial, backgroundEffect, brightness, and blur, will not be able to capture  the correct screen.
 
 **Since:** 26.0.0
 
@@ -262,41 +257,13 @@ distortionCollapse(distortionParam: DistortionParam): VisualEffect
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| distortionParam | [DistortionParam](../../apis-arkui/arkts-apis/arkts-arkui-distortioncomponent-distortionparam-i-sys.md) | Yes | 非线性形变效果的参数。 |
+| distortionParam | [DistortionParam](../../apis-arkui/arkts-apis/arkts-arkui-distortioncomponent-distortionparam-i-sys.md) | Yes | The parameters of the nonlinear deformation effect. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [VisualEffect](../../apis-arkui/arkts-components/arkts-arkui-visualeffect-t.md) | 返回添加了非线性形变效果的VisualEffect。 |
-
-## Examples
-
-```TypeScript
-import { uiEffect } from '@kit.ArkGraphics2D';
-
-@Entry
-@Component
-struct Index {
-  private distortionParam: DistortionParam = {
-    topLeft: {x: 0.09, y: 0.007},
-    topRight: {x: 0.91, y: 0.007},
-    bottomRight: {x: 1.09, y: 0.702},
-    bottomLeft: {x: -0.09, y: 0.702},
-    barrelDistortion: {x: 0.551, y: 0.551, z: 0.092, w: 0.092},
-  }
-
-  build() {
-    Column() {
-      Image($r('app.media.man')).width('80%').height('80%')
-        .visualEffect(uiEffect.createEffect().distortionCollapse(this.distortionParam))
-    }
-    .justifyContent(FlexAlign.Center)
-    .height('100%')
-    .width('100%')
-  }
-}
-```
+| [VisualEffect](../../apis-arkui/arkts-components/arkts-arkui-visualeffect-t.md) | Returns the VisualEffect with the nonlinear deformation effect attached. |
 
 ## liquidMaterial
 
@@ -305,7 +272,7 @@ liquidMaterial(param : LiquidMaterialEffectParam, useEffectMask: Mask, distortMa
       brightnessParam?: BrightnessParam): VisualEffect
 ```
 
-此方法为组件添加材质效果。材质效果通过模拟物理材质的光学特性（折射、反射）和动态扰动效果， 实现玻璃、金属等材质的视觉呈现。可用于模拟玻璃质感UI、流体材质动画、磨砂玻璃效果等场景。
+Adds a material effect to the component. The material effect simulates the optical properties(refraction, reflection) and dynamic perturbation effects of physical materials to achieve visual representations of glass, metal, and other materials. It can be used for scenarios such as glass-textured UI,fluid material animation, frosted glass effects, etc.
 
 **Since:** 22
 
@@ -321,22 +288,22 @@ liquidMaterial(param : LiquidMaterialEffectParam, useEffectMask: Mask, distortMa
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| param | [LiquidMaterialEffectParam](arkts-arkgraphics2d-uieffect-liquidmaterialeffectparam-i-sys.md) | Yes | 材质所需相关变量，用于控制材质显示，包含材质开关、折射系数、反射系数和扰动系数。 |
-| useEffectMask | [Mask](arkts-arkgraphics2d-uieffect-mask-c-sys.md) | Yes | 声明是否使用模糊缓存。使用createUseEffectMask(true)创建的 Mask实例使用模糊缓存，适用于需要复用模糊结果的场景以提升性能； 使用createUseEffectMask(false)创建的Mask实例不使用模糊缓存， 适用于模糊效果频繁变化的场景。 |
-| distortMask | [Mask](arkts-arkgraphics2d-uieffect-mask-c-sys.md) | No | 材质扰动效果需要的扰动纹理，由pixelMap创建的Mask实例的图片纹理决定扰动效果的图案和方向。 可通过createPixelMapMask方法创建Mask实例。当材质的扰动系数（distortFactor）不为0时，需要设置此参数否则无扰动效果； 当材质的扰动系数为0或此参数不设置时，无扰动效果。默认不设置。 |
-| brightnessParam | [BrightnessParam](arkts-arkgraphics2d-uieffect-brightnessparam-i-sys.md) | No | 为材质增加提亮效果。当需要增强材质的视觉亮度（如高亮显示、发光效果）时传入此参数。 不设置时默认不添加提亮效果，材质保持原始亮度。 |
+| param | [LiquidMaterialEffectParam](arkts-arkgraphics2d-uieffect-liquidmaterialeffectparam-i-sys.md) | Yes | The material-related variables used to control the material display, including the material switch, refraction coefficient, reflection coefficient, and perturbation coefficient. |
+| useEffectMask | [Mask](arkts-arkgraphics2d-uieffect-mask-c-sys.md) | Yes | Declares whether to use blur caching. A Mask instance created with createUseEffectMask(true) uses blur caching, suitable for scenarios that need to reuse blur results to improve performance; a Mask instance created with createUseEffectMask(false) does not use blur caching, suitable for scenarios where blur effects change frequently. |
+| distortMask | [Mask](arkts-arkgraphics2d-uieffect-mask-c-sys.md) | No | The perturbation texture required for the material perturbation effect. The image texture of the Mask instance created from a pixelMap determines the pattern and direction of the perturbation effect. A Mask instance can be created through the createPixelMapMask method. When the material's perturbation coefficient (distortFactor) is not 0, this parameter must be set; otherwise, there will be no perturbation effect. When the perturbation coefficient is 0 or this parameter is not set, there is no perturbation effect. The default is not set. |
+| brightnessParam | [BrightnessParam](arkts-arkgraphics2d-uieffect-brightnessparam-i-sys.md) | No | Adds a brightening effect to the material. Pass this parameter when you need to enhance the visual brightness of the material (such as highlight display, glow effects). If not set, no brightening effect is added by default, and the material maintains its original brightness. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [VisualEffect](../../apis-arkui/arkts-components/arkts-arkui-visualeffect-t.md) | 返回具有材质效果的VisualEffect。 |
+| [VisualEffect](../../apis-arkui/arkts-components/arkts-arkui-visualeffect-t.md) | Returns the VisualEffect with the material effect attached. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 202 | 权限校验失败，非系统应用调用系统接口。 |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
 
 ## Examples
 
@@ -357,7 +324,7 @@ struct Index {
   @State tintColorB: number = 1.;
   @State tintColorA: number = 1.;
 
-  private getMaterialVisualEffect(): uiEffect.VisualEffect {
+  private GetMaterialVisualEffect(): uiEffect.VisualEffect {
     let effect: uiEffect.VisualEffect = uiEffect.createEffect();
     effect.liquidMaterial({
       enable: true,
@@ -383,7 +350,7 @@ struct Index {
           .height(553 + 'px')
           .width(553 + 'px')
           .borderRadius(12)
-          .visualEffect(this.getMaterialVisualEffect())
+          .visualEffect(this.GetMaterialVisualEffect())
       }
       .backgroundEffect({
         radius: 15,

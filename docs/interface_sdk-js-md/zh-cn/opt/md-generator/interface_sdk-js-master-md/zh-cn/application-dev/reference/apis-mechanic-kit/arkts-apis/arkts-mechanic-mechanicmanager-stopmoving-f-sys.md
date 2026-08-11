@@ -1,0 +1,48 @@
+# stopMoving（系统接口）
+
+## stopMoving
+
+```TypeScript
+function stopMoving(mechId: number): Promise<void>
+```
+
+停止转动
+
+**起始版本：** 20
+
+<!--Device-mechanicManager-function stopMoving(mechId: int): Promise<void>--><!--Device-mechanicManager-function stopMoving(mechId: int): Promise<void>-End-->
+
+**系统能力：** SystemCapability.Mechanic.Core
+
+**系统接口：** 此接口为系统接口。
+
+**参数：**
+
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| mechId | number | 是 |
+
+**返回值：**
+
+| 类型 |
+| --- |
+| Promise&lt;void&gt; |
+
+**错误码：**
+
+| 错误码ID |
+| --- |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
+| [33300001](../errorcode-mechanic.md#33300001-系统错误) |
+| [33300002](../errorcode-mechanic.md#33300002-设备未连接) |
+
+## 示例
+
+```TypeScript
+console.info('Stop moving');
+mechanicManager.stopMoving(0)
+  .then(() => {
+    console.info('Get stop complete');
+  });
+console.info('Stop succeeded');
+```

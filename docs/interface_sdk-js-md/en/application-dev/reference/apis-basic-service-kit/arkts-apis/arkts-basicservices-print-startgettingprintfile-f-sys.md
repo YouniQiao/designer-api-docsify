@@ -13,7 +13,7 @@ function startGettingPrintFile(jobId: string, printAttributes: PrintAttributes, 
     onFileStateChanged: Callback<PrintFileCreationState>): void
 ```
 
-开始获取打印文件，使用Callback异步回调。
+Starts to obtain the print file. This API uses an asynchronous callback to return the result.
 
 **Since:** 11
 
@@ -31,18 +31,18 @@ function startGettingPrintFile(jobId: string, printAttributes: PrintAttributes, 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| jobId | string | Yes | 表示打印任务ID。 |
-| printAttributes | [PrintAttributes](arkts-basicservices-print-printattributes-i.md) | Yes | 表示打印参数。 |
-| fd | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | 表示打印文件描述符。 |
-| onFileStateChanged | [Callback](arkts-basicservices-base-callback-i.md)&lt;PrintFileCreationState&gt; | Yes | 表示更新文件状态的回调。 |
+| jobId | string | Yes | ID of the print job. |
+| printAttributes | [PrintAttributes](arkts-basicservices-print-printattributes-i.md) | Yes | Print attributes. |
+| fd | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | File descriptor. |
+| onFileStateChanged | [Callback](arkts-basicservices-base-callback-i.md)&lt;PrintFileCreationState&gt; | Yes | Callback for updating the file state. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
-| 201 | the application does not have permission to call this function. |
-| 202 | not system application |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
+| [201](../../errorcode-universal.md#201-permission-denied) | the application does not have permission to call this function. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | not system application |
 
 ## Examples
 

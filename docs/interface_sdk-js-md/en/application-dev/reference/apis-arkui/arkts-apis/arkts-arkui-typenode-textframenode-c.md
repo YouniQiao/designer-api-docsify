@@ -1,6 +1,6 @@
 # TextFrameNode
 
-定义Text类型的FrameNode。
+Define the Text type of FrameNode.
 
 **Inheritance/Implementation:** TextFrameNode extends [TypedFrameNode<TextAttribute>](TypedFrameNode<TextAttribute>)
 
@@ -18,7 +18,7 @@
 abstract initialize(content?: string | Resource, value?: TextOptions): TextAttribute
 ```
 
-初始化Text类型的FrameNode。
+Initialize Text FrameNode.
 
 **Since:** 23
 

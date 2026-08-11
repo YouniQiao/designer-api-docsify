@@ -1,6 +1,6 @@
 # SerialAttribute
 
-串口的配置参数。
+Represents the configuration parameters of a serial port.
 
 **Since:** 19
 
@@ -22,7 +22,7 @@ import { serialManager } from 'kits/@kit.BasicServicesKit';
 baudRate: BaudRates
 ```
 
-串口波特率。
+Baud rate.
 
 **Type:** [BaudRates](arkts-basicservices-serialmanager-baudrates-e.md)
 
@@ -40,7 +40,7 @@ baudRate: BaudRates
 dataBits?: DataBits
 ```
 
-串口数据位，默认值为8位。
+Data bits. The default value is **8**.
 
 **Type:** [DataBits](arkts-basicservices-serial-databits-e.md)
 
@@ -60,7 +60,7 @@ dataBits?: DataBits
 parity?: Parity
 ```
 
-串口奇偶校验，默认值为None，无奇偶校验。
+Parity check. The default value is **None**, indicating that no parity check is performed.
 
 **Type:** [Parity](arkts-basicservices-serialmanager-parity-e.md)
 
@@ -80,7 +80,7 @@ parity?: Parity
 stopBits?: StopBits
 ```
 
-串口停止位，默认值为1位。
+Stop bits. The default value is **1**.
 
 **Type:** [StopBits](arkts-basicservices-serial-stopbits-e.md)
 

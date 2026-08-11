@@ -12,7 +12,7 @@ import { bundleManager } from 'kits/@kit.AbilityKit';
 function getBundleInfoForSelfSync(bundleFlags: int): BundleInfo
 ```
 
-以同步方法根据给定的bundleFlags获取当前应用的BundleInfo。
+Obtains the bundle information of the current application based on the given bundle flags. This API returns the result synchronously.
 
 **Since:** 10
 
@@ -28,19 +28,19 @@ function getBundleInfoForSelfSync(bundleFlags: int): BundleInfo
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| bundleFlags | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | 指定返回的BundleInfo所包含的信息。 |
+| bundleFlags | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | Type of the bundle information to obtain. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [BundleInfo](arkts-ability-bundleinfo-i.md) | 返回BundleInfo对象。 |
+| [BundleInfo](arkts-ability-bundleinfo-i.md) | Bundle information obtained. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types. |
 
 ## Examples
 

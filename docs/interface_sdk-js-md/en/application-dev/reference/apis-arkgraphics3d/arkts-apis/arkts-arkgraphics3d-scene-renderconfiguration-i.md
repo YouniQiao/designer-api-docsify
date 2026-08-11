@@ -1,6 +1,6 @@
 # RenderConfiguration
 
-全局渲染配置控制
+Describes the rendering configuration.
 
 **Since:** 23
 
@@ -16,7 +16,7 @@
 shadowResolution?: Vec2
 ```
 
-单个阴影贴图缓冲区的分辨率, undefined by default, which means we use (1024, 1024) as the resolution of a single shadow map.需要提供相同的x和y值以获得正确的阴影效果，单位为像素.
+Global shadow map resolution, in pixels (px). The default value is undefined,indicating that the shadow map resolution is set to 1024 * 1024.The value must be greater than 0 for the parameter to take effect.If the input value is a floating-point number, it will be truncated to an integer;if the input value is less than or equal to 0, the input will be ignored, and the original configuration will be retained.
 
 **Type:** [Vec2](arkts-arkgraphics3d-scenetypes-vec2-i.md)
 
@@ -36,11 +36,11 @@ shadowResolution?: Vec2
 softShadowConfig?: SoftShadowConfig
 ```
 
-软阴影配置参数，控制算法类型及其配置
+param config for soft shadow, control the algorithm type and its configuration
 
 **Type:** [SoftShadowConfig](arkts-arkgraphics3d-scene-softshadowconfig-c.md)
 
-**Default:** { undefined }, 表示使用默认硬阴影算法
+**Default:** { undefined }, means that use the default hard shadow algorithm
 
 **Since:** 26.0.0
 

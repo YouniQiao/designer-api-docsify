@@ -10,12 +10,6 @@
 
 **系统能力：** SystemCapability.DistributedSched.AppCollaboration
 
-## 导入模块
-
-```TypeScript
-import { linkEnhance } from 'kits/@kit.DistributedServiceKit';
-```
-
 ## close
 
 ```TypeScript
@@ -40,7 +34,7 @@ close(): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 201 | Permission denied. |
+| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
 
 ## 示例
 
@@ -94,8 +88,8 @@ off(type: 'connectionAccepted', callback?: Callback<Connection>): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 32390206 | Parameter invalid. |
-| 201 | Permission denied. |
+| [32390206](../../apis-distributedservice-kit/errorcode-link-enhance.md#32390206-参数非法) | Parameter invalid. |
+| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
 
 ## 示例
 
@@ -155,8 +149,8 @@ off(type: 'serverStopped', callback?: Callback<number>): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 32390206 | Parameter invalid. |
-| 201 | Permission denied. |
+| [32390206](../../apis-distributedservice-kit/errorcode-link-enhance.md#32390206-参数非法) | Parameter invalid. |
+| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
 
 ## 示例
 
@@ -215,8 +209,35 @@ offConnectionAccepted(callback?: Callback<Connection>): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 32390206 | Parameter invalid. |
-| 201 | Permission denied. |
+| [32390206](../../apis-distributedservice-kit/errorcode-link-enhance.md#32390206-参数非法) | Parameter invalid. |
+| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
+
+## 示例
+
+```TypeScript
+import { linkEnhance } from '@kit.DistributedServiceKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+import { hilog } from '@kit.PerformanceAnalysisKit';
+
+const TAG = "testDemo";
+
+try {
+  let name: string = "demo";
+  hilog.info(0x0000, TAG, 'start server name = ' + name);
+  // 使用服务名构造Server
+  let server: linkEnhance.Server = linkEnhance.createServer(name);
+  server.onConnectionAccepted((connection: linkEnhance.Connection): void => {
+    hilog.info(0x0000, TAG, 'accept new connection');
+  });
+  // 取消订阅服务接收
+  server.offConnectionAccepted((connection: linkEnhance.Connection): void => {
+    hilog.info(0x0000, TAG, 'accept new connection');
+  });
+} catch (err) {
+  hilog.error(0x0000, TAG, 'start server errCode: ' + (err as BusinessError).code + ', errMessage: ' +
+  (err as BusinessError).message);
+}
+```
 
 ## offServerStopped
 
@@ -248,8 +269,35 @@ offServerStopped(callback?: Callback<int>): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 32390206 | Parameter invalid. |
-| 201 | Permission denied. |
+| [32390206](../../apis-distributedservice-kit/errorcode-link-enhance.md#32390206-参数非法) | Parameter invalid. |
+| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
+
+## 示例
+
+```TypeScript
+import { linkEnhance } from '@kit.DistributedServiceKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+import { hilog } from '@kit.PerformanceAnalysisKit';
+
+const TAG = "testDemo";
+
+try {
+  let name: string = "demo";
+  hilog.info(0x0000, TAG, 'start server name = ' + name);
+  // 使用服务名构造Server
+  let server: linkEnhance.Server = linkEnhance.createServer(name);
+  server.onServerStopped((reason: int): void => {
+    hilog.info(0x0000, TAG, 'serverStopped, reason= ' + reason);
+  });
+  // 取消订阅服务停止
+  server.offServerStopped((reason: int): void => {
+    hilog.info(0x0000, TAG, 'serverStopped, reason= ' + reason);
+  });
+} catch (err) {
+  hilog.error(0x0000, TAG, 'start server errCode: ' + (err as BusinessError).code + ', errMessage: ' +
+  (err as BusinessError).message);
+}
+```
 
 ## on('connectionAccepted')
 
@@ -282,8 +330,8 @@ on(type: 'connectionAccepted', callback: Callback<Connection>): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 32390206 | Parameter invalid. |
-| 201 | Permission denied. |
+| [32390206](../../apis-distributedservice-kit/errorcode-link-enhance.md#32390206-参数非法) | Parameter invalid. |
+| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
 
 ## 示例
 
@@ -343,8 +391,8 @@ on(type: 'serverStopped', callback: Callback<number>): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 32390206 | Parameter invalid. |
-| 201 | Permission denied. |
+| [32390206](../../apis-distributedservice-kit/errorcode-link-enhance.md#32390206-参数非法) | Parameter invalid. |
+| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
 
 ## 示例
 
@@ -403,8 +451,35 @@ onConnectionAccepted(callback: Callback<Connection>): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 32390206 | Parameter invalid. |
-| 201 | Permission denied. |
+| [32390206](../../apis-distributedservice-kit/errorcode-link-enhance.md#32390206-参数非法) | Parameter invalid. |
+| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
+
+## 示例
+
+```TypeScript
+import { linkEnhance } from '@kit.DistributedServiceKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+import { hilog } from '@kit.PerformanceAnalysisKit';
+
+const TAG = "testDemo";
+
+try {
+  let name: string = "demo";
+  hilog.info(0x0000, TAG, 'start server name = ' + name);
+  // 使用服务名构造Server
+  let server: linkEnhance.Server = linkEnhance.createServer(name);
+
+  // 订阅服务接收事件
+  server.onConnectionAccepted((connection: linkEnhance.Connection): void => {
+    hilog.info(0x0000, TAG, 'serverOnCallback = ' + JSON.stringify(connection));
+  });
+  // 启动服务
+  server.start();
+} catch (err) {
+  hilog.error(0x0000, TAG, 'start server errCode: ' + (err as BusinessError).code + ', errMessage: ' +
+  (err as BusinessError).message);
+}
+```
 
 ## onServerStopped
 
@@ -436,8 +511,35 @@ onServerStopped(callback: Callback<int>): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 32390206 | Parameter invalid. |
-| 201 | Permission denied. |
+| [32390206](../../apis-distributedservice-kit/errorcode-link-enhance.md#32390206-参数非法) | Parameter invalid. |
+| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
+
+## 示例
+
+```TypeScript
+import { linkEnhance } from '@kit.DistributedServiceKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+import { hilog } from '@kit.PerformanceAnalysisKit';
+
+const TAG = "testDemo";
+
+try {
+  let name: string = "demo";
+  hilog.info(0x0000, TAG, 'start server name = ' + name);
+  // 使用服务名构造Server
+  let server: linkEnhance.Server = linkEnhance.createServer(name);
+
+  // 订阅服务停止
+  server.onServerStopped((reason: int): void => {
+    hilog.info(0x0000, TAG, 'serverStopped, reason= ' + reason);
+  });
+  // 启动服务
+  server.start();
+} catch (err) {
+  hilog.error(0x0000, TAG, 'start server errCode: ' + (err as BusinessError).code + ', errMessage: ' +
+  (err as BusinessError).message);
+}
+```
 
 ## start
 
@@ -463,9 +565,9 @@ start(): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 32390300 | Internal error. |
-| 32390202 | The number of servers exceeds the limit. |
-| 201 | Permission denied. |
+| [32390300](../../apis-distributedservice-kit/errorcode-link-enhance.md#32390300-内部错误) | Internal error. |
+| [32390202](../../apis-distributedservice-kit/errorcode-link-enhance.md#32390202-服务个数超出限制) | The number of servers exceeds the limit. |
+| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
 
 ## 示例
 
@@ -511,7 +613,7 @@ stop(): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 201 | Permission denied. |
+| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
 
 ## 示例
 

@@ -1,10 +1,6 @@
 # GetImagePropertyOptions
 
-表示查询图片属性的索引。
-
-> **说明：**
-> 
-> [ImagePropertyOptions](arkts-image-image-imagepropertyoptions-i.md)代替。
+Describes the image properties.
 
 **Since:** 7
 
@@ -30,7 +26,7 @@ import { image } from 'kits/@kit.ImageKit';
 defaultValue?: string
 ```
 
-默认属性值。默认值为空。
+Default property value. The default value is null.
 
 **Type:** string
 
@@ -52,7 +48,7 @@ defaultValue?: string
 index?: number
 ```
 
-图片序号。默认值为0。
+Index of the image. The default value is **0**.
 
 **Type:** number
 
@@ -60,7 +56,7 @@ index?: number
 
 **ArkTS mode:** ArkTS-Dyn only, since version 7.
 
-**Deprecated since:** 11
+**Deprecated since:** 11  
 
 **Substitutes:** [image.ImagePropertyOptions#index](arkts-image-image-imagepropertyoptions-i.md#index)
 

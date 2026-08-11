@@ -1,6 +1,6 @@
 # DismissReason
 
-关闭原因类型。
+Enumerates the reasons for popup dismissal.
 
 **Since:** 12
 
@@ -16,7 +16,7 @@
 PRESS_BACK = 0
 ```
 
-点击三键back、侧滑（左滑/右滑）、键盘ESC。
+Touching the **Back** button, swiping left or right on the screen, or pressing the **Esc** key.
 
 **Since:** 12
 
@@ -36,7 +36,7 @@ PRESS_BACK = 0
 TOUCH_OUTSIDE = 1
 ```
 
-点击遮障层时。
+Touching the mask.
 
 **Since:** 12
 
@@ -56,7 +56,7 @@ TOUCH_OUTSIDE = 1
 CLOSE_BUTTON = 2
 ```
 
-点击关闭按钮。
+Touching the close button.
 
 **Since:** 12
 
@@ -76,11 +76,11 @@ CLOSE_BUTTON = 2
 SLIDE_DOWN = 3
 ```
 
-下拉关闭。
+Swiping down.
 
-**说明：**
+**NOTE：**
 
-该接口仅支持在[半模态转场](../../apis-ability-kit/arkts-apis/arkts-app-ability-common.md/arkts-app-ability-common.md)中使用。
+This API is effective only in [sheet transition](../../apis-ability-kit/arkts-apis/arkts-app-ability-common.md/arkts-app-ability-common.md).
 
 **Since:** 12
 
@@ -100,7 +100,11 @@ SLIDE_DOWN = 3
 SLIDE = 4
 ```
 
-滑动交互，不是向下滑动。默认表示向右滑动，镜像操作后表示向左滑动。不支持选择向左或向右滑动。
+Swiping left or right on the screen. By default, swiping right dismisses the popup, while swiping left is used in the mirror scenario. This setting is not user-defined.
+
+**NOTE：**
+
+This API is effective only in [sheet transition](../../apis-ability-kit/arkts-apis/arkts-app-ability-common.md/arkts-app-ability-common.md).
 
 **Since:** 20
 

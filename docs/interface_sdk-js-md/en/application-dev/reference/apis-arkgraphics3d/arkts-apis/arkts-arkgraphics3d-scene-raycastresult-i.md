@@ -1,6 +1,6 @@
 # RaycastResult
 
-射线检测命中结果.
+Describes a result object from raycasting, containing details about the 3D object hit by the ray.
 
 **Since:** 20
 
@@ -16,7 +16,7 @@
 centerDistance: double
 ```
 
-到轴对齐包围盒中心的距离, 单位为世界坐标系下的场景单位（例如cm、m、km等）.
+Distance from the center of the hit object's bounding box to the camera center,in scene units of the world coordinate system (such as cm, m, km, etc.).The value range is greater than 0.
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：double
 
@@ -34,7 +34,7 @@ centerDistance: double
 hitPosition: Position3
 ```
 
-命中点的世界坐标位置, 单位为世界坐标系下的场景单位（例如cm、m、km等）.
+Exact world coordinates of the collision point between the ray and the object ({x: number, y: number, z: number}),in scene units of the world coordinate system (such as cm, m, km, etc.).
 
 **Type:** [Position3](arkts-arkgraphics3d-position3-t.md)
 
@@ -52,7 +52,7 @@ hitPosition: Position3
 node: Node
 ```
 
-被击中的节点.
+3D scene node hit by the ray.You can use this node to manipulate the target object (for example, moving, rotating, or hiding the object).
 
 **Type:** [Node](arkts-arkgraphics3d-scenenodes-node-i.md)
 

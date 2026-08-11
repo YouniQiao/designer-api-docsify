@@ -10,12 +10,6 @@ Preferences实例配置选项。
 
 **系统能力：** SystemCapability.DistributedDataManager.Preferences.Core
 
-## 导入模块
-
-```TypeScript
-import { preferences } from 'kits/@kit.ArkData';
-```
-
 ## dataGroupId
 
 ```TypeScript

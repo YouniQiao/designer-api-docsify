@@ -16,12 +16,6 @@
 
 **系统能力：** SystemCapability.Security.CryptoFramework.Mac
 
-## 导入模块
-
-```TypeScript
-import { cryptoFramework } from 'kits/@kit.CryptoArchitectureKit';
-```
-
 ## cipherName
 
 ```TypeScript

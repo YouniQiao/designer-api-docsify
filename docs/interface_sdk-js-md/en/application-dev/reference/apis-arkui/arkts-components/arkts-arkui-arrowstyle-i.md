@@ -1,6 +1,6 @@
 # ArrowStyle
 
-左右箭头属性。
+Describes the left and right arrow attributes.
 
 **Since:** 10
 
@@ -16,9 +16,9 @@
 arrowColor?: ResourceColor
 ```
 
-设置箭头颜色。
+Color of the arrow.
 
-默认值：'#182431'
+Default value: **'#182431'**
 
 **Type:** [ResourceColor](../arkts-apis/arkts-arkui-resourcecolor-t.md)
 
@@ -42,21 +42,21 @@ arrowColor?: ResourceColor
 arrowSize?: Length
 ```
 
-设置箭头大小。
+Size of the arrow.
 
-在导航点两侧显示时：
+On both sides of the navigation indicator:
 
-默认值：18vp
+Default value: **18vp**.
 
-在组件两侧显示时：
+On both sides of the component:
 
-默认值：24vp
+Default value: **24vp**.
 
-**说明：**
+**NOTE：**
 
-showBackground为true时，arrowSize为backgroundSize的3/4。
+If **showBackground** is set to **true**, the value of **arrowSize** is 3/4 of the value of **backgroundSize**.
 
-不支持设置百分比。
+Percentage values are not supported.
 
 **Type:** [Length](../arkts-apis/arkts-arkui-length-t.md)
 
@@ -80,15 +80,15 @@ showBackground为true时，arrowSize为backgroundSize的3/4。
 backgroundColor?: ResourceColor
 ```
 
-设置底板颜色。
+Color of the background.
 
-在导航点两侧显示：
+On both sides of the navigation indicator:
 
-默认值：'#00000000'
+Default value: **'#00000000'**.
 
-在组件两侧显示：
+On both sides of the component:
 
-默认值：'#19182431'
+Default value: **'#19182431'**.
 
 **Type:** [ResourceColor](../arkts-apis/arkts-arkui-resourcecolor-t.md)
 
@@ -112,17 +112,17 @@ backgroundColor?: ResourceColor
 backgroundSize?: Length
 ```
 
-设置底板大小。
+Size of the background.
 
-在导航点两侧显示：
+On both sides of the navigation indicator:
 
-默认值：24vp
+Default value: **24vp**.
 
-在组件两侧显示：
+On both sides of the component:
 
-默认值：32vp
+Default value: **32vp**.
 
-不支持设置百分比。
+Percentage values are not supported.
 
 **Type:** [Length](../arkts-apis/arkts-arkui-length-t.md)
 
@@ -146,11 +146,9 @@ backgroundSize?: Length
 isSidebarMiddle?: boolean
 ```
 
-设置箭头显示位置。为true时箭头居中显示在Swiper组件两侧，为false时显示在导航点指示器两侧。
+Whether the arrow is centered on both sides of the **Swiper** component. The value **true** means that the arrow is centered on both sides of the **Swiper** component, and **false** means that the arrow is show on either side of the navigation indicator.
 
-默认值：false
-
-默认显示在导航点指示器两侧。
+Default value: **false**.
 
 **Type:** boolean
 
@@ -174,9 +172,10 @@ isSidebarMiddle?: boolean
 showBackground?: boolean
 ```
 
-设置箭头底板是否显示。为true时箭头底板显示，为false时箭头底板不显示。
+Whether to show the background for the arrow. The value **true** means to show the background for the arrow, and  
+**false** means the opposite.
 
-默认值：false
+Default value: **false**.
 
 **Type:** boolean
 

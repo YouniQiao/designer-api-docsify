@@ -1,6 +1,6 @@
 # TextOverflow
 
-Declare how text overflows.
+Display mode when the text is too long.
 
 **Since:** 7
 
@@ -13,10 +13,10 @@ Declare how text overflows.
 ## None
 
 ```TypeScript
-None = 0
+None
 ```
 
-When the text overflows its dimensions, the text will not be cropped.
+Overflowing content is clipped at the limit of the maximum line width.
 
 **Since:** 7
 
@@ -26,17 +26,17 @@ When the text overflows its dimensions, the text will not be cropped.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 9.
 
-<!--Device-TextOverflow-None = 0--><!--Device-TextOverflow-None = 0-End-->
+<!--Device-TextOverflow-None--><!--Device-TextOverflow-None-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## Clip
 
 ```TypeScript
-Clip = 1
+Clip
 ```
 
-When the text overflows its dimensions, the text will be cropped and displayed.
+Overflowing content is clipped at the limit of the maximum line width. Same effect as **None**.
 
 **Since:** 7
 
@@ -46,17 +46,17 @@ When the text overflows its dimensions, the text will be cropped and displayed.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 9.
 
-<!--Device-TextOverflow-Clip = 1--><!--Device-TextOverflow-Clip = 1-End-->
+<!--Device-TextOverflow-Clip--><!--Device-TextOverflow-Clip-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## Ellipsis
 
 ```TypeScript
-Ellipsis = 2
+Ellipsis
 ```
 
-If the text overflows its dimensions, the text that cannot be displayed shall be replaced by ellipsis.
+An ellipsis (...) is used to represent text overflow.
 
 **Since:** 7
 
@@ -66,17 +66,17 @@ If the text overflows its dimensions, the text that cannot be displayed shall be
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 9.
 
-<!--Device-TextOverflow-Ellipsis = 2--><!--Device-TextOverflow-Ellipsis = 2-End-->
+<!--Device-TextOverflow-Ellipsis--><!--Device-TextOverflow-Ellipsis-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## MARQUEE
 
 ```TypeScript
-MARQUEE = 3
+MARQUEE
 ```
 
-When the text overflows its dimensions, the text will scroll for displaying.
+Text continuously scrolls when text overflow occurs.
 
 **Since:** 10
 
@@ -86,7 +86,7 @@ When the text overflows its dimensions, the text will scroll for displaying.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
-<!--Device-TextOverflow-MARQUEE = 3--><!--Device-TextOverflow-MARQUEE = 3-End-->
+<!--Device-TextOverflow-MARQUEE--><!--Device-TextOverflow-MARQUEE-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 

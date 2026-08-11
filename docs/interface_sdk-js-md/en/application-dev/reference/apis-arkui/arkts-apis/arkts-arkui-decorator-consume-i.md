@@ -16,7 +16,7 @@ Defining Consume annotation Consume is used to access the provided state variabl
 alias: string = ""
 ```
 
-用于设置别名，默认值为属性名。
+The alias name.
 
 **Type:** string
 

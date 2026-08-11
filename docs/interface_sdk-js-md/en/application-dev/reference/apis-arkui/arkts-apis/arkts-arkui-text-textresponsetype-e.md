@@ -1,18 +1,8 @@
 # TextResponseType
 
-选择菜单的响应类型。
+ResponseType for contextMenu
 
-> **说明：**
-> 
-> 菜单类型的匹配顺序如下。例如，用户长按文本时，根据以下规则查找：
-> 
-> 1. 查找是否注册了TextSpanType.TEXT、TextResponseType.LONG_PRESS菜单
-> 
-> 2. 查找是否注册了TextSpanType.TEXT、TextResponseType.DEFAULT菜单
-> 
-> 3. 查找是否注册了TextSpanType.DEFAULT、TextResponseType.LONG_PRESS菜单
-> 
-> 4. 查找是否注册了TextSpanType.DEFAULT、TextResponseType.DEFAULT菜单
+&lt;p&gt;&lt;strong&gt;NOTE&lt;/strong&gt;:&lt;br&gt;The order for menu type matching is as follows. When the user interacts with text,the system follows this order to decides which type of menu to display.&lt;ol&gt;&lt;li&gt;Check whether a menu is registered for TextSpanType.TEXT and TextResponseType.LONG_PRESS.&lt;/li&gt;&lt;li&gt;Check whether a menu is registered for TextSpanType.TEXT and TextResponseType.DEFAULT.&lt;/li&gt;&lt;li&gt;Check whether a menu is registered for TextSpanType.DEFAULT and TextResponseType.LONG_PRESS.&lt;/li&gt;&lt;li&gt;Check whether a menu is registered for TextSpanType.DEFAULT and TextResponseType.DEFAULT.&lt;/li&gt;&lt;/ol&gt;&lt;/p&gt;
 
 **Since:** 23
 
@@ -28,9 +18,7 @@
 RIGHT_CLICK = 0
 ```
 
-通过鼠标右键触发菜单弹出。
-
-**原子化服务API（仅ArkTS-Dyn）：** 从API version 12开始，该接口支持在原子化服务中使用。
+Right click.
 
 **Since:** 23
 
@@ -48,9 +36,7 @@ RIGHT_CLICK = 0
 LONG_PRESS = 1
 ```
 
-通过长按触发菜单弹出。
-
-**原子化服务API（仅ArkTS-Dyn）：** 从API version 12开始，该接口支持在原子化服务中使用。
+Long press.
 
 **Since:** 23
 
@@ -68,9 +54,7 @@ LONG_PRESS = 1
 SELECT = 2
 ```
 
-通过鼠标选中触发菜单弹出。
-
-**原子化服务API（仅ArkTS-Dyn）：** 从API version 12开始，该接口支持在原子化服务中使用。
+Selected by mouse.
 
 **Since:** 23
 
@@ -88,9 +72,7 @@ SELECT = 2
 DEFAULT = 3
 ```
 
-注册此类型的菜单，但未注册RIGHT_CLICK、LONG_PRESS、SELECT时，右键、长按、鼠标、[selection](selection)选中均会触发并显示此类型对应的菜单。
-
-**原子化服务API（仅ArkTS-Dyn）：** 从API version 15开始，该接口支持在原子化服务中使用。
+When no other types are explicitly specified, this type will be matched.When this type is registered but RIGHT_CLICK, LONG_PRESS, or SELECT types are not registered,this type will be triggered and displayed for right-click, long press, and mouse selection actions.
 
 **Since:** 23
 

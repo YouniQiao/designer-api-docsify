@@ -12,7 +12,7 @@ import { uiObserver } from 'kits/@kit.ArkUI';
 export function onTabContentUpdate(options: ObserverOptions, callback: Callback<TabContentInfo>): void
 ```
 
-监听TabContent页面的切换事件。
+Registers a callback function to be called when the tabContent is showed or hidden.
 
 **Since:** 23
 
@@ -28,8 +28,8 @@ export function onTabContentUpdate(options: ObserverOptions, callback: Callback<
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| options | [ObserverOptions](../../apis-telephony-kit/arkts-apis/arkts-telephony-observer-observeroptions-i.md) | Yes | 指定监听的Tabs组件的id。 |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;TabContentInfo&gt; | Yes | 回调函数。携带TabContentInfo，返回TabContent页面切换事件的信息。 |
+| options | [ObserverOptions](../../apis-telephony-kit/arkts-apis/arkts-telephony-observer-observeroptions-i.md) | Yes | The options object. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;TabContentInfo&gt; | Yes | The callback function to be called when when the tabContent is showed or hidden. |
 
 
 ## onTabContentUpdate
@@ -38,7 +38,7 @@ export function onTabContentUpdate(options: ObserverOptions, callback: Callback<
 export function onTabContentUpdate(callback: Callback<TabContentInfo>): void
 ```
 
-监听TabContent页面的切换事件。
+Registers a callback function to be called when the tabContent is showed or hidden.
 
 **Since:** 23
 
@@ -54,5 +54,5 @@ export function onTabContentUpdate(callback: Callback<TabContentInfo>): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;TabContentInfo&gt; | Yes | 回调函数。携带TabContentInfo，返回TabContent页面切换事件的信息。 |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;TabContentInfo&gt; | Yes | The callback function to be called when the tabContent is showed or hidden. |
 

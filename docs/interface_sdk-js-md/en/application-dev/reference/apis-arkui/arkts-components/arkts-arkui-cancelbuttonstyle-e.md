@@ -1,6 +1,6 @@
 # CancelButtonStyle
 
-清除按钮样式枚举。
+Enum for the style of cancel button.
 
 **Since:** 10
 
@@ -16,7 +16,7 @@
 CONSTANT
 ```
 
-清除按钮常显样式。
+The Cancel button is always displayed.
 
 **Since:** 10
 
@@ -36,7 +36,7 @@ CONSTANT
 INVISIBLE
 ```
 
-清除按钮常隐样式。
+The Cancel button is always hidden.
 
 **Since:** 10
 
@@ -56,7 +56,7 @@ INVISIBLE
 INPUT
 ```
 
-清除按钮输入样式。
+The Cancel button is displayed when there is text input.
 
 **Since:** 10
 

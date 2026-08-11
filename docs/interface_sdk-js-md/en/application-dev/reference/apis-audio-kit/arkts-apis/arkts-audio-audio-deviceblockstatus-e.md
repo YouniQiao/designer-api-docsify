@@ -1,6 +1,6 @@
 # DeviceBlockStatus
 
-表示音频设备是否被堵塞的枚举。
+Enumerates the blocked statuses of audio devices.
 
 **Since:** 13
 
@@ -16,7 +16,7 @@
 UNBLOCKED = 0
 ```
 
-音频设备正常。
+The audio device is not blocked.
 
 **Since:** 13
 
@@ -32,7 +32,7 @@ UNBLOCKED = 0
 BLOCKED = 1
 ```
 
-音频设备被堵塞。
+The audio device is blocked.
 
 **Since:** 13
 

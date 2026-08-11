@@ -92,7 +92,7 @@ Creates a component based on [ArkUI_NodeType](capi-native-node-h.md#arkui_nodety
 
 | 类型 | 说明 |
 | -- | -- |
-| [ArkUI_NodeHandle](capi-arkui-nativemodule-arkui-node8h.md) | Returns the pointer to the created component. If the component fails to be created, NULL is returned. |
+| ArkUI_NodeHandle | Returns the pointer to the created component. If the component fails to be created, NULL is returned. |
 
 ### disposeNode()
 
@@ -110,7 +110,7 @@ Destroys the component to which the specified pointer points.
 
 | 参数项 | 描述 |
 | -- | -- |
-| [ArkUI_NodeHandle](capi-arkui-nativemodule-arkui-node8h.md) node | Indicates the pointer. |
+| ArkUI_NodeHandle node | Indicates the pointer. |
 
 ### addChild()
 
@@ -128,8 +128,8 @@ Adds a component to a parent node.
 
 | 参数项 | 描述 |
 | -- | -- |
-| [ArkUI_NodeHandle](capi-arkui-nativemodule-arkui-node8h.md) parent | Indicates the pointer to the parent node. |
-|  [ArkUI_NodeHandle](capi-arkui-nativemodule-arkui-node8h.md) child | Indicates the pointer to the child node. |
+| ArkUI_NodeHandle parent | Indicates the pointer to the parent node. |
+|  ArkUI_NodeHandle child | Indicates the pointer to the child node. |
 
 **返回：**
 
@@ -153,8 +153,8 @@ Removes a component from its parent node.
 
 | 参数项 | 描述 |
 | -- | -- |
-| [ArkUI_NodeHandle](capi-arkui-nativemodule-arkui-node8h.md) parent | Indicates the pointer to the parent node. |
-|  [ArkUI_NodeHandle](capi-arkui-nativemodule-arkui-node8h.md) child | Indicates the pointer to the child node. |
+| ArkUI_NodeHandle parent | Indicates the pointer to the parent node. |
+|  ArkUI_NodeHandle child | Indicates the pointer to the child node. |
 
 **返回：**
 
@@ -178,9 +178,9 @@ Inserts a component to a parent node after the specified <b>sibling</b> node.
 
 | 参数项 | 描述 |
 | -- | -- |
-| [ArkUI_NodeHandle](capi-arkui-nativemodule-arkui-node8h.md) parent | Indicates the pointer to the parent node. |
-|  [ArkUI_NodeHandle](capi-arkui-nativemodule-arkui-node8h.md) child | Indicates the pointer to the child node. |
-|  [ArkUI_NodeHandle](capi-arkui-nativemodule-arkui-node8h.md) sibling | Indicates the pointer to the sibling node after which the target node is to be inserted.If the value is null, the node is inserted at the start of the parent node. |
+| ArkUI_NodeHandle parent | Indicates the pointer to the parent node. |
+|  ArkUI_NodeHandle child | Indicates the pointer to the child node. |
+|  ArkUI_NodeHandle sibling | Indicates the pointer to the sibling node after which the target node is to be inserted.If the value is null, the node is inserted at the start of the parent node. |
 
 **返回：**
 
@@ -204,9 +204,9 @@ Inserts a component to a parent node before the specified <b>sibling</b> node.
 
 | 参数项 | 描述 |
 | -- | -- |
-| [ArkUI_NodeHandle](capi-arkui-nativemodule-arkui-node8h.md) parent | Indicates the pointer to the parent node. |
-|  [ArkUI_NodeHandle](capi-arkui-nativemodule-arkui-node8h.md) child | Indicates the pointer to the child node. |
-|  [ArkUI_NodeHandle](capi-arkui-nativemodule-arkui-node8h.md) sibling | Indicates the pointer to the sibling node before which the target node is to be inserted.If the value is null, the node is inserted at the end of the parent node. |
+| ArkUI_NodeHandle parent | Indicates the pointer to the parent node. |
+|  ArkUI_NodeHandle child | Indicates the pointer to the child node. |
+|  ArkUI_NodeHandle sibling | Indicates the pointer to the sibling node before which the target node is to be inserted.If the value is null, the node is inserted at the end of the parent node. |
 
 **返回：**
 
@@ -230,8 +230,8 @@ Inserts a component to the specified position in a parent node.
 
 | 参数项 | 描述 |
 | -- | -- |
-| [ArkUI_NodeHandle](capi-arkui-nativemodule-arkui-node8h.md) parent | Indicates the pointer to the parent node. |
-|  [ArkUI_NodeHandle](capi-arkui-nativemodule-arkui-node8h.md) child | Indicates the pointer to the child node. |
+| ArkUI_NodeHandle parent | Indicates the pointer to the parent node. |
+|  ArkUI_NodeHandle child | Indicates the pointer to the child node. |
 |  int32_t position | Indicates the position to which the target child node is to be inserted. If the value is anegative number or invalid, the node is inserted at the end of the parent node. |
 
 **返回：**
@@ -256,7 +256,7 @@ Sets the attribute of a node.
 
 | 参数项 | 描述 |
 | -- | -- |
-| [ArkUI_NodeHandle](capi-arkui-nativemodule-arkui-node8h.md) node | Indicates the node whose attribute needs to be set. |
+| ArkUI_NodeHandle node | Indicates the node whose attribute needs to be set. |
 |  [ArkUI_NodeAttributeType](capi-native-node-h.md#arkui_nodeattributetype) attribute | Indicates the type of attribute to set. |
 | value | Indicates the attribute value. |
 
@@ -282,14 +282,14 @@ Obtains an attribute.The pointer returned by this API is an internal buffer poin
 
 | 参数项 | 描述 |
 | -- | -- |
-| [ArkUI_NodeHandle](capi-arkui-nativemodule-arkui-node8h.md) node | Indicates the node whose attribute needs to be obtained. |
+| ArkUI_NodeHandle node | Indicates the node whose attribute needs to be obtained. |
 |  [ArkUI_NodeAttributeType](capi-native-node-h.md#arkui_nodeattributetype) attribute | Indicates the type of attribute to obtain. |
 
 **返回：**
 
 | 类型 | 说明 |
 | -- | -- |
-| [const ArkUI_AttributeItem*](capi-arkui-nativemodule-arkui-attributeitem.md) | Returns the attribute value. If the operation fails, a null pointer is returned. |
+| const ArkUI_AttributeItem* | Returns the attribute value. If the operation fails, a null pointer is returned. |
 
 ### resetAttribute()
 
@@ -307,7 +307,7 @@ Resets an attribute.
 
 | 参数项 | 描述 |
 | -- | -- |
-| [ArkUI_NodeHandle](capi-arkui-nativemodule-arkui-node8h.md) node | Indicates the node whose attribute needs to be reset. |
+| ArkUI_NodeHandle node | Indicates the node whose attribute needs to be reset. |
 |  [ArkUI_NodeAttributeType](capi-native-node-h.md#arkui_nodeattributetype) attribute | Indicates the type of attribute to reset. |
 
 **返回：**
@@ -332,7 +332,7 @@ Registers an event for the specified node.When the component is being displayed,
 
 | 参数项 | 描述 |
 | -- | -- |
-| [ArkUI_NodeHandle](capi-arkui-nativemodule-arkui-node8h.md) node | Indicates the target node. |
+| ArkUI_NodeHandle node | Indicates the target node. |
 |  [ArkUI_NodeEventType](capi-native-node-h.md#arkui_nodeeventtype) eventType | Indicates the type of event to register. |
 | int32_t targetId | Indicates the custom event ID, which is passed in the callback of [ArkUI_NodeEvent](capi-arkui-nativemodule-arkui-nodeevent.md)when the event is triggered. |
 |  void* userData | Indicates the custom event parameter, which is passed in the callback of [ArkUI_NodeEvent](capi-arkui-nativemodule-arkui-nodeevent.md) |
@@ -359,7 +359,7 @@ Unregisters an event for the specified node.When the component is being displaye
 
 | 参数项 | 描述 |
 | -- | -- |
-| [ArkUI_NodeHandle](capi-arkui-nativemodule-arkui-node8h.md) node | Indicates the target node. |
+| ArkUI_NodeHandle node | Indicates the target node. |
 |  [ArkUI_NodeEventType](capi-native-node-h.md#arkui_nodeeventtype) eventType | Indicates the type of event to unregister. |
 
 ### registerNodeEventReceiver()
@@ -408,7 +408,7 @@ Forcibly marks the current node that needs to be measured, laid out, or rendered
 
 | 参数项 | 描述 |
 | -- | -- |
-| [ArkUI_NodeHandle](capi-arkui-nativemodule-arkui-node8h.md) node | Indicates the node for which you want to mark as dirty area. |
+| ArkUI_NodeHandle node | Indicates the node for which you want to mark as dirty area. |
 |  [ArkUI_NodeDirtyFlag](capi-native-node-h.md#arkui_nodedirtyflag) dirtyFlag | Indicates type of dirty area. |
 
 ### getTotalChildCount()
@@ -427,7 +427,7 @@ Obtains the number of subnodes.
 
 | 参数项 | 描述 |
 | -- | -- |
-| [ArkUI_NodeHandle](capi-arkui-nativemodule-arkui-node8h.md) node | Indicates the target node. |
+| ArkUI_NodeHandle node | Indicates the target node. |
 
 **返回：**
 
@@ -451,14 +451,14 @@ Obtains a subnode.
 
 | 参数项 | 描述 |
 | -- | -- |
-| [ArkUI_NodeHandle](capi-arkui-nativemodule-arkui-node8h.md) node | Indicates the target node. |
+| ArkUI_NodeHandle node | Indicates the target node. |
 |  int32_t position | Indicates the position of the subnode. |
 
 **返回：**
 
 | 类型 | 说明 |
 | -- | -- |
-| [ArkUI_NodeHandle](capi-arkui-nativemodule-arkui-node8h.md) | Returns the pointer to the subnode if the subnode exists; returns <b>NULL</b> otherwise. |
+| ArkUI_NodeHandle | Returns the pointer to the subnode if the subnode exists; returns <b>NULL</b> otherwise. |
 
 ### getFirstChild()
 
@@ -476,13 +476,13 @@ Obtains the first subnode.
 
 | 参数项 | 描述 |
 | -- | -- |
-| [ArkUI_NodeHandle](capi-arkui-nativemodule-arkui-node8h.md) node | Indicates the target node. |
+| ArkUI_NodeHandle node | Indicates the target node. |
 
 **返回：**
 
 | 类型 | 说明 |
 | -- | -- |
-| [ArkUI_NodeHandle](capi-arkui-nativemodule-arkui-node8h.md) | Returns the pointer to the subnode if the subnode exists; returns <b>NULL</b> otherwise. |
+| ArkUI_NodeHandle | Returns the pointer to the subnode if the subnode exists; returns <b>NULL</b> otherwise. |
 
 ### getLastChild()
 
@@ -500,13 +500,13 @@ Obtains the last subnode.
 
 | 参数项 | 描述 |
 | -- | -- |
-| [ArkUI_NodeHandle](capi-arkui-nativemodule-arkui-node8h.md) node | Indicates the target node. |
+| ArkUI_NodeHandle node | Indicates the target node. |
 
 **返回：**
 
 | 类型 | 说明 |
 | -- | -- |
-| [ArkUI_NodeHandle](capi-arkui-nativemodule-arkui-node8h.md) | Returns the pointer to the subnode if the subnode exists; returns <b>NULL</b> otherwise. |
+| ArkUI_NodeHandle | Returns the pointer to the subnode if the subnode exists; returns <b>NULL</b> otherwise. |
 
 ### getPreviousSibling()
 
@@ -524,13 +524,13 @@ Obtains the previous sibling node.
 
 | 参数项 | 描述 |
 | -- | -- |
-| [ArkUI_NodeHandle](capi-arkui-nativemodule-arkui-node8h.md) node | Indicates the target node. |
+| ArkUI_NodeHandle node | Indicates the target node. |
 
 **返回：**
 
 | 类型 | 说明 |
 | -- | -- |
-| [ArkUI_NodeHandle](capi-arkui-nativemodule-arkui-node8h.md) | Returns the pointer to the subnode if the subnode exists; returns <b>NULL</b> otherwise. |
+| ArkUI_NodeHandle | Returns the pointer to the subnode if the subnode exists; returns <b>NULL</b> otherwise. |
 
 ### getNextSibling()
 
@@ -548,13 +548,13 @@ Obtains the next sibling node.
 
 | 参数项 | 描述 |
 | -- | -- |
-| [ArkUI_NodeHandle](capi-arkui-nativemodule-arkui-node8h.md) node | Indicates the target node. |
+| ArkUI_NodeHandle node | Indicates the target node. |
 
 **返回：**
 
 | 类型 | 说明 |
 | -- | -- |
-| [ArkUI_NodeHandle](capi-arkui-nativemodule-arkui-node8h.md) | Returns the pointer to the subnode if the subnode exists; returns <b>NULL</b> otherwise. |
+| ArkUI_NodeHandle | Returns the pointer to the subnode if the subnode exists; returns <b>NULL</b> otherwise. |
 
 ### registerNodeCustomEvent()
 
@@ -572,7 +572,7 @@ Registers a custom event for a node. When the event is triggered, the value is r
 
 | 参数项 | 描述 |
 | -- | -- |
-| [ArkUI_NodeHandle](capi-arkui-nativemodule-arkui-node8h.md) node | Indicates the target node. |
+| ArkUI_NodeHandle node | Indicates the target node. |
 |  [ArkUI_NodeCustomEventType](capi-native-node-h.md#arkui_nodecustomeventtype) eventType | Indicates the type of event to register. |
 |  int32_t targetId | Indicates the custom event ID, which is passed in the callback of [ArkUI_NodeCustomEvent](capi-arkui-nativemodule-arkui-nodecustomevent.md)when the event is triggered. |
 |  void* userData | Indicates the custom event parameter, which is passed in the callback of[ArkUI_NodeCustomEvent](capi-arkui-nativemodule-arkui-nodecustomevent.md) when the event is triggered. |
@@ -599,7 +599,7 @@ Unregisters a custom event for a node.
 
 | 参数项 | 描述 |
 | -- | -- |
-| [ArkUI_NodeHandle](capi-arkui-nativemodule-arkui-node8h.md) node | Indicates the target node. |
+| ArkUI_NodeHandle node | Indicates the target node. |
 |  [ArkUI_NodeCustomEventType](capi-native-node-h.md#arkui_nodecustomeventtype) eventType | Indicates the type of event to unregister. |
 
 ### registerNodeCustomEventReceiver()
@@ -648,7 +648,7 @@ Sets the width and height for a component after the measurement.
 
 | 参数项 | 描述 |
 | -- | -- |
-| [ArkUI_NodeHandle](capi-arkui-nativemodule-arkui-node8h.md) node | Indicates the target node. |
+| ArkUI_NodeHandle node | Indicates the target node. |
 |  int32_t width | Indicates the width. |
 |  int32_t height | Indicates the height. |
 
@@ -674,7 +674,7 @@ Sets the position for a component.
 
 | 参数项 | 描述 |
 | -- | -- |
-| [ArkUI_NodeHandle](capi-arkui-nativemodule-arkui-node8h.md) node | Indicates the target node. |
+| ArkUI_NodeHandle node | Indicates the target node. |
 |  int32_t positionX | Indicates the X coordinate. |
 |  int32_t positionY | Indicates the Y coordinate. |
 
@@ -700,13 +700,13 @@ Obtains the width and height of a component after measurement.
 
 | 参数项 | 描述 |
 | -- | -- |
-| [ArkUI_NodeHandle](capi-arkui-nativemodule-arkui-node8h.md) node | Indicates the target node. |
+| ArkUI_NodeHandle node | Indicates the target node. |
 
 **返回：**
 
 | 类型 | 说明 |
 | -- | -- |
-| [ArkUI_IntSize](capi-arkui-nativemodule-arkui-intsize.md) | Returns the width and height of the component. |
+| ArkUI_IntSize | Returns the width and height of the component. |
 
 ### getLayoutPosition()
 
@@ -724,13 +724,13 @@ Obtains the position of a component after the layout is complete.
 
 | 参数项 | 描述 |
 | -- | -- |
-| [ArkUI_NodeHandle](capi-arkui-nativemodule-arkui-node8h.md) node | Indicates the target node. |
+| ArkUI_NodeHandle node | Indicates the target node. |
 
 **返回：**
 
 | 类型 | 说明 |
 | -- | -- |
-| [ArkUI_IntOffset](capi-arkui-nativemodule-arkui-intoffset.md) | Returns the position of the component. |
+| ArkUI_IntOffset | Returns the position of the component. |
 
 ### measureNode()
 
@@ -748,8 +748,8 @@ Measures a node. You can use the <b>getMeasuredSize</b> API to obtain the size a
 
 | 参数项 | 描述 |
 | -- | -- |
-| [ArkUI_NodeHandle](capi-arkui-nativemodule-arkui-node8h.md) node | Indicates the target node. |
-|  [ArkUI_LayoutConstraint](capi-arkui-nativemodule-arkui-layoutconstraint.md)* Constraint | Indicates the size constraint. |
+| ArkUI_NodeHandle node | Indicates the target node. |
+|  ArkUI_LayoutConstraint* Constraint | Indicates the size constraint. |
 
 **返回：**
 
@@ -773,7 +773,7 @@ Lays outs a component and passes the expected position of the component relative
 
 | 参数项 | 描述 |
 | -- | -- |
-| [ArkUI_NodeHandle](capi-arkui-nativemodule-arkui-node8h.md) node | Indicates the target node. |
+| ArkUI_NodeHandle node | Indicates the target node. |
 |  int32_t positionX | Indicates the X coordinate. |
 |  int32_t positionY | Indicates the Y coordinate. |
 
@@ -899,7 +899,7 @@ Saves custom data on the specified component.
 
 | 参数项 | 描述 |
 | -- | -- |
-| [ArkUI_NodeHandle](capi-arkui-nativemodule-arkui-node8h.md) node | Indicates the component on which the custom data will be saved. |
+| ArkUI_NodeHandle node | Indicates the component on which the custom data will be saved. |
 |  void* userData | Indicates the custom data to be saved. |
 
 **返回：**
@@ -924,7 +924,7 @@ Obtains the custom data saved on the specified component.
 
 | 参数项 | 描述 |
 | -- | -- |
-| [ArkUI_NodeHandle](capi-arkui-nativemodule-arkui-node8h.md) node | Indicates the target component. |
+| ArkUI_NodeHandle node | Indicates the target component. |
 
 **返回：**
 
@@ -948,7 +948,7 @@ Sets the unit for a component.
 
 | 参数项 | 描述 |
 | -- | -- |
-| [ArkUI_NodeHandle](capi-arkui-nativemodule-arkui-node8h.md) node | Indicates the component for which you want to set the unit. |
+| ArkUI_NodeHandle node | Indicates the component for which you want to set the unit. |
 |  [ArkUI_LengthMetricUnit](capi-native-type-h.md#arkui_lengthmetricunit) unit | Indicates the unit, which is an enumerated value of [ArkUI_LengthMetricUnit](capi-native-type-h.md#arkui_lengthmetricunit).The default value is <b>ARKUI_LENGTH_METRIC_UNIT_DEFAULT</b>. |
 
 **返回：**
@@ -973,13 +973,13 @@ Get the parent node.
 
 | 参数项 | 描述 |
 | -- | -- |
-| [ArkUI_NodeHandle](capi-arkui-nativemodule-arkui-node8h.md) node | target node object. |
+| ArkUI_NodeHandle node | target node object. |
 
 **返回：**
 
 | 类型 | 说明 |
 | -- | -- |
-| [ArkUI_NodeHandle](capi-arkui-nativemodule-arkui-node8h.md) | Returns the pointer of the component, if not return NULL |
+| ArkUI_NodeHandle | Returns the pointer of the component, if not return NULL |
 
 ### removeAllChildren()
 
@@ -997,7 +997,7 @@ Uninstall all child nodes from the parent component.
 
 | 参数项 | 描述 |
 | -- | -- |
-| [ArkUI_NodeHandle](capi-arkui-nativemodule-arkui-node8h.md) parent | target node object. |
+| ArkUI_NodeHandle parent | target node object. |
 
 **返回：**
 

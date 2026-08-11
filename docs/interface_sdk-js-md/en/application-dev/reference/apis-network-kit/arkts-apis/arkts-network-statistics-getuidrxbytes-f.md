@@ -35,12 +35,12 @@ Queries the data traffic (including all TCP and UDP data packets) received by a 
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. |
-| 2100002 | Failed to connect to the service. |
-| 2100003 | System internal error. |
-| 2103011 | Failed to create a system map. |
-| 201 | Permission denied. |
-| 2103005 | Failed to read the system map. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. |
+| [2100002](../errorcode-net-connection.md#2100002-service-connection-failure) | Failed to connect to the service. |
+| [2100003](../errorcode-net-connection.md#2100003-system-internal-error) | System internal error. |
+| [2103011](../errorcode-net-statistics.md#2103011-failed-to-create-a-system-map) | Failed to create a system map. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
+| [2103005](../errorcode-net-statistics.md#2103005-failed-to-read-the-system-map) | Failed to read the system map. |
 
 ## Examples
 
@@ -48,12 +48,8 @@ Queries the data traffic (including all TCP and UDP data packets) received by a 
 import { BusinessError } from '@kit.BasicServicesKit';
 import { statistics } from '@kit.NetworkKit';
 
-let uid = 123456789;  // This is a sample UID. Replace it with the actual UID.
-statistics.getUidRxBytes(uid, (error: BusinessError, stats: number) => {
-  if (error) {
-     console.error(JSON.stringify(error));
-     return;
-  }
+statistics.getUidRxBytes(20010038, (error: BusinessError, stats: number) => {
+  console.error(JSON.stringify(error));
   console.info(JSON.stringify(stats));
 });
 ```
@@ -93,20 +89,19 @@ Queries the data traffic (including all TCP and UDP data packets) received by a 
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. |
-| 2100002 | Failed to connect to the service. |
-| 2100003 | System internal error. |
-| 2103011 | Failed to create a system map. |
-| 201 | Permission denied. |
-| 2103005 | Failed to read the system map. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. |
+| [2100002](../errorcode-net-connection.md#2100002-service-connection-failure) | Failed to connect to the service. |
+| [2100003](../errorcode-net-connection.md#2100003-system-internal-error) | System internal error. |
+| [2103011](../errorcode-net-statistics.md#2103011-failed-to-create-a-system-map) | Failed to create a system map. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
+| [2103005](../errorcode-net-statistics.md#2103005-failed-to-read-the-system-map) | Failed to read the system map. |
 
 ## Examples
 
 ```TypeScript
 import { statistics } from '@kit.NetworkKit';
 
-let uid = 123456789;  // This is a sample UID. Replace it with the actual UID.
-statistics.getUidRxBytes(uid).then((stats: number) => {
+statistics.getUidRxBytes(20010038).then((stats: number) => {
   console.info(JSON.stringify(stats));
 });
 ```

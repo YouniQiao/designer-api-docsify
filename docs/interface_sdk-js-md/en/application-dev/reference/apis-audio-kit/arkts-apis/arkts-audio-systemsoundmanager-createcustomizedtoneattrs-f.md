@@ -12,7 +12,7 @@ import { systemSoundManager } from 'kits/@kit.AudioKit';
 function createCustomizedToneAttrs(): ToneAttrs
 ```
 
-创建自定义铃声属性。
+Create customized tone attributes.
 
 **Since:** 12
 
@@ -26,13 +26,13 @@ function createCustomizedToneAttrs(): ToneAttrs
 
 | Type | Description |
 | --- | --- |
-| [ToneAttrs](arkts-audio-systemsoundmanager-toneattrs-i.md) | 铃声属性类。 |
+| [ToneAttrs](arkts-audio-systemsoundmanager-toneattrs-i.md) | Tone attributes created. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 202 | Caller is not a system application. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Caller is not a system application. |
 
 ## Examples
 

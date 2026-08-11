@@ -1,6 +1,6 @@
 # RichEditorLayoutStyle
 
-图片布局信息。
+Image layout information.
 
 **Since:** 11
 
@@ -16,11 +16,9 @@
 borderRadius?: Dimension | BorderRadiuses
 ```
 
-圆角类型，用于描述组件边框圆角半径。
+Radius of the rounded corners of the component.
 
-默认值：圆角半径为0。
-
-参数为Dimension类型时，不支持以Percentage形式设置
+If of the **Dimension** type, this parameter cannot be set in percentage.
 
 **Type:** [Dimension](../arkts-apis/arkts-arkui-dimension-t.md) \| BorderRadiuses
 
@@ -42,11 +40,9 @@ borderRadius?: Dimension | BorderRadiuses
 margin?: Dimension | Margin
 ```
 
-外边距类型，用于描述组件不同方向的外边距。
+Margins in different directions of the component.
 
-默认值：四个方向外边距均为0。
-
-参数为Dimension类型时，四个方向外边距同时生效。
+When the parameter is of the **Dimension** type, the four margins take effect.
 
 **Type:** [Dimension](../arkts-apis/arkts-arkui-dimension-t.md) \| Margin
 

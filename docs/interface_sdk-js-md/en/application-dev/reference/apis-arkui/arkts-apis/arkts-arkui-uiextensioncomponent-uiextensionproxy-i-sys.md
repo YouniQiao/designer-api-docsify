@@ -1,6 +1,6 @@
 # UIExtensionProxy (System API)
 
-用于在双方建立连接成功后，组件使用方将数据发送给被拉起的Ability，并订阅和取消订阅扩展Ability的注册事件。
+This interface is used for send data to the UIExtensionAbility.&lt;br/&gt;It is returned from onRemoteReady callback of UIExtensionComponent&lt;br/&gt;when UIExtensionAbility connects successfully
 
 **Since:** 23
 
@@ -18,7 +18,7 @@
 offAsyncReceiverRegister(callback?: Callback<UIExtensionProxy>): void
 ```
 
-注销监听UIExtensionAbility注册异步数据接收回调的监听器。AnonyMous Object Rectification
+Deregisters the listener that watches for async data receiver callback being registered by UIExtensionAbility.AnonyMous Object Rectification
 
 **Since:** 23
 
@@ -36,13 +36,13 @@ offAsyncReceiverRegister(callback?: Callback<UIExtensionProxy>): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;UIExtensionProxy&gt; | No | 监听事件的回调。 |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;UIExtensionProxy&gt; | No | Callback of the listened event. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 202 | 非系统应用不允许使用系统API。 |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Non-system applications are not allowed to use system APIs. |
 
 ## offSyncReceiverRegister
 
@@ -50,7 +50,7 @@ offAsyncReceiverRegister(callback?: Callback<UIExtensionProxy>): void
 offSyncReceiverRegister(callback?: Callback<UIExtensionProxy>): void
 ```
 
-注销监听UIExtensionAbility注册同步数据接收回调的监听器。AnonyMous Object Rectification
+Deregisters the listener that watches for sync data receiver callback being registered by UIExtensionAbility.AnonyMous Object Rectification
 
 **Since:** 23
 
@@ -68,13 +68,13 @@ offSyncReceiverRegister(callback?: Callback<UIExtensionProxy>): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;UIExtensionProxy&gt; | No | 监听事件的回调。 |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;UIExtensionProxy&gt; | No | Callback of the listened event. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 202 | 非系统应用不允许使用系统API。 |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Non-system applications are not allowed to use system APIs. |
 
 ## onAsyncReceiverRegister
 
@@ -82,7 +82,7 @@ offSyncReceiverRegister(callback?: Callback<UIExtensionProxy>): void
 onAsyncReceiverRegister(callback: Callback<UIExtensionProxy>): void
 ```
 
-注册监听器，用于监听UIExtensionAbility注册异步数据接收回调。AnonyMous Object Rectification
+Register the listener that watches for async data receiver callback being registered by UIExtensionAbility.AnonyMous Object Rectification
 
 **Since:** 23
 
@@ -100,13 +100,13 @@ onAsyncReceiverRegister(callback: Callback<UIExtensionProxy>): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;UIExtensionProxy&gt; | Yes | 监听事件的回调。 |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;UIExtensionProxy&gt; | Yes | Callback of the listened event. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 202 | 非系统应用不允许使用系统API。 |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Non-system applications are not allowed to use system APIs. |
 
 ## onSyncReceiverRegister
 
@@ -114,7 +114,7 @@ onAsyncReceiverRegister(callback: Callback<UIExtensionProxy>): void
 onSyncReceiverRegister(callback: Callback<UIExtensionProxy>): void
 ```
 
-注册监听器，用于监听UIExtensionAbility注册同步数据接收回调。AnonyMous Object Rectification
+Register the listener that watches for sync data receiver callback being registered by UIExtensionAbility.AnonyMous Object Rectification
 
 **Since:** 23
 
@@ -132,13 +132,13 @@ onSyncReceiverRegister(callback: Callback<UIExtensionProxy>): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;UIExtensionProxy&gt; | Yes | 监听事件的回调。 |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;UIExtensionProxy&gt; | Yes | Callback of the listened event. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 202 | 非系统应用不允许使用系统API。 |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Non-system applications are not allowed to use system APIs. |
 
 ## send
 
@@ -146,7 +146,7 @@ onSyncReceiverRegister(callback: Callback<UIExtensionProxy>): void
 send(data: Record<string, RecordData>): void
 ```
 
-用于在双方建立连接成功后，组件使用方将数据发送给被拉起的Ability的场景，提供异步发送数据。AnonyMous Object Rectification
+This function is for sending data to the UIExtensionAbility.AnonyMous Object Rectification
 
 **Since:** 23
 
@@ -164,13 +164,13 @@ send(data: Record<string, RecordData>): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| data | [Record](../../apis-default/arkts-apis/arkts-record-t.md)&lt;string, RecordData&gt; | Yes | 异步发送给被拉起的UIExtensionAbility的数据。API version 18之前的版本，data的类型为Object。 |
+| data | [Record](../../apis-default/arkts-apis/arkts-record-t.md)&lt;string, RecordData&gt; | Yes |  |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 202 | 非系统应用不允许使用系统API。 |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Non-system applications are not allowed to use system APIs. |
 
 ## sendSync
 
@@ -178,7 +178,7 @@ send(data: Record<string, RecordData>): void
 sendSync(data: Record<string, RecordData>): Record<string, RecordData>
 ```
 
-用于在双方建立连接成功后，组件使用方将数据发送给被拉起的Ability的场景，提供同步发送数据。AnonyMous Object Rectification
+This function is for sending data to the UIExtensionAbility and waiting for the result in blocking mode.AnonyMous Object Rectification
 
 **Since:** 23
 
@@ -196,19 +196,19 @@ sendSync(data: Record<string, RecordData>): Record<string, RecordData>
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| data | [Record](../../apis-default/arkts-apis/arkts-record-t.md)&lt;string, RecordData&gt; | Yes | 同步发送给被拉起的UIExtensionAbility的数据。API version 18之前的版本，data的类型为Object。 |
+| data | [Record](../../apis-default/arkts-apis/arkts-record-t.md)&lt;string, RecordData&gt; | Yes | Data send to the UIExtensionAbility. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [Record](../../apis-default/arkts-apis/arkts-record-t.md)&lt;string, RecordData&gt; | data - 扩展Ability回复的数据。 |
+| [Record](../../apis-default/arkts-apis/arkts-record-t.md)&lt;string, RecordData&gt; | data - Data transferred from the UIExtensionAbility. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 100011 | 没有注册响应该请求的回调。 |
-| 202 | 非系统应用不允许使用系统API。 |
-| 100012 | 传输数据失败。 |
+| [100011](../errorcode-uiextension.md#100011-no-synchronous-callback-registered) | No callback has been registered to respond to this request. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Non-system applications are not allowed to use system APIs. |
+| [100012](../errorcode-uiextension.md#100012-data-transfer-failure) | Transferring data failed. |
 

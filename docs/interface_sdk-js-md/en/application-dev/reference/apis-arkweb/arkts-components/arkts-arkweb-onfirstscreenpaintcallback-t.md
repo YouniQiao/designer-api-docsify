@@ -4,7 +4,7 @@
 type OnFirstScreenPaintCallback = (firstScreenPaint: FirstScreenPaint) => void
 ```
 
-检测到首屏渲染结束时会触发此回调。
+Defines a callback triggered when the first screen paint is complete.
 
 **Since:** 23
 
@@ -18,5 +18,5 @@ type OnFirstScreenPaintCallback = (firstScreenPaint: FirstScreenPaint) => void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| firstScreenPaint | [FirstScreenPaint](arkts-arkweb-firstscreenpaint-i.md) | Yes | 检测到首屏渲染时的详细信息。 |
+| firstScreenPaint | [FirstScreenPaint](arkts-arkweb-firstscreenpaint-i.md) | Yes | Details about the first screen paint. |
 

@@ -12,12 +12,6 @@
 
 **系统接口：** 此接口为系统接口。
 
-## 导入模块
-
-```TypeScript
-import { privacyManager } from 'kits/@kit.AbilityKit';
-```
-
 ## activeStatus
 
 ```TypeScript
@@ -110,7 +104,7 @@ permissionName: Permissions
 
 权限使用状态发生变化的权限名。
 
-**类型：** [Permissions](arkts-ability-permissions-t.md)
+**类型：** Permissions
 
 **起始版本：** 9
 

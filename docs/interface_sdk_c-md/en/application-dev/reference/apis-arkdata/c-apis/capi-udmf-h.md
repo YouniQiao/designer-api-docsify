@@ -112,7 +112,7 @@ Provides unified data management framework related functions and enumerations.
 | [int OH_Udmf_GetUnifiedData(const char* key, Udmf_Intention intention, OH_UdmfData* unifiedData)](#oh_udmf_getunifieddata) | - | Get [OH_UdmfData](capi-udmf-oh-udmfdata.md) data from udmf database. |
 | [int OH_Udmf_GetUnifiedDataByOptions(OH_UdmfOptions* options, OH_UdmfData** dataArray, unsigned int* dataSize)](#oh_udmf_getunifieddatabyoptions) | - | Get [OH_UdmfData](capi-udmf-oh-udmfdata.md) data array from udmf database by intention. |
 | [int OH_Udmf_SetUnifiedData(Udmf_Intention intention, OH_UdmfData* unifiedData, char* key, unsigned int keyLen)](#oh_udmf_setunifieddata) | - | Set [OH_UdmfData](capi-udmf-oh-udmfdata.md) data to database. |
-| [int OH_Udmf_SetUnifiedDataByOptions(OH_UdmfOptions* options, OH_UdmfData *unifiedData, char *key, unsigned int keyLen)](#oh_udmf_setunifieddatabyoptions) | - | Set [OH_UdmfData](capi-udmf-oh-udmfdata.md) data to database with options. |
+| [int OH_Udmf_SetUnifiedDataByOptions(OH_UdmfOptions* options, OH_UdmfData* unifiedData, char* key, unsigned int keyLen)](#oh_udmf_setunifieddatabyoptions) | - | Set [OH_UdmfData](capi-udmf-oh-udmfdata.md) data to database with options. |
 | [int OH_Udmf_UpdateUnifiedData(OH_UdmfOptions* options, OH_UdmfData* unifiedData)](#oh_udmf_updateunifieddata) | - | Update [OH_UdmfData](capi-udmf-oh-udmfdata.md) data to database with options. |
 | [int OH_Udmf_DeleteUnifiedData(OH_UdmfOptions* options, OH_UdmfData** dataArray, unsigned int* dataSize)](#oh_udmf_deleteunifieddata) | - | Delete [OH_UdmfData](capi-udmf-oh-udmfdata.md) data of database with options. |
 | [OH_UdmfData* OH_UDMF_GetDataElementAt(OH_UdmfData** dataArray, unsigned int index)](#oh_udmf_getdataelementat) | - | Gets the pointer to the element at the specified index from the input array. |
@@ -2071,7 +2071,7 @@ OH_UdmfProperty Udmf_Intention Udmf_ErrCode
 ### OH_Udmf_SetUnifiedDataByOptions()
 
 ```c
-int OH_Udmf_SetUnifiedDataByOptions(OH_UdmfOptions* options, OH_UdmfData *unifiedData, char *key, unsigned int keyLen)
+int OH_Udmf_SetUnifiedDataByOptions(OH_UdmfOptions* options, OH_UdmfData* unifiedData, char* key, unsigned int keyLen)
 ```
 
 **Description**
@@ -2085,8 +2085,8 @@ Set [OH_UdmfData](capi-udmf-oh-udmfdata.md) data to database with options.
 | Parameter | Description |
 | -- | -- |
 | [OH_UdmfOptions](capi-udmf-oh-udmfoptions.md)* options | Represents a pointer to an instance of [OH_UdmfOptions](capi-udmf-oh-udmfoptions.md). |
-| [OH_UdmfData](capi-udmf-oh-udmfdata.md) *unifiedData | Represents a pointer to an instance of [OH_UdmfData](capi-udmf-oh-udmfdata.md). |
-| char *key | Represents return value after set data to database successfully,it's memory size not less than {@link UDMF_KEY_BUFFER_LEN}. |
+| [OH_UdmfData](capi-udmf-oh-udmfdata.md)* unifiedData | Represents a pointer to an instance of [OH_UdmfData](capi-udmf-oh-udmfdata.md). |
+| char* key | Represents return value after set data to database successfully,it's memory size not less than {@link UDMF_KEY_BUFFER_LEN}. |
 | unsigned int keyLen | Represents size of key param. |
 
 **Returns**:

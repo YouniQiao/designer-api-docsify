@@ -1,6 +1,6 @@
 # ImageAttachmentLayoutStyle
 
-定义ImageAttachment布局样式。
+Defines the ImageAttachment Layout Style.
 
 **Since:** 23
 
@@ -16,11 +16,7 @@
 borderRadius?: LengthMetrics | BorderRadiuses
 ```
 
-设置圆角。
-
-默认值：0
-
-单位：[vp](../../../reference/apis-arkui/arkui-ts/ts-pixel-units.md#基本像素单位)
+Border radius.
 
 **Type:** [LengthMetrics](arkts-arkui-lengthmetrics-t.md) \| BorderRadiuses
 
@@ -40,11 +36,7 @@ borderRadius?: LengthMetrics | BorderRadiuses
 margin?: LengthMetrics | Margin
 ```
 
-设置图片外边距。
-
-默认值：0
-
-单位：[vp](../../../reference/apis-arkui/arkui-ts/ts-pixel-units.md#基本像素单位)
+Outer Margin.
 
 **Type:** [LengthMetrics](arkts-arkui-lengthmetrics-t.md) \| Margin
 
@@ -64,11 +56,7 @@ margin?: LengthMetrics | Margin
 padding?: LengthMetrics | Padding
 ```
 
-设置图片内边距。
-
-默认值：0
-
-单位：[vp](../../../reference/apis-arkui/arkui-ts/ts-pixel-units.md#基本像素单位)
+Inner margin.
 
 **Type:** [LengthMetrics](arkts-arkui-lengthmetrics-t.md) \| Padding
 

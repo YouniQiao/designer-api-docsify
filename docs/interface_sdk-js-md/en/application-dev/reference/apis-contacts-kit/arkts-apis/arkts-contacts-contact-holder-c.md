@@ -1,6 +1,6 @@
 # Holder
 
-创建联系人的应用信息类。
+Defines an application that creates the contact.
 
 **Since:** 7
 
@@ -22,7 +22,7 @@ import { contact } from 'kits/@kit.ContactsKit';
 readonly bundleName: string
 ```
 
-Bundle名称，默认值为com.ohos.contacts。
+Bundle name. The default value is **com.ohos.contacts**.
 
 **Type:** string
 
@@ -40,7 +40,7 @@ Bundle名称，默认值为com.ohos.contacts。
 readonly displayName?: string
 ```
 
-应用名称，默认值为空。
+Application name.
 
 **Type:** string
 
@@ -58,7 +58,7 @@ readonly displayName?: string
 holderId?: number
 ```
 
-应用Id，默认值为空。
+Application ID.
 
 **Type:** number
 

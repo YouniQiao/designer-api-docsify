@@ -1,6 +1,6 @@
 # DoorPositionResponse（系统接口）
 
-Interface for indoor or outdoor identify result
+门内外识别接口执行完成后的回调结果。
 
 **起始版本：** 23
 
@@ -12,19 +12,13 @@ Interface for indoor or outdoor identify result
 
 **系统接口：** 此接口为系统接口。
 
-## 导入模块
-
-```TypeScript
-import { spatialAwareness } from 'kits/@kit.MultimodalAwarenessKit';
-```
-
 ## deviceId
 
 ```TypeScript
 deviceId: string
 ```
 
-indicates the ID of the remote ranging device
+表示设备Id号。
 
 **类型：** string
 
@@ -46,7 +40,7 @@ indicates the ID of the remote ranging device
 doorLockCode: int
 ```
 
-indicates random code for unlocking the door
+表示门锁校验码。
 
 **类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
@@ -68,7 +62,7 @@ indicates random code for unlocking the door
 position: PositionRelativeToDoor
 ```
 
-indicates result inside and outside the door
+表示门内外位置信息。
 
 **类型：** [PositionRelativeToDoor](arkts-multimodalawareness-spatialawareness-positionrelativetodoor-e-sys.md)
 

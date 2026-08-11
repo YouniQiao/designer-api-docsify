@@ -1,11 +1,5 @@
 # isStorageTypeSupported
 
-## 导入模块
-
-```TypeScript
-import { preferences } from 'kits/@kit.ArkData';
-```
-
 ## isStorageTypeSupported
 
 ```TypeScript
@@ -40,7 +34,7 @@ function isStorageTypeSupported(type: StorageType): boolean
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 401 | Parameter error. Possible causes: Incorrect parameter types |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: Incorrect parameter types |
 
 ## 示例
 

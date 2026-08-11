@@ -1,11 +1,5 @@
 # createConnection
 
-## 导入模块
-
-```TypeScript
-import { linkEnhance } from 'kits/@kit.DistributedServiceKit';
-```
-
 ## createConnection
 
 ```TypeScript
@@ -43,9 +37,9 @@ function createConnection(deviceId: string, name: string): Connection
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 32390206 | Invalid parameter. |
-| 801 | Capability not supported because the linkEnhance function has been trimmed<br>**适用版本：** 26.0.0+ |
-| 201 | Permission denied. |
+| [32390206](../../apis-distributedservice-kit/errorcode-link-enhance.md#32390206-参数非法) | Invalid parameter. |
+| [801](../../errorcode-universal.md#801-该设备不支持此api) | Capability not supported because the linkEnhance function has been trimmed<br>**适用版本：** 26.0.0+ |
+| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
 
 ## 示例
 

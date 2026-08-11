@@ -1,6 +1,6 @@
 # NotificationKey (System API)
 
-通知键值。
+Defines the notification key value.
 
 **Since:** 9
 
@@ -24,7 +24,7 @@ import { notificationSubscribe } from 'kits/@kit.NotificationKit';
 id: int
 ```
 
-通知ID。
+Notification ID.
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
@@ -44,7 +44,7 @@ id: int
 label?: string
 ```
 
-通知标签，默认为空。
+Notification label. This parameter is left empty by default.
 
 **Type:** string
 

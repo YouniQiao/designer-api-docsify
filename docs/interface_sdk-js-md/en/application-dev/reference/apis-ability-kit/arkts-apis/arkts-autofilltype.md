@@ -2,11 +2,9 @@
 
 ## Summary
 
-<!--Del-->
-### Enums（系统接口）
+### Enums
 
 | Name | Description |
 | --- | --- |
-| [AutoFillType](arkts-ability-autofilltype-e-sys.md) | 表示提供自动填充类型的枚举。 |
-<!--DelEnd-->
+| [AutoFillType](arkts-ability-autofilltype-e.md) | AutoFillType enumerates the types of elements to be automatically filled in. |
 

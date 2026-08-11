@@ -1,6 +1,6 @@
 # SuggestionType (System API)
 
-语言或国家地区的推荐类型。
+Represents the language or country/region suggestion type.
 
 **Since:** 23
 
@@ -18,7 +18,7 @@
 SUGGESTION_TYPE_NONE = 0
 ```
 
-非推荐语言或国家地区。
+Not a recommended language or country/region.
 
 **Since:** 23
 
@@ -36,7 +36,7 @@ SUGGESTION_TYPE_NONE = 0
 SUGGESTION_TYPE_RELATED = 1
 ```
 
-系统语言推荐的国家地区或系统国家地区推荐的语言。
+Country/region recommended by the system language or language recommended by the system country/region.
 
 **Since:** 23
 
@@ -54,7 +54,7 @@ SUGGESTION_TYPE_RELATED = 1
 SUGGESTION_TYPE_SIM = 2
 ```
 
-SIM卡国家地区推荐的语言。
+Language recommended by the country/region of the SIM card.
 
 **Since:** 23
 

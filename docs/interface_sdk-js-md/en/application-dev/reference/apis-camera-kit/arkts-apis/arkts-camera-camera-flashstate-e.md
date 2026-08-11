@@ -1,6 +1,6 @@
 # FlashState
 
-枚举，闪光灯状态。
+Enumerates the flash states.
 
 **Since:** 24
 
@@ -16,7 +16,7 @@
 FLASH_STATE_UNAVAILABLE = 0
 ```
 
-闪光灯为不可用状态，为默认值。
+The flash is unavailable. This is the default value.
 
 **Since:** 24
 
@@ -36,7 +36,7 @@ FLASH_STATE_UNAVAILABLE = 0
 FLASH_STATE_READY = 1
 ```
 
-闪光灯为可用状态。
+The flash is available.
 
 **Since:** 24
 
@@ -56,7 +56,7 @@ FLASH_STATE_READY = 1
 FLASH_STATE_FLASHING = 2
 ```
 
-闪光灯已经被打开。
+The flash is turned on.
 
 **Since:** 24
 

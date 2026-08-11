@@ -1,6 +1,6 @@
 # OnBodyStateResponse
 
-设备佩戴状态的响应对象，包含设备是否已佩戴的状态数据。
+Specifies whether the device that houses the sensor is worn.
 
 **Since:** 3
 
@@ -26,7 +26,7 @@ import { OnBodyStateResponse, subscribeAccelerometerOptions, ProximityResponse, 
 value: boolean
 ```
 
-是否已佩戴设备。取值说明：true表示已佩戴，false表示未佩戴。
+Boolean value indicating whether the device is worn. The value **true** indicates that the device is worn, and the value **false** indicates the opposite.
 
 **Type:** boolean
 

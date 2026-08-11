@@ -1,6 +1,6 @@
 # LocalizedBarrierDirection
 
-定义支持镜像模式的屏障线的方向。
+Specifies the localized direction value of Barrier.
 
 **Since:** 23
 
@@ -16,7 +16,7 @@
 START = 0
 ```
 
-屏障在其所有referencedId的最左/右侧，LTR模式时为最左侧，RTL模式时为最右侧。
+Localized barrier will be positioned to the far start of all referenced components.
 
 **Since:** 23
 
@@ -34,7 +34,7 @@ START = 0
 END = 1
 ```
 
-屏障在其所有referencedId的最左/右侧，LTR模式时为最右侧，RTL模式时为最左侧。
+Localized barrier will be positioned to the far end of all referenced components.
 
 **Since:** 23
 
@@ -52,7 +52,7 @@ END = 1
 TOP = 2
 ```
 
-屏障在其所有referencedId的最上方。
+Localized barrier will be positioned to the top of all referenced components.
 
 **Since:** 23
 
@@ -70,7 +70,7 @@ TOP = 2
 BOTTOM = 3
 ```
 
-屏障在其所有referencedId的最下方。
+Localized barrier will be positioned to the bottom of all referenced components.
 
 **Since:** 23
 

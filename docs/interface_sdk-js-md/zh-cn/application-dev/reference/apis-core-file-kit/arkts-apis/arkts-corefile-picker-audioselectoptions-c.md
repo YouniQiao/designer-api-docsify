@@ -10,12 +10,6 @@
 
 **系统能力：** SystemCapability.FileManagement.UserFileService
 
-## 导入模块
-
-```TypeScript
-import { picker } from 'kits/@kit.CoreFileKit';
-```
-
 ## maxSelectNumber
 
 ```TypeScript

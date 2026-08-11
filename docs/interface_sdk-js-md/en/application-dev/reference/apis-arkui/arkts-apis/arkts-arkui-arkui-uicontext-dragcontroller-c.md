@@ -44,13 +44,14 @@ Cancel the UDMF data sync process by passing in the data key as the identify, ca
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. |
-| 190004 | Operation failed. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. |
+| [190004](../errorcode-drag-event.md#190004-operation-failed) | Operation failed. |
 
 ## createDragAction
 
 ```TypeScript
-createDragAction(customArray: Array<CustomBuilder | DragItemInfo> | undefined, dragInfo: dragController.DragInfo): dragController.DragAction
+createDragAction(customArray: Array<CustomBuilder | DragItemInfo> | undefined,
+    dragInfo: dragController.DragInfo): dragController.DragAction
 ```
 
 Create one drag action object, which can be used for starting drag later or monitoring the drag status after drag started.
@@ -61,7 +62,7 @@ Create one drag action object, which can be used for starting drag later or moni
 
 **Model restriction:** This API can be used only in the stage model.
 
-<!--Device-DragController-createDragAction(customArray: Array<CustomBuilder | DragItemInfo> | undefined, dragInfo: dragController.DragInfo): dragController.DragAction--><!--Device-DragController-createDragAction(customArray: Array<CustomBuilder | DragItemInfo> | undefined, dragInfo: dragController.DragInfo): dragController.DragAction-End-->
+<!--Device-DragController-createDragAction(customArray: Array<CustomBuilder | DragItemInfo> | undefined,    dragInfo: dragController.DragInfo): dragController.DragAction--><!--Device-DragController-createDragAction(customArray: Array<CustomBuilder | DragItemInfo> | undefined,    dragInfo: dragController.DragInfo): dragController.DragAction-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -82,8 +83,8 @@ Create one drag action object, which can be used for starting drag later or moni
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 100001 | Internal handling failed. |
-| 401 | Parameter error. Possible causes: &lt;br&gt; 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameters types. &lt;br&gt; 3. Parameter verification failed. |
+| [100001](../errorcode-internal.md#100001-internal-error) | Internal handling failed. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: &lt;br&gt; 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameters types. &lt;br&gt; 3. Parameter verification failed. |
 
 ## enableDropDisallowedBadge
 
@@ -144,8 +145,8 @@ Execute a drag event.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 100001 | Internal handling failed. |
-| 401 | Parameter error. Possible causes: &lt;br&gt; 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameters types. &lt;br&gt; 3. Parameter verification failed. |
+| [100001](../errorcode-internal.md#100001-internal-error) | Internal handling failed. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: &lt;br&gt; 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameters types. &lt;br&gt; 3. Parameter verification failed. |
 
 ## executeDrag
 
@@ -183,8 +184,8 @@ Execute a drag event.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 100001 | Internal handling failed. |
-| 401 | Parameter error. Possible causes: &lt;br&gt; 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameters types. &lt;br&gt; 3. Parameter verification failed. |
+| [100001](../errorcode-internal.md#100001-internal-error) | Internal handling failed. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: &lt;br&gt; 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameters types. &lt;br&gt; 3. Parameter verification failed. |
 
 ## getDragPreview
 
@@ -192,7 +193,7 @@ Execute a drag event.
 getDragPreview(): dragController.DragPreview
 ```
 
-获取拖拽预览对象。
+Get a drag preview object.
 
 **Since:** 23
 

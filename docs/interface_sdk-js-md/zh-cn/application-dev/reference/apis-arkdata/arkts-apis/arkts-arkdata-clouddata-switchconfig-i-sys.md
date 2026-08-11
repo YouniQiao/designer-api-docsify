@@ -12,12 +12,6 @@
 
 **系统接口：** 此接口为系统接口。
 
-## 导入模块
-
-```TypeScript
-import { cloudData } from 'kits/@kit.ArkData';
-```
-
 ## dbInfo
 
 ```TypeScript
@@ -26,7 +20,7 @@ dbInfo: Record<string, DBSwitchInfo>
 
 数据库级别的开关配置信息。键为库名称，值为该库的配置信息。
 
-**类型：** [Record](../../apis-default/arkts-apis/arkts-record-t.md)&lt;string, DBSwitchInfo&gt;
+**类型：** Record&lt;string, DBSwitchInfo&gt;
 
 **起始版本：** 23
 

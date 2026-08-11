@@ -1,6 +1,7 @@
 # GetInputDataOptions (System API)
 
-表示[通知调用者获取数据](../../../reference/apis-basic-services-kit/js-apis-osAccount-sys.md#ongetdata8)的可选参数集合。
+Represents a set of optional parameters for  
+[onGetData](../../../reference/apis-basic-services-kit/js-apis-osAccount-sys.md#ongetdata8).
 
 **Since:** 12
 
@@ -24,7 +25,7 @@ import { osAccount } from 'kits/@kit.BasicServicesKit';
 challenge?: Uint8Array
 ```
 
-挑战值，默认为undefined。
+Challenge value, which is **undefined** by default.
 
 **Type:** Uint8Array
 

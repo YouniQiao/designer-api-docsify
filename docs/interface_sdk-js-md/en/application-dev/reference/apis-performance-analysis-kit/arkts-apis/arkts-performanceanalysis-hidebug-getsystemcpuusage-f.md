@@ -12,11 +12,12 @@ import { hidebug } from 'kits/@kit.PerformanceAnalysisKit';
 function getSystemCpuUsage(): double
 ```
 
-��ȡϵͳ��CPU��Դռ�������
+Obtains the CPU usage of the system.
 
-> **ע��**
+> **NOTE：**
 > 
-> ���ڸýӿ��漰�����ͨ�ţ���ʱ�ϳ���Ϊ�˱��������������⣬���鲻Ҫ�����߳���ֱ�ӵ��øýӿڡ�
+> This API involves cross-process communication and takes a long time. To avoid performance problems, you are
+> advised not to call this API in the main thread.
 
 **Since:** 12
 
@@ -30,13 +31,13 @@ function getSystemCpuUsage(): double
 
 | Type | Description |
 | --- | --- |
-| ArkTS-Dyn: number  <br>ArkTS-Sta：double | ϵͳCPU��Դռ���������ռ����Ϊ50%���򷵻�0.5�� |
+| ArkTS-Dyn: number  <br>ArkTS-Sta：double | CPU usage of the system. For example, if the CPU usage is **50%**, **0.5** is returned. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 11400104 | The status of the system CPU usage is abnormal. |
+| [11400104](../errorcode-hiviewdfx-hidebug-cpuusage.md#11400104-abnormal-cpu-usage) | The status of the system CPU usage is abnormal. |
 
 ## Examples
 

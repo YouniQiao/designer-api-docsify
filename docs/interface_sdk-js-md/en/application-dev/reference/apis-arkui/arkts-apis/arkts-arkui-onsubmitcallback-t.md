@@ -4,7 +4,9 @@
 export type OnSubmitCallback = (enterKey: EnterKeyType, event: SubmitEvent) => void
 ```
 
-提交回调。
+Defines a TextInput callback when onSubmit.
+
+Anonymous Object Rectification.
 
 **Since:** 23
 
@@ -20,6 +22,6 @@ export type OnSubmitCallback = (enterKey: EnterKeyType, event: SubmitEvent) => v
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| enterKey | [EnterKeyType](arkts-arkui-textinput-enterkeytype-e.md) | Yes | 输入法回车键类型。 |
-| event | [SubmitEvent](../arkts-components/arkts-arkui-submitevent-i.md) | Yes | 提交事件。可以控制是否收起键盘。 |
+| enterKey | [EnterKeyType](arkts-arkui-textinput-enterkeytype-e.md) | Yes | Input method Enter key type. |
+| event | [SubmitEvent](../arkts-components/arkts-arkui-submitevent-i.md) | Yes | The event submitted. |
 

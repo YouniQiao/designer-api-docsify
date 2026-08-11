@@ -1,8 +1,9 @@
 # ElementName
 
-应用组件结构体，包含bundleName、moduleName和abilityName等。通常用于组件启动信息  
-[AbilityRunningInfo.ability](arkts-ability-abilityrunninginfo-i.md)和组件启动回调函数  
-[connectOptions.onConnect](arkts-ability-connectoptions-connectoptions-i.md#onconnect)中。
+A structured identifier for an application component, containing fields such as **bundleName**, **moduleName**, and  
+**abilityName**. It is usually used in  
+[AbilityRunningInfo.ability](arkts-ability-abilityrunninginfo-i.md) for component launch information and in the  
+[connectOptions.onConnect](arkts-ability-connectoptions-connectoptions-i.md#onconnect)callback for component connection.
 
 **Since:** 9
 
@@ -18,7 +19,7 @@
 abilityName: string
 ```
 
-Ability名称。
+Name of the ability.
 
 **Type:** string
 
@@ -38,7 +39,7 @@ Ability名称。
 bundleName: string
 ```
 
-应用Bundle名称。
+Bundle name.
 
 **Type:** string
 
@@ -60,7 +61,7 @@ bundleName: string
 deviceId?: string
 ```
 
-设备ID。
+Device ID.
 
 **Type:** string
 
@@ -80,7 +81,7 @@ deviceId?: string
 moduleName?: string
 ```
 
-Ability所属的HAP的模块名称。
+Module name of the HAP file to which the ability belongs.
 
 **Type:** string
 
@@ -102,7 +103,7 @@ Ability所属的HAP的模块名称。
 shortName?: string
 ```
 
-Ability短名称，以“.”为开头的字符串。
+Short name of the ability. It is a string starting with a period (.).
 
 **Type:** string
 
@@ -122,7 +123,7 @@ Ability短名称，以“.”为开头的字符串。
 uri?: string
 ```
 
-资源标识符。
+Resource ID.
 
 **Type:** string
 

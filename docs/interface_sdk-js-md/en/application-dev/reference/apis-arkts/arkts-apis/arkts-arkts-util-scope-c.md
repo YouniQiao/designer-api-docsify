@@ -1,6 +1,6 @@
 # Scope
 
-Scope 接口用于描述字段的有效范围。
+The Scope interface is used to describe the valid range of a field.
 
 **Since:** 8
 
@@ -26,7 +26,7 @@ import { util } from 'kits/@kit.ArkTS';
 clamp(value: ScopeType): ScopeType
 ```
 
-将一个值限制在此 **Scope** 范围内。
+Limits a value to this **Scope**.
 
 **Since:** 8
 
@@ -44,13 +44,13 @@ clamp(value: ScopeType): ScopeType
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | [ScopeType](arkts-arkts-util-scopetype-t.md) | Yes | 指定的值。 |
+| value | [ScopeType](arkts-arkts-util-scopetype-t.md) | Yes | Value specified. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [ScopeType](arkts-arkts-util-scopetype-t.md) | 如果指定值小于下限，则返回 **lowerObj**；如果指定值大于上限，则返回 **upperObj**；如果 在此 **Scope** 范围内，则返回指定值。 |
+| [ScopeType](arkts-arkts-util-scopetype-t.md) | Returns **lowerObj** if the specified value is less than the lower limit; returns **upperObj** if the specified value is greater than the upper limit; returns the specified value if it is within this **Scope**. |
 
 ## Examples
 
@@ -90,7 +90,7 @@ console.info("result = " + result);
 constructor(lowerObj: ScopeType, upperObj: ScopeType)
 ```
 
-用于创建具有指定上下限的 **Scope** 对象的构造函数。
+A constructor used to create a **Scope** object with the specified upper and lower limits.
 
 **Since:** 8
 
@@ -108,8 +108,8 @@ constructor(lowerObj: ScopeType, upperObj: ScopeType)
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| lowerObj | [ScopeType](arkts-arkts-util-scopetype-t.md) | Yes | Scope** 对象的下限。 |
-| upperObj | [ScopeType](arkts-arkts-util-scopetype-t.md) | Yes | Scope** 对象的上限。 |
+| lowerObj | [ScopeType](arkts-arkts-util-scopetype-t.md) | Yes | Lower limit of the **Scope** object. |
+| upperObj | [ScopeType](arkts-arkts-util-scopetype-t.md) | Yes | Upper limit of the **Scope** object. |
 
 ## Examples
 
@@ -147,7 +147,7 @@ console.info("range = " + range);
 contains(value: ScopeType): boolean
 ```
 
-判断一个值是否在此 **Scope** 范围内。
+Checks whether a value is within this **Scope**.
 
 **Since:** 8
 
@@ -165,13 +165,13 @@ contains(value: ScopeType): boolean
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | [ScopeType](arkts-arkts-util-scopetype-t.md) | Yes | 指定的值。 |
+| value | [ScopeType](arkts-arkts-util-scopetype-t.md) | Yes | Value specified. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| boolean | 检查结果。如果值在此 **Scope** 范围内，则返回 **true**；否则返回 **false**。 |
+| boolean | Check result. The value **true** is returned if the value is within this **Scope**; otherwise, **false** is returned. |
 
 ## Examples
 
@@ -211,7 +211,7 @@ console.info("result = " + result);
 contains(range: Scope): boolean
 ```
 
-判断一个范围是否在此 **Scope** 范围内。
+Checks whether a range is within this **Scope**.
 
 **Since:** 8
 
@@ -229,13 +229,13 @@ contains(range: Scope): boolean
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| range | [Scope](arkts-arkts-util-scope-c.md) | Yes | 指定的 **Scope**。 |
+| range | [Scope](arkts-arkts-util-scope-c.md) | Yes | Scope** specified. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| boolean | 检查结果。如果范围在此 **Scope** 范围内，则返回 **true**；否则返回 **false**。 |
+| boolean | Check result. The value **true** is returned if the range is within this **Scope**; otherwise, **false** is returned. |
 
 ## Examples
 
@@ -277,7 +277,7 @@ console.info("result = " + result);
 expand(lowerObj: ScopeType, upperObj: ScopeType): Scope
 ```
 
-获取此 **Scope** 与给定上下限的并集。
+Obtains the union set of this **Scope** and the given lower and upper limits.
 
 **Since:** 8
 
@@ -295,14 +295,14 @@ expand(lowerObj: ScopeType, upperObj: ScopeType): Scope
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| lowerObj | [ScopeType](arkts-arkts-util-scopetype-t.md) | Yes | 下限。 |
-| upperObj | [ScopeType](arkts-arkts-util-scopetype-t.md) | Yes | 上限。 |
+| lowerObj | [ScopeType](arkts-arkts-util-scopetype-t.md) | Yes | Lower limit. |
+| upperObj | [ScopeType](arkts-arkts-util-scopetype-t.md) | Yes | Upper limit. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [Scope](arkts-arkts-util-scope-c.md) | 此 **Scope** 与给定上下限的并集。 |
+| [Scope](arkts-arkts-util-scope-c.md) | Union set of this **Scope** and the given lower and upper limits. |
 
 ## Examples
 
@@ -343,7 +343,7 @@ console.info("result = " + result);
 expand(range: Scope): Scope
 ```
 
-获取此 **Scope** 与给定 **Scope** 的并集。
+Obtains the union set of this **Scope** and the given **Scope**.
 
 **Since:** 8
 
@@ -361,13 +361,13 @@ expand(range: Scope): Scope
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| range | [Scope](arkts-arkts-util-scope-c.md) | Yes | 指定的 **Scope**。 |
+| range | [Scope](arkts-arkts-util-scope-c.md) | Yes | Scope** specified. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [Scope](arkts-arkts-util-scope-c.md) | 此 **Scope** 与给定 **Scope** 的并集。 |
+| [Scope](arkts-arkts-util-scope-c.md) | Union set of this **Scope** and the given **Scope**. |
 
 ## Examples
 
@@ -409,7 +409,7 @@ console.info("result = " + result);
 expand(value: ScopeType): Scope
 ```
 
-获取此 **Scope** 与给定值的并集。
+Obtains the union set of this **Scope** and the given value.
 
 **Since:** 8
 
@@ -427,13 +427,13 @@ expand(value: ScopeType): Scope
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | [ScopeType](arkts-arkts-util-scopetype-t.md) | Yes | 指定的值。 |
+| value | [ScopeType](arkts-arkts-util-scopetype-t.md) | Yes | Value specified. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [Scope](arkts-arkts-util-scope-c.md) | 此 **Scope** 与给定值的并集。 |
+| [Scope](arkts-arkts-util-scope-c.md) | Union set of this **Scope** and the given value. |
 
 ## Examples
 
@@ -473,7 +473,7 @@ console.info("result = " + result);
 getLower(): ScopeType
 ```
 
-获取此 **Scope** 的下限。
+Obtains the lower limit of this **Scope**.
 
 **Since:** 8
 
@@ -491,7 +491,7 @@ getLower(): ScopeType
 
 | Type | Description |
 | --- | --- |
-| [ScopeType](arkts-arkts-util-scopetype-t.md) | 此 **Scope** 的下限。 |
+| [ScopeType](arkts-arkts-util-scopetype-t.md) | Lower limit of this **Scope**. |
 
 ## Examples
 
@@ -530,7 +530,7 @@ console.info("result = " + result);
 getUpper(): ScopeType
 ```
 
-获取此 **Scope** 的上限。
+Obtains the upper limit of this **Scope**.
 
 **Since:** 8
 
@@ -548,7 +548,7 @@ getUpper(): ScopeType
 
 | Type | Description |
 | --- | --- |
-| [ScopeType](arkts-arkts-util-scopetype-t.md) | 此 **Scope** 的上限。 |
+| [ScopeType](arkts-arkts-util-scopetype-t.md) | Upper limit of this **Scope**. |
 
 ## Examples
 
@@ -587,7 +587,7 @@ console.info("result = " + result);
 intersect(range: Scope): Scope
 ```
 
-获取此 **Scope** 与给定 **Scope** 的交集。
+Obtains the intersection of this **Scope** and the given **Scope**.
 
 **Since:** 8
 
@@ -605,13 +605,13 @@ intersect(range: Scope): Scope
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| range | [Scope](arkts-arkts-util-scope-c.md) | Yes | 指定的 **Scope**。 |
+| range | [Scope](arkts-arkts-util-scope-c.md) | Yes | Scope** specified. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [Scope](arkts-arkts-util-scope-c.md) | 此 **Scope** 与给定 **Scope** 的交集。 |
+| [Scope](arkts-arkts-util-scope-c.md) | Intersection of this **Scope** and the given **Scope**. |
 
 ## Examples
 
@@ -653,7 +653,7 @@ console.info("result = " + result);
 intersect(lowerObj: ScopeType, upperObj: ScopeType): Scope
 ```
 
-获取此 **Scope** 与给定上下限的交集。
+Obtains the intersection of this **Scope** and the given lower and upper limits.
 
 **Since:** 8
 
@@ -671,14 +671,14 @@ intersect(lowerObj: ScopeType, upperObj: ScopeType): Scope
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| lowerObj | [ScopeType](arkts-arkts-util-scopetype-t.md) | Yes | 下限。 |
-| upperObj | [ScopeType](arkts-arkts-util-scopetype-t.md) | Yes | 上限。 |
+| lowerObj | [ScopeType](arkts-arkts-util-scopetype-t.md) | Yes | Lower limit. |
+| upperObj | [ScopeType](arkts-arkts-util-scopetype-t.md) | Yes | Upper limit. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [Scope](arkts-arkts-util-scope-c.md) | 此 **Scope** 与给定上下限的交集。 |
+| [Scope](arkts-arkts-util-scope-c.md) | Intersection of this **Scope** and the given lower and upper limits. |
 
 ## Examples
 
@@ -719,7 +719,7 @@ console.info("result = " + result);
 toString(): string
 ```
 
-获取包含此 **Scope** 的字符串表示形式。
+Obtains a string representation that contains this **Scope**.
 
 **Since:** 8
 
@@ -737,7 +737,7 @@ toString(): string
 
 | Type | Description |
 | --- | --- |
-| string | 包含此 **Scope** 的字符串表示形式。 |
+| string | String representation containing the **Scope**. |
 
 ## Examples
 

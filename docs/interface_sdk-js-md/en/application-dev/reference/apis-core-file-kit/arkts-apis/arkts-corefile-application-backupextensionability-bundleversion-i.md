@@ -1,6 +1,6 @@
 # BundleVersion
 
-恢复时所需要的版本信息，开发者可根据配置的版本号来判断本次恢复时的应用版本数据。
+Describe bundle version
 
 **Since:** 10
 
@@ -22,7 +22,7 @@ import { BundleVersion } from 'kits/@kit.CoreFileKit';
 code: long
 ```
 
-应用的版本号。
+Indicates bundle's version code.
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：long
 
@@ -42,7 +42,7 @@ code: long
 name: string
 ```
 
-应用的版本名称。
+Indicates bundle's version name.
 
 **Type:** string
 

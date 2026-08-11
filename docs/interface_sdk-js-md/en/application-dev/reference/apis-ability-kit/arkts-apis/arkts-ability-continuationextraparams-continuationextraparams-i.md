@@ -1,7 +1,7 @@
 # ContinuationExtraParams
 
-流转管理入口中设备选择模块所需的过滤参数，可以作为  
-[startContinuationDeviceManager](arkts-ability-continuationmanager-startcontinuationdevicemanager-f.md#startcontinuationdevicemanager)的入参。
+The ContinuationExtraParams module provides the filter parameters required by the device selection module in the continuation management entry. These filter parameters can be used as an input parameter of  
+[startContinuationDeviceManager](arkts-ability-continuationmanager-startcontinuationdevicemanager-f.md#startcontinuationdevicemanager).
 
 **Since:** 8
 
@@ -19,7 +19,7 @@
 authInfo?: Record<string, Object>
 ```
 
-表示认证的信息。
+Authentication information.
 
 **Type:** [Record](../../apis-default/arkts-apis/arkts-record-t.md)&lt;string, Object&gt;
 
@@ -43,7 +43,7 @@ authInfo?: Record<string, Object>
 continuationMode?: continuationManager.ContinuationMode
 ```
 
-表示协同的模式。
+Continuation mode.
 
 **Type:** continuationManager.ContinuationMode
 
@@ -67,7 +67,7 @@ continuationMode?: continuationManager.ContinuationMode
 description?: string
 ```
 
-表示设备过滤的描述。
+Device filtering description.
 
 **Type:** string
 
@@ -91,7 +91,7 @@ description?: string
 deviceType?: Array<string>
 ```
 
-表示设备类型。
+Device type.
 
 **Type:** Array&lt;string&gt;
 
@@ -115,7 +115,7 @@ deviceType?: Array<string>
 filter?: any
 ```
 
-表示设备过滤的参数。
+Device filtering parameter.
 
 **Type:** any
 
@@ -139,7 +139,7 @@ filter?: any
 targetBundle?: string
 ```
 
-表示目标Bundle名称。
+Name of the target bundle.
 
 **Type:** string
 

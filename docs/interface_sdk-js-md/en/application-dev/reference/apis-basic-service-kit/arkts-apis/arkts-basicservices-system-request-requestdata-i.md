@@ -24,7 +24,7 @@ import { UploadResponse, RequestData, DownloadRequestOptions, DownloadResponse, 
 name: string
 ```
 
-表示form 元素的名称。
+Name of the form element.
 
 **Type:** string
 
@@ -46,7 +46,7 @@ name: string
 value: string
 ```
 
-表示form 元素的值。
+Value of the form element.
 
 **Type:** string
 

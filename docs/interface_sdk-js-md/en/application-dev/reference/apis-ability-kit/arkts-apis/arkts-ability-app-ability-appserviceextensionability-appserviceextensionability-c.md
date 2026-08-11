@@ -1,6 +1,6 @@
 # AppServiceExtensionAbility
 
-AppServiceExtensionAbility模块提供后台服务相关扩展能力，包括后台服务的创建、销毁、连接、断开等生命周期回调。
+The AppServiceExtensionAbility module provides extended capabilities for background services, including lifecycle callbacks for creating, destroying, connecting, and disconnecting background services.
 
 **Inheritance/Implementation:** AppServiceExtensionAbility extends [ExtensionAbility](arkts-ability-app-ability-extensionability-extensionability-c.md)
 
@@ -24,10 +24,8 @@ import { AppServiceExtensionAbility } from 'kits/@kit.AbilityKit';
 onConnect(want: Want): rpc.RemoteObject
 ```
 
-调用方使用  
-[connectAppServiceExtensionAbility()](arkts-ability-uiabilitycontext-c.md#connectappserviceextensionability)连接AppServiceExtensionAbility实例时，系统会触发该回调。
-
-应用需要在该接口中返回一个RemoteObject对象，用于客户端和服务端进行通信。当AppServiceExtensionAbility实例处于连接状态时，如果调用方发起新的连接，系统会返回缓存的RemoteObject对象，而不会重复回调onConnect()接口。
+Called when an AppServiceExtensionAbility instance is connected by calling  
+[connectAppServiceExtensionAbility()](arkts-ability-uiabilitycontext-c.md#connectappserviceextensionability).
 
 **Since:** 20
 
@@ -43,13 +41,13 @@ onConnect(want: Want): rpc.RemoteObject
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| want | [Want](arkts-ability-app-ability-want-want-c.md) | Yes | 调用方拉起当前AppServiceExtensionAbility实例时传递的Want类型信息，包括Ability名称、Bundle名称等。 |
+| want | [Want](arkts-ability-app-ability-want-want-c.md) | Yes | Want information about the target AppServiceExtensionAbility instance, including the ability name and bundle name. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| rpc.RemoteObject | 一个RemoteObject对象，用于客户端和服务端进行通信。 |
+| rpc.RemoteObject | A RemoteObject used for communication between the server and client. |
 
 ## Examples
 
@@ -83,11 +81,12 @@ export default class AppServiceExtAbility extends AppServiceExtensionAbility {
 onCreate(want: Want): void
 ```
 
-在AppServiceExtensionAbility实例创建时，系统会触发该回调。应用可以在该接口中执行自己的业务逻辑初始化操作，例如注册公共事件监听等。
+Called when an AppServiceExtensionAbility instance is created.Applications can perform initialization operations, such as registering common event listeners, in this callback.
 
-> **说明：**
+> **NOTE：**
 > 
-> 如果AppServiceExtensionAbility实例已创建，再次启动或连接该实例时不会触发onCreate()回调。
+> If an AppServiceExtensionAbility instance has already been created, the **onCreate()** callback is not invoked
+> again when the instance is started or connected.
 
 **Since:** 20
 
@@ -103,7 +102,7 @@ onCreate(want: Want): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| want | [Want](arkts-ability-app-ability-want-want-c.md) | Yes | 调用方拉起当前AppServiceExtensionAbility实例时传递的Want类型信息，包括Ability名称、Bundle名称等。 |
+| want | [Want](arkts-ability-app-ability-want-want-c.md) | Yes | Want information about the target AppServiceExtensionAbility instance, including the ability name and bundle name. |
 
 ## Examples
 
@@ -126,7 +125,7 @@ export default class AppServiceExtAbility extends AppServiceExtensionAbility {
 onDestroy(): void
 ```
 
-在AppServiceExtensionAbility实例销毁时，系统会触发该回调。应用可以在该接口中执行资源清理等操作，如注销监听等。
+Called when an AppServiceExtensionAbility instance is destroyed. Applications can perform resource cleanup operations, such as unregistering listeners, in this callback.
 
 **Since:** 20
 
@@ -159,7 +158,7 @@ export default class AppServiceExtAbility extends AppServiceExtensionAbility {
 onDisconnect(want: Want): void
 ```
 
-当所有连接方断开与AppServiceExtensionAbility实例的连接时，系统会触发该回调。
+Called when all connections to an AppServiceExtensionAbility instance are interrupted.
 
 **Since:** 20
 
@@ -175,7 +174,7 @@ onDisconnect(want: Want): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| want | [Want](arkts-ability-app-ability-want-want-c.md) | Yes | AppServiceExtensionAbility实例最近一次被拉起或者连接时，调用方传递的Want类型信息，包括Ability名称、Bundle名称等。 |
+| want | [Want](arkts-ability-app-ability-want-want-c.md) | Yes | Want information passed by the caller when the AppServiceExtensionAbility instance was most recently started or connected. This includes information such as the ability name and bundle name. |
 
 ## Examples
 
@@ -204,8 +203,8 @@ ArkTS-Sta:
 onRequest(want: Want, startId: int): void
 ```
 
-调用方每次使用  
-[startAppServiceExtensionAbility()](arkts-ability-uiabilitycontext-c.md#startappserviceextensionability)拉起AppServiceExtensionAbility实例时，系统都会触发该回调。
+Called each time an AppServiceExtensionAbility instance is started by calling  
+[startAppServiceExtensionAbility()](arkts-ability-uiabilitycontext-c.md#startappserviceextensionability).
 
 **Since:** 20
 
@@ -221,8 +220,8 @@ onRequest(want: Want, startId: int): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| want | [Want](arkts-ability-app-ability-want-want-c.md) | Yes | 调用方拉起当前AppServiceExtensionAbility实例时传递的Want类型信息，包括Ability名称、Bundle名称等。 |
-| startId | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | 返回拉起次数。首次拉起初始值返回1，多次拉起时自动递增。 |
+| want | [Want](arkts-ability-app-ability-want-want-c.md) | Yes | Want information about the target AppServiceExtensionAbility instance, including the ability name and bundle name. |
+| startId | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | Number of times the instance has been started. The initial value is **1** for the first start, and it increments automatically for subsequent starts. |
 
 ## Examples
 
@@ -245,9 +244,10 @@ export default class AppServiceExtAbility extends AppServiceExtensionAbility {
 context: AppServiceExtensionContext
 ```
 
-AppServiceExtensionAbility的上下文环境，继承自[ExtensionContext](arkts-ability-extensioncontext-c.md)。
+Context environment for an AppServiceExtensionAbility. This context inherits from  
+[ExtensionContext](arkts-ability-extensioncontext-c.md).
 
-**Type:** [AppServiceExtensionContext](../../apis-default/arkts-apis/arkts-appserviceextensioncontext-c.md)
+**Type:** [AppServiceExtensionContext](arkts-ability-appserviceextensioncontext-c.md)
 
 **Since:** 20
 

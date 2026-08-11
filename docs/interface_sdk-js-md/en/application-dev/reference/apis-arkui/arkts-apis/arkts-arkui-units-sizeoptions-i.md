@@ -1,6 +1,6 @@
 # SizeOptions
 
-宽高尺寸类型，用于描述组件布局时的宽高尺寸大小。
+Defines the size options.
 
 **Since:** 23
 
@@ -16,7 +16,7 @@
 height?: Length
 ```
 
-元素高度。
+Defines the height.
 
 **Type:** [Length](arkts-arkui-length-t.md)
 
@@ -36,7 +36,7 @@ height?: Length
 width?: Length
 ```
 
-元素宽度。
+Defines the width.
 
 **Type:** [Length](arkts-arkui-length-t.md)
 

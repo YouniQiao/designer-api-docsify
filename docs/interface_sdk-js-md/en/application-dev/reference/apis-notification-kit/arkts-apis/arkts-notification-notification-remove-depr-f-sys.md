@@ -11,7 +11,7 @@ function remove(
   ): void
 ```
 
-删除指定通知（Callback形式）。
+Removes a notification for a specified bundle. This API uses an asynchronous callback to return the result.
 
 **Since:** 7
 
@@ -33,10 +33,10 @@ function remove(
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| bundle | [BundleOption](arkts-notification-notificationextensionsubscription-bundleoption-t.md) | Yes | 指定应用的包信息。 |
-| notificationKey | [NotificationKey](arkts-notification-notificationsubscribe-notificationkey-i-sys.md) | Yes | 通知键值。 |
-| reason | [RemoveReason](arkts-notification-notificationsubscribe-removereason-e-sys.md) | Yes | 通知删除原因。 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | 删除指定通知回调函数。 |
+| bundle | [BundleOption](arkts-notification-notificationextensionsubscription-bundleoption-t.md) | Yes | Bundle information of the application. |
+| notificationKey | [NotificationKey](arkts-notification-notificationsubscribe-notificationkey-i-sys.md) | Yes | Notification key. |
+| reason | [RemoveReason](arkts-notification-notificationsubscribe-removereason-e-sys.md) | Yes | Reason for deleting a notification. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. |
 
 
 ## remove
@@ -45,7 +45,7 @@ function remove(
 function remove(bundle: BundleOption, notificationKey: NotificationKey, reason: RemoveReason): Promise<void>
 ```
 
-删除指定通知（Promise形式）。
+Removes a notification for a specified bundle. This API uses a promise to return the result.
 
 **Since:** 7
 
@@ -67,15 +67,15 @@ function remove(bundle: BundleOption, notificationKey: NotificationKey, reason: 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| bundle | [BundleOption](arkts-notification-notificationextensionsubscription-bundleoption-t.md) | Yes | 指定应用的包信息。 |
-| notificationKey | [NotificationKey](arkts-notification-notificationsubscribe-notificationkey-i-sys.md) | Yes | 通知键值。 |
-| reason | [RemoveReason](arkts-notification-notificationsubscribe-removereason-e-sys.md) | Yes | 通知删除原因。 |
+| bundle | [BundleOption](arkts-notification-notificationextensionsubscription-bundleoption-t.md) | Yes | Bundle information of the application. |
+| notificationKey | [NotificationKey](arkts-notification-notificationsubscribe-notificationkey-i-sys.md) | Yes | Notification key. |
+| reason | [RemoveReason](arkts-notification-notificationsubscribe-removereason-e-sys.md) | Yes | Reason for deleting a notification. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | 无返回结果的Promise对象。 |
+| Promise&lt;void&gt; | Promise that returns no value. |
 
 
 ## remove
@@ -84,7 +84,7 @@ function remove(bundle: BundleOption, notificationKey: NotificationKey, reason: 
 function remove(hashCode: string, reason: RemoveReason, callback: AsyncCallback<void>): void
 ```
 
-删除指定通知（Callback形式）。
+Removes a notification for a specified bundle. This API uses an asynchronous callback to return the result.
 
 **Since:** 7
 
@@ -106,9 +106,9 @@ function remove(hashCode: string, reason: RemoveReason, callback: AsyncCallback<
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| hashCode | string | Yes | 通知唯一ID。可以通过[onConsume](arkts-notification-notificationsubscriber-notificationsubscriber-i-sys.md#onconsume) 回调的入参[SubscribeCallbackData](arkts-notification-notificationsubscriber-subscribecallbackdata-i-sys.md)获取其内部 [NotificationRequest](arkts-notification-notificationrequest-notificationrequest-i.md)对象中的hashCode。 |
-| reason | [RemoveReason](arkts-notification-notificationsubscribe-removereason-e-sys.md) | Yes | 通知删除原因。 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | 删除指定通知回调函数。 |
+| hashCode | string | Yes | Unique notification ID. It is the value of **hashCode** in the [NotificationRequest](arkts-notification-notificationrequest-notificationrequest-i.md) object of [SubscribeCallbackData](arkts-notification-notificationsubscriber-subscribecallbackdata-i-sys.md) used in the [onConsume](arkts-notification-notificationsubscriber-notificationsubscriber-i-sys.md#onconsume) callback. |
+| reason | [RemoveReason](arkts-notification-notificationsubscribe-removereason-e-sys.md) | Yes | Reason for deleting a notification. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. |
 
 
 ## remove
@@ -117,7 +117,7 @@ function remove(hashCode: string, reason: RemoveReason, callback: AsyncCallback<
 function remove(hashCode: string, reason: RemoveReason): Promise<void>
 ```
 
-删除指定通知（Promise形式）。
+Removes a notification for a specified bundle. This API uses a promise to return the result.
 
 **Since:** 7
 
@@ -139,12 +139,12 @@ function remove(hashCode: string, reason: RemoveReason): Promise<void>
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| hashCode | string | Yes | 通知唯一ID。 |
-| reason | [RemoveReason](arkts-notification-notificationsubscribe-removereason-e-sys.md) | Yes | 通知删除原因。 |
+| hashCode | string | Yes | Unique notification ID. |
+| reason | [RemoveReason](arkts-notification-notificationsubscribe-removereason-e-sys.md) | Yes | Reason for deleting a notification. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | 无返回结果的Promise对象。 |
+| Promise&lt;void&gt; | Promise that returns no value. |
 

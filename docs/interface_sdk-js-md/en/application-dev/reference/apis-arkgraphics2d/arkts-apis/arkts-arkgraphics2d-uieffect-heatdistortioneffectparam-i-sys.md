@@ -1,6 +1,6 @@
 # HeatDistortionEffectParam (System API)
 
-热浪扭曲效果的参数。
+The parameters of heat distortion effect.
 
 **Since:** 26.0.0
 
@@ -24,7 +24,7 @@ import { uiEffect } from 'kits/@kit.ArkGraphics2D';
 intensity: double
 ```
 
-热浪扭曲的强度。取值范围为[0, 1]，超出边界会在实现时自动截断。0表示无扭曲，1表示最大扭曲程度。
+The intensity of the heat distortion.The value range is [0, 1], and values outside the range will be clamped during implementation.0 means no distortion, and 1 represents the maximum distortion level.
 
 **Type:** double
 
@@ -46,7 +46,7 @@ intensity: double
 noiseScale: double
 ```
 
-热浪扭曲的噪声缩放，控制噪声纹理的细度。取值范围为[0.1, 5.0]，超出边界会在实现时自动截断。值越大，噪声纹理越细腻。
+The noise scale of the heat distortion, controlling the fineness of the noise texture.The value range is [0.1, 5.0], and values outside the range will be clamped during implementation.A larger value results in a finer noise texture.
 
 **Type:** double
 
@@ -68,7 +68,7 @@ noiseScale: double
 progress: double
 ```
 
-热浪扭曲的动画进度。取值范围为[0, 1]，超出边界会在实现时自动截断。0对应动画开始，1对应动画结束。
+The animation progress of the heat distortion.The value range is [0, 1], and values outside the range will be clamped during implementation.0 corresponds to the start of the animation, and 1 corresponds to the end of the animation.
 
 **Type:** double
 
@@ -90,7 +90,7 @@ progress: double
 riseWeight: double
 ```
 
-热浪扭曲的上升权重，控制气泡的上升速度。取值范围为[0, 1]，超出边界会在实现时自动截断。值越大，向上运动越明显。
+The rise weight of the heat distortion, controlling the rising speed of bubbles.The value range is [0, 1], and values outside the range will be clamped during implementation.A larger value results in more obvious upward movement.
 
 **Type:** double
 

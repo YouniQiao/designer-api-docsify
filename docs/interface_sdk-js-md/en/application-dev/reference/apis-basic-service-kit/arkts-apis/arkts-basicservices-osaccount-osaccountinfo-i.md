@@ -1,6 +1,6 @@
 # OsAccountInfo
 
-表示系统账号信息。
+Represents information about an OS account.
 
 **Since:** 7
 
@@ -22,7 +22,7 @@ import { osAccount } from 'kits/@kit.BasicServicesKit';
 constraints: Array<string>
 ```
 
-系统账号[约束](../../../reference/apis-basic-services-kit/js-apis-osAccount.md#系统账号约束列表)，默认为空。
+[Constraints](../../../reference/apis-basic-services-kit/js-apis-osAccount.md#constraints) of the system account. By default, no value is passed in.
 
 **Type:** Array&lt;string&gt;
 
@@ -40,7 +40,7 @@ constraints: Array<string>
 createTime: long
 ```
 
-系统账号创建时间，以Unix时间戳格式表示，单位为s。
+OS account creation time. The value is a Unix timestamp (in seconds).
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：long
 
@@ -58,7 +58,7 @@ createTime: long
 distributedInfo: distributedAccount.DistributedInfo
 ```
 
-分布式账号信息，默认为空。
+Distributed account information. By default, no value is passed in.
 
 **Type:** distributedAccount.DistributedInfo
 
@@ -76,7 +76,7 @@ distributedInfo: distributedAccount.DistributedInfo
 domainInfo: DomainAccountInfo
 ```
 
-域账号信息，默认为空。
+Domain account information. By default, no value is passed in.
 
 **Type:** [DomainAccountInfo](arkts-basicservices-osaccount-domainaccountinfo-i.md)
 
@@ -94,7 +94,8 @@ domainInfo: DomainAccountInfo
 isActivated: boolean
 ```
 
-系统账号是否激活。true表示指定账号已激活；false表示指定账号未激活。
+Whether the OS account is activated. The value **true** means the specified account is activated; the value  
+**false** means the opposite.
 
 **Type:** boolean
 
@@ -112,9 +113,11 @@ isActivated: boolean
 isActived: boolean
 ```
 
-系统账号激活状态。true表示指定账号处于激活状态；false表示指定账号处于未激活状态。
+Whether the OS account is activated. The value **true** means the specified account is activated; the value  
+**false** means the opposite.
 
-**说明：**从API version 7开始支持，从API version 11开始废弃，建议使用isActivated。
+Note: This parameter is supported since API version 7 and deprecated since API version 11. You are advised to use  
+ **isActivated** instead.
 
 **Type:** boolean
 
@@ -136,7 +139,7 @@ isActived: boolean
 isCreateCompleted: boolean
 ```
 
-系统账号创建是否完整。true表示指定账号已创建完整；false表示指定账号未创建完整。
+Whether the OS account information is complete. The value **true** means the specified account is complete;the value **false** means the opposite.
 
 **Type:** boolean
 
@@ -154,7 +157,7 @@ isCreateCompleted: boolean
 isUnlocked: boolean
 ```
 
-账号是否已解锁（EL2级别目录是否解密）。true表示指定账号已解锁；false表示指定账号未解锁。
+Whether the account is unlocked (whether the **el2/** directory is decrypted). The value **true** means the specified account is unlocked; the value **false** means the opposite.
 
 **Type:** boolean
 
@@ -172,9 +175,10 @@ isUnlocked: boolean
 isVerified: boolean
 ```
 
-账号是否验证。true表示指定账号已验证；false表示指定账号未验证。
+Whether the account has been verified. The value **true** means the specified account has been verified; the value **false** means the opposite.
 
-**说明：**从API version 7开始支持，从API version 11开始废弃，建议使用isUnlocked。
+Note: This parameter is supported since API version 7 and deprecated since API version 11. You are advised to use  
+ **isUnlocked** instead.
 
 **Type:** boolean
 
@@ -196,7 +200,7 @@ isVerified: boolean
 lastLoginTime: long
 ```
 
-系统账号最后一次登录时间，以Unix时间戳格式表示，单位为s。
+Last login time of the OS account. The value is a Unix timestamp (in seconds).
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：long
 
@@ -214,7 +218,7 @@ lastLoginTime: long
 localId: int
 ```
 
-系统账号ID。
+ID of the target OS account.
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
@@ -232,7 +236,7 @@ localId: int
 localName: string
 ```
 
-系统账号名称。
+Name of the OS account.
 
 **Type:** string
 
@@ -250,7 +254,7 @@ localName: string
 photo: string
 ```
 
-系统账号头像，默认为空。
+Avatar of the OS account. By default, no value is passed in.
 
 **Type:** string
 
@@ -268,7 +272,7 @@ photo: string
 serialNumber: long
 ```
 
-系统账号SN码。
+SN of the OS account.
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：long
 
@@ -286,7 +290,7 @@ serialNumber: long
 type: OsAccountType
 ```
 
-系统账号类型。
+Type of the OS account.
 
 **Type:** [OsAccountType](arkts-basicservices-osaccount-osaccounttype-e.md)
 

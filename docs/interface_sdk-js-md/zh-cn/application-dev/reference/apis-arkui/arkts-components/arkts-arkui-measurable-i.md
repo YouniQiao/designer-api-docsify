@@ -118,7 +118,7 @@ measure(constraint: ConstraintSizeOptions) : MeasureResult
 
 | 类型 | 说明 |
 | --- | --- |
-| [MeasureResult](../arkts-apis/arkts-arkui-common-measureresult-i.md) | Provides the measurement result of the component. |
+| [MeasureResult](arkts-arkui-measureresult-i.md) | Provides the measurement result of the component. |
 
 ## uniqueId
 

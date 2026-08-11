@@ -12,19 +12,14 @@ import { router } from 'kits/@kit.ArkUI';
 function getStateByIndex(index: number): RouterState | undefined
 ```
 
-通过索引值获取对应页面的状态信息。
+Obtains the status information about a page by its index.
 
-> **说明：**
+> **NOTE：**
 > 
-> - 从API version 12开始支持，从API version 18开始废弃，建议使用
-> [getStateByIndex](arkts-arkui-arkui-uicontext-router-c.md#getstatebyindex)替代。getStateByIndex需先通过
-> [UIContext](arkts-arkui-uicontext.md)中的
-> [getRouter](../../../reference/apis-arkui/arkts-apis-uicontext-uicontext.md#getrouter)获取
-> [Router](arkts-arkui-uicontext.md)实例，然后通过该实例进行调用。
-> 
-> - 从API version 12开始，可以通过使用[UIContext](arkts-arkui-uicontext.md)中的
-> [getRouter](../../../reference/apis-arkui/arkts-apis-uicontext-uicontext.md#getrouter)方法获取当前UI上下文关联的
-> [Router](arkts-arkui-uicontext.md)对象。
+> - Since API version 12, you can use the
+> [getRouter](../../../reference/apis-arkui/arkts-apis-uicontext-uicontext.md#getrouter) API in
+> [UIContext](arkts-arkui-uicontext.md) to obtain the [Router](arkts-arkui-uicontext.md) object associated
+> with the current UI context.
 
 **Since:** 12
 
@@ -46,19 +41,17 @@ function getStateByIndex(index: number): RouterState | undefined
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| index | number | Yes | 表示要获取的页面索引，取值范围[1, 页面栈大小]，页面栈最大数量为32。从栈底到栈顶，index从1开始递增。索引不存在时返回undefined。 |
+| index | number | Yes | Index of the target page. The index starts from 1 from the bottom to the top of the stack. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [RouterState](arkts-arkui-router-routerstate-i.md) | 返回对应索引页面的状态信息，包含页面索引、名称、路径和参数。索引不存在时返回undefined。 |
+| [RouterState](arkts-arkui-router-routerstate-i.md) | State information about the target page; **undefined** if the specified index does not exist. |
 
 ## Examples
 
 ```TypeScript
-import { router } from '@kit.ArkUI';
-
 let options: router.RouterState | undefined = router.getStateByIndex(1);
 if (options != undefined) {
   console.info('index = ' + options.index);

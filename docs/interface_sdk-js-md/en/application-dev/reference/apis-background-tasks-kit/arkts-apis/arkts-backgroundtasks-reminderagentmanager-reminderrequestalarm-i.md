@@ -2,7 +2,7 @@
 
 ReminderRequestAlarm extends ReminderRequest
 
-闹钟实例对象，用于设置提醒的时间。
+Defines a reminder for an alarm.
 
 **Inheritance/Implementation:** ReminderRequestAlarm extends [ReminderRequest](arkts-backgroundtasks-reminderagentmanager-reminderrequest-i.md)
 
@@ -26,7 +26,7 @@ import { reminderAgentManager } from 'kits/@kit.BackgroundTasksKit';
 daysOfWeek?: Array<int>
 ```
 
-指明每周哪几天需要重复提醒。范围为周一到周日，对应数字为1到7，默认为空。
+Days of a week when the reminder repeats. The value ranges from 1 to 7, corresponding to the data from Monday to Sunday. This parameter is left empty by default.
 
 **Type:** ArkTS-Dyn: Array&lt;number&gt;  <br>ArkTS-Sta：Array&lt;int&gt;
 
@@ -44,7 +44,7 @@ daysOfWeek?: Array<int>
 hour: int
 ```
 
-指明提醒的目标时刻，范围：[0, 23]。
+Hour portion of the reminder time. The value range is [0, 23].
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
@@ -62,7 +62,7 @@ hour: int
 minute: int
 ```
 
-指明提醒的目标分钟，范围：[0, 59]。
+Minute portion of the reminder time. The value range is [0, 59].
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 

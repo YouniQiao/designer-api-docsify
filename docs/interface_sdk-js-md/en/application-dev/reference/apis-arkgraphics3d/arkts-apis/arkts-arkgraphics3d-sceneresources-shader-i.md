@@ -1,6 +1,6 @@
 # Shader
 
-着色器资源.
+Shader resource, which inherits from [SceneResource](arkts-arkgraphics3d-sceneresources-sceneresource-i.md).
 
 **Inheritance/Implementation:** Shader extends [SceneResource](arkts-arkgraphics3d-sceneresources-sceneresource-i.md)
 
@@ -24,7 +24,7 @@ ArkTS-Sta:
 setShaderInputs(inputs: Record<string, double | Vec2 | Vec3 | Vec4 | Image>): void
 ```
 
-设置着色器输入。与属性版本功能相同，但性能更优。
+Sets the inputs for the shader. This API delivers better performance than directly setting the inputs property.
 
 **Since:** 23
 
@@ -40,7 +40,7 @@ setShaderInputs(inputs: Record<string, double | Vec2 | Vec3 | Vec4 | Image>): vo
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| inputs | ArkTS-Dyn: [Record](../../apis-default/arkts-apis/arkts-record-t.md)&lt;string, number \| [Vec2](arkts-arkgraphics3d-scenetypes-vec2-i.md) \| [Vec3](arkts-arkgraphics3d-scenetypes-vec3-i.md) \| [Vec4](arkts-arkgraphics3d-scenetypes-vec4-i.md) \| Image&gt;  <br>ArkTS-Sta：[Record](../../apis-default/arkts-apis/arkts-record-t.md)&lt;string, double \| [Vec2](arkts-arkgraphics3d-scenetypes-vec2-i.md) \| [Vec3](arkts-arkgraphics3d-scenetypes-vec3-i.md) \| [Vec4](arkts-arkgraphics3d-scenetypes-vec4-i.md) \| Image&gt; | Yes | 着色器的输入 |
+| inputs | ArkTS-Dyn: [Record](../../apis-default/arkts-apis/arkts-record-t.md)&lt;string, number \| [Vec2](arkts-arkgraphics3d-scenetypes-vec2-i.md) \| [Vec3](arkts-arkgraphics3d-scenetypes-vec3-i.md) \| [Vec4](arkts-arkgraphics3d-scenetypes-vec4-i.md) \| Image&gt;  <br>ArkTS-Sta：[Record](../../apis-default/arkts-apis/arkts-record-t.md)&lt;string, double \| [Vec2](arkts-arkgraphics3d-scenetypes-vec2-i.md) \| [Vec3](arkts-arkgraphics3d-scenetypes-vec3-i.md) \| [Vec4](arkts-arkgraphics3d-scenetypes-vec4-i.md) \| Image&gt; | Yes | A mapping of strings to values for setting shader inputs. |
 
 ## inputs
 
@@ -48,7 +48,7 @@ setShaderInputs(inputs: Record<string, double | Vec2 | Vec3 | Vec4 | Image>): vo
 readonly inputs: Record<string, double | Vec2 | Vec3 | Vec4 | Image>
 ```
 
-着色器输入.
+Inputs of the shader.
 
 **Type:** ArkTS-Dyn: [Record](../../apis-default/arkts-apis/arkts-record-t.md)&lt;string, number \| [Vec2](arkts-arkgraphics3d-scenetypes-vec2-i.md) \| [Vec3](arkts-arkgraphics3d-scenetypes-vec3-i.md) \| [Vec4](arkts-arkgraphics3d-scenetypes-vec4-i.md) \| Image&gt;  <br>ArkTS-Sta：[Record](../../apis-default/arkts-apis/arkts-record-t.md)&lt;string, double \| [Vec2](arkts-arkgraphics3d-scenetypes-vec2-i.md) \| [Vec3](arkts-arkgraphics3d-scenetypes-vec3-i.md) \| [Vec4](arkts-arkgraphics3d-scenetypes-vec4-i.md) \| Image&gt;
 

@@ -1,6 +1,6 @@
 # VibrateFromPattern
 
-自定义振动效果触发马达振动。适用于需要灵活组合振动事件的交互反馈场景（如表情包拟真效果、游戏场景/操作反馈）。与VibrateFromFile相比，VibrateFromFile是面向文件中提前定制好的效果，将振动事件以文件描述符形式传递；VibrateFromPattern提供更加灵活的振动事件排列组合，将振动事件以振动事件数组的形式传递。
+Defines the custom vibration effect.
 
 **Since:** 18
 
@@ -22,7 +22,7 @@ import { vibrator } from 'kits/@kit.SensorServiceKit';
 pattern: VibratorPattern
 ```
 
-振动事件数组。由[VibratorPatternBuilder](arkts-sensorservice-vibrator-vibratorpatternbuilder-c.md)的addContinuousEvent和addTransientEvent方法添加后通过build方法生成。同一VibratorPattern中多个VibratorEvent的time值不能重叠。
+Vibration event array, which is the **VibratorPattern** object returned by **build() **.
 
 **Type:** [VibratorPattern](arkts-sensorservice-vibrator-vibratorpattern-i.md)
 
@@ -40,7 +40,7 @@ pattern: VibratorPattern
 type: 'pattern'
 ```
 
-值为'pattern'，根据组合模式触发马达振动。固定值，不可更改。
+If the value is **pattern**, the vibrator vibrates based on the specified pattern.
 
 **Type:** 'pattern'
 

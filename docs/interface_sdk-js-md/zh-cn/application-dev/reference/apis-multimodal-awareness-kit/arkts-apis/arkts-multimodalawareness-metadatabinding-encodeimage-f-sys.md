@@ -1,18 +1,12 @@
 # encodeImage（系统接口）
 
-## 导入模块
-
-```TypeScript
-import { metadataBinding } from 'kits/@kit.MultimodalAwarenessKit';
-```
-
 ## encodeImage
 
 ```TypeScript
 function encodeImage(srcImage: image.PixelMap, metadata: string): Promise<image.PixelMap>
 ```
 
-Encodes metadata into an image. This API uses a promise to return the result.
+在图片中加入信息。通过特定的编码算法将metadata信息嵌入到图片中。可用于防伪、版权保护等场景。使用promise异步回调。
 
 **起始版本：** 18
 
@@ -28,37 +22,20 @@ Encodes metadata into an image. This API uses a promise to return the result.
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| srcImage | image.PixelMap | 是 | Source image. |
-| metadata | string | 是 | Metadata to be encoded. |
+| srcImage | image.PixelMap | 是 | 待编码的原始图片，用于嵌入metadata信息的图片。 |
+| metadata | string | 是 | 嵌入的信息。字符串编码格式建议使用UTF-8，长度不应超过128Bytes，且避免包含不可打印字符。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;image.PixelMap&gt; | Promise object, which is used to return the image with encoded metadata. |
+| Promise&lt;image.PixelMap&gt; | Promise对象。返回嵌入信息的图片。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 32100001 | Internal handling failed. |
-| 202 | Permission check failed. A non-system application uses the system API. |
-| 32100002 | Encode process fail. Possible causes: &lt;br&gt;1. Image processing error. &lt;br&gt;2. Channel coding error. |
-
-## 示例
-
-```TypeScript
-import { image } from '@kit.ImageKit';
-import { metadataBinding } from '@kit.MultimodalAwarenessKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let captureImage: image.PixelMap | undefined = undefined;
-let metadata: string = "";
-let srcImage: image.PixelMap | undefined = undefined;
-metadataBinding.encodeImage(srcImage, metadata).then((pixelMap: image.PixelMap) => {
-  captureImage = pixelMap;
-}).catch((error: BusinessError) => {
-  console.error(`Failed to encode image. Code: ${error.code}, message: ${error.message}`);
-});
-```
+| [32100001](../../apis-multimodalawareness-kit/errorcode-metadataBinding.md#32100001-文件创建失败) | Internal handling failed. |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission check failed. A non-system application uses the system API. |
+| [32100002](../../apis-multimodalawareness-kit/errorcode-metadataBinding.md#32100002-编码程序执行失败) | Encode process fail. Possible causes: &lt;br&gt;1. Image processing error. &lt;br&gt;2. Channel coding error. |
 

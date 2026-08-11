@@ -12,8 +12,8 @@ import { bundleManager } from 'kits/@kit.AbilityKit';
 function getProfileByExtensionAbilitySync(moduleName: string, extensionAbilityName: string, metadataName?: string): Array<string>
 ```
 
-以同步方法根据给定的moduleName、extensionAbilityName和metadataName（module.json5中  
-[metadata标签](../../../quick-start/module-configuration-file.md#metadata标签)下的name）获取自身相应配置文件的json格式字符串，返回对象为string数组。
+Obtains the JSON string array of the current application's configuration file based on the given module name,ExtensionAbility name, and metadata name (name configured in  
+[metadata](../../../quick-start/module-configuration-file.md#metadata) of the **module.json5** file). This API returns the result synchronously. The result value is a string array.
 
 **Since:** 10
 
@@ -29,24 +29,24 @@ function getProfileByExtensionAbilitySync(moduleName: string, extensionAbilityNa
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| moduleName | string | Yes | 表示Module名称。 |
-| extensionAbilityName | string | Yes | 表示ExtensionAbility组件的名称。 |
-| metadataName | string | No | 表示ExtensionAbility组件的元信息名称，即module.json5配置文件中 [extensionAbilities标签](../../../quick-start/module-configuration-file.md#extensionabilities标签)下的metadata标签的 name，默认值为空。 |
+| moduleName | string | Yes | Module name. |
+| extensionAbilityName | string | Yes | Name of the ExtensionAbility component. |
+| metadataName | string | No | Metadata name of the ExtensionAbility component, that is, **name** of the **metadata** tag under [extensionAbilities](../../../quick-start/module-configuration-file.md#extensionabilities) in the **module.json5** file. The default value is null. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Array&lt;string&gt; | 返回Array&lt;string&gt;对象。 |
+| Array&lt;string&gt; | An array of JSON strings. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types. |
-| 17700024 | Failed to get the profile because there is no profile in the HAP. |
-| 17700002 | The specified moduleName is not existed. |
-| 17700003 | The specified extensionAbilityName not existed. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types. |
+| [17700024](../errorcode-bundle.md#17700024-profile-does-not-exist) | Failed to get the profile because there is no profile in the HAP. |
+| [17700002](../errorcode-bundle.md#17700002-module-name-does-not-exist) | The specified moduleName is not existed. |
+| [17700003](../errorcode-bundle.md#17700003-ability-name-does-not-exist) | The specified extensionAbilityName not existed. |
 
 ## Examples
 

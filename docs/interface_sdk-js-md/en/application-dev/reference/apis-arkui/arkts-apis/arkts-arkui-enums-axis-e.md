@@ -1,6 +1,6 @@
 # Axis
 
-定义轴的方向。
+Axis enumeration description.
 
 **Since:** 23
 
@@ -16,7 +16,7 @@
 Vertical = 0
 ```
 
-方向为纵向。
+Longitudinal arrangement
 
 **Since:** 23
 
@@ -34,7 +34,7 @@ Vertical = 0
 Horizontal = 1
 ```
 
-方向为横向。
+Horizontal arrangement.
 
 **Since:** 23
 

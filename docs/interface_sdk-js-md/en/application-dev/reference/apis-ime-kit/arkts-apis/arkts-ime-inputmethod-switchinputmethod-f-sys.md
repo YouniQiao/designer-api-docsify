@@ -12,7 +12,7 @@ import { inputMethod } from 'kits/@kit.IMEKit';
 function switchInputMethod(bundleName: string, subtypeId?: string): Promise<void>
 ```
 
-切换输入法，使用promise异步回调。
+Switches to another input method. This API uses a promise to return the result.
 
 **Since:** 11
 
@@ -30,24 +30,24 @@ function switchInputMethod(bundleName: string, subtypeId?: string): Promise<void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| bundleName | string | Yes | 目标输入法包名。 |
-| subtypeId | string | No | 输入法子类型。 |
+| bundleName | string | Yes | Bundle name of the target input method. |
+| subtypeId | string | No | Input method subtype. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | 无返回结果的Promise对象。 |
+| Promise&lt;void&gt; | Promise that returns no value. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types; 3.Parameter verification failed. |
-| 12800005 | configuration persistence error. |
-| 201 | permissions check fails. |
-| 202 | not system application. |
-| 12800008 | input method manager service error. Possible cause: a system error, such as null pointer, IPC exception. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types; 3.Parameter verification failed. |
+| [12800005](../errorcode-inputmethod-framework.md#12800005-configuration-persistence-error) | configuration persistence error. |
+| [201](../../errorcode-universal.md#201-permission-denied) | permissions check fails. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | not system application. |
+| [12800008](../errorcode-inputmethod-framework.md#12800008-input-method-manager-service-error) | input method manager service error. Possible cause: a system error, such as null pointer, IPC exception. |
 
 ## Examples
 

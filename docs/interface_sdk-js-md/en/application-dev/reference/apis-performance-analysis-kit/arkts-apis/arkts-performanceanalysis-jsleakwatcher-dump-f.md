@@ -12,7 +12,7 @@ import { jsLeakWatcher } from 'kits/@kit.PerformanceAnalysisKit';
 function dump(filePath: string): Array<string>
 ```
 
-����й©�б���������ڴ���ա�
+Dumps the list of leaked objects and VM memory snapshot.
 
 **Since:** 12
 
@@ -26,13 +26,13 @@ function dump(filePath: string): Array<string>
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| filePath | string | Yes | ������Ϣ���ɵ��ļ���ŵ�·����&lt;br&gt;**˵��**����API version 24��ʼ���������������ڣ����������µ�һ�ݿ�����Ϣ�� |
+| filePath | string | Yes | Path for storing exported information files. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Array&lt;string&gt; | ����������ֱ�Ϊ�ļ�����׺Ϊ.jsleaklist��й©�б����ļ�����׺Ϊ.heapsnapshot������ڴ�����ļ��� &lt;br&gt;**˵��**��dump�ɹ�������й©�б��ļ�·����������ڴ����·����dumpʧ�ܣ����ؿ����顣 |
+| Array&lt;string&gt; | Export result. The file name extension is **.jsleaklist** for the list of leaked objects and **.heapsnapshot** for the VM memory snapshot. &lt;br&gt;Note: If the dump is successful, the path of the leaked object list file and the VM memory snapshot path are returned. Otherwise, an empty array is returned. |
 
 ## Examples
 

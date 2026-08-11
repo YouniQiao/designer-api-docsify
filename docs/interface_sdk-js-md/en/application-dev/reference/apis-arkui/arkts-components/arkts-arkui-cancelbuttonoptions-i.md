@@ -1,6 +1,6 @@
 # CancelButtonOptions
 
-定义清除按钮选项。
+Defines the CancelButton options.
 
 **Since:** 12
 
@@ -16,7 +16,7 @@
 icon?: IconOptions
 ```
 
-右侧清除按钮图标。不传入时使用默认清除图标样式。
+Icon of the Cancel button on the right.
 
 **Type:** [IconOptions](arkts-arkui-iconoptions-i.md)
 
@@ -38,7 +38,7 @@ icon?: IconOptions
 style?: CancelButtonStyle
 ```
 
-右侧清除按钮显示状态。默认值：CancelButtonStyle.INPUT。
+Display state of the Cancel button on the right.
 
 **Type:** [CancelButtonStyle](arkts-arkui-cancelbuttonstyle-e.md)
 

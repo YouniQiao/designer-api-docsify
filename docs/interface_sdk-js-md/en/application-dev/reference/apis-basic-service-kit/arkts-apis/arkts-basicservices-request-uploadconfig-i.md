@@ -1,6 +1,6 @@
 # UploadConfig
 
-上传任务的配置信息。
+Describes the configuration of an upload task.
 
 **Since:** 6
 
@@ -22,7 +22,7 @@ import { request } from 'kits/@kit.BasicServicesKit';
 begins?: long
 ```
 
-上传任务开始时读取的文件起点，单位为字节（B）。默认值为0，取值范围为闭区间，表示从头开始传输。
+File start point to read when the upload task begins, in bytes. The default value is **0**. The value is a closed interval, indicating that the file is read from the beginning.
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：long
 
@@ -40,7 +40,7 @@ begins?: long
 data: Array<RequestData>
 ```
 
-请求的表单数据。
+Form data in the request body.
 
 **Type:** Array&lt;RequestData&gt;
 
@@ -58,7 +58,7 @@ data: Array<RequestData>
 ends?: long
 ```
 
-上传任务结束时读取的文件终点，单位为字节（B）。默认值为-1，取值范围为闭区间，表示传输到整个文件末尾结束。
+File end point to read when the upload task ends, in bytes. The default value is **-1**. The value is a closed interval, indicating that the file is read till the end.
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：long
 
@@ -76,7 +76,7 @@ ends?: long
 files: Array<File>
 ```
 
-要上传的文件列表。文件以HTTP的multipart/form-data格式提交。
+List of files to upload. The files are submitted in multipart/form-data format.
 
 **Type:** Array&lt;File&gt;
 
@@ -94,7 +94,7 @@ files: Array<File>
 header: Object
 ```
 
-添加要包含在上传请求中的HTTP或HTTPS标志头。
+HTTP or HTTPS header added to an upload request.
 
 **Type:** Object
 
@@ -112,7 +112,7 @@ header: Object
 index?: int
 ```
 
-任务的路径索引，默认值为0。
+Path index of the task. The default value is **0**.
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
@@ -130,7 +130,7 @@ index?: int
 method: string
 ```
 
-HTTP请求方法：POST、PUT，缺省为POST。使用POST新增资源，使用PUT修改资源。
+HTTP request method. The value can be **POST** or **PUT**. The default value is **POST**. Use **POST** to add resources and **PUT** to modify resources.
 
 **Type:** string
 
@@ -148,8 +148,8 @@ HTTP请求方法：POST、PUT，缺省为POST。使用POST新增资源，使用P
 url: string
 ```
 
-资源地址。从API 6到API 14，最大长度为2048个字符；从API 15开始，最大长度为8192个字符。支持  
-[HTTP拦截](../../../basic-services/request/app-file-upload-download.md#http拦截)功能。
+Resource URL. From API version 6 to 14, the value contains a maximum of 2048 characters; since API version 15, the value contains a maximum of 8192 characters.   
+[Intercepting HTTP](../../../basic-services/request/app-file-upload-download.md#intercepting-http) is supported.
 
 **Type:** string
 

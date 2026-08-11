@@ -1,6 +1,6 @@
 # Pkcs12ParsingConfig
 
-表示解析P12的配置。
+Represents the configuration for parsing P12.
 
 **Since:** 18
 
@@ -22,7 +22,7 @@ import { cert } from 'kits/@kit.DeviceCertificateKit';
 needsCert?: boolean
 ```
 
-表示是否获取证书。默认为true。true为获取，false为不获取。
+Whether to obtain the certificate. The default value is **true**. **true**: yes; **false**: no.
 
 **Type:** boolean
 
@@ -44,7 +44,7 @@ needsCert?: boolean
 needsOtherCerts?: boolean
 ```
 
-表示是否获取其他证书。默认为false。true为获取，false为不获取。
+Whether to obtain other certificates. The default value is **false**. **true**: yes; **false**: no.
 
 **Type:** boolean
 
@@ -66,9 +66,9 @@ needsOtherCerts?: boolean
 needsPrivateKey?: boolean
 ```
 
-表示是否获取私钥。默认为true。
+Whether to obtain the private key. The default value is **true**.
 
-true为获取，返回PKCS8编码的私钥数据；false为不获取。
+**true**: To obtain the private key in PKCS #8 format; **false**: Not to obtain the private key.
 
 **Type:** boolean
 
@@ -90,7 +90,7 @@ true为获取，返回PKCS8编码的私钥数据；false为不获取。
 password: string
 ```
 
-密码。
+Password.
 
 **Type:** string
 
@@ -110,11 +110,11 @@ password: string
 privateKeyFormat?: EncodingBaseFormat
 ```
 
-表示获取私钥的格式，当前支持PEM和DER格式。参数缺省时，默认为PEM格式。
+Format of the private key to be obtained. Currently, the PEM and DER formats are supported. If this parameter is not specified, the PEM format is used by default.
 
-> **说明：**
+> **NOTE：**
 > 
-> 当needsPrivateKey值为true时，该参数生效。
+> This parameter is valid only when **needsPrivateKey** is set to **true**.
 
 **Type:** [EncodingBaseFormat](arkts-devicecertificate-cert-encodingbaseformat-e.md)
 

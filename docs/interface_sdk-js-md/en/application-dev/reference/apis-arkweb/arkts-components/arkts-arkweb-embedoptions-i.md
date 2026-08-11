@@ -1,6 +1,6 @@
 # EmbedOptions
 
-Web同层渲染的配置。
+Represents the same-layer rendering configuration of the **Web** component.
 
 **Since:** 16
 
@@ -16,13 +16,13 @@ Web同层渲染的配置。
 supportCssDisplayChange?: boolean
 ```
 
-设置同层渲染可见性接口是否支持显示属性。
+Whether the same-layer rendering visibility API supports the display attribute.
 
-同层渲染可见性接口默认支持同层标签相对于视口的可见状态。
+By default, the visibility status of same-layer tags relative to the viewport is supported.
 
-设置为true时，支持显示CSS属性，包括visibility、display和宽高。
+If this attribute is set to **true**, CSS attributes can be displayed, including visibility, display, width, and height.
 
-设置为false时，不支持显示CSS属性，仅支持同层标签相对于视口的可见性。
+Otherwise, CSS attributes are not displayed, and only same-layer tags are visible relative to the viewport.
 
 **Type:** boolean
 
@@ -42,17 +42,17 @@ supportCssDisplayChange?: boolean
 supportDefaultIntrinsicSize?: boolean
 ```
 
-设置同层渲染元素是否支持固定大小 300 * 150。
+Whether a same-layer rendering element supports the fixed size of 300 × 150.
 
-当H5侧CSS设置了大小时，同层渲染元素大小为CSS大小，否则为固定大小。
+When the size of an element is set using CSS on the HTML5 side, the size of the same-layer rendering element uses the CSS size. Otherwise, the size is fixed.
 
-为true时，固定大小为 300 * 150。
+If the value is **true**, the fixed size is 300 × 150.
 
-为false时，若H5侧CSS未设置大小，则同层渲染元素不渲染。
+If the value is **false** and the CSS size is not set on the HTML5 side, the same-layer rendering elements are not rendered.
 
-默认值：false
+Default value: **false**.
 
-单位：像素。
+Unit: pixels.
 
 **Type:** boolean
 

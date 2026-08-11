@@ -1,6 +1,6 @@
 # TextTimerOptions
 
-用于构建TextTimer组件的选项。
+Parameters of the TextTimer component.
 
 **Since:** 23
 
@@ -16,7 +16,7 @@
 controller?: TextTimerController
 ```
 
-TextTimer控制器。
+TextTimer controller.
 
 **Type:** [TextTimerController](../arkts-components/arkts-arkui-texttimercontroller-c.md)
 
@@ -36,7 +36,9 @@ TextTimer控制器。
 count?: long
 ```
 
-计时器时间（isCountDown为true时生效），单位为毫秒。最长不超过86400000毫秒（24小时）。 0<count<86400000时，count值为计时器初始值。否则，使用默认值为计时器初始值。默认值：60000ms。
+Timer duration, in milliseconds.It is effective only when isCountDown is true.The maximum value is 86400000 ms (24 hours).Default value: 60000 ms.
+
+&lt;p&gt;&lt;strong&gt;NOTE&lt;/strong&gt;:&lt;br&gt;If the value is between 0 and 86,400,000, it is used as the initial countdown time.&lt;br&gt;Otherwise, the default value is used as the initial countdown time.&lt;/p&gt;
 
 **Type:** long
 
@@ -56,7 +58,7 @@ count?: long
 isCountDown?: boolean
 ```
 
-倒计时开关。true：计时器开启倒计时，例如从30秒~0秒。false：计时器开始计时，例如从0秒~30秒。默认值：false。
+Whether the timer is a countdown.The value true means that the timer counts down,and false means that the timer counts up.Default value: false.
 
 **Type:** boolean
 
@@ -76,7 +78,9 @@ isCountDown?: boolean
 startTime?: int
 ```
 
-计时器经过的时间，单位为设置格式的最小单位。
+The start time of the timer.It is effective only when isCountDown is false.The value should be an integer.
+
+Unit: ms.Default value: 0.
 
 **Type:** int
 

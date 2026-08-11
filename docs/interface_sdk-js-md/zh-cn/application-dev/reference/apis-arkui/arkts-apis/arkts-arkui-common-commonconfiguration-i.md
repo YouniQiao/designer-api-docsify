@@ -18,7 +18,7 @@ contentModifier: ContentModifier<T>
 
 Obtains the contentModifier instance object
 
-**类型：** [ContentModifier](../arkts-components/arkts-arkui-contentmodifier-i.md)&lt;T&gt;
+**类型：** [ContentModifier](arkts-arkui-common-contentmodifier-i.md)&lt;T&gt;
 
 **起始版本：** 23
 

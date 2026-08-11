@@ -1,6 +1,20 @@
 # MessageHandler
 
-自定义通信对象。
+Represents a custom communication object.
+
+> **NOTE：**
+> 
+> You can register this object to receive custom communication data sent by the edit box application attached to
+> the input method application. When the custom communication data is received, the
+> [onMessage](arkts-ime-inputmethodengine-messagehandler-i.md#onmessage) callback in
+> this object is triggered.
+> 
+> This object is globally unique. After multiple registrations, only the last registered object is valid and
+> retained, and the [onTerminated](arkts-ime-inputmethodengine-messagehandler-i.md#onterminated) callback of the
+> penultimate registered object is triggered.
+> 
+> If this object is unregistered, its [onTerminated](arkts-ime-inputmethodengine-messagehandler-i.md#onterminated)
+> callback will be triggered.
 
 **Since:** 15
 
@@ -22,9 +36,7 @@ import { inputMethodEngine } from 'kits/@kit.IMEKit';
 onMessage: OnMessageCallback
 ```
 
-onMessage(msgId: string, msgParam?: ArrayBuffer): void
-
-接收已绑定当前输入法应用的编辑框应用发送的自定义数据回调函数。
+This method is called when a custom message is received.
 
 **Since:** 23
 
@@ -40,9 +52,15 @@ onMessage(msgId: string, msgParam?: ArrayBuffer): void
 onMessage(msgId: string, msgParam?: ArrayBuffer): void
 ```
 
-接收已绑定当前输入法应用的编辑框应用发送的自定义数据回调函数。
+Receives the custom data callback sent by the edit box application attached to the input method application.
 
-&lt;p&gt;当已注册的MessageHandler接收到来自已绑定当前输入法应用的编辑框应用所发送的自定义通信数据时，会触发该回调函数。&lt;/p&gt;&lt;p&gt;msgId为必选参数，msgParam为可选参数。存在收到仅有msgId自定义数据的可能，需与数据发送方确认自定义数据。&lt;/p&gt;
+> **NOTE：**
+> 
+> This callback is triggered when the registered [MessageHandler](arkts-ime-inputmethodengine-messagehandler-i.md)
+> receives custom communication data sent by the edit box application attached to the input method application.
+> 
+> The **msgId** parameter is mandatory, and the **msgParam** parameter is optional. If only the custom **msgId**
+> data is received, confirm it with the data sender.
 
 **Since:** 15
 
@@ -56,8 +74,8 @@ onMessage(msgId: string, msgParam?: ArrayBuffer): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| msgId | string | Yes | 接收到的自定义通信数据的标识符。 |
-| msgParam | ArrayBuffer | No | 接收到的自定义通信数据的消息体。 |
+| msgId | string | Yes | Identifier of the received custom communication data. |
+| msgParam | ArrayBuffer | No | Message body of the received custom communication data. |
 
 ## Examples
 
@@ -72,7 +90,7 @@ inputMethodEngine.getInputMethodAbility()
           console.info('OnTerminated.');
         },
         onMessage(msgId: string, msgParam?: ArrayBuffer): void {
-          console.info(`recv message, msgId is ${msgId}, msgParam is ${JSON.stringify(msgParam)}`);
+          console.info('recv message.');
         }
       }
       inputClient.recvMessage(messageHandler);
@@ -85,9 +103,17 @@ inputMethodEngine.getInputMethodAbility()
 onTerminated(): void
 ```
 
-监听对象终止回调函数。
+Listens for MessageHandler termination.
 
-&lt;p&gt;当应用注册新的MessageHandler对象时，会触发上一个已注册MessageHandler对象的onTerminated回调函数。&lt;/p&gt;&lt;p&gt;当应用取消注册时，会触发当前已注册MessageHandler对象的onTerminated回调函数。&lt;/p&gt;
+> **NOTE：**
+> 
+> When an application registers a new [MessageHandler](arkts-ime-inputmethodengine-messagehandler-i.md) object, the
+> [onTerminated](arkts-ime-inputmethodengine-messagehandler-i.md#onterminated) callback of the penultimate registered
+> [MessageHandler](arkts-ime-inputmethodengine-messagehandler-i.md) object is triggered.
+> 
+> When an application unregisters a new [MessageHandler](arkts-ime-inputmethodengine-messagehandler-i.md) object, the
+> [onTerminated](arkts-ime-inputmethodengine-messagehandler-i.md#onterminated) callback of the registered
+> [MessageHandler](arkts-ime-inputmethodengine-messagehandler-i.md) object is triggered.
 
 **Since:** 15
 
@@ -110,7 +136,7 @@ inputMethodEngine.getInputMethodAbility()
           console.info('OnTerminated.');
         },
         onMessage(msgId: string, msgParam?: ArrayBuffer): void {
-          console.info(`recv message, msgId is ${msgId}, msgParam is ${JSON.stringify(msgParam)}`);
+          console.info('recv message.');
         }
       }
       inputClient.recvMessage(messageHandler);
@@ -123,9 +149,7 @@ inputMethodEngine.getInputMethodAbility()
 onTerminated: Callback<void>
 ```
 
-onTerminated(): void
-
-监听对象终止回调函数。
+This method is called when a new message handler is set.
 
 **Type:** [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;void&gt;
 

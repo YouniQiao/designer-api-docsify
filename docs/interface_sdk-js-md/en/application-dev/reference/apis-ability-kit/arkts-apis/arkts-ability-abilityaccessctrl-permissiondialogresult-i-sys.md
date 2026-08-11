@@ -1,6 +1,6 @@
 # PermissionDialogResult (System API)
 
-表示权限弹窗查询结果。
+Represents the permission dialog query result.
 
 **Since:** 26.0.0
 
@@ -24,7 +24,7 @@ import { Context, Permissions, PermissionRequestResult } from 'kits/@kit.Ability
 detailList: Array<PermissionDialogDetail>
 ```
 
-权限弹窗的信息列表。
+List of permission dialog information.
 
 **Type:** Array&lt;PermissionDialogDetail&gt;
 

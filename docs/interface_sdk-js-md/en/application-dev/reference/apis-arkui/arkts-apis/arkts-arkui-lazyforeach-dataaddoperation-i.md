@@ -1,6 +1,6 @@
 # DataAddOperation
 
-添加单个数据。
+Defines add operation.
 
 **Since:** 23
 
@@ -16,7 +16,7 @@
 count?: int
 ```
 
-插入数量，默认为1。
+Count of added data in one operation.Only validate for ADD and DELETE.
 
 **Type:** int
 
@@ -38,7 +38,7 @@ count?: int
 index: int
 ```
 
-插入数据索引值。取值范围是[0, 数据源长度-1]。
+Index of added data.
 
 **Type:** int
 
@@ -58,7 +58,7 @@ index: int
 key?: string | Array<string>
 ```
 
-为插入的数据分配键值。
+Key of added data.
 
 **Type:** string \| Array&lt;string&gt;
 
@@ -78,7 +78,7 @@ key?: string | Array<string>
 type: DataOperationType
 ```
 
-数据添加类型。
+How to operate added data.
 
 **Type:** [DataOperationType](arkts-arkui-lazyforeach-dataoperationtype-e.md)
 

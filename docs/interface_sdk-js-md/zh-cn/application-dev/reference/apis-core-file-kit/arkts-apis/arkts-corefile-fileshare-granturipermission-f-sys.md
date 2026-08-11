@@ -1,11 +1,5 @@
 # grantUriPermission（系统接口）
 
-## 导入模块
-
-```TypeScript
-import { fileShare } from 'kits/@kit.CoreFileKit';
-```
-
 ## grantUriPermission
 
 ```TypeScript
@@ -44,9 +38,9 @@ function grantUriPermission(
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 401 | The input parameter is invalid.Possible causes:1.Mandatory parameters are left unspecified; &lt;br&gt;2.Incorrect parameter types. |
-| 201 | Permission verification failed |
-| 202 | The caller is not a system application |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | The input parameter is invalid.Possible causes:1.Mandatory parameters are left unspecified; &lt;br&gt;2.Incorrect parameter types. |
+| [201](../../errorcode-universal.md#201-权限校验失败) | Permission verification failed |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | The caller is not a system application |
 | 14300001 | IPC error |
 
 ## 示例
@@ -113,9 +107,9 @@ function grantUriPermission(uri: string, bundleName: string, flag: wantConstant.
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 401 | The input parameter is invalid.Possible causes:1.Mandatory parameters are left unspecified; &lt;br&gt;2.Incorrect parameter types. |
-| 201 | Permission verification failed |
-| 202 | The caller is not a system application |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | The input parameter is invalid.Possible causes:1.Mandatory parameters are left unspecified; &lt;br&gt;2.Incorrect parameter types. |
+| [201](../../errorcode-universal.md#201-权限校验失败) | Permission verification failed |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | The caller is not a system application |
 | 14300001 | IPC error |
 
 ## 示例
@@ -180,10 +174,10 @@ function grantUriPermission(policies: Array<PolicyInfo>, targetBundleName: strin
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 801 | Capability not supported. |
+| [801](../../errorcode-universal.md#801-该设备不支持此api) | Capability not supported. |
 | 13900001 | Operation not permitted. |
-| 201 | Permission verification failed. |
-| 202 | The caller is not a system application. |
+| [201](../../errorcode-universal.md#201-权限校验失败) | Permission verification failed. |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | The caller is not a system application. |
 | 13900011 | Out of memory. |
 
 ## 示例

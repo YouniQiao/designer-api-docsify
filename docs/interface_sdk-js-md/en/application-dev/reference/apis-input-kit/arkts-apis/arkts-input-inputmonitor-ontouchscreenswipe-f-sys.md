@@ -12,7 +12,7 @@ import { inputMonitor } from 'kits/@kit.InputKit';
 function onTouchscreenSwipe(fingers: int, receiver: Callback<TouchGestureEvent>): void
 ```
 
-监听触摸屏滑动手势事件。
+Enables listening touchscreen swipe gesture events.
 
 **Since:** 23
 
@@ -30,14 +30,14 @@ function onTouchscreenSwipe(fingers: int, receiver: Callback<TouchGestureEvent>)
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| fingers | int | Yes | 滑动手势的手指数，取值范围：[3,5]。 |
-| receiver | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[TouchGestureEvent](arkts-input-multimodalinput-gestureevent-touchgestureevent-i-sys.md)&gt; | Yes | 回调函数，异步上报触摸屏滑动手势事件。 |
+| fingers | int | Yes | Number of fingers. |
+| receiver | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[TouchGestureEvent](arkts-input-multimodalinput-gestureevent-touchgestureevent-i-sys.md)&gt; | Yes | Callback used to receive reported data. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. 3.Parameter verification failed. |
-| 201 | Permission denied. |
-| 202 | Caller is not a system application. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. 3.Parameter verification failed. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Caller is not a system application. |
 

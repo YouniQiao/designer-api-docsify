@@ -1,6 +1,6 @@
 # ExtendAction
 
-编辑框中文本的扩展编辑操作类型，如剪切、复制等。
+Describes the type of the extended edit action on the text box.
 
 **Since:** 10
 
@@ -16,7 +16,7 @@
 SELECT_ALL = 0
 ```
 
-全选。
+Select all.
 
 **Since:** 10
 
@@ -32,7 +32,7 @@ SELECT_ALL = 0
 CUT = 3
 ```
 
-剪切。
+Cut.
 
 **Since:** 10
 
@@ -48,7 +48,7 @@ CUT = 3
 COPY = 4
 ```
 
-复制。
+Copy.
 
 **Since:** 10
 
@@ -64,7 +64,7 @@ COPY = 4
 PASTE = 5
 ```
 
-粘贴。
+Paste.
 
 **Since:** 10
 

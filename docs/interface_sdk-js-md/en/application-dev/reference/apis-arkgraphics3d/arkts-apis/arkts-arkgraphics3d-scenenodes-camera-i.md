@@ -1,6 +1,6 @@
 # Camera
 
-定义相机.
+Defines camera.
 
 **Inheritance/Implementation:** Camera extends [Node](arkts-arkgraphics3d-scenenodes-node-i.md)
 
@@ -18,7 +18,7 @@
 getProjectionMatrix(): Mat4x4
 ```
 
-获取相机的投影矩阵.
+Get the projection matrix of this camera.
 
 **Since:** 23
 
@@ -32,7 +32,7 @@ getProjectionMatrix(): Mat4x4
 
 | Type | Description |
 | --- | --- |
-| [Mat4x4](arkts-arkgraphics3d-scenetypes-mat4x4-i.md) | 相机的投影矩阵 |
+| [Mat4x4](arkts-arkgraphics3d-scenetypes-mat4x4-i.md) | the projection matrix of this camera |
 
 ## getViewMatrix
 
@@ -40,7 +40,7 @@ getProjectionMatrix(): Mat4x4
 getViewMatrix(): Mat4x4
 ```
 
-获取相机的视图矩阵.
+Get the view matrix of this camera.
 
 **Since:** 23
 
@@ -54,7 +54,7 @@ getViewMatrix(): Mat4x4
 
 | Type | Description |
 | --- | --- |
-| [Mat4x4](arkts-arkgraphics3d-scenetypes-mat4x4-i.md) | 相机的视图矩阵 |
+| [Mat4x4](arkts-arkgraphics3d-scenetypes-mat4x4-i.md) | the view matrix of this camera |
 
 ## raycast
 
@@ -62,7 +62,7 @@ getViewMatrix(): Mat4x4
 raycast(viewPosition: Vec2, params: RaycastParameters): Promise<RaycastResult[]>
 ```
 
-向屏幕上的位置投射射线并列出射线击中的对象.
+Casts a ray from a specific position on the screen to detect and retrieve information about all hit 3D objects.This API uses a promise to return the result.
 
 **Since:** 20
 
@@ -76,14 +76,14 @@ raycast(viewPosition: Vec2, params: RaycastParameters): Promise<RaycastResult[]>
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| viewPosition | [Vec2](arkts-arkgraphics3d-scenetypes-vec2-i.md) | Yes | 在归一化设备坐标中投射的位置. |
-| params | [RaycastParameters](arkts-arkgraphics3d-scene-raycastparameters-i.md) | Yes | 执行射线检测使用的选项. |
+| viewPosition | [Vec2](arkts-arkgraphics3d-scenetypes-vec2-i.md) | Yes | Normalized screen coordinates. The value range is [0, 1], where (0,0) corresponds to the top-left corner of the Component3D component, and (1,1) corresponds to the bottom-right corner. |
+| params | [RaycastParameters](arkts-arkgraphics3d-scene-raycastparameters-i.md) | Yes | Configuration parameters for raycasting, such as detection range and filtered nodes. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;[RaycastResult](arkts-arkgraphics3d-scene-raycastresult-i.md)[]&gt; | 返回命中结果数组的Promise，按从近到远排序. 数组可能为空. |
+| Promise&lt;[RaycastResult](arkts-arkgraphics3d-scene-raycastresult-i.md)[]&gt; | An array of hit objects sorted by distance (from nearest to farthest). If no objects are hit, an empty array is returned. |
 
 ## clearColor
 
@@ -91,7 +91,7 @@ raycast(viewPosition: Vec2, params: RaycastParameters): Promise<RaycastResult[]>
 clearColor: Color | null
 ```
 
-背景清除颜色（环境背景会覆盖此颜色,需要BACKGROUND_NONE才能实际生效).
+Color after the render target is cleared.
 
 **Type:** [Color](arkts-arkgraphics3d-scenetypes-color-i.md) \| null
 
@@ -109,7 +109,7 @@ clearColor: Color | null
 readonly effects: Container<Effect>
 ```
 
-应用于相机输出的特效.
+Post-processing effects applied to the camera output.
 
 **Type:** [Container](arkts-arkgraphics3d-scenenodes-container-i.md)&lt;[Effect](arkts-arkgraphics3d-sceneresources-effect-i.md)&gt;
 
@@ -127,7 +127,7 @@ readonly effects: Container<Effect>
 enabled: boolean
 ```
 
-相机是否启用.
+Whether the camera is enabled. true if enabled, false otherwise.
 
 **Type:** boolean
 
@@ -145,7 +145,7 @@ enabled: boolean
 farPlane: double
 ```
 
-相机远平面, 单位为世界坐标系下的场景单位（例如cm、m、km等）.
+Far plane. The unit is the scene unit (such as cm, m, and km) in the world coordinate system.The value is greater than that of nearPlane.
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：double
 
@@ -163,7 +163,7 @@ farPlane: double
 fov: double
 ```
 
-相机视场, 单位为弧度.
+Field of view. The unit is radian (rad).The value ranges from 0 to π radians.
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：double
 
@@ -181,7 +181,7 @@ fov: double
 msaa?: boolean
 ```
 
-控制是否启用MSAA.
+Whether Multisample Anti-Aliasing (MSAA) is enabled. true if enabled, false otherwise.The default value is false.
 
 **Type:** boolean
 
@@ -201,7 +201,7 @@ msaa?: boolean
 nearPlane: double
 ```
 
-相机近平面, 单位为世界坐标系下的场景单位（例如cm、m、km等）.
+Near plane. The unit is the scene unit (such as cm, m, and km) in the world coordinate system.The value is greater than 0.
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：double
 
@@ -219,7 +219,7 @@ nearPlane: double
 postProcess: PostProcessSettings | null
 ```
 
-相机的后处理设置.
+Post-processing settings.
 
 **Type:** [PostProcessSettings](arkts-arkgraphics3d-scenepostprocesssettings-postprocesssettings-i.md) \| null
 
@@ -237,11 +237,11 @@ postProcess: PostProcessSettings | null
 renderingPipeline?: RenderingPipelineType
 ```
 
-控制渲染管线. 请注意，如果选择了FORWARD_LIGHTWEIGHT管线，某些功能将不可用.
+Rendering pipeline type. If this parameter is not set, the lightweight forward rendering pipeline is used by default.(If the FORWARD_LIGHTWEIGHT pipeline is selected, certain features are unavailable.)
 
 **Type:** [RenderingPipelineType](arkts-arkgraphics3d-scenetypes-renderingpipelinetype-e.md)
 
-**Default:** RenderingPipelineType.FORWARD_LIGHTWEIGHT 前向轻量级渲染管线
+**Default:** RenderingPipelineType.FORWARD_LIGHTWEIGHT
 
 **Since:** 21
 

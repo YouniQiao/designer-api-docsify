@@ -15,12 +15,6 @@
 
 **系统接口：** 此接口为系统接口。
 
-## 导入模块
-
-```TypeScript
-import { reminderAgentManager } from 'kits/@kit.BackgroundTasksKit';
-```
-
 ## equalTo
 
 ```TypeScript
@@ -29,7 +23,7 @@ equalTo: Record<string, double | string | boolean>
 
 指示筛选条件，当前仅支持通过等于筛选。
 
-**类型：** ArkTS-Dyn: [Record](../../apis-default/arkts-apis/arkts-record-t.md)&lt;string, number \| string \| boolean&gt;  <br>ArkTS-Sta：[Record](../../apis-default/arkts-apis/arkts-record-t.md)&lt;string, double \| string \| boolean&gt;
+**类型：** ArkTS-Dyn: Record&lt;string, number \| string \| boolean&gt;  <br>ArkTS-Sta：Record&lt;string, double \| string \| boolean&gt;
 
 **起始版本：** 11
 

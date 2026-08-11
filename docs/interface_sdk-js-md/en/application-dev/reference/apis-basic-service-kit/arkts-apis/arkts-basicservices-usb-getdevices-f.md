@@ -12,7 +12,7 @@ import { usb } from 'kits/@kit.BasicServicesKit';
 function getDevices(): Array<Readonly<USBDevice>>
 ```
 
-获取USB设备列表。
+Obtains the USB device list.
 
 **Since:** 8
 
@@ -30,7 +30,7 @@ function getDevices(): Array<Readonly<USBDevice>>
 
 | Type | Description |
 | --- | --- |
-| Array&lt;Readonly&lt;USBDevice&gt;&gt; | 设备信息列表。 |
+| Array&lt;Readonly&lt;USBDevice&gt;&gt; | USB device list. |
 
 ## Examples
 

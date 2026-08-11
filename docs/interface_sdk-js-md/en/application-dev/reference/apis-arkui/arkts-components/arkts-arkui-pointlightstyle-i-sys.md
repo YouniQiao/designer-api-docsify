@@ -1,6 +1,6 @@
 # PointLightStyle (System API)
 
-通过设置光源和被照亮的类型实现点光源照亮周围组件的UI效果。
+You apply a point light style by setting the light source that emits illumination and the components to be illuminated.
 
 **Since:** 11
 
@@ -18,9 +18,9 @@
 bloom?: number
 ```
 
-设置组件的发光强度，取值范围为[0, 1]，超出取值范围时会转换为默认值。
+Luminous intensity of the component. The recommended value range is 0-1.
 
-默认值：0
+Default value: **0**
 
 **Type:** number
 
@@ -44,9 +44,9 @@ bloom?: number
 illuminated?: IlluminatedType
 ```
 
-设置当前组件是否可以被光源照亮，以及被照亮的类型。
+Whether the current component can be illuminated by the light source and the illuminated type.
 
-默认值：IlluminatedType.NONE
+Default value: **IlluminatedType.NONE**
 
 **Type:** [IlluminatedType](../arkts-apis/arkts-arkui-illuminatedtype-e-sys.md)
 
@@ -70,9 +70,9 @@ illuminated?: IlluminatedType
 lightSource?: LightSource
 ```
 
-设置光源属性，光源会影响到周围标记为可以被照亮的组件，并在组件上产生光效。
+Light source. The light source affects the surrounding components that are marked as illuminable and creates light effects on those components.
 
-默认值：无光源
+Default value: none
 
 **Type:** [LightSource](../arkts-apis/arkts-arkui-common-lightsource-i-sys.md)
 

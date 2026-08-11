@@ -1,6 +1,6 @@
 # SuppressWarningsType
 
-支持消除告警的规则。帮助开发者根据实际需求选择性地屏蔽兼容性告警、多设备告警、权限告警等，在确保代码质量的同时减少不必要的告警干扰，提升开发体验。
+Defines the warning types that support suppression. Developers can selectively suppress compatibility warnings,multi-device warnings, and permission warnings as required. This helps ensure code quality, reduce unnecessary warning interference, and improve development experience.
 
 **Since:** 23
 
@@ -16,7 +16,7 @@
 COMPATIBILITY = 'compatibility'
 ```
 
-支持消除兼容性告警。当调用API的起始版本高于工程设置的兼容SDK版本时（build-profile.json5中指定的compatibleSdkVersion）产生的告警。建议在已做版本判断或兼容性处理时使用，避免盲目抑制告警导致低版本设备运行异常。
+Compatibility warning.This warning is generated when the start version of the API called is later than the compatible SDK version set for the project(compatibleSdkVersion specified in build-profile.json5).It is recommended that this warning be suppressed when version check or compatibility processing has been performed.Suppressing this warning without proper handling may cause devices running earlier versions to malfunction.
 
 **Since:** 23
 
@@ -38,7 +38,7 @@ COMPATIBILITY = 'compatibility'
 SYSCAP = 'syscap'
 ```
 
-支持消除多设备告警。当调用API的系统能力在目标设备上不支持时产生的告警。
+Multi-device warning.This warning is generated when the system capability obtained by calling the API is not supported on the target device.
 
 **Since:** 23
 
@@ -60,7 +60,7 @@ SYSCAP = 'syscap'
 PERMISSION = 'permission'
 ```
 
-支持消除权限告警。当调用需要权限的API但未在配置文件中声明相应权限时产生的告警。
+Permission warning.This warning is generated when an API that requires permissions is called but the corresponding permissions are not declared in the configuration file.
 
 **Since:** 26.0.0
 

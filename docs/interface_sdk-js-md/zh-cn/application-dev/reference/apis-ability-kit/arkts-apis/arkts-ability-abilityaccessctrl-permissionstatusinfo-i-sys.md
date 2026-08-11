@@ -12,12 +12,6 @@
 
 **系统接口：** 此接口为系统接口。
 
-## 导入模块
-
-```TypeScript
-import { Context, Permissions, PermissionRequestResult } from 'kits/@kit.AbilityKit';
-```
-
 ## grantFlags
 
 ```TypeScript
@@ -60,7 +54,7 @@ grantStatus: GrantStatus
 
 权限授权状态。
 
-**类型：** [GrantStatus](arkts-ability-bundle-grantstatus-e.md)
+**类型：** [GrantStatus](arkts-ability-abilityaccessctrl-grantstatus-e.md)
 
 **起始版本：** 26.0.0
 
@@ -104,7 +98,7 @@ permissionName: Permissions
 
 权限名称。
 
-**类型：** [Permissions](arkts-ability-permissions-t.md)
+**类型：** Permissions
 
 **起始版本：** 26.0.0
 

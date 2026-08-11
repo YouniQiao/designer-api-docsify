@@ -1,6 +1,6 @@
 # WindowAnimationTarget (System API)
 
-目标窗口，用来远程控制实现动画。
+Window animation target.
 
 **Since:** 23
 
@@ -18,7 +18,7 @@
 readonly abilityName: string
 ```
 
-动画窗口所对应的Ability。
+The ability name of the window animation target.
 
 **Type:** string
 
@@ -40,7 +40,7 @@ readonly abilityName: string
 readonly bundleName: string
 ```
 
-动画窗口所对应的进程。
+The bundle name of the window animation target.
 
 **Type:** string
 
@@ -62,7 +62,7 @@ readonly bundleName: string
 readonly missionId: int
 ```
 
-任务ID。
+The mission id of the window animation target.
 
 **Type:** int
 
@@ -84,7 +84,7 @@ readonly missionId: int
 readonly windowBounds: RRect
 ```
 
-动画窗口实际大小。
+The window bounds of the window animation target.
 
 **Type:** [RRect](arkts-arkui-windowanimationmanager-rrect-i-sys.md)
 

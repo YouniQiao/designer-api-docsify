@@ -12,7 +12,7 @@ import { hiTraceChain } from 'kits/@kit.PerformanceAnalysisKit';
 function isFlagEnabled(id: HiTraceId, flag: HiTraceFlag): boolean
 ```
 
-判断HiTraceId是否启用了跟踪标志flag，同步接口。用于在业务逻辑中根据跟踪标志进行不同处理，例如检查是否启用了INCLUDE_ASYNC标志以决定是否等待异步操作完成、检查是否启用了TP_INFO标志以决定是否打印调试信息。
+Checks whether the trace flag is enabled for **HiTraceId**. This API returns the result synchronously.
 
 **Since:** 8
 
@@ -26,14 +26,14 @@ function isFlagEnabled(id: HiTraceId, flag: HiTraceFlag): boolean
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| id | [HiTraceId](arkts-performanceanalysis-hitracechain-hitraceid-i.md) | Yes | 需要判断指定跟踪标志是否启用的HiTraceId实例。 |
-| flag | [HiTraceFlag](arkts-performanceanalysis-hitracechain-hitraceflag-e.md) | Yes | 指定的跟踪标志。 |
+| id | [HiTraceId](arkts-performanceanalysis-hitracechain-hitraceid-i.md) | Yes | HiTraceId** instance to be checked. |
+| flag | [HiTraceFlag](arkts-performanceanalysis-hitracechain-hitraceflag-e.md) | Yes | Specified trace flag. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| boolean | true：HiTraceId已启用flag；false：HiTraceId未启用flag。 |
+| boolean | The value **true** indicates that the flag for **HiTraceId** is enabled, and **false** indicates the opposite. |
 
 ## Examples
 

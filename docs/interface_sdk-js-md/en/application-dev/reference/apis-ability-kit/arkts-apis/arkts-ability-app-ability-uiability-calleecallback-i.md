@@ -1,6 +1,6 @@
 # CalleeCallback
 
-通用组件服务端注册消息通知的回调函数类型。
+Defines the callback of the registration message notification of the UIAbility.
 
 **Since:** 9
 
@@ -22,7 +22,7 @@ import { Callee, Caller, OnReleaseCallback, OnRemoteStateChangeCallback, CalleeC
 (indata: rpc.MessageSequence): rpc.Parcelable
 ```
 
-定义Callee的回调函数。
+Defines the callback of Callee.
 
 **Since:** 9
 
@@ -38,11 +38,11 @@ import { Callee, Caller, OnReleaseCallback, OnRemoteStateChangeCallback, CalleeC
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| indata | rpc.MessageSequence | Yes | 发送需传递的数据。 |
+| indata | rpc.MessageSequence | Yes | Data to be transferred. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| rpc.Parcelable | 返回的数据对象。 |
+| rpc.Parcelable | Returned data object. |
 

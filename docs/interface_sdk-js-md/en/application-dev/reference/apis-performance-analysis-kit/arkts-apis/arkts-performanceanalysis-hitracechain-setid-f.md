@@ -12,9 +12,9 @@ import { hiTraceChain } from 'kits/@kit.PerformanceAnalysisKit';
 function setId(id: HiTraceId): void
 ```
 
-设置跟踪标识，同步接口。用于在需要将外部跟踪标识设置到当前线程的场景，例如从父线程继承跟踪标识、从其他进程接收跟踪标识、从设备间通信获取跟踪标识。
+Sets a trace ID. This API returns the result synchronously.
 
-将给定的HiTraceId设置到当前线程TLS中。若给定的HiTraceId无效，则不执行任何操作。
+Sets the given HiTrace ID to the TLS of the current thread. If the given HiTrace ID is invalid, no operation is performed.
 
 **Since:** 8
 
@@ -28,7 +28,7 @@ function setId(id: HiTraceId): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| id | [HiTraceId](arkts-performanceanalysis-hitracechain-hitraceid-i.md) | Yes | HiTraceId实例。 |
+| id | [HiTraceId](arkts-performanceanalysis-hitracechain-hitraceid-i.md) | Yes | HiTraceId** instance. |
 
 ## Examples
 

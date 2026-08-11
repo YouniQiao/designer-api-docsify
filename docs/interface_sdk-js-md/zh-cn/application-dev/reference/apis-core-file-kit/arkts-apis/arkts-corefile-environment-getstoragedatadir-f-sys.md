@@ -1,11 +1,5 @@
 # getStorageDataDir（系统接口）
 
-## 导入模块
-
-```TypeScript
-import { Environment } from 'kits/@kit.CoreFileKit';
-```
-
 ## getStorageDataDir
 
 ```TypeScript
@@ -35,7 +29,7 @@ function getStorageDataDir(): Promise<string>
 | 错误码ID | 错误信息 |
 | --- | --- |
 | 13900020 | Invalid argument |
-| 202 | The caller is not a system application |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | The caller is not a system application |
 | 13900042 | Unknown error |
 
 
@@ -68,6 +62,6 @@ function getStorageDataDir(callback: AsyncCallback<string>): void
 | 错误码ID | 错误信息 |
 | --- | --- |
 | 13900020 | Invalid argument |
-| 202 | The caller is not a system application |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | The caller is not a system application |
 | 13900042 | Unknown error |
 

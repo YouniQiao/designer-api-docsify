@@ -1,0 +1,42 @@
+# addRule
+
+## Modules to Import
+
+```TypeScript
+import { hichecker } from 'kits/@kit.PerformanceAnalysisKit';
+```
+
+## addRule
+
+```TypeScript
+function addRule(rule: bigint): void
+```
+
+Adds one or more rules. HiChecker detects unexpected operations or gives feedback based on the added rules.
+
+**Since:** 8
+
+**Deprecated since:** 9
+
+**Substitutes:** [hichecker.addCheckRule](arkts-performanceanalysis-hichecker-addcheckrule-f.md#addcheckrule)
+
+<!--Device-hichecker-function addRule(rule: bigint): void--><!--Device-hichecker-function addRule(rule: bigint): void-End-->
+
+**System capability:** SystemCapability.HiviewDFX.HiChecker
+
+**Parameters:**
+
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| rule | bigint | Yes |
+
+## Examples
+
+```TypeScript
+// Add a rule.
+hichecker.addRule(hichecker.RULE_CAUTION_PRINT_LOG);
+
+// Add multiple rules.
+hichecker.addRule(
+          hichecker.RULE_CAUTION_PRINT_LOG | hichecker.RULE_CAUTION_TRIGGER_CRASH);
+```

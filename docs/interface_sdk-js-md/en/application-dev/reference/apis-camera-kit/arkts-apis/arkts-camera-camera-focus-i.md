@@ -1,8 +1,8 @@
 # Focus
 
-Focus继承自[FocusQuery](arkts-camera-camera-focusquery-i.md)。
+**Focus** inherits from [FocusQuery](arkts-camera-camera-focusquery-i.md).
 
-对焦类，对设备对焦操作。
+It provides APIs related to focus operations.
 
 **Inheritance/Implementation:** Focus extends [FocusQuery](arkts-camera-camera-focusquery-i.md)
 
@@ -32,7 +32,7 @@ ArkTS-Sta:
 getFocalLength(): double
 ```
 
-查询当前的焦距值。
+Obtains the focal length in use.
 
 **Since:** 11
 
@@ -48,13 +48,13 @@ getFocalLength(): double
 
 | Type | Description |
 | --- | --- |
-| ArkTS-Dyn: number  <br>ArkTS-Sta：double | 用于获取当前焦距，单位mm。接口调用失败会返回相应错误码，错误码类型[CameraErrorCode]{ |
+| ArkTS-Dyn: number  <br>ArkTS-Sta：double | Focal length, in mm. If the operation fails, an error code defined in [CameraErrorCode]{ |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 7400103 | Session not config. |
+| [7400103](../errorcode-camera.md#7400103-session-not-configured) | Session not config. |
 
 ## getFocusMode
 
@@ -62,7 +62,7 @@ getFocalLength(): double
 getFocusMode(): FocusMode
 ```
 
-获取当前的对焦模式。
+Obtains the focus mode in use.
 
 **Since:** 11
 
@@ -78,13 +78,13 @@ getFocusMode(): FocusMode
 
 | Type | Description |
 | --- | --- |
-| [FocusMode](arkts-camera-camera-focusmode-e.md) | 获取当前设备的焦距模式。接口调用失败会抛出相应错误码并返回undefined，错误码类型 [CameraErrorCode]{ |
+| [FocusMode](arkts-camera-camera-focusmode-e.md) | Focus mode obtained. If the operation fails, undefined is returned and an error code defined in [CameraErrorCode]{ |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 7400103 | Session not config. |
+| [7400103](../errorcode-camera.md#7400103-session-not-configured) | Session not config. |
 
 ## getFocusPoint
 
@@ -92,7 +92,7 @@ getFocusMode(): FocusMode
 getFocusPoint(): Point
 ```
 
-查询当前的焦点。
+Obtains the focal point in use.
 
 **Since:** 11
 
@@ -108,13 +108,13 @@ getFocusPoint(): Point
 
 | Type | Description |
 | --- | --- |
-| [Point](arkts-camera-camera-point-i.md) | 用于获取当前的焦点。接口调用失败会返回相应错误码，错误码类型为[CameraErrorCode]{ |
+| [Point](arkts-camera-camera-point-i.md) | Focal point obtained. If the operation fails, an error code defined in [CameraErrorCode]{ |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 7400103 | Session not config. |
+| [7400103](../errorcode-camera.md#7400103-session-not-configured) | Session not config. |
 
 ## lockFocusTracking
 
@@ -122,7 +122,7 @@ getFocusPoint(): Point
 lockFocusTracking(focusPoint: Point): void
 ```
 
-锁定焦点跟踪，使对焦持续追踪指定的物体。通过focusPoint参数指定追踪目标。
+Lock focus tracking.
 
 **Since:** 26.0.0
 
@@ -140,14 +140,14 @@ lockFocusTracking(focusPoint: Point): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| focusPoint | [Point](arkts-camera-camera-point-i.md) | Yes | 锁定对焦跟踪点。x、y的取值范围均为 [0, 1]，超出范围则设置不生效。(0, 0)表示画面左上角，(1, 1)表示画面右下角。 |
+| focusPoint | [Point](arkts-camera-camera-point-i.md) | Yes | lock focus tracking point. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 7400103 | Session not config, only throw in session usage. |
-| 7400201 | Camera service fatal error. |
+| [7400103](../errorcode-camera.md#7400103-session-not-configured) | Session not config, only throw in session usage. |
+| [7400201](../errorcode-camera.md#7400201-camera-service-error) | Camera service fatal error. |
 
 ## setFocusMode
 
@@ -155,9 +155,9 @@ lockFocusTracking(focusPoint: Point): void
 setFocusMode(afMode: FocusMode): void
 ```
 
-设置对焦模式。
+Sets a focus mode.
 
-进行设置之前，需要先检查设备是否支持指定的焦距模式，可使用方法[isFocusModeSupported](arkts-camera-camera-focusquery-i.md#isfocusmodesupported)。
+Before the setting, call [isFocusModeSupported](arkts-camera-camera-focusquery-i.md#isfocusmodesupported) to check whether the focus mode is supported.
 
 **Since:** 11
 
@@ -173,13 +173,13 @@ setFocusMode(afMode: FocusMode): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| afMode | [FocusMode](arkts-camera-camera-focusmode-e.md) | Yes | 指定的焦距模式。传参为null或者undefined，作为0处理，手动对焦模式。 |
+| afMode | [FocusMode](arkts-camera-camera-focusmode-e.md) | Yes | Focus mode. If the input parameter is null or undefined, it is treated as 0 and manual focus is used. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 7400103 | Session not config. |
+| [7400103](../errorcode-camera.md#7400103-session-not-configured) | Session not config. |
 
 ## setFocusPoint
 
@@ -187,9 +187,9 @@ setFocusMode(afMode: FocusMode): void
 setFocusPoint(point: Point): void
 ```
 
-设置焦点，焦点应在0-1坐标系内，该坐标系左上角为{0，0}，右下角为{1，1}。
+Sets the focal point. The focal point must be in the coordinate system (0-1), where the top-left corner is {0, 0}and the bottom-right corner is {1, 1}.
 
-此坐标系是以设备充电口在右侧时的横向设备方向为基准的，例如应用的预览界面布局以设备充电口在下侧时的竖向方向为基准，布局宽高为{w，h}，且触碰点为{x，y}，则转换后的坐标点为{y/h，1-x/w}。
+The coordinate system is based on the horizontal device direction with the device's charging port on the right. If the layout of the preview screen of an application is based on the vertical direction with the charging port on the lower side, the layout width and height are {w, h}, and the touch point is {x, y}, then the coordinate point after conversion is {y/h, 1-x/w}.
 
 **Since:** 11
 
@@ -205,13 +205,13 @@ setFocusPoint(point: Point): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| point | [Point](arkts-camera-camera-point-i.md) | Yes | 焦点。x、y设置范围应在[0，1]之内，超过范围，如果小于0设置0，大于1设置1。 |
+| point | [Point](arkts-camera-camera-point-i.md) | Yes | Focal point. The value range of x and y must be within [0, 1]. If a value less than 0 is passed, the value **0** is used. If a value greater than **1** is passed, the value **1** is used. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 7400103 | Session not config. |
+| [7400103](../errorcode-camera.md#7400103-session-not-configured) | Session not config. |
 
 ## unlockFocusTracking
 
@@ -219,7 +219,7 @@ setFocusPoint(point: Point): void
 unlockFocusTracking(): void
 ```
 
-解锁焦点跟踪。
+Unlock focus tracking.
 
 **Since:** 26.0.0
 
@@ -237,6 +237,6 @@ unlockFocusTracking(): void
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 7400103 | Session not config, only throw in session usage. |
-| 7400201 | Camera service fatal error. |
+| [7400103](../errorcode-camera.md#7400103-session-not-configured) | Session not config, only throw in session usage. |
+| [7400201](../errorcode-camera.md#7400201-camera-service-error) | Camera service fatal error. |
 

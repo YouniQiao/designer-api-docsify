@@ -1,12 +1,14 @@
 # DecorationStyleInterface
 
-文本装饰线样式接口对象说明。
+Describes the API object for text decoration line styles.
 
-> **说明：**
+> **NOTE：**
 > 
-> 当文字的下边缘轮廓与装饰线位置相交时，会触发下划线避让规则，下划线将在这些字符处避让文字。常见“gjyqp”等英文字符。
+> When the bottom contour of a character intersects with the decoration, underline avoidance is triggered, commonly
+> affecting characters like "g", "j", "y", "q", and "p."
 > 
-> 当文本装饰线的颜色设置为Color.Transparent时，装饰线颜色设置为跟随每行第一个字的字体颜色。当文本装饰线的颜色设置为透明色16进制对应值“#00FFFFFF”时，装饰线颜色设置为透明色。
+> If the decoration color is set to **Color.Transparent**, it inherits the text color of the first character in each
+> line. If the decoration color is set to **"#00FFFFFF"**, the line becomes fully transparent.
 
 **Since:** 12
 
@@ -22,9 +24,9 @@
 color?: ResourceColor
 ```
 
-装饰线颜色。
+Color of the text decorative line.
 
-默认值：Color.Black
+Default value: **Color.Black**.
 
 **Type:** [ResourceColor](arkts-arkui-resourcecolor-t.md)
 
@@ -46,9 +48,9 @@ color?: ResourceColor
 style?: TextDecorationStyle
 ```
 
-装饰线样式。具体枚举及说明请参考TextDecorationStyle。
+Style of the text decorative line.
 
-默认值：TextDecorationStyle.SOLID。
+Default value: **TextDecorationStyle.SOLID**.
 
 **Type:** [TextDecorationStyle](arkts-arkui-enums-textdecorationstyle-e.md)
 
@@ -70,13 +72,13 @@ style?: TextDecorationStyle
 thicknessScale?: number
 ```
 
-装饰线粗细缩放。
+Scale factor for the decoration line thickness.
 
-默认值：1.0 
+Default value: **1.0**.
 
-取值范围：[0, +∞) 
+Value range: [0, +∞).
 
-**说明：** 负值按默认值处理。
+Note: Negative values are treated as the default value.
 
 **Type:** number
 
@@ -98,9 +100,9 @@ thicknessScale?: number
 type: TextDecorationType
 ```
 
-装饰线类型。具体枚举及说明请参考TextDecorationType。
+Type of the text decorative line.
 
-默认值：TextDecorationType.None。
+Default value: **TextDecorationType.None**.
 
 **Type:** [TextDecorationType](arkts-arkui-textdecorationtype-e.md)
 

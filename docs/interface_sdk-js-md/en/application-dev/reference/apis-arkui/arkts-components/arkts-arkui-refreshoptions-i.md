@@ -1,20 +1,31 @@
 # RefreshOptions
 
-用于设置Refresh组件参数。
+Defines the options of the **Refresh** component.
 
-> **补充说明：**
+> **Supplementary Notes**
 > 
-> - 当未设置builder或refreshingContent时，是通过更新子组件的[translate](../arkts-apis/arkts-arkui-common-commonmethod-i.md/arkts-arkui-common-commonmethod-i.md#translate)属性实现的下拉
-> 位移效果。下拉位移过程中不会触发子组件的
-> [onAreaChange](../arkts-apis/arkts-arkui-common-commonmethod-i.md/arkts-arkui-common-commonmethod-i.md#onareachange)事件。子组件设置
-> [translate](../arkts-apis/arkts-arkui-common-commonmethod-i.md/arkts-arkui-common-commonmethod-i.md#translate)属性时不会生效。
+> - If neither **builder** nor **refreshingContent** is set, the pull-down displacement effect is implemented by
+> adjusting the [translate](../arkts-apis/arkts-arkui-common-commonmethod-i.md/arkts-arkui-common-commonmethod-i.md#translate) attribute of the child component.
+> During the pull-down process, the
+> [onAreaChange](../arkts-apis/arkts-arkui-common-commonmethod-i.md/arkts-arkui-common-commonmethod-i.md#onareachange) event of the child
+> component is not triggered, and any changes made to the
+> [translate](../arkts-apis/arkts-arkui-common-commonmethod-i.md/arkts-arkui-common-commonmethod-i.md#translate) attribute of the child component do not take
+> effect.
 > 
-> - 当设置了builder或refreshingContent时，是通过更新子组件相对于Refresh组件的位置实现的下拉位移效果。下拉位移过程中可以触发子组件的
-> [onAreaChange](../arkts-apis/arkts-arkui-common-commonmethod-i.md/arkts-arkui-common-commonmethod-i.md#onareachange)事件。子组件设置
-> [position](../arkts-apis/arkts-arkui-common-commonmethod-i.md/arkts-arkui-common-commonmethod-i.md#position)属性时会固定子组件相对于Refresh组件的位置，导致子组件不会跟手进行下拉位移。
+> - When **builder** or **refreshingContent** is set, the pull-down displacement effect is implemented by adjusting
+> the position of the child component relative to the **Refresh** component. During the pull-down process, the
+> [onAreaChange](../arkts-apis/arkts-arkui-common-commonmethod-i.md/arkts-arkui-common-commonmethod-i.md#onareachange) event of the child
+> component can be triggered. However, if the [position](../arkts-apis/arkts-arkui-common-commonmethod-i.md/arkts-arkui-common-commonmethod-i.md#position) attribute is set for the child
+> component, the position of the child component relative to the **Refresh** component is fixed, preventing the child
+> component from moving down with the pull gesture.
 > 
-> - 通过builder参数设置的自定义组件在未指定宽度和高度时，其尺寸将自适应子组件，在指定宽度而未指定高度时，其高度将自适应下拉距离。通过refreshingContent参数设置的自定义组件若未指定高度，其高度同样会自适应下拉
-> 距离。当自定义组件高度自适应下拉距离时，随着下拉距离的增加，该组件的高度亦随之增加；当自定义组件的高度设定为固定值或自适应至最大高度时，随着下拉距离的增加，自定义组件与Refresh组件上边界之间的间距亦会随之增加。
+> - If the width and height of a custom component set by **builder** are not specified, its dimensions will adapt to
+> the child components. If the width is specified but the height is not, the height of the component is automatically
+> adjusted according to the pull-down distance. If a custom component set by **refreshingContent** does not have a
+> specified height, its height will also adapt to the pull-down distance. In such cases, as the pull-down distance
+> increases, the height of the custom component will increase accordingly. When the custom component's height is set
+> to a fixed value or reaches its maximum height limit, further increases in the pull-down distance will cause the
+> spacing between the custom component and the top boundary of the **Refresh** component to widen.
 
 **Since:** 8
 
@@ -30,8 +41,8 @@
 builder?: CustomBuilder
 ```
 
-自定义刷新区域显示内容。&lt;br/&gt;**说明：**&lt;br/&gt;API version 10及之前版本，自定义组件的高度限制在64vp之内。API version 11及以后版本没有此限制。&lt;br/&gt;自定义组件设置了固定高度时，自定义组件会以固定高度显示在刷新区域下方；自定义组件未设置高度时，自定义组件高度会自适应刷新区域高度，会发生自定义组件高度跟随刷新区域变化至0的现象。建议对自定义组件设置最小高度约束来避免自定义组件高度小于预期的情况发生，具体可参照
-[示例3](../../../reference/apis-arkui/arkui-ts/ts-container-refresh.md#示例3自定义刷新区域显示内容-builder)。&lt;br/&gt;从API version 12开始，建议使用refreshingContent参数替代builder参数自定义刷新区域显示内容，以避免刷新过程中因自定义组件销毁重建造成的动画中断问题。
+Custom content in the refreshing area.NOTE In API version 10 and earlier versions, there is a height limit of 64 vp on custom components. This restriction is removed since API version 11.When a custom component is set with a fixed height, it will be displayed below the refreshing area at that fixed height; when the custom component does not have a height set, its height will adapt to the height of the refreshing area, which may result in the height of the custom component changing to 0 along with the refreshing area. To maintain the intended layout, configure a minimum height constraint for a custom component, which ensures that the component's height does not fall below a certain threshold. For details about how to apply this constraint, see  
+[Example 3](../../../reference/apis-arkui/arkui-ts/ts-container-refresh.md#example-3-customizing-the-refreshing-area-content-with-builder).Since API version 12, use **refreshingContent** instead of **builder** for customizing the content of the refreshing area, to avoid animation interruptions caused by the destruction and re-creation of the custom component during the refreshing process.
 
 **Type:** [CustomBuilder](arkts-arkui-custombuilder-t.md)
 
@@ -53,8 +64,11 @@ builder?: CustomBuilder
 friction?: number | string
 ```
 
-下拉摩擦系数，取值范围为0到100。&lt;br/&gt;默认值：62&lt;br/&gt;- 0表示下拉刷新容器不跟随手势下拉而下拉。&lt;br/&gt;- 100表示下拉刷新容器紧紧跟随手势下拉而下拉。&lt;br/&gt;- 数值越大，下拉刷新容器跟随手势下拉的反应越灵敏。&lt;br/&gt;**说明：** 从API version 8开始支持，从API version 11开始废弃，建议使用
-[pullDownRatio](../../../reference/apis-arkui/arkui-ts/ts-container-refresh.md#pulldownratio12)替代。
+Coefficient of friction, which indicates the component's sensitivity to the pull-down gesture.The value ranges from 0 to 100. Default value: 62
+
+- 0 indicates that the component is not sensitive to the pull-down gesture.  
+- 100 indicates that the component is highly sensitive to the pull-down gesture.  
+- A larger value indicates a more sensitive response of the component to the pull-down gesture.
 
 **Type:** number \| string
 
@@ -76,7 +90,8 @@ friction?: number | string
 offset?: number | string
 ```
 
-下拉起点距离组件顶部的距离。&lt;br/&gt;默认值：16，单位vp。类型为string时，需要显式指定像素单位，如'10px'；未指定像素单位时，如'10'，单位为vp。&lt;br/&gt;**说明：** 从API version 8开始支持，从API version 11开始废弃，无替代接口。&lt;br/&gt;**说明：**&lt;br/&gt;offset取值范围[0vp,64vp]。大于64vp按照64vp处理。不支持百分比，不支持负数。
+Distance from the pull-down starting point to the top of the component.Default value: **16**. Unit: vp. If the type is string, the pixel unit must be explicitly specified, for example,  
+**'10px'**; if the unit is not specified, for example, **'10'**, the default unit vp is used.Note: This API is supported since API version 8 and deprecated since API version 11. No substitute is provided.NOTE The value range of **offset** is [0vp, 64vp]. If the value is greater than 64 vp, the value 64 vp will be used.The value cannot be a percentage or a negative number.
 
 **Type:** number \| string
 
@@ -96,9 +111,9 @@ offset?: number | string
 promptText?: ResourceStr
 ```
 
-设置刷新区域底部显示的自定义文本。&lt;br/&gt;**说明：**&lt;br/&gt;输入文本的限制参考Text组件，使用builder或refreshingContent参数自定义刷新区域显示内容时，promptText不显示。&lt;br/&gt;promptText设置有效时，
-[refreshOffset](../../../reference/apis-arkui/arkui-ts/ts-container-refresh.md#refreshoffset12)属性默认值为96vp。&lt;br/&gt;自定义文本最大的字体缩放倍数  
-[maxFontScale](../../../reference/apis-arkui/arkui-ts/ts-basic-components-text.md#maxfontscale12)为2。
+Custom text displayed at the bottom of the refreshing area.NOTE When setting the text, follow the constraints on the **Text** components. If you are using **builder** or  
+**refreshingContent** to customize the content displayed in the refreshing area, the text set with  
+**promptText** will not be displayed.When **promptText** is set and effective, the refreshOffset attribute defaults to 96 vp.The maximum font scale factor for the custom text, as specified by maxFontScale, is 2.
 
 **Type:** [ResourceStr](../arkts-apis/arkts-arkui-resourcestr-t.md)
 
@@ -120,7 +135,7 @@ promptText?: ResourceStr
 refreshing: boolean
 ```
 
-组件当前是否处于刷新中状态。true表示处于刷新中状态，false表示未处于刷新中状态。&lt;br/&gt;默认值：false&lt;br/&gt;该参数支持\$\$双向绑定变量。
+Whether the component is being refreshed. The value **true** means that the component is being refreshed,and **false** means the opposite.Default value: **false**This parameter supports two-way binding through \$\$.
 
 **Type:** boolean
 
@@ -140,8 +155,8 @@ refreshing: boolean
 refreshingContent?: ComponentContent
 ```
 
-自定义刷新区域显示内容。&lt;br/&gt;**说明：**&lt;br/&gt;与builder参数同时设置时builder参数不生效。&lt;br/&gt;自定义组件设置了固定高度时，自定义组件会以固定高度显示在刷新区域下方；自定义组件未设置高度时，自定义组件高度会自适应刷新区域高度，会发生自定义组件高度跟随刷新区域变化至0的现象。建议对自定义组件设置最小高度约束来避免自定义组件高度小于预期的情况发生，具体可参照
-[示例4](../../../reference/apis-arkui/arkui-ts/ts-container-refresh.md#示例4自定义刷新区域显示内容-refreshingcontent)。
+Custom content in the refreshing area.NOTE If this parameter and the **builder** parameter are set at the same time, the **builder** parameter does not take effect.When a custom component is set with a fixed height, it will be displayed below the refreshing area at that fixed height; when the custom component does not have a height set, its height will adapt to the height of the refreshing area, which may result in the height of the custom component changing to 0 along with the refreshing area. To maintain the intended layout, configure a minimum height constraint for a custom component, which ensures that the component's height does not fall below a certain threshold. For details about how to apply this constraint, see  
+[Example 4](../../../reference/apis-arkui/arkui-ts/ts-container-refresh.md#example-4-customizing-the-refreshing-area-content-with-refreshingcontent).
 
 **Type:** [ComponentContent](../arkts-apis/arkts-arkui-componentcontent-c.md)
 

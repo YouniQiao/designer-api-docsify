@@ -38,27 +38,7 @@ Register the callback for updating form config.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 201 | Permissions denied. |
-| 16500050 | IPC connection error. |
-| 202 | The application is not a system application. |
-
-## Examples
-
-```TypeScript
-import { formHost, formInfo } from '@kit.FormKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-try {
-  const callback = (configInfo: formInfo.FormCustomConfig[]): void => {
-    console.info(`onUpdateFormsConfigCallback configInfo length: ${configInfo.length}`);
-    for (let config of configInfo) {
-      console.info(`bundleName: ${config.bundleName}, moduleName: ${config.moduleName}`);
-    }
-  };
-  formHost.onUpdateFormsConfigCallback(callback);
-  console.info(`onUpdateFormsConfigCallback success`);
-} catch (error) {
-  console.error(`catch error, code: ${(error as BusinessError).code}, message: ${(error as BusinessError).message}`);
-}
-```
+| [201](../../errorcode-universal.md#201-permission-denied) | Permissions denied. |
+| [16500050](../errorcode-form.md#16500050-ipc-failure) | IPC connection error. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | The application is not a system application. |
 

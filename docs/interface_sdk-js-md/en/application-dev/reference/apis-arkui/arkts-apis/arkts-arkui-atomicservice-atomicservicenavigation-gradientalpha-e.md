@@ -1,6 +1,6 @@
 # GradientAlpha
 
-渐变色显示区域不透明度的可选项。
+Enumerates the opacity levels of the navigation bar background.
 
 **Since:** 18
 
@@ -16,7 +16,7 @@
 OPACITY_20 = 1
 ```
 
-不透明度为0.2。
+0.2 opacity.
 
 **Since:** 18
 
@@ -34,7 +34,7 @@ OPACITY_20 = 1
 OPACITY_60 = 2
 ```
 
-不透明度为0.6。
+0.6 opacity.
 
 **Since:** 18
 
@@ -52,7 +52,7 @@ OPACITY_60 = 2
 OPACITY_80 = 3
 ```
 
-不透明度为0.8。
+0.8 opacity.
 
 **Since:** 18
 
@@ -70,7 +70,7 @@ OPACITY_80 = 3
 OPACITY_100 = 4
 ```
 
-不透明度为1.0。
+1.0 opacity.
 
 **Since:** 18
 

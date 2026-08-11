@@ -1,12 +1,12 @@
 # CheckboxGroup
 
-多选框群组，用于控制多选框全选或取消全选状态。适用于需要批量管理多个Checkbox选择状态的场景，如列表项批量选择、表单全选等，可简化用户操作，提升交互体验。
+The **CheckboxGroup** component is used to select or deselect all check boxes in a group.
 
-> **说明：**
+> **NOTE**
 
-## 子组件
+## Child Components
 
-无
+Not supported
 
 ## CheckboxGroup
 
@@ -14,10 +14,10 @@
 CheckboxGroup(options?: CheckboxGroupOptions)
 ```
 
-创建多选框群组，用于控制群组内Checkbox的全选或取消全选状态，具有相同group值的Checkbox和CheckboxGroup属于同一群组。
+Creates a check box group for controlling the select-all or deselect-all state of check boxes within the group. Check boxes and check box groups with the same **group** value belong to the same group.
 
-在结合带缓存功能的组件使用时（如[List]{@link list}），未被创建的Checkbox选中状态需要应用手动控制。详细示例请参考  
-[示例4](docroot://reference/apis-arkui/arkui-ts/ts-basic-components-checkboxgroup.md#示例4设置全选)。
+When this API is used with components that come with the caching mechanism, such as the [List]{@link list} component, those check boxes that have not been created yet need to be manually selected or unselected. For details, see   
+[Example 4](docroot://reference/apis-arkui/arkui-ts/ts-basic-components-checkboxgroup.md#example-4-implementing-the-select-all-functionality).
 
 **Since:** 8
 
@@ -35,7 +35,7 @@ CheckboxGroup(options?: CheckboxGroupOptions)
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| options | [CheckboxGroupOptions](../arkts-apis/arkts-arkui-checkboxgroup-checkboxgroupoptions-i.md) | No | 配置多选框群组参数。 <br/> 未设置时，按照CheckboxGroupOptions中各参数的默认值配置。 |
+| options | [CheckboxGroupOptions](../arkts-apis/arkts-arkui-checkboxgroup-checkboxgroupoptions-i.md) | No | Check box group parameters. |
 
 ## Summary
 

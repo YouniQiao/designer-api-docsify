@@ -17,19 +17,13 @@ LightWeightSet可用于存储一系列值的集合，存储元素中value唯一�
  由于以上存储方式的差异，当对其进行hash算法即会计算出不同的hash值，从而导致映射结果不同，产生与预期不一致的现象。
 
 
-## 导入模块
-
-```TypeScript
-import { LightWeightSet } from 'kits/@kit.ArkTS';
-```
-
 ## 汇总
 
 ### 类
 
 | 名称 | 说明 |
 | --- | --- |
-| [LightWeightSet](arkts-arkts-util-lightweightset-lightweightset-c.md) | LightWeightSet可用于存储一系列值的集合，存储元素中value值唯一。 |
+| [LightWeightSet](arkts-arkts-util-lightweightset-lightweightset-c.md) | LightWeightSet可用于存储一系列值，存储元素中value唯一。 |
 
 ### 类型
 

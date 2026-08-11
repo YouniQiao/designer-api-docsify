@@ -5,7 +5,7 @@ type QueryMediaEntityByKeywordEvent = (keyword: string, searchType: EntityType,
     pageIndex: int) => Promise<PageMediaEntity>
 ```
 
-通过关键字查询媒体数据的回调事件
+The query media entity by keyword event.
 
 **Since:** 23
 
@@ -21,13 +21,13 @@ type QueryMediaEntityByKeywordEvent = (keyword: string, searchType: EntityType,
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| keyword | string | Yes |  |
-| searchType | [EntityType](arkts-avsession-avmusictemplate-entitytype-e.md) | Yes | 搜索内容的类型 |
-| pageIndex | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | 页面索引 |
+| keyword | string | Yes | keyword |
+| searchType | [EntityType](arkts-avsession-avmusictemplate-entitytype-e.md) | Yes | search type |
+| pageIndex | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | page index |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;PageMediaEntity&gt; | 通过promise返回PageMediaEntity |
+| Promise&lt;PageMediaEntity&gt; | (PageMediaEntity) returned through promise |
 

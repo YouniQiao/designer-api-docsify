@@ -1,6 +1,6 @@
 # TextAreaType
 
-多行文本输入框类型。
+Multi-line text input box type.
 
 **Since:** 11
 
@@ -16,7 +16,7 @@
 NORMAL = 0
 ```
 
-基本输入模式，无特殊限制。
+Basic input mode with no special restrictions.
 
 **Since:** 11
 
@@ -36,7 +36,7 @@ NORMAL = 0
 NUMBER = 2
 ```
 
-纯数字输入模式。
+Digit input mode.
 
 **Since:** 11
 
@@ -56,9 +56,9 @@ NUMBER = 2
 PHONE_NUMBER = 3
 ```
 
-电话号码输入模式。
+Phone number input mode.
 
-支持输入数字、空格、+ 、-、*、#、(、)，长度不限。
+In this mode, the following characters are allowed: digits, spaces, plus signs (+), hyphens (-), asterisks (*), and number signs (#); the length is not limited.
 
 **Since:** 11
 
@@ -78,9 +78,9 @@ PHONE_NUMBER = 3
 EMAIL = 5
 ```
 
-邮箱地址输入模式。
+Email address input mode.
 
-支持数字，字母，下划线、小数点、!、#、\$、%、&、'、*、+、-、/、=、?、^、`、{、|、}、~，以及@字符（只能存在一个@字符）。
+This mode accepts only digits, letters, underscores (_), dots (.), and the following special characters: ! # \$ % &' * + - / = ? ^ ` { | } ~ @ (which can only appear once)
 
 **Since:** 11
 
@@ -100,9 +100,9 @@ EMAIL = 5
 NUMBER_DECIMAL = 12
 ```
 
-带小数点的数字输入模式。
+Decimal number input mode.
 
-支持数字，小数点（只能存在一个小数点）。
+The value can contain digits and one decimal point.
 
 **Since:** 12
 
@@ -122,7 +122,7 @@ NUMBER_DECIMAL = 12
 URL = 13
 ```
 
-带URL的输入模式，无特殊限制。
+URL input mode with no special restrictions.
 
 **Since:** 12
 
@@ -142,7 +142,7 @@ URL = 13
 ONE_TIME_CODE = 14
 ```
 
-验证码输入模式，无特殊限制。
+One-time code (verification code) input mode with no special restrictions.
 
 **Since:** 20
 

@@ -20,6 +20,6 @@ export type OnSubmitCallback = (enterKey: EnterKeyType, event: SubmitEvent) => v
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| enterKey | [EnterKeyType](arkts-arkui-textinput-enterkeytype-e.md) | 是 | 输入法回车键类型。 |
+| enterKey | [EnterKeyType](../arkts-components/arkts-arkui-enterkeytype-e.md) | 是 | 输入法回车键类型。 |
 | event | [SubmitEvent](../arkts-components/arkts-arkui-submitevent-i.md) | 是 | 提交事件。可以控制是否收起键盘。 |
 

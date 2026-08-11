@@ -1,14 +1,15 @@
 # PathIterator
 
-表示路径操作迭代器，可通过遍历迭代器逐段读取路径的操作指令。迭代器按顺序遍历路径中的操作指令，便于实现对路径的细粒度分析与自定义处理。
+Implements a path operation iterator. You can read path operation instructions by traversing the iterator.
 
-> **说明：**
+> **NOTE：**
 > 
-> - 本Class首批接口从API version 18开始支持。
+> - The initial APIs of this class are supported since API version 18.
 > 
-> - 本模块使用屏幕物理像素单位px。
+> - This module uses the physical pixel unit, px.
 > 
-> - 本模块为单线程模型策略，需要调用方自行管理线程安全和上下文状态的切换。
+> - The module operates under a single-threaded model. The caller needs to manage thread safety and context state
+> transitions.
 
 **Since:** 18
 
@@ -30,7 +31,7 @@ import { drawing } from 'kits/@kit.ArkGraphics2D';
 constructor(path: Path)
 ```
 
-构造迭代器并绑定路径。
+Creates an iterator and binds it with a path.
 
 **Since:** 18
 
@@ -44,7 +45,7 @@ constructor(path: Path)
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| path | [Path](arkts-arkgraphics2d-drawing-path-c.md) | Yes | 迭代器绑定的路径对象，绑定后迭代器将遍历该路径中的操作指令， 可通过next、peek、hasNext等方法读取路径的操作类型和坐标数据。 |
+| path | [Path](arkts-arkgraphics2d-drawing-path-c.md) | Yes | Path** object bound to the iterator. |
 
 ## hasNext
 
@@ -52,7 +53,7 @@ constructor(path: Path)
 hasNext(): boolean
 ```
 
-判断迭代器中是否还有下一个操作。通常与next()或peek()方法配合使用实现路径遍历。
+Checks whether there is any next operation in the path operation iterator.
 
 **Since:** 18
 
@@ -66,7 +67,7 @@ hasNext(): boolean
 
 | Type | Description |
 | --- | --- |
-| boolean | 迭代器是否还有下一个操作可遍历。true表示还有后续路径操作可读取，false表示已遍历至路径末尾，无更多操作。 |
+| boolean | Check result. **true** means yes; **false** otherwise. |
 
 ## next
 
@@ -74,7 +75,7 @@ hasNext(): boolean
 next(points: Array<common2D.Point>, offset?: number): PathIteratorVerb
 ```
 
-返回当前路径的下一个操作，并将迭代器推进至该操作，同时将路径坐标点数据按操作类型写入传入的points数组。若仅需预览下一个操作而不改变迭代器状态，请使用[peek](arkts-arkgraphics2d-drawing-pathiterator-c.md#peek)。通常与[hasNext](arkts-arkgraphics2d-drawing-pathiterator-c.md#hasnext)方法配合使用实现路径遍历。
+Retrieves the next operation in this path and moves the iterator to that operation.
 
 **Since:** 18
 
@@ -88,20 +89,20 @@ next(points: Array<common2D.Point>, offset?: number): PathIteratorVerb
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| points | Array&lt;common2D.Point&gt; | Yes | 坐标点数组，长度必须至少为偏移量加4，以确保能容纳所有类型的路径数据。操作执行后，该数组会被覆盖。填入的坐标点数量取决于操作类型，其中， MOVE填入1个坐标点，LINE填入2个坐标点，QUAD填入3个坐标点，CONIC填入3个坐标点 + 1个权重值（共3.5组），CUBIC填入4个坐标点，CLOSE和DONE不填入任何点。 |
-| offset | number | No | 数组中写入位置相对起始点的偏移量，默认为0，取值范围为[0, size-4]，size是指坐标点数组长度。 |
+| points | Array&lt;common2D.Point&gt; | Yes | Array of coordinate points. The array length must be at least the offset plus 4 to ensure that the array can hold all types of path data. After the operation is executed, this array is overwritten. The number of coordinate points to be filled depends on the operation type. Specifically, for **MOVE**, fill one coordinate; for **LINE**, fill two coordinates; for **QUAD**, fill three coordinates; for **CONIC**, fill three coordinates and one weight value (a total of 3.5 groups); for **CUBIC**, fill four coordinates; for **CLOSE** and **DONE**, do not fill any coordinate points. |
+| offset | number | No | Offset from the start of the array where writing begins. The default value is **0**. The value range is [0, size - 4], where **size** is the length of the coordinate point array. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [PathIteratorVerb](arkts-arkgraphics2d-drawing-pathiteratorverb-e.md) | 当前路径段的操作类型。 |
+| [PathIteratorVerb](arkts-arkgraphics2d-drawing-pathiteratorverb-e.md) | Path operation type contained in the iterator. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; 3. Parameter verification failed. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; 3. Parameter verification failed. |
 
 ## next
 
@@ -109,7 +110,7 @@ next(points: Array<common2D.Point>, offset?: number): PathIteratorVerb
 next(points: Array<common2D.Point>, offset?: int): PathIteratorVerb | undefined
 ```
 
-返回当前路径的下一个操作，并将迭代器推进至该操作，同时将路径坐标点数据按操作类型写入传入的points数组。若仅需预览下一个操作而不改变迭代器状态，请使用[peek](arkts-arkgraphics2d-drawing-pathiterator-c.md#peek)。通常与[hasNext](arkts-arkgraphics2d-drawing-pathiterator-c.md#hasnext)方法配合使用实现路径遍历。
+Retrieves the next operation in this path and moves the iterator to that operation.
 
 **Since:** 23
 
@@ -123,20 +124,20 @@ next(points: Array<common2D.Point>, offset?: int): PathIteratorVerb | undefined
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| points | Array&lt;common2D.Point&gt; | Yes | 坐标点数组，长度必须至少为偏移量加4，以确保能容纳所有类型的路径数据。操作执行后，该数组会被覆盖。填入的坐标点数量取决于操作类型，其中， MOVE填入1个坐标点，LINE填入2个坐标点，QUAD填入3个坐标点，CONIC填入3个坐标点 + 1个权重值（共3.5组），CUBIC填入4个坐标点，CLOSE和DONE不填入任何点。 |
-| offset | int | No | 数组中写入位置相对起始点的偏移量，默认为0，取值范围为[0, size-4]，size是指坐标点数组长度。 |
+| points | Array&lt;common2D.Point&gt; | Yes | Indicates the point array. |
+| offset | int | No | Indicates the offset into the array where entries should be placed. The default value is 0. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [PathIteratorVerb](arkts-arkgraphics2d-drawing-pathiteratorverb-e.md) | 当前路径段的操作类型。创建失败时返回undefined。 |
+| [PathIteratorVerb](arkts-arkgraphics2d-drawing-pathiteratorverb-e.md) | Returns the next verb in this iterator's path. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; 3. Parameter verification failed. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; 3. Parameter verification failed. |
 
 ## peek
 
@@ -144,7 +145,7 @@ next(points: Array<common2D.Point>, offset?: int): PathIteratorVerb | undefined
 peek(): PathIteratorVerb
 ```
 
-返回当前路径的下一个操作，迭代器保持在原操作。与next不同，peek不会推进迭代器位置。
+Retrieves the next operation in this path, without moving the iterator.
 
 **Since:** 18
 
@@ -158,7 +159,7 @@ peek(): PathIteratorVerb
 
 | Type | Description |
 | --- | --- |
-| [PathIteratorVerb](arkts-arkgraphics2d-drawing-pathiteratorverb-e.md) | 当前路径段的操作类型。 |
+| [PathIteratorVerb](arkts-arkgraphics2d-drawing-pathiteratorverb-e.md) | Path operation type contained in the iterator. |
 
 ## peek
 
@@ -166,7 +167,7 @@ peek(): PathIteratorVerb
 peek(): PathIteratorVerb | undefined
 ```
 
-返回当前路径的下一个操作，迭代器保持在原操作。与next不同，peek不会推进迭代器位置。
+Retrieves the next operation in this path, without moving the iterator.
 
 **Since:** 23
 
@@ -180,5 +181,5 @@ peek(): PathIteratorVerb | undefined
 
 | Type | Description |
 | --- | --- |
-| [PathIteratorVerb](arkts-arkgraphics2d-drawing-pathiteratorverb-e.md) | 当前路径段的操作类型。创建失败时返回undefined。 |
+| [PathIteratorVerb](arkts-arkgraphics2d-drawing-pathiteratorverb-e.md) | Returns the next verb in the iteration. |
 

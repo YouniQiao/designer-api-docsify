@@ -1,6 +1,6 @@
 # FilterOptions
 
-联系人过滤参数。
+Defines contact filter options.
 
 **Since:** 15
 
@@ -22,7 +22,7 @@ import { contact } from 'kits/@kit.ContactsKit';
 filterCondition: FilterCondition
 ```
 
-过滤条件。
+Filter criteria.
 
 **Type:** [FilterCondition](arkts-contacts-contact-filtercondition-e.md)
 
@@ -42,7 +42,7 @@ filterCondition: FilterCondition
 value?: string | ValueType[]
 ```
 
-过滤值，默认为undefined。
+Filter value. The default value is **undefined**.
 
 **Type:** string \| ValueType[]
 

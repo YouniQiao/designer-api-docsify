@@ -4,6 +4,8 @@
 
 Provides APIs for constructing, using, and destroying a parameter set.
 
+**Include**: <huks/native_huks_param.h>
+
 **Library**: libhuks_ndk.z.so
 
 **System capability**: SystemCapability.Security.Huks.Core
@@ -19,16 +21,16 @@ Provides APIs for constructing, using, and destroying a parameter set.
 | Name | Description |
 | -- | -- |
 | [struct OH_Huks_Result OH_Huks_InitParamSet(struct OH_Huks_ParamSet **paramSet)](#oh_huks_initparamset) | Initializes a parameter set. No parameter information is required, and the default available memory space isallocated to the parameter set. The initialized parameter set needs to be released by using[OH_Huks_FreeParamSet](capi-native-huks-param-h.md#oh_huks_freeparamset). To add parameters to a parameter set, you need to use [OH_Huks_AddParams](capi-native-huks-param-h.md#oh_huks_addparams) to addparameters and use [OH_Huks_BuildParamSet](capi-native-huks-param-h.md#oh_huks_buildparamset) to construct the parameter set. |
-| [struct OH_Huks_Result OH_Huks_AddParams(struct OH_Huks_ParamSet *paramSet, const struct OH_Huks_Param *params, uint32_t paramCnt)](#oh_huks_addparams) | Adds parameters to a parameter set. |
-| [struct OH_Huks_Result OH_Huks_BuildParamSet(struct OH_Huks_ParamSet **paramSet)](#oh_huks_buildparamset) | Builds a parameter set. After the parameter set is initialized and parameters are added, the parameter set isserialized and the data of the BLOB type is copied to the adjacent memory area at the end of the **paramSet** struct. |
-| [void OH_Huks_FreeParamSet(struct OH_Huks_ParamSet **paramSet)](#oh_huks_freeparamset) | Frees a parameter set. |
+| [struct OH_Huks_Result OH_Huks_AddParams(struct OH_Huks_ParamSet *paramSet, const struct OH_Huks_Param *params, uint32_t paramCnt)](#oh_huks_addparams) | Adds parameters to a parameter set. After the parameters are added, use [OH_Huks_BuildParamSet](capi-native-huks-param-h.md#oh_huks_buildparamset) toconstruct a parameter set. |
+| [struct OH_Huks_Result OH_Huks_BuildParamSet(struct OH_Huks_ParamSet **paramSet)](#oh_huks_buildparamset) | Constructs a parameter set. After [OH_Huks_InitParamSet](capi-native-huks-param-h.md#oh_huks_initparamset) is called to initialize the parameter set and[OH_Huks_AddParams](capi-native-huks-param-h.md#oh_huks_addparams) is called to add parameters, serialize the parameter set and copy the data of the BLOBtype to the adjacent memory area at the end of the **paramSet** structure. |
+| [void OH_Huks_FreeParamSet(struct OH_Huks_ParamSet **paramSet)](#oh_huks_freeparamset) | Frees a parameter set. This function frees the memory allocated by [OH_Huks_InitParamSet](capi-native-huks-param-h.md#oh_huks_initparamset). |
 | [struct OH_Huks_Result OH_Huks_CopyParamSet(const struct OH_Huks_ParamSet *fromParamSet, uint32_t fromParamSetSize, struct OH_Huks_ParamSet **paramSet)](#oh_huks_copyparamset) | Copies a parameter set (deep copy). |
 | [struct OH_Huks_Result OH_Huks_GetParam(const struct OH_Huks_ParamSet *paramSet, uint32_t tag, struct OH_Huks_Param **param)](#oh_huks_getparam) | Obtains a parameter from a parameter set. |
 | [struct OH_Huks_Result OH_Huks_FreshParamSet(struct OH_Huks_ParamSet *paramSet, bool isCopy)](#oh_huks_freshparamset) | Refreshes the [OH_Huks_Blob](capi-hukstypeapi-oh-huks-blob.md) data in the parameter set. |
-| [struct OH_Huks_Result OH_Huks_IsParamSetTagValid(const struct OH_Huks_ParamSet *paramSet)](#oh_huks_isparamsettagvalid) | Checks whether the parameters in a parameter set are valid. |
+| [struct OH_Huks_Result OH_Huks_IsParamSetTagValid(const struct OH_Huks_ParamSet *paramSet)](#oh_huks_isparamsettagvalid) | Checks whether the tags in a parameter set are valid. |
 | [struct OH_Huks_Result OH_Huks_IsParamSetValid(const struct OH_Huks_ParamSet *paramSet, uint32_t size)](#oh_huks_isparamsetvalid) | Checks whether a parameter set is of the valid size. |
 | [struct OH_Huks_Result OH_Huks_CheckParamMatch(const struct OH_Huks_Param *baseParam, const struct OH_Huks_Param *param)](#oh_huks_checkparammatch) | Checks whether two parameters are the same. |
-| [void OH_Huks_FreeKeyAliasSet(struct OH_Huks_KeyAliasSet *keyAliasSet)](#oh_huks_freekeyaliasset) | Destroys the parameter set of a key alias. |
+| [void OH_Huks_FreeKeyAliasSet(struct OH_Huks_KeyAliasSet *keyAliasSet)](#oh_huks_freekeyaliasset) | Frees a key alias set. |
 
 ## Function description
 
@@ -48,13 +50,13 @@ Initializes a parameter set. No parameter information is required, and the defau
 
 | Parameter | Description |
 | -- | -- |
-| [struct OH_Huks_ParamSet](capi-hukstypeapi-oh-huks-paramset.md) **paramSet | {@link struct OH_Huks_ParamSet} Double pointer to the parameter set to initialize. |
+| [struct OH_Huks_ParamSet](capi-hukstypeapi-oh-huks-paramset.md) **paramSet | Pointer to the parameter set to initialize. |
 
 **Returns**:
 
 | Type | Description |
 | -- | -- |
-| [struct OH_Huks_Result](capi-hukstypeapi-oh-huks-result.md) | [OH_Huks_ErrCode](capi-native-huks-type-h.md#oh_huks_errcode):<br>     <br>OH_HUKS_SUCCESS = 0: Initialization successful.<br>     <br>OH_HUKS_ERR_CODE_INSUFFICIENT_MEMORY = 12000014: Insufficient memory.<br>     <br>OH_HUKS_ERR_CODE_ILLEGAL_ARGUMENT = 401: paramSet is invalid. |
+| [struct OH_Huks_Result](capi-hukstypeapi-oh-huks-result.md) | Possible error codes (errorCode):<br>     <br>OH_HUKS_SUCCESS 0: Initialization successful.<br>     <br>OH_HUKS_ERR_CODE_INSUFFICIENT_MEMORY 12000014: Insufficient memory.<br>     <br>OH_HUKS_ERR_CODE_ILLEGAL_ARGUMENT 401: paramSet is invalid. |
 
 ### OH_Huks_AddParams()
 
@@ -64,7 +66,7 @@ struct OH_Huks_Result OH_Huks_AddParams(struct OH_Huks_ParamSet *paramSet, const
 
 **Description**
 
-Adds parameters to a parameter set.
+Adds parameters to a parameter set. After the parameters are added, use [OH_Huks_BuildParamSet](capi-native-huks-param-h.md#oh_huks_buildparamset) toconstruct a parameter set.
 
 **Since**: 9
 
@@ -72,7 +74,7 @@ Adds parameters to a parameter set.
 
 | Parameter | Description |
 | -- | -- |
-| [struct OH_Huks_ParamSet](capi-hukstypeapi-oh-huks-paramset.md) *paramSet | Pointer to the parameter set to which parameters are to be added. |
+| [struct OH_Huks_ParamSet](capi-hukstypeapi-oh-huks-paramset.md) *paramSet | Pointer to the parameter set to which parameters are to be added. This parameter needs to beinitialized by using [OH_Huks_InitParamSet](capi-native-huks-param-h.md#oh_huks_initparamset). |
 | [const struct OH_Huks_Param](capi-hukstypeapi-oh-huks-param.md) *params | Pointer to an array of parameters to add. |
 | uint32_t paramCnt | Number of parameters to add. |
 
@@ -80,7 +82,7 @@ Adds parameters to a parameter set.
 
 | Type | Description |
 | -- | -- |
-| [struct OH_Huks_Result](capi-hukstypeapi-oh-huks-result.md) | [OH_Huks_ErrCode](capi-native-huks-type-h.md#oh_huks_errcode):<br>     <br>[OH_HUKS_SUCCESS](capi-native-huks-type-h.md#oh_huks_errcode) = 0: Operation successful.<br>     <br>[OH_HUKS_ERR_CODE_ILLEGAL_ARGUMENT](capi-native-huks-type-h.md#oh_huks_errcode) = 401: params is a null pointer or paramSet is invalid. |
+| [struct OH_Huks_Result](capi-hukstypeapi-oh-huks-result.md) | Possible error codes (errorCode):<br>     <br>OH_HUKS_SUCCESS 0: Operation successful.<br>     <br>OH_HUKS_ERR_CODE_ILLEGAL_ARGUMENT 401: params is a null pointer or paramSet is invalid. |
 
 ### OH_Huks_BuildParamSet()
 
@@ -90,7 +92,7 @@ struct OH_Huks_Result OH_Huks_BuildParamSet(struct OH_Huks_ParamSet **paramSet)
 
 **Description**
 
-Builds a parameter set. After the parameter set is initialized and parameters are added, the parameter set isserialized and the data of the BLOB type is copied to the adjacent memory area at the end of the **paramSet** struct.
+Constructs a parameter set. After [OH_Huks_InitParamSet](capi-native-huks-param-h.md#oh_huks_initparamset) is called to initialize the parameter set and[OH_Huks_AddParams](capi-native-huks-param-h.md#oh_huks_addparams) is called to add parameters, serialize the parameter set and copy the data of the BLOBtype to the adjacent memory area at the end of the **paramSet** structure.
 
 **Since**: 9
 
@@ -104,7 +106,7 @@ Builds a parameter set. After the parameter set is initialized and parameters ar
 
 | Type | Description |
 | -- | -- |
-| [struct OH_Huks_Result](capi-hukstypeapi-oh-huks-result.md) | [OH_Huks_ErrCode](capi-native-huks-type-h.md#oh_huks_errcode):<br>     <br>OH_HUKS_SUCCESS = 0: Operation successful.<br>     <br>OH_HUKS_ERR_CODE_ILLEGAL_ARGUMENT = 401: paramSet is invalid.<br>     <br>OH_HUKS_ERR_CODE_INSUFFICIENT_MEMORY = 12000014: Insufficient memory. |
+| [struct OH_Huks_Result](capi-hukstypeapi-oh-huks-result.md) | Possible error codes (errorCode):<br>     <br>OH_HUKS_SUCCESS 0: Operation successful.<br>     <br>OH_HUKS_ERR_CODE_ILLEGAL_ARGUMENT 401: paramSet is invalid.<br>     <br>OH_HUKS_ERR_CODE_INSUFFICIENT_MEMORY 12000014: Insufficient memory. |
 
 ### OH_Huks_FreeParamSet()
 
@@ -114,7 +116,7 @@ void OH_Huks_FreeParamSet(struct OH_Huks_ParamSet **paramSet)
 
 **Description**
 
-Frees a parameter set.
+Frees a parameter set. This function frees the memory allocated by [OH_Huks_InitParamSet](capi-native-huks-param-h.md#oh_huks_initparamset).
 
 **Since**: 9
 
@@ -148,7 +150,7 @@ Copies a parameter set (deep copy).
 
 | Type | Description |
 | -- | -- |
-| [struct OH_Huks_Result](capi-hukstypeapi-oh-huks-result.md) | [OH_Huks_ErrCode](capi-native-huks-type-h.md#oh_huks_errcode) :<br>     <br>OH_HUKS_SUCCESS = 0: Operation successful.<br>     <br>OH_HUKS_ERR_CODE_ILLEGAL_ARGUMENT = 401: fromParamSet, fromParamSetSize, or paramSet is invalid.<br>     <br>OH_HUKS_ERR_CODE_INSUFFICIENT_MEMORY = 12000014: Insufficient memory. |
+| [struct OH_Huks_Result](capi-hukstypeapi-oh-huks-result.md) | Possible error codes (errorCode):<br>     <br>OH_HUKS_SUCCESS 0: Operation successful.<br>     <br>OH_HUKS_ERR_CODE_ILLEGAL_ARGUMENT 401: fromParamSet, fromParamSetSize, or paramSet<br>     is invalid.<br>     <br>OH_HUKS_ERR_CODE_INSUFFICIENT_MEMORY 12000014: Insufficient memory. |
 
 ### OH_Huks_GetParam()
 
@@ -166,15 +168,15 @@ Obtains a parameter from a parameter set.
 
 | Parameter | Description |
 | -- | -- |
-| [const struct OH_Huks_ParamSet](capi-hukstypeapi-oh-huks-paramset.md) *paramSet | Indicates the pointer to the target parameter set. |
-| uint32_t tag | Name of the parameter to obtain. |
+| [const struct OH_Huks_ParamSet](capi-hukstypeapi-oh-huks-paramset.md) *paramSet | Pointer to the parameter set to check. |
+| uint32_t tag | Tag value of the parameter to be obtained. |
 | [struct OH_Huks_Param](capi-hukstypeapi-oh-huks-param.md) **param | Double pointer to the obtained parameter. |
 
 **Returns**:
 
 | Type | Description |
 | -- | -- |
-| [struct OH_Huks_Result](capi-hukstypeapi-oh-huks-result.md) | [OH_Huks_ErrCode](capi-native-huks-type-h.md#oh_huks_errcode):<br>     <br>OH_HUKS_SUCCESS = 0: Operation successful.<br>     <br>OH_HUKS_ERR_CODE_ILLEGAL_ARGUMENT = 401: paramSet or param is invalid, or param is not in <br>     paramSet. |
+| [struct OH_Huks_Result](capi-hukstypeapi-oh-huks-result.md) | Possible error codes (errorCode):<br>     <br>OH_HUKS_SUCCESS 0: Operation successful.<br>     <br>OH_HUKS_ERR_CODE_ILLEGAL_ARGUMENT 401: paramSet or param is invalid, or param is not in <br>     paramSet. |
 
 ### OH_Huks_FreshParamSet()
 
@@ -199,7 +201,7 @@ Refreshes the [OH_Huks_Blob](capi-hukstypeapi-oh-huks-blob.md) data in the param
 
 | Type | Description |
 | -- | -- |
-| [struct OH_Huks_Result](capi-hukstypeapi-oh-huks-result.md) | (capi-hukstypeapi-oh-huks-result.md) [OH_Huks_ErrCode](capi-native-huks-type-h.md#oh_huks_errcode):<br>     <br>OH_HUKS_SUCCESS = 0: Operation successful.<br>     <br>OH_HUKS_ERR_CODE_ILLEGAL_ARGUMENT = 401: paramSet is invalid.<br>     <br>OH_HUKS_ERR_CODE_INSUFFICIENT_MEMORY = 12000014: Insufficient memory. |
+| [struct OH_Huks_Result](capi-hukstypeapi-oh-huks-result.md) | Possible error codes (errorCode):<br>     <br>OH_HUKS_SUCCESS 0: Operation successful.<br>     <br>OH_HUKS_ERR_CODE_ILLEGAL_ARGUMENT 401: paramSet is invalid.<br>     <br>OH_HUKS_ERR_CODE_INSUFFICIENT_MEMORY 12000014: Insufficient memory. |
 
 ### OH_Huks_IsParamSetTagValid()
 
@@ -209,7 +211,7 @@ struct OH_Huks_Result OH_Huks_IsParamSetTagValid(const struct OH_Huks_ParamSet *
 
 **Description**
 
-Checks whether the parameters in a parameter set are valid.
+Checks whether the tags in a parameter set are valid.
 
 **Since**: 9
 
@@ -223,7 +225,7 @@ Checks whether the parameters in a parameter set are valid.
 
 | Type | Description |
 | -- | -- |
-| [struct OH_Huks_Result](capi-hukstypeapi-oh-huks-result.md) | [OH_Huks_ErrCode](capi-native-huks-type-h.md#oh_huks_errcode):<br>     <br>OH_HUKS_SUCCESS = 0: All parameters in paramSet are valid.<br>     <br>OH_HUKS_ERR_CODE_ILLEGAL_ARGUMENT = 401: paramSet is invalid, or the parameter set contains invalid,<br>     duplicate, or incorrect tags. |
+| [struct OH_Huks_Result](capi-hukstypeapi-oh-huks-result.md) | Possible error codes (errorCode):<br>     <br>OH_HUKS_SUCCESS 0: All tags in paramSet are valid.<br>     <br>OH_HUKS_ERR_CODE_ILLEGAL_ARGUMENT 401: paramSet is invalid, or the parameter set contains<br>     invalid, duplicate, or incorrect tags. |
 
 ### OH_Huks_IsParamSetValid()
 
@@ -248,7 +250,7 @@ Checks whether a parameter set is of the valid size.
 
 | Type | Description |
 | -- | -- |
-| [struct OH_Huks_Result](capi-hukstypeapi-oh-huks-result.md) | [OH_Huks_ErrCode](capi-native-huks-type-h.md#oh_huks_errcode):<br>     <br>OH_HUKS_SUCCESS = 0: The size of the parameter set is valid.<br>     <br>OH_HUKS_ERR_CODE_ILLEGAL_ARGUMENT = 401: paramSet is invalid. |
+| [struct OH_Huks_Result](capi-hukstypeapi-oh-huks-result.md) | Possible error codes (errorCode):<br>     <br>OH_HUKS_SUCCESS 0: The size of the parameter set is valid.<br>     <br>OH_HUKS_ERR_CODE_ILLEGAL_ARGUMENT 401: The paramSet or size parameter is invalid. |
 
 ### OH_Huks_CheckParamMatch()
 
@@ -273,7 +275,7 @@ Checks whether two parameters are the same.
 
 | Type | Description |
 | -- | -- |
-| [struct OH_Huks_Result](capi-hukstypeapi-oh-huks-result.md) | [OH_Huks_ErrCode](capi-native-huks-type-h.md#oh_huks_errcode):<br>     <br>OH_HUKS_SUCCESS = 0: The two parameters to be compared are the same.<br>     <br>OH_HUKS_ERR_CODE_ILLEGAL_ARGUMENT = 401: One of the parameter sets is invalid, the parameters do not match,<br>     <br>or there is an invalid tag internally. |
+| [struct OH_Huks_Result](capi-hukstypeapi-oh-huks-result.md) | Possible error codes (errorCode):<br>     <br>OH_HUKS_SUCCESS 0: The two parameters to be compared are the same.<br>     <br>OH_HUKS_ERR_CODE_ILLEGAL_ARGUMENT 401: One of the parameters is invalid or the parameters do not<br>     match. |
 
 ### OH_Huks_FreeKeyAliasSet()
 
@@ -283,7 +285,7 @@ void OH_Huks_FreeKeyAliasSet(struct OH_Huks_KeyAliasSet *keyAliasSet)
 
 **Description**
 
-Destroys the parameter set of a key alias.
+Frees a key alias set.
 
 **Since**: 20
 
@@ -291,6 +293,6 @@ Destroys the parameter set of a key alias.
 
 | Parameter | Description |
 | -- | -- |
-| [struct OH_Huks_KeyAliasSet](capi-hukstypeapi-oh-huks-keyaliasset.md) *keyAliasSet | Pointer to the parameter set of the key alias to destroy. |
+| [struct OH_Huks_KeyAliasSet](capi-hukstypeapi-oh-huks-keyaliasset.md) *keyAliasSet | Pointer to the key alias set to be destroyed. |
 
 

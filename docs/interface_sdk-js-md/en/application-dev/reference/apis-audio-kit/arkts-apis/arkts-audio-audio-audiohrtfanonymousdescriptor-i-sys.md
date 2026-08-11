@@ -1,6 +1,6 @@
 # AudioHRTFAnonymousDescriptor (System API)
 
-匿名的HRTF文件描述符，用于跨进程传输。
+Anonymous personalzied HRTF file descriptor for cross-process transfer.
 
 **Since:** 26.0.0
 
@@ -24,7 +24,7 @@ import { audio } from 'kits/@kit.AudioKit';
 fd: int
 ```
 
-个人化HRTF的文件描述符。
+The file descriptor of personalzied HRTF.
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
@@ -46,7 +46,7 @@ fd: int
 length: long
 ```
 
-个人化HRTF数据的总大小（以字节为单位）。
+Total size of personalzied HRTF data in bytes.
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：long
 

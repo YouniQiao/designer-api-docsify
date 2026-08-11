@@ -1,14 +1,17 @@
 # ParticleAnnulusRegion
 
-用于设置环形发射器区域的配置信息。
+Configures the annular emitter area.
 
-> **说明：**
+> **NOTE：**
 > 
-> - outerRadius、innerRadius小于零或使用百分比单位时，会按零进行处理。
+> - If the value of outerRadius or innerRadius is less than 0 or uses the percentage unit, the value is considered as
+> 0.
 > 
-> - 当outerRadius小于innerRadius时（即外圆半径小于内圆半径时），会将当前较小的值作为新的内圆半径，将较大的值作为新的外圆半径。
+> - If the value of outerRadius is less than that of innerRadius, the smaller value is used as the new inner radius
+> and the larger value is used as the new outer radius.
 > 
-> - 当endAngle小于startAngle时（即结束角度小于起始角度时），会将当前较小的值作为新的起始角度，将较大的值作为新的结束角度。
+> - If the value of endAngle is less than that of startAngle, the smaller value is used as the new start angle and
+> the larger value is used as the new end angle.
 > 
 > ![](../../../reference/apis-arkui/arkui-ts/figures/annulus.png)
 

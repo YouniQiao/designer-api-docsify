@@ -12,7 +12,7 @@ import { scan } from 'kits/@kit.BasicServicesKit';
 function setScannerParameter(scannerId: string, optionIndex: int, value: ScannerOptionValue): Promise<void>
 ```
 
-设置扫描仪参数。使用Promise异步回调。
+Sets scanner parameters. This API uses a promise to return the result.
 
 **Since:** 20
 
@@ -28,21 +28,21 @@ function setScannerParameter(scannerId: string, optionIndex: int, value: Scanner
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| scannerId | string | Yes | 扫描仪的ID。 |
-| optionIndex | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | 要设置的选项的索引。 |
-| value | [ScannerOptionValue](arkts-basicservices-scan-scanneroptionvalue-i.md) | Yes | 要设置的值。 |
+| scannerId | string | Yes | Scanner ID. |
+| optionIndex | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | Index of the option to be set. |
+| value | [ScannerOptionValue](arkts-basicservices-scan-scanneroptionvalue-i.md) | Yes | Value to be set. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise对象，无返回结果。 |
+| Promise&lt;void&gt; | Promise that returns no value. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 201 | Permission denied. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
 
 ## Examples
 

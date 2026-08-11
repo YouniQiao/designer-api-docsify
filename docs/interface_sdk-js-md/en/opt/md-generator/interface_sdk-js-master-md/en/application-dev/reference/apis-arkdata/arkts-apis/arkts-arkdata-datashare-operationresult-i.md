@@ -1,0 +1,51 @@
+# OperationResult
+
+Defines the result of the operation for subscribing to or unsubscribing from the data changes or published data.
+
+**Since:** 10
+
+<!--Device-dataShare-interface OperationResult--><!--Device-dataShare-interface OperationResult-End-->
+
+**System capability:** SystemCapability.DistributedDataManager.DataShare.Consumer
+
+## Modules to Import
+
+```TypeScript
+import { dataShare } from 'kits/@kit.ArkData';
+```
+
+## key
+
+```TypeScript
+key: string
+```
+
+Key of the operation result.
+
+**Type:** string
+
+**Since:** 10
+
+**Model restriction:** This API can be used only in the stage model.
+
+<!--Device-OperationResult-key: string--><!--Device-OperationResult-key: string-End-->
+
+**System capability:** SystemCapability.DistributedDataManager.DataShare.Consumer
+
+## result
+
+```TypeScript
+result: number
+```
+
+Operation result. If the operation is successful, **0** is returned; otherwise, an error code is returned.
+
+**Type:** number
+
+**Since:** 10
+
+**Model restriction:** This API can be used only in the stage model.
+
+<!--Device-OperationResult-result: int--><!--Device-OperationResult-result: int-End-->
+
+**System capability:** SystemCapability.DistributedDataManager.DataShare.Consumer

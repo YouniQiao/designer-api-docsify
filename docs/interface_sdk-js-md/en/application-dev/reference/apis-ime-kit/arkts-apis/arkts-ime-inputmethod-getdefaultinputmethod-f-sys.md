@@ -12,7 +12,7 @@ import { inputMethod } from 'kits/@kit.IMEKit';
 function getDefaultInputMethod(userId?: int): InputMethodProperty
 ```
 
-获取指定用户的默认输入法。
+Get the default input method of a specified user.
 
 **Since:** 26.0.0
 
@@ -30,21 +30,21 @@ function getDefaultInputMethod(userId?: int): InputMethodProperty
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| userId | ArkTS-Dyn: number  <br>ArkTS-Sta：int | No | 用户ID。如果不提供： &lt;br&gt;- 如果调用者不是用户0的应用，该值默认为调用者的用户ID。 &lt;br&gt;- 如果调用者是用户0的应用，该值默认为主屏幕的前台用户ID。 |
+| userId | ArkTS-Dyn: number  <br>ArkTS-Sta：int | No | the user ID. If not provided: If the caller is not a user 0 application, the value defaults to the caller's user ID. If the caller is a user 0 application, the value defaults to the foreground user ID of the main screen. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [InputMethodProperty](arkts-ime-inputmethod-inputmethodproperty-i.md) | 返回默认输入法属性对象。 |
+| [InputMethodProperty](arkts-ime-inputmethod-inputmethodproperty-i.md) | property of the default input method. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
 | 12800023 | the specified user does not exist. |
-| 202 | not system application. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | not system application. |
 | 12800025 | cross-user operation denied. Only user 0 applications are authorized for this operation. |
-| 12800008 | input method manager service error. Possible cause: a system error, such as null pointer, IPC exception. |
+| [12800008](../errorcode-inputmethod-framework.md#12800008-input-method-manager-service-error) | input method manager service error. Possible cause: a system error, such as null pointer, IPC exception. |
 | 12800024 | the specified user is not in the foreground. |
 

@@ -1,6 +1,6 @@
 # ResolvedSymbolNumberFormatOptions
 
-自定义符号数字格式化对象配置项的解析结果。继承自Intl.ResolvedNumberFormatOptions，支持Intl.ResolvedNumberFormatOptions的所有配置项，并且功能与其一致。
+Represents optional element for the ResolvedSymbolNumberFormatOptions object.Define the resolved symbol element and value that need to get.
 
 **Inheritance/Implementation:** ResolvedSymbolNumberFormatOptions extends [Intl.ResolvedNumberFormatOptions](../../apis-arkts/arkts-apis/arkts-arkts-intl-resolvednumberformatoptions-i.md/arkts-arkts-intl-resolvednumberformatoptions-i.md)
 
@@ -24,7 +24,7 @@ import { i18n } from 'kits/@kit.LocalizationKit';
 groupingSeparator?: string
 ```
 
-分组符号。默认值：区域默认的符号。例如：","。
+Grouping Separator symbol of localized number part, such as "," of "10,000".
 
 **Type:** string
 
@@ -46,7 +46,7 @@ groupingSeparator?: string
 infinity?: string
 ```
 
-无穷符号。默认值：区域默认的符号。例如："∞"。
+Infinity symbol of localized number part, such as "∞".
 
 **Type:** string
 
@@ -68,7 +68,7 @@ infinity?: string
 minusSign?: string
 ```
 
-减符号。默认值：区域默认的符号。例如："-"。
+Minus sign of localized number part, such as "-".
 
 **Type:** string
 
@@ -90,7 +90,7 @@ minusSign?: string
 nan?: string
 ```
 
-NaN符号。默认值：区域默认的符号。例如："null"。
+NaN symbol of localized number part, such as "null".
 
 **Type:** string
 
@@ -112,7 +112,7 @@ NaN符号。默认值：区域默认的符号。例如："null"。
 plusSign?: string
 ```
 
-加符号。默认值：区域默认的符号。例如："+"。
+Plus sign of localized number part, such as "+".
 
 **Type:** string
 
@@ -134,7 +134,7 @@ plusSign?: string
 zero?: string
 ```
 
-零符号。默认值：区域默认的符号。例如："0"。
+Zero symbol of localized number part, such as "0".
 
 **Type:** string
 

@@ -1,7 +1,8 @@
 # FormIntentInfo (System API)
 
-FormIntentInfo用于描述  
-[@InsightIntentForm](../../../reference/apis-ability-kit/js-apis-app-ability-InsightIntentDecorator.md#insightintentform)装饰器支持的参数，例如卡片名称。同时，该接口也可用于描述[使用配置文件开发的意图](../../../application-models/insight-intent-config-development.md)所绑定的卡片信息。
+Describes the parameters supported by the  
+[@InsightIntentForm](../../../reference/apis-ability-kit/js-apis-app-ability-InsightIntentDecorator.md#insightintentform) decorator, such as the widget name. It also describes the widget information bound to the  
+[intent developed using a configuration file](../../../application-models/insight-intent-config-development.md).
 
 **Since:** 20
 
@@ -25,7 +26,7 @@ import { insightIntentDriver } from 'kits/@kit.AbilityKit';
 readonly abilityName: string
 ```
 
-Ability名称。
+Ability name.
 
 **Type:** string
 
@@ -47,7 +48,7 @@ Ability名称。
 readonly formName: string
 ```
 
-表示[FormExtensionAbility](../../apis-form-kit/arkts-apis/arkts-app-form-formextensionability.md/arkts-app-form-formextensionability.md)绑定的卡片名称。
+Name of the widget bound to the [FormExtensionAbility](../../apis-form-kit/arkts-apis/arkts-app-form-formextensionability.md/arkts-app-form-formextensionability.md).
 
 **Type:** string
 

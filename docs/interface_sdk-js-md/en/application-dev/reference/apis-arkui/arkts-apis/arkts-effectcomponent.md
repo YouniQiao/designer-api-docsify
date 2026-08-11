@@ -7,7 +7,8 @@
 
 | Name | Description |
 | --- | --- |
-| [EffectComponentOptions](arkts-arkui-effectcomponent-effectcomponentoptions-i-sys.md) | 设置当前EffectComponent构造参数，包含EffectComponent的渲染层级。 |
+| [EffectComponentAttribute](arkts-arkui-effectcomponent-effectcomponentattribute-i-sys.md) | Define the EffectComponentAttribute. |
+| [EffectComponentOptions](arkts-arkui-effectcomponent-effectcomponentoptions-i-sys.md) | Defines the Effect Component constructor options. |
 <!--DelEnd-->
 
 <!--Del-->
@@ -15,6 +16,6 @@
 
 | Name | Description |
 | --- | --- |
-| [EffectLayer](arkts-arkui-effectcomponent-effectlayer-e-sys.md) | EffectComponent的渲染层级。 |
+| [EffectLayer](arkts-arkui-effectcomponent-effectlayer-e-sys.md) | Effect layer enum. |
 <!--DelEnd-->
 

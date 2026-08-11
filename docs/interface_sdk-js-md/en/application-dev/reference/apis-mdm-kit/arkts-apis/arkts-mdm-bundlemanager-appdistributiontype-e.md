@@ -1,6 +1,7 @@
 # AppDistributionType
 
-应用程序签名证书的分发类型。详细介绍请参见[ApplicationInfo](arkts-mdm-bundlemanager-applicationinfo-i.md)的appDistributionType属性。
+Defines the distribution type of the application signing certificate. For details, please refer to the  
+**appDistributionType** attribute of [ApplicationInfo](arkts-mdm-bundlemanager-applicationinfo-i.md).
 
 **Since:** 20
 
@@ -16,7 +17,7 @@
 APP_GALLERY = 1
 ```
 
-应用市场安装的应用。
+Application installed from AppGallery.
 
 **Since:** 20
 
@@ -34,7 +35,7 @@ APP_GALLERY = 1
 ENTERPRISE = 2
 ```
 
-企业应用。
+Enterprise application.
 
 **Since:** 20
 
@@ -52,7 +53,7 @@ ENTERPRISE = 2
 ENTERPRISE_NORMAL = 3
 ```
 
-普通企业应用。
+Common enterprise application.
 
 **Since:** 20
 
@@ -70,7 +71,7 @@ ENTERPRISE_NORMAL = 3
 ENTERPRISE_MDM = 4
 ```
 
-企业MDM应用。
+Enterprise MDM application.
 
 **Since:** 20
 
@@ -88,7 +89,7 @@ ENTERPRISE_MDM = 4
 INTERNALTESTING = 5
 ```
 
-应用市场内测的应用。
+Application under internal testing of AppGallery.
 
 **Since:** 20
 
@@ -106,7 +107,7 @@ INTERNALTESTING = 5
 CROWDTESTING = 6
 ```
 
-众包测试应用。
+Crowdtesting application.
 
 **Since:** 20
 

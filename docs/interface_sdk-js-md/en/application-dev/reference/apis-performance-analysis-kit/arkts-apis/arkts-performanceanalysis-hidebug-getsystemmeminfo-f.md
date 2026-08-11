@@ -12,7 +12,7 @@ import { hidebug } from 'kits/@kit.PerformanceAnalysisKit';
 function getSystemMemInfo(): SystemMemInfo
 ```
 
-��ȡϵͳ�ڴ���Ϣ����ȡ/proc/meminfo�ڵ�����ݡ�
+Obtains system memory information. This API is implemented by reading data from the **\/proc/meminfo** node.
 
 **Since:** 12
 
@@ -26,7 +26,7 @@ function getSystemMemInfo(): SystemMemInfo
 
 | Type | Description |
 | --- | --- |
-| [SystemMemInfo](arkts-performanceanalysis-hidebug-systemmeminfo-i.md) | ϵͳ�ڴ���Ϣ�� |
+| [SystemMemInfo](arkts-performanceanalysis-hidebug-systemmeminfo-i.md) | System memory information. |
 
 ## Examples
 

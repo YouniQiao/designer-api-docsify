@@ -12,12 +12,6 @@
 
 **系统接口：** 此接口为系统接口。
 
-## 导入模块
-
-```TypeScript
-import { osAccount } from 'kits/@kit.BasicServicesKit';
-```
-
 ## createOsAccountSubProfile
 
 ArkTS-Dyn:
@@ -62,19 +56,20 @@ createOsAccountSubProfile(osAccountLocalId: int): Promise<OsAccountSubProfile>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 12300010 | Service busy. Possible causes: The target OS account is being operated. |
-| 12300008 | Restricted OS account. |
-| 12300003 | The OS account not found. |
-| 201 | Permission denied. |
-| 12300402 | The number of sub-profiles under the OS account has reached limit. |
-| 202 | Not system application. |
-| 12300001 | System service exception. |
+| [12300010](../../apis-basic-services-kit/errorcode-account.md#12300010-账号服务忙碌) | Service busy. Possible causes: The target OS account is being operated. |
+| [12300008](../../apis-basic-services-kit/errorcode-account.md#12300008-受限的账号) | Restricted OS account. |
+| [12300003](../../apis-basic-services-kit/errorcode-account.md#12300003-账号不存在) | The OS account not found. |
+| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
+| [12300402](../../apis-basic-services-kit/errorcode-account.md#12300402-系统账号下的子身份资料数量已达到上限) | The number of sub-profiles under the OS account has reached limit. |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not system application. |
+| [12300001](../../apis-basic-services-kit/errorcode-account.md#12300001-系统服务异常) | System service exception. |
 
 ## 示例
 
-创建ID为100的系统账号的子身份资料。
+ArkTS-Dyn示例：
 
 ```TypeScript
+import { osAccount } from '@kit.BasicServicesKit';
 import { BusinessError } from '@kit.BasicServicesKit';
 
 let subProfileManager: osAccount.OsAccountSubProfileManager = osAccount.getOsAccountSubProfileManager();
@@ -83,6 +78,26 @@ try {
   subProfileManager.createOsAccountSubProfile(osAccountLocalId).then((subProfile: osAccount.OsAccountSubProfile) => {
     console.info('createOsAccountSubProfile successfully, subProfileId: ' + subProfile.id);
   }).catch((err: BusinessError) => {
+    console.error(`createOsAccountSubProfile failed, code is ${err.code}, message is ${err.message}`);
+  });
+} catch (e) {
+  const err = e as BusinessError;
+  console.error(`createOsAccountSubProfile exception: code is ${err.code}, message is ${err.message}`);
+}
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+import osAccount from '@ohos.account.osAccount';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let subProfileManager: osAccount.OsAccountSubProfileManager = osAccount.getOsAccountSubProfileManager();
+let osAccountLocalId: int = 100;
+try {
+  subProfileManager.createOsAccountSubProfile(osAccountLocalId).then((subProfile: osAccount.OsAccountSubProfile) => {
+    console.info('createOsAccountSubProfile successfully, subProfileId: ' + subProfile.id);
+  }).catch((err: Error) => {
     console.error(`createOsAccountSubProfile failed, code is ${err.code}, message is ${err.message}`);
   });
 } catch (e) {
@@ -136,19 +151,20 @@ deleteOsAccountSubProfile(osAccountLocalId: int, subProfileId: int): Promise<voi
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 12300010 | Service busy. Possible causes: The OS account or sub-profile is being operated. |
-| 12300403 | Restricted sub-profile cannot be deleted. |
-| 201 | Permission denied. |
-| 202 | Not system application. |
-| 12300001 | System service exception. |
-| 12300401 | Sub-profile not found. |
-| 12300404 | The foreground sub-profile cannot be deleted. |
+| [12300010](../../apis-basic-services-kit/errorcode-account.md#12300010-账号服务忙碌) | Service busy. Possible causes: The OS account or sub-profile is being operated. |
+| [12300403](../../apis-basic-services-kit/errorcode-account.md#12300403-受限的系统账号子身份资料) | Restricted sub-profile cannot be deleted. |
+| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not system application. |
+| [12300001](../../apis-basic-services-kit/errorcode-account.md#12300001-系统服务异常) | System service exception. |
+| [12300401](../../apis-basic-services-kit/errorcode-account.md#12300401-系统账号子身份资料不存在) | Sub-profile not found. |
+| [12300404](../../apis-basic-services-kit/errorcode-account.md#12300404-系统账号的前台子身份资料不允许被删除) | The foreground sub-profile cannot be deleted. |
 
 ## 示例
 
-删除ID为100的系统账号中ID为100001的子身份资料。
+ArkTS-Dyn示例：
 
 ```TypeScript
+import { osAccount } from '@kit.BasicServicesKit';
 import { BusinessError } from '@kit.BasicServicesKit';
 
 let subProfileManager: osAccount.OsAccountSubProfileManager = osAccount.getOsAccountSubProfileManager();
@@ -158,6 +174,27 @@ try {
   subProfileManager.deleteOsAccountSubProfile(osAccountLocalId, subProfileId).then(() => {
     console.info('deleteOsAccountSubProfile successfully');
   }).catch((err: BusinessError) => {
+    console.error(`deleteOsAccountSubProfile failed, code is ${err.code}, message is ${err.message}`);
+  });
+} catch (e) {
+  const err = e as BusinessError;
+  console.error(`deleteOsAccountSubProfile exception: code is ${err.code}, message is ${err.message}`);
+}
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+import osAccount from '@ohos.account.osAccount';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let subProfileManager: osAccount.OsAccountSubProfileManager = osAccount.getOsAccountSubProfileManager();
+let osAccountLocalId: int = 100;
+let subProfileId: int = 100001;
+try {
+  subProfileManager.deleteOsAccountSubProfile(osAccountLocalId, subProfileId).then(() => {
+    console.info('deleteOsAccountSubProfile successfully');
+  }).catch((err: Error) => {
     console.error(`deleteOsAccountSubProfile failed, code is ${err.code}, message is ${err.message}`);
   });
 } catch (e) {
@@ -202,13 +239,16 @@ getOsAccountForegroundSubProfileId(): Promise<int>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 202 | Not system application. |
-| 12300001 | System service exception. |
-| 12300401 | Sub-profile not found. |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not system application. |
+| [12300001](../../apis-basic-services-kit/errorcode-account.md#12300001-系统服务异常) | System service exception. |
+| [12300401](../../apis-basic-services-kit/errorcode-account.md#12300401-系统账号子身份资料不存在) | Sub-profile not found. |
 
 ## 示例
 
+ArkTS-Dyn示例：
+
 ```TypeScript
+import { osAccount } from '@kit.BasicServicesKit';
 import { BusinessError } from '@kit.BasicServicesKit';
 
 let subProfileManager: osAccount.OsAccountSubProfileManager = osAccount.getOsAccountSubProfileManager();
@@ -216,6 +256,25 @@ try {
   subProfileManager.getOsAccountForegroundSubProfileId().then((subProfileId: number) => {
     console.info('getOsAccountForegroundSubProfileId successfully, subProfileId: ' + subProfileId);
   }).catch((err: BusinessError) => {
+    console.error(`getOsAccountForegroundSubProfileId failed, code is ${err.code}, message is ${err.message}`);
+  });
+} catch (e) {
+  const err = e as BusinessError;
+  console.error(`getOsAccountForegroundSubProfileId exception: code is ${err.code}, message is ${err.message}`);
+}
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+import osAccount from '@ohos.account.osAccount';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let subProfileManager: osAccount.OsAccountSubProfileManager = osAccount.getOsAccountSubProfileManager();
+try {
+  subProfileManager.getOsAccountForegroundSubProfileId().then((subProfileId: int) => {
+    console.info('getOsAccountForegroundSubProfileId successfully, subProfileId: ' + subProfileId);
+  }).catch((err: Error) => {
     console.error(`getOsAccountForegroundSubProfileId failed, code is ${err.code}, message is ${err.message}`);
   });
 } catch (e) {
@@ -266,16 +325,17 @@ getOsAccountForegroundSubProfileId(osAccountLocalId: int): Promise<int>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 12300003 | OS account not found. |
-| 202 | Not system application. |
-| 12300001 | System service exception. |
-| 12300401 | The foreground sub-profile not found. |
+| [12300003](../../apis-basic-services-kit/errorcode-account.md#12300003-账号不存在) | OS account not found. |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not system application. |
+| [12300001](../../apis-basic-services-kit/errorcode-account.md#12300001-系统服务异常) | System service exception. |
+| [12300401](../../apis-basic-services-kit/errorcode-account.md#12300401-系统账号子身份资料不存在) | The foreground sub-profile not found. |
 
 ## 示例
 
-获取ID为100的系统账号的前台子身份资料标识符。
+ArkTS-Dyn示例：
 
 ```TypeScript
+import { osAccount } from '@kit.BasicServicesKit';
 import { BusinessError } from '@kit.BasicServicesKit';
 
 let subProfileManager: osAccount.OsAccountSubProfileManager = osAccount.getOsAccountSubProfileManager();
@@ -284,6 +344,26 @@ try {
   subProfileManager.getOsAccountForegroundSubProfileId(osAccountLocalId).then((subProfileId: number) => {
     console.info('getOsAccountForegroundSubProfileId successfully, subProfileId: ' + subProfileId);
   }).catch((err: BusinessError) => {
+    console.error(`getOsAccountForegroundSubProfileId failed, code is ${err.code}, message is ${err.message}`);
+  });
+} catch (e) {
+  const err = e as BusinessError;
+  console.error(`getOsAccountForegroundSubProfileId exception: code is ${err.code}, message is ${err.message}`);
+}
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+import osAccount from '@ohos.account.osAccount';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let subProfileManager: osAccount.OsAccountSubProfileManager = osAccount.getOsAccountSubProfileManager();
+let osAccountLocalId: int = 100;
+try {
+  subProfileManager.getOsAccountForegroundSubProfileId(osAccountLocalId).then((subProfileId: int) => {
+    console.info('getOsAccountForegroundSubProfileId successfully, subProfileId: ' + subProfileId);
+  }).catch((err: Error) => {
     console.error(`getOsAccountForegroundSubProfileId failed, code is ${err.code}, message is ${err.message}`);
   });
 } catch (e) {
@@ -334,15 +414,16 @@ getOsAccountLocalIdForSubProfile(subProfileId: int): Promise<int>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 202 | Not system application. |
-| 12300001 | System service exception. |
-| 12300401 | Sub-profile not found. |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not system application. |
+| [12300001](../../apis-basic-services-kit/errorcode-account.md#12300001-系统服务异常) | System service exception. |
+| [12300401](../../apis-basic-services-kit/errorcode-account.md#12300401-系统账号子身份资料不存在) | Sub-profile not found. |
 
 ## 示例
 
-获取ID为100001的子身份资料所属的系统账号本地标识符。
+ArkTS-Dyn示例：
 
 ```TypeScript
+import { osAccount } from '@kit.BasicServicesKit';
 import { BusinessError } from '@kit.BasicServicesKit';
 
 let subProfileManager: osAccount.OsAccountSubProfileManager = osAccount.getOsAccountSubProfileManager();
@@ -351,6 +432,26 @@ try {
   subProfileManager.getOsAccountLocalIdForSubProfile(subProfileId).then((osAccountLocalId: number) => {
     console.info('getOsAccountLocalIdForSubProfile successfully, osAccountLocalId: ' + osAccountLocalId);
   }).catch((err: BusinessError) => {
+    console.error(`getOsAccountLocalIdForSubProfile failed, code is ${err.code}, message is ${err.message}`);
+  });
+} catch (e) {
+  const err = e as BusinessError;
+  console.error(`getOsAccountLocalIdForSubProfile exception: code is ${err.code}, message is ${err.message}`);
+}
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+import osAccount from '@ohos.account.osAccount';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let subProfileManager: osAccount.OsAccountSubProfileManager = osAccount.getOsAccountSubProfileManager();
+let subProfileId: int = 100001;
+try {
+  subProfileManager.getOsAccountLocalIdForSubProfile(subProfileId).then((osAccountLocalId: int) => {
+    console.info('getOsAccountLocalIdForSubProfile successfully, osAccountLocalId: ' + osAccountLocalId);
+  }).catch((err: Error) => {
     console.error(`getOsAccountLocalIdForSubProfile failed, code is ${err.code}, message is ${err.message}`);
   });
 } catch (e) {
@@ -403,16 +504,17 @@ getOsAccountSubProfile(subProfileId: int): Promise<OsAccountSubProfile>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 201 | Permission denied. |
-| 202 | Not system application. |
-| 12300001 | System service exception. |
-| 12300401 | Sub-profile not found. |
+| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not system application. |
+| [12300001](../../apis-basic-services-kit/errorcode-account.md#12300001-系统服务异常) | System service exception. |
+| [12300401](../../apis-basic-services-kit/errorcode-account.md#12300401-系统账号子身份资料不存在) | Sub-profile not found. |
 
 ## 示例
 
-获取ID为100001的子身份资料对象信息。
+ArkTS-Dyn示例：
 
 ```TypeScript
+import { osAccount } from '@kit.BasicServicesKit';
 import { BusinessError } from '@kit.BasicServicesKit';
 
 let subProfileManager: osAccount.OsAccountSubProfileManager = osAccount.getOsAccountSubProfileManager();
@@ -421,6 +523,26 @@ try {
   subProfileManager.getOsAccountSubProfile(subProfileId).then((subProfile: osAccount.OsAccountSubProfile) => {
     console.info('getOsAccountSubProfile successfully, subProfile: ' + JSON.stringify(subProfile));
   }).catch((err: BusinessError) => {
+    console.error(`getOsAccountSubProfile failed, code is ${err.code}, message is ${err.message}`);
+  });
+} catch (e) {
+  const err = e as BusinessError;
+  console.error(`getOsAccountSubProfile exception: code is ${err.code}, message is ${err.message}`);
+}
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+import osAccount from '@ohos.account.osAccount';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let subProfileManager: osAccount.OsAccountSubProfileManager = osAccount.getOsAccountSubProfileManager();
+let subProfileId: int = 100001;
+try {
+  subProfileManager.getOsAccountSubProfile(subProfileId).then((subProfile: osAccount.OsAccountSubProfile) => {
+    console.info('getOsAccountSubProfile successfully, subProfile: ' + JSON.stringify(subProfile));
+  }).catch((err: Error) => {
     console.error(`getOsAccountSubProfile failed, code is ${err.code}, message is ${err.message}`);
   });
 } catch (e) {
@@ -474,16 +596,17 @@ getOsAccountSubProfile(osAccountLocalId: int, subProfileId: int): Promise<OsAcco
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 201 | Permission denied. |
-| 202 | Not system application. |
-| 12300001 | System service exception. |
-| 12300401 | Sub-profile not found. |
+| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not system application. |
+| [12300001](../../apis-basic-services-kit/errorcode-account.md#12300001-系统服务异常) | System service exception. |
+| [12300401](../../apis-basic-services-kit/errorcode-account.md#12300401-系统账号子身份资料不存在) | Sub-profile not found. |
 
 ## 示例
 
-获取ID为100的系统账号中ID为100001的子身份资料对象信息。
+ArkTS-Dyn示例：
 
 ```TypeScript
+import { osAccount } from '@kit.BasicServicesKit';
 import { BusinessError } from '@kit.BasicServicesKit';
 
 let subProfileManager: osAccount.OsAccountSubProfileManager = osAccount.getOsAccountSubProfileManager();
@@ -493,6 +616,27 @@ try {
   subProfileManager.getOsAccountSubProfile(osAccountLocalId, subProfileId).then((subProfile: osAccount.OsAccountSubProfile) => {
     console.info('getOsAccountSubProfile successfully, subProfile: ' + JSON.stringify(subProfile));
   }).catch((err: BusinessError) => {
+    console.error(`getOsAccountSubProfile failed, code is ${err.code}, message is ${err.message}`);
+  });
+} catch (e) {
+  const err = e as BusinessError;
+  console.error(`getOsAccountSubProfile exception: code is ${err.code}, message is ${err.message}`);
+}
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+import osAccount from '@ohos.account.osAccount';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let subProfileManager: osAccount.OsAccountSubProfileManager = osAccount.getOsAccountSubProfileManager();
+let osAccountLocalId: int = 100;
+let subProfileId: int = 100001;
+try {
+  subProfileManager.getOsAccountSubProfile(osAccountLocalId, subProfileId).then((subProfile: osAccount.OsAccountSubProfile) => {
+    console.info('getOsAccountSubProfile successfully, subProfile: ' + JSON.stringify(subProfile));
+  }).catch((err: Error) => {
     console.error(`getOsAccountSubProfile failed, code is ${err.code}, message is ${err.message}`);
   });
 } catch (e) {
@@ -539,20 +683,42 @@ getOsAccountSubProfileIds(): Promise<int[]>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 201 | Permission denied. |
-| 202 | Not system application. |
-| 12300001 | System service exception. |
+| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not system application. |
+| [12300001](../../apis-basic-services-kit/errorcode-account.md#12300001-系统服务异常) | System service exception. |
 
 ## 示例
 
+ArkTS-Dyn示例：
+
 ```TypeScript
+import { osAccount } from '@kit.BasicServicesKit';
 import { BusinessError } from '@kit.BasicServicesKit';
 
 let subProfileManager: osAccount.OsAccountSubProfileManager = osAccount.getOsAccountSubProfileManager();
 try {
   subProfileManager.getOsAccountSubProfileIds().then((subProfileIds: number[]) => {
-    console.info('getOsAccountSubProfileIds successfully, subProfileIds: ' + subProfileIds);
+    console.info('getOsAccountSubProfileIds successfully, subProfileIds: ' + JSON.stringify(subProfileIds));
   }).catch((err: BusinessError) => {
+    console.error(`getOsAccountSubProfileIds failed, code is ${err.code}, message is ${err.message}`);
+  });
+} catch (e) {
+  const err = e as BusinessError;
+  console.error(`getOsAccountSubProfileIds exception: code is ${err.code}, message is ${err.message}`);
+}
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+import osAccount from '@ohos.account.osAccount';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let subProfileManager: osAccount.OsAccountSubProfileManager = osAccount.getOsAccountSubProfileManager();
+try {
+  subProfileManager.getOsAccountSubProfileIds().then((subProfileIds: int[]) => {
+    console.info('getOsAccountSubProfileIds successfully, subProfileIds: ' + JSON.stringify(subProfileIds));
+  }).catch((err: Error) => {
     console.error(`getOsAccountSubProfileIds failed, code is ${err.code}, message is ${err.message}`);
   });
 } catch (e) {
@@ -605,24 +771,45 @@ getOsAccountSubProfileIds(osAccountLocalId: int): Promise<int[]>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 12300003 | OS account not found. |
-| 201 | Permission denied. |
-| 202 | Not system application. |
-| 12300001 | System service exception. |
+| [12300003](../../apis-basic-services-kit/errorcode-account.md#12300003-账号不存在) | OS account not found. |
+| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not system application. |
+| [12300001](../../apis-basic-services-kit/errorcode-account.md#12300001-系统服务异常) | System service exception. |
 
 ## 示例
 
-获取ID为100的系统账号的子身份资料标识符列表。
+ArkTS-Dyn示例：
 
 ```TypeScript
+import { osAccount } from '@kit.BasicServicesKit';
 import { BusinessError } from '@kit.BasicServicesKit';
 
 let subProfileManager: osAccount.OsAccountSubProfileManager = osAccount.getOsAccountSubProfileManager();
 let osAccountLocalId: number = 100;
 try {
   subProfileManager.getOsAccountSubProfileIds(osAccountLocalId).then((subProfileIds: number[]) => {
-    console.info('getOsAccountSubProfileIds successfully, subProfileIds: ' + subProfileIds);
+    console.info('getOsAccountSubProfileIds successfully, subProfileIds: ' + JSON.stringify(subProfileIds));
   }).catch((err: BusinessError) => {
+    console.error(`getOsAccountSubProfileIds failed, code is ${err.code}, message is ${err.message}`);
+  });
+} catch (e) {
+  const err = e as BusinessError;
+  console.error(`getOsAccountSubProfileIds exception: code is ${err.code}, message is ${err.message}`);
+}
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+import osAccount from '@ohos.account.osAccount';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let subProfileManager: osAccount.OsAccountSubProfileManager = osAccount.getOsAccountSubProfileManager();
+let osAccountLocalId: int = 100;
+try {
+  subProfileManager.getOsAccountSubProfileIds(osAccountLocalId).then((subProfileIds: int[]) => {
+    console.info('getOsAccountSubProfileIds successfully, subProfileIds: ' + JSON.stringify(subProfileIds));
+  }).catch((err: Error) => {
     console.error(`getOsAccountSubProfileIds failed, code is ${err.code}, message is ${err.message}`);
   });
 } catch (e) {
@@ -661,12 +848,30 @@ offOsAccountSubProfileEvent(callback?: Callback<OsAccountSubProfileEventData>): 
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 202 | Not system application. |
-| 12300001 | System service exception. |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not system application. |
+| [12300001](../../apis-basic-services-kit/errorcode-account.md#12300001-系统服务异常) | System service exception. |
 
 ## 示例
 
+ArkTS-Dyn示例：
+
 ```TypeScript
+import { osAccount } from '@kit.BasicServicesKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let subProfileManager: osAccount.OsAccountSubProfileManager = osAccount.getOsAccountSubProfileManager();
+try {
+  subProfileManager.offOsAccountSubProfileEvent();
+} catch (e) {
+  const err = e as BusinessError;
+  console.error(`offOsAccountSubProfileEvent failed, code is ${err.code}, message is ${err.message}`);
+}
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+import osAccount from '@ohos.account.osAccount';
 import { BusinessError } from '@kit.BasicServicesKit';
 
 let subProfileManager: osAccount.OsAccountSubProfileManager = osAccount.getOsAccountSubProfileManager();
@@ -711,15 +916,34 @@ onOsAccountSubProfileEvent(
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 12300002 | Invalid event. |
-| 202 | Not system application. |
-| 12300001 | System service exception. |
+| [12300002](../../apis-basic-services-kit/errorcode-account.md#12300002-无效参数) | Invalid event. |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not system application. |
+| [12300001](../../apis-basic-services-kit/errorcode-account.md#12300001-系统服务异常) | System service exception. |
 
 ## 示例
 
-订阅系统账号子身份的创建事件。
+ArkTS-Dyn示例：
 
 ```TypeScript
+import { osAccount } from '@kit.BasicServicesKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let subProfileManager: osAccount.OsAccountSubProfileManager = osAccount.getOsAccountSubProfileManager();
+let events: osAccount.OsAccountSubProfileEvent[] = [osAccount.OsAccountSubProfileEvent.CREATED];
+try {
+  subProfileManager.onOsAccountSubProfileEvent(events, (data: osAccount.OsAccountSubProfileEventData) => {
+    console.info('onOsAccountSubProfileEvent, event: ' + data.event + ', localId: ' + data.osAccountLocalId);
+  });
+} catch (e) {
+  const err = e as BusinessError;
+  console.error(`onOsAccountSubProfileEvent failed, code is ${err.code}, message is ${err.message}`);
+}
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+import osAccount from '@ohos.account.osAccount';
 import { BusinessError } from '@kit.BasicServicesKit';
 
 let subProfileManager: osAccount.OsAccountSubProfileManager = osAccount.getOsAccountSubProfileManager();
@@ -779,19 +1003,20 @@ switchOsAccountSubProfile(osAccountLocalId: int, subProfileId: int): Promise<voi
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 12300010 | Service busy. Possible causes: The OS account or sub-profile is being operated. |
-| 12300403 | Restricted sub-profile cannot be switched to foreground. |
-| 201 | Permission denied. |
-| 202 | Not system application. |
-| 12300001 | System service exception. |
-| 12300401 | Sub-profile not found. |
-| 12300405 | The foreground sub-profile bound with a logged-in distributed account cannot be directly switched to background. |
+| [12300010](../../apis-basic-services-kit/errorcode-account.md#12300010-账号服务忙碌) | Service busy. Possible causes: The OS account or sub-profile is being operated. |
+| [12300403](../../apis-basic-services-kit/errorcode-account.md#12300403-受限的系统账号子身份资料) | Restricted sub-profile cannot be switched to foreground. |
+| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not system application. |
+| [12300001](../../apis-basic-services-kit/errorcode-account.md#12300001-系统服务异常) | System service exception. |
+| [12300401](../../apis-basic-services-kit/errorcode-account.md#12300401-系统账号子身份资料不存在) | Sub-profile not found. |
+| [12300405](../../apis-basic-services-kit/errorcode-account.md#12300405-已登录分布式账号的前台子身份不可直接切换到后台) | The foreground sub-profile bound with a logged-in distributed account cannot be directly switched to background. |
 
 ## 示例
 
-将ID为100的系统账号的当前子身份资料切换到ID为100001的子身份资料。
+ArkTS-Dyn示例：
 
 ```TypeScript
+import { osAccount } from '@kit.BasicServicesKit';
 import { BusinessError } from '@kit.BasicServicesKit';
 
 let subProfileManager: osAccount.OsAccountSubProfileManager = osAccount.getOsAccountSubProfileManager();
@@ -801,6 +1026,27 @@ try {
   subProfileManager.switchOsAccountSubProfile(osAccountLocalId, subProfileId).then(() => {
     console.info('switchOsAccountSubProfile successfully');
   }).catch((err: BusinessError) => {
+    console.error(`switchOsAccountSubProfile failed, code is ${err.code}, message is ${err.message}`);
+  });
+} catch (e) {
+  const err = e as BusinessError;
+  console.error(`switchOsAccountSubProfile exception: code is ${err.code}, message is ${err.message}`);
+}
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+import osAccount from '@ohos.account.osAccount';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let subProfileManager: osAccount.OsAccountSubProfileManager = osAccount.getOsAccountSubProfileManager();
+let osAccountLocalId: int = 100;
+let subProfileId: int = 100001;
+try {
+  subProfileManager.switchOsAccountSubProfile(osAccountLocalId, subProfileId).then(() => {
+    console.info('switchOsAccountSubProfile successfully');
+  }).catch((err: Error) => {
     console.error(`switchOsAccountSubProfile failed, code is ${err.code}, message is ${err.message}`);
   });
 } catch (e) {

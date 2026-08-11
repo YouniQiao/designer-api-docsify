@@ -1,6 +1,6 @@
 # DeviceBasicInfo
 
-分布式设备基本信息。
+Represents the basic information about a distributed device.
 
 **Since:** 10
 
@@ -22,7 +22,7 @@ import { distributedDeviceManager } from 'kits/@kit.DistributedServiceKit';
 deviceId: string
 ```
 
-设备标识符。实际值为udid-hash与appid和盐值基于sha256方式进行混淆后的值。
+Device ID. The value is the result of obfuscating the udid-hash (hash value of the UDID), **appid**, and salt using the SHA-256 algorithm.
 
 **Type:** string
 
@@ -40,7 +40,7 @@ deviceId: string
 deviceName: string
 ```
 
-设备名称。
+Device name.
 
 **Type:** string
 
@@ -58,7 +58,7 @@ deviceName: string
 deviceType: string
 ```
 
-[设备类型](arkts-distributedservice-distributeddevicemanager-devicemanager-i.md#getdevicetype)。
+[Device type](arkts-distributedservice-distributeddevicemanager-devicemanager-i.md#getdevicetype).
 
 **Type:** string
 
@@ -76,7 +76,7 @@ deviceType: string
 networkId?: string
 ```
 
-设备网络标识。
+Network ID of the device.
 
 **Type:** string
 

@@ -1,11 +1,5 @@
 # setShortcutsEnabled
 
-## 导入模块
-
-```TypeScript
-import { shortcutManager } from 'kits/@kit.AbilityKit';
-```
-
 ## setShortcutsEnabled
 
 ```TypeScript
@@ -41,11 +35,11 @@ function setShortcutsEnabled(shortcutsInfo: Array<ShortcutInfo>, isEnabled: bool
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 801 | Capability not supported. |
-| 17700070 | The specified shortcut id is illegal. |
-| 201 | Permission denied. |
-| 202 | Permission denied. A non-system application is not allowed to call a system API. |
-| 17700001 | The specified bundle is not found. |
+| [801](../../errorcode-universal.md#801-该设备不支持此api) | Capability not supported. |
+| [17700070](../errorcode-bundle.md#17700070-指定的快捷方式id不合法) | The specified shortcut id is illegal. |
+| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission denied. A non-system application is not allowed to call a system API. |
+| [17700001](../errorcode-bundle.md#17700001-指定的bundlename不存在) | The specified bundle is not found. |
 
 ## 示例
 

@@ -1,10 +1,6 @@
 # EdgeStyles
 
-type EdgeStyles = { top: BorderStyle; right: BorderStyle; bottom: BorderStyle; left: BorderStyle; }
-
-边框样式，用于描述组件边框四条边的样式。
-
-引入该对象时，至少传入一个参数。
+Defines the border style property.
 
 **Since:** 23
 
@@ -20,7 +16,7 @@ type EdgeStyles = { top: BorderStyle; right: BorderStyle; bottom: BorderStyle; l
 bottom?: BorderStyle
 ```
 
-组件下边框样式。
+bottom property.
 
 **Type:** [BorderStyle](arkts-arkui-borderstyle-e.md)
 
@@ -40,7 +36,7 @@ bottom?: BorderStyle
 left?: BorderStyle
 ```
 
-组件左边框样式。
+left property.
 
 **Type:** [BorderStyle](arkts-arkui-borderstyle-e.md)
 
@@ -60,7 +56,7 @@ left?: BorderStyle
 right?: BorderStyle
 ```
 
-组件右边框样式。
+right property.
 
 **Type:** [BorderStyle](arkts-arkui-borderstyle-e.md)
 
@@ -80,7 +76,7 @@ right?: BorderStyle
 top?: BorderStyle
 ```
 
-组件上边框样式。
+top property.
 
 **Type:** [BorderStyle](arkts-arkui-borderstyle-e.md)
 

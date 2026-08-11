@@ -1,6 +1,6 @@
 # OnReleaseCallback
 
-注册通用组件服务端Stub（桩）断开监听通知的回调函数类型。
+Defines the callback that is invoked when the stub on the target UIAbility is disconnected.
 
 **Since:** 9
 
@@ -22,7 +22,7 @@ import { Callee, Caller, OnReleaseCallback, OnRemoteStateChangeCallback, CalleeC
 (msg: string): void
 ```
 
-定义OnRelease的回调函数。
+Defines the callback of OnRelease.
 
 **Since:** 9
 
@@ -38,5 +38,5 @@ import { Callee, Caller, OnReleaseCallback, OnRemoteStateChangeCallback, CalleeC
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| msg | string | Yes | 用于传递释放消息。 |
+| msg | string | Yes | Message used for disconnection. |
 

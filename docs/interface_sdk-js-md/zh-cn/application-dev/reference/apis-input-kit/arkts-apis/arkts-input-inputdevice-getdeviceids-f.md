@@ -1,11 +1,5 @@
 # getDeviceIds
 
-## 导入模块
-
-```TypeScript
-import { inputDevice } from 'kits/@kit.InputKit';
-```
-
 ## getDeviceIds
 
 ```TypeScript

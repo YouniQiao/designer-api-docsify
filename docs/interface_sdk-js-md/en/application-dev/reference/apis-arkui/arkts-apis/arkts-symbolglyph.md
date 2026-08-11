@@ -6,23 +6,23 @@
 
 | Name | Description |
 | --- | --- |
-| [AppearSymbolEffect](arkts-arkui-symbolglyph-appearsymboleffect-c.md) | AppearSymbolEffect继承自父类SymbolEffect。 |
-| [BounceSymbolEffect](arkts-arkui-symbolglyph-bouncesymboleffect-c.md) | BounceSymbolEffect继承自父类SymbolEffect。 |
-| [DisappearSymbolEffect](arkts-arkui-symbolglyph-disappearsymboleffect-c.md) | DisappearSymbolEffect继承自父类SymbolEffect。 |
-| [HierarchicalSymbolEffect](arkts-arkui-symbolglyph-hierarchicalsymboleffect-c.md) | HierarchicalSymbolEffect继承自父类SymbolEffect。 |
-| [PulseSymbolEffect](arkts-arkui-symbolglyph-pulsesymboleffect-c.md) | PulseSymbolEffect继承自父类SymbolEffect。 |
-| [ReplaceSymbolEffect](arkts-arkui-symbolglyph-replacesymboleffect-c.md) | ReplaceSymbolEffect继承自父类SymbolEffect。 |
-| [ScaleSymbolEffect](arkts-arkui-symbolglyph-scalesymboleffect-c.md) | ScaleSymbolEffect继承自父类SymbolEffect。 |
-| [SymbolEffect](arkts-arkui-symbolglyph-symboleffect-c.md) | SymbolEffect基类。 |
+| [AppearSymbolEffect](arkts-arkui-symbolglyph-appearsymboleffect-c.md) | Defines AppearSymbolEffect class. |
+| [BounceSymbolEffect](arkts-arkui-symbolglyph-bouncesymboleffect-c.md) | Defines BounceSymbolEffect class. |
+| [DisappearSymbolEffect](arkts-arkui-symbolglyph-disappearsymboleffect-c.md) | Defines DisappearSymbolEffect class. |
+| [HierarchicalSymbolEffect](arkts-arkui-symbolglyph-hierarchicalsymboleffect-c.md) | Defines HierarchicalSymbolEffect class. |
+| [PulseSymbolEffect](arkts-arkui-symbolglyph-pulsesymboleffect-c.md) | Defines PulseSymbolEffect class. |
+| [ReplaceSymbolEffect](arkts-arkui-symbolglyph-replacesymboleffect-c.md) | Defines ReplaceSymbolEffect class. |
+| [ScaleSymbolEffect](arkts-arkui-symbolglyph-scalesymboleffect-c.md) | Defines ScaleSymbolEffect class. |
+| [SymbolEffect](arkts-arkui-symbolglyph-symboleffect-c.md) | Defines SymbolEffect class. |
 
 ### Enums
 
 | Name | Description |
 | --- | --- |
-| [EffectDirection](arkts-arkui-symbolglyph-effectdirection-e.md) | 动效方向。 |
-| [EffectFillStyle](arkts-arkui-symbolglyph-effectfillstyle-e.md) | 动效模式。 |
-| [EffectScope](arkts-arkui-symbolglyph-effectscope-e.md) | 动效范围。 |
-| [ReplaceEffectType](arkts-arkui-symbolglyph-replaceeffecttype-e.md) | Symbol的替换效果类型。 |
-| [SymbolEffectStrategy](arkts-arkui-symbolglyph-symboleffectstrategy-e.md) | 动效类型的枚举值。设置动效后，动效启动即生效，无需触发。 |
-| [SymbolRenderingStrategy](arkts-arkui-symbolglyph-symbolrenderingstrategy-e.md) | 渲染模式的枚举值。 |
+| [EffectDirection](arkts-arkui-symbolglyph-effectdirection-e.md) | The direction type of symbol effect |
+| [EffectFillStyle](arkts-arkui-symbolglyph-effectfillstyle-e.md) | Declare fill style of symbol |
+| [EffectScope](arkts-arkui-symbolglyph-effectscope-e.md) | Declare scope type of the symbol effect |
+| [ReplaceEffectType](arkts-arkui-symbolglyph-replaceeffecttype-e.md) | The replace effect type of symbol. |
+| [SymbolEffectStrategy](arkts-arkui-symbolglyph-symboleffectstrategy-e.md) | The symbol effect strategy. |
+| [SymbolRenderingStrategy](arkts-arkui-symbolglyph-symbolrenderingstrategy-e.md) | The symbol rendering strategy. |
 

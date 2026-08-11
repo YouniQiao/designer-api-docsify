@@ -4,7 +4,7 @@
 declare type FP = `${number}fp`
 ```
 
-定义长度属性，单位为fp。
+Defines the length property with number in units of fp.
 
 **Since:** 23
 

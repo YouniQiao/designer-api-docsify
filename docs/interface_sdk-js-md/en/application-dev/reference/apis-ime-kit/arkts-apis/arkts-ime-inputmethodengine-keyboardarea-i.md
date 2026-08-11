@@ -1,6 +1,6 @@
 # KeyboardArea
 
-面板中的键盘区域。
+Represents the keyboard area on the panel.
 
 **Since:** 15
 
@@ -22,7 +22,7 @@ import { inputMethodEngine } from 'kits/@kit.IMEKit';
 bottom: int
 ```
 
-键盘区域的下边界到面板区域下边界的距离，单位为px，该参数为整数。
+Distance between the lower boundary of the keyboard area and the lower boundary of the panel area, in pixels. The value is an integer.
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
@@ -40,7 +40,7 @@ bottom: int
 left: int
 ```
 
-键盘区域的左边界到面板区域左边界的距离，单位为px，该参数为整数。
+Distance between the left boundary of the keyboard area and the left boundary of the panel area, in pixels. The value is an integer.
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
@@ -58,7 +58,7 @@ left: int
 right: int
 ```
 
-键盘区域的右边界到面板区域右边界的距离，单位为px，该参数为整数。
+Distance between the right border of the keyboard area and the right border of the panel area, in pixels. The value is an integer.
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
@@ -76,7 +76,7 @@ right: int
 top: int
 ```
 
-键盘区域的上边界到面板区域上边界的距离，单位为px，该参数为整数。
+Distance between the upper boundary of the keyboard area and the upper boundary of the panel area, in pixels. The value is an integer.
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 

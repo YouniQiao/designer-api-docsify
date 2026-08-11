@@ -11,7 +11,7 @@ export type PromptActionSextupleButtons = [
     ]
 ```
 
-菜单中的菜单项按钮，仅支持6个按钮。
+Defines the six-buttons array.
 
 **Since:** 23
 

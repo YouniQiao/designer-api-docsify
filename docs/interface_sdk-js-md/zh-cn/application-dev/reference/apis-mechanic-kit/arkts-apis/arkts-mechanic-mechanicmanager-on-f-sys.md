@@ -1,11 +1,5 @@
 # on（系统接口）
 
-## 导入模块
-
-```TypeScript
-import { mechanicManager } from 'kits/@kit.MechanicKit';
-```
-
 ## on('rotationAxesStatusChange')
 
 ```TypeScript
@@ -35,8 +29,8 @@ Register a listener for axis state changes.The status of the rotation axis chang
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 202 | Not system application. |
-| 33300001 | Service exception. |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not system application. |
+| [33300001](../errorcode-mechanic.md#33300001-系统错误) | Service exception. |
 
 ## 示例
 

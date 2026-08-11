@@ -16,7 +16,7 @@ Defines the Localized align rule options of relative container.
 bias?: Bias
 ```
 
-设置组件在锚点约束下的偏移参数，其值为到左/上侧锚点的距离与锚点间总距离的比值。
+Offset of the component under the anchor constraints.&lt;br&gt;The value is the ratio of the distance to the left/upper anchor to the total distance between anchors.
 
 **Type:** [Bias](../arkts-apis/arkts-arkui-bias-i.md)
 
@@ -40,7 +40,7 @@ bias?: Bias
 bottom?: LocalizedVerticalAlignParam
 ```
 
-设置纵向底部对齐的参数。
+Bottom alignment in the vertical direction.
 
 **Type:** [LocalizedVerticalAlignParam](../arkts-apis/arkts-arkui-common-localizedverticalalignparam-i.md)
 
@@ -62,7 +62,7 @@ bottom?: LocalizedVerticalAlignParam
 center?: LocalizedVerticalAlignParam
 ```
 
-设置纵向居中对齐方式的参数。
+Center alignment in the vertical direction.
 
 **Type:** [LocalizedVerticalAlignParam](../arkts-apis/arkts-arkui-common-localizedverticalalignparam-i.md)
 
@@ -84,7 +84,7 @@ center?: LocalizedVerticalAlignParam
 end?: LocalizedHorizontalAlignParam
 ```
 
-设置横向对齐方式的参数，LTR模式时为右对齐，RTL模式时为左对齐。
+Right alignment with left-to-right scripts and left alignment with right-to-left scripts in the horizontal direction.
 
 **Type:** [LocalizedHorizontalAlignParam](../arkts-apis/arkts-arkui-common-localizedhorizontalalignparam-i.md)
 
@@ -106,7 +106,7 @@ end?: LocalizedHorizontalAlignParam
 middle?: LocalizedHorizontalAlignParam
 ```
 
-设置横向居中对齐方式的参数。
+Center alignment in the horizontal direction.
 
 **Type:** [LocalizedHorizontalAlignParam](../arkts-apis/arkts-arkui-common-localizedhorizontalalignparam-i.md)
 
@@ -128,7 +128,7 @@ middle?: LocalizedHorizontalAlignParam
 start?: LocalizedHorizontalAlignParam
 ```
 
-设置横向对齐方式的参数，LTR模式时为左对齐，RTL模式时为右对齐。
+Left alignment with left-to-right scripts and right alignment with right-to-left scripts in the horizontal direction.
 
 **Type:** [LocalizedHorizontalAlignParam](../arkts-apis/arkts-arkui-common-localizedhorizontalalignparam-i.md)
 
@@ -150,7 +150,7 @@ start?: LocalizedHorizontalAlignParam
 top?: LocalizedVerticalAlignParam
 ```
 
-设置纵向顶部对齐的参数。
+Top alignment in the vertical direction.
 
 **Type:** [LocalizedVerticalAlignParam](../arkts-apis/arkts-arkui-common-localizedverticalalignparam-i.md)
 

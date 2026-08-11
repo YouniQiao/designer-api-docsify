@@ -1,7 +1,7 @@
 # OH_Huks_KeyAliasSet
 
 ```c
-struct OH_Huks_KeyAliasSet {...}
+typedef struct OH_Huks_KeyAliasSet {...} OH_Huks_KeyAliasSet
 ```
 
 ## 概述

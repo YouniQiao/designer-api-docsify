@@ -1,6 +1,6 @@
 # BackgroundOptions
 
-指定背景选项
+Defines background options.
 
 **Since:** 20
 

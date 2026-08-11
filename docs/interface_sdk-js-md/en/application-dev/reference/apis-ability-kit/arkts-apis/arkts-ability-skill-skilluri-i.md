@@ -1,6 +1,6 @@
 # SkillUri
 
-Want匹配的Uri集合。
+Indicates the uris of the skill
 
 **Since:** 12
 
@@ -16,7 +16,7 @@ Want匹配的Uri集合。
 readonly host: string
 ```
 
-标识 URI 主机地址部分，仅当 scheme 存在时才生效。
+Indicates the host of the skillUri
 
 **Type:** string
 
@@ -36,7 +36,7 @@ readonly host: string
 readonly linkFeature: string
 ```
 
-标识 URI 提供的[功能类型](../../../application-models/app-uri-config.md#linkfeature标签说明)，用于实现应用间跳转，仅在AbilityInfo中存在。
+Indicates the linkFeature of the skillUri
 
 **Type:** string
 
@@ -56,7 +56,7 @@ readonly linkFeature: string
 readonly maxFileSupported: int
 ```
 
-对于指定类型的文件，标识一次能接收或打开的最大数量。取值范围：不小于0的整数。
+Indicates the maxFileSupported of the skillUri
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
@@ -76,7 +76,7 @@ readonly maxFileSupported: int
 readonly path: string
 ```
 
-标识 URI 路径部分，仅当 scheme 和 host 同时存在时才生效。
+Indicates the path of the skillUri
 
 **Type:** string
 
@@ -96,7 +96,7 @@ readonly path: string
 readonly pathRegex: string
 ```
 
-标识 URI 路径部分，用于正则匹配，仅当 scheme 和 host 同时存在时才生效。
+Indicates the pathRegex of the skillUri
 
 **Type:** string
 
@@ -116,7 +116,7 @@ readonly pathRegex: string
 readonly pathStartWith: string
 ```
 
-标识 URI 路径部分，用于前缀匹配，仅当 scheme 和 host 同时存在时才生效。
+Indicates the pathStartWith of the skillUri
 
 **Type:** string
 
@@ -136,7 +136,7 @@ readonly pathStartWith: string
 readonly port: int
 ```
 
-标识 URI 端口，仅当 scheme 和 host 同时存在时才生效。
+Indicates the port of the skillUri
 
 **Type:** int
 
@@ -156,7 +156,7 @@ readonly port: int
 readonly scheme: string
 ```
 
-标识 URI 协议名，常见的有http、https、file、ftp等。
+Indicates the scheme of the skillUri
 
 **Type:** string
 
@@ -176,8 +176,7 @@ readonly scheme: string
 readonly type: string
 ```
 
-标识与Want相匹配的数据类型，使用MIME（Multipurpose?Internet?Mail?Extensions）类型规范和  
-[UniformDataType](../../apis-arkdata/arkts-apis/arkts-arkdata-uniformtypedescriptor-uniformdatatype-e.md/arkts-arkdata-uniformtypedescriptor-uniformdatatype-e.md)类型规范。
+Indicates the type of the skillUri
 
 **Type:** string
 
@@ -197,7 +196,7 @@ readonly type: string
 readonly utd: string
 ```
 
-标识与 Want 相匹配的 URI 的标准化数据类型，适用于分享等场景。
+Indicates the utd of the skillUri
 
 **Type:** string
 

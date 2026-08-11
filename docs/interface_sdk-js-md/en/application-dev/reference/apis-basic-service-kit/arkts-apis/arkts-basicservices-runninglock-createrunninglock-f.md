@@ -12,7 +12,7 @@ import { runningLock } from 'kits/@kit.BasicServicesKit';
 function createRunningLock(name: string, type: RunningLockType, callback: AsyncCallback<RunningLock>): void
 ```
 
-创建RunningLock锁。使用callback异步回调。
+Creates a {@link RunningLock} object. This API uses an asynchronous callback to return the result.
 
 **Since:** 7
 
@@ -32,9 +32,9 @@ function createRunningLock(name: string, type: RunningLockType, callback: AsyncC
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| name | string | Yes | 锁的名字。建议使用包名或类名加后缀的方式命名。 |
-| type | [RunningLockType](arkts-basicservices-runninglock-runninglocktype-e.md) | Yes | 要创建的锁的类型。 |
-| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;RunningLock&gt; | Yes | 回调函数。当创建锁成功，err为undefined，data为创建的RunningLock；否则为错误对象； AsyncCallback封装了一个RunningLock类型的类。 |
+| name | string | Yes | Indicates the {@link RunningLock} name. A recommended name consists of the package or class name and a suffix. |
+| type | [RunningLockType](arkts-basicservices-runninglock-runninglocktype-e.md) | Yes | Indicates the {@link RunningLockType}. |
+| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;RunningLock&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined** and data is the created **RunningLock** object. Otherwise, **err** is an error object. **AsyncCallback** has encapsulated an API of the **RunningLock** class. |
 
 ## Examples
 
@@ -55,7 +55,7 @@ runningLock.createRunningLock('running_lock_test', runningLock.RunningLockType.B
 function createRunningLock(name: string, type: RunningLockType): Promise<RunningLock>
 ```
 
-创建RunningLock锁。使用Promise异步回调。
+Creates a {@link RunningLock} object. This API uses a promise to return the result.
 
 **Since:** 7
 
@@ -75,14 +75,14 @@ function createRunningLock(name: string, type: RunningLockType): Promise<Running
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| name | string | Yes | 锁的名字。建议使用包名或类名加后缀的方式命名。 |
-| type | [RunningLockType](arkts-basicservices-runninglock-runninglocktype-e.md) | Yes | 要创建的锁的类型。 |
+| name | string | Yes | Indicates the {@link RunningLock} name. A recommended name consists of the package or class name and a suffix. |
+| type | [RunningLockType](arkts-basicservices-runninglock-runninglocktype-e.md) | Yes | Indicates the {@link RunningLockType}. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;RunningLock&gt; | Promise对象，返回RunningLock锁对象。 |
+| Promise&lt;RunningLock&gt; | Promise used to return the { |
 
 ## Examples
 

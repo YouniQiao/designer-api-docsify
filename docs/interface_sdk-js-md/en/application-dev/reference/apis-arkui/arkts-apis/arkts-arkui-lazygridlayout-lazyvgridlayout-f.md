@@ -8,7 +8,7 @@ export declare function LazyVGridLayout(
 ): LazyVGridLayoutAttribute
 ```
 
-创建垂直方向懒加载网格布局容器。
+Defines LazyVGridLayout Component.
 
 **Since:** 23
 
@@ -24,13 +24,13 @@ export declare function LazyVGridLayout(
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| content_ | [CustomBuilder](../arkts-components/arkts-arkui-custombuilder-t.md) | No | 容器内容。 |
+| content_ | [CustomBuilder](../arkts-components/arkts-arkui-custombuilder-t.md) | No | container |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [LazyVGridLayoutAttribute](arkts-arkui-lazygridlayout-lazyvgridlayoutattribute-i.md) | 返回LazyVGridLayout组件的属性。 |
+| [LazyVGridLayoutAttribute](arkts-arkui-lazygridlayout-lazyvgridlayoutattribute-i.md) | The attribute of the grid |
 
 
 ## LazyVGridLayout
@@ -42,11 +42,11 @@ export declare function LazyVGridLayout(
 ): LazyVGridLayoutAttribute
 ```
 
-定义LazyVGridLayout组件。
+Defines LazyVGridLayout Component.
 
-**Since:** 26.0.0
+**Since:** 26.1.0
 
-**ArkTS mode:** ArkTS-Sta only, since version 26.0.0.
+**ArkTS mode:** ArkTS-Sta only, since version 26.1.0.
 
 **Decorator:** @Builder
 
@@ -60,12 +60,12 @@ export declare function LazyVGridLayout(
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| style_ | [CustomBuilderT](../arkts-components/arkts-arkui-custombuildert-t.md)&lt;LazyVGridLayoutAttribute&gt; | Yes | 创建LazyVGridLayout的样式 |
+| style_ | [CustomBuilderT](../arkts-components/arkts-arkui-custombuildert-t.md)&lt;LazyVGridLayoutAttribute&gt; | Yes | The style to create a LazyVGridLayout. |
 | content_ | [CustomBuilder](../arkts-components/arkts-arkui-custombuilder-t.md) | No |  |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [LazyVGridLayoutAttribute](arkts-arkui-lazygridlayout-lazyvgridlayoutattribute-i.md) | LazyVGridLayout的属性。 |
+| [LazyVGridLayoutAttribute](arkts-arkui-lazygridlayout-lazyvgridlayoutattribute-i.md) | The attribute of the LazyVGridLayout. |
 

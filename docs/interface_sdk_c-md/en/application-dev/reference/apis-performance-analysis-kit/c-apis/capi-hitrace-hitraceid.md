@@ -10,7 +10,7 @@ Defines a **HiTraceId** instance.
 
 **Since**: 12
 
-**Related module**: [Hitrace](capi-hitrace.md)
+**Related module**: [HiTrace](capi-hitrace.md)
 
 **Header file**: [trace.h](capi-trace-h.md)
 

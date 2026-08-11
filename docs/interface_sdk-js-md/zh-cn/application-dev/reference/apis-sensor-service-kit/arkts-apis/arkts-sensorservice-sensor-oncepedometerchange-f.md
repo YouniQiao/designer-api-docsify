@@ -1,11 +1,5 @@
 # oncePedometerChange
 
-## 导入模块
-
-```TypeScript
-import { sensor } from 'kits/@kit.SensorServiceKit';
-```
-
 ## oncePedometerChange
 
 ```TypeScript
@@ -34,7 +28,24 @@ Subscribe to pedometer sensor data once, {@code SensorId.PEDOMETER}.
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 801 | Capability not supported. |
-| 14500101 | Service exception. Possible causes: 1. Sensor hdf service exception; &lt;br&gt; 2. Sensor service ipc exception;3. Sensor data channel exception. |
-| 201 | Permission denied. |
+| [801](../../errorcode-universal.md#801-该设备不支持此api) | Capability not supported. |
+| [14500101](../errorcode-sensor.md#14500101-传感器服务异常) | Service exception. Possible causes: 1. Sensor hdf service exception; &lt;br&gt; 2. Sensor service ipc exception;3. Sensor data channel exception. |
+| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
+
+## 示例
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+import { sensor } from '@kit.SensorServiceKit';
+
+// 使用try catch对可能出现的异常进行捕获
+try {
+  sensor.oncePedometerChange((data: sensor.PedometerResponse) => {
+    console.info('Succeeded in invoking oncePedometerChange. Step count: ' + data.steps);
+  });
+} catch (error) {
+  let e: BusinessError = error as BusinessError;
+  console.error(`Failed to invoke oncePedometerChange. Code: ${e.code}, message: ${e.message}`);
+}
+```
 

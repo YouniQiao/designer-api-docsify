@@ -6,6 +6,6 @@
 
 | Name | Description |
 | --- | --- |
-| [FlexOptions](arkts-arkui-flex-flexoptions-i.md) | 设置Flex子组件的排列对齐方式。 |
-| [FlexSpaceOptions](arkts-arkui-flex-flexspaceoptions-i.md) | 设置Flex容器的子组件在主轴或交叉轴的间距。 |
+| [FlexOptions](arkts-arkui-flex-flexoptions-i.md) | Describes the layout and alignment of child components within the Flex component. |
+| [FlexSpaceOptions](arkts-arkui-flex-flexspaceoptions-i.md) | Defines the spacing between child components along the main axis or cross axis of the Flex component. |
 

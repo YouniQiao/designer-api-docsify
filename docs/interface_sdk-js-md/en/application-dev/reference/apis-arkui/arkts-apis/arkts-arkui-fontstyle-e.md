@@ -1,6 +1,6 @@
 # FontStyle
 
-Text style
+Font style.
 
 **Since:** 7
 
@@ -13,10 +13,10 @@ Text style
 ## Normal
 
 ```TypeScript
-Normal = 0
+Normal
 ```
 
-Default style.
+Standard font style.
 
 **Since:** 7
 
@@ -26,17 +26,17 @@ Default style.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 9.
 
-<!--Device-FontStyle-Normal = 0--><!--Device-FontStyle-Normal = 0-End-->
+<!--Device-FontStyle-Normal--><!--Device-FontStyle-Normal-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## Italic
 
 ```TypeScript
-Italic = 1
+Italic
 ```
 
-Italic style.
+Italic font style.
 
 **Since:** 7
 
@@ -46,7 +46,7 @@ Italic style.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 9.
 
-<!--Device-FontStyle-Italic = 1--><!--Device-FontStyle-Italic = 1-End-->
+<!--Device-FontStyle-Italic--><!--Device-FontStyle-Italic-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 

@@ -1,6 +1,6 @@
 # DialogButtonInfo
 
-对话框按钮信息的定义。
+The definition of dialog button information.
 
 **Since:** 23
 
@@ -22,7 +22,7 @@ import { avMusicTemplate } from 'kits/@kit.AVSessionKit';
 buttonId: string
 ```
 
-按钮的ID。
+Button id.
 
 **Type:** string
 
@@ -42,7 +42,7 @@ buttonId: string
 buttonText: string
 ```
 
-按钮的文本。
+Button text.
 
 **Type:** string
 
@@ -62,7 +62,7 @@ buttonText: string
 buttonType: ButtonType
 ```
 
-按钮的类型。
+Button type.
 
 **Type:** [ButtonType](../../apis-arkui/arkts-apis/arkts-arkui-button-buttontype-e.md)
 

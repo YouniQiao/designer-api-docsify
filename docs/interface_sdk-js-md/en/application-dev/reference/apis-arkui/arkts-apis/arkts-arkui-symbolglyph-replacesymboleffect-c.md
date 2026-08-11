@@ -1,6 +1,6 @@
 # ReplaceSymbolEffect
 
-ReplaceSymbolEffect继承自父类SymbolEffect。
+Defines ReplaceSymbolEffect class.
 
 **Inheritance/Implementation:** ReplaceSymbolEffect extends [SymbolEffect](../arkts-components/arkts-arkui-symboleffect-c.md/arkts-arkui-symboleffect-c.md)
 
@@ -18,7 +18,7 @@ ReplaceSymbolEffect继承自父类SymbolEffect。
 constructor(scope?: EffectScope, replaceType?: ReplaceEffectType)
 ```
 
-ReplaceSymbolEffect的构造函数，替换动效。支持指定具体的替换动效类型。
+constructor.
 
 **Since:** 23
 
@@ -34,8 +34,8 @@ ReplaceSymbolEffect的构造函数，替换动效。支持指定具体的替换�
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| scope | [EffectScope](../arkts-components/arkts-arkui-effectscope-e.md) | No | 动效范围。&lt;br/&gt;默认值：EffectScope.LAYER |
-| replaceType | [ReplaceEffectType](../arkts-components/arkts-arkui-replaceeffecttype-e.md) | No | 替换动效类型。&lt;br/&gt;默认值：ReplaceEffectType.SEQUENTIAL |
+| scope | [EffectScope](../arkts-components/arkts-arkui-effectscope-e.md) | No | The scope type of symbol effect. |
+| replaceType | [ReplaceEffectType](../arkts-components/arkts-arkui-replaceeffecttype-e.md) | No | The replace effect type of symbol effect. |
 
 ## replaceType
 
@@ -43,9 +43,7 @@ ReplaceSymbolEffect的构造函数，替换动效。支持指定具体的替换�
 replaceType?: ReplaceEffectType
 ```
 
-替换动效类型。
-
-默认值：ReplaceEffectType.SEQUENTIAL
+The replace effect type of symbol effect.
 
 **Type:** [ReplaceEffectType](../arkts-components/arkts-arkui-replaceeffecttype-e.md)
 
@@ -65,9 +63,7 @@ replaceType?: ReplaceEffectType
 scope?: EffectScope
 ```
 
-动效范围。
-
-默认值：EffectScope.LAYER
+The scope type of symbol effect.
 
 **Type:** [EffectScope](../arkts-components/arkts-arkui-effectscope-e.md)
 

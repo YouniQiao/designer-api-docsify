@@ -1,7 +1,6 @@
 # ObservedMap
 
-继承自Map&lt;K, V&gt;，为可观察API操作的Map对象。详见  
-[ObservedArray/ObservedMap/ObservedSet/ObservedDate：具有观察能力的Built-in类型](../../../ui/state-management-static/arkts-static-new-observed-built-in-types.md)。
+Observable Map base class.
 
 **Inheritance/Implementation:** ObservedMap extends [Map<K, V>](../../apis-arkts/arkts-apis/arkts-arkts-collections-map-c.md/arkts-arkts-collections-map-c.md#set)
 
@@ -19,7 +18,7 @@
 public constructor()
 ```
 
-无参构造函数。
+No arg constructor for observable Map.
 
 **Since:** 26.0.0
 
@@ -37,7 +36,7 @@ public constructor()
 public constructor(initialCapacity: int)
 ```
 
-使用指定的容量创建ObservedMap实例。
+Constructor for observable Map.
 
 **Since:** 26.0.0
 
@@ -53,7 +52,7 @@ public constructor(initialCapacity: int)
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| initialCapacity | int | Yes | 指定的初始容量。 |
+| initialCapacity | int | Yes | initial capacity |
 
 ## constructor
 
@@ -61,7 +60,7 @@ public constructor(initialCapacity: int)
 public constructor(entries: [K, V][])
 ```
 
-使用键值对数组创建ObservedMap实例。
+Constructor for observable Map.
 
 **Since:** 26.0.0
 
@@ -77,7 +76,7 @@ public constructor(entries: [K, V][])
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| entries | [K, V][] | Yes | 初始键值对数组。 |
+| entries | [K, V][] | Yes | initial entries. |
 
 ## constructor
 
@@ -85,7 +84,7 @@ public constructor(entries: [K, V][])
 public constructor(map: Map<K, V>)
 ```
 
-使用已有Map对象创建ObservedMap实例。
+Constructor for observable Map.
 
 **Since:** 26.0.0
 
@@ -101,5 +100,5 @@ public constructor(map: Map<K, V>)
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| map | Map&lt;K, V&gt; | Yes | 初始Map对象。 |
+| map | Map&lt;K, V&gt; | Yes | initial entries. |
 

@@ -1,5 +1,7 @@
 # Util
 
+Provides util functions.
+
 **Since:** 8
 
 **ArkTS mode:** ArkTS-Dyn only, since version 8.
@@ -24,7 +26,7 @@ import { i18n } from 'kits/@kit.LocalizationKit';
 unitConvert(fromUnit: UnitInfo, toUnit: UnitInfo, value: double, locale: string, style?: string): string
 ```
 
-将fromUnit的单位转换为toUnit的单位，并根据区域与风格进行格式化。
+Converts one measurement unit into another and formats the unit based on the specified locale and style.
 
 **Since:** 8
 
@@ -42,15 +44,15 @@ unitConvert(fromUnit: UnitInfo, toUnit: UnitInfo, value: double, locale: string,
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| fromUnit | [UnitInfo](arkts-localization-i18n-unitinfo-i.md) | Yes | 要被转换的单位。 |
-| toUnit | [UnitInfo](arkts-localization-i18n-unitinfo-i.md) | Yes | 要转换为的单位。 |
-| value | double | Yes | 要被转换的单位的数量值。 |
-| locale | string | Yes | 格式化时使用的区域ID，如：zh-Hans-CN。 |
-| style | string | No | 格式化使用的风格，取值包括：'long', 'short', 'narrow'。默认值：short。 |
+| fromUnit | [UnitInfo](arkts-localization-i18n-unitinfo-i.md) | Yes | Measurement unit to be converted. |
+| toUnit | [UnitInfo](arkts-localization-i18n-unitinfo-i.md) | Yes | Measurement unit to be converted to. |
+| value | double | Yes | Value of the measurement unit to be converted. |
+| locale | string | Yes | Locale ID used for formatting, for example, **zh-Hans-CN**. |
+| style | string | No | Style used for formatting. The value can be **long**, **short**, or **narrow**. The default value is **short**. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| string | 按照toUnit的单位格式化后，得到的字符串。 |
+| string | String obtained after formatting based on the measurement unit specified by **toUnit**. |
 

@@ -12,7 +12,7 @@ import { uiObserver } from 'kits/@kit.ArkUI';
 export function onRouterPageUpdate(context: UIAbilityContext | UIContext, callback: Callback<RouterPageInfo>): void
 ```
 
-监听router中page页面的状态变化。
+Registers a callback function to be called when the router page is updated.
 
 **Since:** 23
 
@@ -28,6 +28,6 @@ export function onRouterPageUpdate(context: UIAbilityContext | UIContext, callba
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| context | [UIAbilityContext](../../apis-ability-kit/arkts-apis/arkts-ability-uiabilitycontext-c.md) \| UIContext | Yes | 上下文信息，用以指定监听页面的范围。 |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;RouterPageInfo&gt; | Yes | 回调函数。携带pageInfo，返回当前的page页面状态。 |
+| context | [UIAbilityContext](../../apis-ability-kit/arkts-apis/arkts-ability-uiabilitycontext-c.md) \| UIContext | Yes | The context scope of the observer. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;RouterPageInfo&gt; | Yes | The callback function to be called when the router page is updated. |
 

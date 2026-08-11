@@ -4,7 +4,7 @@
 export type Scale = Vector2
 ```
 
-用于设置组件的缩放比例。
+Scale info.
 
 **Since:** 23
 

@@ -1,6 +1,6 @@
 # AccessibilityActionInterceptResult
 
-intercept action的枚举
+Enum for the result of accessibility action intercept function
 
 **Since:** 20
 
@@ -16,7 +16,7 @@ intercept action的枚举
 ACTION_INTERCEPT = 0
 ```
 
-拦截无障碍Action
+intercept the accessibility action
 
 **Since:** 20
 
@@ -38,7 +38,7 @@ ACTION_INTERCEPT = 0
 ACTION_CONTINUE = 1
 ```
 
-continue action动作
+the accessibility action can be continued
 
 **Since:** 20
 
@@ -60,7 +60,7 @@ continue action动作
 ACTION_RISE = 2
 ```
 
-需要冒泡向上透传的类型枚举
+the accessibility action need to bubble up for execution
 
 **Since:** 20
 

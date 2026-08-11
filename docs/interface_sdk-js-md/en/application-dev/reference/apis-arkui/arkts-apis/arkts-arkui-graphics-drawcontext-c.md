@@ -1,6 +1,6 @@
 # DrawContext
 
-图形绘制上下文，提供绘制所需的画布宽度和高度。
+Defines DrawContext.
 
 **Since:** 23
 
@@ -16,7 +16,7 @@
 get canvas(): drawing.Canvas
 ```
 
-获取用于绘制的画布。
+Get canvas of the DrawContext.
 
 **Type:** drawing.Canvas
 
@@ -36,7 +36,7 @@ get canvas(): drawing.Canvas
 get size() :Size
 ```
 
-获取画布的宽度和高度。
+Get size of the DrawContext.
 
 **Type:** [Size](arkts-arkui-window-size-i.md)
 
@@ -56,7 +56,7 @@ get size() :Size
 get sizeInPixel(): Size
 ```
 
-获取以px为单位的画布的宽度和高度。
+Get size of the DrawContext with pixel unit.
 
 **Type:** [Size](arkts-arkui-window-size-i.md)
 

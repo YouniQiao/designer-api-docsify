@@ -1,10 +1,12 @@
 # LineOptions
 
-用于描述Line组件绘制属性。
+Describes the options of the line.
 
-> **说明：**
+> **NOTE：**
 > 
-> 为规范匿名对象的定义，API 18版本修改了此处的元素定义。其中，保留了历史匿名对象的起始版本信息，会出现外层元素@since版本号高于内层元素版本号的情况，但这不影响接口的使用。
+> To standardize anonymous object definitions, the element definitions here have been revised in API version 18.
+> While historical version information is preserved for anonymous objects, there may be cases where the outer element's
+> @since version number is higher than inner elements'. This does not affect interface usability.
 
 **Since:** 18
 
@@ -20,11 +22,7 @@
 height?: Length
 ```
 
-高度。
-
-值为异常值或缺省时，根据startPoint和endPoint自动计算所需的绘制区域高度。
-
-默认单位：vp
+Height.If the value is invalid or the default value is used, the height required for the content is used.Unit: vp.
 
 **Type:** [Length](../arkts-apis/arkts-arkui-length-t.md)
 
@@ -46,11 +44,7 @@ height?: Length
 width?: Length
 ```
 
-宽度。
-
-值为异常值或缺省时，根据startPoint和endPoint自动计算所需的绘制区域宽度。
-
-默认单位：vp
+Width.If the value is invalid or the default value is used, the width required for the content is used.Unit: vp.
 
 **Type:** [Length](../arkts-apis/arkts-arkui-length-t.md)
 

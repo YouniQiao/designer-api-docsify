@@ -16,12 +16,7 @@ Provides methods for switching components.
 changeIndex(index: int | undefined, animationMode?: SwiperAnimationMode | boolean): void
 ```
 
-翻页至指定页面。
-
-> **说明：**
-> 
-> 该接口本身提供了不带动画跳转页面的能力（animationMode设置为false或者SwiperAnimationMode.NO_ANIMATION），不建议使用changeIndex接口启动动画后，直接使用
-> finishAnimation接口打断来实现页面不带动画跳转。
+Controlling Swiper to change to the specified subcomponent.
 
 **Since:** 23
 
@@ -37,8 +32,8 @@ changeIndex(index: int | undefined, animationMode?: SwiperAnimationMode | boolea
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| index | int \| undefined | Yes | 指定页面在Swiper中的索引值。&lt;br/&gt;取值为undefined时，按默认值处理。&lt;br/&gt;**说明：** &lt;br/&gt;设置的值小于0或大于最大页面索引时，取 0。 |
-| animationMode | [SwiperAnimationMode](../arkts-components/arkts-arkui-swiperanimationmode-e.md) \| boolean | No | 设置翻页至指定页面时的动效模式。&lt;br/&gt;默认值： SwiperAnimationMode.NO_ANIMATION&lt;br/&gt; **说明：** &lt;br/&gt;当传入true时有动效，等同于SwiperAnimationMode.DEFAULT_ANIMATION；当传入 false时无动效，等同于SwiperAnimationMode.NO_ANIMATION。&lt;br/&gt;true：有动效翻页；false：无动效翻页。 |
+| index | int \| undefined | Yes | the index of item to be redirected, default value is 0, undefined means setting to default value. |
+| animationMode | [SwiperAnimationMode](../arkts-components/arkts-arkui-swiperanimationmode-e.md) \| boolean | No | animation mode for changeIndex, true is equivalent to SwiperAnimationMode.DEFAULT_ANIMATION, false is equivalent to SwiperAnimationMode.NO_ANIMATION |
 
 ## constructor
 
@@ -46,7 +41,7 @@ changeIndex(index: int | undefined, animationMode?: SwiperAnimationMode | boolea
 constructor()
 ```
 
-SwiperController的构造函数。
+constructor.
 
 **Since:** 23
 
@@ -64,19 +59,7 @@ SwiperController的构造函数。
 fakeDragBy(offset: float): boolean
 ```
 
-设置模拟拖拽的拖拽距离。
-
-> **说明：**
-> 
-> - 模拟拖拽的距离需要依赖布局体现，建议接口在布局前调用，拖拽效果可以在当前帧布局后体现。如果在未布局前调用了多次该接口，当前帧布局时只生效最后一次调用传入的拖拽距离。
-> 
-> - 在[loop](SwiperAttribute.loop)设置为true的循环场景下，如果设置的模拟拖拽的距离大于布局总长度，此时模拟拖拽距离会被调整为拖拽到刚好显示第一个子节点（向布局起点拖拽）或者最后一个子
-> 节点（向布局终点方向拖拽）的距离。
-> 
-> - [onGestureSwipe](SwiperAttribute.onGestureSwipe)事件、
-> [onContentWillScroll](SwiperAttribute.onContentWillScroll)事件在拖拽过程中不触发。
-> [customContentTransition](SwiperAttribute.customContentTransition)会在布局前触发，由于真实的拖拽距离可能在布局时被调整，在传入拖拽距离过大时，触发事
-> 件时的返回的节点显示信息可能与布局结果不一致。
+Fake drag by an offset.The 'startFakeDrag' must be called first.
 
 **Since:** 23
 
@@ -92,13 +75,13 @@ fakeDragBy(offset: float): boolean
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| offset | float | Yes | 需要模拟拖拽的拖拽距离。&lt;br/&gt;正数表示向布局起点拖拽；负数表示向布局终点方向拖拽。&lt;br/&gt;单位：vp |
+| offset | float | Yes | Indicate the offset that needs to be scrolled. The unit is vp. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| boolean | 是否消费传入的拖拽距离。&lt;br/&gt;true表示消费任意传入的拖拽距离；false表示当前没有在模拟拖拽中，或者已经拖拽到边界，没有消费传入的拖拽距离。&lt;br/&gt;设置0为不可消费的拖拽距离。 |
+| boolean | If not in a fake drag progress, or no offset is consumed, return false. If any offset is consumed, return true. |
 
 ## finishAnimation
 
@@ -106,7 +89,7 @@ fakeDragBy(offset: float): boolean
 finishAnimation(callback?: VoidCallback): void
 ```
 
-停止播放动画。
+Called when need to stop the swiper animation.
 
 **Since:** 23
 
@@ -130,7 +113,7 @@ finishAnimation(callback?: VoidCallback): void
 isFakeDragging(): boolean
 ```
 
-获取是否在模拟拖拽中的状态。
+Get the fake drag state.
 
 **Since:** 23
 
@@ -146,7 +129,7 @@ isFakeDragging(): boolean
 
 | Type | Description |
 | --- | --- |
-| boolean | 是否处在模拟拖拽状态。&lt;br/&gt;true表示当前处在模拟拖拽状态；false表示当前不处在模拟拖拽状态。 |
+| boolean | If a fake drag is in progress return true, otherwise return false. |
 
 ## preloadItems
 
@@ -154,17 +137,7 @@ isFakeDragging(): boolean
 preloadItems(indices: Array<int> | undefined): Promise<void>
 ```
 
-控制Swiper预加载指定子节点。调用该接口后会一次性加载所有指定的子节点，因此为了性能考虑，建议分批加载子节点。使用Promise异步回调。
-
-如果SwiperController对象未绑定任何Swiper组件，直接调用该接口，会抛出JS异常，并返回错误码100004。因此使用该接口时，建议通过try-catch捕获异常。
-
-与[LazyForEach](../../../ui/rendering-control/arkts-rendering-control-lazyforeach.md)和自定义组件结合使用时，由于  
-[LazyForEach](../../../ui/rendering-control/arkts-rendering-control-lazyforeach.md)只会保留缓存范围内的自定义组件，在缓存范围外的会被删除，因此需要开发者保证通过该接口预加载的节点index在缓存范围内。
-
-> **说明：**
-> 
-> Swiper的preloadItems需要在Swiper创建之后去调用，首次预加载推荐在Swiper的
-> [onAppear](../../../reference/apis-arkui/arkui-ts/ts-universal-events-show-hide.md#onappear)生命周期中去控制。
+Called when need to preload specified child.
 
 **Since:** 23
 
@@ -180,20 +153,20 @@ preloadItems(indices: Array<int> | undefined): Promise<void>
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| indices | Array&lt;int&gt; \| undefined | Yes | 需预加载的子节点的下标数组。&lt;br/&gt;取值为undefined时，默认全部加载。 |
+| indices | Array&lt;int&gt; \| undefined | Yes | Indices of swiper child to be preloaded, default value is no swiper child to be preloaded, undefined means setting to default value. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise对象，无返回结果。 |
+| Promise&lt;void&gt; | The promise returned by the function. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter invalid. Possible causes: &lt;br&gt; 1. The parameter type is not Array&lt;int&gt;. &lt;br&gt; 2. The parameter is an empty array. &lt;br&gt; 3. The parameter contains an invalid index. |
-| 100004 | Controller not bound to component. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter invalid. Possible causes: &lt;br&gt; 1. The parameter type is not Array&lt;int&gt;. &lt;br&gt; 2. The parameter is an empty array. &lt;br&gt; 3. The parameter contains an invalid index. |
+| [100004](../errorcode-router.md#100004-incorrect-route-name) | Controller not bound to component. |
 
 ## showNext
 
@@ -201,7 +174,7 @@ preloadItems(indices: Array<int> | undefined): Promise<void>
 showNext(): void
 ```
 
-翻至下一页。翻页带动效切换过程，时长通过Swiper的[duration](SwiperAttribute.duration)属性设置。
+Called when the next child component is displayed.
 
 **Since:** 23
 
@@ -219,7 +192,7 @@ showNext(): void
 showPrevious(): void
 ```
 
-翻至上一页。翻页带动效切换过程，时长通过Swiper的[duration](SwiperAttribute.duration)属性设置。
+Called when the previous subcomponent is displayed.
 
 **Since:** 23
 
@@ -237,13 +210,7 @@ showPrevious(): void
 startFakeDrag(): boolean
 ```
 
-开启模拟拖拽功能。
-
-> **说明：**
-> 
-> - Swiper已经处在真实手势拖拽中，或者已经开启了模拟拖拽，调用接口会返回false表示操作失败。
-> 
-> - 模拟拖拽无法触发嵌套滚动。
+Start a fake drag.Call 'fakeDragBy' to simulate the drag motion. Call 'stopFakeDrag' to complete the fake drag.A fake drag can be interrupted by a real drag. If you need to ignore touch events and other user input during a fake drag, use 'disableSwipe(true)'.
 
 **Since:** 23
 
@@ -259,7 +226,7 @@ startFakeDrag(): boolean
 
 | Type | Description |
 | --- | --- |
-| boolean | 是否开启模拟拖拽功能。&lt;br/&gt;true表示开启模拟拖拽功能成功；false表示开启模拟拖拽功能失败。 |
+| boolean | If the fake drag started successfully, return true. If the Swiper is not ready to start the fake drag, or a real or fake drag is already in progress, return false. |
 
 ## stopFakeDrag
 
@@ -267,11 +234,7 @@ startFakeDrag(): boolean
 stopFakeDrag(): boolean
 ```
 
-关闭模拟拖拽功能。
-
-> **说明：**
-> 
-> 在开启模拟拖拽后，如果接收到真实拖拽手势，模拟拖拽会结束。
+Stop a fake drag.
 
 **Since:** 23
 
@@ -287,5 +250,5 @@ stopFakeDrag(): boolean
 
 | Type | Description |
 | --- | --- |
-| boolean | 是否关闭模拟拖拽功能。&lt;br/&gt;true表示关闭模拟拖拽功能成功；false表示关闭模拟拖拽功能失败。 |
+| boolean | If the fake drag stopped successfully, return true. If the Swiper is not ready to stop a fake drag, or no fake drag is in progress, return false. |
 

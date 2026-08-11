@@ -1,7 +1,7 @@
 # AbilityRunningInfo
 
-AbilityRunningInfo是记录Ability运行信息和状态的数据结构，通过  
-[getAbilityRunningInfos](arkts-ability-abilitymanager-getabilityrunninginfos-f.md#getabilityrunninginfos)方法获取。
+AbilityRunningInfo is a struct that records the running information and state of an ability. It is obtained through  
+[getAbilityRunningInfos](arkts-ability-abilitymanager-getabilityrunninginfos-f.md#getabilityrunninginfos).
 
 **Since:** 14
 
@@ -17,7 +17,7 @@ AbilityRunningInfo是记录Ability运行信息和状态的数据结构，通过
 ability: ElementName
 ```
 
-Ability的ElementName信息。
+Element name of the ability.
 
 **Type:** [ElementName](arkts-ability-elementname-i.md)
 
@@ -37,7 +37,7 @@ Ability的ElementName信息。
 abilityState: abilityManager.AbilityState
 ```
 
-Ability的状态。
+Ability state.
 
 **Type:** abilityManager.AbilityState
 
@@ -57,7 +57,7 @@ Ability的状态。
 pid: int
 ```
 
-进程ID。
+Process ID.
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
@@ -77,7 +77,7 @@ pid: int
 processName: string
 ```
 
-进程的名称。
+Process name.
 
 **Type:** string
 
@@ -97,7 +97,7 @@ processName: string
 startTime: long
 ```
 
-Ability的启动时间。
+Ability start time.
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：long
 
@@ -117,7 +117,7 @@ Ability的启动时间。
 uid: int
 ```
 
-所属应用程序的UID。
+UID of the application.
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 

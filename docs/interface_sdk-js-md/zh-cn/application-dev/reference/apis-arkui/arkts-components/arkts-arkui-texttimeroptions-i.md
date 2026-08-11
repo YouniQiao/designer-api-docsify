@@ -18,7 +18,7 @@ controller?: TextTimerController
 
 TextTimer控制器，用于通过编程方式控制计时器的启动、暂停和重置。不传入时，计时器仍可正常显示但无法通过代码控制其状态。
 
-**类型：** [TextTimerController](arkts-arkui-texttimercontroller-c.md)
+**类型：** [TextTimerController](../arkts-apis/arkts-arkui-texttimer-texttimercontroller-c.md)
 
 **起始版本：** 8
 

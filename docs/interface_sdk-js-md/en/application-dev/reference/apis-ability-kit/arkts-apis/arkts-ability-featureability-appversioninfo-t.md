@@ -4,7 +4,7 @@
 export type AppVersionInfo = _AppVersionInfo
 ```
 
-应用版本信息。
+Defines an AppVersionInfo object.
 
 **Since:** 9
 

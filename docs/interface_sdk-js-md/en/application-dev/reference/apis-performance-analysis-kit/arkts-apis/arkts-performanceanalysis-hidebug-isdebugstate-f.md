@@ -12,7 +12,7 @@ import { hidebug } from 'kits/@kit.PerformanceAnalysisKit';
 function isDebugState(): boolean
 ```
 
-��ȡӦ�ý��̵ĵ���״̬��
+Obtains the debugging state of an application process.
 
 **Since:** 12
 
@@ -26,7 +26,7 @@ function isDebugState(): boolean
 
 | Type | Description |
 | --- | --- |
-| boolean | Ӧ�ý��̵�Ark���Native���Ƿ��ڵ���״̬��true�����ڵ���״̬��false��δ���ڵ���״̬�� |
+| boolean | Whether the Ark or native layer of the application process is in the debugging state. The value **true** indicates that the layer is in the debugging state, and **false** indicates the opposite. |
 
 ## Examples
 

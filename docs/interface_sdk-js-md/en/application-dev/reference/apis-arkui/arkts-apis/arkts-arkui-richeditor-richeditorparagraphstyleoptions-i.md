@@ -1,12 +1,6 @@
 # RichEditorParagraphStyleOptions
 
-段落样式选项。
-
-继承自[RichEditorRange](arkts-arkui-richeditor-richeditorrange-i.md)。
-
-> **说明：**
-> 
-> 接口作用的范围：设定的区间所涉及的段落。
+Defines paragraph style option of RichEditor.
 
 **Inheritance/Implementation:** RichEditorParagraphStyleOptions extends [RichEditorRange](arkts-arkui-richeditor-richeditorrange-i.md)
 
@@ -24,7 +18,7 @@
 style: RichEditorParagraphStyle
 ```
 
-段落样式。
+Paragraph style.
 
 **Type:** [RichEditorParagraphStyle](arkts-arkui-richeditor-richeditorparagraphstyle-i.md)
 

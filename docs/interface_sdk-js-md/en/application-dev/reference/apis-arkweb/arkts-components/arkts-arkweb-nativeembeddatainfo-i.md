@@ -1,6 +1,6 @@
 # NativeEmbedDataInfo
 
-提供同层标签生命周期变化的详细信息。
+Provides detailed information about the changes of the same-layer tag lifecycle.
 
 **Since:** 11
 
@@ -16,7 +16,7 @@
 embedId?: string
 ```
 
-同层标签的id信息。
+ID of the same-layer tag.
 
 **Type:** string
 
@@ -36,7 +36,7 @@ embedId?: string
 info?: NativeEmbedInfo
 ```
 
-同层标签的详细信息。
+Detailed information about the same-layer tag.
 
 **Type:** [NativeEmbedInfo](arkts-arkweb-nativeembedinfo-i.md)
 
@@ -56,7 +56,7 @@ info?: NativeEmbedInfo
 status?: NativeEmbedStatus
 ```
 
-同层标签生命周期状态。
+Lifecycle status of the same-layer tag.
 
 **Type:** [NativeEmbedStatus](arkts-arkweb-nativeembedstatus-e.md)
 
@@ -76,7 +76,7 @@ status?: NativeEmbedStatus
 surfaceId?: string
 ```
 
-NativeImage的psurfaceid。
+Surface ID of the native image.
 
 **Type:** string
 

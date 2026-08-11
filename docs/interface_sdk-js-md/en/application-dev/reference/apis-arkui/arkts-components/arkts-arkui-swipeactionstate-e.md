@@ -1,6 +1,6 @@
 # SwipeActionState
 
-列表项滑动状态枚举。
+Enumerates swipe states of list items.
 
 **Since:** 11
 
@@ -16,7 +16,7 @@
 COLLAPSED
 ```
 
-收起状态，操作项处于隐藏状态。
+Collapsed state.
 
 **Since:** 11
 
@@ -36,11 +36,7 @@ COLLAPSED
 EXPANDED
 ```
 
-展开状态，操作项处于显示状态。
-
-**说明：**
-
-需要ListItem设置划出操作项。
+Expanded state.
 
 **Since:** 11
 
@@ -60,11 +56,7 @@ EXPANDED
 ACTIONING
 ```
 
-长距离状态，当ListItem进入长距删除区后删除ListItem的状态。
-
-**说明：**
-
-actionAreaDistance的最终取值大于0，且小于ListItem在划动方向上的尺寸减去划出组件在划动方向上的尺寸时，滑动后松手的位置超过或等于该取值才能进入该状态。
+Acting state.
 
 **Since:** 11
 

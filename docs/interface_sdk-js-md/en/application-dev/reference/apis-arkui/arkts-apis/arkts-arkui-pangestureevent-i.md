@@ -1,6 +1,7 @@
 # PanGestureEvent
 
-继承自[BaseGestureEvent](arkts-arkui-basegestureevent-i.md)。可将该对象作为[onGestureJudgeBegin](arkts-arkui-common-commonmethod-i.md#ongesturejudgebegin)的event参数来传递。
+Inherits from [BaseGestureEvent](arkts-arkui-basegestureevent-i.md). This object can be passed as the **event** parameter of   
+[onGestureJudgeBegin](arkts-arkui-common-commonmethod-i.md#ongesturejudgebegin).
 
 **Inheritance/Implementation:** PanGestureEvent extends [BaseGestureEvent](arkts-arkui-basegestureevent-i.md)
 
@@ -18,7 +19,7 @@
 offsetX: number
 ```
 
-手势事件x轴相对当前组件元素原始区域的偏移量，单位为vp，从左向右滑动offsetX为正，反之为负。
+Offset of the gesture event on the x-axis relative to the original area of the current component, in vp. A positive value means to pan from left to right, and a negative value means the opposite.
 
 **Type:** number
 
@@ -40,7 +41,7 @@ offsetX: number
 offsetY: number
 ```
 
-手势事件y轴相对当前组件元素原始区域的偏移量，单位为vp，从上向下滑动offsetY为正，反之为负。
+Offset of the gesture event on the y-axis relative to the original area of the current component, in vp. A positive value means to pan from top to bottom, and a negative value means the opposite.
 
 **Type:** number
 
@@ -62,7 +63,7 @@ offsetY: number
 velocity: number
 ```
 
-获取当前的主方向速度。为xy轴方向速度的平方和的算术平方根。单位为vp/s。
+Velocity along the main axis. The value is the arithmetic square root of the sum of squares of the velocity along the x- and y-axis. The unit is vp/s.
 
 **Type:** number
 
@@ -84,7 +85,7 @@ velocity: number
 velocityX: number
 ```
 
-获取当前手势的x轴方向速度。坐标轴原点为屏幕左上角，分正负方向速度，从左往右为正，反之为负。单位为vp/s。
+Velocity along the x-axis. The origin of the coordinate axis is the upper left corner of the screen. The velocity is positive if the movement is from left to right, and it is negative if the movement is from right to left. The unit is vp/s.
 
 **Type:** number
 
@@ -106,7 +107,7 @@ velocityX: number
 velocityY: number
 ```
 
-获取当前手势的y轴方向速度。坐标轴原点为屏幕左上角，分正负方向速度，从上往下为正，反之为负。单位为vp/s。
+Velocity along the y-axis. The origin of the coordinate axis is the upper left corner of the screen. The velocity is positive if the movement is from top to bottom, and it is negative if the movement is from bottom to top. The unit is vp/s.
 
 **Type:** number
 

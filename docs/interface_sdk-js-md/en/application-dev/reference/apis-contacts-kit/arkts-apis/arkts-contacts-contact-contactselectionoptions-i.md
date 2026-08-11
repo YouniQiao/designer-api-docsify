@@ -1,6 +1,6 @@
 # ContactSelectionOptions
 
-选择联系人条件。
+Defines the Contact selection options, which specifies whether one contact or  multiple contacts can be selected.
 
 **Since:** 10
 
@@ -22,7 +22,7 @@ import { contact } from 'kits/@kit.ContactsKit';
 filter?: ContactSelectionFilter
 ```
 
-联系人查询过滤器。从API version 15 开始，该接口支持在原子化服务中使用。
+Contact selection filter.This API can be used in atomic services since API version 15.
 
 **Type:** [ContactSelectionFilter](arkts-contacts-contact-contactselectionfilter-i.md)
 
@@ -42,7 +42,9 @@ filter?: ContactSelectionFilter
 isAutoDismissOnNavigation?: boolean
 ```
 
-联系人picker发生页面路由时是否自动关闭，比如应用退后台场景 默认值为false
+Whether to allow automatic dismissal of the picker when the page that launched it undergoes a route change.The value true means the picker is allowed to be dismissed automatically, and false means the picker is not allowed to be dismissed automatically.
+
+The default value is false.
 
 **Type:** boolean
 
@@ -64,7 +66,7 @@ isAutoDismissOnNavigation?: boolean
 isDisplayedByName?: boolean
 ```
 
-是否按联系人姓名维度展示，true:按联系人姓名维度展示，false:按联系人号码维度展示，默认值为false。从API version 15 开始，该接口支持在原子化服务中使用。
+Whether to display contacts by name. The value **true** indicates that contacts are displayed by name, and the value **false** indicates that contacts are displayed by number. The default value is **false**.This API can be used in atomic services since API version 15.
 
 **Type:** boolean
 
@@ -84,7 +86,7 @@ isDisplayedByName?: boolean
 isMultiSelect?: boolean
 ```
 
-是否为多选，true:多选，false:单选。默认值为false。
+Whether multiple contacts can be selected. The value **true** indicates that multiple contacts can be selected,and the value **false** indicates that only one contact can be selected. The default value is **false**.
 
 **Type:** boolean
 
@@ -104,7 +106,7 @@ isMultiSelect?: boolean
 maxSelectable?: number
 ```
 
-联系人数量上限。默认值为10000，超出上限则以默认值筛选。从API version 15 开始，该接口支持在原子化服务中使用。
+Maximum number of contacts. The default value is **10000**. If the value exceeds the maximum number, the default value is used.This API can be used in atomic services since API version 15.
 
 **Type:** number
 

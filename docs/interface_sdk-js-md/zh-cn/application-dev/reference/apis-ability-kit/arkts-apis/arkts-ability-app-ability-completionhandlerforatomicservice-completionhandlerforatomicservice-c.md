@@ -12,12 +12,6 @@ CompletionHandlerForAtomicService提供了
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 
-## 导入模块
-
-```TypeScript
-import { FailureCode } from 'kits/@kit.AbilityKit';
-```
-
 ## onAtomicServiceRequestFailure
 
 ```TypeScript

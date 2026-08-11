@@ -1,6 +1,6 @@
 # GridRowOptions
 
-设置栅格行布局容器的布局选项。
+Defines layout options of the **GridRow** container.
 
 **Since:** 9
 
@@ -16,21 +16,15 @@
 breakpoints?: BreakPoints
 ```
 
-设置断点位置的单调递增数组，以及断点切换时的参照对象（基于应用窗口或容器尺寸）。
+Array of breakpoint values and the corresponding reference based on the application window or container size.
 
-默认值：
+Default value:
 
-{
+```{ value: ["320vp", "600vp", "840vp"], reference: BreakpointsReference.WindowSize}```
 
-value: ["320vp", "600vp", "840vp"],
+Invalid values are treated as the default value.
 
-reference: BreakpointsReference.WindowSize
-
-} 
-
-非法值：按默认值处理。
-
-单位：vp
+Unit: vp.
 
 **Type:** [BreakPoints](../arkts-apis/arkts-arkui-gridrow-breakpoints-i.md)
 
@@ -52,14 +46,14 @@ reference: BreakpointsReference.WindowSize
 columns?: number | GridRowColumnOption
 ```
 
-设置布局列数。
+Number of columns in the grid layout.
 
-取值为大于0的整数。
+The value is an integer greater than 0.
 
-- API version 20之前：默认值为12。  
-- API version 20及之后：默认值为{ xs: 2, sm: 4, md: 8, lg: 12, xl: 12, xxl: 12 } 
+- Before API version 20: The default value is 12.  
+- API version 20 or later: The default value is { xs: 2, sm: 4, md: 8, lg: 12, xl: 12, xxl: 12 }.
 
-非法值：按默认值处理。
+Invalid values are treated as the default value.
 
 **Type:** number \| GridRowColumnOption
 
@@ -81,11 +75,11 @@ columns?: number | GridRowColumnOption
 direction?: GridRowDirection
 ```
 
-栅格布局排列方向。支持Row（行方向排列，适用于常规LTR布局）和RowReverse（逆序行方向排列，适用于RTL布局或需要反向排列的场景）。
+Arrangement direction of the grid layout.
 
-默认值：GridRowDirection.Row 
+Default value: **GridRowDirection.Row**
 
-非法值：按默认值处理。
+Invalid values are treated as the default value.
 
 **Type:** [GridRowDirection](../arkts-apis/arkts-arkui-gridrow-gridrowdirection-e.md)
 
@@ -107,13 +101,13 @@ direction?: GridRowDirection
 gutter?: Length | GutterOption
 ```
 
-栅格布局间距。
+Gutter of the grid layout.
 
-默认值：0vp 
+Default value: **0**
 
-非法值：按默认值处理。
+Invalid values are treated as the default value.
 
-单位：vp
+Unit: vp.
 
 **Type:** [Length](../arkts-apis/arkts-arkui-length-t.md) \| GutterOption
 

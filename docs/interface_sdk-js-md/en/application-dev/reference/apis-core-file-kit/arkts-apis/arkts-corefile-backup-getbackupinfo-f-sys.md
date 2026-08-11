@@ -12,7 +12,7 @@ import { backup } from 'kits/@kit.CoreFileKit';
 function getBackupInfo(bundleToBackup: string): string
 ```
 
-获取需要备份的应用信息。
+Get Backup information from bundle.
 
 **Since:** 12
 
@@ -30,27 +30,27 @@ function getBackupInfo(bundleToBackup: string): string
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| bundleToBackup | string | Yes | 需要备份的应用名称。 |
+| bundleToBackup | string | Yes | Bundle to backup. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| string | 返回应用上报的备份信息，具体内容和格式由应用自定义。 |
+| string | Return the backup application's info. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt;2. Incorrect parameter types. 3.Parameter verification failed. |
-| 201 | Permission verification failed, usually the result returned by VerifyAccessToken. |
-| 202 | Permission verification failed, application which is not a system application uses system API. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt;2. Incorrect parameter types. 3.Parameter verification failed. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed, usually the result returned by VerifyAccessToken. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed, application which is not a system application uses system API. |
 
 ## Examples
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
-import { backup } from '@kit.CoreFileKit';
+import { fileIo as fs, backup } from '@kit.CoreFileKit';
 
 function getBackupInfo() {
   try {

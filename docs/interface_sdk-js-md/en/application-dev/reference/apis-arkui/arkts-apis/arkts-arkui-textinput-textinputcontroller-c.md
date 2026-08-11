@@ -1,16 +1,6 @@
 # TextInputController
 
-TextInput组件的控制器继承自  
-[TextContentControllerBase](../../../reference/apis-arkui/arkui-ts/ts-universal-attributes-text-style.md#textcontentcontrollerbase)，涉及的接口有  
-[getTextContentRect](../../../reference/apis-arkui/arkui-ts/ts-universal-attributes-text-style.md#gettextcontentrect)、  
-[getTextContentLineCount](../../../reference/apis-arkui/arkui-ts/ts-universal-attributes-text-style.md#gettextcontentlinecount)、[getCaretOffset](../../../reference/apis-arkui/arkui-ts/ts-universal-attributes-text-style.md#getcaretoffset11)、  
-[addText](../../../reference/apis-arkui/arkui-ts/ts-universal-attributes-text-style.md#addtext15)、  
-[deleteText](../../../reference/apis-arkui/arkui-ts/ts-universal-attributes-text-style.md#deletetext15)、  
-[getSelection](../../../reference/apis-arkui/arkui-ts/ts-universal-attributes-text-style.md#getselection15)、  
-[clearPreviewText](../../../reference/apis-arkui/arkui-ts/ts-universal-attributes-text-style.md#clearpreviewtext17)、  
-[setStyledPlaceholder](../../../reference/apis-arkui/arkui-ts/ts-universal-attributes-text-style.md#setstyledplaceholder22)、[deleteBackward](../../../reference/apis-arkui/arkui-ts/ts-universal-attributes-text-style.md#deletebackward23)、  
-[scrollToVisible](../../../reference/apis-arkui/arkui-ts/ts-universal-attributes-text-style.md#scrolltovisible23)&lt;!-  
--Del--&gt;以及系统接口[getText](../../../reference/apis-arkui/arkui-ts/ts-text-common-sys.md#gettext19)&lt;!--DelEnd--&gt;。
+Provides the method of switching the cursor position.
 
 **Inheritance/Implementation:** TextInputController extends [TextContentControllerBase](arkts-arkui-common-textcontentcontrollerbase-c.md)
 
@@ -28,7 +18,9 @@ TextInput组件的控制器继承自
 caretPosition(value: int): void
 ```
 
-设置输入光标的位置。当取值小于0时，取0，大于文本长度时，显示在文本末尾。
+Called when the position of the insertion cursor is set.
+
+&lt;p&gt;&lt;strong&gt;NOTE&lt;/strong&gt;:&lt;br&gt;If the value is less than 0, the value 0 is used.&lt;br&gt;If the value exceeds the text length, the caret is placed at the end of the text.&lt;/p&gt;
 
 **Since:** 23
 
@@ -52,7 +44,7 @@ caretPosition(value: int): void
 constructor()
 ```
 
-TextInputController的构造函数。
+constructor.A constructor used to create a TextInputController object.
 
 **Since:** 23
 
@@ -70,7 +62,9 @@ TextInputController的构造函数。
 setTextSelection(selectionStart: int, selectionEnd: int, options?: SelectionOptions): void
 ```
 
-设置文本选择区域并高亮显示。
+Text selection is achieved by specifying the start and end positions of the text.
+
+&lt;p&gt;&lt;strong&gt;NOTE&lt;/strong&gt;:&lt;br&gt;If selectionStart or selectionEnd is set to undefined, the value 0 will be used.&lt;br&gt;If selectionMenuHidden is set to true or a 2-in-1 device is used,calling setTextSelection does not display the context menu even when options is set to MenuPolicy.SHOW.&lt;br&gt;If the selected text contains an emoji,the emoji is selected when its start position is within the text selection range.&lt;/p&gt;
 
 **Since:** 23
 
@@ -86,9 +80,9 @@ setTextSelection(selectionStart: int, selectionEnd: int, options?: SelectionOpti
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| selectionStart | int | Yes | 文本选择区域起始位置，文本框中文字的起始位置为0。 |
-| selectionEnd | int | Yes | 文本选择区域结束位置。当selectionEnd<0时，按照0处理；当selectionEnd大于文本长度时，按照文本长度处理。 |
-| options | [SelectionOptions](../arkts-components/arkts-arkui-selectionoptions-i.md) | No | 选中文字时的配置。&lt;br /&gt;默认值：MenuPolicy.DEFAULT |
+| selectionStart | int | Yes | The start position of the selected text.The start position of text in the text box is 0. |
+| selectionEnd | int | Yes | The end position of the selected text. |
+| options | [SelectionOptions](../arkts-components/arkts-arkui-selectionoptions-i.md) | No | Indicates the options of the text selection.Default value is MenuPolicy.DEFAULT. |
 
 ## stopEditing
 
@@ -96,7 +90,7 @@ setTextSelection(selectionStart: int, selectionEnd: int, options?: SelectionOpti
 stopEditing(): void
 ```
 
-退出编辑态。
+Exit edit state.
 
 **Since:** 23
 

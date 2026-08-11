@@ -10,12 +10,6 @@ XMPMetadata instance.
 
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
-## 导入模块
-
-```TypeScript
-import { image } from 'kits/@kit.ImageKit';
-```
-
 ## enumerateTags
 
 ```TypeScript
@@ -50,7 +44,7 @@ Enumerate the XMP tags from specified path and uses a callback to return the res
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 7600206 | Invalid argument. Possible causes: 1. Namespace is not registered. 2. The rootPath syntax is invalid. |
+| [7600206](../errorcode-image.md#7600206-无效参数) | Invalid argument. Possible causes: 1. Namespace is not registered. 2. The rootPath syntax is invalid. |
 
 ## getBlob
 
@@ -80,8 +74,8 @@ Obtains the XMP metadata as a blob.
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 7600302 | Memory copy failed. |
-| 7600301 | Memory alloc failed. |
+| [7600302](../errorcode-image.md#7600302-内存拷贝失败) | Memory copy failed. |
+| [7600301](../errorcode-image.md#7600301-申请内存失败) | Memory alloc failed. |
 
 ## getTag
 
@@ -117,7 +111,7 @@ Get a single XMP tag from specified path.
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 7600206 | Invalid argument. Possible causes: 1. Namespace is not registered. 2. The path syntax is invalid. |
+| [7600206](../errorcode-image.md#7600206-无效参数) | Invalid argument. Possible causes: 1. Namespace is not registered. 2. The path syntax is invalid. |
 
 ## getTags
 
@@ -154,7 +148,7 @@ Get all XMP tags from specified path.
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 7600206 | Invalid argument. Possible causes: 1. Namespace is not registered. 2. The rootPath syntax is invalid. |
+| [7600206](../errorcode-image.md#7600206-无效参数) | Invalid argument. Possible causes: 1. Namespace is not registered. 2. The rootPath syntax is invalid. |
 
 ## registerXMPNamespace
 
@@ -190,7 +184,7 @@ Register a new namespace according to the xml namespace and prefix.
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 7600206 | Invalid argument. Possible causes: 1. Invalid namespace format. 2. The uri is already registered. 3. The prefix is already registered. |
+| [7600206](../errorcode-image.md#7600206-无效参数) | Invalid argument. Possible causes: 1. Invalid namespace format. 2. The uri is already registered. 3. The prefix is already registered. |
 
 ## removeTag
 
@@ -226,7 +220,7 @@ Remove the XMP tag from specified path.
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 7600206 | Invalid argument. Possible causes: 1. Namespace is not registered. 2. The path syntax is invalid. |
+| [7600206](../errorcode-image.md#7600206-无效参数) | Invalid argument. Possible causes: 1. Namespace is not registered. 2. The path syntax is invalid. |
 
 ## setBlob
 
@@ -262,7 +256,7 @@ Set a blob into the XMP metadata.
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 7600206 | Invalid argument. Possible causes: 1. The buffer is empty or invalid. |
+| [7600206](../errorcode-image.md#7600206-无效参数) | Invalid argument. Possible causes: 1. The buffer is empty or invalid. |
 
 ## setValue
 
@@ -300,5 +294,5 @@ Set the XMP type and value of the XMP tag in the specified path.
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 7600206 | Invalid argument. Possible causes: 1. Namespace is not registered. 2. The path syntax is invalid. 3. The path does not match the type. 4. The value is invalid for the type. |
+| [7600206](../errorcode-image.md#7600206-无效参数) | Invalid argument. Possible causes: 1. Namespace is not registered. 2. The path syntax is invalid. 3. The path does not match the type. 4. The value is invalid for the type. |
 

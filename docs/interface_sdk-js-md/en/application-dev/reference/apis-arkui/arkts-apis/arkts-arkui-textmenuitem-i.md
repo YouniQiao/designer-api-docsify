@@ -1,6 +1,6 @@
 # TextMenuItem
 
-文本菜单项
+TextMenuItem
 
 **Since:** 12
 
@@ -16,7 +16,7 @@
 content: ResourceStr
 ```
 
-菜单名称。
+Menu name.
 
 **Type:** [ResourceStr](arkts-arkui-resourcestr-t.md)
 
@@ -38,11 +38,9 @@ content: ResourceStr
 icon?: ResourceStr
 ```
 
-菜单图标。
+Menu icon.
 
-不支持网络图片。
-
-默认值：undefined，不显示菜单图标。
+Online images are not supported.
 
 **Type:** [ResourceStr](arkts-arkui-resourcestr-t.md)
 
@@ -64,7 +62,7 @@ icon?: ResourceStr
 id: TextMenuItemId
 ```
 
-菜单id。
+Menu ID.
 
 **Type:** [TextMenuItemId](arkts-arkui-textmenuitemid-c.md)
 
@@ -86,11 +84,9 @@ id: TextMenuItemId
 labelInfo?: ResourceStr
 ```
 
-快捷键提示。
+Shortcut key hint.
 
-该字段仅2in1设备支持。
-
-默认值：undefined，不显示快捷键提示。
+This field is only supported on 2-in-1 devices.
 
 **Type:** [ResourceStr](arkts-arkui-resourcestr-t.md)
 

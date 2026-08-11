@@ -10,12 +10,6 @@ HTML类型数据，用于描述超文本标记语言数据。创建HTML对象后
 
 **系统能力：** SystemCapability.DistributedDataManager.UDMF.Core
 
-## 导入模块
-
-```TypeScript
-import { uniformDataStruct } from 'kits/@kit.ArkData';
-```
-
 ## details
 
 ```TypeScript
@@ -34,7 +28,7 @@ details?: Record<string, string>
 
 的数据对象。
 
-**类型：** [Record](../../apis-default/arkts-apis/arkts-record-t.md)&lt;string, string&gt;
+**类型：** Record&lt;string, string&gt;
 
 **起始版本：** 12
 

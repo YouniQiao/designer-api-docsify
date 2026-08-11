@@ -1,14 +1,14 @@
 # Checkbox
 
-提供多选框组件，用于在多个选项中进行选择。
+**Checkbox** is a component that is used to enable or disable an option.
 
-> **说明：**
+> **NOTE**
 >
-> API version 11开始，Checkbox默认样式由圆角方形变为圆形。
+> Since API version 11, the default style of the **Checkbox** component is changed from rounded square to circle.
 
-## 子组件
+## Child Components
 
-无
+Not supported
 
 ## Checkbox
 
@@ -16,7 +16,7 @@
 Checkbox(options?: CheckboxOptions)
 ```
 
-提供多选框组件，用于在多个选项中进行选择。
+Creates a check box.
 
 **Since:** 8
 
@@ -34,7 +34,7 @@ Checkbox(options?: CheckboxOptions)
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| options | [CheckboxOptions](arkts-arkui-checkboxoptions-i.md) | No | 配置多选框的参数。不传入该参数时，多选框使用默认配置。 |
+| options | [CheckboxOptions](arkts-arkui-checkboxoptions-i.md) | No | Check box parameters. |
 
 ## Summary
 

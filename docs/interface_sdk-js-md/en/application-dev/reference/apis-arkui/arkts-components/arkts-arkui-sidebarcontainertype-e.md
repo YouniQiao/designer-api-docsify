@@ -1,6 +1,6 @@
 # SideBarContainerType
 
-容器内侧边栏样式枚举。
+Enumerates the types of sidebar containers.
 
 **Since:** 8
 
@@ -16,18 +16,15 @@
 Embed = 0
 ```
 
-侧边栏嵌入到组件内，和内容区并列显示。适用于需要同时展示侧边栏和内容区的场景。
+The sidebar is embedded in the component and displayed side by side with the content area.
 
-整体容器大小不变时，显示侧边栏会导致内容区缩小，隐藏侧边栏会扩大内容区。
+With the overall container size unchanged, displaying the sidebar reduces the content area, and hiding the sidebar expands the content area.
 
-组件尺寸小于[minContentWidth](SideBarContainerAttribute#minContentWidth) +  
-[minSideBarWidth](SideBarContainerAttribute#minSideBarWidth(value: number))，并且未设置showSideBar时，默认不显示侧边栏。
+If the component size is less than the sum of [minContentWidth](SideBarContainerAttribute#minContentWidth)and [minSideBarWidth](SideBarContainerAttribute#minSideBarWidth(value: number)), and **showSideBar** is not set, the sidebar is automatically hidden.
 
-设置了showSideBar属性时，以showSideBar属性设置的值为准。
+If **minSideBarWidth** or **minContentWidth** is not set, the default value will be used for calculation.
 
-未设置minSideBarWidth或minContentWidth时，采用对应接口的默认值进行计算。
-
-组件在自动隐藏后，如果通过点击控制按钮唤出侧边栏，则侧边栏悬浮在内容区上显示。
+The user can bring out the sidebar in Overlay mode by clicking the control button.
 
 **Since:** 8
 
@@ -45,7 +42,7 @@ Embed = 0
 Overlay = 1
 ```
 
-侧边栏浮在内容区上面，不会影响内容区的大小。适用于需要临时展示侧边栏的场景。&lt;br/&gt;组件尺寸小于minContentWidth时，内容区会被截断显示。
+The sidebar is overlaid on top of the content area, without affecting the size of the content area.
 
 **Since:** 8
 
@@ -63,11 +60,12 @@ Overlay = 1
 AUTO = 2
 ```
 
-组件尺寸大于等于minSideBarWidth + minContentWidth时，采用Embed模式显示。
+The sidebar is displayed in Embed mode when the component size is greater than or equal to the sum of  
+**minSideBarWidth** and **minContentWidth**
 
-组件尺寸小于minSideBarWidth + minContentWidth时，采用Overlay模式显示。适用于需要响应式布局或多设备适配的场景。
+and in Overlay mode otherwise.
 
-未设置minSideBarWidth或minContentWidth时，会使用未设置接口的默认值进行计算，若计算的值小于600vp，则使用600vp作为模式切换的临界值。
+If **minSideBarWidth** or **minContentWidth** is not set, the default value will be used for calculation. If the calculation result is less than 600 vp, 600 vp will be used as the breakpoint value for mode switching.
 
 **Since:** 10
 
@@ -87,7 +85,7 @@ AUTO = 2
 DISPLACE = 3
 ```
 
-侧边栏和内容区并列显示，内容区超出部分移出组件外。侧边栏展开时，内容区显示灰色蒙层（颜色为#33000000）并被禁用事件，点击内容区可收起侧边栏。
+The sideBar Displace. Sidebar is visible, content will offscreen to make space for sideBar.
 
 **Since:** 26.0.0
 

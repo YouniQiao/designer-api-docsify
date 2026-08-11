@@ -12,23 +12,19 @@ import { LevelMode, ImmersiveMode, LevelOrder } from 'kits/@kit.ArkUI';
 function openCustomDialog(options: CustomDialogOptions): Promise<number>
 ```
 
-打开自定义弹窗。通过Promise返回结果。
+Opens a custom dialog box. This API uses a promise to return the result.
 
-&lt;!--Del--&gt;不支持在ServiceExtension中使用。&lt;!--DelEnd--&gt;
+&lt;!--Del--&gt;This API cannot be used in **ServiceExtension**.&lt;!--DelEnd--&gt;
 
-弹窗宽度在设备竖屏时默认为 所在窗口宽度 - 左右margin（16vp，设备为2in1时为40vp），最大默认宽度为400vp。
+By default, the width of the dialog box in portrait mode is the width of the window where it is located minus the left and right margins (40 vp for 2-in-1 devices and 16 vp for other devices), and the maximum width is 400 vp.
 
-> **说明：**
+> **NOTE：**
 > 
-> - 从API version 11开始支持，从API version 18开始废弃，建议使用[openCustomDialog](arkts-apis-uicontext-promptaction.md#opencustomdialog12-1)替代。
-openCustomDialog需先通过[UIContext](arkts-apis-uicontext-uicontext.md)中的  
-[getPromptAction](arkts-apis-uicontext-uicontext.md#getpromptaction)方法获取  
-[PromptAction](arkts-apis-uicontext-promptaction.md)对象，然后通过该对象进行调用。且直接使用openCustomDialog可能导致  
-[UI上下文不明确](../../ui/arkts-global-interface.md#ui上下文不明确)的问题。  
+> - This API is supported since API version 11 and deprecated since API version 18.
+You are advised to use [openCustomDialog](arkts-apis-uicontext-promptaction.md#opencustomdialog12-1) instead. Before calling this API, you need to obtain the [PromptAction](arkts-apis-uicontext-promptaction.md) object using the [getPromptAction](arkts-apis-uicontext-uicontext.md#getpromptaction) method in [UIContext](arkts-apis-uicontext-uicontext.md). Directly using **openCustomDialog** can lead to the issue of [ambiguous UI context](../../ui/arkts-global-interface.md#ambiguous-ui-context).  
 > 
-> - 从API version 12开始，可以通过使用[UIContext](arkts-apis-uicontext-uicontext.md)中的
-[getPromptAction](arkts-apis-uicontext-uicontext.md#getpromptaction)方法获取当前UI上下文关联的  
-[PromptAction](arkts-apis-uicontext-promptaction.md)对象。
+> - Since API version 12, you can use the [getPromptAction](arkts-apis-uicontext-uicontext.md#getpromptaction) API
+in [UIContext](arkts-apis-uicontext-uicontext.md) to obtain the [PromptAction](arkts-apis-uicontext-promptaction.md) object associated with the current UI context.
 
 **Since:** 11
 
@@ -50,20 +46,20 @@ openCustomDialog需先通过[UIContext](arkts-apis-uicontext-uicontext.md)中的
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| options | [CustomDialogOptions](arkts-arkui-promptaction-customdialogoptions-i.md) | Yes | 自定义弹窗的内容。 &lt;br&gt;**说明：** 如果BaseDialogOptions中的[isModal](js-apis-promptAction.md#basedialogoptions11)与 [showInSubWindow](js-apis-promptAction.md#basedialogoptions11)同时设置为true， 则只生效showInSubWindow = true，此时为非模态弹出框且不会显示蒙层，并在子窗口中显示。 |
+| options | [CustomDialogOptions](arkts-arkui-promptaction-customdialogoptions-i.md) | Yes | Content of the custom dialog box. &lt;br&gt;Note: If both [isModal](js-apis-promptAction.md#basedialogoptions11) and [showInSubWindow](js-apis-promptAction.md#basedialogoptions11) in **BaseDialogOptions** are set to **true**, only **showInSubWindow** takes effect. In this case, the non-modal dialog box is displayed without mask in the subwindow. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;number&gt; | 返回供closeCustomDialog使用的对话框id。 |
+| Promise&lt;number&gt; | ID of the custom dialog box, which can be used in **closeCustomDialog**. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 100001 | Internal error. |
-| 401 | Parameter error. Possible causes: &lt;br&gt; 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameters types. &lt;br&gt; 3. Parameter verification failed. |
+| [100001](../errorcode-internal.md#100001-internal-error) | Internal error. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: &lt;br&gt; 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameters types. &lt;br&gt; 3. Parameter verification failed. |
 
 ## Examples
 

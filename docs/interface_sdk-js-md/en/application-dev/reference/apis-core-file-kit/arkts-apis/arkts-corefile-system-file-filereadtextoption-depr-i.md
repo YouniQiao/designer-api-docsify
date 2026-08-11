@@ -1,6 +1,6 @@
 # FileReadTextOption
 
-可选项类型，支持readText接口使用。
+Defines the options used in readText().
 
 **Since:** 3
 
@@ -18,7 +18,7 @@
 complete?: () => void
 ```
 
-接口调用结束的回调函数。
+Callback invoked when the API call is complete.
 
 **Since:** 3
 
@@ -36,7 +36,13 @@ complete?: () => void
 fail?: (data: string, code: number) => void
 ```
 
-接口调用失败的回调函数。
+Callback invoked when the API call fails.  
+**data** indicates the error information.  
+**code** indicates the returned error code:  
+**202**: invalid parameter  
+**300**: I/O error  
+**301**: file or directory not found  
+**302**: text to read exceeding 4 KB
 
 **Since:** 3
 
@@ -61,7 +67,7 @@ fail?: (data: string, code: number) => void
 success?: (data: FileReadTextResponse) => void
 ```
 
-接口调用成功的回调函数。返回[FileReadTextResponse](arkts-corefile-system-file-filereadtextresponse-depr-i.md)。
+Callback invoked when the API call is successful. **data** is [FileReadTextResponse](arkts-corefile-system-file-filereadtextresponse-depr-i.md).
 
 **Since:** 3
 
@@ -85,7 +91,7 @@ success?: (data: FileReadTextResponse) => void
 encoding?: string
 ```
 
-编码格式，默认为UTF-8。
+Encoding format. The default format is **UTF-8**.
 
 **Type:** string
 
@@ -105,7 +111,7 @@ encoding?: string
 length?: number
 ```
 
-读取的长度，单位为Byte，默认值为4096。
+Length of the text to be read, in bytes. The default value is **4096**.
 
 **Type:** number
 
@@ -125,7 +131,7 @@ length?: number
 position?: number
 ```
 
-读取的起始位置，单位为Byte，默认为文件的起始位置。
+Position where the reading starts, in bytes. The default value is the start position of the file.
 
 **Type:** number
 
@@ -145,7 +151,7 @@ position?: number
 uri: string
 ```
 
-本地文件URI。由于轻量级穿戴设备底层文件系统的限制，该值必须满足以下要求：1. URI 中不得包含以下特殊字符：\"*+,:;&lt;=&gt;?[]|\x7F等。2. 最大允许字符长度为128个字符。
+URI of the file to which the content is written. Restricted by the underlying file system of lite wearables, the value must meet the following requirements:1. The URI cannot contain the following special characters: \"*+,:;&lt;=&gt;?[]|\x7F.2. The value can contain a maximum of 128 characters.
 
 **Type:** string
 

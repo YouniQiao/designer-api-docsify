@@ -1,12 +1,12 @@
 # Readable
 
-可从中读取数据的流。可读流用于从源（如文件或网络套接字）读取数据。
+Stream from which data can be read. A readable stream is used to read data from a source, such as a file or a network socket.
 
 **Since:** 12
 
 **ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
-<!--Device-stream-class Readable--><!--Device-stream-class Readable-End-->
+<!--Device-stream-export class Readable--><!--Device-stream-export class Readable-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
@@ -22,7 +22,7 @@ import { stream } from 'kits/@kit.ArkTS';
 constructor()
 ```
 
-创建**Readable**对象的构造函数。
+A constructor used to create a **Readable** object.
 
 **Since:** 12
 
@@ -46,7 +46,7 @@ let readableStream = new stream.Readable();
 constructor(options: ReadableOptions)
 ```
 
-创建**Readable**对象的构造函数。
+A constructor used to create a **Readable** object.
 
 **Since:** 12
 
@@ -62,7 +62,7 @@ constructor(options: ReadableOptions)
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| options | [ReadableOptions](arkts-arkts-stream-readableoptions-i.md) | Yes | Readable**构造函数中的选项。 |
+| options | [ReadableOptions](arkts-arkts-stream-readableoptions-i.md) | Yes | Options in the **Readable** constructor. |
 
 ## Examples
 
@@ -79,7 +79,8 @@ let readableStream = new stream.Readable(option);
 doInitialize(callback: Function): void
 ```
 
-需要由开发者实现此API。在可读流首次调用[on](stream.Writable#on(event: string, callback: Callback&lt;emitter.EventData&gt;))时调用此API。使用异步回调返回结果。
+You need to implement this API. It is called when the readable stream calls  
+[on](stream.Writable#on(event: string, callback: Callback&lt;emitter.EventData&gt;)) for the first time. This API uses an asynchronous callback to return the result.
 
 **Since:** 12
 
@@ -95,7 +96,7 @@ doInitialize(callback: Function): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | Function | Yes | 回调函数。 |
+| callback | Function | Yes | Callback function. |
 
 ## Examples
 
@@ -127,7 +128,7 @@ ArkTS-Sta:
 doRead(size: int): void
 ```
 
-数据读取API，需在子类中实现。
+A data read API that needs to be implemented in child classes.
 
 **Since:** 12
 
@@ -143,7 +144,7 @@ doRead(size: int): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| size | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | 待读取的字节数。取值范围：0 <= size <= Number.MAX_VALUE |
+| size | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | Number of bytes to read. Value range: 0 <= size <= Number.MAX_VALUE |
 
 ## Examples
 
@@ -169,7 +170,7 @@ readable.on('data', () => {
 isPaused(): boolean
 ```
 
-检查可读流是否已暂停。流在调用[pause()](arkts-arkts-stream-readable-c.md#pause)后暂停，在调用[resume()](arkts-arkts-stream-readable-c.md#resume)后从暂停状态恢复。
+Checks whether the readable stream is paused. The stream is paused after [pause()](arkts-arkts-stream-readable-c.md#pause)is called and resumes from the paused state after [resume()](arkts-arkts-stream-readable-c.md#resume) is called.
 
 **Since:** 12
 
@@ -185,7 +186,7 @@ isPaused(): boolean
 
 | Type | Description |
 | --- | --- |
-| boolean | 检查结果。流已暂停返回**true**，否则返回**false**。 |
+| boolean | Check result. The value **true** is returned if the stream is paused; otherwise, **false** is returned. |
 
 ## Examples
 
@@ -211,7 +212,7 @@ console.info("Readable isPaused", readableStream.isPaused()); // Readable isPaus
 off(event: string, callback?: Callback<emitter.EventData>): void
 ```
 
-移除通过on注册的事件处理函数。
+Unregisters an event processing callback used to listen for different events on the readable stream.
 
 **Since:** 12
 
@@ -227,8 +228,8 @@ off(event: string, callback?: Callback<emitter.EventData>): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| event | string | Yes | 事件回调类型，支持的事件包括：'close' \| 'data' \| 'end' \| 'error' \| 'readable' \| 'pause' \| 'resume'。 - 'close'：完成push()调用，传入null值，触发该事件。 - 'data'：当流传递给消费者一个数据块时触发该事件。 - 'end'：完成push()调用，传入null值，触发该事件。 - 'error'：流发生异常时触发。 - 'readable'：当有可从流中读取的数据时触发该事件。 - 'pause'：完成pause()调用，触发该事件。 - 'resume'：完成resume()调用，触发该事件。 |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;emitter.EventData&gt; | No | 指定事件的要注销的回调函数。不传入时注销指定事件的所有回调函数。 |
+| event | string | Yes | Type of the event. The following events are supported: |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;emitter.EventData&gt; | No | Callback function. |
 
 ## Examples
 
@@ -261,7 +262,7 @@ readable.push('test');
 off(event: string, callback?: Function): void
 ```
 
-取消事件消息。
+Cancel event message.
 
 **Since:** 23
 
@@ -277,8 +278,8 @@ off(event: string, callback?: Function): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| event | string | Yes | 注册的事件。 |
-| callback | Function | No | 事件回调。 |
+| event | string | Yes | Registering Events. |
+| callback | Function | No | Event callback. |
 
 ## on
 
@@ -286,7 +287,7 @@ off(event: string, callback?: Function): void
 on(event: string, callback: Callback<emitter.EventData>): void
 ```
 
-注册事件处理函数来监听可读流上的不同事件。
+Registers an event processing callback to listen for different events on the readable stream.
 
 **Since:** 12
 
@@ -302,8 +303,8 @@ on(event: string, callback: Callback<emitter.EventData>): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| event | string | Yes | 事件回调类型，支持的事件包括：'close' \| 'data' \| 'end' \| 'error' \| 'readable' \| 'pause' \| 'resume'。 - 'close'：完成push()调用，传入null值，触发该事件。 - 'data'：当流传递给消费者一个数据块时触发该事件。 - 'end'：完成push()调用，传入null值，触发该事件。 - 'error'：流发生异常时触发。 - 'readable'：当有可从流中读取的数据时触发该事件。 - 'pause'：完成pause()调用，触发该事件。 - 'resume'：完成resume()调用，触发该事件。 |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;emitter.EventData&gt; | Yes | 回调函数，返回事件数据。 |
+| event | string | Yes | Type of the event. The following events are supported: |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;emitter.EventData&gt; | Yes | Callback function used to return the event data. |
 
 ## Examples
 
@@ -331,7 +332,7 @@ readable.on('error', () => {
 on(event: string, callback: Function): void
 ```
 
-注册事件消息。
+Registering Event Messages.
 
 **Since:** 23
 
@@ -347,8 +348,8 @@ on(event: string, callback: Function): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| event | string | Yes | 注册的事件。 |
-| callback | Function | Yes | 事件回调。 |
+| event | string | Yes | Registering Events. |
+| callback | Function | Yes | Event callback. |
 
 ## pause
 
@@ -356,7 +357,7 @@ on(event: string, callback: Function): void
 pause(): Readable
 ```
 
-暂停流动模式下的可读流。可以使用**isPaused**检查流是否已暂停。
+Pauses the readable stream in flowing mode. You can use **isPaused** to check whether the stream is paused.
 
 **Since:** 12
 
@@ -372,7 +373,7 @@ pause(): Readable
 
 | Type | Description |
 | --- | --- |
-| [Readable](arkts-arkts-stream-readable-c.md) | 当前**Readable**对象。 |
+| [Readable](arkts-arkts-stream-readable-c.md) | Current **Readable** object. |
 
 ## Examples
 
@@ -397,7 +398,7 @@ console.info("Readable test pause", readableStream.isPaused()); // Readable test
 pipe(destination: Writable, options?: Object): Writable
 ```
 
-将一个可写流附加到可读流上，以实现数据的自动传输。
+Attaches a writable stream to the readable stream to implement automatic data transmission.
 
 **Since:** 12
 
@@ -413,14 +414,14 @@ pipe(destination: Writable, options?: Object): Writable
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| destination | [Writable](arkts-arkts-stream-writable-c.md) | Yes | 接收数据的可写流。 |
-| options | Object | No | 预留参数。 |
+| destination | [Writable](arkts-arkts-stream-writable-c.md) | Yes | Writable stream that receives data. |
+| options | Object | No | Reserved. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [Writable](arkts-arkts-stream-writable-c.md) | 当前**Writable**对象。 |
+| [Writable](arkts-arkts-stream-writable-c.md) | Current **Writable** object. |
 
 ## Examples
 
@@ -458,7 +459,7 @@ readable.pipe(writable);
 push(chunk: Uint8Array | string | undefined | null, encoding?: string): boolean
 ```
 
-将数据推入可读流的缓冲区。
+Pushes data into the buffer of the readable stream.
 
 **Since:** 12
 
@@ -474,14 +475,14 @@ push(chunk: Uint8Array | string | undefined | null, encoding?: string): boolean
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| chunk | Uint8Array \| string \| undefined \| null | Yes | 待读取的数据。&lt;br&gt; 从API version 22起有兼容性变更。在API version 21及之前版本，类型为 `Uint8Array \| string \| null`。<br>**Since:** 23 |
-| encoding | string | No | 编码格式。默认值为**'utf8'**。目前支持**'utf8'**、**'gb18030'**、**'gbk'**和**'gb2312'**。 |
+| chunk | Uint8Array \| string \| undefined \| null | Yes | Data to read.&lt;br&gt; There has been a compatibility change since API version 22. In API version 21 and earlier versions, the type is `Uint8Array \| string \| null` .<br>**Since:** 23 |
+| encoding | string | No | Encoding format. The default value is **'utf8'**. Currently, **'utf8'**, **'gb18030'**, **'gbk'**, and **'gb2312'** are supported. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| boolean | 表示可读流缓冲区中是否还有空间。**true**表示缓冲区中还有空间；**false**表示缓冲区已满。如果传入**null**，则始终返回**false**，表示没有可推送的数据块。 |
+| boolean | Whether there is space in the buffer of the readable stream. The value **true** means that there is still space in the buffer, and **false** means that the buffer is full. If **null** is passed, **false** is always returned, indicating that no data chunk is available for pushing. |
 
 ## Examples
 
@@ -507,7 +508,7 @@ console.info("Readable push test", readable.readableLength); // Readable push te
 read(size?: number): string | null
 ```
 
-从可读流的缓冲区中读取数据，并返回读取的数据。如果没有读取到数据，则返回**null**。
+Reads data from the buffer of the readable stream and returns the read data. If no data is read, **null** is returned.
 
 **Since:** 12
 
@@ -523,19 +524,19 @@ read(size?: number): string | null
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| size | number | No | 待读取的字节数。默认值为**undefined**。 |
+| size | number | No | Number of bytes to read. The default value is **undefined**. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| string | 从可读流中读取的数据。 |
+| string | Data read from the readable stream. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 10200038 | The doRead method has not been implemented. |
+| [10200038](../errorcode-utils.md#10200038-doread-is-not-implemented) | The doRead method has not been implemented. |
 
 ## Examples
 
@@ -562,7 +563,7 @@ console.info('Readable data is', dataChunk); // Readable data is test
 read(size?: int): buffer.Buffer | string | null
 ```
 
-从缓冲区中读取指定大小的数据。如果可用缓冲区足够，则返回指定大小的结果；否则，如果Readable已结束，则返回所有剩余的缓冲区。
+Reads a buffer of a specified size from the buffer. If the available buffer is sufficient, the result of the specified size is returned. Otherwise, if Readable has ended, all remaining buffers are returned.
 
 **Since:** 23
 
@@ -578,19 +579,19 @@ read(size?: int): buffer.Buffer | string | null
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| size | int | No | 待读取数据的期望长度。 该值为整数。 |
+| size | int | No | Expected length of the data to be read. The value should be an integer. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| buffer.Buffer | 如果没有可读取的数据，则返回null。 |
+| buffer.Buffer | If no data is available to read, null is returned. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 10200038 | The doRead method has not been implemented. |
+| [10200038](../errorcode-utils.md#10200038-doread-is-not-implemented) | The doRead method has not been implemented. |
 
 ## resume
 
@@ -598,7 +599,7 @@ read(size?: int): buffer.Buffer | string | null
 resume(): Readable
 ```
 
-恢复已显式暂停的可读流。可以使用**isPaused**检查流是否已暂停。
+Resumes an explicitly paused readable stream. You can use **isPaused** to check whether the stream is paused.
 
 **Since:** 12
 
@@ -614,7 +615,7 @@ resume(): Readable
 
 | Type | Description |
 | --- | --- |
-| [Readable](arkts-arkts-stream-readable-c.md) | 当前**Readable**对象。 |
+| [Readable](arkts-arkts-stream-readable-c.md) | Current **Readable** object. |
 
 ## Examples
 
@@ -639,7 +640,7 @@ console.info("Readable test resume", !readableStream.isPaused()); // After a suc
 setEncoding(encoding?: string): boolean
 ```
 
-设置可读流的编码格式。如果缓冲区中包含数据，则不允许设置编码格式，并返回**false**。
+Sets an encoding format for the readable stream.If the buffer contains data, setting the encoding format is not allowed, and **false** is returned.
 
 **Since:** 12
 
@@ -655,13 +656,13 @@ setEncoding(encoding?: string): boolean
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| encoding | string | No | 编码格式。默认值为**'utf8'**。目前支持**'utf8'**、**'gb18030'**、**'gbk'**和**'gb2312'**。 |
+| encoding | string | No | Encoding format. The default value is **'utf8'**. Currently, **'utf8'**, **'gb18030'**, **'gbk'**, and **'gb2312'** are supported. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| boolean | 操作结果。设置成功返回**true**，否则返回**false**。 |
+| boolean | Operation result. The value **true** is returned if the setting is successful; otherwise, **false** is returned. |
 
 ## Examples
 
@@ -686,7 +687,7 @@ console.info("Readable result", result); // Readable result true
 unpipe(destination?: Writable): Readable
 ```
 
-将之前附加到可读流的可写流分离。
+Detaches a writable stream previously attached to the readable stream.
 
 **Since:** 12
 
@@ -702,13 +703,13 @@ unpipe(destination?: Writable): Readable
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| destination | [Writable](arkts-arkts-stream-writable-c.md) | No | 待分离的可写流。默认值为**undefined**。 |
+| destination | [Writable](arkts-arkts-stream-writable-c.md) | No | Writable stream to detach. The default value is **undefined**. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [Readable](arkts-arkts-stream-readable-c.md) | 当前**Readable**对象。 |
+| [Readable](arkts-arkts-stream-readable-c.md) | Current **Readable** object. |
 
 ## Examples
 
@@ -750,7 +751,7 @@ readable.on('data', () => {
 get readable(): boolean
 ```
 
-如果调用readable.read()是安全的，返回true，即表示流未被销毁、未发出'error'或'end'。
+Is true if it is safe to call readable.read(), which means the stream has not been destroyed or emitted 'error' or 'end'.
 
 **Type:** boolean
 
@@ -770,7 +771,7 @@ get readable(): boolean
 get readableEncoding(): string | null
 ```
 
-获取给定Readable流的encoding属性的getter。encoding属性可通过readable.setEncoding()方法设置。
+Getter for the property encoding of a given Readable stream. The encoding property can be set using the readable.setEncoding() method.
 
 **Type:** string
 
@@ -790,7 +791,7 @@ get readableEncoding(): string | null
 get readableEnded(): boolean
 ```
 
-是否已生成所有数据。
+Whether all data has been generated.
 
 **Type:** boolean
 
@@ -810,7 +811,7 @@ get readableEnded(): boolean
 get readableFlowing(): boolean | null
 ```
 
-此属性反映可读流的当前状态 null/true/false。
+This property reflects the current state of the readable stream null/true/false.
 
 **Type:** boolean
 
@@ -830,7 +831,7 @@ get readableFlowing(): boolean | null
 get readableHighWatermark(): int
 ```
 
-返回创建此Readable时传入的highWatermark的值。
+Returns the value of highWatermark passed when creating this Readable.
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
@@ -850,7 +851,7 @@ get readableHighWatermark(): int
 get readableLength(): int
 ```
 
-可读取的数据大小，单位为字节或对象。
+Size of the data that can be read, in bytes or objects.
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
@@ -870,7 +871,7 @@ get readableLength(): int
 get readableObjectMode(): boolean
 ```
 
-返回布尔值，表示是否处于ObjectMode。
+Returns boolean indicating whether it is in ObjectMode.
 
 **Type:** boolean
 

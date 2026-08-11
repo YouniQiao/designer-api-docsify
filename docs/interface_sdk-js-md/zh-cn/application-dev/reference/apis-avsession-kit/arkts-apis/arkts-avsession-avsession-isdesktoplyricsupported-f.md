@@ -1,11 +1,5 @@
 # isDesktopLyricSupported
 
-## 导入模块
-
-```TypeScript
-import { avSession } from 'kits/@kit.AVSessionKit';
-```
-
 ## isDesktopLyricSupported
 
 ```TypeScript
@@ -34,7 +28,7 @@ function isDesktopLyricSupported(): Promise<boolean>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 6600101 | Session service exception. |
+| [6600101](../errorcode-avsession.md#6600101-会话服务端异常) | Session service exception. |
 
 ## 示例
 
@@ -42,7 +36,7 @@ function isDesktopLyricSupported(): Promise<boolean>
 import { avSession } from '@kit.AVSessionKit';
 
 avSession.isDesktopLyricSupported().then((isSupported: boolean) => {
-  console.info(`Succeeded in checking desktop lyric supported: ${isSupported}`);
+  console.info(`isDesktopLyricSupported : SUCCESS : isSupported : ${isSupported}`);
 });
 ```
 

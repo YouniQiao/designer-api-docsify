@@ -1,6 +1,6 @@
 # WindowAnimationConfig
 
-窗口动画参数配置。
+Describes the configuration for window animation.
 
 **Since:** 20
 
@@ -22,7 +22,7 @@ import { window } from 'kits/@kit.ArkUI';
 curve: WindowAnimationCurve
 ```
 
-动画曲线类型。
+Type of animation curve.
 
 **Type:** [WindowAnimationCurve](arkts-arkui-window-windowanimationcurve-e.md)
 
@@ -42,11 +42,11 @@ curve: WindowAnimationCurve
 duration?: long
 ```
 
-动画播放的时长，单位毫秒（ms）。
+Duration for playing the animation, in milliseconds (ms).
 
-默认值：0，最大值：3000。
+The default value is 0, and the maximum value is 3000.
 
-根据动画曲线类型决定是否必填。
+Whether it is required depends on the animation curve type.
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：long
 
@@ -66,7 +66,7 @@ duration?: long
 param?: WindowAnimationCurveParam
 ```
 
-动画曲线参数，根据动画曲线类型决定是否必填。
+Parameters for the animation curve. Whether it is required depends on the animation curve type.
 
 **Type:** [WindowAnimationCurveParam](arkts-arkui-windowanimationcurveparam-t.md)
 

@@ -1,11 +1,5 @@
 # @ohos.arkui.advanced.TreeViewV2
 
-## 导入模块
-
-```TypeScript
-import { TreeListenerManagerV2, NodeParamV2, CallbackParamV2, TreeControllerV2, TreeViewV2, TreeListenerV2 } from 'kits/@kit.ArkUI';
-```
-
 ## 汇总
 
 ### 类

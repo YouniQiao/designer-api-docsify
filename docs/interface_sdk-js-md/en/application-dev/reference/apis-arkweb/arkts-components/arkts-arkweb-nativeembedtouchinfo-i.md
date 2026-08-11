@@ -1,6 +1,6 @@
 # NativeEmbedTouchInfo
 
-提供手指触摸到同层标签的详细信息。
+Provides touch information of the same-layer tag.
 
 **Since:** 11
 
@@ -16,7 +16,7 @@
 embedId?: string
 ```
 
-同层标签的唯一id。
+Unique ID of the same-layer tag.
 
 **Type:** string
 
@@ -36,7 +36,7 @@ embedId?: string
 result?: EventResult
 ```
 
-通知Web组件手势事件的消费结果。
+Gesture event consumption result.
 
 **Type:** [EventResult](../arkts-apis/arkts-arkweb-web-eventresult-c.md)
 
@@ -56,7 +56,7 @@ result?: EventResult
 touchEvent?: TouchEvent
 ```
 
-手指触摸动作信息。
+Touch action information.
 
 **Type:** [TouchEvent](../../apis-arkui/arkts-components/arkts-arkui-touchevent-i.md)
 

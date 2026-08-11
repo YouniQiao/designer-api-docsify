@@ -6,11 +6,11 @@
 const ON_START: string
 ```
 
-监听任务启动的方法
+Start task method.
 
-**Since:** 26.1.0
+**Since:** 26.0.0
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.1.0.
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -24,11 +24,11 @@ const ON_START: string
 const ON_STOP: string
 ```
 
-监听任务结束的方法
+Stop task method.
 
-**Since:** 26.1.0
+**Since:** 26.0.0
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.1.0.
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
 

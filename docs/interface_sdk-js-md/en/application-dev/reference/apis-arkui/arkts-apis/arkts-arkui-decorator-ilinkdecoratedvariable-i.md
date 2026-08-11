@@ -18,7 +18,7 @@ Define Link decoration variable interface.
 resetOnReuse(newValue: LinkSourceType<T>): void
 ```
 
-在重用@可重用组件实例时重置链接变量。
+Reset Link variable when the @Reusable Component instance is reused.
 
 **Since:** 26.0.0
 
@@ -34,5 +34,5 @@ resetOnReuse(newValue: LinkSourceType<T>): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| newValue | [LinkSourceType](arkts-arkui-linksourcetype-t.md)&lt;T&gt; | Yes | 默认值 |
+| newValue | [LinkSourceType](arkts-arkui-linksourcetype-t.md)&lt;T&gt; | Yes | default value |
 

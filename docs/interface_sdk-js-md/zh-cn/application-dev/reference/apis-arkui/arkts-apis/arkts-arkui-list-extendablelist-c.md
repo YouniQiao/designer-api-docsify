@@ -39,7 +39,7 @@ static $_instantiate<T extends ExtendableList>(
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | factory | [ConstructorT](arkts-arkui-constructort-t.md)&lt;T&gt; | 是 |  |
-| options | [ListOptions](../arkts-components/arkts-arkui-listoptions-i.md) | 否 |  |
+| options | [ListOptions](arkts-arkui-list-listoptions-i.md) | 否 |  |
 | content_ | [CustomBuilder](../arkts-components/arkts-arkui-custombuilder-t.md) | 否 |  |
 
 **返回值：**
@@ -102,7 +102,7 @@ public setListOptions(options?: ListOptions): this
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| options | [ListOptions](../arkts-components/arkts-arkui-listoptions-i.md) | 否 |  |
+| options | [ListOptions](arkts-arkui-list-listoptions-i.md) | 否 |  |
 
 **返回值：**
 

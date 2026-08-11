@@ -1,10 +1,10 @@
 # Font
 
-Defines the font used for text.
+Sets the text style.
 
-**Since:** 11
+**Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 11.
+**ArkTS mode:** ArkTS-Dyn only, since version 7.
 
 <!--Device-unnamed-declare interface Font--><!--Device-unnamed-declare interface Font-End-->
 
@@ -16,13 +16,13 @@ Defines the font used for text.
 family?: string | Resource
 ```
 
-font family.
+Font family. &lt;br&gt;To specify multiple fonts, separate them with commas (,), and fonts are applied in priority order.Example: **'Arial, HarmonyOS Sans'**.Default value: 'HarmonyOS Sans'.
 
 **Type:** string \| Resource
 
-**Since:** 11
+**Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 11.
+**ArkTS mode:** ArkTS-Dyn only, since version 7.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -36,13 +36,13 @@ font family.
 size?: Length
 ```
 
-font size.
+Font size. If the value is of the number type, the unit fp is used. Percentage strings are not supported.Default value: 16fp.
 
 **Type:** [Length](arkts-arkui-length-t.md)
 
-**Since:** 11
+**Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 11.
+**ArkTS mode:** ArkTS-Dyn only, since version 7.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -56,13 +56,13 @@ font size.
 style?: FontStyle
 ```
 
-font style.
+Font style.Default value: FontStyle.Normal.
 
 **Type:** [FontStyle](arkts-arkui-fontstyle-e.md)
 
-**Since:** 11
+**Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 11.
+**ArkTS mode:** ArkTS-Dyn only, since version 7.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -76,13 +76,13 @@ font style.
 weight?: FontWeight | number | string
 ```
 
-font weight.
+Font weight. For the number type, the value ranges from 100 to 900, at an interval of 100. A larger value indicates a thicker font.Default value: FontWeight.Normal.
 
 **Type:** [FontWeight](arkts-arkui-fontweight-e.md) \| number \| string
 
-**Since:** 11
+**Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 11.
+**ArkTS mode:** ArkTS-Dyn only, since version 7.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 

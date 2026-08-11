@@ -10,12 +10,6 @@
 
 **系统能力：** SystemCapability.Customization.EnterpriseDeviceManager
 
-## 导入模块
-
-```TypeScript
-import { systemManager } from 'kits/@kit.MDMKit';
-```
-
 ## delayUpdateTime
 
 ```TypeScript
@@ -126,7 +120,7 @@ policyType: PolicyType
 
 表示升级策略类型。
 
-**类型：** [PolicyType](../../apis-core-file-kit/arkts-apis/arkts-corefile-fileshare-policytype-e.md)
+**类型：** [PolicyType](arkts-mdm-systemmanager-policytype-e.md)
 
 **起始版本：** 12
 

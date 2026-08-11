@@ -1,7 +1,7 @@
 # ApplicationStateObserver
 
-应用状态监听器，可以作为入参传入  
-[on('applicationState')](./../@ohos.app.ability.appManager:appManager.on(type: 'applicationState', observer: ApplicationStateObserver))方法，监听应用的生命周期变化。
+The module defines an observer to listen for application state changes. It can be used as an input parameter in   
+[on('applicationState')](./../@ohos.app.ability.appManager:appManager.on(type: 'applicationState', observer: ApplicationStateObserver))to listen for lifecycle changes of the application.
 
 **Since:** 14
 
@@ -17,7 +17,7 @@
 onAbilityStateChanged(abilityStateData: AbilityStateData): void
 ```
 
-Ability状态发生变化时执行的回调函数。
+Called when the ability state changes.
 
 **Since:** 14
 
@@ -31,7 +31,7 @@ Ability状态发生变化时执行的回调函数。
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| abilityStateData | [AbilityStateData](arkts-ability-abilitystatedata-c.md) | Yes | Ability状态信息。 |
+| abilityStateData | [AbilityStateData](arkts-ability-abilitystatedata-c.md) | Yes | Ability state data. |
 
 ## onAppStarted
 
@@ -39,7 +39,7 @@ Ability状态发生变化时执行的回调函数。
 onAppStarted(appStateData: AppStateData): void
 ```
 
-应用第一个进程创建时执行的回调函数。
+Called when the first process of the application is created.
 
 **Since:** 14
 
@@ -53,7 +53,7 @@ onAppStarted(appStateData: AppStateData): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| appStateData | [AppStateData](arkts-ability-appstatedata-c.md) | Yes | 应用状态信息。 |
+| appStateData | [AppStateData](arkts-ability-appstatedata-c.md) | Yes | Application state data. |
 
 ## onAppStopped
 
@@ -61,7 +61,7 @@ onAppStarted(appStateData: AppStateData): void
 onAppStopped(appStateData: AppStateData): void
 ```
 
-应用最后一个进程销毁时执行的回调函数。
+Called when the last process of the application is destroyed.
 
 **Since:** 14
 
@@ -75,7 +75,7 @@ onAppStopped(appStateData: AppStateData): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| appStateData | [AppStateData](arkts-ability-appstatedata-c.md) | Yes | 应用状态信息。 |
+| appStateData | [AppStateData](arkts-ability-appstatedata-c.md) | Yes | Application state data. |
 
 ## onForegroundApplicationChanged
 
@@ -83,7 +83,7 @@ onAppStopped(appStateData: AppStateData): void
 onForegroundApplicationChanged(appStateData: AppStateData): void
 ```
 
-应用前后台状态发生变化时执行的回调函数。
+Called when the foreground or background state of an application changes.
 
 **Since:** 14
 
@@ -97,7 +97,7 @@ onForegroundApplicationChanged(appStateData: AppStateData): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| appStateData | [AppStateData](arkts-ability-appstatedata-c.md) | Yes | 应用状态信息。 |
+| appStateData | [AppStateData](arkts-ability-appstatedata-c.md) | Yes | Application state data. |
 
 ## onProcessCreated
 
@@ -105,7 +105,7 @@ onForegroundApplicationChanged(appStateData: AppStateData): void
 onProcessCreated(processData: ProcessData): void
 ```
 
-进程创建时执行的回调函数。
+Called when a process is created.
 
 **Since:** 14
 
@@ -119,7 +119,7 @@ onProcessCreated(processData: ProcessData): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| processData | [ProcessData](arkts-ability-processdata-c.md) | Yes | 进程数据信息。 |
+| processData | [ProcessData](arkts-ability-processdata-c.md) | Yes | Process data. |
 
 ## onProcessDied
 
@@ -127,7 +127,7 @@ onProcessCreated(processData: ProcessData): void
 onProcessDied(processData: ProcessData): void
 ```
 
-进程销毁时执行的回调函数。
+Called when a process is destroyed.
 
 **Since:** 14
 
@@ -141,7 +141,7 @@ onProcessDied(processData: ProcessData): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| processData | [ProcessData](arkts-ability-processdata-c.md) | Yes | 进程数据信息。 |
+| processData | [ProcessData](arkts-ability-processdata-c.md) | Yes | Process data. |
 
 ## onProcessStateChanged
 
@@ -149,7 +149,7 @@ onProcessDied(processData: ProcessData): void
 onProcessStateChanged(processData: ProcessData): void
 ```
 
-进程状态更新时执行的回调函数。
+Called when the process state is changed.
 
 **Since:** 14
 
@@ -163,5 +163,5 @@ onProcessStateChanged(processData: ProcessData): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| processData | [ProcessData](arkts-ability-processdata-c.md) | Yes | 进程数据信息。 |
+| processData | [ProcessData](arkts-ability-processdata-c.md) | Yes | Process data. |
 

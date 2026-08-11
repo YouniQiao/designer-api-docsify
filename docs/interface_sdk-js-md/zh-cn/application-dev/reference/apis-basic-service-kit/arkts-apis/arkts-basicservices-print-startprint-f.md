@@ -1,11 +1,5 @@
 # startPrint
 
-## 导入模块
-
-```TypeScript
-import { print } from 'kits/@kit.BasicServicesKit';
-```
-
 ## startPrint
 
 ```TypeScript
@@ -42,35 +36,35 @@ function startPrint(job: PrintJobData): Promise<void>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 201 | the application does not have permission to call this function. |
+| [201](../../errorcode-universal.md#201-权限校验失败) | the application does not have permission to call this function. |
 
 ## 示例
 
 ```TypeScript
 import { print } from '@kit.BasicServicesKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-import { fileIo } from '@kit.CoreFileKit';
+import { BusinessError } from '@ohos.base';
+import fs from "@ohos.file.fs";
 
-let tempPath = '/data/storage/el2/base/haps/entry/files/note.jpg';
-let file: fileIo.File;
-file = fileIo.openSync(tempPath, 4);
+let tempPath = '/data/stroage/el2/base/haps/entry/files/note.jpg';
+let file: fs.File;
+file = fs.openSync(tempPath, 4);
 
 let printJobData: print.PrintJobData = {
-    printerId: 'printerId', // printerId可通过on('printerChange')回调获取
-    jobName: 'jobName',
+    printerId: "printerId",
+    jobName: "jobName",
     documentFormat: print.PrintDocumentFormat.DOCUMENT_FORMAT_AUTO,
     docFlavor: print.DocFlavor.FILE_DESCRIPTOR,
     copyNumber: 1,
     isLandscape: false,
     colorMode: print.PrintColorMode.COLOR_MODE_MONOCHROME,
     duplexMode: print.PrintDuplexMode.DUPLEX_MODE_NONE,
-    pageSize: {id: 'ISO_A4', name: 'ISO_A4', width: 8268, height: 11692},
+    pageSize: {id: "ISO_A4", name: "ISO_A4", width:8268, height: 11692},
     fdList: [file.fd],
-};
+}
 print.startPrint(printJobData).then(() => {
     console.info('start print success');
 }).catch((error: BusinessError) => {
-    console.error(`Failed to startPrint. Code: ${error.code}, message: ${error.message}`);
+    console.error('failed to print because : ' + JSON.stringify(error));
 })
 ```
 

@@ -81,7 +81,7 @@ default depthMap(depthMap: ResourceStr | PixelMap, callback?: DepthMapCallback):
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | depthMap | [ResourceStr](arkts-arkui-resourcestr-t.md) \| PixelMap | 是 | 深度图资源或PixelMap对象，引用方式与静态背景图一致。仅背景为静态图时需要设置深度图。深度图需要与背景图的分辨率保持一致。 |
-| callback | [DepthMapCallback](arkts-arkui-depthmapcallback-t-sys.md) | 否 | 深度图加载完成时的回调函数。加载成功时error.code为0，加载失败时error中包含错误码和错误信息。 |
+| callback | [DepthMapCallback](../arkts-components/arkts-arkui-depthmapcallback-t-sys.md) | 否 | 深度图加载完成时的回调函数。加载成功时error.code为0，加载失败时error中包含错误码和错误信息。 |
 
 **返回值：**
 

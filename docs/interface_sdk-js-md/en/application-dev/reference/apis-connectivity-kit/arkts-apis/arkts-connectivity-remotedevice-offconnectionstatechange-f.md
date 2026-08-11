@@ -12,7 +12,7 @@ import { remoteDevice } from 'kits/@kit.ConnectivityKit';
 function offConnectionStateChange(callback?: Callback<ConnectionStateParam>): void
 ```
 
-取消订阅星闪连接状态更改事件。
+Unsubscribes from NearLink connection state change events.
 
 **Since:** 26.0.0
 
@@ -28,12 +28,12 @@ function offConnectionStateChange(callback?: Callback<ConnectionStateParam>): vo
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;ConnectionStateParam&gt; | No | 用于监听事件的回调。 |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;ConnectionStateParam&gt; | No | Callback used to listen for the connection state changed event. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 801 | Capability not supported because the chip does not support it. |
+| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported because the chip does not support it. |
 | 36100099 | Operation failed. |
 

@@ -279,7 +279,7 @@ onSelect(callback: OnAlphabetIndexerSelectCallback)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [OnAlphabetIndexerSelectCallback](../arkts-apis/arkts-arkui-onalphabetindexerselectcallback-t.md) | 是 | 回调函数，用于处理索引项选中事件。<br>**起始版本：** 18 |
+| callback | [OnAlphabetIndexerSelectCallback](arkts-arkui-onalphabetindexerselectcallback-t.md) | 是 | 回调函数，用于处理索引项选中事件。<br>**起始版本：** 18 |
 
 ## onSelected
 

@@ -1,6 +1,6 @@
 # TabsNestedScrollMode
 
-Tabs组件和父组件的嵌套滚动模式枚举。
+Tabs nested scroll nested mode
 
 **Since:** 24
 
@@ -16,7 +16,7 @@ Tabs组件和父组件的嵌套滚动模式枚举。
 SELF_ONLY = 0
 ```
 
-滚动效果只会在Tabs组件内发生，不会发生其他的嵌套滚动行为，也就是说，当内层组件滚动达到边界时，父容器不会随之滚动。
+The scrolling is contained within the Tabs component, and no scroll chaining occurs, that is,the parent container does not scroll when the component scrolling reaches the boundary.
 
 **Since:** 24
 
@@ -34,7 +34,7 @@ SELF_ONLY = 0
 SELF_FIRST = 1
 ```
 
-Tabs组件首先滚动，当它到达边界时，父容器开始滚动。
+The Tabs component scrolls first, and when it hits the boundary, the parent container scrolls.
 
 **Since:** 24
 

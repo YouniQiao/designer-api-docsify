@@ -1,14 +1,15 @@
 # QRCode
 
-QRCode组件用于显示单个二维码，支持自定义二维码颜色、背景颜色及内容不透明度，适用于需要展示二维码以供扫描获取字符串信息的场景。
+The **QRCode** component is used to display a QR code.
 
-> **说明：**
+> **NOTE**
 >
-> - 二维码组件的像素点数量与内容有关，组件尺寸过小可能导致内容无法展示，此时需要适当调整组件尺寸。
+> - The pixel count of the **QRCode** component is subject to the content. If the component size is not large enough,
+> the content may fail to be displayed. In this case, you need to resize the component.
 
-## 子组件
+## Child Components
 
-无
+Not supported
 
 ## QRCode
 
@@ -16,7 +17,7 @@ QRCode组件用于显示单个二维码，支持自定义二维码颜色、背�
 QRCode(value: ResourceStr)
 ```
 
-创建二维码组件，通过扫描组件显示的二维码图案可以获取二维码中包含的字符串信息。
+Creates a **QRCode** component. The displayed QR code can be scanned to obtain the encoded string information.
 
 **Since:** 7
 
@@ -34,7 +35,7 @@ QRCode(value: ResourceStr)
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | [ResourceStr](../arkts-apis/arkts-arkui-resourcestr-t.md) | Yes | 二维码内容字符串。最大支持512个字符，若超出，则截取前512个字符。 <br>从API version 20开始，支持Resource类型。 <br>**说明：** <br>设置为null时与设置字符串"null"效果一致；设置为undefined时与设置字符串"undefined"效果一致；当传入空字符串时，将生成无效二维码。 |
+| value | [ResourceStr](../arkts-apis/arkts-arkui-resourcestr-t.md) | Yes | Content of the QR code. A maximum of 512 characters are supported. If this limit is exceeded, the first 512 characters are used.<br>The Resource type is supported since API version 20.<br> **NOTE**<br>If this parameter is set to **null**, it is equivalent to passing the string **"null"**. If it is set to **undefined**, it is equivalent to passing the string **"undefined"**. Passing an empty string will result in an invalid QR code. |
 
 ## Summary
 

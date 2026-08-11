@@ -1,7 +1,7 @@
 # ExtensionRunningInfo (System API)
 
-ExtensionRunningInfo模块封装了Extension运行的相关信息，可以通过  
-[getExtensionRunningInfos接口](arkts-ability-abilitymanager-getextensionrunninginfos-f-sys.md#getextensionrunninginfos)获取。
+The ExtensionRunningInfo module encapsulates ExtensionAbility running information, which can be obtained through  
+[getExtensionRunningInfos](arkts-ability-abilitymanager-getextensionrunninginfos-f-sys.md#getextensionrunninginfos).
 
 **Since:** 9
 
@@ -19,7 +19,7 @@ ExtensionRunningInfo模块封装了Extension运行的相关信息，可以通过
 clientPackage: Array<String>
 ```
 
-表示当期进程下的所有包名。
+Names of all packages in the process.
 
 **Type:** Array&lt;String&gt;
 
@@ -41,7 +41,7 @@ clientPackage: Array<String>
 extension: ElementName
 ```
 
-Extension信息。
+ExtensionAbility information.
 
 **Type:** [ElementName](arkts-ability-elementname-i.md)
 
@@ -63,7 +63,7 @@ Extension信息。
 pid: int
 ```
 
-进程ID。
+Process ID.
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
@@ -85,7 +85,7 @@ pid: int
 processName: string
 ```
 
-进程名称。
+Process name.
 
 **Type:** string
 
@@ -107,7 +107,7 @@ processName: string
 startTime: long
 ```
 
-Extension被启动时的时间戳。
+Timestamp when the ExtensionAbility is started.
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：long
 
@@ -129,7 +129,7 @@ Extension被启动时的时间戳。
 type: bundle.ExtensionAbilityType
 ```
 
-Extension类型。
+ExtensionAbility type.
 
 **Type:** bundle.ExtensionAbilityType
 
@@ -151,7 +151,7 @@ Extension类型。
 uid: int
 ```
 
-应用程序的uid。
+UID of the application.
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 

@@ -132,7 +132,7 @@ getCharacterRangeForGlyphRange(glyphRange: TextRange): Array<TextRange> | undefi
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| glyphRange | [TextRange](arkts-arkui-textrange-i.md) | 是 | 文本的字形范围。 |
+| glyphRange | [TextRange](arkts-arkui-textcommon-textrange-i.md) | 是 | 文本的字形范围。 |
 
 **返回值：**
 
@@ -164,7 +164,7 @@ getCharacterRangeForGlyphRange(glyphRange: TextRange, encoding?: TextEncoding): 
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| glyphRange | [TextRange](arkts-arkui-textrange-i.md) | 是 | 文本的字形范围。 |
+| glyphRange | [TextRange](arkts-arkui-textcommon-textrange-i.md) | 是 | 文本的字形范围。 |
 | encoding | [TextEncoding](arkts-arkui-textcommon-textencoding-e.md) | 否 | 字符范围使用的编码类型，默认值为**TextEncoding.TEXT_ENCODING_UTF8**。 |
 
 **返回值：**
@@ -249,7 +249,7 @@ getGlyphRangeForCharacterRange(charRange: TextRange): Array<TextRange> | undefin
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| charRange | [TextRange](arkts-arkui-textrange-i.md) | 是 | 文本的字符范围。 |
+| charRange | [TextRange](arkts-arkui-textcommon-textrange-i.md) | 是 | 文本的字符范围。 |
 
 **返回值：**
 
@@ -281,7 +281,7 @@ getGlyphRangeForCharacterRange(charRange: TextRange, encoding?: TextEncoding): A
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| charRange | [TextRange](arkts-arkui-textrange-i.md) | 是 | 文本的字符范围。 |
+| charRange | [TextRange](arkts-arkui-textcommon-textrange-i.md) | 是 | 文本的字符范围。 |
 | encoding | [TextEncoding](arkts-arkui-textcommon-textencoding-e.md) | 否 | 字符范围使用的编码类型，默认值为**TextEncoding.TEXT_ENCODING_UTF8**。 |
 
 **返回值：**
@@ -384,8 +384,8 @@ getRectsForRange(range: TextRange, widthStyle: RectWidthStyle, heightStyle: Rect
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| range | [TextRange](arkts-arkui-textrange-i.md) | 是 | 需要获取的区域的文本区间。 |
-| widthStyle | [RectWidthStyle](arkts-arkui-rectwidthstyle-t.md) | 是 | 返回的矩形区域的宽度规格，用于控制返回矩形的宽度计算方式，不同规格值会影响矩形的宽度边界。 |
+| range | [TextRange](arkts-arkui-textcommon-textrange-i.md) | 是 | 需要获取的区域的文本区间。 |
+| widthStyle | [RectWidthStyle](../../apis-arkgraphics2d/arkts-apis/arkts-arkgraphics2d-text-rectwidthstyle-e.md) | 是 | 返回的矩形区域的宽度规格，用于控制返回矩形的宽度计算方式，不同规格值会影响矩形的宽度边界。 |
 | heightStyle | [RectHeightStyle](../../apis-arkgraphics2d/arkts-apis/arkts-arkgraphics2d-text-rectheightstyle-e.md) | 是 | 返回的矩形区域的高度规格，用于控制返回矩形的高度计算方式，不同规格值会影响矩形的高度边界。 |
 
 **返回值：**

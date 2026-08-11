@@ -10,12 +10,6 @@
 
 **系统能力：** SystemCapability.Utils.Lang
 
-## 导入模块
-
-```TypeScript
-import { taskpool } from 'kits/@kit.ArkTS';
-```
-
 ## addDependency
 
 ```TypeScript
@@ -44,9 +38,9 @@ addDependency(...tasks: Task[]): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 10200026 | There is a circular dependency. |
-| 10200056 | The task has been executed by the AsyncRunner.<br>**适用版本：** 18+ |
-| 10200052 | The periodic task cannot have a dependency.<br>**适用版本：** 12+ |
+| [10200026](../errorcode-utils.md#10200026-当前任务存在循环依赖) | There is a circular dependency. |
+| [10200056](../errorcode-utils.md#10200056-任务已被asyncrunner执行) | The task has been executed by the AsyncRunner.<br>**适用版本：** 18+ |
+| [10200052](../errorcode-utils.md#10200052-周期性任务不能具有依赖项) | The periodic task cannot have a dependency.<br>**适用版本：** 12+ |
 
 ## 示例
 
@@ -110,7 +104,7 @@ Task的构造函数。
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 10200014 | The function is not marked as concurrent. |
+| [10200014](../errorcode-utils.md#10200014-非concurrent函数错误) | The function is not marked as concurrent. |
 
 ## 示例
 
@@ -154,7 +148,7 @@ Task的构造函数用于创建任务，并可指定任务名称。
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 10200014 | The function is not marked as concurrent. |
+| [10200014](../errorcode-utils.md#10200014-非concurrent函数错误) | The function is not marked as concurrent. |
 
 ## 示例
 
@@ -177,6 +171,10 @@ static isCanceled(): boolean
 ```
 
 检查当前正在运行的任务是否已取消。使用此方法前，需要先创建一个**Task**对象。
+
+> **说明：**
+> 
+> isCanceled方法需要和taskpool.cancel方法搭配使用，如果不调用cancel方法，isCanceled方法默认返回false。
 
 **起始版本：** 10
 
@@ -305,7 +303,7 @@ taskpoolCancel();
 onEnqueued(callback: CallbackFunction): void
 ```
 
-注册回调函数，任务入队时将调用该函数。若任务执行前未注册回调函数，将抛出异常。
+注册回调函数，任务入队时将调用该函数。需在调用execute前注册，否则会抛异常。
 
 **起始版本：** 12
 
@@ -327,7 +325,7 @@ onEnqueued(callback: CallbackFunction): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 10200034 | The executed task does not support the registration of listeners. |
+| [10200034](../errorcode-utils.md#10200034-已执行的任务不支持注册监听器) | The executed task does not support the registration of listeners. |
 
 ## 示例
 
@@ -358,7 +356,7 @@ taskpool.execute(task).then(() => {
 onExecutionFailed(callback: CallbackFunctionWithError): void
 ```
 
-注册一个回调函数，并在任务执行失败时调用它（周期任务不支持）。需在任务执行前注册，否则会抛异常。
+注册回调函数，任务执行失败时调用该回调函数（周期任务不支持）。需在调用execute前注册，否则会抛异常。
 
 **起始版本：** 12
 
@@ -380,7 +378,7 @@ onExecutionFailed(callback: CallbackFunctionWithError): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 10200034 | The executed task does not support the registration of listeners. |
+| [10200034](../errorcode-utils.md#10200034-已执行的任务不支持注册监听器) | The executed task does not support the registration of listeners. |
 
 ## 示例
 
@@ -415,7 +413,7 @@ taskpool.execute(task2).then(() => {
 onExecutionSucceeded(callback: CallbackFunction): void
 ```
 
-注册一个回调函数，并在任务执行成功时调用它（周期任务不支持）。需在任务执行前注册，否则会抛异常。
+注册一个回调函数，并在任务执行成功时调用它（周期任务不支持）。需在调用execute前注册，否则会抛异常。
 
 **起始版本：** 12
 
@@ -437,7 +435,7 @@ onExecutionSucceeded(callback: CallbackFunction): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 10200034 | The executed task does not support the registration of listeners. |
+| [10200034](../errorcode-utils.md#10200034-已执行的任务不支持注册监听器) | The executed task does not support the registration of listeners. |
 
 ## 示例
 
@@ -471,6 +469,8 @@ onReceiveData(callback?: Function): void
 为任务注册回调函数，接收并处理任务池工作线程的数据。使用此方法前，需构造Task。
 
 > **说明：**
+> 
+> 该方法与[sendData](arkts-arkts-taskpool-task-c.md#senddata)配对使用。
 > 
 > 不支持为同一任务定义多种回调函数。如果多次赋值，只有最后一次赋值的回调函数会生效。
 
@@ -523,7 +523,7 @@ testFunc();
 onStartExecution(callback: CallbackFunction): void
 ```
 
-注册回调函数，任务执行前将调用该函数。若任务执行前未注册回调函数，将抛出异常。
+注册回调函数，任务开始执行前将调用该函数。需在调用execute前注册，否则会抛异常。
 
 **起始版本：** 12
 
@@ -545,7 +545,7 @@ onStartExecution(callback: CallbackFunction): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 10200034 | The executed task does not support the registration of listeners. |
+| [10200034](../errorcode-utils.md#10200034-已执行的任务不支持注册监听器) | The executed task does not support the registration of listeners. |
 
 ## 示例
 
@@ -598,9 +598,9 @@ removeDependency(...tasks: Task[]): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 10200027 | The dependency does not exist. |
-| 10200056 | The task has been executed by the AsyncRunner.<br>**适用版本：** 18+ |
-| 10200052 | The periodic task cannot have a dependency.<br>**适用版本：** 12+ |
+| [10200027](../errorcode-utils.md#10200027-依赖关系不存在) | The dependency does not exist. |
+| [10200056](../errorcode-utils.md#10200056-任务已被asyncrunner执行) | The task has been executed by the AsyncRunner.<br>**适用版本：** 18+ |
+| [10200052](../errorcode-utils.md#10200052-周期性任务不能具有依赖项) | The periodic task cannot have a dependency.<br>**适用版本：** 12+ |
 
 ## 示例
 
@@ -678,10 +678,10 @@ static sendData(...args: Object[]): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 10200024 | The callback is not registered on the host side. |
-| 10200023 | The function is not called in the concurrent function. |
-| 10200006 | An exception occurred during serialization. |
-| 10200022 | The function is not called in the TaskPool thread. |
+| [10200024](../errorcode-utils.md#10200024-未在宿主线程中注册的函数) | The callback is not registered on the host side. |
+| [10200023](../errorcode-utils.md#10200023-未在并发函数中调用的函数) | The function is not called in the concurrent function. |
+| [10200006](../errorcode-utils.md#10200006-worker传输信息序列化异常) | An exception occurred during serialization. |
+| [10200022](../errorcode-utils.md#10200022-未在任务池中调用的函数) | The function is not called in the TaskPool thread. |
 
 ## 示例
 
@@ -750,6 +750,8 @@ setCloneList(cloneList: Object[] | ArrayBuffer[]): void
 
 > **说明：**
 > 
+> - 此接口与[setTransferList](arkts-arkts-taskpool-task-c.md#settransferlist)互斥：同一个ArrayBuffer不能同时设置在transfer列表和clone列表中。
+> 
 > 该接口需搭配
 > [@Sendable装饰器](../../../arkts-utils/arkts-sendable.md#sendable装饰器)使用，否则会抛异常。建议开发者使用该装饰器以避免异常。
 
@@ -773,7 +775,7 @@ setCloneList(cloneList: Object[] | ArrayBuffer[]): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 10200029 | An ArrayBuffer cannot be set as both a transfer list and a clone list. |
+| [10200029](../errorcode-utils.md#10200029-无法将arraybuffer同时设置为transferlist和clonelist) | An ArrayBuffer cannot be set as both a transfer list and a clone list. |
 
 ## 示例
 
@@ -914,6 +916,8 @@ setTransferList(transfer?: ArrayBuffer[]): void
 
 > **说明：**
 > 
+> - 此接口与[setCloneList](arkts-arkts-taskpool-task-c.md#setclonelist)互斥：同一个ArrayBuffer不能同时设置在transfer列表和clone列表中。
+> 
 > 此接口可以设置任务池中ArrayBuffer的transfer列表，transfer列表中的ArrayBuffer对象在传输时不会复制buffer内容到工作线程，
 > 而是转移buffer控制权至工作线程，传输后当前的ArrayBuffer失效。若ArrayBuffer为空，则不会transfer转移。
 
@@ -937,7 +941,7 @@ setTransferList(transfer?: ArrayBuffer[]): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 10200029 | An ArrayBuffer cannot be set as both a transfer list and a clone list.<br>**适用版本：** 11+ |
+| [10200029](../errorcode-utils.md#10200029-无法将arraybuffer同时设置为transferlist和clonelist) | An ArrayBuffer cannot be set as both a transfer list and a clone list.<br>**适用版本：** 11+ |
 
 ## 示例
 
@@ -980,7 +984,7 @@ console.info("testTransfer view3 byteLength: " + view1.byteLength);
 arguments?: Object[]
 ```
 
-创建任务传入函数所需的参数，支持的参数类型请参考[序列化支持类型](../../../reference/apis-arkts/js-apis-taskpool.md#序列化支持类型)。&lt;br&gt;从API version 11开始，该接口支持在原子化服务中使用。
+创建任务传入函数所需的参数，支持的参数类型请参考[序列化支持类型](../../../reference/apis-arkts/js-apis-taskpool.md#序列化支持类型)。默认值为undefined。&lt;br&gt;从API version 11开始，该接口支持在原子化服务中使用。
 
 **类型：** Object[]
 
@@ -1000,7 +1004,7 @@ arguments?: Object[]
 cpuDuration: number
 ```
 
-执行任务CPU耗时。单位为ms。不建议修改此值。&lt;br&gt;从API version 11开始，该接口支持在原子化服务中使用。
+执行任务CPU耗时。单位：ms。不建议修改此值。&lt;br&gt;从API version 11开始，该接口支持在原子化服务中使用。
 
 **类型：** number
 
@@ -1022,7 +1026,7 @@ cpuDuration: number
 function: Function
 ```
 
-创建任务时需要传入的函数，支持的函数返回值类型请参考[序列化支持类型](../../../reference/apis-arkts/js-apis-taskpool.md#序列化支持类型)。&lt;br&gt;从API version 11开始，该接口支持在原子化服务中使用。
+待执行的函数，必须使用[@Concurrent装饰器](../../arkts-utils/taskpool-introduction.md#concurrent装饰器)装饰，支持的函数返回值类型请参考[序列化支持类型](../../../reference/apis-arkts/js-apis-taskpool.md#序列化支持类型)。&lt;br&gt;从API version 11开始，该接口支持在原子化服务中使用。
 
 **类型：** Function
 
@@ -1042,7 +1046,7 @@ function: Function
 ioDuration: number
 ```
 
-执行任务异步IO耗时。单位为ms。不建议修改此值。&lt;br&gt;从API version 11开始，该接口支持在原子化服务中使用。
+执行任务异步IO耗时。单位：ms。不建议修改此值。&lt;br&gt;从API version 11开始，该接口支持在原子化服务中使用。
 
 **类型：** number
 
@@ -1084,7 +1088,7 @@ name: string
 taskId: number
 ```
 
-任务的ID。任务的标识符，系统默认提供全局唯一值，不建议修改此值。&lt;br&gt;从API version 18开始，该接口支持在原子化服务中使用。
+任务的ID。系统默认提供全局唯一值，不建议修改此值。&lt;br&gt;从API version 18开始，该接口支持在原子化服务中使用。
 
 **类型：** number
 
@@ -1106,7 +1110,7 @@ taskId: number
 totalDuration: number
 ```
 
-执行任务总耗时。单位为ms。不建议修改此值。&lt;br&gt;从API version 11开始，该接口支持在原子化服务中使用。
+执行任务总耗时。单位：ms。不建议修改此值。&lt;br&gt;从API version 11开始，该接口支持在原子化服务中使用。
 
 **类型：** number
 

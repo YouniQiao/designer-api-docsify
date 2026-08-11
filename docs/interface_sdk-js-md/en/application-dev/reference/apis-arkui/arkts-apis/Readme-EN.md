@@ -22,6 +22,8 @@
   - [PiPControlType](arkts-arkui-pipwindow-pipcontroltype-e.md)
   - [PiPState](arkts-arkui-pipwindow-pipstate-e.md)
   - [PiPTemplateType](arkts-arkui-pipwindow-piptemplatetype-e.md)
+  <!--Del-->
+  - [PiPTemplateType(system api)](arkts-arkui-pipwindow-piptemplatetype-e-sys.md)<!--DelEnd-->
   - [VideoCallControlGroup](arkts-arkui-pipwindow-videocallcontrolgroup-e.md)
   - [VideoLiveControlGroup](arkts-arkui-pipwindow-videolivecontrolgroup-e.md)
   - [VideoMeetingControlGroup](arkts-arkui-pipwindow-videomeetingcontrolgroup-e.md)
@@ -231,6 +233,7 @@
   - [GestureListenerCallback](arkts-arkui-gesturelistenercallback-t.md)
   - [NodeIdentity](arkts-arkui-nodeidentity-t.md)
   - [NodeRenderStateChangeCallback](arkts-arkui-noderenderstatechangecallback-t.md)
+  - [OnOverlayBackPressCallback](arkts-arkui-onoverlaybackpresscallback-t.md)
   - [PanListenerCallback](arkts-arkui-panlistenercallback-t.md)
   - [PointerStyle](arkts-arkui-pointerstyle-t.md)
   - [CustomKeyboardContinueFeature](arkts-arkui-arkui-uicontext-customkeyboardcontinuefeature-e.md)
@@ -252,7 +255,6 @@
   - [ComponentUtils](arkts-arkui-arkui-uicontext-componentutils-c.md)
   - [ContextMenuController](arkts-arkui-arkui-uicontext-contextmenucontroller-c.md)
   - [CursorController](arkts-arkui-arkui-uicontext-cursorcontroller-c.md)
-  - [DialogPresenter](arkts-arkui-arkui-uicontext-dialogpresenter-c.md)
   - [DragController](arkts-arkui-arkui-uicontext-dragcontroller-c.md)
   <!--Del-->
   - [DragController(system api)](arkts-arkui-arkui-uicontext-dragcontroller-c-sys.md)<!--DelEnd-->
@@ -1504,7 +1506,11 @@
   - [EventFlag](arkts-arkui-uiextension-eventflag-e.md)
   - [RectChangeReason](arkts-arkui-uiextension-rectchangereason-e.md)
 - [@ohos.arkui.uiMaterial](arkts-arkui-uimaterial.md)
+  - [convertToECMaterial](arkts-arkui-uimaterial-converttoecmaterial-f.md)
+  - [convertToECSubMaterial](arkts-arkui-uimaterial-converttoecsubmaterial-f.md)
+  - [getGlobalMaterialLevel](arkts-arkui-uimaterial-getglobalmateriallevel-f.md)
   - [getMaterialInfo](arkts-arkui-uimaterial-getmaterialinfo-f.md)
+  - [isImmersiveMaterialSupported](arkts-arkui-uimaterial-isimmersivematerialsupported-f.md)
   - [ImmersiveMaterial](arkts-arkui-uimaterial-immersivematerial-c.md)
   - [Material](arkts-arkui-uimaterial-material-c.md)
   - [ImmersiveOptions](arkts-arkui-uimaterial-immersiveoptions-i.md)
@@ -1512,10 +1518,15 @@
   - [MaterialInfo](arkts-arkui-uimaterial-materialinfo-i.md)
   - [MaterialOptions](arkts-arkui-uimaterial-materialoptions-i.md)
   - [ImmersiveStyle](arkts-arkui-uimaterial-immersivestyle-e.md)
+  - [MaterialLevel](arkts-arkui-uimaterial-materiallevel-e.md)
   - [MaterialState](arkts-arkui-uimaterial-materialstate-e.md)
   - [MaterialType](arkts-arkui-uimaterial-materialtype-e.md)
 - [@ohos.arkui.uiMaterial](arkts-arkui-uimaterial.md)
+  - [convertToECMaterial](arkts-arkui-uimaterial-converttoecmaterial-f.md)
+  - [convertToECSubMaterial](arkts-arkui-uimaterial-converttoecsubmaterial-f.md)
+  - [getGlobalMaterialLevel](arkts-arkui-uimaterial-getglobalmateriallevel-f.md)
   - [getMaterialInfo](arkts-arkui-uimaterial-getmaterialinfo-f.md)
+  - [isImmersiveMaterialSupported](arkts-arkui-uimaterial-isimmersivematerialsupported-f.md)
   - [ImmersiveMaterial](arkts-arkui-uimaterial-immersivematerial-c.md)
   - [Material](arkts-arkui-uimaterial-material-c.md)
   - [ImmersiveOptions](arkts-arkui-uimaterial-immersiveoptions-i.md)
@@ -1523,6 +1534,7 @@
   - [MaterialInfo](arkts-arkui-uimaterial-materialinfo-i.md)
   - [MaterialOptions](arkts-arkui-uimaterial-materialoptions-i.md)
   - [ImmersiveStyle](arkts-arkui-uimaterial-immersivestyle-e.md)
+  - [MaterialLevel](arkts-arkui-uimaterial-materiallevel-e.md)
   - [MaterialState](arkts-arkui-uimaterial-materialstate-e.md)
   - [MaterialType](arkts-arkui-uimaterial-materialtype-e.md)
 - [@ohos.atomicservice.AtomicServiceMenuBar](arkts-atomicservice-atomicservicemenubar.md)
@@ -1591,7 +1603,15 @@
   - [springMotion](arkts-arkui-curves-springmotion-f.md)
   - [steps](arkts-arkui-curves-steps-f.md)
   - [stepsCurve](arkts-arkui-curves-stepscurve-f.md)
+  <!--Del-->
+  - [trailOptimizedInterpolatingSpring(system api)](arkts-arkui-curves-trailoptimizedinterpolatingspring-f-sys.md)<!--DelEnd-->
+  <!--Del-->
+  - [trailOptimizedResponsiveSpringMotion(system api)](arkts-arkui-curves-trailoptimizedresponsivespringmotion-f-sys.md)<!--DelEnd-->
+  <!--Del-->
+  - [trailOptimizedSpringMotion(system api)](arkts-arkui-curves-trailoptimizedspringmotion-f-sys.md)<!--DelEnd-->
   - [ICurve](arkts-arkui-curves-icurve-i.md)
+  <!--Del-->
+  - [TrailOptimization(system api)](arkts-arkui-curves-trailoptimization-i-sys.md)<!--DelEnd-->
   - [Curve](arkts-arkui-curves-curve-e.md)
 - [@ohos.curves](arkts-curves.md)
   - [cubicBezierCurve](arkts-arkui-curves-cubicbeziercurve-f.md)
@@ -1615,10 +1635,6 @@
   - [on(system api)](arkts-arkui-draginteraction-on-f-sys.md)<!--DelEnd-->
   <!--Del-->
   - [onDragStateChange(system api)](arkts-arkui-draginteraction-ondragstatechange-f-sys.md)<!--DelEnd-->
-  <!--Del-->
-  - [setAppDragSwitchState(system api)](arkts-arkui-draginteraction-setappdragswitchstate-f-sys.md)<!--DelEnd-->
-  <!--Del-->
-  - [setDragSwitchState(system api)](arkts-arkui-draginteraction-setdragswitchstate-f-sys.md)<!--DelEnd-->
   <!--Del-->
   - [Summary(system api)](arkts-arkui-draginteraction-summary-i-sys.md)<!--DelEnd-->
   <!--Del-->
@@ -1920,6 +1936,10 @@
   - [RouterState](arkts-arkui-router-routerstate-i.md)
   - [RouterMode](arkts-arkui-router-routermode-e.md)
 - [@ohos.router](arkts-router.md)
+  - [EnableAlertOptions](arkts-arkui-router-enablealertoptions-i.md)
+  - [NamedRouterOptions](arkts-arkui-router-namedrouteroptions-i.md)
+  - [RouterOptions](arkts-arkui-router-routeroptions-i.md)
+  - [RouterState](arkts-arkui-router-routerstate-i.md)
   - [RouterMode](arkts-arkui-router-routermode-e.md)
 - [@ohos.screen](arkts-screen.md)
   <!--Del-->
@@ -2126,6 +2146,8 @@
     - [StartAnimationParams](arkts-arkui-window-startanimationparams-i.md)
     <!--Del-->
     - [StartAnimationSystemParams(system api)](arkts-arkui-window-startanimationsystemparams-i-sys.md)<!--DelEnd-->
+    <!--Del-->
+    - [StartMovingOptions(system api)](arkts-arkui-window-startmovingoptions-i-sys.md)<!--DelEnd-->
     - [StatusBarProperty](arkts-arkui-window-statusbarproperty-i.md)
     <!--Del-->
     - [SubWindowAttachOptions(system api)](arkts-arkui-window-subwindowattachoptions-i-sys.md)<!--DelEnd-->
@@ -2203,6 +2225,7 @@
     - [WindowLayoutMode(system api)](arkts-arkui-window-windowlayoutmode-e-sys.md)<!--DelEnd-->
     <!--Del-->
     - [WindowMode(system api)](arkts-arkui-window-windowmode-e-sys.md)<!--DelEnd-->
+    - [WindowPostureMode](arkts-arkui-window-windowposturemode-e.md)
     - [WindowStageEventType](arkts-arkui-window-windowstageeventtype-e.md)
     - [WindowStageLifecycleEventType](arkts-arkui-window-windowstagelifecycleeventtype-e.md)
     - [WindowStatusType](arkts-arkui-window-windowstatustype-e.md)
@@ -2299,36 +2322,6 @@
   - [LevelOrder](arkts-arkui-levelorder-t.md)
   - [DialogAlignment](arkts-arkui-dialogalignment-e.md)
   - [DialogButtonDirection](arkts-arkui-dialogbuttondirection-e.md)
-- [canvas](arkts-canvas.md)
-  - [CanvasAttribute](arkts-arkui-canvasattribute-c.md)
-  - [CanvasGradient](arkts-arkui-canvasgradient-c.md)
-  - [CanvasPath](arkts-arkui-canvaspath-c.md)
-  - [CanvasRenderer](arkts-arkui-canvasrenderer-c.md)
-  - [CanvasRenderingContext2D](arkts-arkui-canvasrenderingcontext2d-c.md)
-  - [DrawingRenderingContext](arkts-arkui-drawingrenderingcontext-c.md)
-  - [ImageBitmap](arkts-arkui-imagebitmap-c.md)
-  - [ImageData](arkts-arkui-imagedata-c.md)
-  - [OffscreenCanvas](arkts-arkui-offscreencanvas-c.md)
-  - [OffscreenCanvasRenderingContext2D](arkts-arkui-offscreencanvasrenderingcontext2d-c.md)
-  - [Path2D](arkts-arkui-path2d-c.md)
-  - [RenderingContextSettings](arkts-arkui-renderingcontextsettings-c.md)
-  - [CanvasInterface](arkts-arkui-canvasinterface-i.md)
-  - [CanvasParams](arkts-arkui-canvasparams-i.md)
-  - [CanvasPattern](arkts-arkui-canvaspattern-i.md)
-  - [OffscreenCanvasRenderingContext2DInterface](arkts-arkui-offscreencanvasrenderingcontext2dinterface-i.md)
-  - [RenderingContextOptions](arkts-arkui-renderingcontextoptions-i.md)
-  - [Size](arkts-arkui-size-i.md)
-  - [TextMetrics](arkts-arkui-textmetrics-i.md)
-  - [CanvasDirection](arkts-arkui-canvasdirection-t.md)
-  - [CanvasFillRule](arkts-arkui-canvasfillrule-t.md)
-  - [CanvasLineCap](arkts-arkui-canvaslinecap-t.md)
-  - [CanvasLineJoin](arkts-arkui-canvaslinejoin-t.md)
-  - [CanvasTextAlign](arkts-arkui-canvastextalign-t.md)
-  - [CanvasTextBaseline](arkts-arkui-canvastextbaseline-t.md)
-  - [DrawingCanvas](arkts-arkui-drawingcanvas-t.md)
-  - [FrameNode](arkts-arkui-framenode-t.md)
-  - [ImageSmoothingQuality](arkts-arkui-imagesmoothingquality-t.md)
-  - [Constants](arkts-arkui-canvas-con.md)
 - [common_ts_ets_api](arkts-common_ts_ets_api.md)
   - [AppStorage](arkts-arkui-appstorage-c.md)
   - [Environment](arkts-arkui-environment-c.md)
@@ -3351,6 +3344,8 @@
     - [Bindable](arkts-arkui-common-bindable-i.md)
     - [BindOptions](arkts-arkui-common-bindoptions-i.md)
     - [BlurOptions](arkts-arkui-common-bluroptions-i.md)
+    <!--Del-->
+    - [BlurSnapshotOptions(system api)](arkts-arkui-common-blursnapshotoptions-i-sys.md)<!--DelEnd-->
     - [BlurStyleOptions](arkts-arkui-common-blurstyleoptions-i.md)
     - [BorderImageOption](arkts-arkui-common-borderimageoption-i.md)
     - [CaretOffset](arkts-arkui-common-caretoffset-i.md)
@@ -3618,6 +3613,8 @@
     - [SheetType](arkts-arkui-common-sheettype-e.md)
     - [SourceTool](arkts-arkui-common-sourcetool-e.md)
     - [SourceType](arkts-arkui-common-sourcetype-e.md)
+    <!--Del-->
+    - [SpatialPositionMode(system api)](arkts-arkui-common-spatialpositionmode-e-sys.md)<!--DelEnd-->
     - [ThemeColorMode](arkts-arkui-common-themecolormode-e.md)
     - [TouchTestStrategy](arkts-arkui-common-touchteststrategy-e.md)
     - [TransitionEdge](arkts-arkui-common-transitionedge-e.md)
@@ -3646,9 +3643,11 @@
     - [ReuseObject](arkts-arkui-customcomponent-reuseobject-c.md)
     - [Component](arkts-arkui-customcomponent-component-i.md)
     - [ComponentV2](arkts-arkui-customcomponent-componentv2-i.md)
+    - [CustomComponentBaseOptions](arkts-arkui-customcomponent-customcomponentbaseoptions-i.md)
     - [CustomComponentInvokeOptions](arkts-arkui-customcomponent-customcomponentinvokeoptions-i.md)
     - [CustomComponentLifecycle](arkts-arkui-customcomponent-customcomponentlifecycle-i.md)
     - [CustomComponentLifecycleObserver](arkts-arkui-customcomponent-customcomponentlifecycleobserver-i.md)
+    - [CustomComponentV1InvokeOptions](arkts-arkui-customcomponent-customcomponentv1invokeoptions-i.md)
     - [CustomDialog](arkts-arkui-customcomponent-customdialog-i.md)
     - [CustomLayout](arkts-arkui-customcomponent-customlayout-i.md)
     - [Entry](arkts-arkui-customcomponent-entry-i.md)
@@ -3657,6 +3656,7 @@
     - [Reusable](arkts-arkui-customcomponent-reusable-i.md)
     - [ReusableV2](arkts-arkui-customcomponent-reusablev2-i.md)
     - [CustomComponentLifecycleState](arkts-arkui-customcomponent-customcomponentlifecyclestate-e.md)
+    - [ReusableMemOptStrategy](arkts-arkui-customcomponent-reusablememoptstrategy-e.md)
     - [ReusePoolOwnership](arkts-arkui-customcomponent-reusepoolownership-e.md)
   - [customDialogController](arkts-customdialogcontroller.md)
     - [CustomDialogController](arkts-arkui-customdialogcontroller-customdialogcontroller-c.md)
@@ -3714,7 +3714,8 @@
   - [distortionComponent](arkts-distortioncomponent.md)
     <!--Del-->
     - [DistortionComponent(system api)](arkts-arkui-distortioncomponent-distortioncomponent-f-sys.md)<!--DelEnd-->
-    - [DistortionComponentAttribute](arkts-arkui-distortioncomponent-distortioncomponentattribute-i.md)
+    <!--Del-->
+    - [DistortionComponentAttribute(system api)](arkts-arkui-distortioncomponent-distortioncomponentattribute-i-sys.md)<!--DelEnd-->
     <!--Del-->
     - [DistortionComponentOptions(system api)](arkts-arkui-distortioncomponent-distortioncomponentoptions-i-sys.md)<!--DelEnd-->
     <!--Del-->
@@ -3855,6 +3856,7 @@
     - [TitleHeight](arkts-arkui-enums-titleheight-e.md)
     - [TouchType](arkts-arkui-enums-touchtype-e.md)
     - [TransitionType](arkts-arkui-enums-transitiontype-e.md)
+    - [UIMaterialAnimationMode](arkts-arkui-enums-uimaterialanimationmode-e.md)
     - [VerticalAlign](arkts-arkui-enums-verticalalign-e.md)
     - [Visibility](arkts-arkui-enums-visibility-e.md)
     - [Week](arkts-arkui-enums-week-e.md)
@@ -4203,6 +4205,8 @@
     - [RouteMapConfig](arkts-arkui-navdestination-routemapconfig-i.md)
     - [NavDestinationTransitionDelegate](arkts-arkui-navdestinationtransitiondelegate-t.md)
     - [Orientation](arkts-arkui-orientation-t.md)
+    - [RestoreStateCallback](arkts-arkui-restorestatecallback-t.md)
+    - [SaveStateCallback](arkts-arkui-savestatecallback-t.md)
     - [NavDestinationActiveReason](arkts-arkui-navdestination-navdestinationactivereason-e.md)
     - [NavDestinationMode](arkts-arkui-navdestination-navdestinationmode-e.md)
     - [NavigationSystemTransitionType](arkts-arkui-navdestination-navigationsystemtransitiontype-e.md)
@@ -4217,6 +4221,7 @@
     - [NavigationAnimatedTransition](arkts-arkui-navigation-navigationanimatedtransition-i.md)
     - [NavigationAttribute](arkts-arkui-navigation-navigationattribute-i.md)
     - [NavigationCommonTitle](arkts-arkui-navigation-navigationcommontitle-i.md)
+    - [NavigationConfiguration](arkts-arkui-navigation-navigationconfiguration-i.md)
     - [NavigationCustomTitle](arkts-arkui-navigation-navigationcustomtitle-i.md)
     - [NavigationDividerStyle](arkts-arkui-navigation-navigationdividerstyle-i.md)
     - [NavigationInterception](arkts-arkui-navigation-navigationinterception-i.md)
@@ -4667,8 +4672,11 @@
     - [ArrowStyle](arkts-arkui-swiper-arrowstyle-i.md)
     - [AutoPlayOptions](arkts-arkui-swiper-autoplayoptions-i.md)
     - [CachedCountOptions](arkts-arkui-swiper-cachedcountoptions-i.md)
+    - [IndicatorIconInfo](arkts-arkui-swiper-indicatoriconinfo-i.md)
     - [SwiperAnimationEvent](arkts-arkui-swiper-swiperanimationevent-i.md)
     - [SwiperAttribute](arkts-arkui-swiper-swiperattribute-i.md)
+    <!--Del-->
+    - [SwiperAttribute(system api)](arkts-arkui-swiper-swiperattribute-i-sys.md)<!--DelEnd-->
     - [SwiperAutoFill](arkts-arkui-swiper-swiperautofill-i.md)
     - [SwiperContentAnimatedTransition](arkts-arkui-swiper-swipercontentanimatedtransition-i.md)
     - [SwiperContentTransitionProxy](arkts-arkui-swiper-swipercontenttransitionproxy-i.md)
@@ -4719,6 +4727,8 @@
     - [Tabs](arkts-arkui-tabs-tabs-f.md)
     - [TabsController](arkts-arkui-tabs-tabscontroller-c.md)
     - [BarGridColumnOptions](arkts-arkui-tabs-bargridcolumnoptions-i.md)
+    - [FloatingTabBarStyle](arkts-arkui-tabs-floatingtabbarstyle-i.md)
+    - [FloatingTabBarWidth](arkts-arkui-tabs-floatingtabbarwidth-i.md)
     - [ScrollableBarModeOptions](arkts-arkui-tabs-scrollablebarmodeoptions-i.md)
     - [TabContentAnimatedTransition](arkts-arkui-tabs-tabcontentanimatedtransition-i.md)
     - [TabContentTransitionProxy](arkts-arkui-tabs-tabcontenttransitionproxy-i.md)
@@ -5000,6 +5010,7 @@
   - [video](arkts-video.md)
     - [Video](arkts-arkui-video-video-f.md)
     - [VideoController](arkts-arkui-video-videocontroller-c.md)
+    - [VideoControllerAsync](arkts-arkui-video-videocontrollerasync-c.md)
     - [FullscreenInfo](arkts-arkui-video-fullscreeninfo-i.md)
     - [PlaybackInfo](arkts-arkui-video-playbackinfo-i.md)
     - [PosterOptions](arkts-arkui-video-posteroptions-i.md)
@@ -5076,6 +5087,7 @@
     - [ConsumeOptions](arkts-arkui-decorator-consumeoptions-i.md)
     - [Consumer](arkts-arkui-decorator-consumer-i.md)
     - [CustomEnv](arkts-arkui-decorator-customenv-i.md)
+    - [CustomEnvOptions](arkts-arkui-decorator-customenvoptions-i.md)
     - [Env](arkts-arkui-decorator-env-i.md)
     - [EnvOptions](arkts-arkui-decorator-envoptions-i.md)
     - [Event](arkts-arkui-decorator-event-i.md)
@@ -5175,6 +5187,9 @@
   - [appStorage](arkts-appstorage.md)
   - [appStorageV2](arkts-appstoragev2.md)
     - [AppStorageV2](arkts-arkui-appstoragev2-appstoragev2-c.md)
+  - [environment](arkts-environment.md)
+    - [Environment](arkts-arkui-environment-environment-c.md)
+    - [EnvPropsOptions](arkts-arkui-environment-envpropsoptions-i.md)
   - [localStorage](arkts-localstorage.md)
     - [LocalStorage](arkts-arkui-localstorage-localstorage-c.md)
   - [persistenceV2](arkts-persistencev2.md)
@@ -5184,6 +5199,11 @@
     - [PersistenceErrorCallback](arkts-arkui-persistenceerrorcallback-t.md)
     - [StorageDefaultCreator](arkts-arkui-storagedefaultcreator-t.md)
     - [StorageDefaultSubCreators](arkts-arkui-storagedefaultsubcreators-t.md)
+  - [persistentStorage](arkts-persistentstorage.md)
+    - [PersistentStorage](arkts-arkui-persistentstorage-persistentstorage-c.md)
+    - [PersistPropsOptions](arkts-arkui-persistentstorage-persistpropsoptions-i.md)
+    - [FromJSONType](arkts-arkui-fromjsontype-t.md)
+    - [ToJSONType](arkts-arkui-tojsontype-t.md)
   - [storageProperty](arkts-storageproperty.md)
     - [AbstractProperty](arkts-arkui-storageproperty-abstractproperty-i.md)
     - [SubscribedAbstractProperty](arkts-arkui-storageproperty-subscribedabstractproperty-i.md)

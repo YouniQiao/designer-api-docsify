@@ -1,8 +1,6 @@
 # Offset
 
-type Offset = { dx: Length; dy: Length; }
-
-相对布局完成位置坐标偏移量。
+Defines the offset property.
 
 **Since:** 23
 
@@ -18,7 +16,7 @@ type Offset = { dx: Length; dy: Length; }
 dx: Length
 ```
 
-水平方向偏移量。
+dx property.
 
 **Type:** [Length](arkts-arkui-length-t.md)
 
@@ -38,7 +36,7 @@ dx: Length
 dy: Length
 ```
 
-竖直方向偏移量。
+dy property.
 
 **Type:** [Length](arkts-arkui-length-t.md)
 

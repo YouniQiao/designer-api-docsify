@@ -10,12 +10,6 @@
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.AbilityCore
 
-## 导入模块
-
-```TypeScript
-import { Callee, Caller, OnReleaseCallback, OnRemoteStateChangeCallback, CalleeCallback } from 'kits/@kit.AbilityKit';
-```
-
 ## off
 
 ```TypeScript
@@ -44,14 +38,15 @@ off(method: string): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
-| 16200005 | The method has not been registered. |
-| 16000050 | Internal error. |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| [16200005](../errorcode-ability.md#16200005-方法未注册) | The method has not been registered. |
+| [16000050](../errorcode-ability.md#16000050-内部错误) | Internal error. |
 
 ## 示例
 
 ```TypeScript
 import { UIAbility, AbilityConstant, Want } from '@kit.AbilityKit';
+import { BusinessError } from '@kit.BasicServicesKit';
 
 let method = 'call_Function';
 
@@ -59,9 +54,9 @@ export default class MainUIAbility extends UIAbility {
   onCreate(want: Want, launchParam: AbilityConstant.LaunchParam) {
     console.info('Callee onCreate is called');
     try {
-      // 取消注册消息监听
       this.callee.off(method);
-    } catch (error) {
+    } catch (err) {
+      let error = err as BusinessError;
       console.error(`Callee.off catch error, error.code: ${error.code}, error.message: ${error.message}`);
     }
   }
@@ -97,20 +92,22 @@ on(method: string, callback: CalleeCallback): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
-| 16200004 | The method has been registered. |
-| 16000050 | Internal error. |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| [16200004](../errorcode-ability.md#16200004-方法已注册) | The method has been registered. |
+| [16000050](../errorcode-ability.md#16000050-内部错误) | Internal error. |
 
 ## 示例
+
+ArkTS-Dyn示例：
 
 ```TypeScript
 import { UIAbility, AbilityConstant, Want } from '@kit.AbilityKit';
 import { rpc } from '@kit.IPCKit';
 
 class MyMessageAble implements rpc.Parcelable {
-  name: string
-  str: string
-  num: number = 1
+  name: string;
+  str: string;
+  num: number = 1;
 
   constructor(name: string, str: string) {
     this.name = name;
@@ -150,6 +147,62 @@ export default class MainUIAbility extends UIAbility {
       this.callee.on(method, funcCallBack);
     } catch (error) {
       console.error(`Callee.on catch error, error.code: ${error.code}, error.message: ${error.message}`);
+    }
+  }
+}
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+'use static'
+import { UIAbility, AbilityConstant, Want } from '@kit.AbilityKit';
+import rpc from '@ohos.rpc';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+class MyMessageAble implements rpc.Parcelable {
+  name: string;
+  str: string;
+  num: int = 1;
+
+  constructor(name: string, str: string) {
+    this.name = name;
+    this.str = str;
+  }
+
+  marshalling(messageSequence: rpc.MessageSequence) {
+    messageSequence.writeInt(this.num);
+    messageSequence.writeString(this.str);
+    console.info(`MyMessageAble marshalling num[${this.num}] str[${this.str}]`);
+    return true;
+  }
+
+  unmarshalling(messageSequence: rpc.MessageSequence) {
+    this.num = messageSequence.readInt();
+    this.str = messageSequence.readString();
+    console.info(`MyMessageAble unmarshalling num[${this.num}] str[${this.str}]`);
+    return true;
+  }
+}
+
+let method = 'call_Function';
+
+function funcCallBack(pdata: rpc.MessageSequence) {
+  console.info(`Callee funcCallBack is called ${pdata}`);
+  let msg = new MyMessageAble('test', '');
+  pdata.readParcelable(msg);
+  return new MyMessageAble('test1', 'Callee test');
+}
+
+export default class MainUIAbility extends UIAbility {
+  onCreate(want: Want, launchParam: AbilityConstant.LaunchParam) {
+    console.info('Callee onCreate is called');
+    try {
+      this.callee.on(method, funcCallBack);
+    } catch (error) {
+      let code = (error as BusinessError).code;
+      let message = (error as BusinessError).message;
+      console.error(`Callee.on catch error, error.code: ${code}, error.message: ${message}`);
     }
   }
 }

@@ -1,11 +1,5 @@
 # isChangePermitted
 
-## 导入模块
-
-```TypeScript
-import { wallpaper } from 'kits/@kit.BasicServicesKit';
-```
-
 ## isChangePermitted
 
 ```TypeScript

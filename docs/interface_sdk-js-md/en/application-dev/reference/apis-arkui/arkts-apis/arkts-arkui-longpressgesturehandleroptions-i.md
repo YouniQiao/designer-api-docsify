@@ -1,6 +1,7 @@
 # LongPressGestureHandlerOptions
 
-长按手势处理器配置参数。继承自[BaseHandlerOptions](arkts-arkui-basehandleroptions-i.md)。
+Provides the parameters of the long press gesture handler. Inherits from   
+[BaseHandlerOptions](arkts-arkui-basehandleroptions-i.md).
 
 **Inheritance/Implementation:** LongPressGestureHandlerOptions extends [BaseHandlerOptions](arkts-arkui-basehandleroptions-i.md)
 
@@ -18,11 +19,11 @@
 allowableMovement?: number
 ```
 
-长按手势识别器识别的手势的最大移动距离，单位为px。
+Maximum movement distance recognized by the long press gesture recognizer, in px.
 
-默认值：15 
+Default value: **15**
 
-取值范围：(0, +∞)，设置小于等于0时，按照默认值15处理。
+Value range: (0, +∞). If the value is less than or equal to 0, the default value **15** is used.
 
 **Type:** number
 
@@ -44,13 +45,13 @@ allowableMovement?: number
 duration?: number
 ```
 
-触发长按的最短时间，单位为毫秒（ms）。
+Minimum hold-down time, in ms.
 
-默认值：500 
+Default value: **500**
 
-**说明：**
+**NOTE：**
 
-取值范围：[0, +∞)，设置小于等于0时，按照默认值500处理。
+Value range: [0, +∞). If the value is less than or equal to 0, the default value **500** is used.
 
 **Type:** number
 
@@ -72,15 +73,15 @@ duration?: number
 fingers?: number
 ```
 
-触发长按的最少手指数，最小为1指， 最大取值为10指。
+Minimum number of fingers to trigger a long press gesture. The value ranges from 1 to 10.
 
-默认值：1 
+Default value: **1**
 
-取值范围：[1, 10]
+Value range: [1, 10]
 
-**说明：**
+**NOTE：**
 
-手指按下后若发生超过15px的移动，则判定当前长按手势识别失败。
+If a finger moves more than 15 px after being pressed, the gesture recognition fails.
 
 **Type:** number
 
@@ -102,9 +103,9 @@ fingers?: number
 repeat?: boolean
 ```
 
-是否连续触发事件回调。true表示为连续触发事件回调，false表示不连续触发事件回调。
+Whether to continuously trigger the event callback. The value **true** means to continuously trigger the event callback, and **false** means the opposite.
 
-默认值：false
+Default value: **false**
 
 **Type:** boolean
 

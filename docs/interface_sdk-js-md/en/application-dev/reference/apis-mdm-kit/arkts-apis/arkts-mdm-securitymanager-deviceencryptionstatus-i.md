@@ -1,6 +1,6 @@
 # DeviceEncryptionStatus
 
-设备管理应用的文件系统加密状态。
+Represents the file system encryption status.
 
 **Since:** 11
 
@@ -22,7 +22,9 @@ import { securityManager } from 'kits/@kit.MDMKit';
 isEncrypted: boolean
 ```
 
-表示设备的文件系统是否加密。true：表示已加密。false：表示未加密。
+Whether the file system of the device is encrypted.
+
+The value **true** means the file system of the device is encrypted; the value **false** means the opposite.
 
 **Type:** boolean
 

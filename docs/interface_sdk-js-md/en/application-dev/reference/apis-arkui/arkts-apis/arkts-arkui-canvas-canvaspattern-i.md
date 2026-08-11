@@ -1,6 +1,6 @@
 # CanvasPattern
 
-一个Object对象，使用createPattern方法创建，通过指定图像和重复方式创建图片填充的模板。
+Describes an opaque object of a template, which is created using the createPattern() method.
 
 **Since:** 23
 
@@ -16,7 +16,7 @@
 setTransform(transform?: Matrix2D): void
 ```
 
-使用Matrix2D对象作为参数，对当前CanvasPattern进行矩阵变换。
+Adds the matrix transformation effect to the current template.
 
 **Since:** 23
 
@@ -32,5 +32,5 @@ setTransform(transform?: Matrix2D): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| transform | [Matrix2D](arkts-arkui-matrix2d-c.md) | No | 转换矩阵。&lt;br&gt;异常值undefined和null按无效值不做矩阵变换处理。 &lt;br&gt;默认值：不做矩阵变换 |
+| transform | [Matrix2D](arkts-arkui-matrix2d-c.md) | No | transformation matrix. The default value is null. |
 

@@ -6,7 +6,7 @@
 const DISTRIBUTED_SERVICE_START: string
 ```
 
-分布式服务启动事件。
+Distributed service event.
 
 **Since:** 7
 
@@ -26,7 +26,7 @@ const DISTRIBUTED_SERVICE_START: string
 const USER_LOGIN: string
 ```
 
-用户登录事件。
+User login event.
 
 **Since:** 7
 
@@ -46,7 +46,7 @@ const USER_LOGIN: string
 const USER_LOGOUT: string
 ```
 
-用户登出事件。
+User logout event.
 
 **Since:** 7
 

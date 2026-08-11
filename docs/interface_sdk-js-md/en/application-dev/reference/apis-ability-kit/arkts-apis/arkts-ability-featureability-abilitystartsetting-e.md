@@ -1,8 +1,8 @@
 # AbilityStartSetting
 
-表示当前Ability对应的窗口属性，abilityStartSetting属性是一个定义为[key: string]: any的对象，key对应设定类型为：AbilityStartSetting枚举类型，value对应设定类型为：AbilityWindowConfiguration枚举类型。
+Defines the window property corresponding to this ability. The **abilityStartSetting** property is an object defined in the format of [**key: string]: any**, where **key** is an enumerated value of **AbilityStartSetting** and **value** is an enumerated value of **AbilityWindowConfiguration**.
 
-使用时通过featureAbility.AbilityStartSetting获取。
+The value is obtained through **featureAbility.AbilityStartSetting**.
 
 **Since:** 7
 
@@ -18,7 +18,7 @@
 BOUNDS_KEY = 'abilityBounds'
 ```
 
-窗口显示大小属性的参数名。
+Ability window size.
 
 **Since:** 7
 
@@ -36,7 +36,7 @@ BOUNDS_KEY = 'abilityBounds'
 WINDOW_MODE_KEY = 'windowMode'
 ```
 
-窗口显示模式属性的参数名。
+Ability window display mode.
 
 **Since:** 7
 
@@ -54,7 +54,7 @@ WINDOW_MODE_KEY = 'windowMode'
 DISPLAY_ID_KEY = 'displayId'
 ```
 
-窗口显示设备ID属性的参数名。
+Display device ID.
 
 **Since:** 7
 

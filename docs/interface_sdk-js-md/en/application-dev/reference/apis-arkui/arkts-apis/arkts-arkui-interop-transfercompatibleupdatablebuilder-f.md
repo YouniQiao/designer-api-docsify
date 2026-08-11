@@ -8,7 +8,7 @@ export declare function transferCompatibleUpdatableBuilder<T extends Object>(
 ): ESValue
 ```
 
-在ArkTS-Sta中给ArkTS-Dyn的@BuilderParam传递@Builder函数（适用于字面量更新场景）。
+Transfer compatible and updatable Builder
 
 **Since:** 23
 
@@ -24,11 +24,11 @@ export declare function transferCompatibleUpdatableBuilder<T extends Object>(
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| builder | [CompatibleUpdatableBuilder](arkts-arkui-compatibleupdatablebuilder-t.md)&lt;T&gt; | Yes | 自定义构建函数。 |
+| builder | [CompatibleUpdatableBuilder](arkts-arkui-compatibleupdatablebuilder-t.md)&lt;T&gt; | Yes | the source builder |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| ESValue | 可互操作的自定义构建函数。 |
+| ESValue | the compatible builder |
 

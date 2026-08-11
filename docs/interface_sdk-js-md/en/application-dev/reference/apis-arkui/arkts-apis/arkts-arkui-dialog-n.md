@@ -1,6 +1,6 @@
 # dialog
 
-提供统一的Dialog API。
+Provides unified dialog APIs.
 
 **Since:** 26.1.0
 
@@ -24,19 +24,19 @@ import { DialogButtonOrientation, DialogState, DialogResult, DialogBaseControlle
 
 | Name | Description |
 | --- | --- |
-| [DialogTextStyleOptions](arkts-arkui-dialog-dialogtextstyleoptions-i.md) | 在Dialog定义文本样式属性。 |
-| [DialogButton](arkts-arkui-dialog-dialogbutton-i.md) | 固定样式对话框的按钮配置。 |
-| [DialogSheet](arkts-arkui-dialog-dialogsheet-i.md) | Dialog sheet的配置项。 |
-| [DialogBaseOptions](arkts-arkui-dialog-dialogbaseoptions-i.md) | 所有Dialog类型共享的基本选项。 |
-| [DialogMessage](arkts-arkui-dialog-dialogmessage-i.md) | 对话框的消息选项。 |
-| [DialogStyleOptions](arkts-arkui-dialog-dialogstyleoptions-i.md) | 固定样式对话框的选项。 |
-| [DialogCustomOptions](arkts-arkui-dialog-dialogcustomoptions-i.md) | 自定义样式对话框的选项。对话内容作为present()方法的第一个参数提供。不在此选项对象中。 |
+| [DialogTextStyleOptions](arkts-arkui-dialog-dialogtextstyleoptions-i.md) | Defines DialogTextStyleOptions in the dialog. |
+| [DialogButton](arkts-arkui-dialog-dialogbutton-i.md) | Button configuration for fixed-style dialog. |
+| [DialogSheet](arkts-arkui-dialog-dialogsheet-i.md) | The information of sheet item for action sheet style. |
+| [DialogBaseOptions](arkts-arkui-dialog-dialogbaseoptions-i.md) | Base options shared by all dialog types. |
+| [DialogMessage](arkts-arkui-dialog-dialogmessage-i.md) | Message options for the dialog box, combining message content with text style. |
+| [DialogStyleOptions](arkts-arkui-dialog-dialogstyleoptions-i.md) | Options for the fixed-style dialog. |
+| [DialogCustomOptions](arkts-arkui-dialog-dialogcustomoptions-i.md) | Options for the custom-style dialog.The dialog content is provided as the first parameter of present() method,not inside this options object. |
 
 <!--Del-->
 ### Interfaces（系统接口）
 
 | Name | Description |
 | --- | --- |
-| [DialogBaseOptions](arkts-arkui-dialog-dialogbaseoptions-i-sys.md) | 所有Dialog类型共享的基本选项。 |
+| [DialogBaseOptions](arkts-arkui-dialog-dialogbaseoptions-i-sys.md) | Base options shared by all dialog types. |
 <!--DelEnd-->
 

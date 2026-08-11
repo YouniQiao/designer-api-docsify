@@ -1,11 +1,5 @@
 # deleteRdbStore
 
-## 导入模块
-
-```TypeScript
-import { relationalStore } from 'kits/@kit.ArkData';
-```
-
 ## deleteRdbStore
 
 ```TypeScript
@@ -39,9 +33,9 @@ function deleteRdbStore(context: Context, name: string, callback: AsyncCallback<
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; 3. Parameter verification failed. |
-| 14800000 | Inner error. |
-| 14800010 | Failed to open or delete the database by an invalid database path. |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; 3. Parameter verification failed. |
+| [14800000](../../apis-basic-services-kit/errorcode-settings.md#14800000-参数检查失败) | Inner error. |
+| [14800010](../../apis-basic-services-kit/errorcode-settings.md#14800010-上下文参数不是uiability类型) | Failed to open or delete the database by an invalid database path. |
 
 ## 示例
 
@@ -53,7 +47,7 @@ import { BusinessError } from '@kit.BasicServicesKit';
 
 let context = featureAbility.getContext();
 
-relationalStore.deleteRdbStore(context, "RdbTest.db", (err: BusinessError) => {
+relationalStore.deleteRdbStore(context, "RdbTest.db", (err) => {
   if (err) {
     console.error(`Delete RdbStore failed, code is ${err.code},message is ${err.message}`);
     return;
@@ -73,7 +67,7 @@ import { BusinessError } from '@kit.BasicServicesKit';
 
 class EntryAbility extends UIAbility {
   onWindowStageCreate(windowStage: window.WindowStage) {
-    relationalStore.deleteRdbStore(this.context, "RdbTest.db", (err: BusinessError) => {
+    relationalStore.deleteRdbStore(this.context, "RdbTest.db", (err) => {
       if (err) {
         console.error(`Delete RdbStore failed, code is ${err.code},message is ${err.message}`);
         return;
@@ -120,11 +114,11 @@ function deleteRdbStore(context: Context, config: StoreConfig, callback: AsyncCa
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; 3. Parameter verification failed. |
-| 14800000 | Inner error. |
-| 14801001 | The operation is supported in the stage model only. |
-| 14800010 | Failed to open or delete the database by an invalid database path. |
-| 14801002 | Invalid data group ID. |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; 3. Parameter verification failed. |
+| [14800000](../../apis-basic-services-kit/errorcode-settings.md#14800000-参数检查失败) | Inner error. |
+| [14801001](../errorcode-data-rdb.md#14801001-上下文环境非stage模型) | The operation is supported in the stage model only. |
+| [14800010](../../apis-basic-services-kit/errorcode-settings.md#14800010-上下文参数不是uiability类型) | Failed to open or delete the database by an invalid database path. |
+| [14801002](../errorcode-data-rdb.md#14801002-storeconfig中传入的datagroupid参数非法) | Invalid data group ID. |
 
 ## 示例
 
@@ -141,7 +135,7 @@ const STORE_CONFIG: relationalStore.StoreConfig = {
   securityLevel: relationalStore.SecurityLevel.S3
 };
 
-relationalStore.deleteRdbStore(context, STORE_CONFIG, (err: BusinessError) => {
+relationalStore.deleteRdbStore(context, STORE_CONFIG, (err) => {
   if (err) {
     console.error(`Delete RdbStore failed, code is ${err.code},message is ${err.message}`);
     return;
@@ -165,7 +159,7 @@ class EntryAbility extends UIAbility {
       name: "RdbTest.db",
       securityLevel: relationalStore.SecurityLevel.S3
     };
-    relationalStore.deleteRdbStore(this.context, STORE_CONFIG, (err: BusinessError) => {
+    relationalStore.deleteRdbStore(this.context, STORE_CONFIG, (err) => {
       if (err) {
         console.error(`Delete RdbStore failed, code is ${err.code},message is ${err.message}`);
         return;
@@ -217,9 +211,9 @@ function deleteRdbStore(context: Context, name: string): Promise<void>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; 3. Parameter verification failed. |
-| 14800000 | Inner error. |
-| 14800010 | Failed to open or delete the database by an invalid database path. |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; 3. Parameter verification failed. |
+| [14800000](../../apis-basic-services-kit/errorcode-settings.md#14800000-参数检查失败) | Inner error. |
+| [14800010](../../apis-basic-services-kit/errorcode-settings.md#14800010-上下文参数不是uiability类型) | Failed to open or delete the database by an invalid database path. |
 
 ## 示例
 
@@ -235,8 +229,9 @@ relationalStore.deleteRdbStore(context, "RdbTest.db").then(() => {
   // 数据库删除成功后，已初始化的RdbStore实例将无法继续使用。
   // 及时将相关变量置空以释放资源。
   console.info('Delete RdbStore successfully.');
-}).catch((err: BusinessError) => {
-  console.error(`Delete RdbStore failed, code is ${err.code},message is ${err.message}`);
+}).catch((err: Error) => {
+  let businessError = err as BusinessError;
+  console.error(`Delete RdbStore failed, code is ${businessError.code},message is ${businessError.message}`);
 });
 ```
 
@@ -253,8 +248,9 @@ class EntryAbility extends UIAbility {
       // 数据库删除成功后，已初始化的RdbStore实例将无法继续使用。
       // 及时将相关变量置空以释放资源。
       console.info('Delete RdbStore successfully.');
-    }).catch((err: BusinessError) => {
-      console.error(`Delete RdbStore failed, code is ${err.code},message is ${err.message}`);
+    }).catch((err: Error) => {
+      let businessError = err as BusinessError;
+      console.error(`Delete RdbStore failed, code is ${businessError.code},message is ${businessError.message}`);
     });
   }
 }
@@ -299,12 +295,12 @@ function deleteRdbStore(context: Context, config: StoreConfig): Promise<void>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; 3. Parameter verification failed. |
-| 14800000 | Inner error. |
-| 801 | Capability not supported.<br>**适用版本：** 12+ |
-| 14801001 | The operation is supported in the stage model only. |
-| 14800010 | Failed to open or delete the database by an invalid database path. |
-| 14801002 | Invalid data group ID. |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; 3. Parameter verification failed. |
+| [14800000](../../apis-basic-services-kit/errorcode-settings.md#14800000-参数检查失败) | Inner error. |
+| [801](../../errorcode-universal.md#801-该设备不支持此api) | Capability not supported.<br>**适用版本：** 12+ |
+| [14801001](../errorcode-data-rdb.md#14801001-上下文环境非stage模型) | The operation is supported in the stage model only. |
+| [14800010](../../apis-basic-services-kit/errorcode-settings.md#14800010-上下文参数不是uiability类型) | Failed to open or delete the database by an invalid database path. |
+| [14801002](../errorcode-data-rdb.md#14801002-storeconfig中传入的datagroupid参数非法) | Invalid data group ID. |
 
 ## 示例
 
@@ -325,8 +321,9 @@ relationalStore.deleteRdbStore(context, STORE_CONFIG).then(() => {
   // 数据库删除成功后，已初始化的RdbStore实例将无法继续使用。
   // 及时将相关变量置空以释放资源。
   console.info('Delete RdbStore successfully.');
-}).catch((err: BusinessError) => {
-  console.error(`Delete RdbStore failed, code is ${err.code},message is ${err.message}`);
+}).catch((err: Error) => {
+  let businessError = err as BusinessError;
+  console.error(`Delete RdbStore failed, code is ${businessError.code},message is ${businessError.message}`);
 });
 ```
 
@@ -347,8 +344,9 @@ class EntryAbility extends UIAbility {
       // 数据库删除成功后，已初始化的RdbStore实例将无法继续使用。
       // 及时将相关变量置空以释放资源。
       console.info('Delete RdbStore successfully.');
-    }).catch((err: BusinessError) => {
-      console.error(`Delete RdbStore failed, code is ${err.code},message is ${err.message}`);
+    }).catch((err: Error) => {
+      let businessError = err as BusinessError;
+      console.error(`Delete RdbStore failed, code is ${businessError.code},message is ${businessError.message}`);
     });
   }
 }

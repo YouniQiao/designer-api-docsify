@@ -1,11 +1,5 @@
 # pushUrl
 
-## 导入模块
-
-```TypeScript
-import { router } from 'kits/@kit.ArkUI';
-```
-
 ## pushUrl
 
 ```TypeScript
@@ -51,17 +45,17 @@ function pushUrl(options: RouterOptions, callback: AsyncCallback<void>): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 100001 | Internal error. |
-| 401 | Parameter error. Possible causes: &lt;br&gt; 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameters types. &lt;br&gt; 3. Parameter verification failed. |
-| 100003 | Page stack error. Too many pages are pushed. |
-| 100002 | Uri error. The URI of the page to redirect is incorrect or does not exist |
+| [100001](../errorcode-internal.md#100001-接口调用异常错误码) | Internal error. |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: &lt;br&gt; 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameters types. &lt;br&gt; 3. Parameter verification failed. |
+| [100003](../errorcode-router.md#100003-路由压入的page过多) | Page stack error. Too many pages are pushed. |
+| [100002](../errorcode-router.md#100002-路由页面跳转时输入的uri错误) | Uri error. The URI of the page to redirect is incorrect or does not exist |
 
 ## 示例
 
 ```TypeScript
 import { router } from '@kit.ArkUI';
 
-class InnerParams {
+class innerParams {
   data3: number[];
 
   constructor(tuple: number[]) {
@@ -71,11 +65,11 @@ class InnerParams {
 
 class RouterParams {
   data1: string;
-  data2: InnerParams;
+  data2: innerParams;
 
   constructor(str: string, tuple: number[]) {
     this.data1 = str;
-    this.data2 = new InnerParams(tuple);
+    this.data2 = new innerParams(tuple);
   }
 }
 
@@ -88,7 +82,7 @@ router.pushUrl({
     return;
   }
   console.info('pushUrl success');
-});
+})
 ```
 
 
@@ -142,10 +136,10 @@ function pushUrl(options: RouterOptions): Promise<void>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 100001 | Internal error. |
-| 401 | Parameter error. Possible causes: &lt;br&gt; 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameters types. &lt;br&gt; 3. Parameter verification failed. |
-| 100003 | Page stack error. Too many pages are pushed. |
-| 100002 | Uri error. The URI of the page to redirect is incorrect or does not exist |
+| [100001](../errorcode-internal.md#100001-接口调用异常错误码) | Internal error. |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: &lt;br&gt; 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameters types. &lt;br&gt; 3. Parameter verification failed. |
+| [100003](../errorcode-router.md#100003-路由压入的page过多) | Page stack error. Too many pages are pushed. |
+| [100002](../errorcode-router.md#100002-路由页面跳转时输入的uri错误) | Uri error. The URI of the page to redirect is incorrect or does not exist |
 
 ## 示例
 
@@ -154,7 +148,7 @@ import { router } from '@kit.ArkUI';
 
 import { BusinessError } from '@kit.BasicServicesKit';
 
-class InnerParams {
+class innerParams {
   data3: number[];
 
   constructor(tuple: number[]) {
@@ -164,11 +158,11 @@ class InnerParams {
 
 class RouterParams {
   data1: string;
-  data2: InnerParams;
+  data2: innerParams;
 
   constructor(str: string, tuple: number[]) {
     this.data1 = str;
-    this.data2 = new InnerParams(tuple);
+    this.data2 = new innerParams(tuple);
   }
 }
 
@@ -181,7 +175,7 @@ router.pushUrl({
   })
   .catch((err: BusinessError) => {
     console.error(`pushUrl failed. Code: ${err.code}, message: ${err.message}`);
-  });
+  })
 ```
 
 
@@ -231,17 +225,17 @@ function pushUrl(options: RouterOptions, mode: RouterMode, callback: AsyncCallba
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 100001 | Internal error. |
-| 401 | Parameter error. Possible causes: &lt;br&gt; 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameters types. &lt;br&gt; 3. Parameter verification failed. |
-| 100003 | Page stack error. Too many pages are pushed. |
-| 100002 | Uri error. The URI of the page to redirect is incorrect or does not exist |
+| [100001](../errorcode-internal.md#100001-接口调用异常错误码) | Internal error. |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: &lt;br&gt; 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameters types. &lt;br&gt; 3. Parameter verification failed. |
+| [100003](../errorcode-router.md#100003-路由压入的page过多) | Page stack error. Too many pages are pushed. |
+| [100002](../errorcode-router.md#100002-路由页面跳转时输入的uri错误) | Uri error. The URI of the page to redirect is incorrect or does not exist |
 
 ## 示例
 
 ```TypeScript
 import { router } from '@kit.ArkUI';
 
-class InnerParams {
+class innerParams {
   data3: number[];
 
   constructor(tuple: number[]) {
@@ -251,11 +245,11 @@ class InnerParams {
 
 class RouterParams {
   data1: string;
-  data2: InnerParams;
+  data2: innerParams;
 
   constructor(str: string, tuple: number[]) {
     this.data1 = str;
-    this.data2 = new InnerParams(tuple);
+    this.data2 = new innerParams(tuple);
   }
 }
 
@@ -323,10 +317,10 @@ function pushUrl(options: RouterOptions, mode: RouterMode): Promise<void>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 100001 | Internal error. |
-| 401 | Parameter error. Possible causes: &lt;br&gt; 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameters types. &lt;br&gt; 3. Parameter verification failed. |
-| 100003 | Page stack error. Too many pages are pushed. |
-| 100002 | Uri error. The URI of the page to redirect is incorrect or does not exist |
+| [100001](../errorcode-internal.md#100001-接口调用异常错误码) | Internal error. |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: &lt;br&gt; 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameters types. &lt;br&gt; 3. Parameter verification failed. |
+| [100003](../errorcode-router.md#100003-路由压入的page过多) | Page stack error. Too many pages are pushed. |
+| [100002](../errorcode-router.md#100002-路由页面跳转时输入的uri错误) | Uri error. The URI of the page to redirect is incorrect or does not exist |
 
 ## 示例
 
@@ -335,7 +329,7 @@ import { router } from '@kit.ArkUI';
 
 import { BusinessError } from '@kit.BasicServicesKit';
 
-class InnerParams {
+class innerParams {
   data3: number[];
 
   constructor(tuple: number[]) {
@@ -345,11 +339,11 @@ class InnerParams {
 
 class RouterParams {
   data1: string;
-  data2: InnerParams;
+  data2: innerParams;
 
   constructor(str: string, tuple: number[]) {
     this.data1 = str;
-    this.data2 = new InnerParams(tuple);
+    this.data2 = new innerParams(tuple);
   }
 }
 

@@ -1,6 +1,6 @@
 # ArrayList
 
-ArrayList是一种线性数据结构，底层基于数组实现，解决了固定大小数组无法动态扩容的限制。ArrayList会根据实际需要动态调整容量，每次扩容增加50%。
+ArrayList is a linear data structure that is implemented based on arrays.ArrayList can dynamically adjust the capacity based on project requirements.It increases the capacity by 50% each time.
 
 **Since:** 8
 
@@ -22,7 +22,7 @@ import { ArrayList } from 'kits/@kit.ArkTS';
 $_iterator(): IterableIterator<T>
 ```
 
-返回一个迭代器，每一项都是一个JavaScript对象。
+Obtains an iterator, each item of which is a JavaScript object.
 
 **Since:** 23
 
@@ -46,7 +46,7 @@ $_iterator(): IterableIterator<T>
 [Symbol.iterator](): IterableIterator<T>
 ```
 
-返回一个迭代器，迭代器按照ArrayList中元素的顺序依次返回类型为T的元素。
+Obtains an iterator, each item of which is a JavaScript object.
 
 **Since:** 8
 
@@ -62,13 +62,13 @@ $_iterator(): IterableIterator<T>
 
 | Type | Description |
 | --- | --- |
-| [IterableIterator](arkts-arkts-iterator-iterableiterator-i.md)&lt;T&gt; | 返回一个迭代器，遍历该迭代器可依次获取ArrayList中的每个元素。 |
+| [IterableIterator](arkts-arkts-iterator-iterableiterator-i.md)&lt;T&gt; |  |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 10200011 | The Symbol.iterator method cannot be bound. |
+| [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) | The Symbol.iterator method cannot be bound. |
 
 ## Examples
 
@@ -107,7 +107,7 @@ while(!temp.done) {
 add(element: T): boolean
 ```
 
-在ArrayList尾部插入元素。批量添加元素时，建议先调用increaseCapacityTo方法扩充容量，避免多次自动扩容带来的性能开销。
+Adds an element at the end of this ArrayList.
 
 **Since:** 8
 
@@ -123,19 +123,19 @@ add(element: T): boolean
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| element | T | Yes | 被插入的元素。 |
+| element | T | Yes | Target element. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| boolean | 插入成功返回true，失败返回false。 |
+| boolean | Operation result. The value **true** is returned if the element is added; otherwise, **false** is returned. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 10200011 | The add method cannot be bound. |
+| [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) | The add method cannot be bound. |
 
 ## Examples
 
@@ -163,7 +163,7 @@ console.info("length:", arrayList.length);  // length: 5
 clear(): void
 ```
 
-清除ArrayList中的所有元素，并把length置为0。
+Clears this ArrayList and sets its length to **0**.
 
 **Since:** 8
 
@@ -179,7 +179,7 @@ clear(): void
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 10200011 | The clear method cannot be bound. |
+| [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) | The clear method cannot be bound. |
 
 ## Examples
 
@@ -198,7 +198,7 @@ arrayList.clear();
 clone(): ArrayList<T>
 ```
 
-克隆一个与ArrayList相同的实例，并返回克隆后的实例。修改克隆后的实例并不会影响原实例。
+Clones this ArrayList and returns a copy. The modification to the copy does not affect the original instance.
 
 **Since:** 8
 
@@ -214,13 +214,13 @@ clone(): ArrayList<T>
 
 | Type | Description |
 | --- | --- |
-| [ArrayList](arkts-arkts-util-arraylist-arraylist-c.md)&lt;T&gt; | 返回ArrayList对象实例。 |
+| [ArrayList](arkts-arkts-util-arraylist-arraylist-c.md)&lt;T&gt; | New **ArrayList** instance obtained. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 10200011 | The clone method cannot be bound. |
+| [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) | The clone method cannot be bound. |
 
 ## Examples
 
@@ -240,7 +240,7 @@ console.info("result = ", result.length); // result = 4
 constructor()
 ```
 
-ArrayList的构造函数，用于创建一个空的ArrayList实例。该构造函数需通过new关键字调用，不可作为普通函数直接调用，否则将抛出异常。
+A constructor used to create an **ArrayList** instance.
 
 **Since:** 8
 
@@ -256,7 +256,7 @@ ArrayList的构造函数，用于创建一个空的ArrayList实例。该构造�
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 10200012 | The ArrayList's constructor cannot be directly invoked. |
+| [10200012](../errorcode-utils.md#10200012-constructor-calling-failure) | The ArrayList's constructor cannot be directly invoked. |
 
 ## Examples
 
@@ -270,7 +270,7 @@ let arrayList = new ArrayList<string | number>();
 convertToArray(): Array<T>
 ```
 
-把当前ArrayList实例转换成数组，并返回转换后的数组。
+Converts this ArrayList into an array.
 
 **Since:** 8
 
@@ -286,13 +286,13 @@ convertToArray(): Array<T>
 
 | Type | Description |
 | --- | --- |
-| Array&lt;T&gt; | 返回数组类型。 |
+| Array&lt;T&gt; | Array obtained. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 10200011 | The convertToArray method cannot be bound. |
+| [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) | The convertToArray method cannot be bound. |
 
 ## Examples
 
@@ -312,7 +312,7 @@ console.info("result = ", result); // result =  2,4,5,4
 forEach(callbackFn: (value: T, index?: number, arrlist?: ArrayList<T>) => void, thisArg?: Object): void
 ```
 
-在遍历ArrayList实例对象的过程中，对每个元素执行回调函数。
+Uses a callback to traverse each element in the **ArrayList** instance.
 
 **Since:** 8
 
@@ -328,14 +328,14 @@ forEach(callbackFn: (value: T, index?: number, arrlist?: ArrayList<T>) => void, 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callbackFn | (value: T, index?: number, arrlist?: ArrayList&lt;T&gt;) =&gt; void | Yes | 回调函数。 |
-| thisArg | Object | No | callbackFn被调用时用作this值，默认值为undefined。 |
+| callbackFn | (value: T, index?: number, arrlist?: ArrayList&lt;T&gt;) =&gt; void | Yes | Callback invoked for the replacement. |
+| thisArg | Object | No | Value of **this** to use when **callbackFn** is invoked. The default value is this instance. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 10200011 | The forEach method cannot be bound. |
+| [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) | The forEach method cannot be bound. |
 
 ## Examples
 
@@ -360,7 +360,7 @@ arrayList.forEach((value: number, index?: number) => {
 forEach(callbackFn: ArrayListForEachCb<T>): void
 ```
 
-在遍历ArrayList实例对象的过程中，对每个元素执行回调函数。
+Iterates over elements in a generic ArrayList and executes a callback function for each element.
 
 **Since:** 23
 
@@ -376,7 +376,7 @@ forEach(callbackFn: ArrayListForEachCb<T>): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callbackFn | [ArrayListForEachCb](arkts-arkts-arraylistforeachcb-t.md)&lt;T&gt; | Yes | 回调函数。 |
+| callbackFn | [ArrayListForEachCb](arkts-arkts-arraylistforeachcb-t.md)&lt;T&gt; | Yes | A callback function to execute for each element. |
 
 ## getCapacity
 
@@ -390,7 +390,7 @@ ArkTS-Sta:
 getCapacity(): int
 ```
 
-获取当前实例的容量大小。
+Obtains the capacity of this ArrayList.
 
 **Since:** 8
 
@@ -406,13 +406,13 @@ getCapacity(): int
 
 | Type | Description |
 | --- | --- |
-| ArkTS-Dyn: number  <br>ArkTS-Sta：int | 获取当前实例的容量大小。 |
+| ArkTS-Dyn: number  <br>ArkTS-Sta：int | Capacity obtained. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 10200011 | The getCapacity method cannot be bound. |
+| [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) | The getCapacity method cannot be bound. |
 
 ## Examples
 
@@ -438,7 +438,7 @@ ArkTS-Sta:
 getIndexOf(element: T): int
 ```
 
-返回指定元素第一次出现的下标，查找失败返回-1。
+Obtains the index of the first occurrence of the specified element in this ArrayList.
 
 **Since:** 8
 
@@ -454,19 +454,19 @@ getIndexOf(element: T): int
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| element | T | Yes | 指定元素。 |
+| element | T | Yes | Target element. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| ArkTS-Dyn: number  <br>ArkTS-Sta：int | 返回指定元素第一次出现时的下标值，查找失败返回-1。 |
+| ArkTS-Dyn: number  <br>ArkTS-Sta：int | Returns the position index if obtained; returns **-1** if the specified element is not found. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 10200011 | The getIndexOf method cannot be bound. |
+| [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) | The getIndexOf method cannot be bound. |
 
 ## Examples
 
@@ -495,7 +495,7 @@ ArkTS-Sta:
 getLastIndexOf(element: T): int
 ```
 
-返回指定元素最后一次出现的下标，查找失败返回-1。
+Obtains the index of the last occurrence of the specified element in this ArrayList.
 
 **Since:** 8
 
@@ -511,19 +511,19 @@ getLastIndexOf(element: T): int
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| element | T | Yes | 指定元素。 |
+| element | T | Yes | Target element. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| ArkTS-Dyn: number  <br>ArkTS-Sta：int | 返回指定元素最后一次出现时的下标值，查找失败返回-1。 |
+| ArkTS-Dyn: number  <br>ArkTS-Sta：int | Returns the position index if obtained; returns **-1** if the specified element is not found. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 10200011 | The getLastIndexOf method cannot be bound. |
+| [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) | The getLastIndexOf method cannot be bound. |
 
 ## Examples
 
@@ -546,7 +546,7 @@ console.info("result = ", result); // result = 5
 has(element: T): boolean
 ```
 
-判断此ArrayList中是否包含该指定元素。
+Checks whether this ArrayList has the specified element.
 
 **Since:** 8
 
@@ -562,19 +562,19 @@ has(element: T): boolean
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| element | T | Yes | 指定元素。 |
+| element | T | Yes | Target element. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| boolean | 返回true表示包含指定元素，否则返回false。 |
+| boolean | Check result. The value **true** is returned if the specified element is contained; otherwise, **false** is returned. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 10200011 | The has method cannot be bound. |
+| [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) | The has method cannot be bound. |
 
 ## Examples
 
@@ -597,7 +597,7 @@ ArkTS-Sta:
 increaseCapacityTo(newCapacity: int): void
 ```
 
-如果传入的新容量大于或等于ArrayList中的元素个数，将容量变更为新容量。
+Increases the capacity of this ArrayList.
 
 **Since:** 8
 
@@ -613,13 +613,13 @@ increaseCapacityTo(newCapacity: int): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| newCapacity | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | 新容量。 |
+| newCapacity | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | New capacity. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 10200011 | The increaseCapacityTo method cannot be bound. |
+| [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) | The increaseCapacityTo method cannot be bound. |
 
 ## Examples
 
@@ -646,7 +646,7 @@ ArkTS-Sta:
 insert(element: T, index: int): void
 ```
 
-在长度范围内指定位置index插入元素element。如果index超出范围，则插入失败。
+Inserts an element at a specified index within the length range. If index is out of range, the insertion fails.
 
 **Since:** 8
 
@@ -662,15 +662,15 @@ insert(element: T, index: int): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| element | T | Yes | 被插入的元素。 |
-| index | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | 被插入的位置索引。需要小于等于int32_max即2147483647。 |
+| element | T | Yes | Target element. |
+| index | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | Index of the position where the element is to be inserted. The value must be less than or equal to int32_max, that is, 2147483647. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 10200011 | The insert method cannot be bound. |
-| 10200001 | The value of index is out of range. |
+| [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) | The insert method cannot be bound. |
+| [10200001](../errorcode-utils.md#10200001-value-out-of-range) | The value of index is out of range. |
 
 ## Examples
 
@@ -688,7 +688,7 @@ console.info("length:", arrayList.length);  // length: 3
 isEmpty(): boolean
 ```
 
-判断该ArrayList是否为空。
+Checks whether this ArrayList is empty (contains no element).
 
 **Since:** 8
 
@@ -704,13 +704,13 @@ isEmpty(): boolean
 
 | Type | Description |
 | --- | --- |
-| boolean | 为空返回true，不为空返回false。 |
+| boolean | Check result. The value **true** is returned if the ArrayList is empty; otherwise, **false** is returned. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 10200011 | The isEmpty method cannot be bound. |
+| [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) | The isEmpty method cannot be bound. |
 
 ## Examples
 
@@ -730,7 +730,7 @@ console.info("result = ", result); // result =  false
 remove(element: T): boolean
 ```
 
-删除查找到的第一个指定元素。
+Removes the first occurrence of the specified element from this ArrayList.
 
 **Since:** 8
 
@@ -746,19 +746,19 @@ remove(element: T): boolean
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| element | T | Yes | 指定元素。 |
+| element | T | Yes | Target element. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| boolean | 删除成功返回true，失败返回false。 |
+| boolean | Operation result. The value **true** is returned if the element is removed; otherwise, **false** is returned. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 10200011 | The remove method cannot be bound. |
+| [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) | The remove method cannot be bound. |
 
 ## Examples
 
@@ -784,7 +784,7 @@ ArkTS-Sta:
 removeByIndex(index: int): T
 ```
 
-根据元素的下标值查找元素，返回元素后将其删除。
+Removes an element with the specified position from this ArrayList.
 
 **Since:** 8
 
@@ -800,20 +800,20 @@ removeByIndex(index: int): T
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| index | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | 指定元素的下标值。需要小于等于int32_max即2147483647。 |
+| index | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | Position index of the target element. The value must be less than or equal to int32_max, that is, 2147483647. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| T | 返回删除的元素。 |
+| T | Element removed. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 10200011 | The removeByIndex method cannot be bound. |
-| 10200001 | The value of "index" is out of range. |
+| [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) | The removeByIndex method cannot be bound. |
+| [10200001](../errorcode-utils.md#10200001-value-out-of-range) | The value of "index" is out of range. |
 
 ## Examples
 
@@ -840,7 +840,7 @@ ArkTS-Sta:
 removeByRange(fromIndex: int, toIndex: int): void
 ```
 
-删除指定范围内的元素，区间包含fromIndex，但不包含toIndex，即左闭右开区间[fromIndex, toIndex)。
+Removes elements within the range [fromIndex, toIndex).
 
 **Since:** 8
 
@@ -856,15 +856,15 @@ removeByRange(fromIndex: int, toIndex: int): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| fromIndex | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | 起始下标。 |
-| toIndex | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | 终止下标。 |
+| fromIndex | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | Index of the start position. |
+| toIndex | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | Index of the end position. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 10200011 | The removeByRange method cannot be bound. |
-| 10200001 | The value of fromIndex or toIndex is out of range. |
+| [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) | The removeByRange method cannot be bound. |
+| [10200001](../errorcode-utils.md#10200001-value-out-of-range) | The value of fromIndex or toIndex is out of range. |
 
 ## Examples
 
@@ -883,7 +883,7 @@ arrayList.removeByRange(2, 4);
 replaceAllElements(callbackFn: (value: T, index?: number, arrlist?: ArrayList<T>) => T, thisArg?: Object): void
 ```
 
-用户操作ArrayList中的元素，用操作后的元素替换原元素并返回操作后的元素。
+Replaces all elements in this ArrayList with new elements, and returns the new ones.
 
 **Since:** 8
 
@@ -899,14 +899,14 @@ replaceAllElements(callbackFn: (value: T, index?: number, arrlist?: ArrayList<T>
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callbackFn | (value: T, index?: number, arrlist?: ArrayList&lt;T&gt;) =&gt; T | Yes | 回调函数。 |
-| thisArg | Object | No | callbackFn被调用时用作this值，默认值为undefined。 |
+| callbackFn | (value: T, index?: number, arrlist?: ArrayList&lt;T&gt;) =&gt; T | Yes | Callback invoked for the replacement. |
+| thisArg | Object | No | Value of **this** to use when **callbackFn** is invoked. The default value is this instance. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 10200011 | The replaceAllElements method cannot be bound. |
+| [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) | The replaceAllElements method cannot be bound. |
 
 ## Examples
 
@@ -928,7 +928,7 @@ arrayList.replaceAllElements((value: number): number => {
 replaceAllElements(callbackFn: ArrayListReplaceCb<T>): void
 ```
 
-用户操作ArrayList中的元素，用操作后的元素替换原元素并返回操作后的元素。
+Replaces all elements in this container with new elements, and returns the new ones.
 
 **Since:** 23
 
@@ -944,7 +944,7 @@ replaceAllElements(callbackFn: ArrayListReplaceCb<T>): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callbackFn | [ArrayListReplaceCb](arkts-arkts-arraylistreplacecb-t.md)&lt;T&gt; | Yes | 回调函数。 |
+| callbackFn | [ArrayListReplaceCb](arkts-arkts-arraylistreplacecb-t.md)&lt;T&gt; | Yes | Callback invoked for the replacement. |
 
 ## sort
 
@@ -952,7 +952,7 @@ replaceAllElements(callbackFn: ArrayListReplaceCb<T>): void
 sort(comparator?: ArrayListComparatorFn<T>): void
 ```
 
-根据指定比较器所定义的顺序，对ArrayList中的元素进行排序。
+Sorts elements in an ArrayList according to the order defined by the specified comparator.
 
 **Since:** 8
 
@@ -968,13 +968,13 @@ sort(comparator?: ArrayListComparatorFn<T>): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| comparator | [ArrayListComparatorFn](arkts-arkts-arraylistcomparatorfn-t.md)&lt;T&gt; | No | 回调函数，默认为升序排序的回调函数。&lt;br&gt; API version 23开始发生兼容性 变更，在API version 22及之前的版本其类型为：`(firstValue: T, secondValue: T) => number`。<br>**Since:** 23 |
+| comparator | [ArrayListComparatorFn](arkts-arkts-arraylistcomparatorfn-t.md)&lt;T&gt; | No | Callback invoked for sorting. The default value is the callback function for sorting elements in ascending order.&lt;br&gt; There has been a compatibility change since API version 2 3. In API version 22 and earlier versions, the type is `(firstValue: T, secondValue: T) => number`.<br>**Since:** 23 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 10200011 | The sort method cannot be bound. |
+| [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) | The sort method cannot be bound. |
 
 ## Examples
 
@@ -1001,7 +1001,8 @@ ArkTS-Sta:
 subArrayList(fromIndex: int, toIndex: int): ArrayList<T>
 ```
 
-根据下标截取ArrayList中的一段元素，并返回这一段ArrayList实例，区间包含fromIndex，但不包含toIndex，即左闭右开区间[fromIndex, toIndex)。
+Obtains elements from this **ArrayList** within the range  
+[fromIndex, toIndex) and returns them as a new ArrayList instance.
 
 **Since:** 8
 
@@ -1017,21 +1018,21 @@ subArrayList(fromIndex: int, toIndex: int): ArrayList<T>
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| fromIndex | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | 起始下标。 |
-| toIndex | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | 终止下标。 |
+| fromIndex | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | Index of the start position. |
+| toIndex | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | Index of the end position. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [ArrayList](arkts-arkts-util-arraylist-arraylist-c.md)&lt;T&gt; | 返回ArrayList对象实例。 |
+| [ArrayList](arkts-arkts-util-arraylist-arraylist-c.md)&lt;T&gt; | New **ArrayList** instance obtained. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 10200011 | The subArrayList method cannot be bound. |
-| 10200001 | The value of fromIndex or toIndex is out of range. |
+| [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) | The subArrayList method cannot be bound. |
+| [10200001](../errorcode-utils.md#10200001-value-out-of-range) | The value of fromIndex or toIndex is out of range. |
 
 ## Examples
 
@@ -1051,7 +1052,7 @@ console.info("result = ", result.length); // result = 2
 trimToCurrentLength(): void
 ```
 
-释放ArrayList中预留的空间，把容量调整为当前的元素个数。
+Releases the reserved space in this ArrayList by adjusting the capacity to the actual number of elements in it.
 
 **Since:** 8
 
@@ -1067,7 +1068,7 @@ trimToCurrentLength(): void
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 10200011 | The trimToCurrentLength method cannot be bound. |
+| [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) | The trimToCurrentLength method cannot be bound. |
 
 ## Examples
 
@@ -1087,7 +1088,7 @@ console.info("result = ", arrayList.length); // result = 4
 [index: int]: T
 ```
 
-获取指定索引值对应位置的元素。
+Returns the element at the given index.
 
 **Type:** T
 
@@ -1107,7 +1108,7 @@ console.info("result = ", arrayList.length); // result = 4
 length: number
 ```
 
-ArrayList的元素个数。
+Number of elements in an ArrayList.
 
 **Type:** number
 

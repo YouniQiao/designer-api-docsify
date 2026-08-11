@@ -1,6 +1,6 @@
 # RectEvent
 
-矩形定义。
+Defines a rectangle.
 
 **Since:** 23
 
@@ -22,9 +22,9 @@ import { webview } from 'kits/@kit.ArkWeb';
 height: double
 ```
 
-矩形的高度。
+Height of the rectangle.
 
-单位：px。
+Unit: px.
 
 **Type:** double
 
@@ -42,9 +42,9 @@ height: double
 width: double
 ```
 
-矩形的宽度。
+Width of the rectangle.
 
-单位：px。
+Unit: px.
 
 **Type:** double
 
@@ -62,9 +62,7 @@ width: double
 x: double
 ```
 
-矩形区域左上角x坐标。
-
-单位：px。
+X-axis coordinate of the upper left corner of the rectangle.
 
 **Type:** double
 
@@ -82,9 +80,7 @@ x: double
 y: double
 ```
 
-矩形区域左上角y坐标。
-
-单位：px。
+Y-axis coordinate of the upper left corner of the rectangle.
 
 **Type:** double
 

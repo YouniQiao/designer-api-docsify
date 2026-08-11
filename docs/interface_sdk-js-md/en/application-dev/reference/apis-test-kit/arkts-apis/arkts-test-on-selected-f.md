@@ -26,7 +26,7 @@ Specifies the selected status of the target Component.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| b | boolean | No | the - selected status.Set it default true if null or undefined. |
+| b | boolean | No | the - selected status. &lt;br&gt;Default value: true |
 
 **Return value:**
 

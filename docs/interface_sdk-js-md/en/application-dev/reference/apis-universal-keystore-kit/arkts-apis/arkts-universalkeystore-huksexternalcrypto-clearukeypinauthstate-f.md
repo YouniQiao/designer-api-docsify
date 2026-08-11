@@ -12,7 +12,7 @@ import { huksExternalCrypto } from 'kits/@kit.UniversalKeystoreKit';
 function clearUkeyPinAuthState(resourceId: string): Promise<void>
 ```
 
-清除指定资源ID的PIN码认证状态。使用Promise异步回调。
+Clear the PIN auth state of the specified resource ID.
 
 **Since:** 26.0.0
 
@@ -28,45 +28,25 @@ function clearUkeyPinAuthState(resourceId: string): Promise<void>
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| resourceId | string | Yes | 资源ID。 |
+| resourceId | string | Yes | Indicates the resource ID of the provider. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise对象，无返回结果。 |
+| Promise&lt;void&gt; | The promise returned by the function. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 801 | API is not supported. |
-| 12000006 | Failed to call the UKey driver interface. Please check the UKey connection and driver status. |
-| 12000005 | IPC communication failed. |
-| 12000020 | The provider operation failed. This means an error occurred in the crypto extension before calling the UKey driver interface. |
-| 12000018 | The input parameters are invalid. Possible causes: 1. The resourceId length is invalid. |
-| 12000014 | The memory is insufficient. |
-| 12000012 | Device environment or input parameters are abnormal. This may occur if the process function is null, or due to other issues. |
-| 12000011 | The cached resource ID not found. |
-| 12000024 | The provider or UKey is busy. |
-
-## Examples
-
-```TypeScript
-import { huksExternalCrypto } from '@kit.UniversalKeystoreKit';
-
-const testResourceId = JSON.stringify({
-  providerName: "testProviderName",
-  bundleName: "com.example.cryptoapplication",
-  abilityName: "CryptoExtension",
-  index: {
-    key: "testKey"
-  } as ESObject
-});
-
-huksExternalCrypto.clearUkeyPinAuthState(testResourceId)
-    .then(() => {
-      console.info('promise: clearUkeyPinAuthState success.');
-    });
-```
+| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | API is not supported. |
+| [12000006](../errorcode-huks.md#12000006-algorithm-library-operation-failed) | Failed to call the UKey driver interface. Please check the UKey connection and driver status. |
+| [12000005](../errorcode-huks.md#12000005-ipc-error) | IPC communication failed. |
+| [12000020](../errorcode-huks.md#12000020-dependent-module-error) | The provider operation failed. This means an error occurred in the crypto extension before calling the UKey driver interface. |
+| [12000018](../errorcode-huks.md#12000018-invalid-input-parameter) | The input parameters are invalid. Possible causes: 1. The resourceId length is invalid. |
+| [12000014](../errorcode-huks.md#12000014-insufficient-memory) | The memory is insufficient. |
+| [12000012](../errorcode-huks.md#12000012-external-error) | Device environment or input parameters are abnormal. This may occur if the process function is null, or due to other issues. |
+| [12000011](../errorcode-huks.md#12000011-the-entity-does-not-exist) | The cached resource ID not found. |
+| [12000024](../errorcode-huks.md#12000024-device-or-resource-busy) | The provider or UKey is busy. |
 

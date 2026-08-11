@@ -1,6 +1,6 @@
 # KVManagerConfig
 
-提供KVManager实例的配置信息，包括调用方的Bundle名称和用户信息。
+Represents the configuration of a **KVManager** instance, including the bundle name and user information of the caller.
 
 **Since:** 7
 
@@ -20,7 +20,7 @@
 bundleName: string
 ```
 
-调用方的Bundle名称。
+Bundle name of the caller.
 
 **Type:** string
 
@@ -42,7 +42,7 @@ bundleName: string
 userInfo: UserInfo
 ```
 
-调用方的用户信息。
+User information.
 
 **Type:** [UserInfo](arkts-arkdata-distributeddata-userinfo-i.md)
 

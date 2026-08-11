@@ -1,11 +1,5 @@
 # addVirtualScreenSurface（系统接口）
 
-## 导入模块
-
-```TypeScript
-import { display } from 'kits/@kit.ArkUI';
-```
-
 ## addVirtualScreenSurface
 
 ```TypeScript
@@ -32,7 +26,7 @@ function addVirtualScreenSurface(screenId: long, surfaceId: string, surfaceRegio
 | --- | --- | --- | --- |
 | screenId | ArkTS-Dyn: number  <br>ArkTS-Sta：long | 是 | 虚拟屏幕的屏幕ID。 |
 | surfaceId | string | 是 | 代表虚拟屏幕绑定的surfaceId，由用户指定某一实际存在的surface对应的surfaceId， 该参数最大长度为4096个字节，超出最大长度时则取前4096个字节。 |
-| surfaceRegion | [Rect](../../apis-form-kit/arkts-apis/arkts-form-forminfo-rect-i.md) | 否 | surface显示的虚拟屏的矩形区域。 如果虚拟屏幕未通过[setVirtualScreenSurface()](arkts-arkui-display-setvirtualscreensurface-f.md#setvirtualscreensurface) 或 [addVirtualScreenSurface()](arkts-arkui-display-addvirtualscreensurface-f-sys.md#addvirtualscreensurface)绑定过surface，surfaceRegion无效，默认全屏。 在镜像模式下，surfaceRegion无效，默认全屏。在异源模式下，surfaceRegion有效。 |
+| surfaceRegion | [Rect](../../apis-test-kit/arkts-apis/arkts-test-uitest-rect-i.md) | 否 | surface显示的虚拟屏的矩形区域。 如果虚拟屏幕未通过[setVirtualScreenSurface()](arkts-arkui-display-setvirtualscreensurface-f.md#setvirtualscreensurface) 或 [addVirtualScreenSurface()](arkts-arkui-display-addvirtualscreensurface-f-sys.md#addvirtualscreensurface)绑定过surface，surfaceRegion无效，默认全屏。 在镜像模式下，surfaceRegion无效，默认全屏。在异源模式下，surfaceRegion有效。 |
 
 **返回值：**
 
@@ -44,13 +38,53 @@ function addVirtualScreenSurface(screenId: long, surfaceId: string, surfaceRegio
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 801 | Capability not supported. Function addVirtualScreenSurface can not work correctly due to limited device capabilities. |
-| 1400004 | Parameter error. Possible cause: 1. Invalid parameter range. |
-| 1400001 | Invalid display or screen. |
-| 1400003 | This display manager service works abnormally. |
-| 202 | Permission verification failed. A non-system application calls a system API. |
+| [801](../../errorcode-universal.md#801-该设备不支持此api) | Capability not supported. Function addVirtualScreenSurface can not work correctly due to limited device capabilities. |
+| [1400004](../errorcode-display.md#1400004-参数异常) | Parameter error. Possible cause: 1. Invalid parameter range. |
+| [1400001](../errorcode-display.md#1400001-无效的显示设备) | Invalid display or screen. |
+| [1400003](../errorcode-display.md#1400003-系统服务工作异常) | This display manager service works abnormally. |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed. A non-system application calls a system API. |
 
 ## 示例
+
+ArkTS-Dyn示例：
+
+```TypeScript
+// Index.ets
+import { BusinessError } from '@kit.BasicServicesKit';
+
+@Entry
+@Component
+struct Index {
+  xComponentController: XComponentController = new XComponentController();
+
+  addVirtualScreenSurface = () => {
+    let screenId: number = 1;
+    let surfaceId = this.xComponentController.getXComponentSurfaceId();
+    display.addVirtualScreenSurface(screenId, surfaceId).then(() => {
+      console.info('Succeeded in adding surface for the virtual screen.');
+    }).catch((err: BusinessError) => {
+      console.error(`Failed to add surface for the virtual screen. Code:${err.code}, message is ${err.message}`);
+    });
+  }
+  build() {
+    RelativeContainer() {
+      XComponent({
+        type: XComponentType.SURFACE,
+        controller: this.xComponentController
+      })
+      Button('addSurface')
+        .onClick((event: ClickEvent) => {
+          this.addVirtualScreenSurface();
+      }).width('100%')
+      .height(20)
+    }
+    .width('100%')
+    .height('100%')
+  }
+}
+```
+
+ArkTS-Sta示例：
 
 ```TypeScript
 // Index.ets

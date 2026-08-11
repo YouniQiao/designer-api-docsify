@@ -12,7 +12,7 @@ import { window } from 'kits/@kit.ArkUI';
 function getAllMainWindowInfo(): Promise<Array<MainWindowInfo>>
 ```
 
-获取全部主窗口信息，使用Promise异步回调。
+Obtains the information about all main windows. This API uses a promise to return the result.
 
 **Since:** 21
 
@@ -28,15 +28,15 @@ function getAllMainWindowInfo(): Promise<Array<MainWindowInfo>>
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;Array&lt;MainWindowInfo&gt;&gt; | Promise对象。返回主窗口信息列表。 |
+| Promise&lt;Array&lt;MainWindowInfo&gt;&gt; | Promise used to return an array of main window information. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 1300003 | This window manager service works abnormally. |
-| 801 | Capability not supported. Failed to call the API due to limited device capabilities. |
-| 201 | Permission verification failed. |
+| [1300003](../errorcode-window.md#1300003-abnormal-window-manager-service) | This window manager service works abnormally. |
+| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. Failed to call the API due to limited device capabilities. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed. |
 
 ## Examples
 

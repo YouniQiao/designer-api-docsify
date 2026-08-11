@@ -10,12 +10,6 @@
 
 **系统能力：** SystemCapability.Utils.Lang
 
-## 导入模块
-
-```TypeScript
-import { convertxml } from 'kits/@kit.ArkTS';
-```
-
 ## 汇总
 
 ### 类

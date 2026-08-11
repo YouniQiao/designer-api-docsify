@@ -1,6 +1,6 @@
 # PathAttribute
 
-路径绘制组件属性，用于设置路径的相关属性。
+Provides methods for attribute path component.
 
 **Inheritance/Implementation:** PathAttribute extends [CommonShapeMethod](arkts-arkui-arkui-shape-commonshapemethod-c.md)
 
@@ -48,9 +48,7 @@ Call attributeModifier.
 default commands(value: ResourceStr | undefined): this
 ```
 
-设置符合  
-[SVG路径描述规范](../../../reference/apis-arkui/arkui-ts/ts-drawing-components-path.md#svg路径描述规范)的命令字符串，单位为px。像素单位转换方法请参考  
-[像素单位转换](../../../reference/apis-arkui/arkui-ts/ts-pixel-units.md)。
+Set a series of path commands that define the path to be drawn
 
 **Since:** 23
 
@@ -66,7 +64,7 @@ default commands(value: ResourceStr | undefined): this
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | [ResourceStr](arkts-arkui-resourcestr-t.md) \| undefined | Yes | 线条绘制的路径。 &lt;br&gt;默认值：空字符串&lt;br&gt;默认单位：px &lt;br&gt;异常值undefined和null按照默认值处理。 |
+| value | [ResourceStr](arkts-arkui-resourcestr-t.md) \| undefined | Yes |  |
 
 **Return value:**
 
@@ -82,9 +80,9 @@ default setPathOptions(options?: PathOptions): this
 
 Set Path options.
 
-**Since:** 26.0.0
+**Since:** 26.1.0
 
-**ArkTS mode:** ArkTS-Sta only, since version 26.0.0.
+**ArkTS mode:** ArkTS-Sta only, since version 26.1.0.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -96,7 +94,7 @@ Set Path options.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| options | [PathOptions](../arkts-components/arkts-arkui-pathoptions-i.md) | No | Path constructor options |
+| options | [PathOptions](../arkts-components/arkts-arkui-pathoptions-i.md) | No | Path constructor options. |
 
 **Return value:**
 

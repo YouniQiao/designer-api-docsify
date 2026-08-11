@@ -1,6 +1,6 @@
 # ContentItemV2Options
 
-声明接口ContentItemV2Options
+Declare interface ContentItemV2Options
 
 **Since:** 26.0.0
 
@@ -22,7 +22,7 @@ import { OperateCheckV2Options, ComposeListItemV2, IconTypeV2, OperateIconV2, Op
 description?: ResourceStr
 ```
 
-设置描述内容。
+Sets the description.
 
 **Type:** [ResourceStr](arkts-arkui-resourcestr-t.md)
 
@@ -42,7 +42,7 @@ description?: ResourceStr
 icon?: ResourceStr
 ```
 
-设置图标
+Sets the icon.
 
 **Type:** [ResourceStr](arkts-arkui-resourcestr-t.md)
 
@@ -62,7 +62,7 @@ icon?: ResourceStr
 iconStyle?: IconTypeV2
 ```
 
-图标样式。
+The type of icon.
 
 **Type:** [IconTypeV2](arkts-arkui-arkui-advanced-composelistitemv2-icontypev2-e.md)
 
@@ -82,7 +82,7 @@ iconStyle?: IconTypeV2
 primaryText?: ResourceStr
 ```
 
-设置标题内容。
+Sets the primaryText.
 
 **Type:** [ResourceStr](arkts-arkui-resourcestr-t.md)
 
@@ -102,7 +102,7 @@ primaryText?: ResourceStr
 secondaryText?: ResourceStr
 ```
 
-设置副标题内容。
+Sets the secondaryText.
 
 **Type:** [ResourceStr](arkts-arkui-resourcestr-t.md)
 
@@ -122,7 +122,7 @@ secondaryText?: ResourceStr
 symbolStyle?: SymbolGlyphModifier
 ```
 
-设置Symbol图标。
+Sets the symbol.
 
 **Type:** [SymbolGlyphModifier](../arkts-components/arkts-arkui-symbolglyphmodifier-t.md)
 

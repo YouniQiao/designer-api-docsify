@@ -1,14 +1,22 @@
 # @ohos.util.Deque
 
-Deque（double-ended queue）基于循环队列的数据结构实现，支持两端元素的插入和删除。Deque同时具备先进先出以及先进后出的特点，可根据操作端的不同同时作为队列和栈使用。当现有容量不足以容纳新插入的元素时，Deque会动态调整容量，每次扩容两倍，无需手动预设容量。
- Deque和[Queue](arkts-util-queue.md)相比，Deque允许在两端执行插入和删除操作，Queue只能在头部删除元素，尾部插入元素。
- 与[ArrayList](arkts-util-arraylist.md)相比，它们都支持在两端插入和删除元素，但Deque不支持中间插入。Deque在头部插入删除元素的效率高于ArrayList，而ArrayList随机访问元素的效率高于Deque。
- **推荐使用场景：** 需要在集合两端频繁增删元素时，推荐使用Deque。
- 文档中使用了泛型，涉及以下泛型标记符：
- - T：Type，类型
- > **说明**
+Double-Ended Queue (Deque) is a data structure implemented based on a circular queue. It supports insertion and
+ deletion of elements at both ends. It follows the principles of First In First Out (FIFO) and Last In First Out (LIFO
+ ). Deque can dynamically adjust the capacity based on project requirements. It doubles the capacity each time.
+ Queue allows element removal at the front and insertion at the rear. Compared with [Queue](arkts-util-queue.md),
+ which only allows element deletion at the front and insertion at the back, Deque permits insertion and deletion at
+ both ends.
+ Both [ArrayList](arkts-util-arraylist.md) and Deque support insertion and deletion at the ends, but Deque does not
+ support insertion in the middle. Deque is more efficient than an ArrayList for inserting and deleting elements at the
+ front, whereas an ArrayList excels in element access efficiency.
+ **Recommended use case**: Use **Deque** when you need to frequently insert or remove elements at both the ends of a
+ container.
+ This topic uses the following to identify the use of generics:
+ - T: Type
+ > **NOTE**
  >
- > - 容器类使用静态语言实现，限制了内部存储方式和所支持的属性，不支持自定义属性和方法。
+ > - Container classes, implemented in static languages, have restrictions on storage locations and properties, and do
+ > not support custom properties or methods.
 
 
 ## Modules to Import
@@ -23,11 +31,11 @@ import { Deque } from 'kits/@kit.ArkTS';
 
 | Name | Description |
 | --- | --- |
-| [Deque](arkts-arkts-util-deque-deque-c.md) | Deque（double-ended queue）基于循环队列的数据结构实现，支持两端元素的插入和删除。Deque同时具备先进先出以及先进后出的特点，可根据操作端的不同同时作为队列和栈使用。当现有容量不足以容纳新插入的元素时，Deque会动态调整容量，每次扩容两倍，无需手动预设容量。 |
+| [Deque](arkts-arkts-util-deque-deque-c.md) | Double-ended queue (deque) is a sequence container implemented based on the queue data structure that follows the principles of First In First Out (FIFO) and Last In First Out (LIFO).It allows insertion and removal of elements at both the ends. |
 
 ### Types
 
 | Name | Description |
 | --- | --- |
-| [DequeForEachCb](arkts-arkts-dequeforeachcb-t.md) | Deque中forEach方法的回调函数。 |
+| [DequeForEachCb](arkts-arkts-dequeforeachcb-t.md) | The type of Deque forEach callback function. |
 

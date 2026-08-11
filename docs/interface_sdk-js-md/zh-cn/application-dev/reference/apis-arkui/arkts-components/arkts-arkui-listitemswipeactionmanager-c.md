@@ -40,8 +40,8 @@ static collapse(node: FrameNode): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 100023 | The component type of the node is incorrect. |
-| 106203 | The node not mounted to component tree. |
+| [100023](../errorcode-node.md#100023-参数错误) | The component type of the node is incorrect. |
+| [106203](../errorcode-node.md#106203-传入的节点未挂载到组件树上) | The node not mounted to component tree. |
 
 ## expand
 
@@ -78,6 +78,6 @@ static expand(node: FrameNode, direction: ListItemSwipeActionDirection): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 100023 | The component type of the node is incorrect. |
-| 106203 | The node not mounted to component tree. |
+| [100023](../errorcode-node.md#100023-参数错误) | The component type of the node is incorrect. |
+| [106203](../errorcode-node.md#106203-传入的节点未挂载到组件树上) | The node not mounted to component tree. |
 

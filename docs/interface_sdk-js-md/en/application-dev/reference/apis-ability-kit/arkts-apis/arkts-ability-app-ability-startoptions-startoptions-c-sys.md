@@ -1,7 +1,7 @@
 # StartOptions
 
-StartOptions可以作为启动UIAbility接口（例如  
-[startAbility()](arkts-ability-uiabilitycontext-c.md#startability)）的入参，用于指定目标UIAbility启动时的选项，包括但不局限于窗口模式、目标UIAbility启动时所在的屏幕等。
+StartOptions can be used as an input parameter for APIs used to launch a UIAbility (for example,  
+[startAbility()](arkts-ability-uiabilitycontext-c.md#startability)). It specifies the options for starting the target UIAbility, including but not limited to the window mode and the display where the target UIAbility is started.
 
 **Since:** 9
 
@@ -23,13 +23,12 @@ import { StartOptions } from 'kits/@kit.AbilityKit';
 windowFocused?: boolean
 ```
 
-窗口是否获焦。默认是true，表示窗口获焦。
+Whether the window has focus. The default value is **true**, indicating that the window has focus.
 
-**约束：**
+**Constraints**:
 
-1.该功能仅在2in1和Tablet设备上生效。
-
-2.仅在[UIAbilityContext.startAbility](arkts-ability-uiabilitycontext-c.md#startability)中生效。
+1. This property takes effect only on 2-in-1 devices and tablets.2. This property takes effect only in  
+[UIAbilityContext.startAbility](arkts-ability-uiabilitycontext-c.md#startability).
 
 **Type:** boolean
 

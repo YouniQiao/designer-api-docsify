@@ -12,7 +12,7 @@ import { dataShare } from 'kits/@kit.ArkData';
 function createDataProxyHandle(): Promise<DataProxyHandle>
 ```
 
-创建DataProxyHandle实例。使用Promise异步回调。
+Creates a **DataProxyHandle** instance. This API uses a promise to return the result.
 
 **Since:** 20
 
@@ -28,13 +28,13 @@ function createDataProxyHandle(): Promise<DataProxyHandle>
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;DataProxyHandle&gt; | Promise对象。返回DataProxyHandle实例。 |
+| Promise&lt;DataProxyHandle&gt; | Promise used to return the result. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 15700000 | Inner error. Possible causes: The service is not ready or is being restarted abnormally. |
+| [15700000](../errorcode-datashare.md#15700000-internal-error) | Inner error. Possible causes: The service is not ready or is being restarted abnormally. |
 
 ## Examples
 
@@ -47,9 +47,9 @@ export default class EntryAbility extends UIAbility {
     dataShare.createDataProxyHandle().then((dataProxyHandle) => {
       console.info("createDataProxyHandle succeed");
     }).catch((err: BusinessError) => {
-      console.error(`Failed to create DataProxyHandle. Code: ${err.code}, message: ${err.message}`);
+      console.error(`createDataProxyHandle error: code: ${err.code}, message: ${err.message}`);
     });
-  }
-}
+  };
+};
 ```
 

@@ -12,7 +12,7 @@ import { inputDevice } from 'kits/@kit.InputKit';
 function setFunctionKeyEnabled(functionKey: FunctionKey, enabled: boolean): Promise<void>
 ```
 
-设置功能键（如：CapsLock键）使能状态。使用Promise异步回调。
+Specifies whether to enable a function key (for example, **CapsLock**). This API uses a promise to return the result.
 
 **Since:** 15
 
@@ -28,23 +28,23 @@ function setFunctionKeyEnabled(functionKey: FunctionKey, enabled: boolean): Prom
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| functionKey | [FunctionKey](arkts-input-inputdevice-functionkey-e.md) | Yes | 需要设置的功能键类型。 |
-| enabled | boolean | Yes | 功能键使能状态。取值为true表示使能功能键，取值为false表示不使能功能键。 |
+| functionKey | [FunctionKey](arkts-input-inputdevice-functionkey-e.md) | Yes | Type of the function key. |
+| enabled | boolean | Yes | Status of the function key. The value **true** indicates that the function key is enabled, and the value **false** indicates the opposite. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise对象，无返回结果。 |
+| Promise&lt;void&gt; | Promise that returns no value. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; 3. Parameter verification failed. |
-| 3900003 | It is prohibited for non-input applications. |
-| 201 | Permission denied. |
-| 3900002 | There is currently no keyboard device connected. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; 3. Parameter verification failed. |
+| [3900003](../errorcode-inputdevice.md#3900003-api-call-failed-for-a-noninput-application) | It is prohibited for non-input applications. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
+| [3900002](../errorcode-inputdevice.md#3900002-keyboard-not-connected) | There is currently no keyboard device connected. |
 
 ## Examples
 
@@ -60,14 +60,13 @@ struct Index {
       Text()
         .onClick(() => {
           try {
-            // Set Function Key Enabled Status
             inputDevice.setFunctionKeyEnabled(inputDevice.FunctionKey.CAPS_LOCK, true).then(() => {
-              console.info(`Succeeded in setting capslock state.`);
+              console.info(`Set capslock state success`);
             }).catch((error: BusinessError) => {
-              console.error(`Failed to set capslock state, Code: ${(error as BusinessError).code}, message: ${(error as BusinessError).message}.`);
+              console.error(`Set capslock state failed, error=${JSON.stringify(error)}`);
             });
           } catch (error) {
-            console.error(`Failed to set capslock enable, Code: ${(error as BusinessError).code}, message: ${(error as BusinessError).message}.`);
+            console.error(`Set capslock enable error`);
           }
         })
     }

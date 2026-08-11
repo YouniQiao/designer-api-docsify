@@ -92,3 +92,23 @@ An internal error occurs during widget processing.
 
 **System API:** This is a system API.
 
+## NOT_SUPPORT
+
+```TypeScript
+NOT_SUPPORT = 4
+```
+
+Indicates that the host does not support the form dimension.
+
+**Since:** 26.1.0
+
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.1.0.
+
+**Model restriction:** This API can be used only in the stage model.
+
+<!--Device-PublishFormErrorCode-NOT_SUPPORT = 4--><!--Device-PublishFormErrorCode-NOT_SUPPORT = 4-End-->
+
+**System capability:** SystemCapability.Ability.Form
+
+**System API:** This is a system API.
+

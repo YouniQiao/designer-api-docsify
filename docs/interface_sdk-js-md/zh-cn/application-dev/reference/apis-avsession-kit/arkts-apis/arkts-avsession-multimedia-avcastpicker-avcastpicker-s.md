@@ -18,12 +18,6 @@
 
 **系统能力：** SystemCapability.Multimedia.AVSession.AVCast
 
-## 导入模块
-
-```TypeScript
-import { AVCastPicker } from 'kits/@kit.AVSessionKit';
-```
-
 ## build
 
 ```TypeScript

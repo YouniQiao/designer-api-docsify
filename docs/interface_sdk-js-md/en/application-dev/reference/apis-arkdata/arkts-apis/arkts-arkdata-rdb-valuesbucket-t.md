@@ -4,7 +4,7 @@
 type ValuesBucket = { [key: string]: ValueType | Uint8Array | null }
 ```
 
-用于存储键值对的类型。
+Defines the types of the key and value in a KV pair.
 
 **Since:** 7
 

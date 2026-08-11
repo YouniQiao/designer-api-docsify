@@ -6,6 +6,6 @@
 
 | Name | Description |
 | --- | --- |
-| [PolylineAttribute](arkts-arkui-polyline-polylineattribute-i.md) | 折线绘制组件属性。 |
-| [PolylineOptions](arkts-arkui-polyline-polylineoptions-i.md) | 用于描述Polyline组件绘制属性。 |
+| [PolylineAttribute](arkts-arkui-polyline-polylineattribute-i.md) | Defines Polyline attribute |
+| [PolylineOptions](arkts-arkui-polyline-polylineoptions-i.md) | Define options used to construct a polyline. |
 

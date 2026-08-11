@@ -12,12 +12,6 @@
 
 **系统能力：** SystemCapability.ResourceSchedule.WorkScheduler
 
-## 导入模块
-
-```TypeScript
-import { WorkSchedulerExtensionContext } from 'kits/@kit.BackgroundTasksKit';
-```
-
 ## onWorkStart
 
 ```TypeScript
@@ -44,6 +38,8 @@ onWorkStart(work: workScheduler.WorkInfo): void
 
 ## 示例
 
+ArkTS-Dyn示例：
+
 ```TypeScript
 import { workScheduler } from '@kit.BackgroundTasksKit';
 import { WorkSchedulerExtensionAbility } from '@kit.BackgroundTasksKit';
@@ -52,6 +48,20 @@ export default class MyWorkSchedulerExtensionAbility extends WorkSchedulerExtens
   onWorkStart(work: workScheduler.WorkInfo) {
     console.info(`MyWorkSchedulerExtensionAbility onWorkStart, workId: ${work.workId},
       bundleName: ${work.bundleName}, abilityName: ${work.abilityName}.`);
+  }
+}
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+import { workScheduler } from '@kit.BackgroundTasksKit';
+import { WorkSchedulerExtensionAbility } from '@kit.BackgroundTasksKit';
+
+export default class MyWorkSchedulerExtensionAbility extends WorkSchedulerExtensionAbility {
+  onWorkStart(work: workScheduler.WorkInfo): void {
+    console.info(`MyWorkSchedulerExtensionAbility onWorkStart, workId: ${work.workId},
+          bundleName: ${work.bundleName}, abilityName: ${work.abilityName}.`);
   }
 }
 ```
@@ -82,6 +92,8 @@ onWorkStop(work: workScheduler.WorkInfo): void
 
 ## 示例
 
+ArkTS-Dyn示例：
+
 ```TypeScript
 import { workScheduler } from '@kit.BackgroundTasksKit';
 import { WorkSchedulerExtensionAbility } from '@kit.BackgroundTasksKit';
@@ -90,6 +102,20 @@ export default class MyWorkSchedulerExtensionAbility extends WorkSchedulerExtens
   onWorkStop(work: workScheduler.WorkInfo) {
     console.info(`MyWorkSchedulerExtensionAbility onWorkStop, workId: ${work.workId},
       bundleName: ${work.bundleName}, abilityName: ${work.abilityName}.`);
+  }
+}
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+import { workScheduler } from '@kit.BackgroundTasksKit';
+import { WorkSchedulerExtensionAbility } from '@kit.BackgroundTasksKit';
+
+export default class MyWorkSchedulerExtensionAbility extends WorkSchedulerExtensionAbility {
+  onWorkStop(work: workScheduler.WorkInfo): void {
+    console.info(`MyWorkSchedulerExtensionAbility onWorkStop, workId: ${work.workId},
+          bundleName: ${work.bundleName}, abilityName: ${work.abilityName}.`);
   }
 }
 ```

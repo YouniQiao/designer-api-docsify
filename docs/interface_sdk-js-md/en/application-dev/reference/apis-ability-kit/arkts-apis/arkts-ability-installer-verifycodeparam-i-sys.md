@@ -1,6 +1,6 @@
 # VerifyCodeParam (System API)
 
-应用程序代码签名文件信息。
+Defines the information about the code signature file.
 
 **Since:** 10
 
@@ -26,7 +26,7 @@ import { installer } from 'kits/@kit.AbilityKit';
 moduleName: string
 ```
 
-应用程序模块名称。
+Module name of the bundle.
 
 **Type:** string
 
@@ -48,7 +48,7 @@ moduleName: string
 signatureFilePath: string
 ```
 
-代码签名文件路径。
+Path of the code signature file.
 
 **Type:** string
 

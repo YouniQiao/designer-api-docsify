@@ -12,22 +12,19 @@ import { font } from 'kits/@kit.ArkUI';
 function getSystemFontList(): Array<string>
 ```
 
-获取系统字体列表。
+Obtains this system font list.
 
-该接口仅在PC/2in1设备上生效，在其他设备上返回空数组。
+This API only takes effect on PCs/2-in-1 devices and returns an empty array on other devices.
 
-推荐使用[getSystemFontFullNamesByType](../../apis-arkgraphics2d/arkts-apis/arkts-arkgraphics2d-text-getsystemfontfullnamesbytype-f.md/arkts-arkgraphics2d-text-getsystemfontfullnamesbytype-f.md#getsystemfontfullnamesbytype)接口获取系统最新支持的字体列表数据。
+You are advised to use the  
+[getSystemFontFullNamesByType](../../apis-arkgraphics2d/arkts-apis/arkts-arkgraphics2d-text-getsystemfontfullnamesbytype-f.md/arkts-arkgraphics2d-text-getsystemfontfullnamesbytype-f.md#getsystemfontfullnamesbytype) API to obtain the latest system-supported font list data.
 
-> **说明：**
+> **NOTE：**
 > 
-> -getSystemFontList需要先通过[UIContext](arkts-arkui-uicontext.md)中的
-> [getFont](../../../reference/apis-arkui/arkts-apis-uicontext-uicontext.md#getfont)方法获取
-> [Font](arkts-arkui-uicontext.md)对象，然后通过该对象进行调用。且直接使用getSystemFontList可能导致
-> [UI上下文不明确](../../../ui/arkts-global-interface.md#ui上下文不明确)的问题。
-> 
-> - 从API version 10开始，可以通过使用[UIContext](arkts-arkui-uicontext.md)中的
-> [getFont](../../../reference/apis-arkui/arkts-apis-uicontext-uicontext.md#getfont)方法获取当前UI上下文关联的
-> [Font](arkts-arkui-uicontext.md)对象。
+> - Since API version 10, you can use the
+> [getFont](../../../reference/apis-arkui/arkts-apis-uicontext-uicontext.md#getfont) API in
+> [UIContext](arkts-arkui-uicontext.md) to obtain the [Font](arkts-arkui-uicontext.md) object associated with
+> the current UI context.
 
 **Since:** 10
 
@@ -49,7 +46,7 @@ function getSystemFontList(): Array<string>
 
 | Type | Description |
 | --- | --- |
-| Array&lt;string&gt; | 系统的字体名列表。 |
+| Array&lt;string&gt; | List of supported fonts. |
 
 ## Examples
 

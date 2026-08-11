@@ -4,7 +4,7 @@
 type ResultCallback = (challenge: Uint8Array, result: UserAuthResult) => void
 ```
 
-返回远程认证结果的回调函数类型。该类型用于远程认证场景，在远程认证完成后，系统会调用此回调函数返回认证结果。
+Defines the callback for returning remote authentication results. This type is used in remote authentication scenarios. After the remote authentication is complete, the system invokes this callback to return the authentication result.
 
 **Since:** 26.0.0
 
@@ -22,6 +22,6 @@ type ResultCallback = (challenge: Uint8Array, result: UserAuthResult) => void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| challenge | Uint8Array | Yes | 挑战值。用于防止重放攻击的一次性随机数，与发起认证时传入的challenge值一致。 |
-| result | [UserAuthResult](arkts-userauthentication-userauth-userauthresult-i.md) | Yes | 用户认证结果。包含认证结果码、认证令牌等信息。 |
+| challenge | Uint8Array | Yes | Challenge value. It is a one-time random number used to prevent replay attacks, which is consistent with the challenge value passed during authentication initiation. |
+| result | [UserAuthResult](arkts-userauthentication-userauth-userauthresult-i.md) | Yes | User authentication result, including the authentication result code and authentication token. |
 

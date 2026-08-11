@@ -1,6 +1,6 @@
 # AuthEvent
 
-认证接口的异步回调对象。
+Provides an asynchronous callback to return the authentication event information.
 
 **Since:** 9
 
@@ -26,7 +26,7 @@ import { userAuth } from 'kits/@kit.UserAuthenticationKit';
 callback(result: EventInfo): void
 ```
 
-通过该回调获取认证结果信息或认证过程中的提示信息。
+Called to return the authentication result or authentication tip information.
 
 **Since:** 9
 
@@ -44,7 +44,7 @@ callback(result: EventInfo): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| result | [EventInfo](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-update-eventinfo-i-sys.md) | Yes | 返回的认证结果信息或提示信息。 |
+| result | [EventInfo](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-update-eventinfo-i-sys.md) | Yes | Authentication result or tip information. |
 
 ## Examples
 
@@ -59,13 +59,16 @@ try {
   let auth = userAuth.getAuthInstance(challenge, authType, authTrustLevel);
   auth.on('result', {
     callback: (result: userAuth.AuthResultInfo) => {
-      console.info(`result: ${result.result}`);
+      console.info(`authV9 result ${result.result}`);
+      console.info(`authV9 token ${result.token}`);
+      console.info(`authV9 remainAttempts ${result.remainAttempts}`);
+      console.info(`authV9 lockoutDuration ${result.lockoutDuration}`);
     }
   } as userAuth.AuthEvent);
   auth.start();
-  console.info('auth start successfully.');
+  console.info('authV9 start success');
 } catch (error) {
-  console.error(`auth failed. Code: ${error?.code}, message: ${error?.message}`);
+  console.error(`authV9 error = ${error}`);
   // do error.
 }
 // Obtain the authentication tip information via a callback.
@@ -86,9 +89,9 @@ try {
     }
   } as userAuth.AuthEvent);
   auth.start();
-  console.info('auth start successfully.');
+  console.info('authV9 start success');
 } catch (error) {
-  console.error(`auth failed. Code: ${error?.code}, message: ${error?.message}`);
+  console.error(`authV9 error = ${error}`);
   // do error.
 }
 ```

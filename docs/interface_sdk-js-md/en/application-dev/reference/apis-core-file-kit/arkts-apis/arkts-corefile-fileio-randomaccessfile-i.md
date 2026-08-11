@@ -1,6 +1,7 @@
 # RandomAccessFile
 
-随机读写文件流，提供基于偏移指针的随机读写能力。在调用RandomAccessFile的方法前，需要先通过createRandomAccessFile()方法（同步或异步）来构建一个RandomAccessFile实例。
+Provides APIs for randomly reading and writing a stream based on offset pointers. Before invoking any API of  
+**RandomAccessFile**, you need to use **createRandomAccessFile()** to create a **RandomAccessFile** instance synchronously or asynchronously.
 
 **Since:** 23
 
@@ -22,7 +23,7 @@ import { Options, ReaderIteratorResult, Watcher, ReadTextOptions, WatchEventList
 close(): void
 ```
 
-以同步方式关闭RandomAccessFile对象，关闭后不可再用于读写等操作。
+Closes a **RandomAccessFile** object synchronously. After the object is closed,it cannot be used for read or write operations.
 
 **Since:** 23
 
@@ -49,7 +50,7 @@ close(): void
 getReadStream(): ReadStream
 ```
 
-获取当前RandomAccessFile的一个ReadStream实例，用于流式读取文件数据。
+Obtains a **ReadStream** instance of this **RandomAccessFile** to read data from a stream file.
 
 **Since:** 23
 
@@ -63,14 +64,14 @@ getReadStream(): ReadStream
 
 | Type | Description |
 | --- | --- |
-| [ReadStream](arkts-corefile-fileio-readstream-c.md) | 文件可读流。 |
+| [ReadStream](arkts-corefile-fileio-readstream-c.md) | ReadStream** instance obtained. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
 | 13900020 | Invalid argument |
-| 401 | Parameter error |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error |
 | 13900012 | Permission denied |
 | 13900008 | Bad file descriptor |
 | 13900042 | Unknown error |
@@ -82,7 +83,7 @@ getReadStream(): ReadStream
 getWriteStream(): WriteStream
 ```
 
-获取当前RandomAccessFile的一个WriteStream实例，用于流式写入文件数据。
+Obtains a **WriteStream** instance of this **RandomAccessFile** to write data to a stream file.
 
 **Since:** 23
 
@@ -96,14 +97,14 @@ getWriteStream(): WriteStream
 
 | Type | Description |
 | --- | --- |
-| [WriteStream](arkts-corefile-fileio-writestream-c.md) | 文件可写流。 |
+| [WriteStream](arkts-corefile-fileio-writestream-c.md) | WriteStream** instance obtained. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
 | 13900020 | Invalid argument |
-| 401 | Parameter error |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error |
 | 13900012 | Permission denied |
 | 13900008 | Bad file descriptor |
 | 13900042 | Unknown error |
@@ -118,7 +119,7 @@ read(
   ): Promise<long>
 ```
 
-从文件读取数据，返回实际读取的字节数。使用Promise异步回调。
+Reads data from a file and returns the number of bytes read. This API uses a promise to return the result.
 
 **Since:** 23
 
@@ -132,14 +133,14 @@ read(
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| buffer | ArrayBuffer | Yes | 用于读取文件的缓冲区。 |
-| options | [ReadOptions](arkts-corefile-file-fs-readoptions-i.md) | No | 支持如下选项：&lt;br/&gt;- length，number类型，表示期望读取数据的长度，单位为Byte。可选，默认为缓冲区长度。&lt;br/&gt;- offset， number类型，表示期望读取文件位置，单位为Byte（基于当前filePointer加上offset的位置）。可选，默认从偏移指针（filePointer）开始读。 |
+| buffer | ArrayBuffer | Yes | Buffer used to store the file read. |
+| options | [ReadOptions](arkts-corefile-file-fs-readoptions-i.md) | No | The options are as follows: &lt;br&gt;- **length** (number): length of the data to read, in bytes. This parameter is optional. The default value is the buffer length.&lt;br&gt; - **offset** (number): start position to read the data, in bytes (it is determined by **filePointer** plus **offset**). This parameter is optional. By default, data is read from the **filePointer**. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;long&gt; | Promise对象，返回读取的结果，单位为Byte。 |
+| Promise&lt;long&gt; | Promise used to return the data read, in bytes. |
 
 **Error codes:**
 
@@ -162,7 +163,7 @@ read(
 read(buffer: ArrayBuffer, callback: AsyncCallback<long>): void
 ```
 
-从文件读取数据，返回实际读取的字节数。使用callback异步回调。
+Reads data from a file and returns the number of bytes read. This API uses an asynchronous callback to return the result.
 
 **Since:** 23
 
@@ -176,8 +177,8 @@ read(buffer: ArrayBuffer, callback: AsyncCallback<long>): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| buffer | ArrayBuffer | Yes | 用于读取文件的缓冲区。 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;long&gt; | Yes | 回调函数，返回实际读取的数据长度，单位为Byte。 |
+| buffer | ArrayBuffer | Yes | Buffer used to store the file read. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;long&gt; | Yes | Callback used to return the length of the data read, in bytes. |
 
 **Error codes:**
 
@@ -203,7 +204,7 @@ read(
   ): void
 ```
 
-从文件读取数据，支持配置读取选项，返回实际读取的字节数。使用callback异步回调。
+Reads data from a file and returns the number of bytes read. The read options can be configured. This API uses an asynchronous callback to return the result.
 
 **Since:** 23
 
@@ -217,9 +218,9 @@ read(
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| buffer | ArrayBuffer | Yes | 用于读取文件的缓冲区。 |
-| options | [ReadOptions](arkts-corefile-file-fs-readoptions-i.md) | Yes | 支持如下选项：&lt;br/&gt;- length，number类型，表示读取数据的长度，单位为Byte。可选，默认为缓冲区长度。&lt;br/&gt;- offset， number类型，表示读取文件位置，单位为Byte（基于当前filePointer加上offset的位置）。可选，默认从filePointer开始读。 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;long&gt; | Yes | 回调函数，返回实际读取的数据长度，单位为Byte。 |
+| buffer | ArrayBuffer | Yes | Buffer used to store the file read. |
+| options | [ReadOptions](arkts-corefile-file-fs-readoptions-i.md) | Yes | The options are as follows: &lt;br&gt;- **length** (number): length of the data to read, in bytes. This parameter is optional. The default valueis the buffer length.&lt;br&gt;- **offset** (number): start position to read the data, in bytes (it is determined by **filePointer** plus **offset**). This parameter is optional. By default, data is read from the **filePointer**. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;long&gt; | Yes | Callback used to return the length of the data read, in bytes. |
 
 **Error codes:**
 
@@ -244,7 +245,7 @@ readSync(
   ): long
 ```
 
-以同步方法从文件读取数据，返回实际读取的字节数。
+Reads data from a file synchronously and returns the number of bytes read.
 
 **Since:** 23
 
@@ -258,14 +259,14 @@ readSync(
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| buffer | ArrayBuffer | Yes | 用于读取文件的缓冲区。 |
-| options | [ReadOptions](arkts-corefile-file-fs-readoptions-i.md) | No | 支持如下选项：&lt;br/&gt;- length，number类型，表示期望读取数据的长度，单位为Byte。可选，默认缓冲区长度。&lt;br/&gt;- offset， number类型，表示期望读取文件位置，单位为Byte（基于当前filePointer加上offset的位置）。可选，默认从偏移指针（filePointer）开始读。&lt;br/&gt; |
+| buffer | ArrayBuffer | Yes | Buffer used to store the file read. |
+| options | [ReadOptions](arkts-corefile-file-fs-readoptions-i.md) | No | The options are as follows: &lt;br&gt;- **length** (number): length of the data to read, in bytes. This parameter is optional. The default valueis the buffer length.&lt;br&gt;- **offset** (number): start position to read the data, in bytes (it is determined by **filePointer** plus **offset**). This parameter is optional. By default, data is read from the **filePointer**. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| long | 实际读取的长度，单位为Byte。 |
+| long | Length of the data read, in bytes. |
 
 **Error codes:**
 
@@ -288,7 +289,7 @@ readSync(
 setFilePointer(filePointer: long): void
 ```
 
-设置文件偏移指针，用于指定后续读写等操作的起始位置。
+Sets the file offset pointer to specify the start position of subsequent read and write operations.
 
 **Since:** 23
 
@@ -302,7 +303,7 @@ setFilePointer(filePointer: long): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| filePointer | long | Yes | RandomAccessFile对象的偏移指针，单位为Byte。 |
+| filePointer | long | Yes | Offset pointer to the **RandomAccessFile** instance, in bytes. |
 
 **Error codes:**
 
@@ -323,7 +324,7 @@ write(
   ): Promise<long>
 ```
 
-将数据写入文件。使用Promise异步回调。
+Writes data to a file. This API uses a promise to return the result.
 
 **Since:** 23
 
@@ -337,14 +338,14 @@ write(
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| buffer | ArrayBuffer \| string | Yes | 待写入文件的数据，可来自缓冲区或字符串。 |
-| options | [WriteOptions](arkts-corefile-file-fs-writeoptions-i.md) | No | 支持如下选项：&lt;br/&gt;- length，number类型，表示期望写入数据的长度，单位为Byte。默认缓冲区长度。&lt;br/&gt;- offset， number类型，表示期望写入文件位置，单位为Byte（基于当前filePointer加上offset的位置）。可选，默认从偏移指针（filePointer）开始写。&lt;br/&gt;- encoding， string类型，当数据是string类型时有效，表示数据的编码方式，默认 'utf-8'。仅支持 'utf-8'。 |
+| buffer | ArrayBuffer \| string | Yes | Data to write. It can be a string or data from a buffer. |
+| options | [WriteOptions](arkts-corefile-file-fs-writeoptions-i.md) | No | The options are as follows: &lt;br&gt;- **length** (number): length of the data to write, in bytes. The default value is the buffer length. &lt;br&gt;- **offset** (number): start position to write the data, in bytes (it is determined by **filePointer** plus **offset**). This parameter is optional. By default, data is written from the **filePointer**. &lt;br&gt;- **encoding** (string): format of the data to be encoded when the data is a string. The default value is **'utf-8'**, which is the only value supported. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;long&gt; | Promise对象，返回实际写入的长度，单位为Byte。 |
+| Promise&lt;long&gt; | Promise used to return the length of the data written, in bytes. |
 
 **Error codes:**
 
@@ -369,7 +370,7 @@ write(
 write(buffer: ArrayBuffer | string, callback: AsyncCallback<long>): void
 ```
 
-将数据写入文件。使用callback异步回调。
+Writes data to a file. This API uses an asynchronous callback to return the result.
 
 **Since:** 23
 
@@ -383,8 +384,8 @@ write(buffer: ArrayBuffer | string, callback: AsyncCallback<long>): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| buffer | ArrayBuffer \| string | Yes | 待写入文件的数据，可来自缓冲区或字符串。 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;long&gt; | Yes | 回调函数，返回实际写入数据长度，单位为Byte。 |
+| buffer | ArrayBuffer \| string | Yes | Data to write. It can be a string or data from a buffer. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;long&gt; | Yes | Callback used to return the length of the data written, in bytes. |
 
 **Error codes:**
 
@@ -413,7 +414,7 @@ write(
   ): void
 ```
 
-将数据写入文件，支持配置写入选项。使用callback异步回调。
+Writes data to a file. Write options can be configured. This API uses an asynchronous callback to return the result.
 
 **Since:** 23
 
@@ -427,9 +428,9 @@ write(
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| buffer | ArrayBuffer \| string | Yes | 待写入文件的数据，可来自缓冲区或字符串。 |
-| options | [WriteOptions](arkts-corefile-file-fs-writeoptions-i.md) | Yes | 支持如下选项：&lt;br/&gt;- length，number类型，表示期望写入数据的长度，单位为Byte。可选，默认为缓冲区长度。&lt;br/&gt;- offset， number类型，表示期望写入文件位置，单位为Byte（基于当前filePointer加上offset的位置）。可选，默认从偏移指针（filePointer）开始写。&lt;br/&gt;- encoding， string类型，当数据是string类型时有效，表示数据的编码方式，默认 'utf-8'。仅支持 'utf-8'。 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;long&gt; | Yes | 回调函数，返回实际写入数据长度，单位为Byte。 |
+| buffer | ArrayBuffer \| string | Yes | Data to write. It can be a string or data from a buffer. |
+| options | [WriteOptions](arkts-corefile-file-fs-writeoptions-i.md) | Yes | The options are as follows: &lt;br&gt;- **length** (number): length of the data to write, in bytes. The default value is the buffer length. &lt;br&gt;- **offset** (number): start position to write the data, in bytes (it is determined by **filePointer** plus **offset**). This parameter is optional. By default, data is written from the **filePointer**. &lt;br&gt;- **encoding** (string): format of the data to be encoded when the data is a string. The default value is **'utf-8'**, which is the only value supported. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;long&gt; | Yes | Callback used to return the length of the data written, in bytes. |
 
 **Error codes:**
 
@@ -457,7 +458,7 @@ writeSync(
   ): long
 ```
 
-以同步方法将数据写入文件。
+Writes data to a file. This API returns the result synchronously.
 
 **Since:** 23
 
@@ -471,14 +472,14 @@ writeSync(
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| buffer | ArrayBuffer \| string | Yes | 待写入文件的数据，可来自缓冲区或字符串。 |
-| options | [WriteOptions](arkts-corefile-file-fs-writeoptions-i.md) | No | 支持如下选项：&lt;br/&gt;- length，number类型，表示期望写入数据的长度，单位为Byte。可选，默认缓冲区长度。&lt;br/&gt;- offset， number类型，表示期望写入文件位置，单位为Byte（基于当前filePointer加上offset的位置）。可选，默认从偏移指针（filePointer）开始写。&lt;br/&gt;- encoding， string类型，当数据是string类型时有效，表示数据的编码方式，默认 'utf-8'。仅支持 'utf-8'。 |
+| buffer | ArrayBuffer \| string | Yes | Data to write. It can be a string or data from a buffer. |
+| options | [WriteOptions](arkts-corefile-file-fs-writeoptions-i.md) | No | The options are as follows: &lt;br&gt;- **length** (number): length of the data to write, in bytes. The default value is the buffer length. &lt;br&gt;- **offset** (number): start position to write the data, in bytes (it is determined by **filePointer** plus **offset**). This parameter is optional. By default, data is written from the **filePointer**. &lt;br&gt;- **encoding** (string): format of the data to be encoded when the data is a string. The default value is **'utf-8'**, which is the only value supported. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| long | 实际写入的长度，单位为Byte。 |
+| long | Length of the data written in the file, in bytes. |
 
 **Error codes:**
 
@@ -503,7 +504,7 @@ writeSync(
 readonly fd: int
 ```
 
-已打开的文件描述符fd。
+FD of the file.
 
 **Type:** int
 
@@ -521,7 +522,7 @@ readonly fd: int
 readonly filePointer: long
 ```
 
-RandomAccessFile对象的偏移指针，表示当前读写位置，单位为Byte。
+Offset pointer to the **RandomAccessFile** instance, in bytes. This parameter indicates the current read/write position.
 
 **Type:** long
 

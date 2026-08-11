@@ -1,6 +1,6 @@
 # GestureRecognizerState
 
-定义手势识别器状态。
+Creating an Object
 
 **Since:** 23
 
@@ -16,7 +16,7 @@
 READY = 0
 ```
 
-准备状态。
+Ready state.
 
 **Since:** 23
 
@@ -34,7 +34,7 @@ READY = 0
 DETECTING = 1
 ```
 
-检测状态。
+Detecting state.
 
 **Since:** 23
 
@@ -52,7 +52,7 @@ DETECTING = 1
 PENDING = 2
 ```
 
-等待状态。
+Pending state.
 
 **Since:** 23
 
@@ -70,7 +70,7 @@ PENDING = 2
 BLOCKED = 3
 ```
 
-阻塞状态。
+Blocked state.
 
 **Since:** 23
 
@@ -88,7 +88,7 @@ BLOCKED = 3
 SUCCESSFUL = 4
 ```
 
-成功状态。
+Successful state.
 
 **Since:** 23
 
@@ -106,7 +106,7 @@ SUCCESSFUL = 4
 FAILED = 5
 ```
 
-失败状态。
+Failed state.
 
 **Since:** 23
 

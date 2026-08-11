@@ -1,6 +1,6 @@
 # DialogDismissal
 
-提供有关关闭对话框的操作的信息。
+Provides information about the action to dismiss the dialog box.
 
 **Since:** 26.1.0
 
@@ -22,7 +22,7 @@ import { DialogButtonOrientation, DialogState, DialogResult, DialogBaseControlle
 dismiss: VoidCallback
 ```
 
-关闭对话框的回调。只有当需要退出对话框时，才会调用此接口。
+Callback for dismissing the dialog box. This API is called only when the dialog box needs to be exited.
 
 **Since:** 26.1.0
 
@@ -42,7 +42,7 @@ dismiss: VoidCallback
 reason: DismissReason
 ```
 
-无法关闭对话框的原因。
+Reason why the dialog box cannot be dismissed.
 
 **Type:** [DismissReason](../arkts-components/arkts-arkui-dismissreason-e.md)
 

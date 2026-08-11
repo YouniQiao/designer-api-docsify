@@ -235,7 +235,7 @@ makeGlobalReusePool(reusePool: ReusePoolOwnership,
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | reusePool | [ReusePoolOwnership](arkts-arkui-customcomponent-reusepoolownership-e.md) | 是 | 复用池类型 |
-| poolAccepts | [Class](../../apis-arkts/arkts-apis/arkts-arkts-class-c.md)[] | 是 | 重用池接受的自定义组件 |
+| poolAccepts | Class[] | 是 | 重用池接受的自定义组件 |
 | owningView | [IVariableOwner](arkts-arkui-decorator-ivariableowner-i.md) | 是 | 拥有全局池的自定义组件 |
 
 **返回值：**

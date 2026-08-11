@@ -1,6 +1,6 @@
 # ContinuousTaskSuspendReason
 
-长时任务暂停原因。
+Describes the reason why a continuous task is suspended.
 
 **Since:** 20
 
@@ -16,7 +16,7 @@
 SYSTEM_SUSPEND_DATA_TRANSFER_LOW_SPEED = 4
 ```
 
-申请DATA_TRANSFER类型长时任务，但是数据传输速率低。
+A continuous task of the **DATA_TRANSFER** type is requested, but the data transmission rate is low.
 
 **Since:** 20
 
@@ -32,7 +32,8 @@ SYSTEM_SUSPEND_DATA_TRANSFER_LOW_SPEED = 4
 SYSTEM_SUSPEND_AUDIO_PLAYBACK_NOT_USE_AVSESSION = 5
 ```
 
-申请AUDIO_PLAYBACK类型长时任务，但是未接入[AVSession](../../../media/avsession/avsession-overview.md)。
+A continuous task of the **AUDIO_PLAYBACK** type is requested, but   
+[AVSession](../../../media/avsession/avsession-overview.md) is not accessed.
 
 **Since:** 20
 
@@ -48,7 +49,7 @@ SYSTEM_SUSPEND_AUDIO_PLAYBACK_NOT_USE_AVSESSION = 5
 SYSTEM_SUSPEND_AUDIO_PLAYBACK_NOT_RUNNING = 6
 ```
 
-申请AUDIO_PLAYBACK类型长时任务，但是未播放音视频。
+A continuous task of the **AUDIO_PLAYBACK** type is requested, but audio playback is not in progress.
 
 **Since:** 20
 
@@ -64,7 +65,7 @@ SYSTEM_SUSPEND_AUDIO_PLAYBACK_NOT_RUNNING = 6
 SYSTEM_SUSPEND_AUDIO_RECORDING_NOT_RUNNING = 7
 ```
 
-申请AUDIO_RECORDING类型长时任务，但是未录制。
+A continuous task of the **AUDIO_RECORDING** type is requested, but audio recording is not in progress.
 
 **Since:** 20
 
@@ -80,7 +81,7 @@ SYSTEM_SUSPEND_AUDIO_RECORDING_NOT_RUNNING = 7
 SYSTEM_SUSPEND_LOCATION_NOT_USED = 8
 ```
 
-申请LOCATION类型长时任务，但是未使用定位导航。
+A continuous task of the **LOCATION** type is requested, but the location service is not in use.
 
 **Since:** 20
 
@@ -96,7 +97,7 @@ SYSTEM_SUSPEND_LOCATION_NOT_USED = 8
 SYSTEM_SUSPEND_BLUETOOTH_NOT_USED = 9
 ```
 
-申请BLUETOOTH_INTERACTION类型长时任务，但是未使用蓝牙相关业务。
+A continuous task of the **BLUETOOTH_INTERACTION** type is requested, but Bluetooth is not in use.
 
 **Since:** 20
 
@@ -112,7 +113,7 @@ SYSTEM_SUSPEND_BLUETOOTH_NOT_USED = 9
 SYSTEM_SUSPEND_MULTI_DEVICE_NOT_USED = 10
 ```
 
-申请MULTI_DEVICE_CONNECTION类型长时任务，但是未使用多设备互联。
+A continuous task of the **MULTI_DEVICE_CONNECTION** type is requested, but the multi-device connection service is not in use.
 
 **Since:** 20
 
@@ -128,7 +129,7 @@ SYSTEM_SUSPEND_MULTI_DEVICE_NOT_USED = 10
 SYSTEM_SUSPEND_USED_ILLEGALLY = 11
 ```
 
-使用非法类型的长时任务，如申请AUDIO_PLAYBACK类型长时任务，但是使用音视频播放及定位导航业务。预留接口，暂未启用。
+A continuous task of an invalid type is used. For example, a continuous task of the **AUDIO_PLAYBACK** type is requested, but the audio playback and location services are in use. This value is reserved.
 
 **Since:** 20
 
@@ -144,7 +145,7 @@ SYSTEM_SUSPEND_USED_ILLEGALLY = 11
 SYSTEM_SUSPEND_SYSTEM_LOAD_WARNING = 12
 ```
 
-系统高负载暂停长时任务。预留接口，暂未启用。
+A continuous task is suspended due to high system load. This value is reserved.
 
 **Since:** 20
 
@@ -160,7 +161,7 @@ SYSTEM_SUSPEND_SYSTEM_LOAD_WARNING = 12
 SYSTEM_SUSPEND_VOIP_NOT_USED = 13
 ```
 
-申请VOIP类型长时任务，但是未检测到音频流或者录音流。
+A continuous task of the **VOIP** type is requested, but no audio stream or recording stream is in progress.
 
 **Since:** 26.0.0
 
@@ -178,7 +179,7 @@ SYSTEM_SUSPEND_VOIP_NOT_USED = 13
 SYSTEM_SUSPEND_BLUETOOTH_DATA_NOT_EXIST = 14
 ```
 
-申请BLUETOOTH_INTERACTION类型长时任务，但是一段时间没有蓝牙数据流。
+A continuous task of the **BLUETOOTH_INTERACTION** type is requested, but there is no Bluetooth data flow for a period of time.
 
 **Since:** 26.0.0
 
@@ -196,7 +197,7 @@ SYSTEM_SUSPEND_BLUETOOTH_DATA_NOT_EXIST = 14
 SYSTEM_SUSPEND_POSITION_NOT_MOVED = 15
 ```
 
-申请LOCATION类型长时任务，但是一段时间内设备处于绝对静止状态。
+A continuous task of the **LOCATION** type is requested, but the device is absolutely still for a period of time.
 
 **Since:** 26.0.0
 
@@ -214,7 +215,7 @@ SYSTEM_SUSPEND_POSITION_NOT_MOVED = 15
 SYSTEM_SUSPEND_AUDIO_PLAYBACK_MUTE = 16
 ```
 
-申请AUDIO_PLAYBACK类型长时任务，但是一段时间内处于整机静音状态。
+A continuous task of the **AUDIO_PLAYBACK** type is requested, but the device is muted for a period of time.
 
 **Since:** 26.0.0
 
@@ -232,7 +233,7 @@ SYSTEM_SUSPEND_AUDIO_PLAYBACK_MUTE = 16
 SYSTEM_SUSPEND_NEARLINK_NOT_USED = 17
 ```
 
-申请星闪类型长时任务，但是一段时间没有星闪配对连接。
+No nearlink connection for a period of time when request nearlink mode.
 
 **Since:** 26.0.0
 
@@ -250,7 +251,7 @@ SYSTEM_SUSPEND_NEARLINK_NOT_USED = 17
 SYSTEM_SUSPEND_NEARLINK_DATA_NOT_EXIST = 18
 ```
 
-申请星闪类型长时任务，但是一段时间没有星闪数据流。
+No nearlink data for a period of time when request nearlink mode.
 
 **Since:** 26.0.0
 
@@ -268,7 +269,7 @@ SYSTEM_SUSPEND_NEARLINK_DATA_NOT_EXIST = 18
 SYSTEM_SUSPEND_USER_UNAUTHORIZED = 19
 ```
 
-申请特殊场景类型长时任务，但是用户未授权。
+A continuous task of the special scenario type is requested, but the user is not authorized.
 
 **Since:** 26.0.0
 

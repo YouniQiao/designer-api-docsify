@@ -1,6 +1,6 @@
 # Compilation
 
-合集的定义。继承自[OperResult](arkts-avsession-avmusictemplate-operresult-i.md)。
+The definition of compilation.
 
 **Inheritance/Implementation:** Compilation extends [OperResult](arkts-avsession-avmusictemplate-operresult-i.md)
 
@@ -24,7 +24,7 @@ import { avMusicTemplate } from 'kits/@kit.AVSessionKit';
 hasMoreData: boolean
 ```
 
-是否有更多的合集数据。true表示有，false表示没有。无默认值。
+Having more compilation data
 
 **Type:** boolean
 
@@ -44,7 +44,7 @@ hasMoreData: boolean
 id: string
 ```
 
-合集的唯一标识。
+Unique ID of the compilation
 
 **Type:** string
 
@@ -64,7 +64,7 @@ id: string
 memberMediaType: EntityType
 ```
 
-合集的媒体资源类型。
+Media type of the compilation
 
 **Type:** [EntityType](arkts-avsession-avmusictemplate-entitytype-e.md)
 
@@ -84,7 +84,7 @@ memberMediaType: EntityType
 title: string
 ```
 
-合集的标题。
+Title of the compilation
 
 **Type:** string
 
@@ -104,7 +104,7 @@ title: string
 topElements: MediaEntity[]
 ```
 
-合集的内容。
+Content of the compilation
 
 **Type:** [MediaEntity](arkts-avsession-avmusictemplate-mediaentity-i.md)[]
 
@@ -124,7 +124,7 @@ topElements: MediaEntity[]
 totalSize: int
 ```
 
-合集的总个数。
+Total size of the compilation
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 

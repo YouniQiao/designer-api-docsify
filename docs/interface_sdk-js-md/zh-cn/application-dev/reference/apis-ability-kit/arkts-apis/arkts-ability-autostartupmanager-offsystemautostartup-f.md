@@ -1,11 +1,5 @@
 # offSystemAutoStartup
 
-## 导入模块
-
-```TypeScript
-import { autoStartupManager } from 'kits/@kit.AbilityKit';
-```
-
 ## offSystemAutoStartup
 
 ```TypeScript
@@ -36,7 +30,7 @@ function offSystemAutoStartup(callback?: AutoStartupCallback): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 16000050 | Connect to system server failed. |
-| 201 | Permission denied, interface caller does not have permission "ohos.permission.MANAGE_APP_BOOT". |
-| 202 | Permission denied, non-system app called system api. |
+| [16000050](../errorcode-ability.md#16000050-内部错误) | Connect to system server failed. |
+| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied, interface caller does not have permission "ohos.permission.MANAGE_APP_BOOT". |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission denied, non-system app called system api. |
 

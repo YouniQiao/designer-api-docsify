@@ -1,11 +1,5 @@
 # setPermissionManagedState
 
-## 导入模块
-
-```TypeScript
-import { securityManager } from 'kits/@kit.MDMKit';
-```
-
 ## setPermissionManagedState
 
 ```TypeScript
@@ -17,7 +11,7 @@ function setPermissionManagedState(
   ): void
 ```
 
-设置指定应用的[user_grant权限](../../apis-ability-kit/arkts-apis/arkts-ability-permissions-t.md/arkts-ability-permissions-t.md)的管理策略。适用于企业应用批量部署场景，如静默授权减少权限弹窗干扰、统一企业应用权限管理策略，提升员工使用体验和管理效率。
+设置指定应用的[user_grant权限](permissions:Permissions)的管理策略。适用于企业应用批量部署场景，如静默授权减少权限弹窗干扰、统一企业应用权限管理策略，提升员工使用体验和管理效率。
 
 **起始版本：** 20
 
@@ -37,18 +31,18 @@ function setPermissionManagedState(
 | --- | --- | --- | --- |
 | admin | [Want](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-want-want-c.md) | 是 | 企业设备管理扩展组件。Want中必须包含企业设备管理扩展能力的abilityName和所在应用的bundleName。 |
 | applicationInstance | [ApplicationInstance](arkts-mdm-securitymanager-applicationinstance-i.md) | 是 | 指定应用实例。 |
-| permissions | Array&lt;string&gt; | 是 | 需要管理的权限名称列表，仅支持[user_grant权限](../../apis-ability-kit/arkts-apis/arkts-ability-permissions-t.md/arkts-ability-permissions-t.md)。权限名称列表以 [应用权限组](../../../security/AccessToken/app-permission-group-list.md)为单位。列表中应包含应用在 [module.json5](../../../quick-start/module-configuration-file.md)中声明的同一权限组内的所有权限。例如：应用如果在module.json5中声明需要 ohos.permission.READ_CALENDAR和ohos.permission.WRITE_CALENDAR权限，则传入的权限名称列表必须同时包含ohos.permission.READ_CALENDAR和 ohos.permission.WRITE_CALENDAR两个权限。 |
+| permissions | Array&lt;string&gt; | 是 | 需要管理的权限名称列表，仅支持[user_grant权限](permissions:Permissions)。权限名称列表以 [应用权限组](../../../security/AccessToken/app-permission-group-list.md)为单位。列表中应包含应用在 [module.json5](../../../quick-start/module-configuration-file.md)中声明的同一权限组内的所有权限。例如：应用如果在module.json5中声明需要 ohos.permission.READ_CALENDAR和ohos.permission.WRITE_CALENDAR权限，则传入的权限名称列表必须同时包含ohos.permission.READ_CALENDAR和 ohos.permission.WRITE_CALENDAR两个权限。 |
 | managedState | [PermissionManagedState](arkts-mdm-securitymanager-permissionmanagedstate-e.md) | 是 | 应用权限的管理策略。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 9200012 | Parameter verification failed. |
-| 9200010 | A conflict policy has been configured. |
-| 201 | Permission verification failed. The application does not have the permission required to call the API. |
-| 9200001 | The application is not an administrator application of the device. |
-| 9200002 | The administrator application does not have permission to manage the device. |
+| [9200012](../errorcode-enterpriseDeviceManager.md#9200012-参数校验失败) | Parameter verification failed. |
+| [9200010](../errorcode-enterpriseDeviceManager.md#9200010-策略冲突) | A conflict policy has been configured. |
+| [201](../../errorcode-universal.md#201-权限校验失败) | Permission verification failed. The application does not have the permission required to call the API. |
+| [9200001](../errorcode-enterpriseDeviceManager.md#9200001-应用没有激活成设备管理器) | The application is not an administrator application of the device. |
+| [9200002](../errorcode-enterpriseDeviceManager.md#9200002-设备管理器权限不够) | The administrator application does not have permission to manage the device. |
 
 ## 示例
 

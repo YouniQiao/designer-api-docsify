@@ -1,6 +1,6 @@
 # BarrierDirection
 
-定义屏障线的方向。
+Defines the direction of a barrier.
 
 **Since:** 12
 
@@ -13,10 +13,11 @@
 ## LEFT
 
 ```TypeScript
-LEFT = 0
+LEFT
 ```
 
-屏障在其所有[referencedId](arkts-arkui-barrierstyle-i.md)的最左侧。
+The barrier is on the left side of all the referenced components specified by  
+[referencedId](arkts-arkui-barrierstyle-i.md).
 
 **Since:** 12
 
@@ -26,17 +27,18 @@ LEFT = 0
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
-<!--Device-BarrierDirection-LEFT = 0--><!--Device-BarrierDirection-LEFT = 0-End-->
+<!--Device-BarrierDirection-LEFT--><!--Device-BarrierDirection-LEFT-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## RIGHT
 
 ```TypeScript
-RIGHT = 1
+RIGHT
 ```
 
-屏障在其所有[referencedId](arkts-arkui-barrierstyle-i.md)的最右侧。
+The barrier is on the right side of all the referenced components specified by  
+[referencedId](arkts-arkui-barrierstyle-i.md).
 
 **Since:** 12
 
@@ -46,17 +48,18 @@ RIGHT = 1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
-<!--Device-BarrierDirection-RIGHT = 1--><!--Device-BarrierDirection-RIGHT = 1-End-->
+<!--Device-BarrierDirection-RIGHT--><!--Device-BarrierDirection-RIGHT-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## TOP
 
 ```TypeScript
-TOP = 2
+TOP
 ```
 
-屏障在其所有[referencedId](arkts-arkui-barrierstyle-i.md)的最上方。
+The barrier is at the top of all the referenced components specified by  
+[referencedId](arkts-arkui-barrierstyle-i.md).
 
 **Since:** 12
 
@@ -66,17 +69,18 @@ TOP = 2
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
-<!--Device-BarrierDirection-TOP = 2--><!--Device-BarrierDirection-TOP = 2-End-->
+<!--Device-BarrierDirection-TOP--><!--Device-BarrierDirection-TOP-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## BOTTOM
 
 ```TypeScript
-BOTTOM = 3
+BOTTOM
 ```
 
-屏障在其所有[referencedId](arkts-arkui-barrierstyle-i.md)的最下方。
+The barrier is at the bottom of all the referenced components specified by  
+[referencedId](arkts-arkui-barrierstyle-i.md).
 
 **Since:** 12
 
@@ -86,7 +90,7 @@ BOTTOM = 3
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
-<!--Device-BarrierDirection-BOTTOM = 3--><!--Device-BarrierDirection-BOTTOM = 3-End-->
+<!--Device-BarrierDirection-BOTTOM--><!--Device-BarrierDirection-BOTTOM-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 

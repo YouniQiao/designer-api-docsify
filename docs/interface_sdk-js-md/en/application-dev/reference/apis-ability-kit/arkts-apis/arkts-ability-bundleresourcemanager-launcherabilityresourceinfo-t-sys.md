@@ -4,7 +4,9 @@
 export type LauncherAbilityResourceInfo = _LauncherAbilityResourceInfo
 ```
 
-应用配置的入口图标和名称信息。
+Defines the entry icon and name of an application.
+
+&lt;!--no_check--&gt;
 
 **Since:** 11
 

@@ -1,6 +1,6 @@
 # DownloadStatus
 
-表示下载状态类型的枚举。
+Enumeration of DownloadStatus.
 
 **Since:** 23
 
@@ -16,7 +16,7 @@
 DOWNLOAD_SUCCESS = 0
 ```
 
-下载成功。
+DOWNLOAD_SUCCESS
 
 **Since:** 23
 
@@ -34,7 +34,7 @@ DOWNLOAD_SUCCESS = 0
 DOWNLOADING = 1
 ```
 
-下载中。
+DOWNLOADING
 
 **Since:** 23
 
@@ -52,7 +52,7 @@ DOWNLOADING = 1
 DOWNLOAD_FAIL = 2
 ```
 
-下载失败。
+DOWNLOAD_FAIL
 
 **Since:** 23
 

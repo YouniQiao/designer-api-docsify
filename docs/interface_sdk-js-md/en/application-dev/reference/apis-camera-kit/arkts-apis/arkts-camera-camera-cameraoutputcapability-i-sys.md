@@ -1,6 +1,6 @@
 # CameraOutputCapability
 
-相机输出能力项。
+Describes the camera output capability.
 
 **Since:** 10
 

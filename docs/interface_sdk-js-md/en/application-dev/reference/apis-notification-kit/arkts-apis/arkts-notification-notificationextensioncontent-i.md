@@ -1,6 +1,6 @@
 # NotificationExtensionContent
 
-通知扩展内容。
+The **NotificationExtensionContent** module describes the notification extension content.
 
 **Since:** 22
 
@@ -16,7 +16,7 @@
 text: string
 ```
 
-通知正文内容。不可为空字符串，大小不超过3072字节，超出部分会被截断。
+Notification body content. It cannot be an empty string. The size cannot exceed 3072 bytes, and any excess will be truncated.
 
 **Type:** string
 
@@ -34,7 +34,7 @@ text: string
 title: string
 ```
 
-通知标题。不可为空字符串，大小不超过1024字节，超出部分会被截断。
+Notification title. It cannot be an empty string. The size cannot exceed 1024 bytes, and any excess will be truncated.
 
 **Type:** string
 

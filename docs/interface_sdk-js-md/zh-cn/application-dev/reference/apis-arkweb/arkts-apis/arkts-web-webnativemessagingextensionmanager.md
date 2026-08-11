@@ -20,12 +20,6 @@ webNativeMessagingExtensionManager模块是ArkWeb提供的Web原生消息扩展�
 
 **系统能力：** SystemCapability.Web.Webview.Core
 
-## 导入模块
-
-```TypeScript
-import { webNativeMessagingExtensionManager } from 'kits/@kit.ArkWeb';
-```
-
 ## 汇总
 
 ### 函数

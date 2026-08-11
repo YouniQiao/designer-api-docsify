@@ -1,6 +1,6 @@
 # PolylineAttribute
 
-折线绘制组件属性。
+Defines Polyline attribute
 
 **Inheritance/Implementation:** PolylineAttribute extends [CommonShapeMethod](arkts-arkui-arkui-shape-commonshapemethod-c.md)
 
@@ -18,7 +18,7 @@
 default attributeModifier(modifier: AttributeModifier<PolylineAttribute> | AttributeModifier<CommonMethod> | undefined): this
 ```
 
-调用attributeModifier。
+Call attributeModifier.
 
 **Since:** 23
 
@@ -48,7 +48,7 @@ default attributeModifier(modifier: AttributeModifier<PolylineAttribute> | Attri
 default points(value: Array<ShapePoint> | undefined): this
 ```
 
-设置折线经过坐标点列表，支持[attributeModifier](../../../reference/apis-arkui/arkui-ts/ts-universal-attributes-attribute-modifier.md#attributemodifier)动态设置属性方法。
+Called when the polyline is set to pass through the coordinate point list.
 
 **Since:** 23
 
@@ -64,7 +64,7 @@ default points(value: Array<ShapePoint> | undefined): this
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | Array&lt;ShapePoint&gt; \| undefined | Yes | 折线经过坐标点列表。使用时传入一个二维数组，每个子数组表示一个顶点的[x, y]坐标。 &lt;br/&gt;默认值：[]（空数组）&lt;br/&gt;默认单位：vp &lt;br/&gt;异常值undefined和null按照默认值处理。 |
+| value | Array&lt;ShapePoint&gt; \| undefined | Yes |  |
 
 **Return value:**
 
@@ -78,11 +78,11 @@ default points(value: Array<ShapePoint> | undefined): this
 default setPolylineOptions(options?: PolylineOptions): this
 ```
 
-设置Polyline构造参数。
+Set Polyline options.
 
-**Since:** 26.0.0
+**Since:** 26.1.0
 
-**ArkTS mode:** ArkTS-Sta only, since version 26.0.0.
+**ArkTS mode:** ArkTS-Sta only, since version 26.1.0.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -94,11 +94,11 @@ default setPolylineOptions(options?: PolylineOptions): this
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| options | [PolylineOptions](../arkts-components/arkts-arkui-polylineoptions-i.md) | No | Polyline绘制区域。&lt;br/&gt;异常值undefined和null按照无效值处理，本次设置不生效。 |
+| options | [PolylineOptions](../arkts-components/arkts-arkui-polylineoptions-i.md) | No | Polyline constructor options. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| this | 返回PolylineAttribute实例。 |
+| this | Returns the instance of the PolylineAttribute. |
 

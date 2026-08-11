@@ -1,11 +1,5 @@
 # cancel
 
-## 导入模块
-
-```TypeScript
-import { cacheDownload } from 'kits/@kit.BasicServicesKit';
-```
-
 ## cancel
 
 ```TypeScript
@@ -35,12 +29,14 @@ function cancel(url: string): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 401 | parameter error. Possible causes: &lt;br&gt; 1. Missing mandatory parameters. &lt;br&gt; 2. Incorrect parameter type. &lt;br&gt; 3. Parameter verification failed. |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | parameter error. Possible causes: &lt;br&gt; 1. Missing mandatory parameters. &lt;br&gt; 2. Incorrect parameter type. &lt;br&gt; 3. Parameter verification failed. |
 
 ## 示例
 
+ArkTS-Dyn示例：
+
 ```TypeScript
-import { cacheDownload, BusinessError } from '@kit.BasicServicesKit';
+import { BusinessError } from '@kit.BasicServicesKit';
 
 // 提供缓存下载任务的配置选项。
 let options: cacheDownload.CacheDownloadOptions = {};
@@ -55,6 +51,32 @@ try {
 
 // 处理其他业务逻辑。
 
+try {
+  // 在不需要特定任务缓存时，移除缓存下载任务，已缓存的内容不受影响。
+  cacheDownload.cancel("https://www.example.com");
+} catch (error) {
+  let err: BusinessError = error as BusinessError;
+  console.error(`Failed to cancel the task. err code: ${err.code}, err message: ${err.message}`);
+}
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+// 提供缓存下载任务的配置选项。
+let options: cacheDownload.CacheDownloadOptions = {};
+
+try {
+  // 进行缓存下载，资源若下载成功会被缓存到应用内存或应用沙箱目录的特定文件中。
+  cacheDownload.download("https://www.example.com", options);
+} catch (error) {
+  let err: BusinessError = error as BusinessError;
+  console.error(`Failed to download the resource. err code: ${err.code}, err message: ${err.message}`);
+}
+
+// 处理其他业务逻辑。
 try {
   // 在不需要特定任务缓存时，移除缓存下载任务，已缓存的内容不受影响。
   cacheDownload.cancel("https://www.example.com");

@@ -1,6 +1,15 @@
 # PermissionRequest
 
-权限请求。
+Implements the **PermissionRequest** object.For details about the sample code,see [onPermissionRequest](./arkts-basic-components-web-events.md#onpermissionrequest9).
+
+> **NOTE：**
+> 
+> - The initial APIs of this component are supported since API version 8.
+> Updates will be marked with a superscript to indicate their earliest API version.
+> 
+> - The initial APIs of this class are supported since API version 9.
+> 
+> - The sample effect is subject to the actual device.
 
 **Since:** 9
 
@@ -16,7 +25,7 @@
 constructor()
 ```
 
-PermissionRequest的构造函数。
+Constructs a **PermissionRequest** object.
 
 **Since:** 9
 
@@ -34,7 +43,7 @@ PermissionRequest的构造函数。
 deny(): void
 ```
 
-Reject the request.
+Denies the permission requested by the web page.
 
 **Since:** 9
 
@@ -52,7 +61,8 @@ Reject the request.
 getAccessibleResource(): Array<string>
 ```
 
-Gets the resource that the webpage is trying to access.
+Obtains the list of accessible resources requested for the web page. For details about the resource types, see  
+[ProtectedResourceType](arkts-arkweb-protectedresourcetype-e.md).
 
 **Since:** 9
 
@@ -76,7 +86,7 @@ Gets the resource that the webpage is trying to access.
 getOrigin(): string
 ```
 
-Gets the source if the webpage that attempted to access the restricted resource.
+Obtains the origin of this web page.
 
 **Since:** 9
 
@@ -100,7 +110,7 @@ Gets the source if the webpage that attempted to access the restricted resource.
 grant(resources: Array<string>): void
 ```
 
-Grant origin access to a given resource.
+Grants the permission for resources requested by the web page.
 
 **Since:** 9
 

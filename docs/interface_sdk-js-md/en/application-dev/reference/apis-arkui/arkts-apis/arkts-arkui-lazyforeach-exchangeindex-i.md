@@ -1,6 +1,6 @@
 # ExchangeIndex
 
-定义交换数据的位置。
+Defines position of exchange data.
 
 **Since:** 23
 
@@ -16,7 +16,7 @@
 end: int
 ```
 
-第二个交换位置。取值范围是[0, 数据源长度-1]。
+Index of the second exchange data.
 
 **Type:** int
 
@@ -36,7 +36,7 @@ end: int
 start: int
 ```
 
-第一个交换位置。取值范围是[0, 数据源长度-1]。
+Index of the first exchange data.
 
 **Type:** int
 

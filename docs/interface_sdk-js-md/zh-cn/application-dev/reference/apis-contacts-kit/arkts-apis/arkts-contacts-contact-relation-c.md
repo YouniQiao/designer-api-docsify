@@ -10,12 +10,6 @@
 
 **系统能力：** SystemCapability.Applications.ContactsData
 
-## 导入模块
-
-```TypeScript
-import { contact } from 'kits/@kit.ContactsKit';
-```
-
 ## CUSTOM_LABEL
 
 ```TypeScript
@@ -242,7 +236,7 @@ static readonly RELATION_PARENT: 9
 static readonly RELATION_PARTNER: 10
 ```
 
-父母关系类型，默认值为9。
+合作伙伴关系类型，默认值为10。
 
 **类型：** 10
 
@@ -302,7 +296,7 @@ static readonly RELATION_RELATIVE: 12
 static readonly RELATION_SISTER: 13
 ```
 
-亲属关系类型，默认值为12。
+姐妹关系类型，默认值为13。
 
 **类型：** 13
 
@@ -342,7 +336,7 @@ static readonly RELATION_SPOUSE: 14
 labelId?: number
 ```
 
-邮箱的类型。
+关系类型。
 
 **类型：** number
 
@@ -362,7 +356,7 @@ labelId?: number
 labelName?: string
 ```
 
-邮箱的类型名称。
+关系类型名称。
 
 **类型：** string
 

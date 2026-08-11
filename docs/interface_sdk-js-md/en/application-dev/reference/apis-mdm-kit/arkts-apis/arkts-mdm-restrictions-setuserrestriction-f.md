@@ -12,7 +12,7 @@ import { restrictions } from 'kits/@kit.MDMKit';
 function setUserRestriction(admin: Want, settingsItem: string, restricted: boolean): void
 ```
 
-设置用户行为的限制规则。
+Sets restrictions on user behaviors.
 
 **Since:** 20
 
@@ -34,17 +34,17 @@ function setUserRestriction(admin: Want, settingsItem: string, restricted: boole
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| admin | [Want](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-want-want-c.md) | Yes | 企业设备管理扩展组件。Want中必须包含企业设备管理扩展能力的abilityName和所在应用的bundleName。 |
-| settingsItem | string | Yes | 行为名称，仅支持以下值，传入其他值会报错。&lt;br/&gt;- setApn：APN设置，当前仅支持手机、平板使用。&lt;br/&gt;- powerLongPress：长按电源键打 开电源菜单，当前仅支持手机、平板使用。&lt;br/&gt;- setEthernetIp：修改以太网IP地址，当前仅支持PC/2in1设备使用。&lt;br/&gt;- setDeviceName：修改设备名称，当前仅支持PC/2in1设备、手 机、平板使用。禁用后，PC/2in1设备的设置中以下设备名称无法修改，包括关于本机、蓝牙、多设备协同->星闪。手机、平板设备设置中的关于本机、蓝牙、个人热点的设备名称无法修改。&lt;br/&gt;- setBiometricsAndScreenLock：修改锁屏密码，当前仅支持PC/2in1设备、手机、平板使用。 |
-| restricted | boolean | Yes | 是否禁用行为。true表示禁用，false表示不禁用。 |
+| admin | [Want](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-want-want-c.md) | Yes | EnterpriseAdminExtensionAbility. **Want** must contain the ability name of the EnterpriseAdminExtensionAbility and the bundle name of the application. |
+| settingsItem | string | Yes | Behavior name. Only the following values are supported. If other values are passed, an error will be reported. &lt;br&gt;- **setApn**: APN configuration, currently supported only on smartphones and tablets. &lt;br&gt;- **powerLongPress**: capability to open the power menu by long-pressing the power button. Currently, only smartphones and tablets are supported. &lt;br&gt;- **setEthernetIp**: Ethernet IP address configuration, currently supported only on PCs/2-in-1 devices. &lt;br&gt;- **setDeviceName**: device name configuration, currently supported only on PCs/2-in-1 devices, smartphones, and tablets. When it is disabled, the device name cannot be modified in the following settings: **About**, **Bluetooth**, and **More connectivity options** > **NearLink** on PCs/2-in-1 devices, and **About**, **Bluetooth**, and **Personal hotspot** on smartphones and tablets. &lt;br&gt;- **setBiometricsAndScreenLock**: screen lock password configuration, currently supported only on PCs/2-in- 1 devices, smartphones, and tablets. |
+| restricted | boolean | Yes | Whether to disable the action. The value **true** means to disable the action, and **false** means the opposite. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 201 | Permission verification failed. The application does not have the permission required to call the API. |
-| 9200001 | The application is not an administrator application of the device. |
-| 9200002 | The administrator application does not have permission to manage the device. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed. The application does not have the permission required to call the API. |
+| [9200001](../errorcode-enterpriseDeviceManager.md#9200001-deviceadmin-not-enabled) | The application is not an administrator application of the device. |
+| [9200002](../errorcode-enterpriseDeviceManager.md#9200002-permission-denied) | The administrator application does not have permission to manage the device. |
 
 ## Examples
 
@@ -74,7 +74,7 @@ try {
 function setUserRestriction(admin: Want, settingsItem: SettingsForDevice, restricted: boolean): void
 ```
 
-设置用户行为的限制规则。
+Restricts users from modifying specified device setting items.
 
 **Since:** 26.0.0
 
@@ -92,36 +92,16 @@ function setUserRestriction(admin: Want, settingsItem: SettingsForDevice, restri
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| admin | [Want](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-want-want-c.md) | Yes | 企业设备管理扩展组件。Want中必须包含企业设备管理扩展能力的abilityName和所在应用的bundleName。 |
+| admin | [Want](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-want-want-c.md) | Yes | EnterpriseAdminExtensionAbility. **Want** must contain the ability name of the EnterpriseAdminExtensionAbility and the bundle name of the application. |
 | settingsItem | [SettingsForDevice](arkts-mdm-restrictions-settingsfordevice-e.md) | Yes | Device setting items to be restricted from modification. |
-| restricted | boolean | Yes | 是否禁用行为。true表示禁用，false表示不禁用。 |
+| restricted | boolean | Yes | The value **true** means to disable the action, and **false** means the opposite. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 801 | Capability not supported. Failed to call the API due to limited device capabilities. |
-| 201 | Permission verification failed. The application does not have the permission required to call the API. |
-| 9200001 | The application is not an administrator application of the device. |
-| 9200002 | The administrator application does not have permission to manage the device. |
-
-## Examples
-
-```TypeScript
-import { restrictions } from '@kit.MDMKit';
-import { Want } from '@kit.AbilityKit';
-
-let wantTemp: Want = {
-  // Replace with actual values.
-  bundleName: 'com.example.myapplication',
-  abilityName: 'EnterpriseAdminAbility'
-};
-
-try {
-  restrictions.setUserRestriction(wantTemp, restrictions.SettingsForDevice.SET_APN, true);
-  console.info('Succeeded in restricting from setting apn');
-} catch (err) {
-  console.error(`Failed to restrict from setting apn. Code is ${err.code}, message is ${err.message}`);
-}
-```
+| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. Failed to call the API due to limited device capabilities. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed. The application does not have the permission required to call the API. |
+| [9200001](../errorcode-enterpriseDeviceManager.md#9200001-deviceadmin-not-enabled) | The application is not an administrator application of the device. |
+| [9200002](../errorcode-enterpriseDeviceManager.md#9200002-permission-denied) | The administrator application does not have permission to manage the device. |
 

@@ -12,10 +12,7 @@ import { Options, ReaderIteratorResult, Watcher, ReadTextOptions, WatchEventList
 declare function mmap(file: number | File, mode: MappingMode, offset: number, size: number): Promise<FileMapping>
 ```
 
-基于文件描述符或文件对象创建文件映射对象，使用promise异步回调。将文件内容映射到内存，以实现文件的高效读写访问。注意：读写模式（MappingMode.READ_WRITE）下，若映射范围超过原始文件大小，将自动扩展文件大小。  
-> **说明：**
-> 注意：在读写模式（MappingMode.READ_WRITE）下，如果映射范围超过原始文件大小，则文件大小
-> 将自动展开。
+Creates a file mapping object based on a file descriptor or file object, using promise asynchronous callback. Maps file contents to memory for efficient read and write access to files.Note: In the read/write mode (MappingMode.READ_WRITE), if the mapping range exceeds the raw file size, the file size will be automatically expanded.
 
 **Since:** 26.0.0
 
@@ -31,16 +28,16 @@ declare function mmap(file: number | File, mode: MappingMode, offset: number, si
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| file | number \| File | Yes | 已打开的File对象或已打开的文件描述符fd。 |
-| mode | [MappingMode](arkts-corefile-file-fs-mappingmode-e.md) | Yes | 创建文件内存映射对象的选项，必须指定如下选项中的一个： &lt;br&gt;MappingMode.READ_ONLY(0)：只读映射模式。文件映射区不可写，修改会抛出异常。 &lt;br&gt;MappingMode.READ_WRITE(1)：读写映射模式。修改会写入文件映射区，后续由操作系统同步到文件（非实时）。 &lt;br&gt;MappingMode.PRIVATE(2)：私有映射模式。是一种写时复制的映射机制，对映射区的修改仅对当前进程可见，不会影响原始文件。 |
-| offset | number | Yes | 文件映射区的起始位置，单位为Byte。 |
-| size | number | Yes | 文件映射区的大小，单位为Byte。 |
+| file | number \| File | Yes | File object or open file descriptor fd that has been opened. |
+| mode | [MappingMode](arkts-corefile-file-fs-mappingmode-e.md) | Yes | Option to create a file memory-mapped object. You must specify one of the following options: &lt;br&gt;MappingMode.READ_ONLY(0): read-only mode. The file mapping area is not writable. An exception is thrown when the file mapping area is modified. &lt;br&gt;MappingMode.READ_WRITE(1): read/write mode. The modification is written to the file mapping area and then synchronized to the file by the operating system (non-real-time). &lt;br&gt;MappingMode.PRIVATE(2): private mode. It is a copy-on-write mapping mechanism. Modifications to the mapping area are visible only to the current process and do not affect the original file. |
+| offset | number | Yes | Start position of the file mapping area, in bytes. |
+| size | number | Yes | Size of the file mapping area, in bytes. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;FileMapping&gt; | Promise对象。返回FileMapping对象。 |
+| Promise&lt;FileMapping&gt; | Promise object. Returns a FileMapping object. |
 
 **Error codes:**
 

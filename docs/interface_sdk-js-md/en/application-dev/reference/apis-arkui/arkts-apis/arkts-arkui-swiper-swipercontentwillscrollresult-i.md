@@ -16,7 +16,7 @@ The result of swiper ContentWillScrollCallback.
 comingIndex: int
 ```
 
-滑动方向上即将显示的页面index。取值范围为全体整数。
+the index value of the child page that will display.The value range is all integers.
 
 **Type:** int
 
@@ -36,7 +36,7 @@ comingIndex: int
 currentIndex: int
 ```
 
-当前页面对应的index。在一次跟手滑动过程中，只要手指未离开屏幕，该值将保持不变，即使该页面已完全移出视窗，如在涉及多个页面的场景中。取值范围为全体整数。
+the index value of the current child page.The value range is all integers.
 
 **Type:** int
 
@@ -56,7 +56,7 @@ currentIndex: int
 offset: double
 ```
 
-此次滑动的位移，带有符号，正负分别指示不同的翻页方向。正数表示从index=1向index=0翻页，负数表示从index=0向index=1翻页。在手指滑动的场景中，该值为滑动事件中每帧传递下来的偏移量。在滚动鼠标滚轮和使用键盘方向键导航的场景中，该值代表即将翻页的距离。
+the sliding offset of each frame. Positive numbers indicating slide backward(e.g. from index=1 to index=0),negative numbers indicating slide forward(e.g. from index=0 to index=1).
 
 **Type:** double
 

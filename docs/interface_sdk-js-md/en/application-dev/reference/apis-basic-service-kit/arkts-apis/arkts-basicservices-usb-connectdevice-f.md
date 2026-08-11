@@ -12,9 +12,10 @@ import { usb } from 'kits/@kit.BasicServicesKit';
 function connectDevice(device: USBDevice): Readonly<USBDevicePipe>
 ```
 
-打开USB设备。
+Connects to a USB device.
 
-需要调用[usb.getDevices](arkts-basicservices-usb-getdevices-f.md#getdevices)获取设备信息以及device，再调用[usb.requestRight](arkts-basicservices-usb-requestright-f.md#requestright)获取设备请求权限。
+Before you do this, call [usb.getDevices](arkts-basicservices-usb-getdevices-f.md#getdevices) to obtain the USB device list, and then call  
+[usb.requestRight](arkts-basicservices-usb-requestright-f.md#requestright) to request the device access permission.
 
 **Since:** 8
 
@@ -32,13 +33,13 @@ function connectDevice(device: USBDevice): Readonly<USBDevicePipe>
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| device | [USBDevice](arkts-basicservices-usb-usbdevice-i.md) | Yes | USB设备信息。 |
+| device | [USBDevice](arkts-basicservices-usb-usbdevice-i.md) | Yes | USB device information. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [Readonly](../../apis-default/arkts-apis/arkts-readonly-t.md)&lt;USBDevicePipe&gt; | 指定的传输通道对象。 |
+| [Readonly](../../apis-default/arkts-apis/arkts-readonly-t.md)&lt;USBDevicePipe&gt; | USB device pipe for data transfer. |
 
 ## Examples
 

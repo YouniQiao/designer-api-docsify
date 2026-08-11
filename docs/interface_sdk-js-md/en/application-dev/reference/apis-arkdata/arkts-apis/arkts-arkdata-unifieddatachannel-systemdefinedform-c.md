@@ -1,6 +1,7 @@
 # SystemDefinedForm
 
-系统定义的桌面卡片类型数据，是[SystemDefinedRecord](arkts-arkdata-unifieddatachannel-systemdefinedrecord-c.md)的子类。
+Represents the service widget data defined by the system. It is a child class of   
+[SystemDefinedRecord](arkts-arkdata-unifieddatachannel-systemdefinedrecord-c.md).
 
 **Inheritance/Implementation:** SystemDefinedForm extends [SystemDefinedRecord](arkts-arkdata-unifieddatachannel-systemdefinedrecord-c.md)
 
@@ -24,7 +25,7 @@ import { unifiedDataChannel } from 'kits/@kit.ArkData';
 set abilityName(value: string)
 ```
 
-卡片对应的ability名。
+Indicates the ability name of form.
 
 **Type:** string
 
@@ -46,7 +47,7 @@ set abilityName(value: string)
 set bundleName(value: string)
 ```
 
-卡片所属的bundle名。
+Indicates the bundle name of form
 
 **Type:** string
 
@@ -68,7 +69,7 @@ set bundleName(value: string)
 set formId(value: int)
 ```
 
-卡片id。
+Indicates the id of form
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
@@ -90,7 +91,7 @@ set formId(value: int)
 set formName(value: string)
 ```
 
-卡片名称。
+Indicates the name of form
 
 **Type:** string
 
@@ -112,7 +113,7 @@ set formName(value: string)
 set module(value: string)
 ```
 
-卡片所属的module名。
+Indicates the module of form
 
 **Type:** string
 

@@ -1,6 +1,6 @@
 # CurrentOutputDeviceChangedEvent
 
-应用接收到输出设备的变更事件。
+Describes the event indicating that the output device changes.
 
 **Since:** 20
 
@@ -22,7 +22,7 @@ import { audio } from 'kits/@kit.AudioKit';
 changeReason: AudioStreamDeviceChangeReason
 ```
 
-设备变更原因。
+Audio device change reason.
 
 **Type:** [AudioStreamDeviceChangeReason](arkts-audio-audio-audiostreamdevicechangereason-e.md)
 
@@ -40,7 +40,7 @@ changeReason: AudioStreamDeviceChangeReason
 devices: AudioDeviceDescriptors
 ```
 
-设备信息。
+Audio device descriptors after change.
 
 **Type:** [AudioDeviceDescriptors](arkts-audio-audio-audiodevicedescriptors-t.md)
 
@@ -58,7 +58,7 @@ devices: AudioDeviceDescriptors
 preDevices?: AudioDeviceDescriptors
 ```
 
-应用输出设备变更前的设备信息。
+Audio device descriptors before change.
 
 **Type:** [AudioDeviceDescriptors](arkts-audio-audio-audiodevicedescriptors-t.md)
 
@@ -78,7 +78,7 @@ preDevices?: AudioDeviceDescriptors
 recommendedAction: OutputDeviceChangeRecommendedAction
 ```
 
-设备变更后推荐的操作。
+Recommend action when device change.
 
 **Type:** [OutputDeviceChangeRecommendedAction](arkts-audio-audio-outputdevicechangerecommendedaction-e.md)
 

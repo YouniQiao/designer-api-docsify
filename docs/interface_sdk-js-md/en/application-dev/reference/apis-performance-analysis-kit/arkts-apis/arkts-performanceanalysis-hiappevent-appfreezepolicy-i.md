@@ -1,6 +1,6 @@
 # AppFreezePolicy
 
-提供应用冻屏事件配置策略的定义。
+Defines the application freeze event configuration policy.
 
 **Since:** 24
 
@@ -22,15 +22,15 @@ import { hiAppEvent } from 'kits/@kit.PerformanceAnalysisKit';
 pageSwitchLogEnable?: boolean
 ```
 
-是否使能应用冻屏事件的页面切换日志。
+Whether to enable the page switching log for APP_FREEZE event.
 
-true：使能应用冻屏事件的页面切换日志。
+**true**: yes.
 
-false：不使能应用冻屏事件的页面切换日志。
+**false**: no.
 
-默认值：false。
+The default value is **false**.
 
-**说明：**应用每次使能行为只在应用当前生命周期生效，在同一生命周期内，以最后一次成功调用的使能状态为准。应用重启后，需要重新设置使能状态。
+Note: The enabling behavior of an application takes effect only in its current lifecycle. In the same lifecycle,the enabling status of the last successful call is used. After the application restarts, you need to set the enabling status again.
 
 **Type:** boolean
 

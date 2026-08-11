@@ -236,7 +236,7 @@ Gets network cookie manager
 getHitTest(): HitTestType
 ```
 
-获取点击测试类型。
+Gets the type of HitTest.
 
 **Since:** 8
 
@@ -244,7 +244,7 @@ getHitTest(): HitTestType
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.web.webview.webview.WebviewController#getHitTest
+**Substitutes:** [@ohos.web.webview:webview.WebviewController#getHitTest](../arkts-apis/arkts-arkweb-webview-webviewcontroller-c.md/arkts-arkweb-webview-webviewcontroller-c.md#gethittest)
 
 <!--Device-WebController-getHitTest(): HitTestType--><!--Device-WebController-getHitTest(): HitTestType-End-->
 
@@ -254,7 +254,7 @@ getHitTest(): HitTestType
 
 | Type | Description |
 | --- | --- |
-| [HitTestType](arkts-arkweb-hittesttype-e.md) | 点击测试类型。 |
+| [HitTestType](arkts-arkweb-hittesttype-e.md) | The type of HitTest. |
 
 ## loadData
 
@@ -314,7 +314,8 @@ Loads the given URL.
 onActive(): void
 ```
 
-Let the Web active.It is no longer maintained since API version 9, and it is recommended to use {@link onActive} instead.
+Called when the **Web** component enters the active state.This API is supported since API version 8 and deprecated since API version 9. You are advised to use  
+[onActive&lt;sup&gt;9+&lt;/sup&gt;](../arkts-apis/arkts-arkweb-webview-webviewcontroller-c.md/arkts-arkweb-webview-webviewcontroller-c.md#onactive) instead.
 
 **Since:** 8
 
@@ -334,7 +335,8 @@ Let the Web active.It is no longer maintained since API version 9, and it is rec
 onInactive(): void
 ```
 
-Let the Web inactive.It is no longer maintained since API version 9, and it is recommended to use {@link onInactive} instead.
+Called when the **Web** component enters the inactive state.This API is supported since API version 8 and deprecated since API version 9. You are advised to use  
+[onInactive&lt;sup&gt;9+&lt;/sup&gt;](../arkts-apis/arkts-arkweb-webview-webviewcontroller-c.md/arkts-arkweb-webview-webviewcontroller-c.md#oninactive) instead.
 
 **Since:** 8
 
@@ -466,7 +468,7 @@ Stops the current load.
 zoom(factor: number): void
 ```
 
-对网页进行缩放。
+Let the Web zoom by.
 
 **Since:** 8
 
@@ -474,7 +476,7 @@ zoom(factor: number): void
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.web.webview.webview.WebviewController#zoom
+**Substitutes:** [@ohos.web.webview:webview.WebviewController#zoom](../arkts-apis/arkts-arkweb-webview-webviewcontroller-c.md/arkts-arkweb-webview-webviewcontroller-c.md#zoom)
 
 <!--Device-WebController-zoom(factor: number): void--><!--Device-WebController-zoom(factor: number): void-End-->
 
@@ -484,5 +486,5 @@ zoom(factor: number): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| factor | number | Yes | 缩放系数。 |
+| factor | number | Yes | The zoom factor. |
 

@@ -6,7 +6,7 @@
 function cancelSuspendDelay(requestId: number): void
 ```
 
-取消延迟挂起。
+Cancels the suspension delay.
 
 **Since:** 7
 
@@ -24,7 +24,7 @@ function cancelSuspendDelay(requestId: number): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| requestId | number | Yes | 延迟挂起的请求ID。这个值通过调用 [requestSuspendDelay](arkts-backgroundtasks-backgroundtaskmanager-requestsuspenddelay-depr-f.md#requestsuspenddelay)方法获取。 |
+| requestId | number | Yes | ID of the suspension delay request. The value is obtained by calling [requestSuspendDelay](arkts-backgroundtasks-backgroundtaskmanager-requestsuspenddelay-depr-f.md#requestsuspenddelay). |
 
 ## Examples
 

@@ -1,6 +1,6 @@
 # RadioIndicatorType
 
-单选框的样式。
+Radio button style.
 
 **Since:** 12
 
@@ -16,7 +16,7 @@
 TICK = 0
 ```
 
-选中样式为系统默认TICK图标。
+Default tick icon.
 
 **Since:** 12
 
@@ -38,7 +38,7 @@ TICK = 0
 DOT = 1
 ```
 
-选中样式为系统默认DOT图标。
+Default dot icon.
 
 **Since:** 12
 
@@ -60,7 +60,7 @@ DOT = 1
 CUSTOM = 2
 ```
 
-选中样式为indicatorBuilder中的内容。
+Custom component.
 
 **Since:** 12
 

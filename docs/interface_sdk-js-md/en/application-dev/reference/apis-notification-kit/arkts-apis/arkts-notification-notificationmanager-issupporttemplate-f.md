@@ -12,7 +12,8 @@ import { notificationManager } from 'kits/@kit.NotificationKit';
 function isSupportTemplate(templateName: string, callback: AsyncCallback<boolean>): void
 ```
 
-在使用[通知模板](arkts-notification-notificationmanager-notificationtemplate-t.md)发布通知前，可以通过该接口查询是否支持对应的通知模板。使用callback异步回调。
+Checks whether a specified template is supported before using   
+[NotificationTemplate](arkts-notification-notificationmanager-notificationtemplate-t.md) to publish a notification. This API uses an asynchronous callback to return the result.
 
 **Since:** 9
 
@@ -26,17 +27,17 @@ function isSupportTemplate(templateName: string, callback: AsyncCallback<boolean
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| templateName | string | Yes | 模板名称。当前仅支持'downloadTemplate'。 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;boolean&gt; | Yes | 回调函数。返回true表示支持该模板；返回false表示不支持该模板；调用失败返回错误对象。 |
+| templateName | string | Yes | Template name. Currently, only **downloadTemplate** is supported. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;boolean&gt; | Yes | Callback used to return the result. The value **true** indicates that the template is supported, and **false** indicates the opposite. If this API call fails, an error object is returned. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. 3. Parameter verification failed. |
-| 1600001 | Internal error. |
-| 1600002 | Marshalling or unmarshalling error. |
-| 1600003 | Failed to connect to the service. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. 3. Parameter verification failed. |
+| [1600001](../errorcode-notification.md#1600001-internal-error) | Internal error. |
+| [1600002](../errorcode-notification.md#1600002-marshalling-or-unmarshalling-error) | Marshalling or unmarshalling error. |
+| [1600003](../errorcode-notification.md#1600003-failed-to-connect-to-the-notification-service) | Failed to connect to the service. |
 
 ## Examples
 
@@ -61,7 +62,8 @@ notificationManager.isSupportTemplate(templateName, isSupportTemplateCallback);
 function isSupportTemplate(templateName: string): Promise<boolean>
 ```
 
-在使用[通知模板](arkts-notification-notificationmanager-notificationtemplate-t.md)发布通知前，可以通过该接口查询是否支持对应的通知模板。使用Promise异步回调。
+Checks whether a specified template is supported before using   
+[NotificationTemplate](arkts-notification-notificationmanager-notificationtemplate-t.md) to publish a notification. This API uses a promise to return the result.
 
 **Since:** 9
 
@@ -75,22 +77,22 @@ function isSupportTemplate(templateName: string): Promise<boolean>
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| templateName | string | Yes | 模板名称。当前仅支持'downloadTemplate'。 |
+| templateName | string | Yes | Template name. Currently, only **downloadTemplate** is supported. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;boolean&gt; | Promise对象。返回true表示支持该模板；返回false表示不支持该模板。 |
+| Promise&lt;boolean&gt; | Promise used to return the result. The value **true** means that the specified template is supported, and **false** means the opposite. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. 3. Parameter verification failed. |
-| 1600001 | Internal error. |
-| 1600002 | Marshalling or unmarshalling error. |
-| 1600003 | Failed to connect to the service. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. 3. Parameter verification failed. |
+| [1600001](../errorcode-notification.md#1600001-internal-error) | Internal error. |
+| [1600002](../errorcode-notification.md#1600002-marshalling-or-unmarshalling-error) | Marshalling or unmarshalling error. |
+| [1600003](../errorcode-notification.md#1600003-failed-to-connect-to-the-notification-service) | Failed to connect to the service. |
 
 ## Examples
 

@@ -12,7 +12,7 @@ import { defaultAppManager } from 'kits/@kit.AbilityKit';
 function setDefaultApplicationForAppClone(type: string, elementName: ElementName, appIndex: int, userId?: int): void
 ```
 
-以同步方法将分身应用设置为打开相应type类型的默认应用。
+Sets an application clone as the default application of the specified type. This API returns the result synchronously.
 
 **Since:** 23
 
@@ -30,22 +30,22 @@ function setDefaultApplicationForAppClone(type: string, elementName: ElementName
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | string | Yes | 要设置的应用类型，支持取值包括： [ApplicationType](arkts-ability-defaultappmanager-applicationtype-e.md)中的值、 [MIMEType](../../../database/uniform-data-type-list.md#基础类型)类型、或 [UniformDataType](../../apis-arkdata/arkts-apis/arkts-arkdata-uniformtypedescriptor-uniformdatatype-e.md/arkts-arkdata-uniformtypedescriptor-uniformdatatype-e.md)类型。 |
-| elementName | [ElementName](arkts-ability-elementname-i.md) | Yes | 要设置为默认应用的组件信息，仅使用其中的bundleName、abilityName、moduleName属性，且三个属性必须设置。 |
-| appIndex | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | 表示分身应用的索引。&lt;br&gt;取值范围：1、2、3、4、5。 |
-| userId | ArkTS-Dyn: number  <br>ArkTS-Sta：int | No | 表示用户ID，可以通过 [getOsAccountLocalId接口](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-osaccount-accountmanager-i.md/arkts-basicservices-osaccount-accountmanager-i.md#getosaccountlocalid) 获取。&lt;br&gt;默认值：调用方所在用户Id。 |
+| type | string | Yes | Type of the application. The value can be a value of [ApplicationType](arkts-ability-defaultappmanager-applicationtype-e.md), [MIMEType](../../../database/uniform-data-type-list.md#generic-utds), or [UniformDataType](../../apis-arkdata/arkts-apis/arkts-arkdata-uniformtypedescriptor-uniformdatatype-e.md/arkts-arkdata-uniformtypedescriptor-uniformdatatype-e.md). |
+| elementName | [ElementName](arkts-ability-elementname-i.md) | Yes | Element information of the application. Only **bundleName**, **abilityName**, and **moduleName** are used, and the three properties must be set. |
+| appIndex | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | Index of the application clone.&lt;br&gt;The options include 1, 2, 3, 4, and 5. |
+| userId | ArkTS-Dyn: number  <br>ArkTS-Sta：int | No | User ID, which can be obtained by calling [getOsAccountLocalId](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-osaccount-accountmanager-i.md/arkts-basicservices-osaccount-accountmanager-i.md#getosaccountlocalid) .&lt;br&gt;The default value is the user ID of the caller. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 801 | Capability not supported. |
-| 17700028 | The specified ability and type do not match. |
-| 17700061 | The specified app index is invalid. |
-| 17700025 | The specified type is invalid. |
-| 201 | Permission denied. |
-| 202 | Permission denied. A non-system application is not allowed to call a system API. |
-| 17700004 | The specified user id is not found. |
+| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. |
+| [17700028](../errorcode-bundle.md#17700028-mismatch-between-ability-and-type) | The specified ability and type do not match. |
+| [17700061](../errorcode-bundle.md#17700061-appindex-for-a-clone-is-invalid) | The specified app index is invalid. |
+| [17700025](../errorcode-bundle.md#17700025-invalid-type) | The specified type is invalid. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission denied. A non-system application is not allowed to call a system API. |
+| [17700004](../errorcode-bundle.md#17700004-user-id-does-not-exist) | The specified user id is not found. |
 
 ## Examples
 

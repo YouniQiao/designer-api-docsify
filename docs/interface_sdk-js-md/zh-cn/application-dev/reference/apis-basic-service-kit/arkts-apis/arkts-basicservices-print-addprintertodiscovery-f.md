@@ -1,11 +1,5 @@
 # addPrinterToDiscovery
 
-## 导入模块
-
-```TypeScript
-import { print } from 'kits/@kit.BasicServicesKit';
-```
-
 ## addPrinterToDiscovery
 
 ```TypeScript
@@ -40,14 +34,14 @@ function addPrinterToDiscovery(printerInformation: PrinterInformation): Promise<
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
-| 201 | the application does not have permission to call this function. |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
+| [201](../../errorcode-universal.md#201-权限校验失败) | the application does not have permission to call this function. |
 
 ## 示例
 
 ```TypeScript
 import { print } from '@kit.BasicServicesKit';
-import { BusinessError } from '@kit.BasicServicesKit';
+import { BusinessError } from '@ohos.base';
 
 let printerInformation : print.PrinterInformation = {
     printerId : 'testPrinterId',
@@ -61,7 +55,7 @@ let printerInformation : print.PrinterInformation = {
 print.addPrinterToDiscovery(printerInformation).then(() => {
     console.info('addPrinterToDiscovery success');
 }).catch((error: BusinessError) => {
-    console.error(`Failed to addPrinterToDiscovery. Code: ${error.code}, message: ${error.message}`);
+    console.error('addPrinterToDiscovery error : ' + JSON.stringify(error));
 })
 ```
 

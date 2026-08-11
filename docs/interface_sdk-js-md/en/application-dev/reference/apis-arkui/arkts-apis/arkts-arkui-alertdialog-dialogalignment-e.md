@@ -1,6 +1,6 @@
 # DialogAlignment
 
-警告弹窗的对齐方式。
+The alignment of dialog,
 
 **Since:** 23
 
@@ -16,7 +16,7 @@
 Top
 ```
 
-垂直顶部对齐。
+Vertical top alignment.
 
 **Since:** 23
 
@@ -34,7 +34,7 @@ Top
 Center
 ```
 
-垂直居中对齐。
+Align vertically to the center.
 
 **Since:** 23
 
@@ -52,7 +52,7 @@ Center
 Bottom
 ```
 
-垂直底部对齐。
+Vertical bottom alignment.
 
 **Since:** 23
 
@@ -70,7 +70,7 @@ Bottom
 Default
 ```
 
-默认对齐。
+Default alignment.
 
 **Since:** 23
 
@@ -88,7 +88,7 @@ Default
 TopStart
 ```
 
-左上对齐。
+Align the upper left corner.
 
 **Since:** 23
 
@@ -106,7 +106,7 @@ TopStart
 TopEnd
 ```
 
-右上对齐。
+Align the upper right corner.
 
 **Since:** 23
 
@@ -124,7 +124,7 @@ TopEnd
 CenterStart
 ```
 
-左中对齐。
+Left center alignment.
 
 **Since:** 23
 
@@ -142,7 +142,7 @@ CenterStart
 CenterEnd
 ```
 
-右中对齐。
+Right center alignment.
 
 **Since:** 23
 
@@ -160,7 +160,7 @@ CenterEnd
 BottomStart
 ```
 
-左下对齐。
+Align the lower left corner.
 
 **Since:** 23
 
@@ -178,7 +178,7 @@ BottomStart
 BottomEnd
 ```
 
-右下对齐。
+Align the lower right corner.
 
 **Since:** 23
 

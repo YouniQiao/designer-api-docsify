@@ -1,11 +1,5 @@
 # setKeyDownDuration（系统接口）
 
-## 导入模块
-
-```TypeScript
-import { shortKey } from 'kits/@kit.InputKit';
-```
-
 ## setKeyDownDuration
 
 ```TypeScript
@@ -36,39 +30,8 @@ function setKeyDownDuration(businessKey: string, delay: int, callback: AsyncCall
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; 3. Parameter verification failed. |
-| 202 | SystemAPI permission error. |
-
-## 示例
-
-```TypeScript
-import { shortKey } from '@kit.InputKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-@Entry
-@Component
-struct Index {
-  build() {
-    RelativeContainer() {
-      Text()
-        .onClick(() => {
-          try {
-            // 设置延迟拉起时间500ms
-            shortKey.setKeyDownDuration('businessId', 500, (error: BusinessError) => {
-              if (error) {
-                console.error(`Failed to set key down duration, Code: ${(error as BusinessError).code}, message: ${(error as BusinessError).message}.`);
-                return;
-              }
-              console.info(`Succeeded in setting key down duration.`);
-            });
-          } catch (error) {
-            console.error(`Failed to set key down duration, Code: ${(error as BusinessError).code}, message: ${(error as BusinessError).message}.`);
-          }
-        });
-    }
-  }
-}
-```
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; 3. Parameter verification failed. |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | SystemAPI permission error. |
 
 
 ## setKeyDownDuration
@@ -106,35 +69,6 @@ function setKeyDownDuration(businessKey: string, delay: int): Promise<void>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; 3. Parameter verification failed. |
-| 202 | SystemAPI permission error. |
-
-## 示例
-
-```TypeScript
-import { shortKey } from '@kit.InputKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-@Entry
-@Component
-struct Index {
-  build() {
-    RelativeContainer() {
-      Text()
-        .onClick(() => {
-          try {
-            // 设置延迟拉起时间500ms
-            shortKey.setKeyDownDuration('businessId', 500).then(() => {
-              console.info(`Succeeded in setting key down duration.`);
-            }).catch((error: BusinessError) => {
-              console.error(`Failed to set key down duration, Code: ${(error as BusinessError).code}, message: ${(error as BusinessError).message}.`);
-            })
-          } catch (error) {
-            console.error(`Failed to set key down duration, Code: ${(error as BusinessError).code}, message: ${(error as BusinessError).message}.`);
-          }
-        })
-    }
-  }
-}
-```
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; 3. Parameter verification failed. |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | SystemAPI permission error. |
 

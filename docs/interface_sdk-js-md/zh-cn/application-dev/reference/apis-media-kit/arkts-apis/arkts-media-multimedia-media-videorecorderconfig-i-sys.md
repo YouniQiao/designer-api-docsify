@@ -12,12 +12,6 @@
 
 **系统接口：** 此接口为系统接口。
 
-## 导入模块
-
-```TypeScript
-import { media } from 'kits/@kit.MediaKit';
-```
-
 ## audioSourceType
 
 ```TypeScript
@@ -46,7 +40,7 @@ location?: Location
 
 地理位置信息。
 
-**类型：** [Location](../../apis-location-kit/arkts-apis/arkts-location-geolocationmanager-location-i.md)
+**类型：** [Location](../../apis-camera-kit/arkts-apis/arkts-camera-camera-location-i.md)
 
 **起始版本：** 9
 

@@ -12,7 +12,7 @@ import { display } from 'kits/@kit.ArkUI';
 function convertGlobalToRelativeCoordinate(position: Position, displayId?: long): RelativePosition
 ```
 
-将主屏左上角为原点的全局坐标转换成displayId指定屏幕左上角为原点的相对坐标。若未传入displayId，默认转换为全局坐标所在屏幕的相对坐标系。若全局坐标不在任何屏幕上，默认转换成主屏的相对坐标。
+Converts global coordinates (based on the top-left corner of the primary screen) into relative coordinates (based on the top-left corner of the screen specified by **displayId**). This API supports only coordinate conversion between the primary screen and extended screen. If **displayId** is not passed, the coordinates are converted relative to the screen where the global coordinates are located. If the global coordinates are not on any screen, the coordinates are converted relative to the primary screen by default.
 
 **Since:** 20
 
@@ -28,33 +28,33 @@ function convertGlobalToRelativeCoordinate(position: Position, displayId?: long)
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| position | [Position](arkts-arkui-display-position-i.md) | Yes | 需要转化为相对坐标的全局坐标。 |
-| displayId | ArkTS-Dyn: number  <br>ArkTS-Sta：long | No | 相对坐标系原点所在的屏幕ID，传递该参数表示以指定屏幕左上角为原点转换相对坐标。不指定则不传参，默认转换成全局坐标所在屏幕的相对坐标，若全局坐标不在任何屏幕上，则默认转换 成主屏的相对坐标。 |
+| position | [Position](arkts-arkui-display-position-i.md) | Yes | Global coordinates to convert. |
+| displayId | ArkTS-Dyn: number  <br>ArkTS-Sta：long | No | Display ID for the relative coordinates. If this parameter is passed, the coordinates are converted relative to this screen. If it is not provided, the coordinates are converted to the screen where the global coordinates are located, or the primary screen if they are not on any screen. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [RelativePosition](arkts-arkui-display-relativeposition-i.md) | 返回对应屏幕的相对坐标。 |
+| [RelativePosition](arkts-arkui-display-relativeposition-i.md) | Relative coordinates for the specified screen. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 1400004 | Parameter error. Possible cause: 1. Invalid parameter range. |
-| 1400003 | This display manager service works abnormally. |
+| [1400004](../errorcode-display.md#1400004-parameter-error) | Parameter error. Possible cause: 1. Invalid parameter range. |
+| [1400003](../errorcode-display.md#1400003-abnormal-display-manager-service) | This display manager service works abnormally. |
 
 ## Examples
 
 ```TypeScript
-// Define the global coordinates to convert.
+import { display } from '@kit.ArkUI';
+
 let position: display.Position = {
     x: 100,
     y: 200
 };
 
 try {
-  // Convert the global coordinates to relative coordinates.
   let relPos: display.RelativePosition = display.convertGlobalToRelativeCoordinate(position, 0);
   console.info(`The relative coordinate is ${relPos.displayId}, ${relPos.position.x}, ${relPos.position.y}`)
 } catch (exception) {

@@ -12,9 +12,9 @@ import { hiAppEvent } from 'kits/@kit.PerformanceAnalysisKit';
 function addProcessor(processor: Processor): long
 ```
 
-添加数据处理者配置信息，用于配置处理者接收的事件名等信息。事件发生后处理者可以接收事件。
+Adds the configuration information of the data processor, such as the event name received by it.
 
-该接口为同步接口，包含耗时操作。为了确保性能，建议使用[addProcessorFromConfig](arkts-performanceanalysis-hiappevent-addprocessorfromconfig-f.md#addprocessorfromconfig)异步接口或者交由子线程执行。
+This is a synchronous API and involves time-consuming operations. To ensure performance, you are advised to use the asynchronous API [addProcessorFromConfig](arkts-performanceanalysis-hiappevent-addprocessorfromconfig-f.md#addprocessorfromconfig) or use a child thread.
 
 **Since:** 11
 
@@ -30,19 +30,19 @@ function addProcessor(processor: Processor): long
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| processor | [Processor](arkts-performanceanalysis-hiappevent-processor-i.md) | Yes | 上报事件的数据处理者。 |
+| processor | [Processor](arkts-performanceanalysis-hiappevent-processor-i.md) | Yes | Data processor. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| ArkTS-Dyn: number  <br>ArkTS-Sta：long | 所添加上报事件数据处理者的ID，标识唯一数据处理者，可用于移除数据处理者。 添加失败返回-1，添加成功返回大于0的值。 |
+| ArkTS-Dyn: number  <br>ArkTS-Sta：long | ID of the data processor of the reported event, which uniquely identifies the data processor and can be used to remove the data processor. If the operation fails, **-1** is returned. If the operation is successful, a value greater than **0** is returned. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types. |
 
 ## Examples
 
@@ -50,13 +50,13 @@ function addProcessor(processor: Processor): long
 import { hilog } from '@kit.PerformanceAnalysisKit';
 
 try {
-  let processor: hiAppEvent.Processor = {
-    name: 'analytics_demo'
-  };
-  let id: number = hiAppEvent.addProcessor(processor);
-  hilog.info(0x0000, 'hiAppEvent', `addProcessor event was successful, id=${id}`);
+    let processor: hiAppEvent.Processor = {
+      name: 'analytics_demo'
+    };
+    let id: number = hiAppEvent.addProcessor(processor);
+    hilog.info(0x0000, 'hiAppEvent', `addProcessor event was successful, id=${id}`);
 } catch (error) {
-  hilog.error(0x0000, 'hiAppEvent', `failed to addProcessor event, code=${error.code}`);
+    hilog.error(0x0000, 'hiAppEvent', `failed to addProcessor event, code=${error.code}`);
 }
 ```
 

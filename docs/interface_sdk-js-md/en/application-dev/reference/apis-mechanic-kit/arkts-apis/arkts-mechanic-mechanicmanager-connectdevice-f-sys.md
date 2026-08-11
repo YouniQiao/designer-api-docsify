@@ -12,7 +12,7 @@ import { mechanicManager } from 'kits/@kit.MechanicKit';
 function connectDevice(addrInfo: AddressInfo, params: ConnectParam): Promise<AttachStateChangeInfo>
 ```
 
-基于地址连接设备
+Connecting devices based on addresses
 
 **Since:** 26.0.0
 
@@ -32,8 +32,8 @@ function connectDevice(addrInfo: AddressInfo, params: ConnectParam): Promise<Att
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| addrInfo | [AddressInfo](arkts-mechanic-mechanicmanager-addressinfo-i-sys.md) | Yes | 地址信息。 |
-| params | [ConnectParam](arkts-mechanic-mechanicmanager-connectparam-i-sys.md) | Yes | 操作参数。 |
+| addrInfo | [AddressInfo](arkts-mechanic-mechanicmanager-addressinfo-i-sys.md) | Yes | Address information. |
+| params | [ConnectParam](arkts-mechanic-mechanicmanager-connectparam-i-sys.md) | Yes | Connect Parameters. |
 
 **Return value:**
 
@@ -45,7 +45,7 @@ function connectDevice(addrInfo: AddressInfo, params: ConnectParam): Promise<Att
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 201 | Permission denied. |
-| 202 | Not system application. |
-| 33300001 | Service exception. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system application. |
+| [33300001](../errorcode-mechanic.md#33300001-system-error) | Service exception. |
 

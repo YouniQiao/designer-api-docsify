@@ -1,6 +1,6 @@
 # PanelType
 
-设置滑动面板的类型
+Sets the type of sliding panel.
 
 **Since:** 7
 
@@ -18,7 +18,7 @@
 Minibar = 0
 ```
 
-提供minibar和类全屏展示切换效果。
+The switch between the minibar and full-screen display is provided.
 
 **Since:** 7
 
@@ -38,7 +38,7 @@ Minibar = 0
 Foldable = 1
 ```
 
-内容永久展示类，提供大（类全屏）、中（类半屏）、小三种尺寸展示切换效果。
+Permanent content display class.The switchover effect is provided in three sizes: large (full-screen), medium (half-screen), and small.
 
 **Since:** 7
 
@@ -58,7 +58,7 @@ Foldable = 1
 Temporary = 2
 ```
 
-内容临时展示区，提供大（类全屏）、中（类半屏）两种尺寸展示切换效果。
+Temporary content display area.The switchover effect is provided in three sizes: large (full-screen), medium (half-screen), and small.
 
 **Since:** 7
 
@@ -78,7 +78,7 @@ Temporary = 2
 CUSTOM = 3
 ```
 
-配置自适应内容高度，不支持尺寸切换效果。
+Custom content display area.The switchover effect is provided in three sizes: large (full-screen), medium (half-screen), and small.
 
 **Since:** 10
 

@@ -12,11 +12,7 @@ import { wallpaper } from 'kits/@kit.BasicServicesKit';
 function getColorsSync(wallpaperType: WallpaperType): Array<RgbaColor>
 ```
 
-获取指定类型壁纸的主要颜色信息。
-
-> **说明：**
-> 
-> 从 API version 9开始支持，从API version 23开始废弃。
+Obtains the wallpaper colors for the wallpaper of the specified type. Returns rgbaColor type of array callback function.
 
 **Since:** 9
 
@@ -34,20 +30,20 @@ function getColorsSync(wallpaperType: WallpaperType): Array<RgbaColor>
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| wallpaperType | [WallpaperType](arkts-basicservices-wallpaper-wallpapertype-e.md) | Yes |  |
+| wallpaperType | [WallpaperType](arkts-basicservices-wallpaper-wallpapertype-e.md) | Yes | indicates the wallpaper type. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Array&lt;RgbaColor&gt; | 返回壁纸的主要颜色信息。 |
+| Array&lt;RgbaColor&gt; | the Array&lt;RgbaColor&gt; returned by the function. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types; 3.Parameter verification failed. |
-| 202 | permission verification failed, application which is not a system application uses system API. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types; 3.Parameter verification failed. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | permission verification failed, application which is not a system application uses system API. |
 
 ## Examples
 

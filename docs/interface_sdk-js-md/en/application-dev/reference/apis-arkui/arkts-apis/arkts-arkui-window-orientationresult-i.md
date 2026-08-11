@@ -1,6 +1,6 @@
 # OrientationResult
 
-设置窗口显示方向的执行结果。
+Result of setting preferred orientation
 
 **Since:** 26.0.0
 
@@ -22,7 +22,7 @@ import { window } from 'kits/@kit.ArkUI';
 executionResult : OrientationExecutionResult
 ```
 
-窗口显示方向的执行结果枚举。
+Execution result of setting preferred orientation.
 
 **Type:** [OrientationExecutionResult](arkts-arkui-window-orientationexecutionresult-e.md)
 

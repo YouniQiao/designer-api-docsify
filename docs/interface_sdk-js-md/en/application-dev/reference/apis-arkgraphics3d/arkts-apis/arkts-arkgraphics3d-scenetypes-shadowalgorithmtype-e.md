@@ -1,6 +1,6 @@
 # ShadowAlgorithmType
 
-阴影算法类型
+the type of shadow algorithm
 
 **Since:** 26.0.0
 
@@ -16,7 +16,7 @@
 PCF = 0
 ```
 
-PCF算法（百分比邻近过滤）
+PCF algorithm
 
 **Since:** 26.0.0
 

@@ -1,6 +1,6 @@
 # RRect (System API)
 
-圆角矩形。
+Round rect.
 
 **Since:** 9
 
@@ -17,8 +17,6 @@
 ```TypeScript
 height: number
 ```
-
-动画窗口高度大小，单位为px。
 
 **Type:** number
 
@@ -38,8 +36,6 @@ height: number
 left: number
 ```
 
-动画窗口左上角相对于屏幕横坐标，单位为px。
-
 **Type:** number
 
 **Since:** 9
@@ -57,8 +53,6 @@ left: number
 ```TypeScript
 radius: number
 ```
-
-动画窗口圆角大小，单位为px。
 
 **Type:** number
 
@@ -78,8 +72,6 @@ radius: number
 top: number
 ```
 
-动画窗口左上角相对于屏幕纵坐标，单位为px。
-
 **Type:** number
 
 **Since:** 9
@@ -97,8 +89,6 @@ top: number
 ```TypeScript
 width: number
 ```
-
-动画窗口宽度大小，单位为px。
 
 **Type:** number
 

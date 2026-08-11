@@ -1,6 +1,6 @@
 # Server
 
-服务对象，提供启动服务、停止服务、关闭服务、注册/取消注册服务端回调等方法。
+Represents a **Server** object, which provides methods for starting, stopping, and closing the server, and registering or unregistering event callbacks.
 
 **Since:** 20
 
@@ -22,7 +22,8 @@ import { linkEnhance } from 'kits/@kit.DistributedServiceKit';
 close(): void
 ```
 
-当业务执行完毕，服务端清理资源时，调用close()方法，销毁Server对象，释放相关资源。之后如果再次与对端设备交互，需要重新创建Server对象。
+Destroys the **Server** object to release related resources. To interact with the peer device again, create a new  
+**Server** object.
 
 **Since:** 20
 
@@ -40,7 +41,7 @@ close(): void
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 201 | Permission denied. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
 
 ## Examples
 
@@ -69,7 +70,7 @@ try {
 off(type: 'connectionAccepted', callback?: Callback<Connection>): void
 ```
 
-取消注册connectionAccepted事件的回调监听。使用callback异步回调。
+Unregisters the callback listener for **connectionAccepted** events. This API uses an asynchronous callback to return the result.
 
 **Since:** 20
 
@@ -87,15 +88,15 @@ off(type: 'connectionAccepted', callback?: Callback<Connection>): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'connectionAccepted' | Yes | 事件回调类型，支持的事件为'connectionAccepted'，收到对端连接，触发该事件。 |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;Connection&gt; | No | 注册的回调函数。[Connection](arkts-distributedservice-linkenhance-connection-i.md)返回的连接对象。 |
+| type | 'connectionAccepted' | Yes | Event type, which is **connectionAccepted**. This event is triggered when a connection from the peer end is received. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;Connection&gt; | No | Registered callback, which is used to return the [Connection](arkts-distributedservice-linkenhance-connection-i.md) object. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 32390206 | Parameter invalid. |
-| 201 | Permission denied. |
+| [32390206](../../apis-distributedservice-kit/errorcode-link-enhance.md#32390206-invalid-parameter) | Parameter invalid. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
 
 ## Examples
 
@@ -130,7 +131,7 @@ try {
 off(type: 'serverStopped', callback?: Callback<number>): void
 ```
 
-取消注册serverStopped事件的回调监听。使用callback异步回调。
+Unregisters the callback listener for **serverStopped** events. This API uses an asynchronous callback to return the result.
 
 **Since:** 20
 
@@ -148,15 +149,15 @@ off(type: 'serverStopped', callback?: Callback<number>): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'serverStopped' | Yes | 事件回调类型，支持的事件为'serverStopped'，底层服务异常时触发。 |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;number&gt; | No | 注册的回调函数，number为返回的错误码。 |
+| type | 'serverStopped' | Yes | Event type, which is **serverStopped**. This event is triggered when the server is stopped abnormally. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;number&gt; | No | Registered callback, where **number** indicates the returned error code. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 32390206 | Parameter invalid. |
-| 201 | Permission denied. |
+| [32390206](../../apis-distributedservice-kit/errorcode-link-enhance.md#32390206-invalid-parameter) | Parameter invalid. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
 
 ## Examples
 
@@ -191,7 +192,7 @@ try {
 offConnectionAccepted(callback?: Callback<Connection>): void
 ```
 
-取消注册connectionAccepted事件的回调监听。使用callback异步回调。
+Unregisters the callback listener for **connectionAccepted** events. This API uses an asynchronous callback to return the result.
 
 **Since:** 23
 
@@ -209,14 +210,14 @@ offConnectionAccepted(callback?: Callback<Connection>): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;Connection&gt; | No | 注册的回调函数。[Connection](arkts-distributedservice-linkenhance-connection-i.md)返回的连接对象。 |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;Connection&gt; | No | Registered callback, which is used to return the [Connection](arkts-distributedservice-linkenhance-connection-i.md) object. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 32390206 | Parameter invalid. |
-| 201 | Permission denied. |
+| [32390206](../../apis-distributedservice-kit/errorcode-link-enhance.md#32390206-invalid-parameter) | Parameter invalid. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
 
 ## offServerStopped
 
@@ -224,7 +225,7 @@ offConnectionAccepted(callback?: Callback<Connection>): void
 offServerStopped(callback?: Callback<int>): void
 ```
 
-取消注册serverStopped事件的回调监听。使用callback异步回调。
+Unregisters the callback listener for **serverStopped** events. This API uses an asynchronous callback to return the result.
 
 **Since:** 23
 
@@ -242,14 +243,14 @@ offServerStopped(callback?: Callback<int>): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;int&gt; | No | 注册的回调函数，int为返回的错误码。 |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;int&gt; | No | Registered callback, where **int** indicates the returned error code. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 32390206 | Parameter invalid. |
-| 201 | Permission denied. |
+| [32390206](../../apis-distributedservice-kit/errorcode-link-enhance.md#32390206-invalid-parameter) | Parameter invalid. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
 
 ## on('connectionAccepted')
 
@@ -257,7 +258,7 @@ offServerStopped(callback?: Callback<int>): void
 on(type: 'connectionAccepted', callback: Callback<Connection>): void
 ```
 
-创建服务成功后，注册connectionAccepted事件的回调监听，等待对端连接。使用callback异步回调。
+Registers a callback listener for **connectionAccepted** events. This API uses an asynchronous callback to return the result.
 
 **Since:** 20
 
@@ -275,15 +276,15 @@ on(type: 'connectionAccepted', callback: Callback<Connection>): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'connectionAccepted' | Yes | 事件回调类型，支持的事件为'connectionAccepted'，收到对端连接，触发该事件。 |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;Connection&gt; | Yes | 注册的回调函数。[Connection](arkts-distributedservice-linkenhance-connection-i.md)返回的连接对象。 |
+| type | 'connectionAccepted' | Yes | Event type, which is **connectionAccepted**. This event is triggered when a connection from the peer end is received. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;Connection&gt; | Yes | Registered callback, which is used to return the [Connection](arkts-distributedservice-linkenhance-connection-i.md) object. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 32390206 | Parameter invalid. |
-| 201 | Permission denied. |
+| [32390206](../../apis-distributedservice-kit/errorcode-link-enhance.md#32390206-invalid-parameter) | Parameter invalid. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
 
 ## Examples
 
@@ -318,7 +319,7 @@ try {
 on(type: 'serverStopped', callback: Callback<number>): void
 ```
 
-在创建服务成功后，注册serverStopped回调，监听服务异常停止。使用callback异步回调。
+Registers a callback listener for **serverStopped** events. This API uses an asynchronous callback to return the result.
 
 **Since:** 20
 
@@ -336,15 +337,15 @@ on(type: 'serverStopped', callback: Callback<number>): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'serverStopped' | Yes | 事件回调类型，支持的事件为'serverStopped'，底层服务异常时，触发该事件。 |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;number&gt; | Yes | 注册的回调函数，number为返回的错误码。 |
+| type | 'serverStopped' | Yes | Event type, which is **serverStopped**. This event is triggered when the server is stopped abnormally. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;number&gt; | Yes | Registered callback, where **number** indicates the returned error code. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 32390206 | Parameter invalid. |
-| 201 | Permission denied. |
+| [32390206](../../apis-distributedservice-kit/errorcode-link-enhance.md#32390206-invalid-parameter) | Parameter invalid. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
 
 ## Examples
 
@@ -379,7 +380,7 @@ try {
 onConnectionAccepted(callback: Callback<Connection>): void
 ```
 
-创建服务成功后，注册connectionAccepted事件的回调监听，等待对端连接。使用callback异步回调。
+Registers a callback listener for **connectionAccepted** events. This API uses an asynchronous callback to return the result.
 
 **Since:** 23
 
@@ -397,14 +398,14 @@ onConnectionAccepted(callback: Callback<Connection>): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;Connection&gt; | Yes | 注册的回调函数。[Connection](arkts-distributedservice-linkenhance-connection-i.md)返回的连接对象。 |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;Connection&gt; | Yes | Callback used to listen for the server is connected event. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 32390206 | Parameter invalid. |
-| 201 | Permission denied. |
+| [32390206](../../apis-distributedservice-kit/errorcode-link-enhance.md#32390206-invalid-parameter) | Parameter invalid. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
 
 ## onServerStopped
 
@@ -412,7 +413,7 @@ onConnectionAccepted(callback: Callback<Connection>): void
 onServerStopped(callback: Callback<int>): void
 ```
 
-在创建服务成功后，注册serverStopped回调，监听服务异常停止。使用callback异步回调。
+Registers a callback listener for **serverStopped** events. This API uses an asynchronous callback to return the result.
 
 **Since:** 23
 
@@ -430,14 +431,14 @@ onServerStopped(callback: Callback<int>): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;int&gt; | Yes | 注册的回调函数，int为返回的错误码。 |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;int&gt; | Yes | Registered callback, where **int** indicates the returned error code. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 32390206 | Parameter invalid. |
-| 201 | Permission denied. |
+| [32390206](../../apis-distributedservice-kit/errorcode-link-enhance.md#32390206-invalid-parameter) | Parameter invalid. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
 
 ## start
 
@@ -445,7 +446,7 @@ onServerStopped(callback: Callback<int>): void
 start(): void
 ```
 
-创建服务成功后，需要调用start()开启该服务，方可被客户端连接，最大服务个数为10。
+Starts a server so that it can be connected by the client. A maximum of 10 servers are supported.
 
 **Since:** 20
 
@@ -463,9 +464,9 @@ start(): void
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 32390300 | Internal error. |
-| 32390202 | The number of servers exceeds the limit. |
-| 201 | Permission denied. |
+| [32390300](../../apis-distributedservice-kit/errorcode-link-enhance.md#32390300-internal-error) | Internal error. |
+| [32390202](../../apis-distributedservice-kit/errorcode-link-enhance.md#32390202-number-of-services-exceeding-the-limit) | The number of servers exceeds the limit. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
 
 ## Examples
 
@@ -493,7 +494,7 @@ try {
 stop(): void
 ```
 
-使用完服务时，调用`stop`停止服务，停止后可以调用`start`重新开启服务。
+Stops the server. After the server is stopped, you can call `start` to start it again.
 
 **Since:** 20
 
@@ -511,7 +512,7 @@ stop(): void
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 201 | Permission denied. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
 
 ## Examples
 

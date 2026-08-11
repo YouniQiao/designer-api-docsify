@@ -18,12 +18,6 @@ fileAccess模块是基于[extension](../../../application-models/extensionabilit
 
 **系统能力：** SystemCapability.FileManagement.UserFileService
 
-## 导入模块
-
-```TypeScript
-import { fileAccess } from 'kits/@kit.CoreFileKit';
-```
-
 ## 汇总
 
 <!--Del-->

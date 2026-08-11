@@ -4,7 +4,7 @@
 export type UpdateRequest = _AutoFillRequest.UpdateRequest
 ```
 
-自动填充的更新信息。
+Defines the information about an auto-update request.
 
 **Since:** 12
 

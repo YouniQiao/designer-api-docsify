@@ -4,7 +4,7 @@
 export type PopupSize = _AutoFillPopupConfig.PopupSize
 ```
 
-气泡弹窗的宽和高。
+Defines the width and height of an auto-fill pop-up.
 
 **Since:** 12
 

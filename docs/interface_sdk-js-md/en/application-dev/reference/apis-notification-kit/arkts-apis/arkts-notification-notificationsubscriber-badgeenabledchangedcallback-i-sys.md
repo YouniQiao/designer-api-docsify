@@ -1,6 +1,6 @@
 # BadgeEnabledChangedCallback
 
-注册应用角标使能状态变化的回调函数类型。
+Defines a callback function to listen for the enabling state changes of the application badge.type BadgeEnabledChangedCallback = (data: EnabledNotificationCallbackData) => void
 
 **Since:** 12
 
@@ -16,7 +16,7 @@
 (data: EnabledNotificationCallbackData): void
 ```
 
-回调返回监听到的角标使能状态信息。
+Callback used to return the listened badge enabling state.
 
 **Since:** 12
 
@@ -32,5 +32,5 @@
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| data | [EnabledNotificationCallbackData](arkts-notification-notificationsubscribe-enablednotificationcallbackdata-t-sys.md) | Yes |  |
+| data | [EnabledNotificationCallbackData](arkts-notification-notificationsubscribe-enablednotificationcallbackdata-t-sys.md) | Yes | Callback used to return the listened badge enabling state. |
 

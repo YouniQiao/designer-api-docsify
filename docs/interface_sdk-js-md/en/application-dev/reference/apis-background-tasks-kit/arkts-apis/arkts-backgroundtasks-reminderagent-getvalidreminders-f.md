@@ -12,7 +12,7 @@ import { reminderAgent } from 'kits/@kit.BackgroundTasksKit';
 function getValidReminders(callback: AsyncCallback<Array<ReminderRequest>>): void
 ```
 
-获取当前应用已设置的所有有效（未过期）的提醒，使用回调的方式实现异步调用。
+Obtains all valid (not yet expired) reminders set by the current application. This API uses an asynchronous callback to return the result.
 
 **Since:** 7
 
@@ -30,13 +30,12 @@ function getValidReminders(callback: AsyncCallback<Array<ReminderRequest>>): voi
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;ReminderRequest&gt;&gt; | Yes | 异步回调，返回当前应用已设置的所有有效（未过期）的提醒。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;ReminderRequest&gt;&gt; | Yes | Callback used to return an array of all valid reminders set by the current application. |
 
 ## Examples
 
 ```TypeScript
 import { BusinessError } from '@ohos.base';
-import reminderAgent from '@ohos.reminderAgent';
 
 reminderAgent.getValidReminders((err: BusinessError, reminders: Array<reminderAgent.ReminderRequest>) => {
   console.info("callback, getValidReminders length = " + reminders.length);
@@ -70,7 +69,7 @@ reminderAgent.getValidReminders((err: BusinessError, reminders: Array<reminderAg
 function getValidReminders(): Promise<Array<ReminderRequest>>
 ```
 
-获取当前应用已设置的所有有效（未过期）的提醒，使用Promise方式实现异步调用。
+Obtains all valid (not yet expired) reminders set by the current application. This API uses a promise to return the reminders.
 
 **Since:** 7
 
@@ -88,13 +87,11 @@ function getValidReminders(): Promise<Array<ReminderRequest>>
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;Array&lt;ReminderRequest&gt;&gt; | 返回当前应用已设置的所有有效（未过期）的提醒。 |
+| Promise&lt;Array&lt;ReminderRequest&gt;&gt; | Promise used to return an array of all valid reminders set by the current application. |
 
 ## Examples
 
 ```TypeScript
-import reminderAgent from '@ohos.reminderAgent';
-
 reminderAgent.getValidReminders().then((reminders: Array<reminderAgent.ReminderRequest>) => {
   console.info("promise, getValidReminders length = " + reminders.length);
   for (let i = 0; i < reminders.length; i++) {

@@ -1,6 +1,6 @@
 # CliCmdInfo (System API)
 
-CLI命令信息。
+CLI command information.
 
 **Since:** 26.0.0
 
@@ -18,7 +18,7 @@ CLI命令信息。
 cliCmdName: string
 ```
 
-CLI主命令名称。
+CLI main command name.
 
 **Type:** string
 
@@ -38,7 +38,7 @@ CLI主命令名称。
 subCliCmdName: string
 ```
 
-CLI子命令名。
+CLI subcommand name.
 
 **Type:** string
 

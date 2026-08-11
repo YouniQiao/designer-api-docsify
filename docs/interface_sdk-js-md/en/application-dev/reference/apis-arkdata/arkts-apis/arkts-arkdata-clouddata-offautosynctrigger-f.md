@@ -12,7 +12,7 @@ import { cloudData } from 'kits/@kit.ArkData';
 function offAutoSyncTrigger(observer?: Callback<AutoSyncTriggerInfo>): void
 ```
 
-取消订阅自动同步触发事件通知。
+Describes unsubscribing from the device-cloud automatic synchronization trigger mode.
 
 **Since:** 26.0.0
 
@@ -28,28 +28,11 @@ function offAutoSyncTrigger(observer?: Callback<AutoSyncTriggerInfo>): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| observer | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;AutoSyncTriggerInfo&gt; | No | 回调函数。 若传入observer，则取消指定回调函数的订阅；若不传入observer，则取消所有已注册的订阅。 |
+| observer | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;AutoSyncTriggerInfo&gt; | No | Callback for automatic synchronization trigger interception. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 801 | Capability not supported. |
-
-## Examples
-
-```TypeScript
-function autoSyncTriggerObserver(info: cloudData.AutoSyncTriggerInfo) {
-  console.info(`Auto sync triggered, mode: ${info.mode}`);
-}
-
-// Subscribe to an observer.
-cloudData.onAutoSyncTrigger(autoSyncTriggerObserver);
-
-// Unsubscribe from a specified observer.
-cloudData.offAutoSyncTrigger(autoSyncTriggerObserver);
-
-// Unsubscribe from all observers.
-cloudData.offAutoSyncTrigger();
-```
+| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. |
 

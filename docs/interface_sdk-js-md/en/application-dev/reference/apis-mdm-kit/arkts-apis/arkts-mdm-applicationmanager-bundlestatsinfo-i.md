@@ -1,6 +1,6 @@
 # BundleStatsInfo
 
-应用包统计信息。
+Application bundle statistics.
 
 **Since:** 26.0.0
 
@@ -22,7 +22,7 @@ import { applicationManager } from 'kits/@kit.MDMKit';
 abilityInFgTotalTime: number
 ```
 
-Ability在前台运行的总时长，单位：毫秒。
+Total duration that the ability runs in the foreground, in milliseconds.
 
 **Type:** number
 
@@ -42,8 +42,7 @@ Ability在前台运行的总时长，单位：毫秒。
 appIndex: number
 ```
 
-应用分身索引，取值范围：大于等于0的整数。appIndex可以通过@ohos.bundle.bundleManager中的  
-[getAppCloneIdentity](../../apis-ability-kit/arkts-apis/arkts-ability-bundlemanager-getappcloneidentity-f.md/arkts-ability-bundlemanager-getappcloneidentity-f.md#getappcloneidentity)等接口来获取。
+Index of the application clone. The value is an integer greater than or equal to 0.You can call [getAppCloneIdentity](../../apis-ability-kit/arkts-apis/arkts-ability-bundlemanager-getappcloneidentity-f.md/arkts-ability-bundlemanager-getappcloneidentity-f.md#getappcloneidentity) of @ohos.bundle.bundleManager to obtain the index.
 
 **Type:** number
 
@@ -63,7 +62,7 @@ appIndex: number
 bundleName: string
 ```
 
-应用的包名。
+Bundle name of the application.
 
 **Type:** string
 

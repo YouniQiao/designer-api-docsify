@@ -1,10 +1,12 @@
 # WidthBreakpoint
 
-Type of window width breakpoint.
+Enumerates the width breakpoint values corresponding to different window width thresholds. The values are returned through [getWindowWidthBreakpoint](arkts-arkui-arkui-uicontext-uicontext-c.md#getwindowwidthbreakpoint).
 
-**Since:** 22
+The following table lists default width breakpoint thresholds for typical devices, serving as a reference for responsive layout design based on window width breakpoints. Device manufacturers may customize these thresholds through product-specific configurations when needed.
 
-**ArkTS mode:** ArkTS-Dyn only, since version 22.
+**Since:** 13
+
+**ArkTS mode:** ArkTS-Dyn only, since version 13.
 
 <!--Device-unnamed-declare enum WidthBreakpoint--><!--Device-unnamed-declare enum WidthBreakpoint-End-->
 
@@ -16,15 +18,15 @@ Type of window width breakpoint.
 WIDTH_XS = 0
 ```
 
-Window width < 320vp type.
+The window width is less than 320 vp.
 
-**Since:** 22
+**Since:** 13
 
-**ArkTS mode:** ArkTS-Dyn only, since version 22.
+**ArkTS mode:** ArkTS-Dyn only, since version 13.
 
 **Model restriction:** This API can be used only in the stage model.
 
-**Atomic service API:** This API can be used in atomic services since API version 22.
+**Atomic service API:** This API can be used in atomic services since API version 13.
 
 <!--Device-WidthBreakpoint-WIDTH_XS = 0--><!--Device-WidthBreakpoint-WIDTH_XS = 0-End-->
 
@@ -36,15 +38,15 @@ Window width < 320vp type.
 WIDTH_SM = 1
 ```
 
-Window width >= 320vp and < 600vp type.
+The window width is greater than or equal to 320 vp and less than 600 vp.
 
-**Since:** 22
+**Since:** 13
 
-**ArkTS mode:** ArkTS-Dyn only, since version 22.
+**ArkTS mode:** ArkTS-Dyn only, since version 13.
 
 **Model restriction:** This API can be used only in the stage model.
 
-**Atomic service API:** This API can be used in atomic services since API version 22.
+**Atomic service API:** This API can be used in atomic services since API version 13.
 
 <!--Device-WidthBreakpoint-WIDTH_SM = 1--><!--Device-WidthBreakpoint-WIDTH_SM = 1-End-->
 
@@ -56,15 +58,15 @@ Window width >= 320vp and < 600vp type.
 WIDTH_MD = 2
 ```
 
-Window width >= 600vp and < 840vp type.
+The window width is greater than or equal to 600 vp and less than 840 vp.
 
-**Since:** 22
+**Since:** 13
 
-**ArkTS mode:** ArkTS-Dyn only, since version 22.
+**ArkTS mode:** ArkTS-Dyn only, since version 13.
 
 **Model restriction:** This API can be used only in the stage model.
 
-**Atomic service API:** This API can be used in atomic services since API version 22.
+**Atomic service API:** This API can be used in atomic services since API version 13.
 
 <!--Device-WidthBreakpoint-WIDTH_MD = 2--><!--Device-WidthBreakpoint-WIDTH_MD = 2-End-->
 
@@ -76,15 +78,15 @@ Window width >= 600vp and < 840vp type.
 WIDTH_LG = 3
 ```
 
-Window width >= 840vp and < 1440vp type.
+The window width is greater than or equal to 840 vp and less than 1440 vp.
 
-**Since:** 22
+**Since:** 13
 
-**ArkTS mode:** ArkTS-Dyn only, since version 22.
+**ArkTS mode:** ArkTS-Dyn only, since version 13.
 
 **Model restriction:** This API can be used only in the stage model.
 
-**Atomic service API:** This API can be used in atomic services since API version 22.
+**Atomic service API:** This API can be used in atomic services since API version 13.
 
 <!--Device-WidthBreakpoint-WIDTH_LG = 3--><!--Device-WidthBreakpoint-WIDTH_LG = 3-End-->
 
@@ -96,15 +98,15 @@ Window width >= 840vp and < 1440vp type.
 WIDTH_XL = 4
 ```
 
-Window width >= 1440vp type.
+The window width is greater than or equal to 1440 vp.
 
-**Since:** 22
+**Since:** 13
 
-**ArkTS mode:** ArkTS-Dyn only, since version 22.
+**ArkTS mode:** ArkTS-Dyn only, since version 13.
 
 **Model restriction:** This API can be used only in the stage model.
 
-**Atomic service API:** This API can be used in atomic services since API version 22.
+**Atomic service API:** This API can be used in atomic services since API version 13.
 
 <!--Device-WidthBreakpoint-WIDTH_XL = 4--><!--Device-WidthBreakpoint-WIDTH_XL = 4-End-->
 

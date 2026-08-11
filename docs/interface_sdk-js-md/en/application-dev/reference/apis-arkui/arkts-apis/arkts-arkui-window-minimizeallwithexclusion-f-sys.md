@@ -12,7 +12,7 @@ import { window } from 'kits/@kit.ArkUI';
 function minimizeAllWithExclusion(displayId: long, excludeWindowId: int): Promise<void>
 ```
 
-最小化指定ID的屏幕中除指定窗口之外的所有主窗口，使用Promise异步回调。
+Minimizes all main windows on a display while keeping one window open. This API uses a promise to return the result.
 
 **Since:** 23
 
@@ -30,22 +30,22 @@ function minimizeAllWithExclusion(displayId: long, excludeWindowId: int): Promis
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| displayId | ArkTS-Dyn: number  <br>ArkTS-Sta：long | Yes | 屏幕ID，该参数仅支持整数输入，输入浮点数会向下取整。 |
-| excludeWindowId | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | 窗口ID。可通过 [getWindowProperties](arkts-arkui-window-window-i.md#getwindowproperties)接口获取到相关窗口属性，其中属性id即对应为窗口ID。窗口ID小于等于0 ，或窗口ID为null或者undefined时，会抛出[401错误码](../../../reference/errorcode-universal.md#401-参数检查失败)；窗口ID大于0但是不存在会抛出13000 02错误码；窗口ID大于0且窗口存在但是不在该屏幕，最小化指定屏幕上的所有主窗口。该参数仅支持整数输入，输入浮点数会向下取整。 |
+| displayId | ArkTS-Dyn: number  <br>ArkTS-Sta：long | Yes | Display ID. The value must be an integer. Non-integer values are rounded down. |
+| excludeWindowId | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | Window ID. You can call [getWindowProperties](arkts-arkui-window-window-i.md#getwindowproperties) to obtain the window properties, in which **id** is the window ID. If the window ID is less than or equal to 0, or the window ID is null or undefined, error code [401](../../../reference/errorcode-universal.md#401-parameter-check-failed) is thrown. If the window ID is greater than 0 but does not exist, error code 1300002 is thrown. If the window ID is greater than 0 but the window exists on another display, all main windows on the specified display are minimized. The value must be an integer. Floating-point numbers are rounded down. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise对象，无返回结果。 |
+| Promise&lt;void&gt; | Promise that returns no value. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 1300003 | This window manager service works abnormally. |
-| 1300002 | This window state is abnormal. Possible cause: 1. Window is nullptr; 2. Failed to find specified window by id. |
-| 202 | Permission verification failed. A nonsystem application calls a system API. |
+| [1300003](../errorcode-window.md#1300003-abnormal-window-manager-service) | This window manager service works abnormally. |
+| [1300002](../errorcode-window.md#1300002-abnormal-window-state) | This window state is abnormal. Possible cause: 1. Window is nullptr; 2. Failed to find specified window by id. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A nonsystem application calls a system API. |
 
 ## Examples
 

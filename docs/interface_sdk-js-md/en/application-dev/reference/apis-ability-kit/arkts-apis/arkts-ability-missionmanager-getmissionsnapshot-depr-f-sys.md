@@ -6,7 +6,7 @@
 function getMissionSnapShot(deviceId: string, missionId: number, callback: AsyncCallback<MissionSnapshot>): void
 ```
 
-获取任务快照。使用callback异步回调。
+Obtains the snapshot of a given mission. This API uses an asynchronous callback to return the result.
 
 **Since:** 8
 
@@ -28,9 +28,9 @@ function getMissionSnapShot(deviceId: string, missionId: number, callback: Async
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| deviceId | string | Yes | 设备ID，本机默认为空字符串。 |
-| missionId | number | Yes | 任务ID。 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[MissionSnapshot](arkts-ability-missionsnapshot-i-sys.md)&gt; | Yes | 回调函数，返回任务快照信息。 |
+| deviceId | string | Yes | Device ID. It is a null string by default for the local device. |
+| missionId | number | Yes | Mission ID. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[MissionSnapshot](arkts-ability-missionsnapshot-i-sys.md)&gt; | Yes | Callback used to return the snapshot information obtained. |
 
 ## Examples
 
@@ -58,7 +58,7 @@ try {
 function getMissionSnapShot(deviceId: string, missionId: number): Promise<MissionSnapshot>
 ```
 
-获取任务快照。使用Promise异步回调。
+Obtains the snapshot of a given mission. This API uses a promise to return the result.
 
 **Since:** 8
 
@@ -80,14 +80,14 @@ function getMissionSnapShot(deviceId: string, missionId: number): Promise<Missio
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| deviceId | string | Yes | 设备ID，本机默认为空字符串。 |
-| missionId | number | Yes | 任务ID。 |
+| deviceId | string | Yes | Device ID. It is a null string by default for the local device. |
+| missionId | number | Yes | Mission ID. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;[MissionSnapshot](arkts-ability-missionsnapshot-i-sys.md)&gt; | Promise对象，返回任务快照信息。 |
+| Promise&lt;[MissionSnapshot](arkts-ability-missionsnapshot-i-sys.md)&gt; | Promise used to return the snapshot information obtained. |
 
 ## Examples
 

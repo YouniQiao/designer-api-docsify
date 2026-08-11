@@ -6,7 +6,7 @@ typedef struct ArkUI_FloatProperty* ArkUI_FloatPropertyHandle
 
 ## Overview
 
-Handle to the ArkUI native float render property.
+Defines a float property pointer.
 
 **Since**: 20
 

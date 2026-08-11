@@ -1,6 +1,6 @@
 # AudioSessionType
 
-应用中Web音频类型。
+Enumerates the web audio types in the application.
 
 **Since:** 20
 
@@ -16,7 +16,7 @@
 AMBIENT = 3
 ```
 
-适用于网页游戏场景，支持Web游戏声音与系统音乐同时播放。对应系统音频流类型STREAM_USAGE_GAME。
+Web game sounds and system music can be played at the same time. This value is applicable to web game scenarios. Its corresponding system audio stream type is **STREAM_USAGE_GAME**.
 
 **Since:** 20
 

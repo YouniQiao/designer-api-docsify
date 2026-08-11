@@ -1,6 +1,6 @@
 # LazyColumnLayoutInterface
 
-定义懒加载列布局组件。
+Defines the lazy column layout component.
 
 **Since:** 26.0.0
 
@@ -22,7 +22,7 @@ import { LazyColumnLayoutAttribute, LazyColumnLayout } from 'kits/@kit.ArkUI';
 (): LazyColumnLayoutAttribute
 ```
 
-构造懒加载列布局属性。
+Construct the lazy column layout attribute.
 
 **Since:** 26.0.0
 

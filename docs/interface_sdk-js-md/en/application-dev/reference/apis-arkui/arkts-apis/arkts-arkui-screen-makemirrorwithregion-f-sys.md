@@ -12,7 +12,7 @@ import { screen } from 'kits/@kit.ArkUI';
 function makeMirrorWithRegion(mainScreen: long, mirrorScreen: Array<long>, mainScreenRegion: Rect): Promise<long>
 ```
 
-将屏幕的某一矩形区域设置为镜像模式，使用Promise异步回调。调用该接口后，不建议再进行屏幕的旋转/折叠，否则可能导致镜像内容异常。
+Sets a rectangle on the screen to mirror mode. This API uses a promise to return the result. After this API is called, you are advised not to rotate or fold the screen further. Otherwise, the mirrored content may be abnormal.
 
 **Since:** 19
 
@@ -28,43 +28,40 @@ function makeMirrorWithRegion(mainScreen: long, mirrorScreen: Array<long>, mainS
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| mainScreen | ArkTS-Dyn: number  <br>ArkTS-Sta：long | Yes | 主屏幕ID，该参数仅支持正整数输入。 |
-| mirrorScreen | ArkTS-Dyn: Array&lt;number&gt;  <br>ArkTS-Sta：Array&lt;long&gt; | Yes | 镜像屏幕ID集合。其中ID应为正整数。 |
-| mainScreenRegion | [Rect](../../apis-form-kit/arkts-apis/arkts-form-forminfo-rect-i.md) | Yes | 主屏创建镜像的矩形区域。 |
+| mainScreen | ArkTS-Dyn: number  <br>ArkTS-Sta：long | Yes | ID of the primary screen. The ID must be a non-negative integer. |
+| mirrorScreen | ArkTS-Dyn: Array&lt;number&gt;  <br>ArkTS-Sta：Array&lt;long&gt; | Yes | Array of IDs of secondary screens. Each ID must be a positive integer. |
+| mainScreenRegion | [Rect](../../apis-form-kit/arkts-apis/arkts-form-forminfo-rect-i.md) | Yes | Rectangle on the primary screen to be mirrored. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| ArkTS-Dyn: Promise&lt;number&gt;  <br>ArkTS-Sta：Promise&lt;long&gt; | Promise对象。返回镜像屏幕的群组id，其中id为正整数。 |
+| ArkTS-Dyn: Promise&lt;number&gt;  <br>ArkTS-Sta：Promise&lt;long&gt; | Promise used to return the group ID of the secondary screens, where the ID is a positive integer. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 1400001 | Invalid display or screen. |
-| 202 | Permission verification failed. A non-system application calls a system API. |
+| [1400001](../errorcode-display.md#1400001-invalid-display-or-screen) | Invalid display or screen. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
 
 ## Examples
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
 
-// Obtain the screen ID using getAllScreens().
-let mainScreenId: number = 0; // Main screen ID.
-let mirrorScreenIds: Array<number> = [1, 2, 3]; // ID array of mirrored screens.
-// Rectangle on the main screen to be mirrored.
+let mainScreenId: number = 0;
+let mirrorScreenIds: Array<number> = [1, 2, 3];
 let mainScreenRegion: screen.Rect = {
   left : 0,
   top : 0,
   width : 1920,
   height : 1080
 };
-// Set a rectangle on the screen to mirror mode.
 screen.makeMirrorWithRegion(mainScreenId, mirrorScreenIds, mainScreenRegion).then((data: number) => {
   console.info(`Succeeded in setting screen mirroring. Data: ${data}`);
 }).catch((err: BusinessError) => {
-  console.error(`Failed to set screen area mirroring. Code: ${err.code}, message: ${err.message}`);
+  console.error(`Failed to set screen area mirroring. Code:${err.code}, message is ${err.message}`);
 });
 ```
 

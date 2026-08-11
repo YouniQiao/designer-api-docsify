@@ -4,7 +4,7 @@
 export type ElementName = _ElementName
 ```
 
-ElementName信息。
+Defines the element name.
 
 **Since:** 9
 

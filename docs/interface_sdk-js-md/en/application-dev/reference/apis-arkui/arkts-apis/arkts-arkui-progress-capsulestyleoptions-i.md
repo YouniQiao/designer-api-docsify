@@ -1,8 +1,6 @@
 # CapsuleStyleOptions
 
-胶囊样式选项。
-
-继承自[ScanEffectOptions](../arkts-components/arkts-arkui-scaneffectoptions-i.md/arkts-arkui-scaneffectoptions-i.md)和[CommonProgressStyleOptions](../arkts-components/arkts-arkui-commonprogressstyleoptions-i.md/arkts-arkui-commonprogressstyleoptions-i.md)。
+Defines the capsule style Options.
 
 **Inheritance/Implementation:** CapsuleStyleOptions extends [ScanEffectOptions](../arkts-components/arkts-arkui-scaneffectoptions-i.md/arkts-arkui-scaneffectoptions-i.md), [CommonProgressStyleOptions](../arkts-components/arkts-arkui-commonprogressstyleoptions-i.md/arkts-arkui-commonprogressstyleoptions-i.md)
 
@@ -20,7 +18,7 @@
 borderColor?: ResourceColor
 ```
 
-内描边颜色。默认值：'#33007dff'。
+Set the inner border color.Default value: '#33007dff'.
 
 **Type:** [ResourceColor](arkts-arkui-resourcecolor-t.md)
 
@@ -40,7 +38,7 @@ borderColor?: ResourceColor
 borderRadius?: LengthMetrics
 ```
 
-Capsule进度条圆角半径（不支持百分比设置）。默认值：min(width, height) / 2。
+Set border rounded corner radius.Default value: min(width, height) / 2.
 
 **Type:** [LengthMetrics](arkts-arkui-graphics-lengthmetrics-c.md)
 
@@ -62,7 +60,7 @@ Capsule进度条圆角半径（不支持百分比设置）。默认值：min(wid
 borderWidth?: Length
 ```
 
-内描边宽度（不支持百分比设置）。默认值：1vp。
+Set the border width.Default value: 1vp.
 
 **Type:** [Length](arkts-arkui-length-t.md)
 
@@ -82,7 +80,7 @@ borderWidth?: Length
 content?: string
 ```
 
-文本内容，应用可自定义。
+Set the text content.
 
 **Type:** string
 
@@ -102,7 +100,7 @@ content?: string
 font?: Font
 ```
 
-文本样式。默认值：文本大小（不支持百分比设置）：12fp其他文本参数跟随[Text](../../apis-arkgraphics2d/arkts-apis/arkts-graphics-text.md/arkts-graphics-text.md)组件的主题值。
+Set the text style.Default value: Text size (percentage setting is not supported): 12 fp Other text parameters follow the theme value of the [Text](../../apis-arkgraphics2d/arkts-apis/arkts-graphics-text.md/arkts-graphics-text.md) component.
 
 **Type:** [Font](arkts-arkui-font-i.md)
 
@@ -122,7 +120,7 @@ font?: Font
 fontColor?: ResourceColor
 ```
 
-文本颜色。默认值：'#ff182431'。
+Set the text fontColor.Default value: '#ff182431'.
 
 **Type:** [ResourceColor](arkts-arkui-resourcecolor-t.md)
 
@@ -142,7 +140,7 @@ fontColor?: ResourceColor
 showDefaultPercentage?: boolean
 ```
 
-显示百分比文本的开关。开启后，进度条上显示当前进度的百分比。设置了content属性时该属性不生效。true：表示显示百分比文本；false：表示不显示百分比文本。默认值：false。
+show default percentage.Default value: false.
 
 **Type:** boolean
 

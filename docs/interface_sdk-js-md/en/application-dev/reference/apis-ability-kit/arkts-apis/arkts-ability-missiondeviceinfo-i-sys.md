@@ -1,7 +1,7 @@
 # MissionDeviceInfo (System API)
 
-可以作为  
-[registerMissionListener](arkts-ability-distributedmissionmanager-registermissionlistener-f-sys.md#registermissionlistener)的入参，表示注册监听时所需参数的枚举。
+The module defines the parameters required for registering a listener. It can be used as an input parameter in  
+[registerMissionListener](arkts-ability-distributedmissionmanager-registermissionlistener-f-sys.md#registermissionlistener)
 
 **Since:** 9
 
@@ -19,7 +19,7 @@
 deviceId: string
 ```
 
-表示设备ID。
+Indicates the deviceId to start sync.
 
 **Type:** string
 

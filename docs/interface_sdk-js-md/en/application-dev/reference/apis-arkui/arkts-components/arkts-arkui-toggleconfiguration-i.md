@@ -1,6 +1,7 @@
 # ToggleConfiguration
 
-开发者需要自定义class实现ContentModifier接口。继承自[CommonConfiguration](../arkts-apis/arkts-arkui-common-commonconfiguration-i.md/arkts-arkui-common-commonconfiguration-i.md)。
+You need a custom class to implement the **ContentModifier** API. This API inherits from   
+[CommonConfiguration](../arkts-apis/arkts-arkui-common-commonconfiguration-i.md/arkts-arkui-common-commonconfiguration-i.md).
 
 **Inheritance/Implementation:** ToggleConfiguration extends [CommonConfiguration<ToggleConfiguration>](CommonConfiguration<ToggleConfiguration>)
 
@@ -18,11 +19,11 @@
 enabled: boolean
 ```
 
-是否可以切换状态。
+Whether the toggle is enabled for state switching.
 
-true：可以切换状态；false：不可以切换状态。
+**true**: The state can be changed. **false**: The state cannot be changed.
 
-默认值：true
+Default value: **true**
 
 **Type:** boolean
 
@@ -44,11 +45,11 @@ true：可以切换状态；false：不可以切换状态。
 isOn: boolean
 ```
 
-开关是否打开。
+Whether the toggle is turned on.
 
-true：开关打开；false：开关关闭。
+**true**: The toggle is turned on. **false**: The toggle is turned off.
 
-默认值：false
+Default value: **false**
 
 **Type:** boolean
 
@@ -70,7 +71,9 @@ true：开关打开；false：开关关闭。
 triggerChange: Callback<boolean>
 ```
 
-用于触发Toggle开关状态变化的回调函数，通常在自定义ContentModifier中通过编程方式改变开关状态。调用此回调并传入true可将开关状态设置为打开，传入false可将开关状态设置为关闭。
+Callback invoked when the toggle's state changes.
+
+**true**: The toggle is turned on. **false**: The toggle is turned off.
 
 **Type:** [Callback](arkts-arkui-callback-i.md)&lt;boolean&gt;
 

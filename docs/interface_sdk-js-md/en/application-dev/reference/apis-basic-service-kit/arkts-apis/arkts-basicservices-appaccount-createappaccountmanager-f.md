@@ -12,7 +12,7 @@ import { appAccount } from 'kits/@kit.BasicServicesKit';
 function createAppAccountManager(): AppAccountManager
 ```
 
-创建应用账号管理器对象。
+Creates an **AppAccountManager** object.
 
 **Since:** 7
 
@@ -26,7 +26,7 @@ function createAppAccountManager(): AppAccountManager
 
 | Type | Description |
 | --- | --- |
-| [AppAccountManager](arkts-basicservices-appaccount-appaccountmanager-i.md) | 应用账号管理器对象。 |
+| [AppAccountManager](arkts-basicservices-appaccount-appaccountmanager-i.md) | AppAccountManager** object created. |
 
 ## Examples
 

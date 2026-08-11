@@ -1,6 +1,6 @@
 # NavDestinationCustomTitle
 
-NavDestination自定义标题。
+Defines the navigation destination custom title.
 
 **Since:** 23
 
@@ -16,7 +16,7 @@ NavDestination自定义标题。
 builder: CustomBuilder
 ```
 
-设置标题栏内容。
+Sets the custom title builder.
 
 **Type:** [CustomBuilder](../arkts-components/arkts-arkui-custombuilder-t.md)
 
@@ -36,9 +36,7 @@ builder: CustomBuilder
 height: TitleHeight | Length
 ```
 
-设置标题栏高度。
-
-取值范围：[0, +∞)。
+Sets the custom title height.
 
 **Type:** [TitleHeight](arkts-arkui-titleheight-e.md) \| Length
 

@@ -1,6 +1,6 @@
 # FileMapping
 
-文件映射对象，在调用FileMapping的方法前，需要先通过[mmap()](arkts-corefile-fileio-mmap-f.md#mmap)或方法[mmapSync()](arkts-corefile-fileio-mmapsync-f.md#mmapsync)构建一个FileMapping实例。
+Defines a file mapping object. Before calling the **FileMapping** method,construct a **FileMapping** instance using [mmap()](arkts-corefile-fileio-mmap-f.md#mmap) or [mmapSync()](arkts-corefile-fileio-mmapsync-f.md#mmapsync).
 
 **Since:** 26.0.0
 
@@ -22,7 +22,7 @@ import { Options, ReaderIteratorResult, Watcher, ReadTextOptions, WatchEventList
 capacity(): int
 ```
 
-获取文件映射区的容量。
+Obtains the capacity of the file mapping area.
 
 **Since:** 26.0.0
 
@@ -38,7 +38,7 @@ capacity(): int
 
 | Type | Description |
 | --- | --- |
-| int | 文件映射区的容量，单位为Byte。 |
+| int | Capacity of the file mapping area, in bytes. |
 
 **Error codes:**
 
@@ -54,11 +54,10 @@ capacity(): int
 flip(): void
 ```
 
-翻转文件映射区，将写入准备状态切换为读取准备状态。调用后，limit被设置为当前position的值，position被重置为0。
+Flips the file mapping area to switch from the write-ready state to the read-ready state.After this API is called, **limit** is set to the value of **position**, and **position** is reset to **0**.
 
-推荐在一系列  
-[write()](arkts-corefile-fileio-stream-i.md#write)操作完成后，调用此方法准备后续的  
-[read()](arkts-corefile-fileio-stream-i.md#read)操作。
+It is recommended that this API be called to prepare for subsequent  
+[read()](arkts-corefile-fileio-stream-i.md#read)operations after the[write()](arkts-corefile-fileio-stream-i.md#write) operations are complete.
 
 **Since:** 26.0.0
 
@@ -84,7 +83,7 @@ flip(): void
 getLimit(): int
 ```
 
-获取文件映射区可读写区域的上界。
+Obtains the upper bound of the readable and writable area of the file mapping area.
 
 **Since:** 26.0.0
 
@@ -100,7 +99,7 @@ getLimit(): int
 
 | Type | Description |
 | --- | --- |
-| int | 当前可读写区域上界值，单位为Byte。 |
+| int | Upper bound of the current readable and writable area, in bytes. |
 
 **Error codes:**
 
@@ -116,7 +115,7 @@ getLimit(): int
 getPosition(): int
 ```
 
-获取文件映射区的当前位置。
+Gets the current location of the file mapping area.
 
 **Since:** 26.0.0
 
@@ -132,7 +131,7 @@ getPosition(): int
 
 | Type | Description |
 | --- | --- |
-| int | 文件映射区的当前位置，单位为Byte。 |
+| int | Current position of the file mapping area, in bytes. |
 
 **Error codes:**
 
@@ -148,11 +147,12 @@ getPosition(): int
 msync(): Promise<void>
 ```
 
-将整个文件映射区的数据同步到磁盘文件。使用Promise异步回调。
+Synchronizes data of the entire file mapping area to the disk file synchronously.This API uses a promise to return the result.
 
-> **说明：**
+> **NOTE：**
 > 
-> 如果文件不在本地设备上，调用此接口不保证所有更改都已持久化存储。
+> If the file is not stored on the local device, calling this API does not ensure that all changes are stored
+> persistently.
 
 **Since:** 26.0.0
 
@@ -168,7 +168,7 @@ msync(): Promise<void>
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise对象，无返回结果。 |
+| Promise&lt;void&gt; | Promise that returns no value. |
 
 **Error codes:**
 
@@ -187,11 +187,12 @@ msync(): Promise<void>
 msync(position: int, length: int): Promise<void>
 ```
 
-将文件映射区指定范围内的数据同步到磁盘文件。使用Promise异步回调。
+Synchronizes data in the specified range of the file mapping area to the disk file synchronously. This API uses a promise to return the result.
 
-> **说明：**
+> **NOTE：**
 > 
-> 如果文件不在本地设备上，调用此接口不保证所有更改都已持久化存储。
+> If the file is not stored on the local device, calling this API does not ensure that all changes are stored
+> persistently.
 
 **Since:** 26.0.0
 
@@ -207,14 +208,14 @@ msync(position: int, length: int): Promise<void>
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| position | int | Yes | 期望同步的起始位置，单位为Byte。 |
-| length | int | Yes | 期望同步的数据长度，单位为Byte。 |
+| position | int | Yes | Start position to synchronize, in bytes. |
+| length | int | Yes | Length of the data to synchronize, in bytes. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise对象，无返回结果。 |
+| Promise&lt;void&gt; | Promise that returns no value. |
 
 **Error codes:**
 
@@ -233,11 +234,12 @@ msync(position: int, length: int): Promise<void>
 msyncSync(): void
 ```
 
-以同步方法将整个文件映射区的数据同步到磁盘文件。
+Synchronizes data of the entire file mapping area to the disk file synchronously.
 
-> **说明：**
+> **NOTE：**
 > 
-> 如果文件不在本地设备上，调用此接口不保证所有更改都已持久化存储。
+> If the file is not stored on the local device, calling this API does not ensure that all changes are stored
+> persistently.
 
 **Since:** 26.0.0
 
@@ -266,11 +268,12 @@ msyncSync(): void
 msyncSync(position: int, length: int): void
 ```
 
-以同步方法将文件映射区指定范围内的数据同步到磁盘文件。
+Synchronizes data in the specified range of the file mapping area to the disk file synchronously.
 
-> **说明：**
+> **NOTE：**
 > 
-> 如果文件不在本地设备上，调用此接口不保证所有更改都已持久化存储。
+> If the file is not stored on the local device, calling this API does not ensure that all changes are stored
+> persistently.
 
 **Since:** 26.0.0
 
@@ -286,8 +289,8 @@ msyncSync(position: int, length: int): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| position | int | Yes | 期望同步的起始位置，单位为Byte。 |
-| length | int | Yes | 期望同步的数据长度，单位为Byte。 |
+| position | int | Yes | Start position to synchronize, in bytes. |
+| length | int | Yes | Length of the data to synchronize, in bytes. |
 
 **Error codes:**
 
@@ -306,7 +309,7 @@ msyncSync(position: int, length: int): void
 read(buffer: ArrayBuffer, length?: int): int
 ```
 
-从当前位置读取数据，并将位置后移实际读取的字节数。
+Reads data from the current position and moves the position backward by the number of bytes actually read.
 
 **Since:** 26.0.0
 
@@ -322,14 +325,14 @@ read(buffer: ArrayBuffer, length?: int): int
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| buffer | ArrayBuffer | Yes | 用于保存读取到的文件数据的缓冲区。 |
-| length | int | No | 期望读取数据的长度，单位为Byte。默认缓冲区长度。 |
+| buffer | ArrayBuffer | Yes | Buffer used to store the file data read. |
+| length | int | No | Length of the data to read, in bytes. The default value is the buffer length. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| int | 返回实际读取的数据长度，单位为Byte。 |
+| int | Length of the data read, in bytes. |
 
 **Error codes:**
 
@@ -347,7 +350,7 @@ read(buffer: ArrayBuffer, length?: int): int
 read(position: int, buffer: ArrayBuffer, length?: int): int
 ```
 
-从指定位置读取数据，当前位置不会发生移动。
+Reads data from the specified position. The current position does not move.
 
 **Since:** 26.0.0
 
@@ -363,15 +366,15 @@ read(position: int, buffer: ArrayBuffer, length?: int): int
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| position | int | Yes | 期望读取的起始位置，单位为Byte。 |
-| buffer | ArrayBuffer | Yes | 用于保存读取到的文件数据的缓冲区。 |
-| length | int | No | 期望读取数据的长度，单位为Byte。默认缓冲区长度。 |
+| position | int | Yes | Start position to read the data, in bytes. |
+| buffer | ArrayBuffer | Yes | Buffer used to store the file data read. |
+| length | int | No | Length of the data to read, in bytes. The default value is the buffer length. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| int | 返回实际读取的数据长度，单位为Byte。 |
+| int | Length of the data read, in bytes. |
 
 **Error codes:**
 
@@ -389,7 +392,7 @@ read(position: int, buffer: ArrayBuffer, length?: int): int
 remaining(): int
 ```
 
-获取从当前位置（position）到可读写区域的上界（limit）之间的剩余字节数。
+Obtains the number of remaining bytes between the current position (**position**) and the upper bound (**limit**)of the readable and writable area.
 
 **Since:** 26.0.0
 
@@ -405,7 +408,7 @@ remaining(): int
 
 | Type | Description |
 | --- | --- |
-| int | 剩余可读或可写的字节数，单位为Byte。 |
+| int | Number of remaining readable or writable bytes. |
 
 **Error codes:**
 
@@ -421,7 +424,7 @@ remaining(): int
 setLimit(limit: int): void
 ```
 
-设置文件映射区可读写区域的上界。
+Sets the upper bound of the readable and writable area of the file mapping area.
 
 **Since:** 26.0.0
 
@@ -437,7 +440,7 @@ setLimit(limit: int): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| limit | int | Yes | 要设置的可读写区域上界值，单位为Byte。 &lt;br&gt;取值需大于等于0，且小于等于当前[capacity](arkts-corefile-fileio-filemapping-i.md#capacity)。若所设值小于文件映射区的当前位置，则当前位置将自动调整至该值。 |
+| limit | int | Yes | Upper bound of the readable and writable area to set, in bytes. &lt;br&gt;The value is greater than or equal to 0 and less than or equal to the value of [capacity](arkts-corefile-fileio-filemapping-i.md#capacity). If the value of **limit** is smaller than that of **position** in the file mapping area, the value of **position** is automatically adjusted to that of **limit**. |
 
 **Error codes:**
 
@@ -453,7 +456,7 @@ setLimit(limit: int): void
 setPosition(position: int): void
 ```
 
-设置文件映射区的当前位置。
+Sets the current location of the file mapping area.
 
 **Since:** 26.0.0
 
@@ -469,7 +472,7 @@ setPosition(position: int): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| position | int | Yes | 期望设置的目标位置，单位为Byte。 &lt;br&gt;必须为非负数且不大于当前可读写上界的limit，可通过[getLimit()](arkts-corefile-fileio-filemapping-i.md#getlimit)获得可读写上界的limit。 |
+| position | int | Yes | Target position to set, in bytes. &lt;br&gt;The value must be a non-negative number and cannot be greater than the upper bound (**limit**) of the readable and writable area. You can obtain the value of **limit** by calling [getLimit()](arkts-corefile-fileio-filemapping-i.md#getlimit). |
 
 **Error codes:**
 
@@ -485,7 +488,9 @@ setPosition(position: int): void
 unmap(): Promise<void>
 ```
 
-释放文件映射区。使用Promise异步回调。调用后，position、limit和capacity均被重置为0，FileMapping对象不可再进行任何操作。
+Releases the file mapping area. This API uses a promise to return the result. After this API is called,  
+**position**, **limit**, and **capacity** are all reset to **0**, and no operation can be performed on the  
+**FileMapping** object.
 
 **Since:** 26.0.0
 
@@ -501,7 +506,7 @@ unmap(): Promise<void>
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise对象，无返回结果。 |
+| Promise&lt;void&gt; | Promise that returns no value. |
 
 **Error codes:**
 
@@ -516,7 +521,7 @@ unmap(): Promise<void>
 unmapSync(): void
 ```
 
-以同步方法释放文件映射区。调用后，position、limit和capacity均被重置为0，FileMapping对象不可再进行任何操作。
+Releases the file mapping area synchronously. After this API is called, **position**, **limit**, and **capacity**are all reset to **0**, and no operation can be performed on the **FileMapping** object.
 
 **Since:** 26.0.0
 
@@ -541,7 +546,7 @@ unmapSync(): void
 write(data: ArrayBuffer, length?: int): int
 ```
 
-从当前位置写入数据，并将位置后移实际写入的字节数。
+Writes data from the current position and moves the position backward by the number of bytes actually written.
 
 **Since:** 26.0.0
 
@@ -557,14 +562,14 @@ write(data: ArrayBuffer, length?: int): int
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| data | ArrayBuffer | Yes | 待写入文件的缓冲区数据。 |
-| length | int | No | 期望写入数据的长度，单位为Byte。默认缓冲区长度。 |
+| data | ArrayBuffer | Yes | Buffer data to be written to the file. |
+| length | int | No | Length of the data to write, in bytes. The default value is the buffer length. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| int | 返回实际写入的长度，单位为Byte。 |
+| int | return the length of the data written, in bytes. |
 
 **Error codes:**
 
@@ -583,7 +588,7 @@ write(data: ArrayBuffer, length?: int): int
 write(position: int, data: ArrayBuffer, length?: int): int
 ```
 
-从指定位置写入数据，当前位置不会发生移动。
+Writes data to the specified position. The current position does not move.
 
 **Since:** 26.0.0
 
@@ -599,15 +604,15 @@ write(position: int, data: ArrayBuffer, length?: int): int
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| position | int | Yes | 期望写入的起始位置，单位为Byte。 |
-| data | ArrayBuffer | Yes | 待写入文件的缓冲区数据。 |
-| length | int | No | 期望写入数据的长度，单位为Byte。可选，默认缓冲区长度。 |
+| position | int | Yes | Start position to write, in bytes. |
+| data | ArrayBuffer | Yes | Buffer data to be written to the file. |
+| length | int | No | Length of the data to write, in bytes. This parameter is optional. The default value is the buffer length. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| int | 返回实际写入的长度，单位为Byte。 |
+| int | return the length of the data written, in bytes. |
 
 **Error codes:**
 

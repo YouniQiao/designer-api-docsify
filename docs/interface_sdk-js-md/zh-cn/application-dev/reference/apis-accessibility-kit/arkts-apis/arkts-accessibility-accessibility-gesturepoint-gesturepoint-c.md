@@ -12,12 +12,6 @@ GesturePoint表示手势触摸点。
 
 **系统能力：** SystemCapability.BarrierFree.Accessibility.Core
 
-## 导入模块
-
-```TypeScript
-import { GesturePoint } from 'kits/@kit.AccessibilityKit';
-```
-
 ## constructor
 
 ```TypeScript

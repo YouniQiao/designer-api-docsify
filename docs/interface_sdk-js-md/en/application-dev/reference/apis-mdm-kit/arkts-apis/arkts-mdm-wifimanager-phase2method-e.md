@@ -1,6 +1,6 @@
 # Phase2Method
 
-表示第二阶段认证方式的枚举。
+Enumerates the Phase 2 authentication methods.
 
 **Since:** 12
 
@@ -16,7 +16,7 @@
 PHASE2_NONE = 0
 ```
 
-未指定。
+Not specified.
 
 **Since:** 12
 
@@ -34,7 +34,7 @@ PHASE2_NONE = 0
 PHASE2_PAP = 1
 ```
 
-PAP类型。
+PAP.
 
 **Since:** 12
 
@@ -52,7 +52,7 @@ PAP类型。
 PHASE2_MSCHAP = 2
 ```
 
-MSCHAP类型。
+MS-CHAP.
 
 **Since:** 12
 
@@ -70,7 +70,7 @@ MSCHAP类型。
 PHASE2_MSCHAPV2 = 3
 ```
 
-MSCHAPV2类型。
+MS-CHAPv2.
 
 **Since:** 12
 
@@ -88,7 +88,7 @@ MSCHAPV2类型。
 PHASE2_GTC = 4
 ```
 
-GTC类型。
+GTC.
 
 **Since:** 12
 
@@ -106,7 +106,7 @@ GTC类型。
 PHASE2_SIM = 5
 ```
 
-SIM类型。
+SIM.
 
 **Since:** 12
 
@@ -124,7 +124,7 @@ SIM类型。
 PHASE2_AKA = 6
 ```
 
-AKA类型。
+AKA.
 
 **Since:** 12
 
@@ -142,7 +142,7 @@ AKA类型。
 PHASE2_AKA_PRIME = 7
 ```
 
-AKA Prime类型。
+AKA Prime.
 
 **Since:** 12
 

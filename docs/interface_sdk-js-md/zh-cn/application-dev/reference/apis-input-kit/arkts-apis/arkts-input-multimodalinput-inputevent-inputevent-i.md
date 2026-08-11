@@ -10,12 +10,6 @@
 
 **系统能力：** SystemCapability.MultimodalInput.Input.Core
 
-## 导入模块
-
-```TypeScript
-import { InputEvent } from 'kits/@kit.InputKit';
-```
-
 ## actionTime
 
 ```TypeScript

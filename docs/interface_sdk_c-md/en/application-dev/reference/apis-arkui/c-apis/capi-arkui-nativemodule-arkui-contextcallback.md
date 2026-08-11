@@ -12,7 +12,7 @@ Defines the event callback type.
 
 **Related module**: [ArkUI_NativeModule](capi-arkui-nativemodule.md)
 
-**Header file**: [native_type.h](capi-native-type-h.md)
+**Header file**: [common_type.h](capi-common-type-h.md)
 
 ## Summary
 
@@ -20,14 +20,14 @@ Defines the event callback type.
 
 | Name | Description |
 | -- | -- |
-| void* userData | Custom type, data of a user-defined type that is passed as a parameter during callbacks. |
+| void* userData |  |
 
 
 ### Member functions
 
 | Name | Description |
 | -- | -- |
-| [void (\*callback)(void* userData)](#callback) | Event callback. |
+| [void (\*callback)(void* userData)](#callback) |  |
 
 ## Member function description
 
@@ -38,7 +38,5 @@ void (*callback)(void* userData)
 ```
 
 **Description**
-
-Event callback.
 
 

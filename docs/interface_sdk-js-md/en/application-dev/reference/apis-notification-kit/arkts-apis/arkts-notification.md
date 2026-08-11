@@ -1,6 +1,6 @@
 # @ohos.notification
 
-本模块提供通知管理的能力，包括发布、取消发布通知，创建、获取、移除通知通道，订阅、取消订阅通知，获取通知的使能状态、角标使能状态，获取通知的相关信息等。
+The **Notification** module provides notification management capabilities, covering notifications, notification slots, notification subscription, notification enabled status, and notification badge status.
 
 **Since:** 7
 
@@ -8,7 +8,7 @@
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.notificationManager/notificationManager
+**Substitutes:** [@ohos.notificationManager:notificationManager](arkts-notificationmanager.md)
 
 <!--Device-unnamed-declare namespace notification--><!--Device-unnamed-declare namespace notification-End-->
 
@@ -20,134 +20,134 @@
 
 | Name | Description |
 | --- | --- |
-| [addSlot](arkts-notification-notification-addslot-depr-f.md#addslot-2) | 创建指定类型的通知通道（callback形式）。 |
-| [addSlot](arkts-notification-notification-addslot-depr-f.md#addslot-3) | 创建指定类型的通知通道（Promise形式）。 |
-| [cancel](arkts-notification-notification-cancel-depr-f.md#cancel) | 取消与指定通知ID相匹配的已发布通知（callback形式）。 |
-| [cancel](arkts-notification-notification-cancel-depr-f.md#cancel-1) | 通过通知ID和通知标签取消已发布的通知（callback形式）。 |
-| [cancel](arkts-notification-notification-cancel-depr-f.md#cancel-2) | 取消与指定通知ID相匹配的已发布通知，label可以指定也可以不指定（Promise形式）。 |
-| [cancelAll](arkts-notification-notification-cancelall-depr-f.md#cancelall) | 取消所有已发布的通知（callback形式）。 |
-| [cancelAll](arkts-notification-notification-cancelall-depr-f.md#cancelall-1) | 取消所有已发布的通知（Promise形式）。 |
-| [cancelGroup](arkts-notification-notification-cancelgroup-depr-f.md#cancelgroup) | 取消本应用指定组下的通知（Callback形式）。 |
-| [cancelGroup](arkts-notification-notification-cancelgroup-depr-f.md#cancelgroup-1) | 取消本应用指定组下的通知（Promise形式）。 |
-| [getActiveNotificationCount](arkts-notification-notification-getactivenotificationcount-depr-f.md#getactivenotificationcount) | 获取当前应用未删除的通知数（Callback形式）。 |
-| [getActiveNotificationCount](arkts-notification-notification-getactivenotificationcount-depr-f.md#getactivenotificationcount-1) | 获取当前应用未删除的通知数（Promise形式）。 |
-| [getActiveNotifications](arkts-notification-notification-getactivenotifications-depr-f.md#getactivenotifications) | 获取当前应用未删除的通知列表（Callback形式）。 |
-| [getActiveNotifications](arkts-notification-notification-getactivenotifications-depr-f.md#getactivenotifications-1) | 获取当前应用未删除的通知列表（Promise形式）。 |
-| [getSlot](arkts-notification-notification-getslot-depr-f.md#getslot) | 获取一个指定类型的通知通道（callback形式）。 |
-| [getSlot](arkts-notification-notification-getslot-depr-f.md#getslot-1) | 获取一个指定类型的通知通道（Promise形式）。 |
-| [getSlots](arkts-notification-notification-getslots-depr-f.md#getslots) | 获取此应用程序的所有通知通道（callback形式）。 |
-| [getSlots](arkts-notification-notification-getslots-depr-f.md#getslots-1) | 获取此应用程序的所有通知通道（Promise形式）。 |
-| [isDistributedEnabled](arkts-notification-notification-isdistributedenabled-depr-f.md#isdistributedenabled) | 查询设备是否支持分布式通知（Callback形式）。 |
-| [isDistributedEnabled](arkts-notification-notification-isdistributedenabled-depr-f.md#isdistributedenabled-1) | 查询设备是否支持分布式通知（Promise形式）。 |
-| [isSupportTemplate](arkts-notification-notification-issupporttemplate-depr-f.md#issupporttemplate) | 在使用[通知模板](arkts-notification-notificationtemplate-notificationtemplate-i.md)发布通知前，可以通过该接口查询是否支持对应的通知模板。使用callback异步回调。 |
-| [isSupportTemplate](arkts-notification-notification-issupporttemplate-depr-f.md#issupporttemplate-1) | 在使用[通知模板](arkts-notification-notificationtemplate-notificationtemplate-i.md)发布通知前，可以通过该接口查询是否支持对应的通知模板。使用Promise异步回调。 |
-| [publish](arkts-notification-notification-publish-depr-f.md#publish) | 发布通知（callback形式）。 |
-| [publish](arkts-notification-notification-publish-depr-f.md#publish-1) | 发布通知（Promise形式）。 |
-| [removeAllSlots](arkts-notification-notification-removeallslots-depr-f.md#removeallslots) | 删除所有通知通道（callback形式）。 |
-| [removeAllSlots](arkts-notification-notification-removeallslots-depr-f.md#removeallslots-1) | 删除所有通知通道（Promise形式）。 |
-| [removeSlot](arkts-notification-notification-removeslot-depr-f.md#removeslot) | 删除指定类型的通知通道（callback形式）。 |
-| [removeSlot](arkts-notification-notification-removeslot-depr-f.md#removeslot-1) | 删除指定类型的通知通道（Promise形式）。 |
-| [requestEnableNotification](arkts-notification-notification-requestenablenotification-depr-f.md#requestenablenotification) | 应用请求通知使能（Callback形式）。 |
-| [requestEnableNotification](arkts-notification-notification-requestenablenotification-depr-f.md#requestenablenotification-1) | 应用请求通知使能（Promise形式）。 |
+| [addSlot](arkts-notification-notification-addslot-depr-f.md#addslot-2) | Adds a notification slot of a specified type. This API uses an asynchronous callback to return the result. |
+| [addSlot](arkts-notification-notification-addslot-depr-f.md#addslot-3) | Adds a notification slot of a specified type. This API uses a promise to return the result. |
+| [cancel](arkts-notification-notification-cancel-depr-f.md#cancel) | Cancels a notification with the specified ID. This API uses an asynchronous callback to return the result. |
+| [cancel](arkts-notification-notification-cancel-depr-f.md#cancel-1) | Cancels a notification with the specified ID and label. This API uses an asynchronous callback to return the result. |
+| [cancel](arkts-notification-notification-cancel-depr-f.md#cancel-2) | Cancels a notification with the specified ID and optional label. This API uses a promise to return the result. |
+| [cancelAll](arkts-notification-notification-cancelall-depr-f.md#cancelall) | Cancels all notifications. This API uses an asynchronous callback to return the result. |
+| [cancelAll](arkts-notification-notification-cancelall-depr-f.md#cancelall-1) | Cancels all notifications. This API uses a promise to return the result. |
+| [cancelGroup](arkts-notification-notification-cancelgroup-depr-f.md#cancelgroup) | Cancels notifications under a notification group of this application. This API uses an asynchronous callback to return the result. |
+| [cancelGroup](arkts-notification-notification-cancelgroup-depr-f.md#cancelgroup-1) | Cancels notifications under a notification group of this application. This API uses a promise to return the result. |
+| [getActiveNotificationCount](arkts-notification-notification-getactivenotificationcount-depr-f.md#getactivenotificationcount) | Obtains the number of active notifications of this application. This API uses an asynchronous callback to return the result. |
+| [getActiveNotificationCount](arkts-notification-notification-getactivenotificationcount-depr-f.md#getactivenotificationcount-1) | Obtains the number of active notifications of this application. This API uses a promise to return the result. |
+| [getActiveNotifications](arkts-notification-notification-getactivenotifications-depr-f.md#getactivenotifications) | Obtains active notifications of this application. This API uses an asynchronous callback to return the result. |
+| [getActiveNotifications](arkts-notification-notification-getactivenotifications-depr-f.md#getactivenotifications-1) | Obtains active notifications of this application. This API uses a promise to return the result. |
+| [getSlot](arkts-notification-notification-getslot-depr-f.md#getslot) | Obtains a notification slot of a specified type. This API uses an asynchronous callback to return the result. |
+| [getSlot](arkts-notification-notification-getslot-depr-f.md#getslot-1) | Obtains a notification slot of a specified type. This API uses a promise to return the result. |
+| [getSlots](arkts-notification-notification-getslots-depr-f.md#getslots) | Obtains all notification slots. This API uses an asynchronous callback to return the result. |
+| [getSlots](arkts-notification-notification-getslots-depr-f.md#getslots-1) | Obtains all notification slots of this application. This API uses a promise to return the result. |
+| [isDistributedEnabled](arkts-notification-notification-isdistributedenabled-depr-f.md#isdistributedenabled) | Checks whether this device supports distributed notifications. This API uses an asynchronous callback to return the result. |
+| [isDistributedEnabled](arkts-notification-notification-isdistributedenabled-depr-f.md#isdistributedenabled-1) | Checks whether this device supports distributed notifications. This API uses a promise to return the result. |
+| [isSupportTemplate](arkts-notification-notification-issupporttemplate-depr-f.md#issupporttemplate) | Checks whether a specified template is supported before using  [NotificationTemplate](arkts-notification-notificationtemplate-notificationtemplate-i.md) to publish a notification.This API uses an asynchronous callback to return the result. |
+| [isSupportTemplate](arkts-notification-notification-issupporttemplate-depr-f.md#issupporttemplate-1) | Checks whether a specified template is supported before using  [NotificationTemplate](arkts-notification-notificationtemplate-notificationtemplate-i.md) to publish a notification.This API uses a promise to return the result. |
+| [publish](arkts-notification-notification-publish-depr-f.md#publish) | Publishes a notification. This API uses an asynchronous callback to return the result. |
+| [publish](arkts-notification-notification-publish-depr-f.md#publish-1) | Publishes a notification. This API uses a promise to return the result. |
+| [removeAllSlots](arkts-notification-notification-removeallslots-depr-f.md#removeallslots) | Removes all notification slots. This API uses an asynchronous callback to return the result. |
+| [removeAllSlots](arkts-notification-notification-removeallslots-depr-f.md#removeallslots-1) | Removes all notification slots. This API uses a promise to return the result. |
+| [removeSlot](arkts-notification-notification-removeslot-depr-f.md#removeslot) | Removes a notification slot of a specified type. This API uses an asynchronous callback to return the result. |
+| [removeSlot](arkts-notification-notification-removeslot-depr-f.md#removeslot-1) | Removes a notification slot of a specified type. This API uses a promise to return the result. |
+| [requestEnableNotification](arkts-notification-notification-requestenablenotification-depr-f.md#requestenablenotification) | Requests notification to be enabled for this application. This API uses an asynchronous callback to return the result. |
+| [requestEnableNotification](arkts-notification-notification-requestenablenotification-depr-f.md#requestenablenotification-1) | Requests notification to be enabled for this application. This API uses a promise to return the result. |
 
 <!--Del-->
 ### Functions（系统接口）
 
 | Name | Description |
 | --- | --- |
-| [addSlot](arkts-notification-notification-addslot-depr-f-sys.md#addslot) | 创建通知渠道。使用callback异步回调。 |
-| [addSlot](arkts-notification-notification-addslot-depr-f-sys.md#addslot-1) | 创建通知渠道。使用Promise异步回调。 |
-| [addSlots](arkts-notification-notification-addslots-depr-f-sys.md#addslots) | 创建多个通知通道（callback形式）。 |
-| [addSlots](arkts-notification-notification-addslots-depr-f-sys.md#addslots-1) | 创建多个通知通道（Promise形式）。 |
-| [displayBadge](arkts-notification-notification-displaybadge-depr-f-sys.md#displaybadge) | 设定指定应用的角标使能状态（Callback形式）。 |
-| [displayBadge](arkts-notification-notification-displaybadge-depr-f-sys.md#displaybadge-1) | 设定指定应用的角标使能状态（Promise形式）。 |
-| [enableDistributed](arkts-notification-notification-enabledistributed-depr-f-sys.md#enabledistributed) | 设置设备是否支持分布式通知（Callback形式）。 |
-| [enableDistributed](arkts-notification-notification-enabledistributed-depr-f-sys.md#enabledistributed-1) | 设置设备是否支持分布式通知（Promise形式）。 |
-| [enableDistributedByBundle](arkts-notification-notification-enabledistributedbybundle-depr-f-sys.md#enabledistributedbybundle) | 设置指定应用是否支持分布式通知（Callback形式）。 |
-| [enableDistributedByBundle](arkts-notification-notification-enabledistributedbybundle-depr-f-sys.md#enabledistributedbybundle-1) | 设置指定应用是否支持分布式通知（Promise形式）。 |
-| [enableNotification](arkts-notification-notification-enablenotification-depr-f-sys.md#enablenotification) | 设定指定应用的通知使能状态（Callback形式）。 |
-| [enableNotification](arkts-notification-notification-enablenotification-depr-f-sys.md#enablenotification-1) | 设定指定应用的通知使能状态（Promise形式）。 |
-| [getAllActiveNotifications](arkts-notification-notification-getallactivenotifications-depr-f-sys.md#getallactivenotifications) | 获取当前未删除的所有通知（Callback形式）。 |
-| [getAllActiveNotifications](arkts-notification-notification-getallactivenotifications-depr-f-sys.md#getallactivenotifications-1) | 获取当前未删除的所有通知（Promise形式）。 |
-| [getDeviceRemindType](arkts-notification-notification-getdeviceremindtype-depr-f-sys.md#getdeviceremindtype) | 获取通知的提醒方式（Callback形式）。 |
-| [getDeviceRemindType](arkts-notification-notification-getdeviceremindtype-depr-f-sys.md#getdeviceremindtype-1) | 获取通知的提醒方式（Promise形式）。 |
-| [getDoNotDisturbDate](arkts-notification-notification-getdonotdisturbdate-depr-f-sys.md#getdonotdisturbdate) | 查询免打扰时间（Callback形式）。 |
-| [getDoNotDisturbDate](arkts-notification-notification-getdonotdisturbdate-depr-f-sys.md#getdonotdisturbdate-1) | 查询免打扰时间（Promise形式）。 |
-| [getDoNotDisturbDate](arkts-notification-notification-getdonotdisturbdate-depr-f-sys.md#getdonotdisturbdate-2) | 查询指定用户的免打扰时间（Callback形式）。 |
-| [getDoNotDisturbDate](arkts-notification-notification-getdonotdisturbdate-depr-f-sys.md#getdonotdisturbdate-3) | 查询指定用户的免打扰时间（Promise形式）。 |
-| [getSlotNumByBundle](arkts-notification-notification-getslotnumbybundle-depr-f-sys.md#getslotnumbybundle) | 获取指定应用的通知通道数量（Callback形式）。 |
-| [getSlotNumByBundle](arkts-notification-notification-getslotnumbybundle-depr-f-sys.md#getslotnumbybundle-1) | 获取指定应用的通知通道数量（Promise形式）。 |
-| [getSlotsByBundle](arkts-notification-notification-getslotsbybundle-depr-f-sys.md#getslotsbybundle) | 获取指定应用的所有通知通道（Callback形式）。 |
-| [getSlotsByBundle](arkts-notification-notification-getslotsbybundle-depr-f-sys.md#getslotsbybundle-1) | 获取指定应用的所有通知通道（Promise形式）。 |
-| [isBadgeDisplayed](arkts-notification-notification-isbadgedisplayed-depr-f-sys.md#isbadgedisplayed) | 获取指定应用的角标使能状态（Callback形式）。 |
-| [isBadgeDisplayed](arkts-notification-notification-isbadgedisplayed-depr-f-sys.md#isbadgedisplayed-1) | 获取指定应用的角标使能状态（Promise形式）。 |
-| [isDistributedEnabledByBundle](arkts-notification-notification-isdistributedenabledbybundle-depr-f-sys.md#isdistributedenabledbybundle) | 根据应用的包获取应用程序是否支持分布式通知（Callback形式）。 |
-| [isDistributedEnabledByBundle](arkts-notification-notification-isdistributedenabledbybundle-depr-f-sys.md#isdistributedenabledbybundle-1) | 查询指定应用是否支持分布式通知（Promise形式）。 |
-| [isNotificationEnabled](arkts-notification-notification-isnotificationenabled-depr-f-sys.md#isnotificationenabled) | 获取指定应用的通知使能状态（Callback形式）。 |
-| [isNotificationEnabled](arkts-notification-notification-isnotificationenabled-depr-f-sys.md#isnotificationenabled-1) | 获取指定应用的通知使能状态（Promise形式）。 |
-| [isNotificationEnabled](arkts-notification-notification-isnotificationenabled-depr-f-sys.md#isnotificationenabled-2) | 获取通知使能状态（Callback形式）。 |
-| [isNotificationEnabled](arkts-notification-notification-isnotificationenabled-depr-f-sys.md#isnotificationenabled-3) | 获取通知使能状态（Promise形式）。 |
-| [isNotificationEnabled](arkts-notification-notification-isnotificationenabled-depr-f-sys.md#isnotificationenabled-4) | 获取指定用户ID下的通知使能状态。使用callback异步回调。 |
-| [isNotificationEnabled](arkts-notification-notification-isnotificationenabled-depr-f-sys.md#isnotificationenabled-5) | 获取指定用户下的通知使能状态。使用Promise异步回调。 |
-| [publish](arkts-notification-notification-publish-depr-f-sys.md#publish-2) | 发布通知给指定的用户。使用callback异步回调。 |
-| [publish](arkts-notification-notification-publish-depr-f-sys.md#publish-3) | 发布通知给指定的用户。使用Promise异步回调。 |
-| [remove](arkts-notification-notification-remove-depr-f-sys.md#remove) | 删除指定通知（Callback形式）。 |
-| [remove](arkts-notification-notification-remove-depr-f-sys.md#remove-1) | 删除指定通知（Promise形式）。 |
-| [remove](arkts-notification-notification-remove-depr-f-sys.md#remove-2) | 删除指定通知（Callback形式）。 |
-| [remove](arkts-notification-notification-remove-depr-f-sys.md#remove-3) | 删除指定通知（Promise形式）。 |
-| [removeAll](arkts-notification-notification-removeall-depr-f-sys.md#removeall) | 删除指定应用的所有通知（Callback形式）。 |
-| [removeAll](arkts-notification-notification-removeall-depr-f-sys.md#removeall-1) | 删除所有通知（Callback形式）。 |
-| [removeAll](arkts-notification-notification-removeall-depr-f-sys.md#removeall-2) | 删除指定用户下的所有通知（callback形式）。 |
-| [removeAll](arkts-notification-notification-removeall-depr-f-sys.md#removeall-3) | 删除指定用户下的所有通知（Promise形式）。 |
-| [removeAll](arkts-notification-notification-removeall-depr-f-sys.md#removeall-4) | 删除指定应用的所有通知（Promise形式）。 |
-| [removeGroupByBundle](arkts-notification-notification-removegroupbybundle-depr-f-sys.md#removegroupbybundle) | 删除指定应用的指定组下的通知（Callback形式）。 |
-| [removeGroupByBundle](arkts-notification-notification-removegroupbybundle-depr-f-sys.md#removegroupbybundle-1) | 删除指定应用的指定组下的通知（Promise形式）。 |
-| [setDoNotDisturbDate](arkts-notification-notification-setdonotdisturbdate-depr-f-sys.md#setdonotdisturbdate) | 设置免打扰时间（Callback形式）。 |
-| [setDoNotDisturbDate](arkts-notification-notification-setdonotdisturbdate-depr-f-sys.md#setdonotdisturbdate-1) | 设置免打扰时间（Promise形式）。 |
-| [setDoNotDisturbDate](arkts-notification-notification-setdonotdisturbdate-depr-f-sys.md#setdonotdisturbdate-2) | 指定用户设置免打扰时间（Callback形式）。 |
-| [setDoNotDisturbDate](arkts-notification-notification-setdonotdisturbdate-depr-f-sys.md#setdonotdisturbdate-3) | 指定用户设置免打扰时间（Promise形式）。 |
-| [setSlotByBundle](arkts-notification-notification-setslotbybundle-depr-f-sys.md#setslotbybundle) | 设定指定应用的通知通道（Callback形式）。 |
-| [setSlotByBundle](arkts-notification-notification-setslotbybundle-depr-f-sys.md#setslotbybundle-1) | 设定指定应用的通知通道（Promise形式）。 |
-| [subscribe](arkts-notification-notification-subscribe-depr-f-sys.md#subscribe) | 订阅当前用户下所有应用的通知。使用callback异步回调。 |
-| [subscribe](arkts-notification-notification-subscribe-depr-f-sys.md#subscribe-1) | 订阅通知并指定订阅信息。使用callback异步回调。 |
-| [subscribe](arkts-notification-notification-subscribe-depr-f-sys.md#subscribe-2) | 订阅通知并指定订阅信息。使用Promise异步回调。 |
-| [supportDoNotDisturbMode](arkts-notification-notification-supportdonotdisturbmode-depr-f-sys.md#supportdonotdisturbmode) | 查询是否支持免打扰功能（Callback形式）。 |
-| [supportDoNotDisturbMode](arkts-notification-notification-supportdonotdisturbmode-depr-f-sys.md#supportdonotdisturbmode-1) | 查询是否支持免打扰功能（Promise形式）。 |
-| [unsubscribe](arkts-notification-notification-unsubscribe-depr-f-sys.md#unsubscribe) | 取消订阅（callbcak形式）。 |
-| [unsubscribe](arkts-notification-notification-unsubscribe-depr-f-sys.md#unsubscribe-1) | 取消订阅（Promise形式）。 |
+| [addSlot](arkts-notification-notification-addslot-depr-f-sys.md#addslot) | Adds a notification slot. This API uses an asynchronous callback to return the result. |
+| [addSlot](arkts-notification-notification-addslot-depr-f-sys.md#addslot-1) | Adds a notification slot. This API uses a promise to return the result. |
+| [addSlots](arkts-notification-notification-addslots-depr-f-sys.md#addslots) | Adds an array of notification slots. This API uses an asynchronous callback to return the result. |
+| [addSlots](arkts-notification-notification-addslots-depr-f-sys.md#addslots-1) | Adds an array of notification slots. This API uses a promise to return the result. |
+| [displayBadge](arkts-notification-notification-displaybadge-depr-f-sys.md#displaybadge) | Sets whether to enable the notification badge for a specified application.This API uses an asynchronous callback to return the result. |
+| [displayBadge](arkts-notification-notification-displaybadge-depr-f-sys.md#displaybadge-1) | Sets whether to enable the notification badge for a specified application.This API uses a promise to return the result. |
+| [enableDistributed](arkts-notification-notification-enabledistributed-depr-f-sys.md#enabledistributed) | Sets whether this device supports distributed notifications.This API uses an asynchronous callback to return the result. |
+| [enableDistributed](arkts-notification-notification-enabledistributed-depr-f-sys.md#enabledistributed-1) | Sets whether this device supports distributed notifications. This API uses a promise to return the result. |
+| [enableDistributedByBundle](arkts-notification-notification-enabledistributedbybundle-depr-f-sys.md#enabledistributedbybundle) | Sets whether a specified application supports distributed notifications.This API uses an asynchronous callback to return the result. |
+| [enableDistributedByBundle](arkts-notification-notification-enabledistributedbybundle-depr-f-sys.md#enabledistributedbybundle-1) | Sets whether a specified application supports distributed notifications.This API uses a promise to return the result. |
+| [enableNotification](arkts-notification-notification-enablenotification-depr-f-sys.md#enablenotification) | Sets whether to enable notification for a specified application.This API uses an asynchronous callback to return the result. |
+| [enableNotification](arkts-notification-notification-enablenotification-depr-f-sys.md#enablenotification-1) | Sets whether to enable notification for a specified application. This API uses a promise to return the result. |
+| [getAllActiveNotifications](arkts-notification-notification-getallactivenotifications-depr-f-sys.md#getallactivenotifications) | Obtains all active notifications. This API uses an asynchronous callback to return the result. |
+| [getAllActiveNotifications](arkts-notification-notification-getallactivenotifications-depr-f-sys.md#getallactivenotifications-1) | Obtains all active notifications. This API uses a promise to return the result. |
+| [getDeviceRemindType](arkts-notification-notification-getdeviceremindtype-depr-f-sys.md#getdeviceremindtype) | Obtains the notification reminder type. This API uses an asynchronous callback to return the result. |
+| [getDeviceRemindType](arkts-notification-notification-getdeviceremindtype-depr-f-sys.md#getdeviceremindtype-1) | Obtains the notification reminder type. This API uses a promise to return the result. |
+| [getDoNotDisturbDate](arkts-notification-notification-getdonotdisturbdate-depr-f-sys.md#getdonotdisturbdate) | Obtains the DND time. This API uses an asynchronous callback to return the result. |
+| [getDoNotDisturbDate](arkts-notification-notification-getdonotdisturbdate-depr-f-sys.md#getdonotdisturbdate-1) | Obtains the DND time. This API uses a promise to return the result. |
+| [getDoNotDisturbDate](arkts-notification-notification-getdonotdisturbdate-depr-f-sys.md#getdonotdisturbdate-2) | Obtains the DND time of a specified user. This API uses an asynchronous callback to return the result. |
+| [getDoNotDisturbDate](arkts-notification-notification-getdonotdisturbdate-depr-f-sys.md#getdonotdisturbdate-3) | Obtains the DND time of a specified user. This API uses a promise to return the result. |
+| [getSlotNumByBundle](arkts-notification-notification-getslotnumbybundle-depr-f-sys.md#getslotnumbybundle) | Obtains the number of notification slots of a specified application.This API uses an asynchronous callback to return the result. |
+| [getSlotNumByBundle](arkts-notification-notification-getslotnumbybundle-depr-f-sys.md#getslotnumbybundle-1) | Obtains the number of notification slots of a specified application. This API uses a promise to return the result. |
+| [getSlotsByBundle](arkts-notification-notification-getslotsbybundle-depr-f-sys.md#getslotsbybundle) | Obtains the notification slots of a specified application.This API uses an asynchronous callback to return the result. |
+| [getSlotsByBundle](arkts-notification-notification-getslotsbybundle-depr-f-sys.md#getslotsbybundle-1) | Obtains the notification slots of a specified application. This API uses a promise to return the result. |
+| [isBadgeDisplayed](arkts-notification-notification-isbadgedisplayed-depr-f-sys.md#isbadgedisplayed) | Checks whether the notification badge is enabled for a specified application.This API uses an asynchronous callback to return the result. |
+| [isBadgeDisplayed](arkts-notification-notification-isbadgedisplayed-depr-f-sys.md#isbadgedisplayed-1) | Checks whether the notification badge is enabled for a specified application.This API uses a promise to return the result. |
+| [isDistributedEnabledByBundle](arkts-notification-notification-isdistributedenabledbybundle-depr-f-sys.md#isdistributedenabledbybundle) | Obtains whether an application supports distributed notifications based on the bundle.This API uses an asynchronous callback to return the result. |
+| [isDistributedEnabledByBundle](arkts-notification-notification-isdistributedenabledbybundle-depr-f-sys.md#isdistributedenabledbybundle-1) | Checks whether a specified application supports distributed notifications.This API uses an asynchronous callback to return the result. |
+| [isNotificationEnabled](arkts-notification-notification-isnotificationenabled-depr-f-sys.md#isnotificationenabled) | Checks whether notification is enabled for a specified application.This API uses an asynchronous callback to return the result. |
+| [isNotificationEnabled](arkts-notification-notification-isnotificationenabled-depr-f-sys.md#isnotificationenabled-1) | Checks whether notification is enabled for a specified application. This API uses a promise to return the result. |
+| [isNotificationEnabled](arkts-notification-notification-isnotificationenabled-depr-f-sys.md#isnotificationenabled-2) | Checks whether notification is enabled for this application.This API uses an asynchronous callback to return the result. |
+| [isNotificationEnabled](arkts-notification-notification-isnotificationenabled-depr-f-sys.md#isnotificationenabled-3) | Checks whether notification is enabled for this application. This API uses a promise to return the result. |
+| [isNotificationEnabled](arkts-notification-notification-isnotificationenabled-depr-f-sys.md#isnotificationenabled-4) | Checks whether notification is enabled for a specified user.This API uses an asynchronous callback to return the result. |
+| [isNotificationEnabled](arkts-notification-notification-isnotificationenabled-depr-f-sys.md#isnotificationenabled-5) | Checks whether notification is enabled for a specified user. This API uses a promise to return the result. |
+| [publish](arkts-notification-notification-publish-depr-f-sys.md#publish-2) | Publishes a notification to a specified user. This API uses an asynchronous callback to return the result. |
+| [publish](arkts-notification-notification-publish-depr-f-sys.md#publish-3) | Publishes a notification to a specified user. This API uses a promise to return the result. |
+| [remove](arkts-notification-notification-remove-depr-f-sys.md#remove) | Removes a notification for a specified bundle. This API uses an asynchronous callback to return the result. |
+| [remove](arkts-notification-notification-remove-depr-f-sys.md#remove-1) | Removes a notification for a specified bundle. This API uses a promise to return the result. |
+| [remove](arkts-notification-notification-remove-depr-f-sys.md#remove-2) | Removes a notification for a specified bundle. This API uses an asynchronous callback to return the result. |
+| [remove](arkts-notification-notification-remove-depr-f-sys.md#remove-3) | Removes a notification for a specified bundle. This API uses a promise to return the result. |
+| [removeAll](arkts-notification-notification-removeall-depr-f-sys.md#removeall) | Removes all notifications for a specified application. This API uses an asynchronous callback to return the result. |
+| [removeAll](arkts-notification-notification-removeall-depr-f-sys.md#removeall-1) | Removes all notifications. This API uses an asynchronous callback to return the result. |
+| [removeAll](arkts-notification-notification-removeall-depr-f-sys.md#removeall-2) | Removes all notifications for a specified user. This API uses an asynchronous callback to return the result. |
+| [removeAll](arkts-notification-notification-removeall-depr-f-sys.md#removeall-3) | Removes all notifications for a specified user. This API uses a promise to return the result. |
+| [removeAll](arkts-notification-notification-removeall-depr-f-sys.md#removeall-4) | Removes all notifications for a specified application. This API uses a promise to return the result. |
+| [removeGroupByBundle](arkts-notification-notification-removegroupbybundle-depr-f-sys.md#removegroupbybundle) | Removes notifications under a notification group of a specified application.This API uses an asynchronous callback to return the result. |
+| [removeGroupByBundle](arkts-notification-notification-removegroupbybundle-depr-f-sys.md#removegroupbybundle-1) | Removes notifications under a notification group of a specified application.This API uses a promise to return the result. |
+| [setDoNotDisturbDate](arkts-notification-notification-setdonotdisturbdate-depr-f-sys.md#setdonotdisturbdate) | Sets the DND time. This API uses an asynchronous callback to return the result. |
+| [setDoNotDisturbDate](arkts-notification-notification-setdonotdisturbdate-depr-f-sys.md#setdonotdisturbdate-1) | Sets the DND time. This API uses a promise to return the result. |
+| [setDoNotDisturbDate](arkts-notification-notification-setdonotdisturbdate-depr-f-sys.md#setdonotdisturbdate-2) | Sets the DND time for a specified user. This API uses an asynchronous callback to return the result. |
+| [setDoNotDisturbDate](arkts-notification-notification-setdonotdisturbdate-depr-f-sys.md#setdonotdisturbdate-3) | Sets the DND time for a specified user. This API uses a promise to return the result. |
+| [setSlotByBundle](arkts-notification-notification-setslotbybundle-depr-f-sys.md#setslotbybundle) | Sets the notification slot for a specified application.This API uses an asynchronous callback to return the result. |
+| [setSlotByBundle](arkts-notification-notification-setslotbybundle-depr-f-sys.md#setslotbybundle-1) | Sets the notification slot for a specified application. This API uses a promise to return the result. |
+| [subscribe](arkts-notification-notification-subscribe-depr-f-sys.md#subscribe) | Subscribes to notifications of all applications under this user.This API uses an asynchronous callback to return the result. |
+| [subscribe](arkts-notification-notification-subscribe-depr-f-sys.md#subscribe-1) | Subscribes to a notification with the subscription information specified.This API uses an asynchronous callback to return the result. |
+| [subscribe](arkts-notification-notification-subscribe-depr-f-sys.md#subscribe-2) | Subscribes to a notification with the subscription information specified.This API uses a promise to return the result. |
+| [supportDoNotDisturbMode](arkts-notification-notification-supportdonotdisturbmode-depr-f-sys.md#supportdonotdisturbmode) | Checks whether DND mode is supported. This API uses an asynchronous callback to return the result. |
+| [supportDoNotDisturbMode](arkts-notification-notification-supportdonotdisturbmode-depr-f-sys.md#supportdonotdisturbmode-1) | Checks whether DND mode is supported. This API uses a promise to return the result. |
+| [unsubscribe](arkts-notification-notification-unsubscribe-depr-f-sys.md#unsubscribe) | Unsubscribes from a notification. This API uses an asynchronous callback to return the result. |
+| [unsubscribe](arkts-notification-notification-unsubscribe-depr-f-sys.md#unsubscribe-1) | Unsubscribes from a notification. This API uses a promise to return the result. |
 <!--DelEnd-->
 
 ### Interfaces
 
 | Name | Description |
 | --- | --- |
-| [BundleOption](arkts-notification-notification-bundleoption-depr-i.md) | 描述BundleOption信息，即应用的包信息。 |
-| [NotificationKey](arkts-notification-notification-notificationkey-depr-i.md) | 通知键值。 |
+| [BundleOption](arkts-notification-notification-bundleoption-depr-i.md) | Describes the **BundleOption** information, that is, the bundle information of an application. |
+| [NotificationKey](arkts-notification-notification-notificationkey-depr-i.md) | Notification key. |
 
 <!--Del-->
 ### Interfaces（系统接口）
 
 | Name | Description |
 | --- | --- |
-| [DoNotDisturbDate](arkts-notification-notification-donotdisturbdate-depr-i-sys.md) | 免打扰时间选项。 |
+| [DoNotDisturbDate](arkts-notification-notification-donotdisturbdate-depr-i-sys.md) | Defines the DND time. |
 <!--DelEnd-->
 
 ### Enums
 
 | Name | Description |
 | --- | --- |
-| [ContentType](arkts-notification-notification-contenttype-depr-e.md) | 通知内容类型。 |
-| [SlotLevel](arkts-notification-notification-slotlevel-depr-e.md) | 通知级别。 |
-| [SlotType](arkts-notification-notification-slottype-depr-e.md) | 通知渠道类型。 |
+| [ContentType](arkts-notification-notification-contenttype-depr-e.md) | Enumerates the notification content types. |
+| [SlotLevel](arkts-notification-notification-slotlevel-depr-e.md) | Enumerates the notification level. |
+| [SlotType](arkts-notification-notification-slottype-depr-e.md) | Enumerates the notification slot types. |
 
 <!--Del-->
 ### Enums（系统接口）
 
 | Name | Description |
 | --- | --- |
-| [DeviceRemindType](arkts-notification-notification-deviceremindtype-depr-e-sys.md) | 通知提醒方式。 |
-| [DoNotDisturbType](arkts-notification-notification-donotdisturbtype-depr-e-sys.md) | 免打扰设置的时间类型。 |
-| [RemoveReason](arkts-notification-notification-removereason-depr-e-sys.md) | 通知删除原因。 |
-| [SourceType](arkts-notification-notification-sourcetype-depr-e-sys.md) | 通知来源类型。 |
+| [DeviceRemindType](arkts-notification-notification-deviceremindtype-depr-e-sys.md) | Defines the notification reminder type. |
+| [DoNotDisturbType](arkts-notification-notification-donotdisturbtype-depr-e-sys.md) | Defines the DND time type. |
+| [RemoveReason](arkts-notification-notification-removereason-depr-e-sys.md) | Reason for removing the notification. |
+| [SourceType](arkts-notification-notification-sourcetype-depr-e-sys.md) | Defines the notification source type. |
 <!--DelEnd-->
 

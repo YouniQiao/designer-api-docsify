@@ -1,11 +1,5 @@
 # removeCheckRule
 
-## 导入模块
-
-```TypeScript
-import { hichecker } from 'kits/@kit.PerformanceAnalysisKit';
-```
-
 ## removeCheckRule
 
 ```TypeScript
@@ -32,7 +26,7 @@ function removeCheckRule(rule: bigint) : void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 401 | the parameter check failed, only one bigint type parameter is needed |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | the parameter check failed, only one bigint type parameter is needed |
 
 ## 示例
 

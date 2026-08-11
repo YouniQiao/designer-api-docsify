@@ -1,12 +1,14 @@
 # UserAuthInstance
 
-用于执行用户身份认证，并支持使用统一用户身份认证控件。该接口提供了完整的用户认证能力，包括订阅认证结果、订阅认证中间状态、启动认证和取消认证等操作。通过统一认证控件，可以为用户提供标准化的认证界面和一致的认证体验。
+Provides APIs for user authentication. The user authentication widget is supported. This API provides complete user authentication capabilities, including subscribing to authentication results and intermediate states, and starting and canceling authentication. The unified authentication widget provides users with a standardized authentication UI and consistent authentication experience.
 
-使用以下接口前，需先通过[getUserAuthInstance](arkts-userauthentication-userauth-getuserauthinstance-f.md#getuserauthinstance)方法获取UserAuthInstance对象。
+Before using the APIs of **UserAuthInstance**, you must obtain a **UserAuthInstance** instance by using  
+[getUserAuthInstance](arkts-userauthentication-userauth-getuserauthinstance-f.md#getuserauthinstance).
 
-> **说明：**
-> 
-> 每个UserAuthInstance实例只能用于一次认证过程。若需要再次认证，必须重新获取UserAuthInstance实例。
+> **NOTE：**
+
+> Each **UserAuthInstance** can be used for only one authentication process. To perform authentication again, you
+> must obtain a new **UserAuthInstance** instance.
 
 **Since:** 10
 
@@ -28,11 +30,11 @@ import { userAuth } from 'kits/@kit.UserAuthenticationKit';
 cancel(): void
 ```
 
-取消认证。该接口常用于以下场景：应用因业务逻辑变化需要中止认证；超时或异常情况下中止认证操作。
+Cancels this authentication. This API is commonly used in the following scenarios: the application needs to abort authentication due to service logic changes; the authentication operation is aborted due to timeout or exceptions.
 
-> **说明：**
-> 
-> 此时UserAuthInstance必须是正在进行认证的对象。
+> **NOTE：**
+
+> **UserAuthInstance** must be the instance being authenticated.
 
 **Since:** 10
 
@@ -50,9 +52,9 @@ cancel(): void
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. Possible causes: &lt;br&gt;1. Incorrect parameter types. |
-| 201 | Permission denied. |
-| 12500002 | General operation error. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: &lt;br&gt;1. Incorrect parameter types. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
+| [12500002](../errorcode-useriam.md#12500002-common-error-code-of-the-identity-authentication-system) | General operation error. |
 
 ## Examples
 
@@ -66,14 +68,14 @@ try {
   const len: number = 16;
   let randData: Uint8Array | null = null;
   let retryCount = 0;
-  while (retryCount < 3) {
+  while(retryCount < 3){
     randData = rand?.generateRandomSync(len)?.data;
-    if (randData) {
+    if(randData){
       break;
     }
     retryCount++;
   }
-  if (!randData) {
+  if(!randData){
     return;
   }
   const authParam : userAuth.AuthParam = {
@@ -85,15 +87,15 @@ try {
     title: 'Enter password',
   };
   const userAuthInstance = userAuth.getUserAuthInstance(authParam, widgetParam);
-  console.info('get userAuth instance successfully.');
+  console.info('get userAuth instance success');
   // The cancel() API can be called only after the authentication is started by start() of UserAuthInstance.
   userAuthInstance.start();
-  console.info('auth start successfully.');
+  console.info('auth start success');
   userAuthInstance.cancel();
-  console.info('auth cancel successfully.');
+  console.info('auth cancel success');
 } catch (error) {
   const err: BusinessError = error as BusinessError;
-  console.error(`auth failed. Code is ${err?.code}, message is ${err?.message}`);
+  console.error(`auth catch error. Code is ${err?.code}, message is ${err?.message}`);
 }
 ```
 
@@ -103,11 +105,12 @@ try {
 off(type: 'result', callback?: IAuthCallback): void
 ```
 
-取消订阅用户身份认证的结果。该接口常用于以下场景：页面销毁或组件卸载时取消订阅；不再需要监听认证结果时释放资源。
+Unsubscribes from the user authentication result. This API is commonly used in the following scenarios:unsubscribing when a page is destroyed or a component is unmounted; releasing resources when it is no longer necessary to listen for authentication results.
 
-> **说明：**
-> 
-> 需要使用已经成功订阅事件的[UserAuthInstance](arkts-userauthentication-userauth-userauthinstance-i.md)对象调用该接口进行取消订阅。
+> **NOTE：**
+
+> The [UserAuthInstance](arkts-userauthentication-userauth-userauthinstance-i.md) instance used to invoke this API must be the one used
+> to subscribe to the event.
 
 **Since:** 10
 
@@ -123,15 +126,15 @@ off(type: 'result', callback?: IAuthCallback): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'result' | Yes | 订阅事件类型，表明该事件用来返回认证结果。 |
-| callback | [IAuthCallback](arkts-userauthentication-userauth-iauthcallback-i.md) | No | 认证接口的回调函数，用于返回认证结果。当不传该参数时默认值为调用 [on('result')](userAuth.UserAuthInstance.on(type: 'result', callback: IAuthCallback))接口时传递的参数值。 |
+| type | 'result' | Yes | Event type. The value is **result**, which indicates the authentication result. |
+| callback | [IAuthCallback](arkts-userauthentication-userauth-iauthcallback-i.md) | No | Callback used to return the user authentication result. If this parameter is not passed, the value passed when the [on('result')](userAuth.UserAuthInstance.on(type: 'result', callback: IAuthCallback)) API is called is used by default. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. Possible causes: &lt;br&gt;1. Mandatory parameters are left unspecified. &lt;br&gt;2. Incorrect parameter types. &lt;br&gt;3. Parameter verification failed. |
-| 12500002 | General operation error. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: &lt;br&gt;1. Mandatory parameters are left unspecified. &lt;br&gt;2. Incorrect parameter types. &lt;br&gt;3. Parameter verification failed. |
+| [12500002](../errorcode-useriam.md#12500002-common-error-code-of-the-identity-authentication-system) | General operation error. |
 
 ## Examples
 
@@ -145,14 +148,14 @@ try {
   const len: number = 16;
   let randData: Uint8Array | null = null;
   let retryCount = 0;
-  while (retryCount < 3) {
+  while(retryCount < 3){
     randData = rand?.generateRandomSync(len)?.data;
-    if (randData) {
+    if(randData){
       break;
     }
     retryCount++;
   }
-  if (!randData) {
+  if(!randData){
     return;
   }
   const authParam: userAuth.AuthParam = {
@@ -164,16 +167,16 @@ try {
     title: 'Enter password',
   };
   const userAuthInstance = userAuth.getUserAuthInstance(authParam, widgetParam);
-  console.info('get userAuth instance successfully.');
+  console.info('get userAuth instance success');
   userAuthInstance.off('result', {
-    onResult: (result) => {
-      console.info(`auth off result = ${result.result}`);
+    onResult (result) {
+      console.info(`auth off result = ${JSON.stringify(result)}`);
     }
   });
-  console.info('auth off successfully.');
+  console.info('auth off success');
 } catch (error) {
   const err: BusinessError = error as BusinessError;
-  console.error(`auth failed. Code is ${err?.code}, message is ${err?.message}`);
+  console.error(`auth catch error. Code is ${err?.code}, message is ${err?.message}`);
 }
 ```
 
@@ -183,11 +186,12 @@ try {
 off(type: 'authTip', callback?: AuthTipCallback): void
 ```
 
-取消订阅用户身份认证中间状态。该接口常用于以下场景：认证完成后清理订阅监听释放资源；不再需要监听认证过程中的提示信息时取消订阅；页面销毁或组件卸载时取消订阅。
+Unsubscribes from the authentication tip information. This API is commonly used in the following scenarios:cleaning up subscription listeners and releasing resources after authentication is complete; unsubscribing when it is no longer necessary to listen for tip information during the authentication process; unsubscribing when a page is destroyed or a component is unmounted.
 
-> **说明：**
-> 
-> 需要使用已经成功订阅事件的[UserAuthInstance](arkts-userauthentication-userauth-userauthinstance-i.md)对象调用该接口进行取消订阅。
+> **NOTE：**
+
+> The [UserAuthInstance](arkts-userauthentication-userauth-userauthinstance-i.md) instance used to invoke this API must be the one used
+> to subscribe to the event.
 
 **Since:** 20
 
@@ -203,14 +207,14 @@ off(type: 'authTip', callback?: AuthTipCallback): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'authTip' | Yes | 取消订阅的事件类型，支持的事件为'authTip'，当[start()](arkts-userauthentication-userauth-userauthinstance-i.md#start)调用完成，发起身份认 证并调用[on('authTip')](userAuth.UserAuthInstance.on(type: 'authTip', callback: AuthTipCallback))订阅该事件后，调用该 方法可取消订阅，不会再触发该事件。 |
-| callback | [AuthTipCallback](arkts-userauthentication-userauth-authtipcallback-t.md) | No | 认证接口的回调函数，用于返回认证中间状态。 当不传该参数时默认值为调用 [on('authTip')](userAuth.UserAuthInstance.on(type: 'authTip', callback: AuthTipCallback))接口时传递的参数值。 |
+| type | 'authTip' | Yes | Event type. The supported event is **'authTip'**. This API unsubscribes from the event triggered by [on('authTip')](userAuth.UserAuthInstance.on(type: 'authTip', callback: AuthTipCallback)) after the [start()](arkts-userauthentication-userauth-userauthinstance-i.md#start) call and the initiation of authentication. |
+| callback | [AuthTipCallback](arkts-userauthentication-userauth-authtipcallback-t.md) | No | Callback used to return the intermediate authentication status. If this parameter is not passed, the value passed when the [on('authTip')](userAuth.UserAuthInstance.on(type: 'authTip', callback: AuthTipCallback)) API is called is used by default. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 12500002 | General operation error. |
+| [12500002](../errorcode-useriam.md#12500002-common-error-code-of-the-identity-authentication-system) | General operation error. |
 
 ## Examples
 
@@ -224,14 +228,14 @@ try {
   const len: number = 16;
   let randData: Uint8Array | null = null;
   let retryCount = 0;
-  while (retryCount < 3) {
+  while(retryCount < 3){
     randData = rand?.generateRandomSync(len)?.data;
-    if (randData) {
+    if(randData){
       break;
     }
     retryCount++;
   }
-  if (!randData) {
+  if(!randData){
     return;
   }
   const authParam: userAuth.AuthParam = {
@@ -243,14 +247,14 @@ try {
     title: 'Enter password',
   };
   const userAuthInstance = userAuth.getUserAuthInstance(authParam, widgetParam);
-  console.info('get userAuth instance successfully.');
+  console.info('get userAuth instance success');
   userAuthInstance.off('authTip', (authTipInfo: userAuth.AuthTipInfo) => {
-    console.info('userAuthInstance callback');
+    console.info(`userAuthInstance callback authTipInfo = ${JSON.stringify(authTipInfo)}`);
   });
-  console.info('auth off successfully.');
+  console.info('auth off success');
 } catch (error) {
   const err: BusinessError = error as BusinessError;
-  console.error(`auth failed. Code is ${err?.code}, message is ${err?.message}`);
+  console.error(`auth catch error. Code is ${err?.code}, message is ${err?.message}`);
 }
 ```
 
@@ -260,11 +264,12 @@ try {
 offAuthTip(callback?: AuthTipCallback): void
 ```
 
-取消订阅用户身份认证中间状态。
+Unsubscribes from the event for intermediate authentication status.
 
-> **说明：**
-> 
-> 需要使用已经成功订阅事件的[UserAuthInstance](arkts-userauthentication-userauth-userauthinstance-i.md)对象调用该接口进行取消订阅。
+> **NOTE：**
+
+> The [UserAuthInstance](arkts-userauthentication-userauth-userauthinstance-i.md) instance used to invoke this API must be the one used
+> to subscribe to the event.
 
 **Since:** 23
 
@@ -278,13 +283,13 @@ offAuthTip(callback?: AuthTipCallback): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AuthTipCallback](arkts-userauthentication-userauth-authtipcallback-t.md) | No | 认证接口的回调函数，用于返回认证中间状态。 当不传该参数时默认值为调用on()接口时传递的参数值。 |
+| callback | [AuthTipCallback](arkts-userauthentication-userauth-authtipcallback-t.md) | No | Indicates the listener. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 12500002 | General operation error. |
+| [12500002](../errorcode-useriam.md#12500002-common-error-code-of-the-identity-authentication-system) | General operation error. |
 
 ## offResult
 
@@ -292,11 +297,14 @@ offAuthTip(callback?: AuthTipCallback): void
 offResult(callback?: IAuthCallback): void
 ```
 
-取消订阅用户身份认证的结果。
+Unsubscribes from the user authentication result.
 
-> **说明：**
-> 
-> 需要使用已经成功订阅事件的[UserAuthInstance](arkts-userauthentication-userauth-userauthinstance-i.md)对象调用该接口进行取消订阅。
+> **NOTE：**
+
+> The [UserAuthInstance](arkts-userauthentication-userauth-userauthinstance-i.md) instance used to invoke this API must be the one used
+> to subscribe to the event.
+
+&lt;p&gt;&lt;strong&gt;NOTE&lt;/strong&gt;:&lt;br&gt;The UserAuthInstance instance used to invoke this API must be the one used to subscribe to the event.&lt;/p&gt;
 
 **Since:** 23
 
@@ -316,8 +324,8 @@ offResult(callback?: IAuthCallback): void
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. Possible causes: &lt;br&gt;1. Mandatory parameters are left unspecified. &lt;br&gt;2. Incorrect parameter types. &lt;br&gt;3. Parameter verification failed. |
-| 12500002 | General operation error. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: &lt;br&gt;1. Mandatory parameters are left unspecified. &lt;br&gt;2. Incorrect parameter types. &lt;br&gt;3. Parameter verification failed. |
+| [12500002](../errorcode-useriam.md#12500002-common-error-code-of-the-identity-authentication-system) | General operation error. |
 
 ## on('result')
 
@@ -325,15 +333,17 @@ offResult(callback?: IAuthCallback): void
 on(type: 'result', callback: IAuthCallback): void
 ```
 
-订阅用户身份认证的最终结果。通过该接口获取到的是用户在认证控件完成身份认证交互后的最终身份认证结果。认证控件消失前，用户中间的认证不通过尝试并不会通过该接口返回，只有最终的认证结果（成功或最终失败）会通过此接口返回。如果需要感知整个认证过程中用户的每一次认证不通过尝试和中间状态，请通过  
-[on('authTip')](userAuth.UserAuthInstance.on(type: 'authTip', callback: AuthTipCallback))接口订阅。
+Subscribes to the user authentication result. This API is used to obtain the final identity authentication result after the user completes identity authentication interaction with the authentication component. Before the authentication widget disappears, the intermediate authentication failures will not be returned through this API.Only the final authentication result (success or failure) is returned through this API. To perceive each authentication failure and intermediate status during the entire authentication process, use the  
+[on('authTip')](userAuth.UserAuthInstance.on(type: 'authTip', callback: AuthTipCallback)) API for subscription.
 
-> **说明：**
-> 
-> 在PC/2in1设备上，应用如果使用模应用弹窗方式发起认证（即配置用户界面参数[widgetParam](arkts-userauthentication-userauth-widgetparam-i.md)时传入了有效的uiContext），收到认证结果后，若需弹出其
-> 他窗口，应先获取控件弹窗释放的标志消息，通过
-> [on('authTip')](userAuth.UserAuthInstance.on(type: 'authTip', callback: AuthTipCallback))接口订阅控件释放消息（
-> authTipInfo.tipCode = UserAuthTipCode.WIDGET_RELEASED）。
+> **NOTE：**
+
+> On PCs/2-in-1 devices, if an application initiates authentication in an application modal dialog (that is, a
+> valid **uiContext** is passed when the user API parameter [widgetParam](arkts-userauthentication-userauth-widgetparam-i.md) is
+> configured) and receives the authentication result, and if other windows need to be displayed, the application
+> needs to obtain the flag message released by the component pop-up window and subscribe to the component release
+> message (**authTipInfo.tipCode = UserAuthTipCode.WIDGET_RELEASED**) through the
+> [on('authTip')](userAuth.UserAuthInstance.on(type: 'authTip', callback: AuthTipCallback)) API.
 
 **Since:** 10
 
@@ -349,15 +359,15 @@ on(type: 'result', callback: IAuthCallback): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'result' | Yes | 订阅事件类型，表明该事件用来返回认证结果，当[start()](arkts-userauthentication-userauth-userauthinstance-i.md#start)调用完成，发起身份认证并完成认证 交互后，触发该事件。 |
-| callback | [IAuthCallback](arkts-userauthentication-userauth-iauthcallback-i.md) | Yes | 认证接口的回调函数，用于返回认证结果。 |
+| type | 'result' | Yes | Event type used to return the authentication result. It is triggered when [start()](arkts-userauthentication-userauth-userauthinstance-i.md#start) is called, identity authentication is initiated, and the authentication interaction is completed. |
+| callback | [IAuthCallback](arkts-userauthentication-userauth-iauthcallback-i.md) | Yes | Callback used to return the user authentication result. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. Possible causes: &lt;br&gt;1. Mandatory parameters are left unspecified. &lt;br&gt;2. Incorrect parameter types. &lt;br&gt;3. Parameter verification failed. |
-| 12500002 | General operation error. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: &lt;br&gt;1. Mandatory parameters are left unspecified. &lt;br&gt;2. Incorrect parameter types. &lt;br&gt;3. Parameter verification failed. |
+| [12500002](../errorcode-useriam.md#12500002-common-error-code-of-the-identity-authentication-system) | General operation error. |
 
 ## on('authTip')
 
@@ -365,14 +375,16 @@ on(type: 'result', callback: IAuthCallback): void
 on(type: 'authTip', callback: AuthTipCallback): void
 ```
 
-订阅身份认证过程中的提示信息。通过该接口可以获取到认证过程中控件的拉起和退出提示，以及认证过程中用户的每一次认证不通过尝试。使用callback异步回调。
+Subscribes to authentication tip information. This API is used to obtain the widget startup and exit messages and each authentication failure. This API uses an asynchronous callback to return the result.
 
-> **说明：**
-> 
-> 在PC/2in1设备上，应用如果使用模应用弹窗方式发起认证（即配置用户界面参数[widgetParam](arkts-userauthentication-userauth-widgetparam-i.md)时传入了有效的uiContext），收到认证结果后，若需弹出其
-> 他窗口，应先获取控件弹窗释放的标志消息，通过
-> [on('authTip')](userAuth.UserAuthInstance.on(type: 'authTip', callback: AuthTipCallback))接口订阅控件释放消息（
-> authTipInfo.tipCode = UserAuthTipCode.WIDGET_RELEASED）。
+> **NOTE：**
+
+> On PCs/2-in-1 devices, if an application initiates authentication in an application modal dialog (that is, a
+> valid **uiContext** is passed when the user API parameter [widgetParam](arkts-userauthentication-userauth-widgetparam-i.md) is
+> configured) and receives the authentication result, and if other windows need to be displayed, the application
+> needs to obtain the flag message released by the component pop-up window and subscribe to the component release
+> message (**authTipInfo.tipCode = UserAuthTipCode.WIDGET_RELEASED**) through the
+> [on('authTip')](userAuth.UserAuthInstance.on(type: 'authTip', callback: AuthTipCallback)) API.
 
 **Since:** 20
 
@@ -388,14 +400,14 @@ on(type: 'authTip', callback: AuthTipCallback): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'authTip' | Yes | 订阅事件类型，支持的事件为'authTip'，当[start()](arkts-userauthentication-userauth-userauthinstance-i.md#start)调用完成，发起身份认证，触 发该事件。 |
-| callback | [AuthTipCallback](arkts-userauthentication-userauth-authtipcallback-t.md) | Yes | 认证接口的回调函数，用于返回认证中间状态。 |
+| type | 'authTip' | Yes | Event type. The supported event is **'authTip'**. This event is triggered when [start()](arkts-userauthentication-userauth-userauthinstance-i.md#start) is called and authentication is initiated. |
+| callback | [AuthTipCallback](arkts-userauthentication-userauth-authtipcallback-t.md) | Yes | Callback used to return the intermediate authentication status. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 12500002 | General operation error. |
+| [12500002](../errorcode-useriam.md#12500002-common-error-code-of-the-identity-authentication-system) | General operation error. |
 
 ## Examples
 
@@ -409,14 +421,14 @@ try {
   const len: number = 16;
   let randData: Uint8Array | null = null;
   let retryCount = 0;
-  while (retryCount < 3) {
+  while(retryCount < 3){
     randData = rand?.generateRandomSync(len)?.data;
-    if (randData) {
+    if(randData){
       break;
     }
     retryCount++;
   }
-  if (!randData) {
+  if(!randData){
     return;
   }
   const authParam: userAuth.AuthParam = {
@@ -428,17 +440,17 @@ try {
     title: 'Enter password',
   };
   const userAuthInstance = userAuth.getUserAuthInstance(authParam, widgetParam);
-  console.info('get userAuth instance successfully.');
+  console.info('get userAuth instance success');
   // The intermediate authentication status is returned by onAuthTip only after the authentication is started by start() of UserAuthInstance.
   userAuthInstance.on('authTip', (authTipInfo: userAuth.AuthTipInfo) => {
-    console.info('userAuthInstance callback.');
+    console.info(`userAuthInstance callback authTipInfo = ${JSON.stringify(authTipInfo)}`);
   });
-  console.info('auth on successfully.');
+  console.info('auth on success');
   userAuthInstance.start();
-  console.info('auth start successfully.');
+  console.info('auth start success');
 } catch (error) {
   const err: BusinessError = error as BusinessError;
-  console.error(`auth failed. Code is ${err?.code}, message is ${err?.message}`);
+  console.error(`auth catch error. Code is ${err?.code}, message is ${err?.message}`);
 }
 ```
 
@@ -448,7 +460,7 @@ try {
 onAuthTip(callback: AuthTipCallback): void
 ```
 
-订阅身份认证过程中的提示信息。通过该接口可以获取到认证过程中控件的拉起和退出提示，以及认证过程中用户的每一次认证失败尝试。
+Turn on authentication tip event listening.
 
 **Since:** 23
 
@@ -462,13 +474,13 @@ onAuthTip(callback: AuthTipCallback): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AuthTipCallback](arkts-userauthentication-userauth-authtipcallback-t.md) | Yes | 认证接口的回调函数，用于返回认证中间状态。 |
+| callback | [AuthTipCallback](arkts-userauthentication-userauth-authtipcallback-t.md) | Yes | Indicates the listener. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 12500002 | General operation error. |
+| [12500002](../errorcode-useriam.md#12500002-common-error-code-of-the-identity-authentication-system) | General operation error. |
 
 ## onResult
 
@@ -476,7 +488,7 @@ onAuthTip(callback: AuthTipCallback): void
 onResult(callback: IAuthCallback): void
 ```
 
-订阅用户身份认证的最终结果。通过该接口获取到的是用户在认证控件完成身份认证交互后的最终身份认证结果。认证控件消失前，用户中间的认证失败尝试并不会通过该接口返回。如果需要感知整个认证过程中用户的每一次认证失败尝试，请通过[on('authTip')](arkts-userauthentication-userauth-userauthinstance-i.md#on)接口订阅。
+Subscribes to the user authentication result. This API is used to obtain the final identity authentication result after the user completes identity authentication interaction with the authentication component. Before the authentication component disappears, the authentication failure attempts are not returned through this API. To perceive each authentication failure, use the [on('authTip')](arkts-userauthentication-userauth-userauthinstance-i.md#on) API for subscription.
 
 **Since:** 23
 
@@ -496,8 +508,8 @@ onResult(callback: IAuthCallback): void
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. Possible causes: &lt;br&gt;1. Mandatory parameters are left unspecified. &lt;br&gt;2. Incorrect parameter types. &lt;br&gt;3. Parameter verification failed. |
-| 12500002 | General operation error. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: &lt;br&gt;1. Mandatory parameters are left unspecified. &lt;br&gt;2. Incorrect parameter types. &lt;br&gt;3. Parameter verification failed. |
+| [12500002](../errorcode-useriam.md#12500002-common-error-code-of-the-identity-authentication-system) | General operation error. |
 
 ## start
 
@@ -505,11 +517,12 @@ onResult(callback: IAuthCallback): void
 start(): void
 ```
 
-开始认证。该接口常用于以下业务场景：用户点击支付按钮时发起身份认证；用户登录应用时进行身份验证；用户访问敏感数据或执行敏感操作时进行身份确认。
+Starts authentication. This API is commonly used in the following service scenarios: initiating identity authentication when a user taps the payment button; performing authentication when a user logs in to an application; confirming identity when a user accesses sensitive data or performs sensitive operations.
 
-> **说明：**
-> 
-> 每个UserAuthInstance只能进行一次认证，需要再次认证时，必须重新获取UserAuthInstance。
+> **NOTE：**
+
+> Each **UserAuthInstance** can be used for authentication only once. To perform authentication again, you must
+> obtain a new **UserAuthInstance**.
 
 **Since:** 10
 
@@ -529,19 +542,19 @@ start(): void
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 201 | Permission denied. Possible causes: &lt;br&gt;1. No permission to access biometric. &lt;br&gt;2. No permission to start authentication from background. |
-| 401 | Parameter error. Possible causes: &lt;br&gt;1. Incorrect parameter types. |
-| 12500013 | Operation failed because of PIN expired.<br>**Applicable version:** 12 and later |
-| 12500010 | The type of credential has not been enrolled. |
-| 12500011 | Switched to the customized authentication process. |
-| 12500009 | Authentication is locked out. |
-| 12500006 | The authentication trust level is not supported. |
-| 12500007 | Authentication service is busy.<br>**Applicable version:** 10 - 19 |
-| 12500004 | Authentication timeout.<br>**Applicable version:** 10 - 19 |
-| 12500005 | The authentication type is not supported. |
-| 12500002 | General operation error. |
-| 12500003 | Authentication canceled. |
-| 12500001 | Authentication failed.<br>**Applicable version:** 10 - 19 |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. Possible causes: &lt;br&gt;1. No permission to access biometric. &lt;br&gt;2. No permission to start authentication from background. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: &lt;br&gt;1. Incorrect parameter types. |
+| [12500013](../errorcode-useriam.md#12500013-password-expired) | Operation failed because of PIN expired.<br>**Applicable version:** 12 and later |
+| [12500010](../errorcode-useriam.md#12500010-credential-not-enrolled) | The type of credential has not been enrolled. |
+| [12500011](../errorcode-useriam.md#12500011-switched-to-custom-authentication) | Switched to the customized authentication process. |
+| [12500009](../errorcode-useriam.md#12500009-authentication-locked) | Authentication is locked out. |
+| [12500006](../errorcode-useriam.md#12500006-unsupported-authentication-trust-level) | The authentication trust level is not supported. |
+| [12500007](../errorcode-useriam.md#12500007-authentication-service-is-busy) | Authentication service is busy.<br>**Applicable version:** 10 - 19 |
+| [12500004](../errorcode-useriam.md#12500004-authentication-timed-out) | Authentication timeout.<br>**Applicable version:** 10 - 19 |
+| [12500005](../errorcode-useriam.md#12500005-unsupported-authentication-type) | The authentication type is not supported. |
+| [12500002](../errorcode-useriam.md#12500002-common-error-code-of-the-identity-authentication-system) | General operation error. |
+| [12500003](../errorcode-useriam.md#12500003-authentication-canceled) | Authentication canceled. |
+| [12500001](../errorcode-useriam.md#12500001-authentication-failed) | Authentication failed.<br>**Applicable version:** 10 - 19 |
 
 ## Examples
 
@@ -555,14 +568,14 @@ try {
   const len: number = 16;
   let randData: Uint8Array | null = null;
   let retryCount = 0;
-  while (retryCount < 3) {
+  while(retryCount < 3){
     randData = rand?.generateRandomSync(len)?.data;
-    if (randData) {
+    if(randData){
       break;
     }
     retryCount++;
   }
-  if (!randData) {
+  if(!randData){
     return;
   }
   const authParam: userAuth.AuthParam = {
@@ -574,12 +587,12 @@ try {
     title: 'Enter password',
   };
   const userAuthInstance = userAuth.getUserAuthInstance(authParam, widgetParam);
-  console.info('get userAuth instance successfully.');
+  console.info('get userAuth instance success');
   userAuthInstance.start();
-  console.info('auth start successfully.');
+  console.info('auth start success');
 } catch (error) {
   const err: BusinessError = error as BusinessError;
-  console.error(`auth failed. Code is ${err?.code}, message is ${err?.message}`);
+  console.error(`auth catch error. Code is ${err?.code}, message is ${err?.message}`);
 }
 ```
 

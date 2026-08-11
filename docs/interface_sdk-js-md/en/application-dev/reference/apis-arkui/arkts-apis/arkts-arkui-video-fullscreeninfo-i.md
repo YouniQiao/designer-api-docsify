@@ -1,6 +1,6 @@
 # FullscreenInfo
 
-用于描述当前视频是否进入全屏播放状态。
+Fullscreen information of the video.
 
 **Since:** 23
 
@@ -16,7 +16,7 @@
 fullscreen: boolean
 ```
 
-当前视频是否进入全屏播放状态。true：进入全屏播放状态；false：未进入全屏播放状态。默认值：false
+The flag whether play in full screen.
 
 **Type:** boolean
 

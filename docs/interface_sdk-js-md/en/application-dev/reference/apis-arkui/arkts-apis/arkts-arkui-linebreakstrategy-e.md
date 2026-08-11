@@ -1,6 +1,6 @@
 # LineBreakStrategy
 
-Enum of line break strategy
+The line break rule.
 
 **Since:** 12
 
@@ -16,7 +16,7 @@ Enum of line break strategy
 GREEDY = 0
 ```
 
-By default. Display as many characters as possible on each line until no more characters can be displayed on that line, and do not automatically add hyphens under this strategy
+Places as many words on a line as possible and moves to the next line only if no more words can fit into the same line.
 
 **Since:** 12
 
@@ -36,7 +36,7 @@ By default. Display as many characters as possible on each line until no more ch
 HIGH_QUALITY = 1
 ```
 
-High quality folding. Optimize the layout of the entire text's line breaks and automatically add hyphens if necessary.
+Fills in lines as much as possible on the basis of **BALANCED**, which may results in a large blank area on the last line.
 
 **Since:** 12
 
@@ -56,7 +56,7 @@ High quality folding. Optimize the layout of the entire text's line breaks and a
 BALANCED = 2
 ```
 
-Balanced folding. We will try our best to ensure that the width of each line in a paragraph is the same, and if necessary, we will add conjunction
+Without splitting words, the width of each line in a paragraph is the same as much as possible.
 
 **Since:** 12
 

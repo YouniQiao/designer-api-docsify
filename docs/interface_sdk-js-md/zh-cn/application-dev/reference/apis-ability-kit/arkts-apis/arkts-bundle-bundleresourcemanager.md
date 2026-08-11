@@ -19,12 +19,6 @@
 
 **系统接口：** 此接口为系统接口。
 
-## 导入模块
-
-```TypeScript
-import { bundleResourceManager } from 'kits/@kit.AbilityKit';
-```
-
 ## 汇总
 
 <!--Del-->

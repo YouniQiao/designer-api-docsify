@@ -1,6 +1,6 @@
 # HuksListAliasesReturnResult
 
-返回的密钥别名数组。
+Defines the returned key alias array.
 
 **Since:** 12
 
@@ -22,7 +22,7 @@ import { huks } from 'kits/@kit.UniversalKeystoreKit';
 keyAliases: Array<string>
 ```
 
-表示密钥别名集。
+Array of key aliases.
 
 **Type:** Array&lt;string&gt;
 

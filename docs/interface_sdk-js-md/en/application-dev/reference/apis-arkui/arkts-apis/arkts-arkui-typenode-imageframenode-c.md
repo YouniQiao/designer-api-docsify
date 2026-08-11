@@ -1,6 +1,6 @@
 # ImageFrameNode
 
-定义Image类型的FrameNode。
+Define the Image type of FrameNode.
 
 **Inheritance/Implementation:** ImageFrameNode extends [TypedFrameNode<ImageAttribute>](TypedFrameNode<ImageAttribute>)
 
@@ -18,7 +18,7 @@
 abstract initialize(src: image.PixelMap | ResourceStr | DrawableDescriptor): ImageAttribute
 ```
 
-初始化Image类型的FrameNode。
+Initialize Image FrameNode.
 
 **Since:** 23
 
@@ -48,7 +48,7 @@ abstract initialize(src: image.PixelMap | ResourceStr | DrawableDescriptor): Ima
 abstract initialize(src: image.PixelMap | ResourceStr | DrawableDescriptor | ImageContent): ImageAttribute
 ```
 
-初始化Image类型的FrameNode。
+Initialize Image FrameNode.
 
 **Since:** 23
 
@@ -78,7 +78,7 @@ abstract initialize(src: image.PixelMap | ResourceStr | DrawableDescriptor | Ima
 abstract initialize(src: image.PixelMap | ResourceStr | DrawableDescriptor, value: ImageAIOptions): ImageAttribute
 ```
 
-初始化Image类型的FrameNode。
+Initialize Image FrameNode.
 
 **Since:** 23
 

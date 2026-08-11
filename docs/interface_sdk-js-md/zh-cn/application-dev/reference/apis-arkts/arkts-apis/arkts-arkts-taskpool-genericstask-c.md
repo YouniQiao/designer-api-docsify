@@ -13,12 +13,6 @@
 
 **系统能力：** SystemCapability.Utils.Lang
 
-## 导入模块
-
-```TypeScript
-import { taskpool } from 'kits/@kit.ArkTS';
-```
-
 ## constructor
 
 ```TypeScript
@@ -48,7 +42,7 @@ GenericsTask的构造函数，用于创建一个**GenericsTask**对象。
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 10200014 | The function is not marked as concurrent. |
+| [10200014](../errorcode-utils.md#10200014-非concurrent函数错误) | The function is not marked as concurrent. |
 
 ## 示例
 
@@ -106,7 +100,7 @@ GenericsTask的构造函数，用于创建一个**GenericsTask**实例，并可�
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 10200014 | The function is not marked as concurrent. |
+| [10200014](../errorcode-utils.md#10200014-非concurrent函数错误) | The function is not marked as concurrent. |
 
 ## 示例
 

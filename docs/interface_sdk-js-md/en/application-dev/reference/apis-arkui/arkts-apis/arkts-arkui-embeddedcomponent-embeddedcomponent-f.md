@@ -8,7 +8,7 @@ export declare function EmbeddedComponent(
 ): EmbeddedComponentAttribute
 ```
 
-创建跨进程嵌入式组件，用于显示同包名或满足跨应用权限条件的EmbeddedUIExtensionAbility的UI。
+Defines EmbeddedComponent Component.
 
 **Since:** 23
 
@@ -24,8 +24,8 @@ export declare function EmbeddedComponent(
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| loader | [Want](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-want-want-c.md) | Yes | 要加载的EmbeddedUIExtensionAbility。 |
-| type | [EmbeddedType](arkts-arkui-embeddedtype-e.md) | No | 提供方的类型，当前支持值为EmbeddedType.EMBEDDED_UI_EXTENSION， 表示嵌入的是EmbeddedUIExtensionAbility提供的UI。 |
+| loader | [Want](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-want-want-c.md) | Yes | indicates initialization parameter. |
+| type | [EmbeddedType](arkts-arkui-embeddedtype-e.md) | No | indicates type of the EmbeddedComponent. |
 
 **Return value:**
 
@@ -42,7 +42,7 @@ export declare function EmbeddedComponent(
 ): EmbeddedComponentAttribute
 ```
 
-创建跨进程嵌入式组件，用于显示同包名或满足跨应用权限条件的EmbeddedUIExtensionAbility的UI。相对于API version 12的接口，新增options参数用于传递构造参数。
+Defines EmbeddedComponent Component.
 
 **Since:** 26.0.0
 
@@ -58,9 +58,9 @@ export declare function EmbeddedComponent(
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| loader | [Want](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-want-want-c.md) | Yes | 要加载的EmbeddedUIExtensionAbility。 |
-| type | [EmbeddedType](arkts-arkui-embeddedtype-e.md) | No | 提供方的类型，当前支持值为EmbeddedType.EMBEDDED_UI_EXTENSION， 表示嵌入的是EmbeddedUIExtensionAbility提供的UI。 |
-| options | [EmbeddedOptions](arkts-arkui-embeddedcomponent-embeddedoptions-i.md) | No | 嵌入式组件的可选配置项，用于设置占位符、DPI跟随策略、窗口模式跟随策略等。详见EmbeddedOptions。 |
+| loader | [Want](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-want-want-c.md) | Yes | indicates initialization parameter. |
+| type | [EmbeddedType](arkts-arkui-embeddedtype-e.md) | No | indicates type of the EmbeddedComponent. |
+| options | [EmbeddedOptions](arkts-arkui-embeddedcomponent-embeddedoptions-i.md) | No | indicates type of the EmbeddedComponent options. |
 
 **Return value:**
 
@@ -77,11 +77,11 @@ export declare function EmbeddedComponent(
 ): EmbeddedComponentAttribute
 ```
 
-定义EmbeddedComponent组件。需要在组件属性设置开始时调用setEmbeddedComponentOptions，并在组件属性设置结束时调用applyAttributeFinish。
+Defines EmbeddedComponent Component.It requires call setEmbeddedComponentOptions at start of the component attribute set-up,and it requires call applyAttributeFinish at the end of the component attribute set-up.
 
-**Since:** 26.0.0
+**Since:** 26.1.0
 
-**ArkTS mode:** ArkTS-Sta only, since version 26.0.0.
+**ArkTS mode:** ArkTS-Sta only, since version 26.1.0.
 
 **Decorator:** @Builder
 
@@ -95,11 +95,11 @@ export declare function EmbeddedComponent(
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| style | [CustomBuilderT](../arkts-components/arkts-arkui-custombuildert-t.md)&lt;EmbeddedComponentAttribute&gt; | Yes | 用于设置embeddedcomponent属性的回调。 |
+| style | [CustomBuilderT](../arkts-components/arkts-arkui-custombuildert-t.md)&lt;EmbeddedComponentAttribute&gt; | Yes | the callback to set up embeddedcomponent's attributes. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [EmbeddedComponentAttribute](../arkts-components/arkts-arkui-embeddedcomponent-attribute.md) | EmbeddedComponent的属性。 |
+| [EmbeddedComponentAttribute](../arkts-components/arkts-arkui-embeddedcomponent-attribute.md) | The attribute of the EmbeddedComponent. |
 

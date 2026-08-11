@@ -30,5 +30,5 @@ Mark moduleNamespace which loaded by dynamic-import is collectable.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | if type of object is not moduleNameSpace. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | if type of object is not moduleNameSpace. |
 

@@ -10,12 +10,6 @@
 
 **系统能力：** SystemCapability.Multimedia.AudioHaptic.Core
 
-## 导入模块
-
-```TypeScript
-import { audioHaptic } from 'kits/@kit.AudioKit';
-```
-
 ## createPlayer
 
 ```TypeScript
@@ -51,11 +45,11 @@ createPlayer(id: number, options?: AudioHapticPlayerOptions): Promise<AudioHapti
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
-| 5400102 | Operation not allowed. |
-| 5400103 | I/O error. |
-| 5400106 | Unsupport format. |
-| 201 | Permission denied. |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
+| [5400102](../../apis-media-kit/errorcode-media.md#5400102-当前状态不支持此操作) | Operation not allowed. |
+| [5400103](../../apis-media-kit/errorcode-media.md#5400103-出现io错误) | I/O error. |
+| [5400106](../../apis-media-kit/errorcode-media.md#5400106-不支持的规格) | Unsupport format. |
+| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
 
 ## 示例
 
@@ -65,7 +59,7 @@ import { BusinessError } from '@kit.BasicServicesKit';
 let id = 0; // 需要通过registerSource方法获取。
 
 let options: audioHaptic.AudioHapticPlayerOptions = {muteAudio: false, muteHaptics: false};
-let audioHapticPlayerInstance: audioHaptic.AudioHapticPlayer | undefined = undefined;
+let audioHapticPlayerInstance;
 
 audioHapticManagerInstance.createPlayer(id, options).then((value: audioHaptic.AudioHapticPlayer) => {
   audioHapticPlayerInstance = value;
@@ -110,10 +104,10 @@ Create an audio haptic player. This method uses a promise to return the result. 
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 5400102 | Operation not allowed. |
-| 5400103 | I/O error. |
-| 5400106 | Unsupport format. |
-| 201 | Permission denied. |
+| [5400102](../../apis-media-kit/errorcode-media.md#5400102-当前状态不支持此操作) | Operation not allowed. |
+| [5400103](../../apis-media-kit/errorcode-media.md#5400103-出现io错误) | I/O error. |
+| [5400106](../../apis-media-kit/errorcode-media.md#5400106-不支持的规格) | Unsupport format. |
+| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
 
 ## registerSource
 
@@ -158,7 +152,7 @@ registerSource(audioUri: string, hapticUri: string): Promise<int>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
 
 ## 示例
 
@@ -169,7 +163,7 @@ let audioUri = 'data/audioTest.wav'; // 需更改为目标音频资源的Uri。
 let hapticUri = 'data/hapticTest.json'; // 需更改为目标振动资源的Uri。
 let id = 0;
 // 单个应用最多支持同时注册128个资源，超过之后将会注册失败（返回注册的资源ID为负数）。推荐应用合理控制注册资源数量，对于不再需要使用的资源，建议及时取消注册。
-audioHapticManagerInstance.registerSource(audioUri, hapticUri).then((value: number) => {
+audioHapticManagerInstance.registerSource(audioUri, hapticUri).then((value) => {
   console.info(`Succeeded in registering source. ID: ${value}.`);
   id = value;
 }).catch((err: BusinessError) => {
@@ -240,7 +234,7 @@ let hapticFd: audioHaptic.AudioHapticFileDescriptor = {
 };
 let id = 0;
 // 单个应用最多支持同时注册128个资源，超过之后将会注册失败（返回注册的资源ID为负数）。推荐应用合理控制注册资源数量，对于不再需要使用的资源，建议及时取消注册。
-audioHapticManagerInstance.registerSourceFromFd(audioFd, hapticFd).then((value: number) => {
+audioHapticManagerInstance.registerSourceFromFd(audioFd, hapticFd).then((value) => {
   console.info(`Succeeded in registering source from fd. ID: ${value}.`);
   id = value;
 }).catch((err: BusinessError) => {
@@ -281,8 +275,8 @@ setAudioLatencyMode(id:int, latencyMode: AudioLatencyMode): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
-| 5400102 | Operation not allowed. |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
+| [5400102](../../apis-media-kit/errorcode-media.md#5400102-当前状态不支持此操作) | Operation not allowed. |
 
 ## 示例
 
@@ -329,8 +323,8 @@ setStreamUsage(id: int, usage: audio.StreamUsage): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types; 3.Parameter verification failed. |
-| 5400102 | Operation not allowed. |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types; 3.Parameter verification failed. |
+| [5400102](../../apis-media-kit/errorcode-media.md#5400102-当前状态不支持此操作) | Operation not allowed. |
 
 ## 示例
 
@@ -387,7 +381,7 @@ unregisterSource(id: int): Promise<void>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
 
 ## 示例
 

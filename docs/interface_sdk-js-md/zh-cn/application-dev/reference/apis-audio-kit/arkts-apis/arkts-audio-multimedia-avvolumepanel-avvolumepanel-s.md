@@ -12,12 +12,6 @@
 
 **系统能力：** SystemCapability.Multimedia.Audio.Volume
 
-## 导入模块
-
-```TypeScript
-import { AVVolumePanelParameter, AVVolumePanel } from 'kits/@kit.AudioKit';
-```
-
 ## build
 
 ```TypeScript

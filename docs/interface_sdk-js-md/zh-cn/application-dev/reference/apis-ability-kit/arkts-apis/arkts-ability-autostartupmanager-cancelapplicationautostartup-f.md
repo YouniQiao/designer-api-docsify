@@ -1,11 +1,5 @@
 # cancelApplicationAutoStartup
 
-## 导入模块
-
-```TypeScript
-import { autoStartupManager } from 'kits/@kit.AbilityKit';
-```
-
 ## cancelApplicationAutoStartup
 
 ```TypeScript
@@ -37,12 +31,12 @@ function cancelApplicationAutoStartup(info: AutoStartupInfo, callback: AsyncCall
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 16000004 | Cannot start an invisible component. |
-| 401 | The parameter check failed. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameters types. |
-| 16000050 | Failed to connect to the system service. |
-| 201 | Permission denied, interface caller does not have permission "ohos.permission.MANAGE_APP_BOOT". |
-| 16000013 | The application is controlled by EDM. |
-| 202 | Permission denied, non-system app called system api. |
+| [16000004](../errorcode-ability.md#16000004-可见性校验失败) | Cannot start an invisible component. |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | The parameter check failed. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameters types. |
+| [16000050](../errorcode-ability.md#16000050-内部错误) | Failed to connect to the system service. |
+| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied, interface caller does not have permission "ohos.permission.MANAGE_APP_BOOT". |
+| [16000013](../errorcode-ability.md#16000013-应用被edm管控) | The application is controlled by EDM. |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission denied, non-system app called system api. |
 
 
 ## cancelApplicationAutoStartup
@@ -81,10 +75,10 @@ function cancelApplicationAutoStartup(info: AutoStartupInfo): Promise<void>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 16000004 | Cannot start an invisible component. |
-| 401 | The parameter check failed. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameters types. |
-| 16000050 | Failed to connect to the system service. |
-| 201 | Permission denied, interface caller does not have permission "ohos.permission.MANAGE_APP_BOOT". |
-| 16000013 | The application is controlled by EDM. |
-| 202 | Permission denied, non-system app called system api. |
+| [16000004](../errorcode-ability.md#16000004-可见性校验失败) | Cannot start an invisible component. |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | The parameter check failed. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameters types. |
+| [16000050](../errorcode-ability.md#16000050-内部错误) | Failed to connect to the system service. |
+| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied, interface caller does not have permission "ohos.permission.MANAGE_APP_BOOT". |
+| [16000013](../errorcode-ability.md#16000013-应用被edm管控) | The application is controlled by EDM. |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission denied, non-system app called system api. |
 

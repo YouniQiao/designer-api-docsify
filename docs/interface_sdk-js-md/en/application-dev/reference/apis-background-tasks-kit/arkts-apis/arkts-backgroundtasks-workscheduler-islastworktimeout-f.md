@@ -12,7 +12,7 @@ import { workScheduler } from 'kits/@kit.BackgroundTasksKit';
 function isLastWorkTimeOut(workId: number, callback: AsyncCallback<void>): boolean
 ```
 
-检查延迟任务的最后一次执行是否超时，使用Callback异步回调。
+Checks whether the last execution of a task timed out. This API uses an asynchronous callback to return the result.
 
 **Since:** 9
 
@@ -32,24 +32,24 @@ function isLastWorkTimeOut(workId: number, callback: AsyncCallback<void>): boole
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| workId | number | Yes | 指定延迟任务的Id。 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | 回调函数。 |
+| workId | number | Yes | ID of the deferred task. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| boolean | 检查延迟任务最后一次执行是否超时，如果workId有效，则返回从WorkSchedulerService获取的任务最后一次执行是否超时；否则，抛出异常。true，对应workId延迟任务最 后一次执行超时，false，对应workId延迟任务最后一次执行未超时。 |
+| boolean | Whether the last execution of a deferred task timed out. If **workId** is valid, it returns whether the last execution of the task obtained from WorkSchedulerService timed out; otherwise, an exception is thrown. **true** indicates that the last execution of the deferred task corresponding to the **workId** timed out, while **false** indicates the opposite. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 9700004 | Check on workInfo failed. |
-| 401 | Parameter error. Possible causes: Parameter verification failed. |
-| 9700001 | Memory operation failed. |
-| 9700002 | Failed to write data into parcel. Possible reasons: 1. Invalid parameters; 2. Failed to apply for memory. |
-| 9700003 | System service operation failed. |
+| [9700004](../../apis-backgroundtasks-kit/errorcode-workScheduler.md#9700004-workinfo-verification-failure) | Check on workInfo failed. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: Parameter verification failed. |
+| [9700001](../../apis-backgroundtasks-kit/errorcode-workScheduler.md#9700001-memory-operation-failure) | Memory operation failed. |
+| [9700002](../../apis-backgroundtasks-kit/errorcode-workScheduler.md#9700002-parcel-operation-failure) | Failed to write data into parcel. Possible reasons: 1. Invalid parameters; 2. Failed to apply for memory. |
+| [9700003](../../apis-backgroundtasks-kit/errorcode-workScheduler.md#9700003-system-service-failure) | System service operation failed. |
 
 
 ## isLastWorkTimeOut
@@ -58,7 +58,7 @@ function isLastWorkTimeOut(workId: number, callback: AsyncCallback<void>): boole
 function isLastWorkTimeOut(workId: int, callback: AsyncCallback<boolean>): void
 ```
 
-检查延迟任务的最后一次执行是否超时，使用Callback异步回调。
+Checks whether the last execution of a task timed out. This API uses an asynchronous callback to return the result.
 
 **Since:** 10
 
@@ -74,18 +74,18 @@ function isLastWorkTimeOut(workId: int, callback: AsyncCallback<boolean>): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| workId | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | 指定延迟任务的Id。 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;boolean&gt; | Yes | 回调函数。 |
+| workId | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | ID of the deferred task. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;boolean&gt; | Yes | Callback used to return the result. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 9700004 | Check on workInfo failed. |
-| 401 | Parameter error. Possible causes: Parameter verification failed. |
-| 9700001 | Memory operation failed. |
-| 9700002 | Failed to write data into parcel. Possible reasons: 1. Invalid parameters; 2. Failed to apply for memory. |
-| 9700003 | System service operation failed. |
+| [9700004](../../apis-backgroundtasks-kit/errorcode-workScheduler.md#9700004-workinfo-verification-failure) | Check on workInfo failed. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: Parameter verification failed. |
+| [9700001](../../apis-backgroundtasks-kit/errorcode-workScheduler.md#9700001-memory-operation-failure) | Memory operation failed. |
+| [9700002](../../apis-backgroundtasks-kit/errorcode-workScheduler.md#9700002-parcel-operation-failure) | Failed to write data into parcel. Possible reasons: 1. Invalid parameters; 2. Failed to apply for memory. |
+| [9700003](../../apis-backgroundtasks-kit/errorcode-workScheduler.md#9700003-system-service-failure) | System service operation failed. |
 
 ## Examples
 
@@ -109,7 +109,7 @@ import { BusinessError } from '@kit.BasicServicesKit';
 function isLastWorkTimeOut(workId: int): Promise<boolean>
 ```
 
-检查延迟任务的最后一次执行是否超时，使用Promise异步回调。
+Checks whether the last execution of a task timed out. This API uses a promise to return the result.
 
 **Since:** 9
 
@@ -125,23 +125,23 @@ function isLastWorkTimeOut(workId: int): Promise<boolean>
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| workId | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | 指定延迟任务的Id。 |
+| workId | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | ID of the deferred task. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;boolean&gt; | Promise对象。返回true表示指定任务的最后一次执行超时，false表示未超时。 |
+| Promise&lt;boolean&gt; | Promise used to return the result. The value **true** means that the last execution of the specified task times out, and **false** means the opposite. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 9700004 | Check on workInfo failed. |
-| 401 | Parameter error. Possible causes: Parameter verification failed. |
-| 9700001 | Memory operation failed. |
-| 9700002 | Failed to write data into parcel. Possible reasons: 1. Invalid parameters; 2. Failed to apply for memory. |
-| 9700003 | System service operation failed. |
+| [9700004](../../apis-backgroundtasks-kit/errorcode-workScheduler.md#9700004-workinfo-verification-failure) | Check on workInfo failed. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: Parameter verification failed. |
+| [9700001](../../apis-backgroundtasks-kit/errorcode-workScheduler.md#9700001-memory-operation-failure) | Memory operation failed. |
+| [9700002](../../apis-backgroundtasks-kit/errorcode-workScheduler.md#9700002-parcel-operation-failure) | Failed to write data into parcel. Possible reasons: 1. Invalid parameters; 2. Failed to apply for memory. |
+| [9700003](../../apis-backgroundtasks-kit/errorcode-workScheduler.md#9700003-system-service-failure) | System service operation failed. |
 
 ## Examples
 

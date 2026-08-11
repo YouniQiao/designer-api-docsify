@@ -5,7 +5,7 @@ export type DataOperation = DataAddOperation | DataDeleteOperation | DataChangeO
     DataExchangeOperation | DataReloadOperation
 ```
 
-定义数据操作类型。
+All data operation types.
 
 **Since:** 23
 

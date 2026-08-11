@@ -6,7 +6,7 @@
 function setCursor(value: PointerStyle): void
 ```
 
-方法语句中可使用的全局接口，调用该接口可更改当前的鼠标光标样式。
+Sets the current mouse cursor style. This API can be used globally in method statements.
 
 **Since:** 11
 
@@ -24,5 +24,5 @@ function setCursor(value: PointerStyle): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | [PointerStyle](arkts-arkui-pointerstyle-t.md) | Yes | 设置的鼠标样式。 |
+| value | [PointerStyle](arkts-arkui-pointerstyle-t.md) | Yes | Cursor style. |
 

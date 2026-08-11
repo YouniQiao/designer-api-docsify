@@ -10,12 +10,6 @@
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 
-## 导入模块
-
-```TypeScript
-import { ChildProcess } from 'kits/@kit.AbilityKit';
-```
-
 ## onStart
 
 ```TypeScript
@@ -49,7 +43,7 @@ export default class DemoProcess extends ChildProcess {
 
   onStart(args?: ChildProcessArgs) {
     let entryParams = args?.entryParams;
-    let fd = args?.fds?.key1;
+    let fd = args?.fds!['key1'];
     // ...
   }
 }

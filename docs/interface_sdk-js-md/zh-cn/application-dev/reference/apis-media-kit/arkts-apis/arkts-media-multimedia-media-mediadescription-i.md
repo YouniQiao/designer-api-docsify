@@ -10,12 +10,6 @@ Provides the container definition for media description key-value pairs.
 
 **系统能力：** SystemCapability.Multimedia.Media.Core
 
-## 导入模块
-
-```TypeScript
-import { media } from 'kits/@kit.MediaKit';
-```
-
 ## [key: string]
 
 ```TypeScript

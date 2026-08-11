@@ -6,7 +6,7 @@
 function clearTimeout(timerId?: int | null): void
 ```
 
-取消指定的定时器。
+Cancel the specified timer.
 
 **Since:** 24
 
@@ -22,5 +22,5 @@ function clearTimeout(timerId?: int | null): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| timerId | int \| null | No | 由setTimeout返回的定时器ID， 如果不传、传入null或undefined，则不执行任何操作。 |
+| timerId | int \| null | No | The id of the timer returned from setTimeout, if pass empty or null or undefined will do nothing. |
 

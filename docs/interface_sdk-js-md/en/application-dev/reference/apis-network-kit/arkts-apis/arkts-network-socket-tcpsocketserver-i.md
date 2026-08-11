@@ -44,8 +44,8 @@ Close the TCPSocketServer. Close the TCPSocketServer listening port.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 2300002 | System internal error. |
-| 201 | Permission denied. |
+| [2300002](../errorcode-net-socket.md#2300002-system-internal-error) | System internal error. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
 
 ## Examples
 
@@ -98,9 +98,9 @@ Obtains the local address of a TCPSocketServer connection.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 2300002 | System internal error. |
-| 2301009 | Bad file descriptor. |
-| 2303188 | Socket operation on non-socket. |
+| [2300002](../errorcode-net-socket.md#2300002-system-internal-error) | System internal error. |
+| [2301009](../errorcode-net-socket.md#2301009-bad-file-descriptor) | Bad file descriptor. |
+| [2303188](../errorcode-net-socket.md#2303188-socket-operations-on-nonsockets) | Socket operation on non-socket. |
 
 ## Examples
 
@@ -159,7 +159,7 @@ Obtains the file descriptor of the TCPSocketServer.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 201 | Permission denied. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
 
 ## Examples
 
@@ -213,10 +213,10 @@ Obtains the status of the TCPSocketServer connection.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. |
-| 2300002 | System internal error. |
-| 2303188 | Socket operation on non-socket. |
-| 201 | Permission denied. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. |
+| [2300002](../errorcode-net-socket.md#2300002-system-internal-error) | System internal error. |
+| [2303188](../errorcode-net-socket.md#2303188-socket-operations-on-nonsockets) | Socket operation on non-socket. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
 
 ## Examples
 
@@ -274,9 +274,9 @@ Obtains the status of the TCPSocketServer connection.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 2300002 | System internal error. |
-| 2303188 | Socket operation on non-socket. |
-| 201 | Permission denied. |
+| [2300002](../errorcode-net-socket.md#2300002-system-internal-error) | System internal error. |
+| [2303188](../errorcode-net-socket.md#2303188-socket-operations-on-nonsockets) | Socket operation on non-socket. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
 
 ## Examples
 
@@ -333,13 +333,13 @@ Binds the IP address and port number, the port number can be specified or random
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. |
-| 2300002 | System internal error. |
-| 2303111 | Resource temporarily unavailable. Try again. |
-| 2303109 | Bad file number. |
-| 201 | Permission denied. |
-| 2303199 | Cannot assign requested address. |
-| 2303198 | Address already in use. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. |
+| [2300002](../errorcode-net-socket.md#2300002-system-internal-error) | System internal error. |
+| [2303111](../errorcode-net-socket.md#2303111-requested-resource-temporarily-unavailable) | Resource temporarily unavailable. Try again. |
+| [2303109](../errorcode-net-socket.md#2303109-error-file-number) | Bad file number. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
+| [2303199](../errorcode-net-socket.md#2303199-failed-to-assign-the-requested-address) | Cannot assign requested address. |
+| [2303198](../errorcode-net-socket.md#2303198-network-address-already-in-use) | Address already in use. |
 
 ## Examples
 
@@ -396,13 +396,13 @@ Binds the IP address and port number, the port number can be specified or random
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. |
-| 2300002 | System internal error. |
-| 2303111 | Resource temporarily unavailable. Try again. |
-| 2303109 | Bad file number. |
-| 201 | Permission denied. |
-| 2303199 | Cannot assign requested address. |
-| 2303198 | Address already in use. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. |
+| [2300002](../errorcode-net-socket.md#2300002-system-internal-error) | System internal error. |
+| [2303111](../errorcode-net-socket.md#2303111-requested-resource-temporarily-unavailable) | Resource temporarily unavailable. Try again. |
+| [2303109](../errorcode-net-socket.md#2303109-error-file-number) | Bad file number. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
+| [2303199](../errorcode-net-socket.md#2303199-failed-to-assign-the-requested-address) | Cannot assign requested address. |
+| [2303198](../errorcode-net-socket.md#2303198-network-address-already-in-use) | Address already in use. |
 
 ## Examples
 
@@ -450,7 +450,7 @@ Cancels listening for connect events of the TCPSocketServer connection.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. |
 
 ## Examples
 
@@ -508,7 +508,7 @@ Cancels listening for error events of the TCPSocketServer connection.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. |
 
 ## Examples
 
@@ -566,7 +566,7 @@ Listens for connect events of the TCPSocketServer connection.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. |
 
 ## Examples
 
@@ -620,7 +620,7 @@ Listens for error events of the TCPSocketServer connection.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. |
 
 ## Examples
 
@@ -676,10 +676,10 @@ Sets other attributes of the TCPSocketServer connection.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. |
-| 2300002 | System internal error. |
-| 2303188 | Socket operation on non-socket. |
-| 201 | Permission denied. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. |
+| [2300002](../errorcode-net-socket.md#2300002-system-internal-error) | System internal error. |
+| [2303188](../errorcode-net-socket.md#2303188-socket-operations-on-nonsockets) | Socket operation on non-socket. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
 
 ## Examples
 
@@ -759,10 +759,10 @@ Sets other attributes of the TCPSocketServer connection.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. |
-| 2300002 | System internal error. |
-| 2303188 | Socket operation on non-socket. |
-| 201 | Permission denied. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. |
+| [2300002](../errorcode-net-socket.md#2300002-system-internal-error) | System internal error. |
+| [2303188](../errorcode-net-socket.md#2303188-socket-operations-on-nonsockets) | Socket operation on non-socket. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
 
 ## Examples
 

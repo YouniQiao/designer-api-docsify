@@ -10,12 +10,6 @@
 
 **系统能力：** SystemCapability.Multimedia.Camera.Core
 
-## 导入模块
-
-```TypeScript
-import { camera } from 'kits/@kit.CameraKit';
-```
-
 ## isMacroSupported
 
 ```TypeScript
@@ -45,5 +39,5 @@ isMacroSupported(): boolean
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 202 | Not System Application.<br>**适用版本：** 11 - 18 |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not System Application.<br>**适用版本：** 11 - 18 |
 

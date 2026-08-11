@@ -4,7 +4,7 @@
 export type SaveRequestCallback = _AutoFillRequest.SaveRequestCallback
 ```
 
-自动保存或者手动保存请求的回调对象。
+Defines the callback for an automatic or a manual saving request.
 
 **Since:** 11
 

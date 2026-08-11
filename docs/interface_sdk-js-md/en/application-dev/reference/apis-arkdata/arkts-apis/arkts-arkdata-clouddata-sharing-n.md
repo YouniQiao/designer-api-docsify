@@ -1,6 +1,6 @@
 # sharing
 
-提供端云共享的方法，包括发起共享、取消共享、退出共享、更改共享数据权限、查找共享参与者、确认邀请、更改已确认的邀请、查找共享资源。
+Provides APIs for device-cloud data sharing, including sharing or unsharing data, exiting a share, changing the privilege on the shared data, querying participants, confirming an invitation, changing the invitation confirmation state, and querying the shared resource.
 
 **Since:** 11
 
@@ -25,25 +25,25 @@ import { cloudData } from 'kits/@kit.ArkData';
 
 | Name | Description |
 | --- | --- |
-| [allocResourceAndShare](arkts-arkdata-sharing-allocresourceandshare-f-sys.md#allocresourceandshare) | 根据谓词条件匹配的数据申请共享资源标识并发起共享，返回已共享资源的结果集。如果指定了列字段，则返回的结果集中同时包含对应列的字段值，使用Promise异步回调。 |
-| [allocResourceAndShare](arkts-arkdata-sharing-allocresourceandshare-f-sys.md#allocresourceandshare-1) | 根据谓词条件匹配的数据申请共享资源标识并发起共享，返回已共享资源的结果集，使用callback异步回调。 |
-| [allocResourceAndShare](arkts-arkdata-sharing-allocresourceandshare-f-sys.md#allocresourceandshare-2) | 根据谓词条件匹配的数据申请共享资源标识并发起共享，返回已共享资源的结果集并根据指定的列字段，返回的结果集中同时包含对应列的字段值，使用callback异步回调。 |
-| [share](arkts-arkdata-sharing-share-f-sys.md#share) | 根据指定的共享资源标识和共享参与者发起共享邀请，使用callback异步回调。 |
-| [share](arkts-arkdata-sharing-share-f-sys.md#share-1) | 根据指定的共享资源标识和共享参与者发起共享邀请，使用Promise异步回调。 |
-| [unshare](arkts-arkdata-sharing-unshare-f-sys.md#unshare) | 根据指定的共享资源标识和共享参与者发起共享邀请，使用callback异步回调。 |
-| [unshare](arkts-arkdata-sharing-unshare-f-sys.md#unshare-1) | 根据指定的共享资源标识和共享参与者发起共享邀请，使用Promise异步回调。 |
-| [exit](arkts-arkdata-sharing-exit-f-sys.md#exit) | 根据指定的共享资源标识退出共享，使用callback异步回调。 |
-| [exit](arkts-arkdata-sharing-exit-f-sys.md#exit-1) | 根据指定的共享资源标识退出共享，使用Promise异步回调。 |
-| [changePrivilege](arkts-arkdata-sharing-changeprivilege-f-sys.md#changeprivilege) | 根据指定的共享资源标识更改共享参与者对共享数据的操作权限，使用callback异步回调。 |
-| [changePrivilege](arkts-arkdata-sharing-changeprivilege-f-sys.md#changeprivilege-1) | 根据指定的共享资源标识更改共享参与者对共享数据的操作权限，使用Promise异步回调。 |
-| [queryParticipants](arkts-arkdata-sharing-queryparticipants-f-sys.md#queryparticipants) | 根据指定的共享资源标识查询当前共享的参与者，使用callback异步回调。 |
-| [queryParticipants](arkts-arkdata-sharing-queryparticipants-f-sys.md#queryparticipants-1) | 根据指定的共享资源标识查询当前共享的参与者，使用Promise异步回调。 |
-| [queryParticipantsByInvitation](arkts-arkdata-sharing-queryparticipantsbyinvitation-f-sys.md#queryparticipantsbyinvitation) | 根据指定的共享邀请码查询当前共享的参与者，使用callback异步回调。 |
-| [queryParticipantsByInvitation](arkts-arkdata-sharing-queryparticipantsbyinvitation-f-sys.md#queryparticipantsbyinvitation-1) | 根据指定的共享邀请码查询当前共享的参与者，使用Promise异步回调。 |
-| [confirmInvitation](arkts-arkdata-sharing-confirminvitation-f-sys.md#confirminvitation) | 被邀请者根据共享邀请码确认当前邀请，并获取当前邀请的共享资源标识，使用callback异步回调。 |
-| [confirmInvitation](arkts-arkdata-sharing-confirminvitation-f-sys.md#confirminvitation-1) | 被邀请者根据共享邀请码确认当前邀请，并获取当前邀请的共享资源标识，使用Promise异步回调。 |
-| [changeConfirmation](arkts-arkdata-sharing-changeconfirmation-f-sys.md#changeconfirmation) | 根据共享资源标识更改共享邀请的状态，使用callback异步回调。 |
-| [changeConfirmation](arkts-arkdata-sharing-changeconfirmation-f-sys.md#changeconfirmation-1) | 根据共享资源标识更改共享邀请的状态，使用Promise异步回调。 |
+| [allocResourceAndShare](arkts-arkdata-sharing-allocresourceandshare-f-sys.md#allocresourceandshare) | Allocates a shared resource ID based on the data that matches the specified predicates.This API uses a promise to return the result set of the data to share,which also includes the column names if they are specified. |
+| [allocResourceAndShare](arkts-arkdata-sharing-allocresourceandshare-f-sys.md#allocresourceandshare-1) | Allocates a shared resource ID based on the data that matches the specified predicates.This API uses an asynchronous callback to return the result. |
+| [allocResourceAndShare](arkts-arkdata-sharing-allocresourceandshare-f-sys.md#allocresourceandshare-2) | Allocates a shared resource ID based on the data that matches the specified predicates.This API uses an asynchronous callback to return the result set of the data to share,which includes the shared resource ID and column names. |
+| [share](arkts-arkdata-sharing-share-f-sys.md#share) | Shares data based on the specified shared resource ID and participants.This API uses an asynchronous callback to return the result. |
+| [share](arkts-arkdata-sharing-share-f-sys.md#share-1) | Shares data based on the specified shared resource ID and participants.This API uses a promise to return the result. |
+| [unshare](arkts-arkdata-sharing-unshare-f-sys.md#unshare) | Unshares data based on the specified shared resource ID and participants.This API uses an asynchronous callback to return the result. |
+| [unshare](arkts-arkdata-sharing-unshare-f-sys.md#unshare-1) | Unshares data based on the specified shared resource ID and participants.This API uses a promise to return the result. |
+| [exit](arkts-arkdata-sharing-exit-f-sys.md#exit) | Exits the share of the specified shared resource.This API uses an asynchronous callback to return the result. |
+| [exit](arkts-arkdata-sharing-exit-f-sys.md#exit-1) | Exits the share of the specified shared resource.This API uses a promise to return the result. |
+| [changePrivilege](arkts-arkdata-sharing-changeprivilege-f-sys.md#changeprivilege) | Changes the privilege on the shared data.This API uses an asynchronous callback to return the result. |
+| [changePrivilege](arkts-arkdata-sharing-changeprivilege-f-sys.md#changeprivilege-1) | Changes the privilege on the shared data.This API uses a promise to return the result. |
+| [queryParticipants](arkts-arkdata-sharing-queryparticipants-f-sys.md#queryparticipants) | Queries the participants of the specified shared data.This API uses an asynchronous callback to return the result. |
+| [queryParticipants](arkts-arkdata-sharing-queryparticipants-f-sys.md#queryparticipants-1) | Queries the participants of the specified shared data.This API uses a promise to return the result. |
+| [queryParticipantsByInvitation](arkts-arkdata-sharing-queryparticipantsbyinvitation-f-sys.md#queryparticipantsbyinvitation) | Queries the participants based on the sharing invitation code.This API uses an asynchronous callback to return the result. |
+| [queryParticipantsByInvitation](arkts-arkdata-sharing-queryparticipantsbyinvitation-f-sys.md#queryparticipantsbyinvitation-1) | Queries the participants based on the sharing invitation code.This API uses a promise to return the result. |
+| [confirmInvitation](arkts-arkdata-sharing-confirminvitation-f-sys.md#confirminvitation) | Confirms the invitation based on the sharing invitation code and obtains the shared resource ID.This API uses an asynchronous callback to return the result. |
+| [confirmInvitation](arkts-arkdata-sharing-confirminvitation-f-sys.md#confirminvitation-1) | Confirms the invitation based on the sharing invitation code and obtains the shared resource ID.This API uses a promise to return the result. |
+| [changeConfirmation](arkts-arkdata-sharing-changeconfirmation-f-sys.md#changeconfirmation) | Changes the invitation confirmation state based on the shared resource ID.This API uses an asynchronous callback to return the result. |
+| [changeConfirmation](arkts-arkdata-sharing-changeconfirmation-f-sys.md#changeconfirmation-1) | Changes the invitation confirmation state based on the shared resource ID.This API uses a promise to return the result. |
 <!--DelEnd-->
 
 <!--Del-->
@@ -51,9 +51,9 @@ import { cloudData } from 'kits/@kit.ArkData';
 
 | Name | Description |
 | --- | --- |
-| [Result](arkts-arkdata-sharing-result-i-sys.md) | 端云共享结果的返回值。 |
-| [Privilege](arkts-arkdata-sharing-privilege-i-sys.md) | 指定的端云共享数据的权限。 |
-| [Participant](arkts-arkdata-sharing-participant-i-sys.md) | 端云共享的参与者。 |
+| [Result](arkts-arkdata-sharing-result-i-sys.md) | Represents the device-cloud sharing result. |
+| [Privilege](arkts-arkdata-sharing-privilege-i-sys.md) | Defines the privilege (permissions) on the shared data. |
+| [Participant](arkts-arkdata-sharing-participant-i-sys.md) | Represents information about a participant of device-cloud sharing. |
 <!--DelEnd-->
 
 <!--Del-->
@@ -61,8 +61,8 @@ import { cloudData } from 'kits/@kit.ArkData';
 
 | Name | Description |
 | --- | --- |
-| [Role](arkts-arkdata-sharing-role-e-sys.md) | 端云共享参与者的角色。 |
-| [State](arkts-arkdata-sharing-state-e-sys.md) | 端云共享状态。 |
-| [SharingCode](arkts-arkdata-sharing-sharingcode-e-sys.md) | 端云共享错误码。 |
+| [Role](arkts-arkdata-sharing-role-e-sys.md) | Enumerates the roles of the participants in a device-cloud share. |
+| [State](arkts-arkdata-sharing-state-e-sys.md) | Enumerates the device-cloud sharing states. |
+| [SharingCode](arkts-arkdata-sharing-sharingcode-e-sys.md) | Enumerates the error codes for device-cloud sharing. |
 <!--DelEnd-->
 

@@ -170,7 +170,7 @@ Provide names of all properties in LocalStorage same as ES6 Map.prototype.keys()
 
 | 类型 | 说明 |
 | --- | --- |
-| [IterableIterator](../../apis-arkts/arkts-apis/arkts-arkts-iterator-iterableiterator-i.md)&lt;string&gt; | return a Map Iterator |
+| IterableIterator&lt;string&gt; | return a Map Iterator |
 
 ## link
 

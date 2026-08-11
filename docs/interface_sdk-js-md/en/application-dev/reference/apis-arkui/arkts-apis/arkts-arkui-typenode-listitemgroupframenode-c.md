@@ -1,6 +1,6 @@
 # ListItemGroupFrameNode
 
-定义ListItemGroup类型的FrameNode。
+Define the ListItemGroup type of FrameNode.
 
 **Inheritance/Implementation:** ListItemGroupFrameNode extends [TypedFrameNode<ListItemGroupAttribute>](TypedFrameNode<ListItemGroupAttribute>)
 
@@ -18,7 +18,7 @@
 abstract initialize(options?: ListItemGroupOptions): ListItemGroupAttribute
 ```
 
-初始化ListItemGroup类型的FrameNode。
+Initialize ListItemGroup FrameNode.
 
 **Since:** 23
 
@@ -34,7 +34,7 @@ abstract initialize(options?: ListItemGroupOptions): ListItemGroupAttribute
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| options | [ListItemGroupOptions](../arkts-components/arkts-arkui-listitemgroupoptions-i.md) | No | list item group 节点的选项。 |
+| options | [ListItemGroupOptions](../arkts-components/arkts-arkui-listitemgroupoptions-i.md) | No | list item group options. |
 
 **Return value:**
 

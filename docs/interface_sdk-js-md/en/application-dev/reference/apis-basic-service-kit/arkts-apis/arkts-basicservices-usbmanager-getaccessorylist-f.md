@@ -12,7 +12,7 @@ import { usbManager } from 'kits/@kit.BasicServicesKit';
 function getAccessoryList(): Array<Readonly<USBAccessory>>
 ```
 
-获取当前已接入主机的USB配件列表。
+Obtains the list of USB accessories connected to the host.
 
 **Since:** 14
 
@@ -26,14 +26,14 @@ function getAccessoryList(): Array<Readonly<USBAccessory>>
 
 | Type | Description |
 | --- | --- |
-| Array&lt;Readonly&lt;USBAccessory&gt;&gt; | 只读的USB配件列表。当前仅支持列表中包含1个USB配件。 |
+| Array&lt;Readonly&lt;USBAccessory&gt;&gt; | List of USB accessories (read-only). Currently, only one USB accessory is contained in the list. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 801 | Capability not supported.<br>**Applicable version:** 18 and later |
-| 14400004 | Service exception. Possible causes:  &lt;br&gt;1. No accessory is plugged in. |
+| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported.<br>**Applicable version:** 18 and later |
+| [14400004](../../apis-basic-services-kit/errorcode-usb.md#14400004-service-exception) | Service exception. Possible causes:  &lt;br&gt;1. No accessory is plugged in. |
 
 ## Examples
 
@@ -43,7 +43,7 @@ try {
   let accList: usbManager.USBAccessory[] = usbManager.getAccessoryList()
   hilog.info(0, 'testTag ui', `getAccessoryList success, accList: ${JSON.stringify(accList)}`)
 } catch (error) {
-  hilog.error(0, 'testTag ui', `getAccessoryList error ${error.code}, message is ${error.message}`)
+  hilog.info(0, 'testTag ui', `getAccessoryList error ${error.code}, message is ${error.message}`)
 }
 ```
 

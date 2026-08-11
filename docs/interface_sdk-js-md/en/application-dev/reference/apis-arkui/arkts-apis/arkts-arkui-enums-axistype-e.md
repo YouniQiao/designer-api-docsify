@@ -1,6 +1,6 @@
 # AxisType
 
-定义轴事件的轴类型。
+Define the axis type of axis event.
 
 **Since:** 23
 
@@ -16,7 +16,7 @@
 VERTICAL_AXIS = 0
 ```
 
-垂直滚动轴。
+Indicates the vertical scoll axis. When you scroll the mouse wheel or make certain gestures on the touchpad,the status of the vertical scoll axis changes.
 
 **Since:** 23
 
@@ -34,7 +34,7 @@ VERTICAL_AXIS = 0
 HORIZONTAL_AXIS = 1
 ```
 
-水平滚动轴。
+Indicates the horizontal scoll axis. When you make certain gestures on the touchpad,the status of the horizontal scroll axis changes.
 
 **Since:** 23
 
@@ -52,7 +52,7 @@ HORIZONTAL_AXIS = 1
 PINCH_AXIS = 2
 ```
 
-捏合轴。
+Indicates the pinch axis, which is used to describe a pinch gesture on the touchpad.
 
 **Since:** 23
 

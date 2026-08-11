@@ -4,7 +4,7 @@
 export type NotificationProgress = _NotificationProgress
 ```
 
-通知进度。
+Describes the notification progress.
 
 **Since:** 11
 

@@ -1,8 +1,8 @@
 # AppStateData
 
-定义应用状态信息，使用接口  
-[on](@ohos.app.ability.appManager:appManager.on(type: 'applicationState', observer: ApplicationStateObserver))注册应用状态变化监听后，当应用、进程或组件的状态变化时，系统通过[ApplicationStateObserver](arkts-ability-applicationstateobserver-c.md)的  
-[onForegroundApplicationChanged](../../../reference/apis-ability-kit/js-apis-inner-application-applicationStateObserver.md#applicationstateobserveronforegroundapplicationchanged)等方法回调给开发者。
+The module defines the application state information. Once an application state change listener is registered using  
+[on](@ohos.app.ability.appManager:appManager.on(type: 'applicationState', observer: ApplicationStateObserver)), the system triggers the  
+[onForegroundApplicationChanged](../../../reference/apis-ability-kit/js-apis-inner-application-applicationStateObserver.md#applicationstateobserveronforegroundapplicationchanged) callback of [ApplicationStateObserver](arkts-ability-applicationstateobserver-c.md) to deliver notifications whenever  the state of an application, process, or ability changes.
 
 **Since:** 14
 
@@ -18,7 +18,7 @@
 bundleName: string
 ```
 
-Bundle名称。
+Bundle name.
 
 **Type:** string
 
@@ -36,11 +36,11 @@ Bundle名称。
 isFloatingWindowMode: boolean
 ```
 
-判断应用是否处于悬浮窗模式。
+Whether the application is in floating window mode.
 
-true:应用处于悬浮窗模式。
+**true**: The application is in floating window mode.
 
-false:应用不处于悬浮窗模式。
+**false**: The application is not in floating window mode.
 
 **Type:** boolean
 
@@ -58,11 +58,11 @@ false:应用不处于悬浮窗模式。
 isSplitScreenMode: boolean
 ```
 
-判断应用是否处于分屏模式。
+Whether the application is in split-screen mode.
 
-true:应用处于分屏模式。
+**true**: The application is in split-screen mode.
 
-false:应用不处于分屏模式。
+**false**: The application is not in split-screen mode.
 
 **Type:** boolean
 
@@ -80,19 +80,19 @@ false:应用不处于分屏模式。
 state: int
 ```
 
-应用状态。
+Application state.
 
-0：初始化状态，应用正在初始化
+**0**: The application is being initialized.
 
-1：就绪状态，应用已初始化完毕
+**1**: The application has been initialized and is ready.
 
-2：前台状态，应用位于前台
+**2**: The application is running in the foreground.
 
-3：获焦状态。（预留状态，当前暂不支持）
+**3**: The application is having the focus. (This state is reserved.)
 
-4：后台状态，应用位于后台
+**4**: The application is running in the background.
 
-5：退出状态，应用已退出
+**5**: The application has exited.
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
@@ -110,7 +110,7 @@ state: int
 uid: int
 ```
 
-应用程序的uid。
+UID of the application.
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 

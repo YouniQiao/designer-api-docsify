@@ -1,6 +1,6 @@
 # AccelerometerResponse
 
-感应到加速度数据变化后的回调函数的响应对象，包含设备在x、y、z三轴方向上的加速度数据。
+Defines the callback invoked when the acceleration sensor data changes.
 
 **Since:** 3
 
@@ -28,7 +28,7 @@ import { OnBodyStateResponse, subscribeAccelerometerOptions, ProximityResponse, 
 x: number
 ```
 
-施加在设备x轴的加速度。单位：m/s²。取值范围：取值为实际上报物理量，由硬件传感器决定。
+Acceleration on the x-axis.
 
 **Type:** number
 
@@ -54,7 +54,7 @@ x: number
 y: number
 ```
 
-施加在设备y轴的加速度。单位：m/s²。取值范围：取值为实际上报物理量，由硬件传感器决定。
+Acceleration on the y-axis.
 
 **Type:** number
 
@@ -80,7 +80,7 @@ y: number
 z: number
 ```
 
-施加在设备z轴的加速度。单位：m/s²。取值范围：取值为实际上报物理量，由硬件传感器决定。静止状态下z轴加速度约为9.8 m/s²（重力加速度）。
+Acceleration on the z-axis.
 
 **Type:** number
 

@@ -1,8 +1,8 @@
 # SwipeActionItem
 
-SwipeActionItem用于配置[SwipeActionOptions](arkts-arkui-swipeactionoptions-i.md)中的start或end划出项，包括划出时显示的操作项、长距离操作区域的距离阈值，以及进入、退出长距离操作区域、抬手触发操作和状态变化时的回调。
+Describes the swipe action item.For a list in vertical layout, it refers to the delete option displayed on the left (or right) of the list item when the list item is swiped right (or left).
 
-作为start划出项时，List为垂直布局时显示在ListItem左侧，List为水平布局时显示在ListItem上方；作为end划出项时，List为垂直布局时显示在ListItem右侧，List为水平布局时显示在ListItem下方。
+For a list in horizontal layout, it refers to the delete option displayed below (or above) the list item when the list item is swiped up (or down).
 
 **Since:** 10
 
@@ -18,7 +18,7 @@ SwipeActionItem用于配置[SwipeActionOptions](arkts-arkui-swipeactionoptions-i
 onAction?: () => void
 ```
 
-组件进入长距删除区后抬手时触发。滑动后松手的位置超过或等于设置的距离阈值，并且设置的距离阈值有效时才会触发。
+Callback invoked when the list item is released while in the delete area.
 
 **Since:** 10
 
@@ -38,7 +38,7 @@ onAction?: () => void
 onEnterActionArea?: () => void
 ```
 
-在滑动条目进入删除区域时调用，只触发一次，当再次进入时仍触发。
+Callback invoked each time the list item enters the delete area.
 
 **Since:** 10
 
@@ -58,7 +58,7 @@ onEnterActionArea?: () => void
 onExitActionArea?: () => void
 ```
 
-当滑动条目退出删除区域时调用，只触发一次，当再次退出时仍触发。
+Callback invoked each time the list item exits the delete area.
 
 **Since:** 10
 
@@ -78,7 +78,7 @@ onExitActionArea?: () => void
 onStateChange?: (state: SwipeActionState) => void
 ```
 
-当列表项滑动状态变化时候触发。
+Callback invoked when the swipe state of the list item changes.
 
 **Since:** 11
 
@@ -104,7 +104,7 @@ onStateChange?: (state: SwipeActionState) => void
 actionAreaDistance?: Length
 ```
 
-设置组件长距离滑动删除距离阈值。即划出组件被完全滑进视窗后，继续滑动触发删除的距离阈值。不支持设置百分比。删除距离阈值大于item宽度减去划出组件宽度，或删除距离阈值小于等于0就不会设置删除区域。
+Swipe distance threshold for deleting the list item. This threshold applies after the swipe action component is fully swiped into view and triggers the deletion action.
 
 **Type:** [Length](../arkts-apis/arkts-arkui-length-t.md)
 
@@ -128,7 +128,7 @@ actionAreaDistance?: Length
 builder?: CustomBuilder
 ```
 
-当列表项向左或向右滑动（当列表方向为"垂直"时），向上或向下滑动（当列表方向为"水平"时）时显示的操作项。
+Swipe action item displayed when the list item is swiped left or right (in vertical list layout)or up or down (in horizontal list layout).
 
 **Type:** [CustomBuilder](arkts-arkui-custombuilder-t.md)
 
@@ -150,7 +150,7 @@ builder?: CustomBuilder
 builderComponent?: ComponentContent
 ```
 
-当列表项向左或向右滑动（当列表方向为"垂直"时），向上或向下滑动（当列表方向为"水平"时）时显示的操作项。该参数的优先级高于参数builder。即同时设置builder和builderComponent时，以builderComponent设置的值为准。同一个builderComponent不推荐同时给不同的start/end使用，否则会导致显示问题。
+Swipe action item displayed when the list item is swiped left or right (in vertical list layout)or up or down (in horizontal list layout).
 
 **Type:** [ComponentContent](../arkts-apis/arkts-arkui-componentcontent-c.md)
 

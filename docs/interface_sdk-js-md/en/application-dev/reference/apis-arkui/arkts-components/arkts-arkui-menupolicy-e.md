@@ -1,6 +1,6 @@
 # MenuPolicy
 
-Define the menu pop-up policy
+Enumerates menu display policies.
 
 **Since:** 12
 
@@ -16,7 +16,7 @@ Define the menu pop-up policy
 DEFAULT = 0
 ```
 
-Default value. The default logic of whether to pop up a menu depends on the scene.
+Whether the menu is displayed depends on the underlying default logic.
 
 **Since:** 12
 
@@ -36,7 +36,7 @@ Default value. The default logic of whether to pop up a menu depends on the scen
 HIDE = 1
 ```
 
-Hide pop up menu.
+The menu is always hidden.
 
 **Since:** 12
 
@@ -56,7 +56,7 @@ Hide pop up menu.
 SHOW = 2
 ```
 
-Show pop up menu.
+The menu is always displayed.
 
 **Since:** 12
 

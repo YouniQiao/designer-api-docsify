@@ -12,7 +12,7 @@ import { text } from 'kits/@kit.ArkGraphics2D';
 function matchFontDescriptors(desc: FontDescriptor): Promise<Array<FontDescriptor>>
 ```
 
-根据指定的字体描述符返回所有符合要求的系统字体描述符，使用Promise异步回调。
+Obtains all system font descriptors that match the provided font descriptor. This API uses a promise to return the result.
 
 **Since:** 18
 
@@ -28,19 +28,19 @@ function matchFontDescriptors(desc: FontDescriptor): Promise<Array<FontDescripto
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| desc | [FontDescriptor](arkts-arkgraphics2d-text-fontdescriptor-i.md) | Yes | 指定需要用来做匹配的字体描述符。如果不指定任何字段，则返回系统的所有字体描述符。如果填写了指定字段，则按照指定字段进行匹配。如果匹配失败，返回空数组。 |
+| desc | [FontDescriptor](arkts-arkgraphics2d-text-fontdescriptor-i.md) | Yes | Font descriptor to match against. If this parameter is left unspecified, all system font descriptors are returned. If a specific value is provided, the matching is performed based on the value provided. If the matching fails, an empty array is returned. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;Array&lt;FontDescriptor&gt;&gt; | Promise对象，返回所有匹配到的系统字体描述符。 |
+| Promise&lt;Array&lt;FontDescriptor&gt;&gt; | Promise used to return all matched system font descriptors. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
 
 ## Examples
 

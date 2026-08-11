@@ -6,7 +6,7 @@
 export function getScrollAttribute(node: FrameNode): ScrollAttribute | undefined
 ```
 
-获取FrameNode属性实例用于属性设置
+Get the attribute instance of FrameNode to set attributes.
 
 **Since:** 26.0.0
 
@@ -22,7 +22,7 @@ export function getScrollAttribute(node: FrameNode): ScrollAttribute | undefined
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| node | [FrameNode](arkts-arkui-framenode-c.md) | Yes | 目标FrameNode. |
+| node | [FrameNode](arkts-arkui-framenode-c.md) | Yes | the target FrameNode. |
 
 **Return value:**
 

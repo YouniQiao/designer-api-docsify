@@ -1,6 +1,6 @@
 # ScaleMode
 
-表示图像的缩放模式的枚举。
+Enumerates the scale modes of images.
 
 **Since:** 9
 
@@ -16,7 +16,7 @@
 FIT_TARGET_SIZE = 0
 ```
 
-图像适合目标尺寸的效果。
+Reduces the image size to the dimensions of the target.
 
 **Since:** 9
 
@@ -36,7 +36,7 @@ FIT_TARGET_SIZE = 0
 CENTER_CROP = 1
 ```
 
-缩放图像以填充目标图像区域并居中裁剪区域外的效果。
+Scales the image so that it fills the requested bounds of the target and crops the extra.
 
 **Since:** 9
 

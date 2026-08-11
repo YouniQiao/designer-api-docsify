@@ -1,11 +1,5 @@
 # offIndoorOrOutdoorIdentify（系统接口）
 
-## 导入模块
-
-```TypeScript
-import { spatialAwareness } from 'kits/@kit.MultimodalAwarenessKit';
-```
-
 ## offIndoorOrOutdoorIdentify
 
 ```TypeScript
@@ -13,7 +7,7 @@ function offIndoorOrOutdoorIdentify(configParams: DistanceMeasurementConfigParam
     callback?: Callback<DoorPositionResponse>): void
 ```
 
-Unsubscribe from the results of indoor and outdoor recognition.
+取消订阅门内外识别接口。停止运行已订阅的门内外识别算法。
 
 **起始版本：** 23
 
@@ -33,19 +27,19 @@ Unsubscribe from the results of indoor and outdoor recognition.
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| configParams | [DistanceMeasurementConfigParams](arkts-multimodalawareness-spatialawareness-distancemeasurementconfigparams-i-sys.md) | 是 | Configuration parameters for identification inside and &lt;br&gt; outside the door |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;DoorPositionResponse&gt; | 否 | Callback for identification inside and outside the door |
+| configParams | [DistanceMeasurementConfigParams](arkts-multimodalawareness-spatialawareness-distancemeasurementconfigparams-i-sys.md) | 是 | 测距接口配置参数 |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;DoorPositionResponse&gt; | 否 | 表示取消指定的callback通知。如果输入空、undefined或null，则取消configParams订阅的所有门 内外识别通知事件。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 801 | Capability not supported. Function can not work correctly due to &lt;br&gt; limited device capabilities. |
-| 35100004 | Parameter invalid. |
-| 35100003 | Unsubscription failed. |
-| 35100001 | Service exception. |
-| 201 | Permission denied. |
-| 202 | Not system application. |
+| [801](../../errorcode-universal.md#801-该设备不支持此api) | Capability not supported. Function can not work correctly due to &lt;br&gt; limited device capabilities. |
+| [35100004](../../apis-multimodalawareness-kit/errorcode-spatialAwareness.md#35100004-无效参数) | Parameter invalid. |
+| [35100003](../../apis-multimodalawareness-kit/errorcode-spatialAwareness.md#35100003-取消订阅失败) | Unsubscription failed. |
+| [35100001](../../apis-multimodalawareness-kit/errorcode-spatialAwareness.md#35100001-服务异常) | Service exception. |
+| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not system application. |
 
 ## 示例
 

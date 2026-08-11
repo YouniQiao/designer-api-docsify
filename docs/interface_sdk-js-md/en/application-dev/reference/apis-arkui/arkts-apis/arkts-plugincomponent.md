@@ -7,8 +7,8 @@
 
 | Name | Description |
 | --- | --- |
-| [PluginComponent](arkts-arkui-plugincomponent-plugincomponent-f-sys.md#plugincomponent) | 创建插件组件，用于显示外部应用提供的UI。 |
-| [PluginComponent](arkts-arkui-plugincomponent-plugincomponent-f-sys.md#plugincomponent-1) | 定义PluginComponent组件。它要求在组件属性设置开始时调用setPluginComponentOptions，并在组件属性设置结束时调用applyAttributeFinish。 |
+| [PluginComponent](arkts-arkui-plugincomponent-plugincomponent-f-sys.md#plugincomponent) | Defines PluginComponent Component. |
+| [PluginComponent](arkts-arkui-plugincomponent-plugincomponent-f-sys.md#plugincomponent-1) | Defines PluginComponent Component.It requires call setPluginComponentOptions at start of the component attribute set-up,and it requires call applyAttributeFinish at the end of the component attribute set-up. |
 <!--DelEnd-->
 
 <!--Del-->
@@ -16,9 +16,9 @@
 
 | Name | Description |
 | --- | --- |
-| [PluginComponentOptions](arkts-arkui-plugincomponent-plugincomponentoptions-i-sys.md) | 定义用于构造插件组件的选项。AnonyMous Object Rectification |
-| [PluginComponentTemplate](arkts-arkui-plugincomponent-plugincomponenttemplate-i-sys.md) | 定义插件组件模板信息，用于与提供方定义的组件绑定。 |
-| [PluginErrorData](arkts-arkui-plugincomponent-pluginerrordata-i-sys.md) | 发生错误时提供的数据。AnonyMous Object Rectification |
+| [PluginComponentOptions](arkts-arkui-plugincomponent-plugincomponentoptions-i-sys.md) | Define options used to construct a plugin component.AnonyMous Object Rectification |
+| [PluginComponentTemplate](arkts-arkui-plugincomponent-plugincomponenttemplate-i-sys.md) | PluginComponentTemplate |
+| [PluginErrorData](arkts-arkui-plugincomponent-pluginerrordata-i-sys.md) | Data provided when an error occurs.AnonyMous Object Rectification |
 <!--DelEnd-->
 
 <!--Del-->
@@ -26,6 +26,6 @@
 
 | Name | Description |
 | --- | --- |
-| [PluginErrorCallback](arkts-arkui-pluginerrorcallback-t-sys.md) | 发生错误时触发事件回调。AnonyMous Object Rectification |
+| [PluginErrorCallback](arkts-arkui-pluginerrorcallback-t-sys.md) | Callback invoked when an error occurs.AnonyMous Object Rectification |
 <!--DelEnd-->
 

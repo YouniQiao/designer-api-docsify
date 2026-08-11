@@ -4,7 +4,7 @@
 export type UnhandledRejectionObserver = (reason: Error | any, promise: Promise<any>) => void
 ```
 
-定义异常监听，用于捕获Promise异步操作失败的原因。
+Defines an observer to capture the cause of a rejected promise.
 
 **Since:** 12
 
@@ -20,6 +20,6 @@ export type UnhandledRejectionObserver = (reason: Error | any, promise: Promise<
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| reason | Error \| any | Yes | 通常是`Error`类型，表示被拒绝的理由。 |
-| promise | Promise&lt;any&gt; | Yes | 被拒绝的promise。 |
+| reason | Error \| any | Yes | Generally, the value is of the **Error** type, indicating the reason for rejection. |
+| promise | Promise&lt;any&gt; | Yes | Rejected promise. |
 

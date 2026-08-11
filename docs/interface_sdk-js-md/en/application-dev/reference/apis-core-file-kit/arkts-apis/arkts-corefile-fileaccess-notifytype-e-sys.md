@@ -1,6 +1,6 @@
 # NotifyType (System API)
 
-枚举，通知类型。
+Enumerates the notification types.
 
 **Since:** 10
 
@@ -20,7 +20,9 @@
 NOTIFY_ADD = 0
 ```
 
-表示新增文件（详见registerObserver接口的示例2、示例3）。
+File added.
+
+See examples 2 and 3 of **registerObserver**.
 
 **Since:** 10
 
@@ -42,7 +44,9 @@ NOTIFY_ADD = 0
 NOTIFY_DELETE = 1
 ```
 
-表示删除文件（详见unregisterObserver(uri: string, callback: Callback&lt;NotifyMessage&gt;)接口的示例1、示例2）。
+File deleted.
+
+See examples 1 and 2 of **unregisterObserver(uri: string, callback: Callback&lt;NotifyMessage&gt;)**.
 
 **Since:** 10
 
@@ -64,7 +68,9 @@ NOTIFY_DELETE = 1
 NOTIFY_MOVED_TO = 2
 ```
 
-表示移动至该文件（对目录下子文件或目录执行rename操作，或外部文件或目录执行move操作到本文件。详见registerObserver接口的示例1，及unregisterObserver(uri: string)接口的示例1）。
+File or directory moved in (for example, **rename()** is performed on a file or directory in this directory or a file or directory is moved to this directory). 
+
+See example 1 of **registerObserver** and example 1 of **unregisterObserver(uri: string)**.
 
 **Since:** 10
 
@@ -86,7 +92,9 @@ NOTIFY_MOVED_TO = 2
 NOTIFY_MOVED_FROM = 3
 ```
 
-表示自该文件移出（对目录下子文件或目录执行rename操作，或子文件（夹）执行move操作从该文件夹内移出。详见registerObserver接口的示例1，及unregisterObserver(uri: string)接口的示例1）。
+File or directory moved out (for example, **rename()** is performed on a file or directory in this directory or a file or directory is moved out from this directory). 
+
+See example 1 of **registerObserver** and example 1 of **unregisterObserver(uri: string)**.
 
 **Since:** 10
 
@@ -108,7 +116,9 @@ NOTIFY_MOVED_FROM = 3
 NOTIFY_MOVE_SELF = 4
 ```
 
-表示本文件被移动（如对文件或文件夹执行rename或move操作时，监听该文件（夹）的callback收到该事件，详见registerObserver接口的示例1）。
+File moved (for example, the target file or directory is renamed or moved).
+
+See example 1 of **registerObserver**.
 
 **Since:** 10
 
@@ -130,7 +140,7 @@ NOTIFY_MOVE_SELF = 4
 NOTIFY_DEVICE_ONLINE = 5
 ```
 
-表示设备上线。
+Device goes online.
 
 **Since:** 11
 
@@ -152,7 +162,7 @@ NOTIFY_DEVICE_ONLINE = 5
 NOTIFY_DEVICE_OFFLINE = 6
 ```
 
-表示设备下线。
+Device goes offline.
 
 **Since:** 11
 

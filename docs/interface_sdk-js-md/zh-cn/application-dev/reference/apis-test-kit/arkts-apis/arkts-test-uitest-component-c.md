@@ -10,12 +10,6 @@ UiTest框架在API9中，Component类代表了UI界面上的一个控件，提�
 
 **系统能力：** SystemCapability.Test.UiTest
 
-## 导入模块
-
-```TypeScript
-import { ResizeDirection, WindowMode, PenMode, PenKeyOperation, Driver, MatchPattern, UiDirection, TouchOptions, ComponentEventType, PointerMatrix, WindowChangeType, Component, ON, PenKey, Rect, InputTextMode, UIEventObserver, WindowFilter, WindowChangeOptions, UiWindow, TouchPadSwipeOptions, Point, KeyOptions, DisplayRotation, UIElementInfo, PenKeyOperationOptions, ComponentEventOptions, MouseButton, On } from 'kits/@kit.TestKit';
-```
-
 ## clearText
 
 ```TypeScript
@@ -44,8 +38,8 @@ clearText(): Promise<void>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 17000002 | The API does not support concurrent calls. |
-| 17000004 | The window or component is invisible or destroyed. |
+| [17000002](../errorcode-uitest.md#17000002-接口不支持并发调用) | The API does not support concurrent calls. |
+| [17000004](../errorcode-uitest.md#17000004-目标控件窗口不可见或已销毁) | The window or component is invisible or destroyed. |
 
 ## 示例
 
@@ -55,8 +49,10 @@ import { Component, Driver, ON } from '@kit.TestKit';
 
 async function demo() {
   let driver: Driver = Driver.create();
-  let text: Component = await driver.findComponent(ON.text('hello world'));
-  await text.clearText();
+  let text: Component | null = await driver.findComponent(ON.text('hello world'));
+  if (text) {
+    await text.clearText();
+  }
 }
 ```
 
@@ -88,8 +84,8 @@ click(): Promise<void>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 17000002 | The API does not support concurrent calls. |
-| 17000004 | The window or component is invisible or destroyed. |
+| [17000002](../errorcode-uitest.md#17000002-接口不支持并发调用) | The API does not support concurrent calls. |
+| [17000004](../errorcode-uitest.md#17000004-目标控件窗口不可见或已销毁) | The window or component is invisible or destroyed. |
 
 ## 示例
 
@@ -98,12 +94,11 @@ click(): Promise<void>
 import { Driver, ON, Component } from '@kit.TestKit';
 
 async function demo() {
-  // 创建Driver对象。
   let driver: Driver = Driver.create();
-  // 查找Button类型的控件。
-  let button: Component = await driver.findComponent(ON.type('Button'));
-  // 点击该控件。
-  await button.click();
+  let button: Component | null = await driver.findComponent(ON.type('Button'));
+  if (button) {
+    await button.click();
+  }
 }
 ```
 
@@ -135,8 +130,8 @@ doubleClick(): Promise<void>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 17000002 | The API does not support concurrent calls. |
-| 17000004 | The window or component is invisible or destroyed. |
+| [17000002](../errorcode-uitest.md#17000002-接口不支持并发调用) | The API does not support concurrent calls. |
+| [17000004](../errorcode-uitest.md#17000004-目标控件窗口不可见或已销毁) | The window or component is invisible or destroyed. |
 
 ## 示例
 
@@ -146,8 +141,10 @@ import { Component, Driver, ON } from '@kit.TestKit';
 
 async function demo() {
   let driver: Driver = Driver.create();
-  let button: Component = await driver.findComponent(ON.type('Button'));
-  await button.doubleClick();
+  let button: Component | null = await driver.findComponent(ON.type('Button'));
+  if (button) {
+    await button.doubleClick();
+  }
 }
 ```
 
@@ -185,9 +182,9 @@ dragTo(target: Component): Promise<void>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
-| 17000002 | The API does not support concurrent calls. |
-| 17000004 | The window or component is invisible or destroyed. |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| [17000002](../errorcode-uitest.md#17000002-接口不支持并发调用) | The API does not support concurrent calls. |
+| [17000004](../errorcode-uitest.md#17000004-目标控件窗口不可见或已销毁) | The window or component is invisible or destroyed. |
 
 ## 示例
 
@@ -196,14 +193,12 @@ dragTo(target: Component): Promise<void>
 import { Component, Driver, ON } from '@kit.TestKit';
 
 async function demo() {
-  // 创建Driver对象。
   let driver: Driver = Driver.create();
-  // 查找Button类型的目标控件。
-  let button: Component = await driver.findComponent(ON.type('Button'));
-  // 查找text为'hello world'的控件作为拖拽目标。
-  let text: Component = await driver.findComponent(ON.text('hello world'));
-  // 将Button控件拖拽至text控件处。
-  await button.dragTo(text);
+  let button: Component | null = await driver.findComponent(ON.type('Button'));
+  let text: Component | null = await driver.findComponent(ON.text('hello world'));
+  if (button && text) {
+    await button.dragTo(text);
+  }
 }
 ```
 
@@ -235,8 +230,8 @@ getBounds(): Promise<Rect>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 17000002 | The API does not support concurrent calls. |
-| 17000004 | The window or component is invisible or destroyed. |
+| [17000002](../errorcode-uitest.md#17000002-接口不支持并发调用) | The API does not support concurrent calls. |
+| [17000004](../errorcode-uitest.md#17000004-目标控件窗口不可见或已销毁) | The window or component is invisible or destroyed. |
 
 ## 示例
 
@@ -246,8 +241,10 @@ import { Component, Driver, ON } from '@kit.TestKit';
 
 async function demo() {
   let driver: Driver = Driver.create();
-  let button: Component = await driver.findComponent(ON.type('Button'));
-  let rect = await button.getBounds();
+  let button: Component | null = await driver.findComponent(ON.type('Button'));
+  if (button) {
+    let rect = await button.getBounds();
+  }
 }
 ```
 
@@ -279,8 +276,8 @@ getBoundsCenter(): Promise<Point>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 17000002 | The API does not support concurrent calls. |
-| 17000004 | The window or component is invisible or destroyed. |
+| [17000002](../errorcode-uitest.md#17000002-接口不支持并发调用) | The API does not support concurrent calls. |
+| [17000004](../errorcode-uitest.md#17000004-目标控件窗口不可见或已销毁) | The window or component is invisible or destroyed. |
 
 ## 示例
 
@@ -290,8 +287,10 @@ import { Component, Driver, ON } from '@kit.TestKit';
 
 async function demo() {
   let driver: Driver = Driver.create();
-  let button: Component = await driver.findComponent(ON.type('Button'));
-  let point = await button.getBoundsCenter();
+  let button: Component | null = await driver.findComponent(ON.type('Button'));
+  if (button) {
+    let point = await button.getBoundsCenter();
+  }
 }
 ```
 
@@ -323,8 +322,8 @@ getDescription(): Promise<string>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 17000002 | The API does not support concurrent calls. |
-| 17000004 | The window or component is invisible or destroyed. |
+| [17000002](../errorcode-uitest.md#17000002-接口不支持并发调用) | The API does not support concurrent calls. |
+| [17000004](../errorcode-uitest.md#17000004-目标控件窗口不可见或已销毁) | The window or component is invisible or destroyed. |
 
 ## 示例
 
@@ -334,8 +333,10 @@ import { Component, Driver, ON } from '@kit.TestKit';
 
 async function demo() {
   let driver: Driver = Driver.create();
-  let button: Component = await driver.findComponent(ON.type('Button'));
-  let description = await button.getDescription();
+  let button: Component | null = await driver.findComponent(ON.type('Button'));
+  if (button) {
+    let description = await button.getDescription();
+  }
 }
 ```
 
@@ -373,8 +374,8 @@ getDisplayId(): Promise<int>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 17000002 | The API does not support concurrent calls. |
-| 17000004 | The window or component is invisible or destroyed. |
+| [17000002](../errorcode-uitest.md#17000002-接口不支持并发调用) | The API does not support concurrent calls. |
+| [17000004](../errorcode-uitest.md#17000004-目标控件窗口不可见或已销毁) | The window or component is invisible or destroyed. |
 
 ## 示例
 
@@ -384,8 +385,10 @@ import { Component, Driver, ON } from '@kit.TestKit';
 
 async function demo() {
   let driver: Driver = Driver.create();
-  let button: Component = await driver.findComponent(ON.type('TextInput'));
-  let displayId = await button.getDisplayId();
+  let button: Component | null = await driver.findComponent(ON.type('TextInput'));
+  if (button) {
+    let displayId = await button.getDisplayId();
+  }
 }
 ```
 
@@ -417,8 +420,8 @@ getHint(): Promise<string>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 17000002 | The API does not support concurrent calls. |
-| 17000004 | The window or component is invisible or destroyed. |
+| [17000002](../errorcode-uitest.md#17000002-接口不支持并发调用) | The API does not support concurrent calls. |
+| [17000004](../errorcode-uitest.md#17000004-目标控件窗口不可见或已销毁) | The window or component is invisible or destroyed. |
 
 ## 示例
 
@@ -428,8 +431,10 @@ import { Component, Driver, ON } from '@kit.TestKit';
 
 async function demo() {
   let driver: Driver = Driver.create();
-  let button: Component = await driver.findComponent(ON.type('TextInput'));
-  let hints = await button.getHint();
+  let button: Component | null = await driver.findComponent(ON.type('TextInput'));
+  if (button) {
+    let hints = await button.getHint();
+  }
 }
 ```
 
@@ -461,8 +466,8 @@ getId(): Promise<string>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 17000002 | The API does not support concurrent calls. |
-| 17000004 | The window or component is invisible or destroyed. |
+| [17000002](../errorcode-uitest.md#17000002-接口不支持并发调用) | The API does not support concurrent calls. |
+| [17000004](../errorcode-uitest.md#17000004-目标控件窗口不可见或已销毁) | The window or component is invisible or destroyed. |
 
 ## 示例
 
@@ -472,8 +477,10 @@ import { Component, Driver, ON } from '@kit.TestKit';
 
 async function demo() {
   let driver: Driver = Driver.create();
-  let button: Component = await driver.findComponent(ON.type('Button'));
-  let id = await button.getId();
+  let button: Component | null = await driver.findComponent(ON.type('Button'));
+  if (button) {
+    let id = await button.getId();
+  }
 }
 ```
 
@@ -506,8 +513,8 @@ getOriginalText(): Promise<string>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 17000002 | The API does not support concurrent calls. |
-| 17000004 | The window or component is invisible or destroyed. |
+| [17000002](../errorcode-uitest.md#17000002-接口不支持并发调用) | The API does not support concurrent calls. |
+| [17000004](../errorcode-uitest.md#17000004-目标控件窗口不可见或已销毁) | The window or component is invisible or destroyed. |
 
 ## 示例
 
@@ -517,8 +524,10 @@ import { Component, Driver, ON } from '@kit.TestKit';
 
 async function demo() {
   let driver: Driver = Driver.create();
-  let button: Component = await driver.findComponent(ON.type('Button'));
-  let text = await button.getOriginalText();
+  let button: Component | null = await driver.findComponent(ON.type('Button'));
+  if (button) {
+    let text = await button.getOriginalText();
+  }
 }
 ```
 
@@ -557,8 +566,8 @@ getText(): Promise<string>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 17000002 | The API does not support concurrent calls. |
-| 17000004 | The window or component is invisible or destroyed. |
+| [17000002](../errorcode-uitest.md#17000002-接口不支持并发调用) | The API does not support concurrent calls. |
+| [17000004](../errorcode-uitest.md#17000004-目标控件窗口不可见或已销毁) | The window or component is invisible or destroyed. |
 
 ## 示例
 
@@ -568,8 +577,10 @@ import { Component, Driver, ON } from '@kit.TestKit';
 
 async function demo() {
   let driver: Driver = Driver.create();
-  let button: Component = await driver.findComponent(ON.type('Button'));
-  let text = await button.getText();
+  let button: Component | null = await driver.findComponent(ON.type('Button'));
+  if (button) {
+    let text = await button.getText();
+  }
 }
 ```
 
@@ -601,8 +612,8 @@ getType(): Promise<string>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 17000002 | The API does not support concurrent calls. |
-| 17000004 | The window or component is invisible or destroyed. |
+| [17000002](../errorcode-uitest.md#17000002-接口不支持并发调用) | The API does not support concurrent calls. |
+| [17000004](../errorcode-uitest.md#17000004-目标控件窗口不可见或已销毁) | The window or component is invisible or destroyed. |
 
 ## 示例
 
@@ -612,8 +623,10 @@ import { Component, Driver, ON } from '@kit.TestKit';
 
 async function demo() {
   let driver: Driver = Driver.create();
-  let button: Component = await driver.findComponent(ON.type('Button'));
-  let type = await button.getType();
+  let button: Component | null = await driver.findComponent(ON.type('Button'));
+  if (button) {
+    let type = await button.getType();
+  }
 }
 ```
 
@@ -651,9 +664,9 @@ inputText(text: string): Promise<void>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
-| 17000002 | The API does not support concurrent calls. |
-| 17000004 | The window or component is invisible or destroyed. |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| [17000002](../errorcode-uitest.md#17000002-接口不支持并发调用) | The API does not support concurrent calls. |
+| [17000004](../errorcode-uitest.md#17000004-目标控件窗口不可见或已销毁) | The window or component is invisible or destroyed. |
 
 ## 示例
 
@@ -662,12 +675,11 @@ inputText(text: string): Promise<void>
 import { Component, Driver, ON } from '@kit.TestKit';
 
 async function demo() {
-  // 创建Driver对象。
   let driver: Driver = Driver.create();
-  // 查找text为'hello world'的控件。
-  let text: Component = await driver.findComponent(ON.text('hello world'));
-  // 清空原有文本并输入'123'。
-  await text.inputText('123');
+  let text: Component | null = await driver.findComponent(ON.text('hello world'));
+  if (text) {
+    await text.inputText('123');
+  }
 }
 ```
 
@@ -706,10 +718,10 @@ inputText(text: string, mode: InputTextMode): Promise<void>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
-| 801 | Capability not supported. Function can not work correctly due to limited device capabilities. |
-| 17000002 | The API does not support concurrent calls. |
-| 17000004 | The window or component is invisible or destroyed. |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| [801](../../errorcode-universal.md#801-该设备不支持此api) | Capability not supported. Function can not work correctly due to limited device capabilities. |
+| [17000002](../errorcode-uitest.md#17000002-接口不支持并发调用) | The API does not support concurrent calls. |
+| [17000004](../errorcode-uitest.md#17000004-目标控件窗口不可见或已销毁) | The window or component is invisible or destroyed. |
 
 ## 示例
 
@@ -719,8 +731,10 @@ import { Component, Driver, ON } from '@kit.TestKit';
 
 async function mode_demo() {
   let driver: Driver = Driver.create();
-  let text: Component = await driver.findComponent(ON.text('hello world'));
-  await text.inputText('123', { paste: true, addition: false });
+  let text: Component | null = await driver.findComponent(ON.text('hello world'));
+  if (text) {
+    await text.inputText('123', { paste: true, addition: false });
+  }
 }
 ```
 
@@ -752,8 +766,8 @@ isCheckable(): Promise<boolean>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 17000002 | The API does not support concurrent calls. |
-| 17000004 | The window or component is invisible or destroyed. |
+| [17000002](../errorcode-uitest.md#17000002-接口不支持并发调用) | The API does not support concurrent calls. |
+| [17000004](../errorcode-uitest.md#17000004-目标控件窗口不可见或已销毁) | The window or component is invisible or destroyed. |
 
 ## 示例
 
@@ -763,8 +777,8 @@ import { Component, Driver, ON } from '@kit.TestKit';
 
 async function demo() {
   let driver: Driver = Driver.create();
-  let checkBox: Component = await driver.findComponent(ON.type('Checkbox'));
-  if (await checkBox.isCheckable()) {
+  let checkBox: Component | null = await driver.findComponent(ON.type('Checkbox'));
+  if (checkBox && await checkBox.isCheckable()) {
     console.info('This checkBox is checkable');
   } else {
     console.info('This checkBox is not checkable');
@@ -800,8 +814,8 @@ isChecked(): Promise<boolean>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 17000002 | The API does not support concurrent calls. |
-| 17000004 | The window or component is invisible or destroyed. |
+| [17000002](../errorcode-uitest.md#17000002-接口不支持并发调用) | The API does not support concurrent calls. |
+| [17000004](../errorcode-uitest.md#17000004-目标控件窗口不可见或已销毁) | The window or component is invisible or destroyed. |
 
 ## 示例
 
@@ -811,8 +825,8 @@ import { Component, Driver, ON } from '@kit.TestKit';
 
 async function demo() {
   let driver: Driver = Driver.create();
-  let checkBox: Component = await driver.findComponent(ON.type('Checkbox'));
-  if (await checkBox.isChecked()) {
+  let checkBox: Component | null = await driver.findComponent(ON.type('Checkbox'));
+  if (checkBox && await checkBox.isChecked()) {
     console.info('This checkBox is checked');
   } else {
     console.info('This checkBox is not checked');
@@ -848,8 +862,8 @@ isClickable(): Promise<boolean>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 17000002 | The API does not support concurrent calls. |
-| 17000004 | The window or component is invisible or destroyed. |
+| [17000002](../errorcode-uitest.md#17000002-接口不支持并发调用) | The API does not support concurrent calls. |
+| [17000004](../errorcode-uitest.md#17000004-目标控件窗口不可见或已销毁) | The window or component is invisible or destroyed. |
 
 ## 示例
 
@@ -859,11 +873,11 @@ import { Component, Driver, ON } from '@kit.TestKit';
 
 async function demo() {
   let driver: Driver = Driver.create();
-  let button: Component = await driver.findComponent(ON.type('Button'));
-  if (await button.isClickable()) {
-    console.info('This button can be clicked');
+  let button: Component | null = await driver.findComponent(ON.type('Button'));
+  if (button && await button.isClickable()) {
+    console.info('This button can be Clicked');
   } else {
-    console.info('This button cannot be clicked');
+    console.info('This button can not be Clicked');
   }
 }
 ```
@@ -896,8 +910,8 @@ isEnabled(): Promise<boolean>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 17000002 | The API does not support concurrent calls. |
-| 17000004 | The window or component is invisible or destroyed. |
+| [17000002](../errorcode-uitest.md#17000002-接口不支持并发调用) | The API does not support concurrent calls. |
+| [17000004](../errorcode-uitest.md#17000004-目标控件窗口不可见或已销毁) | The window or component is invisible or destroyed. |
 
 ## 示例
 
@@ -907,11 +921,11 @@ import { Component, Driver, ON } from '@kit.TestKit';
 
 async function demo() {
   let driver: Driver = Driver.create();
-  let button: Component = await driver.findComponent(ON.type('Button'));
-  if (await button.isEnabled()) {
+  let button: Component | null = await driver.findComponent(ON.type('Button'));
+  if (button && await button.isEnabled()) {
     console.info('This button can be operated');
   } else {
-    console.info('This button cannot be operated');
+    console.info('This button can not be operated');
   }
 }
 ```
@@ -944,8 +958,8 @@ isFocused(): Promise<boolean>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 17000002 | The API does not support concurrent calls. |
-| 17000004 | The window or component is invisible or destroyed. |
+| [17000002](../errorcode-uitest.md#17000002-接口不支持并发调用) | The API does not support concurrent calls. |
+| [17000004](../errorcode-uitest.md#17000004-目标控件窗口不可见或已销毁) | The window or component is invisible or destroyed. |
 
 ## 示例
 
@@ -955,8 +969,8 @@ import { Component, Driver, ON } from '@kit.TestKit';
 
 async function demo() {
   let driver: Driver = Driver.create();
-  let button: Component = await driver.findComponent(ON.type('Button'));
-  if (await button.isFocused()) {
+  let button: Component | null = await driver.findComponent(ON.type('Button'));
+  if (button && await button.isFocused()) {
     console.info('This button is focused');
   } else {
     console.info('This button is not focused');
@@ -992,8 +1006,8 @@ isLongClickable(): Promise<boolean>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 17000002 | The API does not support concurrent calls. |
-| 17000004 | The window or component is invisible or destroyed. |
+| [17000002](../errorcode-uitest.md#17000002-接口不支持并发调用) | The API does not support concurrent calls. |
+| [17000004](../errorcode-uitest.md#17000004-目标控件窗口不可见或已销毁) | The window or component is invisible or destroyed. |
 
 ## 示例
 
@@ -1003,11 +1017,11 @@ import { Component, Driver, ON } from '@kit.TestKit';
 
 async function demo() {
   let driver: Driver = Driver.create();
-  let button: Component = await driver.findComponent(ON.type('Button'));
-  if (await button.isLongClickable()) {
-    console.info('This button supports long click');
+  let button: Component | null = await driver.findComponent(ON.type('Button'));
+  if (button && await button.isLongClickable()) {
+    console.info('This button can longClick');
   } else {
-    console.info('This button can not support long click');
+    console.info('This button can not longClick');
   }
 }
 ```
@@ -1040,8 +1054,8 @@ isScrollable(): Promise<boolean>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 17000002 | The API does not support concurrent calls. |
-| 17000004 | The window or component is invisible or destroyed. |
+| [17000002](../errorcode-uitest.md#17000002-接口不支持并发调用) | The API does not support concurrent calls. |
+| [17000004](../errorcode-uitest.md#17000004-目标控件窗口不可见或已销毁) | The window or component is invisible or destroyed. |
 
 ## 示例
 
@@ -1051,11 +1065,11 @@ import { Component, Driver, ON } from '@kit.TestKit';
 
 async function demo() {
   let driver: Driver = Driver.create();
-  let scrollBar: Component = await driver.findComponent(ON.scrollable(true));
-  if (await scrollBar.isScrollable()) {
+  let scrollBar: Component | null = await driver.findComponent(ON.scrollable(true));
+  if (scrollBar && await scrollBar.isScrollable()) {
     console.info('This scrollBar can be operated');
   } else {
-    console.info('This scrollBar cannot be operated');
+    console.info('This scrollBar can not be operated');
   }
 }
 ```
@@ -1088,8 +1102,8 @@ isSelected(): Promise<boolean>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 17000002 | The API does not support concurrent calls. |
-| 17000004 | The window or component is invisible or destroyed. |
+| [17000002](../errorcode-uitest.md#17000002-接口不支持并发调用) | The API does not support concurrent calls. |
+| [17000004](../errorcode-uitest.md#17000004-目标控件窗口不可见或已销毁) | The window or component is invisible or destroyed. |
 
 ## 示例
 
@@ -1099,8 +1113,8 @@ import { Component, Driver, ON } from '@kit.TestKit';
 
 async function demo() {
   let driver: Driver = Driver.create();
-  let button: Component = await driver.findComponent(ON.type('Button'));
-  if (await button.isSelected()) {
+  let button: Component | null = await driver.findComponent(ON.type('Button'));
+  if (button && await button.isSelected()) {
     console.info('This button is selected');
   } else {
     console.info('This button is not selected');
@@ -1136,8 +1150,8 @@ longClick(): Promise<void>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 17000002 | The API does not support concurrent calls. |
-| 17000004 | The window or component is invisible or destroyed. |
+| [17000002](../errorcode-uitest.md#17000002-接口不支持并发调用) | The API does not support concurrent calls. |
+| [17000004](../errorcode-uitest.md#17000004-目标控件窗口不可见或已销毁) | The window or component is invisible or destroyed. |
 
 ## 示例
 
@@ -1147,8 +1161,10 @@ import { Component, Driver, ON } from '@kit.TestKit';
 
 async function demo() {
   let driver: Driver = Driver.create();
-  let button: Component = await driver.findComponent(ON.type('Button'));
-  await button.longClick();
+  let button: Component | null = await driver.findComponent(ON.type('Button'));
+  if (button) {
+    await button.longClick();
+  }
 }
 ```
 
@@ -1192,9 +1208,9 @@ pinchIn(scale: double): Promise<void>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
-| 17000002 | The API does not support concurrent calls. |
-| 17000004 | The window or component is invisible or destroyed. |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| [17000002](../errorcode-uitest.md#17000002-接口不支持并发调用) | The API does not support concurrent calls. |
+| [17000004](../errorcode-uitest.md#17000004-目标控件窗口不可见或已销毁) | The window or component is invisible or destroyed. |
 
 ## 示例
 
@@ -1204,8 +1220,10 @@ import { Component, Driver, ON } from '@kit.TestKit';
 
 async function demo() {
   let driver: Driver = Driver.create();
-  let image: Component = await driver.findComponent(ON.type('Image'));
-  await image.pinchIn(0.5);
+  let image: Component | null = await driver.findComponent(ON.type('Image'));
+  if (image) {
+    await image.pinchIn(0.5);
+  }
 }
 ```
 
@@ -1249,9 +1267,9 @@ pinchOut(scale: double): Promise<void>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
-| 17000002 | The API does not support concurrent calls. |
-| 17000004 | The window or component is invisible or destroyed. |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| [17000002](../errorcode-uitest.md#17000002-接口不支持并发调用) | The API does not support concurrent calls. |
+| [17000004](../errorcode-uitest.md#17000004-目标控件窗口不可见或已销毁) | The window or component is invisible or destroyed. |
 
 ## 示例
 
@@ -1261,8 +1279,10 @@ import { Component, Driver, ON } from '@kit.TestKit';
 
 async function demo() {
   let driver: Driver = Driver.create();
-  let image: Component = await driver.findComponent(ON.type('Image'));
-  await image.pinchOut(1.5);
+  let image: Component | null = await driver.findComponent(ON.type('Image'));
+  if (image) {
+    await image.pinchOut(1.5);
+  }
 }
 ```
 
@@ -1300,9 +1320,9 @@ scrollSearch(on: On): Promise<Component>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
-| 17000002 | The API does not support concurrent calls. |
-| 17000004 | The window or component is invisible or destroyed. |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| [17000002](../errorcode-uitest.md#17000002-接口不支持并发调用) | The API does not support concurrent calls. |
+| [17000004](../errorcode-uitest.md#17000004-目标控件窗口不可见或已销毁) | The window or component is invisible or destroyed. |
 
 ## 示例
 
@@ -1311,12 +1331,14 @@ scrollSearch(on: On): Promise<Component>
 import { Component, Driver, ON } from '@kit.TestKit';
 
 async function demo() {
-  // 创建Driver对象。
   let driver: Driver = Driver.create();
-  // 获取可滑动的Scroll控件。
-  let scrollBar: Component = await driver.findComponent(ON.type('Scroll'));
-  // 在Scroll控件上滑动查找text为'next page'的控件。
+  let scrollBar: Component | null = await driver.findComponent(ON.type('Scroll'));
+  if (scrollBar) {
   let button = await scrollBar.scrollSearch(ON.text('next page'));
+    if (button) {
+      await button.click();
+    }
+  }
 }
 ```
 
@@ -1356,9 +1378,9 @@ scrollSearch(on: On, vertical?: boolean, offset?: number): Promise<Component>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
-| 17000002 | The API does not support concurrent calls. |
-| 17000004 | The window or component is invisible or destroyed. |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| [17000002](../errorcode-uitest.md#17000002-接口不支持并发调用) | The API does not support concurrent calls. |
+| [17000004](../errorcode-uitest.md#17000004-目标控件窗口不可见或已销毁) | The window or component is invisible or destroyed. |
 
 ## 示例
 
@@ -1368,8 +1390,13 @@ import { Component, Driver, ON } from '@kit.TestKit';
 
 async function demo() {
   let driver: Driver = Driver.create();
-  let scrollBar: Component = await driver.findComponent(ON.type('Scroll'));
+  let scrollBar: Component | null = await driver.findComponent(ON.type('Scroll'));
+  if (scrollBar) {
   let button = await scrollBar.scrollSearch(ON.text('next page'));
+    if (button) {
+      await button.click();
+    }
+  }
 }
 ```
 
@@ -1407,9 +1434,22 @@ Scroll on this {@link Component}to find matched {@link Component},applicable to 
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
-| 17000002 | The API does not support concurrent calls. |
-| 17000004 | The window or component is invisible or destroyed. |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| [17000002](../errorcode-uitest.md#17000002-接口不支持并发调用) | The API does not support concurrent calls. |
+| [17000004](../errorcode-uitest.md#17000004-目标控件窗口不可见或已销毁) | The window or component is invisible or destroyed. |
+
+## 示例
+
+```TypeScript
+// xxx.test.ets
+import { Component, Driver, ON } from '@kit.TestKit';
+
+async function demo() {
+  let driver: Driver = Driver.create();
+  let scrollBar: Component = await driver.findComponent(ON.type('Scroll'));
+  let button = await scrollBar.scrollSearch(ON.text('next page'));
+}
+```
 
 ## scrollToBottom
 
@@ -1451,9 +1491,9 @@ scrollToBottom(speed?: int): Promise<void>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1. Incorrect parameter types; 2. Parameter verification failed. |
-| 17000002 | The API does not support concurrent calls. |
-| 17000004 | The window or component is invisible or destroyed. |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1. Incorrect parameter types; 2. Parameter verification failed. |
+| [17000002](../errorcode-uitest.md#17000002-接口不支持并发调用) | The API does not support concurrent calls. |
+| [17000004](../errorcode-uitest.md#17000004-目标控件窗口不可见或已销毁) | The window or component is invisible or destroyed. |
 
 ## 示例
 
@@ -1463,8 +1503,10 @@ import { Component, Driver, ON } from '@kit.TestKit';
 
 async function demo() {
   let driver: Driver = Driver.create();
-  let scrollBar: Component = await driver.findComponent(ON.type('Scroll'));
-  await scrollBar.scrollToBottom();
+  let scrollBar: Component | null = await driver.findComponent(ON.type('Scroll'));
+  if (scrollBar) {
+    await scrollBar.scrollToBottom();
+  }
 }
 ```
 
@@ -1508,9 +1550,9 @@ scrollToTop(speed?: int): Promise<void>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1. Incorrect parameter types; 2. Parameter verification failed. |
-| 17000002 | The API does not support concurrent calls. |
-| 17000004 | The window or component is invisible or destroyed. |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1. Incorrect parameter types; 2. Parameter verification failed. |
+| [17000002](../errorcode-uitest.md#17000002-接口不支持并发调用) | The API does not support concurrent calls. |
+| [17000004](../errorcode-uitest.md#17000004-目标控件窗口不可见或已销毁) | The window or component is invisible or destroyed. |
 
 ## 示例
 
@@ -1520,8 +1562,10 @@ import { Component, Driver, ON } from '@kit.TestKit';
 
 async function demo() {
   let driver: Driver = Driver.create();
-  let scrollBar: Component = await driver.findComponent(ON.type('Scroll'));
-  await scrollBar.scrollToTop();
+  let scrollBar: Component | null = await driver.findComponent(ON.type('Scroll'));
+  if (scrollBar) {
+    await scrollBar.scrollToTop();
+  }
 }
 ```
 

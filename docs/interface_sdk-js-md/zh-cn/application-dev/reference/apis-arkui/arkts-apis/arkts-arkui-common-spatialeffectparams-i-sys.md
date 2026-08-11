@@ -42,7 +42,7 @@ position: SpatialPosition | double
 
 Spatial position defined by corner points.
 
-**类型：** [SpatialPosition](../arkts-components/arkts-arkui-spatialposition-i-sys.md) \| double
+**类型：** [SpatialPosition](arkts-arkui-common-spatialposition-i-sys.md) \| double
 
 **起始版本：** 26.0.0
 

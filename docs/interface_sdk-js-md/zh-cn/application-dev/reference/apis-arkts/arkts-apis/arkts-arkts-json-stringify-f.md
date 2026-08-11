@@ -1,11 +1,5 @@
 # stringify
 
-## 导入模块
-
-```TypeScript
-import { JSON } from 'kits/@kit.ArkTS';
-```
-
 ## stringify
 
 ```TypeScript
@@ -45,7 +39,7 @@ function stringify(value: Object, replacer?: (number | string)[] | null, space?:
 function stringify(value: Object, replacer?: Transformer, space?: string | number): string
 ```
 
-该方法将一个ArkTS对象或数组转换为JSON字符串，支持线性容器的转换，不支持非线性容器（传入非线性容器时无法正确序列化）。
+该方法将一个ArkTS对象或数组转换为JSON字符串，支持线性容器的转换，不支持非线性容器。
 
 **起始版本：** 12
 
@@ -62,12 +56,12 @@ function stringify(value: Object, replacer?: Transformer, space?: string | numbe
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | value | Object | 是 | ArkTS对象或数组，支持线性容器的转换，不支持非线性容器。 |
-| replacer | [Transformer](arkts-arkts-ason-transformer-t.md) | 否 | 序列化期间，序列化值的每个键都由此函数转换和处理。默认值为undefined。 |
-| space | string \| number | 否 | 为提高可读性，添加到输出JSON字符串中的缩进、空白或换行字符。如果是数字，表示作为缩进的空格字符数。 如果是字符串，该字符串将插入到输出JSON字符串之前。如果传入null，不使用任何空白字符。默认值为空字符串。 |
+| replacer | [Transformer](arkts-arkts-ason-transformer-t.md) | 否 | 在序列化过程中，被序列化的值的每个属性都会经过该函数的转换和处理。 当参数未提供时，则对象所有的属性都会被直接序列化，不经过转换处理。默认值是undefined。 |
+| space | string \| number | 否 | 指定缩进用的空格或字符串，用于美化输出。当参数是数字时表示缩进空格数；当参数是字符串时表示缩进字符；无参数则无缩进。默认值是空字符串。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| string | 返回JSON文本。 |
+| string | 表示对象或数组经序列化处理后生成的JSON格式文本字符串。 |
 

@@ -4,8 +4,8 @@
 export type NotificationInfo = _NotificationInfo
 ```
 
-通知订阅扩展能力中  
-[onReceiveMessage](arkts-notification-application-notificationsubscriberextensionability-notificationsubscriberextensionability-c.md#onreceivemessage)回调的通知信息。
+Describes the notification information delivered to the   
+[onReceiveMessage](arkts-notification-application-notificationsubscriberextensionability-notificationsubscriberextensionability-c.md#onreceivemessage)callback of ExtensionAbility for notification subscriptions.
 
 **Since:** 22
 

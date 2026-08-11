@@ -1,6 +1,7 @@
 # IntentResult
 
-意图执行的返回结果，支持[泛型类型](../../../quick-start/introduction-to-arkts.md#泛型类和接口)。
+Defines the return result of intent execution. The  
+[generic type](../../../quick-start/introduction-to-arkts.md#generic-class-and-interface) is supported.
 
 **Since:** 20
 
@@ -22,7 +23,7 @@ import { insightIntent } from 'kits/@kit.AbilityKit';
 interactionInfo?: InteractionInfo
 ```
 
-意图执行完成后返回的交互信息。
+Interaction information returned after the intent execution completes.
 
 **Type:** [InteractionInfo](arkts-ability-insightintent-interactioninfo-i-sys.md)
 

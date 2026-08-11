@@ -1,6 +1,6 @@
 # TransitionController (System API)
 
-属性转换控制器。使用其子接口之前得先创建系统窗口，参照示例代码。
+Implements the transition animation controller. Before calling any API, you must create a system window. For details, see the sample code.
 
 **Since:** 9
 
@@ -24,7 +24,7 @@ import { window } from 'kits/@kit.ArkUI';
 animationForHidden(context: TransitionContext): void
 ```
 
-窗口隐藏时的自定义动画配置。
+Customizes the animation for the scenario when the window is hidden.
 
 **Since:** 9
 
@@ -40,14 +40,14 @@ animationForHidden(context: TransitionContext): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| context | [TransitionContext](arkts-arkui-window-transitioncontext-i-sys.md) | Yes | 属性转换时的上下文。 |
+| context | [TransitionContext](arkts-arkui-window-transitioncontext-i-sys.md) | Yes | Context of the transition animation. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. Possible cause: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types. |
-| 202 | Permission verification failed. A non-system application calls a system API.<br>**Applicable version:** 12 and later |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible cause: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API.<br>**Applicable version:** 12 and later |
 
 ## Examples
 
@@ -113,7 +113,7 @@ try {
 animationForHidden?: TransitionControllerCallback
 ```
 
-窗口隐藏时的自定义动画配置。
+Animation configuration when hiding window
 
 **Since:** 23
 
@@ -131,7 +131,7 @@ animationForHidden?: TransitionControllerCallback
 animationForShown(context: TransitionContext): void
 ```
 
-窗口显示时的自定义动画配置。
+Customizes the animation for the scenario when the window is shown.
 
 **Since:** 9
 
@@ -147,14 +147,14 @@ animationForShown(context: TransitionContext): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| context | [TransitionContext](arkts-arkui-window-transitioncontext-i-sys.md) | Yes | 属性转换时的上下文。 |
+| context | [TransitionContext](arkts-arkui-window-transitioncontext-i-sys.md) | Yes | Context of the transition animation. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. Possible cause: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types. |
-| 202 | Permission verification failed. A non-system application calls a system API.<br>**Applicable version:** 12 and later |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible cause: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API.<br>**Applicable version:** 12 and later |
 
 ## Examples
 
@@ -220,7 +220,7 @@ try {
 animationForShown?: TransitionControllerCallback
 ```
 
-窗口显示时的自定义动画配置。
+Animation configuration when showing window
 
 **Since:** 23
 

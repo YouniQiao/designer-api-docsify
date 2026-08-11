@@ -1,6 +1,6 @@
 # ThemeControl
 
-ThemeControl将自定义Theme应用于App组件内，实现App组件风格跟随Theme切换。
+Class ThemeControl provides the Theme management for whole Ability and pages.
 
 **Since:** 23
 
@@ -22,9 +22,10 @@ import { CustomColors, ThemeControl, Colors, CustomDarkColors, Theme, CustomThem
 static setDefaultTheme(theme: CustomTheme | undefined): void
 ```
 
-将用户自定义Theme设置应用级默认主题，以实现应用风格跟随Theme切换。
+Sets the default Theme:
 
-需确保在页面build前执行。因运行于静态类型上下文中的ArkTS不存在全局作用域，因此需要在入口组件的static闭包或aboutToAppear生命周期函数中调用该接口。
+- for whole Ability when invoked from the Ability level code.  
+- for the ArkUI page and for later opened pages when invoked at the ArkUI page level.
 
 **Since:** 23
 

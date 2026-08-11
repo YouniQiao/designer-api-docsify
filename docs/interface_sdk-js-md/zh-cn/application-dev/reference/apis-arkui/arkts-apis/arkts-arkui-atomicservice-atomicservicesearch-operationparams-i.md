@@ -10,12 +10,6 @@ AtomicServiceSearch中“功能区”的初始化参数。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
-## 导入模块
-
-```TypeScript
-import { SearchParams, AtomicServiceSearch, SearchButtonParams, OperationParams, SelectParams, InputFilterParams, MenuAlignParams } from 'kits/@kit.ArkUI';
-```
-
 ## auxiliaryItem
 
 ```TypeScript

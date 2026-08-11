@@ -14,12 +14,6 @@ CMS封装数据的接收者信息。
 
 **系统能力：** SystemCapability.Security.Cert
 
-## 导入模块
-
-```TypeScript
-import { cert } from 'kits/@kit.DeviceCertificateKit';
-```
-
 ## keyAgreeInfo
 
 ```TypeScript

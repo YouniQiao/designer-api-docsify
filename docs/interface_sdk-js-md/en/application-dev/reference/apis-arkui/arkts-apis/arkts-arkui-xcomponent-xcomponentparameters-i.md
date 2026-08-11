@@ -1,6 +1,6 @@
 # XComponentParameters
 
-定义XComponent的具体配置参数，支持Native侧触发XComponent生命周期回调。
+Defines the XComponent parameter interface.
 
 **Since:** 23
 
@@ -16,7 +16,7 @@
 controller?: XComponentController
 ```
 
-给组件绑定一个控制器，通过控制器调用组件方法，仅类型为SURFACE或TEXTURE时有效。
+The controller of xcomponent.
 
 **Type:** [XComponentController](arkts-arkui-xcomponent-xcomponentcontroller-c.md)
 
@@ -36,7 +36,7 @@ controller?: XComponentController
 id: string
 ```
 
-组件的唯一标识，支持最大的字符串长度128。
+The id of xcomponent
 
 **Type:** string
 
@@ -56,7 +56,7 @@ id: string
 nativeXComponentHandler: Callback<NativeXComponentPointer>
 ```
 
-用于处理NativeXComponent实例的回调。
+The callback to handle NativeXComponent Pointer.
 
 **Type:** [Callback](../arkts-components/arkts-arkui-callback-i.md)&lt;NativeXComponentPointer&gt;
 
@@ -76,7 +76,7 @@ nativeXComponentHandler: Callback<NativeXComponentPointer>
 type: XComponentType
 ```
 
-用于指定XComponent组件类型。
+The type of xcomponent
 
 **Type:** [XComponentType](arkts-arkui-xcomponenttype-e.md)
 

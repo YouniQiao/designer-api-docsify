@@ -1,12 +1,12 @@
 # BusinessId (System API)
 
-业务ID枚举。业务ID是伴随设备支持的某个业务场景的唯一标识。不同的伴随设备由于认证安全性差异，支持的业务场景范围也不同，例如免解锁执行语音指令。
+Enumerates service IDs. A service ID uniquely identifies a service scenario supported by the companion device. The service scenarios supported by different companion devices vary according to the authentication security. For example, executing voice commands without screen unlocking.
 
-不同业务ID的伴随设备关系是独立的，互不干扰，可以独立添加、删除、认证。
+The companion device relationships of different service IDs are independent of each other and do not interfere with each other. They can be added, deleted, and authenticated independently.
 
-当前伴随设备模块的业务包括锁屏解锁、解锁应用锁、语音指令在锁屏执行前的身份鉴权等业务场景。
+Currently, the services of the companion device module include the default services of OpenHarmony, screen unlocking, application unlocking, and identity authentication before voice commands are executed on the lock screen.
 
-业务的添加对于服务端设备支持的场景有要求，如多屏协同业务，要求服务端设备支持委托认证场景。
+Adding services has requirements on the scenarios supported by the server device. For example, the multi-screen collaboration service requires that the server device support the agency authentication scenario.
 
 **Since:** 23
 
@@ -24,7 +24,7 @@
 DEFAULT = 0
 ```
 
-默认业务ID。系统预设的默认业务，用于基本的伴随设备认证场景。
+Default service ID. It is system-defined and used for basic authentication scenarios.
 
 **Since:** 23
 
@@ -44,7 +44,7 @@ DEFAULT = 0
 VENDOR_BEGIN = 10000
 ```
 
-厂商自定义业务ID取值起点。厂商可在此值基础上自定义扩展业务ID，实际取值需大于等于10000，避免与系统保留值[0-9999]冲突。
+Start value of the vendor-defined service ID. The vendor can extend service IDs based on this value. The actual value must be greater than or equal to 10000 to avoid conflicts with the reserved system values [0-9999].
 
 **Since:** 23
 

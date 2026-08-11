@@ -1,6 +1,6 @@
 # USBInterfaceDesc (System API)
 
-USB设备接口描述符。
+Defines the interface descriptor of a USB device.
 
 **Since:** 12
 
@@ -24,7 +24,7 @@ import { deviceManager } from 'kits/@kit.DriverDevelopmentKit';
 bClass: int
 ```
 
-类型代码。
+Interface class.
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
@@ -44,7 +44,7 @@ bClass: int
 bInterfaceNumber: int
 ```
 
-接口编号。
+Interface ID.
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
@@ -64,7 +64,7 @@ bInterfaceNumber: int
 bProtocol: int
 ```
 
-协议代码。
+Interface protocol.
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
@@ -84,7 +84,7 @@ bProtocol: int
 bSubClass: int
 ```
 
-子类型代码。
+Interface subclass.
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 

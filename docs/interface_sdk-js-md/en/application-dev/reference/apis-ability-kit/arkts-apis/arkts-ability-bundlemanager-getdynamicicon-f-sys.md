@@ -12,7 +12,7 @@ import { bundleManager } from 'kits/@kit.AbilityKit';
 function getDynamicIcon(bundleName: string): Promise<string>
 ```
 
-根据给定的bundleName获得动态图标对应的moduleName。使用Promise异步回调。
+Obtains the module name corresponding to the dynamic icon based on the specified bundle name. This API uses a promise to return the result.
 
 **Since:** 12
 
@@ -30,23 +30,23 @@ function getDynamicIcon(bundleName: string): Promise<string>
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| bundleName | string | Yes | 要查询扩展资源的应用名称。 |
+| bundleName | string | Yes | Bundle name based on which the extended resources are to be queried. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;string&gt; | Promise对象。返回接口运行结果及动态图标对应的moduleName。 |
+| Promise&lt;string&gt; | Promise used to return the API call result and module name corresponding to the dynamic icon. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types. |
-| 201 | Permission denied. |
-| 202 | Permission denied, non-system app called system api. |
-| 17700306 | Failed to obtain the dynamic icon. |
-| 17700001 | The specified bundleName is not found. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission denied, non-system app called system api. |
+| [17700306](../errorcode-bundle.md#17700306-failed-to-obtain-the-dynamic-icon) | Failed to obtain the dynamic icon. |
+| [17700001](../errorcode-bundle.md#17700001-bundle-name-does-not-exist) | The specified bundleName is not found. |
 
 ## Examples
 
@@ -59,7 +59,7 @@ let bundleName: string = 'com.ohos.demo';
 
 try {
   bundleManager.getDynamicIcon(bundleName).then((data) => {
-    hilog.info(0x0000, 'testTag', 'getDynamicIcon successfully %{public}s', JSON.stringify(data));
+    hilog.info(0x0000, 'testTag', 'getDynamicIcon successfully %s', JSON.stringify(data));
   }).catch((err: BusinessError) => {
     hilog.error(0x0000, 'testTag', 'getDynamicIcon failed. Cause: %{public}s', err.message);
   });

@@ -12,9 +12,9 @@ import { relationalStore } from 'kits/@kit.ArkData';
 function isTokenizerSupported(tokenizer: Tokenizer): boolean
 ```
 
-判断当前平台是否支持传入的分词器，此为同步接口。
+Checks whether the specified tokenizer is supported. This API returns the result synchronously.
 
-如果当前平台支持传入的分词器时，此接口返回值为true；反之，返回值为false。
+This API returns **true** if the specified tokenizer is supported; returns **false** otherwise.
 
 **Since:** 18
 
@@ -28,19 +28,19 @@ function isTokenizerSupported(tokenizer: Tokenizer): boolean
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| tokenizer | [Tokenizer](arkts-arkdata-relationalstore-tokenizer-e.md) | Yes | 需要被判断是否支持的分词器。 |
+| tokenizer | [Tokenizer](arkts-arkdata-relationalstore-tokenizer-e.md) | Yes | Tokenizer to check. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| boolean | true表示当前平台支持当前传入的分词器，false表示当前平台不支持当前传入的分词器。 |
+| boolean | Returns **true** if the specified tokenizer is supported; returns **false** otherwise. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; 3. Parameter verification failed. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; 3. Parameter verification failed. |
 
 ## Examples
 

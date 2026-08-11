@@ -1,6 +1,6 @@
 # SubscribeInfo (System API)
 
-发现信息。
+Defines subscription information.
 
 **Since:** 7
 
@@ -26,7 +26,7 @@ import { deviceManager } from 'kits/@kit.DistributedServiceKit';
 capability: SubscribeCap
 ```
 
-发现能力。
+Discovery capability.
 
 **Type:** [SubscribeCap](arkts-distributedservice-devicemanager-subscribecap-e-sys.md)
 
@@ -48,7 +48,7 @@ capability: SubscribeCap
 freq: ExchangeFreq
 ```
 
-发现频率。
+Frequency of device discovery.
 
 **Type:** [ExchangeFreq](arkts-distributedservice-devicemanager-exchangefreq-e-sys.md)
 
@@ -70,7 +70,7 @@ freq: ExchangeFreq
 isSameAccount: boolean
 ```
 
-是否同账号，true表示同账号，false表示异账号。
+Whether the account is the same as the current account. The value **true** indicates the same account and the value **false** indicates a different account.
 
 **Type:** boolean
 
@@ -92,7 +92,7 @@ isSameAccount: boolean
 isWakeRemote: boolean
 ```
 
-是否唤醒设备，true表示唤醒，false表示不用唤醒。
+Whether to wake up the device. The value **true** means to wake up the device and the value **false** means the opposite.
 
 **Type:** boolean
 
@@ -114,7 +114,7 @@ isWakeRemote: boolean
 medium: ExchangeMedium
 ```
 
-发现类型。
+Medium used for device discovery.
 
 **Type:** [ExchangeMedium](arkts-distributedservice-devicemanager-exchangemedium-e-sys.md)
 
@@ -136,7 +136,7 @@ medium: ExchangeMedium
 mode: DiscoverMode
 ```
 
-发现模式。
+Device discovery mode.
 
 **Type:** [DiscoverMode](arkts-distributedservice-devicemanager-discovermode-e-sys.md)
 
@@ -158,7 +158,7 @@ mode: DiscoverMode
 subscribeId: number
 ```
 
-发现标识，用于标识不同的发现周期。 取值范围1~65535。
+Subscription ID, used to identify a device discovery period. The value ranges from 1 to 65535.
 
 **Type:** number
 

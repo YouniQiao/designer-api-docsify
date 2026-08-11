@@ -1,6 +1,6 @@
 # OverlayManagerOptions
 
-初始化[OverlayManager](arkts-arkui-uicontext.md)时所用参数。
+the property of OverlayManager.
 
 **Since:** 23
 
@@ -22,7 +22,8 @@ import { OverlayManager, FrameCallback, ResolvedUIContext, NodeRenderStateChange
 onBackPress?: OnOverlayBackPressCallback
 ```
 
-Callback for intercepting back-press events on an overlay.  
+Callback for intercepting back-press events on an overlay.
+
 **NOTE：**1. When this callback is registered and **enableBackPressedEvent** is set to **true**, the back-press event will not close the overlay automatically. Instead, the overlay invokes this callback  to decide whether the event should be propagated to the underlying components.2. Return **true** to intercept the event (the event is consumed and will not be passed  to lower layers), or **false** to allow the event to propagate through to the components  below the overlay.
 
 **Since:** 26.0.0
@@ -41,7 +42,7 @@ Callback for intercepting back-press events on an overlay.
 enableBackPressedEvent?: boolean
 ```
 
-是否支持通过侧滑手势关闭OverlayManager下的ComponentContent，true表示可以通过侧滑关闭，false表示不可以通过侧滑关闭，默认值为false。
+Set whether support backPressed event or not.
 
 **Type:** boolean
 
@@ -63,7 +64,7 @@ enableBackPressedEvent?: boolean
 renderRootOverlay?: boolean
 ```
 
-是否渲染overlay根节点，true表示渲染overlay根节点，false表示不渲染overlay根节点，默认值为true。
+the render property of overlay node.
 
 **Type:** boolean
 

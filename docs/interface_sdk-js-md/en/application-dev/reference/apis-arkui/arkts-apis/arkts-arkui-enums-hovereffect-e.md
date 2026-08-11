@@ -1,6 +1,6 @@
 # HoverEffect
 
-定义组件悬浮效果的类型。
+HoverEffect enumeration description
 
 **Since:** 23
 
@@ -16,7 +16,7 @@
 None = 0
 ```
 
-不设置效果。
+None effect
 
 **Since:** 23
 
@@ -34,7 +34,7 @@ None = 0
 Scale = 2
 ```
 
-放大缩小的效果。
+Zoom in and out effect
 
 **Since:** 23
 
@@ -52,7 +52,7 @@ Scale = 2
 Highlight = 3
 ```
 
-背景淡入淡出的强调效果。
+Highlight effect
 
 **Since:** 23
 
@@ -70,7 +70,7 @@ Highlight = 3
 Auto = 4
 ```
 
-使用组件的系统默认悬浮效果。
+Default effect
 
 **Since:** 23
 

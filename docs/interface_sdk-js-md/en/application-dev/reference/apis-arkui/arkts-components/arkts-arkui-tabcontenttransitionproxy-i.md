@@ -1,6 +1,6 @@
 # TabContentTransitionProxy
 
-Tabs自定义切换动画执行过程中，返回给开发者的proxy对象。开发者可通过该对象获取自定义动画的起始和目标页面信息，同时，也可以通过调用该对象的finishTransition接口通知Tabs组件自定义动画已结束。
+Implements the proxy object returned during the execution of the custom switching animation of the **Tabs**component. You can use this object to obtain the start and target pages for the custom tab switching animation. In addition, you can call the **finishTransition** API of this object to notify the **Tabs** component of the ending of the custom animation.
 
 **Since:** 11
 
@@ -16,7 +16,7 @@ Tabs自定义切换动画执行过程中，返回给开发者的proxy对象。�
 finishTransition(): void
 ```
 
-通知Tabs组件，此页面的自定义动画已结束。
+Notifies the **Tabs** component that the custom animation has finished playing.
 
 **Since:** 11
 
@@ -38,7 +38,7 @@ finishTransition(): void
 from: number
 ```
 
-自定义动画起始页面对应的index值，索引从0开始。
+Zero-based index of the source page in the custom animation.
 
 **Type:** number
 
@@ -62,7 +62,7 @@ from: number
 to: number
 ```
 
-自定义动画目标页面对应的index值，索引从0开始。
+Zero-based index of the target page in the custom animation.
 
 **Type:** number
 

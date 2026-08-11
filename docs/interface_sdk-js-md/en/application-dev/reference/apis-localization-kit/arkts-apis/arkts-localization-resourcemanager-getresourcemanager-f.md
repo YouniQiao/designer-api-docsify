@@ -12,7 +12,7 @@ import { resourceManager } from 'kits/@kit.LocalizationKit';
 export function getResourceManager(callback: AsyncCallback<ResourceManager>): void
 ```
 
-获取当前应用的资源管理对象。使用callback异步回调。
+Obtains the **ResourceManager** object of the current application. This API uses an asynchronous callback to return the result.
 
 **Since:** 6
 
@@ -28,7 +28,7 @@ export function getResourceManager(callback: AsyncCallback<ResourceManager>): vo
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;ResourceManager&gt; | Yes | 回调函数，返回资源管理对象。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;ResourceManager&gt; | Yes | Callback used to return the **ResourceManager** object. |
 
 ## Examples
 
@@ -64,7 +64,7 @@ export default {
 export function getResourceManager(bundleName: string, callback: AsyncCallback<ResourceManager>): void
 ```
 
-获取指定应用的资源管理对象。使用callback异步回调。
+Obtains the **ResourceManager** object of the specified application. This API uses an asynchronous callback to return the result.
 
 **Since:** 6
 
@@ -80,8 +80,8 @@ export function getResourceManager(bundleName: string, callback: AsyncCallback<R
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| bundleName | string | Yes | 应用包名。 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;ResourceManager&gt; | Yes | 回调函数，返回应用包名对应的资源管理对象。 |
+| bundleName | string | Yes | Bundle name of the application. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;ResourceManager&gt; | Yes | Callback used to return the **ResourceManager** object. |
 
 ## Examples
 
@@ -119,7 +119,7 @@ export default {
 export function getResourceManager(): Promise<ResourceManager>
 ```
 
-获取当前应用的资源管理对象。使用Promise异步回调。
+Obtains the **ResourceManager** object of the current application. This API uses a promise to return the result.
 
 **Since:** 6
 
@@ -135,7 +135,7 @@ export function getResourceManager(): Promise<ResourceManager>
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;ResourceManager&gt; | Promise对象，返回资源管理对象。 |
+| Promise&lt;ResourceManager&gt; | Promise used to return the **ResourceManager** object. |
 
 ## Examples
 
@@ -167,7 +167,7 @@ export default {
 export function getResourceManager(bundleName: string): Promise<ResourceManager>
 ```
 
-获取指定应用的资源管理对象。使用Promise异步回调。
+Obtains the **ResourceManager** object of the specified application. This API uses a promise to return the result.
 
 **Since:** 6
 
@@ -183,13 +183,13 @@ export function getResourceManager(bundleName: string): Promise<ResourceManager>
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| bundleName | string | Yes | 应用包名。 |
+| bundleName | string | Yes | Bundle name of the application. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;ResourceManager&gt; | Promise对象，返回应用包名对应的资源管理对象。 |
+| Promise&lt;ResourceManager&gt; | Promise used to return the **ResourceManager** object. |
 
 ## Examples
 

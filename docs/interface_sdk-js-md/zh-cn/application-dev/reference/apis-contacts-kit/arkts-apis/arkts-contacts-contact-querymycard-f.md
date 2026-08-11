@@ -1,11 +1,5 @@
 # queryMyCard
 
-## 导入模块
-
-```TypeScript
-import { contact } from 'kits/@kit.ContactsKit';
-```
-
 ## queryMyCard
 
 ```TypeScript
@@ -80,8 +74,8 @@ function queryMyCard(context: Context, callback: AsyncCallback<Contact>): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 401 | Parameter error. Possible causes: Mandatory parameters are left unspecified. |
-| 201 | Permission denied. |
+| [401](../errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: Mandatory parameters are left unspecified. |
+| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
 
 ## 示例
 
@@ -182,8 +176,8 @@ function queryMyCard(context: Context, attrs: ContactAttributes, callback: Async
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 401 | Parameter error. Possible causes: Mandatory parameters are left unspecified. |
-| 201 | Permission denied. |
+| [401](../errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: Mandatory parameters are left unspecified. |
+| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
 
 ## 示例
 
@@ -240,7 +234,7 @@ function queryMyCard(attrs?: ContactAttributes): Promise<Contact>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;Contact&gt; | Promise对象。返回“我的名片”联系人对象。 |
+| Promise&lt;Contact&gt; | Promise对象。返回"我的名片"联系人对象。 |
 
 ## 示例
 
@@ -263,7 +257,7 @@ promise.then((data) => {
 function queryMyCard(context: Context, attrs?: ContactAttributes): Promise<Contact>
 ```
 
-查询“我的名片”（支持传入联系人的属性列表）。使用Promise异步回调。
+查询"我的名片"（支持传入联系人的属性列表）。使用Promise异步回调。
 
 **起始版本：** 10
 
@@ -286,14 +280,14 @@ function queryMyCard(context: Context, attrs?: ContactAttributes): Promise<Conta
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;Contact&gt; | Promise对象。返回“我的名片”联系人对象。 |
+| Promise&lt;Contact&gt; | Promise对象。返回"我的名片"联系人对象。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 401 | Parameter error. Possible causes: Mandatory parameters are left unspecified. |
-| 201 | Permission denied. |
+| [401](../errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: Mandatory parameters are left unspecified. |
+| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
 
 ## 示例
 

@@ -1,6 +1,7 @@
 # GetAuthInfoOptions (System API)
 
-表示[查询认证凭据信息](arkts-basicservices-osaccount-useridentitymanager-c-sys.md#getauthinfo)的可选参数集合。
+Represents a set of optional parameters for  
+[GetAuthInfo](arkts-basicservices-osaccount-useridentitymanager-c-sys.md#getauthinfo).
 
 **Since:** 12
 
@@ -24,7 +25,7 @@ import { osAccount } from 'kits/@kit.BasicServicesKit';
 accountId?: int
 ```
 
-系统账号标识，默认为undefined。
+OS account ID, which is **undefined** by default.
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
@@ -44,7 +45,7 @@ accountId?: int
 authType?: AuthType
 ```
 
-认证类型，默认为undefined。
+Authentication type, which is **undefined** by default.
 
 **Type:** [AuthType](arkts-basicservices-osaccount-authtype-e-sys.md)
 

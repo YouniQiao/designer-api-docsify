@@ -1,11 +1,5 @@
 # getBundleInstaller（系统接口）
 
-## 导入模块
-
-```TypeScript
-import { installer } from 'kits/@kit.AbilityKit';
-```
-
 ## getBundleInstaller
 
 ```TypeScript
@@ -34,8 +28,52 @@ function getBundleInstaller(callback: AsyncCallback<BundleInstaller>): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1. Incorrect parameter types. |
-| 202 | Permission verification failed. A non-system application calls a system API. |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1. Incorrect parameter types. |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed. A non-system application calls a system API. |
+
+## 示例
+
+ArkTS-Dyn示例:
+
+```TypeScript
+import { installer } from '@kit.AbilityKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+try {
+    installer.getBundleInstaller((err: BusinessError, data: installer.BundleInstaller) => {
+        if (err) {
+            console.error('getBundleInstaller failed:' + err.message);
+        } else {
+            console.info('getBundleInstaller successfully');
+        }
+    });
+} catch (error) {
+    let message = (error as BusinessError).message;
+    console.error('getBundleInstaller failed:' + message);
+}
+```
+
+ArkTS-Sta示例:
+
+```TypeScript
+'use static'
+
+import { installer } from '@kit.AbilityKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+try {
+    installer.getBundleInstaller((err: BusinessError | null, data: installer.BundleInstaller | undefined) => {
+        if (err) {
+            console.error('getBundleInstaller failed:' + err.message);
+        } else {
+            console.info('getBundleInstaller successfully');
+        }
+    });
+} catch (error) {
+    let message = (error as BusinessError).message;
+    console.error('getBundleInstaller failed:' + message);
+}
+```
 
 
 ## getBundleInstaller
@@ -66,5 +104,45 @@ function getBundleInstaller(): Promise<BundleInstaller>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 202 | Permission verification failed. A non-system application calls a system API. |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed. A non-system application calls a system API. |
+
+## 示例
+
+ArkTS-Dyn示例:
+
+```TypeScript
+import { installer } from '@kit.AbilityKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+try {
+    installer.getBundleInstaller().then((data: installer.BundleInstaller) => {
+        console.info('getBundleInstaller successfully.');
+    }).catch((error: BusinessError) => {
+        console.error('getBundleInstaller failed. Cause: ' + error.message);
+    });
+} catch (error) {
+    let message = (error as BusinessError).message;
+    console.error('getBundleInstaller failed. Cause: ' + message);
+}
+```
+
+ArkTS-Sta示例:
+
+```TypeScript
+'use static'
+
+import { installer } from '@kit.AbilityKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+try {
+    installer.getBundleInstaller().then((data: installer.BundleInstaller) => {
+        console.info('getBundleInstaller successfully.');
+    }).catch((error: Error) => {
+        console.error('getBundleInstaller failed. Cause: ' + (error as BusinessError).message);
+    });
+} catch (error) {
+    let message = (error as BusinessError).message;
+    console.error('getBundleInstaller failed. Cause: ' + message);
+}
+```
 

@@ -1,6 +1,6 @@
 # UsedRecordDetail (System API)
 
-单次访问记录详情。
+Represents the details of a single access record.
 
 **Since:** 9
 
@@ -24,7 +24,7 @@ import { privacyManager } from 'kits/@kit.AbilityKit';
 accessDuration: long
 ```
 
-访问时长。单位为：毫秒。
+Access duration.Unit: milliseconds.
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：long
 
@@ -44,9 +44,9 @@ accessDuration: long
 count?: int
 ```
 
-访问次数。在accessRecords中表示成功访问次数，在rejectRecords中表示失败或拒绝次数。
+Number of accesses. In accessRecords, it indicates the number of successful accesses; in rejectRecords, it indicates the number of failures or rejections.
 
-默认值：0。
+Default value: 0.
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
@@ -66,12 +66,12 @@ count?: int
 lockScreenStatus?: int
 ```
 
-访问时的锁屏状态。
+Lock screen status at the time of access.
 
-- 1，表示非锁屏场景使用权限。  
-- 2，表示锁屏场景使用权限。
+- 1: Indicates permission usage in a non-lock-screen scenario.  
+- 2: Indicates permission usage in a lock-screen scenario.
 
-默认值：1。
+Default value: 1.
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
@@ -91,7 +91,7 @@ lockScreenStatus?: int
 status: int
 ```
 
-访问状态。0表示停止使用，1表示前台使用，2表示后台使用。
+Access status. 0 indicates stopped usage, 1 indicates foreground usage, and 2 indicates background usage.
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
@@ -111,7 +111,7 @@ status: int
 timestamp: long
 ```
 
-访问时的时间戳。单位为：毫秒。
+Access timestamp.Unit: milliseconds.
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：long
 
@@ -131,9 +131,9 @@ timestamp: long
 usedType?: PermissionUsedType
 ```
 
-敏感权限访问方式。
+Sensitive permission access method.
 
-默认值：NORMAL_TYPE。
+Default value: NORMAL_TYPE.
 
 **Type:** [PermissionUsedType](arkts-ability-privacymanager-permissionusedtype-e-sys.md)
 

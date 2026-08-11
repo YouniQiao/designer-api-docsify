@@ -1,6 +1,6 @@
 # CredentialInfo (System API)
 
-表示凭证信息。
+Defines the credential information.
 
 **Since:** 8
 
@@ -24,7 +24,7 @@ import { osAccount } from 'kits/@kit.BasicServicesKit';
 accountId?: int
 ```
 
-系统账号标识，默认为undefined。
+OS account ID, which is **undefined** by default.
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
@@ -44,7 +44,7 @@ accountId?: int
 additionalInfo?: string
 ```
 
-凭据的附加信息，默认为空字符串。
+Additional information about the credential, which is an empty string by default.
 
 **Type:** string
 
@@ -64,7 +64,7 @@ additionalInfo?: string
 credSubType: AuthSubType
 ```
 
-指示凭据子类型。
+Authentication credential subtype.
 
 **Type:** [AuthSubType](arkts-basicservices-osaccount-authsubtype-e-sys.md)
 
@@ -84,7 +84,7 @@ credSubType: AuthSubType
 credType: AuthType
 ```
 
-指示凭据类型。
+Authentication credential type.
 
 **Type:** [AuthType](arkts-basicservices-osaccount-authtype-e-sys.md)
 
@@ -104,7 +104,7 @@ credType: AuthType
 token: Uint8Array
 ```
 
-指示认证令牌，默认为空。
+Authentication token, which is left blank by default.
 
 **Type:** Uint8Array
 

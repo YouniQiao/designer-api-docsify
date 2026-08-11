@@ -1,6 +1,6 @@
 # AudioEffectMode
 
-表示音效模式的枚举。
+Enumerates the audio effect modes.
 
 **Since:** 10
 
@@ -16,7 +16,7 @@
 EFFECT_NONE = 0
 ```
 
-关闭音效。
+The audio effect is disabled.
 
 **Since:** 10
 
@@ -34,7 +34,7 @@ EFFECT_NONE = 0
 EFFECT_DEFAULT = 1
 ```
 
-默认音效。
+The default audio effect is used.
 
 **Since:** 10
 

@@ -1,6 +1,6 @@
 # WallpaperInfo (System API)
 
-定义壁纸的信息结构。
+WallpaperInfo definition including folding status, rotation status, and resource path.
 
 **Since:** 14
 
@@ -24,7 +24,7 @@ import { wallpaper } from 'kits/@kit.BasicServicesKit';
 foldState: FoldState
 ```
 
-表示设备的折展状态。
+Indicates the folding status for wallpaper.
 
 **Type:** [FoldState](arkts-basicservices-wallpaper-foldstate-e-sys.md)
 
@@ -44,7 +44,7 @@ foldState: FoldState
 rotateState: RotateState
 ```
 
-表示设备的横竖屏状态。
+Indicates the rotation status for wallpaper.
 
 **Type:** [RotateState](arkts-basicservices-wallpaper-rotatestate-e-sys.md)
 
@@ -64,7 +64,7 @@ rotateState: RotateState
 source: string
 ```
 
-表示壁纸资源uri，只支持应用沙箱目录。
+Indicates the resource path for wallpaper.
 
 **Type:** string
 

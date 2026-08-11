@@ -12,7 +12,7 @@ import { adminManager } from 'kits/@kit.MDMKit';
 function getEnterpriseManagedTips(): Promise<string>
 ```
 
-查询企业定制信息
+Gets enterprise message tips.
 
 **Since:** 23
 
@@ -34,5 +34,5 @@ function getEnterpriseManagedTips(): Promise<string>
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 202 | Permission verification failed. A non-system application calls a system API. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
 

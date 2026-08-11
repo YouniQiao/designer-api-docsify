@@ -1,6 +1,6 @@
 # OtaUpdatePolicy
 
-升级策略。
+Represents an OTA update policy.
 
 **Since:** 12
 
@@ -22,7 +22,7 @@ import { systemManager } from 'kits/@kit.MDMKit';
 delayUpdateTime?: number
 ```
 
-表示延迟升级时间（单位：小时）。
+Period for which the update is postponed, in hours.
 
 **Type:** number
 
@@ -42,9 +42,9 @@ delayUpdateTime?: number
 disableSystemOtaUpdate?: boolean
 ```
 
-表示是否禁用在公网环境下升级。true表示禁用公网升级，false表示不禁用公网升级。如果作为  
-[systemManager.setOtaUpdatePolicy](arkts-mdm-systemmanager-setotaupdatepolicy-f.md#setotaupdatepolicy)的入参，该字段可缺省，缺省时保持当前配置不变。当前配置可通过  
-[systemManager.getOtaUpdatePolicy](arkts-mdm-systemmanager-getotaupdatepolicy-f.md#getotaupdatepolicy)接口获取。禁用公网升级后，可以采用内网升级。
+Whether to disable public network upgrade. The value **true** indicates that public network upgrade is disabled,and the value **false** indicates the opposite. If this field is used as an input parameter of  
+[systemManager.setOtaUpdatePolicy](arkts-mdm-systemmanager-setotaupdatepolicy-f.md#setotaupdatepolicy), the default value can be retained.The current configuration can be obtained via the  
+[systemManager.getOtaUpdatePolicy](arkts-mdm-systemmanager-getotaupdatepolicy-f.md#getotaupdatepolicy) API. After public network upgrade is disabled, you can perform intranet upgrade.
 
 **Type:** boolean
 
@@ -64,7 +64,7 @@ disableSystemOtaUpdate?: boolean
 installEndTime?: number
 ```
 
-表示指定安装窗口结束时间（时间戳）。
+End time (timestamp) of the installation window.
 
 **Type:** number
 
@@ -84,7 +84,7 @@ installEndTime?: number
 installStartTime?: number
 ```
 
-表示指定安装窗口起始时间（时间戳）。
+Start time (timestamp) of the installation window.
 
 **Type:** number
 
@@ -104,7 +104,7 @@ installStartTime?: number
 latestUpdateTime?: number
 ```
 
-表示最晚升级时间（时间戳）。
+Latest update time (timestamp).
 
 **Type:** number
 
@@ -124,7 +124,7 @@ latestUpdateTime?: number
 policyType: PolicyType
 ```
 
-表示升级策略类型。
+Type of the update policy.
 
 **Type:** [PolicyType](../../apis-core-file-kit/arkts-apis/arkts-corefile-fileshare-policytype-e.md)
 
@@ -144,7 +144,7 @@ policyType: PolicyType
 version: string
 ```
 
-表示待升级软件版本号。
+Version of the software to update.
 
 **Type:** string
 

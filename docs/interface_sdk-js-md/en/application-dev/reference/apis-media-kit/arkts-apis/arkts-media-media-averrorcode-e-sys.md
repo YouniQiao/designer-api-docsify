@@ -1,6 +1,6 @@
 # AVErrorCode
 
-[Media错误码](../../../reference/apis-media-kit/errorcode-media.md)类型枚举。
+Enumerates the types of [Media error codes](../../../reference/apis-media-kit/errorcode-media.md).
 
 **Since:** 9
 

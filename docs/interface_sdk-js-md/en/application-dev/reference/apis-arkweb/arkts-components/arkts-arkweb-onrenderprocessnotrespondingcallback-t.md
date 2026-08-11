@@ -4,7 +4,7 @@
 type OnRenderProcessNotRespondingCallback = (data : RenderProcessNotRespondingData) => void
 ```
 
-The callback of render process not responding.
+Defines a callback invoked when the rendering process does not respond.
 
 **Since:** 12
 

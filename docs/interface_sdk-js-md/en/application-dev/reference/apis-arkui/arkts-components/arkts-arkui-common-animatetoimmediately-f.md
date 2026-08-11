@@ -6,6 +6,8 @@
 declare function animateToImmediately(value: AnimateParam, event: () => void): void
 ```
 
+Delivers an explicit animation immediately.
+
 **Since:** 12
 
 **ArkTS mode:** ArkTS-Dyn only, since version 12.

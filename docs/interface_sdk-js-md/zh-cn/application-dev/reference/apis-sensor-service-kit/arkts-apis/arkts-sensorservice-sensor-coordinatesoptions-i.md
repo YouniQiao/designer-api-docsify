@@ -10,12 +10,6 @@
 
 **系统能力：** SystemCapability.Sensors.Sensor
 
-## 导入模块
-
-```TypeScript
-import { sensor } from 'kits/@kit.SensorServiceKit';
-```
-
 ## x
 
 ```TypeScript

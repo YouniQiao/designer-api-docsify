@@ -10,12 +10,6 @@ Defines the Web resource request used for scheme handler.
 
 **系统能力：** SystemCapability.Web.Webview.Core
 
-## 导入模块
-
-```TypeScript
-import { webview } from 'kits/@kit.ArkWeb';
-```
-
 ## getFrameUrl
 
 ```TypeScript

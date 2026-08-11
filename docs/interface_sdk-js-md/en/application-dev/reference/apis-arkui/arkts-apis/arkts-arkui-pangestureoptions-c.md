@@ -1,6 +1,6 @@
 # PanGestureOptions
 
-定义PanGesture配置参数选项。
+Defines the PanGesture options.
 
 **Since:** 7
 
@@ -16,7 +16,7 @@
 constructor(value?: { fingers?: number; direction?: PanDirection; distance?: number })
 ```
 
-创建滑动手势配置参数对象。通过PanGestureOptions对象接口可以动态修改滑动手势的属性，从而避免通过状态变量修改属性（状态变量修改会导致UI刷新）。
+Creates a pan gesture configuration object. The **PanGestureOptions** API enables dynamic updates to pan gesture properties without requiring state variable modifications that would trigger UI re-renders.
 
 **Since:** 7
 
@@ -32,7 +32,7 @@ constructor(value?: { fingers?: number; direction?: PanDirection; distance?: num
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | { fingers?: number; direction?: PanDirection; distance?: number } | No | 滑动手势配置参数对象。&lt;br/&gt;fingers用于指定触发滑动的最少手指数，最小为1指， 最大取值为10指。&lt;br/&gt;默认值：1 &lt;br/&gt;direction用于指定触发滑动的手 势方向，此枚举值支持逻辑与(&)和逻辑或（\|）运算。&lt;br/&gt;默认值：PanDirection.All&lt;br/&gt;distance用于指定触发滑动手势事件的最小滑动距离，单位为vp。&lt;br/&gt;手写笔默认值：8，其余输入源默认 值：5&lt;br/&gt;**说明：**&lt;br/&gt;[Tabs](arkts-arkui-tabs-tabs-f.md#tabs)组件滑动与该滑动手势事件同时存在时，可将distance值设为1，使滑动更灵敏，避免造成事件错乱。&lt;br/&gt;当设定的值小于0时，按默认值处理。 &lt;br/&gt;建议设置合理的滑动距离，滑动距离设置过大时会导致滑动不跟手（响应时延慢）的问题。&lt;br/&gt;当组件应用了[scale](arkts-arkui-common-commonmethod-i.md#scale)缩放 变换时，distance的实际识别距离会按照scale比例进行缩放。 |
+| value | { fingers?: number; direction?: PanDirection; distance?: number } | No | Pan gesture configuration. &lt;br&gt;**fingers**: minimum number of fingers required. The value ranges from 1 to 10.&lt;br&gt;Default value: **1** &lt;br&gt;**direction**: pan direction. The value supports the AND (&) and OR (\|) operations.&lt;br&gt;Default value: **PanDirection.All** &lt;br&gt;**distance**: minimum pan distance to trigger the gesture, in vp.&lt;br&gt;Default value: **8** for the stylus and **5** for other input sources. &lt;br&gt;**NOTE：**&lt;br&gt;If a pan gesture and a [tab](arkts-arkui-tabs-tabs-f.md#tabs) swipe occur at the same time, set **distance** to **1** to make the gesture more easily recognizable.&lt;br&gt;If the value specified is less than **0**, the default value is used.&lt;br&gt;To avoid slow response and lagging during scrolling, set a reasonable pan distance.&lt;br&gt;When the [scale](arkts-arkui-common-commonmethod-i.md#scale) attribute is applied to the component, the actual pan distance is adjusted based on the **scale** ratio. |
 
 ## getDirection
 
@@ -40,7 +40,7 @@ constructor(value?: { fingers?: number; direction?: PanDirection; distance?: num
 getDirection(): PanDirection
 ```
 
-获取滑动方向。
+Obtains the pan direction.
 
 **Since:** 12
 
@@ -58,7 +58,7 @@ getDirection(): PanDirection
 
 | Type | Description |
 | --- | --- |
-| [PanDirection](arkts-arkui-gesture-pandirection-e.md) | 滑动方向。 |
+| [PanDirection](arkts-arkui-gesture-pandirection-e.md) | Pan direction. |
 
 ## getDistance
 
@@ -66,7 +66,7 @@ getDirection(): PanDirection
 getDistance(): number
 ```
 
-获取触发滑动手势事件的最小滑动距离，单位为vp。
+Obtains the minimum pan distance to trigger the gesture. The unit is vp.
 
 **Since:** 18
 
@@ -84,7 +84,7 @@ getDistance(): number
 
 | Type | Description |
 | --- | --- |
-| number | 滑动手势事件的最小滑动距离。 |
+| number | Minimum pan distance to trigger the gesture. |
 
 ## setDirection
 
@@ -92,7 +92,7 @@ getDistance(): number
 setDirection(value: PanDirection)
 ```
 
-设置滑动方向。
+Sets the pan direction.
 
 **Since:** 7
 
@@ -108,7 +108,7 @@ setDirection(value: PanDirection)
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | [PanDirection](arkts-arkui-gesture-pandirection-e.md) | Yes | 用于指定触发滑动的手势方向，此枚举值支持逻辑与(&)和逻辑或（\|）运算。&lt;br/&gt;默认值：PanDirection.All |
+| value | [PanDirection](arkts-arkui-gesture-pandirection-e.md) | Yes | Pan direction. The value supports the AND (&) and OR (\|) operations.&lt;br&gt;Default value: **PanDirection.All |
 
 ## setDistance
 
@@ -116,8 +116,8 @@ setDirection(value: PanDirection)
 setDistance(value: number)
 ```
 
-设置触发滑动手势事件的最小滑动距离，单位为vp。距离值不宜设置过大，避免因滑动脱手、响应时延过大等问题导致性能劣化，最佳实践请参考：  
-[减小拖动识别距离](https://developer.huawei.com/consumer/cn/doc/best-practices/bpta-application-latency-optimization-cases#section1116134115286)。
+Sets the minimum pan distance to trigger the gesture, in vp. To avoid performance degradation due to excessive response delays or accidental releases, avoid excessively large values. For best practices, see   
+[Reducing the Pan Distance for Gesture Recognition](https://developer.huawei.com/consumer/en/doc/best-practices/bpta-application-latency-optimization-cases#section1116134115286).
 
 **Since:** 7
 
@@ -133,7 +133,7 @@ setDistance(value: number)
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | number | Yes | 触发滑动手势事件的最小滑动距离，单位为vp。&lt;br/&gt;手写笔默认值：8，其余输入源默认值：5&lt;br/&gt;**说明：**&lt;br/&gt;[Tabs组件](arkts-arkui-tabs-tabs-f.md#tabs)滑动与该滑动 手势事件同时存在时，可将distance值设为1，使滑动更灵敏，避免造成事件错乱。&lt;br/&gt;当设定的值小于0时，按默认值处理。&lt;br/&gt;建议设置合理的滑动距离，滑动距离设置过大时会导致滑动不跟手（响应时延慢）的问题。&lt;br/&gt; 当组件应用了[scale](arkts-arkui-common-commonmethod-i.md#scale)缩放变换时，distance的实际识别距离会按照scale比例进行缩放。 |
+| value | number | Yes | Minimum pan distance to trigger the gesture, in vp.&lt;br&gt;Default value: **8** for the stylus and **5** for other input sources.&lt;br&gt;**NOTE：**&lt;br&gt;If a pan gesture and a [tab](arkts-arkui-tabs-tabs-f.md#tabs) swipe occur at the same time, set **distance** to **1** to make the gesture more easily recognizable.&lt;br&gt;If the value specified is less than **0**, the default value is used.&lt;br&gt;To avoid slow response and lagging during scrolling, set a reasonable pan distance.&lt;br&gt;When the [scale](arkts-arkui-common-commonmethod-i.md#scale) attribute is applied to the component, the actual pan distance is adjusted based on the **scale** ratio. |
 
 ## setFingers
 
@@ -141,7 +141,7 @@ setDistance(value: number)
 setFingers(value: number)
 ```
 
-设置触发滑动的最少手指数。
+Sets the minimum number of fingers to trigger the gesture.
 
 **Since:** 7
 
@@ -157,5 +157,5 @@ setFingers(value: number)
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | number | Yes | 触发滑动的最少手指数，最小为1指， 最大取值为10指。&lt;br/&gt;默认值：1 |
+| value | number | Yes | Minimum number of fingers to trigger a pan gesture. The value ranges from 1 to 10.&lt;br&gt; Default value: **1 |
 

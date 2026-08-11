@@ -1,11 +1,5 @@
 # matchMediaSync
 
-## 导入模块
-
-```TypeScript
-import { mediaquery } from 'kits/@kit.ArkUI';
-```
-
 ## matchMediaSync
 
 ```TypeScript
@@ -54,8 +48,18 @@ function matchMediaSync(condition: string): MediaQueryListener
 
 ## 示例
 
+ArkTS-Dyn示例：
+
 ```TypeScript
 import { mediaquery } from '@kit.ArkUI';
+
+let listener: mediaquery.MediaQueryListener = mediaquery.matchMediaSync('(orientation: landscape)'); // 监听横屏事件
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+import mediaquery from '@ohos.mediaquery';
 
 let listener: mediaquery.MediaQueryListener = mediaquery.matchMediaSync('(orientation: landscape)'); // 监听横屏事件
 ```

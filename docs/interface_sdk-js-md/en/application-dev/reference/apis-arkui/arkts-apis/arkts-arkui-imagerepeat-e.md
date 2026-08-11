@@ -2,9 +2,9 @@
 
 ImageRepeat enumeration description
 
-**Since:** 11
+**Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 11.
+**ArkTS mode:** ArkTS-Dyn only, since version 7.
 
 <!--Device-unnamed-declare enum ImageRepeat--><!--Device-unnamed-declare enum ImageRepeat-End-->
 
@@ -18,13 +18,13 @@ NoRepeat
 
 Do not draw the picture again.
 
-**Since:** 11
+**Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 11.
+**ArkTS mode:** ArkTS-Dyn only, since version 7.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
-**Widget capability:** This API can be used in ArkTS widgets since API version 11.
+**Widget capability:** This API can be used in ArkTS widgets since API version 9.
 
 <!--Device-ImageRepeat-NoRepeat--><!--Device-ImageRepeat-NoRepeat-End-->
 
@@ -38,13 +38,13 @@ X
 
 Repeat the drawing only on the horizontal axis.
 
-**Since:** 11
+**Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 11.
+**ArkTS mode:** ArkTS-Dyn only, since version 7.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
-**Widget capability:** This API can be used in ArkTS widgets since API version 11.
+**Widget capability:** This API can be used in ArkTS widgets since API version 9.
 
 <!--Device-ImageRepeat-X--><!--Device-ImageRepeat-X-End-->
 
@@ -58,13 +58,13 @@ Y
 
 Repeat the drawing only on the vertical axis.
 
-**Since:** 11
+**Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 11.
+**ArkTS mode:** ArkTS-Dyn only, since version 7.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
-**Widget capability:** This API can be used in ArkTS widgets since API version 11.
+**Widget capability:** This API can be used in ArkTS widgets since API version 9.
 
 <!--Device-ImageRepeat-Y--><!--Device-ImageRepeat-Y-End-->
 
@@ -78,13 +78,13 @@ XY
 
 Draw the picture repeatedly on both axes.
 
-**Since:** 11
+**Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 11.
+**ArkTS mode:** ArkTS-Dyn only, since version 7.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
-**Widget capability:** This API can be used in ArkTS widgets since API version 11.
+**Widget capability:** This API can be used in ArkTS widgets since API version 9.
 
 <!--Device-ImageRepeat-XY--><!--Device-ImageRepeat-XY-End-->
 

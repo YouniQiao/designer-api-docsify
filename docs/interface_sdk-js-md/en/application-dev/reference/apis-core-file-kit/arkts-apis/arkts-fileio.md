@@ -14,111 +14,111 @@ fileio
 
 | Name | Description |
 | --- | --- |
-| [access](arkts-corefile-fileio-access-f.md#access) | 检查当前进程是否可访问某文件，使用Promise异步回调。 |
-| [access](arkts-corefile-fileio-access-f.md#access-1) | 检查当前进程是否可访问某文件，使用callback异步回调。 |
-| [access](arkts-corefile-fileio-access-f.md#access-2) | 检查当前进程是否可访问某文件，使用callback异步回调。 |
-| [accessSync](arkts-corefile-fileio-accesssync-f.md#accesssync) | 以同步方法检查当前进程是否可访问某文件。 |
-| [chmod](arkts-corefile-fileio-chmod-f.md#chmod) | 改变文件权限，使用Promise异步回调。 |
-| [chmod](arkts-corefile-fileio-chmod-f.md#chmod-1) | 改变文件权限，使用callback异步回调。 |
-| [chmodSync](arkts-corefile-fileio-chmodsync-f.md#chmodsync) | 以同步方法改变文件权限。 |
-| [chown](arkts-corefile-fileio-chown-f.md#chown) | 基于文件路径改变文件所有者，使用Promise异步回调。 |
-| [chown](arkts-corefile-fileio-chown-f.md#chown-1) | 基于文件路径改变文件所有者，使用callback异步回调。 |
-| [chownSync](arkts-corefile-fileio-chownsync-f.md#chownsync) | 以同步的方法基于文件路径改变文件所有者。 |
-| [close](arkts-corefile-fileio-close-f.md#close) | 关闭文件，使用Promise异步回调。 |
-| [close](arkts-corefile-fileio-close-f.md#close-1) | 关闭文件，使用callback异步回调。 |
-| [closeSync](arkts-corefile-fileio-closesync-f.md#closesync) | 以同步方法关闭文件。 |
-| [copyFile](arkts-corefile-fileio-copyfile-f.md#copyfile) | 复制文件，使用Promise异步回调。 |
-| [copyFile](arkts-corefile-fileio-copyfile-f.md#copyfile-1) | copyFile. |
-| [copyFile](arkts-corefile-fileio-copyfile-f.md#copyfile-2) | 复制文件，使用callback异步回调。 |
-| [copyFileSync](arkts-corefile-fileio-copyfilesync-f.md#copyfilesync) | 以同步方法复制文件。 |
-| [createStream](arkts-corefile-fileio-createstream-f.md#createstream) | 基于文件路径打开文件流，使用Promise异步回调。 |
-| [createStream](arkts-corefile-fileio-createstream-f.md#createstream-1) | 基于文件路径打开文件流，使用callback异步回调。 |
-| [createStreamSync](arkts-corefile-fileio-createstreamsync-f.md#createstreamsync) | 以同步方法基于文件路径打开文件流。 |
-| [createWatcher](arkts-corefile-fileio-createwatcher-f.md#createwatcher) | 监听文件或者目录的变化，使用callback异步回调。 |
-| [fchmod](arkts-corefile-fileio-fchmod-f.md#fchmod) | 基于文件描述符改变文件权限，使用Promise异步回调。 |
-| [fchmod](arkts-corefile-fileio-fchmod-f.md#fchmod-1) | 基于文件描述符改变文件权限，使用callback异步回调。 |
-| [fchmodSync](arkts-corefile-fileio-fchmodsync-f.md#fchmodsync) | 以同步方法基于文件描述符改变文件权限。 |
-| [fchown](arkts-corefile-fileio-fchown-f.md#fchown) | 基于文件描述符改变文件所有者，使用Promise异步回调。 |
-| [fchown](arkts-corefile-fileio-fchown-f.md#fchown-1) | 基于文件描述符改变文件所有者，使用callback异步回调。 |
-| [fchownSync](arkts-corefile-fileio-fchownsync-f.md#fchownsync) | 以同步方法基于文件描述符改变文件所有者。 |
-| [fdatasync](arkts-corefile-fileio-fdatasync-f.md#fdatasync) | 实现文件内容数据同步，使用Promise异步回调。 |
-| [fdatasync](arkts-corefile-fileio-fdatasync-f.md#fdatasync-1) | 实现文件内容数据同步，使用callback异步回调。 |
-| [fdatasyncSync](arkts-corefile-fileio-fdatasyncsync-f.md#fdatasyncsync) | 以同步方法实现文件内容数据同步。 |
-| [fdopenStream](arkts-corefile-fileio-fdopenstream-f.md#fdopenstream) | 基于文件描述符打开文件流，使用Promise异步回调。 |
-| [fdopenStream](arkts-corefile-fileio-fdopenstream-f.md#fdopenstream-1) | 基于文件描述符打开文件流，使用callback异步回调。 |
-| [fdopenStreamSync](arkts-corefile-fileio-fdopenstreamsync-f.md#fdopenstreamsync) | 以同步方法基于文件描述符打开文件流。 |
-| [fstat](arkts-corefile-fileio-fstat-f.md#fstat) | 基于文件描述符获取文件状态信息，使用Promise异步回调。 |
-| [fstat](arkts-corefile-fileio-fstat-f.md#fstat-1) | 基于文件描述符获取文件状态信息，使用callback异步回调。 |
-| [fstatSync](arkts-corefile-fileio-fstatsync-f.md#fstatsync) | 以同步方法基于文件描述符获取文件状态信息。 |
-| [fsync](arkts-corefile-fileio-fsync-f.md#fsync) | 同步文件数据，使用Promise异步回调。 |
-| [fsync](arkts-corefile-fileio-fsync-f.md#fsync-1) | 同步文件数据，使用callback异步回调。 |
-| [fsyncSync](arkts-corefile-fileio-fsyncsync-f.md#fsyncsync) | 以同步方法同步文件数据。 |
-| [ftruncate](arkts-corefile-fileio-ftruncate-f.md#ftruncate) | 基于文件描述符截断文件，使用Promise异步回调。 |
-| [ftruncate](arkts-corefile-fileio-ftruncate-f.md#ftruncate-1) | 基于文件描述符截断文件，使用callback异步回调。 |
-| [ftruncate](arkts-corefile-fileio-ftruncate-f.md#ftruncate-2) | 基于文件描述符截断文件，使用callback异步回调。 |
-| [ftruncateSync](arkts-corefile-fileio-ftruncatesync-f.md#ftruncatesync) | 以同步方法基于文件描述符截断文件。 |
-| [hash](arkts-corefile-fileio-hash-f.md#hash) | 计算文件的哈希值，使用Promise异步回调。 |
-| [hash](arkts-corefile-fileio-hash-f.md#hash-1) | 计算文件的哈希值，使用callback异步回调。 |
-| [lchown](arkts-corefile-fileio-lchown-f.md#lchown) | 基于文件路径改变文件所有者，更改符号链接本身的所有者，而不是符号链接所指向的实际文件，使用Promise异步回调。 |
-| [lchown](arkts-corefile-fileio-lchown-f.md#lchown-1) | 基于文件路径改变文件所有者，更改符号链接本身的所有者，而不是更改符号链接所指向的实际文件，使用callback异步回调。 |
-| [lchownSync](arkts-corefile-fileio-lchownsync-f.md#lchownsync) | 以同步方法基于文件路径改变文件所有者，更改符号链接本身的所有者，而不是更改符号链接所指向的实际文件。 |
-| [lstat](arkts-corefile-fileio-lstat-f.md#lstat) | 获取链接信息，使用Promise异步回调。 |
-| [lstat](arkts-corefile-fileio-lstat-f.md#lstat-1) | 获取链接信息，使用callback异步回调。 |
-| [lstatSync](arkts-corefile-fileio-lstatsync-f.md#lstatsync) | 以同步方法获取链接信息。 |
-| [mkdir](arkts-corefile-fileio-mkdir-f.md#mkdir) | 创建目录，使用Promise异步回调。 |
-| [mkdir](arkts-corefile-fileio-mkdir-f.md#mkdir-1) | 创建目录，使用callback异步回调。 |
-| [mkdir](arkts-corefile-fileio-mkdir-f.md#mkdir-2) | 创建目录，使用callback异步回调。 |
-| [mkdirSync](arkts-corefile-fileio-mkdirsync-f.md#mkdirsync) | 以同步方法创建目录。 |
-| [mkdtemp](arkts-corefile-fileio-mkdtemp-f.md#mkdtemp) | 创建临时目录，使用Promise异步回调。 |
-| [mkdtemp](arkts-corefile-fileio-mkdtemp-f.md#mkdtemp-1) | 创建临时目录，使用callback异步回调。 |
-| [mkdtempSync](arkts-corefile-fileio-mkdtempsync-f.md#mkdtempsync) | 以同步的方法创建临时目录。 |
-| [open](arkts-corefile-fileio-open-f.md#open) | 打开文件，使用Promise异步回调。 |
-| [open](arkts-corefile-fileio-open-f.md#open-1) | 打开文件，使用callback异步回调。 |
-| [open](arkts-corefile-fileio-open-f.md#open-2) | 打开文件，使用callback异步回调。 |
-| [open](arkts-corefile-fileio-open-f.md#open-3) | 打开文件，使用callback异步回调。 |
-| [openSync](arkts-corefile-fileio-opensync-f.md#opensync) | 以同步方法打开文件。 |
-| [opendir](arkts-corefile-fileio-opendir-f.md#opendir) | 打开文件目录，使用Promise异步回调。 |
-| [opendir](arkts-corefile-fileio-opendir-f.md#opendir-1) | 打开文件目录，使用callback异步回调。 |
-| [opendirSync](arkts-corefile-fileio-opendirsync-f.md#opendirsync) | 以同步方法打开文件目录。 |
-| [read](arkts-corefile-fileio-read-f.md#read) | 从文件读取数据，使用Promise异步回调。 |
-| [read](arkts-corefile-fileio-read-f.md#read-1) | 从文件读取数据，使用callback异步回调。 |
-| [read](arkts-corefile-fileio-read-f.md#read-2) | 从文件读取数据，使用callback异步回调。 |
-| [readSync](arkts-corefile-fileio-readsync-f.md#readsync) | 以同步方法从文件读取数据。 |
-| [readText](arkts-corefile-fileio-readtext-f.md#readtext) | 基于文本方式读取文件（即直接读取文件的文本内容），使用Promise异步回调。 |
-| [readText](arkts-corefile-fileio-readtext-f.md#readtext-1) | 基于文本方式读取文件（即直接读取文件的文本内容），使用callback异步回调。 |
-| [readTextSync](arkts-corefile-fileio-readtextsync-f.md#readtextsync) | 以同步方法基于文本方式读取文件（即直接读取文件的文本内容）。 |
-| [rename](arkts-corefile-fileio-rename-f.md#rename) | 重命名文件，使用Promise异步回调。 |
-| [rename](arkts-corefile-fileio-rename-f.md#rename-1) | 重命名文件，使用callback异步回调。 |
-| [renameSync](arkts-corefile-fileio-renamesync-f.md#renamesync) | 以同步方法重命名文件。 |
-| [rmdir](arkts-corefile-fileio-rmdir-f.md#rmdir) | 删除目录，使用Promise异步回调。 |
-| [rmdir](arkts-corefile-fileio-rmdir-f.md#rmdir-1) | 删除目录，使用callback异步回调。 |
-| [rmdirSync](arkts-corefile-fileio-rmdirsync-f.md#rmdirsync) | 以同步方法删除目录。 |
-| [stat](arkts-corefile-fileio-stat-f.md#stat) | 获取文件信息，使用Promise异步回调。 |
-| [stat](arkts-corefile-fileio-stat-f.md#stat-1) | 获取文件信息，使用callback异步回调。 |
-| [statSync](arkts-corefile-fileio-statsync-f.md#statsync) | 以同步方法获取文件的信息。 |
-| [symlink](arkts-corefile-fileio-symlink-f.md#symlink) | 基于文件路径创建符号链接，使用Promise异步回调。 |
-| [symlink](arkts-corefile-fileio-symlink-f.md#symlink-1) | 基于文件路径创建符号链接，使用callback异步回调。 |
-| [symlinkSync](arkts-corefile-fileio-symlinksync-f.md#symlinksync) | 以同步的方法基于文件路径创建符号链接。 |
-| [truncate](arkts-corefile-fileio-truncate-f.md#truncate) | 基于文件路径截断文件，使用Promise异步回调。 |
-| [truncate](arkts-corefile-fileio-truncate-f.md#truncate-1) | 基于文件路径截断文件，使用callback异步回调。 |
-| [truncate](arkts-corefile-fileio-truncate-f.md#truncate-2) | 基于文件路径截断文件，使用callback异步回调。 |
-| [truncateSync](arkts-corefile-fileio-truncatesync-f.md#truncatesync) | 以同步方法基于文件路径截断文件。 |
-| [unlink](arkts-corefile-fileio-unlink-f.md#unlink) | 删除文件，使用Promise异步回调。 |
-| [unlink](arkts-corefile-fileio-unlink-f.md#unlink-1) | 删除文件，使用callback异步回调。 |
-| [unlinkSync](arkts-corefile-fileio-unlinksync-f.md#unlinksync) | 以同步方法删除文件。 |
-| [write](arkts-corefile-fileio-write-f.md#write) | 将数据写入文件，使用Promise异步回调。 |
-| [write](arkts-corefile-fileio-write-f.md#write-1) | 将数据写入文件，使用callback异步回调。 |
-| [write](arkts-corefile-fileio-write-f.md#write-2) | 将数据写入文件，使用callback异步回调。 |
-| [writeSync](arkts-corefile-fileio-writesync-f.md#writesync) | 以同步方法将数据写入文件。 |
+| [access](arkts-corefile-fileio-access-f.md#access) | Checks whether this process can access a file. This API uses a promise to return the result. |
+| [access](arkts-corefile-fileio-access-f.md#access-1) | Checks whether this process can access a file. This API uses an asynchronous callback to return the result. |
+| [access](arkts-corefile-fileio-access-f.md#access-2) | Checks whether this process can access a file. This API uses an asynchronous callback to return the result. |
+| [accessSync](arkts-corefile-fileio-accesssync-f.md#accesssync) | Checks whether this process can access a file. This API returns the result synchronously. |
+| [chmod](arkts-corefile-fileio-chmod-f.md#chmod) | Changes file permissions. This API uses a promise to return the result. |
+| [chmod](arkts-corefile-fileio-chmod-f.md#chmod-1) | Changes file permissions. This API uses an asynchronous callback to return the result. |
+| [chmodSync](arkts-corefile-fileio-chmodsync-f.md#chmodsync) | Changes file permissions. This API returns the result synchronously. |
+| [chown](arkts-corefile-fileio-chown-f.md#chown) | Changes the file owner based on the file path. This API uses a promise to return the result. |
+| [chown](arkts-corefile-fileio-chown-f.md#chown-1) | Changes the file owner based on the file path. This API uses an asynchronous callback to return the result. |
+| [chownSync](arkts-corefile-fileio-chownsync-f.md#chownsync) | Changes the file owner based on its path. This API returns the result synchronously. |
+| [close](arkts-corefile-fileio-close-f.md#close) | Closes a file. This API uses a promise to return the result. |
+| [close](arkts-corefile-fileio-close-f.md#close-1) | Closes a file. This API uses an asynchronous callback to return the result. |
+| [closeSync](arkts-corefile-fileio-closesync-f.md#closesync) | Closes a file. This API returns the result synchronously. |
+| [copyFile](arkts-corefile-fileio-copyfile-f.md#copyfile) | Copies a file. This API uses a promise to return the result. |
+| [copyFile](arkts-corefile-fileio-copyfile-f.md#copyfile-1) | Copies a file. This API uses an asynchronous callback to return the result. |
+| [copyFile](arkts-corefile-fileio-copyfile-f.md#copyfile-2) | Copies a file. This API uses an asynchronous callback to return the result. |
+| [copyFileSync](arkts-corefile-fileio-copyfilesync-f.md#copyfilesync) | Copies a file. This API returns the result synchronously. |
+| [createStream](arkts-corefile-fileio-createstream-f.md#createstream) | Creates a stream based on the file path. This API uses a promise to return the result. |
+| [createStream](arkts-corefile-fileio-createstream-f.md#createstream-1) | Creates a stream based on the file path. This API uses an asynchronous callback to return the result. |
+| [createStreamSync](arkts-corefile-fileio-createstreamsync-f.md#createstreamsync) | Creates a stream based on the file path. This API returns the result synchronously. |
+| [createWatcher](arkts-corefile-fileio-createwatcher-f.md#createwatcher) | Listens for file or directory changes. This API uses an asynchronous callback to return the result. |
+| [fchmod](arkts-corefile-fileio-fchmod-f.md#fchmod) | Changes file permissions based on the file descriptor. This API uses a promise to return the result. |
+| [fchmod](arkts-corefile-fileio-fchmod-f.md#fchmod-1) | Changes file permissions based on the file descriptor. This API uses an asynchronous callback to return the result. |
+| [fchmodSync](arkts-corefile-fileio-fchmodsync-f.md#fchmodsync) | Changes the file permissions based on the file descriptor. This API returns the result synchronously. |
+| [fchown](arkts-corefile-fileio-fchown-f.md#fchown) | Changes the file owner based on the file descriptor. This API uses a promise to return the result. |
+| [fchown](arkts-corefile-fileio-fchown-f.md#fchown-1) | Changes the file owner based on the file descriptor. This API uses an asynchronous callback to return the result. |
+| [fchownSync](arkts-corefile-fileio-fchownsync-f.md#fchownsync) | Changes the file owner based on the file descriptor. This API returns the result synchronously. |
+| [fdatasync](arkts-corefile-fileio-fdatasync-f.md#fdatasync) | Synchronizes the data of a file. This API uses a promise to return the result. |
+| [fdatasync](arkts-corefile-fileio-fdatasync-f.md#fdatasync-1) | Synchronizes the data of a file. This API uses an asynchronous callback to return the result. |
+| [fdatasyncSync](arkts-corefile-fileio-fdatasyncsync-f.md#fdatasyncsync) | Synchronizes the data of a file. This API returns the result synchronously. |
+| [fdopenStream](arkts-corefile-fileio-fdopenstream-f.md#fdopenstream) | Opens a stream based on the file descriptor. This API uses a promise to return the result. |
+| [fdopenStream](arkts-corefile-fileio-fdopenstream-f.md#fdopenstream-1) | Opens a stream based on the file descriptor. This API uses an asynchronous callback to return the result. |
+| [fdopenStreamSync](arkts-corefile-fileio-fdopenstreamsync-f.md#fdopenstreamsync) | Opens a stream based on the file descriptor. This API returns the result synchronously. |
+| [fstat](arkts-corefile-fileio-fstat-f.md#fstat) | Obtains file status based on the file descriptor. This API uses a promise to return the result. |
+| [fstat](arkts-corefile-fileio-fstat-f.md#fstat-1) | Obtains file status based on the file descriptor. This API uses an asynchronous callback to return the result. |
+| [fstatSync](arkts-corefile-fileio-fstatsync-f.md#fstatsync) | Obtains file status based on the file descriptor. This API returns the result synchronously. |
+| [fsync](arkts-corefile-fileio-fsync-f.md#fsync) | Synchronizes a file. This API uses a promise to return the result. |
+| [fsync](arkts-corefile-fileio-fsync-f.md#fsync-1) | Synchronizes a file. This API uses an asynchronous callback to return the result. |
+| [fsyncSync](arkts-corefile-fileio-fsyncsync-f.md#fsyncsync) | Synchronizes a file. This API returns the result synchronously. |
+| [ftruncate](arkts-corefile-fileio-ftruncate-f.md#ftruncate) | Truncates a file based on the file descriptor. This API uses a promise to return the result. |
+| [ftruncate](arkts-corefile-fileio-ftruncate-f.md#ftruncate-1) | Truncates a file based on the file descriptor. This API uses an asynchronous callback to return the result. |
+| [ftruncate](arkts-corefile-fileio-ftruncate-f.md#ftruncate-2) | Truncates a file based on the file descriptor. This API uses an asynchronous callback to return the result. |
+| [ftruncateSync](arkts-corefile-fileio-ftruncatesync-f.md#ftruncatesync) | Truncates a file based on the file descriptor. This API returns the result synchronously. |
+| [hash](arkts-corefile-fileio-hash-f.md#hash) | Calculates the hash value of a file. This API uses a promise to return the result. |
+| [hash](arkts-corefile-fileio-hash-f.md#hash-1) | Calculates the hash value of a file. This API uses an asynchronous callback to return the result. |
+| [lchown](arkts-corefile-fileio-lchown-f.md#lchown) | Changes the file owner (owner of the symbolic link, not the file referred to by the symbolic link) based on the file path. This API uses a promise to return the result. |
+| [lchown](arkts-corefile-fileio-lchown-f.md#lchown-1) | Changes the file owner (owner of the symbolic link, not the file referred to by the symbolic link) based on a file path. This API uses an asynchronous callback to return the result. |
+| [lchownSync](arkts-corefile-fileio-lchownsync-f.md#lchownsync) | Changes the file owner based on a file path and changes the owner of the symbolic link (not the referenced file).This API returns the result synchronously. |
+| [lstat](arkts-corefile-fileio-lstat-f.md#lstat) | Obtains information about a symbolic link that is used to refer to a file or directory. This API uses a promise to return the result. |
+| [lstat](arkts-corefile-fileio-lstat-f.md#lstat-1) | Obtains information about a symbolic link that is used to refer to a file or directory. This API uses an asynchronous callback to return the result. |
+| [lstatSync](arkts-corefile-fileio-lstatsync-f.md#lstatsync) | Obtains information about a symbolic link that is used to refer to a file or directory. This API returns the result synchronously. |
+| [mkdir](arkts-corefile-fileio-mkdir-f.md#mkdir) | Creates a directory. This API uses a promise to return the result. |
+| [mkdir](arkts-corefile-fileio-mkdir-f.md#mkdir-1) | Creates a directory. This API uses an asynchronous callback to return the result. |
+| [mkdir](arkts-corefile-fileio-mkdir-f.md#mkdir-2) | Creates a directory. This API uses an asynchronous callback to return the result. |
+| [mkdirSync](arkts-corefile-fileio-mkdirsync-f.md#mkdirsync) | Creates a directory. This API returns the result synchronously. |
+| [mkdtemp](arkts-corefile-fileio-mkdtemp-f.md#mkdtemp) | Creates a temporary directory. This API uses a promise to return the result. |
+| [mkdtemp](arkts-corefile-fileio-mkdtemp-f.md#mkdtemp-1) | Creates a temporary directory. This API uses an asynchronous callback to return the result. |
+| [mkdtempSync](arkts-corefile-fileio-mkdtempsync-f.md#mkdtempsync) | Creates a temporary directory. This API returns the result synchronously. |
+| [open](arkts-corefile-fileio-open-f.md#open) | Opens a file. This API uses a promise to return the result. |
+| [open](arkts-corefile-fileio-open-f.md#open-1) | Opens a file. This API uses an asynchronous callback to return the result. |
+| [open](arkts-corefile-fileio-open-f.md#open-2) | Opens a file. This API uses an asynchronous callback to return the result. |
+| [open](arkts-corefile-fileio-open-f.md#open-3) | Opens a file. This API uses an asynchronous callback to return the result. |
+| [openSync](arkts-corefile-fileio-opensync-f.md#opensync) | Opens a file. This API returns the result synchronously. |
+| [opendir](arkts-corefile-fileio-opendir-f.md#opendir) | Opens a directory. This API uses a promise to return the result. |
+| [opendir](arkts-corefile-fileio-opendir-f.md#opendir-1) | Opens a file directory. This API uses an asynchronous callback to return the result. |
+| [opendirSync](arkts-corefile-fileio-opendirsync-f.md#opendirsync) | Opens a directory. This API returns the result synchronously. |
+| [read](arkts-corefile-fileio-read-f.md#read) | Reads data from a file. This API uses a promise to return the result. |
+| [read](arkts-corefile-fileio-read-f.md#read-1) | Reads data from a file. This API uses an asynchronous callback to return the result. |
+| [read](arkts-corefile-fileio-read-f.md#read-2) | Reads data from a file. This API uses an asynchronous callback to return the result. |
+| [readSync](arkts-corefile-fileio-readsync-f.md#readsync) | Reads data from a file. This API returns the result synchronously. |
+| [readText](arkts-corefile-fileio-readtext-f.md#readtext) | Reads the text content of a file. This API uses a promise to return the result. |
+| [readText](arkts-corefile-fileio-readtext-f.md#readtext-1) | Reads the text content of a file. This API uses an asynchronous callback to return the result. |
+| [readTextSync](arkts-corefile-fileio-readtextsync-f.md#readtextsync) | Reads the text content of a file. This API returns the result synchronously. |
+| [rename](arkts-corefile-fileio-rename-f.md#rename) | Renames a file. This API uses a promise to return the result. |
+| [rename](arkts-corefile-fileio-rename-f.md#rename-1) | Renames a file. This API uses an asynchronous callback to return the result. |
+| [renameSync](arkts-corefile-fileio-renamesync-f.md#renamesync) | Renames a file. This API returns the result synchronously. |
+| [rmdir](arkts-corefile-fileio-rmdir-f.md#rmdir) | Removes a directory. This API uses a promise to return the result. |
+| [rmdir](arkts-corefile-fileio-rmdir-f.md#rmdir-1) | Removes a directory. This API uses an asynchronous callback to return the result. |
+| [rmdirSync](arkts-corefile-fileio-rmdirsync-f.md#rmdirsync) | Removes a directory. This API returns the result synchronously. |
+| [stat](arkts-corefile-fileio-stat-f.md#stat) | Obtains file information. This API uses a promise to return the result. |
+| [stat](arkts-corefile-fileio-stat-f.md#stat-1) | Obtains file information. This API uses an asynchronous callback to return the result. |
+| [statSync](arkts-corefile-fileio-statsync-f.md#statsync) | Obtains file information. This API returns the result synchronously. |
+| [symlink](arkts-corefile-fileio-symlink-f.md#symlink) | Creates a symbolic link based on the file path. This API uses a promise to return the result. |
+| [symlink](arkts-corefile-fileio-symlink-f.md#symlink-1) | Creates a symbolic link based on the file path. This API uses an asynchronous callback to return the result. |
+| [symlinkSync](arkts-corefile-fileio-symlinksync-f.md#symlinksync) | Creates a symbolic link based on the file path. This API returns the result synchronously. |
+| [truncate](arkts-corefile-fileio-truncate-f.md#truncate) | Truncates a file based on the file path. This API uses a promise to return the result. |
+| [truncate](arkts-corefile-fileio-truncate-f.md#truncate-1) | Truncates a file based on the file path. This API uses an asynchronous callback to return the result. |
+| [truncate](arkts-corefile-fileio-truncate-f.md#truncate-2) | Truncates a file based on the file path. This API uses an asynchronous callback to return the result. |
+| [truncateSync](arkts-corefile-fileio-truncatesync-f.md#truncatesync) | Truncates a file based on the file path. This API returns the result synchronously. |
+| [unlink](arkts-corefile-fileio-unlink-f.md#unlink) | Removes a file. This API uses a promise to return the result. |
+| [unlink](arkts-corefile-fileio-unlink-f.md#unlink-1) | Removes a file. This API uses an asynchronous callback to return the result. |
+| [unlinkSync](arkts-corefile-fileio-unlinksync-f.md#unlinksync) | Removes a file. This API returns the result synchronously. |
+| [write](arkts-corefile-fileio-write-f.md#write) | Writes data into a file. This API uses a promise to return the result. |
+| [write](arkts-corefile-fileio-write-f.md#write-1) | Writes data to a file. This API uses an asynchronous callback to return the result. |
+| [write](arkts-corefile-fileio-write-f.md#write-2) | Writes data to a file. This API uses an asynchronous callback to return the result. |
+| [writeSync](arkts-corefile-fileio-writesync-f.md#writesync) | Writes data to a file. This API returns the result synchronously. |
 
 ### Interfaces
 
 | Name | Description |
 | --- | --- |
-| [Dir](arkts-corefile-fileio-dir-depr-i.md) | 管理目录，在调用Dir的方法前，需要先通过opendir方法（同步或异步）来构建一个Dir实例。 |
-| [Dirent](arkts-corefile-fileio-dirent-depr-i.md) | 在调用Dirent的方法前，需要先通过[dir.read()](arkts-corefile-fileio-read-f.md#read)方法（同步或异步）来构建一个Dirent实例。 |
-| [ReadOut](arkts-corefile-fileio-readout-depr-i.md) | 仅用于read方法，获取文件的读取结果。 |
-| [Stat](arkts-corefile-fileio-stat-depr-i.md) | 文件具体信息，在调用Stat的方法前，需要先通过[stat()](arkts-corefile-fileio-stat-f.md#stat)方法（同步或异步）来构建一个Stat实例。 |
-| [Stream](arkts-corefile-fileio-stream-depr-i.md) | 文件流，在调用Stream的方法前，需要先通过createStream()方法（同步或异步）来构建一个Stream实例。 |
-| [Watcher](arkts-corefile-fileio-watcher-depr-i.md) | Watcher是文件变化监听的实例，调用Watcher.stop()方法（同步或异步）来停止文件监听。 |
+| [Dir](arkts-corefile-fileio-dir-depr-i.md) | Manages directories. Before calling a method of the **Dir** class, use the **opendir()** method synchronously or asynchronously to create a **Dir** instance. |
+| [Dirent](arkts-corefile-fileio-dirent-depr-i.md) | Provides information about files and directories. Before calling an API of the **Dirent** class, use  [dir.read()](arkts-corefile-fileio-read-f.md#read) synchronously or asynchronously to create a **Dirent** instance. |
+| [ReadOut](arkts-corefile-fileio-readout-depr-i.md) | Obtains the file read result. This class applies only to the **read()** method. |
+| [Stat](arkts-corefile-fileio-stat-depr-i.md) | Provides detailed file information. Before calling a method of the **Stat** class, use the [stat()](arkts-corefile-fileio-stat-f.md#stat)method synchronously or asynchronously to create a **Stat** instance. |
+| [Stream](arkts-corefile-fileio-stream-depr-i.md) | Provides a stream for file operations. Before calling any API of the **Stream** class, use **createStream()** to create a **Stream** instance synchronously or asynchronously. |
+| [Watcher](arkts-corefile-fileio-watcher-depr-i.md) | Listens for file change. You can call the **Watcher.stop()** method synchronously or asynchronously to stop the listening. |
 

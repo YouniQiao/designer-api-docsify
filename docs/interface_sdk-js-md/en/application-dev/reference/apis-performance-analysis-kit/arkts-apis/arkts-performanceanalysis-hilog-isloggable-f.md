@@ -12,7 +12,7 @@ import { hilog } from 'kits/@kit.PerformanceAnalysisKit';
 function isLoggable(domain: int, tag: string, level: LogLevel): boolean
 ```
 
-在打印日志前调用该接口，用于检查指定领域标识、日志标识和级别的日志是否可以打印。
+Checks whether logs are printable based on the specified service domain, log tag, and log level.
 
 **Since:** 7
 
@@ -28,15 +28,15 @@ function isLoggable(domain: int, tag: string, level: LogLevel): boolean
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| domain | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | 日志对应的领域标识，范围是0x0~0xFFFF，超出范围则日志无法打印。&lt;br/&gt;建议开发者在应用内根据需要自定义划分。 |
-| tag | string | Yes | 指定日志标识，可以为任意字符串，建议用于标识调用所在的类或者业务行为。tag长度最多为31字节，超出后会截断，不建议使用中文字符，可能出现乱码或者对齐问题。 |
-| level | [LogLevel](arkts-performanceanalysis-hilog-loglevel-e.md) | Yes | 日志级别。 |
+| domain | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | Service domain of logs. The value ranges from **0x0** to **0xFFFF**. If the value exceeds the range, logs cannot be printed.&lt;br&gt;You can define the value as required. |
+| tag | string | Yes | Log tag in the string format. You are advised to use this parameter to identify a particular service behavior or the class holding the ongoing method. A tag can contain a maximum of 31 bytes. If a tag exceeds this limit, it will be truncated. Chinese characters are not recommended because garbled characters or alignment problems may occur. |
+| level | [LogLevel](arkts-performanceanalysis-hilog-loglevel-e.md) | Yes | Log level. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| boolean | 如果返回true，则该领域标识、日志标识和级别的日志可以打印，否则不能打印。 |
+| boolean | Returns **true** logs are printable based on the specified service domain, log tag, and log level; returns **false** otherwise. |
 
 ## Examples
 

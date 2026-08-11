@@ -6,7 +6,7 @@
 function getEvent(node: FrameNode, nodeType: 'Scroll'): UIScrollEvent | undefined
 ```
 
-获取Scroll节点中持有的UIScrollEvent对象，用于设置滚动事件。若该节点非ArkTS语言创建，则需要设置是否支持跨语言访问，如果不支持跨语言访问，则返回undefined。该接口不支持声明式方式创建的节点。设置的滚动事件与声明式定义的事件平行；设置的滚动事件不覆盖原有的声明式事件。同时设置两个事件回调的时候，优先回调声明式事件。
+Obtains the **UIScrollEvent** object associated with the **Scroll** node for configuring scroll events. The scroll events configured through this API coexist with declarative events without overriding them. If both event callbacks are registered, the declaratively defined event callback takes precedence.
 
 **Since:** 19
 
@@ -24,14 +24,14 @@ function getEvent(node: FrameNode, nodeType: 'Scroll'): UIScrollEvent | undefine
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| node | [FrameNode](arkts-arkui-framenode-c.md) | Yes | 获取事件时所需的目标节点。 |
-| nodeType | 'Scroll' | Yes | 获取Scroll节点类型的滚动事件。 |
+| node | [FrameNode](arkts-arkui-framenode-c.md) | Yes | Target node. |
+| nodeType | 'Scroll' | Yes | Scroll** node type for scroll event configuration. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [UIScrollEvent](../arkts-components/arkts-arkui-uiscrollevent-i.md) | Scroll节点类型的滚动事件，若获取失败，则返回undefined。 |
+| [UIScrollEvent](../arkts-components/arkts-arkui-uiscrollevent-i.md) | UIScrollEvent** object for the **Scroll** node, or **undefined** if it fails to be obtained. |
 
 
 ## getEvent
@@ -40,7 +40,7 @@ function getEvent(node: FrameNode, nodeType: 'Scroll'): UIScrollEvent | undefine
 function getEvent(node: FrameNode, nodeType: 'List'): UIListEvent | undefined
 ```
 
-获取List节点中持有的UIListEvent对象，用于设置滚动事件。若该节点非ArkTS语言创建，则需要设置是否支持跨语言访问，如果不支持跨语言访问，则返回undefined。该接口不支持声明式方式创建的节点。设置的滚动事件与声明式定义的事件平行；设置的滚动事件不覆盖原有的声明式事件。同时设置两个事件回调的时候，优先回调声明式事件。
+Obtains the **UIListEvent** object associated with the **List** node for configuring scroll events. The scroll events configured through this API coexist with declarative events without overriding them. If both event callbacks are registered, the declaratively defined event callback takes precedence.
 
 **Since:** 19
 
@@ -58,14 +58,14 @@ function getEvent(node: FrameNode, nodeType: 'List'): UIListEvent | undefined
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| node | [FrameNode](arkts-arkui-framenode-c.md) | Yes | 获取事件时所需的目标节点。 |
-| nodeType | 'List' | Yes | 获取List节点类型的滚动事件。 |
+| node | [FrameNode](arkts-arkui-framenode-c.md) | Yes | Target node. |
+| nodeType | 'List' | Yes | List** node type for scroll event configuration. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [UIListEvent](../arkts-components/arkts-arkui-uilistevent-i.md) | List节点类型的滚动事件，若获取失败，则返回undefined。 |
+| [UIListEvent](../arkts-components/arkts-arkui-uilistevent-i.md) | UIListEvent** object for the **List** node, or **undefined** if it fails to be obtained. |
 
 
 ## getEvent
@@ -74,7 +74,7 @@ function getEvent(node: FrameNode, nodeType: 'List'): UIListEvent | undefined
 function getEvent(node: FrameNode, nodeType: 'WaterFlow'): UIWaterFlowEvent | undefined
 ```
 
-获取[WaterFlow](arkts-arkui-typenode-waterflow-t.md)节点中持有的UIWaterFlowEvent对象，用于设置滚动事件。若该节点非ArkTS语言创建，则需要设置是否支持跨语言访问，如果不支持跨语言访问，则返回undefined。该接口不支持声明式方式创建的节点。设置的滚动事件与声明式定义的事件平行；设置的滚动事件不覆盖原有的声明式事件。同时设置两个事件回调的时候，优先回调声明式事件。
+Obtains the **UIWaterFlowEvent** object associated with the [WaterFlow](arkts-arkui-typenode-waterflow-t.md) node for configuring scroll events. The scroll events configured through this API coexist with declarative events without overriding them. If both event callbacks are registered, the declaratively defined event callback takes precedence.
 
 **Since:** 19
 
@@ -92,14 +92,14 @@ function getEvent(node: FrameNode, nodeType: 'WaterFlow'): UIWaterFlowEvent | un
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| node | [FrameNode](arkts-arkui-framenode-c.md) | Yes | 获取事件时所需的目标节点。 |
-| nodeType | 'WaterFlow' | Yes | 获取WaterFlow节点类型的滚动事件。 |
+| node | [FrameNode](arkts-arkui-framenode-c.md) | Yes | Target node. |
+| nodeType | 'WaterFlow' | Yes | WaterFlow** node type for scroll event configuration. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [UIWaterFlowEvent](../arkts-components/arkts-arkui-uiwaterflowevent-i.md) | WaterFlow节点类型的滚动事件，若获取失败，则返回undefined。 |
+| [UIWaterFlowEvent](../arkts-components/arkts-arkui-uiwaterflowevent-i.md) | UIWaterFlowEvent** object for the **WaterFlow** node, or **undefined** if it fails to be obtained. |
 
 
 ## getEvent
@@ -108,7 +108,7 @@ function getEvent(node: FrameNode, nodeType: 'WaterFlow'): UIWaterFlowEvent | un
 function getEvent(node: FrameNode, nodeType: 'Grid'): UIGridEvent | undefined
 ```
 
-获取Grid节点中持有的UIGridEvent对象，用于设置滚动事件。若该节点非ArkTS语言创建，则需要设置是否支持跨语言访问，如果不支持跨语言访问，则返回undefined。该接口不支持声明式方式创建的节点。设置的滚动事件与声明式定义的事件平行；设置的滚动事件不覆盖原有的声明式事件。同时设置两个事件回调的时候，优先回调声明式事件。
+Obtains the **UIGridEvent** object associated with the **Grid** node for configuring scroll events. The scroll events configured through this API coexist with declarative events without overriding them. If both event callbacks are registered, the declaratively defined event callback takes precedence.
 
 **Since:** 19
 
@@ -126,12 +126,12 @@ function getEvent(node: FrameNode, nodeType: 'Grid'): UIGridEvent | undefined
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| node | [FrameNode](arkts-arkui-framenode-c.md) | Yes | 获取事件时所需的目标节点。 |
-| nodeType | 'Grid' | Yes | 获取Grid节点类型的滚动事件。 |
+| node | [FrameNode](arkts-arkui-framenode-c.md) | Yes | Target node. |
+| nodeType | 'Grid' | Yes | Grid** node type for scroll event configuration. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [UIGridEvent](../arkts-components/arkts-arkui-uigridevent-i.md) | Grid节点类型的滚动事件，若获取失败，则返回undefined。 |
+| [UIGridEvent](../arkts-components/arkts-arkui-uigridevent-i.md) | UIGridEvent** object for the **Grid** node, or **undefined** if it fails to be obtained. |
 

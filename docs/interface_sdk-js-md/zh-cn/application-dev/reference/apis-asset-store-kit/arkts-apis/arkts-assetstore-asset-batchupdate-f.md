@@ -1,11 +1,5 @@
 # batchUpdate
 
-## 导入模块
-
-```TypeScript
-import { asset } from 'kits/@kit.AssetStoreKit';
-```
-
 ## batchUpdate
 
 ```TypeScript
@@ -43,16 +37,16 @@ function batchUpdate(sourceAttributes: Array<AssetMap>, destAttributes: Array<As
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 24000015 | Getting the system time failed. |
-| 24000012 | Calling the OS Account service failed. |
-| 24000013 | Calling the Access Token service failed. |
-| 24000010 | IPC failed. |
-| 24000011 | Calling the Bundle Manager service failed. |
-| 24000008 | The database operation failed. |
-| 24000006 | Insufficient memory. |
-| 24000007 | The asset is corrupted. |
-| 24000019 | Each value of {@link Tag.GROUP_ID} and {@link Tag.REQUIRE_ATTR_ENCRYPTED} in the array is not consistent. |
-| 24000001 | The ASSET service is unavailable. |
+| [24000015](../errorcode-asset.md#24000015-获取系统时间失败) | Getting the system time failed. |
+| [24000012](../errorcode-asset.md#24000012-账号系统服务异常) | Calling the OS Account service failed. |
+| [24000013](../errorcode-asset.md#24000013-访问控制服务异常) | Calling the Access Token service failed. |
+| [24000010](../errorcode-asset.md#24000010-进程通信错误) | IPC failed. |
+| [24000011](../errorcode-asset.md#24000011-包管理服务异常) | Calling the Bundle Manager service failed. |
+| [24000008](../errorcode-asset.md#24000008-数据库操作失败) | The database operation failed. |
+| [24000006](../errorcode-asset.md#24000006-系统内存不足) | Insufficient memory. |
+| [24000007](../errorcode-asset.md#24000007-关键资产损坏) | The asset is corrupted. |
+| [24000019](../errorcode-asset.md#24000019-属性值不一致) | Each value of {@link Tag.GROUP_ID} and {@link Tag.REQUIRE_ATTR_ENCRYPTED} in the array is not consistent. |
+| [24000001](../errorcode-asset.md#24000001-关键资产服务不可用) | The ASSET service is unavailable. |
 
 ## 示例
 

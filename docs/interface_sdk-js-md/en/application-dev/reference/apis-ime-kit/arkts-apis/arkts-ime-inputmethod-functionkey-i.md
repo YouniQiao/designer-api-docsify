@@ -1,6 +1,6 @@
 # FunctionKey
 
-输入法功能键类型。
+FunctionKey of Input.
 
 **Since:** 10
 
@@ -22,7 +22,7 @@ import { inputMethod } from 'kits/@kit.IMEKit';
 enterKeyType: EnterKeyType
 ```
 
-输入法enter键类型。
+Indicates the enter key type of the input method.
 
 **Type:** [EnterKeyType](../../apis-arkui/arkts-apis/arkts-arkui-textinput-enterkeytype-e.md)
 

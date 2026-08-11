@@ -1,6 +1,6 @@
 # GridRowFrameNode
 
-定义GridRow类型的FrameNode。
+Define the GridRow type of FrameNode.
 
 **Inheritance/Implementation:** GridRowFrameNode extends [TypedFrameNode<GridRowAttribute>](TypedFrameNode<GridRowAttribute>)
 
@@ -18,7 +18,7 @@
 abstract initialize(options?: GridRowOptions): GridRowAttribute
 ```
 
-初始化GridRow类型的FrameNode。
+Initialize GridRow FrameNode.
 
 **Since:** 23
 
@@ -34,7 +34,7 @@ abstract initialize(options?: GridRowOptions): GridRowAttribute
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| options | [GridRowOptions](../arkts-components/arkts-arkui-gridrowoptions-i.md) | No | GridRow节点的选项。 |
+| options | [GridRowOptions](../arkts-components/arkts-arkui-gridrowoptions-i.md) | No | GridRow options. |
 
 **Return value:**
 

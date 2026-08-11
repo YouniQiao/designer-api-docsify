@@ -32,7 +32,7 @@ constructor(width: number, height: number, settings?: RenderingContextSettings)
 | --- | --- | --- | --- |
 | width | number | 是 | 离屏画布的宽度，默认单位：vp。 &lt;br&gt;异常值NaN和Infinity按无效值处理。 |
 | height | number | 是 | 离屏画布的高度，默认单位：vp。 &lt;br&gt;异常值NaN和Infinity按无效值处理。 |
-| settings | [RenderingContextSettings](arkts-arkui-canvas-renderingcontextsettings-c.md) | 否 | 用来配置OffscreenCanvasRenderingContext2D对象的参数， 见RenderingContextSettings接口描述。 &lt;br&gt;异常值undefined按RenderingContextSettings的默认值处理。 &lt;br&gt;默认值：null。 |
+| settings | [RenderingContextSettings](arkts-arkui-renderingcontextsettings-c.md) | 否 | 用来配置OffscreenCanvasRenderingContext2D对象的参数， 见RenderingContextSettings接口描述。 &lt;br&gt;异常值undefined按RenderingContextSettings的默认值处理。 &lt;br&gt;默认值：null。 |
 
 ## constructor
 
@@ -62,7 +62,7 @@ constructor(width: number, height: number, settings?: RenderingContextSettings, 
 | --- | --- | --- | --- |
 | width | number | 是 | 离屏画布的宽度，默认单位：vp。 &lt;br&gt;异常值NaN和Infinity按无效值处理。 |
 | height | number | 是 | 离屏画布的高度，默认单位：vp。 &lt;br&gt;异常值NaN和Infinity按无效值处理。 |
-| settings | [RenderingContextSettings](arkts-arkui-canvas-renderingcontextsettings-c.md) | 否 | 用来配置OffscreenCanvasRenderingContext2D对象的参数， 见RenderingContextSettings接口描述。 &lt;br&gt;异常值undefined按RenderingContextSettings的默认值处理。 &lt;br&gt;默认值：null。 |
+| settings | [RenderingContextSettings](arkts-arkui-renderingcontextsettings-c.md) | 否 | 用来配置OffscreenCanvasRenderingContext2D对象的参数， 见RenderingContextSettings接口描述。 &lt;br&gt;异常值undefined按RenderingContextSettings的默认值处理。 &lt;br&gt;默认值：null。 |
 | unit | [LengthMetricsUnit](arkts-arkui-lengthmetricsunit-t.md) | 否 | 用来配置OffscreenCanvasRenderingContext2D对象的单位模式， 配置后无法动态更改，配置方法同 [CanvasRenderingContext2D](../../../reference/apis-arkui/arkui-ts/ts-canvasrenderingcontext2d.md)。 &lt;br&gt;异常值undefined、NaN和Infinity按默认值处理。 &lt;br&gt;默认值：DEFAULT。 |
 
 ## toDataURL

@@ -12,7 +12,7 @@ import { notificationManager } from 'kits/@kit.NotificationKit';
 function setPriorityStrategyByBundles(strategies: Map<BundleOption, long>): Promise<void>
 ```
 
-批量设置应用通知优先策略。使用Promise异步回调。
+Sets the application priority notification strategies in batches. This API uses a promise to return the result.
 
 **Since:** 23
 
@@ -32,24 +32,24 @@ function setPriorityStrategyByBundles(strategies: Map<BundleOption, long>): Prom
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| strategies | ArkTS-Dyn: Map&lt;BundleOption, number&gt;  <br>ArkTS-Sta：Map&lt;BundleOption, long&gt; | Yes | 应用通知优先策略的键值对集合。与 PriorityStrategyStatus的枚举进行按位或运算得到值。 |
+| strategies | ArkTS-Dyn: Map&lt;BundleOption, number&gt;  <br>ArkTS-Sta：Map&lt;BundleOption, long&gt; | Yes | Key-value pair set of the application notification priority strategies. This parameter is obtained by performing the bitwise OR operation with the enumeration of [PriorityStrategyStatus](arkts-notification-notificationmanager-prioritystrategystatus-e-sys.md). |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise对象，无返回结果。 |
+| Promise&lt;void&gt; | Promise that returns no value. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 1600012 | No memory space. |
-| 201 | Permission denied. |
-| 1600001 | Internal error. |
-| 202 | Not system application to call the interface. |
-| 1600003 | Failed to connect to the service. |
-| 17700001 | The specified bundle name was not found. |
+| [1600012](../errorcode-notification.md#1600012-insufficient-memory-space) | No memory space. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
+| [1600001](../errorcode-notification.md#1600001-internal-error) | Internal error. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system application to call the interface. |
+| [1600003](../errorcode-notification.md#1600003-failed-to-connect-to-the-notification-service) | Failed to connect to the service. |
+| [17700001](../../apis-ability-kit/errorcode-bundle.md#17700001-bundle-name-does-not-exist) | The specified bundle name was not found. |
 
 ## Examples
 

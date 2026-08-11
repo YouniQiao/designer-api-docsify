@@ -1,6 +1,6 @@
 # Vector4
 
-用于表示包含x、y、z、w四个值的向量。
+Defined a vector with four number values.
 
 **Since:** 26.0.0
 
@@ -16,9 +16,7 @@
 w: double
 ```
 
-向量w轴方向的值。
-
-取值范围：(-∞, +∞)
+Value for w-axis of the vector.Value range: (-∞, +∞).
 
 **Type:** double
 
@@ -38,9 +36,7 @@ w: double
 x: double
 ```
 
-向量x轴方向的值。
-
-取值范围：(-∞, +∞)
+Value for x-axis of the vector.Value range:(-∞, +∞).
 
 **Type:** double
 
@@ -60,9 +56,7 @@ x: double
 y: double
 ```
 
-向量y轴方向的值。
-
-取值范围：(-∞, +∞)
+Value for y-axis of the vector.Value range: (-∞, +∞).
 
 **Type:** double
 
@@ -82,9 +76,7 @@ y: double
 z: double
 ```
 
-向量z轴方向的值。
-
-取值范围：(-∞, +∞)
+Value for z-axis of the vector.Value range: (-∞, +∞).
 
 **Type:** double
 

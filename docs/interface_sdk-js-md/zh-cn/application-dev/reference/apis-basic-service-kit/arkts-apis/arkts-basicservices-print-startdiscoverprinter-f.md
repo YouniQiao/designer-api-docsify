@@ -1,11 +1,5 @@
 # startDiscoverPrinter
 
-## 导入模块
-
-```TypeScript
-import { print } from 'kits/@kit.BasicServicesKit';
-```
-
 ## startDiscoverPrinter
 
 ```TypeScript
@@ -37,22 +31,22 @@ function startDiscoverPrinter(extensionList: Array<string>, callback: AsyncCallb
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 201 | the application does not have permission to call this function. |
-| 202 | not system application<br>**适用版本：** 10 - 19 |
+| [201](../../errorcode-universal.md#201-权限校验失败) | the application does not have permission to call this function. |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | not system application<br>**适用版本：** 10 - 19 |
 
 ## 示例
 
 ```TypeScript
 import { print } from '@kit.BasicServicesKit';
-import { BusinessError } from '@kit.BasicServicesKit';
+import { BusinessError } from '@ohos.base';
 
 // 加载所有打印扩展能力
 let extensionList: string[] = [];
 // 通过指定自己应用的包名，在发现时加载自己的打印扩展能力
 // let extensionList: string[] = ['com.myapplication.test'];
-print.startDiscoverPrinter(extensionList, (error: BusinessError) => {
-    if (error) {
-        console.error(`Failed to startDiscoverPrinter. Code: ${error.code}, message: ${error.message}`);
+print.startDiscoverPrinter(extensionList, (err: BusinessError) => {
+    if (err) {
+        console.error('failed to start Discover Printer because : ' + JSON.stringify(err));
     } else {
         console.info('start Discover Printer success');
     }
@@ -96,14 +90,14 @@ function startDiscoverPrinter(extensionList: Array<string>): Promise<void>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 201 | the application does not have permission to call this function. |
-| 202 | not system application<br>**适用版本：** 10 - 19 |
+| [201](../../errorcode-universal.md#201-权限校验失败) | the application does not have permission to call this function. |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | not system application<br>**适用版本：** 10 - 19 |
 
 ## 示例
 
 ```TypeScript
 import { print } from '@kit.BasicServicesKit';
-import { BusinessError } from '@kit.BasicServicesKit';
+import { BusinessError } from '@ohos.base';
 
 // 加载所有打印扩展能力
 let extensionList: string[] = [];
@@ -112,7 +106,7 @@ let extensionList: string[] = [];
 print.startDiscoverPrinter(extensionList).then(() => {
     console.info('start Discovery success');
 }).catch((error: BusinessError) => {
-    console.error(`Failed to startDiscoverPrinter. Code: ${error.code}, message: ${error.message}`);
+    console.error('failed to start Discovery because : ' + JSON.stringify(error));
 })
 ```
 

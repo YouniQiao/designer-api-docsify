@@ -1,6 +1,6 @@
 # GatheringPolicyType (System API)
 
-DLP沙箱聚合策略类型的枚举。沙箱聚合表示同一权限类型的DLP文件，在同一个沙箱内打开，例如在同一个沙箱内使用不同tab页打开；沙箱非聚合表示不同DLP文件在不同沙箱打开。
+Enumerates the DLP sandbox gathering policy types. **GATHERING** allows the DLP files of the same permission type to be opened in a sandbox. For example, open different tab pages in a sandbox. **NON_GATHERING** allows different DLP files to be opened in different sandboxes.
 
 **Since:** 10
 
@@ -18,7 +18,7 @@ DLP沙箱聚合策略类型的枚举。沙箱聚合表示同一权限类型的DL
 GATHERING = 1
 ```
 
-表示沙箱聚合。
+Allows the DLP files of the same permission type to be opened in a sandbox. For example, the files of the same permission type can be opened in tab pages of a window.
 
 **Since:** 10
 
@@ -36,7 +36,7 @@ GATHERING = 1
 NON_GATHERING = 2
 ```
 
-表示沙箱非聚合。
+Allows the DLP files of different permission types to be opened in different sandboxes.
 
 **Since:** 10
 

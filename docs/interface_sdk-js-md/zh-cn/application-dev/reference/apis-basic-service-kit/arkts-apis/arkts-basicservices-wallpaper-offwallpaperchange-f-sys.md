@@ -1,11 +1,5 @@
 # offWallpaperChange（系统接口）
 
-## 导入模块
-
-```TypeScript
-import { wallpaper } from 'kits/@kit.BasicServicesKit';
-```
-
 ## offWallpaperChange
 
 ```TypeScript
@@ -34,5 +28,5 @@ function offWallpaperChange(callback?: WallpaperChangeObserver): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 202 | permission verification failed, application which is not a system application uses system API. |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | permission verification failed, application which is not a system application uses system API. |
 

@@ -10,12 +10,6 @@
 
 **系统能力：** SystemCapability.Graphics.Drawing
 
-## 导入模块
-
-```TypeScript
-import { text } from 'kits/@kit.ArkGraphics2D';
-```
-
 ## enabled
 
 ```TypeScript
@@ -84,7 +78,7 @@ fontStyle?: FontStyle
 
 字体样式，默认为常规样式。
 
-**类型：** [FontStyle](arkts-arkgraphics2d-text-fontstyle-e.md)
+**类型：** [FontStyle](../../apis-arkui/arkts-apis/arkts-arkui-enums-fontstyle-e.md)
 
 **起始版本：** 12
 

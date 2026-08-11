@@ -1,6 +1,6 @@
 # TextPickerDialogOptionsExt
 
-文本选择器弹窗的参数继承自[TextPickerOptions](arkts-arkui-textpicker-textpickeroptions-i.md)。
+Defines the TextPickerDialogOptionsExt for Text Picker Dialog.
 
 **Inheritance/Implementation:** TextPickerDialogOptionsExt extends [TextPickerOptions](arkts-arkui-textpicker-textpickeroptions-i.md)
 
@@ -18,7 +18,7 @@
 distortionMode?: DistortionMode
 ```
 
-设置对话框的形变动画模式。
+Sets the distortion animation Mode of the dialog.
 
 **Type:** [DistortionMode](../arkts-components/arkts-arkui-distortionmode-e-sys.md)
 
@@ -42,7 +42,7 @@ distortionMode?: DistortionMode
 edgeLightMode?: EdgeLightMode
 ```
 
-设置对话框的边缘光动画模式。
+Sets the edgeLight animation Mode of the dialog.
 
 **Type:** [EdgeLightMode](../arkts-components/arkts-arkui-edgelightmode-e-sys.md)
 

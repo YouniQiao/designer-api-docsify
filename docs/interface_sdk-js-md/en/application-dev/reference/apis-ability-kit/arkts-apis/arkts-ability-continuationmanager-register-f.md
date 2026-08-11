@@ -12,7 +12,7 @@ import { continuationManager } from 'kits/@kit.AbilityKit';
 function register(callback: AsyncCallback<number>): void
 ```
 
-注册流转管理服务，并获取对应的注册token，无过滤条件，使用AsyncCallback方式作为异步方法。
+Registers the continuation management service and obtains a token. This API does not involve any filter parameters and uses an asynchronous callback to return the result.
 
 **Since:** 8
 
@@ -32,7 +32,7 @@ function register(callback: AsyncCallback<number>): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;number&gt; | Yes | AsyncCallback形式返回流转管理服务连接后生成的token。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;number&gt; | Yes | Callback used to return the token generated after the continuation management service is connected. |
 
 ## Examples
 
@@ -57,7 +57,7 @@ continuationManager.register((err, data) => {
 function register(options: ContinuationExtraParams, callback: AsyncCallback<number>): void
 ```
 
-连接流转管理服务，并获取对应的注册token，使用AsyncCallback方式作为异步方法。
+Registers the continuation management service and obtains a token. This API uses an asynchronous callback to return  the result.
 
 **Since:** 8
 
@@ -77,8 +77,8 @@ function register(options: ContinuationExtraParams, callback: AsyncCallback<numb
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| options | [ContinuationExtraParams](arkts-ability-continuationmanager-continuationextraparams-t.md) | Yes | 过滤可选择设备列表的额外参数。 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;number&gt; | Yes | AsyncCallback形式返回流转管理服务连接后生成的token。 |
+| options | [ContinuationExtraParams](arkts-ability-continuationmanager-continuationextraparams-t.md) | Yes | Extra parameters used to filter the list of available devices. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;number&gt; | Yes | Callback used to return the token generated after the continuation management service is connected. |
 
 ## Examples
 
@@ -107,7 +107,7 @@ continuationManager.register(
 function register(options?: ContinuationExtraParams): Promise<number>
 ```
 
-连接流转管理服务，并获取对应的注册token，使用Promise方式作为异步方法。
+Registers the continuation management service and obtains a token. This API uses a promise to return the result.
 
 **Since:** 8
 
@@ -127,13 +127,13 @@ function register(options?: ContinuationExtraParams): Promise<number>
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| options | [ContinuationExtraParams](arkts-ability-continuationmanager-continuationextraparams-t.md) | No | 过滤可选择设备列表的额外参数，该参数可缺省。 |
+| options | [ContinuationExtraParams](arkts-ability-continuationmanager-continuationextraparams-t.md) | No | Extra parameters used to filter the list of available devices. This parameter can be null. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;number&gt; | Promise形式返回流转管理服务连接后生成的token。 |
+| Promise&lt;number&gt; | Promise used to return the token generated after the continuation management service is connected. |
 
 ## Examples
 

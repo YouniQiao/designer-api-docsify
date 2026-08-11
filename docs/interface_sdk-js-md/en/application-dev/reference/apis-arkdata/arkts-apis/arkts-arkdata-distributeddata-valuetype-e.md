@@ -1,6 +1,6 @@
 # ValueType
 
-数据类型枚举。
+Enumerates the data types.
 
 **Since:** 7
 
@@ -20,7 +20,7 @@
 STRING = 0
 ```
 
-表示值类型为字符串。
+String.
 
 **Since:** 7
 
@@ -40,7 +40,7 @@ STRING = 0
 INTEGER = 1
 ```
 
-表示值类型为整数。
+Integer.
 
 **Since:** 7
 
@@ -60,7 +60,7 @@ INTEGER = 1
 FLOAT = 2
 ```
 
-表示值类型为浮点数。
+Float (single-precision floating point).
 
 **Since:** 7
 
@@ -80,7 +80,7 @@ FLOAT = 2
 BYTE_ARRAY = 3
 ```
 
-表示值类型为字节数组。
+Byte array.
 
 **Since:** 7
 
@@ -100,7 +100,7 @@ BYTE_ARRAY = 3
 BOOLEAN = 4
 ```
 
-表示值类型为布尔值。
+Boolean.
 
 **Since:** 7
 
@@ -120,7 +120,7 @@ BOOLEAN = 4
 DOUBLE = 5
 ```
 
-表示值类型为双浮点数。
+Double (double-precision floating point).
 
 **Since:** 7
 

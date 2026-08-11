@@ -1,8 +1,9 @@
 # BundleInfo
 
-> **说明：**
+> **NOTE：**
 > 
-> 从API version 7开始支持，从API version 9开始废弃，建议使用[bundleManager-BundleInfo](arkts-ability-bundleinfo-bundleinfo-depr-i.md)替代。
+> This API has been supported since API version 7 and deprecated since API version 9. You are advised to use
+> [bundleManager-BundleInfo](arkts-ability-bundleinfo-bundleinfo-depr-i.md) instead.
 
 **Since:** 7
 
@@ -22,10 +23,10 @@
 readonly abilityInfos: Array<AbilityInfo>
 ```
 
-Ability的配置信息
+Ability configuration information.
 
-通过调用  
-[bundle.getBundleInfo](arkts-ability-bundle-getbundleinfo-f.md#getbundleinfo)接口时，传入GET_BUNDLE_WITH_ABILITIES获取。
+The value is obtained by passing in GET_BUNDLE_WITH_ABILITIES to  
+[bundle.getBundleInfo](arkts-ability-bundle-getbundleinfo-f.md#getbundleinfo).
 
 **Type:** Array&lt;[AbilityInfo](arkts-ability-abilityinfo-abilityinfo-depr-i.md)&gt;
 
@@ -49,7 +50,7 @@ Ability的配置信息
 readonly appId: string
 ```
 
-应用包里应用程序的id。
+ID of the application to which the bundle belongs.
 
 **Type:** string
 
@@ -73,7 +74,7 @@ readonly appId: string
 readonly appInfo: ApplicationInfo
 ```
 
-应用程序的配置信息。
+Application configuration information.
 
 **Type:** [ApplicationInfo](arkts-ability-applicationinfo-applicationinfo-depr-i.md)
 
@@ -97,7 +98,7 @@ readonly appInfo: ApplicationInfo
 readonly compatibleVersion: number
 ```
 
-运行应用包所需要最低的SDK版本号。
+Earliest SDK version required for running the bundle.
 
 **Type:** number
 
@@ -119,7 +120,7 @@ readonly compatibleVersion: number
 readonly cpuAbi: string
 ```
 
-应用包的cpuAbi信息。
+CPU and ABI information of the bundle.
 
 **Type:** string
 
@@ -141,7 +142,7 @@ readonly cpuAbi: string
 readonly entryInstallationFree: boolean
 ```
 
-Entry是否支持免安装，取值为true表示支持免安装，取值为false表示不支持免安装。
+Whether installation-free is supported for the entry module. **true** if supported, **false** otherwise.
 
 **Type:** boolean
 
@@ -163,7 +164,7 @@ Entry是否支持免安装，取值为true表示支持免安装，取值为false
 readonly entryModuleName: string
 ```
 
-Entry的模块名称。
+Name of the entry module.
 
 **Type:** string
 
@@ -185,7 +186,7 @@ Entry的模块名称。
 readonly hapModuleInfos: Array<HapModuleInfo>
 ```
 
-模块的配置信息。
+Module configuration information.
 
 **Type:** Array&lt;[HapModuleInfo](arkts-ability-hapmoduleinfo-hapmoduleinfo-depr-i.md)&gt;
 
@@ -209,7 +210,7 @@ readonly hapModuleInfos: Array<HapModuleInfo>
 readonly installTime: number
 ```
 
-HAP安装时间，单位：毫秒。
+Time when the HAP file was installed.
 
 **Type:** number
 
@@ -233,7 +234,7 @@ HAP安装时间，单位：毫秒。
 readonly isCompressNativeLibs: boolean
 ```
 
-是否压缩应用包的本地库，取值为true表示压缩应用包的本地库，取值为false表示不压缩应用包的本地库。
+Whether the native libraries in the bundle are compressed. **true** if compressed, **false** otherwise.
 
 **Type:** boolean
 
@@ -255,7 +256,7 @@ readonly isCompressNativeLibs: boolean
 readonly isSilentInstallation: string
 ```
 
-是否通过静默安装。
+Whether the application can be installed in silent mode.
 
 **Type:** string
 
@@ -277,7 +278,7 @@ readonly isSilentInstallation: string
 readonly minCompatibleVersionCode: number
 ```
 
-分布式场景下的应用包兼容的最低版本。
+Earliest version compatible with the bundle in the distributed scenario.
 
 **Type:** number
 
@@ -301,7 +302,7 @@ readonly minCompatibleVersionCode: number
 readonly name: string
 ```
 
-应用包的名称。
+Bundle name.
 
 **Type:** string
 
@@ -325,10 +326,10 @@ readonly name: string
 readonly reqPermissionDetails: Array<ReqPermissionDetail>
 ```
 
-应用运行时需向系统申请的权限集合的详细信息
+Detailed information of the permissions to request from the system.
 
-通过调用  
-[bundle.getBundleInfo](arkts-ability-bundle-getbundleinfo-f.md#getbundleinfo)接口时，传入GET_BUNDLE_WITH_REQUESTED_PERMISSION获取。
+The value is obtained by passing in GET_BUNDLE_WITH_REQUESTED_PERMISSION to  
+[bundle.getBundleInfo](arkts-ability-bundle-getbundleinfo-f.md#getbundleinfo).
 
 **Type:** Array&lt;ReqPermissionDetail&gt;
 
@@ -352,7 +353,7 @@ readonly reqPermissionDetails: Array<ReqPermissionDetail>
 readonly reqPermissionStates: Array<number>
 ```
 
-申请权限的授予状态。0表示申请成功，-1表示申请失败。
+Permission grant state. The value **0** means that the request is successful, and **-1** means the opposite.
 
 **Type:** Array&lt;number&gt;
 
@@ -376,10 +377,10 @@ readonly reqPermissionStates: Array<number>
 readonly reqPermissions: Array<string>
 ```
 
-应用运行时需向系统申请的权限集合
+Permissions to request from the system for running the application.
 
-通过调用  
-[bundle.getBundleInfo](arkts-ability-bundle-getbundleinfo-f.md#getbundleinfo)接口时，传入GET_BUNDLE_WITH_REQUESTED_PERMISSION获取。
+The value is obtained by passing in GET_BUNDLE_WITH_REQUESTED_PERMISSION to  
+[bundle.getBundleInfo](arkts-ability-bundle-getbundleinfo-f.md#getbundleinfo).
 
 **Type:** Array&lt;string&gt;
 
@@ -403,7 +404,7 @@ readonly reqPermissions: Array<string>
 readonly targetVersion: number
 ```
 
-运行应用包所需要最高SDK版本号。
+Latest SDK version required for running the bundle.
 
 **Type:** number
 
@@ -427,7 +428,7 @@ readonly targetVersion: number
 readonly type: string
 ```
 
-应用包类型。
+Bundle type.
 
 **Type:** string
 
@@ -451,7 +452,7 @@ readonly type: string
 readonly uid: number
 ```
 
-应用包里应用程序的uid。
+UID of the application to which the bundle belongs.
 
 **Type:** number
 
@@ -475,7 +476,7 @@ readonly uid: number
 readonly updateTime: number
 ```
 
-HAP更新时间，单位：毫秒。
+Time when the HAP file was updated.
 
 **Type:** number
 
@@ -499,7 +500,7 @@ HAP更新时间，单位：毫秒。
 readonly vendor: string
 ```
 
-应用包的供应商。
+Vendor of the bundle.
 
 **Type:** string
 
@@ -523,7 +524,7 @@ readonly vendor: string
 readonly versionCode: number
 ```
 
-应用包的版本号。
+Version number of the bundle.
 
 **Type:** number
 
@@ -547,7 +548,7 @@ readonly versionCode: number
 readonly versionName: string
 ```
 
-应用包的版本文本描述信息。
+Version description of the bundle.
 
 **Type:** string
 

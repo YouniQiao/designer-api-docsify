@@ -1,6 +1,6 @@
 # KeyPressedConfig
 
-按键事件消费设置。
+Sets the key event consumption configuration.
 
 **Since:** 16
 
@@ -22,11 +22,11 @@ import { inputConsumer } from 'kits/@kit.InputKit';
 action: int
 ```
 
-订阅指定的按键事件。
+Subscription type.
 
-**说明：** 从API version 21开始，支持取值为1和2，取值为1表示订阅按键按下事件，取值为2表示同时订阅按键按下事件和按键抬起事件。
+**Note：**: Since API version 21, the value of this parameter can be **1** or **2**. The value **1** indicates subscription to only key press events, and the value **2** indicates subscription to both key press and release events.
 
-对于API version 20及之前的版本，仅支持取值为1，表示订阅按键按下事件。
+In API version 20 or earlier versions, the value of this parameter can only be set to **1**, indicating subscription to only key press events.
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
@@ -44,7 +44,8 @@ action: int
 isRepeat: boolean
 ```
 
-是否上报重复的按键事件。true表示上报，false表示不上报，默认值为true。
+Whether to report repeated key events. The value **true** means to report repeated key events, and the value  
+**false** means the opposite. The default value is **true**.
 
 **Type:** boolean
 
@@ -62,18 +63,18 @@ isRepeat: boolean
 key: int
 ```
 
-按键键值。
+Key value.
 
-**说明：** 从API version 26.0.0开始，新增支持[KEYCODE_FINGERPRINT_SLIDE_UP](arkts-input-multimodalinput-keycode-keycode-e.md)键和
-[KEYCODE_FINGERPRINT_SLIDE_DOWN](arkts-input-multimodalinput-keycode-keycode-e.md)键，非设备通用键值，使用前请判断当前设备是否支持相关按键事件上报，请参考  
-[优先响应系统功能键开发指导](../../../device/input/keypressed-guidelines.md)。
+**Note:** Since API version 26.0.0, the
+[KEYCODE_FINGERPRINT_SLIDE_UP](arkts-input-multimodalinput-keycode-keycode-e.md) and  
+[KEYCODE_FINGERPRINT_SLIDE_DOWN](arkts-input-multimodalinput-keycode-keycode-e.md) keys are supported. The keys are not universal device keys. Before using them, check whether the current device supports the reporting of related key events. For details, see  
+[Preferential Response of System Function Keys](../../../device/input/keypressed-guidelines.md).
 
-从API version 21开始，新增支持[KEYCODE_MEDIA_PLAY_PAUSE](arkts-input-multimodalinput-keycode-keycode-e.md)键、  
-[KEYCODE_MEDIA_NEXT](arkts-input-multimodalinput-keycode-keycode-e.md)键和  
-[KEYCODE_MEDIA_PREVIOUS](arkts-input-multimodalinput-keycode-keycode-e.md)键。
+Since API version 21, the [KEYCODE_MEDIA_PLAY_PAUSE](arkts-input-multimodalinput-keycode-keycode-e.md),  
+[KEYCODE_MEDIA_NEXT](arkts-input-multimodalinput-keycode-keycode-e.md), and  
+[KEYCODE_MEDIA_PREVIOUS](arkts-input-multimodalinput-keycode-keycode-e.md) keys are supported.
 
-对于API version 20及之前的版本，仅支持[KEYCODE_VOLUME_UP](arkts-input-multimodalinput-keycode-keycode-e.md)键和  
-[KEYCODE_VOLUME_DOWN](arkts-input-multimodalinput-keycode-keycode-e.md)键。
+In API version 20 or earlier versions, only the [KEYCODE_VOLUME_UP](arkts-input-multimodalinput-keycode-keycode-e.md)and [KEYCODE_VOLUME_DOWN](arkts-input-multimodalinput-keycode-keycode-e.md) keys are supported.
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 

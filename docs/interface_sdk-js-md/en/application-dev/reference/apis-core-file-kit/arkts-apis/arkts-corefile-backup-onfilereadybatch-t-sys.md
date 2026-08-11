@@ -4,7 +4,7 @@
 type OnFileReadyBatch = (error: BusinessError<void>, files: Array<File>) => void
 ```
 
-一批文件准备好发送给客户端时触发的回调函数。
+Function that returns array of file handle.
 
 **Since:** 26.0.0
 
@@ -22,6 +22,6 @@ type OnFileReadyBatch = (error: BusinessError<void>, files: Array<File>) => void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| error | [BusinessError](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-businesserror-c.md)&lt;void&gt; | Yes | 获取文件句柄失败时返回的错误对象。 |
-| files | Array&lt;File&gt; | Yes | 获取到的文件句柄数组。 |
+| error | [BusinessError](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-businesserror-c.md)&lt;void&gt; | Yes | the error that triggers the callback. |
+| files | Array&lt;File&gt; | Yes | file handle. |
 

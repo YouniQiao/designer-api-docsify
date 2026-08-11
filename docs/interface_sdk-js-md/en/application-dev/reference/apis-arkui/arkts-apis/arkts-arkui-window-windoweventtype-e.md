@@ -1,6 +1,6 @@
 # WindowEventType
 
-窗口生命周期。
+Enumerates the window lifecycle states.
 
 **Since:** 10
 
@@ -16,7 +16,7 @@
 WINDOW_SHOWN = 1
 ```
 
-切到前台。
+The window is running in the foreground.
 
 **Since:** 10
 
@@ -34,7 +34,7 @@ WINDOW_SHOWN = 1
 WINDOW_ACTIVE = 2
 ```
 
-获焦状态。
+The window gains focus.
 
 **Since:** 10
 
@@ -52,7 +52,7 @@ WINDOW_ACTIVE = 2
 WINDOW_INACTIVE = 3
 ```
 
-失焦状态。
+The window loses focus.
 
 **Since:** 10
 
@@ -70,7 +70,7 @@ WINDOW_INACTIVE = 3
 WINDOW_HIDDEN = 4
 ```
 
-切到后台。
+The window is running in the background.
 
 **Since:** 10
 
@@ -88,7 +88,7 @@ WINDOW_HIDDEN = 4
 WINDOW_DESTROYED = 7
 ```
 
-窗口销毁。
+The window is destroyed.
 
 **Since:** 11
 

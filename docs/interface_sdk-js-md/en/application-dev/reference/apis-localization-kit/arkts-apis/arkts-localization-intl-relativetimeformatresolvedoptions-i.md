@@ -1,6 +1,6 @@
 # RelativeTimeFormatResolvedOptions
 
-相对时间格式化对象的格式化配置项。
+Represents the formatting options for the **RelativeTimeFormat** object.
 
 **Since:** 8
 
@@ -26,7 +26,7 @@ import { intl } from 'kits/@kit.LocalizationKit';
 locale: string
 ```
 
-表示区域ID的字符串，包括语言以及可选的脚本和区域。
+Locale ID, including the language, script, and region.
 
 **Type:** string
 
@@ -50,9 +50,14 @@ locale: string
 numberingSystem: string
 ```
 
-使用的数字系统，取值包括：
+Numbering system. The value can be:
 
-"adlm", "ahom", "arab", "arabext", "bali", "beng", "bhks", "brah", "cakm", "cham", "deva", "diak", "fullwide","gong", "gonm", "gujr", "guru", "hanidec", "hmng", "hmnp", "java", "kali", "khmr", "knda", "lana", "lanatham","laoo", "latn", "lepc", "limb", "mathbold", "mathdbl", "mathmono", "mathsanb", "mathsans", "mlym", "modi", "mong","mroo", "mtei", "mymr", "mymrshan", "mymrtlng", "newa", "nkoo", "olck", "orya", "osma", "rohg", "saur", "segment","shrd", "sind", "sinh", "sora", "sund", "takr", "talu", "tamldec", "telu", "thai", "tibt", "tirh", "vaii","wara", "wcho"。
+**adlm**, **ahom**, **arab**, **arabext**, **bali**, **beng**, **bhks**, **brah**, **cakm**, **cham**, **deva**,   
+**diak**, **fullwide**, **gong**, **gonm**, **gujr**, **guru**, **hanidec**, **hmng**, **hmnp**, **java**,   
+**kali**, **khmr**, **knda**, **lana**, **lanatham**, **laoo**, **latn**, **lepc**, **limb**, **mathbold**,   
+**mathdbl**, **mathmono**, **mathsanb**, **mathsans**, **mlym**, **modi**, **mong**, **mroo**, **mtei**, **mymr**, **mymrshan**, **mymrtlng**, **newa**, **nkoo**, **olck**, **orya**, **osma**, **rohg**, **saur**, **segment**,   
+**shrd**, **sind**, **sinh**, **sora**, **sund**, **takr**, **talu**, **tamldec**, **telu**, **thai**, **tibt**,   
+**tirh**, **vaii**, **wara**, or **wcho**.
 
 **Type:** string
 
@@ -76,9 +81,10 @@ numberingSystem: string
 numeric: string
 ```
 
-输出消息的格式，表示格式化结果中是否使用数字表示相对日期或时间。取值包括："always", "auto"。
+Format of the output result. It determines whether numeric values are used to represent relative dates or times in the formatting result. The value can be **always** or **auto**.
 
-不同取值的显示效果请参考[附录表23](../../../reference/apis-localization-kit/js-apis-intl.md#附录)。
+For details about their display effects, see   
+[Table 23](../../../reference/apis-localization-kit/js-apis-intl.md#appendix).
 
 **Type:** string
 
@@ -102,9 +108,10 @@ numeric: string
 style: string
 ```
 
-国际化消息的长度，取值包括："long", "short", "narrow"。
+Length of an internationalized message. The value can be **long**, **short**, or **narrow**.
 
-不同取值的显示效果请参考[附录表24](../../../reference/apis-localization-kit/js-apis-intl.md#附录)。
+For details about their display effects, see   
+[Table 24](../../../reference/apis-localization-kit/js-apis-intl.md#appendix).
 
 **Type:** string
 

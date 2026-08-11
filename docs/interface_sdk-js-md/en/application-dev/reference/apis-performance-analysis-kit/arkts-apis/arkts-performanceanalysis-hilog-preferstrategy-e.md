@@ -1,6 +1,6 @@
 # PreferStrategy
 
-偏好策略。
+Enumerates the preference strategies.
 
 **Since:** 21
 
@@ -16,7 +16,7 @@
 UNSET_LOGLEVEL = 0
 ```
 
-清除设置, 实际生效的最低日志级别是系统控制的最低级别。
+The setting is cleared. The system-controlled minimum log level takes effect.
 
 **Since:** 21
 
@@ -34,7 +34,7 @@ UNSET_LOGLEVEL = 0
 PREFER_CLOSE_LOG = 1
 ```
 
-实际生效的最低日志级别是新设置的级别和系统控制的最低级别两个值的较大值。
+The larger value of the new log level and the system-controlled minimum log level takes effect.
 
 **Since:** 21
 
@@ -52,7 +52,7 @@ PREFER_CLOSE_LOG = 1
 PREFER_OPEN_LOG = 2
 ```
 
-实际生效的最低日志级别是新设置的级别和系统控制的最低级别两个值的较小值。
+The smaller value of the new log level and the system-controlled minimum log level takes effect.
 
 **Since:** 21
 

@@ -6,7 +6,7 @@
 function setSlotByBundle(bundle: BundleOption, slot: NotificationSlot, callback: AsyncCallback<void>): void
 ```
 
-设定指定应用的通知通道（Callback形式）。
+Sets the notification slot for a specified application.This API uses an asynchronous callback to return the result.
 
 **Since:** 7
 
@@ -28,9 +28,9 @@ function setSlotByBundle(bundle: BundleOption, slot: NotificationSlot, callback:
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| bundle | [BundleOption](arkts-notification-notificationextensionsubscription-bundleoption-t.md) | Yes | 指定应用的包信息。 |
-| slot | [NotificationSlot](arkts-notification-notificationslot-notificationslot-i-sys.md) | Yes | 通知通道。 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | 设定通知通道回调函数。 |
+| bundle | [BundleOption](arkts-notification-notificationextensionsubscription-bundleoption-t.md) | Yes | Bundle information of the application. |
+| slot | [NotificationSlot](arkts-notification-notificationslot-notificationslot-i-sys.md) | Yes | Notification slot. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. |
 
 
 ## setSlotByBundle
@@ -39,7 +39,7 @@ function setSlotByBundle(bundle: BundleOption, slot: NotificationSlot, callback:
 function setSlotByBundle(bundle: BundleOption, slot: NotificationSlot): Promise<void>
 ```
 
-设定指定应用的通知通道（Promise形式）。
+Sets the notification slot for a specified application. This API uses a promise to return the result.
 
 **Since:** 7
 
@@ -61,12 +61,12 @@ function setSlotByBundle(bundle: BundleOption, slot: NotificationSlot): Promise<
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| bundle | [BundleOption](arkts-notification-notificationextensionsubscription-bundleoption-t.md) | Yes | 指定应用的包信息。 |
-| slot | [NotificationSlot](arkts-notification-notificationslot-notificationslot-i-sys.md) | Yes | 通知通道。 |
+| bundle | [BundleOption](arkts-notification-notificationextensionsubscription-bundleoption-t.md) | Yes | Bundle information of the application. |
+| slot | [NotificationSlot](arkts-notification-notificationslot-notificationslot-i-sys.md) | Yes | Notification slot. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | 无返回结果的Promise对象。 |
+| Promise&lt;void&gt; | the promise returned by the function. |
 

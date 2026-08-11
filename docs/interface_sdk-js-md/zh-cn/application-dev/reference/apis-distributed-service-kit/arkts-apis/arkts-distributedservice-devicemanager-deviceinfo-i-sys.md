@@ -16,12 +16,6 @@
 
 **系统接口：** 此接口为系统接口。
 
-## 导入模块
-
-```TypeScript
-import { deviceManager } from 'kits/@kit.DistributedServiceKit';
-```
-
 ## authForm
 
 ```TypeScript
@@ -100,7 +94,7 @@ deviceType: DeviceType
 
 设备类型。
 
-**类型：** [DeviceType](../../apis-avsession-kit/arkts-apis/arkts-avsession-avsession-devicetype-e.md)
+**类型：** [DeviceType](../../apis-localization-kit/arkts-apis/arkts-localization-resourcemanager-devicetype-e.md)
 
 **起始版本：** 7
 

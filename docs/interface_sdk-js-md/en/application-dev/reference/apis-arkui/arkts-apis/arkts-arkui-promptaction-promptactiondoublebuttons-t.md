@@ -7,7 +7,7 @@ export type PromptActionDoubleButtons = [
     ]
 ```
 
-菜单中的菜单项按钮，仅支持2个按钮。
+Defines the two-buttons array.
 
 **Since:** 23
 

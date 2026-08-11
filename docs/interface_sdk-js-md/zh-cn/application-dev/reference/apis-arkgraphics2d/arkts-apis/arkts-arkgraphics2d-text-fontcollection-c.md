@@ -12,12 +12,6 @@
 
 **系统能力：** SystemCapability.Graphics.Drawing
 
-## 导入模块
-
-```TypeScript
-import { text } from 'kits/@kit.ArkGraphics2D';
-```
-
 ## clearCaches
 
 ```TypeScript
@@ -40,6 +34,8 @@ clearCaches(): void
 
 ## 示例
 
+ArkTS-Dyn示例：
+
 ```TypeScript
 import { text } from '@kit.ArkGraphics2D'
 
@@ -49,6 +45,25 @@ struct Index {
   build() {
     Column() {
       Button().onClick(() => {
+        text.FontCollection.getGlobalInstance().clearCaches();
+      })
+    }
+  }
+}
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+import { Entry, Component, Column, Button, ClickEvent} from '@ohos.arkui.component'
+import { text } from "@kit.ArkGraphics2D"
+
+@Entry
+@Component
+struct Index {
+  build() {
+    Column() {
+      Button("Click").onClick((e: ClickEvent) => {
         text.FontCollection.getGlobalInstance().clearCaches();
       })
     }
@@ -82,6 +97,8 @@ static getGlobalInstance(): FontCollection
 
 ## 示例
 
+ArkTS-Dyn示例：
+
 ```TypeScript
 import { text } from '@kit.ArkGraphics2D'
 
@@ -95,7 +112,31 @@ struct Index {
   fun: Function = textFunc;
   build() {
     Column() {
-      Button().onClick(() => {
+      Button("Click").onClick(() => {
+        this.fun();
+      })
+    }
+  }
+}
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+import { Entry, Component, Column, Button} from '@ohos.arkui.component'
+import { text } from "@kit.ArkGraphics2D"
+
+function textFunc() {
+  let fontCollection = text.FontCollection.getGlobalInstance();
+}
+
+@Entry
+@Component
+struct Index {
+  fun: () => void = textFunc;
+  build() {
+    Column() {
+      Button("Click").onClick(() => {
         this.fun();
       })
     }
@@ -173,9 +214,11 @@ loadFont(name: string, path: string | Resource): Promise<void>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
 
 ## 示例
+
+ArkTS-Dyn示例：
 
 ```TypeScript
 import { text } from '@kit.ArkGraphics2D'
@@ -190,6 +233,34 @@ struct RenderTest {
       console.info(`Succeeded in doing loadFont ${JSON.stringify(data)} `);
     }).catch((error: BusinessError) => {
       console.error(`Failed to do loadFont, error: ${error.code} message: ${error.message}`);
+    });
+  }
+
+  aboutToAppear() {
+    this.loadFontPromise();
+  }
+
+  build() {
+  }
+}
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+import { Entry, Component, Column } from '@ohos.arkui.component'
+import { text } from "@kit.ArkGraphics2D"
+
+let fontCollection: text.FontCollection = new text.FontCollection();
+
+@Entry
+@Component
+struct RenderTest {
+  async loadFontPromise() {
+    fontCollection.loadFont('testName', 'file:///system/fonts/a.ttf').then(() => {
+      console.info(`Succeeded in doing loadFont`);
+    }).catch((error: Error) => {
+      console.error(`Failed to do loadFont, error: ${JSON.stringify(error)} message: ${error.message}`);
     });
   }
 
@@ -231,8 +302,47 @@ loadFontSync(name: string, path: string | Resource): void
 
 ## 示例
 
+ArkTS-Dyn示例：
+
 ```TypeScript
 import { text } from '@kit.ArkGraphics2D'
+
+let fontCollection: text.FontCollection = new text.FontCollection();
+
+@Entry
+@Component
+struct RenderTest {
+  LoadFontSyncTest() {
+    fontCollection.loadFontSync('Clock_01', 'file:///system/fonts/HarmonyClock_01.ttf')
+    let fontFamilies: Array<string> = ["Clock_01"]
+    let myTextStyle: text.TextStyle = {
+      fontFamilies: fontFamilies
+    };
+    let myParagraphStyle: text.ParagraphStyle = {
+      textStyle: myTextStyle,
+    }
+    let paragraphBuilder: text.ParagraphBuilder = new text.ParagraphBuilder(myParagraphStyle, fontCollection);
+
+    let textData = "测试 loadFontSync 加载字体HarmonyClock_01.ttf";
+    paragraphBuilder.addText(textData);
+    let paragraph: text.Paragraph = paragraphBuilder.build();
+    paragraph.layoutSync(600);
+  }
+
+  aboutToAppear() {
+    this.LoadFontSyncTest();
+  }
+
+  build() {
+  }
+}
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+import { Entry, Component} from '@ohos.arkui.component'
+import { text } from "@kit.ArkGraphics2D"
 
 let fontCollection: text.FontCollection = new text.FontCollection();
 
@@ -303,16 +413,18 @@ loadFontSyncWithCheck(name: string, path: string | Resource, index?: int): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 25900008 | Corrupted file. |
-| 25900003 | Failed to open the file. |
-| 25900002 | File not found. |
-| 25900001 | Parameter error. |
-| 25900007 | Empty file. |
-| 25900006 | Failed to read the file. |
-| 25900005 | Failed to get the file size. |
-| 25900004 | File seek failed. |
+| [25900008](../errorcode-drawing.md#25900008-文件损坏) | Corrupted file. |
+| [25900003](../errorcode-drawing.md#25900003-打开文件失败) | Failed to open the file. |
+| [25900002](../errorcode-drawing.md#25900002-文件未找到) | File not found. |
+| [25900001](../errorcode-drawing.md#25900001-参数值异常) | Parameter error. |
+| [25900007](../errorcode-drawing.md#25900007-文件为空) | Empty file. |
+| [25900006](../errorcode-drawing.md#25900006-读取文件失败) | Failed to read the file. |
+| [25900005](../errorcode-drawing.md#25900005-获取文件大小失败) | Failed to get the file size. |
+| [25900004](../errorcode-drawing.md#25900004-文件定位失败) | File seek failed. |
 
 ## 示例
+
+ArkTS-Dyn示例：
 
 ```TypeScript
 import { text } from '@kit.ArkGraphics2D'
@@ -342,6 +454,47 @@ struct Index {
           } catch (error) {
             let err: BusinessError = error as BusinessError;
             console.error(`Failed to do loadFontWithCheck, error: ${err.code} message: ${err.message}`);
+          }
+        })
+    }
+    .height('100%')
+    .width('100%')
+  }
+}
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+import { 
+  Entry, Component, RelativeContainer, Text, FontWeight, AlignRuleOption, VerticalAlign, HorizontalAlign
+} from '@ohos.arkui.component';
+import { text } from '@kit.ArkGraphics2D';
+
+let fc: text.FontCollection = text.FontCollection.getGlobalInstance();
+
+@Entry
+@Component
+struct Index {
+  message: string = 'Hello World';
+  fontFamily: string = 'family';
+
+  build() {
+    RelativeContainer() {
+      Text(this.message)
+        .fontFamily(this.fontFamily)
+        .fontSize(50)
+        .fontWeight(FontWeight.Bold)
+        .alignRules({
+          center: { anchor: '__container__', align: VerticalAlign.Center },
+          middle: { anchor: '__container__', align: HorizontalAlign.Center }
+        } as AlignRuleOption)
+        .onClick(() => {
+          fc.loadFontSyncWithCheck(this.fontFamily, 'file:///system/fonts/NotoSansCJK-Regular.ttc', 1);
+          try {
+            fc.loadFontSyncWithCheck(this.fontFamily, '/system/fonts/NotoSansCJK-Regular.ttc', 1);
+          } catch (e) {
+            console.error(`Failed to do loadFontWithCheck, error: ${JSON.stringify(e)} message: ${e.message}`);
           }
         })
     }
@@ -395,16 +548,18 @@ loadFontWithCheck(name: string, path: string | Resource, index?: int): Promise<v
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 25900008 | Corrupted file. |
-| 25900003 | Failed to open the file. |
-| 25900002 | File not found. |
-| 25900001 | Parameter error. |
-| 25900007 | Empty file. |
-| 25900006 | Failed to read the file. |
-| 25900005 | Failed to get the file size. |
-| 25900004 | File seek failed. |
+| [25900008](../errorcode-drawing.md#25900008-文件损坏) | Corrupted file. |
+| [25900003](../errorcode-drawing.md#25900003-打开文件失败) | Failed to open the file. |
+| [25900002](../errorcode-drawing.md#25900002-文件未找到) | File not found. |
+| [25900001](../errorcode-drawing.md#25900001-参数值异常) | Parameter error. |
+| [25900007](../errorcode-drawing.md#25900007-文件为空) | Empty file. |
+| [25900006](../errorcode-drawing.md#25900006-读取文件失败) | Failed to read the file. |
+| [25900005](../errorcode-drawing.md#25900005-获取文件大小失败) | Failed to get the file size. |
+| [25900004](../errorcode-drawing.md#25900004-文件定位失败) | File seek failed. |
 
 ## 示例
+
+ArkTS-Dyn示例：
 
 ```TypeScript
 import { text } from '@kit.ArkGraphics2D'
@@ -446,6 +601,51 @@ struct Index {
 }
 ```
 
+ArkTS-Sta示例：
+
+```TypeScript
+import { 
+  Entry, Component, RelativeContainer, Text, FontWeight, AlignRuleOption, VerticalAlign, HorizontalAlign
+} from '@ohos.arkui.component';
+import { text } from '@kit.ArkGraphics2D';
+
+let fc: text.FontCollection = text.FontCollection.getGlobalInstance();
+
+@Entry
+@Component
+struct Index {
+  message: string = 'Hello World';
+  fontFamily: string = 'family';
+
+  build() {
+    RelativeContainer() {
+      Text(this.message)
+        .fontFamily(this.fontFamily)
+        .fontSize(50)
+        .fontWeight(FontWeight.Bold)
+        .alignRules({
+          center: { anchor: '__container__', align: VerticalAlign.Center },
+          middle: { anchor: '__container__', align: HorizontalAlign.Center }
+        } as AlignRuleOption)
+        .onClick(() => {
+          fc.loadFontWithCheck(this.fontFamily, 'file:///system/fonts/NotoSansCJK-Regular.ttc', 1).then((data) => {
+            console.info(`Succeeded in doing loadFontWithCheck ${JSON.stringify(data)} `);
+          }).catch((error: Error) => {
+            console.error(`Failed to do loadFontWithCheck, error: ${JSON.stringify(error)} message: ${error.message}`);
+          });
+          fc.loadFontWithCheck(this.fontFamily, '/system/fonts/NotoSansCJK-Regular.ttc', 1).then((data) => {
+            console.info(`Succeeded in doing loadFontWithCheck ${JSON.stringify(data)} `);
+          }).catch((error: Error) => {
+            console.error(`Failed to do loadFontWithCheck, error: ${JSON.stringify(error)} message: ${error.message}`);
+          });
+        })
+    }
+    .height('100%')
+    .width('100%')
+  }
+}
+```
+
 ## setParagraphCachesEnabled
 
 ```TypeScript
@@ -474,6 +674,8 @@ setParagraphCachesEnabled(enable: boolean): void
 
 ## 示例
 
+ArkTS-Dyn示例：
+
 ```TypeScript
 import { text } from '@kit.ArkGraphics2D'
 
@@ -482,10 +684,26 @@ import { text } from '@kit.ArkGraphics2D'
 struct Index {
   build() {
     Column() {
-      Button('启用段落缓存').onClick(() => {
-        text.FontCollection.getGlobalInstance().setParagraphCachesEnabled(true);
+      Button('Click').onClick(() => {
+        text.FontCollection.getGlobalInstance().setParagraphCachesEnabled(false);
       })
-      Button('禁用段落缓存').onClick(() => {
+    }
+  }
+}
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+import { Entry, Component, Column, Button, ClickEvent} from '@ohos.arkui.component'
+import { text } from "@kit.ArkGraphics2D"
+
+@Entry
+@Component
+struct Index {
+  build() {
+    Column() {
+      Button("Click").onClick((e: ClickEvent) => {
         text.FontCollection.getGlobalInstance().setParagraphCachesEnabled(false);
       })
     }
@@ -535,6 +753,8 @@ unloadFont(name: string): Promise<void>
 
 ## 示例
 
+ArkTS-Dyn示例：
+
 ```TypeScript
 import { text } from '@kit.ArkGraphics2D'
 
@@ -557,6 +777,44 @@ struct UnloadFontTest {
         .onClick(async () => {
           await this.fc.unloadFont("custom")
           this.content = "默认字体"
+        })
+    }.width("100%")
+    .height("100%")
+    .justifyContent(FlexAlign.Center)
+  }
+}
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+import { Entry, Component, Column, Text, Button, FlexAlign} from '@ohos.arkui.component'
+import { State } from '@ohos.arkui.stateManagement'
+import { text } from "@kit.ArkGraphics2D"
+
+@Entry
+@Component
+struct UnloadFontTest {
+  private fc: text.FontCollection = text.FontCollection.getGlobalInstance();
+  @State content: string = "默认字体"
+
+  build() {
+    Column() {
+      Text(this.content)
+        .fontFamily("custom")
+      Button("load font")
+        .onClick(() => {
+          (async () => {
+            await this.fc.loadFont("custom", "file:///system/fonts/NotoSansCJK-Regular.ttc");
+            this.content = "自定义字体";
+          })();
+        })
+      Button("unload font")
+        .onClick(() => {
+          (async () => {
+            await this.fc.unloadFont("custom");
+            this.content = "默认字体";
+          })();
         })
     }.width("100%")
     .height("100%")
@@ -601,6 +859,8 @@ unloadFontSync(name: string): void
 
 ## 示例
 
+ArkTS-Dyn示例：
+
 ```TypeScript
 import { text } from '@kit.ArkGraphics2D'
 
@@ -612,6 +872,40 @@ struct UnloadFontSyncTest {
 
   build() {
     Column({ space: 10 }) {
+      Text(this.content)
+        .fontFamily("custom")
+      Button("load font")
+        .onClick(() => {
+          this.fc.loadFontSync("custom", "file:///system/fonts/NotoSansCJK-Regular.ttc")
+          this.content = "自定义字体"
+        })
+      Button("unload font")
+        .onClick(() => {
+          this.fc.unloadFontSync("custom")
+          this.content = "默认字体"
+        })
+    }.width("100%")
+    .height("100%")
+    .justifyContent(FlexAlign.Center)
+  }
+}
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+import { Entry, Component, Column, Text, Button, FlexAlign} from '@ohos.arkui.component'
+import { State } from '@ohos.arkui.stateManagement'
+import { text } from "@kit.ArkGraphics2D"
+
+@Entry
+@Component
+struct UnloadFontSyncTest {
+  private fc: text.FontCollection = text.FontCollection.getGlobalInstance();
+  @State content: string = "默认字体"
+
+  build() {
+    Column() {
       Text(this.content)
         .fontFamily("custom")
       Button("load font")

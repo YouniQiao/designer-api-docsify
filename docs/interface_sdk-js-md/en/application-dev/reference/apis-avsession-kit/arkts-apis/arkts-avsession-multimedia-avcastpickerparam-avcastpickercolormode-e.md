@@ -1,6 +1,6 @@
 # AVCastPickerColorMode
 
-投播组件显示模式参数选项。
+Definition of color mode of picker
 
 **Since:** 12
 
@@ -13,10 +13,10 @@
 ## AUTO
 
 ```TypeScript
-AUTO = 0
+AUTO
 ```
 
-Auto mode which follows the definition of system.
+Auto mode that follows the system definition.
 
 **Since:** 12
 
@@ -24,14 +24,14 @@ Auto mode which follows the definition of system.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
-<!--Device-AVCastPickerColorMode-AUTO = 0--><!--Device-AVCastPickerColorMode-AUTO = 0-End-->
+<!--Device-AVCastPickerColorMode-AUTO--><!--Device-AVCastPickerColorMode-AUTO-End-->
 
 **System capability:** SystemCapability.Multimedia.AVSession.AVCast
 
 ## DARK
 
 ```TypeScript
-DARK = 1
+DARK
 ```
 
 Dark mode.
@@ -42,14 +42,14 @@ Dark mode.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
-<!--Device-AVCastPickerColorMode-DARK = 1--><!--Device-AVCastPickerColorMode-DARK = 1-End-->
+<!--Device-AVCastPickerColorMode-DARK--><!--Device-AVCastPickerColorMode-DARK-End-->
 
 **System capability:** SystemCapability.Multimedia.AVSession.AVCast
 
 ## LIGHT
 
 ```TypeScript
-LIGHT = 2
+LIGHT
 ```
 
 Light mode.
@@ -60,7 +60,7 @@ Light mode.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
-<!--Device-AVCastPickerColorMode-LIGHT = 2--><!--Device-AVCastPickerColorMode-LIGHT = 2-End-->
+<!--Device-AVCastPickerColorMode-LIGHT--><!--Device-AVCastPickerColorMode-LIGHT-End-->
 
 **System capability:** SystemCapability.Multimedia.AVSession.AVCast
 

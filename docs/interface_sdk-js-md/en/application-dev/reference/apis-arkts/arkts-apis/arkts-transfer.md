@@ -1,6 +1,6 @@
-# @ohos.transfer(transfer模块)
+# @ohos.transfer
 
-transfer模块提供子系统类或接口的转换能力。
+The transfer module provides transfer ability for subsystem class or interface.
 
 **Since:** 23
 
@@ -22,6 +22,6 @@ import { transfer } from 'kits/@kit.ArkTS';
 
 | Name | Description |
 | --- | --- |
-| [transferDynamic](arkts-arkts-transfer-transferdynamic-f.md#transferdynamic) | 将1.2对象转换为1.0对象。 |
-| [transferStatic](arkts-arkts-transfer-transferstatic-f.md#transferstatic) | 将1.0对象转换为1.2对象。 |
+| [transferDynamic](arkts-arkts-transfer-transferdynamic-f.md#transferdynamic) | Converting the 1.2 object to a 1.0 object. |
+| [transferStatic](arkts-arkts-transfer-transferstatic-f.md#transferstatic) | Converting the 1.0 object to a 1.2 object. |
 

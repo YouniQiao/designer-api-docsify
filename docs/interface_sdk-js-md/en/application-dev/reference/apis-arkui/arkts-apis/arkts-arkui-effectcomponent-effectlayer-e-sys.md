@@ -1,6 +1,6 @@
 # EffectLayer (System API)
 
-EffectComponent的渲染层级。
+Effect layer enum.
 
 **Since:** 23
 
@@ -18,7 +18,7 @@ EffectComponent的渲染层级。
 NONE = 0
 ```
 
-无特效层。
+No layer.
 
 **Since:** 23
 
@@ -38,7 +38,7 @@ NONE = 0
 CHARGE_MOTION = 1
 ```
 
-充电动画层。
+Charge motion layer.
 
 **Since:** 23
 
@@ -58,7 +58,7 @@ CHARGE_MOTION = 1
 CHARGE_TEXT = 2
 ```
 
-充电文字层。
+Charge text layer.
 
 **Since:** 23
 

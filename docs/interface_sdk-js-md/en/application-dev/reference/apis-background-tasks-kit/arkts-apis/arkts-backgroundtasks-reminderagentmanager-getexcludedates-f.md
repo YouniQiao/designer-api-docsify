@@ -12,7 +12,7 @@ import { reminderAgentManager } from 'kits/@kit.BackgroundTasksKit';
 function getExcludeDates(reminderId: int): Promise<Array<Date>>
 ```
 
-为指定id的周期性的日历提醒，查询设置的所有不提醒日期。使用Promise异步回调。
+Obtains all non-reminder dates for a recurring calendar reminder with a specific ID. This API uses a promise to return the result.
 
 **Since:** 12
 
@@ -26,20 +26,20 @@ function getExcludeDates(reminderId: int): Promise<Array<Date>>
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| reminderId | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | 需要查询不提醒日期的代理提醒id。 代理提醒id会在 [发布代理提醒](arkts-backgroundtasks-reminderagentmanager-publishreminder-f.md#publishreminder) 时作为返回值返回。 |
+| reminderId | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | ID of the agent-powered reminder to be queried. The reminder ID is returned when the [publishReminder](arkts-backgroundtasks-reminderagentmanager-publishreminder-f.md#publishreminder) API is called. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;Array&lt;Date&gt;&gt; | Promise对象。返回特定日历设置的所有不提醒日期。 |
+| Promise&lt;Array&lt;Date&gt;&gt; | Promise used to return all the non-reminder dates. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 201 | Permission denied |
-| 1700003 | The reminder does not exist. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied |
+| [1700003](../../apis-backgroundtasks-kit/errorcode-reminderAgentManager.md#1700003-nonexistent-reminder) | The reminder does not exist. |
 
 ## Examples
 

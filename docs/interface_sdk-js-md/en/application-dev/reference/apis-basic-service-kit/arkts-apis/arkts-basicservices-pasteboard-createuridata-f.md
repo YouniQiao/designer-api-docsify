@@ -12,7 +12,7 @@ import { pasteboard } from 'kits/@kit.BasicServicesKit';
 function createUriData(uri: string): PasteData
 ```
 
-构建一个URI剪贴板内容对象。
+Creates a **PasteData** object of the URI type.
 
 **Since:** 7
 
@@ -30,13 +30,13 @@ function createUriData(uri: string): PasteData
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| uri | string | Yes | URI内容，需符合标准URI格式。 |
+| uri | string | Yes | URI content. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [PasteData](arkts-basicservices-pasteboard-pastedata-i.md) | 剪贴板内容对象。 |
+| [PasteData](arkts-basicservices-pasteboard-pastedata-i.md) | PasteData** object. |
 
 ## Examples
 

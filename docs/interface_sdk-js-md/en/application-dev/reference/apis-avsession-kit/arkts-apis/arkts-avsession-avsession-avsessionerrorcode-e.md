@@ -1,6 +1,6 @@
 # AVSessionErrorCode
 
-会话发生错误时的错误码。
+Enumerates ErrorCode types, returns in BusinessError.code.
 
 **Since:** 10
 
@@ -16,7 +16,7 @@
 ERR_CODE_SERVICE_EXCEPTION = 6600101
 ```
 
-会话服务端异常。
+Session service exception.
 
 **Since:** 10
 
@@ -34,7 +34,7 @@ ERR_CODE_SERVICE_EXCEPTION = 6600101
 ERR_CODE_SESSION_NOT_EXIST = 6600102
 ```
 
-会话不存在。
+The session does not exist
 
 **Since:** 10
 
@@ -52,7 +52,7 @@ ERR_CODE_SESSION_NOT_EXIST = 6600102
 ERR_CODE_CONTROLLER_NOT_EXIST = 6600103
 ```
 
-会话控制器不存在。
+The session controller does not exist.
 
 **Since:** 10
 
@@ -70,7 +70,7 @@ ERR_CODE_CONTROLLER_NOT_EXIST = 6600103
 ERR_CODE_REMOTE_CONNECTION_ERR = 6600104
 ```
 
-远端会话连接失败。
+The remote session connection failed.
 
 **Since:** 10
 
@@ -88,7 +88,7 @@ ERR_CODE_REMOTE_CONNECTION_ERR = 6600104
 ERR_CODE_COMMAND_INVALID = 6600105
 ```
 
-无效会话命令。
+Invalid session command.
 
 **Since:** 10
 
@@ -106,7 +106,7 @@ ERR_CODE_COMMAND_INVALID = 6600105
 ERR_CODE_SESSION_INACTIVE = 6600106
 ```
 
-会话未激活。
+The session is not activated.
 
 **Since:** 10
 
@@ -124,7 +124,7 @@ ERR_CODE_SESSION_INACTIVE = 6600106
 ERR_CODE_MESSAGE_OVERLOAD = 6600107
 ```
 
-命令&消息过载。
+Too many commands or events.
 
 **Since:** 10
 
@@ -142,7 +142,7 @@ ERR_CODE_MESSAGE_OVERLOAD = 6600107
 ERR_CODE_DEVICE_CONNECTION_FAILED = 6600108
 ```
 
-设备连接失败。
+Device connecting failed.
 
 **Since:** 10
 
@@ -160,7 +160,7 @@ ERR_CODE_DEVICE_CONNECTION_FAILED = 6600108
 ERR_CODE_REMOTE_CONNECTION_NOT_EXIST = 6600109
 ```
 
-远端会话不存在。
+The remote connection is not established.
 
 **Since:** 10
 
@@ -178,7 +178,7 @@ ERR_CODE_REMOTE_CONNECTION_NOT_EXIST = 6600109
 ERR_CODE_DESKTOP_LYRIC_NOT_ENABLED = 6600110
 ```
 
-应用程序的桌面歌词功能未开启。
+The desktop lyrics feature of this application is not enabled.
 
 **Since:** 23
 
@@ -198,7 +198,7 @@ ERR_CODE_DESKTOP_LYRIC_NOT_ENABLED = 6600110
 ERR_CODE_DESKTOP_LYRIC_NOT_SUPPORTED = 6600111
 ```
 
-当前设备不支持桌面歌词功能。
+The desktop lyrics feature is not supported.
 
 **Since:** 23
 
@@ -218,7 +218,7 @@ ERR_CODE_DESKTOP_LYRIC_NOT_SUPPORTED = 6600111
 ERR_CODE_CAST_CONTROL_UNSPECIFIED = 6611000
 ```
 
-未被定义的投播错误码。
+The error code for cast control is unspecified.
 
 **Since:** 13
 
@@ -236,7 +236,7 @@ ERR_CODE_CAST_CONTROL_UNSPECIFIED = 6611000
 ERR_CODE_CAST_CONTROL_REMOTE_ERROR = 6611001
 ```
 
-远端播放器中发生不明错误。
+An unspecified error occurs in the remote player.
 
 **Since:** 13
 
@@ -254,7 +254,7 @@ ERR_CODE_CAST_CONTROL_REMOTE_ERROR = 6611001
 ERR_CODE_CAST_CONTROL_BEHIND_LIVE_WINDOW = 6611002
 ```
 
-播放出现延迟。
+The playback position falls behind the live window.
 
 **Since:** 13
 
@@ -272,7 +272,7 @@ ERR_CODE_CAST_CONTROL_BEHIND_LIVE_WINDOW = 6611002
 ERR_CODE_CAST_CONTROL_TIMEOUT = 6611003
 ```
 
-投播控制进程超时。
+The process of cast control times out.
 
 **Since:** 13
 
@@ -290,7 +290,7 @@ ERR_CODE_CAST_CONTROL_TIMEOUT = 6611003
 ERR_CODE_CAST_CONTROL_RUNTIME_CHECK_FAILED = 6611004
 ```
 
-运行时检查失败。
+The runtime check failed.
 
 **Since:** 13
 
@@ -308,7 +308,7 @@ ERR_CODE_CAST_CONTROL_RUNTIME_CHECK_FAILED = 6611004
 ERR_CODE_CAST_CONTROL_PLAYER_NOT_WORKING = 6611100
 ```
 
-跨设备数据传输被锁定。
+Cross-device data transmission is locked.
 
 **Since:** 13
 
@@ -326,7 +326,7 @@ ERR_CODE_CAST_CONTROL_PLAYER_NOT_WORKING = 6611100
 ERR_CODE_CAST_CONTROL_SEEK_MODE_UNSUPPORTED = 6611101
 ```
 
-不支持指定的查找模式。
+The specified seek mode is not supported.
 
 **Since:** 13
 
@@ -344,7 +344,7 @@ ERR_CODE_CAST_CONTROL_SEEK_MODE_UNSUPPORTED = 6611101
 ERR_CODE_CAST_CONTROL_ILLEGAL_SEEK_TARGET = 6611102
 ```
 
-要搜索的位置超出媒体的范围，或者不支持当前搜索模式。
+The position to seek to is out of the range of the media asset or the specified seek mode is not supported.
 
 **Since:** 13
 
@@ -362,7 +362,7 @@ ERR_CODE_CAST_CONTROL_ILLEGAL_SEEK_TARGET = 6611102
 ERR_CODE_CAST_CONTROL_PLAY_MODE_UNSUPPORTED = 6611103
 ```
 
-不支持指定的播放模式。
+The specified playback mode is not supported.
 
 **Since:** 13
 
@@ -380,7 +380,7 @@ ERR_CODE_CAST_CONTROL_PLAY_MODE_UNSUPPORTED = 6611103
 ERR_CODE_CAST_CONTROL_PLAY_SPEED_UNSUPPORTED = 6611104
 ```
 
-不支持指定的播放速度。
+The specified playback speed is not supported.
 
 **Since:** 13
 
@@ -398,7 +398,7 @@ ERR_CODE_CAST_CONTROL_PLAY_SPEED_UNSUPPORTED = 6611104
 ERR_CODE_CAST_CONTROL_DEVICE_MISSING = 6611105
 ```
 
-操作失败，因为媒体源设备或媒体接收器设备已被销毁。
+The action failed because either the media source device or the media sink device has been revoked.
 
 **Since:** 13
 
@@ -416,7 +416,7 @@ ERR_CODE_CAST_CONTROL_DEVICE_MISSING = 6611105
 ERR_CODE_CAST_CONTROL_INVALID_PARAM = 6611106
 ```
 
-该参数无效。
+The parameter is invalid, for example, the url is illegal to play.
 
 **Since:** 13
 
@@ -434,7 +434,7 @@ ERR_CODE_CAST_CONTROL_INVALID_PARAM = 6611106
 ERR_CODE_CAST_CONTROL_NO_MEMORY = 6611107
 ```
 
-内存分配失败。
+Allocation of memory failed.
 
 **Since:** 13
 
@@ -452,7 +452,7 @@ ERR_CODE_CAST_CONTROL_NO_MEMORY = 6611107
 ERR_CODE_CAST_CONTROL_OPERATION_NOT_ALLOWED = 6611108
 ```
 
-不被允许的操作。
+Operation is not allowed.
 
 **Since:** 13
 
@@ -470,7 +470,7 @@ ERR_CODE_CAST_CONTROL_OPERATION_NOT_ALLOWED = 6611108
 ERR_CODE_CAST_CONTROL_IO_UNSPECIFIED = 6612000
 ```
 
-未指定的输入/输出错误。
+An unspecified input/output error occurs.
 
 **Since:** 13
 
@@ -488,7 +488,7 @@ ERR_CODE_CAST_CONTROL_IO_UNSPECIFIED = 6612000
 ERR_CODE_CAST_CONTROL_IO_NETWORK_CONNECTION_FAILED = 6612001
 ```
 
-网络连接失败。
+Network connection failure.
 
 **Since:** 13
 
@@ -506,7 +506,7 @@ ERR_CODE_CAST_CONTROL_IO_NETWORK_CONNECTION_FAILED = 6612001
 ERR_CODE_CAST_CONTROL_IO_NETWORK_CONNECTION_TIMEOUT = 6612002
 ```
 
-网络连接超时。
+Network timeout.
 
 **Since:** 13
 
@@ -524,7 +524,7 @@ ERR_CODE_CAST_CONTROL_IO_NETWORK_CONNECTION_TIMEOUT = 6612002
 ERR_CODE_CAST_CONTROL_IO_INVALID_HTTP_CONTENT_TYPE = 6612003
 ```
 
-无效的"Content-Type"。
+Invalid "Content-Type" HTTP header.
 
 **Since:** 13
 
@@ -542,7 +542,7 @@ ERR_CODE_CAST_CONTROL_IO_INVALID_HTTP_CONTENT_TYPE = 6612003
 ERR_CODE_CAST_CONTROL_IO_BAD_HTTP_STATUS = 6612004
 ```
 
-HTTP服务器返回一个意外的HTTP响应状态码。
+The HTTP server returns an unexpected HTTP response status code.
 
 **Since:** 13
 
@@ -560,7 +560,7 @@ HTTP服务器返回一个意外的HTTP响应状态码。
 ERR_CODE_CAST_CONTROL_IO_FILE_NOT_FOUND = 6612005
 ```
 
-文件不存在。
+The file does not exist.
 
 **Since:** 13
 
@@ -578,7 +578,7 @@ ERR_CODE_CAST_CONTROL_IO_FILE_NOT_FOUND = 6612005
 ERR_CODE_CAST_CONTROL_IO_NO_PERMISSION = 6612006
 ```
 
-不允许执行输入/输出的IO操作。
+No permission is granted to perform the IO operation.
 
 **Since:** 13
 
@@ -596,7 +596,7 @@ ERR_CODE_CAST_CONTROL_IO_NO_PERMISSION = 6612006
 ERR_CODE_CAST_CONTROL_IO_CLEARTEXT_NOT_PERMITTED = 6612007
 ```
 
-应用的网络安全配置不允许访问明文HTTP流量。
+Access to cleartext HTTP traffic is not allowed by the app's network security configuration.
 
 **Since:** 13
 
@@ -614,7 +614,7 @@ ERR_CODE_CAST_CONTROL_IO_CLEARTEXT_NOT_PERMITTED = 6612007
 ERR_CODE_CAST_CONTROL_IO_READ_POSITION_OUT_OF_RANGE = 6612008
 ```
 
-读取位置超出范围。
+Reading data out of the data bound.
 
 **Since:** 13
 
@@ -632,7 +632,7 @@ ERR_CODE_CAST_CONTROL_IO_READ_POSITION_OUT_OF_RANGE = 6612008
 ERR_CODE_CAST_CONTROL_IO_NO_CONTENTS = 6612100
 ```
 
-媒体中没有可播放的内容。
+The media does not contain any contents that can be played.
 
 **Since:** 13
 
@@ -650,7 +650,7 @@ ERR_CODE_CAST_CONTROL_IO_NO_CONTENTS = 6612100
 ERR_CODE_CAST_CONTROL_IO_READ_ERROR = 6612101
 ```
 
-媒体无法读取。
+The media cannot be read, for example, because of dust or scratches.
 
 **Since:** 13
 
@@ -668,7 +668,7 @@ ERR_CODE_CAST_CONTROL_IO_READ_ERROR = 6612101
 ERR_CODE_CAST_CONTROL_IO_CONTENT_BUSY = 6612102
 ```
 
-该资源正在使用中。
+This resource is already in use.
 
 **Since:** 13
 
@@ -686,7 +686,7 @@ ERR_CODE_CAST_CONTROL_IO_CONTENT_BUSY = 6612102
 ERR_CODE_CAST_CONTROL_IO_CONTENT_EXPIRED = 6612103
 ```
 
-输入/输出的IO请求内容已过期。
+The content using the validity interval has expired.
 
 **Since:** 13
 
@@ -704,7 +704,7 @@ ERR_CODE_CAST_CONTROL_IO_CONTENT_EXPIRED = 6612103
 ERR_CODE_CAST_CONTROL_IO_USE_FORBIDDEN = 6612104
 ```
 
-不允许播放请求内容。
+Using the requested content to play is not allowed.
 
 **Since:** 13
 
@@ -722,7 +722,7 @@ ERR_CODE_CAST_CONTROL_IO_USE_FORBIDDEN = 6612104
 ERR_CODE_CAST_CONTROL_IO_NOT_VERIFIED = 6612105
 ```
 
-无法验证所允许的内容。
+The use of the allowed content cannot be verified.
 
 **Since:** 13
 
@@ -740,7 +740,7 @@ ERR_CODE_CAST_CONTROL_IO_NOT_VERIFIED = 6612105
 ERR_CODE_CAST_CONTROL_IO_EXHAUSTED_ALLOWED_USES = 6612106
 ```
 
-此内容已达到允许的最大使用次数。
+The number of times this content has been used as requested has reached the maximum allowed number of uses.
 
 **Since:** 13
 
@@ -758,7 +758,7 @@ ERR_CODE_CAST_CONTROL_IO_EXHAUSTED_ALLOWED_USES = 6612106
 ERR_CODE_CAST_CONTROL_IO_NETWORK_PACKET_SENDING_FAILED = 6612107
 ```
 
-从源设备发送数据包到接收设备时出现错误。
+An error occurs when sending packet from source device to sink device.
 
 **Since:** 13
 
@@ -776,7 +776,7 @@ ERR_CODE_CAST_CONTROL_IO_NETWORK_PACKET_SENDING_FAILED = 6612107
 ERR_CODE_CAST_CONTROL_PARSING_UNSPECIFIED = 6613000
 ```
 
-未指定的内容解析错误。
+Unspecified error related to content parsing.
 
 **Since:** 13
 
@@ -794,7 +794,7 @@ ERR_CODE_CAST_CONTROL_PARSING_UNSPECIFIED = 6613000
 ERR_CODE_CAST_CONTROL_PARSING_CONTAINER_MALFORMED = 6613001
 ```
 
-媒体容器比特流的格式解析错误。
+Parsing error associated with media container format bit streams.
 
 **Since:** 13
 
@@ -812,7 +812,7 @@ ERR_CODE_CAST_CONTROL_PARSING_CONTAINER_MALFORMED = 6613001
 ERR_CODE_CAST_CONTROL_PARSING_MANIFEST_MALFORMED = 6613002
 ```
 
-媒体清单解析错误。
+Parsing error associated with the media manifest.
 
 **Since:** 13
 
@@ -830,7 +830,7 @@ ERR_CODE_CAST_CONTROL_PARSING_MANIFEST_MALFORMED = 6613002
 ERR_CODE_CAST_CONTROL_PARSING_CONTAINER_UNSUPPORTED = 6613003
 ```
 
-文件的媒体容器格式/媒体容器特性不被支持。
+An error occurs when attempting to extract a file with an unsupported media container format or an unsupported media container feature.
 
 **Since:** 13
 
@@ -848,7 +848,7 @@ ERR_CODE_CAST_CONTROL_PARSING_CONTAINER_UNSUPPORTED = 6613003
 ERR_CODE_CAST_CONTROL_PARSING_MANIFEST_UNSUPPORTED = 6613004
 ```
 
-媒体清单中不支持的特性。
+Unsupported feature in the media manifest.
 
 **Since:** 13
 
@@ -866,7 +866,7 @@ ERR_CODE_CAST_CONTROL_PARSING_MANIFEST_UNSUPPORTED = 6613004
 ERR_CODE_CAST_CONTROL_DECODING_UNSPECIFIED = 6614000
 ```
 
-未指定的解码错误。
+Unspecified decoding error.
 
 **Since:** 13
 
@@ -884,7 +884,7 @@ ERR_CODE_CAST_CONTROL_DECODING_UNSPECIFIED = 6614000
 ERR_CODE_CAST_CONTROL_DECODING_INIT_FAILED = 6614001
 ```
 
-解码器初始化失败。
+Decoder initialization failed.
 
 **Since:** 13
 
@@ -902,7 +902,7 @@ ERR_CODE_CAST_CONTROL_DECODING_INIT_FAILED = 6614001
 ERR_CODE_CAST_CONTROL_DECODING_QUERY_FAILED = 6614002
 ```
 
-解码器查询失败。
+Decoder query failed.
 
 **Since:** 13
 
@@ -920,7 +920,7 @@ ERR_CODE_CAST_CONTROL_DECODING_QUERY_FAILED = 6614002
 ERR_CODE_CAST_CONTROL_DECODING_FAILED = 6614003
 ```
 
-媒体样本解码失败。
+Decoding the media samples failed.
 
 **Since:** 13
 
@@ -938,7 +938,7 @@ ERR_CODE_CAST_CONTROL_DECODING_FAILED = 6614003
 ERR_CODE_CAST_CONTROL_DECODING_FORMAT_EXCEEDS_CAPABILITIES = 6614004
 ```
 
-设备的能力无法解码当前格式。
+The format of the content to decode exceeds the capabilities of the device.
 
 **Since:** 13
 
@@ -956,7 +956,7 @@ ERR_CODE_CAST_CONTROL_DECODING_FORMAT_EXCEEDS_CAPABILITIES = 6614004
 ERR_CODE_CAST_CONTROL_DECODING_FORMAT_UNSUPPORTED = 6614005
 ```
 
-不支持的解码格式。
+The format of the content to decode is not supported.
 
 **Since:** 13
 
@@ -974,7 +974,7 @@ ERR_CODE_CAST_CONTROL_DECODING_FORMAT_UNSUPPORTED = 6614005
 ERR_CODE_CAST_CONTROL_AUDIO_RENDERER_UNSPECIFIED = 6615000
 ```
 
-未指定的音频渲染器错误。
+Unspecified errors related to the audio renderer.
 
 **Since:** 13
 
@@ -992,7 +992,7 @@ ERR_CODE_CAST_CONTROL_AUDIO_RENDERER_UNSPECIFIED = 6615000
 ERR_CODE_CAST_CONTROL_AUDIO_RENDERER_INIT_FAILED = 6615001
 ```
 
-音频渲染器初始化失败。
+Initializing the audio renderer failed.
 
 **Since:** 13
 
@@ -1010,7 +1010,7 @@ ERR_CODE_CAST_CONTROL_AUDIO_RENDERER_INIT_FAILED = 6615001
 ERR_CODE_CAST_CONTROL_AUDIO_RENDERER_WRITE_FAILED = 6615002
 ```
 
-音频渲染器写入数据失败。
+The audio renderer fails to write data.
 
 **Since:** 13
 
@@ -1028,7 +1028,7 @@ ERR_CODE_CAST_CONTROL_AUDIO_RENDERER_WRITE_FAILED = 6615002
 ERR_CODE_CAST_CONTROL_DRM_UNSPECIFIED = 6616000
 ```
 
-未指定的DRM相关错误。
+Unspecified error related to DRM.
 
 **Since:** 13
 
@@ -1046,7 +1046,7 @@ ERR_CODE_CAST_CONTROL_DRM_UNSPECIFIED = 6616000
 ERR_CODE_CAST_CONTROL_DRM_SCHEME_UNSUPPORTED = 6616001
 ```
 
-设备不支持所选择的DRM保护方案。
+The chosen DRM protection scheme is not supported by the device.
 
 **Since:** 13
 
@@ -1064,7 +1064,7 @@ ERR_CODE_CAST_CONTROL_DRM_SCHEME_UNSUPPORTED = 6616001
 ERR_CODE_CAST_CONTROL_DRM_PROVISIONING_FAILED = 6616002
 ```
 
-设备配置失败。
+Device provisioning failed.
 
 **Since:** 13
 
@@ -1082,7 +1082,7 @@ ERR_CODE_CAST_CONTROL_DRM_PROVISIONING_FAILED = 6616002
 ERR_CODE_CAST_CONTROL_DRM_CONTENT_ERROR = 6616003
 ```
 
-受DRM保护的内容无法播放。
+The DRM-protected content to play is incompatible.
 
 **Since:** 13
 
@@ -1100,7 +1100,7 @@ ERR_CODE_CAST_CONTROL_DRM_CONTENT_ERROR = 6616003
 ERR_CODE_CAST_CONTROL_DRM_LICENSE_ACQUISITION_FAILED = 6616004
 ```
 
-获取许可证失败。
+Failed to obtain a license.
 
 **Since:** 13
 
@@ -1118,7 +1118,7 @@ ERR_CODE_CAST_CONTROL_DRM_LICENSE_ACQUISITION_FAILED = 6616004
 ERR_CODE_CAST_CONTROL_DRM_DISALLOWED_OPERATION = 6616005
 ```
 
-许可证策略不允许该操作。
+The operation is disallowed by the license policy.
 
 **Since:** 13
 
@@ -1136,7 +1136,7 @@ ERR_CODE_CAST_CONTROL_DRM_DISALLOWED_OPERATION = 6616005
 ERR_CODE_CAST_CONTROL_DRM_SYSTEM_ERROR = 6616006
 ```
 
-DRM系统中发生错误。
+An error occurs in the DRM system.
 
 **Since:** 13
 
@@ -1154,7 +1154,7 @@ DRM系统中发生错误。
 ERR_CODE_CAST_CONTROL_DRM_DEVICE_REVOKED = 6616007
 ```
 
-设备已撤销DRM权限。
+The device has revoked DRM privileges.
 
 **Since:** 13
 
@@ -1172,7 +1172,7 @@ ERR_CODE_CAST_CONTROL_DRM_DEVICE_REVOKED = 6616007
 ERR_CODE_CAST_CONTROL_DRM_LICENSE_EXPIRED = 6616008
 ```
 
-加载中的DRM许可证已过期。
+The DRM license being loaded into the open DRM session has expired.
 
 **Since:** 13
 
@@ -1190,7 +1190,7 @@ ERR_CODE_CAST_CONTROL_DRM_LICENSE_EXPIRED = 6616008
 ERR_CODE_CAST_CONTROL_DRM_PROVIDE_KEY_RESPONSE_ERROR = 6616100
 ```
 
-DRM处理密钥响应时发生错误。
+An error occurs when the DRM processes the key response.
 
 **Since:** 13
 

@@ -4,7 +4,8 @@
 export type PreloadedUIExtensionAbilityDestroyedFn = (preloadId: int) => void
 ```
 
-预加载[UIExtensionAbility](arkts-ability-app-ability-uiextensionability-uiextensionability-c.md)被销毁时的回调函数类型。
+Defines the callback function when the preloaded  
+[UIExtensionAbility](arkts-ability-app-ability-uiextensionability-uiextensionability-c.md) instance is destroyed.
 
 **Since:** 23
 

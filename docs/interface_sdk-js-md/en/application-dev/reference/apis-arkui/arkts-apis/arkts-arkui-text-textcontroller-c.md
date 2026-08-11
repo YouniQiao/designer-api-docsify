@@ -1,6 +1,6 @@
 # TextController
 
-Text组件的控制器。
+Defines the controller of Text.
 
 **Since:** 23
 
@@ -16,7 +16,7 @@ Text组件的控制器。
 closeSelectionMenu(): void
 ```
 
-关闭自定义选择菜单或系统默认选择菜单。
+Close the select menu when menu is on.
 
 **Since:** 23
 
@@ -34,7 +34,7 @@ closeSelectionMenu(): void
 getLayoutManager(): LayoutManager | undefined
 ```
 
-获取布局管理器对象。
+Get LayoutManager.
 
 **Since:** 23
 
@@ -50,7 +50,7 @@ getLayoutManager(): LayoutManager | undefined
 
 | Type | Description |
 | --- | --- |
-| [LayoutManager](arkts-arkui-layoutmanager-i.md) | 布局管理器对象。 |
+| [LayoutManager](arkts-arkui-layoutmanager-i.md) | Return the LayoutManager. |
 
 ## setStyledString
 
@@ -58,7 +58,9 @@ getLayoutManager(): LayoutManager | undefined
 setStyledString(value: StyledString): void
 ```
 
-触发绑定或更新属性字符串。
+Update the styles of StyledString by setStyledString.
+
+&lt;p&gt;&lt;strong&gt;NOTE&lt;/strong&gt;:&lt;br&gt;The child class MutableStyledString of StyledString can also serve as the argument.&lt;/p&gt;
 
 **Since:** 23
 
@@ -82,21 +84,9 @@ setStyledString(value: StyledString): void
 setTextSelection(selectionStart: int | undefined, selectionEnd: int | undefined, options?: SelectionOptions): void
 ```
 
-设置文本选择区域并高亮显示。
+Text selection is achieved by specifying the start and end positions of the text.
 
-> **说明：**
-> 
-> 当[copyOption](copyOption)设置为CopyOptions.None时，设置setTextSelection不生效。
-> 
-> 当[textOverflow](arkts-arkui-enums-textoverflow-e.md)设置为TextOverflow.MARQUEE时，设置setTextSelection不生效。
-> 
-> 当selectionStart大于等于selectionEnd时不选中。可选范围为[0, textSize]，其中textSize为文本内容最大字符数，入参小于0时处理为0，大于textSize时处理为textSize。
-> 
-> 当selectionStart或selectionEnd位于截断的不可见区域时，文本不选中。截断为false时，超出父组件的文本选中区域生效。
-> 
-> 如果设备为PC/2in1，即使options被赋值为MenuPolicy.SHOW，调用setTextSelection也不弹出菜单。
-> 
-> 当emoji表情被选中区域截断时，若表情的起始位置包含在设置的文本选中区域内，该表情就会被选中。
+&lt;p&gt;&lt;strong&gt;NOTE&lt;/strong&gt;:&lt;br&gt;If selectionStart or selectionEnd is set to undefined, the value 0 will be used.&lt;br&gt;If a 2-in-1 device is used,calling setTextSelection does not display the context menu even when options is set to MenuPolicy.SHOW.&lt;br&gt;If the selected text contains an emoji,the emoji is selected when its start position is within the text selection range.&lt;/p&gt;
 
 **Since:** 23
 
@@ -112,7 +102,7 @@ setTextSelection(selectionStart: int | undefined, selectionEnd: int | undefined,
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| selectionStart | int \| undefined | Yes | 文本选择区域起始位置。&lt;br /&gt;取值范围：[0, +∞），值为负数或undefined时按0处理。 |
-| selectionEnd | int \| undefined | Yes | 文本选择区域结束位置。&lt;br /&gt;取值范围：[0, +∞），值为负数或undefined时按0处理。 |
-| options | [SelectionOptions](../arkts-components/arkts-arkui-selectionoptions-i.md) | No | 选中文字时的配置。&lt;br /&gt;默认值：SelectionOptions中MenuPolicy.DEFAULT |
+| selectionStart | int \| undefined | Yes | The start position of the selected text. |
+| selectionEnd | int \| undefined | Yes | The end position of the selected text. |
+| options | [SelectionOptions](../arkts-components/arkts-arkui-selectionoptions-i.md) | No | Indicates the options of the text selection. Default value is MenuPolicy.DEFAULT. |
 

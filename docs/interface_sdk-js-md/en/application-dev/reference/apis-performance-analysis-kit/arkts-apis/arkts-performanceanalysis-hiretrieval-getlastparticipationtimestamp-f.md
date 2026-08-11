@@ -12,7 +12,7 @@ import { hiRetrieval } from 'kits/@kit.PerformanceAnalysisKit';
 function getLastParticipationTimestamp(): long
 ```
 
-查询此设备上次参与应用灰度活动的UNIX时间戳，如果此设备从未参与则返回0。
+Query the UNIX timestamp of the last participating time.
 
 **Since:** 26.0.0
 
@@ -28,5 +28,5 @@ function getLastParticipationTimestamp(): long
 
 | Type | Description |
 | --- | --- |
-| ArkTS-Dyn: number  <br>ArkTS-Sta：long | 上一次参与应用灰度活动的UNIX时间戳，单位为毫秒。如果此设备从未参与则返回0。 |
+| ArkTS-Dyn: number  <br>ArkTS-Sta：long | Returns the timestamp of the last participating time in milliseconds, if never participated return 0. |
 

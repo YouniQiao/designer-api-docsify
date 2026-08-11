@@ -1,6 +1,6 @@
 # AccessibilitySamePageMode
 
-Defines the same page mode
+Enumerates the same-page modes for cross-process embedded components and their host applications.
 
 **Since:** 23
 
@@ -16,7 +16,7 @@ Defines the same page mode
 SEMI_SILENT = 0
 ```
 
-the first page and root page event is not send.but if application load new page whith navigation,the page event will be sent.this mode is to solve skipping focus
+Ignores initial page loading events and root node page events from the cross-process embedded component.
 
 **Since:** 23
 
@@ -34,7 +34,7 @@ the first page and root page event is not send.but if application load new page 
 FULL_SILENT = 1
 ```
 
-the all page event is not send
+Ignores all page events from the cross-process embedded component.
 
 **Since:** 23
 

@@ -4,7 +4,7 @@
 type QuerySearchHistoryEvent = () => Promise<string[]>
 ```
 
-搜索历史查询事件。使用Promise异步回调。
+The query search history event.
 
 **Since:** 23
 

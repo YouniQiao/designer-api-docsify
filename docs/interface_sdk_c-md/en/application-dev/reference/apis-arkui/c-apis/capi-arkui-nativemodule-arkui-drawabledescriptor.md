@@ -6,7 +6,7 @@ typedef struct ArkUI_DrawableDescriptor ArkUI_DrawableDescriptor
 
 ## Overview
 
-Defines the drawable descriptor.
+Defines a struct for the **DrawableDescriptor** object.
 
 **Since**: 12
 

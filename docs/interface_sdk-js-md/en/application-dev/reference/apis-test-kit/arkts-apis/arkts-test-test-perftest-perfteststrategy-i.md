@@ -1,11 +1,13 @@
 # PerfTestStrategy
 
-性能测试执行策略。
+Represents the performance test strategy.
 
-> **说明：**
+> **NOTE：**
 > 
-> 属性actionCode和resetCode的入参类型为回调函数"Callback\&lt;boolean&gt;"。在代码段中需要主动调用此回调函数，通知框架代码段执行完成，否则会导致代码段执行超时。
-> > 其中，回调函数的参数为boolean类型，true代表代码段执行符合预期，false代表代码段执行不符合预期。[代码示例](arkts-test-test-perftest-perftest-c.md#create)。
+> The input parameter type of the **actionCode** and **resetCode** attributes is **Callback\&lt;boolean&gt;**. You need to call
+> this callback in the code segment to notify the framework that the code segment execution is complete. Otherwise, the
+> code segment execution times out. The callback parameter is of the **Boolean** type. The value **true** indicates that
+> the code segment execution meets the expectation, and **false** indicates the opposite.
 
 **Since:** 20
 
@@ -27,7 +29,7 @@ import { PerfTestStrategy, PerfMetric, PerfTest, PerfMeasureResult } from 'kits/
 actionCode: Callback<Callback<boolean>>
 ```
 
-测试代码段。
+Code segment to test. The input parameter is a callback function, which needs to be called in the code segment to notify the framework that the execution is complete. Otherwise, the execution will time out. For details, see the following description.
 
 **Type:** [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;Callback&lt;boolean&gt;&gt;
 
@@ -47,7 +49,7 @@ actionCode: Callback<Callback<boolean>>
 bundleName?: string
 ```
 
-被测应用包名。默认为""，框架运行时测试当前测试应用的性能数据。
+Bundle name of the application to test. The format must be the same as that of **bundleName** in the application configuration file. To test the performance data of a non-current application, pass the bundle name of the target application. The default value is **""**, indicating that the framework tests the performance data of the current application.
 
 **Type:** string
 
@@ -67,7 +69,7 @@ bundleName?: string
 iterations?: int
 ```
 
-测试迭代执行次数，取值范围为大于0的整数，默认值为5。超出范围时抛出异常。
+Number of test iterations. The value must be an integer greater than 0. The default value is **5**. An exception is thrown if the value is out of range.
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
@@ -87,7 +89,7 @@ iterations?: int
 metrics: Array<PerfMetric>
 ```
 
-被测性能指标列表，列表为空则不采集任何性能指标数据。
+Array of performance metrics to test. If the array is empty, no performance metric data is collected.
 
 **Type:** Array&lt;PerfMetric&gt;
 
@@ -107,7 +109,7 @@ metrics: Array<PerfMetric>
 resetCode?: Callback<Callback<boolean>>
 ```
 
-测试结束环境重置代码段。默认为空，框架运行时不执行此代码段。
+Code segment for resetting the environment after the test is complete. This parameter is passed for resetting after each test when the test code segment modifies the global status (such as global variables and configurations). The default value is empty. This code segment is not executed when the framework is performing the test. The input parameter is a callback function, which needs to be called in the code segment to notify the framework that the execution is complete. Otherwise, the execution will time out. For details, see the following description.
 
 **Type:** [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;Callback&lt;boolean&gt;&gt;
 
@@ -127,7 +129,7 @@ resetCode?: Callback<Callback<boolean>>
 timeout?: int
 ```
 
-单次代码段（actionCode/resetCode）执行的超时时间，取值范围为大于0的整数，单位：ms，默认值为10000ms。当测试代码段执行耗时较长时，可适当增大此值以避免超时，超时后将触发异常，并终止测试执行。
+resetCode**) at a time. The value is an integer greater than 0, in milliseconds. The default value is **10000**. If the execution of a test code segment takes a long time, you can increase the value of this parameter to prevent timeout. If a timeout occurs, an exception is triggered and the test execution is terminated.
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 

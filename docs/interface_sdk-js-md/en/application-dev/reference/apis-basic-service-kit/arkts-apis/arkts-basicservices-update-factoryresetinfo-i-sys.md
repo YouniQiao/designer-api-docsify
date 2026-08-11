@@ -1,6 +1,6 @@
 # FactoryResetInfo (System API)
 
-恢复出厂设置信息。
+Describes the information of restoring factory settings.
 
 **Since:** 26.0.0
 
@@ -24,7 +24,7 @@ import { update } from 'kits/@kit.BasicServicesKit';
 duration: int
 ```
 
-恢复出厂设置所需持续时间。单位为min。取值范围[0, 86400]。超出范围时抛出异常。
+Duration required for restoring factory settings, in minutes. The value range is [0, +∞]. An exception is thrown if the value is out of range.
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 

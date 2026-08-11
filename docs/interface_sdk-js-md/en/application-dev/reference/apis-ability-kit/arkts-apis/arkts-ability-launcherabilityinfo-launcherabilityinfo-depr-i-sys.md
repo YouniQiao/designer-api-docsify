@@ -1,13 +1,14 @@
 # LauncherAbilityInfo (System API)
 
-LauncherAbilityInfo信息，通过接口  
-[innerBundleManager.getLauncherAbilityInfos](../../../reference/apis-ability-kit/js-apis-Bundle-InnerBundleManager-sys.md#innerbundlemanagergetlauncherabilityinfosdeprecated)获取。
+The LauncherAbilityInfo module provides information about the launcher ability, which is obtained through  
+[innerBundleManager.getLauncherAbilityInfos](../../../reference/apis-ability-kit/js-apis-Bundle-InnerBundleManager-sys.md#innerbundlemanagergetlauncherabilityinfosdeprecated).
 
-> **说明：**
+> **NOTE：**
 > 
-> 从API version 9开始，该模块不再维护，建议使用[bundleManager-LauncherAbilityInfo](arkts-ability-launcherabilityinfo-launcherabilityinfo-depr-i-sys.md)替代。
+> The APIs of this module have been deprecated since API version 9. You are advised to use
+> [bundleManager-LauncherAbilityInfo](arkts-ability-launcherabilityinfo-launcherabilityinfo-depr-i-sys.md) instead.
 > 
-> 本模块为系统接口。
+> The APIs provided by this module are system APIs.
 
 **Since:** 8
 
@@ -29,7 +30,7 @@ LauncherAbilityInfo信息，通过接口
 readonly applicationInfo: ApplicationInfo
 ```
 
-launcher ability的应用程序的配置信息。
+Application information of the launcher ability.
 
 **Type:** [ApplicationInfo](arkts-ability-applicationinfo-applicationinfo-depr-i.md)
 
@@ -53,7 +54,7 @@ launcher ability的应用程序的配置信息。
 readonly elementName: ElementName
 ```
 
-launcher ability的ElementName信息。
+Element name of the launcher ability.
 
 **Type:** [ElementName](arkts-ability-elementname-elementname-depr-i.md)
 
@@ -77,7 +78,7 @@ launcher ability的ElementName信息。
 readonly iconId: number
 ```
 
-launcher ability的图标的资源ID值。
+ID of the launcher ability icon.
 
 **Type:** number
 
@@ -101,7 +102,7 @@ launcher ability的图标的资源ID值。
 readonly installTime: number
 ```
 
-launcher ability的安装时间戳，单位毫秒。
+Timestamp when the launcher ability was installed, in milliseconds.
 
 **Type:** number
 
@@ -125,7 +126,7 @@ launcher ability的安装时间戳，单位毫秒。
 readonly labelId: number
 ```
 
-launcher ability的标签的资源ID值。
+ID of the launcher ability label.
 
 **Type:** number
 
@@ -149,7 +150,7 @@ launcher ability的标签的资源ID值。
 readonly userId: number
 ```
 
-launcher ability的用户ID。
+User ID of the launcher ability.
 
 **Type:** number
 

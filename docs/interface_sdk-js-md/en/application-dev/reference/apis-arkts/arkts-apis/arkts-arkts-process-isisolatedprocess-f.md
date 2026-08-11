@@ -12,7 +12,7 @@ import { process } from 'kits/@kit.ArkTS';
 function isIsolatedProcess(): boolean
 ```
 
-检查进程是否已被隔离。
+Checks whether this process is isolated.
 
 **Since:** 8
 
@@ -28,7 +28,7 @@ function isIsolatedProcess(): boolean
 
 | Type | Description |
 | --- | --- |
-| boolean | 返回判断结果。如果进程被隔离则返回 true；否则， 返回 false。 |
+| boolean | Check result. The value **true** is returned if the process is isolated; otherwise, **false** is returned. |
 
 ## Examples
 

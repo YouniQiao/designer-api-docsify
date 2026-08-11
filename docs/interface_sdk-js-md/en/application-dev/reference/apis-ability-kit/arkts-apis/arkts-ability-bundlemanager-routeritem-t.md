@@ -4,7 +4,7 @@
 export type RouterItem = _HapModuleInfo.RouterItem
 ```
 
-模块配置的路由表信息。
+Defines the router table configuration of the module.
 
 **Since:** 12
 

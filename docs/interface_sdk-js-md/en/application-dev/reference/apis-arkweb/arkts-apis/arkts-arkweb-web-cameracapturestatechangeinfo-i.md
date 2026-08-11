@@ -1,6 +1,6 @@
 # CameraCaptureStateChangeInfo
 
-Defines the camera capture state change info.
+Defines the state information of the camera before and after the callback is triggered.
 
 **Since:** 23
 
@@ -16,7 +16,7 @@ Defines the camera capture state change info.
 newState: CameraCaptureState
 ```
 
-The new camera capture state.
+New state.
 
 **Type:** [CameraCaptureState](arkts-arkweb-web-cameracapturestate-e.md)
 
@@ -34,7 +34,7 @@ The new camera capture state.
 originalState: CameraCaptureState
 ```
 
-The original camera capture state.
+Original state.
 
 **Type:** [CameraCaptureState](arkts-arkweb-web-cameracapturestate-e.md)
 

@@ -12,7 +12,7 @@ import { window } from 'kits/@kit.ArkUI';
 function notifyScreenshotEvent(eventType: ScreenshotEventType): Promise<void>
 ```
 
-通知屏幕截屏的事件类型，使用Promise异步回调。
+Notifies a screenshot event. This API uses a promise to return the result.
 
 **Since:** 20
 
@@ -28,21 +28,21 @@ function notifyScreenshotEvent(eventType: ScreenshotEventType): Promise<void>
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| eventType | [ScreenshotEventType](arkts-arkui-window-screenshoteventtype-e.md) | Yes | 截屏事件类型。 |
+| eventType | [ScreenshotEventType](arkts-arkui-window-screenshoteventtype-e.md) | Yes | Type of the screenshot event. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | 无返回结果的Promise对象。 |
+| Promise&lt;void&gt; | Promise that returns no value. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 1300003 | This window manager service works abnormally. |
-| 1300016 | Parameter error. Possible cause: 1. Invalid parameter range. |
-| 202 | Permission verification failed. A non-system application calls a system API. |
+| [1300003](../errorcode-window.md#1300003-abnormal-window-manager-service) | This window manager service works abnormally. |
+| [1300016](../errorcode-window.md#1300016-parameter-verification-error) | Parameter error. Possible cause: 1. Invalid parameter range. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
 
 ## Examples
 

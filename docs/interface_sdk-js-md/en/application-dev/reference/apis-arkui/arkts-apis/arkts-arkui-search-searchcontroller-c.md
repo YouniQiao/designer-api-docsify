@@ -1,16 +1,6 @@
 # SearchController
 
-Search组件的控制器继承自  
-[TextContentControllerBase](../../../reference/apis-arkui/arkui-ts/ts-universal-attributes-text-style.md#textcontentcontrollerbase)，涉及的接口有  
-[getTextContentRect](../../../reference/apis-arkui/arkui-ts/ts-universal-attributes-text-style.md#gettextcontentrect)、  
-[getTextContentLineCount](../../../reference/apis-arkui/arkui-ts/ts-universal-attributes-text-style.md#gettextcontentlinecount)、[getCaretOffset](../../../reference/apis-arkui/arkui-ts/ts-universal-attributes-text-style.md#getcaretoffset11)、  
-[addText](../../../reference/apis-arkui/arkui-ts/ts-universal-attributes-text-style.md#addtext15)、  
-[deleteText](../../../reference/apis-arkui/arkui-ts/ts-universal-attributes-text-style.md#deletetext15)、  
-[getSelection](../../../reference/apis-arkui/arkui-ts/ts-universal-attributes-text-style.md#getselection15)、  
-[clearPreviewText](../../../reference/apis-arkui/arkui-ts/ts-universal-attributes-text-style.md#clearpreviewtext17)、  
-[setStyledPlaceholder](../../../reference/apis-arkui/arkui-ts/ts-universal-attributes-text-style.md#setstyledplaceholder22)、[deleteBackward](../../../reference/apis-arkui/arkui-ts/ts-universal-attributes-text-style.md#deletebackward23)、  
-[scrollToVisible](../../../reference/apis-arkui/arkui-ts/ts-universal-attributes-text-style.md#scrolltovisible23)&lt;!-  
--Del--&gt;以及系统接口[getText](../../../reference/apis-arkui/arkui-ts/ts-text-common-sys.md#gettext19)&lt;!--DelEnd--&gt;。
+Provides the method of switching the cursor position.
 
 **Inheritance/Implementation:** SearchController extends [TextContentControllerBase](arkts-arkui-common-textcontentcontrollerbase-c.md)
 
@@ -28,7 +18,7 @@ Search组件的控制器继承自
 caretPosition(value: int): void
 ```
 
-设置输入光标的位置。
+Called when the position of the insertion cursor is set.
 
 **Since:** 23
 
@@ -44,7 +34,7 @@ caretPosition(value: int): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | int | Yes | 从字符串开始到光标所在位置的长度。 &lt;br/&gt;取值范围：大于等于0。 |
+| value | int | Yes | Length from the start of the character string to the position where the caret is located. |
 
 ## constructor
 
@@ -52,7 +42,7 @@ caretPosition(value: int): void
 constructor()
 ```
 
-SearchController的构造函数。
+constructor.A constructor used to create a SearchController object.
 
 **Since:** 23
 
@@ -70,7 +60,9 @@ SearchController的构造函数。
 setTextSelection(selectionStart: int, selectionEnd: int, options?: SelectionOptions): void
 ```
 
-组件在获焦状态下，调用该接口设置文本选择区域并高亮显示，且只有在selectionStart小于selectionEnd时，文字才会被选取并高亮显示。
+Text selection is achieved by specifying the start and end positions of the text.
+
+&lt;p&gt;&lt;strong&gt;NOTE&lt;/strong&gt;:&lt;br&gt;If selectionStart or selectionEnd is set to undefined, the value 0 will be used.&lt;br&gt;If &lt;em&gt;selectionMenuHidden&lt;/em&gt; is set to &lt;em&gt;true&lt;/em&gt; or a 2-in-1 device is used,calling setTextSelection does not display the context menu even when options is set to &lt;em&gt;MenuPolicy.SHOW&lt;/em&gt;.&lt;br&gt;If the selected text contains an emoji, the emoji is selected when its start position is within the text selection range.&lt;br&gt;Sets the text selection range and highlights the selected text when the component is focused.&lt;br&gt;This API works only when the value of selectionStart is less than that of selectionEnd.&lt;/p&gt;
 
 **Since:** 23
 
@@ -86,9 +78,9 @@ setTextSelection(selectionStart: int, selectionEnd: int, options?: SelectionOpti
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| selectionStart | int | Yes | 文本选择区域起始位置，文本框中文字的起始位置为0。&lt;br/&gt;当selectionStart小于0时、按照0处理；当selectionStart大于文字最大长度时、 按照文字最大长度处理。&lt;br/&gt; |
-| selectionEnd | int | Yes | 文本选择区域结束位置。&lt;br/&gt;当selectionEnd小于0时、按照0处理；当selectionEnd大于文字最大长度时、按照文字最大长度处理。&lt;br/&gt; |
-| options | [SelectionOptions](../arkts-components/arkts-arkui-selectionoptions-i.md) | No | 选中文字时的配置。&lt;br /&gt;默认值：MenuPolicy.DEFAULT。 |
+| selectionStart | int | Yes | The start position of the selected text. The start position of text in the text box is 0. A value less than 0 is handled as 0. A value greater than the maximum text length is handled as the maximum text length. |
+| selectionEnd | int | Yes | The end position of the selected text. A value less than 0 is handled as the value 0. A value greater than the maximum text length is handled as the maximum text length. |
+| options | [SelectionOptions](../arkts-components/arkts-arkui-selectionoptions-i.md) | No | Indicates the options of the text selection. Default value is MenuPolicy.DEFAULT. |
 
 ## stopEditing
 
@@ -96,7 +88,7 @@ setTextSelection(selectionStart: int, selectionEnd: int, options?: SelectionOpti
 stopEditing(): void
 ```
 
-退出编辑态。
+Exit edit state.
 
 **Since:** 23
 

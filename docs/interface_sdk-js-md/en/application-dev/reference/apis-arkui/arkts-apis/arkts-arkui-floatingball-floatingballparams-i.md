@@ -1,6 +1,6 @@
 # FloatingBallParams
 
-启动和更新闪控球的配置参数。
+Describes the parameters for starting and updating the floating ball.
 
 **Since:** 20
 
@@ -22,7 +22,8 @@ import { floatingBall } from 'kits/@kit.ArkUI';
 backgroundColor?: string
 ```
 
-闪控球背景颜色，为不带透明度的十六进制颜色格式（例如'#008EF5'或'#FF008EF5'），不传入时闪控球跟随系统深浅色模式的默认背景色。
+Background color of the floating ball, in hexadecimal format without opacity (for example, **'#008EF5'** or  
+**'#FF008EF5'**). If this parameter is not specified, the default background color of the system (light or dark mode) is used.
 
 **Type:** string
 
@@ -40,7 +41,7 @@ backgroundColor?: string
 content?: string
 ```
 
-闪控球内容，大小不超过64字节。不传入时默认为空字符串，不显示闪控球内容。
+Content of the floating ball. It cannot exceed 64 bytes. The default value is an empty string, and no content is displayed on the floating ball.
 
 **Type:** string
 
@@ -58,7 +59,7 @@ content?: string
 contentColor?: string
 ```
 
-闪控球内容颜色，为不带透明度的十六进制颜色格式（例如'#008EF5'或'#FF008EF5'）。如果背景颜色没有指定，不允许指定内容颜色。
+The color of the floating ball content, in hexadecimal format without opacity(e.g., **'#008EF5'** or **'#FF008EF5'**).Providing contentColor is not allowed if 'backgroundColor' is not provided.
 
 **Type:** string
 
@@ -80,8 +81,7 @@ contentColor?: string
 icon?: image.PixelMap
 ```
 
-闪控球图标，图标像素的总字节数不超过192KB（图标像素的总字节数通过  
-[getPixelBytesNumber](../../apis-image-kit/arkts-apis/arkts-image-image-pixelmap-i.md/arkts-image-image-pixelmap-i.md#getpixelbytesnumber)获取）。建议图标像素宽高为128px*128px。实际显示效果依赖于设备能力和闪控球UI样式。
+Icon of the floating ball. The total number of bytes of the icon pixels cannot exceed 192 KB (which is obtained through [getPixelBytesNumber](../../apis-image-kit/arkts-apis/arkts-image-image-pixelmap-i.md/arkts-image-image-pixelmap-i.md#getpixelbytesnumber)). The recommended size is 128 px * 128 px. Actual display may vary based on the device capability and floating ball UI style.
 
 **Type:** image.PixelMap
 
@@ -99,7 +99,7 @@ icon?: image.PixelMap
 template: FloatingBallTemplate
 ```
 
-闪控球模板。
+Floating ball template.
 
 **Type:** [FloatingBallTemplate](arkts-arkui-floatingball-floatingballtemplate-e.md)
 
@@ -117,7 +117,8 @@ template: FloatingBallTemplate
 textUpdateAnimationType?: FloatingBallTextUpdateAnimationType
 ```
 
-闪控球文本更新时的动画类型。默认为FloatingBallTextUpdateAnimationType.ANIMATION_NONE。
+Animation type used when the floating ball text is updated. The default value is  
+**FloatingBallTextUpdateAnimationType.ANIMATION_NONE**.
 
 **Type:** [FloatingBallTextUpdateAnimationType](arkts-arkui-floatingball-floatingballtextupdateanimationtype-e.md)
 
@@ -139,7 +140,7 @@ textUpdateAnimationType?: FloatingBallTextUpdateAnimationType
 title: string
 ```
 
-闪控球标题，不可为空字符串，大小不超过64字节。
+Title of the floating ball. It cannot be an empty string and cannot exceed 64 bytes.
 
 **Type:** string
 
@@ -157,7 +158,7 @@ title: string
 titleColor?: string
 ```
 
-闪控球标题颜色，为不带透明度的十六进制颜色格式（例如'#008EF5'或'#FF008EF5'）。如果背景颜色没有指定，不允许指定标题颜色。
+The color of the floating ball title, in hexadecimal format without opacity(e.g., **'#008EF5'** or **'#FF008EF5'**).Providing titleColor is not allowed if 'backgroundColor' is not provided.
 
 **Type:** string
 

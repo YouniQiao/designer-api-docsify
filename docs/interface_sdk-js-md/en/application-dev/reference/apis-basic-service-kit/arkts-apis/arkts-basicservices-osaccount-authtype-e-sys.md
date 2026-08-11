@@ -1,6 +1,6 @@
 # AuthType (System API)
 
-表示身份验证的凭据类型的枚举。
+Enumerates the authentication credential types.
 
 **Since:** 8
 
@@ -18,7 +18,7 @@
 PIN = 1
 ```
 
-表示PIN认证类型。
+PIN authentication.
 
 **Since:** 8
 
@@ -36,7 +36,7 @@ PIN = 1
 FACE = 2
 ```
 
-表示脸部认证类型。
+Facial authentication.
 
 **Since:** 8
 
@@ -54,7 +54,7 @@ FACE = 2
 FINGERPRINT = 4
 ```
 
-表示指纹认证类型。
+Fingerprint authentication.
 
 **Since:** 10
 
@@ -72,7 +72,7 @@ FINGERPRINT = 4
 RECOVERY_KEY = 8
 ```
 
-表示键恢复类型。
+Key recovery type.
 
 **Since:** 12
 
@@ -90,7 +90,7 @@ RECOVERY_KEY = 8
 PRIVATE_PIN = 16
 ```
 
-表示隐私PIN类型。
+Private PIN type.
 
 **Since:** 14
 
@@ -108,7 +108,7 @@ PRIVATE_PIN = 16
 COMPANION_DEVICE = 64
 ```
 
-表示伴随设备认证类型。
+Companion device authentication.
 
 **Since:** 23
 
@@ -126,7 +126,7 @@ COMPANION_DEVICE = 64
 CUSTOM = 128
 ```
 
-自定义认证。
+Custom authentication.
 
 **Since:** 26.0.0
 
@@ -146,7 +146,7 @@ CUSTOM = 128
 DOMAIN = 1024
 ```
 
-表示域认证类型。
+Domain authentication.
 
 **Since:** 9
 

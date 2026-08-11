@@ -12,7 +12,7 @@ import { pointer } from 'kits/@kit.InputKit';
 function setMouseScrollRows(rows: int, callback: AsyncCallback<void>): void
 ```
 
-设置鼠标滚动行数，使用callback异步回调。
+Sets the number of mouse scroll lines. This API uses an asynchronous callback to return the result.
 
 **Since:** 10
 
@@ -28,15 +28,15 @@ function setMouseScrollRows(rows: int, callback: AsyncCallback<void>): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| rows | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | 鼠标滚动行数，范围1-100，默认为3。 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | 回调函数。当设置鼠标滚动行数成功，err为undefined，否则为错误对象。 |
+| rows | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | Number of mouse scroll lines. The value ranges from 1 to 100. The default value is **3**. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined**. Otherwise, **err** is an error object. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; 3. Parameter verification failed. |
-| 202 | SystemAPI permission error. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; 3. Parameter verification failed. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | SystemAPI permission error. |
 
 ## Examples
 
@@ -52,16 +52,15 @@ struct Index {
       Text()
         .onClick(() => {
           try {
-            // Set the number of mouse scroll lines.
             pointer.setMouseScrollRows(1, (error: BusinessError) => {
               if (error) {
-                console.error(`Failed to set mouse scroll rows, Code: ${(error as BusinessError).code}, message: ${(error as BusinessError).message}.`);
+                console.error(`setMouseScrollRows failed, error: ${JSON.stringify(error, [`code`, `message`])}`);
                 return;
               }
-              console.info(`Succeeded in setting mouse scroll rows.`);
+              console.info(`setMouseScrollRows success`);
             });
           } catch (error) {
-            console.error(`Failed to set mouse scroll rows, Code: ${(error as BusinessError).code}, message: ${(error as BusinessError).message}.`);
+            console.error(`setMouseScrollRows failed, error: ${JSON.stringify(error, [`code`, `message`])}`);
           }
         })
     }
@@ -76,7 +75,7 @@ struct Index {
 function setMouseScrollRows(rows: int): Promise<void>
 ```
 
-设置鼠标滚动行数，使用Promise异步回调。
+Sets the number of mouse scroll lines. This API uses a promise to return the result.
 
 **Since:** 10
 
@@ -92,20 +91,20 @@ function setMouseScrollRows(rows: int): Promise<void>
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| rows | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | 鼠标滚动行数，范围1-100，默认为3。 |
+| rows | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | Number of mouse scroll lines. The value ranges from 1 to 100. The default value is **3**. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise对象，无返回结果。 |
+| Promise&lt;void&gt; | Promise that returns no value. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; 3. Parameter verification failed. |
-| 202 | SystemAPI permission error. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; 3. Parameter verification failed. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | SystemAPI permission error. |
 
 ## Examples
 
@@ -121,14 +120,13 @@ struct Index {
       Text()
         .onClick(() => {
           try {
-            // Set the number of mouse scroll lines.
             pointer.setMouseScrollRows(20).then(() => {
-              console.info(`Succeeded in setting mouse scroll rows.`);
+              console.info(`setMouseScrollRows success`);
             }).catch((error: BusinessError) => {
-              console.error(`Failed to set mouse scroll rows, Code: ${(error as BusinessError).code}, message: ${(error as BusinessError).message}.`);
+              console.error(`Set mouse scroll rows failed, error: ${JSON.stringify(error, [`code`, `message`])}`);
             })
           } catch (error) {
-            console.error(`Failed to set mouse scroll rows, Code: ${(error as BusinessError).code}, message: ${(error as BusinessError).message}.`);
+            console.error(`setMouseScrollRows failed, error: ${JSON.stringify(error, [`code`, `message`])}`);
           }
         })
     }

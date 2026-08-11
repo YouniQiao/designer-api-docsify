@@ -1,11 +1,5 @@
 # isHdHapticSupported
 
-## 导入模块
-
-```TypeScript
-import { vibrator } from 'kits/@kit.SensorServiceKit';
-```
-
 ## isHdHapticSupported
 
 ```TypeScript
@@ -32,7 +26,7 @@ function isHdHapticSupported(): boolean
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 14600101 | Device operation failed. |
+| [14600101](../errorcode-vibrator.md#14600101-操作设备失败) | Device operation failed. |
 
 ## 示例
 

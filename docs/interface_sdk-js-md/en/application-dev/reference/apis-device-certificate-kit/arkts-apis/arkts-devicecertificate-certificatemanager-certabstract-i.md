@@ -1,6 +1,6 @@
 # CertAbstract
 
-表示证书简要信息。
+Represents brief information about a certificate.
 
 **Since:** 11
 
@@ -22,7 +22,7 @@ import { certificateManager } from 'kits/@kit.DeviceCertificateKit';
 certAlias: string
 ```
 
-表示证书的别名，最大长度为128字节。
+Alias of a certificate. The value contains up to 128 bytes.
 
 **Type:** string
 
@@ -40,7 +40,7 @@ certAlias: string
 state: boolean
 ```
 
-表示证书的状态，true为启用状态、false为禁用状态。
+Certificate state. The value **true** indicates that the certificate is enabled, and **false** means the opposite.
 
 **Type:** boolean
 
@@ -58,7 +58,7 @@ state: boolean
 subjectName: string
 ```
 
-表示证书的使用者名称，最大长度为1024字节。
+Name of the certificate subject. The value contains up to 1024 bytes.
 
 **Type:** string
 
@@ -76,7 +76,7 @@ subjectName: string
 uri: string
 ```
 
-表示证书的唯一标识符，最大长度为256字节。
+Unique identifier of a certificate. The value contains up to 256 bytes.
 
 **Type:** string
 

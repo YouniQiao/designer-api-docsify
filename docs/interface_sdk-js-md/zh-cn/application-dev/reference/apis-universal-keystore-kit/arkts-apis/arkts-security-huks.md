@@ -12,12 +12,6 @@ HUKS所管理的密钥可以由应用导入或者由应用调用HUKS接口生成
 
 **系统能力：** SystemCapability.Security.Huks.Core
 
-## 导入模块
-
-```TypeScript
-import { huks } from 'kits/@kit.UniversalKeystoreKit';
-```
-
 ## 汇总
 
 ### 函数

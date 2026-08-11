@@ -1,11 +1,5 @@
 # onSwipeInward（系统接口）
 
-## 导入模块
-
-```TypeScript
-import { inputMonitor } from 'kits/@kit.InputKit';
-```
-
 ## onSwipeInward
 
 ```TypeScript
@@ -36,7 +30,35 @@ function onSwipeInward(receiver: Callback<SwipeInward>): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 401 | Parameter error. |
-| 201 | Permission denied. |
-| 202 | SystemAPI permit error. |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. |
+| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | SystemAPI permit error. |
+
+## 示例
+
+```TypeScript
+import { Entry, Text, RelativeContainer, Component } from '@kit.ArkUI';
+import { BusinessError } from '@kit.BasicServicesKit';
+import { inputMonitor } from '@kit.InputKit';
+
+@Entry
+@Component
+struct Index {
+  build() {
+    RelativeContainer() {
+      Text()
+        .onClick(() => {
+          try {
+            // 订阅向内滑动事件
+            inputMonitor.onSwipeInward((SwipeInward) => {
+              console.info(`Succeeded in monitoring on ${JSON.stringify(SwipeInward)}.`);
+            });
+          } catch (error) {
+            console.error(`Failed to monitor swipe inward, Code: ${(error as BusinessError).code}, message: ${(error as BusinessError).message}.`);
+          }
+        })
+    }
+  }
+}
+```
 

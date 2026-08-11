@@ -167,7 +167,7 @@ setCurrentTime(value: number, seekMode: SeekMode)
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | value | number | 是 | 视频播放进度位置。 &lt;br&gt;取值范围：[0, [duration](arkts-arkui-preparedinfo-i.md)] &lt;br&gt;当设置value大于duration时，进度跳转至最后；当设置value小于0时，不会进行进度跳转。 &lt;br&gt;单位：s |
-| seekMode | [SeekMode](arkts-arkui-seekmode-e.md) | 是 | 跳转模式。 &lt;br&gt;异常值undefined、null、NaN和Infinity按PreviousKeyframe处理。 |
+| seekMode | [SeekMode](../arkts-apis/arkts-arkui-video-seekmode-e.md) | 是 | 跳转模式。 &lt;br&gt;异常值undefined、null、NaN和Infinity按PreviousKeyframe处理。 |
 
 ## start
 

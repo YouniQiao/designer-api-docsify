@@ -1,6 +1,7 @@
 # DataAbilityHelper
 
-可以通过[acquireDataAbilityHelper](arkts-ability-featureability-acquiredataabilityhelper-f.md#acquiredataabilityhelper)接口获取DataAbilityHelper对象。
+A DataAbilityHelper object is obtained through  
+[acquireDataAbilityHelper](arkts-ability-featureability-acquiredataabilityhelper-f.md#acquiredataabilityhelper).
 
 **Since:** 7
 
@@ -16,7 +17,7 @@
 batchInsert(uri: string, valuesBuckets: Array<rdb.ValuesBucket>, callback: AsyncCallback<number>): void
 ```
 
-将多个数据记录插入数据库。使用callback异步回调。
+Inserts multiple data records into the database.This API uses an asynchronous callback to return the result.
 
 **Since:** 7
 
@@ -32,9 +33,9 @@ batchInsert(uri: string, valuesBuckets: Array<rdb.ValuesBucket>, callback: Async
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| uri | string | Yes | 表示要插入数据的uri。 |
-| valuesBuckets | Array&lt;rdb.ValuesBucket&gt; | Yes | 表示要插入的数据记录数组。 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;number&gt; | Yes | 回调函数，返回插入的数据记录数。 |
+| uri | string | Yes | URI of the data to insert. |
+| valuesBuckets | Array&lt;rdb.ValuesBucket&gt; | Yes | Data records to insert. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;number&gt; | Yes | Callback used to return the number of inserted data records. |
 
 ## batchInsert
 
@@ -42,7 +43,7 @@ batchInsert(uri: string, valuesBuckets: Array<rdb.ValuesBucket>, callback: Async
 batchInsert(uri: string, valuesBuckets: Array<rdb.ValuesBucket>): Promise<number>
 ```
 
-将多个数据记录插入数据库。使用Promise异步回调。
+Inserts multiple data records into the database. This API uses a promise to return the result.
 
 **Since:** 7
 
@@ -58,14 +59,14 @@ batchInsert(uri: string, valuesBuckets: Array<rdb.ValuesBucket>): Promise<number
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| uri | string | Yes | 表示要插入数据的uri。 |
-| valuesBuckets | Array&lt;rdb.ValuesBucket&gt; | Yes | 表示要插入的数据记录数组。 |
+| uri | string | Yes | URI of the data to insert. |
+| valuesBuckets | Array&lt;rdb.ValuesBucket&gt; | Yes | Data records to insert. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;number&gt; | Promise对象，返回插入的数据记录数。 |
+| Promise&lt;number&gt; | Promise used to return the number of inserted data records. |
 
 ## call
 
@@ -73,7 +74,7 @@ batchInsert(uri: string, valuesBuckets: Array<rdb.ValuesBucket>): Promise<number
 call(uri: string, method: string, arg: string, extras: PacMap, callback: AsyncCallback<PacMap>): void
 ```
 
-调用DataAbility的扩展接口。使用callback异步回调。
+Calls an extended method defined by the DataAbility. This API uses an asynchronous callback to return the result.
 
 **Since:** 7
 
@@ -89,11 +90,11 @@ call(uri: string, method: string, arg: string, extras: PacMap, callback: AsyncCa
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| uri | string | Yes | 表示待处理的DataAbility。例：'dataability:///com.example.xxx.xxxx'。 |
-| method | string | Yes | 表示被调用的方法名。 |
-| arg | string | Yes | 表示需传入的参数。 |
-| extras | [PacMap](arkts-ability-common-pacmap-t.md) | Yes | 表示扩展的键值对参数。 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;PacMap&gt; | Yes | 回调函数，返回扩展的键值对参数。 |
+| uri | string | Yes | URI of the DataAbility. Example: 'dataability:///com.example.xxx.xxxx'. |
+| method | string | Yes | Name of the API to call. |
+| arg | string | Yes | Parameter to pass in. |
+| extras | [PacMap](arkts-ability-common-pacmap-t.md) | Yes | Key-value pair parameter. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;PacMap&gt; | Yes | Callback used to return the extended parameters in the format of key-value pairs. |
 
 ## call
 
@@ -101,7 +102,7 @@ call(uri: string, method: string, arg: string, extras: PacMap, callback: AsyncCa
 call(uri: string, method: string, arg: string, extras: PacMap): Promise<PacMap>
 ```
 
-调用DataAbility的扩展接口。使用Promise异步回调。
+Calls an extended method defined by the DataAbility. This API uses a promise to return the result.
 
 **Since:** 7
 
@@ -117,16 +118,16 @@ call(uri: string, method: string, arg: string, extras: PacMap): Promise<PacMap>
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| uri | string | Yes | 表示待处理的DataAbility。例：'dataability:///com.example.xxx.xxxx'。 |
-| method | string | Yes | 表示被调用的方法名。 |
-| arg | string | Yes | 表示需传入的参数。 |
-| extras | [PacMap](arkts-ability-common-pacmap-t.md) | Yes | 表示扩展的键值对参数。 |
+| uri | string | Yes | URI of the DataAbility. Example: 'dataability:///com.example.xxx.xxxx'. |
+| method | string | Yes | Name of the API to call. |
+| arg | string | Yes | Parameter to pass in. |
+| extras | [PacMap](arkts-ability-common-pacmap-t.md) | Yes | Key-value pair parameter. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;PacMap&gt; | Promise对象，返回扩展的键值对参数。 |
+| Promise&lt;PacMap&gt; | Promise used to return the extended parameters in the format of key-value pairs. |
 
 ## delete
 
@@ -134,7 +135,7 @@ call(uri: string, method: string, arg: string, extras: PacMap): Promise<PacMap>
 delete(uri: string, predicates: dataAbility.DataAbilityPredicates, callback: AsyncCallback<number>): void
 ```
 
-从数据库中删除一个或多个数据记录。使用callback异步回调。
+Deletes one or more data records from the database. This API uses an asynchronous callback to return the result.
 
 **Since:** 7
 
@@ -150,9 +151,9 @@ delete(uri: string, predicates: dataAbility.DataAbilityPredicates, callback: Asy
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| uri | string | Yes | 表示要删除数据的uri。 |
-| predicates | dataAbility.DataAbilityPredicates | Yes | 表示筛选条件。当此参数为null时，应定义处理逻辑。 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;number&gt; | Yes | 回调函数，返回已删除的数据记录数。 |
+| uri | string | Yes | URI of the data to delete. |
+| predicates | dataAbility.DataAbilityPredicates | Yes | Filter criteria. You should define the processing logic when this parameter is null. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;number&gt; | Yes | Callback used to return the number of deleted data records. |
 
 ## delete
 
@@ -160,7 +161,7 @@ delete(uri: string, predicates: dataAbility.DataAbilityPredicates, callback: Asy
 delete(uri: string, predicates?: dataAbility.DataAbilityPredicates): Promise<number>
 ```
 
-从数据库中删除一个或多个数据记录。使用Promise异步回调。
+Deletes one or more data records from the database. This API uses a promise to return the result.
 
 **Since:** 7
 
@@ -176,8 +177,8 @@ delete(uri: string, predicates?: dataAbility.DataAbilityPredicates): Promise<num
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| uri | string | Yes | 表示要删除数据的uri。 |
-| predicates | dataAbility.DataAbilityPredicates | No | 表示筛选条件。当此参数为null时，应定义处理逻辑。 |
+| uri | string | Yes | URI of the data to delete. |
+| predicates | dataAbility.DataAbilityPredicates | No | Filter criteria. You should define the processing logic when this parameter is null. |
 
 **Return value:**
 
@@ -191,7 +192,7 @@ delete(uri: string, predicates?: dataAbility.DataAbilityPredicates): Promise<num
 delete(uri: string, callback: AsyncCallback<number>): void
 ```
 
-predicates筛选条件为空，自定义数据库删除数据记录的处理逻辑。使用callback异步回调。
+Uses a custom processing logic to delete data records from the database.This API uses an asynchronous callback to return the result.
 
 **Since:** 7
 
@@ -207,8 +208,8 @@ predicates筛选条件为空，自定义数据库删除数据记录的处理逻�
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| uri | string | Yes | 表示要删除数据的uri。 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;number&gt; | Yes | 回调函数，返回已删除的数据记录数。 |
+| uri | string | Yes | URI of the data to delete. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;number&gt; | Yes | Callback used to return the number of deleted data records. |
 
 ## denormalizeUri
 
@@ -216,7 +217,7 @@ predicates筛选条件为空，自定义数据库删除数据记录的处理逻�
 denormalizeUri(uri: string, callback: AsyncCallback<string>): void
 ```
 
-将由normalizeUri（uri）生成的给定规范化uri转换为非规范化uri。使用callback异步回调。
+Converts a normalized URI generated by normalizeUri to a denormalized one.This API uses an asynchronous callback to return the result.
 
 **Since:** 7
 
@@ -232,8 +233,8 @@ denormalizeUri(uri: string, callback: AsyncCallback<string>): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| uri | string | Yes | 表示要反规范化的uri对象。 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;string&gt; | Yes | 回调函数，返回反规范化uri对象。 |
+| uri | string | Yes | URI object to denormalize. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;string&gt; | Yes | Callback used to return the denormalized URI object. |
 
 ## denormalizeUri
 
@@ -241,7 +242,7 @@ denormalizeUri(uri: string, callback: AsyncCallback<string>): void
 denormalizeUri(uri: string): Promise<string>
 ```
 
-将由normalizeUri（uri）生成的给定规范化uri转换为非规范化uri。使用Promise异步回调。
+Converts a normalized URI generated by normalizeUri to a denormalized one.This API uses a promise to return the result.
 
 **Since:** 7
 
@@ -257,13 +258,13 @@ denormalizeUri(uri: string): Promise<string>
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| uri | string | Yes | 表示要规范化的uri对象。 |
+| uri | string | Yes | URI object to normalize. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;string&gt; | Promise对象，返回反规范化uri对象。 |
+| Promise&lt;string&gt; | Promise used to return the denormalized URI object |
 
 ## executeBatch
 
@@ -275,7 +276,7 @@ executeBatch(
   ): void
 ```
 
-批量操作数据库中的数据。使用callback异步回调。
+Operates data in the database in batches. This API uses an asynchronous callback to return the result.
 
 **Since:** 7
 
@@ -291,9 +292,9 @@ executeBatch(
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| uri | string | Yes | 表示待处理的DataAbility。例：'dataability:///com.example.xxx.xxxx'。 |
-| operations | Array&lt;[DataAbilityOperation](arkts-ability-dataabilityoperation-dataabilityoperation-i.md)&gt; | Yes | 表示数据操作数组，其中可以包含对数据库的多个不同操作。 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;[DataAbilityResult](arkts-ability-dataabilityresult-dataabilityresult-i.md)&gt;&gt; | Yes | 回调函数，在DataAbilityResult数组中返回每个操作的结果。 |
+| uri | string | Yes | URI of the DataAbility. Example: 'dataability:///com.example.xxx.xxxx'. |
+| operations | Array&lt;[DataAbilityOperation](arkts-ability-dataabilityoperation-dataabilityoperation-i.md)&gt; | Yes | An array holding the data operations on the database. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;[DataAbilityResult](arkts-ability-dataabilityresult-dataabilityresult-i.md)&gt;&gt; | Yes | Callback used to return the result of each operation in the DataAbilityResult array. |
 
 ## executeBatch
 
@@ -301,7 +302,7 @@ executeBatch(
 executeBatch(uri: string, operations: Array<DataAbilityOperation>): Promise<Array<DataAbilityResult>>
 ```
 
-批量操作数据库中的数据。使用Promise异步回调。
+Operates data in the database in batches. This API uses a promise to return the result.
 
 **Since:** 7
 
@@ -317,14 +318,14 @@ executeBatch(uri: string, operations: Array<DataAbilityOperation>): Promise<Arra
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| uri | string | Yes | 表示待处理的DataAbility。例：'dataability:///com.example.xxx.xxxx'。 |
-| operations | Array&lt;[DataAbilityOperation](arkts-ability-dataabilityoperation-dataabilityoperation-i.md)&gt; | Yes | 表示数据操作数组，其中可以包含对数据库的多个不同操作。 |
+| uri | string | Yes | URI of the DataAbility. Example: 'dataability:///com.example.xxx.xxxx'. |
+| operations | Array&lt;[DataAbilityOperation](arkts-ability-dataabilityoperation-dataabilityoperation-i.md)&gt; | Yes | An array holding the data operations on the database. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;Array&lt;[DataAbilityResult](arkts-ability-dataabilityresult-dataabilityresult-i.md)&gt;&gt; | Promise对象，在DataAbilityResult数组中返回每个操作的结果。 |
+| Promise&lt;Array&lt;[DataAbilityResult](arkts-ability-dataabilityresult-dataabilityresult-i.md)&gt;&gt; | Promise used to return the result of each operation in the DataAbilityResult array. |
 
 ## getFileTypes
 
@@ -332,7 +333,7 @@ executeBatch(uri: string, operations: Array<DataAbilityOperation>): Promise<Arra
 getFileTypes(uri: string, mimeTypeFilter: string, callback: AsyncCallback<Array<string>>): void
 ```
 
-获取支持的文件媒体资源类型。使用callback异步回调。
+Obtains the supported media resource types of a specified file.This API uses an asynchronous callback to return the result.
 
 **Since:** 7
 
@@ -348,9 +349,9 @@ getFileTypes(uri: string, mimeTypeFilter: string, callback: AsyncCallback<Array<
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| uri | string | Yes | 表示待获取文件的uri。 |
-| mimeTypeFilter | string | Yes | 表示待获取文件的媒体资源类型。 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;string&gt;&gt; | Yes | 回调函数，返回匹配的媒体资源类型数组。 |
+| uri | string | Yes | URI of the file. |
+| mimeTypeFilter | string | Yes | Media resource type of the file to obtain. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;string&gt;&gt; | Yes | Callback used to return an array holding the media resource types. |
 
 ## getFileTypes
 
@@ -358,7 +359,7 @@ getFileTypes(uri: string, mimeTypeFilter: string, callback: AsyncCallback<Array<
 getFileTypes(uri: string, mimeTypeFilter: string): Promise<Array<string>>
 ```
 
-获取支持的文件媒体资源类型。使用Promise异步回调。
+Obtains the supported media resource types of a specified file. This API uses a promise to return the result.
 
 **Since:** 7
 
@@ -374,14 +375,14 @@ getFileTypes(uri: string, mimeTypeFilter: string): Promise<Array<string>>
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| uri | string | Yes | 表示待获取文件的uri。 |
-| mimeTypeFilter | string | Yes | 表示待获取文件的媒体资源类型。 |
+| uri | string | Yes | URI of the file. |
+| mimeTypeFilter | string | Yes | Media resource type of the file to obtain. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;Array&lt;string&gt;&gt; | Promise对象，返回匹配的媒体资源类型数组。 |
+| Promise&lt;Array&lt;string&gt;&gt; | Promise used to return an array holding the media resource types. |
 
 ## getType
 
@@ -389,7 +390,7 @@ getFileTypes(uri: string, mimeTypeFilter: string): Promise<Array<string>>
 getType(uri: string, callback: AsyncCallback<string>): void
 ```
 
-获取给定uri指向数据的媒体资源类型。使用callback异步回调。
+Obtains the media resource type of the data specified by a given URI.This API uses an asynchronous callback to return the result.
 
 **Since:** 7
 
@@ -405,8 +406,8 @@ getType(uri: string, callback: AsyncCallback<string>): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| uri | string | Yes | 表示待获取数据的uri。 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;string&gt; | Yes | 回调函数，返回与uri指向数据匹配的媒体资源类型。 |
+| uri | string | Yes | URI of the data. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;string&gt; | Yes | Callback used to return the media resource type. |
 
 ## getType
 
@@ -414,7 +415,7 @@ getType(uri: string, callback: AsyncCallback<string>): void
 getType(uri: string): Promise<string>
 ```
 
-获取给定uri指向数据的媒体资源类型。使用Promise异步回调。
+Obtains the media resource type of the data specified by a given URI.This API uses a promise to return the result.
 
 **Since:** 7
 
@@ -430,13 +431,13 @@ getType(uri: string): Promise<string>
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| uri | string | Yes | 表示待获取数据的uri。 |
+| uri | string | Yes | URI of the data. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;string&gt; | Promise对象，返回与uri指向数据匹配的媒体资源类型。 |
+| Promise&lt;string&gt; | Promise used to return the media resource type. |
 
 ## insert
 
@@ -444,7 +445,7 @@ getType(uri: string): Promise<string>
 insert(uri: string, valuesBucket: rdb.ValuesBucket, callback: AsyncCallback<number>): void
 ```
 
-将单个数据记录插入数据库。使用callback异步回调。
+Inserts a single data record into the database. This API uses an asynchronous callback to return the result.
 
 **Since:** 7
 
@@ -460,9 +461,9 @@ insert(uri: string, valuesBucket: rdb.ValuesBucket, callback: AsyncCallback<numb
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| uri | string | Yes | 表示要插入数据的uri。 |
-| valuesBucket | rdb.ValuesBucket | Yes | 表示要插入的数据记录。如果此参数为空，将插入一个空行。 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;number&gt; | Yes | 回调函数，返回插入数据记录的索引。 |
+| uri | string | Yes | URI of the data to insert. |
+| valuesBucket | rdb.ValuesBucket | Yes | Data record to insert. If this parameter is null, a blank row will be inserted. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;number&gt; | Yes | Callback used to return the index of the inserted data record. |
 
 ## insert
 
@@ -470,7 +471,7 @@ insert(uri: string, valuesBucket: rdb.ValuesBucket, callback: AsyncCallback<numb
 insert(uri: string, valuesBucket: rdb.ValuesBucket): Promise<number>
 ```
 
-将单个数据记录插入数据库。使用Promise异步回调。
+Inserts a single data record into the database. This API uses a promise to return the result.
 
 **Since:** 7
 
@@ -486,14 +487,14 @@ insert(uri: string, valuesBucket: rdb.ValuesBucket): Promise<number>
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| uri | string | Yes | 表示要插入数据的uri。 |
-| valuesBucket | rdb.ValuesBucket | Yes | 表示要插入的数据记录。如果此参数为空，将插入一个空行。 |
+| uri | string | Yes | URI of the data to insert. |
+| valuesBucket | rdb.ValuesBucket | Yes | Data record to insert. If this parameter is null, a blank row will be inserted. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;number&gt; | Promise对象，返回插入数据记录的索引。 |
+| Promise&lt;number&gt; | Promise used to return the index of the inserted data record. |
 
 ## normalizeUri
 
@@ -501,7 +502,7 @@ insert(uri: string, valuesBucket: rdb.ValuesBucket): Promise<number>
 normalizeUri(uri: string, callback: AsyncCallback<string>): void
 ```
 
-将引用数据功能的给定uri转换为规范化uri。使用callback异步回调。
+Converts the URI that refers to a DataAbility into a normalized URI.This API uses an asynchronous callback to return the result.
 
 **Since:** 7
 
@@ -517,8 +518,8 @@ normalizeUri(uri: string, callback: AsyncCallback<string>): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| uri | string | Yes | 表示要规范化的uri对象。 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;string&gt; | Yes | 回调函数，如果数据功能支持uri规范化，则返回规范化uri对象；否则返回null。 |
+| uri | string | Yes | URI object to normalize. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;string&gt; | Yes | Callback used to return the normalized URI object if the DataAbility supports URI normalization. If the DataAbility does not support URI normalization, null is returned. |
 
 ## normalizeUri
 
@@ -526,7 +527,7 @@ normalizeUri(uri: string, callback: AsyncCallback<string>): void
 normalizeUri(uri: string): Promise<string>
 ```
 
-将引用数据功能的给定uri转换为规范化uri。使用Promise异步回调。
+Converts a normalized URI generated by normalizeUri to a denormalized one.This API uses an asynchronous callback to return the result.
 
 **Since:** 7
 
@@ -542,13 +543,13 @@ normalizeUri(uri: string): Promise<string>
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| uri | string | Yes | 表示要规范化的uri对象。 |
+| uri | string | Yes | URI object to denormalize. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;string&gt; | Promise对象，如果数据功能支持uri规范化，则返回规范化uri对象；否则返回null。 |
+| Promise&lt;string&gt; | Promise used to return the normalized URI object if the DataAbility supports URI normalization. If the DataAbility does not support URI normalization, null is returned. |
 
 ## notifyChange
 
@@ -556,7 +557,7 @@ normalizeUri(uri: string): Promise<string>
 notifyChange(uri: string, callback: AsyncCallback<void>): void
 ```
 
-通知注册的观察者，uri指定数据的数据变化。使用callback异步回调。
+Notifies the registered observer of a change to the data specified by the URI.This API uses an asynchronous callback to return the result.
 
 **Since:** 7
 
@@ -572,8 +573,8 @@ notifyChange(uri: string, callback: AsyncCallback<void>): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| uri | string | Yes | 表示数据变化的uri。 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | 回调函数。当通知注册的观察者成功，err为undefined，否则为错误对象。 |
+| uri | string | Yes | URI of the data that changes. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. If the observer is registered, err is undefined. Otherwise, err is an error object. |
 
 ## notifyChange
 
@@ -581,7 +582,7 @@ notifyChange(uri: string, callback: AsyncCallback<void>): void
 notifyChange(uri: string): Promise<void>
 ```
 
-通知注册的观察者，uri指定数据的数据变化。使用Promise异步回调。
+Notifies the registered observer of a change to the data specified by the URI.This API uses a promise to return the result.
 
 **Since:** 7
 
@@ -597,13 +598,13 @@ notifyChange(uri: string): Promise<void>
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| uri | string | Yes | 表示数据变化的uri。 |
+| uri | string | Yes | URI of the data that changes. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise对象。无返回结果的Promise对象。 |
+| Promise&lt;void&gt; | Promise that returns no value. |
 
 ## off('dataChange')
 
@@ -611,7 +612,7 @@ notifyChange(uri: string): Promise<void>
 off(type: 'dataChange', uri: string, callback?: AsyncCallback<void>): void
 ```
 
-注销观察者以停止监听uri指定数据的数据变化通知。使用callback异步回调。
+Deregisters the observer that listens for changes in the data specified by a given URI.This API uses an asynchronous callback to return the result.
 
 **Since:** 7
 
@@ -627,9 +628,9 @@ off(type: 'dataChange', uri: string, callback?: AsyncCallback<void>): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'dataChange' | Yes | 表示监听操作类型，'dataChange'表示数据变化操作。 |
-| uri | string | Yes | 表示待取消监听数据变化的uri。 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | No | 回调函数。当注销观察者以停止监听uri指定数据的数据变化通知成功，err为undefined，否则为错误对象。 |
+| type | 'dataChange' | Yes | The value 'dataChange' means data changes. |
+| uri | string | Yes | URI of the data. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | No | Callback used to return the result. If the observer is deregistered, err is undefined. Otherwise, err is an error object. |
 
 ## on('dataChange')
 
@@ -637,7 +638,7 @@ off(type: 'dataChange', uri: string, callback?: AsyncCallback<void>): void
 on(type: 'dataChange', uri: string, callback: AsyncCallback<void>): void
 ```
 
-注册观察者以监听uri指定数据的数据变化通知。使用callback异步回调。
+Registers an observer to listen for changes in the data specified by a given URI.This API uses an asynchronous callback to return the result.
 
 **Since:** 7
 
@@ -653,9 +654,9 @@ on(type: 'dataChange', uri: string, callback: AsyncCallback<void>): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'dataChange' | Yes | 表示监听操作类型，'dataChange'表示数据变化操作。 |
-| uri | string | Yes | 表示待监听数据变化的uri。 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | 回调函数。当注册观察者以监听uri指定数据的数据变化通知成功，err为undefined，否则为错误对象。 |
+| type | 'dataChange' | Yes | The value 'dataChange' means data changes. |
+| uri | string | Yes | URI of the data. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. If the observer is registered, err is undefined. Otherwise, err is an error object. |
 
 ## openFile
 
@@ -663,7 +664,7 @@ on(type: 'dataChange', uri: string, callback: AsyncCallback<void>): void
 openFile(uri: string, mode: string, callback: AsyncCallback<number>): void
 ```
 
-打开指定uri对应的文件，返回文件描述符。使用callback异步回调。
+Opens a file with a specified URI. This API uses an asynchronous callback to return the result.
 
 **Since:** 7
 
@@ -679,9 +680,9 @@ openFile(uri: string, mode: string, callback: AsyncCallback<number>): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| uri | string | Yes | 表示待打开文件的uri。 |
-| mode | string | Yes | 表示文件打开模式，可以设置为‘r’表示只读访问，‘w’表示只写访问，‘rw’表示读写访问等。 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;number&gt; | Yes | 回调函数，返回文件描述符。 |
+| uri | string | Yes | URI of the file to open. |
+| mode | string | Yes | Mode for opening the file. The value r indicates read-only access, w indicates write-only access, and rw indicates read-write access. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;number&gt; | Yes | Callback used to return the file descriptor. |
 
 ## openFile
 
@@ -689,7 +690,7 @@ openFile(uri: string, mode: string, callback: AsyncCallback<number>): void
 openFile(uri: string, mode: string): Promise<number>
 ```
 
-打开指定uri对应的文件，返回文件描述符。使用Promise异步回调。
+Opens a file with a specified URI. This API uses a promise to return the result.
 
 **Since:** 7
 
@@ -705,14 +706,14 @@ openFile(uri: string, mode: string): Promise<number>
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| uri | string | Yes | 表示待打开文件的uri |
-| mode | string | Yes | 表示文件打开模式，可以设置为‘r’表示只读访问，‘w’表示只写访问，‘rw’表示读写访问等。 |
+| uri | string | Yes | URI of the file to open. |
+| mode | string | Yes | Mode for opening the file. The value r indicates read-only access, w indicates write-only access, and rw indicates read-write access. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;number&gt; | Promise对象，返回文件说明符。 |
+| Promise&lt;number&gt; | Promise used to return the file descriptor. |
 
 ## query
 
@@ -725,7 +726,7 @@ query(
   ): void
 ```
 
-查询数据库中的数据。使用callback异步回调。
+Queries data in the database. This API uses an asynchronous callback to return the result.
 
 **Since:** 7
 
@@ -741,10 +742,10 @@ query(
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| uri | string | Yes | 表示要查询数据的uri。 |
-| columns | Array&lt;string&gt; | Yes | 表示要查询的列。如果此参数为空，则查询所有列。 |
-| predicates | dataAbility.DataAbilityPredicates | Yes | 表示筛选条件。当此参数为null时，自定义查询数据库中数据的处理逻辑。 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;ResultSet&gt; | Yes | 回调函数，返回查询结果。 |
+| uri | string | Yes | URI of the data to query. |
+| columns | Array&lt;string&gt; | Yes | Columns to query. If this parameter is null, all columns will be queried. |
+| predicates | dataAbility.DataAbilityPredicates | Yes | Filter criteria. When null is passed in, you need to customize the logic for querying data in the database. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;ResultSet&gt; | Yes | Callback used to return the result. |
 
 ## query
 
@@ -752,7 +753,7 @@ query(
 query(uri: string, callback: AsyncCallback<ResultSet>): void
 ```
 
-查询数据库中的数据。使用callback异步回调。
+Queries data in the database. This API uses an asynchronous callback to return the result.
 
 **Since:** 7
 
@@ -768,8 +769,8 @@ query(uri: string, callback: AsyncCallback<ResultSet>): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| uri | string | Yes | 表示要查询数据的uri。 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;ResultSet&gt; | Yes | 回调函数，返回查询结果。 |
+| uri | string | Yes | URI of the data to query. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;ResultSet&gt; | Yes | Callback used to return the result. |
 
 ## query
 
@@ -777,7 +778,7 @@ query(uri: string, callback: AsyncCallback<ResultSet>): void
 query(uri: string, columns: Array<string>, callback: AsyncCallback<ResultSet>): void
 ```
 
-查询数据库中的数据。使用callback异步回调。
+Queries data in the database. This API uses an asynchronous callback to return the result.
 
 **Since:** 7
 
@@ -793,9 +794,9 @@ query(uri: string, columns: Array<string>, callback: AsyncCallback<ResultSet>): 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| uri | string | Yes | 表示要查询数据的uri。 |
-| columns | Array&lt;string&gt; | Yes | 表示要查询的列。如果此参数为空，则查询所有列。 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;ResultSet&gt; | Yes | 回调函数，返回查询结果。 |
+| uri | string | Yes | URI of the data to query. |
+| columns | Array&lt;string&gt; | Yes | Columns to query. If this parameter is null, all columns will be queried. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;ResultSet&gt; | Yes | Callback used to return the result. |
 
 ## query
 
@@ -803,7 +804,7 @@ query(uri: string, columns: Array<string>, callback: AsyncCallback<ResultSet>): 
 query(uri: string, predicates: dataAbility.DataAbilityPredicates, callback: AsyncCallback<ResultSet>): void
 ```
 
-查询数据库中的数据。使用callback异步回调。
+Queries data in the database. This API uses an asynchronous callback to return the result.
 
 **Since:** 7
 
@@ -819,9 +820,9 @@ query(uri: string, predicates: dataAbility.DataAbilityPredicates, callback: Asyn
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| uri | string | Yes | 表示要查询数据的uri。 |
-| predicates | dataAbility.DataAbilityPredicates | Yes | 表示筛选条件。当此参数为null时，自定义查询数据库中数据的处理逻辑。 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;ResultSet&gt; | Yes | 回调函数，返回查询结果。 |
+| uri | string | Yes | URI of the data to query. |
+| predicates | dataAbility.DataAbilityPredicates | Yes | Filter criteria. When null is passed in, you need to customize the logic for querying data in the database. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;ResultSet&gt; | Yes | Callback used to return the result. |
 
 ## query
 
@@ -829,7 +830,7 @@ query(uri: string, predicates: dataAbility.DataAbilityPredicates, callback: Asyn
 query(uri: string, columns?: Array<string>, predicates?: dataAbility.DataAbilityPredicates): Promise<ResultSet>
 ```
 
-查询数据库中的数据。使用Promise异步回调。
+Queries data in the database. This API uses a promise to return the result.
 
 **Since:** 7
 
@@ -845,15 +846,15 @@ query(uri: string, columns?: Array<string>, predicates?: dataAbility.DataAbility
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| uri | string | Yes | 表示要查询数据的uri。 |
-| columns | Array&lt;string&gt; | No | 表示要查询的列。如果此参数为空，则查询所有列。 |
-| predicates | dataAbility.DataAbilityPredicates | No | 表示筛选条件。当此参数为null时，自定义查询数据库中数据的处理逻辑。 |
+| uri | string | Yes | URI of the data to query. |
+| columns | Array&lt;string&gt; | No | Columns to query. If this parameter is null, all columns will be queried. |
+| predicates | dataAbility.DataAbilityPredicates | No | Filter criteria. When null is passed in, you need to customize the logic for querying data in the database. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;ResultSet&gt; | Promise对象，返回查询结果。 |
+| Promise&lt;ResultSet&gt; | Returns the query result { |
 
 ## update
 
@@ -866,7 +867,7 @@ update(
   ): void
 ```
 
-更新数据库中的数据记录。使用callback异步回调。
+Updates data in the database.This API uses an asynchronous callback to return the result.
 
 **Since:** 7
 
@@ -882,10 +883,10 @@ update(
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| uri | string | Yes | 表示要更新数据的uri。 |
-| valuesBucket | rdb.ValuesBucket | Yes | 表示要更新的数据。 |
-| predicates | dataAbility.DataAbilityPredicates | Yes | 表示筛选条件。当此参数为null时，应定义处理逻辑。 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;number&gt; | Yes | 回调函数，返回更新的数据记录数。 |
+| uri | string | Yes | URI of the data to update. |
+| valuesBucket | rdb.ValuesBucket | Yes | New values. |
+| predicates | dataAbility.DataAbilityPredicates | Yes | Filter criteria. You should define the processing logic when this parameter is null. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;number&gt; | Yes | Callback used to return the number of updated data records. |
 
 ## update
 
@@ -893,7 +894,7 @@ update(
 update(uri: string, valuesBucket: rdb.ValuesBucket, predicates?: dataAbility.DataAbilityPredicates): Promise<number>
 ```
 
-更新数据库中的数据记录。使用Promise异步回调。
+Updates data in the database. This API uses a promise to return the result.
 
 **Since:** 7
 
@@ -909,15 +910,15 @@ update(uri: string, valuesBucket: rdb.ValuesBucket, predicates?: dataAbility.Dat
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| uri | string | Yes | 表示要更新数据的uri。 |
-| valuesBucket | rdb.ValuesBucket | Yes | 表示要更新的数据。 |
-| predicates | dataAbility.DataAbilityPredicates | No | 表示筛选条件。当此参数为null时，应定义处理逻辑。 |
+| uri | string | Yes | URI of the data to update. |
+| valuesBucket | rdb.ValuesBucket | Yes | New values. |
+| predicates | dataAbility.DataAbilityPredicates | No | Filter criteria. You should define the processing logic when this parameter is null. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;number&gt; | Returns the number of data records updated. |
+| Promise&lt;number&gt; | Promise used to return the number of updated data records. |
 
 ## update
 
@@ -925,7 +926,7 @@ update(uri: string, valuesBucket: rdb.ValuesBucket, predicates?: dataAbility.Dat
 update(uri: string, valuesBucket: rdb.ValuesBucket, callback: AsyncCallback<number>): void
 ```
 
-predicates筛选条件为空，自定义更新数据库的处理逻辑。使用callback异步回调。
+Uses a custom processing logic to update data records in the database.This API uses an asynchronous callback to return the result.
 
 **Since:** 7
 
@@ -941,7 +942,7 @@ predicates筛选条件为空，自定义更新数据库的处理逻辑。使用c
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| uri | string | Yes | 表示要更新数据的uri。 |
-| valuesBucket | rdb.ValuesBucket | Yes | 表示要更新的数据。 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;number&gt; | Yes | 回调函数，返回更新的数据记录数。 |
+| uri | string | Yes | URI of the data to update. |
+| valuesBucket | rdb.ValuesBucket | Yes | New values. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;number&gt; | Yes | Callback used to return the number of updated data records. |
 

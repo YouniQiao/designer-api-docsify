@@ -1,6 +1,6 @@
 # FullScreenEnterEvent
 
-Web组件进入全屏回调事件的详情。
+Provides details about the event that the **Web** component to enter the full-screen mode.
 
 **Since:** 23
 
@@ -16,7 +16,7 @@ Web组件进入全屏回调事件的详情。
 handler: FullScreenExitHandler
 ```
 
-用于退出全屏模式的函数句柄。
+Function handle for exiting full screen mode.
 
 **Type:** [FullScreenExitHandler](../arkts-components/arkts-arkweb-fullscreenexithandler-c.md)
 
@@ -34,9 +34,7 @@ handler: FullScreenExitHandler
 videoHeight?: int
 ```
 
-视频的高度，单位：px。如果进入全屏的是 `&lt;video&gt;` 元素，表示其高度；如果进入全屏的子元素中包含 `&lt;video&gt;` 元素，表示第一个子视频元素的高度；其他情况下，为0。
-
-23
+Video height, in px. If the element that enters fulls screen mode is a **&lt;video&gt;** element, the value represents its height; if the element that enters fulls screen mode contains a **&lt;video&gt;** element, the value represents the height of the first sub-video element; in other cases, the value is **0**.
 
 **Type:** int
 
@@ -54,9 +52,7 @@ videoHeight?: int
 videoWidth?: int
 ```
 
-视频的宽度，单位：px。如果进入全屏的是 `&lt;video&gt;` 元素，表示其宽度；如果进入全屏的子元素中包含 `&lt;video&gt;` 元素，表示第一个子视频元素的宽度；其他情况下，为0。
-
-23
+Video width, in px. If the element that enters fulls screen mode is a **&lt;video&gt;** element, the value represents its width; if the element that enters fulls screen mode contains a **&lt;video&gt;** element, the value represents the width of the first sub-video element; in other cases, the value is **0**.
 
 **Type:** int
 

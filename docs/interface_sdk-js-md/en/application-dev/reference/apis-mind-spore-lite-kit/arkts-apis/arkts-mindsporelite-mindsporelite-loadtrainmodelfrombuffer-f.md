@@ -64,13 +64,11 @@ globalContext.getApplicationContext()
   .then((buffer: Uint8Array) => {
     let modelBuffer = buffer.buffer;
     mindSporeLite.loadTrainModelFromBuffer(modelBuffer).then((mindSporeLiteModel: mindSporeLite.Model) => {
-      console.info(`Succeeded in loading train model. Train mode: ${mindSporeLiteModel.trainMode}`);
-    }).catch((error: Error) => {
-      console.error(`Failed to load train model from buffer. Model file: ${modelFile}, Buffer size: ${modelBuffer.byteLength}, Error: ${error.message}`);
-    });
+      console.info("MSLITE trainMode: ", mindSporeLiteModel.trainMode);
+    })
   })
   .catch((error: BusinessError) => {
-    console.error(`Failed to read model file from resources. File name: ${modelFile}, Error code: ${error.code}, Error message: ${error.message}`);
+    console.error("getRawFileContent promise error is " + error);
   });
 ```
 

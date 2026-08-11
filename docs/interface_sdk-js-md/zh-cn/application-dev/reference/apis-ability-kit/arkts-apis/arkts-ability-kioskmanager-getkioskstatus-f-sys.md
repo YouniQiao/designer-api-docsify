@@ -1,11 +1,5 @@
 # getKioskStatus（系统接口）
 
-## 导入模块
-
-```TypeScript
-import { kioskManager } from 'kits/@kit.AbilityKit';
-```
-
 ## getKioskStatus
 
 ```TypeScript
@@ -36,9 +30,9 @@ function getKioskStatus(): Promise<KioskStatus>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 801 | Capability not supported. |
-| 16000050 | Failed to connect to the system service. |
-| 202 | Not system application. |
+| [801](../../errorcode-universal.md#801-该设备不支持此api) | Capability not supported. |
+| [16000050](../errorcode-ability.md#16000050-内部错误) | Failed to connect to the system service. |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not system application. |
 
 ## 示例
 

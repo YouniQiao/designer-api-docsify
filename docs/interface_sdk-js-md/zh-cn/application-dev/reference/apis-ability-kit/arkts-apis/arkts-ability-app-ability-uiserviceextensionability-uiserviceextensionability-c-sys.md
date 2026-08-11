@@ -14,12 +14,6 @@ UIServiceExtensionAbility提供浮窗组件相关扩展能力，继承自[Extens
 
 **系统接口：** 此接口为系统接口。
 
-## 导入模块
-
-```TypeScript
-import { UIServiceExtensionAbility } from 'kits/@kit.AbilityKit';
-```
-
 ## onConnect
 
 ```TypeScript
@@ -125,7 +119,7 @@ onData(proxy: UIServiceHostProxy, data: Record<string, Object>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | proxy | [UIServiceHostProxy](arkts-ability-uiservicehostproxy-i-sys.md) | 是 | 往客户端发送数据的Proxy。 |
-| data | [Record](../../apis-default/arkts-apis/arkts-record-t.md)&lt;string, Object&gt; | 是 | 表示接收到的数据。 |
+| data | Record&lt;string, Object&gt; | 是 | 表示接收到的数据。 |
 
 ## 示例
 
@@ -164,7 +158,7 @@ onData(proxy: UIServiceHostProxy, data: Record<string, RecordData>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | proxy | [UIServiceHostProxy](arkts-ability-uiservicehostproxy-i-sys.md) | 是 | 往客户端发送数据的Proxy。 |
-| data | [Record](../../apis-default/arkts-apis/arkts-record-t.md)&lt;string, RecordData&gt; | 是 | 表示接收到的数据。 |
+| data | Record&lt;string, RecordData&gt; | 是 | 表示接收到的数据。 |
 
 ## onDestroy
 

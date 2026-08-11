@@ -1,6 +1,6 @@
 # ScannerDevice
 
-定义扫描仪设备的接口。
+Defines the scanner.
 
 **Since:** 20
 
@@ -22,7 +22,7 @@ import { scan } from 'kits/@kit.BasicServicesKit';
 deviceName: string
 ```
 
-扫描仪的设备名称。
+Name of the scanner.
 
 **Type:** string
 
@@ -40,7 +40,7 @@ deviceName: string
 discoveryMode: ScannerDiscoveryMode
 ```
 
-扫描仪的发现模式。
+Discovery mode of the scanner.
 
 **Type:** [ScannerDiscoveryMode](arkts-basicservices-scan-scannerdiscoverymode-e.md)
 
@@ -58,7 +58,7 @@ discoveryMode: ScannerDiscoveryMode
 manufacturer: string
 ```
 
-扫描仪的制造商。
+Manufacturer of the scanner.
 
 **Type:** string
 
@@ -76,7 +76,7 @@ manufacturer: string
 model: string
 ```
 
-扫描仪的型号。
+Model of the scanner.
 
 **Type:** string
 
@@ -94,7 +94,7 @@ model: string
 scannerId: string
 ```
 
-扫描仪的唯一标识符。
+Unique identifier of the scanner.
 
 **Type:** string
 
@@ -112,7 +112,7 @@ scannerId: string
 uniqueId: string
 ```
 
-扫描仪的唯一ID。
+Unique ID of the scanner.
 
 **Type:** string
 

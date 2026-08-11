@@ -1,20 +1,14 @@
 # ComponentInfo
 
-Component information.
+组件大小、位置、平移缩放旋转及仿射矩阵属性信息。
 
-**起始版本：** 23
+**起始版本：** 10
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为10。
 
-<!--Device-componentUtils-export interface ComponentInfo--><!--Device-componentUtils-export interface ComponentInfo-End-->
+<!--Device-componentUtils-interface ComponentInfo--><!--Device-componentUtils-interface ComponentInfo-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
-
-## 导入模块
-
-```TypeScript
-import { componentUtils } from 'kits/@kit.ArkUI';
-```
 
 ## localOffset
 
@@ -22,15 +16,17 @@ import { componentUtils } from 'kits/@kit.ArkUI';
 localOffset: Offset
 ```
 
-Obtain attribute information relative to the local coordinates.
+组件相对于父组件信息。
 
-**类型：** [Offset](arkts-arkui-componentutils-offset-i.md)
+**类型：** [Offset](arkts-arkui-units-offset-i.md)
 
-**起始版本：** 23
+**起始版本：** 10
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为10。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 <!--Device-ComponentInfo-localOffset: Offset--><!--Device-ComponentInfo-localOffset: Offset-End-->
 
@@ -42,15 +38,17 @@ Obtain attribute information relative to the local coordinates.
 rotate: RotateResult
 ```
 
-Obtain attribute information for rotate.
+组件旋转信息。
 
 **类型：** [RotateResult](arkts-arkui-componentutils-rotateresult-i.md)
 
-**起始版本：** 23
+**起始版本：** 10
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为10。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 <!--Device-ComponentInfo-rotate: RotateResult--><!--Device-ComponentInfo-rotate: RotateResult-End-->
 
@@ -62,15 +60,17 @@ Obtain attribute information for rotate.
 scale: ScaleResult
 ```
 
-Obtain attribute information for scale.
+组件缩放信息。
 
 **类型：** [ScaleResult](arkts-arkui-componentutils-scaleresult-i.md)
 
-**起始版本：** 23
+**起始版本：** 10
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为10。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 <!--Device-ComponentInfo-scale: ScaleResult--><!--Device-ComponentInfo-scale: ScaleResult-End-->
 
@@ -82,15 +82,17 @@ Obtain attribute information for scale.
 screenOffset: Offset
 ```
 
-Obtain attribute information relative to the screen.
+组件相对于屏幕信息。
 
-**类型：** [Offset](arkts-arkui-componentutils-offset-i.md)
+**类型：** [Offset](arkts-arkui-units-offset-i.md)
 
-**起始版本：** 23
+**起始版本：** 10
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为10。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 <!--Device-ComponentInfo-screenOffset: Offset--><!--Device-ComponentInfo-screenOffset: Offset-End-->
 
@@ -102,15 +104,17 @@ Obtain attribute information relative to the screen.
 size: Size
 ```
 
-component size.
+组件大小。
 
 **类型：** [Size](arkts-arkui-window-size-i.md)
 
-**起始版本：** 23
+**起始版本：** 10
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为10。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 <!--Device-ComponentInfo-size: Size--><!--Device-ComponentInfo-size: Size-End-->
 
@@ -122,15 +126,17 @@ component size.
 transform: Matrix4Result
 ```
 
-Obtain attribute information of the transformation matrix.
+仿射矩阵信息，根据入参创建的四阶矩阵对象。
 
 **类型：** [Matrix4Result](arkts-arkui-componentutils-matrix4result-t.md)
 
-**起始版本：** 23
+**起始版本：** 10
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为10。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 <!--Device-ComponentInfo-transform: Matrix4Result--><!--Device-ComponentInfo-transform: Matrix4Result-End-->
 
@@ -142,15 +148,17 @@ Obtain attribute information of the transformation matrix.
 translate: TranslateResult
 ```
 
-Obtain attribute information for translation.
+组件平移信息。
 
 **类型：** [TranslateResult](arkts-arkui-componentutils-translateresult-i.md)
 
-**起始版本：** 23
+**起始版本：** 10
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为10。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 <!--Device-ComponentInfo-translate: TranslateResult--><!--Device-ComponentInfo-translate: TranslateResult-End-->
 
@@ -162,15 +170,17 @@ Obtain attribute information for translation.
 windowOffset: Offset
 ```
 
-Obtain attribute information relative to the window.
+组件相对于窗口信息。
 
-**类型：** [Offset](arkts-arkui-componentutils-offset-i.md)
+**类型：** [Offset](arkts-arkui-units-offset-i.md)
 
-**起始版本：** 23
+**起始版本：** 10
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为10。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 <!--Device-ComponentInfo-windowOffset: Offset--><!--Device-ComponentInfo-windowOffset: Offset-End-->
 

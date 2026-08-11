@@ -1,6 +1,6 @@
 # LayoutInfo
 
-子组件布局位置信息
+Provides the child component layout information.
 
 **Since:** 9
 
@@ -20,7 +20,7 @@
 constraint: ConstraintSizeOptions
 ```
 
-子组件布局约束
+Constraint size of the child component.
 
 **Type:** [ConstraintSizeOptions](../arkts-apis/arkts-arkui-constraintsizeoptions-i.md)
 
@@ -44,7 +44,7 @@ constraint: ConstraintSizeOptions
 position: Position
 ```
 
-子组件位置信息
+Position coordinates of the child component.
 
 **Type:** [Position](../arkts-apis/arkts-arkui-position-i.md)
 

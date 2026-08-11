@@ -1,6 +1,6 @@
 # TouchEvent
 
-触屏输入事件。
+Defines a touch event.
 
 **Inheritance/Implementation:** TouchEvent extends [InputEvent](arkts-input-multimodalinput-inputevent-inputevent-i.md)
 
@@ -24,7 +24,7 @@ import { SourceType, ToolType, TouchEvent, FixedMode, KeyAction, Touch } from 'k
 fixedMode?: FixedMode
 ```
 
-修正坐标的模式。
+Coordinate correction mode.
 
 **Type:** [FixedMode](arkts-input-multimodalinput-touchevent-fixedmode-e-sys.md)
 
@@ -44,8 +44,8 @@ fixedMode?: FixedMode
 isInject?: boolean
 ```
 
-表示该触屏输入事件是否为注入事件。注入事件详细介绍可参考  
-[@ohos.multimodalInput.inputEventClient](arkts-multimodalinput-inputeventclient.md)。
+Whether the touch event is an injection event. For details about injection events, see  
+[@ohos.multimodalInput.inputEventClient](arkts-multimodalinput-inputeventclient.md).
 
 **Type:** boolean
 

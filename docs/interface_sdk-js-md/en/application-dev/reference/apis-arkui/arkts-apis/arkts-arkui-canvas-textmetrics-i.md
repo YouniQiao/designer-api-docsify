@@ -1,6 +1,6 @@
 # TextMetrics
 
-文本的尺寸信息。
+Size information of the text
 
 **Since:** 23
 
@@ -16,7 +16,7 @@
 readonly actualBoundingBoxAscent: double
 ```
 
-只读属性，从CanvasRenderingContext2D.textBaseline属性标明的水平线到渲染文本的矩形边界顶部的距离。
+Double, the distance from the horizontal line indicated by the textBaseline property to the top of  the rectangular boundary of the rendered text.
 
 **Type:** double
 
@@ -36,7 +36,7 @@ readonly actualBoundingBoxAscent: double
 readonly actualBoundingBoxDescent: double
 ```
 
-只读属性，从CanvasRenderingContext2D.textBaseline属性标明的水平线到渲染文本的矩形边界底部的距离。
+Double, the distance from the horizontal line indicated by the textBaseline property to the bottom of  the rectangular boundary of the rendered text.
 
 **Type:** double
 
@@ -56,7 +56,7 @@ readonly actualBoundingBoxDescent: double
 readonly actualBoundingBoxLeft: double
 ```
 
-只读属性，平行于基线，从CanvasRenderingContext2D.textAlign属性确定的对齐点到文本矩形边界左侧的距离。
+Double, parallel to the baseline, distance from the alignment point determined by the textAlign property to  the left of the text rectangle boundary.
 
 **Type:** double
 
@@ -76,7 +76,7 @@ readonly actualBoundingBoxLeft: double
 readonly actualBoundingBoxRight: double
 ```
 
-只读属性，平行于基线，从CanvasRenderingContext2D.textAlign属性确定的对齐点到文本矩形边界右侧的距离。
+Double, parallel to the baseline, distance from the alignment point determined by the textAlign property to  the right of the text rectangle boundary.
 
 **Type:** double
 
@@ -96,7 +96,7 @@ readonly actualBoundingBoxRight: double
 readonly alphabeticBaseline: double
 ```
 
-只读属性，从CanvasRenderingContext2D.textBaseline属性标明的水平线到线框的alphabetic基线的距离。
+Double, the distance from the horizontal line indicated by the textBaseline property to the alphabetic baseline of  the wireframe.
 
 **Type:** double
 
@@ -116,7 +116,7 @@ readonly alphabeticBaseline: double
 readonly emHeightAscent: double
 ```
 
-只读属性，从CanvasRenderingContext2D.textBaseline属性标明的水平线到线框中em方块顶部的距离。
+Double, the distance from the horizontal line indicated by the textBaseline property to the top of the  em square in the wireframe.
 
 **Type:** double
 
@@ -136,7 +136,7 @@ readonly emHeightAscent: double
 readonly emHeightDescent: double
 ```
 
-只读属性，从CanvasRenderingContext2D.textBaseline属性标明的水平线到线框中em方块底部的距离。
+Double, distance from the horizontal line indicated by the textBaseline property to the bottom of the  em box in the wireframe.
 
 **Type:** double
 
@@ -156,7 +156,7 @@ readonly emHeightDescent: double
 readonly fontBoundingBoxAscent: double
 ```
 
-只读属性，从CanvasRenderingContext2D.textBaseline属性标明的水平线到渲染文本的所有字体的矩形最高边界顶部的距离。
+Double, distance from the horizontal line indicated by the textBaseline property to the top of the  highest rectangle boundary of all fonts rendering text.
 
 **Type:** double
 
@@ -176,7 +176,7 @@ readonly fontBoundingBoxAscent: double
 readonly fontBoundingBoxDescent: double
 ```
 
-只读属性，从CanvasRenderingContext2D.textBaseline属性标明的水平线到渲染文本的所有字体的矩形边界最底部的距离。
+Double, distance from the horizontal line indicated by the textBaseline property to the bottom of the  rectangular boundary of all fonts rendering text.
 
 **Type:** double
 
@@ -196,7 +196,7 @@ readonly fontBoundingBoxDescent: double
 readonly hangingBaseline: double
 ```
 
-只读属性，从CanvasRenderingContext2D.textBaseline属性标明的水平线到线框的hanging基线的距离。
+Double, distance from the horizontal line indicated by the textBaseline property to  the hanging baseline of the wireframe.
 
 **Type:** double
 
@@ -216,7 +216,7 @@ readonly hangingBaseline: double
 readonly height: double
 ```
 
-只读属性，文本方块的高度。
+Indicates the height of a character string. The value is of the double type.
 
 **Type:** double
 
@@ -236,7 +236,7 @@ readonly height: double
 readonly ideographicBaseline: double
 ```
 
-只读属性，从CanvasRenderingContext2D.textBaseline属性标明的水平线到线框的ideographic基线的距离。
+Double, distance from the horizontal line indicated by the textBaseline property to  the ideographic baseline of the wireframe.
 
 **Type:** double
 
@@ -256,7 +256,7 @@ readonly ideographicBaseline: double
 readonly width: double
 ```
 
-只读属性，文本方块的宽度。
+Indicates the width of a character string. The value is of the double type.
 
 **Type:** double
 

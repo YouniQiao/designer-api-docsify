@@ -16,7 +16,7 @@ Defining Provider annotation Provider is used for two-way data synchronization w
 alias: string = ""
 ```
 
-用于设置别名，默认值为属性名。
+The alias name.
 
 **Type:** string
 

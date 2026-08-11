@@ -50,9 +50,9 @@ Starts the widget provider (application) page. This API uses a promise to return
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 801 | Capability not supported due to limited device capabilities. |
-| 16501000 | An internal functional error occurred. |
-| 16501011 | The form can not support this operation |
-| 16500050 | An IPC connection error happened. |
-| 16500100 | Failed to obtain the configuration information. |
+| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported due to limited device capabilities. |
+| [16501000](../errorcode-form.md#16501000-internal-function-error) | An internal functional error occurred. |
+| [16501011](../errorcode-form.md#16501011-api-not-supported) | The form can not support this operation |
+| [16500050](../errorcode-form.md#16500050-ipc-failure) | An IPC connection error happened. |
+| [16500100](../errorcode-form.md#16500100-failed-to-obtain-widget-configuration-information) | Failed to obtain the configuration information. |
 

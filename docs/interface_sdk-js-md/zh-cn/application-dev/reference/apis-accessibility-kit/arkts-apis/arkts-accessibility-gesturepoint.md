@@ -1,11 +1,5 @@
 # @ohos.accessibility.GesturePoint
 
-## 导入模块
-
-```TypeScript
-import { GesturePoint } from 'kits/@kit.AccessibilityKit';
-```
-
 ## 汇总
 
 ### 类

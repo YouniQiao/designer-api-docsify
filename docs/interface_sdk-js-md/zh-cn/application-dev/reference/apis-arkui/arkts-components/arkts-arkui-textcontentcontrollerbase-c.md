@@ -35,7 +35,7 @@ Add a text.
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | text | string | 是 | text value. |
-| textOperationOptions | [TextContentControllerOptions](arkts-arkui-textcontentcontrolleroptions-i.md) | 否 | operation info. |
+| textOperationOptions | [TextContentControllerOptions](../arkts-apis/arkts-arkui-common-textcontentcontrolleroptions-i.md) | 否 | operation info. |
 
 **返回值：**
 

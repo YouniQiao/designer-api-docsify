@@ -142,7 +142,7 @@ voiceContent?: VoiceContent
 
 通知语音播报内容。
 
-**类型：** [VoiceContent](arkts-notification-notificationsubscriber-voicecontent-i-sys.md)
+**类型：** [VoiceContent](arkts-notification-notificationsubscribe-voicecontent-t-sys.md)
 
 **起始版本：** 26.0.0
 

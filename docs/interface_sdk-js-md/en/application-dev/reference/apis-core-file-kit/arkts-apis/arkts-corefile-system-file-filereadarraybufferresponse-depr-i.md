@@ -1,6 +1,6 @@
 # FileReadArrayBufferResponse
 
-文件读取返回，包含读取到的文件内容。
+Returns the file read, including the file content.
 
 **Since:** 3
 
@@ -18,7 +18,7 @@
 buffer: Uint8Array
 ```
 
-获取的文件列表，其中每个文件的信息的格式为：{uri:'file1',lastModifiedTime:1589965924479,length:10240,type:?'file'}
+Data read.
 
 **Type:** Uint8Array
 

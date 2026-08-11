@@ -1,11 +1,5 @@
 # allocResourceAndShare（系统接口）
 
-## 导入模块
-
-```TypeScript
-import { cloudData } from 'kits/@kit.ArkData';
-```
-
 ## allocResourceAndShare
 
 ```TypeScript
@@ -48,9 +42,9 @@ function allocResourceAndShare(
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
-| 801 | Capability not supported. |
-| 202 | Permission verification failed, application which is not a system application uses system API. |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| [801](../../errorcode-universal.md#801-该设备不支持此api) | Capability not supported. |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed, application which is not a system application uses system API. |
 
 ## 示例
 
@@ -71,27 +65,21 @@ participants.push({
     shareable: false
   },
   attachInfo: ''
-});
+})
 let sharingResource: string;
 let predicates = new relationalStore.RdbPredicates('test_table');
 predicates.equalTo('data', 'data_test');
 cloudData.sharing.allocResourceAndShare('storeName', predicates, participants, ['uuid', 'data']).then((resultSet) => {
-  try {
-    if (!resultSet.goToFirstRow()) {
-      console.error(`row error`);
-      return;
-    }
-    const res = resultSet.getString(resultSet.getColumnIndex(relationalStore.Field.SHARING_RESOURCE_FIELD));
-    console.info(`sharing resource: ${res}`);
-    sharingResource = res;
-  } catch (err) {
-    console.error(`Failed to get sharing resource: ${err}`);
-  } finally {
-    resultSet.close();
+  if (!resultSet.goToFirstRow()) {
+    console.error(`row error`);
+    return;
   }
-}).catch((err: BusinessError) => {
+  const res = resultSet.getString(resultSet.getColumnIndex(relationalStore.Field.SHARING_RESOURCE_FIELD));
+  console.info(`sharing resource: ${res}`);
+  sharingResource = res;
+}).catch((err) => {
   console.error(`alloc resource and share failed, code is ${err.code},message is ${err.message}`);
-});
+})
 ```
 
 
@@ -131,9 +119,9 @@ function allocResourceAndShare(
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
-| 801 | Capability not supported. |
-| 202 | Permission verification failed, application which is not a system application uses system API. |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| [801](../../errorcode-universal.md#801-该设备不支持此api) | Capability not supported. |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed, application which is not a system application uses system API. |
 
 ## 示例
 
@@ -154,29 +142,23 @@ participants.push({
     shareable: false
   },
   attachInfo: ''
-});
+})
 let sharingResource: string;
 let predicates = new relationalStore.RdbPredicates('test_table');
 predicates.equalTo('data', 'data_test');
-cloudData.sharing.allocResourceAndShare('storeName', predicates, participants, (err: BusinessError, resultSet) => {
+cloudData.sharing.allocResourceAndShare('storeName', predicates, participants, (err: BusinessError|null, resultSet) => {
   if (err) {
     console.error(`alloc resource and share failed, code is ${err.code},message is ${err.message}`);
     return;
   }
-  try {
-    if (!resultSet.goToFirstRow()) {
-      console.error(`row error`);
-      return;
-    }
-    const res = resultSet.getString(resultSet.getColumnIndex(relationalStore.Field.SHARING_RESOURCE_FIELD));
-    console.info(`sharing resource: ${res}`);
-    sharingResource = res;
-  } catch (err) {
-    console.error(`Failed to get sharing resource: ${err}`);
-  } finally {
-    resultSet.close();
+  if (!resultSet.goToFirstRow()) {
+    console.error(`row error`);
+    return;
   }
-});
+  const res = resultSet.getString(resultSet.getColumnIndex(relationalStore.Field.SHARING_RESOURCE_FIELD));
+  console.info(`sharing resource: ${res}`);
+  sharingResource = res;
+})
 ```
 
 
@@ -218,9 +200,9 @@ function allocResourceAndShare(
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
-| 801 | Capability not supported. |
-| 202 | Permission verification failed, application which is not a system application uses system API. |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| [801](../../errorcode-universal.md#801-该设备不支持此api) | Capability not supported. |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed, application which is not a system application uses system API. |
 
 ## 示例
 
@@ -241,28 +223,22 @@ participants.push({
     shareable: false
   },
   attachInfo: ''
-});
+})
 let sharingResource: string;
 let predicates = new relationalStore.RdbPredicates('test_table');
 predicates.equalTo('data', 'data_test');
-cloudData.sharing.allocResourceAndShare('storeName', predicates, participants, ['uuid', 'data'], (err: BusinessError, resultSet) => {
+cloudData.sharing.allocResourceAndShare('storeName', predicates, participants, ['uuid', 'data'], (err: BusinessError|null, resultSet) => {
   if (err) {
     console.error(`alloc resource and share failed, code is ${err.code},message is ${err.message}`);
     return;
   }
-  try {
-    if (!resultSet.goToFirstRow()) {
-      console.error(`row error`);
-      return;
-    }
-    const res = resultSet.getString(resultSet.getColumnIndex(relationalStore.Field.SHARING_RESOURCE_FIELD));
-    console.info(`sharing resource: ${res}`);
-    sharingResource = res;
-  } catch (err) {
-    console.error(`Failed to get sharing resource: ${err}`);
-  } finally {
-    resultSet.close();
+  if (!resultSet.goToFirstRow()) {
+    console.error(`row error`);
+    return;
   }
-});
+  const res = resultSet.getString(resultSet.getColumnIndex(relationalStore.Field.SHARING_RESOURCE_FIELD));
+  console.info(`sharing resource: ${res}`);
+  sharingResource = res;
+})
 ```
 

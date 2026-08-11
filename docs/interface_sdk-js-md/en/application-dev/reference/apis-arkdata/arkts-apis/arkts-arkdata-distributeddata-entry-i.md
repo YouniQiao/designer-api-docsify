@@ -1,6 +1,6 @@
 # Entry
 
-存储在数据库中的键值对。
+Defines the KV pairs stored in the KV store.
 
 **Since:** 7
 
@@ -20,7 +20,7 @@
 key: string
 ```
 
-键值。
+Key of the KV pair stored in the KV store.
 
 **Type:** string
 
@@ -42,7 +42,7 @@ key: string
 value: Value
 ```
 
-值对象。
+Value of the KV pair stored in the KV store.
 
 **Type:** [Value](arkts-arkdata-distributeddata-value-i.md)
 

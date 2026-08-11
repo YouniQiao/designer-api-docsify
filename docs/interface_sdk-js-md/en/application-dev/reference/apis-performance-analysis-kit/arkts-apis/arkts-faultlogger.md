@@ -1,19 +1,23 @@
-# @ohos.faultLogger(故障日志获取)
+# @ohos.faultLogger(FaultLogger)
 
-应用可以使用faultLogger接口查询系统侧缓存的当前应用的故障日志。接口以应用包名和系统分配的UID作为唯一键值。
+The **faultLogger** APIs can be used to query fault logs of an application cached on the system. The APIs use the application bundle name and the UID allocated by the system as the unique key value.
 
-系统侧保存的应用故障日志数量受系统日志的压力限制，推荐使用[@ohos.hiviewdfx.hiAppEvent](arkts-performanceanalysis-hiappevent-n.md)订阅APP_CRASH及APP_FREEZE等故障事件。
+The number of application fault logs stored in the system is limited by the system log pressure. You are advised to use [@ohos.hiviewdfx.hiAppEvent](arkts-performanceanalysis-hiappevent-n.md) to subscribe to fault events such as  
+**APP_CRASH** and **APP_FREEZE**.
 
-> **说明：**
+> **NOTE：**
 > 
-> 本模块接口从API version 18开始废弃使用, 该接口不再维护。后续版本推荐使用
-> [@ohos.hiviewdfx.hiAppEvent](arkts-performanceanalysis-hiappevent-n.md)订阅APP_CRASH，APP_FREEZE事件。
+> The APIs of this module are no longer maintained since API version 18. You are advised to use
+> [@ohos.hiviewdfx.hiAppEvent](arkts-performanceanalysis-hiappevent-n.md) to subscribe to the **APP_CRASH** and
+> **APP_FREEZE** events in later versions.
 > 
-> 查阅[从Faultlogger接口迁移崩溃事件](../../../dfx/hiappevent-watcher-crash-events-arkts.md#从faultlogger接口迁移崩溃事件)，
-> 了解使用hiAppEvent订阅APP_CRASH的具体信息。
+> For details about how to use HiAppEvent to subscribe to the **APP_CRASH** event, see
+> [Migrating Crash Events from the FaultLogger API](../../../dfx/hiappevent-watcher-crash-events-arkts.md#migrating-crash-events-from-the-faultlogger-api)
+> .
 > 
-> 查阅[从Faultlogger接口迁移应用冻屏事件](../../../dfx/hiappevent-watcher-freeze-events-arkts.md#从faultlogger接口迁移应用冻屏事件)，
-> 了解使用hiAppEvent订阅APP_FREEZE的具体信息。
+> For details about how to use HiAppEvent to subscribe to the **APP_FREEZE** event, see
+> [Migrating Application Freeze Events from the Faultlogger API](../../../dfx/hiappevent-watcher-freeze-events-arkts.md#migrating-application-freeze-events-from-the-faultlogger-api)
+> .
 
 **Since:** 8
 
@@ -39,20 +43,20 @@ import { FaultLogger } from 'kits/@kit.PerformanceAnalysisKit';
 
 | Name | Description |
 | --- | --- |
-| [query](arkts-performanceanalysis-faultlogger-query-f.md#query) | 获取当前应用故障信息，该方法通过回调方式获取故障信息数组，故障信息数组内最多上报10份故障信息。 |
-| [query](arkts-performanceanalysis-faultlogger-query-f.md#query-1) | 获取当前应用故障信息，该方法通过Promise方式返回故障信息数组，故障信息数组内最多上报10份故障信息。 |
-| [querySelfFaultLog](arkts-performanceanalysis-faultlogger-queryselffaultlog-f.md#queryselffaultlog) | 获取当前应用故障信息，该方法通过回调方式获取故障信息数组，故障信息数组内最多上报10份故障信息。 |
-| [querySelfFaultLog](arkts-performanceanalysis-faultlogger-queryselffaultlog-f.md#queryselffaultlog-1) | 获取当前应用故障信息，该方法通过Promise方式返回故障信息数组，故障信息数组内最多上报10份故障信息。 |
+| [query](arkts-performanceanalysis-faultlogger-query-f.md#query) | Obtains the fault information about the current application. This API uses an asynchronous callback to return the fault information array obtained, which contains a maximum of 10 pieces of fault information. |
+| [query](arkts-performanceanalysis-faultlogger-query-f.md#query-1) | Obtains the fault information about the current application. This API uses a promise to return the fault information array obtained, which contains a maximum of 10 pieces of fault information. |
+| [querySelfFaultLog](arkts-performanceanalysis-faultlogger-queryselffaultlog-f.md#queryselffaultlog) | Obtains the fault information about the current application. This API uses an asynchronous callback to return the fault information array obtained, which contains a maximum of 10 pieces of fault information. |
+| [querySelfFaultLog](arkts-performanceanalysis-faultlogger-queryselffaultlog-f.md#queryselffaultlog-1) | Obtains the fault information about the current application. This API uses a promise to return the fault information array obtained, which contains a maximum of 10 pieces of fault information. |
 
 ### Interfaces
 
 | Name | Description |
 | --- | --- |
-| [FaultLogInfo](arkts-performanceanalysis-faultlogger-faultloginfo-i.md) | 故障信息数据结构，获取到的故障信息的数据结构。 |
+| [FaultLogInfo](arkts-performanceanalysis-faultlogger-faultloginfo-i.md) | Defines the data structure of the fault log information. |
 
 ### Enums
 
 | Name | Description |
 | --- | --- |
-| [FaultType](arkts-performanceanalysis-faultlogger-faulttype-e.md) | 故障类型枚举。 |
+| [FaultType](arkts-performanceanalysis-faultlogger-faulttype-e.md) | Enumerates the fault types. |
 

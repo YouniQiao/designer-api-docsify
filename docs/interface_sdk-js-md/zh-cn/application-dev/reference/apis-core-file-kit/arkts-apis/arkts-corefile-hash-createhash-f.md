@@ -1,11 +1,5 @@
 # createHash
 
-## 导入模块
-
-```TypeScript
-import { hash } from 'kits/@kit.CoreFileKit';
-```
-
 ## createHash
 
 ```TypeScript
@@ -39,7 +33,7 @@ function createHash(algorithm: string): HashStream
 | 错误码ID | 错误信息 |
 | --- | --- |
 | 13900020 | Invalid argument |
-| 401 | Parameter error |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error |
 | 13900042 | Unknown error |
 
 ## 示例

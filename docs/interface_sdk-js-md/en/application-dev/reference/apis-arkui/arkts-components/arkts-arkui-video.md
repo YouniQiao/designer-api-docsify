@@ -1,31 +1,30 @@
 # Video
 
-Video组件用于播放视频文件并控制其播放状态，支持播放、暂停、进度控制、倍速播放、全屏切换等功能。
-
-> **说明：**
+The **Video** component is used to play a video and control its playback.
+> **NOTE**
 >
-> 该组件从API version 7开始支持。后续版本的新增接口，采用上角标单独标记接口的起始版本。
-> <br>
+> The **Video** component provides only simple video playback features. For complex video playback control
+> scenarios, consider using the [AVPlayer]{@link @ohos.multimedia.media:media.AVPlayer} APIs in conjunction with the
+> [XComponent]{@link XComponent} component.
+> When using **expandSafeArea** to extend into safe areas, the **Video** component's content display area does not
+> support expansion.
 >
-> Video组件只提供简单的视频播放功能，无法支撑复杂的视频播控场景。复杂开发场景推荐使用[AVPlayer]{@link @ohos.multimedia.media:media.AVPlayer}播控API和
-> [XComponent]{@link ./xcomponent}组件开发。
-> <br>
+> **Required Permissions**
 >
-> Video组件在使用[expandSafeArea]{@link CommonMethod#expandSafeArea}扩展安全区域时，组件视频显示内容区域不支持扩展。
-
-## 权限列表
-
-使用网络视频时，需要申请权限ohos.permission.INTERNET。具体申请方式请参考[声明权限](docroot://security/AccessToken/declare-permissions.md)。
-
-## 子组件
-
-不支持子组件。
+> To use online videos, you must apply for the ohos.permission.INTERNET permission. For details about how to apply
+> for a permission, see [Declaring Permissions](docroot://security/AccessToken/declare-permissions.md).
+>
+> **Child Components**
+>
+> Not supported.
 
 ## Video
 
 ```TypeScript
 Video(value: VideoOptions)
 ```
+
+Defines the constructor of video component.
 
 **Since:** 7
 
@@ -41,7 +40,7 @@ Video(value: VideoOptions)
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | [VideoOptions](arkts-arkui-videooptions-i.md) | Yes | 视频信息。 |
+| value | [VideoOptions](arkts-arkui-videooptions-i.md) | Yes | Video information. |
 
 ## Summary
 

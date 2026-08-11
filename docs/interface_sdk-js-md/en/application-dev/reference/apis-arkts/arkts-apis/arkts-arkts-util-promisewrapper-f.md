@@ -12,7 +12,7 @@ import { util } from 'kits/@kit.ArkTS';
 function promiseWrapper(original: (err: Object, value: Object) => void): Object
 ```
 
-接收一个使用错误优先回调模式的函数（即最后一个参数为 `(err, value) => callback`），并通过 promise 返回结果。
+Receives a function that uses the error-first callback mode, that is, uses `(err, value) => callback` as the last parameter, and uses a promise to return the result.
 
 **Since:** 7
 
@@ -30,11 +30,11 @@ function promiseWrapper(original: (err: Object, value: Object) => void): Object
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| original | (err: Object, value: Object) =&gt; void | Yes | 异步函数。 |
+| original | (err: Object, value: Object) =&gt; void | Yes | Asynchronous function. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Object | 错误优先风格（即最后一个参数为 (err, value) => ... ）的 promise。 |
+| Object | Promise in the error-first style (that is, (err, value) => ... is called as the last parameter) . |
 

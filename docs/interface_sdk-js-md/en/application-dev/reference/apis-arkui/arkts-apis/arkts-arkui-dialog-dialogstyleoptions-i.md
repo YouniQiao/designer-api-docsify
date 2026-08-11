@@ -1,6 +1,6 @@
 # DialogStyleOptions
 
-固定样式对话框的选项。
+Options for the fixed-style dialog.
 
 **Inheritance/Implementation:** DialogStyleOptions extends [DialogBaseOptions](arkts-arkui-dialog-dialogbaseoptions-i.md)
 
@@ -24,7 +24,7 @@ import { DialogButtonOrientation, DialogState, DialogResult, DialogBaseControlle
 buttonDirection?: DialogButtonOrientation
 ```
 
-按钮的排列。
+The arrangement of buttons.
 
 **Type:** [DialogButtonOrientation](arkts-arkui-arkui-dialog-dialogbuttonorientation-e.md)
 
@@ -48,7 +48,7 @@ buttonDirection?: DialogButtonOrientation
 buttons?: Array<DialogButton>
 ```
 
-对话框中的按钮数组。提供时，对话框显示为带有按钮的警报样式对话框。与图纸一起使用时，按钮显示在图纸列表下方。
+Array of buttons in the dialog box.When provided, the dialog displays as an alert-style dialog with buttons.When used together with sheets, buttons are displayed below the sheet list.
 
 **Type:** Array&lt;DialogButton&gt;
 
@@ -70,7 +70,7 @@ buttons?: Array<DialogButton>
 gridCount?: int
 ```
 
-对话框的网格计数。取值限定为整数。
+Grid count of dialog.The value should be an integer.
 
 **Type:** int
 
@@ -92,7 +92,7 @@ gridCount?: int
 message?: DialogMessage
 ```
 
-对话框的消息内容和文字样式。
+Message content and text style of the dialog box.
 
 **Type:** [DialogMessage](arkts-arkui-dialog-dialogmessage-i.md)
 
@@ -114,7 +114,7 @@ message?: DialogMessage
 sheets?: Array<DialogSheet>
 ```
 
-action-sheet样式的表单项数组。提供时，对话框将显示供用户选择的工作表项目。
+Array of sheet items for action-sheet style.When provided, the dialog displays sheet items for user selection.
 
 **Type:** Array&lt;DialogSheet&gt;
 
@@ -136,7 +136,7 @@ action-sheet样式的表单项数组。提供时，对话框将显示供用户�
 subtitle?: ResourceStr
 ```
 
-对话框的副标题。
+Subtitle of the dialog box.
 
 **Type:** [ResourceStr](arkts-arkui-resourcestr-t.md)
 
@@ -158,7 +158,7 @@ subtitle?: ResourceStr
 title?: ResourceStr
 ```
 
-对话框标题。
+Title of the dialog box.
 
 **Type:** [ResourceStr](arkts-arkui-resourcestr-t.md)
 

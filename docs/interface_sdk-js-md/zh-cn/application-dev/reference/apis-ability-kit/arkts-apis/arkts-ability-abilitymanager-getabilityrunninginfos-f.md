@@ -1,11 +1,5 @@
 # getAbilityRunningInfos
 
-## 导入模块
-
-```TypeScript
-import { abilityManager } from 'kits/@kit.AbilityKit';
-```
-
 ## getAbilityRunningInfos
 
 ```TypeScript
@@ -38,7 +32,7 @@ function getAbilityRunningInfos(): Promise<Array<AbilityRunningInfo>>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 16000050 | Internal error. |
+| [16000050](../errorcode-ability.md#16000050-内部错误) | Internal error. |
 
 ## 示例
 
@@ -52,13 +46,14 @@ try {
     .then((data: abilityManager.AbilityRunningInfo[]) => {
       console.info(`getAbilityRunningInfos success, data: ${JSON.stringify(data)}`);
     })
-    .catch((error: BusinessError) => {
-      console.error(`getAbilityRunningInfos fail, error code: ${JSON.stringify(error.code)}, error msg: ${JSON.stringify(error.message)}`);
+    .catch((err: Error) => {
+      let error = err as BusinessError;
+      console.error(`getAbilityRunningInfos fail, error ${error.code}, ${error.message}`);
     })
 } catch (e) {
   let code = (e as BusinessError).code;
   let msg = (e as BusinessError).message;
-  console.error(`getAbilityRunningInfos fail, error code: ${JSON.stringify(code)}, error msg: ${JSON.stringify(msg)}`);
+  console.error(`getAbilityRunningInfos fail, error code: ${code}, error msg: ${msg}`);
 }
 ```
 

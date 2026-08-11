@@ -1,6 +1,6 @@
 # FileResponse
 
-文件返回。包含文件的信息。
+Returns a file, including the file information.
 
 **Since:** 3
 
@@ -18,7 +18,7 @@
 lastModifiedTime: number
 ```
 
-文件保存时的时间戳，从1970/01/01?00:00:00到当前时间的毫秒数。
+Timestamp when the file is stored the last time, which is the number of milliseconds elapsed since1970/01/01 00:00:00 GMT. For lite wearables, the value is fixed to 0, because this parameter is restricted by the underlying file system.
 
 **Type:** number
 
@@ -38,7 +38,7 @@ lastModifiedTime: number
 length: number
 ```
 
-文件长度，单位为Byte。
+File length, in bytes.
 
 **Type:** number
 
@@ -58,7 +58,7 @@ length: number
 subFiles?: Array<FileResponse>
 ```
 
-文件列表。
+List of files. When the recursive value is true and the type is dir, the file information under the subdirectory will be returned. Otherwise, no value will be returned.
 
 **Type:** Array&lt;[FileResponse](arkts-corefile-system-file-fileresponse-depr-i.md)&gt;
 
@@ -78,9 +78,9 @@ subFiles?: Array<FileResponse>
 type: 'dir' | 'file'
 ```
 
-文件类型，可选值为：  
--dir：目录；  
--file：文件。
+File type. Available values are as follows:  
+**dir**: directory  
+**file**: file
 
 **Type:** 'dir' \| 'file'
 
@@ -100,7 +100,7 @@ type: 'dir' | 'file'
 uri: string
 ```
 
-文件的URI。
+URI of the file.
 
 **Type:** string
 

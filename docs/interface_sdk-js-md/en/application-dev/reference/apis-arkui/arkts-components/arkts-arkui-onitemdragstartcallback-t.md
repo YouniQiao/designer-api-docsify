@@ -4,7 +4,7 @@
 declare type OnItemDragStartCallback = (event: ItemDragInfo, itemIndex: number) => CustomBuilder
 ```
 
-开始拖拽列表或网格元素时触发的回调。
+Defines the callback type used in onItemDragStart.
 
 **Since:** 23
 
@@ -20,12 +20,12 @@ declare type OnItemDragStartCallback = (event: ItemDragInfo, itemIndex: number) 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| event | [ItemDragInfo](../arkts-apis/arkts-arkui-common-itemdraginfo-i.md) | Yes | 拖拽点的信息。 |
-| itemIndex | number | Yes | 被拖拽列表元素索引值。 |
+| event | [ItemDragInfo](../arkts-apis/arkts-arkui-common-itemdraginfo-i.md) | Yes | Information about the dragged item. |
+| itemIndex | number | Yes | The index number of the dragged item. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [CustomBuilder](arkts-arkui-custombuilder-t.md) | 返回CustomBuilder用于构建被拖拽元素的拖拽图。返回void表示不能拖拽。 |
+| [CustomBuilder](arkts-arkui-custombuilder-t.md) | - |
 

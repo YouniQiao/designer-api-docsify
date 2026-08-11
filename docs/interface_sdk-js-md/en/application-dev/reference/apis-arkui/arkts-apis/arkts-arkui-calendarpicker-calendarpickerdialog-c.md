@@ -16,7 +16,7 @@ Defines CalendarPickerDialog which uses show method to show CalendarPicker dialo
 static show(options?: CalendarDialogOptions): void
 ```
 
-定义日历选择器弹窗。
+Invoking method display.
 
 **Since:** 23
 
@@ -32,5 +32,5 @@ static show(options?: CalendarDialogOptions): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| options | [CalendarDialogOptions](arkts-arkui-calendarpicker-calendardialogoptions-i.md) | No | 配置日历选择器弹窗参数。参数缺省时无法弹出弹窗。 @static |
+| options | [CalendarDialogOptions](arkts-arkui-calendarpicker-calendardialogoptions-i.md) | No | the option of th calendarPicker. @static |
 

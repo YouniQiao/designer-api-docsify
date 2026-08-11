@@ -14,12 +14,6 @@
 
 **系统能力：** SystemCapability.Communication.IPC.Core
 
-## 导入模块
-
-```TypeScript
-import { rpc } from 'kits/@kit.IPCKit';
-```
-
 ## closeFileDescriptor
 
 ```TypeScript
@@ -1120,7 +1114,7 @@ let connectionId = context.connectServiceExtensionAbility(want, connect);
 import { rpc } from '@kit.IPCKit';
 import { hilog } from '@kit.PerformanceAnalysisKit';
 
-try { 
+try {
   let option = new rpc.MessageOption();
   let data = rpc.MessageParcel.create();
   let reply = rpc.MessageParcel.create();
@@ -1146,7 +1140,7 @@ try {
       reply.reclaim();
     });
   }
-} catch (error) { 
+} catch (error) {
   hilog.error(0x0000, 'testTag', 'error ' + error);
 }
 ```
@@ -3310,7 +3304,7 @@ class TestRemoteObject extends rpc.RemoteObject {
     super(descriptor);
   }
 
-onRemoteRequest(code: number, data: rpc.MessageParcel, reply: rpc.MessageParcel, option: rpc.MessageOption): boolean {
+  onRemoteRequest(code: number, data: rpc.MessageParcel, reply: rpc.MessageParcel, option: rpc.MessageOption): boolean {
     if (code === 1) {
       hilog.info(0x0000, 'testTag', 'RpcServer: onRemoteRequest called');
       reply.writeNoException();

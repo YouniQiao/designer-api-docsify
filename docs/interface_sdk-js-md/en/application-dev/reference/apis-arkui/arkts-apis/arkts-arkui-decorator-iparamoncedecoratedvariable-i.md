@@ -1,6 +1,6 @@
 # IParamOnceDecoratedVariable
 
-Param和Once装饰的变量。
+Define Param Once decoration variable interface.
 
 **Inheritance/Implementation:** IParamOnceDecoratedVariable extends [IDecoratedMutableVariable<T>](IDecoratedMutableVariable<T>), [IDecoratedV2Variable<T>](IDecoratedV2Variable<T>)
 

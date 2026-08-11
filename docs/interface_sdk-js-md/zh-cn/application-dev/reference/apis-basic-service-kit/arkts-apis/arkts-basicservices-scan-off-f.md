@@ -1,11 +1,5 @@
 # off
 
-## 导入模块
-
-```TypeScript
-import { scan } from 'kits/@kit.BasicServicesKit';
-```
-
 ## off('scanDeviceFound')
 
 ```TypeScript
@@ -35,7 +29,7 @@ function off(type: 'scanDeviceFound', callback?: Callback<ScannerDevice>): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 201 | Permission denied. |
+| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
 
 ## 示例
 
@@ -80,7 +74,7 @@ function off(type: 'scanDeviceSync', callback?: Callback<ScannerSyncDevice>): vo
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 201 | Permission denied. |
+| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
 
 ## 示例
 

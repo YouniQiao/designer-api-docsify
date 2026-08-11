@@ -1,6 +1,6 @@
 # UserGesturesData（系统接口）
 
-Defines user gesture data.
+用户手势数据。
 
 **继承/实现关系：** UserGesturesData extends [UserFacesData](arkts-multimodalawareness-userstatus-userfacesdata-i-sys.md)
 
@@ -14,19 +14,13 @@ Defines user gesture data.
 
 **系统接口：** 此接口为系统接口。
 
-## 导入模块
-
-```TypeScript
-import { userStatus } from 'kits/@kit.MultimodalAwarenessKit';
-```
-
 ## directionAngle
 
 ```TypeScript
 directionAngle?: double[]
 ```
 
-Angle between user gesture and screen directions.The value ranges from 0 to 90, in degrees.
+用户手势与屏幕方向之间的角度。取值范围为0到90，单位：度。
 
 **类型：** ArkTS-Dyn: number[]  <br>ArkTS-Sta：double[]
 
@@ -48,7 +42,7 @@ Angle between user gesture and screen directions.The value ranges from 0 to 90, 
 gestureSpeed?: double[]
 ```
 
-Gesture speed, in frames per second (fps).
+手势速度，单位：帧/秒（fps）。
 
 **类型：** ArkTS-Dyn: number[]  <br>ArkTS-Sta：double[]
 
@@ -70,7 +64,7 @@ Gesture speed, in frames per second (fps).
 handPosition?: double[]
 ```
 
-Hand position relative to screen. The normalized coordinate system ranges from 0 to 640.
+手部相对于屏幕的位置。归一化坐标系范围为0到640。
 
 **类型：** ArkTS-Dyn: number[]  <br>ArkTS-Sta：double[]
 
@@ -92,7 +86,7 @@ Hand position relative to screen. The normalized coordinate system ranges from 0
 handType?: int
 ```
 
-User static gesture type.The value ranges from 0 to 3. 0: Palm, 1: Fist, 2: Scissors, 3: Finger heart.
+用户静态手势类型。取值范围为0到3。0：手掌，1：握拳，2：剪刀，3：比心。
 
 **类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
@@ -114,7 +108,7 @@ User static gesture type.The value ranges from 0 to 3. 0: Palm, 1: Fist, 2: Scis
 isHandExist?: boolean
 ```
 
-Whether user hand exists.
+用户手部是否存在。
 
 **类型：** boolean
 
@@ -136,7 +130,7 @@ Whether user hand exists.
 motionGesture?: int
 ```
 
-User dynamic gesture type.The value ranges from 0 to 3. 0: Up, 1: Down, 2: Screen capture, 3: Release.
+用户动态手势类型。取值范围为0到3。0：上滑，1：下滑，2：截屏，3：释放。
 
 **类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 

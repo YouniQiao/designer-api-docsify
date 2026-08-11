@@ -1,0 +1,1030 @@
+# LightWeightMap
+
+LightWeightMap可用于存储具有关联关系的key-value键值对，其中key值唯一，每个key对应一个value。
+
+**起始版本：** 8
+
+<!--Device-unnamed-declare class LightWeightMap<K, V>--><!--Device-unnamed-declare class LightWeightMap<K, V>-End-->
+
+**系统能力：** SystemCapability.Utils.Lang
+
+## [Symbol.iterator]
+
+```TypeScript
+[Symbol.iterator](): IterableIterator<[K, V]>
+```
+
+返回一个迭代器，迭代器的每一项都是一个包含键和值的[K, V]数组。
+
+**起始版本：** 8
+
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-LightWeightMap-[Symbol.iterator](): IterableIterator<[K, V]>--><!--Device-LightWeightMap-[Symbol.iterator](): IterableIterator<[K, V]>-End-->
+
+**系统能力：** SystemCapability.Utils.Lang
+
+**返回值：**
+
+| 类型 |
+| --- |
+| IterableIterator&lt;[K, V]&gt; |
+
+**错误码：**
+
+| 错误码ID |
+| --- |
+| [10200011](../errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) |
+
+## 示例
+
+```TypeScript
+let lightWeightMap = new LightWeightMap<string, number>();
+lightWeightMap.set("squirrel", 123);
+lightWeightMap.set("sparrow", 356);
+
+// 使用方法一：
+for (let item of lightWeightMap) {
+  console.info("key:", item[0]);
+  console.info("value:", item[1]);
+}
+// key: sparrow
+// value: 356
+// key: squirrel
+// value: 123
+
+// 使用方法二：
+let iter = lightWeightMap[Symbol.iterator]();
+let temp: IteratorResult<Object[]> = iter.next();
+while(!temp.done) {
+  console.info("key:", temp.value[0]);
+  console.info("value:", temp.value[1]);
+  temp = iter.next();
+}
+// key: sparrow
+// value: 356
+// key: squirrel
+// value: 123
+```
+
+```TypeScript
+// 不建议在Symbol.iterator中使用set、setValueAt、remove、removeAt方法，会导致死循环等不可预知的风险，可使用for循环来进行插入和删除。
+let lightWeightMap = new LightWeightMap<string, number>();
+for(let i = 0; i < 10; i++) {
+  lightWeightMap.set("sparrow" + i, 123);
+}
+for(let i = 0; i < 10; i++) {
+  lightWeightMap.remove("sparrow" + i);
+}
+```
+
+## clear
+
+```TypeScript
+clear(): void
+```
+
+清除LightWeightMap中的所有元素，并将length置为0。
+
+**起始版本：** 8
+
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-LightWeightMap-clear(): void--><!--Device-LightWeightMap-clear(): void-End-->
+
+**系统能力：** SystemCapability.Utils.Lang
+
+**错误码：**
+
+| 错误码ID |
+| --- |
+| [10200011](../errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) |
+
+## 示例
+
+```TypeScript
+let lightWeightMap = new LightWeightMap<string, number>();
+lightWeightMap.set("squirrel", 123);
+lightWeightMap.set("sparrow", 356);
+lightWeightMap.clear();
+let result = lightWeightMap.isEmpty();
+console.info("result:", result);  // result: true
+```
+
+## constructor
+
+```TypeScript
+constructor()
+```
+
+LightWeightMap的构造函数，创建一个空的LightWeightMap实例。
+
+**起始版本：** 8
+
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-LightWeightMap-constructor()--><!--Device-LightWeightMap-constructor()-End-->
+
+**系统能力：** SystemCapability.Utils.Lang
+
+**错误码：**
+
+| 错误码ID |
+| --- |
+| [10200012](../errorcode-utils.md#10200012-构造函数调用异常) |
+
+## 示例
+
+```TypeScript
+let lightWeightMap = new LightWeightMap<string, number>();
+```
+
+## entries
+
+```TypeScript
+entries(): IterableIterator<[K, V]>
+```
+
+返回包含此映射中所有键值对的新迭代器对象。
+
+**起始版本：** 8
+
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-LightWeightMap-entries(): IterableIterator<[K, V]>--><!--Device-LightWeightMap-entries(): IterableIterator<[K, V]>-End-->
+
+**系统能力：** SystemCapability.Utils.Lang
+
+**返回值：**
+
+| 类型 |
+| --- |
+| IterableIterator&lt;[K, V]&gt; |
+
+**错误码：**
+
+| 错误码ID |
+| --- |
+| [10200011](../errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) |
+
+## 示例
+
+```TypeScript
+let lightWeightMap = new LightWeightMap<string, number>();
+lightWeightMap.set("squirrel", 123);
+lightWeightMap.set("sparrow", 356);
+let iteratorResult = lightWeightMap.entries();
+let temp: IteratorResult<Object[]> = iteratorResult.next();
+while (!temp.done) {
+  console.info("key:" + temp.value[0]);
+  console.info("value:" + temp.value[1]);
+  temp = iteratorResult.next();
+}
+```
+
+```TypeScript
+// 不建议在entries中使用set、setValueAt、remove、removeAt方法，会导致死循环等不可预知的风险，可使用for循环来进行插入和删除。
+let lightWeightMap = new LightWeightMap<string, number>();
+for(let i = 0; i < 10; i++) {
+  lightWeightMap.set("sparrow" + i, 123);
+}
+for(let i = 0; i < 10; i++) {
+  lightWeightMap.remove("sparrow" + i);
+}
+```
+
+## forEach
+
+```TypeScript
+forEach(callbackFn: (value?: V, key?: K, map?: LightWeightMap<K, V>) => void, thisArg?: Object): void
+```
+
+通过回调函数来遍历实例对象上的元素及其键值对信息。
+
+**起始版本：** 8
+
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-LightWeightMap-forEach(callbackFn: (value?: V, key?: K, map?: LightWeightMap<K, V>) => void, thisArg?: Object): void--><!--Device-LightWeightMap-forEach(callbackFn: (value?: V, key?: K, map?: LightWeightMap<K, V>) => void, thisArg?: Object): void-End-->
+
+**系统能力：** SystemCapability.Utils.Lang
+
+**参数：**
+
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| callbackFn | (value?: V, key?: K, map?: LightWeightMap&lt;K, V&gt;) =&gt; void | 是 |
+| thisArg | Object | 否 |
+
+**错误码：**
+
+| 错误码ID |
+| --- |
+| [10200011](../errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) |
+
+## 示例
+
+```TypeScript
+let lightWeightMap = new LightWeightMap<string, number>();
+lightWeightMap.set("sparrow", 123);
+lightWeightMap.set("gull", 357);
+lightWeightMap.forEach((value: number, key: string) => {
+  console.info("value:" + value, "key:" + key);
+});
+// value:123 key:sparrow
+// value:357 key:gull
+```
+
+```TypeScript
+// 不建议在forEach中使用set、setValueAt、remove、removeAt方法，会导致死循环等不可预知的风险，可使用for循环来进行插入和删除。
+let lightWeightMap = new LightWeightMap<string, number>();
+for (let i = 0; i < 10; i++) {
+  lightWeightMap.set("sparrow" + i, 123);
+}
+for (let i = 0; i < 10; i++) {
+  lightWeightMap.remove("sparrow" + i);
+}
+```
+
+## get
+
+```TypeScript
+get(key: K): V
+```
+
+获取指定key所对应的value。当key为number类型且值大于INT32_MAX或小于INT32_MIN时，结果可能与预期不一致。
+
+**起始版本：** 8
+
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-LightWeightMap-get(key: K): V--><!--Device-LightWeightMap-get(key: K): V-End-->
+
+**系统能力：** SystemCapability.Utils.Lang
+
+**参数：**
+
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| key | K | 是 |
+
+**返回值：**
+
+| 类型 |
+| --- |
+| V |
+
+**错误码：**
+
+| 错误码ID |
+| --- |
+| [10200011](../errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) |
+
+## 示例
+
+```TypeScript
+let lightWeightMap = new LightWeightMap<string, number>();
+lightWeightMap.set("squirrel", 123);
+lightWeightMap.set("sparrow", 356);
+let result = lightWeightMap.get("sparrow");
+console.info("result:", result);  // result: 356
+```
+
+## getIndexOfKey
+
+```TypeScript
+getIndexOfKey(key: K): number
+```
+
+查找key元素首次出现的下标值，如果未找到返回-1。当key为number类型且值大于INT32_MAX或小于INT32_MIN时，结果可能与预期不一致。
+
+**起始版本：** 8
+
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-LightWeightMap-getIndexOfKey(key: K): int--><!--Device-LightWeightMap-getIndexOfKey(key: K): int-End-->
+
+**系统能力：** SystemCapability.Utils.Lang
+
+**参数：**
+
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| key | K | 是 |
+
+**返回值：**
+
+| 类型 |
+| --- |
+| number |
+
+**错误码：**
+
+| 错误码ID |
+| --- |
+| [10200011](../errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) |
+
+## 示例
+
+```TypeScript
+let lightWeightMap = new LightWeightMap<string, number>();
+lightWeightMap.set("squirrel", 123);
+lightWeightMap.set("sparrow", 356);
+let result = lightWeightMap.getIndexOfKey("sparrow");
+console.info("result:", result);  // result: 0
+```
+
+## getIndexOfValue
+
+```TypeScript
+getIndexOfValue(value: V): number
+```
+
+查找指定value元素首次出现的下标值，如果未找到则返回-1。
+
+**起始版本：** 8
+
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-LightWeightMap-getIndexOfValue(value: V): int--><!--Device-LightWeightMap-getIndexOfValue(value: V): int-End-->
+
+**系统能力：** SystemCapability.Utils.Lang
+
+**参数：**
+
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| value | V | 是 |
+
+**返回值：**
+
+| 类型 |
+| --- |
+| number |
+
+**错误码：**
+
+| 错误码ID |
+| --- |
+| [10200011](../errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) |
+
+## 示例
+
+```TypeScript
+let lightWeightMap = new LightWeightMap<string, number>();
+lightWeightMap.set("squirrel", 123);
+lightWeightMap.set("sparrow", 356);
+let result = lightWeightMap.getIndexOfValue(123);
+console.info("result:", result);  // result: 1
+```
+
+## getKeyAt
+
+```TypeScript
+getKeyAt(index: number): K
+```
+
+查找指定下标的元素键值对中key值，如果未找到则返回undefined。
+
+**起始版本：** 8
+
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-LightWeightMap-getKeyAt(index: number): K--><!--Device-LightWeightMap-getKeyAt(index: number): K-End-->
+
+**系统能力：** SystemCapability.Utils.Lang
+
+**参数：**
+
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| index | number | 是 |
+
+**返回值：**
+
+| 类型 |
+| --- |
+| K |
+
+**错误码：**
+
+| 错误码ID |
+| --- |
+| [10200011](../errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) |
+| [10200001](../errorcode-utils.md#10200001-参数范围越界错误) |
+
+## 示例
+
+```TypeScript
+let lightWeightMap = new LightWeightMap<string, number>();
+lightWeightMap.set("squirrel", 123);
+lightWeightMap.set("sparrow", 356);
+let result = lightWeightMap.getKeyAt(1);
+console.info("result:", result);  // result: squirrel
+```
+
+## getValueAt
+
+```TypeScript
+getValueAt(index: number): V
+```
+
+获取指定下标对应键值对中的值。
+
+**起始版本：** 8
+
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-LightWeightMap-getValueAt(index: number): V--><!--Device-LightWeightMap-getValueAt(index: number): V-End-->
+
+**系统能力：** SystemCapability.Utils.Lang
+
+**参数：**
+
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| index | number | 是 |
+
+**返回值：**
+
+| 类型 |
+| --- |
+| V |
+
+**错误码：**
+
+| 错误码ID |
+| --- |
+| [10200011](../errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) |
+| [10200001](../errorcode-utils.md#10200001-参数范围越界错误) |
+
+## 示例
+
+```TypeScript
+let lightWeightMap = new LightWeightMap<string, number>();
+lightWeightMap.set("squirrel", 123);
+lightWeightMap.set("sparrow", 356);
+let result = lightWeightMap.getValueAt(1);
+console.info("result:", result);  // result: 123
+```
+
+## hasAll
+
+```TypeScript
+hasAll(map: LightWeightMap<K, V>): boolean
+```
+
+判断LightWeightMap中是否包含指定map中的所有元素。
+
+**起始版本：** 8
+
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-LightWeightMap-hasAll(map: LightWeightMap<K, V>): boolean--><!--Device-LightWeightMap-hasAll(map: LightWeightMap<K, V>): boolean-End-->
+
+**系统能力：** SystemCapability.Utils.Lang
+
+**参数：**
+
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| map | [LightWeightMap](arkts-arkts-util-lightweightmap-lightweightmap-c.md)&lt;K, V&gt; | 是 |
+
+**返回值：**
+
+| 类型 |
+| --- |
+| boolean |
+
+**错误码：**
+
+| 错误码ID |
+| --- |
+| [10200011](../errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) |
+
+## 示例
+
+```TypeScript
+let lightWeightMap = new LightWeightMap<string, number>();
+lightWeightMap.set("squirrel", 123);
+lightWeightMap.set("sparrow", 356);
+let targetMap = new LightWeightMap<string, number>();
+targetMap.set("sparrow", 356);
+let result = lightWeightMap.hasAll(targetMap); 
+console.info("result = ", result); // result = true
+```
+
+## hasKey
+
+```TypeScript
+hasKey(key: K): boolean
+```
+
+判断LightWeightMap中是否包含指定key。当key为number类型且值大于INT32_MAX或小于INT32_MIN时，结果可能与预期不一致，详见规格限制。
+
+**起始版本：** 8
+
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-LightWeightMap-hasKey(key: K): boolean--><!--Device-LightWeightMap-hasKey(key: K): boolean-End-->
+
+**系统能力：** SystemCapability.Utils.Lang
+
+**参数：**
+
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| key | K | 是 |
+
+**返回值：**
+
+| 类型 |
+| --- |
+| boolean |
+
+**错误码：**
+
+| 错误码ID |
+| --- |
+| [10200011](../errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) |
+
+## 示例
+
+```TypeScript
+let lightWeightMap = new LightWeightMap<string, number>();
+lightWeightMap.set("squirrel", 123);
+let result = lightWeightMap.hasKey("squirrel");
+console.info("result:", result);  // result: true
+```
+
+## hasValue
+
+```TypeScript
+hasValue(value: V): boolean
+```
+
+判断LightWeightMap中是否包含指定value。
+
+**起始版本：** 8
+
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-LightWeightMap-hasValue(value: V): boolean--><!--Device-LightWeightMap-hasValue(value: V): boolean-End-->
+
+**系统能力：** SystemCapability.Utils.Lang
+
+**参数：**
+
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| value | V | 是 |
+
+**返回值：**
+
+| 类型 |
+| --- |
+| boolean |
+
+**错误码：**
+
+| 错误码ID |
+| --- |
+| [10200011](../errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) |
+
+## 示例
+
+```TypeScript
+let lightWeightMap = new LightWeightMap<string, number>();
+lightWeightMap.set("squirrel", 123);
+let result = lightWeightMap.hasValue(123);
+console.info("result:", result);  // result: true
+```
+
+## increaseCapacityTo
+
+```TypeScript
+increaseCapacityTo(minimumCapacity: number): void
+```
+
+将当前LightWeightMap扩容至指定容量。如果传入的容量值大于或等于当前LightWeightMap中的元素个数，将容量扩容至新容量，小于则不会变更。
+
+**起始版本：** 8
+
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-LightWeightMap-increaseCapacityTo(minimumCapacity: int): void--><!--Device-LightWeightMap-increaseCapacityTo(minimumCapacity: int): void-End-->
+
+**系统能力：** SystemCapability.Utils.Lang
+
+**参数：**
+
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| minimumCapacity | number | 是 |
+
+**错误码：**
+
+| 错误码ID |
+| --- |
+| [10200011](../errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) |
+
+## 示例
+
+```TypeScript
+let lightWeightMap = new LightWeightMap<string, number>();
+lightWeightMap.increaseCapacityTo(10);
+```
+
+## isEmpty
+
+```TypeScript
+isEmpty(): boolean
+```
+
+判断LightWeightMap是否为空。
+
+**起始版本：** 8
+
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-LightWeightMap-isEmpty(): boolean--><!--Device-LightWeightMap-isEmpty(): boolean-End-->
+
+**系统能力：** SystemCapability.Utils.Lang
+
+**返回值：**
+
+| 类型 |
+| --- |
+| boolean |
+
+**错误码：**
+
+| 错误码ID |
+| --- |
+| [10200011](../errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) |
+
+## 示例
+
+```TypeScript
+let lightWeightMap = new LightWeightMap<string, number>();
+let result = lightWeightMap.isEmpty();
+console.info("result:", result);  // result: true
+```
+
+## keys
+
+```TypeScript
+keys(): IterableIterator<K>
+```
+
+返回包含此映射中所有的键的新迭代器对象。
+
+**起始版本：** 8
+
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-LightWeightMap-keys(): IterableIterator<K>--><!--Device-LightWeightMap-keys(): IterableIterator<K>-End-->
+
+**系统能力：** SystemCapability.Utils.Lang
+
+**返回值：**
+
+| 类型 |
+| --- |
+| IterableIterator&lt;K&gt; |
+
+**错误码：**
+
+| 错误码ID |
+| --- |
+| [10200011](../errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) |
+
+## 示例
+
+```TypeScript
+// 不建议在keys中使用set、setValueAt、remove、removeAt方法，会导致死循环等不可预知的风险，可使用for循环来进行插入和删除。
+let lightWeightMap = new LightWeightMap<string, number>();
+lightWeightMap.set("squirrel", 123);
+lightWeightMap.set("sparrow", 356);
+let keys = lightWeightMap.keys();
+for (let key of keys) {
+  console.info("key:", key);
+}
+// key: sparrow
+// key: squirrel
+```
+
+## remove
+
+```TypeScript
+remove(key: K): V
+```
+
+删除指定key映射的元素。当key为number类型且值大于INT32_MAX或小于INT32_MIN时，结果可能与预期不一致。
+
+**起始版本：** 8
+
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-LightWeightMap-remove(key: K): V--><!--Device-LightWeightMap-remove(key: K): V-End-->
+
+**系统能力：** SystemCapability.Utils.Lang
+
+**参数：**
+
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| key | K | 是 |
+
+**返回值：**
+
+| 类型 |
+| --- |
+| V |
+
+**错误码：**
+
+| 错误码ID |
+| --- |
+| [10200011](../errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) |
+
+## 示例
+
+```TypeScript
+let lightWeightMap = new LightWeightMap<string, number>();
+lightWeightMap.set("sparrow", 356);
+let result = lightWeightMap.remove("sparrow");
+console.info("result:", result);  // result: 356
+```
+
+## removeAt
+
+```TypeScript
+removeAt(index: number): boolean
+```
+
+删除指定下标对应的元素。调用成功后，若下标有效则该位置的键值对从LightWeightMap中移除且length减少。
+
+**起始版本：** 8
+
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-LightWeightMap-removeAt(index: int): boolean--><!--Device-LightWeightMap-removeAt(index: int): boolean-End-->
+
+**系统能力：** SystemCapability.Utils.Lang
+
+**参数：**
+
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| index | number | 是 |
+
+**返回值：**
+
+| 类型 |
+| --- |
+| boolean |
+
+**错误码：**
+
+| 错误码ID |
+| --- |
+| [10200011](../errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) |
+
+## 示例
+
+```TypeScript
+let lightWeightMap = new LightWeightMap<string, number>();
+lightWeightMap.set("squirrel", 123);
+lightWeightMap.set("sparrow", 356);
+let result = lightWeightMap.removeAt(1);
+console.info("result:", result);  // result: true
+```
+
+## set
+
+```TypeScript
+set(key: K, value: V): Object
+```
+
+向LightWeightMap中添加或更新一组数据。调用成功后，若key不存在则新增键值对且length增加，若key已存在则更新对应value值。
+
+**起始版本：** 8
+
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-LightWeightMap-set(key: K, value: V): Object--><!--Device-LightWeightMap-set(key: K, value: V): Object-End-->
+
+**系统能力：** SystemCapability.Utils.Lang
+
+**参数：**
+
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| key | K | 是 |
+| value | V | 是 |
+
+**返回值：**
+
+| 类型 |
+| --- |
+| Object |
+
+**错误码：**
+
+| 错误码ID |
+| --- |
+| [10200011](../errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) |
+
+## 示例
+
+```TypeScript
+let lightWeightMap = new LightWeightMap<string, number>();
+let result = lightWeightMap.set("squirrel", 123);
+console.info("result:", result);  // result: squirrel:123
+```
+
+## setAll
+
+```TypeScript
+setAll(map: LightWeightMap<K, V>): void
+```
+
+将一个LightWeightMap中的所有元素添加到另一个LightWeightMap中，如果目标LightWeightMap中已存在相同的key，则会更新其对应的value。
+
+**起始版本：** 8
+
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-LightWeightMap-setAll(map: LightWeightMap<K, V>): void--><!--Device-LightWeightMap-setAll(map: LightWeightMap<K, V>): void-End-->
+
+**系统能力：** SystemCapability.Utils.Lang
+
+**参数：**
+
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| map | [LightWeightMap](arkts-arkts-util-lightweightmap-lightweightmap-c.md)&lt;K, V&gt; | 是 |
+
+**错误码：**
+
+| 错误码ID |
+| --- |
+| [10200011](../errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) |
+
+## 示例
+
+```TypeScript
+let lightWeightMap = new LightWeightMap<string, number>();
+lightWeightMap.set("squirrel", 123);
+lightWeightMap.set("sparrow", 356);
+let map = new LightWeightMap<string, number>();
+map.setAll(lightWeightMap);   // 将lightWeightMap中所有的元素添加到map中
+let result = map.get("sparrow");
+console.info("result:", result);  // result: 356
+```
+
+## setValueAt
+
+```TypeScript
+setValueAt(index: number, newValue: V): boolean
+```
+
+替换指定下标对应键值对中的值。调用成功后，指定下标处键值对的值将被替换为newValue。
+
+**起始版本：** 8
+
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-LightWeightMap-setValueAt(index: int, newValue: V): boolean--><!--Device-LightWeightMap-setValueAt(index: int, newValue: V): boolean-End-->
+
+**系统能力：** SystemCapability.Utils.Lang
+
+**参数：**
+
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| index | number | 是 |
+| newValue | V | 是 |
+
+**返回值：**
+
+| 类型 |
+| --- |
+| boolean |
+
+**错误码：**
+
+| 错误码ID |
+| --- |
+| [10200011](../errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) |
+| [10200001](../errorcode-utils.md#10200001-参数范围越界错误) |
+
+## 示例
+
+```TypeScript
+let lightWeightMap = new LightWeightMap<string, number>();
+lightWeightMap.set("squirrel", 123);
+lightWeightMap.set("sparrow", 356);
+lightWeightMap.setValueAt(1, 3546);
+console.info("result:", lightWeightMap.get("squirrel"));  // result: 3546
+```
+
+## toString
+
+```TypeScript
+toString(): String
+```
+
+将此映射中包含的键值对拼接成字符串并返回。
+
+**起始版本：** 8
+
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-LightWeightMap-toString(): String--><!--Device-LightWeightMap-toString(): String-End-->
+
+**系统能力：** SystemCapability.Utils.Lang
+
+**返回值：**
+
+| 类型 |
+| --- |
+| String |
+
+**错误码：**
+
+| 错误码ID |
+| --- |
+| [10200011](../errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) |
+
+## 示例
+
+```TypeScript
+let lightWeightMap = new LightWeightMap<string, number>();
+lightWeightMap.set("squirrel", 123);
+lightWeightMap.set("sparrow", 356);
+let result = lightWeightMap.toString();
+console.info("result:", result);  // result: sparrow:356,squirrel:123
+```
+
+## values
+
+```TypeScript
+values(): IterableIterator<V>
+```
+
+返回包含此映射中所有值的新迭代器对象。
+
+**起始版本：** 8
+
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-LightWeightMap-values(): IterableIterator<V>--><!--Device-LightWeightMap-values(): IterableIterator<V>-End-->
+
+**系统能力：** SystemCapability.Utils.Lang
+
+**返回值：**
+
+| 类型 |
+| --- |
+| IterableIterator&lt;V&gt; |
+
+**错误码：**
+
+| 错误码ID |
+| --- |
+| [10200011](../errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) |
+
+## 示例
+
+```TypeScript
+// 不建议在values中使用set、setValueAt、remove、removeAt方法，会导致死循环等不可预知的风险，可使用for循环来进行插入和删除。
+let lightWeightMap = new LightWeightMap<string, number>();
+lightWeightMap.set("squirrel", 123);
+lightWeightMap.set("sparrow", 356);
+let values = lightWeightMap.values();
+for (let value of values) {
+  console.info("value:", value);
+}
+// value: 356
+// value: 123
+```
+
+## length
+
+```TypeScript
+length: number
+```
+
+LightWeightMap的元素个数。
+
+**类型：** number
+
+**起始版本：** 8
+
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-LightWeightMap-length: number--><!--Device-LightWeightMap-length: number-End-->
+
+**系统能力：** SystemCapability.Utils.Lang

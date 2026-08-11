@@ -1,10 +1,8 @@
 # EnableAlertOptions
 
-页面状态信息。
+**Since:** 23
 
-**Since:** 8
-
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
+**ArkTS mode:** ArkTS-Sta only, since version 23.
 
 <!--Device-router-interface EnableAlertOptions--><!--Device-router-interface EnableAlertOptions-End-->
 
@@ -22,15 +20,15 @@ import { router } from 'kits/@kit.ArkUI';
 message: string
 ```
 
-询问对话框内容。
+dialog context.
 
 **Type:** string
 
-**Since:** 8
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
+**ArkTS mode:** ArkTS-Sta only, since version 23.
 
-**Atomic service API:** This API can be used in atomic services since API version 11.
+**Model restriction:** This API can be used only in the stage model.
 
 <!--Device-EnableAlertOptions-message: string--><!--Device-EnableAlertOptions-message: string-End-->
 

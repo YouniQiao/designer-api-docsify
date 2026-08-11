@@ -4,7 +4,7 @@
 type StatusObserver = (sessionId: string, networkId: string, status: string) => void
 ```
 
-定义获取分布式对象状态变更的监听回调函数。
+Defines an observer for obtaining the status change of a distributed object.
 
 **Since:** 20
 
@@ -18,7 +18,7 @@ type StatusObserver = (sessionId: string, networkId: string, status: string) => 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| sessionId | string | Yes | 标识变更对象的sessionId。长度不大于128字节，且只能包含字母、数字或下划线_。 |
-| networkId | string | Yes | 对端设备的网络标识。要求字符串非空且长度不超过255字节。 |
-| status | string | Yes | 标识分布式对象的状态，可能的取值有'online'（上线）、'offline'（下线）和'restore'（恢复）。 |
+| sessionId | string | Yes | Session ID of the distributed data object, with a maximum length of 128 bytes. The value can contain only letters, digits, and underscores (_). |
+| networkId | string | Yes | Network ID of the peer device, with a maximum of 255 bytes. The value must be a non- empty string. |
+| status | string | Yes | Status of the distributed object. The value can be **online**, **offline**, or **restore. |
 

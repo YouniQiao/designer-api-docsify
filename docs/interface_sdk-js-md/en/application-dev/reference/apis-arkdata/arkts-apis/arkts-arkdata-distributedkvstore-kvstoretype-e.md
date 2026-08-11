@@ -1,6 +1,10 @@
 # KVStoreType
 
-分布式键值数据库类型枚举。
+Enumerates the distributed KV store types.  
+| Name | Value| Description |  
+| -------------------- | - | ------------------------------------------------------------ |  
+| DEVICE_COLLABORATION | 0 | Device KV store.&lt;br&gt;The device KV store manages data by device, which eliminates conflicts. Data can be queried by device.&lt;br&gt;**System capability**:SystemCapability.DistributedDataManager.KVStore.DistributedKVStore|  
+| SINGLE_VERSION | 1 | Single KV store.&lt;br&gt;The single KV store does not differentiate data by device. If entries with the same key are modified on different devices, the value will be overwritten.&lt;br&gt;**System capability**: SystemCapability.DistributedDataManager.KVStore.Core|
 
 **Since:** 9
 
@@ -16,7 +20,7 @@
 DEVICE_COLLABORATION
 ```
 
-表示多设备协同数据库。
+Device-collaboration database, as specified by {@code DeviceKVStore}
 
 **Since:** 9
 
@@ -34,7 +38,7 @@ DEVICE_COLLABORATION
 SINGLE_VERSION
 ```
 
-表示单版本数据库。
+Single-version database, as specified by {@code SingleKVStore}
 
 **Since:** 9
 

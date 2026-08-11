@@ -1,8 +1,6 @@
 # RelativeTimeFormatInputOptions
 
-创建相对时间格式化对象时可设置的配置项。
-
-从API version 9开始，RelativeTimeFormatInputOptions中的属性改为可选。
+Defines the configuration options for a **RelativeTimeFormat** object.Since API version 9, the attributes in **RelativeTimeFormatInputOptions** are optional.
 
 **Since:** 8
 
@@ -28,9 +26,9 @@ import { intl } from 'kits/@kit.LocalizationKit';
 localeMatcher?: string
 ```
 
-区域匹配算法，取值包括："best fit", "lookup"。
+Locale matching algorithm. The value can be **lookup** or **best fit**.
 
-默认值：best fit。
+The default value is **best fit**.
 
 **Type:** string
 
@@ -54,11 +52,12 @@ localeMatcher?: string
 numeric?: string
 ```
 
-输出消息的格式，表示格式化结果中是否使用数字表示相对日期或时间。取值包括："always", "auto"。
+Format of the output result. It determines whether numeric values are used to represent relative dates or times in the formatting result. The value can be **always** or **auto**.
 
-默认值：always。
+The default value is **always**.
 
-不同取值的显示效果请参考[附录表23](../../../reference/apis-localization-kit/js-apis-intl.md#附录)。
+For details about their display effects, see   
+[Table 23](../../../reference/apis-localization-kit/js-apis-intl.md#appendix).
 
 **Type:** string
 
@@ -82,11 +81,9 @@ numeric?: string
 style?: string
 ```
 
-国际化消息的长度，取值包括："long", "short", "narrow"。
+Length of an internationalized message. The value can be **long**, **short**, or **narrow**.
 
-默认值：long。
-
-不同取值的显示效果请参考[附录表24](../../../reference/apis-localization-kit/js-apis-intl.md#附录)。
+The default value is **long**.
 
 **Type:** string
 

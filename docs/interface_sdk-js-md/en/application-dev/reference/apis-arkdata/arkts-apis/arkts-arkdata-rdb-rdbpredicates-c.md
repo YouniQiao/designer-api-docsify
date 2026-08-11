@@ -1,6 +1,6 @@
 # RdbPredicates
 
-表示关系型数据库（RDB）的谓词。该类确定RDB中条件表达式的值是true还是false。
+Defines predicates for an RDB store. This class determines whether the conditional expression for the RDB store is true or false.
 
 **Since:** 7
 
@@ -20,7 +20,7 @@
 and(): RdbPredicates
 ```
 
-向谓词添加和条件。
+Creates an **RdbPredicates** object to add the AND condition.
 
 **Since:** 7
 
@@ -38,7 +38,7 @@ and(): RdbPredicates
 
 | Type | Description |
 | --- | --- |
-| [RdbPredicates](arkts-arkdata-relationalstore-rdbpredicates-c.md) | 返回带有和条件的Rdb谓词。 |
+| [RdbPredicates](arkts-arkdata-relationalstore-rdbpredicates-c.md) | RdbPredicates** object created. |
 
 ## Examples
 
@@ -55,7 +55,7 @@ predicates.equalTo("NAME", "Lisa")
 beginWrap(): RdbPredicates
 ```
 
-向谓词添加左括号。
+Creates an **RdbPredicates** object to add a left parenthesis.
 
 **Since:** 7
 
@@ -73,7 +73,7 @@ beginWrap(): RdbPredicates
 
 | Type | Description |
 | --- | --- |
-| [RdbPredicates](arkts-arkdata-relationalstore-rdbpredicates-c.md) | 返回带有左括号的Rdb谓词。 |
+| [RdbPredicates](arkts-arkdata-relationalstore-rdbpredicates-c.md) | RdbPredicates** object created. |
 
 ## Examples
 
@@ -93,7 +93,7 @@ predicates.equalTo("NAME", "lisi")
 beginsWith(field: string, value: string): RdbPredicates
 ```
 
-配置谓词以匹配数据字段为string且值以指定字符串开头的字段。该方法等同于SQL语句中的"LIKE 'xxx%'"。
+Creates an **RdbPredicates** object to search for the records in the specified column that start with the given value.
 
 **Since:** 7
 
@@ -111,14 +111,14 @@ beginsWith(field: string, value: string): RdbPredicates
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| field | string | Yes | 数据库表中的列名，不能为空字符串。 |
-| value | string | Yes | 指示要与谓词匹配的值，长度不超过1024字节。 |
+| field | string | Yes | Column name in the database table. |
+| value | string | Yes | Value to match. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [RdbPredicates](arkts-arkdata-relationalstore-rdbpredicates-c.md) | 返回配置了以指定字符串开头条件的谓词。 |
+| [RdbPredicates](arkts-arkdata-relationalstore-rdbpredicates-c.md) | RdbPredicates** object created. |
 
 ## Examples
 
@@ -133,7 +133,7 @@ predicates.beginsWith("NAME", "os")
 between(field: string, low: ValueType, high: ValueType): RdbPredicates
 ```
 
-将谓词配置为匹配数据字段为ValueType且value在给定范围内的指定字段。该方法等同于SQL语句中的"BETWEEN"。
+Creates an **RdbPredicates** object to search for the records in the specified column that are within the specified range.
 
 **Since:** 7
 
@@ -151,15 +151,15 @@ between(field: string, low: ValueType, high: ValueType): RdbPredicates
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| field | string | Yes | 数据库表中的列名，不能为空字符串。 |
-| low | [ValueType](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-pasteboard-valuetype-t.md) | Yes | 指示与谓词匹配的最小值。 |
-| high | [ValueType](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-pasteboard-valuetype-t.md) | Yes | 指示要与谓词匹配的最大值。 |
+| field | string | Yes | Column name in the database table. |
+| low | [ValueType](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-pasteboard-valuetype-t.md) | Yes | Minimum value of the range to set. |
+| high | [ValueType](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-pasteboard-valuetype-t.md) | Yes | Maximum value of the range to set. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [RdbPredicates](arkts-arkdata-relationalstore-rdbpredicates-c.md) | 返回配置了在给定范围内条件的谓词。 |
+| [RdbPredicates](arkts-arkdata-relationalstore-rdbpredicates-c.md) | RdbPredicates** object created. |
 
 ## Examples
 
@@ -174,7 +174,7 @@ predicates.between("AGE", 10, 50)
 constructor(name: string)
 ```
 
-构造函数。
+A constructor used to create an **RdbPredicates** object.
 
 **Since:** 7
 
@@ -192,7 +192,7 @@ constructor(name: string)
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| name | string | Yes | 数据库表名，不能为空字符串。 |
+| name | string | Yes | Database table name. |
 
 ## Examples
 
@@ -206,7 +206,7 @@ let predicates = new data_rdb.RdbPredicates("EMPLOYEE")
 contains(field: string, value: string): RdbPredicates
 ```
 
-配置谓词以匹配数据字段为string且value包含指定值的字段。该方法等同于SQL语句中的"LIKE '%xxx%'"。
+Creates an **RdbPredicates** object to search for the records in the specified column that contain the given value.
 
 **Since:** 7
 
@@ -224,14 +224,14 @@ contains(field: string, value: string): RdbPredicates
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| field | string | Yes | 数据库表中的列名，不能为空字符串。 |
-| value | string | Yes | 指示要与谓词匹配的值，长度不超过1024字节。 |
+| field | string | Yes | Column name in the database table. |
+| value | string | Yes | Value to match. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [RdbPredicates](arkts-arkdata-relationalstore-rdbpredicates-c.md) | 返回配置了包含指定值条件的谓词。 |
+| [RdbPredicates](arkts-arkdata-relationalstore-rdbpredicates-c.md) | RdbPredicates** object created. |
 
 ## Examples
 
@@ -246,7 +246,7 @@ predicates.contains("NAME", "os")
 distinct(): RdbPredicates
 ```
 
-配置谓词以过滤重复记录并仅保留其中一个。该方法等同于SQL语句中的"DISTINCT"。
+Creates an **RdbPredicates** object to filter out duplicate records.
 
 **Since:** 7
 
@@ -264,7 +264,7 @@ distinct(): RdbPredicates
 
 | Type | Description |
 | --- | --- |
-| [RdbPredicates](arkts-arkdata-relationalstore-rdbpredicates-c.md) | 返回可用于过滤重复记录的谓词。 |
+| [RdbPredicates](arkts-arkdata-relationalstore-rdbpredicates-c.md) | RdbPredicates** object created. |
 
 ## Examples
 
@@ -279,7 +279,7 @@ predicates.equalTo("NAME", "Rose").distinct()
 endWrap(): RdbPredicates
 ```
 
-向谓词添加右括号。
+Creates an **RdbPredicates** object to add a right parenthesis.
 
 **Since:** 7
 
@@ -297,7 +297,7 @@ endWrap(): RdbPredicates
 
 | Type | Description |
 | --- | --- |
-| [RdbPredicates](arkts-arkdata-relationalstore-rdbpredicates-c.md) | 返回带有右括号的Rdb谓词。 |
+| [RdbPredicates](arkts-arkdata-relationalstore-rdbpredicates-c.md) | RdbPredicates** created. |
 
 ## Examples
 
@@ -317,7 +317,7 @@ predicates.equalTo("NAME", "lisi")
 endsWith(field: string, value: string): RdbPredicates
 ```
 
-配置谓词以匹配数据字段为string且值以指定字符串结尾的字段。该方法等同于SQL语句中的"LIKE '%xxx'"。
+Creates an **RdbPredicates** object to search for the records in the specified column that end with the given value.
 
 **Since:** 7
 
@@ -335,14 +335,14 @@ endsWith(field: string, value: string): RdbPredicates
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| field | string | Yes | 数据库表中的列名，不能为空字符串。 |
-| value | string | Yes | 指示要与谓词匹配的值，长度不超过1024字节。 |
+| field | string | Yes | Column name in the database table. |
+| value | string | Yes | Value to match. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [RdbPredicates](arkts-arkdata-relationalstore-rdbpredicates-c.md) | 返回配置了以指定字符串结尾条件的谓词。 |
+| [RdbPredicates](arkts-arkdata-relationalstore-rdbpredicates-c.md) | RdbPredicates** object created. |
 
 ## Examples
 
@@ -357,7 +357,7 @@ predicates.endsWith("NAME", "se")
 equalTo(field: string, value: ValueType): RdbPredicates
 ```
 
-配置谓词以匹配数据字段为ValueType且值等于指定值的字段。该方法等同于SQL语句中的"="。
+Creates an **RdbPredicates** object to search for the records in the specified column that are equal to the given value.
 
 **Since:** 7
 
@@ -375,14 +375,14 @@ equalTo(field: string, value: ValueType): RdbPredicates
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| field | string | Yes | 数据库表中的列名，不能为空字符串。 |
-| value | [ValueType](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-pasteboard-valuetype-t.md) | Yes | 指示要与谓词匹配的值。 |
+| field | string | Yes | Column name in the database table. |
+| value | [ValueType](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-pasteboard-valuetype-t.md) | Yes | Value to match. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [RdbPredicates](arkts-arkdata-relationalstore-rdbpredicates-c.md) | 返回配置了等于指定值条件的谓词。 |
+| [RdbPredicates](arkts-arkdata-relationalstore-rdbpredicates-c.md) | RdbPredicates** object created. |
 
 ## Examples
 
@@ -397,7 +397,7 @@ predicates.equalTo("NAME", "lisi")
 glob(field: string, value: string): RdbPredicates
 ```
 
-配置RdbPredicates匹配数据字段为string且值符合指定通配符模式的字段，其中*匹配任意多个字符，?匹配单个字符。该方法等同于SQL语句中的"GLOB"
+Creates an **RdbPredicates** object to search for the records in the specified column that match the given string.
 
 **Since:** 7
 
@@ -415,14 +415,14 @@ glob(field: string, value: string): RdbPredicates
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| field | string | Yes | 数据库表中的列名，不能为空字符串。 |
-| value | string | Yes | 指示要与谓词匹配的值，长度不超过1024字节 &lt;br&gt;支持通配符，*表示0个、1个或多个数字或字符，?表示1个数字或字符。 |
+| field | string | Yes | Column name in the database table. |
+| value | string | Yes | Value to match.&lt;br&gt;Wildcards are supported. An asterisk (*) indicates zero, one, or multiple digits or characters, and a question mark (?) indicates a single digit or character. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [RdbPredicates](arkts-arkdata-relationalstore-rdbpredicates-c.md) | 返回配置了匹配指定通配符模式条件的谓词。 |
+| [RdbPredicates](arkts-arkdata-relationalstore-rdbpredicates-c.md) | RdbPredicates** object created. |
 
 ## Examples
 
@@ -437,7 +437,7 @@ predicates.glob("NAME", "?h*g")
 greaterThan(field: string, value: ValueType): RdbPredicates
 ```
 
-配置谓词以匹配数据字段为ValueType且值大于指定值的字段。该方法等同于SQL语句中的">"。
+Creates an **RdbPredicates** object to search for the records in the specified column that are greater than the given value.
 
 **Since:** 7
 
@@ -455,14 +455,14 @@ greaterThan(field: string, value: ValueType): RdbPredicates
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| field | string | Yes | 数据库表中的列名，不能为空字符串。 |
-| value | [ValueType](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-pasteboard-valuetype-t.md) | Yes | 指示要与谓词匹配的值。 |
+| field | string | Yes | Column name in the database table. |
+| value | [ValueType](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-pasteboard-valuetype-t.md) | Yes | Value to match. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [RdbPredicates](arkts-arkdata-relationalstore-rdbpredicates-c.md) | 返回配置了大于指定值条件的谓词。 |
+| [RdbPredicates](arkts-arkdata-relationalstore-rdbpredicates-c.md) | RdbPredicates** object created. |
 
 ## Examples
 
@@ -477,7 +477,7 @@ predicates.greaterThan("AGE", 18)
 greaterThanOrEqualTo(field: string, value: ValueType): RdbPredicates
 ```
 
-配置谓词以匹配数据字段为ValueType且value大于或等于指定值的字段。该方法等同于SQL语句中的">="。
+Creates an **RdbPredicates** object to search for the records in the specified column that are greater than or equal to the given value.
 
 **Since:** 7
 
@@ -495,14 +495,14 @@ greaterThanOrEqualTo(field: string, value: ValueType): RdbPredicates
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| field | string | Yes | 数据库表中的列名，不能为空字符串。 |
-| value | [ValueType](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-pasteboard-valuetype-t.md) | Yes | 指示要与谓词匹配的值。 |
+| field | string | Yes | Column name in the database table. |
+| value | [ValueType](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-pasteboard-valuetype-t.md) | Yes | Value to match. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [RdbPredicates](arkts-arkdata-relationalstore-rdbpredicates-c.md) | 返回配置了大于或等于指定值条件的谓词。 |
+| [RdbPredicates](arkts-arkdata-relationalstore-rdbpredicates-c.md) | RdbPredicates** object created. |
 
 ## Examples
 
@@ -517,7 +517,7 @@ predicates.greaterThanOrEqualTo("AGE", 18)
 groupBy(fields: Array<string>): RdbPredicates
 ```
 
-配置RdbPredicates按指定列分组查询结果。该方法等同于SQL语句中的"GROUP BY"。
+Creates an **RdbPredicates** object to group the query results based on the specified columns.
 
 **Since:** 7
 
@@ -535,13 +535,13 @@ groupBy(fields: Array<string>): RdbPredicates
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| fields | Array&lt;string&gt; | Yes | 指定分组依赖的列名，不能为空字符串。 |
+| fields | Array&lt;string&gt; | Yes | Names of columns to group. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [RdbPredicates](arkts-arkdata-relationalstore-rdbpredicates-c.md) | 返回分组查询列的谓词。 |
+| [RdbPredicates](arkts-arkdata-relationalstore-rdbpredicates-c.md) | RdbPredicates** object created. |
 
 ## Examples
 
@@ -556,7 +556,7 @@ predicates.groupBy(["AGE", "NAME"])
 in(field: string, value: Array<ValueType>): RdbPredicates
 ```
 
-配置RdbPredicates以匹配数据字段为ValueType数组且值在给定范围内的指定字段。
+Creates an **RdbPredicates** object to search for the records in the specified column that are within the specified range.
 
 **Since:** 7
 
@@ -574,14 +574,14 @@ in(field: string, value: Array<ValueType>): RdbPredicates
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| field | string | Yes | 数据库表中的列名，不能为空字符串。 |
-| value | Array&lt;ValueType&gt; | Yes | 以ValueType型数组形式指定的要匹配的值。 |
+| field | string | Yes | Column name in the database table. |
+| value | Array&lt;ValueType&gt; | Yes | Array of **ValueType**s to match. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [RdbPredicates](arkts-arkdata-relationalstore-rdbpredicates-c.md) | 返回配置了值在给定范围内条件的谓词。 |
+| [RdbPredicates](arkts-arkdata-relationalstore-rdbpredicates-c.md) | RdbPredicates** object created. |
 
 ## Examples
 
@@ -596,7 +596,7 @@ predicates.in("AGE", [18, 20])
 inAllDevices(): RdbPredicates
 ```
 
-同步分布式数据库时连接到组网内所有的远程设备。
+Creates an **RdbPredicates** object to specify all remote devices on the network to connect during distributed database sync.
 
 **Since:** 8
 
@@ -614,7 +614,7 @@ inAllDevices(): RdbPredicates
 
 | Type | Description |
 | --- | --- |
-| [RdbPredicates](arkts-arkdata-relationalstore-rdbpredicates-c.md) | 返回配置了所有远程设备同步条件的谓词。 |
+| [RdbPredicates](arkts-arkdata-relationalstore-rdbpredicates-c.md) | RdbPredicates** object created. |
 
 ## Examples
 
@@ -629,13 +629,14 @@ predicates.inAllDevices()
 inDevices(devices: Array<string>): RdbPredicates
 ```
 
-同步分布式数据库时连接到组网内指定的远程设备。
+Creates an **RdbPredicates** object to specify the remote devices to connect on the network during distributed database sync.
 
-> **说明：**
-> 
-> 其中devices通过调用&lt;!--RP2--&gt;
+> **NOTE：**
+
+> The value of **devices** can be obtained by using &lt;!--RP2--&gt;
 > [deviceManager.getTrustedDeviceListSync](../../apis-distributed-service-kit/arkts-apis/arkts-distributedservice-devicemanager-devicemanager-i-sys.md/arkts-distributedservice-devicemanager-devicemanager-i-sys.md#gettrusteddevicelistsync)
-> 方法得到。&lt;!--RP2End--&gt;deviceManager模块的接口均为系统接口，仅系统应用可用。
+> . &lt;!--RP2End--&gt;The APIs of the **deviceManager** module are system interfaces and available only to system
+> applications.
 
 **Since:** 8
 
@@ -653,13 +654,13 @@ inDevices(devices: Array<string>): RdbPredicates
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| devices | Array&lt;string&gt; | Yes | 指定的组网内的远程设备ID，不能为空字符串。 |
+| devices | Array&lt;string&gt; | Yes | IDs of the remote devices in the same network. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [RdbPredicates](arkts-arkdata-relationalstore-rdbpredicates-c.md) | 返回配置了指定远程设备同步条件的谓词。 |
+| [RdbPredicates](arkts-arkdata-relationalstore-rdbpredicates-c.md) | RdbPredicates** object created. |
 
 ## Examples
 
@@ -695,7 +696,7 @@ predicates.inDevices(deviceIds);
 indexedBy(field: string): RdbPredicates
 ```
 
-配置RdbPredicates以指定索引列。该方法等同于SQL语句中的"INDEXED BY"。
+Creates an **RdbPredicates** object to specify the index column.
 
 **Since:** 7
 
@@ -713,13 +714,13 @@ indexedBy(field: string): RdbPredicates
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| field | string | Yes | 索引列的名称，不能为空字符串。 |
+| field | string | Yes | Name of the index column. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [RdbPredicates](arkts-arkdata-relationalstore-rdbpredicates-c.md) | 返回具有指定索引列的RdbPredicates。 |
+| [RdbPredicates](arkts-arkdata-relationalstore-rdbpredicates-c.md) | RdbPredicates** object created. |
 
 ## Examples
 
@@ -734,7 +735,7 @@ predicates.indexedBy("SALARY_INDEX")
 isNotNull(field: string): RdbPredicates
 ```
 
-配置谓词以匹配值不为null的指定字段。该方法等同于SQL语句中的"IS NOT NULL"。
+Creates an **RdbPredicates** object to search for the records in the specified column that are not **null**.
 
 **Since:** 7
 
@@ -752,19 +753,19 @@ isNotNull(field: string): RdbPredicates
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| field | string | Yes | 数据库表中的列名，不能为空字符串。 |
+| field | string | Yes | Column name in the database table. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [RdbPredicates](arkts-arkdata-relationalstore-rdbpredicates-c.md) | 返回配置了值不为null条件的谓词。 |
+| [RdbPredicates](arkts-arkdata-relationalstore-rdbpredicates-c.md) | RdbPredicates** object created. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2 . Incorrect parameter types. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2 . Incorrect parameter types. |
 
 ## Examples
 
@@ -779,7 +780,7 @@ predicates.isNotNull("NAME")
 isNull(field: string): RdbPredicates
 ```
 
-配置谓词以匹配值为null的字段。该方法等同于SQL语句中的"IS NULL"。
+Creates an **RdbPredicates** object to search for the records in the specified column that are **null**.
 
 **Since:** 7
 
@@ -797,13 +798,13 @@ isNull(field: string): RdbPredicates
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| field | string | Yes | 数据库表中的列名，不能为空字符串。 |
+| field | string | Yes | Column name in the database table. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [RdbPredicates](arkts-arkdata-relationalstore-rdbpredicates-c.md) | 返回配置了值为null条件的谓词。 |
+| [RdbPredicates](arkts-arkdata-relationalstore-rdbpredicates-c.md) | RdbPredicates** object created. |
 
 ## Examples
 
@@ -818,7 +819,7 @@ predicates.isNull("NAME")
 lessThan(field: string, value: ValueType): RdbPredicates
 ```
 
-配置谓词以匹配数据字段为valueType且value小于指定值的字段。该方法等同于SQL语句中的"<"。
+Creates an **RdbPredicates** object to search for the records in the specified column that are less than the given value.
 
 **Since:** 7
 
@@ -836,14 +837,14 @@ lessThan(field: string, value: ValueType): RdbPredicates
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| field | string | Yes | 数据库表中的列名，不能为空字符串。 |
-| value | [ValueType](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-pasteboard-valuetype-t.md) | Yes | 指示要与谓词匹配的值。 |
+| field | string | Yes | Column name in the database table. |
+| value | [ValueType](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-pasteboard-valuetype-t.md) | Yes | Value to match. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [RdbPredicates](arkts-arkdata-relationalstore-rdbpredicates-c.md) | 返回配置了小于指定值条件的谓词。 |
+| [RdbPredicates](arkts-arkdata-relationalstore-rdbpredicates-c.md) | RdbPredicates** object created. |
 
 ## Examples
 
@@ -858,7 +859,7 @@ predicates.lessThan("AGE", 20)
 lessThanOrEqualTo(field: string, value: ValueType): RdbPredicates
 ```
 
-配置谓词以匹配数据字段为ValueType且value小于或等于指定值的字段。该方法等同于SQL语句中的"<="。
+Creates an **RdbPredicates** object to search for the records in the specified column that are less than or equal to the given value.
 
 **Since:** 7
 
@@ -876,14 +877,14 @@ lessThanOrEqualTo(field: string, value: ValueType): RdbPredicates
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| field | string | Yes | 数据库表中的列名，不能为空字符串。 |
-| value | [ValueType](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-pasteboard-valuetype-t.md) | Yes | 指示要与谓词匹配的值。 |
+| field | string | Yes | Column name in the database table. |
+| value | [ValueType](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-pasteboard-valuetype-t.md) | Yes | Value to match. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [RdbPredicates](arkts-arkdata-relationalstore-rdbpredicates-c.md) | 返回配置了小于或等于指定值条件的谓词。 |
+| [RdbPredicates](arkts-arkdata-relationalstore-rdbpredicates-c.md) | RdbPredicates** object created. |
 
 ## Examples
 
@@ -898,7 +899,7 @@ predicates.lessThanOrEqualTo("AGE", 20)
 like(field: string, value: string): RdbPredicates
 ```
 
-配置谓词以匹配数据字段为string且值类似于指定字符串的字段。该方法等同于SQL语句中的"LIKE"。
+Creates an **RdbPredicates** object to search for the records in the specified column that are similar to the given value.
 
 **Since:** 7
 
@@ -916,14 +917,14 @@ like(field: string, value: string): RdbPredicates
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| field | string | Yes | 数据库表中的列名，不能为空字符串。 |
-| value | string | Yes | 指示要与谓词匹配的值，长度不超过1024字节。 |
+| field | string | Yes | Column name in the database table. |
+| value | string | Yes | Value to match. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [RdbPredicates](arkts-arkdata-relationalstore-rdbpredicates-c.md) | 返回配置了类似指定字符串条件的谓词。 |
+| [RdbPredicates](arkts-arkdata-relationalstore-rdbpredicates-c.md) | RdbPredicates** object created. |
 
 ## Examples
 
@@ -938,7 +939,7 @@ predicates.like("NAME", "%os%")
 limitAs(value: number): RdbPredicates
 ```
 
-设置最大数据记录数的谓词。该方法等同于SQL语句中的"LIMIT"。
+Creates an **RdbPredicates** object to limit the number of records.
 
 **Since:** 7
 
@@ -956,13 +957,13 @@ limitAs(value: number): RdbPredicates
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | number | Yes | 最大数据记录数。 |
+| value | number | Yes | Maximum number of records. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [RdbPredicates](arkts-arkdata-relationalstore-rdbpredicates-c.md) | 返回可用于设置最大数据记录数的谓词。 |
+| [RdbPredicates](arkts-arkdata-relationalstore-rdbpredicates-c.md) | RdbPredicates** object created. |
 
 ## Examples
 
@@ -977,7 +978,7 @@ predicates.equalTo("NAME", "Rose").limitAs(3)
 notBetween(field: string, low: ValueType, high: ValueType): RdbPredicates
 ```
 
-配置RdbPredicates以匹配数据字段为ValueType且value超出给定范围的指定字段。该方法等同于SQL语句中的"NOT BETWEEN"。
+Creates an **RdbPredicates** object to search for the records in the specified column that are out of the specified range.
 
 **Since:** 7
 
@@ -995,15 +996,15 @@ notBetween(field: string, low: ValueType, high: ValueType): RdbPredicates
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| field | string | Yes | 数据库表中的列名，不能为空字符串。 |
-| low | [ValueType](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-pasteboard-valuetype-t.md) | Yes | 指示与谓词匹配的最小值。 |
-| high | [ValueType](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-pasteboard-valuetype-t.md) | Yes | 指示要与谓词匹配的最大值。 |
+| field | string | Yes | Column name in the database table. |
+| low | [ValueType](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-pasteboard-valuetype-t.md) | Yes | Minimum value of the range to set. |
+| high | [ValueType](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-pasteboard-valuetype-t.md) | Yes | Maximum value of the range to set. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [RdbPredicates](arkts-arkdata-relationalstore-rdbpredicates-c.md) | 返回配置了超出给定范围条件的谓词。 |
+| [RdbPredicates](arkts-arkdata-relationalstore-rdbpredicates-c.md) | RdbPredicates** object created. |
 
 ## Examples
 
@@ -1018,7 +1019,7 @@ predicates.notBetween("AGE", 10, 50)
 notEqualTo(field: string, value: ValueType): RdbPredicates
 ```
 
-配置谓词以匹配数据字段为ValueType且值不等于指定值的字段。该方法等同于SQL语句中的"!="。
+Creates an **RdbPredicates** object to search for the records in the specified column that are not equal to the given value.
 
 **Since:** 7
 
@@ -1036,14 +1037,14 @@ notEqualTo(field: string, value: ValueType): RdbPredicates
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| field | string | Yes | 数据库表中的列名，不能为空字符串。 |
-| value | [ValueType](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-pasteboard-valuetype-t.md) | Yes | 指示要与谓词匹配的值。 |
+| field | string | Yes | Column name in the database table. |
+| value | [ValueType](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-pasteboard-valuetype-t.md) | Yes | Value to match. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [RdbPredicates](arkts-arkdata-relationalstore-rdbpredicates-c.md) | 返回配置了不等于指定值条件的谓词。 |
+| [RdbPredicates](arkts-arkdata-relationalstore-rdbpredicates-c.md) | RdbPredicates** object created. |
 
 ## Examples
 
@@ -1058,7 +1059,7 @@ predicates.notEqualTo("NAME", "lisi")
 notIn(field: string, value: Array<ValueType>): RdbPredicates
 ```
 
-将RdbPredicates配置为匹配数据字段为ValueType且值超出给定范围的指定字段。
+Creates an **RdbPredicates** object to search for the records in the specified column that are out of the specified range.
 
 **Since:** 7
 
@@ -1076,14 +1077,14 @@ notIn(field: string, value: Array<ValueType>): RdbPredicates
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| field | string | Yes | 数据库表中的列名，不能为空字符串。 |
-| value | Array&lt;ValueType&gt; | Yes | 以ValueType数组形式指定的要匹配的值。 |
+| field | string | Yes | Column name in the database table. |
+| value | Array&lt;ValueType&gt; | Yes | Array of **ValueType**s to match. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [RdbPredicates](arkts-arkdata-relationalstore-rdbpredicates-c.md) | 返回配置了值超出给定范围内条件的谓词。 |
+| [RdbPredicates](arkts-arkdata-relationalstore-rdbpredicates-c.md) | RdbPredicates** object created. |
 
 ## Examples
 
@@ -1098,7 +1099,7 @@ predicates.notIn("NAME", ["Lisa", "Rose"])
 offsetAs(rowOffset: number): RdbPredicates
 ```
 
-配置RdbPredicates以指定返回结果的起始位置。需要同步调用limitAs接口指定查询数量，否则将无查询结果。如需查询指定偏移位置后的所有行，limitAs接口调用需传参数-1。该方法等同于SQL语句中的"OFFSET"。
+Creates an **RdbPredicates** object to specify the start position of the returned result. This API must be used together with **limitAs**. Otherwise, no result will be returned. To query all rows after the specified offset, pass in **-1** in **limitAs**.
 
 **Since:** 7
 
@@ -1116,13 +1117,13 @@ offsetAs(rowOffset: number): RdbPredicates
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| rowOffset | number | Yes | 返回结果的起始位置，取值为正整数。 |
+| rowOffset | number | Yes | Start position, which is a positive integer. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [RdbPredicates](arkts-arkdata-relationalstore-rdbpredicates-c.md) | 返回具有指定返回结果起始位置的谓词。 |
+| [RdbPredicates](arkts-arkdata-relationalstore-rdbpredicates-c.md) | RdbPredicates** object created. |
 
 ## Examples
 
@@ -1137,7 +1138,7 @@ predicates.equalTo("NAME", "Rose").limitAs(-1).offsetAs(3)
 or(): RdbPredicates
 ```
 
-将或条件添加到谓词中。
+Creates an **RdbPredicates** object to add the OR condition.
 
 **Since:** 7
 
@@ -1155,7 +1156,7 @@ or(): RdbPredicates
 
 | Type | Description |
 | --- | --- |
-| [RdbPredicates](arkts-arkdata-relationalstore-rdbpredicates-c.md) | 返回带有或条件的Rdb谓词。 |
+| [RdbPredicates](arkts-arkdata-relationalstore-rdbpredicates-c.md) | RdbPredicates** created. |
 
 ## Examples
 
@@ -1172,7 +1173,7 @@ predicates.equalTo("NAME", "Lisa")
 orderByAsc(field: string): RdbPredicates
 ```
 
-配置谓词以匹配其值按升序排序的列。该方法等同于SQL语句中的"ORDER BY"。
+Creates an **RdbPredicates** object to sort the records in the specified column in ascending order.
 
 **Since:** 7
 
@@ -1190,13 +1191,13 @@ orderByAsc(field: string): RdbPredicates
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| field | string | Yes | 数据库表中的列名，不能为空字符串。 |
+| field | string | Yes | Column name in the database table. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [RdbPredicates](arkts-arkdata-relationalstore-rdbpredicates-c.md) | 返回配置了按升序排序条件的谓词。 |
+| [RdbPredicates](arkts-arkdata-relationalstore-rdbpredicates-c.md) | RdbPredicates** object created. |
 
 ## Examples
 
@@ -1211,7 +1212,7 @@ predicates.orderByAsc("NAME")
 orderByDesc(field: string): RdbPredicates
 ```
 
-配置谓词以匹配其值按降序排序的列。该方法等同于SQL语句中的"ORDER BY"。
+Creates an **RdbPredicates** object to sort the records in the specified column in descending order.
 
 **Since:** 7
 
@@ -1229,13 +1230,13 @@ orderByDesc(field: string): RdbPredicates
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| field | string | Yes | 数据库表中的列名，不能为空字符串。 |
+| field | string | Yes | Column name in the database table. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [RdbPredicates](arkts-arkdata-relationalstore-rdbpredicates-c.md) | 返回配置了按降序排序条件的谓词。 |
+| [RdbPredicates](arkts-arkdata-relationalstore-rdbpredicates-c.md) | RdbPredicates** object created. |
 
 ## Examples
 

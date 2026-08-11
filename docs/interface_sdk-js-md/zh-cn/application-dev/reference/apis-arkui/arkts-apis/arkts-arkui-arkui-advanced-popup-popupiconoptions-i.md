@@ -10,12 +10,6 @@ PopupIconOptions定义图标的属性。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
-## 导入模块
-
-```TypeScript
-import { Popup, PopupOptions, PopupButtonOptions, PopupIconOptions, PopupTextOptions } from 'kits/@kit.ArkUI';
-```
-
 ## borderRadius
 
 ```TypeScript

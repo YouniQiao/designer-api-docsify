@@ -4,7 +4,7 @@
 declare type OnGetStartIndexByOffsetCallback = (totalOffset: double) => StartLineInfo
 ```
 
-根据Grid的总偏移量，计算当前页面起始行的位置，用于快速滑动或反向滑动场景。此回调需与onGetStartIndexByIndex同时设置才能生效。
+Defines the callback type used in onGetStartIndexByOffset of GridLayoutOptions.
 
 **Since:** 23
 
@@ -14,17 +14,19 @@ declare type OnGetStartIndexByOffsetCallback = (totalOffset: double) => StartLin
 
 <!--Device-unnamed-declare type OnGetStartIndexByOffsetCallback = (totalOffset: double) => StartLineInfo--><!--Device-unnamed-declare type OnGetStartIndexByOffsetCallback = (totalOffset: double) => StartLineInfo-End-->
 
+**System capability:** SystemCapability.ArkUI.ArkUI.Full
+
 **System API:** This is a system API.
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| totalOffset | double | Yes | 总滚动偏移量，即Grid当中第一个GridItem的顶部与Grid顶部之间的偏移量。<br/>单位：vp |
+| totalOffset | double | Yes | Total scrolling offset, that is, the offset between the top of the first **GridItem** in the **Grid** component and the top of the **Grid** component. <br>Unit:vp. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [StartLineInfo](../arkts-apis/arkts-arkui-grid-startlineinfo-i-sys.md) | 用于记录Grid页面内起始行的位置信息。 |
+| [StartLineInfo](../arkts-apis/arkts-arkui-grid-startlineinfo-i-sys.md) | - |
 

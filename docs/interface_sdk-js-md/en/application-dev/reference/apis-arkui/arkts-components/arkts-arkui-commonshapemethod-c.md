@@ -18,7 +18,7 @@ CommonShapeMethod
 antiAlias(value: boolean): T
 ```
 
-Indicates whether to enable anti-aliasing
+Specifies whether anti-aliasing is enabled.
 
 **Since:** 11
 
@@ -36,7 +36,7 @@ Indicates whether to enable anti-aliasing
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | boolean | Yes | @returns { T } |
+| value | boolean | Yes | Whether anti-aliasing is enabled. true: Anti-aliasing is enabled. false: Anti-aliasing is disabled. Default value: true |
 
 **Return value:**
 
@@ -50,7 +50,7 @@ Indicates whether to enable anti-aliasing
 fill(value: ResourceColor): T
 ```
 
-Fill color.
+Sets the color of the fill area.An invalid value is handled as the default value.If this attribute and the universal attribute foregroundColor are both set, whichever is set later takes effect.
 
 **Since:** 11
 
@@ -68,7 +68,7 @@ Fill color.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | [ResourceColor](../arkts-apis/arkts-arkui-resourcecolor-t.md) | Yes | @returns { T } |
+| value | [ResourceColor](../arkts-apis/arkts-arkui-resourcecolor-t.md) | Yes | Color of the fill area. Default value: Color.Black. |
 
 **Return value:**
 
@@ -82,7 +82,7 @@ Fill color.
 fillOpacity(value: number | string | Resource): T
 ```
 
-fill Opacity
+Sets the opacity of the fill area.The value range is [0.0, 1.0].A value less than 0.0 evaluates to the value 0.0. A value greater than 1.0 evaluates to the value 1.0.Any other value evaluates to the value 1.0.
 
 **Since:** 11
 
@@ -100,7 +100,7 @@ fill Opacity
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | number \| string \| Resource | Yes | @returns { T } |
+| value | number \| string \| Resource | Yes | Opacity of the fill area. Default value: 1 |
 
 **Return value:**
 
@@ -114,7 +114,7 @@ fill Opacity
 stroke(value: ResourceColor): T
 ```
 
-border Color
+Sets the stroke color.If this attribute is not set, the component does not have any stroke.If the value is invalid, no stroke will be drawn.
 
 **Since:** 11
 
@@ -132,7 +132,7 @@ border Color
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | [ResourceColor](../arkts-apis/arkts-arkui-resourcecolor-t.md) | Yes | @returns { T } |
+| value | [ResourceColor](../arkts-apis/arkts-arkui-resourcecolor-t.md) | Yes | Stroke color. |
 
 **Return value:**
 
@@ -146,7 +146,7 @@ border Color
 strokeDashArray(value: Array<any>): T
 ```
 
-Sets the gap for the border.
+Sets stroke dashes.The value must be greater than or equal to 0. Invalid values are treated as the default value.
 
 **Since:** 11
 
@@ -164,7 +164,7 @@ Sets the gap for the border.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | Array&lt;any&gt; | Yes | @returns { T } |
+| value | Array&lt;any&gt; | Yes | Stroke dashes. Default value: [] Default unit: vp |
 
 **Return value:**
 
@@ -178,7 +178,7 @@ Sets the gap for the border.
 strokeDashOffset(value: number | string): T
 ```
 
-Offset from the start point of the border drawing.
+Sets the offset of the start point for drawing the stroke.An invalid value is handled as the default value.
 
 **Since:** 11
 
@@ -196,7 +196,7 @@ Offset from the start point of the border drawing.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | number \| string | Yes | @returns { T } |
+| value | number \| string | Yes | Offset of the start point for drawing the stroke. Default value: 0 Default unit: vp |
 
 **Return value:**
 
@@ -210,7 +210,7 @@ Offset from the start point of the border drawing.
 strokeLineCap(value: LineCapStyle): T
 ```
 
-Path endpoint drawing style.
+Sets the cap style of the stroke.
 
 **Since:** 11
 
@@ -228,7 +228,7 @@ Path endpoint drawing style.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | [LineCapStyle](../arkts-apis/arkts-arkui-linecapstyle-e.md) | Yes | @returns { T } |
+| value | [LineCapStyle](../arkts-apis/arkts-arkui-linecapstyle-e.md) | Yes | Cap style of the stroke. Default value: LineCapStyle.Butt |
 
 **Return value:**
 
@@ -242,7 +242,7 @@ Path endpoint drawing style.
 strokeLineJoin(value: LineJoinStyle): T
 ```
 
-Border corner drawing style.
+Sets the join style of the stroke.This attribute does not work for the Circle component, which does not have corners.
 
 **Since:** 11
 
@@ -260,7 +260,7 @@ Border corner drawing style.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | [LineJoinStyle](../arkts-apis/arkts-arkui-linejoinstyle-e.md) | Yes | @returns { T } |
+| value | [LineJoinStyle](../arkts-apis/arkts-arkui-linejoinstyle-e.md) | Yes | Join style of the stroke. Default value: LineJoinStyle.Miter |
 
 **Return value:**
 
@@ -306,7 +306,7 @@ Limits for drawing acute angles as bevels
 strokeOpacity(value: number | string | Resource): T
 ```
 
-Sets the opacity of the border.
+Sets the stroke opacity.The value range is [0.0, 1.0].A value less than 0.0 evaluates to the value 0.0. A value greater than 1.0 evaluates to the value 1.0.Any other value evaluates to the value 1.0.
 
 **Since:** 11
 
@@ -324,7 +324,7 @@ Sets the opacity of the border.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | number \| string \| Resource | Yes | @returns { T } |
+| value | number \| string \| Resource | Yes | Stroke opacity. Default value: 1 |
 
 **Return value:**
 
@@ -338,7 +338,7 @@ Sets the opacity of the border.
 strokeWidth(value: Length): T
 ```
 
-Sets the width of the dividing line.
+Sets the stroke width.If this attribute is of the string type, percentage values are not supported and will be treated as 1 px.
 
 **Since:** 11
 
@@ -356,7 +356,7 @@ Sets the width of the dividing line.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | [Length](../arkts-apis/arkts-arkui-length-t.md) | Yes | @returns { T } |
+| value | [Length](../arkts-apis/arkts-arkui-length-t.md) | Yes | Stroke width. The value must be greater than or equal to 0. Default value: 1. Default unit: vp. An invalid value is handled as the default value. |
 
 **Return value:**
 

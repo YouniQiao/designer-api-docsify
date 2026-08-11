@@ -10,12 +10,6 @@
 
 **系统能力：** SystemCapability.Communication.IPC.Core
 
-## 导入模块
-
-```TypeScript
-import { rpc } from 'kits/@kit.IPCKit';
-```
-
 ## 汇总
 
 ### 类
@@ -54,5 +48,5 @@ import { rpc } from 'kits/@kit.IPCKit';
 
 | 名称 | 说明 |
 | --- | --- |
-| [OnRemoteDiedFunc](arkts-ipc-rpc-onremotediedfunc-t.md) | Called to perform subsequent operations when a death notification of the remote object is received. |
+| [OnRemoteDiedFunc](arkts-ipc-rpc-onremotediedfunc-t.md) | 调用以在接收到远程对象的死亡通知时执行后续操作。 |
 

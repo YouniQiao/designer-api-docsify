@@ -14,12 +14,6 @@
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 
-## 导入模块
-
-```TypeScript
-import { InsightIntentExecutor } from 'kits/@kit.AbilityKit';
-```
-
 ## onExecuteInServiceExtensionAbility
 
 ```TypeScript
@@ -46,7 +40,7 @@ onExecuteInServiceExtensionAbility(name: string, param: Record<string, Object>):
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | name | string | 是 | 意图名称。 |
-| param | [Record](../../apis-default/arkts-apis/arkts-record-t.md)&lt;string, Object&gt; | 是 | 意图参数，表示本次意图执行由系统入口传递给应用的数据。 |
+| param | Record&lt;string, Object&gt; | 是 | 意图参数，表示本次意图执行由系统入口传递给应用的数据。 |
 
 **返回值：**
 
@@ -155,13 +149,93 @@ onExecuteInServiceExtensionAbility(name: string, param: Record<string, RecordDat
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | name | string | 是 | 意图调用名称。 |
-| param | [Record](../../apis-default/arkts-apis/arkts-record-t.md)&lt;string, RecordData&gt; | 是 | 意图调用参数。 |
+| param | Record&lt;string, RecordData&gt; | 是 | 意图调用参数。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
 | insightIntent.ExecuteResult | Intent execution result or a Promise object containing the intent execution result, representing the data returned to the system entry point from this intent execution. |
+
+## 示例
+
+直接返回意图调用的结果，示例如下：
+
+```TypeScript
+'use static'
+import { InsightIntentExecutor, insightIntent } from '@kit.AbilityKit';
+import { hilog } from '@kit.PerformanceAnalysisKit';
+import { RecordData } from '@kit.BasicServicesKit';
+
+
+export default class IntentExecutorImpl extends InsightIntentExecutor {
+  onExecuteInServiceExtensionAbility(name: string, param: Record<string, RecordData>): insightIntent.ExecuteResult {
+    let result: insightIntent.ExecuteResult;
+    if (name !== 'SupportedInsightIntentName') {
+      hilog.warn(0x0000, 'testTag', 'Unsupported insight intent %{public}s', name);
+      result = {
+        // 由开发人员决定
+        code: 404,
+        result: {
+          'message': 'Unsupported insight intent.',
+        } as Record<string, RecordData>
+
+      };
+      return result;
+    }
+
+    result = {
+      code: 0,
+      result: {
+        'message': 'Execute insight intent succeed.',
+      } as Record<string, RecordData>
+    };
+    return result;
+  }
+}
+```
+
+使用Promise异步返回意图调用的结果，示例如下：
+
+```TypeScript
+'use static'
+ import { InsightIntentExecutor, insightIntent } from '@kit.AbilityKit';
+ import { hilog } from '@kit.PerformanceAnalysisKit';
+ import { RecordData } from '@kit.BasicServicesKit';
+ 
+ async function executeInsightIntent(param: Record<string, RecordData>): Promise<insightIntent.ExecuteResult> {
+   return new Promise<insightIntent.ExecuteResult>((resolve, reject) => {
+     let result: insightIntent.ExecuteResult = {
+       code: 0,
+       result: {
+         'message': 'Execute insight intent succeed.',
+       } as Record<string, RecordData>
+     };
+     resolve(result);
+   });
+ }
+ 
+ export default class IntentExecutorImpl extends InsightIntentExecutor {
+   async onExecuteInServiceExtensionAbility(name: string,
+     param: Record<string, RecordData>): Promise<insightIntent.ExecuteResult> {
+     let result: insightIntent.ExecuteResult;
+     if (name !== 'SupportedInsightIntentName') {
+       hilog.warn(0x0000, 'testTag', 'Unsupported insight intent %{public}s', name);
+       result = {
+         // 由开发人员决定
+         code: 404,
+         result: {
+           'message': 'Unsupported insight intent.',
+         } as Record<string, RecordData>
+       };
+       return result;
+     }
+
+     result = await executeInsightIntent(param);
+     return result;
+   }
+ }
+```
 
 ## onExecuteInUIAbilityBackgroundMode
 
@@ -193,7 +267,7 @@ onExecuteInUIAbilityBackgroundMode、[onBackground](arkts-ability-app-ability-ui
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | name | string | 是 | 意图名称。 |
-| param | [Record](../../apis-default/arkts-apis/arkts-record-t.md)&lt;string, Object&gt; | 是 | 意图参数，表示本次意图执行由系统入口传递给应用的数据。 |
+| param | Record&lt;string, Object&gt; | 是 | 意图参数，表示本次意图执行由系统入口传递给应用的数据。 |
 
 **返回值：**
 
@@ -288,13 +362,63 @@ onExecuteInUIAbilityBackgroundMode、[onBackground](arkts-ability-app-ability-ui
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | name | string | 是 | 意图调用名称。 |
-| param | [Record](../../apis-default/arkts-apis/arkts-record-t.md)&lt;string, RecordData&gt; | 是 | 意图调用参数。 |
+| param | Record&lt;string, RecordData&gt; | 是 | 意图调用参数。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
 | insightIntent.ExecuteResult | Intent execution result or a Promise object containing the intent execution result, representing the data returned to the system entry point from this intent execution. |
+
+## 示例
+
+直接返回意图调用的结果，示例如下：
+
+```TypeScript
+'use static'
+import { InsightIntentExecutor, insightIntent } from '@kit.AbilityKit';
+import { RecordData } from '@kit.BasicServicesKit';
+
+export default class IntentExecutorImpl extends InsightIntentExecutor {
+  onExecuteInUIAbilityBackgroundMode(name: string, param: Record<string, RecordData>): insightIntent.ExecuteResult {
+    let result: insightIntent.ExecuteResult = {
+      code: 0,
+      result: {
+        'message': 'Execute insight intent succeed.',
+      } as Record<string, RecordData>
+    };
+    return result;
+  }
+}
+```
+
+使用Promise异步返回意图调用的结果，示例如下：
+
+```TypeScript
+'use static'
+import { InsightIntentExecutor, insightIntent } from '@kit.AbilityKit';
+import { RecordData } from '@kit.BasicServicesKit';
+
+async function executeInsightIntent(param: Record<string, RecordData>): Promise<insightIntent.ExecuteResult> {
+  return new Promise<insightIntent.ExecuteResult>((resolve, reject) => {
+    let result: insightIntent.ExecuteResult = {
+      code: 0,
+      result: {
+        'message': 'Execute insight intent succeed.',
+      } as Record<string, RecordData>
+    };
+    resolve(result);
+  })
+}
+
+export default class IntentExecutorImpl extends InsightIntentExecutor {
+  async onExecuteInUIAbilityBackgroundMode(name: string,
+    param: Record<string, RecordData>): Promise<insightIntent.ExecuteResult> {
+    let result: insightIntent.ExecuteResult = await executeInsightIntent(param);
+    return result;
+  }
+}
+```
 
 ## onExecuteInUIAbilityForegroundMode
 
@@ -329,7 +453,7 @@ onExecuteInUIAbilityForegroundMode(name: string, param: Record<string, Object>, 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | name | string | 是 | 意图名称。 |
-| param | [Record](../../apis-default/arkts-apis/arkts-record-t.md)&lt;string, Object&gt; | 是 | 意图参数，表示本次意图执行由系统入口传递给应用的数据。 |
+| param | Record&lt;string, Object&gt; | 是 | 意图参数，表示本次意图执行由系统入口传递给应用的数据。 |
 | pageLoader | window.WindowStage | 是 | 表示windowStage实例对象，和 [onWindowStageCreate](arkts-ability-app-ability-uiability-uiability-c.md#onwindowstagecreate)接口的windowStage实例是同一个，可用于加载意图执行 的页面。 |
 
 **返回值：**
@@ -456,7 +580,7 @@ onExecuteInUIAbilityForegroundMode(name: string, param: Record<string, RecordDat
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | name | string | 是 | 意图调用名称。 |
-| param | [Record](../../apis-default/arkts-apis/arkts-record-t.md)&lt;string, RecordData&gt; | 是 | 意图调用参数。 |
+| param | Record&lt;string, RecordData&gt; | 是 | 意图调用参数。 |
 | pageLoader | window.WindowStage | 是 | 页面加载器。 |
 
 **返回值：**
@@ -464,6 +588,99 @@ onExecuteInUIAbilityForegroundMode(name: string, param: Record<string, RecordDat
 | 类型 | 说明 |
 | --- | --- |
 | insightIntent.ExecuteResult | Intent execution result or a Promise object containing the intent execution result, representing the data returned to the system entry point from this intent execution. |
+
+## 示例
+
+直接返回意图调用的结果，示例如下：
+
+```TypeScript
+'use static'
+import { InsightIntentExecutor, insightIntent } from '@kit.AbilityKit';
+import { window } from '@kit.ArkUI';
+import { hilog } from '@kit.PerformanceAnalysisKit';
+import { RecordData } from '@kit.BasicServicesKit';
+
+export default class IntentExecutorImpl extends InsightIntentExecutor {
+  onExecuteInUIAbilityForegroundMode(name: string, param: Record<string, RecordData>,
+    pageLoader: window.WindowStage): insightIntent.ExecuteResult {
+    let result: insightIntent.ExecuteResult;
+    if (name !== 'SupportedInsightIntentName') {
+      hilog.warn(0x0000, 'testTag', 'Unsupported insight intent %{public}s', name);
+      result = {
+        // 由开发人员决定
+        code: 404,
+        result: {
+          'message': 'Unsupported insight intent.',
+        } as Record<string, RecordData>
+      };
+      return result;
+    }
+
+    // 若开发者需加载内容
+    pageLoader.loadContent('pages/Index', (err, data) => {
+      if (err?.code) {
+        hilog.error(0x0000, 'testTag', 'Failed to load the content. Cause: %{public}s', JSON.stringify(err));
+      } else {
+        hilog.info(0x0000, 'testTag', '%{public}s', 'Succeeded in loading the content');
+      }
+    });
+
+    result = {
+      code: 0,
+      result: {
+        'message': 'Execute insight intent succeed.',
+      } as Record<string, RecordData>
+    };
+    return result;
+  }
+}
+```
+
+使用Promise异步返回意图调用的结果，示例如下：
+
+```TypeScript
+'use static'
+import { InsightIntentExecutor, insightIntent } from '@kit.AbilityKit';
+import { window } from '@kit.ArkUI';
+import { hilog } from '@kit.PerformanceAnalysisKit';
+import { RecordData } from '@kit.BasicServicesKit';
+
+async function executeInsightIntent(param: Record<string, RecordData>): Promise<insightIntent.ExecuteResult> {
+  return new Promise<insightIntent.ExecuteResult>((resolve, reject) => { // 添加泛型类型
+    let result: insightIntent.ExecuteResult = {
+      code: 0,
+      result: {
+        'message': 'Execute insight intent succeed.',
+      } as Record<string, RecordData>
+    };
+    resolve(result);
+  });
+}
+
+export default class IntentExecutorImpl extends InsightIntentExecutor {
+  async onExecuteInUIAbilityForegroundMode(
+    name: string,
+    param: Record<string, RecordData>,
+    pageLoader: window.WindowStage
+  ): Promise<insightIntent.ExecuteResult> {
+    let result: insightIntent.ExecuteResult;
+
+    if (name !== 'SupportedInsightIntentName') {
+      hilog.warn(0x0000, 'testTag', 'Unsupported insight intent %{public}s', name);
+      result = {
+        code: 404,
+        result: {
+          'message': 'Unsupported insight intent.',
+        } as Record<string, RecordData>
+      };
+      return result;
+    }
+
+    result = await executeInsightIntent(param);
+    return result;
+  }
+}
+```
 
 ## onExecuteInUIExtensionAbility
 
@@ -494,7 +711,7 @@ onExecuteInUIExtensionAbility(name: string, param: Record<string, Object>, pageL
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | name | string | 是 | 意图名称。 |
-| param | [Record](../../apis-default/arkts-apis/arkts-record-t.md)&lt;string, Object&gt; | 是 | 意图参数，表示本次意图执行由系统入口传递给应用的数据。 |
+| param | Record&lt;string, Object&gt; | 是 | 意图参数，表示本次意图执行由系统入口传递给应用的数据。 |
 | pageLoader | [UIExtensionContentSession](arkts-ability-app-ability-uiextensioncontentsession-uiextensioncontentsession-c.md) | 是 | 表示UIExtensionContentSession实例对象，和 [onSessionCreate](arkts-ability-app-ability-uiextensionability-uiextensionability-c.md#onsessioncreate)接口的 UIExtensionContentSession实例是同一个，可用于加载意图执行的页面。 |
 
 **返回值：**
@@ -611,7 +828,7 @@ onExecuteInUIExtensionAbility(name: string, param: Record<string, RecordData>, p
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | name | string | 是 | 意图调用名称。 |
-| param | [Record](../../apis-default/arkts-apis/arkts-record-t.md)&lt;string, RecordData&gt; | 是 | 意图调用参数。 |
+| param | Record&lt;string, RecordData&gt; | 是 | 意图调用参数。 |
 | pageLoader | [UIExtensionContentSession](arkts-ability-app-ability-uiextensioncontentsession-uiextensioncontentsession-c.md) | 是 | 页面加载器。 |
 
 **返回值：**
@@ -619,6 +836,88 @@ onExecuteInUIExtensionAbility(name: string, param: Record<string, RecordData>, p
 | 类型 | 说明 |
 | --- | --- |
 | insightIntent.ExecuteResult | Intent execution result or a Promise object containing the intent execution result, representing the data returned to the system entry point from this intent execution. |
+
+## 示例
+
+直接返回意图调用的结果，示例如下：
+
+```TypeScript
+'use static'
+import { InsightIntentExecutor, insightIntent, UIExtensionContentSession } from '@kit.AbilityKit';
+import { hilog } from '@kit.PerformanceAnalysisKit';
+import { RecordData } from '@kit.BasicServicesKit';
+
+export default class IntentExecutorImpl extends InsightIntentExecutor {
+  onExecuteInUIExtensionAbility(name: string, param: Record<string, RecordData>,
+    pageLoader: UIExtensionContentSession): insightIntent.ExecuteResult {
+    let result: insightIntent.ExecuteResult;
+    if (name !== 'SupportedInsightIntentName') {
+      hilog.warn(0x0000, 'testTag', 'Unsupported insight intent %{public}s', name);
+      result = {
+        // 由开发人员决定
+        code: 404,
+        result: {
+          'message': 'Unsupported insight intent.',
+        } as Record<string, RecordData>
+      };
+      return result;
+    }
+
+    // 若开发者需加载内容
+    pageLoader.loadContent('pages/Index');
+
+    result = {
+      code: 0,
+      result: {
+        'message': 'Execute insight intent succeed.',
+      } as Record<string, RecordData>
+    };
+    return result;
+  }
+}
+```
+
+使用Promise异步返回意图调用的结果，示例如下：
+
+```TypeScript
+'use static'
+import { InsightIntentExecutor, insightIntent, UIExtensionContentSession } from '@kit.AbilityKit';
+import { hilog } from '@kit.PerformanceAnalysisKit';
+import { RecordData } from '@kit.BasicServicesKit';
+
+async function executeInsightIntent(param: Record<string, RecordData>): Promise<insightIntent.ExecuteResult> {
+  return new Promise<insightIntent.ExecuteResult>((resolve, reject) => {
+    let result: insightIntent.ExecuteResult = {
+      code: 0,
+      result: {
+        'message': 'Execute insight intent succeed.',
+      } as Record<string, RecordData>
+    };
+    resolve(result);
+  })
+}
+
+export default class IntentExecutorImpl extends InsightIntentExecutor {
+  async onExecuteInUIExtensionAbility(name: string, param: Record<string, RecordData>,
+    pageLoader: UIExtensionContentSession): Promise<insightIntent.ExecuteResult> {
+    let result: insightIntent.ExecuteResult;
+    if (name !== 'SupportedInsightIntentName') {
+      hilog.warn(0x0000, 'testTag', 'Unsupported insight intent %{public}s', name);
+      result = {
+        // 由开发人员决定
+        code: 404,
+        result: {
+          'message': 'Unsupported insight intent.',
+        } as Record<string, RecordData>
+      };
+      return result;
+    }
+
+    result = await executeInsightIntent(param);
+    return result;
+  }
+}
+```
 
 ## context
 

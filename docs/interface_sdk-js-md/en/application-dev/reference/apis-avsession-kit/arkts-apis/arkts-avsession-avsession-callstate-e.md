@@ -1,6 +1,6 @@
 # CallState
 
-表示通话状态的枚举。
+Enumeration of current call state
 
 **Since:** 11
 
@@ -16,7 +16,7 @@
 CALL_STATE_IDLE = 0
 ```
 
-空闲状态。
+Idle state.
 
 **Since:** 11
 
@@ -34,7 +34,7 @@ CALL_STATE_IDLE = 0
 CALL_STATE_INCOMING = 1
 ```
 
-来电。
+Incoming state.
 
 **Since:** 11
 
@@ -52,7 +52,7 @@ CALL_STATE_INCOMING = 1
 CALL_STATE_ACTIVE = 2
 ```
 
-接通。
+Active state in calling.
 
 **Since:** 11
 
@@ -70,7 +70,7 @@ CALL_STATE_ACTIVE = 2
 CALL_STATE_DIALING = 3
 ```
 
-响铃。
+Dialing state.
 
 **Since:** 11
 
@@ -88,7 +88,7 @@ CALL_STATE_DIALING = 3
 CALL_STATE_WAITING = 4
 ```
 
-等待接通。
+Waiting state.
 
 **Since:** 11
 
@@ -106,7 +106,7 @@ CALL_STATE_WAITING = 4
 CALL_STATE_HOLDING = 5
 ```
 
-保持。
+Holding state.
 
 **Since:** 11
 
@@ -124,7 +124,7 @@ CALL_STATE_HOLDING = 5
 CALL_STATE_DISCONNECTING = 6
 ```
 
-挂断。
+Disconnecting state.
 
 **Since:** 11
 

@@ -18,7 +18,7 @@ controller: WebviewController
 
 Sets the controller of the Web.
 
-**类型：** [WebviewController](arkts-arkweb-webview-webviewcontroller-c.md)
+**类型：** [WebviewController](../arkts-components/arkts-arkweb-webviewcontroller-t.md)
 
 **起始版本：** 23
 
@@ -72,7 +72,7 @@ renderMode?: RenderMode
 
 Rendering mode.RenderMode.ASYNC_RENDER (default, cannot be dynamically adjusted): The Web component is rendered asynchronously.RenderMode.SYNC_RENDER: The Web component is rendered synchronously within the current execution context.
 
-**类型：** [RenderMode](arkts-arkweb-web-rendermode-e.md)
+**类型：** [RenderMode](../arkts-components/arkts-arkweb-rendermode-e.md)
 
 **起始版本：** 23
 

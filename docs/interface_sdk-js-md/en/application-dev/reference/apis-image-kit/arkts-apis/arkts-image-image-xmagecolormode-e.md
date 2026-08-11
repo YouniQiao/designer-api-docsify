@@ -1,6 +1,6 @@
 # XmageColorMode
 
-表示XMAGE颜色模式类型的枚举。
+Enumerates the XMAGE color modes.
 
 **Since:** 23
 
@@ -16,7 +16,7 @@
 NORMAL = 0
 ```
 
-标准模式。
+Original.
 
 **Since:** 23
 
@@ -34,7 +34,7 @@ NORMAL = 0
 BRIGHT = 1
 ```
 
-明亮模式。
+Bright.
 
 **Since:** 23
 
@@ -52,7 +52,7 @@ BRIGHT = 1
 SOFT = 2
 ```
 
-柔焦模式。
+Vivid.
 
 **Since:** 23
 
@@ -70,7 +70,7 @@ SOFT = 2
 MONO = 3
 ```
 
-黑白模式。
+Mono.
 
 **Since:** 23
 

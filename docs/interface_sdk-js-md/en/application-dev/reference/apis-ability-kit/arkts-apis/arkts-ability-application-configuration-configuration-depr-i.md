@@ -1,6 +1,6 @@
 # Configuration
 
-定义环境变化信息。Configuration是接口定义，仅做字段声明。
+The module defines environment change information. Configuration is an interface definition and is used only for field declaration.
 
 **Since:** 8
 
@@ -20,7 +20,7 @@
 colorMode?: ConfigurationConstant.ColorMode
 ```
 
-表示深浅色模式，取值范围：浅色模式（COLOR_MODE_LIGHT），深色模式（COLOR_MODE_DARK）。默认为浅色。
+Color mode, which can be **COLOR_MODE_LIGHT** or **COLOR_MODE_DARK**. The default value is **COLOR_MODE_LIGHT**.
 
 **Type:** ConfigurationConstant.ColorMode
 
@@ -42,7 +42,7 @@ colorMode?: ConfigurationConstant.ColorMode
 language?: string
 ```
 
-表示应用程序的当前语言。例如：zh。
+Language of the application, for example, **zh**.
 
 **Type:** string
 

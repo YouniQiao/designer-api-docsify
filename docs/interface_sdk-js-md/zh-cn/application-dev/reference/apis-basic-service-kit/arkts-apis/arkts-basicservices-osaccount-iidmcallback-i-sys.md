@@ -12,12 +12,6 @@
 
 **系统接口：** 此接口为系统接口。
 
-## 导入模块
-
-```TypeScript
-import { osAccount } from 'kits/@kit.BasicServicesKit';
-```
-
 ## onAcquireInfo
 
 ArkTS-Dyn:
@@ -52,6 +46,8 @@ onAcquireInfo?: (module: int, acquire: int, extraInfo: Uint8Array) => void
 
 ## 示例
 
+ArkTS-Dyn示例：
+
 ```TypeScript
 let idmCallback: osAccount.IIdmCallback = {
   onResult: (result: number, extraInfo: Object) => {
@@ -59,6 +55,22 @@ let idmCallback: osAccount.IIdmCallback = {
     console.info('callback onResult = ' + JSON.stringify(extraInfo));
   },
   onAcquireInfo: (module: number, acquire: number, extraInfo: Uint8Array) => {
+    console.info('callback module = ' + module);
+    console.info('callback acquire = ' + acquire);
+    console.info('callback onacquireinfo = ' + JSON.stringify(extraInfo));
+  }
+};
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+let idmCallback: osAccount.IIdmCallback = {
+  onResult: (result: int, extraInfo: Object) => {
+    console.info('callback result = ' + result)
+    console.info('callback onResult = ' + JSON.stringify(extraInfo));
+  },
+  onAcquireInfo: (module: int, acquire: int, extraInfo: Uint8Array) => {
     console.info('callback module = ' + module);
     console.info('callback acquire = ' + acquire);
     console.info('callback onacquireinfo = ' + JSON.stringify(extraInfo));
@@ -99,9 +111,22 @@ onResult: (result: int, extraInfo: RequestResult) => void
 
 ## 示例
 
+ArkTS-Dyn示例：
+
 ```TypeScript
 let idmCallback: osAccount.IIdmCallback = {
   onResult: (result: number, extraInfo: osAccount.RequestResult) => {
+    console.info('callback result = ' + result)
+    console.info('callback extraInfo = ' + JSON.stringify(extraInfo));
+  }
+};
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+let idmCallback: osAccount.IIdmCallback = {
+  onResult: (result: int, extraInfo: osAccount.RequestResult) => {
     console.info('callback result = ' + result)
     console.info('callback extraInfo = ' + JSON.stringify(extraInfo));
   }

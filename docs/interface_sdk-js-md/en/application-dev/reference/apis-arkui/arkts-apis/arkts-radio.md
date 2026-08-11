@@ -1,20 +1,5 @@
 # radio
 
-单选框，提供相应的用户交互选择项。
- > **说明：**
- >
- > - 本模块同时支持ArkTS-Dyn、ArkTS-Sta。
- >
- > - API version 12开始，Radio选中默认样式由RadioIndicatorType.DOT变为RadioIndicatorType.TICK。
- >
- > -
- >
- > - 该组件默认有[margin](arkts-arkui-common-commonmethod-i.md#margin)间距，默认值为：{&nbsp;top: '14px',&nbsp;right: '14px',&nbsp;bottom: '14px',&
- > nbsp;left: '14px' }。
- ###### 子组件
- 无
-
-
 ## Summary
 
 ### Functions
@@ -27,20 +12,20 @@
 
 | Name | Description |
 | --- | --- |
-| [RadioAttribute](arkts-arkui-radio-radioattribute-i.md) | 除支持[通用属性](../../apis-ability-kit/arkts-apis/arkts-app-ability-common.md/arkts-app-ability-common.md)外，还支持以下属性： |
-| [RadioConfiguration](arkts-arkui-radio-radioconfiguration-i.md) | 开发者需要自定义class实现ContentModifier接口。继承自[CommonConfiguration](arkts-arkui-common-commonconfiguration-i.md)。 |
-| [RadioOptions](arkts-arkui-radio-radiooptions-i.md) | 单选框的信息。 |
-| [RadioStyle](arkts-arkui-radio-radiostyle-i.md) | 单选框的颜色。 |
+| [RadioAttribute](arkts-arkui-radio-radioattribute-i.md) | Defines the Radio component attributes. |
+| [RadioConfiguration](arkts-arkui-radio-radioconfiguration-i.md) | RadioConfiguration used by radio Configuration |
+| [RadioOptions](arkts-arkui-radio-radiooptions-i.md) | Input parameter for creating a radio box. |
+| [RadioStyle](arkts-arkui-radio-radiostyle-i.md) | Set radio Style. |
 
 ### Enums
 
 | Name | Description |
 | --- | --- |
-| [RadioIndicatorType](arkts-arkui-radio-radioindicatortype-e.md) | 单选框的样式。 |
+| [RadioIndicatorType](arkts-arkui-radio-radioindicatortype-e.md) | Defines the IndicatorType of Radio component |
 
 ### Types
 
 | Name | Description |
 | --- | --- |
-| [OnRadioChangeCallback](arkts-arkui-onradiochangecallback-t.md) | 单选框选中状态改变时触发的回调函数类型定义。 |
+| [OnRadioChangeCallback](arkts-arkui-onradiochangecallback-t.md) | Callback of radio box selection status changes event. |
 

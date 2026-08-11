@@ -1,6 +1,6 @@
-# @ohos.multimodalAwareness.motion
+# @ohos.multimodalAwareness.motion(动作感知能力)
 
-The **motion** module provides the user motion awareness capabilities, including user gestures and actions.
+**motion**模块提供用户动作感知能力，包括用户手势和动作。
 
 **起始版本：** 15
 
@@ -10,42 +10,36 @@ The **motion** module provides the user motion awareness capabilities, including
 
 **系统能力：** SystemCapability.MultimodalAwareness.Motion
 
-## 导入模块
-
-```TypeScript
-import { motion } from 'kits/@kit.MultimodalAwarenessKit';
-```
-
 ## 汇总
 
 ### 函数
 
 | 名称 | 说明 |
 | --- | --- |
-| [getRecentOperatingHandStatus](arkts-multimodalawareness-motion-getrecentoperatinghandstatus-f.md#getrecentoperatinghandstatus) | Obtains the latest operating hand status. |
-| [off](arkts-multimodalawareness-motion-off-f.md#off) | Unsubscribes from operating hand change events. |
-| [off](arkts-multimodalawareness-motion-off-f.md#off-1) | Disables listening for holding hand status changes. |
-| [offHoldingHandChanged](arkts-multimodalawareness-motion-offholdinghandchanged-f.md#offholdinghandchanged) | Unsubscribe from the holding hand changed event. |
-| [offOperatingHandChanged](arkts-multimodalawareness-motion-offoperatinghandchanged-f.md#offoperatinghandchanged) | Unsubscribe from the operating hand changed event. |
-| [on](arkts-multimodalawareness-motion-on-f.md#on) | Subscribes to operating hand change events.  If the device does not support this function, error code 801 is returned. |
-| [on](arkts-multimodalawareness-motion-on-f.md#on-1) | Enables listening for holding hand status changes. |
-| [onHoldingHandChanged](arkts-multimodalawareness-motion-onholdinghandchanged-f.md#onholdinghandchanged) | Subscribe to detect the holding hand changed event. |
-| [onOperatingHandChanged](arkts-multimodalawareness-motion-onoperatinghandchanged-f.md#onoperatinghandchanged) | Subscribe to detect the operating hand changed event. |
+| [getRecentOperatingHandStatus](arkts-multimodalawareness-motion-getrecentoperatinghandstatus-f.md#getrecentoperatinghandstatus) | 获取最新触控操作手状态。 |
+| [off](arkts-multimodalawareness-motion-off-f.md#off) | 取消订阅触控操作手感知事件。若未调用on()就调用off()，该方法会抛出异常。相关方法：on('operatingHandChanged')：订阅触控操作手感知事件。 |
+| [off](arkts-multimodalawareness-motion-off-f.md#off-1) | 取消订阅握持手状态变化感知事件。若未调用on()就调用off()，该方法会抛出异常。相关方法：on('holdingHandChanged')：订阅握持手状态变化感知事件。 |
+| [offHoldingHandChanged](arkts-multimodalawareness-motion-offholdinghandchanged-f.md#offholdinghandchanged) | 取消订阅握持手状态变化事件。 |
+| [offOperatingHandChanged](arkts-multimodalawareness-motion-offoperatinghandchanged-f.md#offoperatinghandchanged) | 取消订阅触控操作手变化事件。 |
+| [on](arkts-multimodalawareness-motion-on-f.md#on) | 订阅触控操作手感知事件。调用on()订阅事件后，建议在使用完毕后调用off()取消订阅以释放资源，避免多余的性能功耗开销。相关方法：off('operatingHandChanged')：取消订阅触控操作手感知事件。  如果设备不支持此功能，将返回801错误码。 |
+| [on](arkts-multimodalawareness-motion-on-f.md#on-1) | 订阅握持手状态变化感知事件。调用on()订阅事件后，建议在使用完毕后调用off()取消订阅以释放资源，避免多余的性能功耗开销。相关方法：off('holdingHandChanged')：取消订阅握持手状态变化感知事件。 |
+| [onHoldingHandChanged](arkts-multimodalawareness-motion-onholdinghandchanged-f.md#onholdinghandchanged) | 订阅握持手状态变化事件。 |
+| [onOperatingHandChanged](arkts-multimodalawareness-motion-onoperatinghandchanged-f.md#onoperatinghandchanged) | 订阅触控操作手变化事件。 |
 
 <!--Del-->
 ### 函数（系统接口）
 
 | 名称 | 说明 |
 | --- | --- |
-| [offHoverHandChange](arkts-multimodalawareness-motion-offhoverhandchange-f-sys.md#offhoverhandchange) | Unsubscribe to hover hand event. |
-| [offPickupChange](arkts-multimodalawareness-motion-offpickupchange-f-sys.md#offpickupchange) | Unsubscribe to pick up sensor event. |
-| [offRotateChange](arkts-multimodalawareness-motion-offrotatechange-f-sys.md#offrotatechange) | Unsubscribe to rotate sensor event. |
-| [offSmartRotateChange](arkts-multimodalawareness-motion-offsmartrotatechange-f-sys.md#offsmartrotatechange) | Unsubscribe to smart rotate sensor event. |
-| [onHoverHandChange](arkts-multimodalawareness-motion-onhoverhandchange-f-sys.md#onhoverhandchange) | Subscribes to hover hand events and immediately starts detection for five seconds. |
-| [onHoverHandChange](arkts-multimodalawareness-motion-onhoverhandchange-f-sys.md#onhoverhandchange-1) | Subscribes to hover hand events and immediately starts detection. |
-| [onPickupChange](arkts-multimodalawareness-motion-onpickupchange-f-sys.md#onpickupchange) | Subscribe to pick up sensor event. |
-| [onRotateChange](arkts-multimodalawareness-motion-onrotatechange-f-sys.md#onrotatechange) | Subscribe to rotate sensor event. |
-| [onSmartRotateChange](arkts-multimodalawareness-motion-onsmartrotatechange-f-sys.md#onsmartrotatechange) | Subscribe to smart rotate sensor event. |
+| [offHoverHandChange](arkts-multimodalawareness-motion-offhoverhandchange-f-sys.md#offhoverhandchange) | 取消订阅悬停手势事件。 |
+| [offPickupChange](arkts-multimodalawareness-motion-offpickupchange-f-sys.md#offpickupchange) | 取消订阅拾起传感器事件。 |
+| [offRotateChange](arkts-multimodalawareness-motion-offrotatechange-f-sys.md#offrotatechange) | 取消订阅旋转传感器事件。 |
+| [offSmartRotateChange](arkts-multimodalawareness-motion-offsmartrotatechange-f-sys.md#offsmartrotatechange) | 取消订阅智能旋转传感器事件。 |
+| [onHoverHandChange](arkts-multimodalawareness-motion-onhoverhandchange-f-sys.md#onhoverhandchange) | 订阅悬停手势事件，并立即开始5秒检测。 |
+| [onHoverHandChange](arkts-multimodalawareness-motion-onhoverhandchange-f-sys.md#onhoverhandchange-1) | 订阅悬停手势事件，并立即开始检测。 |
+| [onPickupChange](arkts-multimodalawareness-motion-onpickupchange-f-sys.md#onpickupchange) | 订阅拾起传感器事件。 |
+| [onRotateChange](arkts-multimodalawareness-motion-onrotatechange-f-sys.md#onrotatechange) | 订阅旋转传感器事件。 |
+| [onSmartRotateChange](arkts-multimodalawareness-motion-onsmartrotatechange-f-sys.md#onsmartrotatechange) | 订阅智能旋转传感器事件。 |
 <!--DelEnd-->
 
 <!--Del-->
@@ -53,26 +47,26 @@ import { motion } from 'kits/@kit.MultimodalAwarenessKit';
 
 | 名称 | 说明 |
 | --- | --- |
-| [HoverHandDetectionArea](arkts-multimodalawareness-motion-hoverhanddetectionarea-i-sys.md) | The basic data structure of the hover hand detection area. |
-| [SmartRotateEvent](arkts-multimodalawareness-motion-smartrotateevent-i-sys.md) | The basic data structure of the smart rotate sensor event. |
+| [HoverHandDetectionArea](arkts-multimodalawareness-motion-hoverhanddetectionarea-i-sys.md) | 悬停手势检测区域的基础数据结构。 |
+| [SmartRotateEvent](arkts-multimodalawareness-motion-smartrotateevent-i-sys.md) | 智能旋转传感器事件的基础数据结构。 |
 <!--DelEnd-->
 
 ### 枚举
 
 | 名称 | 说明 |
 | --- | --- |
-| [HoldingHandStatus](arkts-multimodalawareness-motion-holdinghandstatus-e.md) | Represents the holding hand status. The holding hand status is returned if listening for holding hand status changes is enabled. |
-| [OperatingHandStatus](arkts-multimodalawareness-motion-operatinghandstatus-e.md) | Defines the status of the operating hand. |
+| [HoldingHandStatus](arkts-multimodalawareness-motion-holdinghandstatus-e.md) | 握持手状态信息，表示握持手状态变化感知事件的结果。订阅握持手状态变化感知事件后，返回当前握持手状态信息。 |
+| [OperatingHandStatus](arkts-multimodalawareness-motion-operatinghandstatus-e.md) | 触控操作手状态信息。 |
 
 <!--Del-->
 ### 枚举（系统接口）
 
 | 名称 | 说明 |
 | --- | --- |
-| [HoverHandAction](arkts-multimodalawareness-motion-hoverhandaction-e-sys.md) | Enum for hover hand actions. |
-| [LogicalOrientation](arkts-multimodalawareness-motion-logicalorientation-e-sys.md) | Enum for logical orientation calculated by smart algorithms. |
-| [PhysicalOrientation](arkts-multimodalawareness-motion-physicalorientation-e-sys.md) | Enum for physical orientation detected by the sensor. |
-| [PickupEvent](arkts-multimodalawareness-motion-pickupevent-e-sys.md) | Enum for pickup event. |
-| [RotateEvent](arkts-multimodalawareness-motion-rotateevent-e-sys.md) | Enum for rotate event. |
+| [HoverHandAction](arkts-multimodalawareness-motion-hoverhandaction-e-sys.md) | 悬停手势动作枚举。 |
+| [LogicalOrientation](arkts-multimodalawareness-motion-logicalorientation-e-sys.md) | 智能算法计算得到的逻辑方向枚举。 |
+| [PhysicalOrientation](arkts-multimodalawareness-motion-physicalorientation-e-sys.md) | 传感器检测到的物理方向枚举。 |
+| [PickupEvent](arkts-multimodalawareness-motion-pickupevent-e-sys.md) | 拾起事件枚举。 |
+| [RotateEvent](arkts-multimodalawareness-motion-rotateevent-e-sys.md) | 旋转事件枚举。 |
 <!--DelEnd-->
 

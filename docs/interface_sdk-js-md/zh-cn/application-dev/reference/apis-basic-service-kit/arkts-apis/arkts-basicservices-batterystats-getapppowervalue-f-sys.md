@@ -1,11 +1,5 @@
 # getAppPowerValue（系统接口）
 
-## 导入模块
-
-```TypeScript
-import { batteryStats } from 'kits/@kit.BasicServicesKit';
-```
-
 ## getAppPowerValue
 
 ```TypeScript
@@ -40,18 +34,18 @@ function getAppPowerValue(uid: int): double
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1. Parameter verification failed. |
-| 4600101 | Failed to connect to the service. |
-| 202 | Permission verification failed. A non-system application calls a system API. |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1. Parameter verification failed. |
+| [4600101](../../apis-basic-services-kit/errorcode-batteryStatistics.md#4600101-连接服务失败) | Failed to connect to the service. |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed. A non-system application calls a system API. |
 
 ## 示例
 
 ```TypeScript
 try {
-    let value = batteryStats.getAppPowerValue(10021); // 10021为示例UID，实际使用时需通过bundleManager.getBundleInfoForSelf等接口获取应用UID
+    let value = batteryStats.getAppPowerValue(10021);
     console.info('battery statistics value of app is: ' + value);
-} catch (err) {
-    console.error(`Failed to get battery statistics value of app. Code: ${err.code}, message: ${err.message}`);
+} catch(err) {
+    console.error('get battery statistics value of app failed, err: ' + err);
 }
 ```
 

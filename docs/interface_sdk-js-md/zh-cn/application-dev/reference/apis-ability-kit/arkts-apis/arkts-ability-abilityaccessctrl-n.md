@@ -8,12 +8,6 @@
 
 **系统能力：** SystemCapability.Security.AccessToken
 
-## 导入模块
-
-```TypeScript
-import { Context, Permissions, PermissionRequestResult } from 'kits/@kit.AbilityKit';
-```
-
 ## 汇总
 
 ### 函数

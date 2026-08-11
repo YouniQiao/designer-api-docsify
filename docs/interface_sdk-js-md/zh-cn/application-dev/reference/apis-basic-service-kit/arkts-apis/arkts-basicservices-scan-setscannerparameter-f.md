@@ -1,11 +1,5 @@
 # setScannerParameter
 
-## 导入模块
-
-```TypeScript
-import { scan } from 'kits/@kit.BasicServicesKit';
-```
-
 ## setScannerParameter
 
 ```TypeScript
@@ -42,7 +36,7 @@ function setScannerParameter(scannerId: string, optionIndex: int, value: Scanner
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 201 | Permission denied. |
+| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
 
 ## 示例
 
@@ -59,7 +53,7 @@ let value: scan.ScannerOptionValue = {
 scan.setScannerParameter(scannerId, optionIndex, value).then(() => {
     console.info('set scanner parameter success');
 }).catch((error: BusinessError) => {
-    console.error(`Failed to set scanner parameter. Code: ${error.code}, message: ${error.message}`);
-});
+    console.error('set scanner parameter failed: ' + JSON.stringify(error));
+})
 ```
 

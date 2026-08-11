@@ -1,7 +1,8 @@
 # AccessibilityElement
 
-无障碍节点元素。在调用 **AccessibilityElement** 的 API 之前，应该调用   
-[AccessibilityExtensionContext.getAccessibilityFocusedElement()](arkts-accessibility-accessibilityextensioncontext-c-sys.md#getaccessibilityfocusedelement)或 [AccessibilityExtensionContext.getRootInActiveWindow()](arkts-accessibility-accessibilityextensioncontext-c-sys.md#getrootinactivewindow) 来获取一个 **AccessibilityElement** 实例。
+Defines the **AccessibilityElement**. Before calling APIs of **AccessibilityElement**, you must call   
+[AccessibilityExtensionContext.getFocusElement()](arkts-accessibility-accessibilityextensioncontext-c.md#getfocuselement)or   
+[AccessibilityExtensionContext.getWindowRootElement()](arkts-accessibility-accessibilityextensioncontext-c.md#getwindowrootelement)to obtain an **AccessibilityElement** instance.
 
 **Since:** 9
 
@@ -17,7 +18,7 @@
 enableScreenCurtain(isEnable: boolean): void
 ```
 
-提供开启/关闭幕帘屏的能力。
+Enables or disables the screen curtain.
 
 **Since:** 12
 
@@ -33,15 +34,15 @@ enableScreenCurtain(isEnable: boolean): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| isEnable | boolean | Yes | true表示打开幕帘屏功能，false表示关闭幕帘屏功能。 |
+| isEnable | boolean | Yes | The value **true** indicates enabled; **false** indicates disabled. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
-| 202 | Permission verification failed. A non-system application calls a system API. |
-| 9300003 | No accessibility permission to perform the operation. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
+| [9300003](../errorcode-accessibility.md#9300003-no-accessibility-permission-to-perform-the-operation) | No accessibility permission to perform the operation. |
 
 ## executeAction
 
@@ -49,7 +50,7 @@ enableScreenCurtain(isEnable: boolean): void
 executeAction(action: AccessibilityAction, parameters?: Parameter): Promise<void>
 ```
 
-根据action指定的操作类型和parameters传入的参数，执行特定操作。使用Promise异步回调。
+Executes a specific action based on the specified action type and input parameters. This API uses a promise to return the result.
 
 **Since:** 20
 
@@ -67,22 +68,22 @@ executeAction(action: AccessibilityAction, parameters?: Parameter): Promise<void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| action | [AccessibilityAction](arkts-accessibility-accessibility-accessibilityaction-e-sys.md) | Yes | 无障碍节点可执行的操作。 |
-| parameters | [Parameter](arkts-accessibility-parameter-t-sys.md) | No | 执行操作时设置的参数值，默认为空。 |
+| action | [AccessibilityAction](arkts-accessibility-accessibility-accessibilityaction-e-sys.md) | Yes | Executable action for the accessibility node. |
+| parameters | [Parameter](arkts-accessibility-parameter-t-sys.md) | No | Parameters set for the action. This parameter is left empty by default. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise对象，无返回结果。 |
+| Promise&lt;void&gt; | Promise that returns no value. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 9300005 | This action is not supported. |
-| 201 | Permission verification failed.The application does not have the permission required to call the API. |
-| 202 | Permission verification failed. A non-system application calls a system API. |
+| [9300005](../errorcode-accessibility.md#9300005-operation-not-supported) | This action is not supported. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed.The application does not have the permission required to call the API. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
 
 ## findElement
 
@@ -90,7 +91,7 @@ executeAction(action: AccessibilityAction, parameters?: Parameter): Promise<void
 findElement(type: 'textType', condition: string): Promise<Array<AccessibilityElement>>
 ```
 
-根据节点配置的accessibilityTextHint无障碍文本类型查询所有节点元素，使用Promise异步回调。
+Finds all node elements based on the **accessibilityTextHint** text type configured for a node. This API uses a promise to return the result.
 
 **Since:** 12
 
@@ -106,20 +107,20 @@ findElement(type: 'textType', condition: string): Promise<Array<AccessibilityEle
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'textType' | Yes | 固定为'textType', 表示根据文本类型查找节点元素。 |
-| condition | string | Yes | 表示查找的条件。 |
+| type | 'textType' | Yes | Type of element finding. The value is fixed at **'textType'**. |
+| condition | string | Yes | Search criteria. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;Array&lt;[AccessibilityElement](arkts-accessibility-accessibilityextensioncontext-accessibilityelement-i-sys.md)&gt;&gt; | Promise对象，返回满足指定查询关键字的所有节点元素。 |
+| Promise&lt;Array&lt;[AccessibilityElement](arkts-accessibility-accessibilityextensioncontext-accessibilityelement-i-sys.md)&gt;&gt; | Promise used to return the result. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
 
 ## findElement
 
@@ -127,7 +128,7 @@ findElement(type: 'textType', condition: string): Promise<Array<AccessibilityEle
 findElement(type: 'elementId', condition: long): Promise<AccessibilityElement>
 ```
 
-根据elementId查询当前活动窗口下的节点元素。使用Promise异步回调。
+Finds the node element of the current active window based on the element ID. This API uses a promise to return the result.
 
 **Since:** 12
 
@@ -143,20 +144,20 @@ findElement(type: 'elementId', condition: long): Promise<AccessibilityElement>
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'elementId' | Yes | 固定为'elementId', 表示根据elementId查询当前活动窗口下的节点元素。 |
-| condition | long | Yes | 表示要查询的节点元素的elementId。 |
+| type | 'elementId' | Yes | Type of element finding. The value is fixed at **'elementId'**. |
+| condition | long | Yes | elementId** of the node element. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;[AccessibilityElement](arkts-accessibility-accessibilityextensioncontext-accessibilityelement-i-sys.md)&gt; | Promise对象，返回满足指定查询条件的节点元素。 |
+| Promise&lt;[AccessibilityElement](arkts-accessibility-accessibilityextensioncontext-accessibilityelement-i-sys.md)&gt; | Promise used to return the result. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
 
 ## findElementByContent
 
@@ -164,7 +165,7 @@ findElement(type: 'elementId', condition: long): Promise<AccessibilityElement>
 findElementByContent(condition: string): Promise<Array<AccessibilityElement>>
 ```
 
-根据内容查找元素。使用Promise异步回调。
+Finds elements based on the content. This API uses a promise to return the result.
 
 **Since:** 20
 
@@ -182,21 +183,21 @@ findElementByContent(condition: string): Promise<Array<AccessibilityElement>>
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| condition | string | Yes | 内容。 |
+| condition | string | Yes | Content. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;Array&lt;[AccessibilityElement](arkts-accessibility-accessibilityextensioncontext-accessibilityelement-i-sys.md)&gt;&gt; | Promise对象，返回包含指定内容的元素列表。 |
+| Promise&lt;Array&lt;[AccessibilityElement](arkts-accessibility-accessibilityextensioncontext-accessibilityelement-i-sys.md)&gt;&gt; | Promise used to return the result. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 201 | Permission verification failed.The application does not have the permission required to call the API. |
-| 202 | Permission verification failed. A non-system application calls a system API. |
-| 9300006 | The target application failed to connect to accessibility service. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed.The application does not have the permission required to call the API. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
+| [9300006](../errorcode-accessibility.md#9300006-failed-to-connect-the-target-app-and-accessibility-service) | The target application failed to connect to accessibility service. |
 
 ## findElementByElementId
 
@@ -232,7 +233,7 @@ Find elements that match the condition.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 202 | Permission verification failed. A non-system application calls a system API. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
 
 ## findElementByFocusDirection
 
@@ -240,7 +241,7 @@ Find elements that match the condition.
 findElementByFocusDirection(condition: FocusDirection): Promise<AccessibilityElement>
 ```
 
-根据焦点方向查找元素。使用Promise异步回调。
+Finds elements based on the focus direction. This API uses a promise to return the result.
 
 **Since:** 20
 
@@ -258,21 +259,64 @@ findElementByFocusDirection(condition: FocusDirection): Promise<AccessibilityEle
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| condition | [FocusDirection](arkts-accessibility-focusdirection-t.md) | Yes | 焦点方向。 |
+| condition | [FocusDirection](arkts-accessibility-focusdirection-t.md) | Yes | Focus direction. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;[AccessibilityElement](arkts-accessibility-accessibilityextensioncontext-accessibilityelement-i-sys.md)&gt; | Promise对象，返回指定焦点方向的元素。 |
+| Promise&lt;[AccessibilityElement](arkts-accessibility-accessibilityextensioncontext-accessibilityelement-i-sys.md)&gt; | Promise used to return the result. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 201 | Permission verification failed.The application does not have the permission required to call the API. |
-| 202 | Permission verification failed. A non-system application calls a system API. |
-| 9300006 | The target application failed to connect to accessibility service. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed.The application does not have the permission required to call the API. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
+| [9300006](../errorcode-accessibility.md#9300006-failed-to-connect-the-target-app-and-accessibility-service) | The target application failed to connect to accessibility service. |
+
+## findElementByFocusDirection
+
+```TypeScript
+findElementByFocusDirection(condition: FocusDirection, type: FocusRuleType): Promise<AccessibilityElement>
+```
+
+Finds elements based on the focus direction. This API uses a promise to return the result.
+
+**Since:** 26.0.0
+
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
+
+**Required permissions:** ohos.permission.ACCESSIBILITY_EXTENSION_ABILITY
+
+**Model restriction:** This API can be used only in the stage model.
+
+<!--Device-AccessibilityElement-findElementByFocusDirection(condition: FocusDirection, type: FocusRuleType): Promise<AccessibilityElement>--><!--Device-AccessibilityElement-findElementByFocusDirection(condition: FocusDirection, type: FocusRuleType): Promise<AccessibilityElement>-End-->
+
+**System capability:** SystemCapability.BarrierFree.Accessibility.Core
+
+**System API:** This is a system API.
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| condition | [FocusDirection](arkts-accessibility-focusdirection-t.md) | Yes | Focus direction. |
+| type | [FocusRuleType](arkts-accessibility-accessibility-focusruletype-e-sys.md) | Yes | Type for finding a focusable node. |
+
+**Return value:**
+
+| Type | Description |
+| --- | --- |
+| Promise&lt;[AccessibilityElement](arkts-accessibility-accessibilityextensioncontext-accessibilityelement-i-sys.md)&gt; | Promise used to return the result. |
+
+**Error codes:**
+
+| Error Code ID | Error Message |
+| --- | --- |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed.The application does not have the permission required to call the API. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
+| [9300006](../errorcode-accessibility.md#9300006-failed-to-connect-the-target-app-and-accessibility-service) | The target application failed to connect to accessibility service. |
 
 ## findElementById
 
@@ -286,7 +330,7 @@ ArkTS-Sta:
 findElementById(condition: long): Promise<AccessibilityElement>
 ```
 
-根据元素 ID 查找元素。使用Promise异步回调。
+Finds elements based on element ID. This API uses a promise to return the result.
 
 **Since:** 20
 
@@ -304,21 +348,21 @@ findElementById(condition: long): Promise<AccessibilityElement>
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| condition | ArkTS-Dyn: number  <br>ArkTS-Sta：long | Yes | 元素 ID。 |
+| condition | ArkTS-Dyn: number  <br>ArkTS-Sta：long | Yes | Element ID. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;[AccessibilityElement](arkts-accessibility-accessibilityextensioncontext-accessibilityelement-i-sys.md)&gt; | Promise对象，返回指定 ID 的元素。 |
+| Promise&lt;[AccessibilityElement](arkts-accessibility-accessibilityextensioncontext-accessibilityelement-i-sys.md)&gt; | Promise used to return the result. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 201 | Permission verification failed.The application does not have the permission required to call the API. |
-| 202 | Permission verification failed. A non-system application calls a system API. |
-| 9300006 | The target application failed to connect to accessibility service. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed.The application does not have the permission required to call the API. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
+| [9300006](../errorcode-accessibility.md#9300006-failed-to-connect-the-target-app-and-accessibility-service) | The target application failed to connect to accessibility service. |
 
 ## findElementByTextType
 
@@ -354,7 +398,7 @@ Find elements that match the condition.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 202 | Permission verification failed. A non-system application calls a system API. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
 
 ## findElementsByAccessibilityHintText
 
@@ -362,7 +406,7 @@ Find elements that match the condition.
 findElementsByAccessibilityHintText(condition: string): Promise<Array<AccessibilityElement>>
 ```
 
-根据提示文本查找元素。使用Promise异步回调。
+Finds elements based on the hint text. This API uses a promise to return the result.
 
 **Since:** 20
 
@@ -380,21 +424,21 @@ findElementsByAccessibilityHintText(condition: string): Promise<Array<Accessibil
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| condition | string | Yes | 提示文本。 |
+| condition | string | Yes | Hint text. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;Array&lt;[AccessibilityElement](arkts-accessibility-accessibilityextensioncontext-accessibilityelement-i-sys.md)&gt;&gt; | Promise对象，返回包含指定提示文本的元素列表。 |
+| Promise&lt;Array&lt;[AccessibilityElement](arkts-accessibility-accessibilityextensioncontext-accessibilityelement-i-sys.md)&gt;&gt; | Promise used to return the result. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 201 | Permission verification failed.The application does not have the permission required to call the API. |
-| 202 | Permission verification failed. A non-system application calls a system API. |
-| 9300006 | The target application failed to connect to accessibility service. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed.The application does not have the permission required to call the API. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
+| [9300006](../errorcode-accessibility.md#9300006-failed-to-connect-the-target-app-and-accessibility-service) | The target application failed to connect to accessibility service. |
 
 ## findElementsByCondition
 
@@ -402,7 +446,7 @@ findElementsByAccessibilityHintText(condition: string): Promise<Array<Accessibil
 findElementsByCondition(rule: FocusRule, condition: FocusCondition): Promise<FocusMoveResult>
 ```
 
-查询满足条件的可聚焦节点。使用Promise异步回调。
+Finds a focusable node by conditions. This API uses a promise to return the result.
 
 **Since:** 23
 
@@ -420,21 +464,64 @@ findElementsByCondition(rule: FocusRule, condition: FocusCondition): Promise<Foc
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| rule | [FocusRule](arkts-accessibility-focusrule-t-sys.md) | Yes | 检查当前节点及其子节点的规则。 |
-| condition | [FocusCondition](arkts-accessibility-focuscondition-t-sys.md) | Yes | 表示查询可聚焦节点方式。 |
+| rule | [FocusRule](arkts-accessibility-focusrule-t-sys.md) | Yes | Rule for checking the current node and its descendants. |
+| condition | [FocusCondition](arkts-accessibility-focuscondition-t-sys.md) | Yes | Condition for finding a focusable node. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;FocusMoveResult&gt; | Promise对象，返回查询结果对象。 |
+| Promise&lt;FocusMoveResult&gt; | Promise used to return the result. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 201 | Permission verification failed. The application does not have the permission required to call the API. |
-| 202 | Permission verification failed. A non-system application calls a system API. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed. The application does not have the permission required to call the API. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
+
+## findElementsByCondition
+
+```TypeScript
+findElementsByCondition(rule: FocusRule, condition: FocusCondition, type: FocusRuleType): Promise<FocusMoveResult>
+```
+
+Finds a focusable node by conditions. This API uses a promise to return the result.
+
+**Since:** 26.0.0
+
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
+
+**Required permissions:** ohos.permission.ACCESSIBILITY_EXTENSION_ABILITY
+
+**Model restriction:** This API can be used only in the stage model.
+
+<!--Device-AccessibilityElement-findElementsByCondition(rule: FocusRule, condition: FocusCondition, type: FocusRuleType): Promise<FocusMoveResult>--><!--Device-AccessibilityElement-findElementsByCondition(rule: FocusRule, condition: FocusCondition, type: FocusRuleType): Promise<FocusMoveResult>-End-->
+
+**System capability:** SystemCapability.BarrierFree.Accessibility.Core
+
+**System API:** This is a system API.
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| rule | [FocusRule](arkts-accessibility-focusrule-t-sys.md) | Yes | Rule for checking the current node and its descendants. |
+| condition | [FocusCondition](arkts-accessibility-focuscondition-t-sys.md) | Yes | Condition for finding a focusable node. |
+| type | [FocusRuleType](arkts-accessibility-accessibility-focusruletype-e-sys.md) | Yes | Type for finding a focusable node. |
+
+**Return value:**
+
+| Type | Description |
+| --- | --- |
+| Promise&lt;FocusMoveResult&gt; | Promise used to return the result. |
+
+**Error codes:**
+
+| Error Code ID | Error Message |
+| --- | --- |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed. The application does not have the permission required to call the API. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
 
 ## getChildren
 
@@ -442,7 +529,7 @@ findElementsByCondition(rule: FocusRule, condition: FocusCondition): Promise<Foc
 getChildren(): Promise<Array<AccessibilityElement>>
 ```
 
-获取元素的子元素列表。使用Promise异步回调。
+Obtains the child elements of an element. This API uses a promise to return the result.
 
 **Since:** 20
 
@@ -460,14 +547,14 @@ getChildren(): Promise<Array<AccessibilityElement>>
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;Array&lt;[AccessibilityElement](arkts-accessibility-accessibilityextensioncontext-accessibilityelement-i-sys.md)&gt;&gt; | Promise对象，返回当前元素的子元素列表。 |
+| Promise&lt;Array&lt;[AccessibilityElement](arkts-accessibility-accessibilityextensioncontext-accessibilityelement-i-sys.md)&gt;&gt; | Promise used to return the result. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 201 | Permission verification failed.The application does not have the permission required to call the API. |
-| 202 | Permission verification failed. A non-system application calls a system API. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed.The application does not have the permission required to call the API. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
 
 ## getCursorPosition
 
@@ -481,7 +568,7 @@ ArkTS-Sta:
 getCursorPosition(callback: AsyncCallback<int>): void
 ```
 
-获取文本组件中光标位置，使用callback异步回调。
+Obtains the cursor position in the **Text** component. This API uses an asynchronous callback to return the result.
 
 **Since:** 12
 
@@ -497,7 +584,7 @@ getCursorPosition(callback: AsyncCallback<int>): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | ArkTS-Dyn: [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;number&gt;  <br>ArkTS-Sta：[AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;int&gt; | Yes | 回调函数，表示文本组件中光标位置。 |
+| callback | ArkTS-Dyn: [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;number&gt;  <br>ArkTS-Sta：[AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;int&gt; | Yes | Callback function used to return the result. |
 
 ## getCursorPosition
 
@@ -511,7 +598,7 @@ ArkTS-Sta:
 getCursorPosition(): Promise<int>
 ```
 
-获取文本组件中光标位置，使用Promise异步回调。
+Obtains the cursor position in the **Text** component. This API uses a promise to return the result.
 
 **Since:** 12
 
@@ -527,7 +614,7 @@ getCursorPosition(): Promise<int>
 
 | Type | Description |
 | --- | --- |
-| ArkTS-Dyn: Promise&lt;number&gt;  <br>ArkTS-Sta：Promise&lt;int&gt; | Promise对象，返回当前光标所处位置。 |
+| ArkTS-Dyn: Promise&lt;number&gt;  <br>ArkTS-Sta：Promise&lt;int&gt; | Promise used to return the result. |
 
 ## getParent
 
@@ -535,7 +622,7 @@ getCursorPosition(): Promise<int>
 getParent(): Promise<AccessibilityElement>
 ```
 
-获取无障碍节点元素的父元素。使用Promise异步回调。
+Obtains the parent element of an accessibility node. This API uses a promise to return the result.
 
 **Since:** 20
 
@@ -553,14 +640,14 @@ getParent(): Promise<AccessibilityElement>
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;[AccessibilityElement](arkts-accessibility-accessibilityextensioncontext-accessibilityelement-i-sys.md)&gt; | Promise对象，返回当前元素的父元素。 |
+| Promise&lt;[AccessibilityElement](arkts-accessibility-accessibilityextensioncontext-accessibilityelement-i-sys.md)&gt; | Promise used to return the result. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 201 | Permission verification failed.The application does not have the permission required to call the API. |
-| 202 | Permission verification failed. A non-system application calls a system API. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed.The application does not have the permission required to call the API. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
 
 ## getRoot
 
@@ -568,7 +655,7 @@ getParent(): Promise<AccessibilityElement>
 getRoot(): Promise<AccessibilityElement>
 ```
 
-获取活动窗口中的根元素。使用Promise异步回调。
+Obtains the root element of an active window. This API uses a promise to return the result.
 
 **Since:** 20
 
@@ -586,14 +673,14 @@ getRoot(): Promise<AccessibilityElement>
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;[AccessibilityElement](arkts-accessibility-accessibilityextensioncontext-accessibilityelement-i-sys.md)&gt; | Promise对象，返回活动窗口中的根元素。 |
+| Promise&lt;[AccessibilityElement](arkts-accessibility-accessibilityextensioncontext-accessibilityelement-i-sys.md)&gt; | Promise used to return the result. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 201 | Permission verification failed.The application does not have the permission required to call the API. |
-| 202 | Permission verification failed. A non-system application calls a system API. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed.The application does not have the permission required to call the API. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
 
 ## accessibilityFocused
 
@@ -601,9 +688,9 @@ getRoot(): Promise<AccessibilityElement>
 accessibilityFocused?: boolean
 ```
 
-表示元素是否因无障碍目的获得焦点。true表示已获得焦点，false表示未获得焦点。
+Whether the element is focused for accessibility purposes. The value **true** indicates that the element is focused, and **false** indicates the opposite.
 
-默认值：false。
+Default value: **false**.
 
 **Type:** boolean
 
@@ -623,9 +710,9 @@ accessibilityFocused?: boolean
 accessibilityGroup?: boolean
 ```
 
-元素是否为无障碍组。true表示元素是无障碍组，false表示元素不是无障碍组。
+Whether the element is an accessibility group. The value **true** indicates that the element is an accessibility group, and **false** indicates the opposite.
 
-默认值：false。
+Default value: **false**.
 
 **Type:** boolean
 
@@ -645,15 +732,15 @@ accessibilityGroup?: boolean
 accessibilityLevel?: string
 ```
 
-组件的无障碍级别。
+Accessibility level of a component.
 
-'auto'：当前组件由无障碍分组服务和ArkUI进行综合判断组件是否可被辅助功能识别。
+**auto**: The accessibility grouping service and ArkUI jointly determine whether the current component can be identified by accessibility services.
 
-'yes'：当前组件可被辅助功能识别。
+**yes**: The component can be identified by accessibility services.
 
-'no'：当前组件不可被辅助功能识别。
+**no**: The component cannot be identified by accessibility services.
 
-'no-hide-descendants'：当前组件及其所有子组件不可被辅助功能识别。
+**no-hide-descendants**: The current component and all its child components cannot be identified by accessibility services.
 
 **Type:** string
 
@@ -673,9 +760,9 @@ accessibilityLevel?: string
 accessibilityNextFocusId?: long
 ```
 
-下一个要获得焦点的组件的ID。
+ID of the next component to obtain the focus.
 
-默认值：-1。
+Default value: **-1**.
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：long
 
@@ -695,9 +782,9 @@ accessibilityNextFocusId?: long
 accessibilityPreviousFocusId?: long
 ```
 
-上一个要获得焦点的组件的ID。
+ID of the previous component to obtain the focus.
 
-默认值：-1。
+Default value: **-1**.
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：long
 
@@ -717,11 +804,12 @@ accessibilityPreviousFocusId?: long
 accessibilityScrollable?: boolean
 ```
 
-元素是否因无障碍目的而可滚动。此属性优先级高于scrollable。
+Whether the element can be scrolled for accessibility purposes. This attribute has a higher priority than   
+**scrollable**.
 
-true表示元素可滚动，false表示元素不可滚动。
+The value **true** indicates that the element is scrollable, and **false** indicates the opposite.
 
-默认值：true。
+Default value: **true**.
 
 **Type:** boolean
 
@@ -741,7 +829,7 @@ true表示元素可滚动，false表示元素不可滚动。
 accessibilityStateDescription?: string
 ```
 
-元素的自定义无障碍状态播报文本信息。
+Custom accessibility state broadcast text of an element.
 
 **Type:** string
 
@@ -763,7 +851,7 @@ accessibilityStateDescription?: string
 accessibilityText?: string
 ```
 
-元素的无障碍文本信息。
+Accessibility text information of an element.
 
 **Type:** string
 
@@ -783,7 +871,7 @@ accessibilityText?: string
 accessibilityVisible?: boolean
 ```
 
-组件是否无障碍可见。true表示可见，false表示不可见。
+Whether the component is visible for accessibility purposes. The value **true** indicates that the component is visible, and **false** indicates the opposite.
 
 **Type:** boolean
 
@@ -803,7 +891,7 @@ accessibilityVisible?: boolean
 belongTreeId?: int
 ```
 
-表示元素所属的组件树ID。默认值为-1。
+Component tree ID that the element belongs to. The default value is **-1**.
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
@@ -825,7 +913,7 @@ belongTreeId?: int
 bundleName?: string
 ```
 
-包名。
+Bundle name.
 
 **Type:** string
 
@@ -845,9 +933,9 @@ bundleName?: string
 checkable?: boolean
 ```
 
-元素是否可勾选。true表示可勾选，false表示不可勾选。
+Whether the element is checkable. The value **true** indicates that the element is checkable, and **false** indicates the opposite.
 
-默认值：false。
+Default value: **false**.
 
 **Type:** boolean
 
@@ -867,9 +955,9 @@ checkable?: boolean
 checked?: boolean
 ```
 
-元素是否已勾选。true表示已勾选，false表示未勾选。
+Whether the element is checked. The value **true** indicates that the element is checked, and **false** indicates the opposite.
 
-默认值：false。
+Default value: **false**.
 
 **Type:** boolean
 
@@ -889,7 +977,7 @@ checked?: boolean
 childrenIds?: Array<long>
 ```
 
-组件的子元素ID列表。
+List of child element IDs of a component.
 
 **Type:** ArkTS-Dyn: Array&lt;number&gt;  <br>ArkTS-Sta：Array&lt;long&gt;
 
@@ -909,7 +997,7 @@ childrenIds?: Array<long>
 childrenTreeId?: int
 ```
 
-表示元素的子组件树ID。默认值为-1。
+Child component tree ID of the element. The default value is **-1**.
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
@@ -931,9 +1019,9 @@ childrenTreeId?: int
 clickable?: boolean
 ```
 
-元素是否可点击。true表示可点击，false表示不可点击。
+Whether the element is clickable. The value **true** indicates that the element is clickable, and **false** indicates the opposite.
 
-默认值：false。
+Default value: **false**.
 
 **Type:** boolean
 
@@ -953,7 +1041,8 @@ clickable?: boolean
 clip?: boolean
 ```
 
-组件是否需要裁剪。true表示需要裁剪，false表示不需要裁剪。
+Whether the component needs to be clipped. The value **true** indicates that the component needs to be clipped, and  
+**false** indicates the opposite.
 
 **Type:** boolean
 
@@ -973,9 +1062,9 @@ clip?: boolean
 componentId?: long
 ```
 
-元素所属组件的ID。
+ID of the component to which the element belongs.
 
-默认值：-1。
+Default value: **-1**.
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：long
 
@@ -995,7 +1084,7 @@ componentId?: long
 componentType?: string
 ```
 
-元素所属组件的类型。
+Type of the component to which the element belongs.
 
 **Type:** string
 
@@ -1015,7 +1104,7 @@ componentType?: string
 contents?: Array<string>
 ```
 
-元素显示内容。
+Content displayed in the element.
 
 **Type:** Array&lt;string&gt;
 
@@ -1035,9 +1124,9 @@ contents?: Array<string>
 currentIndex?: int
 ```
 
-当前项的索引。
+Index of the current item.
 
-默认值：0。
+Default value: **0**.
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
@@ -1057,7 +1146,7 @@ currentIndex?: int
 currentItem?: AccessibilityGrid
 ```
 
-组件网格中的当前项。
+Current item in the component grid.
 
 **Type:** [AccessibilityGrid](arkts-accessibility-accessibilityextensioncontext-accessibilitygrid-i-sys.md)
 
@@ -1099,7 +1188,7 @@ Indicates the custom actions supported by the component.
 customComponentType?: string
 ```
 
-自定义组件类型。
+Custom component type.
 
 **Type:** string
 
@@ -1119,7 +1208,7 @@ customComponentType?: string
 description?: string
 ```
 
-元素的描述信息。
+Description of the element.
 
 **Type:** string
 
@@ -1139,9 +1228,9 @@ description?: string
 editable?: boolean
 ```
 
-元素是否可编辑。true表示可编辑，false表示不可编辑。
+Whether the element is editable. The value **true** indicates that the element is editable, and **false** indicates the opposite.
 
-默认值：false。
+Default value: **false**.
 
 **Type:** boolean
 
@@ -1161,9 +1250,9 @@ editable?: boolean
 endIndex?: int
 ```
 
-屏幕上显示的最后一个列表项的索引。
+Index of the last list item displayed on the screen.
 
-默认值：0。
+Default value: **0**.
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
@@ -1183,7 +1272,7 @@ endIndex?: int
 error?: string
 ```
 
-元素的错误状态。
+Error status of the element.
 
 **Type:** string
 
@@ -1203,7 +1292,7 @@ error?: string
 extraInfo?: string
 ```
 
-元素的额外信息。值为JSON字符串。
+Additional information about an element. The value is a JSON string.
 
 **Type:** string
 
@@ -1223,9 +1312,9 @@ extraInfo?: string
 focusable?: boolean
 ```
 
-元素是否可获得焦点。true表示可获得焦点，false表示不可获得焦点。
+Whether the element is focusable. The value **true** indicates that the element is focusable, and **false** indicates the opposite.
 
-默认值：false。
+Default value: **false**.
 
 **Type:** boolean
 
@@ -1245,7 +1334,7 @@ focusable?: boolean
 hintText?: string
 ```
 
-提示文本。
+Hint text.
 
 **Type:** string
 
@@ -1265,7 +1354,7 @@ hintText?: string
 hotArea?: Rect
 ```
 
-元素的可触摸区域。
+Hot area of an element.
 
 **Type:** [Rect](../../apis-form-kit/arkts-apis/arkts-form-forminfo-rect-i.md)
 
@@ -1285,9 +1374,9 @@ hotArea?: Rect
 inputType?: int
 ```
 
-输入文本的类型。
+Type of the input text.
 
-默认值：0。
+Default value: **0**.
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
@@ -1307,7 +1396,7 @@ inputType?: int
 inspectorKey?: string
 ```
 
-检查器键。
+Inspector key.
 
 **Type:** string
 
@@ -1327,9 +1416,9 @@ inspectorKey?: string
 isActive?: boolean
 ```
 
-元素是否处于活动状态。true表示活动状态，false表示非活动状态。
+Whether the element is active. The value **true** indicates that the element is active, and **false** indicates the opposite.
 
-默认值：true。
+Default value: **true**.
 
 **Type:** boolean
 
@@ -1349,9 +1438,9 @@ isActive?: boolean
 isEnable?: boolean
 ```
 
-元素是否启用。true表示启用，false表示未启用。
+Whether the element is enabled. The value **true** indicates that the element is enabled, and **false** indicates the opposite.
 
-默认值：false。
+Default value: **false**.
 
 **Type:** boolean
 
@@ -1371,7 +1460,7 @@ isEnable?: boolean
 isEssential?: boolean
 ```
 
-表示元素对用户是否是必需的。true表示元素是必需的，false表示元素不是必需的，默认值为false。
+Whether the element is mandatory for the user. The value **true** indicates that the element is mandatory, and the value **false** indicates that the element is not mandatory. The default value is **false**.
 
 **Type:** boolean
 
@@ -1393,9 +1482,9 @@ isEssential?: boolean
 isFocused?: boolean
 ```
 
-表示元素是否已获得焦点。true表示已获得焦点，false表示未获得焦点。
+Whether the element is focused. The value **true** indicates that the element is focused, and **false** indicates the opposite.
 
-默认值：false。
+Default value: **false**.
 
 **Type:** boolean
 
@@ -1415,9 +1504,9 @@ isFocused?: boolean
 isHint?: boolean
 ```
 
-元素是否为提示信息。true表示元素是提示信息，false表示非提示信息。
+Whether the element is a hint. The value **true** indicates that the element is a hint, and **false** indicates the opposite.
 
-默认值：false。
+Default value: **false**.
 
 **Type:** boolean
 
@@ -1437,9 +1526,9 @@ isHint?: boolean
 isPassword?: boolean
 ```
 
-元素是否为密码。true表示元素是密码，false表示不是密码。
+Whether the element is a password. The value **true** indicates that the element is a password, and **false** indicates the opposite.
 
-默认值：false。
+Default value: **false**.
 
 **Type:** boolean
 
@@ -1459,9 +1548,9 @@ isPassword?: boolean
 isVisible?: boolean
 ```
 
-元素是否可见。true表示元素可见，false表示元素不可见。
+Whether the element is visible. The value **true** indicates that the element is visible, and **false** indicates the opposite.
 
-默认值：false。
+Default value: **false**.
 
 **Type:** boolean
 
@@ -1481,9 +1570,9 @@ isVisible?: boolean
 itemCount?: int
 ```
 
-项目总数。
+Total number of items.
 
-默认值：0。
+Default value: **0**.
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
@@ -1503,7 +1592,7 @@ itemCount?: int
 lastContent?: string
 ```
 
-最后一项内容。
+Last item.
 
 **Type:** string
 
@@ -1523,7 +1612,7 @@ lastContent?: string
 layer?: int
 ```
 
-元素的显示层级。
+Display layer of the element.
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
@@ -1543,9 +1632,10 @@ layer?: int
 longClickable?: boolean
 ```
 
-元素是否可长按。true表示可长按，false表示不可长按。
+Whether the element can be long-pressed. The value **true** indicates that the element can be long-pressed, and   
+**false** indicates the opposite.
 
-默认值：false。
+Default value: **false**.
 
 **Type:** boolean
 
@@ -1565,7 +1655,7 @@ longClickable?: boolean
 mainWindowId?: int
 ```
 
-组件的主窗口ID。
+Main window ID of a component.
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
@@ -1585,7 +1675,7 @@ mainWindowId?: int
 navDestinationId?: long
 ```
 
-组件的导航目标ID。
+Destination ID of a component for navigation.
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：long
 
@@ -1605,9 +1695,9 @@ navDestinationId?: long
 offset?: double
 ```
 
-内容区域相对于可滚动组件（如List和Grid）顶部坐标的像素偏移量，单位为像素（px）。
+Pixel offset of the content area relative to the top coordinate of a scrollable component (such as List and Grid). The unit is pixel (px).
 
-默认值：0。
+Default value: **0**.
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：double
 
@@ -1627,9 +1717,9 @@ offset?: double
 pageId?: int
 ```
 
-页面ID。
+Page ID.
 
-默认值：-1。
+Default value: **-1**.
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
@@ -1649,7 +1739,7 @@ pageId?: int
 parentId?: long
 ```
 
-组件的父元素ID。
+Parent element ID of a component.
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：long
 
@@ -1669,9 +1759,9 @@ parentId?: long
 pluralLineSupported?: boolean
 ```
 
-表示元素是否支持多行文本。true表示支持，false表示不支持。
+Whether the element supports multiple lines of text. The value **true** indicates that the element supports multiple lines of text, and **false** indicates the opposite.
 
-默认值：false。
+Default value: **false**.
 
 **Type:** boolean
 
@@ -1691,7 +1781,7 @@ pluralLineSupported?: boolean
 rect?: Rect
 ```
 
-元素的区域。
+Rectangular area for the element.
 
 **Type:** [Rect](../../apis-form-kit/arkts-apis/arkts-form-forminfo-rect-i.md)
 
@@ -1711,7 +1801,7 @@ rect?: Rect
 resourceName?: string
 ```
 
-元素的资源名称。
+Resource name of the element.
 
 **Type:** string
 
@@ -1731,7 +1821,7 @@ resourceName?: string
 screenRect?: Rect
 ```
 
-元素的显示区域。
+Rectangular area for the element to display.
 
 **Type:** [Rect](../../apis-form-kit/arkts-apis/arkts-form-forminfo-rect-i.md)
 
@@ -1751,9 +1841,9 @@ screenRect?: Rect
 scrollable?: boolean
 ```
 
-元素是否可滚动。true表示元素可滚动，false表示不可滚动。
+Whether the element is scrollable. The value **true** indicates that the element is scrollable, and **false** indicates the opposite.
 
-默认值：false。
+Default value: **false**.
 
 **Type:** boolean
 
@@ -1773,9 +1863,9 @@ scrollable?: boolean
 selected?: boolean
 ```
 
-元素是否已选中。true表示已选中，false表示未选中。
+Whether the element is selected. The value **true** indicates that the element is selected, and **false** indicates the opposite.
 
-默认值：false。
+Default value: **false**.
 
 **Type:** boolean
 
@@ -1789,13 +1879,35 @@ selected?: boolean
 
 **System API:** This is a system API.
 
+## sourceType
+
+```TypeScript
+sourceType?: AccessibilitySourceType
+```
+
+Indicates the source of this element.
+
+**Type:** [AccessibilitySourceType](arkts-accessibility-accessibility-accessibilitysourcetype-e-sys.md)
+
+**Since:** 26.0.0
+
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
+
+**Model restriction:** This API can be used only in the stage model.
+
+<!--Device-AccessibilityElement-sourceType?: AccessibilitySourceType--><!--Device-AccessibilityElement-sourceType?: AccessibilitySourceType-End-->
+
+**System capability:** SystemCapability.BarrierFree.Accessibility.Core
+
+**System API:** This is a system API.
+
 ## spans
 
 ```TypeScript
 spans?: AccessibilitySpan[]
 ```
 
-组件的跨度数组。
+Span array of a component.
 
 **Type:** [AccessibilitySpan](arkts-accessibility-accessibilityextensioncontext-accessibilityspan-i-sys.md)[]
 
@@ -1815,9 +1927,9 @@ spans?: AccessibilitySpan[]
 startIndex?: int
 ```
 
-屏幕上第一个列表项的索引。
+Index of the first item on the screen.
 
-默认值：0。
+Default value: **0**.
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
@@ -1837,7 +1949,7 @@ startIndex?: int
 supportedActionNames?: Array<string>
 ```
 
-支持的操作名称。
+Supported action names.
 
 **Type:** Array&lt;string&gt;
 
@@ -1857,7 +1969,7 @@ supportedActionNames?: Array<string>
 text?: string
 ```
 
-元素的文本内容。
+Text content of an element.
 
 **Type:** string
 
@@ -1877,7 +1989,7 @@ text?: string
 textLengthLimit?: int
 ```
 
-元素的最大文本长度。
+Maximum text length of an element.
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
@@ -1897,9 +2009,9 @@ textLengthLimit?: int
 textMoveUnit?: accessibility.TextMoveUnit
 ```
 
-文本朗读时的移动单位。
+Movement unit for traversing and reading text.
 
-默认值：0。
+Default value: **char**.
 
 **Type:** accessibility.TextMoveUnit
 
@@ -1919,7 +2031,7 @@ textMoveUnit?: accessibility.TextMoveUnit
 textType?: string
 ```
 
-元素的无障碍文本类型，由组件的accessibilityTextHint属性配置。
+Accessibility text type of an element, which is configured by the **accessibilityTextHint** attribute of the component.
 
 **Type:** string
 
@@ -1939,7 +2051,7 @@ textType?: string
 triggerAction?: AccessibilityAction
 ```
 
-触发元素事件的操作。
+Action that triggers the element event.
 
 **Type:** [AccessibilityAction](arkts-accessibility-accessibility-accessibilityaction-e-sys.md)
 
@@ -1959,7 +2071,7 @@ triggerAction?: AccessibilityAction
 type?: WindowType
 ```
 
-元素的窗口类型。
+Window type of an element.
 
 **Type:** [WindowType](arkts-accessibility-windowtype-t.md)
 
@@ -1979,9 +2091,9 @@ type?: WindowType
 valueMax?: double
 ```
 
-最大值。
+Maximum value.
 
-默认值：0。
+Default value: **0**.
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：double
 
@@ -2001,9 +2113,9 @@ valueMax?: double
 valueMin?: double
 ```
 
-最小值。
+Minimum value.
 
-默认值：0。
+Default value: **0**.
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：double
 
@@ -2023,9 +2135,9 @@ valueMin?: double
 valueNow?: double
 ```
 
-当前值。
+Current value.
 
-默认值：0。
+Default value: **0**.
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：double
 
@@ -2045,9 +2157,9 @@ valueNow?: double
 windowId?: int
 ```
 
-窗口ID。
+Window ID.
 
-默认值：-1。
+Default value: **-1**.
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 

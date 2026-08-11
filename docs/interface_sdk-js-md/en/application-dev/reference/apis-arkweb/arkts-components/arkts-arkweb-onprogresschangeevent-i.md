@@ -1,6 +1,6 @@
 # OnProgressChangeEvent
 
-定义网页加载进度变化时触发该回调。
+Defines the triggered function when the page loading progress changes.
 
 **Since:** 12
 
@@ -16,7 +16,7 @@
 newProgress: number
 ```
 
-新的加载进度。
+The new progress of the page.
 
 **Type:** number
 

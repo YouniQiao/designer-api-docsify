@@ -1,6 +1,6 @@
 # NavBarPosition
 
-导航页位置。
+Navigation bar position
 
 **Since:** 23
 

@@ -23,12 +23,6 @@ Audio/Video播放demo可参考：[音频播放开发指导](../../../media/media
 
 **系统能力：** SystemCapability.Multimedia.Media.AVPlayer
 
-## 导入模块
-
-```TypeScript
-import { media } from 'kits/@kit.MediaKit';
-```
-
 ## forceLoadVideo
 
 ```TypeScript
@@ -65,7 +59,7 @@ Specifies whether to forcibly load the video. This API can be called only when t
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 202 | Called from Non-System applications. Return by promise. |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Called from Non-System applications. Return by promise. |
 
 ## 示例
 
@@ -107,7 +101,7 @@ Obtains the selected track by the specified media type. This API can be called o
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| trackType | [MediaType](../../apis-arkweb/arkts-apis/arkts-arkweb-webview-mediatype-e.md) | 是 | specified media Type, see [MediaType](#MediaType). |
+| trackType | [MediaType](arkts-media-multimedia-media-mediatype-e.md) | 是 | specified media Type, see [MediaType](#MediaType). |
 
 **返回值：**
 
@@ -119,9 +113,9 @@ Obtains the selected track by the specified media type. This API can be called o
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 5400102 | Operation not allowed. Return by promise. |
-| 5400103 | I/O error. Return by promise. |
-| 5400101 | No memory. Return by promise. |
-| 202 | Called from Non-System applications. Return by promise. |
-| 5400105 | Service died. Return by promise. |
+| [5400102](../errorcode-media.md#5400102-当前状态不支持此操作) | Operation not allowed. Return by promise. |
+| [5400103](../errorcode-media.md#5400103-出现io错误) | I/O error. Return by promise. |
+| [5400101](../errorcode-media.md#5400101-内存分配失败) | No memory. Return by promise. |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Called from Non-System applications. Return by promise. |
+| [5400105](../errorcode-media.md#5400105-播放服务死亡) | Service died. Return by promise. |
 

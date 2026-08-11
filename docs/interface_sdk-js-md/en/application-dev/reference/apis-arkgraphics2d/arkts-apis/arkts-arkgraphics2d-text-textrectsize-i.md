@@ -1,6 +1,6 @@
 # TextRectSize
 
-文本矩形尺寸，用于描述文本的矩形宽高属性。值为浮点数，单位为物理像素px。
+Represents the text rectangle size, which is used to describe the width and height of the text rectangle. It is a floating-point value in physical pixels (px).
 
 **Since:** 24
 
@@ -22,7 +22,7 @@ import { text } from 'kits/@kit.ArkGraphics2D';
 height: double
 ```
 
-文本矩形的高度，浮点数，单位为物理像素px。
+Height of the text rectangle, which is a floating-point value in physical pixels (px).
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：double
 
@@ -44,7 +44,7 @@ height: double
 width: double
 ```
 
-文本矩形的宽度，浮点数，单位为物理像素px。
+Width of the text rectangle, which is a floating-point value in physical pixels (px).
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：double
 

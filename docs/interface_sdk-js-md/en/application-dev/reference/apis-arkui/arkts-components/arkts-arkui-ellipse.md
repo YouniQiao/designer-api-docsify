@@ -1,14 +1,9 @@
 # Ellipse
 
-椭圆绘制组件。该组件通过设置宽度和高度属性绘制椭圆形状，在给定的矩形区域内渲染椭圆轮廓和填充区域。
-
-> **说明：**
+The **Ellipse** component is used to draw an ellipse.
+> **Child Components**
 >
-> 该组件从API version 7开始支持。后续版本的新增接口，采用上角标单独标记接口的起始版本。
-
-## 子组件
-
-无
+> None
 
 ## Ellipse
 
@@ -42,7 +37,7 @@ use new function to set the value.Anonymous Object Rectification.
 Ellipse(options?: EllipseOptions)
 ```
 
-用于绘制椭圆的构造函数。调用后创建一个Ellipse对象，可设置宽高属性。
+Set the value.
 
 **Since:** 7
 
@@ -60,7 +55,7 @@ Ellipse(options?: EllipseOptions)
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| options | [EllipseOptions](arkts-arkui-ellipseoptions-i.md) | No | 椭圆绘制配置选项，包含宽度和高度设置。不传入时使用默认尺寸（宽度和高度均为0）。 <br>异常值undefined和null按照无效值处理，本次设置不生效。 |
+| options | [EllipseOptions](arkts-arkui-ellipseoptions-i.md) | No | Options of the ellipse.<br>The **undefined** and **null** values are treated as invalid and will not take effect. |
 
 ## Summary
 

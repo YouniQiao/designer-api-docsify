@@ -47,7 +47,7 @@ static addMonitor(valueCallback: MonitorValueCallback | MonitorValueCallback[],
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 130000 | options.owner is not ComponentV2 struct. |
+| [130000](../errorcode-stateManagement.md#130000-addmonitorclearmonitor非法目标对象) | options.owner is not ComponentV2 struct. |
 
 ## addMonitor
 
@@ -86,7 +86,7 @@ static addMonitor(valueInfo: MonitorValueInfo | MonitorValueInfo[],
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 130000 | options.owner is not ComponentV2 struct. |
+| [130000](../errorcode-stateManagement.md#130000-addmonitorclearmonitor非法目标对象) | options.owner is not ComponentV2 struct. |
 
 ## canBeObserved
 
@@ -171,7 +171,7 @@ static getCustomComponentContext<T extends IVariableOwner>(customComponent: T): 
 
 | 类型 | 说明 |
 | --- | --- |
-| [CustomComponentContext](arkts-arkui-utils-customcomponentcontext-i.md) | 传入自定义组件的上下文信息。 |
+| [CustomComponentContext](arkts-arkui-arkui-statemanagement-customcomponentcontext-i.md) | 传入自定义组件的上下文信息。 |
 
 ## getLifecycle
 

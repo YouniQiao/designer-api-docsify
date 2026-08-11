@@ -10,12 +10,6 @@
 
 **系统能力：** SystemCapability.Communication.NearLink.Base
 
-## 导入模块
-
-```TypeScript
-import { ssap } from 'kits/@kit.ConnectivityKit';
-```
-
 ## close
 
 ```TypeScript
@@ -40,9 +34,9 @@ close(): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 36100003 | NearLink disabled. |
-| 36100099 | Operation failed. |
-| 201 | Permission denied. |
+| [36100003](../errorcode-nearlink-service.md#36100003--星闪关闭) | NearLink disabled. |
+| [36100099](../errorcode-nearlink-service.md#36100099-操作失败) | Operation failed. |
+| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
 
 ## connect
 
@@ -74,9 +68,9 @@ connect(): Promise<void>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 36100003 | NearLink disabled. |
-| 36100099 | Operation failed. |
-| 201 | Permission denied. |
+| [36100003](../errorcode-nearlink-service.md#36100003--星闪关闭) | NearLink disabled. |
+| [36100099](../errorcode-nearlink-service.md#36100099-操作失败) | Operation failed. |
+| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
 
 ## disconnect
 
@@ -108,9 +102,9 @@ disconnect(): Promise<void>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 36100003 | NearLink disabled. |
-| 36100099 | Operation failed. |
-| 201 | Permission denied. |
+| [36100003](../errorcode-nearlink-service.md#36100003--星闪关闭) | NearLink disabled. |
+| [36100099](../errorcode-nearlink-service.md#36100099-操作失败) | Operation failed. |
+| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
 
 ## getServices
 
@@ -142,9 +136,9 @@ getServices(): Promise<Service[]>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 36100003 | NearLink disabled. |
-| 36100099 | Operation failed. |
-| 201 | Permission denied. |
+| [36100003](../errorcode-nearlink-service.md#36100003--星闪关闭) | NearLink disabled. |
+| [36100099](../errorcode-nearlink-service.md#36100099-操作失败) | Operation failed. |
+| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
 
 ## offConnectionStateChange
 
@@ -344,11 +338,11 @@ readProperty(property: Property): Promise<Property>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 36100003 | NearLink disabled. |
-| 36100099 | Operation failed. |
-| 201 | Permission denied. |
-| 36100044 | NearLink standard UUID not allowed. |
-| 36100043 | Invalid UUID in property. |
+| [36100003](../errorcode-nearlink-service.md#36100003--星闪关闭) | NearLink disabled. |
+| [36100099](../errorcode-nearlink-service.md#36100099-操作失败) | Operation failed. |
+| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
+| [36100044](../errorcode-nearlink-service.md#36100044-禁止使用星闪标准服务uuid) | NearLink standard UUID not allowed. |
+| [36100043](../errorcode-nearlink-service.md#36100043-无效uuid) | Invalid UUID in property. |
 
 ## requestMtuSize
 
@@ -392,9 +386,9 @@ requestMtuSize(mtu: int): Promise<void>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 36100003 | NearLink disabled. |
-| 36100099 | Operation failed. |
-| 201 | Permission denied. |
+| [36100003](../errorcode-nearlink-service.md#36100003--星闪关闭) | NearLink disabled. |
+| [36100099](../errorcode-nearlink-service.md#36100099-操作失败) | Operation failed. |
+| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
 
 ## setPropertyNotification
 
@@ -433,11 +427,11 @@ setPropertyNotification(property: Property, enable: boolean): Promise<void>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 36100003 | NearLink disabled. |
-| 36100099 | Operation failed. |
-| 201 | Permission denied. |
-| 36100044 | NearLink standard UUID not allowed. |
-| 36100043 | Invalid UUID in property. |
+| [36100003](../errorcode-nearlink-service.md#36100003--星闪关闭) | NearLink disabled. |
+| [36100099](../errorcode-nearlink-service.md#36100099-操作失败) | Operation failed. |
+| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
+| [36100044](../errorcode-nearlink-service.md#36100044-禁止使用星闪标准服务uuid) | NearLink standard UUID not allowed. |
+| [36100043](../errorcode-nearlink-service.md#36100043-无效uuid) | Invalid UUID in property. |
 
 ## writeProperty
 
@@ -476,9 +470,9 @@ writeProperty(property: Property, writeType: PropertyWriteType): Promise<void>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 36100003 | NearLink disabled. |
-| 36100099 | Operation failed. |
-| 201 | Permission denied. |
-| 36100044 | NearLink standard UUID not allowed. |
-| 36100043 | Invalid UUID in property. |
+| [36100003](../errorcode-nearlink-service.md#36100003--星闪关闭) | NearLink disabled. |
+| [36100099](../errorcode-nearlink-service.md#36100099-操作失败) | Operation failed. |
+| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
+| [36100044](../errorcode-nearlink-service.md#36100044-禁止使用星闪标准服务uuid) | NearLink standard UUID not allowed. |
+| [36100043](../errorcode-nearlink-service.md#36100043-无效uuid) | Invalid UUID in property. |
 

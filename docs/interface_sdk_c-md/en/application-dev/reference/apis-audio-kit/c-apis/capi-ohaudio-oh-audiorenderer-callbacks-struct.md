@@ -12,7 +12,7 @@ Declaring the callback struct for renderer stream.
 
 **Deprecated**: 20
 
-**Replaced by**: Use the callback type: OH_AudioRenderer_OnWriteDataCallback, OH_AudioRenderer_OutputDeviceChangeCallback,OH_AudioRenderer_OnInterruptEvent, OH_AudioRenderer_OnErrorCallback separately.
+**Replaced by**: Use the callback type: OH_AudioRenderer_OnWriteDataCallback, OH_AudioRenderer_OutputDeviceChangeCallback,OH_AudioRenderer_OnInterruptCallback, OH_AudioRenderer_OnErrorCallback separately.
 
 **Related module**: [OHAudio](capi-ohaudio.md)
 

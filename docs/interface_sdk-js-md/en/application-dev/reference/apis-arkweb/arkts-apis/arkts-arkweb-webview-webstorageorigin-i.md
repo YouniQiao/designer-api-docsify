@@ -1,6 +1,6 @@
 # WebStorageOrigin
 
-Provides basic information of web storage.
+Provides usage information of the Web SQL Database.
 
 **Since:** 23
 
@@ -22,7 +22,7 @@ import { webview } from 'kits/@kit.ArkWeb';
 origin: string
 ```
 
-Url source.
+Index of the origin.
 
 **Type:** string
 
@@ -40,7 +40,7 @@ Url source.
 quota: double
 ```
 
-the callback of getOriginUsage. Unit: byte.
+Storage quota of the origin.
 
 **Type:** double
 
@@ -58,7 +58,7 @@ the callback of getOriginUsage. Unit: byte.
 usage: double
 ```
 
-Specify the amount of storage for the source. Unit: byte.
+Storage usage of the origin.
 
 **Type:** double
 

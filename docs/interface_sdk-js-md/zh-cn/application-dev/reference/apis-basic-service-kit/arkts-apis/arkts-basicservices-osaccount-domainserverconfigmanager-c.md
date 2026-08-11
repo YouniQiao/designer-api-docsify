@@ -10,12 +10,6 @@
 
 **系统能力：** SystemCapability.Account.OsAccount
 
-## 导入模块
-
-```TypeScript
-import { osAccount } from 'kits/@kit.BasicServicesKit';
-```
-
 ## addServerConfig
 
 ```TypeScript
@@ -38,7 +32,7 @@ static addServerConfig(parameters: Record<string, Object>): Promise<DomainServer
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| parameters | [Record](../../apis-default/arkts-apis/arkts-record-t.md)&lt;string, Object&gt; | 是 | 表示域服务器配置参数。 |
+| parameters | Record&lt;string, Object&gt; | 是 | 表示域服务器配置参数。 |
 
 **返回值：**
 
@@ -50,17 +44,18 @@ static addServerConfig(parameters: Record<string, Object>): Promise<DomainServer
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 801 | Capability not supported. |
+| [801](../../errorcode-universal.md#801-该设备不支持此api) | Capability not supported. |
 | 12300211 | Server unreachable. |
-| 201 | Permission denied. |
-| 12300002 | Invalid server config parameters. |
-| 12300001 | The system service works abnormally. |
+| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
+| [12300002](../../apis-basic-services-kit/errorcode-account.md#12300002-无效参数) | Invalid server config parameters. |
+| [12300001](../../apis-basic-services-kit/errorcode-account.md#12300001-系统服务异常) | The system service works abnormally. |
 | 12300215 | The number of server config reaches the upper limit. |
 | 12300213 | Server config already exists. |
 
 ## 示例
 
 ```TypeScript
+import { osAccount } from '@kit.BasicServicesKit';
 import { BusinessError } from '@kit.BasicServicesKit';
 
 let configParams: Record<string, Object> = {
@@ -97,7 +92,7 @@ static addServerConfig(parameters: Record<string, RecordData>): Promise<DomainSe
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| parameters | [Record](../../apis-default/arkts-apis/arkts-record-t.md)&lt;string, RecordData&gt; | 是 | 表示域服务器配置参数。 |
+| parameters | Record&lt;string, RecordData&gt; | 是 | 表示域服务器配置参数。 |
 
 **返回值：**
 
@@ -109,13 +104,33 @@ static addServerConfig(parameters: Record<string, RecordData>): Promise<DomainSe
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 801 | Capability not supported. |
+| [801](../../errorcode-universal.md#801-该设备不支持此api) | Capability not supported. |
 | 12300211 | Server unreachable. |
-| 201 | Permission denied. |
-| 12300002 | Invalid server config parameters. |
-| 12300001 | The system service works abnormally. |
+| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
+| [12300002](../../apis-basic-services-kit/errorcode-account.md#12300002-无效参数) | Invalid server config parameters. |
+| [12300001](../../apis-basic-services-kit/errorcode-account.md#12300001-系统服务异常) | The system service works abnormally. |
 | 12300215 | The number of server config reaches the upper limit. |
 | 12300213 | Server config already exists. |
+
+## 示例
+
+```TypeScript
+import osAccount from '@ohos.account.osAccount';
+import { BusinessError } from '@kit.BasicServicesKit';
+import type { RecordData } from './@ohos.base';
+
+let configParams: Record<string, RecordData> = {
+  'uri': 'test.example.com',
+  'port': 100
+};
+osAccount.DomainServerConfigManager.addServerConfig(configParams).then((
+  serverConfig: osAccount.DomainServerConfig) => {
+  console.info('add server configuration successfully, the return config: ' + JSON.stringify(serverConfig));
+}).catch((e: Error) => {
+  const err = e as BusinessError;
+  console.error(`add server configuration failed, code is ${err.code}, message is ${err.message}`);
+});
+```
 
 ## getAccountServerConfig
 
@@ -151,14 +166,17 @@ static getAccountServerConfig(domainAccountInfo: DomainAccountInfo): Promise<Dom
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 801 | Capability not supported. |
-| 12300003 | Domain account not found. |
-| 201 | Permission denied. |
-| 12300001 | The system service works abnormally. |
+| [801](../../errorcode-universal.md#801-该设备不支持此api) | Capability not supported. |
+| [12300003](../../apis-basic-services-kit/errorcode-account.md#12300003-账号不存在) | Domain account not found. |
+| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
+| [12300001](../../apis-basic-services-kit/errorcode-account.md#12300001-系统服务异常) | The system service works abnormally. |
 
 ## 示例
 
+ArkTS-Dyn示例：
+
 ```TypeScript
+import { osAccount } from '@kit.BasicServicesKit';
 import { BusinessError } from '@kit.BasicServicesKit';
 
 let accountInfo: osAccount.DomainAccountInfo = {
@@ -169,6 +187,25 @@ osAccount.DomainServerConfigManager.getAccountServerConfig(accountInfo).then((
   serverConfig: osAccount.DomainServerConfig) => {
   console.info('get account server configuration successfully, the return config: ' + JSON.stringify(serverConfig));
 }).catch((err: BusinessError) => {
+  console.error(`add server configuration failed, code is ${err.code}, message is ${err.message}`);
+});
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+import osAccount from '@ohos.account.osAccount';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let accountInfo: osAccount.DomainAccountInfo = {
+  'accountName': 'demoName',
+  'domain': 'demoDomain'
+};
+osAccount.DomainServerConfigManager.getAccountServerConfig(accountInfo).then((
+  serverConfig: osAccount.DomainServerConfig) => {
+  console.info('get account server configuration successfully, the return config: ' + JSON.stringify(serverConfig));
+}).catch((e: Error) => {
+  const err = e as BusinessError;
   console.error(`add server configuration failed, code is ${err.code}, message is ${err.message}`);
 });
 ```
@@ -201,13 +238,16 @@ static getAllServerConfigs(): Promise<Array<DomainServerConfig>>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 801 | Capability not supported. |
-| 201 | Permission denied. |
-| 12300001 | The system service works abnormally. |
+| [801](../../errorcode-universal.md#801-该设备不支持此api) | Capability not supported. |
+| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
+| [12300001](../../apis-basic-services-kit/errorcode-account.md#12300001-系统服务异常) | The system service works abnormally. |
 
 ## 示例
 
+ArkTS-Dyn示例：
+
 ```TypeScript
+import { osAccount } from '@kit.BasicServicesKit';
 import { BusinessError } from '@kit.BasicServicesKit';
 
 let configParams: Record<string, Object> = {
@@ -223,6 +263,32 @@ osAccount.DomainServerConfigManager.addServerConfig(configParams).then((
     console.error(`get all domain server configuration failed, code is ${err.code}, message is ${err.message}`);
   });
 }).catch((err: BusinessError) => {
+  console.error(`add server configuration failed, code is ${err.code}, message is ${err.message}`);
+});
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+import osAccount from '@ohos.account.osAccount';
+import { BusinessError } from '@kit.BasicServicesKit';
+import type { RecordData } from './@ohos.base';
+
+let configParams: Record<string, RecordData> = {
+  'uri': 'test.example.com',
+  'port': 100
+};
+osAccount.DomainServerConfigManager.addServerConfig(configParams).then((
+  serverConfig: osAccount.DomainServerConfig) => {
+  console.info('add domain server configuration successfully, the added config: ' + JSON.stringify(serverConfig));
+  osAccount.DomainServerConfigManager.getAllServerConfigs().then((data: Array<osAccount.DomainServerConfig>) => {
+    console.info('get all domain server configuration successfully, return config: ' + JSON.stringify(data));
+  }).catch((e: Error) => {
+    const err = e as BusinessError;
+    console.error(`get all domain server configuration failed, code is ${err.code}, message is ${err.message}`);
+  });
+}).catch((e: Error) => {
+  const err = e as BusinessError;
   console.error(`add server configuration failed, code is ${err.code}, message is ${err.message}`);
 });
 ```
@@ -261,14 +327,17 @@ static getServerConfig(configId: string): Promise<DomainServerConfig>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 801 | Capability not supported. |
-| 201 | Permission denied. |
-| 12300001 | The system service works abnormally. |
+| [801](../../errorcode-universal.md#801-该设备不支持此api) | Capability not supported. |
+| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
+| [12300001](../../apis-basic-services-kit/errorcode-account.md#12300001-系统服务异常) | The system service works abnormally. |
 | 12300212 | Server config not found. |
 
 ## 示例
 
+ArkTS-Dyn示例：
+
 ```TypeScript
+import { osAccount } from '@kit.BasicServicesKit';
 import { BusinessError } from '@kit.BasicServicesKit';
 
 let configParams: Record<string, Object> = {
@@ -284,6 +353,32 @@ osAccount.DomainServerConfigManager.addServerConfig(configParams).then((
     console.error(`get domain server configuration failed, code is ${err.code}, message is ${err.message}`);
   });
 }).catch((err: BusinessError) => {
+  console.error(`add server configuration failed, code is ${err.code}, message is ${err.message}`);
+});
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+import osAccount from '@ohos.account.osAccount';
+import { BusinessError } from '@kit.BasicServicesKit';
+import type { RecordData } from './@ohos.base';
+
+let configParams: Record<string, RecordData> = {
+  'uri': 'test.example.com',
+  'port': 100
+};
+osAccount.DomainServerConfigManager.addServerConfig(configParams).then((
+  serverConfig: osAccount.DomainServerConfig) => {
+  console.info('add domain server configuration successfully, the added config: ' + JSON.stringify(serverConfig));
+  osAccount.DomainServerConfigManager.getServerConfig(serverConfig.id).then((data: osAccount.DomainServerConfig) => {
+    console.info('get domain server configuration successfully, return config: ' + JSON.stringify(data));
+  }).catch((e: Error) => {
+    const err = e as BusinessError;
+    console.error(`get domain server configuration failed, code is ${err.code}, message is ${err.message}`);
+  });
+}).catch((e: Error) => {
+  const err = e as BusinessError;
   console.error(`add server configuration failed, code is ${err.code}, message is ${err.message}`);
 });
 ```
@@ -322,15 +417,18 @@ static removeServerConfig(configId: string): Promise<void>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 801 | Capability not supported. |
-| 201 | Permission denied. |
-| 12300001 | The system service works abnormally. |
+| [801](../../errorcode-universal.md#801-该设备不支持此api) | Capability not supported. |
+| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
+| [12300001](../../apis-basic-services-kit/errorcode-account.md#12300001-系统服务异常) | The system service works abnormally. |
 | 12300214 | Server config has been associated with an account. |
 | 12300212 | Server config not found. |
 
 ## 示例
 
+ArkTS-Dyn示例：
+
 ```TypeScript
+import { osAccount } from '@kit.BasicServicesKit';
 import { BusinessError } from '@kit.BasicServicesKit';
 
 let configParams: Record<string, Object> = {
@@ -343,6 +441,28 @@ osAccount.DomainServerConfigManager.addServerConfig(configParams).then((
   osAccount.DomainServerConfigManager.removeServerConfig(serverConfig.id);
   console.info('remove domain server configuration successfully');
 }).catch((err: BusinessError) => {
+  console.error(`add server configuration failed, code is ${err.code}, message is ${err.message}`);
+});
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+import osAccount from '@ohos.account.osAccount';
+import { BusinessError } from '@kit.BasicServicesKit';
+import type { RecordData } from './@ohos.base';
+
+let configParams: Record<string, RecordData> = {
+  'uri': 'test.example.com',
+  'port': 100
+};
+osAccount.DomainServerConfigManager.addServerConfig(configParams).then((
+  serverConfig: osAccount.DomainServerConfig) => {
+  console.info('add domain server configuration successfully, the added config: ' + JSON.stringify(serverConfig));
+  osAccount.DomainServerConfigManager.removeServerConfig(serverConfig.id);
+  console.info('remove domain server configuration successfully');
+}).catch((e: Error) => {
+  const err = e as BusinessError;
   console.error(`add server configuration failed, code is ${err.code}, message is ${err.message}`);
 });
 ```
@@ -370,7 +490,7 @@ static updateServerConfig(configId: string, parameters: Record<string, Object>):
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | configId | string | 是 | 表示服务器配置标识。 |
-| parameters | [Record](../../apis-default/arkts-apis/arkts-record-t.md)&lt;string, Object&gt; | 是 | 表示域服务器配置参数。 |
+| parameters | Record&lt;string, Object&gt; | 是 | 表示域服务器配置参数。 |
 
 **返回值：**
 
@@ -382,11 +502,11 @@ static updateServerConfig(configId: string, parameters: Record<string, Object>):
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 801 | Capability not supported. |
+| [801](../../errorcode-universal.md#801-该设备不支持此api) | Capability not supported. |
 | 12300211 | Server unreachable. |
-| 201 | Permission denied. |
-| 12300002 | Invalid server config parameters. |
-| 12300001 | The system service works abnormally. |
+| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
+| [12300002](../../apis-basic-services-kit/errorcode-account.md#12300002-无效参数) | Invalid server config parameters. |
+| [12300001](../../apis-basic-services-kit/errorcode-account.md#12300001-系统服务异常) | The system service works abnormally. |
 | 12300214 | Server config has been associated with an account. |
 | 12300213 | Server config already exists. |
 | 12300212 | Server config not found. |
@@ -394,6 +514,7 @@ static updateServerConfig(configId: string, parameters: Record<string, Object>):
 ## 示例
 
 ```TypeScript
+import { osAccount } from '@kit.BasicServicesKit';
 import { BusinessError } from '@kit.BasicServicesKit';
 
 let configParams: Record<string, Object> = {
@@ -436,7 +557,7 @@ static updateServerConfig(configId: string, parameters: Record<string, RecordDat
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | configId | string | 是 | 表示服务器配置标识。 |
-| parameters | [Record](../../apis-default/arkts-apis/arkts-record-t.md)&lt;string, RecordData&gt; | 是 | 表示域服务器配置参数。 |
+| parameters | Record&lt;string, RecordData&gt; | 是 | 表示域服务器配置参数。 |
 
 **返回值：**
 
@@ -448,12 +569,38 @@ static updateServerConfig(configId: string, parameters: Record<string, RecordDat
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 801 | Capability not supported. |
+| [801](../../errorcode-universal.md#801-该设备不支持此api) | Capability not supported. |
 | 12300211 | Server unreachable. |
-| 201 | Permission denied. |
-| 12300002 | Invalid server config parameters. |
-| 12300001 | The system service works abnormally. |
+| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
+| [12300002](../../apis-basic-services-kit/errorcode-account.md#12300002-无效参数) | Invalid server config parameters. |
+| [12300001](../../apis-basic-services-kit/errorcode-account.md#12300001-系统服务异常) | The system service works abnormally. |
 | 12300214 | Server config has been associated with an account. |
 | 12300213 | Server config already exists. |
 | 12300212 | Server config not found. |
+
+## 示例
+
+```TypeScript
+import osAccount from '@ohos.account.osAccount';
+import { BusinessError } from '@kit.BasicServicesKit';
+import type { RecordData } from './@ohos.base';
+
+let configParams: Record<string, RecordData> = {
+  'uri': 'test.example.com',
+  'port': 100
+};
+osAccount.DomainServerConfigManager.addServerConfig(configParams).then((
+  serverConfig: osAccount.DomainServerConfig) => {
+  console.info('add domain server configuration successfully, the added config: ' + JSON.stringify(serverConfig));
+  osAccount.DomainServerConfigManager.updateServerConfig(serverConfig.id, configParams).then((data: osAccount.DomainServerConfig) => {
+    console.info('update domain server configuration successfully, return config: ' + JSON.stringify(data));
+  }).catch((e: Error) => {
+    const err = e as BusinessError;
+    console.error(`update domain server configuration failed, code is ${err.code}, message is ${err.message}`);
+  });
+}).catch((e: Error) => {
+  const err = e as BusinessError;
+  console.error(`add server configuration failed, code is ${err.code}, message is ${err.message}`);
+});
+```
 

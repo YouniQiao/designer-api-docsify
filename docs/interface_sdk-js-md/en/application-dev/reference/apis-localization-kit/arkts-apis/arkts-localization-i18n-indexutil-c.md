@@ -1,6 +1,6 @@
 # IndexUtil
 
-提供索引相关的能力，包括区域索引列表和文本索引值获取。
+Sequence text can be grouped under the specified area,and grouping index with different lengths can be specified.
 
 **Since:** 23
 
@@ -22,7 +22,7 @@ import { i18n } from 'kits/@kit.LocalizationKit';
 addLocale(locale: string): void
 ```
 
-在当前区域的索引列表中，添加新区域的索引列表，形成复合列表。
+Adds the index list of a new locale to the index list of the current locale to form a composite list.
 
 **Since:** 23
 
@@ -38,7 +38,7 @@ addLocale(locale: string): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| locale | string | Yes | [表示区域ID的字符串](../../../internationalization/i18n-locale-culture.md#实现原理)，由语言、脚本、国家地区组 成。 |
+| locale | string | Yes | System locale, which consists of the language, script, and country/region. |
 
 ## getIndex
 
@@ -46,7 +46,7 @@ addLocale(locale: string): void
 getIndex(text: string): string
 ```
 
-获取输入文本对应的索引值。
+Obtains the index of the text object.
 
 **Since:** 23
 
@@ -62,13 +62,13 @@ getIndex(text: string): string
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| text | string | Yes | 输入文本。 |
+| text | string | Yes | text object. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| string | 输入文本对应的索引值。无合适索引时返回空字符串。 |
+| string | Index of the text object. If no proper index is found, an empty string is returned. |
 
 ## getIndexList
 
@@ -76,7 +76,7 @@ getIndex(text: string): string
 getIndexList(): Array<string>
 ```
 
-获取当前区域的索引列表。
+Obtains the index list of the current locale.
 
 **Since:** 23
 
@@ -92,5 +92,5 @@ getIndexList(): Array<string>
 
 | Type | Description |
 | --- | --- |
-| Array&lt;string&gt; | 当前区域的索引列表。第一个元素和最后一个元素为“...”。 |
+| Array&lt;string&gt; | Index list of the current locale. The first and last elements are "...". |
 

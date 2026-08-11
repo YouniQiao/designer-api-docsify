@@ -12,9 +12,9 @@ import { dataTransfer } from 'kits/@kit.ConnectivityKit';
 function onReadData(callback: Callback<DataParams>): void
 ```
 
-订阅从端口读取数据事件。
+Subscribes to the event reported when data is read from the port.
 
-只有授予了ohos.permission.NEARLINK_ACCESS权限的应用程序才能访问此事件。
+This event is accessible only to applications that granted the ohos.permission.NEARLINK_ACCESS permission.
 
 **Since:** 26.0.0
 
@@ -30,12 +30,12 @@ function onReadData(callback: Callback<DataParams>): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;DataParams&gt; | Yes | 监听端口读事件的回调。 |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;DataParams&gt; | Yes | Callback used to listen for the port read event. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 801 | Capability not supported because the chip does not support it. |
+| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported because the chip does not support it. |
 | 36100099 | Operation failed. |
 

@@ -1,6 +1,6 @@
 # BackupExtensionAbility
 
-备份恢复扩展能力。应用可通过该类实现自定义备份、恢复、进度上报和安全退出逻辑。
+Class to be override for backup extension ability.
 
 **Since:** 10
 
@@ -22,7 +22,7 @@ import { BundleVersion } from 'kits/@kit.CoreFileKit';
 onBackup(): void
 ```
 
-Extension生命周期回调，在执行备份数据时回调，由开发者实现自定义备份数据处理。
+Callback to be called when the backup procedure is started.Developer could override this method to build files to be backup.
 
 **Since:** 10
 
@@ -50,7 +50,7 @@ class BackupExt extends BackupExtensionAbility {
 onBackupEx(backupInfo: string): string | Promise<string>
 ```
 
-备份恢复框架在备份时向应用传递扩展参数，由开发者实现自定义备份处理。
+Callback to be called when the backup procedure is started.Developer could override this method to restore.
 
 **Since:** 12
 
@@ -66,13 +66,13 @@ onBackupEx(backupInfo: string): string | Promise<string>
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| backupInfo | string | Yes | 备份时框架传递给应用的扩展信息，参数为JSON格式字符串。 |
+| backupInfo | string | Yes | BackupInfo to be backup, the param is a JSON string, it is an array, each array element includes detail and type now. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| string | 应用执行自定义备份操作的信息，返回值为JSON格式字符串， 包含type、errorCode和errorInfo字段，支持同步返回或使用Promise异步返回。 |
+| string | Return backup result, support promise, the result is a JSON string, it includes type, errorCode and errorInfo now. |
 
 ## Examples
 
@@ -143,7 +143,7 @@ class BackupExt extends BackupExtensionAbility {
 onProcess(): string
 ```
 
-返回应用执行备份或恢复业务的进度信息。
+Callback to be called when getting backup/restore process info.Developer could override this method to provide the backup/restore process info.
 
 **Since:** 12
 
@@ -159,7 +159,7 @@ onProcess(): string
 
 | Type | Description |
 | --- | --- |
-| string | 应用处理数据的进度信息，返回值为JSON格式字符串。 |
+| string | Return the backup/restore process info. |
 
 ## Examples
 
@@ -249,7 +249,7 @@ ArkTS-Sta:
 onRelease(scenario: int): Promise<void>
 ```
 
-备份恢复框架安全退出回调，应用可在备份或恢复完成后清理临时文件。
+Callback to be called before extension ability exits.Developer could override this method to clean abnormal data.
 
 **Since:** 20
 
@@ -265,13 +265,13 @@ onRelease(scenario: int): Promise<void>
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| scenario | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | 当前操作场景，值为1表示备份，值为2表示恢复。 |
+| scenario | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | The value 1 indicates backup and the value 2 indicates restoration. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise对象，无返回结果。 |
+| Promise&lt;void&gt; | the promise returned by the function |
 
 ## Examples
 
@@ -312,7 +312,7 @@ class BackupExt extends BackupExtensionAbility {
 onRestore(bundleVersion: BundleVersion): void
 ```
 
-Extension生命周期回调，在执行恢复数据时回调，由开发者提供扩展的恢复数据操作。
+Callback to be called when the restore procedure is started.Developer could override this method to restore from copies for various bundle versions.
 
 **Since:** 10
 
@@ -328,7 +328,7 @@ Extension生命周期回调，在执行恢复数据时回调，由开发者提�
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| bundleVersion | [BundleVersion](arkts-corefile-application-backupextensionability-bundleversion-i.md) | Yes | 恢复时应用数据所在的版本信息。 |
+| bundleVersion | [BundleVersion](arkts-corefile-application-backupextensionability-bundleversion-i.md) | Yes | Bundle version to be restore. |
 
 ## Examples
 
@@ -348,7 +348,7 @@ class BackupExt extends BackupExtensionAbility {
 onRestoreEx(bundleVersion: BundleVersion, restoreInfo: string): string | Promise<string>
 ```
 
-Extension生命周期回调，在执行恢复数据时回调，由开发者实现自定义恢复数据处理。
+Callback to be called when the restore procedure is started.Developer could override this method to restore.
 
 **Since:** 12
 
@@ -364,14 +364,14 @@ Extension生命周期回调，在执行恢复数据时回调，由开发者实�
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| bundleVersion | [BundleVersion](arkts-corefile-application-backupextensionability-bundleversion-i.md) | Yes | 恢复时应用数据所在的版本信息。 |
-| restoreInfo | string | Yes | 恢复时框架传递给应用的扩展信息，参数为JSON格式字符串。 |
+| bundleVersion | [BundleVersion](arkts-corefile-application-backupextensionability-bundleversion-i.md) | Yes | Bundle version to be restore. |
+| restoreInfo | string | Yes | RestoreInfo to be restore, the param is a JSON string, it is an array, each array element includes detail and type now. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| string | 应用执行自定义恢复操作的信息，返回值为JSON格式字符串， 包含type、errorCode和errorInfo字段，支持同步返回或使用Promise异步返回。 |
+| string | Return restore result, support promise. the result is a JSON string, it includes type, errorCode and errorInfo now. |
 
 ## Examples
 
@@ -442,7 +442,7 @@ class BackupExt extends BackupExtensionAbility {
 context: BackupExtensionContext
 ```
 
-BackupExtensionAbility的上下文环境，继承自ExtensionContext。
+Indicates backup extension ability context.
 
 **Type:** [BackupExtensionContext](arkts-corefile-file-backupextensioncontext-backupextensioncontext-c.md)
 

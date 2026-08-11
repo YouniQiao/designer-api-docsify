@@ -12,7 +12,7 @@ import { abilityManager } from 'kits/@kit.AbilityKit';
 function notifyDebugAssertResult(sessionId: string, status: UserStatus): Promise<void>
 ```
 
-将断言调试结果通知应用程序。使用Promise异步回调。
+Notifies the application of the assertion result. This API uses a promise to return the result.
 
 **Since:** 12
 
@@ -32,23 +32,23 @@ function notifyDebugAssertResult(sessionId: string, status: UserStatus): Promise
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| sessionId | string | Yes | 指示AssertFault的请求ID。 |
-| status | [UserStatus](arkts-ability-abilitymanager-userstatus-e-sys.md) | Yes | 用户的操作状态。 |
+| sessionId | string | Yes | Session ID of the AssertFault. |
+| status | [UserStatus](arkts-ability-abilitymanager-userstatus-e-sys.md) | Yes | Assertion result of the user operation. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise对象。无返回结果的Promise对象。 |
+| Promise&lt;void&gt; | Promise that returns no value. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
-| 16000050 | Internal error. |
-| 201 | The application does not have permission to call the interface. |
-| 202 | Not system application. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| [16000050](../errorcode-ability.md#16000050-internal-error) | Internal error. |
+| [201](../../errorcode-universal.md#201-permission-denied) | The application does not have permission to call the interface. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system application. |
 
 ## Examples
 

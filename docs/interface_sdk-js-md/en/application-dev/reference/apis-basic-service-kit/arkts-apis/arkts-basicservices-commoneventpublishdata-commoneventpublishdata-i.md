@@ -1,10 +1,13 @@
 # CommonEventPublishData
 
-用于封装公共事件发布时携带的数据和属性，包括事件数据（code/data）、订阅者权限、订阅者包名、是否有序/粘性事件及附加参数等，支持发布方对公共事件接收方范围、事件投递顺序及粘性特性进行精细化控制，适用于需要限定接收方、传递自定义事件数据或实现有序/粘性公共事件等场景。
+This module encapsulates the data and attributes carried when a common event is published, including the event data (code/data), subscriber permissions, subscriber bundle name, whether the event is ordered or sticky, and additional parameters. It allows the publisher to precisely control the common event recipients, event delivery sequence, and sticky feature. This module is applicable to scenarios where the recipients need to be specified, custom event data needs to be transferred, and ordered/sticky common events need to be implemented.
 
-> **说明：**
+> **NOTE：**
 > 
-> 如果不加限制，任何应用都可以订阅公共事件并读取公共事件携带的信息，应避免在公共事件中携带敏感信息。通过本模块的subscriberPermissions和bundleName参数，可以限制公共事件接收方的范围。
+> If there is no restriction, any app can subscribe to common events and read the
+> information carried by the event. In this case, sensitive information should not be
+> carried in common events. The **subscriberPermissions** and **bundleName** parameters
+> of this module can be used to restrict the receiving scope of common events.
 
 **Since:** 7
 
@@ -20,7 +23,7 @@
 bundleName?: string
 ```
 
-表示订阅者包名，用于限定将公共事件发布给指定包名的订阅者。默认为空。当该参数为空时，表示不限制订阅者包名，所有订阅者都可以接收该公共事件。
+Bundle name of the subscriber, which is used to specify the subscriber to whom the common event is published. This parameter is left empty by default. When this parameter is empty, the bundle name of the subscriber is not specified, and all subscribers can receive the common event.
 
 **Type:** string
 
@@ -40,7 +43,7 @@ bundleName?: string
 code?: int
 ```
 
-表示发布方传递的公共事件数据。默认值为0。
+Common event data transferred by the publisher. The default value is **0**.
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
@@ -62,7 +65,7 @@ code?: int
 data?: string
 ```
 
-表示发布方传递的公共事件数据。数据大小不超过64KB，超出限制时，事件发布失败。默认为空。
+Common event data transferred by the publisher. The value is a string and cannot exceed 64 KB. If the value exceeds the limit, the event fails to be published. This parameter is left empty by default.
 
 **Type:** string
 
@@ -82,10 +85,12 @@ data?: string
 isOrdered?: boolean
 ```
 
-表示是否是有序公共事件。默认为false。
+Whether the common event is an ordered one. The default value is **false**.
 
-- true：有序公共事件，根据订阅者设置的优先级等级，优先将公共事件发送给优先级较高的订阅者，等待其成功接收该公共事件之后再将事件发送给优先级较低的订阅者。如果有多个订阅者具有相同的优先级，则他们将随机接收到公共事件。  
-- false：无序公共事件，不考虑订阅者是否接收到该事件，也不保证订阅者接收到该事件的顺序与其订阅顺序一致。
+- **true**: This event is an ordered common event. Based on the priority set by the subscriber, the common event is  
+preferentially sent to the subscriber with a higher priority. After the subscriber successfully receives the event,the public event is sent to the subscriber with a lower priority. Subscribers with the same priority receive common events in a random order.  
+- **false**: This event is an unordered common event. Whether subscribers receive the event is not considered, and   
+the common event which subscribers receive may not comply with the subscription sequence.
 
 **Type:** boolean
 
@@ -105,13 +110,16 @@ isOrdered?: boolean
 isSticky?: boolean
 ```
 
-表示是否是粘性公共事件。默认为false。
+Whether the common event is a sticky one. The default value is **false**.
 
-- true：粘性公共事件，能够让订阅者收到在订阅前已经发送的公共事件。  
-- false：普通公共事件，只能让订阅者收到在订阅后才发送的公共事件。
+- **true**: This event is a sticky common event, which allows subscribers to receive common events that have been   
+sent before subscription.  
+- **false**: This event is not a sticky common event, which allows subscribers to receive common events sent after   
+subscription.
 
-仅系统应用或系统服务允许发送粘性事件。
+Only system applications and system services are allowed to send sticky events.
 
+**Required Permissions**:   
 [ohos.permission.COMMONEVENT_STICKY](../../../security/AccessToken/permissions-for-all.md#ohospermissioncommonevent_sticky)
 
 **Type:** boolean
@@ -134,7 +142,7 @@ isSticky?: boolean
 parameters?: { [key: string]: any }
 ```
 
-表示发布方传递的公共事件的附加信息，以键值对形式携带自定义参数。默认为空。
+Additional information about the common event transferred by the publisher. Custom parameters are configured in a key-value pair format. This parameter is left empty by default.
 
 **Type:** { [key: string]: any }
 
@@ -154,7 +162,7 @@ parameters?: { [key: string]: any }
 subscriberPermissions?: Array<string>
 ```
 
-表示订阅者的权限，只有具备该权限的订阅者才能收到该公共事件。默认为空。当该参数为空时，表示不限制订阅者的权限，所有订阅者都可以接收该公共事件。
+Subscriber permissions. Only subscribers with the specified permissions can receive the common event. This parameter is left empty by default. When this parameter is empty, the subscriber permissions are not specified, and all subscribers can receive the common event.
 
 **Type:** Array&lt;string&gt;
 

@@ -1,6 +1,6 @@
 # Audio
 
-音频类型数据，是[File](arkts-arkdata-unifieddatachannel-file-c.md)的子类，用于描述音频文件。
+Represents audio data. It is a child class of [File](arkts-arkdata-unifieddatachannel-file-c.md) and is used to describe an audio file.
 
 **Inheritance/Implementation:** Audio extends [File](arkts-arkdata-unifieddatachannel-file-c.md)
 
@@ -24,7 +24,7 @@ import { unifiedDataChannel } from 'kits/@kit.ArkData';
 set audioUri(value: string)
 ```
 
-本地音频数据uri或网络音频uri，本地音频数据uri可通过[getUriFromPath](../../apis-core-file-kit/arkts-apis/arkts-corefile-fileuri-geturifrompath-f.md/arkts-corefile-fileuri-geturifrompath-f.md#geturifrompath)函数获取。
+Indicates the uri of audio
 
 **Type:** string
 

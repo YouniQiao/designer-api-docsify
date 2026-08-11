@@ -1,6 +1,6 @@
 # SwiperContentWillScrollResult
 
-滑动的相关信息，主要包括：当前页面对应的index、滑动方向上即将显示的页面index和此次滑动的位移。
+Provides information related to the upcoming scroll action, including the index of the current page, the index of the page that will be displayed in the scroll direction, and the displacement of the scroll action.
 
 **Since:** 15
 
@@ -16,7 +16,7 @@
 comingIndex: number
 ```
 
-滑动方向上即将显示的页面index。
+Index of the page that will be displayed in the scroll direction.
 
 **Type:** number
 
@@ -40,7 +40,7 @@ comingIndex: number
 currentIndex: number
 ```
 
-当前页面对应的index。在一次跟手滑动过程中，只要手指未离开屏幕，该值将保持不变，即使该页面已完全移出视窗，如在涉及多个页面的场景中。
+Index of the current page. During a finger swipe, this value remains constant as long as the finger is on the screen, even if the page has completely moved out of view.
 
 **Type:** number
 
@@ -64,9 +64,9 @@ currentIndex: number
 offset: number
 ```
 
-此次滑动的位移，带有符号，正负分别指示不同的翻页方向。正数表示从index=1向index=0翻页，负数表示从index=0向index=1翻页。
+Displacement of the scroll action, which is signed to indicate different swipe directions. A positive value indicates a swipe from index=1 to index=0, while a negative value indicates a swipe from index=0 to index=1.
 
-在手指滑动的场景中，该值为滑动事件中每帧传递下来的偏移量。在滚动鼠标滚轮和使用键盘方向键导航的场景中，该值代表即将翻页的距离。
+This value represents the offset for each frame during a finger swipe and the distance for page turning when the mouse wheel or keyboard navigation is used.
 
 **Type:** number
 

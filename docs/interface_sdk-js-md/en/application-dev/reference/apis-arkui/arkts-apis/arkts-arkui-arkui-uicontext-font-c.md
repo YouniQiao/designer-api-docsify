@@ -22,7 +22,7 @@ import { OverlayManager, FrameCallback, ResolvedUIContext, NodeRenderStateChange
 getFontByName(fontName: string): font.FontInfo
 ```
 
-根据名称获取系统字体的详细信息。
+Get font details according to the font name.
 
 **Since:** 23
 
@@ -76,7 +76,7 @@ Gets a list of fonts supported by system.
 registerFont(options: font.FontOptions): void
 ```
 
-在字体管理器中注册自定义字体。
+Register a customized font in the FontManager.
 
 **Since:** 23
 

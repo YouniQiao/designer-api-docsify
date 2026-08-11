@@ -24,7 +24,7 @@ global \$rawfile function
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | string | Yes |  |
+| value | string | Yes | name of the file in the resources/rawfile directory of the project. When referencing resources of the Resource type, make sure the data type is the same as that of the attribute method. For example, if an attribute method supports the string \| Resource types, the data type of the Resource type must be string. |
 
 **Return value:**
 

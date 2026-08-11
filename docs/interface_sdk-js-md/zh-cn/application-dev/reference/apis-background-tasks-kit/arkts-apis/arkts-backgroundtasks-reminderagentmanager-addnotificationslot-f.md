@@ -1,11 +1,5 @@
 # addNotificationSlot
 
-## 导入模块
-
-```TypeScript
-import { reminderAgentManager } from 'kits/@kit.BackgroundTasksKit';
-```
-
 ## addNotificationSlot
 
 ```TypeScript
@@ -33,9 +27,11 @@ function addNotificationSlot(slot: NotificationSlot, callback: AsyncCallback<voi
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 401 | If the input parameter is not valid parameter. |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | If the input parameter is not valid parameter. |
 
 ## 示例
+
+ArkTS-Dyn示例：
 
 ```TypeScript
 import { notificationManager } from '@kit.NotificationKit';
@@ -53,6 +49,28 @@ reminderAgentManager.addNotificationSlot(mySlot, (err: BusinessError) => {
     console.info("addNotificationSlot callback");
   }
 });
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+import { notificationManager } from '@kit.NotificationKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+import { reminderAgentManager } from '@kit.BackgroundTasksKit';
+
+let addCallback = (err: BusinessError | null) => {
+  if (err) {
+    console.error(`Failed to add slot. Code is ${err.code}, message is ${err.message}`);
+  } else {
+    console.info(`Succeeded in adding slot.`);
+  }
+}
+
+let mySlot: notificationManager.NotificationSlot = {
+  notificationType: notificationManager.SlotType.SOCIAL_COMMUNICATION
+}
+
+reminderAgentManager.addNotificationSlot(mySlot, addCallback);
 ```
 
 
@@ -88,9 +106,11 @@ function addNotificationSlot(slot: NotificationSlot): Promise<void>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 401 | If the input parameter is not valid parameter. |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | If the input parameter is not valid parameter. |
 
 ## 示例
+
+ArkTS-Dyn示例：
 
 ```TypeScript
 import { notificationManager } from '@kit.NotificationKit';
@@ -104,6 +124,22 @@ reminderAgentManager.addNotificationSlot(mySlot).then(() => {
   console.info("addNotificationSlot promise");
 }).catch((err: BusinessError) => {
   console.error("promise err code:" + err.code + " message:" + err.message);
+});
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+import { notificationManager } from '@kit.NotificationKit';
+import { reminderAgentManager } from '@kit.BackgroundTasksKit';
+
+let mySlot: notificationManager.NotificationSlot = {
+  notificationType: notificationManager.SlotType.SOCIAL_COMMUNICATION
+}
+reminderAgentManager.addNotificationSlot(mySlot).then(() => {
+  console.info(`Succeeded in adding slot.`);
+}).catch((err): void => {
+  console.error(`Failed to add slot. Code is ${err.code}, message is ${err.message}`);
 });
 ```
 

@@ -1,6 +1,6 @@
 # ScrollBarOptions
 
-定义滚动条的参数选项。
+Defines the options of ScrollBar.
 
 **Since:** 23
 
@@ -16,7 +16,7 @@
 direction?: ScrollBarDirection
 ```
 
-设置滚动条的方向。
+Sets the direction of scroll bar.
 
 **Type:** [ScrollBarDirection](../arkts-components/arkts-arkui-scrollbardirection-e.md)
 
@@ -36,7 +36,7 @@ direction?: ScrollBarDirection
 scroller: Scroller
 ```
 
-设置滚动条的控制器。
+Sets the scroller of scroll bar.
 
 **Type:** [Scroller](../arkts-components/arkts-arkui-scroller-c.md)
 
@@ -56,7 +56,7 @@ scroller: Scroller
 state?: BarState
 ```
 
-设置滚动条的状态。
+Sets the state of scroll bar.
 
 **Type:** [BarState](arkts-arkui-barstate-e.md)
 

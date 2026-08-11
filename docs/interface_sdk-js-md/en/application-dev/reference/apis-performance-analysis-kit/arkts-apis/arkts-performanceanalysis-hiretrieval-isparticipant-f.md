@@ -12,7 +12,7 @@ import { hiRetrieval } from 'kits/@kit.PerformanceAnalysisKit';
 function isParticipant(): boolean
 ```
 
-查询此设备是否正在参与应用灰度活动。
+Query if the app is participating the HiRetrieval project.
 
 **Since:** 26.0.0
 
@@ -28,5 +28,5 @@ function isParticipant(): boolean
 
 | Type | Description |
 | --- | --- |
-| boolean | 标识此设备现在是否正在参与应用灰度活动，true表示正在参与，false表示未参与。 |
+| boolean | Returns true if this app is participating HiRetrieval project, false otherwise. |
 

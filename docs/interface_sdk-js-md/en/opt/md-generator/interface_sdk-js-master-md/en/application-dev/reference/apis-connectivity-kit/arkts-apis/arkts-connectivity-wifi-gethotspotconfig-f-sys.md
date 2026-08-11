@@ -1,0 +1,48 @@
+# getHotspotConfig (System API)
+
+## Modules to Import
+
+```TypeScript
+import { wifi } from 'kits/@kit.ConnectivityKit';
+```
+
+## getHotspotConfig
+
+```TypeScript
+function getHotspotConfig(): HotspotConfig
+```
+
+Obtains the Wi-Fi hotspot configuration.
+
+**Since:** 7
+
+**Deprecated since:** 9
+
+**Substitutes:** ohos.wifiManager/wifiManager.getHotspotConfig
+
+**Required permissions:** ohos.permission.GET_WIFI_INFO and ohos.permission.GET_WIFI_CONFIG
+
+<!--Device-wifi-function getHotspotConfig(): HotspotConfig--><!--Device-wifi-function getHotspotConfig(): HotspotConfig-End-->
+
+**System capability:** SystemCapability.Communication.WiFi.AP.Core
+
+**System API:** This is a system API.
+
+**Return value:**
+
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| [HotspotConfig](arkts-connectivity-wifi-hotspotconfig-i-sys.md) |
+
+## Examples
+
+```TypeScript
+import wifi from '@ohos.wifi';
+
+try {
+    let config = wifi.getHotspotConfig();
+    console.info("result:" + JSON.stringify(config));        
+}catch(error){
+    console.error("failed:" + JSON.stringify(error));
+}
+```

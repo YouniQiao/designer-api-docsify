@@ -12,7 +12,7 @@ import { process } from 'kits/@kit.ArkTS';
 function chdir(dir: string): void
 ```
 
-修改当前目录。
+Change current directory
 
 **Since:** 7
 
@@ -28,5 +28,5 @@ function chdir(dir: string): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| dir | string | Yes | 要切换到的路径。 |
+| dir | string | Yes | The path you want to change. |
 

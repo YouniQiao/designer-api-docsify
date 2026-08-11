@@ -10,12 +10,6 @@
 
 **系统能力：** SystemCapability.DistributedDataManager.CloudSync.Client
 
-## 导入模块
-
-```TypeScript
-import { relationalStore } from 'kits/@kit.ArkData';
-```
-
 ## downloadOnly
 
 ```TypeScript

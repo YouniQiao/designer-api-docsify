@@ -1,6 +1,6 @@
 # TextChangeReason (System API)
 
-组件内容变化原因。
+Enumerates the reasons for component content changes.
 
 **Since:** 20
 
@@ -18,7 +18,7 @@
 UNKNOWN = 0
 ```
 
-未知原因。
+Unknown reason.
 
 **Since:** 20
 
@@ -38,7 +38,7 @@ UNKNOWN = 0
 INPUT = 1
 ```
 
-用户输入。
+User input.
 
 **Since:** 20
 
@@ -58,7 +58,7 @@ INPUT = 1
 PASTE = 2
 ```
 
-粘贴。
+Paste operation.
 
 **Since:** 20
 
@@ -78,7 +78,7 @@ PASTE = 2
 CUT = 3
 ```
 
-剪切。
+Cut operation.
 
 **Since:** 20
 
@@ -98,7 +98,7 @@ CUT = 3
 DRAG = 4
 ```
 
-拖拽。
+Drag and drop operation.
 
 **Since:** 20
 
@@ -118,7 +118,7 @@ DRAG = 4
 AUTO_FILL = 5
 ```
 
-自动填充。
+Auto-fill operation.
 
 **Since:** 20
 
@@ -138,7 +138,7 @@ AUTO_FILL = 5
 AI_WRITE = 6
 ```
 
-AI帮写。
+AI-assisted writing.
 
 **Since:** 20
 
@@ -158,7 +158,7 @@ AI帮写。
 REDO = 7
 ```
 
-重做。
+Redo operation.
 
 **Since:** 20
 
@@ -178,7 +178,7 @@ REDO = 7
 UNDO = 8
 ```
 
-撤销。
+Undo operation.
 
 **Since:** 20
 
@@ -198,7 +198,7 @@ UNDO = 8
 CONTROLLER = 9
 ```
 
-开发者调用组件接口。
+Component API call.
 
 **Since:** 20
 
@@ -218,7 +218,7 @@ CONTROLLER = 9
 ACCESSIBILITY = 10
 ```
 
-无障碍接口。
+Accessibility API.
 
 **Since:** 20
 
@@ -238,7 +238,7 @@ ACCESSIBILITY = 10
 COLLABORATION = 11
 ```
 
-跨端拍照。
+Cross-device photographing.
 
 **Since:** 20
 
@@ -258,7 +258,7 @@ COLLABORATION = 11
 STYLUS = 12
 ```
 
-手写笔。
+Stylus input.
 
 **Since:** 20
 

@@ -1,7 +1,7 @@
 # AsyKeyGenerator
 
-非对称密钥生成器接口，定义生成非对称密钥的方法。调用前，需通过  
-[createAsyKeyGenerator](arkts-cryptoarchitecture-cryptoframework-createasykeygenerator-f.md#createasykeygenerator)方法创建一个AsyKeyGenerator实例。
+Asymmetric key generator interface, defining methods for generating asymmetric keys. Before use, you must create an  
+**AsyKeyGenerator** instance by using [createAsyKeyGenerator](arkts-cryptoarchitecture-cryptoframework-createasykeygenerator-f.md#createasykeygenerator).
 
 **Since:** 9
 
@@ -25,7 +25,7 @@ import { cryptoFramework } from 'kits/@kit.CryptoArchitectureKit';
 convertKey(pubKey: DataBlob, priKey: DataBlob, callback: AsyncCallback<KeyPair>): void
 ```
 
-将非对称密钥数据转换为密钥对对象。使用callback异步回调。
+Converts asymmetric key data to a key pair object. This API uses an asynchronous callback to return the result.
 
 **Since:** 9
 
@@ -43,18 +43,18 @@ convertKey(pubKey: DataBlob, priKey: DataBlob, callback: AsyncCallback<KeyPair>)
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| pubKey | [DataBlob](arkts-cryptoarchitecture-cryptoframework-datablob-i.md) | Yes | 公钥材料。 |
-| priKey | [DataBlob](arkts-cryptoarchitecture-cryptoframework-datablob-i.md) | Yes | 私钥材料。 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;KeyPair&gt; | Yes | 回调函数。当生成非对称密钥成功时，err为undefined，data为获取到的KeyPair；否则 为错误对象。 |
+| pubKey | [DataBlob](arkts-cryptoarchitecture-cryptoframework-datablob-i.md) | Yes | The public key data blob. |
+| priKey | [DataBlob](arkts-cryptoarchitecture-cryptoframework-datablob-i.md) | Yes | The private key data blob. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;KeyPair&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined**, and **data** is the asymmetric key pair obtained. Otherwise, **err** is an error object. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | 非法入参。可能的原因： &lt;br&gt;1. 必填参数未指定； &lt;br&gt;2. 参数类型不正确； &lt;br&gt;3. 参数验证失败。 |
-| 17630001 | 密码操作错误。 |
-| 17620001 | 内存操作失败。 |
-| 17620003 | 参数检查失败。<br>**Applicable version:** 26.0.0 and later |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Invalid parameters. Possible causes: &lt;br&gt;1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; &lt;br&gt;3. Parameter verification failed. |
+| [17630001](../errorcode-crypto-framework.md#17630001-cryptographic-operation-error) | Crypto operation error. |
+| [17620001](../errorcode-crypto-framework.md#17620001-memory-operation-failed) | Memory operation failed. |
+| [17620003](../errorcode-crypto-framework.md#17620003-parameter-check-failed) | Parameter check failed.<br>**Applicable version:** 26.0.0 and later |
 
 ## convertKey
 
@@ -62,7 +62,7 @@ convertKey(pubKey: DataBlob, priKey: DataBlob, callback: AsyncCallback<KeyPair>)
 convertKey(pubKey: DataBlob | null, priKey: DataBlob | null, callback: AsyncCallback<KeyPair>): void
 ```
 
-获取指定数据生成非对称密钥。使用callback异步回调。
+Converts data into an asymmetric key pair. This API uses an asynchronous callback to return the result.
 
 **Since:** 10
 
@@ -80,18 +80,18 @@ convertKey(pubKey: DataBlob | null, priKey: DataBlob | null, callback: AsyncCall
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| pubKey | [DataBlob](arkts-cryptoarchitecture-cryptoframework-datablob-i.md) \| null | Yes | 指定的公钥材料。如果公钥不需要转换，请传入null。API 10之前只支持DataBlob， API 10之后增 加支持null。 |
-| priKey | [DataBlob](arkts-cryptoarchitecture-cryptoframework-datablob-i.md) \| null | Yes | 指定的私钥材料。如果私钥不需要转换，请传入null。API 10之前只支持DataBlob， API 10之后增 加支持null。 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;KeyPair&gt; | Yes | 回调函数。当生成非对称密钥成功时，err为undefined，data为获取到的KeyPair；否则 为错误对象。 |
+| pubKey | [DataBlob](arkts-cryptoarchitecture-cryptoframework-datablob-i.md) \| null | Yes | Public key material to convert. If no public key needs to be converted, set this parameter to **null**. In versions earlier than API version 10, only **DataBlob** is supported. Since API version 10, **null** is also supported. |
+| priKey | [DataBlob](arkts-cryptoarchitecture-cryptoframework-datablob-i.md) \| null | Yes | Private key material to convert. If no private key needs to be converted, set this parameter to **null**. In versions earlier than API version 10, only **DataBlob** is supported. Since API version 10, **null** is also supported. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;KeyPair&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined**, and **data** is the key pair obtained. Otherwise, **err** is an error object. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | 非法入参。可能的原因： &lt;br&gt;1. 必填参数未指定； &lt;br&gt;2. 参数类型不正确； &lt;br&gt;3. 参数验证失败。 |
-| 17630001 | 密码操作错误。 |
-| 17620001 | 内存操作失败。 |
-| 17620003 | 参数检查失败。<br>**Applicable version:** 26.0.0 and later |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Invalid parameters. Possible causes: &lt;br&gt;1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; &lt;br&gt;3. Parameter verification failed. |
+| [17630001](../errorcode-crypto-framework.md#17630001-cryptographic-operation-error) | Crypto operation error. |
+| [17620001](../errorcode-crypto-framework.md#17620001-memory-operation-failed) | Memory operation failed. |
+| [17620003](../errorcode-crypto-framework.md#17620003-parameter-check-failed) | Parameter check failed.<br>**Applicable version:** 26.0.0 and later |
 
 ## Examples
 
@@ -111,7 +111,7 @@ let priKeyBlob: cryptoFramework.DataBlob = { data: priKeyArray }; // Binary data
 let asyKeyGenerator = cryptoFramework.createAsyKeyGenerator('ECC256');
 asyKeyGenerator.convertKey(pubKeyBlob, priKeyBlob, (err, keyPair) => {
   if (err) {
-    console.error(`convertKey failed, errCode: ${err.code}, errMsg: ${err.message}`);
+    console.error('convertKey result: fail.');
     return;
   }
   console.info('convertKey result: success.');
@@ -124,7 +124,7 @@ asyKeyGenerator.convertKey(pubKeyBlob, priKeyBlob, (err, keyPair) => {
 convertKey(pubKey: DataBlob, priKey: DataBlob): Promise<KeyPair>
 ```
 
-将非对称密钥数据转换为密钥对对象。使用Promise异步回调。
+Converts asymmetric key data to a key pair object. This API uses a promise to return the result.
 
 **Since:** 9
 
@@ -142,23 +142,23 @@ convertKey(pubKey: DataBlob, priKey: DataBlob): Promise<KeyPair>
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| pubKey | [DataBlob](arkts-cryptoarchitecture-cryptoframework-datablob-i.md) | Yes | 公钥材料。 |
-| priKey | [DataBlob](arkts-cryptoarchitecture-cryptoframework-datablob-i.md) | Yes | 私钥材料。 |
+| pubKey | [DataBlob](arkts-cryptoarchitecture-cryptoframework-datablob-i.md) | Yes | The public key data blob. |
+| priKey | [DataBlob](arkts-cryptoarchitecture-cryptoframework-datablob-i.md) | Yes | The private key data blob. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;KeyPair&gt; | Promise对象，返回非对称密钥KeyPair。 |
+| Promise&lt;KeyPair&gt; | Promise used to return the asymmetric key pair. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | 非法入参。可能的原因： &lt;br&gt;1. 必填参数未指定； &lt;br&gt;2. 参数类型不正确； &lt;br&gt;3. 参数验证失败。 |
-| 17630001 | 密码操作错误。 |
-| 17620001 | 内存操作失败。 |
-| 17620003 | 参数检查失败。<br>**Applicable version:** 26.0.0 and later |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Invalid parameters. Possible causes: &lt;br&gt;1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; &lt;br&gt;3. Parameter verification failed. |
+| [17630001](../errorcode-crypto-framework.md#17630001-cryptographic-operation-error) | Crypto operation error. |
+| [17620001](../errorcode-crypto-framework.md#17620001-memory-operation-failed) | Memory operation failed. |
+| [17620003](../errorcode-crypto-framework.md#17620003-parameter-check-failed) | Parameter check failed.<br>**Applicable version:** 26.0.0 and later |
 
 ## convertKey
 
@@ -166,7 +166,7 @@ convertKey(pubKey: DataBlob, priKey: DataBlob): Promise<KeyPair>
 convertKey(pubKey: DataBlob | null, priKey: DataBlob | null): Promise<KeyPair>
 ```
 
-获取指定数据生成非对称密钥。使用Promise异步回调。
+Converts data into an asymmetric key pair. This API uses a promise to return the result.
 
 **Since:** 10
 
@@ -184,23 +184,23 @@ convertKey(pubKey: DataBlob | null, priKey: DataBlob | null): Promise<KeyPair>
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| pubKey | [DataBlob](arkts-cryptoarchitecture-cryptoframework-datablob-i.md) \| null | Yes | 指定的公钥材料。如果公钥不需要转换，请传入null。API 10之前只支持DataBlob， API 10之后增 加支持null。 |
-| priKey | [DataBlob](arkts-cryptoarchitecture-cryptoframework-datablob-i.md) \| null | Yes | 指定的私钥材料。如果私钥不需要转换，请传入null。API 10之前只支持DataBlob， API 10之后增 加支持null。 |
+| pubKey | [DataBlob](arkts-cryptoarchitecture-cryptoframework-datablob-i.md) \| null | Yes | Public key material to convert. If no public key needs to be converted, set this parameter to **null**. In versions earlier than API version 10, only **DataBlob** is supported. Since API version 10, **null** is also supported. |
+| priKey | [DataBlob](arkts-cryptoarchitecture-cryptoframework-datablob-i.md) \| null | Yes | Private key material to convert. If no private key needs to be converted, set this parameter to **null**. In versions earlier than API version 10, only **DataBlob** is supported. Since API version 10, **null** is also supported. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;KeyPair&gt; | Promise对象，返回非对称密钥KeyPair。 |
+| Promise&lt;KeyPair&gt; | Promise used to return the asymmetric key pair. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | 非法入参。可能的原因： &lt;br&gt;1. 必填参数未指定； &lt;br&gt;2. 参数类型不正确； &lt;br&gt;3. 参数验证失败。 |
-| 17630001 | 密码操作错误。 |
-| 17620001 | 内存操作失败。 |
-| 17620003 | 参数检查失败。<br>**Applicable version:** 26.0.0 and later |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Invalid parameters. Possible causes: &lt;br&gt;1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; &lt;br&gt;3. Parameter verification failed. |
+| [17630001](../errorcode-crypto-framework.md#17630001-cryptographic-operation-error) | Crypto operation error. |
+| [17620001](../errorcode-crypto-framework.md#17620001-memory-operation-failed) | Memory operation failed. |
+| [17620003](../errorcode-crypto-framework.md#17620003-parameter-check-failed) | Parameter check failed.<br>**Applicable version:** 26.0.0 and later |
 
 ## Examples
 
@@ -233,9 +233,9 @@ keyGenPromise.then(keyPair => {
 convertKeySync(pubKey: DataBlob | null, priKey: DataBlob | null): KeyPair
 ```
 
-同步获取指定数据生成非对称密钥。
+Converts data into an asymmetric key pair. This API returns the result synchronously.
 
-&lt;br&gt;&lt;br&gt;**说明：**&lt;br&gt;建议优先使用异步API，{@link convertKey}。同步API可能因系统繁忙、高负载等原因耗时较长而阻塞主线程。因此建议在子线程中调用同步API，以避免阻塞主线程。
+&lt;br&gt;&lt;br&gt;**NOTE：**&lt;br&gt;It is recommended to prioritize the use of asynchronous API, {@link convertKey}. Synchronous API may take a long time and block the main thread due to system busyness, high load, and other reasons. Therefore,it is advised to invoke synchronous API within a child thread to avoid blocking the main thread.
 
 **Since:** 12
 
@@ -251,23 +251,23 @@ convertKeySync(pubKey: DataBlob | null, priKey: DataBlob | null): KeyPair
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| pubKey | [DataBlob](arkts-cryptoarchitecture-cryptoframework-datablob-i.md) \| null | Yes | 指定公钥材料。如果公钥无需转换，请传入null。API 10前仅支持DataBlob，API 10起支持传入 null。 |
-| priKey | [DataBlob](arkts-cryptoarchitecture-cryptoframework-datablob-i.md) \| null | Yes | 指定私钥材料。如果私钥无需转换，请传入null。API 10前仅支持DataBlob，API 10起支持传入 null。 |
+| pubKey | [DataBlob](arkts-cryptoarchitecture-cryptoframework-datablob-i.md) \| null | Yes | Public key material. If no public key needs to be converted, set this parameter to **null**. Before API version 10, only **DataBlob** is supported. Since API version 10, **null** can be passed in. |
+| priKey | [DataBlob](arkts-cryptoarchitecture-cryptoframework-datablob-i.md) \| null | Yes | Private key material. If no private key needs to be converted, set this parameter to **null**. Before API version 10, only **DataBlob** is supported. Since API version 10, **null** can be passed in. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [KeyPair](arkts-cryptoarchitecture-cryptoframework-keypair-i.md) | 非对称密钥。 |
+| [KeyPair](arkts-cryptoarchitecture-cryptoframework-keypair-i.md) | Asymmetric key pair. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | 非法入参。可能的原因： &lt;br&gt;1. 必填参数未指定； &lt;br&gt;2. 参数类型不正确； &lt;br&gt;3. 参数验证失败。 |
-| 17630001 | 密码操作错误。 |
-| 17620001 | 内存操作失败。 |
-| 17620003 | 参数检查失败。<br>**Applicable version:** 26.0.0 and later |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Invalid parameters. Possible causes: &lt;br&gt;1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; &lt;br&gt;3. Parameter verification failed. |
+| [17630001](../errorcode-crypto-framework.md#17630001-cryptographic-operation-error) | Crypto operation error. |
+| [17620001](../errorcode-crypto-framework.md#17620001-memory-operation-failed) | Memory operation failed. |
+| [17620003](../errorcode-crypto-framework.md#17620003-parameter-check-failed) | Parameter check failed.<br>**Applicable version:** 26.0.0 and later |
 
 ## Examples
 
@@ -303,16 +303,19 @@ try {
 convertPemKey(pubKey: string | null, priKey: string | null): Promise<KeyPair>
 ```
 
-获取指定数据生成非对称密钥。使用Promise异步回调。
+Converts data into an asymmetric key pair. This API uses a promise to return the result.
 
-> **说明：**
+> **NOTE：**
 > 
-> 1. 使用convertPemKey()将外部字符串转换为Crypto框架定义的非对称密钥对象时，公钥需满足ASN.1语法、X.509规范和PEM编码格式，私钥需
-> 满足ASN.1语法、PKCS#8规范和PEM编码格式。
-> 2. 在convertPemKey()中，可以只传入pubKey或priKey中的一个，也可以两个都传入。如果只传入其中一个，返回的KeyPair实例中只包含从传
-> 入数据转换而来的密钥。
-> 3. 使用convertPemKey将外部字符串转换为Crypto框架定义的非对称密钥对象时，系统不会校验生成的密钥对象规格是否与为非对称密钥生成器指
-> 定的密钥规格相同。
+> 1. When **convertPemKey()** is used to convert an external string into an asymmetric key object defined by
+> the Crypto framework, the public key must comply with the ASN.1 syntax, X.509 specifications, and PEM
+> encoding format, and the private key must comply with the ASN.1 syntax, PKCS #8 specifications, and PEM
+> encoding format.
+> 2. In **convertPemKey()**, you can pass in either **pubKey** or **priKey**, or both of them. If one of them is
+> passed in, the returned **KeyPair** instance contains only the key converted from the data you passed in.
+> 3. When **convertPemKey** is used to convert an external string into an asymmetric key object defined by the
+> Crypto framework, the system does not verify whether the specifications of the generated key object are the
+> same as the key specifications specified for the asymmetric key generator.
 
 **Since:** 12
 
@@ -328,23 +331,23 @@ convertPemKey(pubKey: string | null, priKey: string | null): Promise<KeyPair>
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| pubKey | string \| null | Yes | 指定的公钥材料。如果公钥不需要转换，请传入null。 |
-| priKey | string \| null | Yes | 指定的私钥材料。如果私钥不需要转换，请传入null。&lt;br&gt;**说明：**公钥和私钥材料不能同时为null 或空字符串。 |
+| pubKey | string \| null | Yes | Public key material to convert. If no public key needs to be converted, set this parameter to **null**. |
+| priKey | string \| null | Yes | Private key material to convert. If no private key needs to be converted, set this parameter to **null**.&lt;br&gt;Note: The public key and private key materials cannot be both null or empty strings. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;KeyPair&gt; | Promise对象，返回非对称密钥KeyPair。 |
+| Promise&lt;KeyPair&gt; | Promise used to return the asymmetric key pair. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | 非法入参。可能的原因： &lt;br&gt;1. 必填参数未指定； &lt;br&gt;2. 参数类型不正确； &lt;br&gt;3. 参数验证失败。 |
-| 17630001 | 密码操作错误。 |
-| 17620001 | 内存操作失败。 |
-| 17620003 | 参数检查失败。<br>**Applicable version:** 26.0.0 and later |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Invalid parameters. Possible causes: &lt;br&gt;1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; &lt;br&gt;3. Parameter verification failed. |
+| [17630001](../errorcode-crypto-framework.md#17630001-cryptographic-operation-error) | Crypto operation error. |
+| [17620001](../errorcode-crypto-framework.md#17620001-memory-operation-failed) | Memory operation failed. |
+| [17620003](../errorcode-crypto-framework.md#17620003-parameter-check-failed) | Parameter check failed.<br>**Applicable version:** 26.0.0 and later |
 
 ## Examples
 
@@ -392,17 +395,20 @@ async function TestConvertPemKeyByPromise() {
 convertPemKey(pubKey: string | null, priKey: string | null, password: string): Promise<KeyPair>
 ```
 
-获取指定数据生成非对称密钥。支持加密的私钥，同步传入私钥口令解密私钥。使用Promise异步回调。
+Converts data into an asymmetric key pair. Encrypted private keys are supported. The private key password is synchronously passed to decrypt the private key. This API uses a promise to return the result.
 
-> **说明：**
+> **NOTE：**
 > 
-> 1. 使用convertPemKey()将外部字符串转换为Crypto框架定义的非对称密钥对象时，公钥需满足ASN.1语法、X.509规范和PEM编码格式，私钥需
-> 满足ASN.1语法、PKCS#8规范和PEM编码格式。
-> 2. 在convertPemKey()中，可以只传入pubKey或priKey中的一个，也可以两个都传入。如果只传入其中一个，返回的KeyPair实例中只包含从传
-> 入数据转换而来的密钥。
-> 3. 使用convertPemKey将外部字符串转换为Crypto框架定义的非对称密钥对象时，系统不会校验生成的密钥对象规格是否与为非对称密钥生成器指
-> 定的密钥规格相同。
-> 4. 如果传入了password参数，可用于解密加密的私钥。
+> 1. When **convertPemKey()** is used to convert an external string into an asymmetric key object defined by
+> the Crypto framework, the public key must comply with the ASN.1 syntax, X.509 specifications, and PEM
+> encoding format, and the private key must comply with the ASN.1 syntax, PKCS #8 specifications, and PEM
+> encoding format.
+> 2. In **convertPemKey()**, you can pass in either **pubKey** or **priKey**, or both of them. If one of them is
+> passed in, the returned **KeyPair** instance contains only the key converted from the data you passed in.
+> 3. When **convertPemKey** is used to convert an external string into an asymmetric key object defined by the
+> Crypto framework, the system does not verify whether the specifications of the generated key object are the
+> same as the key specifications specified for the asymmetric key generator.
+> 4. If **password** is passed in, it can be used to decrypt the encrypted private key.
 
 **Since:** 18
 
@@ -418,23 +424,23 @@ convertPemKey(pubKey: string | null, priKey: string | null, password: string): P
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| pubKey | string \| null | Yes | 指定的公钥材料。如果公钥不需要转换，请传入null。 |
-| priKey | string \| null | Yes | 指定的私钥材料。如果私钥不需要转换，请传入null。&lt;br&gt;**说明：**公钥和私钥材料不能同时为null 或空字符串。 |
-| password | string | Yes | 指定口令，用于解密私钥。 |
+| pubKey | string \| null | Yes | Public key material to convert. If no public key needs to be converted, set this parameter to **null**. |
+| priKey | string \| null | Yes | Private key material to convert. If no private key needs to be converted, set this parameter to **null**.&lt;br&gt;Note: The public key and private key materials cannot be both null or empty strings. |
+| password | string | Yes | Password used to decrypt the private key. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;KeyPair&gt; | Promise对象，返回非对称密钥KeyPair。 |
+| Promise&lt;KeyPair&gt; | Promise used to return the asymmetric key pair. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | 非法入参。可能的原因： &lt;br&gt;1. 必填参数未指定； &lt;br&gt;2. 参数类型不正确； &lt;br&gt;3. 参数验证失败。 |
-| 17630001 | 密码操作错误。 |
-| 17620001 | 内存操作失败。 |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Invalid parameters. Possible causes: &lt;br&gt;1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; &lt;br&gt;3. Parameter verification failed. |
+| [17630001](../errorcode-crypto-framework.md#17630001-cryptographic-operation-error) | Crypto operation error. |
+| [17620001](../errorcode-crypto-framework.md#17620001-memory-operation-failed) | Memory operation failed. |
 
 ## Examples
 
@@ -478,14 +484,15 @@ async function TestConvertPemKeyByPromise() {
 convertPemKeySync(pubKey: string | null, priKey: string | null): KeyPair
 ```
 
-同步获取指定数据，生成非对称密钥。
+Converts data into an asymmetric key pair. This API returns the result synchronously.
 
-> **说明：**
-> convertPemKeySync接口与convertPemKey接口注意事项相同，见
+> **NOTE：**
+> The precautions for using **convertPemKeySync** are the same as those for **convertPemKey**. For details, see
+> the description of
 > [convertPemKey](arkts-cryptoarchitecture-cryptoframework-asykeygenerator-i.md#convertpemkey)
-> 接口说明。
+> .
 
-&lt;br&gt;&lt;br&gt;**说明：**&lt;br&gt;建议优先使用异步API，{@link convertPemKey}。同步API可能因系统繁忙、高负载等原因耗时较长而阻塞主线程。因此建议在子线程中调用同步API，以避免阻塞主线程。
+&lt;br&gt;&lt;br&gt;**NOTE：**&lt;br&gt;It is recommended to prioritize the use of asynchronous API, {@link convertPemKey}. Synchronous API may take a long time and block the main thread due to system busyness, high load, and other reasons. Therefore,it is advised to invoke synchronous API within a child thread to avoid blocking the main thread.
 
 **Since:** 12
 
@@ -501,23 +508,23 @@ convertPemKeySync(pubKey: string | null, priKey: string | null): KeyPair
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| pubKey | string \| null | Yes | 指定的公钥材料。如果公钥不需要转换，请传入null。 |
-| priKey | string \| null | Yes | 指定私钥材料。私钥无需转换时，请传入null。&lt;br&gt;**说明：**公钥和私钥材料不能同时为null或 空字符串。 |
+| pubKey | string \| null | Yes | Public key material to convert. If no public key needs to be converted, set this parameter to **null**. |
+| priKey | string \| null | Yes | Private key material. If no private key needs to be converted, set this parameter to **null**.&lt;br&gt;Note: The public key and private key materials cannot be both null or empty strings. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [KeyPair](arkts-cryptoarchitecture-cryptoframework-keypair-i.md) | 非对称密钥。 |
+| [KeyPair](arkts-cryptoarchitecture-cryptoframework-keypair-i.md) | Asymmetric key pair. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | 非法入参。可能的原因： &lt;br&gt;1. 必填参数未指定； &lt;br&gt;2. 参数类型不正确； &lt;br&gt;3. 参数验证失败。 |
-| 17630001 | 密码操作错误。 |
-| 17620001 | 内存操作失败。 |
-| 17620003 | 参数检查失败。<br>**Applicable version:** 26.0.0 and later |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Invalid parameters. Possible causes: &lt;br&gt;1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; &lt;br&gt;3. Parameter verification failed. |
+| [17630001](../errorcode-crypto-framework.md#17630001-cryptographic-operation-error) | Crypto operation error. |
+| [17620001](../errorcode-crypto-framework.md#17620001-memory-operation-failed) | Memory operation failed. |
+| [17620003](../errorcode-crypto-framework.md#17620003-parameter-check-failed) | Parameter check failed.<br>**Applicable version:** 26.0.0 and later |
 
 ## Examples
 
@@ -568,14 +575,14 @@ function TestConvertPemKeyBySync() {
 convertPemKeySync(pubKey: string | null, priKey: string | null, password: string): KeyPair
 ```
 
-获取指定数据生成非对称密钥。支持加密的私钥，同步传入私钥口令解密私钥。
+Converts data into an asymmetric key pair. Encrypted private keys are supported. The private key password is synchronously passed to decrypt the private key.
 
-> **说明：**
-> convertPemKeySync接口与convertPemKey接口注意事项相同，见
+> **NOTE：**
+> The precautions for using **convertPemKeySync** are the same as those for
 > [convertPemKey](arkts-cryptoarchitecture-cryptoframework-asykeygenerator-i.md#convertpemkey)
-> 接口说明。
+> .
 
-&lt;br&gt;&lt;br&gt;**说明：**&lt;br&gt;建议优先使用异步API，{@link convertPemKey}。同步API可能因系统繁忙、高负载等原因耗时较长而阻塞主线程。因此建议在子线程中调用同步API，以避免阻塞主线程。
+&lt;br&gt;&lt;br&gt;**NOTE：**&lt;br&gt;It is recommended to prioritize the use of asynchronous API, {@link convertPemKey}. Synchronous API may take a long time and block the main thread due to system busyness, high load, and other reasons. Therefore,it is advised to invoke synchronous API within a child thread to avoid blocking the main thread.
 
 **Since:** 18
 
@@ -591,23 +598,23 @@ convertPemKeySync(pubKey: string | null, priKey: string | null, password: string
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| pubKey | string \| null | Yes | 指定的公钥材料。如果公钥不需要转换，请传入null。 |
-| priKey | string \| null | Yes | 指定私钥材料。若无需转换，请传入 null。&lt;br&gt;注意：公钥与私钥材料不可同时为 null。 |
-| password | string | Yes | 指定口令，用于解密私钥。 |
+| pubKey | string \| null | Yes | Public key material to convert. If no public key needs to be converted, set this parameter to **null**. |
+| priKey | string \| null | Yes | Private key material. If no private key needs to be converted, set this parameter to **null**. &lt;br&gt;Note: **pubKey** and **priKey** cannot be **null** at the same time. |
+| password | string | Yes | Password used to decrypt the private key. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [KeyPair](arkts-cryptoarchitecture-cryptoframework-keypair-i.md) | 非对称密钥。 |
+| [KeyPair](arkts-cryptoarchitecture-cryptoframework-keypair-i.md) | Asymmetric key pair. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | 非法入参。可能的原因： &lt;br&gt;1. 必填参数未指定； &lt;br&gt;2. 参数类型不正确； &lt;br&gt;3. 参数验证失败。 |
-| 17630001 | 密码操作错误。 |
-| 17620001 | 内存操作失败。 |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Invalid parameters. Possible causes: &lt;br&gt;1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; &lt;br&gt;3. Parameter verification failed. |
+| [17630001](../errorcode-crypto-framework.md#17630001-cryptographic-operation-error) | Crypto operation error. |
+| [17620001](../errorcode-crypto-framework.md#17620001-memory-operation-failed) | Memory operation failed. |
 
 ## Examples
 
@@ -654,7 +661,7 @@ function TestConvertPemKeyBySync() {
 generateKeyPair(callback: AsyncCallback<KeyPair>): void
 ```
 
-获取非对称密钥生成器随机生成的密钥。使用callback异步回调。
+Generates a random key pair using this asymmetric key generator. This API uses an asynchronous callback to return the result.
 
 **Since:** 9
 
@@ -672,15 +679,15 @@ generateKeyPair(callback: AsyncCallback<KeyPair>): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;KeyPair&gt; | Yes | 回调函数。当生成非对称密钥成功时，err为undefined，data为获取到的KeyPair；否则 为错误对象。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;KeyPair&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined**, and **data** is the key pair obtained. Otherwise, **err** is an error object. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | 非法入参。可能的原因：参数类型不正确。 |
-| 17630001 | 密码操作错误。 |
-| 17620001 | 内存操作失败。 |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Invalid parameters. Possible causes: Incorrect parameter types; |
+| [17630001](../errorcode-crypto-framework.md#17630001-cryptographic-operation-error) | Crypto operation error. |
+| [17620001](../errorcode-crypto-framework.md#17620001-memory-operation-failed) | Memory operation failed. |
 
 ## Examples
 
@@ -690,7 +697,7 @@ import { cryptoFramework } from '@kit.CryptoArchitectureKit';
 let asyKeyGenerator = cryptoFramework.createAsyKeyGenerator('ECC256');
 asyKeyGenerator.generateKeyPair((err, keyPair) => {
   if (err) {
-    console.error(`generateKeyPair failed, errCode: ${err.code}, errMsg: ${err.message}`);
+    console.error('generateKeyPair result: fail.');
     return;
   }
   console.info('generateKeyPair result: success.');
@@ -703,7 +710,7 @@ asyKeyGenerator.generateKeyPair((err, keyPair) => {
 generateKeyPair(): Promise<KeyPair>
 ```
 
-获取非对称密钥生成器随机生成的密钥。使用Promise异步回调。
+Generates a random key pair using this asymmetric key generator. This API uses a promise to return the result.
 
 **Since:** 9
 
@@ -721,15 +728,15 @@ generateKeyPair(): Promise<KeyPair>
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;KeyPair&gt; | Promise对象，返回非对称密钥KeyPair。 |
+| Promise&lt;KeyPair&gt; | Promise used to return the asymmetric key pair. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | 非法入参。可能的原因： &lt;br&gt;1. 必填参数未指定； &lt;br&gt;2. 参数类型不正确； &lt;br&gt;3. 参数验证失败。 |
-| 17630001 | 密码操作错误。 |
-| 17620001 | 内存操作失败。 |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Invalid parameters. Possible causes: &lt;br&gt;1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; &lt;br&gt;3. Parameter verification failed. |
+| [17630001](../errorcode-crypto-framework.md#17630001-cryptographic-operation-error) | Crypto operation error. |
+| [17620001](../errorcode-crypto-framework.md#17620001-memory-operation-failed) | Memory operation failed. |
 
 ## Examples
 
@@ -742,7 +749,7 @@ let keyGenPromise = asyKeyGenerator.generateKeyPair();
 keyGenPromise.then(keyPair => {
   console.info('generateKeyPair result: success.');
 }).catch((error: BusinessError) => {
-  console.error(`generateKeyPair failed, ${error.code}, ${error.message}`);
+  console.error('generateKeyPair result: fail.');
 });
 ```
 
@@ -752,9 +759,9 @@ keyGenPromise.then(keyPair => {
 generateKeyPairSync(): KeyPair
 ```
 
-同步获取非对称密钥生成器随机生成的密钥。
+Generates a random key pair using this asymmetric key generator. This API returns the result synchronously.
 
-&lt;br&gt;&lt;br&gt;**说明：**&lt;br&gt;建议优先使用异步API，{@link generateKeyPair}。同步API可能因系统繁忙、高负载等原因耗时较长而阻塞主线程。因此建议在子线程中调用同步API，以避免阻塞主线程。
+&lt;br&gt;&lt;br&gt;**NOTE：**&lt;br&gt;It is recommended to prioritize the use of asynchronous API, {@link generateKeyPair}. Synchronous API may take a long time and block the main thread due to system busyness, high load, and other reasons. Therefore,it is advised to invoke synchronous API within a child thread to avoid blocking the main thread.
 
 **Since:** 12
 
@@ -770,15 +777,15 @@ generateKeyPairSync(): KeyPair
 
 | Type | Description |
 | --- | --- |
-| [KeyPair](arkts-cryptoarchitecture-cryptoframework-keypair-i.md) | 非对称密钥。 |
+| [KeyPair](arkts-cryptoarchitecture-cryptoframework-keypair-i.md) | Asymmetric key pair. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | 非法入参。可能的原因： &lt;br&gt;1. 必填参数未指定； &lt;br&gt;2. 参数类型不正确； &lt;br&gt;3. 参数验证失败。 |
-| 17630001 | 密码操作错误。 |
-| 17620001 | 内存操作失败。 |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Invalid parameters. Possible causes: &lt;br&gt;1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; &lt;br&gt;3. Parameter verification failed. |
+| [17630001](../errorcode-crypto-framework.md#17630001-cryptographic-operation-error) | Crypto operation error. |
+| [17620001](../errorcode-crypto-framework.md#17620001-memory-operation-failed) | Memory operation failed. |
 
 ## Examples
 
@@ -804,7 +811,7 @@ try {
 readonly algName: string
 ```
 
-非对称密钥生成器指定的算法名称。
+The algName of the AsyKeyGenerator.
 
 **Type:** string
 

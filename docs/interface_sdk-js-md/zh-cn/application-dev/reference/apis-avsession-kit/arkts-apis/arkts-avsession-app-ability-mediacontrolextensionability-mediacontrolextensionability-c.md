@@ -17,9 +17,3 @@ MediaControlExtensionAbility模块提供播放控制的扩展能力，继承自
 
 **系统接口：** 此接口为系统接口。
 
-## 导入模块
-
-```TypeScript
-import { MediaControlExtensionAbility } from 'kits/@kit.AVSessionKit';
-```
-

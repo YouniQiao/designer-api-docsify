@@ -1,6 +1,6 @@
 # RenderResourceFactory
 
-渲染资源工厂，用于创建可在共享RenderContext的场景间共享的资源。
+The render resource factory. RenderResourceFactory is used to create resources that can be shared across Scenes that share a RenderContext
 
 **Since:** 20
 
@@ -16,7 +16,7 @@
 createScene(uri: ResourceStr, param: SceneLoadParams): Promise<Scene>
 ```
 
-从SceneLoadParams创建新场景.
+Create a new scene from a SceneLoadParams.
 
 **Since:** 26.0.0
 
@@ -34,12 +34,12 @@ createScene(uri: ResourceStr, param: SceneLoadParams): Promise<Scene>
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| uri | [ResourceStr](../../apis-arkui/arkts-apis/arkts-arkui-resourcestr-t.md) | Yes | 创建场景的资源 |
-| param | [SceneLoadParams](arkts-arkgraphics3d-scene-sceneloadparams-i-sys.md) | Yes | 场景加载参数 |
+| uri | [ResourceStr](../../apis-arkui/arkts-apis/arkts-arkui-resourcestr-t.md) | Yes | the resource of creating a scene |
+| param | [SceneLoadParams](arkts-arkgraphics3d-scene-sceneloadparams-i-sys.md) | Yes | the params for scene load |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;Scene&gt; | 返回场景的Promise |
+| Promise&lt;Scene&gt; | Promise used to return a scene |
 

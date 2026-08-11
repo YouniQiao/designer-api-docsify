@@ -1,19 +1,6 @@
 # InputMethodSetting
 
-InputMethodSetting提供输入法配置与查询能力，面向前台应用提供以下功能：
-
-- **输入法变化订阅**：通过  
-[on('imeChange')](inputMethod.InputMethodSetting.on( type: 'imeChange', callback: (inputMethodProperty: InputMethodProperty, inputMethodSubtype: InputMethodSubtype) => void ))订阅输入法及子类型变化事件，当用户切换输入法时收到通知。  
-- **输入法列表查询**：通过  
-[getInputMethods](arkts-ime-inputmethod-inputmethodsetting-i.md#getinputmethods)查询已激活/未激活输入法列表，通过  
-[getAllInputMethods](arkts-ime-inputmethod-inputmethodsetting-i.md#getallinputmethods)查询所有已安装输入法列表，通过  
-[listInputMethodSubtype](arkts-ime-inputmethod-inputmethodsetting-i.md#listinputmethodsubtype)查询指定输入法的子类型列表。  
-- **面板可见性查询**：通过isPanelShown查询输入法面板是否显示。  
-- **输入法选择对话框**：通过showOptionalInputMethods显示输入法选择对话框（已废弃，建议使用InputMethodListDialog）。
-
-需通过[getSetting](arkts-ime-inputmethod-getsetting-f.md#getsetting)获取InputMethodSetting实例后使用。
-
-下列API均需使用[getSetting](arkts-ime-inputmethod-getsetting-f.md#getsetting)获取到InputMethodSetting实例后，通过实例调用。
+In the following API examples, you must first use [getSetting](arkts-ime-inputmethod-getsetting-f.md#getsetting) to obtain an **InputMethodSetting** instance, and then call the APIs using the obtained instance.
 
 **Since:** 8
 
@@ -35,7 +22,7 @@ import { inputMethod } from 'kits/@kit.IMEKit';
 enableInputMethod(bundleName: string, extensionName: string, enabledState: EnabledState): Promise<void>
 ```
 
-修改输入法的启用状态。使用promise异步回调。
+Enables or disables an input method. This API uses a promise to return the result.
 
 **Since:** 20
 
@@ -53,25 +40,25 @@ enableInputMethod(bundleName: string, extensionName: string, enabledState: Enabl
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| bundleName | string | Yes | 输入法包名。 |
-| extensionName | string | Yes | 输入法扩展名。 |
-| enabledState | [EnabledState](arkts-ime-inputmethod-enabledstate-e.md) | Yes | 输入法启用状态。 |
+| bundleName | string | Yes | Bundle name of the input method. |
+| extensionName | string | Yes | Extension name of the input method. |
+| enabledState | [EnabledState](arkts-ime-inputmethod-enabledstate-e.md) | Yes | Whether the input method is enabled. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | 无返回结果的Promise对象。 |
+| Promise&lt;void&gt; | Promise that returns no value. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 12800019 | current operation cannot be applied to the preconfigured default input method. |
-| 12800018 | input method is not found. |
-| 201 | permissions check fails. |
-| 202 | not system application. |
-| 12800008 | input method manager service error. Possible cause: a system error, such as null pointer, IPC exception. |
+| [12800019](../errorcode-inputmethod-framework.md#12800019-unsupported-operation-by-default-input-method) | current operation cannot be applied to the preconfigured default input method. |
+| [12800018](../errorcode-inputmethod-framework.md#12800018-input-method-not-found) | input method is not found. |
+| [201](../../errorcode-universal.md#201-permission-denied) | permissions check fails. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | not system application. |
+| [12800008](../errorcode-inputmethod-framework.md#12800008-input-method-manager-service-error) | input method manager service error. Possible cause: a system error, such as null pointer, IPC exception. |
 
 ## Examples
 
@@ -112,7 +99,7 @@ enableInputMethod(
       bundleName: string, extensionName: string, enabledState: EnabledState, userId?: int): Promise<void>
 ```
 
-修改指定用户输入法的启用状态。
+Change the enabled state of an input method of a specified user.
 
 **Since:** 26.0.0
 
@@ -132,10 +119,10 @@ enableInputMethod(
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| bundleName | string | Yes | 输入法的包名。 |
-| extensionName | string | Yes | 输入法的扩展名。 |
-| enabledState | [EnabledState](arkts-ime-inputmethod-enabledstate-e.md) | Yes | 要修改的启用状态。 |
-| userId | ArkTS-Dyn: number  <br>ArkTS-Sta：int | No | 用户ID。如果不提供：如果调用者不是用户0的应用，该值默认为调用者的用户ID。如果调用者是用户0的应用，该值默认为主屏幕的前台用户ID。 |
+| bundleName | string | Yes | Indicates the bundle name of the input method. |
+| extensionName | string | Yes | Indicates the extension name of the input method. |
+| enabledState | [EnabledState](arkts-ime-inputmethod-enabledstate-e.md) | Yes | Indicates the enabledState to be changed. |
+| userId | ArkTS-Dyn: number  <br>ArkTS-Sta：int | No | the user ID. If not provided: If the caller is not a user 0 application, the value defaults to the caller's user ID. If the caller is a user 0 application, the value defaults to the foreground user ID of the main screen. |
 
 **Return value:**
 
@@ -147,13 +134,13 @@ enableInputMethod(
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 12800019 | current operation cannot be applied to the preconfigured default input method. |
-| 12800018 | input method is not found. |
+| [12800019](../errorcode-inputmethod-framework.md#12800019-unsupported-operation-by-default-input-method) | current operation cannot be applied to the preconfigured default input method. |
+| [12800018](../errorcode-inputmethod-framework.md#12800018-input-method-not-found) | input method is not found. |
 | 12800023 | the specified user does not exist. |
-| 201 | permissions check fails. |
-| 202 | not system application. |
+| [201](../../errorcode-universal.md#201-permission-denied) | permissions check fails. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | not system application. |
 | 12800025 | cross-user operation denied. Only user 0 applications are authorized for this operation. |
-| 12800008 | input method manager service error. Possible cause: a system error, such as null pointer, IPC exception. |
+| [12800008](../errorcode-inputmethod-framework.md#12800008-input-method-manager-service-error) | input method manager service error. Possible cause: a system error, such as null pointer, IPC exception. |
 | 12800024 | the specified user is not in the foreground. |
 
 ## getAllInputMethodsSync
@@ -168,7 +155,7 @@ ArkTS-Sta:
 getAllInputMethodsSync(userId?: int): Array<InputMethodProperty>
 ```
 
-获取指定用户的所有输入法应用列表。同步接口。
+Get all input methods sync of a specified user.
 
 **Since:** 26.0.0
 
@@ -186,23 +173,23 @@ getAllInputMethodsSync(userId?: int): Array<InputMethodProperty>
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| userId | ArkTS-Dyn: number  <br>ArkTS-Sta：int | No | 用户ID。如果不提供：如果调用者不是用户0的应用，该值默认为调用者的用户ID。如果调用者是用户0的应用，该值默认为主屏幕的前台用户ID。 |
+| userId | ArkTS-Dyn: number  <br>ArkTS-Sta：int | No | the user ID. If not provided: If the caller is not a user 0 application, the value defaults to the caller's user ID. If the caller is a user 0 application, the value defaults to the foreground user ID of the main screen. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Array&lt;InputMethodProperty&gt; | 返回所有输入法列表。 |
+| Array&lt;InputMethodProperty&gt; | the list of all input methods. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 12800001 | bundle manager error. |
+| [12800001](../errorcode-inputmethod-framework.md#12800001-package-manager-error) | bundle manager error. |
 | 12800023 | the specified user does not exist. |
-| 202 | not system application. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | not system application. |
 | 12800025 | cross-user operation denied. Only user 0 applications are authorized for this operation. |
-| 12800008 | input method manager service error. Possible cause: a system error, such as null pointer, IPC exception. |
+| [12800008](../errorcode-inputmethod-framework.md#12800008-input-method-manager-service-error) | input method manager service error. Possible cause: a system error, such as null pointer, IPC exception. |
 | 12800024 | the specified user is not in the foreground. |
 
 ## getCursorInfo
@@ -217,7 +204,7 @@ ArkTS-Sta:
 getCursorInfo(userId?: int): CursorInfo
 ```
 
-获取指定用户的光标信息。当编辑框未给输入法服务通知光标信息时，返回所有属性值都为0。
+Get the cursor information of a specified user.
 
 **Since:** 26.0.0
 
@@ -235,38 +222,24 @@ getCursorInfo(userId?: int): CursorInfo
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| userId | ArkTS-Dyn: number  <br>ArkTS-Sta：int | No | 指定的用户ID。 <如果调用者不是用户0应用，该值默认为调用者的用户ID。 如果调用者是用户0应用，则该值默认为主屏幕的前台用户ID。 |
+| userId | ArkTS-Dyn: number  <br>ArkTS-Sta：int | No | the user ID. If not provided: If the caller is not a user 0 application, the value defaults to the caller's user ID. If the caller is a user 0 application, the value defaults to the foreground user ID of the main screen. The value should be an integer. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [CursorInfo](arkts-ime-inputmethod-cursorinfo-i.md) | 指定用户下的光标信息。 |
+| [CursorInfo](arkts-ime-inputmethod-cursorinfo-i.md) | the information of the cursor of the specified display. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 12800003 | input method client error. Possible causes: 1. No edit box is bound to the current input method application under the specified user. |
+| [12800003](../errorcode-inputmethod-framework.md#12800003-input-method-client-error) | input method client error. Possible causes: 1. No edit box is bound to the current input method application under the specified user. |
 | 12800023 | the specified user does not exist. |
-| 202 | not system application. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | not system application. |
 | 12800025 | cross-user operation denied. Only user 0 applications are authorized for this operation. |
-| 12800008 | input method manager service error. Possible causes: a system error, such as null pointer, IPC exception. |
+| [12800008](../errorcode-inputmethod-framework.md#12800008-input-method-manager-service-error) | input method manager service error. Possible causes: a system error, such as null pointer, IPC exception. |
 | 12800024 | the specified user is not in the foreground. |
-
-## Examples
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-try {
-  let cursorInfo: inputMethod.CursorInfo = inputMethod.getSetting().getCursorInfo();
-  console.info(`get cursorInfo success, left: ${cursorInfo.left}, top: ${cursorInfo.top}, width: ${cursorInfo.width}, height: ${cursorInfo.height}, displayId: ${cursorInfo.displayId}`);
-} catch (err) {
-  let error = err as BusinessError;
-  console.error(`Failed to get cursorInfo. Code: ${error.code}, message: ${error.message}`);
-}
-```
 
 ## getDefaultInputMethodAbility
 
@@ -274,7 +247,7 @@ try {
 getDefaultInputMethodAbility(): InputMethodProperty
 ```
 
-获取默认输入法能力。为优化性能，返回的InputMethodProperty对象仅保证能够唯一标识输入法能力的`name`和`id`属性正确，其他属性可能为空。
+&lt;p&gt;Get the default input method ability.&lt;/p&gt;&lt;p&gt;To optimize performance, only the 'name' and 'id' properties which can uniquely identify an input method ability are included in the returned InputMethodProperty object.&lt;/p&gt;
 
 **Since:** 26.0.0
 
@@ -292,25 +265,14 @@ getDefaultInputMethodAbility(): InputMethodProperty
 
 | Type | Description |
 | --- | --- |
-| [InputMethodProperty](arkts-ime-inputmethod-inputmethodproperty-i.md) | 默认输入法属性，仅保证`name`和`id`属性正确，其他属性可能为空。 |
+| [InputMethodProperty](arkts-ime-inputmethod-inputmethodproperty-i.md) | property of the default input method.Only contains 'name' and 'id' properties. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 202 | not system application. |
-| 12800008 | input method manager service error. Possible cause: a system error, such as null pointer, IPC exception. |
-
-## Examples
-
-```TypeScript
-try {
-  const defaultAbility: inputMethod.InputMethodProperty = inputMethod.getSetting().getDefaultInputMethodAbility();
-  console.info('Succeeded in getting default input method ability, name: ' + defaultAbility.name + ', id: ' + defaultAbility.id);
-} catch (err) {
-  console.error(`Failed to getDefaultInputMethodAbility. Code: ${err.code}, message: ${err.message}`);
-}
-```
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | not system application. |
+| [12800008](../errorcode-inputmethod-framework.md#12800008-input-method-manager-service-error) | input method manager service error. Possible cause: a system error, such as null pointer, IPC exception. |
 
 ## getInputMethodSubtypes
 
@@ -324,7 +286,7 @@ ArkTS-Sta:
 getInputMethodSubtypes(bundleName: string, userId?: int): Array<InputMethodSubtype>
 ```
 
-获取指定用户指定输入法的子类型列表。同步接口。
+Get subtypes of a specified input method of a specified user.
 
 **Since:** 26.0.0
 
@@ -342,24 +304,24 @@ getInputMethodSubtypes(bundleName: string, userId?: int): Array<InputMethodSubty
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| bundleName | string | Yes | 指定输入法的包名。 |
-| userId | ArkTS-Dyn: number  <br>ArkTS-Sta：int | No | 用户ID。如果不提供：如果调用者不是用户0的应用，该值默认为调用者的用户ID。如果调用者是用户0的应用，该值默认为主屏幕的前台用户ID。 |
+| bundleName | string | Yes | the bundle name of the specified input method. |
+| userId | ArkTS-Dyn: number  <br>ArkTS-Sta：int | No | the user ID. If not provided: If the caller is not a user 0 application, the value defaults to the caller's user ID. If the caller is a user 0 application, the value defaults to the foreground user ID of the main screen. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Array&lt;[InputMethodSubtype](arkts-ime-inputmethodsubtype-i.md)&gt; | 返回指定输入法应用的所有子类型。 |
+| Array&lt;[InputMethodSubtype](arkts-ime-inputmethodsubtype-i.md)&gt; | the subtype of target input method. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 12800001 | bundle manager error. |
+| [12800001](../errorcode-inputmethod-framework.md#12800001-package-manager-error) | bundle manager error. |
 | 12800023 | the specified user does not exist. |
-| 202 | not system application. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | not system application. |
 | 12800025 | cross-user operation denied. Only user 0 applications are authorized for this operation. |
-| 12800008 | input method manager service error. Possible cause: a system error, such as null pointer, IPC exception. |
+| [12800008](../errorcode-inputmethod-framework.md#12800008-input-method-manager-service-error) | input method manager service error. Possible cause: a system error, such as null pointer, IPC exception. |
 | 12800024 | the specified user is not in the foreground. |
 
 ## getInputMethodsSync
@@ -374,7 +336,7 @@ ArkTS-Sta:
 getInputMethodsSync(enable: boolean, userId?: int): Array<InputMethodProperty>
 ```
 
-获取指定用户已激活/未激活的输入法应用列表。同步接口
+List enabled or disabled input methods sync of a specified user.
 
 **Since:** 26.0.0
 
@@ -392,24 +354,24 @@ getInputMethodsSync(enable: boolean, userId?: int): Array<InputMethodProperty>
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| enable | boolean | Yes | true表示返回已激活输入法列表，false表示返回未激活输入法列表。 |
-| userId | ArkTS-Dyn: number  <br>ArkTS-Sta：int | No | 用户ID。如果不提供：如果调用者不是用户0的应用，该值默认为调用者的用户ID。如果调用者是用户0的应用，该值默认为主屏幕的前台用户ID。 |
+| enable | boolean | Yes | If true, collect enabled input methods. If false, collect disabled input methods. |
+| userId | ArkTS-Dyn: number  <br>ArkTS-Sta：int | No | the user ID. If not provided: If the caller is not a user 0 application, the value defaults to the caller's user ID. If the caller is a user 0 application, the value defaults to the foreground user ID of the main screen. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Array&lt;InputMethodProperty&gt; | 返回已激活/未激活输入法列表。 |
+| Array&lt;InputMethodProperty&gt; | the list of input methods. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 12800001 | bundle manager error. |
+| [12800001](../errorcode-inputmethod-framework.md#12800001-package-manager-error) | bundle manager error. |
 | 12800023 | the specified user does not exist. |
-| 202 | not system application. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | not system application. |
 | 12800025 | cross-user operation denied. Only user 0 applications are authorized for this operation. |
-| 12800008 | input method manager service error. Possible cause: a system error, such as null pointer, IPC exception. |
+| [12800008](../errorcode-inputmethod-framework.md#12800008-input-method-manager-service-error) | input method manager service error. Possible cause: a system error, such as null pointer, IPC exception. |
 | 12800024 | the specified user is not in the foreground. |
 
 ## isPanelShown
@@ -418,7 +380,7 @@ getInputMethodsSync(enable: boolean, userId?: int): Array<InputMethodProperty>
 isPanelShown(panelInfo: PanelInfo): boolean
 ```
 
-查询指定类型的输入法面板是否处于显示状态。
+Checks whether the input method panel of a specified type is shown.
 
 **Since:** 11
 
@@ -434,21 +396,21 @@ isPanelShown(panelInfo: PanelInfo): boolean
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| panelInfo | [PanelInfo](arkts-ime-inputmethod-panel-panelinfo-i.md) | Yes | 输入法面板的属性。 |
+| panelInfo | [PanelInfo](arkts-ime-inputmethod-panel-panelinfo-i.md) | Yes | Information about the input method panel. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| boolean | 面板显隐状态查询结果。&lt;br/&gt;- true表示被查询的输入法面板处于显示状态。&lt;br/&gt;- false表示被查询的输入法面板处于隐藏状态。 |
+| boolean | Whether the input method panel is shown. &lt;br&gt;- The value **true** means that the input method panel is shown. &lt;br&gt;- The value **false** means that the input method panel is hidden. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
-| 202 | not system application. |
-| 12800008 | input method manager service error. Possible cause: a system error, such as null pointer, IPC exception. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | not system application. |
+| [12800008](../errorcode-inputmethod-framework.md#12800008-input-method-manager-service-error) | input method manager service error. Possible cause: a system error, such as null pointer, IPC exception. |
 
 ## Examples
 
@@ -476,7 +438,7 @@ ArkTS-Sta:
 isPanelShown(panelInfo: PanelInfo, displayId: long): boolean
 ```
 
-查询指定类型的输入法面板在指定屏幕上是否处于显示状态。
+Checks whether the input method panel of a specified type is shown on a specified screen.
 
 **Since:** 23
 
@@ -494,21 +456,21 @@ isPanelShown(panelInfo: PanelInfo, displayId: long): boolean
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| panelInfo | [PanelInfo](arkts-ime-inputmethod-panel-panelinfo-i.md) | Yes | 输入法面板的属性。 |
-| displayId | ArkTS-Dyn: number  <br>ArkTS-Sta：long | Yes | 屏幕ID。 |
+| panelInfo | [PanelInfo](arkts-ime-inputmethod-panel-panelinfo-i.md) | Yes | Information about the input method panel. |
+| displayId | ArkTS-Dyn: number  <br>ArkTS-Sta：long | Yes | Display ID. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| boolean | 面板显隐状态查询结果。&lt;br/&gt;- true表示被查询的输入法面板处于显示状态。&lt;br/&gt;- false表示被查询的输入法面板处于隐藏状态。 |
+| boolean | Whether the input method panel is shown. &lt;br&gt;- The value **true** means that the input method panel is shown. &lt;br&gt;- The value **false** means that the input method panel is hidden. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 202 | not system application. |
-| 12800008 | input method manager service error. Possible cause: a system error, such as null pointer, IPC exception. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | not system application. |
+| [12800008](../errorcode-inputmethod-framework.md#12800008-input-method-manager-service-error) | input method manager service error. Possible cause: a system error, such as null pointer, IPC exception. |
 
 ## Examples
 
@@ -531,7 +493,8 @@ console.info('Succeeded in querying isPanelShown, result: ' + result);
 off(type: 'imeShow', callback?: (info: Array<InputWindowInfo>) => void): void
 ```
 
-取消订阅输入法[Panel](arkts-ime-inputmethodengine-panel-i.md)固定态软键盘显示事件。
+Unsubscribes from the soft keyboard show event of the   
+[input method panel](arkts-ime-inputmethodengine-panel-i.md) in the fixed state.
 
 **Since:** 10
 
@@ -547,8 +510,8 @@ off(type: 'imeShow', callback?: (info: Array<InputWindowInfo>) => void): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'imeShow' | Yes | 设置监听类型，固定取值'imeShow'。 |
-| callback | (info: Array&lt;InputWindowInfo&gt;) =&gt; void | No | 取消订阅的回调函数。 &lt;br&gt;参数不填写时，取消订阅type对应的所有回调事件。 |
+| type | 'imeShow' | Yes | Event type, which is **'imeShow'**. |
+| callback | (info: Array&lt;InputWindowInfo&gt;) =&gt; void | No | Callback to unregister.&lt;br&gt;If this parameter is not specified, this API unregisters all callbacks for the specified event type. |
 
 ## Examples
 
@@ -562,7 +525,8 @@ inputMethod.getSetting().off('imeShow');
 off(type: 'imeHide', callback?: (info: Array<InputWindowInfo>) => void): void
 ```
 
-取消订阅输入法[Panel](arkts-ime-inputmethodengine-panel-i.md)固定态软键盘隐藏事件。
+Unsubscribes from the soft keyboard hide event of the   
+[input method panel](arkts-ime-inputmethodengine-panel-i.md) in the fixed state.
 
 **Since:** 10
 
@@ -578,8 +542,8 @@ off(type: 'imeHide', callback?: (info: Array<InputWindowInfo>) => void): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'imeHide' | Yes | 设置监听类型，固定取值'imeHide'。 |
-| callback | (info: Array&lt;InputWindowInfo&gt;) =&gt; void | No | 取消订阅的回调函数。 &lt;br&gt;参数不填写时，取消订阅type对应的所有回调事件。 |
+| type | 'imeHide' | Yes | Event type, which is **'imeHide'**. |
+| callback | (info: Array&lt;InputWindowInfo&gt;) =&gt; void | No | Callback to unregister.&lt;br&gt;If this parameter is not specified, this API unregisters all callbacks for the specified event type. |
 
 ## Examples
 
@@ -593,7 +557,7 @@ inputMethod.getSetting().off('imeHide');
 offImeChangeWithUserId(callback?: ImeChangeWithUserIdCallback): void
 ```
 
-取消订阅输入法及子类型变化监听事件，携带发生输入法变更的用户ID。
+Unsubscribe from the input method change event.
 
 **Since:** 26.0.0
 
@@ -611,13 +575,13 @@ offImeChangeWithUserId(callback?: ImeChangeWithUserIdCallback): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [ImeChangeWithUserIdCallback](arkts-ime-inputmethod-imechangewithuseridcallback-t-sys.md) | No | 回调函数，返回取消订阅的输入法属性对象、子类型对象及用户ID。 参数不填写时，取消订阅所有的回调事件。 |
+| callback | [ImeChangeWithUserIdCallback](arkts-ime-inputmethod-imechangewithuseridcallback-t-sys.md) | No | the callback called when the current input method changes, when the subscriber unsubscribes all callbacks, this parameter can be left blank. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 202 | not system application. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | not system application. |
 
 ## offImeHide
 
@@ -625,7 +589,7 @@ offImeChangeWithUserId(callback?: ImeChangeWithUserIdCallback): void
 offImeHide(callback?: Callback<Array<InputWindowInfo>>): void
 ```
 
-取消订阅输入法Panel固定态软键盘隐藏事件。
+Unsubscribe input window hide event.
 
 **Since:** 23
 
@@ -641,7 +605,7 @@ offImeHide(callback?: Callback<Array<InputWindowInfo>>): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;Array&lt;InputWindowInfo&gt;&gt; | No | 取消订阅的回调函数。 参数不填写时，取消订阅type对应的所有回调事件。 |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;Array&lt;InputWindowInfo&gt;&gt; | No | the callback called when input method hides, when subscriber unsubscribes all callback functions, this parameter can be left blank. |
 
 ## offImeShow
 
@@ -649,7 +613,7 @@ offImeHide(callback?: Callback<Array<InputWindowInfo>>): void
 offImeShow(callback?: Callback<Array<InputWindowInfo>>):void
 ```
 
-取消订阅输入法Panel固定态软键盘显示事件。
+Unsubscribe input window show event.
 
 **Since:** 23
 
@@ -667,7 +631,7 @@ offImeShow(callback?: Callback<Array<InputWindowInfo>>):void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;Array&lt;InputWindowInfo&gt;&gt; | No | 取消订阅的回调函数。 参数不填写时，取消订阅type对应的所有回调事件。 |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;Array&lt;InputWindowInfo&gt;&gt; | No | the callback called when input method shows, when subscriber unsubscribes all callback functions, this parameter can be left blank. |
 
 ## on('imeShow')
 
@@ -675,7 +639,8 @@ offImeShow(callback?: Callback<Array<InputWindowInfo>>):void
 on(type: 'imeShow', callback: (info: Array<InputWindowInfo>) => void): void
 ```
 
-订阅输入法[Panel](arkts-ime-inputmethodengine-panel-i.md)固定态软键盘显示事件。使用callback异步回调。
+Subscribes to the soft keyboard show event of the   
+[input method panel](arkts-ime-inputmethodengine-panel-i.md) in the fixed state. This API uses an asynchronous callback to return the result.
 
 **Since:** 10
 
@@ -691,14 +656,14 @@ on(type: 'imeShow', callback: (info: Array<InputWindowInfo>) => void): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'imeShow' | Yes | 设置监听类型，固定取值为'imeShow'。 |
-| callback | (info: Array&lt;InputWindowInfo&gt;) =&gt; void | Yes | 回调函数，返回输入法固定态软键盘信息。 |
+| type | 'imeShow' | Yes | Event type, which is **'imeShow'**. |
+| callback | (info: Array&lt;InputWindowInfo&gt;) =&gt; void | Yes | Callback used to return the soft keyboard information of the input method panel in the fixed state. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 202 | not system application. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | not system application. |
 
 ## Examples
 
@@ -714,7 +679,8 @@ inputMethod.getSetting().on('imeShow', (info: Array<inputMethod.InputWindowInfo>
 on(type: 'imeHide', callback: (info: Array<InputWindowInfo>) => void): void
 ```
 
-订阅输入法[Panel](arkts-ime-inputmethodengine-panel-i.md)固定态软键盘隐藏事件。使用callback异步回调。
+Subscribes to the soft keyboard hide event of the   
+[input method panel](arkts-ime-inputmethodengine-panel-i.md) in the fixed state. This API uses an asynchronous callback to return the result.
 
 **Since:** 10
 
@@ -730,14 +696,14 @@ on(type: 'imeHide', callback: (info: Array<InputWindowInfo>) => void): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'imeHide' | Yes | 设置监听类型，固定取值为'imeHide'。 |
-| callback | (info: Array&lt;InputWindowInfo&gt;) =&gt; void | Yes | 回调函数，返回输入法固定态软键盘信息。 |
+| type | 'imeHide' | Yes | Event type, which is **'imeHide'**. |
+| callback | (info: Array&lt;InputWindowInfo&gt;) =&gt; void | Yes | Callback used to return the soft keyboard information of the input method panel in the fixed state. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 202 | not system application. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | not system application. |
 
 ## Examples
 
@@ -753,7 +719,7 @@ inputMethod.getSetting().on('imeHide', (info: Array<inputMethod.InputWindowInfo>
 onImeChangeWithUserId(callback: ImeChangeWithUserIdCallback): void
 ```
 
-订阅输入法及子类型变化监听事件，携带发生输入法变更的用户ID。
+Subscribe to the input method change event.
 
 **Since:** 26.0.0
 
@@ -771,13 +737,13 @@ onImeChangeWithUserId(callback: ImeChangeWithUserIdCallback): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [ImeChangeWithUserIdCallback](arkts-ime-inputmethod-imechangewithuseridcallback-t-sys.md) | Yes | 回调函数，返回输入法属性对象、子类型对象及用户ID。 |
+| callback | [ImeChangeWithUserIdCallback](arkts-ime-inputmethod-imechangewithuseridcallback-t-sys.md) | Yes | the callback called when the current input method changes. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 202 | not system application. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | not system application. |
 
 ## onImeHide
 
@@ -785,7 +751,7 @@ onImeChangeWithUserId(callback: ImeChangeWithUserIdCallback): void
 onImeHide(callback: Callback<Array<InputWindowInfo>>): void
 ```
 
-订阅输入法Panel固定态软键盘隐藏事件。
+Subscribes to input window hidden events.
 
 **Since:** 23
 
@@ -801,13 +767,13 @@ onImeHide(callback: Callback<Array<InputWindowInfo>>): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;Array&lt;InputWindowInfo&gt;&gt; | Yes | 回调函数，返回输入法固定态软键盘信息。 |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;Array&lt;InputWindowInfo&gt;&gt; | Yes | the callback called when input method hides. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 202 | not system application. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | not system application. |
 
 ## onImeShow
 
@@ -815,7 +781,7 @@ onImeHide(callback: Callback<Array<InputWindowInfo>>): void
 onImeShow(callback: Callback<Array<InputWindowInfo>>):void
 ```
 
-订阅输入法Panel固定态软键盘显示事件。
+Subscribes to input window show events.
 
 **Since:** 23
 
@@ -833,11 +799,11 @@ onImeShow(callback: Callback<Array<InputWindowInfo>>):void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;Array&lt;InputWindowInfo&gt;&gt; | Yes | 回调函数，返回输入法固定态软键盘信息。 |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;Array&lt;InputWindowInfo&gt;&gt; | Yes | the callback called when input method shows. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 202 | not system application. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | not system application. |
 

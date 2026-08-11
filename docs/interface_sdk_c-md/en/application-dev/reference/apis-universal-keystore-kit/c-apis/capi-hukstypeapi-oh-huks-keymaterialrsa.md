@@ -1,12 +1,12 @@
 # OH_Huks_KeyMaterialRsa
 
 ```c
-struct OH_Huks_KeyMaterialRsa {...}
+typedef struct OH_Huks_KeyMaterialRsa {...} OH_Huks_KeyMaterialRsa
 ```
 
 ## Overview
 
-Defines the struct of an RSA key.
+Defines the struct for an RSA key.
 
 **Since**: 9
 

@@ -1,6 +1,6 @@
 # SuperscriptStyle
 
-定义文本上下角标样式。
+Defines the superscript style.
 
 **Since:** 24
 
@@ -16,7 +16,7 @@
 NORMAL = 0
 ```
 
-普通文本样式。
+normal font style.
 
 **Since:** 24
 
@@ -34,7 +34,7 @@ NORMAL = 0
 SUPERSCRIPT = 1
 ```
 
-上标文本样式。
+Superscript font style.
 
 **Since:** 24
 
@@ -52,7 +52,7 @@ SUPERSCRIPT = 1
 SUBSCRIPT = 2
 ```
 
-下标文本样式。
+Subscript font style.
 
 **Since:** 24
 

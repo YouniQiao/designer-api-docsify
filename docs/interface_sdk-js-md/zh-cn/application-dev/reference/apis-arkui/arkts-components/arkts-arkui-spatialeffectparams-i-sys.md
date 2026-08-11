@@ -44,7 +44,7 @@ position: SpatialPosition | double
 
 由角点或深度值定义的空间位置。
 
-**类型：** [SpatialPosition](arkts-arkui-spatialposition-i-sys.md) \| double
+**类型：** [SpatialPosition](../arkts-apis/arkts-arkui-common-spatialposition-i-sys.md) \| double
 
 **起始版本：** 26.0.0
 

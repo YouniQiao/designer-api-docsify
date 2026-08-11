@@ -12,7 +12,7 @@ import { hiTraceChain } from 'kits/@kit.PerformanceAnalysisKit';
 function enableFlag(id: HiTraceId, flag: HiTraceFlag): void
 ```
 
-启用HiTraceId中指定的跟踪标志，同步接口。用于在业务流程中动态调整跟踪行为，例如在调试时启用TP_INFO标志以打印埋点信息、在需要跟踪异步调用时启用INCLUDE_ASYNC标志、在需要禁用日志关联时启用DISABLE_LOG标志。
+Enables the trace flag specified in HiTraceId. This API returns the result synchronously.
 
 **Since:** 8
 
@@ -26,8 +26,8 @@ function enableFlag(id: HiTraceId, flag: HiTraceFlag): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| id | [HiTraceId](arkts-performanceanalysis-hitracechain-hitraceid-i.md) | Yes | 需要启用指定跟踪标志的HiTraceId实例。 |
-| flag | [HiTraceFlag](arkts-performanceanalysis-hitracechain-hitraceflag-e.md) | Yes | 指定的跟踪标志。 |
+| id | [HiTraceId](arkts-performanceanalysis-hitracechain-hitraceid-i.md) | Yes | HiTraceId** instance for which the trace flag is enabled. |
+| flag | [HiTraceFlag](arkts-performanceanalysis-hitracechain-hitraceflag-e.md) | Yes | Specified trace flag. |
 
 ## Examples
 

@@ -1,6 +1,6 @@
 # MarqueeUpdateStrategy
 
-Marquee scrolling strategy after text update
+The scrolling strategy for the marquee after its attributes are updated.
 
 **Since:** 12
 
@@ -16,7 +16,7 @@ Marquee scrolling strategy after text update
 DEFAULT = 0
 ```
 
-Reset scroll position and restart scroll.
+After the marquee attributes are updated, the marquee scrolls from the start position.
 
 **Since:** 12
 
@@ -36,7 +36,7 @@ Reset scroll position and restart scroll.
 PRESERVE_POSITION = 1
 ```
 
-Preserve scroll position, just change to new text
+After the marquee attributes are updated, the marquee scrolls from the current position.
 
 **Since:** 12
 

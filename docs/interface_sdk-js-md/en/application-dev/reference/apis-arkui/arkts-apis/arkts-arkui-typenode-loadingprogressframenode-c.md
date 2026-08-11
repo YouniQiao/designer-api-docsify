@@ -1,6 +1,6 @@
 # LoadingProgressFrameNode
 
-定义LoadingProgress类型的FrameNode。
+Define the LoadingProgress type of FrameNode.
 
 **Inheritance/Implementation:** LoadingProgressFrameNode extends [TypedFrameNode<LoadingProgressAttribute>](TypedFrameNode<LoadingProgressAttribute>)
 
@@ -18,7 +18,7 @@
 abstract initialize(): LoadingProgressAttribute
 ```
 
-初始化LoadingProgress类型的FrameNode。
+Initialize LoadingProgress FrameNode.
 
 **Since:** 23
 

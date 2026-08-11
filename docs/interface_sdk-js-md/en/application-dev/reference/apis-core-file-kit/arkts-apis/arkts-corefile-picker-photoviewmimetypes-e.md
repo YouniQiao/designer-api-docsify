@@ -20,7 +20,7 @@ Enumerates the media file types that can be selected.
 IMAGE_TYPE = 'image/*'
 ```
 
-图片类型。
+Image.
 
 **Since:** 9
 
@@ -42,7 +42,7 @@ IMAGE_TYPE = 'image/*'
 VIDEO_TYPE = 'video/*'
 ```
 
-视频类型。
+Video.
 
 **Since:** 9
 
@@ -64,7 +64,7 @@ VIDEO_TYPE = 'video/*'
 IMAGE_VIDEO_TYPE = '*/*'
 ```
 
-图片和视频类型。
+Image and video.
 
 **Since:** 9
 

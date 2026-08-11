@@ -12,7 +12,7 @@ import { hidebug } from 'kits/@kit.PerformanceAnalysisKit';
 function getVMRuntimeStat(item: string): long
 ```
 
-���ݲ�����ȡָ����ϵͳGCͳ����Ϣ��
+Obtains the specified system GC statistics based on parameters.
 
 **Since:** 12
 
@@ -26,19 +26,19 @@ function getVMRuntimeStat(item: string): long
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| item | string | Yes | ����ͳ����Ϣ�����͡��ɻ�ȡ��ͳ����Ϣ�������£� "ark.gc.gc-count"����ǰ�̵߳�GC������ "ark.gc.gc-time"����ǰ�̴߳�����GC�ܺ�ʱ����msΪ��λ�� "ark.gc.gc-bytes-allocated"����ǰ�߳�Ark������ѷ�����ڴ��С����BΪ��λ�� "ark.gc.gc-bytes-freed"����ǰ�߳�GC�ɹ����յ��ڴ棬��BΪ��λ�� "ark.gc.fullgc-longtime-count"����ǰ�̳߳���fullGC������ |
+| item | string | Yes | Type of the statistics to obtain. The following statistics can be obtained:&lt;br&gt; **"ark.gc.gc-count"**: number of GC times of the current thread.&lt;br&gt;**"ark.gc.gc-time"**: total GC duration triggered by the current thread, in milliseconds.&lt;br&gt;**"ark.gc.gc-bytes-allocated"**: size of the Ark VM memory allocated to the current thread, in bytes.&lt;br&gt;**"ark.gc.gc-bytes-freed"**: memory freed by GC of the current thread, in bytes.&lt;br&gt; **"ark.gc.fullgc-longtime-count"**: number of longtime full GC times triggered by the current thread. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| ArkTS-Dyn: number  <br>ArkTS-Sta：long | ϵͳGCͳ����Ϣ�����ݴ���Ĳ�����������Ӧ����Ϣ�� |
+| ArkTS-Dyn: number  <br>ArkTS-Sta：long | System GC statistics returned based on the input parameters. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Possible causes: 1. Invalid parameter, a string parameter required. 2. Invalid parameter, unknown property. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Possible causes: 1. Invalid parameter, a string parameter required. 2. Invalid parameter, unknown property. |
 
 ## Examples
 

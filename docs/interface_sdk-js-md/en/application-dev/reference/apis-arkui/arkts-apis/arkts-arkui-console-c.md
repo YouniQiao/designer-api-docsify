@@ -1,6 +1,6 @@
 # console
 
-提供控制台。
+Provide console
 
 **Since:** 3
 
@@ -16,7 +16,7 @@
 static debug(message: string): void
 ```
 
-打印调试信息。
+Prints "debug" logs.
 
 **Since:** 3
 
@@ -32,7 +32,7 @@ static debug(message: string): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| message | string | Yes | 要打印的文本信息。 @static |
+| message | string | Yes | Text to print @static |
 
 ## error
 
@@ -40,7 +40,7 @@ static debug(message: string): void
 static error(message: string): void
 ```
 
-打印错误信息。
+Prints "error" logs.
 
 **Since:** 3
 
@@ -56,7 +56,7 @@ static error(message: string): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| message | string | Yes | 要打印的错误信息。 @static |
+| message | string | Yes | Text to print @static |
 
 ## info
 
@@ -64,7 +64,7 @@ static error(message: string): void
 static info(message: string): void
 ```
 
-打印日志信息。
+Prints "info" logs.
 
 **Since:** 3
 
@@ -80,7 +80,7 @@ static info(message: string): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| message | string | Yes | 要打印的文本信息。 @static |
+| message | string | Yes | Text to print @static |
 
 ## log
 
@@ -88,7 +88,7 @@ static info(message: string): void
 static log(message: string): void
 ```
 
-打印日志信息。
+Prints "log" logs.
 
 **Since:** 3
 
@@ -104,7 +104,7 @@ static log(message: string): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| message | string | Yes | 要打印的文本信息。 @static |
+| message | string | Yes | Text to print @static |
 
 ## warn
 
@@ -112,7 +112,7 @@ static log(message: string): void
 static warn(message: string): void
 ```
 
-打印警告信息。
+Prints "warn" logs.
 
 **Since:** 3
 
@@ -128,5 +128,5 @@ static warn(message: string): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| message | string | Yes | 要打印的警告信息。 @static |
+| message | string | Yes | Text to print @static |
 

@@ -1,6 +1,6 @@
 # SecurityUIExtensionProxy (System API)
 
-用于在双方建立连接成功后，向被拉起的Ability发送数据，以及订阅和取消订阅事件回调。
+This interface is used for send data to the UIExtensionAbility.&lt;br/&gt;It is returned from onRemoteReady callback of SecurityUIExtensionComponent&lt;br/&gt;when UIExtensionAbility connects successfully
 
 **Since:** 26.0.0
 
@@ -18,7 +18,7 @@
 offAsyncReceiverRegister(callback?: Callback<SecurityUIExtensionProxy>): void
 ```
 
-取消订阅被拉起的Ability发生异步注册的回调。使用callback异步回调。AnonyMous Object Rectification
+Deregisters the listener that watches for async data receiver callback being registered by UIExtensionAbility.AnonyMous Object Rectification
 
 **Since:** 26.0.0
 
@@ -36,7 +36,7 @@ offAsyncReceiverRegister(callback?: Callback<SecurityUIExtensionProxy>): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[SecurityUIExtensionProxy](arkts-arkui-securityuiextensioncomponent-securityuiextensionproxy-i-sys.md)&gt; | No | 回调函数。为空代表取消订阅所有扩展Ability异步注册后触发回调。非空代表取消订阅异步对应回调。 ArkTS-Sta模式下，可传入undefined，表示取消所有回调。 |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[SecurityUIExtensionProxy](arkts-arkui-securityuiextensioncomponent-securityuiextensionproxy-i-sys.md)&gt; | No | Callback of the listened event. |
 
 ## offSyncReceiverRegister
 
@@ -44,7 +44,7 @@ offAsyncReceiverRegister(callback?: Callback<SecurityUIExtensionProxy>): void
 offSyncReceiverRegister(callback?: Callback<SecurityUIExtensionProxy>): void
 ```
 
-取消订阅被拉起的Ability发生同步注册的回调。使用callback异步回调。AnonyMous Object Rectification
+Deregisters the listener that watches for sync data receiver callback being registered by UIExtensionAbility.AnonyMous Object Rectification
 
 **Since:** 26.0.0
 
@@ -62,7 +62,7 @@ offSyncReceiverRegister(callback?: Callback<SecurityUIExtensionProxy>): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[SecurityUIExtensionProxy](arkts-arkui-securityuiextensioncomponent-securityuiextensionproxy-i-sys.md)&gt; | No | 回调函数。为空代表取消订阅所有扩展Ability同步注册后触发回调。非空代表取消订阅同步对应回调。 ArkTS-Sta模式下，可传入undefined，表示取消所有回调。 |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[SecurityUIExtensionProxy](arkts-arkui-securityuiextensioncomponent-securityuiextensionproxy-i-sys.md)&gt; | No | Callback of the listened event. |
 
 ## onAsyncReceiverRegister
 
@@ -70,7 +70,7 @@ offSyncReceiverRegister(callback?: Callback<SecurityUIExtensionProxy>): void
 onAsyncReceiverRegister(callback: Callback<SecurityUIExtensionProxy>): void
 ```
 
-订阅被拉起的Ability发生异步注册的回调。使用callback异步回调。AnonyMous Object Rectification
+Register the listener that watches for async data receiver callback being registered by UIExtensionAbility.AnonyMous Object Rectification
 
 **Since:** 26.0.0
 
@@ -88,7 +88,7 @@ onAsyncReceiverRegister(callback: Callback<SecurityUIExtensionProxy>): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[SecurityUIExtensionProxy](arkts-arkui-securityuiextensioncomponent-securityuiextensionproxy-i-sys.md)&gt; | Yes | 回调函数。订阅扩展Ability注册setReceiveDataCallback后触发的回调。 |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[SecurityUIExtensionProxy](arkts-arkui-securityuiextensioncomponent-securityuiextensionproxy-i-sys.md)&gt; | Yes | Callback of the listened event. |
 
 ## onSyncReceiverRegister
 
@@ -96,7 +96,7 @@ onAsyncReceiverRegister(callback: Callback<SecurityUIExtensionProxy>): void
 onSyncReceiverRegister(callback: Callback<SecurityUIExtensionProxy>): void
 ```
 
-订阅被拉起的Ability发生同步注册的回调。使用callback异步回调。AnonyMous Object Rectification
+Register the listener that watches for sync data receiver callback being registered by UIExtensionAbility.AnonyMous Object Rectification
 
 **Since:** 26.0.0
 
@@ -114,7 +114,7 @@ onSyncReceiverRegister(callback: Callback<SecurityUIExtensionProxy>): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[SecurityUIExtensionProxy](arkts-arkui-securityuiextensioncomponent-securityuiextensionproxy-i-sys.md)&gt; | Yes | 回调函数。扩展Ability注册setReceiveDataForResultCallback后触发的回调。 |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[SecurityUIExtensionProxy](arkts-arkui-securityuiextensioncomponent-securityuiextensionproxy-i-sys.md)&gt; | Yes | Callback of the listened event. |
 
 ## send
 
@@ -122,7 +122,7 @@ onSyncReceiverRegister(callback: Callback<SecurityUIExtensionProxy>): void
 send(data: Record<string, RecordData>): void
 ```
 
-用于在双方建立连接成功后，向被拉起的Ability发送数据，提供异步发送能力。数据将被扩展Ability通过setReceiveDataCallback接收处理。AnonyMous Object Rectification
+This function is for sending data to the UIExtensionAbility.AnonyMous Object Rectification
 
 **Since:** 26.0.0
 
@@ -140,7 +140,7 @@ send(data: Record<string, RecordData>): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| data | [Record](../../apis-default/arkts-apis/arkts-record-t.md)&lt;string, RecordData&gt; | Yes | 异步发送给被拉起的Ability的数据。 |
+| data | [Record](../../apis-default/arkts-apis/arkts-record-t.md)&lt;string, RecordData&gt; | Yes |  |
 
 ## sendSync
 
@@ -148,7 +148,7 @@ send(data: Record<string, RecordData>): void
 sendSync(data: Record<string, RecordData>): Record<string, RecordData>
 ```
 
-用于在双方建立连接成功后，向被拉起的Ability同步发送数据，数据将被拉起的Ability通过setReceiveDataForResultCallback处理并返回结果。AnonyMous Object Rectification
+This function is for sending data to the UIExtensionAbility and waiting for the result in blocking mode.AnonyMous Object Rectification
 
 **Since:** 26.0.0
 
@@ -166,18 +166,18 @@ sendSync(data: Record<string, RecordData>): Record<string, RecordData>
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| data | [Record](../../apis-default/arkts-apis/arkts-record-t.md)&lt;string, RecordData&gt; | Yes | 同步发送给被拉起的Ability的数据。 |
+| data | [Record](../../apis-default/arkts-apis/arkts-record-t.md)&lt;string, RecordData&gt; | Yes | Data send to the UIExtensionAbility. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [Record](../../apis-default/arkts-apis/arkts-record-t.md)&lt;string, RecordData&gt; | data - 被拉起的Ability对同步发送请求处理后返回的响应数据。 |
+| [Record](../../apis-default/arkts-apis/arkts-record-t.md)&lt;string, RecordData&gt; | data - Data transferred from the UIExtensionAbility. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 100011 | 没有注册响应该请求的回调。 |
-| 100012 | 传输数据失败。 |
+| [100011](../errorcode-uiextension.md#100011-no-synchronous-callback-registered) | No callback has been registered to respond to this request. |
+| [100012](../errorcode-uiextension.md#100012-data-transfer-failure) | Transferring data failed. |
 

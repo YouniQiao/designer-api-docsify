@@ -16,7 +16,7 @@ TextMenuItem
 content: ResourceStr
 ```
 
-菜单名称。
+Customize what the menu displays.
 
 **Type:** [ResourceStr](arkts-arkui-resourcestr-t.md)
 
@@ -36,7 +36,7 @@ content: ResourceStr
 icon?: ResourceStr
 ```
 
-菜单图标。不支持网络图片。默认值：undefined，不显示菜单图标。
+Customize the icon before the menu displays content.
 
 **Type:** [ResourceStr](arkts-arkui-resourcestr-t.md)
 
@@ -56,7 +56,7 @@ icon?: ResourceStr
 id: TextMenuItemId
 ```
 
-菜单id。
+Distinguish clicked menu content by Id.
 
 **Type:** [TextMenuItemId](arkts-arkui-textmenuitemid-c.md)
 
@@ -76,7 +76,7 @@ id: TextMenuItemId
 labelInfo?: ResourceStr
 ```
 
-快捷键提示。该字段仅2in1设备支持。默认值：undefined，不显示快捷键提示。
+Customize what the menu item shortcut displays.
 
 **Type:** [ResourceStr](arkts-arkui-resourcestr-t.md)
 

@@ -6,49 +6,50 @@
 
 | Name | Description |
 | --- | --- |
-| [Particle](arkts-arkui-particle-particle-f.md#particle) | Defines Particle |
+| [Particle](arkts-arkui-particle-particle-f.md#particle) | Defines Particle Component |
+| [Particle](arkts-arkui-particle-particle-f.md#particle-1) | Defines Particle |
 
 ### Interfaces
 
 | Name | Description |
 | --- | --- |
-| [AccelerationOptions](arkts-arkui-particle-accelerationoptions-i.md) | 粒子加速度配置。  @since版本号高于内层元素版本号的情况，但这不影响接口的使用。 |
-| [DisturbanceFieldOptions](arkts-arkui-particle-disturbancefieldoptions-i.md) | 设置粒子扰动场参数。 |
-| [EmitterOptions](arkts-arkui-particle-emitteroptions-i.md) | 粒子发射器的配置。 |
-| [EmitterParticleOptions](arkts-arkui-particle-emitterparticleoptions-i.md) | 粒子配置。  @since版本号高于内层元素版本号的情况，但这不影响接口的使用。 |
-| [EmitterProperty](arkts-arkui-particle-emitterproperty-i.md) | 设置发射器属性。 |
-| [FieldRegion](arkts-arkui-particle-fieldregion-i.md) | 用于设置粒子场的区域信息。 |
-| [ImageParticleParameters](arkts-arkui-particle-imageparticleparameters-i.md) | 设置图片选项。 |
-| [ParticleAnnulusRegion](arkts-arkui-particle-particleannulusregion-i.md) | 用于设置环形发射器区域的配置信息。 |
-| [ParticleColorOptions](arkts-arkui-particle-particlecoloroptions-i.md) | 颜色变化方式为均匀变化的时候，在区间内随机生成一个差值。r、g、b、a四个颜色通道每秒分别使用差值叠加当前颜色值，生成目标颜色值。实现颜色随机变化的效果。  @since版本号高于内层元素版本号的情况，但这不影响接口的使用。 |
-| [ParticleColorPropertyOptions](arkts-arkui-particle-particlecolorpropertyoptions-i.md) | 设置粒子颜色属性更新器配置。 |
-| [ParticleColorUpdaterOptions](arkts-arkui-particle-particlecolorupdateroptions-i.md) | 颜色属性变化配置。  @since版本号高于内层元素版本号的情况，但这不影响接口的使用。 |
-| [ParticleOptions](arkts-arkui-particle-particleoptions-i.md) | 设置粒子参数。 |
-| [ParticlePropertyAnimation](arkts-arkui-particle-particlepropertyanimation-i.md) | 设置粒子属性生命周期。 |
-| [ParticlePropertyOptions](arkts-arkui-particle-particlepropertyoptions-i.md) | 设置粒子属性选项。 |
-| [ParticleUpdaterOptions](arkts-arkui-particle-particleupdateroptions-i.md) | 颜色属性变化配置。  @since版本号高于内层元素版本号的情况，但这不影响接口的使用。 |
-| [Particles](arkts-arkui-particle-particles-i.md) | 粒子动画的集合。  @since版本号高于内层元素版本号的情况，但这不影响接口的使用。 |
-| [PointParticleParameters](arkts-arkui-particle-pointparticleparameters-i.md) | 设置粒子半径。 |
-| [RippleFieldOptions](arkts-arkui-particle-ripplefieldoptions-i.md) | 用于描述粒子波动场信息的参数。 |
-| [VelocityFieldOptions](arkts-arkui-particle-velocityfieldoptions-i.md) | 用于描述粒子速度场信息的参数。 |
-| [VelocityOptions](arkts-arkui-particle-velocityoptions-i.md) | 粒子速度配置。  @since版本号高于内层元素版本号的情况，但这不影响接口的使用。 |
+| [AccelerationOptions](arkts-arkui-particle-accelerationoptions-i.md) | Defines acceleration options. |
+| [DisturbanceFieldOptions](arkts-arkui-particle-disturbancefieldoptions-i.md) | Defines particle disturbance Field params. |
+| [EmitterOptions](arkts-arkui-particle-emitteroptions-i.md) | Defines the emitter Options. |
+| [EmitterParticleOptions](arkts-arkui-particle-emitterparticleoptions-i.md) | Defines parameters of particles used by emitters. |
+| [EmitterProperty](arkts-arkui-particle-emitterproperty-i.md) | Defines the emitter property. |
+| [FieldRegion](arkts-arkui-particle-fieldregion-i.md) | Defines particle field region params. |
+| [ImageParticleParameters](arkts-arkui-particle-imageparticleparameters-i.md) | Defines the parameters for an image-like particle. |
+| [ParticleAnnulusRegion](arkts-arkui-particle-particleannulusregion-i.md) | Defines particle annuslus region params. |
+| [ParticleColorOptions](arkts-arkui-particle-particlecoloroptions-i.md) | Defines the particle color options. |
+| [ParticleColorPropertyOptions](arkts-arkui-particle-particlecolorpropertyoptions-i.md) | Defines the particle color property updater. |
+| [ParticleColorUpdaterOptions](arkts-arkui-particle-particlecolorupdateroptions-i.md) | Defines the particle color updater options. |
+| [ParticleOptions](arkts-arkui-particle-particleoptions-i.md) | Defines the ParticleOptions Interface. |
+| [ParticlePropertyAnimation](arkts-arkui-particle-particlepropertyanimation-i.md) | Defines the particle property lifecycle. |
+| [ParticlePropertyOptions](arkts-arkui-particle-particlepropertyoptions-i.md) | Defines the particle property Options. |
+| [ParticleUpdaterOptions](arkts-arkui-particle-particleupdateroptions-i.md) | Defines the particle updater options. |
+| [Particles](arkts-arkui-particle-particles-i.md) | Defines the Particles interface. |
+| [PointParticleParameters](arkts-arkui-particle-pointparticleparameters-i.md) | Defines the parameters for a point-like particle. |
+| [RippleFieldOptions](arkts-arkui-particle-ripplefieldoptions-i.md) | Defines ripple field options. |
+| [VelocityFieldOptions](arkts-arkui-particle-velocityfieldoptions-i.md) | Defines velocity field options. |
+| [VelocityOptions](arkts-arkui-particle-velocityoptions-i.md) | Defines velocity options. |
 
 ### Enums
 
 | Name | Description |
 | --- | --- |
 | [DistributionType](arkts-arkui-particle-distributiontype-e.md) | Enumerates the color distribution types of a particle. |
-| [DisturbanceFieldShape](arkts-arkui-particle-disturbancefieldshape-e.md) | 粒子形状。 |
-| [ParticleEmitterShape](arkts-arkui-particle-particleemittershape-e.md) | 粒子发射器形状。 |
-| [ParticleType](arkts-arkui-particle-particletype-e.md) | 粒子类型。 |
-| [ParticleUpdater](arkts-arkui-particle-particleupdater-e.md) | 粒子变化类型。 |
+| [DisturbanceFieldShape](arkts-arkui-particle-disturbancefieldshape-e.md) | Defines particle disturbance shape. |
+| [ParticleEmitterShape](arkts-arkui-particle-particleemittershape-e.md) | Enumerates the emitter shapes of a particle. |
+| [ParticleType](arkts-arkui-particle-particletype-e.md) | Enumerates the particle types. |
+| [ParticleUpdater](arkts-arkui-particle-particleupdater-e.md) | Enumerates the updater types of a particle. |
 
 ### Types
 
 | Name | Description |
 | --- | --- |
-| [ParticleColorPropertyUpdaterConfigs](arkts-arkui-particlecolorpropertyupdaterconfigs-t.md) | 设置粒子颜色属性更新器的配置。 |
-| [ParticleConfigs](arkts-arkui-particleconfigs-t.md) |  |
-| [ParticlePropertyUpdaterConfigs](arkts-arkui-particlepropertyupdaterconfigs-t.md) | 设置粒子属性更新器配置。 |
-| [ParticleTuple](arkts-arkui-particletuple-t.md) | 粒子元组，表示定义一些动画参数的类型。 |
+| [ParticleColorPropertyUpdaterConfigs](arkts-arkui-particlecolorpropertyupdaterconfigs-t.md) | Defines the particle color property updater configs. |
+| [ParticleConfigs](arkts-arkui-particleconfigs-t.md) | Defines the particle configs. |
+| [ParticlePropertyUpdaterConfigs](arkts-arkui-particlepropertyupdaterconfigs-t.md) | Defines the particle property updater configs. |
+| [ParticleTuple](arkts-arkui-particletuple-t.md) | Defines a pair of given type for particle. |
 

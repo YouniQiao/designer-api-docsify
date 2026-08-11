@@ -12,7 +12,7 @@ import { usb } from 'kits/@kit.BasicServicesKit';
 function hasRight(deviceName: string): boolean
 ```
 
-判断是否有权访问该设备。
+Checks whether the application has the permission to access the device.
 
 **Since:** 8
 
@@ -30,13 +30,13 @@ function hasRight(deviceName: string): boolean
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| deviceName | string | Yes | 设备名称。 |
+| deviceName | string | Yes | Device name. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| boolean | true表示有访问设备的权限，false表示没有访问设备的权限。 |
+| boolean | Returns **true** if the application has the permission to access the device; returns **false** otherwise. |
 
 ## Examples
 

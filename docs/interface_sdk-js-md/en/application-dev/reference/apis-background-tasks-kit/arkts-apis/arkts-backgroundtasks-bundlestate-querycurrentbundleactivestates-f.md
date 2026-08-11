@@ -39,8 +39,7 @@ Queries state data of the current bundle within a specified period.
 ## Examples
 
 ```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-import { bundleState } from '@kit.BackgroundTasksKit';
+import { BusinessError } from '@ohos.base';
 
 bundleState.queryCurrentBundleActiveStates(0, 20000000000000, (err: BusinessError, res: Array<bundleState.BundleActiveState>) => {
   if (err) {
@@ -90,8 +89,7 @@ Queries state data of the current bundle within a specified period.
 ## Examples
 
 ```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-import { bundleState } from '@kit.BackgroundTasksKit';
+import { BusinessError } from '@ohos.base';
 
 bundleState.queryCurrentBundleActiveStates(0, 20000000000000).then((res: Array<bundleState.BundleActiveState>) => {
   console.info('BUNDLE_ACTIVE queryCurrentBundleActiveStates promise success.');

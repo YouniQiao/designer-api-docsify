@@ -40,7 +40,7 @@ reason: DismissReason
 
 返回本次拦截全屏模态页面退出的事件原因。
 
-**类型：** [DismissReason](arkts-arkui-dismissreason-e.md)
+**类型：** [DismissReason](../arkts-apis/arkts-arkui-common-dismissreason-e.md)
 
 **起始版本：** 12
 

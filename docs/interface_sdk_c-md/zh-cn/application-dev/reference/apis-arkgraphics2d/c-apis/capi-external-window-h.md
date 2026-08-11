@@ -19,9 +19,9 @@
 | 名称 | typedef关键字 | 描述 |
 | -- | -- | -- |
 | [Region](capi-nativewindow-region.md) | Region | 表示本地窗口OHNativeWindow需要更新内容的矩形区域（脏区）。 |
-| [OHHDRMetaData](capi-nativewindow-ohhdrmetadata.md) | OHHDRMetaData | Defines the HDR metadata.(API10废弃) |
-| [OHExtDataHandle](capi-nativewindow-ohextdatahandle.md) | OHExtDataHandle | Defines the ExtData Handle(API10废弃) |
-| [OHIPCParcel](capi-nativewindow-ohipcparcel.md) | OHIPCParcel | 提供OHIPCParcel结构体声明，用于进程间通信。 |
+| [OHHDRMetaData](capi-nativewindow-ohhdrmetadata.md) | OHHDRMetaData | HDR元数据结构体定义。(API10废弃) |
+| [OHExtDataHandle](capi-nativewindow-ohextdatahandle.md) | OHExtDataHandle | 扩展数据句柄结构体定义。(API10废弃) |
+| [OHIPCParcel](capi-nativewindow-ohipcparcel.md) | OHIPCParcel | 提供对IPC序列化对象的访问功能。 |
 | [NativeWindow](capi-nativewindow-nativewindow.md) | - | 提供对OHNativeWindow的访问功能。 |
 | [NativeWindowBuffer](capi-nativewindow-nativewindowbuffer.md) | - | 提供对OHNativeWindowBuffer的访问功能。 |
 
@@ -33,7 +33,7 @@
 | [OHScalingMode](#ohscalingmode) | OHScalingMode | Indicates Scaling Mode.(API10废弃) |
 | [OHScalingModeV2](#ohscalingmodev2) | OHScalingModeV2 | Indicates Scaling Mode. |
 | [OHHDRMetadataKey](#ohhdrmetadatakey) | OHHDRMetadataKey | Enumerates the HDR metadata keys.(API10废弃) |
-| [OHSurfaceSource](#ohsurfacesource) | OHSurfaceSource | Indicates the source type of surface. |
+| [OHSurfaceSource](#ohsurfacesource) | OHSurfaceSource | 本地窗口内容来源类型枚举。 |
 
 ### 函数
 
@@ -74,6 +74,8 @@
 | [int32_t OH_NativeWindow_PreAllocBuffers(OHNativeWindow *window, uint32_t allocBufferCnt)](#oh_nativewindow_preallocbuffers) | 通过OHNativeWindow对象提前申请多块OHNativeWindowBuffer，用以内容生产。<br> 在调用本接口前，需要通过OH_NativeWindow_NativeWindowHandleOpt对OHNativeWindow设置宽高。<br> 本接口为非线程安全类型接口。<br> |
 | [int32_t OH_NativeWindow_LockBuffer(OHNativeWindow* window, Region region, OHNativeWindowBuffer** buffer)](#oh_nativewindow_lockbuffer) | 通过OHNativeWindow对象申请一块OHNativeWindowBuffer，用以内容生产，并对该OHNativeWindowBuffer加锁。<br> 本接口需要和OH_NativeWindow_UnlockAndFlushBuffer接口配合使用。<br> 本接口对OHNativeWindowBuffer加锁后，需要调OH_NativeWindow_UnlockAndFlushBuffer接口解锁后才能重新对OHNativeWindowBuffer加锁。<br> 若用本接口重复对OHNativeWindowBuffer加锁，会返回操作非法错误码。<br> 本接口支持通过CPU上的内存读写直接渲染图像。<br> 本接口为非线程安全类型接口。<br> |
 | [int32_t OH_NativeWindow_UnlockAndFlushBuffer(OHNativeWindow* window)](#oh_nativewindow_unlockandflushbuffer) | 通过OHNativeWindow将生产好内容的OHNativeWindowBuffer放回到Buffer队列中，用以内容消费，并对OHNativeWindowBuffer解锁。<br> 本接口需要和OH_NativeWindow_LockBuffer接口配合使用。<br> 若用本接口重复对OHNativeWindowBuffer解锁，会返回操作非法错误码。<br> 本接口为非线程安全类型接口。<br> |
+| [int32_t OH_NativeWindow_Set3DMetadataValue(OHNativeWindow *window, OH_NativeBuffer_3D_MetadataKey metadataKey, int32_t size, uint8_t *metadata)](#oh_nativewindow_set3dmetadatavalue) | 设置OHNativeWindow的3D元数据。<br> 本接口为非线程安全类型接口。<br> |
+| [int32_t OH_NativeWindow_Get3DMetadataValue(OHNativeWindow *window, OH_NativeBuffer_3D_MetadataKey metadataKey, int32_t *size, uint8_t **metadata)](#oh_nativewindow_get3dmetadatavalue) | 获取OHNativeWindow的3D元数据。<br> 本接口为非线程安全类型接口。<br> |
 
 ## 枚举类型说明
 
@@ -185,17 +187,17 @@ enum OHSurfaceSource
 
 **描述**
 
-Indicates the source type of surface.
+本地窗口内容来源类型枚举。
 
 **起始版本：** 12
 
 | 枚举项 | 描述 |
 | -- | -- |
-| OH_SURFACE_SOURCE_DEFAULT = 0 | the default source type of surface. |
-| OH_SURFACE_SOURCE_UI | the surface is created by ui. |
-| OH_SURFACE_SOURCE_GAME | the surface is created by game. |
-| OH_SURFACE_SOURCE_CAMERA | the surface is created by camera. |
-| OH_SURFACE_SOURCE_VIDEO | the surface is created by video. |
+| OH_SURFACE_SOURCE_DEFAULT = 0 | 窗口内容默认来源。 |
+| OH_SURFACE_SOURCE_UI | 窗口内容来自于UI。 |
+| OH_SURFACE_SOURCE_GAME | 窗口内容来自于游戏。 |
+| OH_SURFACE_SOURCE_CAMERA | 窗口内容来自于相机。 |
+| OH_SURFACE_SOURCE_VIDEO | 窗口内容来自于视频。 |
 
 
 ## 函数说明
@@ -1153,5 +1155,63 @@ int32_t OH_NativeWindow_UnlockAndFlushBuffer(OHNativeWindow* window)
 | 类型 | 说明 |
 | -- | -- |
 | int32_t | NATIVE_ERROR_OK 0 - 成功。<br>     NATIVE_ERROR_INVALID_ARGUMENTS 40001000 - window为空。<br>     NATIVE_ERROR_UNKNOWN 50002000 - window的surface成员为空。 |
+
+### OH_NativeWindow_Set3DMetadataValue()
+
+```c
+int32_t OH_NativeWindow_Set3DMetadataValue(OHNativeWindow *window, OH_NativeBuffer_3D_MetadataKey metadataKey, int32_t size, uint8_t *metadata)
+```
+
+**描述**
+
+设置OHNativeWindow的3D元数据。<br> 本接口为非线程安全类型接口。<br>
+
+**系统能力：** SystemCapability.Graphic.Graphic2D.NativeWindow
+
+**起始版本：** 26.0.0
+
+**参数：**
+
+| 参数项 | 描述 |
+| -- | -- |
+| [OHNativeWindow](capi-nativewindow-nativewindow.md) *window | 一个指向OHNativeWindow的结构体实例的指针。 |
+| [OH_NativeBuffer_3D_MetadataKey](capi-buffer-common-h.md#oh_nativebuffer_3d_metadatakey) metadataKey | window的3D元数据类型，其值从OH_NativeBuffer_3D_MetadataKey获取。 |
+| int32_t size | uint8_t向量的大小。 |
+| uint8_t *metadata | 指向uint8_t向量的指针。 |
+
+**返回：**
+
+| 类型 | 说明 |
+| -- | -- |
+| int32_t | NATIVE_ERROR_OK 0 - 成功。<br>     NATIVE_ERROR_INVALID_ARGUMENTS 40001000 - window或metadata为空。<br>     NATIVE_ERROR_UNKNOWN 50002000 - 设置3D元数据失败。<br>     NATIVE_ERROR_UNSUPPORTED 50102000 - 不支持的metadata key。 |
+
+### OH_NativeWindow_Get3DMetadataValue()
+
+```c
+int32_t OH_NativeWindow_Get3DMetadataValue(OHNativeWindow *window, OH_NativeBuffer_3D_MetadataKey metadataKey, int32_t *size, uint8_t **metadata)
+```
+
+**描述**
+
+获取OHNativeWindow的3D元数据。<br> 本接口为非线程安全类型接口。<br>
+
+**系统能力：** SystemCapability.Graphic.Graphic2D.NativeWindow
+
+**起始版本：** 26.0.0
+
+**参数：**
+
+| 参数项 | 描述 |
+| -- | -- |
+| [OHNativeWindow](capi-nativewindow-nativewindow.md) *window | 一个指向OHNativeWindow的结构体实例的指针。 |
+| [OH_NativeBuffer_3D_MetadataKey](capi-buffer-common-h.md#oh_nativebuffer_3d_metadatakey) metadataKey | window的3D元数据类型，其值从OH_NativeBuffer_3D_MetadataKey获取。 |
+| int32_t *size | uint8_t向量的大小。 |
+| uint8_t **metadata | 指向uint8_t向量的二级指针。 |
+
+**返回：**
+
+| 类型 | 说明 |
+| -- | -- |
+| int32_t | NATIVE_ERROR_OK 0 - 成功。<br>     NATIVE_ERROR_INVALID_ARGUMENTS 40001000 - window、metadata或size为空。<br>     NATIVE_ERROR_UNKNOWN 50002000 - 内存拷贝或分配失败，或者获取3D元数据失败。<br>     NATIVE_ERROR_UNSUPPORTED 50102000 - 不支持的metadata key。 |
 
 

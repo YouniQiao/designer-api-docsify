@@ -12,7 +12,7 @@ import { adminManager } from 'kits/@kit.MDMKit';
 function getAdmins(): Promise<Array<Want>>
 ```
 
-查询当前用户下的所有设备管理应用。使用Promise异步回调。
+Queries all device administrator applications of the current user. This API uses a promise to return the result.
 
 **Since:** 15
 
@@ -28,13 +28,13 @@ function getAdmins(): Promise<Array<Want>>
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;Array&lt;[Want](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-want-want-c.md)&gt;&gt; | 包含所有已激活的设备管理应用的Promise对象。 |
+| Promise&lt;Array&lt;[Want](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-want-want-c.md)&gt;&gt; | Promise that contains all activated device administrator applications. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 202 | Permission verification failed. A non-system application calls a system API. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
 
 ## Examples
 

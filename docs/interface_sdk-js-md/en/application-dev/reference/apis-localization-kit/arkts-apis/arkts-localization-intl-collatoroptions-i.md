@@ -1,12 +1,10 @@
 # CollatorOptions
 
-创建排序对象时可设置的配置项。
+Defines the options for creating a Collator object.
 
-从API version 9开始，CollatorOptions中的属性改为可选。
+**Since:** 23
 
-**Since:** 8
-
-**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Sta only, since version 23.
 
 <!--Device-intl-export interface CollatorOptions--><!--Device-intl-export interface CollatorOptions-End-->
 
@@ -24,23 +22,13 @@ import { intl } from 'kits/@kit.LocalizationKit';
 caseFirst?: string
 ```
 
-区域的排序规则是否考虑大小写，取值包括：
-
-"upper"：大写排前面。
-
-"lower"：小写排前面。
-
-"false"：使用区域默认的大小写排序规则。
-
-默认值："false"。
+Whether upper case or lower case is sorted first. The value can be "upper", "lower", or "false".The default value is "false".
 
 **Type:** string
 
-**Since:** 8
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
-**Atomic service API:** This API can be used in atomic services since API version 12.
+**ArkTS mode:** ArkTS-Sta only, since version 23.
 
 <!--Device-CollatorOptions-caseFirst?: string--><!--Device-CollatorOptions-caseFirst?: string-End-->
 
@@ -52,49 +40,13 @@ caseFirst?: string
 collation?: string
 ```
 
-区域的排序规则，取值包括：
-
-"big5han"：拉丁字母使用的拼音排序。
-
-"compat"：兼容性排序，仅用于阿拉伯语。
-
-"dict"：词典风格排序，仅用于僧伽罗语。
-
-"direct"：二进制码点排序。
-
-"ducet"：按Unicode排序元素表排序。
-
-"eor"：按欧洲排序规则排序。
-
-"gb2312"：拼音排序，仅用于中文排序。
-
-"phonebk"：电话本风格排序。
-
-"phonetic"：发音排序。
-
-"pinyin"：拼音排序。
-
-"reformed"：瑞典语排序。
-
-"searchjl"：韩语初始辅音搜索的特殊排序。
-
-"stroke"：汉语的笔画排序。
-
-"trad"：传统风格排序，如西班牙语。
-
-"unihan"：统一汉字排序，用于日语、韩语、中文等汉字排序。
-
-"zhuyin"：注音排序，仅用于中文排序。
-
-默认值："default"。
+Collation rule. The value can be any of the following: "big5han", "compat", "dict", "direct", "ducet", "eor","gb2312", "phonebk", "phonetic", "pinyin", "reformed", "searchjl", "stroke", "trad", "unihan", or "zhuyin".The default value is "default".
 
 **Type:** string
 
-**Since:** 8
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
-**Atomic service API:** This API can be used in atomic services since API version 12.
+**ArkTS mode:** ArkTS-Sta only, since version 23.
 
 <!--Device-CollatorOptions-collation?: string--><!--Device-CollatorOptions-collation?: string-End-->
 
@@ -106,17 +58,13 @@ collation?: string
 ignorePunctuation?: boolean
 ```
 
-true表示忽略标点符号，false表示考虑标点符号。
-
-默认值：false。
+Whether to ignore punctuation. The value "true" means to ignore punctuation, and the value "false" means the opposite. The default value is "false".
 
 **Type:** boolean
 
-**Since:** 8
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
-**Atomic service API:** This API can be used in atomic services since API version 12.
+**ArkTS mode:** ArkTS-Sta only, since version 23.
 
 <!--Device-CollatorOptions-ignorePunctuation?: boolean--><!--Device-CollatorOptions-ignorePunctuation?: boolean-End-->
 
@@ -128,21 +76,13 @@ true表示忽略标点符号，false表示考虑标点符号。
 localeMatcher?: string
 ```
 
-区域匹配算法，取值范围：
-
-"lookup"：精确匹配。
-
-"best fit"：最佳匹配。
-
-默认值："best fit"。
+Locale matching algorithm. The value can be "lookup" or "best fit". The default value is "best fit".
 
 **Type:** string
 
-**Since:** 8
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
-**Atomic service API:** This API can be used in atomic services since API version 12.
+**ArkTS mode:** ArkTS-Sta only, since version 23.
 
 <!--Device-CollatorOptions-localeMatcher?: string--><!--Device-CollatorOptions-localeMatcher?: string-End-->
 
@@ -154,21 +94,13 @@ localeMatcher?: string
 numeric?: boolean
 ```
 
-数字排序，取值包括：
-
-true：使用数字排序，比如：'1' < '2' < '10' < '11'。
-
-false：不使用数字排序，比如：'1' < '10' < '11' < '2'。
-
-默认值：false。
+Whether to use numeric collation. The value "true" means to use numeric collation, and the value "false" means the opposite. The default value is "false".
 
 **Type:** boolean
 
-**Since:** 8
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
-**Atomic service API:** This API can be used in atomic services since API version 12.
+**ArkTS mode:** ArkTS-Sta only, since version 23.
 
 <!--Device-CollatorOptions-numeric?: boolean--><!--Device-CollatorOptions-numeric?: boolean-End-->
 
@@ -180,25 +112,13 @@ false：不使用数字排序，比如：'1' < '10' < '11' < '2'。
 sensitivity?: string
 ```
 
-表示字符串中的哪些差异会导致非零结果值，取值范围：
-
-"base"：不同的字母比较不相等，比如：'a' ≠ 'b', 'a' = 'á', 'a' = 'A'。
-
-"accent"：不同的字母或不同读音的相同字母比较不相等，比如'a' ≠ 'b', 'a' ≠ 'á', 'a' = 'A'。
-
-"case"：不同的字母或相同字母大小写比较不相等，比如：'a' ≠ 'b', 'a' = 'á', 'a' ≠ 'A'。
-
-"variant"：不同的字母或读音及其它有区别的标志或大小写都是不相等的，比如：'a' ≠ 'b', 'a' ≠ 'á', 'a' ≠ 'A'。
-
-默认值："variant"。
+Differences in the strings that lead to non-zero return values. The value can be "base", "accent", "case", or"letiant". The default value is "variant".
 
 **Type:** string
 
-**Since:** 8
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
-**Atomic service API:** This API can be used in atomic services since API version 12.
+**ArkTS mode:** ArkTS-Sta only, since version 23.
 
 <!--Device-CollatorOptions-sensitivity?: string--><!--Device-CollatorOptions-sensitivity?: string-End-->
 
@@ -210,21 +130,13 @@ sensitivity?: string
 usage?: string
 ```
 
-比较的用途，取值范围：
-
-"sort"：用作排序。
-
-"search"：用作查找匹配的字符串。
-
-默认值："sort"。
+Whether the comparison is for sorting or for searching. The value can be "sort" or "search".The default value is "sort".
 
 **Type:** string
 
-**Since:** 8
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
-**Atomic service API:** This API can be used in atomic services since API version 12.
+**ArkTS mode:** ArkTS-Sta only, since version 23.
 
 <!--Device-CollatorOptions-usage?: string--><!--Device-CollatorOptions-usage?: string-End-->
 

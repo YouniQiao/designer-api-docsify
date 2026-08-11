@@ -10,12 +10,6 @@ Provides APIs to define the valid range of a field. The constructor of this clas
 
 **系统能力：** SystemCapability.Utils.Lang
 
-## 导入模块
-
-```TypeScript
-import { util } from 'kits/@kit.ArkTS';
-```
-
 ## clamp
 
 ```TypeScript

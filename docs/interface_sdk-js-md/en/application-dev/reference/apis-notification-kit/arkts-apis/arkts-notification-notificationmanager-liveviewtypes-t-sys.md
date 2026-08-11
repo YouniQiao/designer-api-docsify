@@ -4,7 +4,7 @@
 export type LiveViewTypes = _LiveViewTypes
 ```
 
-描述实况通知的类型。
+Enumerates live view types.
 
 **Since:** 18
 

@@ -1,8 +1,8 @@
 # ControlCenter
 
-ControlCenter继承自[ControlCenterQuery](arkts-camera-camera-controlcenterquery-i.md)。
+**ControlCenter** inherits from [ControlCenterQuery](arkts-camera-camera-controlcenterquery-i.md).
 
-控制中心类，用于使能相机控制器。
+It is used to enable the camera controller.
 
 **Inheritance/Implementation:** ControlCenter extends [ControlCenterQuery](arkts-camera-camera-controlcenterquery-i.md)
 
@@ -26,7 +26,7 @@ import { camera } from 'kits/@kit.CameraKit';
 enableControlCenter(enabled: boolean): void
 ```
 
-使能相机控制器。
+Enables the camera controller.
 
 **Since:** 20
 
@@ -42,11 +42,11 @@ enableControlCenter(enabled: boolean): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| enabled | boolean | Yes | 开启或关闭相机控制器。true表示开启，false表示关闭。 |
+| enabled | boolean | Yes | Whether to enable or disable the camera controller. **true** to enable, **false** otherwise. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 7400103 | Session not config. |
+| [7400103](../errorcode-camera.md#7400103-session-not-configured) | Session not config. |
 

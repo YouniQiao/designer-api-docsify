@@ -1,6 +1,6 @@
 # LazyForEachCustomComponentFreezeMode
 
-冻结模式枚举，用于配置LazyForEach中已移出组件树的缓存自定义节点的冻结行为。
+Enumerates the freeze modes for cached custom nodes that have been removed from the component tree in LazyForEach.
 
 **Since:** 26.0.0
 
@@ -16,7 +16,7 @@
 AUTO = 0
 ```
 
-遵循Metadata中enableCustomComponentFreeze字段的配置来决定是否启用冻结。
+Follow the enableCustomComponentFreeze field in Metadata to determine whether freezing takes effect.
 
 **Since:** 26.0.0
 
@@ -34,7 +34,7 @@ AUTO = 0
 DISABLED = 1
 ```
 
-禁用已移出组件树的缓存自定义节点的冻结。
+Freezing is disabled for cached custom nodes removed from the component tree.
 
 **Since:** 26.0.0
 
@@ -52,7 +52,7 @@ DISABLED = 1
 ENABLED = 2
 ```
 
-启用已移出组件树的缓存自定义节点的冻结。开启后，缓存自定义组件的状态更新将被冻结。
+Freezing is enabled for cached custom nodes removed from the component tree.State updates of cached custom components will be frozen.
 
 **Since:** 26.0.0
 

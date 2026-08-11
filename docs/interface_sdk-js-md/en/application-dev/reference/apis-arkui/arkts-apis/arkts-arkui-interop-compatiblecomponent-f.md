@@ -10,7 +10,7 @@ export declare function compatibleComponent(
 ): void
 ```
 
-在ArkTS-Sta中引用ArkTS-Dyn自定义组件的占位组件。
+Obtains the compatible custom component.
 
 **Since:** 23
 
@@ -28,7 +28,7 @@ export declare function compatibleComponent(
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| init | [CompatibleInitCallback](arkts-arkui-compatibleinitcallback-t.md) | Yes | 初始化占位组件的回调函数。 |
-| update | [CompatibleUpdateCallback](arkts-arkui-compatibleupdatecallback-t.md) | Yes | 更新占位组件的回调函数。 |
-| component | [ExtendableComponent](arkts-arkui-extendablecomponent-extendablecomponent-c.md) | No | 当前ArkTS-Sta自定义组件。 |
+| init | [CompatibleInitCallback](arkts-arkui-compatibleinitcallback-t.md) | Yes | the callback for initializing compatible custom component |
+| update | [CompatibleUpdateCallback](arkts-arkui-compatibleupdatecallback-t.md) | Yes | the callback for updating compatible custom component |
+| component | [ExtendableComponent](arkts-arkui-extendablecomponent-extendablecomponent-c.md) | No | the custom component |
 

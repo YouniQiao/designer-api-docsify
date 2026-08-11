@@ -1,6 +1,6 @@
 # LinearAccelerometerResponse
 
-线性加速度传感器数据，继承于[Response](arkts-sensorservice-sensor-response-i.md)。
+Describes the linear acceleration sensor data. It extends from [Response](arkts-sensorservice-sensor-response-i.md).
 
 **Inheritance/Implementation:** LinearAccelerometerResponse extends [Response](arkts-sensorservice-sensor-response-i.md)
 
@@ -24,7 +24,7 @@ import { sensor } from 'kits/@kit.SensorServiceKit';
 x: double
 ```
 
-施加在设备x轴方向的线性加速度（排除重力分量）。单位：m/s²。
+Linear acceleration along the x-axis of the device, in m/s?.
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：double
 
@@ -42,7 +42,7 @@ x: double
 y: double
 ```
 
-施加在设备y轴方向的线性加速度（排除重力分量）。单位：m/s²。
+Linear acceleration along the y-axis of the device, in m/s?.
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：double
 
@@ -60,7 +60,7 @@ y: double
 z: double
 ```
 
-施加在设备z轴方向的线性加速度（排除重力分量）。单位：m/s²。
+Linear acceleration along the z-axis of the device, in m/s?.
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：double
 

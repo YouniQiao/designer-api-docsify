@@ -1,13 +1,14 @@
 # InterruptHint
 
-表示中断提示的枚举。
+Enumerates the hints provided along with audio interruption.
 
-当用户监听到音频中断事件（即收到[InterruptEvent](arkts-audio-audio-interruptevent-i.md)事件）时，获取此信息。
+The hint is obtained when an [InterruptEvent](arkts-audio-audio-interruptevent-i.md) is received.
 
-此类型表示根据焦点策略，对音频流执行的具体操作（如暂停、调整音量等）。
+The hint specifies the operation (such as audio pause or volume adjustment) to be performed on audio streams based on the focus strategy.
 
-可以结合InterruptEvent中的[InterruptForceType](arkts-audio-audio-interruptforcetype-e.md)信息，判断该操作是否已由系统强制执行。详情请参阅文档  
-[音频焦点介绍](../../../media/audio/audio-playback-concurrency.md)。
+You can determine whether the operation is forcibly performed by the system based on  
+[InterruptForceType](arkts-audio-audio-interruptforcetype-e.md) in **InterruptEvent**. For details, see  
+[Introduction to Audio Focus](../../../media/audio/audio-playback-concurrency.md).
 
 **Since:** 7
 
@@ -23,7 +24,7 @@
 INTERRUPT_HINT_NONE = 0
 ```
 
-无提示。
+None.
 
 **Since:** 8
 
@@ -41,9 +42,10 @@ INTERRUPT_HINT_NONE = 0
 INTERRUPT_HINT_RESUME = 1
 ```
 
-提示音频恢复，应用可主动触发开始渲染或开始采集的相关操作。
+A hint is displayed, indicating that the audio stream is restored. The application can proactively trigger operations related to rendering or recording.
 
-此操作无法由系统强制执行，其对应的[InterruptForceType](arkts-audio-audio-interruptforcetype-e.md)一定为INTERRUPT_SHARE类型。
+This operation cannot be forcibly performed by the system, and the corresponding  
+[InterruptForceType](arkts-audio-audio-interruptforcetype-e.md) must be **INTERRUPT_SHARE**.
 
 **Since:** 7
 
@@ -61,9 +63,9 @@ INTERRUPT_HINT_RESUME = 1
 INTERRUPT_HINT_PAUSE = 2
 ```
 
-提示音频暂停，暂时失去音频焦点。
+A hint is displayed, indicating that the audio stream is paused and the audio focus is lost temporarily.
 
-待焦点可用时，会收到INTERRUPT_HINT_RESUME事件。
+When the audio focus is available, the **INTERRUPT_HINT_RESUME** event is received.
 
 **Since:** 7
 
@@ -81,7 +83,7 @@ INTERRUPT_HINT_PAUSE = 2
 INTERRUPT_HINT_STOP = 3
 ```
 
-提示音频停止，彻底失去音频焦点。
+A hint is displayed, indicating that the audio stream stops and the audio focus is lost.
 
 **Since:** 7
 
@@ -99,7 +101,7 @@ INTERRUPT_HINT_STOP = 3
 INTERRUPT_HINT_DUCK = 4
 ```
 
-提示音频躲避开始，降低音量播放。
+A hint is displayed, indicating that audio ducking starts and the audio is played at a lower volume.
 
 **Since:** 7
 
@@ -117,7 +119,7 @@ INTERRUPT_HINT_DUCK = 4
 INTERRUPT_HINT_UNDUCK = 5
 ```
 
-提示音频躲避结束，恢复音量播放。
+A hint is displayed, indicating that audio ducking ends and the audio is played at the normal volume.
 
 **Since:** 8
 
@@ -135,7 +137,7 @@ INTERRUPT_HINT_UNDUCK = 5
 INTERRUPT_HINT_MUTE = 6
 ```
 
-提示音频静音。
+A hint is displayed, indicating that the audio is muted.
 
 **Since:** 20
 
@@ -151,7 +153,7 @@ INTERRUPT_HINT_MUTE = 6
 INTERRUPT_HINT_UNMUTE = 7
 ```
 
-提示音频解除静音。
+A hint is displayed, indicating that the audio is unmuted.
 
 **Since:** 20
 

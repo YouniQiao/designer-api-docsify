@@ -7,12 +7,6 @@ TestRunner模块提供了框架测试的能力。包括准备单元测试环境�
  > 本模块接口仅可在[单元测试框架](../../../application-test/unittest-guidelines.md)中使用。
 
 
-## 导入模块
-
-```TypeScript
-import { TestRunner } from 'kits/@kit.TestKit';
-```
-
 ## 汇总
 
 ### 接口

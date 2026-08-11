@@ -2,9 +2,9 @@
 
 Decide whether the width of select menu fit the trigger or content
 
-**Since:** 12
+**Since:** 11
 
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
+**ArkTS mode:** ArkTS-Dyn only, since version 11.
 
 <!--Device-unnamed-declare enum OptionWidthMode--><!--Device-unnamed-declare enum OptionWidthMode-End-->
 
@@ -18,9 +18,9 @@ FIT_CONTENT = 'fit_content'
 
 The menu width fit the content.
 
-**Since:** 12
+**Since:** 11
 
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
+**ArkTS mode:** ArkTS-Dyn only, since version 11.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -38,9 +38,9 @@ FIT_TRIGGER = 'fit_trigger'
 
 The menu width fit the trigger.
 
-**Since:** 12
+**Since:** 11
 
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
+**ArkTS mode:** ArkTS-Dyn only, since version 11.
 
 **Model restriction:** This API can be used only in the stage model.
 

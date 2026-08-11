@@ -1,7 +1,7 @@
 # OverlayModuleInfo
 
-OverlayModuleInfo信息，可以通过  
-[overlay.getOverlayModuleInfo](arkts-ability-overlay-getoverlaymoduleinfo-f.md#getoverlaymoduleinfo)接口获取当前应用中具有overlay特征模块的OverlayModuleInfo信息。
+The module provides information about a module with the overlay feature. An application can obtain such information through  
+[overlay.getOverlayModuleInfo](arkts-ability-overlay-getoverlaymoduleinfo-f.md#getoverlaymoduleinfo).
 
 **Since:** 10
 
@@ -17,7 +17,7 @@ OverlayModuleInfo信息，可以通过
 readonly bundleName: string
 ```
 
-overlay特征module所属的应用的bundle名称。
+Bundle name of the application to which the module with the overlay feature belongs.
 
 **Type:** string
 
@@ -35,7 +35,7 @@ overlay特征module所属的应用的bundle名称。
 readonly moduleName: string
 ```
 
-overlay特征module的名称。
+Name of the module with the overlay feature.
 
 **Type:** string
 
@@ -53,7 +53,7 @@ overlay特征module的名称。
 readonly priority: int
 ```
 
-overlay特征module的优先级。取值为整数，取值范围1 ~ 100，数值越大优先级越高。
+Priority of the module with the overlay feature. The value is an integer ranging from 1 to 100. A larger value indicates a higher priority.
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
@@ -71,8 +71,8 @@ overlay特征module的优先级。取值为整数，取值范围1 ~ 100，数值
 readonly state: int
 ```
 
-overlay特征module的  
-[禁用使能状态](arkts-ability-overlay-setoverlayenabled-f.md#setoverlayenabled)。0代表禁用状态，1代表使能状态。
+Whether the module with the overlay feature is  
+[disabled](arkts-ability-overlay-setoverlayenabled-f.md#setoverlayenabled). The value **0** means that the module with the overlay feature is disabled, and **1** means the opposite.
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
@@ -90,7 +90,7 @@ overlay特征module的
 readonly targetModuleName: string
 ```
 
-overlay特征指定的目标module的名称，表示当前overlay包的资源需要替换生效的模块名称。
+Name of the target module specified by the overlay feature, that is, the name of the module whose resources are to be replaced by the overlay package.
 
 **Type:** string
 

@@ -28,7 +28,7 @@ Enables NFC.This API can be called only by system applications
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 801 | Capability not supported. |
-| 201 | Permission denied. |
-| 3100101 | The NFC state is abnormal in the service. |
+| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
+| [3100101](../errorcode-nfc.md#3100101-nfc-switch-error) | The NFC state is abnormal in the service. |
 

@@ -6,43 +6,45 @@
 
 | Name | Description |
 | --- | --- |
-| [Tabs](arkts-arkui-tabs-tabs-f.md#tabs) | 定义Tabs组件 |
+| [Tabs](arkts-arkui-tabs-tabs-f.md#tabs) | Defines Tabs Component |
 
 ### Classes
 
 | Name | Description |
 | --- | --- |
-| [TabsController](arkts-arkui-tabs-tabscontroller-c.md) | Tabs组件的控制器，用于控制Tabs组件进行页签切换。不支持一个TabsController控制多个Tabs组件。 |
+| [TabsController](arkts-arkui-tabs-tabscontroller-c.md) | Provides methods for switching tabs. |
 
 ### Interfaces
 
 | Name | Description |
 | --- | --- |
-| [BarGridColumnOptions](arkts-arkui-tabs-bargridcolumnoptions-i.md) | TabBar栅格化方式设置的对象，包括栅格模式下的column边距和间隔，以及小、中、大屏下，页签占用的columns数量。 |
-| [ScrollableBarModeOptions](arkts-arkui-tabs-scrollablebarmodeoptions-i.md) | Scrollable模式下的TabBar的布局样式对象。 |
-| [TabContentAnimatedTransition](arkts-arkui-tabs-tabcontentanimatedtransition-i.md) | Tabs自定义切换动画相关信息。 |
-| [TabContentTransitionProxy](arkts-arkui-tabs-tabcontenttransitionproxy-i.md) | Tabs自定义切换动画执行过程中，返回给开发者的proxy对象。开发者可通过该对象获取自定义动画的起始和目标页面信息，同时，也可以通过调用该对象的finishTransition接口通知Tabs组件自定义动画已结束。 |
-| [TabsAnimationEvent](arkts-arkui-tabs-tabsanimationevent-i.md) | Tabs组件动画相关信息集合。 |
+| [BarGridColumnOptions](arkts-arkui-tabs-bargridcolumnoptions-i.md) | Provides an interface for the grid column options of an tab bar including sm, md, lg, margin and gutter. |
+| [FloatingTabBarStyle](arkts-arkui-tabs-floatingtabbarstyle-i.md) | Provides an interface for the options for the floating bar mode. |
+| [FloatingTabBarWidth](arkts-arkui-tabs-floatingtabbarwidth-i.md) | Provides an interface for the options for the floating bar width of the tab width at different breakpoints. |
+| [ScrollableBarModeOptions](arkts-arkui-tabs-scrollablebarmodeoptions-i.md) | Provides an interface for the options for the scrollable bar mode including margin and nonScrollableLayoutStyle. |
+| [TabContentAnimatedTransition](arkts-arkui-tabs-tabcontentanimatedtransition-i.md) | Defines the Tab Content animated transition options. |
+| [TabContentTransitionProxy](arkts-arkui-tabs-tabcontenttransitionproxy-i.md) | The proxy of TabContentAnimatedTransition. |
+| [TabsAnimationEvent](arkts-arkui-tabs-tabsanimationevent-i.md) | Provides an interface for tabs animation. |
 
 ### Enums
 
 | Name | Description |
 | --- | --- |
-| [AnimationMode](arkts-arkui-tabs-animationmode-e.md) | 点击[TabBar](../../../reference/apis-arkui/arkui-ts/ts-container-tabcontent.md#tabbar)页签时切换TabContent的动画形式枚举。 |
-| [BarMode](arkts-arkui-tabs-barmode-e.md) | TabBar布局模式枚举。 |
-| [BarPosition](arkts-arkui-tabs-barposition-e.md) | Tabs页签位置枚举。 |
-| [LayoutStyle](arkts-arkui-tabs-layoutstyle-e.md) | [Scrollable](TabsAttribute.barMode)模式下不滚动时的页签排布方式枚举。 |
-| [TabsCacheMode](arkts-arkui-tabs-tabscachemode-e.md) | 子组件的缓存模式。 |
-| [TabsNestedScrollMode](arkts-arkui-tabs-tabsnestedscrollmode-e.md) | Tabs组件和父组件的嵌套滚动模式枚举。 |
+| [AnimationMode](arkts-arkui-tabs-animationmode-e.md) | Declare the animation mode of tab content. |
+| [BarMode](arkts-arkui-tabs-barmode-e.md) | Declare the graphic format of the bar chart. |
+| [BarPosition](arkts-arkui-tabs-barposition-e.md) | Declare the location of the bar chart. |
+| [LayoutStyle](arkts-arkui-tabs-layoutstyle-e.md) | Declare the layout style of the tab bar items. |
+| [TabsCacheMode](arkts-arkui-tabs-tabscachemode-e.md) | Declare the cache mode of the child components. |
+| [TabsNestedScrollMode](arkts-arkui-tabs-tabsnestedscrollmode-e.md) | Tabs nested scroll nested mode |
 
 ### Types
 
 | Name | Description |
 | --- | --- |
-| [OnTabsAnimationEndCallback](arkts-arkui-ontabsanimationendcallback-t.md) | 切换动画结束时触发的回调。 |
-| [OnTabsAnimationStartCallback](arkts-arkui-ontabsanimationstartcallback-t.md) | 切换动画开始时触发的回调。 |
-| [OnTabsContentDidScrollCallback](arkts-arkui-ontabscontentdidscrollcallback-t.md) | Tabs滑动时触发的回调。 |
-| [OnTabsContentWillChangeCallback](arkts-arkui-ontabscontentwillchangecallback-t.md) | 自定义Tabs页面切换拦截事件能力，新页面即将显示时触发的回调。 |
-| [OnTabsGestureSwipeCallback](arkts-arkui-ontabsgestureswipecallback-t.md) | 在页面跟手滑动过程中，逐帧触发的回调。 |
-| [TabsCustomContentTransitionCallback](arkts-arkui-tabscustomcontenttransitioncallback-t.md) | 自定义Tabs页面切换动画开始时触发的回调。 |
+| [OnTabsAnimationEndCallback](arkts-arkui-ontabsanimationendcallback-t.md) | Defines a tabs callback when onAnimationEnd. |
+| [OnTabsAnimationStartCallback](arkts-arkui-ontabsanimationstartcallback-t.md) | Defines a tabs callback when onAnimationStart. |
+| [OnTabsContentDidScrollCallback](arkts-arkui-ontabscontentdidscrollcallback-t.md) | Defines a tabs callback when onContentDidScroll. |
+| [OnTabsContentWillChangeCallback](arkts-arkui-ontabscontentwillchangecallback-t.md) | Defines a tabs callback when onContentWillChange. |
+| [OnTabsGestureSwipeCallback](arkts-arkui-ontabsgestureswipecallback-t.md) | Defines a tabs callback when onGestureSwipe. |
+| [TabsCustomContentTransitionCallback](arkts-arkui-tabscustomcontenttransitioncallback-t.md) | Defines a tabs callback when customContentTransition. |
 

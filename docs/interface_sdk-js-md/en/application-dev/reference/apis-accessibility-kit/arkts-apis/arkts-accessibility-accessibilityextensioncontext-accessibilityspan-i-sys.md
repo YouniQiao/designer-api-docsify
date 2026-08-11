@@ -1,6 +1,7 @@
 # AccessibilitySpan (System API)
 
-辅助功能超链接文本信息。详见[AccessibilityElement](arkts-accessibility-accessibilityextensioncontext-accessibilityelement-i.md)中的属性spans。
+Defines the information about the hyperlink wrapped by the span tag. For details, see the spans attribute in   
+[AccessibilityElement](arkts-accessibility-accessibilityextensioncontext-accessibilityelement-i.md).
 
 **Since:** 20
 
@@ -18,7 +19,7 @@
 accessibilityDescription: string
 ```
 
-超链接文本的辅助功能描述。
+Accessibility description of the hyperlink.
 
 **Type:** string
 
@@ -38,7 +39,7 @@ accessibilityDescription: string
 accessibilityLevel: string
 ```
 
-超链接文本的辅助功能级别。
+Accessibility level of the hyperlink.
 
 **Type:** string
 
@@ -58,7 +59,7 @@ accessibilityLevel: string
 accessibilityText: string
 ```
 
-超链接文本的辅助功能文本。
+Accessibility text of the hyperlink.
 
 **Type:** string
 
@@ -78,7 +79,7 @@ accessibilityText: string
 spanId: int
 ```
 
-超链接文本编号。
+Hyperlink ID.
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
@@ -98,7 +99,7 @@ spanId: int
 spanText: string
 ```
 
-超链接文本的文本内容。
+Text content of the hyperlink.
 
 **Type:** string
 

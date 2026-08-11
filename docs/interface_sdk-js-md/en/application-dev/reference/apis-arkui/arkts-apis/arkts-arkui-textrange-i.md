@@ -1,6 +1,6 @@
 # TextRange
 
-文本范围。
+Defines the text range.
 
 **Since:** 12
 
@@ -16,7 +16,7 @@
 end?: number
 ```
 
-结束索引。
+End index.
 
 **Type:** number
 
@@ -40,7 +40,7 @@ end?: number
 start?: number
 ```
 
-起始索引。
+Start index.
 
 **Type:** number
 

@@ -12,11 +12,12 @@ import { hidebug } from 'kits/@kit.PerformanceAnalysisKit';
 function dumpJsHeapData(filename : string) : void
 ```
 
-�����������ת����
+Dumps VM heap data.
 
-> **ע��**
+> **NOTE：**
 > 
-> ����������ѵ��������ʱ���Ҹýӿ�Ϊͬ���ӿڣ����鲻Ҫ���ϼܰ汾�е��øýӿڣ��Ա���Ӧ�ö�����Ӱ���û����顣
+> Exporting the VM heap is time-consuming, and this API is a synchronous API. Therefore, you are advised not to
+> call this API in the release version. Otherwise, the application screen may freeze, affecting user experience.
 
 **Since:** 9
 
@@ -30,13 +31,13 @@ function dumpJsHeapData(filename : string) : void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| filename | string | Yes | �û��Զ���������������ת��������ļ���������Ӧ�õ�`files`Ŀ¼�������Ըò���������heapsnapshot�ļ���string���ȵ����ֵΪ128�ֽڡ� |
+| filename | string | Yes | User-defined name of the VM heap data output file. The .heapsnapshot file is generated in the **files** directory of the application based on the specified file name. The maximum length of a string is 128 bytes. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | the parameter check failed, Parameter type error |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | The parameter check failed, Parameter type error. |
 
 ## Examples
 
@@ -58,11 +59,7 @@ try {
 function dumpJsHeapData(filename: string, needClean: boolean): void
 ```
 
-�����������ת����֧�����nodeId���档
-
-> **ע��**
-> 
-> ����������ѵ��������ʱ���Ҹýӿ�Ϊͬ���ӿڣ����鲻Ҫ���ϼܰ汾�е��øýӿڣ��Ա���Ӧ�ö�����Ӱ���û����顣
+Exports the heap data.The input parameter is a user-defined file name, excluding the file suffix.The generated file is in the files folder under the application directory.
 
 **Since:** 24
 
@@ -80,19 +77,6 @@ function dumpJsHeapData(filename: string, needClean: boolean): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| filename | string | Yes | �û��Զ�����������ת���ļ���������Ӧ�õ�filesĿ¼������fileName.heapsnapshot��ʽ�ļ���string���ȵ����ֵΪ128�ֽڡ� |
-| needClean | boolean | Yes | ת���ѿ���ǰ�Ƿ���Ҫ���nodeId���档true����Ҫ�����false������Ҫ����� |
-
-## Examples
-
-```TypeScript
-import { hidebug } from '@kit.PerformanceAnalysisKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-try {
-  hidebug.dumpJsHeapData("heapData", true);
-} catch (error) {
-  console.error(`error code: ${(error as BusinessError).code}, error msg: ${(error as BusinessError).message}`);
-}
-```
+| filename | string | Yes | User-defined file name of the sampling data. The .heapsnapshot file is generated in the files directory of the application based on the specified file name. |
+| needClean | boolean | Yes | Whether to release the snapshot cache before dumping the heap snapshot. The default value is false. |
 

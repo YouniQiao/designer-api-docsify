@@ -12,9 +12,9 @@ import { asset } from 'kits/@kit.AssetStoreKit';
 function addAsUser(userId: number, attributes: AssetMap): Promise<void>
 ```
 
-在指定用户空间中新增一条关键资产。使用Promise异步回调。
+Adds an asset in the specified user space. This API uses a promise to return the result.
 
-设置[Tag.IS_PERSISTENT](arkts-assetstore-asset-tagtype-e.md)属性，需申请ohos.permission.STORE_PERSISTENT_DATA权限，申请方式请参考[声明权限](../../../security/AccessToken/declare-permissions.md)。
+To set {@link Tag.IS_PERSISTENT}, the application must have the ohos.permission.STORE_PERSISTENT_DATA permission.
 
 **Since:** 12
 
@@ -32,35 +32,35 @@ function addAsUser(userId: number, attributes: AssetMap): Promise<void>
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| userId | number | Yes | 用户ID。取值范围大于等于100。 |
-| attributes | [AssetMap](arkts-assetstore-asset-assetmap-t.md) | Yes | 待新增关键资产的属性集合，包括关键资产明文、访问控制属性、自定义数据等。 |
+| userId | number | Yes | the user identifier to add an Asset. The value must be greater than or equal to 100. |
+| attributes | [AssetMap](arkts-assetstore-asset-assetmap-t.md) | Yes | Attributes of the asset to add, including the asset plaintext, access control attributes, and custom data. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise对象，无返回结果。 |
+| Promise&lt;void&gt; | Promise that returns no value. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 24000014 | The file operation failed. |
-| 24000015 | Getting the system time failed. |
-| 24000012 | Calling the OS Account service failed. |
-| 24000013 | Calling the Access Token service failed. |
-| 24000010 | IPC failed. |
-| 24000011 | Calling the Bundle Manager service failed. |
-| 24000008 | The database operation failed. |
-| 24000009 | The cryptography operation failed. |
-| 24000006 | Insufficient memory. |
-| 201 | The caller doesn't have the permission. |
-| 24000007 | The asset is corrupted. |
-| 202 | Non-system applications use system APIs. |
-| 24000005 | The screen lock status does not match. |
-| 24000003 | The asset already exists. |
-| 24000001 | The ASSET service is unavailable. |
-| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. 3. Parameter verification failed. |
+| [24000014](../errorcode-asset.md#24000014-file-operation-failed) | The file operation failed. |
+| [24000015](../errorcode-asset.md#24000015-failed-to-obtain-the-system-time) | Getting the system time failed. |
+| [24000012](../errorcode-asset.md#24000012-account-system-service-abnormal) | Calling the OS Account service failed. |
+| [24000013](../errorcode-asset.md#24000013-access-token-service-abnormal) | Calling the Access Token service failed. |
+| [24000010](../errorcode-asset.md#24000010-ipc-failed) | IPC failed. |
+| [24000011](../errorcode-asset.md#24000011-bundle-manager-service-abnormal) | Calling the Bundle Manager service failed. |
+| [24000008](../errorcode-asset.md#24000008-database-operation-failed) | The database operation failed. |
+| [24000009](../errorcode-asset.md#24000009-cryptographic-operation-failed) | The cryptography operation failed. |
+| [24000006](../errorcode-asset.md#24000006-insufficient-memory) | Insufficient memory. |
+| [201](../../errorcode-universal.md#201-permission-denied) | The caller doesn't have the permission. |
+| [24000007](../errorcode-asset.md#24000007-asset-corrupted) | The asset is corrupted. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Non-system applications use system APIs. |
+| [24000005](../errorcode-asset.md#24000005-incorrect-screen-lock-status) | The screen lock status does not match. |
+| [24000003](../errorcode-asset.md#24000003-asset-already-exists) | The asset already exists. |
+| [24000001](../errorcode-asset.md#24000001-asset-store-service-unavailable) | The ASSET service is unavailable. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. 3. Parameter verification failed. |
 
 ## Examples
 

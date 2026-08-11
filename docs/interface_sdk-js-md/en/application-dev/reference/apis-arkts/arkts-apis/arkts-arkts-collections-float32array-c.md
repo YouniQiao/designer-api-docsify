@@ -1,11 +1,11 @@
 # Float32Array
 
-一种线性数据结构，底层基于[ArkTS ArrayBuffer](arkts-collections.md)实现。
+A linear data structure that is implemented on [ArkTS ArrayBuffer](arkts-collections.md).
 
-> **说明：**
+> **NOTE：**
 > 
-> - 此模块仅支持在ArkTS文件（文件后缀为.ets）中导入使用。
-> **装饰器类型：** \@Sendable
+> - This module can be imported only to ArkTS files (with the file name extension .ets).
+> **Decorator**: \@Sendable
 
 **Since:** 12
 
@@ -29,7 +29,7 @@ import { collections } from 'kits/@kit.ArkTS';
 [Symbol.iterator](): IterableIterator<number>
 ```
 
-返回一个迭代器，迭代器的每一项都是一个 JavaScript 对象，并返回该对象。
+Returns an iterator that iterates over numbers.
 
 **Since:** 12
 
@@ -45,13 +45,13 @@ import { collections } from 'kits/@kit.ArkTS';
 
 | Type | Description |
 | --- | --- |
-| [IterableIterator](arkts-arkts-iterator-iterableiterator-i.md)&lt;number&gt; | 迭代器对象。 |
+| [IterableIterator](arkts-arkts-iterator-iterableiterator-i.md)&lt;number&gt; | Iterator object that yields numbers. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 10200011 | The Symbol.iterator method cannot be bound. |
+| [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) | The Symbol.iterator method cannot be bound. |
 
 ## at
 
@@ -59,7 +59,7 @@ import { collections } from 'kits/@kit.ArkTS';
 at(index: number): number | undefined
 ```
 
-返回指定下标的元素，如果不存在，则返回**undefined**。
+Returns the element at the given index. If no element is found, **undefined** is returned.
 
 **Since:** 12
 
@@ -75,20 +75,20 @@ at(index: number): number | undefined
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| index | number | Yes | 要返回的Array元素的索引（从零开始），取值为整数。&lt;br/&gt; 如果`index < 0`，则会访问`index + Float32Array.length`位置的元素。 |
+| index | number | Yes | The zero-based index of the desired code unit.&lt;br/&gt; A negative index will count back from the last item. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| number | 指定下标的元素；如果不存在，则返回**undefined**。 |
+| number | Element obtained. If no element is found, **undefined** is returned. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 10200011 | The at method cannot be bound. |
-| 10200201 | Concurrent modification error. |
+| [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) | The at method cannot be bound. |
+| [10200201](../errorcode-utils.md#10200201-concurrent-modification-error) | Concurrent modification error. |
 
 ## constructor
 
@@ -96,7 +96,7 @@ at(index: number): number | undefined
 constructor()
 ```
 
-构造函数，用于创建一个空ArkTS Float32Array对象。
+A constructor used to create an empty ArkTS Float32Array.
 
 **Since:** 12
 
@@ -112,7 +112,7 @@ constructor()
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 10200012 | The Float32Array's constructor cannot be directly invoked. |
+| [10200012](../errorcode-utils.md#10200012-constructor-calling-failure) | The Float32Array's constructor cannot be directly invoked. |
 
 ## constructor
 
@@ -120,7 +120,7 @@ constructor()
 constructor(length: number)
 ```
 
-构造函数，用于创建一个指定长度的ArkTS Float32Array对象。
+A constructor used to create an ArkTS Float32Array of a given length.
 
 **Since:** 12
 
@@ -136,13 +136,13 @@ constructor(length: number)
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| length | number | Yes | 用于指定ArkTS Float32Array的长度。 |
+| length | number | Yes | Length of the ArkTS Float32Array. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 10200012 | The Float32Array's constructor cannot be directly invoked. |
+| [10200012](../errorcode-utils.md#10200012-constructor-calling-failure) | The Float32Array's constructor cannot be directly invoked. |
 
 ## constructor
 
@@ -150,7 +150,7 @@ constructor(length: number)
 constructor(elements: Iterable<number>)
 ```
 
-构造函数，以Iterable创建一个ArkTS Float32Array对象。
+A constructor that creates an ArkTS Float32Array from an iterable object.
 
 **Since:** 12
 
@@ -166,13 +166,13 @@ constructor(elements: Iterable<number>)
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| elements | Iterable&lt;number&gt; | Yes | 可迭代数字集合，用于构造ArkTS Float32Array对象。 |
+| elements | Iterable&lt;number&gt; | Yes | An iterable collection of numbers used to construct an ArkTS Float32Array object. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 10200012 | The Float32Array's constructor cannot be directly invoked. |
+| [10200012](../errorcode-utils.md#10200012-constructor-calling-failure) | The Float32Array's constructor cannot be directly invoked. |
 
 ## constructor
 
@@ -180,7 +180,7 @@ constructor(elements: Iterable<number>)
 constructor(array: ArrayLike<number> | ArrayBuffer)
 ```
 
-构造函数，以ArrayLike或ArkTS ArrayBuffer创建一个ArkTS Float32Array对象。
+A constructor that creates an ArkTS Float32Array from an array-like object or ArkTS ArrayBuffer.
 
 **Since:** 12
 
@@ -196,13 +196,13 @@ constructor(array: ArrayLike<number> | ArrayBuffer)
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| array | [ArrayLike](arkts-arkts-arraylike-i.md)&lt;number&gt; \| ArrayBuffer | Yes | 用于构造ArkTS Float32Array的对象。当参数类型是ArrayBuffer时buffer所占的字节数须是4的整数倍。 |
+| array | [ArrayLike](arkts-arkts-arraylike-i.md)&lt;number&gt; \| ArrayBuffer | Yes | Object used to construct the ArkTS Float32Array. When the parameter type is ArrayBuffer, the number of bytes occupied by the buffer must be an integer multiple of 4. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 10200012 | The Float32Array's constructor cannot be directly invoked. |
+| [10200012](../errorcode-utils.md#10200012-constructor-calling-failure) | The Float32Array's constructor cannot be directly invoked. |
 
 ## constructor
 
@@ -210,7 +210,7 @@ constructor(array: ArrayLike<number> | ArrayBuffer)
 constructor(buffer: ArrayBuffer, byteOffset?: number, length?: number)
 ```
 
-构造函数，以ArrayBuffer创建一个ArkTS Float32Array对象。
+A constructor that creates an ArkTS Float32Array from an ArrayBuffer.
 
 **Since:** 12
 
@@ -226,15 +226,15 @@ constructor(buffer: ArrayBuffer, byteOffset?: number, length?: number)
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| buffer | ArrayBuffer | Yes | 用于构造ArkTS Float32Array的ArrayBuffer对象。buffer所占的字节数须是4的整数倍。 |
-| byteOffset | number | No | 指定buffer的字节偏移，从0开始，默认为**0**。 |
-| length | number | No | 指定ArkTS Float32Array的长度，默认为**0**。 |
+| buffer | ArrayBuffer | Yes | ArrayBuffer object used to construct the ArkTS Float32Array. The number of bytes occupied by the buffer must be an integer multiple of 4. |
+| byteOffset | number | No | Byte offset of the buffer, beginning at 0. The default value is **0**. |
+| length | number | No | Length of the ArkTS Float32Array. The default value is **0**. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 10200012 | The Float32Array's constructor cannot be directly invoked. |
+| [10200012](../errorcode-utils.md#10200012-constructor-calling-failure) | The Float32Array's constructor cannot be directly invoked. |
 
 ## copyWithin
 
@@ -242,7 +242,7 @@ constructor(buffer: ArrayBuffer, byteOffset?: number, length?: number)
 copyWithin(target: number, start: number, end?: number): Float32Array
 ```
 
-从ArkTS Float32Array指定范围内的元素依次拷贝到目标位置。
+Copies elements within a given range from this ArkTS Float32Array to another position in sequence.
 
 **Since:** 12
 
@@ -258,22 +258,22 @@ copyWithin(target: number, start: number, end?: number): Float32Array
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| target | number | Yes | 目标起始位置的下标，如果`target < 0`，则会从`target + array.length`位置开始。 |
-| start | number | Yes | 源起始位置下标，如果`start < 0`，则会从`start + Float32Array.length`位置开始。 |
-| end | number | No | 源终止位置下标（不包含end位置的元素），如果`end < 0`，则会从`end + Float32Array.length`位置终止。默认为ArkTS Float32Array的长度。 |
+| target | number | Yes | Start index of the range. If a negative number is passed in, it refers to the index of `target + array.length`. |
+| start | number | Yes | Start index of the range. If a negative number is passed in, it refers to the index of `start + Float32Array.length`. |
+| end | number | No | End index of the range (exclusive). If a negative number is passed in, it refers to the index of `end + Float32Array.length`. The default value is the length of the ArkTS Float32Array. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Float32Array | 修改后的Float32Array。 |
+| Float32Array | ArkTS Float32Array after being modified. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 10200011 | The copyWithin method cannot be bound. |
-| 10200201 | Concurrent modification error. |
+| [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) | The copyWithin method cannot be bound. |
+| [10200201](../errorcode-utils.md#10200201-concurrent-modification-error) | Concurrent modification error. |
 
 ## entries
 
@@ -281,7 +281,7 @@ copyWithin(target: number, start: number, end?: number): Float32Array
 entries(): IterableIterator<[number, number]>
 ```
 
-返回一个新的迭代器对象，该对象包含ArkTS Float32Array中每个元素的键值对。
+Returns an iterator object that contains the key-value pair of each element in this ArkTS Float32Array.
 
 **Since:** 12
 
@@ -297,14 +297,14 @@ entries(): IterableIterator<[number, number]>
 
 | Type | Description |
 | --- | --- |
-| [IterableIterator](arkts-arkts-iterator-iterableiterator-i.md)&lt;[number, number]&gt; | 迭代器对象。 |
+| [IterableIterator](arkts-arkts-iterator-iterableiterator-i.md)&lt;[number, number]&gt; | Iterator object. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 10200011 | The entries method cannot be bound. |
-| 10200201 | Concurrent modification error. |
+| [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) | The entries method cannot be bound. |
+| [10200201](../errorcode-utils.md#10200201-concurrent-modification-error) | Concurrent modification error. |
 
 ## every
 
@@ -312,7 +312,7 @@ entries(): IterableIterator<[number, number]>
 every(predicate: TypedArrayPredicateFn<number, Float32Array>): boolean
 ```
 
-测试ArkTS Float32Array中的所有元素是否满足指定条件。
+Checks whether all elements in this ArkTS Float32Array meet a given condition.
 
 **Since:** 12
 
@@ -328,20 +328,20 @@ every(predicate: TypedArrayPredicateFn<number, Float32Array>): boolean
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| predicate | [TypedArrayPredicateFn](arkts-arkts-collections-typedarraypredicatefn-t.md)&lt;number, Float32Array&gt; | Yes | 用于测试的断言函数。 |
+| predicate | [TypedArrayPredicateFn](arkts-arkts-collections-typedarraypredicatefn-t.md)&lt;number, Float32Array&gt; | Yes | Assertion function used for the test. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| boolean | 检查结果。如果所有元素都满足指定条件则返回**true**，否则返回**false**。 |
+| boolean | Check result. The value **true** is returned if all elements meet the given condition; otherwise, **false** is returned. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 10200011 | The every method cannot be bound. |
-| 10200201 | Concurrent modification error. |
+| [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) | The every method cannot be bound. |
+| [10200201](../errorcode-utils.md#10200201-concurrent-modification-error) | Concurrent modification error. |
 
 ## fill
 
@@ -349,7 +349,7 @@ every(predicate: TypedArrayPredicateFn<number, Float32Array>): boolean
 fill(value: number, start?: number, end?: number): Float32Array
 ```
 
-使用特定值填充ArkTS Float32Array指定范围的全部元素。
+Fills all elements in a given range in this ArkTS Float32Array with a value.
 
 **Since:** 12
 
@@ -365,22 +365,22 @@ fill(value: number, start?: number, end?: number): Float32Array
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | number | Yes | 待填充的值。 |
-| start | number | No | 开始填充的索引，如果`start < 0`，则会从`start + Float32Array.length`位置开始。默认值为**0**。 |
-| end | number | No | 结束填充的索引（不包括该元素），如果`end < 0`，则会到`end + Float32Array.length`位置结束。默认为ArkTS Float32Array的长度。 |
+| value | number | Yes | Value to fill in. |
+| start | number | No | Start index of the range. If a negative number is passed in, it refers to the index of `start + Float32Array.length`. The default value is **0**. |
+| end | number | No | End index of the range (exclusive). If a negative number is passed in, it refers to the index of `end + Float32Array.length`. The default value is the length of the ArkTS Float32Array. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Float32Array | 填充后的Float32Array。 |
+| Float32Array | Filled ArkTS Float32Array. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 10200011 | The fill method cannot be bound. |
-| 10200201 | Concurrent modification error. |
+| [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) | The fill method cannot be bound. |
+| [10200201](../errorcode-utils.md#10200201-concurrent-modification-error) | Concurrent modification error. |
 
 ## filter
 
@@ -388,7 +388,7 @@ fill(value: number, start?: number, end?: number): Float32Array
 filter(predicate: TypedArrayPredicateFn<number, Float32Array>): Float32Array
 ```
 
-返回一个新ArkTS Float32Array，其包含满足指定条件的所有元素。
+Returns a new ArkTS Float32Array that contains all elements that meet the given condition.
 
 **Since:** 12
 
@@ -404,20 +404,20 @@ filter(predicate: TypedArrayPredicateFn<number, Float32Array>): Float32Array
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| predicate | [TypedArrayPredicateFn](arkts-arkts-collections-typedarraypredicatefn-t.md)&lt;number, Float32Array&gt; | Yes | 用于元素过滤的断言函数。 |
+| predicate | [TypedArrayPredicateFn](arkts-arkts-collections-typedarraypredicatefn-t.md)&lt;number, Float32Array&gt; | Yes | Assertion function used for the test. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Float32Array | 过滤后的ArkTS Float32Array对象。 |
+| Float32Array | Filtered ArkTS Float32Array. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 10200011 | The filter method cannot be bound. |
-| 10200201 | Concurrent modification error. |
+| [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) | The filter method cannot be bound. |
+| [10200201](../errorcode-utils.md#10200201-concurrent-modification-error) | Concurrent modification error. |
 
 ## find
 
@@ -425,7 +425,7 @@ filter(predicate: TypedArrayPredicateFn<number, Float32Array>): Float32Array
 find(predicate: TypedArrayPredicateFn<number, Float32Array>): number | undefined
 ```
 
-返回ArkTS Float32Array中第一个满足指定条件的元素的值，如果所有元素都不满足，则返回**undefined**。
+Returns the value of the first element that passes a test provided by a callback function. If none of the elements pass the test, **undefined** is returned.
 
 **Since:** 12
 
@@ -441,20 +441,20 @@ find(predicate: TypedArrayPredicateFn<number, Float32Array>): number | undefined
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| predicate | [TypedArrayPredicateFn](arkts-arkts-collections-typedarraypredicatefn-t.md)&lt;number, Float32Array&gt; | Yes | 用于元素查找的断言函数。 |
+| predicate | [TypedArrayPredicateFn](arkts-arkts-collections-typedarraypredicatefn-t.md)&lt;number, Float32Array&gt; | Yes | Assertion function used for the test. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| number | 第一个满足条件的元素的值；如果所有元素都不满足条件，则返回**undefined**。 |
+| number | Value of the first element that passes the test. If none of the elements pass the test, **undefined** is returned. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 10200011 | The find method cannot be bound. |
-| 10200201 | Concurrent modification error. |
+| [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) | The find method cannot be bound. |
+| [10200201](../errorcode-utils.md#10200201-concurrent-modification-error) | Concurrent modification error. |
 
 ## findIndex
 
@@ -462,7 +462,7 @@ find(predicate: TypedArrayPredicateFn<number, Float32Array>): number | undefined
 findIndex(predicate: TypedArrayPredicateFn<number, Float32Array>): number
 ```
 
-返回ArkTS Float32Array中第一个满足指定条件的元素索引，如果所有元素都不满足，则返回**-1**。
+Returns the index of the first element that passes a test provided by a callback function. If none of the elements pass the test, **-1** is returned.
 
 **Since:** 12
 
@@ -478,20 +478,20 @@ findIndex(predicate: TypedArrayPredicateFn<number, Float32Array>): number
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| predicate | [TypedArrayPredicateFn](arkts-arkts-collections-typedarraypredicatefn-t.md)&lt;number, Float32Array&gt; | Yes | 用于元素查找的断言函数。 |
+| predicate | [TypedArrayPredicateFn](arkts-arkts-collections-typedarraypredicatefn-t.md)&lt;number, Float32Array&gt; | Yes | Assertion function used for the test. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| number | 第一个满足条件的元素索引；如果所有元素都不满足条件，则返回**-1**。 |
+| number | Index of the first element that passes the test. If none of the elements pass the test, **-1** is returned. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 10200011 | The findIndex method cannot be bound. |
-| 10200201 | Concurrent modification error. |
+| [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) | The findIndex method cannot be bound. |
+| [10200201](../errorcode-utils.md#10200201-concurrent-modification-error) | Concurrent modification error. |
 
 ## forEach
 
@@ -499,7 +499,7 @@ findIndex(predicate: TypedArrayPredicateFn<number, Float32Array>): number
 forEach(callbackFn: TypedArrayForEachCallback<number, Float32Array>): void
 ```
 
-对ArkTS Float32Array中的每个元素执行提供的回调函数。
+Calls a callback function for each element in this ArkTS Float32Array.
 
 **Since:** 12
 
@@ -515,14 +515,14 @@ forEach(callbackFn: TypedArrayForEachCallback<number, Float32Array>): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callbackFn | [TypedArrayForEachCallback](arkts-arkts-collections-typedarrayforeachcallback-t.md)&lt;number, Float32Array&gt; | Yes | 用于对每个元素执行的回调函数。 |
+| callbackFn | [TypedArrayForEachCallback](arkts-arkts-collections-typedarrayforeachcallback-t.md)&lt;number, Float32Array&gt; | Yes | Callback function to run for each element. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 10200011 | The forEach method cannot be bound. |
-| 10200201 | Concurrent modification error. |
+| [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) | The forEach method cannot be bound. |
+| [10200201](../errorcode-utils.md#10200201-concurrent-modification-error) | Concurrent modification error. |
 
 ## from
 
@@ -530,7 +530,7 @@ forEach(callbackFn: TypedArrayForEachCallback<number, Float32Array>): void
 static from(arrayLike: ArrayLike<number>): Float32Array
 ```
 
-从一个ArrayLike或者可迭代对象中创建一个ArkTS Float32Array对象。
+Creates an ArkTS Float32Array from an array-like or iterator object.
 
 **Since:** 12
 
@@ -546,13 +546,13 @@ static from(arrayLike: ArrayLike<number>): Float32Array
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| arrayLike | [ArrayLike](arkts-arkts-arraylike-i.md)&lt;number&gt; | Yes | 用于构造ArkTS Float32Array的ArrayLike对象。 |
+| arrayLike | [ArrayLike](arkts-arkts-arraylike-i.md)&lt;number&gt; | Yes | Array-like object used to construct the ArkTS Float32Array. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Float32Array | 新创建的ArkTS Float32Array对象。 |
+| Float32Array | New ArkTS Float32Array generated. |
 
 ## from
 
@@ -560,7 +560,7 @@ static from(arrayLike: ArrayLike<number>): Float32Array
 static from<T>(arrayLike: ArrayLike<T>, mapFn: TypedArrayFromMapFn<T, number>): Float32Array
 ```
 
-从一个ArrayLike中创建一个ArkTS Float32Array对象。
+Creates an ArkTS Float32Array from an array-like object.
 
 **Since:** 12
 
@@ -576,14 +576,14 @@ static from<T>(arrayLike: ArrayLike<T>, mapFn: TypedArrayFromMapFn<T, number>): 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| arrayLike | [ArrayLike](arkts-arkts-arraylike-i.md)&lt;T&gt; | Yes | 用于构造ArrayLike对象。 |
-| mapFn | [TypedArrayFromMapFn](arkts-arkts-collections-typedarrayfrommapfn-t.md)&lt;T, number&gt; | Yes | 映射函数。 |
+| arrayLike | [ArrayLike](arkts-arkts-arraylike-i.md)&lt;T&gt; | Yes | An array-like object to convert to an Float32Array. |
+| mapFn | [TypedArrayFromMapFn](arkts-arkts-collections-typedarrayfrommapfn-t.md)&lt;T, number&gt; | Yes | A mapping function to call on every element of the array. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Float32Array | 新创建的ArkTS Float32Array对象。 |
+| Float32Array | New ArkTS Float32Array generated. |
 
 ## from
 
@@ -591,7 +591,7 @@ static from<T>(arrayLike: ArrayLike<T>, mapFn: TypedArrayFromMapFn<T, number>): 
 static from(arrayLike: Iterable<number>, mapFn?: TypedArrayFromMapFn<number, number>): Float32Array
 ```
 
-从一个可迭代对象中创建一个ArkTS Float32Array对象。
+Creates an ArkTS Float32Array from an iterator object.
 
 **Since:** 12
 
@@ -607,14 +607,14 @@ static from(arrayLike: Iterable<number>, mapFn?: TypedArrayFromMapFn<number, num
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| arrayLike | Iterable&lt;number&gt; | Yes | 用于构造的可迭代对象。 |
-| mapFn | [TypedArrayFromMapFn](arkts-arkts-collections-typedarrayfrommapfn-t.md)&lt;number, number&gt; | No | 映射函数。如果省略，则不对元素进行加工处理。 |
+| arrayLike | Iterable&lt;number&gt; | Yes | An iterable object to convert to an Float32Array. |
+| mapFn | [TypedArrayFromMapFn](arkts-arkts-collections-typedarrayfrommapfn-t.md)&lt;number, number&gt; | No | A mapping function to call on every element of the array. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Float32Array | 新创建的ArkTS Float32Array对象。 |
+| Float32Array | New ArkTS Float32Array generated. |
 
 ## includes
 
@@ -622,7 +622,7 @@ static from(arrayLike: Iterable<number>, mapFn?: TypedArrayFromMapFn<number, num
 includes(searchElement: number, fromIndex?: number): boolean
 ```
 
-判断ArkTS Float32Array是否包含特定元素。
+Checks whether elements are contained in this ArkTS Float32Array.
 
 **Since:** 12
 
@@ -638,21 +638,21 @@ includes(searchElement: number, fromIndex?: number): boolean
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| searchElement | number | Yes | 待搜索的元素。 |
-| fromIndex | number | No | 开始搜索的索引。 |
+| searchElement | number | Yes | The element to search for. |
+| fromIndex | number | No | The position in this array at which to begin searching for searchElement. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| boolean | 检查结果。如果ArkTS Float32Array包含指定的元素，则返回**true**，否则返回**false**。 |
+| boolean | Check result. The value **true** is returned if the element exists; otherwise, **false** is returned. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 10200011 | The includes method cannot be bound. |
-| 10200201 | Concurrent modification error. |
+| [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) | The includes method cannot be bound. |
+| [10200201](../errorcode-utils.md#10200201-concurrent-modification-error) | Concurrent modification error. |
 
 ## indexOf
 
@@ -660,7 +660,8 @@ includes(searchElement: number, fromIndex?: number): boolean
 indexOf(searchElement: number, fromIndex?: number): number
 ```
 
-返回在ArkTS Float32Array中给定元素的第一个索引，如果不存在，则返回**-1**。
+Returns the index of the first occurrence of a value in this ArkTS Float32Array. If the value is not found,  
+**-1** is returned.
 
 **Since:** 12
 
@@ -676,21 +677,21 @@ indexOf(searchElement: number, fromIndex?: number): number
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| searchElement | number | Yes | 待索引的值。 |
-| fromIndex | number | No | 搜索的起始下标。默认值为**0**。如果下标大于等于ArkTS Float32Array的长度，则返回**-1**。如果提供的下标值是负数，则被当做距离数组尾部的偏移，从前到后搜索。 |
+| searchElement | number | Yes | Value to search for. |
+| fromIndex | number | No | Index from which the search starts. The default value is **0**. If the index is greater than or equal to the length of the ArkTS Float32Array, **-1** is returned. If a negative number is passed in, the search starts from the end of the ArkTS Float32Array. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| number | 数组中元素的第一个索引；没有找到，则返回**-1**。 |
+| number | Index of the first occurrence of the value. If the value is not found, **-1** is returned. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 10200011 | The indexOf method cannot be bound. |
-| 10200201 | Concurrent modification error. |
+| [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) | The indexOf method cannot be bound. |
+| [10200201](../errorcode-utils.md#10200201-concurrent-modification-error) | Concurrent modification error. |
 
 ## join
 
@@ -698,7 +699,7 @@ indexOf(searchElement: number, fromIndex?: number): number
 join(separator?: string): string
 ```
 
-将ArkTS Float32Array的所有元素拼接成一个字符串，元素之间使用指定的分隔符分隔。
+Concatenates all elements in this ArkTS Float32Array into a string, with a given separator.
 
 **Since:** 12
 
@@ -714,20 +715,20 @@ join(separator?: string): string
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| separator | string | No | 分隔字符串。如果省略，则使用逗号分隔。 |
+| separator | string | No | Separator to be used. If no value is passed in, a comma (,) is used as the separator. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| string | 包含所有元素拼接成的字符串。如果ArkTS Float32Array为空，则返回空字符串。 |
+| string | String obtained. If the array is empty, an empty string is returned. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 10200011 | The join method cannot be bound. |
-| 10200201 | Concurrent modification error. |
+| [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) | The join method cannot be bound. |
+| [10200201](../errorcode-utils.md#10200201-concurrent-modification-error) | Concurrent modification error. |
 
 ## keys
 
@@ -735,7 +736,7 @@ join(separator?: string): string
 keys(): IterableIterator<number>
 ```
 
-返回一个新的迭代器对象，该对象包含ArkTS Float32Array中每个元素的键（下标）。
+Returns an iterator object that contains the key (index) of each element in this ArkTS Float32Array.
 
 **Since:** 12
 
@@ -751,14 +752,14 @@ keys(): IterableIterator<number>
 
 | Type | Description |
 | --- | --- |
-| [IterableIterator](arkts-arkts-iterator-iterableiterator-i.md)&lt;number&gt; | 迭代器对象。 |
+| [IterableIterator](arkts-arkts-iterator-iterableiterator-i.md)&lt;number&gt; | Iterator object. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 10200011 | The keys method cannot be bound. |
-| 10200201 | Concurrent modification error. |
+| [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) | The keys method cannot be bound. |
+| [10200201](../errorcode-utils.md#10200201-concurrent-modification-error) | Concurrent modification error. |
 
 ## lastIndexOf
 
@@ -766,7 +767,7 @@ keys(): IterableIterator<number>
 lastIndexOf(searchElement: number, fromIndex?: number): number
 ```
 
-返回ArkTS Float32Array实例中最后一次出现searchElement的索引，如果对象不包含，则为**-1**。
+Obtains the index of the last occurrence of the specified value in this ArkTS Float32Array.
 
 **Since:** 18
 
@@ -782,21 +783,21 @@ lastIndexOf(searchElement: number, fromIndex?: number): number
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| searchElement | number | Yes | 待索引的值。 |
-| fromIndex | number | No | 搜索的起始下标。默认值为**0**。如果下标大于等于ArkTS Float32Array的长度，则返回**-1**。如果提供的下标值是负数，则被当做距离数组尾部的偏移，从后到前搜索。 |
+| searchElement | number | Yes | Value to search for. |
+| fromIndex | number | No | Index from which the search starts. The default value is **0**. If the index is greater than or equal to the length of the ArkTS Float32Array, **-1** is returned. If a negative number is passed in, the search starts from the end of the ArkTS Float32Array. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| number | 数组中给定元素的最后一个索引；没有找到，则返回**-1**。 |
+| number | Index of the last occurrence of the value. If the value is not found, **-1** is returned. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 10200011 | The lastIndexOf method cannot be bound. |
-| 10200201 | Concurrent modification error. |
+| [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) | The lastIndexOf method cannot be bound. |
+| [10200201](../errorcode-utils.md#10200201-concurrent-modification-error) | Concurrent modification error. |
 
 ## map
 
@@ -804,7 +805,7 @@ lastIndexOf(searchElement: number, fromIndex?: number): number
 map(callbackFn: TypedArrayMapCallback<number, Float32Array>): Float32Array
 ```
 
-对ArkTS Float32Array中的每个元素应用指定的回调函数，并使用结果创建一个新的ArkTS Float32Array对象。
+Applies a callback function to each element in this ArkTS Float32Array and uses the result to create an ArkTS Float32Array.
 
 **Since:** 12
 
@@ -820,20 +821,20 @@ map(callbackFn: TypedArrayMapCallback<number, Float32Array>): Float32Array
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callbackFn | [TypedArrayMapCallback](arkts-arkts-collections-typedarraymapcallback-t.md)&lt;number, Float32Array&gt; | Yes | 一个接受最多三个参数的函数。 map方法对数组中的每个元素调用一次callbackfn函数。 |
+| callbackFn | [TypedArrayMapCallback](arkts-arkts-collections-typedarraymapcallback-t.md)&lt;number, Float32Array&gt; | Yes | A function that accepts up to three arguments. The map method calls the callbackfn function one time for each element in the array. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Float32Array | 新ArkTS Float32Array对象。 |
+| Float32Array | New ArkTS Float32Array. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 10200011 | The map method cannot be bound. |
-| 10200201 | Concurrent modification error. |
+| [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) | The map method cannot be bound. |
+| [10200201](../errorcode-utils.md#10200201-concurrent-modification-error) | Concurrent modification error. |
 
 ## of
 
@@ -841,7 +842,7 @@ map(callbackFn: TypedArrayMapCallback<number, Float32Array>): Float32Array
 static of(...items: number[]): Float32Array
 ```
 
-通过可变数量的参数创建一个新的ArkTS Float32Array对象，参数个数可以是0个、1个或者多个。
+Creates an ArkTS Float32Array with a variable number of parameters.
 
 **Since:** 18
 
@@ -857,13 +858,13 @@ static of(...items: number[]): Float32Array
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| items | number[] | Yes | 用于创建数组的元素，参数个数可以是0个、1个或者多个。 |
+| items | number[] | Yes | Array of elements used to create the array. The number of elements can be zero, one, or more. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Float32Array | 新的ArkTS Float32Array实例。可能的原因：1.必填参数未指定； &lt;br&gt;2.参数类型不正确；3.参数校验失败。 |
+| Float32Array | New ArkTS Float32Array instance. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; 3. Parameter verification failed. |
 
 ## reduce
 
@@ -871,7 +872,7 @@ static of(...items: number[]): Float32Array
 reduce(callbackFn: TypedArrayReduceCallback<number, number, Float32Array>): number
 ```
 
-对ArkTS Float32Array中的每个元素执行归约函数，并返回最终的归约结果。
+Applies a reduce function on each element in this ArkTS Float32Array and returns the final reduction result.
 
 **Since:** 12
 
@@ -887,20 +888,20 @@ reduce(callbackFn: TypedArrayReduceCallback<number, number, Float32Array>): numb
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callbackFn | [TypedArrayReduceCallback](arkts-arkts-collections-typedarrayreducecallback-t.md)&lt;number, number, Float32Array&gt; | Yes | 一个接受最多四个参数的函数。 reduce方法对数组中的每个元素调用一次callbackfn函数。 |
+| callbackFn | [TypedArrayReduceCallback](arkts-arkts-collections-typedarrayreducecallback-t.md)&lt;number, number, Float32Array&gt; | Yes | A function that accepts up to four arguments. The reduce method calls the callbackfn function one time for each element in the array. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| number | 由归约函数最后一次调用返回的结果。 |
+| number | Final result obtained from the last call of the reduce function. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 10200011 | The reduce method cannot be bound. |
-| 10200201 | Concurrent modification error. |
+| [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) | The reduce method cannot be bound. |
+| [10200201](../errorcode-utils.md#10200201-concurrent-modification-error) | Concurrent modification error. |
 
 ## reduce
 
@@ -908,7 +909,7 @@ reduce(callbackFn: TypedArrayReduceCallback<number, number, Float32Array>): numb
 reduce<U = number>(callbackFn: TypedArrayReduceCallback<U, number, Float32Array>, initialValue: U): U
 ```
 
-对ArkTS Float32Array中的每个元素执行归约函数，且接收一个初始值作为归约函数首次调用的参数，并返回最终的归约结果。
+Applies a reduce function for each element in this ArkTS Float32Array, receives an initial value as the parameter called by the reduce function for the first time, and returns the final reduction result.
 
 **Since:** 12
 
@@ -924,21 +925,21 @@ reduce<U = number>(callbackFn: TypedArrayReduceCallback<U, number, Float32Array>
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callbackFn | [TypedArrayReduceCallback](arkts-arkts-collections-typedarrayreducecallback-t.md)&lt;U, number, Float32Array&gt; | Yes | 一个接受最多四个参数的函数。 reduce方法对数组中的每个元素调用一次callbackfn函数。 |
-| initialValue | U | Yes | 如果指定了initialValue，则将其作为开始累积的初始值。 首次调用callbackfn函数时将该值作为参数提供，而不是使用数组元素值。 |
+| callbackFn | [TypedArrayReduceCallback](arkts-arkts-collections-typedarrayreducecallback-t.md)&lt;U, number, Float32Array&gt; | Yes | A function that accepts up to four arguments. The reduce method calls the callbackfn function one time for each element in the array. |
+| initialValue | U | Yes | If initialValue is specified, it is used as the initial value to start the accumulation. The first call to the callbackfn function provides this value as an argument instead of an array value. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| U | 由归约函数最后一次调用返回的结果。 |
+| U | Final result obtained from the last call of the reduce function. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 10200011 | The reduce method cannot be bound. |
-| 10200201 | Concurrent modification error. |
+| [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) | The reduce method cannot be bound. |
+| [10200201](../errorcode-utils.md#10200201-concurrent-modification-error) | Concurrent modification error. |
 
 ## reduceRight
 
@@ -946,7 +947,7 @@ reduce<U = number>(callbackFn: TypedArrayReduceCallback<U, number, Float32Array>
 reduceRight<U = number>(callbackFn: TypedArrayReduceCallback<U, number, Float32Array>, initialValue: U): U
 ```
 
-反向遍历ArkTS Float32Array，对ArkTS Float32Array中的每个元素执行归约函数，且接收一个初始值作为归约函数首次调用的参数，并返回最终的归约结果。
+Reversely traverses this ArkTS Float32Array, applies a reduce function for each element in the array, receives an initial value as the parameter called by the reduce function for the first time, and returns the final reduction result.
 
 **Since:** 18
 
@@ -962,21 +963,21 @@ reduceRight<U = number>(callbackFn: TypedArrayReduceCallback<U, number, Float32A
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callbackFn | [TypedArrayReduceCallback](arkts-arkts-collections-typedarrayreducecallback-t.md)&lt;U, number, Float32Array&gt; | Yes | 对Float32Array中的每个元素调用的函数。 |
-| initialValue | U | Yes | 作为回调函数首次调用第一个参数的值。 &lt;br&gt;如果未提供初始值，则使用Float32Array的最后一个元素， &lt;br&gt;并且回调函数从倒数第二个元素开始调用。 |
+| callbackFn | [TypedArrayReduceCallback](arkts-arkts-collections-typedarrayreducecallback-t.md)&lt;U, number, Float32Array&gt; | Yes | A function that is called for each element in the Float32Array. |
+| initialValue | U | Yes | A value to use as the first argument to the first call of the callback. &lt;br&gt;If no initial value is provided, the last element of the Float32Array will be used, &lt;br&gt;and the callback will start with the second-to-last element. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| U | 由归约函数最后一次调用返回的结果。可能的原因： 1.必填参数未指定。 2.参数类型不正确。 |
+| U | Final result obtained from the last call of the reduce function. Possible causes: 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 10200011 | The reduceRight method cannot be bound. |
-| 10200201 | Concurrent modification error. |
+| [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) | The reduceRight method cannot be bound. |
+| [10200201](../errorcode-utils.md#10200201-concurrent-modification-error) | Concurrent modification error. |
 
 ## reduceRight
 
@@ -984,7 +985,7 @@ reduceRight<U = number>(callbackFn: TypedArrayReduceCallback<U, number, Float32A
 reduceRight(callbackFn: TypedArrayReduceCallback<number, number, Float32Array>): number
 ```
 
-反向遍历ArkTS Float32Array，对ArkTS Float32Array中的每个元素执行归约函数，并返回最终的归约结果。
+Reversely traverses this ArkTS Float32Array, applies a reduce function on each element in the array, and returns the final reduction result.
 
 **Since:** 18
 
@@ -1000,20 +1001,20 @@ reduceRight(callbackFn: TypedArrayReduceCallback<number, number, Float32Array>):
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callbackFn | [TypedArrayReduceCallback](arkts-arkts-collections-typedarrayreducecallback-t.md)&lt;number, number, Float32Array&gt; | Yes | 对Float32Array中的每个元素调用的函数。 |
+| callbackFn | [TypedArrayReduceCallback](arkts-arkts-collections-typedarrayreducecallback-t.md)&lt;number, number, Float32Array&gt; | Yes | A function that is called for each element in the Float32Array. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| number | 由归约函数最后一次调用返回的结果。可能的原因： 1.必填参数未指定。 2.参数类型不正确。 |
+| number | Final result obtained from the last call of the reduce function. Possible causes: 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 10200011 | The reduceRight method cannot be bound. |
-| 10200201 | Concurrent modification error. |
+| [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) | The reduceRight method cannot be bound. |
+| [10200201](../errorcode-utils.md#10200201-concurrent-modification-error) | Concurrent modification error. |
 
 ## reverse
 
@@ -1021,7 +1022,7 @@ reduceRight(callbackFn: TypedArrayReduceCallback<number, number, Float32Array>):
 reverse(): Float32Array
 ```
 
-反转ArkTS Float32Array。
+Reverses this ArkTS Float32Array.
 
 **Since:** 12
 
@@ -1037,14 +1038,14 @@ reverse(): Float32Array
 
 | Type | Description |
 | --- | --- |
-| Float32Array | 反转后的ArkTS Float32Array对象。 |
+| Float32Array | Reversed ArkTS Float32Array. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 10200011 | The reverse method cannot be bound. |
-| 10200201 | Concurrent modification error. |
+| [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) | The reverse method cannot be bound. |
+| [10200201](../errorcode-utils.md#10200201-concurrent-modification-error) | Concurrent modification error. |
 
 ## set
 
@@ -1052,7 +1053,7 @@ reverse(): Float32Array
 set(array: ArrayLike<number>, offset?: number): void
 ```
 
-将传入的ArrayLike元素依次写入到指定的起始位置。
+Writes the elements in an array-like object to the given start position in sequence.
 
 **Since:** 12
 
@@ -1068,15 +1069,15 @@ set(array: ArrayLike<number>, offset?: number): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| array | [ArrayLike](arkts-arkts-arraylike-i.md)&lt;number&gt; | Yes | 用于设置的ArrayLike对象。 |
-| offset | number | No | 写入的起始位置。默认为0。 |
+| array | [ArrayLike](arkts-arkts-arraylike-i.md)&lt;number&gt; | Yes | A typed or untyped array of values to set. |
+| offset | number | No | The index in the current array at which the values are to be written. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 10200011 | The set method cannot be bound. |
-| 10200201 | Concurrent modification error. |
+| [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) | The set method cannot be bound. |
+| [10200201](../errorcode-utils.md#10200201-concurrent-modification-error) | Concurrent modification error. |
 
 ## slice
 
@@ -1084,7 +1085,7 @@ set(array: ArrayLike<number>, offset?: number): void
 slice(start?: number, end?: number): Float32Array
 ```
 
-返回一个新的ArkTS Float32Array对象，其包含原ArkTS Float32Array指定范围的内容。
+Selects a range of elements in this ArkTS Float32Array to create an ArkTS Float32Array.
 
 **Since:** 12
 
@@ -1100,21 +1101,21 @@ slice(start?: number, end?: number): Float32Array
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| start | number | No | 开始索引，如果`start < 0`，则会从`start + Float32Array.length`位置开始。默认为**0**。 |
-| end | number | No | 结束索引（不包括该元素），如果`end < 0`，则会到`end + Float32Array.length`位置结束。默认为ArkTS Float32Array的长度。 |
+| start | number | No | Start index of the range. If a negative number is passed in, it refers to the index of `start + Float32Array.length`. The default value is **0**. |
+| end | number | No | End index of the range (exclusive). If a negative number is passed in, it refers to the index of `end + Float32Array.length`. The default value is the length of the ArkTS Float32Array. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Float32Array | 新的ArkTS Float32Array对象。 |
+| Float32Array | New ArkTS Float32Array. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 10200011 | The slice method cannot be bound. |
-| 10200201 | Concurrent modification error. |
+| [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) | The slice method cannot be bound. |
+| [10200201](../errorcode-utils.md#10200201-concurrent-modification-error) | Concurrent modification error. |
 
 ## some
 
@@ -1122,7 +1123,7 @@ slice(start?: number, end?: number): Float32Array
 some(predicate: TypedArrayPredicateFn<number, Float32Array>): boolean
 ```
 
-测试ArkTS Float32Array中的是否存在元素满足指定条件。
+Checks whether any element in this ArkTS Float32Array meets a given condition.
 
 **Since:** 12
 
@@ -1138,20 +1139,20 @@ some(predicate: TypedArrayPredicateFn<number, Float32Array>): boolean
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| predicate | [TypedArrayPredicateFn](arkts-arkts-collections-typedarraypredicatefn-t.md)&lt;number, Float32Array&gt; | Yes | 用于测试的断言函数。 |
+| predicate | [TypedArrayPredicateFn](arkts-arkts-collections-typedarraypredicatefn-t.md)&lt;number, Float32Array&gt; | Yes | Assertion function used for the test. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| boolean | 检查结果。如果存在元素满足指定条件则返回**true**，否则返回**false**。 |
+| boolean | Check result. The value **true** is returned if an element meeting the given condition exists; otherwise, **false** is returned. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 10200011 | The some method cannot be bound. |
-| 10200201 | Concurrent modification error. |
+| [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) | The some method cannot be bound. |
+| [10200201](../errorcode-utils.md#10200201-concurrent-modification-error) | Concurrent modification error. |
 
 ## sort
 
@@ -1159,7 +1160,7 @@ some(predicate: TypedArrayPredicateFn<number, Float32Array>): boolean
 sort(compareFn?: TypedArrayCompareFn<number>): Float32Array
 ```
 
-对ArkTS Float32Array进行排序，并返回排序后的ArkTS Float32Array对象。
+Sorts elements in this ArkTS Float32Array and returns the sorted ArkTS Float32Array.
 
 **Since:** 12
 
@@ -1175,20 +1176,20 @@ sort(compareFn?: TypedArrayCompareFn<number>): Float32Array
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| compareFn | [TypedArrayCompareFn](arkts-arkts-collections-typedarraycomparefn-t.md)&lt;number&gt; | No | 用于确定元素顺序的函数。默认使用升序排序。 |
+| compareFn | [TypedArrayCompareFn](arkts-arkts-collections-typedarraycomparefn-t.md)&lt;number&gt; | No | Function that determines the sort order. By default, elements are sorted in ascending order. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Float32Array | 排序后的ArkTS Float32Array对象。 |
+| Float32Array | Sorted ArkTS Float32Array. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 10200011 | The sort method cannot be bound. |
-| 10200201 | Concurrent modification error. |
+| [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) | The sort method cannot be bound. |
+| [10200201](../errorcode-utils.md#10200201-concurrent-modification-error) | Concurrent modification error. |
 
 ## subarray
 
@@ -1196,7 +1197,7 @@ sort(compareFn?: TypedArrayCompareFn<number>): Float32Array
 subarray(begin?: number, end?: number): Float32Array
 ```
 
-从指定的位置截取数组，返回一个新的、基于相同ArkTS ArrayBuffer的ArkTS Float32Array对象。
+Truncates an array from a specified position and returns a new ArkTS Float32Array based on the same ArkTS ArrayBuffer.
 
 **Since:** 12
 
@@ -1212,21 +1213,21 @@ subarray(begin?: number, end?: number): Float32Array
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| begin | number | No | 开始索引，如果`begin < 0`，则会从`begin + Float32Array.length`位置开始。默认值为**0**。 |
-| end | number | No | 结束索引（不包括该元素），如果`end < 0`，则会到`end + Float32Array.length`位置结束。默认为ArkTS Float32Array的长度。 |
+| begin | number | No | Start index of the range. If a negative number is passed in, it refers to the index of `begin + Float32Array.length`. The default value is **0**. |
+| end | number | No | End index of the range (exclusive). If a negative number is passed in, it refers to the index of `end + Float32Array.length`. The default value is the length of the ArkTS Float32Array. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Float32Array | 新的ArkTS Float32Array对象。 |
+| Float32Array | New ArkTS Float32Array. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 10200011 | The subarray method cannot be bound. |
-| 10200201 | Concurrent modification error. |
+| [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) | The subarray method cannot be bound. |
+| [10200201](../errorcode-utils.md#10200201-concurrent-modification-error) | Concurrent modification error. |
 
 ## toLocaleString
 
@@ -1234,7 +1235,7 @@ subarray(begin?: number, end?: number): Float32Array
 toLocaleString(): string
 ```
 
-根据当前应用的系统地区获取符合当前文化习惯的数字表示形式，让每个元素调用自己的toLocaleString方法把数字转换为字符串，然后使用逗号将每个元素的结果字符串按照顺序拼接成字符串。
+Generates a string of digits that matches the cultural conventions of the current system locale. Each element converts its digits to a string via its **toLocaleString** API, and these strings are then joined in sequence with commas (,).
 
 **Since:** 18
 
@@ -1250,14 +1251,14 @@ toLocaleString(): string
 
 | Type | Description |
 | --- | --- |
-| string | 一个包含数组所有元素的字符串。 |
+| string | A string that contains all elements of the array. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 10200011 | The toLocaleString method cannot be bound. |
-| 10200201 | Concurrent modification error. |
+| [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) | The toLocaleString method cannot be bound. |
+| [10200201](../errorcode-utils.md#10200201-concurrent-modification-error) | Concurrent modification error. |
 
 ## toString
 
@@ -1265,7 +1266,7 @@ toLocaleString(): string
 toString(): string
 ```
 
-ArkTS Float32Array转换为字符串。
+Converts an ArkTS Float32Array into a string.
 
 **Since:** 18
 
@@ -1281,14 +1282,14 @@ ArkTS Float32Array转换为字符串。
 
 | Type | Description |
 | --- | --- |
-| string | 一个包含数组所有元素的字符串。 |
+| string | A string that contains all elements of the array. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 10200011 | The toString method cannot be bound. |
-| 10200201 | Concurrent modification error. |
+| [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) | The toString method cannot be bound. |
+| [10200201](../errorcode-utils.md#10200201-concurrent-modification-error) | Concurrent modification error. |
 
 ## values
 
@@ -1296,7 +1297,7 @@ ArkTS Float32Array转换为字符串。
 values(): IterableIterator<number>
 ```
 
-返回一个新的迭代器对象，该对象包含ArkTS Float32Array中每个元素的值。
+Returns an iterator object that contains the value of each element in this ArkTS Float32Array.
 
 **Since:** 12
 
@@ -1312,14 +1313,14 @@ values(): IterableIterator<number>
 
 | Type | Description |
 | --- | --- |
-| [IterableIterator](arkts-arkts-iterator-iterableiterator-i.md)&lt;number&gt; | 迭代器对象。 |
+| [IterableIterator](arkts-arkts-iterator-iterableiterator-i.md)&lt;number&gt; | Iterator object. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 10200011 | The values method cannot be bound. |
-| 10200201 | Concurrent modification error. |
+| [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) | The values method cannot be bound. |
+| [10200201](../errorcode-utils.md#10200201-concurrent-modification-error) | Concurrent modification error. |
 
 ## BYTES_PER_ELEMENT
 
@@ -1327,7 +1328,7 @@ values(): IterableIterator<number>
 static readonly BYTES_PER_ELEMENT: number
 ```
 
-ArkTS Float32Array中每个元素所占用的字节数。
+Number of bytes occupied by each element in the ArkTS Float32Array.
 
 **Type:** number
 
@@ -1347,7 +1348,7 @@ ArkTS Float32Array中每个元素所占用的字节数。
 [index: number]: number
 ```
 
-返回Float32Array指定索引位置的元素。
+Returns the item at that index.
 
 **Type:** number
 
@@ -1367,7 +1368,7 @@ ArkTS Float32Array中每个元素所占用的字节数。
 readonly buffer: ArrayBuffer
 ```
 
-ArkTS Float32Array底层使用的buffer。
+Bottom-layer buffer used by an ArkTS Float32Array.
 
 **Type:** ArrayBuffer
 
@@ -1387,7 +1388,7 @@ ArkTS Float32Array底层使用的buffer。
 readonly byteLength: number
 ```
 
-ArkTS Float32Array的所占的字节数。
+Number of bytes occupied by an ArkTS Float32Array.
 
 **Type:** number
 
@@ -1407,7 +1408,7 @@ ArkTS Float32Array的所占的字节数。
 readonly byteOffset: number
 ```
 
-ArkTS Float32Array距离其ArrayBuffer起始位置的偏移。
+Offset between the ArkTS Float32Array and the start position of the ArrayBuffer.
 
 **Type:** number
 
@@ -1427,7 +1428,7 @@ ArkTS Float32Array距离其ArrayBuffer起始位置的偏移。
 readonly length: number
 ```
 
-ArkTS Float32Array元素个数。
+Number of elements in an ArkTS Float32Array.
 
 **Type:** number
 

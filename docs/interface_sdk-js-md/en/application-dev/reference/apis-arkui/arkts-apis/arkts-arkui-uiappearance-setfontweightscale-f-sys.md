@@ -12,7 +12,7 @@ import { uiAppearance } from 'kits/@kit.ArkUI';
 function setFontWeightScale(fontWeightScale: double): Promise<void>
 ```
 
-设置系统字体粗细。
+Set the system font-weight-scale.
 
 **Since:** 23
 
@@ -42,7 +42,7 @@ function setFontWeightScale(fontWeightScale: double): Promise<void>
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 500001 | Internal error. |
-| 201 | Permission denied. |
-| 202 | Permission verification failed. A non-system application calls a system API. |
+| [500001](../errorcode-uiappearance.md#500001-internal-error) | Internal error. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
 

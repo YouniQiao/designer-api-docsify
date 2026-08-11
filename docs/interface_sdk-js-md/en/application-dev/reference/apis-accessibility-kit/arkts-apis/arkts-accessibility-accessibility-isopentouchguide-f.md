@@ -12,7 +12,7 @@ import { accessibility } from 'kits/@kit.AccessibilityKit';
 function isOpenTouchGuide(callback: AsyncCallback<boolean>): void
 ```
 
-判断触摸浏览模式是否开启，使用callback异步回调。
+Checks whether touch guide mode is enabled. This API uses an asynchronous callback to return the result.
 
 **Since:** 7
 
@@ -30,7 +30,7 @@ function isOpenTouchGuide(callback: AsyncCallback<boolean>): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;boolean&gt; | Yes | 回调函数，如果触摸浏览模式已开启，则返回 true；否则返回 false。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;boolean&gt; | Yes | Callback used to return the result. Returns **true** if touch guide mode is enabled; returns **false** otherwise. |
 
 ## Examples
 
@@ -54,7 +54,7 @@ accessibility.isOpenTouchGuide((err: BusinessError, data: boolean) => {
 function isOpenTouchGuide(): Promise<boolean>
 ```
 
-判断触摸浏览模式是否开启，使用Promise异步回调。
+Checks whether touch guide mode is enabled. This API uses a promise to return the result.
 
 **Since:** 7
 
@@ -72,7 +72,7 @@ function isOpenTouchGuide(): Promise<boolean>
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;boolean&gt; | Promise对象，如果触摸浏览模式已开启，则返回 true；否则返回 false。 |
+| Promise&lt;boolean&gt; | Promise used to return the result. Returns **true** if touch guide mode is enabled; returns **false** otherwise. |
 
 ## Examples
 

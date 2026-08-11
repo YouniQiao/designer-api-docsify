@@ -8,7 +8,7 @@ export declare function ImageSpan(
 ): ImageSpanAttribute
 ```
 
-定义ImageSpan组件。
+Defines ImageSpan Component.
 
 **Since:** 23
 
@@ -41,7 +41,7 @@ export declare function ImageSpan(
 ): ImageSpanAttribute
 ```
 
-定义ImageSpan组件。
+Defines ImageSpan Component.
 
 **Since:** 26.1.0
 
@@ -59,7 +59,7 @@ export declare function ImageSpan(
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| style | [CustomBuilderT](../arkts-components/arkts-arkui-custombuildert-t.md)&lt;ImageSpanAttribute&gt; | Yes | ImageSpan属性实例。 |
+| style | [CustomBuilderT](../arkts-components/arkts-arkui-custombuildert-t.md)&lt;ImageSpanAttribute&gt; | Yes | ImageSpan attribute instance |
 
 **Return value:**
 

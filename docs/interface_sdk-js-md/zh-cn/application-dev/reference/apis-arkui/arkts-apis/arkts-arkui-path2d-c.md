@@ -46,7 +46,7 @@ addPath(path: Path2D, transform?: Matrix2D): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| path | [Path2D](arkts-arkui-viewmodel-path2d-i.md) | 是 | 需要添加到当前路径的路径对象，路径单位：px。 &lt;br&gt;异常值undefined和null按无效值处理。 |
+| path | [Path2D](arkts-arkui-canvas-path2d-c.md) | 是 | 需要添加到当前路径的路径对象，路径单位：px。 &lt;br&gt;异常值undefined和null按无效值处理。 |
 | transform | [Matrix2D](arkts-arkui-matrix2d-c.md) | 否 | 新增路径的变换矩阵对象。 &lt;br&gt;异常值undefined和null按无效值处理。 &lt;br&gt;默认值：null。 |
 
 ## constructor
@@ -121,7 +121,7 @@ constructor(path: Path2D)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| path | [Path2D](arkts-arkui-viewmodel-path2d-i.md) | 是 | 路径对象。 |
+| path | [Path2D](arkts-arkui-canvas-path2d-c.md) | 是 | 路径对象。 |
 
 ## constructor
 
@@ -149,7 +149,7 @@ constructor(path: Path2D, unit: LengthMetricsUnit)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| path | [Path2D](arkts-arkui-viewmodel-path2d-i.md) | 是 | 路径对象。 |
+| path | [Path2D](arkts-arkui-canvas-path2d-c.md) | 是 | 路径对象。 |
 | unit | [LengthMetricsUnit](arkts-arkui-lengthmetricsunit-t.md) | 是 | 用来配置Path2D对象的单位模式，配置后无法动态更改， 配置方法同 [CanvasRenderingContext2D](../../../reference/apis-arkui/arkui-ts/ts-canvasrenderingcontext2d.md)。 &lt;br&gt;异常值NaN和Infinity按默认值处理。 &lt;br&gt;默认值：DEFAULT。 |
 
 ## constructor

@@ -4,7 +4,7 @@
 declare type RestoreStateCallback = (savedState: Record<string, Object> | null) => void
 ```
 
-自定义页面状态恢复回调。
+Custom page state restore callback.
 
 **Since:** 26.0.0
 
@@ -22,5 +22,5 @@ declare type RestoreStateCallback = (savedState: Record<string, Object> | null) 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| savedState | [Record](../../apis-default/arkts-apis/arkts-record-t.md)&lt;string, Object&gt; \| null | Yes | onSaveState保存的自定义页面状态。 |
+| savedState | [Record](../../apis-default/arkts-apis/arkts-record-t.md)&lt;string, Object&gt; \| null | Yes | Custom page state saved by onSaveState. |
 

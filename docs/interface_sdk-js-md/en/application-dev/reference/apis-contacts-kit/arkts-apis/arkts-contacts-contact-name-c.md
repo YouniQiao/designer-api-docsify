@@ -1,6 +1,6 @@
 # Name
 
-联系人的名字类。
+Defines a contact's name.
 
 **Since:** 7
 
@@ -22,7 +22,7 @@ import { contact } from 'kits/@kit.ContactsKit';
 familyName?: string
 ```
 
-联系人的家庭姓名。
+Family name.
 
 **Type:** string
 
@@ -42,7 +42,7 @@ familyName?: string
 familyNamePhonetic?: string
 ```
 
-联系人的家庭姓名拼音。
+Family name in pinyin.
 
 **Type:** string
 
@@ -62,7 +62,7 @@ familyNamePhonetic?: string
 fullName: string
 ```
 
-联系人的全名。
+Full name of the contact.
 
 **Type:** string
 
@@ -82,7 +82,7 @@ fullName: string
 givenName?: string
 ```
 
-联系人的名称(firstName)。
+Given name of the contact.
 
 **Type:** string
 
@@ -102,7 +102,7 @@ givenName?: string
 givenNamePhonetic?: string
 ```
 
-联系人的名称拼音。
+Given name of the contact in pinyin.
 
 **Type:** string
 
@@ -122,7 +122,7 @@ givenNamePhonetic?: string
 hasName?: boolean
 ```
 
-联系人信息中是否包含姓名。true表示包含，false表示不包含。
+Whether the contact information contains the name. The value **true** indicates that the contact information contains the name, and the value **false** indicates the opposite.
 
 **Type:** boolean
 
@@ -142,7 +142,7 @@ hasName?: boolean
 middleName?: string
 ```
 
-联系人的中间名。
+Middle name of the contact.
 
 **Type:** string
 
@@ -162,7 +162,7 @@ middleName?: string
 middleNamePhonetic?: string
 ```
 
-联系人的中间名拼音。
+Middle name of the contact in pinyin.
 
 **Type:** string
 
@@ -182,7 +182,7 @@ middleNamePhonetic?: string
 namePrefix?: string
 ```
 
-联系人的姓名前缀。
+Prefix of the contact name.
 
 **Type:** string
 
@@ -202,7 +202,7 @@ namePrefix?: string
 nameSuffix?: string
 ```
 
-联系人的姓名后缀。
+Suffix of the contact name.
 
 **Type:** string
 

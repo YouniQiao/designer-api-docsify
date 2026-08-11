@@ -1,6 +1,6 @@
 # RichEditorRange
 
-定义RichEditor的范围。
+Defines range of RichEditor.
 
 **Since:** 23
 
@@ -16,7 +16,7 @@
 end?: int
 ```
 
-需要更新样式的文本结束位置，省略或者超出文本范围时表示无穷大。
+end offset.
 
 **Type:** int
 
@@ -38,7 +38,7 @@ end?: int
 start?: int
 ```
 
-需要更新样式的文本起始位置，省略或者设置负值时表示从0开始。
+start offset.
 
 **Type:** int
 

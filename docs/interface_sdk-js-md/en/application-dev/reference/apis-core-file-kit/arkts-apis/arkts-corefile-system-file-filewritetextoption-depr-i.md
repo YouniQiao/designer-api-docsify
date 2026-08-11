@@ -1,6 +1,6 @@
 # FileWriteTextOption
 
-可选项类型，支持writeText接口使用。
+Defines the options used in writeText().
 
 **Since:** 3
 
@@ -18,7 +18,7 @@
 complete?: () => void
 ```
 
-接口调用结束的回调函数。
+Callback invoked when the API call is complete.
 
 **Since:** 3
 
@@ -36,7 +36,11 @@ complete?: () => void
 fail?: (data: string, code: number) => void
 ```
 
-接口调用失败的回调函数。
+Callback invoked when the API call fails.  
+**data** indicates the error information.  
+**code** indicates the returned error code:  
+**202**: invalid parameter  
+**300**: I/O error
 
 **Since:** 3
 
@@ -61,7 +65,7 @@ fail?: (data: string, code: number) => void
 success?: () => void
 ```
 
-接口调用成功的回调函数。
+Callback invoked when the API call is successful.
 
 **Since:** 3
 
@@ -79,7 +83,7 @@ success?: () => void
 append?: boolean
 ```
 
-是否追加模式，默认为false。true为追加，false为不追加。
+Whether to enable the append mode. The default value is **false**. The value **true** means to enable the append mode; the value **false** means the opposite.
 
 **Type:** boolean
 
@@ -99,7 +103,7 @@ append?: boolean
 encoding?: string
 ```
 
-编码格式，默认为UTF-8。
+Encoding format. The default format is **UTF-8**.
 
 **Type:** string
 
@@ -119,7 +123,7 @@ encoding?: string
 text: string
 ```
 
-写入的字符串。
+String to write into the file.
 
 **Type:** string
 
@@ -139,7 +143,7 @@ text: string
 uri: string
 ```
 
-本地文件URI，如果文件不存在会创建文件。由于轻量级穿戴设备底层文件系统的限制，该值必须满足以下要求：1. URI 中不得包含以下特殊字符：\"*+,:;&lt;=&gt;?[]|\x7F等。2. 最大允许字符长度为128个字符。
+URI of a local file. If it does not exist, a file will be created. Restricted by the underlying file system of lite wearables, the value must meet the following requirements:1. The URI cannot contain the following special characters: \"*+,:;&lt;=&gt;?[]|\x7F.2. The value can contain a maximum of 128 characters.
 
 **Type:** string
 

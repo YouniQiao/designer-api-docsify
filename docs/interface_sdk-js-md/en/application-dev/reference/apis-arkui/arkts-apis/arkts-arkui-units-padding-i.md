@@ -1,10 +1,6 @@
 # Padding
 
-type Padding = { top: Length; right: Length; bottom: Length; left: Length; }
-
-内边距类型，用于描述组件不同方向的内边距。
-
-引入该对象时，至少传入一个参数。
+Defines the padding property.
 
 **Since:** 23
 
@@ -20,7 +16,7 @@ type Padding = { top: Length; right: Length; bottom: Length; left: Length; }
 bottom?: Length
 ```
 
-下内边距，组件内元素距组件底部的尺寸。
+bottom property.
 
 **Type:** [Length](arkts-arkui-length-t.md)
 
@@ -40,7 +36,7 @@ bottom?: Length
 left?: Length
 ```
 
-左内边距，组件内元素距组件左边界的尺寸。
+left property.
 
 **Type:** [Length](arkts-arkui-length-t.md)
 
@@ -60,7 +56,7 @@ left?: Length
 right?: Length
 ```
 
-右内边距，组件内元素距组件右边界的尺寸。
+right property.
 
 **Type:** [Length](arkts-arkui-length-t.md)
 
@@ -80,7 +76,7 @@ right?: Length
 top?: Length
 ```
 
-上内边距，组件内元素距组件顶部的尺寸。
+top property.
 
 **Type:** [Length](arkts-arkui-length-t.md)
 

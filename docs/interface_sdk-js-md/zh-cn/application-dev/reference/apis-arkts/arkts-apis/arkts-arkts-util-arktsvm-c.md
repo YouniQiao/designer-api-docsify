@@ -10,12 +10,6 @@
 
 **系统能力：** SystemCapability.Utils.Lang
 
-## 导入模块
-
-```TypeScript
-import { util } from 'kits/@kit.ArkTS';
-```
-
 ## enableLocalHandleDetection
 
 ```TypeScript
@@ -116,6 +110,10 @@ static getAllVMHeapMemoryInfo(): Promise<HeapMemoryInfo[]>
 ```
 
 从 ArkTS-VM 和共享堆中获取所有堆内存信息。
+
+> **说明：**
+> 
+> 此接口在执行时会暂停所有VM线程运行以获取内存信息。由于需要等待所有VM线程暂停，高负载场景下调用此接口的耗时可能较高。
 
 **起始版本：** 24
 
@@ -234,7 +232,7 @@ console.info('Registration result: ' + result);
 static setMultithreadingDetectionEnabled(enabled: boolean, options?: MultithreadingDetectionOptions):void
 ```
 
-设置是否开启多线程检测。当 **enabled** 设置为 **true** 时开启检测，多线程问题的 cppcrash 文件中将包含多线程相关的详细信息。当 **enabled** 设置为 **false** 时关闭检测，相应的 cppcrash 文件中将不包含此类详细信息。
+设置是否开启多线程安全检测。当 **enabled** 设置为 **true** 时开启检测，多线程问题的 cppcrash 文件中将包含多线程相关的详细信息。当 **enabled** 设置为 **false** 时关闭检测，相应的 cppcrash 文件中将不包含此类详细信息。
 
 **起始版本：** 23
 
@@ -250,8 +248,8 @@ static setMultithreadingDetectionEnabled(enabled: boolean, options?: Multithread
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| enabled | boolean | 是 | 控制是否开启多线程检测。**true** 表示开启检测，**false** 表示关闭检测。 |
-| options | [MultithreadingDetectionOptions](arkts-arkts-util-multithreadingdetectionoptions-i.md) | 否 | 可选的配置项。<br>**起始版本：** 26.0.0 |
+| enabled | boolean | 是 | 控制是否开启多线程安全检测。**true** 表示开启检测，**false** 表示关闭检测。 |
+| options | [MultithreadingDetectionOptions](arkts-arkts-util-multithreadingdetectionoptions-i.md) | 否 | 多线程安全检测的参数配置，此参数不填时， 对应各属性取MultithreadingDetectionOptions的默认值。<br>**起始版本：** 26.0.0 |
 
 ## 示例
 

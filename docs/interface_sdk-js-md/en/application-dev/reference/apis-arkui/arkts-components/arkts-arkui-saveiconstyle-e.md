@@ -1,6 +1,6 @@
 # SaveIconStyle
 
-保存控件的图标风格。
+Enumerates icon styles of the **SaveButton** component.
 
 **Since:** 10
 
@@ -16,7 +16,7 @@
 FULL_FILLED = 0
 ```
 
-保存控件展示填充样式图标。
+Filled style icon.
 
 **Since:** 10
 
@@ -36,7 +36,7 @@ FULL_FILLED = 0
 LINES = 1
 ```
 
-保存控件展示线条样式图标。
+Line style icon.
 
 **Since:** 10
 

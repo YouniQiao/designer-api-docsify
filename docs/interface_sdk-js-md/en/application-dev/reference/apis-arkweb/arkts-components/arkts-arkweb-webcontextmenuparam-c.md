@@ -1,6 +1,6 @@
 # WebContextMenuParam
 
-定义上下文菜单参数，关联{@link WebContextMenuParam}方法。
+Defines the context menu param, related to {@link WebContextMenuParam} method.
 
 **Since:** 9
 
@@ -16,7 +16,7 @@
 constructor()
 ```
 
-WebContextMenuParam的构造函数。
+Constructor.
 
 **Since:** 9
 
@@ -34,7 +34,7 @@ WebContextMenuParam的构造函数。
 existsImageContents(): boolean
 ```
 
-长按菜单所在位置是否包含图片内容。
+Long press menu location has image content.
 
 **Since:** 9
 
@@ -50,7 +50,7 @@ existsImageContents(): boolean
 
 | Type | Description |
 | --- | --- |
-| boolean | 返回当前上下文菜单位置是否存在图片内容。 |
+| boolean | Return whether this context menu has image content. |
 
 ## getContextMenuMediaType
 
@@ -58,7 +58,7 @@ existsImageContents(): boolean
 getContextMenuMediaType(): ContextMenuDataMediaType
 ```
 
-返回上下文节点的类型。
+Returns the type of context node.
 
 **Since:** 22
 
@@ -72,7 +72,7 @@ getContextMenuMediaType(): ContextMenuDataMediaType
 
 | Type | Description |
 | --- | --- |
-| [ContextMenuDataMediaType](arkts-arkweb-contextmenudatamediatype-e.md) | 返回上下文节点的类型。 |
+| [ContextMenuDataMediaType](arkts-arkweb-contextmenudatamediatype-e.md) | Returns the type of context node. |
 
 ## getEditStateFlags
 
@@ -80,7 +80,7 @@ getContextMenuMediaType(): ContextMenuDataMediaType
 getEditStateFlags(): number
 ```
 
-返回上下文可编辑状态标记 {@link ContextMenuEditStateFlags}。
+Returns the context editable flags {@link ContextMenuEditStateFlags}.
 
 **Since:** 9
 
@@ -104,7 +104,7 @@ getEditStateFlags(): number
 getInputFieldType(): ContextMenuInputFieldType
 ```
 
-若上下文菜单在输入框上触发，则返回输入框类型。
+Returns input field type if the context menu was invoked on an input field.
 
 **Since:** 9
 
@@ -120,7 +120,7 @@ getInputFieldType(): ContextMenuInputFieldType
 
 | Type | Description |
 | --- | --- |
-| [ContextMenuInputFieldType](../arkts-apis/arkts-arkweb-web-contextmenuinputfieldtype-e.md) | 输入框上触发菜单时返回输入框类型。 |
+| [ContextMenuInputFieldType](../arkts-apis/arkts-arkweb-web-contextmenuinputfieldtype-e.md) | Input field type if the context menu was invoked on an input field. |
 
 ## getLinkUrl
 
@@ -128,7 +128,7 @@ getInputFieldType(): ContextMenuInputFieldType
 getLinkUrl(): string
 ```
 
-若长按位置为链接，则返回经过安全校验的链接 URL。
+If the long-press location is the link returns the link's security-checked URL.
 
 **Since:** 9
 
@@ -144,7 +144,7 @@ getLinkUrl(): string
 
 | Type | Description |
 | --- | --- |
-| string | 关联链接时返回链接地址，否则返回 null。 |
+| string | If relate to a link return link url, else return null. |
 
 ## getMediaType
 
@@ -152,7 +152,7 @@ getLinkUrl(): string
 getMediaType(): ContextMenuMediaType
 ```
 
-返回上下文节点的类型。
+Returns the type of context node.
 
 **Since:** 9
 
@@ -168,7 +168,7 @@ getMediaType(): ContextMenuMediaType
 
 | Type | Description |
 | --- | --- |
-| [ContextMenuMediaType](arkts-arkweb-contextmenumediatype-e.md) | 返回上下文节点的类型。 |
+| [ContextMenuMediaType](arkts-arkweb-contextmenumediatype-e.md) | Returns the type of context node. |
 
 ## getPreviewHeight
 
@@ -176,7 +176,7 @@ getMediaType(): ContextMenuMediaType
 getPreviewHeight(): number
 ```
 
-返回选择菜单预览高度。
+Returns the selection menu preview height.
 
 **Since:** 13
 
@@ -190,7 +190,7 @@ getPreviewHeight(): number
 
 | Type | Description |
 | --- | --- |
-| number | 预览菜单高度。单位：像素。 |
+| number | The preview menu height. Unit: px. |
 
 ## getPreviewWidth
 
@@ -198,7 +198,7 @@ getPreviewHeight(): number
 getPreviewWidth(): number
 ```
 
-返回选择菜单预览宽度。
+Returns the selection menu preview width.
 
 **Since:** 13
 
@@ -212,7 +212,7 @@ getPreviewWidth(): number
 
 | Type | Description |
 | --- | --- |
-| number | 菜单预览宽度。单位：像素。 |
+| number | The preview menu width. Unit: px. |
 
 ## getSelectionText
 
@@ -220,7 +220,7 @@ getPreviewWidth(): number
 getSelectionText(): string
 ```
 
-返回选中的文本内容。
+Returns the text of the selection.
 
 **Since:** 9
 
@@ -236,7 +236,7 @@ getSelectionText(): string
 
 | Type | Description |
 | --- | --- |
-| string | 返回选中文本，未选中任何文本时返回 null。 |
+| string | Returns the text of the selection, or return null if no text is selected. |
 
 ## getSourceType
 
@@ -244,7 +244,7 @@ getSelectionText(): string
 getSourceType(): ContextMenuSourceType
 ```
 
-* 返回上下文菜单的来源类型。
+Returns the context menu source type.
 
 **Since:** 9
 
@@ -268,7 +268,7 @@ getSourceType(): ContextMenuSourceType
 getSourceUrl(): string
 ```
 
-若选中元素包含 SRC 属性，则返回其资源地址 URL。
+Returns the SRC URL if the selected element has a SRC attribute.
 
 **Since:** 9
 
@@ -284,7 +284,7 @@ getSourceUrl(): string
 
 | Type | Description |
 | --- | --- |
-| string | 若当前上下文菜单源自元素 src 属性，则返回资源链接地址，否则返回 null。 |
+| string | If this context menu is "src" attribute, return link url, else return null. |
 
 ## getUnfilteredLinkUrl
 
@@ -292,7 +292,7 @@ getSourceUrl(): string
 getUnfilteredLinkUrl(): string
 ```
 
-若长按位置为链接，则返回该链接的原始 URL。
+If the long-press location is the link returns the link's original URL.
 
 **Since:** 9
 
@@ -308,7 +308,7 @@ getUnfilteredLinkUrl(): string
 
 | Type | Description |
 | --- | --- |
-| string | 关联链接时返回未过滤的链接地址，否则返回 null。 |
+| string | If relate to a link return unfiltered link url, else return null. |
 
 ## isEditable
 
@@ -316,7 +316,7 @@ getUnfilteredLinkUrl(): string
 isEditable(): boolean
 ```
 
-* 返回当前上下文是否可编辑。
+Returns whether the context is editable.
 
 **Since:** 9
 
@@ -340,7 +340,7 @@ isEditable(): boolean
 x(): number
 ```
 
-菜单在Web组件内的水平偏移坐标。
+Horizontal offset coordinates of the menu within the Web component.
 
 **Since:** 9
 
@@ -356,7 +356,7 @@ x(): number
 
 | Type | Description |
 | --- | --- |
-| number | 上下文菜单X坐标。 正常情况下返回非负整数，否则返回 -1。 单位：像素。 |
+| number | The context menu x coordinate. Returns a non-negative integer if normal, otherwise returns -1. Unit: px. |
 
 ## y
 
@@ -364,7 +364,7 @@ x(): number
 y(): number
 ```
 
-菜单在Web组件内的垂直偏移坐标。
+Vertical offset coordinates for the menu within the Web component.
 
 **Since:** 9
 
@@ -380,5 +380,5 @@ y(): number
 
 | Type | Description |
 | --- | --- |
-| number | 上下文菜单Y坐标。 正常情况下返回非负整数，否则返回 -1。 单位：像素。 |
+| number | The context menu y coordinate. Returns a non-negative integer if normal, otherwise returns -1. Unit: px. |
 

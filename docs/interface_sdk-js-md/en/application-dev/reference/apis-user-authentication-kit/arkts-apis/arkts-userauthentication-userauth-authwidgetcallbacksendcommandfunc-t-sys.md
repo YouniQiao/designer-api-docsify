@@ -4,7 +4,7 @@
 type AuthWidgetCallbackSendCommandFunc = (cmdData: string) => void
 ```
 
-回调函数，身份认证框架向控件发送命令。
+Called to return the command sent from the user authentication framework to the user authentication widget.
 
 **Since:** 23
 
@@ -20,5 +20,5 @@ type AuthWidgetCallbackSendCommandFunc = (cmdData: string) => void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| cmdData | string | Yes | 用户身份认证框架向控件发送的命令。 |
+| cmdData | string | Yes | Command sent from the user authentication framework to the user authentication widget. |
 

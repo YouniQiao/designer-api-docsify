@@ -12,7 +12,7 @@ import { hiAppEvent } from 'kits/@kit.PerformanceAnalysisKit';
 function getUserId(name: string): string
 ```
 
-获取通过setUserId接口设置的value值。
+Obtains the value set through **setUserId**.
 
 **Since:** 11
 
@@ -28,19 +28,19 @@ function getUserId(name: string): string
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| name | string | Yes | 用户ID的key。只能包含大小写字母、数字、下划线和 \\$，不能以数字开头，长度非空且不超过256个字符。 |
+| name | string | Yes | Key of a user ID. The value is string that contains a maximum of 256 characters, including digits (0 to 9), letters (a to z)(A to Z), underscore (_), and dollar sign (\\$). It must not start with a digit. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| string | 用户ID的值。没有查到返回空字符串。 |
+| string | Value of a user ID. If no user ID is found, an empty string is returned. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types. |
 
 ## Examples
 

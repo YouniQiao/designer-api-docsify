@@ -1,6 +1,6 @@
 # ScrollAlign
 
-对齐方式枚举。
+Enumerates alignment modes.
 
 **Since:** 10
 
@@ -16,7 +16,7 @@
 START
 ```
 
-首部对齐。指定item首部与滚动容器组件首部对齐。
+The start edge of the list item is flush with the start edge of the list.
 
 **Since:** 10
 
@@ -36,7 +36,7 @@ START
 CENTER
 ```
 
-居中对齐。指定item主轴方向居中对齐于滚动容器组件。
+The list item is centered along the main axis of the list.
 
 **Since:** 10
 
@@ -56,7 +56,7 @@ CENTER
 END
 ```
 
-尾部对齐。指定item尾部与滚动容器组件尾部对齐。
+The end edge of the list item is flush with the end edge of the list.
 
 **Since:** 10
 
@@ -76,9 +76,7 @@ END
 AUTO
 ```
 
-自动对齐。
-
-若指定item完全处于显示区，不做调整。否则依照滑动距离最短的原则，将指定item首部对齐或尾部对齐于滚动容器组件，使指定item完全处于显示区。
+The list item is automatically aligned.
 
 **Since:** 10
 

@@ -12,7 +12,7 @@ import { print } from 'kits/@kit.BasicServicesKit';
 function analyzePrintEvents(printerId: string, eventType: string): Promise<string>
 ```
 
-分析打印事件。
+Analyze print events.
 
 **Since:** 24
 
@@ -32,8 +32,8 @@ function analyzePrintEvents(printerId: string, eventType: string): Promise<strin
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| printerId | string | Yes | 打印机ID。 &lt;br&gt;要分析的打印机ID。 |
-| eventType | string | Yes | 前卫类型。 &lt;br&gt;需要分析的事件类型。 |
+| printerId | string | Yes | Indicates the printer ID. &lt;br&gt;Printer ID to be analyzed. |
+| eventType | string | Yes | Indicates the avant type. &lt;br&gt;Event types to be analyzed. |
 
 **Return value:**
 
@@ -45,6 +45,6 @@ function analyzePrintEvents(printerId: string, eventType: string): Promise<strin
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 201 | the application does not have permission to call this function. |
-| 202 | not system application. |
+| [201](../../errorcode-universal.md#201-permission-denied) | the application does not have permission to call this function. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | not system application. |
 

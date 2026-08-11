@@ -1,6 +1,6 @@
 # ButtonType
 
-表示按钮类型的枚举。
+Enumeration of button type.
 
 **Since:** 23
 
@@ -16,7 +16,7 @@
 NORMAL = 0
 ```
 
-普通按钮。
+Normal button.
 
 **Since:** 23
 
@@ -34,7 +34,7 @@ NORMAL = 0
 EMPHASIZE = 1
 ```
 
-强调按钮。
+Emphasize button.
 
 **Since:** 23
 

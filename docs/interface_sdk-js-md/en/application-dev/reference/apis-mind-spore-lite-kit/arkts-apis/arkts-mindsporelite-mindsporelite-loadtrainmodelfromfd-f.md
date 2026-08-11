@@ -56,9 +56,7 @@ import { fileIo } from '@kit.CoreFileKit';
 let modelFile = '/path/to/xxx.ms';
 let file = fileIo.openSync(modelFile, fileIo.OpenMode.READ_ONLY);
 mindSporeLite.loadTrainModelFromFd(file.fd).then((mindSporeLiteModel: mindSporeLite.Model) => {
-  console.info(`Succeeded in loading train model. Train mode: ${mindSporeLiteModel.trainMode}`);
-}).catch((error: Error) => {
-  console.error(`Failed to load train model from file descriptor. Model file: ${modelFile}, File descriptor: ${file.fd}, Error: ${error.message}`);
+  console.info("MSLITE trainMode: ", mindSporeLiteModel.trainMode);
 });
 ```
 

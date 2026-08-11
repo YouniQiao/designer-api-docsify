@@ -12,12 +12,6 @@
 
 **系统能力：** SystemCapability.MultimodalInput.Input.InputDevice
 
-## 导入模块
-
-```TypeScript
-import { inputDevice } from 'kits/@kit.InputKit';
-```
-
 ## 汇总
 
 ### 函数

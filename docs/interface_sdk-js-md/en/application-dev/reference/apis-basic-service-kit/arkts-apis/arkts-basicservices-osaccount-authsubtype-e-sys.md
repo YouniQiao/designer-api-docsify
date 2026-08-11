@@ -1,6 +1,6 @@
 # AuthSubType (System API)
 
-表示用于认证的凭据子类型的枚举。
+Enumerates the authentication credential subtypes.
 
 **Since:** 8
 
@@ -18,7 +18,7 @@
 PIN_SIX = 10000
 ```
 
-表示6位凭证。
+Six-digit PIN.
 
 **Since:** 8
 
@@ -36,7 +36,7 @@ PIN_SIX = 10000
 PIN_NUMBER = 10001
 ```
 
-表示自定义数字凭证。
+Custom PIN.
 
 **Since:** 8
 
@@ -54,7 +54,7 @@ PIN_NUMBER = 10001
 PIN_MIXED = 10002
 ```
 
-表示自定义混合凭据。
+Custom mixed credentials.
 
 **Since:** 8
 
@@ -72,7 +72,7 @@ PIN_MIXED = 10002
 PIN_FOUR = 10003
 ```
 
-表示4位凭证。
+4-digit credential.
 
 **Since:** 12
 
@@ -90,7 +90,7 @@ PIN_FOUR = 10003
 PIN_PATTERN = 10004
 ```
 
-表示图案凭据。
+Pattern credential.
 
 **Since:** 12
 
@@ -108,7 +108,7 @@ PIN_PATTERN = 10004
 PIN_QUESTION = 10005
 ```
 
-表示密保问题凭据。
+Security question credential.
 
 **Since:** 14
 
@@ -126,7 +126,7 @@ PIN_QUESTION = 10005
 FACE_2D = 20000
 ```
 
-表示2D 人脸凭证。
+2D face credential.
 
 **Since:** 8
 
@@ -144,7 +144,7 @@ FACE_2D = 20000
 FACE_3D = 20001
 ```
 
-表示3D 人脸凭证。
+3D face credential.
 
 **Since:** 8
 
@@ -162,7 +162,7 @@ FACE_3D = 20001
 FINGERPRINT_CAPACITIVE = 30000
 ```
 
-表示电容式指纹。
+Capacitive fingerprint.
 
 **Since:** 10
 
@@ -180,7 +180,7 @@ FINGERPRINT_CAPACITIVE = 30000
 FINGERPRINT_OPTICAL = 30001
 ```
 
-表示光学指纹。
+Optical fingerprint.
 
 **Since:** 10
 
@@ -198,7 +198,7 @@ FINGERPRINT_OPTICAL = 30001
 FINGERPRINT_ULTRASONIC = 30002
 ```
 
-表示超声波指纹。
+Ultrasonic fingerprint.
 
 **Since:** 10
 
@@ -216,7 +216,7 @@ FINGERPRINT_ULTRASONIC = 30002
 DOMAIN_MIXED = 10240001
 ```
 
-表示域认证混合凭证。
+Mixed domain authentication credentials.
 
 **Since:** 9
 

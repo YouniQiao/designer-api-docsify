@@ -1,6 +1,6 @@
 # MenuMaskType
 
-设置蒙层样式。
+Sets the mask type.
 
 **Since:** 20
 
@@ -16,9 +16,9 @@
 backgroundBlurStyle?: BlurStyle
 ```
 
-设置蒙层模糊材质。
+Blur material of the mask.
 
-默认值：BlurStyle.BACKGROUND_THIN
+Default value: **BlurStyle.BACKGROUND_THIN**
 
 **Type:** [BlurStyle](arkts-arkui-blurstyle-e.md)
 
@@ -42,9 +42,9 @@ backgroundBlurStyle?: BlurStyle
 color?: ResourceColor
 ```
 
-设置蒙层颜色。
+Mask color.
 
-默认值：\$r('sys.color.ohos_id_color_mask_thin')
+Default value: **\$r('sys.color.ohos_id_color_mask_thin')**
 
 **Type:** [ResourceColor](../arkts-apis/arkts-arkui-resourcecolor-t.md)
 

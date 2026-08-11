@@ -1,6 +1,6 @@
 # PasteDataRecord
 
-对于剪贴板中内容记录的抽象定义，称之为条目。剪贴板内容部分由一个或者多个条目构成，例如一条文本内容、一份HTML、一个URI或者一个Want。
+Provides **PasteDataRecord** APIs. A **PasteDataRecord** is an abstract definition of the content in the pasteboard. The pasteboard content consists of one or more plain text, HTML, URI, or Want records.After creating a PasteDataRecord, it is not supported to modify the value of the default data type of the PasteDataRecord. The correct value for the default data type should be specified when creating the PasteDataRecord.If you need to refresh the attribute value of the PasteDataRecord,please use [addEntry](arkts-basicservices-pasteboard-pastedatarecord-i.md#addentry).
 
 **Since:** 7
 
@@ -22,7 +22,8 @@ import { pasteboard } from 'kits/@kit.BasicServicesKit';
 addEntry(type: string, value: ValueType): void
 ```
 
-往一个PasteDataRecord中额外添加一种样式的数据。此方式添加的MIME类型都不是Record的默认类型，粘贴时只能使用[getData](arkts-basicservices-pasteboard-pastedatarecord-i.md#getdata)接口读取对应数据。
+Adds PasteData of an extra type to **PasteDataRecord**. The type added using this method is not the default type of **Record**. You can only use the  
+[getData](arkts-basicservices-pasteboard-pastedatarecord-i.md#getdata) API to read the corresponding data.
 
 **Since:** 14
 
@@ -36,25 +37,21 @@ addEntry(type: string, value: ValueType): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | string | Yes | 剪贴板数据对应的MIME类型， 可以是[常量](../../../reference/apis-basic-services-kit/js-apis-pasteboard.md#常量)中已定义的类型， 包括HTML类型，Want类型，纯文本类型，URI类型，PixelMap类型；也可以是自定义的MIME类型，开发者可自定义此参数值，mimeType长度不能超过1024字节。 |
-| value | [ValueType](arkts-basicservices-pasteboard-valuetype-t.md) | Yes | 自定义数据内容。 |
+| type | string | Yes | Type of extra data. The value can be a predefined MIME type listed in [Constants](../../../reference/apis-basic-services-kit/js-apis-pasteboard.md#constants), including HTML, Want, plain text, URI, and PixelMap, or a custom type. The value of **mimeType** cannot exceed 1024 bytes. |
+| value | [ValueType](arkts-basicservices-pasteboard-valuetype-t.md) | Yes | Content of extra data. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameters types; 3. Parameter verification failed. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameters types; 3. Parameter verification failed. |
 
 ## Examples
 
 ```TypeScript
-// Build an HTML string.
 let html = "<!DOCTYPE html>\n" + "<html>\n" + "<head>\n" + "<meta charset=\"utf-8\">\n" + "<title>HTML-PASTEBOARD_HTML</title>\n" + "</head>\n" + "<body>\n" + "    <h1>HEAD</h1>\n" + "    <p></p>\n" + "</body>\n" + "</html>";
-// Create an URI data record.
 let record: pasteboard.PasteDataRecord = pasteboard.createRecord(pasteboard.MIMETYPE_TEXT_URI, 'dataability:///com.example.myapplication1/user.txt');
-// Add plain text data.
 record.addEntry(pasteboard.MIMETYPE_TEXT_PLAIN, 'hello');
-// Add HTML data.
 record.addEntry(pasteboard.MIMETYPE_TEXT_HTML, html);
 ```
 
@@ -64,7 +61,7 @@ record.addEntry(pasteboard.MIMETYPE_TEXT_HTML, html);
 convertToText(callback: AsyncCallback<string>): void
 ```
 
-将一个PasteData中的内容强制转换为文本内容，使用callback异步回调。
+Forcibly converts the content in a **PasteData** object to text. This API uses an asynchronous callback to return  the result.
 
 **Since:** 7
 
@@ -82,13 +79,13 @@ convertToText(callback: AsyncCallback<string>): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;string&gt; | Yes | 回调函数，当转换成功，err为undefined，data为强制转换的文本内容；否则返回错误信息。 |
+| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;string&gt; | Yes | Callback used to return the result. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Possible causes: Incorrect parameters types. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Possible causes: Incorrect parameters types. |
 
 ## Examples
 
@@ -111,7 +108,7 @@ record.convertToText((err: BusinessError, data: string) => {
 convertToText(): Promise<string>
 ```
 
-将一个PasteData中的内容强制转换为文本内容，使用Promise异步回调。
+Forcibly converts the content in a **PasteData** object to text. This API uses a promise to return the result.
 
 **Since:** 7
 
@@ -129,7 +126,7 @@ convertToText(): Promise<string>
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;string&gt; | Promise对象，返回强制转换的文本内容。 |
+| Promise&lt;string&gt; | Promise used to return the text obtained from the conversion. |
 
 ## Examples
 
@@ -150,7 +147,7 @@ record.convertToText().then((data: string) => {
 getData(type: string): Promise<ValueType>
 ```
 
-从PasteDataRecord中获取指定MIME类型的自定义数据，使用Promise异步回调。
+Obtains data of the specified type from **PasteDataRecord**.
 
 **Since:** 14
 
@@ -164,19 +161,19 @@ getData(type: string): Promise<ValueType>
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | string | Yes | MIME类型，取值范围：长度不超过1024字节。超出范围时返回错误码401。 |
+| type | string | Yes | type of PasteData, which cannot exceed 1024 bytes. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;ValueType&gt; | Promise对象，返回PasteDataRecord中指定MIME类型的自定义数据。 PasteDataRecord中包含多个MIME类型数据时，非PasteDataRecord的默认MIME类型的数据只能通过本接口获取。 |
+| Promise&lt;ValueType&gt; | Promise used to return the data of the specified type in **PasteDataRecord**. If **PasteDataRecord** contains data of multiple types, the non-**PasteDataRecord** data of the default type can be obtained only through this API. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameters types; 3. Parameter verification failed. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameters types; 3. Parameter verification failed. |
 
 ## Examples
 
@@ -207,7 +204,7 @@ record.getData(pasteboard.MIMETYPE_TEXT_URI).then((value: pasteboard.ValueType) 
 getValidTypes(types: Array<string>): Array<string>
 ```
 
-根据传入的MIME类型，返回传入的MIME类型和剪贴板中数据的MIME类型的交集。在粘贴前，检查剪贴板数据是否包含应用支持的格式。例如，若应用仅支持纯文本和HTML格式，可调用此接口检查剪贴板数据是否包含这些格式，并根据返回结果决定是否执行粘贴操作。
+Obtains the intersection of the input types and the types of the PasteData.
 
 **Since:** 14
 
@@ -221,19 +218,19 @@ getValidTypes(types: Array<string>): Array<string>
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| types | Array&lt;string&gt; | Yes | MIME类型列表，设置后用于与剪贴板中数据的MIME类型进行交集匹配，返回匹配成功的类型列表。 |
+| types | Array&lt;string&gt; | Yes | List of the types. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Array&lt;string&gt; | 传入的MIME类型和剪贴板中数据的MIME类型的交集。 |
+| Array&lt;string&gt; | Intersection of the input types and the types of the PasteData obtained. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameters types; 3. Parameter verification failed. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameters types; 3. Parameter verification failed. |
 
 ## Examples
 
@@ -257,7 +254,7 @@ let types: string[] = record.getValidTypes([
 toPlainText(): string
 ```
 
-将一个PasteDataRecord中的html、plain、uri内容强制转换为文本内容。若PasteDataRecord包含其他数据类型（如PixelMap、Want等），转换结果为空字符串。
+Forcibly converts HTML, plain, and URI content in a **PasteDataRecord** to the plain text.
 
 **Since:** 9
 
@@ -273,7 +270,7 @@ toPlainText(): string
 
 | Type | Description |
 | --- | --- |
-| string | 纯文本内容。 |
+| string | Plain text. |
 
 ## Examples
 
@@ -289,7 +286,7 @@ console.info(`Succeeded in converting to text. Text: ${text}`);
 data: Record<string, ArrayBuffer>
 ```
 
-自定义数据内容。
+Content of custom data.
 
 **Type:** [Record](../../apis-default/arkts-apis/arkts-record-t.md)&lt;string, ArrayBuffer&gt;
 
@@ -309,7 +306,7 @@ data: Record<string, ArrayBuffer>
 htmlText: string
 ```
 
-HTML内容，需符合标准HTML格式。
+HTML content.
 
 **Type:** string
 
@@ -329,7 +326,7 @@ HTML内容，需符合标准HTML格式。
 mimeType: string
 ```
 
-默认数据类型。
+Default type of PasteDataRecord.
 
 **Type:** string
 
@@ -349,7 +346,7 @@ mimeType: string
 pixelMap: image.PixelMap
 ```
 
-PixelMap内容。
+PixelMap content.
 
 **Type:** image.PixelMap
 
@@ -369,7 +366,7 @@ PixelMap内容。
 plainText: string
 ```
 
-纯文本内容。
+Plain text.
 
 **Type:** string
 
@@ -389,7 +386,7 @@ plainText: string
 uri: string
 ```
 
-URI内容，需符合标准URI格式。
+URI content.
 
 **Type:** string
 
@@ -409,7 +406,7 @@ URI内容，需符合标准URI格式。
 want: Want
 ```
 
-Want内容。
+Want content.
 
 **Type:** [Want](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-want-want-c.md)
 

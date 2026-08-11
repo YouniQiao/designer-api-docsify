@@ -12,5 +12,5 @@ import { ChildProcess } from 'kits/@kit.AbilityKit';
 
 | Name | Description |
 | --- | --- |
-| [ChildProcess](arkts-ability-app-ability-childprocess-childprocess-c.md) | 开发者自定义子进程的基类。通过[childProcessManager](arkts-app-ability-childprocessmanager.md)启动子进程时，需要继承此类并重写入口方法。 |
+| [ChildProcess](arkts-ability-app-ability-childprocess-childprocess-c.md) | ChildProcess is the base class for you to customize child processes. When starting a child process through  [childProcessManager](arkts-app-ability-childprocessmanager.md), you must inherit this class and override the entrypoint method. |
 

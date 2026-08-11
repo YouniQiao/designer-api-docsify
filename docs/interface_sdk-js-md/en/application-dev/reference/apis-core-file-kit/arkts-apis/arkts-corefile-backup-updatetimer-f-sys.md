@@ -12,7 +12,7 @@ import { backup } from 'kits/@kit.CoreFileKit';
 function updateTimer(bundleName: string, timeout: int): boolean
 ```
 
-设置应用备份或恢复的时长。
+Update backup or restore timeout.
 
 **Since:** 12
 
@@ -30,22 +30,22 @@ function updateTimer(bundleName: string, timeout: int): boolean
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| bundleName | string | Yes | 需要设置备份或恢复时长的应用名称。 |
-| timeout | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | 备份或恢复的限制时长，单位为毫秒，取值范围为0至14400000。 |
+| bundleName | string | Yes | set update to bundleName app. |
+| timeout | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | Update backup or restore timeout(unit:ms). |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| boolean | 设置结果，true表示成功，false表示失败。 |
+| boolean | Return update result, true is success, false is fail. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt;2. Incorrect parameter types. 3.Parameter verification failed. |
-| 201 | Permission verification failed, usually the result returned by VerifyAccessToken. |
-| 202 | Permission verification failed, application which is not a system application uses system API. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt;2. Incorrect parameter types. 3.Parameter verification failed. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed, usually the result returned by VerifyAccessToken. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed, application which is not a system application uses system API. |
 
 ## Examples
 

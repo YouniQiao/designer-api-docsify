@@ -1,11 +1,5 @@
 # @ohos.arkui.drawableDescriptor
 
-## 导入模块
-
-```TypeScript
-import { DrawableDescriptor, AnimatedDrawableDescriptor, AnimationStopMode, AnimationOptions, AnimationController, DrawableDescriptorLoadedResult, LayeredDrawableDescriptor, PictureDrawableDescriptor, PixelMapDrawableDescriptor, HdrCompositionConfig } from 'kits/@kit.ArkUI';
-```
-
 ## 汇总
 
 ### 类

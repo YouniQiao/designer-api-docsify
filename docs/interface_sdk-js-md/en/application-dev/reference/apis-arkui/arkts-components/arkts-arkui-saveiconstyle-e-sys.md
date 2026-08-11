@@ -1,6 +1,6 @@
 # SaveIconStyle
 
-保存控件的图标风格。
+Enumerates icon styles of the **SaveButton** component.
 
 **Since:** 10
 
@@ -16,7 +16,7 @@
 PICTURE = 2
 ```
 
-保存控件展示图片样式图标。
+Picture-attached icon.
 
 **Since:** 12
 

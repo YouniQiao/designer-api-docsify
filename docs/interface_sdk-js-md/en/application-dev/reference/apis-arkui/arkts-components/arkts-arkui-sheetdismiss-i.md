@@ -1,6 +1,6 @@
 # SheetDismiss
 
-控制半模态的关闭。
+Component sheet dismiss
 
 **Since:** 11
 
@@ -16,7 +16,7 @@
 dismiss: () => void
 ```
 
-半模态面板关闭回调函数。开发者需要退出时调用，不需要退出时无需调用。
+Defines sheet dismiss function
 
 **Since:** 11
 

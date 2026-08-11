@@ -1,10 +1,10 @@
 # DragStartRequestStatus
 
-Define the status for the application to notify the framework whether to execute drag.
+定义应用是否可以发起拖拽的枚举类型。仅在[onDragStart](arkts-arkui-common-commonmethod-i.md#ondragstart)调用时有效。
 
-**起始版本：** 23
+**起始版本：** 18
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为18。
 
 <!--Device-dragController-const enum DragStartRequestStatus--><!--Device-dragController-const enum DragStartRequestStatus-End-->
 
@@ -16,13 +16,15 @@ Define the status for the application to notify the framework whether to execute
 WAITING = 0
 ```
 
-Notify the framework that the application is not yet ready and needs to temporarily block the start of drag, only effective in onDragStart calls.
+应用在准备数据阶段，无法发起拖拽。
 
-**起始版本：** 23
+**起始版本：** 18
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为18。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+**原子化服务API：** 从API版本18开始，该接口支持在原子化服务API中使用。
 
 <!--Device-DragStartRequestStatus-WAITING = 0--><!--Device-DragStartRequestStatus-WAITING = 0-End-->
 
@@ -34,13 +36,15 @@ Notify the framework that the application is not yet ready and needs to temporar
 READY = 1
 ```
 
-Notify the framework that the drag can continue to be started, but only during the start of drag, and will not take effect when the drag is started.
+应用数据准备完成，可以发起拖拽。
 
-**起始版本：** 23
+**起始版本：** 18
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为18。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+**原子化服务API：** 从API版本18开始，该接口支持在原子化服务API中使用。
 
 <!--Device-DragStartRequestStatus-READY = 1--><!--Device-DragStartRequestStatus-READY = 1-End-->
 

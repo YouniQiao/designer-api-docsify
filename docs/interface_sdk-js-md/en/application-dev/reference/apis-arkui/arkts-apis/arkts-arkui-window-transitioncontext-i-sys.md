@@ -1,6 +1,6 @@
 # TransitionContext (System API)
 
-属性转换的上下文信息。
+Provides the context for the transition animation.
 
 **Since:** 9
 
@@ -24,7 +24,7 @@ import { window } from 'kits/@kit.ArkUI';
 completeTransition(isCompleted: boolean): void
 ```
 
-设置属性转换的最终完成状态。该函数需要在动画函数[animateTo()](../../apis-arkui/arkts-components/arkts-arkui-common-attribute.md)执行后设置。
+Completes the transition. This API can be called only after [animateTo()](../arkts-components/arkts-arkui-common-animateto-f.md/arkts-arkui-common-animateto-f.md#animateto)is executed.
 
 **Since:** 9
 
@@ -40,14 +40,14 @@ completeTransition(isCompleted: boolean): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| isCompleted | boolean | Yes | 窗口属性转换是否完成。true表示完成本次转换；false表示撤销本次转换。 |
+| isCompleted | boolean | Yes | Whether the transition is complete. **true** if complete, **false** otherwise. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. Possible cause: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types. |
-| 202 | Permission verification failed. A non-system application calls a system API.<br>**Applicable version:** 12 and later |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible cause: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API.<br>**Applicable version:** 12 and later |
 
 ## Examples
 
@@ -86,7 +86,7 @@ completeTransition(isCompleted: boolean): void
 toWindow: Window
 ```
 
-动画的目标窗口。
+The target window with animation
 
 **Type:** [Window](arkts-arkui-window-window-i-sys.md)
 

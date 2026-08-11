@@ -1,6 +1,6 @@
 # FillRequestCallback (System API)
 
-自动填充或者生成密码时的回调对象，可以通过此回调通知客户端成功或者失败。
+Implements callbacks for an auto-fill request, which is used to automatically fill in or generate a password. The callbacks can be used to notify the client of the success or failure of the request.
 
 **Since:** 11
 
@@ -18,7 +18,7 @@
 onCancel(fillContent?: string): void
 ```
 
-通知自动填充已被取消。
+Called when an auto-fill request is canceled.
 
 **Since:** 11
 
@@ -36,15 +36,15 @@ onCancel(fillContent?: string): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| fillContent | string | No | 表示通知自动填充取消后，返回给输入法框架的填充内容。<br>**Since:** 12 |
+| fillContent | string | No | Content returned to the input method framework when the auto-fill request is canceled.<br>**Since:** 12 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. Possible causes: &lt;br&gt;1.The input parameter is not valid parameter; &lt;br&gt;2. Mandatory parameters are left unspecified.<br>**Applicable version:** 12 and later |
-| 16000050 | Internal error. |
-| 202 | Permission denied, non-system app called system api. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: &lt;br&gt;1.The input parameter is not valid parameter; &lt;br&gt;2. Mandatory parameters are left unspecified.<br>**Applicable version:** 12 and later |
+| [16000050](../errorcode-ability.md#16000050-internal-error) | Internal error. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission denied, non-system app called system api. |
 
 ## onFailure
 
@@ -52,7 +52,7 @@ onCancel(fillContent?: string): void
 onFailure(): void
 ```
 
-通知自动填充请求已失败。
+Called when an auto-fill request fails to be processed.
 
 **Since:** 11
 
@@ -70,8 +70,8 @@ onFailure(): void
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 16000050 | Internal error. |
-| 202 | Permission denied, non-system app called system api. |
+| [16000050](../errorcode-ability.md#16000050-internal-error) | Internal error. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission denied, non-system app called system api. |
 
 ## onSuccess
 
@@ -79,7 +79,7 @@ onFailure(): void
 onSuccess(response: FillResponse): void
 ```
 
-通知自动填充请求已成功完成。
+Called when an auto-fill request is successfully processed.
 
 **Since:** 11
 
@@ -97,15 +97,15 @@ onSuccess(response: FillResponse): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| response | [FillResponse](arkts-ability-autofillrequest-fillresponse-i-sys.md) | Yes | 自动填充响应信息。 |
+| response | [FillResponse](arkts-ability-autofillrequest-fillresponse-i-sys.md) | Yes | Information about the response to the auto-fill request. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Mandatory parameters are left unspecified. |
-| 16000050 | Internal error. |
-| 202 | Permission denied, non-system app called system api. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Mandatory parameters are left unspecified. |
+| [16000050](../errorcode-ability.md#16000050-internal-error) | Internal error. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission denied, non-system app called system api. |
 
 ## setAutoFillPopupConfig
 
@@ -113,7 +113,7 @@ onSuccess(response: FillResponse): void
 setAutoFillPopupConfig(autoFillPopupConfig: AutoFillPopupConfig): void
 ```
 
-动态调整气泡弹窗的尺寸和位置。
+Sets the size and position of an auto-fill pop-up.
 
 **Since:** 12
 
@@ -131,13 +131,13 @@ setAutoFillPopupConfig(autoFillPopupConfig: AutoFillPopupConfig): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| autoFillPopupConfig | [AutoFillPopupConfig](arkts-ability-autofillpopupconfig-i-sys.md) | Yes | 气泡弹窗尺寸和位置信息。 |
+| autoFillPopupConfig | [AutoFillPopupConfig](arkts-ability-autofillpopupconfig-i-sys.md) | Yes | Size and position of the auto-fill pop-up. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Mandatory parameters are left unspecified. |
-| 16000050 | Internal error. |
-| 202 | Permission denied, non-system app called system api. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Mandatory parameters are left unspecified. |
+| [16000050](../errorcode-ability.md#16000050-internal-error) | Internal error. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission denied, non-system app called system api. |
 

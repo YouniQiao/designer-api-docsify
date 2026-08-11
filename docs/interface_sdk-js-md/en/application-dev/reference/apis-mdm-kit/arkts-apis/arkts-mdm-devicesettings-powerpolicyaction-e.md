@@ -1,6 +1,6 @@
 # PowerPolicyAction
 
-执行电源策略的动作。
+Enumerates the actions that can be performed to apply the power policy.
 
 **Since:** 11
 
@@ -16,7 +16,7 @@
 NONE = 0
 ```
 
-不执行动作。
+No action is performed.
 
 **Since:** 11
 
@@ -34,7 +34,7 @@ NONE = 0
 AUTO_SUSPEND = 1
 ```
 
-自动进入睡眠。
+Automatically enter the sleep mode.
 
 **Since:** 11
 
@@ -52,7 +52,7 @@ AUTO_SUSPEND = 1
 FORCE_SUSPEND = 2
 ```
 
-强制进入睡眠。
+Forcibly enter the sleep mode.
 
 **Since:** 11
 
@@ -70,7 +70,7 @@ FORCE_SUSPEND = 2
 HIBERNATE = 3
 ```
 
-进入休眠，该策略暂不生效。
+Enter the sleep mode. This policy does not take effect currently.
 
 **Since:** 11
 
@@ -88,7 +88,7 @@ HIBERNATE = 3
 SHUTDOWN = 4
 ```
 
-关机。
+Shut down the system.
 
 **Since:** 11
 

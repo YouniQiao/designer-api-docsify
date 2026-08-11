@@ -1,6 +1,6 @@
 # Panel
 
-可滑动面板，提供一种轻量的内容展示窗口，方便在不同尺寸中切换。
+Defines Panel Component.
 
 ## Panel
 
@@ -8,7 +8,7 @@
 Panel(show: boolean)
 ```
 
-滑动面板组件。
+Called when the panel slidable panel pops up.
 
 **Since:** 7
 
@@ -26,7 +26,7 @@ Panel(show: boolean)
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| show | boolean | Yes | 控制Panel显示或隐藏，true表示显示面板，false表示隐藏面板。 |
+| show | boolean | Yes |  |
 
 ## Summary
 

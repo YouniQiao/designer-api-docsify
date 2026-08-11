@@ -1,10 +1,6 @@
 # ExpandedMenuItemOptions
 
-> **说明：**
-> 
-> 从API version 12开始支持，从API version 20开始废弃，建议使用
-> [editMenuOptions](../arkts-apis/arkts-arkweb-web-webattribute-i.md/arkts-arkweb-web-webattribute-i.md#editmenuoptions)替代。
-> 自定义菜单扩展项。
+Defines the menu item option.
 
 **Since:** 12
 
@@ -24,7 +20,7 @@
 action: (selectedText: {plainText: string}) => void
 ```
 
-选中的文本信息。
+Selected text.
 
 **Since:** 12
 
@@ -52,7 +48,7 @@ action: (selectedText: {plainText: string}) => void
 content: ResourceStr
 ```
 
-显示内容。
+Display content.
 
 **Type:** [ResourceStr](../../apis-arkui/arkts-apis/arkts-arkui-resourcestr-t.md)
 
@@ -76,7 +72,7 @@ content: ResourceStr
 startIcon?: ResourceStr
 ```
 
-显示图标。默认值为空，不显示图标。
+Display icon. The default value is empty, and no icon is displayed.
 
 **Type:** [ResourceStr](../../apis-arkui/arkts-apis/arkts-arkui-resourcestr-t.md)
 

@@ -157,7 +157,7 @@ default hdrBrightness(brightness: double | undefined, type?: HdrType): this
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | brightness | double \| undefined | 是 | HDR内容的亮度。&lt;br&gt;默认值：1.0&lt;br&gt;取值范围：[0.0, 1.0]。 小于0.0的值按0.0处理，大于1.0的值按1.0处理，其他异常值按1.0处理。&lt;br&gt;0.0表示内容按照SDR亮度显示，1.0表示内容按照当前允许的最高HDR亮度显示。 &lt;br&gt;ArkTS-Sta模式下可不传，不传时使用默认值1.0。 |
-| type | [HdrType](../../apis-media-kit/arkts-apis/arkts-media-media-hdrtype-e.md) | 否 | 显示HDR内容时的HDR类型。&lt;br&gt;默认值：HdrType.DEFAULT |
+| type | [HdrType](arkts-arkui-xcomponent-hdrtype-e.md) | 否 | 显示HDR内容时的HDR类型。&lt;br&gt;默认值：HdrType.DEFAULT |
 
 **返回值：**
 

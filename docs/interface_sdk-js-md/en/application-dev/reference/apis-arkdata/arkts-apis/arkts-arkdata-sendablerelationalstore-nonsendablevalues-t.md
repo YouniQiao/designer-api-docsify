@@ -4,7 +4,7 @@
 type NonSendableValues = Array<relationalStore.ValueType>
 ```
 
-表示[ValueType](arkts-arkdata-relationalstore-valuetype-t.md)数据数组存储。不支持跨线程传递。
+Represents the [ValueType](arkts-arkdata-relationalstore-valuetype-t.md) array that cannot be passed across threads.
 
 **Since:** 20
 

@@ -1,6 +1,6 @@
 # AuthInfo (System API)
 
-认证信息。
+Defines authentication information.
 
 **Since:** 7
 
@@ -26,7 +26,7 @@ import { deviceManager } from 'kits/@kit.DistributedServiceKit';
 authType: number
 ```
 
-认证类型。
+Authentication type.
 
 **Type:** number
 
@@ -48,7 +48,7 @@ authType: number
 extraInfo: { [key: string]: any }
 ```
 
-认证参数可扩展字段。可选，默认为undefined。
+Extended field. Optional. The default value is **undefined**.
 
 **Type:** { [key: string]: any }
 
@@ -70,7 +70,7 @@ extraInfo: { [key: string]: any }
 token: number
 ```
 
-认证Token。
+Authentication token.
 
 **Type:** number
 

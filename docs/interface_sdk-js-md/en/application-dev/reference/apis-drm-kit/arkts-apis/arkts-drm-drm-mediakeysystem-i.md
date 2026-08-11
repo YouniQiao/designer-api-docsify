@@ -44,9 +44,9 @@ Remove media keys corresponding to the mediaKeyId.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | The parameter check failed.Possibly because: 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. |
-| 24700201 | Fatal service error, for example, service died. |
-| 24700101 | All unknown errors. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | The parameter check failed.Possibly because: 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. |
+| [24700201](../errorcode-drm.md#24700201-service-exception) | Fatal service error, for example, service died. |
+| [24700101](../errorcode-drm.md#24700101-unknown-error) | All unknown errors. |
 
 ## createMediaKeySession
 
@@ -82,10 +82,10 @@ Create a MediaKeySession instance with level.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 24700104 | Meet max MediaKeySession num limit. |
-| 401 | The parameter check failed. Possibly because: 1.Mandatory parameters are left unspecified. 2.The param level exceeds reasonable range, please use value in ContentProtectionLevel. |
-| 24700201 | Fatal service error, for example, service died. |
-| 24700101 | All unknown errors. |
+| [24700104](../errorcode-drm.md#24700104-too-many-mediakeysession-instances) | Meet max MediaKeySession num limit. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | The parameter check failed. Possibly because: 1.Mandatory parameters are left unspecified. 2.The param level exceeds reasonable range, please use value in ContentProtectionLevel. |
+| [24700201](../errorcode-drm.md#24700201-service-exception) | Fatal service error, for example, service died. |
+| [24700101](../errorcode-drm.md#24700101-unknown-error) | All unknown errors. |
 
 ## createMediaKeySession
 
@@ -119,10 +119,10 @@ Create a MediaKeySession instance with level.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 24700104 | Meet max MediaKeySession num limit. |
-| 401 | The parameter check failed. Possibly because: 1.Mandatory parameters are left unspecified. 2.The param level exceeds reasonable range, please use value in ContentProtectionLevel. |
-| 24700201 | Fatal service error, for example, service died. |
-| 24700101 | All unknown errors. |
+| [24700104](../errorcode-drm.md#24700104-too-many-mediakeysession-instances) | Meet max MediaKeySession num limit. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | The parameter check failed. Possibly because: 1.Mandatory parameters are left unspecified. 2.The param level exceeds reasonable range, please use value in ContentProtectionLevel. |
+| [24700201](../errorcode-drm.md#24700201-service-exception) | Fatal service error, for example, service died. |
+| [24700101](../errorcode-drm.md#24700101-unknown-error) | All unknown errors. |
 
 ## createMediaKeySession
 
@@ -152,9 +152,9 @@ Create a MediaKeySession instance.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 24700104 | Meet max MediaKeySession num limit. |
-| 24700201 | Fatal service error, for example, service died. |
-| 24700101 | All unknown errors. |
+| [24700104](../errorcode-drm.md#24700104-too-many-mediakeysession-instances) | Meet max MediaKeySession num limit. |
+| [24700201](../errorcode-drm.md#24700201-service-exception) | Fatal service error, for example, service died. |
+| [24700101](../errorcode-drm.md#24700101-unknown-error) | All unknown errors. |
 
 ## createMediaKeySession
 
@@ -182,9 +182,9 @@ Create a MediaKeySession instance.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 24700104 | Meet max MediaKeySession num limit. |
-| 24700201 | Fatal service error, for example, service died. |
-| 24700101 | All unknown errors. |
+| [24700104](../errorcode-drm.md#24700104-too-many-mediakeysession-instances) | Meet max MediaKeySession num limit. |
+| [24700201](../errorcode-drm.md#24700201-service-exception) | Fatal service error, for example, service died. |
+| [24700101](../errorcode-drm.md#24700101-unknown-error) | All unknown errors. |
 
 ## destroy
 
@@ -208,8 +208,8 @@ Release the resource before the MediaKeySystem gonna be unused.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 24700201 | Fatal service error, for example, service died. |
-| 24700101 | All unknown errors. |
+| [24700201](../errorcode-drm.md#24700201-service-exception) | Fatal service error, for example, service died. |
+| [24700101](../errorcode-drm.md#24700101-unknown-error) | All unknown errors. |
 
 ## generateKeySystemRequest
 
@@ -239,8 +239,8 @@ Generate a media key system provision request.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 24700201 | Fatal service error, for example, service died. |
-| 24700101 | All unknown errors. |
+| [24700201](../errorcode-drm.md#24700201-service-exception) | Fatal service error, for example, service died. |
+| [24700101](../errorcode-drm.md#24700101-unknown-error) | All unknown errors. |
 
 ## getCertificateStatus
 
@@ -270,8 +270,8 @@ Get certificate status of the MediaKeySystem.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 24700201 | Fatal service error, for example, service died. |
-| 24700101 | All unknown errors. |
+| [24700201](../errorcode-drm.md#24700201-service-exception) | Fatal service error, for example, service died. |
+| [24700101](../errorcode-drm.md#24700101-unknown-error) | All unknown errors. |
 
 ## getConfigurationByteArray
 
@@ -307,9 +307,9 @@ Get the specified configuration.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | The parameter check failed. Possibly because: 1.Mandatory parameters are left unspecified. 2.Parameter verification failed. |
-| 24700201 | Fatal service error, for example, service died. |
-| 24700101 | All unknown errors. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | The parameter check failed. Possibly because: 1.Mandatory parameters are left unspecified. 2.Parameter verification failed. |
+| [24700201](../errorcode-drm.md#24700201-service-exception) | Fatal service error, for example, service died. |
+| [24700101](../errorcode-drm.md#24700101-unknown-error) | All unknown errors. |
 
 ## getConfigurationString
 
@@ -345,9 +345,9 @@ Get the specified configuration.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | The parameter check failed. Possibly because: 1.Mandatory parameters are left unspecified. 2.Parameter verification failed, the param's length is zero or too big(exceeds 4096 Bytes). |
-| 24700201 | Fatal service error, for example, service died. |
-| 24700101 | All unknown errors. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | The parameter check failed. Possibly because: 1.Mandatory parameters are left unspecified. 2.Parameter verification failed, the param's length is zero or too big(exceeds 4096 Bytes). |
+| [24700201](../errorcode-drm.md#24700201-service-exception) | Fatal service error, for example, service died. |
+| [24700101](../errorcode-drm.md#24700101-unknown-error) | All unknown errors. |
 
 ## getMaxContentProtectionLevel
 
@@ -377,8 +377,8 @@ Get max content protection level the device supports.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 24700201 | Fatal service error, for example, service died. |
-| 24700101 | All unknown errors. |
+| [24700201](../errorcode-drm.md#24700201-service-exception) | Fatal service error, for example, service died. |
+| [24700101](../errorcode-drm.md#24700101-unknown-error) | All unknown errors. |
 
 ## getOfflineMediaKeyIds
 
@@ -408,8 +408,8 @@ Get the list of offline MediaKeyIds.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 24700201 | Fatal service error, for example, service died. |
-| 24700101 | All unknown errors. |
+| [24700201](../errorcode-drm.md#24700201-service-exception) | Fatal service error, for example, service died. |
+| [24700101](../errorcode-drm.md#24700101-unknown-error) | All unknown errors. |
 
 ## getOfflineMediaKeyStatus
 
@@ -445,9 +445,9 @@ Get offline media key status corresponding to the mediaKeyId.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | The parameter check failed. Possibly because: 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. 3.Parameter verification failed. |
-| 24700201 | Fatal service error, for example, service died. |
-| 24700101 | All unknown errors. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | The parameter check failed. Possibly because: 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. 3.Parameter verification failed. |
+| [24700201](../errorcode-drm.md#24700201-service-exception) | Fatal service error, for example, service died. |
+| [24700101](../errorcode-drm.md#24700101-unknown-error) | All unknown errors. |
 
 ## getStatistics
 
@@ -477,8 +477,8 @@ Get performance statistics information.That includes currentSessionNum, version,
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 24700201 | Fatal service error, for example, service died. |
-| 24700101 | All unknown errors. |
+| [24700201](../errorcode-drm.md#24700201-service-exception) | Fatal service error, for example, service died. |
+| [24700101](../errorcode-drm.md#24700101-unknown-error) | All unknown errors. |
 
 ## off('keySystemRequired')
 
@@ -509,8 +509,8 @@ Unregister keySystemRequired events.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | The parameter check failed. Possibly because: 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. |
-| 24700101 | All unknown errors. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | The parameter check failed. Possibly because: 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. |
+| [24700101](../errorcode-drm.md#24700101-unknown-error) | All unknown errors. |
 
 ## offKeySystemRequired
 
@@ -538,7 +538,7 @@ Unregister keySystemRequired events.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 24700101 | All unknown errors. |
+| [24700101](../errorcode-drm.md#24700101-unknown-error) | All unknown errors. |
 
 ## on('keySystemRequired')
 
@@ -569,8 +569,8 @@ Register keySystemRequired events.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | The parameter check failed. Possibly because: 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. |
-| 24700101 | All unknown errors. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | The parameter check failed. Possibly because: 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. |
+| [24700101](../errorcode-drm.md#24700101-unknown-error) | All unknown errors. |
 
 ## onKeySystemRequired
 
@@ -598,7 +598,7 @@ Register keySystemRequired events.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 24700101 | All unknown errors. |
+| [24700101](../errorcode-drm.md#24700101-unknown-error) | All unknown errors. |
 
 ## processKeySystemResponse
 
@@ -634,9 +634,9 @@ Process the response corresponding the key system request obtained by the applic
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | The parameter check failed. Possibly because: 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. 3.Parameter verification failed. |
-| 24700201 | Fatal service error, for example, service died. |
-| 24700101 | All unknown errors. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | The parameter check failed. Possibly because: 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. 3.Parameter verification failed. |
+| [24700201](../errorcode-drm.md#24700201-service-exception) | Fatal service error, for example, service died. |
+| [24700101](../errorcode-drm.md#24700101-unknown-error) | All unknown errors. |
 
 ## setConfigurationByteArray
 
@@ -667,9 +667,9 @@ Set the specified configuration.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | The parameter check failed. Possibly because: 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. 3.Parameter verification failed. |
-| 24700201 | Fatal service error, for example, service died. |
-| 24700101 | All unknown errors. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | The parameter check failed. Possibly because: 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. 3.Parameter verification failed. |
+| [24700201](../errorcode-drm.md#24700201-service-exception) | Fatal service error, for example, service died. |
+| [24700101](../errorcode-drm.md#24700101-unknown-error) | All unknown errors. |
 
 ## setConfigurationString
 
@@ -700,7 +700,7 @@ Set the specified configuration.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | The parameter check failed. Possibly because: 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. 3.Parameter verification failed. |
-| 24700201 | Fatal service error, for example, service died. |
-| 24700101 | All unknown errors. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | The parameter check failed. Possibly because: 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. 3.Parameter verification failed. |
+| [24700201](../errorcode-drm.md#24700201-service-exception) | Fatal service error, for example, service died. |
+| [24700101](../errorcode-drm.md#24700101-unknown-error) | All unknown errors. |
 

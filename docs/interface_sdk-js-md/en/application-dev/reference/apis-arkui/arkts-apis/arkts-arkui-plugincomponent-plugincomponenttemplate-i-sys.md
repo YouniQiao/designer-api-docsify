@@ -1,6 +1,6 @@
 # PluginComponentTemplate (System API)
 
-定义插件组件模板信息，用于与提供方定义的组件绑定。
+PluginComponentTemplate
 
 **Since:** 23
 
@@ -18,7 +18,7 @@
 bundleName: string | undefined
 ```
 
-提供方应用的bundleName。使用绝对路径提供模板时不需要填写，使用应用包提供模板时需要填写。
+Defines the bundle name of the Template.
 
 **Type:** string \| undefined
 
@@ -40,7 +40,7 @@ bundleName: string | undefined
 source: string | undefined
 ```
 
-组件模板，取值可为模板绝对路径（不建议）、相对HAP包的相对路径（多HAP场景使用“相对路径&模块名称”格式）或FA模型下的AbilityName。
+Defines the plugin source name.
 
 **Type:** string \| undefined
 

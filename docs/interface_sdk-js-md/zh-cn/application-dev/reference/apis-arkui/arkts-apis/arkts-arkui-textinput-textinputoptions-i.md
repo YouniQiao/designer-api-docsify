@@ -18,7 +18,7 @@ controller?: TextInputController
 
 设置TextInput控制器。
 
-**类型：** [TextInputController](arkts-arkui-textinput-textinputcontroller-c.md)
+**类型：** [TextInputController](../arkts-components/arkts-arkui-textinputcontroller-c.md)
 
 **起始版本：** 23
 

@@ -1,6 +1,6 @@
 # DismissDialogAction
 
-Dialog关闭的信息。
+Provides information about the action to dismiss the dialog box.
 
 **Since:** 12
 
@@ -22,7 +22,7 @@ import { LevelMode, ImmersiveMode, LevelOrder } from 'kits/@kit.ArkUI';
 dismiss: Callback<void>
 ```
 
-Dialog关闭回调函数。开发者需要退出时调用，不需要退出时无需调用。
+Callback for dismissing the dialog box. This API is called only when the dialog box needs to be exited.
 
 **Type:** [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;void&gt;
 
@@ -44,7 +44,7 @@ Dialog关闭回调函数。开发者需要退出时调用，不需要退出时�
 reason: DismissReason
 ```
 
-触发Dialog关闭的操作类型（如点击遮障层、按返回键等）。开发者可根据reason判断用户的具体关闭操作，决定是否调用dismiss()关闭Dialog。
+Reason why the dialog box cannot be dismissed. You must specify whether to close the dialog box for each of the listed actions.
 
 **Type:** [DismissReason](../arkts-components/arkts-arkui-dismissreason-e.md)
 

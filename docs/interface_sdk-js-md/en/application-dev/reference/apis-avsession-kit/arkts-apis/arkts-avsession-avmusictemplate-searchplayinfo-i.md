@@ -1,6 +1,6 @@
 # SearchPlayInfo
 
-搜播信息的定义。
+The definition of SearchPlayInfo.
 
 **Since:** 23
 
@@ -22,7 +22,7 @@ import { avMusicTemplate } from 'kits/@kit.AVSessionKit';
 musicInfo?: SearchPlayMusicInfo
 ```
 
-搜播的音频信息。
+The musicInfo of SearchPlayInfo.
 
 **Type:** [SearchPlayMusicInfo](arkts-avsession-avmusictemplate-searchplaymusicinfo-i.md)
 
@@ -42,7 +42,7 @@ musicInfo?: SearchPlayMusicInfo
 videoInfo?: SearchPlayVideoInfo
 ```
 
-搜播的视频信息。
+The videoInfo of SearchPlayInfo.
 
 **Type:** [SearchPlayVideoInfo](arkts-avsession-avmusictemplate-searchplayvideoinfo-i.md)
 

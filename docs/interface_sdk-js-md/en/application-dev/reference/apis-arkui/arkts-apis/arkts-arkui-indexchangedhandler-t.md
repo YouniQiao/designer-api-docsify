@@ -4,7 +4,7 @@
 export type IndexChangedHandler = (index: int) => void
 ```
 
-当前显示元素的索引变化时，告知应用。
+Handler of swiper, used in OnChange.
 
 **Since:** 26.0.0
 
@@ -20,5 +20,5 @@ export type IndexChangedHandler = (index: int) => void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| index | int | Yes | 当前显示元素的索引。index序列从0开始。 |
+| index | int | Yes | The index of the current swiper. |
 

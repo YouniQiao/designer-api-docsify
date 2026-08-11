@@ -4,7 +4,7 @@
 
 ```TypeScript
 export declare function Checkbox(
-    options?: CheckboxOptions, 
+    options?: CheckboxOptions,
     content_?: CustomBuilder,
 ): CheckboxAttribute
 ```
@@ -17,7 +17,7 @@ Defines Checkbox Component.
 
 **Model restriction:** This API can be used only in the stage model.
 
-<!--Device-unnamed-export declare function Checkbox(    options?: CheckboxOptions,     content_?: CustomBuilder,): CheckboxAttribute--><!--Device-unnamed-export declare function Checkbox(    options?: CheckboxOptions,     content_?: CustomBuilder,): CheckboxAttribute-End-->
+<!--Device-unnamed-export declare function Checkbox(    options?: CheckboxOptions,    content_?: CustomBuilder,): CheckboxAttribute--><!--Device-unnamed-export declare function Checkbox(    options?: CheckboxOptions,    content_?: CustomBuilder,): CheckboxAttribute-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -26,6 +26,43 @@ Defines Checkbox Component.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | options | [CheckboxOptions](../arkts-components/arkts-arkui-checkboxoptions-i.md) | No | the options of Checkbox. |
+| content_ | [CustomBuilder](../arkts-components/arkts-arkui-custombuilder-t.md) | No | container |
+
+**Return value:**
+
+| Type | Description |
+| --- | --- |
+| [CheckboxAttribute](arkts-arkui-checkbox-checkboxattribute-i.md) |  |
+
+
+## Checkbox
+
+```TypeScript
+export declare function Checkbox(
+    style_: CustomBuilderT<CheckboxAttribute>,
+    content_?: CustomBuilder,
+): CheckboxAttribute
+```
+
+Defines Checkbox Component.
+
+**Since:** 26.1.0
+
+**ArkTS mode:** ArkTS-Sta only, since version 26.1.0.
+
+**Decorator:** @Builder
+
+**Model restriction:** This API can be used only in the stage model.
+
+<!--Device-unnamed-export declare function Checkbox(    style_: CustomBuilderT<CheckboxAttribute>,    content_?: CustomBuilder,): CheckboxAttribute--><!--Device-unnamed-export declare function Checkbox(    style_: CustomBuilderT<CheckboxAttribute>,    content_?: CustomBuilder,): CheckboxAttribute-End-->
+
+**System capability:** SystemCapability.ArkUI.ArkUI.Full
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| style_ | [CustomBuilderT](../arkts-components/arkts-arkui-custombuildert-t.md)&lt;CheckboxAttribute&gt; | Yes | checkbox attribute instance |
 | content_ | [CustomBuilder](../arkts-components/arkts-arkui-custombuilder-t.md) | No | container |
 
 **Return value:**

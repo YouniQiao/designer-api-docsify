@@ -1,6 +1,6 @@
 # PiPWindowSize
 
-画中画窗口大小。
+Describes the size of a PiP window.
 
 **Since:** 15
 
@@ -22,7 +22,7 @@ import { PiPWindow } from 'kits/@kit.ArkUI';
 height: int
 ```
 
-窗口高度，单位为px，该参数应为正整数，不大于屏幕高度。
+Window height, in px. The value must be a positive integer and cannot be greater than the screen height.
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
@@ -42,7 +42,7 @@ height: int
 scale: double
 ```
 
-窗口缩放比，显示大小相对于width和height的缩放比，该参数为浮点数，取值范围大于0.0，小于等于1.0。等于1表示与width和height一样大。
+Scale factor of the window, representing the display size relative to the width and height. The value is a floating-point number in the range (0.0, 1.0]. The value **1** means that the window matches the specified width and height.
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：double
 
@@ -62,7 +62,7 @@ scale: double
 width: int
 ```
 
-窗口宽度，单位为px，该参数应为正整数，不大于屏幕宽度。
+Window width, in px. The value must be a positive integer and cannot be greater than the screen width.
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 

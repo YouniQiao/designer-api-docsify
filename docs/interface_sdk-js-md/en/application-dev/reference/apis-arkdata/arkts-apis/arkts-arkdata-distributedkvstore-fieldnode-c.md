@@ -1,6 +1,6 @@
 # FieldNode
 
-表示 Schema 实例的节点，提供定义存储在数据库中的值的方法。
+Represents a **Schema** instance, which provides the methods for defining the values stored in a KV store.
 
 **Since:** 9
 
@@ -22,7 +22,7 @@ import { distributedKVStore } from 'kits/@kit.ArkData';
 appendChild(child: FieldNode): boolean
 ```
 
-在当前 FieldNode 中添加一个子节点。
+Appends a child node to this **FieldNode**.
 
 **Since:** 9
 
@@ -38,39 +38,38 @@ appendChild(child: FieldNode): boolean
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| child | [FieldNode](arkts-arkdata-distributedkvstore-fieldnode-c.md) | Yes | 要附加的子节点。 |
+| child | [FieldNode](arkts-arkdata-distributedkvstore-fieldnode-c.md) | Yes | Child node to append. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| boolean | 返回true表示子节点成功添加到FieldNode；返回false则表示操作失败。 |
+| boolean | Returns **true** if the operation is successful; returns **false** otherwise. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error.Possible causes:1.Mandatory parameters are left unspecified; &lt;br&gt;2.Incorrect parameters types. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error.Possible causes:1.Mandatory parameters are left unspecified; &lt;br&gt;2.Incorrect parameters types. |
 
 ## Examples
 
 ```TypeScript
 try {
-  let node: distributedKVStore.FieldNode | null = new distributedKVStore.FieldNode('root');
-  let child1: distributedKVStore.FieldNode | null = new distributedKVStore.FieldNode('child1');
-  let child2: distributedKVStore.FieldNode | null = new distributedKVStore.FieldNode('child2');
-  let child3: distributedKVStore.FieldNode | null = new distributedKVStore.FieldNode('child3');
+  let node: distributedKVStore.FieldNode | null = new distributedKVStore.FieldNode("root");
+  let child1: distributedKVStore.FieldNode | null = new distributedKVStore.FieldNode("child1");
+  let child2: distributedKVStore.FieldNode | null = new distributedKVStore.FieldNode("child2");
+  let child3: distributedKVStore.FieldNode | null = new distributedKVStore.FieldNode("child3");
   node.appendChild(child1);
   node.appendChild(child2);
   node.appendChild(child3);
-  console.info('appendNode ' + JSON.stringify(node));
+  console.info("appendNode " + JSON.stringify(node));
   child1 = null;
   child2 = null;
   child3 = null;
   node = null;
-} catch (err) {
-  let error = err as BusinessError;
-  console.error(`Failed to append child. Code: ${error.code}, message: ${error.message}`);
+} catch (e) {
+  console.error("AppendChild " + e);
 }
 ```
 
@@ -80,7 +79,7 @@ try {
 constructor(name: string)
 ```
 
-用于创建带有string字段FieldNode实例的构造函数。
+Defines a constructor used to create a **FieldNode** instance with a string field.
 
 **Since:** 9
 
@@ -96,13 +95,13 @@ constructor(name: string)
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| name | string | Yes | FieldNode的值，不能为空，长度范围为1-64个字符。 |
+| name | string | Yes | Value of **FieldNode**, with a maximum of 64 characters. This parameter cannot be left blank. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error.Possible causes:1.Mandatory parameters are left unspecified; &lt;br&gt;2.Parameter verification failed. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error.Possible causes:1.Mandatory parameters are left unspecified; &lt;br&gt;2.Parameter verification failed. |
 
 ## default
 
@@ -110,7 +109,7 @@ constructor(name: string)
 default: string
 ```
 
-表示FieldNode的默认值。default需传入type对应类型可解析的字符串字面量，确保内容类型与type字段类型一致。
+Indicates the default value of field node.
 
 **Type:** string
 
@@ -128,7 +127,7 @@ default: string
 set defaultValue(defaultValue: string)
 ```
 
-设置FieldNode的默认值.
+Set the default value of field node.
 
 **Type:** string
 
@@ -148,7 +147,7 @@ set defaultValue(defaultValue: string)
 set nullable(isnullable: boolean)
 ```
 
-设置数据库字段是否为空.
+Set the nullable of database field.
 
 **Type:** boolean
 
@@ -168,7 +167,7 @@ set nullable(isnullable: boolean)
 set type(type: int)
 ```
 
-设置节点对应的数据类型。
+Set the type of value.
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 

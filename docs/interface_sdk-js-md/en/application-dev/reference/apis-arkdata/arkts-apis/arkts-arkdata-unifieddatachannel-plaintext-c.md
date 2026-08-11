@@ -1,6 +1,6 @@
 # PlainText
 
-[Text](arkts-arkdata-unifieddatachannel-text-c.md)的子类，用于描述纯文本类数据。
+Represents the plain text data. It is a child class of [Text](arkts-arkdata-unifieddatachannel-text-c.md).
 
 **Inheritance/Implementation:** PlainText extends [Text](arkts-arkdata-unifieddatachannel-text-c.md)
 
@@ -24,7 +24,7 @@ import { unifiedDataChannel } from 'kits/@kit.ArkData';
 abstract?: string
 ```
 
-纯文本摘要，非必填字段，默认值为空字符串。
+Indicates the abstract of text
 
 **Type:** string
 
@@ -46,7 +46,7 @@ abstract?: string
 set textAbstract(value: string | undefined)
 ```
 
-表示文本摘要。
+Indicates the abstract of text
 
 **Type:** string
 
@@ -66,7 +66,7 @@ set textAbstract(value: string | undefined)
 set textContent(value: string)
 ```
 
-纯文本内容。
+Indicates the content of text
 
 **Type:** string
 

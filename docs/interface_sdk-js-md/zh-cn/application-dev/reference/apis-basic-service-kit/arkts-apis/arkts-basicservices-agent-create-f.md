@@ -1,11 +1,5 @@
 # create
 
-## 导入模块
-
-```TypeScript
-import { request } from 'kits/@kit.BasicServicesKit';
-```
-
 ## create
 
 ```TypeScript
@@ -42,12 +36,59 @@ function create(context: BaseContext, config: Config, callback: AsyncCallback<Ta
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 401 | Parameter error. Possible causes: &lt;br&gt; 1. Missing mandatory parameters. &lt;br&gt; 2. Incorrect parameter type. &lt;br&gt; 3. Parameter verification failed. |
-| 201 | Permission denied. |
-| 21900004 | The application task queue is full. |
-| 21900005 | Operation with wrong task mode. |
-| 13400001 | Invalid file or file system error. |
-| 13400003 | Task service ability error. |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: &lt;br&gt; 1. Missing mandatory parameters. &lt;br&gt; 2. Incorrect parameter type. &lt;br&gt; 3. Parameter verification failed. |
+| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
+| [21900004](../../apis-basic-services-kit/errorcode-request.md#21900004-应用任务队列已满) | The application task queue is full. |
+| [21900005](../../apis-basic-services-kit/errorcode-request.md#21900005-任务模式错误) | Operation with wrong task mode. |
+| [13400001](../../apis-basic-services-kit/errorcode-request.md#13400001-文件操作异常) | Invalid file or file system error. |
+| [13400003](../../apis-basic-services-kit/errorcode-request.md#13400003-服务异常) | Task service ability error. |
+
+## 示例
+
+ArkTS-Sta示例：
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+import { common } from '@kit.AbilityKit';
+
+// 请在组件内获取context，确保this.getUIContext().getHostContext()返回结果为UIAbilityContext
+let context = this.getUIContext().getHostContext() as common.UIAbilityContext;
+let attachments: Array<request.agent.FormItem> = [{
+  name: "createTest",
+  value: {
+    filename: "createTest.avi",
+    path: "./createTest.avi",
+  }
+}];
+let config: request.agent.Config = {
+  action: request.agent.Action.UPLOAD,
+  url: 'http://127.0.0.1', // 需要手动将url替换为真实服务器的HTTP协议地址
+  title: 'createTest',
+  description: 'Sample code for create task',
+  mode: request.agent.Mode.BACKGROUND,
+  overwrite: false,
+  method: "PUT",
+  data: attachments,
+  saveas: "./",
+  network: request.agent.Network.CELLULAR,
+  metered: false,
+  roaming: true,
+  retry: true,
+  redirect: true,
+  index: 0,
+  begins: 0,
+  ends: -1,
+  gauge: false,
+  precise: false,
+  token: "it is a secret"
+};
+request.agent.create(context, config, async (err: BusinessError, task: request.agent.Task) => {
+  console.info(`Succeeded in creating a download task. result: ${task.config}`);
+  await task.start();
+  // 用户需要手动调用remove从而结束task对象的生命周期
+  request.agent.remove(task.tid);
+});
+```
 
 
 ## create
@@ -91,10 +132,59 @@ function create(context: BaseContext, config: Config): Promise<Task>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 401 | Parameter error. Possible causes: &lt;br&gt; 1. Missing mandatory parameters. &lt;br&gt; 2. Incorrect parameter type. &lt;br&gt; 3. Parameter verification failed. |
-| 201 | Permission denied. |
-| 21900004 | The application task queue is full. |
-| 21900005 | Operation with wrong task mode. |
-| 13400001 | Invalid file or file system error. |
-| 13400003 | Task service ability error. |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: &lt;br&gt; 1. Missing mandatory parameters. &lt;br&gt; 2. Incorrect parameter type. &lt;br&gt; 3. Parameter verification failed. |
+| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
+| [21900004](../../apis-basic-services-kit/errorcode-request.md#21900004-应用任务队列已满) | The application task queue is full. |
+| [21900005](../../apis-basic-services-kit/errorcode-request.md#21900005-任务模式错误) | Operation with wrong task mode. |
+| [13400001](../../apis-basic-services-kit/errorcode-request.md#13400001-文件操作异常) | Invalid file or file system error. |
+| [13400003](../../apis-basic-services-kit/errorcode-request.md#13400003-服务异常) | Task service ability error. |
+
+## 示例
+
+ArkTS-Sta示例：
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+import { common } from '@kit.AbilityKit';
+
+// 请在组件内获取context，确保this.getUIContext().getHostContext()返回结果为UIAbilityContext
+let context = this.getUIContext().getHostContext() as common.UIAbilityContext;
+let attachments: Array<request.agent.FormItem> = [{
+  name: "createTest",
+  value: {
+    filename: "createTest.avi",
+    path: "./createTest.avi",
+  }
+}];
+let config: request.agent.Config = {
+  action: request.agent.Action.UPLOAD,
+  url: 'http://127.0.0.1', // 需要手动将url替换为真实服务器的HTTP协议地址
+  title: 'createTest',
+  description: 'Sample code for create task',
+  mode: request.agent.Mode.BACKGROUND,
+  overwrite: false,
+  method: "PUT",
+  data: attachments,
+  saveas: "./",
+  network: request.agent.Network.CELLULAR,
+  metered: false,
+  roaming: true,
+  retry: true,
+  redirect: true,
+  index: 0,
+  begins: 0,
+  ends: -1,
+  gauge: false,
+  precise: false,
+  token: "it is a secret"
+};
+request.agent.create(context, config).then(async (task: request.agent.Task) => {
+  console.info(`Succeeded in creating a download task. result: ${task.config}`);
+  await task.start();
+  // 用户需要手动调用remove从而结束task对象的生命周期
+  request.agent.remove(task.tid);
+}).catch((err: Error) => {
+  console.error(`Failed to create a download task, Code: ${err.code}, message: ${err.message}`);
+});
+```
 

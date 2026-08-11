@@ -4,7 +4,7 @@
 export type Version = _PackInfo.Version
 ```
 
-包的版本。
+Defines the version in the **pack.info** file.
 
 **Since:** 9
 

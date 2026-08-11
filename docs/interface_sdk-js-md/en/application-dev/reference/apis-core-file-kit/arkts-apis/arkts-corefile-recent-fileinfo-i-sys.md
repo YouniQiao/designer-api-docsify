@@ -1,6 +1,6 @@
 # FileInfo (System API)
 
-最近访问列表文件信息。
+Represents information about the recent file list.
 
 **Since:** 10
 
@@ -26,7 +26,7 @@ import { recent } from 'kits/@kit.CoreFileKit';
 readonly ctime: number
 ```
 
-文件的创建时间。自1970年1月1日起至目标时间的秒数。
+Time when the file was created.&lt;br&gt;Unit: second.
 
 **Type:** number
 
@@ -50,7 +50,7 @@ readonly ctime: number
 readonly fileName: string
 ```
 
-文件名。
+File name.
 
 **Type:** string
 
@@ -74,7 +74,7 @@ readonly fileName: string
 readonly mode: number
 ```
 
-[文件权限信息](arkts-corefile-file-fs-stat-i.md)。
+[Permissions on the file](arkts-corefile-file-fs-stat-i.md).
 
 **Type:** number
 
@@ -98,7 +98,7 @@ readonly mode: number
 readonly mtime: number
 ```
 
-文件的修改时间。自1970年1月1日起至目标时间的毫秒数。
+Time when the file was last modified.&lt;br&gt;Unit: ms.
 
 **Type:** number
 
@@ -122,7 +122,7 @@ readonly mtime: number
 readonly size: number
 ```
 
-文件的大小（单位：字节）。
+File size, in bytes.
 
 **Type:** number
 
@@ -146,7 +146,7 @@ readonly size: number
 readonly srcPath: string
 ```
 
-文件路径。
+File path.
 
 **Type:** string
 
@@ -170,7 +170,7 @@ readonly srcPath: string
 readonly uri: string
 ```
 
-文件URI。
+File URI.
 
 **Type:** string
 

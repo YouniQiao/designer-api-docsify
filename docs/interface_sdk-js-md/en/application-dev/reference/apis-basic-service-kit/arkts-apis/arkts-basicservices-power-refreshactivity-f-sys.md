@@ -12,9 +12,10 @@ import { power } from 'kits/@kit.BasicServicesKit';
 function refreshActivity(reason: string): void
 ```
 
-刷新设备活动状态（如：重设屏幕超时息屏时间等）。
+Refreshes the device activity status (for example, resetting the screen-off time).
 
-只有设备在活动状态下生效，设备活动状态见[power.isActive](arkts-basicservices-power-isactive-f.md#isactive)接口。
+This API takes effect only when the device is active. For details about the device activity status, see  
+[power.isActive](arkts-basicservices-power-isactive-f.md#isactive).
 
 **Since:** 20
 
@@ -32,17 +33,17 @@ function refreshActivity(reason: string): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| reason | string | Yes | 刷新设备活动状态的原因。该参数必须为字符串类型。 |
+| reason | string | Yes | Reason for refreshing the device activity status. The value must be a string. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 801 | Capability not supported. This API cannot work in car devices.<br>**Applicable version:** 26.1.0 and later |
-| 4900201 | The device activity is being refreshed too frequently; the minimum time interval is 100 ms. |
-| 201 | Permission verification failed. The application does not have the permission required to call the API. |
-| 202 | Permission verification failed. A non-system application calls a system API. |
-| 4900101 | Failed to connect to the service. |
+| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. This API cannot work in car devices.<br>**Applicable version:** 26.1.0 and later |
+| [4900201](../../apis-basic-services-kit/errorcode-power.md#4900201-frequent-status-refreshes) | The device activity is being refreshed too frequently; the minimum time interval is 100 ms. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed. The application does not have the permission required to call the API. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
+| [4900101](../../apis-basic-services-kit/errorcode-power.md#4900101-service-connection-failure) | Failed to connect to the service. |
 
 ## Examples
 

@@ -1,6 +1,6 @@
 # CryptoParam
 
-数据库加密参数配置。此配置只有在StoreConfig的encrypt选项设置为true或密钥非空时有效。
+Represents the configuration of database encryption parameters. This configuration is valid only when **encrypt** of **StoreConfig** is set to **true** or the key is not empty.
 
 **Since:** 14
 
@@ -22,9 +22,11 @@ import { relationalStore } from 'kits/@kit.ArkData';
 cryptoPageSize?: int
 ```
 
-整数类型，指定数据库加解密使用的页大小，单位：字节。如不指定，默认值为1024字节。
+Page size used for database encryption and decryption. The value is an integer. Unit: byte 
 
-用户指定的页大小应为1024到65536范围内的整数，并且为2&lt;sup&gt;n&lt;/sup&gt;。若指定值非整数，则向下取整。
+Default value: **1024**.
+
+The value must be an integer within the range of 1,024 to 65,536 and must be 2&lt;sup&gt;n&lt;/sup&gt;. If the specified value is not an integer, the value is rounded down.
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
@@ -42,7 +44,9 @@ cryptoPageSize?: int
 encryptionAlgo?: EncryptionAlgo
 ```
 
-指定数据库加解密使用的加密算法。如不指定，默认值为 AES_256_GCM。
+Algorithm used for database encryption and decryption. 
+
+Default value: **AES_256_GCM**.
 
 **Type:** [EncryptionAlgo](arkts-arkdata-relationalstore-encryptionalgo-e.md)
 
@@ -60,11 +64,11 @@ encryptionAlgo?: EncryptionAlgo
 encryptionKey: Uint8Array
 ```
 
-指定数据库加/解密使用的密钥。
+Key used for database encryption and decryption.
 
-如传入密钥为空，则由数据库负责生成并保存密钥，并使用生成的密钥打开数据库文件。
+If this parameter is not specified, the RDB store generates a key, saves the key, and uses the key to open the database file.
 
-使用完后用户需要将密钥内容全部置为零。
+If the key is not required, you need to set the key to **0**.
 
 **Type:** Uint8Array
 
@@ -82,7 +86,9 @@ encryptionKey: Uint8Array
 hmacAlgo?: HmacAlgo
 ```
 
-指定数据库加解密使用的HMAC算法。如不指定，默认值为SHA256。
+HMAC algorithm used for database encryption and decryption. 
+
+Default value: **SHA256**.
 
 **Type:** [HmacAlgo](arkts-arkdata-relationalstore-hmacalgo-e.md)
 
@@ -100,11 +106,13 @@ hmacAlgo?: HmacAlgo
 iterationCount?: int
 ```
 
-整数类型，指定数据库PBKDF2算法的迭代次数，默认值为10000。
+Number of iterations of the PBKDF2 algorithm used in the RDB store. The value is an integer. 
 
-迭代次数应当为大于零的整数，若非整数则向下取整，若小于零则抛出错误码401，请参见[通用错误码](../../../reference/errorcode-universal.md)。
+Default value: **10000**.
 
-不指定此参数或指定为零时，使用默认值10000，并使用默认加密算法AES_256_GCM。
+The value must be an integer greater than 0. If it is not an integer, the value is rounded down.
+
+If this parameter is not specified or is set to **0**, the default value **10000** and the default encryption algorithm **AES_256_GCM** are used.
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
@@ -122,7 +130,9 @@ iterationCount?: int
 kdfAlgo?: KdfAlgo
 ```
 
-指定数据库加解密使用的PBKDF2算法。如不指定，默认使用和HMAC算法相等的算法。
+PBKDF2 algorithm used for database encryption and decryption. 
+
+Default value: the same as the HMAC algorithm used.
 
 **Type:** [KdfAlgo](arkts-arkdata-relationalstore-kdfalgo-e.md)
 

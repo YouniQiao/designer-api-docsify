@@ -1,6 +1,6 @@
 # SwipeDirection
 
-定义滑动手势的触发方向。
+Creating an Object
 
 **Since:** 23
 
@@ -16,7 +16,7 @@
 None
 ```
 
-任何方向均不可触发。
+Default.
 
 **Since:** 23
 
@@ -34,7 +34,7 @@ None
 Horizontal
 ```
 
-水平方向，手指滑动方向与x轴夹角小于45度时触发。
+Sliding horizontally.
 
 **Since:** 23
 
@@ -52,7 +52,7 @@ Horizontal
 Vertical
 ```
 
-竖直方向，手指滑动方向与y轴夹角小于45度时触发。
+Sliding vertically
 
 **Since:** 23
 
@@ -70,7 +70,7 @@ Vertical
 All
 ```
 
-所有方向。
+Sliding in all directions.
 
 **Since:** 23
 

@@ -1,16 +1,6 @@
 # CalendarOptions
 
-日历选择器组件的参数说明。
-
-## start和end设置规则
-
-> 日期异常场景说明：
-> - start日期晚于end日期：start日期、end日期都设置无效，选中日期为默认值
-> - 选中日期早于start日期：选中日期为start日期
-> - 选中日期晚于end日期：选中日期为end日期
-> - start日期晚于当前系统日期，选中日期未设置：选中日期为start日期
-> - end日期早于当前系统日期，选中日期未设置：选中日期为end日期
-> - 日期格式不符合规范，如`1999-13-32`：start日期或end日期设置无效，选中日期取默认值
+Describes the parameters of the calendar picker.
 
 **Since:** 10
 
@@ -26,13 +16,11 @@
 disabledDateRange?: DateRange[]
 ```
 
-设置禁用日期区间。不传此参数时不禁用任何日期。
+Disabled date range.
 
-> **说明：**
-> 
-> 1. 若日期区间内的开始日期或结束日期未设置或设置为异常值，则该日期区间无效。
-> 2. 若在日期区间内，结束日期早于开始日期，则该日期区间无效。
-> 3. 当在入口区选定某日期，通过上下箭头调整日期进行增加或减少操作时，若遇到禁用日期，系统将自动跳过整个禁用区间。
+**NOTE：**
+
+1. If the start date or end date within a date range is invalid or is not set, the entire date range does not take effect.2. If the end date is earlier than the start date within a date range, the entire date range does not take effect.3. When users select a date and adjust it with the up or down arrow keys, the system skips over all dates in the disabled date range.
 
 **Type:** [DateRange](arkts-arkui-daterange-i.md)[]
 
@@ -54,14 +42,11 @@ disabledDateRange?: DateRange[]
 end?: Date
 ```
 
-设置结束日期。
+End date.
 
-> 默认值：Date('5000-12-31')
+Default value: **Date('5000-12-31')**.
 
-> 取值范围：[Date('0001-01-01'), Date('5000-12-31')]
-
-> **说明：** 若start日期晚于end日期，则start日期、end日期都设置无效，选中日期为默认值。
-> 详见[start和end设置规则](arkts-arkui-calendaroptions-i.md)。
+Value range: [Date('0001-01-01'), Date('5000-12-31')].
 
 **Type:** Date
 
@@ -85,18 +70,18 @@ end?: Date
 hintRadius?: number | Resource
 ```
 
-设置日期选中态底板样式。
+Style of the background of the selected state.
 
-> 取值范围：[0.0, 16.0]
+Value range: [0.0, 16.0]
 
-> 单位：vp
+Unit: vp.
 
-> 默认值：16.0，即底板样式为圆形。
+Default value: **16.0** (the background is a circle).
 
-> **说明：**
-> 
-> 当hintRadius为0.0时表示底板样式为直角矩形；当hintRadius为(0.0, 16.0)时，底板样式为圆角矩形；当hintRadius为16.0时，
-> 底板样式为圆形；当hintRadius为负数或大于16.0时，恢复为默认值16.0。
+**NOTE：**
+
+If the value is **0.0**, the background is a right-angled rectangle. If the value is in the (0.0, 16.0) range, the background is a rounded rectangle. If the value is a negative number or greater than 16.0, the default value  
+**16.0** is used, which means the background is a circle.
 
 **Type:** number \| Resource
 
@@ -120,11 +105,11 @@ hintRadius?: number | Resource
 selected?: Date
 ```
 
-设置选中项的日期。当需要预设选中日期时传入此参数，不需要预设时使用当前系统日期。选中的日期未设置或日期格式不符合规范则为默认值。选中日期与start、end参数的配合关系见[start和end设置规则](arkts-arkui-calendaroptions-i.md)。
+Date of the selected item. If the value is not set or does not comply with the date format specifications, the default value will be used.
 
-> 默认值：当前系统日期。
+Default value: current system date
 
-> 取值范围：[Date('0001-01-01'), Date('5000-12-31')]
+Value range: [Date('0001-01-01'), Date('5000-12-31')].
 
 **Type:** Date
 
@@ -148,14 +133,11 @@ selected?: Date
 start?: Date
 ```
 
-设置开始日期。
+Start date.
 
-> 默认值：Date('0001-01-01')
+Default value: **Date('0001-01-01')**
 
-> 取值范围：[Date('0001-01-01'), Date('5000-12-31')]
-
-> **说明：** 若start日期晚于end日期，则start日期、end日期都设置无效，选中日期为默认值。
-> 详见[start和end设置规则](arkts-arkui-calendaroptions-i.md)。
+Value range: [Date('0001-01-01'), Date('5000-12-31')].
 
 **Type:** Date
 

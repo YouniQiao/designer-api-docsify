@@ -20,7 +20,7 @@ color: DepthColorRGB
 
 光照颜色。
 
-**类型：** [DepthColorRGB](../arkts-apis/arkts-arkui-common-depthcolorrgb-i-sys.md)
+**类型：** [DepthColorRGB](arkts-arkui-depthcolorrgb-i-sys.md)
 
 **起始版本：** 26.0.0
 

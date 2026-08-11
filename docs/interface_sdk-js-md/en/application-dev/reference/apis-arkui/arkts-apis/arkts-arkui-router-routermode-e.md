@@ -1,6 +1,6 @@
 # RouterMode
 
-路由跳转模式。
+Router Mode
 
 **Since:** 23
 

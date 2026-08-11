@@ -12,12 +12,6 @@
 
 **系统能力：** SystemCapability.Multimedia.Audio.Core
 
-## 导入模块
-
-```TypeScript
-import { audio } from 'kits/@kit.AudioKit';
-```
-
 ## getAudioParameter
 
 ```TypeScript

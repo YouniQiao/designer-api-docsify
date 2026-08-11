@@ -19,12 +19,6 @@
 
 **系统能力：** SystemCapability.Utils.Lang
 
-## 导入模块
-
-```TypeScript
-import { collections } from 'kits/@kit.ArkTS';
-```
-
 ## join
 
 ```TypeScript
@@ -77,14 +71,14 @@ slice(start?: number, end?: number): ConcatArray<T>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| start | number | 否 | 开始索引。如果`start < 0`，则会从`start + array.length`位置开始。默认值为0。 |
-| end | number | 否 | 结束索引（不包括该元素）。如果`end < 0`，则会到`end + array.length`位置结束。默认为ArkTS Array的长度。 |
+| start | number | 否 | 开始索引。如果`start < 0`，则会从`start + ConcatArray.length`位置开始。默认值为0。 |
+| end | number | 否 | 结束索引（不包括该元素）。如果`end < 0`，则会到`end + ConcatArray.length`位置结束。默认为ArkTS ConcatArray的长度。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| [ConcatArray](arkts-arkts-concatarray-i.md)&lt;T&gt; | 包含原始ConcatArray切片的新ConcatArray。 |
+| [ConcatArray](arkts-arkts-collections-concatarray-i.md)&lt;T&gt; | 包含原始ConcatArray切片的新ConcatArray。 |
 
 ## [index: number]
 

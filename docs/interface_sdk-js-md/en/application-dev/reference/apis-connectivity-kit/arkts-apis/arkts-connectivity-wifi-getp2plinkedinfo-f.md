@@ -73,11 +73,11 @@ wifi.getP2pLinkedInfo((err, data:wifi.WifiP2pLinkedInfo) => {
        console.error("get p2p linked info error");
        return;
    }
-  console.info("get wifi p2p linked info: " + JSON.stringify(data));
+	console.info("get wifi p2p linked info: " + JSON.stringify(data));
 });
 
 wifi.getP2pLinkedInfo().then(data => {
-  console.info("get wifi p2p linked info: " + JSON.stringify(data));
+	console.info("get wifi p2p linked info: " + JSON.stringify(data));
 });
 ```
 

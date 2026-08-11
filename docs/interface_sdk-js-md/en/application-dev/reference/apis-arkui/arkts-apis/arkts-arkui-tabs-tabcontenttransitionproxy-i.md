@@ -1,6 +1,6 @@
 # TabContentTransitionProxy
 
-Tabs自定义切换动画执行过程中，返回给开发者的proxy对象。开发者可通过该对象获取自定义动画的起始和目标页面信息，同时，也可以通过调用该对象的finishTransition接口通知Tabs组件自定义动画已结束。
+The proxy of TabContentAnimatedTransition.
 
 **Since:** 23
 
@@ -16,7 +16,7 @@ Tabs自定义切换动画执行过程中，返回给开发者的proxy对象。�
 finishTransition(): void
 ```
 
-通知Tabs组件，此页面的自定义动画已结束。
+Notifies Tabs component the custom content transition animation is complete.
 
 **Since:** 23
 
@@ -34,7 +34,7 @@ finishTransition(): void
 from: int
 ```
 
-自定义动画起始页面对应的index值，索引从0开始。取值范围为全体整数。
+The index of current tab content.The value range is all integers.
 
 **Type:** int
 
@@ -54,7 +54,7 @@ from: int
 to: int
 ```
 
-自定义动画目标页面对应的index值，索引从0开始。取值范围为全体整数。
+The index of target tab content.The value range is all integers.
 
 **Type:** int
 

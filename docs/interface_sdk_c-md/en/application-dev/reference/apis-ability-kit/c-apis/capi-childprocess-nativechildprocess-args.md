@@ -6,7 +6,7 @@ typedef struct NativeChildProcess_Args {...} NativeChildProcess_Args
 
 ## Overview
 
-The arguments passed to the child process.
+The struct describes the parameters passed to the child process.
 
 **Since**: 13
 
@@ -20,7 +20,7 @@ The arguments passed to the child process.
 
 | Name | Description |
 | -- | -- |
-| char* entryParams | the entry parameter. |
-| struct [NativeChildProcess_FdList](capi-childprocess-nativechildprocess-fdlist.md) fdList | the list of the info of the file descriptors passed to child process.For details, see [NativeChildProcess_FdList](capi-childprocess-nativechildprocess-fdlist.md). |
+| char* entryParams |  |
+| struct [NativeChildProcess_FdList](capi-childprocess-nativechildprocess-fdlist.md) fdList |  |
 
 

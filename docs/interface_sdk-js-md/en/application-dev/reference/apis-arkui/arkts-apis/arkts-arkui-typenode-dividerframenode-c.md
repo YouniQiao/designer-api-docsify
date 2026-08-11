@@ -1,6 +1,6 @@
 # DividerFrameNode
 
-定义Divider类型的FrameNode。
+Define the Divider type of FrameNode.
 
 **Inheritance/Implementation:** DividerFrameNode extends [TypedFrameNode<DividerAttribute>](TypedFrameNode<DividerAttribute>)
 
@@ -18,7 +18,7 @@
 abstract initialize(): DividerAttribute
 ```
 
-初始化Divider类型的FrameNode。
+Initialize Divider FrameNode.
 
 **Since:** 23
 

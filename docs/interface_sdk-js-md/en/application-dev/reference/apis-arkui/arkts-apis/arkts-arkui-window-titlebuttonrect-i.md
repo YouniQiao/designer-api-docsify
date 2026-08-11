@@ -1,6 +1,6 @@
 # TitleButtonRect
 
-标题栏上的最小化、最大化、关闭按钮矩形区域，该区域位置坐标相对窗口右上角。
+Describes the rectangle used to hold the minimize, maximize, and close buttons on the title bar. This rectangle is located in the top-right corner of the window.
 
 **Since:** 11
 
@@ -22,7 +22,7 @@ import { window } from 'kits/@kit.ArkUI';
 height: int
 ```
 
-矩形区域的高度，单位为vp，该参数为整数。
+Height of the rectangle, in vp. The value must be an integer.
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
@@ -42,7 +42,7 @@ height: int
 right: int
 ```
 
-矩形区域的右边界，单位为vp，该参数为整数。
+Right boundary of the rectangle, in vp. The value must be an integer.
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
@@ -62,7 +62,7 @@ right: int
 top: int
 ```
 
-矩形区域的上边界，单位为vp，该参数为整数。
+Top boundary of the rectangle, in vp. The value must be an integer.
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
@@ -82,7 +82,7 @@ top: int
 width: int
 ```
 
-矩形区域的宽度，单位为vp，该参数为整数。
+Width of the rectangle, in vp. The value must be an integer.
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 

@@ -1,6 +1,6 @@
 # ItemFillPolicy
 
-定义一个适合WaterFlow、Grid、List和Swiper组件的响应式item布局。
+Define a responsive item layout suitable for WaterFlow, Grid, List,and Swiper components.
 
 **Since:** 22
 
@@ -16,7 +16,7 @@
 fillType?: ResponsiveFillType
 ```
 
-指定不同响应断点的列数。
+Specify the number of columns for different responsive breakpoints.
 
 **Type:** [ResponsiveFillType](arkts-arkui-responsivefilltype-t.md)
 

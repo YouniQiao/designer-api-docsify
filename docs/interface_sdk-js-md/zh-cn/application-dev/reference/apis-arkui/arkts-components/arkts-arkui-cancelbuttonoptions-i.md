@@ -40,7 +40,7 @@ style?: CancelButtonStyle
 
 右侧清除按钮显示状态。默认值：CancelButtonStyle.INPUT。
 
-**类型：** [CancelButtonStyle](arkts-arkui-cancelbuttonstyle-e.md)
+**类型：** [CancelButtonStyle](../arkts-apis/arkts-arkui-search-cancelbuttonstyle-e.md)
 
 **起始版本：** 12
 

@@ -12,13 +12,14 @@ import { networkManager } from 'kits/@kit.MDMKit';
 function removeFirewallRule(admin: Want, firewallRule?: FirewallRule): void
 ```
 
-移除设备防火墙过滤规则。适用于企业网络安全策略调整场景，例如取消某些网络访问限制、调整防火墙策略、清理过时或无效的规则，帮助企业灵活调整网络安全策略，确保网络访问控制策略与实际需求保持一致。
+Removes a firewall rule. This API is suitable for enterprise network security policy adjustment scenarios, such as canceling certain network access restrictions, adjusting firewall policies, and clearing outdated or invalid rules.It helps enterprises flexibly adjust network security policies and ensure that network access control policies meet actual requirements.
 
-API version 21及之前版本，仅支持IPv4。从API version 22开始，支持IPv4和IPv6。
+In API version 21 and earlier versions, only IPv4 is supported. IPv4 and IPv6 are supported since API version 22.
 
-从API version 23开始，支持[LogType](arkts-mdm-networkmanager-logtype-e.md)。
+[LogType](arkts-mdm-networkmanager-logtype-e.md) is supported since API version 23.
 
-移除规则后如果不存在[Action](arkts-mdm-networkmanager-action-e.md)为ALLOW规则后，会将[addFirewallRule](arkts-mdm-networkmanager-addfirewallrule-f.md#addfirewallrule)添加的默认DENY规则清空。
+If there is no rule with [Action](arkts-mdm-networkmanager-action-e.md) being **ALLOW** after the rule is removed, the  
+**DENY** rules that are added by default with [addFirewallRule](arkts-mdm-networkmanager-addfirewallrule-f.md#addfirewallrule) will be removed.
 
 **Since:** 12
 
@@ -36,17 +37,17 @@ API version 21及之前版本，仅支持IPv4。从API version 22开始，支持
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| admin | [Want](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-want-want-c.md) | Yes | 企业设备管理扩展组件。Want中必须包含企业设备管理扩展能力的abilityName和所在应用的bundleName。 |
-| firewallRule | [FirewallRule](arkts-mdm-networkmanager-firewallrule-i.md) | No | 移除防火墙过滤规则。值为空时，清空所有的防火墙规则。 |
+| admin | [Want](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-want-want-c.md) | Yes | EnterpriseAdminExtensionAbility. **Want** must contain the ability name of the EnterpriseAdminExtensionAbility and the bundle name of the application. |
+| firewallRule | [FirewallRule](arkts-mdm-networkmanager-firewallrule-i.md) | No | Firewall rule to remove. If the value is empty, all firewall rules will be removed. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
-| 201 | Permission verification failed. The application does not have the permission required to call the API. |
-| 9200001 | The application is not an administrator application of the device. |
-| 9200002 | The administrator application does not have permission to manage the device. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed. The application does not have the permission required to call the API. |
+| [9200001](../errorcode-enterpriseDeviceManager.md#9200001-deviceadmin-not-enabled) | The application is not an administrator application of the device. |
+| [9200002](../errorcode-enterpriseDeviceManager.md#9200002-permission-denied) | The administrator application does not have permission to manage the device. |
 
 ## Examples
 
@@ -82,7 +83,7 @@ try {
   console.error(`Failed to remove firewall rule. Code: ${err.code}, message: ${err.message}`);
 }
 
-// Clears all IPv4 rules.
+// Remove all firewall rules.
 try {
   networkManager.removeFirewallRule(wantTemp);
   console.info('Succeeded in removing all firewall rule.');

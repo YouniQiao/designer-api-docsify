@@ -1,6 +1,6 @@
 # PowerKeyFilteringStrategy
 
-表示电源键过滤策略。
+Enumerates the power key filtering strategies.
 
 **Since:** 21
 
@@ -16,7 +16,7 @@
 DISABLE_LONG_PRESS_FILTERING = 0
 ```
 
-表示不使能电源键长按事件的过滤策略，默认值。
+Disable the filtering of power key long-press event. This is the default value.
 
 **Since:** 21
 
@@ -32,7 +32,7 @@ DISABLE_LONG_PRESS_FILTERING = 0
 LONG_PRESS_FILTERING_ONCE = 1
 ```
 
-表示仅过滤当前电源键长按事件，下一次不过滤。
+Filters the long-press event of the current power key once. The next is not filtered by default.
 
 **Since:** 21
 

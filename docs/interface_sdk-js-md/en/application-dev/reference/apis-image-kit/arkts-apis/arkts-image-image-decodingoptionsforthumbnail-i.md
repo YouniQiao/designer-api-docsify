@@ -1,6 +1,6 @@
 # DecodingOptionsForThumbnail
 
-缩略图解码参数选项。
+Describes thumbnail decoding parameters.
 
 **Since:** 26.0.0
 
@@ -22,10 +22,9 @@ import { image } from 'kits/@kit.ImageKit';
 generateThumbnailIfAbsent?: boolean
 ```
 
-指定图像无缩略图时是否生成缩略图。true表示生成，false表示不生成。默认值为true。
+Flag to specify whether the thumbnail should be generated, if the image does not have a thumbnail.
 
-当图片文件中无缩略图且generateThumbnailIfAbsent为false时，返回undefined（抛出错误码  
-[7700303 图片不包含缩略图数据](../../../reference/apis-image-kit/errorcode-image.md#7700303-图片不包含缩略图数据)）。
+&lt;br&gt;Default value: true.
 
 **Type:** boolean
 
@@ -45,13 +44,7 @@ generateThumbnailIfAbsent?: boolean
 maxGeneratedPixelDimension?: int
 ```
 
-用于指定生成缩略图的最大边长（宽和高中较大的那一边），较短的一边会根据长边的缩放比例进行缩放。此参数仅在generateThumbnailIfAbsent设置为true时生效。
-
-该值应为整数，默认值为512。生成后的缩略图，宽和高都会限制在maxGeneratedPixelDimension以内。
-
-若按该参数计算后，缩略图的宽或高小于1像素（取整后为0），则不会生成缩略图。
-
-单位：像素（px）。
+This parameter is valid only when generateThumbnailIfAbsent is set to true. The width and height of the image  cannot exceed the value of this parameter.The value should be an integer.&lt;br&gt;Unit:px.&lt;br&gt;Default value:512.
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 

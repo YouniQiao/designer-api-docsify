@@ -16,9 +16,7 @@ Define the style of checkbox mark.
 size?: Length
 ```
 
-内部图标大小，单位vp。默认大小与多选框组件宽度相同。
-
-不支持百分比形式设置。设置为非法值时，按照默认大小处理。默认大小与多选框组件宽度相同。
+Define the size of checkbox mark.
 
 **Type:** [Length](arkts-arkui-length-t.md)
 
@@ -38,7 +36,7 @@ size?: Length
 strokeColor?: ResourceColor
 ```
 
-内部图标颜色。
+Define the stroke color of checkbox mark.
 
 **Type:** [ResourceColor](arkts-arkui-resourcecolor-t.md)
 
@@ -58,7 +56,7 @@ strokeColor?: ResourceColor
 strokeWidth?: Length
 ```
 
-内部图标粗细，单位vp。不支持设置百分比。设置为非法值时，按照默认值处理。
+Define the stroke width of checkbox mark.
 
 **Type:** [Length](arkts-arkui-length-t.md)
 

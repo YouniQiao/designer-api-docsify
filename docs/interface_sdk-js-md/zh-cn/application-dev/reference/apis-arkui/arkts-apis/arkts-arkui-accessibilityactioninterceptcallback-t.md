@@ -20,7 +20,7 @@ Defines the callback type used in accessibility action intercept.The value of ac
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| action | [AccessibilityAction](../arkts-components/arkts-arkui-accessibilityaction-e.md) | 是 | the enum of accessibility action type. |
+| action | [AccessibilityAction](arkts-arkui-common-accessibilityaction-e.md) | 是 | the enum of accessibility action type. |
 
 **返回值：**
 

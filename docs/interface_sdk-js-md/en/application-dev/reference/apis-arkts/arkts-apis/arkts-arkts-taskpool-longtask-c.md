@@ -1,7 +1,7 @@
 # LongTask
 
-表示长时任务。**LongTask**继承自  
-[Task](arkts-arkts-taskpool-execute-f.md#execute)。长时任务不设置执行时间上限，长时间运行不会触发超时异常，但不支持将同一任务多次执行或者将该任务加入任务组（TaskGroup）。执行长时任务的线程会持续存在，直到任务完成并调用[terminateTask](arkts-arkts-taskpool-terminatetask-f.md#terminatetask)后，该线程在空闲时被回收。
+Describes a continuous task. **LongTask** inherits from  
+[Task](arkts-arkts-taskpool-execute-f.md#execute).No upper limit is set for the execution time of a continuous task, and no timeout exception is thrown if a continuous task runs for a long period of time. However, a continuous task cannot be executed in a task group or executed for multiple times.The thread for executing a continuous task exists until [terminateTask](arkts-arkts-taskpool-terminatetask-f.md#terminatetask) is called after the execution is complete. The thread is reclaimed when it is idle.
 
 **Inheritance/Implementation:** LongTask extends [Task](arkts-arkts-taskpool-task-c.md)
 

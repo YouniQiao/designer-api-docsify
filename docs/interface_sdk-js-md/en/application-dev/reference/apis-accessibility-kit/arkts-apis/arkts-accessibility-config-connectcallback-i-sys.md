@@ -1,6 +1,6 @@
 # ConnectCallback (System API)
 
-通过[enableAbilityWithCallback](arkts-accessibility-config-enableabilitywithcallback-f-sys.md#enableabilitywithcallback)接口启用辅助扩展应用时提供的回调函数。辅助扩展应用连接断开时，回调函数将被调用。
+Callback provided when the [enableAbilityWithCallback](arkts-accessibility-config-enableabilitywithcallback-f-sys.md#enableabilitywithcallback) API is called to enable an accessibility extension ability. This callback will be invoked when the connection to an auxiliary extension ability is disconnected.
 
 **Since:** 23
 
@@ -24,7 +24,7 @@ import { config } from 'kits/@kit.AccessibilityKit';
 onDisconnect: OnDisconnectCallback
 ```
 
-辅助扩展应用的连接断开时调用的回调函数。
+Callback to be invoked when the connection to an auxiliary extension ability is disconnected.
 
 **Since:** 23
 

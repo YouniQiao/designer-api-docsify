@@ -1,6 +1,6 @@
 # DeviceListener
 
-描述输入设备热插拔的信息。
+Provides hot swap information about an input device.
 
 **Since:** 9
 
@@ -22,7 +22,7 @@ import { inputDevice } from 'kits/@kit.InputKit';
 deviceId: int
 ```
 
-输入设备的唯一标识，同一个物理设备反复插拔或重启，设备ID可能会发生变化。
+Unique ID of the input device. If a physical device is repeatedly reinstalled or restarted, its ID may change.
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
@@ -40,7 +40,7 @@ deviceId: int
 type: ChangedType
 ```
 
-输入设备插入或者移除。
+Device change type, which indicates whether an input device is inserted or removed.
 
 **Type:** [ChangedType](arkts-input-inputdevice-changedtype-t.md)
 

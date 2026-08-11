@@ -4,9 +4,7 @@
 export type UpgradeTaskCallback = (eventInfo: EventInfo) => void
 ```
 
-事件回调。
-
-**版本说明**： 从API version 23开始支持。
+Represents an event callback.
 
 **Since:** 9
 
@@ -22,5 +20,5 @@ export type UpgradeTaskCallback = (eventInfo: EventInfo) => void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| eventInfo | [EventInfo](arkts-basicservices-update-eventinfo-i-sys.md) | Yes | Event information. |
+| eventInfo | [EventInfo](arkts-basicservices-update-eventinfo-i-sys.md) | Yes | Event information, including the eventId(eventID) and taskBody(task data) fields. |
 

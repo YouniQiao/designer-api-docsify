@@ -1,10 +1,8 @@
 # InsightIntentExecutor
 
-本模块提供意图执行基类，开发者通过本模块对接端侧[意图框架](../../../application-models/insight-intent-overview.md)，  
-[通过配置文件开发意图][configuration files](../../../application-models/insight-intent-config-development.md)实现意图的业务逻辑。
-
-除了可以通过配置文件开发意图，还可以通过装饰器开发意图。对于API version 20及以后的版本，推荐使用  
-[通过装饰器开发意图](../../../application-models/insight-intent-decorator-development.md)。
+The module provides the base class for intent execution. You can use this module to interface with the  
+[InsightIntent framework](../../../application-models/insight-intent-overview.md) on the device side and implement intent service logic through [configuration files](../../../application-models/insight-intent-config-development.md).In addition to developing intents via configuration files, intents can also be developed using decorators. For API version 20 and later, you are advised to  
+[develop intents using decorators](../../../application-models/insight-intent-decorator-development.md).
 
 **Since:** 11
 
@@ -27,9 +25,10 @@ onExecuteInServiceExtensionAbility(name: string, param: Record<string, Object>):
     insightIntent.ExecuteResult | Promise<insightIntent.ExecuteResult>
 ```
 
-当意图执行依赖ServiceExtensionAbility组件启动时，会在ServiceExtensionAbility组件生命周期执行中触发本意图执行接口。支持同步返回和使用Promise异步返回。
+Called during the ServiceExtensionAbility lifecycle when the ServiceExtensionAbility that the intent execution depends on is started. Both synchronous calls and asynchronous calls using Promise are supported.
 
-- 意图执行时ServiceExtensionAbility生命周期触发顺序：onCreate、onRequest、onExecuteInServiceExtensionAbility。
+- The ServiceExtensionAbility lifecycle callbacks are triggered in the following sequence during intent execution:  
+**onCreate**, **onRequest**, and **onExecuteInServiceExtensionAbility**.
 
 **Since:** 11
 
@@ -45,8 +44,8 @@ onExecuteInServiceExtensionAbility(name: string, param: Record<string, Object>):
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| name | string | Yes | 意图名称。 |
-| param | [Record](../../apis-default/arkts-apis/arkts-record-t.md)&lt;string, Object&gt; | Yes | 意图参数，表示本次意图执行由系统入口传递给应用的数据。 |
+| name | string | Yes | Intent name. |
+| param | [Record](../../apis-default/arkts-apis/arkts-record-t.md)&lt;string, Object&gt; | Yes | Intent parameter, which is the data passed from the system entry point to the application for this intent execution. |
 
 **Return value:**
 
@@ -136,9 +135,10 @@ onExecuteInServiceExtensionAbility(name: string, param: Record<string, RecordDat
     insightIntent.ExecuteResult | Promise<insightIntent.ExecuteResult>
 ```
 
-当意图执行依赖ServiceExtensionAbility组件启动时，会在ServiceExtensionAbility组件生命周期执行中触发本意图执行接口。支持同步返回和使用Promise异步返回。
+Called during the ServiceExtensionAbility lifecycle when the ServiceExtensionAbility that the intent execution depends on is started. Both synchronous calls and asynchronous calls using Promise are supported.
 
-- 意图执行时ServiceExtensionAbility生命周期触发顺序：onCreate、onRequest、onExecuteInServiceExtensionAbility。
+- The ServiceExtensionAbility lifecycle callbacks are triggered in the following sequence during intent execution:  
+**onCreate**, **onRequest**, and **onExecuteInServiceExtensionAbility**.
 
 **Since:** 23
 
@@ -154,8 +154,8 @@ onExecuteInServiceExtensionAbility(name: string, param: Record<string, RecordDat
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| name | string | Yes | 意图调用名称。 |
-| param | [Record](../../apis-default/arkts-apis/arkts-record-t.md)&lt;string, RecordData&gt; | Yes | 意图调用参数。 |
+| name | string | Yes | InsightIntent name. |
+| param | [Record](../../apis-default/arkts-apis/arkts-record-t.md)&lt;string, RecordData&gt; | Yes | InsightIntent call parameter. |
 
 **Return value:**
 
@@ -170,11 +170,12 @@ onExecuteInUIAbilityBackgroundMode(name: string, param: Record<string, Object>):
     insightIntent.ExecuteResult | Promise<insightIntent.ExecuteResult>
 ```
 
-当意图执行依赖[UIAbility](arkts-app-ability-uiability.md)组件后台启动时，会在UIAbility组件生命周期执行中触发本意图执行接口。支持同步返回和使用Promise异步返回。
+Called during the UIAbility lifecycle when the [UIAbility](arkts-app-ability-uiability.md) that the intent execution depends on is started in the background. Both synchronous calls and asynchronous calls using Promise are supported.
 
-- 若UIAbility组件冷启动，意图执行时UIAbility组件生命周期触发顺序：[onCreate](arkts-ability-app-ability-uiability-uiability-c.md#oncreate)、  
-onExecuteInUIAbilityBackgroundMode、[onBackground](arkts-ability-app-ability-uiability-uiability-c.md#onbackground)。  
-- 若UIAbility组件热启动，意图执行时UIAbility组件生命周期触发顺序：onExecuteInUIAbilityBackgroundMode。
+- If the UIAbility is cold started, the UIAbility lifecycle callbacks are triggered in the following sequence  
+during intent execution: [onCreate](arkts-ability-app-ability-uiability-uiability-c.md#oncreate),onExecuteInUIAbilityBackgroundMode, and [onBackground](arkts-ability-app-ability-uiability-uiability-c.md#onbackground).  
+- If the UIAbility is hot started, the UIAbility lifecycle callbacks are triggered in the following sequence during  
+ intent execution: onExecuteInUIAbilityBackgroundMode.
 
 **Since:** 11
 
@@ -192,8 +193,8 @@ onExecuteInUIAbilityBackgroundMode、[onBackground](arkts-ability-app-ability-ui
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| name | string | Yes | 意图名称。 |
-| param | [Record](../../apis-default/arkts-apis/arkts-record-t.md)&lt;string, Object&gt; | Yes | 意图参数，表示本次意图执行由系统入口传递给应用的数据。 |
+| name | string | Yes | Intent name. |
+| param | [Record](../../apis-default/arkts-apis/arkts-record-t.md)&lt;string, Object&gt; | Yes | Intent parameter, which is the data passed from the system entry point to the application for this intent execution. |
 
 **Return value:**
 
@@ -255,11 +256,12 @@ onExecuteInUIAbilityBackgroundMode(name: string, param: Record<string, RecordDat
     insightIntent.ExecuteResult | Promise<insightIntent.ExecuteResult>
 ```
 
-当意图执行依赖[UIAbility](arkts-app-ability-uiability.md)组件后台启动时，会在UIAbility组件生命周期执行中触发本意图执行接口。支持同步返回和使用Promise异步返回。
+Called during the UIAbility lifecycle when the [UIAbility](arkts-app-ability-uiability.md) that the intent execution depends on is started in the background. Both synchronous calls and asynchronous calls using Promise are supported.
 
-- 若UIAbility组件冷启动，意图执行时UIAbility组件生命周期触发顺序：[onCreate](arkts-ability-app-ability-uiability-uiability-c.md#oncreate)、  
-onExecuteInUIAbilityBackgroundMode、[onBackground](arkts-ability-app-ability-uiability-uiability-c.md#onbackground)。  
-- 若UIAbility组件热启动，意图执行时UIAbility组件生命周期触发顺序：onExecuteInUIAbilityBackgroundMode。
+- If the UIAbility is cold started, the UIAbility lifecycle callbacks are triggered in the following sequence  
+during intent execution: [onCreate](arkts-ability-app-ability-uiability-uiability-c.md#oncreate),onExecuteInUIAbilityBackgroundMode, and [onBackground](arkts-ability-app-ability-uiability-uiability-c.md#onbackground).  
+- If the UIAbility is hot started, the UIAbility lifecycle callbacks are triggered in the following sequence during  
+ intent execution: onExecuteInUIAbilityBackgroundMode.
 
 **Since:** 23
 
@@ -275,8 +277,8 @@ onExecuteInUIAbilityBackgroundMode、[onBackground](arkts-ability-app-ability-ui
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| name | string | Yes | 意图调用名称。 |
-| param | [Record](../../apis-default/arkts-apis/arkts-record-t.md)&lt;string, RecordData&gt; | Yes | 意图调用参数。 |
+| name | string | Yes | InsightIntent name. |
+| param | [Record](../../apis-default/arkts-apis/arkts-record-t.md)&lt;string, RecordData&gt; | Yes | InsightIntent call parameter. |
 
 **Return value:**
 
@@ -291,14 +293,15 @@ onExecuteInUIAbilityForegroundMode(name: string, param: Record<string, Object>, 
     insightIntent.ExecuteResult | Promise<insightIntent.ExecuteResult>
 ```
 
-当意图执行依赖[UIAbility](arkts-app-ability-uiability.md)组件前台启动时，会在UIAbility组件生命周期执行中触发本意图执行接口。支持同步返回和使用Promise异步返回。
+Called during the UIAbility lifecycle when the [UIAbility](arkts-app-ability-uiability.md) that the intent execution depends on is started in the foreground. Both synchronous calls and asynchronous calls using Promise are supported.
 
-- 若UIAbility组件冷启动，意图执行时UIAbility组件生命周期触发顺序：[onCreate](arkts-ability-app-ability-uiability-uiability-c.md#oncreate)、  
-[onWindowStageCreate](arkts-ability-app-ability-uiability-uiability-c.md#onwindowstagecreate)、onExecuteInUIAbilityForegroundMode、[onForeground](arkts-ability-app-ability-uiability-uiability-c.md#onforeground)。  
-- 若UIAbility组件热启动，且启动时UIAbility组件处于后台，意图执行时UIAbility组件生命周期触发顺序：  
-[onNewWant](arkts-ability-app-ability-uiability-uiability-c.md#onnewwant)、onExecuteInUIAbilityForegroundMode、  
-[onForeground](arkts-ability-app-ability-uiability-uiability-c.md#onforeground)。  
-- 若UIAbility组件热启动，且启动时UIAbility组件处于前台，意图执行时UIAbility组件生命周期触发顺序：onExecuteInUIAbilityForegroundMode。
+- If the UIAbility is cold started, the UIAbility lifecycle callbacks are triggered in the following sequence  
+during intent execution: [onCreate](arkts-ability-app-ability-uiability-uiability-c.md#oncreate),  
+[onWindowStageCreate](arkts-ability-app-ability-uiability-uiability-c.md#onwindowstagecreate),onExecuteInUIAbilityForegroundMode, and [onForeground](arkts-ability-app-ability-uiability-uiability-c.md#onforeground).  
+- If the UIAbility is hot started in the background, the UIAbility lifecycle callbacks are triggered in the  
+following sequence during intent execution: [onNewWant](arkts-ability-app-ability-uiability-uiability-c.md#onnewwant),onExecuteInUIAbilityForegroundMode, and [onForeground](arkts-ability-app-ability-uiability-uiability-c.md#onforeground).  
+- If the UIAbility is hot started in the foreground, the UIAbility lifecycle callbacks are triggered in the  
+following sequence during intent execution: onExecuteInUIAbilityForegroundMode.
 
 **Since:** 11
 
@@ -316,9 +319,9 @@ onExecuteInUIAbilityForegroundMode(name: string, param: Record<string, Object>, 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| name | string | Yes | 意图名称。 |
-| param | [Record](../../apis-default/arkts-apis/arkts-record-t.md)&lt;string, Object&gt; | Yes | 意图参数，表示本次意图执行由系统入口传递给应用的数据。 |
-| pageLoader | window.WindowStage | Yes | 表示windowStage实例对象，和 [onWindowStageCreate](arkts-ability-app-ability-uiability-uiability-c.md#onwindowstagecreate)接口的windowStage实例是同一个，可用于加载意图执行 的页面。 |
+| name | string | Yes | Intent name. |
+| param | [Record](../../apis-default/arkts-apis/arkts-record-t.md)&lt;string, Object&gt; | Yes | Intent parameter, which is the data passed from the system entry point to the application for this intent execution. |
+| pageLoader | window.WindowStage | Yes | WindowStage instance, which is the same as the WindowStage instance in the [onWindowStageCreate](arkts-ability-app-ability-uiability-uiability-c.md#onwindowstagecreate) API and can be used to load the page for intent execution. |
 
 **Return value:**
 
@@ -420,14 +423,15 @@ onExecuteInUIAbilityForegroundMode(name: string, param: Record<string, RecordDat
     insightIntent.ExecuteResult | Promise<insightIntent.ExecuteResult>
 ```
 
-当意图执行依赖[UIAbility](arkts-app-ability-uiability.md)组件前台启动时，会在UIAbility组件生命周期执行中触发本意图执行接口。支持同步返回和使用Promise异步返回。
+Called during the UIAbility lifecycle when the [UIAbility](arkts-app-ability-uiability.md) that the intent execution depends on is started in the foreground. Both synchronous calls and asynchronous calls using Promise are supported.
 
-- 若UIAbility组件冷启动，意图执行时UIAbility组件生命周期触发顺序：[onCreate](arkts-ability-app-ability-uiability-uiability-c.md#oncreate)、  
-[onWindowStageCreate](arkts-ability-app-ability-uiability-uiability-c.md#onwindowstagecreate)、onExecuteInUIAbilityForegroundMode、[onForeground](arkts-ability-app-ability-uiability-uiability-c.md#onforeground)。  
-- 若UIAbility组件热启动，且启动时UIAbility组件处于后台，意图执行时UIAbility组件生命周期触发顺序：  
-[onNewWant](arkts-ability-app-ability-uiability-uiability-c.md#onnewwant)、onExecuteInUIAbilityForegroundMode、  
-[onForeground](arkts-ability-app-ability-uiability-uiability-c.md#onforeground)。  
-- 若UIAbility组件热启动，且启动时UIAbility组件处于前台，意图执行时UIAbility组件生命周期触发顺序：onExecuteInUIAbilityForegroundMode。
+- If the UIAbility is cold started, the UIAbility lifecycle callbacks are triggered in the following sequence  
+during intent execution: [onCreate](arkts-ability-app-ability-uiability-uiability-c.md#oncreate),  
+[onWindowStageCreate](arkts-ability-app-ability-uiability-uiability-c.md#onwindowstagecreate),onExecuteInUIAbilityForegroundMode, and [onForeground](arkts-ability-app-ability-uiability-uiability-c.md#onforeground).  
+- If the UIAbility is hot started in the background, the UIAbility lifecycle callbacks are triggered in the  
+following sequence during intent execution: [onNewWant](arkts-ability-app-ability-uiability-uiability-c.md#onnewwant),onExecuteInUIAbilityForegroundMode, and [onForeground](arkts-ability-app-ability-uiability-uiability-c.md#onforeground).  
+- If the UIAbility is hot started in the foreground, the UIAbility lifecycle callbacks are triggered in the  
+following sequence during intent execution: onExecuteInUIAbilityForegroundMode.
 
 **Since:** 23
 
@@ -443,9 +447,9 @@ onExecuteInUIAbilityForegroundMode(name: string, param: Record<string, RecordDat
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| name | string | Yes | 意图调用名称。 |
-| param | [Record](../../apis-default/arkts-apis/arkts-record-t.md)&lt;string, RecordData&gt; | Yes | 意图调用参数。 |
-| pageLoader | window.WindowStage | Yes | 页面加载器。 |
+| name | string | Yes | InsightIntent name. |
+| param | [Record](../../apis-default/arkts-apis/arkts-record-t.md)&lt;string, RecordData&gt; | Yes | InsightIntent call parameter. |
+| pageLoader | window.WindowStage | Yes | Page loader. |
 
 **Return value:**
 
@@ -460,12 +464,13 @@ onExecuteInUIExtensionAbility(name: string, param: Record<string, Object>, pageL
     insightIntent.ExecuteResult | Promise<insightIntent.ExecuteResult>
 ```
 
-当意图执行依赖[UIExtensionAbility](arkts-ability-app-ability-uiextensionability-uiextensionability-c.md)启动时，会在UIExtensionAbility组件生命周期执行中触发本意图执行接口。支持同步返回和使用Promise异步返回。
+Called during the UIExtensionAbility lifecycle when the  
+[UIExtensionAbility](arkts-ability-app-ability-uiextensionability-uiextensionability-c.md) that the intent execution depends on is started. Both synchronous calls and asynchronous calls using Promise are supported.
 
-- 意图执行时UIExtensionAbility生命周期触发顺序：  
-[onCreate](arkts-ability-app-ability-uiextensionability-uiextensionability-c.md#oncreate)、  
-[onSessionCreate](arkts-ability-app-ability-uiextensionability-uiextensionability-c.md#onsessioncreate)、onExecuteInUIExtensionAbility、  
-[onForeground](arkts-ability-app-ability-uiextensionability-uiextensionability-c.md#onforeground)。
+- The UIExtensionAbility lifecycle callbacks are triggered in the following sequence during intent execution:  
+[onCreate](arkts-ability-app-ability-uiextensionability-uiextensionability-c.md#oncreate),  
+[onSessionCreate](arkts-ability-app-ability-uiextensionability-uiextensionability-c.md#onsessioncreate),onExecuteInUIExtensionAbility, and  
+[onForeground](arkts-ability-app-ability-uiextensionability-uiextensionability-c.md#onforeground).
 
 **Since:** 11
 
@@ -481,9 +486,9 @@ onExecuteInUIExtensionAbility(name: string, param: Record<string, Object>, pageL
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| name | string | Yes | 意图名称。 |
-| param | [Record](../../apis-default/arkts-apis/arkts-record-t.md)&lt;string, Object&gt; | Yes | 意图参数，表示本次意图执行由系统入口传递给应用的数据。 |
-| pageLoader | [UIExtensionContentSession](arkts-ability-app-ability-uiextensioncontentsession-uiextensioncontentsession-c.md) | Yes | 表示UIExtensionContentSession实例对象，和 [onSessionCreate](arkts-ability-app-ability-uiextensionability-uiextensionability-c.md#onsessioncreate)接口的 UIExtensionContentSession实例是同一个，可用于加载意图执行的页面。 |
+| name | string | Yes | Intent name. |
+| param | [Record](../../apis-default/arkts-apis/arkts-record-t.md)&lt;string, Object&gt; | Yes | Intent parameter, which is the data passed from the system entry point to the application for this intent execution. |
+| pageLoader | [UIExtensionContentSession](arkts-ability-app-ability-uiextensioncontentsession-uiextensioncontentsession-c.md) | Yes | UIExtensionContentSession instance, which is the same as the UIExtensionContentSession instance in the [onSessionCreate](arkts-ability-app-ability-uiextensionability-uiextensionability-c.md#onsessioncreate) API and can be used to load the page for intent execution. |
 
 **Return value:**
 
@@ -577,12 +582,13 @@ onExecuteInUIExtensionAbility(name: string, param: Record<string, RecordData>, p
     insightIntent.ExecuteResult | Promise<insightIntent.ExecuteResult>
 ```
 
-当意图执行依赖[UIExtensionAbility](arkts-ability-app-ability-uiextensionability-uiextensionability-c.md)启动时，会在UIExtensionAbility组件生命周期执行中触发本意图执行接口。支持同步返回和使用Promise异步返回。
+Called during the UIExtensionAbility lifecycle when the  
+[UIExtensionAbility](arkts-ability-app-ability-uiextensionability-uiextensionability-c.md) that the intent execution depends on is started. Both synchronous calls and asynchronous calls using Promise are supported.
 
-- 意图执行时UIExtensionAbility生命周期触发顺序：  
-[onCreate](arkts-ability-app-ability-uiextensionability-uiextensionability-c.md#oncreate)、  
-[onSessionCreate](arkts-ability-app-ability-uiextensionability-uiextensionability-c.md#onsessioncreate)、onExecuteInUIExtensionAbility、  
-[onForeground](arkts-ability-app-ability-uiextensionability-uiextensionability-c.md#onforeground)。
+- The UIExtensionAbility lifecycle callbacks are triggered in the following sequence during intent execution:  
+[onCreate](arkts-ability-app-ability-uiextensionability-uiextensionability-c.md#oncreate),  
+[onSessionCreate](arkts-ability-app-ability-uiextensionability-uiextensionability-c.md#onsessioncreate),onExecuteInUIExtensionAbility, and  
+[onForeground](arkts-ability-app-ability-uiextensionability-uiextensionability-c.md#onforeground).
 
 **Since:** 23
 
@@ -598,9 +604,9 @@ onExecuteInUIExtensionAbility(name: string, param: Record<string, RecordData>, p
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| name | string | Yes | 意图调用名称。 |
-| param | [Record](../../apis-default/arkts-apis/arkts-record-t.md)&lt;string, RecordData&gt; | Yes | 意图调用参数。 |
-| pageLoader | [UIExtensionContentSession](arkts-ability-app-ability-uiextensioncontentsession-uiextensioncontentsession-c.md) | Yes | 页面加载器。 |
+| name | string | Yes | InsightIntent name. |
+| param | [Record](../../apis-default/arkts-apis/arkts-record-t.md)&lt;string, RecordData&gt; | Yes | InsightIntent call parameter. |
+| pageLoader | [UIExtensionContentSession](arkts-ability-app-ability-uiextensioncontentsession-uiextensioncontentsession-c.md) | Yes | Page loader. |
 
 **Return value:**
 
@@ -614,7 +620,7 @@ onExecuteInUIExtensionAbility(name: string, param: Record<string, RecordData>, p
 context: InsightIntentContext
 ```
 
-意图执行上下文。
+Context for intent execution.
 
 **Type:** [InsightIntentContext](arkts-ability-app-ability-insightintentcontext-insightintentcontext-c.md)
 

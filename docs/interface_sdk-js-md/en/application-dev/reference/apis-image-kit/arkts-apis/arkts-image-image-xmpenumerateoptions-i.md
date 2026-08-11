@@ -1,6 +1,6 @@
 # XMPEnumerateOptions
 
-表示XMP枚举选项。
+Describes XMP enumerate option parameters.
 
 **Since:** 26.0.0
 
@@ -22,9 +22,7 @@ import { image } from 'kits/@kit.ImageKit';
 isRecursive?: boolean
 ```
 
-表示是否进行递归遍历。
-
-true表示进行递归遍历。false表示仅遍历直接子节点。默认为false。
+The option that controls recursive enabling.
 
 **Type:** boolean
 
@@ -44,9 +42,7 @@ true表示进行递归遍历。false表示仅遍历直接子节点。默认为fa
 onlyQualifier?: boolean
 ```
 
-表示是否仅遍历限定符节点。
-
-true表示仅遍历限定符节点。false表示遍历所有节点。默认为false。
+Whether to return only qualifier data.&lt;br&gt;Default value:false.
 
 **Type:** boolean
 

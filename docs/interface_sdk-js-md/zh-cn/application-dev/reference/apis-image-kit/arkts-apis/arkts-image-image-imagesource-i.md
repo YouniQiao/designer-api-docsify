@@ -16,12 +16,6 @@ ImageSource的所有方法均不支持并发调用。
 
 **系统能力：** SystemCapability.Multimedia.Image.ImageSource
 
-## 导入模块
-
-```TypeScript
-import { image } from 'kits/@kit.ImageKit';
-```
-
 ## createImageRawData
 
 ```TypeScript
@@ -50,8 +44,8 @@ createImageRawData(): Promise<ImageRawData>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 7700101 | Bad source. |
-| 7700102 | Unsupported MIME type. |
+| [7700101](../errorcode-image.md#7700101-图片源存在问题) | Bad source. |
+| [7700102](../errorcode-image.md#7700102-不支持的mime类型) | Unsupported MIME type. |
 
 ## createPicture
 
@@ -89,9 +83,9 @@ createPicture(options?: DecodingOptionsForPicture): Promise<Picture>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. 3.Parameter verification failed. |
-| 7700301 | Decode failed. |
-| 7700203 | Unsupported options. For example, unsupported desiredPixelFormat causes a failure in converting an image into the desired pixel format.<br>**适用版本：** 24+ |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. 3.Parameter verification failed. |
+| [7700301](../errorcode-image.md#7700301-解码失败) | Decode failed. |
+| [7700203](../errorcode-image.md#7700203-不支持的选项) | Unsupported options. For example, unsupported desiredPixelFormat causes a failure in converting an image into the desired pixel format.<br>**适用版本：** 24+ |
 
 ## createPicture
 
@@ -125,7 +119,7 @@ Creates a Picture object based on image decoding parameters. This method uses a 
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 7700301 | Failed to decode image. |
+| [7700301](../errorcode-image.md#7700301-解码失败) | Failed to decode image. |
 
 ## createPictureAtIndex
 
@@ -167,11 +161,11 @@ createPictureAtIndex(index: int): Promise<Picture>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 7700101 | Bad source. |
-| 7700103 | Image too large. |
-| 7700102 | Unsupported MIME type. |
-| 7700301 | Decoding failed. |
-| 7700203 | Unsupported options. For example, index is invalid. |
+| [7700101](../errorcode-image.md#7700101-图片源存在问题) | Bad source. |
+| [7700103](../errorcode-image.md#7700103-图片太大) | Image too large. |
+| [7700102](../errorcode-image.md#7700102-不支持的mime类型) | Unsupported MIME type. |
+| [7700301](../errorcode-image.md#7700301-解码失败) | Decoding failed. |
+| [7700203](../errorcode-image.md#7700203-不支持的选项) | Unsupported options. For example, index is invalid. |
 
 ## createPictureAtIndex
 
@@ -205,11 +199,11 @@ Decodes an image at the specified index into a Picture object.
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 7700101 | Bad source. |
-| 7700103 | Image too large. |
-| 7700102 | Unsupported MIME type. |
-| 7700301 | Decoding failed. |
-| 7700203 | Unsupported options. For example, index is invalid. |
+| [7700101](../errorcode-image.md#7700101-图片源存在问题) | Bad source. |
+| [7700103](../errorcode-image.md#7700103-图片太大) | Image too large. |
+| [7700102](../errorcode-image.md#7700102-不支持的mime类型) | Unsupported MIME type. |
+| [7700301](../errorcode-image.md#7700301-解码失败) | Decoding failed. |
+| [7700203](../errorcode-image.md#7700203-不支持的选项) | Unsupported options. For example, index is invalid. |
 
 ## createPixelMap
 
@@ -447,19 +441,19 @@ createPixelMapList(options?: DecodingOptions): Promise<Array<PixelMap>>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 62980096 | The operation failed. Possible cause: 1.Image upload exception. 2. Decoding process exception. 3. Insufficient memory. |
-| 62980099 | The shared memory data is abnormal. |
-| 62980101 | The image data is abnormal. |
-| 62980103 | The image data is not supported. |
-| 62980137 | Invalid media operation. |
-| 62980106 | The image data is too large. This status code is thrown when an error occurs during the process of checking size. |
-| 62980109 | Failed to crop the image. |
-| 62980173 | The DMA memory does not exist. |
-| 62980111 | The image source data is incomplete. |
-| 62980174 | The DMA memory data is abnormal. |
-| 62980115 | Invalid image parameter. |
-| 62980116 | Failed to decode the image. |
-| 62980118 | Failed to create the image plugin. |
+| [62980096](../errorcode-image.md#62980096-操作失败) | The operation failed. Possible cause: 1.Image upload exception. 2. Decoding process exception. 3. Insufficient memory. |
+| [62980099](../errorcode-image.md#62980099-共享内存数据异常) | The shared memory data is abnormal. |
+| [62980101](../errorcode-image.md#62980101-图片输入数据错误) | The image data is abnormal. |
+| [62980103](../errorcode-image.md#62980103-图片类型不支持) | The image data is not supported. |
+| [62980137](../errorcode-image.md#62980137-图片操作无效) | Invalid media operation. |
+| [62980106](../errorcode-image.md#62980106-图片数据太大) | The image data is too large. This status code is thrown when an error occurs during the process of checking size. |
+| [62980109](../errorcode-image.md#62980109-裁剪错误) | Failed to crop the image. |
+| [62980173](../errorcode-image.md#62980173-dma内存空间错误) | The DMA memory does not exist. |
+| [62980111](../errorcode-image.md#62980111-图片源数据不完整) | The image source data is incomplete. |
+| [62980174](../errorcode-image.md#62980174-dma内存数据异常) | The DMA memory data is abnormal. |
+| [62980115](../errorcode-image.md#62980115-图片无效参数) | Invalid image parameter. |
+| [62980116](../errorcode-image.md#62980116-解码失败) | Failed to decode the image. |
+| [62980118](../errorcode-image.md#62980118-创建插件失败) | Failed to create the image plugin. |
 
 ## createPixelMapList
 
@@ -499,19 +493,19 @@ createPixelMapList(callback: AsyncCallback<Array<PixelMap>>): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 62980096 | The operation failed. Possible cause: 1.Image upload exception. 2. Decoding process exception. 3. Insufficient memory. |
-| 62980099 | The shared memory data is abnormal. |
-| 62980101 | The image data is abnormal. |
-| 62980103 | The image data is not supported. |
-| 62980137 | Invalid media operation. |
-| 62980106 | The image data is too large. This status code is thrown when an error occurs during the process of checking size. |
-| 62980109 | Failed to crop the image. |
-| 62980173 | The DMA memory does not exist. |
-| 62980111 | The image source data is incomplete. |
-| 62980174 | The DMA memory data is abnormal. |
-| 62980115 | Invalid image parameter. |
-| 62980116 | Failed to decode the image. |
-| 62980118 | Failed to create the image plugin. |
+| [62980096](../errorcode-image.md#62980096-操作失败) | The operation failed. Possible cause: 1.Image upload exception. 2. Decoding process exception. 3. Insufficient memory. |
+| [62980099](../errorcode-image.md#62980099-共享内存数据异常) | The shared memory data is abnormal. |
+| [62980101](../errorcode-image.md#62980101-图片输入数据错误) | The image data is abnormal. |
+| [62980103](../errorcode-image.md#62980103-图片类型不支持) | The image data is not supported. |
+| [62980137](../errorcode-image.md#62980137-图片操作无效) | Invalid media operation. |
+| [62980106](../errorcode-image.md#62980106-图片数据太大) | The image data is too large. This status code is thrown when an error occurs during the process of checking size. |
+| [62980109](../errorcode-image.md#62980109-裁剪错误) | Failed to crop the image. |
+| [62980173](../errorcode-image.md#62980173-dma内存空间错误) | The DMA memory does not exist. |
+| [62980111](../errorcode-image.md#62980111-图片源数据不完整) | The image source data is incomplete. |
+| [62980174](../errorcode-image.md#62980174-dma内存数据异常) | The DMA memory data is abnormal. |
+| [62980115](../errorcode-image.md#62980115-图片无效参数) | Invalid image parameter. |
+| [62980116](../errorcode-image.md#62980116-解码失败) | Failed to decode the image. |
+| [62980118](../errorcode-image.md#62980118-创建插件失败) | Failed to create the image plugin. |
 
 ## createPixelMapList
 
@@ -552,19 +546,19 @@ createPixelMapList(options: DecodingOptions, callback: AsyncCallback<Array<Pixel
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 62980096 | The operation failed. Possible cause: 1.Image upload exception. 2. Decoding process exception. 3. Insufficient memory. |
-| 62980099 | The shared memory data is abnormal. |
-| 62980101 | The image data is abnormal. |
-| 62980103 | The image data is not supported. |
-| 62980137 | Invalid media operation. |
-| 62980106 | The image data is too large. This status code is thrown when an error occurs during the process of checking size. |
-| 62980109 | Failed to crop the image. |
-| 62980173 | The DMA memory does not exist. |
-| 62980111 | The image source data is incomplete. |
-| 62980174 | The DMA memory data is abnormal. |
-| 62980115 | Invalid image parameter. |
-| 62980116 | Failed to decode the image. |
-| 62980118 | Failed to create the image plugin. |
+| [62980096](../errorcode-image.md#62980096-操作失败) | The operation failed. Possible cause: 1.Image upload exception. 2. Decoding process exception. 3. Insufficient memory. |
+| [62980099](../errorcode-image.md#62980099-共享内存数据异常) | The shared memory data is abnormal. |
+| [62980101](../errorcode-image.md#62980101-图片输入数据错误) | The image data is abnormal. |
+| [62980103](../errorcode-image.md#62980103-图片类型不支持) | The image data is not supported. |
+| [62980137](../errorcode-image.md#62980137-图片操作无效) | Invalid media operation. |
+| [62980106](../errorcode-image.md#62980106-图片数据太大) | The image data is too large. This status code is thrown when an error occurs during the process of checking size. |
+| [62980109](../errorcode-image.md#62980109-裁剪错误) | Failed to crop the image. |
+| [62980173](../errorcode-image.md#62980173-dma内存空间错误) | The DMA memory does not exist. |
+| [62980111](../errorcode-image.md#62980111-图片源数据不完整) | The image source data is incomplete. |
+| [62980174](../errorcode-image.md#62980174-dma内存数据异常) | The DMA memory data is abnormal. |
+| [62980115](../errorcode-image.md#62980115-图片无效参数) | Invalid image parameter. |
+| [62980116](../errorcode-image.md#62980116-解码失败) | Failed to decode the image. |
+| [62980118](../errorcode-image.md#62980118-创建插件失败) | Failed to create the image plugin. |
 
 ## createPixelMapSync
 
@@ -604,7 +598,7 @@ createPixelMapSync(options?: DecodingOptions): PixelMap
 
 | 类型 | 说明 |
 | --- | --- |
-| [PixelMap](arkts-image-image-pixelmap-i.md) | 用于同步返回创建结果。 |
+| [PixelMap](../../apis-arkui/arkts-apis/arkts-arkui-pixelmap-t.md) | 用于同步返回创建结果。 |
 
 ## createPixelMapSync
 
@@ -632,7 +626,7 @@ Create a PixelMap object based on image decoding parameters synchronously.
 
 | 类型 | 说明 |
 | --- | --- |
-| [PixelMap](arkts-image-image-pixelmap-i.md) | Return the PixelMap. If decoding fails, return undefined. |
+| [PixelMap](../../apis-arkui/arkts-apis/arkts-arkui-pixelmap-t.md) | Return the PixelMap. If decoding fails, return undefined. |
 
 ## createPixelMapUsingAllocator
 
@@ -676,14 +670,14 @@ createPixelMapUsingAllocator(options?: DecodingOptions, allocatorType?: Allocato
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 7700101 | Bad source. e.g.,1. Image has invalid width or height. 2. Image source incomplete. 3. Read image data failed. 4. Codec create failed. |
-| 401 | Parameter error.Possible causes: 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types; 3.Parameter verification failed. |
-| 7700103 | Image too large. This status code is thrown when an error occurs during the process of checking size. |
-| 7700102 | Unsupported mimetype. |
-| 7700301 | Failed to decode image. |
-| 7700302 | Failed to allocate memory. |
-| 7700201 | Unsupported allocator type, e.g., use share memory to decode a HDR image as only DMA supported hdr metadata. |
-| 7700203 | Unsupported options, e.g, cannot convert image into desired pixel format. |
+| [7700101](../errorcode-image.md#7700101-图片源存在问题) | Bad source. e.g.,1. Image has invalid width or height. 2. Image source incomplete. 3. Read image data failed. 4. Codec create failed. |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error.Possible causes: 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types; 3.Parameter verification failed. |
+| [7700103](../errorcode-image.md#7700103-图片太大) | Image too large. This status code is thrown when an error occurs during the process of checking size. |
+| [7700102](../errorcode-image.md#7700102-不支持的mime类型) | Unsupported mimetype. |
+| [7700301](../errorcode-image.md#7700301-解码失败) | Failed to decode image. |
+| [7700302](../errorcode-image.md#7700302-内存分配失败) | Failed to allocate memory. |
+| [7700201](../errorcode-image.md#7700201-不支持的内存分配类型) | Unsupported allocator type, e.g., use share memory to decode a HDR image as only DMA supported hdr metadata. |
+| [7700203](../errorcode-image.md#7700203-不支持的选项) | Unsupported options, e.g, cannot convert image into desired pixel format. |
 
 ## createPixelMapUsingAllocator
 
@@ -719,13 +713,13 @@ Creates a PixelMap based on decoding parameters, the memory type used by the Pix
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 7700101 | Bad source. |
-| 7700103 | Image too large. |
-| 7700102 | Unsupported mimetype. |
-| 7700301 | Failed to decode image. |
-| 7700302 | Failed to allocate memory. |
-| 7700201 | Unsupported allocator type. For example, use share memory to decode HDR image as only DMA supported HDR metadata. |
-| 7700203 | Unsupported options, For example, unsupported desiredPixelFormat causes a failure in converting an imagge into the desired pixel format. |
+| [7700101](../errorcode-image.md#7700101-图片源存在问题) | Bad source. |
+| [7700103](../errorcode-image.md#7700103-图片太大) | Image too large. |
+| [7700102](../errorcode-image.md#7700102-不支持的mime类型) | Unsupported mimetype. |
+| [7700301](../errorcode-image.md#7700301-解码失败) | Failed to decode image. |
+| [7700302](../errorcode-image.md#7700302-内存分配失败) | Failed to allocate memory. |
+| [7700201](../errorcode-image.md#7700201-不支持的内存分配类型) | Unsupported allocator type. For example, use share memory to decode HDR image as only DMA supported HDR metadata. |
+| [7700203](../errorcode-image.md#7700203-不支持的选项) | Unsupported options, For example, unsupported desiredPixelFormat causes a failure in converting an imagge into the desired pixel format. |
 
 ## createPixelMapUsingAllocatorSync
 
@@ -763,20 +757,20 @@ createPixelMapUsingAllocatorSync(options?: DecodingOptions, allocatorType?: Allo
 
 | 类型 | 说明 |
 | --- | --- |
-| [PixelMap](arkts-image-image-pixelmap-i.md) | 用于同步返回创建结果。 |
+| [PixelMap](../../apis-arkui/arkts-apis/arkts-arkui-pixelmap-t.md) | 用于同步返回创建结果。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 7700101 | Bad source. e.g.,1. Image has invalid width or height. 2. Image source incomplete. 3. Read image data failed. 4. Codec create failed. |
-| 401 | Parameter error.Possible causes: 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types; 3.Parameter verification failed. |
-| 7700103 | Image too large. This status code is thrown when an error occurs during the process of checking size. |
-| 7700102 | Unsupported mimetype. |
-| 7700301 | Failed to decode image. |
-| 7700302 | Failed to allocate memory. |
-| 7700201 | Unsupported allocator type, e.g., use share memory to decode a HDR image as only DMA supported hdr metadata. |
-| 7700203 | Unsupported options, e.g, cannot convert image into desired pixel format. |
+| [7700101](../errorcode-image.md#7700101-图片源存在问题) | Bad source. e.g.,1. Image has invalid width or height. 2. Image source incomplete. 3. Read image data failed. 4. Codec create failed. |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error.Possible causes: 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types; 3.Parameter verification failed. |
+| [7700103](../errorcode-image.md#7700103-图片太大) | Image too large. This status code is thrown when an error occurs during the process of checking size. |
+| [7700102](../errorcode-image.md#7700102-不支持的mime类型) | Unsupported mimetype. |
+| [7700301](../errorcode-image.md#7700301-解码失败) | Failed to decode image. |
+| [7700302](../errorcode-image.md#7700302-内存分配失败) | Failed to allocate memory. |
+| [7700201](../errorcode-image.md#7700201-不支持的内存分配类型) | Unsupported allocator type, e.g., use share memory to decode a HDR image as only DMA supported hdr metadata. |
+| [7700203](../errorcode-image.md#7700203-不支持的选项) | Unsupported options, e.g, cannot convert image into desired pixel format. |
 
 ## createPixelMapUsingAllocatorSync
 
@@ -805,19 +799,19 @@ Creates a PixelMap based on decoding parameters synchronously, the memory type u
 
 | 类型 | 说明 |
 | --- | --- |
-| [PixelMap](arkts-image-image-pixelmap-i.md) | Return the PixelMap. If decoding fails, return undefined. |
+| [PixelMap](../../apis-arkui/arkts-apis/arkts-arkui-pixelmap-t.md) | Return the PixelMap. If decoding fails, return undefined. |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 7700101 | Bad source. |
-| 7700103 | Image too large. |
-| 7700102 | Unsupported MIME type. |
-| 7700301 | Failed to decode image. |
-| 7700302 | Failed to allocate memory. |
-| 7700201 | Unsupported allocator type. For example, use share memory to decode HDR image as only DMA supported HDR metadata. |
-| 7700203 | Unsupported options, For example, unsupported desiredPixelFormat cause a failure in converting an image into the desired pixel format. |
+| [7700101](../errorcode-image.md#7700101-图片源存在问题) | Bad source. |
+| [7700103](../errorcode-image.md#7700103-图片太大) | Image too large. |
+| [7700102](../errorcode-image.md#7700102-不支持的mime类型) | Unsupported MIME type. |
+| [7700301](../errorcode-image.md#7700301-解码失败) | Failed to decode image. |
+| [7700302](../errorcode-image.md#7700302-内存分配失败) | Failed to allocate memory. |
+| [7700201](../errorcode-image.md#7700201-不支持的内存分配类型) | Unsupported allocator type. For example, use share memory to decode HDR image as only DMA supported HDR metadata. |
+| [7700203](../errorcode-image.md#7700203-不支持的选项) | Unsupported options, For example, unsupported desiredPixelFormat cause a failure in converting an image into the desired pixel format. |
 
 ## createThumbnail
 
@@ -865,12 +859,12 @@ createThumbnail(options?: DecodingOptionsForThumbnail): Promise<PixelMap | undef
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 7700103 | Image too large. |
-| 7700102 | Unsupported mimetype. |
-| 7700305 | Thumbnail generation failed. |
-| 7700301 | Decode failed. |
-| 7700204 | Invalid parameter, e.g, invalid generate size. |
-| 7700303 | Image does not carry thumbnail data. |
+| [7700103](../errorcode-image.md#7700103-图片太大) | Image too large. |
+| [7700102](../errorcode-image.md#7700102-不支持的mime类型) | Unsupported mimetype. |
+| [7700305](../errorcode-image.md#7700305-缩略图生成失败) | Thumbnail generation failed. |
+| [7700301](../errorcode-image.md#7700301-解码失败) | Decode failed. |
+| [7700204](../errorcode-image.md#7700204-无效参数) | Invalid parameter, e.g, invalid generate size. |
+| [7700303](../errorcode-image.md#7700303-图片不包含缩略图数据) | Image does not carry thumbnail data. |
 
 ## createThumbnailSync
 
@@ -913,18 +907,18 @@ createThumbnailSync(options?: DecodingOptionsForThumbnail): PixelMap | undefined
 
 | 类型 | 说明 |
 | --- | --- |
-| [PixelMap](arkts-image-image-pixelmap-i.md) | 用于同步返回创建结果。 |
+| [PixelMap](../../apis-arkui/arkts-apis/arkts-arkui-pixelmap-t.md) | 用于同步返回创建结果。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 7700103 | Image too large. |
-| 7700102 | Unsupported mimetype. |
-| 7700305 | Thumbnail generation failed. |
-| 7700301 | Decode failed. |
-| 7700204 | Invalid parameter, e.g, invalid generate size. |
-| 7700303 | Image does not carry thumbnail data. |
+| [7700103](../errorcode-image.md#7700103-图片太大) | Image too large. |
+| [7700102](../errorcode-image.md#7700102-不支持的mime类型) | Unsupported mimetype. |
+| [7700305](../errorcode-image.md#7700305-缩略图生成失败) | Thumbnail generation failed. |
+| [7700301](../errorcode-image.md#7700301-解码失败) | Decode failed. |
+| [7700204](../errorcode-image.md#7700204-无效参数) | Invalid parameter, e.g, invalid generate size. |
+| [7700303](../errorcode-image.md#7700303-图片不包含缩略图数据) | Image does not carry thumbnail data. |
 
 ## getDelayTimeList
 
@@ -958,14 +952,14 @@ getDelayTimeList(): Promise<Array<int>>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 62980096 | The operation failed. Possible cause: 1.Image upload exception. 2. Decoding process exception. 3. Insufficient memory. |
-| 62980115 | Invalid image parameter. |
-| 62980149 | Invalid MIME type for the image source. |
-| 62980116 | Failed to decode the image. |
-| 62980118 | Failed to create the image plugin. |
-| 62980122 | Failed to decode the image header. |
-| 62980111 | The image source data is incomplete. |
-| 62980110 | The image source data is incorrect. |
+| [62980096](../errorcode-image.md#62980096-操作失败) | The operation failed. Possible cause: 1.Image upload exception. 2. Decoding process exception. 3. Insufficient memory. |
+| [62980115](../errorcode-image.md#62980115-图片无效参数) | Invalid image parameter. |
+| [62980149](../errorcode-image.md#62980149-图片参数无效) | Invalid MIME type for the image source. |
+| [62980116](../errorcode-image.md#62980116-解码失败) | Failed to decode the image. |
+| [62980118](../errorcode-image.md#62980118-创建插件失败) | Failed to create the image plugin. |
+| [62980122](../errorcode-image.md#62980122-解码图片头异常) | Failed to decode the image header. |
+| [62980111](../errorcode-image.md#62980111-图片源数据不完整) | The image source data is incomplete. |
+| [62980110](../errorcode-image.md#62980110-图片源数据错误) | The image source data is incorrect. |
 
 ## getDelayTimeList
 
@@ -999,14 +993,14 @@ getDelayTimeList(callback: AsyncCallback<Array<int>>): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 62980096 | The operation failed. Possible cause: 1.Image upload exception. 2. Decoding process exception. 3. Insufficient memory. |
-| 62980115 | Invalid image parameter. |
-| 62980149 | Invalid MIME type for the image source. |
-| 62980116 | Failed to decode the image. |
-| 62980118 | Failed to create the image plugin. |
-| 62980122 | Failed to decode the image header. |
-| 62980111 | The image source data is incomplete. |
-| 62980110 | The image source data is incorrect. |
+| [62980096](../errorcode-image.md#62980096-操作失败) | The operation failed. Possible cause: 1.Image upload exception. 2. Decoding process exception. 3. Insufficient memory. |
+| [62980115](../errorcode-image.md#62980115-图片无效参数) | Invalid image parameter. |
+| [62980149](../errorcode-image.md#62980149-图片参数无效) | Invalid MIME type for the image source. |
+| [62980116](../errorcode-image.md#62980116-解码失败) | Failed to decode the image. |
+| [62980118](../errorcode-image.md#62980118-创建插件失败) | Failed to create the image plugin. |
+| [62980122](../errorcode-image.md#62980122-解码图片头异常) | Failed to decode the image header. |
+| [62980111](../errorcode-image.md#62980111-图片源数据不完整) | The image source data is incomplete. |
+| [62980110](../errorcode-image.md#62980110-图片源数据错误) | The image source data is incorrect. |
 
 ## getDisposalTypeList
 
@@ -1040,10 +1034,10 @@ getDisposalTypeList(): Promise<Array<int>>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 62980096 | The operation failed. Possible cause: 1.Image upload exception. 2. Decoding process exception. 3. Insufficient memory. |
-| 62980101 | The image data is abnormal. |
-| 62980149 | Invalid MIME type for the image source. |
-| 62980137 | Invalid media operation. |
+| [62980096](../errorcode-image.md#62980096-操作失败) | The operation failed. Possible cause: 1.Image upload exception. 2. Decoding process exception. 3. Insufficient memory. |
+| [62980101](../errorcode-image.md#62980101-图片输入数据错误) | The image data is abnormal. |
+| [62980149](../errorcode-image.md#62980149-图片参数无效) | Invalid MIME type for the image source. |
+| [62980137](../errorcode-image.md#62980137-图片操作无效) | Invalid media operation. |
 
 ## getFrameCount
 
@@ -1077,15 +1071,15 @@ getFrameCount(): Promise<int>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 62980113 | Unknown image format. The image data provided is not in a recognized or supported format, or it may be corrupted. |
-| 62980096 | The operation failed. Possible cause: 1.Image upload exception. 2. Decoding process exception. 3. Insufficient memory. |
-| 62980112 | The image format does not match. |
-| 62980115 | Invalid image parameter. |
-| 62980116 | Failed to decode the image. |
-| 62980118 | Failed to create the image plugin. |
-| 62980137 | Invalid media operation. |
-| 62980122 | Failed to decode the image header. |
-| 62980111 | The image source data is incomplete. |
+| [62980113](../errorcode-image.md#62980113-图片未知格式) | Unknown image format. The image data provided is not in a recognized or supported format, or it may be corrupted. |
+| [62980096](../errorcode-image.md#62980096-操作失败) | The operation failed. Possible cause: 1.Image upload exception. 2. Decoding process exception. 3. Insufficient memory. |
+| [62980112](../errorcode-image.md#62980112-图片格式不匹配) | The image format does not match. |
+| [62980115](../errorcode-image.md#62980115-图片无效参数) | Invalid image parameter. |
+| [62980116](../errorcode-image.md#62980116-解码失败) | Failed to decode the image. |
+| [62980118](../errorcode-image.md#62980118-创建插件失败) | Failed to create the image plugin. |
+| [62980137](../errorcode-image.md#62980137-图片操作无效) | Invalid media operation. |
+| [62980122](../errorcode-image.md#62980122-解码图片头异常) | Failed to decode the image header. |
+| [62980111](../errorcode-image.md#62980111-图片源数据不完整) | The image source data is incomplete. |
 
 ## getFrameCount
 
@@ -1119,15 +1113,15 @@ getFrameCount(callback: AsyncCallback<int>): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 62980113 | Unknown image format. The image data provided is not in a recognized or supported format, or it may be corrupted. |
-| 62980096 | The operation failed. Possible cause: 1.Image upload exception. 2. Decoding process exception. 3. Insufficient memory. |
-| 62980112 | The image format does not match. |
-| 62980115 | Invalid image parameter. |
-| 62980116 | Failed to decode the image. |
-| 62980118 | Failed to create the image plugin. |
-| 62980137 | Invalid media operation. |
-| 62980122 | Failed to decode the image header. |
-| 62980111 | The image source data is incomplete. |
+| [62980113](../errorcode-image.md#62980113-图片未知格式) | Unknown image format. The image data provided is not in a recognized or supported format, or it may be corrupted. |
+| [62980096](../errorcode-image.md#62980096-操作失败) | The operation failed. Possible cause: 1.Image upload exception. 2. Decoding process exception. 3. Insufficient memory. |
+| [62980112](../errorcode-image.md#62980112-图片格式不匹配) | The image format does not match. |
+| [62980115](../errorcode-image.md#62980115-图片无效参数) | Invalid image parameter. |
+| [62980116](../errorcode-image.md#62980116-解码失败) | Failed to decode the image. |
+| [62980118](../errorcode-image.md#62980118-创建插件失败) | Failed to create the image plugin. |
+| [62980137](../errorcode-image.md#62980137-图片操作无效) | Invalid media operation. |
+| [62980122](../errorcode-image.md#62980122-解码图片头异常) | Failed to decode the image header. |
+| [62980111](../errorcode-image.md#62980111-图片源数据不完整) | The image source data is incomplete. |
 
 ## getImageInfo
 
@@ -1382,11 +1376,11 @@ getImageProperties(key: Array<PropertyKey>): Promise<Record<PropertyKey, string|
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 62980113 | Unknown image format. The image data provided is not in a recognized or supported format, or it may be corrupted. |
-| 401 | Parameter error.Possible causes: 1.Mandatory parameters are left unspecified; 2 .Incorrect parameter types; 3.Parameter verification failed; |
-| 62980096 | The operation failed. Possible cause: 1.Image upload exception. 2. Decoding process exception. 3. Insufficient memory. |
-| 62980116 | Failed to decode the image. |
-| 62980110 | The image source data is incorrect. |
+| [62980113](../errorcode-image.md#62980113-图片未知格式) | Unknown image format. The image data provided is not in a recognized or supported format, or it may be corrupted. |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error.Possible causes: 1.Mandatory parameters are left unspecified; 2 .Incorrect parameter types; 3.Parameter verification failed; |
+| [62980096](../errorcode-image.md#62980096-操作失败) | The operation failed. Possible cause: 1.Image upload exception. 2. Decoding process exception. 3. Insufficient memory. |
+| [62980116](../errorcode-image.md#62980116-解码失败) | Failed to decode the image. |
+| [62980110](../errorcode-image.md#62980110-图片源数据错误) | The image source data is incorrect. |
 
 ## getImageProperties
 
@@ -1420,10 +1414,10 @@ Obtains the value of properties in an image. This method uses a promise to retur
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 62980113 | Unknown image format. The image data provided is not in a recognized or supported format, or it may be corrupted. |
-| 62980096 | The operation failed. Possible cause: 1.Image upload exception. 2. Decoding process exception. 3. Insufficient memory. |
-| 62980116 | Failed to decode the image. |
-| 62980110 | The image source data is incorrect. |
+| [62980113](../errorcode-image.md#62980113-图片未知格式) | Unknown image format. The image data provided is not in a recognized or supported format, or it may be corrupted. |
+| [62980096](../errorcode-image.md#62980096-操作失败) | The operation failed. Possible cause: 1.Image upload exception. 2. Decoding process exception. 3. Insufficient memory. |
+| [62980116](../errorcode-image.md#62980116-解码失败) | Failed to decode the image. |
+| [62980110](../errorcode-image.md#62980110-图片源数据错误) | The image source data is incorrect. |
 
 ## getImageProperty
 
@@ -1460,18 +1454,18 @@ getImageProperty(key: PropertyKey, options?: ImagePropertyOptions): Promise<stri
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 62980113 | Unknown image format. The image data provided is not in a recognized or supported format, or it may be corrupted. |
-| 401 | Parameter error.Possible causes: 1.Mandatory parameters are left unspecified; 2 .Incorrect parameter types;3.Parameter verification failed; |
-| 62980096 | The operation failed. Possible cause: 1.Image upload exception. 2. Decoding process exception. 3. Insufficient memory. |
-| 62980112 | The image format does not match. |
-| 62980115 | Invalid image parameter. |
-| 62980103 | The image data is not supported. |
-| 62980135 | The EXIF value is invalid. |
-| 62980118 | Failed to create the image plugin. |
-| 62980123 | The image does not support EXIF decoding. |
-| 62980122 | Failed to decode the image header. |
-| 62980111 | The image source data is incomplete. |
-| 62980110 | The image source data is incorrect. |
+| [62980113](../errorcode-image.md#62980113-图片未知格式) | Unknown image format. The image data provided is not in a recognized or supported format, or it may be corrupted. |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error.Possible causes: 1.Mandatory parameters are left unspecified; 2 .Incorrect parameter types;3.Parameter verification failed; |
+| [62980096](../errorcode-image.md#62980096-操作失败) | The operation failed. Possible cause: 1.Image upload exception. 2. Decoding process exception. 3. Insufficient memory. |
+| [62980112](../errorcode-image.md#62980112-图片格式不匹配) | The image format does not match. |
+| [62980115](../errorcode-image.md#62980115-图片无效参数) | Invalid image parameter. |
+| [62980103](../errorcode-image.md#62980103-图片类型不支持) | The image data is not supported. |
+| [62980135](../errorcode-image.md#62980135-图片属性值无效) | The EXIF value is invalid. |
+| [62980118](../errorcode-image.md#62980118-创建插件失败) | Failed to create the image plugin. |
+| [62980123](../errorcode-image.md#62980123-图片不支持exif解码) | The image does not support EXIF decoding. |
+| [62980122](../errorcode-image.md#62980122-解码图片头异常) | Failed to decode the image header. |
+| [62980111](../errorcode-image.md#62980111-图片源数据不完整) | The image source data is incomplete. |
+| [62980110](../errorcode-image.md#62980110-图片源数据错误) | The image source data is incorrect. |
 
 ## getImageProperty
 
@@ -1626,9 +1620,9 @@ getImagePropertySync(key: PropertyKey): string
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 7700101 | Bad source. e.g.,1. Image has invalid width or height. 2. Image source incomplete. 3. Read image data failed. 4. Codec create failed. |
-| 7700102 | Unsupported MIME type. |
-| 7700202 | Unsupported metadata. For example, key is not supported. |
+| [7700101](../errorcode-image.md#7700101-图片源存在问题) | Bad source. e.g.,1. Image has invalid width or height. 2. Image source incomplete. 3. Read image data failed. 4. Codec create failed. |
+| [7700102](../errorcode-image.md#7700102-不支持的mime类型) | Unsupported MIME type. |
+| [7700202](../errorcode-image.md#7700202-不支持的元数据) | Unsupported metadata. For example, key is not supported. |
 
 ## getImagePropertySync
 
@@ -1662,9 +1656,9 @@ Obtains the value of a property in the image.
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 7700101 | Bad source. e.g.,1. Image has invalid width or height. 2. Image source incomplete. 3. Read image data failed. 4. Codec create failed. |
-| 7700102 | Unsupported MIME type. |
-| 7700202 | Unsupported metadata. For example, key is not supported. |
+| [7700101](../errorcode-image.md#7700101-图片源存在问题) | Bad source. e.g.,1. Image has invalid width or height. 2. Image source incomplete. 3. Read image data failed. 4. Codec create failed. |
+| [7700102](../errorcode-image.md#7700102-不支持的mime类型) | Unsupported MIME type. |
+| [7700202](../errorcode-image.md#7700202-不支持的元数据) | Unsupported metadata. For example, key is not supported. |
 
 ## modifyImageProperties
 
@@ -1695,7 +1689,7 @@ modifyImageProperties(records: Record<PropertyKey, string|null>): Promise<void>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| records | [Record](../../apis-default/arkts-apis/arkts-record-t.md)&lt;PropertyKey, string \| null&gt; | 是 | 包含图片属性名和属性值的数组。 |
+| records | Record&lt;PropertyKey, string \| null&gt; | 是 | 包含图片属性名和属性值的数组。 |
 
 **返回值：**
 
@@ -1707,10 +1701,10 @@ modifyImageProperties(records: Record<PropertyKey, string|null>): Promise<void>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 401 | Parameter error.Possible causes: 1.Mandatory parameters are left unspecified; 2 .Incorrect parameter types; 3.Parameter verification failed; |
-| 62980146 | The EXIF data failed to be written to the file. |
-| 62980135 | The EXIF value is invalid. |
-| 62980123 | The image does not support EXIF decoding. |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error.Possible causes: 1.Mandatory parameters are left unspecified; 2 .Incorrect parameter types; 3.Parameter verification failed; |
+| [62980146](../errorcode-image.md#62980146-图片属性值写入文件失败) | The EXIF data failed to be written to the file. |
+| [62980135](../errorcode-image.md#62980135-图片属性值无效) | The EXIF value is invalid. |
+| [62980123](../errorcode-image.md#62980123-图片不支持exif解码) | The image does not support EXIF decoding. |
 
 ## modifyImageProperties
 
@@ -1732,7 +1726,7 @@ Modify the value of properties in an image with the specified keys.
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| records | [Record](../../apis-default/arkts-apis/arkts-record-t.md)&lt;string, string \| null&gt; | 是 | Array of the property Records whose values are to be modified. |
+| records | Record&lt;string, string \| null&gt; | 是 | Array of the property Records whose values are to be modified. |
 
 **返回值：**
 
@@ -1744,9 +1738,9 @@ Modify the value of properties in an image with the specified keys.
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 62980146 | The EXIF data failed to be written to the file. |
-| 62980135 | The EXIF value is invalid. |
-| 62980123 | The image does not support EXIF decoding. |
+| [62980146](../errorcode-image.md#62980146-图片属性值写入文件失败) | The EXIF data failed to be written to the file. |
+| [62980135](../errorcode-image.md#62980135-图片属性值无效) | The EXIF value is invalid. |
+| [62980123](../errorcode-image.md#62980123-图片不支持exif解码) | The image does not support EXIF decoding. |
 
 ## modifyImagePropertiesEnhanced
 
@@ -1781,7 +1775,7 @@ modifyImagePropertiesEnhanced(records: Record<string, string | null>): Promise<v
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| records | [Record](../../apis-default/arkts-apis/arkts-record-t.md)&lt;string, string \| null&gt; | 是 | 包含图片属性名和属性值的键值对集合。 |
+| records | Record&lt;string, string \| null&gt; | 是 | 包含图片属性名和属性值的键值对集合。 |
 
 **返回值：**
 
@@ -1793,9 +1787,9 @@ modifyImagePropertiesEnhanced(records: Record<string, string | null>): Promise<v
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 7700102 | Unsupported MIME type. |
-| 7700304 | Failed to write image properties to the file. |
-| 7700202 | Unsupported metadata. For example, the property key is not supported, or the property value is invalid. |
+| [7700102](../errorcode-image.md#7700102-不支持的mime类型) | Unsupported MIME type. |
+| [7700304](../errorcode-image.md#7700304-图片信息写入文件失败) | Failed to write image properties to the file. |
+| [7700202](../errorcode-image.md#7700202-不支持的元数据) | Unsupported metadata. For example, the property key is not supported, or the property value is invalid. |
 
 ## modifyImageProperty
 
@@ -1839,11 +1833,11 @@ modifyImageProperty(key: PropertyKey, value: string): Promise<void>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 401 | Parameter error.Possible causes: 1.Mandatory parameters are left unspecified; 2 .Incorrect parameter types; |
-| 62980146 | The EXIF data failed to be written to the file. |
-| 62980133 | The EXIF data is out of range. |
-| 62980135 | The EXIF value is invalid. |
-| 62980123 | The image does not support EXIF decoding. |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error.Possible causes: 1.Mandatory parameters are left unspecified; 2 .Incorrect parameter types; |
+| [62980146](../errorcode-image.md#62980146-图片属性值写入文件失败) | The EXIF data failed to be written to the file. |
+| [62980133](../errorcode-image.md#62980133-图片属性赋值超出范围) | The EXIF data is out of range. |
+| [62980135](../errorcode-image.md#62980135-图片属性值无效) | The EXIF value is invalid. |
+| [62980123](../errorcode-image.md#62980123-图片不支持exif解码) | The image does not support EXIF decoding. |
 
 ## modifyImageProperty
 
@@ -2010,9 +2004,9 @@ readImageMetadata(propertyKeys?: string[], index?: int): Promise<ImageMetadata>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 7700102 | Unsupported MIME type. |
-| 7700204 | Invalid parameter. Possible causes: 1. The index is negative. 2. The index is greater than or equal to the number of frames in the image. |
-| 7700202 | Unsupported metadata. |
+| [7700102](../errorcode-image.md#7700102-不支持的mime类型) | Unsupported MIME type. |
+| [7700204](../errorcode-image.md#7700204-无效参数) | Invalid parameter. Possible causes: 1. The index is negative. 2. The index is greater than or equal to the number of frames in the image. |
+| [7700202](../errorcode-image.md#7700202-不支持的元数据) | Unsupported metadata. |
 
 ## readImageMetadataByType
 
@@ -2082,9 +2076,9 @@ readImageMetadataByType(metadataTypes?: MetadataType[], index?: int): Promise<Im
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 7700102 | Unsupported MIME type. |
-| 7700204 | Invalid parameter. Possible causes: 1.The index is negative. 2. The index is greater than or equal to the number of frames in the image. |
-| 7700202 | Unsupported metadata. |
+| [7700102](../errorcode-image.md#7700102-不支持的mime类型) | Unsupported MIME type. |
+| [7700204](../errorcode-image.md#7700204-无效参数) | Invalid parameter. Possible causes: 1.The index is negative. 2. The index is greater than or equal to the number of frames in the image. |
+| [7700202](../errorcode-image.md#7700202-不支持的元数据) | Unsupported metadata. |
 
 ## release
 
@@ -2269,9 +2263,9 @@ writeImageMetadata(imageMetadata: ImageMetadata): Promise<void>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 7700102 | Unsupported MIME type. |
-| 7700204 | Invalid parameter. Possible causes: The imageSource object is released. |
-| 7700202 | Unsupported metadata. |
+| [7700102](../errorcode-image.md#7700102-不支持的mime类型) | Unsupported MIME type. |
+| [7700204](../errorcode-image.md#7700204-无效参数) | Invalid parameter. Possible causes: The imageSource object is released. |
+| [7700202](../errorcode-image.md#7700202-不支持的元数据) | Unsupported metadata. |
 
 ## supportedFormats
 

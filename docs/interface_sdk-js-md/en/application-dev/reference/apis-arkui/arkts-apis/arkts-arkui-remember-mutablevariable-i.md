@@ -1,6 +1,6 @@
 # MutableVariable
 
-rememberVariable创建的状态变量类型。
+Mutable state variable declared with rememberVariable.
 
 **Since:** 23
 
@@ -16,7 +16,7 @@ rememberVariable创建的状态变量类型。
 value: T
 ```
 
-状态变量的值。
+Mutable variable value.
 
 **Type:** T
 

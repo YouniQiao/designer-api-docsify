@@ -12,7 +12,7 @@ import { abilityConnectionManager } from 'kits/@kit.DistributedServiceKit';
 function disconnect(sessionId: int): void
 ```
 
-当协同业务执行完毕后，协同双端的任意一台设备，应断开UIAbility的连接，结束协同状态。
+Disconnects the UIAbility connection to end the collaboration session.
 
 **Since:** 18
 
@@ -28,7 +28,7 @@ function disconnect(sessionId: int): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| sessionId | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | 协同会话ID |
+| sessionId | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | ID of the collaboration session. |
 
 ## Examples
 

@@ -1,6 +1,6 @@
 # NetworkType
 
-触发延迟任务回调的网络类型。
+Enumerates the network types that trigger deferred task callback.
 
 **Since:** 9
 
@@ -16,7 +16,7 @@
 NETWORK_TYPE_ANY = 0
 ```
 
-表示这个触发条件是任何类型的网络连接。
+Any network type.
 
 **Since:** 9
 
@@ -34,7 +34,7 @@ NETWORK_TYPE_ANY = 0
 NETWORK_TYPE_MOBILE = 1
 ```
 
-表示这个触发条件是Mobile网络连接。
+Mobile network.
 
 **Since:** 9
 
@@ -52,7 +52,7 @@ NETWORK_TYPE_MOBILE = 1
 NETWORK_TYPE_WIFI = 2
 ```
 
-表示这个触发条件是Wifi类型的网络连接。
+Wi-Fi network.
 
 **Since:** 9
 
@@ -70,7 +70,7 @@ NETWORK_TYPE_WIFI = 2
 NETWORK_TYPE_BLUETOOTH = 3
 ```
 
-表示这个触发条件是Bluetooth网络连接。
+Bluetooth network.
 
 **Since:** 9
 
@@ -88,7 +88,7 @@ NETWORK_TYPE_BLUETOOTH = 3
 NETWORK_TYPE_WIFI_P2P = 4
 ```
 
-表示这个触发条件是Wifi P2P网络连接。
+Wi-Fi P2P network.
 
 **Since:** 9
 
@@ -106,7 +106,7 @@ NETWORK_TYPE_WIFI_P2P = 4
 NETWORK_TYPE_ETHERNET = 5
 ```
 
-表示这个触发条件是有线网络连接。
+Ethernet.
 
 **Since:** 9
 

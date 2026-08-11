@@ -1,6 +1,6 @@
 # AreaMode
 
-文件加密分区等级，保证应用在不同场景下的数据安全。开发者可以根据应用的具体需求选择合适的加密等级，以保护用户的数据安全。
+Enumerates the file encryption levels, which are used to ensure data security for applications across different scenarios. You can select the appropriate encryption level based on the application requirements to protect user data.
 
 **Since:** 9
 
@@ -16,7 +16,7 @@
 EL1 = 0
 ```
 
-设备级加密区，设备开机后可访问的数据区。
+Device-level encryption. Directories with this encryption level are accessible after the device is powered on.
 
 **Since:** 9
 
@@ -36,7 +36,7 @@ EL1 = 0
 EL2 = 1
 ```
 
-用户级加密区，设备开机，首次输入密码后才能够访问的数据区。
+User-level encryption. Directories with this encryption level are accessible only after the device is powered on and the password is entered (for the first time).
 
 **Since:** 9
 
@@ -56,13 +56,13 @@ EL2 = 1
 EL3 = 2
 ```
 
-用户级加密区，不同场景的文件权限如下：
+User-level encryption. The file permissions vary according to their scenarios.
 
-已打开文件：锁屏时，可读写；解锁后，可读写。
-
-未打开文件：锁屏时，不可打开、不可读写；解锁后，可打开、可读写。
-
-创建新文件：锁屏时，可创建、可打开、可写不可读；解锁后，可创建、可打开、可读写。
+- An open file is always readable and writable regardless of whether the screen is locked.  
+- When the screen is locked, a closed file cannot be opened, read, or written. When the screen is unlocked, such  
+a file can be opened, read, and written.  
+- When the screen is locked, a file can be created and then opened and written but not read. When the screen is  
+unlocked, a file can be created and then opened, read, and written.
 
 **Since:** 11
 
@@ -82,13 +82,14 @@ EL3 = 2
 EL4 = 3
 ```
 
-用户级加密区，不同场景的文件权限如下：
+User-level encryption. The file permissions vary according to their scenarios.
 
-已打开文件：锁屏时，不可读写；解锁后，可读写。
-
-未打开文件：锁屏时，不可打开、不可读写；解锁后，可打开、可读写。
-
-创建新文件：锁屏时，不可创建；解锁后，可创建、可打开、可读写。
+- When the screen is locked, an open file is not readable or writable. When the screen is unlocked, such a file  
+is readable and writable.  
+- When the screen is locked, a closed file cannot be opened, read, or written. When the screen is unlocked, such  
+a file can be opened, read, and written.  
+- When the screen is locked, a file cannot be created. When the screen is unlocked, a file can be created and  
+then opened, read, and written.
 
 **Since:** 11
 
@@ -108,13 +109,13 @@ EL4 = 3
 EL5 = 4
 ```
 
-应用级加密区，不同场景的文件权限如下：
+Application-level encryption. The file permissions vary according to their scenarios.
 
-已打开文件：锁屏时，可读写；解锁后，可读写。
+- An open file is always readable and writable regardless of whether the screen is locked.
 
-未打开文件：锁屏时，调用[Access](js-apis-screenLockFileManager.md#screenlockfilemanageracquireaccess)接口获取保留密钥后，可打开、可读写，否则不可打开、不可读写；解锁后，可打开、可读写。
+When the screen is locked, a closed file can be opened, read, and written only if the reserved key is obtained by  calling [Access](js-apis-screenLockFileManager.md#screenlockfilemanageracquireaccess). When the screen is unlocked, such a file can be opened, read, and written.
 
-创建新文件：锁屏时，可创建、可打开、可读写；解锁后，可创建、可打开、可读写。
+A file can be created and then opened, read, and written regardless of whether the screen is locked.
 
 **Since:** 12
 

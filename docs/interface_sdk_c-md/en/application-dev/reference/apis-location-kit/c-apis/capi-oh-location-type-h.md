@@ -35,6 +35,7 @@ Declares the common location attributes.
 
 | Name | typedef keyword | Description |
 | -- | -- | -- |
+| [bool OH_LocationInfo_IsFromMock(Location_Info* location)](#oh_locationinfo_isfrommock) | - | Indicates whether the location was obtained from the mock location function. |
 | [Location_BasicInfo OH_LocationInfo_GetBasicInfo(Location_Info* location)](#oh_locationinfo_getbasicinfo) | - | Obtain basic location information. |
 | [Location_ResultCode OH_LocationInfo_GetAdditionalInfo(Location_Info* location, char* additionalInfo, uint32_t length)](#oh_locationinfo_getadditionalinfo) | - | Obtain additional information from the location information. |
 | [typedef void (\*Location_InfoCallback)(Location_Info* location, void* userData)](#location_infocallback) | Location_InfoCallback | Defines the callback function used to report location data. |
@@ -126,6 +127,30 @@ Enumerates the source type of location.
 
 
 ## Function description
+
+### OH_LocationInfo_IsFromMock()
+
+```c
+bool OH_LocationInfo_IsFromMock(Location_Info* location)
+```
+
+**Description**
+
+Indicates whether the location was obtained from the mock location function.
+
+**Since**: 26.0.0
+
+**Parameters**:
+
+| Parameter | Description |
+| -- | -- |
+| [Location_Info](capi-location-location-info.md)* location | - Pointer to the location information structure.A non‑null pointer is required. The pointer can be obtained via [Location_InfoCallback](capi-oh-location-type-h.md#location_infocallback). |
+
+**Returns**:
+
+| Type | Description |
+| -- | -- |
+| bool | true if the location was obtained from the mock location function.<br> Otherwise, the location originates from the system's real positioning result. |
 
 ### OH_LocationInfo_GetBasicInfo()
 

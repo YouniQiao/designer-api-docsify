@@ -1,6 +1,6 @@
 # ModuleMetadata
 
-描述模块的元数据信息。
+Describes the metadata of a module.
 
 **Since:** 10
 
@@ -16,7 +16,7 @@
 readonly metadata: Array<Metadata>
 ```
 
-该模块下的元数据信息列表。
+Metadata list of the module.
 
 **Type:** Array&lt;[Metadata](arkts-ability-metadata-i.md)&gt;
 
@@ -36,7 +36,7 @@ readonly metadata: Array<Metadata>
 readonly moduleName: string
 ```
 
-模块名。
+Module name.
 
 **Type:** string
 

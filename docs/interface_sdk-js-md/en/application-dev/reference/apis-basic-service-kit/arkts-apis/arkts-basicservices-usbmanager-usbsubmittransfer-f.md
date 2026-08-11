@@ -12,15 +12,15 @@ import { usbManager } from 'kits/@kit.BasicServicesKit';
 function usbSubmitTransfer(transfer: UsbDataTransferParams): void
 ```
 
-提交异步传输请求。
+Requests a USB data transfer.
 
-> **说明：**
+> **NOTE：**
 > 
-> 本接口为异步接口，调用后立刻返回，实际读写操作的结果以回调的方式返回。
+> This API uses an asynchronous callback to return the result.
 > 
-> 在调用该接口前需要通过
+> Before calling this API, call the
 > [usbManager.claimInterface](arkts-basicservices-usbmanager-claiminterface-f.md#claiminterface)
-> claim通信接口。
+> API to claim a communication interface.
 
 **Since:** 18
 
@@ -34,18 +34,18 @@ function usbSubmitTransfer(transfer: UsbDataTransferParams): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| transfer | [UsbDataTransferParams](arkts-basicservices-usbmanager-usbdatatransferparams-i.md) | Yes | 作为通用USB数据传输接口，客户端需要填充这个对象中的参数，用以发起传输请求。 |
+| transfer | [UsbDataTransferParams](arkts-basicservices-usbmanager-usbdatatransferparams-i.md) | Yes | As a USB data transfer interface, it is required for a client to initiate a transfer request. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 801 | Capability not supported. |
-| 14400009 | Insufficient memory. Possible causes:  &lt;br&gt;1. Memory allocation failed. |
-| 14400008 | No such device (it may have been disconnected). |
-| 14400012 | Transmission I/O error. |
-| 14400001 | Access right denied. Call requestRight to get the USBDevicePipe access right first. |
-| 14400007 | Resource busy. Possible causes:  &lt;br&gt;1. The transfer has already been submitted.  &lt;br&gt;2. The interface is claimed by another program or driver. |
+| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. |
+| [14400009](../../apis-basic-services-kit/errorcode-usb.md#14400009-insufficient-memory) | Insufficient memory. Possible causes:  &lt;br&gt;1. Memory allocation failed. |
+| [14400008](../../apis-basic-services-kit/errorcode-usb.md#14400008-no-device-disconnected) | No such device (it may have been disconnected). |
+| [14400012](../../apis-basic-services-kit/errorcode-usb.md#14400012-io-error) | Transmission I/O error. |
+| [14400001](../../apis-basic-services-kit/errorcode-usb.md#14400001-usb-device-connection-denied) | Access right denied. Call requestRight to get the USBDevicePipe access right first. |
+| [14400007](../../apis-basic-services-kit/errorcode-usb.md#14400007-resource-busy) | Resource busy. Possible causes:  &lt;br&gt;1. The transfer has already been submitted.  &lt;br&gt;2. The interface is claimed by another program or driver. |
 
 ## Examples
 
@@ -61,19 +61,15 @@ function usbSubmitTransfer() {
     console.info(`device list is empty`);
     return;
   }
-  let device: usbManager.USBDevice = devicesList?.[0];
+  let device: usbManager.USBDevice = devicesList[0];
   usbManager.requestRight(device.name);
-  if (!usbManager.hasRight(device.name)) {
-    console.info(`request right fail`);
-    return;
-  }
   let devicepipe: usbManager.USBDevicePipe = usbManager.connectDevice(device);
   // Obtain the endpoint address.
-  let endpoint = device.configs?.[0]?.interfaces?.[0]?.endpoints.find((value) => {
+  let endpoint = device.configs[0].interfaces[0]?.endpoints.find((value) => {
     return value.direction === 0 && value.type === 2
   })
   // Obtain the first ID of the device.
-  let ret: number = usbManager.claimInterface(devicepipe, device.configs?.[0]?.interfaces?.[0], true);
+  let ret: number = usbManager.claimInterface(devicepipe, device.configs[0].interfaces[0], true);
 
   let transferParams: usbManager.UsbDataTransferParams = {
     devPipe: devicepipe,

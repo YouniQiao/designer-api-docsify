@@ -12,12 +12,6 @@ childprocess 对象可用于创建新的进程。
 
 **系统接口：** 此接口为系统接口。
 
-## 导入模块
-
-```TypeScript
-import { process } from 'kits/@kit.ArkTS';
-```
-
 ## close
 
 ```TypeScript

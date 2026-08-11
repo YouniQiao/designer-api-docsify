@@ -1,11 +1,5 @@
 # getManagedBrowserPolicy
 
-## 导入模块
-
-```TypeScript
-import { browser } from 'kits/@kit.MDMKit';
-```
-
 ## getManagedBrowserPolicy
 
 ```TypeScript
@@ -41,8 +35,8 @@ function getManagedBrowserPolicy(admin: Want, bundleName: string): ArrayBuffer
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
-| 9200001 | The application is not an administrator application of the device. |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| [9200001](../errorcode-enterpriseDeviceManager.md#9200001-应用没有激活成设备管理器) | The application is not an administrator application of the device. |
 
 ## 示例
 

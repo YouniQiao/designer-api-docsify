@@ -62,7 +62,7 @@ Type of the metrics event.
 playbackPosition: int
 ```
 
-The playback progress position when the event occurs.
+The playback progress position when the event occurs, in ms.
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
@@ -80,7 +80,7 @@ The playback progress position when the event occurs.
 timeStamp: long
 ```
 
-Absolute timestamp when the event occurred.
+Absolute timestamp when the event occurred, in ms.
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：long
 

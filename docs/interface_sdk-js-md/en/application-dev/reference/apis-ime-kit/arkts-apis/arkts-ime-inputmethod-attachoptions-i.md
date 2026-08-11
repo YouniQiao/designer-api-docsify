@@ -1,6 +1,6 @@
 # AttachOptions
 
-绑定输入法的附加选项。
+Attach options.
 
 **Since:** 23
 
@@ -22,7 +22,7 @@ import { inputMethod } from 'kits/@kit.IMEKit';
 requestKeyboardReason?: RequestKeyboardReason
 ```
 
-请求键盘输入的原因。
+The reason for request keyboard.
 
 **Type:** [RequestKeyboardReason](arkts-ime-inputmethod-requestkeyboardreason-e.md)
 
@@ -44,10 +44,7 @@ requestKeyboardReason?: RequestKeyboardReason
 showKeyboard?: boolean
 ```
 
-绑定输入法成功后，是否拉起输入法键盘。
-
-- true表示拉起。  
-- false表示不拉起。
+Whether to show the keyboard when attaching.
 
 **Type:** boolean
 

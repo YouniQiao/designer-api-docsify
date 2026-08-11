@@ -1,6 +1,6 @@
 # MediaError
 
-播放器的错误类型。
+Enumerates the error types of the player.
 
 **Since:** 23
 
@@ -16,7 +16,7 @@
 NETWORK_ERROR = 1
 ```
 
-网络错误。
+Network error.
 
 **Since:** 23
 
@@ -32,7 +32,7 @@ NETWORK_ERROR = 1
 FORMAT_ERROR = 2
 ```
 
-媒体格式错误。
+Media format error.
 
 **Since:** 23
 
@@ -48,7 +48,7 @@ FORMAT_ERROR = 2
 DECODE_ERROR = 3
 ```
 
-解码错误。
+Decoding error.
 
 **Since:** 23
 

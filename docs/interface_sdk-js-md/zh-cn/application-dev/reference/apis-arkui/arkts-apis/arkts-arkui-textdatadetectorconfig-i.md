@@ -54,7 +54,7 @@ decoration?: DecorationStyleInterface
 
 }
 
-**类型：** [DecorationStyleInterface](arkts-arkui-decorationstyleinterface-i.md)
+**类型：** [DecorationStyleInterface](arkts-arkui-styledstring-decorationstyleinterface-i.md)
 
 **起始版本：** 12
 
@@ -128,7 +128,7 @@ types: TextDataDetectorType[]
 
 设置文本识别的实体类型。设置types为null或者[]时，识别所有类型的实体，否则只识别指定类型的实体。
 
-**类型：** [TextDataDetectorType](arkts-arkui-textdatadetectortype-e.md)[]
+**类型：** [TextDataDetectorType](arkts-arkui-textcommon-textdatadetectortype-e.md)[]
 
 **起始版本：** 11
 

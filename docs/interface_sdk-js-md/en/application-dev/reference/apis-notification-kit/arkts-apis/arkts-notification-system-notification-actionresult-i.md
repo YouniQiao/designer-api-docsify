@@ -22,7 +22,7 @@ import { ActionResult, ShowNotificationOptions } from 'kits/@kit.NotificationKit
 abilityName: string
 ```
 
-单击通知后要重定向到的应用程序的Ability名称。
+Name of the application ability to which the notification will be redirected after being clicked.
 
 **Type:** string
 
@@ -42,7 +42,7 @@ abilityName: string
 bundleName: string
 ```
 
-单击通知后要重定向到的应用程序的Bundle名。
+Name of the application bundle to which the notification will be redirected after being clicked.
 
 **Type:** string
 
@@ -62,7 +62,7 @@ bundleName: string
 uri: string
 ```
 
-要重定向到的页面的uri。
+URI of the page to be redirected to.
 
 **Type:** string
 

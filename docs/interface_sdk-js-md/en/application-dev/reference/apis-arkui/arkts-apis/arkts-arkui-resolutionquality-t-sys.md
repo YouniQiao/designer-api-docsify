@@ -4,9 +4,7 @@
 export type ResolutionQuality = image.ResolutionQuality
 ```
 
-type ResolutionQuality = image.ResolutionQuality;
-
-画质效果等级类型。
+Enumerates all the levels available for the image resolution quality.
 
 **Since:** 23
 

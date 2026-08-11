@@ -1,6 +1,6 @@
 # IDecoratedV2Variable
 
-V2装饰的变量。
+Define V2 decorated variable interface.
 
 **Inheritance/Implementation:** IDecoratedV2Variable extends [IDecoratedVariable](arkts-arkui-decorator-idecoratedvariable-i.md)
 
@@ -18,7 +18,7 @@ V2装饰的变量。
 resetOnReuse(newValue: T): void
 ```
 
-当ComponentV2被重用时重置V2装饰变量。
+Reset V2 decorated variable when the ComponentV2 instance is reused.
 
 **Since:** 23
 

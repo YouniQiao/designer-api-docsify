@@ -1,6 +1,6 @@
 # DistributedHardwareType (System API)
 
-表示分布式硬件类型。
+Enumerates the types of the distributed hardware.
 
 **Since:** 11
 
@@ -18,7 +18,7 @@
 ALL = 0
 ```
 
-表示所有分布式硬件。
+All distributed hardware.
 
 **Since:** 11
 
@@ -36,7 +36,7 @@ ALL = 0
 CAMERA = 1
 ```
 
-表示分布式相机。
+Distributed camera.
 
 **Since:** 11
 
@@ -54,7 +54,7 @@ CAMERA = 1
 SCREEN = 8
 ```
 
-表示分布式屏幕。
+Distributed screen.
 
 **Since:** 11
 
@@ -72,7 +72,7 @@ SCREEN = 8
 MODEM_MIC = 256
 ```
 
-表示分布式移动通话的麦克风。
+Distributed microphone for mobile calls.
 
 **Since:** 11
 
@@ -90,7 +90,7 @@ MODEM_MIC = 256
 MODEM_SPEAKER = 512
 ```
 
-表示分布式移动通话的扬声器。
+Distributed speaker for mobile calls.
 
 **Since:** 11
 
@@ -108,7 +108,7 @@ MODEM_SPEAKER = 512
 MIC = 1024
 ```
 
-表示分布式麦克风。
+Distributed microphone.
 
 **Since:** 11
 
@@ -126,7 +126,7 @@ MIC = 1024
 SPEAKER = 2048
 ```
 
-表示分布式扬声器。
+Distributed speaker.
 
 **Since:** 11
 

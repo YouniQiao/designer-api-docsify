@@ -1,5 +1,10 @@
 # UploadRequestOptions
 
+> **NOTE：**
+> 
+> This API has been supported since API version 3 and deprecated since API version 9. You are advised to use
+> [UploadConfig](arkts-basicservices-agent-config-i.md) instead.
+
 **Since:** 3
 
 **ArkTS mode:** ArkTS-Dyn only, since version 3.

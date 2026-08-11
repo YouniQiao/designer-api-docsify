@@ -1,6 +1,6 @@
 # RecurrenceFrequency
 
-日程重复规则类型枚举。
+Enumerates the types of the event recurrence rule.
 
 **Since:** 10
 
@@ -16,7 +16,7 @@
 YEARLY = 0
 ```
 
-每年重复。
+Yearly.
 
 **Since:** 10
 
@@ -34,7 +34,7 @@ YEARLY = 0
 MONTHLY = 1
 ```
 
-每月重复。
+Monthly.
 
 **Since:** 10
 
@@ -52,7 +52,7 @@ MONTHLY = 1
 WEEKLY = 2
 ```
 
-每周重复。
+Weekly.
 
 **Since:** 10
 
@@ -70,7 +70,7 @@ WEEKLY = 2
 DAILY = 3
 ```
 
-每天重复。
+Daily.
 
 **Since:** 10
 

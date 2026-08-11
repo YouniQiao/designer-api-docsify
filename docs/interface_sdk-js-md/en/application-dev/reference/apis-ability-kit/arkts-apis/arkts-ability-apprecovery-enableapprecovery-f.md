@@ -12,7 +12,7 @@ import { appRecovery } from 'kits/@kit.AbilityKit';
 function enableAppRecovery(restart?: RestartFlag, saveOccasion?: SaveOccasionFlag, saveMode?: SaveModeFlag) : void
 ```
 
-使能应用恢复功能，参数按顺序填入。该接口调用后，应用从启动器启动时第一个Ability支持恢复。
+Enables application recovery. After this API is called, the first ability that is displayed when the application is started from the initiator can be restored.
 
 **Since:** 9
 
@@ -30,7 +30,7 @@ function enableAppRecovery(restart?: RestartFlag, saveOccasion?: SaveOccasionFla
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| restart | [RestartFlag](arkts-ability-apprecovery-restartflag-e.md) | No | 枚举类型，发生对应故障时是否重启，默认为重启。 |
-| saveOccasion | [SaveOccasionFlag](arkts-ability-apprecovery-saveoccasionflag-e.md) | No | 枚举类型，状态保存时机，默认为故障时保存。 |
-| saveMode | [SaveModeFlag](arkts-ability-apprecovery-savemodeflag-e.md) | No | 枚举类型，状态保存方式， 默认为文件缓存。 |
+| restart | [RestartFlag](arkts-ability-apprecovery-restartflag-e.md) | No | Whether the application is restarted upon a fault. By default, the application is restarted. |
+| saveOccasion | [SaveOccasionFlag](arkts-ability-apprecovery-saveoccasionflag-e.md) | No | Scenario for saving the application state. By default, the state is saved when a fault occurs. |
+| saveMode | [SaveModeFlag](arkts-ability-apprecovery-savemodeflag-e.md) | No | Application state saving mode. By default, the application state is written to the local file cache. |
 

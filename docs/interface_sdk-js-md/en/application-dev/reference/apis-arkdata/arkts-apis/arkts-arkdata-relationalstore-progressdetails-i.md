@@ -1,6 +1,6 @@
 # ProgressDetails
 
-描述数据库整体执行端云同步任务上传和下载的统计信息。
+Describes detail of the cloud sync {@code Progress}.
 
 **Since:** 10
 
@@ -22,7 +22,7 @@ import { relationalStore } from 'kits/@kit.ArkData';
 code: ProgressCode
 ```
 
-表示端云同步过程的状态。
+Describes the code of data sync progress.
 
 **Type:** [ProgressCode](arkts-arkdata-relationalstore-progresscode-e.md)
 
@@ -40,9 +40,9 @@ code: ProgressCode
 details: Record<string, TableDetails>
 ```
 
-表示端云同步各表的统计信息。
+Statistics of each table.
 
-键表示表名，值表示该表的端云同步过程统计信息。
+The key indicates the table name, and the value indicates the device-cloud sync statistics of the table.
 
 **Type:** [Record](../../apis-default/arkts-apis/arkts-record-t.md)&lt;string, TableDetails&gt;
 
@@ -60,7 +60,7 @@ details: Record<string, TableDetails>
 message?: string
 ```
 
-同步状态的详细消息。通过message信息查看详细的失败原因。默认值为空。
+Indicates the code message.
 
 **Type:** string
 
@@ -80,7 +80,7 @@ message?: string
 schedule: Progress
 ```
 
-表示端云同步过程。
+Describes the status of data sync progress.
 
 **Type:** [Progress](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-agent-progress-i.md)
 

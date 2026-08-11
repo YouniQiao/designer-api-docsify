@@ -1,6 +1,6 @@
 # ListDividerOptions
 
-定义List或ListItemGroup组件的分割线样式。
+Defines the divider style of the list or list item group.
 
 **Since:** 23
 
@@ -16,7 +16,7 @@
 color?: ResourceColor
 ```
 
-分割线颜色。匿名对象整改。
+Color of the divider.Anonymous Object Rectification.
 
 **Type:** [ResourceColor](arkts-arkui-resourcecolor-t.md)
 
@@ -38,7 +38,7 @@ color?: ResourceColor
 endMargin?: Length
 ```
 
-分割线与列表侧边结束端的距离。匿名对象整改。
+Distance between the divider and the end edge of the list.Anonymous Object Rectification.
 
 **Type:** [Length](arkts-arkui-length-t.md)
 
@@ -60,7 +60,7 @@ endMargin?: Length
 startMargin?: Length
 ```
 
-分割线与列表侧边起始端的距离。匿名对象整改。
+Distance between the divider and the start edge of the list.Anonymous Object Rectification.
 
 **Type:** [Length](arkts-arkui-length-t.md)
 
@@ -82,7 +82,7 @@ startMargin?: Length
 strokeWidth: Length
 ```
 
-分割线的线宽。匿名对象整改。
+Width of the divider.Anonymous Object Rectification.
 
 **Type:** [Length](arkts-arkui-length-t.md)
 

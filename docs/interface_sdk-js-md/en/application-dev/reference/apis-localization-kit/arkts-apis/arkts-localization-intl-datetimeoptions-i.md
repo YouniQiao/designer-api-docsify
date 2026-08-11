@@ -1,14 +1,10 @@
 # DateTimeOptions
 
-时间日期格式化时可设置的配置项。从API version 9开始，DateTimeOptions的属性由必填改为可选。
+Defines the options for a DateTimeOptions object. Since API version 9, the DateTimeOptions attribute is changed from mandatory to optional.
 
-**Since:** 6
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 6.
-
-**Deprecated since:** 20
-
-**Substitutes:** [Intl.DateTimeFormatOptions](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/DateTimeFormat/DateTimeFormat#options)
+**ArkTS mode:** ArkTS-Sta only, since version 23.
 
 <!--Device-intl-export interface DateTimeOptions--><!--Device-intl-export interface DateTimeOptions-End-->
 
@@ -26,25 +22,13 @@ import { intl } from 'kits/@kit.LocalizationKit';
 dateStyle?: string
 ```
 
-日期显示格式，取值包括：
-
-"long", "short", "medium", "full", "auto"。
-
-不同取值的显示效果请参考[附录表1](../../../reference/apis-localization-kit/js-apis-intl.md#附录)。
+Date display format. The value can be: "long", "short", "medium", "full", or "auto".
 
 **Type:** string
 
-**Since:** 6
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 6.
-
-**Deprecated since:** 20
-
-**Substitutes:** [Intl.DateTimeFormatOptions.dateStyle](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/DateTimeFormat/DateTimeFormat#datestyle)
-
-**Atomic service API:** This API can be used in atomic services since API version 12.
-
-**Widget capability:** This API can be used in ArkTS widgets since API version 11.
+**ArkTS mode:** ArkTS-Sta only, since version 23.
 
 <!--Device-DateTimeOptions-dateStyle?: string--><!--Device-DateTimeOptions-dateStyle?: string-End-->
 
@@ -56,23 +40,13 @@ dateStyle?: string
 day?: string
 ```
 
-日期的显示格式，取值包括：
-
-"numeric", "2-digit"。
+Day display format. The value can be: "numeric" or "2-digit".
 
 **Type:** string
 
-**Since:** 6
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 6.
-
-**Deprecated since:** 20
-
-**Substitutes:** [Intl.DateTimeFormatOptions.day](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/DateTimeFormat/DateTimeFormat#day)
-
-**Atomic service API:** This API can be used in atomic services since API version 12.
-
-**Widget capability:** This API can be used in ArkTS widgets since API version 11.
+**ArkTS mode:** ArkTS-Sta only, since version 23.
 
 <!--Device-DateTimeOptions-day?: string--><!--Device-DateTimeOptions-day?: string-End-->
 
@@ -84,25 +58,13 @@ day?: string
 dayPeriod?: string
 ```
 
-时段的显示格式，取值包括：
-
-"long", "short", "narrow", "auto"。
-
-不同取值的显示效果请参考[附录表10](../../../reference/apis-localization-kit/js-apis-intl.md#附录)。
+Time period display format. The value can be: "long", "short", "narrow", or "auto".
 
 **Type:** string
 
-**Since:** 6
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 6.
-
-**Deprecated since:** 20
-
-**Substitutes:** [Intl.DateTimeFormatOptions.dayPeriod](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/DateTimeFormat/DateTimeFormat#dayperiod)
-
-**Atomic service API:** This API can be used in atomic services since API version 12.
-
-**Widget capability:** This API can be used in ArkTS widgets since API version 11.
+**ArkTS mode:** ArkTS-Sta only, since version 23.
 
 <!--Device-DateTimeOptions-dayPeriod?: string--><!--Device-DateTimeOptions-dayPeriod?: string-End-->
 
@@ -114,25 +76,13 @@ dayPeriod?: string
 era?: string
 ```
 
-纪元的显示格式，取值包括：
-
-"long", "short", "narrow", "auto"。
-
-不同取值的显示效果请参考[附录表9](../../../reference/apis-localization-kit/js-apis-intl.md#附录)。
+Epoch display format. The value can be: "long", "short", "narrow", or "auto".
 
 **Type:** string
 
-**Since:** 6
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 6.
-
-**Deprecated since:** 20
-
-**Substitutes:** [Intl.DateTimeFormatOptions.era](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/DateTimeFormat/DateTimeFormat#era)
-
-**Atomic service API:** This API can be used in atomic services since API version 12.
-
-**Widget capability:** This API can be used in ArkTS widgets since API version 11.
+**ArkTS mode:** ArkTS-Sta only, since version 23.
 
 <!--Device-DateTimeOptions-era?: string--><!--Device-DateTimeOptions-era?: string-End-->
 
@@ -144,25 +94,13 @@ era?: string
 formatMatcher?: string
 ```
 
-要使用的格式匹配算法，取值包括：
-
-"basic"：精确匹配。
-
-"best fit"：最佳匹配。
+Format matching algorithm. The value can be:"basic": exact match."best fit": best match.
 
 **Type:** string
 
-**Since:** 6
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 6.
-
-**Deprecated since:** 20
-
-**Substitutes:** [Intl.DateTimeFormatOptions.formatMatcher](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/DateTimeFormat/DateTimeFormat#formatmatcher)
-
-**Atomic service API:** This API can be used in atomic services since API version 12.
-
-**Widget capability:** This API can be used in ArkTS widgets since API version 11.
+**ArkTS mode:** ArkTS-Sta only, since version 23.
 
 <!--Device-DateTimeOptions-formatMatcher?: string--><!--Device-DateTimeOptions-formatMatcher?: string-End-->
 
@@ -174,23 +112,13 @@ formatMatcher?: string
 hour?: string
 ```
 
-小时的显示格式，取值包括：
-
-"numeric", "2-digit"。
+Hour display format. The value can be: "numeric" or "2-digit".
 
 **Type:** string
 
-**Since:** 6
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 6.
-
-**Deprecated since:** 20
-
-**Substitutes:** [Intl.DateTimeFormatOptions.hour](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/DateTimeFormat/DateTimeFormat#hour)
-
-**Atomic service API:** This API can be used in atomic services since API version 12.
-
-**Widget capability:** This API can be used in ArkTS widgets since API version 11.
+**ArkTS mode:** ArkTS-Sta only, since version 23.
 
 <!--Device-DateTimeOptions-hour?: string--><!--Device-DateTimeOptions-hour?: string-End-->
 
@@ -202,25 +130,13 @@ hour?: string
 hour12?: boolean
 ```
 
-true表示使用12小时制，false表示使用24小时制。
-
-同时设置hour12和hourCycle时，hourCycle不生效。
-
-若hour12和hourCycle未设置且系统24小时开关打开时，hour12属性的默认值为false。
+Whether to use the 12-hour clock. The value true means to use the 12-hour clock, and the value false means the opposite. If both hour12 and hourCycle are set, hourCycle does not take effect. If hour12 and hourCycle are not set and the 24-hour clock is turned on, the default value of hour12 is false.
 
 **Type:** boolean
 
-**Since:** 6
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 6.
-
-**Deprecated since:** 20
-
-**Substitutes:** [Intl.DateTimeFormatOptions.hour12](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/DateTimeFormat/DateTimeFormat#hour12)
-
-**Atomic service API:** This API can be used in atomic services since API version 12.
-
-**Widget capability:** This API can be used in ArkTS widgets since API version 11.
+**ArkTS mode:** ArkTS-Sta only, since version 23.
 
 <!--Device-DateTimeOptions-hour12?: boolean--><!--Device-DateTimeOptions-hour12?: boolean-End-->
 
@@ -232,27 +148,13 @@ true表示使用12小时制，false表示使用24小时制。
 hourCycle?: string
 ```
 
-时制格式，取值包括：
-
-"h11", "h12", "h23", "h24"。
-
-不设置dateStyle或timeStyle参数时的显示效果请参考[附录表5](../../../reference/apis-localization-kit/js-apis-intl.md#附录)。
-
-设置dateStyle或timeStyle参数时的显示效果请参考[附录表6](../../../reference/apis-localization-kit/js-apis-intl.md#附录)。
+Hour cycle. The value can be: "h11", "h12", "h23", or "h24".
 
 **Type:** string
 
-**Since:** 6
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 6.
-
-**Deprecated since:** 20
-
-**Substitutes:** [Intl.DateTimeFormatOptions.hourCycle](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/DateTimeFormat/DateTimeFormat#hourcycle)
-
-**Atomic service API:** This API can be used in atomic services since API version 12.
-
-**Widget capability:** This API can be used in ArkTS widgets since API version 11.
+**ArkTS mode:** ArkTS-Sta only, since version 23.
 
 <!--Device-DateTimeOptions-hourCycle?: string--><!--Device-DateTimeOptions-hourCycle?: string-End-->
 
@@ -264,21 +166,13 @@ hourCycle?: string
 locale?: string
 ```
 
-合法的区域ID，如：zh-Hans-CN。
-
-默认值：系统当前区域ID。
+Valid locale ID, for example, "zh-Hans-CN". The default value is the current system locale.
 
 **Type:** string
 
-**Since:** 6
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 6.
-
-**Deprecated since:** 20
-
-**Atomic service API:** This API can be used in atomic services since API version 12.
-
-**Widget capability:** This API can be used in ArkTS widgets since API version 11.
+**ArkTS mode:** ArkTS-Sta only, since version 23.
 
 <!--Device-DateTimeOptions-locale?: string--><!--Device-DateTimeOptions-locale?: string-End-->
 
@@ -290,25 +184,13 @@ locale?: string
 localeMatcher?: string
 ```
 
-要使用的区域匹配算法，取值包括：
-
-"lookup"：精确匹配。
-
-"best fit"：最佳匹配。
+Locale matching algorithm. The value can be:"lookup": exact match."best fit": best match.
 
 **Type:** string
 
-**Since:** 6
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 6.
-
-**Deprecated since:** 20
-
-**Substitutes:** [Intl.DateTimeFormatOptions.localeMatcher](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/DateTimeFormat/DateTimeFormat#localematcher)
-
-**Atomic service API:** This API can be used in atomic services since API version 12.
-
-**Widget capability:** This API can be used in ArkTS widgets since API version 11.
+**ArkTS mode:** ArkTS-Sta only, since version 23.
 
 <!--Device-DateTimeOptions-localeMatcher?: string--><!--Device-DateTimeOptions-localeMatcher?: string-End-->
 
@@ -320,23 +202,13 @@ localeMatcher?: string
 minute?: string
 ```
 
-分钟的显示格式，取值包括：
-
-"numeric", "2-digit"。
+Minute display format. The value can be: "numeric" or "2-digit".
 
 **Type:** string
 
-**Since:** 6
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 6.
-
-**Deprecated since:** 20
-
-**Substitutes:** [Intl.DateTimeFormatOptions.minute](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/DateTimeFormat/DateTimeFormat#minute)
-
-**Atomic service API:** This API can be used in atomic services since API version 12.
-
-**Widget capability:** This API can be used in ArkTS widgets since API version 11.
+**ArkTS mode:** ArkTS-Sta only, since version 23.
 
 <!--Device-DateTimeOptions-minute?: string--><!--Device-DateTimeOptions-minute?: string-End-->
 
@@ -348,25 +220,13 @@ minute?: string
 month?: string
 ```
 
-月份的显示格式，取值包括：
-
-"numeric", "2-digit", "long", "short", "narrow", "auto"。
-
-不同取值的显示效果请参考[附录表7](../../../reference/apis-localization-kit/js-apis-intl.md#附录)。
+Month display format. The value can be: "numeric", "2-digit", "long", "short", "narrow", or "auto".
 
 **Type:** string
 
-**Since:** 6
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 6.
-
-**Deprecated since:** 20
-
-**Substitutes:** [Intl.DateTimeFormatOptions.month](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/DateTimeFormat/DateTimeFormat#month)
-
-**Atomic service API:** This API can be used in atomic services since API version 12.
-
-**Widget capability:** This API can be used in ArkTS widgets since API version 11.
+**ArkTS mode:** ArkTS-Sta only, since version 23.
 
 <!--Device-DateTimeOptions-month?: string--><!--Device-DateTimeOptions-month?: string-End-->
 
@@ -378,23 +238,13 @@ month?: string
 numberingSystem?: string
 ```
 
-数字系统，取值包括：
-
-"adlm", "ahom", "arab", "arabext", "bali", "beng", "bhks", "brah", "cakm", "cham", "deva", "diak", "fullwide","gong", "gonm", "gujr", "guru", "hanidec", "hmng", "hmnp", "java", "kali", "khmr", "knda", "lana", "lanatham","laoo", "latn", "lepc", "limb", "mathbold", "mathdbl", "mathmono", "mathsanb", "mathsans", "mlym", "modi", "mong","mroo", "mtei", "mymr", "mymrshan", "mymrtlng", "newa", "nkoo", "olck", "orya", "osma", "rohg", "saur", "segment","shrd", "sind", "sinh", "sora", "sund", "takr", "talu", "tamldec", "telu", "thai", "tibt", "tirh", "vaii","wara", "wcho"。
+Numbering system. The value can be: "adlm", "ahom", "arab", "arabext", "bali", "beng", "bhks","brah", "cakm", "cham", "deva", "diak", "fullwide", "gong", "gonm", "gujr", "guru", "hanidec", "hmng", "hmnp","java", "kali", "khmr", "knda", "lana", "lanatham", "laoo", "latn", "lepc", "limb", "mathbold", "mathdbl","mathmono", "mathsanb", "mathsans", "mlym", "modi", "mong", "mroo", "mtei", "mymr", "mymrshan", "mymrtlng","newa", "nkoo", "olck", "orya", "osma", "rohg", "saur", "segment", "shrd", "sind", "sinh", "sora", "sund","takr", "talu", "tamldec", "telu", "thai", "tibt", "tirh", "vaii", "wara", or "wcho".
 
 **Type:** string
 
-**Since:** 6
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 6.
-
-**Deprecated since:** 20
-
-**Substitutes:** [Intl.DateTimeFormatOptions.numberingSystem](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/DateTimeFormat/DateTimeFormat#numberingsystem)
-
-**Atomic service API:** This API can be used in atomic services since API version 12.
-
-**Widget capability:** This API can be used in ArkTS widgets since API version 11.
+**ArkTS mode:** ArkTS-Sta only, since version 23.
 
 <!--Device-DateTimeOptions-numberingSystem?: string--><!--Device-DateTimeOptions-numberingSystem?: string-End-->
 
@@ -406,23 +256,13 @@ numberingSystem?: string
 second?: string
 ```
 
-秒钟的显示格式，取值包括：
-
-"numeric", "2-digit"。
+Second display format. The value can be: "numeric" or "2-digit".
 
 **Type:** string
 
-**Since:** 6
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 6.
-
-**Deprecated since:** 20
-
-**Substitutes:** [Intl.DateTimeFormatOptions.second](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/DateTimeFormat/DateTimeFormat#second)
-
-**Atomic service API:** This API can be used in atomic services since API version 12.
-
-**Widget capability:** This API can be used in ArkTS widgets since API version 11.
+**ArkTS mode:** ArkTS-Sta only, since version 23.
 
 <!--Device-DateTimeOptions-second?: string--><!--Device-DateTimeOptions-second?: string-End-->
 
@@ -434,25 +274,13 @@ second?: string
 timeStyle?: string
 ```
 
-时间显示格式，取值包括：
-
-"long", "short", "medium", "full", "auto"。
-
-不同取值的显示效果请参考[附录表2](../../../reference/apis-localization-kit/js-apis-intl.md#附录)。
+Time display format. The value can be: "long", "short", "medium", "full", or "auto".
 
 **Type:** string
 
-**Since:** 6
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 6.
-
-**Deprecated since:** 20
-
-**Substitutes:** [Intl.DateTimeFormatOptions.timeStyle](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/DateTimeFormat/DateTimeFormat#timestyle)
-
-**Atomic service API:** This API can be used in atomic services since API version 12.
-
-**Widget capability:** This API can be used in ArkTS widgets since API version 11.
+**ArkTS mode:** ArkTS-Sta only, since version 23.
 
 <!--Device-DateTimeOptions-timeStyle?: string--><!--Device-DateTimeOptions-timeStyle?: string-End-->
 
@@ -464,21 +292,13 @@ timeStyle?: string
 timeZone?: string
 ```
 
-使用的时区，取值为合法的IANA时区ID。
+Time zone in use. The value is a valid IANA time zone ID.
 
 **Type:** string
 
-**Since:** 6
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 6.
-
-**Deprecated since:** 20
-
-**Substitutes:** [Intl.DateTimeFormatOptions.timeZone](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/DateTimeFormat/DateTimeFormat#timezone)
-
-**Atomic service API:** This API can be used in atomic services since API version 12.
-
-**Widget capability:** This API can be used in ArkTS widgets since API version 11.
+**ArkTS mode:** ArkTS-Sta only, since version 23.
 
 <!--Device-DateTimeOptions-timeZone?: string--><!--Device-DateTimeOptions-timeZone?: string-End-->
 
@@ -490,25 +310,13 @@ timeZone?: string
 timeZoneName?: string
 ```
 
-时区名称的本地化表示，取值包括：
-
-"long", "short", "auto"。
-
-不同取值的显示效果请参考[附录表8](../../../reference/apis-localization-kit/js-apis-intl.md#附录)。
+Localized representation of a time zone name. The value can be: "long", "short", or "auto".
 
 **Type:** string
 
-**Since:** 6
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 6.
-
-**Deprecated since:** 20
-
-**Substitutes:** [Intl.DateTimeFormatOptions.timeZoneName](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/DateTimeFormat/DateTimeFormat#timezonename)
-
-**Atomic service API:** This API can be used in atomic services since API version 12.
-
-**Widget capability:** This API can be used in ArkTS widgets since API version 11.
+**ArkTS mode:** ArkTS-Sta only, since version 23.
 
 <!--Device-DateTimeOptions-timeZoneName?: string--><!--Device-DateTimeOptions-timeZoneName?: string-End-->
 
@@ -520,25 +328,13 @@ timeZoneName?: string
 weekday?: string
 ```
 
-星期的显示格式，取值包括：
-
-"long", "short", "narrow", "auto"。
-
-不同取值的显示效果请参考[附录表4](../../../reference/apis-localization-kit/js-apis-intl.md#附录)。
+Week display format. The value can be: "long", "short", "narrow", or "auto".
 
 **Type:** string
 
-**Since:** 6
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 6.
-
-**Deprecated since:** 20
-
-**Substitutes:** [Intl.DateTimeFormatOptions.weekday](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/DateTimeFormat/DateTimeFormat#weekday)
-
-**Atomic service API:** This API can be used in atomic services since API version 12.
-
-**Widget capability:** This API can be used in ArkTS widgets since API version 11.
+**ArkTS mode:** ArkTS-Sta only, since version 23.
 
 <!--Device-DateTimeOptions-weekday?: string--><!--Device-DateTimeOptions-weekday?: string-End-->
 
@@ -550,25 +346,13 @@ weekday?: string
 year?: string
 ```
 
-年份的显示格式，取值包括：
-
-"numeric", "2-digit"。
-
-不同取值的显示效果请参考[附录表3](../../../reference/apis-localization-kit/js-apis-intl.md#附录)。
+Year display format. The value can be: "numeric" or "2-digit".
 
 **Type:** string
 
-**Since:** 6
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 6.
-
-**Deprecated since:** 20
-
-**Substitutes:** [Intl.DateTimeFormatOptions.year](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/DateTimeFormat/DateTimeFormat#year)
-
-**Atomic service API:** This API can be used in atomic services since API version 12.
-
-**Widget capability:** This API can be used in ArkTS widgets since API version 11.
+**ArkTS mode:** ArkTS-Sta only, since version 23.
 
 <!--Device-DateTimeOptions-year?: string--><!--Device-DateTimeOptions-year?: string-End-->
 

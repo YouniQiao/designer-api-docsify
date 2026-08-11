@@ -36,7 +36,7 @@ constructor(width: double, height: double, settings?: RenderingContextSettings, 
 | --- | --- | --- | --- |
 | width | double | 是 | 离屏画布的宽度，默认单位：vp。 异常值NaN和Infinity按无效值处理。 |
 | height | double | 是 | 离屏画布的高度，默认单位：vp。 异常值NaN和Infinity按无效值处理。 |
-| settings | [RenderingContextSettings](arkts-arkui-canvas-renderingcontextsettings-c.md) | 否 | 用来配置OffscreenCanvasRenderingContext2D 对象的参数，见RenderingContextSettings。 异常值undefined按RenderingContextSettings的默认值处理。默认值：null。 |
+| settings | [RenderingContextSettings](arkts-arkui-renderingcontextsettings-c.md) | 否 | 用来配置OffscreenCanvasRenderingContext2D 对象的参数，见RenderingContextSettings。 异常值undefined按RenderingContextSettings的默认值处理。默认值：null。 |
 | unit | [LengthMetricsUnit](arkts-arkui-lengthmetricsunit-t.md) | 否 | 用来配置OffscreenCanvasRenderingContext2D对象的单位模式， 配置后无法动态更改。异常值undefined、NaN和Infinity按默认值处理。默认值：DEFAULT。 |
 
 ## toDataURL

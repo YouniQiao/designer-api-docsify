@@ -1,13 +1,10 @@
 # appStorageV2
 
-状态管理
-
-
 ## Summary
 
 ### Classes
 
 | Name | Description |
 | --- | --- |
-| [AppStorageV2](arkts-arkui-appstoragev2-appstoragev2-c.md) | 状态管理模块提供了应用程序动态刷新、UI数据存储、使能数据观察等能力。 |
+| [AppStorageV2](arkts-arkui-appstoragev2-appstoragev2-c.md) | AppStorageV2 is for UI state of app-wide access, has same life cycle as the app,and saves database content only in memory. |
 

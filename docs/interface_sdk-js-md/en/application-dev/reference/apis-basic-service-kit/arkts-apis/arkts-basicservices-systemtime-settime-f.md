@@ -12,7 +12,7 @@ import { systemTime } from 'kits/@kit.BasicServicesKit';
 function setTime(time: number, callback: AsyncCallback<void>): void
 ```
 
-设置系统时间，使用callback异步回调。
+Sets the system time. This API uses an asynchronous callback to return the result.
 
 **Since:** 7
 
@@ -32,8 +32,8 @@ function setTime(time: number, callback: AsyncCallback<void>): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| time | number | Yes | 目标时间戳（ms）。 |
-| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | 回调函数。 |
+| time | number | Yes | Timestamp to set, in milliseconds. |
+| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. |
 
 **Error codes:**
 
@@ -51,7 +51,7 @@ let time = 1611081385000;
 try {
   systemTime.setTime(time, (error: BusinessError) => {
     if (error) {
-      console.info(`Failed to set time. message: ${error.message}, code: ${error.code}`);
+      console.info(`Failed to setting time. message: ${error.message}, code: ${error.code}`);
       return;
     }
     console.info(`Succeeded in setting time`);
@@ -69,7 +69,7 @@ try {
 function setTime(time: number): Promise<void>
 ```
 
-设置系统时间，使用Promise异步回调。
+Sets the system time. This API uses a promise to return the result.
 
 **Since:** 7
 
@@ -89,13 +89,13 @@ function setTime(time: number): Promise<void>
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| time | number | Yes | 目标时间戳（ms）。 |
+| time | number | Yes | Timestamp to set, in milliseconds. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | 无返回结果的Promise对象。 |
+| Promise&lt;void&gt; | Promise that returns no value. |
 
 **Error codes:**
 
@@ -114,7 +114,7 @@ try {
   systemTime.setTime(time).then(() => {
     console.info(`Succeeded in setting time.`);
   }).catch((error: BusinessError) => {
-    console.info(`Failed to set time. message: ${error.message}, code: ${error.code}`);
+    console.info(`Failed to setting time. message: ${error.message}, code: ${error.code}`);
   });
 } catch(e) {
   let error = e as BusinessError;

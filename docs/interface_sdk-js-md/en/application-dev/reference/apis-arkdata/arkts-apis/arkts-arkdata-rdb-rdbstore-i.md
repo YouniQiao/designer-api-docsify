@@ -1,9 +1,9 @@
 # RdbStore
 
-提供管理关系数据库（RDB）方法的接口。
+Provides APIs for managing data in an RDB store.
 
-在使用以下相关接口前，请使用  
-[executeSql](arkts-arkdata-rdb-rdbstore-i.md#executesql)接口初始化数据库表结构和相关数据。
+Before using the APIs of this class, use   
+[executeSql](arkts-arkdata-rdb-rdbstore-i.md#executesql)to initialize the database table structure and related data.
 
 **Since:** 7
 
@@ -23,7 +23,7 @@
 batchInsert(table: string, values: Array<ValuesBucket>, callback: AsyncCallback<number>): void
 ```
 
-向目标表中插入一组数据，使用callback异步回调。
+Inserts a batch of data into a table. This API uses an asynchronous callback to return the result.
 
 **Since:** 7
 
@@ -41,9 +41,9 @@ batchInsert(table: string, values: Array<ValuesBucket>, callback: AsyncCallback<
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| table | string | Yes | 指定的目标表名，不能为空字符串。 |
-| values | Array&lt;ValuesBucket&gt; | Yes | 表示要插入到表中的一组数据。 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;number&gt; | Yes | 回调函数。当操作成功，err为undefined，data为插入的数据个数；否则为错误对象。 |
+| table | string | Yes | Name of the target table. |
+| values | Array&lt;ValuesBucket&gt; | Yes | An array of data to insert. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;number&gt; | Yes | Callback used to return the result. If the operation is successful, the number of inserted data records is returned. Otherwise, **-1** is returned. |
 
 ## Examples
 
@@ -101,7 +101,7 @@ rdbStore.batchInsert("EMPLOYEE", valueBuckets, (status: number, insertNum: numbe
 batchInsert(table: string, values: Array<ValuesBucket>): Promise<number>
 ```
 
-向目标表中插入一组数据，使用Promise异步回调。
+Inserts a batch of data into a table. This API uses a promise to return the result.
 
 **Since:** 7
 
@@ -119,14 +119,14 @@ batchInsert(table: string, values: Array<ValuesBucket>): Promise<number>
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| table | string | Yes | 指定的目标表名，不能为空字符串。 |
-| values | Array&lt;ValuesBucket&gt; | Yes | 表示要插入到表中的一组数据。 |
+| table | string | Yes | Name of the target table. |
+| values | Array&lt;ValuesBucket&gt; | Yes | An array of data to insert. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;number&gt; | Promise对象。如果操作成功，返回插入的数据个数，否则返回-1。 |
+| Promise&lt;number&gt; | Promise used to return the result. If the operation is successful, the number of inserted data records is returned. Otherwise, **-1** is returned. |
 
 ## Examples
 
@@ -183,7 +183,7 @@ promise.then((insertNum: number) => {
 beginTransaction(): void
 ```
 
-在开始执行SQL语句之前，开始事务。
+Starts the transaction before executing an SQL statement.
 
 **Since:** 8
 
@@ -232,7 +232,7 @@ data_rdb.getRdbStore(this.context, "RdbTest.db", 1, async (err: BusinessError, r
 commit(): void
 ```
 
-提交已执行的SQL语句。
+Commits the executed SQL statements.
 
 **Since:** 8
 
@@ -281,7 +281,7 @@ data_rdb.getRdbStore(this.context, "RdbTest.db", 1, async (err: BusinessError, r
 delete(predicates: RdbPredicates, callback: AsyncCallback<number>): void
 ```
 
-根据RdbPredicates的指定实例对象从数据库中删除数据，使用callback异步回调。
+Deletes data from the RDB store based on the specified **RdbPredicates** object. This API uses an asynchronous callback to return the result.
 
 **Since:** 7
 
@@ -299,8 +299,8 @@ delete(predicates: RdbPredicates, callback: AsyncCallback<number>): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| predicates | [RdbPredicates](arkts-arkdata-relationalstore-rdbpredicates-c.md) | Yes | RdbPredicates的实例对象指定的删除条件。 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;number&gt; | Yes | 回调函数。当操作成功，err为undefined，data为受影响的行数；否则为错误对象。 |
+| predicates | [RdbPredicates](arkts-arkdata-relationalstore-rdbpredicates-c.md) | Yes | Deletion conditions specified by the **RdbPredicates** object. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;number&gt; | Yes | Callback used to return the number of rows deleted. |
 
 ## Examples
 
@@ -322,7 +322,7 @@ rdbStore.delete(predicates, (err: BusinessError, rows: number) => {
 delete(predicates: RdbPredicates): Promise<number>
 ```
 
-根据RdbPredicates的指定实例对象从数据库中删除数据，使用Promise异步回调。
+Deletes data from the RDB store based on the specified **RdbPredicates** object. This API uses a promise to return the result.
 
 **Since:** 7
 
@@ -340,13 +340,13 @@ delete(predicates: RdbPredicates): Promise<number>
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| predicates | [RdbPredicates](arkts-arkdata-relationalstore-rdbpredicates-c.md) | Yes | RdbPredicates的实例对象指定的删除条件。 |
+| predicates | [RdbPredicates](arkts-arkdata-relationalstore-rdbpredicates-c.md) | Yes | Deletion conditions specified by the **RdbPredicates** object. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;number&gt; | Promise对象。返回受影响的行数。 |
+| Promise&lt;number&gt; | Promise used to return the number of rows deleted. |
 
 ## Examples
 
@@ -367,7 +367,7 @@ promise.then((rows: number) => {
 executeSql(sql: string, bindArgs: Array<ValueType>, callback: AsyncCallback<void>): void
 ```
 
-执行包含指定参数但不返回值的SQL语句，使用callback异步回调。
+Executes an SQL statement that contains specified arguments but returns no value. This API uses an asynchronous callback to return the result.
 
 **Since:** 8
 
@@ -385,9 +385,9 @@ executeSql(sql: string, bindArgs: Array<ValueType>, callback: AsyncCallback<void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| sql | string | Yes | 指定要执行的SQL语句，不能为空字符串。 |
-| bindArgs | Array&lt;ValueType&gt; | Yes | SQL语句中参数的值。该值与sql参数语句中的占位符相对应。当sql参数语句完整时，该参数需为空数组。 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | 回调函数。当操作成功，err为undefined；否则为错误对象。 |
+| sql | string | Yes | SQL statement to run. |
+| bindArgs | Array&lt;ValueType&gt; | Yes | Arguments in the SQL statement. The value corresponds to the placeholders in the SQL parameter statement. If the SQL parameter statement is complete, the value of this parameter must be an empty array. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. |
 
 ## Examples
 
@@ -408,7 +408,7 @@ rdbStore.executeSql(SQL_DELETE_TABLE, ['zhangsan'], (err: BusinessError) => {
 executeSql(sql: string, bindArgs?: Array<ValueType>): Promise<void>
 ```
 
-执行包含指定参数但不返回值的SQL语句，使用Promise异步回调。
+Executes an SQL statement that contains specified arguments but returns no value. This API uses a promise to return the result.
 
 **Since:** 8
 
@@ -426,14 +426,14 @@ executeSql(sql: string, bindArgs?: Array<ValueType>): Promise<void>
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| sql | string | Yes | 指定要执行的SQL语句，不能为空字符串。 |
-| bindArgs | Array&lt;ValueType&gt; | No | SQL语句中参数的值。该值与sql参数语句中的占位符相对应。当sql参数语句完整时，该参数不填。 |
+| sql | string | Yes | SQL statement to run. |
+| bindArgs | Array&lt;ValueType&gt; | No | Arguments in the SQL statement. The value corresponds to the placeholders in the SQL parameter statement. If the SQL parameter statement is complete, leave this parameter blank. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise对象，无返回结果。 |
+| Promise&lt;void&gt; | Promise that returns no value. |
 
 ## Examples
 
@@ -453,7 +453,7 @@ promise.then(() => {
 insert(table: string, values: ValuesBucket, callback: AsyncCallback<number>): void
 ```
 
-向目标表中插入一行数据，使用callback异步回调。
+Inserts a row of data into a table. This API uses an asynchronous callback to return the result.
 
 **Since:** 7
 
@@ -471,9 +471,9 @@ insert(table: string, values: ValuesBucket, callback: AsyncCallback<number>): vo
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| table | string | Yes | 指定的目标表名，不能为空字符串。 |
-| values | [ValuesBucket](arkts-arkdata-rdb-valuesbucket-t.md) | Yes | 表示要插入到表中的数据行。 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;number&gt; | Yes | 回调函数。当操作成功，err为undefined，data为行ID；否则为错误对象。 |
+| table | string | Yes | Name of the target table. |
+| values | [ValuesBucket](arkts-arkdata-rdb-valuesbucket-t.md) | Yes | Row of data to insert. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;number&gt; | Yes | Callback used to return the result. If the operation is successful, the row ID will be returned. Otherwise, **-1** will be returned. |
 
 ## Examples
 
@@ -510,7 +510,7 @@ rdbStore.insert("EMPLOYEE", valueBucket, (status: number, rowId: number) => {
 insert(table: string, values: ValuesBucket): Promise<number>
 ```
 
-向目标表中插入一行数据，使用Promise异步回调。
+Inserts a row of data into a table. This API uses a promise to return the result.
 
 **Since:** 7
 
@@ -528,14 +528,14 @@ insert(table: string, values: ValuesBucket): Promise<number>
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| table | string | Yes | 指定的目标表名，不能为空字符串。 |
-| values | [ValuesBucket](arkts-arkdata-rdb-valuesbucket-t.md) | Yes | 表示要插入到表中的数据行。 |
+| table | string | Yes | Name of the target table. |
+| values | [ValuesBucket](arkts-arkdata-rdb-valuesbucket-t.md) | Yes | Row of data to insert. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;number&gt; | Promise对象。如果操作成功，返回行ID；否则返回-1。 |
+| Promise&lt;number&gt; | Promise used to return the result. If the operation is successful, the row ID will be returned. Otherwise, **-1** will be returned. |
 
 ## Examples
 
@@ -571,13 +571,14 @@ promise.then((rowId: BusinessError) => {
 obtainDistributedTableName(device: string, table: string, callback: AsyncCallback<string>): void
 ```
 
-根据远程设备的本地表名获取指定远程设备的分布式表名。在查询远程设备数据库时，需要使用分布式表名，使用callback异步回调。
+Obtains the distributed table name of a remote device based on the local table name of the device. The distributed table name is required when the RDB store of a remote device is queried. This API uses an asynchronous callback to return the result.
 
-> **说明：**
-> 
-> 其中device通过调用&lt;!--RP1--&gt;
+> **NOTE：**
+
+> The value of **device** can be obtained by &lt;!--RP1--&gt;
 > [deviceManager.getTrustedDeviceListSync](../../apis-distributed-service-kit/arkts-apis/arkts-distributedservice-devicemanager-devicemanager-i-sys.md/arkts-distributedservice-devicemanager-devicemanager-i-sys.md#gettrusteddevicelistsync)
-> 方法得到。&lt;!--RP1End--&gt;deviceManager模块的接口均为系统接口，仅系统应用可用。
+> . &lt;!--RP1End--&gt;The APIs of the **deviceManager** module are system interfaces and available only to system
+> applications.
 
 **Since:** 8
 
@@ -597,9 +598,9 @@ obtainDistributedTableName(device: string, table: string, callback: AsyncCallbac
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| device | string | Yes | 远程设备ID 。 |
-| table | string | Yes | 远程设备的本地表名。 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;string&gt; | Yes | 回调函数。当操作成功，err为undefined，data为远程设备的分布式表名；否则为错误对象。 |
+| device | string | Yes | ID of the remote device. |
+| table | string | Yes | Local table name of the remote device. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;string&gt; | Yes | Callback used to return the result. If the operation succeeds, the distributed table name of the remote device is returned. |
 
 ## Examples
 
@@ -633,13 +634,14 @@ rdbStore.obtainDistributedTableName(deviceId, "EMPLOYEE", (err: BusinessError, t
 obtainDistributedTableName(device: string, table: string): Promise<string>
 ```
 
-根据远程设备的本地表名获取指定远程设备的分布式表名。在查询远程设备数据库时，需要使用分布式表名，使用Promise异步回调。
+Obtains the distributed table name of a remote device based on the local table name of the device. The distributed table name is required when the RDB store of a remote device is queried. This API uses a promise to return the result.
 
-> **说明：**
-> 
-> 其中device通过调用&lt;!--RP1--&gt;
+> **NOTE：**
+
+> The value of **device** can be obtained by &lt;!--RP1--&gt;
 > [deviceManager.getTrustedDeviceListSync](../../apis-distributed-service-kit/arkts-apis/arkts-distributedservice-devicemanager-devicemanager-i-sys.md/arkts-distributedservice-devicemanager-devicemanager-i-sys.md#gettrusteddevicelistsync)
-> 方法得到。&lt;!--RP1End--&gt;deviceManager模块的接口均为系统接口，仅系统应用可用。
+> . &lt;!--RP1End--&gt;The APIs of the **deviceManager** module are system interfaces and available only to system
+> applications.
 
 **Since:** 8
 
@@ -659,14 +661,14 @@ obtainDistributedTableName(device: string, table: string): Promise<string>
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| device | string | Yes | 远程设备ID。 |
-| table | string | Yes | 远程设备的本地表名。 |
+| device | string | Yes | ID of the remote device. |
+| table | string | Yes | Local table name of the remote device. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;string&gt; | Promise对象。如果操作成功，返回远程设备的分布式表名。 |
+| Promise&lt;string&gt; | Promise used to return the result. If the operation succeeds, the distributed table name of the remote device is returned. |
 
 ## Examples
 
@@ -699,7 +701,7 @@ promise.then((tableName: String) => {
 off(event: 'dataChange', type: SubscribeType, observer: Callback<Array<string>>): void
 ```
 
-从数据库中删除指定类型的指定观察者，使用callback异步回调。
+Unregisters the observer of the specified type from the RDB store. This API uses an asynchronous callback to return the result.
 
 **Since:** 8
 
@@ -717,9 +719,9 @@ off(event: 'dataChange', type: SubscribeType, observer: Callback<Array<string>>)
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| event | 'dataChange' | Yes | 取值为'dataChange'，表示数据更改。 |
-| type | [SubscribeType](arkts-arkdata-rdb-subscribetype-e.md) | Yes | 订阅类型。 |
-| observer | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;Array&lt;string&gt;&gt; | Yes | 指已注册的数据更改观察者。Array&lt;string&gt;为数据库中的数据发生改变的对端设备ID。 |
+| event | 'dataChange' | Yes | Event to observe. The value is **dataChange**, which indicates a data change event. |
+| type | [SubscribeType](arkts-arkdata-rdb-subscribetype-e.md) | Yes | Subscription type to register. |
+| observer | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;Array&lt;string&gt;&gt; | Yes | Data change observer registered. **Array&lt;string&gt;** indicates the ID of the peer device whose data in the database is changed. |
 
 ## Examples
 
@@ -743,7 +745,7 @@ try {
 on(event: 'dataChange', type: SubscribeType, observer: Callback<Array<string>>): void
 ```
 
-注册数据库的观察者。当分布式数据库中的数据发生更改时，将调用回调。
+Registers an observer for this RDB store. When the data in the RDB store changes, a callback is invoked to return the data changes.
 
 **Since:** 8
 
@@ -761,9 +763,9 @@ on(event: 'dataChange', type: SubscribeType, observer: Callback<Array<string>>):
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| event | 'dataChange' | Yes | 取值为'dataChange'，表示数据更改。 |
-| type | [SubscribeType](arkts-arkdata-rdb-subscribetype-e.md) | Yes | 订阅类型。 |
-| observer | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;Array&lt;string&gt;&gt; | Yes | 指分布式数据库中数据更改事件的观察者。Array&lt;string&gt;为数据库中的数据发生改变的对端设备ID。 |
+| event | 'dataChange' | Yes | Event to observe. The value is **dataChange**, which indicates a data change event. |
+| type | [SubscribeType](arkts-arkdata-rdb-subscribetype-e.md) | Yes | Subscription type to register. |
+| observer | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;Array&lt;string&gt;&gt; | Yes | Observer that listens for the data changes in the RDB store. **Array&lt;string&gt;** indicates the ID of the peer device whose data in the database is changed. |
 
 ## Examples
 
@@ -787,7 +789,7 @@ try {
 query(predicates: RdbPredicates, columns: Array<string>, callback: AsyncCallback<ResultSet>): void
 ```
 
-根据指定条件查询数据库中的数据，使用callback异步回调。
+Queries data from the RDB store based on specified conditions. This API uses an asynchronous callback to return the result.
 
 **Since:** 7
 
@@ -805,9 +807,9 @@ query(predicates: RdbPredicates, columns: Array<string>, callback: AsyncCallback
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| predicates | [RdbPredicates](arkts-arkdata-relationalstore-rdbpredicates-c.md) | Yes | RdbPredicates的实例对象指定的查询条件。 |
-| columns | Array&lt;string&gt; | Yes | 表示要查询的列。如果值为空，则查询应用于所有列。 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;ResultSet&gt; | Yes | 回调函数。当操作成功，err为undefined，data为ResultSet对象；否则为错误对象。 |
+| predicates | [RdbPredicates](arkts-arkdata-relationalstore-rdbpredicates-c.md) | Yes | Query conditions specified by the **RdbPredicates** object. |
+| columns | Array&lt;string&gt; | Yes | Columns to query. If this parameter is not specified, the query applies to all columns. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;ResultSet&gt; | Yes | Callback used to return the result. If the operation is successful , a **ResultSet** object will be returned. |
 
 ## Examples
 
@@ -830,7 +832,7 @@ rdbStore.query(predicates, ["ID", "NAME", "AGE", "SALARY", "CODES"], (err: Busin
 query(predicates: RdbPredicates, columns?: Array<string>): Promise<ResultSet>
 ```
 
-根据指定条件查询数据库中的数据，使用Promise异步回调。
+Queries data from the RDB store based on specified conditions. This API uses a promise to return the result.
 
 **Since:** 7
 
@@ -848,14 +850,14 @@ query(predicates: RdbPredicates, columns?: Array<string>): Promise<ResultSet>
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| predicates | [RdbPredicates](arkts-arkdata-relationalstore-rdbpredicates-c.md) | Yes | RdbPredicates的实例对象指定的查询条件。 |
-| columns | Array&lt;string&gt; | No | 表示要查询的列。如果值为空，则查询应用于所有列。 |
+| predicates | [RdbPredicates](arkts-arkdata-relationalstore-rdbpredicates-c.md) | Yes | Query conditions specified by the **RdbPredicates** object. |
+| columns | Array&lt;string&gt; | No | Columns to query. If this parameter is not specified, the query applies to all columns. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;ResultSet&gt; | Promise对象。如果操作成功，则返回ResultSet对象。 |
+| Promise&lt;ResultSet&gt; | Promise used to return the result. If the operation is successful, a **ResultSet** object will be returned. |
 
 ## Examples
 
@@ -877,7 +879,7 @@ promise.then((resultSet: void) => {
 querySql(sql: string, bindArgs: Array<ValueType>, callback: AsyncCallback<ResultSet>): void
 ```
 
-根据指定SQL语句查询数据库中的数据，使用callback异步回调。
+Queries data using the specified SQL statement. This API uses an asynchronous callback to return the result.
 
 **Since:** 8
 
@@ -895,9 +897,9 @@ querySql(sql: string, bindArgs: Array<ValueType>, callback: AsyncCallback<Result
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| sql | string | Yes | 指定要执行的SQL语句，不能为空字符串。 |
-| bindArgs | Array&lt;ValueType&gt; | Yes | SQL语句中参数的值。该值与sql参数语句中的占位符相对应。当sql参数语句完整时，该参数需为空数组。 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;ResultSet&gt; | Yes | 回调函数。当操作成功，err为undefined，data为ResultSet对象；否则为错误对象。 |
+| sql | string | Yes | SQL statement to run. |
+| bindArgs | Array&lt;ValueType&gt; | Yes | Arguments in the SQL statement. The value corresponds to the placeholders in the SQL parameter statement. If the SQL parameter statement is complete, the value of this parameter must be an empty array. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;ResultSet&gt; | Yes | Callback used to return the result. If the operation is successful , a **ResultSet** object will be returned. |
 
 ## Examples
 
@@ -918,7 +920,7 @@ rdbStore.querySql("SELECT * FROM EMPLOYEE CROSS JOIN BOOK WHERE BOOK.NAME = ?", 
 querySql(sql: string, bindArgs?: Array<ValueType>): Promise<ResultSet>
 ```
 
-根据指定SQL语句查询数据库中的数据，使用Promise异步回调。
+Queries data using the specified SQL statement. This API uses a promise to return the result.
 
 **Since:** 8
 
@@ -936,14 +938,14 @@ querySql(sql: string, bindArgs?: Array<ValueType>): Promise<ResultSet>
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| sql | string | Yes | 指定要执行的SQL语句，不能为空字符串。 |
-| bindArgs | Array&lt;ValueType&gt; | No | SQL语句中参数的值。该值与sql参数语句中的占位符相对应。当sql参数语句完整时，该参数不填。 |
+| sql | string | Yes | SQL statement to run. |
+| bindArgs | Array&lt;ValueType&gt; | No | Arguments in the SQL statement. The value corresponds to the placeholders in the SQL parameter statement. If the SQL parameter statement is complete, leave this parameter blank. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;ResultSet&gt; | Promise对象。如果操作成功，则返回ResultSet对象。 |
+| Promise&lt;ResultSet&gt; | Promise used to return the result. If the operation is successful, a **ResultSet** object will be returned. |
 
 ## Examples
 
@@ -963,7 +965,7 @@ promise.then((resultSet: void) => {
 rollBack(): void
 ```
 
-回滚已经执行的SQL语句。
+Rolls back the SQL statements that have been executed.
 
 **Since:** 8
 
@@ -1017,7 +1019,7 @@ data_rdb.getRdbStore(this,context, "RdbTest.db", 1, async (err: BusinessError, r
 setDistributedTables(tables: Array<string>, callback: AsyncCallback<void>): void
 ```
 
-设置分布式列表，使用callback异步回调。
+Sets distributed tables. This API uses an asynchronous callback to return the result.
 
 **Since:** 8
 
@@ -1037,8 +1039,8 @@ setDistributedTables(tables: Array<string>, callback: AsyncCallback<void>): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| tables | Array&lt;string&gt; | Yes | 要设置的分布式列表表名。 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | 回调函数。当操作成功，err为undefined；否则为错误对象。 |
+| tables | Array&lt;string&gt; | Yes | Names of the distributed tables to set. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. |
 
 ## Examples
 
@@ -1058,7 +1060,7 @@ rdbStore.setDistributedTables(["EMPLOYEE"], (err: BusinessError) => {
 setDistributedTables(tables: Array<string>): Promise<void>
 ```
 
-设置分布式列表，使用Promise异步回调。
+Sets distributed tables. This API uses a promise to return the result.
 
 **Since:** 8
 
@@ -1078,13 +1080,13 @@ setDistributedTables(tables: Array<string>): Promise<void>
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| tables | Array&lt;string&gt; | Yes | 要设置的分布式列表表名。 |
+| tables | Array&lt;string&gt; | Yes | Names of the distributed tables to set. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise对象，无返回结果。 |
+| Promise&lt;void&gt; | Promise that returns no value. |
 
 ## Examples
 
@@ -1103,7 +1105,7 @@ promise.then(() => {
 sync(mode: SyncMode, predicates: RdbPredicates, callback: AsyncCallback<Array<[string, number]>>): void
 ```
 
-在设备之间同步数据，使用callback异步回调。
+Synchronizes data across devices. This API uses an asynchronous callback to return the result.
 
 **Since:** 8
 
@@ -1123,9 +1125,9 @@ sync(mode: SyncMode, predicates: RdbPredicates, callback: AsyncCallback<Array<[s
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| mode | [SyncMode](arkts-arkdata-relationalstore-syncmode-e.md) | Yes | 指同步模式。该值可以是推、拉。 |
-| predicates | [RdbPredicates](arkts-arkdata-relationalstore-rdbpredicates-c.md) | Yes | 约束同步数据和设备。 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;[string, number]&gt;&gt; | Yes | 回调函数。当操作成功，err为undefined，data为同步结果，其中string为设备ID， number为每个设备同步状态，0表示成功，其他值表示失败；否则为错误对象。 |
+| mode | [SyncMode](arkts-arkdata-relationalstore-syncmode-e.md) | Yes | Data sync mode. The value can be **push** or **pull**. |
+| predicates | [RdbPredicates](arkts-arkdata-relationalstore-rdbpredicates-c.md) | Yes | RdbPredicates** object that specifies the data and devices to synchronize. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;[string, number]&gt;&gt; | Yes | Callback invoked to send the sync result to the caller. &lt;br&gt;**string** indicates the device ID. &lt;br&gt;**number** indicates the sync status of that device. The value **0** indicates a successful sync. Other values indicate a sync failure. |
 
 ## Examples
 
@@ -1166,7 +1168,7 @@ rdbStore.sync(data_rdb.SyncMode.SYNC_MODE_PUSH, predicates, (err: BusinessError,
 sync(mode: SyncMode, predicates: RdbPredicates): Promise<Array<[string, number]>>
 ```
 
-在设备之间同步数据，使用Promise异步回调。
+Synchronizes data across devices. This API uses a promise to return the result.
 
 **Since:** 8
 
@@ -1186,14 +1188,14 @@ sync(mode: SyncMode, predicates: RdbPredicates): Promise<Array<[string, number]>
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| mode | [SyncMode](arkts-arkdata-relationalstore-syncmode-e.md) | Yes | 指同步模式。该值可以是推、拉。 |
-| predicates | [RdbPredicates](arkts-arkdata-relationalstore-rdbpredicates-c.md) | Yes | 约束同步数据和设备。 |
+| mode | [SyncMode](arkts-arkdata-relationalstore-syncmode-e.md) | Yes | Data sync mode. The value can be **push** or **pull**. |
+| predicates | [RdbPredicates](arkts-arkdata-relationalstore-rdbpredicates-c.md) | Yes | RdbPredicates** object that specifies the data and devices to synchronize. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;Array&lt;[string, number]&gt;&gt; | Promise对象，用于向调用者发送同步结果。string：设备ID；number：每个设备同步状态，0表示成功，其他值表示失败。 |
+| Promise&lt;Array&lt;[string, number]&gt;&gt; | Promise used to send the sync result. &lt;br&gt;**string** indicates the device ID. &lt;br&gt;**number** indicates the sync status of that device. The value **0** indicates a successful sync. Other values indicate a sync failure. |
 
 ## Examples
 
@@ -1233,7 +1235,7 @@ promise.then((result: void) =>{
 update(values: ValuesBucket, predicates: RdbPredicates, callback: AsyncCallback<number>): void
 ```
 
-根据RdbPredicates的指定实例对象更新数据库中的数据，使用callback异步回调。
+Updates data in the RDB store based on the specified **RdbPredicates** object. This API uses an asynchronous callback to return the result.
 
 **Since:** 7
 
@@ -1251,9 +1253,9 @@ update(values: ValuesBucket, predicates: RdbPredicates, callback: AsyncCallback<
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| values | [ValuesBucket](arkts-arkdata-rdb-valuesbucket-t.md) | Yes | values指示数据库中要更新的数据行。键值对与数据库表的列名相关联。 |
-| predicates | [RdbPredicates](arkts-arkdata-relationalstore-rdbpredicates-c.md) | Yes | RdbPredicates的实例对象指定的更新条件。 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;number&gt; | Yes | 回调函数。当操作成功，err为undefined，data为受影响的行数；否则为错误对象。 |
+| values | [ValuesBucket](arkts-arkdata-rdb-valuesbucket-t.md) | Yes | Rows of data to update in the RDB store. The key-value pair is associated with the column name in the target table. |
+| predicates | [RdbPredicates](arkts-arkdata-relationalstore-rdbpredicates-c.md) | Yes | Update conditions specified by the **RdbPredicates** object. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;number&gt; | Yes | Callback invoked to return the number of rows updated. |
 
 ## Examples
 
@@ -1292,7 +1294,7 @@ rdbStore.update(valueBucket, predicates, (err: BusinessError, rows: number) => {
 update(values: ValuesBucket, predicates: RdbPredicates): Promise<number>
 ```
 
-根据RdbPredicates的指定实例对象更新数据库中的数据，使用Promise异步回调。
+Updates data based on the specified **RdbPredicates** object. This API uses a promise to return the result.
 
 **Since:** 7
 
@@ -1310,14 +1312,14 @@ update(values: ValuesBucket, predicates: RdbPredicates): Promise<number>
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| values | [ValuesBucket](arkts-arkdata-rdb-valuesbucket-t.md) | Yes | values指示数据库中要更新的数据行。键值对与数据库表的列名相关联。 |
-| predicates | [RdbPredicates](arkts-arkdata-relationalstore-rdbpredicates-c.md) | Yes | RdbPredicates的实例对象指定的更新条件。 |
+| values | [ValuesBucket](arkts-arkdata-rdb-valuesbucket-t.md) | Yes | Rows of data to update in the RDB store. The key-value pair is associated with the column name in the target table. |
+| predicates | [RdbPredicates](arkts-arkdata-relationalstore-rdbpredicates-c.md) | Yes | Update conditions specified by the **RdbPredicates** object. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;number&gt; | 指定的Promise回调方法。返回受影响的行数。 |
+| Promise&lt;number&gt; | Promise used to return the number of rows updated. |
 
 ## Examples
 

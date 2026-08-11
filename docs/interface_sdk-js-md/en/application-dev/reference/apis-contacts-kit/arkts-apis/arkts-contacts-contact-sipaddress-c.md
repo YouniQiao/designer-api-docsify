@@ -1,6 +1,6 @@
 # SipAddress
 
-联系人的会话发起协议(SIP)地址类。
+Defines a contact's SIP address.
 
 **Since:** 7
 
@@ -22,7 +22,7 @@ import { contact } from 'kits/@kit.ContactsKit';
 static readonly CUSTOM_LABEL: 0
 ```
 
-自定义邮箱类型，默认值为0。
+Custom SIP address type, the default value is **0**.
 
 **Type:** 0
 
@@ -42,7 +42,7 @@ static readonly CUSTOM_LABEL: 0
 static readonly INVALID_LABEL_ID: -1
 ```
 
-无效邮箱类型，默认值为-1。
+Invalid SIP address type, the default value is **-1**.
 
 **Type:** -1
 
@@ -62,7 +62,7 @@ static readonly INVALID_LABEL_ID: -1
 static readonly SIP_HOME: 1
 ```
 
-家庭会话发起协议(SIP)地址类型，默认值为1。
+Home SIP address, the default value is **1**.
 
 **Type:** 1
 
@@ -82,7 +82,7 @@ static readonly SIP_HOME: 1
 static readonly SIP_OTHER: 3
 ```
 
-其它会话发起协议(SIP)地址类型，默认值为3。
+Other SIP address, the default value is **3**.
 
 **Type:** 3
 
@@ -102,7 +102,7 @@ static readonly SIP_OTHER: 3
 static readonly SIP_WORK: 2
 ```
 
-工作会话发起协议(SIP)地址类型，默认值为2。
+Work SIP address, the default value is **2**.
 
 **Type:** 2
 
@@ -122,7 +122,7 @@ static readonly SIP_WORK: 2
 labelId?: number
 ```
 
-邮箱的类型。
+SIP address type.
 
 **Type:** number
 
@@ -142,7 +142,7 @@ labelId?: number
 labelName?: string
 ```
 
-邮箱的类型名称。
+SIP address type name.
 
 **Type:** string
 
@@ -162,7 +162,7 @@ labelName?: string
 sipAddress: string
 ```
 
-会话发起协议(SIP)地址。
+SIP address.
 
 **Type:** string
 

@@ -18,7 +18,7 @@ attributes: Record<string, string>
 
 The attributes of web input element.
 
-**类型：** [Record](../../apis-default/arkts-apis/arkts-record-t.md)&lt;string, string&gt;
+**类型：** Record&lt;string, string&gt;
 
 **起始版本：** 12
 

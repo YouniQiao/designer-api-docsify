@@ -1,6 +1,6 @@
 # AbilityType
 
-标识Ability组件的类型。
+Enumerates the types of ability components.
 
 **Since:** 9
 
@@ -16,7 +16,7 @@
 PAGE = 1
 ```
 
-UI界面类型的Ability。表示基于Page模板开发的FA，用于提供与用户交互的能力。
+Ability that has the UI. FA developed using the Page template to provide the capability of interacting with users.
 
 **Since:** 9
 
@@ -34,7 +34,7 @@ UI界面类型的Ability。表示基于Page模板开发的FA，用于提供与�
 SERVICE = 2
 ```
 
-后台服务类型的Ability，无UI界面。表示基于Service模板开发的[ParticleAbility](arkts-ability-particleability.md)，用于提供后台运行任务的能力，例如后台下载或者播放音乐。
+Ability of the background service type, without the UI. PA developed using the Service template to provide the capability of running tasks in the background.
 
 **Since:** 9
 
@@ -52,7 +52,7 @@ SERVICE = 2
 DATA = 3
 ```
 
-表示基于Data模板开发的[ParticleAbility](arkts-ability-particleability.md)，用于对外部提供统一的数据访问对象。
+PA developed using the Data template to provide unified data access for external systems.
 
 **Since:** 9
 

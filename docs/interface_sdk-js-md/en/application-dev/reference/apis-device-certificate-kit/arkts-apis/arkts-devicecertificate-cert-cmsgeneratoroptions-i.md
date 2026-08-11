@@ -1,6 +1,6 @@
 # CmsGeneratorOptions
 
-表示生成CMS消息的配置选项。
+Represents the configuration for generating a CMS message.
 
 **Since:** 18
 
@@ -22,7 +22,7 @@ import { cert } from 'kits/@kit.DeviceCertificateKit';
 contentDataFormat?: CmsContentDataFormat
 ```
 
-内容数据的格式。默认为CmsContentDataFormat.BINARY。
+Format of the content. The default value is **CmsContentDataFormat.BINARY**.
 
 **Type:** [CmsContentDataFormat](arkts-devicecertificate-cert-cmscontentdataformat-e.md)
 
@@ -44,7 +44,7 @@ contentDataFormat?: CmsContentDataFormat
 isDetached?: boolean
 ```
 
-Cms最终数据是否不包含原始数据。默认为false。true为不包含，false为包含。
+Whether the final CMS message does not contain the raw data. The default value is **false**. **true**: raw data is not contained; **false**: raw data is contained.
 
 **Type:** boolean
 
@@ -66,7 +66,7 @@ Cms最终数据是否不包含原始数据。默认为false。true为不包含�
 outFormat?: CmsFormat
 ```
 
-Cms最终数据的输出格式。默认为DER。
+Format of the CMS message generated. The default value is **DER**.
 
 **Type:** [CmsFormat](arkts-devicecertificate-cert-cmsformat-e.md)
 

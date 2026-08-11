@@ -1,6 +1,6 @@
 # Random
 
-随机数接口，定义随机数生成的方法。调用前，需通过[createRandom](arkts-cryptoarchitecture-cryptoframework-createrandom-f.md#createrandom)创建一个Random实例。
+Random interface, defining methods for generating random numbers. Before use, you must create a **Random** instance by using [createRandom](arkts-cryptoarchitecture-cryptoframework-createrandom-f.md#createrandom).
 
 **Since:** 9
 
@@ -24,7 +24,7 @@ import { cryptoFramework } from 'kits/@kit.CryptoArchitectureKit';
 enableHardwareEntropy(): void
 ```
 
-开启硬件熵源。将从TEE中获取安全随机数作为该随机数实例的熵源。
+Enables the hardware entropy source. Secure random numbers obtained from TEE will be used as the entropy source of this random instance.
 
 **Since:** 21
 
@@ -42,10 +42,10 @@ enableHardwareEntropy(): void
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 801 | 该操作不支持。 |
-| 17630001 | 密码操作错误。 |
-| 17620001 | 内存操作失败。 |
-| 17620002 | 获取Native对象失败或参数转换失败。 |
+| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | This operation is not supported. |
+| [17630001](../errorcode-crypto-framework.md#17630001-cryptographic-operation-error) | Crypto operation error. |
+| [17620001](../errorcode-crypto-framework.md#17620001-memory-operation-failed) | Memory operation failed. |
+| [17620002](../errorcode-crypto-framework.md#17620002-failed-to-obtain-the-native-object-or-convert-parameters) | Failed to obtain the native object or convert parameters. |
 
 ## Examples
 
@@ -57,7 +57,7 @@ let rand = cryptoFramework.createRandom();
 rand.enableHardwareEntropy();
 rand.generateRandom(12, (err, randData) => {
   if (err) {
-    console.error(`[Callback] generate random failed, errCode: ${err.code}, errMsg: ${err.message}`);
+    console.error('[Callback] err: ' + err.code);
   } else {
     console.info('[Callback]: generate random result: ' + randData.data);
     try {
@@ -82,7 +82,7 @@ ArkTS-Sta:
 generateRandom(len: int, callback: AsyncCallback<DataBlob>): void
 ```
 
-生成指定长度的随机数。使用callback异步回调。
+Generates a random number of the specified length. This API uses an asynchronous callback to return the result.
 
 **Since:** 9
 
@@ -104,16 +104,16 @@ generateRandom(len: int, callback: AsyncCallback<DataBlob>): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| len | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | 表示生成随机数的长度，单位为bytes，范围在[1, INT_MAX]。 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;DataBlob&gt; | Yes | 回调函数。当生成随机数成功时，err为undefined，data为获取到的随机数；否则为 错误对象。 |
+| len | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | Length of the random number to generate, in bytes. The value range is [1, INT_MAX]. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;DataBlob&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined**, and **data** is the random number obtained. Otherwise, **err** is an error object. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | 非法入参。可能的原因： &lt;br&gt;1. 必填参数未指定； &lt;br&gt;2. 参数类型不正确； &lt;br&gt;3. 参数验证失败。 |
-| 17630001 | 密码操作错误。 |
-| 17620001 | 内存操作失败。 |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Invalid parameters. Possible causes: &lt;br&gt;1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; &lt;br&gt;3. Parameter verification failed. |
+| [17630001](../errorcode-crypto-framework.md#17630001-cryptographic-operation-error) | Crypto operation error. |
+| [17620001](../errorcode-crypto-framework.md#17620001-memory-operation-failed) | Memory operation failed. |
 
 ## Examples
 
@@ -123,7 +123,7 @@ import { cryptoFramework } from '@kit.CryptoArchitectureKit';
 let rand = cryptoFramework.createRandom();
 rand.generateRandom(12, (err, randData) => {
   if (err) {
-    console.error(`[Callback] generate random failed, errCode: ${err.code}, errMsg: ${err.message}`);
+    console.error(`[Callback] failed, errCode: ${err.code}, errMsg: ${err.message}`);
   } else {
     console.info('[Callback]: generate random result: ' + randData.data);
   }
@@ -142,7 +142,7 @@ ArkTS-Sta:
 generateRandom(len: int): Promise<DataBlob>
 ```
 
-生成指定长度的随机数。使用promise异步回调。
+Generates a random number of the specified length. This API uses a promise to return the result.
 
 **Since:** 9
 
@@ -162,25 +162,23 @@ generateRandom(len: int): Promise<DataBlob>
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| len | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | 表示生成随机数的长度，单位为bytes，范围在[1, INT_MAX]。 |
+| len | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | Length of the random number to generate, in bytes. The value range is [1, INT_MAX]. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;DataBlob&gt; | Promise对象，返回生成的随机数。 |
+| Promise&lt;DataBlob&gt; | Promise used to return the random number generated. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | 非法入参。可能的原因： &lt;br&gt;1. 必填参数未指定； &lt;br&gt;2. 参数类型不正确； &lt;br&gt;3. 参数验证失败。 |
-| 17630001 | 密码操作错误。 |
-| 17620001 | 内存操作失败。 |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Invalid parameters. Possible causes: &lt;br&gt;1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; &lt;br&gt;3. Parameter verification failed. |
+| [17630001](../errorcode-crypto-framework.md#17630001-cryptographic-operation-error) | Crypto operation error. |
+| [17620001](../errorcode-crypto-framework.md#17620001-memory-operation-failed) | Memory operation failed. |
 
 ## Examples
-
-ArkTS example:
 
 ```TypeScript
 import { cryptoFramework } from '@kit.CryptoArchitectureKit';
@@ -195,72 +193,6 @@ promiseGenerateRand.then(randData => {
 });
 ```
 
-JS example:
-
-```TypeScript
-<div class="container">
-    <text class="TestTitle">Crypto test</text>
-    <input class="btn" @click="RandTest">Rand asynchronous test</input>
-</div>
-```
-
-```TypeScript
-.container {
-  width: 100%;
-  height: 2000px;
-  align-items: center;
-  background-color: #fffefcfc;
-  flex-direction: column;
-  display: flex;
-}
-
-.TestTitle {
-  width: 300px;
-  height: 80px;
-  text-align: center;
-  background-color: white;
-  color: #fff61515;
-  font-size: 15fp;
-}
-
-.btn {
-  width: 90%;
-  height: 80px;
-  text-align: center;
-  background-color: #fff17f04;
-  margin-top: 3px;
-  color: white;
-  font-size: 20fp;
-}
-```
-
-```TypeScript
-import cryptoFramework from '@ohos.security.cryptoFramework';
-
-function randTest() {
-    let rand = cryptoFramework.createRandom();
-    let seed = new Uint8Array([1, 2, 3]);
-    rand.setSeed({ data : seed });
-
-    rand.generateRandom(12, function (finishErr, randData){
-        if (finishErr) {
-            console.error("GenerateRandom failed. Code:" + finishErr.code + " : " + finishErr.message);
-        } else {
-            console.info("GenerateRandom successfully:" + randData);
-        }
-    })
-}
-
-export default {
-    data: {
-        result: ''
-    },
-    RandTest() {
-        randTest();
-    }
-};
-```
-
 ## generateRandomSync
 
 ArkTS-Dyn:
@@ -273,9 +205,9 @@ ArkTS-Sta:
 generateRandomSync(len: int): DataBlob
 ```
 
-同步生成指定长度的随机数。
+Generates a random number of the specified length. This API returns the result synchronously.
 
-&lt;br&gt;&lt;br&gt;**说明：**&lt;br&gt;建议优先使用异步API，{@link generateRandom}。同步API可能因系统繁忙、高负载等原因耗时较长而阻塞主线程。因此建议在子线程中调用同步API，以避免阻塞主线程。
+&lt;br&gt;&lt;br&gt;**NOTE：**&lt;br&gt;It is recommended to prioritize the use of asynchronous API, {@link generateRandom}. Synchronous API may take a long time and block the main thread due to system busyness, high load, and other reasons. Therefore,it is advised to invoke synchronous API within a child thread to avoid blocking the main thread.
 
 **Since:** 10
 
@@ -297,25 +229,23 @@ generateRandomSync(len: int): DataBlob
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| len | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | 表示生成随机数的长度，单位为bytes，范围在[1, INT_MAX]。 |
+| len | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | Length of the random number to generate, in bytes. The value range is [1, INT_MAX]. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [DataBlob](arkts-cryptoarchitecture-cryptoframework-datablob-i.md) | 表示生成的随机数。 |
+| [DataBlob](arkts-cryptoarchitecture-cryptoframework-datablob-i.md) | Returns the generated random number. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | 非法入参。可能的原因： &lt;br&gt;1. 必填参数未指定； &lt;br&gt;2. 参数类型不正确； &lt;br&gt;3. 参数验证失败。 |
-| 17630001 | 密码操作错误。 |
-| 17620001 | 内存操作失败。 |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Invalid parameters. Possible causes: &lt;br&gt;1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; &lt;br&gt;3. Parameter verification failed. |
+| [17630001](../errorcode-crypto-framework.md#17630001-cryptographic-operation-error) | Crypto operation error. |
+| [17620001](../errorcode-crypto-framework.md#17620001-memory-operation-failed) | Memory operation failed. |
 
 ## Examples
-
-ArkTS example:
 
 ```TypeScript
 import { cryptoFramework } from '@kit.CryptoArchitectureKit';
@@ -335,80 +265,13 @@ try {
 }
 ```
 
-JS example:
-
-```TypeScript
-<div class="container">
-    <text class="TestTitle">Crypto test</text>
-    <input class="btn" @click="RandTestSync">Rand synchronous test</input>
-</div>
-```
-
-```TypeScript
-.container {
-  width: 100%;
-  height: 2000px;
-  align-items: center;
-  background-color: #fffefcfc;
-  flex-direction: column;
-  display: flex;
-}
-
-.TestTitle {
-  width: 300px;
-  height: 80px;
-  text-align: center;
-  background-color: white;
-  color: #fff61515;
-  font-size: 15fp;
-}
-
-.btn {
-  width: 90%;
-  height: 80px;
-  text-align: center;
-  background-color: #fff17f04;
-  margin-top: 3px;
-  color: white;
-  font-size: 20fp;
-}
-```
-
-```TypeScript
-import cryptoFramework from '@ohos.security.cryptoFramework';
-
-function randTestSync() {
-    let rand = cryptoFramework.createRandom();
-    let randLen = 24;
-    try {
-        let randData = rand.generateRandomSync(randLen);
-        if (randData != null) {
-            console.info("GenerateRandom successfully: " + randData.data);
-        } else {
-            console.error("GenerateRandom failed!");
-        }
-    } catch (error) {
-        console.error(`GenerateRandom random number failed. Code: ${error.code}, message: ${error.message}`);
-    }
-}
-
-export default {
-    data: {
-        result: ''
-    },
-    RandTestSync() {
-        randTestSync();
-    }
-};
-```
-
 ## setSeed
 
 ```TypeScript
 setSeed(seed: DataBlob): void
 ```
 
-设置指定的种子。
+Sets a seed.
 
 **Since:** 9
 
@@ -430,13 +293,13 @@ setSeed(seed: DataBlob): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| seed | [DataBlob](arkts-cryptoarchitecture-cryptoframework-datablob-i.md) | Yes | 设置的种子。 |
+| seed | [DataBlob](arkts-cryptoarchitecture-cryptoframework-datablob-i.md) | Yes | Seed to set. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 17620001 | 内存操作失败。 |
+| [17620001](../errorcode-crypto-framework.md#17620001-memory-operation-failed) | Memory operation failed. |
 
 ## Examples
 
@@ -447,7 +310,7 @@ import { BusinessError } from '@kit.BasicServicesKit';
 let rand = cryptoFramework.createRandom();
 rand.generateRandom(12, (err, randData) => {
   if (err) {
-    console.error(`[Callback] generate random failed, errCode: ${err.code}, errMsg: ${err.message}`);
+    console.error('[Callback] err: ' + err.code);
   } else {
     console.info('[Callback]: generate random result: ' + randData.data);
     try {
@@ -466,7 +329,7 @@ rand.generateRandom(12, (err, randData) => {
 readonly algName: string
 ```
 
-代表当前使用的随机数生成算法，目前只支持"CTR_DRBG"。
+Indicates the random generation algorithm name. Currently, only CTR_DRBG is supported.
 
 **Type:** string
 

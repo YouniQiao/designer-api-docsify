@@ -12,7 +12,7 @@ import { telephonyManager } from 'kits/@kit.MDMKit';
 function setDefaultData(admin: Want, slotId: number): void
 ```
 
-设置指定卡槽的SIM卡为默认数据流量卡，设备将使用指定卡槽的SIM卡流量上网。例如，企业可在双卡设备管理场景中，为员工设备指定默认的数据流量卡以统一管理流量使用。该接口需要插入SIM卡并关闭飞行模式才能成功调用。
+Sets the SIM card in the specified slot as the default data SIM card. The device will use the data connection from the SIM card in that slot for internet access. For example, in dual-SIM device management scenarios, an enterprise can specify a default data SIM card for employee devices to centrally manage data usage. To successfully call this API, the SIM card must be inserted and airplane mode must be turned off.
 
 **Since:** 26.0.0
 
@@ -30,40 +30,18 @@ function setDefaultData(admin: Want, slotId: number): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| admin | [Want](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-want-want-c.md) | Yes | 企业设备管理扩展组件。Want中必须包含企业设备管理扩展能力的abilityName和所在应用的bundleName。 |
-| slotId | number | Yes | 卡槽ID，目前仅支持单卡槽设备和双卡槽设备，取值范围为0或1，其中0表示卡槽1，1表示卡槽2。 |
+| admin | [Want](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-want-want-c.md) | Yes | EnterpriseAdminExtensionAbility. **Want** must contain the ability name of the EnterpriseAdminExtensionAbility and the bundle name of the application. |
+| slotId | number | Yes | Slot ID. Currently, only single-slot and dual-slot devices are supported. The value can be **0** or **1**, where **0** indicates slot 1 and **1** indicates slot 2. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 9200012 | Parameter verification failed. |
-| 9201020 | Failed to set the default data SIM card. The airplane mode is enabled or no SIM card is inserted. |
-| 801 | Capability not supported. Failed to call the API due to limited device capabilities. |
-| 201 | Permission verification failed. The application does not have the permission required to call the API. |
-| 203 | This function is prohibited by enterprise management policies. |
-| 9200001 | The application is not an administrator application of the device. |
-| 9200002 | The administrator application does not have permission to manage the device. |
-
-## Examples
-
-```TypeScript
-import { Want } from '@kit.AbilityKit';
-import { telephonyManager } from '@kit.MDMKit';
-
-let wantTemp: Want = {
-  // Replace the values as required.
-  bundleName: 'com.example.myapplication',
-  abilityName: 'EnterpriseAdminAbility'
-};
-// Set the slot ID of the SIM card to be used as the default data SIM card.
-let slotId: number = 0;
-try {
-  // Sets the specified slot as the default data SIM.
-  telephonyManager.setDefaultData(wantTemp, slotId);
-  console.info(`success to set default data SIM ID`);
-} catch (err) {
-  console.error(`Failed to set default data. Code: ${err.code}, message: ${err.message}`);
-}
-```
+| [9200012](../errorcode-enterpriseDeviceManager.md#9200012-parameter-verification-failed) | Parameter verification failed. |
+| [9201020](../errorcode-enterpriseDeviceManager.md#9201020-failed-to-set-the-default-mobile-data-sim) | Failed to set the default data SIM card. The airplane mode is enabled or no SIM card is inserted. |
+| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. Failed to call the API due to limited device capabilities. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed. The application does not have the permission required to call the API. |
+| [203](../../errorcode-universal.md#203-system-function-prohibited-by-enterprise-management-policies) | This function is prohibited by enterprise management policies. |
+| [9200001](../errorcode-enterpriseDeviceManager.md#9200001-deviceadmin-not-enabled) | The application is not an administrator application of the device. |
+| [9200002](../errorcode-enterpriseDeviceManager.md#9200002-permission-denied) | The administrator application does not have permission to manage the device. |
 

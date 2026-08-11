@@ -1,6 +1,6 @@
 # VideoCodecType
 
-枚举，视频编码类型。
+Enumerates the video codec types.
 
 **Since:** 13
 
@@ -16,7 +16,7 @@
 AVC = 0
 ```
 
-视频编码类型AVC。
+AVC.
 
 **Since:** 13
 
@@ -34,7 +34,7 @@ AVC = 0
 HEVC = 1
 ```
 
-视频编码类型HEVC。
+HEVC.
 
 **Since:** 13
 

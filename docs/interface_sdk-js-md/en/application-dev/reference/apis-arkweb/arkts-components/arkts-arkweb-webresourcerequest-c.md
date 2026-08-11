@@ -1,6 +1,6 @@
 # WebResourceRequest
 
-Encompassed message information as parameters to {@link onConsole} method.
+Defines the Web resource request.
 
 **Since:** 8
 
@@ -34,7 +34,7 @@ Constructor.
 getRequestHeader(): Array<Header>
 ```
 
-获取资源请求头信息。
+Gets request headers.
 
 **Since:** 8
 
@@ -50,7 +50,7 @@ getRequestHeader(): Array<Header>
 
 | Type | Description |
 | --- | --- |
-| Array&lt;Header&gt; | 返回资源请求头信息。 |
+| Array&lt;Header&gt; | Return the request headers |
 
 ## getRequestMethod
 
@@ -58,7 +58,7 @@ getRequestHeader(): Array<Header>
 getRequestMethod(): string
 ```
 
-获取请求方法。
+Get request method.
 
 **Since:** 9
 
@@ -74,7 +74,7 @@ getRequestMethod(): string
 
 | Type | Description |
 | --- | --- |
-| string | 返回请求方法。 |
+| string | Return the request method. |
 
 ## getRequestUrl
 
@@ -82,7 +82,7 @@ getRequestMethod(): string
 getRequestUrl(): string
 ```
 
-获取资源请求的URL信息。
+Gets the request URL.
 
 **Since:** 8
 
@@ -98,7 +98,7 @@ getRequestUrl(): string
 
 | Type | Description |
 | --- | --- |
-| string | 返回资源请求的URL信息。 |
+| string | Return the request URL. |
 
 ## isMainFrame
 
@@ -106,7 +106,7 @@ getRequestUrl(): string
 isMainFrame(): boolean
 ```
 
-判断资源请求是否为主frame。
+Check whether the request is for getting the main frame.
 
 **Since:** 8
 
@@ -122,7 +122,7 @@ isMainFrame(): boolean
 
 | Type | Description |
 | --- | --- |
-| boolean | 返回 { |
+| boolean | Return { |
 
 ## isRedirect
 
@@ -130,7 +130,7 @@ isMainFrame(): boolean
 isRedirect(): boolean
 ```
 
-判断资源请求是否被服务端重定向。
+Check whether the request redirects.
 
 **Since:** 8
 
@@ -146,7 +146,7 @@ isRedirect(): boolean
 
 | Type | Description |
 | --- | --- |
-| boolean | 返回 { |
+| boolean | Return { |
 
 ## isRequestGesture
 
@@ -154,7 +154,7 @@ isRedirect(): boolean
 isRequestGesture(): boolean
 ```
 
-获取资源请求是否与手势（如点击）相关联。
+Check whether the request is associated with gesture.
 
 **Since:** 8
 
@@ -170,5 +170,5 @@ isRequestGesture(): boolean
 
 | Type | Description |
 | --- | --- |
-| boolean | 返回 { |
+| boolean | Return { |
 

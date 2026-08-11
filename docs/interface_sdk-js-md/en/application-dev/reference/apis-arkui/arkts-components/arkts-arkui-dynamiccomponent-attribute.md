@@ -1,8 +1,8 @@
 # DynamicComponent properties/events
 
-支持[通用属性](../../apis-ability-kit/arkts-apis/arkts-app-ability-common.md/arkts-app-ability-common.md)。
+The [universal attributes](../../apis-ability-kit/arkts-apis/arkts-app-ability-common.md/arkts-app-ability-common.md) are supported.
 
-支持以下事件：
+The following events are supported:
 
 **Inheritance/Implementation:** DynamicComponentAttribute extends [CommonMethod<DynamicComponentAttribute>](CommonMethod<DynamicComponentAttribute>)
 

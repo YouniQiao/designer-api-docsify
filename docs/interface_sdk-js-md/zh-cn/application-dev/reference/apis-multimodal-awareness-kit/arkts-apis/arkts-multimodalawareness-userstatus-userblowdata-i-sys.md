@@ -1,6 +1,6 @@
 # UserBlowData（系统接口）
 
-Defines user blow data.
+用户吹气数据。
 
 **继承/实现关系：** UserBlowData extends [UserStatusData](arkts-multimodalawareness-userstatus-userstatusdata-i-sys.md)
 
@@ -14,19 +14,13 @@ Defines user blow data.
 
 **系统接口：** 此接口为系统接口。
 
-## 导入模块
-
-```TypeScript
-import { userStatus } from 'kits/@kit.MultimodalAwarenessKit';
-```
-
 ## blowDirection
 
 ```TypeScript
 blowDirection?: int
 ```
 
-Blow direction.The value ranges from 0 to 2. 0: Not blowing, 1: Blowing from bottom mic, 2: Blowing from top mic.
+吹气方向。取值范围为0到2。0：未吹气，1：从底部麦克风吹气，2：从顶部麦克风吹气。
 
 **类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
@@ -48,7 +42,7 @@ Blow direction.The value ranges from 0 to 2. 0: Not blowing, 1: Blowing from bot
 emotion?: int
 ```
 
-User emotion level.The value ranges from 0 to 5. 0: Very happy, 1: A little happy, 2: Calm,3: A little unhappy, 4: Angry, 5: Crying.
+用户情绪级别。取值范围为0到5。0：非常开心，1：有些开心，2：平静，3：有些不开心，4：生气，5：哭泣。
 
 **类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
@@ -70,7 +64,7 @@ User emotion level.The value ranges from 0 to 5. 0: Very happy, 1: A little happ
 facePosition?: double[]
 ```
 
-Face position relative to screen.The normalized coordinate system ranges from 0 to 640.
+面部相对于屏幕的位置。归一化坐标系范围为0到640。
 
 **类型：** ArkTS-Dyn: number[]  <br>ArkTS-Sta：double[]
 
@@ -92,7 +86,7 @@ Face position relative to screen.The normalized coordinate system ranges from 0 
 gravityAcceleration?: double[]
 ```
 
-Gravity acceleration of user motion status, in m/s².
+用户运动状态的重力加速度，单位：m/s²。
 
 **类型：** ArkTS-Dyn: number[]  <br>ArkTS-Sta：double[]
 
@@ -114,7 +108,7 @@ Gravity acceleration of user motion status, in m/s².
 isGazeStatus?: boolean
 ```
 
-Whether user is gazing at screen.
+用户是否正在注视屏幕。
 
 **类型：** boolean
 
@@ -136,7 +130,7 @@ Whether user is gazing at screen.
 linearAcceleration?: double[][]
 ```
 
-Linear acceleration of user motion status, in m/s²..
+用户运动状态的线性加速度，单位：m/s²。
 
 **类型：** ArkTS-Dyn: number[][]  <br>ArkTS-Sta：double[][]
 
@@ -158,7 +152,7 @@ Linear acceleration of user motion status, in m/s²..
 strengthLevel?: int
 ```
 
-Blow strength level.The value must be an integer within [1,12].
+吹气强度级别。取值范围为[1,12]的整数。
 
 **类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 

@@ -1,10 +1,14 @@
 # BadgeStyle
 
-Badge的样式。包括文本颜色、尺寸、字重、圆点颜色和尺寸等。
+Describes the badge style. It includes the font color, font size, badge color, badge size, etc.
 
-> **说明：**
-> > 当`borderWidth`大于0且`borderColor`与`badgeColor`颜色不一致时，先绘制角标，再绘制描边。由于边缘像素经过抗锯齿处理，抗锯齿产生半透明像素，四角会出现 `badgeColor` 颜色的描边
-> 线。如需实现相关场景，建议使用[Text](../../apis-arkgraphics2d/arkts-apis/arkts-graphics-text.md/arkts-graphics-text.md)组件设置[outline](arkts-arkui-common-commonmethod-i.md#outline)代替Badge组件。
+> **NOTE：**
+> 
+> - When **borderWidth** is set to a value greater than 0 and **borderColor** is different from **badgeColor**, the
+> badge is drawn before the border. Edge pixels are anti-aliased, which produces semi-transparent pixels. This causes
+> the border in **badgeColor** to become visible at the four corners. To implement related scenarios, it is
+> recommended that you use the [Text](../../apis-arkgraphics2d/arkts-apis/arkts-graphics-text.md/arkts-graphics-text.md) component with its
+> [outline](arkts-arkui-common-commonmethod-i.md#outline) attribute instead of the **Badge** component.
 
 **Since:** 23
 
@@ -20,7 +24,7 @@ Badge的样式。包括文本颜色、尺寸、字重、圆点颜色和尺寸等
 badgeColor?: ResourceColor
 ```
 
-Badge的颜色。默认值：Color.Red 。
+Badge color.Default value: Color.Red .
 
 **Type:** [ResourceColor](arkts-arkui-resourcecolor-t.md)
 
@@ -42,7 +46,7 @@ Badge的颜色。默认值：Color.Red 。
 badgeSize?: double | ResourceStr
 ```
 
-Badge的大小。string类型支持number类型取值的字符串形式，可以附带单位，，支持的单位有"px"、"vp"、"fp"、"lpx"，例如"16"、"16vp"，不附带单位时默认单位为"fp"。默认值：16vp。
+Size of a badge.Default value: 16vp.
 
 **Type:** double \| ResourceStr
 
@@ -62,7 +66,7 @@ Badge的大小。string类型支持number类型取值的字符串形式，可以
 borderColor?: ResourceColor
 ```
 
-底板描边颜色。默认值：Color.Red 。
+Border color of the background.Default value: Color.Red.
 
 **Type:** [ResourceColor](arkts-arkui-resourcecolor-t.md)
 
@@ -84,7 +88,7 @@ borderColor?: ResourceColor
 borderWidth?: Length
 ```
 
-底板描边粗细,不支持设置百分比，当设置为百分比时，按照默认值处理。单位为：vp。默认值：1。
+Baseplate stroke thickness. The percentage cannot be set. When the percentage is set, the default value is used.Unit: vp. Default value: 1.
 
 **Type:** [Length](arkts-arkui-length-t.md)
 
@@ -106,7 +110,7 @@ borderWidth?: Length
 color?: ResourceColor
 ```
 
-文本颜色。默认值：Color.White 。
+Font color.Default value: Color.White.
 
 **Type:** [ResourceColor](arkts-arkui-resourcecolor-t.md)
 
@@ -128,7 +132,7 @@ color?: ResourceColor
 enableAutoAvoidance?: boolean
 ```
 
-增加角标文本延伸显示时是否避让。true表示避让，false表示不避让。默认值：false。&lt;br&gt;**说明：**1. 避让效果为角标文本向组件内部延伸显示。2. 当外描边的宽度大于0时，角标的延伸起点为外描边的内侧。3. 当position设置为具体坐标值时，角标不进行避让处理。
+Enable auto-avoidance for text in badge.Default value: false.&lt;p&gt;&lt;strong&gt;NOTE&lt;/strong&gt;:1. The avoidance effect is that the text of the corner mark extends to the interior of the component.2. When the width of the outer stroke is greater than 0, the extension start point of the corner mark is the inner side of the outer stroke.3. When position is set to a specific coordinate value, corner marks are not avoided.
 
 **Type:** boolean
 
@@ -150,7 +154,7 @@ enableAutoAvoidance?: boolean
 fontSize?: double | ResourceStr
 ```
 
-文本大小。string类型仅支持number类型取值的字符串形式，可以附带单位，支持的单位有"px"、"vp"、"fp"、"lpx"，例如"10"、"10fp"，不附带单位时默认单位为"fp"。默认值：10vp。
+Text size.Default value: 10vp.
 
 **Type:** double \| ResourceStr
 
@@ -170,7 +174,7 @@ fontSize?: double | ResourceStr
 fontWeight?: int | FontWeight | ResourceStr
 ```
 
-设置文本的字体粗细。默认值：FontWeight.Normal。&lt;br&gt;number类型取值范围：[100,900]，取值间隔为100。取值越大，字体越粗。设置number类型在取值范围外时，按默认值400处理。string类型仅支持number类型取值的字符串形式，例如"400"，以及"bold"、"bolder"、"lighter"、"regular"、"medium"，分别对应FontWeight中相应的枚举值。
+Define the font weight of the badge.Default value: FontWeight.Normal.&lt;br&gt;Value range of the number type: [100, 900], with an interval of 100. A larger value indicates a thicker font.If the number type is out of the value range, the default value 400 is used. The value of the string type must be a string of values of the number type, for example, 400. The values of bold, bolter, lighter, regular, and medium correspond to the corresponding enumerated values in FontWeight, respectively.
 
 **Type:** int \| FontWeight \| ResourceStr
 
@@ -190,7 +194,7 @@ fontWeight?: int | FontWeight | ResourceStr
 outerBorderColor?: ResourceColor
 ```
 
-底板外描边颜色。默认值：Color.White 。
+Outer border color of the background.Default value: Color.White.
 
 **Type:** [ResourceColor](arkts-arkui-resourcecolor-t.md)
 
@@ -212,13 +216,7 @@ outerBorderColor?: ResourceColor
 outerBorderWidth?: LengthMetrics
 ```
 
-底板外描边粗细。
-
-默认值：0
-
-单位：vp
-
-不支持设置百分比，当设置为百分比时，按照默认值处理。
+Outer border width of the background.Default value: 0 Unit: vp The percentage cannot be set. When the percentage is set, the default value is used.
 
 **Type:** [LengthMetrics](arkts-arkui-lengthmetrics-t.md)
 

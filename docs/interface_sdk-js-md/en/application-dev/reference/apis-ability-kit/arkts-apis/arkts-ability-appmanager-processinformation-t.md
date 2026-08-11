@@ -4,7 +4,7 @@
 export type ProcessInformation = _ProcessInformation
 ```
 
-进程信息。
+Defines the process information.
 
 **Since:** 9
 

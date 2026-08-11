@@ -1,6 +1,6 @@
 # SwitchStyle
 
-Switch类型的样式。
+Sets the style for the component of the **Switch** type.
 
 **Since:** 12
 
@@ -16,9 +16,9 @@ Switch类型的样式。
 pointColor?: ResourceColor
 ```
 
-设置Switch类型的圆形滑块颜色。
+Color of the circular slider when the component is of the **Switch** type.
 
-默认值：\$r('sys.color.ohos_id_color_foreground_contrary')
+Default value: **\$r('sys.color.ohos_id_color_foreground_contrary')**
 
 **Type:** [ResourceColor](../arkts-apis/arkts-arkui-resourcecolor-t.md)
 
@@ -40,15 +40,15 @@ pointColor?: ResourceColor
 pointRadius?: number | Resource
 ```
 
-设置Switch类型的圆形滑块半径，单位为vp。
+Radius of the circular slider when the component is of the **Switch** type. The unit is vp.
 
-**说明：**
+**NOTE：**
 
-不支持百分比，设定值小于0时按照默认算法设置，设定值大于等于0时按照设定值设置。
+Percentage values are not supported. The value specified is used only when it is greater than or equal to 0.
 
-未设定此属性时，圆形滑块半径根据默认算法设置。
+If the value is not specified or the specified one is less than 0, the radius is set using the following formula:
 
-默认算法：（组件高度（单位：vp） / 2） - （2vp * 组件高度（单位：vp） / 20vp）。
+(Component height (in vp)/2) - (2 vp x Component height (in vp)/20 vp)
 
 **Type:** number \| Resource
 
@@ -70,15 +70,15 @@ pointRadius?: number | Resource
 trackBorderRadius?: number | Resource
 ```
 
-设置Switch类型的滑轨的圆角，单位为vp。
+Radius of the slider track border corners when the component is of the **Switch** type. The unit is vp.
 
-**说明：**
+**NOTE：**
 
-不支持百分比，设定值小于0时按照默认算法设置，设定值大于组件高度一半时按照组件高度一半设置，其他场合按照设定值设置。
+This parameter cannot be set in percentage. If the value specified is less than 0, the radius is set using the default value formula. If the value specified is greater than half of the component height, the latter is used. In other cases, the value specified is used.
 
-未设定此属性时，滑轨圆角根据默认算法设置。
+If the value is not specified or the specified one is less than 0, the radius is set using the default value formula.
 
-默认算法：组件高度（单位：vp） / 2。
+Default value formula: Component height (in vp)/2
 
 **Type:** number \| Resource
 
@@ -100,10 +100,10 @@ trackBorderRadius?: number | Resource
 unselectedColor?: ResourceColor
 ```
 
-设置Switch类型关闭状态的背景颜色。
+Background color of the component when it is of the **Switch** type and is disabled.
 
-默认值：深色和浅色模式下均为0x337F7F7F。从API version 20开始，如果开启了  
-[优化深浅色模式切换开销](../../../ui/ui-dark-light-color-adaptation.md#优化深浅色模式切换开销)能力，浅色模式下默认值为0x19000000，表现效果为10%透明度的黑色；深色模式下默认值为0x19FFFFFF，表现效果为10%透明度的白色。
+Default value: **0x337F7F7F** (applies to both dark and light modes). Since API version 20, when   
+[optimizing color mode switching overhead](../../../ui/ui-dark-light-color-adaptation.md#optimizing-color-mode-switching-overhead)is enabled, the default value is **0x19000000** (black with 10% opacity) in light mode and **0x19FFFFFF** (white with 10% opacity) in dark mode.
 
 **Type:** [ResourceColor](../arkts-apis/arkts-arkui-resourcecolor-t.md)
 

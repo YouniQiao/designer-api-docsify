@@ -1,6 +1,6 @@
 # NativeEmbedStatus
 
-定义同层标签生命周期，当加载页面中有同层标签会触发CREATE，同层标签移动或者放大会触发UPDATE，退出页面会触发DESTROY。
+Enumerates the lifecycles of the same-layer tag. When a same-layer tag exists on the loaded page, **CREATE** is triggered. When a same-layer tag is moved or is enlarged, **UPDATE** is triggered. When the page exits, **DESTROY**is triggered.
 
 **Since:** 11
 
@@ -16,7 +16,7 @@
 CREATE = 0
 ```
 
-同层标签创建。
+The same-layer tag is created.
 
 **Since:** 11
 
@@ -34,7 +34,7 @@ CREATE = 0
 UPDATE = 1
 ```
 
-同层标签更新。
+The same-layer tag is updated.
 
 **Since:** 11
 
@@ -52,7 +52,7 @@ UPDATE = 1
 DESTROY = 2
 ```
 
-同层标签销毁。
+The same-layer tag is destroyed.
 
 **Since:** 11
 
@@ -70,7 +70,7 @@ DESTROY = 2
 ENTER_BFCACHE = 3
 ```
 
-同层标签进入BFCache。
+The same-layer tag enters BFCache.
 
 **Since:** 12
 
@@ -88,7 +88,7 @@ ENTER_BFCACHE = 3
 LEAVE_BFCACHE = 4
 ```
 
-同层标签离开BFCache。
+The same-layer tag leaves BFCache.
 
 **Since:** 12
 

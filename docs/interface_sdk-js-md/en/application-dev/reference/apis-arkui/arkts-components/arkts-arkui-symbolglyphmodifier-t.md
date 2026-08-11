@@ -4,7 +4,7 @@
 declare type SymbolGlyphModifier = import('../api/arkui/SymbolGlyphModifier').SymbolGlyphModifier
 ```
 
-SymbolGlyphModifier类型，用于设置自定义图标小符号。
+Defines custom icon symbol configurations.
 
 **Since:** 12
 

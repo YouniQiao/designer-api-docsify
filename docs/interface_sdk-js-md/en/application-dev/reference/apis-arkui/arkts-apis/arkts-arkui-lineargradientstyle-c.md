@@ -1,6 +1,6 @@
 # LinearGradientStyle
 
-显示为线性渐变。LinearGradientStyle继承自[ShaderStyle](arkts-arkui-shaderstyle-c.md)。
+Displays a linear gradient. **LinearGradientStyle** inherits from [ShaderStyle](arkts-arkui-shaderstyle-c.md).
 
 **Inheritance/Implementation:** LinearGradientStyle extends [ShaderStyle](arkts-arkui-shaderstyle-c.md)
 
@@ -18,7 +18,7 @@
 constructor(options: LinearGradientOptions)
 ```
 
-用于创建LinearGradientStyle对象的构造函数。
+A constructor used to create a **LinearGradientStyle** object.
 
 **Since:** 20
 
@@ -36,7 +36,7 @@ constructor(options: LinearGradientOptions)
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| options | [LinearGradientOptions](../arkts-components/arkts-arkui-lineargradientoptions-i.md) | Yes | 显示为线性渐变效果。 &lt;br&gt;[LinearGradientOptions](arkts-arkui-common-lineargradientoptions-i.md)中的direction默认值按 [GradientDirection](arkts-arkui-enums-gradientdirection-e.md)中的NONE处理。 |
+| options | [LinearGradientOptions](../arkts-components/arkts-arkui-lineargradientoptions-i.md) | Yes | Options for displaying a linear gradient. |
 
 ## options
 
@@ -44,7 +44,7 @@ constructor(options: LinearGradientOptions)
 options: LinearGradientOptions
 ```
 
-显示为线性渐变效果。
+Options for displaying a linear gradient.
 
 **Type:** [LinearGradientOptions](../arkts-components/arkts-arkui-lineargradientoptions-i.md)
 

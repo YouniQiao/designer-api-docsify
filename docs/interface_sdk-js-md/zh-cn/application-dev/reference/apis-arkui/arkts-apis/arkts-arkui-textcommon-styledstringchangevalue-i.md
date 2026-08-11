@@ -38,7 +38,7 @@ range: TextRange
 
 即将被替换的属性字符串子串在原字符串中的范围。
 
-**类型：** [TextRange](arkts-arkui-textrange-i.md)
+**类型：** [TextRange](arkts-arkui-textcommon-textrange-i.md)
 
 **起始版本：** 23
 

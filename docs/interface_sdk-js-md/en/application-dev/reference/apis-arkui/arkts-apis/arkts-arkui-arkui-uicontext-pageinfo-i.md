@@ -1,6 +1,6 @@
 # PageInfo
 
-Router和NavDestination等页面信息，若无对应的Router或NavDestination页面信息，则对应属性为undefined。
+Defines the PageInfo type.The value of routerPageInfo indicates the information of the router page, or undefined if the frameNode does not have router page information. And the value of navDestinationInfo indicates the information of the navDestination, or undefined if the frameNode does not have navDestination information.
 
 **Since:** 23
 
@@ -22,7 +22,7 @@ import { OverlayManager, FrameCallback, ResolvedUIContext, NodeRenderStateChange
 navDestinationInfo?: observer.NavDestinationInfo
 ```
 
-NavDestination信息。
+the property of navDestination information.
 
 **Type:** observer.NavDestinationInfo
 
@@ -42,7 +42,7 @@ NavDestination信息。
 routerPageInfo?: observer.RouterPageInfo
 ```
 
-Router信息。
+the property of router page information.
 
 **Type:** observer.RouterPageInfo
 

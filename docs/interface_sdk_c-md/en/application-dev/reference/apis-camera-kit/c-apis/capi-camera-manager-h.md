@@ -501,7 +501,7 @@ Creates a **Camera_Input** instance.
 | -- | -- |
 | [Camera_Manager](capi-oh-camera-camera-manager.md)* cameraManager | Pointer to the **Camera_Manager** instance. |
 | [const Camera_Device](capi-oh-camera-camera-device.md)* camera | Pointer to the **Camera_Device** instance. |
-| [Camera_Input](capi-oh-camera-camera-input.md)** cameraInput | Double pointer to the **Camera_Input** instance created, if the function is successfully called. |
+| Camera_Input** cameraInput | Double pointer to the **Camera_Input** instance created, if the function is successfully called. |
 
 **Returns**:
 
@@ -530,7 +530,7 @@ Creates a **Camera_Input** instance with the specified camera position and type.
 | [Camera_Manager](capi-oh-camera-camera-manager.md)* cameraManager | Pointer to the **Camera_Manager** instance. |
 | [Camera_Position](capi-camera-h.md#camera_position) position | Camera position. |
 | [Camera_Type](capi-camera-h.md#camera_type) type | Camera type. |
-| [Camera_Input](capi-oh-camera-camera-input.md)** cameraInput | Double pointer to the **Camera_Input** instance created, if the function is successfully called. |
+| Camera_Input** cameraInput | Double pointer to the **Camera_Input** instance created, if the function is successfully called. |
 
 **Returns**:
 
@@ -557,7 +557,7 @@ Creates a **PreviewOutput** instance.
 | [Camera_Manager](capi-oh-camera-camera-manager.md)* cameraManager | Pointer to the **Camera_Manager** instance. |
 | [const Camera_Profile](capi-oh-camera-camera-profile.md)* profile | Pointer to the profile used for creating the **Camera_PreviewOutput** instance. |
 | const char* surfaceId | Pointer to the surface ID used for creating the **Camera_PreviewOutput** instance. |
-| Camera_PreviewOutput** previewOutput | Double pointer to the **Camera_PreviewOutput** instance created, if the function issuccessfully called. |
+| [Camera_PreviewOutput](capi-oh-camera-camera-previewoutput.md)** previewOutput | Double pointer to the **Camera_PreviewOutput** instance created, if the function issuccessfully called. |
 
 **Returns**:
 
@@ -583,7 +583,7 @@ Creates a **PreviewOutput** instance to be used in a preconfiguration stream.
 | -- | -- |
 | [Camera_Manager](capi-oh-camera-camera-manager.md)* cameraManager | Pointer to the **Camera_Manager** instance. |
 | const char* surfaceId | Pointer to the surface ID used for creating the **Camera_PreviewOutput** instance. |
-| Camera_PreviewOutput** previewOutput | Double pointer to the **Camera_PreviewOutput** instance created, if the function issuccessfully called. |
+| [Camera_PreviewOutput](capi-oh-camera-camera-previewoutput.md)** previewOutput | Double pointer to the **Camera_PreviewOutput** instance created, if the function issuccessfully called. |
 
 **Returns**:
 
@@ -609,7 +609,7 @@ Create a defer preview output instance.The caller must call [OH_PreviewOutput_Re
 | -- | -- |
 | [const Camera_Manager](capi-oh-camera-camera-manager.md)* cameraManager | the [Camera_Manager](capi-oh-camera-camera-manager.md) instance. |
 | [const Camera_Profile](capi-oh-camera-camera-profile.md)* profile | the [Camera_Profile](capi-oh-camera-camera-profile.md) to create [Camera_PreviewOutput](capi-oh-camera-camera-previewoutput.md). |
-| Camera_PreviewOutput** previewOutput | the [Camera_PreviewOutput](capi-oh-camera-camera-previewoutput.md) will be created if the method call succeeds. |
+| [Camera_PreviewOutput](capi-oh-camera-camera-previewoutput.md)** previewOutput | the [Camera_PreviewOutput](capi-oh-camera-camera-previewoutput.md) will be created if the method call succeeds. |
 
 **Returns**:
 

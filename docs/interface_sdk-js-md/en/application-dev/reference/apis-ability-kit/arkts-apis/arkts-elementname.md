@@ -6,5 +6,5 @@
 
 | Name | Description |
 | --- | --- |
-| [ElementName](arkts-ability-elementname-i.md) | 应用组件结构体，包含bundleName、moduleName和abilityName等。通常用于组件启动信息  [AbilityRunningInfo.ability](arkts-ability-abilityrunninginfo-i.md)和组件启动回调函数  [connectOptions.onConnect](arkts-ability-connectoptions-connectoptions-i.md#onconnect)中。 |
+| [ElementName](arkts-ability-elementname-i.md) | A structured identifier for an application component, containing fields such as **bundleName**, **moduleName**, and  **abilityName**. It is usually used in  [AbilityRunningInfo.ability](arkts-ability-abilityrunninginfo-i.md) for component launch information and in the  [connectOptions.onConnect](arkts-ability-connectoptions-connectoptions-i.md#onconnect)callback for component connection. |
 

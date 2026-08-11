@@ -1,6 +1,6 @@
 # BoidsSimPlugin (System API)
 
-群组模拟插件. 提供用于管理群组模拟组件的静态方法.
+Boids simulation plugin, providing static methods for obtaining the boids simulation world.
 
 **Since:** 26.0.0
 
@@ -18,7 +18,7 @@
 static getDefaultBoidsSimWorld(scene: Scene): BoidsSimWorld | null
 ```
 
-获取指定场景的默认群组模拟世界.
+Gets the Boids simulation world instance associated with the specified scene.
 
 **Since:** 26.0.0
 
@@ -36,11 +36,11 @@ static getDefaultBoidsSimWorld(scene: Scene): BoidsSimWorld | null
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| scene | [Scene](arkts-arkgraphics3d-scene-c-sys.md) | Yes | 要获取群组模拟世界的场景 |
+| scene | [Scene](arkts-arkgraphics3d-scene-c-sys.md) | Yes | Object of the target scene. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [BoidsSimWorld](arkts-arkgraphics3d-sceneboidssim-boidssimworld-c-sys.md) | 返回群组模拟世界实例，若不存在则返回null。 |
+| [BoidsSimWorld](arkts-arkgraphics3d-sceneboidssim-boidssimworld-c-sys.md) | Returns the Boids simulation world instance, or null if it does not exist. |
 

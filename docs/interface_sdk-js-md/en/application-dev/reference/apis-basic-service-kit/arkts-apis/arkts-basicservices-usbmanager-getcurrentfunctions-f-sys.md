@@ -12,7 +12,8 @@ import { usbManager } from 'kits/@kit.BasicServicesKit';
 function getCurrentFunctions(): FunctionType
 ```
 
-在设备模式下，获取当前的USB功能列表的数字组合掩码。开发者模式关闭时，如果没有设备接入，接口可能返回`undefined`，注意需要对接口返回值做判空处理。
+Obtains the numeric mask combination for the USB function list in Device mode. When the developer mode is disabled,  
+ **undefined** may be returned if no device is connected. Check whether the return value of the API is empty.
 
 **Since:** 9
 
@@ -32,5 +33,5 @@ function getCurrentFunctions(): FunctionType
 
 | Type | Description |
 | --- | --- |
-| [FunctionType](arkts-basicservices-usb-functiontype-e-sys.md) | 当前的USB功能列表的数字组合掩码。 |
+| [FunctionType](arkts-basicservices-usb-functiontype-e-sys.md) | Numeric mask combination for the USB function list. |
 

@@ -10,12 +10,6 @@
 
 **系统能力：** SystemCapability.Security.Cert
 
-## 导入模块
-
-```TypeScript
-import { cert } from 'kits/@kit.DeviceCertificateKit';
-```
-
 ## crlDownloadURI
 
 ```TypeScript
@@ -90,7 +84,7 @@ ocspResponderCert?: X509Cert
 
 表示用于OCSP响应的签名校验的签名证书。
 
-**类型：** [X509Cert](../../apis-network-kit/arkts-apis/arkts-network-http-x509cert-t.md)
+**类型：** [X509Cert](arkts-devicecertificate-cert-x509cert-i.md)
 
 **起始版本：** 12
 

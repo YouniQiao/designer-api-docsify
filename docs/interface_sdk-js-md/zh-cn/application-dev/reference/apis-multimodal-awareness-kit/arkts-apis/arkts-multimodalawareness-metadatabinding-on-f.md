@@ -1,18 +1,12 @@
 # on
 
-## 导入模块
-
-```TypeScript
-import { metadataBinding } from 'kits/@kit.MultimodalAwarenessKit';
-```
-
 ## on('operationSubmitMetadata')
 
 ```TypeScript
 function on(type: 'operationSubmitMetadata', bundleName: string, callback: Callback<int>): void
 ```
 
-Subscribes to a system event to obtain the encoded metadata. The application needs to register a callback to return the encoded metadata when the registered system event occurs.
+订阅系统获取编码内容的事件。应用注册回调，事件发生时通过回调通知应用。调用on()方法订阅事件后，必须在不再需要监听事件时调用off()方法取消订阅，释放监听资源。
 
 **起始版本：** 18
 
@@ -28,33 +22,31 @@ Subscribes to a system event to obtain the encoded metadata. The application nee
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| type | 'operationSubmitMetadata' | 是 | Event type. This parameter has a fixed value of **operationSubmitMetadata**, indicating the system application's attempt to obtain the encoded metadata. |
-| bundleName | string | 是 | Application bundle name. |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;int&gt; | 是 | Callback used to return the encoded metadata. |
+| type | 'operationSubmitMetadata' | 是 | 事件类型，type为'operationSubmitMetadata'，表示系统应用获取编码内容。 |
+| bundleName | string | 是 | 应用包名，用于标识注册订阅事件的第三方应用。在事件发生时，系统将通过此包名识别并通知对应的注册应用。需确保传入的包名为有效的应用包名。 |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;int&gt; | 是 | 回调函数，用于返回事件编码。当事件值为1时表示截图事件。注意：回调函数应快速执行，避免阻塞UI线程。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 32100001 | Internal handling failed. |
-| 32100004 | Subscribe Failed. Possible causes: &lt;br&gt;1. Abnormal system capability. &lt;br&gt;2. IPC communication abnormality. &lt;br&gt;3. Algorithm loading exception. |
+| [32100001](../../apis-multimodalawareness-kit/errorcode-metadataBinding.md#32100001-文件创建失败) | Internal handling failed. |
+| [32100004](../../apis-multimodalawareness-kit/errorcode-metadataBinding.md#32100004-订阅失败) | Subscribe Failed. Possible causes: &lt;br&gt;1. Abnormal system capability. &lt;br&gt;2. IPC communication abnormality. &lt;br&gt;3. Algorithm loading exception. |
 
 ## 示例
 
 ```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
 import { metadataBinding } from '@kit.MultimodalAwarenessKit';
 
 let bundleName: string = '';
 try {
   metadataBinding.on('operationSubmitMetadata', bundleName, (event: number) => {
     if (event == 1) {
-      console.info("The screenshot request is received and the app link is obtained");
+      console.info("The screenshot request is intercepted and the app link is obtained");
     }
   });
 } catch (error) {
-  const err = error as BusinessError;
-  console.error(`Failed to register operationSubmitMetadata event. Code: ${err.code}, message: ${err.message}`);
+  console.error("register screenshot event error");
 }
 ```
 

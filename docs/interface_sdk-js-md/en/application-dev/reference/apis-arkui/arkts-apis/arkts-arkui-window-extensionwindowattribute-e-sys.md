@@ -1,6 +1,6 @@
 # ExtensionWindowAttribute (System API)
 
-扩展窗口的属性枚举。
+Enumerates the attributes of a window for a UI ServiceExtensionAbility.
 
 **Since:** 14
 
@@ -18,7 +18,7 @@
 SYSTEM_WINDOW = 0
 ```
 
-系统窗口。
+System window
 
 **Since:** 14
 
@@ -38,7 +38,7 @@ SYSTEM_WINDOW = 0
 SUB_WINDOW = 1
 ```
 
-子窗口。
+child window.
 
 **Since:** 14
 

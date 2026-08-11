@@ -20,12 +20,6 @@
 
 **系统能力：** SystemCapability.MultimodalInput.Input.Cooperator
 
-## 导入模块
-
-```TypeScript
-import { inputDeviceCooperate } from 'kits/@kit.InputKit';
-```
-
 ## 汇总
 
 <!--Del-->

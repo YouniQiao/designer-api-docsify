@@ -1,6 +1,6 @@
 # MaterialType
 
-材质类型枚举.
+Enumerates the material types in a scene. The material type defines how materials in a scene are rendered.
 
 **Since:** 12
 
@@ -16,7 +16,7 @@
 UNLIT_SHADOW_ALPHA = 100
 ```
 
-仅对阴影进行绘制，当材质开启[Blend](arkts-arkgraphics3d-sceneresources-blend-i.md)属性，与背景融合模拟透明材质效果。
+Draws only shadows. When the [Blend](arkts-arkgraphics3d-sceneresources-blend-i.md) property of the material is enabled,the material is blended with the background to simulate a transparent material effect.
 
 **Since:** 23
 

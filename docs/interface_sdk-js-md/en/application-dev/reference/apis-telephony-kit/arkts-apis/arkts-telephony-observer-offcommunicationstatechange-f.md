@@ -37,5 +37,5 @@ Unsubscribes from the callback for listening to the 5A state.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 201 | Permission denied. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
 

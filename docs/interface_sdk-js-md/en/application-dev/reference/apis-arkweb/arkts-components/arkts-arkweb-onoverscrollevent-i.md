@@ -1,6 +1,6 @@
 # OnOverScrollEvent
 
-定义网页过度滚动时触发的回调。
+Represents the callback invoked when the web page is overscrolled.
 
 **Since:** 12
 
@@ -16,9 +16,9 @@
 xOffset: number
 ```
 
-以网页最左端为基准，水平过度滚动的偏移量。
+Horizontal overscroll offset based on the leftmost edge of the web page.
 
-单位：vp。
+Unit: vp.
 
 **Type:** number
 
@@ -38,9 +38,9 @@ xOffset: number
 yOffset: number
 ```
 
-以网页最上端为基准，竖直过度滚动的偏移量。
+Vertical overscroll offset based on the top edge of the web page.
 
-单位：vp。
+Unit: vp.
 
 **Type:** number
 

@@ -16,7 +16,7 @@ CommonMethod.
 accessibilityActionOptions(option: AccessibilityActionOptions | undefined): T
 ```
 
-设置组件的无障碍操作的可选参数，用于限制或修改屏幕朗读等辅助应用发起的操作行为。
+Provides optional parameters for setting accessibility operations of a component, which is used to restrict or&lt;br&gt;modify the operations initiated by accessibility applications such as the screen reader.
 
 **Since:** 23
 
@@ -36,13 +36,13 @@ accessibilityActionOptions(option: AccessibilityActionOptions | undefined): T
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| option | [AccessibilityActionOptions](../arkts-apis/arkts-arkui-accessibilityactionoptions-i.md) \| undefined | Yes | 无障碍操作的参数，用于限制或者修改无障碍操作下的滑动行为。 &lt;br&gt;AccessibilityActionOptions中的scrollStep用于设置无障碍操作下的滑动步数。 &lt;br&gt;取值为**undefined**时scrollStep按1处理。 |
+| option | [AccessibilityActionOptions](../arkts-apis/arkts-arkui-accessibilityactionoptions-i.md) \| undefined | Yes | Parameter of the accessibility operation, which is used &lt;br&gt;to restrict or modify the sliding behavior in the accessibility operation. &lt;br&gt;The **scrollStep** parameter in **AccessibilityActionOptions** is used to set the number of sliding steps in &lt;br&gt;the accessibility operation. When the value is **undefined**, **scrollStep** is processed as **1**. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| T | 返回调用该接口的组件引用。 |
+| T | return component instance who call the method. |
 
 ## accessibilityChecked
 
@@ -50,7 +50,7 @@ accessibilityActionOptions(option: AccessibilityActionOptions | undefined): T
 accessibilityChecked(isCheck: boolean): T
 ```
 
-无障碍节点是否选中的状态维护，用于支持多选的情况使用，表示组件是否被选中。此接口只影响屏幕朗读场景下的组件状态播报信息。
+Sets the checked state for the accessibility node. This API is used in multi-select scenarios and only affects&lt;br&gt;component state announcements in screen reading scenarios.
 
 **Since:** 13
 
@@ -70,7 +70,7 @@ accessibilityChecked(isCheck: boolean): T
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| isCheck | boolean | Yes | 用于表示组件是否被选中。 &lt;br&gt;**true**：当前组件被选中。 &lt;br&gt;**false**：当前组件未被选中。 &lt;br&gt;**undefined**：由组件自行确定选中状态。 &lt;br&gt;默认值：**undefined |
+| isCheck | boolean | Yes | Whether the current component is selected. &lt;br&gt;**true**: The component is selected. &lt;br&gt;**false**: The component is not selected. &lt;br&gt;**undefined**: The component determines its own selected state. &lt;br&gt;Default value: **undefined |
 
 **Return value:**
 
@@ -84,7 +84,7 @@ accessibilityChecked(isCheck: boolean): T
 accessibilityCustomActions(actions: Array<AccessibilityCustomAction> | undefined): T
 ```
 
-设置组件的自定义无障碍操作，支持开发者设置一个自定义actions的数组，用于给组件按操作名进行自定义操作的回调绑定。
+Sets the custom accessibility operations of the component, allowing developers to set an array of custom actions&lt;br&gt;for binding custom operation callbacks to components by operation name.
 
 **Since:** 26.0.0
 
@@ -104,13 +104,13 @@ accessibilityCustomActions(actions: Array<AccessibilityCustomAction> | undefined
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| actions | Array&lt;[AccessibilityCustomAction](../arkts-apis/arkts-arkui-accessibilitycustomaction-i.md)&gt; \| undefined | Yes | 自定义无障碍操作数组，每个操作包含操作名称和回调，用于给组件按操作名进行自定义操作的回调绑定。 &lt;br&gt;**说明：**数组长度最大支持16个，超出部分将不生效。 &lt;br&gt;取值为**undefined**时，不设置自定义操作。 |
+| actions | Array&lt;[AccessibilityCustomAction](../arkts-apis/arkts-arkui-accessibilitycustomaction-i.md)&gt; \| undefined | Yes | Array of custom accessibility operations, where &lt;br&gt;each operation contains an operation name and a callback, used for binding custom operation callbacks to &lt;br&gt;components by operation name. &lt;br&gt;**NOTE：**: The array supports a maximum of 16 entries; any excess will not take effect. &lt;br&gt;When the value is **undefined**, no custom operations are set. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| T | 返回调用方法的组件实例。 |
+| T | return component instance who call method. |
 
 ## accessibilityDefaultFocus
 
@@ -118,7 +118,7 @@ accessibilityCustomActions(actions: Array<AccessibilityCustomAction> | undefined
 accessibilityDefaultFocus(focus: boolean): T
 ```
 
-为页面设置屏幕朗读初始焦点。
+Sets the initial screen reader focus on the page.
 
 **Since:** 18
 
@@ -138,7 +138,7 @@ accessibilityDefaultFocus(focus: boolean): T
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| focus | boolean | Yes | 为页面设置屏幕朗读初始焦点。值为true则表示该组件为当前页默认首焦点，值为false或其他值无效。 |
+| focus | boolean | Yes | Initial screen reader focus on the page. The value **true** means the component is the &lt;br&gt;default initial focus for screen readers on the current page. Other values are ignored. |
 
 **Return value:**
 
@@ -152,7 +152,7 @@ accessibilityDefaultFocus(focus: boolean): T
 accessibilityDescription(value: string): T
 ```
 
-设置无障碍说明。该属性用于为用户进一步说明当前组件，开发人员可为组件设置相对较详细的解释文本，帮助用户理解将要执行的操作。
+Sets the accessibility description.&lt;br&gt;This attribute provides additional context and explanation for the component, helping users understand its&lt;br&gt;functionality and purpose.
 
 **Since:** 10
 
@@ -172,7 +172,7 @@ accessibilityDescription(value: string): T
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | string | Yes | 无障碍说明，用于为用户进一步说明当前组件，开发人员可为组件的该属性设置相对较详细的解释文本，帮助用户理解将要执行的操作。如帮助用户理解将要执行的操作可能导致什么后果，尤其是当这些后果无法从组件本身属性与无障碍文本中了解到时。若组件既拥有文本属性又拥有无障碍说明属性，则组件被选中时，先播报组件的文本属性，再播报无障碍说明属性的内容。 &lt;br&gt;默认值：**"" |
+| value | string | Yes | Accessibility description. You can specify further explanation of the current component, &lt;br&gt;such as potential operation consequences that cannot be inferred from component attributes or accessibility text. &lt;br&gt;If a component contains both text content and the accessibility description, the screen reader announces the &lt;br&gt;text first, followed by the accessibility description, when the component is selected. &lt;br&gt;Default value: **"" |
 
 **Return value:**
 
@@ -186,7 +186,7 @@ accessibilityDescription(value: string): T
 accessibilityDescription(description: Resource): T
 ```
 
-设置无障碍说明，支持通过Resource引用资源文件。该属性用于为用户进一步说明当前组件，开发人员可为组件设置相对较详细的解释文本，帮助用户理解将要执行的操作。&lt;p&gt;&lt;strong&gt;NOTE&lt;/strong&gt;:&lt;br&gt;Reference resource of the accessibility description. You can specify further explanation&lt;br&gt;of the current component, for example, possible operation consequences, especially those that&lt;br&gt;cannot be learned from component attributes and accessibility text. If a component contains&lt;br&gt;both text information and the accessibility description, the text is read first and then the&lt;br&gt;accessibility description, when the component is selected.&lt;/p&gt;
+Sets the accessibility description, with support for resource references using Resource.&lt;br&gt;This attribute provides additional context and explanation for the component, helping users understand its&lt;br&gt;functionality and purpose.&lt;p&gt;&lt;strong&gt;NOTE&lt;/strong&gt;:&lt;br&gt;Reference resource of the accessibility description. You can specify further explanation&lt;br&gt;of the current component, for example, possible operation consequences, especially those that&lt;br&gt;cannot be learned from component attributes and accessibility text. If a component contains&lt;br&gt;both text information and the accessibility description, the text is read first and then the&lt;br&gt;accessibility description, when the component is selected.&lt;/p&gt;
 
 **Since:** 12
 
@@ -220,7 +220,7 @@ accessibilityDescription(description: Resource): T
 accessibilityFocusDrawLevel(drawLevel: FocusDrawLevel): T
 ```
 
-无障碍焦点绿框的绘制层级设置功能。默认层级是跟随组件。
+Sets the drawing level for the accessibility focus highlight (green frame).
 
 **Since:** 19
 
@@ -240,7 +240,7 @@ accessibilityFocusDrawLevel(drawLevel: FocusDrawLevel): T
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| drawLevel | [FocusDrawLevel](../arkts-apis/arkts-arkui-focusdrawlevel-e.md) | Yes | 无障碍绘制能力，默认情况下绘制聚焦节点本身。 |
+| drawLevel | [FocusDrawLevel](../arkts-apis/arkts-arkui-focusdrawlevel-e.md) | Yes | Drawing level for the accessibility focus highlight frame. |
 
 **Return value:**
 
@@ -363,7 +363,7 @@ Sets the accessibility level.This property determines whether the component can 
 accessibilityNextFocusId(nextId: string): T
 ```
 
-指定屏幕朗读扫动走焦过程中组件的下一个焦点。
+Sets the next component to receive focus during screen reader navigation.
 
 **Since:** 18
 
@@ -383,7 +383,7 @@ accessibilityNextFocusId(nextId: string): T
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| nextId | string | Yes | 下一个被指定聚焦组件的[唯一标识id](arkts-arkui-commonmethod-c.md#id)。若唯一标识id无对应组件，则设置的accessibilityNextFocusId不存在，设置无效。 |
+| nextId | string | Yes | [Unique ID](arkts-arkui-commonmethod-c.md#id) of the next component to receive focus. &lt;br&gt;If the ID does not correspond to any component, the setting is ignored. |
 
 **Return value:**
 
@@ -397,7 +397,7 @@ accessibilityNextFocusId(nextId: string): T
 accessibilityNextFocusId(nextId: string, nextFocusParams : AccessibilityNextFocusParams | undefined): T
 ```
 
-指定屏幕朗读扫动走焦过程中组件的下一个焦点，并支持配置详细参数。&lt;br&gt;通过AccessibilityNextFocusParams参数，可以配置是否在无障碍下一个焦点处理过程中查找后代节点中的焦点。
+Sets the next component to receive focus during screen reader navigation, with optional detailed parameters.The detailed parameters can provide additional behavior for the accessibility focus transition.
 
 **Since:** 26.0.0
 
@@ -417,8 +417,8 @@ accessibilityNextFocusId(nextId: string, nextFocusParams : AccessibilityNextFocu
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| nextId | string | Yes | 下一个被指定聚焦组件的[唯一标识id](arkts-arkui-commonmethod-c.md#id)。若唯一标识id无对应组件，则设置的accessibilityNextFocusId不存在，设置无效。 |
-| nextFocusParams | [AccessibilityNextFocusParams](../arkts-apis/arkts-arkui-accessibilitynextfocusparams-i.md) \| undefined | Yes | 无障碍下一个焦点处理的详细参数，用于配置是否在后代节点中查找可聚焦节点。 &lt;br&gt;取值为**undefined**时，不配置下一个焦点处理的详细参数，不在后代节点中查找焦点。 |
+| nextId | string | Yes | [Unique ID](arkts-arkui-commonmethod-c.md#id) of the next component to receive focus. &lt;br&gt;If the ID does not correspond to any component, the setting is ignored. |
+| nextFocusParams | [AccessibilityNextFocusParams](../arkts-apis/arkts-arkui-accessibilitynextfocusparams-i.md) \| undefined | Yes | Detailed parameters for accessibility next &lt;br&gt;focus processing, used to configure whether to search for focusable nodes among descendant nodes. &lt;br&gt;When the value is **undefined**, no detailed parameters are configured and no focus search is performed &lt;br&gt;among descendant nodes. |
 
 **Return value:**
 
@@ -426,13 +426,48 @@ accessibilityNextFocusId(nextId: string, nextFocusParams : AccessibilityNextFocu
 | --- | --- |
 | T |  |
 
+## accessibilityNextFocusId
+
+```TypeScript
+accessibilityNextFocusId(nextId: string, nextFocusParams : AccessibilityNextFocusParams | undefined): T
+```
+
+Enable or disable specific smart gesture shortcuts, and set response priorities for them.
+
+**Since:** 26.0.0
+
+**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
+
+**Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API:** This API can be used in atomic services since API version 26.0.0.
+
+**Widget capability:** This API can be used in ArkTS widgets since API version 26.0.0.
+
+<!--Device-CommonMethod-accessibilityNextFocusId(nextId: string, nextFocusParams : AccessibilityNextFocusParams | undefined): T--><!--Device-CommonMethod-accessibilityNextFocusId(nextId: string, nextFocusParams : AccessibilityNextFocusParams | undefined): T-End-->
+
+**System capability:** SystemCapability.ArkUI.ArkUI.Full
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| nextId | string | Yes |  |
+| nextFocusParams | [AccessibilityNextFocusParams](../arkts-apis/arkts-arkui-accessibilitynextfocusparams-i.md) \| undefined | Yes |  |
+
+**Return value:**
+
+| Type | Description |
+| --- | --- |
+| T | return component instance who call the method. |
+
 ## accessibilityRole
 
 ```TypeScript
 accessibilityRole(role: AccessibilityRoleType): T
 ```
 
-设置无障碍组件类型，特定组件类型有特定的朗读方式，可以根据应用诉求，修改组件类型，用于控制无障碍模式下对组件的朗读方式和朗读内容。
+Sets the role type of the accessibility component, which affects how the component is announced by screen readers.
 
 **Since:** 18
 
@@ -452,7 +487,7 @@ accessibilityRole(role: AccessibilityRoleType): T
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| role | [AccessibilityRoleType](../arkts-apis/arkts-arkui-common-accessibilityroletype-e.md) | Yes | 屏幕朗读播报的组件类型，如按钮、图表。具体类型可由开发者自定义。 |
+| role | [AccessibilityRoleType](../arkts-apis/arkts-arkui-common-accessibilityroletype-e.md) | Yes | Role of the component as announced by screen readers (for example, button or &lt;br&gt;chart). You can define custom roles. |
 
 **Return value:**
 
@@ -466,7 +501,7 @@ accessibilityRole(role: AccessibilityRoleType): T
 accessibilityScrollTriggerable(isTriggerable: boolean): T
 ```
 
-设置无障碍节点是否支持屏幕朗读滚动操作。当屏幕朗读在扫动走焦时，若容器内当前页面无可聚焦的组件，会发起一次自动滚动操作。
+Sets whether the accessibility node triggers automatic screen scrolling. When no focusable components are visible&lt;br&gt;on the current page within a container, this setting determines whether automatic scrolling is initiated.
 
 **Since:** 18
 
@@ -486,7 +521,7 @@ accessibilityScrollTriggerable(isTriggerable: boolean): T
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| isTriggerable | boolean | Yes | 用于表示组件是否支持该能力。 &lt;br&gt;**true**：屏幕朗读焦点切换而容器内当前页面无可聚焦的组件时，需要自动滚动操作。 &lt;br&gt;**false**：屏幕朗读焦点切换而容器内当前页面无可聚焦的组件时，不需要自动滚动操作。 &lt;br&gt;**undefined**：还原默认值。 &lt;br&gt;默认值：**true |
+| isTriggerable | boolean | Yes | Whether the component triggers automatic scrolling for screen readers when the &lt;br&gt;current page has no focusable components. &lt;br&gt;**true**: The component triggers automatic scrolling. &lt;br&gt;**false**: The component does not trigger automatic scrolling. &lt;br&gt;**undefined**: The default settings are restored. &lt;br&gt;Default value: **true |
 
 **Return value:**
 
@@ -500,7 +535,7 @@ accessibilityScrollTriggerable(isTriggerable: boolean): T
 accessibilitySelected(isSelect: boolean): T
 ```
 
-无障碍节点是否选中的状态维护，用于支持单选的情况使用，表示组件是否被选中。此接口只影响屏幕朗读场景下的组件状态播报信息。
+Sets the checked state for the accessibility node. This API is used in single-select scenarios and only affects&lt;br&gt;component state announcements in screen reading scenarios.
 
 **Since:** 13
 
@@ -520,7 +555,7 @@ accessibilitySelected(isSelect: boolean): T
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| isSelect | boolean | Yes | 用于表示组件是否被选中。 &lt;br&gt;**true**：当前组件被选中。 &lt;br&gt;**false**：当前组件未被选中。 &lt;br&gt;**undefined**：由组件自行确定选中状态。 &lt;br&gt;默认值：**undefined |
+| isSelect | boolean | Yes | Whether the current component is selected. &lt;br&gt;**true**: The component is selected. &lt;br&gt;**false**: The component is not selected. &lt;br&gt;**undefined**: The component determines its own selected state. &lt;br&gt;Default value: **undefined |
 
 **Return value:**
 
@@ -534,7 +569,7 @@ accessibilitySelected(isSelect: boolean): T
 accessibilityStateDescription(description: string | Resource | undefined): T
 ```
 
-设置组件的状态播报文本，用于屏幕朗读场景下清晰说明组件当前的实时状态。屏幕朗读时会优先播报该状态文本。
+Sets the state description of a component for broadcasting, which clearly describes the real-time state of the&lt;br&gt;component in screen reading scenarios. Screen reader will broadcast the state description first.
 
 **Since:** 23
 
@@ -554,13 +589,13 @@ accessibilityStateDescription(description: string | Resource | undefined): T
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| description | string \| Resource \| undefined | Yes | 需要播报组件当前状态的语音播报文本。 &lt;br&gt;设置文本超过1000字符时，截取前1000字符进行播报。 &lt;br&gt;**undefined**：播报文本默认为空。 |
+| description | string \| Resource \| undefined | Yes | Text to be broadcasted for the current state of the component. &lt;br&gt;If the text contains more than 1000 characters, the first 1000 characters will be broadcasted. &lt;br&gt;**undefined**: The text is empty by default. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| T | 返回调用该接口的组件引用。 |
+| T | return component instance who call the method. |
 
 ## accessibilityText
 
@@ -602,7 +637,9 @@ Sets the accessibility text.When a component does not contain a text attribute, 
 accessibilityText(text: Resource): T
 ```
 
-Sets the accessibility text.&lt;p&gt;&lt;strong&gt;NOTE&lt;/strong&gt;If a component has both text content and accessibility text, only the accessibility text is announced.&lt;br&gt;If a component is grouped for accessibility purposes but lacks both text content and accessibility&lt;br&gt;text, the screen reader will concatenate text from its child components (depth-first traversal).&lt;br&gt;To prioritize accessibility text concatenation, set accessibilityPreferred in accessibilityGroup.&lt;/p&gt;
+Sets the accessibility text.
+
+&lt;p&gt;&lt;strong&gt;NOTE&lt;/strong&gt;If a component has both text content and accessibility text, only the accessibility text is announced.&lt;br&gt;If a component is grouped for accessibility purposes but lacks both text content and accessibility&lt;br&gt;text, the screen reader will concatenate text from its child components (depth-first traversal).&lt;br&gt;To prioritize accessibility text concatenation, set accessibilityPreferred in accessibilityGroup.&lt;/p&gt;
 
 **Since:** 12
 
@@ -636,7 +673,7 @@ Sets the accessibility text.&lt;p&gt;&lt;strong&gt;NOTE&lt;/strong&gt;If a compo
 accessibilityTextHint(value: string): T
 ```
 
-设置组件的文本提示信息，供无障碍辅助应用查询。
+Sets the text hint for the component, which can be queried by accessibility services.
 
 **Since:** 12
 
@@ -656,7 +693,7 @@ accessibilityTextHint(value: string): T
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | string | Yes | 组件的文本提示信息，供无障碍辅助应用查询。 |
+| value | string | Yes | Text hint for the component, which can be queried by accessibility services. |
 
 **Return value:**
 
@@ -670,7 +707,7 @@ accessibilityTextHint(value: string): T
 accessibilityUseSamePage(pageMode: AccessibilitySamePageMode): T
 ```
 
-设置当前组件和宿主应用为同page模式。
+Sets the same-page mode for the current component and its host application.
 
 **Since:** 18
 
@@ -690,7 +727,7 @@ accessibilityUseSamePage(pageMode: AccessibilitySamePageMode): T
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| pageMode | [AccessibilitySamePageMode](arkts-arkui-accessibilitysamepagemode-e.md) | Yes | 当前跨进程嵌入式显示的组件和宿主应用的同page模式。 |
+| pageMode | [AccessibilitySamePageMode](arkts-arkui-accessibilitysamepagemode-e.md) | Yes | Same-page mode for the cross-process embedded component &lt;br&gt;and the host application. |
 
 **Return value:**
 
@@ -704,7 +741,7 @@ accessibilityUseSamePage(pageMode: AccessibilitySamePageMode): T
 accessibilityVirtualNode(builder: CustomBuilder): T
 ```
 
-设置无障碍虚拟子节点。对自绘制组件传入一个自定义的CustomBuilder，该CustomBuilder中的组件在后端仅做布局不做显示，辅助应用获取无障碍节点信息时会返回CustomBuilder中的节点信息。
+Sets an accessibility virtual child node. For custom drawing components, a **CustomBuilder** is passed, which is&lt;br&gt;used to provide accessibility information. The components within the **CustomBuilder** are only used for layout&lt;br&gt;and not for display.
 
 **Since:** 11
 
@@ -724,7 +761,7 @@ accessibilityVirtualNode(builder: CustomBuilder): T
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| builder | [CustomBuilder](arkts-arkui-custombuilder-t.md) | Yes | 无障碍虚拟子节点，使开发者可以对自绘制组件传入一个自定义的CustomBuilder，该CustomBuilder中的组件在后端仅做布局不做显示，辅助应用获取无障碍节点信息时会返回CustomBuilder中的节点信息。 |
+| builder | [CustomBuilder](arkts-arkui-custombuilder-t.md) | Yes | Accessibility virtual node. Pass a custom builder to the custom drawing component. &lt;br&gt;The components within the custom builder are used for layout only and are not visually rendered. When &lt;br&gt;accessibility services retrieve node information, the node information from the custom builder is returned. |
 
 **Return value:**
 
@@ -738,7 +775,7 @@ accessibilityVirtualNode(builder: CustomBuilder): T
 align(value: Alignment): T
 ```
 
-设置当前组件绘制区域内的子组件的对齐方式，支持 [attributeModifier](arkts-arkui-commonmethod-c.md#attributemodifier)动态设置属性方法。
+Sets the alignment mode for child elements within the container's drawing area. This attribute can be dynamically set using [attributeModifier](arkts-arkui-commonmethod-c.md#attributemodifier).
 
 **Since:** 7
 
@@ -756,7 +793,7 @@ align(value: Alignment): T
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | [Alignment](../arkts-apis/arkts-arkui-alignment-e.md) | Yes | 设置当前组件绘制区域内的子组件的对齐方式。&lt;br/&gt;只在[Stack](../../apis-arkts/arkts-apis/arkts-arkts-util-stack-stack-c.md/arkts-arkts-util-stack-stack-c.md), [FolderStack](../arkts-apis/arkts-arkui-folderstack-folderstack-f.md/arkts-arkui-folderstack-folderstack-f.md#folderstack), [Shape](../arkts-apis/arkts-arkui-shape-shape-f.md/arkts-arkui-shape-shape-f.md#shape), [Button](../../apis-input-kit/arkts-apis/arkts-input-multimodalinput-mouseevent-button-e.md/arkts-input-multimodalinput-mouseevent-button-e.md), [Marquee](../arkts-apis/arkts-arkui-marquee-marquee-f.md/arkts-arkui-marquee-marquee-f.md#marquee), [StepperItem](StepperItem), [Text](../arkts-apis/arkts-arkui-text-text-f.md/arkts-arkui-text-text-f.md#text), [TextArea](../arkts-apis/arkts-arkui-textarea-textarea-f.md/arkts-arkui-textarea-textarea-f.md#textarea), [TextInput](../arkts-apis/arkts-arkui-textinput-textinput-f.md/arkts-arkui-textinput-textinput-f.md#textinput), [RichEditor](../arkts-apis/arkts-arkui-richeditor-richeditor-f.md/arkts-arkui-richeditor-richeditor-f.md#richeditor), [Hyperlink](../arkts-apis/arkts-arkui-hyperlink-hyperlink-f.md/arkts-arkui-hyperlink-hyperlink-f.md#hyperlink), [SymbolGlyph](../arkts-apis/arkts-arkui-symbolglyph-symbolglyph-f.md/arkts-arkui-symbolglyph-symbolglyph-f.md#symbolglyph), [ListItem](../arkts-apis/arkts-arkui-listitem-listitem-f.md/arkts-arkui-listitem-listitem-f.md#listitem), [GridItem](../arkts-apis/arkts-arkui-griditem-griditem-f.md/arkts-arkui-griditem-griditem-f.md#griditem), [Scroll](../arkts-apis/arkts-arkui-scroll-scroll-f.md/arkts-arkui-scroll-scroll-f.md#scroll), [FlowItem](../arkts-apis/arkts-arkui-flowitem-flowitem-f.md/arkts-arkui-flowitem-flowitem-f.md#flowitem), [ImageAnimator](../arkts-apis/arkts-arkui-imageanimator-imageanimator-f.md/arkts-arkui-imageanimator-imageanimator-f.md#imageanimator), [LoadingProgress](../arkts-apis/arkts-arkui-loadingprogress-loadingprogress-f.md/arkts-arkui-loadingprogress-loadingprogress-f.md#loadingprogress), [PatternLock](../arkts-apis/arkts-arkui-patternlock-patternlock-f.md/arkts-arkui-patternlock-patternlock-f.md#patternlock), [Progress](../../apis-core-file-kit/arkts-apis/arkts-corefile-file-fs-progress-i.md/arkts-corefile-file-fs-progress-i.md), [QRCode](../arkts-apis/arkts-arkui-qrcode-qrcode-f.md/arkts-arkui-qrcode-qrcode-f.md#qrcode), [TextClock](../arkts-apis/arkts-arkui-textclock-textclock-f.md/arkts-arkui-textclock-textclock-f.md#textclock), [TextTimer](../arkts-apis/arkts-arkui-texttimer-texttimer-f.md/arkts-arkui-texttimer-texttimer-f.md#texttimer), [MenuItem](StMenuItemack), [Toggle](../arkts-apis/arkts-arkui-toggle-toggle-f.md/arkts-arkui-toggle-toggle-f.md#toggle), [Checkbox](../arkts-apis/arkts-arkui-checkbox-checkbox-f.md/arkts-arkui-checkbox-checkbox-f.md#checkbox), and [NodeContainer](../arkts-apis/arkts-arkui-nodecontainer-nodecontainer-f.md/arkts-arkui-nodecontainer-nodecontainer-f.md#nodecontainer)中生效，其中和文本相关的组件Marquee、Text、TextArea、TextInput、RichEditor、Hyperlink的align结果参考[textAlign](ts-basic- components-text.md#textalign)。&lt;br/&gt;不支持textAlign属性的组件则无法设置水平方向的文字对齐。&lt;br/&gt;默认值：Alignment.Center&lt;br/&gt;**说明：** &lt;br/&gt;该属性在[Stack](ts-container-stack.md)组件上支持镜像能力，在其他组件上不支持镜像能力。&lt;br/&gt;在Stack中该属性与alignContent效果一致，只能设置子组件在当前组件内的对 齐方式。 |
+| value | [Alignment](../arkts-apis/arkts-arkui-alignment-e.md) | Yes | Alignment mode for child elements in container drawing area. This setting takes effect only in [Stack](../../apis-arkts/arkts-apis/arkts-arkts-util-stack-stack-c.md/arkts-arkts-util-stack-stack-c.md), [FolderStack](../arkts-apis/arkts-arkui-folderstack-folderstack-f.md/arkts-arkui-folderstack-folderstack-f.md#folderstack), [Shape](../arkts-apis/arkts-arkui-shape-shape-f.md/arkts-arkui-shape-shape-f.md#shape), [Button](../../apis-input-kit/arkts-apis/arkts-input-multimodalinput-mouseevent-button-e.md/arkts-input-multimodalinput-mouseevent-button-e.md), [Marquee](../arkts-apis/arkts-arkui-marquee-marquee-f.md/arkts-arkui-marquee-marquee-f.md#marquee), [StepperItem](StepperItem), [Text](../arkts-apis/arkts-arkui-text-text-f.md/arkts-arkui-text-text-f.md#text), [TextArea](../arkts-apis/arkts-arkui-textarea-textarea-f.md/arkts-arkui-textarea-textarea-f.md#textarea), [TextInput](../arkts-apis/arkts-arkui-textinput-textinput-f.md/arkts-arkui-textinput-textinput-f.md#textinput), [RichEditor](../arkts-apis/arkts-arkui-richeditor-richeditor-f.md/arkts-arkui-richeditor-richeditor-f.md#richeditor), [Hyperlink](../arkts-apis/arkts-arkui-hyperlink-hyperlink-f.md/arkts-arkui-hyperlink-hyperlink-f.md#hyperlink), [SymbolGlyph](../arkts-apis/arkts-arkui-symbolglyph-symbolglyph-f.md/arkts-arkui-symbolglyph-symbolglyph-f.md#symbolglyph), [ListItem](../arkts-apis/arkts-arkui-listitem-listitem-f.md/arkts-arkui-listitem-listitem-f.md#listitem), [GridItem](../arkts-apis/arkts-arkui-griditem-griditem-f.md/arkts-arkui-griditem-griditem-f.md#griditem), [Scroll](../arkts-apis/arkts-arkui-scroll-scroll-f.md/arkts-arkui-scroll-scroll-f.md#scroll), [FlowItem](../arkts-apis/arkts-arkui-flowitem-flowitem-f.md/arkts-arkui-flowitem-flowitem-f.md#flowitem), [ImageAnimator](../arkts-apis/arkts-arkui-imageanimator-imageanimator-f.md/arkts-arkui-imageanimator-imageanimator-f.md#imageanimator), [LoadingProgress](../arkts-apis/arkts-arkui-loadingprogress-loadingprogress-f.md/arkts-arkui-loadingprogress-loadingprogress-f.md#loadingprogress), [PatternLock](../arkts-apis/arkts-arkui-patternlock-patternlock-f.md/arkts-arkui-patternlock-patternlock-f.md#patternlock), [Progress](../../apis-core-file-kit/arkts-apis/arkts-corefile-file-fs-progress-i.md/arkts-corefile-file-fs-progress-i.md), [QRCode](../arkts-apis/arkts-arkui-qrcode-qrcode-f.md/arkts-arkui-qrcode-qrcode-f.md#qrcode), [TextClock](../arkts-apis/arkts-arkui-textclock-textclock-f.md/arkts-arkui-textclock-textclock-f.md#textclock), [TextTimer](../arkts-apis/arkts-arkui-texttimer-texttimer-f.md/arkts-arkui-texttimer-texttimer-f.md#texttimer), [MenuItem](StMenuItemack), [Toggle](../arkts-apis/arkts-arkui-toggle-toggle-f.md/arkts-arkui-toggle-toggle-f.md#toggle), [Checkbox](../arkts-apis/arkts-arkui-checkbox-checkbox-f.md/arkts-arkui-checkbox-checkbox-f.md#checkbox), and [NodeContainer](../arkts-apis/arkts-arkui-nodecontainer-nodecontainer-f.md/arkts-arkui-nodecontainer-nodecontainer-f.md#nodecontainer). For the alignment of the **Marquee**, **Text**, **TextArea**, **TextInput**, **RichEditor**, and **Hyperlink** components related to text, see [textAlign](../arkts-apis/arkts-arkui-text-textattribute-i.md/arkts-arkui-text-textattribute-i.md#textalign). If a component does not support the **textAlign** attribute, horizontal text alignment cannot be configured. &lt;br&gt;Default value: **Alignment.Center** &lt;br&gt;**NOTE：**&lt;br&gt; This attribute supports the mirroring capability only in the [Stack](../../apis-arkts/arkts-apis/arkts-arkts-util-stack-stack-c.md/arkts-arkts-util-stack-stack-c.md) component. In the **Stack** component, this attribute has the same effect as **alignContent**, which means that it sets the alignment mode of child components in the container |
 
 **Return value:**
 
@@ -770,7 +807,7 @@ align(value: Alignment): T
 align(alignment: Alignment | LocalizedAlignment): T
 ```
 
-设置当前组件绘制区域内的子组件的对齐方式，增加支持镜像的能力，支持[attributeModifier](arkts-arkui-commonmethod-c.md#attributemodifier)。
+Sets the alignment mode for child elements within the container's drawing area. The mirroring capability is supported. This attribute can be dynamically set using [attributeModifier](arkts-arkui-commonmethod-c.md#attributemodifier).
 
 **Since:** 20
 
@@ -790,7 +827,7 @@ align(alignment: Alignment | LocalizedAlignment): T
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| alignment | [Alignment](../arkts-apis/arkts-arkui-alignment-e.md) \| LocalizedAlignment | Yes | 设置当前组件绘制区域内的子组件的对齐方式，增加支持镜像的能力。&lt;br/&gt;[LocalizedAlignment](../arkts-apis/arkts-arkui-enums-localizedalignment-e.md/arkts-arkui-enums-localizedalignment-e.md)只在[Shape](../arkts-apis/arkts-arkui-shape-shape-f.md/arkts-arkui-shape-shape-f.md#shape), [Button](../../apis-input-kit/arkts-apis/arkts-input-multimodalinput-mouseevent-button-e.md/arkts-input-multimodalinput-mouseevent-button-e.md), [GridItem](../arkts-apis/arkts-arkui-griditem-griditem-f.md/arkts-arkui-griditem-griditem-f.md#griditem), [FlowItem](../arkts-apis/arkts-arkui-flowitem-flowitem-f.md/arkts-arkui-flowitem-flowitem-f.md#flowitem), [ImageAnimator](../arkts-apis/arkts-arkui-imageanimator-imageanimator-f.md/arkts-arkui-imageanimator-imageanimator-f.md#imageanimator), [LoadingProgress](../arkts-apis/arkts-arkui-loadingprogress-loadingprogress-f.md/arkts-arkui-loadingprogress-loadingprogress-f.md#loadingprogress), [PatternLock](../arkts-apis/arkts-arkui-patternlock-patternlock-f.md/arkts-arkui-patternlock-patternlock-f.md#patternlock), [Progress](../../apis-core-file-kit/arkts-apis/arkts-corefile-file-fs-progress-i.md/arkts-corefile-file-fs-progress-i.md), [QRCode](../arkts-apis/arkts-arkui-qrcode-qrcode-f.md/arkts-arkui-qrcode-qrcode-f.md#qrcode), [TextClock](../arkts-apis/arkts-arkui-textclock-textclock-f.md/arkts-arkui-textclock-textclock-f.md#textclock), [TextTimer](../arkts-apis/arkts-arkui-texttimer-texttimer-f.md/arkts-arkui-texttimer-texttimer-f.md#texttimer), [StepperItem](StepperItem), [MenuItem](../arkts-apis/arkts-arkui-menuitem-menuitem-f.md/arkts-arkui-menuitem-menuitem-f.md#menuitem), [Toggle](../arkts-apis/arkts-arkui-menuitem-menuitem-f.md/arkts-arkui-menuitem-menuitem-f.md#menuitem), [Checkbox](../arkts-apis/arkts-arkui-checkbox-checkbox-f.md/arkts-arkui-checkbox-checkbox-f.md#checkbox), and [ListItem](../arkts-apis/arkts-arkui-listitem-listitem-f.md/arkts-arkui-listitem-listitem-f.md#listitem)中有效果。&lt;br/&gt;其中，除ListItem与Alignment的效果保持一致以外，其他组件镜像切换均生效；其他设置LocalizedAlignment无效果的组件按其默认效果显示。&lt;br/&gt;默认值：Al ignment.Center、LocalizedAlignment.CENTER&lt;br/&gt;设置异常值按默认值处理，效果为居中显示。&lt;br/&gt;**说明：** &lt;br/&gt;Alignment类型不支持镜像能力；LocalizedAlignment类型支持镜像能力，选择LocalizedAlignment中的枚举值，根据direction或系统语言方向的改变实现镜像切换。其中dire ction的优先级高于系统语言方向，当设置direction且不为auto时，LocalizedAlignment的镜像按照direction进行布局；当设置direction为auto或未设置时，LocalizedAli gnment的镜像按照系统语言方向进行布局。 |
+| alignment | [Alignment](../arkts-apis/arkts-arkui-alignment-e.md) \| LocalizedAlignment | Yes | Alignment mode for child elements in container drawing area. The mirroring capability is supported. The [LocalizedAlignment](../arkts-apis/arkts-arkui-enums-localizedalignment-e.md/arkts-arkui-enums-localizedalignment-e.md) type is effective only in the following components: [Shape](../arkts-apis/arkts-arkui-shape-shape-f.md/arkts-arkui-shape-shape-f.md#shape), [Button](../../apis-input-kit/arkts-apis/arkts-input-multimodalinput-mouseevent-button-e.md/arkts-input-multimodalinput-mouseevent-button-e.md), [GridItem](../arkts-apis/arkts-arkui-griditem-griditem-f.md/arkts-arkui-griditem-griditem-f.md#griditem), [FlowItem](../arkts-apis/arkts-arkui-flowitem-flowitem-f.md/arkts-arkui-flowitem-flowitem-f.md#flowitem), [ImageAnimator](../arkts-apis/arkts-arkui-imageanimator-imageanimator-f.md/arkts-arkui-imageanimator-imageanimator-f.md#imageanimator), [LoadingProgress](../arkts-apis/arkts-arkui-loadingprogress-loadingprogress-f.md/arkts-arkui-loadingprogress-loadingprogress-f.md#loadingprogress), [PatternLock](../arkts-apis/arkts-arkui-patternlock-patternlock-f.md/arkts-arkui-patternlock-patternlock-f.md#patternlock), [Progress](../../apis-core-file-kit/arkts-apis/arkts-corefile-file-fs-progress-i.md/arkts-corefile-file-fs-progress-i.md), [QRCode](../arkts-apis/arkts-arkui-qrcode-qrcode-f.md/arkts-arkui-qrcode-qrcode-f.md#qrcode), [TextClock](../arkts-apis/arkts-arkui-textclock-textclock-f.md/arkts-arkui-textclock-textclock-f.md#textclock), [TextTimer](../arkts-apis/arkts-arkui-texttimer-texttimer-f.md/arkts-arkui-texttimer-texttimer-f.md#texttimer), [StepperItem](StepperItem), [MenuItem](../arkts-apis/arkts-arkui-menuitem-menuitem-f.md/arkts-arkui-menuitem-menuitem-f.md#menuitem), [Toggle](../arkts-apis/arkts-arkui-menuitem-menuitem-f.md/arkts-arkui-menuitem-menuitem-f.md#menuitem), [Checkbox](../arkts-apis/arkts-arkui-checkbox-checkbox-f.md/arkts-arkui-checkbox-checkbox-f.md#checkbox), and [ListItem](../arkts-apis/arkts-arkui-listitem-listitem-f.md/arkts-arkui-listitem-listitem-f.md#listitem). For the above components, mirror switching is effective for all except the [ListItem](../arkts-apis/arkts-arkui-listitem-listitem-f.md/arkts-arkui-listitem-listitem-f.md#listitem), component, which behaves identically to [Alignment](../arkts-apis/arkts-arkui-enums-alignment-e.md/arkts-arkui-enums-alignment-e.md). Components where **LocalizedAlignment** is not applicable will be rendered in accordance with their default behavior. &lt;br&gt;Default value: **Alignment.Center**, **LocalizedAlignment.CENTER**. If an invalid value is passed, the default value will be used, indicating center alignment. &lt;br&gt;**NOTE：**&lt;br&gt; The [Alignment](../arkts-apis/arkts-arkui-enums-alignment-e.md/arkts-arkui-enums-alignment-e.md) type does not support the mirroring capability. The [LocalizedAlignment](../arkts-apis/arkts-arkui-enums-localizedalignment-e.md/arkts-arkui-enums-localizedalignment-e.md) type supports mirroring based on the layout direction (configurable via [direction](arkts-arkui-commonmethod-c.md#direction)) or system language. The **direction** setting takes precedence over the system language direction. When **direction** is explicitly set to any value other than **auto**, **LocalizedAlignment** mirroring follows the specified direction. If **direction** is set to **auto** or not configured, **LocalizedAlignment** mirroring adapts to the system language direction |
 
 **Return value:**
 
@@ -804,7 +841,7 @@ align(alignment: Alignment | LocalizedAlignment): T
 alignRules(value: AlignRuleOption): T
 ```
 
-指定设置在相对布局组件中子组件的对齐规则，仅当父组件为[RelativeContainer](../arkts-apis/arkts-arkui-relativecontainer-relativecontainer-f.md/arkts-arkui-relativecontainer-relativecontainer-f.md#relativecontainer)时生效，支持[attributeModifier](arkts-arkui-commonmethod-c.md#attributemodifier)动态设置属性方法。
+Sets the alignment rule for child components within the relative container. This attribute only takes effect when the parent container is [RelativeContainer](../arkts-apis/arkts-arkui-relativecontainer-relativecontainer-f.md/arkts-arkui-relativecontainer-relativecontainer-f.md#relativecontainer),and supports dynamic configuration via [attributeModifier](arkts-arkui-commonmethod-c.md#attributemodifier).
 
 **Since:** 9
 
@@ -822,7 +859,7 @@ alignRules(value: AlignRuleOption): T
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | [AlignRuleOption](../arkts-apis/arkts-arkui-common-alignruleoption-i.md) | Yes | 指定设置在相对布局组件中子组件的对齐规则。 |
+| value | [AlignRuleOption](../arkts-apis/arkts-arkui-common-alignruleoption-i.md) | Yes | Alignment rules in the relative container. |
 
 **Return value:**
 
@@ -836,8 +873,8 @@ alignRules(value: AlignRuleOption): T
 alignRules(alignRule: LocalizedAlignRuleOptions): T
 ```
 
-指定设置在相对布局组件中子组件的对齐规则，仅当父组件为[RelativeContainer](../arkts-apis/arkts-arkui-relativecontainer-relativecontainer-f.md/arkts-arkui-relativecontainer-relativecontainer-f.md#relativecontainer)时生效。该方法水平方向上以start和end分别替代原方法的left和right，以便在RTL模式下能镜像显示，建议使用该方法指定设置在相对布局组件中子组件的对齐规则，支持  
-[attributeModifier](arkts-arkui-commonmethod-c.md#attributemodifier)动态设置属性方法。
+Sets the alignment rules in the relative container. This API is valid only when the container is  
+[RelativeContainer](../arkts-apis/arkts-arkui-relativecontainer-relativecontainer-f.md/arkts-arkui-relativecontainer-relativecontainer-f.md#relativecontainer),.This attribute replaces the original **left** and **right** directional parameters with **start** and **end** to support proper mirroring in right-to-left (RTL) layout modes. It is recommended that you use this attribute for configuring child component alignment rules in relative containers. This attribute supports dynamic configuration via [attributeModifier](arkts-arkui-commonmethod-c.md#attributemodifier).
 
 **Since:** 12
 
@@ -857,7 +894,7 @@ alignRules(alignRule: LocalizedAlignRuleOptions): T
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| alignRule | [LocalizedAlignRuleOptions](arkts-arkui-localizedalignruleoptions-i.md) | Yes | 指定设置在相对布局组件中子组件的对齐规则。 |
+| alignRule | [LocalizedAlignRuleOptions](arkts-arkui-localizedalignruleoptions-i.md) | Yes | Alignment rules in the relative container. |
 
 **Return value:**
 
@@ -871,7 +908,7 @@ alignRules(alignRule: LocalizedAlignRuleOptions): T
 alignSelf(value: ItemAlign): T
 ```
 
-子组件在父容器交叉轴的对齐格式。
+Sets the alignment mode of the child components along the cross axis of the parent container.
 
 **Since:** 7
 
@@ -889,7 +926,7 @@ alignSelf(value: ItemAlign): T
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | [ItemAlign](../arkts-apis/arkts-arkui-itemalign-e.md) | Yes | 子组件在父容器交叉轴的对齐格式，会覆盖([Flex](../arkts-apis/arkts-arkui-flex-flex-f.md/arkts-arkui-flex-flex-f.md#flex), [Column](../arkts-apis/arkts-arkui-column-column-f.md/arkts-arkui-column-column-f.md#column), [Row](../arkts-apis/arkts-arkui-row-row-f.md/arkts-arkui-row-row-f.md#row), or [GridRow](../arkts-apis/arkts-arkui-gridrow-gridrow-f.md/arkts-arkui-gridrow-gridrow-f.md#gridrow))布局容器中的alignItems设置。&lt;br/&gt;[GridCol](../arkts-apis/arkts-arkui-gridcol-gridcol-f.md/arkts-arkui-gridcol-gridcol-f.md#gridcol)可以绑定alignSelf属性来改变它自身在交叉轴方向上的布局。&lt;br/&gt;默认值：ItemAlign.Auto |
+| value | [ItemAlign](../arkts-apis/arkts-arkui-itemalign-e.md) | Yes | Alignment mode of the child components along the cross axis of the parent container. The setting overwrites the **alignItems** setting of the parent container ([Flex](../arkts-apis/arkts-arkui-flex-flex-f.md/arkts-arkui-flex-flex-f.md#flex), [Column](../arkts-apis/arkts-arkui-column-column-f.md/arkts-arkui-column-column-f.md#column), [Row](../arkts-apis/arkts-arkui-row-row-f.md/arkts-arkui-row-row-f.md#row), or [GridRow](../arkts-apis/arkts-arkui-gridrow-gridrow-f.md/arkts-arkui-gridrow-gridrow-f.md#gridrow)). [GridCol](../arkts-apis/arkts-arkui-gridcol-gridcol-f.md/arkts-arkui-gridcol-gridcol-f.md#gridcol) can have the **alignSelf** attribute bound to change its own layout along the cross axis.&lt;br&gt;Default value: **ItemAlign.Auto |
 
 **Return value:**
 
@@ -903,7 +940,7 @@ alignSelf(value: ItemAlign): T
 allowDrop(value: Array<UniformDataType> | null | Array<string>): T
 ```
 
-设置该组件上允许落入的数据类型。如果未设置allowDrop，组件将默认接受所有数据类型。
+Sets the types of data that can be dropped to the component. If **allowDrop** is not set, the component accepts all data types by default.
 
 **Since:** 10
 
@@ -921,13 +958,13 @@ allowDrop(value: Array<UniformDataType> | null | Array<string>): T
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | Array&lt;UniformDataType&gt; \| null \| Array&lt;string&gt; | Yes | 设置该组件上允许落入的数据类型。从API version 12开始，允许设置成null使该组件不接受 所有的数据类型。从API version 23开始，支持设置自定义数据类型Array&lt;string&gt;，自定义数据类型为应用自行定义的数据类型字符串，字符串无明确格式要求，但不应与UniformDataType标准类型格式重 复，建议以易记易区分为原则来定义。<br>**Since:** 23 |
+| value | Array&lt;UniformDataType&gt; \| null \| Array&lt;string&gt; | Yes | Types of data that can be dropped to the component. Since API version 12, this parameter can be set to **null** to make the component reject all data types. Starting from API version 23, this parameter can be set to an application-defined data type string array Array&lt;string&gt; is supported. While there is no strict format requirement for the string, it should not duplicate the format of standard types in **UniformDataType**. You are advised to define them based on the principle of being easy to remember and distinguish.<br>**Since:** 23 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| T | 返回当前组件。 |
+| T | Current component. |
 
 ## allowForceDark
 
@@ -967,25 +1004,29 @@ Set whether the component enables the ability to invert colors.This interface ne
 animation(value: AnimateParam): T
 ```
 
-设置组件的属性动画。
+Sets a property animation for the component.
 
-> **说明：**
+> **NOTE：**
 > 
-> - 在单一页面上存在大量应用动效的组件时，可以使用[renderGroup](arkts-arkui-commonmethod-c.md#rendergroup)方法来解决卡顿问题，从而提升动画性能。最佳实践请参考
-> [动画使用指导-使用renderGroup](https://developer.huawei.com/consumer/cn/doc/best-practices/bpta-fair-use-animation#section1223162922415)。
+> - When a single page contains a large number of components with animations, use
+> [renderGroup](arkts-arkui-commonmethod-c.md#rendergroup) to minimize frame freezing and improve animation
+> performance. For best practices, see
+> [Animation Usage Guide – Using RenderGroup](https://developer.huawei.com/consumer/en/doc/best-practices/bpta-fair-use-animation#section1223162922415).
 > 
 > 
-> - 该接口不支持在[attributeModifier](arkts-arkui-commonmethod-c.md#attributemodifier)中调用。
+> - This API cannot be called within [attributeModifier](arkts-arkui-commonmethod-c.md#attributemodifier).
 
-**Since:** 11
+**Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 11.
+**ArkTS mode:** ArkTS-Dyn only, since version 7.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
-**Widget capability:** This API can be used in ArkTS widgets since API version 11.
+**Widget capability:** This API can be used in ArkTS widgets since API version 9.
 
 <!--Device-CommonMethod-animation(value: AnimateParam): T--><!--Device-CommonMethod-animation(value: AnimateParam): T-End-->
+
+**System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
 
@@ -997,7 +1038,7 @@ animation(value: AnimateParam): T
 
 | Type | Description |
 | --- | --- |
-| T | 返回当前组件。 |
+| T | Current component. |
 
 ## aspectRatio
 
@@ -1005,12 +1046,7 @@ animation(value: AnimateParam): T
 aspectRatio(value: number): T
 ```
 
-指定当前组件的宽高比，aspectRatio=width/height。  
-- 仅设置width、aspectRatio时，height=width/aspectRatio。  
-- 仅设置height、aspectRatio时，width=height*aspectRatio。  
-- 同时设置width、height和aspectRatio时，height不生效，height=width/aspectRatio。
-
-设置aspectRatio属性后，组件宽高会受父组件内容区大小限制，[constraintSize](arkts-arkui-commonmethod-c.md#constraintsize)的优先级高于aspectRatio。
+Sets the aspect ratio of the component, which can be obtained using the following formula: width/height.&lt;br&gt;- If only **width** and **aspectRatio** are set, the height is calculated using the following formula:width/aspectRatio.&lt;br&gt;- If only **height** and **aspectRatio** are set, the width is calculated using the following formula:height x aspectRatio.&lt;br&gt;- If **width**, **height**, and **aspectRatio** are all set, the explicitly set height is ignored, and the effective height is calculated using the following formula: width/aspectRatio.&lt;br&gt;After the **aspectRatio** attribute is set, the component's width and height will be limited by the size of the parent component's content area. The priority of [constraintSize](arkts-arkui-commonmethod-c.md#constraintsize) is higher than that of **aspectRatio**.
 
 **Since:** 7
 
@@ -1028,7 +1064,7 @@ aspectRatio(value: number): T
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | number | Yes | 指定当前组件的宽高比。&lt;br/&gt;API version 9及以前，默认值为：1.0。&lt;br/&gt;API version 10：无默认值。&lt;br/&gt;**说明：**&lt;br/&gt;该属性在不设置值或者设置非法值(小于等于0)时不生效。&lt;br/&gt;例如，Row只设置宽度且没有子组件，aspectRatio不设置值或者设置成负数时，此时Row高度为0。 &lt;br&gt;取值限定为整数。 |
+| value | number | Yes | Aspect ratio of the component. The default value varies by API version. &lt;br&gt;API version 9 and earlier: **1.0** &lt;br&gt;API version 10: none &lt;br&gt;**NOTE：**&lt;br&gt; This parameter takes effect only when a valid value greater than 0 is specified. For example, if a **Row** component has only its width set and does not have any child component, then when **aspectRatio** is not set or is set to a negative value, the height of the **Row** component is 0 &lt;br&gt;The value range is all integers. |
 
 **Return value:**
 
@@ -1060,7 +1096,7 @@ Sets the attribute modifier.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| modifier | [AttributeModifier](arkts-arkui-attributemodifier-i.md)&lt;T&gt; | Yes |  |
+| modifier | [AttributeModifier](arkts-arkui-attributemodifier-i.md)&lt;T&gt; | Yes | The if/else syntax is supported. You need a custom class to implement the AttributeModifier API. |
 
 **Return value:**
 
@@ -1074,7 +1110,7 @@ Sets the attribute modifier.
 backdropBlur(value: number, options?: BlurOptions): T
 ```
 
-为组件添加背景模糊效果，支持自定义设置模糊半径和灰阶参数。
+Applies a background blur effect to the component. You can customize the blur radius and grayscale parameters.
 
 **Since:** 7
 
@@ -1092,14 +1128,14 @@ backdropBlur(value: number, options?: BlurOptions): T
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | number | Yes | 为当前组件添加背景模糊效果，入参为模糊半径，模糊半径越大越模糊，为0时不模糊。&lt;br/&gt;取值范围：[0, +∞)&lt;br/&gt;默认值：0 |
-| options | [BlurOptions](arkts-arkui-bluroptions-i.md) | No | 灰阶模糊参数。对图像中的黑白色进行色阶调整，使其趋于灰色更为柔和美观，对图像中的彩色调整没有效果。&lt;br/&gt;默认值：grayscale: [0,0]<br>**Since:** 11 |
+| value | number | Yes | Background blur effect to apply to the component. The input parameter is the blur radius. The larger the radius is, the more blurred the background is. If the value is **0**, the background is not blurred. |
+| options | [BlurOptions](arkts-arkui-bluroptions-i.md) | No | Grayscale parameters.<br>**Since:** 11 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| T | 返回当前组件。 |
+| T | Current component. |
 
 ## backdropBlur
 
@@ -1107,7 +1143,7 @@ backdropBlur(value: number, options?: BlurOptions): T
 backdropBlur(radius: Optional<number>, options?: BlurOptions): T
 ```
 
-为组件添加背景模糊效果，支持自定义设置模糊半径和灰阶参数。与[backdropBlur](arkts-arkui-commonmethod-c.md#backdropblur)相比，radius参数新增了对undefined类型的支持。
+Applies a background blur effect to the component. You can customize the blur radius and grayscale parameters. Compared to [backdropBlur](arkts-arkui-commonmethod-c.md#backdropblur), the **radius** parameter supports the **undefined** type.
 
 **Since:** 18
 
@@ -1127,14 +1163,14 @@ backdropBlur(radius: Optional<number>, options?: BlurOptions): T
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| radius | [Optional](../arkts-apis/arkts-arkui-optional-t.md)&lt;number&gt; | Yes | 为当前组件添加背景模糊效果，入参为模糊半径，模糊半径越大越模糊，为0时不模糊。当radius的值为undefined时，恢复为默认无模糊的背景。&lt;br/&gt;取 值范围：[0, +∞)&lt;br/&gt;默认值：0&lt;br/&gt; |
-| options | [BlurOptions](arkts-arkui-bluroptions-i.md) | No | 灰阶模糊参数。对图像中的黑白色进行色阶调整，使其趋于灰色更为柔和美观，对图像中的彩色调整没有效果。&lt;br/&gt;默认值：grayscale: [0,0] |
+| radius | [Optional](../arkts-apis/arkts-arkui-optional-t.md)&lt;number&gt; | Yes | Background blur effect to apply to the component. The input parameter is the blur radius. The larger the radius is, the more blurred the background is. If the value is **0**, the background is not blurred.&lt;br&gt;If **radius** is **undefined**, the background blur reverts to its default state (that is, no blur). |
+| options | [BlurOptions](arkts-arkui-bluroptions-i.md) | No | Grayscale parameters. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| T | 返回当前组件。 |
+| T | Current component. |
 
 ## backdropBlur
 
@@ -1142,8 +1178,8 @@ backdropBlur(radius: Optional<number>, options?: BlurOptions): T
 backdropBlur(radius: Optional<number>, options?: BlurOptions, sysOptions?: SystemAdaptiveOptions): T
 ```
 
-为组件添加背景模糊效果，支持自定义设置模糊半径和灰阶参数。与  
-[backdropBlur&lt;sup&gt;18+&lt;/sup&gt;](arkts-arkui-commonmethod-c.md#backdropblur)相比，新增了sysOptions参数，即支持系统自适应调节参数。
+Applies a background blur effect to the component. You can customize the blur radius and grayscale parameters. Compared with   
+[backdropBlur&lt;sup&gt;18+&lt;/sup&gt;](arkts-arkui-commonmethod-c.md#backdropblur), this API adds the **sysOptions** parameter, which allows for system adaptive adjustments.
 
 **Since:** 19
 
@@ -1163,15 +1199,15 @@ backdropBlur(radius: Optional<number>, options?: BlurOptions, sysOptions?: Syste
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| radius | [Optional](../arkts-apis/arkts-arkui-optional-t.md)&lt;number&gt; | Yes | 为当前组件添加背景模糊效果，入参为模糊半径，模糊半径越大越模糊，为0时不模糊。&lt;br/&gt;当radius的值为undefined时，恢复为默认无模糊的背景。&lt; br/&gt;取值范围：[0, +∞)&lt;br/&gt;默认值：0 |
-| options | [BlurOptions](arkts-arkui-bluroptions-i.md) | No | 灰阶模糊参数。对图像中的黑白色进行色阶调整，使其趋于灰色更为柔和美观，对图像中的彩色调整没有效果。&lt;br/&gt;默认值：grayscale: [0,0] |
-| sysOptions | [SystemAdaptiveOptions](arkts-arkui-systemadaptiveoptions-i.md) | No | 系统自适应调节参数。&lt;br/&gt;默认值：{ disableSystemAdaptation: false } |
+| radius | [Optional](../arkts-apis/arkts-arkui-optional-t.md)&lt;number&gt; | Yes | Background blur effect to apply to the component. The input parameter is the blur radius. The larger the radius is, the more blurred the background is. If the value is **0**, the background is not blurred.&lt;br&gt;If **radius** is **undefined**, the background blur reverts to its default state (that is, no blur). |
+| options | [BlurOptions](arkts-arkui-bluroptions-i.md) | No | Grayscale parameters. |
+| sysOptions | [SystemAdaptiveOptions](arkts-arkui-systemadaptiveoptions-i.md) | No | System adaptive adjustment options.&lt;br&gt;Default value: **{ disableSystemAdaptation: false } |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| T | 返回当前组件。 |
+| T | Current component. |
 
 ## background
 
@@ -1214,7 +1250,7 @@ Anonymous Object Rectification.
 backgroundBlurStyle(value: BlurStyle, options?: BackgroundBlurStyleOptions): T
 ```
 
-为当前组件提供一种背景材质模糊能力，通过枚举值的方式封装了不同的模糊半径、蒙版颜色、蒙版透明度、饱和度、亮度。
+Defines the background material blur style. It encapsulates various blur radius, mask color, mask opacity, saturation, and brightness values through enum values.
 
 **Since:** 9
 
@@ -1232,14 +1268,14 @@ backgroundBlurStyle(value: BlurStyle, options?: BackgroundBlurStyleOptions): T
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | [BlurStyle](arkts-arkui-blurstyle-e.md) | Yes | 背景模糊样式。模糊样式中封装了模糊半径、蒙版颜色、蒙版透明度、饱和度、亮度五个参数。 |
-| options | [BackgroundBlurStyleOptions](../arkts-apis/arkts-arkui-common-backgroundblurstyleoptions-i.md) | No | 背景模糊选项。用于配置模糊激活策略和不生效时的背景色。不传入时使用默认激活策略 [BlurStyleActivePolicy](arkts-arkui-blurstyleactivepolicy-e.md).ALWAYS_ACTIVE。&lt;br/&gt;该参数在ArkTS卡片中，暂不支持使用。 |
+| value | [BlurStyle](arkts-arkui-blurstyle-e.md) | Yes | Settings of the background blur style, including the blur radius, mask color, mask opacity, saturation, and brightness. |
+| options | [BackgroundBlurStyleOptions](../arkts-apis/arkts-arkui-common-backgroundblurstyleoptions-i.md) | No | Background blur options.&lt;br&gt;This parameter cannot be used in ArkTS widgets. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| T | 返回当前组件。 |
+| T | Current component. |
 
 ## backgroundBlurStyle
 
@@ -1247,8 +1283,8 @@ backgroundBlurStyle(value: BlurStyle, options?: BackgroundBlurStyleOptions): T
 backgroundBlurStyle(style: Optional<BlurStyle>, options?: BackgroundBlurStyleOptions): T
 ```
 
-为当前组件提供一种背景材质模糊能力，通过枚举值的方式封装了不同的模糊半径、蒙版颜色、蒙版透明度、饱和度、亮度。与  
-[backgroundBlurStyle&lt;sup&gt;9+&lt;/sup&gt;](arkts-arkui-commonmethod-c.md#backgroundblurstyle)相比，style参数新增了对undefined类型的支持。
+Defines the background material blur style. It encapsulates various blur radius, mask color, mask opacity, saturation, and brightness values through enum values. Compared to   
+[backgroundBlurStyle&lt;sup&gt;9+&lt;/sup&gt;](arkts-arkui-commonmethod-c.md#backgroundblurstyle),the **style** parameter supports the **undefined** type.
 
 **Since:** 18
 
@@ -1268,14 +1304,14 @@ backgroundBlurStyle(style: Optional<BlurStyle>, options?: BackgroundBlurStyleOpt
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| style | [Optional](../arkts-apis/arkts-arkui-optional-t.md)&lt;BlurStyle&gt; | Yes | 背景模糊样式。模糊样式中封装了模糊半径、蒙版颜色、蒙版透明度、饱和度、亮度五个参数。&lt;br/&gt;当style的值为undefined时，恢复为默认关闭模糊 的背景。 |
-| options | [BackgroundBlurStyleOptions](../arkts-apis/arkts-arkui-common-backgroundblurstyleoptions-i.md) | No | 背景模糊选项。用于配置模糊激活策略和不生效时的背景色。不传入时使用默认激活策略 [BlurStyleActivePolicy](arkts-arkui-blurstyleactivepolicy-e.md).ALWAYS_ACTIVE。&lt;br/&gt;该参数在ArkTS卡片中，暂不支持使用。 |
+| style | [Optional](../arkts-apis/arkts-arkui-optional-t.md)&lt;BlurStyle&gt; | Yes | Settings of the background blur style, including the blur radius, mask color, mask opacity, saturation, and brightness.&lt;br&gt;If **style** is **undefined**, the background blur reverts to its default state (that is, no blur). |
+| options | [BackgroundBlurStyleOptions](../arkts-apis/arkts-arkui-common-backgroundblurstyleoptions-i.md) | No | Background blur options.&lt;br&gt;This parameter cannot be used in ArkTS widgets. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| T | 返回当前组件。 |
+| T | Current component. |
 
 ## backgroundBlurStyle
 
@@ -1283,8 +1319,8 @@ backgroundBlurStyle(style: Optional<BlurStyle>, options?: BackgroundBlurStyleOpt
 backgroundBlurStyle(style: Optional<BlurStyle>, options?: BackgroundBlurStyleOptions, sysOptions?: SystemAdaptiveOptions): T
 ```
 
-为当前组件提供一种背景材质模糊能力，通过枚举值的方式封装了不同的模糊半径、蒙版颜色、蒙版透明度、饱和度、亮度。与  
-[backgroundBlurStyle&lt;sup&gt;18+&lt;/sup&gt;](arkts-arkui-commonmethod-c.md#backgroundblurstyle)相比，新增了sysOptions参数，即支持系统自适应调节参数。
+Defines the background material blur style. It encapsulates various blur radius, mask color, mask opacity, saturation, and brightness values through enum values. Compared with   
+[backgroundBlurStyle&lt;sup&gt;18+&lt;/sup&gt;](arkts-arkui-commonmethod-c.md#backgroundblurstyle),this API adds the **sysOptions** parameter, which allows for system adaptive adjustments.
 
 **Since:** 19
 
@@ -1304,15 +1340,15 @@ backgroundBlurStyle(style: Optional<BlurStyle>, options?: BackgroundBlurStyleOpt
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| style | [Optional](../arkts-apis/arkts-arkui-optional-t.md)&lt;BlurStyle&gt; | Yes | 背景模糊样式。模糊样式中封装了模糊半径、蒙版颜色、蒙版透明度、饱和度、亮度五个参数。&lt;br/&gt;当style的值为undefined时，恢复为默认关闭模糊 的背景。 |
-| options | [BackgroundBlurStyleOptions](../arkts-apis/arkts-arkui-common-backgroundblurstyleoptions-i.md) | No | 背景模糊选项。&lt;br/&gt;该参数在ArkTS卡片中，暂不支持使用。 |
-| sysOptions | [SystemAdaptiveOptions](arkts-arkui-systemadaptiveoptions-i.md) | No | 系统自适应调节参数。&lt;br/&gt;默认值：{ disableSystemAdaptation: false } |
+| style | [Optional](../arkts-apis/arkts-arkui-optional-t.md)&lt;BlurStyle&gt; | Yes | Settings of the background blur style, including the blur radius, mask color, mask opacity, saturation, and brightness.&lt;br&gt;If **style** is **undefined**, the background blur reverts to its default state (that is, no blur). |
+| options | [BackgroundBlurStyleOptions](../arkts-apis/arkts-arkui-common-backgroundblurstyleoptions-i.md) | No | Background blur options.&lt;br&gt;This parameter cannot be used in ArkTS widgets. |
+| sysOptions | [SystemAdaptiveOptions](arkts-arkui-systemadaptiveoptions-i.md) | No | System adaptive adjustment options.&lt;br&gt;Default value: **{ disableSystemAdaptation: false } |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| T | 返回当前组件。 |
+| T | Current component. |
 
 ## backgroundBrightness
 
@@ -1320,7 +1356,7 @@ backgroundBlurStyle(style: Optional<BlurStyle>, options?: BackgroundBlurStyleOpt
 backgroundBrightness(params: BackgroundBrightnessOptions): T
 ```
 
-设置组件背景提亮效果。
+Sets the background brightness of the component.
 
 **Since:** 12
 
@@ -1338,13 +1374,13 @@ backgroundBrightness(params: BackgroundBrightnessOptions): T
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| params | [BackgroundBrightnessOptions](arkts-arkui-backgroundbrightnessoptions-i.md) | Yes | 设置组件背景提亮效果，包括：亮度变化速率，提亮程度。 |
+| params | [BackgroundBrightnessOptions](arkts-arkui-backgroundbrightnessoptions-i.md) | Yes | Parameters for setting the background brightness. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| T | 返回当前组件。 |
+| T |  |
 
 ## backgroundBrightness
 
@@ -1352,8 +1388,8 @@ backgroundBrightness(params: BackgroundBrightnessOptions): T
 backgroundBrightness(options: Optional<BackgroundBrightnessOptions>): T
 ```
 
-设置组件背景提亮效果。与  
-[backgroundBrightness&lt;sup&gt;12+&lt;/sup&gt;](arkts-arkui-commonmethod-c.md#backgroundbrightness)相比，options参数新增了对undefined类型的支持。
+Sets the background brightness of the component. Compared to   
+[backgroundBrightness&lt;sup&gt;12+&lt;/sup&gt;](arkts-arkui-commonmethod-c.md#backgroundbrightness),the **options** parameter supports the **undefined** type.
 
 **Since:** 18
 
@@ -1371,13 +1407,13 @@ backgroundBrightness(options: Optional<BackgroundBrightnessOptions>): T
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| options | [Optional](../arkts-apis/arkts-arkui-optional-t.md)&lt;BackgroundBrightnessOptions&gt; | Yes | 设置组件背景提亮效果，包括：亮度变化速率，提亮程度。&lt;br/&gt;当options的值为undefined时，恢复为 无提亮效果的背景。 |
+| options | [Optional](../arkts-apis/arkts-arkui-optional-t.md)&lt;BackgroundBrightnessOptions&gt; | Yes | Parameters for setting the background brightness.&lt;br&gt;If **options** is **undefined**, the background reverts to its default state with no brightness effect. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| T | 返回当前组件。 |
+| T | Current component. |
 
 ## backgroundColor
 
@@ -1485,7 +1521,7 @@ Background color
 backgroundEffect(options: BackgroundEffectOptions): T
 ```
 
-设置组件背景属性，包括背景模糊半径、亮度、饱和度和颜色等参数。
+Sets the background effect of the component, including the blur radius, brightness, saturation, and color.
 
 **Since:** 11
 
@@ -1503,13 +1539,13 @@ backgroundEffect(options: BackgroundEffectOptions): T
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| options | [BackgroundEffectOptions](arkts-arkui-backgroundeffectoptions-i.md) | Yes | 设置组件背景属性包括：背景模糊半径、亮度、饱和度和颜色等参数。 |
+| options | [BackgroundEffectOptions](arkts-arkui-backgroundeffectoptions-i.md) | Yes | Background effect of the component, including the blur radius, brightness, saturation, and color. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| T | 返回当前组件。 |
+| T | Current component. |
 
 ## backgroundEffect
 
@@ -1517,8 +1553,8 @@ backgroundEffect(options: BackgroundEffectOptions): T
 backgroundEffect(options: Optional<BackgroundEffectOptions>): T
 ```
 
-设置组件背景属性，包括背景模糊半径、亮度、饱和度和颜色等参数。与  
-[backgroundEffect&lt;sup&gt;11+&lt;/sup&gt;](arkts-arkui-commonmethod-c.md#backgroundeffect)相比，options参数新增了对undefined类型的支持。
+Sets the background effect of the component, including the blur radius, brightness, saturation, and color. Compared to [backgroundEffect&lt;sup&gt;11+&lt;/sup&gt;](arkts-arkui-commonmethod-c.md#backgroundeffect), the   
+**options** parameter supports the **undefined** type.
 
 **Since:** 18
 
@@ -1536,13 +1572,13 @@ backgroundEffect(options: Optional<BackgroundEffectOptions>): T
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| options | [Optional](../arkts-apis/arkts-arkui-optional-t.md)&lt;BackgroundEffectOptions&gt; | Yes | 设置组件背景属性包括：背景模糊半径、亮度、饱和度和颜色等参数。&lt;br/&gt;当options的值为undefined时，恢复 为无效果的背景。 |
+| options | [Optional](../arkts-apis/arkts-arkui-optional-t.md)&lt;BackgroundEffectOptions&gt; | Yes | Background effect of the component, including the blur radius, brightness, saturation, and color.&lt;br&gt;If **options** is **undefined**, the background reverts to its default state with no effect. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| T | 返回当前组件。 |
+| T | Current component. |
 
 ## backgroundEffect
 
@@ -1550,14 +1586,15 @@ backgroundEffect(options: Optional<BackgroundEffectOptions>): T
 backgroundEffect(options: Optional<BackgroundEffectOptions>, sysOptions?: SystemAdaptiveOptions): T
 ```
 
-设置组件背景属性，包括背景模糊半径、亮度、饱和度和颜色等参数。与  
-[backgroundEffect&lt;sup&gt;18+&lt;/sup&gt;](arkts-arkui-commonmethod-c.md#backgroundeffect)相比，新增了sysOptions参数，即支持系统自适应调节参数。
+Sets the background effect of the component, including the blur radius, brightness, saturation, and color. Compared with   
+[backgroundEffect&lt;sup&gt;18+&lt;/sup&gt;](arkts-arkui-commonmethod-c.md#backgroundeffect), this API adds the **sysOptions** parameter, which allows for system adaptive adjustments.
 
-> **说明：**
+> **NOTE：**
 > 
-> backgroundEffect接口为实时接口，每帧对模糊等效果执行实时渲染，性能负载较大。当组件背景模糊效果无需变动时，推荐采用静态模糊接口
-> [blur](../../apis-arkgraphics2d/arkts-apis/arkts-arkgraphics2d-effectkit-filter-i.md/arkts-arkgraphics2d-effectkit-filter-i.md#blur)实现模糊效果。最佳实践请参考：
-> [图像模糊动效优化-使用场景](https://developer.huawei.com/consumer/cn/doc/best-practices/bpta-fuzzy-scene-performance-optimization#section4945532519)。
+> **backgroundEffect** performs real-time rendering per frame, resulting in high performance overhead. When the
+> background blur effect remains unchanged, it is recommended that you use the static blur API
+> [blur](../../apis-arkgraphics2d/arkts-apis/arkts-arkgraphics2d-effectkit-filter-i.md/arkts-arkgraphics2d-effectkit-filter-i.md#blur). For best practices, see
+> [Image Blurring Optimization – When to Use](https://developer.huawei.com/consumer/en/doc/best-practices/bpta-fuzzy-scene-performance-optimization#section4945532519).
 
 **Since:** 19
 
@@ -1575,14 +1612,14 @@ backgroundEffect(options: Optional<BackgroundEffectOptions>, sysOptions?: System
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| options | [Optional](../arkts-apis/arkts-arkui-optional-t.md)&lt;BackgroundEffectOptions&gt; | Yes | 设置组件背景属性包括：背景模糊半径、亮度、饱和度和颜色等参数。&lt;br/&gt;当options的值为undefined时，恢复 为无效果的背景。 |
+| options | [Optional](../arkts-apis/arkts-arkui-optional-t.md)&lt;BackgroundEffectOptions&gt; | Yes | Background effect of the component, including the blur radius, brightness, saturation, and color.&lt;br&gt;If **options** is **undefined**, the background reverts to its default state with no effect. |
 | sysOptions | [SystemAdaptiveOptions](arkts-arkui-systemadaptiveoptions-i.md) | No |  |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| T | 返回当前组件。 |
+| T | Current component. |
 
 ## backgroundFilter
 
@@ -1590,11 +1627,11 @@ backgroundEffect(options: Optional<BackgroundEffectOptions>, sysOptions?: System
 backgroundFilter(filter: Filter): T
 ```
 
-设置背景滤镜视觉效果。
+Sets the visual effect of the background filter.
 
-> **说明：**
+> **NOTE：**
 > 
-> 从API version 20开始，该接口支持在[attributeModifier](arkts-arkui-commonmethod-c.md#attributemodifier)中调用。
+> This API can be called within [attributeModifier](arkts-arkui-commonmethod-c.md#attributemodifier) since API version 20.
 
 **Since:** 12
 
@@ -1612,13 +1649,13 @@ backgroundFilter(filter: Filter): T
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| filter | [Filter](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-agent-filter-i.md) | Yes | 背景滤镜视觉效果。 |
+| filter | [Filter](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-agent-filter-i.md) | Yes | Visual effect of the background filter. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| T | 返回当前组件。 |
+| T | Current component. |
 
 ## backgroundImage
 
@@ -1776,7 +1813,7 @@ Background image size
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | [SizeOptions](../arkts-apis/arkts-arkui-sizeoptions-i.md) \| ImageSize | Yes | @returns { T } |
+| value | [SizeOptions](../arkts-apis/arkts-arkui-sizeoptions-i.md) \| ImageSize | Yes | The width and height of the background image. |
 
 **Return value:**
 
@@ -1790,11 +1827,11 @@ Background image size
 bindContentCover(isShow: boolean, builder: CustomBuilder, type?: ModalTransition): T
 ```
 
-给组件绑定全屏模态页面，点击后显示模态页面。模态页面内容自定义，显示方式可设置无动画过渡，上下切换过渡以及透明渐变过渡。
+Binds a full-screen modal to the component, which can be displayed when the component is touched. The content of the modal is customizable. The transition type can be set to none, slide-up and slide-down animation, and opacity gradient animation.
 
-> **说明：**
+> **NOTE：**
 > 
-> 该接口不支持在[attributeModifier](arkts-arkui-commonmethod-c.md#attributemodifier)中调用。
+> This API cannot be called within [attributeModifier](arkts-arkui-commonmethod-c.md#attributemodifier).
 
 **Since:** 10
 
@@ -1812,15 +1849,15 @@ bindContentCover(isShow: boolean, builder: CustomBuilder, type?: ModalTransition
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| isShow | boolean | Yes | 是否显示全屏模态页面。&lt;br/&gt;-true：显示全屏模态页面。&lt;br/&gt;-false：隐藏全屏模态页面。&lt;br/&gt;从API version 10开始，该参数支持 [\\$\\$](../../../ui/state-management/arkts-two-way-sync.md)双向绑定变量。&lt;br /&gt;从API version 18开始，该参数支持 [!!](../../../ui/state-management/arkts-new-binding.md#系统组件参数双向绑定)双向绑定变量。 |
-| builder | [CustomBuilder](arkts-arkui-custombuilder-t.md) | Yes | 配置全屏模态页面内容。builder里面的根节点需要唯一。 |
-| type | [ModalTransition](arkts-arkui-modaltransition-e.md) | No | 全屏模态页面的系统转场方式。&lt;br/&gt; 默认值：ModalTransition.DEFAULT。&lt;br/&gt;**说明：**&lt;br /&gt; 与transition同时设 置时，此属性不生效。 |
+| isShow | boolean | Yes | Whether to display the full-screen modal.&lt;br&gt;- **true**: Display the modal.&lt;br&gt;- **false**: Hide the modal.&lt;br&gt;Since API version 10, this attribute supports two-way binding through [\\$\\$](../../../ui/state-management/arkts-two-way-sync.md).&lt;br&gt;Since API version 18, this attribute supports two -way binding through [!!](../../../ui/state-management/arkts-new-binding.md#two-way-binding-between-built-in-component-parameters). |
+| builder | [CustomBuilder](arkts-arkui-custombuilder-t.md) | Yes | Content of the modal. The root node in **builder** must be unique. |
+| type | [ModalTransition](arkts-arkui-modaltransition-e.md) | No | System transition mode of the modal.&lt;br&gt; Default value: **ModalTransition.DEFAULT**.&lt;br&gt;**NOTE：**&lt;br&gt; This property has no effect when it is set together with **transition**. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| T | 返回当前组件。 |
+| T | Current component. |
 
 ## bindContentCover
 
@@ -1828,7 +1865,7 @@ bindContentCover(isShow: boolean, builder: CustomBuilder, type?: ModalTransition
 bindContentCover(isShow: boolean, builder: CustomBuilder, options?: ContentCoverOptions): T
 ```
 
-给组件绑定全屏模态页面，点击后显示模态页面。模态页面内容自定义，可自定义设置转场方式。
+Binds a full-screen modal to the component, which can be displayed when the component is touched. The modal page content and transition mode are configurable.
 
 **Since:** 10
 
@@ -1846,15 +1883,15 @@ bindContentCover(isShow: boolean, builder: CustomBuilder, options?: ContentCover
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| isShow | boolean | Yes | 是否显示全屏模态页面。&lt;br/&gt;-true：显示全屏模态页面。&lt;br/&gt;-false：隐藏全屏模态页面。&lt;br/&gt;从API version 10开始，该参数支持 [\\$\\$](../../../ui/state-management/arkts-two-way-sync.md)双向绑定变量。&lt;br /&gt;从API version 18开始，该参数支持 [!!](../../../ui/state-management/arkts-new-binding.md#系统组件参数双向绑定)双向绑定变量。 |
-| builder | [CustomBuilder](arkts-arkui-custombuilder-t.md) | Yes | 配置全屏模态页面内容。 |
-| options | [ContentCoverOptions](../arkts-apis/arkts-arkui-common-contentcoveroptions-i.md) | No | 配置全屏模态页面的可选属性。 |
+| isShow | boolean | Yes | Whether to display the full-screen modal.&lt;br&gt;- **true**: Display the modal.&lt;br&gt;- **false**: Hide the modal.&lt;br&gt;Since API version 10, this attribute supports two-way binding through [\\$\\$](../../../ui/state-management/arkts-two-way-sync.md).&lt;br&gt;Since API version 18, this attribute supports two -way binding through [!!](../../../ui/state-management/arkts-new-binding.md#two-way-binding-between-built-in-component-parameters). |
+| builder | [CustomBuilder](arkts-arkui-custombuilder-t.md) | Yes | Content of the modal. |
+| options | [ContentCoverOptions](../arkts-apis/arkts-arkui-common-contentcoveroptions-i.md) | No | Optional attributes of the modal. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| T | 返回当前组件。 |
+| T | Current component. |
 
 ## bindContextMenu
 
@@ -1864,9 +1901,9 @@ bindContextMenu(content: CustomBuilder, responseType: ResponseType, options?: Co
 
 Binds a context menu to this component, which is displayed when the user long-presses or right-clicks the component. Only custom menu items are supported.
 
-**Since:** 11
+**Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn only, since version 11.
+**ArkTS mode:** ArkTS-Dyn only, since version 8.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -1894,7 +1931,7 @@ Binds a context menu to this component, which is displayed when the user long-pr
 bindContextMenu(isShown: boolean, content: CustomBuilder, options?: ContextMenuOptions): T
 ```
 
-ContextMenu control
+Binds a context menu to the component, whose visibility is subject to the isShown settings.
 
 **Since:** 12
 
@@ -1912,7 +1949,7 @@ ContextMenu control
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| isShown | boolean | Yes | true means display content, false means hide content. |
+| isShown | boolean | Yes | true means display content, false means hide content, default is false. &lt;p&gt;&lt;strong&gt;NOTE&lt;/strong&gt;: &lt;br&gt;The menu can be displayed properly only when the related page has been constructed. If this parameter is set to true before the construction is complete, display issues, such as misplacement, distortion, or failure to pop up, may occur. To trigger dragging by long presses is not supported. &lt;/p&gt; |
 | content | [CustomBuilder](arkts-arkui-custombuilder-t.md) | Yes | Indicates the content of context menu. |
 | options | [ContextMenuOptions](arkts-arkui-contextmenuoptions-i.md) | No | Indicates the options of context menu. |
 
@@ -1928,7 +1965,7 @@ ContextMenu control
 bindContextMenuByIsShow(isShow: boolean, content: CustomBuilder | Array<MenuElement>, options?: ContextMenuOptions): T
 ```
 
-将上下文菜单绑定到组件，组件的可见性受isShow设置的约束。
+Binds a context menu to the component, whose visibility is subject to the isShow settings.
 
 **Since:** 26.0.0
 
@@ -1946,9 +1983,9 @@ bindContextMenuByIsShow(isShow: boolean, content: CustomBuilder | Array<MenuElem
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| isShow | boolean | Yes | true表示显示内容，false表示隐藏内容，默认为false。 &lt;p&gt;&lt;strong&gt;注意&lt;/strong&gt;： &lt;br&gt;只有在构建了相关页面后，菜单才能正常显示。如果设置了该参数在构建完成之前设置为true，显示问题，如错位、扭曲或无法弹出上，可能会发生。不支持长按拖动。 &lt;/p&gt;. |
-| content | [CustomBuilder](arkts-arkui-custombuilder-t.md) \| Array&lt;MenuElement&gt; | Yes | 上下文菜单的内容。 |
-| options | [ContextMenuOptions](arkts-arkui-contextmenuoptions-i.md) | No | 上下文菜单选项。 |
+| isShow | boolean | Yes | true means display content, false means hide content, default is false. &lt;p&gt;&lt;strong&gt;NOTE&lt;/strong&gt;: &lt;br&gt;The menu can be displayed properly only when the related page has been constructed. If this parameter is set to true before the construction is complete, display issues, such as misplacement, distortion, or failure to pop up, may occur. Dragging via long press is not supported. &lt;/p&gt;. |
+| content | [CustomBuilder](arkts-arkui-custombuilder-t.md) \| Array&lt;MenuElement&gt; | Yes | Indicates the content of context menu. |
+| options | [ContextMenuOptions](arkts-arkui-contextmenuoptions-i.md) | No | Indicates the options of context menu. |
 
 **Return value:**
 
@@ -1963,7 +2000,7 @@ bindContextMenuByResponseType(content: CustomBuilder | Array<MenuElement>, respo
       options?: ContextMenuOptions): T
 ```
 
-将上下文菜单绑定到此组件，当用户长按或右键单击组件，支持自定义或固定样式的菜单项。
+Binds a context menu to this component, which is displayed when the user long-presses or right-clicks the component. Custom or fixed-style menu items are supported.
 
 **Since:** 26.0.0
 
@@ -1981,9 +2018,9 @@ bindContextMenuByResponseType(content: CustomBuilder | Array<MenuElement>, respo
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| content | [CustomBuilder](arkts-arkui-custombuilder-t.md) \| Array&lt;MenuElement&gt; | Yes | 上下文菜单的内容。 |
-| responseType | [ResponseType](../arkts-apis/arkts-arkui-responsetype-e.md) | Yes | 上下文菜单响应类型。用鼠标设备长按 不支持。 |
-| options | [ContextMenuOptions](arkts-arkui-contextmenuoptions-i.md) | No | 上下文菜单选项。 |
+| content | [CustomBuilder](arkts-arkui-custombuilder-t.md) \| Array&lt;MenuElement&gt; | Yes | Indicates the content of context menu. |
+| responseType | [ResponseType](../arkts-apis/arkts-arkui-responsetype-e.md) | Yes | Indicates response type of context menu. Long pressing with a mouse device is not supported. |
+| options | [ContextMenuOptions](arkts-arkui-contextmenuoptions-i.md) | No | Indicates the options of context menu. |
 
 **Return value:**
 
@@ -1997,7 +2034,7 @@ bindContextMenuByResponseType(content: CustomBuilder | Array<MenuElement>, respo
 bindContextMenuWithResponse(content: CustomBuilderT<ResponseType> | undefined, options?: ContextMenuOptions): T
 ```
 
-将上下文菜单绑定到组件上，当用户长按或右键该组件时显示。仅支持自定义菜单项。鼠标设备不支持长按操作。
+Binds a context menu to this component, which is displayed when the user long-presses or right-clicks the component. Only custom menu items are supported. Long pressing with a mouse device is not supported.
 
 **Since:** 23
 
@@ -2015,8 +2052,8 @@ bindContextMenuWithResponse(content: CustomBuilderT<ResponseType> | undefined, o
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| content | [CustomBuilderT](arkts-arkui-custombuildert-t.md)&lt;[ResponseType](../arkts-apis/arkts-arkui-responsetype-e.md)&gt; \| undefined | Yes | 表示上下文菜单的内容。传入undefined表示解绑。 |
-| options | [ContextMenuOptions](arkts-arkui-contextmenuoptions-i.md) | No | 表示上下文菜单的选项。 |
+| content | [CustomBuilderT](arkts-arkui-custombuildert-t.md)&lt;[ResponseType](../arkts-apis/arkts-arkui-responsetype-e.md)&gt; \| undefined | Yes | Indicates the content of context menu. Undefined means unbinding. |
+| options | [ContextMenuOptions](arkts-arkui-contextmenuoptions-i.md) | No | Indicates the options of context menu. |
 
 **Return value:**
 
@@ -2031,7 +2068,7 @@ bindContextMenuWithResponse(content: CustomBuilderT<ResponseType> | Array<MenuEl
     options?: ContextMenuOptions): T
 ```
 
-将上下文菜单绑定到此组件，当用户长按或右键单击组件，支持自定义或固定样式的菜单项。不支持使用鼠标设备长按。
+Binds a context menu to this component, which is displayed when the user long-presses or right-clicks the component. Custom or fixed-style menu items are supported. Long pressing with a mouse device is not supported.
 
 **Since:** 26.0.0
 
@@ -2049,8 +2086,8 @@ bindContextMenuWithResponse(content: CustomBuilderT<ResponseType> | Array<MenuEl
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| content | [CustomBuilderT](arkts-arkui-custombuildert-t.md)&lt;[ResponseType](../arkts-apis/arkts-arkui-responsetype-e.md)&gt; \| Array&lt;MenuElement&gt; \| undefined | Yes | 上下文菜单的内容。Undefined表示解除绑定。 |
-| options | [ContextMenuOptions](arkts-arkui-contextmenuoptions-i.md) | No | 上下文菜单选项。 |
+| content | [CustomBuilderT](arkts-arkui-custombuildert-t.md)&lt;[ResponseType](../arkts-apis/arkts-arkui-responsetype-e.md)&gt; \| Array&lt;MenuElement&gt; \| undefined | Yes | Indicates the content of context menu. Undefined means unbinding. |
+| options | [ContextMenuOptions](arkts-arkui-contextmenuoptions-i.md) | No | Indicates the options of context menu. |
 
 **Return value:**
 
@@ -2066,9 +2103,9 @@ bindMenu(content: Array<MenuElement> | CustomBuilder, options?: MenuOptions): T
 
 Menu control
 
-**Since:** 11
+**Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 11.
+**ArkTS mode:** ArkTS-Dyn only, since version 7.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -2097,9 +2134,9 @@ bindMenu(isShow: boolean, content: Array<MenuElement> | CustomBuilder, options?:
 
 Menu control
 
-**Since:** 12
+**Since:** 11
 
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
+**ArkTS mode:** ArkTS-Dyn only, since version 11.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -2113,7 +2150,7 @@ Menu control
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| isShow | boolean | Yes | true means display menu, false means hide menu. |
+| isShow | boolean | Yes | true means display menu, false means hide menu, default is false. |
 | content | Array&lt;MenuElement&gt; \| CustomBuilder | Yes | Indicates the content of menu. |
 | options | [MenuOptions](../arkts-apis/arkts-arkui-common-menuoptions-i.md) | No | Indicates the options of menu. |
 
@@ -2131,9 +2168,9 @@ bindPopup(show: boolean, popup: PopupOptions | CustomPopupOptions): T
 
 Popup control&lt;p&gt;&lt;strong&gt;NOTE&lt;/strong&gt;:&lt;br&gt;The popup can be displayed only after the entire page is fully constructed. Therefore, to avoid incorrect display positions and shapes, do not set this parameter to true while the page is still being constructed.&lt;/p&gt;
 
-**Since:** 11
+**Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 11.
+**ArkTS mode:** ArkTS-Dyn only, since version 7.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -2145,8 +2182,8 @@ Popup control&lt;p&gt;&lt;strong&gt;NOTE&lt;/strong&gt;:&lt;br&gt;The popup can 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| show | boolean | Yes | @param { PopupOptions \| CustomPopupOptions } popup |
-| popup | [PopupOptions](../arkts-apis/arkts-arkui-arkui-advanced-popup-popupoptions-i.md) \| CustomPopupOptions | Yes |  |
+| show | boolean | Yes |  |
+| popup | [PopupOptions](../arkts-apis/arkts-arkui-arkui-advanced-popup-popupoptions-i.md) \| CustomPopupOptions | Yes | [since 7 - 7] |
 
 **Return value:**
 
@@ -2160,11 +2197,11 @@ Popup control&lt;p&gt;&lt;strong&gt;NOTE&lt;/strong&gt;:&lt;br&gt;The popup can 
 bindSheet(isShow: boolean, builder: CustomBuilder, options?: SheetOptions): T
 ```
 
-给组件绑定半模态页面，点击后显示模态页面。
+Binds a sheet to the component, which is displayed when the component is touched.
 
-> **说明：**
+> **NOTE：**
 > 
-> 该接口不支持在[attributeModifier](arkts-arkui-commonmethod-c.md#attributemodifier)中调用。
+> This API cannot be called within [attributeModifier](arkts-arkui-commonmethod-c.md#attributemodifier).
 
 **Since:** 10
 
@@ -2182,15 +2219,15 @@ bindSheet(isShow: boolean, builder: CustomBuilder, options?: SheetOptions): T
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| isShow | boolean | Yes | 是否显示半模态页面。&lt;br/&gt;true：显示半模态页面。&lt;br/&gt;false：隐藏半模态页面。&lt;br/&gt;从API version 10开始，该参数支持 [\\$\\$](../../../ui/state-management/arkts-two-way-sync.md)双向绑定变量。&lt;br /&gt;从API version 18开始，该参数支持 [!!](../../../ui/state-management/arkts-new-binding.md)双向绑定变量。 |
-| builder | [CustomBuilder](arkts-arkui-custombuilder-t.md) | Yes | 配置半模态页面内容。 |
-| options | [SheetOptions](arkts-arkui-sheetoptions-i.md) | No | 配置半模态页面的可选属性。 |
+| isShow | boolean | Yes | Whether to display the sheet.&lt;br&gt;**true**: Display the sheet.&lt;br&gt;**false**: Hide the sheet.&lt;br&gt;Since API version 10, this parameter supports two-way binding through [\\$\\$](../../../ui/state-management/arkts-two-way-sync.md).&lt;br&gt;Since API version 18, this attribute supports two -way binding through [!!](../../../ui/state-management/arkts-new-binding.md). |
+| builder | [CustomBuilder](arkts-arkui-custombuilder-t.md) | Yes | Content of the sheet. |
+| options | [SheetOptions](arkts-arkui-sheetoptions-i.md) | No | Optional attributes of the sheet. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| T | 返回当前组件。 |
+| T | Current component. |
 
 ## bindTips
 
@@ -2231,32 +2268,34 @@ Tips control
 blendMode(value: BlendMode, type?: BlendApplyType): T
 ```
 
-将当前控件的内容（包含子节点内容）与下方画布（可能为离屏画布）已有内容进行混合。
+Defines how the component's content (including the content of it child components) is blended with the existing content on the canvas (possibly offscreen canvas) below.
 
-**Since:** 12
+**Since:** 11
 
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
+**ArkTS mode:** ArkTS-Dyn only, since version 11.
 
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
-**Widget capability:** This API can be used in ArkTS widgets since API version 12.
+**Widget capability:** This API can be used in ArkTS widgets since API version 11.
 
 <!--Device-CommonMethod-blendMode(value: BlendMode, type?: BlendApplyType): T--><!--Device-CommonMethod-blendMode(value: BlendMode, type?: BlendApplyType): T-End-->
+
+**System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | [BlendMode](../arkts-apis/arkts-arkui-common-blendmode-e.md) | Yes | 混合模式。&lt;br/&gt;默认值：BlendMode.NONE&lt;br/&gt;**说明：**&lt;br/&gt;混合模式设置为BlendMode.NONE时，blend效果实际为默认的 BlendMode.SRC_OVER，且BlendApplyType不生效。 |
-| type | [BlendApplyType](arkts-arkui-blendapplytype-e.md) | No | blendMode实现方式是否离屏。&lt;br/&gt;默认值：BlendApplyType.FAST&lt;br/&gt;**说明：**&lt;br/&gt;1. 设置 BlendApplyType.FAST时，不离屏。&lt;br/&gt;2. 设置BlendApplyType.OFFSCREEN时，会创建当前组件大小的离屏画布，再将当前组件（含子组件）的内容绘制到离屏画布上，再用指定的混合模式与下 方画布已有内容进行混合。使用该实现方式时，将导致 [linearGradientBlur&lt;sup&gt;12+&lt;/sup&gt;](arkts-arkui-commonmethod-c.md#lineargradientblur) 、[backgroundEffect](arkts-arkui-commonmethod-c.md#backgroundeffect)、 [brightness](arkts-arkui-commonmethod-c.md#brightness)、 [blur](arkts-arkui-commonmethod-c.md#blur)等需要截屏的接口无法截取到正确的画面。 |
+| value | [BlendMode](../arkts-apis/arkts-arkui-common-blendmode-e.md) | Yes | Blend mode.&lt;br&gt;Default value: **BlendMode.NONE**&lt;br&gt;**NOTE：**&lt;br&gt;When **BlendMode.NONE** is used, the blend effect is **BlendMode.SRC_OVER** by default, and **BlendApplyType** does not take effect. |
+| type | [BlendApplyType](arkts-arkui-blendapplytype-e.md) | No | Whether the blend mode is implemented offscreen.&lt;br&gt;Default value: **BlendApplyType.FAST**&lt;br&gt;**NOTE：**&lt;br&gt;1. **BlendApplyType.FAST**: The blend mode is not implemented offscreen. &lt;br&gt;2. **BlendApplyType.OFFSCREEN**: An offscreen canvas of the size of the current component is created. The content of the current component (including child components) is then drawn onto the offscreen canvas, and blended with the existing content on the canvas below using the specified blend mode. This approach may cause issues with screen capture for APIs such as [linearGradientBlur&lt;sup&gt;12+&lt;/sup&gt;](arkts-arkui-commonmethod-c.md#lineargradientblur), [backgroundEffect](arkts-arkui-commonmethod-c.md#backgroundeffect), [brightness](arkts-arkui-commonmethod-c.md#brightness), and [blur](arkts-arkui-commonmethod-c.md#blur). |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| T | 返回当前组件。 |
+| T | Current component. |
 
 ## blendMode
 
@@ -2264,8 +2303,8 @@ blendMode(value: BlendMode, type?: BlendApplyType): T
 blendMode(mode: Optional<BlendMode>, type?: BlendApplyType): T
 ```
 
-将当前控件的内容（包含子节点内容）与下方画布（可能为离屏画布）已有内容进行混合。与  
-[blendMode&lt;sup&gt;11+&lt;/sup&gt;](arkts-arkui-commonmethod-c.md#blendmode)相比，mode参数新增了对undefined类型的支持。
+Defines how the component's content (including the content of it child components) is blended with the existing content on the canvas (possibly offscreen canvas) below. Compared to   
+[blendMode&lt;sup&gt;11+&lt;/sup&gt;](arkts-arkui-commonmethod-c.md#blendmode), the **mode** parameter supports the **undefined** type.
 
 **Since:** 18
 
@@ -2279,18 +2318,20 @@ blendMode(mode: Optional<BlendMode>, type?: BlendApplyType): T
 
 <!--Device-CommonMethod-blendMode(mode: Optional<BlendMode>, type?: BlendApplyType): T--><!--Device-CommonMethod-blendMode(mode: Optional<BlendMode>, type?: BlendApplyType): T-End-->
 
+**System capability:** SystemCapability.ArkUI.ArkUI.Full
+
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| mode | [Optional](../arkts-apis/arkts-arkui-optional-t.md)&lt;BlendMode&gt; | Yes | 混合模式。&lt;br/&gt;默认值：BlendMode.NONE&lt;br/&gt;当mode的值为undefined时，恢复为内容不进行混合的效果。&lt;br/&gt; **说明：**&lt;br/&gt;混合模式设置为BlendMode.NONE时，blend效果实际为默认的BlendMode.SRC_OVER，且BlendApplyType不生效。 |
-| type | [BlendApplyType](arkts-arkui-blendapplytype-e.md) | No | blendMode实现方式是否离屏。&lt;br/&gt;默认值：BlendApplyType.FAST&lt;br/&gt;**说明：**&lt;br/&gt;1. 设置 BlendApplyType.FAST时，不离屏。&lt;br/&gt;2. 设置BlendApplyType.OFFSCREEN时，会创建当前组件大小的离屏画布，再将当前组件（含子组件）的内容绘制到离屏画布上，再用指定的混合模式与下 方画布已有内容进行混合。使用该实现方式时，将导致 [linearGradientBlur&lt;sup&gt;12+&lt;/sup&gt;](arkts-arkui-commonmethod-c.md#lineargradientblur) 、[backgroundEffect](arkts-arkui-commonmethod-c.md#backgroundeffect)、 [brightness](arkts-arkui-commonmethod-c.md#brightness)、 [blur](arkts-arkui-commonmethod-c.md#blur)等需要截屏的接口无法截取到正确的画面。 |
+| mode | [Optional](../arkts-apis/arkts-arkui-optional-t.md)&lt;BlendMode&gt; | Yes | Blend mode.&lt;br&gt;Default value: **BlendMode.NONE**&lt;br&gt;If **mode** is **undefined**, the component reverts to its original effect of not enabling offscreen rendering as a whole before blending with the parent component.&lt;br&gt;**NOTE：**&lt;br&gt;When **BlendMode.NONE** is used, the blend effect is **BlendMode.SRC_OVER** by default, and **BlendApplyType** does not take effect. |
+| type | [BlendApplyType](arkts-arkui-blendapplytype-e.md) | No | Whether the blend mode is implemented offscreen.&lt;br&gt;Default value: **BlendApplyType.FAST**&lt;br&gt;**NOTE：**&lt;br&gt;1. **BlendApplyType.FAST**: The blend mode is not implemented offscreen. &lt;br&gt;2. **BlendApplyType.OFFSCREEN**: An offscreen canvas of the size of the current component is created. The content of the current component (including child components) is then drawn onto the offscreen canvas, and blended with the existing content on the canvas below using the specified blend mode. This approach may cause issues with screen capture for APIs such as [linearGradientBlur&lt;sup&gt;12+&lt;/sup&gt;](arkts-arkui-commonmethod-c.md#lineargradientblur), [backgroundEffect](arkts-arkui-commonmethod-c.md#backgroundeffect), [brightness](arkts-arkui-commonmethod-c.md#brightness), and [blur](arkts-arkui-commonmethod-c.md#blur). |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| T | 返回当前组件。 |
+| T | Current component. |
 
 ## blur
 
@@ -2298,7 +2339,7 @@ blendMode(mode: Optional<BlendMode>, type?: BlendApplyType): T
 blur(value: number, options?: BlurOptions): T
 ```
 
-为组件添加内容模糊效果。
+Applies a foreground blur effect to the component.
 
 **Since:** 7
 
@@ -2316,14 +2357,14 @@ blur(value: number, options?: BlurOptions): T
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | number | Yes | 当前组件添加内容模糊效果，入参为模糊半径，模糊半径越大越模糊，为0时不模糊。 |
-| options | [BlurOptions](arkts-arkui-bluroptions-i.md) | No | 灰阶模糊参数。对图像中的黑白色进行色阶调整，使其趋于灰色更为柔和美观，对图像中的彩色调整没有效果。&lt;br/&gt;默认值：grayscale: [0,0]<br>**Since:** 11 |
+| value | number | Yes | Foreground blur effect to apply to the component. The input parameter is the blur radius. The larger the radius is, the more blurred the content is. If the value is **0**, the content is not blurred. |
+| options | [BlurOptions](arkts-arkui-bluroptions-i.md) | No | Grayscale parameters.<br>**Since:** 11 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| T | 返回当前组件。 |
+| T | Current component. |
 
 ## blur
 
@@ -2331,7 +2372,9 @@ blur(value: number, options?: BlurOptions): T
 blur(blurRadius: Optional<number>, options?: BlurOptions): T
 ```
 
-为组件添加内容模糊效果。与[blur](arkts-arkui-commonmethod-c.md#blur)相比，blurRadius参数新增了对undefined类型的支持。
+Applies a foreground blur effect to the component. Compared to   
+[blur](arkts-arkui-commonmethod-c.md#blur), the **blurRadius** parameter supports the   
+**undefined** type.
 
 **Since:** 18
 
@@ -2345,18 +2388,20 @@ blur(blurRadius: Optional<number>, options?: BlurOptions): T
 
 <!--Device-CommonMethod-blur(blurRadius: Optional<number>, options?: BlurOptions): T--><!--Device-CommonMethod-blur(blurRadius: Optional<number>, options?: BlurOptions): T-End-->
 
+**System capability:** SystemCapability.ArkUI.ArkUI.Full
+
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| blurRadius | [Optional](../arkts-apis/arkts-arkui-optional-t.md)&lt;number&gt; | Yes | 当前组件添加内容模糊效果，入参为模糊半径，模糊半径越大越模糊，为0时不模糊。&lt;br/&gt;当blurRadius的值为undefined时，维持之前取 值。 |
-| options | [BlurOptions](arkts-arkui-bluroptions-i.md) | No | 灰阶模糊参数。对图像中的黑白色进行色阶调整，使其趋于灰色更为柔和美观，对图像中的彩色调整没有效果。&lt;br/&gt;默认值：grayscale: [0,0] |
+| blurRadius | [Optional](../arkts-apis/arkts-arkui-optional-t.md)&lt;number&gt; | Yes | Foreground blur effect to apply to the component. The input parameter is the blur radius. The larger the radius is, the more blurred the content is. If the value is **0**, the content is not blurred.&lt;br&gt;If **blurRadius** is set to **undefined**, the previous value is retained. |
+| options | [BlurOptions](arkts-arkui-bluroptions-i.md) | No | Grayscale parameters. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| T | 返回当前组件。 |
+| T | Current component. |
 
 ## blur
 
@@ -2364,7 +2409,8 @@ blur(blurRadius: Optional<number>, options?: BlurOptions): T
 blur(blurRadius: Optional<number>, options?: BlurOptions, sysOptions?: SystemAdaptiveOptions): T
 ```
 
-为组件添加内容模糊效果。与[blur&lt;sup&gt;18+&lt;/sup&gt;](arkts-arkui-commonmethod-c.md#blur)相比，新增了sysOptions参数，即支持系统自适应调节参数。
+Applies a foreground blur effect to the component. Compared to   
+[blur&lt;sup&gt;18+&lt;/sup&gt;](arkts-arkui-commonmethod-c.md#blur), this API adds the **sysOptions** parameter, which allows for system adaptive adjustments.
 
 **Since:** 19
 
@@ -2378,19 +2424,21 @@ blur(blurRadius: Optional<number>, options?: BlurOptions, sysOptions?: SystemAda
 
 <!--Device-CommonMethod-blur(blurRadius: Optional<number>, options?: BlurOptions, sysOptions?: SystemAdaptiveOptions): T--><!--Device-CommonMethod-blur(blurRadius: Optional<number>, options?: BlurOptions, sysOptions?: SystemAdaptiveOptions): T-End-->
 
+**System capability:** SystemCapability.ArkUI.ArkUI.Full
+
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| blurRadius | [Optional](../arkts-apis/arkts-arkui-optional-t.md)&lt;number&gt; | Yes | 当前组件添加内容模糊效果，入参为模糊半径，模糊半径越大越模糊，为0时不模糊。&lt;br/&gt;当blurRadius的值为undefined时，维持之前取 值。 |
-| options | [BlurOptions](arkts-arkui-bluroptions-i.md) | No | 灰阶模糊参数。对图像中的黑白色进行色阶调整，使其趋于灰色更为柔和美观，对图像中的彩色调整没有效果。&lt;br/&gt;默认值：grayscale: [0,0] |
-| sysOptions | [SystemAdaptiveOptions](arkts-arkui-systemadaptiveoptions-i.md) | No | 系统自适应调节参数。&lt;br/&gt;默认值：{ disableSystemAdaptation: false } |
+| blurRadius | [Optional](../arkts-apis/arkts-arkui-optional-t.md)&lt;number&gt; | Yes | Foreground blur effect to apply to the component. The input parameter is the blur radius. The larger the radius is, the more blurred the content is. If the value is **0**, the content is not blurred.&lt;br&gt;If **blurRadius** is set to **undefined**, the previous value is retained. |
+| options | [BlurOptions](arkts-arkui-bluroptions-i.md) | No | Grayscale parameters. |
+| sysOptions | [SystemAdaptiveOptions](arkts-arkui-systemadaptiveoptions-i.md) | No | System adaptive adjustment options.&lt;br&gt;Default value: **{ disableSystemAdaptation: false } |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| T | 返回当前组件。 |
+| T | Current component. |
 
 ## border
 
@@ -2398,11 +2446,7 @@ blur(blurRadius: Optional<number>, options?: BlurOptions, sysOptions?: SystemAda
 border(value: BorderOptions): T
 ```
 
-设置边框样式。
-
-> **说明：**
-> 
-> color、radius缺省时，为了保证[borderColor](arkts-arkui-commonmethod-c.md#bordercolor)、[borderRadius](../arkts-apis/arkts-arkui-common-commonmethod-i.md/arkts-arkui-common-commonmethod-i.md#borderradius)生效，需要将[borderColor](../arkts-apis/arkts-arkui-common-commonmethod-i.md/arkts-arkui-common-commonmethod-i.md#bordercolor)、[borderRadius](../arkts-apis/arkts-arkui-common-commonmethod-i.md/arkts-arkui-common-commonmethod-i.md#borderradius)设置在[border](arkts-arkui-commonmethod-c.md#border)后。
+Sets the border. When neither color nor radius is specified, set borderColor and borderRadius after border to ensure they take effect.
 
 **Since:** 7
 
@@ -2420,7 +2464,7 @@ border(value: BorderOptions): T
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | [BorderOptions](../arkts-apis/arkts-arkui-borderoptions-i.md) | Yes | &lt;br&gt;统一边框样式设置接口。&lt;br/&gt;**说明：** &lt;br/&gt;边框宽度默认值为0，即不显示边框。&lt;br/&gt;从API version 9开始，父节点的border显示在子节点内容之上。 |
+| value | [BorderOptions](../arkts-apis/arkts-arkui-borderoptions-i.md) | Yes | Unified border style.&lt;br&gt;The default value is **0**, indicating that no border is displayed.&lt;br&gt;Since API version 9, the parent node's border is displayed above child node content. |
 
 **Return value:**
 
@@ -2434,7 +2478,7 @@ border(value: BorderOptions): T
 borderColor(value: ResourceColor | EdgeColors | LocalizedEdgeColors): T
 ```
 
-设置边框的颜色。
+Sets the border color.
 
 **Since:** 7
 
@@ -2484,7 +2528,7 @@ Sets the border image of the component.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | [BorderImageOption](arkts-arkui-borderimageoption-i.md) | Yes | @returns { T } |
+| value | [BorderImageOption](arkts-arkui-borderimageoption-i.md) | Yes | Border image or border gradient. |
 
 **Return value:**
 
@@ -2498,7 +2542,7 @@ Sets the border image of the component.
 borderRadius(value: Length | BorderRadiuses | LocalizedBorderRadiuses): T
 ```
 
-设置边框的圆角半径。
+Sets the border radius.
 
 **Since:** 7
 
@@ -2530,9 +2574,7 @@ borderRadius(value: Length | BorderRadiuses | LocalizedBorderRadiuses): T
 borderRadius(value: Length | BorderRadiuses | LocalizedBorderRadiuses, type?: RenderStrategy): T
 ```
 
-设置边框的圆角半径和绘制圆角的模式。
-
-**注意**1. **RenderStrategy.FAST**：当前组件及其子组件将直接以圆角效果绘制到画布上。2. **RenderStrategy.OFFSCREEN**：当前组件及其子组件将首先渲染到一个离屏画布，然后进行圆角裁剪，最后绘制到主画布上。
+Sets the border corner radius and the rendering strategy for rounded corners.NOTE 1. **RenderStrategy.FAST**: The current component and its child components will be drawn directly  onto the canvas with rounded corners applied. 2. **RenderStrategy.OFFSCREEN**: The current component and its child components will first be rendered onto  an off-screen canvas, then undergo a rounded corner clipping, and finally be drawn onto the main canvas.
 
 **Since:** 22
 
@@ -2552,8 +2594,8 @@ borderRadius(value: Length | BorderRadiuses | LocalizedBorderRadiuses, type?: Re
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | [Length](../arkts-apis/arkts-arkui-length-t.md) \| BorderRadiuses \| LocalizedBorderRadiuses | Yes | 设置元素的边框圆角半径，支持百分比，百分比依据组件宽度。设置圆角后，可搭配clip属性进行裁剪，避免子组件超出组件自身。 |
-| type | [RenderStrategy](../arkts-apis/arkts-arkui-renderstrategy-e.md) | No | 设置组件绘制圆角的模式。 &lt;br&gt;默认值： **RenderStrategy.FAST**。 |
+| value | [Length](../arkts-apis/arkts-arkui-length-t.md) \| BorderRadiuses \| LocalizedBorderRadiuses | Yes | Radius of the border corners. The value can be expressed as a percentage of the component's width. When combined with the clip attribute, this setting clips child components to prevent them from extending beyond the component's boundaries. |
+| type | [RenderStrategy](../arkts-apis/arkts-arkui-renderstrategy-e.md) | No | Rendering strategy for drawing rounded corners. &lt;br&gt;Default value: RenderStrategy.FAST. |
 
 **Return value:**
 
@@ -2567,7 +2609,7 @@ borderRadius(value: Length | BorderRadiuses | LocalizedBorderRadiuses, type?: Re
 borderStyle(value: BorderStyle | EdgeStyles): T
 ```
 
-设置元素的边框线条样式。
+Border style
 
 **Since:** 7
 
@@ -2585,7 +2627,7 @@ borderStyle(value: BorderStyle | EdgeStyles): T
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | [BorderStyle](../arkts-apis/arkts-arkui-borderstyle-e.md) \| EdgeStyles | Yes | 设置元素的边框样式。&lt;br/&gt;默认值：BorderStyle.Solid - Border style.&lt;br&gt;Default value: **BorderStyle.Solid**.<br>**Since:** 9 |
+| value | [BorderStyle](../arkts-apis/arkts-arkui-borderstyle-e.md) \| EdgeStyles | Yes | Border style.&lt;br&gt;Default value: **BorderStyle.Solid**.<br>**Since:** 9 |
 
 **Return value:**
 
@@ -2599,7 +2641,7 @@ borderStyle(value: BorderStyle | EdgeStyles): T
 borderWidth(value: Length | EdgeWidths | LocalizedEdgeWidths): T
 ```
 
-设置边框的宽度。
+Sets the border width.
 
 **Since:** 7
 
@@ -2631,7 +2673,7 @@ borderWidth(value: Length | EdgeWidths | LocalizedEdgeWidths): T
 brightness(value: number): T
 ```
 
-为组件添加高光效果。不通过该接口设置时，默认无变化。
+Applies a brightness effect to the component. If this API is not used, there will be no change by default.
 
 **Since:** 7
 
@@ -2649,13 +2691,13 @@ brightness(value: number): T
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | number | Yes | 为当前组件添加高光效果，入参为高光比例，值为1时没有效果，小于1时亮度变暗，小于或等于0为全黑，大于1时亮度增加，数值越大亮度越大，亮度大于或等于2时会变为全白。&lt;br/&gt;取值范 围：[0, +∞)&lt;br/&gt;推荐取值范围：[0, 2]&lt;br/&gt;**说明：**&lt;br/&gt;设置小于0的值时，按值为0处理。 |
+| value | number | Yes | Brightness effect of the component. **1**: No brightness adjustment. Less than 1.0: decreases brightness. 0 or less: Complete black. Greater than 1: increases brightness. 2 or greater: complete white.&lt;br&gt;Value range: [0, +∞)&lt;br&gt;Recommended value range: [0, 2]&lt;br&gt;**NOTE：**&lt;br&gt;A value less than 0 evaluates to the value **0**. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| T | 返回当前组件。 |
+| T | Current component. |
 
 ## brightness
 
@@ -2663,7 +2705,8 @@ brightness(value: number): T
 brightness(brightness: Optional<number>): T
 ```
 
-为组件添加高光效果。不通过该接口设置时，默认无变化。与[brightness](arkts-arkui-commonmethod-c.md#brightness)相比，brightness参数新增了对undefined类型的支持。
+Applies a brightness effect to the component. If this API is not used, there will be no change by default. Compared with [brightness](arkts-arkui-commonmethod-c.md#brightness), this API supports the **undefined** type for the   
+**brightness** parameter.
 
 **Since:** 18
 
@@ -2677,17 +2720,19 @@ brightness(brightness: Optional<number>): T
 
 <!--Device-CommonMethod-brightness(brightness: Optional<number>): T--><!--Device-CommonMethod-brightness(brightness: Optional<number>): T-End-->
 
+**System capability:** SystemCapability.ArkUI.ArkUI.Full
+
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| brightness | [Optional](../arkts-apis/arkts-arkui-optional-t.md)&lt;number&gt; | Yes | 为当前组件添加高光效果，入参为高光比例，值为1时没有效果，小于1时亮度变暗，小于或等于0为全黑，大于1时亮度增加，数值越大亮度越大，亮度大于或等于2 时会变为全白。&lt;br/&gt;取值范围： [0, +∞)&lt;br/&gt;推荐取值范围：[0, 2]&lt;br/&gt;**说明：**&lt;br/&gt;设置小于0的值时，按值为0处理。&lt;br/&gt;当brightness的值为undefined时，恢复为亮度为1的高光效果。 |
+| brightness | [Optional](../arkts-apis/arkts-arkui-optional-t.md)&lt;number&gt; | Yes | Brightness effect of the component. **1**: No brightness adjustment. Less than 1.0: decreases brightness. 0 or less: Complete black. Greater than 1: increases brightness. 2 or greater: complete white.&lt;br&gt;Value range: [0, +∞)&lt;br&gt;Recommended value range: [0, 2]&lt;br&gt;**NOTE：**&lt;br&gt;A value less than 0 evaluates to the value **0**.&lt;br&gt;If **brightness** is **undefined**, the brightness level is reset to **1**. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| T | 返回当前组件。 |
+| T | Current component. |
 
 ## chainMode
 
@@ -2695,7 +2740,7 @@ brightness(brightness: Optional<number>): T
 chainMode(direction: Axis, style: ChainStyle): T
 ```
 
-指定以该组件为链头所构成的链的参数，仅当父组件为RelativeContainer时生效。链头指满足成链规则时链的第一个组件（水平方向从左边起始，镜像语言下从右边起始；竖直方向从上边起始）。
+Sets the parameters of the chain in which the component is the head. This attribute takes effect only when the parent container is RelativeContainer. The chain head is the first component in the chain that satisfies the chain formation rules. In a horizontal layout, it starts from the left (or from the right in a mirrored language layout).In a vertical layout, it starts from the top.
 
 **Since:** 12
 
@@ -2713,8 +2758,8 @@ chainMode(direction: Axis, style: ChainStyle): T
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| direction | [Axis](../arkts-apis/arkts-arkui-axis-e.md) | Yes | 链的方向。 |
-| style | [ChainStyle](arkts-arkui-chainstyle-e.md) | Yes | 链的样式。 |
+| direction | [Axis](../arkts-apis/arkts-arkui-axis-e.md) | Yes | indicates direction of the chain |
+| style | [ChainStyle](arkts-arkui-chainstyle-e.md) | Yes | indicates style of the chain |
 
 **Return value:**
 
@@ -2728,11 +2773,12 @@ chainMode(direction: Axis, style: ChainStyle): T
 chainWeight(chainWeight: ChainWeightOptions): T
 ```
 
-对形成链的组件进行重新布局。仅当父组件为[RelativeContainer](../arkts-apis/arkts-arkui-relativecontainer-relativecontainer-f.md/arkts-arkui-relativecontainer-relativecontainer-f.md#relativecontainer)时生效。
+Sets the weight of the component in a chain, which is used to re-lay out components that form the chain. This attribute takes effect only when the parent container is  
+[RelativeContainer](../arkts-apis/arkts-arkui-relativecontainer-relativecontainer-f.md/arkts-arkui-relativecontainer-relativecontainer-f.md#relativecontainer).
 
-> **说明：**
-> 
-> 从API version 23开始，支持 [attributeModifier](arkts-arkui-commonmethod-c.md#attributemodifier)动态设置属性方法。
+**NOTE：**
+
+Since API version 23, dynamic configuration via [attributeModifier](arkts-arkui-commonmethod-c.md#attributemodifier) is supported
 
 **Since:** 14
 
@@ -2750,7 +2796,7 @@ chainWeight(chainWeight: ChainWeightOptions): T
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| chainWeight | [ChainWeightOptions](../arkts-apis/arkts-arkui-chainweightoptions-i.md) | Yes | 设置了chainWeight属性的组件与同一条链上的兄弟组件在水平或竖直方向的尺寸会按照设置的权重进行分配，分配时会忽略组件本身尺寸设置，按分配的权重自适应占满剩余空间。 |
+| chainWeight | [ChainWeightOptions](../arkts-apis/arkts-arkui-chainweightoptions-i.md) | Yes | Layout weight of the component in the horizontal or vertical direction. The component with **chainWeight** set will have its size in the horizontal or vertical direction allocated according to the set weights. The allocation ignores the component's intrinsic size and enables the component to adaptively fill the remaining space. |
 
 **Return value:**
 
@@ -2764,7 +2810,7 @@ chainWeight(chainWeight: ChainWeightOptions): T
 clickEffect(value: ClickEffect | null): T
 ```
 
-设置当前组件的点击回弹效果。
+Sets the click feedback effect of the component.
 
 **Since:** 10
 
@@ -2782,13 +2828,13 @@ clickEffect(value: ClickEffect | null): T
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | [ClickEffect](arkts-arkui-clickeffect-i.md) \| null | Yes | 设置当前组件点击回弹效果。&lt;br/&gt;**说明：**&lt;br/&gt;可通过null取消点击回弹效果。&lt;br/&gt;不建议在组件大小动态变化的场景中使用该功能。&lt;br/ &gt;当组件无法触发通用事件时，不支持该属性。&lt;br/&gt;回弹触发缩放后可能造成触摸点不在控件上，控件上无法响应手势事件。 |
+| value | [ClickEffect](arkts-arkui-clickeffect-i.md) \| null | Yes | Click feedback effect of the component.&lt;br&gt;**NOTE：**&lt;br&gt;Use **null** to disable the click feedback effect.&lt;br&gt;Avoid using this feature in scenarios where the component size dynamically changes.&lt;br&gt;This attribute is not supported when the component cannot trigger universal events.&lt;br&gt; After the click feedback effect triggers scaling, the touch point may fall outside the control, making the component unresponsive to gesture events. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| T | 返回当前组件。 |
+| T | Current component. |
 
 ## clickEffect
 
@@ -2796,7 +2842,8 @@ clickEffect(value: ClickEffect | null): T
 clickEffect(effect: Optional<ClickEffect | null>): T
 ```
 
-设置当前组件的点击回弹效果。与[clickEffect](arkts-arkui-commonmethod-c.md#clickeffect)相比，新增了对undefined类型的支持。
+Sets the click feedback effect of the component. Compared with   
+[clickEffect](arkts-arkui-commonmethod-c.md#clickeffect), this API supports the **undefined** type.
 
 **Since:** 18
 
@@ -2814,13 +2861,13 @@ clickEffect(effect: Optional<ClickEffect | null>): T
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| effect | [Optional](../arkts-apis/arkts-arkui-optional-t.md)&lt;ClickEffect \| null&gt; | Yes | 设置当前组件的点击回弹效果。&lt;br/&gt;**说明：**&lt;br/&gt;可通过undefined或者null取消点击回弹效果。&lt;br/&gt;不建议 在组件大小动态变化的场景中使用该功能。&lt;br/&gt;当组件无法触发通用事件时，不支持该属性。&lt;br/&gt;回弹触发缩放后可能造成触摸点不在控件上，控件上无法响应手势事件。 |
+| effect | [Optional](../arkts-apis/arkts-arkui-optional-t.md)&lt;ClickEffect \| null&gt; | Yes | Click feedback effect of the component.&lt;br&gt;**NOTE：**&lt;br&gt;Use **undefined** or **null** to disable the click feedback effect.&lt;br&gt;Avoid using this feature in scenarios where the component size dynamically changes.&lt;br&gt;This attribute is not supported when the component cannot trigger universal events.&lt;br&gt;After the click feedback effect triggers scaling, the touch point may fall outside the control, making the component unresponsive to gesture events. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| T | 返回当前组件。 |
+| T | Current component. |
 
 ## clip
 
@@ -2828,7 +2875,7 @@ clickEffect(effect: Optional<ClickEffect | null>): T
 clip(value: boolean): T
 ```
 
-是否对子组件超出当前组件范围外的区域进行裁剪。不设置该接口时，默认不对子组件超出当前组件范围外的区域进行裁剪。
+Sets whether to clip the areas of child components that extend beyond this component's bounds, that is, whether to perform clipping based on the edge contour of the parent container If this API is not used, the area of child components extending beyond the current component's bounds is not clipped by default.
 
 **Since:** 12
 
@@ -2848,13 +2895,13 @@ clip(value: boolean): T
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | boolean | Yes | 设置子组件是否按照当前组件边缘轮廓进行裁剪。&lt;br/&gt;true表示子组件按照当前组件边缘轮廓进行裁剪，false表示不对子组件进行裁剪。 &lt;br/&gt;**说明：** 设置为 true后，子组件超出当前组件范围外的区域将不响应绑定的手势事件。 |
+| value | boolean | Yes | Whether to clip the areas of child components that extend beyond the current component's bounds.&lt;br&gt;The value **true** means to clip the areas of child components that extend beyond the current component's bounds, and **false** means the opposite.&lt;br&gt;Note: If this parameter is set to **true**, child components exceeding the current component's bounds will not respond to bound gesture events. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| T | 返回当前组件。 |
+| T | Current component. |
 
 ## clip
 
@@ -2862,8 +2909,8 @@ clip(value: boolean): T
 clip(clip: Optional<boolean>): T
 ```
 
-是否对子组件超出当前组件范围外的区域进行裁剪。不设置该接口时，默认不对子组件超出当前组件范围外的区域进行裁剪。与  
-[clip&lt;sup&gt;12+&lt;/sup&gt;](arkts-arkui-commonmethod-c.md#clip)相比，新增了对undefined类型的支持。
+Sets whether to clip the areas of child components that extend beyond this component's bounds, that is, whether to perform clipping based on the edge contour of the parent container If this API is not used, the area of child components extending beyond the current component's bounds is not clipped by default. Compared with   
+[clip&lt;sup&gt;12+&lt;/sup&gt;](arkts-arkui-commonmethod-c.md#clip), this API supports the **undefined** type.
 
 **Since:** 18
 
@@ -2883,13 +2930,13 @@ clip(clip: Optional<boolean>): T
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| clip | [Optional](../arkts-apis/arkts-arkui-optional-t.md)&lt;boolean&gt; | Yes | 设置子组件是否按照当前组件边缘轮廓进行裁剪。&lt;br/&gt;**说明：** 设置为true后，子组件超出当前组件范围外的区域将不响应绑定的手势事件。&lt;br/&gt;当 clip的值为undefined时，恢复为不对子组件超出当前组件范围外的区域进行裁剪。 |
+| clip | [Optional](../arkts-apis/arkts-arkui-optional-t.md)&lt;boolean&gt; | Yes | Whether to clip the areas of child components that extend beyond the current component's bounds.&lt;br&gt;Note: If this parameter is set to **true**, child components exceeding the current component's bounds will not respond to bound gesture events.&lt;br&gt;If **clip** is set to **undefined**, clipping is disabled, and child components are not clipped. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| T | 返回当前组件。 |
+| T | Current component. |
 
 ## clip
 
@@ -2897,9 +2944,7 @@ clip(clip: Optional<boolean>): T
 clip(value: boolean | CircleAttribute | EllipseAttribute | PathAttribute | RectAttribute): T
 ```
 
-按指定的形状对当前组件进行裁剪。
-
-> **说明：**
+Sets whether to clip this component based on the given shape.
 
 **Since:** 7
 
@@ -2907,7 +2952,7 @@ clip(value: boolean | CircleAttribute | EllipseAttribute | PathAttribute | RectA
 
 **Deprecated since:** 12
 
-**Substitutes:** [CommonMethod#clipShape](arkts-arkui-commonmethod-c.md#clipshape)(value:
+**Substitutes:** [CommonMethod#clipShape](arkts-arkui-commonmethod-c.md#clipshape)
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -2921,13 +2966,13 @@ clip(value: boolean | CircleAttribute | EllipseAttribute | PathAttribute | RectA
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | boolean \| CircleAttribute \| EllipseAttribute \| PathAttribute \| RectAttribute | Yes | 参数为相应类型的组件，按指定的形状对当 前组件进行裁剪；参数为boolean类型时，设置是否按照父容器边缘轮廓进行裁剪。&lt;br/&gt;默认值：false &lt;br/&gt;**说明：** 参数为对应类型的组件时，裁剪不会导致被裁剪区域无法响应绑定的手势事件。参数为 boolean类型时，裁剪会导致被裁剪区域无法响应绑定的手势事件。 |
+| value | boolean \| CircleAttribute \| EllipseAttribute \| PathAttribute \| RectAttribute | Yes | Clip mode. If the value is a shape attribute, the component is clipped based on the specified shape. If the value is of the Boolean type, it specifies whether to clip the component based on the boundaries of the parent container.&lt;br&gt; Default value: **false**.&lt;br&gt;Note: If the value is a shape attribute, the clipped area can still respond to bound gesture events. If the value is of the Boolean type, the clipped area will not respond to bound gesture events. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| T | 返回当前组件。 |
+| T | Current component. |
 
 ## clipShape
 
@@ -2935,15 +2980,18 @@ clip(value: boolean | CircleAttribute | EllipseAttribute | PathAttribute | RectA
 clipShape(value: CircleShape | EllipseShape | PathShape | RectShape): T
 ```
 
-按指定的形状（形状中可包含位置信息）对当前组件进行裁剪。
+Clips this component according to the specified shape (which may include position information).
 
-> **说明：**
+> **NOTE：**
 > 
-> 不同的形状支持的属性范围不同，路径是一种形状，除此之外还有椭圆、矩形等形状。
+> Different shapes support different ranges of attributes. A path is one type of shape, along with others like
+> ellipses and rectangles.
 > 
-> 路径的形状不支持设置宽度和高度。具体形状支持的属性参考具体形状的文档。
+> Path shapes do not support setting width and height attributes. For details about the supported attributes, see
+> the specific shape documentation.
 > 
-> 形状中的[fill](arkts-arkui-commonshapemethod-c.md#fill)属性对clipShape接口不生效。
+> The [fill](arkts-arkui-commonshapemethod-c.md#fill) attribute of shapes has no effect on the **clipShape**
+> API.
 
 **Since:** 12
 
@@ -2963,13 +3011,13 @@ clipShape(value: CircleShape | EllipseShape | PathShape | RectShape): T
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | [CircleShape](../arkts-apis/arkts-arkui-arkui-shape-circleshape-c.md) \| EllipseShape \| PathShape \| RectShape | Yes | 参数为相应类型的组件，按指定的形状（形状中可包含位置信息）对当前组件进行裁剪。&lt;br/&gt; **说明：** 裁剪不会导致被裁剪区域无法响应绑定的手势事件。 |
+| value | [CircleShape](../arkts-apis/arkts-arkui-arkui-shape-circleshape-c.md) \| EllipseShape \| PathShape \| RectShape | Yes | Shape (which may include position information ) to clip the current component.&lt;br&gt;Note: The clipped area remains responsive to bound gesture events. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| T | 返回当前组件。 |
+| T | Current component. |
 
 ## clipShape
 
@@ -2977,16 +3025,19 @@ clipShape(value: CircleShape | EllipseShape | PathShape | RectShape): T
 clipShape(shape: Optional<CircleShape | EllipseShape | PathShape | RectShape>): T
 ```
 
-按指定的形状（形状中可包含位置信息）对当前组件进行裁剪。与  
-[clipShape&lt;sup&gt;12+&lt;/sup&gt;](arkts-arkui-commonmethod-c.md#clipshape)相比，新增了对undefined类型的支持。
+Clips this component according to the specified shape (which may include position information). Compared with   
+[clipShape&lt;sup&gt;12+&lt;/sup&gt;](arkts-arkui-commonmethod-c.md#clipshape),this API supports the **undefined** type.
 
-> **说明：**
+> **NOTE：**
 > 
-> 不同的形状支持的属性范围不同，路径是一种形状，除此之外还有椭圆、矩形等形状。
+> Different shapes support different ranges of attributes. A path is one type of shape, along with others like
+> ellipses and rectangles.
 > 
-> 路径的形状不支持设置宽度和高度。具体形状支持的属性参考具体形状的文档。
+> Path shapes do not support setting width and height attributes. For details about the supported attributes, see
+> the specific shape documentation.
 > 
-> 形状中的[fill](arkts-arkui-commonshapemethod-c.md#fill)属性对clipShape接口不生效。
+> The [fill](arkts-arkui-commonshapemethod-c.md#fill) attribute of shapes has no effect on the **clipShape**
+> API.
 
 **Since:** 18
 
@@ -3006,13 +3057,13 @@ clipShape(shape: Optional<CircleShape | EllipseShape | PathShape | RectShape>): 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| shape | [Optional](../arkts-apis/arkts-arkui-optional-t.md)&lt;[CircleShape](../arkts-apis/arkts-arkui-arkui-shape-circleshape-c.md) \| [EllipseShape](../arkts-apis/arkts-arkui-arkui-shape-ellipseshape-c.md) \| [PathShape](../arkts-apis/arkts-arkui-arkui-shape-pathshape-c.md) \| [RectShape](../arkts-apis/arkts-arkui-arkui-shape-rectshape-c.md)&gt; | Yes | 参数为相应类型的组件，按指定的形状（形状中可包含位置信息）对当前组件进 行裁剪。&lt;br/&gt;**说明：** 裁剪不会导致被裁剪区域无法响应绑定的手势事件。&lt;br/&gt;当shape的值为undefined时，会重置当前值。 |
+| shape | [Optional](../arkts-apis/arkts-arkui-optional-t.md)&lt;[CircleShape](../arkts-apis/arkts-arkui-arkui-shape-circleshape-c.md) \| [EllipseShape](../arkts-apis/arkts-arkui-arkui-shape-ellipseshape-c.md) \| [PathShape](../arkts-apis/arkts-arkui-arkui-shape-pathshape-c.md) \| [RectShape](../arkts-apis/arkts-arkui-arkui-shape-rectshape-c.md)&gt; | Yes | Shape (which may include position information) to clip the current component.&lt;br&gt;Note: The clipped area remains responsive to bound gesture events.&lt;br&gt;If the value of **shape** is **undefined**, the current setting will be reset to its default state. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| T | 返回当前组件。 |
+| T | Current component. |
 
 ## colorBlend
 
@@ -3020,7 +3071,7 @@ clipShape(shape: Optional<CircleShape | EllipseShape | PathShape | RectShape>): 
 colorBlend(value: Color | string | Resource): T
 ```
 
-为组件添加颜色叠加效果。
+Applies a color blend effect to the component.
 
 **Since:** 7
 
@@ -3038,13 +3089,13 @@ colorBlend(value: Color | string | Resource): T
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | [Color](../arkts-apis/arkts-arkui-color-e.md) \| string \| Resource | Yes | 为当前组件添加颜色叠加效果，入参为叠加的颜色字符串。取值可为string类型，如'0x000000'，'rgba(0,0,0,1)'。 |
+| value | [Color](../arkts-apis/arkts-arkui-color-e.md) \| string \| Resource | Yes | Color to blend with the component. The value can be a string, for example, **'0x000000'** or **'rgba(0,0,0,1)'**. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| T | 返回当前组件。 |
+| T | Current component. |
 
 ## colorBlend
 
@@ -3052,7 +3103,8 @@ colorBlend(value: Color | string | Resource): T
 colorBlend(color: Optional<Color | string | Resource>): T
 ```
 
-为组件添加颜色叠加效果。与[colorBlend](arkts-arkui-commonmethod-c.md#colorblend)相比，color参数新增了对undefined类型的支持。
+Applies a color blend effect to the component. Compared with   
+[colorBlend](arkts-arkui-commonmethod-c.md#colorblend), this API supports the **undefined** type for the **color** parameter.
 
 **Since:** 18
 
@@ -3066,17 +3118,19 @@ colorBlend(color: Optional<Color | string | Resource>): T
 
 <!--Device-CommonMethod-colorBlend(color: Optional<Color | string | Resource>): T--><!--Device-CommonMethod-colorBlend(color: Optional<Color | string | Resource>): T-End-->
 
+**System capability:** SystemCapability.ArkUI.ArkUI.Full
+
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| color | [Optional](../arkts-apis/arkts-arkui-optional-t.md)&lt;[Color](../arkts-apis/arkts-arkui-color-e.md) \| string \| [Resource](../../apis-localization-kit/arkts-apis/arkts-localization-resource-resource-i.md)&gt; | Yes | 为当前组件添加颜色叠加效果，入参为叠加的颜色。取值可为string类型，如'0x000000'，'rgba(0,0,0, 1)'。&lt;br/&gt;当color的值为undefined时，恢复为无颜色叠加的效果。 |
+| color | [Optional](../arkts-apis/arkts-arkui-optional-t.md)&lt;[Color](../arkts-apis/arkts-arkui-color-e.md) \| string \| [Resource](../../apis-localization-kit/arkts-apis/arkts-localization-resource-resource-i.md)&gt; | Yes | Color to blend with the component. The value can be a string, for example, **'0x000000'** or **'rgba(0,0,0,1)'**.&lt;br&gt;If **color** is **undefined**, the component reverts to its original effect with no color blending. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| T | 返回当前组件。 |
+| T | Current component. |
 
 ## compositingFilter
 
@@ -3084,11 +3138,11 @@ colorBlend(color: Optional<Color | string | Resource>): T
 compositingFilter(filter: Filter): T
 ```
 
-设置合成滤镜视觉效果。
+Sets the visual effect of the compositing filter.
 
-> **说明：**
+> **NOTE：**
 > 
-> 从API version 20开始，该接口支持在[attributeModifier](arkts-arkui-commonmethod-c.md#attributemodifier)中调用。
+> This API can be called within [attributeModifier](arkts-arkui-commonmethod-c.md#attributemodifier) since API version 20.
 
 **Since:** 12
 
@@ -3106,13 +3160,13 @@ compositingFilter(filter: Filter): T
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| filter | [Filter](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-agent-filter-i.md) | Yes | 合成滤镜视觉效果。 |
+| filter | [Filter](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-agent-filter-i.md) | Yes | Visual effect of the compositing filter. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| T | 返回当前组件。 |
+| T | Current component. |
 
 ## constraintSize
 
@@ -3120,9 +3174,22 @@ compositingFilter(filter: Filter): T
 constraintSize(value: ConstraintSizeOptions): T
 ```
 
-设置约束尺寸，组件布局时进行尺寸范围限制。设置后组件的宽度和高度将被限制在指定的最小值和最大值范围内，constraintSize的优先级高于width和height属性。
+Sets the constraint size of the component, which is used to limit the size range during component layout.&lt;br&gt;Since API version 10, this API supports the calc calculation feature.
 
-从API version 10开始，该接口支持calc计算特性。
+**Impact of constraintSize(minWidth/maxWidth/minHeight/maxHeight) on width/height**  
+| Default Value | Result |  
+| ---------------------------------------- | ---------------------------------------- |  
+| \ | width=MAX(minWidth,MIN(maxWidth,width))&lt;br&gt;height=MAX(minHeight,MIN(maxHeight,height)) |  
+| maxWidth, maxHeight| width=MAX(minWidth,width)&lt;br&gt;height=MAX(minHeight,height)  
+| minWidth, minHeight| width=MIN(maxWidth,width)&lt;br&gt;height=MIN(maxHeight,height) |  
+| width, height| If minWidth < maxWidth, the layout logic of the component takes effect, and the value range of  
+**width** is [minWidth, maxWidth]. Otherwise, width = MAX(minWidth, maxWidth).&lt;br&gt;If minHeight < maxHeight,the layout logic of the component takes effect, and the value range of **height** is [minHeight, maxHeight].Otherwise, height = MAX (minHeight, maxHeight).|  
+| width and maxWidth; height and maxHeight| width = minWidth&lt;br&gt;height = minHeight |  
+| width and minWidth; and height and minHeight| The layout logic of the component takes effect, and the value of  
+**width** cannot be greater than that of **maxWidth**.&lt;br&gt;The layout logic of the component takes effect, and the value of **height** cannot be greater than that of **maxHeight**.|  
+| minWidth and maxWidth; minHeight and maxHeight| The width of the component is initially determined by the value of **width**, and it may be adjusted based on other layout attributes.&lt;br&gt;The height of the component is initially determined by the value of **height**, and it may be adjusted based on other layout attributes.|  
+| width, minWidth, and maxWidth| The layout restrictions passed by the parent container are used for layout.|  
+| height, minHeight, and maxHeight| The layout restrictions passed by the parent container are used for layout.|
 
 **Since:** 7
 
@@ -3140,13 +3207,13 @@ constraintSize(value: ConstraintSizeOptions): T
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | [ConstraintSizeOptions](../arkts-apis/arkts-arkui-constraintsizeoptions-i.md) | Yes | 设置约束尺寸。constraintSize的优先级高于 [width](arkts-arkui-commonmethod-c.md#width)和[height](arkts-arkui-commonmethod-c.md#height)。取值结果参考 constraintSize取值对width/height影响。 &lt;br&gt;默认值： &lt;br&gt;{ &lt;br&gt;minWidth: 0, &lt;br&gt;maxWidth: Infinity, &lt;br&gt;minHeight: 0, &lt;br&gt;maxHeight: Infinity &lt;br&gt;} &lt;br&gt;异常值：数值开头的字符串仅解析出数字部分，非数值开头的字符串解析为0；其它异常值时，constraintSize属性恢复到不配置时的默认行为。 &lt;br&gt;单位：vp |
+| value | [ConstraintSizeOptions](../arkts-apis/arkts-arkui-constraintsizeoptions-i.md) | Yes | Constraint size of the component to set. **constraintSize** takes precedence over **width** and **height**. &lt;br&gt; Default value: {minWidth: 0, maxWidth: Infinity, minHeight: 0, maxHeight: Infinity} &lt;br&gt;Exception handling: For strings beginning with numerals, only the numeric part is parsed. Strings not beginning with numerals are parsed as 0. For other invalid values, the **constraintSize** attribute reverts to its default behavior when unconfigured. &lt;br&gt;Unit: vp. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| T | 返回当前组件对象，用于链式调用。 |
+| T | Current component. |
 
 ## contrast
 
@@ -3154,7 +3221,7 @@ constraintSize(value: ConstraintSizeOptions): T
 contrast(value: number): T
 ```
 
-为组件添加对比度效果。不通过该接口设置时，默认无变化。
+Applies a contrast effect to the component. If this API is not used, there will be no change by default.
 
 **Since:** 7
 
@@ -3172,13 +3239,13 @@ contrast(value: number): T
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | number | Yes | 为当前组件添加对比度效果，入参为对比度的值。值为1时，显示原图，大于1时，值越大对比度越高，图像越清晰醒目，小于1时，值越小对比度越低，当对比度为0时，图像变为全灰。&lt;br/&gt;推 荐取值范围：[0, 10)&lt;br/&gt;**说明：**&lt;br/&gt;设置小于0的值时，按值为0处理。 |
+| value | number | Yes | Contrast of the component. The input parameter is a contrast value. If the value is **1**, the source image is displayed. If the value is greater than 1, a larger value indicates a higher contrast and a clearer image. If the value is less than 1, a smaller value indicates a lower contrast is. If the value is **0**, the image becomes all gray.&lt;br&gt;Recommended value range: [0, 10)&lt;br&gt;**NOTE：**&lt;br&gt;A value less than 0 evaluates to the value **0**. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| T | 返回当前组件。 |
+| T | Current component. |
 
 ## contrast
 
@@ -3186,7 +3253,7 @@ contrast(value: number): T
 contrast(contrast: Optional<number>): T
 ```
 
-为组件添加对比度效果。不通过该接口设置时，默认无变化。与[contrast](arkts-arkui-commonmethod-c.md#contrast)相比，contrast参数新增了对undefined类型的支持。
+Applies a contrast effect to the component. If this API is not used, there will be no change by default. Compared to [contrast](arkts-arkui-commonmethod-c.md#contrast), the **contrast** parameter supports the **undefined** type.
 
 **Since:** 18
 
@@ -3200,17 +3267,19 @@ contrast(contrast: Optional<number>): T
 
 <!--Device-CommonMethod-contrast(contrast: Optional<number>): T--><!--Device-CommonMethod-contrast(contrast: Optional<number>): T-End-->
 
+**System capability:** SystemCapability.ArkUI.ArkUI.Full
+
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| contrast | [Optional](../arkts-apis/arkts-arkui-optional-t.md)&lt;number&gt; | Yes | 为当前组件添加对比度效果，入参为对比度的值。值为1时，显示原图，大于1时，值越大对比度越高，图像越清晰醒目，小于1时，值越小对比度越低，当对比度为0时， 图像变为全灰。&lt;br/&gt;推荐取值范围：[0, 10)&lt;br/&gt;**说明：**&lt;br/&gt;设置小于0的值时，按值为0处理。&lt;br/&gt;当contrast的值为undefined时，恢复为对比度为1的效果。 |
+| contrast | [Optional](../arkts-apis/arkts-arkui-optional-t.md)&lt;number&gt; | Yes | Contrast of the component. The input parameter is a contrast value. If the value is **1**, the source image is displayed. If the value is greater than 1, a larger value indicates a higher contrast and a clearer image. If the value is less than 1, a smaller value indicates a lower contrast is. If the value is **0**, the image becomes all gray.&lt;br&gt;Recommended value range: [0, 10)&lt;br&gt;**NOTE：**&lt;br&gt;A value less than 0 evaluates to the value **0**.&lt;br&gt;If **contrast** is **undefined**, the contrast effect is reset to **1.0**. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| T | 返回当前组件。 |
+| T | Current component. |
 
 ## customProperty
 
@@ -3218,11 +3287,12 @@ contrast(contrast: Optional<number>): T
 customProperty(name: string, value: Optional<Object>): T
 ```
 
-设置组件的自定义属性。
+Sets a custom property for this component.
 
-API版本26.0.0之前，[自定义组件](../../../ui/state-management/arkts-create-custom-components.md)不支持设置自定义属性。
+In versions earlier than API 26.0.0,  
+[custom components](../../../ui/state-management/arkts-create-custom-components.md) do not support custom properties.
 
-从API版本26.0.0开始，自定义组件支持设置并读取自定义属性。
+Since API 26.0.0, custom components support setting and reading custom properties.
 
 **Since:** 12
 
@@ -3240,14 +3310,14 @@ API版本26.0.0之前，[自定义组件](../../../ui/state-management/arkts-cre
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| name | string | Yes | 自定义属性的名称。 |
-| value | [Optional](../arkts-apis/arkts-arkui-optional-t.md)&lt;Object&gt; | Yes | 自定义属性的值。 |
+| name | string | Yes | Name of the custom property. |
+| value | [Optional](../arkts-apis/arkts-arkui-optional-t.md)&lt;Object&gt; | Yes | Value of the custom property. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| T | 当前控件 |
+| T | Current component. |
 
 ## defaultFocus
 
@@ -3255,11 +3325,13 @@ API版本26.0.0之前，[自定义组件](../../../ui/state-management/arkts-cre
 defaultFocus(value: boolean): T
 ```
 
-设置当前组件是否为当前[层级页面](../../../ui/arkts-common-events-focus-event.md#基础概念)上的默认焦点。当未设置defaultFocus时，组件默认不为当前层级页面的默认焦点。
+Specifies whether to set this component as the default focus of the current  
+[hierarchical page](../../../ui/arkts-common-events-focus-event.md#basic-concepts). If **defaultFocus** is not set, the component will not receive initial focus on the current page.
 
-> **说明：**
+> **NOTE：**
 > 
-> 可以设置默认焦点的页面指的是支持页面路由或是弹窗类的容器组件，例如Page、NaviDestination、NavBar、PopUp、Dialog等。
+> This setting applies to pages that support routing or modal-type container components, such as **Page**,
+> **NaviDestination**, **NavBar**, **PopUp**, and **Dialog**.
 
 **Since:** 9
 
@@ -3275,13 +3347,13 @@ defaultFocus(value: boolean): T
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | boolean | Yes | 设置当前组件是否为当前[层级页面](../../../ui/arkts-common-events-focus-event.md#基础概念)上的默认焦点，仅在初次创建的 层级页面第一次进入时生效。&lt;br/&gt;**说明：** &lt;br/&gt;值为true则表示为默认焦点，值为false时无效。&lt;br/&gt;若层级页面内无任何组件设置defaultFocus(true)， API version 11及之前，层级页面的默认焦点是当前层级页面上首个可获焦的非容器组件，API version 11之后，层级页面的默认焦点就是层级页面的根容器。&lt;br/&gt; 若某层级页面内有多个组件设置了defaultFocus(true)，则以组件树深度遍历找到的第一个组件为默认焦点。 |
+| value | boolean | Yes | Whether to set the component as the default focus of the current [hierarchical page](../../../ui/arkts-common-events-focus-event.md#basic-concepts). This parameter takes effect only when the hierarchical page is new and accessed for the first time.&lt;br&gt;**NOTE：**&lt;br&gt;The value **true** means to set the component as the default focus, and the value **false** has no effect.&lt;br&gt;If no component on the hierarchical page has **defaultFocus(true)** set:&lt;br&gt;For API version 11 and earlier, the default focus is on the first focusable non-container component.&lt;br&gt;For API version versions later than 11, the default focus is on the hierarchical page's root container.&lt;br&gt;If **defaultFocus(true)** is set for multiple components on the hierarchical page, the first component found in the component tree depth-first traversal is used as the default focus. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| T | 返回当前组件。 |
+| T | Current component. |
 
 ## direction
 
@@ -3289,7 +3361,7 @@ defaultFocus(value: boolean): T
 direction(value: Direction): T
 ```
 
-设置当前组件绘制区域内主轴方向上的布局，支持[attributeModifier](arkts-arkui-commonmethod-c.md#attributemodifier)动态设置属性方法。
+Sets how elements are laid out along the main axis of the container. This attribute supports dynamic configuration via [attributeModifier](arkts-arkui-commonmethod-c.md#attributemodifier).
 
 **Since:** 7
 
@@ -3307,7 +3379,7 @@ direction(value: Direction): T
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | [Direction](../arkts-apis/arkts-arkui-direction-e.md) | Yes | 设置当前组件绘制区域内主轴方向上的布局。&lt;br/&gt;属性配置为auto的时候，按照系统语言方向进行布局。&lt;br/&gt;该属性在Column组件上不生效。&lt;br/&gt;默认值：Direction.Auto &lt;br/&gt;direction取undefined或null时按默认值处理。 |
+| value | [Direction](../arkts-apis/arkts-arkui-direction-e.md) | Yes | How elements are laid out along the main axis of the container. If this parameter is set to **auto**, the layout is subject to the system language. The setting does not take effect in the **Column** component. &lt;br&gt;Default value: **Direction.Auto**. If the **direction** attribute receives an **undefined** or **null** input parameter, the system will apply the default value |
 
 **Return value:**
 
@@ -3321,7 +3393,8 @@ direction(value: Direction): T
 displayPriority(value: number): T
 ```
 
-设置当前组件在布局容器中显示的优先级。
+Sets the display priority for the component in the layout container.&lt;br&gt;This parameter is only effective in [Row](../arkts-apis/arkts-arkui-row-row-f.md/arkts-arkui-row-row-f.md#row), [Column](../arkts-apis/arkts-arkui-column-column-f.md/arkts-arkui-column-column-f.md#column), and  
+[Flex (single-line)](../arkts-apis/arkts-arkui-flex-flex-f.md/arkts-arkui-flex-flex-f.md#flex) container components.
 
 **Since:** 7
 
@@ -3339,7 +3412,7 @@ displayPriority(value: number): T
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | number | Yes | 设置当前组件在布局容器中显示的优先级。&lt;br/&gt;默认值：1&lt;br/&gt;**说明：**&lt;br/&gt;仅在[Row](../arkts-apis/arkts-arkui-row-row-f.md/arkts-arkui-row-row-f.md#row)/[Column](../arkts-apis/arkts-arkui-column-column-f.md/arkts-arkui-column-column-f.md#column)/[Flex(单行)](../arkts-apis/arkts-arkui-flex-flex-f.md/arkts-arkui-flex-flex-f.md#flex)容器组件中生效。&lt;br/&gt; 小数点后的数字不作优先级区分，即区间为[x, x + 1)内的数字视为相同优先级。例如：1.0与1.9为同一优先级。&lt;br/&gt;子组件的displayPriority均不大于1时，优先级没有区别。&lt;br/&gt;当子组件的displayPriority大于1时，displayPriority 数值越大，优先级越高。若父容器空间不足，隐藏低优先级子组件。若某一优先级的子组件被隐藏，则优先级更低的子组件也都被隐藏 &lt;br&gt;取值限定为整数。 |
+| value | number | Yes | Display priority of the component in the layout container. &lt;br&gt;The value range is all integers. Default value: **1**. &lt;br&gt;**NOTE：**&lt;br&gt; The digits after the decimal point are not counted in determining the display priority. That is, numbers in the [x, x + 1) range are considered to represent the same priority. For example, **1.0** and **1.9** represent the same priority. &lt;br&gt;If the **displayPriority** value of all child components is not greater than 1, there is no difference in priority. When the **displayPriority** value of a child component is greater than 1, a larger value indicates higher priority. If the parent container does not have enough space, child components with lower priority are hidden. If child components of a certain priority are hidden, those with an even lower priority are also hidden. &lt;br&gt;The value range is all integers. |
 
 **Return value:**
 
@@ -3353,7 +3426,7 @@ displayPriority(value: number): T
 doubleSided(value: Optional<boolean>): T
 ```
 
-是否绘制组件的双面。
+Sets whether to component is double-sided.
 
 **Since:** 26.0.0
 
@@ -3367,17 +3440,19 @@ doubleSided(value: Optional<boolean>): T
 
 <!--Device-CommonMethod-doubleSided(value: Optional<boolean>): T--><!--Device-CommonMethod-doubleSided(value: Optional<boolean>): T-End-->
 
+**System capability:** SystemCapability.ArkUI.ArkUI.Full
+
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | [Optional](../arkts-apis/arkts-arkui-optional-t.md)&lt;boolean&gt; | Yes | 是否绘制组件的双面。&lt;br/&gt;设置为true表示组件的正面和背面都是可见的。&lt;br/&gt;设置为false表示组件的正面是可见的，旋转时组件的背面是不可见的。&lt; br/&gt;设置为undefined时效果和设置为true时保持一致，默认开启双面绘制。 |
+| value | [Optional](../arkts-apis/arkts-arkui-optional-t.md)&lt;boolean&gt; | Yes | Whether to draw both sides of component. **true**: Both front and back sides are visible (default). **false**: Only to front side is visible, to back side is hidden when rotated. When **value** is **undefined**, the component reverts to default double-sided setting (**true**). |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| T | 返回当前组件。 |
+| T |  |
 
 ## dragPreview
 
@@ -3385,7 +3460,7 @@ doubleSided(value: Optional<boolean>): T
 dragPreview(value: CustomBuilder | DragItemInfo | string): T
 ```
 
-设置组件浮起和拖拽过程中的预览图。
+Sets the preview image displayed during component drag operations.
 
 **Since:** 11
 
@@ -3403,13 +3478,13 @@ dragPreview(value: CustomBuilder | DragItemInfo | string): T
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | [CustomBuilder](arkts-arkui-custombuilder-t.md) \| DragItemInfo \| string | Yes | 设置组件浮起和拖拽过程中的预览图，仅在 [onDragStart](arkts-arkui-commonmethod-c.md#ondragstart)拖拽方式中有效。&lt;br/&gt;当组件支持拖拽并同时设置 [bindContextMenu](arkts-arkui-commonmethod-c.md#bindcontextmenu) 的预览图时，则长按浮起的预览图以 [bindContextMenu](arkts-arkui-commonmethod-c.md#bindcontextmenu) 设置的预览图为准。开发者在[onDragStart](arkts-arkui-commonmethod-c.md#ondragstart)中返回的背板图优先级低于 [dragPreview](arkts-arkui-commonmethod-c.md#dragpreview)设置的预览图，当设置了 [dragPreview](arkts-arkui-commonmethod-c.md#dragpreview)预览图时，拖拽过程中的背板图使用 [dragPreview](arkts-arkui-commonmethod-c.md#dragpreview)预览图。由于 [CustomBuilder](../../../reference/apis-arkui/arkui-ts/ts-types.md#custombuilder8)需要离线渲染之后才能使用，因此存在一定的性能开销和时延， 推荐优先使用 [DragItemInfo](arkts-arkui-dragiteminfo-i.md)中的[PixelMap](../../apis-image-kit/arkts-apis/arkts-image-image-pixelmap-i.md/arkts-image-image-pixelmap-i.md)方式。&lt;br/&gt; 当传入类 型为string的id时，则将id对应组件的截图作为预览图。如果id对应的组件无法查找到，或者id对应的组件[Visibility](../arkts-apis/arkts-arkui-enums-visibility-e.md/arkts-arkui-enums-visibility-e.md)属性设置成None/Hidden，则对组件自身进行截图 作为拖拽预览图。目前截图不含有亮度、阴影、模糊和旋转等视觉效果。<br>**Since:** 12 |
+| value | [CustomBuilder](arkts-arkui-custombuilder-t.md) \| DragItemInfo \| string | Yes | Preview image displayed during component drag operations. It only applies to [onDragStart](arkts-arkui-commonmethod-c.md#ondragstart) drag mode.&lt;br&gt;If the component supports drag and drop and a preview is specified through [bindContextMenu](arkts-arkui-commonmethod-c.md#bindcontextmenu), that specified preview is displayed when the component is dragged. The priority of the background image returned in [onDragStart](arkts-arkui-commonmethod-c.md#ondragstart) is lower than that of the preview set in [dragPreview](arkts-arkui-commonmethod-c.md#dragpreview). This means that, once set, the latter will be used in place of the former. Using [CustomBuilder](../../../reference/apis-arkui/arkui-ts/ts-types.md#custombuilder8) requires offline rendering and may increase performance overhead and latency. In light of this, you are advised to use [PixelMap](../../apis-image-kit/arkts-apis/arkts-image-image-pixelmap-i.md/arkts-image-image-pixelmap-i.md) in [DragItemInfo](arkts-arkui-dragiteminfo-i.md) instead.&lt;br&gt; When an ID of the string type is passed in, the snapshot of the component assigned the ID is used as the preview image. If the component assigned the ID cannot be found or its [Visibility](../arkts-apis/arkts-arkui-enums-visibility-e.md/arkts-arkui-enums-visibility-e.md) attribute is set to **None** or **Hidden**, a snapshot of the current component is used as the preview image. Currently, snapshots do not support visual effects, such as brightness, shadow, blur, and rotation.<br>**Since:** 12 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| T | 返回当前组件。 |
+| T | Current component. |
 
 ## dragPreview
 
@@ -3417,11 +3492,11 @@ dragPreview(value: CustomBuilder | DragItemInfo | string): T
 dragPreview(preview: CustomBuilder | DragItemInfo | string, config?: PreviewConfiguration): T
 ```
 
-自定义组件拖拽过程中的预览图，仅用于设置浮起效果或者禁用浮起效果。
+Sets the drag preview for the component. This API specifically configures or disables the lift animation effect.
 
-> **说明：**
+> **NOTE：**
 > 
-> 该接口不支持在[attributeModifier](arkts-arkui-commonmethod-c.md#attributemodifier)中调用。
+> This API cannot be called within [attributeModifier](arkts-arkui-commonmethod-c.md#attributemodifier).
 
 **Since:** 15
 
@@ -3439,14 +3514,14 @@ dragPreview(preview: CustomBuilder | DragItemInfo | string, config?: PreviewConf
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| preview | [CustomBuilder](arkts-arkui-custombuilder-t.md) \| DragItemInfo \| string | Yes | 设置组件浮起和拖拽过程中的预览图，仅在 [onDragStart](arkts-arkui-commonmethod-c.md#ondragstart)拖拽方式中有效。&lt;br/&gt;当组件支持拖拽并同时设置 [bindContextMenu](arkts-arkui-commonmethod-c.md#bindcontextmenu) 的预览图时，则长按浮起的预览图以 [bindContextMenu](arkts-arkui-commonmethod-c.md#bindcontextmenu) 设置的预览图为准。开发者在[onDragStart](arkts-arkui-commonmethod-c.md#ondragstart)中返回的背板图优先级低于 [dragPreview](arkts-arkui-commonmethod-c.md#dragpreview)设置的预览图，当设置了 [dragPreview](arkts-arkui-commonmethod-c.md#dragpreview)预览图时，拖拽过程中的背板图使用 [dragPreview](arkts-arkui-commonmethod-c.md#dragpreview)预览图。由于 [CustomBuilder](arkts-arkui-custombuilder-t.md)需要离线渲染之后才能使用，因此存在一定的性能开销和时延， 推荐优先使用 [DragItemInfo](arkts-arkui-dragiteminfo-i.md)中的[PixelMap](../../apis-image-kit/arkts-apis/arkts-image-image-pixelmap-i.md/arkts-image-image-pixelmap-i.md)方式。&lt;br/&gt; 当传入类 型为string的id时，则将id对应组件的截图作为预览图。如果id对应的组件无法查找到，或者id对应的组件[Visibility](../arkts-apis/arkts-arkui-enums-visibility-e.md/arkts-arkui-enums-visibility-e.md)属性设置成None/Hidden，则对组件自身进行截图 作为拖拽预览图。目前截图不含有亮度、阴影、模糊和旋转等视觉效果。 |
-| config | [PreviewConfiguration](../arkts-apis/arkts-arkui-common-previewconfiguration-i.md) | No | 对自定义拖拽过程中的预览图进行配置。&lt;br/&gt;只对 [dragPreview](arkts-arkui-commonmethod-c.md#dragpreview)中的预览生效。 |
+| preview | [CustomBuilder](arkts-arkui-custombuilder-t.md) \| DragItemInfo \| string | Yes | Preview image displayed during component drag operations. It only applies to [onDragStart](arkts-arkui-commonmethod-c.md#ondragstart) drag mode.&lt;br&gt;If the component supports drag and drop and a preview is specified through [bindContextMenu](arkts-arkui-commonmethod-c.md#bindcontextmenu), that specified preview is displayed when the component is dragged. The priority of the background image returned in [onDragStart](arkts-arkui-commonmethod-c.md#ondragstart) is lower than that of the preview set in [dragPreview](arkts-arkui-commonmethod-c.md#dragpreview). This means that, once set, the latter will be used in place of the former. Using [CustomBuilder](../../../reference/apis-arkui/arkui-ts/ts-types.md#custombuilder8) requires offline rendering and may increase performance overhead and latency. In light of this, you are advised to use [PixelMap](../../apis-image-kit/arkts-apis/arkts-image-image-pixelmap-i.md/arkts-image-image-pixelmap-i.md) in [DragItemInfo](arkts-arkui-dragiteminfo-i.md) instead.&lt;br&gt; When an ID of the string type is passed in, the snapshot of the component assigned the ID is used as the preview image. If the component assigned the ID cannot be found or its [Visibility](../arkts-apis/arkts-arkui-enums-visibility-e.md/arkts-arkui-enums-visibility-e.md) attribute is set to **None** or **Hidden**, a snapshot of the current component is used as the preview image. Currently, snapshots do not support visual effects, such as brightness, shadow, blur, and rotation. |
+| config | [PreviewConfiguration](../arkts-apis/arkts-arkui-common-previewconfiguration-i.md) | No | Additional settings for the drag preview.&lt;br&gt;This parameter is effective only for previews set using [dragPreview](arkts-arkui-commonmethod-c.md#dragpreview). |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| T | 返回当前组件。 |
+| T | Current component. |
 
 ## dragPreviewOptions
 
@@ -3454,11 +3529,12 @@ dragPreview(preview: CustomBuilder | DragItemInfo | string, config?: PreviewConf
 dragPreviewOptions(value: DragPreviewOptions, options?: DragInteractionOptions): T
 ```
 
-设置拖拽过程中预览图处理模式，数量角标的显示以及预览图浮起的交互模式。不支持onItemDragStart拖拽方式。
+Sets the preview image processing mode, badge count, and interaction behavior during drag operations. The  
+**onItemDragStart** drag mode is not supported.
 
-> **说明：**
+> **NOTE：**
 > 
-> 从API version 20开始，该接口支持在[attributeModifier](arkts-arkui-commonmethod-c.md#attributemodifier)中调用。
+> This API can be called within [attributeModifier](arkts-arkui-commonmethod-c.md#attributemodifier) since API version 20.
 
 **Since:** 11
 
@@ -3476,14 +3552,14 @@ dragPreviewOptions(value: DragPreviewOptions, options?: DragInteractionOptions):
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | [DragPreviewOptions](arkts-arkui-dragpreviewoptions-i.md) | Yes | 设置拖拽过程中预览图处理模式及数量角标的显示。 |
-| options | [DragInteractionOptions](arkts-arkui-draginteractionoptions-i.md) | No | 设置拖拽过程中预览图浮起的交互模式。&lt;br/&gt;默认值：空<br>**Since:** 12 |
+| value | [DragPreviewOptions](arkts-arkui-dragpreviewoptions-i.md) | Yes | Preview image processing mode and badge count during dragging. |
+| options | [DragInteractionOptions](arkts-arkui-draginteractionoptions-i.md) | No | Interaction behavior for the floating preview image.&lt;br&gt;Default value: empty<br>**Since:** 12 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| T | 返回当前组件。 |
+| T | Current component. |
 
 ## draggable
 
@@ -3491,7 +3567,7 @@ dragPreviewOptions(value: DragPreviewOptions, options?: DragInteractionOptions):
 draggable(value: boolean): T
 ```
 
-设置该组件是否允许拖拽。默认情况下，组件不允许拖拽。
+Sets whether the component is draggable. By default, the component is not draggable.
 
 **Since:** 10
 
@@ -3509,13 +3585,13 @@ draggable(value: boolean): T
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | boolean | Yes | 设置该组件是否允许进行拖拽。true表示允许拖拽，false表示不允许拖拽。 |
+| value | boolean | Yes | Whether the component is draggable. &lt;br&gt;**true**: The component is draggable.&lt;br&gt; **false**: The component is not draggable. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| T | 返回当前组件。 |
+| T | Current component. |
 
 ## drawModifier
 
@@ -3541,7 +3617,7 @@ Sets the drawModifier of the current component.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| modifier | [DrawModifier](arkts-arkui-drawmodifier-c.md) \| undefined | Yes | drawModifier used to draw, or undefined if it is not available. |
+| modifier | [DrawModifier](arkts-arkui-drawmodifier-c.md) \| undefined | Yes | drawModifier used to draw, or undefined if it is not available. Default value: undefined A custom modifier applies only to the FrameNode of the currently bound component, not to its subnodes. |
 
 **Return value:**
 
@@ -3555,7 +3631,7 @@ Sets the drawModifier of the current component.
 enableClickSoundEffect(enabled: boolean | undefined): T
 ```
 
-设置组件是否启用默认点击音效。是否能够发音依赖设备声音相关的设置，如静音模式下不会播放音效。
+Sets whether to enable the default click sound effect for a component. Whether the sound can be played depends on the sound settings of the device. For example, the sound effect is not played in mute mode.
 
 **Since:** 24
 
@@ -3573,13 +3649,13 @@ enableClickSoundEffect(enabled: boolean | undefined): T
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| enabled | boolean \| undefined | Yes | 设置此组件是否启用默认点击音效。 true表示启用默认点击音效；false表示禁用默认点击音效。值为undefined时，启用默认点击音效。 |
+| enabled | boolean \| undefined | Yes | Whether to enable the default click sound effect for a component.&lt;br&gt;The value **true** indicates that the default click sound effect is enabled, and **false** indicates the opposite. &lt;br&gt;If the value is **undefined**, the default click sound effect is enabled. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| T | 返回当前组件。 |
+| T | Current component. |
 
 ## enabled
 
@@ -3587,7 +3663,7 @@ enableClickSoundEffect(enabled: boolean | undefined): T
 enabled(value: boolean): T
 ```
 
-设置组件是否可交互。当未设置enabled时，组件默认可交互。
+Sets whether the component responds to user interactions. If **enabled** is not set, the component responds to user interactions by default.
 
 **Since:** 7
 
@@ -3605,13 +3681,13 @@ enabled(value: boolean): T
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | boolean | Yes | 值为true表示组件可交互，响应点击等操作。&lt;br/&gt;值为false表示组件不可交互，不响应点击等操作。 |
+| value | boolean | Yes | Whether the component responds to user interactions, including clicks and touches. The value **true** means that the component responds to user interactions, and **false** means the opposite. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| T | 返回当前组件。 |
+| T | Current component. |
 
 ## expandSafeArea
 
@@ -3619,36 +3695,56 @@ enabled(value: boolean): T
 expandSafeArea(types?: Array<SafeAreaType>, edges?: Array<SafeAreaEdge>): T
 ```
 
-控制组件扩展其安全区域。
+Expands the safe area.
 
-> **说明：**
+> **NOTE：**
 > 
-> - 设置expandSafeArea属性进行组件绘制扩展时，建议组件尺寸不要设置固定宽高（百分比除外），当设置固定宽高（包括设置'auto'）时，扩展安全区域的方向只支持[SafeAreaEdge.TOP,
-SafeAreaEdge.START]，扩展后的组件尺寸保持不变。  
+> - When using **expandSafeArea** to expand the drawing of a component, avoid setting fixed width and height values
+> (except percentages). If fixed width and height values are set (including **'auto'**), the edges for expanding
+the  
+> safe area can only be **[SafeAreaEdge.TOP, SafeAreaEdge.START]**, and the size of the component remains unchanged
+> after safe area expansion.
 > 
-> - 安全区域不会限制内部组件的布局和大小，不会裁剪内部组件。
+> - The safe area does not restrict the layout or size of components inside, nor does it clip the components.
 > 
-> - 当父容器为滚动容器时，组件设置expandSafeArea属性后，自身不会延伸，但仍可触发其子节点中设置了expandSafeArea的延伸范围更新。
+> - If the parent container is a scrollable container, the component does not extend after the **expandSafeArea**
+> attribute is set, but it can still trigger updates to the extension range of its child nodes that have
+> **expandSafeArea** set.
 > 
-> - 设置expandSafeArea()时，不传参，走默认值处理；设置expandSafeArea([],[])时，相当于入参是空数组，此时expandSafeArea属性设置无效。
+> - When **expandSafeArea()** is set without parameters, default values are applied. When **expandSafeArea([],[])**
+> is used with empty arrays, the setting has no effect.
 > 
-> - 组件设置expandSafeArea生效的条件为：
-> 1.type为SafeAreaType.KEYBOARD时默认生效，表现为组件不避让键盘。&lt;br/&gt;
-> 2.设置其他type，组件的边界与安全区域重合时组件能够延伸到安全区域下。例如：设备顶部状态栏高度100，那么组件在屏幕中的绝对位置需要为0 &lt;= y <= 100。
+> - Prerequisites for the **expandSafeArea** attribute to take effect:
+> 1. When **type** is set to **SafeAreaType.KEYBOARD**, the settings take effect by default. This behaves as the
+> component not avoiding the virtual keyboard.
+> 2. When **type** is set to any other value, the settings take effect only if its boundaries overlap with the
+> safe area. For example, if the height of the status bar is 100, the absolute position of the component on
+the  
+> screen must be 0 &lt;= y <= 100 for the settings to take effect.
 > 
-&gt;&lt;= 100。
+&gt;&lt;= 100 for the settings to take effect.
 &gt; 
-> - 组件延伸到避让区时，在避让区的事件如点击事件等可能会被系统拦截，优先给状态栏等系统组件响应。
+> - When a component extends into a non-safe area, events in the non-safe area (such as click events) may be
+> intercepted by the system. Built-in components like the status bar will be given priority to respond to these
+> events.
 > 
-> -
-滚动类容器内的组件不建议设置expandSafeArea属性，如果设置，需要按照组件嵌套关系，将当前节点到滚动类祖先容器间所有直接节点设置expandSafeArea属性，否则expandSafeArea属性在滚动后可能会失效，写法参考[示例7](#示例7滚动类容器扩展安全区)。  
+> - Avoid setting the **expandSafeArea** attribute for components within scrollable containers. If you do set it,
+> you must apply the **expandSafeArea** attribute to all direct nodes from the current node to the scrollable
+> ancestor container, following the component nesting relationship. Otherwise, the **expandSafeArea** attribute may
+> become ineffective after scrolling.
 > 
-> - expandSafeArea属性仅作用于当前组件，不会向父组件或子组件传递，因此使用过程中，所有相关组件均需配置。
+> - The **expandSafeArea** attribute only affects the current component and does not propagate to parent or child
+> components. Therefore, all relevant components must be configured individually.
 > 
-> -
-同时设置expandSafeArea和position属性时，position属性会优先生效，expandSafeArea属性会后生效。对于未设置position、offset等绘制属性的组件，如果其边界未与避让区重叠，设置exp andSafeArea属性将不生效，如弹窗和半模态组件。  
+> - When both **expandSafeArea** and **position** attributes are set, the **position** attribute takes effect
+first,  
+> followed by the **expandSafeArea** attribute. For components that do not have **position**, **offset**, or other
+> rendering attributes set, such as dialog boxes and sheets, the **expandSafeArea** attribute will not take effect
+if  
+> their boundaries do not overlap with the non-safe area.
 > 
-> - 对于expandSafeArea属性无法生效的场景，若要将组件部署在避让区，需要手动调整组件的坐标。
+> - In scenarios where the **expandSafeArea** attribute is ineffective, and you need to place a component in the
+> safe area, you will need to manually adjust the component's coordinates.
 
 **Since:** 10
 
@@ -3666,8 +3762,8 @@ SafeAreaEdge.START]，扩展后的组件尺寸保持不变。
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| types | Array&lt;SafeAreaType&gt; | No | 配置扩展安全区域的类型。未添加Metadata配置项时，页面不避让挖孔，CUTOUT类型不生效。 &lt;br&gt;默认值： [SafeAreaType.SYSTEM, SafeAreaType.CUTOUT, SafeAreaType.KEYBOARD]。 &lt;br&gt;非法值：按默认值处理。 |
-| edges | Array&lt;SafeAreaEdge&gt; | No | 配置扩展安全区域的边缘。 &lt;br&gt;默认值： [SafeAreaEdge.TOP, SafeAreaEdge.BOTTOM, SafeAreaEdge.START, SafeAreaEdge.END]。 &lt;br&gt;非法值：按默认值处理。扩展至所有避让区域。 |
+| types | Array&lt;SafeAreaType&gt; | No | Types of non-safe areas to extend into. For the CUTOUT type to take effect, the Metadata item must be added to the configuration file. &lt;br&gt;Default value: [SafeAreaType.SYSTEM, SafeAreaType.CUTOUT, SafeAreaType.KEYBOARD]. &lt;br&gt;Invalid values are treated as the default value. |
+| edges | Array&lt;SafeAreaEdge&gt; | No | Edges for expanding the safe area. &lt;br&gt;Default value: [SafeAreaEdge.TOP, SafeAreaEdge.BOTTOM, SafeAreaEdge.START, SafeAreaEdge.END]. &lt;br&gt;Invalid values are treated as the default value. The default value means to extend to all non-safe areas. |
 
 **Return value:**
 
@@ -3681,7 +3777,7 @@ SafeAreaEdge.START]，扩展后的组件尺寸保持不变。
 flexBasis(value: number | string): T
 ```
 
-设置组件的基准尺寸。
+Sets the base size of the component.
 
 **Since:** 7
 
@@ -3699,7 +3795,7 @@ flexBasis(value: number | string): T
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | number \| string | Yes | 设置组件在父容器主轴方向上的基准尺寸。&lt;br/&gt;默认值：'auto'（表示组件在主轴方向上的基准尺寸为组件原本的大小）。&lt;br/&gt;string类型可选值：可以转化为数字的字符串（如'10'）或带长度单位的字符串（如'10px'）或 'auto'，不允许设置百分比字符串。&lt;br/&gt;number：取值范围(0,+∞)，单位为vp。&lt;br/&gt;异常值：默认为'auto'。 |
+| value | number \| string | Yes | Base size of the component in the main axis of the parent container (indicating that the base size of the component in the main axis is the original size of the component). Default value: **'auto'**. &lt;br&gt;For the string type, the value must be a string that can be converted into a number (for example,**'10'**), a string that includes a length unit (for example, **'10px'**), or the literal string **'auto'**; percentage-based strings are not supported. &lt;br&gt;For the number type, the value range is (0, +∞), and the unit is vp. &lt;br&gt;Invalid values are treated as the default value **'auto' |
 
 **Return value:**
 
@@ -3713,7 +3809,7 @@ flexBasis(value: number | string): T
 flexGrow(value: number): T
 ```
 
-设置组件在父容器的剩余空间所占比例。
+Sets the percentage of the parent container's remaining space that is allocated to the component.
 
 **Since:** 7
 
@@ -3731,7 +3827,7 @@ flexGrow(value: number): T
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | number | Yes | 设置父容器在主轴方向上的剩余空间分配给此属性所在组件的比例。&lt;br/&gt;取值范围：[0, +∞)&lt;br/&gt;默认值：0&lt;br/&gt;设置异常值时，该属性为默认值。 &lt;br&gt;取值应为≥0的整数。 |
+| value | number | Yes | Percentage of the parent container's remaining space that is allocated to the component. &lt;br&gt;The value must be greater than or equal to 0, &lt;br&gt;. Default value: **0**. &lt;br&gt;If this parameter is set to an invalid value, the default value will be used. |
 
 **Return value:**
 
@@ -3745,9 +3841,11 @@ flexGrow(value: number): T
 flexShrink(value: number): T
 ```
 
-设置父容器压缩尺寸分配给此属性所在组件的比例。当父容器为Column、Row时，需设置主轴方向的尺寸。
+Sets the percentage of the parent container's shrink size that is allocated to the component.When the parent container is [Column](../arkts-apis/arkts-arkui-column-column-f.md/arkts-arkui-column-column-f.md#column) or [Row](../arkts-apis/arkts-arkui-row-row-f.md/arkts-arkui-row-row-f.md#row), you must set the size along the main axis.
 
-使用[getInspectorByKey](ts-universal-attributes-component-id.md#getinspectorbykey9)获取flexShrink属性时，如果该节点未设置flexShrink属性，默认返回1。
+When  
+[getInspectorByKey](../../../reference/apis-arkui/arkui-ts/ts-universal-attributes-component-id.md#getinspectorbykey9)is used to obtain the **flexShrink** attribute, if the node does not have **flexShrink** set, the default value of  
+**1** is returned by default.
 
 **Since:** 7
 
@@ -3765,7 +3863,7 @@ flexShrink(value: number): T
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | number | Yes | 设置父容器压缩尺寸分配给此属性所在组件的比例。 &lt;br&gt;取值限定为整数，父容器为 [Column](../arkts-apis/arkts-arkui-column-column-f.md/arkts-arkui-column-column-f.md#column) 、[Row](../arkts-apis/arkts-arkui-row-row-f.md/arkts-arkui-row-row-f.md#row)时， 取值范围[0,+∞). &lt;br/&gt; 父容器为[Flex](../arkts-apis/arkts-arkui-flex-flex-f.md/arkts-arkui-flex-flex-f.md#flex)时，默认值：1 &lt;br/&gt;[constraintSize](arkts-arkui-commonmethod-c.md#constraintsize)限制组件的尺寸范围. Column和Row即使设置了constraintSize，在未设置主轴尺寸width/height/size时仍遵守默认布局行为，在主轴上自适应子组件尺寸，此时flexShrink不生效.&lt;br/&gt;设置异常值时，该属性为 默认值。 |
+| value | number | Yes | Percentage of the parent container's shrink size that is allocated to the component &lt;br&gt;The value range is all integers, If the parent container is [Column](../arkts-apis/arkts-arkui-column-column-f.md/arkts-arkui-column-column-f.md#column) or [Row](../arkts-apis/arkts-arkui-row-row-f.md/arkts-arkui-row-row-f.md#row), the default value is **0**, and the value range is (0, +∞). If the parent container is [Flex](../arkts-apis/arkts-arkui-flex-flex-f.md/arkts-arkui-flex-flex-f.md#flex), the default value is **1**. &lt;br&gt;[constraintSize](arkts-arkui-commonmethod-c.md#constraintsize) limits the component's size range. For Column and Row components without explicit main axis size specified (through width, height, or size), the default layout behavior (adapt-to-fit child components) applies, even when constraintSize is configured. In this case, **flexShrink** has no effect. &lt;br&gt;If this parameter is set to an invalid value, the default value will be used. |
 
 **Return value:**
 
@@ -3779,7 +3877,7 @@ flexShrink(value: number): T
 focusBox(style: FocusBoxStyle): T
 ```
 
-设置当前组件系统焦点框样式。
+Sets the system focus box style for the component.
 
 **Since:** 12
 
@@ -3797,13 +3895,13 @@ focusBox(style: FocusBoxStyle): T
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| style | [FocusBoxStyle](../arkts-apis/arkts-arkui-focusboxstyle-i.md) | Yes | 设置当前组件系统焦点框样式。&lt;br/&gt;**说明：** &lt;br/&gt;仅影响走焦状态下展示了系统焦点框的组件。 |
+| style | [FocusBoxStyle](../arkts-apis/arkts-arkui-focusboxstyle-i.md) | Yes | System focus box style for the component.&lt;br&gt;**NOTE：**&lt;br&gt;This style affects only the components that display the system focus box during focus traversal. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| T | 返回当前组件。 |
+| T | Current component. |
 
 ## focusOnTouch
 
@@ -3811,7 +3909,7 @@ focusBox(style: FocusBoxStyle): T
 focusOnTouch(value: boolean): T
 ```
 
-设置当前组件是否支持点击获焦能力。当组件未设置focusOnTouch时，组件默认不支持点击获焦能力。
+Sets whether the component is focusable on touch. If **focusOnTouch** is not set, the component is not focusable on touch by default.
 
 **Since:** 9
 
@@ -3827,13 +3925,13 @@ focusOnTouch(value: boolean): T
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | boolean | Yes | 设置当前组件是否支持点击获焦能力。true表示组件支持点击获焦，false表示不支持点击获焦。&lt;br/&gt;**说明：** &lt;br/&gt;仅在组件可点击时才能正常获取焦点。 |
+| value | boolean | Yes | Whether the component is focusable on touch. &lt;br&gt;**true**: The component is focusable on touch.&lt;br&gt;**false**: The component is not focusable on touch.&lt;br&gt;**NOTE：**&lt;br&gt;This setting requires the component to be touchable. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| T | 返回当前组件。 |
+| T | Current component. |
 
 ## focusScopeId
 
@@ -3841,7 +3939,7 @@ focusOnTouch(value: boolean): T
 focusScopeId(id: string, isGroup?: boolean): T
 ```
 
-设置当前容器组件的id标识，以及是否为焦点组。
+Set container as a focus group with a specific identifier.
 
 **Since:** 12
 
@@ -3853,18 +3951,20 @@ focusScopeId(id: string, isGroup?: boolean): T
 
 <!--Device-CommonMethod-focusScopeId(id: string, isGroup?: boolean): T--><!--Device-CommonMethod-focusScopeId(id: string, isGroup?: boolean): T-End-->
 
+**System capability:** SystemCapability.ArkUI.ArkUI.Full
+
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| id | string | Yes | 设置当前容器组件的id标识。&lt;br/&gt;**说明：** &lt;br/&gt;单个 [层级页面](../../../ui/arkts-common-events-focus-event.md#基础概念)下，id标识全局唯一，不可重复。 |
-| isGroup | boolean | No | 设置当前容器组件是否为焦点组。true表示容器组件为焦点组，false表示容器组件不是焦点组。默认值为false。&lt;br/&gt;**说明：** &lt;br/&gt;焦点组不可嵌套，不 可重复配置。&lt;br/&gt; 焦点组不能和tabIndex混用。&lt;br/&gt;配置焦点组的目的是使得容器及容器内的元素可以按照焦点组规则走焦。焦点组走焦规则：&lt;br/&gt;1.焦点组容器内只能通过方向键走焦，tab键会使焦点跳出焦点组容 器。&lt;br/&gt;2.通过方向键使焦点从焦点组容器外切换到焦点组容器内时，若焦点组容器内存在优先级为PREVIOUS的组件，则优先级为PREVIOUS的组件获焦，否则，由焦点组容器内上次获焦的组件获焦。 |
+| id | string | Yes | focus scope identifier. |
+| isGroup | boolean | No | whether this scope is a focus group, the default value is false |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| T | 返回当前组件。 |
+| T |  |
 
 ## focusScopeId
 
@@ -3872,7 +3972,7 @@ focusScopeId(id: string, isGroup?: boolean): T
 focusScopeId(id: string, isGroup?: boolean, arrowStepOut?: boolean): T
 ```
 
-设置当前容器组件的id标识，以及是否为焦点组。新增参数arrowStepOut，用于设置能否使用方向键走焦出当前焦点组。
+Set container as a focus group with a specific identifier.
 
 **Since:** 14
 
@@ -3884,19 +3984,21 @@ focusScopeId(id: string, isGroup?: boolean, arrowStepOut?: boolean): T
 
 <!--Device-CommonMethod-focusScopeId(id: string, isGroup?: boolean, arrowStepOut?: boolean): T--><!--Device-CommonMethod-focusScopeId(id: string, isGroup?: boolean, arrowStepOut?: boolean): T-End-->
 
+**System capability:** SystemCapability.ArkUI.ArkUI.Full
+
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| id | string | Yes | 设置当前容器组件的id标识。&lt;br/&gt;**说明：** &lt;br/&gt;单个 [层级页面](../../../ui/arkts-common-events-focus-event.md#基础概念)下，id标识全局唯一，不可重复。 |
-| isGroup | boolean | No | 设置当前容器组件是否为焦点组。true表示容器组件为焦点组，false表示容器组件不是焦点组。默认值为false。&lt;br/&gt;**说明：** &lt;br/&gt;焦点组不可嵌套，不 可重复配置。&lt;br/&gt; 焦点组不能和tabIndex混用。&lt;br/&gt;配置焦点组的目的是使得容器及容器内的元素可以按照焦点组规则走焦。焦点组走焦规则：&lt;br/&gt;1.焦点组容器内只能通过方向键走焦，tab键会使焦点跳出焦点组容 器。&lt;br/&gt;2.通过方向键使焦点从焦点组容器外切换到焦点组容器内时，若焦点组容器内存在优先级为PREVIOUS的组件，则优先级为PREVIOUS的组件获焦，否则，由焦点组容器内上次获焦的组件获焦。 |
-| arrowStepOut | boolean | No | 设置能否使用方向键走焦出当前焦点组。true表示可以使用方向键走焦出当前焦点组，false表示不能使用方向键走焦出当前焦点组。默认值为true。 |
+| id | string | Yes | focus scope identifier. |
+| isGroup | boolean | No | whether this scope is a focus group, the default value is false. |
+| arrowStepOut | boolean | No | whether the arrow keys can move focus from inside the focus group to outside, only effective when isGroup is true, the default value is true. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| T | 返回当前组件。 |
+| T |  |
 
 ## focusScopePriority
 
@@ -3904,7 +4006,7 @@ focusScopeId(id: string, isGroup?: boolean, arrowStepOut?: boolean): T
 focusScopePriority(scopeId: string, priority?: FocusPriority): T
 ```
 
-设置当前组件在指定容器内获焦的优先级。需要配合[focusScopeId](arkts-arkui-commonmethod-c.md#focusscopeid)一起使用。
+Set the focus priority of component in a specific focus scope.
 
 **Since:** 12
 
@@ -3916,18 +4018,20 @@ focusScopePriority(scopeId: string, priority?: FocusPriority): T
 
 <!--Device-CommonMethod-focusScopePriority(scopeId: string, priority?: FocusPriority): T--><!--Device-CommonMethod-focusScopePriority(scopeId: string, priority?: FocusPriority): T-End-->
 
+**System capability:** SystemCapability.ArkUI.ArkUI.Full
+
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | scopeId | string | Yes |  |
-| priority | [FocusPriority](../arkts-apis/arkts-arkui-focuspriority-e.md) | No | 获焦优先级。&lt;br/&gt;**说明：** &lt;br/&gt;未设置priority时，默认为AUTO优先级。&lt;br/&gt;优先级对走焦以及获焦组件的影响：&lt;br/&gt;1.容 器整体获焦（[层级页面](../../../ui/arkts-common-events-focus-event.md#基础概念)切换/焦点切换到焦点组/容器组件使用requestFocus申请焦点）时，若容器内存在优先 级为PREVIOUS的组件，则优先级为PREVIOUS的组件获焦，否则，由容器内上次获焦的组件获焦。&lt;br/&gt;2.容器非整体获焦（非焦点组场景下使用tab键/方向键走焦）时，若容器为首次获焦，则容器内优先级最高的组件获焦， 若容器非首次获焦，不考虑优先级按照位置顺序走焦。 |
+| priority | [FocusPriority](../arkts-apis/arkts-arkui-focuspriority-e.md) | No | the default value is AUTO |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| T | 返回当前组件。 |
+| T |  |
 
 ## focusable
 
@@ -3935,7 +4039,7 @@ focusScopePriority(scopeId: string, priority?: FocusPriority): T
 focusable(value: boolean): T
 ```
 
-设置当前组件是否可以获焦。
+Sets whether the component is focusable.
 
 **Since:** 8
 
@@ -3951,13 +4055,13 @@ focusable(value: boolean): T
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | boolean | Yes | 设置当前组件是否可以获焦，true表示组件可以获焦，false表示组件不可获焦。&lt;br/&gt;**说明：**&lt;br/&gt;存在默认交互逻辑的组件例如 [Button](../../apis-input-kit/arkts-apis/arkts-input-multimodalinput-mouseevent-button-e.md/arkts-input-multimodalinput-mouseevent-button-e.md)、[TextInput](text_input)等，默认即为可获焦，[Text](../../apis-arkgraphics2d/arkts-apis/arkts-graphics-text.md/arkts-graphics-text.md)、[Image](../../apis-image-kit/arkts-apis/arkts-multimedia-image.md/arkts-multimedia-image.md)等组件则默认状态为不 可获焦。不可获焦状态下，无法触发[焦点事件](../../apis-ability-kit/arkts-apis/arkts-app-ability-common.md/arkts-app-ability-common.md)。 |
+| value | boolean | Yes | Whether the component is focusable.&lt;br&gt;**true**: The component is focusable.&lt;br&gt; **false**: The component is not focusable.&lt;br&gt;**NOTE：**&lt;br&gt;Components that have default interaction logic, such as [Button](../../apis-input-kit/arkts-apis/arkts-input-multimodalinput-mouseevent-button-e.md/arkts-input-multimodalinput-mouseevent-button-e.md) and [TextInput](text_input), are focusable by default. Other components, such as [Text](../../apis-arkgraphics2d/arkts-apis/arkts-graphics-text.md/arkts-graphics-text.md) and [Image](../../apis-image-kit/arkts-apis/arkts-multimedia-image.md/arkts-multimedia-image.md), are not focusable by default. Only focusable components can trigger a [focus event](../../apis-ability-kit/arkts-apis/arkts-app-ability-common.md/arkts-app-ability-common.md). |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| T | 返回当前组件。 |
+| T | Current component. |
 
 ## foregroundBlurStyle
 
@@ -3965,11 +4069,11 @@ focusable(value: boolean): T
 foregroundBlurStyle(value: BlurStyle, options?: ForegroundBlurStyleOptions): T
 ```
 
-为当前组件提供内容模糊能力。
+Applies a foreground blur style to the component.
 
-> **说明：**
+> **NOTE：**
 > 
-> 从API version 18开始，该接口支持在[attributeModifier](arkts-arkui-commonmethod-c.md#attributemodifier)中调用。
+> This API can be called within [attributeModifier](arkts-arkui-commonmethod-c.md#attributemodifier) since API version 18.
 
 **Since:** 10
 
@@ -3987,8 +4091,8 @@ foregroundBlurStyle(value: BlurStyle, options?: ForegroundBlurStyleOptions): T
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | [BlurStyle](arkts-arkui-blurstyle-e.md) | Yes | 内容模糊样式。 |
-| options | [ForegroundBlurStyleOptions](../arkts-apis/arkts-arkui-common-foregroundblurstyleoptions-i.md) | No | 内容模糊选项。默认值请参考 [ForegroundBlurStyleOptions](../../../reference/apis-arkui/arkui-ts/ts-universal-attributes-foreground-blur-style.md#foregroundblurstyleoptions)。 |
+| value | [BlurStyle](arkts-arkui-blurstyle-e.md) | Yes | Settings of the foreground blur style. |
+| options | [ForegroundBlurStyleOptions](../arkts-apis/arkts-arkui-common-foregroundblurstyleoptions-i.md) | No | Defines the foreground blur options. For details about the default value, see [ForegroundBlurStyleOptions](arkts-arkui-foregroundblurstyleoptions-i.md). |
 
 **Return value:**
 
@@ -4002,8 +4106,8 @@ foregroundBlurStyle(value: BlurStyle, options?: ForegroundBlurStyleOptions): T
 foregroundBlurStyle(style: Optional<BlurStyle>, options?: ForegroundBlurStyleOptions): T
 ```
 
-为当前组件提供内容模糊能力。与  
-[foregroundBlurStyle](arkts-arkui-commonmethod-c.md#foregroundblurstyle)相比，style参数新增了对undefined类型的支持。
+Applies a foreground blur style to the component. Compared to   
+[foregroundBlurStyle](arkts-arkui-commonmethod-c.md#foregroundblurstyle),the **style** parameter supports the **undefined** type.
 
 **Since:** 18
 
@@ -4015,18 +4119,20 @@ foregroundBlurStyle(style: Optional<BlurStyle>, options?: ForegroundBlurStyleOpt
 
 <!--Device-CommonMethod-foregroundBlurStyle(style: Optional<BlurStyle>, options?: ForegroundBlurStyleOptions): T--><!--Device-CommonMethod-foregroundBlurStyle(style: Optional<BlurStyle>, options?: ForegroundBlurStyleOptions): T-End-->
 
+**System capability:** SystemCapability.ArkUI.ArkUI.Full
+
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| style | [Optional](../arkts-apis/arkts-arkui-optional-t.md)&lt;BlurStyle&gt; | Yes |  |
-| options | [ForegroundBlurStyleOptions](../arkts-apis/arkts-arkui-common-foregroundblurstyleoptions-i.md) | No |  |
+| style | [Optional](../arkts-apis/arkts-arkui-optional-t.md)&lt;BlurStyle&gt; | Yes | Settings of the foreground blur style.&lt;br&gt;If **style** is set to **undefined**, no blur is applied. |
+| options | [ForegroundBlurStyleOptions](../arkts-apis/arkts-arkui-common-foregroundblurstyleoptions-i.md) | No | Defines the foreground blur options. For details about the default value, see [ForegroundBlurStyleOptions](arkts-arkui-foregroundblurstyleoptions-i.md). |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| T | 返回当前组件。 |
+| T | Current component. |
 
 ## foregroundBlurStyle
 
@@ -4034,14 +4140,7 @@ foregroundBlurStyle(style: Optional<BlurStyle>, options?: ForegroundBlurStyleOpt
 foregroundBlurStyle(style: Optional<BlurStyle>, options?: ForegroundBlurStyleOptions, sysOptions?: SystemAdaptiveOptions): T
 ```
 
-为当前组件提供内容模糊能力。与  
-[foregroundBlurStyle&lt;sup&gt;18+&lt;/sup&gt;](arkts-arkui-commonmethod-c.md#foregroundblurstyle)相比，新增了sysOptions参数，即支持系统自适应调节参数。
-
-> **说明：**
-> 
-> foregroundBlurStyle接口为实时模糊接口，每帧执行实时渲染，性能负载较大。当模糊内容与模糊半径均无需变动时，推荐采用静态模糊接口
-> [blur](../../apis-arkgraphics2d/arkts-apis/arkts-arkgraphics2d-effectkit-filter-i.md/arkts-arkgraphics2d-effectkit-filter-i.md#blur)。最佳实践请参考：
-> [图像模糊动效优化-使用场景](https://developer.huawei.com/consumer/cn/doc/best-practices/bpta-fuzzy-scene-performance-optimization#section4945532519)。
+Foreground blur style.blurStyle:Blur style type.sysOptions: system adaptive options.
 
 **Since:** 19
 
@@ -4052,6 +4151,8 @@ foregroundBlurStyle(style: Optional<BlurStyle>, options?: ForegroundBlurStyleOpt
 **Atomic service API:** This API can be used in atomic services since API version 19.
 
 <!--Device-CommonMethod-foregroundBlurStyle(style: Optional<BlurStyle>, options?: ForegroundBlurStyleOptions, sysOptions?: SystemAdaptiveOptions): T--><!--Device-CommonMethod-foregroundBlurStyle(style: Optional<BlurStyle>, options?: ForegroundBlurStyleOptions, sysOptions?: SystemAdaptiveOptions): T-End-->
+
+**System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
 
@@ -4065,7 +4166,7 @@ foregroundBlurStyle(style: Optional<BlurStyle>, options?: ForegroundBlurStyleOpt
 
 | Type | Description |
 | --- | --- |
-| T | 返回当前组件。 |
+| T |  |
 
 ## foregroundColor
 
@@ -4073,7 +4174,7 @@ foregroundBlurStyle(style: Optional<BlurStyle>, options?: ForegroundBlurStyleOpt
 foregroundColor(value: ResourceColor | ColoringStrategy): T
 ```
 
-设置组件的前景色。当组件未设置前景色，默认继承父组件。
+Sets the foreground color of the component. Components without explicit foreground color settings inherit from their parent components by default.
 
 **Since:** 10
 
@@ -4091,13 +4192,13 @@ foregroundColor(value: ResourceColor | ColoringStrategy): T
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | [ResourceColor](../arkts-apis/arkts-arkui-resourcecolor-t.md) \| ColoringStrategy | Yes | 设置组件的前景颜色或者根据智能取色策略设置前景颜色。不支持[属性动画](../../apis-ability-kit/arkts-apis/arkts-app-ability-common.md/arkts-app-ability-common.md)。 |
+| value | [ResourceColor](../arkts-apis/arkts-arkui-resourcecolor-t.md) \| ColoringStrategy | Yes | Foreground color. The value can be a specific color or a coloring strategy. The [attribute animation](../../apis-ability-kit/arkts-apis/arkts-app-ability-common.md/arkts-app-ability-common.md) is not supported. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| T | 返回当前组件。 |
+| T | Current component. |
 
 ## foregroundColor
 
@@ -4105,8 +4206,8 @@ foregroundColor(value: ResourceColor | ColoringStrategy): T
 foregroundColor(color: Optional<ResourceColor | ColoringStrategy>): T
 ```
 
-设置组件的前景色。当组件未设置前景色，默认继承父组件。与  
-[foregroundColor](arkts-arkui-commonmethod-c.md#foregroundcolor)相比，color参数新增了对undefined类型的支持。
+Sets the foreground color of the component. Components without explicit foreground color settings inherit from their parent components by default. Compared to   
+[foregroundColor](arkts-arkui-commonmethod-c.md#foregroundcolor), the **color** parameter supports the **undefined** type.
 
 **Since:** 18
 
@@ -4124,13 +4225,13 @@ foregroundColor(color: Optional<ResourceColor | ColoringStrategy>): T
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| color | [Optional](../arkts-apis/arkts-arkui-optional-t.md)&lt;[ResourceColor](../arkts-apis/arkts-arkui-resourcecolor-t.md) \| [ColoringStrategy](../arkts-apis/arkts-arkui-coloringstrategy-e.md)&gt; | Yes | 设置组件的前景颜色或者根据智能取色策略设置前景颜色。不支持属性动画。&lt;br/&gt;当color的值为 undefined时，维持之前取值或组件默认取值，具体行为不同组件可能会有差异，建议开发者使用确定颜色或[ColoringStrategy](../arkts-apis/arkts-arkui-enums-coloringstrategy-e.md/arkts-arkui-enums-coloringstrategy-e.md)。 |
+| color | [Optional](../arkts-apis/arkts-arkui-optional-t.md)&lt;[ResourceColor](../arkts-apis/arkts-arkui-resourcecolor-t.md) \| [ColoringStrategy](../arkts-apis/arkts-arkui-coloringstrategy-e.md)&gt; | Yes | Foreground color. The value can be a specific color or a coloring strategy. Property animations are not supported.&lt;br&gt;If the color value is **undefined**, the previous setting or the component's default value is retained. The specific behavior may vary across components. It is recommended that you use explicit color values or [ColoringStrategy](../arkts-apis/arkts-arkui-enums-coloringstrategy-e.md/arkts-arkui-enums-coloringstrategy-e.md). |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| T | 返回当前组件。 |
+| T | Current component. |
 
 ## foregroundEffect
 
@@ -4138,7 +4239,7 @@ foregroundColor(color: Optional<ResourceColor | ColoringStrategy>): T
 foregroundEffect(options: ForegroundEffectOptions): T
 ```
 
-设置组件的前景属性。
+Sets the foreground effect of the component.
 
 **Since:** 12
 
@@ -4156,13 +4257,13 @@ foregroundEffect(options: ForegroundEffectOptions): T
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| options | [ForegroundEffectOptions](../arkts-apis/arkts-arkui-common-foregroundeffectoptions-i.md) | Yes | 设置组件前景属性包括：模糊半径。 |
+| options | [ForegroundEffectOptions](../arkts-apis/arkts-arkui-common-foregroundeffectoptions-i.md) | Yes | Foreground effect settings, including the blur radius. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| T | 返回当前组件。 |
+| T | Current component. |
 
 ## foregroundFilter
 
@@ -4170,11 +4271,11 @@ foregroundEffect(options: ForegroundEffectOptions): T
 foregroundFilter(filter: Filter): T
 ```
 
-设置前景滤镜（内容）视觉效果。
+Sets the visual effect of the foreground (content) filter.
 
-> **说明：**
+> **NOTE：**
 > 
-> 从API version 20开始，该接口支持在[attributeModifier](arkts-arkui-commonmethod-c.md#attributemodifier)中调用。
+> This API can be called within [attributeModifier](arkts-arkui-commonmethod-c.md#attributemodifier) since API version 20.
 
 **Since:** 12
 
@@ -4192,13 +4293,13 @@ foregroundFilter(filter: Filter): T
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| filter | [Filter](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-agent-filter-i.md) | Yes | 前景滤镜（内容）视觉效果。 |
+| filter | [Filter](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-agent-filter-i.md) | Yes | Visual effect of the foreground (content) filter. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| T | 返回当前组件。 |
+| T | Current component. |
 
 ## freeze
 
@@ -4206,11 +4307,11 @@ foregroundFilter(filter: Filter): T
 freeze(value: boolean): T
 ```
 
-设置当前控件和子控件是否整体离屏渲染绘制后重复绘制缓存，不再进行内部属性更新。
+Sets whether to freeze the component. When frozen, the component and its children are cached for repeated drawing after offscreen rendering, without updating internal attributes.
 
-> **说明：**
+> **NOTE：**
 > 
-> 从API version 20开始，该接口支持在[attributeModifier](arkts-arkui-commonmethod-c.md#attributemodifier)中调用。
+> This API can be called within [attributeModifier](arkts-arkui-commonmethod-c.md#attributemodifier) since API version 20.
 
 **Since:** 12
 
@@ -4222,17 +4323,19 @@ freeze(value: boolean): T
 
 <!--Device-CommonMethod-freeze(value: boolean): T--><!--Device-CommonMethod-freeze(value: boolean): T-End-->
 
+**System capability:** SystemCapability.ArkUI.ArkUI.Full
+
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | boolean | Yes | 设置当前控件和子控件是否整体离屏渲染绘制后重复绘制缓存，不再进行内部属性更新。当前控件的不透明度不为1时绘制效果可能有差异。&lt;br/&gt;默认值：false &lt;br/&gt; true时 离屏渲染绘制后重复绘制缓存，false时离屏渲染绘制后不重复绘制缓存。 |
+| value | boolean | Yes | Whether to freeze the component. When frozen, the component and its children are cached for repeated drawing after offscreen rendering, without updating internal attributes. If the opacity of the component is not 1, the drawing effect may vary depending on the value.&lt;br&gt;Default value: **false**&lt;br&gt; **true**: Freeze the component.&lt;br&gt;**false**: Do not freeze the component. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| T | 返回当前组件。 |
+| T | Current component. |
 
 ## freeze
 
@@ -4240,11 +4343,12 @@ freeze(value: boolean): T
 freeze(freeze: Optional<boolean>): T
 ```
 
-设置当前控件和子控件是否整体离屏渲染绘制后重复绘制缓存，不再进行内部属性更新。与[freeze](arkts-arkui-commonmethod-c.md#freeze)相比，freeze参数新增了对undefined类型的支持。
+Sets whether to freeze the component. When frozen, the component and its children are cached for repeated drawing after offscreen rendering, without updating internal attributes. Compared with   
+[freeze](arkts-arkui-commonmethod-c.md#freeze), this API supports the **undefined** type for the **freeze** parameter.
 
-> **说明：**
+> **NOTE：**
 > 
-> 从API version 20开始，该接口支持在[attributeModifier](arkts-arkui-commonmethod-c.md#attributemodifier)中调用。
+> This API can be called within [attributeModifier](arkts-arkui-commonmethod-c.md#attributemodifier) since API version 20.
 
 **Since:** 18
 
@@ -4256,17 +4360,19 @@ freeze(freeze: Optional<boolean>): T
 
 <!--Device-CommonMethod-freeze(freeze: Optional<boolean>): T--><!--Device-CommonMethod-freeze(freeze: Optional<boolean>): T-End-->
 
+**System capability:** SystemCapability.ArkUI.ArkUI.Full
+
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| freeze | [Optional](../arkts-apis/arkts-arkui-optional-t.md)&lt;boolean&gt; | Yes | 设置当前控件和子控件是否整体离屏渲染绘制后重复绘制缓存，不再进行内部属性更新。当前控件的不透明度不为1时绘制效果可能有差异。&lt;br/&gt;默认值：false&lt; br/&gt; true时离屏渲染绘制后重复绘制缓存，false时离屏渲染绘制后不重复绘制缓存。&lt;br/&gt;当freeze的值为undefined时，维持之前取值。 |
+| freeze | [Optional](../arkts-apis/arkts-arkui-optional-t.md)&lt;boolean&gt; | Yes | Whether to freeze the component. When frozen, the component and its children are cached for repeated drawing after offscreen rendering, without updating internal attributes. If the opacity of the component is not 1, the drawing effect may vary depending on the value.&lt;br&gt;Default value: **false**&lt;br&gt; **true**: Freeze the component.&lt;br&gt;**false**: Do not freeze the component.&lt;br&gt;If **freeze** is set to **undefined**, the previous value is retained. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| T | 返回当前组件。 |
+| T | Current component. |
 
 ## geometryTransition
 
@@ -4274,7 +4380,7 @@ freeze(freeze: Optional<boolean>): T
 geometryTransition(id: string): T
 ```
 
-组件内隐式共享元素转场。
+Implements an implicit shared element transition.
 
 **Since:** 7
 
@@ -4290,13 +4396,13 @@ geometryTransition(id: string): T
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| id | string | Yes | 用于设置绑定关系，id置空字符串清除绑定关系避免参与共享行为，id可更换重新建立绑定关系。同一个id只能有两个组件绑定且是in/out不同类型角色，不能多个组件绑定同一个id。 |
+| id | string | Yes | ID used to set up a binding relationship. Setting **id** to an empty string clears the binding relationship. The value can be changed to re-establish the binding relationship. One ID can be bound to only two components, which function as in and out components. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| T | 返回当前组件。 |
+| T | Current component. |
 
 ## geometryTransition
 
@@ -4304,7 +4410,7 @@ geometryTransition(id: string): T
 geometryTransition(id: string, options?: GeometryTransitionOptions): T
 ```
 
-组件内隐式共享元素转场。
+Implements an implicit shared element transition.
 
 **Since:** 11
 
@@ -4322,14 +4428,14 @@ geometryTransition(id: string, options?: GeometryTransitionOptions): T
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| id | string | Yes | 用于设置绑定关系，id置空字符串清除绑定关系避免参与共享行为，id可更换重新建立绑定关系。同一个id只能有两个组件绑定且是in/out不同类型角色，不能多个组件绑定同一个id。 |
-| options | [GeometryTransitionOptions](arkts-arkui-geometrytransitionoptions-i.md) | No | 组件内共享元素转场动画参数。&lt;br&gt;默认值为 { follow: false }。 |
+| id | string | Yes | ID used to set up a binding relationship. Setting **id** to an empty string clears the binding relationship. The value can be changed to re-establish the binding relationship. One ID can be bound to only two components, which function as in and out components. |
+| options | [GeometryTransitionOptions](arkts-arkui-geometrytransitionoptions-i.md) | No | Settings of the implicit shared element transition. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| T | 返回当前组件。 |
+| T | Current component. |
 
 ## gesture
 
@@ -4337,11 +4443,11 @@ geometryTransition(id: string, options?: GeometryTransitionOptions): T
 gesture(gesture: GestureType, mask?: GestureMask): T
 ```
 
-绑定手势。
+Gesture to bind.
 
-> **说明：**
+> **NOTE：**
 > 
-> 该接口不支持在[attributeModifier](arkts-arkui-commonmethod-c.md#attributemodifier)中调用。
+> This API cannot be called within [attributeModifier](arkts-arkui-commonmethod-c.md#attributemodifier).
 
 **Since:** 7
 
@@ -4357,14 +4463,14 @@ gesture(gesture: GestureType, mask?: GestureMask): T
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| gesture | [GestureType](../arkts-apis/arkts-arkui-gesturetype-t.md) | Yes | 绑定的手势类型。 |
-| mask | [GestureMask](../arkts-apis/arkts-arkui-gesturemask-e.md) | No | 事件响应设置。&lt;br/&gt;默认值：GestureMask.Normal |
+| gesture | [GestureType](../arkts-apis/arkts-arkui-gesturetype-t.md) | Yes | Type of the gesture to bind. |
+| mask | [GestureMask](../arkts-apis/arkts-arkui-gesturemask-e.md) | No | Mask for gesture events.&lt;br&gt;Default value: **GestureMask.Normal**. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| T | 返回当前组件。 |
+| T | Current component. |
 
 ## gestureModifier
 
@@ -4372,9 +4478,13 @@ gesture(gesture: GestureType, mask?: GestureMask): T
 gestureModifier(modifier: GestureModifier): T
 ```
 
-动态设置组件绑定的手势。
+Creates a gesture modifier.
 
-说明：gestureModifier不支持自定义组件。该接口不支持在[attributeModifier](arkts-arkui-commonmethod-c.md#attributemodifier)中调用。
+> **NOTE：**
+> 
+> **gestureModifier** does not support custom components.
+> 
+> This API cannot be called within [attributeModifier](arkts-arkui-commonmethod-c.md#attributemodifier).
 
 **Since:** 12
 
@@ -4392,7 +4502,7 @@ gestureModifier(modifier: GestureModifier): T
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| modifier | [GestureModifier](../arkts-apis/arkts-arkui-common-gesturemodifier-i.md) | Yes | 动态设置当前组件的手势绑定，支持if/else语法。 modifier: 手势修改器，开发者需自定义class实现GestureModifier接口。 |
+| modifier | [GestureModifier](../arkts-apis/arkts-arkui-common-gesturemodifier-i.md) | Yes | for dynamically setting gestures bound to the current component. The if/else syntax is supported. modifier: gesture modifier. You need a custom class to implement the GestureModifier API. |
 
 **Return value:**
 
@@ -4406,7 +4516,7 @@ gestureModifier(modifier: GestureModifier): T
 grayscale(value: number): T
 ```
 
-为组件添加灰度效果。上层渲染灰度会覆盖下层子组件渲染。不通过该接口设置时，默认无变化。
+Applies a grayscale effect to the component. The grayscale rendering of the upper layer will overlay that of lower-layer child components. If this API is not used, there will be no change by default.
 
 **Since:** 7
 
@@ -4424,13 +4534,13 @@ grayscale(value: number): T
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | number | Yes | 为当前组件添加灰度效果。值定义为灰度转换的比例，入参1.0则完全转为灰度图像，入参0.0则图像无变化，入参在0.0和1.0之间时，效果呈线性变化。&lt;br/&gt;取值范围： [0.0, 1.0]&lt;br/&gt;**说明：**&lt;br/&gt;设置小于0.0的值时，按值为0.0处理，设置大于1.0的值时，按值为1.0处理。 |
+| value | number | Yes | Grayscale conversion ratio of the component. If the value is **1.0**, the component is completely converted to grayscale. If the value is **0.0**, the component remains unchanged. Between **0** and **1**, the value applies a linear multiplier on the grayscale effect.&lt;br&gt;Value range: [0.0, 1.0]&lt;br&gt;**NOTE：**&lt;br &gt;A value less than **0.0** evaluates to the value **0.0**. A value greater than **1.0** evaluates to the value **1.0**. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| T | 返回当前组件。 |
+| T | Current component. |
 
 ## grayscale
 
@@ -4438,7 +4548,8 @@ grayscale(value: number): T
 grayscale(grayscale: Optional<number>): T
 ```
 
-为组件添加灰度效果。上层渲染灰度会覆盖下层子组件渲染。不通过该接口设置时，默认无变化。与[grayscale](arkts-arkui-commonmethod-c.md#grayscale)相比，grayscale参数新增了对undefined类型的支持。
+Applies a grayscale effect to the component. The grayscale rendering of the upper layer will overlay that of lower-layer child components. If this API is not used, there will be no change by default. Compared to   
+[grayscale](arkts-arkui-commonmethod-c.md#grayscale), the **grayscale** parameter supports the **undefined** type.
 
 **Since:** 18
 
@@ -4452,17 +4563,19 @@ grayscale(grayscale: Optional<number>): T
 
 <!--Device-CommonMethod-grayscale(grayscale: Optional<number>): T--><!--Device-CommonMethod-grayscale(grayscale: Optional<number>): T-End-->
 
+**System capability:** SystemCapability.ArkUI.ArkUI.Full
+
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| grayscale | [Optional](../arkts-apis/arkts-arkui-optional-t.md)&lt;number&gt; | Yes | 为当前组件添加灰度效果。值定义为灰度转换的比例，入参1.0则完全转为灰度图像，入参0.0则图像无变化，入参在0.0和1.0之间时，效果呈线性变化。&lt; br/&gt;取值范围：[0.0, 1.0]&lt;br/&gt;**说明：**&lt;br/&gt;设置小于0.0的值时，按值为0.0处理，设置大于1.0的值时，按值为1.0处理。&lt;br/&gt;当grayscale的值为undefined时，取默认值0. 0。恢复为无灰度效果。 |
+| grayscale | [Optional](../arkts-apis/arkts-arkui-optional-t.md)&lt;number&gt; | Yes | Grayscale conversion ratio of the component. If the value is **1.0**, the component is completely converted to grayscale. If the value is **0.0**, the component remains unchanged. Between **0** and **1**, the value applies a linear multiplier on the grayscale effect.&lt;br&gt;Value range: [0.0, 1.0]&lt;br&gt;**NOTE：**&lt;br&gt;A value less than **0.0** evaluates to the value **0.0**. A value greater than **1.0** evaluates to the value **1.0**.&lt;br&gt;If **grayscale** is set to **undefined**, the default value **0.0** is used, which means the component reverts to its original effect with no grayscale. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| T | 返回当前组件。 |
+| T | Current component. |
 
 ## gridOffset
 
@@ -4538,7 +4651,7 @@ Default number of occupied columns, indicating the number of occupied grid colum
 groupDefaultFocus(value: boolean): T
 ```
 
-设置当前组件是否为当前组件所在容器获焦时的默认焦点。当组件未设置groupDefaultFocus时，组件默认不为当前组件所在容器获焦时的默认焦点。
+Specifies whether to set the component as the default focus of the container. If **groupDefaultFocus** is not set,the component will not receive focus by default when its container is focused.
 
 **Since:** 9
 
@@ -4554,13 +4667,13 @@ groupDefaultFocus(value: boolean): T
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | boolean | Yes | 设置当前组件是否为当前组件所在容器获焦时的默认焦点，仅在初次创建容器节点第一次获焦时生效。true表示当前组件为所在容器获焦时的默认焦点，false表示当前组件不是所在容器获焦 时的默认焦点。&lt;br/&gt;**说明：** &lt;br/&gt;必须与[tabIndex](arkts-arkui-commonmethod-c.md#tabindex)联合使用，当某个容器设置了tabIndex，且容器内某子组件或容器自身设置了 groupDefaultFocus(true)，当该容器首次TAB键获焦时，会自动将焦点转移至该指定的组件上。若容器内（包含容器本身）有多个组件设置了groupDefaultFocus(true)，则以组件树深度遍历找到的 第一个组件为最终结果。 |
+| value | boolean | Yes | Whether to set the component as the default focus of the parent container. This parameter takes effect only when the container is new and obtains focus for the first time. &lt;br&gt;**true**: The component is the default focus of the parent container.&lt;br&gt;**false**: The component is not the default focus of the parent container.&lt;br&gt;**NOTE：**&lt;br&gt;This parameter must be used together with [tabIndex](arkts-arkui-commonmethod-c.md#tabindex). When **tabIndex** is set for a container and **groupDefaultFocus(true)** is set for a child in the container or for the container itself, then when the container obtains focus for the first time through sequential Tab navigation, the focus automatically moves to the specified component. If **groupDefaultFocus(true)** is set for multiple components in the container ( including the container itself), the first component found in the component tree in-depth traversal receives the focus. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| T | 返回当前组件。 |
+| T | Current component. |
 
 ## height
 
@@ -4568,9 +4681,7 @@ groupDefaultFocus(value: boolean): T
 height(value: Length): T
 ```
 
-设置组件自身的高度，缺省时使用子组件自身内容需要的高度。若子组件的高大于父组件的高，则子组件会溢出显示在父组件外部。
-
-从API version 10开始，该接口支持calc计算特性。
+Sets the height of the component. By default, the height required to fully hold the component content is used. If a component is higher than its parent, it will overflow.&lt;br&gt;Since API version 10, this API supports the calc calculation feature.
 
 **Since:** 7
 
@@ -4588,13 +4699,13 @@ height(value: Length): T
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | [Length](../arkts-apis/arkts-arkui-length-t.md) | Yes | 要设置的组件高度。 &lt;br&gt;单位：vp &lt;br&gt;设置百分比时，以父容器的高度作为基础值。 &lt;br&gt;异常值：参数为undefined时，属性设置不生效；其它异常值时，height属性恢复到不配置时的默认行为。 |
+| value | [Length](../arkts-apis/arkts-arkui-length-t.md) | Yes | Height of the component to set.&lt;br&gt;Unit: vp > **NOTE：**> > In the [Row](../arkts-apis/arkts-arkui-row-row-f.md/arkts-arkui-row-row-f.md#row), [Column](../arkts-apis/arkts-arkui-column-column-f.md/arkts-arkui-column-column-f.md#column), and [RelativeContainer](../arkts-apis/arkts-arkui-relativecontainer-relativecontainer-f.md/arkts-arkui-relativecontainer-relativecontainer-f.md#relativecontainer) components, setting **width** and **height** to **auto** means that the size adapts to the size of their child components. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| T | 返回当前组件对象，用于链式调用。 |
+| T | Current component. |
 
 ## height
 
@@ -4602,9 +4713,7 @@ height(value: Length): T
 height(heightValue: Length | LayoutPolicy): T
 ```
 
-设置组件自身的高度或垂直方向布局策略，缺省时使用子组件自身内容需要的高度。若子组件的高大于父组件的高，则子组件会溢出显示在父组件外部。
-
-从API version 15开始，当参数为Length类型时，该接口支持calc计算特性。
+Sets the height of the component or its vertical layout policy. By default, the component uses the height required for its content. If a component is higher than its parent, it will overflow.
 
 **Since:** 15
 
@@ -4624,13 +4733,13 @@ height(heightValue: Length | LayoutPolicy): T
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| heightValue | [Length](../arkts-apis/arkts-arkui-length-t.md) \| LayoutPolicy | Yes | 要设置的组件高度或垂直方向布局策略。 &lt;br&gt;单位：vp &lt;br&gt;设置百分比时，以父容器的高度作为基础值。 |
+| heightValue | [Length](../arkts-apis/arkts-arkui-length-t.md) \| LayoutPolicy | Yes | Height of the component to set. &lt;br&gt;Unit: vp. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| T | 返回当前组件对象，用于链式调用。 |
+| T | Current component. |
 
 ## hitTestBehavior
 
@@ -4638,7 +4747,8 @@ height(heightValue: Length | LayoutPolicy): T
 hitTestBehavior(value: HitTestMode): T
 ```
 
-设置组件的触摸测试类型。如果组件不设置hitTestBehavior，其默认触摸测试类型为HitTestMode.Default。
+Sets the hit test mode for a component. If **hitTestBehavior** is not set, the component defaults to  
+**HitTestMode.Default**.
 
 **Since:** 9
 
@@ -4656,13 +4766,13 @@ hitTestBehavior(value: HitTestMode): T
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | [HitTestMode](../arkts-apis/arkts-arkui-hittestmode-e.md) | Yes | 设置当前组件的触摸测试类型。 |
+| value | [HitTestMode](../arkts-apis/arkts-arkui-hittestmode-e.md) | Yes | Hit test mode for a component. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| T | 返回当前组件。 |
+| T | Current component. |
 
 ## hoverEffect
 
@@ -4670,7 +4780,8 @@ hitTestBehavior(value: HitTestMode): T
 hoverEffect(value: HoverEffect): T
 ```
 
-设置组件的鼠标悬浮态显示效果。当未设置hoverEffect时，组件默认鼠标悬浮态效果为HoverEffect.Auto。对于应用了悬浮态效果的组件，当鼠标悬浮于组件上并按下时，悬浮态效果会消失；当鼠标松开时，悬浮态效果会恢复。
+Sets the hover effect for the component. When no hover effect is specified, the component uses the default  
+**HoverEffect.Auto** effect. For components with hover effects applied, the hover effect is hidden when the mouse hovers and presses down on the component, and restored when the mouse button is released.
 
 **Since:** 8
 
@@ -4686,13 +4797,13 @@ hoverEffect(value: HoverEffect): T
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | [HoverEffect](../arkts-apis/arkts-arkui-hovereffect-e.md) | Yes | 设置当前组件悬浮态下的悬浮效果。 |
+| value | [HoverEffect](../arkts-apis/arkts-arkui-hovereffect-e.md) | Yes | Hover effect of the component. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| T | 返回当前组件。 |
+| T | Current component. |
 
 ## hueRotate
 
@@ -4700,7 +4811,7 @@ hoverEffect(value: HoverEffect): T
 hueRotate(value: number | string): T
 ```
 
-色相旋转效果。不通过该接口设置时，默认无变化。
+Rotates the hue of the component. If this API is not used, there will be no change by default.
 
 **Since:** 7
 
@@ -4718,13 +4829,13 @@ hueRotate(value: number | string): T
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | number \| string | Yes | 色相旋转效果，输入参数为旋转角度。&lt;br/&gt;取值范围：(-∞, +∞)&lt;br/&gt;**说明：**&lt;br/&gt;色调旋转360度会显示原始颜色。先将色调旋转180 度， 然后再旋转-180度会显示原始颜色。数据类型为number时，值为90和'90deg'效果一致。 |
+| value | number \| string | Yes | Hue rotation angle of the component.&lt;br&gt;Value range: (-∞, +∞)&lt;br&gt;**NOTE：**&lt;br&gt;A rotation of 360 degrees leaves the color unchanged. A rotation of 180 degrees and then -180 degrees also leaves the color unchanged. When the data type is number, the value **90** is equivalent to **'90deg'**. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| T | 返回当前组件。 |
+| T | Current component. |
 
 ## hueRotate
 
@@ -4732,7 +4843,9 @@ hueRotate(value: number | string): T
 hueRotate(rotation: Optional<number | string>): T
 ```
 
-色相旋转效果。不通过该接口设置时，默认无变化。与[hueRotate](arkts-arkui-commonmethod-c.md#huerotate)相比，rotation参数新增了对undefined类型的支持。
+Rotates the hue of the component. If this API is not used, there will be no change by default. Compared to   
+[hueRotate](arkts-arkui-commonmethod-c.md#huerotate), the **rotation** parameter supports the   
+**undefined** type.
 
 **Since:** 18
 
@@ -4746,17 +4859,19 @@ hueRotate(rotation: Optional<number | string>): T
 
 <!--Device-CommonMethod-hueRotate(rotation: Optional<number | string>): T--><!--Device-CommonMethod-hueRotate(rotation: Optional<number | string>): T-End-->
 
+**System capability:** SystemCapability.ArkUI.ArkUI.Full
+
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| rotation | [Optional](../arkts-apis/arkts-arkui-optional-t.md)&lt;number \| string&gt; | Yes |  |
+| rotation | [Optional](../arkts-apis/arkts-arkui-optional-t.md)&lt;number \| string&gt; | Yes | Hue rotation angle of the component.&lt;br&gt;Value range: (-∞, +∞)&lt;br&gt; For the string type, the value must be a numeric string.&lt;br&gt;**NOTE：**&lt;br&gt;A rotation of 360 degrees leaves the color unchanged. A rotation of 180 degrees and then -180 degrees also leaves the color unchanged. When the data type is number, the value **90** is equivalent to **'90deg'**.&lt;br&gt;If **sepia** is **undefined**, the component reverts to its original effect with no hue rotation. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| T | 返回当前组件。 |
+| T | Current component. |
 
 ## id
 
@@ -4796,18 +4911,24 @@ Id. User can set an id to the component to identify it.
 ignoreLayoutSafeArea(types?: Array<LayoutSafeAreaType>, edges?: Array<LayoutSafeAreaEdge>): T
 ```
 
-扩展组件布局时的安全区。
+Ignores the safe area for component layout.
 
-> **说明：**
+> **NOTE：**
 > 
+> - For a component that ignores layout safe area edges: If its width or height is set to
+> [LayoutPolicy.matchParent](arkts-arkui-layoutpolicy-c.md#matchparent), both its size and position
+> will change; otherwise, only its position will change.
 > 
-忽略布局安全区边缘的组件，如果其宽度或高度设置了 [LayoutPolicy.matchParent](arkts-arkui-layoutpolicy-c.md#matchparent)，其大小和位置都会改变，否则仅改变其位置。  
+> - Based on the **safeAreaPadding** accumulation feature, a component can expand its safe area edges to all
+> detectable continuous safe areas.
 > 
-> 依据safeAreaPadding累积功能，组件可扩展其安全区边缘到所有能感知的连续安全区域。
+> - When child elements of scrollable components ignore layout safe area edges, the safe areas of the scrollable
+> component itself and its parent components are not considered in the scrolling direction. Scrollable components
+> include **List**, **ArcListItem**, **Grid**, **WaterFlow**, **Swiper**, and **Tabs**.
 > 
-> 滚动类组件的子元素忽略布局安全区边缘时在滚动方向不考虑滚动组件自身及其父组件的安全区域，包括：List、ArcListItem、Grid、WaterFlow、Swiper和Tabs。
-> 
-> 忽略布局安全区属性.ignoreLayoutSafeArea和忽略渲染安全区属性.expandSafeArea都设置时，.ignoreLayoutSafeArea先生效，.expandSafeArea在前者基础上再生效。
+> - When both the layout safe area ignore attribute (**.ignoreLayoutSafeArea**) and the rendering safe area ignore
+> attribute (**.expandSafeArea**) are set: **.ignoreLayoutSafeArea** takes effect first, and **.expandSafeArea**
+> takes effect on the basis of the former.
 
 **Since:** 20
 
@@ -4825,8 +4946,8 @@ ignoreLayoutSafeArea(types?: Array<LayoutSafeAreaType>, edges?: Array<LayoutSafe
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| types | Array&lt;LayoutSafeAreaType&gt; | No | 扩展布局安全区域的类型。&lt;br /&gt;默认值：[LayoutSafeAreaType.SYSTEM]，扩展至所有安全区域，比如：状态栏，导航栏和组件级安全区（safeAreaPadding）。&lt;br/&gt;非法值：按默认值处理。 |
-| edges | Array&lt;LayoutSafeAreaEdge&gt; | No | 扩展布局安全区的边缘，并且支持镜像能力。&lt;br /&gt;默认值：[LayoutSafeAreaEdge.ALL]，扩展组件所有边缘。&lt;br /&gt;非法值：按默认值处理。 |
+| types | Array&lt;LayoutSafeAreaType&gt; | No | Types of layout safe areas to expand.&lt;br&gt;Default value: [LayoutSafeAreaType.SYSTEM] (expands to all safe areas, including the status bar, navigation bar, and component-level safe area (safeAreaPadding)). navigation bar, and component-level safe area&lt;br&gt;Invalid values are treated as the default value. |
+| edges | Array&lt;LayoutSafeAreaEdge&gt; | No | Edges of the layout safe area to expand, with mirroring capability supported.&lt;br&gt;Default value: [LayoutSafeAreaEdge.ALL] (expands all edges of the component).&lt;br&gt;Invalid values are treated as the default value. |
 
 **Return value:**
 
@@ -4840,7 +4961,7 @@ ignoreLayoutSafeArea(types?: Array<LayoutSafeAreaType>, edges?: Array<LayoutSafe
 inspectorLabel(label: string | undefined): T
 ```
 
-设置组件的检查器标签，该标签仅在DevEco Studio上显示。
+Set the component's inspector label which only display on DevEco Studio.
 
 **Since:** 26.0.0
 
@@ -4858,7 +4979,7 @@ inspectorLabel(label: string | undefined): T
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| label | string \| undefined | Yes | 检查器标签。 |
+| label | string \| undefined | Yes | the inspector label. |
 
 **Return value:**
 
@@ -4872,7 +4993,7 @@ inspectorLabel(label: string | undefined): T
 invert(value: number | InvertOptions): T
 ```
 
-反转输入的图像。
+Inverts an image.
 
 **Since:** 7
 
@@ -4890,13 +5011,13 @@ invert(value: number | InvertOptions): T
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | number \| InvertOptions | Yes | 反转输入的图像。&lt;br/&gt;入参对象为number时。入参为图像反转的比例，值为1时完全反转，值为0则图像无变化。&lt;br/&gt;取值范围：[0, 1]。&lt;br/&gt;设置小于0的值时，按值 为0处理。设置大于1的值时，按值为1处理。&lt;br/&gt;入参对象为 InvertOptions时，对比背景颜色灰度值和阈值区间，背景颜色灰度值小于阈值区间时反色取high值，当背景颜色灰度值大于阈值区间时反色取low值，背景颜 色灰度值在阈值区间内取值由high线性渐变到low。&lt;br/&gt;**说明：**&lt;br/&gt;number和InvertOptions两种形式的入参对应不同的反转效果。两种类型的入参切换时，不会清除之前已设置的反转效果，两种反转效 果会同时存在，建议始终使用同一种形式的入参。<br>**Since:** 11 |
+| value | number \| InvertOptions | Yes | How an image is inverted.&lt;br&gt;When the input parameter is a number: If the value is **1**, the component is completely inverted. If the value is **0**, the component remains unchanged.&lt; br&gt;Value range: [0, 1].&lt;br&gt;A value less than 0 evaluates to the value **0**. A value larger than 1 is treated as **1**.&lt;br&gt;If the value is of the InvertOptions type, the grayscale value of the background color is compared with the threshold range. If the grayscale value is greater than the upper bound of the threshold range, the **high** value is used. If the grayscale value is less than the lower bound of the threshold range, the **low** value is used. If the grayscale value is within the threshold range, the background color changes linearly from high to low.&lt;br&gt;**NOTE：**&lt;br&gt;The number and InvertOptions parameter types produce different inversion effects. When you switch parameter types, previous effects persist and both effects coexist. Use consistent parameter types for predictable results.<br>**Since:** 11 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| T | 返回当前组件。 |
+| T | Current component. |
 
 ## invert
 
@@ -4904,7 +5025,7 @@ invert(value: number | InvertOptions): T
 invert(options: Optional<number | InvertOptions>): T
 ```
 
-反转输入的图像。与[invert](arkts-arkui-commonmethod-c.md#invert)相比，options参数新增了对undefined类型的支持。
+Inverts an image. Compared with [invert](arkts-arkui-commonmethod-c.md#invert), this API supports the **undefined** type for the **options** parameter.
 
 **Since:** 18
 
@@ -4918,17 +5039,19 @@ invert(options: Optional<number | InvertOptions>): T
 
 <!--Device-CommonMethod-invert(options: Optional<number | InvertOptions>): T--><!--Device-CommonMethod-invert(options: Optional<number | InvertOptions>): T-End-->
 
+**System capability:** SystemCapability.ArkUI.ArkUI.Full
+
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| options | [Optional](../arkts-apis/arkts-arkui-optional-t.md)&lt;number \| InvertOptions&gt; | Yes | 反转输入的图像。&lt;br/&gt;入参对象为number时。入参为图像反转的比例，值为1时完全反转，值为0则图像无变化。&lt;br/&gt; 取值范围：[0, 1]。&lt;br/&gt;设置小于0的值时，按值为0处理。设置大于1的值时，按值为1处理。&lt;br/&gt;入参对象为 InvertOptions时，对比背景颜色灰度值和阈值区间，背景颜色灰度值小于阈值区间时反色取high 值，当背景颜色灰度值大于阈值区间时反色取low值，背景颜色灰度值在阈值区间内取值由high线性渐变到low。&lt;br/&gt;当options的值为undefined时，恢复为图像无变化的效果。&lt;br/&gt;**说明：**&lt;br/&gt; number和InvertOptions两种形式的入参对应不同的反转效果。两种类型的入参切换时，不会清除之前已设置的反转效果，两种反转效果会同时存在，建议始终使用同一种形式的入参。 |
+| options | [Optional](../arkts-apis/arkts-arkui-optional-t.md)&lt;number \| InvertOptions&gt; | Yes | How an image is inverted.&lt;br&gt;When the input parameter is a number: If the value is **1**, the component is completely inverted. If the value is **0**, the component remains unchanged.&lt;br&gt;Value range: [0, 1].&lt;br&gt;A value less than 0 evaluates to the value **0**. A value larger than 1 is treated as **1**.&lt;br&gt;If the value is of the InvertOptions type, the grayscale value of the background color is compared with the threshold range. If the grayscale value is greater than the upper bound of the threshold range, the **high** value is used. If the grayscale value is less than the lower bound of the threshold range, the **low** value is used. If the grayscale value is within the threshold range, the background color changes linearly from high to low.&lt;br&gt;If **options** is **undefined**, the component reverts to its original effect.&lt;br&gt;**NOTE：**&lt;br&gt;The number and InvertOptions parameter types produce different inversion effects. When you switch parameter types, previous effects persist and both effects coexist. Use consistent parameter types for predictable results. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| T | 返回当前组件。 |
+| T | Current component. |
 
 ## key
 
@@ -4936,7 +5059,7 @@ invert(options: Optional<number | InvertOptions>): T
 key(value: string): T
 ```
 
-控件标识，开发者可以通过标识来区分不同控件
+Key. User can set an key to the component to identify it.
 
 **Since:** 23
 
@@ -4968,7 +5091,7 @@ key(value: string): T
 keyboardShortcut(value: string | FunctionKey, keys: Array<ModifierKey>, action?: () => void): T
 ```
 
-设置组件的自定义组合键。
+Sets a keyboard shortcut for the component.
 
 **Since:** 10
 
@@ -4986,15 +5109,15 @@ keyboardShortcut(value: string | FunctionKey, keys: Array<ModifierKey>, action?:
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | string \| FunctionKey | Yes | 热键的单个字符（可以通过键盘输入的字符）或[FunctionKey](../arkts-apis/arkts-arkui-enums-functionkey-e.md/arkts-arkui-enums-functionkey-e.md)。&lt;br /&gt;空字符串意为取消快捷键绑定。&lt;br/&gt; |
-| keys | Array&lt;[ModifierKey](../arkts-apis/arkts-arkui-modifierkey-e.md)&gt; | Yes | 热键组合。&lt;br /&gt;仅当value为[FunctionKey](../arkts-apis/arkts-arkui-enums-functionkey-e.md/arkts-arkui-enums-functionkey-e.md)的情况下keys的值可以为空。&lt;br/&gt; |
-| action | () =&gt; void | No | 组合快捷键触发成功后的自定义事件回调。 |
+| value | string \| FunctionKey | Yes | Character key (which can be entered through the keyboard) or [function key](../arkts-apis/arkts-arkui-enums-functionkey-e.md/arkts-arkui-enums-functionkey-e.md).&lt;br&gt;An empty string means to disable the keyboard shortcut.&lt;br&gt; |
+| keys | Array&lt;[ModifierKey](../arkts-apis/arkts-arkui-modifierkey-e.md)&gt; | Yes | Modifier keys.&lt;br&gt;This parameter can be left empty only when **value** is set to a [function key](../arkts-apis/arkts-arkui-enums-functionkey-e.md/arkts-arkui-enums-functionkey-e.md).&lt;br&gt; |
+| action | () =&gt; void | No | Callback for a custom event after the keyboard shortcut is triggered. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| T | 返回当前组件。 |
+| T | Current component. |
 
 ## layoutGravity
 
@@ -5002,7 +5125,7 @@ keyboardShortcut(value: string | FunctionKey, keys: Array<ModifierKey>, action?:
 layoutGravity(alignment: LocalizedAlignment): T
 ```
 
-单独设置Stack组件中子组件的对齐规则，仅当父组件为Stack时生效。与align属性同时使用时，layoutGravity优先级更高，支持[attributeModifier](arkts-arkui-commonmethod-c.md#attributemodifier)动态设置属性方法。
+Sets the alignment rule for child components in the **Stack** container. This API only takes effect when the parent container is **Stack**. When used with the [align](arkts-arkui-commonmethod-c.md#align) attribute, **layoutGravity** takes precedence. This attribute supports dynamic configuration via [attributeModifier](arkts-arkui-commonmethod-c.md#attributemodifier).
 
 **Since:** 20
 
@@ -5022,7 +5145,7 @@ layoutGravity(alignment: LocalizedAlignment): T
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| alignment | [LocalizedAlignment](../arkts-apis/arkts-arkui-localizedalignment-e.md) | Yes | 指定设置在Stack组件中子组件的对齐规则。&lt;br/&gt;默认值：LocalizedAlignment.CENTER 。说明：当传入异常值时，按默认值处理。 |
+| alignment | [LocalizedAlignment](../arkts-apis/arkts-arkui-localizedalignment-e.md) | Yes | Alignment rule of child components in the **Stack** container. If an invalid value is passed, the default value is used. Default value: **LocalizedAlignment.CENTER**. |
 
 **Return value:**
 
@@ -5036,7 +5159,7 @@ layoutGravity(alignment: LocalizedAlignment): T
 layoutWeight(value: number | string): T
 ```
 
-设置组件的布局权重，使组件在父容器（[Row](../arkts-apis/arkts-arkui-row-row-f.md/arkts-arkui-row-row-f.md#row)/[Column](../arkts-apis/arkts-arkui-column-column-f.md/arkts-arkui-column-column-f.md#column)/[Flex](../arkts-apis/arkts-arkui-flex-flex-f.md/arkts-arkui-flex-flex-f.md#flex)）的主轴方向按照权重分配尺寸。适用于父容器尺寸确定、需要多个子组件按比例分配剩余空间的场景。
+Sets the weight of the component during layout. A component with this attribute is allocated space along the main axis of its parent container ([Row](../arkts-apis/arkts-arkui-row-row-f.md/arkts-arkui-row-row-f.md#row), [Column](../arkts-apis/arkts-arkui-column-column-f.md/arkts-arkui-column-column-f.md#column), or [Flex](../arkts-apis/arkts-arkui-flex-flex-f.md/arkts-arkui-flex-flex-f.md#flex) based on its specified weight.
 
 **Since:** 7
 
@@ -5054,13 +5177,13 @@ layoutWeight(value: number | string): T
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | number \| string | Yes | 父容器尺寸确定时，不设置layoutWeight属性或者layoutWeight属性生效值为0的子组件优先占位，这些子组件占位后在主轴留下的空间称为主轴剩余空 间。设置了layoutWeight属性且layoutWeight属性生效值大于0的子组件会从主轴剩余空间中按照各自所设置的权重占比分配尺寸，分配时会忽略子组件本身的width/height设置，但保留minWidth/ minHeight约束。 &lt;br&gt;默认值：0 &lt;br&gt;取值范围：[0, +∞) &lt;br&gt;超出范围时：传入小于0的值时，按0处理。 &lt;br&gt;**说明：** &lt;br&gt;仅在[Row](../arkts-apis/arkts-arkui-row-row-f.md/arkts-arkui-row-row-f.md#row)/[Column](../arkts-apis/arkts-arkui-column-column-f.md/arkts-arkui-column-column-f.md#column)/[Flex](../arkts-apis/arkts-arkui-flex-flex-f.md/arkts-arkui-flex-flex-f.md#flex)布局中生效。 &lt;br&gt;可选值为大于等于0的数字，或者可以转换为数字的字符串（支持整数、小数格式）。 &lt;br&gt;如果容器中有子组件设置了layoutWeight属性，且设置的属性值大于0，则所有子组件不会再基于[flexShrink](arkts-arkui-commonmethod-c.md#flexshrink)和 [flexGrow](arkts-arkui-commonmethod-c.md#flexgrow)布局。 |
+| value | number \| string | Yes | Layout weight of the component. &lt;br&gt;When the parent container size is determined: &lt;br&gt;Elements without **layoutWeight** or with **layoutWeight** set to **0** take precedence in occupying space. &lt;br&gt;The remaining space on the main axis is then allocated proportionally among elements with a **layoutWeight** value greater than 0, ignoring their own size settings. &lt;br&gt;Default value: **0** &lt;br&gt;**NOTE：**&lt;br&gt;This parameter is only effective in [Row](../arkts-apis/arkts-arkui-row-row-f.md/arkts-arkui-row-row-f.md#row), [Column](../arkts-apis/arkts-arkui-column-column-f.md/arkts-arkui-column-column-f.md#column), and [Flex](../arkts-apis/arkts-arkui-flex-flex-f.md/arkts-arkui-flex-flex-f.md#flex) container components. &lt;br&gt;The value can be a number greater than or equal to 0 or a string that can be converted to a number. &lt;br&gt;If any child component in a container has the **layoutWeight** attribute set to a value greater than 0, then child components will no longer be laid out based on [flexShrink](arkts-arkui-commonmethod-c.md#flexshrink) and [flexGrow](arkts-arkui-commonmethod-c.md#flexgrow). |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| T | 返回当前组件对象，用于链式调用。 |
+| T | Current component. |
 
 ## lightUpEffect
 
@@ -5068,7 +5191,7 @@ layoutWeight(value: number | string): T
 lightUpEffect(value: number): T
 ```
 
-设置组件图像亮起程度。
+Applies a light up effect to the component.
 
 **Since:** 12
 
@@ -5080,17 +5203,19 @@ lightUpEffect(value: number): T
 
 <!--Device-CommonMethod-lightUpEffect(value: number): T--><!--Device-CommonMethod-lightUpEffect(value: number): T-End-->
 
+**System capability:** SystemCapability.ArkUI.ArkUI.Full
+
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | number | Yes | 设置组件图像亮起程度。&lt;br/&gt;取值范围：[0,1]。&lt;br/&gt;如果value等于0则图像为全黑，如果value等于1则图像为全亮效果。0到1之间数值越大，表示图像亮度越高。 `value &lt; 0` 或者 `value &gt; 1`为异常情况，`value &lt; 0`按0处理，`value &gt; 1`按1处理。 |
+| value | number | Yes | Light up degree of the component.&lt;br&gt;The value ranges from 0 to 1.&lt;br&gt;If the value is **0**, the component is dark. If the value is **1**, the component is fully illuminated. Between **0** and **1**, a larger value indicates higher luminance. A value less than 0 is handled as the value **0**. A value greater than 1 is handled as the value **1**. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| T | 返回当前组件。 |
+| T | Current component. |
 
 ## lightUpEffect
 
@@ -5098,7 +5223,8 @@ lightUpEffect(value: number): T
 lightUpEffect(degree: Optional<number>): T
 ```
 
-设置组件图像亮起程度。与[lightUpEffect&lt;sup&gt;12+&lt;/sup&gt;](arkts-arkui-commonmethod-c.md#lightupeffect)相比，degree参数新增了对undefined类型的支持。
+Applies a light up effect to the component. Compared to   
+[lightUpEffect&lt;sup&gt;12+&lt;/sup&gt;](arkts-arkui-commonmethod-c.md#lightupeffect), the **degree** parameter supports the **undefined** type.
 
 **Since:** 18
 
@@ -5110,17 +5236,19 @@ lightUpEffect(degree: Optional<number>): T
 
 <!--Device-CommonMethod-lightUpEffect(degree: Optional<number>): T--><!--Device-CommonMethod-lightUpEffect(degree: Optional<number>): T-End-->
 
+**System capability:** SystemCapability.ArkUI.ArkUI.Full
+
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| degree | [Optional](../arkts-apis/arkts-arkui-optional-t.md)&lt;number&gt; | Yes | 设置组件图像亮起程度。&lt;br/&gt;取值范围：[0,1]。&lt;br/&gt;如果value等于0则图像为全黑，如果value等于1则图像为全亮效果。0到1之间数值越大， 表示图像亮度越高。`degree &lt; 0` 或者 `degree &gt; 1`为异常情况，`degree &lt; 0`按0处理，`degree &gt; 1`按1处理。&lt;br/&gt;当degree的值为undefined时，恢复为亮起为1的 效果。 |
+| degree | [Optional](../arkts-apis/arkts-arkui-optional-t.md)&lt;number&gt; | Yes | Light up degree of the component.&lt;br&gt;The value ranges from 0 to 1.&lt;br&gt;If the value is **0**, the component is dark. If the value is **1**, the component is fully illuminated. Between **0** and **1**, a larger value indicates higher luminance. A value less than 0 is handled as the value **0**. A value greater than 1 is handled as the value **1**.&lt;br&gt;If **degree** is **undefined**, the light up degree reverts to **1**. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| T | 返回当前组件。 |
+| T | Current component. |
 
 ## linearGradient
 
@@ -5128,29 +5256,31 @@ lightUpEffect(degree: Optional<number>): T
 linearGradient(value: LinearGradientOptions): T
 ```
 
-线性渐变。
+Creates a linear gradient.
 
-**Since:** 18
+**Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 18.
+**ArkTS mode:** ArkTS-Dyn only, since version 7.
 
-**Atomic service API:** This API can be used in atomic services since API version 18.
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
-**Widget capability:** This API can be used in ArkTS widgets since API version 18.
+**Widget capability:** This API can be used in ArkTS widgets since API version 9.
 
 <!--Device-CommonMethod-linearGradient(value: LinearGradientOptions): T--><!--Device-CommonMethod-linearGradient(value: LinearGradientOptions): T-End-->
+
+**System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | [LinearGradientOptions](arkts-arkui-lineargradientoptions-i.md) | Yes | 线性渐变。<br>**Since:** 18 |
+| value | [LinearGradientOptions](arkts-arkui-lineargradientoptions-i.md) | Yes | Linear gradient.<br>**Since:** 18 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| T | 返回当前组件。 |
+| T | Current component. |
 
 ## linearGradient
 
@@ -5158,7 +5288,9 @@ linearGradient(value: LinearGradientOptions): T
 linearGradient(options: Optional<LinearGradientOptions>): T
 ```
 
-线性渐变。与[linearGradient](arkts-arkui-commonmethod-c.md#lineargradient)相比，options参数新增了对undefined类型的支持。
+Creates a linear gradient. Compared to   
+[linearGradient](arkts-arkui-commonmethod-c.md#lineargradient), this API supports the   
+**undefined** type for the **options** parameter.
 
 **Since:** 18
 
@@ -5172,17 +5304,19 @@ linearGradient(options: Optional<LinearGradientOptions>): T
 
 <!--Device-CommonMethod-linearGradient(options: Optional<LinearGradientOptions>): T--><!--Device-CommonMethod-linearGradient(options: Optional<LinearGradientOptions>): T-End-->
 
+**System capability:** SystemCapability.ArkUI.ArkUI.Full
+
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| options | [Optional](../arkts-apis/arkts-arkui-optional-t.md)&lt;LinearGradientOptions&gt; | Yes | 线性渐变。&lt;br/&gt;当options的值为undefined时，恢复为无线性渐变的效果。 |
+| options | [Optional](../arkts-apis/arkts-arkui-optional-t.md)&lt;LinearGradientOptions&gt; | Yes | Linear gradient.&lt;br&gt;If **options** is **undefined**, the linear gradient is disabled. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| T | 返回当前组件。 |
+| T | Current component. |
 
 ## linearGradientBlur
 
@@ -5190,7 +5324,7 @@ linearGradient(options: Optional<LinearGradientOptions>): T
 linearGradientBlur(value: number, options: LinearGradientBlurOptions): T
 ```
 
-为组件添加内容线性渐变模糊效果。
+Applies a linear gradient foreground blur effect to the component.
 
 **Since:** 12
 
@@ -5202,18 +5336,20 @@ linearGradientBlur(value: number, options: LinearGradientBlurOptions): T
 
 <!--Device-CommonMethod-linearGradientBlur(value: number, options: LinearGradientBlurOptions): T--><!--Device-CommonMethod-linearGradientBlur(value: number, options: LinearGradientBlurOptions): T-End-->
 
+**System capability:** SystemCapability.ArkUI.ArkUI.Full
+
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | number | Yes | 为模糊半径，模糊半径越大越模糊，为0时不模糊。&lt;br/&gt;取值范围：[0, 1000] |
-| options | [LinearGradientBlurOptions](../arkts-apis/arkts-arkui-common-lineargradientbluroptions-i.md) | Yes | 设置线性渐变模糊效果。 &lt;br/&gt;线性渐变参数，包含模糊程度和模糊位置数组fractionStops，及渐变模糊方向 direction。 |
+| value | number | Yes | Blur radius. A larger value indicates a higher blur degree. If the value is 0, the content is not blurred.&lt;br&gt;Value range: [0, 1000] |
+| options | [LinearGradientBlurOptions](../arkts-apis/arkts-arkui-common-lineargradientbluroptions-i.md) | Yes | Linear gradient blur effect.&lt;br&gt;The linear gradient blur effect is defined by [fractionStops](arkts-arkui-lineargradientbluroptions-i.md) and [direction](arkts-arkui-lineargradientbluroptions-i.md). |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| T | 返回当前组件。 |
+| T | Current component. |
 
 ## linearGradientBlur
 
@@ -5221,8 +5357,8 @@ linearGradientBlur(value: number, options: LinearGradientBlurOptions): T
 linearGradientBlur(blurRadius: Optional<number>, options: Optional<LinearGradientBlurOptions>): T
 ```
 
-为组件添加内容线性渐变模糊效果。与  
-[linearGradientBlur&lt;sup&gt;12+&lt;/sup&gt;](arkts-arkui-commonmethod-c.md#lineargradientblur)相比，新增了对undefined类型的支持。
+Applies a linear gradient foreground blur effect to the component. Compared with   
+[linearGradientBlur&lt;sup&gt;12+&lt;/sup&gt;](arkts-arkui-commonmethod-c.md#lineargradientblur),this API supports the **undefined** type.
 
 **Since:** 18
 
@@ -5234,18 +5370,20 @@ linearGradientBlur(blurRadius: Optional<number>, options: Optional<LinearGradien
 
 <!--Device-CommonMethod-linearGradientBlur(blurRadius: Optional<number>, options: Optional<LinearGradientBlurOptions>): T--><!--Device-CommonMethod-linearGradientBlur(blurRadius: Optional<number>, options: Optional<LinearGradientBlurOptions>): T-End-->
 
+**System capability:** SystemCapability.ArkUI.ArkUI.Full
+
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| blurRadius | [Optional](../arkts-apis/arkts-arkui-optional-t.md)&lt;number&gt; | Yes | 为模糊半径，模糊半径越大越模糊，为0时不模糊。&lt;br/&gt;取值范围：[0, 1000]&lt;br/&gt;当blurRadius的值为undefined时，恢复 为渐变模糊为0的效果。 |
-| options | [Optional](../arkts-apis/arkts-arkui-optional-t.md)&lt;LinearGradientBlurOptions&gt; | Yes | 设置线性渐变模糊效果。&lt;br/&gt;线性渐变参数，包含模糊程度和模糊位置数组fractionStops，及渐变模糊方向 direction。 |
+| blurRadius | [Optional](../arkts-apis/arkts-arkui-optional-t.md)&lt;number&gt; | Yes | Blur radius. A larger value indicates a higher blur degree. If the value is 0, the content is not blurred.&lt;br&gt;Value range: [0, 1000]&lt;br&gt;If **blurRadius** is **undefined**, the gradient blur effect reverts to **0**. |
+| options | [Optional](../arkts-apis/arkts-arkui-optional-t.md)&lt;LinearGradientBlurOptions&gt; | Yes | Linear gradient blur effect.&lt;br&gt;If **options** is **undefined**, the gradient blur effect reverts to **0**.&lt;br&gt;The linear gradient blur effect is defined by [fractionStops](arkts-arkui-lineargradientbluroptions-i.md) and [direction](arkts-arkui-lineargradientbluroptions-i.md). |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| T | 返回当前组件。 |
+| T | Current component. |
 
 ## margin
 
@@ -5253,9 +5391,7 @@ linearGradientBlur(blurRadius: Optional<number>, options: Optional<LinearGradien
 margin(value: Margin | Length | LocalizedMargin): T
 ```
 
-设置组件的外边距属性。在计算位置时外边距视为组件大小的一部分，从而影响组件位置。
-
-从API version 10开始，该接口支持calc计算特性。
+Sets the margin of the component. The margin is considered as a part of the component's size during position calculation, thereby affecting the component's placement.&lt;br&gt;Since API version 10, this API supports the calc calculation feature.
 
 **Since:** 7
 
@@ -5273,13 +5409,13 @@ margin(value: Margin | Length | LocalizedMargin): T
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | [Margin](../arkts-apis/arkts-arkui-margin-t.md) \| Length \| LocalizedMargin | Yes | 设置组件的外边距。 &lt;br&gt;参数为Length类型时，四个方向外边距同时生效。 &lt;br&gt;默认值：0 &lt;br&gt;单位：vp &lt;br&gt;margin设置百分比时，上下左右外边距均以父容器的width作为基础值。在[Row](../arkts-apis/arkts-arkui-row-row-f.md/arkts-arkui-row-row-f.md#row)、[Column](../arkts-apis/arkts-arkui-column-column-f.md/arkts-arkui-column-column-f.md#column)、[Flex](../arkts-apis/arkts-arkui-flex-flex-f.md/arkts-arkui-flex-flex-f.md#flex)交叉轴上布 局时，子组件在交叉轴方向占用的空间包含子组件本身尺寸和margin值。 &lt;br&gt;例如Column容器宽100，其中子组件宽50，margin left为10，right为20，子组件宽度与左右margin之和为50+10+20=80，小于容器宽度100，子组件在交叉轴方向居中对齐，此时水平方向 左侧和右侧各有(100-80)/2=10的空白区域。<br>**Since:** 12 |
+| value | [Margin](../arkts-apis/arkts-arkui-margin-t.md) \| Length \| LocalizedMargin | Yes | Margin of the component to set. &lt;br&gt;When the parameter is of the **Length** type, the four margins take effect. &lt;br&gt;Default value: **0** &lt;br&gt;Unit: vp &lt;br&gt;When **margin** is set to a percentage, the width of the parent container is used as the basic value. When child components are laid out along the cross axis of the [Row](../arkts-apis/arkts-arkui-row-row-f.md/arkts-arkui-row-row-f.md#row), [Column](../arkts-apis/arkts-arkui-column-column-f.md/arkts-arkui-column-column-f.md#column), or [Flex](../arkts-apis/arkts-arkui-flex-flex-f.md/arkts-arkui-flex-flex-f.md#flex) container, the cross axis size of the child components and the margins add up to the total size of the container. &lt;br&gt;For example, if the width of the **Column** container is 100, the width of the child component is 50, the left margin is 10, and the right margin is 20, then the actual horizontal offset of the child component is 10.<br>**Since:** 12 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| T | 返回当前组件对象，用于链式调用。 |
+| T | Current component. |
 
 ## markAnchor
 
@@ -5287,7 +5423,8 @@ margin(value: Margin | Length | LocalizedMargin): T
 markAnchor(value: Position | LocalizedPosition): T
 ```
 
-设置元素在位置定位时的锚点，支持[attributeModifier](arkts-arkui-commonmethod-c.md#attributemodifier)动态设置属性方法。
+Sets the anchor for element positioning. This attribute supports dynamic configuration via  
+[attributeModifier](arkts-arkui-commonmethod-c.md#attributemodifier).
 
 **Since:** 7
 
@@ -5319,7 +5456,7 @@ markAnchor(value: Position | LocalizedPosition): T
 mask(value: ProgressMask): T
 ```
 
-为组件上添加可调节进度的遮罩。
+Adds a mask to the component to indicate the progress.
 
 **Since:** 12
 
@@ -5337,13 +5474,13 @@ mask(value: ProgressMask): T
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | [ProgressMask](arkts-arkui-progressmask-c.md) | Yes | 在当前组件上加上可动态设置进度、最大值和颜色的遮罩。 |
+| value | [ProgressMask](arkts-arkui-progressmask-c.md) | Yes | Mask to add to the component, which allows for dynamic adjustment of progress, maximum value, and color settings. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| T | 返回当前组件。 |
+| T | Current component. |
 
 ## mask
 
@@ -5351,7 +5488,8 @@ mask(value: ProgressMask): T
 mask(mask: Optional<ProgressMask>): T
 ```
 
-为组件上添加可调节进度的遮罩。与[mask&lt;sup&gt;12+&lt;/sup&gt;](arkts-arkui-commonmethod-c.md#mask)相比，新增了对undefined类型的支持。
+Adds a mask to the component to indicate the progress. Compared with   
+[mask&lt;sup&gt;12+&lt;/sup&gt;](arkts-arkui-commonmethod-c.md#mask), this API supports the **undefined** type.
 
 **Since:** 18
 
@@ -5369,13 +5507,13 @@ mask(mask: Optional<ProgressMask>): T
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| mask | [Optional](../arkts-apis/arkts-arkui-optional-t.md)&lt;ProgressMask&gt; | Yes | 在当前组件上加上可动态设置进度、最大值和颜色的遮罩。&lt;br/&gt;当mask的值为undefined时，恢复为无进度遮罩效果。 |
+| mask | [Optional](../arkts-apis/arkts-arkui-optional-t.md)&lt;ProgressMask&gt; | Yes | Mask to add to the component, which allows for dynamic adjustment of progress, maximum value, and color settings.&lt;br&gt;If **mask** is set to **undefined**, the component to revert to its original effect without the mask to indicate the progress. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| T | 返回当前组件。 |
+| T | Current component. |
 
 ## mask
 
@@ -5383,9 +5521,7 @@ mask(mask: Optional<ProgressMask>): T
 mask(value: CircleAttribute | EllipseAttribute | PathAttribute | RectAttribute | ProgressMask): T
 ```
 
-为组件上添加指定形状的遮罩。
-
-> **说明：**
+Adds a mask of the specified shape to the component.
 
 **Since:** 7
 
@@ -5393,7 +5529,7 @@ mask(value: CircleAttribute | EllipseAttribute | PathAttribute | RectAttribute |
 
 **Deprecated since:** 12
 
-**Substitutes:** [CommonMethod#maskShape](arkts-arkui-commonmethod-c.md#maskshape)(value:
+**Substitutes:** [CommonMethod#maskShape](arkts-arkui-commonmethod-c.md#maskshape)
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -5407,13 +5543,13 @@ mask(value: CircleAttribute | EllipseAttribute | PathAttribute | RectAttribute |
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | [CircleAttribute](arkts-arkui-circle-attribute.md) \| EllipseAttribute \| PathAttribute \| RectAttribute \| ProgressMask | Yes | 在当前组件上加上指定形状的遮 罩。 |
+| value | [CircleAttribute](arkts-arkui-circle-attribute.md) \| EllipseAttribute \| PathAttribute \| RectAttribute \| ProgressMask | Yes | Mask of the specified shape to add to the component. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| T | 返回当前组件。 |
+| T | Current component. |
 
 ## maskShape
 
@@ -5421,7 +5557,7 @@ mask(value: CircleAttribute | EllipseAttribute | PathAttribute | RectAttribute |
 maskShape(value: CircleShape | EllipseShape | PathShape | RectShape): T
 ```
 
-为组件上添加指定形状的遮罩。
+Adds a mask of the specified shape to the component.
 
 **Since:** 12
 
@@ -5441,13 +5577,13 @@ maskShape(value: CircleShape | EllipseShape | PathShape | RectShape): T
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | [CircleShape](../arkts-apis/arkts-arkui-arkui-shape-circleshape-c.md) \| EllipseShape \| PathShape \| RectShape | Yes | 在当前组件上加上指定形状的遮罩。 |
+| value | [CircleShape](../arkts-apis/arkts-arkui-arkui-shape-circleshape-c.md) \| EllipseShape \| PathShape \| RectShape | Yes | Mask of the specified shape to add to the component. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| T | 返回当前组件。 |
+| T | Current component. |
 
 ## maskShape
 
@@ -5455,8 +5591,8 @@ maskShape(value: CircleShape | EllipseShape | PathShape | RectShape): T
 maskShape(shape: Optional<CircleShape | EllipseShape | PathShape | RectShape>): T
 ```
 
-为组件上添加指定形状的遮罩。与  
-[maskShape&lt;sup&gt;12+&lt;/sup&gt;](arkts-arkui-commonmethod-c.md#maskshape)相比，新增了对undefined类型的支持。
+Adds a mask of the specified shape to the component. Compared with   
+[maskShape&lt;sup&gt;12+&lt;/sup&gt;](arkts-arkui-commonmethod-c.md#maskshape),this API supports the **undefined** type.
 
 **Since:** 18
 
@@ -5476,13 +5612,13 @@ maskShape(shape: Optional<CircleShape | EllipseShape | PathShape | RectShape>): 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| shape | [Optional](../arkts-apis/arkts-arkui-optional-t.md)&lt;[CircleShape](../arkts-apis/arkts-arkui-arkui-shape-circleshape-c.md) \| [EllipseShape](../arkts-apis/arkts-arkui-arkui-shape-ellipseshape-c.md) \| [PathShape](../arkts-apis/arkts-arkui-arkui-shape-pathshape-c.md) \| [RectShape](../arkts-apis/arkts-arkui-arkui-shape-rectshape-c.md)&gt; | Yes | 在当前组件上加上指定形状的遮罩。&lt;br/&gt;当shape的值为 undefined时，会重置当前值。 |
+| shape | [Optional](../arkts-apis/arkts-arkui-optional-t.md)&lt;[CircleShape](../arkts-apis/arkts-arkui-arkui-shape-circleshape-c.md) \| [EllipseShape](../arkts-apis/arkts-arkui-arkui-shape-ellipseshape-c.md) \| [PathShape](../arkts-apis/arkts-arkui-arkui-shape-pathshape-c.md) \| [RectShape](../arkts-apis/arkts-arkui-arkui-shape-rectshape-c.md)&gt; | Yes | Mask of the specified shape to add to the component.&lt;br&gt;If the value of **shape** is **undefined**, the current setting will be reset to its default state. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| T | 返回当前组件。 |
+| T | Current component. |
 
 ## materialFilter
 
@@ -5490,11 +5626,7 @@ maskShape(shape: Optional<CircleShape | EllipseShape | PathShape | RectShape>): 
 materialFilter(filter: Filter | undefined): T
 ```
 
-设置系统材质滤镜效果，系统材质滤镜的绘制早于[backgroundFilter](arkts-arkui-commonmethod-c.md#backgroundfilter)绘制，即位于backgroundFilter的更底层。
-
-> **说明：**
-> 
-> 该接口支持在[attributeModifier](arkts-arkui-commonmethod-c.md#attributemodifier)中调用。
+Sets the visual effect of the material filter. The effects it contains are rendered at a level before the shadow.
 
 **Since:** 23
 
@@ -5512,13 +5644,13 @@ materialFilter(filter: Filter | undefined): T
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| filter | [Filter](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-agent-filter-i.md) \| undefined | Yes | 系统材质滤镜视觉效果。设置为undefined时恢复为无系统材质滤镜效果。 |
+| filter | [Filter](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-agent-filter-i.md) \| undefined | Yes | Filter effect parameters. Undefined means to none material filter. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| T | 返回当前组件。 |
+| T |  |
 
 ## monopolizeEvents
 
@@ -5526,7 +5658,7 @@ materialFilter(filter: Filter | undefined): T
 monopolizeEvents(monopolize: boolean): T
 ```
 
-设置组件是否独占事件。
+Sets whether the component exclusively handles events.
 
 **Since:** 11
 
@@ -5538,17 +5670,19 @@ monopolizeEvents(monopolize: boolean): T
 
 <!--Device-CommonMethod-monopolizeEvents(monopolize: boolean): T--><!--Device-CommonMethod-monopolizeEvents(monopolize: boolean): T-End-->
 
+**System capability:** SystemCapability.ArkUI.ArkUI.Full
+
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| monopolize | boolean | Yes | 组件是否独占事件。true表示组件独占事件，false表示组件不独占事件。 默认值：false 说明： 1、如果第一根手指触发了组件事件独占，在抬起前又按下了一根手指，则第二根手指的交互继续处于组件独占状态，依次类推。 2、如果开发者通过[parallelGesture](arkts-arkui-commonmethod-c.md#parallelgesture)绑定了与子组件同时触发的手势，如PanGesture，子组件设置了独占控制且首个响应事件，则父组件的手势不会响应。 |
+| monopolize | boolean | Yes | Whether the component exclusively handles events. true: The component exclusively handles events. false: The component does not exclusively handle events. Default value: false. NOTE 1. If a component is exclusively handling events after a finger is pressed on it, and another finger is pressed before the first finger is lifted, the component continues to exclusively handle events while interacting with the second finger. The same case applies to a third and more fingers. 2. If a component is bound through [parallelGesture](arkts-arkui-commonmethod-c.md#parallelgesture) to a gesture, for example, pan gesture, that can also be triggered by its child component, and the child component has event monopolization and is the first to respond, then the parent will not respond to the gesture. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| T | 返回当前组件。 |
+| T |  |
 
 ## motionBlur
 
@@ -5556,21 +5690,27 @@ monopolizeEvents(monopolize: boolean): T
 motionBlur(value: MotionBlurOptions):T
 ```
 
-在当前组件由缩放大小或位移变化引起的运动过程中，增加动态模糊效果。
+Applies a motion blur effect to the component being scaled or moved.
 
-> **说明：**
+> **NOTE：**
 > 
-> - 不建议在组件内转场、共享元素转场、组件内隐式元素转场和粒子动画场景中使用该属性，否则会产生非预期效果。
+> - Do not use this API in intra-component transitions, shared element transitions, implicit element transitions,
+> or particle animations. Doing so may cause unexpected results.
 > 
-> - 该属性需要在开始状态将motionBlur的参数radius设置为0，否则冷启动时会有非预期效果。
+> - The **radius** parameter of **motionBlur** must be set to **0** for the initial state. Otherwise, there may be
+> unexpected results during a cold start.
 > 
-> - 该属性需要与动画的AnimateParam的onFinish参数配合使用，需要在运动模糊动画结束后将motionBlur的参数radius置为0，否则会产生非预期效果。
+> - This API must be used together with the **onFinish** parameter of **AnimateParam**. Its **radius** parameter
+> must be set to **0** when the animation ends; otherwise, there may be unexpected results.
 > 
-> - 在使用该属性过程中，不要在使用过程中频繁更改同一个组件的模糊半径，否则会产生非预期效果。比如示例中的动画，频繁点击会出现模糊效果偶尔失效的情况。
+> - When using this API, do not frequently change the blur radius of the same component; otherwise, there may be
+> unexpected results. For example, if you frequently click the image in the example, the blur effect may not work
+> sometimes.
 > 
-> - 运动模糊锚点坐标需要与动画缩放的锚点保持一致，否则会产生非预期效果。
+> - To avoid unexpected results, make sure the coordinates of the motion blur anchor point are the same as those of
+> the animation scaling anchor point.
 > 
-> - 模糊半径建议设置1以内，否则会产生非预期效果。
+> - To avoid unexpected results, set the blur radius to a value less than 1.
 
 **Since:** 12
 
@@ -5582,37 +5722,40 @@ motionBlur(value: MotionBlurOptions):T
 
 <!--Device-CommonMethod-motionBlur(value: MotionBlurOptions):T--><!--Device-CommonMethod-motionBlur(value: MotionBlurOptions):T-End-->
 
+**System capability:** SystemCapability.ArkUI.ArkUI.Full
+
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | [MotionBlurOptions](../arkts-apis/arkts-arkui-common-motionbluroptions-i.md) | Yes | 定义运动模糊参数。 |
+| value | [MotionBlurOptions](../arkts-apis/arkts-arkui-common-motionbluroptions-i.md) | Yes | Motion blur options. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| T | 返回当前组件。 |
+| T | Current component. |
 
 ## motionBlur
 
 ```TypeScript
-motionBlur(motionBlur: Optional<MotionBlurOptions>):T
+motionBlur(motionBlur: Optional<MotionBlurOptions>): T
 ```
 
-在当前组件由缩放大小或位移变化引起的运动过程中，增加动态模糊效果。与[motionBlur](arkts-arkui-commonmethod-c.md#motionblur)相比，motionBlur参数新增了对undefined类型的支持。
+Applies a motion blur effect to the component being scaled or moved. Compared with   
+[motionBlur](arkts-arkui-commonmethod-c.md#motionblur), this API supports the **undefined** type for the **motionBlur** parameter.
 
-1、不建议在组件内转场、共享元素转场、组件内隐式元素转场、粒子动画场景下使用该属性，否则会产生非预期效果。
+1. Do not use this API in intra-component transitions, shared element transitions, implicit element transitions,or particle animations. Doing so may cause unexpected results.
 
-2、该属性需要在开始状态将motionBlur的参数radius设置为0，否则冷启动时会有非预期效果。
+2. The **radius** parameter of **motionBlur** must be set to **0** for the initial state. Otherwise, there may be unexpected results during a cold start.
 
-3、该属性需要与动画的AnimateParam的onFinish参数配合使用，需要在运动模糊动画结束后将motionBlur的参数radius置为0，否则会产生非预期效果。
+3. This API must be used together with the **onFinish** parameter of **AnimateParam**. Its **radius** parameter must be set to **0** when the animation ends; otherwise, there may be unexpected results.
 
-4、在使用该属性过程中，不要在使用过程中频繁更改同一个组件的模糊半径，否则会产生非预期效果。比如示例中的动画，频繁点击会出现模糊效果偶尔失效的情况。
+4. When using this API, do not frequently change the blur radius of the same component; otherwise, there may be unexpected results. For example, if you frequently click the image in the example, the blur effect may not work sometimes.
 
-5、运动模糊锚点坐标需要与动画缩放的锚点保持一致，否则会产生非预期效果。
+5. To avoid unexpected results, make sure the coordinates of the motion blur anchor point are the same as those of the animation scaling anchor point.
 
-6、模糊半径建议设置1以内，否则会产生非预期效果。
+6. To avoid unexpected results, set the blur radius to a value less than 1.
 
 **Since:** 18
 
@@ -5622,19 +5765,21 @@ motionBlur(motionBlur: Optional<MotionBlurOptions>):T
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
-<!--Device-CommonMethod-motionBlur(motionBlur: Optional<MotionBlurOptions>):T--><!--Device-CommonMethod-motionBlur(motionBlur: Optional<MotionBlurOptions>):T-End-->
+<!--Device-CommonMethod-motionBlur(motionBlur: Optional<MotionBlurOptions>): T--><!--Device-CommonMethod-motionBlur(motionBlur: Optional<MotionBlurOptions>): T-End-->
+
+**System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| motionBlur | [Optional](../arkts-apis/arkts-arkui-optional-t.md)&lt;MotionBlurOptions&gt; | Yes | 定义运动模糊参数。&lt;br/&gt;当motionBlur的值为undefined时，维持之前取值。 |
+| motionBlur | [Optional](../arkts-apis/arkts-arkui-optional-t.md)&lt;MotionBlurOptions&gt; | Yes | Motion blur options.&lt;br&gt;If **motionBlur** is set to **undefined**, the previous value is retained. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| T | 返回当前组件。 |
+| T | Current component. |
 
 ## motionPath
 
@@ -5642,7 +5787,7 @@ motionBlur(motionBlur: Optional<MotionBlurOptions>):T
 motionPath(value: MotionPathOptions): T
 ```
 
-设置组件的路径动画。
+Sets a path animation for the component.
 
 **Since:** 7
 
@@ -5658,13 +5803,13 @@ motionPath(value: MotionPathOptions): T
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | [MotionPathOptions](../arkts-apis/arkts-arkui-common-motionpathoptions-i.md) | Yes | 设置组件的运动路径。 |
+| value | [MotionPathOptions](../arkts-apis/arkts-arkui-common-motionpathoptions-i.md) | Yes | Motion path of the component. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| T | 返回当前组件。 |
+| T | Current component. |
 
 ## mouseResponseRegion
 
@@ -5672,7 +5817,7 @@ motionPath(value: MotionPathOptions): T
 mouseResponseRegion(value: Array<Rectangle> | Rectangle): T
 ```
 
-设置一个或多个鼠标触摸热区。
+Sets one or more mouse response regions.
 
 **Since:** 10
 
@@ -5690,13 +5835,13 @@ mouseResponseRegion(value: Array<Rectangle> | Rectangle): T
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | Array&lt;Rectangle&gt; \| Rectangle | Yes | 鼠标触摸热区，包括位置和大小。&lt;br/&gt;默认触摸热区为整个组件，默认值：&lt;br/&gt;{&lt;br/&gt;x：0,&lt;br/&gt;y：0,&lt;br/&gt; width：'100%',&lt;br/&gt;height：'100%'&lt;br/&gt;} |
+| value | Array&lt;Rectangle&gt; \| Rectangle | Yes | Mouse response regions, defining the position and size.&lt;br&gt;The default touch target is the entire component. Default value:&lt;br&gt;{&lt;br&gt;x: 0,&lt;br&gt;y: 0,&lt;br&gt;width: '100%',&lt;br&gt; height: '100%'&lt;br&gt;} |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| T | 返回当前组件。 |
+| T | Current component. |
 
 ## nextFocus
 
@@ -5704,7 +5849,7 @@ mouseResponseRegion(value: Array<Rectangle> | Rectangle): T
 nextFocus(nextStep: Optional<FocusMovement>): T
 ```
 
-设置组件的自定义焦点走焦逻辑。
+Set nextFocus.
 
 **Since:** 18
 
@@ -5716,6 +5861,8 @@ nextFocus(nextStep: Optional<FocusMovement>): T
 
 <!--Device-CommonMethod-nextFocus(nextStep: Optional<FocusMovement>): T--><!--Device-CommonMethod-nextFocus(nextStep: Optional<FocusMovement>): T-End-->
 
+**System capability:** SystemCapability.ArkUI.ArkUI.Full
+
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
@@ -5726,7 +5873,7 @@ nextFocus(nextStep: Optional<FocusMovement>): T
 
 | Type | Description |
 | --- | --- |
-| T | 返回当前组件。 |
+| T |  |
 
 ## obscured
 
@@ -5734,11 +5881,11 @@ nextFocus(nextStep: Optional<FocusMovement>): T
 obscured(reasons: Array<ObscuredReasons>): T
 ```
 
-Sets obscured
+Sets how the component content is obscured.
 
-**Since:** 11
+**Since:** 10
 
-**ArkTS mode:** ArkTS-Dyn only, since version 11.
+**ArkTS mode:** ArkTS-Dyn only, since version 10.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -5752,13 +5899,13 @@ Sets obscured
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| reasons | Array&lt;[ObscuredReasons](../arkts-apis/arkts-arkui-obscuredreasons-e.md)&gt; | Yes | reasons of obscuration |
+| reasons | Array&lt;[ObscuredReasons](../arkts-apis/arkts-arkui-obscuredreasons-e.md)&gt; | Yes | How the component content is obscured.&lt;br&gt;This API is only available for the [Image](../../apis-image-kit/arkts-apis/arkts-multimedia-image.md/arkts-multimedia-image.md)&lt;!--Del--&gt;, [FormComponent](./form_component)&lt;sup&gt;12+&lt;/sup&gt;,&lt;!--DelEnd--&gt; and [Text](../../apis-arkgraphics2d/arkts-apis/arkts-graphics-text.md/arkts-graphics-text.md) components.&lt;br&gt;**NOTE：**&lt;br&gt;To obscure an image when it is being loaded, you must set the width and height of the **Image** component.&lt;br&gt;Obscuring is not available for **Text** components that have child components or have any [styled string](./styled_string) configured. &lt;br&gt;Default value: []. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| T |  |
+| T | Returns the current component. |
 
 ## offset
 
@@ -5766,7 +5913,9 @@ Sets obscured
 offset(value: Position | Edges | LocalizedEdges): T
 ```
 
-相对偏移，组件相对原本的布局位置进行偏移。和position一起使用时，position生效，offset不生效，支持[attributeModifier](arkts-arkui-commonmethod-c.md#attributemodifier)动态设置属性方法。
+Sets the offset of the component relative to its original position. When **offset** is used in combination with the  
+[position](arkts-arkui-commonmethod-c.md#position) attribute, the **position** attribute takes precedence and the configured offset will not be applied. This attribute supports dynamic configuration via  
+[attributeModifier](arkts-arkui-commonmethod-c.md#attributemodifier).
 
 **Since:** 7
 
@@ -5798,7 +5947,7 @@ offset(value: Position | Edges | LocalizedEdges): T
 onAccessibilityActionIntercept(callback: AccessibilityActionInterceptCallback): T
 ```
 
-注册可访问性操作拦截回调，当要执行可访问性操作时，将执行回调
+Register accessibility action intercept callback,when accessibility action is to be executed,the callback will be executed
 
 **Since:** 20
 
@@ -5818,7 +5967,7 @@ onAccessibilityActionIntercept(callback: AccessibilityActionInterceptCallback): 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AccessibilityActionInterceptCallback](arkts-arkui-accessibilityactioninterceptcallback-t.md) | Yes | 可访问性操作拦截回调函数 |
+| callback | [AccessibilityActionInterceptCallback](arkts-arkui-accessibilityactioninterceptcallback-t.md) | Yes | accessibility action intercept callback function |
 
 **Return value:**
 
@@ -5930,11 +6079,11 @@ prompt for current component and descendants unable to handle accessibility hove
 onAppear(event: () => void): T
 ```
 
-组件挂载后触发此回调。
+Triggered when this component appears.
 
-> **说明：**
+> **NOTE：**
 > 
-> 回调的调用时机有可能发生在组件布局渲染后。
+> This callback may be called after the component layout and rendering process.
 
 **Since:** 7
 
@@ -5952,13 +6101,13 @@ onAppear(event: () => void): T
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| event | () =&gt; void | Yes | onAppear事件的回调函数，表示组件已挂载显示。 |
+| event | () =&gt; void | Yes | Callback function of the **onAppear** event, which indicates that the component is displayed. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| T | 返回当前组件。 |
+| T | Current component. |
 
 ## onAreaChange
 
@@ -5966,17 +6115,19 @@ onAppear(event: () => void): T
 onAreaChange(event: (oldValue: Area, newValue: Area) => void): T
 ```
 
-组件区域变化时触发该回调。仅会响应由布局变化所导致的组件大小、位置发生变化时的回调。
+Triggered when the component area changes in size or position due to layout updates.
 
-由绘制变化所导致的渲染属性变化不会响应回调，如[translate](arkts-arkui-commonmethod-c.md#translate)、  
-[offset](arkts-arkui-commonmethod-c.md#offset)、[markAnchor](arkts-arkui-commonmethod-c.md#markanchor)、  
-[scale](arkts-arkui-commonmethod-c.md#scale)、[transform](arkts-arkui-commonmethod-c.md#transform)。若组件自身位置由绘制变化决定也不会响应回调，如[bindSheet](arkts-arkui-commonmethod-c.md#bindsheet)。
+This event is not triggered for render attribute changes caused by re-rendering, such as changes to  
+[translate](arkts-arkui-commonmethod-c.md#translate), [offset](arkts-arkui-commonmethod-c.md#offset),  
+[markAnchor](arkts-arkui-commonmethod-c.md#markanchor), [scale](arkts-arkui-commonmethod-c.md#scale), or  
+[transform](arkts-arkui-commonmethod-c.md#transform). In addition, if the component position is altered due to drawing changes, for example, through [bindSheet](arkts-arkui-commonmethod-c.md#bindsheet), this event is also not triggered.
 
-> **说明：**
+> **NOTE：**
 > 
-> 当组件同时绑定onAreaChange事件和[position](arkts-arkui-commonmethod-c.md#position)属性时，onAreaChange事件响应设置
-> [Position](../arkts-apis/arkts-arkui-position-t.md/arkts-arkui-position-t.md)类型的position属性变化，不响应设置[Edges](../arkts-apis/arkts-arkui-graphics-edges-i.md/arkts-arkui-graphics-edges-i.md)和[LocalizedEdges](../arkts-apis/arkts-arkui-units-localizededges-i.md/arkts-arkui-units-localizededges-i.md)
-> 类型的position属性变化。
+> When a component is bound to both the **onAreaChange** event and the [position](arkts-arkui-commonmethod-c.md#position)
+> attribute, the **onAreaChange** event responds to changes in the **position** attribute of type
+> [Position](../arkts-apis/arkts-arkui-position-t.md/arkts-arkui-position-t.md), but does not respond to changes in the **position** attribute of type
+> [Edges](../arkts-apis/arkts-arkui-graphics-edges-i.md/arkts-arkui-graphics-edges-i.md) or [LocalizedEdges](../arkts-apis/arkts-arkui-units-localizededges-i.md/arkts-arkui-units-localizededges-i.md).
 
 **Since:** 8
 
@@ -5992,13 +6143,13 @@ onAreaChange(event: (oldValue: Area, newValue: Area) => void): T
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| event | (oldValue: Area, newValue: Area) =&gt; void | Yes | 返回目标元素位置信息变化情况，oldValue为目标元素变化之前的宽高以及目标元素相对父元素和页面左上角的坐标位置。newValue为目标元素变化之后的宽高以及目标元素相对父 元素和页面左上角的坐标位置。 |
+| event | (oldValue: Area, newValue: Area) =&gt; void | Yes | Position information of the target element. **oldValue** indicates the width and height of the target element as well as its coordinates relative to the parent element and the upper left corner of the page before the change. **newValue** indicates these dimensions and coordinates after the change. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| T | 返回当前组件。 |
+| T | Current component. |
 
 ## onAreaChange
 
@@ -6006,7 +6157,7 @@ onAreaChange(event: (oldValue: Area, newValue: Area) => void): T
 onAreaChange(event: AreaChangeCallback, options?: AreaChangeOptions): T
 ```
 
-组件区域变化时触发该回调，可通过[AreaChangeOptions](arkts-arkui-areachangeoptions-i.md)中的expectedUpdateInterval设置触发回调的间隔。仅会响应由布局变化所导致的组件大小、位置发生变化时的回调。
+Triggered when the component area changes. The interval at which the callback is triggered can be set using expectedUpdateInterval in [AreaChangeOptions](arkts-arkui-areachangeoptions-i.md). This event is triggered only in response to changes in component size or position caused by layout updates.
 
 **Since:** 26.0.0
 
@@ -6024,14 +6175,14 @@ onAreaChange(event: AreaChangeCallback, options?: AreaChangeOptions): T
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| event | [AreaChangeCallback](arkts-arkui-areachangecallback-t.md) | Yes | onAreaChange事件的回调函数。组件显示的尺寸、位置发生变化时触发该回调。 |
-| options | [AreaChangeOptions](../arkts-apis/arkts-arkui-common-areachangeoptions-i.md) | No | 区域变化相关的参数。缺省时，expectedUpdateInterval时间间隔按照0处理。 |
+| event | [AreaChangeCallback](arkts-arkui-areachangecallback-t.md) | Yes | Callback function for the **onAreaChange** event. Triggered when the component's size or position changes. |
+| options | [AreaChangeOptions](../arkts-apis/arkts-arkui-common-areachangeoptions-i.md) | No | Parameters related to the area change. If not specified, **expectedUpdateInterval** is treated as **0**. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| T | 返回当前组件。 |
+| T | Current component. |
 
 ## onAttach
 
@@ -6039,13 +6190,14 @@ onAreaChange(event: AreaChangeCallback, options?: AreaChangeOptions): T
 onAttach(callback: Callback<void>): T
 ```
 
-组件挂载到组件树时触发此回调。由于以下说明中的限制，建议使用[onAppear](arkts-arkui-commonmethod-c.md#onappear)替代此接口。
+Triggered when this component is mounted to the component tree. Due to the following limitations, it is recommended that you use [onAppear](arkts-arkui-commonmethod-c.md#onappear) instead of this callback.
 
-> **说明：**
+> **NOTE：**
 > 
-> - 回调在组件布局渲染前调用。
+> - This callback is triggered before the component layout and rendering process.
 > 
-> - 不允许在回调中对组件树进行变更，例如启动动画或使用if-else变更组件树结构。
+> - Modifying the component tree within the callback is prohibited, including initiating animations or altering the
+> component structure through conditional statements like **if-else**.
 
 **Since:** 12
 
@@ -6063,13 +6215,13 @@ onAttach(callback: Callback<void>): T
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;void&gt; | Yes | onAttach事件的回调函数，表示组件已经挂载至组件树。 |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;void&gt; | Yes | Callback function of the **onAttach** event, indicating that the component has been mounted to the component tree. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| T | 返回当前组件。 |
+| T | Current component. |
 
 ## onAxisEvent
 
@@ -6077,7 +6229,7 @@ onAttach(callback: Callback<void>): T
 onAxisEvent(event: Callback<AxisEvent>): T
 ```
 
-鼠标滚轮滚动或触控板双指轻触滑动、双指捏合时触发该回调。
+Triggered by mouse wheel scrolling, a two-finger sliding gesture, or a pinch gesture on the touchpad.
 
 **Since:** 17
 
@@ -6095,13 +6247,13 @@ onAxisEvent(event: Callback<AxisEvent>): T
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| event | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;AxisEvent&gt; | Yes | 获得[AxisEvent](arkts-arkui-axisevent-i.md)对象。 |
+| event | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;AxisEvent&gt; | Yes | [AxisEvent](arkts-arkui-axisevent-i.md) object. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| T | 返回当前组件。 |
+| T | Current component. |
 
 ## onBlur
 
@@ -6109,7 +6261,7 @@ onAxisEvent(event: Callback<AxisEvent>): T
 onBlur(event: () => void): T
 ```
 
-当前组件失去焦点时触发的回调。
+Triggered when the current component loses focus.
 
 **Since:** 8
 
@@ -6125,13 +6277,13 @@ onBlur(event: () => void): T
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| event | () =&gt; void | Yes | onBlur的回调函数，表示组件已失焦。 |
+| event | () =&gt; void | Yes | Callback function of **onBlur**, which indicates that the component has lost focus. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| T | 返回当前组件。 |
+| T | Current component. |
 
 ## onChildTouchTest
 
@@ -6139,13 +6291,14 @@ onBlur(event: () => void): T
 onChildTouchTest(event: (value: Array<TouchTestInfo>) => TouchResult): T
 ```
 
-当前组件通过设置回调，可自定义触摸测试并控制触摸测试中的子节点行为。
+Allows the current component to customize the hit test and control child component behavior during the test by setting a callback.
 
-> **说明：**
+> **NOTE：**
 > 
-> - 子节点信息数组中仅包含命名节点的信息，即开发者通过id属性设置了id的节点。
+> - The array of child node information only includes information about named nodes, that is, nodes for which the
+> **id** attribute is explicitly set.
 > 
-> - 从API version 20开始，该接口支持在[attributeModifier](arkts-arkui-commonmethod-c.md#attributemodifier)中调用。
+> - This API can be called in [attributeModifier](arkts-arkui-commonmethod-c.md#attributemodifier) since API version 20.
 
 **Since:** 11
 
@@ -6163,13 +6316,13 @@ onChildTouchTest(event: (value: Array<TouchTestInfo>) => TouchResult): T
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| event | (value: Array&lt;TouchTestInfo&gt;) =&gt; TouchResult | Yes | 触摸事件信息。value的值为包含子节点信息的数组。 |
+| event | (value: Array&lt;TouchTestInfo&gt;) =&gt; TouchResult | Yes | Touch event information. **value**: array of child node information. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| T | 返回当前组件。 |
+| T | Current component. |
 
 ## onClick
 
@@ -6177,17 +6330,18 @@ onChildTouchTest(event: (value: Array<TouchTestInfo>) => TouchResult): T
 onClick(event: (event: ClickEvent) => void): T
 ```
 
-点击动作触发该回调。
+Called when a click event occurs.
 
-触发点击事件的设备类型为键盘或手柄时，事件的SourceTool值为Unknown，事件的[SourceType](arkts-arkui-sourcetype-e.md)值为KEY，JOYSTICK。
+When triggered by keyboard or gamepad input, the event's **SourceTool** is **Unknown**, and  
+[SourceType](arkts-arkui-sourcetype-e.md) is **KEY** or **JOYSTICK**.
 
-> **说明：**
+> **NOTE：**
 > 
-> 从API version 9开始，使用卡片能力时存在以下限制：
+> Since API version 9, the following constraints apply when this API is used in service widgets:
 > 
-> 1. 如果手指按下的持续时间超过800ms，不能触发点击事件。
+> 1. Click events will not be triggered if the finger is pressed for more than 800 ms.
 > 
-> 2. 如果手指按下后移动位移超过20px，不能触发点击事件。
+> 2. Click events will not be triggered if the finger moves more than 20 px after pressing down.
 
 **Since:** 7
 
@@ -6205,13 +6359,13 @@ onClick(event: (event: ClickEvent) => void): T
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| event | (event: ClickEvent) =&gt; void | Yes | 点击事件的回调函数。 |
+| event | (event: ClickEvent) =&gt; void | Yes | Callback for the click event. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| T | 返回当前组件。 |
+| T | Current component. |
 
 ## onClick
 
@@ -6219,21 +6373,22 @@ onClick(event: (event: ClickEvent) => void): T
 onClick(event: Callback<ClickEvent>, distanceThreshold: number): T
 ```
 
-点击动作触发该回调。
+Called when a click event occurs.
 
-当触发点击事件的设备类型为键盘或手柄时，事件的[SourceTool](arkts-arkui-sourcetool-e.md)值为Unknown，事件的[SourceType](arkts-arkui-sourcetype-e.md)值为KEY或JOYSTICK。
+When triggered by keyboard or gamepad input, the event's [SourceTool](arkts-arkui-sourcetool-e.md) is **Unknown**, and  
+[SourceType](arkts-arkui-sourcetype-e.md) is **KEY** or **JOYSTICK**.
 
-新增distanceThreshold参数，设置点击手势移动阈值。手指移动超出阈值时，点击手势识别失败。
+Compared with the original **onClick** API, this API has the **distanceThreshold** parameter that specifies the finger movement threshold for click events. If the finger's movement exceeds the set threshold, the gesture recognition will fail. The click gesture recognition will fail if finger movement exceeds this threshold.
 
-对于无手指移动距离限制的点击场景，建议使用原有接口。若需限制点击时手指移动范围，建议使用该接口。
+For scenarios where there is no restriction on the finger movement distance during a click, the original API is preferred. To limit finger movement range during a click, use this new API.
 
-> **说明：**
+> **NOTE：**
 > 
-> - 从API version 12开始，在使用卡片能力时，存在以下限制：
-> > 1. 如果手指按下的持续时间超过800ms，不能触发点击事件。
-> > 2. 如果手指按下后移动位移超过20px，不能触发点击事件。
+> - Since API version 12, the following constraints apply when this API is used in service widgets:
+> > 1. Click events will not be triggered if the finger is pressed for more than 800 ms.
+> > 2. Click events will not be triggered if the finger moves more than 20 px after pressing down.
 > 
-> - 该接口不支持在[attributeModifier](arkts-arkui-commonmethod-c.md#attributemodifier)中调用。
+> - This API cannot be called within [attributeModifier](arkts-arkui-commonmethod-c.md#attributemodifier).
 
 **Since:** 12
 
@@ -6253,14 +6408,14 @@ onClick(event: Callback<ClickEvent>, distanceThreshold: number): T
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| event | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;ClickEvent&gt; | Yes | 点击事件的回调函数。 |
-| distanceThreshold | number | Yes | 点击事件移动阈值。当设置的值小于等于0时，会被转化为默认值。&lt;br/&gt;默认值：2^31-1&lt;br/&gt;单位：vp&lt;br/&gt;**说明：**&lt;br/&gt;当手指的移 动距离超出开发者预设的移动阈值时，点击识别失败。如果初始化为默认阈值时，手指移动超过组件热区范围，点击识别失败。 |
+| event | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;ClickEvent&gt; | Yes | Callback for the click event. |
+| distanceThreshold | number | Yes | Finger movement threshold for click events. If the value specified is less than or equal to 0, it will be converted to the default value.&lt;br&gt;Default value: 2^31-1&lt;br&gt;Unit: vp&lt;br&gt;**NOTE：**&lt;br&gt;If the finger movement exceeds the preset movement threshold, the gesture recognition fails. If the default threshold is used during initialization and the finger moves beyond the component's touch target, the gesture recognition fails. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| T | 返回当前组件。 |
+| T | Current component. |
 
 ## onDetach
 
@@ -6268,7 +6423,8 @@ onClick(event: Callback<ClickEvent>, distanceThreshold: number): T
 onDetach(callback: Callback<void>): T
 ```
 
-组件从组件树卸载时触发此回调。建议使用[onDisAppear](arkts-arkui-commonmethod-c.md#ondisappear)替代此接口。
+Triggered when this component is unmounted from the component tree. You are advised to use  
+[onDisAppear](arkts-arkui-commonmethod-c.md#ondisappear) instead.
 
 **Since:** 12
 
@@ -6286,13 +6442,13 @@ onDetach(callback: Callback<void>): T
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;void&gt; | Yes | onDetach事件的回调函数，表示组件已经从组件树卸载。 |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;void&gt; | Yes | Callback function of the **onDetach** event, indicating that the component has been unmounted from the component tree. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| T | 返回当前组件。 |
+| T | Current component. |
 
 ## onDigitalCrown
 
@@ -6300,11 +6456,11 @@ onDetach(callback: Callback<void>): T
 onDigitalCrown(handler: Optional<Callback<CrownEvent>>): T
 ```
 
-组件获焦以后旋转表冠时触发该回调。
+Called when the crown is rotated while the component has focus.
 
-> **说明：**
+> **NOTE：**
 > 
-> 该接口不支持在[attributeModifier](arkts-arkui-commonmethod-c.md#attributemodifier)中调用。
+> This API cannot be called within [attributeModifier](arkts-arkui-commonmethod-c.md#attributemodifier).
 
 **Since:** 18
 
@@ -6328,7 +6484,7 @@ onDigitalCrown(handler: Optional<Callback<CrownEvent>>): T
 
 | Type | Description |
 | --- | --- |
-| T | 返回当前组件。 |
+| T | Current component. |
 
 ## onDisAppear
 
@@ -6336,7 +6492,7 @@ onDigitalCrown(handler: Optional<Callback<CrownEvent>>): T
 onDisAppear(event: () => void): T
 ```
 
-组件从组件树卸载时触发此回调。
+Triggered when this component disappears.
 
 **Since:** 7
 
@@ -6354,13 +6510,13 @@ onDisAppear(event: () => void): T
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| event | () =&gt; void | Yes | onDisAppear事件的回调函数，表示组件已卸载消失。 |
+| event | () =&gt; void | Yes | Callback function of the **onDisAppear** event, which indicates that the component is hidden. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| T | 返回当前组件。 |
+| T | Current component. |
 
 ## onDragEnd
 
@@ -6368,7 +6524,7 @@ onDisAppear(event: () => void): T
 onDragEnd(event: (event: DragEvent, extraParams?: string) => void): T
 ```
 
-绑定此事件的组件触发的拖拽结束后，触发回调。
+Triggered when the dragging of the component bound to the event ends.
 
 **Since:** 10
 
@@ -6386,13 +6542,13 @@ onDragEnd(event: (event: DragEvent, extraParams?: string) => void): T
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| event | (event: DragEvent, extraParams?: string) =&gt; void | Yes | 回调函数。&lt;br/&gt;**说明：**&lt;br/&gt; event为拖拽事件信息，在onDragEnd调用中不包括拖拽点坐标。&lt;br/&gt; extraParams为拖拽事件额外信息，需要 解析为JSON格式。 |
+| event | (event: DragEvent, extraParams?: string) =&gt; void | Yes | Callback function.&lt;br&gt;**NOTE：**&lt;br&gt; **event**: drag event information. The coordinates of the drag point are not included in **onDragEnd**.&lt;br&gt; **extraParams**: additional information about the drag event. Its value must be parsed into JSON format. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| T | 返回当前组件。 |
+| T | Current component. |
 
 ## onDragEnter
 
@@ -6400,7 +6556,8 @@ onDragEnd(event: (event: DragEvent, extraParams?: string) => void): T
 onDragEnter(event: (event: DragEvent, extraParams?: string) => void): T
 ```
 
-拖拽进入组件范围内时，触发回调，当监听了[onDrop](arkts-arkui-commonmethod-c.md#ondrop)事件时，此事件才有效。
+Triggered when a dragged item enters a valid drop target. This event takes effect only when a listener for the  
+[onDrop](arkts-arkui-commonmethod-c.md#ondrop) event is enabled.
 
 **Since:** 8
 
@@ -6416,13 +6573,13 @@ onDragEnter(event: (event: DragEvent, extraParams?: string) => void): T
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| event | (event: DragEvent, extraParams?: string) =&gt; void | Yes | 回调函数。&lt;br/&gt;**说明：**&lt;br/&gt; event为拖拽事件信息，包括拖拽点坐标。&lt;br/&gt; extraParams为拖拽事件额外信息，需要解析为JSON格式。 |
+| event | (event: DragEvent, extraParams?: string) =&gt; void | Yes | Callback function.&lt;br&gt;**NOTE：**&lt;br&gt; **event**: drag event information, including the coordinates of the drag point.&lt;br&gt; **extraParams**: additional information about the drag event. Its value must be parsed into JSON format. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| T | 返回当前组件。 |
+| T | Current component. |
 
 ## onDragLeave
 
@@ -6430,7 +6587,8 @@ onDragEnter(event: (event: DragEvent, extraParams?: string) => void): T
 onDragLeave(event: (event: DragEvent, extraParams?: string) => void): T
 ```
 
-拖拽离开组件范围内时，触发回调，当监听了[onDrop](arkts-arkui-commonmethod-c.md#ondrop)事件时，此事件才有效。
+Triggered when a dragged item leaves a valid drop target. This event takes effect only when a listener for the  
+[onDrop](arkts-arkui-commonmethod-c.md#ondrop) event is enabled.
 
 **Since:** 8
 
@@ -6446,13 +6604,13 @@ onDragLeave(event: (event: DragEvent, extraParams?: string) => void): T
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| event | (event: DragEvent, extraParams?: string) =&gt; void | Yes | 回调函数。&lt;br/&gt;**说明：**&lt;br/&gt; event为拖拽事件信息，包括拖拽点坐标。&lt;br/&gt; extraParams为拖拽事件额外信息，需要解析为JSON格式。 |
+| event | (event: DragEvent, extraParams?: string) =&gt; void | Yes | Callback function.&lt;br&gt;**NOTE：**&lt;br&gt; **event**: drag event information, including the coordinates of the drag point.&lt;br&gt; **extraParams**: additional information about the drag event. Its value must be parsed into JSON format. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| T | 返回当前组件。 |
+| T | Current component. |
 
 ## onDragMove
 
@@ -6460,7 +6618,8 @@ onDragLeave(event: (event: DragEvent, extraParams?: string) => void): T
 onDragMove(event: (event: DragEvent, extraParams?: string) => void): T
 ```
 
-拖拽在组件范围内移动时，触发回调，当监听了[onDrop](arkts-arkui-commonmethod-c.md#ondrop)事件时，此事件才有效。
+Triggered when a dragged item moves in a valid drop target. This event takes effect only when a listener for the  
+[onDrop](arkts-arkui-commonmethod-c.md#ondrop) event is enabled.
 
 **Since:** 8
 
@@ -6476,13 +6635,13 @@ onDragMove(event: (event: DragEvent, extraParams?: string) => void): T
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| event | (event: DragEvent, extraParams?: string) =&gt; void | Yes | 回调函数。&lt;br/&gt;**说明：**&lt;br/&gt; event为拖拽事件信息，包括拖拽点坐标。&lt;br/&gt; extraParams为拖拽事件额外信息，需要解析为JSON格式。 |
+| event | (event: DragEvent, extraParams?: string) =&gt; void | Yes | Callback function.&lt;br&gt;**NOTE：**&lt;br&gt; **event**: drag event information, including the coordinates of the drag point.&lt;br&gt; **extraParams**: additional information about the drag event. Its value must be parsed into JSON format. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| T | 返回当前组件。 |
+| T | Current component. |
 
 ## onDragSpringLoading
 
@@ -6490,9 +6649,10 @@ onDragMove(event: (event: DragEvent, extraParams?: string) => void): T
 onDragSpringLoading(callback: Callback<SpringLoadingContext> | null, configuration?: DragSpringLoadingConfiguration): T
 ```
 
-绑定此事件的组件可作为具有悬停检测功能的拖拽响应目标。当拖拽对象悬停在目标上时，触发回调通知。此时只有一个目标可以成为响应方，并且子组件始终具有更高的响应优先级。
+The component bound to this event can be used as a drag-response target with hover detection capability. When the dragged object hovers over the target, the callback is triggered. Only one target can become the responder at any time, and child components always have higher response priority.
 
-关于悬停检测的触发机制及详细使用方法，请参考开发指南[支持悬停检测](../../../ui/arkts-common-events-drag-event.md#支持悬停检测)。
+For details about the hover detection triggering mechanism and usage, see  
+[Spring Loading (Hover Detection) Support](../../../ui/arkts-common-events-drag-event.md#spring-loading-hover-detection-support).
 
 **Since:** 20
 
@@ -6510,14 +6670,14 @@ onDragSpringLoading(callback: Callback<SpringLoadingContext> | null, configurati
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;SpringLoadingContext&gt; \| null | Yes | 悬停检测回调函数，当值为null时禁用悬停检测。 |
-| configuration | [DragSpringLoadingConfiguration](arkts-arkui-dragspringloadingconfiguration-t.md) | No | 悬停检测配置信息，为undefined时取 [DragSpringLoadingConfiguration](../arkts-apis/arkts-arkui-dragcontroller-dragspringloadingconfiguration-i.md/arkts-arkui-dragcontroller-dragspringloadingconfiguration-i.md) 默认值。 |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;SpringLoadingContext&gt; \| null | Yes | Hover detection callback. If the value is **null**, hover detection is disabled. |
+| configuration | [DragSpringLoadingConfiguration](arkts-arkui-dragspringloadingconfiguration-t.md) | No | Hover detection configuration. If the value is **undefined**, the default value of [DragSpringLoadingConfiguration](../arkts-apis/arkts-arkui-dragcontroller-dragspringloadingconfiguration-i.md/arkts-arkui-dragcontroller-dragspringloadingconfiguration-i.md) is used. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| T | 返回当前组件。 |
+| T | Current component. |
 
 ## onDragStart
 
@@ -6525,19 +6685,20 @@ onDragSpringLoading(callback: Callback<SpringLoadingContext> | null, configurati
 onDragStart(event: (event: DragEvent, extraParams?: string) => CustomBuilder | DragItemInfo): T
 ```
 
-在手势拖拽场景中，在可拖拽的组件上长按时间超过500ms，然后手指移动距离大于10vp时触发此回调；在鼠标拖拽场景中，鼠标左键在可拖拽的组件上按下并移动超过1vp时，即可触发此回调。
+In a gesture-based drag scenario, this callback is triggered when a user long-presses a draggable component for more than 500 ms and then moves the finger more than 10 vp. In a mouse-drag scenario, it is triggered when the left mouse button is pressed on a draggable component and moved more than 1 vp.
 
-针对默认支持拖拽能力的组件，如果开发者设置了onDragStart，优先执行onDragStart，并根据执行情况决定是否使用系统默认的拖拽能力，具体规则为：
+For components that provide drag and drop capabilities by default, a custom **onDragStart** event, if set, is executed and:
 
-- 如果开发者返回了自定义预览图，则不再使用系统默认的拖拽预览图；  
-- 如果开发者设置了拖拽数据，则不再使用系统默认填充的拖拽数据。
+- If a custom drag preview is returned, it is used in place of the default drag preview.  
+- If drag data is set, it is used in place of the default drag data.
 
-文本类组件[Text](../../apis-arkgraphics2d/arkts-apis/arkts-graphics-text.md/arkts-graphics-text.md)、[Search](../arkts-apis/arkts-arkui-search-search-f.md/arkts-arkui-search-search-f.md#search)、[TextInput](text_input)、[TextArea](text_area)、  
-[RichEditor](rich_editor)对选中的文本内容进行拖拽时，不支持自定义预览图。当onDragStart与菜单预览一起使用或使用了默认支持拖拽能力的组件时，预览及菜单项上的自定义内容不支持拖拽。
+The custom drag preview is not supported for dragging selected text in the following components:  
+[Text](../../apis-arkgraphics2d/arkts-apis/arkts-graphics-text.md/arkts-graphics-text.md), [Search](../arkts-apis/arkts-arkui-search-search-f.md/arkts-arkui-search-search-f.md#search), [TextInput](text_input), [TextArea](text_area),  
+[RichEditor](rich_editor) When **onDragStart** is used with menu preview or any component that provides default drag and drop capabilities, custom content on menu items and the preview cannot be dragged.
 
-> **说明：**
+> **NOTE：**
 > 
-> 从API version 13开始，该接口支持在[attributeModifier](arkts-arkui-commonmethod-c.md#attributemodifier)中调用。
+> This API can be called in [attributeModifier](arkts-arkui-commonmethod-c.md#attributemodifier) since API version 13.
 
 **Since:** 8
 
@@ -6553,13 +6714,13 @@ onDragStart(event: (event: DragEvent, extraParams?: string) => CustomBuilder | D
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| event | (event: DragEvent, extraParams?: string) =&gt; CustomBuilder \| DragItemInfo | Yes | 回调函数。&lt;br/&gt; **说明：**&lt;br/&gt; event参数为拖拽事件的信息。&lt;br/&gt; extraParams参数为拖拽事件的额外信息，需要解析为JSON格式。 &lt;br/&gt;CustomBuilder为拖拽过程中显示的组件信息，不支持全局builder。 |
+| event | (event: DragEvent, extraParams?: string) =&gt; CustomBuilder \| DragItemInfo | Yes | Callback function.&lt;br&gt; **NOTE：**&lt;br&gt; **event**: drag event information.&lt;br&gt; **extraParams**: additional information about the drag event. Its value must be parsed into JSON format.&lt;br&gt; **CustomBuilder**: component information displayed during dragging. Global builders are not supported. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| T | 返回当前组件。 |
+| T | Current component. |
 
 ## onDrop
 
@@ -6567,7 +6728,8 @@ onDragStart(event: (event: DragEvent, extraParams?: string) => CustomBuilder | D
 onDrop(event: (event: DragEvent, extraParams?: string) => void): T
 ```
 
-绑定此事件的组件可作为释放目标。当在本组件范围内停止拖放行为时，将触发回调。如果开发者未在onDrop中主动调用event.setResult()来设置拖拽接收的结果，对于系统支持的默认可拖入组件，处理结果将以系统实际处理的数据为准。对于其他组件，系统将默认视为数据接收成功。
+A component bound with this event can serve as a drop target. This callback is triggered when the drag-and-drop action stops within the bounds of this component If **event.setResult()** is not explicitly called in the  
+**onDrop** callback to set the drag-and-drop result, then: For supported components, the result is determined based on the actual data processed; for other components, the system considers the data as successfully received.
 
 **Since:** 8
 
@@ -6583,13 +6745,13 @@ onDrop(event: (event: DragEvent, extraParams?: string) => void): T
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| event | (event: DragEvent, extraParams?: string) =&gt; void | Yes | 回调函数。&lt;br/&gt;**说明：**&lt;br/&gt; event为拖拽事件信息，包括拖拽点坐标。&lt;br/&gt; extraParams为拖拽事件额外信息，需要解析为JSON格式。 |
+| event | (event: DragEvent, extraParams?: string) =&gt; void | Yes | Callback function.&lt;br&gt;**NOTE：**&lt;br&gt; **event**: drag event information, including the coordinates of the drag point.&lt;br&gt; **extraParams**: additional information about the drag event. Its value must be parsed into JSON format. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| T | 返回当前组件。 |
+| T | Current component. |
 
 ## onDrop
 
@@ -6597,7 +6759,12 @@ onDrop(event: (event: DragEvent, extraParams?: string) => void): T
 onDrop(eventCallback: OnDragEventCallback, dropOptions?: DropOptions): T
 ```
 
-绑定此事件的组件可作为拖拽释放目标，当在本组件范围内停止拖拽行为时，触发回调。如果开发者没有在onDrop中主动调用event.[setResult](arkts-arkui-dragevent-i.md#setresult)()设置拖拽接收的结果，若拖拽组件为系统支持默认拖入的组件，以系统实际处理数据结果为准，其它组件则系统按照数据接收成功处理。
+Triggered when a dragged item is dropped on a valid drop target. If you do not explicitly call event.  
+[setResult](arkts-arkui-dragevent-i.md#setresult)() in **onDrop** to set the result of the drag reception, the system handles it as follows:
+
+- If the component being dragged is one that supports drop actions by default, the system's actual data processing  
+result is used.  
+- For other components, the system assumes that the data is received successfully.
 
 **Since:** 15
 
@@ -6615,14 +6782,14 @@ onDrop(eventCallback: OnDragEventCallback, dropOptions?: DropOptions): T
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| eventCallback | [OnDragEventCallback](../arkts-apis/arkts-arkui-ondrageventcallback-t.md) | Yes | 回调函数。 |
-| dropOptions | [DropOptions](arkts-arkui-dropoptions-i.md) | No | 落入过程的参数。 |
+| eventCallback | [OnDragEventCallback](../arkts-apis/arkts-arkui-ondrageventcallback-t.md) | Yes | Callback function. |
+| dropOptions | [DropOptions](arkts-arkui-dropoptions-i.md) | No | Parameters for the drop process. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| T | 返回当前组件。 |
+| T | Current component. |
 
 ## onFocus
 
@@ -6630,7 +6797,7 @@ onDrop(eventCallback: OnDragEventCallback, dropOptions?: DropOptions): T
 onFocus(event: () => void): T
 ```
 
-当前组件获取焦点时触发的回调。
+Triggered when the current component obtains focus.
 
 **Since:** 8
 
@@ -6646,13 +6813,13 @@ onFocus(event: () => void): T
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| event | () =&gt; void | Yes | onFocus的回调函数，表示组件已获焦。 |
+| event | () =&gt; void | Yes | Callback function of **onFocus**, indicating that the component has gained focus. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| T | 返回当前组件。 |
+| T | Current component. |
 
 ## onFocusAxisEvent
 
@@ -6660,7 +6827,7 @@ onFocus(event: () => void): T
 onFocusAxisEvent(event: Callback<FocusAxisEvent>): T
 ```
 
-给组件绑定焦点轴事件回调。绑定该方法的组件获焦后，游戏手柄上的摇杆、十字键等的操作会触发该回调。
+Binds a focus axis event callback to the component. Triggered when any operation is performed with the game controller's directional pad or joystick on the bound component.
 
 **Since:** 15
 
@@ -6678,13 +6845,13 @@ onFocusAxisEvent(event: Callback<FocusAxisEvent>): T
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| event | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;FocusAxisEvent&gt; | Yes | 焦点轴事件回调。 |
+| event | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;FocusAxisEvent&gt; | Yes | Focus axis event callback. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| T | 返回当前组件。 |
+| T | Current component. |
 
 ## onGestureCollectIntercept
 
@@ -6692,7 +6859,7 @@ onFocusAxisEvent(event: Callback<FocusAxisEvent>): T
 onGestureCollectIntercept(callback: GestureCollectInterceptCallback): T
 ```
 
-在当前节点及更高优先级节点上的事件和手势被收集完成后触发该回调。该回调可用于干预事件和手势的收集结果。使用callback异步回调。
+Triggered after events and gestures on the current node and higher-priority nodes are collected. This callback can be used to intervene in the collection results of events and gestures. This callback uses an asynchronous callback.
 
 **Since:** 26.0.0
 
@@ -6710,13 +6877,13 @@ onGestureCollectIntercept(callback: GestureCollectInterceptCallback): T
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [GestureCollectInterceptCallback](arkts-arkui-gesturecollectinterceptcallback-t.md) | Yes | 组件进行触摸测试时使用的回调函数。在当前节点及更高优先级节点上的事件和手势收集完成后执行，以干预收集结果。 |
+| callback | [GestureCollectInterceptCallback](arkts-arkui-gesturecollectinterceptcallback-t.md) | Yes | A callback instance used when the component does a touch test. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| T | 返回当前组件。 |
+| T | Current component. |
 
 ## onGestureJudgeBegin
 
@@ -6724,11 +6891,7 @@ onGestureCollectIntercept(callback: GestureCollectInterceptCallback): T
 onGestureJudgeBegin(callback: (gestureInfo: GestureInfo, event: BaseGestureEvent) => GestureJudgeResult): T
 ```
 
-为组件绑定自定义手势判定回调。当手势即将成功时，触发用户定义的回调获取结果。
-
-> **说明：**
-> 
-> 在Text组件中使用该接口时，不支持对点击事件进行自定义手势判定。
+Binds a custom gesture determination callback to the component. When the gesture is about to succeed, the user-defined callback is triggered to obtain the result.
 
 **Since:** 11
 
@@ -6752,7 +6915,7 @@ onGestureJudgeBegin(callback: (gestureInfo: GestureInfo, event: BaseGestureEvent
 
 | Type | Description |
 | --- | --- |
-| T | 返回当前组件。 |
+| T | Current component. |
 
 ## onGestureRecognizerJudgeBegin
 
@@ -6760,7 +6923,7 @@ onGestureJudgeBegin(callback: (gestureInfo: GestureInfo, event: BaseGestureEvent
 onGestureRecognizerJudgeBegin(callback: GestureRecognizerJudgeBeginCallback): T
 ```
 
-给组件绑定自定义手势识别器判定回调。
+Binds a custom gesture recognizer judgment callback to the component.
 
 **Since:** 12
 
@@ -6778,13 +6941,13 @@ onGestureRecognizerJudgeBegin(callback: GestureRecognizerJudgeBeginCallback): T
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [GestureRecognizerJudgeBeginCallback](../arkts-apis/arkts-arkui-gesturerecognizerjudgebegincallback-t.md) | Yes | 自定义手势识别器判定回调。当绑定到该组件的手势即将成功时，会触发用户定义的回调来获取结果。 |
+| callback | [GestureRecognizerJudgeBeginCallback](../arkts-apis/arkts-arkui-gesturerecognizerjudgebegincallback-t.md) | Yes | A callback instance used when a gesture bound to this component will be accepted. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| T | 返回当前组件。 |
+| T | Current component. |
 
 ## onGestureRecognizerJudgeBegin
 
@@ -6792,12 +6955,12 @@ onGestureRecognizerJudgeBegin(callback: GestureRecognizerJudgeBeginCallback): T
 onGestureRecognizerJudgeBegin(callback: GestureRecognizerJudgeBeginCallback, exposeInnerGesture: boolean): T
 ```
 
-给组件绑定自定义手势识别器判定回调。
+Binds a custom gesture recognizer judgment callback to the component.
 
-新增exposeInnerGesture参数作为是否将ArkUI系统组合组件的内置组件的手势暴露给开发者的标识。当该标识置为true时，将ArkUI系统组合组件的内置组件的手势暴露给开发者。
+The **exposeInnerGesture** parameter indicates whether to expose gestures from built-in components within ArkUI system composite components to developers. When this parameter is set to **true**, these internal gestures are exposed.
 
-对于不需要将ArkUI系统组合组件的内置组件的手势暴露给开发者的场景，建议采用原有  
-[onGestureRecognizerJudgeBegin](arkts-arkui-commonmethod-c.md#ongesturerecognizerjudgebegin)接口。若要求将ArkUI系统组合组件的内置组件的手势暴露给开发者，建议使用该接口并将exposeInnerGesture设置为true。
+For scenarios where exposure of internal gestures is not required, use the original  
+[onGestureRecognizerJudgeBegin](arkts-arkui-commonmethod-c.md#ongesturerecognizerjudgebegin)API. Use this API with **exposeInnerGesture** set to **true** only when internal gesture exposure is necessary.
 
 **Since:** 13
 
@@ -6815,14 +6978,14 @@ onGestureRecognizerJudgeBegin(callback: GestureRecognizerJudgeBeginCallback, exp
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [GestureRecognizerJudgeBeginCallback](../arkts-apis/arkts-arkui-gesturerecognizerjudgebegincallback-t.md) | Yes | 自定义手势识别器判定回调，当绑定到该组件的手势即将成功时，会触发用户定义的回调来获取结果。 |
-| exposeInnerGesture | boolean | Yes | 暴露内部手势标识。&lt;br/&gt;默认值：false&lt;br/&gt;**说明：** &lt;br/&gt;如果是组合组件，此参数设置true，回调中的current参数则会包含组合组件内部的手势识别器。&lt;br&gt; 当前仅支持[Tabs](../arkts-apis/arkts-arkui-tabs-tabs-f.md/arkts-arkui-tabs-tabs-f.md#tabs)，其他组件请不要设置此参数。&lt;br/&gt;设置为false时，功能与原接口[onGestureRecognizerJudgeBegin](arkts-arkui-commonmethod-c.md#ongesturerecognizerjudgebegin) 相同。 |
+| callback | [GestureRecognizerJudgeBeginCallback](../arkts-apis/arkts-arkui-gesturerecognizerjudgebegincallback-t.md) | Yes | A callback instance used when a gesture bound to this component will be accepted. |
+| exposeInnerGesture | boolean | Yes | This parameter is a flag. This flag determines whether to expose internal gestures. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| T | 返回当前组件。 |
+| T | Current component. |
 
 ## onHover
 
@@ -6830,7 +6993,7 @@ onGestureRecognizerJudgeBegin(callback: GestureRecognizerJudgeBeginCallback, exp
 onHover(event: (isHover: boolean, event: HoverEvent) => void): T
 ```
 
-鼠标或手写笔进入或退出组件时，触发hover事件。
+Triggered when the mouse pointer or stylus enters or leaves the component.
 
 **Since:** 8
 
@@ -6846,13 +7009,13 @@ onHover(event: (isHover: boolean, event: HoverEvent) => void): T
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| event | (isHover: boolean, event: HoverEvent) =&gt; void | Yes | 鼠标的状态信息。&lt;br /&gt;event表示设置阻塞事件冒泡属性，并获取鼠标或手写笔悬浮的位置坐标，从API version 11开始支持。&lt;br /&gt;isHover表示鼠标或 手写笔是否悬浮在组件上，进入时为true， 离开时为false。 |
+| event | (isHover: boolean, event: HoverEvent) =&gt; void | Yes | Callback for mouse or stylus hover status.&lt;br&gt;**event**: event bubbling control and coordinates of the hover position; available since API version 11.&lt;br&gt;**isHover**: whether the mouse pointer or stylus is hovering over the component. **true**: The mouse pointer or stylus has entered the component. **false**: The mouse pointer or stylus has left the component. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| T | 返回当前组件。 |
+| T | Current component. |
 
 ## onHoverMove
 
@@ -6860,7 +7023,7 @@ onHover(event: (isHover: boolean, event: HoverEvent) => void): T
 onHoverMove(event: Callback<HoverEvent>): T
 ```
 
-手写笔悬浮于组件上方时触发悬浮移动事件。
+Triggered when a stylus hovers over the component.
 
 **Since:** 15
 
@@ -6878,13 +7041,13 @@ onHoverMove(event: Callback<HoverEvent>): T
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| event | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;HoverEvent&gt; | Yes | 设置阻塞事件冒泡属性，并获取手写笔悬浮的位置坐标。 |
+| event | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;HoverEvent&gt; | Yes | Callback that controls event bubbling blocking and obtains the stylus hover position coordinates. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| T | 返回当前组件。 |
+| T | Current component. |
 
 ## onKeyEvent
 
@@ -6892,7 +7055,7 @@ onHoverMove(event: Callback<HoverEvent>): T
 onKeyEvent(event: (event: KeyEvent) => void): T
 ```
 
-绑定该方法的组件获焦后，按键动作触发该回调。
+Triggered when a key event occurs.
 
 **Since:** 7
 
@@ -6908,13 +7071,13 @@ onKeyEvent(event: (event: KeyEvent) => void): T
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| event | (event: KeyEvent) =&gt; void | Yes | 获得KeyEvent对象。 |
+| event | (event: KeyEvent) =&gt; void | Yes | KeyEvent** object. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| T | 返回当前组件。 |
+| T | Current component. |
 
 ## onKeyEvent
 
@@ -6922,7 +7085,8 @@ onKeyEvent(event: (event: KeyEvent) => void): T
 onKeyEvent(event: Callback<KeyEvent, boolean>): T
 ```
 
-当绑定该方法的组件获焦后，按键操作将触发此回调。若此回调的返回值为`true`，则视为按键事件已被处理。
+Triggered when a key operation is performed on the bound component after it obtains focus. If the callback returns  
+**true**, the key event is considered handled.
 
 **Since:** 15
 
@@ -6940,13 +7104,13 @@ onKeyEvent(event: Callback<KeyEvent, boolean>): T
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| event | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;KeyEvent, boolean&gt; | Yes | 按键事件的回调。 |
+| event | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;KeyEvent, boolean&gt; | Yes | Callback for handling the key event. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| T | 返回当前组件。 |
+| T | Current component. |
 
 ## onKeyEventDispatch
 
@@ -6954,9 +7118,10 @@ onKeyEvent(event: Callback<KeyEvent, boolean>): T
 onKeyEventDispatch(event: Callback<KeyEvent, boolean>): T
 ```
 
-对应组件收到按键事件时，会触发该回调，该按键事件不会分发给其子组件。不支持构造KeyEvent进行分发，只支持分发已有的按键事件。
+Triggered when the bound component receives a key event. The key event will not be dispatched to its child components. Only existing key events can be intercepted; creating new **KeyEvent** objects for dispatch is not supported.
 
-该回调的返回值为`true`时，视作该按键事件已被消费，不会[冒泡](../../../ui/arkts-interaction-basic-principles.md#事件冒泡)给父组件处理。
+If the callback returns **true**, the key event is marked as consumed and will not  
+[bubble up](../../../ui/arkts-interaction-basic-principles.md#event-bubbling) to parent components.
 
 **Since:** 15
 
@@ -6974,13 +7139,13 @@ onKeyEventDispatch(event: Callback<KeyEvent, boolean>): T
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| event | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;KeyEvent, boolean&gt; | Yes | 处理按键事件分发的回调。 |
+| event | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;KeyEvent, boolean&gt; | Yes | Callback for handling key event dispatch. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| T | 返回当前组件。 |
+| T | Current component. |
 
 ## onKeyPreIme
 
@@ -6988,9 +7153,9 @@ onKeyEventDispatch(event: Callback<KeyEvent, boolean>): T
 onKeyPreIme(event: Callback<KeyEvent, boolean>): T
 ```
 
-绑定该方法的组件获焦后，按键动作优先触发该回调。
+Triggered before other callbacks when a key operation is performed on the bound component after it obtains focus.
 
-该回调的返回值为`true`时，视作该按键事件已被消费，后续的事件回调（`keyboardShortcut`、输入法事件、`onKeyEventDispatch`、`onKeyEvent`）会被拦截，不再触发。
+If the return value of this callback is **true**, the key event is considered consumed, and subsequent event callbacks (**keyboardShortcut**, input method events, **onKeyEventDispatch**, and **onKeyEvent**) will be intercepted and no longer triggered.
 
 **Since:** 12
 
@@ -7008,13 +7173,13 @@ onKeyPreIme(event: Callback<KeyEvent, boolean>): T
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| event | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;KeyEvent, boolean&gt; | Yes | 处理按键事件的回调。 |
+| event | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;KeyEvent, boolean&gt; | Yes | Callback for handling the key event. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| T | 返回当前组件。 |
+| T | Current component. |
 
 ## onMouse
 
@@ -7022,7 +7187,7 @@ onKeyPreIme(event: Callback<KeyEvent, boolean>): T
 onMouse(event: (event: MouseEvent) => void): T
 ```
 
-当前组件被鼠标按键点击时或者鼠标在组件上悬浮移动时，触发该回调。
+Triggered when the component is clicked by a mouse button or the mouse pointer moves on the component.
 
 **Since:** 8
 
@@ -7038,13 +7203,13 @@ onMouse(event: (event: MouseEvent) => void): T
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| event | (event: MouseEvent) =&gt; void | Yes | 返回触发事件时的时间戳、鼠标按键、动作、鼠标位置在整个屏幕上的坐标和相对于当前组件的坐标。 |
+| event | (event: MouseEvent) =&gt; void | Yes | Timestamp, mouse button, action, coordinates of the clicked point on the entire screen, and coordinates of the clicked point relative to the component when the event is triggered. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| T | 返回当前组件。 |
+| T | Current component. |
 
 ## onNeedSoftkeyboard
 
@@ -7052,19 +7217,7 @@ onMouse(event: (event: MouseEvent) => void): T
 onNeedSoftkeyboard(onNeedSoftkeyboardCallback: OnNeedSoftkeyboardCallback | undefined): T
 ```
 
-设置组件判断是否需要键盘时触发的回调。主要用于键盘接续场景，当焦点从输入框切换到其他组件时，如果切换后的组件回调函数[OnNeedSoftkeyboardCallback](arkts-arkui-onneedsoftkeyboardcallback-t.md)的返回值设置为`true`，则表示该组件需要键盘，此时键盘将不会收起，如果返回值设置为`false`，则表示该组件不需要键盘，此时键盘将收起。
-
-对于不能获焦的组件，本接口不生效。
-
-输入框组件使用该接口并将返回值设置为`false`时，点击输入框将不会拉起键盘。
-
-Web组件使用该方法时，如果返回值为`true`，Web组件会判断组件中是否有可编辑节点，如果有可编辑节点才会保留键盘，如果返回值为`false`，无论是否有可编辑节点，键盘都不会保留。
-
-XComponent组件使用该方法时，如果返回值为`true`且XComponent组件使用 [OH_ArkUI_XComponent_SetNeedSoftKeyboard()](../../../reference/apis-arkui/capi-native-interface-xcomponent-h.md#oh_arkui_xcomponent_setneedsoftkeyboard)设置了需要键盘，才会保留键盘，如果返回值为`false`，无论组件如何设置，键盘都不会保留。
-
-当返回值为`true`时，应用的自绘制输入框需要在获焦时主动调用 [attach](../../apis-ime-kit/arkts-apis/arkts-ime-inputmethod-inputmethodcontroller-i.md/arkts-ime-inputmethod-inputmethodcontroller-i.md#attach)方法，建立输入法框架和输入法应用的通信，否则点击键盘会失去响应。说明：失焦时输入法框架和输入法应用的通信会断开，获焦时需要重新建立通信。
-
-该接口只适用于对输入法应用接续的场景，对自定义键盘不生效。自定义键盘接续详见[setCustomKeyboardContinueFeature](../arkts-apis/arkts-arkui-arkui-uicontext-uicontext-c.md/arkts-arkui-arkui-uicontext-uicontext-c.md#setcustomkeyboardcontinuefeature)。
+Called when component is focused, the return value indicates whether keyboard is needed.
 
 **Since:** 24
 
@@ -7082,7 +7235,7 @@ XComponent组件使用该方法时，如果返回值为`true`且XComponent组件
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| onNeedSoftkeyboardCallback | [OnNeedSoftkeyboardCallback](../arkts-apis/arkts-arkui-onneedsoftkeyboardcallback-t.md) \| undefined | Yes | 事件触发时执行的回调，系统会根据回调的返回值决定是否需要键盘。设置为undefined时，不会触发回调，输入框类组件行为等同返回true。其他组件行为等同返回false。前提条件：组件需可获焦，否则本接口不生效。当返回值为true时，自绘制输入框需在获焦时主动调用[attach](../../apis-ime-kit/arkts-apis/arkts-ime-inputmethod-inputmethodcontroller-i.md/arkts-ime-inputmethod-inputmethodcontroller-i.md#attach)方法建立输入法通信，否则点击键盘会失去响应。 |
+| onNeedSoftkeyboardCallback | [OnNeedSoftkeyboardCallback](../arkts-apis/arkts-arkui-onneedsoftkeyboardcallback-t.md) \| undefined | Yes | Callback executed when an event is triggered. The system determines whether a keyboard is required based on the return value of the callback. If this parameter is set to undefined, no callback is triggered, and the input box component returns true. For other components, false is returned. Prerequisite: The component must be able to obtain focus. Otherwise, this interface does not take effect. When the return value is true, the self-drawn text box needs to actively invoke the [attach](../../apis-ime-kit/arkts-apis/arkts-ime-inputmethod-inputmethodcontroller-i.md/arkts-ime-inputmethod-inputmethodcontroller-i.md#attach) method to establish input method communication when the focus is obtained. Otherwise, the keyboard does not respond. |
 
 **Return value:**
 
@@ -7096,11 +7249,11 @@ XComponent组件使用该方法时，如果返回值为`true`且XComponent组件
 onPreDrag(callback: Callback<PreDragStatus>): T
 ```
 
-绑定此事件的组件，当处于手势拖拽发起前的不同阶段时，触发回调。拖拽发起前的各阶段可参考[PreDragStatus](arkts-arkui-predragstatus-e.md)。此接口不支持在鼠标拖拽中触发。
+Triggered when the component enters a state prior to a gesture-based drag operation. For details about the state prior to the drag-and-drop operation, see [PreDragStatus](arkts-arkui-predragstatus-e.md). This API cannot be triggered in mouse-based drag scenarios.
 
-> **说明：**
+> **NOTE：**
 > 
-> 从API version 20开始，该接口支持在[attributeModifier](arkts-arkui-commonmethod-c.md#attributemodifier)中调用。
+> This API can be called in [attributeModifier](arkts-arkui-commonmethod-c.md#attributemodifier) since API version 20.
 
 **Since:** 12
 
@@ -7118,13 +7271,13 @@ onPreDrag(callback: Callback<PreDragStatus>): T
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;PreDragStatus&gt; | Yes | 回调函数。 |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;PreDragStatus&gt; | Yes | Callback function. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| T | 返回当前组件。 |
+| T | Current component. |
 
 ## onSizeChange
 
@@ -7132,17 +7285,21 @@ onPreDrag(callback: Callback<PreDragStatus>): T
 onSizeChange(event: SizeChangeCallback): T
 ```
 
-组件区域变化时触发该回调。仅会响应由布局变化所导致的组件尺寸发生变化时的回调。
+Triggered when the component size changes due to layout updates.
 
-> **说明：**
+> **NOTE：**
 > 
-> 1. 该接口在布局发生变化时触发，由于计算精度的关系，其返回值可能与真实物理尺寸存在细微的差异。
+> 1. This API is triggered upon layout changes. Due to calculation precision limitations, the return value may
+> deviate slightly from the actual physical size.
 > 
-> 2. onSizeChange是布局过程中触发的同步回调，直接在其中更改状态变量存在被纳入动画闭包的风险。具体而言，动画会对比动画前的布局与动画闭包后的布局，若onSizeChange的回调在动画前的布局中同步触发，那么
-> onSizeChange回调中所做的变更将与动画闭包中的变更一同纳入动画过程。为了避免此类问题，可在onSizeChange中使用延迟时间为0的
-> [setTimeout](../arkts-apis/arkts-arkui-global-settimeout-f.md/arkts-arkui-global-settimeout-f.md#settimeout)或
-> [postFrameCallback](../arkts-apis/arkts-arkui-arkui-uicontext-uicontext-c.md/arkts-arkui-arkui-uicontext-uicontext-c.md#postframecallback)，将UI处理逻辑
-> 延后至异步执行。
+> 2. **onSizeChange** is a synchronous callback triggered during the layout process. Directly modifying state
+> variables within **onSizeChange** may cause the changes to be included in the animation closure. Specifically,
+> animations compare the layout state before the animation starts with the state after the animation closure is
+> executed. If the **onSizeChange** callback is triggered synchronously during the pre-animation layout phase, the
+> changes made in this callback will be processed as part of the animation, along with the changes in the animation
+> closure. To avoid this issue, you can use [setTimeout](../arkts-apis/arkts-arkui-global-settimeout-f.md/arkts-arkui-global-settimeout-f.md#settimeout) or
+> [postFrameCallback](../arkts-apis/arkts-arkui-arkui-uicontext-uicontext-c.md/arkts-arkui-arkui-uicontext-uicontext-c.md#postframecallback) (with a 0 ms delay) inside
+> **onSizeChange** to defer the UI processing logic to asynchronous execution.
 
 **Since:** 12
 
@@ -7162,13 +7319,13 @@ onSizeChange(event: SizeChangeCallback): T
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| event | [SizeChangeCallback](arkts-arkui-sizechangecallback-t.md) | Yes | 目标元素变化前后的尺寸。 |
+| event | [SizeChangeCallback](arkts-arkui-sizechangecallback-t.md) | Yes | Size of the component before and after the change. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| T | 返回当前组件。 |
+| T | Current component. |
 
 ## onTouch
 
@@ -7176,8 +7333,8 @@ onSizeChange(event: SizeChangeCallback): T
 onTouch(event: (event: TouchEvent) => void): T
 ```
 
-手指触摸动作触发该回调。触摸事件默认[冒泡](../../../ui/arkts-interaction-basic-principles.md#事件冒泡)，会被多个组件消费，如果需阻止冒泡，可参考  
-[TouchEvent](arkts-arkui-touchevent-i.md)的stopPropagation方法。鼠标左键按下时，对应的事件也会转换成触摸事件并触发该回调。
+Invoked when a touch event is triggered. Touch events  
+[bubble](../../../ui/arkts-interaction-basic-principles.md#event-bubbling) by default and can be consumed by multiple components. To prevent event bubbling, use the **stopPropagation** API of [TouchEvent](arkts-arkui-touchevent-i.md).Mouse left-click events are converted to touch events and will also trigger this callback.
 
 **Since:** 7
 
@@ -7193,13 +7350,13 @@ onTouch(event: (event: TouchEvent) => void): T
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| event | (event: TouchEvent) =&gt; void | Yes | 获得TouchEvent对象。 |
+| event | (event: TouchEvent) =&gt; void | Yes | TouchEvent** object. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| T | 返回当前组件。 |
+| T | Current component. |
 
 ## onTouchIntercept
 
@@ -7207,7 +7364,7 @@ onTouch(event: (event: TouchEvent) => void): T
 onTouchIntercept(callback: Callback<TouchEvent, HitTestMode>): T
 ```
 
-给组件绑定自定义事件拦截回调。
+Binds a custom event interception callback to a component.
 
 **Since:** 12
 
@@ -7225,13 +7382,13 @@ onTouchIntercept(callback: Callback<TouchEvent, HitTestMode>): T
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;TouchEvent, [HitTestMode](../arkts-apis/arkts-arkui-hittestmode-e.md)&gt; | Yes | 自定义事件拦截回调。在做触摸测试时回调此函数。 通过返回值设置组件的HitTestMode。 |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;TouchEvent, [HitTestMode](../arkts-apis/arkts-arkui-hittestmode-e.md)&gt; | Yes | Custom event interception callback. Triggered during hit testing and sets the hit test behavior for the component based on the return value. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| T | 返回当前组件。 |
+| T | Current component. |
 
 ## onTouchTestDone
 
@@ -7239,7 +7396,8 @@ onTouchIntercept(callback: Callback<TouchEvent, HitTestMode>): T
 onTouchTestDone(callback: TouchTestDoneCallback): T
 ```
 
-提供在[触摸测试](../../../ui/arkts-interaction-basic-principles.md#触摸测试)结束后，指定手势识别器是否参与后续处理的能力。
+Specifies whether gesture recognizers participate in subsequent processing after  
+[hit testing](../../../ui/arkts-interaction-basic-principles.md#hit-testing) completes.
 
 **Since:** 20
 
@@ -7257,13 +7415,13 @@ onTouchTestDone(callback: TouchTestDoneCallback): T
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [TouchTestDoneCallback](../arkts-apis/arkts-arkui-touchtestdonecallback-t.md) | Yes | 回调函数，用于指定手势识别器是否参与后续处理。在 [触摸测试](../../../ui/arkts-interaction-basic-principles.md#触摸测试)结束后，开始识别用户手势之前，会触发该回调来动态指定手势识别器是否参与后续处理。 |
+| callback | [TouchTestDoneCallback](../arkts-apis/arkts-arkui-touchtestdonecallback-t.md) | Yes | Callback to specify gesture recognizer participation in subsequent processing. Triggered after [hit testing](../../../ui/arkts-interaction-basic-principles.md#hit-testing) completes but before user gesture recognition begins. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| T | 返回当前组件。 |
+| T | Current component. |
 
 ## onVisibleAreaApproximateChange
 
@@ -7271,11 +7429,11 @@ onTouchTestDone(callback: TouchTestDoneCallback): T
 onVisibleAreaApproximateChange(options: VisibleAreaEventOptions, event: VisibleAreaChangeCallback | undefined): T
 ```
 
-设置onVisibleAreaApproximateChange事件的回调参数，限制它的执行间隔。
+Configures a callback for the **onVisibleAreaApproximateChange** event, with options to limit the callback execution interval.
 
-> **说明：**
+> **NOTE：**
 > 
-> 从API version 23开始，该接口支持在[attributeModifier](arkts-arkui-commonmethod-c.md#attributemodifier)中调用。
+> This API can be called within [attributeModifier](arkts-arkui-commonmethod-c.md#attributemodifier) since API version 23.
 
 **Since:** 17
 
@@ -7293,14 +7451,14 @@ onVisibleAreaApproximateChange(options: VisibleAreaEventOptions, event: VisibleA
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| options | [VisibleAreaEventOptions](../arkts-apis/arkts-arkui-common-visibleareaeventoptions-i.md) | Yes | 可见区域变化相关的参数。 |
-| event | [VisibleAreaChangeCallback](../arkts-apis/arkts-arkui-visibleareachangecallback-t.md) \| undefined | Yes | onVisibleAreaChange事件的回调函数。当组件可见面积与自身面积的比值接近options中设置的阈值时 触发该回调。 |
+| options | [VisibleAreaEventOptions](../arkts-apis/arkts-arkui-common-visibleareaeventoptions-i.md) | Yes | Visible area change configuration options. |
+| event | [VisibleAreaChangeCallback](../arkts-apis/arkts-arkui-visibleareachangecallback-t.md) \| undefined | Yes | Callback for the **onVisibleAreaChange** event. This callback is triggered when the ratio of the component's visible area to its total area approaches the threshold set in **options**. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| T | 返回当前组件。 |
+| T | Current component. |
 
 ## onVisibleAreaChange
 
@@ -7308,23 +7466,29 @@ onVisibleAreaApproximateChange(options: VisibleAreaEventOptions, event: VisibleA
 onVisibleAreaChange(ratios: Array<number>, event: VisibleAreaChangeCallback): T
 ```
 
-组件可见区域变化时触发该回调。开发指导及常见问题请参考[感知组件可见性](../../../ui/arkts-manage-components-visibility.md)指南。
+Called when the visible area of the component changes. For details about the development guidelines and FAQs, see  
+[Detecting Component Visibility](../../../ui/arkts-manage-components-visibility.md).
 
-> **说明：**
+> **NOTE：**
 > 
-> - 从API version 20开始，该接口支持在[attributeModifier](arkts-arkui-commonmethod-c.md#attributemodifier)中调用。
+> - This API can be called in [attributeModifier](arkts-arkui-commonmethod-c.md#attributemodifier) since API version 20.
 > 
-> - 仅提供自身节点相对于所有祖先节点（直到window边界）的相对裁切面积与自身面积的比值及其变化趋势。
+> - This API only takes into account the relative clipped area ratio of the component with respect to all ancestor
+> nodes (up to the window boundary) and its own area.
 > 
-> - 不支持兄弟组件对自身节点的遮挡计算，不支持所有祖先的兄弟节点对自身节点的遮挡计算，不支持窗口遮挡计算，不支持组件旋转计算，如[Stack](../../apis-arkts/arkts-apis/arkts-arkts-util-stack-stack-c.md/arkts-arkts-util-stack-stack-c.md)、[Z序控制](arkts-arkui-commonmethod-c.md#zindex)、
-> [rotate](arkts-arkui-commonmethod-c.md#rotate)等。
+> - The following calculation scenarios are not supported: clipping by sibling nodes, clipping by siblings of any
+> ancestor node, window-level occlusion, and component rotation. Examples include layouts using
+> [Stack](../../apis-arkts/arkts-apis/arkts-arkts-util-stack-stack-c.md/arkts-arkts-util-stack-stack-c.md), [z-order control](arkts-arkui-commonmethod-c.md#zindex), and
+> [rotate](arkts-arkui-commonmethod-c.md#rotate) transformations.
 > 
-> - 不支持非挂树节点的可见面积变化计算。例如，预加载的节点、通过[overlay](arkts-arkui-commonmethod-c.md#overlay)能力挂载的自定义节点。
+> - It does not support visibility change calculations for nodes that are not in the component tree. For example,
+> preloaded nodes or custom nodes mounted using the
+> [overlay](../../../reference/apis-arkui/arkui-ts/ts-universal-attributes-overlay.md#overlay) capability.
 > 
-> - 不支持[scale](arkts-arkui-commonmethod-c.md#scale)属性，如果想要支持
-> [scale](arkts-arkui-commonmethod-c.md#scale)，则需使用
+> - This API does not support the [scale](arkts-arkui-commonmethod-c.md#scale) attribute. To enable
+> support for the [scale](arkts-arkui-commonmethod-c.md#scale) attribute, use
 > [onVisibleAreaChange&lt;sup&gt;22+&lt;/sup&gt;](arkts-arkui-commonmethod-c.md#onvisibleareachange)
-> ，将measureFromViewport设置为true。
+> and set **measureFromViewport** to **true**.
 
 **Since:** 9
 
@@ -7340,14 +7504,14 @@ onVisibleAreaChange(ratios: Array<number>, event: VisibleAreaChangeCallback): T
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| ratios | Array&lt;number&gt; | Yes | 阈值数组。其中，每个阈值代表组件可见面积（即组件在屏幕显示区的面积，只计算父组件内的面积，超出父组件部分不会计算）与组件自身面积的比值。当组件可见面积与自身面积的 比值接近阈值时，均会触发该回调。每个阈值的取值范围为[0.0, 1.0]，如果开发者设置的阈值小于0.0，则实际取值为0.0；如果设置的阈值大于1.0，则实际取值为1.0。&lt;br/&gt;**说明：** &lt;br/&gt;当数值接近边界 0和1时，将会按照误差不超过0.001的规则进行舍入。例如，0.9997会被近似为1。 |
-| event | [VisibleAreaChangeCallback](../arkts-apis/arkts-arkui-visibleareachangecallback-t.md) | Yes | 组件可见区域变化事件的回调。<br>**Since:** 13 |
+| ratios | Array&lt;number&gt; | Yes | Threshold array. Each threshold represents a ratio of the component's visible area (that is, the area of the component that is visible on screen; only the area within the parent component is counted) to the component's total area. This callback is invoked when the ratio of the component's visible area to its total area is greater than or less than the threshold. The value of each threshold ranges from 0.0 to 1.0. If a threshold value is less than 0.0, it is clamped to 0.0; if it is greater than 1.0, it is clamped to 1.0.&lt;br&gt;**NOTE：**&lt;br&gt;When the value is close to the boundary 0 or 1, it is rounded off with a round-off error not greater than 0.001. For example, 0.9997 is rounded off to 1. |
+| event | [VisibleAreaChangeCallback](../arkts-apis/arkts-arkui-visibleareachangecallback-t.md) | Yes | Callback for visible area changes of the component.<br>**Since:** 13 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| T | 返回当前组件。 |
+| T | Current component. |
 
 ## onVisibleAreaChange
 
@@ -7355,8 +7519,8 @@ onVisibleAreaChange(ratios: Array<number>, event: VisibleAreaChangeCallback): T
 onVisibleAreaChange(ratios: Array<number>, event: VisibleAreaChangeCallback, measureFromViewport: boolean): T
 ```
 
-组件可见区域变化时触发该回调。可以通过measureFromViewport设置可见区域计算模式。开发指导及常见问题请参考  
-[感知组件可见性](../../../ui/arkts-manage-components-visibility.md)指南。
+Called when the visible area of the component changes. You can use **measureFromViewport** to set the visible area calculation mode. For details about the development guidelines and FAQs, see  
+[Detecting Component Visibility](../../../ui/arkts-manage-components-visibility.md).
 
 **Since:** 22
 
@@ -7374,15 +7538,15 @@ onVisibleAreaChange(ratios: Array<number>, event: VisibleAreaChangeCallback, mea
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| ratios | Array&lt;number&gt; | Yes | 阈值数组。其中，每个阈值代表组件可见面积与组件自身面积的比值。当组件可见面积与自身面积的比值接近阈值时，均会触发该回调。每个阈值的取值范围为[0.0, 1.0]， 如果开发者设置的阈值小于0.0，则实际取值为0.0；如果设置的阈值大于1.0，则实际取值为1.0。&lt;br/&gt;**说明：**&lt;br/&gt;当数值接近边界0和1时，将会按照误差不超过0.001的规则进行舍入。例如，0.9997会被 近似为1。 |
-| event | [VisibleAreaChangeCallback](../arkts-apis/arkts-arkui-visibleareachangecallback-t.md) | Yes | 组件可见区域变化事件的回调。 |
-| measureFromViewport | boolean | Yes | 设置可见区域计算模式。&lt;br/&gt;当measureFromViewport设置为true时，系统在计算该组件的可见区域时，会考虑父组件的 [clip](arkts-arkui-commonmethod-c.md#clip) 属性设置。如果父组件的[clip](arkts-arkui-commonmethod-c.md#clip)为 false，则认为其内的子组件可以超出其区域进行显示，因此超出父组件的区域也将被视为可见区域纳入计算；如果父组件的[clip](arkts-arkui-commonmethod-c.md#clip)设置为 true，则组件超出父组件的区域会被裁剪，无法显示，因此会被视为不可见区域进行计算。而当measureFromViewport设置为false时，则不考虑 [clip](arkts-arkui-commonmethod-c.md#clip)的影响，直接将组件超出父组件的部分视为不可见区域。&lt;br/&gt;measureFromViewport设置为true时，祖先节点设置 [scale](arkts-arkui-commonmethod-c.md#scale)属性，组件可见比例会被正确计算。 |
+| ratios | Array&lt;number&gt; | Yes | Threshold array. Each threshold represents the ratio of the component's visible area to its own total area. This callback is invoked when the ratio of the component's visible area to its total area is greater than or less than the threshold. The value of each threshold ranges from 0.0 to 1.0. If a threshold value is less than 0.0, it is clamped to 0.0; if it is greater than 1.0, it is clamped to 1.0.&lt;br&gt; **NOTE：**&lt;br&gt;When the value is close to the boundary 0 or 1, it is rounded off with a round-off error not greater than 0.001. For example, 0.9997 is rounded off to 1. |
+| event | [VisibleAreaChangeCallback](../arkts-apis/arkts-arkui-visibleareachangecallback-t.md) | Yes | Callback for visible area changes of the component. |
+| measureFromViewport | boolean | Yes | Visible area calculation mode.&lt;br&gt;**true**: considers the parent's [clip](arkts-arkui-commonmethod-c.md#clip) attribute. If [clip](arkts-arkui-commonmethod-c.md#clip) is **false**, areas of the child component beyond the parent's bounds are counted as visible; if [clip](arkts-arkui-commonmethod-c.md#clip) is **true**, such areas are counted as invisible. **false**: ignores the parent's [clip](arkts-arkui-commonmethod-c.md#clip) attribute, treating areas beyond the parent's bounds as invisible.&lt;br&gt;When **measureFromViewport** is set to **true**, and an ancestor node has the [scale](arkts-arkui-commonmethod-c.md#scale) attribute set, the component's visible ratio will be correctly calculated. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| T | 返回当前组件。 |
+| T | Current component. |
 
 ## opacity
 
@@ -7390,7 +7554,7 @@ onVisibleAreaChange(ratios: Array<number>, event: VisibleAreaChangeCallback, mea
 opacity(value: number | Resource): T
 ```
 
-设置组件的不透明度。
+Sets the opacity of the component.
 
 **Since:** 7
 
@@ -7408,13 +7572,13 @@ opacity(value: number | Resource): T
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | number \| Resource | Yes | 元素的不透明度，取值范围为0到1，若设置的值小于0时，则取值为0，若设置的值大于1时，则取值为1，1表示不透明，0表示完全透明，达到隐藏组件效果，但是在布局 中占位。 &lt;br&gt; 默认值：1 &lt;br/&gt;**说明：** &lt;br/&gt; 子组件会继承父组件的透明度，并与自身的透明度属性叠加。如：父组件透明度为0.1，子组件设置透明度为0.8，则子组件实际透明度为0.1*0.8=0.08。 |
+| value | number \| Resource | Yes | Component opacity. Value range: 0 to 1. Values less than 0 are treated as 0. Values greater than 1 are treated as 1. **1**: fully opaque. **0**: fully transparent (where the component is hidden but occupies layout space).&lt;br&gt; Default value: **1**.&lt;br&gt;**NOTE：**&lt;br&gt; Child components inherit parent opacity and combine with their own opacity. Example: Parent opacity 0.1 x Child opacity 0.8 = Effective opacity 0.08. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| T | 返回当前组件。 |
+| T | Current component. |
 
 ## opacity
 
@@ -7422,7 +7586,8 @@ opacity(value: number | Resource): T
 opacity(opacity: Optional<number | Resource>): T
 ```
 
-设置组件的不透明度。与[opacity](arkts-arkui-commonmethod-c.md#opacity)相比，opacity参数新增了对undefined类型的支持。
+Sets the opacity of the component. Compared with   
+[opacity](../../../reference/apis-arkui/arkui-ts/ts-universal-attributes-opacity.md#opacity), this API supports the **undefined** type for the **opacity** parameter.
 
 **Since:** 18
 
@@ -7442,13 +7607,13 @@ opacity(opacity: Optional<number | Resource>): T
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| opacity | [Optional](../arkts-apis/arkts-arkui-optional-t.md)&lt;number \| [Resource](../../apis-localization-kit/arkts-apis/arkts-localization-resource-resource-i.md)&gt; | Yes | 元素的不透明度，取值范围为0到1，若设置的值小于0时，则取值为0，若设置的值大于1时，则取值为1，1表示不透明，0表示完全透明，达到 隐藏组件效果，但是在布局中占位。 &lt;br/&gt; 默认值：1 &lt;br/&gt;**说明：** &lt;br/&gt; 子组件会继承父组件的透明度，并与自身的透明度属性叠加。如：父组件透明度为0.1，子组件设置透明度为0.8，则子组件实际透明度为 0.1*0.8=0.08。&lt;br/&gt;当opacity的值为undefined时，恢复为默认不透明度为1的状态。 |
+| opacity | [Optional](../arkts-apis/arkts-arkui-optional-t.md)&lt;number \| [Resource](../../apis-localization-kit/arkts-apis/arkts-localization-resource-resource-i.md)&gt; | Yes | Component opacity. Value range: 0 to 1. Values less than 0 are treated as 0. Values greater than 1 are treated as 1. **1**: fully opaque. **0**: fully transparent (where the component is hidden but occupies layout space).&lt;br&gt; Default value: **1**.&lt;br&gt;**NOTE：**&lt;br&gt; Child components inherit parent opacity and combine with their own opacity. Example: Parent opacity 0.1 x Child opacity 0.8 = Effective opacity 0.08.&lt;br&gt;When **opacity** is **undefined**, the component reverts to the default opacity of **1**. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| T | 返回当前组件。 |
+| T | Current component. |
 
 ## outline
 
@@ -7456,7 +7621,7 @@ opacity(opacity: Optional<number | Resource>): T
 outline(value: OutlineOptions): T
 ```
 
-统一外描边样式设置接口。
+Sets the outline attributes in one declaration.
 
 **Since:** 11
 
@@ -7476,13 +7641,13 @@ outline(value: OutlineOptions): T
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | [OutlineOptions](../arkts-apis/arkts-arkui-outlineoptions-i.md) | Yes | 外描边样式。 |
+| value | [OutlineOptions](../arkts-apis/arkts-arkui-outlineoptions-i.md) | Yes | Outline attributes. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| T | 返回当前组件。 |
+| T | Current component. |
 
 ## outline
 
@@ -7490,7 +7655,8 @@ outline(value: OutlineOptions): T
 outline(options: Optional<OutlineOptions>): T
 ```
 
-统一外描边样式设置接口。与[outline](arkts-arkui-commonmethod-c.md#outline)相比，options参数新增了对undefined类型的支持。
+Sets the outline attributes in one declaration. Compared with   
+[outline](../../../reference/apis-arkui/arkui-ts/ts-universal-attributes-outline.md#outline), this API supports the **undefined** type for the **options** parameter.
 
 **Since:** 18
 
@@ -7504,17 +7670,19 @@ outline(options: Optional<OutlineOptions>): T
 
 <!--Device-CommonMethod-outline(options: Optional<OutlineOptions>): T--><!--Device-CommonMethod-outline(options: Optional<OutlineOptions>): T-End-->
 
+**System capability:** SystemCapability.ArkUI.ArkUI.Full
+
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| options | [Optional](../arkts-apis/arkts-arkui-optional-t.md)&lt;[OutlineOptions](../arkts-apis/arkts-arkui-outlineoptions-i.md)&gt; | Yes | 外描边样式。&lt;br/&gt;当options的值为undefined时，恢复为无外边框效果。 |
+| options | [Optional](../arkts-apis/arkts-arkui-optional-t.md)&lt;[OutlineOptions](../arkts-apis/arkts-arkui-outlineoptions-i.md)&gt; | Yes | Outline attributes.&lt;br&gt;If **options** is **undefined**, the component reverts to its original style with no outline. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| T | 返回当前组件。 |
+| T | Current component. |
 
 ## outlineColor
 
@@ -7522,7 +7690,7 @@ outline(options: Optional<OutlineOptions>): T
 outlineColor(value: ResourceColor | EdgeColors | LocalizedEdgeColors): T
 ```
 
-设置元素的外描边颜色。不设置该接口时，默认显示为黑色。
+Sets the outline color. If this API is not used, the default color black will be applied.
 
 **Since:** 11
 
@@ -7542,13 +7710,13 @@ outlineColor(value: ResourceColor | EdgeColors | LocalizedEdgeColors): T
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | [ResourceColor](../arkts-apis/arkts-arkui-resourcecolor-t.md) \| EdgeColors \| LocalizedEdgeColors | Yes | 设置元素的外描边颜色。<br>**Since:** 12 |
+| value | [ResourceColor](../arkts-apis/arkts-arkui-resourcecolor-t.md) \| EdgeColors \| LocalizedEdgeColors | Yes | Outline color.<br>**Since:** 12 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| T | 返回当前组件。 |
+| T | Current component. |
 
 ## outlineColor
 
@@ -7556,8 +7724,8 @@ outlineColor(value: ResourceColor | EdgeColors | LocalizedEdgeColors): T
 outlineColor(color: Optional<ResourceColor | EdgeColors | LocalizedEdgeColors>): T
 ```
 
-设置元素的外描边颜色。不设置该接口时，默认显示为黑色。与  
-[outlineColor](arkts-arkui-commonmethod-c.md#outlinecolor)相比，color参数新增了对undefined类型的支持。
+Sets the outline color. If this API is not used, the default color black will be applied. Compared with   
+[outlineColor](arkts-arkui-commonmethod-c.md#outlinecolor), this API supports the **undefined** type for the **color** parameter.
 
 **Since:** 18
 
@@ -7571,17 +7739,19 @@ outlineColor(color: Optional<ResourceColor | EdgeColors | LocalizedEdgeColors>):
 
 <!--Device-CommonMethod-outlineColor(color: Optional<ResourceColor | EdgeColors | LocalizedEdgeColors>): T--><!--Device-CommonMethod-outlineColor(color: Optional<ResourceColor | EdgeColors | LocalizedEdgeColors>): T-End-->
 
+**System capability:** SystemCapability.ArkUI.ArkUI.Full
+
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| color | [Optional](../arkts-apis/arkts-arkui-optional-t.md)&lt;[ResourceColor](../arkts-apis/arkts-arkui-resourcecolor-t.md) \| EdgeColors \| [LocalizedEdgeColors](../arkts-apis/arkts-arkui-localizededgecolors-i.md)&gt; | Yes | 设置元素的外描边颜色。&lt;br/&gt;当color的值为undefined时，恢 复为描边颜色为Color.Black的效果。 |
+| color | [Optional](../arkts-apis/arkts-arkui-optional-t.md)&lt;[ResourceColor](../arkts-apis/arkts-arkui-resourcecolor-t.md) \| EdgeColors \| [LocalizedEdgeColors](../arkts-apis/arkts-arkui-localizededgecolors-i.md)&gt; | Yes | Outline color.&lt;br&gt;If **color** is **undefined**, the component reverts to its original style with the outline color of **Color.Black**. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| T | 返回当前组件。 |
+| T | Current component. |
 
 ## outlineRadius
 
@@ -7589,7 +7759,7 @@ outlineColor(color: Optional<ResourceColor | EdgeColors | LocalizedEdgeColors>):
 outlineRadius(value: Dimension | OutlineRadiuses): T
 ```
 
-设置元素的外描边圆角半径。不设置该接口时，默认无变化。
+Sets the radius of the outline corners. If this API is not used, there will be no change by default.
 
 **Since:** 11
 
@@ -7609,13 +7779,13 @@ outlineRadius(value: Dimension | OutlineRadiuses): T
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | [Dimension](../arkts-apis/arkts-arkui-dimension-t.md) \| OutlineRadiuses | Yes | 设置元素的外描边圆角半径，不支持百分比。&lt;br/&gt;最大生效值：组件width/2 + outlineWidth或组件height/2 + outlineWidth。 |
+| value | [Dimension](../arkts-apis/arkts-arkui-dimension-t.md) \| OutlineRadiuses | Yes | Radius of the outline corners. Percentage values are not supported.&lt; br&gt;Maximum effective value: Component width/2 + outlineWidth or component height/2 + outlineWidth |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| T | 返回当前组件。 |
+| T | Current component. |
 
 ## outlineRadius
 
@@ -7623,7 +7793,9 @@ outlineRadius(value: Dimension | OutlineRadiuses): T
 outlineRadius(radius: Optional<Dimension | OutlineRadiuses>): T
 ```
 
-设置元素的外描边圆角半径。不设置该接口时，默认无变化。与[outlineRadius](arkts-arkui-commonmethod-c.md#outlineradius)相比，radius参数新增了对undefined类型的支持。
+Sets the radius of the outline corners. If this API is not used, there will be no change by default. Compared with   
+[outlineRadius](arkts-arkui-commonmethod-c.md#outlineradius), this API supports the   
+**undefined** type for the **radius** parameter.
 
 **Since:** 18
 
@@ -7637,17 +7809,19 @@ outlineRadius(radius: Optional<Dimension | OutlineRadiuses>): T
 
 <!--Device-CommonMethod-outlineRadius(radius: Optional<Dimension | OutlineRadiuses>): T--><!--Device-CommonMethod-outlineRadius(radius: Optional<Dimension | OutlineRadiuses>): T-End-->
 
+**System capability:** SystemCapability.ArkUI.ArkUI.Full
+
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| radius | [Optional](../arkts-apis/arkts-arkui-optional-t.md)&lt;[Dimension](../arkts-apis/arkts-arkui-dimension-t.md) \| OutlineRadiuses&gt; | Yes | 设置元素的外描边圆角半径，不支持百分比。&lt;br/&gt;最大生效值：组件width/2 + outlineWidth或组 件height/2 + outlineWidth。&lt;br/&gt;当radius的值为undefined时，恢复为外描边圆角半径为0的效果。 |
+| radius | [Optional](../arkts-apis/arkts-arkui-optional-t.md)&lt;[Dimension](../arkts-apis/arkts-arkui-dimension-t.md) \| OutlineRadiuses&gt; | Yes | Radius of the outline corners. Percentage values are not supported.&lt;br&gt;Maximum effective value: Component width/2 + outlineWidth or component height/2 + outlineWidth&lt;br &gt;If **radius** is **undefined**, the component reverts to its original style with the outline corner radius of 0. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| T | 返回当前组件。 |
+| T | Current component. |
 
 ## outlineStyle
 
@@ -7655,7 +7829,7 @@ outlineRadius(radius: Optional<Dimension | OutlineRadiuses>): T
 outlineStyle(value: OutlineStyle | EdgeOutlineStyles): T
 ```
 
-设置元素的外描边样式。不设置该接口时，默认显示为一条实线。
+Sets the outline style. If this API is not used, a solid line is displayed by default.
 
 **Since:** 11
 
@@ -7675,13 +7849,13 @@ outlineStyle(value: OutlineStyle | EdgeOutlineStyles): T
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | [OutlineStyle](../arkts-apis/arkts-arkui-common-outlinestyle-e.md) \| EdgeOutlineStyles | Yes | 设置元素的外描边样式。 |
+| value | [OutlineStyle](../arkts-apis/arkts-arkui-common-outlinestyle-e.md) \| EdgeOutlineStyles | Yes | Outline style. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| T | 返回当前组件。 |
+| T | Current component. |
 
 ## outlineStyle
 
@@ -7689,8 +7863,9 @@ outlineStyle(value: OutlineStyle | EdgeOutlineStyles): T
 outlineStyle(style: Optional<OutlineStyle | EdgeOutlineStyles>): T
 ```
 
-设置元素的外描边样式。不设置该接口时，默认显示为一条实线。与  
-[outlineStyle](arkts-arkui-commonmethod-c.md#outlinestyle)相比，style参数新增了对undefined类型的支持。
+Sets the outline style. If this API is not used, a solid line is displayed by default. Compared with   
+[outlineStyle](arkts-arkui-commonmethod-c.md#outlinestyle), this API supports the   
+**undefined** type for the **style** parameter.
 
 **Since:** 18
 
@@ -7704,17 +7879,19 @@ outlineStyle(style: Optional<OutlineStyle | EdgeOutlineStyles>): T
 
 <!--Device-CommonMethod-outlineStyle(style: Optional<OutlineStyle | EdgeOutlineStyles>): T--><!--Device-CommonMethod-outlineStyle(style: Optional<OutlineStyle | EdgeOutlineStyles>): T-End-->
 
+**System capability:** SystemCapability.ArkUI.ArkUI.Full
+
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| style | [Optional](../arkts-apis/arkts-arkui-optional-t.md)&lt;OutlineStyle \| EdgeOutlineStyles&gt; | Yes | 设置元素的外描边样式。&lt;br/&gt;当style的值为undefined时，恢复为无外描边样式的效果。 |
+| style | [Optional](../arkts-apis/arkts-arkui-optional-t.md)&lt;OutlineStyle \| EdgeOutlineStyles&gt; | Yes | Outline style.&lt;br&gt;If **style** is **undefined**, the component reverts to its original style with no outline. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| T | 返回当前组件。 |
+| T | Current component. |
 
 ## outlineWidth
 
@@ -7722,7 +7899,7 @@ outlineStyle(style: Optional<OutlineStyle | EdgeOutlineStyles>): T
 outlineWidth(value: Dimension | EdgeOutlineWidths): T
 ```
 
-设置元素的外描边宽度。不设置该接口时，默认无变化。
+Sets the thickness of the outline. If this API is not used, there will be no change by default.
 
 **Since:** 11
 
@@ -7742,13 +7919,13 @@ outlineWidth(value: Dimension | EdgeOutlineWidths): T
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | [Dimension](../arkts-apis/arkts-arkui-dimension-t.md) \| EdgeOutlineWidths | Yes | 设置元素的外描边宽度，不支持百分比。 |
+| value | [Dimension](../arkts-apis/arkts-arkui-dimension-t.md) \| EdgeOutlineWidths | Yes | Outline thickness. Percentage values are not supported. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| T | 返回当前组件。 |
+| T | Current component. |
 
 ## outlineWidth
 
@@ -7756,7 +7933,9 @@ outlineWidth(value: Dimension | EdgeOutlineWidths): T
 outlineWidth(width: Optional<Dimension | EdgeOutlineWidths>): T
 ```
 
-设置元素的外描边宽度。不设置该接口时，默认无变化。与[outlineWidth](arkts-arkui-commonmethod-c.md#outlinewidth)相比，width参数新增了对undefined类型的支持。
+Sets the thickness of the outline. If this API is not used, there will be no change by default. Compared with   
+[outlineWidth](arkts-arkui-commonmethod-c.md#outlinewidth), this API supports the   
+**undefined** type for the **width** parameter.
 
 **Since:** 18
 
@@ -7770,17 +7949,19 @@ outlineWidth(width: Optional<Dimension | EdgeOutlineWidths>): T
 
 <!--Device-CommonMethod-outlineWidth(width: Optional<Dimension | EdgeOutlineWidths>): T--><!--Device-CommonMethod-outlineWidth(width: Optional<Dimension | EdgeOutlineWidths>): T-End-->
 
+**System capability:** SystemCapability.ArkUI.ArkUI.Full
+
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| width | [Optional](../arkts-apis/arkts-arkui-optional-t.md)&lt;[Dimension](../arkts-apis/arkts-arkui-dimension-t.md) \| EdgeOutlineWidths&gt; | Yes | 设置元素的外描边宽度，不支持百分比。&lt;br/&gt;当width的值为undefined时，恢复为无外描边宽度的效果。 |
+| width | [Optional](../arkts-apis/arkts-arkui-optional-t.md)&lt;[Dimension](../arkts-apis/arkts-arkui-dimension-t.md) \| EdgeOutlineWidths&gt; | Yes | Outline thickness. Percentage values are not supported.&lt; br&gt;If **width** is **undefined**, the component reverts to its original style with no outline width. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| T | 返回当前组件。 |
+| T | Current component. |
 
 ## overlay
 
@@ -7788,15 +7969,18 @@ outlineWidth(width: Optional<Dimension | EdgeOutlineWidths>): T
 overlay(value: string | CustomBuilder | ComponentContent, options?: OverlayOptions): T
 ```
 
-在当前组件上，增加遮罩文本或者叠加自定义组件以及[ComponentContent](arkts-arkui-componentcontent-t.md)作为该组件的浮层。浮层的定位同样基于当前组件进行计算。浮层不通过组件树进行渲染，部分接口（例如  
-[getRectangleById](api\@ohos.arkui.ComponentUtils#getRectangleById)）不支持获取浮层中的组件。
+Adds an overlay to this component, which can be text, a custom component, or  
+[ComponentContent](arkts-arkui-componentcontent-t.md). The overlay is positioned based on the current component. The overlay is not rendered through the component tree, meaning some APIs (for example,  
+[getRectangleById](../arkts-apis/arkts-arkui-componentutils-getrectanglebyid-f.md/arkts-arkui-componentutils-getrectanglebyid-f.md#getrectanglebyid)) cannot access components within the overlay.
 
-> **说明：**
+> **NOTE：**
 > 
-> - overlay会将浮层组件覆盖在所绑定的组件上方，阻塞用户对浮层下方组件的所有交互操作。
-> - 多次调用overlay接口时，如果同时传入string类型和
-> [CustomBuilder](arkts-arkui-custombuilder-t.md)类型，或者同时传入string类型和
-> [ComponentContent](arkts-arkui-componentcontent-t.md)类型，浮层内容会叠加显示。
+> The overlay places the floating layer component above the bound component, blocking all user interactions with
+> components beneath it. To enable interaction with underlying components, refer to
+> [Example 2: Setting an Overlay Using a Custom Builder](../../../reference/apis-arkui/arkui-ts/ts-universal-attributes-overlay.md#example-2-setting-an-overlay-using-a-custom-builder)
+> and apply **.hitTestBehavior(HitTestMode.Transparent)** to the outermost component in the overlay builder. This
+> configuration is particularly crucial for watermark implementations, where the overlay must not interfere with
+> user interaction with the underlying content.
 
 **Since:** 7
 
@@ -7814,14 +7998,14 @@ overlay(value: string | CustomBuilder | ComponentContent, options?: OverlayOptio
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | string \| CustomBuilder \| ComponentContent | Yes | 遮罩文本内容或自定义组件构造函数。&lt;br/&gt;**说明：**&lt;br/&gt;自定义组件作为浮层时，不支持键盘走焦到自 定义组件中。通过CustomBuilder设置浮层时，浮层中的内容会在页面刷新时销毁并重新创建，存在一定的性能损耗，页面频繁刷新的场景推荐使用ComponentContent方式设置浮层。<br>**Since:** 12 |
-| options | [OverlayOptions](../arkts-apis/arkts-arkui-common-overlayoptions-i.md) | No | 浮层的定位。&lt;br/&gt;**说明：**&lt;br/&gt;API version 12之前，options: &lt;br/&gt;{&lt;br/&gt;align?:  [Alignment](../arkts-apis/arkts-arkui-enums-alignment-e.md/arkts-arkui-enums-alignment-e.md), &lt;br/&gt;offset?: {x?: number, y?: number}&lt;br/&gt;}<br>**Since:** 12 |
+| value | string \| CustomBuilder \| ComponentContent | Yes | Content of the overlay, which can be text or a custom component.&lt;br&gt;**NOTE：**&lt;br&gt;When the overlay is a custom component, it cannot obtain focus through sequential keyboard navigation. Using **CustomBuilder** will cause the overlay content to be destroyed and recreated on page refresh, which may incur performance overhead. For scenarios with frequent page updates, using **ComponentContent** is recommended.<br>**Since:** 12 |
+| options | [OverlayOptions](../arkts-apis/arkts-arkui-common-overlayoptions-i.md) | No | Options for positioning the overlay.&lt;br&gt;**NOTE：**&lt;br&gt;In versions earlier than API version 12, **options** is defined as follows:&lt;br&gt;{&lt;br&gt;align?: [Alignment](../arkts-apis/arkts-arkui-enums-alignment-e.md/arkts-arkui-enums-alignment-e.md), &lt;br&gt;offset?: { x?: number, y?: number}&lt;br&gt;}<br>**Since:** 12 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| T | 返回当前组件。 |
+| T | Current component. |
 
 ## padding
 
@@ -7829,9 +8013,7 @@ overlay(value: string | CustomBuilder | ComponentContent, options?: OverlayOptio
 padding(value: Padding | Length | LocalizedPadding): T
 ```
 
-设置组件的内边距属性。设置后会在组件内容和边框之间创建额外空间，影响组件内部内容的布局区域。
-
-从API version 10开始，该接口支持calc计算特性。
+Sets the padding of the component.&lt;br&gt;Since API version 10, this API supports the calc calculation feature.
 
 **Since:** 7
 
@@ -7849,13 +8031,13 @@ padding(value: Padding | Length | LocalizedPadding): T
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | [Padding](../arkts-apis/arkts-arkui-units-padding-i.md) \| Length \| LocalizedPadding | Yes | 设置组件的内边距。 &lt;br&gt;参数为Length类型时，四个方向内边距同时生效。 &lt;br&gt;默认值：0 &lt;br&gt;单位：vp &lt;br&gt;padding设置百分比时，上下左右内边距均以父容器的width作为基础值。<br>**Since:** 12 |
+| value | [Padding](../arkts-apis/arkts-arkui-units-padding-i.md) \| Length \| LocalizedPadding | Yes | Padding of the component to set &lt;br&gt; When the parameter is of the **Length** type, the four paddings take effect. &lt;br&gt;Default value: **0** &lt;br&gt;Unit: vp &lt;br&gt;When **padding** is set to a percentage, the width of the parent container is used as the basic value.<br>**Since:** 12 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| T | 返回当前组件对象，用于链式调用。 |
+| T | Current component. |
 
 ## parallelGesture
 
@@ -7863,11 +8045,11 @@ padding(value: Padding | Length | LocalizedPadding): T
 parallelGesture(gesture: GestureType, mask?: GestureMask): T
 ```
 
-绑定可与子组件手势同时触发的手势。手势事件为非冒泡事件。父组件设置parallelGesture时，父子组件相同的手势事件都可以触发，实现类似冒泡效果。
+Gesture that can be recognized at once by the component and its child component. The gesture event is not a bubbling event. When **parallelGesture** is set for a component, both it and its child component can respond to the same gesture events, thereby implementing a quasi-bubbling effect.
 
-> **说明：**
+> **NOTE：**
 > 
-> 该接口不支持在[attributeModifier](arkts-arkui-commonmethod-c.md#attributemodifier)中调用。
+> This API cannot be called within [attributeModifier](arkts-arkui-commonmethod-c.md#attributemodifier).
 
 **Since:** 7
 
@@ -7883,14 +8065,14 @@ parallelGesture(gesture: GestureType, mask?: GestureMask): T
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| gesture | [GestureType](../arkts-apis/arkts-arkui-gesturetype-t.md) | Yes | 绑定的手势对象。 |
-| mask | [GestureMask](../arkts-apis/arkts-arkui-gesturemask-e.md) | No | 事件响应设置。&lt;br/&gt;默认值：GestureMask.Normal |
+| gesture | [GestureType](../arkts-apis/arkts-arkui-gesturetype-t.md) | Yes | Gesture object to bind. |
+| mask | [GestureMask](../arkts-apis/arkts-arkui-gesturemask-e.md) | No | Mask for gesture events.&lt;br&gt;Default value: **GestureMask.Normal**. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| T | 返回当前组件。 |
+| T | Current component. |
 
 ## pixelRound
 
@@ -7898,21 +8080,26 @@ parallelGesture(gesture: GestureType, mask?: GestureMask): T
 pixelRound(value: PixelRoundPolicy): T
 ```
 
-指定当前组件在指定方向上的像素取整对齐方式，某方向不设置时默认在该方向进行四舍五入取整。
+Sets the pixel rounding policy for the current component in the specified direction.If a direction is not set, the pixels are rounded to the nearest whole number in that direction.
 
-> **说明：**
+> **NOTE：**
 > 
-> - 在API version 11，本接口采用半像素对齐方式（即0\~0.25取0，0.25\~0.75取0.5，0.75\~1.0取1）。从API version
-12开始，本接口采用四舍五入的取整方式，并支持组件级关闭像素取整的能力。  
+> - In API version 11, this API uses half-pixel alignment (that is, 0-0.25 rounds to 0, 0.25-0.75 rounds to 0.5,
+> 0.75-1.0 rounds to 1). Since API version 12, this API rounds pixels to the nearest integers and allows you to
+> disable pixel rounding for individual components.
 > 
-> - 从API version
-12开始，该接口支持在[attributeModifier](ts-universal-attributes-attribute-modifier.md#attributemodifier)中调用。
+> - This API can be called within
+> [attributeModifier](arkts-arkui-commonmethod-c.md#attributemodifier)
+> since API version 12.
 
-正常计算时，上下方向与组件高度相对应，左右方向（镜像的起始方向称为左）与宽度相对应。为方便描述将两组方向称为左上和右下。
+In normal calculations, the vertical direction (top and bottom) correspond to the component height, and the horizontal direction (the starting direction of mirroring is considered "left") correspond to the component width.For ease of description, these two sets of directions are referred to as top-left and bottom-right.
 
-- 计算当前组件左上角坐标： 左上角相对父容器偏移量。  
-- 计算当前组件右下角坐标： 左上角相对于父容器偏移量 + 组件自身尺寸。  
-- 重新计算当前组件尺寸： 右下角坐标四舍五入取整 - 左上角坐标四舍五入取整。
+- Calculate the top-left coordinates of the current component: offset of the top-left corner relative to the  
+parent container.  
+- Calculate the bottom-right coordinates of the current component: offset of the top-left corner relative to the  
+parent container plus the size of the component itself.  
+- Recalculate the size of the current component: bottom-right corner rounded value minus the top-left corner  
+rounded value.
 
 **Since:** 11
 
@@ -7932,7 +8119,7 @@ pixelRound(value: PixelRoundPolicy): T
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | [PixelRoundPolicy](../arkts-apis/arkts-arkui-common-pixelroundpolicy-i.md) | Yes | 指定当前组件边界取整策略。&lt;br/&gt;**说明：**&lt;br/&gt;该属性用于因浮点数绘制产生视觉异常的场景。取整结果不仅和组件的宽高有关，也与组件的位置有关。即使设置组件的宽高相同，由于以浮点数描述的组件位置不同，舍入后组件的最终宽高也 可能不同。 |
+| value | [PixelRoundPolicy](../arkts-apis/arkts-arkui-common-pixelroundpolicy-i.md) | Yes | Rounding policy for the bounds of the component. &lt;br&gt;**NOTE：**&lt;br&gt; This attribute is applicable in scenarios where artifacts occur due to floating-point drawing. The rounding result is related not only to the component's width and height but also to its position. Even if the component's width and height are set to be the same, due to different floating-point positions described, the final width and height of the component may also be different after rounding. |
 
 **Return value:**
 
@@ -7946,7 +8133,7 @@ pixelRound(value: PixelRoundPolicy): T
 pixelStretchEffect(options: PixelStretchEffectOptions): T
 ```
 
-设置组件的图像边缘像素扩展距离。
+Applies a pixel stretch effect to the component.
 
 **Since:** 12
 
@@ -7958,17 +8145,19 @@ pixelStretchEffect(options: PixelStretchEffectOptions): T
 
 <!--Device-CommonMethod-pixelStretchEffect(options: PixelStretchEffectOptions): T--><!--Device-CommonMethod-pixelStretchEffect(options: PixelStretchEffectOptions): T-End-->
 
+**System capability:** SystemCapability.ArkUI.ArkUI.Full
+
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| options | [PixelStretchEffectOptions](../arkts-apis/arkts-arkui-common-pixelstretcheffectoptions-i.md) | Yes | 设置组件的图像边缘像素扩展距离。&lt;br/&gt;参数`options`包括上下左右四个方向的边缘像素扩展距离。&lt;br/&gt;**说明：**&lt;br/ &gt;1. 如果距离为正值，表示向外扩展，放大原来图像大小。上下左右四个方向分别用边缘像素填充，填充的距离即为设置的边缘扩展的距离。&lt;br/&gt;2. 如果距离为负值，表示内缩，但是最终图像大小不变。&lt;br/&gt;内缩方式：&lt;br/&gt; 图像根据`options`的设置缩小，缩小大小为四个方向边缘扩展距离的绝对值。&lt;br/&gt;图像用边缘像素扩展到原来大小。&lt;br/&gt;3. 对`options`的输入约束：&lt;br/&gt;上下左右四个方向的扩展统一为非正值或者非负值。 即四个边同时向外扩或者内缩，方向一致。&lt;br/&gt;所有方向的输入均为百分比或者具体值，不支持百分比和具体值混用。&lt;br/&gt;所有异常情况下，显示为{0, 0, 0, 0}效果，即跟原图保持一致。 |
+| options | [PixelStretchEffectOptions](../arkts-apis/arkts-arkui-common-pixelstretcheffectoptions-i.md) | Yes | Pixel stretch effect options.&lt;br&gt;The value includes the length by which a pixel is stretched toward the four edges.&lt;br&gt;**NOTE：**&lt;br&gt;1. If the length is a positive value, the original image is stretched, and the image size increases. The edge pixels grow by the set length toward the top, bottom, left, and right edges.&lt;br&gt;2. If the length is a negative value, the original image shrinks as follows, but the image size remains unchanged:&lt;br&gt;Shrinking mode:&lt;br&gt;(1) The image shrinks from the four edges by the absolute value of length set through **options**.&lt;br&gt;(2) The image is stretched back to the original size with edge pixels.&lt;br&gt;3. Constraints on **options**:&lt;br&gt;(1) The length values for the four edges must be all positive or all negative. That is, the four edges are stretched or shrink at the same time in the same direction.&lt;br&gt;(2) The length values must all be a percentage or a specific value. Combined use of the percentage and specific value is not allowed.&lt;br&gt;If the input value is invalid, the image is displayed as {0, 0, 0, 0}, that is, the image remains unchanged. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| T | 返回当前组件。 |
+| T | Current component. |
 
 ## pixelStretchEffect
 
@@ -7976,8 +8165,9 @@ pixelStretchEffect(options: PixelStretchEffectOptions): T
 pixelStretchEffect(options: Optional<PixelStretchEffectOptions>): T
 ```
 
-设置组件的图像边缘像素扩展距离。与  
-[pixelStretchEffect&lt;sup&gt;12+&lt;/sup&gt;](arkts-arkui-commonmethod-c.md#pixelstretcheffect)相比，options参数新增了对undefined类型的支持。
+Applies a pixel stretch effect to the component. Compared to   
+[pixelStretchEffect&lt;sup&gt;12+&lt;/sup&gt;](arkts-arkui-commonmethod-c.md#pixelstretcheffect), the   
+**options** parameter supports the **undefined** type.
 
 **Since:** 18
 
@@ -7989,17 +8179,19 @@ pixelStretchEffect(options: Optional<PixelStretchEffectOptions>): T
 
 <!--Device-CommonMethod-pixelStretchEffect(options: Optional<PixelStretchEffectOptions>): T--><!--Device-CommonMethod-pixelStretchEffect(options: Optional<PixelStretchEffectOptions>): T-End-->
 
+**System capability:** SystemCapability.ArkUI.ArkUI.Full
+
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| options | [Optional](../arkts-apis/arkts-arkui-optional-t.md)&lt;PixelStretchEffectOptions&gt; | Yes | 设置组件的图像边缘像素扩展距离。&lt;br/&gt;参数`options`包括上下左右四个方向的边缘像素扩展距离。&lt;br/&gt; **说明：**&lt;br/&gt;1. 如果距离为正值，表示向外扩展，放大原来图像大小。上下左右四个方向分别用边缘像素填充，填充的距离即为设置的边缘扩展的距离。&lt;br/&gt;2. 如果距离为负值，表示内缩，但是最终图像大小不变。&lt;br/ &gt;内缩方式：&lt;br/&gt;图像根据`options`的设置缩小，缩小大小为四个方向边缘扩展距离的绝对值。&lt;br/&gt;图像用边缘像素扩展到原来大小。&lt;br/&gt;3. 对`options`的输入约束：&lt;br/&gt;上下左右四个方向的扩展统 一为非正值或者非负值。即四个边同时向外扩或者内缩，方向一致。&lt;br/&gt;所有方向的输入均为百分比或者具体值，不支持百分比和具体值混用。&lt;br/&gt;所有异常情况下，显示为{0, 0, 0, 0}效果，即跟原图保持一致。&lt;br/&gt; 当options的值为undefined时，恢复为无像素扩展效果。 |
+| options | [Optional](../arkts-apis/arkts-arkui-optional-t.md)&lt;PixelStretchEffectOptions&gt; | Yes | Pixel stretch effect options.&lt;br&gt;The value includes the length by which a pixel is stretched toward the four edges.&lt;br&gt;**NOTE：**&lt;br&gt;1. If the length is a positive value, the original image is stretched, and the image size increases. The edge pixels grow by the set length toward the top, bottom, left, and right edges.&lt;br&gt;2. If the length is a negative value, the original image shrinks as follows, but the image size remains unchanged:&lt;br&gt;Shrinking mode:&lt;br&gt;(1) The image shrinks from the four edges by the absolute value of length set through **options**.&lt;br&gt;(2) The image is stretched back to the original size with edge pixels.&lt;br&gt;3. Constraints on **options**:&lt;br&gt;(1) The length values for the four edges must be all positive or all negative. That is, the four edges are stretched or shrink at the same time in the same direction.&lt;br&gt;(2) The length values must all be a percentage or a specific value. Combined use of the percentage and specific value is not allowed.&lt;br&gt;If the input value is invalid, the image is displayed as {0, 0, 0, 0}, that is, the image remains unchanged.&lt;br&gt;If **options** is **undefined**, the component reverts to its original effect with no pixel stretch. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| T | 返回当前组件。 |
+| T | Current component. |
 
 ## position
 
@@ -8007,18 +8199,20 @@ pixelStretchEffect(options: Optional<PixelStretchEffectOptions>): T
 position(value: Position | Edges | LocalizedEdges): T
 ```
 
-绝对定位，确定子组件相对父组件内容区的位置，支持[attributeModifier](arkts-arkui-commonmethod-c.md#attributemodifier)动态设置属性方法。
+Sets the absolute positioning, which determines the position of a child component relative to the content area of the parent component. Dynamic configuration via [attributeModifier](arkts-arkui-commonmethod-c.md#attributemodifier) is supported.
 
-> **说明：**
-> 
-> - position对位置的影响作用在组件的尺寸测量完成之后。
-> - 当父组件为[Row](../arkts-apis/arkts-arkui-row-row-f.md/arkts-arkui-row-row-f.md#row)、[Column](../arkts-apis/arkts-arkui-column-column-f.md/arkts-arkui-column-column-f.md#column)或[Flex](../arkts-apis/arkts-arkui-flex-flex-f.md/arkts-arkui-flex-flex-f.md#flex)时，设置position的子组件不占位。在上述场景中，如果父组件包含的所有子组件均设置了position，此时父组件尺寸无法通过其他子组件确定，将基于尺寸(0, 0)进行布局测算。
-> -
-Position类型基于父组件内容区左上角确定位置；Edges类型基于父组件内容区四边确定位置，top/left/right/bottom分别为组件各边距离父组件内容区相应边的边距，通过边距来确定组件相对于父组件内容区的位置；Lo calizedEdges类型基于父组件内容区四边确定位置，支持镜像模式。  
-> - 本属性适用于置顶显示、悬浮按钮等组件在父组件中位置固定的场景。
-> - 本属性不支持在宽高为零的布局组件上设置。
-> - 当父组件为[RelativeContainer](../arkts-apis/arkts-arkui-relativecontainer-relativecontainer-f.md/arkts-arkui-relativecontainer-relativecontainer-f.md#relativecontainer)，且子组件设置了alignRules属性时，子组件的position属性不生效。
-> - 若本属性所在组件的父组件未设置固定宽高，那么本组件会参考第一个设置固定宽高的祖先组件进行绝对定位。
+**NOTE：**
+- This API takes effect after the component's size measurement is complete.
+- When the parent container is [Row](../arkts-apis/arkts-arkui-row-row-f.md/arkts-arkui-row-row-f.md#row),
+[Column](../arkts-apis/arkts-arkui-column-column-f.md/arkts-arkui-column-column-f.md#column), or  
+[Flex](../arkts-apis/arkts-arkui-flex-flex-f.md/arkts-arkui-flex-flex-f.md#flex), the child component with **position** set does not occupy any space.  
+- The [Position](arkts-arkui-commonmethod-c.md#position) type uses the upper left corner of the parent's content area as the  
+reference point. The [Edges](../arkts-apis/arkts-arkui-graphics-edges-i.md/arkts-arkui-graphics-edges-i.md) type uses all four sides of the parent's content area as reference, where **top**, **left**, **right**, and **bottom** define the margins between the component and corresponding sides of the parent's content area. The [LocalizedEdges](../arkts-apis/arkts-arkui-units-localizededges-i.md/arkts-arkui-units-localizededges-i.md) type provides the same functionality as Edges while supporting layout mirroring.  
+- This attribute is applicable to scenarios where the component's position in the parent container is fixed, for  
+example, where it is pinned to top or floating on the UI.  
+- This attribute is unavailable for a layout container whose width and height are zero.  
+- In [RelativeContainer](../../../reference/apis-arkui/arkui-ts/ts-container-relativecontainer.md), if the child  
+component has [alignRules](arkts-arkui-commonmethod-c.md#alignrules) set, the **position** attribute will not take effect
 
 **Since:** 7
 
@@ -8050,13 +8244,14 @@ Position类型基于父组件内容区左上角确定位置；Edges类型基于�
 priorityGesture(gesture: GestureType, mask?: GestureMask): T
 ```
 
-绑定优先识别手势。
+Gesture to preferentially recognize.
 
-1. 默认情况下，子组件优先识别通过gesture绑定的手势，当父组件配置priorityGesture时，父组件优先识别priorityGesture绑定的手势。2. 绑定长按手势时，设置触发长按的最短时间小的组件会优先响应，会忽略priorityGesture设置。
+1. By default, the child component preferentially recognizes the gesture specified by **gesture**, and the parent component preferentially recognizes the gesture specified by **priorityGesture** (if set).2. For long press gestures, the component with the shortest minimum hold-down time responds first, ignoring the  
+**priorityGesture** settings.
 
-> **说明：**
+> **NOTE：**
 > 
-> 该接口不支持在[attributeModifier](arkts-arkui-commonmethod-c.md#attributemodifier)中调用。
+> This API cannot be called within [attributeModifier](arkts-arkui-commonmethod-c.md#attributemodifier).
 
 **Since:** 7
 
@@ -8072,14 +8267,14 @@ priorityGesture(gesture: GestureType, mask?: GestureMask): T
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| gesture | [GestureType](../arkts-apis/arkts-arkui-gesturetype-t.md) | Yes | 绑定的手势对象。 |
-| mask | [GestureMask](../arkts-apis/arkts-arkui-gesturemask-e.md) | No | 事件响应设置。&lt;br/&gt;默认值：GestureMask.Normal |
+| gesture | [GestureType](../arkts-apis/arkts-arkui-gesturetype-t.md) | Yes | Gesture object to bind. |
+| mask | [GestureMask](../arkts-apis/arkts-arkui-gesturemask-e.md) | No | Mask for gesture events.&lt;br&gt;Default value: **GestureMask.Normal**. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| T | 返回当前组件。 |
+| T | Current component. |
 
 ## radialGradient
 
@@ -8087,31 +8282,33 @@ priorityGesture(gesture: GestureType, mask?: GestureMask): T
 radialGradient(value: RadialGradientOptions): T
 ```
 
-径向渐变。
+Radial Gradient center:Center point of radial gradient radius:Radius of Radial Gradient. value range [0, +∞)colors:Color description for gradients repeating: Refill. The default value is false
 
 Anonymous Object Rectification.
 
-**Since:** 18
+**Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 18.
+**ArkTS mode:** ArkTS-Dyn only, since version 7.
 
-**Atomic service API:** This API can be used in atomic services since API version 18.
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
-**Widget capability:** This API can be used in ArkTS widgets since API version 18.
+**Widget capability:** This API can be used in ArkTS widgets since API version 9.
 
 <!--Device-CommonMethod-radialGradient(value: RadialGradientOptions): T--><!--Device-CommonMethod-radialGradient(value: RadialGradientOptions): T-End-->
+
+**System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | [RadialGradientOptions](arkts-arkui-radialgradientoptions-i.md) | Yes | 径向渐变。<br>**Since:** 18 |
+| value | [RadialGradientOptions](arkts-arkui-radialgradientoptions-i.md) | Yes | [since 7 - 17] |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| T | 返回当前组件。 |
+| T |  |
 
 ## radialGradient
 
@@ -8119,7 +8316,7 @@ Anonymous Object Rectification.
 radialGradient(options: Optional<RadialGradientOptions>): T
 ```
 
-径向渐变。与[radialGradient](arkts-arkui-commonmethod-c.md#radialgradient)相比，options参数新增了对undefined类型的支持。
+Radial Gradient center:Center point of radial gradient radius:Radius of Radial Gradient. value range [0, +∞)colors:Color description for gradients repeating: Refill. The default value is false
 
 **Since:** 18
 
@@ -8133,17 +8330,19 @@ radialGradient(options: Optional<RadialGradientOptions>): T
 
 <!--Device-CommonMethod-radialGradient(options: Optional<RadialGradientOptions>): T--><!--Device-CommonMethod-radialGradient(options: Optional<RadialGradientOptions>): T-End-->
 
+**System capability:** SystemCapability.ArkUI.ArkUI.Full
+
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| options | [Optional](../arkts-apis/arkts-arkui-optional-t.md)&lt;RadialGradientOptions&gt; | Yes | 径向渐变。&lt;br/&gt;当options的值为undefined时，恢复为无径向渐变的效果。 |
+| options | [Optional](../arkts-apis/arkts-arkui-optional-t.md)&lt;RadialGradientOptions&gt; | Yes |  |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| T | 返回当前组件。 |
+| T |  |
 
 ## renderFit
 
@@ -8151,7 +8350,7 @@ radialGradient(options: Optional<RadialGradientOptions>): T
 renderFit(fitMode: RenderFit): T
 ```
 
-设置宽高动画过程中的组件内容填充方式。不通过该接口设置，保持动画终态的内容大小，并且内容始终与组件保持左上角对齐。
+Sets how the final state of the component's content is rendered during its width and height animation process. If it is not set via this API, the content size at the end of the animation is maintained, and the content always remains top-left aligned with the component.
 
 **Since:** 10
 
@@ -8171,13 +8370,13 @@ renderFit(fitMode: RenderFit): T
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| fitMode | [RenderFit](../arkts-apis/arkts-arkui-renderfit-e.md) | Yes | 设置宽高动画过程中的组件内容填充方式。 |
+| fitMode | [RenderFit](../arkts-apis/arkts-arkui-renderfit-e.md) | Yes | Sets how the final state of the component's content is rendered during its width and height animation process. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| T | 返回当前组件。 |
+| T | Current component. |
 
 ## renderFit
 
@@ -8185,8 +8384,9 @@ renderFit(fitMode: RenderFit): T
 renderFit(fitMode: Optional<RenderFit>): T
 ```
 
-设置宽高动画过程中的组件内容填充方式。不通过该接口设置，保持动画终态的内容大小，并且内容始终与组件保持左上角对齐。与  
-[renderFit](arkts-arkui-commonmethod-c.md#renderfit)相比，fitMode参数新增了对undefined类型的支持。
+Sets how the final state of the component's content is rendered during its width and height animation process. If it is not set via this API, the content size at the end of the animation is maintained, and the content always remains top-left aligned with the component. Compared to   
+[renderFit](arkts-arkui-commonmethod-c.md#renderfit), this API supports the **undefined** type for the   
+**fitMode** parameter.
 
 **Since:** 18
 
@@ -8206,13 +8406,13 @@ renderFit(fitMode: Optional<RenderFit>): T
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| fitMode | [Optional](../arkts-apis/arkts-arkui-optional-t.md)&lt;[RenderFit](../arkts-apis/arkts-arkui-renderfit-e.md)&gt; | Yes | 设置宽高动画过程中的组件内容填充方式。&lt;br/&gt;当fitMode的值为undefined时，取默认值。恢复为内容填充方式为 RenderFit.TOP_LEFT的效果。 |
+| fitMode | [Optional](../arkts-apis/arkts-arkui-optional-t.md)&lt;[RenderFit](../arkts-apis/arkts-arkui-renderfit-e.md)&gt; | Yes | Sets how the final state of the component's content is rendered during its width and height animation process.&lt;br&gt;If **fitMode** is set to **undefined**, the default value is used, which is equivalent to **RenderFit.TOP_LEFT**. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| T | 返回当前组件。 |
+| T | Current component. |
 
 ## renderGroup
 
@@ -8220,9 +8420,9 @@ renderFit(fitMode: Optional<RenderFit>): T
 renderGroup(value: boolean): T
 ```
 
-设置是否组成节点组。节点组表示当前组件和子组件组成的子树先在离屏画布中渲染，再与父组件融合绘制。设置为节点组后，系统会缓存绘制结果，提升性能。但如果节点组内的组件频繁更新，缓存失效，可能导致性能下降。此外，设置为节点组后，当前组件的不透明度不为1时，绘制效果可能有差异。
+Sets whether to form a render group. A render group means that the subtree composed of the current component and its child components is first rendered on an offscreen canvas and then composited with the parent component. Setting a render group allows the system to cache the rendering result, improving performance. However, if components within the render group are frequently updated, cache invalidation may lead to performance degradation. Additionally, when a render group is set and the current component's opacity is not **1**, the rendering effect may differ.
 
-不设置该属性时，默认不组成节点组。
+If this attribute is not set, no render group is formed by default.
 
 **Since:** 10
 
@@ -8242,13 +8442,13 @@ renderGroup(value: boolean): T
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | boolean | Yes | 设置当前组件和子组件是否组成节点组。&lt;br/&gt; false表示不组成节点组，不进行离屏渲染直接绘制。&lt;br/&gt; true表示当前组件和子组件组成节点组，进行离屏渲染后再与父组件 融合绘制。 |
+| value | boolean | Yes | Whether the current component and its child components form a render group.&lt;br&gt; **false**: no. Rendering is performed directly without offscreen rendering.&lt;br&gt; **true**: yes. The current component and its child components are rendered offscreen first and then composited with the parent component. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| T | 返回当前组件。 |
+| T | Current component. |
 
 ## renderGroup
 
@@ -8256,11 +8456,7 @@ renderGroup(value: boolean): T
 renderGroup(isGroup: Optional<boolean>): T
 ```
 
-设置是否组成节点组。节点组表示当前组件和子组件组成的子树先在离屏画布中渲染，再与父组件融合绘制。设置为节点组后，系统会缓存绘制结果，提升性能。但如果节点组内的组件频繁更新，缓存失效，可能导致性能下降。此外，设置为节点组后，当前组件的不透明度不为1时，绘制效果可能有差异。
-
-与[renderGroup&lt;sup&gt;10+&lt;/sup&gt;](arkts-arkui-commonmethod-c.md#rendergroup)相比，isGroup参数新增了对undefined类型的支持。
-
-不设置该属性时，默认不组成节点组。
+Composite the contents of this view and its children into an offscreen cache before display in the screen.
 
 **Since:** 18
 
@@ -8274,17 +8470,19 @@ renderGroup(isGroup: Optional<boolean>): T
 
 <!--Device-CommonMethod-renderGroup(isGroup: Optional<boolean>): T--><!--Device-CommonMethod-renderGroup(isGroup: Optional<boolean>): T-End-->
 
+**System capability:** SystemCapability.ArkUI.ArkUI.Full
+
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| isGroup | [Optional](../arkts-apis/arkts-arkui-optional-t.md)&lt;boolean&gt; | Yes | 设置当前组件和子组件是否组成节点组。&lt;br/&gt; false表示不组成节点组，不进行离屏渲染直接绘制。&lt;br/&gt; true表示当前组件和子组件组成节点组， 进行离屏渲染后再与父组件融合绘制。&lt;br/&gt;当isGroup的值为undefined时，按照不组成节点组处理。 |
+| isGroup | [Optional](../arkts-apis/arkts-arkui-optional-t.md)&lt;boolean&gt; | Yes | if this view and its children need to composite into an offscreen cache. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| T | 返回当前组件。 |
+| T |  |
 
 ## responseRegion
 
@@ -8292,8 +8490,7 @@ renderGroup(isGroup: Optional<boolean>): T
 responseRegion(value: Array<Rectangle> | Rectangle): T
 ```
 
-设置一个或多个触摸热区。从API版本26.0.0开始，未主动设置时[Button](../../apis-input-kit/arkts-apis/arkts-input-multimodalinput-mouseevent-button-e.md/arkts-input-multimodalinput-mouseevent-button-e.md)、[Button模式的Toggle](../arkts-apis/arkts-arkui-toggle-toggle-f.md/arkts-arkui-toggle-toggle-f.md#toggle)、[Select](../arkts-apis/arkts-arkui-select-select-f.md/arkts-arkui-select-select-f.md#select)、  
-[Chip](../arkts-apis/arkts-arkui-advanced-chip.md/arkts-arkui-advanced-chip.md)和[ChipGroup](../arkts-apis/arkts-arkui-advanced-chipgroup.md/arkts-arkui-advanced-chipgroup.md)组件的触摸热区默认最小高度从28vp变更为32vp。该变更仅影响触摸命中范围，不影响组件实际显示高度。
+Sets one or more touch targets.
 
 **Since:** 8
 
@@ -8311,13 +8508,13 @@ responseRegion(value: Array<Rectangle> | Rectangle): T
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | Array&lt;Rectangle&gt; \| Rectangle | Yes | 触摸热区，包括位置和大小。&lt;br/&gt;默认触摸热区为整个组件，默认值：&lt;br/&gt;{&lt;br/&gt;x：0,&lt;br/&gt;y：0,&lt;br/&gt; width：'100%',&lt;br/&gt;height：'100%'&lt;br/&gt;}&lt;br/&gt; |
+| value | Array&lt;Rectangle&gt; \| Rectangle | Yes | Touch target, including the position and size.&lt;br&gt;The default touch target is the entire component. Default value:&lt;br&gt;{&lt;br&gt;x: 0,&lt;br&gt;y: 0,&lt;br&gt;width: '100%',&lt;br&gt;height: '100%'&lt;br&gt;}&lt;br&gt; |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| T | 返回当前组件。 |
+| T | Current component. |
 
 ## responseRegionList
 
@@ -8325,8 +8522,9 @@ responseRegion(value: Array<Rectangle> | Rectangle): T
 responseRegionList(regions: Array<ResponseRegion>): T
 ```
 
-设置组件的触摸热区列表。调用该接口时，[responseRegion](arkts-arkui-commonmethod-c.md#responseregion)与  
-[mouseResponseRegion](arkts-arkui-commonmethod-c.md#mouseresponseregion)接口不再生效。
+Sets the touch target list for the component. When this API is called, the  
+[responseRegion](arkts-arkui-commonmethod-c.md#responseregion) and  
+[mouseResponseRegion](arkts-arkui-commonmethod-c.md#mouseresponseregion) APIs do not take effect.
 
 **Since:** 22
 
@@ -8344,13 +8542,13 @@ responseRegionList(regions: Array<ResponseRegion>): T
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| regions | Array&lt;ResponseRegion&gt; | Yes | 组件的触摸热区数组。&lt;br/&gt;每个触摸热区均包括输入工具类型、位置和大小。&lt;br/&gt;默认值：&lt;br/&gt; [{&lt;br/&gt;tool：ResponseRegionSupportedTool.ALL,&lt;br/&gt;x：LengthMetrics.vp(0),&lt;br/&gt;y：LengthMetrics.vp(0),&lt;br/&gt;width：LengthMetrics.percent(1),&lt;br/&gt;height：LengthMetrics.percent(1)&lt;br/&gt;}] |
+| regions | Array&lt;ResponseRegion&gt; | Yes | Array of touch targets for the component.&lt;br&gt;Each touch target contains the input tool type, position, and size.&lt;br&gt;Default value:&lt;br&gt; [{&lt;br&gt;tool: ResponseRegionSupportedTool.ALL,&lt;br&gt;x: LengthMetrics.vp(0),&lt;br&gt;y: LengthMetrics.vp(0), &lt;br&gt;width: LengthMetrics.percent(1),&lt;br&gt;height: LengthMetrics.percent(1)&lt;br&gt;}] |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| T | 返回当前组件。 |
+| T | Current component. |
 
 ## restoreId
 
@@ -8452,7 +8650,7 @@ Reuse id is used for identify the reuse type for each custom node.
 rotate(value: RotateOptions): T
 ```
 
-设置组件旋转。
+Rotates the component.
 
 **Since:** 7
 
@@ -8470,13 +8668,13 @@ rotate(value: RotateOptions): T
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | [RotateOptions](arkts-arkui-rotateoptions-i.md) | Yes | 可使组件在以组件左上角为坐标原点的[组件坐标系](../../../ui/arkui-glossary.md#组件坐标系)中进行旋转（坐标系如下图所示）。其中，( x, y, z）指定一个矢量，作为旋转轴。&lt;br/&gt;旋转轴和旋转中心点都基于坐标系设定，组件发生位移时，坐标系不会随之移动。&lt;br/&gt;默认值: 在x、y、z都不指定时，x、y、z的默认值分别为0、0、1。指定了x、y、z任 何一个值时，x、y、z中未指定的值默认为0。&lt;br/&gt;{&lt;br/&gt;centerX: '50%',&lt;br/&gt;centerY: '50%',&lt;br/&gt;centerZ: 0,&lt;br/&gt;perspective: 0&lt;br/&gt;}&lt; br/&gt;单位：vp&lt;br/&gt;![coordinates](../../../reference/apis-arkui/arkui-ts/figures/coordinates.png) |
+| value | [RotateOptions](arkts-arkui-rotateoptions-i.md) | Yes | How the component is rotated within the [component coordinate system](../../../ui/arkui-glossary.md#component-coordinate-system), which takes the upper-left corner of the component as the origin (as shown in the figure below). (x, y, z) specifies a vector as the axis of rotation.&lt;br&gt;The axis and center of rotation are set based on the coordinate system, which remains where it is when the component is moved.&lt;br&gt;Default value: When **x**, **y**, and **z** are not specified, their default values are **0**, **0**, and **1**, respectively. If any of **x**, **y**, and **z** is specified, the default value for the unspecified one is **0**.&lt;br&gt;{&lt;br&gt;centerX: '50%',&lt;br&gt;centerY: '50%',&lt;br&gt; centerZ: 0,&lt;br&gt;perspective: 0&lt;br&gt;}&lt;br&gt;Unit: vp&lt;br&gt;! [coordinates](../../../reference/apis-arkui/arkui-ts/figures/coordinates.png) |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| T | 返回当前组件。 |
+| T | Current component. |
 
 ## rotate
 
@@ -8484,7 +8682,7 @@ rotate(value: RotateOptions): T
 rotate(options: Optional<RotateOptions>): T
 ```
 
-设置组件旋转。与[rotate](arkts-arkui-commonmethod-c.md#rotate)相比，options参数新增了对undefined类型的支持。
+Rotates the component. Compared with [rotate](arkts-arkui-commonmethod-c.md#rotate), this API supports the **undefined** type.
 
 **Since:** 18
 
@@ -8504,13 +8702,13 @@ rotate(options: Optional<RotateOptions>): T
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| options | [Optional](../arkts-apis/arkts-arkui-optional-t.md)&lt;RotateOptions&gt; | Yes | 可使组件在以组件左上角为坐标原点的[组件坐标系](../../../ui/arkui-glossary.md#组件坐标系)中进行旋转（坐标 系如下图所示）。其中，(x, y, z）指定一个矢量，作为旋转轴。&lt;br/&gt;旋转轴和旋转中心点都基于坐标系设定，组件发生位移时，坐标系不会随之移动。&lt;br/&gt;默认值: 在x、y、z都不指定时，x、y、z的默认值分别为0、0 、1。指定了x、y、z任何一个值时，x、y、z中未指定的值默认为0。&lt;br/&gt;{&lt;br/&gt;centerX: '50%',&lt;br/&gt;centerY: '50%',&lt;br/&gt;centerZ: 0,&lt;br/&gt; perspective: 0&lt;br/&gt;}&lt;br/&gt;单位：vp&lt;br/&gt;! [coordinates](../../../reference/apis-arkui/arkui-ts/figures/coordinates.png)。&lt;br/&gt;当options的值为undefined时，恢复为无旋 转效果。 |
+| options | [Optional](../arkts-apis/arkts-arkui-optional-t.md)&lt;RotateOptions&gt; | Yes | How the component is rotated within the [component coordinate system](../../../ui/arkui-glossary.md#component-coordinate-system), which takes the upper-left corner of the component as the origin (as shown in the figure below). (x, y, z) specifies a vector as the axis of rotation.&lt;br&gt;The axis and center of rotation are set based on the coordinate system, which remains where it is when the component is moved.&lt;br&gt;Default value: When **x**, **y**, and **z** are not specified, their default values are **0**, **0**, and **1**, respectively. If any of **x**, **y**, and **z** is specified, the default value for the unspecified one is **0**.&lt;br&gt;{&lt;br&gt;centerX: '50%',&lt;br&gt;centerY: '50%',&lt;br&gt; centerZ: 0,&lt;br&gt;perspective: 0&lt;br&gt;}&lt;br&gt;Unit: vp&lt;br&gt;! [coordinates](../../../reference/apis-arkui/arkui-ts/figures/coordinates.png)&lt;br&gt;If **options** is **undefined**, the component reverts to its original state with no rotation. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| T | 返回当前组件。 |
+| T | Current component. |
 
 ## rotate
 
@@ -8518,7 +8716,8 @@ rotate(options: Optional<RotateOptions>): T
 rotate(options: Optional<RotateOptions | RotateAngleOptions>): T
 ```
 
-设置组件旋转效果。与[rotate](arkts-arkui-commonmethod-c.md#rotate)相比，options参数新增了对RotateAngleOptions类型的支持。
+Sets the component rotation effect. Compared with   
+[rotate](arkts-arkui-commonmethod-c.md#rotate), this API supports the **RotateAngleOptions**type for the **options** parameter.
 
 **Since:** 20
 
@@ -8538,13 +8737,13 @@ rotate(options: Optional<RotateOptions | RotateAngleOptions>): T
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| options | [Optional](../arkts-apis/arkts-arkui-optional-t.md)&lt;RotateOptions \| RotateAngleOptions&gt; | Yes | RotateOptions可使组件在以组件左上角为坐标原点的坐标系中进行旋转（坐标系如下图所示）。 其中，(x, y, z）指定一个矢量，作为旋转轴。&lt;br/&gt;旋转轴和旋转中心点都基于[组件坐标系](../../../ui/arkui-glossary.md#组件坐标系)设定，组件发生位移时，坐标系不会随之移动。&lt;br /&gt;默认值：在x、y、z都不指定时，x、y、z的默认值分别为0、0、1。指定了x、y、z任何一个值时，x、y、z中未指定的值默认为0。&lt;br/&gt;{&lt;br/&gt;centerX: '50%',&lt;br/&gt;centerY: '50% ',&lt;br/&gt;centerZ: 0,&lt;br/&gt;perspective: 0&lt;br/&gt;}&lt;br/&gt;RotateAngleOptions可使组件在以组件左上角为坐标原点的坐标系中进行旋转（坐标系如下图所示）。其中，( angleX, angleY, angleZ）指定三个轴方向上的旋转角。&lt;br/&gt;默认值：&lt;br/&gt;{&lt;br/&gt;angleX:0,&lt;br /&gt;angleY:0,&lt;br /&gt;angleZ:0,&lt;br /&gt;centerX: ' 50%',&lt;br/&gt;centerY: '50%',&lt;br/&gt;centerZ: 0,&lt;br/&gt;perspective: 0&lt;br/&gt;}&lt;br/&gt;! [coordinates](../../../reference/apis-arkui/arkui-ts/figures/coordinates.png)&lt;br/&gt;当options的值为undefined时，恢复为无旋转 效果。 |
+| options | [Optional](../arkts-apis/arkts-arkui-optional-t.md)&lt;RotateOptions \| RotateAngleOptions&gt; | Yes | RotateOptions**: How the component rotates in the coordinate system (as shown below) with the upper left corner of the component as the coordinate origin. ( x, y, z) specifies a vector as the axis of rotation.&lt;br&gt;The rotation axis and center point are defined based on the [component coordinate system](../../../ui/arkui-glossary.md#component-coordinate-system). When the component moves, the coordinate system does not follow it.&lt;br&gt;Default value: When **x**, **y**, and **z** are not specified, their default values are **0**, **0**, and **1**, respectively. If any of **x**, **y**, and **z** is specified, the default value for the unspecified one is **0**.&lt;br&gt;{&lt;br&gt;centerX: '50%',&lt;br&gt;centerY: '50 %',&lt;br&gt;centerZ: 0,&lt;br&gt;perspective: 0&lt;br&gt;}&lt;br&gt;**RotateAngleOptions**: How the component rotates in the coordinate system (as shown below) with the upper left corner of the component as the coordinate origin. angleX , angleY, angleZ specifies the rotation angle on the three axes.&lt;br&gt;Default value:&lt;br&gt;{&lt;br&gt;angleX:0,&lt;br&gt;angleY: 0,&lt;br&gt;angleZ:0,&lt;br&gt;centerX: '50%',&lt;br&gt;centerY: '50%',&lt;br&gt;centerZ: 0,&lt;br&gt;perspective: 0&lt;br&gt;}&lt;br&gt;! [coordinates](../../../reference/apis-arkui/arkui-ts/figures/coordinates.png)&lt;br&gt;If **options** is **undefined**, the component reverts to its original state with no rotation. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| T | 返回当前组件。 |
+| T | Current component. |
 
 ## safeAreaPadding
 
@@ -8552,11 +8751,23 @@ rotate(options: Optional<RotateOptions | RotateAngleOptions>): T
 safeAreaPadding(paddingValue: Padding | LengthMetrics | LocalizedPadding): T
 ```
 
-设置安全区边距属性。允许容器向自身添加组件级安全区域，供子组件延伸，支持[attributeModifier](arkts-arkui-commonmethod-c.md#attributemodifier)动态设置属性方法。与padding不同，safeAreaPadding用于设置组件级安全区域供子组件延伸使用，而padding用于设置组件内容区域的内边距，两者可同时设置、分别生效。
+Sets the safe area padding. This allows the container to add a component-level safe area for its child components to extend into. This attribute can be dynamically set using  
+[attributeModifier](arkts-arkui-commonmethod-c.md#attributemodifier).
 
-> **说明：**
-> 
-> 从API version 18开始，该接口支持在[attributeModifier](arkts-arkui-commonmethod-c.md#attributemodifier)中调用。
+> **NOTE：**
+> In API version 18, this API can be invoked in attributeModifier.
+> When parent and ancestor containers define component-level safe areas, child components can detect and utilize
+> these areas, referred to as Accumulated Safe Area Expansion (SAE), which represents the maximum extendable length
+> in each direction.
+> When ancestor containers have contiguous safeAreaPadding (undivided by margin, border, or padding),
+> SAE accumulates recursively outward until no adjacent outer safeAreaPadding exists or the recursion extends
+> beyond the page container.
+> System-level avoid areas (status bar, navigation bar, notch areas, and more) are treated as the page container's
+> inherent safeAreaPadding and participate in SAE calculations.
+> For details about the avoid areas, see Safe Area. These component-level safe areas can be leveraged by combining
+> with other attributes.
+> For example, setting the ignoreLayoutSafeArea attribute on a child component allows it to extend its layout into
+> the SAE region.
 
 **Since:** 14
 
@@ -8576,13 +8787,13 @@ safeAreaPadding(paddingValue: Padding | LengthMetrics | LocalizedPadding): T
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| paddingValue | [Padding](../arkts-apis/arkts-arkui-units-padding-i.md) \| LengthMetrics \| LocalizedPadding | Yes | 设置组件的安全区边距，用于在组件内部创建组件级安全区域供子组件延伸使用。 &lt;br&gt;默认值：0 &lt;br&gt;单位：vp &lt;br&gt;paddingValue设置百分比时，上下左右内边距均以父容器的width作为基础值。 |
+| paddingValue | [Padding](../arkts-apis/arkts-arkui-units-padding-i.md) \| LengthMetrics \| LocalizedPadding | Yes | Safe area padding. &lt;br&gt;Unit: vp. Default value: **0**. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| T | 返回当前组件对象，用于链式调用。 |
+| T | Current component. |
 
 ## saturate
 
@@ -8590,7 +8801,7 @@ safeAreaPadding(paddingValue: Padding | LengthMetrics | LocalizedPadding): T
 saturate(value: number): T
 ```
 
-为组件添加饱和度效果。不通过该接口设置时，默认无变化。
+Applies a saturation effect to the component. If this API is not used, there will be no change by default.
 
 **Since:** 7
 
@@ -8608,13 +8819,13 @@ saturate(value: number): T
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | number | Yes | 为当前组件添加饱和度效果，饱和度为颜色中的含色成分和消色成分(灰)的比例，入参为1时，显示原图像，大于1时含色成分越大，饱和度越大，小于1时消色成分越大，饱和度越小。&lt;br/&gt;推 荐取值范围：[0, 50)&lt;br/&gt;**说明：**&lt;br/&gt;设置小于0的值时，按值为0处理。 |
+| value | number | Yes | Saturation of the component. The saturation is the ratio of the chromatic component to the achromatic component (gray) in a color. If the value is **1**, the original image is displayed. If the value is greater than **1**, a higher percentage of the chromatic component indicates a higher saturation. If the value is less than **1**, a higher percentage of the achromatic component indicates a lower saturation.&lt;br&gt; Recommended value range: [0, 50)&lt;br&gt;**NOTE：**&lt;br&gt;A value less than 0 evaluates to the value **0**. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| T | 返回当前组件。 |
+| T | Current component. |
 
 ## saturate
 
@@ -8622,7 +8833,7 @@ saturate(value: number): T
 saturate(saturate: Optional<number>): T
 ```
 
-为组件添加饱和度效果。不通过该接口设置时，默认无变化。与[saturate](arkts-arkui-commonmethod-c.md#saturate)相比，saturate参数新增了对undefined类型的支持。
+Applies a saturation effect to the component. If this API is not used, there will be no change by default. Compared to [saturate](arkts-arkui-commonmethod-c.md#saturate), the **saturate** parameter supports the **undefined** type.
 
 **Since:** 18
 
@@ -8636,17 +8847,19 @@ saturate(saturate: Optional<number>): T
 
 <!--Device-CommonMethod-saturate(saturate: Optional<number>): T--><!--Device-CommonMethod-saturate(saturate: Optional<number>): T-End-->
 
+**System capability:** SystemCapability.ArkUI.ArkUI.Full
+
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| saturate | [Optional](../arkts-apis/arkts-arkui-optional-t.md)&lt;number&gt; | Yes | 为当前组件添加饱和度效果，饱和度为颜色中的含色成分和消色成分(灰)的比例，入参为1时，显示原图像，大于1时含色成分越大，饱和度越大，小于1时消色成分越 大，饱和度越小。&lt;br/&gt;推荐取值范围：[0, 50)&lt;br/&gt;**说明：**&lt;br/&gt;设置小于0的值时，按值为0处理。&lt;br/&gt;当saturate的值为undefined时。恢复为饱和度为1的效果。 |
+| saturate | [Optional](../arkts-apis/arkts-arkui-optional-t.md)&lt;number&gt; | Yes | Saturation of the component. The saturation is the ratio of the chromatic component to the achromatic component (gray) in a color. If the value is **1**, the original image is displayed. If the value is greater than **1**, a higher percentage of the chromatic component indicates a higher saturation. If the value is less than **1**, a higher percentage of the achromatic component indicates a lower saturation.&lt;br&gt;Recommended value range: [0, 50)&lt;br&gt;**NOTE：**&lt;br&gt;A value less than 0 evaluates to the value **0**.&lt;br&gt;If **saturate** is **undefined**, the saturation effect is reset to **1.0**. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| T | 返回当前组件。 |
+| T | Current component. |
 
 ## scale
 
@@ -8654,7 +8867,7 @@ saturate(saturate: Optional<number>): T
 scale(value: ScaleOptions): T
 ```
 
-设置组件缩放。
+Scales the component.
 
 **Since:** 7
 
@@ -8672,13 +8885,13 @@ scale(value: ScaleOptions): T
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | [ScaleOptions](arkts-arkui-scaleoptions-i.md) | Yes | 可以分别设置X轴、Y轴、Z轴的缩放比例，默认值为1，同时可以通过centerX和centerY设置缩放的中心点。&lt;br/&gt;默认值:&lt;br/&gt;{&lt;br/&gt;x: 1,&lt; br/&gt;y: 1,&lt;br/&gt;z: 1,&lt;br/&gt;centerX:'50%',&lt;br/&gt;centerY:'50%'&lt;br/&gt;} |
+| value | [ScaleOptions](arkts-arkui-scaleoptions-i.md) | Yes | Scale ratio along the x-, y-, and z-axis. The default value is **1**. **centerX** and **centerY** are used to set the scale center point.&lt;br&gt;Default value:&lt;br&gt;{&lt;br&gt;x: 1,&lt;br&gt;y: 1,&lt;br&gt;z: 1,&lt;br&gt; centerX:'50%',&lt;br&gt;centerY:'50%'&lt;br&gt;} |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| T | 返回当前组件。 |
+| T | Current component. |
 
 ## scale
 
@@ -8686,7 +8899,8 @@ scale(value: ScaleOptions): T
 scale(options: Optional<ScaleOptions>): T
 ```
 
-设置组件缩放。与[scale](arkts-arkui-commonmethod-c.md#scale)相比，options参数新增了对undefined类型的支持。
+Scales the component. Compared with [scale](arkts-arkui-commonmethod-c.md#scale), this API supports the   
+**undefined** type.
 
 **Since:** 18
 
@@ -8706,13 +8920,13 @@ scale(options: Optional<ScaleOptions>): T
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| options | [Optional](../arkts-apis/arkts-arkui-optional-t.md)&lt;ScaleOptions&gt; | Yes | 可以分别设置X轴、Y轴、Z轴的缩放比例，默认值为1，同时可以通过centerX和centerY设置缩放的中心点。&lt;br/&gt;默认值:&lt;br/&gt;{ &lt;br/&gt;x: 1,&lt;br/&gt;y: 1,&lt;br/&gt;z: 1,&lt;br/&gt;centerX:'50%',&lt;br/&gt;centerY:'50%'&lt;br/&gt;}&lt;br/&gt;当options的值为undefined时，恢复为无缩放效果。 |
+| options | [Optional](../arkts-apis/arkts-arkui-optional-t.md)&lt;ScaleOptions&gt; | Yes | Scale ratio along the x-, y-, and z-axis. The default value is **1**. **centerX** and **centerY** are used to set the scale center point.&lt;br&gt;Default value:&lt;br&gt;{&lt;br&gt;x: 1,&lt;br&gt;y: 1,&lt;br &gt;z: 1,&lt;br&gt;centerX:'50%',&lt;br&gt;centerY:'50%'&lt;br&gt;}&lt;br&gt;If **options** is **undefined**, the component reverts to its original state with no scaling. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| T | 返回当前组件。 |
+| T | Current component. |
 
 ## sepia
 
@@ -8720,7 +8934,7 @@ scale(options: Optional<ScaleOptions>): T
 sepia(value: number): T
 ```
 
-将图像转换为深褐色。
+Converts the image to a sepia tone, reducing color intensity to create a warm, vintage image style.
 
 **Since:** 7
 
@@ -8738,13 +8952,13 @@ sepia(value: number): T
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | number | Yes | 将图像转换为深褐色，降低色彩度，产生温暖复古的图像风格。入参为褐色滤镜强度，值为1则完全是深褐色的，值小于等于0则图像无变化，值大于1会进一步放大色彩偏移比例，图像整体会变得更亮 且色彩更加偏黄/偏红，但不属于标准sepia效果。&lt;br/&gt;取值范围：[0, +∞)，推荐取值范围：(0, 1]。 |
+| value | number | Yes | Intensity of the sepia filter. A value of 1 results in a completely sepia image, values less than or equal to 0 leave the image unchanged, and values greater than 1 increase the color shift, making the image brighter and more yellow or red, though this is not a standard sepia effect.&lt;br&gt;Value range: [0, +∞). Recommended value range: (0, 1]. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| T | 返回当前组件。 |
+| T | Current component. |
 
 ## sepia
 
@@ -8752,7 +8966,8 @@ sepia(value: number): T
 sepia(sepia: Optional<number>): T
 ```
 
-将图像转换为深褐色。与[sepia](arkts-arkui-commonmethod-c.md#sepia)相比，sepia参数新增了对undefined类型的支持。
+Converts the image to a sepia tone, reducing color intensity to create a warm, vintage image style. Compared to   
+[sepia](arkts-arkui-commonmethod-c.md#sepia), this API supports the **undefined** type for the **sepia** parameter.
 
 **Since:** 18
 
@@ -8766,17 +8981,19 @@ sepia(sepia: Optional<number>): T
 
 <!--Device-CommonMethod-sepia(sepia: Optional<number>): T--><!--Device-CommonMethod-sepia(sepia: Optional<number>): T-End-->
 
+**System capability:** SystemCapability.ArkUI.ArkUI.Full
+
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| sepia | [Optional](../arkts-apis/arkts-arkui-optional-t.md)&lt;number&gt; | Yes | 将图像转换为深褐色，降低色彩度，产生温暖复古的图像风格。入参为褐色滤镜强度，值为1则完全是深褐色的，值小于等于0则图像无变化，值大于1会进一步放大色彩偏移比 例，图像整体会变得更亮且色彩更加偏黄/偏红，但不属于标准sepia效果。&lt;br/&gt;当sepia的值为undefined时，恢复为图像无变化的效果。&lt;br/&gt; 取值范围：[0, +∞)，推荐取值范围：(0, 1]。 |
+| sepia | [Optional](../arkts-apis/arkts-arkui-optional-t.md)&lt;number&gt; | Yes | Intensity of the sepia filter. A value of 1 results in a completely sepia image, values less than or equal to 0 leave the image unchanged, and values greater than 1 increase the color shift, making the image brighter and more yellow or red, though this is not a standard sepia effect.&lt;br&gt;If **sepia** is **undefined**, the component reverts to its original effect.&lt;br&gt; Value range: [0, +∞). Recommended value range: (0, 1]. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| T | 返回当前组件。 |
+| T | Current component. |
 
 ## shadow
 
@@ -8784,29 +9001,31 @@ sepia(sepia: Optional<number>): T
 shadow(value: ShadowOptions | ShadowStyle): T
 ```
 
-为组件添加阴影效果。
+Applies a shadow effect to the component.
 
-**Since:** 11
+**Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 11.
+**ArkTS mode:** ArkTS-Dyn only, since version 7.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
-**Widget capability:** This API can be used in ArkTS widgets since API version 11.
+**Widget capability:** This API can be used in ArkTS widgets since API version 9.
 
 <!--Device-CommonMethod-shadow(value: ShadowOptions | ShadowStyle): T--><!--Device-CommonMethod-shadow(value: ShadowOptions | ShadowStyle): T-End-->
+
+**System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | [ShadowOptions](../arkts-apis/arkts-arkui-common-shadowoptions-i.md) \| ShadowStyle | Yes | 为当前组件添加阴影效果。&lt;br/&gt;入参类型为ShadowOptions时，可以指定模糊半径、阴影的颜色、X轴和Y轴的偏移量。&lt;br/&gt;入参类型为 ShadowStyle时，可指定不同阴影样式。<br>**Since:** 7 - 9 |
+| value | [ShadowOptions](../arkts-apis/arkts-arkui-common-shadowoptions-i.md) \| ShadowStyle | Yes | Shadow of the component.&lt;br&gt;When the value type is **ShadowOptions**, the blur radius, shadow color, and offset along the x-axis and y-axis can be specified.&lt;br&gt; When the value type is **ShadowStyle**, the shadow style can be specified.<br>**Since:** 10 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| T | 返回当前组件。 |
+| T | Current component. |
 
 ## shadow
 
@@ -8814,7 +9033,9 @@ shadow(value: ShadowOptions | ShadowStyle): T
 shadow(options: Optional<ShadowOptions | ShadowStyle>): T
 ```
 
-为组件添加阴影效果。与[shadow](arkts-arkui-commonmethod-c.md#shadow)相比，options参数新增了对undefined类型的支持。
+Applies a shadow effect to the component. Compared to   
+[shadow](arkts-arkui-commonmethod-c.md#shadow), the **options** parameter supports the   
+**undefined** type.
 
 **Since:** 18
 
@@ -8828,17 +9049,19 @@ shadow(options: Optional<ShadowOptions | ShadowStyle>): T
 
 <!--Device-CommonMethod-shadow(options: Optional<ShadowOptions | ShadowStyle>): T--><!--Device-CommonMethod-shadow(options: Optional<ShadowOptions | ShadowStyle>): T-End-->
 
+**System capability:** SystemCapability.ArkUI.ArkUI.Full
+
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| options | [Optional](../arkts-apis/arkts-arkui-optional-t.md)&lt;ShadowOptions \| ShadowStyle&gt; | Yes | 为当前组件添加阴影效果。&lt;br/&gt;入参类型为ShadowOptions时，可以指定模糊半径、阴影的颜色、X轴和Y 轴的偏移量。&lt;br/&gt;入参类型为ShadowStyle时，可指定不同阴影样式。&lt;br/&gt;当options的值为undefined时，恢复为无样式的阴影效果。 |
+| options | [Optional](../arkts-apis/arkts-arkui-optional-t.md)&lt;ShadowOptions \| ShadowStyle&gt; | Yes | Shadow of the component.&lt;br&gt;When the value type is **ShadowOptions**, the blur radius, shadow color, and offset along the x-axis and y-axis can be specified.&lt;br&gt; When the value type is **ShadowStyle**, the shadow style can be specified.&lt;br&gt;If **options** is **undefined**, the component reverts to its original effect with no shadow. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| T | 返回当前组件。 |
+| T | Current component. |
 
 ## sharedTransition
 
@@ -8846,7 +9069,7 @@ shadow(options: Optional<ShadowOptions | ShadowStyle>): T
 sharedTransition(id: string, options?: sharedTransitionOptions): T
 ```
 
-设置共享元素转场动效。
+Sets the shared transition animation.
 
 **Since:** 7
 
@@ -8862,14 +9085,14 @@ sharedTransition(id: string, options?: sharedTransitionOptions): T
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| id | string | Yes | 两个页面中id值相同且不为空字符串的组件即为共享元素，在页面转场时可显示共享元素转场动效。 |
-| options | [sharedTransitionOptions](../arkts-apis/arkts-arkui-common-sharedtransitionoptions-i.md) | No | 共享元素转场动画参数。不设置时使用默认转场动画参数。各参数具体默认值参考 [sharedTransitionOptions](arkts-arkui-sharedtransitionoptions-i.md)。 |
+| id | string | Yes | Transition of the shared element. If the same **id** value is configured for a component on the two pages, this component is considered as a shared element of the pages. If the **id** value is an empty string, no transition will be applied to the component. |
+| options | [sharedTransitionOptions](../arkts-apis/arkts-arkui-common-sharedtransitionoptions-i.md) | No | Parameters of the shared element transition animation. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| T | 返回当前组件。 |
+| T | Current component. |
 
 ## shouldBuiltInRecognizerParallelWith
 
@@ -8877,8 +9100,8 @@ sharedTransition(id: string, options?: sharedTransitionOptions): T
 shouldBuiltInRecognizerParallelWith(callback: ShouldBuiltInRecognizerParallelWithCallback): T
 ```
 
-提供系统内置手势与响应链上其他组件的手势设置并行关系的回调事件。此接口对应的C API接口为  
-[setInnerGestureParallelTo](../../../reference/apis-arkui/capi-arkui-nativemodule-arkui-nativegestureapi-1.md#setinnergestureparallelto)。
+Provides a callback to set the parallel relationship between built-in gestures and gestures of other components in the response chain. The corresponding C API is  
+[setInnerGestureParallelTo](../../../reference/apis-arkui/capi-arkui-nativemodule-arkui-nativegestureapi-1.md#setinnergestureparallelto).
 
 **Since:** 12
 
@@ -8896,13 +9119,13 @@ shouldBuiltInRecognizerParallelWith(callback: ShouldBuiltInRecognizerParallelWit
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [ShouldBuiltInRecognizerParallelWithCallback](../arkts-apis/arkts-arkui-shouldbuiltinrecognizerparallelwithcallback-t.md) | Yes | 系统内置手势与响应链上其他组件的手势设置并行关系的回调事件，当该组件进行触摸碰撞测试时， 会触发用户定义的回调来形成手势并行关系。 |
+| callback | [ShouldBuiltInRecognizerParallelWithCallback](../arkts-apis/arkts-arkui-shouldbuiltinrecognizerparallelwithcallback-t.md) | Yes | A callback instance used when a component is doing touch test. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| T | 返回当前组件。 |
+| T | Current component. |
 
 ## shouldRecognizerParallelWith
 
@@ -8910,8 +9133,8 @@ shouldBuiltInRecognizerParallelWith(callback: ShouldBuiltInRecognizerParallelWit
 shouldRecognizerParallelWith(callback: ShouldRecognizerParallelWithCallback): T
 ```
 
-提供手势与响应链上其他组件的手势设置并行关系的回调事件。使用callback异步回调。此接口对应的C API接口为  
-[setGestureParallelTo](../../../reference/apis-arkui/capi-arkui-nativemodule-arkui-nativegestureapi-3.md#setgestureparallelto)。
+Provides a callback to set the parallel relationship between gestures of the current component and gestures of other components in the response chain. This callback uses an asynchronous callback. The corresponding C API is  
+[setGestureParallelTo](../../../reference/apis-arkui/capi-arkui-nativemodule-arkui-nativegestureapi-3.md#setgestureparallelto).
 
 **Since:** 26.0.0
 
@@ -8935,7 +9158,7 @@ shouldRecognizerParallelWith(callback: ShouldRecognizerParallelWithCallback): T
 
 | Type | Description |
 | --- | --- |
-| T | 返回当前组件。 |
+| T | Current component. |
 
 ## size
 
@@ -8943,9 +9166,7 @@ shouldRecognizerParallelWith(callback: ShouldRecognizerParallelWithCallback): T
 size(value: SizeOptions): T
 ```
 
-设置组件自身的宽高尺寸。设置后会影响组件在父容器中的布局和显示大小。
-
-从API version 10开始，该接口支持calc计算特性。
+Sets the width and height of the component.&lt;br&gt;Since API version 10, this API supports the calc calculation feature.
 
 **Since:** 7
 
@@ -8963,13 +9184,13 @@ size(value: SizeOptions): T
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | [SizeOptions](../arkts-apis/arkts-arkui-sizeoptions-i.md) | Yes | 设置宽高尺寸。 &lt;br&gt;异常值：参数为undefined时，属性设置不生效；其它异常值时，size属性恢复到不配置时的默认行为。 &lt;br&gt;单位：vp |
+| value | [SizeOptions](../arkts-apis/arkts-arkui-sizeoptions-i.md) | Yes | The [SizeOptions](../arkts-apis/arkts-arkui-units-sizeoptions-i.md/arkts-arkui-units-sizeoptions-i.md) type is used to set the width and height.&lt;br&gt;Exception handling: If the parameter is **undefined**, the attribute setting does not take effect. For other invalid values, the **size** attribute reverts to its default behavior when unconfigured.&lt;br&gt;Unit: vp |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| T | 返回当前组件对象，用于链式调用。 |
+| T | Current component. |
 
 ## smartGestureShortcut
 
@@ -8977,7 +9198,7 @@ size(value: SizeOptions): T
 smartGestureShortcut(options?: SmartGestureShortcutOptions): T
 ```
 
-设置组件智慧手势响应行为配置。
+Enable or disable specific smart gesture shortcuts, and set response priorities for them.
 
 **Since:** 26.0.0
 
@@ -8995,13 +9216,13 @@ smartGestureShortcut(options?: SmartGestureShortcutOptions): T
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| options | [SmartGestureShortcutOptions](../arkts-apis/arkts-arkui-common-smartgestureshortcutoptions-i.md) | No | 组件智慧手势响应配置。 SmartGestureShortcutOptions中enabled用于配置组件是否响应智慧手势。 selectable用于设置组件被智慧手势操作选中后是否展示并保留选中态。 action用于设置智慧手势响应优先级，当前仅支持GestureShortcut.PRIMARY，会使组件在智慧手势的滑动，点击等操作中作为首选响应目标。 建议显式传入，避免因缺省配置导致预期不一致，缺省配置处理参考[SmartGestureShortcutOptions](arkts-arkui-smartgestureshortcutoptions-i.md)。 |
+| options | [SmartGestureShortcutOptions](../arkts-apis/arkts-arkui-common-smartgestureshortcutoptions-i.md) | No | Options for configuring smart gesture shortcuts. In SmartGestureShortcutOptions: enabled is used to configure whether the component responds to smart gestures. selectable is used to set whether the component displays and retains a selected state after being selected by a smart gesture operation. action is used to set the smart gesture response priority. Currently, only GestureShortcut.PRIMARY is supported, which makes the component the primary response target for smart gesture operations such as swiping and tapping. It is recommended to explicitly pass these parameters to avoid inconsistencies caused by default configurations. For default configuration handling, please refer to [SmartGestureShortcutOptions](arkts-arkui-smartgestureshortcutoptions-i.md). |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| T | 返回当前组件。 |
+| T | return component instance who call the method. |
 
 ## sphericalEffect
 
@@ -9009,7 +9230,7 @@ smartGestureShortcut(options?: SmartGestureShortcutOptions): T
 sphericalEffect(value: number): T
 ```
 
-设置组件的图像球面化程度。
+Applies a spherical effect to the component.
 
 **Since:** 12
 
@@ -9021,17 +9242,19 @@ sphericalEffect(value: number): T
 
 <!--Device-CommonMethod-sphericalEffect(value: number): T--><!--Device-CommonMethod-sphericalEffect(value: number): T-End-->
 
+**System capability:** SystemCapability.ArkUI.ArkUI.Full
+
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | number | Yes | 设置组件的图像球面化程度。&lt;br/&gt;取值范围：[0,1]。&lt;br/&gt;**说明：**&lt;br/&gt;1. 如果value等于0则图像保持原样，如果value等于1则图像为完全球面化效果。 在0和1之间，数值越大，则球面化程度越高。&lt;br/&gt;`value &lt; 0 `或者` value &gt; 1`为异常情况，`value &lt; 0`按0处理，`value &gt; 1`按1处理。&lt;br/&gt;2. 组件阴影和外描边不支持球面 效果。&lt;br&gt;3. 设置value大于0时，组件冻屏并且把组件内容绘制到透明离屏buffer上，如果要更新组件属性则需要把value设置为0。 |
+| value | number | Yes | Spherical degree of the component.&lt;br&gt;The value ranges from 0 to 1.&lt;br&gt;**NOTE：**&lt;br&gt;1. If the value is **0**, the component remains unchanged. If the value is 1, the component is completely spherical. Between **0** and **1**, a larger value indicates a higher spherical degree.&lt;br&gt;A value less than 0 is handled as the value **0**. A value greater than 1 is handled as the value **1**.&lt;br&gt;2. The component's shadow and outer stroke do not support spherical effects.&lt;br&gt;3. If the value is greater than 0, the component is frozen, and its content is drawn to the transparent offscreen buffer. To update the component attributes, set the value to **0**. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| T | 返回当前组件。 |
+| T | Current component. |
 
 ## sphericalEffect
 
@@ -9039,7 +9262,8 @@ sphericalEffect(value: number): T
 sphericalEffect(effect: Optional<number>): T
 ```
 
-设置组件的图像球面化程度。与[sphericalEffect&lt;sup&gt;12+&lt;/sup&gt;](arkts-arkui-commonmethod-c.md#sphericaleffect)相比，effect参数新增了对undefined类型的支持。
+Applies a spherical effect to the component. Compared to   
+[sphericalEffect&lt;sup&gt;12+&lt;/sup&gt;](arkts-arkui-commonmethod-c.md#sphericaleffect), the **effect** parameter supports the **undefined** type.
 
 **Since:** 18
 
@@ -9051,17 +9275,19 @@ sphericalEffect(effect: Optional<number>): T
 
 <!--Device-CommonMethod-sphericalEffect(effect: Optional<number>): T--><!--Device-CommonMethod-sphericalEffect(effect: Optional<number>): T-End-->
 
+**System capability:** SystemCapability.ArkUI.ArkUI.Full
+
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| effect | [Optional](../arkts-apis/arkts-arkui-optional-t.md)&lt;number&gt; | Yes | 设置组件的图像球面化程度。&lt;br/&gt;取值范围：[0,1]。&lt;br/&gt;**说明：**&lt;br/&gt;1. 如果value等于0则图像保持原样，如果value等于1则 图像为完全球面化效果。在0和1之间，数值越大，则球面化程度越高。&lt;br/&gt;`effect &lt; 0 `或者` effect &gt; 1`为异常情况，`effect &lt; 0`按0处理，`effect &gt; 1`按1处理。&lt;br/&gt; 2. 组件阴影和外描边不支持球面效果。&lt;br/&gt;3. 设置effect大于0时，组件冻屏并且把组件内容绘制到透明离屏buffer上，如果要更新组件属性则需要把effect设置为0。&lt;br/&gt;当effect的值为 undefined时，恢复为图像球面化程度为0的效果。 |
+| effect | [Optional](../arkts-apis/arkts-arkui-optional-t.md)&lt;number&gt; | Yes | Spherical degree of the component.&lt;br&gt;The value ranges from 0 to 1.&lt;br&gt; **NOTE：**&lt;br&gt;1. If the value is **0**, the component remains unchanged. If the value is 1, the component is completely spherical. Between **0** and **1**, a larger value indicates a higher spherical degree.&lt;br&gt;A value less than 0 is handled as the value **0**. A value greater than 1 is handled as the value **1**.&lt;br&gt;2. The component's shadow and outer stroke do not support spherical effects.&lt;br&gt;3. If **effect** is set to a positive number, the component is frozen, and its content is drawn to the transparent offscreen buffer. To update the component attributes, set **effect** to **0**.&lt;br&gt;If **effect** is **undefined**, the spherical degree reverts to **0**. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| T | 返回当前组件。 |
+| T | Current component. |
 
 ## stateStyles
 
@@ -9069,11 +9295,11 @@ sphericalEffect(effect: Optional<number>): T
 stateStyles(value: StateStyles): T
 ```
 
-设置组件不同状态下的样式。
+Sets the state-specific styles for the component.
 
-> **说明：**
+> **NOTE：**
 > 
-> 该接口不支持在[attributeModifier](arkts-arkui-commonmethod-c.md#attributemodifier)中调用。
+> This API cannot be called within [attributeModifier](arkts-arkui-commonmethod-c.md#attributemodifier).
 
 **Since:** 8
 
@@ -9097,7 +9323,7 @@ stateStyles(value: StateStyles): T
 
 | Type | Description |
 | --- | --- |
-| T | 返回当前组件。 |
+| T | Current component. |
 
 ## sweepGradient
 
@@ -9105,29 +9331,33 @@ stateStyles(value: StateStyles): T
 sweepGradient(value: SweepGradientOptions): T
 ```
 
-角度渐变。
+Angle Gradient center:is the center point of the angle gradient start:Start point of angle gradient. The default value is 0end:End point of angle gradient. The default value is 0rotating:rotating. The default value is 0colors:Color description for gradients repeating:repeating. The default value is false
 
-**Since:** 18
+Anonymous Object Rectification.
 
-**ArkTS mode:** ArkTS-Dyn only, since version 18.
+**Since:** 7
 
-**Atomic service API:** This API can be used in atomic services since API version 18.
+**ArkTS mode:** ArkTS-Dyn only, since version 7.
 
-**Widget capability:** This API can be used in ArkTS widgets since API version 18.
+**Atomic service API:** This API can be used in atomic services since API version 11.
+
+**Widget capability:** This API can be used in ArkTS widgets since API version 9.
 
 <!--Device-CommonMethod-sweepGradient(value: SweepGradientOptions): T--><!--Device-CommonMethod-sweepGradient(value: SweepGradientOptions): T-End-->
+
+**System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | [SweepGradientOptions](../arkts-apis/arkts-arkui-common-sweepgradientoptions-i.md) | Yes | 角度渐变，仅绘制0-360度范围内的角度，超出时不绘制渐变色，只绘制纯色。<br>**Since:** 18 |
+| value | [SweepGradientOptions](../arkts-apis/arkts-arkui-common-sweepgradientoptions-i.md) | Yes | [since 7 - 17] |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| T | 返回当前组件。 |
+| T |  |
 
 ## sweepGradient
 
@@ -9135,7 +9365,7 @@ sweepGradient(value: SweepGradientOptions): T
 sweepGradient(options: Optional<SweepGradientOptions>): T
 ```
 
-角度渐变。与[sweepGradient](arkts-arkui-commonmethod-c.md#sweepgradient)相比，options参数新增了对undefined类型的支持。
+Angle Gradient center:is the center point of the angle gradient start:Start point of angle gradient. The default value is 0end:End point of angle gradient. The default value is 0rotating:rotating. The default value is 0colors:Color description for gradients repeating:repeating. The default value is false
 
 **Since:** 18
 
@@ -9149,17 +9379,19 @@ sweepGradient(options: Optional<SweepGradientOptions>): T
 
 <!--Device-CommonMethod-sweepGradient(options: Optional<SweepGradientOptions>): T--><!--Device-CommonMethod-sweepGradient(options: Optional<SweepGradientOptions>): T-End-->
 
+**System capability:** SystemCapability.ArkUI.ArkUI.Full
+
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| options | [Optional](../arkts-apis/arkts-arkui-optional-t.md)&lt;SweepGradientOptions&gt; | Yes | 角度渐变。&lt;br/&gt;当options的值为undefined时，恢复为无角度渐变的效果。 |
+| options | [Optional](../arkts-apis/arkts-arkui-optional-t.md)&lt;SweepGradientOptions&gt; | Yes |  |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| T | 返回当前组件。 |
+| T |  |
 
 ## systemBarEffect
 
@@ -9167,7 +9399,7 @@ sweepGradient(options: Optional<SweepGradientOptions>): T
 systemBarEffect(): T
 ```
 
-根据背景进行智能反色并且带有模糊效果。
+Applies a system bar effect to the component, which means to invert colors based on the background and add a blur.
 
 **Since:** 12
 
@@ -9185,7 +9417,7 @@ systemBarEffect(): T
 
 | Type | Description |
 | --- | --- |
-| T | 返回当前组件。 |
+| T | return the component attribute. |
 
 ## systemMaterial
 
@@ -9193,31 +9425,34 @@ systemBarEffect(): T
 systemMaterial(material: SystemUiMaterial | undefined): T
 ```
 
-Set system-styled materials for the component. The material effect behaves differently on devices with different level of computing powers. On devices with lower computing power, it affects attributes such as the backgroundColor, borderWidth, borderColor, shadow. On devices with higher computing power, it adds a filter effect at the system material layer, which can produce an effect similar to glass.
+Sets the system material for a component. Different system materials have different attribute effects. This API affects the background color ([backgroundColor](arkts-arkui-commonmethod-c.md#backgroundcolor)), border color ([borderColor](arkts-arkui-commonmethod-c.md#bordercolor)), border width ([borderWidth](arkts-arkui-commonmethod-c.md#borderwidth)), and shadow ([shadow](arkts-arkui-commonmethod-c.md#shadow)). You are advised not to use this API together with the aforementioned APIs. For details about the example, see   
+[Setting the System Material](../../../reference/apis-arkui/arkts-apis-uimaterial-sys.md#example-1-setting-the-system-material).
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
 
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
-**Widget capability:** This API can be used in ArkTS widgets since API version 26.0.0.
+**Widget capability:** This API can be used in ArkTS widgets since API version 23.
 
 <!--Device-CommonMethod-systemMaterial(material: SystemUiMaterial | undefined): T--><!--Device-CommonMethod-systemMaterial(material: SystemUiMaterial | undefined): T-End-->
+
+**System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| material | [SystemUiMaterial](../arkts-apis/arkts-arkui-systemuimaterial-t.md) \| undefined | Yes | 组件的系统材质对象。设置为undefined时恢复为无材质的效果，若同时设置了材质对象影响的通用属性，会恢复至对应通用属性设置的 值，冲突的属性由材质对象决定，参考 [ImmersiveMaterial](../../../reference/apis-arkui/arkts-apis-uimaterial.md#immersivematerial)。 |
+| material | [SystemUiMaterial](../arkts-apis/arkts-arkui-systemuimaterial-t.md) \| undefined | Yes | System material object of the component. Setting it to **undefined** will make the component return to the no-material effect. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| T | 返回当前组件。 |
+| T | Current component. |
 
 ## tabIndex
 
@@ -9225,11 +9460,12 @@ Set system-styled materials for the component. The material effect behaves diffe
 tabIndex(index: number): T
 ```
 
-自定义组件tab键走焦能力。当组件未设置tabIndex时，默认按照预设的焦点移动规则进行焦点移动。
+Sets the tab navigation order of the component in sequential focus navigation with the **Tab** key. Components without explicit **tabIndex** settings follow default focus navigation rules.
 
-> **说明：**
+> **NOTE：**
 > 
-> - tabIndex只能够自定义Tab键走焦，若想同时自定义方向键等走焦能力，建议使用[nextFocus](arkts-arkui-commonmethod-c.md#nextfocus)。
+> - **tabIndex** only customizes **Tab** key navigation. For arrow key navigation customization, use
+> [nextFocus](arkts-arkui-commonmethod-c.md#nextfocus).
 
 **Since:** 9
 
@@ -9245,13 +9481,13 @@ tabIndex(index: number): T
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| index | number | Yes | 自定义组件tab键走焦能力。若有配置了tabIndex大于0的组件，则tab键走焦只会在tabIndex大于0的组件内按照tabIndex的值从小到大并循环依次走焦。若没有配置 tabIndex大于0的组件，则tabIndex等于0的组件按照组件预设的走焦规则走焦。&lt;br /&gt;[UiExtension](../arkts-apis/arkts-arkui-uiextension.md/arkts-arkui-uiextension.md)组件未适配 tabIndex，在含有[UiExtension](../arkts-apis/arkts-arkui-uiextension.md/arkts-arkui-uiextension.md)组件的 [层级页面](../../../ui/arkts-common-events-focus-event.md#基础概念)使用tabIndex会导致走焦错乱。&lt;br /&gt;- tabIndex >= 0：表示元素是可聚焦的，并 且可以通过tab键走焦来访问到该元素。&lt;br /&gt;- tabIndex < 0（通常是tabIndex = -1）：表示元素是可聚焦的，但是不能通过tab键走焦来访问到该元素。&lt;br/&gt; **说明：**&lt;br/&gt; tabIndex与focusScopeId不能混用。 |
+| index | number | Yes | Tab navigation order of the component in sequential focus navigation with the **Tab** key. When components with positive **tabIndex** values are present, only these components are reachable through sequential focus navigation, and they are navigated cyclically in ascending order based on the **tabIndex** value. When components with positive **tabIndex** values are not present, those components with a **tabIndex** value of **0** are navigated based on the preset focus navigation rule.&lt;br&gt;The [UiExtension](../arkts-apis/arkts-arkui-uiextension.md/arkts-arkui-uiextension.md) component does not support **tabIndex**. As such, using **tabIndex** on [hierarchical pages](../../../ui/arkts-common-events-focus-event.md#basic-concepts) that contain **UiExtension** components may lead to disordered focus navigation.&lt;br&gt;- **tabIndex** >= 0: The component is focusable and can be reached through sequential keyboard navigation.&lt;br&gt;- **tabIndex** < 0 ( usually **tabIndex** = -1): The component is focusable, but cannot be reached through sequential keyboard navigation.&lt;br&gt; **NOTE：**&lt;br&gt; **tabIndex** and **focusScopeId** cannot be used together. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| T | 返回当前组件。 |
+| T | Current component. |
 
 ## tabStop
 
@@ -9259,7 +9495,7 @@ tabIndex(index: number): T
 tabStop(isTabStop: boolean): T
 ```
 
-设置当前容器组件的tabStop，可决定焦点在走焦时是否会停留在当前容器。
+Set TabStop on component focus
 
 **Since:** 14
 
@@ -9271,6 +9507,8 @@ tabStop(isTabStop: boolean): T
 
 <!--Device-CommonMethod-tabStop(isTabStop: boolean): T--><!--Device-CommonMethod-tabStop(isTabStop: boolean): T-End-->
 
+**System capability:** SystemCapability.ArkUI.ArkUI.Full
+
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
@@ -9281,7 +9519,7 @@ tabStop(isTabStop: boolean): T
 
 | Type | Description |
 | --- | --- |
-| T | 返回当前组件。 |
+| T |  |
 
 ## toolbar
 
@@ -9319,9 +9557,7 @@ Config toolbar for current component.
 touchable(value: boolean): T
 ```
 
-设置当前组件是否可以响应点击事件、触摸事件等手指交互事件。
-
-> **说明：**
+Whether the component can respond to finger interactions such as click and touch events.
 
 **Since:** 7
 
@@ -9339,13 +9575,13 @@ touchable(value: boolean): T
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | boolean | Yes | 设置当前组件是否可以响应点击事件、触摸事件等手指交互事件。 默认值：true，可以响应交互事件。设置为false时，不可以响应交互事件。 |
+| value | boolean | Yes | Whether the component can respond to finger interactions such as click and touch events. &lt;br&gt;**true** (default): The component can respond to finger interactions. **false**: The component cannot respond to finger interactions. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| T | 返回当前组件。 |
+| T | Current component. |
 
 ## transform
 
@@ -9353,7 +9589,8 @@ touchable(value: boolean): T
 transform(value: object): T
 ```
 
-可用于显示二维变换时的矩阵变换。包含三维变换时应使用[transform3D](arkts-arkui-commonmethod-c.md#transform3d)接口。
+Displays the matrix transformation when 2D transformation is performed. If 3D transformation is included, the   
+[transform3D](arkts-arkui-commonmethod-c.md#transform3d) API is required.
 
 **Since:** 7
 
@@ -9369,13 +9606,13 @@ transform(value: object): T
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | object | Yes | 设置当前组件的变换矩阵。object当前仅支持[Matrix4Transit](../arkts-apis/arkts-arkui-matrix4-matrix4transit-i.md/arkts-arkui-matrix4-matrix4transit-i.md)矩阵对象类 型。 |
+| value | object | Yes | Transformation matrix of the component. Only the [Matrix4Transit](../arkts-apis/arkts-matrix4.md/arkts-matrix4.md) object type is supported. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| T | 返回当前组件。 |
+| T | Current component. |
 
 ## transform
 
@@ -9383,8 +9620,9 @@ transform(value: object): T
 transform(transform: Optional<object>): T
 ```
 
-可用于显示二维变换时的矩阵变换。包含三维变换时应使用[transform3D](arkts-arkui-commonmethod-c.md#transform3d)接口。与  
-[transform](arkts-arkui-commonmethod-c.md#transform)相比，transform&lt;sup&gt;18+&lt;/sup&gt;参数新增了对undefined类型的支持。
+Displays the matrix transformation when 2D transformation is performed. If 3D transformation is included, the   
+[transform3D](arkts-arkui-commonmethod-c.md#transform3d) API is required. Compared with   
+[transform](../../../reference/apis-arkui/arkui-ts/ts-universal-attributes-transformation.md#transform), the transform&lt;sup&gt;18+&lt;/sup&gt; parameter supports the undefined type.
 
 **Since:** 18
 
@@ -9402,13 +9640,13 @@ transform(transform: Optional<object>): T
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| transform | [Optional](../arkts-apis/arkts-arkui-optional-t.md)&lt;object&gt; | Yes | 设置当前组件的变换矩阵。object当前仅支持 [Matrix4Transit](../arkts-apis/arkts-arkui-matrix4-matrix4transit-i.md/arkts-arkui-matrix4-matrix4transit-i.md)矩阵对象类型。&lt;br/&gt;当transform的值为undefined时，恢复为单位矩阵的效果。 |
+| transform | [Optional](../arkts-apis/arkts-arkui-optional-t.md)&lt;object&gt; | Yes | Transformation matrix of the component. Only the [Matrix4Transit](../arkts-apis/arkts-matrix4.md/arkts-matrix4.md) object type is supported.&lt;br&gt;If **transform** is **undefined**, the component reverts to the identity matrix (no transformation). |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| T | 返回当前组件。 |
+| T | Current component. |
 
 ## transform3D
 
@@ -9416,7 +9654,7 @@ transform(transform: Optional<object>): T
 transform3D(transform: Optional<Matrix4Transit>): T
 ```
 
-设置组件的三维变换矩阵。当涉及包含透视效果的三维变换时，transform接口显示效果可能有误，推荐使用transform3D接口。
+Sets the 3D transformation matrix of the component. When 3D transformation with the perspective effect is involved,the display effect of the transform interface may be incorrect. In this case, the transform3D interface is recommended.
 
 **Since:** 20
 
@@ -9434,13 +9672,13 @@ transform3D(transform: Optional<Matrix4Transit>): T
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| transform | [Optional](../arkts-apis/arkts-arkui-optional-t.md)&lt;Matrix4Transit&gt; | Yes | 三维变换矩阵。&lt;br/&gt;当transform的值为undefined时，恢复为单位矩阵的效果。 |
+| transform | [Optional](../arkts-apis/arkts-arkui-optional-t.md)&lt;Matrix4Transit&gt; | Yes | 3D transformation matrix.&lt;br&gt;If **transform** is **undefined**, the component reverts to the identity matrix (no transformation). |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| T | 返回当前组件。 |
+| T | Current component. |
 
 ## transition
 
@@ -9448,7 +9686,7 @@ transform3D(transform: Optional<Matrix4Transit>): T
 transition(value: TransitionOptions | TransitionEffect): T
 ```
 
-组件插入显示和删除隐藏的过渡效果。
+Sets the transition effects used when a component is inserted or removed.
 
 **Since:** 7
 
@@ -9466,13 +9704,13 @@ transition(value: TransitionOptions | TransitionEffect): T
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | [TransitionOptions](arkts-arkui-transitionoptions-i.md) \| TransitionEffect | Yes | 设置组件插入显示和删除隐藏的过渡效果。&lt;br/&gt;**说明：** &lt;br/&gt;详细描述见 [TransitionOptions](arkts-arkui-transitionoptions-i.md)和[TransitionEffect](arkts-arkui-transitioneffect-c.md)对象说明。 |
+| value | [TransitionOptions](arkts-arkui-transitionoptions-i.md) \| TransitionEffect | Yes | Transition effects used when a component is inserted or removed.&lt;br&gt;**NOTE：**&lt;br&gt;For details, see [TransitionOptions](arkts-arkui-transitionoptions-i.md) and [TransitionEffect](arkts-arkui-transitioneffect-c.md). |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| T | 返回当前组件。 |
+| T | Current component. |
 
 ## transition
 
@@ -9480,11 +9718,12 @@ transition(value: TransitionOptions | TransitionEffect): T
 transition(effect: TransitionEffect, onFinish: Optional<TransitionFinishCallback>): T
 ```
 
-组件插入显示和删除隐藏的过渡效果。同[transition](arkts-arkui-commonmethod-c.md#transition)相比，增加了转场动画结束的回调。
+Sets the transition effects used when a component is inserted or removed. Compared with   
+[transition](arkts-arkui-commonmethod-c.md#transition), this API provides the callback when the transition animation ends.
 
-> **说明：**
+> **NOTE：**
 > 
-> 从API version 20开始，该接口支持在[attributeModifier](arkts-arkui-commonmethod-c.md#attributemodifier)中调用。
+> This API can be called within [attributeModifier](arkts-arkui-commonmethod-c.md#attributemodifier) since API version 20.
 
 **Since:** 12
 
@@ -9504,14 +9743,14 @@ transition(effect: TransitionEffect, onFinish: Optional<TransitionFinishCallback
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| effect | [TransitionEffect](../arkts-apis/arkts-arkui-common-transitioneffect-c.md) | Yes | 设置组件插入显示和删除隐藏的过渡效果。 |
-| onFinish | [Optional](../arkts-apis/arkts-arkui-optional-t.md)&lt;TransitionFinishCallback&gt; | Yes | 转场动画结束回调。 |
+| effect | [TransitionEffect](../arkts-apis/arkts-arkui-common-transitioneffect-c.md) | Yes | Transition effects used when a component is inserted or removed. |
+| onFinish | [Optional](../arkts-apis/arkts-arkui-optional-t.md)&lt;TransitionFinishCallback&gt; | Yes | Callback when the transition animation ends. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| T | 返回当前组件。 |
+| T | Current component. |
 
 ## translate
 
@@ -9519,7 +9758,7 @@ transition(effect: TransitionEffect, onFinish: Optional<TransitionFinishCallback
 translate(value: TranslateOptions): T
 ```
 
-设置组件平移。
+Translates the component.
 
 **Since:** 7
 
@@ -9537,13 +9776,13 @@ translate(value: TranslateOptions): T
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | [TranslateOptions](../arkts-apis/arkts-arkui-common-translateoptions-i.md) | Yes | 可使组件在以组件左上角为坐标原点的[组件坐标系](../../../ui/arkui-glossary.md#组件坐标系)中进行移动（坐标系如下图所示）。其 中，x，y，z的值分别表示在对应轴移动的距离，值为正时表示向对应轴的正向移动，值为负时表示向对应轴的反向移动。移动距离支持数字和字符串（比如'10px'，'10%'）两种类型。&lt;br/&gt;默认值:&lt;br/&gt;{&lt;br/&gt;x: 0,&lt;br/&gt;y: 0,&lt;br/&gt;z: 0&lt;br/&gt;}&lt;br/&gt;单位：vp&lt;br/&gt;! [coordinates](../../../reference/apis-arkui/arkui-ts/figures/coordinates.png)&lt;br/&gt;**说明：**&lt;br/&gt;z轴方向移动时由于观察点位置不 变，z的值接近观察点组件会有放大效果，远离则缩小。&lt;br/&gt;! [coordinateNode](../../../reference/apis-arkui/arkui-ts/figures/coordinateNote.png) |
+| value | [TranslateOptions](../arkts-apis/arkts-arkui-common-translateoptions-i.md) | Yes | How the component is translated within the [component coordinate system](../../../ui/arkui-glossary.md#component-coordinate-system), which takes the upper-left corner of the component as the origin (as shown in the figure below). Values of **x**, **y**, and **z** indicate the translation distance along the respective axis. A positive value indicates a forward movement towards the respective axis, and a negative value indicates a backward movement towards the respective axis. The translation distance can be a number or a string (for example, **'10px'** or **'10%'**).&lt;br&gt;Default value:&lt;br&gt;{&lt;br&gt;x: 0,&lt;br&gt;y: 0,&lt;br&gt;z: 0&lt;br&gt;}&lt;br&gt;Unit: vp&lt;br&gt;! [coordinates](../../../reference/apis-arkui/arkui-ts/figures/coordinates.png)&lt;br&gt;**NOTE：**&lt;br&gt;When the component is translated along the z-axis, the position of the observation point remains unchanged. As such, the component appears larger when the value of **z** places it closer to the observation point and smaller when the value of **z** places it further away from the observation point.&lt;br&gt;! [coordinateNode](../../../reference/apis-arkui/arkui-ts/figures/coordinateNote.png) |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| T | 返回当前组件。 |
+| T | Current component. |
 
 ## translate
 
@@ -9551,7 +9790,7 @@ translate(value: TranslateOptions): T
 translate(translate: Optional<TranslateOptions>): T
 ```
 
-设置组件平移。与[translate](arkts-arkui-commonmethod-c.md#translate)相比，translate参数新增了对undefined类型的支持。
+Translates the component. Compared with [translate](arkts-arkui-commonmethod-c.md#translate), this API supports the **undefined** type.
 
 **Since:** 18
 
@@ -9571,13 +9810,13 @@ translate(translate: Optional<TranslateOptions>): T
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| translate | [Optional](../arkts-apis/arkts-arkui-optional-t.md)&lt;TranslateOptions&gt; | Yes | 可使组件在以组件左上角为坐标原点的[组件坐标系](../../../ui/arkui-glossary.md#组件坐标系)中进行 移动（坐标系如下图所示）。其中，x，y，z的值分别表示在对应轴移动的距离，值为正时表示向对应轴的正向移动，值为负时表示向对应轴的反向移动。移动距离支持数字和字符串（比如'10px'，'10%'）两种类型。&lt;br/&gt;默认值: &lt;br/&gt;{&lt;br/&gt;x: 0,&lt;br/&gt;y: 0,&lt;br/&gt;z: 0&lt;br/&gt;}&lt;br/&gt;单位：vp&lt;br/&gt;! [coordinates](../../../reference/apis-arkui/arkui-ts/figures/coordinates.png)&lt;br/&gt;**说明：**&lt;br/&gt;z轴方向移动时由于观察点位置不 变，z的值接近观察点组件会有放大效果，远离则缩小。&lt;br/&gt;! [coordinateNode](../../../reference/apis-arkui/arkui-ts/figures/coordinateNote.png)&lt;br/&gt;当translate的值为undefined 时，恢复为无平移效果。 |
+| translate | [Optional](../arkts-apis/arkts-arkui-optional-t.md)&lt;TranslateOptions&gt; | Yes | How the component is translated within the [component coordinate system](../../../ui/arkui-glossary.md#component-coordinate-system), which takes the upper-left corner of the component as the origin (as shown in the figure below). Values of **x**, **y**, and **z** indicate the translation distance along the respective axis. A positive value indicates a forward movement towards the respective axis, and a negative value indicates a backward movement towards the respective axis. The translation distance can be a number or a string (for example, **'10px'** or **'10%'**).&lt;br&gt;Default value:&lt;br&gt;{&lt;br&gt;x: 0,&lt;br&gt;y: 0,&lt;br&gt;z: 0&lt;br&gt;}&lt;br&gt;Unit: vp&lt;br&gt;! [coordinates](../../../reference/apis-arkui/arkui-ts/figures/coordinates.png)&lt;br&gt;**NOTE：**&lt;br&gt;When the component is translated along the z-axis, the position of the observation point remains unchanged. As such, the component appears larger when the value of **z** places it closer to the observation point and smaller when the value of **z** places it further away from the observation point.&lt;br&gt;! [coordinateNode](../../../reference/apis-arkui/arkui-ts/figures/coordinateNote.png)&lt;br&gt;If **translate** is **undefined**, the component reverts to its original state with no translation. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| T | 返回当前组件。 |
+| T | Current component. |
 
 ## useEffect
 
@@ -9585,7 +9824,7 @@ translate(translate: Optional<TranslateOptions>): T
 useEffect(useEffect: boolean, effectType: EffectType): T
 ```
 
-用于设置组件是否应用&lt;!--Del--&gt;父级[EffectComponent](effect_component)或&lt;!--DelEnd--&gt;窗口定义的效果模板。
+Sets whether the component should apply the effects template defined by the parent effectComponent or window.If multiple parent effectComponents are found, the nearest one will be used.If no parent effectComponent is found, this method has no effect.
 
 **Since:** 14
 
@@ -9603,14 +9842,14 @@ useEffect(useEffect: boolean, effectType: EffectType): T
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| useEffect | boolean | Yes | 控制组件是否应用&lt;!--Del--&gt;父级EffectComponent或&lt;!--DelEnd--&gt;窗口定义的效果模板。&lt;br/&gt;useEffect为true时表示应用&lt; !--Del--&gt;父级EffectComponent或&lt;!--DelEnd--&gt;窗口定义的效果模板。&lt;br/&gt;默认值：false |
-| effectType | [EffectType](../arkts-apis/arkts-arkui-common-effecttype-e.md) | Yes | 设置组件应用&lt;!--Del--&gt;父级EffectComponent或&lt;!--DelEnd--&gt;窗口定义的效果模板。&lt;br/&gt;默认值： EffectType.DEFAULT |
+| useEffect | boolean | Yes | true means the component should apply the effects template defined by the parent effectComponent or window. |
+| effectType | [EffectType](../arkts-apis/arkts-arkui-common-effecttype-e.md) | Yes | the effect type of the effects template, defined by the parent effectComponent or window. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| T | 返回当前组件。 |
+| T | return the component attribute. |
 
 ## useEffect
 
@@ -9618,8 +9857,7 @@ useEffect(useEffect: boolean, effectType: EffectType): T
 useEffect(useEffect: Optional<boolean>, effectType?: EffectType): T
 ```
 
-用于设置组件是否应用&lt;!--Del--&gt;父级[EffectComponent](effect_component)或&lt;!--DelEnd--&gt;窗口定义的效果模板。与  
-[useEffect&lt;sup&gt;14+&lt;/sup&gt;](arkts-arkui-commonmethod-c.md#useeffect)相比，useEffect参数新增了对undefined类型的支持。
+Sets whether the component should apply the effects template defined by the parent effectComponent or window.If multiple parent effectComponents are found, the nearest one will be used.If no parent effectComponent is found, this method has no effect.
 
 **Since:** 18
 
@@ -9637,14 +9875,14 @@ useEffect(useEffect: Optional<boolean>, effectType?: EffectType): T
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| useEffect | [Optional](../arkts-apis/arkts-arkui-optional-t.md)&lt;boolean&gt; | Yes | 控制组件是否应用&lt;!--Del--&gt;父级EffectComponent或&lt;!--DelEnd--&gt;窗口定义的效果模板。&lt;br/&gt;useEffect为 true时表示应用&lt;!--Del--&gt;父级EffectComponent或&lt;!--DelEnd--&gt;窗口定义的效果模板。&lt;br/&gt;默认值：false&lt;br/&gt;当useEffect的值为undefined时，维持之前取值。 |
-| effectType | [EffectType](../arkts-apis/arkts-arkui-common-effecttype-e.md) | No | 设置组件应用&lt;!--Del--&gt;父级EffectComponent或&lt;!--DelEnd--&gt;窗口定义的效果模板。&lt;br/&gt;默认值： EffectType.DEFAULT |
+| useEffect | [Optional](../arkts-apis/arkts-arkui-optional-t.md)&lt;boolean&gt; | Yes | true means the component should apply the effects template defined by the parent effectComponent or window. |
+| effectType | [EffectType](../arkts-apis/arkts-arkui-common-effecttype-e.md) | No | the effect type of the effects template, defined by the parent effectComponent or window. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| T | 返回当前组件。 |
+| T | return the component attribute. |
 
 ## useEffect
 
@@ -9652,7 +9890,7 @@ useEffect(useEffect: Optional<boolean>, effectType?: EffectType): T
 useEffect(value: boolean): T
 ```
 
-用于对背景模糊等特效进行绘制合并。
+Sets whether the component should apply the effects template defined by the parent effectComponent.If multiple parent effectComponents are found, the nearest one will be used.If no parent effectComponent is found, this method has no effect.
 
 **Since:** 12
 
@@ -9670,13 +9908,13 @@ useEffect(value: boolean): T
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | boolean | Yes | 控制组件是否继承特效绘制合并组件的特效属性参数，从而合并绘制特效。&lt;br/&gt;useEffect为true时子组件继承特效绘制合并组件的特效属性参数，为false时子组件不继承特 效绘制合并组件的特效属性参数。&lt;br/&gt;默认值：false |
+| value | boolean | Yes | true means the component should apply the effects template. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| T | 返回当前组件。 |
+| T | return the component attribute. |
 
 ## useShadowBatching
 
@@ -9684,7 +9922,7 @@ useEffect(value: boolean): T
 useShadowBatching(value: boolean): T
 ```
 
-控件内部子节点的阴影进行同层绘制，同层元素阴影重叠。
+Sets whether to render child node shadows at the same layer, enabling shadow overlap within the same layer.
 
 **Since:** 11
 
@@ -9704,13 +9942,13 @@ useShadowBatching(value: boolean): T
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | boolean | Yes | 控件内部子节点的阴影是否进行同层绘制。&lt;br/&gt;默认值：false&lt;br/&gt; true：控件内部子节点的阴影进行同层绘制，子节点的阴影不会产生重叠覆盖效果。&lt;br/&gt; false：控件内部子节点的阴影不进行同层绘制，子节点的阴影重叠区域有覆盖效果。&lt;br/&gt;**说明：**&lt;br/&gt;1. 默认不开启，如果子节点的阴影半径较大，阴影有重叠区域，后绘制的子节点阴影会覆盖在之前绘制的子节点阴影之 上。 当开启时，子节点的阴影将同时绘制，不会产生覆盖效果。&lt;br/&gt;2. 不推荐useShadowBatching嵌套使用，如果嵌套使用，只会对当前的子节点生效，无法递推。 |
+| value | boolean | Yes | Whether to render child node shadows at the same layer.&lt;br&gt;Default value: **false**&lt;br&gt; **true**: Child node shadows are rendered at the same layer without overlapping.&lt;br&gt; **false**: Child node shadows are rendered separately, with later shadows overlapping earlier ones.&lt;br&gt;**NOTE：**&lt;br&gt;1. This feature is disabled by default. When child nodes have large shadow radius and overlapping areas, later-rendered shadows cover earlier ones. Enabling this feature renders all child shadows simultaneously without overlap.&lt;br&gt;2. Avoid nesting **useShadowBatching**. When used in nested mode, **useShadowBatching** takes effect for the current child node only and cannot be recursively used. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| T | 返回当前组件。 |
+| T | Current component. |
 
 ## useShadowBatching
 
@@ -9718,7 +9956,7 @@ useShadowBatching(value: boolean): T
 useShadowBatching(use: Optional<boolean>): T
 ```
 
-控件内部子节点的阴影进行同层绘制，同层元素阴影重叠。与[useShadowBatching&lt;sup&gt;11+&lt;/sup&gt;](arkts-arkui-commonmethod-c.md#useshadowbatching)相比，use参数新增了对undefined类型的支持。
+Sets whether to render child node shadows at the same layer, enabling shadow overlap within the same layer. Compared with [useShadowBatching&lt;sup&gt;11+&lt;/sup&gt;](arkts-arkui-commonmethod-c.md#useshadowbatching), this API supports the **undefined** type for the **use** parameter.
 
 **Since:** 18
 
@@ -9732,17 +9970,19 @@ useShadowBatching(use: Optional<boolean>): T
 
 <!--Device-CommonMethod-useShadowBatching(use: Optional<boolean>): T--><!--Device-CommonMethod-useShadowBatching(use: Optional<boolean>): T-End-->
 
+**System capability:** SystemCapability.ArkUI.ArkUI.Full
+
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| use | [Optional](../arkts-apis/arkts-arkui-optional-t.md)&lt;boolean&gt; | Yes | 控件内部子节点的阴影是否进行同层绘制。&lt;br/&gt;默认值：false&lt;br/&gt; true：控件内部子节点的阴影进行同层绘制，子节点的阴影不会产生重叠覆盖效果。&lt; br/&gt; false：控件内部子节点的阴影不进行同层绘制，子节点的阴影重叠区域有覆盖效果。&lt;br/&gt;**说明：**&lt;br/&gt;1. 默认不开启，如果子节点的阴影半径较大，阴影有重叠区域，后绘制的子节点阴影会覆盖在之前绘制的子 节点阴影之上。 当开启时，子节点的阴影将同时绘制，不会产生覆盖效果。&lt;br/&gt;2. 不推荐useShadowBatching嵌套使用，如果嵌套使用，只会对当前的子节点生效，无法递推。&lt;br/&gt;当use的值为 undefined时，恢复为不使用元素阴影重叠的效果。 |
+| use | [Optional](../arkts-apis/arkts-arkui-optional-t.md)&lt;boolean&gt; | Yes | Whether to render child node shadows at the same layer.&lt;br&gt;Default value: **false**&lt;br&gt; **true**: Child node shadows are rendered at the same layer without overlapping.&lt;br&gt; **false**: Child node shadows are rendered separately, with later shadows overlapping earlier ones.&lt;br&gt;**NOTE：**&lt;br&gt;1. This feature is disabled by default. When child nodes have large shadow radius and overlapping areas, later-rendered shadows cover earlier ones. Enabling this feature renders all child shadows simultaneously without overlap.&lt;br&gt; 2. Avoid nesting **useShadowBatching**. When used in nested mode, **useShadowBatching** takes effect for the current child node only and cannot be recursively used.&lt;br&gt;If **use** is **undefined**, the component reverts to its original effect of not using shadow overlapping. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| T | 返回当前组件。 |
+| T | Current component. |
 
 ## useSizeType
 
@@ -9773,7 +10013,7 @@ Sets the number of occupied columns and offset columns for a specific device wid
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | {     xs?: number \| { span: number; offset: number };     sm?: number \| { span: number; offset: number };     md?: number \| { span: number; offset: number };     lg?: number \| { span: number; offset: number };   } | Yes |  |
+| value | {     xs?: number \| { span: number; offset: number };     sm?: number \| { span: number; offset: number };     md?: number \| { span: number; offset: number };     lg?: number \| { span: number; offset: number };   } | Yes |  |
 
 **Return value:**
 
@@ -9787,7 +10027,7 @@ Sets the number of occupied columns and offset columns for a specific device wid
 visibility(value: Visibility): T
 ```
 
-控制组件的显示或隐藏。当未设置visibility时，组件默认为显示。
+Sets the visibility of the component. If **visibility** is not set, the component is displayed by default.
 
 **Since:** 7
 
@@ -9805,13 +10045,13 @@ visibility(value: Visibility): T
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | [Visibility](../arkts-apis/arkts-arkui-visibility-e.md) | Yes | 控制当前组件显示或隐藏。根据具体场景需要可使用 [条件渲染](../../../ui/rendering-control/arkts-rendering-control-ifelse.md)代替。 |
+| value | [Visibility](../arkts-apis/arkts-arkui-visibility-e.md) | Yes | Whether the component is visible. When appropriate, consider using [conditional rendering](../../../ui/rendering-control/arkts-rendering-control-ifelse.md) as a substitute. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| T | 返回当前组件。 |
+| T | Current component. |
 
 ## visualEffect
 
@@ -9819,11 +10059,11 @@ visibility(value: Visibility): T
 visualEffect(effect: VisualEffect): T
 ```
 
-设置非滤镜视觉效果。
+Sets a visual effect that is not a filter effect.
 
-> **说明：**
+> **NOTE：**
 > 
-> 从API version 20开始，该接口支持在[attributeModifier](arkts-arkui-commonmethod-c.md#attributemodifier)中调用。
+> This API can be called within [attributeModifier](arkts-arkui-commonmethod-c.md#attributemodifier) since API version 20.
 
 **Since:** 12
 
@@ -9841,13 +10081,13 @@ visualEffect(effect: VisualEffect): T
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| effect | [VisualEffect](arkts-arkui-visualeffect-t.md) | Yes | 非滤镜视觉效果。 |
+| effect | [VisualEffect](arkts-arkui-visualeffect-t.md) | Yes | Visual effect. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| T | 返回当前组件。 |
+| T | Current component. |
 
 ## width
 
@@ -9855,9 +10095,7 @@ visualEffect(effect: VisualEffect): T
 width(value: Length): T
 ```
 
-设置组件自身的宽度，缺省时使用子组件自身内容需要的宽度。若子组件的宽大于父组件的宽，则子组件会溢出显示在父组件外部。
-
-从API version 10开始，该接口支持calc计算特性。
+Sets the width of the component. By default, the width required to fully hold the component content is used. If a component is wider than its parent, it will overflow.&lt;br&gt;Since API version 10, this API supports the calc calculation feature.
 
 **Since:** 7
 
@@ -9875,13 +10113,13 @@ width(value: Length): T
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | [Length](../arkts-apis/arkts-arkui-length-t.md) | Yes | 要设置的组件宽度。 &lt;br&gt;单位：vp &lt;br&gt;设置百分比时，以父容器的宽度作为基础值。 &lt;br&gt;异常值：参数为undefined时，属性设置不生效；其它异常值时，width属性恢复到不配置时的默认行为。 |
+| value | [Length](../arkts-apis/arkts-arkui-length-t.md) | Yes | Width of the component to set.&lt;br&gt;Unit: vp > **NOTE：**> > - In the [TextInput](../arkts-apis/arkts-arkui-textinput-textinput-f.md/arkts-arkui-textinput-textinput-f.md#textinput) component, setting **width** to **auto** means that > the width adapts to the width of the text content. > > - In the [AlphabetIndexer](../arkts-apis/arkts-arkui-alphabetindexer-alphabetindexer-f.md/arkts-arkui-alphabetindexer-alphabetindexer-f.md#alphabetindexer) component, setting **width** to **auto** > means that the width adapts to the maximum width of index entries. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| T | 返回当前组件对象，用于链式调用。 |
+| T | Current component. |
 
 ## width
 
@@ -9889,9 +10127,7 @@ width(value: Length): T
 width(widthValue: Length | LayoutPolicy): T
 ```
 
-设置组件自身的宽度或水平方向布局策略，缺省时使用子组件自身内容需要的宽度。若子组件的宽大于父组件的宽，则子组件会溢出显示在父组件外部。
-
-从API version 15开始，当参数为Length类型时，该接口支持calc计算特性。
+Sets the width of the component or its horizontal layout policy. By default, the component uses the width required for its content. If a component is wider than its parent, it will overflow.
 
 **Since:** 15
 
@@ -9911,13 +10147,13 @@ width(widthValue: Length | LayoutPolicy): T
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| widthValue | [Length](../arkts-apis/arkts-arkui-length-t.md) \| LayoutPolicy | Yes | 要设置的组件宽度或水平方向布局策略。 &lt;br&gt;单位：vp &lt;br&gt;设置百分比时，以父容器的宽度作为基础值。 |
+| widthValue | [Length](../arkts-apis/arkts-arkui-length-t.md) \| LayoutPolicy | Yes | Width of the component to set &lt;br&gt;Unit: vp. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| T | 返回当前组件对象，用于链式调用。 |
+| T | Current component. |
 
 ## zIndex
 
@@ -9925,7 +10161,7 @@ width(widthValue: Length | LayoutPolicy): T
 zIndex(value: number): T
 ```
 
-设置组件的堆叠顺序。
+Sets the stacking order of the component.
 
 **Since:** 7
 
@@ -9943,11 +10179,11 @@ zIndex(value: number): T
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | number | Yes | 同一容器中兄弟组件显示层级关系。zIndex值越大，显示层级越高，即zIndex值大的组件会覆盖在zIndex值小的组件上方。当不涉及新增或减少兄弟节点，动态改变zIndex时会 在zIndex改变前层级顺序的基础上进行稳定排序。 |
+| value | number | Yes | Stacking order of the component relative to its sibling components in a container. The components with a larger **zIndex** value cover those with a smaller one. When dynamically changing zIndex does not involve adding or removing sibling nodes, the components are sorted stably based on their previous stack level. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| T | 返回当前组件。 |
+| T | Current component. |
 

@@ -1,6 +1,6 @@
 # BinaryBufferInfo
 
-描述二值图像缓冲区内的信息及数据。
+Describes binary buffer info.
 
 **Since:** 26.0.0
 
@@ -22,7 +22,7 @@ import { image } from 'kits/@kit.ImageKit';
 bytesPerRow?: int
 ```
 
-每行字节数。若未指定，将按(width + 7) / 8计算。该值应为整数。
+Bytes per row.If it is not specified, it will be calculated as (width + 7) / 8.The value range is all integers.
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
@@ -42,7 +42,7 @@ bytesPerRow?: int
 data: ArrayBuffer
 ```
 
-图像数据缓冲区，包含二值图像数据。
+Describes binary buffer.
 
 **Type:** ArrayBuffer
 
@@ -62,7 +62,7 @@ data: ArrayBuffer
 size: Size
 ```
 
-图像尺寸，包含宽度和高度。
+Describes binary buffer size.
 
 **Type:** [Size](../../apis-arkui/arkts-apis/arkts-arkui-window-size-i.md)
 

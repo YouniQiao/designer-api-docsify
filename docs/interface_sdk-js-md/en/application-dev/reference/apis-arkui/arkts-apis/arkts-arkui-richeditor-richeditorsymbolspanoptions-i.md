@@ -1,6 +1,6 @@
 # RichEditorSymbolSpanOptions
 
-设置SymbolSpan组件的偏移位置和样式。
+Defines the symbol span options of RichEditor.
 
 **Since:** 23
 
@@ -16,9 +16,7 @@
 offset?: int
 ```
 
-添加组件的位置。省略时，添加到所有内容的最后。
-
-如果值小于0，添加到所有内容的最前面；如果值大于所有内容的长度，添加到所有内容的最后面。
+The offset that add custom symbol span at.
 
 **Type:** int
 
@@ -38,7 +36,7 @@ offset?: int
 style?: RichEditorSymbolSpanStyle
 ```
 
-组件样式信息。省略时，使用系统默认样式信息。
+The style that add custom symbol span at.
 
 **Type:** [RichEditorSymbolSpanStyle](arkts-arkui-richeditor-richeditorsymbolspanstyle-i.md)
 

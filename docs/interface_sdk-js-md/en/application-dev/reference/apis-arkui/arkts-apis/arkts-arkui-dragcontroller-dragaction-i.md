@@ -92,5 +92,5 @@ trigger drag action
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 100001 | Internal handling failed. |
+| [100001](../errorcode-internal.md#100001-internal-error) | Internal handling failed. |
 

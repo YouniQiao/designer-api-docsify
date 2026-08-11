@@ -1,11 +1,5 @@
 # createAudioRenderer
 
-## 导入模块
-
-```TypeScript
-import { audio } from 'kits/@kit.AudioKit';
-```
-
 ## createAudioRenderer
 
 ```TypeScript

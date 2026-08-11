@@ -1,6 +1,6 @@
 # VelocityFieldOptions
 
-用于描述粒子速度场信息的参数。
+Parameter used to describe the velocity field of particles.
 
 **Since:** 22
 

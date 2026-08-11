@@ -1,10 +1,10 @@
 # ShowDialogSuccessResponse
 
-定义ShowDialog的响应。
+Defines the response of ShowDialog.
 
-**Since:** 3
+**Since:** 11
 
-**ArkTS mode:** ArkTS-Dyn only, since version 3.
+**ArkTS mode:** ArkTS-Dyn only, since version 11.
 
 <!--Device-unnamed-export interface ShowDialogSuccessResponse--><!--Device-unnamed-export interface ShowDialogSuccessResponse-End-->
 
@@ -22,13 +22,13 @@ import { ShowActionMenuOptions, Button, ShowToastOptions, ShowDialogOptions, Sho
 index: number
 ```
 
-定义数据的索引信息。
+Defines the index of data.
 
 **Type:** number
 
-**Since:** 3
+**Since:** 11
 
-**ArkTS mode:** ArkTS-Dyn only, since version 3.
+**ArkTS mode:** ArkTS-Dyn only, since version 11.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 

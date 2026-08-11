@@ -12,7 +12,7 @@ import { sim } from 'kits/@kit.TelephonyKit';
 function setSimLabelIndex(simId: int, simLabelIndex: int): Promise<void>
 ```
 
-设置SIM卡标签索引。
+Set the SIM card labelIndex.
 
 **Since:** 23
 
@@ -30,8 +30,8 @@ function setSimLabelIndex(simId: int, simLabelIndex: int): Promise<void>
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| simId | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | 表示来自SIM账户信息的卡的SIM ID。 &lt;br&gt;取值范围:[1,500] |
-| simLabelIndex | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | 表示卡的SIM标签索引。 |
+| simId | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | Indicates the sim Id for card from sim account information. &lt;br&gt;Value range:[1,500] |
+| simLabelIndex | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | Indicates the simlabel index for card. |
 
 **Return value:**
 
@@ -43,23 +43,10 @@ function setSimLabelIndex(simId: int, simLabelIndex: int): Promise<void>
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 201 | Permission denied. |
-| 8300999 | Unknown error code. |
-| 202 | Nonsystem applications use system APIs. |
-| 8300002 | Service connection failed. |
-| 8300003 | System internal error. |
-| 8300001 | Invalid parameter value. |
-
-## Examples
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-import { sim } from '@kit.TelephonyKit';
-
-sim.setSimLabelIndex(1,  0).then(() => {
-    console.info(`setSimLabelIndex success.`);
-}).catch((err: BusinessError) => {
-    console.error(`setSimLabelIndex failed, promise: err->${JSON.stringify(err)}`);
-});
-```
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
+| [8300999](../errorcode-telephony.md#8300999-internal-error) | Unknown error code. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Nonsystem applications use system APIs. |
+| [8300002](../errorcode-telephony.md#8300002-service-connection-error) | Service connection failed. |
+| [8300003](../errorcode-telephony.md#8300003-system-internal-error) | System internal error. |
+| [8300001](../errorcode-telephony.md#8300001-input-parameter-value-out-of-range) | Invalid parameter value. |
 

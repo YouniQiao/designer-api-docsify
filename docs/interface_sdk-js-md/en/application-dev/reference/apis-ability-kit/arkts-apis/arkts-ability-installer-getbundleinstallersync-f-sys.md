@@ -12,7 +12,7 @@ import { installer } from 'kits/@kit.AbilityKit';
 function getBundleInstallerSync(): BundleInstaller
 ```
 
-获取并返回BundleInstaller对象。
+Obtains a BundleInstaller object. This API is a synchronous API.
 
 **Since:** 10
 
@@ -34,5 +34,5 @@ function getBundleInstallerSync(): BundleInstaller
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 202 | Permission verification failed. A non-system application calls a system API. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
 

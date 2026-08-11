@@ -4,7 +4,7 @@
 declare type OnSelectCallback = (index: number, selectStr: string) => void
 ```
 
-下拉菜单选中某一项时触发的回调函数类型定义。
+Defines the callback invoked when a drop-down menu option is selected.
 
 **Since:** 18
 
@@ -22,6 +22,6 @@ declare type OnSelectCallback = (index: number, selectStr: string) => void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| index | number | Yes | 选中项的索引，索引值从0开始。 |
-| selectStr | string | Yes | 选中项的值。 |
+| index | number | Yes | Index of the selected option. The index is zero-based. |
+| selectStr | string | Yes | Value of the selected option. |
 

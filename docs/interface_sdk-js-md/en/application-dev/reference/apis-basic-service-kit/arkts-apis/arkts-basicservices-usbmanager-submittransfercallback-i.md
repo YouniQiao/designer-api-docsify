@@ -1,6 +1,6 @@
 # SubmitTransferCallback
 
-Usb异步传输回调。
+Transfers USB data packets in an asynchronous manner.
 
 **Since:** 18
 
@@ -22,7 +22,7 @@ import { usbManager } from 'kits/@kit.BasicServicesKit';
 actualLength: int
 ```
 
-读写操作的实际长度值。（单位：字节）。
+Actual length of the read or written data.Unit: bytes.
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
@@ -40,7 +40,7 @@ actualLength: int
 isoPacketDescs: Array<Readonly<UsbIsoPacketDescriptor>>
 ```
 
-实时传输的分包信息。
+Packet information transferred in real time.
 
 **Type:** Array&lt;Readonly&lt;UsbIsoPacketDescriptor&gt;&gt;
 
@@ -58,7 +58,7 @@ isoPacketDescs: Array<Readonly<UsbIsoPacketDescriptor>>
 status: UsbTransferStatus
 ```
 
-读写操作完成的状态。
+Status after reading or writing is complete.
 
 **Type:** [UsbTransferStatus](arkts-basicservices-usbmanager-usbtransferstatus-e.md)
 

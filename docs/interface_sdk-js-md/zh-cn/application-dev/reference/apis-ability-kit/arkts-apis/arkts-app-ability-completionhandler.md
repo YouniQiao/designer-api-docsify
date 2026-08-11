@@ -1,11 +1,5 @@
 # @ohos.app.ability.CompletionHandler
 
-## 导入模块
-
-```TypeScript
-import { CompletionHandler } from 'kits/@kit.AbilityKit';
-```
-
 ## 汇总
 
 ### 类

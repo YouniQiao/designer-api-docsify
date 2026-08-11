@@ -1,8 +1,9 @@
 # ShortcutWant (System API)
 
-> **说明：**
+> **NOTE：**
 > 
-> 从API version 7开始支持，从API version 9开始废弃，建议使用[bundleManager-ShortcutWant](arkts-ability-shortcutinfo-shortcutwant-depr-i-sys.md)替代。
+> This API has been supported since API version 7 and deprecated since API version 9. You are advised to use
+> [bundleManager-ShortcutWant](arkts-ability-shortcutinfo-shortcutwant-depr-i-sys.md) instead.
 
 **Since:** 7
 
@@ -24,7 +25,7 @@
 readonly targetBundle: string
 ```
 
-快捷方式的目标捆绑包。
+Target bundle of the shortcut.
 
 **Type:** string
 
@@ -48,7 +49,7 @@ readonly targetBundle: string
 readonly targetClass: string
 ```
 
-快捷方式所需的目标类。
+Target class required by the shortcut.
 
 **Type:** string
 

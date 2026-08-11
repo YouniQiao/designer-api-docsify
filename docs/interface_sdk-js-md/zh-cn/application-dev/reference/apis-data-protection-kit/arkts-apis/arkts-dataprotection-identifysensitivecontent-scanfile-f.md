@@ -1,11 +1,5 @@
 # scanFile
 
-## 导入模块
-
-```TypeScript
-import { identifySensitiveContent } from 'kits/@kit.DataProtectionKit';
-```
-
 ## scanFile
 
 ```TypeScript
@@ -41,12 +35,12 @@ function scanFile(filePath: string, identifyPolicies: Array<Policy>): Promise<Ar
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 19110003 | The file is not supported. Possible causes: 1. The file path does not exist. 2. The file type is not supported. 3. The file permission is not supported. |
-| 801 | Capability not supported. |
-| 19110002 | Sensitive file content identification timed out. |
-| 19110001 | Parameter error. Possible causes: 1. Incorrect policy format. 2. Invalid parameter range. |
-| 19110004 | A system error has occurred. |
-| 201 | permission denied. |
+| [19110003](../errorcode-dlp.md#19110003-文件不支持) | The file is not supported. Possible causes: 1. The file path does not exist. 2. The file type is not supported. 3. The file permission is not supported. |
+| [801](../../errorcode-universal.md#801-该设备不支持此api) | Capability not supported. |
+| [19110002](../errorcode-dlp.md#19110002-文件敏感信息识别超时) | Sensitive file content identification timed out. |
+| [19110001](../errorcode-dlp.md#19110001-参数错误) | Parameter error. Possible causes: 1. Incorrect policy format. 2. Invalid parameter range. |
+| [19110004](../errorcode-dlp.md#19110004-系统功能运行异常) | A system error has occurred. |
+| [201](../../errorcode-universal.md#201-权限校验失败) | permission denied. |
 
 ## 示例
 

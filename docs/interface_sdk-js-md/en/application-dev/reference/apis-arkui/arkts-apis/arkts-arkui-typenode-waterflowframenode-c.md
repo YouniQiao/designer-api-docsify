@@ -1,6 +1,6 @@
 # WaterFlowFrameNode
 
-定义WaterFlow类型的FrameNode。
+Define the WaterFlow type of FrameNode.
 
 **Inheritance/Implementation:** WaterFlowFrameNode extends [TypedFrameNode<WaterFlowAttribute>](TypedFrameNode<WaterFlowAttribute>)
 
@@ -18,7 +18,7 @@
 abstract initialize(options?: WaterFlowOptions): WaterFlowAttribute
 ```
 
-初始化WaterFlow类型的FrameNode。
+Initialize WaterFlow FrameNode.
 
 **Since:** 23
 
@@ -34,7 +34,7 @@ abstract initialize(options?: WaterFlowOptions): WaterFlowAttribute
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| options | [WaterFlowOptions](../arkts-components/arkts-arkui-waterflowoptions-i.md) | No | WaterFlow节点的选项。 |
+| options | [WaterFlowOptions](../arkts-components/arkts-arkui-waterflowoptions-i.md) | No | WaterFlow options. |
 
 **Return value:**
 

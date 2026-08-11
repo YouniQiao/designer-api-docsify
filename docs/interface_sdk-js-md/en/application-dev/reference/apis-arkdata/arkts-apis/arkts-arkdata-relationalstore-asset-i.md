@@ -1,6 +1,6 @@
 # Asset
 
-记录资产附件（文件、图片、视频等类型文件）的相关信息。
+Represents the asset (such as a document, image, or video).
 
 **Since:** 10
 
@@ -22,7 +22,7 @@ import { relationalStore } from 'kits/@kit.ArkData';
 createTime: string
 ```
 
-资产被创建出来的时间。
+Time when an asset is created.
 
 **Type:** string
 
@@ -40,7 +40,7 @@ createTime: string
 modifyTime: string
 ```
 
-资产最后一次被修改的时间。
+Time when an asset is last modified.
 
 **Type:** string
 
@@ -58,7 +58,7 @@ modifyTime: string
 name: string
 ```
 
-资产的名称，长度不超过256字节。
+Asset name.
 
 **Type:** string
 
@@ -76,7 +76,7 @@ name: string
 path: string
 ```
 
-资产在应用沙箱里的路径，路径长度不超过1024字节。
+Path of an asset in the application sandbox.
 
 **Type:** string
 
@@ -94,7 +94,7 @@ path: string
 size: string
 ```
 
-资产占用空间的大小。在端云同步机制中，本字段作为判定资产是否发生变更的关键依据之一，需确保在全链路中保持统一、一致的存储格式与取值逻辑。建议所有系统节点均采用标准化处理方式（单位为字节（Byte），取值为非负整数），避免因格式差异导致同步异常或误判。
+Asset size. In the device-cloud sync mechanism, this field is one of the key bases for determining whether an asset is changed. Ensure that the storage format and value logic are consistent across the end-to-end link. It is recommended that all system nodes use the standard processing format (unit: byte; value: a non-negative integer) to avoid sync exceptions or misjudgment caused by format differences.
 
 **Type:** string
 
@@ -112,7 +112,9 @@ size: string
 status?: AssetStatus
 ```
 
-资产的状态，默认值为ASSET_NORMAL。
+Asset status. 
+
+Default value: **ASSET_NORMAL**.
 
 **Type:** [AssetStatus](arkts-arkdata-relationalstore-assetstatus-e.md)
 
@@ -130,7 +132,7 @@ status?: AssetStatus
 uri: string
 ```
 
-资产的uri，在系统里的绝对路径，路径长度不超过1024字节。
+Asset URI, which is an absolute path in the system.
 
 **Type:** string
 

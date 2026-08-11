@@ -1,0 +1,28 @@
+# CustomCommandEvent
+
+```TypeScript
+type CustomCommandEvent = (command: string, args: string) => Promise<OperResult>
+```
+
+The custom command event.
+
+**Since:** 26.1.0
+
+**Model restriction:** This API can be used only in the stage model.
+
+<!--Device-avMusicTemplate-type CustomCommandEvent = (command: string, args: string) => Promise<OperResult>--><!--Device-avMusicTemplate-type CustomCommandEvent = (command: string, args: string) => Promise<OperResult>-End-->
+
+**System capability:** SystemCapability.Multimedia.AVSession.AVMusicTemplate
+
+**Parameters:**
+
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| command | string | Yes |
+| args | string | Yes |
+
+**Return value:**
+
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| Promise&lt;OperResult&gt; |

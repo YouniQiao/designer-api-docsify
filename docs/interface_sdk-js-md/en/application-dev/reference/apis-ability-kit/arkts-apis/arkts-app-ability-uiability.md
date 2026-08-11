@@ -1,11 +1,16 @@
 # @ohos.app.ability.UIAbility
 
-UIAbility是包含UI界面的应用组件，继承自[Ability](arkts-ability-app-ability-ability-ability-c.md)，提供UIAbility组件创建、销毁、前后台切换等
- [生命周期](../../../reference/apis-ability-kit/js-apis-app-ability-uiAbility.md#uiability生命周期状态)回调，同时也具备
- [后台通信能力](../../../reference/apis-ability-kit/js-apis-app-ability-uiAbility.md#后台通信能力)。
- > **说明：**
+UIAbility is an application component that has the UI. It inherits from
+ [Ability](arkts-ability-app-ability-ability-ability-c.md) and provides
+ [lifecycle](../../../reference/apis-ability-kit/js-apis-app-ability-uiAbility.md#uiability-lifecycle-states)
+ callbacks such as component creation, destruction, and foreground/background switching. It also provides the
+ [background communication capability](../../../reference/apis-ability-kit/js-apis-app-ability-uiAbility.md#background-communication-capability)
+ .
+ > **NOTE**
  >
- > 各类Ability的继承关系详见[继承关系说明](../../../reference/apis-ability-kit/js-apis-app-ability-ability.md#ability的继承关系说明)。
+ > For details about the inheritance relationship of each ability, see
+ > [Inheritance Relationship](../../../reference/apis-ability-kit/js-apis-app-ability-ability.md#ability-inheritance-relationship)
+ > .
 
 
 ## Modules to Import
@@ -20,23 +25,23 @@ import { Callee, Caller, OnReleaseCallback, OnRemoteStateChangeCallback, CalleeC
 
 | Name | Description |
 | --- | --- |
-| [UIAbility](arkts-ability-app-ability-uiability-uiability-c.md) | 表示包含UI界面的应用组件，提供组件创建、销毁、前后台切换等生命周期回调，同时也具备后台通信能力。 |
+| [UIAbility](arkts-ability-app-ability-uiability-uiability-c.md) | Application component that has the UI. It provides lifecycle callbacks such as component creation, destruction, and foreground/background switching, and supports background communication. |
 
 ### Interfaces
 
 | Name | Description |
 | --- | --- |
-| [Callee](arkts-ability-app-ability-uiability-callee-i.md) | 系统为UIAbility创建的后台通信对象，Callee UIAbility（被调用方）可以通过Callee对象接收Caller对象发送的数据。 |
-| [CalleeCallback](arkts-ability-app-ability-uiability-calleecallback-i.md) | 通用组件服务端注册消息通知的回调函数类型。 |
-| [Caller](arkts-ability-app-ability-uiability-caller-i.md) | 调用方Caller UIAbility通过[startAbilityByCall](arkts-ability-uiabilitycontext-c.md#startabilitybycall)接口拉起目标Callee UIAbility，目标UIAbility启动成功后，返回一个Caller对象给调用方进行通信。 |
-| [OnReleaseCallback](arkts-ability-app-ability-uiability-onreleasecallback-i.md) | 注册通用组件服务端Stub（桩）断开监听通知的回调函数类型。 |
-| [OnRemoteStateChangeCallback](arkts-ability-app-ability-uiability-onremotestatechangecallback-i.md) | 注册协同场景下跨设备组件状态变化监听通知的回调函数类型。 |
+| [Callee](arkts-ability-app-ability-uiability-callee-i.md) | Background communication object created by the system for the UIAbility, known as the Callee UIAbility (Callee), which is capable of receiving data sent from the Caller object. |
+| [CalleeCallback](arkts-ability-app-ability-uiability-calleecallback-i.md) | Defines the callback of the registration message notification of the UIAbility. |
+| [Caller](arkts-ability-app-ability-uiability-caller-i.md) | A Caller UIAbility can use the  [startAbilityByCall](arkts-ability-uiabilitycontext-c.md#startabilitybycall) API to start the target Callee UIAbility. After the target UIAbility is started successfully, a Caller object is returned to the caller for communication. |
+| [OnReleaseCallback](arkts-ability-app-ability-uiability-onreleasecallback-i.md) | Defines the callback that is invoked when the stub on the target UIAbility is disconnected. |
+| [OnRemoteStateChangeCallback](arkts-ability-app-ability-uiability-onremotestatechangecallback-i.md) | Defines the callback that is invoked when the remote UIAbility state changes in the collaboration scenario. |
 
 ### Types
 
 | Name | Description |
 | --- | --- |
-| [CalleeCallback](arkts-ability-calleecallback-t.md) | 通用组件服务端注册消息通知的回调函数类型。 |
-| [OnReleaseCallback](arkts-ability-onreleasecallback-t.md) | 注册通用组件服务端Stub（桩）断开监听通知的回调函数类型。 |
-| [OnRemoteStateChangeCallback](arkts-ability-onremotestatechangecallback-t.md) | 注册协同场景下跨设备组件状态变化监听通知的回调函数类型。 |
+| [CalleeCallback](arkts-ability-calleecallback-t.md) | Defines the callback of the registration message notification of the UIAbility. |
+| [OnReleaseCallback](arkts-ability-onreleasecallback-t.md) | Defines the callback that is invoked when the stub on the target UIAbility is disconnected. |
+| [OnRemoteStateChangeCallback](arkts-ability-onremotestatechangecallback-t.md) | Defines the callback that is invoked when the remote UIAbility state changes in the collaboration scenario. |
 

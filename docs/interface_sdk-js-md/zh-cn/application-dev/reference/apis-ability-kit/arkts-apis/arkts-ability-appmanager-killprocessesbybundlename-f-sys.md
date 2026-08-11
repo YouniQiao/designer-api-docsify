@@ -1,11 +1,5 @@
 # killProcessesByBundleName（系统接口）
 
-## 导入模块
-
-```TypeScript
-import { appManager } from 'kits/@kit.AbilityKit';
-```
-
 ## killProcessesByBundleName
 
 ```TypeScript
@@ -44,10 +38,10 @@ function killProcessesByBundleName(bundleName: string): Promise<void>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
-| 16000050 | Internal error. |
-| 201 | Permission denied. |
-| 202 | Not system application. |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| [16000050](../errorcode-ability.md#16000050-内部错误) | Internal error. |
+| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not system application. |
 
 ## 示例
 
@@ -60,8 +54,9 @@ let bundleName = 'bundleName';
 try {
   appManager.killProcessesByBundleName(bundleName).then((data) => {
     console.info('killProcessesByBundleName success.');
-  }).catch((err: BusinessError) => {
-    console.error(`killProcessesByBundleName fail, err: ${JSON.stringify(err)}`);
+  }).catch((e: Error) => {
+    let err=e as BusinessError;
+    console.error(`killProcessesByBundleName fail, err: ${err.code }, ${err.message }`);
   });
 } catch (paramError) {
   let code = (paramError as BusinessError).code;
@@ -104,10 +99,10 @@ function killProcessesByBundleName(bundleName: string, callback: AsyncCallback<v
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
-| 16000050 | Internal error. |
-| 201 | Permission denied. |
-| 202 | Not system application. |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| [16000050](../errorcode-ability.md#16000050-内部错误) | Internal error. |
+| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not system application. |
 
 ## 示例
 
@@ -117,7 +112,7 @@ import { BusinessError } from '@kit.BasicServicesKit';
 
 let bundleName = 'bundleName';
 
-function killProcessesByBundleNameCallback(err: BusinessError) {
+function killProcessesByBundleNameCallback(err: BusinessError | null) {
   if (err) {
     console.error(`killProcessesByBundleNameCallback fail, err: ${JSON.stringify(err)}`);
   } else {

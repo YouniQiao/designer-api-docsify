@@ -1,6 +1,6 @@
 # USBInterface
 
-一个[USBConfig](arkts-basicservices-usb-usbconfig-i.md)中可以含有多个USBInterface，每个USBInterface提供一个功能。
+Represents a USB interface. One [USBConfig](arkts-basicservices-usb-usbconfig-i.md) can contain multiple **USBInterface** instances,each providing a specific function.
 
 **Since:** 8
 
@@ -26,7 +26,7 @@ import { usb } from 'kits/@kit.BasicServicesKit';
 alternateSetting: number
 ```
 
-在同一个接口中的多个描述符中进行切换设置。
+Settings for alternating between descriptors of the same USB interface.
 
 **Type:** number
 
@@ -48,7 +48,7 @@ alternateSetting: number
 clazz: number
 ```
 
-设备类型。
+Device type.
 
 **Type:** number
 
@@ -70,7 +70,7 @@ clazz: number
 endpoints: Array<USBEndpoint>
 ```
 
-当前接口所包含的端点。
+Endpoints that belong to the USB interface.
 
 **Type:** Array&lt;USBEndpoint&gt;
 
@@ -92,7 +92,7 @@ endpoints: Array<USBEndpoint>
 id: number
 ```
 
-接口的唯一标识。
+Unique ID of the USB interface.
 
 **Type:** number
 
@@ -114,7 +114,7 @@ id: number
 name: string
 ```
 
-接口名称。
+Interface name.
 
 **Type:** string
 
@@ -136,7 +136,7 @@ name: string
 protocol: number
 ```
 
-接口的协议。
+Interface protocol.
 
 **Type:** number
 
@@ -158,7 +158,7 @@ protocol: number
 subClass: number
 ```
 
-设备子类。
+Device subclass.
 
 **Type:** number
 

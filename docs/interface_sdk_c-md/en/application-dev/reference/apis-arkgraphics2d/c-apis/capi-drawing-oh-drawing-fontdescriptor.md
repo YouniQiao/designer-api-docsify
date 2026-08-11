@@ -28,7 +28,7 @@ This struct describes the detailed information about a system font.
 | int weight | Weight of the system font. |
 | int width | Width of the system font. |
 | int italic | Slope of the system font. |
-| bool monoSpace | Whether the system font is monospaced. **true** means yes; **false** otherwise. |
+| bool monoSpace | Whether the system font is monospace. The value true means the font is monospace, and false means the opposite. |
 | bool symbolic | Whether the system font supports symbols. **true** means yes; **false** otherwise. |
 
 

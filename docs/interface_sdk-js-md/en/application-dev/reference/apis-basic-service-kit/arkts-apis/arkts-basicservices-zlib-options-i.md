@@ -1,6 +1,6 @@
 # Options
 
-Options用于指定在压缩或解压Zip文件时的选项。
+Defines options used to compress or decompress a ZIP file.
 
 **Since:** 7
 
@@ -16,13 +16,35 @@ Options用于指定在压缩或解压Zip文件时的选项。
 import { zlib } from 'kits/@kit.BasicServicesKit';
 ```
 
+## keepTopLevelFolder
+
+```TypeScript
+keepTopLevelFolder?: boolean
+```
+
+Indicates whether to keep the top-level source folder in the compressed file.The default value is false.
+
+**Type:** boolean
+
+**Since:** 26.0.0
+
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
+
+**Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API:** This API can be used in atomic services since API version 26.0.0.
+
+<!--Device-Options-keepTopLevelFolder?: boolean--><!--Device-Options-keepTopLevelFolder?: boolean-End-->
+
+**System capability:** SystemCapability.BundleManager.Zlib
+
 ## level
 
 ```TypeScript
 level?: CompressLevel
 ```
 
-压缩或解压时指定的压缩等级。
+Compression level specified for compression or decompression.
 
 **Type:** [CompressLevel](arkts-basicservices-zlib-compresslevel-e.md)
 
@@ -42,7 +64,7 @@ level?: CompressLevel
 memLevel?: MemLevel
 ```
 
-压缩时指定的使用内存等级。
+Memory level specified for compression.
 
 **Type:** [MemLevel](arkts-basicservices-zlib-memlevel-e.md)
 
@@ -62,7 +84,7 @@ memLevel?: MemLevel
 parallel?: ParallelStrategy
 ```
 
-压缩策略。
+Serial or parallel strategy specified for compression or decompression.
 
 **Type:** [ParallelStrategy](arkts-basicservices-zlib-parallelstrategy-e.md)
 
@@ -82,7 +104,7 @@ parallel?: ParallelStrategy
 pathSeparatorStrategy?: PathSeparatorStrategy
 ```
 
-并行策略。
+Separator strategy for the file path in the compressed package specified for decompression.
 
 **Type:** [PathSeparatorStrategy](arkts-basicservices-zlib-pathseparatorstrategy-e.md)
 
@@ -102,7 +124,7 @@ pathSeparatorStrategy?: PathSeparatorStrategy
 strategy?: CompressStrategy
 ```
 
-压缩时指定的压缩策略。
+Compression strategy specified for compression.
 
 **Type:** [CompressStrategy](arkts-basicservices-zlib-compressstrategy-e.md)
 

@@ -1,14 +1,19 @@
 # MenuItemGroup
 
-该组件用于展示MenuItem的分组，支持设置分组的标题和尾部信息，用于组织和管理菜单项的分类结构。适用于需要在菜单中按类别组织多个菜单项的场景，通过分组清晰地展示菜单的层次结构，提升菜单的可读性和用户体验。
+The **MenuItemGroup** component represents a group of menu items.
 
-> **说明：**
+> **NOTE**
+>
+> This component is supported since API version 9. Newly added APIs will be marked with a superscript to indicate 
+> their
 
-> - 该组件从API版本26.0.0开始支持[WithTheme]{@link with_theme}。
+## Child Components
 
-## 子组件
+This component contains the [MenuItem]{@link menu_item} child component.
 
-包含[MenuItem]{@link menu_item}子组件。
+## Sample
+
+For details, see [Example in Menu](docroot://reference/apis-arkui/arkui-ts/ts-basic-components-menu.md#example).
 
 ## MenuItemGroup
 
@@ -30,7 +35,7 @@ MenuItemGroup(value?: MenuItemGroupOptions)
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | [MenuItemGroupOptions](arkts-arkui-menuitemgroupoptions-i.md) | No | 设置MenuItemGroup的标题和尾部信息。<br/> 未设置时，不显示标题和尾部信息。 |
+| value | [MenuItemGroupOptions](arkts-arkui-menuitemgroupoptions-i.md) | No | Header and footer of the menu item group. |
 
 ## Summary
 

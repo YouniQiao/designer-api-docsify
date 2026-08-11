@@ -1,6 +1,6 @@
 # MagneticFieldResponse
 
-磁场传感器数据，继承于[Response](arkts-sensorservice-sensor-response-i.md)。
+Describes the magnetic field sensor data. It extends from [Response](arkts-sensorservice-sensor-response-i.md).
 
 **Inheritance/Implementation:** MagneticFieldResponse extends [Response](arkts-sensorservice-sensor-response-i.md)
 
@@ -24,7 +24,7 @@ import { sensor } from 'kits/@kit.SensorServiceKit';
 x: double
 ```
 
-x轴方向的环境磁场强度。单位：μT（微特斯拉）。
+Magnetic field strength on the x-axis, in μT.
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：double
 
@@ -42,7 +42,7 @@ x轴方向的环境磁场强度。单位：μT（微特斯拉）。
 y: double
 ```
 
-y轴方向的环境磁场强度。单位：μT（微特斯拉）。
+Magnetic field strength on the y-axis, in μT.
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：double
 
@@ -60,7 +60,7 @@ y轴方向的环境磁场强度。单位：μT（微特斯拉）。
 z: double
 ```
 
-z轴方向的环境磁场强度。单位：μT（微特斯拉）。
+Magnetic field strength on the z-axis, in μT.
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：double
 

@@ -6,7 +6,7 @@
 export function getWaterFlowEvent(node: FrameNode): UIWaterFlowEvent | undefined
 ```
 
-从Scroll节点中获取事件实例
+Get the event instance of WaterFlow node.
 
 **Since:** 26.0.0
 
@@ -22,7 +22,7 @@ export function getWaterFlowEvent(node: FrameNode): UIWaterFlowEvent | undefined
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| node | [FrameNode](arkts-arkui-framenode-c.md) | Yes | 目标 FrameNode |
+| node | [FrameNode](arkts-arkui-framenode-c.md) | Yes | the target FrameNode. |
 
 **Return value:**
 

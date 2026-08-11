@@ -1,6 +1,6 @@
 # ScreenCaptureConfig
 
-Defines the screen capture configuration.
+Provides the web screen capture configuration.
 
 **Since:** 23
 
@@ -16,7 +16,7 @@ Defines the screen capture configuration.
 captureMode: WebCaptureMode
 ```
 
-The mode for selecting the recording area.
+Web screen capture mode.
 
 **Type:** [WebCaptureMode](arkts-arkweb-web-webcapturemode-e.md)
 

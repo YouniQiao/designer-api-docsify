@@ -1,6 +1,6 @@
 # RandomAccessFileOptions
 
-可选项类型，支持 createRandomAccessFile 接口使用。
+Defines the options used in **createRandomAccessFile()**.
 
 **Since:** 23
 
@@ -22,7 +22,7 @@ import { Options, ReaderIteratorResult, Watcher, ReadTextOptions, WatchEventList
 end?: long
 ```
 
-表示期望读取结束的位置，单位为Byte。可选，默认文件末尾。
+End position to read the data, in bytes. This parameter is optional. The default value is the end of the file.
 
 **Type:** long
 
@@ -40,7 +40,7 @@ end?: long
 start?: long
 ```
 
-表示期望读取文件的位置，单位为Byte。可选，默认从当前位置开始读。
+Start position to read the data, in bytes. This parameter is optional. By default, data is read from the current position.
 
 **Type:** long
 

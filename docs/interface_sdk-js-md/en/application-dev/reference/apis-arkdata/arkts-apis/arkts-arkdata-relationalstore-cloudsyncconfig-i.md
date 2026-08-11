@@ -1,6 +1,6 @@
 # CloudSyncConfig
 
-云同步配置信息。
+Cloud sync configuration.
 
 **Since:** 26.0.0
 
@@ -22,7 +22,7 @@ import { relationalStore } from 'kits/@kit.ArkData';
 enablePredicate?: boolean
 ```
 
-是否启用表级同步开关。true表示启用表级同步，false表示不启用。默认值为false。
+Indicates the table-level synchronization switch.
 
 **Type:** boolean
 
@@ -42,7 +42,7 @@ enablePredicate?: boolean
 mode: SyncMode
 ```
 
-数据库同步模式。
+Indicates the database synchronization mode.
 
 **Type:** [SyncMode](arkts-arkdata-relationalstore-syncmode-e.md)
 
@@ -62,7 +62,7 @@ mode: SyncMode
 predicate?: RdbPredicates
 ```
 
-表级同步谓词。仅当enablePredicate为true时，此参数有效。
+Indicates the table-level synchronization predicate.
 
 **Type:** [RdbPredicates](arkts-arkdata-relationalstore-rdbpredicates-c.md)
 

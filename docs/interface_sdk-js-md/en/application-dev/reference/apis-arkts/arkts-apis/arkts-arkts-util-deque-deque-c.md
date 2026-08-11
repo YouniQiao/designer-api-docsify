@@ -1,6 +1,6 @@
 # Deque
 
-Deque（double-ended queue）基于循环队列的数据结构实现，支持两端元素的插入和删除。Deque同时具备先进先出以及先进后出的特点，可根据操作端的不同同时作为队列和栈使用。当现有容量不足以容纳新插入的元素时，Deque会动态调整容量，每次扩容两倍，无需手动预设容量。
+Double-ended queue (deque) is a sequence container implemented based on the queue data structure that follows the principles of First In First Out (FIFO) and Last In First Out (LIFO).It allows insertion and removal of elements at both the ends.
 
 **Since:** 8
 
@@ -22,7 +22,7 @@ import { Deque } from 'kits/@kit.ArkTS';
 $_iterator(): IterableIterator<T>
 ```
 
-返回一个迭代器，每一项都是一个ArkTS对象。
+Returns an iterator. Each item of the iterator is a ArkTS Object
 
 **Since:** 23
 
@@ -46,7 +46,7 @@ $_iterator(): IterableIterator<T>
 [Symbol.iterator](): IterableIterator<T>
 ```
 
-返回一个迭代器，按插入顺序遍历Deque中的元素，迭代器每项为T类型的元素。
+returns an iterator.Each item of the iterator is a Javascript Object
 
 **Since:** 8
 
@@ -62,13 +62,13 @@ $_iterator(): IterableIterator<T>
 
 | Type | Description |
 | --- | --- |
-| [IterableIterator](arkts-arkts-iterator-iterableiterator-i.md)&lt;T&gt; | 返回一个迭代器，用于遍历Deque实例中的所有元素。 |
+| [IterableIterator](arkts-arkts-iterator-iterableiterator-i.md)&lt;T&gt; |  |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 10200011 | The Symbol.iterator method cannot be bound. |
+| [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) | The Symbol.iterator method cannot be bound. |
 
 ## Examples
 
@@ -111,7 +111,7 @@ Output: 4
 constructor()
 ```
 
-Deque的构造函数，用于创建一个基于循环队列数据结构的空Deque实例。
+A constructor used to create a **Deque** instance.
 
 **Since:** 8
 
@@ -127,7 +127,7 @@ Deque的构造函数，用于创建一个基于循环队列数据结构的空Deq
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 10200012 | The Deque's constructor cannot be directly invoked. |
+| [10200012](../errorcode-utils.md#10200012-constructor-calling-failure) | The Deque's constructor cannot be directly invoked. |
 
 ## Examples
 
@@ -141,7 +141,7 @@ let deque = new Deque<string | number | boolean | Object>();
 forEach(callbackFn: (value: T, index?: number, deque?: Deque<T>) => void, thisArg?: Object): void
 ```
 
-通过回调函数遍历Deque实例中的每个元素。
+Uses a callback to traverse each element in the **Deque** instance.
 
 **Since:** 8
 
@@ -157,14 +157,14 @@ forEach(callbackFn: (value: T, index?: number, deque?: Deque<T>) => void, thisAr
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callbackFn | (value: T, index?: number, deque?: Deque&lt;T&gt;) =&gt; void | Yes | 遍历每个元素时执行的回调函数，执行时的this值可通过thisArg参数指定。在回调函数执行过程中，不建议修改Deque（如插入或删除元素），否则可能导致遍历行为异常。 |
-| thisArg | Object | No | callbackFn被调用时用作this值。当需要改变回调函数中的this指向时传入此参数；不传入时默认值为当前实例对象。 |
+| callbackFn | (value: T, index?: number, deque?: Deque&lt;T&gt;) =&gt; void | Yes | Callback invoked to traverse the elements in the Deque. |
+| thisArg | Object | No | Value of **this** to use when **callbackFn** is invoked. The default value is this instance. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 10200011 | The forEach method cannot be bound. |
+| [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) | The forEach method cannot be bound. |
 
 ## Examples
 
@@ -191,7 +191,7 @@ Output: value:1 index:0
 forEach(callbackFn: DequeForEachCb<T>): void
 ```
 
-通过回调函数遍历Deque实例中的每个元素。
+Iterates over elements in a generic Deque (double-ended queue) and executes a callback function for each element.
 
 **Since:** 23
 
@@ -207,7 +207,7 @@ forEach(callbackFn: DequeForEachCb<T>): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callbackFn | [DequeForEachCb](arkts-arkts-dequeforeachcb-t.md)&lt;T&gt; | Yes | 回调函数。 |
+| callbackFn | [DequeForEachCb](arkts-arkts-dequeforeachcb-t.md)&lt;T&gt; | Yes | A callback function to execute for each element. |
 
 ## getFirst
 
@@ -215,7 +215,7 @@ forEach(callbackFn: DequeForEachCb<T>): void
 getFirst(): T
 ```
 
-获取Deque实例的头元素，不删除该元素。调用后，Deque的内容和长度不变。如需删除并返回首元素，请使用popFirst。
+Obtains the first element of this Deque.
 
 **Since:** 8
 
@@ -231,14 +231,14 @@ getFirst(): T
 
 | Type | Description |
 | --- | --- |
-| T | 返回Deque实例的头元素。 |
+| T | First element of the T type obtained. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 10200011 | The getFirst method cannot be bound. |
-| 10200010 | Container is empty.<br>**Applicable version:** 23 and later  **ArkTS mode:** This error code applies only to ArkTS-Sta. |
+| [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) | The getFirst method cannot be bound. |
+| [10200010](../errorcode-utils.md#10200010-empty-container) | Container is empty.<br>**Applicable version:** 23 and later  **ArkTS mode:** This error code applies only to ArkTS-Sta. |
 
 ## Examples
 
@@ -258,7 +258,7 @@ console.info("result:", result);  // result: 4
 getLast(): T
 ```
 
-获取Deque实例的尾元素，不删除该元素。调用后，Deque的内容和长度不变。如需删除并返回尾元素，请使用popLast。
+Obtains the last element of this Deque.
 
 **Since:** 8
 
@@ -274,14 +274,14 @@ getLast(): T
 
 | Type | Description |
 | --- | --- |
-| T | 返回Deque实例的尾元素。 |
+| T | Last element of the T type obtained. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 10200011 | The getLast method cannot be bound. |
-| 10200010 | Container is empty.<br>**Applicable version:** 23 and later  **ArkTS mode:** This error code applies only to ArkTS-Sta. |
+| [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) | The getLast method cannot be bound. |
+| [10200010](../errorcode-utils.md#10200010-empty-container) | Container is empty.<br>**Applicable version:** 23 and later  **ArkTS mode:** This error code applies only to ArkTS-Sta. |
 
 ## Examples
 
@@ -301,7 +301,7 @@ console.info("result:", result);  // result: 2
 has(element: T): boolean
 ```
 
-判断此Deque中是否包含指定元素。
+Checks whether this Deque has the specified element.
 
 **Since:** 8
 
@@ -317,19 +317,19 @@ has(element: T): boolean
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| element | T | Yes | 指定的元素。 |
+| element | T | Yes | Target element. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| boolean | 如果包含指定元素返回true，否则返回false。 |
+| boolean | Operation result. The value **true** is returned if the specified element is contained; otherwise, **false** is returned. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 10200011 | The has method cannot be bound. |
+| [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) | The has method cannot be bound. |
 
 ## Examples
 
@@ -346,7 +346,7 @@ console.info("result:", result);  // result: true
 insertEnd(element: T): void
 ```
 
-在Deque尾部插入元素。插入成功后Deque的元素个数增加1。
+Inserts an element at the end of this Deque.
 
 **Since:** 8
 
@@ -362,13 +362,13 @@ insertEnd(element: T): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| element | T | Yes | 在尾部插入的元素。 |
+| element | T | Yes | Target element. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 10200011 | The insertEnd method cannot be bound. |
+| [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) | The insertEnd method cannot be bound. |
 
 ## Examples
 
@@ -395,7 +395,7 @@ console.info("result:", deque[0]);  // result: a
 insertFront(element: T): void
 ```
 
-在Deque头部插入元素。插入成功后Deque的元素个数增加1。Deque在头部插入元素的效率高于ArrayList。
+Inserts an element at the front of this Deque.
 
 **Since:** 8
 
@@ -411,13 +411,13 @@ insertFront(element: T): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| element | T | Yes | 在头部插入的元素，类型需与Deque实例化时指定的泛型类型T一致。 |
+| element | T | Yes | Target element. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 10200011 | The insertFront method cannot be bound. |
+| [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) | The insertFront method cannot be bound. |
 
 ## Examples
 
@@ -444,7 +444,7 @@ console.info("result:", deque[0]);  // result: false
 popFirst(): T
 ```
 
-删除并返回Deque的首元素。删除成功后Deque的元素个数减少1。Deque在头部删除元素的效率高于ArrayList。
+Removes the first element of this Deque.
 
 **Since:** 8
 
@@ -460,14 +460,14 @@ popFirst(): T
 
 | Type | Description |
 | --- | --- |
-| T | 返回被删除的首元素。 |
+| T | First element removed. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 10200011 | The popFirst method cannot be bound. |
-| 10200010 | Container is empty.<br>**Applicable version:** 23 and later  **ArkTS mode:** This error code applies only to ArkTS-Sta. |
+| [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) | The popFirst method cannot be bound. |
+| [10200010](../errorcode-utils.md#10200010-empty-container) | Container is empty.<br>**Applicable version:** 23 and later  **ArkTS mode:** This error code applies only to ArkTS-Sta. |
 
 ## Examples
 
@@ -488,7 +488,7 @@ console.info("result:", result);  // result: 4
 popLast(): T
 ```
 
-删除并返回Deque的尾元素。删除成功后Deque的元素个数减少1。
+Removes the last element of this Deque.
 
 **Since:** 8
 
@@ -504,14 +504,14 @@ popLast(): T
 
 | Type | Description |
 | --- | --- |
-| T | 返回被删除的尾元素。 |
+| T | Last element removed. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 10200011 | The popLast method cannot be bound. |
-| 10200010 | Container is empty.<br>**Applicable version:** 23 and later  **ArkTS mode:** This error code applies only to ArkTS-Sta. |
+| [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) | The popLast method cannot be bound. |
+| [10200010](../errorcode-utils.md#10200010-empty-container) | Container is empty.<br>**Applicable version:** 23 and later  **ArkTS mode:** This error code applies only to ArkTS-Sta. |
 
 ## Examples
 
@@ -532,7 +532,7 @@ console.info("result:", result);  // result: 6
 [index: int]: T
 ```
 
-获取指定索引值对应位置的元素。
+Returns the item at that index.
 
 **Type:** T
 
@@ -552,7 +552,7 @@ console.info("result:", result);  // result: 6
 length: number
 ```
 
-Deque的元素个数。
+Number of elements in a Deque.
 
 **Type:** number
 

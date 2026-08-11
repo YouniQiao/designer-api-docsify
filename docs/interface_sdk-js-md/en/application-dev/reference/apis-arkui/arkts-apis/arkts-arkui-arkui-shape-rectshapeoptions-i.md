@@ -1,8 +1,6 @@
 # RectShapeOptions
 
-RectShape 的构造函数参数。
-
-继承自[ShapeSize](arkts-arkui-arkui-shape-shapesize-i.md)。
+Interface for RectShape constructor parameters.
 
 **Inheritance/Implementation:** RectShapeOptions extends [ShapeSize](arkts-arkui-arkui-shape-shapesize-i.md)
 
@@ -26,13 +24,7 @@ import { RectShape, CircleShape, EllipseShape, PathShape } from 'kits/@kit.ArkUI
 radius?: double | string | Array<double | string>
 ```
 
-矩形形状的圆角半径。
-
-类型为number时取值范围是[0, +∞)，string时是[Length](arkts-arkui-length-t.md)。
-
-单位：vp
-
-取值为异常值时按照0vp处理。
+Defines the corner radius of the RectShape.
 
 **Type:** double \| string \| Array&lt;double \| string&gt;
 

@@ -1,6 +1,6 @@
 # GestureType
 
-定义手势类型。
+Enumerates gesture recognizer types.
 
 **Since:** 11
 
@@ -16,7 +16,7 @@
 TAP_GESTURE = 0
 ```
 
-点击手势。
+Tap gesture.
 
 **Since:** 11
 
@@ -34,7 +34,7 @@ TAP_GESTURE = 0
 LONG_PRESS_GESTURE = 1
 ```
 
-长按手势。
+Long press gesture.
 
 **Since:** 11
 
@@ -52,7 +52,7 @@ LONG_PRESS_GESTURE = 1
 PAN_GESTURE = 2
 ```
 
-滑动手势。
+Pan gesture.
 
 **Since:** 11
 
@@ -70,7 +70,7 @@ PAN_GESTURE = 2
 PINCH_GESTURE = 3
 ```
 
-捏合手势。
+Pinch gesture.
 
 **Since:** 11
 
@@ -88,7 +88,7 @@ PINCH_GESTURE = 3
 SWIPE_GESTURE = 4
 ```
 
-快滑手势。
+Swipe gesture.
 
 **Since:** 11
 
@@ -106,7 +106,7 @@ SWIPE_GESTURE = 4
 ROTATION_GESTURE = 5
 ```
 
-旋转手势。
+Rotation gesture.
 
 **Since:** 11
 
@@ -124,7 +124,7 @@ ROTATION_GESTURE = 5
 DRAG = 6
 ```
 
-拖拽。
+Drag.
 
 **Since:** 11
 
@@ -142,7 +142,7 @@ DRAG = 6
 CLICK = 7
 ```
 
-点击。
+Click.
 
 **Since:** 11
 
@@ -160,7 +160,7 @@ CLICK = 7
 BOX_SELECT_GESTURE = 8
 ```
 
-滚动类容器鼠标框选手势，是一种特殊的滑动手势，用于在滚动容器中通过鼠标拖拽创建选择区域，批量选择多个元素。
+Swipe gesture used to create a selection area by dragging with the mouse within a scroll container, enabling the batch selection of multiple elements.
 
 **Since:** 23
 
@@ -180,7 +180,7 @@ BOX_SELECT_GESTURE = 8
 WEB_SCROLL_GESTURE = 9
 ```
 
-Web组件滚动手势，是一种特殊的滑动手势，用于控制Web组件内的滚动行为。
+Swipe gesture used to control the scrolling behavior of a **Web** component.
 
 **Since:** 23
 
@@ -200,7 +200,7 @@ Web组件滚动手势，是一种特殊的滑动手势，用于控制Web组件�
 TEXT_FIELD_SELECT_GESTURE = 10
 ```
 
-文本选择手势，是一种特殊的滑动手势，用于在输入框组件中通过拖拽选择文本内容。
+Swipe gesture used to select text content by dragging within an input box component.
 
 **Since:** 23
 
@@ -220,8 +220,7 @@ TEXT_FIELD_SELECT_GESTURE = 10
 CONTEXT_MENU_HOVER_GESTURE = 11
 ```
 
-上下文菜单悬停手势是一种特殊的长按手势，用于在长按过程中触发菜单的hoverScale动画效果（需启用  
-[ContextMenuAnimationOptions](arkts-arkui-common-contextmenuanimationoptions-i.md)的hoverScaleInterruption属性以支持该行为）。
+Context menu hover gesture. It is a special type of long-press gesture and triggers the **hoverScale** animation effect of the menu during the long-press process (this behavior requires enabling the **hoverScaleInterruption**attribute of [ContextMenuAnimationOptions](arkts-arkui-common-contextmenuanimationoptions-i.md) for support).
 
 **Since:** 23
 

@@ -1,6 +1,6 @@
 # RadioOptions
 
-单选框的信息。
+Radio button information.
 
 **Since:** 8
 
@@ -16,7 +16,7 @@
 group: string
 ```
 
-当前单选框的所属群组名称，相同group的单选框只能有一个被选中。
+Name of the group to which the radio button belongs. Only one radio button in a given group can be selected at a time.
 
 **Type:** string
 
@@ -38,7 +38,7 @@ group: string
 indicatorBuilder?: CustomBuilder
 ```
 
-配置单选框的选中样式为自定义组件。自定义组件与Radio组件以中心点对齐显示。indicatorBuilder设置为undefined时，按照RadioIndicatorType.TICK进行显示。
+Custom component to indicate that the radio button is selected. This custom component is center aligned with the radio button. If this parameter is set to **undefined**, the value of **RadioIndicatorType.TICK** is used as the indicator type.
 
 **Type:** [CustomBuilder](arkts-arkui-custombuilder-t.md)
 
@@ -62,7 +62,7 @@ indicatorBuilder?: CustomBuilder
 indicatorType?: RadioIndicatorType
 ```
 
-配置单选框的选中样式。未设置时按照RadioIndicatorType.TICK进行显示。
+Indicator type of the radio button. If no value is specified, the value of **RadioIndicatorType.TICK** is used.
 
 **Type:** [RadioIndicatorType](../arkts-apis/arkts-arkui-radio-radioindicatortype-e.md)
 
@@ -86,7 +86,7 @@ indicatorType?: RadioIndicatorType
 value: string
 ```
 
-当前单选框的值。
+Current value of the radio button.
 
 **Type:** string
 

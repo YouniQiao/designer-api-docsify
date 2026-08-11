@@ -1,6 +1,6 @@
 # FrictionMotion (System API)
 
-摩擦动画模型。可以通过摩擦力、初始位置和初始速度构建摩擦动画。
+Friction animation model. You can build friction animation by friction force, initial position, and initial velocity.
 
 **Since:** 7
 
@@ -20,7 +20,7 @@
 constructor(friction: number, position: number, velocity: number)
 ```
 
-构造器参数。
+Constructor parameters
 
 **Since:** 7
 

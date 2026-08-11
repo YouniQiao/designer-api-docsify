@@ -1,0 +1,73 @@
+# BloomSettings
+
+Describes the settings for bloom effects.It is unavailable when RenderingPipelineType is set to FORWARD_LIGHTWEIGHT.
+
+**Since:** 18
+
+<!--Device-unnamed-export interface BloomSettings--><!--Device-unnamed-export interface BloomSettings-End-->
+
+**System capability:** SystemCapability.ArkUi.Graphics3D
+
+## scaleFactor
+
+```TypeScript
+scaleFactor?: number
+```
+
+Scale factor. The value must be greater than 0. The default value is 1.0.
+
+**Type:** number
+
+**Since:** 18
+
+<!--Device-BloomSettings-scaleFactor?: double--><!--Device-BloomSettings-scaleFactor?: double-End-->
+
+**System capability:** SystemCapability.ArkUi.Graphics3D
+
+## scatter
+
+```TypeScript
+scatter?: number
+```
+
+Scatter amount. The value must be greater than 0. The default value is 1.0.
+
+**Type:** number
+
+**Since:** 18
+
+<!--Device-BloomSettings-scatter?: double--><!--Device-BloomSettings-scatter?: double-End-->
+
+**System capability:** SystemCapability.ArkUi.Graphics3D
+
+## thresholdHard
+
+```TypeScript
+thresholdHard?: number
+```
+
+Hard threshold. The value is a non-negative number. The default value is 1.0.
+
+**Type:** number
+
+**Since:** 18
+
+<!--Device-BloomSettings-thresholdHard?: double--><!--Device-BloomSettings-thresholdHard?: double-End-->
+
+**System capability:** SystemCapability.ArkUi.Graphics3D
+
+## thresholdSoft
+
+```TypeScript
+thresholdSoft?: number
+```
+
+Soft threshold. The value is a non-negative number. The default value is 2.0.
+
+**Type:** number
+
+**Since:** 18
+
+<!--Device-BloomSettings-thresholdSoft?: double--><!--Device-BloomSettings-thresholdSoft?: double-End-->
+
+**System capability:** SystemCapability.ArkUi.Graphics3D

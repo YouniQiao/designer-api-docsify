@@ -1,6 +1,6 @@
 # Blend
 
-混合接口.
+Controls the transparency of materials.
 
 **Since:** 20
 
@@ -16,7 +16,7 @@
 enabled: boolean
 ```
 
-控制是否启用混合
+Whether the transparency of the material is enabled. true if enabled, false otherwise.
 
 **Type:** boolean
 

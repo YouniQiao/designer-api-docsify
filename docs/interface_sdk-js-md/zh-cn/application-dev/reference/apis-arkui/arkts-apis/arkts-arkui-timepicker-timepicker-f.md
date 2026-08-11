@@ -30,5 +30,5 @@ export declare function TimePicker(
 
 | 类型 | 说明 |
 | --- | --- |
-| [TimePickerAttribute](../arkts-components/arkts-arkui-timepicker-attribute.md) | 时间选择器属性。 |
+| [TimePickerAttribute](arkts-arkui-timepicker-timepickerattribute-i.md) | 时间选择器属性。 |
 

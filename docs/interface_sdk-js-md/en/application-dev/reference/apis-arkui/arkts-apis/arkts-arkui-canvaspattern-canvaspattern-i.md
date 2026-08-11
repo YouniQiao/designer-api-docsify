@@ -1,6 +1,6 @@
 # CanvasPattern
 
-描述一个模板的不透明对象，该对象通过createPattern()方法创建。
+Describes an opaque object of a template, which is created using the createPattern() method.
 
 **Since:** 11
 
@@ -16,7 +16,7 @@
 setTransform(transform?: Matrix2D): void
 ```
 
-使用Matrix2D对象作为参数，对当前CanvasPattern进行矩阵变换。
+Adds the matrix transformation effect to the current template.
 
 **Since:** 11
 
@@ -36,5 +36,5 @@ setTransform(transform?: Matrix2D): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| transform | [Matrix2D](arkts-arkui-matrix2d-c.md) | No | 变换矩阵。 |
+| transform | [Matrix2D](arkts-arkui-matrix2d-c.md) | No | transformation matrix |
 

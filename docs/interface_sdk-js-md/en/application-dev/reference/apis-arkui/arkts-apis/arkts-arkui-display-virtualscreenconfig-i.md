@@ -1,6 +1,6 @@
 # VirtualScreenConfig
 
-创建虚拟屏幕的参数。
+Describes the virtual screen parameters.
 
 **Since:** 16
 
@@ -22,7 +22,7 @@ import { display } from 'kits/@kit.ArkUI';
 density: double
 ```
 
-指定虚拟屏幕的密度，单位为px，该参数为浮点数。
+Density of the virtual screen, in px. The value is a floating-point number.
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：double
 
@@ -40,7 +40,7 @@ density: double
 height: long
 ```
 
-指定虚拟屏幕的高度，单位为px，该参数应为正整数。
+Height of the virtual screen, in px. The value must be a positive integer.
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：long
 
@@ -58,7 +58,7 @@ height: long
 name: string
 ```
 
-指定虚拟屏幕的名称，用户可自行定义。
+Name of the virtual screen, which can be customized.
 
 **Type:** string
 
@@ -76,7 +76,8 @@ name: string
 supportsFocus?: boolean
 ```
 
-指定虚拟屏幕是否可获得焦点。true表示可获焦，false表示不可获焦，默认值为true。
+Whether the virtual screen is focusable. **true** if focusable, **false** otherwise. The default value is  
+**true**.
 
 **Type:** boolean
 
@@ -94,7 +95,7 @@ supportsFocus?: boolean
 surfaceId: string
 ```
 
-指定虚拟屏幕的surfaceId，用户可自行定义，该参数最大长度为4096个字节，超出最大长度时则取前4096个字节。
+Surface ID of the virtual screen, which can be customized. The maximum length for this parameter is 4096 bytes.If it goes beyond that, only the first 4096 bytes are used.
 
 **Type:** string
 
@@ -112,7 +113,7 @@ surfaceId: string
 width: long
 ```
 
-指定虚拟屏幕的宽度，单位为px，该参数应为正整数。
+Width of the virtual screen, in px. The value must be a positive integer.
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：long
 

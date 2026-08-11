@@ -1,6 +1,6 @@
 # NotificationSlot
 
-描述通知渠道，不同通知渠道对应的通知提醒方式不同。
+The **NotificationSlot** module provides APIs for defining the notification slots. The notification reminder modes vary according to notification slots.
 
 **Since:** 7
 
@@ -16,10 +16,10 @@
 readonly authorizedStatus?: int
 ```
 
-授权状态。
+Authorization status.
 
-- 0：表示已授权。   
-- 1：表示待授权。
+- **0**: means the feature is authorized.  
+- **1**: means the feature is to be authorized.
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
@@ -39,14 +39,15 @@ readonly authorizedStatus?: int
 readonly reminderMode?: int
 ```
 
-通知提醒模式。
+Reminder mode of the notification.
 
-- bit0：铃声提示。0表示关闭，1表示开启。   
-- bit1：锁屏。0表示关闭，1表示开启。   
-- bit2：横幅。0表示关闭，1表示开启。   
-- bit3：亮屏。0表示关闭，1表示开启。   
-- bit4：振动。0表示关闭，1表示开启。   
-- bit5：状态栏通知图标。0表示关闭，1表示开启。
+- Bit 0: sound alert. The value **0** means to enable the feature, and **1** means the opposite.  
+- Bit 1: locking the screen. The value **0** means to enable the feature, and **1** means the opposite.  
+- Bit 2: banner. The value **0** means to enable the feature, and **1** means the opposite.  
+- Bit 3: turning on the screen. The value **0** means to enable the feature, and **1** means the opposite.  
+- Bit 4: vibration. The value **0** means to enable the feature, and **1** means the opposite.  
+- Bit 5: notification icon in the status bar. The value **0** means to enable the feature, and **1** means the  
+opposite.
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 

@@ -4,7 +4,7 @@
 type UrlCbFn = (value: string, key: string, searchParams: URLParams) => void
 ```
 
-[forEach](arkts-arkts-url-urlparams-c.md#foreach)函数所需的回调函数。
+The type of URL callback function.
 
 **Since:** 23
 
@@ -20,7 +20,7 @@ type UrlCbFn = (value: string, key: string, searchParams: URLParams) => void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | string | Yes | 当前遍历到的键值。 |
-| key | string | Yes | 当前遍历到的键名。 |
-| searchParams | [URLParams](arkts-arkts-url-urlparams-c.md) | Yes | 当前调用[forEach](arkts-arkts-url-urlparams-c.md#foreach)方法的实例对象。 |
+| value | string | Yes | The value of the URL parameter. |
+| key | string | Yes | The key of the URL parameter. |
+| searchParams | [URLParams](arkts-arkts-url-urlparams-c.md) | Yes | The URLParams object containing all parameters. |
 

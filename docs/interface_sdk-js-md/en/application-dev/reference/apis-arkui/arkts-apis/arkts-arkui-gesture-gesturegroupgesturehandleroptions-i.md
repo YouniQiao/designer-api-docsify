@@ -1,6 +1,6 @@
 # GestureGroupGestureHandlerOptions
 
-手势组处理器配置参数。
+Defines the GestureGroupGestureHandler options.
 
 **Since:** 23
 
@@ -16,11 +16,7 @@
 gestures: GestureHandler[]
 ```
 
-设置手势组中需要包含的手势集合。
-
-**说明：**
-
-当需要为一个组件同时添加单击和双击手势时，可在[GestureGroup](../../apis-ability-kit/arkts-apis/arkts-app-ability-common.md/arkts-app-ability-common.md)中添加两个[TapGesture](../../apis-ability-kit/arkts-apis/arkts-app-ability-common.md/arkts-app-ability-common.md)，需要双击手势在前，单击手势在后，否则不生效。
+Indicates the gestures included in the gesture group.
 
 **Type:** [GestureHandler](arkts-arkui-gesturehandler-c.md)[]
 
@@ -40,9 +36,7 @@ gestures: GestureHandler[]
 mode: GestureMode
 ```
 
-设置组合手势识别模式。
-
-默认值：GestureMode.Sequence
+Indicates the mode of gesture group.
 
 **Type:** [GestureMode](arkts-arkui-gesture-gesturemode-e.md)
 

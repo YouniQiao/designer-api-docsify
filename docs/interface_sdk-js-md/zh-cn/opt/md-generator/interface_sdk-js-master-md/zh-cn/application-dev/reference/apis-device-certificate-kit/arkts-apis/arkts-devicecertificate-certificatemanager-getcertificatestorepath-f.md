@@ -1,0 +1,76 @@
+# getCertificateStorePath
+
+## getCertificateStorePath
+
+```TypeScript
+function getCertificateStorePath(property: CertStoreProperty): string
+```
+
+表示获取证书的存储路径。
+
+**起始版本：** 18
+
+<!--Device-certificateManager-function getCertificateStorePath(property: CertStoreProperty): string--><!--Device-certificateManager-function getCertificateStorePath(property: CertStoreProperty): string-End-->
+
+**系统能力：** SystemCapability.Security.CertificateManager
+
+**参数：**
+
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| property | [CertStoreProperty](arkts-devicecertificate-certificatemanager-certstoreproperty-i.md) | 是 |
+
+**返回值：**
+
+| 类型 |
+| --- |
+| string |
+
+**错误码：**
+
+| 错误码ID |
+| --- |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
+| [17500009](../errorcode-certManager.md#17500009-不支持指定的证书存储路径) |
+| [17500001](../errorcode-certManager.md#17500001-内部错误) |
+
+## 示例
+
+```TypeScript
+import { certificateManager } from '@kit.DeviceCertificateKit';
+
+try {
+  /* 获取系统CA的存储位置 */
+  let property1: certificateManager.CertStoreProperty = {
+    certType: certificateManager.CertType.CA_CERT_SYSTEM,
+  }
+  let systemCAPath = certificateManager.getCertificateStorePath(property1);
+  console.info(`Success to get system ca path: ${systemCAPath}`);
+
+  /* 获取当前用户的用户CA存储位置 */
+  let property2: certificateManager.CertStoreProperty = {
+    certType: certificateManager.CertType.CA_CERT_USER,
+    certScope: certificateManager.CertScope.CURRENT_USER,
+  }
+  let userCACurrentPath = certificateManager.getCertificateStorePath(property2);
+  console.info(`Success to get current user's user ca path: ${userCACurrentPath}`);
+
+  /* 获取设备公共的用户CA存储位置 */
+  let property3: certificateManager.CertStoreProperty = {
+    certType: certificateManager.CertType.CA_CERT_USER,
+    certScope: certificateManager.CertScope.GLOBAL_USER,
+  }
+  let globalCACurrentPath = certificateManager.getCertificateStorePath(property3);
+  console.info(`Success to get global user's user ca path: ${globalCACurrentPath}`);
+
+  /* 获取SM算法系统CA的存储位置 */
+  let property4: certificateManager.CertStoreProperty = {
+    certType: certificateManager.CertType.CA_CERT_SYSTEM,
+    certAlg: certificateManager.CertAlgorithm.SM,
+  }
+  let smSystemCAPath = certificateManager.getCertificateStorePath(property4);
+  console.info(`Success to get SM system ca path: ${smSystemCAPath}`);
+} catch (error) {
+  console.error(`Failed to get store path. Code: ${error.code}, message: ${error.message}`);
+}
+```

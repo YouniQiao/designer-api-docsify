@@ -12,7 +12,7 @@ import { sendableRelationalStore } from 'kits/@kit.ArkData';
 function toSendableValues(values: NonSendableValues): collections.Array<ValueType>
 ```
 
-将不可跨线程传递的数组数据，转换为可跨线程传递的数组数据。
+Converts the array data that cannot be passed across threads into the data that can be passed across threads.
 
 **Since:** 20
 
@@ -26,19 +26,19 @@ function toSendableValues(values: NonSendableValues): collections.Array<ValueTyp
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| values | [NonSendableValues](arkts-arkdata-sendablerelationalstore-nonsendablevalues-t.md) | Yes | 不可跨线程传递的数组数据。 |
+| values | [NonSendableValues](arkts-arkdata-sendablerelationalstore-nonsendablevalues-t.md) | Yes | Array data that cannot be passed across threads. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| collections.Array&lt;ValueType&gt; | 可跨线程传递的数组数据。 |
+| collections.Array&lt;ValueType&gt; | Array data that can be passed across threads. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 14800000 | Inner error. |
+| [14800000](../../apis-basic-services-kit/errorcode-settings.md#14800000-parameter-check-failed) | Inner error. |
 
 ## Examples
 

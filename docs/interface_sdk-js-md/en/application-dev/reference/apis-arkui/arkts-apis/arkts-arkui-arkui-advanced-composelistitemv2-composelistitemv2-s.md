@@ -1,6 +1,6 @@
 # ComposeListItemV2
 
-列表组件，可自定义列表左侧、中间元素以及右侧显示内容。
+Declare ComposeListItemV2
 
 **Since:** 26.0.0
 
@@ -24,7 +24,7 @@ import { OperateCheckV2Options, ComposeListItemV2, IconTypeV2, OperateIconV2, Op
 build(): void
 ```
 
-构建组件的方法。
+The method to build component.
 
 **Since:** 26.0.0
 
@@ -44,7 +44,7 @@ build(): void
 contentItemV2?: ContentItemV2
 ```
 
-定义左侧以及中间元素。
+The ContentItem.
 
 **Type:** [ContentItemV2](arkts-arkui-arkui-advanced-composelistitemv2-contentitemv2-c.md)
 
@@ -66,7 +66,7 @@ contentItemV2?: ContentItemV2
 operateItemV2?: OperateItemV2
 ```
 
-定义右侧元素。
+The OperateItem.
 
 **Type:** [OperateItemV2](arkts-arkui-arkui-advanced-composelistitemv2-operateitemv2-c.md)
 

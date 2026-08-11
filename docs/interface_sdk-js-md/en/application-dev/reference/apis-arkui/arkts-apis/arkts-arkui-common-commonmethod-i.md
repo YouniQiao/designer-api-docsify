@@ -16,7 +16,7 @@ CommonMethod
 default accessibilityActionOptions(option: AccessibilityActionOptions | undefined): this
 ```
 
-Sets AccessibilityActionOptions that can affect operation under accessibility.
+Provides optional parameters for setting accessibility operations of a component, which is used to restrict or&lt;br&gt;modify the operations initiated by accessibility applications such as the screen reader.
 
 **Since:** 23
 
@@ -32,7 +32,7 @@ Sets AccessibilityActionOptions that can affect operation under accessibility.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| option | [AccessibilityActionOptions](arkts-arkui-accessibilityactionoptions-i.md) \| undefined | Yes | set accessibility specific operation options. |
+| option | [AccessibilityActionOptions](arkts-arkui-accessibilityactionoptions-i.md) \| undefined | Yes | Parameter of the accessibility operation, which is used &lt;br&gt;to restrict or modify the sliding behavior in the accessibility operation. &lt;br&gt;The **scrollStep** parameter in **AccessibilityActionOptions** is used to set the number of sliding steps in &lt;br&gt;the accessibility operation. When the value is **undefined**, **scrollStep** is processed as **1**. |
 
 **Return value:**
 
@@ -46,7 +46,7 @@ Sets AccessibilityActionOptions that can affect operation under accessibility.
 default accessibilityChecked(isCheck: boolean | undefined): this
 ```
 
-Sets accessibilityChecked
+Sets the checked state for the accessibility node. This API is used in multi-select scenarios and only affects&lt;br&gt;component state announcements in screen reading scenarios.
 
 **Since:** 23
 
@@ -62,7 +62,7 @@ Sets accessibilityChecked
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| isCheck | boolean \| undefined | Yes | set accessibility checked status |
+| isCheck | boolean \| undefined | Yes | Whether the current component is selected. &lt;br&gt;**true**: The component is selected. &lt;br&gt;**false**: The component is not selected. &lt;br&gt;**undefined**: The component determines its own selected state. &lt;br&gt;Default value: **undefined |
 
 **Return value:**
 
@@ -76,7 +76,7 @@ Sets accessibilityChecked
 default accessibilityCustomActions(actions: Array<AccessibilityCustomAction> | undefined): this
 ```
 
-Sets AccessibilityCustomActions that can be processed in custom action processing under accessibility.
+Sets the custom accessibility operations of the component, allowing developers to set an array of custom actions&lt;br&gt;for binding custom operation callbacks to components by operation name.
 
 **Since:** 26.0.0
 
@@ -92,7 +92,7 @@ Sets AccessibilityCustomActions that can be processed in custom action processin
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| actions | Array&lt;[AccessibilityCustomAction](arkts-arkui-accessibilitycustomaction-i.md)&gt; \| undefined | Yes | set accessibility custom action. |
+| actions | Array&lt;[AccessibilityCustomAction](arkts-arkui-accessibilitycustomaction-i.md)&gt; \| undefined | Yes | Array of custom accessibility operations, where &lt;br&gt;each operation contains an operation name and a callback, used for binding custom operation callbacks to &lt;br&gt;components by operation name. &lt;br&gt;**NOTE：**: The array supports a maximum of 16 entries; any excess will not take effect. &lt;br&gt;When the value is **undefined**, no custom operations are set. |
 
 **Return value:**
 
@@ -106,7 +106,7 @@ Sets AccessibilityCustomActions that can be processed in custom action processin
 default accessibilityDefaultFocus(focus: boolean | undefined): this
 ```
 
-Sets the accessibility default foucs flag
+Sets the initial screen reader focus on the page.
 
 **Since:** 23
 
@@ -122,7 +122,7 @@ Sets the accessibility default foucs flag
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| focus | boolean \| undefined | Yes | if the component is accessibility default focus,focus set true |
+| focus | boolean \| undefined | Yes | Initial screen reader focus on the page. The value **true** means the &lt;br&gt;component is the default initial focus for screen readers on the current page. Other values are ignored. |
 
 **Return value:**
 
@@ -136,9 +136,7 @@ Sets the accessibility default foucs flag
 default accessibilityDescription(description: Resource | string | undefined): this
 ```
 
-Sets accessibilityDescription
-
-with support for resource references using Resource.This property provides additional context or explanation for the component,helping users understand the action or function it performs.&lt;p&gt;&lt;strong&gt;NOTE&lt;/strong&gt;:&lt;br&gt;Reference resource of the accessibility description. You can specify further explanation&lt;br&gt;of the current component, for example, possible operation consequences, especially those that&lt;br&gt;cannot be learned from component attributes and accessibility text. If a component contains&lt;br&gt;both text information and the accessibility description, the text is read first and then the&lt;br&gt;accessibility description, when the component is selected.&lt;/p&gt;
+Sets the accessibility description, with support for resource references using Resource.&lt;br&gt;This attribute provides additional context and explanation for the component, helping users understand its&lt;br&gt;functionality and purpose.&lt;p&gt;&lt;strong&gt;NOTE&lt;/strong&gt;:&lt;br&gt;Reference resource of the accessibility description. You can specify further explanation&lt;br&gt;of the current component, for example, possible operation consequences, especially those that&lt;br&gt;cannot be learned from component attributes and accessibility text. If a component contains&lt;br&gt;both text information and the accessibility description, the text is read first and then the&lt;br&gt;accessibility description, when the component is selected.&lt;/p&gt;
 
 **Since:** 23
 
@@ -168,7 +166,7 @@ with support for resource references using Resource.This property provides addit
 default accessibilityFocusDrawLevel(drawLevel: FocusDrawLevel | undefined): this
 ```
 
-Accessibility focus draw level, and the default value is FocusDrawLevel.SELF.
+Sets the drawing level for the accessibility focus highlight (green frame).
 
 **Since:** 23
 
@@ -184,7 +182,7 @@ Accessibility focus draw level, and the default value is FocusDrawLevel.SELF.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| drawLevel | [FocusDrawLevel](arkts-arkui-focusdrawlevel-e.md) \| undefined | Yes | indicates accessibility focus draw level. |
+| drawLevel | [FocusDrawLevel](arkts-arkui-focusdrawlevel-e.md) \| undefined | Yes | Drawing level for the accessibility focus highlight frame. |
 
 **Return value:**
 
@@ -265,7 +263,7 @@ Sets the accessibility level.This property determines whether the component can 
 default accessibilityNextFocusId(nextId: string | undefined): this
 ```
 
-Sets accessibility next focus id
+Sets the next component to receive focus during screen reader navigation.
 
 **Since:** 23
 
@@ -281,7 +279,7 @@ Sets accessibility next focus id
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| nextId | string \| undefined | Yes | set component next accessibility focus id |
+| nextId | string \| undefined | Yes | [Unique ID](../arkts-components/arkts-arkui-commonmethod-c.md/arkts-arkui-commonmethod-c.md#id) of the next component to receive focus. &lt;br&gt;If the ID does not correspond to any component, the setting is ignored. |
 
 **Return value:**
 
@@ -295,7 +293,7 @@ Sets accessibility next focus id
 default accessibilityNextFocusId(nextId: string, nextFocusParams: AccessibilityNextFocusParams | undefined): this
 ```
 
-Sets the next accessibility focus ID for the component, with optional detailed parameters.The detailed parameters can provide additional behavior for the accessibility focus transition.
+Sets the next component to receive focus during screen reader navigation, with optional detailed parameters.The detailed parameters can provide additional behavior for the accessibility focus transition.
 
 **Since:** 26.0.0
 
@@ -311,8 +309,8 @@ Sets the next accessibility focus ID for the component, with optional detailed p
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| nextId | string | Yes | set component next accessibility focus id. |
-| nextFocusParams | [AccessibilityNextFocusParams](arkts-arkui-accessibilitynextfocusparams-i.md) \| undefined | Yes | the detailed parameters for accessibility next focus processing. Undefined indicates reverting to the default of the detailed parameters. |
+| nextId | string | Yes | [Unique ID](../arkts-components/arkts-arkui-commonmethod-c.md/arkts-arkui-commonmethod-c.md#id) of the next component to receive focus. &lt;br&gt;If the ID does not correspond to any component, the setting is ignored. |
+| nextFocusParams | [AccessibilityNextFocusParams](arkts-arkui-accessibilitynextfocusparams-i.md) \| undefined | Yes | Detailed parameters for accessibility next &lt;br&gt;focus processing, used to configure whether to search for focusable nodes among descendant nodes. &lt;br&gt;When the value is **undefined**, no detailed parameters are configured and no focus search is performed &lt;br&gt;among descendant nodes. |
 
 **Return value:**
 
@@ -326,7 +324,7 @@ Sets the next accessibility focus ID for the component, with optional detailed p
 default accessibilityRole(role: AccessibilityRoleType | undefined): this
 ```
 
-Sets accessibility role,role indicates the custom type of the component
+Sets the role type of the accessibility component, which affects how the component is announced by screen readers.
 
 **Since:** 23
 
@@ -342,7 +340,7 @@ Sets accessibility role,role indicates the custom type of the component
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| role | [AccessibilityRoleType](arkts-arkui-common-accessibilityroletype-e.md) \| undefined | Yes | set accessibility component type |
+| role | [AccessibilityRoleType](arkts-arkui-common-accessibilityroletype-e.md) \| undefined | Yes | Role of the component as announced by screen readers (for &lt;br&gt;example, button or chart). You can define custom roles. |
 
 **Return value:**
 
@@ -356,7 +354,7 @@ Sets accessibility role,role indicates the custom type of the component
 default accessibilityScrollTriggerable(isTriggerable: boolean | undefined): this
 ```
 
-Sets accessibilityScrollTriggerable
+Sets whether the accessibility node triggers automatic screen scrolling. When no focusable components are visible&lt;br&gt;on the current page within a container, this setting determines whether automatic scrolling is initiated.
 
 **Since:** 23
 
@@ -372,7 +370,7 @@ Sets accessibilityScrollTriggerable
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| isTriggerable | boolean \| undefined | Yes | set property of supporting scroll in accessibility |
+| isTriggerable | boolean \| undefined | Yes | Whether the component triggers automatic scrolling for screen &lt;br&gt;readers when the current page has no focusable components. &lt;br&gt;**true**: The component triggers automatic scrolling. &lt;br&gt;**false**: The component does not trigger automatic scrolling. &lt;br&gt;**undefined**: The default settings are restored. &lt;br&gt;Default value: **true |
 
 **Return value:**
 
@@ -386,7 +384,7 @@ Sets accessibilityScrollTriggerable
 default accessibilitySelected(isSelect: boolean | undefined): this
 ```
 
-Sets accessibilitySelected
+Sets the checked state for the accessibility node. This API is used in single-select scenarios and only affects&lt;br&gt;component state announcements in screen reading scenarios.
 
 **Since:** 23
 
@@ -402,7 +400,7 @@ Sets accessibilitySelected
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| isSelect | boolean \| undefined | Yes | set accessibility selected status |
+| isSelect | boolean \| undefined | Yes | Whether the current component is selected. &lt;br&gt;**true**: The component is selected. &lt;br&gt;**false**: The component is not selected. &lt;br&gt;**undefined**: The component determines its own selected state. &lt;br&gt;Default value: **undefined |
 
 **Return value:**
 
@@ -416,7 +414,7 @@ Sets accessibilitySelected
 default accessibilityStateDescription(description: string | Resource | undefined): this
 ```
 
-Sets the state anouncement text of the component under accessibility.
+Sets the state description of a component for broadcasting, which clearly describes the real-time state of the&lt;br&gt;component in screen reading scenarios. Screen reader will broadcast the state description first.
 
 **Since:** 23
 
@@ -432,7 +430,7 @@ Sets the state anouncement text of the component under accessibility.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| description | string \| Resource \| undefined | Yes | the state anouncement text of the component under accessibility. if incoming is undefined, it will be processed as empty string. |
+| description | string \| Resource \| undefined | Yes | Text to be broadcasted for the current state of the component. &lt;br&gt;If the text contains more than 1000 characters, the first 1000 characters will be broadcasted. &lt;br&gt;**undefined**: The text is empty by default. |
 
 **Return value:**
 
@@ -476,7 +474,7 @@ Sets the accessibility text.&lt;p&gt;&lt;strong&gt;NOTE&lt;/strong&gt;&lt;br&gt;
 default accessibilityTextHint(value: string | undefined): this
 ```
 
-Sets accessibilityTextHint
+Sets the text hint for the component, which can be queried by accessibility services.
 
 **Since:** 23
 
@@ -492,7 +490,7 @@ Sets accessibilityTextHint
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | string \| undefined | Yes | set accessibility text hint |
+| value | string \| undefined | Yes | Text hint for the component, which can be queried by accessibility services. |
 
 **Return value:**
 
@@ -506,7 +504,7 @@ Sets accessibilityTextHint
 default accessibilityUseSamePage(pageMode: AccessibilitySamePageMode | undefined): this
 ```
 
-Sets accessibility same page mode
+Sets the same-page mode for the current component and its host application.
 
 **Since:** 23
 
@@ -522,7 +520,7 @@ Sets accessibility same page mode
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| pageMode | [AccessibilitySamePageMode](../arkts-components/arkts-arkui-accessibilitysamepagemode-e.md) \| undefined | Yes | accessibility same page mode |
+| pageMode | [AccessibilitySamePageMode](../arkts-components/arkts-arkui-accessibilitysamepagemode-e.md) \| undefined | Yes | Same-page mode for the cross-process embedded &lt;br&gt;component and the host application. |
 
 **Return value:**
 
@@ -536,7 +534,7 @@ Sets accessibility same page mode
 default accessibilityVirtualNode(builder: CustomBuilder | undefined): this
 ```
 
-Sets accessibilityVirtualNode
+Sets an accessibility virtual child node. For custom drawing components, a **CustomBuilder** is passed, which is&lt;br&gt;used to provide accessibility information. The components within the **CustomBuilder** are only used for layout&lt;br&gt;and not for display.
 
 **Since:** 23
 
@@ -710,6 +708,24 @@ animation
 | --- | --- |
 | this |  |
 
+## applyAttributesFinish
+
+```TypeScript
+default applyAttributesFinish(): void
+```
+
+Notify the component is fiished setting up its attributes.
+
+**Since:** 26.1.0
+
+**ArkTS mode:** ArkTS-Sta only, since version 26.1.0.
+
+**Model restriction:** This API can be used only in the stage model.
+
+<!--Device-CommonMethod-default applyAttributesFinish(): void--><!--Device-CommonMethod-default applyAttributesFinish(): void-End-->
+
+**System capability:** SystemCapability.ArkUI.ArkUI.Full
+
 ## aspectRatio
 
 ```TypeScript
@@ -746,7 +762,7 @@ Sets the aspect ratio of the component, which can be obtained using the followin
 default backdropBlur(radius: double | undefined, options?: BlurOptions, sysOptions?: SystemAdaptiveOptions): this
 ```
 
-为组件添加背景模糊效果，支持自定义设置模糊半径和灰阶参数。
+Adds the background blur effect for the current component. The input parameter is the blur radius.The larger the blur radius, the more blurred the background. If the value is 0, the background blur is not blurred.
 
 **Since:** 23
 
@@ -762,9 +778,9 @@ default backdropBlur(radius: double | undefined, options?: BlurOptions, sysOptio
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| radius | double \| undefined | Yes | 为当前组件添加背景模糊效果，入参为模糊半径，模糊半径越大越模糊，为0时不模糊。&lt;br/&gt;当radius的值为undefined时，恢复为默认无模糊的 背景。 |
-| options | [BlurOptions](../arkts-components/arkts-arkui-bluroptions-i.md) | No | 灰阶模糊参数。对图像中的黑白色进行色阶调整，使其趋于灰色更为柔和美观，对图像中的彩色调整没有效果。&lt;br/&gt;默认值：grayscale: [0,0] |
-| sysOptions | [SystemAdaptiveOptions](../arkts-components/arkts-arkui-systemadaptiveoptions-i.md) | No | 系统自适应调节参数。&lt;br/&gt;默认值：{ disableSystemAdaptation: false } |
+| radius | double \| undefined | Yes | radius indicates radius of backdrop blur. |
+| options | [BlurOptions](../arkts-components/arkts-arkui-bluroptions-i.md) | No | options indicates the backdrop blur options. |
+| sysOptions | [SystemAdaptiveOptions](../arkts-components/arkts-arkui-systemadaptiveoptions-i.md) | No | system adaptive options. |
 
 **Return value:**
 
@@ -809,7 +825,7 @@ Set the background to a given CustomBuilder, or set it to a specific ResourceCol
 default backgroundBlurStyle(style: BlurStyle | undefined, options?: BackgroundBlurStyleOptions, sysOptions?: SystemAdaptiveOptions): this
 ```
 
-为当前组件提供一种背景材质模糊能力，通过枚举值的方式封装了不同的模糊半径、蒙版颜色、蒙版透明度、饱和度、亮度。
+Defines the blur style to apply between the background and content of a component.It encapsulates various blur radius, mask color, mask opacity, saturation.And brightness values through enum values.
 
 **Since:** 23
 
@@ -825,9 +841,9 @@ default backgroundBlurStyle(style: BlurStyle | undefined, options?: BackgroundBl
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| style | [BlurStyle](../arkts-components/arkts-arkui-blurstyle-e.md) \| undefined | Yes | 背景模糊样式。模糊样式中封装了模糊半径、蒙版颜色、蒙版透明度、饱和度、亮度五个参数。&lt;br/&gt;当style的值为undefined时，恢复为默认 关闭模糊的背景。 |
-| options | [BackgroundBlurStyleOptions](arkts-arkui-common-backgroundblurstyleoptions-i.md) | No | 背景模糊选项。&lt;br/&gt;该参数在ArkTS卡片中，暂不支持使用。 |
-| sysOptions | [SystemAdaptiveOptions](../arkts-components/arkts-arkui-systemadaptiveoptions-i.md) | No | 系统自适应调节参数。&lt;br/&gt;默认值：{ disableSystemAdaptation: false } |
+| style | [BlurStyle](../arkts-components/arkts-arkui-blurstyle-e.md) \| undefined | Yes | Settings of the background blur style &lt;br&gt;including the blur radius, mask color, mask opacity, saturation, and brightness. |
+| options | [BackgroundBlurStyleOptions](arkts-arkui-common-backgroundblurstyleoptions-i.md) | No |  |
+| sysOptions | [SystemAdaptiveOptions](../arkts-components/arkts-arkui-systemadaptiveoptions-i.md) | No | system adaptive options. |
 
 **Return value:**
 
@@ -841,7 +857,7 @@ default backgroundBlurStyle(style: BlurStyle | undefined, options?: BackgroundBl
 default backgroundBrightness(params: BackgroundBrightnessOptions | undefined): this
 ```
 
-设置组件背景提亮效果。
+Sets the background brightness of the component.
 
 **Since:** 23
 
@@ -857,7 +873,7 @@ default backgroundBrightness(params: BackgroundBrightnessOptions | undefined): t
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| params | [BackgroundBrightnessOptions](../arkts-components/arkts-arkui-backgroundbrightnessoptions-i.md) \| undefined | Yes | 设置组件背景提亮效果，包括：亮度变化速率，提亮程度。&lt;br/&gt;当params的值为undefined时，恢 复为无提亮效果的背景。 |
+| params | [BackgroundBrightnessOptions](../arkts-components/arkts-arkui-backgroundbrightnessoptions-i.md) \| undefined | Yes | Parameters for setting the background brightness. |
 
 **Return value:**
 
@@ -901,13 +917,7 @@ Background color
 default backgroundEffect(options: BackgroundEffectOptions | undefined, sysOptions?: SystemAdaptiveOptions): this
 ```
 
-设置组件背景属性，包括背景模糊半径、亮度、饱和度和颜色等参数。
-
-> **说明：**
-> 
-> backgroundEffect接口为实时接口，每帧对模糊等效果执行实时渲染，性能负载较大。当组件背景模糊效果无需变动时，推荐采用静态模糊接口
-> [blur](../../apis-arkgraphics2d/arkts-apis/arkts-arkgraphics2d-effectkit-filter-i.md/arkts-arkgraphics2d-effectkit-filter-i.md#blur)实现模糊效果。最佳实践请参考：
-> [图像模糊动效优化-使用场景](https://developer.huawei.com/consumer/cn/doc/best-practices/bpta-fuzzy-scene-performance-optimization#section4945532519)。
+options:background effect options.sysOptions: system adaptive options.
 
 **Since:** 23
 
@@ -923,7 +933,7 @@ default backgroundEffect(options: BackgroundEffectOptions | undefined, sysOption
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| options | [BackgroundEffectOptions](../arkts-components/arkts-arkui-backgroundeffectoptions-i.md) \| undefined | Yes | 设置组件背景属性包括：饱和度，亮度，颜色。&lt;br/&gt;当options的值为undefined时，恢复为无效果的背 景。 |
+| options | [BackgroundEffectOptions](../arkts-components/arkts-arkui-backgroundeffectoptions-i.md) \| undefined | Yes | options indicates the effect options. |
 | sysOptions | [SystemAdaptiveOptions](../arkts-components/arkts-arkui-systemadaptiveoptions-i.md) | No |  |
 
 **Return value:**
@@ -938,7 +948,7 @@ default backgroundEffect(options: BackgroundEffectOptions | undefined, sysOption
 default backgroundFilter(filter: Filter | undefined): this
 ```
 
-设置背景滤镜视觉效果。
+Sets the visual effect of the background filter.
 
 **Since:** 23
 
@@ -954,13 +964,13 @@ default backgroundFilter(filter: Filter | undefined): this
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| filter | [Filter](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-agent-filter-i.md) \| undefined | Yes | 背景滤镜视觉效果。&lt;br/&gt;当filter的值为undefined时，无背景滤镜视觉效果。 |
+| filter | [Filter](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-agent-filter-i.md) \| undefined | Yes | Filter effect parameters. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| this | 返回当前组件。 |
+| this |  |
 
 ## backgroundImage
 
@@ -1150,11 +1160,7 @@ Background image size
 default bindContentCover(isShow: boolean | Bindable<boolean> | undefined, builder: CustomBuilder | undefined, type?: ModalTransition): this
 ```
 
-给组件绑定全屏模态页面，点击后显示模态页面。模态页面内容自定义，显示方式可设置无动画过渡，上下切换过渡以及透明渐变过渡。
-
-> **说明：**
-> 
-> 该接口不支持在[attributeModifier](../arkts-components/arkts-arkui-commonmethod-c.md/arkts-arkui-commonmethod-c.md#attributemodifier)中调用。
+Binds a modal page to the component, whose visibility is subject to the isShow settings.
 
 **Since:** 23
 
@@ -1170,9 +1176,9 @@ default bindContentCover(isShow: boolean | Bindable<boolean> | undefined, builde
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| isShow | boolean \| Bindable&lt;boolean&gt; \| undefined | Yes | 是否显示全屏模态页面。&lt;br/&gt;-true：显示全屏模态页面。&lt;br/&gt;-false：隐藏全屏模态页面。 |
-| builder | [CustomBuilder](../arkts-components/arkts-arkui-custombuilder-t.md) \| undefined | Yes | 配置全屏模态页面内容。 |
-| type | [ModalTransition](../arkts-components/arkts-arkui-modaltransition-e.md) | No | 全屏模态页面的系统转场方式。&lt;br/&gt; 默认值：ModalTransition.DEFAULT。&lt;br/&gt;**说明：**&lt;br /&gt; 同 transition同时设置时，此属性不生效。 |
+| isShow | boolean \| Bindable&lt;boolean&gt; \| undefined | Yes | true means display content, false means hide content. |
+| builder | [CustomBuilder](../arkts-components/arkts-arkui-custombuilder-t.md) \| undefined | Yes | the content to be displayed. |
+| type | [ModalTransition](../arkts-components/arkts-arkui-modaltransition-e.md) | No | transition type. |
 
 **Return value:**
 
@@ -1186,7 +1192,7 @@ default bindContentCover(isShow: boolean | Bindable<boolean> | undefined, builde
 default bindContentCover(isShow: boolean | Bindable<boolean> | undefined, builder: CustomBuilder | undefined, options?: ContentCoverOptions): this
 ```
 
-给组件绑定全屏模态页面，点击后显示模态页面。模态页面内容自定义，可自定义设置转场方式。
+Bind content cover
 
 **Since:** 23
 
@@ -1202,9 +1208,9 @@ default bindContentCover(isShow: boolean | Bindable<boolean> | undefined, builde
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| isShow | boolean \| Bindable&lt;boolean&gt; \| undefined | Yes | 是否显示全屏模态页面。&lt;br/&gt;-true：显示全屏模态页面。&lt;br/&gt;-false：隐藏全屏模态页面。 |
-| builder | [CustomBuilder](../arkts-components/arkts-arkui-custombuilder-t.md) \| undefined | Yes | 配置全屏模态页面内容。 |
-| options | [ContentCoverOptions](arkts-arkui-common-contentcoveroptions-i.md) | No | 配置全屏模态页面的可选属性。 |
+| isShow | boolean \| Bindable&lt;boolean&gt; \| undefined | Yes | true means display content, false means hide content. |
+| builder | [CustomBuilder](../arkts-components/arkts-arkui-custombuilder-t.md) \| undefined | Yes | the content to be displayed. |
+| options | [ContentCoverOptions](arkts-arkui-common-contentcoveroptions-i.md) | No | options of content cover. |
 
 **Return value:**
 
@@ -1373,10 +1379,10 @@ Binds a context menu to this component, which is displayed when the user long-pr
 | --- | --- |
 | this |  |
 
-## bindContextMenuWithResponse
+## bindContextMenuWithResponseArray
 
 ```TypeScript
-default bindContextMenuWithResponse(content: CustomBuilderT<ResponseType> | Array<MenuElement> | undefined,
+default bindContextMenuWithResponseArray(content: CustomBuilderT<ResponseType> | Array<MenuElement> | undefined,
         options?: ContextMenuOptions): this
 ```
 
@@ -1388,7 +1394,7 @@ Binds a context menu to this component, which is displayed when the user long-pr
 
 **Model restriction:** This API can be used only in the stage model.
 
-<!--Device-CommonMethod-default bindContextMenuWithResponse(content: CustomBuilderT<ResponseType> | Array<MenuElement> | undefined,        options?: ContextMenuOptions): this--><!--Device-CommonMethod-default bindContextMenuWithResponse(content: CustomBuilderT<ResponseType> | Array<MenuElement> | undefined,        options?: ContextMenuOptions): this-End-->
+<!--Device-CommonMethod-default bindContextMenuWithResponseArray(content: CustomBuilderT<ResponseType> | Array<MenuElement> | undefined,        options?: ContextMenuOptions): this--><!--Device-CommonMethod-default bindContextMenuWithResponseArray(content: CustomBuilderT<ResponseType> | Array<MenuElement> | undefined,        options?: ContextMenuOptions): this-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -1505,11 +1511,7 @@ Popup control&lt;p&gt;&lt;strong&gt;NOTE&lt;/strong&gt;:&lt;br&gt;The popup can 
 default bindSheet(isShow: boolean | Bindable<boolean> | undefined, builder: CustomBuilder | undefined, options?: SheetOptions): this
 ```
 
-给组件绑定半模态页面，点击后显示模态页面。
-
-> **说明：**
-> 
-> 该接口不支持在[attributeModifier](../arkts-components/arkts-arkui-commonmethod-c.md/arkts-arkui-commonmethod-c.md#attributemodifier)中调用。
+Bind sheet
 
 **Since:** 23
 
@@ -1525,15 +1527,15 @@ default bindSheet(isShow: boolean | Bindable<boolean> | undefined, builder: Cust
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| isShow | boolean \| Bindable&lt;boolean&gt; \| undefined | Yes | 是否显示半模态页面。&lt;br/&gt;true：显示半模态页面。&lt;br/&gt;false：隐藏半模态页面。 |
-| builder | [CustomBuilder](../arkts-components/arkts-arkui-custombuilder-t.md) \| undefined | Yes | 配置半模态页面内容。 |
-| options | [SheetOptions](../arkts-components/arkts-arkui-sheetoptions-i.md) | No | 配置半模态页面的可选属性。 |
+| isShow | boolean \| Bindable&lt;boolean&gt; \| undefined | Yes | true means display sheet, false means hide sheet. |
+| builder | [CustomBuilder](../arkts-components/arkts-arkui-custombuilder-t.md) \| undefined | Yes | the sheet to be displayed. |
+| options | [SheetOptions](../arkts-components/arkts-arkui-sheetoptions-i.md) | No | options of sheet. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| this | 返回当前组件。 |
+| this | return the component attribute. |
 
 ## bindTips
 
@@ -1907,7 +1909,7 @@ Sets the weight of the component in a chain, which is used to re-lay out compone
 default clickEffect(value: ClickEffect | null | undefined): this
 ```
 
-设置当前组件的点击回弹效果。
+The click effect level and scale number.
 
 **Since:** 23
 
@@ -1923,7 +1925,7 @@ default clickEffect(value: ClickEffect | null | undefined): this
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | [ClickEffect](../arkts-components/arkts-arkui-clickeffect-i.md) \| null \| undefined | Yes | 设置当前组件点击回弹效果。&lt;br/&gt;**说明：**&lt;br/&gt;可通过undefined或者null取消点击回弹效果。&lt;br/&gt;不 建议在组件大小动态变化的场景中使用该功能。&lt;br/&gt;当组件无法触发通用事件时，不支持该属性。&lt;br/&gt;回弹触发缩放后可能造成触摸点不在控件上，控件上无法响应手势事件。 |
+| value | [ClickEffect](../arkts-components/arkts-arkui-clickeffect-i.md) \| null \| undefined | Yes |  |
 
 **Return value:**
 
@@ -1937,7 +1939,7 @@ default clickEffect(value: ClickEffect | null | undefined): this
 default clip(value: boolean | undefined): this
 ```
 
-是否对子组件超出当前组件范围外的区域进行裁剪。
+Sets whether to clip the areas of child components that extend beyond this component's boundaries,That is, whether to perform clipping based on the edge contour of the parent container.
 
 **Since:** 23
 
@@ -1953,7 +1955,7 @@ default clip(value: boolean | undefined): this
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | boolean \| undefined | Yes | 参数为boolean类型，设置是否按照父容器边缘轮廓进行裁剪。&lt;br/&gt;默认值：false &lt;br/&gt;true表示按照父容器边缘轮廓进行裁剪， false表示不对子组件进行裁剪。 &lt;br/&gt;**说明：** 设置为true后，子组件超出当前组件范围外的区域将不响应绑定的手势事件。&lt;br/&gt;当value的值为undefined时，恢复为不对子组件超出当前组件范围外 的区域进行裁剪。 |
+| value | boolean \| undefined | Yes | Whether to perform clipping based on the edge contour of the parent container. &lt;br&gt;Default value: **false**. &lt;br&gt;**true**: Perform clipping. **false**: Do not perform clipping. &lt;br&gt;If this parameter is set to **true**. &lt;br&gt;child components exceeding the current component's bounds will not respond to bound gesture events. |
 
 **Return value:**
 
@@ -1967,15 +1969,7 @@ default clip(value: boolean | undefined): this
 default clipShape(value: CircleShape | EllipseShape | PathShape | RectShape | undefined): this
 ```
 
-按指定的形状（形状中可包含位置信息）对当前组件进行裁剪。
-
-> **说明：**
-> 
-> 不同的形状支持的属性范围不同，路径是一种形状，除此之外还有椭圆、矩形等形状。
-> 
-> 路径的形状不支持设置宽度和高度。具体形状支持的属性参考具体形状的文档。
-> 
-> 形状中的[fill](../arkts-components/arkts-arkui-commonshapemethod-c.md/arkts-arkui-commonshapemethod-c.md#fill)属性对clipShape接口不生效。
+Clips this component based on the given shape.
 
 **Since:** 23
 
@@ -1991,7 +1985,7 @@ default clipShape(value: CircleShape | EllipseShape | PathShape | RectShape | un
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | [CircleShape](arkts-arkui-arkui-shape-circleshape-c.md) \| EllipseShape \| PathShape \| RectShape \| undefined | Yes | 参数为相应类型的组件，按指定的形状（形状中可包含位置信息）对当 前组件进行裁剪。&lt;br/&gt;**说明：** 裁剪不会导致被裁剪区域无法响应绑定的手势事件。&lt;br/&gt;当value的值为undefined时，会重置为当前值。 |
+| value | [CircleShape](arkts-arkui-arkui-shape-circleshape-c.md) \| EllipseShape \| PathShape \| RectShape \| undefined | Yes | Shape that the component to be clipped into. The clipped area remains responsive to bound gesture events. |
 
 **Return value:**
 
@@ -2035,7 +2029,7 @@ Applies a color blend effect to the component.
 default compositingFilter(filter: Filter | undefined): this
 ```
 
-设置合成滤镜视觉效果。
+Sets the visual effect of the compositing filter.
 
 **Since:** 23
 
@@ -2051,13 +2045,13 @@ default compositingFilter(filter: Filter | undefined): this
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| filter | [Filter](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-agent-filter-i.md) \| undefined | Yes | 合成滤镜视觉效果。&lt;br/&gt;当filter的值为undefined时，无合成滤镜视觉效果。 |
+| filter | [Filter](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-agent-filter-i.md) \| undefined | Yes | Filter effect parameters. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| this | 返回当前组件。 |
+| this |  |
 
 ## constraintSize
 
@@ -2797,7 +2791,7 @@ Applies a foreground blur style to the component.
 default foregroundColor(value: ResourceColor | ColoringStrategy | undefined): this
 ```
 
-设置组件的前景色。当组件未设置前景色，默认继承父组件。
+Sets the foreground color of the component.If the component does not have a foreground color set, it inherits the color from its parent component by default.
 
 **Since:** 23
 
@@ -2813,13 +2807,13 @@ default foregroundColor(value: ResourceColor | ColoringStrategy | undefined): th
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | [ResourceColor](arkts-arkui-resourcecolor-t.md) \| ColoringStrategy \| undefined | Yes | 设置组件的前景颜色或者根据智能取色策略设置前景颜色。不支持属性动画。&lt;br/&gt;当value的值为 undefined时，维持之前取值或组件默认取值，具体行为不同组件可能会有差异，建议开发者使用确定颜色或[ColoringStrategy](arkts-arkui-enums-coloringstrategy-e.md)。 |
+| value | [ResourceColor](arkts-arkui-resourcecolor-t.md) \| ColoringStrategy \| undefined | Yes | Foreground color. &lt;br&gt;The value can be a specific color or a coloring strategy. Property animations are supported. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| this | 返回当前组件。 |
+| this |  |
 
 ## foregroundEffect
 
@@ -2857,7 +2851,7 @@ Foreground effect.
 default foregroundFilter(filter: Filter | undefined): this
 ```
 
-设置前景滤镜（内容）视觉效果。
+Sets the visual effect of the foreground (content) filter.
 
 **Since:** 23
 
@@ -2873,13 +2867,13 @@ default foregroundFilter(filter: Filter | undefined): this
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| filter | [Filter](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-agent-filter-i.md) \| undefined | Yes | 前景滤镜（内容）视觉效果。&lt;br/&gt;当filter的值为undefined时，无前景滤镜（内容）视觉效果。 |
+| filter | [Filter](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-agent-filter-i.md) \| undefined | Yes | Filter effect parameters. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| this | 返回当前组件。 |
+| this |  |
 
 ## freeze
 
@@ -2917,7 +2911,7 @@ Sets whether to freeze the component. When frozen, the component and its childre
 default geometryTransition(id: string | undefined, options?: GeometryTransitionOptions): this
 ```
 
-组件内隐式共享元素转场。
+Shared geometry transition
 
 **Since:** 23
 
@@ -2934,7 +2928,7 @@ default geometryTransition(id: string | undefined, options?: GeometryTransitionO
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | id | string \| undefined | Yes | geometry transition id |
-| options | [GeometryTransitionOptions](../arkts-components/arkts-arkui-geometrytransitionoptions-i.md) | No | 组件内共享元素转场动画参数。&lt;br&gt;默认值为 { follow: false }。 |
+| options | [GeometryTransitionOptions](../arkts-components/arkts-arkui-geometrytransitionoptions-i.md) | No | Indicates the options of geometry transition. |
 
 **Return value:**
 
@@ -3583,7 +3577,7 @@ Sets the anchor for locating the component, which is used to move the component 
 default mask(value: ProgressMask | undefined): this
 ```
 
-为组件上添加可调节进度的遮罩。
+Adds a mask to the component to indicate the progress.
 
 **Since:** 23
 
@@ -3599,7 +3593,7 @@ default mask(value: ProgressMask | undefined): this
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | [ProgressMask](../arkts-components/arkts-arkui-progressmask-c.md) \| undefined | Yes | 在当前组件上加上可动态设置进度、最大值和颜色的遮罩。&lt;br/&gt;当value的值为undefined时，恢复为无进度遮罩效果。 |
+| value | [ProgressMask](../arkts-components/arkts-arkui-progressmask-c.md) \| undefined | Yes | Mask to add to the component, which allows for dynamic adjustment of progress, maximum value, and color settings. |
 
 **Return value:**
 
@@ -3613,7 +3607,7 @@ default mask(value: ProgressMask | undefined): this
 default maskShape(value: CircleShape | EllipseShape | PathShape | RectShape | undefined): this
 ```
 
-为组件上添加指定形状的遮罩。
+Adds a mask of the specified shape to the component.
 
 **Since:** 23
 
@@ -3629,7 +3623,7 @@ default maskShape(value: CircleShape | EllipseShape | PathShape | RectShape | un
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | [CircleShape](arkts-arkui-arkui-shape-circleshape-c.md) \| EllipseShape \| PathShape \| RectShape \| undefined | Yes | 在当前组件上加上指定形状的遮罩。&lt;br/&gt;当value的值为 undefined时，会重置为当前值。 |
+| value | [CircleShape](arkts-arkui-arkui-shape-circleshape-c.md) \| EllipseShape \| PathShape \| RectShape \| undefined | Yes | Mask of the specified shape to add to the component. |
 
 **Return value:**
 
@@ -3643,7 +3637,7 @@ default maskShape(value: CircleShape | EllipseShape | PathShape | RectShape | un
 default materialFilter(filter: Filter | undefined): this
 ```
 
-设置系统材质滤镜效果，系统材质滤镜的绘制早于[backgroundFilter](../arkts-components/arkts-arkui-commonmethod-c.md/arkts-arkui-commonmethod-c.md#backgroundfilter)绘制，即位于backgroundFilter的更底层。
+Sets the visual effect of the material filter. The effects it contains are rendered at a level before the shadow.
 
 **Since:** 23
 
@@ -3659,13 +3653,13 @@ default materialFilter(filter: Filter | undefined): this
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| filter | [Filter](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-agent-filter-i.md) \| undefined | Yes | 系统材质滤镜视觉效果。设置为undefined时恢复为无系统材质滤镜效果。 |
+| filter | [Filter](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-agent-filter-i.md) \| undefined | Yes | Filter effect parameters. Undefined means to none material filter. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| this | 返回当前组件。 |
+| this |  |
 
 ## monopolizeEvents
 
@@ -3733,7 +3727,7 @@ Apply a motion blur effect to the component being scaled or moved.1.Do not use t
 default motionPath(value: MotionPathOptions | undefined): this
 ```
 
-设置组件的路径动画。
+Set the motion path of the component.
 
 **Since:** 23
 
@@ -3749,13 +3743,13 @@ default motionPath(value: MotionPathOptions | undefined): this
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | [MotionPathOptions](arkts-arkui-common-motionpathoptions-i.md) \| undefined | Yes | 设置组件的运动路径。&lt;br/&gt;当value的值为undefined时，使用默认值{ MotionPathOptions: { path: " ", from: 0, to: 1, rotatable: false } }。 |
+| value | [MotionPathOptions](arkts-arkui-common-motionpathoptions-i.md) \| undefined | Yes | Motion path of the component. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| this | 返回当前组件。 |
+| this |  |
 
 ## mouseResponseRegion
 
@@ -4789,7 +4783,7 @@ Binds a custom gesture recognizer judgment callback to the component.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | callback | [GestureRecognizerJudgeBeginCallback](arkts-arkui-gesturerecognizerjudgebegincallback-t.md) \| undefined | Yes | A callback instance used when a gesture bound to this component will be accepted. |
-| exposeInnerGesture | boolean \| undefined | Yes | This parameter is a flag. This flag determines whether to expose internal gestures. The default value is false. |
+| exposeInnerGesture | boolean \| undefined | Yes | This parameter is a flag. This flag determines whether to expose internal gestures. @default false |
 
 **Return value:**
 
@@ -5257,7 +5251,7 @@ Trigger a visible area change event.
 default opacity(value: double | Resource | undefined): this
 ```
 
-设置组件的不透明度。
+Sets the opacity of the component.
 
 **Since:** 23
 
@@ -5273,7 +5267,7 @@ default opacity(value: double | Resource | undefined): this
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | double \| Resource \| undefined | Yes | 元素的不透明度，取值范围为0到1，若设置的值小于0时，则取值为0，若设置的值大于1时，则取值为1，1表示不透明，0表示完全透明， 达到隐藏组件效果，但是在布局中占位。 &lt;br&gt; 默认值：1 &lt;br/&gt;**说明：** &lt;br/&gt; 子组件会继承父组件的透明度，并与自身的透明度属性叠加。如：父组件透明度为0.1，子组件设置透明度为0.8，则子组件实际透 明度为0.1*0.8=0.08。&lt;br/&gt;当opacity的值为undefined时，恢复为默认不透明度为1的状态。 |
+| value | double \| Resource \| undefined | Yes | Opacity of the component. The value ranges from 0 to 1. |
 
 **Return value:**
 
@@ -5682,7 +5676,7 @@ Anonymous Object Rectification.
 default renderFit(fitMode: RenderFit | undefined): this
 ```
 
-设置宽高动画过程中的组件内容填充方式。
+How the final state of the component's content is rendered during its width and height animation process.
 
 **Since:** 23
 
@@ -5698,13 +5692,13 @@ default renderFit(fitMode: RenderFit | undefined): this
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| fitMode | [RenderFit](arkts-arkui-renderfit-e.md) \| undefined | Yes | 设置宽高动画过程中的组件内容填充方式。&lt;br/&gt;当fitMode的值为undefined时，取默认值。恢复为内容填充方式为 RenderFit.TOP_LEFT的效果。 |
+| fitMode | [RenderFit](arkts-arkui-renderfit-e.md) \| undefined | Yes | How the final state of the component's content is rendered during. &lt;br&gt;its width and height animation process. &lt;br&gt;If **renderFit** is not set, the default value **RenderFit.TOP_LEFT** is used. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| this | 返回当前组件。 |
+| this |  |
 
 ## renderGroup
 
@@ -5892,7 +5886,7 @@ Reuse id is used for identify the reuse type for each custom node.
 default rotate(value: RotateOptions | RotateAngleOptions | undefined): this
 ```
 
-设置组件旋转。
+Set component rotation.
 
 **Since:** 23
 
@@ -5908,7 +5902,7 @@ default rotate(value: RotateOptions | RotateAngleOptions | undefined): this
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | [RotateOptions](../arkts-components/arkts-arkui-rotateoptions-i.md) \| RotateAngleOptions \| undefined | Yes | 可使组件在以组件左上角为坐标原点的坐标系中进行旋转。其中，(x, y, z）指定一个矢量，作为 旋转轴；或使用(angleX, angleY, angleZ）指定三个轴方向上的旋转角。&lt;br/&gt;默认值：{&lt;br/&gt;centerX: '50%',&lt;br/&gt;centerY: '50%',&lt;br/&gt;centerZ: 0 ,&lt;br/&gt;perspective: 0&lt;br/&gt;}&lt;br/&gt;当value的值为undefined时，恢复为无旋转效果。 |
+| value | [RotateOptions](../arkts-components/arkts-arkui-rotateoptions-i.md) \| RotateAngleOptions \| undefined | Yes | default:{x:0,y:0,z:0,centerX:'50%',centerY:'50%',centerZ:0,perspective:0} |
 
 **Return value:**
 
@@ -5982,7 +5976,7 @@ Applies a saturation effect to the component.
 default scale(value: ScaleOptions | undefined): this
 ```
 
-设置组件缩放。
+Scales the component.
 
 **Since:** 23
 
@@ -5998,7 +5992,7 @@ default scale(value: ScaleOptions | undefined): this
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | [ScaleOptions](../arkts-components/arkts-arkui-scaleoptions-i.md) \| undefined | Yes | 可以分别设置X轴、Y轴、Z轴的缩放比例，默认值为1，同时可以通过centerX和centerY设置缩放的中心点。&lt;br/&gt;默认值：{&lt;br /&gt;x: 1,&lt;br/&gt;y: 1,&lt;br/&gt;z: 1,&lt;br/&gt;centerX:'50%',&lt;br/&gt;centerY:'50%'&lt;br/&gt;}&lt;br/&gt;当value的值为undefined时，恢复为无缩放效果。 |
+| value | [ScaleOptions](../arkts-components/arkts-arkui-scaleoptions-i.md) \| undefined | Yes | Scale ratio along the x-, y-, and z-axis. The default value is **1**. &lt;br&gt;**centerX** and **centerY** are used to set the scale center point. &lt;br&gt;default:{x:1,y:1,z:1,centerX:'50%',centerY:'50%'} |
 
 **Return value:**
 
@@ -6072,7 +6066,7 @@ Applies a shadow effect to the component.
 default sharedTransition(id: string | undefined, options?: sharedTransitionOptions): this
 ```
 
-设置共享元素转场动效。
+If the components of the two pages are configured with the same ID.The shared element transition is performed during transition.If the parameter is set to an empty string, the shared element transition does not occur.For details about the options parameter, see the options parameter description.
 
 **Since:** 23
 
@@ -6088,14 +6082,14 @@ default sharedTransition(id: string | undefined, options?: sharedTransitionOptio
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| id | string \| undefined | Yes | 两个页面中id值相同且不为空字符串的组件即为共享元素，在页面转场时可显示共享元素转场动效。当id的值为undefined时，共享元素转场不生效。 |
-| options | [sharedTransitionOptions](arkts-arkui-common-sharedtransitionoptions-i.md) | No | 共享元素转场动画参数。 |
+| id | string \| undefined | Yes | Transition of the shared element. &lt;br&gt;If the same **id** value is configured for a component on the two pages, &lt;br&gt;this component is considered as a shared element of the pages. &lt;br&gt;If the **id** value is an empty string, no transition will be applied to the component. |
+| options | [sharedTransitionOptions](arkts-arkui-common-sharedtransitionoptions-i.md) | No | Parameters of the shared element transition animation. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| this | 返回当前组件。 |
+| this |  |
 
 ## shouldBuiltInRecognizerParallelWith
 
@@ -6341,20 +6335,19 @@ Set system-styled materials for the component. The material effect behaves diffe
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Sta only, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-CommonMethod-default systemMaterial(material: SystemUiMaterial | undefined): this--><!--Device-CommonMethod-default systemMaterial(material: SystemUiMaterial | undefined): this-End-->
 
-**System capability:** 
-- API version 23 and later: SystemCapability.ArkUI.ArkUI.Full
+**System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| material | [SystemUiMaterial](arkts-arkui-systemuimaterial-t.md) \| undefined | Yes | System-styled material. Undefined indicates reverting to the effect of no system material.<br>**Since:** 23 |
+| material | [SystemUiMaterial](arkts-arkui-systemuimaterial-t.md) \| undefined | Yes | System-styled material. Undefined indicates reverting to the effect of no system material. |
 
 **Return value:**
 
@@ -6458,7 +6451,7 @@ Config toolbar for current component.
 default transform(value: Matrix4Transit | undefined): this
 ```
 
-可用于显示二维变换时的矩阵变换。包含三维变换时应使用[transform3D](../arkts-components/arkts-arkui-commonmethod-c.md/arkts-arkui-commonmethod-c.md#transform3d)接口。
+Sets the transformation matrix of the component. Set undefined value to reset the transform matrix.
 
 **Since:** 23
 
@@ -6474,7 +6467,7 @@ default transform(value: Matrix4Transit | undefined): this
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | [Matrix4Transit](arkts-arkui-matrix4-matrix4transit-i.md) \| undefined | Yes | 设置当前组件的变换矩阵。&lt;br/&gt;当value的值为undefined时，恢复为单位矩阵的效果。 |
+| value | [Matrix4Transit](arkts-arkui-matrix4-matrix4transit-i.md) \| undefined | Yes | Transformation matrix of the component. |
 
 **Return value:**
 
@@ -6488,7 +6481,7 @@ default transform(value: Matrix4Transit | undefined): this
 default transform3D(transform: Matrix4Transit | undefined): this
 ```
 
-设置组件的三维变换矩阵。当涉及包含透视效果的三维变换时，transform接口显示效果可能有误，推荐使用transform3D接口。
+Sets the transformation matrix for the current component.The interface can display the effect of three-dimensional natrix transformation.
 
 **Since:** 23
 
@@ -6504,7 +6497,7 @@ default transform3D(transform: Matrix4Transit | undefined): this
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| transform | [Matrix4Transit](arkts-arkui-matrix4-matrix4transit-i.md) \| undefined | Yes | 三维变换矩阵。&lt;br/&gt;当transform的值为undefined时，恢复为单位矩阵的效果。 |
+| transform | [Matrix4Transit](arkts-arkui-matrix4-matrix4transit-i.md) \| undefined | Yes | transform3D natrix |
 
 **Return value:**
 
@@ -6518,7 +6511,7 @@ default transform3D(transform: Matrix4Transit | undefined): this
 default transition(value: TransitionEffect | undefined): this
 ```
 
-设置组件插入时显示和删除时隐藏的过渡效果。
+Set the transition effect of component when it appears and disappears.
 
 **Since:** 23
 
@@ -6534,7 +6527,7 @@ default transition(value: TransitionEffect | undefined): this
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | [TransitionEffect](arkts-arkui-common-transitioneffect-c.md) \| undefined | Yes | 设置组件插入时显示和删除时隐藏的过渡效果。&lt;br/&gt;**说明：** &lt;br/&gt;详细描述 [TransitionEffect](../arkts-components/arkts-arkui-transitioneffect-c.md/arkts-arkui-transitioneffect-c.md)对象说明。&lt;br/&gt;当value的值为undefined时，无过渡效果。 |
+| value | [TransitionEffect](arkts-arkui-common-transitioneffect-c.md) \| undefined | Yes | transition effect |
 
 **Return value:**
 
@@ -6548,7 +6541,7 @@ default transition(value: TransitionEffect | undefined): this
 default transition(effect: TransitionEffect | undefined, onFinish: TransitionFinishCallback | undefined): this
 ```
 
-设置组件插入时显示和删除时隐藏的过渡效果。
+Set the transition effect of component when it appears and disappears.
 
 **Since:** 23
 
@@ -6564,8 +6557,8 @@ default transition(effect: TransitionEffect | undefined, onFinish: TransitionFin
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| effect | [TransitionEffect](arkts-arkui-common-transitioneffect-c.md) \| undefined | Yes | 设置组件插入时显示和删除时隐藏的过渡效果。&lt;br/&gt;**说明：** &lt;br/&gt;详细描述 [TransitionEffect](../arkts-components/arkts-arkui-transitioneffect-c.md/arkts-arkui-transitioneffect-c.md)对象说明。&lt;br/&gt;当value的值为undefined时，无过渡效果。 |
-| onFinish | [TransitionFinishCallback](arkts-arkui-transitionfinishcallback-t.md) \| undefined | Yes | 转场动画结束回调。 |
+| effect | [TransitionEffect](arkts-arkui-common-transitioneffect-c.md) \| undefined | Yes | transition effect |
+| onFinish | [TransitionFinishCallback](arkts-arkui-transitionfinishcallback-t.md) \| undefined | Yes | transition finish callback. |
 
 **Return value:**
 
@@ -6579,7 +6572,7 @@ default transition(effect: TransitionEffect | undefined, onFinish: TransitionFin
 default translate(value: TranslateOptions | undefined): this
 ```
 
-设置组件平移。
+Sets the translation effect for page transitions.
 
 **Since:** 23
 
@@ -6595,7 +6588,7 @@ default translate(value: TranslateOptions | undefined): this
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | [TranslateOptions](arkts-arkui-common-translateoptions-i.md) \| undefined | Yes | 可使组件在以组件左上角为坐标原点的坐标系中进行移动。其中，x，y，z的值分别表示在对应轴移动的距离，值为正时表示向对应轴的正向移 动，值为负时表示向对应轴的反向移动。&lt;br/&gt;默认值：{&lt;br/&gt;x: 0,&lt;br/&gt;y: 0,&lt;br/&gt;z: 0&lt;br/&gt;}&lt;br/&gt;当value的值为undefined时，恢复为无平移效果。 |
+| value | [TranslateOptions](arkts-arkui-common-translateoptions-i.md) \| undefined | Yes | Translation effect for page transitions &lt;br&gt;specifying the start value for entrance and the end value for exit. default:{x:0,y:0,z:0} |
 
 **Return value:**
 
@@ -6731,7 +6724,7 @@ Controls the display or hide of the current component.
 default visualEffect(effect: VisualEffect | undefined): this
 ```
 
-设置非滤镜视觉效果。
+Sets a visual effect that is not a filter effect.
 
 **Since:** 23
 
@@ -6747,13 +6740,13 @@ default visualEffect(effect: VisualEffect | undefined): this
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| effect | [VisualEffect](../arkts-components/arkts-arkui-visualeffect-t.md) \| undefined | Yes | 非滤镜视觉效果。&lt;br/&gt;当effect的值为undefined时，无非滤镜视觉效果。 |
+| effect | [VisualEffect](../arkts-components/arkts-arkui-visualeffect-t.md) \| undefined | Yes | Visual effect parameters. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| this | 返回当前组件。 |
+| this |  |
 
 ## width
 

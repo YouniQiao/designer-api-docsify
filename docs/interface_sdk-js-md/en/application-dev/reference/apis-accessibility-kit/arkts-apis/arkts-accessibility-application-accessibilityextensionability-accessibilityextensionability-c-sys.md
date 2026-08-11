@@ -1,6 +1,6 @@
 # AccessibilityExtensionAbility
 
-AccessibilityExtensionAbility基于ExtensionAbility框架，提供辅助功能业务的能力。
+The **AccessibilityExtensionAbility** module provides accessibility extension capabilities based on the ExtensionAbility framework.
 
 **Since:** 9
 
@@ -22,9 +22,7 @@ import { Rect, TouchPosition, AccessibilityVirtualNode, ElementAttributeKeys, Fo
 onAccessibilityConnect(): void
 ```
 
-连接无障碍服务成功后的回调函数。
-
-用户启用AccessibilityExtensionAbility时，系统服务完成连接后回调该接口，在该方法中完成初始化业务逻辑操作。 该方法可以选择性重写。 无障碍服务通过该回调，通知Ability已成功连接。
+Called when the AccessibilityExtensionAbility is enabled and connected to the system service.In this API, you can have the service logic initialized. This API can be overridden as required. It returns the result to notify that the ability is successfully connected.
 
 **Since:** 20
 
@@ -42,8 +40,8 @@ onAccessibilityConnect(): void
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 201 | Permission verification failed.The application does not have the permission required to call the API. |
-| 202 | Permission verification failed. A non-system application calls a system API. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed.The application does not have the permission required to call the API. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
 
 ## Examples
 
@@ -63,9 +61,7 @@ class MyAccessibilityExtensionAbility extends AccessibilityExtensionAbility {
 onAccessibilityDisconnect(): void
 ```
 
-断开无障碍服务成功后的回调函数。
-
-用户停用AccessibilityExtensionAbility时，系统服务完成断开连接后回调该接口，在该方法中执行资源回收和退出业务操作。该方法可以选择性重写。
+Called when the AccessibilityExtensionAbility is successfully disconnected from the system service.In this API, you can implement the service logic of resource release and exit. This API can be overridden as required.
 
 **Since:** 20
 
@@ -83,8 +79,8 @@ onAccessibilityDisconnect(): void
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 201 | Permission verification failed.The application does not have the permission required to call the API. |
-| 202 | Permission verification failed. A non-system application calls a system API. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed.The application does not have the permission required to call the API. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
 
 ## Examples
 
@@ -104,7 +100,7 @@ class MyAccessibilityExtensionAbility extends AccessibilityExtensionAbility {
 onAccessibilityEventInfo(event: AccessibilityEventInfo): void
 ```
 
-在应用和事件发生时回调该接口，根据事件信息处理业务逻辑。通常需要重写。
+Called when a specified event occurs in an application. In this API, you can implement event-specific service logic. Generally, this API needs to be overridden.
 
 **Since:** 20
 
@@ -122,14 +118,14 @@ onAccessibilityEventInfo(event: AccessibilityEventInfo): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| event | [AccessibilityEventInfo](arkts-accessibility-application-accessibilityextensionability-accessibilityeventinfo-i-sys.md) | Yes | 无障碍事件 |
+| event | [AccessibilityEventInfo](arkts-accessibility-application-accessibilityextensionability-accessibilityeventinfo-i-sys.md) | Yes | Accessibility event information. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 201 | Permission verification failed.The application does not have the permission required to call the API. |
-| 202 | Permission verification failed. A non-system application calls a system API. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed.The application does not have the permission required to call the API. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
 
 ## Examples
 
@@ -152,7 +148,7 @@ class MyAccessibilityExtensionAbility extends AccessibilityExtensionAbility {
 onAccessibilityKeyEvent(keyEvent: KeyEvent): boolean
 ```
 
-在物理按键按下时回调该方法，在该方法中根据业务判断是否消费事件。
+Called when a physical key is pressed. In this API, you can determine whether to consume the event based on the service.
 
 **Since:** 20
 
@@ -170,20 +166,20 @@ onAccessibilityKeyEvent(keyEvent: KeyEvent): boolean
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| keyEvent | [KeyEvent](../../apis-input-kit/arkts-apis/arkts-input-multimodalinput-keyevent-keyevent-i.md) | Yes | 按键事件。 |
+| keyEvent | [KeyEvent](../../apis-input-kit/arkts-apis/arkts-input-multimodalinput-keyevent-keyevent-i.md) | Yes | Key event. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| boolean | 返回true表示此事件被消费，不会继续传递。&lt;br&gt;返回false表示些事件未被消费，会继续传递。 |
+| boolean | Returns **true** if the event is consumed and will not be transferred; returns **false** otherwise. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 201 | Permission verification failed.The application does not have the permission required to call the API. |
-| 202 | Permission verification failed. A non-system application calls a system API. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed.The application does not have the permission required to call the API. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
 
 ## Examples
 

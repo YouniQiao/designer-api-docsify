@@ -1,6 +1,6 @@
 # SwitchKey
 
-开关名称的枚举。
+Enumerates switch names.
 
 **Since:** 26.0.0
 
@@ -16,7 +16,7 @@
 NEARLINK = 0
 ```
 
-星闪开关。
+NearLink.
 
 **Since:** 26.0.0
 
@@ -34,7 +34,7 @@ NEARLINK = 0
 BLUETOOTH = 1
 ```
 
-蓝牙开关。
+Bluetooth.
 
 **Since:** 26.0.0
 
@@ -52,7 +52,7 @@ BLUETOOTH = 1
 WIFI = 2
 ```
 
-Wi-Fi开关。
+Wi-Fi.
 
 **Since:** 26.0.0
 
@@ -70,7 +70,7 @@ Wi-Fi开关。
 NFC = 3
 ```
 
-NFC开关。
+NFC.
 
 **Since:** 26.0.0
 

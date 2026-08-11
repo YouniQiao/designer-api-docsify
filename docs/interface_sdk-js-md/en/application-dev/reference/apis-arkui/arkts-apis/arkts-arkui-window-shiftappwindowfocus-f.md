@@ -12,17 +12,18 @@ import { window } from 'kits/@kit.ArkUI';
 function shiftAppWindowFocus(sourceWindowId: int, targetWindowId: int): Promise<void>
 ```
 
-在同应用内将窗口焦点从源窗口转移到目标窗口，仅支持应用主窗、子窗范围内的焦点转移。使用Promise异步回调。
+Shifts the window focus from the source window to the target window in the same application. The window focus can be shifted within the main window and child windows. This API uses a promise to return the result.
 
-目标窗口需确保具有获得焦点的能力（可通过  
-[setWindowFocusable()](arkts-arkui-window-window-i.md#setwindowfocusable)设置），并确保调用[showWindow()](arkts-arkui-window-window-i.md#showwindow)成功且执行完毕。
+Ensure that the target window can gain focus (configurable by calling  
+[setWindowFocusable()](arkts-arkui-window-window-i.md#setwindowfocusable)) and that [showWindow()](arkts-arkui-window-window-i.md#showwindow) has been successfully executed.
 
-> **说明：**
+> **NOTE：**
 > 
-> 在调用shiftAppWindowFocus()前，建议确保目标窗口已调用
+> Before calling **shiftAppWindowFocus()**, ensure that the target window has called
 > [loadContent()](arkts-arkui-window-window-i.md#loadcontent)
-> 或[setUIContent()](arkts-arkui-window-window-i.md#setuicontent)并生效，
-> 否则可能会导致不可见窗口获取焦点，造成功能异常或影响用户体验。
+> or [setUIContent()](arkts-arkui-window-window-i.md#setuicontent)
+> and these operations have been effective. Otherwise, an invisible window may gain focus, causing function
+> exceptions or affecting user experience.
 
 **Since:** 11
 
@@ -38,24 +39,24 @@ function shiftAppWindowFocus(sourceWindowId: int, targetWindowId: int): Promise<
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| sourceWindowId | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | 源窗口id，必须是获焦状态。推荐使用 [getWindowProperties()](arkts-arkui-window-window-i.md#getwindowproperties)方法获取窗口id属性。 |
-| targetWindowId | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | 目标窗口id。推荐使用 [getWindowProperties()](arkts-arkui-window-window-i.md#getwindowproperties)方法获取窗口id属性。 |
+| sourceWindowId | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | ID of the source window, which is having the focus. You are advised to call [getWindowProperties()](arkts-arkui-window-window-i.md#getwindowproperties) to obtain the window ID. |
+| targetWindowId | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | ID of the target window. You are advised to call [getWindowProperties()](arkts-arkui-window-window-i.md#getwindowproperties) to obtain the window ID. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | 无返回结果的Promise对象。 |
+| Promise&lt;void&gt; | Promise that returns no value. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 1300003 | This window manager service works abnormally. |
-| 401 | Parameter error. Possible cause: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types. |
-| 801 | Capability not supported. Failed to call the API due to limited device capabilities. |
-| 1300002 | This window state is abnormal. Possible cause: 1. The window is not created or destroyed; 2. Internal task error. |
-| 1300004 | Unauthorized operation. Possible cause: 1. Invalid window type. Only main windows and subwindows are supported. 2. The two windows are not from the same process. |
+| [1300003](../errorcode-window.md#1300003-abnormal-window-manager-service) | This window manager service works abnormally. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible cause: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types. |
+| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. Failed to call the API due to limited device capabilities. |
+| [1300002](../errorcode-window.md#1300002-abnormal-window-state) | This window state is abnormal. Possible cause: 1. The window is not created or destroyed; 2. Internal task error. |
+| [1300004](../errorcode-window.md#1300004-unauthorized-operation) | Unauthorized operation. Possible cause: 1. Invalid window type. Only main windows and subwindows are supported. 2. The two windows are not from the same process. |
 
 ## Examples
 

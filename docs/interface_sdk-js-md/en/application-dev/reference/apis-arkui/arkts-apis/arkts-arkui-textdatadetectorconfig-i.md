@@ -1,6 +1,6 @@
 # TextDataDetectorConfig
 
-该配置只支持[Text](../../apis-arkgraphics2d/arkts-apis/arkts-graphics-text.md/arkts-graphics-text.md)组件和[RichEditor](./rich_editor)组件。
+This configuration is only available for the [Text](../../apis-arkgraphics2d/arkts-apis/arkts-graphics-text.md/arkts-graphics-text.md) and [RichEditor](./rich_editor) components.
 
 **Since:** 11
 
@@ -16,9 +16,9 @@
 color?: ResourceColor
 ```
 
-设置文本识别成功后的实体颜色。
+Color of the entity after successful text detection.
 
-默认值：'#ff0a59f7'，表示蓝色（不透明度为100%）
+Default value: **'#ff0a59f7'**
 
 **Type:** [ResourceColor](arkts-arkui-resourcecolor-t.md)
 
@@ -40,17 +40,17 @@ color?: ResourceColor
 decoration?: DecorationStyleInterface
 ```
 
-设置文本识别成功后的实体装饰线样式。
+Decoration style of the entity after successful text detection.
 
-默认值：
+Default value:
 
 {
 
  type: TextDecorationType.Underline,
 
- color: 与实体颜色一致,
+ color: same as the entity
 
- style: TextDecorationStyle.SOLID 
+ style: TextDecorationStyle.SOLID
 
 }
 
@@ -74,13 +74,13 @@ decoration?: DecorationStyleInterface
 enablePreviewMenu?: boolean
 ```
 
-设置是否开启文本识别长按显示预览菜单。true表示开启，false表示未开启。
+Whether to enable the preview menu displayed when long-pressing recognized text. The value **true** means to enable the preview menu, and **false** means the opposite.
 
-默认值：false
+Default value: **false**
 
-当[copyOptions](arkts-arkui-richeditor-richeditorattribute-i.md#copyoptions)设置为None时，若enablePreviewMenu设置为true，长按AI实体也不能显示预览菜单。
+When [copyOptions](arkts-arkui-richeditor-richeditorattribute-i.md#copyoptions) is set to **None**, even if **enablePreviewMenu** is set to **true**, long-pressing AI entities will not display the preview menu.
 
-本接口实际支持的设备类型范围（Phone、Tablet）小于其所属系统能力支持的设备类型范围（Phone、PC/2in1、Tablet、TV、Car、Wearable）。因硬件形态限制，该接口在PC/2in1、TV、Car、Wearable设备中调用功能不生效。
+This API can be properly called on phones and tablets, but has no effect on other devices such as PCs, 2-in-1devices, TVs, and wearables.
 
 **Type:** boolean
 
@@ -102,9 +102,7 @@ enablePreviewMenu?: boolean
 onDetectResultUpdate?: Callback<string>
 ```
 
-文本识别成功后，触发onDetectResultUpdate回调。
-
-默认值：undefined，不触发回调。
+Callback invoked when text recognition succeeds.
 
 **Type:** [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;string&gt;
 
@@ -126,7 +124,7 @@ onDetectResultUpdate?: Callback<string>
 types: TextDataDetectorType[]
 ```
 
-设置文本识别的实体类型。设置types为null或者[]时，识别所有类型的实体，否则只识别指定类型的实体。
+Entity types for text recognition. Values **null** and **[]** indicate that all types of entities can be recognized.
 
 **Type:** [TextDataDetectorType](arkts-arkui-textdatadetectortype-e.md)[]
 

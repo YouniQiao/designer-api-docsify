@@ -1,6 +1,6 @@
 # USBDevice
 
-USB设备信息，继承自[Device](arkts-driverdevelopment-devicemanager-querydevices-f.md#querydevices)。
+USB device information, which is inherited from [Device](arkts-driverdevelopment-devicemanager-querydevices-f.md#querydevices).
 
 **Inheritance/Implementation:** USBDevice extends [Device](arkts-driverdevelopment-devicemanager-device-i.md)
 
@@ -24,7 +24,7 @@ import { deviceManager } from 'kits/@kit.DriverDevelopmentKit';
 productId: int
 ```
 
-USB设备Product ID。
+Product ID of the USB device.
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
@@ -42,7 +42,7 @@ USB设备Product ID。
 vendorId: int
 ```
 
-USB设备Vendor ID。
+Vendor ID of the USB device.
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 

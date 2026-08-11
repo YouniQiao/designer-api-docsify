@@ -1,6 +1,6 @@
 # ApiVersion (System API)
 
-module的api版本。
+ApiVersion: the bundle Api version class.
 
 **Since:** 9
 
@@ -18,7 +18,7 @@ module的api版本。
 readonly compatible: int
 ```
 
-最小兼容版本号。
+Minimum API version.
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
@@ -38,7 +38,7 @@ readonly compatible: int
 readonly releaseType: string
 ```
 
-版本的名称。
+Name of the API version.
 
 **Type:** string
 
@@ -58,7 +58,7 @@ readonly releaseType: string
 readonly target: int
 ```
 
-目标版本号。
+Target API version.
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 

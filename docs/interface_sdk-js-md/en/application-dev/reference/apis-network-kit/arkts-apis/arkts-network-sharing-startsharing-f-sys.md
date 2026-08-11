@@ -37,17 +37,17 @@ Start network sharing for given type.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 2200001 | Invalid parameter value. |
-| 401 | Parameter error. |
-| 2200003 | System internal error. |
-| 2200002 | Failed to connect to the service. |
-| 2202005 | WiFi sharing failed. |
-| 2202004 | Try to share an unavailable iface. |
-| 2202006 | Bluetooth sharing failed. |
-| 2202009 | Failed to enable forwarding for network sharing. |
-| 201 | Permission denied. |
-| 202 | Non-system applications use system APIs. |
-| 2202011 | Cannot get network sharing configuration. |
+| [2200001](../errorcode-net-sharing.md#2200001-invalid-parameter-value) | Invalid parameter value. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. |
+| [2200003](../errorcode-net-sharing.md#2200003-system-internal-error) | System internal error. |
+| [2200002](../errorcode-net-sharing.md#2200002-service-connection-failure) | Failed to connect to the service. |
+| [2202005](../errorcode-net-sharing.md#2202005-wifi-sharing-failure) | WiFi sharing failed. |
+| [2202004](../errorcode-net-sharing.md#2202004-shared-iface-unavailable) | Try to share an unavailable iface. |
+| [2202006](../errorcode-net-sharing.md#2202006-bluetooth-sharing-failure) | Bluetooth sharing failed. |
+| [2202009](../errorcode-net-sharing.md#2202009-failed-to-enable-forwarding-for-network-sharing) | Failed to enable forwarding for network sharing. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Non-system applications use system APIs. |
+| [2202011](../errorcode-net-sharing.md#2202011-failed-to-obtain-the-network-sharing-configuration) | Cannot get network sharing configuration. |
 
 ## Examples
 
@@ -98,17 +98,17 @@ Start network sharing for given type.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 2200001 | Invalid parameter value. |
-| 401 | Parameter error. |
-| 2200003 | System internal error. |
-| 2200002 | Failed to connect to the service. |
-| 2202005 | WiFi sharing failed. |
-| 2202004 | Try to share an unavailable iface. |
-| 2202006 | Bluetooth sharing failed. |
-| 2202009 | Failed to enable forwarding for network sharing. |
-| 201 | Permission denied. |
-| 202 | Non-system applications use system APIs. |
-| 2202011 | Cannot get network sharing configuration. |
+| [2200001](../errorcode-net-sharing.md#2200001-invalid-parameter-value) | Invalid parameter value. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. |
+| [2200003](../errorcode-net-sharing.md#2200003-system-internal-error) | System internal error. |
+| [2200002](../errorcode-net-sharing.md#2200002-service-connection-failure) | Failed to connect to the service. |
+| [2202005](../errorcode-net-sharing.md#2202005-wifi-sharing-failure) | WiFi sharing failed. |
+| [2202004](../errorcode-net-sharing.md#2202004-shared-iface-unavailable) | Try to share an unavailable iface. |
+| [2202006](../errorcode-net-sharing.md#2202006-bluetooth-sharing-failure) | Bluetooth sharing failed. |
+| [2202009](../errorcode-net-sharing.md#2202009-failed-to-enable-forwarding-for-network-sharing) | Failed to enable forwarding for network sharing. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Non-system applications use system APIs. |
+| [2202011](../errorcode-net-sharing.md#2202011-failed-to-obtain-the-network-sharing-configuration) | Cannot get network sharing configuration. |
 
 ## Examples
 

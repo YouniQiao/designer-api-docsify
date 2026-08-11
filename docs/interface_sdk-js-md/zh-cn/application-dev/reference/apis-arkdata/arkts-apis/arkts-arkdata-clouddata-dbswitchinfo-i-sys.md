@@ -12,12 +12,6 @@
 
 **系统接口：** 此接口为系统接口。
 
-## 导入模块
-
-```TypeScript
-import { cloudData } from 'kits/@kit.ArkData';
-```
-
 ## enable
 
 ```TypeScript
@@ -46,7 +40,7 @@ tableInfo?: Record<string, boolean>
 
 表级别的端云协同开关配置信息。键为表名，值为该表的开关状态。true为打开该表的端云协同开关，false为关闭该表开关。当未配置该参数时，默认按照数据库级开关状态enable生效。
 
-**类型：** [Record](../../apis-default/arkts-apis/arkts-record-t.md)&lt;string, boolean&gt;
+**类型：** Record&lt;string, boolean&gt;
 
 **起始版本：** 23
 

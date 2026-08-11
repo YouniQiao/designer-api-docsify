@@ -7,6 +7,6 @@
 
 | Name | Description |
 | --- | --- |
-| [ContinueMissionInfo](arkts-ability-continuemissioninfo-i-sys.md) | 表示发起按照包名迁移时所需参数的枚举，迁移Mission详见：  [continueMission接口](arkts-ability-distributedmissionmanager-continuemission-f-sys.md#continuemission) |
+| [ContinueMissionInfo](arkts-ability-continuemissioninfo-i-sys.md) | The module defines the parameters required for initiating mission continuation with the bundle name specified. For details about mission continuation, see  [continueMission](arkts-ability-distributedmissionmanager-continuemission-f-sys.md#continuemission) |
 <!--DelEnd-->
 

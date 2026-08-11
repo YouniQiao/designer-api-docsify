@@ -1,11 +1,5 @@
 # createCustomizedToneAttrs
 
-## 导入模块
-
-```TypeScript
-import { systemSoundManager } from 'kits/@kit.AudioKit';
-```
-
 ## createCustomizedToneAttrs
 
 ```TypeScript
@@ -32,7 +26,7 @@ function createCustomizedToneAttrs(): ToneAttrs
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 202 | Caller is not a system application. |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Caller is not a system application. |
 
 ## 示例
 

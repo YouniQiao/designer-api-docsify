@@ -1,6 +1,6 @@
 # WhenceType
 
-枚举，文件偏移指针相对偏移位置类型，支持lseek接口使用。
+Enumerates the types of the relative offset position used in **lseek()**.
 
 **Since:** 11
 
@@ -16,7 +16,7 @@
 SEEK_SET = 0
 ```
 
-文件起始位置处。
+Beginning of the file.
 
 **Since:** 11
 
@@ -32,7 +32,7 @@ SEEK_SET = 0
 SEEK_CUR = 1
 ```
 
-当前文件偏移指针位置处。
+Current offset position.
 
 **Since:** 11
 
@@ -48,7 +48,7 @@ SEEK_CUR = 1
 SEEK_END = 2
 ```
 
-文件末尾位置处。
+End of the file.
 
 **Since:** 11
 

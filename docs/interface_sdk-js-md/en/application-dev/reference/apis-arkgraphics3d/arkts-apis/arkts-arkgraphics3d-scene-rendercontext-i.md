@@ -1,6 +1,6 @@
 # RenderContext
 
-渲染上下文，定义所有渲染资源的上下文。同一渲染上下文中的资源可在该上下文内创建的场景间共享。
+Render context defines the context for all rendering resources. Resources within the same render context may be shared between scenes created within the same render context.
 
 **Since:** 20
 
@@ -16,7 +16,7 @@
 getRenderResourceFactory() : RenderResourceFactory
 ```
 
-获取资源工厂.
+Get resource factory.
 
 **Since:** 20
 
@@ -30,7 +30,7 @@ getRenderResourceFactory() : RenderResourceFactory
 
 | Type | Description |
 | --- | --- |
-| [RenderResourceFactory](arkts-arkgraphics3d-scene-renderresourcefactory-i.md) | RenderResourceFactory实例 |
+| [RenderResourceFactory](arkts-arkgraphics3d-scene-renderresourcefactory-i.md) | RenderResourceFactory instance |
 
 ## loadPlugin
 
@@ -38,7 +38,7 @@ getRenderResourceFactory() : RenderResourceFactory
 loadPlugin(name: string): Promise<boolean>
 ```
 
-加载外部插件
+Loads a plugin by name. The API locates and loads the corresponding plugin resource using the provided plugin name.It uses a promise to return the result.
 
 **Since:** 20
 
@@ -52,13 +52,13 @@ loadPlugin(name: string): Promise<boolean>
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| name | string | Yes | 插件名称 |
+| name | string | Yes | Name of the plugin to load, which must be a system predefined or registered and available plugin name, and follow the naming conventions. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;boolean&gt; | 返回表示插件加载是否成功的Promise |
+| Promise&lt;boolean&gt; | Promise used to return a Boolean value, indicating whether the plugin is loaded. The value true means that the plugin is loaded, and false means the opposite. |
 
 ## registerResourcePath
 
@@ -66,7 +66,7 @@ loadPlugin(name: string): Promise<boolean>
 registerResourcePath(protocol: string, uri: string): boolean
 ```
 
-注册资源路径
+Registers the directory path and retrieval name for asset files, such as shaders.It allows the system to find and replace the path descriptions of related files within the shaders using the retrieval name.This ensures that the correct paths for assets and their associated files are located and loaded properly.
 
 **Since:** 20
 
@@ -80,12 +80,12 @@ registerResourcePath(protocol: string, uri: string): boolean
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| protocol | string | Yes | uri的协议 |
-| uri | string | Yes | 要注册的路径 |
+| protocol | string | Yes | Path retrieval name to be registered, used as the prefix identifier for file paths associated internally in the shader. Must be a non-empty retrieval name that is not predefined or registered by the system. |
+| uri | string | Yes | Directory path of the assets to be registered, which corresponds to the retrieval name. When the shader is loaded, the retrieval name prefix in the path is replaced with this directory. It must be the path to the folder containing the asset files. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| boolean | 注册成功返回true，false表示协议已被注册 |
+| boolean | Result indicating whether the registration is successful. true if successful, and false otherwise. The possible cause of a registration failure is that the retrieval name has been registered or an input parameter is invalid. |
 

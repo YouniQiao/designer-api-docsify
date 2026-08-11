@@ -1,11 +1,5 @@
 # deleteGroup
 
-## 导入模块
-
-```TypeScript
-import { request } from 'kits/@kit.BasicServicesKit';
-```
-
 ## deleteGroup
 
 ```TypeScript
@@ -40,7 +34,25 @@ function deleteGroup(gid: string): Promise<void>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 401 | Parameter error. Possible causes: &lt;br&gt; 1. Missing mandatory parameters. &lt;br&gt; 2. Incorrect parameter type. &lt;br&gt; 3. Parameter verification failed. |
-| 21900008 | Group deleted or not found. |
-| 13400003 | Task service ability error. |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: &lt;br&gt; 1. Missing mandatory parameters. &lt;br&gt; 2. Incorrect parameter type. &lt;br&gt; 3. Parameter verification failed. |
+| [21900008](../../apis-basic-services-kit/errorcode-request.md#21900008-任务分组不存在或已移除) | Group deleted or not found. |
+| [13400003](../../apis-basic-services-kit/errorcode-request.md#13400003-服务异常) | Task service ability error. |
+
+## 示例
+
+ArkTS-Sta示例：
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+// 准备分组id。
+let groupId: string = "123456789";
+
+// 调用 deleteGroup 接口移除分组。
+request.agent.deleteGroup(groupId).then(() => {
+  console.info(`Succeeded in deleting the download task group.`);
+}).catch((err: Error) => {
+  console.error(`Failed to delete the download group, Code: ${err.code}, message: ${err.message}`);
+});
+```
 

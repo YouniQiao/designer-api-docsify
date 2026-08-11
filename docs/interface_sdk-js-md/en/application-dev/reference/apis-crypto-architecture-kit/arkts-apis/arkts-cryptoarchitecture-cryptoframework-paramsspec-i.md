@@ -1,21 +1,24 @@
 # ParamsSpec
 
-加解密参数，在进行对称加解密时需要构造其子类对象，并将子类对象传入  
-[init()](arkts-cryptoarchitecture-cryptoframework-cipher-i.md#init)方法。
+Encapsulates the parameters used for encryption or decryption. You need to construct its child class object and pass it to [init()](arkts-cryptoarchitecture-cryptoframework-cipher-i.md#init) for symmetric encryption or decryption.
 
-&lt;br&gt;适用于需要iv等参数的对称加解密模式（对于无iv等参数的模式如ECB模式，无需构造，在  
-[init()](arkts-cryptoarchitecture-cryptoframework-cipher-i.md#init)中传入null即可）。
+&lt;br&gt;It applies to the symmetric block cipher modes that require parameters such as the initialization vector (IV). If the IV is not required (for example, the ECB mode), pass in **null** to  
+[init()](arkts-cryptoarchitecture-cryptoframework-cipher-i.md#init).
 
-> **说明：**
+> **NOTE：**
 > 
-> iv（Initialization Vector，初始化向量）是用于对称加密模式（如 CBC/CTR/OFB/CFB/GCM/CCM/ChaCha20-Poly1305）中引入随机性或
-> 唯一性的字节序列，保证相同明文在相同密钥下产生不同密文。
+> An initialization vector (IV) is a byte sequence used to introduce randomness or uniqueness in symmetric
+> encryption modes (such as CBC, CTR, OFB, CFB, GCM, CCM, and ChaCha20-Poly1305). It ensures that different
+> ciphertexts are generated for the same plaintext under the same key.
 
-> **说明：**
+> **NOTE：**
 > 
-> 由于[init()](arkts-cryptoarchitecture-cryptoframework-cipher-i.md#init)的params
-> 参数是ParamsSpec类型（父类），而实际需要传入具体的子类对象（如[IvParamsSpec](arkts-cryptoarchitecture-cryptoframework-ivparamsspec-i.md)），因此在
-> 构造子类对象时应设置其父类ParamsSpec的algName参数，使算法库在init()时知道传入的是哪种子类对象。
+> The **params** parameter in
+> [init()](arkts-cryptoarchitecture-cryptoframework-cipher-i.md#init) is of the
+> **ParamsSpec** type (parent class). However, a child class object (such as
+> [IvParamsSpec](arkts-cryptoarchitecture-cryptoframework-ivparamsspec-i.md)) needs to be passed in. When constructing the child class
+> object, you must set **algName** for its parent class **ParamsSpec** to specify the child class object to be
+> passed to **init()**.
 
 **Since:** 9
 
@@ -39,12 +42,12 @@ import { cryptoFramework } from 'kits/@kit.CryptoArchitectureKit';
 algName: string
 ```
 
-指明对称加解密参数的算法模式。可选值如下：
+Algorithm for symmetric encryption or decryption. The value can be:
 
-- "IvParamsSpec"：适用于CBC|CTR|OFB|CFB模式。  
-- "GcmParamsSpec"：适用于GCM模式。  
-- "CcmParamsSpec"：适用于CCM模式。  
-- "AeadParamsSpec"：适用于AES-GCM，AES-CCM，SM4-GCM和ChaCha20-Poly1305算法。
+- **IvParamsSpec**: applicable to the CBC, CTR, OFB, and CFB modes.  
+- **GcmParamsSpec**: applicable to the GCM mode.  
+- **CcmParamsSpec**: applicable to the CCM mode.  
+- **AeadParamsSpec**: applicable to the AES-GCM, AES-CCM, SM4-GCM and ChaCha20-Poly1305 algorithm.
 
 **Type:** string
 

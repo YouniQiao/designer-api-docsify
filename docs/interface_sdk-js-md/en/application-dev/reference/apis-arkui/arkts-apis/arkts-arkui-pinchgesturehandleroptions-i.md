@@ -1,6 +1,6 @@
 # PinchGestureHandlerOptions
 
-捏合手势处理器配置参数。继承自[BaseHandlerOptions](arkts-arkui-basehandleroptions-i.md)。
+Provides the parameters of the pinch gesture handler. Inherits from [BaseHandlerOptions](arkts-arkui-basehandleroptions-i.md).
 
 **Inheritance/Implementation:** PinchGestureHandlerOptions extends [BaseHandlerOptions](arkts-arkui-basehandleroptions-i.md)
 
@@ -18,13 +18,13 @@
 distance?: number
 ```
 
-最小识别距离，单位为vp。
+Minimum recognition distance, in vp.
 
-默认值：5 
+Default value: **5**
 
-**说明：**
+**NOTE：**
 
-当识别距离的值小于等于0时，会被转化为默认值。
+If the value is less than or equal to 0, it will be converted to the default value.
 
 **Type:** number
 
@@ -46,13 +46,13 @@ distance?: number
 fingers?: number
 ```
 
-触发捏合的最少手指数，最小为2指，最大为5指。
+Minimum number of fingers required to trigger the pinch gesture. The value ranges from 2 to 5.
 
-默认值：2 
+Default value: **2**
 
-取值范围：[2, 5]
+Value range: [2, 5]
 
-触发手势手指可以多于fingers数目，但只有先落下的与fingers相同数目的手指参与手势计算。
+While more fingers than the minimum number can be pressed to trigger the gesture, only the first fingers of the minimum number participate in gesture calculation.
 
 **Type:** number
 

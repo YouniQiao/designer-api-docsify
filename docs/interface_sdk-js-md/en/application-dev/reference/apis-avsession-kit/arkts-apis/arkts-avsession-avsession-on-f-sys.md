@@ -12,7 +12,7 @@ import { avSession } from 'kits/@kit.AVSessionKit';
 function on(type: 'sessionCreate', callback: (session: AVSessionDescriptor) => void): void
 ```
 
-会话的创建事件监听。 使用callback异步回调。
+Register session create callback
 
 **Since:** 9
 
@@ -28,42 +28,25 @@ function on(type: 'sessionCreate', callback: (session: AVSessionDescriptor) => v
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'sessionCreate' | Yes | 事件回调类型，支持的事件是'sessionCreate'：会话创建事件，检测到会话创建时触发。 |
-| callback | (session: AVSessionDescriptor) =&gt; void | Yes | 回调函数。参数为会话相关描述。 |
+| type | 'sessionCreate' | Yes | Registration Type, 'sessionCreate' |
+| callback | (session: AVSessionDescriptor) =&gt; void | Yes | Used to handle ('sessionCreate' command) |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | parameter check failed. 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. |
-| 6600101 | Session service exception. |
-| 202 | Not System App. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | parameter check failed. 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. |
+| [6600101](../errorcode-avsession.md#6600101-session-service-exception) | Session service exception. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not System App. |
 
 ## Examples
 
 ```TypeScript
-import { avSession } from '@kit.AVSessionKit';
-
-@Entry
-@Component
-struct Index {
-  @State message: string = 'hello world';
-
-  build() {
-    Column() {
-        Text(this.message)
-          .onClick(()=>{
-            avSession.on('sessionCreate', (descriptor: avSession.AVSessionDescriptor) => {
-              console.info(`on sessionCreate : isActive : ${descriptor.isActive}`);
-              console.info(`on sessionCreate : type : ${descriptor.type}`);
-              console.info(`on sessionCreate : sessionTag : ${descriptor.sessionTag}`);
-            });
-          })
-      }
-    .width('100%')
-    .height('100%')
-  }
-}
+avSession.on('sessionCreate', (descriptor: avSession.AVSessionDescriptor) => {
+  console.info(`on sessionCreate : isActive : ${descriptor.isActive}`);
+  console.info(`on sessionCreate : type : ${descriptor.type}`);
+  console.info(`on sessionCreate : sessionTag : ${descriptor.sessionTag}`);
+});
 ```
 
 
@@ -73,7 +56,7 @@ struct Index {
 function on(type: 'sessionDestroy', callback: (session: AVSessionDescriptor) => void): void
 ```
 
-会话的销毁事件监听。使用callback异步回调。
+Register session destroy callback
 
 **Since:** 9
 
@@ -89,40 +72,25 @@ function on(type: 'sessionDestroy', callback: (session: AVSessionDescriptor) => 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'sessionDestroy' | Yes | 事件回调类型，支持的事件是`'sessionDestroy'`：会话销毁事件，检测到会话销毁时触发。 |
-| callback | (session: AVSessionDescriptor) =&gt; void | Yes | 回调函数。参数为会话相关描述。 |
+| type | 'sessionDestroy' | Yes | Registration Type, 'sessionDestroy' |
+| callback | (session: AVSessionDescriptor) =&gt; void | Yes | Used to handle ('sessionDestroy' command) |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | parameter check failed. 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. |
-| 6600101 | Session service exception. |
-| 202 | Not System App. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | parameter check failed. 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. |
+| [6600101](../errorcode-avsession.md#6600101-session-service-exception) | Session service exception. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not System App. |
 
 ## Examples
 
 ```TypeScript
-import { avSession } from '@kit.AVSessionKit';
-
-@Entry
-@Component
-struct Index {
-  @State message: string = 'hello world';
-
-  build() {
-    Column() {
-        Text(this.message)
-          .onClick(()=>{
-            avSession.on('sessionDestroy', (descriptor: avSession.AVSessionDescriptor) => {
-              console.info(`on sessionDestroy : ${descriptor.sessionId}`);
-            });
-          })
-      }
-    .width('100%')
-    .height('100%')
-  }
-}
+avSession.on('sessionDestroy', (descriptor: avSession.AVSessionDescriptor) => {
+  console.info(`on sessionDestroy : isActive : ${descriptor.isActive}`);
+  console.info(`on sessionDestroy : type : ${descriptor.type}`);
+  console.info(`on sessionDestroy : sessionTag : ${descriptor.sessionTag}`);
+});
 ```
 
 
@@ -132,7 +100,7 @@ struct Index {
 function on(type: 'topSessionChange', callback: (session: AVSessionDescriptor) => void): void
 ```
 
-最新播放会话变更的事件监听。使用callback异步回调。
+Register top session changed callback
 
 **Since:** 9
 
@@ -148,42 +116,25 @@ function on(type: 'topSessionChange', callback: (session: AVSessionDescriptor) =
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'topSessionChange' | Yes | 事件回调类型，支持的事件是 `'topSessionChange'`：最新播放会话的变化事件，检测到最新的会话改变时触发。 |
-| callback | (session: AVSessionDescriptor) =&gt; void | Yes | 回调函数。参数为会话相关描述。 |
+| type | 'topSessionChange' | Yes | Registration Type, top priority session change, 'topSessionChange' |
+| callback | (session: AVSessionDescriptor) =&gt; void | Yes | Used to handle ('topSessionChange' command) |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | parameter check failed. 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. |
-| 6600101 | Session service exception. |
-| 202 | Not System App. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | parameter check failed. 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. |
+| [6600101](../errorcode-avsession.md#6600101-session-service-exception) | Session service exception. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not System App. |
 
 ## Examples
 
 ```TypeScript
-import { avSession } from '@kit.AVSessionKit';
-
-@Entry
-@Component
-struct Index {
-  @State message: string = 'hello world';
-
-  build() {
-    Column() {
-        Text(this.message)
-          .onClick(()=>{
-            avSession.on('topSessionChange', (descriptor: avSession.AVSessionDescriptor) => {
-              console.info(`on topSessionChange : isActive : ${descriptor.isActive}`);
-              console.info(`on topSessionChange : type : ${descriptor.type}`);
-              console.info(`on topSessionChange : sessionTag : ${descriptor.sessionTag}`);
-            });
-          })
-      }
-    .width('100%')
-    .height('100%')
-  }
-}
+avSession.on('topSessionChange', (descriptor: avSession.AVSessionDescriptor) => {
+  console.info(`on topSessionChange : isActive : ${descriptor.isActive}`);
+  console.info(`on topSessionChange : type : ${descriptor.type}`);
+  console.info(`on topSessionChange : sessionTag : ${descriptor.sessionTag}`);
+});
 ```
 
 
@@ -193,7 +144,7 @@ struct Index {
 function on(type: 'sessionServiceDie', callback: () => void): void
 ```
 
-监听会话的服务死亡事件。通知应用清理资源。
+Register Session service death callback, notifying the application to clean up resources.
 
 **Since:** 9
 
@@ -209,16 +160,16 @@ function on(type: 'sessionServiceDie', callback: () => void): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'sessionServiceDie' | Yes | 事件回调类型，支持事件`'sessionServiceDie'`：会话服务死亡事件，检测到会话的服务死亡时触发。 |
-| callback | () =&gt; void | Yes | 回调函数。当监听事件注册成功，err为undefined，否则返回错误对象。 |
+| type | 'sessionServiceDie' | Yes | Registration Type, 'sessionServiceDie' |
+| callback | () =&gt; void | Yes | Used to handle ('sessionServiceDie') command. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | parameter check failed. 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. |
-| 6600101 | Session service exception. |
-| 202 | Not System App. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | parameter check failed. 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. |
+| [6600101](../errorcode-avsession.md#6600101-session-service-exception) | Session service exception. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not System App. |
 
 ## Examples
 
@@ -235,7 +186,7 @@ avSession.on('sessionServiceDie', () => {
 function on(type: 'distributedSessionChange', distributedSessionType: DistributedSessionType, callback: Callback<Array<AVSessionController>>): void
 ```
 
-最新分布式远端会话变更的监听事件。
+Register distributed session changed callback
 
 **Since:** 18
 
@@ -251,16 +202,16 @@ function on(type: 'distributedSessionChange', distributedSessionType: Distribute
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'distributedSessionChange' | Yes | 事件回调类型，支持的事件为 `'distributedSessionChange'`：最新远端分布式会话的变化事件，检测到最新的会话改变时触 发。 |
-| distributedSessionType | [DistributedSessionType](arkts-avsession-avsession-distributedsessiontype-e-sys.md) | Yes | 远端会话类型。 |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;Array&lt;AVSessionController&gt;&gt; | Yes | 回调函数。参数为对应类型的会话控制器实例列表，可查看会话ID，并完成对会话发送命令及事件，获取元数据、播放状态信 息等操作。 |
+| type | 'distributedSessionChange' | Yes | Registration Type, distributed session change |
+| distributedSessionType | [DistributedSessionType](arkts-avsession-avsession-distributedsessiontype-e-sys.md) | Yes | Indicates the distributed session type |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;Array&lt;AVSessionController&gt;&gt; | Yes | The callback will return remote changed AVSessionController. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 6600101 | Session service exception. |
-| 202 | Not System App. |
+| [6600101](../errorcode-avsession.md#6600101-session-service-exception) | Session service exception. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not System App. |
 
 ## Examples
 
@@ -277,7 +228,7 @@ avSession.on('distributedSessionChange', avSession.DistributedSessionType.TYPE_S
 function on(type: 'deviceAvailable', callback: (device: OutputDeviceInfo) => void): void
 ```
 
-设备发现回调监听。
+Register device discovery callback
 
 **Since:** 10
 
@@ -293,15 +244,15 @@ function on(type: 'deviceAvailable', callback: (device: OutputDeviceInfo) => voi
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'deviceAvailable' | Yes | 事件回调类型，支持事件`'deviceAvailable'`，有设备被发现时触发回调。 |
-| callback | (device: OutputDeviceInfo) =&gt; void | Yes | 回调函数。当监听事件注册成功，err为undefined，否则返回错误对象。 |
+| type | 'deviceAvailable' | Yes | Registration Type |
+| callback | (device: OutputDeviceInfo) =&gt; void | Yes | Used to returns the device info |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | parameter check failed. 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. |
-| 202 | Not System App. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | parameter check failed. 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not System App. |
 
 ## Examples
 
@@ -320,7 +271,7 @@ avSession.on('deviceAvailable', (device: avSession.OutputDeviceInfo) => {
 function on(type: 'deviceOffline', callback: (deviceId: string) => void): void
 ```
 
-设备下线回调监听。
+Register device offline callback
 
 **Since:** 11
 
@@ -336,15 +287,15 @@ function on(type: 'deviceOffline', callback: (deviceId: string) => void): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'deviceOffline' | Yes | 事件回调类型，支持事件`'deviceOffline'`，有设备下线时触发回调。 |
-| callback | (deviceId: string) =&gt; void | Yes | 回调函数，参数deviceId是设备的ID。当监听事件注册成功，err为undefined，否则返回错误对象。 |
+| type | 'deviceOffline' | Yes | Registration Type |
+| callback | (deviceId: string) =&gt; void | Yes | Used to returns the device info |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | parameter check failed. 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. |
-| 202 | Not System App. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | parameter check failed. 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not System App. |
 
 ## Examples
 
@@ -363,7 +314,7 @@ avSession.on('deviceOffline', (deviceId: string) => {
 function on(type: 'deviceLogEvent', callback: Callback<DeviceLogEventCode>): void
 ```
 
-监听日志事件的回调。
+Register log event callback.
 
 **Since:** 13
 
@@ -379,17 +330,17 @@ function on(type: 'deviceLogEvent', callback: Callback<DeviceLogEventCode>): voi
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'deviceLogEvent' | Yes | 事件回调类型，支持事件`'deviceLogEvent'`。 |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;DeviceLogEventCode&gt; | Yes | 回调函数，参数DeviceLogEventCode是当前设备日志返回值。 |
+| type | 'deviceLogEvent' | Yes | Command to register 'deviceLogEvent'. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;DeviceLogEventCode&gt; | Yes | Used to handle ('deviceLogEvent') command |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter check failed. 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. |
-| 6600101 | Session service exception. |
-| 6600102 | The session does not exist. |
-| 202 | Not System App. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter check failed. 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. |
+| [6600101](../errorcode-avsession.md#6600101-session-service-exception) | Session service exception. |
+| [6600102](../errorcode-avsession.md#6600102-session-does-not-exist) | The session does not exist. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not System App. |
 
 ## Examples
 
@@ -406,7 +357,7 @@ avSession.on('deviceLogEvent', (eventCode: avSession.DeviceLogEventCode) => {
 function on(type: 'deviceStateChanged', callback: Callback<DeviceState>): void
 ```
 
-投播设备连接状态的回调函数。
+Registers a system callback for the device connection phase.The callback includes information such as error codes, connection status, radar errors, and user behavior codes.
 
 **Since:** 20
 
@@ -424,15 +375,15 @@ function on(type: 'deviceStateChanged', callback: Callback<DeviceState>): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'deviceStateChanged' | Yes | 事件回调类型，支持事件`'deviceStateChanged'`，投播设备连接状态发生变化时触发回调。 |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;DeviceState&gt; | Yes | 回调函数，参数DeviceState包含投播设备ID、连接状态码、连接错误码和系统雷达错误码。 |
+| type | 'deviceStateChanged' | Yes | Event type. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;DeviceState&gt; | Yes | Callback used to return the device information. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 201 | Permission denied. |
-| 202 | Not System App. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not System App. |
 
 ## Examples
 

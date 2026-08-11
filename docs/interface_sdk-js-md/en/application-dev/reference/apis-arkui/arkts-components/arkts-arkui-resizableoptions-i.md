@@ -1,8 +1,8 @@
 # ResizableOptions
 
-图像拉伸时可调整大小的图像选项。
+Defines the resizable image options.
 
-**图1** 设置EdgeWidths效果图![edgewidths](../../../reference/apis-arkui/arkui-ts/figures/edgewidths.png)
+**Figure 1** Effect of Setting EdgeWidths![edgewidths](../../../reference/apis-arkui/arkui-ts/figures/edgewidths.png)
 
 **Since:** 11
 
@@ -18,15 +18,16 @@
 lattice?: DrawingLattice
 ```
 
-矩形网格对象。
+Lattice object, which is used to divide the image by lattice.
 
-**说明：**
+**NOTE：**
 
-通过@ohos.graphics.drawing的[createImageLattice](../../apis-arkgraphics2d/arkts-apis/arkts-arkgraphics2d-drawing-lattice-c.md/arkts-arkgraphics2d-drawing-lattice-c.md#createimagelattice)接口创建Lattice类型作为入参。将图像划分为矩形网格，同时处于偶数列和偶数行上的网格图像是固定的，不会被拉伸。其他位置的网格图像会根据slice进行拉伸。
+Use the  
+[createImageLattice](../../apis-arkgraphics2d/arkts-apis/arkts-arkgraphics2d-drawing-lattice-c.md/arkts-arkgraphics2d-drawing-lattice-c.md#createimagelattice)API of **@ohos.graphics.drawing** to create a **Lattice** type as the input parameter. Lattices located at both  even columns and even rows are fixed; those at other positions are stretched according to **slice**.
 
-该参数对[backgroundImageResizable](../arkts-apis/arkts-arkui-common-commonmethod-i.md/arkts-arkui-common-commonmethod-i.md#backgroundimageresizable)接口不生效。
+This parameter does not take effect for the [backgroundImageResizable](../arkts-apis/arkts-arkui-common-commonmethod-i.md/arkts-arkui-common-commonmethod-i.md#backgroundimageresizable)API.
 
-传入数字时默认单位为px。
+When a number is passed, the default unit is px.
 
 **Type:** [DrawingLattice](../arkts-apis/arkts-arkui-drawinglattice-t.md)
 
@@ -48,25 +49,23 @@ lattice?: DrawingLattice
 slice?: EdgeWidths
 ```
 
-边框宽度类型，用于描述组件边框不同方向的宽度。
+Edge widths in different directions of a component.
 
-**说明：**
+**NOTE：**
 
-只有当bottom和right同时大于0时，该属性生效。
+This attribute takes effect only when both **bottom** and **right** are greater than 0.
 
-当设置了top时，图片顶部拉伸，图片的像素值保持不变。
+When **top** is set, the top part of the image is stretched while the pixel values of the image remain unchanged.
 
-当设置了right时，图片右部拉伸，图片的像素值保持不变。
+When **right** is set, the right part of the image is stretched while the pixel values of the image remain unchanged.
 
-当设置了bottom时，图片底部拉伸，图片的像素值保持不变。
+When **bottom** is set, the bottom part of the image is stretched while the pixel values of the image remain unchanged.
 
-当设置了left时，图片左部拉伸，图片的像素值保持不变。
+When **left** is set, the left part of the image is stretched while the pixel values of the image remain unchanged.
 
-每个方向的宽度默认值为0，传入数字时默认单位为vp。
+The default width of each direction is **0**. The default unit is vp.
 
-设置了EdgeWidths后的效果如图1（设置EdgeWidths效果图）所示。
-
-单位：vp
+The effect of setting **EdgeWidths** is shown in Figure 1 (Effect of Setting EdgeWidths).
 
 **Type:** [EdgeWidths](../arkts-apis/arkts-arkui-units-edgewidths-i.md)
 

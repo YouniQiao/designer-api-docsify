@@ -1,11 +1,5 @@
 # connectPrinterByIdAndPpd（系统接口）
 
-## 导入模块
-
-```TypeScript
-import { print } from 'kits/@kit.BasicServicesKit';
-```
-
 ## connectPrinterByIdAndPpd
 
 ```TypeScript
@@ -46,7 +40,7 @@ function connectPrinterByIdAndPpd(printerId: string, protocol: string, ppdName: 
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 13100003 | Add the printer to system failed. |
-| 201 | the application does not have permission to call this function. |
-| 202 | not system application. |
+| [13100003](../../apis-basic-services-kit/errorcode-print.md#13100003-打印服务异常) | Add the printer to system failed. |
+| [201](../../errorcode-universal.md#201-权限校验失败) | the application does not have permission to call this function. |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | not system application. |
 

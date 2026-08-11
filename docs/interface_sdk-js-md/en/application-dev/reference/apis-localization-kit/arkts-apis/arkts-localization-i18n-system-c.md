@@ -1,6 +1,6 @@
 # System
 
-提供系统属性相关的能力，包括语言地区名称翻译、支持的语言地区列表获取和系统语言地区获取等。
+Provides system functions.
 
 **Since:** 23
 
@@ -22,7 +22,7 @@ import { i18n } from 'kits/@kit.LocalizationKit';
 static getAppPreferredLanguage(): string
 ```
 
-获取应用偏好语言。
+Obtains the preferred language of an application.
 
 **Since:** 23
 
@@ -38,7 +38,7 @@ static getAppPreferredLanguage(): string
 
 | Type | Description |
 | --- | --- |
-| string | 应用偏好语言。 |
+| string | Preferred language of the application. |
 
 ## getDisplayCountry
 
@@ -46,7 +46,7 @@ static getAppPreferredLanguage(): string
 static getDisplayCountry(country: string, locale: string, sentenceCase?: boolean): string
 ```
 
-获取国家地区名称在指定语言下的翻译。
+Obtains the country/region display name in the specified language.
 
 **Since:** 23
 
@@ -62,22 +62,22 @@ static getDisplayCountry(country: string, locale: string, sentenceCase?: boolean
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| country | string | Yes | 国家地区，要求是[合法的国家地区码](../../../internationalization/i18n-locale-culture.md#实现原理)。 |
-| locale | string | Yes | [表示区域ID的字符串](../../../internationalization/i18n-locale-culture.md#实现原理)，由语言、脚本、国家地区组 成。 |
-| sentenceCase | boolean | No | true表示按照首字母大写的格式显示文本，false表示按照区域默认的大小写格式显示文本。默认值：true。 |
+| country | string | Yes | Valid country/region code. |
+| locale | string | Yes | System locale, which consists of the language, script, and country/region. |
+| sentenceCase | boolean | No | Whether to use sentence case to display the text. The value "true" means to display the text in title case format, and the value "false" means to display the text in the default case format of the locale. The default value is true. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| string | 国家地区名称在指定语言下的翻译。 |
+| string | Country/region display name in the specified language. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
-| 890001 | Invalid parameter. Possible causes: Parameter verification failed. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
+| [890001](../errorcode-i18n.md#890001-parameter-error) | Invalid parameter. Possible causes: Parameter verification failed. |
 
 ## getDisplayLanguage
 
@@ -85,7 +85,7 @@ static getDisplayCountry(country: string, locale: string, sentenceCase?: boolean
 static getDisplayLanguage(language: string, locale: string, sentenceCase?: boolean): string
 ```
 
-获取语言名称在指定语言下的翻译。
+Obtains the language display name in the specified language.
 
 **Since:** 23
 
@@ -101,22 +101,22 @@ static getDisplayLanguage(language: string, locale: string, sentenceCase?: boole
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| language | string | Yes | 语言，要求是[合法的语言ID](../../../internationalization/i18n-locale-culture.md#实现原理)。 |
-| locale | string | Yes | [表示区域ID的字符串](../../../internationalization/i18n-locale-culture.md#实现原理)，由语言、脚本、国家地区组 成。 |
-| sentenceCase | boolean | No | true表示按照首字母大写的格式显示文本，false表示按照区域默认的大小写格式显示文本。默认值：true。 |
+| language | string | Yes | Valid language ID. |
+| locale | string | Yes | System locale, which consists of the language, script, and country/region. |
+| sentenceCase | boolean | No | Whether to use sentence case to display the text. The value "true" means to display the text in title case format, and the value "false" means to display the text in the default case format of the locale. The default value is true. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| string | 语言名称在指定语言下的翻译。 |
+| string | Language display name in the specified language. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
-| 890001 | Invalid parameter. Possible causes: Parameter verification failed. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
+| [890001](../errorcode-i18n.md#890001-parameter-error) | Invalid parameter. Possible causes: Parameter verification failed. |
 
 ## getFirstDayOfWeek
 
@@ -124,7 +124,7 @@ static getDisplayLanguage(language: string, locale: string, sentenceCase?: boole
 static getFirstDayOfWeek(): WeekDay
 ```
 
-获取系统设置的周起始日。
+Obtains the first day of a week in the system settings.
 
 **Since:** 23
 
@@ -140,7 +140,7 @@ static getFirstDayOfWeek(): WeekDay
 
 | Type | Description |
 | --- | --- |
-| [WeekDay](arkts-localization-i18n-weekday-e.md) | 周起始日。 |
+| [WeekDay](arkts-localization-i18n-weekday-e.md) | Start day of a week. |
 
 ## getFirstPreferredLanguage
 
@@ -148,7 +148,7 @@ static getFirstDayOfWeek(): WeekDay
 static getFirstPreferredLanguage(): string
 ```
 
-获取系统偏好语言列表中的第一个语言。
+Obtains the first language in the preferred language list.
 
 **Since:** 23
 
@@ -164,7 +164,7 @@ static getFirstPreferredLanguage(): string
 
 | Type | Description |
 | --- | --- |
-| string | 系统偏好语言列表中的第一个语言。 |
+| string | First language in the preferred language list. |
 
 ## getPreferredLanguageList
 
@@ -172,7 +172,7 @@ static getFirstPreferredLanguage(): string
 static getPreferredLanguageList(): Array<string>
 ```
 
-获取系统偏好语言列表。
+Obtains the list of preferred languages.
 
 **Since:** 23
 
@@ -188,7 +188,7 @@ static getPreferredLanguageList(): Array<string>
 
 | Type | Description |
 | --- | --- |
-| Array&lt;string&gt; | 系统偏好语言列表。 |
+| Array&lt;string&gt; | List of preferred languages. |
 
 ## getSimplifiedLanguage
 
@@ -196,7 +196,7 @@ static getPreferredLanguageList(): Array<string>
 static getSimplifiedLanguage(language?: string): string
 ```
 
-获取语言的简化表示。例如：'en-Latn-US'的简化表示为'en'，'en-Latn-GB'的简化表示为'en-GB'。
+Obtains the simplified representation of a language. For example, the simplified representation of "en-Latn-US"is "en", and that of "en-Latn-GB" is "en-GB".
 
 **Since:** 23
 
@@ -212,20 +212,20 @@ static getSimplifiedLanguage(language?: string): string
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| language | string | No | [合法的语言ID](../../../internationalization/i18n-locale-culture.md#实现原理)。默认值：系统语言。 |
+| language | string | No | Valid language ID. The default value is the system language. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| string | 不传入language时，会根据系统语言和地区判断是否存在系统支持的方言，若存在则返回方言的简化表示；若不存在，则返回系统语言的简化表示。 &lt;br&gt;传入language时，返回language的简化表示。 |
+| string | If language is not passed, the application checks for dialects supported by the system based on the system language and locale. If such a dialect is found, the simplified representation of the dialect is returned. Otherwise, the simplified representation of the system language is returned. If language is passed, the simplified representation of the specified language is returned. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
-| 890001 | Invalid parameter. Possible causes: Parameter verification failed. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
+| [890001](../errorcode-i18n.md#890001-parameter-error) | Invalid parameter. Possible causes: Parameter verification failed. |
 
 ## getSystemCountries
 
@@ -233,7 +233,7 @@ static getSimplifiedLanguage(language?: string): string
 static getSystemCountries(language: string): Array<string>
 ```
 
-获取输入语言下系统支持的国家地区列表。
+Obtains the list of countries/regions supported for the specified language.
 
 **Since:** 23
 
@@ -249,20 +249,20 @@ static getSystemCountries(language: string): Array<string>
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| language | string | Yes | [合法的语言ID](../../../internationalization/i18n-locale-culture.md#实现原理)。 |
+| language | string | Yes | Valid language ID. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Array&lt;string&gt; | language参数指定的语言下，系统支持的国家/地区列表。 |
+| Array&lt;string&gt; | List of countries/regions supported for the specified language. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
-| 890001 | Invalid parameter. Possible causes: Parameter verification failed. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
+| [890001](../errorcode-i18n.md#890001-parameter-error) | Invalid parameter. Possible causes: Parameter verification failed. |
 
 ## getSystemLanguage
 
@@ -270,9 +270,7 @@ static getSystemCountries(language: string): Array<string>
 static getSystemLanguage(): string
 ```
 
-获取系统当前设置的语言。若要监听系统语言变化，可以监听  
-[公共事件](../../../reference/apis-basic-services-kit/common_event/commonEventManager-definitions.md#common_event_locale_changed)OHOS::EventFwk::CommonEventSupport::COMMON_EVENT_LOCALE_CHANGED，具体可参考  
-[系统语言与区域](../../../internationalization/i18n-system-language-region.md#开发步骤)。
+Obtains the current system language.
 
 **Since:** 23
 
@@ -290,7 +288,7 @@ static getSystemLanguage(): string
 
 | Type | Description |
 | --- | --- |
-| string | 表示语言ID的字符串。 |
+| string | Language ID. |
 
 ## getSystemLanguages
 
@@ -298,7 +296,7 @@ static getSystemLanguage(): string
 static getSystemLanguages(): Array<string>
 ```
 
-获取系统支持的语言列表。
+Obtains the list of system languages.
 
 **Since:** 23
 
@@ -314,7 +312,7 @@ static getSystemLanguages(): Array<string>
 
 | Type | Description |
 | --- | --- |
-| Array&lt;string&gt; | 系统支持的语言列表。 |
+| Array&lt;string&gt; | List of system languages. |
 
 ## getSystemLocaleInstance
 
@@ -322,9 +320,7 @@ static getSystemLanguages(): Array<string>
 static getSystemLocaleInstance(): Intl.Locale
 ```
 
-获取系统当前设置的区域对象。若要监听系统区域变化，可以监听  
-[公共事件](../../../reference/apis-basic-services-kit/common_event/commonEventManager-definitions.md#common_event_locale_changed)OHOS::EventFwk::CommonEventSupport::COMMON_EVENT_LOCALE_CHANGED，具体可参考  
-[系统语言与区域](../../../internationalization/i18n-system-language-region.md#开发步骤)。
+Obtains the locale object currently used by the system.
 
 **Since:** 23
 
@@ -348,9 +344,7 @@ static getSystemLocaleInstance(): Intl.Locale
 static getSystemRegion(): string
 ```
 
-获取系统当前设置的国家地区。若要监听系统地区变化，可以监听  
-[公共事件](../../../reference/apis-basic-services-kit/common_event/commonEventManager-definitions.md#common_event_locale_changed)OHOS::EventFwk::CommonEventSupport::COMMON_EVENT_LOCALE_CHANGED，具体可参考  
-[系统语言与区域](../../../internationalization/i18n-system-language-region.md#开发步骤)。
+Obtains the current system country/region.
 
 **Since:** 23
 
@@ -366,7 +360,7 @@ static getSystemRegion(): string
 
 | Type | Description |
 | --- | --- |
-| string | 表示国家地区ID的字符串。 |
+| string | Country/region ID. |
 
 ## getTemperatureName
 
@@ -374,7 +368,7 @@ static getSystemRegion(): string
 static getTemperatureName(type: TemperatureType): string
 ```
 
-获取温度单位的名称。
+Obtains the name of a temperature unit.
 
 **Since:** 23
 
@@ -390,19 +384,19 @@ static getTemperatureName(type: TemperatureType): string
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | [TemperatureType](arkts-localization-i18n-temperaturetype-e.md) | Yes | 温度单位。 |
+| type | [TemperatureType](arkts-localization-i18n-temperaturetype-e.md) | Yes | Temperature unit. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| string | 返回温度单位的名称，包括celsius，fahrenheit，kelvin。 |
+| string | Name of the temperature unit, which can be "celsius", "fahrenheit", and "kelvin". |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 890001 | Invalid parameter. Possible causes: Parameter verification failed. |
+| [890001](../errorcode-i18n.md#890001-parameter-error) | Invalid parameter. Possible causes: Parameter verification failed. |
 
 ## getTemperatureType
 
@@ -410,7 +404,7 @@ static getTemperatureName(type: TemperatureType): string
 static getTemperatureType(): TemperatureType
 ```
 
-获取系统设置的温度单位。
+Obtains the temperature unit of the system.
 
 **Since:** 23
 
@@ -426,7 +420,7 @@ static getTemperatureType(): TemperatureType
 
 | Type | Description |
 | --- | --- |
-| [TemperatureType](arkts-localization-i18n-temperaturetype-e.md) | 温度单位。 |
+| [TemperatureType](arkts-localization-i18n-temperaturetype-e.md) | Temperature unit. |
 
 ## getUsingLocalDigit
 
@@ -434,7 +428,7 @@ static getTemperatureType(): TemperatureType
 static getUsingLocalDigit(): boolean
 ```
 
-判断系统是否使用本地数字。
+Checks whether use of local digits is enabled.
 
 **Since:** 23
 
@@ -450,7 +444,7 @@ static getUsingLocalDigit(): boolean
 
 | Type | Description |
 | --- | --- |
-| boolean | true表示系统当前使用本地数字，false表示系统当前不使用本地数字。 |
+| boolean | Whether use of local digits is enabled. The value "true" indicates that use of local digits is enabled, and the value "false" indicates the opposite. |
 
 ## is24HourClock
 
@@ -458,9 +452,7 @@ static getUsingLocalDigit(): boolean
 static is24HourClock(): boolean
 ```
 
-判断系统时制是否为24小时制。若要监听系统时制变化，可以监听  
-[公共事件](../../../reference/apis-basic-services-kit/common_event/commonEventManager-definitions.md#common_event_time_changed)OHOS::EventFwk::CommonEventSupport::COMMON_EVENT_TIME_CHANGED，具体可参考  
-[用户偏好](../../../internationalization/i18n-user-preferences.md#开发步骤)。
+Checks whether the 24-hour clock is used.
 
 **Since:** 23
 
@@ -478,7 +470,7 @@ static is24HourClock(): boolean
 
 | Type | Description |
 | --- | --- |
-| boolean | true表示系统时制为24小时制，false表示系统时制为12小时制。 |
+| boolean | Whether the 24-hour clock is used. The value "true" indicates that the 24-hour clock is used, the the value "false" means the opposite. |
 
 ## isSuggested
 
@@ -486,7 +478,7 @@ static is24HourClock(): boolean
 static isSuggested(language: string, region?: string): boolean
 ```
 
-判断语言是否是地区的推荐语言。用于根据地区推荐语言或根据语言推荐地区。
+Checks whether a language is a suggested language in the specified region. It can be used for region-based language recommendation or language-based region recommendation.
 
 **Since:** 23
 
@@ -502,21 +494,21 @@ static isSuggested(language: string, region?: string): boolean
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| language | string | Yes | [合法的语言ID](../../../internationalization/i18n-locale-culture.md#实现原理)，例如zh。 |
-| region | string | No | [合法的国家地区码](../../../internationalization/i18n-locale-culture.md#实现原理)，例如CN。 &lt;br&gt;默认值：SIM卡国家地区。 |
+| language | string | Yes | Valid language ID, for example, "zh". |
+| region | string | No | Valid region ID, for example, "CN". The default value is the country/region of the SIM card. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| boolean | true表示语言是地区的推荐语言，false表示语言不是地区的推荐语言。 |
+| boolean | Whether a language is a suggested language. The value "true" indicates that the language is a suggested language of the region, the the value "false" indicates the opposite. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
-| 890001 | Invalid parameter. Possible causes: Parameter verification failed. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
+| [890001](../errorcode-i18n.md#890001-parameter-error) | Invalid parameter. Possible causes: Parameter verification failed. |
 
 ## setAppPreferredLanguage
 
@@ -524,7 +516,7 @@ static isSuggested(language: string, region?: string): boolean
 static setAppPreferredLanguage(language: string): void
 ```
 
-设置应用偏好语言。设置后，应用将优先加载应用偏好语言对应的资源。设置偏好语言为'default'后，应用语言将跟随系统语言，应用冷启动生效。
+Sets the preferred language of the application. Resources are loaded in the preferred language when the application is launched. If the preferred language is set to default, the application's language will be the same as the system language, and the setting will take effect upon cold starting of the application.
 
 **Since:** 23
 
@@ -540,12 +532,12 @@ static setAppPreferredLanguage(language: string): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| language | string | Yes | [合法的语言ID](../../../internationalization/i18n-locale-culture.md#实现原理)或'default'。 |
+| language | string | Yes | Valid language ID or default. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
-| 890001 | Invalid parameter. Possible causes: Parameter verification failed. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
+| [890001](../errorcode-i18n.md#890001-parameter-error) | Invalid parameter. Possible causes: Parameter verification failed. |
 

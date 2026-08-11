@@ -30,5 +30,5 @@ export type OnGetStartIndexByOffsetCallback = (totalOffset: double) => StartLine
 
 | 类型 | 说明 |
 | --- | --- |
-| [StartLineInfo](arkts-arkui-grid-startlineinfo-i-sys.md) | - |
+| [StartLineInfo](../arkts-components/arkts-arkui-startlineinfo-i-sys.md) | - |
 

@@ -12,7 +12,7 @@ import { Options, ReaderIteratorResult, Watcher, ReadTextOptions, WatchEventList
 function utimes(path: string, mtime: double): void
 ```
 
-更改文件上次修改该文件的时间。
+Changes the time when the file was last modified.
 
 **Since:** 23
 
@@ -26,8 +26,8 @@ function utimes(path: string, mtime: double): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| path | string | Yes | 文件的应用沙箱路径。 |
-| mtime | double | Yes | 待更新的时间戳。自1970年1月1日起至目标时间的毫秒数。仅支持更改上次修改该文件的时间属性。 |
+| path | string | Yes | Application sandbox path of the file. |
+| mtime | double | Yes | New timestamp. The value is the number of milliseconds elapsed since the Epoch time (00:00:00 UTC on January 1, 1970). Only the time when the file was last modified can be changed. |
 
 **Error codes:**
 

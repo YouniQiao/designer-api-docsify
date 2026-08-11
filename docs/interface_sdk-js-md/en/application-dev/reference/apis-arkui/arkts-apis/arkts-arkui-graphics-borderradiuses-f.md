@@ -6,7 +6,7 @@
 export declare function borderRadiuses(all: double): NodeBorderRadiuses
 ```
 
-获取所有边都设置为相同半径的BorderRadiuses对象。
+Obtain a BorderRadiuses object with all edges are set to the same radius.
 
 **Since:** 23
 
@@ -22,11 +22,11 @@ export declare function borderRadiuses(all: double): NodeBorderRadiuses
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| all | double | Yes | 边框圆角。&lt;br/&gt;单位：vp&lt;br/&gt;。 &lt;br&gt;取值范围：[0, +∞)。 |
+| all | double | Yes | The edge radius will be set. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [NodeBorderRadiuses](arkts-arkui-nodeborderradiuses-t.md) | 边框圆角均设置为传入值的边框圆角对象。 |
+| [NodeBorderRadiuses](arkts-arkui-nodeborderradiuses-t.md) | The BorderRadiuses object. |
 

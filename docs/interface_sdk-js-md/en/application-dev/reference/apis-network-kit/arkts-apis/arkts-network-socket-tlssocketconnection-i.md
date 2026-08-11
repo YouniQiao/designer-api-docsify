@@ -42,11 +42,11 @@ Closes a TLSSocket client connection.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. |
-| 2303506 | Failed to close the TLS connection. |
-| 2300002 | System internal error. |
-| 2303505 | An error occurred in the TLS system call. |
-| 2303501 | SSL is null. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. |
+| [2303506](../errorcode-net-socket.md#2303506-failed-to-close-tls-connections) | Failed to close the TLS connection. |
+| [2300002](../errorcode-net-socket.md#2300002-system-internal-error) | System internal error. |
+| [2303505](../errorcode-net-socket.md#2303505-tls-system-call-error) | An error occurred in the TLS system call. |
+| [2303501](../errorcode-net-socket.md#2303501-null-ssl) | SSL is null. |
 
 ## Examples
 
@@ -117,10 +117,10 @@ Closes a TLSSocket client connection.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 2303506 | Failed to close the TLS connection. |
-| 2300002 | System internal error. |
-| 2303505 | An error occurred in the TLS system call. |
-| 2303501 | SSL is null. |
+| [2303506](../errorcode-net-socket.md#2303506-failed-to-close-tls-connections) | Failed to close the TLS connection. |
+| [2300002](../errorcode-net-socket.md#2300002-system-internal-error) | System internal error. |
+| [2303505](../errorcode-net-socket.md#2303505-tls-system-call-error) | An error occurred in the TLS system call. |
+| [2303501](../errorcode-net-socket.md#2303501-null-ssl) | SSL is null. |
 
 ## Examples
 
@@ -188,11 +188,11 @@ Returns a list containing the negotiated cipher suite information.For example:{"
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. |
-| 2300002 | System internal error. |
-| 2303505 | An error occurred in the TLS system call. |
-| 2303502 | An error occurred when reading data on the TLS socket. |
-| 2303501 | SSL is null. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. |
+| [2300002](../errorcode-net-socket.md#2300002-system-internal-error) | System internal error. |
+| [2303505](../errorcode-net-socket.md#2303505-tls-system-call-error) | An error occurred in the TLS system call. |
+| [2303502](../errorcode-net-socket.md#2303502-tls-read-error) | An error occurred when reading data on the TLS socket. |
+| [2303501](../errorcode-net-socket.md#2303501-null-ssl) | SSL is null. |
 
 ## Examples
 
@@ -262,10 +262,10 @@ Returns a list containing the negotiated cipher suite information.For example:{"
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 2300002 | System internal error. |
-| 2303505 | An error occurred in the TLS system call. |
-| 2303502 | An error occurred when reading data on the TLS socket. |
-| 2303501 | SSL is null. |
+| [2300002](../errorcode-net-socket.md#2300002-system-internal-error) | System internal error. |
+| [2303505](../errorcode-net-socket.md#2303505-tls-system-call-error) | An error occurred in the TLS system call. |
+| [2303502](../errorcode-net-socket.md#2303502-tls-read-error) | An error occurred when reading data on the TLS socket. |
+| [2303501](../errorcode-net-socket.md#2303501-null-ssl) | SSL is null. |
 
 ## Examples
 
@@ -333,9 +333,9 @@ Obtains the local address of a TLSSocketServer connection.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 2300002 | System internal error. |
-| 2301009 | Bad file descriptor. |
-| 2303188 | Socket operation on non-socket. |
+| [2300002](../errorcode-net-socket.md#2300002-system-internal-error) | System internal error. |
+| [2301009](../errorcode-net-socket.md#2301009-bad-file-descriptor) | Bad file descriptor. |
+| [2303188](../errorcode-net-socket.md#2303188-socket-operations-on-nonsockets) | Socket operation on non-socket. |
 
 ## Examples
 
@@ -404,9 +404,9 @@ Obtains the peer address of a TLSSocketServer connection.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. |
-| 2300002 | System internal error. |
-| 2303188 | Socket operation on non-socket. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. |
+| [2300002](../errorcode-net-socket.md#2300002-system-internal-error) | System internal error. |
+| [2303188](../errorcode-net-socket.md#2303188-socket-operations-on-nonsockets) | Socket operation on non-socket. |
 
 ## Examples
 
@@ -476,8 +476,8 @@ Obtains the peer address of a TLSSocketServer connection.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 2300002 | System internal error. |
-| 2303188 | Socket operation on non-socket. |
+| [2300002](../errorcode-net-socket.md#2300002-system-internal-error) | System internal error. |
+| [2303188](../errorcode-net-socket.md#2303188-socket-operations-on-nonsockets) | Socket operation on non-socket. |
 
 ## Examples
 
@@ -545,9 +545,9 @@ getRemoteCertificate(callback: AsyncCallback<X509CertRawData>): void
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. |
-| 2300002 | System internal error. |
-| 2303501 | SSL is null. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. |
+| [2300002](../errorcode-net-socket.md#2300002-system-internal-error) | System internal error. |
+| [2303501](../errorcode-net-socket.md#2303501-null-ssl) | SSL is null. |
 
 ## getRemoteCertificate
 
@@ -575,8 +575,8 @@ getRemoteCertificate(): Promise<X509CertRawData>
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 2300002 | System internal error. |
-| 2303501 | SSL is null. |
+| [2300002](../errorcode-net-socket.md#2300002-system-internal-error) | System internal error. |
+| [2303501](../errorcode-net-socket.md#2303501-null-ssl) | SSL is null. |
 
 ## getSignatureAlgorithms
 
@@ -604,9 +604,9 @@ getSignatureAlgorithms(callback: AsyncCallback<Array<string>>): void
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. |
-| 2300002 | System internal error. |
-| 2303501 | SSL is null. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. |
+| [2300002](../errorcode-net-socket.md#2300002-system-internal-error) | System internal error. |
+| [2303501](../errorcode-net-socket.md#2303501-null-ssl) | SSL is null. |
 
 ## Examples
 
@@ -676,8 +676,8 @@ getSignatureAlgorithms(): Promise<Array<string>>
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 2300002 | System internal error. |
-| 2303501 | SSL is null. |
+| [2300002](../errorcode-net-socket.md#2300002-system-internal-error) | System internal error. |
+| [2303501](../errorcode-net-socket.md#2303501-null-ssl) | SSL is null. |
 
 ## Examples
 
@@ -753,7 +753,7 @@ Obtains the file descriptor of the TLSSocketConnection.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 201 | Permission denied. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
 
 ## Examples
 
@@ -822,7 +822,7 @@ Cancels listening for message receiving events of the TLSSocketConnection.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. |
 
 ## Examples
 
@@ -902,7 +902,7 @@ Cancels listening for close events of the TLSSocketConnection.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. |
 
 ## Examples
 
@@ -974,7 +974,7 @@ Cancels listening for error events of the TLSSocketConnection.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. |
 
 ## Examples
 
@@ -1046,7 +1046,7 @@ Listens for message receiving events of the TLSSocketConnection.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. |
 
 ## Examples
 
@@ -1122,7 +1122,7 @@ Listens for close events of the TLSSocketConnection.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. |
 
 ## Examples
 
@@ -1189,7 +1189,7 @@ Listens for error events of the TLSSocketConnection.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. |
 
 ## Examples
 
@@ -1257,12 +1257,12 @@ Sends data over a TLSSocketServer connection to client.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. |
-| 2303506 | Failed to close the TLS connection. |
-| 2300002 | System internal error. |
-| 2303505 | An error occurred in the TLS system call. |
-| 2303503 | An error occurred when writing data on the TLS socket. |
-| 2303501 | SSL is null. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. |
+| [2303506](../errorcode-net-socket.md#2303506-failed-to-close-tls-connections) | Failed to close the TLS connection. |
+| [2300002](../errorcode-net-socket.md#2300002-system-internal-error) | System internal error. |
+| [2303505](../errorcode-net-socket.md#2303505-tls-system-call-error) | An error occurred in the TLS system call. |
+| [2303503](../errorcode-net-socket.md#2303503-tls-write-error) | An error occurred when writing data on the TLS socket. |
+| [2303501](../errorcode-net-socket.md#2303501-null-ssl) | SSL is null. |
 
 ## Examples
 
@@ -1339,12 +1339,12 @@ Sends data over a TLSSocketServer connection to client.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. |
-| 2303506 | Failed to close the TLS connection. |
-| 2300002 | System internal error. |
-| 2303505 | An error occurred in the TLS system call. |
-| 2303503 | An error occurred when writing data on the TLS socket. |
-| 2303501 | SSL is null. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. |
+| [2303506](../errorcode-net-socket.md#2303506-failed-to-close-tls-connections) | Failed to close the TLS connection. |
+| [2300002](../errorcode-net-socket.md#2300002-system-internal-error) | System internal error. |
+| [2303505](../errorcode-net-socket.md#2303505-tls-system-call-error) | An error occurred in the TLS system call. |
+| [2303503](../errorcode-net-socket.md#2303503-tls-write-error) | An error occurred when writing data on the TLS socket. |
+| [2303501](../errorcode-net-socket.md#2303501-null-ssl) | SSL is null. |
 
 ## Examples
 

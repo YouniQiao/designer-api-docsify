@@ -34,12 +34,12 @@ Check whether the specified network is active.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 33200010 | invalid eth state |
-| 33200009 | netmanager stop |
-| 33200002 | Log off fail |
-| 201 | Permission denied. |
-| 33200099 | internal error |
-| 33200001 | Invalid netId |
+| [33200010](../errorcode-net-eap.md#33200010-invalid-eap-status) | invalid eth state |
+| [33200009](../errorcode-net-eap.md#33200009-netmanager-not-exist) | netmanager stop |
+| [33200002](../errorcode-net-eap.md#33200002-failed-to-exit-extended-authentication-of-the-specified-nic) | Log off fail |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
+| [33200099](../errorcode-net-eap.md#33200099-internal-program-error) | internal error |
+| [33200001](../errorcode-net-eap.md#33200001-invalid-netid) | Invalid netId |
 
 ## Examples
 

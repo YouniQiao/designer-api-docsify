@@ -12,11 +12,7 @@ import { curves } from 'kits/@kit.ArkUI';
 function steps(count: number, end: boolean): string
 ```
 
-构造阶梯曲线对象。
-
-> **说明：**
-> 
-> 从API version 7开始支持，从API version 9开始废弃。建议使用[Curves. stepsCurve](arkts-arkui-curves-stepscurve-f.md#stepscurve)替代。
+Creates a step curve.
 
 **Since:** 7
 
@@ -24,7 +20,7 @@ function steps(count: number, end: boolean): string
 
 **Deprecated since:** 9
 
-**Substitutes:** [curves.stepsCurve](arkts-arkui-curves-stepscurve-f.md#stepscurve)
+**Substitutes:** [stepsCurve](arkts-arkui-curves-stepscurve-f.md#stepscurve)
 
 <!--Device-curves-function steps(count: number, end: boolean): string--><!--Device-curves-function steps(count: number, end: boolean): string-End-->
 
@@ -34,12 +30,12 @@ function steps(count: number, end: boolean): string
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| count | number | Yes | 阶梯的数量，需要为正整数。 |
-| end | boolean | Yes | 在每个间隔的起点或是终点发生阶跃变化。&lt;br&gt;-true：在终点发生阶跃变化。&lt;br&gt;-false：在起点发生阶跃变化。 |
+| count | number | Yes | Number of steps. The value must be a positive integer. |
+| end | boolean | Yes | Whether the step change occurs at the start or end of each interval.&lt;br&gt;- **true**: The step change occurs at the end of each interval.&lt;br&gt;- **false**: The step change occurs at the start of each interval. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| string | 返回阶梯曲线对象。 |
+| string | Steps curve object. |
 

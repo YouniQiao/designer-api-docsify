@@ -12,7 +12,7 @@ import { print } from 'kits/@kit.BasicServicesKit';
 function checkPreferencesConflicts(printerId: string, changedType: string, preferences: PrinterPreferences): Promise<string[]>
 ```
 
-检查首选项冲突。
+Check preferences conflicts.
 
 **Since:** 24
 
@@ -32,9 +32,9 @@ function checkPreferencesConflicts(printerId: string, changedType: string, prefe
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| printerId | string | Yes | 打印机ID。 |
-| changedType | string | Yes | 在打印界面上修改的字段名称。 |
-| preferences | [PrinterPreferences](arkts-basicservices-print-printerpreferences-i.md) | Yes | 打印界面选择的值。 |
+| printerId | string | Yes | Indicates the printer ID. &lt;br&gt;Added printer ID in the system. |
+| changedType | string | Yes | Indicates the field name that was modified on the printing interface. &lt;br&gt;Field names set in the print preview or preferences interface. |
+| preferences | [PrinterPreferences](arkts-basicservices-print-printerpreferences-i.md) | Yes | Indicates the selected value on the printing interface. &lt;br&gt;The selected value on the printinginterface. |
 
 **Return value:**
 
@@ -46,7 +46,7 @@ function checkPreferencesConflicts(printerId: string, changedType: string, prefe
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 13100005 | Can not find the printer or printer's ppd file in system. |
-| 201 | the application does not have permission to call this function. |
-| 202 | not system application. |
+| [13100005](../../apis-basic-services-kit/errorcode-print.md#13100005-invalid-printer) | Can not find the printer or printer's ppd file in system. |
+| [201](../../errorcode-universal.md#201-permission-denied) | the application does not have permission to call this function. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | not system application. |
 

@@ -1,6 +1,6 @@
 # DistanceMeasurementResponse（系统接口）
 
-Interface for distance measurement result
+测距接口执行完成后的回调结果。
 
 **起始版本：** 23
 
@@ -12,19 +12,13 @@ Interface for distance measurement result
 
 **系统接口：** 此接口为系统接口。
 
-## 导入模块
-
-```TypeScript
-import { spatialAwareness } from 'kits/@kit.MultimodalAwarenessKit';
-```
-
 ## confidence
 
 ```TypeScript
 confidence: float
 ```
 
-indicates confidence of distance measurement
+表示置信度。
 
 **类型：** float
 
@@ -46,7 +40,7 @@ indicates confidence of distance measurement
 deviceId: string
 ```
 
-indicates the ID of the remote ranging device
+表示设备Id号。
 
 **类型：** string
 
@@ -68,7 +62,7 @@ indicates the ID of the remote ranging device
 distance: float
 ```
 
-indicates distance result
+表示距离。
 
 **类型：** float
 
@@ -90,7 +84,7 @@ indicates distance result
 rank: DistanceRank
 ```
 
-indicates distance rank
+表示距离档位。
 
 **类型：** [DistanceRank](arkts-multimodalawareness-spatialawareness-distancerank-e-sys.md)
 

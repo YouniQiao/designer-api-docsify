@@ -1,6 +1,6 @@
 # DragResult
 
-定义拖拽操作的结果及组件的落入选定状态。
+Defines the result of a drag operation and the drop-selection state of a component.
 
 **Since:** 10
 
@@ -16,9 +16,7 @@
 UNKNOWN = -1
 ```
 
-拖拽结果尚未设置，在[onDragStart](arkts-arkui-commonmethod-c.md#ondragstart)，[onDragEnter](arkts-arkui-commonmethod-c.md#ondragenter)，  
-[onDragMove](arkts-arkui-commonmethod-c.md#ondragmove)，[onDragLeave](arkts-arkui-commonmethod-c.md#ondragleave)，  
-[onDrop](arkts-arkui-commonmethod-c.md#ondrop)中使用。
+If the drag is not finished and the result is not set by receiver, return DragResult.UNKNOWN.
 
 **Since:** 24
 
@@ -38,7 +36,8 @@ UNKNOWN = -1
 DRAG_SUCCESSFUL = 0
 ```
 
-拖拽成功，在[onDrop](arkts-arkui-commonmethod-c.md#ondrop)中使用。
+The drag is successful. This value applies to  
+[onDrop](arkts-arkui-commonmethod-c.md#ondrop).
 
 **Since:** 10
 
@@ -58,7 +57,8 @@ DRAG_SUCCESSFUL = 0
 DRAG_FAILED = 1
 ```
 
-拖拽失败，在[onDrop](arkts-arkui-commonmethod-c.md#ondrop)中使用。
+The drag fails. This value applies to  
+[onDrop](arkts-arkui-commonmethod-c.md#ondrop).
 
 **Since:** 10
 
@@ -78,7 +78,8 @@ DRAG_FAILED = 1
 DRAG_CANCELED = 2
 ```
 
-拖拽取消，在[onDrop](arkts-arkui-commonmethod-c.md#ondrop)中使用。
+The drag is canceled. This value applies to  
+[onDrop](arkts-arkui-commonmethod-c.md#ondrop).
 
 **Since:** 10
 
@@ -98,8 +99,8 @@ DRAG_CANCELED = 2
 DROP_ENABLED = 3
 ```
 
-组件允许落入，在[onDragEnter](arkts-arkui-commonmethod-c.md#ondragenter)，[onDragMove](arkts-arkui-commonmethod-c.md#ondragmove)，  
-[onDragLeave](arkts-arkui-commonmethod-c.md#ondragleave)中使用。
+The component allows dropping. This value applies to [onDragEnter](arkts-arkui-commonmethod-c.md#ondragenter),  
+[onDragMove](arkts-arkui-commonmethod-c.md#ondragmove), and [onDragLeave](arkts-arkui-commonmethod-c.md#ondragleave).
 
 **Since:** 10
 
@@ -119,8 +120,8 @@ DROP_ENABLED = 3
 DROP_DISABLED = 4
 ```
 
-组件不允许落入，在[onDragEnter](arkts-arkui-commonmethod-c.md#ondragenter)，[onDragMove](arkts-arkui-commonmethod-c.md#ondragmove)，  
-[onDragLeave](arkts-arkui-commonmethod-c.md#ondragleave)中使用。
+The component does not allow dropping. This value applies to [onDragEnter](arkts-arkui-commonmethod-c.md#ondragenter),  
+[onDragMove](arkts-arkui-commonmethod-c.md#ondragmove), and [onDragLeave](arkts-arkui-commonmethod-c.md#ondragleave).
 
 **Since:** 10
 

@@ -1,11 +1,5 @@
 # notifyWatermarkComplete
 
-## 导入模块
-
-```TypeScript
-import { print } from 'kits/@kit.BasicServicesKit';
-```
-
 ## notifyWatermarkComplete
 
 ```TypeScript
@@ -37,7 +31,7 @@ function notifyWatermarkComplete(jobId: string, result: WatermarkHandleResult): 
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 201 | the application does not have permission to call this function. |
+| [201](../../errorcode-universal.md#201-权限校验失败) | the application does not have permission to call this function. |
 
 ## 示例
 
@@ -52,15 +46,15 @@ let watermarkCallback: print.WatermarkCallback = (jobId: string, fd: number) => 
         print.notifyWatermarkComplete(jobId, print.WatermarkHandleResult.WATERMARK_HANDLE_SUCCESS);
         console.info('notifyWatermarkComplete success');
     } catch (error) {
-        console.error(`Failed to notifyWatermarkComplete. Code: ${error.code}, message: ${error.message}`);
+        console.error('notifyWatermarkComplete error: ' + JSON.stringify(error));
     }
-};
+}
 
 try {
     print.registerWatermarkCallback(watermarkCallback);
     console.info('registerWatermarkCallback success');
 } catch (error) {
-    console.error(`Failed to registerWatermarkCallback. Code: ${error.code}, message: ${error.message}`);
+    console.error('registerWatermarkCallback error: ' + JSON.stringify(error));
 }
 ```
 

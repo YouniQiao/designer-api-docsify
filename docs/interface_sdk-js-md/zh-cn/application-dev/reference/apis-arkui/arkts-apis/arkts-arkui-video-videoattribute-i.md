@@ -604,7 +604,7 @@ default setVideoOptions(value: VideoOptions): this
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | [VideoOptions](../arkts-components/arkts-arkui-videooptions-i.md) | 是 | Video constructor options |
+| value | [VideoOptions](arkts-arkui-video-videooptions-i.md) | 是 | Video constructor options |
 
 **返回值：**
 

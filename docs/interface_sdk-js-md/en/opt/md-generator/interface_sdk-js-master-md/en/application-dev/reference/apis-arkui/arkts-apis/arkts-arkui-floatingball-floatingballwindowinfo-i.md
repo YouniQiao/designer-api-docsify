@@ -1,0 +1,31 @@
+# FloatingBallWindowInfo
+
+Describes the floating ball window information.
+
+**Since:** 20
+
+<!--Device-floatingBall-interface FloatingBallWindowInfo--><!--Device-floatingBall-interface FloatingBallWindowInfo-End-->
+
+**System capability:** SystemCapability.Window.SessionManager
+
+## Modules to Import
+
+```TypeScript
+import { floatingBall } from 'kits/@kit.ArkUI';
+```
+
+## windowId
+
+```TypeScript
+readonly windowId: number
+```
+
+ID of the floating ball window.The value range is all integers.
+
+**Type:** number
+
+**Since:** 20
+
+<!--Device-FloatingBallWindowInfo-readonly windowId: int--><!--Device-FloatingBallWindowInfo-readonly windowId: int-End-->
+
+**System capability:** SystemCapability.Window.SessionManager

@@ -1,6 +1,6 @@
 # ScrollbarLayoutPolicy
 
-定义滚动条布局模式控制参数的枚举类型。
+Defines the layout policy for scrollbars, used with {@link scrollbarLayoutPolicy}.
 
 **Since:** 26.0.0
 
@@ -16,7 +16,7 @@
 CONTENT = 0
 ```
 
-滚动条左右布局模式跟随css设定。
+Adheres to W3C standards (CSS/HTML/XHTML) for scrollbar layout.
 
 **Since:** 26.0.0
 
@@ -34,7 +34,7 @@ CONTENT = 0
 SYSTEM = 1
 ```
 
-滚动条左右布局模式跟随系统语种设定。
+Follows the system UI conventions for scrollbar layout in the system language.
 
 **Since:** 26.0.0
 

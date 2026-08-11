@@ -1,6 +1,6 @@
 # SignatureUtils
 
-用于ECC/SM2签名数据转换的工具类。
+Provides utilities for converting ECC/SM2 signature data.
 
 **Since:** 20
 
@@ -22,7 +22,7 @@ import { cryptoFramework } from 'kits/@kit.CryptoArchitectureKit';
 static genEccSignature(spec: EccSignatureSpec): Uint8Array
 ```
 
-将（r、s）的ECC/SM2签名数据转换为ASN.1 DER编码。
+Converts an ECC/SM2 signature (r, s) to the ASN.1 DER encoding.
 
 **Since:** 20
 
@@ -38,22 +38,22 @@ static genEccSignature(spec: EccSignatureSpec): Uint8Array
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| spec | [EccSignatureSpec](arkts-cryptoarchitecture-cryptoframework-eccsignaturespec-i.md) | Yes | （r、s）的ECC/SM2签名数据。 |
+| spec | [EccSignatureSpec](arkts-cryptoarchitecture-cryptoframework-eccsignaturespec-i.md) | Yes | ECC/SM2 signature data to convert. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Uint8Array | ASN.1 DER编码的签名数据。 |
+| Uint8Array | Signature data in ASN.1 DER encoding. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 17630001 | 密码操作错误。 |
-| 17620001 | 内存操作失败。 |
-| 17620002 | 获取Native对象失败或参数转换失败。 |
-| 17620003 | 参数检查失败。可能的原因： &lt;br&gt;1. spec参数的r或s值为0或过大。 |
+| [17630001](../errorcode-crypto-framework.md#17630001-cryptographic-operation-error) | Crypto operation error. |
+| [17620001](../errorcode-crypto-framework.md#17620001-memory-operation-failed) | Memory operation failed. |
+| [17620002](../errorcode-crypto-framework.md#17620002-failed-to-obtain-the-native-object-or-convert-parameters) | Failed to obtain the native object or convert parameters. |
+| [17620003](../errorcode-crypto-framework.md#17620003-parameter-check-failed) | Parameter check failed. Possible causes: &lt;br&gt;1. The r or s value of the spec parameter is 0 or too large. |
 
 ## Examples
 
@@ -84,7 +84,7 @@ function testGenEccSignature() {
 static genEccSignatureSpec(data: Uint8Array): EccSignatureSpec
 ```
 
-从ASN.1 DER编码的ECC/SM2签名数据获取r和s。
+Generates r and s from the ECC/SM2 signature data in ASN.1 DER encoding.
 
 **Since:** 20
 
@@ -100,22 +100,22 @@ static genEccSignatureSpec(data: Uint8Array): EccSignatureSpec
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| data | Uint8Array | Yes | ASN.1 DER编码的签名数据。 |
+| data | Uint8Array | Yes | Signature data in ASN.1 DER encoding. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [EccSignatureSpec](arkts-cryptoarchitecture-cryptoframework-eccsignaturespec-i.md) | 包含r和s的数据对象。 |
+| [EccSignatureSpec](arkts-cryptoarchitecture-cryptoframework-eccsignaturespec-i.md) | Object that contains r and s. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 17630001 | 密码操作错误。 |
-| 17620001 | 内存操作失败。 |
-| 17620002 | 获取Native对象失败或参数转换失败。 |
-| 17620003 | 参数检查失败。可能的原因： &lt;br&gt;1. data参数长度为0或过大。 |
+| [17630001](../errorcode-crypto-framework.md#17630001-cryptographic-operation-error) | Crypto operation error. |
+| [17620001](../errorcode-crypto-framework.md#17620001-memory-operation-failed) | Memory operation failed. |
+| [17620002](../errorcode-crypto-framework.md#17620002-failed-to-obtain-the-native-object-or-convert-parameters) | Failed to obtain the native object or convert parameters. |
+| [17620003](../errorcode-crypto-framework.md#17620003-parameter-check-failed) | Parameter check failed. Possible causes: &lt;br&gt;1. The length of the data parameter is 0 or too large. |
 
 ## Examples
 

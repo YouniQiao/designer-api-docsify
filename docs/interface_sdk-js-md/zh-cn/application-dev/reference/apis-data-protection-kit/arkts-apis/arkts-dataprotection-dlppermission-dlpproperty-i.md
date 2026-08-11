@@ -10,12 +10,6 @@
 
 **系统能力：** SystemCapability.Security.DataLossPrevention
 
-## 导入模块
-
-```TypeScript
-import { dlpPermission } from 'kits/@kit.DataProtectionKit';
-```
-
 ## actionUponExpiry
 
 ```TypeScript
@@ -24,7 +18,7 @@ actionUponExpiry?: ActionType
 
 表示到期后文件是否允许打开（打开后拥有编辑权限），仅在expireTime不为空时生效，默认为空。
 
-**类型：** [ActionType](../../apis-avsession-kit/arkts-apis/arkts-avsession-avmusictemplate-actiontype-t.md)
+**类型：** [ActionType](arkts-dataprotection-dlppermission-actiontype-e.md)
 
 **起始版本：** 21
 
@@ -152,7 +146,7 @@ extensionFields?: Record<string, Object>
 
 表示DLP文件的扩展属性，默认为空。
 
-**类型：** [Record](../../apis-default/arkts-apis/arkts-record-t.md)&lt;string, Object&gt;
+**类型：** Record&lt;string, Object&gt;
 
 **起始版本：** 24
 

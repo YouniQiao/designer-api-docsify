@@ -1,0 +1,40 @@
+# @ohos.enterprise.locationManager(Location Service Management)
+
+The **locationManager** module provides location service management capabilities for devices, including setting and obtaining the location service policy.
+
+**Use cases:**This module is applicable to enterprise device management scenarios, where administrators can centrally manage location service policies for devices.
+
+> **NOTE：**
+> 
+> The APIs of this module can be called only by a device administrator application that is enabled. For details, see
+> [MDM Kit Development](../../../mdm/mdm-kit-guide.md).
+
+**Since:** 12
+
+**Model restriction:** This API can be used only in the stage model.
+
+<!--Device-unnamed-declare namespace locationManager--><!--Device-unnamed-declare namespace locationManager-End-->
+
+**System capability:** SystemCapability.Customization.EnterpriseDeviceManager
+
+## Modules to Import
+
+```TypeScript
+import { locationManager } from 'kits/@kit.MDMKit';
+```
+
+## Summary
+
+### Functions
+
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
+| --- |
+| [getLocationPolicy](arkts-mdm-locationmanager-getlocationpolicy-f.md#getlocationpolicy) |
+| [getLocationPolicy](arkts-mdm-locationmanager-getlocationpolicy-f.md#getlocationpolicy-1) |
+| [setLocationPolicy](arkts-mdm-locationmanager-setlocationpolicy-f.md#setlocationpolicy) |
+
+### Enums
+
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
+| --- |
+| [LocationPolicy](arkts-mdm-locationmanager-locationpolicy-e.md) |

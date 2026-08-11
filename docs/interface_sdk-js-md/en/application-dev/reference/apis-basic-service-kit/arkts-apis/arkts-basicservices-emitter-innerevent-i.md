@@ -1,6 +1,6 @@
 # InnerEvent
 
-订阅或发送的事件，订阅事件时`EventPriority`不生效。
+Describes an event to subscribe to or emit. The **EventPriority** settings do not take effect under event subscription.
 
 **Since:** 7
 
@@ -22,7 +22,7 @@ import { emitter } from 'kits/@kit.BasicServicesKit';
 eventId: long
 ```
 
-事件ID，由开发者定义，用于辨别事件。
+Event ID.
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：long
 
@@ -42,7 +42,7 @@ eventId: long
 priority?: EventPriority
 ```
 
-事件的优先级，默认值为EventPriority.LOW。
+Event priority. The default value is **EventPriority.LOW**.
 
 **Type:** [EventPriority](arkts-basicservices-emitter-eventpriority-e.md)
 

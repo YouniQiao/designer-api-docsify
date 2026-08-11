@@ -250,7 +250,7 @@ backgroundEffect?: BackgroundEffectOptions
 
 定义Popup的背景效果选项。
 
-**类型：** [BackgroundEffectOptions](arkts-arkui-backgroundeffectoptions-i.md)
+**类型：** [BackgroundEffectOptions](../arkts-apis/arkts-arkui-common-backgroundeffectoptions-i.md)
 
 **起始版本：** 26.0.0
 
@@ -829,7 +829,7 @@ transition?: TransitionEffect
 
 4.不支持通过[updatePopup](../../../reference/apis-arkui/arkts-apis-uicontext-promptaction.md#updatepopup18)进行更新。
 
-**类型：** [TransitionEffect](../arkts-apis/arkts-arkui-common-transitioneffect-c.md)
+**类型：** [TransitionEffect](arkts-arkui-transitioneffect-c.md)
 
 **起始版本：** 18
 

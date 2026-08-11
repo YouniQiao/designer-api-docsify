@@ -1,6 +1,6 @@
 # ExtensionOidType
 
-证书扩展OID类型的枚举。
+Enumerates the OID types of the certificate extensions that can be obtained.
 
 **Since:** 10
 
@@ -16,7 +16,7 @@
 EXTENSION_OID_TYPE_ALL = 0
 ```
 
-所有OID。
+All object identifiers.
 
 **Since:** 10
 
@@ -34,7 +34,7 @@ EXTENSION_OID_TYPE_ALL = 0
 EXTENSION_OID_TYPE_CRITICAL = 1
 ```
 
-critical为true的OID。
+Object identifier whose **critical** is **true**.
 
 **Since:** 10
 
@@ -52,7 +52,7 @@ critical为true的OID。
 EXTENSION_OID_TYPE_UNCRITICAL = 2
 ```
 
-critical为false的OID。
+Object identifier whose **critical** is **false**.
 
 **Since:** 10
 

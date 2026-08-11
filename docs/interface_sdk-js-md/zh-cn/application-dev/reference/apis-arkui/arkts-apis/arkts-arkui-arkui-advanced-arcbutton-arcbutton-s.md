@@ -14,12 +14,6 @@ ArcButton({ options: ArcButtonOptions })
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Circle
 
-## 导入模块
-
-```TypeScript
-import { ArcButtonPosition, ArcButton, ArcButtonStatus, ArcButtonStyleMode, ArcButtonOptions, ArcButtonProgressConfig } from 'kits/@kit.ArkUI';
-```
-
 ## build
 
 ```TypeScript

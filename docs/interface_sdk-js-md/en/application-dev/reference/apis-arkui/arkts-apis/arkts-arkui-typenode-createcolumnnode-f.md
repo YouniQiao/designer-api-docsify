@@ -6,7 +6,7 @@
 export function createColumnNode(context: UIContext, options?: FrameNodeOptions): Column
 ```
 
-创建Column类型的FrameNode。
+Create a FrameNode of Column type.On API 26.0.0 and above, It can also create a FrameNode of Column type with options.
 
 **Since:** 23
 
@@ -22,12 +22,12 @@ export function createColumnNode(context: UIContext, options?: FrameNodeOptions)
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| context | [UIContext](arkts-arkui-arkui-uicontext-uicontext-c.md) | Yes | 用于创建FrameNode的UI上下文。 |
-| options | [FrameNodeOptions](arkts-arkui-framenode-framenodeoptions-i.md) | No | Options for configuring FrameNode creation.<br>**Since:** 24 |
+| context | [UIContext](arkts-arkui-arkui-uicontext-uicontext-c.md) | Yes | uiContext used to create the FrameNode. |
+| options | [FrameNodeOptions](arkts-arkui-framenode-framenodeoptions-i.md) | No | Options for configuring FrameNode creation.<br>**Since:** 26.0.0 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [Column](arkts-arkui-typenode-column-t.md) | 返回Column类型的FrameNode。 |
+| [Column](arkts-arkui-typenode-column-t.md) | Return Column type FrameNode. |
 

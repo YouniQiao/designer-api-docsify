@@ -1,6 +1,6 @@
 # BlankFrameNode
 
-定义Blank类型的FrameNode。
+Define the Blank type of FrameNode.
 
 **Inheritance/Implementation:** BlankFrameNode extends [TypedFrameNode<BlankAttribute>](TypedFrameNode<BlankAttribute>)
 
@@ -18,7 +18,7 @@
 abstract initialize(min?: double | string): BlankAttribute
 ```
 
-初始化Blank类型的FrameNode。
+Initialize Blank FrameNode.
 
 **Since:** 23
 
@@ -34,7 +34,7 @@ abstract initialize(min?: double | string): BlankAttribute
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| min | double \| string | No | Blank节点的选项。 |
+| min | double \| string | No | Blank options. |
 
 **Return value:**
 

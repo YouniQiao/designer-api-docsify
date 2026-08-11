@@ -4,7 +4,7 @@
 type PlayMediaEntityEvent = (mediaEntity: MediaEntity) => Promise<void>
 ```
 
-媒体实体播放事件。使用Promise异步回调。
+The play media entity event.
 
 **Since:** 23
 
@@ -20,11 +20,11 @@ type PlayMediaEntityEvent = (mediaEntity: MediaEntity) => Promise<void>
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| mediaEntity | [MediaEntity](arkts-avsession-avmusictemplate-mediaentity-i.md) | Yes | 需要播放的媒体实体。 |
+| mediaEntity | [MediaEntity](arkts-avsession-avmusictemplate-mediaentity-i.md) | Yes | media entity |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise对象，无返回结果。 |
+| Promise&lt;void&gt; | (void) returned through promise |
 

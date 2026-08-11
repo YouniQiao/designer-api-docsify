@@ -1,7 +1,7 @@
 # ConnectOptions
 
-在连接指定的后台服务时作为入参，用于接收连接过程中的状态变化，如作为  
-[connectServiceExtensionAbility](arkts-ability-uiabilitycontext-c.md#connectserviceextensionability)的入参，连接指定的ServiceExtensionAbility。
+**ConnectOptions** can be used as an input parameter to receive status changes during the connection to a background service. For example, it is used as an input parameter of  
+[connectServiceExtensionAbility](arkts-ability-uiabilitycontext-c.md#connectserviceextensionability)to connect to a ServiceExtensionAbility.
 
 **Since:** 7
 
@@ -17,7 +17,7 @@
 onConnect(elementName: ElementName, remote: rpc.IRemoteObject): void
 ```
 
-建立连接时的回调函数。
+Called when a connection is set up.
 
 **Since:** 7
 
@@ -31,8 +31,8 @@ onConnect(elementName: ElementName, remote: rpc.IRemoteObject): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| elementName | [ElementName](arkts-ability-elementname-i.md) | Yes | 目标Ability的elementName。 |
-| remote | rpc.IRemoteObject | Yes | 用于与目标Ability进行IPC通信的IRemoteObject实例。 |
+| elementName | [ElementName](arkts-ability-elementname-i.md) | Yes | Element name of the target ability. |
+| remote | rpc.IRemoteObject | Yes | IRemoteObject instance used for IPC with the target ability. |
 
 ## onConnect
 
@@ -40,7 +40,7 @@ onConnect(elementName: ElementName, remote: rpc.IRemoteObject): void
 onConnect: OnConnectFn
 ```
 
-与指定的后台服务成功建立连接时，会触发该回调。
+Callback invoked when a connection is set up.
 
 **Since:** 23
 
@@ -56,7 +56,7 @@ onConnect: OnConnectFn
 onDisconnect(elementName: ElementName): void
 ```
 
-断开连接时的回调函数。
+Called when a connection is interrupted.
 
 **Since:** 7
 
@@ -70,7 +70,7 @@ onDisconnect(elementName: ElementName): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| elementName | [ElementName](arkts-ability-elementname-i.md) | Yes | 目标Ability的elementName。 |
+| elementName | [ElementName](arkts-ability-elementname-i.md) | Yes | Element name of the target ability. |
 
 ## onDisconnect
 
@@ -78,7 +78,7 @@ onDisconnect(elementName: ElementName): void
 onDisconnect: OnDisconnectFn
 ```
 
-与指定的后台服务成功断开连接时，会触发该回调。
+Callback invoked when a connection is interrupted.
 
 **Since:** 23
 
@@ -94,7 +94,7 @@ onDisconnect: OnDisconnectFn
 onFailed(code: number): void
 ```
 
-连接失败时的回调函数。
+Called when a connection fails.
 
 **Since:** 7
 
@@ -108,7 +108,7 @@ onFailed(code: number): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| code | number | Yes | 连接指定Ability失败返回的错误码。  错误码详细介绍请参考[通用错误码](../errorcode-universal.md)和[元能力子系统错误码](errorcode-ability.md)。  201 - The application does not have permission to call the interface.  16000001 - The specified ability does not exist.  16000002 - Incorrect ability type.  16000004 - Cannot start an invisible component.  16000005 - The specified process does not have the permission.  16000006 - Cross-user operations are not allowed.  16000008 - The crowdtesting application expires.  16000053 - The ability is not on the top of the UI.  16000055 - Installation-free timed out.  16000050 - Internal error. |
+| code | number | Yes | Error code returned when connection to the specified ability fails.  For details about the error codes, see [Universal Error Codes](../errorcode-universal.md) and [Ability Error Codes](errorcode-ability.md).  201 - The application does not have permission to call the interface.  16000001 - The specified ability does not exist.  16000002 - Incorrect ability type.  16000004 - Cannot start an invisible component.  16000005 - The specified process does not have the permission.  16000006 - Cross-user operations are not allowed.  16000008 - The crowdtesting application expires.  16000053 - The ability is not on the top of the UI.  16000055 - Installation-free timed out.  16000050 - Internal error. |
 
 ## onFailed
 
@@ -116,7 +116,7 @@ onFailed(code: number): void
 onFailed: OnFailedFn
 ```
 
-与指定的后台服务建立连接失败时，会触发该回调。
+Callback invoked when a connection fails.
 
 **Since:** 23
 

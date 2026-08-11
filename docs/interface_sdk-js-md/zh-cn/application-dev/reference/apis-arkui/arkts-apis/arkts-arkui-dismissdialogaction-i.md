@@ -40,7 +40,7 @@ reason: DismissReason
 
 Dialog无法关闭原因。根据开发者需要选择不同操作下，Dialog是否需要关闭。
 
-**类型：** [DismissReason](../arkts-components/arkts-arkui-dismissreason-e.md)
+**类型：** [DismissReason](arkts-arkui-common-dismissreason-e.md)
 
 **起始版本：** 12
 

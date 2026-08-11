@@ -1,6 +1,6 @@
 # PackingDynamicRange
 
-描述编码时期望的图像动态范围。
+Enumerates the desired dynamic range of an image during encoding.
 
 **Since:** 12
 
@@ -16,7 +16,7 @@
 AUTO = 0
 ```
 
-自适应，根据[pixelmap](arkts-image-image-pixelmap-i.md)内容处理。即如果pixelmap本身为HDR，则会按照HDR内容进行编码；反之按照SDR内容编码。
+Adaptive. The [pixelmap](arkts-image-image-pixelmap-i.md) is encoded based on the format. If the PixelMap is in HDR format, it is encoded based on the HDR content; otherwise, it is encoded based on the SDR content.
 
 **Since:** 12
 
@@ -32,7 +32,7 @@ AUTO = 0
 SDR = 1
 ```
 
-按照标准动态范围处理图片。
+The image is decoded according to the standard dynamic range.
 
 **Since:** 12
 

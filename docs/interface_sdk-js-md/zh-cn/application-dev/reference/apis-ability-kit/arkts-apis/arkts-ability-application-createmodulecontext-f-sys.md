@@ -1,11 +1,5 @@
 # createModuleContext（系统接口）
 
-## 导入模块
-
-```TypeScript
-import { application } from 'kits/@kit.AbilityKit';
-```
-
 ## createModuleContext
 
 ```TypeScript
@@ -55,25 +49,26 @@ export function createModuleContext(context: Context, bundleName: string, module
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
-| 201 | Permission denied. |
-| 202 | Permission denied, non-system app called system api. |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
+| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission denied, non-system app called system api. |
 
 ## 示例
 
 ```TypeScript
-import { UIAbility, application, common } from '@kit.AbilityKit';
+import { UIAbility, application, common, Context } from '@kit.AbilityKit';
 import { BusinessError } from '@kit.BasicServicesKit';
 
 export default class EntryAbility extends UIAbility {
   onCreate() {
     let moduleContext: common.Context;
     try {
-      application.createModuleContext(this.context, 'bundlename', 'entry').then((data: common.Context)=>{
+      application.createModuleContext(this.context, 'bundlename', 'entry').then((data: common.Context) => {
         moduleContext = data;
         console.info('createModuleContext success!');
-      }).catch((error : BusinessError)=>{
-        console.error(`createModuleContext failed, error.code: ${error.code}, error.message: ${error.message}`);
+      }).catch((err: Error) => {
+        let error = err as BusinessError;
+        console.error(`createModuleContext failed, error.code: ${(error as BusinessError).code}, error.message: ${(error as BusinessError).message}`);
       })
     } catch (error) {
       console.error(`createModuleContext failed, error.code: ${(error as BusinessError).code}, error.message: ${(error as BusinessError).message}`);

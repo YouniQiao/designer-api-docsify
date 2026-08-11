@@ -1,6 +1,6 @@
 # ContinuousTaskCancelReason
 
-长时任务取消原因。
+Describes the reason for canceling a continuous task.
 
 **Since:** 15
 
@@ -16,7 +16,7 @@
 USER_CANCEL = 1
 ```
 
-用户取消。
+The task is canceled by the user.
 
 **Since:** 15
 
@@ -32,7 +32,7 @@ USER_CANCEL = 1
 SYSTEM_CANCEL = 2
 ```
 
-系统取消。
+The task is canceled by the system.
 
 **Since:** 15
 
@@ -48,7 +48,7 @@ SYSTEM_CANCEL = 2
 USER_CANCEL_REMOVE_NOTIFICATION = 3
 ```
 
-用户移除通知。预留接口，暂未启用。
+User removal notification. This value is reserved.
 
 **Since:** 15
 
@@ -64,7 +64,7 @@ USER_CANCEL_REMOVE_NOTIFICATION = 3
 SYSTEM_CANCEL_DATA_TRANSFER_LOW_SPEED = 4
 ```
 
-申请DATA_TRANSFER类型长时任务，但是数据传输速率低。预留接口，暂未启用。
+A continuous task of the DATA_TRANSFER type is requested, but the data transmission rate is low. This value is reserved.
 
 **Since:** 15
 
@@ -80,7 +80,8 @@ SYSTEM_CANCEL_DATA_TRANSFER_LOW_SPEED = 4
 SYSTEM_CANCEL_AUDIO_PLAYBACK_NOT_USE_AVSESSION = 5
 ```
 
-申请AUDIO_PLAYBACK类型长时任务，但是未接入[AVSession](../../../media/avsession/avsession-overview.md)。预留接口，暂未启用。
+A continuous task of the AUDIO_PLAYBACK type is requested, but the   
+[AVSession](../../../media/avsession/avsession-overview.md) is not accessed. This value is reserved.
 
 **Since:** 15
 
@@ -96,7 +97,7 @@ SYSTEM_CANCEL_AUDIO_PLAYBACK_NOT_USE_AVSESSION = 5
 SYSTEM_CANCEL_AUDIO_PLAYBACK_NOT_RUNNING = 6
 ```
 
-申请AUDIO_PLAYBACK类型长时任务，但是未播放音视频。预留接口，暂未启用。
+A continuous task of the AUDIO_PLAYBACK type is requested, but the audio and video are not played. This value is reserved.
 
 **Since:** 15
 
@@ -112,7 +113,7 @@ SYSTEM_CANCEL_AUDIO_PLAYBACK_NOT_RUNNING = 6
 SYSTEM_CANCEL_AUDIO_RECORDING_NOT_RUNNING = 7
 ```
 
-申请AUDIO_RECORDING类型长时任务，但是未录制。预留接口，暂未启用。
+A continuous task of the AUDIO_RECORDING type is requested, but audio recording is not in progress. This value is reserved.
 
 **Since:** 15
 
@@ -128,7 +129,7 @@ SYSTEM_CANCEL_AUDIO_RECORDING_NOT_RUNNING = 7
 SYSTEM_CANCEL_NOT_USE_LOCATION = 8
 ```
 
-申请LOCATION类型长时任务，但是未使用定位导航。预留接口，暂未启用。
+A continuous task of the **LOCATION** type is requested, but the location service is not in use. This value is reserved.
 
 **Since:** 15
 
@@ -144,7 +145,7 @@ SYSTEM_CANCEL_NOT_USE_LOCATION = 8
 SYSTEM_CANCEL_NOT_USE_BLUETOOTH = 9
 ```
 
-申请BLUETOOTH_INTERACTION类型长时任务，但是未使用蓝牙相关业务。预留接口，暂未启用。
+A continuous task of the BLUETOOTH_INTERACTION type is requested, but Bluetooth-related services are not used. This value is reserved.
 
 **Since:** 15
 
@@ -160,7 +161,7 @@ SYSTEM_CANCEL_NOT_USE_BLUETOOTH = 9
 SYSTEM_CANCEL_NOT_USE_MULTI_DEVICE = 10
 ```
 
-申请MULTI_DEVICE_CONNECTION类型长时任务，但是未使用多设备互联。预留接口，暂未启用。
+A continuous task of the MULTI_DEVICE_CONNECTION type is requested, but multi-device connection is not used. This value is reserved.
 
 **Since:** 15
 
@@ -176,7 +177,7 @@ SYSTEM_CANCEL_NOT_USE_MULTI_DEVICE = 10
 SYSTEM_CANCEL_USE_ILLEGALLY = 11
 ```
 
-使用非法类型的长时任务，如申请AUDIO_PLAYBACK类型长时任务，但是使用音视频播放及定位导航业务。预留接口，暂未启用。
+A continuous task of an invalid type is used. For example, a continuous task of the **AUDIO_PLAYBACK** type is requested, but the audio playback and location services are in use. This value is reserved.
 
 **Since:** 15
 

@@ -1,6 +1,6 @@
 # UserAgeGroup
 
-Enumerates the user age groups, for example, child or adult.
+表示用户具体的年龄分类群组，例如，儿童或成年人。
 
 **起始版本：** 20
 
@@ -18,7 +18,7 @@ Enumerates the user age groups, for example, child or adult.
 OTHERS = 0
 ```
 
-Adult.
+表示是成年人操作。
 
 **起始版本：** 20
 
@@ -36,7 +36,7 @@ Adult.
 CHILD = 1
 ```
 
-Child.
+表示是儿童操作。
 
 **起始版本：** 20
 

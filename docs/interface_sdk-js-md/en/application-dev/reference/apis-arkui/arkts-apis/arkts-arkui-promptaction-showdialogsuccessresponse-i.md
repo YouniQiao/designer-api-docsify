@@ -1,6 +1,6 @@
 # ShowDialogSuccessResponse
 
-对话框的响应结果。
+Success response.
 
 **Since:** 23
 
@@ -22,7 +22,7 @@ import { LevelMode, ImmersiveMode, LevelOrder } from 'kits/@kit.ArkUI';
 index: int
 ```
 
-选中按钮在buttons数组中的索引，从0开始。
+Index of the selected button, starting from 0.
 
 **Type:** int
 

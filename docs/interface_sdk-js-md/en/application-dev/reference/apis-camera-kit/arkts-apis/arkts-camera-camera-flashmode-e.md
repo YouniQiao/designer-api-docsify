@@ -1,6 +1,6 @@
 # FlashMode
 
-枚举，闪光灯模式。
+Enumerates the flash modes.
 
 **Since:** 10
 
@@ -16,7 +16,7 @@
 FLASH_MODE_CLOSE = 0
 ```
 
-闪光灯关闭。
+The flash is off.
 
 **Since:** 10
 
@@ -34,7 +34,7 @@ FLASH_MODE_CLOSE = 0
 FLASH_MODE_OPEN = 1
 ```
 
-闪光灯打开。
+The flash is on.
 
 **Since:** 10
 
@@ -52,7 +52,7 @@ FLASH_MODE_OPEN = 1
 FLASH_MODE_AUTO = 2
 ```
 
-自动闪光灯。
+The flash mode is auto, indicating that the flash fires automatically depending on the photo capture conditions.
 
 **Since:** 10
 
@@ -70,7 +70,7 @@ FLASH_MODE_AUTO = 2
 FLASH_MODE_ALWAYS_OPEN = 3
 ```
 
-闪光灯常亮。
+The flash is steady on.
 
 **Since:** 10
 

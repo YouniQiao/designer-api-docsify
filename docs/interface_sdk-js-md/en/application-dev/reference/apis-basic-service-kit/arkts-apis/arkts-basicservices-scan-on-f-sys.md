@@ -12,7 +12,7 @@ import { scan } from 'kits/@kit.BasicServicesKit';
 function on(type: 'scanDeviceAdd', callback: Callback<ScannerDevice>): void
 ```
 
-注册扫描仪设备添加事件回调（系统API）。使用callback异步回调。
+Registers a callback used to listen for the scanner addition event. This API uses an asynchronous callback to return the result.
 
 **Since:** 20
 
@@ -30,15 +30,15 @@ function on(type: 'scanDeviceAdd', callback: Callback<ScannerDevice>): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'scanDeviceAdd' | Yes | 事件类型。 |
-| callback | [Callback](arkts-basicservices-base-callback-i.md)&lt;ScannerDevice&gt; | Yes | 回调函数，返回扫描仪设备添加信息。 |
+| type | 'scanDeviceAdd' | Yes | Event type. |
+| callback | [Callback](arkts-basicservices-base-callback-i.md)&lt;ScannerDevice&gt; | Yes | Callback used to return the added scanner. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 201 | Permission denied. |
-| 202 | Not system application. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system application. |
 
 ## Examples
 
@@ -57,7 +57,7 @@ scan.on('scanDeviceAdd', (device: scan.ScannerDevice) => {
 function on(type: 'scanDeviceDel', callback: Callback<ScannerDevice>): void
 ```
 
-注册扫描仪设备删除事件回调（系统API）。使用callback异步回调。
+Registers a callback used to listen for the scanner deletion event. This API uses an asynchronous callback to return the result.
 
 **Since:** 20
 
@@ -75,15 +75,15 @@ function on(type: 'scanDeviceDel', callback: Callback<ScannerDevice>): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'scanDeviceDel' | Yes | 事件类型。 |
-| callback | [Callback](arkts-basicservices-base-callback-i.md)&lt;ScannerDevice&gt; | Yes | 回调函数，返回扫描仪设备删除信息。 |
+| type | 'scanDeviceDel' | Yes | Event type. |
+| callback | [Callback](arkts-basicservices-base-callback-i.md)&lt;ScannerDevice&gt; | Yes | Callback used to return the deleted scanner. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 201 | Permission denied. |
-| 202 | Not system application. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system application. |
 
 ## Examples
 

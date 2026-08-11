@@ -1,11 +1,5 @@
 # addExcludeDate
 
-## 导入模块
-
-```TypeScript
-import { reminderAgentManager } from 'kits/@kit.BackgroundTasksKit';
-```
-
 ## addExcludeDate
 
 ```TypeScript
@@ -39,11 +33,13 @@ function addExcludeDate(reminderId: int, date: Date): Promise<void>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 401 | If the input parameter is not valid parameter. |
-| 201 | Permission denied |
-| 1700003 | The reminder does not exist. |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | If the input parameter is not valid parameter. |
+| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied |
+| [1700003](../../apis-backgroundtasks-kit/errorcode-reminderAgentManager.md#1700003-提醒不存在) | The reminder does not exist. |
 
 ## 示例
+
+ArkTS-Dyn示例：
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -55,6 +51,20 @@ reminderAgentManager.addExcludeDate(reminderId, date).then(() => {
   console.info("addExcludeDate promise");
 }).catch((err: BusinessError) => {
   console.error("promise err code:" + err.code + " message:" + err.message);
+});
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+import { reminderAgentManager } from '@kit.BackgroundTasksKit';
+
+let reminderId: int = 1;
+let date = new Date();
+reminderAgentManager.addExcludeDate(reminderId, date).then(() => {
+  console.info(`Succeeded in adding exclude date.`);
+}).catch((err): void => {
+  console.error(`Failed to add exclude date. Code is ${err.code}, message is ${err.message}`);
 });
 ```
 

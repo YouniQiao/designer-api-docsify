@@ -1,10 +1,12 @@
 # LinearGradientOptions
 
-线性渐变的参数。
+Defines the linear gradient parameters.
 
-> **说明：**
+> **NOTE：**
 > 
-> 为规范匿名对象的定义，API 18版本修改了此处的元素定义。其中，保留了历史匿名对象的起始版本信息，会出现外层元素@since版本号高于内层元素版本号的情况，但这不影响接口的使用。
+> To standardize anonymous object definitions, the element definitions here have been revised in API version 18.
+> While historical version information is preserved for anonymous objects, there may be cases where the outer element
+> 's @since version number is higher than inner elements'. This does not affect interface usability.
 
 **Since:** 18
 
@@ -20,21 +22,25 @@
 angle?: number | string
 ```
 
-Defines starting angle of linear gradient.
+Start angle of the linear gradient. When the angle is 0 degrees, the gradient direction is from bottom to top (that is, 0 o'clock direction). A positive value indicates a clockwise rotation from the origin, (0, 0).
 
-Anonymous Object Rectification.
+Value range: (-∞, +∞). Positive values indicate clockwise rotation, and negative values indicate counterclockwise rotation.
+
+Default value: **180**
+
+When specified as a string, valid values are pure numbers or numbers followed by units: "deg" (degrees), "rad" (radians), "grad" (gradians), or "turn" (turns). Examples: "90", "90deg", "1.57rad".
 
 **Type:** number \| string
 
-**Default:** 180
+**Default:** 180 [since 18]
 
-**Since:** 18
+**Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 18.
+**ArkTS mode:** ArkTS-Dyn only, since version 7.
 
-**Atomic service API:** This API can be used in atomic services since API version 18.
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
-**Widget capability:** This API can be used in ArkTS widgets since API version 18.
+**Widget capability:** This API can be used in ArkTS widgets since API version 9.
 
 <!--Device-LinearGradientOptions-angle?: number | string--><!--Device-LinearGradientOptions-angle?: number | string-End-->
 
@@ -46,19 +52,19 @@ Anonymous Object Rectification.
 colors: Array<[ResourceColor, number]>
 ```
 
-Defines color description for gradients.
+Array of color stops, each of which consists of a color and its stop position. Invalid colors are automatically skipped. **ResourceColor** indicates the color. **number** represents the stop position of the color, with a range of [0, 1.0]. Values less than 0 are treated as **0**, and values greater than 1.0 are treated as **1.0**. **0** indicates the start of the gradient; **1.0** indicates the end. To achieve multi-color gradients, the **number** parameters in the array should be set in ascending order. If a later number is less than a previous one, it is treated as equal to the previous value.
 
-Anonymous Object Rectification.
+Default value: **[]**, meaning no gradient effect.
 
 **Type:** Array&lt;[ResourceColor, number]&gt;
 
-**Since:** 18
+**Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 18.
+**ArkTS mode:** ArkTS-Dyn only, since version 7.
 
-**Atomic service API:** This API can be used in atomic services since API version 18.
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
-**Widget capability:** This API can be used in ArkTS widgets since API version 18.
+**Widget capability:** This API can be used in ArkTS widgets since API version 9.
 
 <!--Device-LinearGradientOptions-colors: Array<[ResourceColor, number]>--><!--Device-LinearGradientOptions-colors: Array<[ResourceColor, number]>-End-->
 
@@ -70,21 +76,22 @@ Anonymous Object Rectification.
 direction?: GradientDirection
 ```
 
-Defines the direction of linear gradient.
+Direction of the linear gradient. It does not take effect when **angle** is set to a non-undefined value.   
+**GradientDirection.None** uses the default direction. 
 
-Anonymous Object Rectification.
+Default value: **GradientDirection.Bottom**.
 
 **Type:** [GradientDirection](../arkts-apis/arkts-arkui-gradientdirection-e.md)
 
-**Default:** GradientDirection.Bottom
+**Default:** GradientDirection.Bottom [since 18]
 
-**Since:** 18
+**Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 18.
+**ArkTS mode:** ArkTS-Dyn only, since version 7.
 
-**Atomic service API:** This API can be used in atomic services since API version 18.
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
-**Widget capability:** This API can be used in ArkTS widgets since API version 18.
+**Widget capability:** This API can be used in ArkTS widgets since API version 9.
 
 <!--Device-LinearGradientOptions-direction?: GradientDirection--><!--Device-LinearGradientOptions-direction?: GradientDirection-End-->
 
@@ -96,21 +103,25 @@ Anonymous Object Rectification.
 repeating?: boolean
 ```
 
-Defines gradient colors with repeated coloring.
+Whether the colors are repeated.
 
-Anonymous Object Rectification.
+Default value: **false**.
+
+**true**: The colors are repeated.
+
+**false**: The colors are not repeated.
 
 **Type:** boolean
 
-**Default:** false
+**Default:** false [since 18]
 
-**Since:** 18
+**Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 18.
+**ArkTS mode:** ArkTS-Dyn only, since version 7.
 
-**Atomic service API:** This API can be used in atomic services since API version 18.
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
-**Widget capability:** This API can be used in ArkTS widgets since API version 18.
+**Widget capability:** This API can be used in ArkTS widgets since API version 9.
 
 <!--Device-LinearGradientOptions-repeating?: boolean--><!--Device-LinearGradientOptions-repeating?: boolean-End-->
 

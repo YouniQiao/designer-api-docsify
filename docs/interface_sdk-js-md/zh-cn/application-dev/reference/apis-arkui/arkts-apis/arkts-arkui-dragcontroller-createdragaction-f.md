@@ -1,11 +1,5 @@
 # createDragAction
 
-## 导入模块
-
-```TypeScript
-import { dragController } from 'kits/@kit.ArkUI';
-```
-
 ## createDragAction
 
 ```TypeScript
@@ -42,7 +36,7 @@ function createDragAction(customArray: Array<CustomBuilder | DragItemInfo>, drag
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| customArray | Array&lt;[CustomBuilder](../arkts-components/arkts-arkui-custombuilder-t.md) \| [DragItemInfo](../arkts-components/arkts-arkui-dragiteminfo-i.md)&gt; | 是 | 拖拽发起后跟手效果所拖拽的对象。 |
+| customArray | Array&lt;CustomBuilder \| DragItemInfo&gt; | 是 | 拖拽发起后跟手效果所拖拽的对象。 |
 | dragInfo | [DragInfo](arkts-arkui-dragcontroller-draginfo-i.md) | 是 | 拖拽信息。 |
 
 **返回值：**
@@ -55,8 +49,8 @@ function createDragAction(customArray: Array<CustomBuilder | DragItemInfo>, drag
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 100001 | Internal handling failed. |
-| 401 | Parameter error. Possible causes: &lt;br&gt; 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameters types. &lt;br&gt; 3. Parameter verification failed. |
+| [100001](../errorcode-internal.md#100001-接口调用异常错误码) | Internal handling failed. |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: &lt;br&gt; 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameters types. &lt;br&gt; 3. Parameter verification failed. |
 
 ## 示例
 
@@ -153,10 +147,10 @@ struct DragControllerPage {
               })
               this.dragAction.startDrag().then(() => {
               }).catch((err: Error) => {
-                console.error(`Failed to start drag. Code: ${err.code}, message: ${err.message}`);
+                console.error(`start drag Error:${err.message}`);
               })
             } catch (err) {
-              console.error(`Failed to create dragAction. Code: ${err.code}, message: ${err.message}`);
+              console.error(`create dragAction Error:${err.message}`);
             }
           }
         }

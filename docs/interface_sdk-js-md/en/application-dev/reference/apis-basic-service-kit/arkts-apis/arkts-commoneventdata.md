@@ -6,5 +6,5 @@
 
 | Name | Description |
 | --- | --- |
-| [CommonEventData](arkts-basicservices-commoneventdata-commoneventdata-i.md) | 表示公共事件的数据。CommonEventData用于在公共事件订阅场景中承载订阅者接收到的公共事件数据，包含事件名称、发布者包名、code数据、data数据及附加参数等信息，适用于应用订阅并处理公共事件、解析事件携带数据的场景。 |
+| [CommonEventData](arkts-basicservices-commoneventdata-commoneventdata-i.md) | Describes the data of a common event. The **CommonEventData** module is used to carry the common event data received by subscribers in common event subscription scenarios. The data includes the event name, publisher bundle name, code, data, and additional parameters. This module is applicable to scenarios where apps subscribe to and process common events and parse the data carried in the events. |
 

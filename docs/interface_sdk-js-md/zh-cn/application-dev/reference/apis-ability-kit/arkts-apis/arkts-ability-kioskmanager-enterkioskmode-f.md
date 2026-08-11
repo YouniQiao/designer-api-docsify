@@ -1,11 +1,5 @@
 # enterKioskMode
 
-## 导入模块
-
-```TypeScript
-import { kioskManager } from 'kits/@kit.AbilityKit';
-```
-
 ## enterKioskMode
 
 ```TypeScript
@@ -40,13 +34,15 @@ function enterKioskMode(context: UIAbilityContext): Promise<void>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 801 | Capability not supported. |
-| 16000113 | Current ability is not in foreground. |
-| 16000050 | Failed to connect to the system service. |
-| 16000110 | The current application is not in Kiosk app list and cannot enter Kiosk mode. |
-| 16000111 | The system is already in Kiosk mode and cannot enter Kiosk mode again. |
+| [801](../../errorcode-universal.md#801-该设备不支持此api) | Capability not supported. |
+| [16000113](../errorcode-ability.md#16000113-当前ability不在前台) | Current ability is not in foreground. |
+| [16000050](../errorcode-ability.md#16000050-内部错误) | Failed to connect to the system service. |
+| [16000110](../errorcode-ability.md#16000110-当前应用不在kiosk模式的列表内) | The current application is not in Kiosk app list and cannot enter Kiosk mode. |
+| [16000111](../errorcode-ability.md#16000111-已经有应用进入了kiosk模式) | The system is already in Kiosk mode and cannot enter Kiosk mode again. |
 
 ## 示例
+
+ArkTS-Dyn示例：
 
 ```TypeScript
 import { common, kioskManager } from '@kit.AbilityKit';
@@ -69,6 +65,42 @@ struct Index {
             })
             .catch((error: BusinessError) => {
               hilog.error(0x0000, 'testTag', '%{public}s', `enterKioskMode failed. Code: ${error.code}, message: ${error.message}`);
+            });
+        })
+    }
+    .height('100%')
+    .width('100%')
+  }
+}
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+'use static'
+import { common, kioskManager } from '@kit.AbilityKit';
+import { hilog } from '@kit.PerformanceAnalysisKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+import { Entry, Component, Column, Button } from '@kit.ArkUI';
+
+@Entry
+@Component
+struct Index {
+  private uiAbilityContext: common.UIAbilityContext | undefined =
+    this.getUIContext().getHostContext() as common.UIAbilityContext;
+
+  build() {
+    Column() {
+      Button('enterKioskMode').margin({ top: 30 })
+        .onClick(() => {
+          let context: common.UIAbilityContext = this.uiAbilityContext as common.UIAbilityContext;
+          kioskManager.enterKioskMode(context)
+            .then(() => {
+              hilog.info(0x0000, 'testTag', '%{public}s', 'enterKioskMode success');
+            })
+            .catch((err: Error) => {
+              let error = err as BusinessError;
+              hilog.error(0x0000, 'testTag', '%{public}s', `enterKioskMode failed:${JSON.stringify(error)}`);
             });
         })
     }

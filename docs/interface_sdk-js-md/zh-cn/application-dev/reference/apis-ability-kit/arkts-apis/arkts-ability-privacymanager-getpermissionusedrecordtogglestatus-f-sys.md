@@ -1,11 +1,5 @@
 # getPermissionUsedRecordToggleStatus（系统接口）
 
-## 导入模块
-
-```TypeScript
-import { privacyManager } from 'kits/@kit.AbilityKit';
-```
-
 ## getPermissionUsedRecordToggleStatus
 
 ```TypeScript
@@ -36,10 +30,10 @@ function getPermissionUsedRecordToggleStatus(): Promise<boolean>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 201 | Permission denied. Interface caller does not have permission "ohos.permission.PERMISSION_USED_STATS". |
-| 202 | Not system app. Interface caller is not a system app. |
-| 12100004 | This API must be used together with [setPermissionUsedRecordToggleStatus](arkts-ability-privacymanager-setpermissionusedrecordtogglestatus-f-sys.md#setpermissionusedrecordtogglestatus).<br>**适用版本：** 26.1.0+ |
-| 12100007 | Service exception. |
+| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. Interface caller does not have permission "ohos.permission.PERMISSION_USED_STATS". |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not system app. Interface caller is not a system app. |
+| [12100004](../errorcode-access-token.md#12100004-接口未配套使用) | This API must be used together with [setPermissionUsedRecordToggleStatus](arkts-ability-privacymanager-setpermissionusedrecordtogglestatus-f-sys.md#setpermissionusedrecordtogglestatus).<br>**适用版本：** 26.1.0+ |
+| [12100007](../errorcode-access-token.md#12100007-系统服务工作异常) | Service exception. |
 
 ## 示例
 
@@ -99,11 +93,11 @@ function getPermissionUsedRecordToggleStatus(subProfileId: int): Promise<boolean
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 801 | Capability not supported. |
-| 201 | Permission denied. Interface caller does not have permission "ohos.permission.PERMISSION_USED_STATS". |
-| 12100001 | Invalid parameter. The specified subProfileId does not exist for the current user. |
-| 202 | Not system app. Interface caller is not a system app. |
-| 12100007 | Service exception. |
+| [801](../../errorcode-universal.md#801-该设备不支持此api) | Capability not supported. |
+| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. Interface caller does not have permission "ohos.permission.PERMISSION_USED_STATS". |
+| [12100001](../errorcode-access-token.md#12100001-入参错误) | Invalid parameter. The specified subProfileId does not exist for the current user. |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not system app. Interface caller is not a system app. |
+| [12100007](../errorcode-access-token.md#12100007-系统服务工作异常) | Service exception. |
 
 ## 示例
 

@@ -1,6 +1,6 @@
 # PermissionUsedResponse (System API)
 
-表示所有应用或设备的访问记录。
+Represents the access records of all applications or devices.
 
 **Since:** 9
 
@@ -24,7 +24,7 @@ import { privacyManager } from 'kits/@kit.AbilityKit';
 beginTime: long
 ```
 
-查询记录的起始时间。单位为：毫秒。
+Start time of the query.Unit: milliseconds.
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：long
 
@@ -44,7 +44,7 @@ beginTime: long
 bundleRecords: Array<BundleUsedRecord>
 ```
 
-每个元素表示一个应用维度下的权限访问记录，开发者可进一步遍历permissionRecords获取具体权限使用详情。
+Each element represents the permission access record under an application dimension. Developers can further traverse permissionRecords to obtain specific permission usage details.
 
 **Type:** Array&lt;BundleUsedRecord&gt;
 
@@ -64,7 +64,7 @@ bundleRecords: Array<BundleUsedRecord>
 endTime: long
 ```
 
-查询记录的终止时间。单位为：毫秒。
+End time of the query.Unit: milliseconds.
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：long
 

@@ -12,7 +12,7 @@ import { process } from 'kits/@kit.ArkTS';
 function kill(signal: number, pid: number): boolean
 ```
 
-发送信号到指定进程，结束该进程。
+Sends a signal to a specified process to terminate it.
 
 **Since:** 7
 
@@ -30,14 +30,14 @@ function kill(signal: number, pid: number): boolean
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| signal | number | Yes | 发送的信号。 |
-| pid | number | Yes | 进程的 id。 |
+| signal | number | Yes | Signal to send. |
+| pid | number | Yes | PID of the process, to which the signal will be sent. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| boolean | 信号发送成功返回 true，失败返回 false。 |
+| boolean | If the signal is sent successfully, **true** is returned. Other, **false** is returned. |
 
 ## Examples
 

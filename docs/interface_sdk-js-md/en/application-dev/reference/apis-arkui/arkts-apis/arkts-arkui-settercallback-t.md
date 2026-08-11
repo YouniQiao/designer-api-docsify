@@ -4,7 +4,7 @@
 export declare type SetterCallback<T> = (newValue: T) => void
 ```
 
-设置绑定值的回调方法。
+Setter callback type. It is used to assign a new value.
 
 **Since:** 23
 
@@ -20,5 +20,5 @@ export declare type SetterCallback<T> = (newValue: T) => void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| newValue | T | Yes | 类型为T的参数。 |
+| newValue | T | Yes | update the value with newValue. |
 

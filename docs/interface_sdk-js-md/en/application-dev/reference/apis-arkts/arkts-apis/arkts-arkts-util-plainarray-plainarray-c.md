@@ -1,6 +1,6 @@
 # PlainArray
 
-PlainArray可用于存储具有关联关系的key-value键值对集合，其中key值唯一且类型为number，每个key对应一个value。PlainArray依据泛型定义，采用轻量级结构。
+PlainArray stores key-value (KV) pairs. Each key must be unique, be of the number type, and have only one value.PlainArray is based on generics and uses a lightweight structure.
 
 **Since:** 8
 
@@ -22,7 +22,7 @@ import { PlainArray } from 'kits/@kit.ArkTS';
 $_iterator(): IterableIterator<[int, T]>
 ```
 
-返回一个迭代器，每一项都是一个ArkTS对象。
+returns an iterator. Each item of the iterator is a ArkTS Object
 
 **Since:** 23
 
@@ -46,7 +46,7 @@ $_iterator(): IterableIterator<[int, T]>
 [Symbol.iterator](): IterableIterator<[number, T]>
 ```
 
-返回一个包含key-value键值对的迭代器对象，其中key是number类型。
+returns an iterator.Each item of the iterator is a Javascript Object
 
 **Since:** 8
 
@@ -62,13 +62,13 @@ $_iterator(): IterableIterator<[int, T]>
 
 | Type | Description |
 | --- | --- |
-| [IterableIterator](arkts-arkts-iterator-iterableiterator-i.md)&lt;[number, T]&gt; | 返回一个迭代器。 |
+| [IterableIterator](arkts-arkts-iterator-iterableiterator-i.md)&lt;[number, T]&gt; |  |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 10200011 | The Symbol.iterator method cannot be bound. |
+| [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) | The Symbol.iterator method cannot be bound. |
 
 ## Examples
 
@@ -108,7 +108,7 @@ ArkTS-Sta:
 add(key: int, value: T): void
 ```
 
-向容器中添加一组数据。若指定的key不存在，则新增键值对，且length增加；若指定的key存在，则替换该key对应的value值。
+Adds an element to this PlainArray.
 
 **Since:** 8
 
@@ -124,14 +124,14 @@ add(key: int, value: T): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| key | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | 添加成员数据的键名。取值范围为[-2147483648, 2147483647]，即int32范围。 |
-| value | T | Yes | 添加成员数据的值。 |
+| key | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | Key of the target element. The value must be less than or equal to int32_max, that is, 2147483 647. |
+| value | T | Yes | Value of the target element. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 10200011 | The add method cannot be bound. |
+| [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) | The add method cannot be bound. |
 
 ## Examples
 
@@ -147,7 +147,7 @@ console.info("result:", plainArray.get(1));  // result: squirrel
 clear(): void
 ```
 
-清除容器中的所有元素，并将length置为0。
+Clears this PlainArray and sets its length to **0**.
 
 **Since:** 8
 
@@ -163,7 +163,7 @@ clear(): void
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 10200011 | The clear method cannot be bound. |
+| [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) | The clear method cannot be bound. |
 
 ## Examples
 
@@ -182,7 +182,7 @@ console.info("result:", result);  // result: true
 clone(): PlainArray<T>
 ```
 
-克隆一个实例，并返回克隆后的实例。修改克隆后的实例并不会影响原实例。
+Clones this PlainArray and returns a copy. The modification to the copy does not affect the original instance.
 
 **Since:** 8
 
@@ -198,13 +198,13 @@ clone(): PlainArray<T>
 
 | Type | Description |
 | --- | --- |
-| [PlainArray](arkts-arkts-util-plainarray-plainarray-c.md)&lt;T&gt; | 返回新的对象的克隆实例。 |
+| [PlainArray](arkts-arkts-util-plainarray-plainarray-c.md)&lt;T&gt; | New **PlainArray** instance obtained. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 10200011 | The clone method cannot be bound. |
+| [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) | The clone method cannot be bound. |
 
 ## Examples
 
@@ -222,7 +222,7 @@ console.info("result:", newPlainArray.get(1));  // result: squirrel
 constructor()
 ```
 
-PlainArray的构造函数。
+A constructor used to create a **PlainArray** instance.
 
 **Since:** 8
 
@@ -238,7 +238,7 @@ PlainArray的构造函数。
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 10200012 | The PlainArray's constructor cannot be directly invoked. |
+| [10200012](../errorcode-utils.md#10200012-constructor-calling-failure) | The PlainArray's constructor cannot be directly invoked. |
 
 ## Examples
 
@@ -252,7 +252,7 @@ let plainArray = new PlainArray<string>();
 forEach(callbackFn: (value: T, index?: number, PlainArray?: PlainArray<T>) => void, thisArg?: Object): void
 ```
 
-在遍历PlainArray实例对象中每一个元素的过程中，对每个元素执行回调函数。
+Uses a callback to traverse each element in the **PlainArray** instance.
 
 **Since:** 8
 
@@ -268,14 +268,14 @@ forEach(callbackFn: (value: T, index?: number, PlainArray?: PlainArray<T>) => vo
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callbackFn | (value: T, index?: number, PlainArray?: PlainArray&lt;T&gt;) =&gt; void | Yes | 回调函数。 |
-| thisArg | Object | No | callbackFn被调用时用作this值，默认值为当前实例对象。 |
+| callbackFn | (value: T, index?: number, PlainArray?: PlainArray&lt;T&gt;) =&gt; void | Yes | Callback invoked to traverse the elements in the PlainArray. |
+| thisArg | Object | No | Value of **this** to use when **callbackFn** is invoked. The default value is this instance. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 10200011 | The forEach method cannot be bound. |
+| [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) | The forEach method cannot be bound. |
 
 ## Examples
 
@@ -308,7 +308,7 @@ for(let i = 0; i < 10; i++) {
 forEach(callbackFn: PlainArrayForEachCb<T>): void
 ```
 
-在遍历PlainArray实例对象中每一个元素的过程中，对每个元素执行回调函数。
+Executes a provided function once for each value in the PlainArray object.
 
 **Since:** 23
 
@@ -324,7 +324,7 @@ forEach(callbackFn: PlainArrayForEachCb<T>): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callbackFn | [PlainArrayForEachCb](arkts-arkts-plainarrayforeachcb-t.md)&lt;T&gt; | Yes | 回调函数。 |
+| callbackFn | [PlainArrayForEachCb](arkts-arkts-plainarrayforeachcb-t.md)&lt;T&gt; | Yes | callbackFn |
 
 ## get
 
@@ -332,7 +332,7 @@ forEach(callbackFn: PlainArrayForEachCb<T>): void
 get(key: number): T
 ```
 
-获取指定key所对应的value。
+Obtains the value of the specified key in this PlainArray.
 
 **Since:** 8
 
@@ -348,19 +348,19 @@ get(key: number): T
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| key | number | Yes | 查找的指定key。取值范围为[-2147483648, 2147483647]，即int32范围。 |
+| key | number | Yes | Target key. The value must be less than or equal to int32_max, that is, 2147483647. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| T | 返回key映射的value值。 |
+| T | Value of the key. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 10200011 | The get method cannot be bound. |
+| [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) | The get method cannot be bound. |
 
 ## Examples
 
@@ -378,7 +378,7 @@ console.info("result:", result);  // result: squirrel
 get(key: int): T | undefined
 ```
 
-查询与指定key关联的value。
+Queries the value associated with the specified key
 
 **Since:** 23
 
@@ -394,19 +394,19 @@ get(key: int): T | undefined
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| key | int | Yes | 查找的目标key。 该值为整数。 |
+| key | int | Yes | looking for goals The value should be an integer. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| T | 键值对中的value。 |
+| T | the value of key-value pairs |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 10200001 | The value of index is out of range. |
+| [10200001](../errorcode-utils.md#10200001-value-out-of-range) | The value of index is out of range. |
 
 ## getIndexOfKey
 
@@ -420,7 +420,7 @@ ArkTS-Sta:
 getIndexOfKey(key: int): int
 ```
 
-查找指定key对应的下标值，如果未找到则返回-1。
+Obtains the index of the element with the specified key in this PlainArray.
 
 **Since:** 8
 
@@ -436,19 +436,19 @@ getIndexOfKey(key: int): int
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| key | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | 指定key。需要小于等于int32_max即2147483647。 |
+| key | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | Target key. The value must be less than or equal to int32_max, that is, 2147483647. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| ArkTS-Dyn: number  <br>ArkTS-Sta：int | 返回指定key对应的下标值，查找失败返回-1。 |
+| ArkTS-Dyn: number  <br>ArkTS-Sta：int | Index of the element. If no match is found, **-1** is returned. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 10200011 | The getIndexOfKey method cannot be bound. |
+| [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) | The getIndexOfKey method cannot be bound. |
 
 ## Examples
 
@@ -472,7 +472,7 @@ ArkTS-Sta:
 getIndexOfValue(value: T): int
 ```
 
-查找指定value元素第一次出现的下标值，如果未找到则返回-1。
+Obtains the index of the first occurrence of an element with the specified value in this PlainArray.
 
 **Since:** 8
 
@@ -488,19 +488,19 @@ getIndexOfValue(value: T): int
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | T | Yes | 指定value元素。 |
+| value | T | Yes | Value of the target element. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| ArkTS-Dyn: number  <br>ArkTS-Sta：int | 返回指定value元素第一次出现时的下标值，查找失败返回-1。 |
+| ArkTS-Dyn: number  <br>ArkTS-Sta：int | Index of the element. If no match is found, **-1** is returned. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 10200011 | The getIndexOfValue method cannot be bound. |
+| [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) | The getIndexOfValue method cannot be bound. |
 
 ## Examples
 
@@ -524,7 +524,7 @@ ArkTS-Sta:
 getKeyAt(index: int): int
 ```
 
-查找指定下标元素键值对中的key值。
+Obtains the key of the element at the specified position in this PlainArray.
 
 **Since:** 8
 
@@ -540,19 +540,19 @@ getKeyAt(index: int): int
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| index | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | 指定下标。需要小于等于int32_max即2147483647。 |
+| index | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | Position index of the target element. The value must be less than or equal to int32_max, that is, 2147483647. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| ArkTS-Dyn: number  <br>ArkTS-Sta：int | 返回该下标元素键值对中的key值，失败返回undefined。 |
+| ArkTS-Dyn: number  <br>ArkTS-Sta：int | Key of the element. If no match is found, **-1** is returned. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 10200011 | The getKeyAt method cannot be bound. |
+| [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) | The getKeyAt method cannot be bound. |
 
 ## Examples
 
@@ -576,7 +576,7 @@ ArkTS-Sta:
 getValueAt(index: int): T
 ```
 
-查找指定下标元素键值对中的Value值，失败则返回undefined。
+Obtains the value of an element at the specified position in this PlainArray.
 
 **Since:** 8
 
@@ -592,20 +592,20 @@ getValueAt(index: int): T
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| index | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | 指定下标。需要小于等于int32_max即2147483647。 |
+| index | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | Position index of the target element. The value must be less than or equal to int32_max, that is, 2147483647. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| T | 返回该下标元素键值对中的value值，失败返回undefined。 |
+| T | Value of the element. If no match is found, **undefined** is returned. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 10200011 | The getValueAt method cannot be bound. |
-| 10200001 | The value of index is out of range. |
+| [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) | The getValueAt method cannot be bound. |
+| [10200001](../errorcode-utils.md#10200001-value-out-of-range) | The value of index is out of range. |
 
 ## Examples
 
@@ -629,7 +629,7 @@ ArkTS-Sta:
 has(key: int): boolean
 ```
 
-判断容器中是否包含指定key。
+Checks whether PlainArray has the specified key.
 
 **Since:** 8
 
@@ -645,19 +645,19 @@ has(key: int): boolean
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| key | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | 指定key。取值范围为[-2147483648, 2147483647]，即int32范围。 |
+| key | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | Target key. The value must be less than or equal to int32_max, that is, 2147483647. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| boolean | 包含指定key返回true，否则返回false。 |
+| boolean | Check result. The value **true** is returned if the specified key is contained; otherwise, **false** is returned. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 10200011 | The has method cannot be bound. |
+| [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) | The has method cannot be bound. |
 
 ## Examples
 
@@ -674,7 +674,7 @@ console.info("result = ", result); // result = true
 isEmpty(): boolean
 ```
 
-判断容器是否为空。
+Checks whether this PlainArray is empty.
 
 **Since:** 8
 
@@ -690,13 +690,13 @@ isEmpty(): boolean
 
 | Type | Description |
 | --- | --- |
-| boolean | 为空返回true，不为空返回false。 |
+| boolean | Check result. The value **true** is returned if the PlainArray is empty; otherwise, **false** is returned. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 10200011 | The isEmpty method cannot be bound. |
+| [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) | The isEmpty method cannot be bound. |
 
 ## Examples
 
@@ -712,7 +712,7 @@ console.info("result = ", result); // result =  true
 remove(key: number): T
 ```
 
-删除指定key对应的键值对。指定key不存在时，返回undefined。
+Removes a key-value pair with the specified key.
 
 **Since:** 8
 
@@ -728,19 +728,19 @@ remove(key: number): T
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| key | number | Yes | 指定key。需要小于等于int32_max即2147483647。 |
+| key | number | Yes | Target key. The value must be less than or equal to int32_max, that is, 2147483647. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| T | 返回所删除的键值对中的value值。 |
+| T | Value in the key-value pair removed. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 10200011 | The remove method cannot be bound. |
+| [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) | The remove method cannot be bound. |
 
 ## Examples
 
@@ -758,7 +758,7 @@ console.info("result:", result);  // result: sparrow
 remove(key: int): T | undefined
 ```
 
-如果存在指定key对应的键值对，则删除并返回该值。
+Remove the key-value pair based on a specified key if it exists and return the value
 
 **Since:** 23
 
@@ -774,19 +774,19 @@ remove(key: int): T | undefined
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| key | int | Yes | 待删除的目标key。 该值为整数。 |
+| key | int | Yes | target to be deleted The value should be an integer. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| T | 如果key存在则返回映射的值，否则返回undefined。 |
+| T | target mapped value, or undefined if key is not exist |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 10200001 | The value of index is out of range. |
+| [10200001](../errorcode-utils.md#10200001-value-out-of-range) | The value of index is out of range. |
 
 ## removeAt
 
@@ -794,7 +794,7 @@ remove(key: int): T | undefined
 removeAt(index: number): T
 ```
 
-删除指定下标对应的元素。指定[0, PlainArray.length-1]以外的值时会返回undefined。
+Removes an element at the specified position from this PlainArray.
 
 **Since:** 8
 
@@ -810,19 +810,19 @@ removeAt(index: number): T
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| index | number | Yes | 指定元素下标。需要小于等于int32_max即2147483647。 |
+| index | number | Yes | Position index of the target element. The value must be less than or equal to int32_max, that is, 2147483647. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| T | 返回删除的元素。 |
+| T | Element removed. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 10200011 | The removeAt method cannot be bound. |
+| [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) | The removeAt method cannot be bound. |
 
 ## Examples
 
@@ -840,7 +840,7 @@ console.info("result:", result);  // result: sparrow
 removeAt(index: int): T | undefined
 ```
 
-如果存在指定下标的键值对，则删除并返回该值。
+Remove the key-value pair at a specified index if it exists and return the value
 
 **Since:** 23
 
@@ -856,19 +856,19 @@ removeAt(index: int): T | undefined
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| index | int | Yes | 查找的目标下标。 该值为整数。 |
+| index | int | Yes | target subscript for search The value should be an integer. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| T | T类型的值，容器为空时返回undefined。 |
+| T | the T type, or undefined if container is empty |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 10200001 | The value of index is out of range. |
+| [10200001](../errorcode-utils.md#10200001-value-out-of-range) | The value of index is out of range. |
 
 ## removeRangeFrom
 
@@ -882,7 +882,7 @@ ArkTS-Sta:
 removeRangeFrom(index: int, size: int): int
 ```
 
-删除指定范围内的元素。
+Removes elements within the specified range.
 
 **Since:** 8
 
@@ -898,21 +898,21 @@ removeRangeFrom(index: int, size: int): int
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| index | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | 删除元素的起始下标。取值范围为[0, PlainArray.length-1]，且需要小于等于int32_max即2147483647。 |
-| size | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | 期望删除元素个数。需要大于0，小于等于int32_max即2147483647。 |
+| index | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | Start position of the elements to remove. The value must be less than or equal to int32_max, that is, 2147483647. |
+| size | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | Number of elements to remove. The value must be less than or equal to int32_max, that is, 214 7483647. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| ArkTS-Dyn: number  <br>ArkTS-Sta：int | 实际删除元素个数。 |
+| ArkTS-Dyn: number  <br>ArkTS-Sta：int | Number of elements removed. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 10200011 | The removeRangeFrom method cannot be bound. |
-| 10200001 | The value of index is out of range. |
+| [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) | The removeRangeFrom method cannot be bound. |
+| [10200001](../errorcode-utils.md#10200001-value-out-of-range) | The value of index is out of range. |
 
 ## Examples
 
@@ -936,7 +936,7 @@ ArkTS-Sta:
 setValueAt(index: int, value: T): void
 ```
 
-替换容器中指定下标对应键值对中的value值。
+Sets a value for an element at the specified position in this PlainArray.
 
 **Since:** 8
 
@@ -952,15 +952,15 @@ setValueAt(index: int, value: T): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| index | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | 指定替换数据下标。取值范围为[0, PlainArray.length-1]，且需要小于等于int32_max即2147483647。 |
-| value | T | Yes | 替换键值对中的值。 |
+| index | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | Position index of the target element. The value must be less than or equal to int32_max, that is, 2147483647. |
+| value | T | Yes | Value of the target element. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 10200011 | The setValueAt method cannot be bound. |
-| 10200001 | The value of index is out of range. |
+| [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) | The setValueAt method cannot be bound. |
+| [10200001](../errorcode-utils.md#10200001-value-out-of-range) | The value of index is out of range. |
 
 ## Examples
 
@@ -979,7 +979,7 @@ console.info("result:", result);  // result: 3546
 toString(): String
 ```
 
-获取包含容器中所有键和值的字符串。
+Obtains a string that contains all elements in this PlainArray.
 
 **Since:** 8
 
@@ -995,13 +995,13 @@ toString(): String
 
 | Type | Description |
 | --- | --- |
-| String | 返回将容器中所有键和值拼接而成的字符串。 |
+| String | String obtained. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 10200011 | The toString method cannot be bound. |
+| [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) | The toString method cannot be bound. |
 
 ## Examples
 
@@ -1019,7 +1019,7 @@ console.info("result:", result);  // result: 1:squirrel,2:sparrow
 length: number
 ```
 
-PlainArray的元素个数。
+Number of elements in a PlainArray.
 
 **Type:** number
 

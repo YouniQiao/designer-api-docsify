@@ -1,6 +1,6 @@
 # NotificationSorting (System API)
 
-提供有关活动通知的排序信息。
+The **NotificationSorting** module provides APIs for defining the sorting information of active notifications.
 
 **Since:** 7
 
@@ -18,7 +18,7 @@
 readonly hashCode: string
 ```
 
-通知唯一标识。
+Unique ID of the notification.
 
 **Type:** string
 
@@ -38,7 +38,7 @@ readonly hashCode: string
 readonly ranking: long
 ```
 
-通知级别，不设置则根据通知渠道类型有默认值。
+Notification level. If this parameter is not set, the default value is used based on the notification slot type.
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：long
 
@@ -58,7 +58,7 @@ readonly ranking: long
 readonly slot: NotificationSlot
 ```
 
-通道类型。
+Notification slot type.
 
 **Type:** [NotificationSlot](arkts-notification-notificationslot-notificationslot-i-sys.md)
 

@@ -1,6 +1,6 @@
 # ElementAttributeValues
 
-节点元素具备的属性名称及属性值类型信息。
+Provides attribute names and value types of a node element.
 
 **Since:** 9
 
@@ -16,7 +16,9 @@
 accessibilityFocused: boolean
 ```
 
-表示元素是否处于无障碍焦点状态。true表示元素当前处于无障碍焦点状态，false表示元素当前不处于无障碍焦点状态，默认值为false。
+Whether the element is focused for accessibility purposes. The value **true** indicates that the element is focused, and **false** indicates the opposite.
+
+Default value: **false**.
 
 **Type:** boolean
 
@@ -34,7 +36,9 @@ accessibilityFocused: boolean
 accessibilityNextFocusId?: long
 ```
 
-下一个要聚焦的组件ID。通过findElement('elementId')查询到的AccessibilityElementInfo对象中可获取到用户在控件上设置的该属性值。默认值为-1。
+ID of the next component to be focused on. You can use **findElement('elementId')** to obtain the value of this attribute set on the component from the **AccessibilityElementInfo** object. 
+
+Default value: **-1**.
 
 **Type:** long
 
@@ -52,7 +56,9 @@ accessibilityNextFocusId?: long
 accessibilityPreviousFocusId?: long
 ```
 
-上一个聚焦的组件ID。通过findElement('elementId')查询到的AccessibilityElementInfo对象中可获取到用户在控件上设置的该属性值。默认值为-1。
+ID of the previous component to be focused on. You can use **findElement('elementId')** to obtain the value of this attribute set on the component from the **AccessibilityElementInfo** object. 
+
+Default value: **-1**.
 
 **Type:** long
 
@@ -70,7 +76,10 @@ accessibilityPreviousFocusId?: long
 accessibilityScrollable?: boolean
 ```
 
-表示无障碍模式下元素是否滚动，优先级高于scrollable。其中，true表示可滚动，false表示不可滚动，默认值为true。
+Whether an element is scrollable for accessibility. This attribute has a higher priority than **scrollable**. 
+
+- **true** (default): the element is scrollable.  
+- **false**: the element is not scrollable.
 
 **Type:** boolean
 
@@ -88,7 +97,7 @@ accessibilityScrollable?: boolean
 accessibilityText: string
 ```
 
-元素的无障碍文本信息。
+Accessibility text information of an element.
 
 **Type:** string
 
@@ -106,7 +115,7 @@ accessibilityText: string
 bundleName: string
 ```
 
-应用包名。
+Bundle name.
 
 **Type:** string
 
@@ -124,7 +133,9 @@ bundleName: string
 checkable: boolean
 ```
 
-表示元素是否支持点击操作。true表示元素支持点击操作，false表示元素不支持点击操作，默认值为false。
+Whether the element is checkable. The value **true** indicates that the element is checkable, and **false** indicates the opposite.
+
+Default value: **false**.
 
 **Type:** boolean
 
@@ -142,7 +153,9 @@ checkable: boolean
 checked: boolean
 ```
 
-表示元素当前的可点击状态。true表示元素当前是可点击的，false表示元素当前是不可点击的，默认值为false。
+Whether the element is checked. The value **true** indicates that the element is checked, and **false** indicates the opposite.
+
+Default value: **false**.
 
 **Type:** boolean
 
@@ -160,7 +173,7 @@ checked: boolean
 children: Array<AccessibilityElement>
 ```
 
-所有子元素。
+All child elements.
 
 **Type:** Array&lt;AccessibilityElement&gt;
 
@@ -178,7 +191,9 @@ children: Array<AccessibilityElement>
 clickable: boolean
 ```
 
-表示元素是否可点击。true表示元素可点击，false表示元素不可点击，默认值为false。
+Whether the element is clickable. The value **true** indicates that the element is clickable, and **false** indicates the opposite.
+
+Default value: **false**.
 
 **Type:** boolean
 
@@ -196,7 +211,9 @@ clickable: boolean
 componentId: long
 ```
 
-元素所属的组件ID。默认值为-1。
+ID of the component to which the element belongs. 
+
+Default value: **-1**.
 
 **Type:** long
 
@@ -214,7 +231,7 @@ componentId: long
 componentType: string
 ```
 
-应与元素所属的组件类型所对应，如：按钮Button类型->'Button'、图像Image类型->'Image'。
+Type of the component to which the element belongs, for example, **Button** for the button component and **Image** for the image component.
 
 **Type:** string
 
@@ -232,7 +249,7 @@ componentType: string
 contents: Array<string>
 ```
 
-内容列表。根据实际场景设置，无特殊限制。
+List of contents. Set this parameter based on site requirements. No special restrictions.
 
 **Type:** Array&lt;string&gt;
 
@@ -250,7 +267,9 @@ contents: Array<string>
 currentIndex: int
 ```
 
-当前项的索引。默认值为0。
+Index of the current item. 
+
+Default value: **0**.
 
 **Type:** int
 
@@ -268,7 +287,8 @@ currentIndex: int
 customComponentType?: string
 ```
 
-自定义组件类型。与元素的[AccessibilityRoleType枚举说明](../../apis-arkui/arkts-apis/arkts-arkui-common-accessibilityroletype-e.md/arkts-arkui-common-accessibilityroletype-e.md)类型所对应。
+Custom component type. It corresponds to   
+[AccessibilityRoleType Enumeration Description](../../apis-arkui/arkts-apis/arkts-arkui-common-accessibilityroletype-e.md/arkts-arkui-common-accessibilityroletype-e.md) of the element.
 
 **Type:** string
 
@@ -286,7 +306,7 @@ customComponentType?: string
 description: string
 ```
 
-元素的描述信息。根据实际场景设置，无特殊限制。
+Description of the element. Set this parameter based on site requirements. No special restrictions.
 
 **Type:** string
 
@@ -304,7 +324,9 @@ description: string
 editable: boolean
 ```
 
-表示元素是否可编辑。true表示元素可编辑，false表示元素不可编辑，默认值为false。
+Whether the element is editable. The value **true** indicates that the element is editable, and **false** indicates the opposite.
+
+Default value: **false**.
 
 **Type:** boolean
 
@@ -322,7 +344,9 @@ editable: boolean
 endIndex: int
 ```
 
-屏幕最后显示项的列表索引。默认值为0。
+Index of the last list item displayed on the screen. 
+
+Default value: **0**.
 
 **Type:** int
 
@@ -340,7 +364,7 @@ endIndex: int
 error: string
 ```
 
-错误状态字符串。
+Error status.
 
 **Type:** string
 
@@ -358,19 +382,48 @@ error: string
 extraInfo?: string
 ```
 
-扩展属性，用于定义一些特定组件的属性，包含：
+Extended attributes, which are used to define the attributes of specific components, including:
 
-- CheckboxGroupSelectedStatus：表示CheckboxGroup组件的选中状态，其中取值0表示已选中，取值1表示部分选中，取值2表示未选中。  
-- Row：Grid组件中聚焦item的行信息，表示该item在第几行。  
-- Column：Grid组件中聚焦的item的列，表示该item在第几列。  
-- ListItemIndex：List组件中聚焦item的行信息，表示当前该item在第几行。  
-- SideBarContainerStates：表示可展开类组件（SideBarContainer、Select）的展开状态，其中取值0表示收起态，取值1表示展开态。  
-- ToggleType：表示Toggle组件的具体类型，其中取值0表示Checkbox，取值1表示Switch，取值2表示Button。  
-- BindSheet：表示BindSheet组件的状态，其中取值0表示状态高，取值1表示状态中，取值2表示状态低。  
-- hasRegisteredHover：表示组件是否注册了onAccessibilityHover事件回调，取值为1表示组件注册了事件回调，若未注册不会使用该字段。  
-- direction：表示list组件的布局方向，其中取值"vertical"表示竖向，取值"horizontal"表示横向。  
-- expandedState：表示list组件中listItem的展开状态，其中取值"expanded"表示展开态，取值"collapsed"表示收起态。  
-- componentTypeDescription：组件类型详细信息，对componentType的补充描述。
+- **CheckboxGroupSelectedStatus**: selection status of the **CheckboxGroup** component. The options are as follows:
+
+**0**: selected
+
+**1**: partially selected
+
+**2**: not selected
+
+- **Row**: row where a focused item is located in **Grid**.  
+- **Column**: column where a focused item is located in **Grid**.  
+- **ListItemIndex**: row where a focused item is located in **List**.  
+- **SideBarContainerStates**: expansion state of the expandable components (such as **SideBarContainer** and   
+**Select**). The options are as follows:
+
+**0**: collapsed
+
+**1**: expanded
+
+- **ToggleType**: type of the **Toggle** component. The options are as follows:
+
+**0**: checkbox
+
+**1**: switch
+
+**2**: button
+
+- **BindSheet**: position of the **BindSheet** component on the screen. The options are as follows:
+
+**0**: high
+
+**1**: middle
+
+**2**: low
+
+- **hasRegisteredHover**: whether the component has registered the **onAccessibilityHover** event callback. The   
+value **1** indicates that the component has registered the event callback; otherwise, this field is not used.  
+- **direction**: layout direction of the **List** component. The value can be **vertical** or **horizontal**.  
+- **expandedState**: expanded state of list items in the **List** component. The value can be **expanded** or   
+**collapsed**.  
+- **componentTypeDescription**: detailed information about the component type.
 
 **Type:** string
 
@@ -388,7 +441,9 @@ extraInfo?: string
 focusable: boolean
 ```
 
-表示元素是否可聚焦。true表示元素可聚焦，false表示元素不可聚焦，默认值为false。
+Whether the element is focusable. The value **true** indicates that the element is focusable, and **false** indicates the opposite.
+
+Default value: **false**.
 
 **Type:** boolean
 
@@ -406,7 +461,7 @@ focusable: boolean
 hintText: string
 ```
 
-提示文本。
+Hint text.
 
 **Type:** string
 
@@ -424,7 +479,7 @@ hintText: string
 hotArea: Rect
 ```
 
-元素的可触摸区域。
+Touchable area of an element.
 
 **Type:** [Rect](../../apis-form-kit/arkts-apis/arkts-form-forminfo-rect-i.md)
 
@@ -442,7 +497,9 @@ hotArea: Rect
 inputType: int
 ```
 
-输入文本的类型。默认值为0。
+Type of the input text. 
+
+Default value: **0**.
 
 **Type:** int
 
@@ -460,7 +517,7 @@ inputType: int
 inspectorKey: string
 ```
 
-表示元素的别名。
+Alias of the element.
 
 **Type:** string
 
@@ -478,7 +535,9 @@ inspectorKey: string
 isActive: boolean
 ```
 
-表示元素是否处于活动状态。true表示元素处于活动状态，false表示元素不处于活动状态，默认值为true。
+Whether the element is active. The value **true** indicates that the element is active and **false** indicates the opposite.
+
+Default value: **true**.
 
 **Type:** boolean
 
@@ -496,7 +555,9 @@ isActive: boolean
 isEnable: boolean
 ```
 
-表示元素是否启用。true表示元素已启用，false表示元素未启用，默认值为false。
+Whether the element is enabled. The value **true** indicates that the element is enabled, and **false** indicates the opposite.
+
+Default value: **false**.
 
 **Type:** boolean
 
@@ -514,7 +575,9 @@ isEnable: boolean
 isFocused: boolean
 ```
 
-表示元素是否聚焦。true表示元素处于聚焦状态，false表示元素不处于聚焦状态，默认值为false。
+Whether the element is focused. The value **true** indicates that the element is focused, and **false** indicates the opposite.
+
+Default value: **false**.
 
 **Type:** boolean
 
@@ -532,7 +595,9 @@ isFocused: boolean
 isHint: boolean
 ```
 
-表示元素是否为提示状态。true表示元素处于提示状态，false表示元素不处于提示状态，默认值为false。
+Whether the element is a hint. The value **true** indicates that the element is a hint, and **false** indicates the opposite.
+
+Default value: **false**.
 
 **Type:** boolean
 
@@ -550,7 +615,9 @@ isHint: boolean
 isPassword: boolean
 ```
 
-表示元素是否为密码。true表示元素为密码，false表示元素不为密码，默认值为false。
+Whether the element is a password. The value **true** indicates that the element is a password, and **false** indicates the opposite.
+
+Default value: **false**.
 
 **Type:** boolean
 
@@ -568,7 +635,9 @@ isPassword: boolean
 isVisible: boolean
 ```
 
-表示元素是否可见。true表示元素可见，false表示元素不可见，默认值为false。
+Whether the element is visible. The value **true** indicates that the element is visible, and **false** indicates the opposite.
+
+Default value: **false**.
 
 **Type:** boolean
 
@@ -586,7 +655,9 @@ isVisible: boolean
 itemCount: int
 ```
 
-项目的总数。默认值为0。
+Total number of items. 
+
+Default value: **0**.
 
 **Type:** int
 
@@ -604,7 +675,7 @@ itemCount: int
 lastContent: string
 ```
 
-最后的内容。
+Last content.
 
 **Type:** string
 
@@ -622,7 +693,7 @@ lastContent: string
 layer: int
 ```
 
-该元素的显示层。
+Display layer of the element.
 
 **Type:** int
 
@@ -640,7 +711,10 @@ layer: int
 longClickable: boolean
 ```
 
-表示元素是否可长单击。true表示元素可长单击，false表示元素不可长单击，默认值为false。
+Whether the element is long-clickable. The value **true** indicates that the element is long-clickable, and   
+**false** indicates the opposite.
+
+Default value: **false**.
 
 **Type:** boolean
 
@@ -658,7 +732,9 @@ longClickable: boolean
 offset: double
 ```
 
-对于可滚动类控件，如List、Grid，内容区相对控件的顶部坐标滚动的像素偏移量，单位为像素（px）。默认值为0。
+For scrollable components such as **List** and **Grid**, this attribute indicates the pixel offset of the content area relative to the top coordinate of the component. The unit is pixel (px). 
+
+Default value: **0**.
 
 **Type:** double
 
@@ -676,7 +752,9 @@ offset: double
 pageId: int
 ```
 
-页码id。默认值为-1。
+Page ID. 
+
+Default value: **-1**.
 
 **Type:** int
 
@@ -694,7 +772,7 @@ pageId: int
 parent: AccessibilityElement
 ```
 
-元素的父元素。
+Parent element of the element.
 
 **Type:** [AccessibilityElement](arkts-accessibility-accessibilityextensioncontext-accessibilityelement-i.md)
 
@@ -712,7 +790,9 @@ parent: AccessibilityElement
 pluralLineSupported: boolean
 ```
 
-表示元素是否支持多行文本。true表示元素支持多行文本，false表示元素不支持多行文本，默认值为false。
+Whether the element supports multiple lines of text. The value **true** indicates that the element supports multiple lines of text, and **false** indicates the opposite.
+
+Default value: **false**.
 
 **Type:** boolean
 
@@ -730,7 +810,7 @@ pluralLineSupported: boolean
 rect: Rect
 ```
 
-元素的面积。
+Area of the element.
 
 **Type:** [Rect](../../apis-form-kit/arkts-apis/arkts-form-forminfo-rect-i.md)
 
@@ -748,7 +828,7 @@ rect: Rect
 resourceName: string
 ```
 
-元素的资源名称。
+Resource name of the element.
 
 **Type:** string
 
@@ -766,7 +846,7 @@ resourceName: string
 rootElement: AccessibilityElement
 ```
 
-窗口元素的根元素。
+Root element of the window element.
 
 **Type:** [AccessibilityElement](arkts-accessibility-accessibilityextensioncontext-accessibilityelement-i.md)
 
@@ -784,7 +864,7 @@ rootElement: AccessibilityElement
 screenRect: Rect
 ```
 
-元素的显示区域。
+Display area of the element.
 
 **Type:** [Rect](../../apis-form-kit/arkts-apis/arkts-form-forminfo-rect-i.md)
 
@@ -802,7 +882,9 @@ screenRect: Rect
 scrollable: boolean
 ```
 
-表示元素是否可滚动。true表示元素可滚动，false表示元素不可滚动，默认值为false。
+Whether the element is scrollable. The value **true** indicates that the element is scrollable, and **false** indicates the opposite.
+
+Default value: **false**.
 
 **Type:** boolean
 
@@ -820,7 +902,9 @@ scrollable: boolean
 selected: boolean
 ```
 
-表示元素是否被选中。true表示元素被选中，false表示元素未被选中，默认值为false。
+Whether the element is selected. The value **true** indicates that the element is selected, and **false** indicates the opposite.
+
+Default value: **false**.
 
 **Type:** boolean
 
@@ -838,7 +922,9 @@ selected: boolean
 startIndex: int
 ```
 
-在屏幕上的第一个项目的列表索引。默认值为0。
+Index of the first list item on the screen. 
+
+Default value: **0**.
 
 **Type:** int
 
@@ -856,7 +942,7 @@ startIndex: int
 text: string
 ```
 
-元素的文本。
+Text of the element.
 
 **Type:** string
 
@@ -874,7 +960,7 @@ text: string
 textLengthLimit: int
 ```
 
-元素文本的最大长度限制。
+Maximum text length of the element.
 
 **Type:** int
 
@@ -892,7 +978,7 @@ textLengthLimit: int
 textMoveUnit: accessibility.TextMoveUnit
 ```
 
-文本被读取时的移动粒度。
+Granularity of movement when the text is read.
 
 **Type:** accessibility.TextMoveUnit
 
@@ -910,7 +996,7 @@ textMoveUnit: accessibility.TextMoveUnit
 textType: string
 ```
 
-元素的无障碍文本类型，由组件accessibilityTextHint属性配置。
+Accessibility text type of an element, which is configured by the **accessibilityTextHint** attribute of the component.
 
 **Type:** string
 
@@ -928,7 +1014,7 @@ textType: string
 triggerAction: accessibility.Action
 ```
 
-触发元素事件的动作。
+Action that triggers the element event.
 
 **Type:** accessibility.Action
 
@@ -946,7 +1032,7 @@ triggerAction: accessibility.Action
 type: WindowType
 ```
 
-元素的窗口类型。
+Window type of the element.
 
 **Type:** [WindowType](arkts-accessibility-windowtype-t.md)
 
@@ -964,7 +1050,9 @@ type: WindowType
 valueMax: double
 ```
 
-最大值。默认值为0。
+Maximum value. 
+
+Default value: **0**.
 
 **Type:** double
 
@@ -982,7 +1070,9 @@ valueMax: double
 valueMin: double
 ```
 
-最小值。默认值为0。
+Minimum value. 
+
+Default value: **0**.
 
 **Type:** double
 
@@ -1000,7 +1090,9 @@ valueMin: double
 valueNow: double
 ```
 
-当前值。默认值为0。
+Current value. 
+
+Default value: **0**.
 
 **Type:** double
 
@@ -1018,7 +1110,9 @@ valueNow: double
 windowId: int
 ```
 
-窗口ID。默认值为-1。
+Window ID. 
+
+Default value: **-1**.
 
 **Type:** int
 

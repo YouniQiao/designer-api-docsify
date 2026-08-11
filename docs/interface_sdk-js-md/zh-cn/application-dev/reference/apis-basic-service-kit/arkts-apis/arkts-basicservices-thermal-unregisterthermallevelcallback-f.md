@@ -1,11 +1,5 @@
 # unregisterThermalLevelCallback
 
-## 导入模块
-
-```TypeScript
-import { thermal } from 'kits/@kit.BasicServicesKit';
-```
-
 ## unregisterThermalLevelCallback
 
 ```TypeScript
@@ -32,7 +26,7 @@ function unregisterThermalLevelCallback(callback?: Callback<void>): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1. Incorrect parameter types; |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1. Incorrect parameter types; |
 
 ## 示例
 
@@ -42,8 +36,8 @@ try {
         console.info('unsubscribe thermal level success.');
     });
     console.info('unregister thermal level callback success.');
-} catch (err) {
-    console.error(`Failed to unregister thermal level callback. Code: ${err.code}, message: ${err.message}`);
+} catch(err) {
+    console.error('unregister thermal level callback failed, err: ' + err);
 }
 ```
 

@@ -23,12 +23,6 @@ K和V类型都需为
 
 **系统能力：** SystemCapability.Utils.Lang
 
-## 导入模块
-
-```TypeScript
-import { collections } from 'kits/@kit.ArkTS';
-```
-
 ## [Symbol.iterator]
 
 ```TypeScript
@@ -51,13 +45,13 @@ import { collections } from 'kits/@kit.ArkTS';
 
 | 类型 | 说明 |
 | --- | --- |
-| [IterableIterator](arkts-arkts-iterator-iterableiterator-i.md)&lt;[K, V]&gt; | 返回一个迭代器对象，该对象包含键值对。 |
+| IterableIterator&lt;[K, V]&gt; | 返回一个迭代器对象，该对象包含键值对。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 10200011 | The Symbol.iterator method cannot be bound. |
+| [10200011](../errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) | The Symbol.iterator method cannot be bound. |
 
 ## clear
 
@@ -81,8 +75,8 @@ clear(): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 10200011 | The clear method cannot be bound with non-sendable. |
-| 10200201 | Concurrent modification error. |
+| [10200011](../errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) | The clear method cannot be bound with non-sendable. |
+| [10200201](../errorcode-utils.md#10200201-concurrent修改错误) | Concurrent modification error. |
 
 ## constructor
 
@@ -112,7 +106,7 @@ constructor(entries?: readonly (readonly [K, V])[] | null)
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 10200012 | The ArkTS Map's constructor cannot be directly invoked. |
+| [10200012](../errorcode-utils.md#10200012-构造函数调用异常) | The ArkTS Map's constructor cannot be directly invoked. |
 
 ## constructor
 
@@ -120,7 +114,7 @@ constructor(entries?: readonly (readonly [K, V])[] | null)
 constructor(iterable: Iterable<readonly [K, V]>)
 ```
 
-创建ArkTS Map对象的构造函数。
+构造函数，用于通过可迭代对象创建ArkTS Map对象。
 
 **起始版本：** 12
 
@@ -136,13 +130,13 @@ constructor(iterable: Iterable<readonly [K, V]>)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| iterable | Iterable&lt;readonly [K, V]&gt; | 是 | 用于构造ArkTS Map的对象。 |
+| iterable | Iterable&lt;readonly [K, V]&gt; | 是 | 用于构造ArkTS Map的可迭代对象。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 10200012 | The ArkTS Map's constructor cannot be directly invoked. |
+| [10200012](../errorcode-utils.md#10200012-构造函数调用异常) | The ArkTS Map's constructor cannot be directly invoked. |
 
 ## delete
 
@@ -150,7 +144,7 @@ constructor(iterable: Iterable<readonly [K, V]>)
 delete(key: K): boolean
 ```
 
-删除该Map中指定元素。
+删除该Map中指定键对应的元素。
 
 **起始版本：** 12
 
@@ -178,8 +172,8 @@ delete(key: K): boolean
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 10200011 | The delete method cannot be bound with non-sendable. |
-| 10200201 | Concurrent modification error. |
+| [10200011](../errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) | The delete method cannot be bound with non-sendable. |
+| [10200201](../errorcode-utils.md#10200201-concurrent修改错误) | Concurrent modification error. |
 
 ## entries
 
@@ -203,14 +197,14 @@ entries(): IterableIterator<[K, V]>
 
 | 类型 | 说明 |
 | --- | --- |
-| [IterableIterator](arkts-arkts-iterator-iterableiterator-i.md)&lt;[K, V]&gt; | Map迭代器对象。 |
+| IterableIterator&lt;[K, V]&gt; | Map迭代器对象。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 10200011 | The entries method cannot be bound with non-sendable. |
-| 10200201 | Concurrent modification error. |
+| [10200011](../errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) | The entries method cannot be bound with non-sendable. |
+| [10200201](../errorcode-utils.md#10200201-concurrent修改错误) | Concurrent modification error. |
 
 ## forEach
 
@@ -218,7 +212,7 @@ entries(): IterableIterator<[K, V]>
 forEach(callbackFn: (value: V, key: K, map: Map<K, V>) => void): void
 ```
 
-按插入顺序对该Map中的每个键/值对执行一次回调函数。
+按插入顺序对该Map中的每个键值对执行一次回调函数。
 
 **起始版本：** 12
 
@@ -240,8 +234,8 @@ forEach(callbackFn: (value: V, key: K, map: Map<K, V>) => void): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 10200011 | The forEach method cannot be bound with non-sendable. |
-| 10200201 | Concurrent modification error. |
+| [10200011](../errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) | The forEach method cannot be bound with non-sendable. |
+| [10200201](../errorcode-utils.md#10200201-concurrent修改错误) | Concurrent modification error. |
 
 ## get
 
@@ -249,7 +243,7 @@ forEach(callbackFn: (value: V, key: K, map: Map<K, V>) => void): void
 get(key: K): V | undefined
 ```
 
-返回该Map中的指定元素。
+返回该Map中指定键对应的元素。
 
 **起始版本：** 12
 
@@ -265,7 +259,7 @@ get(key: K): V | undefined
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| key | K | 是 | 指定key。 |
+| key | K | 是 | 要获取值的键。 |
 
 **返回值：**
 
@@ -277,8 +271,8 @@ get(key: K): V | undefined
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 10200011 | The get method cannot be bound with non-sendable. |
-| 10200201 | Concurrent modification error. |
+| [10200011](../errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) | The get method cannot be bound with non-sendable. |
+| [10200201](../errorcode-utils.md#10200201-concurrent修改错误) | Concurrent modification error. |
 
 ## has
 
@@ -286,7 +280,7 @@ get(key: K): V | undefined
 has(key: K): boolean
 ```
 
-判断该Map中是否存在指定元素。
+判断该Map中是否存在指定键。
 
 **起始版本：** 12
 
@@ -314,8 +308,8 @@ has(key: K): boolean
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 10200011 | The has method cannot be bound with non-sendable. |
-| 10200201 | Concurrent modification error. |
+| [10200011](../errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) | The has method cannot be bound with non-sendable. |
+| [10200201](../errorcode-utils.md#10200201-concurrent修改错误) | Concurrent modification error. |
 
 ## keys
 
@@ -339,14 +333,14 @@ keys(): IterableIterator<K>
 
 | 类型 | 说明 |
 | --- | --- |
-| [IterableIterator](arkts-arkts-iterator-iterableiterator-i.md)&lt;K&gt; | Map迭代器对象。 |
+| IterableIterator&lt;K&gt; | Map迭代器对象。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 10200011 | The keys method cannot be bound with non-sendable. |
-| 10200201 | Concurrent modification error. |
+| [10200011](../errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) | The keys method cannot be bound with non-sendable. |
+| [10200201](../errorcode-utils.md#10200201-concurrent修改错误) | Concurrent modification error. |
 
 ## set
 
@@ -370,21 +364,21 @@ set(key: K, value: V): Map<K, V>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| key | K | 是 | 添加或更新指定元素的键。 |
-| value | V | 是 | 添加或更新指定元素的值。 |
+| key | K | 是 | 要添加或更新的键。 |
+| value | V | 是 | 要添加或更新的值。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Map&lt;K, V&gt; | 新的Map对象。 |
+| Map&lt;K, V&gt; | 添加或更新键值对操作后的Map对象本身。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 10200011 | The set method cannot be bound with non-sendable. |
-| 10200201 | Concurrent modification error. |
+| [10200011](../errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) | The set method cannot be bound with non-sendable. |
+| [10200201](../errorcode-utils.md#10200201-concurrent修改错误) | Concurrent modification error. |
 
 ## values
 
@@ -392,7 +386,7 @@ set(key: K, value: V): Map<K, V>
 values(): IterableIterator<V>
 ```
 
-返回一个Map迭代器对象，该对象包含此Map中每个元素的值。
+返回一个Map迭代器对象，该对象包含了此Map中每个元素的值。
 
 **起始版本：** 12
 
@@ -408,14 +402,14 @@ values(): IterableIterator<V>
 
 | 类型 | 说明 |
 | --- | --- |
-| [IterableIterator](arkts-arkts-iterator-iterableiterator-i.md)&lt;V&gt; | Map迭代器对象。 |
+| IterableIterator&lt;V&gt; | Map迭代器对象。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 10200011 | The values method cannot be bound with non-sendable. |
-| 10200201 | Concurrent modification error. |
+| [10200011](../errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) | The values method cannot be bound with non-sendable. |
+| [10200201](../errorcode-utils.md#10200201-concurrent修改错误) | Concurrent modification error. |
 
 ## size
 

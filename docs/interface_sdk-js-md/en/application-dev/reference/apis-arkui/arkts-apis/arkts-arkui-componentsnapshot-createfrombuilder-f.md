@@ -13,19 +13,23 @@ function createFromBuilder(builder: CustomBuilder, callback: AsyncCallback<image
     delay?: number, checkImageStatus?: boolean, options?: SnapshotOptions): void
 ```
 
-在应用后台渲染CustomBuilder自定义组件，并输出其截图。通过回调返回结果并支持在回调中获取离屏组件绘制区域坐标和大小。
+Renders a custom component in the application background and outputs its snapshot. This API uses an asynchronous callback to return the result. The coordinates and size of the offscreen component's drawing area can be obtained through the callback.
 
-> **说明：**
+> **NOTE：**
 > 
-> - 从API version 12开始，可以通过使用[UIContext](arkts-arkui-uicontext.md)中的
-> [getComponentSnapshot](arkts-arkui-arkui-uicontext-uicontext-c.md#getcomponentsnapshot)方法
-> 获取当前UI上下文关联的[ComponentSnapshot](arkts-arkui-arkui-uicontext-componentsnapshot-c.md)对象。
+> - Since API version 12, you can use the [getComponentSnapshot](arkts-arkui-arkui-uicontext-uicontext-c.md#getcomponentsnapshot)
+> API in [UIContext](arkts-arkui-uicontext.md) to obtain the [ComponentSnapshot](arkts-arkui-arkui-uicontext-componentsnapshot-c.md)
+> object associated with the current UI context.
 > 
-> - 由于需要等待组件构建、渲染成功，离屏截图的回调有500ms以内的延迟。
+> - To account for the time spent in awaiting component building and rendering, the callback of offscreen snapshots
+> has a delay of less than 500 ms.
 > 
-> - builder中的组件不支持设置动画相关的属性，如[transition](../../apis-ability-kit/arkts-apis/arkts-app-ability-common.md/arkts-app-ability-common.md)。
+> - Components in the builder do not support the setting of animation-related attributes, such as
+> [transition](../../apis-ability-kit/arkts-apis/arkts-app-ability-common.md/arkts-app-ability-common.md).
 > 
-> - 部分执行耗时任务的组件可能无法及时在截图前加载完成，因此会截取不到加载成功后的图像。例如：加载网络图片的[Image](../../apis-image-kit/arkts-apis/arkts-multimedia-image.md/arkts-multimedia-image.md)组件、[Web](../../apis-arkweb/arkts-apis/arkts-arkweb-web-web-f.md/arkts-arkweb-web-web-f.md#web)组件。
+> - If a component is on a time-consuming task, for example, an [Image](../../apis-image-kit/arkts-apis/arkts-multimedia-image.md/arkts-multimedia-image.md) or [Web](../../apis-arkweb/arkts-apis/arkts-arkweb-web-web-f.md/arkts-arkweb-web-web-f.md#web) component
+> that is loading online images, its loading may be still in progress when this API is called. In this case, the
+> output snapshot does not represent the component in the way it looks when the loading is successfully completed.
 
 **Since:** 10
 
@@ -47,19 +51,19 @@ function createFromBuilder(builder: CustomBuilder, callback: AsyncCallback<image
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| builder | [CustomBuilder](../arkts-components/arkts-arkui-custombuilder-t.md) | Yes | 自定义组件构建函数。&lt;br/&gt;**说明：** 不支持全局builder。&lt;br/&gt;builder的根组件宽高为0时，截图操作会失败并抛出100001错误码。 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;image.PixelMap&gt; | Yes | 截图返回结果的回调。支持在回调中获取离屏组件绘制区域坐标和大小。 |
-| delay | number | No | 指定触发截图指令的延迟时间。当布局中使用了图片组件时，需要指定延迟时间，以便系统解码图片资源。资源越大，解码需要的时间越长，建议尽量使用不需要解码的PixelMap资源。 &lt;br/&gt; 当使用PixelMap资源或对Image组件设置syncLoad为true时，可以配置delay为0，强制不等待触发截图。该延迟时间并非指接口从调用到返回的时间，由于系统需要对传入的builder进行临时离屏构 建，因此返回的时间通常要比该延迟时间长。&lt;br/&gt;**说明：** 截图接口传入的builder中，不应使用状态变量控制子组件的构建，如果必须要使用，在调用截图接口时，也不应再有变化，以避免出现截图不符合预期的情况。 &lt;br/&gt; 默认值：300 &lt;br/&gt; 单位：毫秒 &lt;br/&gt; 取值范围：[0, +∞)，小于0时按默认值处理。<br>**Since:** 12 |
-| checkImageStatus | boolean | No | 指定是否允许在截图之前，校验图片解码状态。如果为true，则会在截图之前检查所有Image组件是否已经解码完成。为false，则不会校验图片解码状态。 如果没有完成检查，则会放弃截图并返回异常。&lt;br/&gt;默认值：false<br>**Since:** 12 |
-| options | [SnapshotOptions](arkts-arkui-componentsnapshot-snapshotoptions-i.md) | No | 截图相关的自定义参数。<br>**Since:** 12 |
+| builder | [CustomBuilder](../arkts-components/arkts-arkui-custombuilder-t.md) | Yes | Builder of the custom component.&lt;br&gt;Note: The global builder is not supported.&lt; br&gt;If the root component of the builder has a width or height of zero, the snapshot operation will fail with error code 100001. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;image.PixelMap&gt; | Yes | Callback used to return the result. The coordinates and size of the offscreen component's drawing area can be obtained through the callback. |
+| delay | number | No | Delay time for triggering the screenshot command. When the layout includes an image component, it is necessary to set a delay time to allow the system to decode the image resources. The decoding time is subject to the resource size. In light of this, whenever possible, use pixel map resources that do not require decoding.&lt;br&gt; When pixel map resources are used or when **syncLoad** to **true** for the **Image** component, you can set **delay** to **0** to forcibly capture snapshots without waiting. This delay time does not refer to the time from the API call to the return: As the system needs to temporarily construct the passed- in **builder** offscreen, the return time is usually longer than this delay.&lt;br&gt;Note: In the **builder** passed in, state variables should not be used to control the construction of child components. If they are used, they should not change when the API is called, so as to avoid unexpected snapshot results.&lt;br&gt; Default value: **300**&lt;br&gt; Unit: ms&lt;br&gt; Value range: [0, +∞). If the value is less than 0, the default value is used.<br>**Since:** 12 |
+| checkImageStatus | boolean | No | Whether to verify the image decoding status before taking a snapshot. &lt;br&gt; **true**: Check whether all Image components have been decoded. &lt;br&gt;**false**: Skip verification. If the verification is not completed, snapshot capture will be canceled and an exception will be returned.&lt;br&gt;Default value: **false<br>**Since:** 12 |
+| options | [SnapshotOptions](arkts-arkui-componentsnapshot-snapshotoptions-i.md) | No | Custom settings of the snapshot.<br>**Since:** 12 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 100001 | The builder is not a valid build function. |
-| 401 | Parameter error. Possible causes: &lt;br&gt; 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameters types. &lt;br&gt; 3. Parameter verification failed. |
-| 160001 | An image component in builder is not ready for taking a snapshot. The check for the ready state is required when the checkImageStatus option is enabled.<br>**Applicable version:** 12 and later |
+| [100001](../errorcode-internal.md#100001-internal-error) | The builder is not a valid build function. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: &lt;br&gt; 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameters types. &lt;br&gt; 3. Parameter verification failed. |
+| [160001](../errorcode-snapshot.md#160001-image-loading-error) | An image component in builder is not ready for taking a snapshot. The check for the ready state is required when the checkImageStatus option is enabled.<br>**Applicable version:** 12 and later |
 
 ## Examples
 
@@ -131,19 +135,23 @@ function createFromBuilder(builder: CustomBuilder, delay?: number,
     checkImageStatus?: boolean, options?: SnapshotOptions): Promise<image.PixelMap>
 ```
 
-在应用后台渲染CustomBuilder自定义组件，并输出其截图。通过Promise返回结果，支持获取离屏组件绘制区域的坐标和大小。
+Renders a custom component in the application background and outputs its snapshot. This API uses a promise to return the result. The coordinates and size of the offscreen component's drawing area can be obtained through the callback.
 
-> **说明：**
+> **NOTE：**
 > 
-> - 从API version 12开始，可以通过使用[UIContext](arkts-arkui-uicontext.md)中的
-> [getComponentSnapshot](arkts-arkui-arkui-uicontext-uicontext-c.md#getcomponentsnapshot)方法
-> 获取当前UI上下文关联的[ComponentSnapshot](arkts-arkui-arkui-uicontext-componentsnapshot-c.md)对象。
+> - Since API version 12, you can use the [getComponentSnapshot](arkts-arkui-arkui-uicontext-uicontext-c.md#getcomponentsnapshot)
+> API in [UIContext](arkts-arkui-uicontext.md) to obtain the [ComponentSnapshot](arkts-arkui-arkui-uicontext-componentsnapshot-c.md)
+> object associated with the current UI context.
 > 
-> - 由于需要等待组件构建、渲染成功，离屏截图的回调有500ms以内的延迟。
+> - To account for the time spent in awaiting component building and rendering, the callback of offscreen snapshots
+> has a delay of less than 500 ms.
 > 
-> - builder中的组件不支持设置动画相关的属性，如[transition](../../apis-ability-kit/arkts-apis/arkts-app-ability-common.md/arkts-app-ability-common.md)。
+> - Components in the builder do not support the setting of animation-related attributes, such as
+> [transition](../../apis-ability-kit/arkts-apis/arkts-app-ability-common.md/arkts-app-ability-common.md).
 > 
-> - 部分执行耗时任务的组件可能无法及时在截图前加载完成，因此会截取不到加载成功后的图像。例如：加载网络图片的[Image](../../apis-image-kit/arkts-apis/arkts-multimedia-image.md/arkts-multimedia-image.md)组件、[Web](../../apis-arkweb/arkts-apis/arkts-arkweb-web-web-f.md/arkts-arkweb-web-web-f.md#web)组件。
+> - If a component is on a time-consuming task, for example, an [Image](../../apis-image-kit/arkts-apis/arkts-multimedia-image.md/arkts-multimedia-image.md) or [Web](../../apis-arkweb/arkts-apis/arkts-arkweb-web-web-f.md/arkts-arkweb-web-web-f.md#web) component
+> that is loading online images, its loading may be still in progress when this API is called. In this case, the
+> output snapshot does not represent the component in the way it looks when the loading is successfully completed.
 
 **Since:** 10
 
@@ -165,24 +173,24 @@ function createFromBuilder(builder: CustomBuilder, delay?: number,
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| builder | [CustomBuilder](../arkts-components/arkts-arkui-custombuilder-t.md) | Yes | 自定义组件构建函数。&lt;br/&gt;**说明：** 不支持全局builder。&lt;br/&gt;builder的根组件宽高为0时，截图操作会失败并抛出100001错误码。 |
-| delay | number | No | 指定触发截图指令的延迟时间。当布局中使用了图片组件时，需要指定延迟时间，以便系统解码图片资源。资源越大，解码需要的时间越长，建议尽量使用不需要解码的PixelMap资源。 &lt;br/&gt; 当使用PixelMap资源或对Image组件设置syncLoad为true时，可以配置delay为0，强制不等待触发截图。该延迟时间并非指接口从调用到返回的时间，由于系统需要对传入的builder进行临时离屏构 建，因此返回的时间通常要比该延迟时间长。&lt;br/&gt;**说明：** 截图接口传入的builder中，不应使用状态变量控制子组件的构建，如果必须要使用，在调用截图接口时，也不应再有变化，以避免出现截图不符合预期的情况。 &lt;br/&gt; 默认值：300 &lt;br/&gt; 单位：毫秒<br>**Since:** 12 |
-| checkImageStatus | boolean | No | 指定是否允许在截图之前，校验图片解码状态。如果为true，则会在截图之前检查所有Image组件是否已经解码完成。为false，则不会校验图片解码状态。 如果没有完成检查，则会放弃截图并返回异常。&lt;br/&gt;默认值：false<br>**Since:** 12 |
-| options | [SnapshotOptions](arkts-arkui-componentsnapshot-snapshotoptions-i.md) | No | 截图相关的自定义参数。<br>**Since:** 12 |
+| builder | [CustomBuilder](../arkts-components/arkts-arkui-custombuilder-t.md) | Yes | Builder of the custom component.&lt;br&gt;Note: The global builder is not supported.&lt; br&gt;If the root component of the builder has a width or height of zero, the snapshot operation will fail with error code 100001. |
+| delay | number | No | Delay time for triggering the screenshot command. When the layout includes an image component, it is necessary to set a delay time to allow the system to decode the image resources. The decoding time is subject to the resource size. In light of this, whenever possible, use pixel map resources that do not require decoding.&lt;br&gt; When pixel map resources are used or when **syncLoad** to **true** for the **Image** component, you can set **delay** to **0** to forcibly capture snapshots without waiting. This delay time does not refer to the time from the API call to the return: As the system needs to temporarily construct the passed- in **builder** offscreen, the return time is usually longer than this delay.&lt;br&gt;Note: In the **builder** passed in, state variables should not be used to control the construction of child components. If they are used, they should not change when the API is called, so as to avoid unexpected snapshot results.&lt;br&gt; Default value: **300**&lt;br&gt; Unit: ms<br>**Since:** 12 |
+| checkImageStatus | boolean | No | Whether to verify the image decoding status before taking a snapshot. &lt;br&gt; **true**: Check whether all Image components have been decoded. &lt;br&gt;**false**: Skip verification. If the verification is not completed, snapshot capture will be canceled and an exception will be returned.&lt;br&gt;Default value: **false<br>**Since:** 12 |
+| options | [SnapshotOptions](arkts-arkui-componentsnapshot-snapshotoptions-i.md) | No | Custom settings of the snapshot.<br>**Since:** 12 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;image.PixelMap&gt; | 截图返回的结果。 |
+| Promise&lt;image.PixelMap&gt; | Promise used to return the result. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 100001 | The builder is not a valid build function. |
-| 401 | Parameter error. Possible causes: &lt;br&gt; 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameters types. &lt;br&gt; 3. Parameter verification failed. |
-| 160001 | An image component in builder is not ready for taking a snapshot. The check for the ready state is required when the checkImageStatus option is enabled.<br>**Applicable version:** 12 and later |
+| [100001](../errorcode-internal.md#100001-internal-error) | The builder is not a valid build function. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: &lt;br&gt; 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameters types. &lt;br&gt; 3. Parameter verification failed. |
+| [160001](../errorcode-snapshot.md#160001-image-loading-error) | An image component in builder is not ready for taking a snapshot. The check for the ready state is required when the checkImageStatus option is enabled.<br>**Applicable version:** 12 and later |
 
 ## Examples
 

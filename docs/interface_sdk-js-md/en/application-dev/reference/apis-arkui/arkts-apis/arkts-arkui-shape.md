@@ -12,19 +12,19 @@ import { RectShape, CircleShape, EllipseShape, PathShape } from 'kits/@kit.ArkUI
 
 | Name | Description |
 | --- | --- |
-| [BaseShape](arkts-arkui-arkui-shape-baseshape-c.md) | 继承自[CommonShapeMethod](arkts-arkui-arkui-shape-commonshapemethod-c.md)。 |
-| [CircleShape](arkts-arkui-arkui-shape-circleshape-c.md) | 用于clipShape和maskShape接口的圆形形状。  继承自[BaseShape](arkts-arkui-arkui-shape-baseshape-c.md)。 |
-| [CommonShapeMethod](arkts-arkui-arkui-shape-commonshapemethod-c.md) | 常见的形状方法。 |
-| [EllipseShape](arkts-arkui-arkui-shape-ellipseshape-c.md) | 用于clipShape和maskShape接口的椭圆形状。  继承自[BaseShape](arkts-arkui-arkui-shape-baseshape-c.md)。 |
-| [PathShape](arkts-arkui-arkui-shape-pathshape-c.md) | 用于clipShape和maskShape接口的路径。  继承自[CommonShapeMethod](arkts-arkui-arkui-shape-commonshapemethod-c.md)。 |
-| [RectShape](arkts-arkui-arkui-shape-rectshape-c.md) | 用于clipShape和maskShape接口的矩形形状。  继承自[BaseShape](arkts-arkui-arkui-shape-baseshape-c.md)。 |
+| [BaseShape](arkts-arkui-arkui-shape-baseshape-c.md) | Base shape class |
+| [CircleShape](arkts-arkui-arkui-shape-circleshape-c.md) | Defines a circle drawing class. |
+| [CommonShapeMethod](arkts-arkui-arkui-shape-commonshapemethod-c.md) | Common shape method class |
+| [EllipseShape](arkts-arkui-arkui-shape-ellipseshape-c.md) | Defines an ellipse drawing class. |
+| [PathShape](arkts-arkui-arkui-shape-pathshape-c.md) | Defines a path drawing class. |
+| [RectShape](arkts-arkui-arkui-shape-rectshape-c.md) | Defines a rect drawing class. |
 
 ### Interfaces
 
 | Name | Description |
 | --- | --- |
-| [PathShapeOptions](arkts-arkui-arkui-shape-pathshapeoptions-i.md) | PathShape的构造函数参数。 |
-| [RectShapeOptions](arkts-arkui-arkui-shape-rectshapeoptions-i.md) | RectShape 的构造函数参数。  继承自[ShapeSize](arkts-arkui-arkui-shape-shapesize-i.md)。 |
-| [RoundRectShapeOptions](arkts-arkui-arkui-shape-roundrectshapeoptions-i.md) | RectShape 带有半径的构造函数参数。  继承自[ShapeSize](arkts-arkui-arkui-shape-shapesize-i.md)。 |
-| [ShapeSize](arkts-arkui-arkui-shape-shapesize-i.md) | 形状的尺寸参数。 |
+| [PathShapeOptions](arkts-arkui-arkui-shape-pathshapeoptions-i.md) | Interface for PathShape constructor parameters. |
+| [RectShapeOptions](arkts-arkui-arkui-shape-rectshapeoptions-i.md) | Interface for RectShape constructor parameters. |
+| [RoundRectShapeOptions](arkts-arkui-arkui-shape-roundrectshapeoptions-i.md) | Interface for RectShape constructor parameters with separate radius values. |
+| [ShapeSize](arkts-arkui-arkui-shape-shapesize-i.md) | Interface for shape size properties. |
 

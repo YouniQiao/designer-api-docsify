@@ -1,6 +1,6 @@
 # PanelMode
 
-设置滑动面板的初始状态
+Sets the initial state of the slidable panel.
 
 **Since:** 7
 
@@ -18,7 +18,7 @@
 Mini = 0
 ```
 
-类型为minibar和foldable时，为最小状态；类型为temporary，则不生效。
+Minimum state.
 
 **Since:** 7
 
@@ -38,7 +38,7 @@ Mini = 0
 Half
 ```
 
-类型为foldable和temporary时，为类半屏状态；类型为minibar，则不生效。
+SHalf-screen-like status
 
 **Since:** 7
 
@@ -58,7 +58,7 @@ Half
 Full
 ```
 
-类全屏状态。
+Class Full Screen Status.
 
 **Since:** 7
 

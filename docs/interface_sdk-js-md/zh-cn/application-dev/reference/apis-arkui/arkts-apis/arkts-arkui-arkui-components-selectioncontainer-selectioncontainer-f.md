@@ -1,11 +1,5 @@
 # SelectionContainer
 
-## 导入模块
-
-```TypeScript
-import { SelectionContainerInstance, SelectionContainer, OnMenuItemClickWithTextCallback, SelectionContainerOptions, SelectionContainerAttribute, SelectionContainerEditMenuOptions, SelectionContainerTextJoinStyle, SelectionContainerController, SelectionContainerMenuOptions } from 'kits/@kit.ArkUI';
-```
-
 ## SelectionContainer
 
 ```TypeScript

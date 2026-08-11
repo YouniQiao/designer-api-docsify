@@ -1,6 +1,6 @@
 # LeadingMarginSpanDrawInfo
 
-自定义绘制信息。
+Defines the LeadingMarginSpanDrawInfo interface.
 
 **Since:** 24
 
@@ -16,11 +16,7 @@
 baseline: double
 ```
 
-当前行的基线与组件上边缘的距离。
-
-单位：[px](../../../reference/apis-arkui/arkui-ts/ts-pixel-units.md#基本像素单位)
-
-取值范围：大于等于0。
+The baseline offset of the line.The unit is px.
 
 **Type:** double
 
@@ -40,11 +36,7 @@ baseline: double
 bottom: double
 ```
 
-行底与组件上边缘的距离。
-
-单位：[px](../../../reference/apis-arkui/arkui-ts/ts-pixel-units.md#基本像素单位)
-
-取值范围：大于等于0。
+The bottom position of the line.The unit is px.
 
 **Type:** double
 
@@ -64,7 +56,7 @@ bottom: double
 direction: TextDirection
 ```
 
-文本内容的方向。
+The direction of text.
 
 **Type:** [TextDirection](arkts-arkui-textdirection-e.md)
 
@@ -84,9 +76,7 @@ direction: TextDirection
 end: int
 ```
 
-当前行的结束索引。
-
-取值范围：大于等于0。
+The end index of the first character in the current line relative to the component text content.The value should be an integer.
 
 **Type:** int
 
@@ -106,9 +96,7 @@ end: int
 first: boolean
 ```
 
-当前行是否是段落的首行。
-
-true：首行；false：非首行。
+Whether current line is first line of a paragraph.
 
 **Type:** boolean
 
@@ -128,9 +116,7 @@ true：首行；false：非首行。
 start: int
 ```
 
-当前行的起始索引。
-
-取值范围：大于等于0。
+The start index of the first character in the current line relative to the component text content.The value should be an integer.
 
 **Type:** int
 
@@ -150,11 +136,7 @@ start: int
 top: double
 ```
 
-行顶与组件上边缘的距离。
-
-单位：[px](../../../reference/apis-arkui/arkui-ts/ts-pixel-units.md#基本像素单位)
-
-取值范围：大于等于0。
+The top position of the line.The unit is px.
 
 **Type:** double
 
@@ -174,11 +156,7 @@ top: double
 x: double
 ```
 
-当前行相对于组件的水平偏移。direction为RTL时，返回当前行右侧与组件右边缘的距离。
-
-单位：[px](../../../reference/apis-arkui/arkui-ts/ts-pixel-units.md#基本像素单位)
-
-取值范围：大于等于0。
+The x offset of the line.The unit is px.
 
 **Type:** double
 

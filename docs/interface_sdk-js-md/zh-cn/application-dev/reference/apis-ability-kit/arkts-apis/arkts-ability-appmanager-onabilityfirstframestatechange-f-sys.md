@@ -1,11 +1,5 @@
 # onAbilityFirstFrameStateChange（系统接口）
 
-## 导入模块
-
-```TypeScript
-import { appManager } from 'kits/@kit.AbilityKit';
-```
-
 ## onAbilityFirstFrameStateChange
 
 ```TypeScript
@@ -37,7 +31,32 @@ function onAbilityFirstFrameStateChange(observer: AbilityFirstFrameStateObserver
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 16000050 | Internal error. |
-| 201 | Permission denied. |
-| 202 | Not system application. |
+| [16000050](../errorcode-ability.md#16000050-内部错误) | Internal error. |
+| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not system application. |
+
+## 示例
+
+ArkTS-Sta示例：
+
+```TypeScript
+'use static'
+import { appManager } from '@kit.AbilityKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+class AbilityFirstFrameStateObserverCustom implements appManager.AbilityFirstFrameStateObserver {
+  onAbilityFirstFrameDrawn(abilityStateData: appManager.AbilityFirstFrameStateData) {
+    console.info(`abilityFirstFrame:  ${JSON.stringify(abilityStateData)}`);
+  }
+}
+
+try {
+  let observer = new AbilityFirstFrameStateObserverCustom();
+  appManager.onAbilityFirstFrameStateChange(observer);
+} catch (e) {
+  let code = (e as BusinessError).code;
+  let message = (e as BusinessError).message;
+  console.error(`[appManager] error: ${code}, ${message}`);
+}
+```
 

@@ -6,7 +6,7 @@ typedef struct OH_Drawing_Range OH_Drawing_Range
 
 ## Overview
 
-Defines a struct used to receive the start position and end position of a glyph.
+Used to receive the start and end positions of text.
 
 **Since**: 11
 

@@ -1,0 +1,44 @@
+# getAllDisks (System API)
+
+## Modules to Import
+
+```TypeScript
+import { volumeManager } from 'kits/@kit.CoreFileKit';
+```
+
+## getAllDisks
+
+```TypeScript
+function getAllDisks(): Promise<Array<Disk>>
+```
+
+Querying Information About All Disks.
+
+**Since:** 26.0.0
+
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
+
+**Required permissions:** ohos.permission.MOUNT_UNMOUNT_MANAGER
+
+**Model restriction:** This API can be used only in the stage model.
+
+<!--Device-volumeManager-function getAllDisks(): Promise<Array<Disk>>--><!--Device-volumeManager-function getAllDisks(): Promise<Array<Disk>>-End-->
+
+**System capability:** SystemCapability.FileManagement.StorageService.Volume
+
+**System API:** This is a system API.
+
+**Return value:**
+
+| Type | Description |
+| --- | --- |
+| Promise&lt;Array&lt;Disk&gt;&gt; | return Promise |
+
+**Error codes:**
+
+| Error Code ID | Error Message |
+| --- | --- |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | The caller is not a system application. |
+| 13600001 | IPC error. |
+

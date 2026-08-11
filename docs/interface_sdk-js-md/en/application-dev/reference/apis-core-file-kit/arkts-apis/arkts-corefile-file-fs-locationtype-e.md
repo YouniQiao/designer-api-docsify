@@ -1,6 +1,6 @@
 # LocationType
 
-枚举，文件位置，表示该文件是否在本地或者云端存在。
+Enumerates the file locations.
 
 **Since:** 11
 
@@ -16,7 +16,7 @@
 LOCAL = 1 << 0
 ```
 
-文件在本地存在。
+The file is stored in a local device.
 
 **Since:** 11
 
@@ -32,7 +32,7 @@ LOCAL = 1 << 0
 CLOUD = 1 << 1
 ```
 
-文件在云端存在。
+The file is stored in the cloud.
 
 **Since:** 11
 

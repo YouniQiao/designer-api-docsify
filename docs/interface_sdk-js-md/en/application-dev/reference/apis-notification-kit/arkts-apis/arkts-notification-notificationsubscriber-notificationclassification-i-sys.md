@@ -1,6 +1,6 @@
 # NotificationClassification (System API)
 
-通知分类信息。
+Returns the notification classification information.
 
 **Since:** 26.0.0
 
@@ -18,7 +18,7 @@
 readonly classification?: string
 ```
 
-系统识别的通知分类。
+Notification classification identified by the system.
 
 **Type:** string
 
@@ -40,7 +40,7 @@ readonly classification?: string
 readonly subClassification?: string
 ```
 
-系统识别的通知子分类。
+Notification sub-classification identified by the system.
 
 **Type:** string
 

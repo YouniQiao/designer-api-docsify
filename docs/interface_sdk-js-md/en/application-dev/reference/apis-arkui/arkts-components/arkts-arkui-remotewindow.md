@@ -1,10 +1,6 @@
 # RemoteWindow
 
-远程控制窗口组件，可以通过此组件控制应用窗口，提供启动退出过程中控件动画和应用窗口联动动画的能力。
-
-## 子组件
-
-不可以包含子组件
+Defines RemoteWindow Component.
 
 ## RemoteWindow
 
@@ -12,7 +8,7 @@
 RemoteWindow(target: WindowAnimationTarget)
 ```
 
-通过窗口动画对象创建组件。
+Called when the remote window interface is used.
 
 **Since:** 9
 
@@ -28,7 +24,7 @@ RemoteWindow(target: WindowAnimationTarget)
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| target | [WindowAnimationTarget](../arkts-apis/arkts-arkui-remotewindow-windowanimationtarget-i-sys.md) | Yes | 需要控制的动画窗口的描述。 |
+| target | [WindowAnimationTarget](../arkts-apis/arkts-arkui-remotewindow-windowanimationtarget-i-sys.md) | Yes |  |
 
 ## Summary
 

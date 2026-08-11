@@ -12,7 +12,7 @@ import { statfs } from 'kits/@kit.CoreFileKit';
 function getFreeSize(path: string): Promise<long>
 ```
 
-异步方法获取指定文件系统空闲字节数，以Promise形式返回结果。
+Obtains the free size of the specified file system, in bytes. This API uses a promise to return the result.
 
 **Since:** 9
 
@@ -26,13 +26,13 @@ function getFreeSize(path: string): Promise<long>
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| path | string | Yes | 需要查询的文件系统的文件路径。 |
+| path | string | Yes | File path of the file system. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| ArkTS-Dyn: Promise&lt;number&gt;  <br>ArkTS-Sta：Promise&lt;long&gt; | Promise对象，返回空闲字节数。 |
+| ArkTS-Dyn: Promise&lt;number&gt;  <br>ArkTS-Sta：Promise&lt;long&gt; | Promise used to return the free size obtained, in bytes. |
 
 **Error codes:**
 
@@ -75,7 +75,7 @@ statfs.getFreeSize(path).then((number: number) => {
 function getFreeSize(path: string, callback: AsyncCallback<long>): void
 ```
 
-异步方法获取指定文件系统空闲字节数，使用callback形式返回结果。
+Obtains the free size of the specified file system, in bytes. This API uses an asynchronous callback to return the result.
 
 **Since:** 9
 
@@ -89,8 +89,8 @@ function getFreeSize(path: string, callback: AsyncCallback<long>): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| path | string | Yes | 需要查询的文件系统的文件路径。 |
-| callback | ArkTS-Dyn: [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;number&gt;  <br>ArkTS-Sta：[AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;long&gt; | Yes | 异步获取空闲字节数之后的回调。 |
+| path | string | Yes | File path of the file system. |
+| callback | ArkTS-Dyn: [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;number&gt;  <br>ArkTS-Sta：[AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;long&gt; | Yes | Callback used to return the free size obtained, in bytes. |
 
 **Error codes:**
 

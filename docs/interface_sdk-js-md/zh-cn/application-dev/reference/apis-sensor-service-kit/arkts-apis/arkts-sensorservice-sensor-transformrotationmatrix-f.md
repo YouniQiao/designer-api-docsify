@@ -1,11 +1,5 @@
 # transformRotationMatrix
 
-## 导入模块
-
-```TypeScript
-import { sensor } from 'kits/@kit.SensorServiceKit';
-```
-
 ## transformRotationMatrix
 
 ```TypeScript
@@ -35,14 +29,16 @@ function transformRotationMatrix(inRotationVector: Array<double>, coordinates: C
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt; 2. Incorrect parameter types; 3. Parameter verification failed. |
-| 14500101 | Service exception. Possible causes: 1. Sensor hdf service exception; &lt;br&gt; 2. Sensor service ipc exception;3. Sensor data channel exception. |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| [14500101](../errorcode-sensor.md#14500101-传感器服务异常) | Service exception. Possible causes: 1. Sensor hdf service exception; &lt;br&gt; 2. Sensor service ipc exception;3. Sensor data channel exception. |
 
 ## 示例
 
+ArkTS-Dyn示例：
+
 ```TypeScript
-import { sensor } from '@kit.SensorServiceKit';
 import { BusinessError } from '@kit.BasicServicesKit';
+import { sensor } from '@kit.SensorServiceKit';
 
 // 使用try catch对可能出现的异常进行捕获
 try {
@@ -51,13 +47,45 @@ try {
     0, 0.87, -0.50,
     0, 0.50, 0.87
   ];
-  sensor.transformRotationMatrix(rotationMatrix, { x: 1, y: 3 }, (err: BusinessError, data: Array<number>) => {
-    if (err) {
-      console.error(`Failed to transform rotationMatrix. Code: ${err.code}, message: ${err.message}`);
+  sensor.transformRotationMatrix(rotationMatrix, { x: 1, y: 3 }, (err, data) => {
+    let error = err as BusinessError;
+    let dataValue = data as Array<number>;
+    if (error) {
+      console.error(`Failed to transform rotationMatrix. Code: ${error.code}, message: ${error.message}`);
       return;
     }
-    for (let i = 0; i < data.length; i++) {
-      console.info('Succeeded in getting data[' + i + '] = ' + data[i]);
+    for (let i = 0; i < dataValue.length; i++) {
+      console.info('Succeeded in getting data[' + i + '] = ' + dataValue[i]);
+    }
+  })
+} catch (error) {
+  let e: BusinessError = error as BusinessError;
+  console.error(`Failed to transform rotationMatrix. Code: ${e.code}, message: ${e.message}`);
+}
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+import { sensor } from '@kit.SensorServiceKit';
+
+// 使用try catch对可能出现的异常进行捕获
+try {
+  let rotationMatrix = [
+    1, 0, 0,
+    0, 0.87, -0.50,
+    0, 0.50, 0.87
+  ];
+  sensor.transformRotationMatrix(rotationMatrix, { x: 1, y: 3 }, (err, data) => {
+    let error = err as BusinessError;
+    let dataValue = data as Array<double>;
+    if (error) {
+      console.error(`Failed to transform rotationMatrix. Code: ${error.code}, message: ${error.message}`);
+      return;
+    }
+    for (let i = 0; i < dataValue.length; i++) {
+      console.info('Succeeded in getting data[' + i + '] = ' + dataValue[i]);
     }
   })
 } catch (error) {
@@ -100,6 +128,6 @@ function transformRotationMatrix(inRotationVector: Array<double>, coordinates: C
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt; 2. Incorrect parameter types; 3. Parameter verification failed. |
-| 14500101 | Service exception. Possible causes: 1. Sensor hdf service exception; &lt;br&gt; 2. Sensor service ipc exception;3. Sensor data channel exception. |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| [14500101](../errorcode-sensor.md#14500101-传感器服务异常) | Service exception. Possible causes: 1. Sensor hdf service exception; &lt;br&gt; 2. Sensor service ipc exception;3. Sensor data channel exception. |
 

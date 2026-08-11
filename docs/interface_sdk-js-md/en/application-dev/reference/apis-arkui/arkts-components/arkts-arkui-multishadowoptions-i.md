@@ -1,6 +1,6 @@
 # MultiShadowOptions
 
-投影样式参数。
+Defines shadow style properties.
 
 **Since:** 10
 
@@ -16,7 +16,7 @@
 offsetX?: number | Resource
 ```
 
-X轴偏移量。单位为：vp。默认值：5。
+X-axis offset.Unit: vp. Default value: 5.
 
 **Type:** number \| Resource
 
@@ -42,7 +42,7 @@ X轴偏移量。单位为：vp。默认值：5。
 offsetY?: number | Resource
 ```
 
-Y轴偏移量。单位为：vp。默认值：5。
+Y-axis offset.Unit: vp. Default value: 5.
 
 **Type:** number \| Resource
 
@@ -68,7 +68,17 @@ Y轴偏移量。单位为：vp。默认值：5。
 radius?: number | Resource
 ```
 
-投影模糊半径。API version 10及以前，5；API version 11及以后，。单位为：vp。取值约束：(0, +∞)。默认值：20。&lt;br&gt;设置小于等于0的值时，按默认值显示。
+Shadow blur radius.
+
+The default value varies by API version.
+
+API version 10 and earlier versions: **5**
+
+Since API version 11: **20**
+
+Unit: vp.
+
+A value less than or equal to 0 is handled as the default value.
 
 **Type:** number \| Resource
 

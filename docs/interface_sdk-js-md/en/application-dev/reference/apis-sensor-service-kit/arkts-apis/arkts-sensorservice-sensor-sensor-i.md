@@ -1,6 +1,6 @@
 # Sensor
 
-指示传感器信息。
+Describes the sensor information.
 
 **Since:** 9
 
@@ -22,7 +22,7 @@ import { sensor } from 'kits/@kit.SensorServiceKit';
 deviceId?: int
 ```
 
-设备ID。-1表示本地设备，其它值表示远程设备。
+Device ID.
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
@@ -40,7 +40,7 @@ deviceId?: int
 deviceName?: string
 ```
 
-设备名称，标识传感器的来源设备。
+Device name.
 
 **Type:** string
 
@@ -58,7 +58,7 @@ deviceName?: string
 firmwareVersion:string
 ```
 
-传感器固件版本号，标识传感器固件的当前版本。
+Firmware version of the sensor.
 
 **Type:** string
 
@@ -76,7 +76,7 @@ firmwareVersion:string
 hardwareVersion:string
 ```
 
-传感器硬件版本号，标识传感器硬件的当前版本。
+Hardware version of the sensor.
 
 **Type:** string
 
@@ -94,7 +94,7 @@ hardwareVersion:string
 isLocalSensor?: boolean
 ```
 
-是否为本地传感器。true表示本地传感器，false表示非本地传感器（即远程设备上的传感器）。默认值：true。
+Whether the sensor is a local sensor. The value **true** indicates a local sensor, and the value **false**indicates the opposite.
 
 **Type:** boolean
 
@@ -112,7 +112,7 @@ isLocalSensor?: boolean
 isMockSensor?: boolean
 ```
 
-是否为模拟传感器。true表示模拟传感器，false表示真实传感器。默认值：false。
+Whether the sensor is a mock sensor. The value **true** indicates a mock sensor, and the value **false**indicates the opposite.
 
 **Type:** boolean
 
@@ -130,7 +130,7 @@ isMockSensor?: boolean
 maxRange:double
 ```
 
-传感器最大测量范围。单位：取决于具体传感器类型（如加速度传感器为m/s²）。
+Maximum measurement range of the sensor.
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：double
 
@@ -148,7 +148,7 @@ maxRange:double
 maxSamplePeriod:long
 ```
 
-传感器最大采样周期。单位：ns（纳秒）。
+Maximum sampling period.
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：long
 
@@ -166,7 +166,7 @@ maxSamplePeriod:long
 minSamplePeriod:long
 ```
 
-传感器最小采样周期。单位：ns（纳秒）。
+Minimum sampling period.
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：long
 
@@ -184,7 +184,7 @@ minSamplePeriod:long
 power:double
 ```
 
-传感器估计功耗。单位：mA（毫安）。
+Estimated sensor power, in mA.
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：double
 
@@ -202,7 +202,7 @@ power:double
 precision:double
 ```
 
-传感器精度。单位：取决于具体传感器类型。
+Precision of the sensor.
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：double
 
@@ -220,7 +220,7 @@ precision:double
 sensorId:int
 ```
 
-传感器类型ID，对应[SensorId](arkts-sensorservice-sensor-sensorid-e.md)枚举值。
+Sensor type ID.
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
@@ -238,7 +238,7 @@ sensorId:int
 sensorIndex?: int
 ```
 
-传感器索引，同一类型传感器可能有多个实例，通过sensorIndex区分。
+Sensor index.
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
@@ -256,7 +256,7 @@ sensorIndex?: int
 sensorName:string
 ```
 
-传感器名称，标识传感器的类型和型号。
+Sensor name.
 
 **Type:** string
 
@@ -274,7 +274,7 @@ sensorName:string
 vendorName:string
 ```
 
-传感器厂商名称，标识传感器的制造商。
+Vendor of the sensor.
 
 **Type:** string
 

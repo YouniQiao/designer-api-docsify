@@ -12,11 +12,11 @@ import { HoverModeStatus, ExtraRegionPosition, OnHoverStatusChangeHandler, Expan
 
 | Name | Description |
 | --- | --- |
-| [PresetSplitRatio](arkts-arkui-arkui-advanced-foldsplitcontainer-presetsplitratio-e.md) | 区域比例。 |
+| [PresetSplitRatio](arkts-arkui-arkui-advanced-foldsplitcontainer-presetsplitratio-e.md) | Preset split ratio. |
 
 ### Types
 
 | Name | Description |
 | --- | --- |
-| [RegionBuilder](arkts-arkui-regionbuilder-t.md) | RegionBuilder类型。 |
+| [RegionBuilder](arkts-arkui-regionbuilder-t.md) | RegionBuilder |
 

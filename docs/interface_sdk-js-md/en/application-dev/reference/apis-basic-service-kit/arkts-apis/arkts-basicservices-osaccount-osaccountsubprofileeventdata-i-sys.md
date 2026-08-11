@@ -1,6 +1,6 @@
 # OsAccountSubProfileEventData (System API)
 
-表示系统账号子Profile事件数据。
+Represents the event data of an OS account sub-profile.
 
 **Since:** 26.0.0
 
@@ -24,7 +24,7 @@ import { osAccount } from 'kits/@kit.BasicServicesKit';
 event: OsAccountSubProfileEvent
 ```
 
-发生的事件。
+Event that occurred.
 
 **Type:** [OsAccountSubProfileEvent](arkts-basicservices-osaccount-osaccountsubprofileevent-e-sys.md)
 
@@ -46,7 +46,7 @@ event: OsAccountSubProfileEvent
 osAccountLocalId: int
 ```
 
-系统账号本地ID。取值范围为全体整数。
+OS account local ID.
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
@@ -68,7 +68,7 @@ osAccountLocalId: int
 previousSubProfileId?: int
 ```
 
-上一个系统账号子Profile标识符。取值范围为全体整数。
+Previous OS account sub-profile identifier.
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
@@ -90,7 +90,7 @@ previousSubProfileId?: int
 subProfileId: int
 ```
 
-系统账号子profile标识。取值范围为全体整数。
+OS account sub-profile identifier.
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 

@@ -1,18 +1,12 @@
 # notifyMetadataBindingEvent（系统接口）
 
-## 导入模块
-
-```TypeScript
-import { metadataBinding } from 'kits/@kit.MultimodalAwarenessKit';
-```
-
 ## notifyMetadataBindingEvent
 
 ```TypeScript
 function notifyMetadataBindingEvent(bundleName: string): Promise<string>
 ```
 
-Transfers metadata to the application or service that calls the encoding API. This API uses a promise to return the result.
+推送待嵌入的信息给调用编码接口的应用或服务。使用promise异步回调。
 
 **起始版本：** 18
 
@@ -28,32 +22,18 @@ Transfers metadata to the application or service that calls the encoding API. Th
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| bundleName | string | 是 | Bundle name used to obtain the application link. |
+| bundleName | string | 是 | 应用包名，需为已安装应用的包名。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;string&gt; | Promise used to return the application link information of the current page. |
+| Promise&lt;string&gt; | Promise对象。返回当前所在页面的applink信息。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 32100001 | Internal handling failed. |
-| 202 | Permission check failed. A non-system application uses the system API. |
-
-## 示例
-
-```TypeScript
-import { metadataBinding } from '@kit.MultimodalAwarenessKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let bundleName: string = '';
-metadataBinding.notifyMetadataBindingEvent(bundleName).then((appLink:string)=>{
-  console.info('notify metadata:' + appLink);
-}).catch((error: BusinessError) => {
-  console.error(`Failed to notify metadata. Code: ${error.code}, message: ${error.message}`);
-});
-```
+| [32100001](../../apis-multimodalawareness-kit/errorcode-metadataBinding.md#32100001-文件创建失败) | Internal handling failed. |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission check failed. A non-system application uses the system API. |
 

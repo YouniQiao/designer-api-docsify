@@ -4,7 +4,7 @@
 export type ModuleMetadata = _ModuleMetadata
 ```
 
-模块的元数据信息。
+Defines the metadata of a module.
 
 **Since:** 10
 

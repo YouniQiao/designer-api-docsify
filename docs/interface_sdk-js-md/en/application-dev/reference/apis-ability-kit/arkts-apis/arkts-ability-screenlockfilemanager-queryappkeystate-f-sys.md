@@ -12,7 +12,7 @@ import { screenLockFileManager } from 'kits/@kit.AbilityKit';
 function queryAppKeyState(dataType: DataType): KeyStatus
 ```
 
-以同步方法查询锁屏下指定类型敏感数据密钥的状态。
+Queries the status of a specified type of sensitive data key under the lock screen synchronously.
 
 **Since:** 18
 
@@ -30,24 +30,24 @@ function queryAppKeyState(dataType: DataType): KeyStatus
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| dataType | [DataType](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-file-photopickercomponent-datatype-e.md) | Yes | 锁屏下访问的敏感数据类型。 |
+| dataType | [DataType](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-file-photopickercomponent-datatype-e.md) | Yes | Type of sensitive data that is accessible on the lock screen. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [KeyStatus](arkts-ability-screenlockfilemanager-keystatus-e.md) | 锁屏下敏感数据密钥的状态。 |
+| [KeyStatus](arkts-ability-screenlockfilemanager-keystatus-e.md) | Status of the key for sensitive data under lock screen. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1. Mandatory parameter is left unspecified. 2. Incorrect parameter types. |
-| 801 | The specified SystemCapability name was not found. |
-| 201 | Permission verification failed, usually returned by VerifyAccessToken. |
-| 202 | Permission verification failed, application which is not a system application uses system API. |
-| 29300002 | The system ability works abnormally. |
-| 29300001 | Invalid DataType. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameter is left unspecified. 2. Incorrect parameter types. |
+| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | The specified SystemCapability name was not found. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed, usually returned by VerifyAccessToken. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed, application which is not a system application uses system API. |
+| [29300002](../errorcode-screenLockFileManager.md#29300002-system-service-abnormal) | The system ability works abnormally. |
+| [29300001](../errorcode-screenLockFileManager.md#29300001-invalid-parameter) | Invalid DataType. |
 
 ## Examples
 
@@ -58,9 +58,7 @@ import { BusinessError } from '@kit.BasicServicesKit';
 import { hilog } from '@kit.PerformanceAnalysisKit';
 
 try {
-    // Query the key status
     let keyStatus = screenLockFileManager.queryAppKeyState(screenLockFileManager.DataType.MEDIA_DATA);
-    // Determine the key status and handle different situations
     if (keyStatus === screenLockFileManager.KeyStatus.KEY_NOT_EXIST) {
         hilog.info(0x0000, 'testTag', 'Key does not exist.');
     } else if (keyStatus === screenLockFileManager.KeyStatus.KEY_RELEASED) {

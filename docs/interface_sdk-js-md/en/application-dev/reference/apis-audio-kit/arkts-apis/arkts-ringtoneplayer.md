@@ -1,6 +1,12 @@
 # ringtonePlayer
 
-铃声播放器
+The ringtonePlayer module provides APIs for playing, configuring, and obtaining ringtones.
+ This module must work with
+ [@ohos.multimedia.systemSoundManager](arkts-multimedia-systemsoundmanager.md) to manage
+ ringtones.
+ > **NOTE**
+ >
+ > - The APIs provided by this module are system APIs.
 
 
 ## Summary
@@ -10,7 +16,7 @@
 
 | Name | Description |
 | --- | --- |
-| [RingtoneOptions](arkts-audio-ringtoneplayer-ringtoneoptions-i-sys.md) | 铃声参数选项。 |
-| [RingtonePlayer](arkts-audio-ringtoneplayer-ringtoneplayer-i-sys.md) | 系统铃声播放器，提供系统铃声的参数设置、参数获取、播放、停止等功能。在调用RingtonePlayer的接口前，需要先通过  [getRingtonePlayer](arkts-audio-systemsoundmanager-systemsoundmanager-i.md#getringtoneplayer)创建实例。 |
+| [RingtoneOptions](arkts-audio-ringtoneplayer-ringtoneoptions-i-sys.md) | Enumerates the ringtone parameters. |
+| [RingtonePlayer](arkts-audio-ringtoneplayer-ringtoneplayer-i-sys.md) | Provides APIs for setting and obtaining ringtone parameters as well as playing and stopping ringtones. Before calling any API in RingtonePlayer, you must use  [getRingtonePlayer](arkts-audio-systemsoundmanager-systemsoundmanager-i.md#getringtoneplayer)to obtain a RingtonePlayer instance. |
 <!--DelEnd-->
 

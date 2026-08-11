@@ -1,6 +1,6 @@
 # ChannelStateInfo
 
-当代理通道状态变化时，用于表示代理通道的连接状态。
+Represents the connection state information of the proxy channel.
 
 **Since:** 20
 
@@ -22,7 +22,7 @@ import { proxyChannelManager } from 'kits/@kit.DistributedServiceKit';
 channelId: int
 ```
 
-代理通道的channelId。
+Proxy channel ID.
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
@@ -42,7 +42,7 @@ channelId: int
 state: ChannelState
 ```
 
-通道的连接状态。
+Connection state of the proxy channel.
 
 **Type:** [ChannelState](arkts-distributedservice-proxychannelmanager-channelstate-e.md)
 

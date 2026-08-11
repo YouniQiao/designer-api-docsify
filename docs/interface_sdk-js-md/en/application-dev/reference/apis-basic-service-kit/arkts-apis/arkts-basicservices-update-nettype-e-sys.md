@@ -1,6 +1,6 @@
 # NetType (System API)
 
-网络类型，用于指定下载的网络类型。设置CELLULAR仅允许数据网络下载，设置WIFI仅允许WIFI下载，设置CELLULAR_AND_WIFI允许两者均可下载。
+Enumerates the network types allowed for download. The value **CELLULAR** indicates that only download over the cellular network is allowed; **WiFi** that only download using Wi-Fi is allowed; **CELLULAR_AND_WIFI** indicates that download over both the cellular network and Wi-Fi is allowed.
 
 **Since:** 9
 
@@ -18,7 +18,7 @@
 CELLULAR = 1
 ```
 
-数据网络。
+Data network.
 
 **Since:** 9
 
@@ -36,7 +36,7 @@ CELLULAR = 1
 METERED_WIFI = 2
 ```
 
-热点WIFI。
+Wi-Fi hotspot.
 
 **Since:** 9
 
@@ -54,7 +54,7 @@ METERED_WIFI = 2
 NOT_METERED_WIFI = 4
 ```
 
-非热点WIFI。
+Non Wi-Fi hotspot.
 
 **Since:** 9
 
@@ -72,7 +72,7 @@ NOT_METERED_WIFI = 4
 WIFI = 6
 ```
 
-WIFI。
+Wi-Fi.
 
 **Since:** 9
 
@@ -90,7 +90,7 @@ WIFI。
 CELLULAR_AND_WIFI = 7
 ```
 
-数据网络和WIFI。
+Data network and Wi-Fi.
 
 **Since:** 9
 

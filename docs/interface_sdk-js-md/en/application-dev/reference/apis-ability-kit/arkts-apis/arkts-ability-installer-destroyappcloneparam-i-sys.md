@@ -1,6 +1,6 @@
 # DestroyAppCloneParam (System API)
 
-删除分身应用可指定的参数信息。
+Describes the parameters used for destroying an application clone.
 
 **Since:** 15
 
@@ -24,8 +24,22 @@ import { installer } from 'kits/@kit.AbilityKit';
 parameters?: Array<Parameters>
 ```
 
-扩展参数，Parameters类型的数组，默认值为空。Parameters.key取值支持：&lt;/br&gt; - "ohos.bms.param.renameInstall"：若对应value值为“true”，表示安装时使用共享目录将安装包从应用沙箱移动到安装目录，否则使用常规目录将安装包从应用沙箱拷贝到安装目录。&lt;/br&gt; - "ohos.bms.param.enterpriseForAllUser"：若对应value值为“true”，表示在安装企业应用时为所有用户安装，该参数只对[签名证书的分发类型](arkts-ability-applicationinfo-i.md)为enterprise_mdm和enterprise_normal的应用生效。&lt;/br&gt; - "ohos.bms.param.verifyUninstallRule"：若对应value值为“true”，表示设置卸载处置规则，用于拦截应用卸载。&lt;/br&gt; - "ohos.bms.param.enterpriseManifest"：value值为json文件的沙箱路径，json文件用于存储应用的描述文件，包括应用包名等，该字段用于企业应用克隆场景。克隆时，若该json文件存在，则将旧机的应用安装包拷贝到新机进行安装。&lt;/br&gt; - "ohos.bms.param.installBundleName"：value值为应用的包名，该字段用于应用安装场景（从API version 23开始支持）。如果安装时传入了该字段，则在应用安装过程中调用接口[getBundleInstallStatus](arkts-ability-bundlemanager-getbundleinstallstatus-f-sys.md#getbundleinstallstatus)能够查询到应用正在安装的状态。&lt;/br&gt; - "ohos.bms.param.installAllowDowngrade"：若对应value值为“true”，该字段表示支持应用降级安装（从API version 23开始支持），即设备已安装较高版本的应用，也可以覆盖安装较低版本的应用。仅支持签名证书分发类型为app_gallery或者签名证书类型为debug的三方应用降级安装。使用降级安装能力需要同时申请ohos.permission.INSTALL_BUNDLE和ohos.permission.INSTALL_ALLOW_DOWNGRADE权限。&lt;/br&gt; - "ohos.bms.param.originalInstallSource"：用于指定待安装应用的原始安装来源，对应value取值范围为  
-[ApplicationInfo](arkts-ability-applicationinfo-i.md)中的installSource字段取值。使用该参数安装的应用，其安装来源installSource会被设置为指定的value值。参数生效条件：待安装应用必须未在设备上安装；当value指定为应用包名时，要求指定的应用必须已安装且为系统应用。从API version 23开始支持。
+Extended parameters, represented as an array of the Parameters type. The default value is empty. The options of  
+**Parameters.key** are as follows:
+
+- **ohos.bms.param.renameInstall**: If the value is **true**, the installation package is moved from the  
+application sandbox to the installation directory using a shared directory. Otherwise, it is copied from the application sandbox to the installation directory using a regular directory.  
+- **ohos.bms.param.enterpriseForAllUser**: If the value is **true**, the enterprise app is installed for all  
+users. This parameter takes effect only for applications whose  
+[distribution type of the application signing certificate](arkts-ability-applicationinfo-i.md)is **enterprise_mdm** or **enterprise_normal**.  
+- **ohos.bms.param.verifyUninstallRule**: If the value is **true**, an uninstallation handling rule is set to  
+block application uninstallation.  
+- **ohos.bms.param.enterpriseManifest**: The value is the sandbox path of the JSON file used to store the  
+application's manifest, including the bundle name. It is used in the scenario of cloning enterprise applications.If this JSON file exists during cloning, the application package from the old device is copied to the new device for installation.  
+- **ohos.bms.param.installBundleName**: The value is the bundle name of the application. It is used in  
+application installation scenarios and supported since API version 23. If this field is passed during installation, the [getBundleInstallStatus](arkts-ability-bundlemanager-getbundleinstallstatus-f.md#getbundleinstallstatus)API can be called to obtain the installation status of the application.  
+- **ohos.bms.param.installAllowDowngrade**: If the value is **true**, the application can be installed in  
+downgrade mode (supported since API version 23). That is, if a higher version of the application is already installed on the device, a lower version can be installed over it. Only third-party applications with the signing certificate distribution type set to **app_gallery** or the signing certificate type set to **debug** support downgrade installation. To use downgrade installation, you must request the ohos.permission.INSTALL_BUNDLE and ohos.permission.INSTALL_ALLOW_DOWNGRADE permissions.
 
 **Type:** Array&lt;Parameters&gt;
 
@@ -45,8 +59,8 @@ parameters?: Array<Parameters>
 userId?: int
 ```
 
-指定删除分身应用所在的用户ID，可以通过  
-[getOsAccountLocalId接口](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-osaccount-accountmanager-i.md/arkts-basicservices-osaccount-accountmanager-i.md#getosaccountlocalid)获取。默认值：调用方所在用户。
+ID of the user for whom the clone is to be destroyed. You can obtain the user ID by calling  
+[getOsAccountLocalId](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-osaccount-accountmanager-i.md/arkts-basicservices-osaccount-accountmanager-i.md#getosaccountlocalid). The default value is the user ID of the caller.
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 

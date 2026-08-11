@@ -50,7 +50,7 @@ color?: ParticleColorPropertyOptions
 
 默认值：{ range:[Color.White,Color.White] } 。图片粒子不支持设置颜色。
 
-**类型：** [ParticleColorPropertyOptions](../arkts-components/arkts-arkui-particlecolorpropertyoptions-i.md)
+**类型：** [ParticleColorPropertyOptions](arkts-arkui-particle-particlecolorpropertyoptions-i.md)
 
 **默认值：** {range:['#FFFFFF','#FFFFFF']}
 
@@ -72,7 +72,7 @@ emitter: EmitterOptions
 
 粒子发射器配置。
 
-**类型：** [EmitterOptions](../arkts-components/arkts-arkui-emitteroptions-i.md)
+**类型：** [EmitterOptions](arkts-arkui-particle-emitteroptions-i.md)
 
 **起始版本：** 23
 
@@ -94,7 +94,7 @@ opacity?: ParticlePropertyOptions
 
 默认值：{ range:[1.0,1.0] }
 
-**类型：** [ParticlePropertyOptions](../arkts-components/arkts-arkui-particlepropertyoptions-i.md)
+**类型：** [ParticlePropertyOptions](arkts-arkui-particle-particlepropertyoptions-i.md)
 
 **默认值：** {range:[1.0,1.0]}
 
@@ -118,7 +118,7 @@ scale?: ParticlePropertyOptions
 
 默认值：{ range:[1.0,1.0] }
 
-**类型：** [ParticlePropertyOptions](../arkts-components/arkts-arkui-particlepropertyoptions-i.md)
+**类型：** [ParticlePropertyOptions](arkts-arkui-particle-particlepropertyoptions-i.md)
 
 **默认值：** {range:[1.0,1.0]}
 
@@ -144,7 +144,7 @@ spin?: ParticlePropertyOptions
 
 方向：正数表示顺时针旋转，负数表示逆时针旋转。
 
-**类型：** [ParticlePropertyOptions](../arkts-components/arkts-arkui-particlepropertyoptions-i.md)
+**类型：** [ParticlePropertyOptions](arkts-arkui-particle-particlepropertyoptions-i.md)
 
 **默认值：** {range:[0,0]}
 
@@ -172,7 +172,7 @@ speed表示速度大小。angle表示速度的方向（单位为角度），以�
 
 默认值：{ speed:[0.0,0.0],angle:[0.0,0.0] }
 
-**类型：** [VelocityOptions](arkts-arkui-particle-velocityoptions-i.md)
+**类型：** [VelocityOptions](../arkts-components/arkts-arkui-velocityoptions-i.md)
 
 **默认值：** {speed:[0,0];angle:[0,0]}
 

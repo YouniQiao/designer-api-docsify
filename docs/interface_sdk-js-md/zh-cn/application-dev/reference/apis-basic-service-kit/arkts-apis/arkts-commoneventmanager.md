@@ -34,12 +34,6 @@
 
 **系统能力：** SystemCapability.Notification.CommonEvent
 
-## 导入模块
-
-```TypeScript
-import { commonEventManager } from 'kits/@kit.BasicServicesKit';
-```
-
 ## 汇总
 
 ### 函数

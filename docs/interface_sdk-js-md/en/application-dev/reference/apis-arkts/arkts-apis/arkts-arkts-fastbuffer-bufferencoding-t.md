@@ -4,7 +4,7 @@
 type BufferEncoding = 'ascii' | 'utf8' | 'utf-8' | 'utf16le' | 'ucs2' | 'ucs-2' | 'base64' | 'base64url' | 'latin1' | 'binary' | 'hex'
 ```
 
-表示支持的编码格式类型。
+This parameter specifies the type of a common encoding format.
 
 **Since:** 20
 

@@ -1,10 +1,12 @@
 # RdbStore
 
-提供管理关系数据库（RDB）方法的接口。
+Provides APIs for managing data in an RDB store.
 
-在使用以下API前，请先通过[getRdbStore](arkts-arkdata-relationalstore-getrdbstore-f.md#getrdbstore)方法获取RdbStore实例，并使用该实例调用对应接口方法。
+Before using the following APIs, you should obtain an **RdbStore** instance by calling the   
+[getRdbStore](arkts-arkdata-relationalstore-getrdbstore-f.md#getrdbstore) method and then call the corresponding method through the instance.
 
-在此基础上，建议优先使用[execute](arkts-arkdata-relationalstore-rdbstore-i.md#execute)方法完成数据库表结构和初始数据的初始化，以确保相关接口调用的前置条件已满足。
+In addition, use   
+[execute](arkts-arkdata-relationalstore-rdbstore-i.md#execute) to initialize the database table structure and related data first, ensuring that the prerequisites for related API calls are met.
 
 **Since:** 9
 
@@ -32,13 +34,7 @@ ArkTS-Sta:
 attach(fullPath: string, attachName: string, waitTime?: int) : Promise<int>
 ```
 
-将一个数据库文件附加到当前数据库中，以便在SQL语句中可以直接访问附加数据库中的数据，使用Promise异步回调。
-
-数据库文件来自文件，且此API不支持附加加密数据库。调用attach接口后，数据库切换为非WAL模式，性能会存在一定的劣化。
-
-attach时，数据库会切换为非WAL模式，切换模式需要确保所有的ResultSet都已经Close，所有的写操作已经结束，否则会报错14800015。
-
-attach不能并发调用，否则可能出现未响应情况并报错14800015，需要重试。
+Attaches a database file to the currently linked database.
 
 **Since:** 12
 
@@ -52,42 +48,42 @@ attach不能并发调用，否则可能出现未响应情况并报错14800015，
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| fullPath | string | Yes | 表示要附加的数据库的路径，不能为空字符串，路径长度不超过1024字节。 |
-| attachName | string | Yes | 表示附加后的数据库的别名，不能为空字符串。 |
-| waitTime | ArkTS-Dyn: number  <br>ArkTS-Sta：int | No | 表示附加数据库文件的等待时长，单位：s。默认值2s，最小值1s，最大值300s。 |
+| fullPath | string | Yes | Indicates the path of the database file to attach. |
+| attachName | string | Yes | Indicates the alias of the database. |
+| waitTime | ArkTS-Dyn: number  <br>ArkTS-Sta：int | No | Indicates the maximum time allowed for attaching the database file, in seconds. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| ArkTS-Dyn: Promise&lt;number&gt;  <br>ArkTS-Sta：Promise&lt;int&gt; | Promise对象。返回附加数据库的数量。 |
+| ArkTS-Dyn: Promise&lt;number&gt;  <br>ArkTS-Sta：Promise&lt;int&gt; | Promise used to return the number of attached databases. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 14800033 | SQLite: Data type mismatch. |
-| 801 | Capability not supported. |
-| 14800000 | Inner error. |
-| 14800032 | SQLite: Abort due to constraint violation. |
-| 14800034 | SQLite: Library used incorrectly. |
-| 14800011 | The current operation failed because the database is corrupted. |
-| 14800010 | Failed to open or delete the database by an invalid database path. |
-| 14800015 | The database does not respond. |
-| 14800014 | The target instance is already closed. |
-| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; 3. Parameter verification failed. |
-| 14800016 | The database alias already exists. |
-| 14800021 | SQLite: Generic error. |
-| 14800023 | SQLite: Access permission denied. |
-| 14800022 | SQLite: Callback routine requested an abort. |
-| 14800025 | SQLite: A table in the database is locked. |
-| 14800024 | SQLite: The database file is locked. |
-| 14800027 | SQLite: Attempt to write a readonly database. |
-| 14800026 | SQLite: The database is out of memory. |
-| 14800029 | SQLite: The database is full. |
-| 14800028 | SQLite: Some kind of disk I/O error occurred. |
-| 14800031 | SQLite: TEXT or BLOB exceeds size limit. |
-| 14800030 | SQLite: Unable to open the database file. |
+| [14800033](../errorcode-data-rdb.md#14800033-sqlite-data-types-mismatch) | SQLite: Data type mismatch. |
+| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. |
+| [14800000](../../apis-basic-services-kit/errorcode-settings.md#14800000-parameter-check-failed) | Inner error. |
+| [14800032](../errorcode-data-rdb.md#14800032-sqlite-abort-due-to-constraint-violation) | SQLite: Abort due to constraint violation. |
+| [14800034](../errorcode-data-rdb.md#14800034-incorrect-use-of-sqlite-library) | SQLite: Library used incorrectly. |
+| [14800011](../errorcode-data-rdb.md#14800011-database-file-corrupted) | The current operation failed because the database is corrupted. |
+| [14800010](../../apis-basic-services-kit/errorcode-settings.md#14800010-uiability-required) | Failed to open or delete the database by an invalid database path. |
+| [14800015](../errorcode-data-rdb.md#14800015-rdb-store-not-respond) | The database does not respond. |
+| [14800014](../errorcode-data-rdb.md#14800014-target-instance-closed) | The target instance is already closed. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; 3. Parameter verification failed. |
+| [14800016](../errorcode-data-rdb.md#14800016-duplicate-rdb-alias) | The database alias already exists. |
+| [14800021](../errorcode-data-rdb.md#14800021-sqlite-generic-error) | SQLite: Generic error. |
+| [14800023](../errorcode-data-rdb.md#14800023-sqlite-access-denied) | SQLite: Access permission denied. |
+| [14800022](../errorcode-data-rdb.md#14800022-sqlite-asynchronous-callback-request-aborted) | SQLite: Callback routine requested an abort. |
+| [14800025](../errorcode-data-rdb.md#14800025-sqlite-database-table-locked) | SQLite: A table in the database is locked. |
+| [14800024](../errorcode-data-rdb.md#14800024-sqlite-database-file-locked) | SQLite: The database file is locked. |
+| [14800027](../errorcode-data-rdb.md#14800027-sqlite-attempt-to-write-a-readonly-database) | SQLite: Attempt to write a readonly database. |
+| [14800026](../errorcode-data-rdb.md#14800026-sqlite-insufficient-database-memory) | SQLite: The database is out of memory. |
+| [14800029](../errorcode-data-rdb.md#14800029-sqlite-database-is-full) | SQLite: The database is full. |
+| [14800028](../errorcode-data-rdb.md#14800028-sqlite-io-error) | SQLite: Some kind of disk I/O error occurred. |
+| [14800031](../errorcode-data-rdb.md#14800031-sqlite-text-or-blob-exceeds-the-limit) | SQLite: TEXT or BLOB exceeds size limit. |
+| [14800030](../errorcode-data-rdb.md#14800030-sqlite-unable-to-open-the-database-file) | SQLite: Unable to open the database file. |
 
 ## attach
 
@@ -101,13 +97,7 @@ ArkTS-Sta:
 attach(context: Context, config: StoreConfig, attachName: string, waitTime?: int) : Promise<int>
 ```
 
-将一个当前应用的数据库附加到当前数据库中，以便在SQL语句中可以直接访问附加数据库中的数据，使用Promise异步回调。
-
-此API不支持加密数据库附加非加密数据库。调用attach接口后，数据库切换为非WAL模式，性能会存在一定的劣化。
-
-attach时，数据库会切换为非WAL模式，切换模式需要确保所有的ResultSet都已经Close，所有的写操作已经结束，否则会报错14800015。
-
-attach不能并发调用，否则可能出现未响应情况并报错14800015，需要重试。除此之外，attach附加加密数据库时，可能受到并发的影响，出现解密失败的情况，报错14800011，需要显式指定加密参数并重试。
+Attaches a database file to the currently linked database.
 
 **Since:** 12
 
@@ -121,45 +111,45 @@ attach不能并发调用，否则可能出现未响应情况并报错14800015，
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| context | [Context](../../apis-arkui/arkts-components/arkts-arkui-context-t.md) | Yes | 应用的上下文。 &lt;br&gt;FA模型的应用Context定义见[Context](../../apis-ability-kit/arkts-apis/arkts-ability-context-t.md/arkts-ability-context-t.md)。 &lt;br&gt;Stage模型的应用Context定义见[Context](../../apis-ability-kit/arkts-apis/arkts-ability-context-t.md/arkts-ability-context-t.md)。 |
-| config | [StoreConfig](arkts-arkdata-relationalstore-storeconfig-i.md) | Yes | 与此RDB存储相关的数据库配置。 |
-| attachName | string | Yes | 表示附加后的数据库的别名，不能为空字符串。 |
-| waitTime | ArkTS-Dyn: number  <br>ArkTS-Sta：int | No | 表示附加数据库文件的等待时长，单位：s。默认值2s，最小值1s，最大值300s。 |
+| context | [Context](../../apis-arkui/arkts-components/arkts-arkui-context-t.md) | Yes | Indicates the context of an application or ability. |
+| config | [StoreConfig](arkts-arkdata-relationalstore-storeconfig-i.md) | Yes | Indicates the {@link StoreConfig} configuration of the database related to this RDB store. |
+| attachName | string | Yes | Indicates the alias of the database. |
+| waitTime | ArkTS-Dyn: number  <br>ArkTS-Sta：int | No | Indicates the maximum time allowed for attaching the database file, in seconds. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| ArkTS-Dyn: Promise&lt;number&gt;  <br>ArkTS-Sta：Promise&lt;int&gt; | Promise对象。返回附加数据库的数量。 |
+| ArkTS-Dyn: Promise&lt;number&gt;  <br>ArkTS-Sta：Promise&lt;int&gt; | Promise used to return the number of attached databases. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 14800033 | SQLite: Data type mismatch. |
-| 801 | Capability not supported. |
-| 14800000 | Inner error. |
-| 14800032 | SQLite: Abort due to constraint violation. |
-| 14800034 | SQLite: Library used incorrectly. |
-| 14801001 | The operation is supported in the stage model only. |
-| 14800011 | The current operation failed because the database is corrupted. |
-| 14800010 | Failed to open or delete the database by an invalid database path. |
-| 14801002 | Invalid data group ID. |
-| 14800015 | The database does not respond. |
-| 14800014 | The target instance is already closed. |
-| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; 3. Parameter verification failed. |
-| 14800016 | The database alias already exists. |
-| 14800021 | SQLite: Generic error. |
-| 14800023 | SQLite: Access permission denied. |
-| 14800022 | SQLite: Callback routine requested an abort. |
-| 14800025 | SQLite: A table in the database is locked. |
-| 14800024 | SQLite: The database file is locked. |
-| 14800027 | SQLite: Attempt to write a readonly database. |
-| 14800026 | SQLite: The database is out of memory. |
-| 14800029 | SQLite: The database is full. |
-| 14800028 | SQLite: Some kind of disk I/O error occurred. |
-| 14800031 | SQLite: TEXT or BLOB exceeds size limit. |
-| 14800030 | SQLite: Unable to open the database file. |
+| [14800033](../errorcode-data-rdb.md#14800033-sqlite-data-types-mismatch) | SQLite: Data type mismatch. |
+| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. |
+| [14800000](../../apis-basic-services-kit/errorcode-settings.md#14800000-parameter-check-failed) | Inner error. |
+| [14800032](../errorcode-data-rdb.md#14800032-sqlite-abort-due-to-constraint-violation) | SQLite: Abort due to constraint violation. |
+| [14800034](../errorcode-data-rdb.md#14800034-incorrect-use-of-sqlite-library) | SQLite: Library used incorrectly. |
+| [14801001](../errorcode-data-rdb.md#14801001-stage-model-required) | The operation is supported in the stage model only. |
+| [14800011](../errorcode-data-rdb.md#14800011-database-file-corrupted) | The current operation failed because the database is corrupted. |
+| [14800010](../../apis-basic-services-kit/errorcode-settings.md#14800010-uiability-required) | Failed to open or delete the database by an invalid database path. |
+| [14801002](../errorcode-data-rdb.md#14801002-invalid-datagroupid-in-storeconfig) | Invalid data group ID. |
+| [14800015](../errorcode-data-rdb.md#14800015-rdb-store-not-respond) | The database does not respond. |
+| [14800014](../errorcode-data-rdb.md#14800014-target-instance-closed) | The target instance is already closed. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; 3. Parameter verification failed. |
+| [14800016](../errorcode-data-rdb.md#14800016-duplicate-rdb-alias) | The database alias already exists. |
+| [14800021](../errorcode-data-rdb.md#14800021-sqlite-generic-error) | SQLite: Generic error. |
+| [14800023](../errorcode-data-rdb.md#14800023-sqlite-access-denied) | SQLite: Access permission denied. |
+| [14800022](../errorcode-data-rdb.md#14800022-sqlite-asynchronous-callback-request-aborted) | SQLite: Callback routine requested an abort. |
+| [14800025](../errorcode-data-rdb.md#14800025-sqlite-database-table-locked) | SQLite: A table in the database is locked. |
+| [14800024](../errorcode-data-rdb.md#14800024-sqlite-database-file-locked) | SQLite: The database file is locked. |
+| [14800027](../errorcode-data-rdb.md#14800027-sqlite-attempt-to-write-a-readonly-database) | SQLite: Attempt to write a readonly database. |
+| [14800026](../errorcode-data-rdb.md#14800026-sqlite-insufficient-database-memory) | SQLite: The database is out of memory. |
+| [14800029](../errorcode-data-rdb.md#14800029-sqlite-database-is-full) | SQLite: The database is full. |
+| [14800028](../errorcode-data-rdb.md#14800028-sqlite-io-error) | SQLite: Some kind of disk I/O error occurred. |
+| [14800031](../errorcode-data-rdb.md#14800031-sqlite-text-or-blob-exceeds-the-limit) | SQLite: TEXT or BLOB exceeds size limit. |
+| [14800030](../errorcode-data-rdb.md#14800030-sqlite-unable-to-open-the-database-file) | SQLite: Unable to open the database file. |
 
 ## backup
 
@@ -167,9 +157,7 @@ attach不能并发调用，否则可能出现未响应情况并报错14800015，
 backup(destName: string, callback: AsyncCallback<void>): void
 ```
 
-以指定名称备份数据库，使用callback异步回调。
-
-该接口支持向量数据库（在[StoreConfig](arkts-arkdata-relationalstore-storeconfig-i.md)中配置vector为true）使用。
+Backs up a database in a specified name.
 
 **Since:** 9
 
@@ -183,33 +171,33 @@ backup(destName: string, callback: AsyncCallback<void>): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| destName | string | Yes | 指定数据库的备份文件名，不能为空字符串。 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | 回调函数。当备份成功，err为undefined，否则为错误对象。 |
+| destName | string | Yes | Indicates the name that saves the database backup. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | The callback of backup. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 14800033 | SQLite: Data type mismatch.<br>**Applicable version:** 12 and later |
-| 14800000 | Inner error. |
-| 14800032 | SQLite: Abort due to constraint violation.<br>**Applicable version:** 12 and later |
-| 14800034 | SQLite: Library used incorrectly.<br>**Applicable version:** 12 and later |
-| 14800011 | The current operation failed because the database is corrupted.<br>**Applicable version:** 12 and later |
-| 14800010 | Failed to open or delete the database by an invalid database path.<br>**Applicable version:** 12 and later |
-| 14800015 | The database does not respond.<br>**Applicable version:** 12 and later |
-| 14800014 | The target instance is already closed.<br>**Applicable version:** 12 and later |
-| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; 3. Parameter verification failed. |
-| 14800021 | SQLite: Generic error.<br>**Applicable version:** 12 and later |
-| 14800023 | SQLite: Access permission denied.<br>**Applicable version:** 12 and later |
-| 14800022 | SQLite: Callback routine requested an abort.<br>**Applicable version:** 12 and later |
-| 14800025 | SQLite: A table in the database is locked.<br>**Applicable version:** 12 and later |
-| 14800024 | SQLite: The database file is locked.<br>**Applicable version:** 12 and later |
-| 14800027 | SQLite: Attempt to write a readonly database.<br>**Applicable version:** 12 and later |
-| 14800026 | SQLite: The database is out of memory.<br>**Applicable version:** 12 and later |
-| 14800029 | SQLite: The database is full.<br>**Applicable version:** 12 and later |
-| 14800028 | SQLite: Some kind of disk I/O error occurred.<br>**Applicable version:** 12 and later |
-| 14800031 | SQLite: TEXT or BLOB exceeds size limit.<br>**Applicable version:** 12 and later |
-| 14800030 | SQLite: Unable to open the database file.<br>**Applicable version:** 12 and later |
+| [14800033](../errorcode-data-rdb.md#14800033-sqlite-data-types-mismatch) | SQLite: Data type mismatch.<br>**Applicable version:** 12 and later |
+| [14800000](../../apis-basic-services-kit/errorcode-settings.md#14800000-parameter-check-failed) | Inner error. |
+| [14800032](../errorcode-data-rdb.md#14800032-sqlite-abort-due-to-constraint-violation) | SQLite: Abort due to constraint violation.<br>**Applicable version:** 12 and later |
+| [14800034](../errorcode-data-rdb.md#14800034-incorrect-use-of-sqlite-library) | SQLite: Library used incorrectly.<br>**Applicable version:** 12 and later |
+| [14800011](../errorcode-data-rdb.md#14800011-database-file-corrupted) | The current operation failed because the database is corrupted.<br>**Applicable version:** 12 and later |
+| [14800010](../../apis-basic-services-kit/errorcode-settings.md#14800010-uiability-required) | Failed to open or delete the database by an invalid database path.<br>**Applicable version:** 12 and later |
+| [14800015](../errorcode-data-rdb.md#14800015-rdb-store-not-respond) | The database does not respond.<br>**Applicable version:** 12 and later |
+| [14800014](../errorcode-data-rdb.md#14800014-target-instance-closed) | The target instance is already closed.<br>**Applicable version:** 12 and later |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; 3. Parameter verification failed. |
+| [14800021](../errorcode-data-rdb.md#14800021-sqlite-generic-error) | SQLite: Generic error.<br>**Applicable version:** 12 and later |
+| [14800023](../errorcode-data-rdb.md#14800023-sqlite-access-denied) | SQLite: Access permission denied.<br>**Applicable version:** 12 and later |
+| [14800022](../errorcode-data-rdb.md#14800022-sqlite-asynchronous-callback-request-aborted) | SQLite: Callback routine requested an abort.<br>**Applicable version:** 12 and later |
+| [14800025](../errorcode-data-rdb.md#14800025-sqlite-database-table-locked) | SQLite: A table in the database is locked.<br>**Applicable version:** 12 and later |
+| [14800024](../errorcode-data-rdb.md#14800024-sqlite-database-file-locked) | SQLite: The database file is locked.<br>**Applicable version:** 12 and later |
+| [14800027](../errorcode-data-rdb.md#14800027-sqlite-attempt-to-write-a-readonly-database) | SQLite: Attempt to write a readonly database.<br>**Applicable version:** 12 and later |
+| [14800026](../errorcode-data-rdb.md#14800026-sqlite-insufficient-database-memory) | SQLite: The database is out of memory.<br>**Applicable version:** 12 and later |
+| [14800029](../errorcode-data-rdb.md#14800029-sqlite-database-is-full) | SQLite: The database is full.<br>**Applicable version:** 12 and later |
+| [14800028](../errorcode-data-rdb.md#14800028-sqlite-io-error) | SQLite: Some kind of disk I/O error occurred.<br>**Applicable version:** 12 and later |
+| [14800031](../errorcode-data-rdb.md#14800031-sqlite-text-or-blob-exceeds-the-limit) | SQLite: TEXT or BLOB exceeds size limit.<br>**Applicable version:** 12 and later |
+| [14800030](../errorcode-data-rdb.md#14800030-sqlite-unable-to-open-the-database-file) | SQLite: Unable to open the database file.<br>**Applicable version:** 12 and later |
 
 ## backup
 
@@ -217,9 +205,7 @@ backup(destName: string, callback: AsyncCallback<void>): void
 backup(destName: string): Promise<void>
 ```
 
-以指定名称备份数据库，使用Promise异步回调。
-
-该接口支持向量数据库（在[StoreConfig](arkts-arkdata-relationalstore-storeconfig-i.md)中配置vector为true）使用。
+Backs up a database in a specified name.
 
 **Since:** 9
 
@@ -233,37 +219,37 @@ backup(destName: string): Promise<void>
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| destName | string | Yes | 指定数据库的备份文件名，不能为空字符串。 |
+| destName | string | Yes | Indicates the name that saves the database backup. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise对象，无返回结果。 |
+| Promise&lt;void&gt; | The promise returned by the function. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 14800033 | SQLite: Data type mismatch.<br>**Applicable version:** 12 and later |
-| 14800000 | Inner error. |
-| 14800032 | SQLite: Abort due to constraint violation.<br>**Applicable version:** 12 and later |
-| 14800034 | SQLite: Library used incorrectly.<br>**Applicable version:** 12 and later |
-| 14800011 | The current operation failed because the database is corrupted.<br>**Applicable version:** 12 and later |
-| 14800015 | The database does not respond.<br>**Applicable version:** 12 and later |
-| 14800014 | The target instance is already closed.<br>**Applicable version:** 12 and later |
-| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; 3. Parameter verification failed. |
-| 14800021 | SQLite: Generic error.<br>**Applicable version:** 12 and later |
-| 14800023 | SQLite: Access permission denied.<br>**Applicable version:** 12 and later |
-| 14800022 | SQLite: Callback routine requested an abort.<br>**Applicable version:** 12 and later |
-| 14800025 | SQLite: A table in the database is locked.<br>**Applicable version:** 12 and later |
-| 14800024 | SQLite: The database file is locked.<br>**Applicable version:** 12 and later |
-| 14800027 | SQLite: Attempt to write a readonly database.<br>**Applicable version:** 12 and later |
-| 14800026 | SQLite: The database is out of memory.<br>**Applicable version:** 12 and later |
-| 14800029 | SQLite: The database is full.<br>**Applicable version:** 12 and later |
-| 14800028 | SQLite: Some kind of disk I/O error occurred.<br>**Applicable version:** 12 and later |
-| 14800031 | SQLite: TEXT or BLOB exceeds size limit.<br>**Applicable version:** 12 and later |
-| 14800030 | SQLite: Unable to open the database file.<br>**Applicable version:** 12 and later |
+| [14800033](../errorcode-data-rdb.md#14800033-sqlite-data-types-mismatch) | SQLite: Data type mismatch.<br>**Applicable version:** 12 and later |
+| [14800000](../../apis-basic-services-kit/errorcode-settings.md#14800000-parameter-check-failed) | Inner error. |
+| [14800032](../errorcode-data-rdb.md#14800032-sqlite-abort-due-to-constraint-violation) | SQLite: Abort due to constraint violation.<br>**Applicable version:** 12 and later |
+| [14800034](../errorcode-data-rdb.md#14800034-incorrect-use-of-sqlite-library) | SQLite: Library used incorrectly.<br>**Applicable version:** 12 and later |
+| [14800011](../errorcode-data-rdb.md#14800011-database-file-corrupted) | The current operation failed because the database is corrupted.<br>**Applicable version:** 12 and later |
+| [14800015](../errorcode-data-rdb.md#14800015-rdb-store-not-respond) | The database does not respond.<br>**Applicable version:** 12 and later |
+| [14800014](../errorcode-data-rdb.md#14800014-target-instance-closed) | The target instance is already closed.<br>**Applicable version:** 12 and later |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; 3. Parameter verification failed. |
+| [14800021](../errorcode-data-rdb.md#14800021-sqlite-generic-error) | SQLite: Generic error.<br>**Applicable version:** 12 and later |
+| [14800023](../errorcode-data-rdb.md#14800023-sqlite-access-denied) | SQLite: Access permission denied.<br>**Applicable version:** 12 and later |
+| [14800022](../errorcode-data-rdb.md#14800022-sqlite-asynchronous-callback-request-aborted) | SQLite: Callback routine requested an abort.<br>**Applicable version:** 12 and later |
+| [14800025](../errorcode-data-rdb.md#14800025-sqlite-database-table-locked) | SQLite: A table in the database is locked.<br>**Applicable version:** 12 and later |
+| [14800024](../errorcode-data-rdb.md#14800024-sqlite-database-file-locked) | SQLite: The database file is locked.<br>**Applicable version:** 12 and later |
+| [14800027](../errorcode-data-rdb.md#14800027-sqlite-attempt-to-write-a-readonly-database) | SQLite: Attempt to write a readonly database.<br>**Applicable version:** 12 and later |
+| [14800026](../errorcode-data-rdb.md#14800026-sqlite-insufficient-database-memory) | SQLite: The database is out of memory.<br>**Applicable version:** 12 and later |
+| [14800029](../errorcode-data-rdb.md#14800029-sqlite-database-is-full) | SQLite: The database is full.<br>**Applicable version:** 12 and later |
+| [14800028](../errorcode-data-rdb.md#14800028-sqlite-io-error) | SQLite: Some kind of disk I/O error occurred.<br>**Applicable version:** 12 and later |
+| [14800031](../errorcode-data-rdb.md#14800031-sqlite-text-or-blob-exceeds-the-limit) | SQLite: TEXT or BLOB exceeds size limit.<br>**Applicable version:** 12 and later |
+| [14800030](../errorcode-data-rdb.md#14800030-sqlite-unable-to-open-the-database-file) | SQLite: Unable to open the database file.<br>**Applicable version:** 12 and later |
 
 ## batchInsert
 
@@ -277,25 +263,11 @@ ArkTS-Sta:
 batchInsert(table: string, values: Array<ValuesBucket>, callback: AsyncCallback<long>): void
 ```
 
-向目标表中插入一组数据，使用callback异步回调。
+Inserts a batch of data into the target table.
 
-接口报错，表示插入数据失败；接口没有报错但返回值为-1时，也表示插入数据失败。
+The data insertion fails if the API returns an error, or if it returns -1 without throwing an error.
 
-按每批32766个参数，分批以[ConflictResolution.ON_CONFLICT_REPLACE](arkts-arkdata-relationalstore-conflictresolution-e.md)策略写入，参数数量计算方式为插入数据条数乘以插入数据的所有字段的并集大小，中途失败则立即返回。
-
-由于共享内存的大小限制为2MB，因此单条数据的大小也必须严格小于2MB。
-
-如果单条数据超过此限制，在后续通过RdbStore的  
-[query](arkts-arkdata-relationalstore-rdbstore-i.md#query)或  
-[querySql](arkts-arkdata-relationalstore-rdbstore-i.md#querysql)接口获取ResultSet后，调用[getValue](arkts-arkdata-relationalstore-resultset-i.md#getvalue)、  
-[getString](arkts-arkdata-relationalstore-resultset-i.md#getstring)等get方法时将无法成功获取数据，并可能导致操作失败或抛出异常。
-
-如需读取超过2MB的数据，请使用  
-[queryByStep](arkts-arkdata-relationalstore-rdbstore-i.md#querybystep)接口。
-
-单条字符串类型字段最大支持写入8MB，超出部分将被截断，仅保留前8MB数据，若需存储超过8MB的内容，建议使用blob类型。
-
-从API version 20开始，支持向量数据库（在[StoreConfig](arkts-arkdata-relationalstore-storeconfig-i.md)中配置vector为true）。
+Write 32766 parameters per batch using the {@link ConflictResolution.ON_CONFLICT_REPLACE} policy.The product of the number of inserted data records and the size of the union of all fields in the inserted data equals the number of parameters. This API returns immediately upon a failure during the process.
 
 **Since:** 9
 
@@ -309,34 +281,34 @@ batchInsert(table: string, values: Array<ValuesBucket>, callback: AsyncCallback<
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| table | string | Yes | 指定的目标表名，不能为空字符串。 |
-| values | Array&lt;ValuesBucket&gt; | Yes | 表示要插入到表中的一组数据。 |
-| callback | ArkTS-Dyn: [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;number&gt;  <br>ArkTS-Sta：[AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;long&gt; | Yes | 回调函数。当批量插入成功，err为undefined，data为插入的数据个数；否则为错误对象。 |
+| table | string | Yes | Indicates the target table. |
+| values | Array&lt;ValuesBucket&gt; | Yes | Indicates the rows of data {@link ValuesBucket} to be inserted into the table. |
+| callback | ArkTS-Dyn: [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;number&gt;  <br>ArkTS-Sta：[AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;long&gt; | Yes | The number of values that were inserted if the operation is successful. returns -1 otherwise. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 14800033 | SQLite: Data type mismatch.<br>**Applicable version:** 12 and later |
-| 14800000 | Inner error. |
-| 14800032 | SQLite: Abort due to constraint violation.<br>**Applicable version:** 12 and later |
-| 14800034 | SQLite: Library used incorrectly.<br>**Applicable version:** 12 and later |
-| 14800011 | The current operation failed because the database is corrupted.<br>**Applicable version:** 12 and later |
-| 14800047 | The WAL file size exceeds the default limit.<br>**Applicable version:** 10 and later |
-| 14800015 | The database does not respond.<br>**Applicable version:** 12 and later |
-| 14800014 | The target instance is already closed.<br>**Applicable version:** 12 and later |
-| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; 3. Parameter verification failed. |
-| 14800021 | SQLite: Generic error. Possible causes: Insert failed or the updated data does not exist.<br>**Applicable version:** 12 and later |
-| 14800023 | SQLite: Access permission denied.<br>**Applicable version:** 12 and later |
-| 14800022 | SQLite: Callback routine requested an abort.<br>**Applicable version:** 12 and later |
-| 14800025 | SQLite: A table in the database is locked.<br>**Applicable version:** 12 and later |
-| 14800024 | SQLite: The database file is locked.<br>**Applicable version:** 12 and later |
-| 14800027 | SQLite: Attempt to write a readonly database.<br>**Applicable version:** 12 and later |
-| 14800026 | SQLite: The database is out of memory.<br>**Applicable version:** 12 and later |
-| 14800029 | SQLite: The database is full.<br>**Applicable version:** 12 and later |
-| 14800028 | SQLite: Some kind of disk I/O error occurred.<br>**Applicable version:** 12 and later |
-| 14800031 | SQLite: TEXT or BLOB exceeds size limit.<br>**Applicable version:** 12 and later |
-| 14800030 | SQLite: Unable to open the database file.<br>**Applicable version:** 12 and later |
+| [14800033](../errorcode-data-rdb.md#14800033-sqlite-data-types-mismatch) | SQLite: Data type mismatch.<br>**Applicable version:** 12 and later |
+| [14800000](../../apis-basic-services-kit/errorcode-settings.md#14800000-parameter-check-failed) | Inner error. |
+| [14800032](../errorcode-data-rdb.md#14800032-sqlite-abort-due-to-constraint-violation) | SQLite: Abort due to constraint violation.<br>**Applicable version:** 12 and later |
+| [14800034](../errorcode-data-rdb.md#14800034-incorrect-use-of-sqlite-library) | SQLite: Library used incorrectly.<br>**Applicable version:** 12 and later |
+| [14800011](../errorcode-data-rdb.md#14800011-database-file-corrupted) | The current operation failed because the database is corrupted.<br>**Applicable version:** 12 and later |
+| [14800047](../errorcode-data-rdb.md#14800047-wal-file-size-exceeds-the-default-limit) | The WAL file size exceeds the default limit.<br>**Applicable version:** 10 and later |
+| [14800015](../errorcode-data-rdb.md#14800015-rdb-store-not-respond) | The database does not respond.<br>**Applicable version:** 12 and later |
+| [14800014](../errorcode-data-rdb.md#14800014-target-instance-closed) | The target instance is already closed.<br>**Applicable version:** 12 and later |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; 3. Parameter verification failed. |
+| [14800021](../errorcode-data-rdb.md#14800021-sqlite-generic-error) | SQLite: Generic error. Possible causes: Insert failed or the updated data does not exist.<br>**Applicable version:** 12 and later |
+| [14800023](../errorcode-data-rdb.md#14800023-sqlite-access-denied) | SQLite: Access permission denied.<br>**Applicable version:** 12 and later |
+| [14800022](../errorcode-data-rdb.md#14800022-sqlite-asynchronous-callback-request-aborted) | SQLite: Callback routine requested an abort.<br>**Applicable version:** 12 and later |
+| [14800025](../errorcode-data-rdb.md#14800025-sqlite-database-table-locked) | SQLite: A table in the database is locked.<br>**Applicable version:** 12 and later |
+| [14800024](../errorcode-data-rdb.md#14800024-sqlite-database-file-locked) | SQLite: The database file is locked.<br>**Applicable version:** 12 and later |
+| [14800027](../errorcode-data-rdb.md#14800027-sqlite-attempt-to-write-a-readonly-database) | SQLite: Attempt to write a readonly database.<br>**Applicable version:** 12 and later |
+| [14800026](../errorcode-data-rdb.md#14800026-sqlite-insufficient-database-memory) | SQLite: The database is out of memory.<br>**Applicable version:** 12 and later |
+| [14800029](../errorcode-data-rdb.md#14800029-sqlite-database-is-full) | SQLite: The database is full.<br>**Applicable version:** 12 and later |
+| [14800028](../errorcode-data-rdb.md#14800028-sqlite-io-error) | SQLite: Some kind of disk I/O error occurred.<br>**Applicable version:** 12 and later |
+| [14800031](../errorcode-data-rdb.md#14800031-sqlite-text-or-blob-exceeds-the-limit) | SQLite: TEXT or BLOB exceeds size limit.<br>**Applicable version:** 12 and later |
+| [14800030](../errorcode-data-rdb.md#14800030-sqlite-unable-to-open-the-database-file) | SQLite: Unable to open the database file.<br>**Applicable version:** 12 and later |
 
 ## batchInsert
 
@@ -350,25 +322,11 @@ ArkTS-Sta:
 batchInsert(table: string, values: Array<ValuesBucket>): Promise<long>
 ```
 
-向目标表中插入一组数据，使用Promise异步回调。
+Inserts a batch of data into the target table.
 
-接口报错，表示插入数据失败；接口没有报错但返回值为-1时，也表示插入数据失败。
+The data insertion fails if the API returns an error, or if it returns -1 without throwing an error.
 
-按每批32766个参数，分批以[ConflictResolution.ON_CONFLICT_REPLACE](arkts-arkdata-relationalstore-conflictresolution-e.md)策略写入，参数数量计算方式为插入数据条数乘以插入数据的所有字段的并集大小，中途失败则立即返回。
-
-由于共享内存的大小限制为2MB，因此单条数据的大小也必须严格小于2MB。
-
-如果单条数据超过此限制，在后续通过RdbStore的  
-[query](arkts-arkdata-relationalstore-rdbstore-i.md#query)或  
-[querySql](arkts-arkdata-relationalstore-rdbstore-i.md#querysql)接口获取ResultSet后，调用[getValue](arkts-arkdata-relationalstore-resultset-i.md#getvalue)、  
-[getString](arkts-arkdata-relationalstore-resultset-i.md#getstring)等get方法时将无法成功获取数据，并可能导致操作失败或抛出异常。
-
-如需读取超过2MB的数据，请使用  
-[queryByStep](arkts-arkdata-relationalstore-rdbstore-i.md#querybystep)接口。
-
-单条字符串类型字段最大支持写入8MB，超出部分将被截断，仅保留前8MB数据，若需存储超过8MB的内容，建议使用blob类型。
-
-从API version 20开始，该接口支持向量数据库（在[StoreConfig](arkts-arkdata-relationalstore-storeconfig-i.md)中配置vector为true）使用。
+Write 32766 parameters per batch using the {@link ConflictResolution.ON_CONFLICT_REPLACE} policy.The product of the number of inserted data records and the size of the union of all fields in the inserted data equals the number of parameters. This API returns immediately upon a failure during the process.
 
 **Since:** 9
 
@@ -382,39 +340,39 @@ batchInsert(table: string, values: Array<ValuesBucket>): Promise<long>
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| table | string | Yes | 指定的目标表名，不能为空字符串。 |
-| values | Array&lt;ValuesBucket&gt; | Yes | 表示要插入到表中的一组数据。 |
+| table | string | Yes | Indicates the target table. |
+| values | Array&lt;ValuesBucket&gt; | Yes | Indicates the rows of data {@link ValuesBucket} to be inserted into the table. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| ArkTS-Dyn: Promise&lt;number&gt;  <br>ArkTS-Sta：Promise&lt;long&gt; | Promise对象。返回批量插入的数据个数。 |
+| ArkTS-Dyn: Promise&lt;number&gt;  <br>ArkTS-Sta：Promise&lt;long&gt; | The number of values that were inserted if the operation is successful. Returns -1 otherwise. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 14800033 | SQLite: Data type mismatch.<br>**Applicable version:** 12 and later |
-| 14800000 | Inner error. |
-| 14800032 | SQLite: Abort due to constraint violation.<br>**Applicable version:** 12 and later |
-| 14800034 | SQLite: Library used incorrectly.<br>**Applicable version:** 12 and later |
-| 14800011 | The current operation failed because the database is corrupted.<br>**Applicable version:** 12 and later |
-| 14800047 | The WAL file size exceeds the default limit.<br>**Applicable version:** 10 and later |
-| 14800015 | The database does not respond.<br>**Applicable version:** 12 and later |
-| 14800014 | The target instance is already closed.<br>**Applicable version:** 12 and later |
-| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; 3. Parameter verification failed. |
-| 14800021 | SQLite: Generic error. Possible causes: Insert failed or the updated data does not exist.<br>**Applicable version:** 12 and later |
-| 14800023 | SQLite: Access permission denied.<br>**Applicable version:** 12 and later |
-| 14800022 | SQLite: Callback routine requested an abort.<br>**Applicable version:** 12 and later |
-| 14800025 | SQLite: A table in the database is locked.<br>**Applicable version:** 12 and later |
-| 14800024 | SQLite: The database file is locked.<br>**Applicable version:** 12 and later |
-| 14800027 | SQLite: Attempt to write a readonly database.<br>**Applicable version:** 12 and later |
-| 14800026 | SQLite: The database is out of memory.<br>**Applicable version:** 12 and later |
-| 14800029 | SQLite: The database is full.<br>**Applicable version:** 12 and later |
-| 14800028 | SQLite: Some kind of disk I/O error occurred.<br>**Applicable version:** 12 and later |
-| 14800031 | SQLite: TEXT or BLOB exceeds size limit.<br>**Applicable version:** 12 and later |
-| 14800030 | SQLite: Unable to open the database file.<br>**Applicable version:** 12 and later |
+| [14800033](../errorcode-data-rdb.md#14800033-sqlite-data-types-mismatch) | SQLite: Data type mismatch.<br>**Applicable version:** 12 and later |
+| [14800000](../../apis-basic-services-kit/errorcode-settings.md#14800000-parameter-check-failed) | Inner error. |
+| [14800032](../errorcode-data-rdb.md#14800032-sqlite-abort-due-to-constraint-violation) | SQLite: Abort due to constraint violation.<br>**Applicable version:** 12 and later |
+| [14800034](../errorcode-data-rdb.md#14800034-incorrect-use-of-sqlite-library) | SQLite: Library used incorrectly.<br>**Applicable version:** 12 and later |
+| [14800011](../errorcode-data-rdb.md#14800011-database-file-corrupted) | The current operation failed because the database is corrupted.<br>**Applicable version:** 12 and later |
+| [14800047](../errorcode-data-rdb.md#14800047-wal-file-size-exceeds-the-default-limit) | The WAL file size exceeds the default limit.<br>**Applicable version:** 10 and later |
+| [14800015](../errorcode-data-rdb.md#14800015-rdb-store-not-respond) | The database does not respond.<br>**Applicable version:** 12 and later |
+| [14800014](../errorcode-data-rdb.md#14800014-target-instance-closed) | The target instance is already closed.<br>**Applicable version:** 12 and later |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; 3. Parameter verification failed. |
+| [14800021](../errorcode-data-rdb.md#14800021-sqlite-generic-error) | SQLite: Generic error. Possible causes: Insert failed or the updated data does not exist.<br>**Applicable version:** 12 and later |
+| [14800023](../errorcode-data-rdb.md#14800023-sqlite-access-denied) | SQLite: Access permission denied.<br>**Applicable version:** 12 and later |
+| [14800022](../errorcode-data-rdb.md#14800022-sqlite-asynchronous-callback-request-aborted) | SQLite: Callback routine requested an abort.<br>**Applicable version:** 12 and later |
+| [14800025](../errorcode-data-rdb.md#14800025-sqlite-database-table-locked) | SQLite: A table in the database is locked.<br>**Applicable version:** 12 and later |
+| [14800024](../errorcode-data-rdb.md#14800024-sqlite-database-file-locked) | SQLite: The database file is locked.<br>**Applicable version:** 12 and later |
+| [14800027](../errorcode-data-rdb.md#14800027-sqlite-attempt-to-write-a-readonly-database) | SQLite: Attempt to write a readonly database.<br>**Applicable version:** 12 and later |
+| [14800026](../errorcode-data-rdb.md#14800026-sqlite-insufficient-database-memory) | SQLite: The database is out of memory.<br>**Applicable version:** 12 and later |
+| [14800029](../errorcode-data-rdb.md#14800029-sqlite-database-is-full) | SQLite: The database is full.<br>**Applicable version:** 12 and later |
+| [14800028](../errorcode-data-rdb.md#14800028-sqlite-io-error) | SQLite: Some kind of disk I/O error occurred.<br>**Applicable version:** 12 and later |
+| [14800031](../errorcode-data-rdb.md#14800031-sqlite-text-or-blob-exceeds-the-limit) | SQLite: TEXT or BLOB exceeds size limit.<br>**Applicable version:** 12 and later |
+| [14800030](../errorcode-data-rdb.md#14800030-sqlite-unable-to-open-the-database-file) | SQLite: Unable to open the database file.<br>**Applicable version:** 12 and later |
 
 ## batchInsertSync
 
@@ -428,23 +386,11 @@ ArkTS-Sta:
 batchInsertSync(table: string, values: Array<ValuesBucket>): long
 ```
 
-向目标表中插入一组数据。
+Inserts a batch of data into the target table.
 
-接口报错，表示插入数据失败；接口没有报错但返回值为-1时，也表示插入数据失败。
+The data insertion fails if the API returns an error, or if it returns -1 without throwing an error.
 
-按每批32766个参数，分批以[ConflictResolution.ON_CONFLICT_REPLACE](arkts-arkdata-relationalstore-conflictresolution-e.md)策略写入，参数数量计算方式为插入数据条数乘以插入数据的所有字段的并集大小，中途失败则立即返回。
-
-由于共享内存的大小限制为2MB，因此单条数据的大小也必须严格小于2MB。
-
-如果单条数据超过此限制，在后续通过RdbStore的  
-[query](arkts-arkdata-relationalstore-rdbstore-i.md#query)或  
-[querySql](arkts-arkdata-relationalstore-rdbstore-i.md#querysql)接口获取ResultSet后，调用[getValue](arkts-arkdata-relationalstore-resultset-i.md#getvalue)、  
-[getString](arkts-arkdata-relationalstore-resultset-i.md#getstring)等get方法时将无法成功获取数据，并可能导致操作失败或抛出异常。
-
-如需读取超过2MB的数据，请使用  
-[queryByStep](arkts-arkdata-relationalstore-rdbstore-i.md#querybystep)接口。
-
-单条字符串类型字段最大支持写入8MB，超出部分将被截断，仅保留前8MB数据，若需存储超过8MB的内容，建议使用blob类型。
+Write 32766 parameters per batch using the {@link ConflictResolution.ON_CONFLICT_REPLACE} policy.The product of the number of inserted data records and the size of the union of all fields in the inserted data equals the number of parameters. This API returns immediately upon a failure during the process.
 
 **Since:** 12
 
@@ -458,39 +404,39 @@ batchInsertSync(table: string, values: Array<ValuesBucket>): long
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| table | string | Yes | 指定的目标表名，不能为空字符串。 |
-| values | Array&lt;ValuesBucket&gt; | Yes | 表示要插入到表中的一组数据。 |
+| table | string | Yes | Indicates the target table. |
+| values | Array&lt;ValuesBucket&gt; | Yes | Indicates the rows of data {@link ValuesBucket} to be inserted into the table. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| ArkTS-Dyn: number  <br>ArkTS-Sta：long | 返回批量插入的数据个数。 |
+| ArkTS-Dyn: number  <br>ArkTS-Sta：long | The number of values that were inserted if the operation is successful. returns -1 otherwise. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 14800033 | SQLite: Data type mismatch. |
-| 14800000 | Inner error. |
-| 14800032 | SQLite: Abort due to constraint violation. |
-| 14800034 | SQLite: Library used incorrectly. |
-| 14800011 | The current operation failed because the database is corrupted. |
-| 14800015 | The database does not respond. |
-| 14800047 | The WAL file size exceeds the default limit. |
-| 14800014 | The target instance is already closed. |
-| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; 3. Parameter verification failed. |
-| 14800021 | SQLite: Generic error. Possible causes: Insert failed or the updated data does not exist. |
-| 14800023 | SQLite: Access permission denied. |
-| 14800022 | SQLite: Callback routine requested an abort. |
-| 14800025 | SQLite: A table in the database is locked. |
-| 14800024 | SQLite: The database file is locked. |
-| 14800027 | SQLite: Attempt to write a readonly database. |
-| 14800026 | SQLite: The database is out of memory. |
-| 14800029 | SQLite: The database is full. |
-| 14800028 | SQLite: Some kind of disk I/O error occurred. |
-| 14800031 | SQLite: TEXT or BLOB exceeds size limit. |
-| 14800030 | SQLite: Unable to open the database file. |
+| [14800033](../errorcode-data-rdb.md#14800033-sqlite-data-types-mismatch) | SQLite: Data type mismatch. |
+| [14800000](../../apis-basic-services-kit/errorcode-settings.md#14800000-parameter-check-failed) | Inner error. |
+| [14800032](../errorcode-data-rdb.md#14800032-sqlite-abort-due-to-constraint-violation) | SQLite: Abort due to constraint violation. |
+| [14800034](../errorcode-data-rdb.md#14800034-incorrect-use-of-sqlite-library) | SQLite: Library used incorrectly. |
+| [14800011](../errorcode-data-rdb.md#14800011-database-file-corrupted) | The current operation failed because the database is corrupted. |
+| [14800015](../errorcode-data-rdb.md#14800015-rdb-store-not-respond) | The database does not respond. |
+| [14800047](../errorcode-data-rdb.md#14800047-wal-file-size-exceeds-the-default-limit) | The WAL file size exceeds the default limit. |
+| [14800014](../errorcode-data-rdb.md#14800014-target-instance-closed) | The target instance is already closed. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; 3. Parameter verification failed. |
+| [14800021](../errorcode-data-rdb.md#14800021-sqlite-generic-error) | SQLite: Generic error. Possible causes: Insert failed or the updated data does not exist. |
+| [14800023](../errorcode-data-rdb.md#14800023-sqlite-access-denied) | SQLite: Access permission denied. |
+| [14800022](../errorcode-data-rdb.md#14800022-sqlite-asynchronous-callback-request-aborted) | SQLite: Callback routine requested an abort. |
+| [14800025](../errorcode-data-rdb.md#14800025-sqlite-database-table-locked) | SQLite: A table in the database is locked. |
+| [14800024](../errorcode-data-rdb.md#14800024-sqlite-database-file-locked) | SQLite: The database file is locked. |
+| [14800027](../errorcode-data-rdb.md#14800027-sqlite-attempt-to-write-a-readonly-database) | SQLite: Attempt to write a readonly database. |
+| [14800026](../errorcode-data-rdb.md#14800026-sqlite-insufficient-database-memory) | SQLite: The database is out of memory. |
+| [14800029](../errorcode-data-rdb.md#14800029-sqlite-database-is-full) | SQLite: The database is full. |
+| [14800028](../errorcode-data-rdb.md#14800028-sqlite-io-error) | SQLite: Some kind of disk I/O error occurred. |
+| [14800031](../errorcode-data-rdb.md#14800031-sqlite-text-or-blob-exceeds-the-limit) | SQLite: TEXT or BLOB exceeds size limit. |
+| [14800030](../errorcode-data-rdb.md#14800030-sqlite-unable-to-open-the-database-file) | SQLite: Unable to open the database file. |
 
 ## batchInsertWithConflictResolution
 
@@ -512,25 +458,9 @@ batchInsertWithConflictResolution(
     ): Promise<long>
 ```
 
-向目标表中插入一组数据，可以通过conflict参数指定冲突解决模式[ConflictResolution](arkts-arkdata-relationalstore-conflictresolution-e.md)。使用Promise异步回调。
+Inserts a batch of data into the target table.
 
-单次插入参数的最大数量限制为32766，超出上限会返回14800000错误码。参数数量计算方式为插入数据条数乘以插入数据的所有字段的并集大小。
-
-例如：插入数据的所有字段的并集大小为10，则最多可以插入3276条数据（3276*10=32760）。
-
-请确保在调用接口时遵守此限制，以避免因参数数量过多而导致错误。
-
-由于共享内存的大小限制为2MB，因此单条数据的大小也必须严格小于2MB。
-
-如果单条数据超过此限制，在后续通过RdbStore的  
-[query](arkts-arkdata-relationalstore-rdbstore-i.md#query)或  
-[querySql](arkts-arkdata-relationalstore-rdbstore-i.md#querysql)接口获取ResultSet后，调用[getValue](arkts-arkdata-relationalstore-resultset-i.md#getvalue)、  
-[getString](arkts-arkdata-relationalstore-resultset-i.md#getstring)等get方法时将无法成功获取数据，并可能导致操作失败或抛出异常。
-
-如需读取超过2MB的数据，请使用  
-[queryByStep](arkts-arkdata-relationalstore-rdbstore-i.md#querybystep)接口。
-
-单条字符串类型字段最大支持写入8MB，超出部分将被截断，仅保留前8MB数据，若需存储超过8MB的内容，建议使用blob类型。
+A maximum of 32766 parameters can be inserted at a time. If the number of parameters exceeds the upper limit,the error code 14800000 is returned. The product of the number of inserted data records and the size of the union of all fields in the inserted data equals the number of parameters. For example, if the size of the union is 10,a maximum of 3276 data records can be inserted (3276 * 10 = 32760). Ensure that your application complies with this constraint when calling this API to avoid errors caused by excessive parameters.
 
 **Since:** 18
 
@@ -544,40 +474,40 @@ batchInsertWithConflictResolution(
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| table | string | Yes | 指定的目标表名，不能为空字符串。 |
-| values | Array&lt;ValuesBucket&gt; | Yes | 表示要插入到表中的一组数据。 |
-| conflict | [ConflictResolution](../../apis-asset-store-kit/arkts-apis/arkts-assetstore-asset-conflictresolution-e.md) | Yes | 指定冲突解决模式。 |
+| table | string | Yes | Indicates the target table. |
+| values | Array&lt;ValuesBucket&gt; | Yes | Indicates the rows of data {@link ValuesBucket} to be inserted into the table. |
+| conflict | [ConflictResolution](../../apis-asset-store-kit/arkts-apis/arkts-assetstore-asset-conflictresolution-e.md) | Yes | Indicates the {@link ConflictResolution} to insert data into the table. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| ArkTS-Dyn: Promise&lt;number&gt;  <br>ArkTS-Sta：Promise&lt;long&gt; | Promise对象。返回批量插入的数据个数。 |
+| ArkTS-Dyn: Promise&lt;number&gt;  <br>ArkTS-Sta：Promise&lt;long&gt; | The number of values that were inserted if the operation is successful. Returns -1 otherwise. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 14800033 | SQLite: Data type mismatch. |
-| 14800000 | Inner error. |
-| 14800032 | SQLite: Abort due to constraint violation. |
-| 14800034 | SQLite: Library used incorrectly. |
-| 14800011 | The current operation failed because the database is corrupted. |
-| 14800015 | The database does not respond. |
-| 14800047 | The WAL file size exceeds the default limit. |
-| 14800014 | The target instance is already closed. |
-| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; 3. Parameter verification failed. |
-| 14800021 | SQLite: Generic error. Possible causes: Insert failed or the updated data does not exist. |
-| 14800023 | SQLite: Access permission denied. |
-| 14800022 | SQLite: Callback routine requested an abort. |
-| 14800025 | SQLite: A table in the database is locked. |
-| 14800024 | SQLite: The database file is locked. |
-| 14800027 | SQLite: Attempt to write a readonly database. |
-| 14800026 | SQLite: The database is out of memory. |
-| 14800029 | SQLite: The database is full. |
-| 14800028 | SQLite: Some kind of disk I/O error occurred. |
-| 14800031 | SQLite: TEXT or BLOB exceeds size limit. |
-| 14800030 | SQLite: Unable to open the database file. |
+| [14800033](../errorcode-data-rdb.md#14800033-sqlite-data-types-mismatch) | SQLite: Data type mismatch. |
+| [14800000](../../apis-basic-services-kit/errorcode-settings.md#14800000-parameter-check-failed) | Inner error. |
+| [14800032](../errorcode-data-rdb.md#14800032-sqlite-abort-due-to-constraint-violation) | SQLite: Abort due to constraint violation. |
+| [14800034](../errorcode-data-rdb.md#14800034-incorrect-use-of-sqlite-library) | SQLite: Library used incorrectly. |
+| [14800011](../errorcode-data-rdb.md#14800011-database-file-corrupted) | The current operation failed because the database is corrupted. |
+| [14800015](../errorcode-data-rdb.md#14800015-rdb-store-not-respond) | The database does not respond. |
+| [14800047](../errorcode-data-rdb.md#14800047-wal-file-size-exceeds-the-default-limit) | The WAL file size exceeds the default limit. |
+| [14800014](../errorcode-data-rdb.md#14800014-target-instance-closed) | The target instance is already closed. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; 3. Parameter verification failed. |
+| [14800021](../errorcode-data-rdb.md#14800021-sqlite-generic-error) | SQLite: Generic error. Possible causes: Insert failed or the updated data does not exist. |
+| [14800023](../errorcode-data-rdb.md#14800023-sqlite-access-denied) | SQLite: Access permission denied. |
+| [14800022](../errorcode-data-rdb.md#14800022-sqlite-asynchronous-callback-request-aborted) | SQLite: Callback routine requested an abort. |
+| [14800025](../errorcode-data-rdb.md#14800025-sqlite-database-table-locked) | SQLite: A table in the database is locked. |
+| [14800024](../errorcode-data-rdb.md#14800024-sqlite-database-file-locked) | SQLite: The database file is locked. |
+| [14800027](../errorcode-data-rdb.md#14800027-sqlite-attempt-to-write-a-readonly-database) | SQLite: Attempt to write a readonly database. |
+| [14800026](../errorcode-data-rdb.md#14800026-sqlite-insufficient-database-memory) | SQLite: The database is out of memory. |
+| [14800029](../errorcode-data-rdb.md#14800029-sqlite-database-is-full) | SQLite: The database is full. |
+| [14800028](../errorcode-data-rdb.md#14800028-sqlite-io-error) | SQLite: Some kind of disk I/O error occurred. |
+| [14800031](../errorcode-data-rdb.md#14800031-sqlite-text-or-blob-exceeds-the-limit) | SQLite: TEXT or BLOB exceeds size limit. |
+| [14800030](../errorcode-data-rdb.md#14800030-sqlite-unable-to-open-the-database-file) | SQLite: Unable to open the database file. |
 
 ## batchInsertWithConflictResolutionSync
 
@@ -599,25 +529,9 @@ batchInsertWithConflictResolutionSync(
     ): long
 ```
 
-向目标表中插入一组数据，可以通过conflict参数指定冲突解决模式[ConflictResolution](arkts-arkdata-relationalstore-conflictresolution-e.md)。
+Inserts a batch of data into the target table.
 
-单次插入参数的最大数量限制为32766，超出上限会返回14800000错误码。参数数量计算方式为插入数据条数乘以插入数据的所有字段的并集大小。
-
-例如：插入数据的所有字段的并集大小为10，则最多可以插入3276条数据（3276*10=32760）。
-
-请确保在调用接口时遵守此限制，以避免因参数数量过多而导致错误。
-
-由于共享内存的大小限制为2MB，因此单条数据的大小也必须严格小于2MB。
-
-如果单条数据超过此限制，在后续通过RdbStore的  
-[query](arkts-arkdata-relationalstore-rdbstore-i.md#query)或  
-[querySql](arkts-arkdata-relationalstore-rdbstore-i.md#querysql)接口获取ResultSet后，调用[getValue](arkts-arkdata-relationalstore-resultset-i.md#getvalue)、  
-[getString](arkts-arkdata-relationalstore-resultset-i.md#getstring)等get方法时将无法成功获取数据，并可能导致操作失败或抛出异常。
-
-如需读取超过2MB的数据，请使用  
-[queryByStep](arkts-arkdata-relationalstore-rdbstore-i.md#querybystep)接口。
-
-单条字符串类型字段最大支持写入8MB，超出部分将被截断，仅保留前8MB数据，若需存储超过8MB的内容，建议使用blob类型。
+A maximum of 32766 parameters can be inserted at a time. If the number of parameters exceeds the upper limit,the error code 14800000 is returned. The product of the number of inserted data records and the size of the union of all fields in the inserted data equals the number of parameters. For example, if the size of the union is 10,a maximum of 3276 data records can be inserted (3276 * 10 = 32760). Ensure that your application complies with this constraint when calling this API to avoid errors caused by excessive parameters.
 
 **Since:** 18
 
@@ -631,40 +545,40 @@ batchInsertWithConflictResolutionSync(
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| table | string | Yes | 指定的目标表名，不能为空字符串。 |
-| values | Array&lt;ValuesBucket&gt; | Yes | 表示要插入到表中的一组数据。 |
-| conflict | [ConflictResolution](../../apis-asset-store-kit/arkts-apis/arkts-assetstore-asset-conflictresolution-e.md) | Yes | 指定冲突解决模式。 |
+| table | string | Yes | Indicates the target table. |
+| values | Array&lt;ValuesBucket&gt; | Yes | Indicates the rows of data {@link ValuesBucket} to be inserted into the table. |
+| conflict | [ConflictResolution](../../apis-asset-store-kit/arkts-apis/arkts-assetstore-asset-conflictresolution-e.md) | Yes | Indicates the {@link ConflictResolution} to insert data into the table. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| ArkTS-Dyn: number  <br>ArkTS-Sta：long | 返回批量插入的数据个数。 |
+| ArkTS-Dyn: number  <br>ArkTS-Sta：long | The number of values that were inserted if the operation is successful. returns -1 otherwise. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 14800033 | SQLite: Data type mismatch. |
-| 14800000 | Inner error. |
-| 14800032 | SQLite: Abort due to constraint violation. |
-| 14800034 | SQLite: Library used incorrectly. |
-| 14800011 | The current operation failed because the database is corrupted. |
-| 14800015 | The database does not respond. |
-| 14800047 | The WAL file size exceeds the default limit. |
-| 14800014 | The target instance is already closed. |
-| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; 3. Parameter verification failed. |
-| 14800021 | SQLite: Generic error. Possible causes: Insert failed or the updated data does not exist. |
-| 14800023 | SQLite: Access permission denied. |
-| 14800022 | SQLite: Callback routine requested an abort. |
-| 14800025 | SQLite: A table in the database is locked. |
-| 14800024 | SQLite: The database file is locked. |
-| 14800027 | SQLite: Attempt to write a readonly database. |
-| 14800026 | SQLite: The database is out of memory. |
-| 14800029 | SQLite: The database is full. |
-| 14800028 | SQLite: Some kind of disk I/O error occurred. |
-| 14800031 | SQLite: TEXT or BLOB exceeds size limit. |
-| 14800030 | SQLite: Unable to open the database file. |
+| [14800033](../errorcode-data-rdb.md#14800033-sqlite-data-types-mismatch) | SQLite: Data type mismatch. |
+| [14800000](../../apis-basic-services-kit/errorcode-settings.md#14800000-parameter-check-failed) | Inner error. |
+| [14800032](../errorcode-data-rdb.md#14800032-sqlite-abort-due-to-constraint-violation) | SQLite: Abort due to constraint violation. |
+| [14800034](../errorcode-data-rdb.md#14800034-incorrect-use-of-sqlite-library) | SQLite: Library used incorrectly. |
+| [14800011](../errorcode-data-rdb.md#14800011-database-file-corrupted) | The current operation failed because the database is corrupted. |
+| [14800015](../errorcode-data-rdb.md#14800015-rdb-store-not-respond) | The database does not respond. |
+| [14800047](../errorcode-data-rdb.md#14800047-wal-file-size-exceeds-the-default-limit) | The WAL file size exceeds the default limit. |
+| [14800014](../errorcode-data-rdb.md#14800014-target-instance-closed) | The target instance is already closed. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; 3. Parameter verification failed. |
+| [14800021](../errorcode-data-rdb.md#14800021-sqlite-generic-error) | SQLite: Generic error. Possible causes: Insert failed or the updated data does not exist. |
+| [14800023](../errorcode-data-rdb.md#14800023-sqlite-access-denied) | SQLite: Access permission denied. |
+| [14800022](../errorcode-data-rdb.md#14800022-sqlite-asynchronous-callback-request-aborted) | SQLite: Callback routine requested an abort. |
+| [14800025](../errorcode-data-rdb.md#14800025-sqlite-database-table-locked) | SQLite: A table in the database is locked. |
+| [14800024](../errorcode-data-rdb.md#14800024-sqlite-database-file-locked) | SQLite: The database file is locked. |
+| [14800027](../errorcode-data-rdb.md#14800027-sqlite-attempt-to-write-a-readonly-database) | SQLite: Attempt to write a readonly database. |
+| [14800026](../errorcode-data-rdb.md#14800026-sqlite-insufficient-database-memory) | SQLite: The database is out of memory. |
+| [14800029](../errorcode-data-rdb.md#14800029-sqlite-database-is-full) | SQLite: The database is full. |
+| [14800028](../errorcode-data-rdb.md#14800028-sqlite-io-error) | SQLite: Some kind of disk I/O error occurred. |
+| [14800031](../errorcode-data-rdb.md#14800031-sqlite-text-or-blob-exceeds-the-limit) | SQLite: TEXT or BLOB exceeds size limit. |
+| [14800030](../errorcode-data-rdb.md#14800030-sqlite-unable-to-open-the-database-file) | SQLite: Unable to open the database file. |
 
 ## batchInsertWithReturning
 
@@ -673,28 +587,9 @@ batchInsertWithReturning(table: string, values: Array<ValuesBucket>, config: Ret
       conflict?: ConflictResolution): Promise<Result>
 ```
 
-向目标表中插入一组数据，可以通过conflict参数指定当发生数据冲突时的解决模式[ConflictResolution](arkts-arkdata-relationalstore-conflictresolution-e.md)，返回  
-[Result](arkts-arkdata-relationalstore-result-i.md)。使用Promise异步回调。
+Inserts a batch of data into the target table and return a resultSet of changed fields.
 
-单次插入参数的最大数量限制为32766，超出上限会返回14800001错误码。参数数量计算方式为插入数据条数乘以插入数据的所有字段的并集大小。
-
-例如：插入数据的所有字段的并集大小为10，则最多可以插入3276条数据（3276*10=32760）。
-
-请确保在调用接口时遵守此限制，以避免因参数数量过多而导致错误。
-
-conflict参数不建议使用ON_CONFLICT_FAIL策略，可能无法返回正确的结果。
-
-由于共享内存的大小限制为2MB，因此单条数据的大小也必须严格小于2MB。
-
-如果单条数据超过此限制，在后续通过RdbStore的  
-[query](arkts-arkdata-relationalstore-rdbstore-i.md#query)或  
-[querySql](arkts-arkdata-relationalstore-rdbstore-i.md#querysql)接口获取ResultSet后，调用[getValue](arkts-arkdata-relationalstore-resultset-i.md#getvalue)、  
-[getString](arkts-arkdata-relationalstore-resultset-i.md#getstring)等get方法时将无法成功获取数据，并可能导致操作失败或抛出异常。
-
-如需读取超过2MB的数据，请使用  
-[queryByStep](arkts-arkdata-relationalstore-rdbstore-i.md#querybystep)接口。
-
-单条字符串类型字段最大支持写入8MB，超出部分将被截断，仅保留前8MB数据，若需存储超过8MB的内容，建议使用blob类型。
+A maximum of 32766 parameters can be inserted at a time. If the number of parameters exceeds the upper limit,the error code 14800001 is returned. The product of the number of inserted data records and the size of the union of all fields in the inserted data equals the number of parameters. For example, if the size of the union is 10,a maximum of 3276 data records can be inserted (3276 * 10 = 32760). Ensure that your application complies with this constraint when calling this API to avoid errors caused by excessive parameters.
 
 **Since:** 23
 
@@ -710,33 +605,33 @@ conflict参数不建议使用ON_CONFLICT_FAIL策略，可能无法返回正确�
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| table | string | Yes | 要插入的目标表名。注意：正确的表名不应包含空格、逗号和星号，不能以点开头和结尾等，否则会抛出参数错误。 |
-| values | Array&lt;ValuesBucket&gt; | Yes | 要插入到表中的一组数据。注意：空数组、含有重复资产数据会抛出参数错误。 |
-| config | [ReturningConfig](arkts-arkdata-relationalstore-returningconfig-i.md) | Yes | 指定返回值的配置信息。 |
-| conflict | [ConflictResolution](../../apis-asset-store-kit/arkts-apis/arkts-assetstore-asset-conflictresolution-e.md) | No | 指定冲突解决模式。默认为ON_CONFLICT_NONE。 |
+| table | string | Yes | Indicates the target table. |
+| values | Array&lt;ValuesBucket&gt; | Yes | Indicates the rows of data {@link ValuesBucket} to be inserted into the table. |
+| config | [ReturningConfig](arkts-arkdata-relationalstore-returningconfig-i.md) | Yes | Indicate the information that needs to be returned. |
+| conflict | [ConflictResolution](../../apis-asset-store-kit/arkts-apis/arkts-assetstore-asset-conflictresolution-e.md) | No | Indicates the {@link ConflictResolution} to insert data into the table. The default conflict resolution policy is {@link ConflictResolution.ON_CONFLICT_NONE}. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;Result&gt; | Promise对象。返回受影响的数据集。 |
+| Promise&lt;Result&gt; | The { |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 14800001 | Invalid arguments. Possible causes: 1. Parameter is out of valid range. |
-| 14800033 | SQLite: Data type mismatch. |
-| 14800032 | SQLite: Abort due to constraint violation. |
-| 14800021 | SQLite: Generic error. Possible causes: Insert failed or the updated data does not exist. |
-| 14800025 | SQLite: A table in the database is locked. |
-| 14800024 | SQLite: The database file is locked. |
-| 14800011 | The current operation failed because the database is corrupted. |
-| 14800027 | SQLite: Attempt to write a readonly database. |
-| 14800029 | SQLite: The database is full. |
-| 14800028 | SQLite: Some kind of disk I/O error occurred. |
-| 14800047 | The WAL file size exceeds the default limit. |
-| 14800014 | The target instance is already closed. |
+| [14800001](../errorcode-data-rdb.md#14800001-invalid-arguments) | Invalid arguments. Possible causes: 1. Parameter is out of valid range. |
+| [14800033](../errorcode-data-rdb.md#14800033-sqlite-data-types-mismatch) | SQLite: Data type mismatch. |
+| [14800032](../errorcode-data-rdb.md#14800032-sqlite-abort-due-to-constraint-violation) | SQLite: Abort due to constraint violation. |
+| [14800021](../errorcode-data-rdb.md#14800021-sqlite-generic-error) | SQLite: Generic error. Possible causes: Insert failed or the updated data does not exist. |
+| [14800025](../errorcode-data-rdb.md#14800025-sqlite-database-table-locked) | SQLite: A table in the database is locked. |
+| [14800024](../errorcode-data-rdb.md#14800024-sqlite-database-file-locked) | SQLite: The database file is locked. |
+| [14800011](../errorcode-data-rdb.md#14800011-database-file-corrupted) | The current operation failed because the database is corrupted. |
+| [14800027](../errorcode-data-rdb.md#14800027-sqlite-attempt-to-write-a-readonly-database) | SQLite: Attempt to write a readonly database. |
+| [14800029](../errorcode-data-rdb.md#14800029-sqlite-database-is-full) | SQLite: The database is full. |
+| [14800028](../errorcode-data-rdb.md#14800028-sqlite-io-error) | SQLite: Some kind of disk I/O error occurred. |
+| [14800047](../errorcode-data-rdb.md#14800047-wal-file-size-exceeds-the-default-limit) | The WAL file size exceeds the default limit. |
+| [14800014](../errorcode-data-rdb.md#14800014-target-instance-closed) | The target instance is already closed. |
 
 ## batchInsertWithReturningSync
 
@@ -745,28 +640,9 @@ batchInsertWithReturningSync(table: string, values: Array<ValuesBucket>, config:
       conflict?: ConflictResolution): Result
 ```
 
-向目标表中插入一组数据，可以通过conflict参数指定当发生数据冲突时的解决模式[ConflictResolution](arkts-arkdata-relationalstore-conflictresolution-e.md)，返回  
-[Result](arkts-arkdata-relationalstore-result-i.md)。
+Inserts a batch of data into the target table and return a resultSet of changed fields.
 
-单次插入参数的最大数量限制为32766，超出上限会返回14800001错误码。参数数量计算方式为插入数据条数乘以插入数据的所有字段的并集大小。
-
-例如：插入数据的所有字段的并集大小为10，则最多可以插入3276条数据（3276*10=32760）。
-
-请确保在调用接口时遵守此限制，以避免因参数数量过多而导致错误。
-
-conflict参数不建议使用ON_CONFLICT_FAIL策略，可能无法返回正确的结果。
-
-由于共享内存的大小限制为2MB，因此单条数据的大小也必须严格小于2MB。
-
-如果单条数据超过此限制，在后续通过RdbStore的  
-[query](arkts-arkdata-relationalstore-rdbstore-i.md#query)或  
-[querySql](arkts-arkdata-relationalstore-rdbstore-i.md#querysql)接口获取ResultSet后，调用[getValue](arkts-arkdata-relationalstore-resultset-i.md#getvalue)、  
-[getString](arkts-arkdata-relationalstore-resultset-i.md#getstring)等get方法时将无法成功获取数据，并可能导致操作失败或抛出异常。
-
-如需读取超过2MB的数据，请使用  
-[queryByStep](arkts-arkdata-relationalstore-rdbstore-i.md#querybystep)接口。
-
-单条字符串类型字段最大支持写入8MB，超出部分将被截断，仅保留前8MB数据，若需存储超过8MB的内容，建议使用blob类型。
+A maximum of 32766 parameters can be inserted at a time. If the number of parameters exceeds the upper limit,the error code 14800001 is returned. The product of the number of inserted data records and the size of the union of all fields in the inserted data equals the number of parameters. For example, if the size of the union is 10,a maximum of 3276 data records can be inserted (3276 * 10 = 32760). Ensure that your application complies with this constraint when calling this API to avoid errors caused by excessive parameters.
 
 **Since:** 23
 
@@ -782,33 +658,33 @@ conflict参数不建议使用ON_CONFLICT_FAIL策略，可能无法返回正确�
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| table | string | Yes | 要插入的目标表名。注意：正确的表名不应包含空格、逗号和星号，不能以点开头和结尾等，否则会抛出参数错误。 |
-| values | Array&lt;ValuesBucket&gt; | Yes | 表示要插入到表中的一组数据。注意：空数组、含有重复资产数据会抛出参数错误。 |
-| config | [ReturningConfig](arkts-arkdata-relationalstore-returningconfig-i.md) | Yes | 指定返回值的配置信息。 |
-| conflict | [ConflictResolution](../../apis-asset-store-kit/arkts-apis/arkts-assetstore-asset-conflictresolution-e.md) | No | 指定冲突解决模式。默认为ON_CONFLICT_NONE。 |
+| table | string | Yes | Indicates the target table. |
+| values | Array&lt;ValuesBucket&gt; | Yes | Indicates the rows of data {@link ValuesBucket} to be inserted into the table. |
+| config | [ReturningConfig](arkts-arkdata-relationalstore-returningconfig-i.md) | Yes | Indicate the information that needs to be returned. |
+| conflict | [ConflictResolution](../../apis-asset-store-kit/arkts-apis/arkts-assetstore-asset-conflictresolution-e.md) | No | Indicates the {@link ConflictResolution} to insert data into the table. The default conflict resolution policy is {@link ConflictResolution.ON_CONFLICT_NONE}. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [Result](arkts-arkdata-relationalstore-result-i.md) | 返回受影响的数据集。 |
+| [Result](arkts-arkdata-relationalstore-result-i.md) | The { |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 14800001 | Invalid arguments. Possible causes: 1. Parameter is out of valid range. |
-| 14800033 | SQLite: Data type mismatch. |
-| 14800032 | SQLite: Abort due to constraint violation. |
-| 14800021 | SQLite: Generic error. Possible causes: Insert failed or the updated data does not exist. |
-| 14800025 | SQLite: A table in the database is locked. |
-| 14800024 | SQLite: The database file is locked. |
-| 14800011 | The current operation failed because the database is corrupted. |
-| 14800027 | SQLite: Attempt to write a readonly database. |
-| 14800029 | SQLite: The database is full. |
-| 14800028 | SQLite: Some kind of disk I/O error occurred. |
-| 14800047 | The WAL file size exceeds the default limit. |
-| 14800014 | The target instance is already closed. |
+| [14800001](../errorcode-data-rdb.md#14800001-invalid-arguments) | Invalid arguments. Possible causes: 1. Parameter is out of valid range. |
+| [14800033](../errorcode-data-rdb.md#14800033-sqlite-data-types-mismatch) | SQLite: Data type mismatch. |
+| [14800032](../errorcode-data-rdb.md#14800032-sqlite-abort-due-to-constraint-violation) | SQLite: Abort due to constraint violation. |
+| [14800021](../errorcode-data-rdb.md#14800021-sqlite-generic-error) | SQLite: Generic error. Possible causes: Insert failed or the updated data does not exist. |
+| [14800025](../errorcode-data-rdb.md#14800025-sqlite-database-table-locked) | SQLite: A table in the database is locked. |
+| [14800024](../errorcode-data-rdb.md#14800024-sqlite-database-file-locked) | SQLite: The database file is locked. |
+| [14800011](../errorcode-data-rdb.md#14800011-database-file-corrupted) | The current operation failed because the database is corrupted. |
+| [14800027](../errorcode-data-rdb.md#14800027-sqlite-attempt-to-write-a-readonly-database) | SQLite: Attempt to write a readonly database. |
+| [14800029](../errorcode-data-rdb.md#14800029-sqlite-database-is-full) | SQLite: The database is full. |
+| [14800028](../errorcode-data-rdb.md#14800028-sqlite-io-error) | SQLite: Some kind of disk I/O error occurred. |
+| [14800047](../errorcode-data-rdb.md#14800047-wal-file-size-exceeds-the-default-limit) | The WAL file size exceeds the default limit. |
+| [14800014](../errorcode-data-rdb.md#14800014-target-instance-closed) | The target instance is already closed. |
 
 ## beginTrans
 
@@ -822,12 +698,7 @@ ArkTS-Sta:
 beginTrans(): Promise<long>
 ```
 
-在开始执行SQL语句之前，开始事务，使用Promise异步回调。
-
-与[beginTransaction](arkts-arkdata-relationalstore-rdbstore-i.md#begintransaction)的区别在于：该接口会返回事务ID，  
-[execute](arkts-arkdata-relationalstore-rdbstore-i.md#execute)可以指定不同事务ID达到事务隔离目的。
-
-该接口仅支持向量数据库（在[StoreConfig](arkts-arkdata-relationalstore-storeconfig-i.md)中配置vector为true）使用。
+Begins a transaction before executing the SQL statement.
 
 **Since:** 12
 
@@ -841,33 +712,33 @@ beginTrans(): Promise<long>
 
 | Type | Description |
 | --- | --- |
-| ArkTS-Dyn: Promise&lt;number&gt;  <br>ArkTS-Sta：Promise&lt;long&gt; | Promise对象，返回事务ID。 |
+| ArkTS-Dyn: Promise&lt;number&gt;  <br>ArkTS-Sta：Promise&lt;long&gt; | Returns the transaction ID. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 14800033 | SQLite: Data type mismatch. |
-| 801 | Capability not supported the sql(attach,begin,commit,rollback etc.). |
-| 14800000 | Inner error. |
-| 14800032 | SQLite: Abort due to constraint violation. |
-| 14800034 | SQLite: Library used incorrectly. |
-| 14800011 | The current operation failed because the database is corrupted. |
-| 14800015 | The database does not respond. |
-| 14800047 | The WAL file size exceeds the default limit. |
-| 14800014 | The target instance is already closed. |
-| 401 | Parameter error. Possible causes: The RdbStore verification failed. |
-| 14800021 | SQLite: Generic error. |
-| 14800023 | SQLite: Access permission denied. |
-| 14800022 | SQLite: Callback routine requested an abort. |
-| 14800025 | SQLite: A table in the database is locked. |
-| 14800024 | SQLite: The database file is locked. |
-| 14800027 | SQLite: Attempt to write a readonly database. |
-| 14800026 | SQLite: The database is out of memory. |
-| 14800029 | SQLite: The database is full. |
-| 14800028 | SQLite: Some kind of disk I/O error occurred. |
-| 14800031 | SQLite: TEXT or BLOB exceeds size limit. |
-| 14800030 | SQLite: Unable to open the database file. |
+| [14800033](../errorcode-data-rdb.md#14800033-sqlite-data-types-mismatch) | SQLite: Data type mismatch. |
+| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported the sql(attach,begin,commit,rollback etc.). |
+| [14800000](../../apis-basic-services-kit/errorcode-settings.md#14800000-parameter-check-failed) | Inner error. |
+| [14800032](../errorcode-data-rdb.md#14800032-sqlite-abort-due-to-constraint-violation) | SQLite: Abort due to constraint violation. |
+| [14800034](../errorcode-data-rdb.md#14800034-incorrect-use-of-sqlite-library) | SQLite: Library used incorrectly. |
+| [14800011](../errorcode-data-rdb.md#14800011-database-file-corrupted) | The current operation failed because the database is corrupted. |
+| [14800015](../errorcode-data-rdb.md#14800015-rdb-store-not-respond) | The database does not respond. |
+| [14800047](../errorcode-data-rdb.md#14800047-wal-file-size-exceeds-the-default-limit) | The WAL file size exceeds the default limit. |
+| [14800014](../errorcode-data-rdb.md#14800014-target-instance-closed) | The target instance is already closed. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: The RdbStore verification failed. |
+| [14800021](../errorcode-data-rdb.md#14800021-sqlite-generic-error) | SQLite: Generic error. |
+| [14800023](../errorcode-data-rdb.md#14800023-sqlite-access-denied) | SQLite: Access permission denied. |
+| [14800022](../errorcode-data-rdb.md#14800022-sqlite-asynchronous-callback-request-aborted) | SQLite: Callback routine requested an abort. |
+| [14800025](../errorcode-data-rdb.md#14800025-sqlite-database-table-locked) | SQLite: A table in the database is locked. |
+| [14800024](../errorcode-data-rdb.md#14800024-sqlite-database-file-locked) | SQLite: The database file is locked. |
+| [14800027](../errorcode-data-rdb.md#14800027-sqlite-attempt-to-write-a-readonly-database) | SQLite: Attempt to write a readonly database. |
+| [14800026](../errorcode-data-rdb.md#14800026-sqlite-insufficient-database-memory) | SQLite: The database is out of memory. |
+| [14800029](../errorcode-data-rdb.md#14800029-sqlite-database-is-full) | SQLite: The database is full. |
+| [14800028](../errorcode-data-rdb.md#14800028-sqlite-io-error) | SQLite: Some kind of disk I/O error occurred. |
+| [14800031](../errorcode-data-rdb.md#14800031-sqlite-text-or-blob-exceeds-the-limit) | SQLite: TEXT or BLOB exceeds size limit. |
+| [14800030](../errorcode-data-rdb.md#14800030-sqlite-unable-to-open-the-database-file) | SQLite: Unable to open the database file. |
 
 ## beginTransaction
 
@@ -875,9 +746,7 @@ beginTrans(): Promise<long>
 beginTransaction(): void
 ```
 
-在开始执行SQL语句之前，开始事务。
-
-此接口不允许嵌套事务，且不支持在多进程或多线程中使用。
+BeginTransaction before execute your sql.
 
 **Since:** 9
 
@@ -891,26 +760,26 @@ beginTransaction(): void
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 14800033 | SQLite: Data type mismatch.<br>**Applicable version:** 12 and later |
-| 14800000 | Inner error. |
-| 14800032 | SQLite: Abort due to constraint violation.<br>**Applicable version:** 12 and later |
-| 14800034 | SQLite: Library used incorrectly.<br>**Applicable version:** 12 and later |
-| 14800011 | The current operation failed because the database is corrupted.<br>**Applicable version:** 12 and later |
-| 14800047 | The WAL file size exceeds the default limit.<br>**Applicable version:** 10 and later |
-| 14800015 | The database does not respond.<br>**Applicable version:** 12 and later |
-| 14800014 | The target instance is already closed.<br>**Applicable version:** 12 and later |
-| 401 | Parameter error. Possible causes: The RdbStore verification failed. |
-| 14800021 | SQLite: Generic error.<br>**Applicable version:** 12 and later |
-| 14800023 | SQLite: Access permission denied.<br>**Applicable version:** 12 and later |
-| 14800022 | SQLite: Callback routine requested an abort.<br>**Applicable version:** 12 and later |
-| 14800025 | SQLite: A table in the database is locked.<br>**Applicable version:** 12 and later |
-| 14800024 | SQLite: The database file is locked.<br>**Applicable version:** 12 and later |
-| 14800027 | SQLite: Attempt to write a readonly database.<br>**Applicable version:** 12 and later |
-| 14800026 | SQLite: The database is out of memory.<br>**Applicable version:** 12 and later |
-| 14800029 | SQLite: The database is full.<br>**Applicable version:** 12 and later |
-| 14800028 | SQLite: Some kind of disk I/O error occurred.<br>**Applicable version:** 12 and later |
-| 14800031 | SQLite: TEXT or BLOB exceeds size limit.<br>**Applicable version:** 12 and later |
-| 14800030 | SQLite: Unable to open the database file.<br>**Applicable version:** 12 and later |
+| [14800033](../errorcode-data-rdb.md#14800033-sqlite-data-types-mismatch) | SQLite: Data type mismatch.<br>**Applicable version:** 12 and later |
+| [14800000](../../apis-basic-services-kit/errorcode-settings.md#14800000-parameter-check-failed) | Inner error. |
+| [14800032](../errorcode-data-rdb.md#14800032-sqlite-abort-due-to-constraint-violation) | SQLite: Abort due to constraint violation.<br>**Applicable version:** 12 and later |
+| [14800034](../errorcode-data-rdb.md#14800034-incorrect-use-of-sqlite-library) | SQLite: Library used incorrectly.<br>**Applicable version:** 12 and later |
+| [14800011](../errorcode-data-rdb.md#14800011-database-file-corrupted) | The current operation failed because the database is corrupted.<br>**Applicable version:** 12 and later |
+| [14800047](../errorcode-data-rdb.md#14800047-wal-file-size-exceeds-the-default-limit) | The WAL file size exceeds the default limit.<br>**Applicable version:** 10 and later |
+| [14800015](../errorcode-data-rdb.md#14800015-rdb-store-not-respond) | The database does not respond.<br>**Applicable version:** 12 and later |
+| [14800014](../errorcode-data-rdb.md#14800014-target-instance-closed) | The target instance is already closed.<br>**Applicable version:** 12 and later |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: The RdbStore verification failed. |
+| [14800021](../errorcode-data-rdb.md#14800021-sqlite-generic-error) | SQLite: Generic error.<br>**Applicable version:** 12 and later |
+| [14800023](../errorcode-data-rdb.md#14800023-sqlite-access-denied) | SQLite: Access permission denied.<br>**Applicable version:** 12 and later |
+| [14800022](../errorcode-data-rdb.md#14800022-sqlite-asynchronous-callback-request-aborted) | SQLite: Callback routine requested an abort.<br>**Applicable version:** 12 and later |
+| [14800025](../errorcode-data-rdb.md#14800025-sqlite-database-table-locked) | SQLite: A table in the database is locked.<br>**Applicable version:** 12 and later |
+| [14800024](../errorcode-data-rdb.md#14800024-sqlite-database-file-locked) | SQLite: The database file is locked.<br>**Applicable version:** 12 and later |
+| [14800027](../errorcode-data-rdb.md#14800027-sqlite-attempt-to-write-a-readonly-database) | SQLite: Attempt to write a readonly database.<br>**Applicable version:** 12 and later |
+| [14800026](../errorcode-data-rdb.md#14800026-sqlite-insufficient-database-memory) | SQLite: The database is out of memory.<br>**Applicable version:** 12 and later |
+| [14800029](../errorcode-data-rdb.md#14800029-sqlite-database-is-full) | SQLite: The database is full.<br>**Applicable version:** 12 and later |
+| [14800028](../errorcode-data-rdb.md#14800028-sqlite-io-error) | SQLite: Some kind of disk I/O error occurred.<br>**Applicable version:** 12 and later |
+| [14800031](../errorcode-data-rdb.md#14800031-sqlite-text-or-blob-exceeds-the-limit) | SQLite: TEXT or BLOB exceeds size limit.<br>**Applicable version:** 12 and later |
+| [14800030](../errorcode-data-rdb.md#14800030-sqlite-unable-to-open-the-database-file) | SQLite: Unable to open the database file.<br>**Applicable version:** 12 and later |
 
 ## cleanDirtyData
 
@@ -924,7 +793,9 @@ ArkTS-Sta:
 cleanDirtyData(table: string, cursor: long, callback: AsyncCallback<void>): void
 ```
 
-清理云端删除的数据同步到本地后，未自动清理的，且数据的游标（cursor）小于指定游标的数据。使用callback异步回调。
+Cleans the dirty data, which is the data deleted in the cloud.
+
+Data with a cursor smaller than the specified cursor will be cleaned up.
 
 **Since:** 11
 
@@ -938,34 +809,34 @@ cleanDirtyData(table: string, cursor: long, callback: AsyncCallback<void>): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| table | string | Yes | 表示当前数据库的表的名称。 |
-| cursor | ArkTS-Dyn: number  <br>ArkTS-Sta：long | Yes | 整数类型，表示数据游标，小于此游标的脏数据将被清理。 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | 回调函数。当清理成功，err为undefined，否则为错误对象。 |
+| table | string | Yes | Indicates the name of the table to check. |
+| cursor | ArkTS-Dyn: number  <br>ArkTS-Sta：long | Yes | Indicates the position of the data to be cleaned up. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Indicates the callback invoked to return the result. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 14800033 | SQLite: Data type mismatch.<br>**Applicable version:** 12 and later |
-| 801 | Capability not supported. |
-| 14800000 | Inner error. |
-| 14800032 | SQLite: Abort due to constraint violation.<br>**Applicable version:** 12 and later |
-| 14800034 | SQLite: Library used incorrectly.<br>**Applicable version:** 12 and later |
-| 14800011 | The current operation failed because the database is corrupted.<br>**Applicable version:** 12 and later |
-| 14800015 | The database does not respond.<br>**Applicable version:** 12 and later |
-| 14800014 | The target instance is already closed.<br>**Applicable version:** 12 and later |
-| 401 | Parameter error. Possible causes: 1. Need 1 - 3 parameter(s)! 2. The RdbStore must be not nullptr. 3. The tablesNames must be not empty string. 4. The cursor must be valid cursor. |
-| 14800021 | SQLite: Generic error.<br>**Applicable version:** 12 and later |
-| 14800023 | SQLite: Access permission denied.<br>**Applicable version:** 12 and later |
-| 14800022 | SQLite: Callback routine requested an abort.<br>**Applicable version:** 12 and later |
-| 14800025 | SQLite: A table in the database is locked.<br>**Applicable version:** 12 and later |
-| 14800024 | SQLite: The database file is locked.<br>**Applicable version:** 12 and later |
-| 14800027 | SQLite: Attempt to write a readonly database.<br>**Applicable version:** 12 and later |
-| 14800026 | SQLite: The database is out of memory.<br>**Applicable version:** 12 and later |
-| 14800029 | SQLite: The database is full.<br>**Applicable version:** 12 and later |
-| 14800028 | SQLite: Some kind of disk I/O error occurred.<br>**Applicable version:** 12 and later |
-| 14800031 | SQLite: TEXT or BLOB exceeds size limit.<br>**Applicable version:** 12 and later |
-| 14800030 | SQLite: Unable to open the database file.<br>**Applicable version:** 12 and later |
+| [14800033](../errorcode-data-rdb.md#14800033-sqlite-data-types-mismatch) | SQLite: Data type mismatch.<br>**Applicable version:** 12 and later |
+| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. |
+| [14800000](../../apis-basic-services-kit/errorcode-settings.md#14800000-parameter-check-failed) | Inner error. |
+| [14800032](../errorcode-data-rdb.md#14800032-sqlite-abort-due-to-constraint-violation) | SQLite: Abort due to constraint violation.<br>**Applicable version:** 12 and later |
+| [14800034](../errorcode-data-rdb.md#14800034-incorrect-use-of-sqlite-library) | SQLite: Library used incorrectly.<br>**Applicable version:** 12 and later |
+| [14800011](../errorcode-data-rdb.md#14800011-database-file-corrupted) | The current operation failed because the database is corrupted.<br>**Applicable version:** 12 and later |
+| [14800015](../errorcode-data-rdb.md#14800015-rdb-store-not-respond) | The database does not respond.<br>**Applicable version:** 12 and later |
+| [14800014](../errorcode-data-rdb.md#14800014-target-instance-closed) | The target instance is already closed.<br>**Applicable version:** 12 and later |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Need 1 - 3 parameter(s)! 2. The RdbStore must be not nullptr. 3. The tablesNames must be not empty string. 4. The cursor must be valid cursor. |
+| [14800021](../errorcode-data-rdb.md#14800021-sqlite-generic-error) | SQLite: Generic error.<br>**Applicable version:** 12 and later |
+| [14800023](../errorcode-data-rdb.md#14800023-sqlite-access-denied) | SQLite: Access permission denied.<br>**Applicable version:** 12 and later |
+| [14800022](../errorcode-data-rdb.md#14800022-sqlite-asynchronous-callback-request-aborted) | SQLite: Callback routine requested an abort.<br>**Applicable version:** 12 and later |
+| [14800025](../errorcode-data-rdb.md#14800025-sqlite-database-table-locked) | SQLite: A table in the database is locked.<br>**Applicable version:** 12 and later |
+| [14800024](../errorcode-data-rdb.md#14800024-sqlite-database-file-locked) | SQLite: The database file is locked.<br>**Applicable version:** 12 and later |
+| [14800027](../errorcode-data-rdb.md#14800027-sqlite-attempt-to-write-a-readonly-database) | SQLite: Attempt to write a readonly database.<br>**Applicable version:** 12 and later |
+| [14800026](../errorcode-data-rdb.md#14800026-sqlite-insufficient-database-memory) | SQLite: The database is out of memory.<br>**Applicable version:** 12 and later |
+| [14800029](../errorcode-data-rdb.md#14800029-sqlite-database-is-full) | SQLite: The database is full.<br>**Applicable version:** 12 and later |
+| [14800028](../errorcode-data-rdb.md#14800028-sqlite-io-error) | SQLite: Some kind of disk I/O error occurred.<br>**Applicable version:** 12 and later |
+| [14800031](../errorcode-data-rdb.md#14800031-sqlite-text-or-blob-exceeds-the-limit) | SQLite: TEXT or BLOB exceeds size limit.<br>**Applicable version:** 12 and later |
+| [14800030](../errorcode-data-rdb.md#14800030-sqlite-unable-to-open-the-database-file) | SQLite: Unable to open the database file.<br>**Applicable version:** 12 and later |
 
 ## cleanDirtyData
 
@@ -973,7 +844,7 @@ cleanDirtyData(table: string, cursor: long, callback: AsyncCallback<void>): void
 cleanDirtyData(table: string, callback: AsyncCallback<void>): void
 ```
 
-清理云端删除的数据同步到本地后，未自动清理的所有数据。使用callback异步回调。
+Cleans all dirty data deleted in the cloud.
 
 **Since:** 11
 
@@ -987,33 +858,33 @@ cleanDirtyData(table: string, callback: AsyncCallback<void>): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| table | string | Yes | 表示当前数据库的表的名称。 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | 回调函数。当清理成功，err为undefined，否则为错误对象。 |
+| table | string | Yes | Indicates the name of the table to check. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | The callback of clean. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 14800033 | SQLite: Data type mismatch.<br>**Applicable version:** 12 and later |
-| 801 | Capability not supported. |
-| 14800000 | Inner error. |
-| 14800032 | SQLite: Abort due to constraint violation.<br>**Applicable version:** 12 and later |
-| 14800034 | SQLite: Library used incorrectly.<br>**Applicable version:** 12 and later |
-| 14800011 | The current operation failed because the database is corrupted.<br>**Applicable version:** 12 and later |
-| 14800015 | The database does not respond.<br>**Applicable version:** 12 and later |
-| 14800014 | The target instance is already closed.<br>**Applicable version:** 12 and later |
-| 401 | Parameter error. Possible causes: 1. Need 1 - 3 parameter(s). 2. The RdbStore must be not nullptr. 3. The tablesNames must be not empty string. |
-| 14800021 | SQLite: Generic error.<br>**Applicable version:** 12 and later |
-| 14800023 | SQLite: Access permission denied.<br>**Applicable version:** 12 and later |
-| 14800022 | SQLite: Callback routine requested an abort.<br>**Applicable version:** 12 and later |
-| 14800025 | SQLite: A table in the database is locked.<br>**Applicable version:** 12 and later |
-| 14800024 | SQLite: The database file is locked.<br>**Applicable version:** 12 and later |
-| 14800027 | SQLite: Attempt to write a readonly database.<br>**Applicable version:** 12 and later |
-| 14800026 | SQLite: The database is out of memory.<br>**Applicable version:** 12 and later |
-| 14800029 | SQLite: The database is full.<br>**Applicable version:** 12 and later |
-| 14800028 | SQLite: Some kind of disk I/O error occurred.<br>**Applicable version:** 12 and later |
-| 14800031 | SQLite: TEXT or BLOB exceeds size limit.<br>**Applicable version:** 12 and later |
-| 14800030 | SQLite: Unable to open the database file.<br>**Applicable version:** 12 and later |
+| [14800033](../errorcode-data-rdb.md#14800033-sqlite-data-types-mismatch) | SQLite: Data type mismatch.<br>**Applicable version:** 12 and later |
+| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. |
+| [14800000](../../apis-basic-services-kit/errorcode-settings.md#14800000-parameter-check-failed) | Inner error. |
+| [14800032](../errorcode-data-rdb.md#14800032-sqlite-abort-due-to-constraint-violation) | SQLite: Abort due to constraint violation.<br>**Applicable version:** 12 and later |
+| [14800034](../errorcode-data-rdb.md#14800034-incorrect-use-of-sqlite-library) | SQLite: Library used incorrectly.<br>**Applicable version:** 12 and later |
+| [14800011](../errorcode-data-rdb.md#14800011-database-file-corrupted) | The current operation failed because the database is corrupted.<br>**Applicable version:** 12 and later |
+| [14800015](../errorcode-data-rdb.md#14800015-rdb-store-not-respond) | The database does not respond.<br>**Applicable version:** 12 and later |
+| [14800014](../errorcode-data-rdb.md#14800014-target-instance-closed) | The target instance is already closed.<br>**Applicable version:** 12 and later |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Need 1 - 3 parameter(s). 2. The RdbStore must be not nullptr. 3. The tablesNames must be not empty string. |
+| [14800021](../errorcode-data-rdb.md#14800021-sqlite-generic-error) | SQLite: Generic error.<br>**Applicable version:** 12 and later |
+| [14800023](../errorcode-data-rdb.md#14800023-sqlite-access-denied) | SQLite: Access permission denied.<br>**Applicable version:** 12 and later |
+| [14800022](../errorcode-data-rdb.md#14800022-sqlite-asynchronous-callback-request-aborted) | SQLite: Callback routine requested an abort.<br>**Applicable version:** 12 and later |
+| [14800025](../errorcode-data-rdb.md#14800025-sqlite-database-table-locked) | SQLite: A table in the database is locked.<br>**Applicable version:** 12 and later |
+| [14800024](../errorcode-data-rdb.md#14800024-sqlite-database-file-locked) | SQLite: The database file is locked.<br>**Applicable version:** 12 and later |
+| [14800027](../errorcode-data-rdb.md#14800027-sqlite-attempt-to-write-a-readonly-database) | SQLite: Attempt to write a readonly database.<br>**Applicable version:** 12 and later |
+| [14800026](../errorcode-data-rdb.md#14800026-sqlite-insufficient-database-memory) | SQLite: The database is out of memory.<br>**Applicable version:** 12 and later |
+| [14800029](../errorcode-data-rdb.md#14800029-sqlite-database-is-full) | SQLite: The database is full.<br>**Applicable version:** 12 and later |
+| [14800028](../errorcode-data-rdb.md#14800028-sqlite-io-error) | SQLite: Some kind of disk I/O error occurred.<br>**Applicable version:** 12 and later |
+| [14800031](../errorcode-data-rdb.md#14800031-sqlite-text-or-blob-exceeds-the-limit) | SQLite: TEXT or BLOB exceeds size limit.<br>**Applicable version:** 12 and later |
+| [14800030](../errorcode-data-rdb.md#14800030-sqlite-unable-to-open-the-database-file) | SQLite: Unable to open the database file.<br>**Applicable version:** 12 and later |
 
 ## cleanDirtyData
 
@@ -1027,7 +898,9 @@ ArkTS-Sta:
 cleanDirtyData(table: string, cursor?: long): Promise<void>
 ```
 
-清理云端删除的数据同步到本地后，未自动清理的，且数据的游标（cursor）小于指定游标的数据，使用Promise异步回调。若无cursor参数，将全部清理。
+Cleans dirty data deleted in the cloud.
+
+If a cursor is specified, data with a cursor smaller than the specified cursor will be cleaned up.otherwise clean all.
 
 **Since:** 11
 
@@ -1041,39 +914,39 @@ cleanDirtyData(table: string, cursor?: long): Promise<void>
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| table | string | Yes | 表示当前数据库的表的名称。 |
-| cursor | ArkTS-Dyn: number  <br>ArkTS-Sta：long | No | 整数类型，表示数据游标，小于此游标的脏数据将被清理。当此参数不填时，清理当前表的所有脏数据。 |
+| table | string | Yes | Indicates the name of the table to check. |
+| cursor | ArkTS-Dyn: number  <br>ArkTS-Sta：long | No | Indicates the cursor. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise对象，无返回结果。 |
+| Promise&lt;void&gt; | The promise returned by the function. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 14800033 | SQLite: Data type mismatch.<br>**Applicable version:** 12 and later |
-| 801 | Capability not supported. |
-| 14800000 | Inner error. |
-| 14800032 | SQLite: Abort due to constraint violation.<br>**Applicable version:** 12 and later |
-| 14800034 | SQLite: Library used incorrectly.<br>**Applicable version:** 12 and later |
-| 14800011 | The current operation failed because the database is corrupted.<br>**Applicable version:** 12 and later |
-| 14800015 | The database does not respond.<br>**Applicable version:** 12 and later |
-| 14800014 | The target instance is already closed.<br>**Applicable version:** 12 and later |
-| 401 | Parameter error. Possible causes: 1. Need 1 - 3 parameter(s)! 2. The RdbStore must be not nullptr. 3. The tablesNames must be not empty string. 4. The cursor must be valid cursor. |
-| 14800021 | SQLite: Generic error.<br>**Applicable version:** 12 and later |
-| 14800023 | SQLite: Access permission denied.<br>**Applicable version:** 12 and later |
-| 14800022 | SQLite: Callback routine requested an abort.<br>**Applicable version:** 12 and later |
-| 14800025 | SQLite: A table in the database is locked.<br>**Applicable version:** 12 and later |
-| 14800024 | SQLite: The database file is locked.<br>**Applicable version:** 12 and later |
-| 14800027 | SQLite: Attempt to write a readonly database.<br>**Applicable version:** 12 and later |
-| 14800026 | SQLite: The database is out of memory.<br>**Applicable version:** 12 and later |
-| 14800029 | SQLite: The database is full.<br>**Applicable version:** 12 and later |
-| 14800028 | SQLite: Some kind of disk I/O error occurred.<br>**Applicable version:** 12 and later |
-| 14800031 | SQLite: TEXT or BLOB exceeds size limit.<br>**Applicable version:** 12 and later |
-| 14800030 | SQLite: Unable to open the database file.<br>**Applicable version:** 12 and later |
+| [14800033](../errorcode-data-rdb.md#14800033-sqlite-data-types-mismatch) | SQLite: Data type mismatch.<br>**Applicable version:** 12 and later |
+| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. |
+| [14800000](../../apis-basic-services-kit/errorcode-settings.md#14800000-parameter-check-failed) | Inner error. |
+| [14800032](../errorcode-data-rdb.md#14800032-sqlite-abort-due-to-constraint-violation) | SQLite: Abort due to constraint violation.<br>**Applicable version:** 12 and later |
+| [14800034](../errorcode-data-rdb.md#14800034-incorrect-use-of-sqlite-library) | SQLite: Library used incorrectly.<br>**Applicable version:** 12 and later |
+| [14800011](../errorcode-data-rdb.md#14800011-database-file-corrupted) | The current operation failed because the database is corrupted.<br>**Applicable version:** 12 and later |
+| [14800015](../errorcode-data-rdb.md#14800015-rdb-store-not-respond) | The database does not respond.<br>**Applicable version:** 12 and later |
+| [14800014](../errorcode-data-rdb.md#14800014-target-instance-closed) | The target instance is already closed.<br>**Applicable version:** 12 and later |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Need 1 - 3 parameter(s)! 2. The RdbStore must be not nullptr. 3. The tablesNames must be not empty string. 4. The cursor must be valid cursor. |
+| [14800021](../errorcode-data-rdb.md#14800021-sqlite-generic-error) | SQLite: Generic error.<br>**Applicable version:** 12 and later |
+| [14800023](../errorcode-data-rdb.md#14800023-sqlite-access-denied) | SQLite: Access permission denied.<br>**Applicable version:** 12 and later |
+| [14800022](../errorcode-data-rdb.md#14800022-sqlite-asynchronous-callback-request-aborted) | SQLite: Callback routine requested an abort.<br>**Applicable version:** 12 and later |
+| [14800025](../errorcode-data-rdb.md#14800025-sqlite-database-table-locked) | SQLite: A table in the database is locked.<br>**Applicable version:** 12 and later |
+| [14800024](../errorcode-data-rdb.md#14800024-sqlite-database-file-locked) | SQLite: The database file is locked.<br>**Applicable version:** 12 and later |
+| [14800027](../errorcode-data-rdb.md#14800027-sqlite-attempt-to-write-a-readonly-database) | SQLite: Attempt to write a readonly database.<br>**Applicable version:** 12 and later |
+| [14800026](../errorcode-data-rdb.md#14800026-sqlite-insufficient-database-memory) | SQLite: The database is out of memory.<br>**Applicable version:** 12 and later |
+| [14800029](../errorcode-data-rdb.md#14800029-sqlite-database-is-full) | SQLite: The database is full.<br>**Applicable version:** 12 and later |
+| [14800028](../errorcode-data-rdb.md#14800028-sqlite-io-error) | SQLite: Some kind of disk I/O error occurred.<br>**Applicable version:** 12 and later |
+| [14800031](../errorcode-data-rdb.md#14800031-sqlite-text-or-blob-exceeds-the-limit) | SQLite: TEXT or BLOB exceeds size limit.<br>**Applicable version:** 12 and later |
+| [14800030](../errorcode-data-rdb.md#14800030-sqlite-unable-to-open-the-database-file) | SQLite: Unable to open the database file.<br>**Applicable version:** 12 and later |
 
 ## close
 
@@ -1081,7 +954,7 @@ cleanDirtyData(table: string, cursor?: long): Promise<void>
 close(): Promise<void>
 ```
 
-关闭数据库，使用Promise异步回调。
+Close the RdbStore and all resultSets.
 
 **Since:** 12
 
@@ -1095,14 +968,14 @@ close(): Promise<void>
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise对象，无返回结果。 |
+| Promise&lt;void&gt; | The promise returned by the function. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. Possible causes: The RdbStore verification failed. |
-| 14800000 | Inner error. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: The RdbStore verification failed. |
+| [14800000](../../apis-basic-services-kit/errorcode-settings.md#14800000-parameter-check-failed) | Inner error. |
 
 ## cloudSync
 
@@ -1110,7 +983,7 @@ close(): Promise<void>
 cloudSync(mode: SyncMode, progress: Callback<ProgressDetails>, callback: AsyncCallback<void>): void
 ```
 
-主动执行对所有分布式表的端云同步，使用callback异步回调。使用该接口需要实现云服务功能。
+Sync data to cloud.
 
 **Since:** 10
 
@@ -1124,17 +997,17 @@ cloudSync(mode: SyncMode, progress: Callback<ProgressDetails>, callback: AsyncCa
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| mode | [SyncMode](arkts-arkdata-relationalstore-syncmode-e.md) | Yes | 表示数据库的同步模式。 |
-| progress | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;ProgressDetails&gt; | Yes | 用来处理数据库同步详细信息的回调函数。 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | 回调函数。当同步成功，err为undefined，否则为错误对象。 |
+| mode | [SyncMode](arkts-arkdata-relationalstore-syncmode-e.md) | Yes | indicates the database synchronization mode. |
+| progress | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;ProgressDetails&gt; | Yes | Callback used to return the {@link ProgressDetails} result. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | The callback of cloudSync. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1. Need 2 - 4 parameter(s). 2. The RdbStore must be not nullptr. 3. The mode must be a SyncMode of cloud. 4. The progress must be a callback type. 5. The callback must be a function. |
-| 801 | Capability not supported. |
-| 14800014 | The target instance is already closed.<br>**Applicable version:** 12 and later |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Need 2 - 4 parameter(s). 2. The RdbStore must be not nullptr. 3. The mode must be a SyncMode of cloud. 4. The progress must be a callback type. 5. The callback must be a function. |
+| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. |
+| [14800014](../errorcode-data-rdb.md#14800014-target-instance-closed) | The target instance is already closed.<br>**Applicable version:** 12 and later |
 
 ## cloudSync
 
@@ -1142,7 +1015,7 @@ cloudSync(mode: SyncMode, progress: Callback<ProgressDetails>, callback: AsyncCa
 cloudSync(mode: SyncMode, progress: Callback<ProgressDetails>): Promise<void>
 ```
 
-主动执行对所有分布式表的端云同步，使用Promise异步回调。使用该接口需要实现云服务功能。
+Sync data to cloud.
 
 **Since:** 10
 
@@ -1156,22 +1029,22 @@ cloudSync(mode: SyncMode, progress: Callback<ProgressDetails>): Promise<void>
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| mode | [SyncMode](arkts-arkdata-relationalstore-syncmode-e.md) | Yes | 表示数据库的同步模式。 |
-| progress | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;ProgressDetails&gt; | Yes | 用来处理数据库同步详细信息的回调函数。 |
+| mode | [SyncMode](arkts-arkdata-relationalstore-syncmode-e.md) | Yes | indicates the database synchronization mode. |
+| progress | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;ProgressDetails&gt; | Yes | Callback used to return the {@link ProgressDetails} result. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise对象，无返回结果。 |
+| Promise&lt;void&gt; | : The promise returned by the function. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1. Need 2 - 4 parameter(s). 2. The RdbStore must be not nullptr. 3. The mode must be a SyncMode of cloud. 4. The progress must be a callback type. |
-| 801 | Capability not supported. |
-| 14800014 | The target instance is already closed.<br>**Applicable version:** 12 and later |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Need 2 - 4 parameter(s). 2. The RdbStore must be not nullptr. 3. The mode must be a SyncMode of cloud. 4. The progress must be a callback type. |
+| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. |
+| [14800014](../errorcode-data-rdb.md#14800014-target-instance-closed) | The target instance is already closed.<br>**Applicable version:** 12 and later |
 
 ## cloudSync
 
@@ -1184,7 +1057,7 @@ cloudSync(
     ): void
 ```
 
-主动执行对指定表的端云同步，使用callback异步回调。使用该接口需要实现云服务功能。
+Sync data to cloud.
 
 **Since:** 10
 
@@ -1198,18 +1071,18 @@ cloudSync(
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| mode | [SyncMode](arkts-arkdata-relationalstore-syncmode-e.md) | Yes | 表示数据库的同步模式。 |
-| tables | string[] | Yes | 指定同步的表名。 |
-| progress | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;ProgressDetails&gt; | Yes | 用来处理数据库同步详细信息的回调函数。 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | 回调函数。当同步成功，err为undefined，否则为错误对象。 |
+| mode | [SyncMode](arkts-arkdata-relationalstore-syncmode-e.md) | Yes | indicates the database synchronization mode. |
+| tables | string[] | Yes | indicates the database synchronization mode. |
+| progress | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;ProgressDetails&gt; | Yes | Callback used to return the {@link ProgressDetails} result. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | The callback of cloudSync. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. Possible causes: &lt;br&gt; 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameter types. &lt;br&gt; 3. Parameter verification failed. |
-| 801 | Capability not supported. |
-| 14800014 | The target instance is already closed.<br>**Applicable version:** 12 and later |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes:    *     &lt;br&gt; 1. Mandatory parameters are left unspecified.   *     &lt;br&gt; 2. Incorrect parameter types.   *     &lt;br&gt; 3. Parameter verification failed. |
+| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. |
+| [14800014](../errorcode-data-rdb.md#14800014-target-instance-closed) | The target instance is already closed.<br>**Applicable version:** 12 and later |
 
 ## cloudSync
 
@@ -1217,7 +1090,7 @@ cloudSync(
 cloudSync(mode: SyncMode, tables: string[], progress: Callback<ProgressDetails>): Promise<void>
 ```
 
-主动执行对指定表的端云同步，使用Promise异步回调。使用该接口需要实现云服务功能。
+Sync data to cloud.
 
 **Since:** 10
 
@@ -1231,23 +1104,23 @@ cloudSync(mode: SyncMode, tables: string[], progress: Callback<ProgressDetails>)
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| mode | [SyncMode](arkts-arkdata-relationalstore-syncmode-e.md) | Yes | 表示数据库的同步模式。 |
-| tables | string[] | Yes | 指定同步的表名。 |
-| progress | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;ProgressDetails&gt; | Yes | 用来处理数据库同步详细信息的回调函数。 |
+| mode | [SyncMode](arkts-arkdata-relationalstore-syncmode-e.md) | Yes | indicates the database synchronization mode. |
+| tables | string[] | Yes | indicates the database synchronization mode. |
+| progress | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;ProgressDetails&gt; | Yes | Callback used to return the {@link ProgressDetails} result. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise对象，无返回结果。 |
+| Promise&lt;void&gt; | : The promise returned by the function. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1. Need 2 - 4 parameter(s). 2. The RdbStore must be not nullptr. 3. The mode must be a SyncMode of cloud. 4. The tablesNames must be not empty. 5. The progress must be a callback type. |
-| 801 | Capability not supported. |
-| 14800014 | The target instance is already closed.<br>**Applicable version:** 12 and later |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Need 2 - 4 parameter(s). 2. The RdbStore must be not nullptr. 3. The mode must be a SyncMode of cloud. 4. The tablesNames must be not empty. 5. The progress must be a callback type. |
+| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. |
+| [14800014](../errorcode-data-rdb.md#14800014-target-instance-closed) | The target instance is already closed.<br>**Applicable version:** 12 and later |
 
 ## cloudSyncEx
 
@@ -1255,42 +1128,7 @@ cloudSync(mode: SyncMode, tables: string[], progress: Callback<ProgressDetails>)
 cloudSyncEx(config: CloudSyncConfig, progress: Callback<ProgressDetails>): Promise<void>
 ```
 
-主动执行端云同步，根据云同步配置信息进行同步，使用Promise异步回调。使用该接口需要实现云服务功能。
-
-> **说明：**
-> 
-> [CloudSyncConfig](arkts-arkdata-relationalstore-cloudsyncconfig-i.md)中仅支持以下谓词：
-> 
-> - [beginWrap](arkts-arkdata-relationalstore-rdbpredicates-c.md#beginwrap)
-> 
-> - [endWrap](arkts-arkdata-relationalstore-rdbpredicates-c.md#endwrap)
-> 
-> - [or](arkts-arkdata-relationalstore-rdbpredicates-c.md#or)
-> 
-> - [and](arkts-arkdata-relationalstore-rdbpredicates-c.md#and)
-> 
-> - 以下谓词的数据字段类型[ValueType](arkts-arkdata-relationalstore-valuetype-t.md)仅支持number类型的整数和string：
-> 
-> - [equalTo](arkts-arkdata-relationalstore-rdbpredicates-c.md#equalto)
-> 
-> - [notEqualTo](arkts-arkdata-relationalstore-rdbpredicates-c.md#notequalto)
-> 
-> - [in](arkts-arkdata-relationalstore-rdbpredicates-c.md#in)
-> 
-> - [notIn](arkts-arkdata-relationalstore-rdbpredicates-c.md#notin)
-> 
-> - 以下谓词的数据字段类型[ValueType](arkts-arkdata-relationalstore-valuetype-t.md)仅支持number类型的整数：
-> 
-> - [greaterThan](arkts-arkdata-relationalstore-rdbpredicates-c.md#greaterthan)
-> 
-> - [lessThan](arkts-arkdata-relationalstore-rdbpredicates-c.md#lessthan)
-> 
-> - [greaterThanOrEqualTo](arkts-arkdata-relationalstore-rdbpredicates-c.md#greaterthanorequalto)
-> 
-> - [lessThanOrEqualTo](arkts-arkdata-relationalstore-rdbpredicates-c.md#lessthanorequalto)
-> 
-> 谓词中支持使用主键（必填）和资产（可选）作为同步条件：当选择资产作为同步条件时，同步模式需要设置为relationalStore.SyncMode.SYNC_MODE_CLOUD_FIRST；指定资产的数量较多时（最多支持
-> 指定50个资产），建议谓词中仅使用主键作为同步条件。
+Synchronizes data to the cloud. This API uses a promise to return the result.
 
 **Since:** 26.0.0
 
@@ -1306,20 +1144,20 @@ cloudSyncEx(config: CloudSyncConfig, progress: Callback<ProgressDetails>): Promi
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| config | [CloudSyncConfig](arkts-arkdata-relationalstore-cloudsyncconfig-i.md) | Yes | 云同步配置。 |
-| progress | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;ProgressDetails&gt; | Yes | 进度回调函数，返回ProgressDetails实例对象。 |
+| config | [CloudSyncConfig](arkts-arkdata-relationalstore-cloudsyncconfig-i.md) | Yes | indicates the cloud synchronization config. |
+| progress | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;ProgressDetails&gt; | Yes | Callback used to return the sync progress. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise对象，无返回结果。 |
+| Promise&lt;void&gt; | Promise that returns no value. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 14800014 | The target instance is already closed. |
+| [14800014](../errorcode-data-rdb.md#14800014-target-instance-closed) | The target instance is already closed. |
 
 ## commit
 
@@ -1327,9 +1165,7 @@ cloudSyncEx(config: CloudSyncConfig, progress: Callback<ProgressDetails>): Promi
 commit(): void
 ```
 
-提交已执行的SQL语句，跟[beginTransaction](arkts-arkdata-relationalstore-rdbstore-i.md#begintransaction)配合使用。
-
-此接口不允许嵌套事务，且不支持在多进程或多线程中使用。
+Commit the the sql you have executed.
 
 **Since:** 9
 
@@ -1343,25 +1179,25 @@ commit(): void
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 14800033 | SQLite: Data type mismatch.<br>**Applicable version:** 12 and later |
-| 14800000 | Inner error.<br>**Applicable version:** 12 and later |
-| 14800032 | SQLite: Abort due to constraint violation.<br>**Applicable version:** 12 and later |
-| 14800034 | SQLite: Library used incorrectly.<br>**Applicable version:** 12 and later |
-| 14800011 | The current operation failed because the database is corrupted.<br>**Applicable version:** 12 and later |
-| 14800015 | The database does not respond.<br>**Applicable version:** 12 and later |
-| 14800014 | The target instance is already closed.<br>**Applicable version:** 12 and later |
-| 401 | Parameter error. Possible causes: The RdbStore verification failed. |
-| 14800021 | SQLite: Generic error.<br>**Applicable version:** 12 and later |
-| 14800023 | SQLite: Access permission denied.<br>**Applicable version:** 12 and later |
-| 14800022 | SQLite: Callback routine requested an abort.<br>**Applicable version:** 12 and later |
-| 14800025 | SQLite: A table in the database is locked.<br>**Applicable version:** 12 and later |
-| 14800024 | SQLite: The database file is locked.<br>**Applicable version:** 12 and later |
-| 14800027 | SQLite: Attempt to write a readonly database.<br>**Applicable version:** 12 and later |
-| 14800026 | SQLite: The database is out of memory.<br>**Applicable version:** 12 and later |
-| 14800029 | SQLite: The database is full.<br>**Applicable version:** 12 and later |
-| 14800028 | SQLite: Some kind of disk I/O error occurred.<br>**Applicable version:** 12 and later |
-| 14800031 | SQLite: TEXT or BLOB exceeds size limit.<br>**Applicable version:** 12 and later |
-| 14800030 | SQLite: Unable to open the database file.<br>**Applicable version:** 12 and later |
+| [14800033](../errorcode-data-rdb.md#14800033-sqlite-data-types-mismatch) | SQLite: Data type mismatch.<br>**Applicable version:** 12 and later |
+| [14800000](../../apis-basic-services-kit/errorcode-settings.md#14800000-parameter-check-failed) | Inner error.<br>**Applicable version:** 12 and later |
+| [14800032](../errorcode-data-rdb.md#14800032-sqlite-abort-due-to-constraint-violation) | SQLite: Abort due to constraint violation.<br>**Applicable version:** 12 and later |
+| [14800034](../errorcode-data-rdb.md#14800034-incorrect-use-of-sqlite-library) | SQLite: Library used incorrectly.<br>**Applicable version:** 12 and later |
+| [14800011](../errorcode-data-rdb.md#14800011-database-file-corrupted) | The current operation failed because the database is corrupted.<br>**Applicable version:** 12 and later |
+| [14800015](../errorcode-data-rdb.md#14800015-rdb-store-not-respond) | The database does not respond.<br>**Applicable version:** 12 and later |
+| [14800014](../errorcode-data-rdb.md#14800014-target-instance-closed) | The target instance is already closed.<br>**Applicable version:** 12 and later |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: The RdbStore verification failed. |
+| [14800021](../errorcode-data-rdb.md#14800021-sqlite-generic-error) | SQLite: Generic error.<br>**Applicable version:** 12 and later |
+| [14800023](../errorcode-data-rdb.md#14800023-sqlite-access-denied) | SQLite: Access permission denied.<br>**Applicable version:** 12 and later |
+| [14800022](../errorcode-data-rdb.md#14800022-sqlite-asynchronous-callback-request-aborted) | SQLite: Callback routine requested an abort.<br>**Applicable version:** 12 and later |
+| [14800025](../errorcode-data-rdb.md#14800025-sqlite-database-table-locked) | SQLite: A table in the database is locked.<br>**Applicable version:** 12 and later |
+| [14800024](../errorcode-data-rdb.md#14800024-sqlite-database-file-locked) | SQLite: The database file is locked.<br>**Applicable version:** 12 and later |
+| [14800027](../errorcode-data-rdb.md#14800027-sqlite-attempt-to-write-a-readonly-database) | SQLite: Attempt to write a readonly database.<br>**Applicable version:** 12 and later |
+| [14800026](../errorcode-data-rdb.md#14800026-sqlite-insufficient-database-memory) | SQLite: The database is out of memory.<br>**Applicable version:** 12 and later |
+| [14800029](../errorcode-data-rdb.md#14800029-sqlite-database-is-full) | SQLite: The database is full.<br>**Applicable version:** 12 and later |
+| [14800028](../errorcode-data-rdb.md#14800028-sqlite-io-error) | SQLite: Some kind of disk I/O error occurred.<br>**Applicable version:** 12 and later |
+| [14800031](../errorcode-data-rdb.md#14800031-sqlite-text-or-blob-exceeds-the-limit) | SQLite: TEXT or BLOB exceeds size limit.<br>**Applicable version:** 12 and later |
+| [14800030](../errorcode-data-rdb.md#14800030-sqlite-unable-to-open-the-database-file) | SQLite: Unable to open the database file.<br>**Applicable version:** 12 and later |
 
 ## commit
 
@@ -1375,9 +1211,7 @@ ArkTS-Sta:
 commit(txId : long): Promise<void>
 ```
 
-提交已执行的SQL语句，跟[beginTrans](arkts-arkdata-relationalstore-rdbstore-i.md#begintrans)配合使用，使用Promise异步回调。
-
-该接口仅支持向量数据库（在[StoreConfig](arkts-arkdata-relationalstore-storeconfig-i.md)中配置vector为true）使用。
+Commits the SQL statement executed.
 
 **Since:** 12
 
@@ -1391,37 +1225,37 @@ commit(txId : long): Promise<void>
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| txId | ArkTS-Dyn: number  <br>ArkTS-Sta：long | Yes | 通过[beginTrans](arkts-arkdata-relationalstore-rdbstore-i.md#begintrans)获取的事务ID。 |
+| txId | ArkTS-Dyn: number  <br>ArkTS-Sta：long | Yes | Indicates the transaction ID which is obtained by beginTrans. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise对象，无返回结果。 |
+| Promise&lt;void&gt; | Promise used to return the result. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 14800033 | SQLite: Data type mismatch. |
-| 14800000 | Inner error. |
-| 14800032 | SQLite: Abort due to constraint violation. |
-| 14800034 | SQLite: Library used incorrectly. |
-| 14800011 | The current operation failed because the database is corrupted. |
-| 14800015 | The database does not respond. |
-| 14800014 | The target instance is already closed. |
-| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; 3. Parameter verification failed. |
-| 14800021 | SQLite: Generic error. |
-| 14800023 | SQLite: Access permission denied. |
-| 14800022 | SQLite: Callback routine requested an abort. |
-| 14800025 | SQLite: A table in the database is locked. |
-| 14800024 | SQLite: The database file is locked. |
-| 14800027 | SQLite: Attempt to write a readonly database. |
-| 14800026 | SQLite: The database is out of memory. |
-| 14800029 | SQLite: The database is full. |
-| 14800028 | SQLite: Some kind of disk I/O error occurred. |
-| 14800031 | SQLite: TEXT or BLOB exceeds size limit. |
-| 14800030 | SQLite: Unable to open the database file. |
+| [14800033](../errorcode-data-rdb.md#14800033-sqlite-data-types-mismatch) | SQLite: Data type mismatch. |
+| [14800000](../../apis-basic-services-kit/errorcode-settings.md#14800000-parameter-check-failed) | Inner error. |
+| [14800032](../errorcode-data-rdb.md#14800032-sqlite-abort-due-to-constraint-violation) | SQLite: Abort due to constraint violation. |
+| [14800034](../errorcode-data-rdb.md#14800034-incorrect-use-of-sqlite-library) | SQLite: Library used incorrectly. |
+| [14800011](../errorcode-data-rdb.md#14800011-database-file-corrupted) | The current operation failed because the database is corrupted. |
+| [14800015](../errorcode-data-rdb.md#14800015-rdb-store-not-respond) | The database does not respond. |
+| [14800014](../errorcode-data-rdb.md#14800014-target-instance-closed) | The target instance is already closed. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; 3. Parameter verification failed. |
+| [14800021](../errorcode-data-rdb.md#14800021-sqlite-generic-error) | SQLite: Generic error. |
+| [14800023](../errorcode-data-rdb.md#14800023-sqlite-access-denied) | SQLite: Access permission denied. |
+| [14800022](../errorcode-data-rdb.md#14800022-sqlite-asynchronous-callback-request-aborted) | SQLite: Callback routine requested an abort. |
+| [14800025](../errorcode-data-rdb.md#14800025-sqlite-database-table-locked) | SQLite: A table in the database is locked. |
+| [14800024](../errorcode-data-rdb.md#14800024-sqlite-database-file-locked) | SQLite: The database file is locked. |
+| [14800027](../errorcode-data-rdb.md#14800027-sqlite-attempt-to-write-a-readonly-database) | SQLite: Attempt to write a readonly database. |
+| [14800026](../errorcode-data-rdb.md#14800026-sqlite-insufficient-database-memory) | SQLite: The database is out of memory. |
+| [14800029](../errorcode-data-rdb.md#14800029-sqlite-database-is-full) | SQLite: The database is full. |
+| [14800028](../errorcode-data-rdb.md#14800028-sqlite-io-error) | SQLite: Some kind of disk I/O error occurred. |
+| [14800031](../errorcode-data-rdb.md#14800031-sqlite-text-or-blob-exceeds-the-limit) | SQLite: TEXT or BLOB exceeds size limit. |
+| [14800030](../errorcode-data-rdb.md#14800030-sqlite-unable-to-open-the-database-file) | SQLite: Unable to open the database file. |
 
 ## createTransaction
 
@@ -1429,13 +1263,7 @@ commit(txId : long): Promise<void>
 createTransaction(options?: TransactionOptions): Promise<Transaction>
 ```
 
-创建一个事务对象并开始事务，使用Promise异步回调。
-
-与[beginTransaction](arkts-arkdata-relationalstore-rdbstore-i.md#begintransaction)的区别在于：createTransaction接口会返回一个事务对象，不同事务对象之间是隔离的。使用事务对象进行插入、删除或更新数据等操作，无法被注册数据变更通知[on('dataChange')](relationalStore.RdbStore.onDataChange)监听到。
-
-一个store最多支持同时存在四个事务对象，超过后会返回14800015错误码，此时需要检查是否持有事务对象时间过长或并发事务过多，若确认无法通过上述优化解决问题，建议等待现有事务释放后，再尝试新建事务对象。
-
-优先使用createTransaction，不再推荐使用beginTransaction。
+create a transaction instance and begin.
 
 **Since:** 14
 
@@ -1449,28 +1277,28 @@ createTransaction(options?: TransactionOptions): Promise<Transaction>
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| options | [TransactionOptions](arkts-arkdata-relationalstore-transactionoptions-i.md) | No | 表示事务对象的配置信息，默认值为DEFERRED。 |
+| options | [TransactionOptions](arkts-arkdata-relationalstore-transactionoptions-i.md) | No | The option for creating transactions. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;Transaction&gt; | Promise对象，返回事务对象。 |
+| Promise&lt;Transaction&gt; | The { |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 14800000 | Inner error. |
-| 14800023 | SQLite: Access permission denied. |
-| 14800024 | SQLite: The database file is locked. |
-| 14800011 | The current operation failed because the database is corrupted. |
-| 14800026 | SQLite: The database is out of memory. |
-| 14800029 | SQLite: The database is full. |
-| 14800028 | SQLite: Some kind of disk I/O error occurred. |
-| 14800015 | The database is busy. |
-| 14800014 | The target instance is already closed. |
-| 14800030 | SQLite: Unable to open the database file. |
+| [14800000](../../apis-basic-services-kit/errorcode-settings.md#14800000-parameter-check-failed) | Inner error. |
+| [14800023](../errorcode-data-rdb.md#14800023-sqlite-access-denied) | SQLite: Access permission denied. |
+| [14800024](../errorcode-data-rdb.md#14800024-sqlite-database-file-locked) | SQLite: The database file is locked. |
+| [14800011](../errorcode-data-rdb.md#14800011-database-file-corrupted) | The current operation failed because the database is corrupted. |
+| [14800026](../errorcode-data-rdb.md#14800026-sqlite-insufficient-database-memory) | SQLite: The database is out of memory. |
+| [14800029](../errorcode-data-rdb.md#14800029-sqlite-database-is-full) | SQLite: The database is full. |
+| [14800028](../errorcode-data-rdb.md#14800028-sqlite-io-error) | SQLite: Some kind of disk I/O error occurred. |
+| [14800015](../errorcode-data-rdb.md#14800015-rdb-store-not-respond) | The database is busy. |
+| [14800014](../errorcode-data-rdb.md#14800014-target-instance-closed) | The target instance is already closed. |
+| [14800030](../errorcode-data-rdb.md#14800030-sqlite-unable-to-open-the-database-file) | SQLite: Unable to open the database file. |
 
 ## delete
 
@@ -1484,7 +1312,7 @@ ArkTS-Sta:
 delete(predicates: RdbPredicates, callback: AsyncCallback<long>): void
 ```
 
-根据RdbPredicates的指定实例对象从数据库中删除数据，使用callback异步回调。
+Deletes data from the database based on a specified instance object of RdbPredicates.
 
 **Since:** 9
 
@@ -1498,33 +1326,33 @@ delete(predicates: RdbPredicates, callback: AsyncCallback<long>): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| predicates | [RdbPredicates](arkts-arkdata-relationalstore-rdbpredicates-c.md) | Yes | RdbPredicates的实例对象指定的删除条件。 |
-| callback | ArkTS-Dyn: [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;number&gt;  <br>ArkTS-Sta：[AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;long&gt; | Yes | 回调函数。当删除数据成功，err为undefined，data为受影响的行数量；否则为错误对象。 |
+| predicates | [RdbPredicates](arkts-arkdata-relationalstore-rdbpredicates-c.md) | Yes | The specified delete condition by the instance object of {@link RdbPredicates}. |
+| callback | ArkTS-Dyn: [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;number&gt;  <br>ArkTS-Sta：[AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;long&gt; | Yes | The number of affected rows. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 14800033 | SQLite: Data type mismatch.<br>**Applicable version:** 12 and later |
-| 14800000 | Inner error. |
-| 14800032 | SQLite: Abort due to constraint violation.<br>**Applicable version:** 12 and later |
-| 14800034 | SQLite: Library used incorrectly.<br>**Applicable version:** 12 and later |
-| 14800011 | The current operation failed because the database is corrupted.<br>**Applicable version:** 12 and later |
-| 14800047 | The WAL file size exceeds the default limit.<br>**Applicable version:** 10 and later |
-| 14800015 | The database does not respond.<br>**Applicable version:** 12 and later |
-| 14800014 | The target instance is already closed.<br>**Applicable version:** 12 and later |
-| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; 3. Parameter verification failed. |
-| 14800021 | SQLite: Generic error.<br>**Applicable version:** 12 and later |
-| 14800023 | SQLite: Access permission denied.<br>**Applicable version:** 12 and later |
-| 14800022 | SQLite: Callback routine requested an abort.<br>**Applicable version:** 12 and later |
-| 14800025 | SQLite: A table in the database is locked.<br>**Applicable version:** 12 and later |
-| 14800024 | SQLite: The database file is locked.<br>**Applicable version:** 12 and later |
-| 14800027 | SQLite: Attempt to write a readonly database.<br>**Applicable version:** 12 and later |
-| 14800026 | SQLite: The database is out of memory.<br>**Applicable version:** 12 and later |
-| 14800029 | SQLite: The database is full.<br>**Applicable version:** 12 and later |
-| 14800028 | SQLite: Some kind of disk I/O error occurred.<br>**Applicable version:** 12 and later |
-| 14800031 | SQLite: TEXT or BLOB exceeds size limit.<br>**Applicable version:** 12 and later |
-| 14800030 | SQLite: Unable to open the database file.<br>**Applicable version:** 12 and later |
+| [14800033](../errorcode-data-rdb.md#14800033-sqlite-data-types-mismatch) | SQLite: Data type mismatch.<br>**Applicable version:** 12 and later |
+| [14800000](../../apis-basic-services-kit/errorcode-settings.md#14800000-parameter-check-failed) | Inner error. |
+| [14800032](../errorcode-data-rdb.md#14800032-sqlite-abort-due-to-constraint-violation) | SQLite: Abort due to constraint violation.<br>**Applicable version:** 12 and later |
+| [14800034](../errorcode-data-rdb.md#14800034-incorrect-use-of-sqlite-library) | SQLite: Library used incorrectly.<br>**Applicable version:** 12 and later |
+| [14800011](../errorcode-data-rdb.md#14800011-database-file-corrupted) | The current operation failed because the database is corrupted.<br>**Applicable version:** 12 and later |
+| [14800047](../errorcode-data-rdb.md#14800047-wal-file-size-exceeds-the-default-limit) | The WAL file size exceeds the default limit.<br>**Applicable version:** 10 and later |
+| [14800015](../errorcode-data-rdb.md#14800015-rdb-store-not-respond) | The database does not respond.<br>**Applicable version:** 12 and later |
+| [14800014](../errorcode-data-rdb.md#14800014-target-instance-closed) | The target instance is already closed.<br>**Applicable version:** 12 and later |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; 3. Parameter verification failed. |
+| [14800021](../errorcode-data-rdb.md#14800021-sqlite-generic-error) | SQLite: Generic error.<br>**Applicable version:** 12 and later |
+| [14800023](../errorcode-data-rdb.md#14800023-sqlite-access-denied) | SQLite: Access permission denied.<br>**Applicable version:** 12 and later |
+| [14800022](../errorcode-data-rdb.md#14800022-sqlite-asynchronous-callback-request-aborted) | SQLite: Callback routine requested an abort.<br>**Applicable version:** 12 and later |
+| [14800025](../errorcode-data-rdb.md#14800025-sqlite-database-table-locked) | SQLite: A table in the database is locked.<br>**Applicable version:** 12 and later |
+| [14800024](../errorcode-data-rdb.md#14800024-sqlite-database-file-locked) | SQLite: The database file is locked.<br>**Applicable version:** 12 and later |
+| [14800027](../errorcode-data-rdb.md#14800027-sqlite-attempt-to-write-a-readonly-database) | SQLite: Attempt to write a readonly database.<br>**Applicable version:** 12 and later |
+| [14800026](../errorcode-data-rdb.md#14800026-sqlite-insufficient-database-memory) | SQLite: The database is out of memory.<br>**Applicable version:** 12 and later |
+| [14800029](../errorcode-data-rdb.md#14800029-sqlite-database-is-full) | SQLite: The database is full.<br>**Applicable version:** 12 and later |
+| [14800028](../errorcode-data-rdb.md#14800028-sqlite-io-error) | SQLite: Some kind of disk I/O error occurred.<br>**Applicable version:** 12 and later |
+| [14800031](../errorcode-data-rdb.md#14800031-sqlite-text-or-blob-exceeds-the-limit) | SQLite: TEXT or BLOB exceeds size limit.<br>**Applicable version:** 12 and later |
+| [14800030](../errorcode-data-rdb.md#14800030-sqlite-unable-to-open-the-database-file) | SQLite: Unable to open the database file.<br>**Applicable version:** 12 and later |
 
 ## delete
 
@@ -1538,7 +1366,7 @@ ArkTS-Sta:
 delete(predicates: RdbPredicates): Promise<long>
 ```
 
-根据RdbPredicates的指定实例对象从数据库中删除数据，使用Promise异步回调。
+Deletes data from the database based on a specified instance object of RdbPredicates.
 
 **Since:** 9
 
@@ -1552,38 +1380,38 @@ delete(predicates: RdbPredicates): Promise<long>
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| predicates | [RdbPredicates](arkts-arkdata-relationalstore-rdbpredicates-c.md) | Yes | RdbPredicates的实例对象指定的删除条件。 |
+| predicates | [RdbPredicates](arkts-arkdata-relationalstore-rdbpredicates-c.md) | Yes | The specified delete condition by the instance object of {@link RdbPredicates}. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| ArkTS-Dyn: Promise&lt;number&gt;  <br>ArkTS-Sta：Promise&lt;long&gt; | Promise对象。返回受影响的行数量。 |
+| ArkTS-Dyn: Promise&lt;number&gt;  <br>ArkTS-Sta：Promise&lt;long&gt; | return the number of affected rows. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 14800033 | SQLite: Data type mismatch.<br>**Applicable version:** 12 and later |
-| 14800000 | Inner error. |
-| 14800032 | SQLite: Abort due to constraint violation.<br>**Applicable version:** 12 and later |
-| 14800034 | SQLite: Library used incorrectly.<br>**Applicable version:** 12 and later |
-| 14800011 | The current operation failed because the database is corrupted.<br>**Applicable version:** 12 and later |
-| 14800047 | The WAL file size exceeds the default limit.<br>**Applicable version:** 10 and later |
-| 14800015 | The database does not respond.<br>**Applicable version:** 12 and later |
-| 14800014 | The target instance is already closed.<br>**Applicable version:** 12 and later |
-| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; 3. Parameter verification failed. |
-| 14800021 | SQLite: Generic error.<br>**Applicable version:** 12 and later |
-| 14800023 | SQLite: Access permission denied.<br>**Applicable version:** 12 and later |
-| 14800022 | SQLite: Callback routine requested an abort.<br>**Applicable version:** 12 and later |
-| 14800025 | SQLite: A table in the database is locked.<br>**Applicable version:** 12 and later |
-| 14800024 | SQLite: The database file is locked.<br>**Applicable version:** 12 and later |
-| 14800027 | SQLite: Attempt to write a readonly database.<br>**Applicable version:** 12 and later |
-| 14800026 | SQLite: The database is out of memory.<br>**Applicable version:** 12 and later |
-| 14800029 | SQLite: The database is full.<br>**Applicable version:** 12 and later |
-| 14800028 | SQLite: Some kind of disk I/O error occurred.<br>**Applicable version:** 12 and later |
-| 14800031 | SQLite: TEXT or BLOB exceeds size limit.<br>**Applicable version:** 12 and later |
-| 14800030 | SQLite: Unable to open the database file.<br>**Applicable version:** 12 and later |
+| [14800033](../errorcode-data-rdb.md#14800033-sqlite-data-types-mismatch) | SQLite: Data type mismatch.<br>**Applicable version:** 12 and later |
+| [14800000](../../apis-basic-services-kit/errorcode-settings.md#14800000-parameter-check-failed) | Inner error. |
+| [14800032](../errorcode-data-rdb.md#14800032-sqlite-abort-due-to-constraint-violation) | SQLite: Abort due to constraint violation.<br>**Applicable version:** 12 and later |
+| [14800034](../errorcode-data-rdb.md#14800034-incorrect-use-of-sqlite-library) | SQLite: Library used incorrectly.<br>**Applicable version:** 12 and later |
+| [14800011](../errorcode-data-rdb.md#14800011-database-file-corrupted) | The current operation failed because the database is corrupted.<br>**Applicable version:** 12 and later |
+| [14800047](../errorcode-data-rdb.md#14800047-wal-file-size-exceeds-the-default-limit) | The WAL file size exceeds the default limit.<br>**Applicable version:** 10 and later |
+| [14800015](../errorcode-data-rdb.md#14800015-rdb-store-not-respond) | The database does not respond.<br>**Applicable version:** 12 and later |
+| [14800014](../errorcode-data-rdb.md#14800014-target-instance-closed) | The target instance is already closed.<br>**Applicable version:** 12 and later |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; 3. Parameter verification failed. |
+| [14800021](../errorcode-data-rdb.md#14800021-sqlite-generic-error) | SQLite: Generic error.<br>**Applicable version:** 12 and later |
+| [14800023](../errorcode-data-rdb.md#14800023-sqlite-access-denied) | SQLite: Access permission denied.<br>**Applicable version:** 12 and later |
+| [14800022](../errorcode-data-rdb.md#14800022-sqlite-asynchronous-callback-request-aborted) | SQLite: Callback routine requested an abort.<br>**Applicable version:** 12 and later |
+| [14800025](../errorcode-data-rdb.md#14800025-sqlite-database-table-locked) | SQLite: A table in the database is locked.<br>**Applicable version:** 12 and later |
+| [14800024](../errorcode-data-rdb.md#14800024-sqlite-database-file-locked) | SQLite: The database file is locked.<br>**Applicable version:** 12 and later |
+| [14800027](../errorcode-data-rdb.md#14800027-sqlite-attempt-to-write-a-readonly-database) | SQLite: Attempt to write a readonly database.<br>**Applicable version:** 12 and later |
+| [14800026](../errorcode-data-rdb.md#14800026-sqlite-insufficient-database-memory) | SQLite: The database is out of memory.<br>**Applicable version:** 12 and later |
+| [14800029](../errorcode-data-rdb.md#14800029-sqlite-database-is-full) | SQLite: The database is full.<br>**Applicable version:** 12 and later |
+| [14800028](../errorcode-data-rdb.md#14800028-sqlite-io-error) | SQLite: Some kind of disk I/O error occurred.<br>**Applicable version:** 12 and later |
+| [14800031](../errorcode-data-rdb.md#14800031-sqlite-text-or-blob-exceeds-the-limit) | SQLite: TEXT or BLOB exceeds size limit.<br>**Applicable version:** 12 and later |
+| [14800030](../errorcode-data-rdb.md#14800030-sqlite-unable-to-open-the-database-file) | SQLite: Unable to open the database file.<br>**Applicable version:** 12 and later |
 
 ## deleteSync
 
@@ -1597,7 +1425,7 @@ ArkTS-Sta:
 deleteSync(predicates: RdbPredicates): long
 ```
 
-根据RdbPredicates的指定实例对象从数据库中删除数据。
+Deletes data from the database based on a specified instance object of RdbPredicates with sync interface.
 
 **Since:** 12
 
@@ -1611,38 +1439,38 @@ deleteSync(predicates: RdbPredicates): long
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| predicates | [RdbPredicates](arkts-arkdata-relationalstore-rdbpredicates-c.md) | Yes | RdbPredicates的实例对象指定的删除条件。 |
+| predicates | [RdbPredicates](arkts-arkdata-relationalstore-rdbpredicates-c.md) | Yes | The specified delete condition by the instance object of {@link RdbPredicates}. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| ArkTS-Dyn: number  <br>ArkTS-Sta：long | 返回受影响的行数量。 |
+| ArkTS-Dyn: number  <br>ArkTS-Sta：long | return the number of rows deleted. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 14800033 | SQLite: Data type mismatch. |
-| 14800000 | Inner error. |
-| 14800032 | SQLite: Abort due to constraint violation. |
-| 14800034 | SQLite: Library used incorrectly. |
-| 14800011 | The current operation failed because the database is corrupted. |
-| 14800015 | The database does not respond. |
-| 14800047 | The WAL file size exceeds the default limit. |
-| 14800014 | The target instance is already closed. |
-| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; 3. Parameter verification failed. |
-| 14800021 | SQLite: Generic error. |
-| 14800023 | SQLite: Access permission denied. |
-| 14800022 | SQLite: Callback routine requested an abort. |
-| 14800025 | SQLite: A table in the database is locked. |
-| 14800024 | SQLite: The database file is locked. |
-| 14800027 | SQLite: Attempt to write a readonly database. |
-| 14800026 | SQLite: The database is out of memory. |
-| 14800029 | SQLite: The database is full. |
-| 14800028 | SQLite: Some kind of disk I/O error occurred. |
-| 14800031 | SQLite: TEXT or BLOB exceeds size limit. |
-| 14800030 | SQLite: Unable to open the database file. |
+| [14800033](../errorcode-data-rdb.md#14800033-sqlite-data-types-mismatch) | SQLite: Data type mismatch. |
+| [14800000](../../apis-basic-services-kit/errorcode-settings.md#14800000-parameter-check-failed) | Inner error. |
+| [14800032](../errorcode-data-rdb.md#14800032-sqlite-abort-due-to-constraint-violation) | SQLite: Abort due to constraint violation. |
+| [14800034](../errorcode-data-rdb.md#14800034-incorrect-use-of-sqlite-library) | SQLite: Library used incorrectly. |
+| [14800011](../errorcode-data-rdb.md#14800011-database-file-corrupted) | The current operation failed because the database is corrupted. |
+| [14800015](../errorcode-data-rdb.md#14800015-rdb-store-not-respond) | The database does not respond. |
+| [14800047](../errorcode-data-rdb.md#14800047-wal-file-size-exceeds-the-default-limit) | The WAL file size exceeds the default limit. |
+| [14800014](../errorcode-data-rdb.md#14800014-target-instance-closed) | The target instance is already closed. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; 3. Parameter verification failed. |
+| [14800021](../errorcode-data-rdb.md#14800021-sqlite-generic-error) | SQLite: Generic error. |
+| [14800023](../errorcode-data-rdb.md#14800023-sqlite-access-denied) | SQLite: Access permission denied. |
+| [14800022](../errorcode-data-rdb.md#14800022-sqlite-asynchronous-callback-request-aborted) | SQLite: Callback routine requested an abort. |
+| [14800025](../errorcode-data-rdb.md#14800025-sqlite-database-table-locked) | SQLite: A table in the database is locked. |
+| [14800024](../errorcode-data-rdb.md#14800024-sqlite-database-file-locked) | SQLite: The database file is locked. |
+| [14800027](../errorcode-data-rdb.md#14800027-sqlite-attempt-to-write-a-readonly-database) | SQLite: Attempt to write a readonly database. |
+| [14800026](../errorcode-data-rdb.md#14800026-sqlite-insufficient-database-memory) | SQLite: The database is out of memory. |
+| [14800029](../errorcode-data-rdb.md#14800029-sqlite-database-is-full) | SQLite: The database is full. |
+| [14800028](../errorcode-data-rdb.md#14800028-sqlite-io-error) | SQLite: Some kind of disk I/O error occurred. |
+| [14800031](../errorcode-data-rdb.md#14800031-sqlite-text-or-blob-exceeds-the-limit) | SQLite: TEXT or BLOB exceeds size limit. |
+| [14800030](../errorcode-data-rdb.md#14800030-sqlite-unable-to-open-the-database-file) | SQLite: Unable to open the database file. |
 
 ## deleteWithReturning
 
@@ -1650,7 +1478,7 @@ deleteSync(predicates: RdbPredicates): long
 deleteWithReturning(predicates: RdbPredicates, config: ReturningConfig): Promise<Result>
 ```
 
-根据RdbPredicates的实例对象从数据库中删除数据，返回[Result](arkts-arkdata-relationalstore-result-i.md)，使用Promise异步回调。
+Deletes data from the database based on a specified instance object of RdbPredicates and return a resultSet of changed fields.
 
 **Since:** 23
 
@@ -1666,31 +1494,31 @@ deleteWithReturning(predicates: RdbPredicates, config: ReturningConfig): Promise
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| predicates | [RdbPredicates](arkts-arkdata-relationalstore-rdbpredicates-c.md) | Yes | RdbPredicates的实例对象指定的删除条件。 |
-| config | [ReturningConfig](arkts-arkdata-relationalstore-returningconfig-i.md) | Yes | 指定返回值的配置信息。 |
+| predicates | [RdbPredicates](arkts-arkdata-relationalstore-rdbpredicates-c.md) | Yes | The specified delete condition by the instance object of {@link RdbPredicates}. |
+| config | [ReturningConfig](arkts-arkdata-relationalstore-returningconfig-i.md) | Yes | Indicate the information that needs to be returned. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;Result&gt; | Promise对象。返回受影响的数据集。 |
+| Promise&lt;Result&gt; | The { |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 14800001 | Invalid arguments. Possible causes: 1. Parameter is out of valid range. |
-| 14800033 | SQLite: Data type mismatch. |
-| 14800032 | SQLite: Abort due to constraint violation. |
-| 14800021 | SQLite: Generic error. Possible causes: Insert failed or the updated data does not exist. |
-| 14800025 | SQLite: A table in the database is locked. |
-| 14800024 | SQLite: The database file is locked. |
-| 14800011 | The current operation failed because the database is corrupted. |
-| 14800027 | SQLite: Attempt to write a readonly database. |
-| 14800029 | SQLite: The database is full. |
-| 14800028 | SQLite: Some kind of disk I/O error occurred. |
-| 14800047 | The WAL file size exceeds the default limit. |
-| 14800014 | The target instance is already closed. |
+| [14800001](../errorcode-data-rdb.md#14800001-invalid-arguments) | Invalid arguments. Possible causes: 1. Parameter is out of valid range. |
+| [14800033](../errorcode-data-rdb.md#14800033-sqlite-data-types-mismatch) | SQLite: Data type mismatch. |
+| [14800032](../errorcode-data-rdb.md#14800032-sqlite-abort-due-to-constraint-violation) | SQLite: Abort due to constraint violation. |
+| [14800021](../errorcode-data-rdb.md#14800021-sqlite-generic-error) | SQLite: Generic error. Possible causes: Insert failed or the updated data does not exist. |
+| [14800025](../errorcode-data-rdb.md#14800025-sqlite-database-table-locked) | SQLite: A table in the database is locked. |
+| [14800024](../errorcode-data-rdb.md#14800024-sqlite-database-file-locked) | SQLite: The database file is locked. |
+| [14800011](../errorcode-data-rdb.md#14800011-database-file-corrupted) | The current operation failed because the database is corrupted. |
+| [14800027](../errorcode-data-rdb.md#14800027-sqlite-attempt-to-write-a-readonly-database) | SQLite: Attempt to write a readonly database. |
+| [14800029](../errorcode-data-rdb.md#14800029-sqlite-database-is-full) | SQLite: The database is full. |
+| [14800028](../errorcode-data-rdb.md#14800028-sqlite-io-error) | SQLite: Some kind of disk I/O error occurred. |
+| [14800047](../errorcode-data-rdb.md#14800047-wal-file-size-exceeds-the-default-limit) | The WAL file size exceeds the default limit. |
+| [14800014](../errorcode-data-rdb.md#14800014-target-instance-closed) | The target instance is already closed. |
 
 ## deleteWithReturningSync
 
@@ -1698,7 +1526,7 @@ deleteWithReturning(predicates: RdbPredicates, config: ReturningConfig): Promise
 deleteWithReturningSync(predicates: RdbPredicates, config: ReturningConfig): Result
 ```
 
-根据RdbPredicates的实例对象从数据库中删除数据，返回[Result](arkts-arkdata-relationalstore-result-i.md)。
+Deletes data from the database based on a specified instance object of RdbPredicates and return a resultSet of changed fields.
 
 **Since:** 23
 
@@ -1714,31 +1542,31 @@ deleteWithReturningSync(predicates: RdbPredicates, config: ReturningConfig): Res
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| predicates | [RdbPredicates](arkts-arkdata-relationalstore-rdbpredicates-c.md) | Yes | RdbPredicates的实例对象指定的删除条件。 |
-| config | [ReturningConfig](arkts-arkdata-relationalstore-returningconfig-i.md) | Yes | 指定返回值的配置信息。 |
+| predicates | [RdbPredicates](arkts-arkdata-relationalstore-rdbpredicates-c.md) | Yes | The specified delete condition by the instance object of {@link RdbPredicates}. |
+| config | [ReturningConfig](arkts-arkdata-relationalstore-returningconfig-i.md) | Yes | Indicate the information that needs to be returned. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [Result](arkts-arkdata-relationalstore-result-i.md) | 返回受影响的数据集。 |
+| [Result](arkts-arkdata-relationalstore-result-i.md) | The { |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 14800001 | Invalid arguments. Possible causes: 1. Parameter is out of valid range. |
-| 14800033 | SQLite: Data type mismatch. |
-| 14800032 | SQLite: Abort due to constraint violation. |
-| 14800021 | SQLite: Generic error. Possible causes: Insert failed or the updated data does not exist. |
-| 14800025 | SQLite: A table in the database is locked. |
-| 14800024 | SQLite: The database file is locked. |
-| 14800011 | The current operation failed because the database is corrupted. |
-| 14800027 | SQLite: Attempt to write a readonly database. |
-| 14800029 | SQLite: The database is full. |
-| 14800028 | SQLite: Some kind of disk I/O error occurred. |
-| 14800047 | The WAL file size exceeds the default limit. |
-| 14800014 | The target instance is already closed. |
+| [14800001](../errorcode-data-rdb.md#14800001-invalid-arguments) | Invalid arguments. Possible causes: 1. Parameter is out of valid range. |
+| [14800033](../errorcode-data-rdb.md#14800033-sqlite-data-types-mismatch) | SQLite: Data type mismatch. |
+| [14800032](../errorcode-data-rdb.md#14800032-sqlite-abort-due-to-constraint-violation) | SQLite: Abort due to constraint violation. |
+| [14800021](../errorcode-data-rdb.md#14800021-sqlite-generic-error) | SQLite: Generic error. Possible causes: Insert failed or the updated data does not exist. |
+| [14800025](../errorcode-data-rdb.md#14800025-sqlite-database-table-locked) | SQLite: A table in the database is locked. |
+| [14800024](../errorcode-data-rdb.md#14800024-sqlite-database-file-locked) | SQLite: The database file is locked. |
+| [14800011](../errorcode-data-rdb.md#14800011-database-file-corrupted) | The current operation failed because the database is corrupted. |
+| [14800027](../errorcode-data-rdb.md#14800027-sqlite-attempt-to-write-a-readonly-database) | SQLite: Attempt to write a readonly database. |
+| [14800029](../errorcode-data-rdb.md#14800029-sqlite-database-is-full) | SQLite: The database is full. |
+| [14800028](../errorcode-data-rdb.md#14800028-sqlite-io-error) | SQLite: Some kind of disk I/O error occurred. |
+| [14800047](../errorcode-data-rdb.md#14800047-wal-file-size-exceeds-the-default-limit) | The WAL file size exceeds the default limit. |
+| [14800014](../errorcode-data-rdb.md#14800014-target-instance-closed) | The target instance is already closed. |
 
 ## detach
 
@@ -1752,11 +1580,7 @@ ArkTS-Sta:
 detach(attachName: string, waitTime?: int) : Promise<int>
 ```
 
-将附加的数据库从当前数据库中分离，使用Promise异步回调。
-
-当所有的附加的数据库被分离后，数据库会重新切换为WAL模式。
-
-在detach之前，所有的数据库操作要确保已经结束，所有的ResultSet已经Close。并且不能并发调用，可能出现未响应情况，需要重试。
+Detaches a database from this database.
 
 **Since:** 12
 
@@ -1770,38 +1594,38 @@ detach(attachName: string, waitTime?: int) : Promise<int>
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| attachName | string | Yes | 表示附加后的数据库的别名，不能为空字符串。 |
-| waitTime | ArkTS-Dyn: number  <br>ArkTS-Sta：int | No | 表示分离数据库的等待时长，单位：s。默认值2s，最小值1s，最大值300s。 |
+| attachName | string | Yes | Indicates the alias of the database. |
+| waitTime | ArkTS-Dyn: number  <br>ArkTS-Sta：int | No | Indicates the maximum time allowed for detaching the database, in seconds. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| ArkTS-Dyn: Promise&lt;number&gt;  <br>ArkTS-Sta：Promise&lt;int&gt; | Promise对象。返回分离后剩余附加的数据库的数量。 |
+| ArkTS-Dyn: Promise&lt;number&gt;  <br>ArkTS-Sta：Promise&lt;int&gt; | Return the current number of attached databases. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 14800033 | SQLite: Data type mismatch. |
-| 14800000 | Inner error. |
-| 14800032 | SQLite: Abort due to constraint violation. |
-| 14800034 | SQLite: Library used incorrectly. |
-| 14800011 | The current operation failed because the database is corrupted. |
-| 14800015 | The database does not respond. |
-| 14800014 | The target instance is already closed. |
-| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; 3. Parameter verification failed. |
-| 14800021 | SQLite: Generic error. |
-| 14800023 | SQLite: Access permission denied. |
-| 14800022 | SQLite: Callback routine requested an abort. |
-| 14800025 | SQLite: A table in the database is locked. |
-| 14800024 | SQLite: The database file is locked. |
-| 14800027 | SQLite: Attempt to write a readonly database. |
-| 14800026 | SQLite: The database is out of memory. |
-| 14800029 | SQLite: The database is full. |
-| 14800028 | SQLite: Some kind of disk I/O error occurred. |
-| 14800031 | SQLite: TEXT or BLOB exceeds size limit. |
-| 14800030 | SQLite: Unable to open the database file. |
+| [14800033](../errorcode-data-rdb.md#14800033-sqlite-data-types-mismatch) | SQLite: Data type mismatch. |
+| [14800000](../../apis-basic-services-kit/errorcode-settings.md#14800000-parameter-check-failed) | Inner error. |
+| [14800032](../errorcode-data-rdb.md#14800032-sqlite-abort-due-to-constraint-violation) | SQLite: Abort due to constraint violation. |
+| [14800034](../errorcode-data-rdb.md#14800034-incorrect-use-of-sqlite-library) | SQLite: Library used incorrectly. |
+| [14800011](../errorcode-data-rdb.md#14800011-database-file-corrupted) | The current operation failed because the database is corrupted. |
+| [14800015](../errorcode-data-rdb.md#14800015-rdb-store-not-respond) | The database does not respond. |
+| [14800014](../errorcode-data-rdb.md#14800014-target-instance-closed) | The target instance is already closed. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; 3. Parameter verification failed. |
+| [14800021](../errorcode-data-rdb.md#14800021-sqlite-generic-error) | SQLite: Generic error. |
+| [14800023](../errorcode-data-rdb.md#14800023-sqlite-access-denied) | SQLite: Access permission denied. |
+| [14800022](../errorcode-data-rdb.md#14800022-sqlite-asynchronous-callback-request-aborted) | SQLite: Callback routine requested an abort. |
+| [14800025](../errorcode-data-rdb.md#14800025-sqlite-database-table-locked) | SQLite: A table in the database is locked. |
+| [14800024](../errorcode-data-rdb.md#14800024-sqlite-database-file-locked) | SQLite: The database file is locked. |
+| [14800027](../errorcode-data-rdb.md#14800027-sqlite-attempt-to-write-a-readonly-database) | SQLite: Attempt to write a readonly database. |
+| [14800026](../errorcode-data-rdb.md#14800026-sqlite-insufficient-database-memory) | SQLite: The database is out of memory. |
+| [14800029](../errorcode-data-rdb.md#14800029-sqlite-database-is-full) | SQLite: The database is full. |
+| [14800028](../errorcode-data-rdb.md#14800028-sqlite-io-error) | SQLite: Some kind of disk I/O error occurred. |
+| [14800031](../errorcode-data-rdb.md#14800031-sqlite-text-or-blob-exceeds-the-limit) | SQLite: TEXT or BLOB exceeds size limit. |
+| [14800030](../errorcode-data-rdb.md#14800030-sqlite-unable-to-open-the-database-file) | SQLite: Unable to open the database file. |
 
 ## emit
 
@@ -1809,7 +1633,7 @@ detach(attachName: string, waitTime?: int) : Promise<int>
 emit(event: string): void
 ```
 
-通知通过[on](../../../reference/apis-arkdata/arkts-apis-data-relationalStore-RdbStore.md#on10)注册的进程间或者进程内监听事件。
+Notifies the registered observers of a change to the data resource specified by Uri.
 
 **Since:** 10
 
@@ -1823,17 +1647,17 @@ emit(event: string): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| event | string | Yes | 通知订阅事件的名称，可自定义事件名称，不能与系统已有事件[dataChange](relationalStore.RdbStore.onDataChange)， [autoSyncProgress](../../../reference/apis-arkdata/arkts-apis-data-relationalStore-RdbStore.md#onautosyncprogress11)， [statistics](../../../reference/apis-arkdata/arkts-apis-data-relationalStore-RdbStore.md#onstatistics12)名称重 复。 |
+| event | string | Yes | Indicates the subscription event. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; 3. Parameter verification failed. |
-| 801 | Capability not supported. |
-| 14800000 | Inner error. |
-| 14800050 | Failed to obtain the subscription service. |
-| 14800014 | The target instance is already closed.<br>**Applicable version:** 12 and later |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; 3. Parameter verification failed. |
+| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. |
+| [14800000](../../apis-basic-services-kit/errorcode-settings.md#14800000-parameter-check-failed) | Inner error. |
+| [14800050](../errorcode-data-rdb.md#14800050-failed-to-obtain-the-subscription-service) | Failed to obtain the subscription service. |
+| [14800014](../errorcode-data-rdb.md#14800014-target-instance-closed) | The target instance is already closed.<br>**Applicable version:** 12 and later |
 
 ## execute
 
@@ -1841,22 +1665,7 @@ emit(event: string): void
 execute(sql: string, args?: Array<ValueType>): Promise<ValueType>
 ```
 
-执行包含指定参数的SQL语句，语句中的各种表达式和操作符之间的关系操作符号不超过1000个，返回值类型为ValueType，使用Promise异步回调。
-
-该接口支持执行增删改操作，支持执行PRAGMA语法的sql，支持对表的操作（建表、删表、修改表），返回结果类型由执行具体sql的结果决定。
-
-此接口不支持执行查询、附加数据库和事务操作，可以使用  
-[querySql](arkts-arkdata-relationalstore-rdbstore-i.md#querysql)、  
-[query](arkts-arkdata-relationalstore-rdbstore-i.md#query)、  
-[attach](arkts-arkdata-relationalstore-rdbstore-i.md#attach)、  
-[beginTransaction](arkts-arkdata-relationalstore-rdbstore-i.md#begintransaction)、  
-[commit](arkts-arkdata-relationalstore-rdbstore-i.md#commit)等接口代替。
-
-向量数据库使用该接口执行插入操作，数据来源于子查询时，支持全字段插入，暂不支持部分字段插入。
-
-不支持分号分隔的多条语句。
-
-不支持开头包含注释的语句。
+Executes a SQL statement that contains specified parameters and returns a value of ValueType.
 
 **Since:** 12
 
@@ -1870,40 +1679,40 @@ execute(sql: string, args?: Array<ValueType>): Promise<ValueType>
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| sql | string | Yes | 指定要执行的SQL语句，不能为空字符串。 |
-| args | Array&lt;ValueType&gt; | No | SQL语句中参数的值。该值与sql参数语句中的占位符相对应。当sql参数语句完整时，该参数不填。默认值为空数组。 |
+| sql | string | Yes | Indicates the SQL statement to execute. |
+| args | Array&lt;ValueType&gt; | No | Indicates the {@link ValueType} values of the parameters in the SQL statement. The values are strings. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;ValueType&gt; | Promise对象，返回SQL执行后的结果。 |
+| Promise&lt;ValueType&gt; | The promise returned by the function. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 14800033 | SQLite: Data type mismatch. |
-| 801 | Capability not supported the sql(attach,begin,commit,rollback etc.). |
-| 14800000 | Inner error. |
-| 14800032 | SQLite: Abort due to constraint violation. |
-| 14800034 | SQLite: Library used incorrectly. |
-| 14800011 | The current operation failed because the database is corrupted. |
-| 14800015 | The database does not respond. |
-| 14800047 | The WAL file size exceeds the default limit. |
-| 14800014 | The target instance is already closed. |
-| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; 3. Parameter verification failed. |
-| 14800021 | SQLite: Generic error. Possible causes: Insert failed or the updated data does not exist. |
-| 14800023 | SQLite: Access permission denied. |
-| 14800022 | SQLite: Callback routine requested an abort. |
-| 14800025 | SQLite: A table in the database is locked. |
-| 14800024 | SQLite: The database file is locked. |
-| 14800027 | SQLite: Attempt to write a readonly database. |
-| 14800026 | SQLite: The database is out of memory. |
-| 14800029 | SQLite: The database is full. |
-| 14800028 | SQLite: Some kind of disk I/O error occurred. |
-| 14800031 | SQLite: TEXT or BLOB exceeds size limit. |
-| 14800030 | SQLite: Unable to open the database file. |
+| [14800033](../errorcode-data-rdb.md#14800033-sqlite-data-types-mismatch) | SQLite: Data type mismatch. |
+| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported the sql(attach,begin,commit,rollback etc.). |
+| [14800000](../../apis-basic-services-kit/errorcode-settings.md#14800000-parameter-check-failed) | Inner error. |
+| [14800032](../errorcode-data-rdb.md#14800032-sqlite-abort-due-to-constraint-violation) | SQLite: Abort due to constraint violation. |
+| [14800034](../errorcode-data-rdb.md#14800034-incorrect-use-of-sqlite-library) | SQLite: Library used incorrectly. |
+| [14800011](../errorcode-data-rdb.md#14800011-database-file-corrupted) | The current operation failed because the database is corrupted. |
+| [14800015](../errorcode-data-rdb.md#14800015-rdb-store-not-respond) | The database does not respond. |
+| [14800047](../errorcode-data-rdb.md#14800047-wal-file-size-exceeds-the-default-limit) | The WAL file size exceeds the default limit. |
+| [14800014](../errorcode-data-rdb.md#14800014-target-instance-closed) | The target instance is already closed. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; 3. Parameter verification failed. |
+| [14800021](../errorcode-data-rdb.md#14800021-sqlite-generic-error) | SQLite: Generic error. Possible causes: Insert failed or the updated data does not exist. |
+| [14800023](../errorcode-data-rdb.md#14800023-sqlite-access-denied) | SQLite: Access permission denied. |
+| [14800022](../errorcode-data-rdb.md#14800022-sqlite-asynchronous-callback-request-aborted) | SQLite: Callback routine requested an abort. |
+| [14800025](../errorcode-data-rdb.md#14800025-sqlite-database-table-locked) | SQLite: A table in the database is locked. |
+| [14800024](../errorcode-data-rdb.md#14800024-sqlite-database-file-locked) | SQLite: The database file is locked. |
+| [14800027](../errorcode-data-rdb.md#14800027-sqlite-attempt-to-write-a-readonly-database) | SQLite: Attempt to write a readonly database. |
+| [14800026](../errorcode-data-rdb.md#14800026-sqlite-insufficient-database-memory) | SQLite: The database is out of memory. |
+| [14800029](../errorcode-data-rdb.md#14800029-sqlite-database-is-full) | SQLite: The database is full. |
+| [14800028](../errorcode-data-rdb.md#14800028-sqlite-io-error) | SQLite: Some kind of disk I/O error occurred. |
+| [14800031](../errorcode-data-rdb.md#14800031-sqlite-text-or-blob-exceeds-the-limit) | SQLite: TEXT or BLOB exceeds size limit. |
+| [14800030](../errorcode-data-rdb.md#14800030-sqlite-unable-to-open-the-database-file) | SQLite: Unable to open the database file. |
 
 ## execute
 
@@ -1917,16 +1726,7 @@ ArkTS-Sta:
 execute(sql: string, txId: long, args?: Array<ValueType>): Promise<ValueType>
 ```
 
-执行包含指定参数的SQL语句，语句中的各种表达式和操作符之间的关系操作符号不超过1000个，使用Promise异步回调。
-
-该接口仅支持向量数据库（在[StoreConfig](arkts-arkdata-relationalstore-storeconfig-i.md)中配置vector为true）使用。使用该接口执行插入操作，数据来源于子查询时，支持全字段插入，暂不支持部分字段插入。
-
-此接口不支持执行查询，可以使用  
-[querySql](arkts-arkdata-relationalstore-rdbstore-i.md#querysql)接口代替。
-
-不支持分号分隔的多条语句。
-
-不支持开头包含注释的语句。
+Executes a SQL statement that contains specified parameters and returns a value of ValueType.
 
 **Since:** 12
 
@@ -1940,41 +1740,41 @@ execute(sql: string, txId: long, args?: Array<ValueType>): Promise<ValueType>
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| sql | string | Yes | 指定要执行的SQL语句，不能为空字符串。 |
-| txId | ArkTS-Dyn: number  <br>ArkTS-Sta：long | Yes | 通过[beginTrans](arkts-arkdata-relationalstore-rdbstore-i.md#begintrans)获取的事务ID，如果传0，该语句默认在单独事务内。 |
-| args | Array&lt;ValueType&gt; | No | SQL语句中参数的值。该值与sql参数语句中的占位符相对应。当sql参数语句完整时，该参数不填。默认值为空数组。 |
+| sql | string | Yes | Indicates the SQL statement to execute. |
+| txId | ArkTS-Dyn: number  <br>ArkTS-Sta：long | Yes | Indicates the transaction ID which is obtained by beginTrans or 0. |
+| args | Array&lt;ValueType&gt; | No | Indicates the {@link ValueType} values of the parameters in the SQL statement. The values are strings. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;ValueType&gt; | Promise对象，返回SQL执行后的结果。 |
+| Promise&lt;ValueType&gt; | The promise returned by the function. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 14800033 | SQLite: Data type mismatch. |
-| 801 | Capability not supported the sql(attach,begin,commit,rollback etc.). |
-| 14800000 | Inner error. |
-| 14800032 | SQLite: Abort due to constraint violation. |
-| 14800034 | SQLite: Library used incorrectly. |
-| 14800011 | The current operation failed because the database is corrupted. |
-| 14800015 | The database does not respond. |
-| 14800047 | The WAL file size exceeds the default limit. |
-| 14800014 | The target instance is already closed. |
-| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; 3. Parameter verification failed. |
-| 14800021 | SQLite: Generic error. Possible causes: Insert failed or the updated data does not exist. |
-| 14800023 | SQLite: Access permission denied. |
-| 14800022 | SQLite: Callback routine requested an abort. |
-| 14800025 | SQLite: A table in the database is locked. |
-| 14800024 | SQLite: The database file is locked. |
-| 14800027 | SQLite: Attempt to write a readonly database. |
-| 14800026 | SQLite: The database is out of memory. |
-| 14800029 | SQLite: The database is full. |
-| 14800028 | SQLite: Some kind of disk I/O error occurred. |
-| 14800031 | SQLite: TEXT or BLOB exceeds size limit. |
-| 14800030 | SQLite: Unable to open the database file. |
+| [14800033](../errorcode-data-rdb.md#14800033-sqlite-data-types-mismatch) | SQLite: Data type mismatch. |
+| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported the sql(attach,begin,commit,rollback etc.). |
+| [14800000](../../apis-basic-services-kit/errorcode-settings.md#14800000-parameter-check-failed) | Inner error. |
+| [14800032](../errorcode-data-rdb.md#14800032-sqlite-abort-due-to-constraint-violation) | SQLite: Abort due to constraint violation. |
+| [14800034](../errorcode-data-rdb.md#14800034-incorrect-use-of-sqlite-library) | SQLite: Library used incorrectly. |
+| [14800011](../errorcode-data-rdb.md#14800011-database-file-corrupted) | The current operation failed because the database is corrupted. |
+| [14800015](../errorcode-data-rdb.md#14800015-rdb-store-not-respond) | The database does not respond. |
+| [14800047](../errorcode-data-rdb.md#14800047-wal-file-size-exceeds-the-default-limit) | The WAL file size exceeds the default limit. |
+| [14800014](../errorcode-data-rdb.md#14800014-target-instance-closed) | The target instance is already closed. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; 3. Parameter verification failed. |
+| [14800021](../errorcode-data-rdb.md#14800021-sqlite-generic-error) | SQLite: Generic error. Possible causes: Insert failed or the updated data does not exist. |
+| [14800023](../errorcode-data-rdb.md#14800023-sqlite-access-denied) | SQLite: Access permission denied. |
+| [14800022](../errorcode-data-rdb.md#14800022-sqlite-asynchronous-callback-request-aborted) | SQLite: Callback routine requested an abort. |
+| [14800025](../errorcode-data-rdb.md#14800025-sqlite-database-table-locked) | SQLite: A table in the database is locked. |
+| [14800024](../errorcode-data-rdb.md#14800024-sqlite-database-file-locked) | SQLite: The database file is locked. |
+| [14800027](../errorcode-data-rdb.md#14800027-sqlite-attempt-to-write-a-readonly-database) | SQLite: Attempt to write a readonly database. |
+| [14800026](../errorcode-data-rdb.md#14800026-sqlite-insufficient-database-memory) | SQLite: The database is out of memory. |
+| [14800029](../errorcode-data-rdb.md#14800029-sqlite-database-is-full) | SQLite: The database is full. |
+| [14800028](../errorcode-data-rdb.md#14800028-sqlite-io-error) | SQLite: Some kind of disk I/O error occurred. |
+| [14800031](../errorcode-data-rdb.md#14800031-sqlite-text-or-blob-exceeds-the-limit) | SQLite: TEXT or BLOB exceeds size limit. |
+| [14800030](../errorcode-data-rdb.md#14800030-sqlite-unable-to-open-the-database-file) | SQLite: Unable to open the database file. |
 
 ## executeSql
 
@@ -1982,16 +1782,7 @@ execute(sql: string, txId: long, args?: Array<ValueType>): Promise<ValueType>
 executeSql(sql: string, callback: AsyncCallback<void>): void
 ```
 
-执行指定的SQL语句，语句中的各种表达式和操作符之间的关系操作符号不超过1000个，使用callback异步回调。
-
-此接口不支持执行查询、附加数据库和事务操作，可以使用  
-[querySql](arkts-arkdata-relationalstore-rdbstore-i.md#querysql)、  
-[query](arkts-arkdata-relationalstore-rdbstore-i.md#query)、  
-[attach](arkts-arkdata-relationalstore-rdbstore-i.md#attach)、  
-[beginTransaction](arkts-arkdata-relationalstore-rdbstore-i.md#begintransaction)、  
-[commit](arkts-arkdata-relationalstore-rdbstore-i.md#commit)等接口代替。
-
-不支持分号分隔的多条语句。
+Executes a SQL statement that contains specified parameters but returns no value.
 
 **Since:** 10
 
@@ -2005,34 +1796,34 @@ executeSql(sql: string, callback: AsyncCallback<void>): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| sql | string | Yes | 指定要执行的SQL语句，不能为空字符串。 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | 回调函数。当执行SQL成功，err为undefined，否则为错误对象。 |
+| sql | string | Yes | Indicates the SQL statement to execute. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | The callback of executeSql. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 14800033 | SQLite: Data type mismatch.<br>**Applicable version:** 12 and later |
-| 14800000 | Inner error. |
-| 801 | Capability not supported the sql(attach,begin,commit,rollback etc.).<br>**Applicable version:** 12 and later |
-| 14800032 | SQLite: Abort due to constraint violation.<br>**Applicable version:** 12 and later |
-| 14800034 | SQLite: Library used incorrectly.<br>**Applicable version:** 12 and later |
-| 14800011 | The current operation failed because the database is corrupted.<br>**Applicable version:** 12 and later |
-| 14800047 | The WAL file size exceeds the default limit. |
-| 14800015 | The database does not respond.<br>**Applicable version:** 12 and later |
-| 14800014 | The target instance is already closed.<br>**Applicable version:** 12 and later |
-| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; 3. Parameter verification failed. |
-| 14800021 | SQLite: Generic error. Possible causes: Insert failed or the updated data does not exist.<br>**Applicable version:** 12 and later |
-| 14800023 | SQLite: Access permission denied.<br>**Applicable version:** 12 and later |
-| 14800022 | SQLite: Callback routine requested an abort.<br>**Applicable version:** 12 and later |
-| 14800025 | SQLite: A table in the database is locked.<br>**Applicable version:** 12 and later |
-| 14800024 | SQLite: The database file is locked.<br>**Applicable version:** 12 and later |
-| 14800027 | SQLite: Attempt to write a readonly database.<br>**Applicable version:** 12 and later |
-| 14800026 | SQLite: The database is out of memory.<br>**Applicable version:** 12 and later |
-| 14800029 | SQLite: The database is full.<br>**Applicable version:** 12 and later |
-| 14800028 | SQLite: Some kind of disk I/O error occurred.<br>**Applicable version:** 12 and later |
-| 14800031 | SQLite: TEXT or BLOB exceeds size limit.<br>**Applicable version:** 12 and later |
-| 14800030 | SQLite: Unable to open the database file.<br>**Applicable version:** 12 and later |
+| [14800033](../errorcode-data-rdb.md#14800033-sqlite-data-types-mismatch) | SQLite: Data type mismatch.<br>**Applicable version:** 12 and later |
+| [14800000](../../apis-basic-services-kit/errorcode-settings.md#14800000-parameter-check-failed) | Inner error. |
+| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported the sql(attach,begin,commit,rollback etc.).<br>**Applicable version:** 12 and later |
+| [14800032](../errorcode-data-rdb.md#14800032-sqlite-abort-due-to-constraint-violation) | SQLite: Abort due to constraint violation.<br>**Applicable version:** 12 and later |
+| [14800034](../errorcode-data-rdb.md#14800034-incorrect-use-of-sqlite-library) | SQLite: Library used incorrectly.<br>**Applicable version:** 12 and later |
+| [14800011](../errorcode-data-rdb.md#14800011-database-file-corrupted) | The current operation failed because the database is corrupted.<br>**Applicable version:** 12 and later |
+| [14800047](../errorcode-data-rdb.md#14800047-wal-file-size-exceeds-the-default-limit) | The WAL file size exceeds the default limit. |
+| [14800015](../errorcode-data-rdb.md#14800015-rdb-store-not-respond) | The database does not respond.<br>**Applicable version:** 12 and later |
+| [14800014](../errorcode-data-rdb.md#14800014-target-instance-closed) | The target instance is already closed.<br>**Applicable version:** 12 and later |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; 3. Parameter verification failed. |
+| [14800021](../errorcode-data-rdb.md#14800021-sqlite-generic-error) | SQLite: Generic error. Possible causes: Insert failed or the updated data does not exist.<br>**Applicable version:** 12 and later |
+| [14800023](../errorcode-data-rdb.md#14800023-sqlite-access-denied) | SQLite: Access permission denied.<br>**Applicable version:** 12 and later |
+| [14800022](../errorcode-data-rdb.md#14800022-sqlite-asynchronous-callback-request-aborted) | SQLite: Callback routine requested an abort.<br>**Applicable version:** 12 and later |
+| [14800025](../errorcode-data-rdb.md#14800025-sqlite-database-table-locked) | SQLite: A table in the database is locked.<br>**Applicable version:** 12 and later |
+| [14800024](../errorcode-data-rdb.md#14800024-sqlite-database-file-locked) | SQLite: The database file is locked.<br>**Applicable version:** 12 and later |
+| [14800027](../errorcode-data-rdb.md#14800027-sqlite-attempt-to-write-a-readonly-database) | SQLite: Attempt to write a readonly database.<br>**Applicable version:** 12 and later |
+| [14800026](../errorcode-data-rdb.md#14800026-sqlite-insufficient-database-memory) | SQLite: The database is out of memory.<br>**Applicable version:** 12 and later |
+| [14800029](../errorcode-data-rdb.md#14800029-sqlite-database-is-full) | SQLite: The database is full.<br>**Applicable version:** 12 and later |
+| [14800028](../errorcode-data-rdb.md#14800028-sqlite-io-error) | SQLite: Some kind of disk I/O error occurred.<br>**Applicable version:** 12 and later |
+| [14800031](../errorcode-data-rdb.md#14800031-sqlite-text-or-blob-exceeds-the-limit) | SQLite: TEXT or BLOB exceeds size limit.<br>**Applicable version:** 12 and later |
+| [14800030](../errorcode-data-rdb.md#14800030-sqlite-unable-to-open-the-database-file) | SQLite: Unable to open the database file.<br>**Applicable version:** 12 and later |
 
 ## executeSql
 
@@ -2040,16 +1831,7 @@ executeSql(sql: string, callback: AsyncCallback<void>): void
 executeSql(sql: string, bindArgs: Array<ValueType>, callback: AsyncCallback<void>): void
 ```
 
-执行指定的SQL语句，支持传入SQL语句中参数的值，语句中的各种表达式和操作符之间的关系操作符号不超过1000个，使用callback异步回调。
-
-此接口不支持执行查询、附加数据库和事务操作，可以使用  
-[querySql](arkts-arkdata-relationalstore-rdbstore-i.md#querysql)、  
-[query](arkts-arkdata-relationalstore-rdbstore-i.md#query)、  
-[attach](arkts-arkdata-relationalstore-rdbstore-i.md#attach)、  
-[beginTransaction](arkts-arkdata-relationalstore-rdbstore-i.md#begintransaction)、  
-[commit](arkts-arkdata-relationalstore-rdbstore-i.md#commit)等接口代替。
-
-不支持分号分隔的多条语句。
+Executes a SQL statement that contains specified parameters but returns no value.
 
 **Since:** 9
 
@@ -2063,35 +1845,35 @@ executeSql(sql: string, bindArgs: Array<ValueType>, callback: AsyncCallback<void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| sql | string | Yes | 指定要执行的SQL语句，不能为空字符串。 |
-| bindArgs | Array&lt;ValueType&gt; | Yes | SQL语句中参数的值。该值与sql参数语句中的占位符相对应。当sql参数语句完整时，该参数不填。默认值为空数组。 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | 回调函数。当执行SQL成功，err为undefined，否则为错误对象。 |
+| sql | string | Yes | Indicates the SQL statement to execute. |
+| bindArgs | Array&lt;ValueType&gt; | Yes | Indicates the {@link ValueType} values of the parameters in the SQL statement. The values are strings. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | The callback of executeSql. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 14800033 | SQLite: Data type mismatch.<br>**Applicable version:** 12 and later |
-| 14800000 | Inner error. |
-| 801 | Capability not supported the sql(attach,begin,commit,rollback etc.).<br>**Applicable version:** 12 and later |
-| 14800032 | SQLite: Abort due to constraint violation.<br>**Applicable version:** 12 and later |
-| 14800034 | SQLite: Library used incorrectly.<br>**Applicable version:** 12 and later |
-| 14800011 | The current operation failed because the database is corrupted.<br>**Applicable version:** 12 and later |
-| 14800047 | The WAL file size exceeds the default limit.<br>**Applicable version:** 10 and later |
-| 14800015 | The database does not respond.<br>**Applicable version:** 12 and later |
-| 14800014 | The target instance is already closed.<br>**Applicable version:** 12 and later |
-| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; 3. Parameter verification failed. |
-| 14800021 | SQLite: Generic error. Possible causes: Insert failed or the updated data does not exist.<br>**Applicable version:** 12 and later |
-| 14800023 | SQLite: Access permission denied.<br>**Applicable version:** 12 and later |
-| 14800022 | SQLite: Callback routine requested an abort.<br>**Applicable version:** 12 and later |
-| 14800025 | SQLite: A table in the database is locked.<br>**Applicable version:** 12 and later |
-| 14800024 | SQLite: The database file is locked.<br>**Applicable version:** 12 and later |
-| 14800027 | SQLite: Attempt to write a readonly database.<br>**Applicable version:** 12 and later |
-| 14800026 | SQLite: The database is out of memory.<br>**Applicable version:** 12 and later |
-| 14800029 | SQLite: The database is full.<br>**Applicable version:** 12 and later |
-| 14800028 | SQLite: Some kind of disk I/O error occurred.<br>**Applicable version:** 12 and later |
-| 14800031 | SQLite: TEXT or BLOB exceeds size limit.<br>**Applicable version:** 12 and later |
-| 14800030 | SQLite: Unable to open the database file.<br>**Applicable version:** 12 and later |
+| [14800033](../errorcode-data-rdb.md#14800033-sqlite-data-types-mismatch) | SQLite: Data type mismatch.<br>**Applicable version:** 12 and later |
+| [14800000](../../apis-basic-services-kit/errorcode-settings.md#14800000-parameter-check-failed) | Inner error. |
+| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported the sql(attach,begin,commit,rollback etc.).<br>**Applicable version:** 12 and later |
+| [14800032](../errorcode-data-rdb.md#14800032-sqlite-abort-due-to-constraint-violation) | SQLite: Abort due to constraint violation.<br>**Applicable version:** 12 and later |
+| [14800034](../errorcode-data-rdb.md#14800034-incorrect-use-of-sqlite-library) | SQLite: Library used incorrectly.<br>**Applicable version:** 12 and later |
+| [14800011](../errorcode-data-rdb.md#14800011-database-file-corrupted) | The current operation failed because the database is corrupted.<br>**Applicable version:** 12 and later |
+| [14800047](../errorcode-data-rdb.md#14800047-wal-file-size-exceeds-the-default-limit) | The WAL file size exceeds the default limit.<br>**Applicable version:** 10 and later |
+| [14800015](../errorcode-data-rdb.md#14800015-rdb-store-not-respond) | The database does not respond.<br>**Applicable version:** 12 and later |
+| [14800014](../errorcode-data-rdb.md#14800014-target-instance-closed) | The target instance is already closed.<br>**Applicable version:** 12 and later |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; 3. Parameter verification failed. |
+| [14800021](../errorcode-data-rdb.md#14800021-sqlite-generic-error) | SQLite: Generic error. Possible causes: Insert failed or the updated data does not exist.<br>**Applicable version:** 12 and later |
+| [14800023](../errorcode-data-rdb.md#14800023-sqlite-access-denied) | SQLite: Access permission denied.<br>**Applicable version:** 12 and later |
+| [14800022](../errorcode-data-rdb.md#14800022-sqlite-asynchronous-callback-request-aborted) | SQLite: Callback routine requested an abort.<br>**Applicable version:** 12 and later |
+| [14800025](../errorcode-data-rdb.md#14800025-sqlite-database-table-locked) | SQLite: A table in the database is locked.<br>**Applicable version:** 12 and later |
+| [14800024](../errorcode-data-rdb.md#14800024-sqlite-database-file-locked) | SQLite: The database file is locked.<br>**Applicable version:** 12 and later |
+| [14800027](../errorcode-data-rdb.md#14800027-sqlite-attempt-to-write-a-readonly-database) | SQLite: Attempt to write a readonly database.<br>**Applicable version:** 12 and later |
+| [14800026](../errorcode-data-rdb.md#14800026-sqlite-insufficient-database-memory) | SQLite: The database is out of memory.<br>**Applicable version:** 12 and later |
+| [14800029](../errorcode-data-rdb.md#14800029-sqlite-database-is-full) | SQLite: The database is full.<br>**Applicable version:** 12 and later |
+| [14800028](../errorcode-data-rdb.md#14800028-sqlite-io-error) | SQLite: Some kind of disk I/O error occurred.<br>**Applicable version:** 12 and later |
+| [14800031](../errorcode-data-rdb.md#14800031-sqlite-text-or-blob-exceeds-the-limit) | SQLite: TEXT or BLOB exceeds size limit.<br>**Applicable version:** 12 and later |
+| [14800030](../errorcode-data-rdb.md#14800030-sqlite-unable-to-open-the-database-file) | SQLite: Unable to open the database file.<br>**Applicable version:** 12 and later |
 
 ## executeSql
 
@@ -2099,16 +1881,7 @@ executeSql(sql: string, bindArgs: Array<ValueType>, callback: AsyncCallback<void
 executeSql(sql: string, bindArgs?: Array<ValueType>): Promise<void>
 ```
 
-执行指定的SQL语句，语句中的各种表达式和操作符之间的关系操作符号不超过1000个，使用Promise异步回调。
-
-此接口不支持执行查询、附加数据库和事务操作，可以使用  
-[querySql](arkts-arkdata-relationalstore-rdbstore-i.md#querysql)、  
-[query](arkts-arkdata-relationalstore-rdbstore-i.md#query)、  
-[attach](arkts-arkdata-relationalstore-rdbstore-i.md#attach)、  
-[beginTransaction](arkts-arkdata-relationalstore-rdbstore-i.md#begintransaction)、  
-[commit](arkts-arkdata-relationalstore-rdbstore-i.md#commit)等接口代替。
-
-不支持分号分隔的多条语句。
+Executes a SQL statement that contains specified parameters but returns no value.
 
 **Since:** 9
 
@@ -2122,40 +1895,40 @@ executeSql(sql: string, bindArgs?: Array<ValueType>): Promise<void>
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| sql | string | Yes | 指定要执行的SQL语句，不能为空字符串。 |
-| bindArgs | Array&lt;ValueType&gt; | No | SQL语句中参数的值。该值与sql参数语句中的占位符相对应。当sql参数语句完整时，该参数不填。默认值为空数组。 |
+| sql | string | Yes | Indicates the SQL statement to execute. |
+| bindArgs | Array&lt;ValueType&gt; | No | Indicates the {@link ValueType} values of the parameters in the SQL statement. The values are strings. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise对象，无返回结果。 |
+| Promise&lt;void&gt; | The promise returned by the function. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 14800033 | SQLite: Data type mismatch.<br>**Applicable version:** 12 and later |
-| 14800000 | Inner error. |
-| 801 | Capability not supported the sql(attach,begin,commit,rollback etc.).<br>**Applicable version:** 12 and later |
-| 14800032 | SQLite: Abort due to constraint violation.<br>**Applicable version:** 12 and later |
-| 14800034 | SQLite: Library used incorrectly.<br>**Applicable version:** 12 and later |
-| 14800011 | The current operation failed because the database is corrupted.<br>**Applicable version:** 12 and later |
-| 14800047 | The WAL file size exceeds the default limit.<br>**Applicable version:** 10 and later |
-| 14800015 | The database does not respond.<br>**Applicable version:** 12 and later |
-| 14800014 | The target instance is already closed.<br>**Applicable version:** 12 and later |
-| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; 3. Parameter verification failed. |
-| 14800021 | SQLite: Generic error. Possible causes: Insert failed or the updated data does not exist.<br>**Applicable version:** 12 and later |
-| 14800023 | SQLite: Access permission denied.<br>**Applicable version:** 12 and later |
-| 14800022 | SQLite: Callback routine requested an abort.<br>**Applicable version:** 12 and later |
-| 14800025 | SQLite: A table in the database is locked.<br>**Applicable version:** 12 and later |
-| 14800024 | SQLite: The database file is locked.<br>**Applicable version:** 12 and later |
-| 14800027 | SQLite: Attempt to write a readonly database.<br>**Applicable version:** 12 and later |
-| 14800026 | SQLite: The database is out of memory.<br>**Applicable version:** 12 and later |
-| 14800029 | SQLite: The database is full.<br>**Applicable version:** 12 and later |
-| 14800028 | SQLite: Some kind of disk I/O error occurred.<br>**Applicable version:** 12 and later |
-| 14800031 | SQLite: TEXT or BLOB exceeds size limit.<br>**Applicable version:** 12 and later |
-| 14800030 | SQLite: Unable to open the database file.<br>**Applicable version:** 12 and later |
+| [14800033](../errorcode-data-rdb.md#14800033-sqlite-data-types-mismatch) | SQLite: Data type mismatch.<br>**Applicable version:** 12 and later |
+| [14800000](../../apis-basic-services-kit/errorcode-settings.md#14800000-parameter-check-failed) | Inner error. |
+| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported the sql(attach,begin,commit,rollback etc.).<br>**Applicable version:** 12 and later |
+| [14800032](../errorcode-data-rdb.md#14800032-sqlite-abort-due-to-constraint-violation) | SQLite: Abort due to constraint violation.<br>**Applicable version:** 12 and later |
+| [14800034](../errorcode-data-rdb.md#14800034-incorrect-use-of-sqlite-library) | SQLite: Library used incorrectly.<br>**Applicable version:** 12 and later |
+| [14800011](../errorcode-data-rdb.md#14800011-database-file-corrupted) | The current operation failed because the database is corrupted.<br>**Applicable version:** 12 and later |
+| [14800047](../errorcode-data-rdb.md#14800047-wal-file-size-exceeds-the-default-limit) | The WAL file size exceeds the default limit.<br>**Applicable version:** 10 and later |
+| [14800015](../errorcode-data-rdb.md#14800015-rdb-store-not-respond) | The database does not respond.<br>**Applicable version:** 12 and later |
+| [14800014](../errorcode-data-rdb.md#14800014-target-instance-closed) | The target instance is already closed.<br>**Applicable version:** 12 and later |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; 3. Parameter verification failed. |
+| [14800021](../errorcode-data-rdb.md#14800021-sqlite-generic-error) | SQLite: Generic error. Possible causes: Insert failed or the updated data does not exist.<br>**Applicable version:** 12 and later |
+| [14800023](../errorcode-data-rdb.md#14800023-sqlite-access-denied) | SQLite: Access permission denied.<br>**Applicable version:** 12 and later |
+| [14800022](../errorcode-data-rdb.md#14800022-sqlite-asynchronous-callback-request-aborted) | SQLite: Callback routine requested an abort.<br>**Applicable version:** 12 and later |
+| [14800025](../errorcode-data-rdb.md#14800025-sqlite-database-table-locked) | SQLite: A table in the database is locked.<br>**Applicable version:** 12 and later |
+| [14800024](../errorcode-data-rdb.md#14800024-sqlite-database-file-locked) | SQLite: The database file is locked.<br>**Applicable version:** 12 and later |
+| [14800027](../errorcode-data-rdb.md#14800027-sqlite-attempt-to-write-a-readonly-database) | SQLite: Attempt to write a readonly database.<br>**Applicable version:** 12 and later |
+| [14800026](../errorcode-data-rdb.md#14800026-sqlite-insufficient-database-memory) | SQLite: The database is out of memory.<br>**Applicable version:** 12 and later |
+| [14800029](../errorcode-data-rdb.md#14800029-sqlite-database-is-full) | SQLite: The database is full.<br>**Applicable version:** 12 and later |
+| [14800028](../errorcode-data-rdb.md#14800028-sqlite-io-error) | SQLite: Some kind of disk I/O error occurred.<br>**Applicable version:** 12 and later |
+| [14800031](../errorcode-data-rdb.md#14800031-sqlite-text-or-blob-exceeds-the-limit) | SQLite: TEXT or BLOB exceeds size limit.<br>**Applicable version:** 12 and later |
+| [14800030](../errorcode-data-rdb.md#14800030-sqlite-unable-to-open-the-database-file) | SQLite: Unable to open the database file.<br>**Applicable version:** 12 and later |
 
 ## executeSync
 
@@ -2163,20 +1936,7 @@ executeSql(sql: string, bindArgs?: Array<ValueType>): Promise<void>
 executeSync(sql: string, args?: Array<ValueType>): ValueType
 ```
 
-执行包含指定参数的SQL语句，语句中的各种表达式和操作符之间的关系操作符号不超过1000个，返回值类型为ValueType。
-
-该接口支持执行增删改操作，支持执行PRAGMA语法的sql，支持对表的操作（建表、删表、修改表），返回结果类型由执行具体sql的结果决定。
-
-此接口不支持执行查询、附加数据库和事务操作，可以使用  
-[querySql](arkts-arkdata-relationalstore-rdbstore-i.md#querysql)、  
-[query](arkts-arkdata-relationalstore-rdbstore-i.md#query)、  
-[attach](arkts-arkdata-relationalstore-rdbstore-i.md#attach)、  
-[beginTransaction](arkts-arkdata-relationalstore-rdbstore-i.md#begintransaction)、  
-[commit](arkts-arkdata-relationalstore-rdbstore-i.md#commit)等接口代替。
-
-不支持分号分隔的多条语句。
-
-不支持开头包含注释的语句。
+Executes a SQL statement that contains specified parameters and returns a value of ValueType with sync interface.
 
 **Since:** 12
 
@@ -2190,39 +1950,39 @@ executeSync(sql: string, args?: Array<ValueType>): ValueType
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| sql | string | Yes | 指定要执行的SQL语句，不能为空字符串。 |
-| args | Array&lt;ValueType&gt; | No | SQL语句中参数的值。该值与sql参数语句中的占位符相对应。该参数不填，或者填null或undefined，都认为是sql参数语句完整，默认值为空数组。 |
+| sql | string | Yes | Indicates the SQL statement to execute. |
+| args | Array&lt;ValueType&gt; | No | Indicates the {@link ValueType} values of the parameters in the SQL statement. The values are strings. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [ValueType](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-pasteboard-valuetype-t.md) | 返回SQL执行后的结果 |
+| [ValueType](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-pasteboard-valuetype-t.md) | The promise returned by the function. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 14800033 | SQLite: Data type mismatch. |
-| 14800000 | Inner error. |
-| 14800032 | SQLite: Abort due to constraint violation. |
-| 14800034 | SQLite: Library used incorrectly. |
-| 14800011 | The current operation failed because the database is corrupted. |
-| 14800015 | The database does not respond. |
-| 14800047 | The WAL file size exceeds the default limit. |
-| 14800014 | The target instance is already closed. |
-| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; 3. Parameter verification failed. |
-| 14800021 | SQLite: Generic error. Possible causes: Insert failed or the updated data does not exist. |
-| 14800023 | SQLite: Access permission denied. |
-| 14800022 | SQLite: Callback routine requested an abort. |
-| 14800025 | SQLite: A table in the database is locked. |
-| 14800024 | SQLite: The database file is locked. |
-| 14800027 | SQLite: Attempt to write a readonly database. |
-| 14800026 | SQLite: The database is out of memory. |
-| 14800029 | SQLite: The database is full. |
-| 14800028 | SQLite: Some kind of disk I/O error occurred. |
-| 14800031 | SQLite: TEXT or BLOB exceeds size limit. |
-| 14800030 | SQLite: Unable to open the database file. |
+| [14800033](../errorcode-data-rdb.md#14800033-sqlite-data-types-mismatch) | SQLite: Data type mismatch. |
+| [14800000](../../apis-basic-services-kit/errorcode-settings.md#14800000-parameter-check-failed) | Inner error. |
+| [14800032](../errorcode-data-rdb.md#14800032-sqlite-abort-due-to-constraint-violation) | SQLite: Abort due to constraint violation. |
+| [14800034](../errorcode-data-rdb.md#14800034-incorrect-use-of-sqlite-library) | SQLite: Library used incorrectly. |
+| [14800011](../errorcode-data-rdb.md#14800011-database-file-corrupted) | The current operation failed because the database is corrupted. |
+| [14800015](../errorcode-data-rdb.md#14800015-rdb-store-not-respond) | The database does not respond. |
+| [14800047](../errorcode-data-rdb.md#14800047-wal-file-size-exceeds-the-default-limit) | The WAL file size exceeds the default limit. |
+| [14800014](../errorcode-data-rdb.md#14800014-target-instance-closed) | The target instance is already closed. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; 3. Parameter verification failed. |
+| [14800021](../errorcode-data-rdb.md#14800021-sqlite-generic-error) | SQLite: Generic error. Possible causes: Insert failed or the updated data does not exist. |
+| [14800023](../errorcode-data-rdb.md#14800023-sqlite-access-denied) | SQLite: Access permission denied. |
+| [14800022](../errorcode-data-rdb.md#14800022-sqlite-asynchronous-callback-request-aborted) | SQLite: Callback routine requested an abort. |
+| [14800025](../errorcode-data-rdb.md#14800025-sqlite-database-table-locked) | SQLite: A table in the database is locked. |
+| [14800024](../errorcode-data-rdb.md#14800024-sqlite-database-file-locked) | SQLite: The database file is locked. |
+| [14800027](../errorcode-data-rdb.md#14800027-sqlite-attempt-to-write-a-readonly-database) | SQLite: Attempt to write a readonly database. |
+| [14800026](../errorcode-data-rdb.md#14800026-sqlite-insufficient-database-memory) | SQLite: The database is out of memory. |
+| [14800029](../errorcode-data-rdb.md#14800029-sqlite-database-is-full) | SQLite: The database is full. |
+| [14800028](../errorcode-data-rdb.md#14800028-sqlite-io-error) | SQLite: Some kind of disk I/O error occurred. |
+| [14800031](../errorcode-data-rdb.md#14800031-sqlite-text-or-blob-exceeds-the-limit) | SQLite: TEXT or BLOB exceeds size limit. |
+| [14800030](../errorcode-data-rdb.md#14800030-sqlite-unable-to-open-the-database-file) | SQLite: Unable to open the database file. |
 
 ## getModifyTime
 
@@ -2230,7 +1990,7 @@ executeSync(sql: string, args?: Array<ValueType>): ValueType
 getModifyTime(table: string, columnName: string, primaryKeys: PRIKeyType[]): Promise<ModifyTime>
 ```
 
-获取数据库表中数据的最后修改时间，使用Promise异步回调。
+Obtains the modify time of rows corresponding to the primary keys.
 
 **Since:** 10
 
@@ -2244,40 +2004,40 @@ getModifyTime(table: string, columnName: string, primaryKeys: PRIKeyType[]): Pro
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| table | string | Yes | 指定要查询的数据库表的表名。 |
-| columnName | string | Yes | 指定要查询的数据库表的列名。 |
-| primaryKeys | [PRIKeyType](arkts-arkdata-relationalstore-prikeytype-t.md)[] | Yes | 指定要查询的行的主键。 &lt;br&gt;如果数据库表无主键，参数columnName需传入"rowid"，此时primaryKeys为要查询的数据库表的行号。 &lt;br&gt;如果数据库表无主键，参数columnName传入不为"rowid"，返回对应的错误码。 |
+| table | string | Yes | Indicates the name of the table to check. |
+| columnName | string | Yes | Indicates the name of the column to check. |
+| primaryKeys | [PRIKeyType](arkts-arkdata-relationalstore-prikeytype-t.md)[] | Yes | Indicates the primary keys of the rows to check. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;ModifyTime&gt; | 返回ModifyTime类型的Promise对象，表示数据最后的修改时间。 |
+| Promise&lt;ModifyTime&gt; | The promise returned by the function. ModifyTime indicates the modify time of current row. If this table does not support cloud, the { |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 14800033 | SQLite: Data type mismatch.<br>**Applicable version:** 12 and later |
-| 801 | Capability not supported. |
-| 14800000 | Inner error. |
-| 14800032 | SQLite: Abort due to constraint violation.<br>**Applicable version:** 12 and later |
-| 14800034 | SQLite: Library used incorrectly.<br>**Applicable version:** 12 and later |
-| 14800011 | The current operation failed because the database is corrupted.<br>**Applicable version:** 12 and later |
-| 14800015 | The database does not respond.<br>**Applicable version:** 12 and later |
-| 14800014 | The target instance is already closed.<br>**Applicable version:** 12 and later |
-| 401 | Parameter error. Possible causes: 1. Need 3 - 4 parameter(s)! 2. The RdbStore must be not nullptr. 3. The tablesNames must be not empty string. 4. The columnName must be not empty string. 5. The PRIKey must be number or string. |
-| 14800021 | SQLite: Generic error.<br>**Applicable version:** 12 and later |
-| 14800023 | SQLite: Access permission denied.<br>**Applicable version:** 12 and later |
-| 14800022 | SQLite: Callback routine requested an abort.<br>**Applicable version:** 12 and later |
-| 14800025 | SQLite: A table in the database is locked.<br>**Applicable version:** 12 and later |
-| 14800024 | SQLite: The database file is locked.<br>**Applicable version:** 12 and later |
-| 14800027 | SQLite: Attempt to write a readonly database.<br>**Applicable version:** 12 and later |
-| 14800026 | SQLite: The database is out of memory.<br>**Applicable version:** 12 and later |
-| 14800029 | SQLite: The database is full.<br>**Applicable version:** 12 and later |
-| 14800028 | SQLite: Some kind of disk I/O error occurred.<br>**Applicable version:** 12 and later |
-| 14800031 | SQLite: TEXT or BLOB exceeds size limit.<br>**Applicable version:** 12 and later |
-| 14800030 | SQLite: Unable to open the database file.<br>**Applicable version:** 12 and later |
+| [14800033](../errorcode-data-rdb.md#14800033-sqlite-data-types-mismatch) | SQLite: Data type mismatch.<br>**Applicable version:** 12 and later |
+| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. |
+| [14800000](../../apis-basic-services-kit/errorcode-settings.md#14800000-parameter-check-failed) | Inner error. |
+| [14800032](../errorcode-data-rdb.md#14800032-sqlite-abort-due-to-constraint-violation) | SQLite: Abort due to constraint violation.<br>**Applicable version:** 12 and later |
+| [14800034](../errorcode-data-rdb.md#14800034-incorrect-use-of-sqlite-library) | SQLite: Library used incorrectly.<br>**Applicable version:** 12 and later |
+| [14800011](../errorcode-data-rdb.md#14800011-database-file-corrupted) | The current operation failed because the database is corrupted.<br>**Applicable version:** 12 and later |
+| [14800015](../errorcode-data-rdb.md#14800015-rdb-store-not-respond) | The database does not respond.<br>**Applicable version:** 12 and later |
+| [14800014](../errorcode-data-rdb.md#14800014-target-instance-closed) | The target instance is already closed.<br>**Applicable version:** 12 and later |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Need 3 - 4 parameter(s)! 2. The RdbStore must be not nullptr. 3. The tablesNames must be not empty string. 4. The columnName must be not empty string. 5. The PRIKey must be number or string. |
+| [14800021](../errorcode-data-rdb.md#14800021-sqlite-generic-error) | SQLite: Generic error.<br>**Applicable version:** 12 and later |
+| [14800023](../errorcode-data-rdb.md#14800023-sqlite-access-denied) | SQLite: Access permission denied.<br>**Applicable version:** 12 and later |
+| [14800022](../errorcode-data-rdb.md#14800022-sqlite-asynchronous-callback-request-aborted) | SQLite: Callback routine requested an abort.<br>**Applicable version:** 12 and later |
+| [14800025](../errorcode-data-rdb.md#14800025-sqlite-database-table-locked) | SQLite: A table in the database is locked.<br>**Applicable version:** 12 and later |
+| [14800024](../errorcode-data-rdb.md#14800024-sqlite-database-file-locked) | SQLite: The database file is locked.<br>**Applicable version:** 12 and later |
+| [14800027](../errorcode-data-rdb.md#14800027-sqlite-attempt-to-write-a-readonly-database) | SQLite: Attempt to write a readonly database.<br>**Applicable version:** 12 and later |
+| [14800026](../errorcode-data-rdb.md#14800026-sqlite-insufficient-database-memory) | SQLite: The database is out of memory.<br>**Applicable version:** 12 and later |
+| [14800029](../errorcode-data-rdb.md#14800029-sqlite-database-is-full) | SQLite: The database is full.<br>**Applicable version:** 12 and later |
+| [14800028](../errorcode-data-rdb.md#14800028-sqlite-io-error) | SQLite: Some kind of disk I/O error occurred.<br>**Applicable version:** 12 and later |
+| [14800031](../errorcode-data-rdb.md#14800031-sqlite-text-or-blob-exceeds-the-limit) | SQLite: TEXT or BLOB exceeds size limit.<br>**Applicable version:** 12 and later |
+| [14800030](../errorcode-data-rdb.md#14800030-sqlite-unable-to-open-the-database-file) | SQLite: Unable to open the database file.<br>**Applicable version:** 12 and later |
 
 ## getModifyTime
 
@@ -2290,7 +2050,7 @@ getModifyTime(
     ): void
 ```
 
-获取数据库表中数据的最后修改时间，使用callback异步回调。
+Obtains the modify time of rows corresponding to the primary keys.
 
 **Since:** 10
 
@@ -2304,35 +2064,35 @@ getModifyTime(
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| table | string | Yes | 指定要查询的数据库表的表名。 |
-| columnName | string | Yes | 指定要查询的数据库表的列名。 |
-| primaryKeys | [PRIKeyType](arkts-arkdata-relationalstore-prikeytype-t.md)[] | Yes | 指定要查询的行的主键。 &lt;br&gt;如果数据库表无主键，参数columnName需传入"rowid"，此时primaryKeys为要查询的数据库表的行号。 &lt;br&gt;如果数据库表无主键，参数columnName传入不为"rowid"，返回对应的错误码。 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;ModifyTime&gt; | Yes | 回调函数。当获取修改时间成功，err为undefined，data为ModifyTime对象；否则为错误对象。 |
+| table | string | Yes | Indicates the name of the table to check. |
+| columnName | string | Yes | Indicates the name of the column to check. |
+| primaryKeys | [PRIKeyType](arkts-arkdata-relationalstore-prikeytype-t.md)[] | Yes | Indicates the primary keys of the rows to check. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;ModifyTime&gt; | Yes | The callback of getModifyTime. ModifyTime indicates the modify time of current row. If this table does not support cloud, the {@link ModifyTime} will be empty. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 14800033 | SQLite: Data type mismatch.<br>**Applicable version:** 12 and later |
-| 801 | Capability not supported. |
-| 14800000 | Inner error. |
-| 14800032 | SQLite: Abort due to constraint violation.<br>**Applicable version:** 12 and later |
-| 14800034 | SQLite: Library used incorrectly.<br>**Applicable version:** 12 and later |
-| 14800011 | The current operation failed because the database is corrupted.<br>**Applicable version:** 12 and later |
-| 14800015 | The database does not respond.<br>**Applicable version:** 12 and later |
-| 14800014 | The target instance is already closed.<br>**Applicable version:** 12 and later |
-| 401 | Parameter error. Possible causes: 1. Need 3 - 4 parameter(s)! 2. The RdbStore must be not nullptr. 3. The tablesNames must be not empty string. 4. The columnName must be not empty string. 5. The PRIKey must be number or string. |
-| 14800021 | SQLite: Generic error.<br>**Applicable version:** 12 and later |
-| 14800023 | SQLite: Access permission denied.<br>**Applicable version:** 12 and later |
-| 14800022 | SQLite: Callback routine requested an abort.<br>**Applicable version:** 12 and later |
-| 14800025 | SQLite: A table in the database is locked.<br>**Applicable version:** 12 and later |
-| 14800024 | SQLite: The database file is locked.<br>**Applicable version:** 12 and later |
-| 14800027 | SQLite: Attempt to write a readonly database.<br>**Applicable version:** 12 and later |
-| 14800026 | SQLite: The database is out of memory.<br>**Applicable version:** 12 and later |
-| 14800029 | SQLite: The database is full.<br>**Applicable version:** 12 and later |
-| 14800028 | SQLite: Some kind of disk I/O error occurred.<br>**Applicable version:** 12 and later |
-| 14800031 | SQLite: TEXT or BLOB exceeds size limit.<br>**Applicable version:** 12 and later |
-| 14800030 | SQLite: Unable to open the database file.<br>**Applicable version:** 12 and later |
+| [14800033](../errorcode-data-rdb.md#14800033-sqlite-data-types-mismatch) | SQLite: Data type mismatch.<br>**Applicable version:** 12 and later |
+| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. |
+| [14800000](../../apis-basic-services-kit/errorcode-settings.md#14800000-parameter-check-failed) | Inner error. |
+| [14800032](../errorcode-data-rdb.md#14800032-sqlite-abort-due-to-constraint-violation) | SQLite: Abort due to constraint violation.<br>**Applicable version:** 12 and later |
+| [14800034](../errorcode-data-rdb.md#14800034-incorrect-use-of-sqlite-library) | SQLite: Library used incorrectly.<br>**Applicable version:** 12 and later |
+| [14800011](../errorcode-data-rdb.md#14800011-database-file-corrupted) | The current operation failed because the database is corrupted.<br>**Applicable version:** 12 and later |
+| [14800015](../errorcode-data-rdb.md#14800015-rdb-store-not-respond) | The database does not respond.<br>**Applicable version:** 12 and later |
+| [14800014](../errorcode-data-rdb.md#14800014-target-instance-closed) | The target instance is already closed.<br>**Applicable version:** 12 and later |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Need 3 - 4 parameter(s)! 2. The RdbStore must be not nullptr. 3. The tablesNames must be not empty string. 4. The columnName must be not empty string. 5. The PRIKey must be number or string. |
+| [14800021](../errorcode-data-rdb.md#14800021-sqlite-generic-error) | SQLite: Generic error.<br>**Applicable version:** 12 and later |
+| [14800023](../errorcode-data-rdb.md#14800023-sqlite-access-denied) | SQLite: Access permission denied.<br>**Applicable version:** 12 and later |
+| [14800022](../errorcode-data-rdb.md#14800022-sqlite-asynchronous-callback-request-aborted) | SQLite: Callback routine requested an abort.<br>**Applicable version:** 12 and later |
+| [14800025](../errorcode-data-rdb.md#14800025-sqlite-database-table-locked) | SQLite: A table in the database is locked.<br>**Applicable version:** 12 and later |
+| [14800024](../errorcode-data-rdb.md#14800024-sqlite-database-file-locked) | SQLite: The database file is locked.<br>**Applicable version:** 12 and later |
+| [14800027](../errorcode-data-rdb.md#14800027-sqlite-attempt-to-write-a-readonly-database) | SQLite: Attempt to write a readonly database.<br>**Applicable version:** 12 and later |
+| [14800026](../errorcode-data-rdb.md#14800026-sqlite-insufficient-database-memory) | SQLite: The database is out of memory.<br>**Applicable version:** 12 and later |
+| [14800029](../errorcode-data-rdb.md#14800029-sqlite-database-is-full) | SQLite: The database is full.<br>**Applicable version:** 12 and later |
+| [14800028](../errorcode-data-rdb.md#14800028-sqlite-io-error) | SQLite: Some kind of disk I/O error occurred.<br>**Applicable version:** 12 and later |
+| [14800031](../errorcode-data-rdb.md#14800031-sqlite-text-or-blob-exceeds-the-limit) | SQLite: TEXT or BLOB exceeds size limit.<br>**Applicable version:** 12 and later |
+| [14800030](../errorcode-data-rdb.md#14800030-sqlite-unable-to-open-the-database-file) | SQLite: Unable to open the database file.<br>**Applicable version:** 12 and later |
 
 ## insert
 
@@ -2346,19 +2106,7 @@ ArkTS-Sta:
 insert(table: string, values: ValuesBucket, callback: AsyncCallback<long>): void
 ```
 
-向目标表中插入一行数据，使用callback异步回调。
-
-由于共享内存的大小限制为2MB，因此单条数据的大小也必须严格小于2MB。
-
-如果单条数据超过此限制，在后续通过RdbStore的  
-[query](arkts-arkdata-relationalstore-rdbstore-i.md#query)或  
-[querySql](arkts-arkdata-relationalstore-rdbstore-i.md#querysql)接口获取ResultSet后，调用[getValue](arkts-arkdata-relationalstore-resultset-i.md#getvalue)、  
-[getString](arkts-arkdata-relationalstore-resultset-i.md#getstring)等get方法时将无法成功获取数据，并可能导致操作失败或抛出异常。
-
-如需读取超过2MB的数据，请使用  
-[queryByStep](arkts-arkdata-relationalstore-rdbstore-i.md#querybystep)接口。
-
-单条字符串类型字段最大支持写入8MB，超出部分将被截断，仅保留前8MB数据，若需存储超过8MB的内容，建议使用blob类型。
+Inserts a row of data into the target table.
 
 **Since:** 9
 
@@ -2372,34 +2120,34 @@ insert(table: string, values: ValuesBucket, callback: AsyncCallback<long>): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| table | string | Yes | 指定的目标表名，不能为空字符串。 |
-| values | [ValuesBucket](arkts-arkdata-rdb-valuesbucket-t.md) | Yes | 表示要插入到表中的数据行。 |
-| callback | ArkTS-Dyn: [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;number&gt;  <br>ArkTS-Sta：[AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;long&gt; | Yes | 回调函数。当插入数据成功，err为undefined，data为行ID；否则为错误对象。 |
+| table | string | Yes | Indicates the target table. |
+| values | [ValuesBucket](arkts-arkdata-rdb-valuesbucket-t.md) | Yes | Indicates the row of data {@link ValuesBucket} to be inserted into the table. |
+| callback | ArkTS-Dyn: [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;number&gt;  <br>ArkTS-Sta：[AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;long&gt; | Yes | The row ID if the operation is successful. returns -1 otherwise. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 14800033 | SQLite: Data type mismatch.<br>**Applicable version:** 12 and later |
-| 14800000 | Inner error. |
-| 14800032 | SQLite: Abort due to constraint violation.<br>**Applicable version:** 12 and later |
-| 14800034 | SQLite: Library used incorrectly.<br>**Applicable version:** 12 and later |
-| 14800011 | The current operation failed because the database is corrupted.<br>**Applicable version:** 12 and later |
-| 14800047 | The WAL file size exceeds the default limit.<br>**Applicable version:** 10 and later |
-| 14800015 | The database does not respond.<br>**Applicable version:** 12 and later |
-| 14800014 | The target instance is already closed.<br>**Applicable version:** 12 and later |
-| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; 3. Parameter verification failed. |
-| 14800021 | SQLite: Generic error. Possible causes: Insert failed or the updated data does not exist.<br>**Applicable version:** 12 and later |
-| 14800023 | SQLite: Access permission denied.<br>**Applicable version:** 12 and later |
-| 14800022 | SQLite: Callback routine requested an abort.<br>**Applicable version:** 12 and later |
-| 14800025 | SQLite: A table in the database is locked.<br>**Applicable version:** 12 and later |
-| 14800024 | SQLite: The database file is locked.<br>**Applicable version:** 12 and later |
-| 14800027 | SQLite: Attempt to write a readonly database.<br>**Applicable version:** 12 and later |
-| 14800026 | SQLite: The database is out of memory.<br>**Applicable version:** 12 and later |
-| 14800029 | SQLite: The database is full.<br>**Applicable version:** 12 and later |
-| 14800028 | SQLite: Some kind of disk I/O error occurred.<br>**Applicable version:** 12 and later |
-| 14800031 | SQLite: TEXT or BLOB exceeds size limit.<br>**Applicable version:** 12 and later |
-| 14800030 | SQLite: Unable to open the database file.<br>**Applicable version:** 12 and later |
+| [14800033](../errorcode-data-rdb.md#14800033-sqlite-data-types-mismatch) | SQLite: Data type mismatch.<br>**Applicable version:** 12 and later |
+| [14800000](../../apis-basic-services-kit/errorcode-settings.md#14800000-parameter-check-failed) | Inner error. |
+| [14800032](../errorcode-data-rdb.md#14800032-sqlite-abort-due-to-constraint-violation) | SQLite: Abort due to constraint violation.<br>**Applicable version:** 12 and later |
+| [14800034](../errorcode-data-rdb.md#14800034-incorrect-use-of-sqlite-library) | SQLite: Library used incorrectly.<br>**Applicable version:** 12 and later |
+| [14800011](../errorcode-data-rdb.md#14800011-database-file-corrupted) | The current operation failed because the database is corrupted.<br>**Applicable version:** 12 and later |
+| [14800047](../errorcode-data-rdb.md#14800047-wal-file-size-exceeds-the-default-limit) | The WAL file size exceeds the default limit.<br>**Applicable version:** 10 and later |
+| [14800015](../errorcode-data-rdb.md#14800015-rdb-store-not-respond) | The database does not respond.<br>**Applicable version:** 12 and later |
+| [14800014](../errorcode-data-rdb.md#14800014-target-instance-closed) | The target instance is already closed.<br>**Applicable version:** 12 and later |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; 3. Parameter verification failed. |
+| [14800021](../errorcode-data-rdb.md#14800021-sqlite-generic-error) | SQLite: Generic error. Possible causes: Insert failed or the updated data does not exist.<br>**Applicable version:** 12 and later |
+| [14800023](../errorcode-data-rdb.md#14800023-sqlite-access-denied) | SQLite: Access permission denied.<br>**Applicable version:** 12 and later |
+| [14800022](../errorcode-data-rdb.md#14800022-sqlite-asynchronous-callback-request-aborted) | SQLite: Callback routine requested an abort.<br>**Applicable version:** 12 and later |
+| [14800025](../errorcode-data-rdb.md#14800025-sqlite-database-table-locked) | SQLite: A table in the database is locked.<br>**Applicable version:** 12 and later |
+| [14800024](../errorcode-data-rdb.md#14800024-sqlite-database-file-locked) | SQLite: The database file is locked.<br>**Applicable version:** 12 and later |
+| [14800027](../errorcode-data-rdb.md#14800027-sqlite-attempt-to-write-a-readonly-database) | SQLite: Attempt to write a readonly database.<br>**Applicable version:** 12 and later |
+| [14800026](../errorcode-data-rdb.md#14800026-sqlite-insufficient-database-memory) | SQLite: The database is out of memory.<br>**Applicable version:** 12 and later |
+| [14800029](../errorcode-data-rdb.md#14800029-sqlite-database-is-full) | SQLite: The database is full.<br>**Applicable version:** 12 and later |
+| [14800028](../errorcode-data-rdb.md#14800028-sqlite-io-error) | SQLite: Some kind of disk I/O error occurred.<br>**Applicable version:** 12 and later |
+| [14800031](../errorcode-data-rdb.md#14800031-sqlite-text-or-blob-exceeds-the-limit) | SQLite: TEXT or BLOB exceeds size limit.<br>**Applicable version:** 12 and later |
+| [14800030](../errorcode-data-rdb.md#14800030-sqlite-unable-to-open-the-database-file) | SQLite: Unable to open the database file.<br>**Applicable version:** 12 and later |
 
 ## insert
 
@@ -2413,19 +2161,7 @@ ArkTS-Sta:
 insert(table: string, values: ValuesBucket, conflict: ConflictResolution, callback: AsyncCallback<long>): void
 ```
 
-向目标表中插入一行数据，可以通过conflict参数指定冲突解决模式[ConflictResolution](arkts-arkdata-relationalstore-conflictresolution-e.md)，使用callback异步回调。
-
-由于共享内存的大小限制为2MB，因此单条数据的大小也必须严格小于2MB。
-
-如果单条数据超过此限制，在后续通过RdbStore的  
-[query](arkts-arkdata-relationalstore-rdbstore-i.md#query)或  
-[querySql](arkts-arkdata-relationalstore-rdbstore-i.md#querysql)接口获取ResultSet后，调用[getValue](arkts-arkdata-relationalstore-resultset-i.md#getvalue)、  
-[getString](arkts-arkdata-relationalstore-resultset-i.md#getstring)等get方法时将无法成功获取数据，并可能导致操作失败或抛出异常。
-
-如需读取超过2MB的数据，请使用  
-[queryByStep](arkts-arkdata-relationalstore-rdbstore-i.md#querybystep)接口。
-
-单条字符串类型字段最大支持写入8MB，超出部分将被截断，仅保留前8MB数据，若需存储超过8MB的内容，建议使用blob类型。
+Inserts a row of data into the target table.
 
 **Since:** 10
 
@@ -2439,35 +2175,35 @@ insert(table: string, values: ValuesBucket, conflict: ConflictResolution, callba
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| table | string | Yes | 指定的目标表名，不能为空字符串。 |
-| values | [ValuesBucket](arkts-arkdata-rdb-valuesbucket-t.md) | Yes | 表示要插入到表中的数据行。 |
-| conflict | [ConflictResolution](../../apis-asset-store-kit/arkts-apis/arkts-assetstore-asset-conflictresolution-e.md) | Yes | 指定冲突解决模式。 |
-| callback | ArkTS-Dyn: [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;number&gt;  <br>ArkTS-Sta：[AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;long&gt; | Yes | 回调函数。当插入数据成功，err为undefined，data为行ID；否则为错误对象。 |
+| table | string | Yes | Indicates the target table. |
+| values | [ValuesBucket](arkts-arkdata-rdb-valuesbucket-t.md) | Yes | Indicates the row of data {@link ValuesBucket} to be inserted into the table. |
+| conflict | [ConflictResolution](../../apis-asset-store-kit/arkts-apis/arkts-assetstore-asset-conflictresolution-e.md) | Yes | Indicates the {@link ConflictResolution} to insert data into the table. |
+| callback | ArkTS-Dyn: [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;number&gt;  <br>ArkTS-Sta：[AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;long&gt; | Yes | The row ID if the operation is successful. returns -1 otherwise. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 14800033 | SQLite: Data type mismatch.<br>**Applicable version:** 12 and later |
-| 14800000 | Inner error. |
-| 14800032 | SQLite: Abort due to constraint violation.<br>**Applicable version:** 12 and later |
-| 14800034 | SQLite: Library used incorrectly.<br>**Applicable version:** 12 and later |
-| 14800011 | The current operation failed because the database is corrupted.<br>**Applicable version:** 12 and later |
-| 14800047 | The WAL file size exceeds the default limit. |
-| 14800015 | The database does not respond.<br>**Applicable version:** 12 and later |
-| 14800014 | The target instance is already closed.<br>**Applicable version:** 12 and later |
-| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; 3. Parameter verification failed. |
-| 14800021 | SQLite: Generic error. Possible causes: Insert failed or the updated data does not exist.<br>**Applicable version:** 12 and later |
-| 14800023 | SQLite: Access permission denied.<br>**Applicable version:** 12 and later |
-| 14800022 | SQLite: Callback routine requested an abort.<br>**Applicable version:** 12 and later |
-| 14800025 | SQLite: A table in the database is locked.<br>**Applicable version:** 12 and later |
-| 14800024 | SQLite: The database file is locked.<br>**Applicable version:** 12 and later |
-| 14800027 | SQLite: Attempt to write a readonly database.<br>**Applicable version:** 12 and later |
-| 14800026 | SQLite: The database is out of memory.<br>**Applicable version:** 12 and later |
-| 14800029 | SQLite: The database is full.<br>**Applicable version:** 12 and later |
-| 14800028 | SQLite: Some kind of disk I/O error occurred.<br>**Applicable version:** 12 and later |
-| 14800031 | SQLite: TEXT or BLOB exceeds size limit.<br>**Applicable version:** 12 and later |
-| 14800030 | SQLite: Unable to open the database file.<br>**Applicable version:** 12 and later |
+| [14800033](../errorcode-data-rdb.md#14800033-sqlite-data-types-mismatch) | SQLite: Data type mismatch.<br>**Applicable version:** 12 and later |
+| [14800000](../../apis-basic-services-kit/errorcode-settings.md#14800000-parameter-check-failed) | Inner error. |
+| [14800032](../errorcode-data-rdb.md#14800032-sqlite-abort-due-to-constraint-violation) | SQLite: Abort due to constraint violation.<br>**Applicable version:** 12 and later |
+| [14800034](../errorcode-data-rdb.md#14800034-incorrect-use-of-sqlite-library) | SQLite: Library used incorrectly.<br>**Applicable version:** 12 and later |
+| [14800011](../errorcode-data-rdb.md#14800011-database-file-corrupted) | The current operation failed because the database is corrupted.<br>**Applicable version:** 12 and later |
+| [14800047](../errorcode-data-rdb.md#14800047-wal-file-size-exceeds-the-default-limit) | The WAL file size exceeds the default limit. |
+| [14800015](../errorcode-data-rdb.md#14800015-rdb-store-not-respond) | The database does not respond.<br>**Applicable version:** 12 and later |
+| [14800014](../errorcode-data-rdb.md#14800014-target-instance-closed) | The target instance is already closed.<br>**Applicable version:** 12 and later |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; 3. Parameter verification failed. |
+| [14800021](../errorcode-data-rdb.md#14800021-sqlite-generic-error) | SQLite: Generic error. Possible causes: Insert failed or the updated data does not exist.<br>**Applicable version:** 12 and later |
+| [14800023](../errorcode-data-rdb.md#14800023-sqlite-access-denied) | SQLite: Access permission denied.<br>**Applicable version:** 12 and later |
+| [14800022](../errorcode-data-rdb.md#14800022-sqlite-asynchronous-callback-request-aborted) | SQLite: Callback routine requested an abort.<br>**Applicable version:** 12 and later |
+| [14800025](../errorcode-data-rdb.md#14800025-sqlite-database-table-locked) | SQLite: A table in the database is locked.<br>**Applicable version:** 12 and later |
+| [14800024](../errorcode-data-rdb.md#14800024-sqlite-database-file-locked) | SQLite: The database file is locked.<br>**Applicable version:** 12 and later |
+| [14800027](../errorcode-data-rdb.md#14800027-sqlite-attempt-to-write-a-readonly-database) | SQLite: Attempt to write a readonly database.<br>**Applicable version:** 12 and later |
+| [14800026](../errorcode-data-rdb.md#14800026-sqlite-insufficient-database-memory) | SQLite: The database is out of memory.<br>**Applicable version:** 12 and later |
+| [14800029](../errorcode-data-rdb.md#14800029-sqlite-database-is-full) | SQLite: The database is full.<br>**Applicable version:** 12 and later |
+| [14800028](../errorcode-data-rdb.md#14800028-sqlite-io-error) | SQLite: Some kind of disk I/O error occurred.<br>**Applicable version:** 12 and later |
+| [14800031](../errorcode-data-rdb.md#14800031-sqlite-text-or-blob-exceeds-the-limit) | SQLite: TEXT or BLOB exceeds size limit.<br>**Applicable version:** 12 and later |
+| [14800030](../errorcode-data-rdb.md#14800030-sqlite-unable-to-open-the-database-file) | SQLite: Unable to open the database file.<br>**Applicable version:** 12 and later |
 
 ## insert
 
@@ -2481,19 +2217,7 @@ ArkTS-Sta:
 insert(table: string, values: ValuesBucket): Promise<long>
 ```
 
-向目标表中插入一行数据，使用Promise异步回调。
-
-由于共享内存的大小限制为2MB，因此单条数据的大小也必须严格小于2MB。
-
-如果单条数据超过此限制，在后续通过RdbStore的  
-[query](arkts-arkdata-relationalstore-rdbstore-i.md#query)或  
-[querySql](arkts-arkdata-relationalstore-rdbstore-i.md#querysql)接口获取ResultSet后，调用[getValue](arkts-arkdata-relationalstore-resultset-i.md#getvalue)、  
-[getString](arkts-arkdata-relationalstore-resultset-i.md#getstring)等get方法时将无法成功获取数据，并可能导致操作失败或抛出异常。
-
-如需读取超过2MB的数据，请使用  
-[queryByStep](arkts-arkdata-relationalstore-rdbstore-i.md#querybystep)接口。
-
-单条字符串类型字段最大支持写入8MB，超出部分将被截断，仅保留前8MB数据，若需存储超过8MB的内容，建议使用blob类型。
+Inserts a row of data into the target table.
 
 **Since:** 9
 
@@ -2507,39 +2231,39 @@ insert(table: string, values: ValuesBucket): Promise<long>
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| table | string | Yes | 指定的目标表名，不能为空字符串。 |
-| values | [ValuesBucket](arkts-arkdata-rdb-valuesbucket-t.md) | Yes | 表示要插入到表中的数据行。 |
+| table | string | Yes | Indicates the target table. |
+| values | [ValuesBucket](arkts-arkdata-rdb-valuesbucket-t.md) | Yes | Indicates the row of data {@link ValuesBucket} to be inserted into the table. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| ArkTS-Dyn: Promise&lt;number&gt;  <br>ArkTS-Sta：Promise&lt;long&gt; | Promise对象。返回插入数据的行ID。 |
+| ArkTS-Dyn: Promise&lt;number&gt;  <br>ArkTS-Sta：Promise&lt;long&gt; | The row ID if the operation is successful. return -1 otherwise. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 14800033 | SQLite: Data type mismatch.<br>**Applicable version:** 12 and later |
-| 14800000 | Inner error. |
-| 14800032 | SQLite: Abort due to constraint violation.<br>**Applicable version:** 12 and later |
-| 14800034 | SQLite: Library used incorrectly.<br>**Applicable version:** 12 and later |
-| 14800011 | The current operation failed because the database is corrupted.<br>**Applicable version:** 12 and later |
-| 14800047 | The WAL file size exceeds the default limit.<br>**Applicable version:** 10 and later |
-| 14800015 | The database does not respond.<br>**Applicable version:** 12 and later |
-| 14800014 | The target instance is already closed.<br>**Applicable version:** 12 and later |
-| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; 3. Parameter verification failed. |
-| 14800021 | SQLite: Generic error. Possible causes: Insert failed or the updated data does not exist.<br>**Applicable version:** 12 and later |
-| 14800023 | SQLite: Access permission denied.<br>**Applicable version:** 12 and later |
-| 14800022 | SQLite: Callback routine requested an abort.<br>**Applicable version:** 12 and later |
-| 14800025 | SQLite: A table in the database is locked.<br>**Applicable version:** 12 and later |
-| 14800024 | SQLite: The database file is locked.<br>**Applicable version:** 12 and later |
-| 14800027 | SQLite: Attempt to write a readonly database.<br>**Applicable version:** 12 and later |
-| 14800026 | SQLite: The database is out of memory.<br>**Applicable version:** 12 and later |
-| 14800029 | SQLite: The database is full.<br>**Applicable version:** 12 and later |
-| 14800028 | SQLite: Some kind of disk I/O error occurred.<br>**Applicable version:** 12 and later |
-| 14800031 | SQLite: TEXT or BLOB exceeds size limit.<br>**Applicable version:** 12 and later |
-| 14800030 | SQLite: Unable to open the database file.<br>**Applicable version:** 12 and later |
+| [14800033](../errorcode-data-rdb.md#14800033-sqlite-data-types-mismatch) | SQLite: Data type mismatch.<br>**Applicable version:** 12 and later |
+| [14800000](../../apis-basic-services-kit/errorcode-settings.md#14800000-parameter-check-failed) | Inner error. |
+| [14800032](../errorcode-data-rdb.md#14800032-sqlite-abort-due-to-constraint-violation) | SQLite: Abort due to constraint violation.<br>**Applicable version:** 12 and later |
+| [14800034](../errorcode-data-rdb.md#14800034-incorrect-use-of-sqlite-library) | SQLite: Library used incorrectly.<br>**Applicable version:** 12 and later |
+| [14800011](../errorcode-data-rdb.md#14800011-database-file-corrupted) | The current operation failed because the database is corrupted.<br>**Applicable version:** 12 and later |
+| [14800047](../errorcode-data-rdb.md#14800047-wal-file-size-exceeds-the-default-limit) | The WAL file size exceeds the default limit.<br>**Applicable version:** 10 and later |
+| [14800015](../errorcode-data-rdb.md#14800015-rdb-store-not-respond) | The database does not respond.<br>**Applicable version:** 12 and later |
+| [14800014](../errorcode-data-rdb.md#14800014-target-instance-closed) | The target instance is already closed.<br>**Applicable version:** 12 and later |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; 3. Parameter verification failed. |
+| [14800021](../errorcode-data-rdb.md#14800021-sqlite-generic-error) | SQLite: Generic error. Possible causes: Insert failed or the updated data does not exist.<br>**Applicable version:** 12 and later |
+| [14800023](../errorcode-data-rdb.md#14800023-sqlite-access-denied) | SQLite: Access permission denied.<br>**Applicable version:** 12 and later |
+| [14800022](../errorcode-data-rdb.md#14800022-sqlite-asynchronous-callback-request-aborted) | SQLite: Callback routine requested an abort.<br>**Applicable version:** 12 and later |
+| [14800025](../errorcode-data-rdb.md#14800025-sqlite-database-table-locked) | SQLite: A table in the database is locked.<br>**Applicable version:** 12 and later |
+| [14800024](../errorcode-data-rdb.md#14800024-sqlite-database-file-locked) | SQLite: The database file is locked.<br>**Applicable version:** 12 and later |
+| [14800027](../errorcode-data-rdb.md#14800027-sqlite-attempt-to-write-a-readonly-database) | SQLite: Attempt to write a readonly database.<br>**Applicable version:** 12 and later |
+| [14800026](../errorcode-data-rdb.md#14800026-sqlite-insufficient-database-memory) | SQLite: The database is out of memory.<br>**Applicable version:** 12 and later |
+| [14800029](../errorcode-data-rdb.md#14800029-sqlite-database-is-full) | SQLite: The database is full.<br>**Applicable version:** 12 and later |
+| [14800028](../errorcode-data-rdb.md#14800028-sqlite-io-error) | SQLite: Some kind of disk I/O error occurred.<br>**Applicable version:** 12 and later |
+| [14800031](../errorcode-data-rdb.md#14800031-sqlite-text-or-blob-exceeds-the-limit) | SQLite: TEXT or BLOB exceeds size limit.<br>**Applicable version:** 12 and later |
+| [14800030](../errorcode-data-rdb.md#14800030-sqlite-unable-to-open-the-database-file) | SQLite: Unable to open the database file.<br>**Applicable version:** 12 and later |
 
 ## insert
 
@@ -2553,19 +2277,7 @@ ArkTS-Sta:
 insert(table: string, values: ValuesBucket, conflict: ConflictResolution): Promise<long>
 ```
 
-向目标表中插入一行数据，可以通过conflict参数指定冲突解决模式[ConflictResolution](arkts-arkdata-relationalstore-conflictresolution-e.md)，使用Promise异步回调。
-
-由于共享内存的大小限制为2MB，因此单条数据的大小也必须严格小于2MB。
-
-如果单条数据超过此限制，在后续通过RdbStore的  
-[query](arkts-arkdata-relationalstore-rdbstore-i.md#query)或  
-[querySql](arkts-arkdata-relationalstore-rdbstore-i.md#querysql)接口获取ResultSet后，调用[getValue](arkts-arkdata-relationalstore-resultset-i.md#getvalue)、  
-[getString](arkts-arkdata-relationalstore-resultset-i.md#getstring)等get方法时将无法成功获取数据，并可能导致操作失败或抛出异常。
-
-如需读取超过2MB的数据，请使用  
-[queryByStep](arkts-arkdata-relationalstore-rdbstore-i.md#querybystep)接口。
-
-单条字符串类型字段最大支持写入8MB，超出部分将被截断，仅保留前8MB数据，若需存储超过8MB的内容，建议使用blob类型。
+Inserts a row of data into the target table.
 
 **Since:** 10
 
@@ -2579,40 +2291,40 @@ insert(table: string, values: ValuesBucket, conflict: ConflictResolution): Promi
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| table | string | Yes | 指定的目标表名，不能为空字符串。 |
-| values | [ValuesBucket](arkts-arkdata-rdb-valuesbucket-t.md) | Yes | 表示要插入到表中的数据行。 |
-| conflict | [ConflictResolution](../../apis-asset-store-kit/arkts-apis/arkts-assetstore-asset-conflictresolution-e.md) | Yes | 指定冲突解决模式。 |
+| table | string | Yes | Indicates the target table. |
+| values | [ValuesBucket](arkts-arkdata-rdb-valuesbucket-t.md) | Yes | Indicates the row of data {@link ValuesBucket} to be inserted into the table. |
+| conflict | [ConflictResolution](../../apis-asset-store-kit/arkts-apis/arkts-assetstore-asset-conflictresolution-e.md) | Yes | Indicates the {@link ConflictResolution} to insert data into the table. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| ArkTS-Dyn: Promise&lt;number&gt;  <br>ArkTS-Sta：Promise&lt;long&gt; | Promise对象。返回插入数据的行ID。 |
+| ArkTS-Dyn: Promise&lt;number&gt;  <br>ArkTS-Sta：Promise&lt;long&gt; | The row ID if the operation is successful. return -1 otherwise. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 14800033 | SQLite: Data type mismatch.<br>**Applicable version:** 12 and later |
-| 14800000 | Inner error. |
-| 14800032 | SQLite: Abort due to constraint violation.<br>**Applicable version:** 12 and later |
-| 14800034 | SQLite: Library used incorrectly.<br>**Applicable version:** 12 and later |
-| 14800011 | The current operation failed because the database is corrupted.<br>**Applicable version:** 12 and later |
-| 14800047 | The WAL file size exceeds the default limit. |
-| 14800015 | The database does not respond.<br>**Applicable version:** 12 and later |
-| 14800014 | The target instance is already closed.<br>**Applicable version:** 12 and later |
-| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; 3. Parameter verification failed. |
-| 14800021 | SQLite: Generic error. Possible causes: Insert failed or the updated data does not exist.<br>**Applicable version:** 12 and later |
-| 14800023 | SQLite: Access permission denied.<br>**Applicable version:** 12 and later |
-| 14800022 | SQLite: Callback routine requested an abort.<br>**Applicable version:** 12 and later |
-| 14800025 | SQLite: A table in the database is locked.<br>**Applicable version:** 12 and later |
-| 14800024 | SQLite: The database file is locked.<br>**Applicable version:** 12 and later |
-| 14800027 | SQLite: Attempt to write a readonly database.<br>**Applicable version:** 12 and later |
-| 14800026 | SQLite: The database is out of memory.<br>**Applicable version:** 12 and later |
-| 14800029 | SQLite: The database is full.<br>**Applicable version:** 12 and later |
-| 14800028 | SQLite: Some kind of disk I/O error occurred.<br>**Applicable version:** 12 and later |
-| 14800031 | SQLite: TEXT or BLOB exceeds size limit.<br>**Applicable version:** 12 and later |
-| 14800030 | SQLite: Unable to open the database file.<br>**Applicable version:** 12 and later |
+| [14800033](../errorcode-data-rdb.md#14800033-sqlite-data-types-mismatch) | SQLite: Data type mismatch.<br>**Applicable version:** 12 and later |
+| [14800000](../../apis-basic-services-kit/errorcode-settings.md#14800000-parameter-check-failed) | Inner error. |
+| [14800032](../errorcode-data-rdb.md#14800032-sqlite-abort-due-to-constraint-violation) | SQLite: Abort due to constraint violation.<br>**Applicable version:** 12 and later |
+| [14800034](../errorcode-data-rdb.md#14800034-incorrect-use-of-sqlite-library) | SQLite: Library used incorrectly.<br>**Applicable version:** 12 and later |
+| [14800011](../errorcode-data-rdb.md#14800011-database-file-corrupted) | The current operation failed because the database is corrupted.<br>**Applicable version:** 12 and later |
+| [14800047](../errorcode-data-rdb.md#14800047-wal-file-size-exceeds-the-default-limit) | The WAL file size exceeds the default limit. |
+| [14800015](../errorcode-data-rdb.md#14800015-rdb-store-not-respond) | The database does not respond.<br>**Applicable version:** 12 and later |
+| [14800014](../errorcode-data-rdb.md#14800014-target-instance-closed) | The target instance is already closed.<br>**Applicable version:** 12 and later |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; 3. Parameter verification failed. |
+| [14800021](../errorcode-data-rdb.md#14800021-sqlite-generic-error) | SQLite: Generic error. Possible causes: Insert failed or the updated data does not exist.<br>**Applicable version:** 12 and later |
+| [14800023](../errorcode-data-rdb.md#14800023-sqlite-access-denied) | SQLite: Access permission denied.<br>**Applicable version:** 12 and later |
+| [14800022](../errorcode-data-rdb.md#14800022-sqlite-asynchronous-callback-request-aborted) | SQLite: Callback routine requested an abort.<br>**Applicable version:** 12 and later |
+| [14800025](../errorcode-data-rdb.md#14800025-sqlite-database-table-locked) | SQLite: A table in the database is locked.<br>**Applicable version:** 12 and later |
+| [14800024](../errorcode-data-rdb.md#14800024-sqlite-database-file-locked) | SQLite: The database file is locked.<br>**Applicable version:** 12 and later |
+| [14800027](../errorcode-data-rdb.md#14800027-sqlite-attempt-to-write-a-readonly-database) | SQLite: Attempt to write a readonly database.<br>**Applicable version:** 12 and later |
+| [14800026](../errorcode-data-rdb.md#14800026-sqlite-insufficient-database-memory) | SQLite: The database is out of memory.<br>**Applicable version:** 12 and later |
+| [14800029](../errorcode-data-rdb.md#14800029-sqlite-database-is-full) | SQLite: The database is full.<br>**Applicable version:** 12 and later |
+| [14800028](../errorcode-data-rdb.md#14800028-sqlite-io-error) | SQLite: Some kind of disk I/O error occurred.<br>**Applicable version:** 12 and later |
+| [14800031](../errorcode-data-rdb.md#14800031-sqlite-text-or-blob-exceeds-the-limit) | SQLite: TEXT or BLOB exceeds size limit.<br>**Applicable version:** 12 and later |
+| [14800030](../errorcode-data-rdb.md#14800030-sqlite-unable-to-open-the-database-file) | SQLite: Unable to open the database file.<br>**Applicable version:** 12 and later |
 
 ## insertSync
 
@@ -2626,19 +2338,7 @@ ArkTS-Sta:
 insertSync(table: string, values: ValuesBucket, conflict?: ConflictResolution): long
 ```
 
-向目标表中插入一行数据。
-
-由于共享内存的大小限制为2MB，因此单条数据的大小也必须严格小于2MB。
-
-如果单条数据超过此限制，在后续通过RdbStore的  
-[query](arkts-arkdata-relationalstore-rdbstore-i.md#query)或  
-[querySql](arkts-arkdata-relationalstore-rdbstore-i.md#querysql)接口获取ResultSet后，调用[getValue](arkts-arkdata-relationalstore-resultset-i.md#getvalue)、  
-[getString](arkts-arkdata-relationalstore-resultset-i.md#getstring)等get方法时将无法成功获取数据，并可能导致操作失败或抛出异常。
-
-如需读取超过2MB的数据，请使用  
-[queryByStep](arkts-arkdata-relationalstore-rdbstore-i.md#querybystep)接口。
-
-单条字符串类型字段最大支持写入8MB，超出部分将被截断，仅保留前8MB数据，若需存储超过8MB的内容，建议使用blob类型。
+Inserts a row of data into the target table with sync interface.
 
 **Since:** 12
 
@@ -2652,40 +2352,40 @@ insertSync(table: string, values: ValuesBucket, conflict?: ConflictResolution): 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| table | string | Yes | 指定的目标表名，不能为空字符串。 |
-| values | [ValuesBucket](arkts-arkdata-rdb-valuesbucket-t.md) | Yes | 表示要插入到表中的数据行。 |
-| conflict | [ConflictResolution](../../apis-asset-store-kit/arkts-apis/arkts-assetstore-asset-conflictresolution-e.md) | No | 指定冲突解决模式。默认值是relationalStore.ConflictResolution.ON_CONFLICT_NONE。 |
+| table | string | Yes | Indicates the target table. |
+| values | [ValuesBucket](arkts-arkdata-rdb-valuesbucket-t.md) | Yes | Indicates the row of data {@link ValuesBucket} to be inserted into the table. |
+| conflict | [ConflictResolution](../../apis-asset-store-kit/arkts-apis/arkts-assetstore-asset-conflictresolution-e.md) | No | Indicates the {@link ConflictResolution} to insert data into the table. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| ArkTS-Dyn: number  <br>ArkTS-Sta：long | 返回插入数据的行ID。 |
+| ArkTS-Dyn: number  <br>ArkTS-Sta：long | The row ID if the operation is successful. return -1 otherwise. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 14800033 | SQLite: Data type mismatch. |
-| 14800000 | Inner error. |
-| 14800032 | SQLite: Abort due to constraint violation. |
-| 14800034 | SQLite: Library used incorrectly. |
-| 14800011 | The current operation failed because the database is corrupted. |
-| 14800015 | The database does not respond. |
-| 14800047 | The WAL file size exceeds the default limit. |
-| 14800014 | The target instance is already closed. |
-| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; 3. Parameter verification failed. |
-| 14800021 | SQLite: Generic error. Possible causes: Insert failed or the updated data does not exist. |
-| 14800023 | SQLite: Access permission denied. |
-| 14800022 | SQLite: Callback routine requested an abort. |
-| 14800025 | SQLite: A table in the database is locked. |
-| 14800024 | SQLite: The database file is locked. |
-| 14800027 | SQLite: Attempt to write a readonly database. |
-| 14800026 | SQLite: The database is out of memory. |
-| 14800029 | SQLite: The database is full. |
-| 14800028 | SQLite: Some kind of disk I/O error occurred. |
-| 14800031 | SQLite: TEXT or BLOB exceeds size limit. |
-| 14800030 | SQLite: Unable to open the database file. |
+| [14800033](../errorcode-data-rdb.md#14800033-sqlite-data-types-mismatch) | SQLite: Data type mismatch. |
+| [14800000](../../apis-basic-services-kit/errorcode-settings.md#14800000-parameter-check-failed) | Inner error. |
+| [14800032](../errorcode-data-rdb.md#14800032-sqlite-abort-due-to-constraint-violation) | SQLite: Abort due to constraint violation. |
+| [14800034](../errorcode-data-rdb.md#14800034-incorrect-use-of-sqlite-library) | SQLite: Library used incorrectly. |
+| [14800011](../errorcode-data-rdb.md#14800011-database-file-corrupted) | The current operation failed because the database is corrupted. |
+| [14800015](../errorcode-data-rdb.md#14800015-rdb-store-not-respond) | The database does not respond. |
+| [14800047](../errorcode-data-rdb.md#14800047-wal-file-size-exceeds-the-default-limit) | The WAL file size exceeds the default limit. |
+| [14800014](../errorcode-data-rdb.md#14800014-target-instance-closed) | The target instance is already closed. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; 3. Parameter verification failed. |
+| [14800021](../errorcode-data-rdb.md#14800021-sqlite-generic-error) | SQLite: Generic error. Possible causes: Insert failed or the updated data does not exist. |
+| [14800023](../errorcode-data-rdb.md#14800023-sqlite-access-denied) | SQLite: Access permission denied. |
+| [14800022](../errorcode-data-rdb.md#14800022-sqlite-asynchronous-callback-request-aborted) | SQLite: Callback routine requested an abort. |
+| [14800025](../errorcode-data-rdb.md#14800025-sqlite-database-table-locked) | SQLite: A table in the database is locked. |
+| [14800024](../errorcode-data-rdb.md#14800024-sqlite-database-file-locked) | SQLite: The database file is locked. |
+| [14800027](../errorcode-data-rdb.md#14800027-sqlite-attempt-to-write-a-readonly-database) | SQLite: Attempt to write a readonly database. |
+| [14800026](../errorcode-data-rdb.md#14800026-sqlite-insufficient-database-memory) | SQLite: The database is out of memory. |
+| [14800029](../errorcode-data-rdb.md#14800029-sqlite-database-is-full) | SQLite: The database is full. |
+| [14800028](../errorcode-data-rdb.md#14800028-sqlite-io-error) | SQLite: Some kind of disk I/O error occurred. |
+| [14800031](../errorcode-data-rdb.md#14800031-sqlite-text-or-blob-exceeds-the-limit) | SQLite: TEXT or BLOB exceeds size limit. |
+| [14800030](../errorcode-data-rdb.md#14800030-sqlite-unable-to-open-the-database-file) | SQLite: Unable to open the database file. |
 
 ## insertSync
 
@@ -2693,19 +2393,7 @@ insertSync(table: string, values: ValuesBucket, conflict?: ConflictResolution): 
 insertSync(table: string, values: sendableRelationalStore.ValuesBucket, conflict?: ConflictResolution): number
 ```
 
-传入Sendable数据，向目标表中插入一行数据。
-
-由于共享内存的大小限制为2MB，因此单条数据的大小也必须严格小于2MB。
-
-如果单条数据超过此限制，在后续通过RdbStore的  
-[query](arkts-arkdata-relationalstore-rdbstore-i.md#query)或  
-[querySql](arkts-arkdata-relationalstore-rdbstore-i.md#querysql)接口获取ResultSet后，调用[getValue](arkts-arkdata-relationalstore-resultset-i.md#getvalue)、  
-[getString](arkts-arkdata-relationalstore-resultset-i.md#getstring)等get方法时将无法成功获取数据，并可能导致操作失败或抛出异常。
-
-如需读取超过2MB的数据，请使用  
-[queryByStep](arkts-arkdata-relationalstore-rdbstore-i.md#querybystep)接口。
-
-单条字符串类型字段最大支持写入8MB，超出部分将被截断，仅保留前8MB数据，若需存储超过8MB的内容，建议使用blob类型。
+Inserts a row of data into the target table with sync interface.
 
 **Since:** 12
 
@@ -2719,40 +2407,40 @@ insertSync(table: string, values: sendableRelationalStore.ValuesBucket, conflict
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| table | string | Yes | 指定的目标表名，不能为空字符串。 |
-| values | sendableRelationalStore.ValuesBucket | Yes | 表示要插入到表中的可跨线程传递数据。 |
-| conflict | [ConflictResolution](../../apis-asset-store-kit/arkts-apis/arkts-assetstore-asset-conflictresolution-e.md) | No | 指定冲突解决模式。默认值是relationalStore.ConflictResolution.ON_CONFLICT_NONE。 |
+| table | string | Yes | Indicates the target table. |
+| values | sendableRelationalStore.ValuesBucket | Yes | Indicates the row of data {@link sendableRelationalStore.ValuesBucket} to be inserted into the table. |
+| conflict | [ConflictResolution](../../apis-asset-store-kit/arkts-apis/arkts-assetstore-asset-conflictresolution-e.md) | No | Indicates the {@link ConflictResolution} to insert data into the table. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| number | 返回插入数据的行ID。 |
+| number | The row ID if the operation is successful. return -1 otherwise. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 14800033 | SQLite: Data type mismatch. |
-| 14800000 | Inner error. |
-| 14800032 | SQLite: Abort due to constraint violation. |
-| 14800034 | SQLite: Library used incorrectly. |
-| 14800011 | The current operation failed because the database is corrupted. |
-| 14800015 | The database does not respond. |
-| 14800047 | The WAL file size exceeds the default limit. |
-| 14800014 | The target instance is already closed. |
-| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; 3. Parameter verification failed. |
-| 14800021 | SQLite: Generic error. Possible causes: Insert failed or the updated data does not exist. |
-| 14800023 | SQLite: Access permission denied. |
-| 14800022 | SQLite: Callback routine requested an abort. |
-| 14800025 | SQLite: A table in the database is locked. |
-| 14800024 | SQLite: The database file is locked. |
-| 14800027 | SQLite: Attempt to write a readonly database. |
-| 14800026 | SQLite: The database is out of memory. |
-| 14800029 | SQLite: The database is full. |
-| 14800028 | SQLite: Some kind of disk I/O error occurred. |
-| 14800031 | SQLite: TEXT or BLOB exceeds size limit. |
-| 14800030 | SQLite: Unable to open the database file. |
+| [14800033](../errorcode-data-rdb.md#14800033-sqlite-data-types-mismatch) | SQLite: Data type mismatch. |
+| [14800000](../../apis-basic-services-kit/errorcode-settings.md#14800000-parameter-check-failed) | Inner error. |
+| [14800032](../errorcode-data-rdb.md#14800032-sqlite-abort-due-to-constraint-violation) | SQLite: Abort due to constraint violation. |
+| [14800034](../errorcode-data-rdb.md#14800034-incorrect-use-of-sqlite-library) | SQLite: Library used incorrectly. |
+| [14800011](../errorcode-data-rdb.md#14800011-database-file-corrupted) | The current operation failed because the database is corrupted. |
+| [14800015](../errorcode-data-rdb.md#14800015-rdb-store-not-respond) | The database does not respond. |
+| [14800047](../errorcode-data-rdb.md#14800047-wal-file-size-exceeds-the-default-limit) | The WAL file size exceeds the default limit. |
+| [14800014](../errorcode-data-rdb.md#14800014-target-instance-closed) | The target instance is already closed. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; 3. Parameter verification failed. |
+| [14800021](../errorcode-data-rdb.md#14800021-sqlite-generic-error) | SQLite: Generic error. Possible causes: Insert failed or the updated data does not exist. |
+| [14800023](../errorcode-data-rdb.md#14800023-sqlite-access-denied) | SQLite: Access permission denied. |
+| [14800022](../errorcode-data-rdb.md#14800022-sqlite-asynchronous-callback-request-aborted) | SQLite: Callback routine requested an abort. |
+| [14800025](../errorcode-data-rdb.md#14800025-sqlite-database-table-locked) | SQLite: A table in the database is locked. |
+| [14800024](../errorcode-data-rdb.md#14800024-sqlite-database-file-locked) | SQLite: The database file is locked. |
+| [14800027](../errorcode-data-rdb.md#14800027-sqlite-attempt-to-write-a-readonly-database) | SQLite: Attempt to write a readonly database. |
+| [14800026](../errorcode-data-rdb.md#14800026-sqlite-insufficient-database-memory) | SQLite: The database is out of memory. |
+| [14800029](../errorcode-data-rdb.md#14800029-sqlite-database-is-full) | SQLite: The database is full. |
+| [14800028](../errorcode-data-rdb.md#14800028-sqlite-io-error) | SQLite: Some kind of disk I/O error occurred. |
+| [14800031](../errorcode-data-rdb.md#14800031-sqlite-text-or-blob-exceeds-the-limit) | SQLite: TEXT or BLOB exceeds size limit. |
+| [14800030](../errorcode-data-rdb.md#14800030-sqlite-unable-to-open-the-database-file) | SQLite: Unable to open the database file. |
 
 ## lockRow
 
@@ -2760,13 +2448,7 @@ insertSync(table: string, values: sendableRelationalStore.ValuesBucket, conflict
 lockRow(predicates: RdbPredicates): Promise<void>
 ```
 
-根据RdbPredicates的指定实例对象从数据库中锁定数据，锁定数据不执行端云同步，使用Promise异步回调。
-
-该接口只支持主键为基本类型的表、不支持共享表、无主键表和复合类型主键表。
-
-该接口不支持依赖关系表之间的锁传递，如果表存在依赖关系，需要根据依赖关系手动调用该接口。
-
-该接口不支持对已删除数据的操作。
+Locks data from the database based on a specified instance object of RdbPredicates.
 
 **Since:** 12
 
@@ -2780,38 +2462,38 @@ lockRow(predicates: RdbPredicates): Promise<void>
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| predicates | [RdbPredicates](arkts-arkdata-relationalstore-rdbpredicates-c.md) | Yes | RdbPredicates的实例对象指定的锁定条件。 |
+| predicates | [RdbPredicates](arkts-arkdata-relationalstore-rdbpredicates-c.md) | Yes | The specified lock condition by the instance object of {@link RdbPredicates}. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise对象，无返回结果。 |
+| Promise&lt;void&gt; | The promise returned by the function. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 14800033 | SQLite: Data type mismatch. |
-| 14800000 | Inner error. |
-| 14800032 | SQLite: Abort due to constraint violation. |
-| 14800034 | SQLite: Library used incorrectly. |
-| 14800011 | The current operation failed because the database is corrupted. |
-| 14800015 | The database does not respond. |
-| 14800014 | The target instance is already closed. |
-| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; 3. Parameter verification failed. |
-| 14800018 | No data meets the condition. |
-| 14800021 | SQLite: Generic error. |
-| 14800023 | SQLite: Access permission denied. |
-| 14800022 | SQLite: Callback routine requested an abort. |
-| 14800025 | SQLite: A table in the database is locked. |
-| 14800024 | SQLite: The database file is locked. |
-| 14800027 | SQLite: Attempt to write a readonly database. |
-| 14800026 | SQLite: The database is out of memory. |
-| 14800029 | SQLite: The database is full. |
-| 14800028 | SQLite: Some kind of disk I/O error occurred. |
-| 14800031 | SQLite: TEXT or BLOB exceeds size limit. |
-| 14800030 | SQLite: Unable to open the database file. |
+| [14800033](../errorcode-data-rdb.md#14800033-sqlite-data-types-mismatch) | SQLite: Data type mismatch. |
+| [14800000](../../apis-basic-services-kit/errorcode-settings.md#14800000-parameter-check-failed) | Inner error. |
+| [14800032](../errorcode-data-rdb.md#14800032-sqlite-abort-due-to-constraint-violation) | SQLite: Abort due to constraint violation. |
+| [14800034](../errorcode-data-rdb.md#14800034-incorrect-use-of-sqlite-library) | SQLite: Library used incorrectly. |
+| [14800011](../errorcode-data-rdb.md#14800011-database-file-corrupted) | The current operation failed because the database is corrupted. |
+| [14800015](../errorcode-data-rdb.md#14800015-rdb-store-not-respond) | The database does not respond. |
+| [14800014](../errorcode-data-rdb.md#14800014-target-instance-closed) | The target instance is already closed. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; 3. Parameter verification failed. |
+| [14800018](../errorcode-data-rdb.md#14800018-no-match) | No data meets the condition. |
+| [14800021](../errorcode-data-rdb.md#14800021-sqlite-generic-error) | SQLite: Generic error. |
+| [14800023](../errorcode-data-rdb.md#14800023-sqlite-access-denied) | SQLite: Access permission denied. |
+| [14800022](../errorcode-data-rdb.md#14800022-sqlite-asynchronous-callback-request-aborted) | SQLite: Callback routine requested an abort. |
+| [14800025](../errorcode-data-rdb.md#14800025-sqlite-database-table-locked) | SQLite: A table in the database is locked. |
+| [14800024](../errorcode-data-rdb.md#14800024-sqlite-database-file-locked) | SQLite: The database file is locked. |
+| [14800027](../errorcode-data-rdb.md#14800027-sqlite-attempt-to-write-a-readonly-database) | SQLite: Attempt to write a readonly database. |
+| [14800026](../errorcode-data-rdb.md#14800026-sqlite-insufficient-database-memory) | SQLite: The database is out of memory. |
+| [14800029](../errorcode-data-rdb.md#14800029-sqlite-database-is-full) | SQLite: The database is full. |
+| [14800028](../errorcode-data-rdb.md#14800028-sqlite-io-error) | SQLite: Some kind of disk I/O error occurred. |
+| [14800031](../errorcode-data-rdb.md#14800031-sqlite-text-or-blob-exceeds-the-limit) | SQLite: TEXT or BLOB exceeds size limit. |
+| [14800030](../errorcode-data-rdb.md#14800030-sqlite-unable-to-open-the-database-file) | SQLite: Unable to open the database file. |
 
 ## obtainDistributedTableName
 
@@ -2819,13 +2501,7 @@ lockRow(predicates: RdbPredicates): Promise<void>
 obtainDistributedTableName(device: string, table: string, callback: AsyncCallback<string>): void
 ```
 
-根据远程设备的本地表名获取指定远程设备的分布式表名。在查询远程设备数据库时，需要使用分布式表名，使用callback异步回调。
-
-> **说明：**
-> 
-> 其中device通过调用
-> [deviceManager.getAvailableDeviceListSync](../../apis-distributed-service-kit/arkts-apis/arkts-distributedservice-distributeddevicemanager-devicemanager-i.md/arkts-distributedservice-distributeddevicemanager-devicemanager-i.md#getavailabledevicelistsync)
-> 方法得到。
+Obtain distributed table name of specified remote device according to local table name.When query remote device database, distributed table name is needed.
 
 **Since:** 9
 
@@ -2841,18 +2517,18 @@ obtainDistributedTableName(device: string, table: string, callback: AsyncCallbac
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| device | string | Yes | 远程设备ID，不能为空字符串。 |
-| table | string | Yes | 远程设备的本地表名。 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;string&gt; | Yes | 回调函数。当获取分布式表名成功，err为undefined，data为远程设备的分布式表名；否则为错误对象。 |
+| device | string | Yes | Indicates the remote device. |
+| table | string | Yes | {string}: the distributed table name. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;string&gt; | Yes |  |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; 3. Parameter verification failed. |
-| 14800000 | Inner error. |
-| 801 | Capability not supported. |
-| 14800014 | The target instance is already closed.<br>**Applicable version:** 12 and later |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; 3. Parameter verification failed. |
+| [14800000](../../apis-basic-services-kit/errorcode-settings.md#14800000-parameter-check-failed) | Inner error. |
+| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. |
+| [14800014](../errorcode-data-rdb.md#14800014-target-instance-closed) | The target instance is already closed.<br>**Applicable version:** 12 and later |
 
 ## obtainDistributedTableName
 
@@ -2860,13 +2536,7 @@ obtainDistributedTableName(device: string, table: string, callback: AsyncCallbac
 obtainDistributedTableName(device: string, table: string): Promise<string>
 ```
 
-根据远程设备的本地表名获取指定远程设备的分布式表名。在查询远程设备数据库时，需要使用分布式表名，使用Promise异步回调。
-
-> **说明：**
-> 
-> 其中device通过调用
-> [deviceManager.getAvailableDeviceListSync](../../apis-distributed-service-kit/arkts-apis/arkts-distributedservice-distributeddevicemanager-devicemanager-i.md/arkts-distributedservice-distributeddevicemanager-devicemanager-i.md#getavailabledevicelistsync)
-> 方法得到。
+Obtain distributed table name of specified remote device according to local table name.When query remote device database, distributed table name is needed.
 
 **Since:** 9
 
@@ -2882,23 +2552,23 @@ obtainDistributedTableName(device: string, table: string): Promise<string>
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| device | string | Yes | 远程设备ID，不能为空字符串。 |
-| table | string | Yes | 远程设备的本地表名。 |
+| device | string | Yes | Indicates the remote device. |
+| table | string | Yes |  |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;string&gt; | Promise对象。返回远程设备的分布式表名。 |
+| Promise&lt;string&gt; | {string}: the distributed table name. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; 3. Parameter verification failed. |
-| 14800000 | Inner error. |
-| 801 | Capability not supported. |
-| 14800014 | The target instance is already closed.<br>**Applicable version:** 12 and later |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; 3. Parameter verification failed. |
+| [14800000](../../apis-basic-services-kit/errorcode-settings.md#14800000-parameter-check-failed) | Inner error. |
+| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. |
+| [14800014](../errorcode-data-rdb.md#14800014-target-instance-closed) | The target instance is already closed.<br>**Applicable version:** 12 and later |
 
 ## off
 
@@ -2906,7 +2576,7 @@ obtainDistributedTableName(device: string, table: string): Promise<string>
 off(event: 'dataChange', type: SubscribeType, observer: Callback<Array<string>>): void
 ```
 
-取消数据变更的事件监听。
+Remove specified observer of specified type from the database.
 
 **Since:** 9
 
@@ -2920,17 +2590,17 @@ off(event: 'dataChange', type: SubscribeType, observer: Callback<Array<string>>)
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| event | 'dataChange' | Yes | 取值为'dataChange'，表示数据更改。 |
-| type | [SubscribeType](arkts-arkdata-rdb-subscribetype-e.md) | Yes | 订阅类型。 |
-| observer | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;Array&lt;string&gt;&gt; | Yes | 指已注册的数据更改观察者。Array&lt;string&gt;为数据库中的数据发生改变的对端设备ID。 |
+| event | 'dataChange' | Yes | Indicates the event must be string 'dataChange'. |
+| type | [SubscribeType](arkts-arkdata-rdb-subscribetype-e.md) | Yes | Indicates the subscription type, which is defined in {@link SubscribeType}. If its value is SUBSCRIBE_TYPE_REMOTE, ohos.permission.DISTRIBUTED_DATASYNC is required. |
+| observer | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;Array&lt;string&gt;&gt; | Yes | {Array&lt;string&gt;}: the data change observer already registered. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; 3. Parameter verification failed. |
-| 801 | Capability not supported. |
-| 14800014 | The target instance is already closed.<br>**Applicable version:** 12 and later |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; 3. Parameter verification failed. |
+| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. |
+| [14800014](../errorcode-data-rdb.md#14800014-target-instance-closed) | The target instance is already closed.<br>**Applicable version:** 12 and later |
 
 ## off
 
@@ -2942,7 +2612,7 @@ off(
     ): void
 ```
 
-取消数据变更的事件监听。
+Remove specified observer of specified type from the database.
 
 **Since:** 10
 
@@ -2956,18 +2626,18 @@ off(
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| event | 'dataChange' | Yes | 取值为'dataChange'，表示数据更改。 |
-| type | [SubscribeType](arkts-arkdata-rdb-subscribetype-e.md) | Yes | 订阅类型。 |
-| observer | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;Array&lt;string&gt;&gt; \| Callback&lt;Array&lt;ChangeInfo&gt;&gt; | No | 回调函数。&lt;br/&gt;当type为 SUBSCRIBE_TYPE_REMOTE，observer类型需为Callback&lt;Array<string>&gt;&lt;string&gt;>，其中Array&lt;string&gt;为数据库中的数据发生改变的对端设备ID。&lt;br/&gt; 当type为 SUBSCRIBE_TYPE_CLOUD，observer类型需为Callback&lt;Array<string>&gt;&lt;string&gt;>，其中Array&lt;string&gt;为数据库中的数据发生改变的云端账号。&lt;br/&gt; 当type为 SUBSCRIBE_TYPE_CLOUD_DETAILS，observer类型需为Callback&lt;Array<ChangeInfo>&gt;&lt;ChangeInfo&gt;>，其中Array&lt;ChangeInfo&gt;为数据库端云同步过程的详情。 &lt;br&gt;当type为SUBSCRIBE_TYPE_LOCAL_DETAILS，observer类型需为Callback&lt;Array<ChangeInfo>&gt;&lt;ChangeInfo&gt;>，其中Array&lt;ChangeInfo&gt;为本地数据库中的数据更 改的详情。 &lt;br&gt;当observer没有传入时，表示取消当前type类型下所有数据变更的事件监听。 |
+| event | 'dataChange' | Yes | indicates the event must be string 'dataChange'. |
+| type | [SubscribeType](arkts-arkdata-rdb-subscribetype-e.md) | Yes | indicates the subscription type, which is defined in {@link SubscribeType}. If its value is SUBSCRIBE_TYPE_REMOTE, ohos.permission.DISTRIBUTED_DATASYNC is required. |
+| observer | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;Array&lt;string&gt;&gt; \| Callback&lt;Array&lt;ChangeInfo&gt;&gt; | No | {Array&lt;string&gt;}: the data change observer already registered. {Array&lt;ChangeInfo&gt;}: the change info already registered. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; 3. Parameter verification failed. |
-| 801 | Capability not supported. |
-| 202 | Permission verification failed, application which is not a system application uses system API. |
-| 14800014 | The target instance is already closed.<br>**Applicable version:** 12 and later |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; 3. Parameter verification failed. |
+| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed, application which is not a system application uses system API. |
+| [14800014](../errorcode-data-rdb.md#14800014-target-instance-closed) | The target instance is already closed.<br>**Applicable version:** 12 and later |
 
 ## off
 
@@ -2975,7 +2645,7 @@ off(
 off(event: string, interProcess: boolean, observer?: Callback<void>): void
 ```
 
-取消数据库的进程内或者进程间事件监听。
+Remove specified observer of specified type from the database.
 
 **Since:** 10
 
@@ -2989,19 +2659,19 @@ off(event: string, interProcess: boolean, observer?: Callback<void>): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| event | string | Yes | 取消订阅事件名称。事件名称与on接口调用时订阅事件的名称一致。 |
-| interProcess | boolean | Yes | 指定是进程间还是本进程取消订阅。&lt;br/&gt; true：进程间。&lt;br/&gt; false：本进程。 |
-| observer | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;void&gt; | No | 该参数存在，则取消指定Callback监听回调，否则取消该event事件的所有监听回调。<br>**Since:** 12 |
+| event | string | Yes | Indicates the subscription event. |
+| interProcess | boolean | Yes | Indicates whether it is an interprocess subscription or an in-process subscription. |
+| observer | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;void&gt; | No | The data change observer already registered.<br>**Since:** 12 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; 3. Parameter verification failed. |
-| 801 | Capability not supported. |
-| 14800000 | Inner error. |
-| 14800050 | Failed to obtain the subscription service. |
-| 14800014 | The target instance is already closed.<br>**Applicable version:** 12 and later |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; 3. Parameter verification failed. |
+| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. |
+| [14800000](../../apis-basic-services-kit/errorcode-settings.md#14800000-parameter-check-failed) | Inner error. |
+| [14800050](../errorcode-data-rdb.md#14800050-failed-to-obtain-the-subscription-service) | Failed to obtain the subscription service. |
+| [14800014](../errorcode-data-rdb.md#14800014-target-instance-closed) | The target instance is already closed.<br>**Applicable version:** 12 and later |
 
 ## off
 
@@ -3009,7 +2679,7 @@ off(event: string, interProcess: boolean, observer?: Callback<void>): void
 off(event: 'autoSyncProgress', progress?: Callback<ProgressDetails>): void
 ```
 
-取消订阅自动同步进度的通知。
+Unregister the database auto synchronization callback.
 
 **Since:** 11
 
@@ -3023,16 +2693,16 @@ off(event: 'autoSyncProgress', progress?: Callback<ProgressDetails>): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| event | 'autoSyncProgress' | Yes | 取值为'autoSyncProgress'，表示自动同步进度通知。 |
-| progress | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;ProgressDetails&gt; | No | 指已注册的自动同步进度观察者。该参数存在，则取消订阅指定回调，该参数为null或undefined或不存在，则取消订阅所有回调。 |
+| event | 'autoSyncProgress' | Yes | indicates the event must be string 'autoSyncProgress'. |
+| progress | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;ProgressDetails&gt; | No | Callback used to return the {@link ProgressDetails} result. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1. Need 1 - 3 parameter(s)! 2. The RdbStore must be valid. 3. The event must be a not empty string. 4. The progress must be function. |
-| 801 | Capability not supported. |
-| 14800014 | The target instance is already closed.<br>**Applicable version:** 12 and later |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Need 1 - 3 parameter(s)! 2. The RdbStore must be valid. 3. The event must be a not empty string. 4. The progress must be function. |
+| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. |
+| [14800014](../errorcode-data-rdb.md#14800014-target-instance-closed) | The target instance is already closed.<br>**Applicable version:** 12 and later |
 
 ## off
 
@@ -3040,7 +2710,7 @@ off(event: 'autoSyncProgress', progress?: Callback<ProgressDetails>): void
 off(event: 'statistics', observer?: Callback<SqlExecutionInfo> ): void
 ```
 
-取消订阅SQL统计信息。
+Unsubscribes from the SQL statistics.
 
 **Since:** 12
 
@@ -3054,17 +2724,17 @@ off(event: 'statistics', observer?: Callback<SqlExecutionInfo> ): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| event | 'statistics' | Yes | 取消订阅事件名称。取值为'statistics'，表示sql执行时间的统计。 |
-| observer | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;SqlExecutionInfo&gt; | No | 回调函数。该参数存在，则取消指定Callback监听回调，否则取消该event事件的所有监听回调。 |
+| event | 'statistics' | Yes | Indicates the event type, which must be 'statistics'. |
+| observer | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;SqlExecutionInfo&gt; | No | Indicates the callback to unregister. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; 3. Parameter verification failed. |
-| 801 | Capability not supported. |
-| 14800000 | Inner error. |
-| 14800014 | The target instance is already closed. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; 3. Parameter verification failed. |
+| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. |
+| [14800000](../../apis-basic-services-kit/errorcode-settings.md#14800000-parameter-check-failed) | Inner error. |
+| [14800014](../errorcode-data-rdb.md#14800014-target-instance-closed) | The target instance is already closed. |
 
 ## off
 
@@ -3072,7 +2742,7 @@ off(event: 'statistics', observer?: Callback<SqlExecutionInfo> ): void
 off(event: 'perfStat', observer?: Callback<SqlExecutionInfo>): void
 ```
 
-取消订阅SQL统计信息。
+Unsubscribes from the SQL performance statistics.
 
 **Since:** 20
 
@@ -3086,15 +2756,15 @@ off(event: 'perfStat', observer?: Callback<SqlExecutionInfo>): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| event | 'perfStat' | Yes | 取消订阅事件名称。取值为'perfStat'，统计执行SQL的时间。 |
-| observer | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;SqlExecutionInfo&gt; | No | 回调函数，表示订阅时的回调函数。该参数存在，则取消指定Callback监听回调，否则取消该event事件的所有监听回调。 |
+| event | 'perfStat' | Yes | Event type, which must be 'perfStat'. |
+| observer | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;SqlExecutionInfo&gt; | No | Callback to unregister. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 801 | Capability not supported. |
-| 14800014 | The target instance is already closed. |
+| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. |
+| [14800014](../errorcode-data-rdb.md#14800014-target-instance-closed) | The target instance is already closed. |
 
 ## off
 
@@ -3102,7 +2772,7 @@ off(event: 'perfStat', observer?: Callback<SqlExecutionInfo>): void
 off(event: 'sqliteErrorOccurred', observer?: Callback<ExceptionMessage>): void
 ```
 
-停止记录SQL执行过程中的异常日志。
+Unsubscribes from the SQL execution error logs.
 
 **Since:** 20
 
@@ -3116,15 +2786,15 @@ off(event: 'sqliteErrorOccurred', observer?: Callback<ExceptionMessage>): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| event | 'sqliteErrorOccurred' | Yes | 取消订阅事件名称，取值为'sqliteErrorOccurred'，记录SQL语句执行过程中的错误信息。 |
-| observer | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;ExceptionMessage&gt; | No | 回调函数。该参数存在，则取消指定Callback监听回调，否则取消该event事件的所有监听回调。 |
+| event | 'sqliteErrorOccurred' | Yes | Indicates the event type, which must be 'sqliteErrorOccurred'. |
+| observer | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;ExceptionMessage&gt; | No | Callback to unregister. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 801 | Capability not supported. |
-| 14800014 | The target instance is already closed. |
+| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. |
+| [14800014](../errorcode-data-rdb.md#14800014-target-instance-closed) | The target instance is already closed. |
 
 ## offAutoSyncProgress
 
@@ -3132,7 +2802,7 @@ off(event: 'sqliteErrorOccurred', observer?: Callback<ExceptionMessage>): void
 offAutoSyncProgress(progress?: Callback<ProgressDetails>): void
 ```
 
-取消注册数据库的自动同步回调。
+Unregister the database auto synchronization callback.
 
 **Since:** 23
 
@@ -3146,14 +2816,14 @@ offAutoSyncProgress(progress?: Callback<ProgressDetails>): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| progress | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;ProgressDetails&gt; | No | 已注册的自动同步回调。若不传入，则取消所有自动同步订阅。 |
+| progress | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;ProgressDetails&gt; | No | the specified sync condition by the instance object of {@link ProgressDetails}. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 801 | Capability not supported. |
-| 14800014 | The target instance is already closed. |
+| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. |
+| [14800014](../errorcode-data-rdb.md#14800014-target-instance-closed) | The target instance is already closed. |
 
 ## offDataChange
 
@@ -3161,7 +2831,7 @@ offAutoSyncProgress(progress?: Callback<ProgressDetails>): void
 offDataChange(type: SubscribeType, observer?: Callback<Array<string>> | Callback<Array<ChangeInfo>>): void
 ```
 
-取消订阅数据库的数据变更事件。
+Remove specified observer of specified type from the database.
 
 **Since:** 23
 
@@ -3175,16 +2845,16 @@ offDataChange(type: SubscribeType, observer?: Callback<Array<string>> | Callback
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | [SubscribeType](arkts-arkdata-rdb-subscribetype-e.md) | Yes | 订阅类型。 |
-| observer | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;Array&lt;string&gt;&gt; \| Callback&lt;Array&lt;ChangeInfo&gt;&gt; | No | 已注册的数据变更回调。若不传入，则取消所有该类型订阅。 |
+| type | [SubscribeType](arkts-arkdata-rdb-subscribetype-e.md) | Yes | indicates the subscription type, which is defined in {@link SubscribeType}. If its value is SUBSCRIBE_TYPE_REMOTE, ohos.permission.DISTRIBUTED_DATASYNC is required. |
+| observer | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;Array&lt;string&gt;&gt; \| Callback&lt;Array&lt;ChangeInfo&gt;&gt; | No | {Array&lt;string&gt;}: the data change observer already registered. {Array&lt;ChangeInfo&gt;}: the change info already registered. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; 3. Parameter verification failed. |
-| 801 | Capability not supported. |
-| 14800014 | The target instance is already closed. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; 3. Parameter verification failed. |
+| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. |
+| [14800014](../errorcode-data-rdb.md#14800014-target-instance-closed) | The target instance is already closed. |
 
 ## offPerfStat
 
@@ -3192,7 +2862,7 @@ offDataChange(type: SubscribeType, observer?: Callback<Array<string>> | Callback
 offPerfStat(observer?: Callback<SqlExecutionInfo>): void
 ```
 
-取消订阅SQL性能统计信息。
+Unsubscribes from the SQL performance statistics.
 
 **Since:** 23
 
@@ -3206,14 +2876,14 @@ offPerfStat(observer?: Callback<SqlExecutionInfo>): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| observer | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;SqlExecutionInfo&gt; | No | 已注册的SQL性能统计回调。若不传入，则取消所有SQL性能统计订阅。 |
+| observer | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;SqlExecutionInfo&gt; | No | Callback to unregister. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 801 | Capability not supported. |
-| 14800014 | The target instance is already closed. |
+| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. |
+| [14800014](../errorcode-data-rdb.md#14800014-target-instance-closed) | The target instance is already closed. |
 
 ## offSqliteErrorOccurred
 
@@ -3221,7 +2891,7 @@ offPerfStat(observer?: Callback<SqlExecutionInfo>): void
 offSqliteErrorOccurred(observer?: Callback<ExceptionMessage>): void
 ```
 
-取消订阅SQL执行错误日志。
+Unsubscribes from the SQL execution error logs.
 
 **Since:** 23
 
@@ -3235,14 +2905,14 @@ offSqliteErrorOccurred(observer?: Callback<ExceptionMessage>): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| observer | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;ExceptionMessage&gt; | No | 已注册的SQL错误日志回调。若不传入，则取消所有SQL错误日志订阅。 |
+| observer | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;ExceptionMessage&gt; | No | Callback to unregister. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 801 | Capability not supported. |
-| 14800014 | The target instance is already closed. |
+| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. |
+| [14800014](../errorcode-data-rdb.md#14800014-target-instance-closed) | The target instance is already closed. |
 
 ## offStatistics
 
@@ -3250,7 +2920,7 @@ offSqliteErrorOccurred(observer?: Callback<ExceptionMessage>): void
 offStatistics(observer?: Callback<SqlExecutionInfo> ): void
 ```
 
-取消订阅SQL执行统计信息。
+Unsubscribes from the SQL statistics.
 
 **Since:** 23
 
@@ -3266,14 +2936,14 @@ offStatistics(observer?: Callback<SqlExecutionInfo> ): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| observer | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;SqlExecutionInfo&gt; | No | 已注册的SQL统计回调。若不传入，则取消所有SQL统计订阅。 |
+| observer | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;SqlExecutionInfo&gt; | No | Indicates the callback to unregister. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 801 | Capability not supported. |
-| 14800014 | The target instance is already closed. |
+| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. |
+| [14800014](../errorcode-data-rdb.md#14800014-target-instance-closed) | The target instance is already closed. |
 
 ## on
 
@@ -3281,7 +2951,7 @@ offStatistics(observer?: Callback<SqlExecutionInfo> ): void
 on(event: 'dataChange', type: SubscribeType, observer: Callback<Array<string>>): void
 ```
 
-注册数据库的数据变更的事件监听。当分布式数据库中的数据发生更改时，将调用回调。
+Subscribes to data changes of this RDB store.The registered callback will be called when data in a distributed RDB store changes.the callback will be invoked.
 
 **Since:** 9
 
@@ -3295,17 +2965,17 @@ on(event: 'dataChange', type: SubscribeType, observer: Callback<Array<string>>):
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| event | 'dataChange' | Yes | 取值为'dataChange'，表示数据更改。 |
-| type | [SubscribeType](arkts-arkdata-rdb-subscribetype-e.md) | Yes | 订阅类型。 |
-| observer | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;Array&lt;string&gt;&gt; | Yes | 指分布式数据库中数据更改事件的观察者。Array&lt;string&gt;为数据库中的数据发生改变的对端设备ID。 |
+| event | 'dataChange' | Yes | Indicates the event must be string 'dataChange'. |
+| type | [SubscribeType](arkts-arkdata-rdb-subscribetype-e.md) | Yes | Indicates the subscription type, which is defined in {@link SubscribeType}. If its value is SUBSCRIBE_TYPE_REMOTE, ohos.permission.DISTRIBUTED_DATASYNC is required. |
+| observer | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;Array&lt;string&gt;&gt; | Yes | {Array&lt;string&gt;}: the observer of data change events in the distributed database. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; 3. Parameter verification failed. |
-| 801 | Capability not supported. |
-| 14800014 | The target instance is already closed.<br>**Applicable version:** 12 and later |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; 3. Parameter verification failed. |
+| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. |
+| [14800014](../errorcode-data-rdb.md#14800014-target-instance-closed) | The target instance is already closed.<br>**Applicable version:** 12 and later |
 
 ## on
 
@@ -3313,7 +2983,7 @@ on(event: 'dataChange', type: SubscribeType, observer: Callback<Array<string>>):
 on(event: 'dataChange', type: SubscribeType, observer: Callback<Array<string>> | Callback<Array<ChangeInfo>>): void
 ```
 
-注册数据库的数据变更的事件监听。当分布式数据库或本地数据库中的数据发生更改时，将调用回调。
+Subscribes to data changes of this RDB store.The registered callback will be called when data in a distributed RDB store changes.
 
 **Since:** 10
 
@@ -3327,18 +2997,18 @@ on(event: 'dataChange', type: SubscribeType, observer: Callback<Array<string>> |
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| event | 'dataChange' | Yes | 取值为'dataChange'，表示数据更改。 |
-| type | [SubscribeType](arkts-arkdata-rdb-subscribetype-e.md) | Yes | 订阅类型。 |
-| observer | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;Array&lt;string&gt;&gt; \| Callback&lt;Array&lt;ChangeInfo&gt;&gt; | Yes | 回调函数。 &lt;br&gt;当type为SUBSCRIBE_TYPE_REMOTE，observer类型需为Callback&lt;Array<string>&gt;&lt;string&gt;>，其中Array&lt;string&gt;为数据库中的数据发生改变的对端设备ID。 &lt;br&gt;当type为SUBSCRIBE_TYPE_CLOUD，observer类型需为Callback&lt;Array<string>&gt;&lt;string&gt;>，其中Array&lt;string&gt;为数据库中的数据发生改变的云端账号。 &lt;br&gt;当type为SUBSCRIBE_TYPE_CLOUD_DETAILS，observer类型需为Callback&lt;Array<ChangeInfo>&gt;&lt;ChangeInfo&gt;>，其中Array&lt;ChangeInfo&gt;为数据库端云同步过程的 详情。 &lt;br&gt;当type为SUBSCRIBE_TYPE_LOCAL_DETAILS，observer类型需为Callback&lt;Array<ChangeInfo>&gt;&lt;ChangeInfo&gt;>，其中Array&lt;ChangeInfo&gt;为本地数据库中的数据更 改的详情。 |
+| event | 'dataChange' | Yes | Indicates the event must be string 'dataChange'. |
+| type | [SubscribeType](arkts-arkdata-rdb-subscribetype-e.md) | Yes | Indicates the subscription type, which is defined in {@link SubscribeType}. If its value is SUBSCRIBE_TYPE_REMOTE, ohos.permission.DISTRIBUTED_DATASYNC is required. |
+| observer | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;Array&lt;string&gt;&gt; \| Callback&lt;Array&lt;ChangeInfo&gt;&gt; | Yes | {Array&lt;string&gt;}: the observer of data change events in the distributed database. {Array&lt;ChangeInfo&gt;}: The change info of data change events in the distributed database. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; 3. Parameter verification failed. |
-| 801 | Capability not supported. |
-| 202 | Permission verification failed, application which is not a system application uses system API. |
-| 14800014 | The target instance is already closed.<br>**Applicable version:** 12 and later |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; 3. Parameter verification failed. |
+| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed, application which is not a system application uses system API. |
+| [14800014](../errorcode-data-rdb.md#14800014-target-instance-closed) | The target instance is already closed.<br>**Applicable version:** 12 and later |
 
 ## on
 
@@ -3346,7 +3016,7 @@ on(event: 'dataChange', type: SubscribeType, observer: Callback<Array<string>> |
 on(event: string, interProcess: boolean, observer: Callback<void>): void
 ```
 
-注册数据库的进程内或者进程间事件监听。当调用[emit](relationalStore.RdbStore.emit)接口时，将调用回调。
+Registers an observer for the database.
 
 **Since:** 10
 
@@ -3360,19 +3030,19 @@ on(event: string, interProcess: boolean, observer: Callback<void>): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| event | string | Yes | 订阅事件名称，与emit接口触发事件时的名称一致。 |
-| interProcess | boolean | Yes | 指定是进程间还是本进程订阅。&lt;br/&gt; true：进程间。&lt;br/&gt; false：本进程。 |
-| observer | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;void&gt; | Yes | 回调函数。当进程间或本进程数据变更时触发回调。 |
+| event | string | Yes | Event type, which must match the event type in {@link emit}. |
+| interProcess | boolean | Yes | Indicates whether it is an interprocess subscription or an in-process subscription. |
+| observer | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;void&gt; | Yes | The observer of data change events in the database. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; 3. Parameter verification failed. |
-| 801 | Capability not supported. |
-| 14800000 | Inner error. |
-| 14800050 | Failed to obtain the subscription service. |
-| 14800014 | The target instance is already closed.<br>**Applicable version:** 12 and later |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; 3. Parameter verification failed. |
+| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. |
+| [14800000](../../apis-basic-services-kit/errorcode-settings.md#14800000-parameter-check-failed) | Inner error. |
+| [14800050](../errorcode-data-rdb.md#14800050-failed-to-obtain-the-subscription-service) | Failed to obtain the subscription service. |
+| [14800014](../errorcode-data-rdb.md#14800014-target-instance-closed) | The target instance is already closed.<br>**Applicable version:** 12 and later |
 
 ## on
 
@@ -3380,7 +3050,7 @@ on(event: string, interProcess: boolean, observer: Callback<void>): void
 on(event: 'autoSyncProgress', progress: Callback<ProgressDetails>): void
 ```
 
-在已打开端云同步，并且网络状态正常的条件下，注册自动同步进度通知，自动同步进行时调用回调。
+Register an automatic synchronization callback to the database.
 
 **Since:** 11
 
@@ -3394,16 +3064,16 @@ on(event: 'autoSyncProgress', progress: Callback<ProgressDetails>): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| event | 'autoSyncProgress' | Yes | 取值为'autoSyncProgress'，表示自动同步进度通知。 |
-| progress | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;ProgressDetails&gt; | Yes | 用于返回[ProgressDetails](arkts-arkdata-relationalstore-progressdetails-i.md)结果的回调 函数。 |
+| event | 'autoSyncProgress' | Yes | Indicates the event must be string 'autoSyncProgress'. |
+| progress | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;ProgressDetails&gt; | Yes | Callback used to return the {@link ProgressDetails} result. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; 3. Parameter verification failed; &lt;br&gt;4. The event must be a not empty string; 5. The progress must be function. |
-| 801 | Capability not supported. |
-| 14800014 | The target instance is already closed.<br>**Applicable version:** 12 and later |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; 3. Parameter verification failed; &lt;br&gt;4. The event must be a not empty string; 5. The progress must be function. |
+| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. |
+| [14800014](../errorcode-data-rdb.md#14800014-target-instance-closed) | The target instance is already closed.<br>**Applicable version:** 12 and later |
 
 ## on
 
@@ -3411,7 +3081,7 @@ on(event: 'autoSyncProgress', progress: Callback<ProgressDetails>): void
 on(event: 'statistics', observer: Callback<SqlExecutionInfo> ): void
 ```
 
-订阅SQL统计信息。
+Subscribes to the SQL statistics.
 
 **Since:** 12
 
@@ -3425,17 +3095,17 @@ on(event: 'statistics', observer: Callback<SqlExecutionInfo> ): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| event | 'statistics' | Yes | 订阅事件名称，取值为'statistics'，表示sql执行时间的统计。 |
-| observer | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;SqlExecutionInfo&gt; | Yes | 回调函数。用于返回数据库中SQL执行时间的统计信息。 |
+| event | 'statistics' | Yes | Indicates the event type, which must be 'statistics'. |
+| observer | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;SqlExecutionInfo&gt; | Yes | Indicates the callback used to return the SQL execution statistics {@link SqlExeInfo} in the database. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; 3. Parameter verification failed. |
-| 801 | Capability not supported. |
-| 14800000 | Inner error. |
-| 14800014 | The target instance is already closed. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; 3. Parameter verification failed. |
+| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. |
+| [14800000](../../apis-basic-services-kit/errorcode-settings.md#14800000-parameter-check-failed) | Inner error. |
+| [14800014](../errorcode-data-rdb.md#14800014-target-instance-closed) | The target instance is already closed. |
 
 ## on
 
@@ -3443,8 +3113,7 @@ on(event: 'statistics', observer: Callback<SqlExecutionInfo> ): void
 on(event: 'perfStat', observer: Callback<SqlExecutionInfo>): void
 ```
 
-订阅SQL统计信息。使用[createTransaction](arkts-arkdata-relationalstore-rdbstore-i.md#createtransaction)创建的事务进行相关操作（  
-[Transaction](arkts-arkdata-relationalstore-transaction-i.md)），只会在事务结束（COMMIT/ROLLBACK）时通知一次统计信息。
+Subscribes to the SQL performance statistics.
 
 **Since:** 20
 
@@ -3458,15 +3127,15 @@ on(event: 'perfStat', observer: Callback<SqlExecutionInfo>): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| event | 'perfStat' | Yes | 订阅事件名称，取值为'perfStat'，统计执行SQL的时间。 |
-| observer | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;SqlExecutionInfo&gt; | Yes | 回调函数。用于返回数据库执行SQL的时间。 |
+| event | 'perfStat' | Yes | Event type, which must be 'perfStat'. |
+| observer | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;SqlExecutionInfo&gt; | Yes | Callback used to return the SQL execution statistics {@link SqlExecutionInfo}. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 801 | Capability not supported. |
-| 14800014 | The target instance is already closed. |
+| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. |
+| [14800014](../errorcode-data-rdb.md#14800014-target-instance-closed) | The target instance is already closed. |
 
 ## on
 
@@ -3474,7 +3143,7 @@ on(event: 'perfStat', observer: Callback<SqlExecutionInfo>): void
 on(event: 'sqliteErrorOccurred', observer: Callback<ExceptionMessage>): void
 ```
 
-记录执行SQL语句时的异常日志。
+Subscribes to the SQL execution error logs.
 
 **Since:** 20
 
@@ -3488,15 +3157,15 @@ on(event: 'sqliteErrorOccurred', observer: Callback<ExceptionMessage>): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| event | 'sqliteErrorOccurred' | Yes | 订阅事件名称，取值为'sqliteErrorOccurred'，记录SQL语句执行过程中的错误信息。 |
-| observer | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;ExceptionMessage&gt; | Yes | 回调函数。用于返回SQL执行时出现的异常信息。 |
+| event | 'sqliteErrorOccurred' | Yes | Event type, which must be 'sqliteErrorOccurred'. |
+| observer | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;ExceptionMessage&gt; | Yes | Callback used to return the SQL execution errorlog {@link ExceptionMessage }. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 801 | Capability not supported. |
-| 14800014 | The target instance is already closed. |
+| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. |
+| [14800014](../errorcode-data-rdb.md#14800014-target-instance-closed) | The target instance is already closed. |
 
 ## onAutoSyncProgress
 
@@ -3504,7 +3173,7 @@ on(event: 'sqliteErrorOccurred', observer: Callback<ExceptionMessage>): void
 onAutoSyncProgress(progress: Callback<ProgressDetails>): void
 ```
 
-注册数据库的自动同步回调。当数据库自动同步进度发生变化时，将调用回调。
+Register an automatic synchronization callback to the database.
 
 **Since:** 23
 
@@ -3518,14 +3187,14 @@ onAutoSyncProgress(progress: Callback<ProgressDetails>): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| progress | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;ProgressDetails&gt; | Yes | 回调函数，返回同步过程的详细信息。 |
+| progress | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;ProgressDetails&gt; | Yes | Callback used to return the {@link ProgressDetails} result. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 801 | Capability not supported. |
-| 14800014 | The target instance is already closed. |
+| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. |
+| [14800014](../errorcode-data-rdb.md#14800014-target-instance-closed) | The target instance is already closed. |
 
 ## onDataChange
 
@@ -3536,7 +3205,7 @@ onDataChange(
     ): void
 ```
 
-订阅数据库的数据变更事件。当分布式数据库中的数据发生更改时，将调用回调。
+Subscribes to data changes of this RDB store.The registered callback will be called when data in a distributed RDB store changes.
 
 **Since:** 23
 
@@ -3550,16 +3219,16 @@ onDataChange(
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | [SubscribeType](arkts-arkdata-rdb-subscribetype-e.md) | Yes | 订阅类型。 |
-| observer | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;Array&lt;string&gt;&gt; \| Callback&lt;Array&lt;ChangeInfo&gt;&gt; | Yes | 回调函数。Array&lt;string&gt;为数据库中的数据发生改变的对端设备 ID；Array&lt;ChangeInfo&gt;为数据变更的详细信息。 |
+| type | [SubscribeType](arkts-arkdata-rdb-subscribetype-e.md) | Yes | Indicates the subscription type, which is defined in {@link SubscribeType}. If its value is SUBSCRIBE_TYPE_REMOTE, ohos.permission.DISTRIBUTED_DATASYNC is required. |
+| observer | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;Array&lt;string&gt;&gt; \| Callback&lt;Array&lt;ChangeInfo&gt;&gt; | Yes | {Array&lt;string&gt;}: The observer of data change events in the distributed database. {Array&lt;ChangeInfo&gt;}: The change info of data change events in the distributed database. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; 3. Parameter verification failed. |
-| 801 | Capability not supported. |
-| 14800014 | The target instance is already closed. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; 3. Parameter verification failed. |
+| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. |
+| [14800014](../errorcode-data-rdb.md#14800014-target-instance-closed) | The target instance is already closed. |
 
 ## onPerfStat
 
@@ -3567,7 +3236,7 @@ onDataChange(
 onPerfStat(observer: Callback<SqlExecutionInfo>): void
 ```
 
-订阅SQL性能统计信息。当SQL性能统计信息发生变化时，将调用回调。
+Subscribes to the SQL performance statistics.
 
 **Since:** 23
 
@@ -3581,14 +3250,14 @@ onPerfStat(observer: Callback<SqlExecutionInfo>): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| observer | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;SqlExecutionInfo&gt; | Yes | 回调函数，返回SQL性能统计信息。 |
+| observer | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;SqlExecutionInfo&gt; | Yes | Callback used to return the SQL execution statistics {@link SqlExecutionInfo}. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 801 | Capability not supported. |
-| 14800014 | The target instance is already closed. |
+| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. |
+| [14800014](../errorcode-data-rdb.md#14800014-target-instance-closed) | The target instance is already closed. |
 
 ## onSqliteErrorOccurred
 
@@ -3596,7 +3265,7 @@ onPerfStat(observer: Callback<SqlExecutionInfo>): void
 onSqliteErrorOccurred(observer: Callback<ExceptionMessage>): void
 ```
 
-订阅SQL执行错误日志。当SQL执行发生错误时，将调用回调。
+Subscribes to the SQL execution error logs.
 
 **Since:** 23
 
@@ -3610,14 +3279,14 @@ onSqliteErrorOccurred(observer: Callback<ExceptionMessage>): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| observer | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;ExceptionMessage&gt; | Yes | 回调函数，返回SQL执行错误日志。 |
+| observer | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;ExceptionMessage&gt; | Yes | Callback used to return the SQL execution errorlog {@link ExceptionMessage }. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 801 | Capability not supported. |
-| 14800014 | The target instance is already closed. |
+| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. |
+| [14800014](../errorcode-data-rdb.md#14800014-target-instance-closed) | The target instance is already closed. |
 
 ## onStatistics
 
@@ -3625,7 +3294,7 @@ onSqliteErrorOccurred(observer: Callback<ExceptionMessage>): void
 onStatistics(observer: Callback<SqlExecutionInfo> ): void
 ```
 
-订阅SQL执行统计信息。当SQL执行统计信息发生变化时，将调用回调。
+Subscribes to the SQL statistics.
 
 **Since:** 23
 
@@ -3641,16 +3310,16 @@ onStatistics(observer: Callback<SqlExecutionInfo> ): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| observer | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;SqlExecutionInfo&gt; | Yes | 回调函数，返回SQL执行统计信息。 |
+| observer | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;SqlExecutionInfo&gt; | Yes | Indicates the callback used to return the SQL execution statistics {@link SqlExeInfo} in the database. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; 3. Parameter verification failed. |
-| 801 | Capability not supported. |
-| 14800000 | Inner error. |
-| 14800014 | The target instance is already closed. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; 3. Parameter verification failed. |
+| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. |
+| [14800000](../../apis-basic-services-kit/errorcode-settings.md#14800000-parameter-check-failed) | Inner error. |
+| [14800014](../errorcode-data-rdb.md#14800014-target-instance-closed) | The target instance is already closed. |
 
 ## query
 
@@ -3658,8 +3327,7 @@ onStatistics(observer: Callback<SqlExecutionInfo> ): void
 query(predicates: RdbPredicates, callback: AsyncCallback<ResultSet>): void
 ```
 
-根据指定条件查询数据库中的数据，使用callback异步回调。由于共享内存的大小限制为2MB，因此单条数据的大小也必须严格小于2MB。如果单条数据超过此限制，使用此接口获取ResultSet后，调用  
-[getValue](arkts-arkdata-relationalstore-resultset-i.md#getvalue)、[getString](arkts-arkdata-relationalstore-resultset-i.md#getstring)等get方法时将无法成功获取数据，并可能导致操作失败或抛出异常。
+Queries data in the database based on specified conditions.
 
 **Since:** 10
 
@@ -3673,17 +3341,17 @@ query(predicates: RdbPredicates, callback: AsyncCallback<ResultSet>): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| predicates | [RdbPredicates](arkts-arkdata-relationalstore-rdbpredicates-c.md) | Yes | RdbPredicates的实例对象指定的查询条件。 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;ResultSet&gt; | Yes | 回调函数。当查询成功，err为undefined，data为ResultSet对象；否则为错误对象。 |
+| predicates | [RdbPredicates](arkts-arkdata-relationalstore-rdbpredicates-c.md) | Yes | The specified query condition by the instance object of {@link RdbPredicates}. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;ResultSet&gt; | Yes | The {@link ResultSet} object if the operation is successful. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; 3. Parameter verification failed. |
-| 14800000 | Inner error. |
-| 14800015 | The database does not respond.<br>**Applicable version:** 12 and later |
-| 14800014 | The target instance is already closed.<br>**Applicable version:** 12 and later |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; 3. Parameter verification failed. |
+| [14800000](../../apis-basic-services-kit/errorcode-settings.md#14800000-parameter-check-failed) | Inner error. |
+| [14800015](../errorcode-data-rdb.md#14800015-rdb-store-not-respond) | The database does not respond.<br>**Applicable version:** 12 and later |
+| [14800014](../errorcode-data-rdb.md#14800014-target-instance-closed) | The target instance is already closed.<br>**Applicable version:** 12 and later |
 
 ## query
 
@@ -3691,8 +3359,7 @@ query(predicates: RdbPredicates, callback: AsyncCallback<ResultSet>): void
 query(predicates: RdbPredicates, columns: Array<string>, callback: AsyncCallback<ResultSet>): void
 ```
 
-根据指定条件查询数据库中的数据，支持指定要查询的列，使用callback异步回调。由于共享内存的大小限制为2MB，因此单条数据的大小也必须严格小于2MB。如果单条数据超过此限制，使用此接口获取ResultSet后，调用  
-[getValue](arkts-arkdata-relationalstore-resultset-i.md#getvalue)、[getString](arkts-arkdata-relationalstore-resultset-i.md#getstring)等get方法时将无法成功获取数据，并可能导致操作失败或抛出异常。
+Queries data in the database based on specified conditions.
 
 **Since:** 9
 
@@ -3706,18 +3373,18 @@ query(predicates: RdbPredicates, columns: Array<string>, callback: AsyncCallback
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| predicates | [RdbPredicates](arkts-arkdata-relationalstore-rdbpredicates-c.md) | Yes | RdbPredicates的实例对象指定的查询条件。 |
-| columns | Array&lt;string&gt; | Yes | 表示要查询的列。如果值为空，则查询应用于所有列。 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;ResultSet&gt; | Yes | 回调函数。当查询成功，err为undefined，data为ResultSet对象；否则为错误对象。 |
+| predicates | [RdbPredicates](arkts-arkdata-relationalstore-rdbpredicates-c.md) | Yes | The specified query condition by the instance object of {@link RdbPredicates}. |
+| columns | Array&lt;string&gt; | Yes | The columns to query. If the value is empty array, the query applies to all columns. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;ResultSet&gt; | Yes | The {@link ResultSet} object if the operation is successful. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; 3. Parameter verification failed. |
-| 14800000 | Inner error. |
-| 14800015 | The database does not respond.<br>**Applicable version:** 12 and later |
-| 14800014 | The target instance is already closed.<br>**Applicable version:** 12 and later |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; 3. Parameter verification failed. |
+| [14800000](../../apis-basic-services-kit/errorcode-settings.md#14800000-parameter-check-failed) | Inner error. |
+| [14800015](../errorcode-data-rdb.md#14800015-rdb-store-not-respond) | The database does not respond.<br>**Applicable version:** 12 and later |
+| [14800014](../errorcode-data-rdb.md#14800014-target-instance-closed) | The target instance is already closed.<br>**Applicable version:** 12 and later |
 
 ## query
 
@@ -3725,8 +3392,7 @@ query(predicates: RdbPredicates, columns: Array<string>, callback: AsyncCallback
 query(predicates: RdbPredicates, columns?: Array<string>): Promise<ResultSet>
 ```
 
-根据指定条件查询数据库中的数据，使用Promise异步回调。由于共享内存的大小限制为2MB，因此单条数据的大小也必须严格小于2MB。如果单条数据超过此限制，使用此接口获取ResultSet后，调用  
-[getValue](arkts-arkdata-relationalstore-resultset-i.md#getvalue)、[getString](arkts-arkdata-relationalstore-resultset-i.md#getstring)等get方法时将无法成功获取数据，并可能导致操作失败或抛出异常。
+Queries data in the database based on specified conditions.
 
 **Since:** 9
 
@@ -3740,23 +3406,23 @@ query(predicates: RdbPredicates, columns?: Array<string>): Promise<ResultSet>
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| predicates | [RdbPredicates](arkts-arkdata-relationalstore-rdbpredicates-c.md) | Yes | RdbPredicates的实例对象指定的查询条件。 |
-| columns | Array&lt;string&gt; | No | 表示要查询的列。如果值为空，则查询应用于所有列。 |
+| predicates | [RdbPredicates](arkts-arkdata-relationalstore-rdbpredicates-c.md) | Yes | The specified query condition by the instance object of {@link RdbPredicates}. |
+| columns | Array&lt;string&gt; | No | The columns to query. If the value is null, the query applies to all columns. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;ResultSet&gt; | Promise对象。返回ResultSet对象。 |
+| Promise&lt;ResultSet&gt; | The { |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; 3. Parameter verification failed. |
-| 14800000 | Inner error. |
-| 14800015 | The database does not respond.<br>**Applicable version:** 12 and later |
-| 14800014 | The target instance is already closed.<br>**Applicable version:** 12 and later |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; 3. Parameter verification failed. |
+| [14800000](../../apis-basic-services-kit/errorcode-settings.md#14800000-parameter-check-failed) | Inner error. |
+| [14800015](../errorcode-data-rdb.md#14800015-rdb-store-not-respond) | The database does not respond.<br>**Applicable version:** 12 and later |
+| [14800014](../errorcode-data-rdb.md#14800014-target-instance-closed) | The target instance is already closed.<br>**Applicable version:** 12 and later |
 
 ## queryByStep
 
@@ -3764,9 +3430,7 @@ query(predicates: RdbPredicates, columns?: Array<string>): Promise<ResultSet>
 queryByStep(sql: string, bindArgs?: Array<ValueType>): Promise<ResultSet>
 ```
 
-根据指定SQL语句查询数据库中的数据，SQL语句中的各种表达式和操作符之间的关系操作符不超过1000个，使用Promise异步回调。该接口按行逐步获取结果，不存在2MB的单条数据大小限制。
-
-聚合函数不支持嵌套使用。
+Query data in the database step‑by‑step based on SQL statements.
 
 **Since:** 26.0.0
 
@@ -3782,20 +3446,20 @@ queryByStep(sql: string, bindArgs?: Array<ValueType>): Promise<ResultSet>
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| sql | string | Yes | 指定要执行的SQL语句，不能为空字符串。 &lt;br&gt;必须使用有效的SQL语句。否则在使用ResultSet时可能会抛出错误码。 |
-| bindArgs | Array&lt;ValueType&gt; | No | SQL语句中参数的值。该值与sql参数语句中的占位符相对应。默认值为空数组。 |
+| sql | string | Yes | Indicates the SQL statement to execute. &lt;br&gt;Value range: (0, +∞) &lt;br&gt;A valid SQL statement must be used. Otherwise, an error code may be thrown when ResultSet is used. |
+| bindArgs | Array&lt;ValueType&gt; | No | Indicates the {@link ValueType} values of the parameters in the SQL statement. &lt;br&gt;Default value:The default value is an empty array. &lt;br&gt;The value must be the same as the number of placeholders in the SQL statement. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;ResultSet&gt; | Promise对象。返回ResultSet对象。 |
+| Promise&lt;ResultSet&gt; | The { |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 14800014 | The target instance is already closed. |
+| [14800014](../errorcode-data-rdb.md#14800014-target-instance-closed) | The target instance is already closed. |
 
 ## queryByStep
 
@@ -3803,7 +3467,7 @@ queryByStep(sql: string, bindArgs?: Array<ValueType>): Promise<ResultSet>
 queryByStep(predicates: RdbPredicates, columns?: Array<string>): Promise<ResultSet>
 ```
 
-根据指定条件查询数据库中的数据，使用Promise异步回调。该接口按行逐步获取结果，不存在2MB的单条数据大小限制。
+Queries data in the database step‑by‑step based on specified conditions.
 
 **Since:** 26.0.0
 
@@ -3819,20 +3483,20 @@ queryByStep(predicates: RdbPredicates, columns?: Array<string>): Promise<ResultS
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| predicates | [RdbPredicates](arkts-arkdata-relationalstore-rdbpredicates-c.md) | Yes | RdbPredicates的实例对象指定的查询条件。 |
-| columns | Array&lt;string&gt; | No | 表示要查询的列。如果值为空，则查询应用于所有列。默认值为空数组。 |
+| predicates | [RdbPredicates](arkts-arkdata-relationalstore-rdbpredicates-c.md) | Yes | The specified query condition by the instance object of {@link RdbPredicates}. |
+| columns | Array&lt;string&gt; | No | The columns to query. If the value is null, the query applies to all columns. &lt;br&gt;Default value: empty array by default. &lt;br&gt;If an empty array is transferred, all columns are queried. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;ResultSet&gt; | Promise对象。返回ResultSet对象。 |
+| Promise&lt;ResultSet&gt; | The { |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 14800014 | The target instance is already closed. |
+| [14800014](../errorcode-data-rdb.md#14800014-target-instance-closed) | The target instance is already closed. |
 
 ## queryLockedRow
 
@@ -3840,7 +3504,7 @@ queryByStep(predicates: RdbPredicates, columns?: Array<string>): Promise<ResultS
 queryLockedRow(predicates: RdbPredicates, columns?: Array<string>): Promise<ResultSet>
 ```
 
-根据指定条件查询数据库中锁定的数据，使用Promise异步回调。
+Queries locked data in the database based on specified conditions.
 
 **Since:** 12
 
@@ -3854,38 +3518,38 @@ queryLockedRow(predicates: RdbPredicates, columns?: Array<string>): Promise<Resu
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| predicates | [RdbPredicates](arkts-arkdata-relationalstore-rdbpredicates-c.md) | Yes | RdbPredicates的实例对象指定的查询条件。 |
-| columns | Array&lt;string&gt; | No | 表示要查询的列。如果值为空，则查询应用于所有列。 |
+| predicates | [RdbPredicates](arkts-arkdata-relationalstore-rdbpredicates-c.md) | Yes | The specified query condition by the instance object of {@link RdbPredicates}. |
+| columns | Array&lt;string&gt; | No | The columns to query. If the value is null, the query applies to all columns. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;ResultSet&gt; | Promise对象。返回ResultSet对象。 |
+| Promise&lt;ResultSet&gt; | The { |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 14800033 | SQLite: Data type mismatch. |
-| 14800000 | Inner error. |
-| 14800032 | SQLite: Abort due to constraint violation. |
-| 14800034 | SQLite: Library used incorrectly. |
-| 14800011 | The current operation failed because the database is corrupted. |
-| 14800015 | The database does not respond. |
-| 14800014 | The target instance is already closed. |
-| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; 3. Parameter verification failed. |
-| 14800021 | SQLite: Generic error. |
-| 14800023 | SQLite: Access permission denied. |
-| 14800022 | SQLite: Callback routine requested an abort. |
-| 14800025 | SQLite: A table in the database is locked. |
-| 14800024 | SQLite: The database file is locked. |
-| 14800027 | SQLite: Attempt to write a readonly database. |
-| 14800026 | SQLite: The database is out of memory. |
-| 14800029 | SQLite: The database is full. |
-| 14800028 | SQLite: Some kind of disk I/O error occurred. |
-| 14800031 | SQLite: TEXT or BLOB exceeds size limit. |
-| 14800030 | SQLite: Unable to open the database file. |
+| [14800033](../errorcode-data-rdb.md#14800033-sqlite-data-types-mismatch) | SQLite: Data type mismatch. |
+| [14800000](../../apis-basic-services-kit/errorcode-settings.md#14800000-parameter-check-failed) | Inner error. |
+| [14800032](../errorcode-data-rdb.md#14800032-sqlite-abort-due-to-constraint-violation) | SQLite: Abort due to constraint violation. |
+| [14800034](../errorcode-data-rdb.md#14800034-incorrect-use-of-sqlite-library) | SQLite: Library used incorrectly. |
+| [14800011](../errorcode-data-rdb.md#14800011-database-file-corrupted) | The current operation failed because the database is corrupted. |
+| [14800015](../errorcode-data-rdb.md#14800015-rdb-store-not-respond) | The database does not respond. |
+| [14800014](../errorcode-data-rdb.md#14800014-target-instance-closed) | The target instance is already closed. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; 3. Parameter verification failed. |
+| [14800021](../errorcode-data-rdb.md#14800021-sqlite-generic-error) | SQLite: Generic error. |
+| [14800023](../errorcode-data-rdb.md#14800023-sqlite-access-denied) | SQLite: Access permission denied. |
+| [14800022](../errorcode-data-rdb.md#14800022-sqlite-asynchronous-callback-request-aborted) | SQLite: Callback routine requested an abort. |
+| [14800025](../errorcode-data-rdb.md#14800025-sqlite-database-table-locked) | SQLite: A table in the database is locked. |
+| [14800024](../errorcode-data-rdb.md#14800024-sqlite-database-file-locked) | SQLite: The database file is locked. |
+| [14800027](../errorcode-data-rdb.md#14800027-sqlite-attempt-to-write-a-readonly-database) | SQLite: Attempt to write a readonly database. |
+| [14800026](../errorcode-data-rdb.md#14800026-sqlite-insufficient-database-memory) | SQLite: The database is out of memory. |
+| [14800029](../errorcode-data-rdb.md#14800029-sqlite-database-is-full) | SQLite: The database is full. |
+| [14800028](../errorcode-data-rdb.md#14800028-sqlite-io-error) | SQLite: Some kind of disk I/O error occurred. |
+| [14800031](../errorcode-data-rdb.md#14800031-sqlite-text-or-blob-exceeds-the-limit) | SQLite: TEXT or BLOB exceeds size limit. |
+| [14800030](../errorcode-data-rdb.md#14800030-sqlite-unable-to-open-the-database-file) | SQLite: Unable to open the database file. |
 
 ## querySql
 
@@ -3893,13 +3557,7 @@ queryLockedRow(predicates: RdbPredicates, columns?: Array<string>): Promise<Resu
 querySql(sql: string, callback: AsyncCallback<ResultSet>): void
 ```
 
-根据指定SQL语句查询数据库中的数据，SQL语句中的各种表达式和操作符之间的关系操作符号不超过1000个，使用callback异步回调。由于共享内存的大小限制为2MB，因此单条数据的大小也必须严格小于2MB。如果单条数据超过此限制，使用此接口获取ResultSet后，调用[getValue](arkts-arkdata-relationalstore-resultset-i.md#getvalue)、  
-[getString](arkts-arkdata-relationalstore-resultset-i.md#getstring)等get方法时将无法成功获取数据，并可能导致操作失败或抛出异常。
-
-该接口支持向量数据库（在[StoreConfig](arkts-arkdata-relationalstore-storeconfig-i.md)中配置vector为true）使用，当前支持的语法见  
-[规格限制](../../../database/data-persistence-by-vector-store.md#规格限制)。
-
-聚合函数不支持嵌套使用。
+Queries data in the database based on SQL statement.
 
 **Since:** 10
 
@@ -3913,17 +3571,17 @@ querySql(sql: string, callback: AsyncCallback<ResultSet>): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| sql | string | Yes | 指定要执行的SQL语句，不能为空字符串。 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;ResultSet&gt; | Yes | 回调函数。当查询成功，err为undefined，data为ResultSet对象；否则为错误对象。 |
+| sql | string | Yes | Indicates the SQL statement to execute. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;ResultSet&gt; | Yes | The {@link ResultSet} object if the operation is successful. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; 3. Parameter verification failed. |
-| 14800000 | Inner error. |
-| 14800015 | The database does not respond.<br>**Applicable version:** 12 and later |
-| 14800014 | The target instance is already closed.<br>**Applicable version:** 12 and later |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; 3. Parameter verification failed. |
+| [14800000](../../apis-basic-services-kit/errorcode-settings.md#14800000-parameter-check-failed) | Inner error. |
+| [14800015](../errorcode-data-rdb.md#14800015-rdb-store-not-respond) | The database does not respond.<br>**Applicable version:** 12 and later |
+| [14800014](../errorcode-data-rdb.md#14800014-target-instance-closed) | The target instance is already closed.<br>**Applicable version:** 12 and later |
 
 ## querySql
 
@@ -3931,13 +3589,7 @@ querySql(sql: string, callback: AsyncCallback<ResultSet>): void
 querySql(sql: string, bindArgs: Array<ValueType>, callback: AsyncCallback<ResultSet>): void
 ```
 
-根据指定SQL语句查询数据库中的数据，SQL语句中的各种表达式和操作符之间的关系操作符号不超过1000个，支持传入SQL语句中参数的值，使用callback异步回调。由于共享内存的大小限制为2MB，因此单条数据的大小也必须严格小于2MB。如果单条数据超过此限制，使用此接口获取ResultSet后，调用[getValue](arkts-arkdata-relationalstore-resultset-i.md#getvalue)、  
-[getString](arkts-arkdata-relationalstore-resultset-i.md#getstring)等get方法时将无法成功获取数据，并可能导致操作失败或抛出异常。
-
-该接口支持向量数据库（在[StoreConfig](arkts-arkdata-relationalstore-storeconfig-i.md)中配置vector为true）使用，当前支持的语法见  
-[规格限制](../../../database/data-persistence-by-vector-store.md#规格限制)。
-
-聚合函数不支持嵌套使用。
+Queries data in the database based on SQL statement.
 
 **Since:** 9
 
@@ -3951,18 +3603,18 @@ querySql(sql: string, bindArgs: Array<ValueType>, callback: AsyncCallback<Result
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| sql | string | Yes | 指定要执行的SQL语句，不能为空字符串。 |
-| bindArgs | Array&lt;ValueType&gt; | Yes | SQL语句中参数的值。该值与sql参数语句中的占位符相对应。当sql参数语句完整时，该参数不填。默认值为空数组。 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;ResultSet&gt; | Yes | 回调函数。当查询成功，err为undefined，data为ResultSet对象；否则为错误对象。 |
+| sql | string | Yes | Indicates the SQL statement to execute. |
+| bindArgs | Array&lt;ValueType&gt; | Yes | Indicates the {@link ValueType} values of the parameters in the SQL statement. The values are strings. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;ResultSet&gt; | Yes | The {@link ResultSet} object if the operation is successful. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; 3. Parameter verification failed. |
-| 14800000 | Inner error. |
-| 14800015 | The database does not respond.<br>**Applicable version:** 12 and later |
-| 14800014 | The target instance is already closed.<br>**Applicable version:** 12 and later |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; 3. Parameter verification failed. |
+| [14800000](../../apis-basic-services-kit/errorcode-settings.md#14800000-parameter-check-failed) | Inner error. |
+| [14800015](../errorcode-data-rdb.md#14800015-rdb-store-not-respond) | The database does not respond.<br>**Applicable version:** 12 and later |
+| [14800014](../errorcode-data-rdb.md#14800014-target-instance-closed) | The target instance is already closed.<br>**Applicable version:** 12 and later |
 
 ## querySql
 
@@ -3970,13 +3622,7 @@ querySql(sql: string, bindArgs: Array<ValueType>, callback: AsyncCallback<Result
 querySql(sql: string, bindArgs?: Array<ValueType>): Promise<ResultSet>
 ```
 
-根据指定SQL语句查询数据库中的数据，SQL语句中的各种表达式和操作符之间的关系操作符号不超过1000个，使用Promise异步回调。由于共享内存的大小限制为2MB，因此单条数据的大小也必须严格小于2MB。如果单条数据超过此限制，使用此接口获取ResultSet后，调用[getValue](arkts-arkdata-relationalstore-resultset-i.md#getvalue)、  
-[getString](arkts-arkdata-relationalstore-resultset-i.md#getstring)等get方法时将无法成功获取数据，并可能导致操作失败或抛出异常。
-
-该接口支持向量数据库（在[StoreConfig](arkts-arkdata-relationalstore-storeconfig-i.md)中配置vector为true）使用，当前支持的语法见  
-[规格限制](../../../database/data-persistence-by-vector-store.md#规格限制)。
-
-聚合函数不支持嵌套使用。
+Queries data in the database based on SQL statement.
 
 **Since:** 9
 
@@ -3990,23 +3636,23 @@ querySql(sql: string, bindArgs?: Array<ValueType>): Promise<ResultSet>
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| sql | string | Yes | 指定要执行的SQL语句，不能为空字符串。 |
-| bindArgs | Array&lt;ValueType&gt; | No | SQL语句中参数的值。该值与sql参数语句中的占位符相对应。当sql参数语句完整时，该参数不填。默认值为空数组。 |
+| sql | string | Yes | Indicates the SQL statement to execute. |
+| bindArgs | Array&lt;ValueType&gt; | No | Indicates the {@link ValueType} values of the parameters in the SQL statement. The values are strings. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;ResultSet&gt; | Promise对象。返回ResultSet对象。 |
+| Promise&lt;ResultSet&gt; | The { |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; 3. Parameter verification failed. |
-| 14800000 | Inner error. |
-| 14800015 | The database does not respond.<br>**Applicable version:** 12 and later |
-| 14800014 | The target instance is already closed.<br>**Applicable version:** 12 and later |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; 3. Parameter verification failed. |
+| [14800000](../../apis-basic-services-kit/errorcode-settings.md#14800000-parameter-check-failed) | Inner error. |
+| [14800015](../errorcode-data-rdb.md#14800015-rdb-store-not-respond) | The database does not respond.<br>**Applicable version:** 12 and later |
+| [14800014](../errorcode-data-rdb.md#14800014-target-instance-closed) | The target instance is already closed.<br>**Applicable version:** 12 and later |
 
 ## querySqlSync
 
@@ -4014,7 +3660,7 @@ querySql(sql: string, bindArgs?: Array<ValueType>): Promise<ResultSet>
 querySqlSync(sql: string, bindArgs?: Array<ValueType>): ResultSet
 ```
 
-根据指定SQL语句查询数据库中的数据，SQL语句中的各种表达式和操作符之间的关系操作符号不超过1000个。对query同步接口获得的resultSet进行操作时，若逻辑复杂且循环次数过多，可能造成freeze问题，建议将此步骤放到[taskpool](../../apis-arkts/arkts-apis/arkts-taskpool.md/arkts-taskpool.md)线程中执行。
+Queries data in the database based on SQL statement with sync interface.
 
 **Since:** 12
 
@@ -4028,23 +3674,23 @@ querySqlSync(sql: string, bindArgs?: Array<ValueType>): ResultSet
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| sql | string | Yes | 指定要执行的SQL语句，不能为空字符串。 |
-| bindArgs | Array&lt;ValueType&gt; | No | SQL语句中参数的值。该值与sql参数语句中的占位符相对应。当sql参数语句完整时，该参数不填。默认值为空数组。 |
+| sql | string | Yes | Indicates the SQL statement to execute. |
+| bindArgs | Array&lt;ValueType&gt; | No | Indicates the {@link ValueType} values of the parameters in the SQL statement. The values are strings. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [ResultSet](arkts-arkdata-rdb-resultset-t.md) | 返回ResultSet对象。 |
+| [ResultSet](arkts-arkdata-rdb-resultset-t.md) | The { |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; 3. Parameter verification failed. |
-| 14800000 | Inner error. |
-| 14800015 | The database does not respond. |
-| 14800014 | The target instance is already closed. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; 3. Parameter verification failed. |
+| [14800000](../../apis-basic-services-kit/errorcode-settings.md#14800000-parameter-check-failed) | Inner error. |
+| [14800015](../errorcode-data-rdb.md#14800015-rdb-store-not-respond) | The database does not respond. |
+| [14800014](../errorcode-data-rdb.md#14800014-target-instance-closed) | The target instance is already closed. |
 
 ## querySqlWithoutRowCount
 
@@ -4052,8 +3698,8 @@ querySqlSync(sql: string, bindArgs?: Array<ValueType>): ResultSet
 querySqlWithoutRowCount(sql: string, bindArgs?: Array<ValueType>): Promise<LiteResultSet>
 ```
 
-根据指定条件查询数据库中的数据，查询时不计算行数。使用Promise异步回调。性能优于  
-[querySql](arkts-arkdata-relationalstore-rdbstore-i.md#querysql)接口。SQL语句中的各种表达式和操作符之间的关系操作符号不超过1000个。
+Queries data from the RDB store based on specified conditions without calculating the row count. This API uses a promise to return the result and delivers better performance than the   
+[querySql](arkts-arkdata-relationalstore-transaction-i.md#querysql) API. The number of relational operators between expressions and operators in the SQL statement cannot exceed 1,000.
 
 **Since:** 23
 
@@ -4069,21 +3715,21 @@ querySqlWithoutRowCount(sql: string, bindArgs?: Array<ValueType>): Promise<LiteR
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| sql | string | Yes | 指定要执行的SQL语句，不能为空字符串。 |
-| bindArgs | Array&lt;ValueType&gt; | No | SQL语句中参数的值。该值与sql参数语句中的占位符相对应。当sql参数语句完整时，该参数不填。默认值为空数组。 |
+| sql | string | Yes | SQL statement to run. |
+| bindArgs | Array&lt;ValueType&gt; | No | Arguments in the SQL statement. The value corresponds to the placeholders in the SQL parameter statement. If the SQL parameter statement is complete, leave this parameter blank. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;LiteResultSet&gt; | Promise对象。返回LiteResultSet对象。 |
+| Promise&lt;LiteResultSet&gt; | Promise used to return the result. If the operation is successful, a **LiteResultSet** object will be returned. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 14800001 | Invalid arguments. Possible causes: 1. Parameter is out of valid range. |
-| 14800014 | The target instance is already closed. |
+| [14800001](../errorcode-data-rdb.md#14800001-invalid-arguments) | Invalid arguments. Possible causes: 1. Parameter is out of valid range. |
+| [14800014](../errorcode-data-rdb.md#14800014-target-instance-closed) | The target instance is already closed. |
 
 ## querySqlWithoutRowCountSync
 
@@ -4091,7 +3737,9 @@ querySqlWithoutRowCount(sql: string, bindArgs?: Array<ValueType>): Promise<LiteR
 querySqlWithoutRowCountSync(sql: string, bindArgs?: Array<ValueType>): LiteResultSet
 ```
 
-根据指定SQL语句查询数据库中的数据，查询时不计算行数。SQL语句中的各种表达式和操作符之间的关系操作符号不超过1000个。对querySqlWithoutRowCountSync同步接口获得的LiteResultSet进行操作时，若逻辑复杂且循环次数过多，可能造成freeze问题，建议将此步骤放到[taskpool](../../apis-arkts/arkts-apis/arkts-taskpool.md/arkts-taskpool.md)线程中执行。
+Queries data from the RDB store based on specified SQL statements without calculating the row count. The number of relational operators between expressions and operators in the SQL statement cannot exceed 1,000. If complex logic and a large number of loops are involved in the operations on the **LiteResultSet** obtained by   
+**querySqlWithoutRowCountSync**, the freeze problem may occur. You are advised to perform this operation in the   
+[taskpool](../../apis-arkts/arkts-apis/arkts-taskpool.md/arkts-taskpool.md) thread.
 
 **Since:** 23
 
@@ -4107,21 +3755,21 @@ querySqlWithoutRowCountSync(sql: string, bindArgs?: Array<ValueType>): LiteResul
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| sql | string | Yes | 指定要执行的SQL语句，不能为空字符串。 |
-| bindArgs | Array&lt;ValueType&gt; | No | SQL语句中参数的值。该值与sql参数语句中的占位符相对应。当sql参数语句完整时，该参数不填。默认值为空数组。 |
+| sql | string | Yes | SQL statement to run. |
+| bindArgs | Array&lt;ValueType&gt; | No | Arguments in the SQL statement. The value corresponds to the placeholders in the SQL parameter statement. If the SQL parameter statement is complete, leave this parameter blank. The default value is null. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [LiteResultSet](arkts-arkdata-relationalstore-literesultset-c.md) | 返回LiteResultSet对象。 |
+| [LiteResultSet](arkts-arkdata-relationalstore-literesultset-c.md) | If the operation is successful, a **LiteResultSet** object will be returned. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 14800001 | Invalid arguments. Possible causes: 1. Parameter is out of valid range. |
-| 14800014 | The target instance is already closed. |
+| [14800001](../errorcode-data-rdb.md#14800001-invalid-arguments) | Invalid arguments. Possible causes: 1. Parameter is out of valid range. |
+| [14800014](../errorcode-data-rdb.md#14800014-target-instance-closed) | The target instance is already closed. |
 
 ## querySync
 
@@ -4129,8 +3777,7 @@ querySqlWithoutRowCountSync(sql: string, bindArgs?: Array<ValueType>): LiteResul
 querySync(predicates: RdbPredicates, columns?: Array<string>): ResultSet
 ```
 
-根据指定条件查询数据库中的数据。对query同步接口获得的resultSet进行操作时，若逻辑复杂且循环次数过多，可能造成freeze问题，建议将此步骤放到  
-[taskpool](../../apis-arkts/arkts-apis/arkts-taskpool.md/arkts-taskpool.md)线程中执行。
+Queries data in the database based on specified conditions with sync function.
 
 **Since:** 12
 
@@ -4144,23 +3791,23 @@ querySync(predicates: RdbPredicates, columns?: Array<string>): ResultSet
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| predicates | [RdbPredicates](arkts-arkdata-relationalstore-rdbpredicates-c.md) | Yes | RdbPredicates的实例对象指定的查询条件。 |
-| columns | Array&lt;string&gt; | No | 表示要查询的列。如果值为空，则查询应用于所有列。默认值为空。 |
+| predicates | [RdbPredicates](arkts-arkdata-relationalstore-rdbpredicates-c.md) | Yes | The specified query condition by the instance object of {@link RdbPredicates}. |
+| columns | Array&lt;string&gt; | No | The columns to query. If the value is empty array, the query applies to all columns. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [ResultSet](arkts-arkdata-rdb-resultset-t.md) | 返回ResultSet对象。 |
+| [ResultSet](arkts-arkdata-rdb-resultset-t.md) | The { |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; 3. Parameter verification failed. |
-| 14800000 | Inner error. |
-| 14800015 | The database does not respond. |
-| 14800014 | The target instance is already closed. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; 3. Parameter verification failed. |
+| [14800000](../../apis-basic-services-kit/errorcode-settings.md#14800000-parameter-check-failed) | Inner error. |
+| [14800015](../errorcode-data-rdb.md#14800015-rdb-store-not-respond) | The database does not respond. |
+| [14800014](../errorcode-data-rdb.md#14800014-target-instance-closed) | The target instance is already closed. |
 
 ## queryWithoutRowCount
 
@@ -4168,8 +3815,7 @@ querySync(predicates: RdbPredicates, columns?: Array<string>): ResultSet
 queryWithoutRowCount(predicates: RdbPredicates, columns?: Array<string>): Promise<LiteResultSet>
 ```
 
-根据指定条件查询数据库中的数据，查询时不计算行数，性能优于  
-[query](arkts-arkdata-relationalstore-rdbstore-i.md#query)接口。使用Promise异步回调。
+Queries data without rowCount in the database based on specified conditions.
 
 **Since:** 23
 
@@ -4185,20 +3831,20 @@ queryWithoutRowCount(predicates: RdbPredicates, columns?: Array<string>): Promis
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| predicates | [RdbPredicates](arkts-arkdata-relationalstore-rdbpredicates-c.md) | Yes | RdbPredicates的实例对象指定的查询条件。 |
-| columns | Array&lt;string&gt; | No | 表示要查询的列。如果值为空，则查询该表的所有列。默认值为空。 |
+| predicates | [RdbPredicates](arkts-arkdata-relationalstore-rdbpredicates-c.md) | Yes | The specified query condition by the instance object of {@link RdbPredicates}. |
+| columns | Array&lt;string&gt; | No | The columns to query. If the value is null, the query applies to all columns. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;LiteResultSet&gt; | 返回LiteResultSet对象。 |
+| Promise&lt;LiteResultSet&gt; | The { |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 14800014 | The target instance is already closed. |
+| [14800014](../errorcode-data-rdb.md#14800014-target-instance-closed) | The target instance is already closed. |
 
 ## queryWithoutRowCountSync
 
@@ -4206,8 +3852,7 @@ queryWithoutRowCount(predicates: RdbPredicates, columns?: Array<string>): Promis
 queryWithoutRowCountSync(predicates: RdbPredicates, columns?: Array<string>): LiteResultSet
 ```
 
-根据指定条件查询数据库中的数据，查询时不计算行数。对queryWithoutRowCountSync同步接口获得的LiteResultSet进行操作时，若逻辑复杂且循环次数过多，可能造成freeze问题，建议将此步骤放到  
-[taskpool](../../apis-arkts/arkts-apis/arkts-taskpool.md/arkts-taskpool.md)线程中执行。
+Queries data without rowCount in the database based on specified conditions with sync function.
 
 **Since:** 23
 
@@ -4223,20 +3868,20 @@ queryWithoutRowCountSync(predicates: RdbPredicates, columns?: Array<string>): Li
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| predicates | [RdbPredicates](arkts-arkdata-relationalstore-rdbpredicates-c.md) | Yes | RdbPredicates的实例对象指定的查询条件。 |
-| columns | Array&lt;string&gt; | No | 表示要查询的列。如果值为空，则查询应用于所有列。默认值为空。 |
+| predicates | [RdbPredicates](arkts-arkdata-relationalstore-rdbpredicates-c.md) | Yes | The specified query condition by the instance object of {@link RdbPredicates}. |
+| columns | Array&lt;string&gt; | No | The columns to query. If the value is null, the query applies to all columns. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [LiteResultSet](arkts-arkdata-relationalstore-literesultset-c.md) | 返回LiteResultSet对象。 |
+| [LiteResultSet](arkts-arkdata-relationalstore-literesultset-c.md) | The { |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 14800014 | The target instance is already closed. |
+| [14800014](../errorcode-data-rdb.md#14800014-target-instance-closed) | The target instance is already closed. |
 
 ## rekey
 
@@ -4244,17 +3889,7 @@ queryWithoutRowCountSync(predicates: RdbPredicates, columns?: Array<string>): Li
 rekey(cryptoParam?: CryptoParam): Promise<void>
 ```
 
-手动更新加密数据库的密钥。使用Promise异步回调。
-
-从API版本26.0.0开始，支持使用该接口更新向量数据库（创建数据库时配置StoreConfig的vector字段为true）的密钥。
-
-仅支持加密数据库进行密钥更新，不支持非加密数据库变加密数据库及加密数据库变非加密数据库，且需要保持加密参数和密钥生成方式与建库时一致。
-
-不支持对非WAL模式的数据库进行密钥更新。
-
-手动更新密钥时需要独占访问数据库，此时若存在任何未释放的结果集（ResultSet）、事务（Transaction）或其他进程打开的数据库均会引发失败。
-
-数据库越大，密钥更新所需的时间越长。
+Changes the key used to encrypt the database.
 
 **Since:** 20
 
@@ -4268,30 +3903,30 @@ rekey(cryptoParam?: CryptoParam): Promise<void>
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| cryptoParam | [CryptoParam](arkts-arkdata-relationalstore-cryptoparam-i.md) | No | 指定用户自定义的加密参数。&lt;br/&gt;当此参数不填时，使用默认的加密参数，见CryptoParam。 |
+| cryptoParam | [CryptoParam](arkts-arkdata-relationalstore-cryptoparam-i.md) | No | Specifies the crypto parameters used to rekey. If valid cryptoParam passed, the cryptoParam is used to rekey. If cryptoParam is null or not passed, the default cryptoParam is used. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise对象，无返回结果。 |
+| Promise&lt;void&gt; | Promise that returns no value. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 14800001 | Invalid arguments. Possible causes: 1. Parameter is out of valid range. |
-| 801 | Capability not supported. |
-| 14800021 | SQLite: Generic error. |
-| 14800023 | SQLite: Access permission denied. |
-| 14800024 | SQLite: The database file is locked. |
-| 14800011 | The current operation failed because the database is corrupted. |
-| 14800027 | SQLite: Attempt to write a readonly database. |
-| 14800026 | SQLite: The database is out of memory. |
-| 14800029 | SQLite: The database is full. |
-| 14800028 | SQLite: Some kind of disk I/O error occurred. |
-| 14800015 | The database does not respond. |
-| 14800014 | The target instance is already closed. |
+| [14800001](../errorcode-data-rdb.md#14800001-invalid-arguments) | Invalid arguments. Possible causes: 1. Parameter is out of valid range. |
+| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. |
+| [14800021](../errorcode-data-rdb.md#14800021-sqlite-generic-error) | SQLite: Generic error. |
+| [14800023](../errorcode-data-rdb.md#14800023-sqlite-access-denied) | SQLite: Access permission denied. |
+| [14800024](../errorcode-data-rdb.md#14800024-sqlite-database-file-locked) | SQLite: The database file is locked. |
+| [14800011](../errorcode-data-rdb.md#14800011-database-file-corrupted) | The current operation failed because the database is corrupted. |
+| [14800027](../errorcode-data-rdb.md#14800027-sqlite-attempt-to-write-a-readonly-database) | SQLite: Attempt to write a readonly database. |
+| [14800026](../errorcode-data-rdb.md#14800026-sqlite-insufficient-database-memory) | SQLite: The database is out of memory. |
+| [14800029](../errorcode-data-rdb.md#14800029-sqlite-database-is-full) | SQLite: The database is full. |
+| [14800028](../errorcode-data-rdb.md#14800028-sqlite-io-error) | SQLite: Some kind of disk I/O error occurred. |
+| [14800015](../errorcode-data-rdb.md#14800015-rdb-store-not-respond) | The database does not respond. |
+| [14800014](../errorcode-data-rdb.md#14800014-target-instance-closed) | The target instance is already closed. |
 
 ## rekeyEx
 
@@ -4299,23 +3934,7 @@ rekey(cryptoParam?: CryptoParam): Promise<void>
 rekeyEx(cryptoParam: CryptoParam): Promise<void>
 ```
 
-手动更新数据库的密钥或加密参数，使用Promise异步回调。
-
-不支持对非WAL模式的数据库进行密钥更新。
-
-手动更新时需要独占访问数据库，此时若存在任何未释放的结果集（ResultSet）、事务（Transaction）或其他进程打开的数据库均会导致更新失败。
-
-支持加密数据库的参数更新，以及加密数据库与非加密数据库之间的相互转换。
-
-数据库越大，执行更新所需的时间越长。
-
-> **说明：**
-> 
-> 加密参数变更需谨慎，在完成rekeyEx操作后，getRdbStore时必须使用新的参数来打开数据库，否则可能会导致开库失败。
-> 
-> 如果rekey过程因设备断电等原因中断，操作可能成功也可能失败。因此，建议业务方做好兜底保障（使用RekeyEx前后的参数进行冗余重试），确保不会错误地判断数据库的状态，从而避免出现数据库无法打开的问题。
-> 
-> 如果有加密参数变更，不建议getRdbStore时使用AllowedRebuild参数，防止因为传入的错误加密参数导致数据库发生重建。
+Change the encryption parameters of the database.
 
 **Since:** 22
 
@@ -4329,29 +3948,29 @@ rekeyEx(cryptoParam: CryptoParam): Promise<void>
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| cryptoParam | [CryptoParam](arkts-arkdata-relationalstore-cryptoparam-i.md) | Yes | 指定用户自定义的加密参数。 |
+| cryptoParam | [CryptoParam](arkts-arkdata-relationalstore-cryptoparam-i.md) | Yes | Crypto parameters. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise对象，无返回结果。 |
+| Promise&lt;void&gt; | Promise that returns no value. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 14800001 | Invalid arguments. Possible causes: 1. Parameter is out of valid range. |
-| 801 | Capability not supported. |
-| 14800021 | SQLite: Generic error. |
-| 14800023 | SQLite: Access permission denied. |
-| 14800024 | SQLite: The database file is locked. |
-| 14800011 | The current operation failed because the database is corrupted. |
-| 14800027 | SQLite: Attempt to write a readonly database. |
-| 14800026 | SQLite: The database is out of memory. |
-| 14800029 | SQLite: The database is full. |
-| 14800028 | SQLite: Some kind of disk I/O error occurred. |
-| 14800014 | The target instance is already closed. |
+| [14800001](../errorcode-data-rdb.md#14800001-invalid-arguments) | Invalid arguments. Possible causes: 1. Parameter is out of valid range. |
+| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. |
+| [14800021](../errorcode-data-rdb.md#14800021-sqlite-generic-error) | SQLite: Generic error. |
+| [14800023](../errorcode-data-rdb.md#14800023-sqlite-access-denied) | SQLite: Access permission denied. |
+| [14800024](../errorcode-data-rdb.md#14800024-sqlite-database-file-locked) | SQLite: The database file is locked. |
+| [14800011](../errorcode-data-rdb.md#14800011-database-file-corrupted) | The current operation failed because the database is corrupted. |
+| [14800027](../errorcode-data-rdb.md#14800027-sqlite-attempt-to-write-a-readonly-database) | SQLite: Attempt to write a readonly database. |
+| [14800026](../errorcode-data-rdb.md#14800026-sqlite-insufficient-database-memory) | SQLite: The database is out of memory. |
+| [14800029](../errorcode-data-rdb.md#14800029-sqlite-database-is-full) | SQLite: The database is full. |
+| [14800028](../errorcode-data-rdb.md#14800028-sqlite-io-error) | SQLite: Some kind of disk I/O error occurred. |
+| [14800014](../errorcode-data-rdb.md#14800014-target-instance-closed) | The target instance is already closed. |
 
 ## remoteQuery
 
@@ -4365,13 +3984,7 @@ remoteQuery(
     ): void
 ```
 
-根据指定条件查询远程设备数据库中的数据。使用callback异步回调。
-
-> **说明：**
-> 
-> 其中device通过调用
-> [deviceManager.getAvailableDeviceListSync](../../apis-distributed-service-kit/arkts-apis/arkts-distributedservice-distributeddevicemanager-devicemanager-i.md/arkts-distributedservice-distributeddevicemanager-devicemanager-i.md#getavailabledevicelistsync)
-> 方法得到。
+Queries remote data in the database based on specified conditions before Synchronizing Data.
 
 **Since:** 9
 
@@ -4385,20 +3998,20 @@ remoteQuery(
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| device | string | Yes | 指定的远程设备ID，不能为空字符串。 |
-| table | string | Yes | 指定的目标表名，不能为空字符串。 |
-| predicates | [RdbPredicates](arkts-arkdata-relationalstore-rdbpredicates-c.md) | Yes | RdbPredicates的实例对象，指定查询的条件。 |
-| columns | Array&lt;string&gt; | Yes | 表示要查询的列。如果值为空，则查询应用于所有列。 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;ResultSet&gt; | Yes | 回调函数。当查询成功，err为undefined，data为ResultSet对象；否则为错误对象。 |
+| device | string | Yes | Indicates specified remote device. |
+| table | string | Yes | Indicates the target table. |
+| predicates | [RdbPredicates](arkts-arkdata-relationalstore-rdbpredicates-c.md) | Yes | The specified remote remote query condition by the instance object of {@link RdbPredicates}. |
+| columns | Array&lt;string&gt; | Yes | The columns to remote query. If the value is empty array, the remote query applies to all columns. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;ResultSet&gt; | Yes | The {@link ResultSet} object if the operation is successful. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; 3. Parameter verification failed. |
-| 14800000 | Inner error. |
-| 801 | Capability not supported. |
-| 14800014 | The target instance is already closed.<br>**Applicable version:** 12 and later |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; 3. Parameter verification failed. |
+| [14800000](../../apis-basic-services-kit/errorcode-settings.md#14800000-parameter-check-failed) | Inner error. |
+| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. |
+| [14800014](../errorcode-data-rdb.md#14800014-target-instance-closed) | The target instance is already closed.<br>**Applicable version:** 12 and later |
 
 ## remoteQuery
 
@@ -4406,13 +4019,7 @@ remoteQuery(
 remoteQuery(device: string, table: string, predicates: RdbPredicates, columns: Array<string>): Promise<ResultSet>
 ```
 
-根据指定条件查询远程设备数据库中的数据。使用Promise异步回调。
-
-> **说明：**
-> 
-> 其中device通过调用
-> [deviceManager.getAvailableDeviceListSync](../../apis-distributed-service-kit/arkts-apis/arkts-distributedservice-distributeddevicemanager-devicemanager-i.md/arkts-distributedservice-distributeddevicemanager-devicemanager-i.md#getavailabledevicelistsync)
-> 方法得到。
+Queries remote data in the database based on specified conditions before Synchronizing Data.
 
 **Since:** 9
 
@@ -4426,25 +4033,25 @@ remoteQuery(device: string, table: string, predicates: RdbPredicates, columns: A
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| device | string | Yes | 指定的远程设备ID，不能为空字符串。 |
-| table | string | Yes | 指定的目标表名，不能为空字符串。 |
-| predicates | [RdbPredicates](arkts-arkdata-relationalstore-rdbpredicates-c.md) | Yes | RdbPredicates的实例对象，指定查询的条件。 |
-| columns | Array&lt;string&gt; | Yes | 表示要查询的列。如果值为空，则查询应用于所有列。 |
+| device | string | Yes | Indicates specified remote device. |
+| table | string | Yes | Indicates the target table. |
+| predicates | [RdbPredicates](arkts-arkdata-relationalstore-rdbpredicates-c.md) | Yes | The specified remote remote query condition by the instance object of {@link RdbPredicates}. |
+| columns | Array&lt;string&gt; | Yes | The columns to remote query. If the value is empty array, the remote query applies to all columns. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;ResultSet&gt; | Promise对象。返回ResultSet对象。 |
+| Promise&lt;ResultSet&gt; | The { |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; 3. Parameter verification failed. |
-| 14800000 | Inner error. |
-| 801 | Capability not supported. |
-| 14800014 | The target instance is already closed.<br>**Applicable version:** 12 and later |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; 3. Parameter verification failed. |
+| [14800000](../../apis-basic-services-kit/errorcode-settings.md#14800000-parameter-check-failed) | Inner error. |
+| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. |
+| [14800014](../errorcode-data-rdb.md#14800014-target-instance-closed) | The target instance is already closed.<br>**Applicable version:** 12 and later |
 
 ## restore
 
@@ -4452,9 +4059,7 @@ remoteQuery(device: string, table: string, predicates: RdbPredicates, columns: A
 restore(srcName: string, callback: AsyncCallback<void>): void
 ```
 
-从指定的数据库备份文件恢复数据库，使用callback异步回调。
-
-该接口支持向量数据库（在[StoreConfig](arkts-arkdata-relationalstore-storeconfig-i.md)中配置vector为true）使用。
+Restores a database from a specified database file.
 
 **Since:** 9
 
@@ -4468,32 +4073,32 @@ restore(srcName: string, callback: AsyncCallback<void>): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| srcName | string | Yes | 指定数据库的备份文件名，不能为空字符串。 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | 回调函数。当恢复成功，err为undefined，否则为错误对象。 |
+| srcName | string | Yes | Indicates the name that saves the database file. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | The callback of restore. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 14800033 | SQLite: Data type mismatch.<br>**Applicable version:** 12 and later |
-| 14800000 | Inner error. |
-| 14800032 | SQLite: Abort due to constraint violation.<br>**Applicable version:** 12 and later |
-| 14800034 | SQLite: Library used incorrectly.<br>**Applicable version:** 12 and later |
-| 14800011 | The current operation failed because the database is corrupted.<br>**Applicable version:** 12 and later |
-| 14800015 | The database does not respond.<br>**Applicable version:** 12 and later |
-| 14800014 | The target instance is already closed.<br>**Applicable version:** 12 and later |
-| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; 3. Parameter verification failed. |
-| 14800021 | SQLite: Generic error.<br>**Applicable version:** 12 and later |
-| 14800023 | SQLite: Access permission denied.<br>**Applicable version:** 12 and later |
-| 14800022 | SQLite: Callback routine requested an abort.<br>**Applicable version:** 12 and later |
-| 14800025 | SQLite: A table in the database is locked.<br>**Applicable version:** 12 and later |
-| 14800024 | SQLite: The database file is locked.<br>**Applicable version:** 12 and later |
-| 14800027 | SQLite: Attempt to write a readonly database.<br>**Applicable version:** 12 and later |
-| 14800026 | SQLite: The database is out of memory.<br>**Applicable version:** 12 and later |
-| 14800029 | SQLite: The database is full.<br>**Applicable version:** 12 and later |
-| 14800028 | SQLite: Some kind of disk I/O error occurred.<br>**Applicable version:** 12 and later |
-| 14800031 | SQLite: TEXT or BLOB exceeds size limit.<br>**Applicable version:** 12 and later |
-| 14800030 | SQLite: Unable to open the database file.<br>**Applicable version:** 12 and later |
+| [14800033](../errorcode-data-rdb.md#14800033-sqlite-data-types-mismatch) | SQLite: Data type mismatch.<br>**Applicable version:** 12 and later |
+| [14800000](../../apis-basic-services-kit/errorcode-settings.md#14800000-parameter-check-failed) | Inner error. |
+| [14800032](../errorcode-data-rdb.md#14800032-sqlite-abort-due-to-constraint-violation) | SQLite: Abort due to constraint violation.<br>**Applicable version:** 12 and later |
+| [14800034](../errorcode-data-rdb.md#14800034-incorrect-use-of-sqlite-library) | SQLite: Library used incorrectly.<br>**Applicable version:** 12 and later |
+| [14800011](../errorcode-data-rdb.md#14800011-database-file-corrupted) | The current operation failed because the database is corrupted.<br>**Applicable version:** 12 and later |
+| [14800015](../errorcode-data-rdb.md#14800015-rdb-store-not-respond) | The database does not respond.<br>**Applicable version:** 12 and later |
+| [14800014](../errorcode-data-rdb.md#14800014-target-instance-closed) | The target instance is already closed.<br>**Applicable version:** 12 and later |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; 3. Parameter verification failed. |
+| [14800021](../errorcode-data-rdb.md#14800021-sqlite-generic-error) | SQLite: Generic error.<br>**Applicable version:** 12 and later |
+| [14800023](../errorcode-data-rdb.md#14800023-sqlite-access-denied) | SQLite: Access permission denied.<br>**Applicable version:** 12 and later |
+| [14800022](../errorcode-data-rdb.md#14800022-sqlite-asynchronous-callback-request-aborted) | SQLite: Callback routine requested an abort.<br>**Applicable version:** 12 and later |
+| [14800025](../errorcode-data-rdb.md#14800025-sqlite-database-table-locked) | SQLite: A table in the database is locked.<br>**Applicable version:** 12 and later |
+| [14800024](../errorcode-data-rdb.md#14800024-sqlite-database-file-locked) | SQLite: The database file is locked.<br>**Applicable version:** 12 and later |
+| [14800027](../errorcode-data-rdb.md#14800027-sqlite-attempt-to-write-a-readonly-database) | SQLite: Attempt to write a readonly database.<br>**Applicable version:** 12 and later |
+| [14800026](../errorcode-data-rdb.md#14800026-sqlite-insufficient-database-memory) | SQLite: The database is out of memory.<br>**Applicable version:** 12 and later |
+| [14800029](../errorcode-data-rdb.md#14800029-sqlite-database-is-full) | SQLite: The database is full.<br>**Applicable version:** 12 and later |
+| [14800028](../errorcode-data-rdb.md#14800028-sqlite-io-error) | SQLite: Some kind of disk I/O error occurred.<br>**Applicable version:** 12 and later |
+| [14800031](../errorcode-data-rdb.md#14800031-sqlite-text-or-blob-exceeds-the-limit) | SQLite: TEXT or BLOB exceeds size limit.<br>**Applicable version:** 12 and later |
+| [14800030](../errorcode-data-rdb.md#14800030-sqlite-unable-to-open-the-database-file) | SQLite: Unable to open the database file.<br>**Applicable version:** 12 and later |
 
 ## restore
 
@@ -4501,9 +4106,7 @@ restore(srcName: string, callback: AsyncCallback<void>): void
 restore(srcName: string): Promise<void>
 ```
 
-从指定的数据库备份文件恢复数据库，使用Promise异步回调。
-
-该接口支持向量数据库（在[StoreConfig](arkts-arkdata-relationalstore-storeconfig-i.md)中配置vector为true）使用。
+Restores a database from a specified database file.
 
 **Since:** 9
 
@@ -4517,37 +4120,37 @@ restore(srcName: string): Promise<void>
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| srcName | string | Yes | 指定数据库的备份文件名，不能为空字符串。 |
+| srcName | string | Yes | Indicates the name that saves the database file. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise对象，无返回结果。 |
+| Promise&lt;void&gt; | The promise returned by the function. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 14800033 | SQLite: Data type mismatch.<br>**Applicable version:** 12 and later |
-| 14800000 | Inner error. |
-| 14800032 | SQLite: Abort due to constraint violation.<br>**Applicable version:** 12 and later |
-| 14800034 | SQLite: Library used incorrectly.<br>**Applicable version:** 12 and later |
-| 14800011 | The current operation failed because the database is corrupted.<br>**Applicable version:** 12 and later |
-| 14800015 | The database does not respond.<br>**Applicable version:** 12 and later |
-| 14800014 | The target instance is already closed.<br>**Applicable version:** 12 and later |
-| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; 3. Parameter verification failed. |
-| 14800021 | SQLite: Generic error.<br>**Applicable version:** 12 and later |
-| 14800023 | SQLite: Access permission denied.<br>**Applicable version:** 12 and later |
-| 14800022 | SQLite: Callback routine requested an abort.<br>**Applicable version:** 12 and later |
-| 14800025 | SQLite: A table in the database is locked.<br>**Applicable version:** 12 and later |
-| 14800024 | SQLite: The database file is locked.<br>**Applicable version:** 12 and later |
-| 14800027 | SQLite: Attempt to write a readonly database.<br>**Applicable version:** 12 and later |
-| 14800026 | SQLite: The database is out of memory.<br>**Applicable version:** 12 and later |
-| 14800029 | SQLite: The database is full.<br>**Applicable version:** 12 and later |
-| 14800028 | SQLite: Some kind of disk I/O error occurred.<br>**Applicable version:** 12 and later |
-| 14800031 | SQLite: TEXT or BLOB exceeds size limit.<br>**Applicable version:** 12 and later |
-| 14800030 | SQLite: Unable to open the database file.<br>**Applicable version:** 12 and later |
+| [14800033](../errorcode-data-rdb.md#14800033-sqlite-data-types-mismatch) | SQLite: Data type mismatch.<br>**Applicable version:** 12 and later |
+| [14800000](../../apis-basic-services-kit/errorcode-settings.md#14800000-parameter-check-failed) | Inner error. |
+| [14800032](../errorcode-data-rdb.md#14800032-sqlite-abort-due-to-constraint-violation) | SQLite: Abort due to constraint violation.<br>**Applicable version:** 12 and later |
+| [14800034](../errorcode-data-rdb.md#14800034-incorrect-use-of-sqlite-library) | SQLite: Library used incorrectly.<br>**Applicable version:** 12 and later |
+| [14800011](../errorcode-data-rdb.md#14800011-database-file-corrupted) | The current operation failed because the database is corrupted.<br>**Applicable version:** 12 and later |
+| [14800015](../errorcode-data-rdb.md#14800015-rdb-store-not-respond) | The database does not respond.<br>**Applicable version:** 12 and later |
+| [14800014](../errorcode-data-rdb.md#14800014-target-instance-closed) | The target instance is already closed.<br>**Applicable version:** 12 and later |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; 3. Parameter verification failed. |
+| [14800021](../errorcode-data-rdb.md#14800021-sqlite-generic-error) | SQLite: Generic error.<br>**Applicable version:** 12 and later |
+| [14800023](../errorcode-data-rdb.md#14800023-sqlite-access-denied) | SQLite: Access permission denied.<br>**Applicable version:** 12 and later |
+| [14800022](../errorcode-data-rdb.md#14800022-sqlite-asynchronous-callback-request-aborted) | SQLite: Callback routine requested an abort.<br>**Applicable version:** 12 and later |
+| [14800025](../errorcode-data-rdb.md#14800025-sqlite-database-table-locked) | SQLite: A table in the database is locked.<br>**Applicable version:** 12 and later |
+| [14800024](../errorcode-data-rdb.md#14800024-sqlite-database-file-locked) | SQLite: The database file is locked.<br>**Applicable version:** 12 and later |
+| [14800027](../errorcode-data-rdb.md#14800027-sqlite-attempt-to-write-a-readonly-database) | SQLite: Attempt to write a readonly database.<br>**Applicable version:** 12 and later |
+| [14800026](../errorcode-data-rdb.md#14800026-sqlite-insufficient-database-memory) | SQLite: The database is out of memory.<br>**Applicable version:** 12 and later |
+| [14800029](../errorcode-data-rdb.md#14800029-sqlite-database-is-full) | SQLite: The database is full.<br>**Applicable version:** 12 and later |
+| [14800028](../errorcode-data-rdb.md#14800028-sqlite-io-error) | SQLite: Some kind of disk I/O error occurred.<br>**Applicable version:** 12 and later |
+| [14800031](../errorcode-data-rdb.md#14800031-sqlite-text-or-blob-exceeds-the-limit) | SQLite: TEXT or BLOB exceeds size limit.<br>**Applicable version:** 12 and later |
+| [14800030](../errorcode-data-rdb.md#14800030-sqlite-unable-to-open-the-database-file) | SQLite: Unable to open the database file.<br>**Applicable version:** 12 and later |
 
 ## rollBack
 
@@ -4555,9 +4158,7 @@ restore(srcName: string): Promise<void>
 rollBack(): void
 ```
 
-回滚已经执行的SQL语句。
-
-此接口不允许嵌套事务，且不支持在多进程或多线程中使用。
+Roll back the sql you have already executed.
 
 **Since:** 9
 
@@ -4571,25 +4172,25 @@ rollBack(): void
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 14800033 | SQLite: Data type mismatch.<br>**Applicable version:** 12 and later |
-| 14800000 | Inner error.<br>**Applicable version:** 12 and later |
-| 14800032 | SQLite: Abort due to constraint violation.<br>**Applicable version:** 12 and later |
-| 14800034 | SQLite: Library used incorrectly.<br>**Applicable version:** 12 and later |
-| 14800011 | The current operation failed because the database is corrupted.<br>**Applicable version:** 12 and later |
-| 14800015 | The database does not respond.<br>**Applicable version:** 12 and later |
-| 14800014 | The target instance is already closed.<br>**Applicable version:** 12 and later |
-| 401 | Parameter error. Possible causes: The RdbStore verification failed. |
-| 14800021 | SQLite: Generic error.<br>**Applicable version:** 12 and later |
-| 14800023 | SQLite: Access permission denied.<br>**Applicable version:** 12 and later |
-| 14800022 | SQLite: Callback routine requested an abort.<br>**Applicable version:** 12 and later |
-| 14800025 | SQLite: A table in the database is locked.<br>**Applicable version:** 12 and later |
-| 14800024 | SQLite: The database file is locked.<br>**Applicable version:** 12 and later |
-| 14800027 | SQLite: Attempt to write a readonly database.<br>**Applicable version:** 12 and later |
-| 14800026 | SQLite: The database is out of memory.<br>**Applicable version:** 12 and later |
-| 14800029 | SQLite: The database is full.<br>**Applicable version:** 12 and later |
-| 14800028 | SQLite: Some kind of disk I/O error occurred.<br>**Applicable version:** 12 and later |
-| 14800031 | SQLite: TEXT or BLOB exceeds size limit.<br>**Applicable version:** 12 and later |
-| 14800030 | SQLite: Unable to open the database file.<br>**Applicable version:** 12 and later |
+| [14800033](../errorcode-data-rdb.md#14800033-sqlite-data-types-mismatch) | SQLite: Data type mismatch.<br>**Applicable version:** 12 and later |
+| [14800000](../../apis-basic-services-kit/errorcode-settings.md#14800000-parameter-check-failed) | Inner error.<br>**Applicable version:** 12 and later |
+| [14800032](../errorcode-data-rdb.md#14800032-sqlite-abort-due-to-constraint-violation) | SQLite: Abort due to constraint violation.<br>**Applicable version:** 12 and later |
+| [14800034](../errorcode-data-rdb.md#14800034-incorrect-use-of-sqlite-library) | SQLite: Library used incorrectly.<br>**Applicable version:** 12 and later |
+| [14800011](../errorcode-data-rdb.md#14800011-database-file-corrupted) | The current operation failed because the database is corrupted.<br>**Applicable version:** 12 and later |
+| [14800015](../errorcode-data-rdb.md#14800015-rdb-store-not-respond) | The database does not respond.<br>**Applicable version:** 12 and later |
+| [14800014](../errorcode-data-rdb.md#14800014-target-instance-closed) | The target instance is already closed.<br>**Applicable version:** 12 and later |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: The RdbStore verification failed. |
+| [14800021](../errorcode-data-rdb.md#14800021-sqlite-generic-error) | SQLite: Generic error.<br>**Applicable version:** 12 and later |
+| [14800023](../errorcode-data-rdb.md#14800023-sqlite-access-denied) | SQLite: Access permission denied.<br>**Applicable version:** 12 and later |
+| [14800022](../errorcode-data-rdb.md#14800022-sqlite-asynchronous-callback-request-aborted) | SQLite: Callback routine requested an abort.<br>**Applicable version:** 12 and later |
+| [14800025](../errorcode-data-rdb.md#14800025-sqlite-database-table-locked) | SQLite: A table in the database is locked.<br>**Applicable version:** 12 and later |
+| [14800024](../errorcode-data-rdb.md#14800024-sqlite-database-file-locked) | SQLite: The database file is locked.<br>**Applicable version:** 12 and later |
+| [14800027](../errorcode-data-rdb.md#14800027-sqlite-attempt-to-write-a-readonly-database) | SQLite: Attempt to write a readonly database.<br>**Applicable version:** 12 and later |
+| [14800026](../errorcode-data-rdb.md#14800026-sqlite-insufficient-database-memory) | SQLite: The database is out of memory.<br>**Applicable version:** 12 and later |
+| [14800029](../errorcode-data-rdb.md#14800029-sqlite-database-is-full) | SQLite: The database is full.<br>**Applicable version:** 12 and later |
+| [14800028](../errorcode-data-rdb.md#14800028-sqlite-io-error) | SQLite: Some kind of disk I/O error occurred.<br>**Applicable version:** 12 and later |
+| [14800031](../errorcode-data-rdb.md#14800031-sqlite-text-or-blob-exceeds-the-limit) | SQLite: TEXT or BLOB exceeds size limit.<br>**Applicable version:** 12 and later |
+| [14800030](../errorcode-data-rdb.md#14800030-sqlite-unable-to-open-the-database-file) | SQLite: Unable to open the database file.<br>**Applicable version:** 12 and later |
 
 ## rollback
 
@@ -4603,9 +4204,7 @@ ArkTS-Sta:
 rollback(txId : long): Promise<void>
 ```
 
-回滚已经执行的SQL语句，跟[beginTrans](arkts-arkdata-relationalstore-rdbstore-i.md#begintrans)配合使用，使用Promise异步回调。
-
-该接口仅支持向量数据库（在[StoreConfig](arkts-arkdata-relationalstore-storeconfig-i.md)中配置vector为true）使用。
+Rolls back the SQL statement executed.
 
 **Since:** 12
 
@@ -4619,37 +4218,37 @@ rollback(txId : long): Promise<void>
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| txId | ArkTS-Dyn: number  <br>ArkTS-Sta：long | Yes | 通过[beginTrans](arkts-arkdata-relationalstore-rdbstore-i.md#begintrans)获取的事务ID。 |
+| txId | ArkTS-Dyn: number  <br>ArkTS-Sta：long | Yes | Indicates the transaction ID which is obtained by beginTrans. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise对象，无返回结果。 |
+| Promise&lt;void&gt; | Promise used to return the result. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 14800033 | SQLite: Data type mismatch. |
-| 14800000 | Inner error. |
-| 14800032 | SQLite: Abort due to constraint violation. |
-| 14800034 | SQLite: Library used incorrectly. |
-| 14800011 | The current operation failed because the database is corrupted. |
-| 14800015 | The database does not respond. |
-| 14800014 | The target instance is already closed. |
-| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; 3. Parameter verification failed. |
-| 14800021 | SQLite: Generic error. |
-| 14800023 | SQLite: Access permission denied. |
-| 14800022 | SQLite: Callback routine requested an abort. |
-| 14800025 | SQLite: A table in the database is locked. |
-| 14800024 | SQLite: The database file is locked. |
-| 14800027 | SQLite: Attempt to write a readonly database. |
-| 14800026 | SQLite: The database is out of memory. |
-| 14800029 | SQLite: The database is full. |
-| 14800028 | SQLite: Some kind of disk I/O error occurred. |
-| 14800031 | SQLite: TEXT or BLOB exceeds size limit. |
-| 14800030 | SQLite: Unable to open the database file. |
+| [14800033](../errorcode-data-rdb.md#14800033-sqlite-data-types-mismatch) | SQLite: Data type mismatch. |
+| [14800000](../../apis-basic-services-kit/errorcode-settings.md#14800000-parameter-check-failed) | Inner error. |
+| [14800032](../errorcode-data-rdb.md#14800032-sqlite-abort-due-to-constraint-violation) | SQLite: Abort due to constraint violation. |
+| [14800034](../errorcode-data-rdb.md#14800034-incorrect-use-of-sqlite-library) | SQLite: Library used incorrectly. |
+| [14800011](../errorcode-data-rdb.md#14800011-database-file-corrupted) | The current operation failed because the database is corrupted. |
+| [14800015](../errorcode-data-rdb.md#14800015-rdb-store-not-respond) | The database does not respond. |
+| [14800014](../errorcode-data-rdb.md#14800014-target-instance-closed) | The target instance is already closed. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; 3. Parameter verification failed. |
+| [14800021](../errorcode-data-rdb.md#14800021-sqlite-generic-error) | SQLite: Generic error. |
+| [14800023](../errorcode-data-rdb.md#14800023-sqlite-access-denied) | SQLite: Access permission denied. |
+| [14800022](../errorcode-data-rdb.md#14800022-sqlite-asynchronous-callback-request-aborted) | SQLite: Callback routine requested an abort. |
+| [14800025](../errorcode-data-rdb.md#14800025-sqlite-database-table-locked) | SQLite: A table in the database is locked. |
+| [14800024](../errorcode-data-rdb.md#14800024-sqlite-database-file-locked) | SQLite: The database file is locked. |
+| [14800027](../errorcode-data-rdb.md#14800027-sqlite-attempt-to-write-a-readonly-database) | SQLite: Attempt to write a readonly database. |
+| [14800026](../errorcode-data-rdb.md#14800026-sqlite-insufficient-database-memory) | SQLite: The database is out of memory. |
+| [14800029](../errorcode-data-rdb.md#14800029-sqlite-database-is-full) | SQLite: The database is full. |
+| [14800028](../errorcode-data-rdb.md#14800028-sqlite-io-error) | SQLite: Some kind of disk I/O error occurred. |
+| [14800031](../errorcode-data-rdb.md#14800031-sqlite-text-or-blob-exceeds-the-limit) | SQLite: TEXT or BLOB exceeds size limit. |
+| [14800030](../errorcode-data-rdb.md#14800030-sqlite-unable-to-open-the-database-file) | SQLite: Unable to open the database file. |
 
 ## setDistributedTables
 
@@ -4657,7 +4256,7 @@ rollback(txId : long): Promise<void>
 setDistributedTables(tables: Array<string>, callback: AsyncCallback<void>): void
 ```
 
-设置分布式数据库表，使用callback异步回调。
+Set table to be distributed table.
 
 **Since:** 9
 
@@ -4673,17 +4272,17 @@ setDistributedTables(tables: Array<string>, callback: AsyncCallback<void>): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| tables | Array&lt;string&gt; | Yes | 要设置的分布式数据库的表名。 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | 回调函数。当设置分布式列表成功，err为undefined，否则为错误对象。 |
+| tables | Array&lt;string&gt; | Yes | Indicates the table names you want to set. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | The callback of setDistributedTables. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; 3. Parameter verification failed. |
-| 14800000 | Inner error. |
-| 801 | Capability not supported. |
-| 14800014 | The target instance is already closed.<br>**Applicable version:** 12 and later |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; 3. Parameter verification failed. |
+| [14800000](../../apis-basic-services-kit/errorcode-settings.md#14800000-parameter-check-failed) | Inner error. |
+| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. |
+| [14800014](../errorcode-data-rdb.md#14800014-target-instance-closed) | The target instance is already closed.<br>**Applicable version:** 12 and later |
 
 ## setDistributedTables
 
@@ -4691,7 +4290,7 @@ setDistributedTables(tables: Array<string>, callback: AsyncCallback<void>): void
 setDistributedTables(tables: Array<string>): Promise<void>
 ```
 
-设置分布式数据库表，使用Promise异步回调。
+Set table to be distributed table.
 
 **Since:** 9
 
@@ -4707,22 +4306,22 @@ setDistributedTables(tables: Array<string>): Promise<void>
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| tables | Array&lt;string&gt; | Yes | 要设置的分布式数据库的表名。 |
+| tables | Array&lt;string&gt; | Yes | Indicates the table names you want to set. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise对象，无返回结果。 |
+| Promise&lt;void&gt; | The promise returned by the function. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; 3. Parameter verification failed. |
-| 14800000 | Inner error. |
-| 801 | Capability not supported. |
-| 14800014 | The target instance is already closed.<br>**Applicable version:** 12 and later |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; 3. Parameter verification failed. |
+| [14800000](../../apis-basic-services-kit/errorcode-settings.md#14800000-parameter-check-failed) | Inner error. |
+| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. |
+| [14800014](../errorcode-data-rdb.md#14800014-target-instance-closed) | The target instance is already closed.<br>**Applicable version:** 12 and later |
 
 ## setDistributedTables
 
@@ -4730,7 +4329,7 @@ setDistributedTables(tables: Array<string>): Promise<void>
 setDistributedTables(tables: Array<string>, type: DistributedType, callback: AsyncCallback<void>): void
 ```
 
-设置分布式数据库表，支持指定表的分布式类型，使用callback异步回调。
+Set table to be distributed table.
 
 **Since:** 10
 
@@ -4746,19 +4345,19 @@ setDistributedTables(tables: Array<string>, type: DistributedType, callback: Asy
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| tables | Array&lt;string&gt; | Yes | 要设置的分布式数据库的表名。 |
-| type | [DistributedType](arkts-arkdata-relationalstore-distributedtype-e.md) | Yes | 表的分布式类型。 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | 回调函数。当设置分布式列表成功，err为undefined，否则为错误对象。 |
+| tables | Array&lt;string&gt; | Yes | Indicates the table names you want to set. |
+| type | [DistributedType](arkts-arkdata-relationalstore-distributedtype-e.md) | Yes | Indicates the distributed type {@link DistributedType}. ohos.permission.DISTRIBUTED_DATASYNC is required only when type is DISTRIBUTED_DEVICE. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | The callback of setDistributedTables. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; 3. Parameter verification failed. |
-| 14800000 | Inner error. |
-| 801 | Capability not supported. |
-| 14800051 | The type of the distributed table does not match. |
-| 14800014 | The target instance is already closed.<br>**Applicable version:** 12 and later |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; 3. Parameter verification failed. |
+| [14800000](../../apis-basic-services-kit/errorcode-settings.md#14800000-parameter-check-failed) | Inner error. |
+| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. |
+| [14800051](../errorcode-data-rdb.md#14800051-inconsistent-distributed-table-type) | The type of the distributed table does not match. |
+| [14800014](../errorcode-data-rdb.md#14800014-target-instance-closed) | The target instance is already closed.<br>**Applicable version:** 12 and later |
 
 ## setDistributedTables
 
@@ -4771,7 +4370,7 @@ setDistributedTables(
     ): void
 ```
 
-设置分布式数据库表，支持指定表的分布式类型和表的分布式配置信息，使用callback异步回调。
+Set table to be distributed table.
 
 **Since:** 10
 
@@ -4787,20 +4386,20 @@ setDistributedTables(
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| tables | Array&lt;string&gt; | Yes | 要设置的分布式数据库的表名。 |
-| type | [DistributedType](arkts-arkdata-relationalstore-distributedtype-e.md) | Yes | 表的分布式类型。 |
-| config | [DistributedConfig](arkts-arkdata-relationalstore-distributedconfig-i.md) | Yes | 表的分布式配置信息。 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | 回调函数。当设置分布式列表成功，err为undefined，否则为错误对象。 |
+| tables | Array&lt;string&gt; | Yes | Indicates the table names you want to set. |
+| type | [DistributedType](arkts-arkdata-relationalstore-distributedtype-e.md) | Yes | Indicates the distributed type {@link DistributedType}. ohos.permission.DISTRIBUTED_DATASYNC is required only when type is DISTRIBUTED_DEVICE. |
+| config | [DistributedConfig](arkts-arkdata-relationalstore-distributedconfig-i.md) | Yes | Indicates the distributed config of the tables. For details, see {@link DistributedConfig}. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | The callback of setDistributedTables. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; 3. Parameter verification failed. |
-| 14800000 | Inner error. |
-| 801 | Capability not supported. |
-| 14800051 | The type of the distributed table does not match. |
-| 14800014 | The target instance is already closed.<br>**Applicable version:** 12 and later |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; 3. Parameter verification failed. |
+| [14800000](../../apis-basic-services-kit/errorcode-settings.md#14800000-parameter-check-failed) | Inner error. |
+| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. |
+| [14800051](../errorcode-data-rdb.md#14800051-inconsistent-distributed-table-type) | The type of the distributed table does not match. |
+| [14800014](../errorcode-data-rdb.md#14800014-target-instance-closed) | The target instance is already closed.<br>**Applicable version:** 12 and later |
 
 ## setDistributedTables
 
@@ -4808,7 +4407,7 @@ setDistributedTables(
 setDistributedTables(tables: Array<string>, type?: DistributedType, config?: DistributedConfig): Promise<void>
 ```
 
-设置分布式数据库表，支持指定表的分布式类型和表的分布式配置信息，使用Promise异步回调。
+Set table to be a distributed table.
 
 **Since:** 10
 
@@ -4824,25 +4423,25 @@ setDistributedTables(tables: Array<string>, type?: DistributedType, config?: Dis
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| tables | Array&lt;string&gt; | Yes | 要设置的分布式数据库的表名。 |
-| type | [DistributedType](arkts-arkdata-relationalstore-distributedtype-e.md) | No | 表的分布式类型。默认值是relationalStore.DistributedType.DISTRIBUTED_DEVICE。 |
-| config | [DistributedConfig](arkts-arkdata-relationalstore-distributedconfig-i.md) | No | 表的分布式配置信息。不传入时默认autoSync为false，需要调用 [cloudSync](arkts-arkdata-relationalstore-rdbstore-i.md#cloudsync) 接口触发端云同步。 |
+| tables | Array&lt;string&gt; | Yes | Indicates the table names you want to set. |
+| type | [DistributedType](arkts-arkdata-relationalstore-distributedtype-e.md) | No | Indicates the distributed type {@link DistributedType}. ohos.permission.DISTRIBUTED_DATASYNC is required only when type is DISTRIBUTED_DEVICE. |
+| config | [DistributedConfig](arkts-arkdata-relationalstore-distributedconfig-i.md) | No | Indicates the distributed config of the tables. For details, see {@link DistributedConfig}. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise对象，无返回结果。 |
+| Promise&lt;void&gt; | The promise returned by the function. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; 3. Parameter verification failed. |
-| 14800000 | Inner error. |
-| 801 | Capability not supported. |
-| 14800051 | The type of the distributed table does not match. |
-| 14800014 | The target instance is already closed.<br>**Applicable version:** 12 and later |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; 3. Parameter verification failed. |
+| [14800000](../../apis-basic-services-kit/errorcode-settings.md#14800000-parameter-check-failed) | Inner error. |
+| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. |
+| [14800051](../errorcode-data-rdb.md#14800051-inconsistent-distributed-table-type) | The type of the distributed table does not match. |
+| [14800014](../errorcode-data-rdb.md#14800014-target-instance-closed) | The target instance is already closed.<br>**Applicable version:** 12 and later |
 
 ## setLocale
 
@@ -4850,9 +4449,7 @@ setDistributedTables(tables: Array<string>, type?: DistributedType, config?: Dis
 setLocale(locale: string) : Promise<void>
 ```
 
-设置自定义排序的语言。使用Promise异步回调。
-
-该值符合ISO 639标准，但是仅支持ICU中的部分语言，对于不支持的语言，设置自定义排序的语言时会报错14800001。
+Support for collations in different languages.
 
 **Since:** 20
 
@@ -4866,24 +4463,24 @@ setLocale(locale: string) : Promise<void>
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| locale | string | Yes | 设置自定义排序的语言，不能为空字符串。该值符合ISO 639标准，如："zh"。 |
+| locale | string | Yes | Language related to the locale. for example, zh. The value complies with the ISO 639 standard. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise对象，无返回结果。 |
+| Promise&lt;void&gt; | The promise returned by the function. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 14800001 | Invalid arguments. Possible causes: 1. Parameter is out of valid range. |
-| 801 | Capability not supported. |
-| 14800034 | SQLite: Library used incorrectly. |
-| 14800024 | SQLite: The database file is locked. |
-| 14800026 | SQLite: The database is out of memory. |
-| 14800014 | The target instance is already closed. |
+| [14800001](../errorcode-data-rdb.md#14800001-invalid-arguments) | Invalid arguments. Possible causes: 1. Parameter is out of valid range. |
+| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. |
+| [14800034](../errorcode-data-rdb.md#14800034-incorrect-use-of-sqlite-library) | SQLite: Library used incorrectly. |
+| [14800024](../errorcode-data-rdb.md#14800024-sqlite-database-file-locked) | SQLite: The database file is locked. |
+| [14800026](../errorcode-data-rdb.md#14800026-sqlite-insufficient-database-memory) | SQLite: The database is out of memory. |
+| [14800014](../errorcode-data-rdb.md#14800014-target-instance-closed) | The target instance is already closed. |
 
 ## stopCloudSync
 
@@ -4891,7 +4488,7 @@ setLocale(locale: string) : Promise<void>
 stopCloudSync(): Promise<void>
 ```
 
-停止与云端的数据同步，使用Promise异步回调。
+Stops synchronizing data with the cloud.
 
 **Since:** 26.0.0
 
@@ -4907,14 +4504,14 @@ stopCloudSync(): Promise<void>
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise对象，无返回结果。 |
+| Promise&lt;void&gt; | : The promise returned by the function. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 801 | Capability not supported because the device does not support the cloud synchronization capability. |
-| 14800014 | The target instance is already closed. |
+| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported because the device does not support the cloud synchronization capability. |
+| [14800014](../errorcode-data-rdb.md#14800014-target-instance-closed) | The target instance is already closed. |
 
 ## sync
 
@@ -4928,7 +4525,7 @@ ArkTS-Sta:
 sync(mode: SyncMode, predicates: RdbPredicates, callback: AsyncCallback<Array<[string, int]>>): void
 ```
 
-在设备之间同步数据，使用callback异步回调。
+Sync data between devices.
 
 **Since:** 9
 
@@ -4944,18 +4541,18 @@ sync(mode: SyncMode, predicates: RdbPredicates, callback: AsyncCallback<Array<[s
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| mode | [SyncMode](arkts-arkdata-relationalstore-syncmode-e.md) | Yes | 指同步模式。该值可以是relationalStore.SyncMode.SYNC_MODE_PUSH、 relationalStore.SyncMode.SYNC_MODE_PULL。 |
-| predicates | [RdbPredicates](arkts-arkdata-relationalstore-rdbpredicates-c.md) | Yes | 约束同步数据和设备。 |
-| callback | ArkTS-Dyn: [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;[string, number]&gt;&gt;  <br>ArkTS-Sta：[AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;[string, int]&gt;&gt; | Yes | 回调函数，用于向调用者发送同步结果。string：设备ID；number：每个设备同步状态，0表示成功，1表示 失败。 |
+| mode | [SyncMode](arkts-arkdata-relationalstore-syncmode-e.md) | Yes | Indicates the database synchronization mode. |
+| predicates | [RdbPredicates](arkts-arkdata-relationalstore-rdbpredicates-c.md) | Yes | The specified sync condition by the instance object of {@link RdbPredicates}. |
+| callback | ArkTS-Dyn: [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;[string, number]&gt;&gt;  <br>ArkTS-Sta：[AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;[string, int]&gt;&gt; | Yes | {Array&lt;[string, int]&gt;}: devices sync status array, {string}: device id, {int}: device sync status. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; 3. Parameter verification failed. |
-| 14800000 | Inner error. |
-| 801 | Capability not supported. |
-| 14800014 | The target instance is already closed.<br>**Applicable version:** 12 and later |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; 3. Parameter verification failed. |
+| [14800000](../../apis-basic-services-kit/errorcode-settings.md#14800000-parameter-check-failed) | Inner error. |
+| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. |
+| [14800014](../errorcode-data-rdb.md#14800014-target-instance-closed) | The target instance is already closed.<br>**Applicable version:** 12 and later |
 
 ## sync
 
@@ -4969,7 +4566,7 @@ ArkTS-Sta:
 sync(mode: SyncMode, predicates: RdbPredicates): Promise<Array<[string, int]>>
 ```
 
-在设备之间同步数据，使用Promise异步回调。
+Sync data between devices.
 
 **Since:** 9
 
@@ -4985,23 +4582,23 @@ sync(mode: SyncMode, predicates: RdbPredicates): Promise<Array<[string, int]>>
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| mode | [SyncMode](arkts-arkdata-relationalstore-syncmode-e.md) | Yes | 指同步模式。该值可以是relationalStore.SyncMode.SYNC_MODE_PUSH、 relationalStore.SyncMode.SYNC_MODE_PULL。 |
-| predicates | [RdbPredicates](arkts-arkdata-relationalstore-rdbpredicates-c.md) | Yes | 约束同步数据和设备。 |
+| mode | [SyncMode](arkts-arkdata-relationalstore-syncmode-e.md) | Yes | Indicates the database synchronization mode. |
+| predicates | [RdbPredicates](arkts-arkdata-relationalstore-rdbpredicates-c.md) | Yes | The specified sync condition by the instance object of {@link RdbPredicates}. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| ArkTS-Dyn: Promise&lt;Array&lt;[string, number]&gt;&gt;  <br>ArkTS-Sta：Promise&lt;Array&lt;[string, int]&gt;&gt; | Promise对象。返回同步结果。string：设备ID；number：每个设备同步状态，0表示成功，1表示失败。 |
+| ArkTS-Dyn: Promise&lt;Array&lt;[string, number]&gt;&gt;  <br>ArkTS-Sta：Promise&lt;Array&lt;[string, int]&gt;&gt; | {Array&lt;[string, int]&gt;}: devices sync status array, {string}: device id, {int}: device sync status. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; 3. Parameter verification failed. |
-| 14800000 | Inner error. |
-| 801 | Capability not supported. |
-| 14800014 | The target instance is already closed.<br>**Applicable version:** 12 and later |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; 3. Parameter verification failed. |
+| [14800000](../../apis-basic-services-kit/errorcode-settings.md#14800000-parameter-check-failed) | Inner error. |
+| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. |
+| [14800014](../errorcode-data-rdb.md#14800014-target-instance-closed) | The target instance is already closed.<br>**Applicable version:** 12 and later |
 
 ## syncEx
 
@@ -5009,7 +4606,9 @@ sync(mode: SyncMode, predicates: RdbPredicates): Promise<Array<[string, int]>>
 syncEx(mode: SyncMode, predicates: RdbPredicates): Promise<Array<SyncResult>>
 ```
 
-在设备之间同步数据，使用Promise异步回调，可以返回具体的同步状态信息。
+Sync data between devices.
+
+1. The difference between the sync interface and the syncEx interface is that they can return more error codes,but their functionality is similar.2. Before invoking synchronization, call setdistributedTable to set the distributed table.
 
 **Since:** 26.0.0
 
@@ -5027,22 +4626,22 @@ syncEx(mode: SyncMode, predicates: RdbPredicates): Promise<Array<SyncResult>>
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| mode | [SyncMode](arkts-arkdata-relationalstore-syncmode-e.md) | Yes | 同步模式。该值可以是relationalStore.SyncMode.SYNC_MODE_PUSH、 relationalStore.SyncMode.SYNC_MODE_PULL。 |
-| predicates | [RdbPredicates](arkts-arkdata-relationalstore-rdbpredicates-c.md) | Yes | 约束同步数据和设备。 |
+| mode | [SyncMode](arkts-arkdata-relationalstore-syncmode-e.md) | Yes | Indicates the database synchronization mode. &lt;br&gt;Only SYNC_MODE_PUSH and SYNC_MODE_PULL are supported. |
+| predicates | [RdbPredicates](arkts-arkdata-relationalstore-rdbpredicates-c.md) | Yes | The specified sync condition by the instance object of {@link RdbPredicates}. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;Array&lt;SyncResult&gt;&gt; | Promise对象。返回SyncResult数组。 |
+| Promise&lt;Array&lt;SyncResult&gt;&gt; | devices sync result array, see { |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 14800001 | Invalid arguments. Possible causes: 1. Parameter is out of valid range. |
-| 201 | the application does not have permission to call this function. |
-| 14800014 | The target instance is already closed. |
+| [14800001](../errorcode-data-rdb.md#14800001-invalid-arguments) | Invalid arguments. Possible causes: 1. Parameter is out of valid range. |
+| [201](../../errorcode-universal.md#201-permission-denied) | the application does not have permission to call this function. |
+| [14800014](../errorcode-data-rdb.md#14800014-target-instance-closed) | The target instance is already closed. |
 
 ## unlockRow
 
@@ -5050,13 +4649,7 @@ syncEx(mode: SyncMode, predicates: RdbPredicates): Promise<Array<SyncResult>>
 unlockRow(predicates: RdbPredicates): Promise<void>
 ```
 
-根据RdbPredicates的指定实例对象从数据库中解锁数据，使用Promise异步回调。
-
-该接口只支持主键为基本类型的表、不支持共享表、无主键表和复合类型主键表。
-
-该接口不支持依赖关系表之间的锁传递，如果表存在依赖关系，需要根据依赖关系手动调用该接口。
-
-该接口不支持对已删除数据的操作。
+Unlocks data from the database based on a specified instance object of RdbPredicates.
 
 **Since:** 12
 
@@ -5070,38 +4663,38 @@ unlockRow(predicates: RdbPredicates): Promise<void>
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| predicates | [RdbPredicates](arkts-arkdata-relationalstore-rdbpredicates-c.md) | Yes | RdbPredicates的实例对象指定的锁定条件。 |
+| predicates | [RdbPredicates](arkts-arkdata-relationalstore-rdbpredicates-c.md) | Yes | The specified Unlock condition by the instance object of {@link RdbPredicates}. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise对象，无返回结果。 |
+| Promise&lt;void&gt; | The promise returned by the function. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 14800033 | SQLite: Data type mismatch. |
-| 14800000 | Inner error. |
-| 14800032 | SQLite: Abort due to constraint violation. |
-| 14800034 | SQLite: Library used incorrectly. |
-| 14800011 | The current operation failed because the database is corrupted. |
-| 14800015 | The database does not respond. |
-| 14800014 | The target instance is already closed. |
-| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; 3. Parameter verification failed. |
-| 14800018 | No data meets the condition. |
-| 14800021 | SQLite: Generic error. |
-| 14800023 | SQLite: Access permission denied. |
-| 14800022 | SQLite: Callback routine requested an abort. |
-| 14800025 | SQLite: A table in the database is locked. |
-| 14800024 | SQLite: The database file is locked. |
-| 14800027 | SQLite: Attempt to write a readonly database. |
-| 14800026 | SQLite: The database is out of memory. |
-| 14800029 | SQLite: The database is full. |
-| 14800028 | SQLite: Some kind of disk I/O error occurred. |
-| 14800031 | SQLite: TEXT or BLOB exceeds size limit. |
-| 14800030 | SQLite: Unable to open the database file. |
+| [14800033](../errorcode-data-rdb.md#14800033-sqlite-data-types-mismatch) | SQLite: Data type mismatch. |
+| [14800000](../../apis-basic-services-kit/errorcode-settings.md#14800000-parameter-check-failed) | Inner error. |
+| [14800032](../errorcode-data-rdb.md#14800032-sqlite-abort-due-to-constraint-violation) | SQLite: Abort due to constraint violation. |
+| [14800034](../errorcode-data-rdb.md#14800034-incorrect-use-of-sqlite-library) | SQLite: Library used incorrectly. |
+| [14800011](../errorcode-data-rdb.md#14800011-database-file-corrupted) | The current operation failed because the database is corrupted. |
+| [14800015](../errorcode-data-rdb.md#14800015-rdb-store-not-respond) | The database does not respond. |
+| [14800014](../errorcode-data-rdb.md#14800014-target-instance-closed) | The target instance is already closed. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; 3. Parameter verification failed. |
+| [14800018](../errorcode-data-rdb.md#14800018-no-match) | No data meets the condition. |
+| [14800021](../errorcode-data-rdb.md#14800021-sqlite-generic-error) | SQLite: Generic error. |
+| [14800023](../errorcode-data-rdb.md#14800023-sqlite-access-denied) | SQLite: Access permission denied. |
+| [14800022](../errorcode-data-rdb.md#14800022-sqlite-asynchronous-callback-request-aborted) | SQLite: Callback routine requested an abort. |
+| [14800025](../errorcode-data-rdb.md#14800025-sqlite-database-table-locked) | SQLite: A table in the database is locked. |
+| [14800024](../errorcode-data-rdb.md#14800024-sqlite-database-file-locked) | SQLite: The database file is locked. |
+| [14800027](../errorcode-data-rdb.md#14800027-sqlite-attempt-to-write-a-readonly-database) | SQLite: Attempt to write a readonly database. |
+| [14800026](../errorcode-data-rdb.md#14800026-sqlite-insufficient-database-memory) | SQLite: The database is out of memory. |
+| [14800029](../errorcode-data-rdb.md#14800029-sqlite-database-is-full) | SQLite: The database is full. |
+| [14800028](../errorcode-data-rdb.md#14800028-sqlite-io-error) | SQLite: Some kind of disk I/O error occurred. |
+| [14800031](../errorcode-data-rdb.md#14800031-sqlite-text-or-blob-exceeds-the-limit) | SQLite: TEXT or BLOB exceeds size limit. |
+| [14800030](../errorcode-data-rdb.md#14800030-sqlite-unable-to-open-the-database-file) | SQLite: Unable to open the database file. |
 
 ## update
 
@@ -5115,19 +4708,7 @@ ArkTS-Sta:
 update(values: ValuesBucket, predicates: RdbPredicates, callback: AsyncCallback<long>): void
 ```
 
-根据RdbPredicates的指定实例对象更新数据库中的数据，使用callback异步回调。
-
-由于共享内存的大小限制为2MB，因此单条数据的大小也必须严格小于2MB。
-
-如果单条数据超过此限制，在后续通过RdbStore的  
-[query](arkts-arkdata-relationalstore-rdbstore-i.md#query)或  
-[querySql](arkts-arkdata-relationalstore-rdbstore-i.md#querysql)接口获取ResultSet后，调用[getValue](arkts-arkdata-relationalstore-resultset-i.md#getvalue)、  
-[getString](arkts-arkdata-relationalstore-resultset-i.md#getstring)等get方法时将无法成功获取数据，并可能导致操作失败或抛出异常。
-
-如需读取超过2MB的数据，请使用  
-[queryByStep](arkts-arkdata-relationalstore-rdbstore-i.md#querybystep)接口。
-
-单条字符串类型字段最大支持写入8MB，超出部分将被截断，仅保留前8MB数据，若需存储超过8MB的内容，建议使用blob类型。
+Updates data in the database based on a specified instance object of RdbPredicates.
 
 **Since:** 9
 
@@ -5141,34 +4722,34 @@ update(values: ValuesBucket, predicates: RdbPredicates, callback: AsyncCallback<
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| values | [ValuesBucket](arkts-arkdata-rdb-valuesbucket-t.md) | Yes | values指示数据库中要更新的数据行。键值对与数据库表的列名相关联。 |
-| predicates | [RdbPredicates](arkts-arkdata-relationalstore-rdbpredicates-c.md) | Yes | RdbPredicates的实例对象指定的更新条件。 |
-| callback | ArkTS-Dyn: [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;number&gt;  <br>ArkTS-Sta：[AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;long&gt; | Yes | 回调函数。当更新数据成功，err为undefined，data为受影响的行数；否则为错误对象。 |
+| values | [ValuesBucket](arkts-arkdata-rdb-valuesbucket-t.md) | Yes | Indicates the row of data to be updated in the database. The key-value pairs are associated with column names of the database table. |
+| predicates | [RdbPredicates](arkts-arkdata-relationalstore-rdbpredicates-c.md) | Yes | Indicates the specified update condition by the instance object of {@link RdbPredicates}. |
+| callback | ArkTS-Dyn: [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;number&gt;  <br>ArkTS-Sta：[AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;long&gt; | Yes | The number of affected rows. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 14800033 | SQLite: Data type mismatch.<br>**Applicable version:** 12 and later |
-| 14800000 | Inner error. |
-| 14800032 | SQLite: Abort due to constraint violation.<br>**Applicable version:** 12 and later |
-| 14800034 | SQLite: Library used incorrectly.<br>**Applicable version:** 12 and later |
-| 14800011 | The current operation failed because the database is corrupted.<br>**Applicable version:** 12 and later |
-| 14800047 | The WAL file size exceeds the default limit.<br>**Applicable version:** 10 and later |
-| 14800015 | The database does not respond.<br>**Applicable version:** 12 and later |
-| 14800014 | The target instance is already closed.<br>**Applicable version:** 12 and later |
-| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; 3. Parameter verification failed. |
-| 14800021 | SQLite: Generic error. Possible causes: Insert failed or the updated data does not exist.<br>**Applicable version:** 12 and later |
-| 14800023 | SQLite: Access permission denied.<br>**Applicable version:** 12 and later |
-| 14800022 | SQLite: Callback routine requested an abort.<br>**Applicable version:** 12 and later |
-| 14800025 | SQLite: A table in the database is locked.<br>**Applicable version:** 12 and later |
-| 14800024 | SQLite: The database file is locked.<br>**Applicable version:** 12 and later |
-| 14800027 | SQLite: Attempt to write a readonly database.<br>**Applicable version:** 12 and later |
-| 14800026 | SQLite: The database is out of memory.<br>**Applicable version:** 12 and later |
-| 14800029 | SQLite: The database is full.<br>**Applicable version:** 12 and later |
-| 14800028 | SQLite: Some kind of disk I/O error occurred.<br>**Applicable version:** 12 and later |
-| 14800031 | SQLite: TEXT or BLOB exceeds size limit.<br>**Applicable version:** 12 and later |
-| 14800030 | SQLite: Unable to open the database file.<br>**Applicable version:** 12 and later |
+| [14800033](../errorcode-data-rdb.md#14800033-sqlite-data-types-mismatch) | SQLite: Data type mismatch.<br>**Applicable version:** 12 and later |
+| [14800000](../../apis-basic-services-kit/errorcode-settings.md#14800000-parameter-check-failed) | Inner error. |
+| [14800032](../errorcode-data-rdb.md#14800032-sqlite-abort-due-to-constraint-violation) | SQLite: Abort due to constraint violation.<br>**Applicable version:** 12 and later |
+| [14800034](../errorcode-data-rdb.md#14800034-incorrect-use-of-sqlite-library) | SQLite: Library used incorrectly.<br>**Applicable version:** 12 and later |
+| [14800011](../errorcode-data-rdb.md#14800011-database-file-corrupted) | The current operation failed because the database is corrupted.<br>**Applicable version:** 12 and later |
+| [14800047](../errorcode-data-rdb.md#14800047-wal-file-size-exceeds-the-default-limit) | The WAL file size exceeds the default limit.<br>**Applicable version:** 10 and later |
+| [14800015](../errorcode-data-rdb.md#14800015-rdb-store-not-respond) | The database does not respond.<br>**Applicable version:** 12 and later |
+| [14800014](../errorcode-data-rdb.md#14800014-target-instance-closed) | The target instance is already closed.<br>**Applicable version:** 12 and later |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; 3. Parameter verification failed. |
+| [14800021](../errorcode-data-rdb.md#14800021-sqlite-generic-error) | SQLite: Generic error. Possible causes: Insert failed or the updated data does not exist.<br>**Applicable version:** 12 and later |
+| [14800023](../errorcode-data-rdb.md#14800023-sqlite-access-denied) | SQLite: Access permission denied.<br>**Applicable version:** 12 and later |
+| [14800022](../errorcode-data-rdb.md#14800022-sqlite-asynchronous-callback-request-aborted) | SQLite: Callback routine requested an abort.<br>**Applicable version:** 12 and later |
+| [14800025](../errorcode-data-rdb.md#14800025-sqlite-database-table-locked) | SQLite: A table in the database is locked.<br>**Applicable version:** 12 and later |
+| [14800024](../errorcode-data-rdb.md#14800024-sqlite-database-file-locked) | SQLite: The database file is locked.<br>**Applicable version:** 12 and later |
+| [14800027](../errorcode-data-rdb.md#14800027-sqlite-attempt-to-write-a-readonly-database) | SQLite: Attempt to write a readonly database.<br>**Applicable version:** 12 and later |
+| [14800026](../errorcode-data-rdb.md#14800026-sqlite-insufficient-database-memory) | SQLite: The database is out of memory.<br>**Applicable version:** 12 and later |
+| [14800029](../errorcode-data-rdb.md#14800029-sqlite-database-is-full) | SQLite: The database is full.<br>**Applicable version:** 12 and later |
+| [14800028](../errorcode-data-rdb.md#14800028-sqlite-io-error) | SQLite: Some kind of disk I/O error occurred.<br>**Applicable version:** 12 and later |
+| [14800031](../errorcode-data-rdb.md#14800031-sqlite-text-or-blob-exceeds-the-limit) | SQLite: TEXT or BLOB exceeds size limit.<br>**Applicable version:** 12 and later |
+| [14800030](../errorcode-data-rdb.md#14800030-sqlite-unable-to-open-the-database-file) | SQLite: Unable to open the database file.<br>**Applicable version:** 12 and later |
 
 ## update
 
@@ -5192,20 +4773,7 @@ update(
     ): void
 ```
 
-根据RdbPredicates的指定实例对象更新数据库中的数据，可以通过conflict参数指定冲突解决模式  
-[ConflictResolution](arkts-arkdata-relationalstore-conflictresolution-e.md)，使用callback异步回调。
-
-由于共享内存的大小限制为2MB，因此单条数据的大小也必须严格小于2MB。
-
-如果单条数据超过此限制，在后续通过RdbStore的  
-[query](arkts-arkdata-relationalstore-rdbstore-i.md#query)或  
-[querySql](arkts-arkdata-relationalstore-rdbstore-i.md#querysql)接口获取ResultSet后，调用[getValue](arkts-arkdata-relationalstore-resultset-i.md#getvalue)、  
-[getString](arkts-arkdata-relationalstore-resultset-i.md#getstring)等get方法时将无法成功获取数据，并可能导致操作失败或抛出异常。
-
-如需读取超过2MB的数据，请使用  
-[queryByStep](arkts-arkdata-relationalstore-rdbstore-i.md#querybystep)接口。
-
-单条字符串类型字段最大支持写入8MB，超出部分将被截断，仅保留前8MB数据，若需存储超过8MB的内容，建议使用blob类型。
+Updates data in the database based on a specified instance object of RdbPredicates.
 
 **Since:** 10
 
@@ -5219,35 +4787,35 @@ update(
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| values | [ValuesBucket](arkts-arkdata-rdb-valuesbucket-t.md) | Yes | values指示数据库中要更新的数据行。键值对与数据库表的列名相关联。 |
-| predicates | [RdbPredicates](arkts-arkdata-relationalstore-rdbpredicates-c.md) | Yes | RdbPredicates的实例对象指定的更新条件。 |
-| conflict | [ConflictResolution](../../apis-asset-store-kit/arkts-apis/arkts-assetstore-asset-conflictresolution-e.md) | Yes | 指定冲突解决模式。 |
-| callback | ArkTS-Dyn: [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;number&gt;  <br>ArkTS-Sta：[AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;long&gt; | Yes | 回调函数。当更新数据成功，err为undefined，data为受影响的行数；否则为错误对象。 |
+| values | [ValuesBucket](arkts-arkdata-rdb-valuesbucket-t.md) | Yes | Indicates the row of data to be updated in the database. The key-value pairs are associated with column names of the database table. |
+| predicates | [RdbPredicates](arkts-arkdata-relationalstore-rdbpredicates-c.md) | Yes | Indicates the specified update condition by the instance object of {@link RdbPredicates}. |
+| conflict | [ConflictResolution](../../apis-asset-store-kit/arkts-apis/arkts-assetstore-asset-conflictresolution-e.md) | Yes | Indicates the {@link ConflictResolution} to insert data into the table. |
+| callback | ArkTS-Dyn: [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;number&gt;  <br>ArkTS-Sta：[AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;long&gt; | Yes | The number of affected rows. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 14800033 | SQLite: Data type mismatch.<br>**Applicable version:** 12 and later |
-| 14800000 | Inner error. |
-| 14800032 | SQLite: Abort due to constraint violation.<br>**Applicable version:** 12 and later |
-| 14800034 | SQLite: Library used incorrectly.<br>**Applicable version:** 12 and later |
-| 14800011 | The current operation failed because the database is corrupted.<br>**Applicable version:** 12 and later |
-| 14800047 | The WAL file size exceeds the default limit. |
-| 14800015 | The database does not respond.<br>**Applicable version:** 12 and later |
-| 14800014 | The target instance is already closed.<br>**Applicable version:** 12 and later |
-| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; 3. Parameter verification failed. |
-| 14800021 | SQLite: Generic error. Possible causes: Insert failed or the updated data does not exist.<br>**Applicable version:** 12 and later |
-| 14800023 | SQLite: Access permission denied.<br>**Applicable version:** 12 and later |
-| 14800022 | SQLite: Callback routine requested an abort.<br>**Applicable version:** 12 and later |
-| 14800025 | SQLite: A table in the database is locked.<br>**Applicable version:** 12 and later |
-| 14800024 | SQLite: The database file is locked.<br>**Applicable version:** 12 and later |
-| 14800027 | SQLite: Attempt to write a readonly database.<br>**Applicable version:** 12 and later |
-| 14800026 | SQLite: The database is out of memory.<br>**Applicable version:** 12 and later |
-| 14800029 | SQLite: The database is full.<br>**Applicable version:** 12 and later |
-| 14800028 | SQLite: Some kind of disk I/O error occurred.<br>**Applicable version:** 12 and later |
-| 14800031 | SQLite: TEXT or BLOB exceeds size limit.<br>**Applicable version:** 12 and later |
-| 14800030 | SQLite: Unable to open the database file.<br>**Applicable version:** 12 and later |
+| [14800033](../errorcode-data-rdb.md#14800033-sqlite-data-types-mismatch) | SQLite: Data type mismatch.<br>**Applicable version:** 12 and later |
+| [14800000](../../apis-basic-services-kit/errorcode-settings.md#14800000-parameter-check-failed) | Inner error. |
+| [14800032](../errorcode-data-rdb.md#14800032-sqlite-abort-due-to-constraint-violation) | SQLite: Abort due to constraint violation.<br>**Applicable version:** 12 and later |
+| [14800034](../errorcode-data-rdb.md#14800034-incorrect-use-of-sqlite-library) | SQLite: Library used incorrectly.<br>**Applicable version:** 12 and later |
+| [14800011](../errorcode-data-rdb.md#14800011-database-file-corrupted) | The current operation failed because the database is corrupted.<br>**Applicable version:** 12 and later |
+| [14800047](../errorcode-data-rdb.md#14800047-wal-file-size-exceeds-the-default-limit) | The WAL file size exceeds the default limit. |
+| [14800015](../errorcode-data-rdb.md#14800015-rdb-store-not-respond) | The database does not respond.<br>**Applicable version:** 12 and later |
+| [14800014](../errorcode-data-rdb.md#14800014-target-instance-closed) | The target instance is already closed.<br>**Applicable version:** 12 and later |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; 3. Parameter verification failed. |
+| [14800021](../errorcode-data-rdb.md#14800021-sqlite-generic-error) | SQLite: Generic error. Possible causes: Insert failed or the updated data does not exist.<br>**Applicable version:** 12 and later |
+| [14800023](../errorcode-data-rdb.md#14800023-sqlite-access-denied) | SQLite: Access permission denied.<br>**Applicable version:** 12 and later |
+| [14800022](../errorcode-data-rdb.md#14800022-sqlite-asynchronous-callback-request-aborted) | SQLite: Callback routine requested an abort.<br>**Applicable version:** 12 and later |
+| [14800025](../errorcode-data-rdb.md#14800025-sqlite-database-table-locked) | SQLite: A table in the database is locked.<br>**Applicable version:** 12 and later |
+| [14800024](../errorcode-data-rdb.md#14800024-sqlite-database-file-locked) | SQLite: The database file is locked.<br>**Applicable version:** 12 and later |
+| [14800027](../errorcode-data-rdb.md#14800027-sqlite-attempt-to-write-a-readonly-database) | SQLite: Attempt to write a readonly database.<br>**Applicable version:** 12 and later |
+| [14800026](../errorcode-data-rdb.md#14800026-sqlite-insufficient-database-memory) | SQLite: The database is out of memory.<br>**Applicable version:** 12 and later |
+| [14800029](../errorcode-data-rdb.md#14800029-sqlite-database-is-full) | SQLite: The database is full.<br>**Applicable version:** 12 and later |
+| [14800028](../errorcode-data-rdb.md#14800028-sqlite-io-error) | SQLite: Some kind of disk I/O error occurred.<br>**Applicable version:** 12 and later |
+| [14800031](../errorcode-data-rdb.md#14800031-sqlite-text-or-blob-exceeds-the-limit) | SQLite: TEXT or BLOB exceeds size limit.<br>**Applicable version:** 12 and later |
+| [14800030](../errorcode-data-rdb.md#14800030-sqlite-unable-to-open-the-database-file) | SQLite: Unable to open the database file.<br>**Applicable version:** 12 and later |
 
 ## update
 
@@ -5261,19 +4829,7 @@ ArkTS-Sta:
 update(values: ValuesBucket, predicates: RdbPredicates): Promise<long>
 ```
 
-根据RdbPredicates的指定实例对象更新数据库中的数据，使用Promise异步回调。
-
-由于共享内存的大小限制为2MB，因此单条数据的大小也必须严格小于2MB。
-
-如果单条数据超过此限制，在后续通过RdbStore的  
-[query](arkts-arkdata-relationalstore-rdbstore-i.md#query)或  
-[querySql](arkts-arkdata-relationalstore-rdbstore-i.md#querysql)接口获取ResultSet后，调用[getValue](arkts-arkdata-relationalstore-resultset-i.md#getvalue)、  
-[getString](arkts-arkdata-relationalstore-resultset-i.md#getstring)等get方法时将无法成功获取数据，并可能导致操作失败或抛出异常。
-
-如需读取超过2MB的数据，请使用  
-[queryByStep](arkts-arkdata-relationalstore-rdbstore-i.md#querybystep)接口。
-
-单条字符串类型字段最大支持写入8MB，超出部分将被截断，仅保留前8MB数据，若需存储超过8MB的内容，建议使用blob类型。
+Updates data in the database based on a specified instance object of RdbPredicates.
 
 **Since:** 9
 
@@ -5287,39 +4843,39 @@ update(values: ValuesBucket, predicates: RdbPredicates): Promise<long>
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| values | [ValuesBucket](arkts-arkdata-rdb-valuesbucket-t.md) | Yes | values指示数据库中要更新的数据行。键值对与数据库表的列名相关联。 |
-| predicates | [RdbPredicates](arkts-arkdata-relationalstore-rdbpredicates-c.md) | Yes | RdbPredicates的实例对象指定的更新条件。 |
+| values | [ValuesBucket](arkts-arkdata-rdb-valuesbucket-t.md) | Yes | Indicates the row of data to be updated in the database. The key-value pairs are associated with column names of the database table. |
+| predicates | [RdbPredicates](arkts-arkdata-relationalstore-rdbpredicates-c.md) | Yes | Indicates the specified update condition by the instance object of {@link RdbPredicates}. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| ArkTS-Dyn: Promise&lt;number&gt;  <br>ArkTS-Sta：Promise&lt;long&gt; | Promise对象。返回受影响的行数。 |
+| ArkTS-Dyn: Promise&lt;number&gt;  <br>ArkTS-Sta：Promise&lt;long&gt; | The number of affected rows. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 14800033 | SQLite: Data type mismatch.<br>**Applicable version:** 12 and later |
-| 14800000 | Inner error. |
-| 14800032 | SQLite: Abort due to constraint violation.<br>**Applicable version:** 12 and later |
-| 14800034 | SQLite: Library used incorrectly.<br>**Applicable version:** 12 and later |
-| 14800011 | The current operation failed because the database is corrupted.<br>**Applicable version:** 12 and later |
-| 14800047 | The WAL file size exceeds the default limit.<br>**Applicable version:** 10 and later |
-| 14800015 | The database does not respond.<br>**Applicable version:** 12 and later |
-| 14800014 | The target instance is already closed.<br>**Applicable version:** 12 and later |
-| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; 3. Parameter verification failed. |
-| 14800021 | SQLite: Generic error. Possible causes: Insert failed or the updated data does not exist.<br>**Applicable version:** 12 and later |
-| 14800023 | SQLite: Access permission denied.<br>**Applicable version:** 12 and later |
-| 14800022 | SQLite: Callback routine requested an abort.<br>**Applicable version:** 12 and later |
-| 14800025 | SQLite: A table in the database is locked.<br>**Applicable version:** 12 and later |
-| 14800024 | SQLite: The database file is locked.<br>**Applicable version:** 12 and later |
-| 14800027 | SQLite: Attempt to write a readonly database.<br>**Applicable version:** 12 and later |
-| 14800026 | SQLite: The database is out of memory.<br>**Applicable version:** 12 and later |
-| 14800029 | SQLite: The database is full.<br>**Applicable version:** 12 and later |
-| 14800028 | SQLite: Some kind of disk I/O error occurred.<br>**Applicable version:** 12 and later |
-| 14800031 | SQLite: TEXT or BLOB exceeds size limit.<br>**Applicable version:** 12 and later |
-| 14800030 | SQLite: Unable to open the database file.<br>**Applicable version:** 12 and later |
+| [14800033](../errorcode-data-rdb.md#14800033-sqlite-data-types-mismatch) | SQLite: Data type mismatch.<br>**Applicable version:** 12 and later |
+| [14800000](../../apis-basic-services-kit/errorcode-settings.md#14800000-parameter-check-failed) | Inner error. |
+| [14800032](../errorcode-data-rdb.md#14800032-sqlite-abort-due-to-constraint-violation) | SQLite: Abort due to constraint violation.<br>**Applicable version:** 12 and later |
+| [14800034](../errorcode-data-rdb.md#14800034-incorrect-use-of-sqlite-library) | SQLite: Library used incorrectly.<br>**Applicable version:** 12 and later |
+| [14800011](../errorcode-data-rdb.md#14800011-database-file-corrupted) | The current operation failed because the database is corrupted.<br>**Applicable version:** 12 and later |
+| [14800047](../errorcode-data-rdb.md#14800047-wal-file-size-exceeds-the-default-limit) | The WAL file size exceeds the default limit.<br>**Applicable version:** 10 and later |
+| [14800015](../errorcode-data-rdb.md#14800015-rdb-store-not-respond) | The database does not respond.<br>**Applicable version:** 12 and later |
+| [14800014](../errorcode-data-rdb.md#14800014-target-instance-closed) | The target instance is already closed.<br>**Applicable version:** 12 and later |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; 3. Parameter verification failed. |
+| [14800021](../errorcode-data-rdb.md#14800021-sqlite-generic-error) | SQLite: Generic error. Possible causes: Insert failed or the updated data does not exist.<br>**Applicable version:** 12 and later |
+| [14800023](../errorcode-data-rdb.md#14800023-sqlite-access-denied) | SQLite: Access permission denied.<br>**Applicable version:** 12 and later |
+| [14800022](../errorcode-data-rdb.md#14800022-sqlite-asynchronous-callback-request-aborted) | SQLite: Callback routine requested an abort.<br>**Applicable version:** 12 and later |
+| [14800025](../errorcode-data-rdb.md#14800025-sqlite-database-table-locked) | SQLite: A table in the database is locked.<br>**Applicable version:** 12 and later |
+| [14800024](../errorcode-data-rdb.md#14800024-sqlite-database-file-locked) | SQLite: The database file is locked.<br>**Applicable version:** 12 and later |
+| [14800027](../errorcode-data-rdb.md#14800027-sqlite-attempt-to-write-a-readonly-database) | SQLite: Attempt to write a readonly database.<br>**Applicable version:** 12 and later |
+| [14800026](../errorcode-data-rdb.md#14800026-sqlite-insufficient-database-memory) | SQLite: The database is out of memory.<br>**Applicable version:** 12 and later |
+| [14800029](../errorcode-data-rdb.md#14800029-sqlite-database-is-full) | SQLite: The database is full.<br>**Applicable version:** 12 and later |
+| [14800028](../errorcode-data-rdb.md#14800028-sqlite-io-error) | SQLite: Some kind of disk I/O error occurred.<br>**Applicable version:** 12 and later |
+| [14800031](../errorcode-data-rdb.md#14800031-sqlite-text-or-blob-exceeds-the-limit) | SQLite: TEXT or BLOB exceeds size limit.<br>**Applicable version:** 12 and later |
+| [14800030](../errorcode-data-rdb.md#14800030-sqlite-unable-to-open-the-database-file) | SQLite: Unable to open the database file.<br>**Applicable version:** 12 and later |
 
 ## update
 
@@ -5333,20 +4889,7 @@ ArkTS-Sta:
 update(values: ValuesBucket, predicates: RdbPredicates, conflict: ConflictResolution): Promise<long>
 ```
 
-根据RdbPredicates的指定实例对象更新数据库中的数据，可以通过conflict参数指定冲突解决模式  
-[ConflictResolution](arkts-arkdata-relationalstore-conflictresolution-e.md)，使用Promise异步回调。
-
-由于共享内存的大小限制为2MB，因此单条数据的大小也必须严格小于2MB。
-
-如果单条数据超过此限制，在后续通过RdbStore的  
-[query](arkts-arkdata-relationalstore-rdbstore-i.md#query)或  
-[querySql](arkts-arkdata-relationalstore-rdbstore-i.md#querysql)接口获取ResultSet后，调用[getValue](arkts-arkdata-relationalstore-resultset-i.md#getvalue)、  
-[getString](arkts-arkdata-relationalstore-resultset-i.md#getstring)等get方法时将无法成功获取数据，并可能导致操作失败或抛出异常。
-
-如需读取超过2MB的数据，请使用  
-[queryByStep](arkts-arkdata-relationalstore-rdbstore-i.md#querybystep)接口。
-
-单条字符串类型字段最大支持写入8MB，超出部分将被截断，仅保留前8MB数据，若需存储超过8MB的内容，建议使用blob类型。
+Updates data in the database based on a specified instance object of RdbPredicates.
 
 **Since:** 10
 
@@ -5360,40 +4903,40 @@ update(values: ValuesBucket, predicates: RdbPredicates, conflict: ConflictResolu
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| values | [ValuesBucket](arkts-arkdata-rdb-valuesbucket-t.md) | Yes | values指示数据库中要更新的数据行。键值对与数据库表的列名相关联。 |
-| predicates | [RdbPredicates](arkts-arkdata-relationalstore-rdbpredicates-c.md) | Yes | RdbPredicates的实例对象指定的更新条件。 |
-| conflict | [ConflictResolution](../../apis-asset-store-kit/arkts-apis/arkts-assetstore-asset-conflictresolution-e.md) | Yes | 指定冲突解决模式。 |
+| values | [ValuesBucket](arkts-arkdata-rdb-valuesbucket-t.md) | Yes | Indicates the row of data to be updated in the database. The key-value pairs are associated with column names of the database table. |
+| predicates | [RdbPredicates](arkts-arkdata-relationalstore-rdbpredicates-c.md) | Yes | Indicates the specified update condition by the instance object of {@link RdbPredicates}. |
+| conflict | [ConflictResolution](../../apis-asset-store-kit/arkts-apis/arkts-assetstore-asset-conflictresolution-e.md) | Yes | Indicates the {@link ConflictResolution} to insert data into the table. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| ArkTS-Dyn: Promise&lt;number&gt;  <br>ArkTS-Sta：Promise&lt;long&gt; | Promise对象。返回受影响的行数。 |
+| ArkTS-Dyn: Promise&lt;number&gt;  <br>ArkTS-Sta：Promise&lt;long&gt; | The number of affected rows. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 14800033 | SQLite: Data type mismatch.<br>**Applicable version:** 12 and later |
-| 14800000 | Inner error. |
-| 14800032 | SQLite: Abort due to constraint violation.<br>**Applicable version:** 12 and later |
-| 14800034 | SQLite: Library used incorrectly.<br>**Applicable version:** 12 and later |
-| 14800011 | The current operation failed because the database is corrupted.<br>**Applicable version:** 12 and later |
-| 14800047 | The WAL file size exceeds the default limit. |
-| 14800015 | The database does not respond.<br>**Applicable version:** 12 and later |
-| 14800014 | The target instance is already closed.<br>**Applicable version:** 12 and later |
-| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; 3. Parameter verification failed. |
-| 14800021 | SQLite: Generic error. Possible causes: Insert failed or the updated data does not exist.<br>**Applicable version:** 12 and later |
-| 14800023 | SQLite: Access permission denied.<br>**Applicable version:** 12 and later |
-| 14800022 | SQLite: Callback routine requested an abort.<br>**Applicable version:** 12 and later |
-| 14800025 | SQLite: A table in the database is locked.<br>**Applicable version:** 12 and later |
-| 14800024 | SQLite: The database file is locked.<br>**Applicable version:** 12 and later |
-| 14800027 | SQLite: Attempt to write a readonly database.<br>**Applicable version:** 12 and later |
-| 14800026 | SQLite: The database is out of memory.<br>**Applicable version:** 12 and later |
-| 14800029 | SQLite: The database is full.<br>**Applicable version:** 12 and later |
-| 14800028 | SQLite: Some kind of disk I/O error occurred.<br>**Applicable version:** 12 and later |
-| 14800031 | SQLite: TEXT or BLOB exceeds size limit.<br>**Applicable version:** 12 and later |
-| 14800030 | SQLite: Unable to open the database file.<br>**Applicable version:** 12 and later |
+| [14800033](../errorcode-data-rdb.md#14800033-sqlite-data-types-mismatch) | SQLite: Data type mismatch.<br>**Applicable version:** 12 and later |
+| [14800000](../../apis-basic-services-kit/errorcode-settings.md#14800000-parameter-check-failed) | Inner error. |
+| [14800032](../errorcode-data-rdb.md#14800032-sqlite-abort-due-to-constraint-violation) | SQLite: Abort due to constraint violation.<br>**Applicable version:** 12 and later |
+| [14800034](../errorcode-data-rdb.md#14800034-incorrect-use-of-sqlite-library) | SQLite: Library used incorrectly.<br>**Applicable version:** 12 and later |
+| [14800011](../errorcode-data-rdb.md#14800011-database-file-corrupted) | The current operation failed because the database is corrupted.<br>**Applicable version:** 12 and later |
+| [14800047](../errorcode-data-rdb.md#14800047-wal-file-size-exceeds-the-default-limit) | The WAL file size exceeds the default limit. |
+| [14800015](../errorcode-data-rdb.md#14800015-rdb-store-not-respond) | The database does not respond.<br>**Applicable version:** 12 and later |
+| [14800014](../errorcode-data-rdb.md#14800014-target-instance-closed) | The target instance is already closed.<br>**Applicable version:** 12 and later |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; 3. Parameter verification failed. |
+| [14800021](../errorcode-data-rdb.md#14800021-sqlite-generic-error) | SQLite: Generic error. Possible causes: Insert failed or the updated data does not exist.<br>**Applicable version:** 12 and later |
+| [14800023](../errorcode-data-rdb.md#14800023-sqlite-access-denied) | SQLite: Access permission denied.<br>**Applicable version:** 12 and later |
+| [14800022](../errorcode-data-rdb.md#14800022-sqlite-asynchronous-callback-request-aborted) | SQLite: Callback routine requested an abort.<br>**Applicable version:** 12 and later |
+| [14800025](../errorcode-data-rdb.md#14800025-sqlite-database-table-locked) | SQLite: A table in the database is locked.<br>**Applicable version:** 12 and later |
+| [14800024](../errorcode-data-rdb.md#14800024-sqlite-database-file-locked) | SQLite: The database file is locked.<br>**Applicable version:** 12 and later |
+| [14800027](../errorcode-data-rdb.md#14800027-sqlite-attempt-to-write-a-readonly-database) | SQLite: Attempt to write a readonly database.<br>**Applicable version:** 12 and later |
+| [14800026](../errorcode-data-rdb.md#14800026-sqlite-insufficient-database-memory) | SQLite: The database is out of memory.<br>**Applicable version:** 12 and later |
+| [14800029](../errorcode-data-rdb.md#14800029-sqlite-database-is-full) | SQLite: The database is full.<br>**Applicable version:** 12 and later |
+| [14800028](../errorcode-data-rdb.md#14800028-sqlite-io-error) | SQLite: Some kind of disk I/O error occurred.<br>**Applicable version:** 12 and later |
+| [14800031](../errorcode-data-rdb.md#14800031-sqlite-text-or-blob-exceeds-the-limit) | SQLite: TEXT or BLOB exceeds size limit.<br>**Applicable version:** 12 and later |
+| [14800030](../errorcode-data-rdb.md#14800030-sqlite-unable-to-open-the-database-file) | SQLite: Unable to open the database file.<br>**Applicable version:** 12 and later |
 
 ## updateSync
 
@@ -5407,19 +4950,7 @@ ArkTS-Sta:
 updateSync(values: ValuesBucket, predicates: RdbPredicates, conflict?: ConflictResolution): long
 ```
 
-根据RdbPredicates的指定实例对象更新数据库中的数据。
-
-由于共享内存的大小限制为2MB，因此单条数据的大小也必须严格小于2MB。
-
-如果单条数据超过此限制，在后续通过RdbStore的  
-[query](arkts-arkdata-relationalstore-rdbstore-i.md#query)或  
-[querySql](arkts-arkdata-relationalstore-rdbstore-i.md#querysql)接口获取ResultSet后，调用[getValue](arkts-arkdata-relationalstore-resultset-i.md#getvalue)、  
-[getString](arkts-arkdata-relationalstore-resultset-i.md#getstring)等get方法时将无法成功获取数据，并可能导致操作失败或抛出异常。
-
-如需读取超过2MB的数据，请使用  
-[queryByStep](arkts-arkdata-relationalstore-rdbstore-i.md#querybystep)接口。
-
-单条字符串类型字段最大支持写入8MB，超出部分将被截断，仅保留前8MB数据，若需存储超过8MB的内容，建议使用blob类型。
+Updates data in the database based on a specified instance object of RdbPredicates with sync interface.
 
 **Since:** 12
 
@@ -5433,40 +4964,40 @@ updateSync(values: ValuesBucket, predicates: RdbPredicates, conflict?: ConflictR
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| values | [ValuesBucket](arkts-arkdata-rdb-valuesbucket-t.md) | Yes | values指示数据库中要更新的数据行。键值对与数据库表的列名相关联。 |
-| predicates | [RdbPredicates](arkts-arkdata-relationalstore-rdbpredicates-c.md) | Yes | RdbPredicates的实例对象指定的更新条件。 |
-| conflict | [ConflictResolution](../../apis-asset-store-kit/arkts-apis/arkts-assetstore-asset-conflictresolution-e.md) | No | 指定冲突解决模式。默认值是relationalStore.ConflictResolution.ON_CONFLICT_NONE。 |
+| values | [ValuesBucket](arkts-arkdata-rdb-valuesbucket-t.md) | Yes | Indicates the row of data to be updated in the database. The key-value pairs are associated with column names of the database table. |
+| predicates | [RdbPredicates](arkts-arkdata-relationalstore-rdbpredicates-c.md) | Yes | Indicates the specified update condition by the instance object of {@link RdbPredicates}. |
+| conflict | [ConflictResolution](../../apis-asset-store-kit/arkts-apis/arkts-assetstore-asset-conflictresolution-e.md) | No | Indicates the {@link ConflictResolution} to insert data into the table. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| ArkTS-Dyn: number  <br>ArkTS-Sta：long | 返回受影响的行数。 |
+| ArkTS-Dyn: number  <br>ArkTS-Sta：long | The number of affected rows. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 14800033 | SQLite: Data type mismatch. |
-| 14800000 | Inner error. |
-| 14800032 | SQLite: Abort due to constraint violation. |
-| 14800034 | SQLite: Library used incorrectly. |
-| 14800011 | The current operation failed because the database is corrupted. |
-| 14800015 | The database does not respond. |
-| 14800047 | The WAL file size exceeds the default limit. |
-| 14800014 | The target instance is already closed. |
-| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; 3. Parameter verification failed. |
-| 14800021 | SQLite: Generic error. Possible causes: Insert failed or the updated data does not exist. |
-| 14800023 | SQLite: Access permission denied. |
-| 14800022 | SQLite: Callback routine requested an abort. |
-| 14800025 | SQLite: A table in the database is locked. |
-| 14800024 | SQLite: The database file is locked. |
-| 14800027 | SQLite: Attempt to write a readonly database. |
-| 14800026 | SQLite: The database is out of memory. |
-| 14800029 | SQLite: The database is full. |
-| 14800028 | SQLite: Some kind of disk I/O error occurred. |
-| 14800031 | SQLite: TEXT or BLOB exceeds size limit. |
-| 14800030 | SQLite: Unable to open the database file. |
+| [14800033](../errorcode-data-rdb.md#14800033-sqlite-data-types-mismatch) | SQLite: Data type mismatch. |
+| [14800000](../../apis-basic-services-kit/errorcode-settings.md#14800000-parameter-check-failed) | Inner error. |
+| [14800032](../errorcode-data-rdb.md#14800032-sqlite-abort-due-to-constraint-violation) | SQLite: Abort due to constraint violation. |
+| [14800034](../errorcode-data-rdb.md#14800034-incorrect-use-of-sqlite-library) | SQLite: Library used incorrectly. |
+| [14800011](../errorcode-data-rdb.md#14800011-database-file-corrupted) | The current operation failed because the database is corrupted. |
+| [14800015](../errorcode-data-rdb.md#14800015-rdb-store-not-respond) | The database does not respond. |
+| [14800047](../errorcode-data-rdb.md#14800047-wal-file-size-exceeds-the-default-limit) | The WAL file size exceeds the default limit. |
+| [14800014](../errorcode-data-rdb.md#14800014-target-instance-closed) | The target instance is already closed. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; 3. Parameter verification failed. |
+| [14800021](../errorcode-data-rdb.md#14800021-sqlite-generic-error) | SQLite: Generic error. Possible causes: Insert failed or the updated data does not exist. |
+| [14800023](../errorcode-data-rdb.md#14800023-sqlite-access-denied) | SQLite: Access permission denied. |
+| [14800022](../errorcode-data-rdb.md#14800022-sqlite-asynchronous-callback-request-aborted) | SQLite: Callback routine requested an abort. |
+| [14800025](../errorcode-data-rdb.md#14800025-sqlite-database-table-locked) | SQLite: A table in the database is locked. |
+| [14800024](../errorcode-data-rdb.md#14800024-sqlite-database-file-locked) | SQLite: The database file is locked. |
+| [14800027](../errorcode-data-rdb.md#14800027-sqlite-attempt-to-write-a-readonly-database) | SQLite: Attempt to write a readonly database. |
+| [14800026](../errorcode-data-rdb.md#14800026-sqlite-insufficient-database-memory) | SQLite: The database is out of memory. |
+| [14800029](../errorcode-data-rdb.md#14800029-sqlite-database-is-full) | SQLite: The database is full. |
+| [14800028](../errorcode-data-rdb.md#14800028-sqlite-io-error) | SQLite: Some kind of disk I/O error occurred. |
+| [14800031](../errorcode-data-rdb.md#14800031-sqlite-text-or-blob-exceeds-the-limit) | SQLite: TEXT or BLOB exceeds size limit. |
+| [14800030](../errorcode-data-rdb.md#14800030-sqlite-unable-to-open-the-database-file) | SQLite: Unable to open the database file. |
 
 ## updateWithReturning
 
@@ -5475,12 +5006,7 @@ updateWithReturning(values: ValuesBucket, predicates: RdbPredicates, config: Ret
       conflict?: ConflictResolution): Promise<Result>
 ```
 
-根据RdbPredicates的指定实例对象更新数据库中的数据，可以通过conflict参数指定当发生数据冲突时的解决模式  
-[ConflictResolution](arkts-arkdata-relationalstore-conflictresolution-e.md)，返回[Result](arkts-arkdata-relationalstore-result-i.md)，使用Promise异步回调。
-
-conflict参数不建议使用ON_CONFLICT_FAIL策略，可能无法返回正确的结果。
-
-单条字符串类型字段最大支持写入8MB，超出部分将被截断，仅保留前8MB数据，若需存储超过8MB的内容，建议使用blob类型。
+Updates data in the database based on a specified instance object of RdbPredicates and return a resultSet of changed fields.
 
 **Since:** 23
 
@@ -5496,33 +5022,33 @@ conflict参数不建议使用ON_CONFLICT_FAIL策略，可能无法返回正确�
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| values | [ValuesBucket](arkts-arkdata-rdb-valuesbucket-t.md) | Yes | values指示数据库中要更新的数据行。键值对与数据库表的列名相关联。 |
-| predicates | [RdbPredicates](arkts-arkdata-relationalstore-rdbpredicates-c.md) | Yes | RdbPredicates的实例对象指定的更新条件。 |
-| config | [ReturningConfig](arkts-arkdata-relationalstore-returningconfig-i.md) | Yes | 指定返回值的配置信息。 |
-| conflict | [ConflictResolution](../../apis-asset-store-kit/arkts-apis/arkts-assetstore-asset-conflictresolution-e.md) | No | 指定冲突解决模式。默认为ON_CONFLICT_NONE。 |
+| values | [ValuesBucket](arkts-arkdata-rdb-valuesbucket-t.md) | Yes | Indicates the row of data to be updated in the database. The key-value pairs are associated with column names of the database table. |
+| predicates | [RdbPredicates](arkts-arkdata-relationalstore-rdbpredicates-c.md) | Yes | Indicates the specified update condition by the instance object of {@link RdbPredicates}. |
+| config | [ReturningConfig](arkts-arkdata-relationalstore-returningconfig-i.md) | Yes | Indicate the information that needs to be returned. |
+| conflict | [ConflictResolution](../../apis-asset-store-kit/arkts-apis/arkts-assetstore-asset-conflictresolution-e.md) | No | Indicates the {@link ConflictResolution} to update data into the table. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;Result&gt; | Promise对象。返回受影响的数据集。 |
+| Promise&lt;Result&gt; | The { |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 14800001 | Invalid arguments. Possible causes: 1. Parameter is out of valid range. |
-| 14800033 | SQLite: Data type mismatch. |
-| 14800032 | SQLite: Abort due to constraint violation. |
-| 14800021 | SQLite: Generic error. Possible causes: Insert failed or the updated data does not exist. |
-| 14800025 | SQLite: A table in the database is locked. |
-| 14800024 | SQLite: The database file is locked. |
-| 14800011 | The current operation failed because the database is corrupted. |
-| 14800027 | SQLite: Attempt to write a readonly database. |
-| 14800029 | SQLite: The database is full. |
-| 14800028 | SQLite: Some kind of disk I/O error occurred. |
-| 14800047 | The WAL file size exceeds the default limit. |
-| 14800014 | The target instance is already closed. |
+| [14800001](../errorcode-data-rdb.md#14800001-invalid-arguments) | Invalid arguments. Possible causes: 1. Parameter is out of valid range. |
+| [14800033](../errorcode-data-rdb.md#14800033-sqlite-data-types-mismatch) | SQLite: Data type mismatch. |
+| [14800032](../errorcode-data-rdb.md#14800032-sqlite-abort-due-to-constraint-violation) | SQLite: Abort due to constraint violation. |
+| [14800021](../errorcode-data-rdb.md#14800021-sqlite-generic-error) | SQLite: Generic error. Possible causes: Insert failed or the updated data does not exist. |
+| [14800025](../errorcode-data-rdb.md#14800025-sqlite-database-table-locked) | SQLite: A table in the database is locked. |
+| [14800024](../errorcode-data-rdb.md#14800024-sqlite-database-file-locked) | SQLite: The database file is locked. |
+| [14800011](../errorcode-data-rdb.md#14800011-database-file-corrupted) | The current operation failed because the database is corrupted. |
+| [14800027](../errorcode-data-rdb.md#14800027-sqlite-attempt-to-write-a-readonly-database) | SQLite: Attempt to write a readonly database. |
+| [14800029](../errorcode-data-rdb.md#14800029-sqlite-database-is-full) | SQLite: The database is full. |
+| [14800028](../errorcode-data-rdb.md#14800028-sqlite-io-error) | SQLite: Some kind of disk I/O error occurred. |
+| [14800047](../errorcode-data-rdb.md#14800047-wal-file-size-exceeds-the-default-limit) | The WAL file size exceeds the default limit. |
+| [14800014](../errorcode-data-rdb.md#14800014-target-instance-closed) | The target instance is already closed. |
 
 ## updateWithReturningSync
 
@@ -5531,12 +5057,7 @@ updateWithReturningSync(values: ValuesBucket, predicates: RdbPredicates, config:
       conflict?: ConflictResolution): Result
 ```
 
-根据RdbPredicates的指定实例对象更新数据库中的数据，可以通过conflict参数指定当发生数据冲突时的解决模式  
-[ConflictResolution](arkts-arkdata-relationalstore-conflictresolution-e.md)，返回[Result](arkts-arkdata-relationalstore-result-i.md)。
-
-conflict参数不建议使用ON_CONFLICT_FAIL策略，可能无法返回正确的结果。
-
-单条字符串类型字段最大支持写入8MB，超出部分将被截断，仅保留前8MB数据，若需存储超过8MB的内容，建议使用blob类型。
+Updates data in the database based on a specified instance object of RdbPredicates and return a resultSet of changed fields.
 
 **Since:** 23
 
@@ -5552,33 +5073,33 @@ conflict参数不建议使用ON_CONFLICT_FAIL策略，可能无法返回正确�
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| values | [ValuesBucket](arkts-arkdata-rdb-valuesbucket-t.md) | Yes | values指示数据库中要更新的数据行。键值对与数据库表的列名相关联。 |
-| predicates | [RdbPredicates](arkts-arkdata-relationalstore-rdbpredicates-c.md) | Yes | RdbPredicates的实例对象指定的更新条件。 |
-| config | [ReturningConfig](arkts-arkdata-relationalstore-returningconfig-i.md) | Yes | 指定返回值的配置信息。 |
-| conflict | [ConflictResolution](../../apis-asset-store-kit/arkts-apis/arkts-assetstore-asset-conflictresolution-e.md) | No | 指定冲突解决模式。默认为ON_CONFLICT_NONE。 |
+| values | [ValuesBucket](arkts-arkdata-rdb-valuesbucket-t.md) | Yes | Indicates the row of data to be updated in the database. The key-value pairs are associated with column names of the database table. |
+| predicates | [RdbPredicates](arkts-arkdata-relationalstore-rdbpredicates-c.md) | Yes | Indicates the specified update condition by the instance object of {@link RdbPredicates}. |
+| config | [ReturningConfig](arkts-arkdata-relationalstore-returningconfig-i.md) | Yes | Indicate the information that needs to be returned. |
+| conflict | [ConflictResolution](../../apis-asset-store-kit/arkts-apis/arkts-assetstore-asset-conflictresolution-e.md) | No | Indicates the {@link ConflictResolution} to update data into the table. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [Result](arkts-arkdata-relationalstore-result-i.md) | 返回受影响的数据集。 |
+| [Result](arkts-arkdata-relationalstore-result-i.md) | The { |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 14800001 | Invalid arguments. Possible causes: 1. Parameter is out of valid range. |
-| 14800033 | SQLite: Data type mismatch. |
-| 14800032 | SQLite: Abort due to constraint violation. |
-| 14800021 | SQLite: Generic error. Possible causes: Insert failed or the updated data does not exist. |
-| 14800025 | SQLite: A table in the database is locked. |
-| 14800024 | SQLite: The database file is locked. |
-| 14800011 | The current operation failed because the database is corrupted. |
-| 14800027 | SQLite: Attempt to write a readonly database. |
-| 14800029 | SQLite: The database is full. |
-| 14800028 | SQLite: Some kind of disk I/O error occurred. |
-| 14800047 | The WAL file size exceeds the default limit. |
-| 14800014 | The target instance is already closed. |
+| [14800001](../errorcode-data-rdb.md#14800001-invalid-arguments) | Invalid arguments. Possible causes: 1. Parameter is out of valid range. |
+| [14800033](../errorcode-data-rdb.md#14800033-sqlite-data-types-mismatch) | SQLite: Data type mismatch. |
+| [14800032](../errorcode-data-rdb.md#14800032-sqlite-abort-due-to-constraint-violation) | SQLite: Abort due to constraint violation. |
+| [14800021](../errorcode-data-rdb.md#14800021-sqlite-generic-error) | SQLite: Generic error. Possible causes: Insert failed or the updated data does not exist. |
+| [14800025](../errorcode-data-rdb.md#14800025-sqlite-database-table-locked) | SQLite: A table in the database is locked. |
+| [14800024](../errorcode-data-rdb.md#14800024-sqlite-database-file-locked) | SQLite: The database file is locked. |
+| [14800011](../errorcode-data-rdb.md#14800011-database-file-corrupted) | The current operation failed because the database is corrupted. |
+| [14800027](../errorcode-data-rdb.md#14800027-sqlite-attempt-to-write-a-readonly-database) | SQLite: Attempt to write a readonly database. |
+| [14800029](../errorcode-data-rdb.md#14800029-sqlite-database-is-full) | SQLite: The database is full. |
+| [14800028](../errorcode-data-rdb.md#14800028-sqlite-io-error) | SQLite: Some kind of disk I/O error occurred. |
+| [14800047](../errorcode-data-rdb.md#14800047-wal-file-size-exceeds-the-default-limit) | The WAL file size exceeds the default limit. |
+| [14800014](../errorcode-data-rdb.md#14800014-target-instance-closed) | The target instance is already closed. |
 
 ## rebuilt
 
@@ -5586,9 +5107,7 @@ conflict参数不建议使用ON_CONFLICT_FAIL策略，可能无法返回正确�
 rebuilt: RebuildType
 ```
 
-rebuilt: [RebuildType](arkts-arkdata-relationalstore-rebuildtype-e.md)
-
-用于获取数据库是否进行过重建或修复。
+Set whether the database is rebuilt.
 
 **Type:** [RebuildType](arkts-arkdata-relationalstore-rebuildtype-e.md)
 
@@ -5606,9 +5125,7 @@ rebuilt: [RebuildType](arkts-arkdata-relationalstore-rebuildtype-e.md)
 version: int
 ```
 
-version: int
-
-设置和获取数据库版本，值为正整数。读取和设置version属性会占用数据库连接，避免对该属性进行频繁操作。使用临时变量保存读取到的version值，在数据库变更完成后将其赋值给RdbStore实例的version属性。数据库升级时变更version属性的场景，请参考[开发指南示例代码](../../../database/data-persistence-by-rdb-store.md#开发步骤)。
+Set RdbStore version. The version number must be an integer greater than 0.Obtains the RdbStore version.
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 

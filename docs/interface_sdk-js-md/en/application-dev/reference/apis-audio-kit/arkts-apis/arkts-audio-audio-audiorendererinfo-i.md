@@ -1,6 +1,6 @@
 # AudioRendererInfo
 
-音频渲染器信息。
+Describes audio renderer information.
 
 **Since:** 8
 
@@ -22,11 +22,7 @@ import { audio } from 'kits/@kit.AudioKit';
 content?: ContentType
 ```
 
-音频内容类型。
-
-API version 8、9为必填参数，从API version 10开始为可选参数，默认值为CONTENT_TYPE_UNKNOWN。
-
-从API version 8开始支持，从API version 10开始废弃，建议使用usage替代。
+Audio content type.
 
 **Type:** [ContentType](../../apis-arkui/arkts-components/arkts-arkui-contenttype-e.md)
 
@@ -48,9 +44,9 @@ API version 8、9为必填参数，从API version 10开始为可选参数，默�
 rendererFlags: int
 ```
 
-播放流行为标志。
+Flags that control the renderer behavior.
 
-设置为0即可。
+Set this parameter to **0**.
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
@@ -70,7 +66,7 @@ rendererFlags: int
 usage: StreamUsage
 ```
 
-音频流使用类型。
+Audio stream usage.
 
 **Type:** [StreamUsage](arkts-audio-audio-streamusage-e.md)
 
@@ -90,7 +86,7 @@ usage: StreamUsage
 volumeMode?: AudioVolumeMode
 ```
 
-音频的音量模式。默认值为SYSTEM_GLOBAL。
+Audio volume mode config. If volumeMode is set to {@link AudioVolumeMode.APP_INDIVIDUAL}, this audio renderer will be affected by app volume percentage set by {@link setAppVolumePercentage}
 
 **Type:** [AudioVolumeMode](arkts-audio-audio-audiovolumemode-e.md)
 

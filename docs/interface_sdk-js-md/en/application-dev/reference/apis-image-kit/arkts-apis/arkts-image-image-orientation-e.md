@@ -1,6 +1,6 @@
 # Orientation
 
-表示图像方向类型的枚举。
+Enumerates image orientation.
 
 **Since:** 23
 
@@ -16,7 +16,7 @@
 TOP_LEFT = 1
 ```
 
-图像未旋转。
+The image is not rotated.
 
 **Since:** 23
 
@@ -34,7 +34,7 @@ TOP_LEFT = 1
 TOP_RIGHT = 2
 ```
 
-图像是水平镜像的。
+The image is mirrored horizontally.
 
 **Since:** 23
 
@@ -52,7 +52,7 @@ TOP_RIGHT = 2
 BOTTOM_RIGHT = 3
 ```
 
-图像旋转180度。
+The image is rotated 180 degrees.
 
 **Since:** 23
 
@@ -70,7 +70,7 @@ BOTTOM_RIGHT = 3
 BOTTOM_LEFT = 4
 ```
 
-图像垂直镜像。
+The image is mirrored vertically.
 
 **Since:** 23
 
@@ -88,7 +88,7 @@ BOTTOM_LEFT = 4
 LEFT_TOP = 5
 ```
 
-图像水平镜像，然后顺时针旋转270度。
+The image is mirrored horizontally, then rotated 270 degrees clockwise.
 
 **Since:** 23
 
@@ -106,7 +106,7 @@ LEFT_TOP = 5
 RIGHT_TOP = 6
 ```
 
-图像顺时针旋转90度。
+The image is rotated 90 degrees clockwise.
 
 **Since:** 23
 
@@ -124,7 +124,7 @@ RIGHT_TOP = 6
 RIGHT_BOTTOM = 7
 ```
 
-图像水平镜像，然后顺时针旋转90度。
+The image is mirrored horizontally, then rotated 90 degrees clockwise.
 
 **Since:** 23
 
@@ -142,7 +142,7 @@ RIGHT_BOTTOM = 7
 LEFT_BOTTOM = 8
 ```
 
-图像顺时针旋转270度。
+The image is rotated 270 degrees clockwise.
 
 **Since:** 23
 

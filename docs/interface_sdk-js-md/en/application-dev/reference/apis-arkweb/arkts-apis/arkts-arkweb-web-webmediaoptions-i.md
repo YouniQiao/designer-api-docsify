@@ -1,6 +1,6 @@
 # WebMediaOptions
 
-Web媒体策略的配置。
+Describes the web media options.
 
 **Since:** 23
 
@@ -16,11 +16,12 @@ Web媒体策略的配置。
 audioExclusive?: boolean
 ```
 
-应用内多个Web实例的音频是否独占。
+Whether the audio of multiple **Web** instances in an application is exclusive.
 
-true表示应用内多个Web实例的音频独占，false表示应用内多个Web实例的音频不独占。
+The value **true** indicates that the audio of multiple **Web** instances in an application is exclusive, and  
+**false** indicates the opposite.
 
-默认值：true。
+The default value is **true**.
 
 **Type:** boolean
 
@@ -38,7 +39,8 @@ true表示应用内多个Web实例的音频独占，false表示应用内多个We
 audioSessionType?: AudioSessionType
 ```
 
-应用中Web音频类型。默认值对应[系统音频流类型](../../../reference/apis-audio-kit/arkts-apis-audio-e.md#streamusage)STREAM_USAGE_MUSIC。设置该参数会改变组件音频类型与系统音频类型映射关系，进而影响ArkWeb音频焦点策略。
+Web audio type in the application. The default value is  
+[STREAM_USAGE_MUSIC](../../../reference/apis-audio-kit/arkts-apis-audio-e.md#streamusage). This parameter changes the mapping between the component audio type and the system audio type, which affects the ArkWeb audio focus policy.
 
 **Type:** [AudioSessionType](arkts-arkweb-web-audiosessiontype-e.md)
 
@@ -56,11 +58,12 @@ audioSessionType?: AudioSessionType
 resumeInterval?: int
 ```
 
-被其他应用暂停的Web音视频能够自动续播的有效期，单位：秒。取值范围：[-2147483648, 2147483647]。resumeInterval值为0时，不自动续播；大于0时，将在该时间内尝试续播；小于0时，将在无限时间内尝试续播。由于近似值原因，该有效期可能存在一秒内的误差。
+Validity period for automatically resuming a web audio paused by another application, in seconds. The value range is [-2147483648, 2147483647]. If **resumeInterval** is set to **0**, the playback is not automatically resumed.If **resumeInterval** is set to a value greater than 0, the playback is resumed in the specified period. If  
+**resumeInterval** is set to a value less than 0, the playback is resumed in an unlimited period. Due to the approximate value, the validity period may have a deviation of less than 1 second.
 
-**说明：**
+**NOTE：**
 
-HLS视频被打断后，回到前台将自动续播，不受该时间控制。
+After an HLS video is interrupted, the video playback is automatically resumed when the video is returned to the foreground.
 
 **Type:** int
 

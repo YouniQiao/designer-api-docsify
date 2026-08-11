@@ -10,12 +10,6 @@ UIExtensionAbility组件的界面操作类，提供页面加载、设置宿主�
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 
-## 导入模块
-
-```TypeScript
-import { UIExtensionContentSession } from 'kits/@kit.AbilityKit';
-```
-
 ## getUIExtensionWindowProxy
 
 ```TypeScript
@@ -44,9 +38,11 @@ getUIExtensionWindowProxy(): uiExtension.WindowProxy
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 16000050 | Internal error. |
+| [16000050](../errorcode-ability.md#16000050-内部错误) | Internal error. |
 
 ## 示例
+
+ArkTS-Dyn示例：
 
 ```TypeScript
 // Index.ets
@@ -73,6 +69,48 @@ struct Extension {
   aboutToDisappear(): void {
     this.extensionWindow?.off('windowSizeChange');
     this.extensionWindow?.off('avoidAreaChange');
+  }
+
+  build() {
+    Column() {
+      Text(this.message)
+        .fontSize(20)
+        .fontWeight(FontWeight.Bold)
+    }
+    .width('100%')
+  }
+}
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+'use static'
+// Index.ets
+import { UIExtensionContentSession } from '@kit.AbilityKit';
+import uiExtension from '@ohos.arkui.uiExtension';
+import { Entry, Text, Column, Component, FontWeight, State } from '@kit.ArkUI';
+
+@Entry()
+@Component
+struct Extension {
+  storage: LocalStorage | undefined = this.getUIContext().getSharedLocalStorage();
+  @State message: string = 'EmbeddedUIExtensionAbility Index';
+  private session: UIExtensionContentSession | undefined = this.storage?.get<UIExtensionContentSession>('session');
+  private extensionWindow: uiExtension.WindowProxy | undefined = this.session?.getUIExtensionWindowProxy();
+
+  aboutToAppear(): void {
+    this.extensionWindow?.onWindowSizeChange((size) => {
+      console.info(`size = ${JSON.stringify(size)}`);
+    });
+    this.extensionWindow?.onAvoidAreaChange((info) => {
+      console.info(`type = ${JSON.stringify(info.type)}, area = ${JSON.stringify(info.area)}`);
+    });
+  }
+
+  aboutToDisappear(): void {
+    this.extensionWindow?.offWindowSizeChange();
+    this.extensionWindow?.offWindowSizeChange();
   }
 
   build() {
@@ -117,10 +155,12 @@ loadContent(path: string, storage?: LocalStorage): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types. |
-| 16000050 | Internal error. |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types. |
+| [16000050](../errorcode-ability.md#16000050-内部错误) | Internal error. |
 
 ## 示例
+
+ArkTS-Dyn示例：
 
 ```TypeScript
 // UIExtensionAbility组件不支持三方应用直接继承，故以派生类ShareExtensionAbility举例说明。
@@ -140,6 +180,27 @@ export default class ShareExtAbility extends ShareExtensionAbility {
       let message = (error as BusinessError).message;
       console.error(`Failed to load content, code: ${code}, msg: ${message}`);
     }
+  }
+
+  // ...
+}
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+'use static'
+// UIExtensionAbility不支持三方应用直接继承，故以派生类ShareExtensionAbility举例说明。
+import { UIExtensionContentSession, ShareExtensionAbility, Want } from '@kit.AbilityKit';
+import { LocalStorage } from '@kit.ArkUI';
+
+export default class ShareExtAbility extends ShareExtensionAbility {
+  // ...
+
+  onSessionCreate(want: Want, session: UIExtensionContentSession): void {
+    let storage: LocalStorage = new LocalStorage();
+    storage.setOrCreate('session', session);
+    session.loadContent('pages/Extension', storage);
   }
 
   // ...
@@ -178,7 +239,7 @@ loadContentByName(name: string, storage?: LocalStorage): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 16000050 | Internal error. |
+| [16000050](../errorcode-ability.md#16000050-内部错误) | Internal error. |
 
 ## 示例
 
@@ -238,6 +299,65 @@ struct UIExtensionPage {
 }
 ```
 
+UIExtensionAbility的实现：
+
+```TypeScript
+'use static'
+// UIExtensionAbility不支持三方应用直接继承，故以派生类ShareExtensionAbility举例说明。
+import { UIExtensionContentSession, ShareExtensionAbility, Want } from '@kit.AbilityKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+import { LocalStorage } from '@kit.ArkUI';
+
+export default class ShareExtAbility extends ShareExtensionAbility {
+  // 其他生命周期和实现
+
+  onSessionCreate(want: Want, session: UIExtensionContentSession): void {
+    let storage: LocalStorage = new LocalStorage();
+    storage.setOrCreate('session', session);
+
+    let name: string = 'UIExtPage'; // 命名路由页面的名字。
+    try {
+      session.loadContentByName(name, storage);
+    } catch (error) {
+      let code = (error as BusinessError).code;
+      let message = (error as BusinessError).message;
+      console.error(`Failed to load content by name ${name}, code: ${code}, msg: ${message}`);
+    }
+  }
+
+  // 其他生命周期和实现
+}
+```
+
+UIExtensionAbility加载的命名路由页面的实现：
+
+```TypeScript
+// “./pages/UIExtensionPage.ets”文件的实现。
+import { UIExtensionContentSession } from '@kit.AbilityKit';
+import { Entry, Text, Column, Row, Component, Button, FontWeight, State, LocalStorage } from '@kit.ArkUI';
+
+@Entry({ routeName: 'UIExtPage' })
+  // 通过“routeName”定义命名路由页面的名字。
+@Component
+struct UIExtensionPage {
+  @State message: string = 'Hello world';
+  storage: LocalStorage | undefined = this.getUIContext().getSharedLocalStorage();
+  private session: UIExtensionContentSession | undefined = this.storage?.get<UIExtensionContentSession>('session');
+
+  build() {
+    Row() {
+      Column() {
+        Text(this.message)
+          .fontSize(20)
+          .fontWeight(FontWeight.Bold)
+      }
+      .width('100%')
+    }
+    .height('100%')
+  }
+}
+```
+
 ## setWindowPrivacyMode
 
 ```TypeScript
@@ -274,8 +394,8 @@ setWindowPrivacyMode(isPrivacyMode: boolean): Promise<void>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types. |
-| 201 | The application does not have permission to call the interface. |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types. |
+| [201](../../errorcode-universal.md#201-权限校验失败) | The application does not have permission to call the interface. |
 
 ## 示例
 
@@ -294,7 +414,8 @@ export default class ShareExtAbility extends ShareExtensionAbility {
         .then(() => {
           console.info(`Succeeded in setting window to privacy mode.`);
         })
-        .catch((err: BusinessError) => {
+        .catch((error: Error) => {
+          let err = error as BusinessError;
           console.error(`Failed to set window to privacy mode, code: ${err.code}, msg: ${err.message}`);
         });
     } catch (e) {
@@ -339,8 +460,8 @@ setWindowPrivacyMode(isPrivacyMode: boolean, callback: AsyncCallback<void>): voi
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types. |
-| 201 | The application does not have permission to call the interface. |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types. |
+| [201](../../errorcode-universal.md#201-权限校验失败) | The application does not have permission to call the interface. |
 
 ## 示例
 
@@ -355,7 +476,7 @@ export default class ShareExtAbility extends ShareExtensionAbility {
   onSessionCreate(want: Want, session: UIExtensionContentSession): void {
     let isPrivacyMode: boolean = true;
     try {
-      session.setWindowPrivacyMode(isPrivacyMode, (err: BusinessError) => {
+      session.setWindowPrivacyMode(isPrivacyMode, (err: BusinessError | null) => {
         if (err) {
           console.error(`Failed to set window to privacy mode, code: ${err.code}, msg: ${err.message}`);
           return;
@@ -397,7 +518,7 @@ startAbilityByType(type: string, wantParam: Record<string, Object>,
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | string | 是 | UIExtensionAbility组件类型，取值详见 [通过startAbilityByType接口拉起垂类面板](../../../application-models/start-intent-panel.md#匹配规则)。 |
-| wantParam | [Record](../../apis-default/arkts-apis/arkts-record-t.md)&lt;string, Object&gt; | 是 | 表示启动UIExtensionAbility组件时传递的参数。 |
+| wantParam | Record&lt;string, Object&gt; | 是 | 表示启动UIExtensionAbility组件时传递的参数。 |
 | abilityStartCallback | [AbilityStartCallback](arkts-ability-abilitystartcallback-i.md) | 是 | 表示启动UIExtensionAbility组件的执行结果。 |
 | callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数。当接口调用成功，err为undefined，否则为错误对象。 |
 
@@ -405,13 +526,13 @@ startAbilityByType(type: string, wantParam: Record<string, Object>,
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 16000004 | Cannot start an invisible component.<br>**适用版本：** 11+ |
-| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types. |
-| 16000001 | The specified ability does not exist.<br>**适用版本：** 11+ |
-| 16000002 | Incorrect ability type.<br>**适用版本：** 11+ |
-| 16000050 | Internal error. |
-| 16200001 | The caller has been released.<br>**适用版本：** 11+ |
-| 201 | The application does not have permission to call the interface.<br>**适用版本：** 11+ |
+| [16000004](../errorcode-ability.md#16000004-可见性校验失败) | Cannot start an invisible component.<br>**适用版本：** 11+ |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types. |
+| [16000001](../errorcode-ability.md#16000001-指定的ability名称不存在) | The specified ability does not exist.<br>**适用版本：** 11+ |
+| [16000002](../errorcode-ability.md#16000002-接口调用ability类型错误) | Incorrect ability type.<br>**适用版本：** 11+ |
+| [16000050](../errorcode-ability.md#16000050-内部错误) | Internal error. |
+| [16200001](../errorcode-ability.md#16200001-通用组件客户端caller已回收) | The caller has been released.<br>**适用版本：** 11+ |
+| [201](../../errorcode-universal.md#201-权限校验失败) | The application does not have permission to call the interface.<br>**适用版本：** 11+ |
 
 ## 示例
 
@@ -473,7 +594,7 @@ startAbilityByType(type: string, wantParam: Record<string, RecordData>,
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | string | 是 | 显示拉起的UIExtensionAbility类型，取值详见 [通过startAbilityByType接口拉起垂类面板](../../../application-models/start-intent-panel.md#匹配规则)。 |
-| wantParam | [Record](../../apis-default/arkts-apis/arkts-record-t.md)&lt;string, RecordData&gt; | 是 | 表示扩展参数。 |
+| wantParam | Record&lt;string, RecordData&gt; | 是 | 表示扩展参数。 |
 | abilityStartCallback | [AbilityStartCallback](arkts-ability-abilitystartcallback-i.md) | 是 | 回调函数，返回启动失败后的详细错误信息。 |
 | callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数。当启动Ability成功，err为undefined，否则为错误对象。 |
 
@@ -481,7 +602,49 @@ startAbilityByType(type: string, wantParam: Record<string, RecordData>,
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 16000050 | Internal error. |
+| [16000050](../errorcode-ability.md#16000050-内部错误) | Internal error. |
+
+## 示例
+
+ArkTS-Sta示例：
+
+```TypeScript
+'use static'
+// UIExtensionAbility不支持三方应用直接继承，故以派生类ShareExtensionAbility举例说明。
+import { UIExtensionContentSession, ShareExtensionAbility, Want, common } from '@kit.AbilityKit';
+import { BusinessError, RecordData } from '@kit.BasicServicesKit';
+
+class MyAbilityStartCallback implements common.AbilityStartCallback {
+  onError(code: int, name: string, message: string): void {
+    console.info(`startAbilityByType Error:` + "code:" + code + "name:" + name + "message:" + message);
+  }
+
+  onResult?: (abilityResult: common.AbilityResult) => void = (parameter: common.AbilityResult) => {
+    console.info(`startAbilityByType resultCode:` + parameter.resultCode + `bundleName:` + parameter.want?.bundleName);
+  }
+}
+
+export default class ShareExtAbility extends ShareExtensionAbility {
+  // ...
+
+  onSessionCreate(want: Want, session: UIExtensionContentSession): void {
+    let wantParams: Record<string, RecordData> = {
+      'sceneType': 1
+    };
+
+    let abilityStartCallback = new MyAbilityStartCallback();
+    session.startAbilityByType('test', wantParams, abilityStartCallback, (err: BusinessError | null) => {
+      if (err) {
+        console.error(`Failed to startAbilityByType, code: ${err.code}, msg: ${err.message}`);
+        return;
+      }
+      console.info(`Succeeded in startAbilityByType`);
+    });
+  }
+
+  // ...
+}
+```
 
 ## startAbilityByType
 
@@ -507,7 +670,7 @@ startAbilityByType(type: string, wantParam: Record<string, Object>,
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | string | 是 | UIExtensionAbility组件类型，取值详见 [通过startAbilityByType接口拉起垂类面板](../../../application-models/start-intent-panel.md#匹配规则)。 |
-| wantParam | [Record](../../apis-default/arkts-apis/arkts-record-t.md)&lt;string, Object&gt; | 是 | 表示启动UIExtensionAbility组件时传递的参数。 |
+| wantParam | Record&lt;string, Object&gt; | 是 | 表示启动UIExtensionAbility组件时传递的参数。 |
 | abilityStartCallback | [AbilityStartCallback](arkts-ability-abilitystartcallback-i.md) | 是 | 表示启动UIExtensionAbility组件的执行结果。 |
 
 **返回值：**
@@ -520,13 +683,13 @@ startAbilityByType(type: string, wantParam: Record<string, Object>,
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 16000004 | Cannot start an invisible component.<br>**适用版本：** 11+ |
-| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types. |
-| 16000001 | The specified ability does not exist.<br>**适用版本：** 11+ |
-| 16000002 | Incorrect ability type.<br>**适用版本：** 11+ |
-| 16000050 | Internal error. |
-| 16200001 | The caller has been released.<br>**适用版本：** 11+ |
-| 201 | The application does not have permission to call the interface.<br>**适用版本：** 11+ |
+| [16000004](../errorcode-ability.md#16000004-可见性校验失败) | Cannot start an invisible component.<br>**适用版本：** 11+ |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types. |
+| [16000001](../errorcode-ability.md#16000001-指定的ability名称不存在) | The specified ability does not exist.<br>**适用版本：** 11+ |
+| [16000002](../errorcode-ability.md#16000002-接口调用ability类型错误) | Incorrect ability type.<br>**适用版本：** 11+ |
+| [16000050](../errorcode-ability.md#16000050-内部错误) | Internal error. |
+| [16200001](../errorcode-ability.md#16200001-通用组件客户端caller已回收) | The caller has been released.<br>**适用版本：** 11+ |
+| [201](../../errorcode-universal.md#201-权限校验失败) | The application does not have permission to call the interface.<br>**适用版本：** 11+ |
 
 ## 示例
 
@@ -588,7 +751,7 @@ startAbilityByType(type: string, wantParam: Record<string, RecordData>,
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | string | 是 | 显示拉起的UIExtensionAbility类型，取值详见 [通过startAbilityByType接口拉起垂类面板](../../../application-models/start-intent-panel.md#匹配规则)。 |
-| wantParam | [Record](../../apis-default/arkts-apis/arkts-record-t.md)&lt;string, RecordData&gt; | 是 | 表示扩展参数。 |
+| wantParam | Record&lt;string, RecordData&gt; | 是 | 表示扩展参数。 |
 | abilityStartCallback | [AbilityStartCallback](arkts-ability-abilitystartcallback-i.md) | 是 | 回调函数，返回启动失败后的详细错误信息。 |
 
 **返回值：**
@@ -601,7 +764,48 @@ startAbilityByType(type: string, wantParam: Record<string, RecordData>,
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 16000050 | Internal error. |
+| [16000050](../errorcode-ability.md#16000050-内部错误) | Internal error. |
+
+## 示例
+
+ArkTS-Sta示例：
+
+```TypeScript
+'use static'
+// UIExtensionAbility不支持三方应用直接继承，故以派生类ShareExtensionAbility举例说明。
+import { UIExtensionContentSession, ShareExtensionAbility, Want, common } from '@kit.AbilityKit';
+import { BusinessError, RecordData } from '@kit.BasicServicesKit';
+
+class MyAbilityStartCallback implements common.AbilityStartCallback {
+  onError(code: int, name: string, message: string): void {
+    console.info(`startAbilityByType Error:` + "code:" + code + "name:" + name + "message:" + message);
+  }
+
+  onResult?: (abilityResult: common.AbilityResult) => void = (parameter: common.AbilityResult) => {
+    console.info(`startAbilityByType resultCode:` + parameter.resultCode + `bundleName:` + parameter.want?.bundleName);
+  }
+}
+
+export default class ShareExtAbility extends ShareExtensionAbility {
+  // ...
+
+  onSessionCreate(want: Want, session: UIExtensionContentSession): void {
+    let wantParams: Record<string, RecordData> = {
+      'sceneType': 1
+    };
+
+    let abilityStartCallback = new MyAbilityStartCallback();
+    session.startAbilityByType('test', wantParams, abilityStartCallback).then(() => {
+      console.info(`Succeeded in startAbilityByType`);
+    }).catch((error) => {
+      let err = error as BusinessError;
+      console.error(`Failed to startAbilityByType, code: ${err.code}, msg: ${err.message}`);
+    });
+  }
+
+  // ...
+}
+```
 
 ## terminateSelf
 
@@ -631,9 +835,11 @@ terminateSelf(callback: AsyncCallback<void>): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types. |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types. |
 
 ## 示例
+
+ArkTS-Dyn示例：
 
 ```TypeScript
 import { UIExtensionContentSession } from '@kit.AbilityKit';
@@ -651,6 +857,42 @@ struct Index {
       Button('TerminateSelf')
         .onClick(() => {
           this.session?.terminateSelf((err: BusinessError) => {
+            if (err) {
+              console.error(`Failed to terminate self, code: ${err.code}, msg: ${err.message}`);
+              return;
+            }
+            console.info(`Succeeded in terminating self.`);
+          });
+
+          this.storage?.clear();
+        })
+    }
+    .height('100%')
+    .width('100%')
+  }
+}
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+'use static'
+import { UIExtensionContentSession } from '@kit.AbilityKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+import { Entry, Component, Button, RelativeContainer, LocalStorage } from '@kit.ArkUI';
+
+@Entry()
+@Component
+struct Index {
+  storage: LocalStorage | undefined = this.getUIContext().getSharedLocalStorage();
+  private session: UIExtensionContentSession | undefined =
+    this.storage?.get<UIExtensionContentSession>('session');
+
+  build() {
+    RelativeContainer() {
+      Button('TerminateSelf')
+        .onClick(() => {
+          this.session?.terminateSelf((err: BusinessError | null) => {
             if (err) {
               console.error(`Failed to terminate self, code: ${err.code}, msg: ${err.message}`);
               return;
@@ -693,6 +935,8 @@ terminateSelf(): Promise<void>
 
 ## 示例
 
+ArkTS-Dyn示例：
+
 ```TypeScript
 import { UIExtensionContentSession } from '@kit.AbilityKit';
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -713,6 +957,43 @@ struct Index {
               console.info(`Succeeded in terminating self.`);
             })
             .catch((err: BusinessError) => {
+              console.error(`Failed to terminate self, code: ${err.code}, msg: ${err.message}`);
+            });
+
+          this.storage?.clear();
+        })
+    }
+    .height('100%')
+    .width('100%')
+  }
+}
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+'use static'
+import { UIExtensionContentSession } from '@kit.AbilityKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+import { Entry, Component, Button, RelativeContainer, LocalStorage } from '@kit.ArkUI';
+
+@Entry()
+@Component
+struct Index {
+  storage: LocalStorage | undefined = this.getUIContext().getSharedLocalStorage();
+  private session: UIExtensionContentSession | undefined =
+    this.storage?.get<UIExtensionContentSession>('session');
+
+  build() {
+    RelativeContainer() {
+      Button('TerminateSelf')
+        .onClick(() => {
+          this.session?.terminateSelf()
+            .then(() => {
+              console.info(`Succeeded in terminating self.`);
+            })
+            .catch((error) => {
+              let err = error as BusinessError;
               console.error(`Failed to terminate self, code: ${err.code}, msg: ${err.message}`);
             });
 
@@ -754,9 +1035,11 @@ terminateSelfWithResult(parameter: AbilityResult, callback: AsyncCallback<void>)
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types. |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types. |
 
 ## 示例
+
+ArkTS-Dyn示例：
 
 ```TypeScript
 import { UIExtensionContentSession, common } from '@kit.AbilityKit';
@@ -784,6 +1067,52 @@ struct Index {
           };
 
           this.session?.terminateSelfWithResult(abilityResult, (err: BusinessError) => {
+            if (err) {
+              console.error(`Failed to terminate self with result, code: ${err.code}, msg: ${err.message}`);
+              return;
+            }
+            console.info(`Succeeded in terminating self with result.`);
+          });
+
+          this.storage?.clear();
+        })
+    }
+    .height('100%')
+    .width('100%')
+  }
+}
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+'use static'
+import { UIExtensionContentSession, common } from '@kit.AbilityKit';
+import { BusinessError, RecordData } from '@kit.BasicServicesKit';
+import { Entry, Component, Button, RelativeContainer, LocalStorage } from '@kit.ArkUI';
+
+@Entry()
+@Component
+struct Index {
+  storage: LocalStorage | undefined = this.getUIContext().getSharedLocalStorage();
+  private session: UIExtensionContentSession | undefined =
+    this.storage?.get<UIExtensionContentSession>('session');
+
+  build() {
+    RelativeContainer() {
+      Button('TerminateSelfWithResult')
+        .onClick(() => {
+          let abilityResult: common.AbilityResult = {
+            resultCode: 0,
+            want: {
+              bundleName: 'com.ohos.uiextensioncontentsession',
+              parameters: {
+                'result': 123456
+              } as Record<string, RecordData>
+            }
+          };
+
+          this.session?.terminateSelfWithResult(abilityResult, (err: BusinessError | null) => {
             if (err) {
               console.error(`Failed to terminate self with result, code: ${err.code}, msg: ${err.message}`);
               return;
@@ -834,9 +1163,11 @@ terminateSelfWithResult(parameter: AbilityResult): Promise<void>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types. |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types. |
 
 ## 示例
+
+ArkTS-Dyn示例：
 
 ```TypeScript
 import { UIExtensionContentSession, common } from '@kit.AbilityKit';
@@ -868,6 +1199,53 @@ struct Index {
               console.info(`Succeeded in terminating self with result.`);
             })
             .catch((err: BusinessError) => {
+              console.error(`Failed to terminate self with result, code: ${err.code}, msg: ${err.message}`);
+            });
+
+          this.storage?.clear();
+        })
+    }
+    .height('100%')
+    .width('100%')
+  }
+}
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+'use static'
+import { UIExtensionContentSession, common } from '@kit.AbilityKit';
+import { BusinessError, RecordData } from '@kit.BasicServicesKit';
+import { Entry, Column, Component, Button, RelativeContainer, LocalStorage } from '@kit.ArkUI';
+
+@Entry()
+@Component
+struct Index {
+  storage: LocalStorage | undefined = this.getUIContext().getSharedLocalStorage();
+  private session: UIExtensionContentSession | undefined =
+    this.storage?.get<UIExtensionContentSession>('session');
+
+  build() {
+    RelativeContainer() {
+      Button('TerminateSelfWithResult')
+        .onClick(() => {
+          let abilityResult: common.AbilityResult = {
+            resultCode: 0,
+            want: {
+              bundleName: 'com.ohos.uiextensioncontentsession',
+              parameters: {
+                'result': 123456
+              } as Record<string, RecordData>
+            }
+          };
+
+          this.session?.terminateSelfWithResult(abilityResult)
+            .then(() => {
+              console.info(`Succeeded in terminating self with result.`);
+            })
+            .catch((error) => {
+              let err = error as BusinessError;
               console.error(`Failed to terminate self with result, code: ${err.code}, msg: ${err.message}`);
             });
 

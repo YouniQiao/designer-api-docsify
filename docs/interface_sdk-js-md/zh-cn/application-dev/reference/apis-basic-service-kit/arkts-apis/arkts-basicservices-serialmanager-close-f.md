@@ -1,11 +1,5 @@
 # close
 
-## 导入模块
-
-```TypeScript
-import { serialManager } from 'kits/@kit.BasicServicesKit';
-```
-
 ## close
 
 ```TypeScript
@@ -32,10 +26,10 @@ function close(portId: int): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
-| 31400005 | The serial port device is not opened. Call the open API first. |
-| 31400003 | PortId does not exist. |
-| 31400001 | Serial port management exception. |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| [31400005](../../apis-basic-services-kit/errorcode-usb.md#31400005-设备未打开) | The serial port device is not opened. Call the open API first. |
+| [31400003](../../apis-basic-services-kit/errorcode-usb.md#31400003-端口号不存在) | PortId does not exist. |
+| [31400001](../../apis-basic-services-kit/errorcode-usb.md#31400001-串口服务异常) | Serial port management exception. |
 
 ## 示例
 
@@ -43,18 +37,18 @@ function close(portId: int): void
 
 ```TypeScript
 import { JSON } from '@kit.ArkTS';
-import { serialManager } from '@kit.BasicServicesKit';
-import { BusinessError } from '@kit.BasicServicesKit';
+import serialManager from '@ohos.usbManager.serial';
+import { BusinessError } from '@ohos.base';
 
 // 获取串口列表
 async function closeExample() {
   let portList: serialManager.SerialPort[] = serialManager.getPortList();
   console.info('usbSerial portList: ' + JSON.stringify(portList));
-  if (!portList || portList.length === 0) {
+  if (portList === undefined || portList.length === 0) {
     console.error('usbSerial portList is empty');
     return;
   }
-  let portId: number = portList[0].portId;
+  let portId: int = portList[0].portId;
 
   // 检测设备是否可被应用访问
   if (!serialManager.hasSerialRight(portId)) {
@@ -62,7 +56,6 @@ async function closeExample() {
     if (!result) {
       // 没有访问设备的权限且用户不授权则退出
       console.error('user is not granted the operation permission');
-      return;
     } else {
       console.info('grant permission successfully');
     }
@@ -76,7 +69,6 @@ async function closeExample() {
     const err: BusinessError = error as BusinessError;
     console.error(`Failed to open usbSerial. Code: ${err.code}, message: ${err.message}`);
   }
-
 
   // 关闭串口
   try {

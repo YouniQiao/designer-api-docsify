@@ -1,6 +1,6 @@
 # RichEditorTextStyle
 
-文本样式信息。
+Defines the span text style.
 
 **Since:** 23
 
@@ -16,7 +16,7 @@
 decoration?: DecorationStyleInterface
 ```
 
-文本装饰线样式信息。
+Font decoration.
 
 **Type:** [DecorationStyleInterface](arkts-arkui-decorationstyleinterface-i.md)
 
@@ -36,7 +36,7 @@ decoration?: DecorationStyleInterface
 fontColor?: ResourceColor
 ```
 
-文本颜色。
+font color.
 
 **Type:** [ResourceColor](arkts-arkui-resourcecolor-t.md)
 
@@ -56,7 +56,7 @@ fontColor?: ResourceColor
 fontFamily?: ResourceStr
 ```
 
-字体列表。
+font family.
 
 **Type:** [ResourceStr](arkts-arkui-resourcestr-t.md)
 
@@ -76,7 +76,7 @@ fontFamily?: ResourceStr
 fontFeature?: string
 ```
 
-文字特性效果。
+Set font feature, advanced text styles and effects as designed by the font author.The format is the like the CSS font-feature-settings attribute.
 
 **Type:** string
 
@@ -96,7 +96,7 @@ fontFeature?: string
 fontSize?: Length | double
 ```
 
-字体大小，默认单位为fp。
+font size.
 
 **Type:** [Length](arkts-arkui-length-t.md) \| double
 
@@ -116,7 +116,7 @@ fontSize?: Length | double
 fontStyle?: FontStyle
 ```
 
-字体样式。
+font style.
 
 **Type:** [FontStyle](arkts-arkui-fontstyle-e.md)
 
@@ -136,7 +136,7 @@ fontStyle?: FontStyle
 fontWeight?: int | FontWeight | string
 ```
 
-字体粗细。
+font weight.
 
 **Type:** int \| FontWeight \| string
 
@@ -156,11 +156,7 @@ fontWeight?: int | FontWeight | string
 halfLeading?: boolean
 ```
 
-文本是否将行间距平分至行的顶部与底部。
-
-true表示将行间距平分至行的顶部与底部，false则不平分。
-
-默认值：false。
+Set the text with half leading.
 
 **Type:** boolean
 
@@ -180,7 +176,7 @@ true表示将行间距平分至行的顶部与底部，false则不平分。
 letterSpacing?: double | string
 ```
 
-文本字符间距，默认单位为fp。
+letter spacing.
 
 **Type:** double \| string
 
@@ -200,7 +196,7 @@ letterSpacing?: double | string
 lineHeight?: double | string | Resource
 ```
 
-文本行高，默认单位为fp。
+line height.
 
 **Type:** double \| string \| Resource
 
@@ -220,11 +216,7 @@ lineHeight?: double | string | Resource
 strokeColor?: ResourceColor
 ```
 
-文本描边颜色。
-
-默认值：跟随字体颜色。
-
-设置异常值时跟随字体颜色。
+The stroke color of the text.
 
 **Type:** [ResourceColor](arkts-arkui-resourcecolor-t.md)
 
@@ -244,11 +236,7 @@ strokeColor?: ResourceColor
 strokeJoinStyle?: StrokeJoinStyle
 ```
 
-文本描边拐角样式。
-
-默认值：StrokeJoinStyle.MITER_JOIN。
-
-**模型约束：** 此接口仅可在Stage模型下使用。
+The stroke join style of the text.
 
 **Type:** [StrokeJoinStyle](arkts-arkui-strokejoinstyle-e.md)
 
@@ -268,17 +256,7 @@ strokeJoinStyle?: StrokeJoinStyle
 strokeWidth?: LengthMetrics | double
 ```
 
-文本描边宽度。如果LengthMetrics的unit值是[PERCENT](arkts-arkui-graphics-lengthunit-e.md)，当前设置不生效，作为0处理。
-
-值小于0时为实体字，大于0时为轮廓字，等于0时无描边效果。
-
-默认值：0vp。
-
-单位：LengthMetrics类型时跟随LengthMetrics，number或double类型时是vp。
-
-取值范围：(-∞, +∞)
-
-**模型约束：** 此接口仅可在Stage模型下使用。
+The stroke width of the text.
 
 **Type:** [LengthMetrics](arkts-arkui-graphics-lengthmetrics-c.md) \| double
 
@@ -298,7 +276,7 @@ strokeWidth?: LengthMetrics | double
 textBackgroundStyle?: TextBackgroundStyle
 ```
 
-文本背景样式。
+Text background style.
 
 **Type:** [TextBackgroundStyle](../arkts-components/arkts-arkui-textbackgroundstyle-i.md)
 
@@ -318,11 +296,7 @@ textBackgroundStyle?: TextBackgroundStyle
 textShadow?: ShadowOptions | Array<ShadowOptions>
 ```
 
-文字阴影效果。
-
-**说明：**
-
-仅支持查询阴影模糊半径、颜色和偏移量。
+Text shadow
 
 **Type:** [ShadowOptions](../arkts-components/arkts-arkui-shadowoptions-i.md) \| Array&lt;[ShadowOptions](../arkts-components/arkts-arkui-shadowoptions-i.md)&gt;
 

@@ -1,6 +1,6 @@
 # ChainEdgeEffect (System API)
 
-链式动效边缘效果枚举。
+Declare edge effect of chain animation.
 
 **Since:** 23
 

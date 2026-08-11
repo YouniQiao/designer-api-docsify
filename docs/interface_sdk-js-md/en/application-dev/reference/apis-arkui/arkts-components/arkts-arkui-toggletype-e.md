@@ -1,13 +1,6 @@
 # ToggleType
 
-Toggle的样式。
-
-> **说明：**
-> 
-> Toggle的样式继承对应组件样式的默认值，且不支持设置。例如，如果ToggleType为Button，则该组件样式继承[ButtonType](../arkts-apis/arkts-arkui-button-buttontype-e.md/arkts-arkui-button-buttontype-e.md)的默认值。由于Button.type从API
-> version 18开始，默认类型从胶囊型变更为圆角矩形，胶囊型按钮不支持设置
-> [borderRadius](../arkts-apis/arkts-arkui-common-commonmethod-i.md/arkts-arkui-common-commonmethod-i.md#borderradius)，此时使用
-> Toggle组件设置borderRadius也不生效。
+Enumerates toggle types.
 
 **Since:** 8
 
@@ -23,29 +16,29 @@ Toggle的样式。
 Checkbox
 ```
 
-提供勾选框样式。
+Checkbox type.
 
-**说明：**
+**NOTE：**
 
-API version 11开始，Checkbox默认样式由圆角方形变为圆形。
+Since API version 11, the default style of the **Checkbox** component is changed from rounded square to circle.
 
-[通用属性margin](../arkts-apis/arkts-arkui-common-commonmethod-i.md/arkts-arkui-common-commonmethod-i.md#margin)的默认值为：
+The default value of the universal attribute [margin](../arkts-apis/arkts-arkui-common-commonmethod-i.md/arkts-arkui-common-commonmethod-i.md#margin) is as follows:
 
 {
 
- top: '14px',
+ top: '14px',
 
- right: '14px',
+ right: '14px',
 
- bottom: '14px',
+ bottom: '14px',
 
- left: '14px'
+ left: '14px'
 
-}。
+}.
 
-默认尺寸为：
+Default size:
 
-{width:'20vp', height:'20vp'}。
+{width:'20vp', height:'20vp'}
 
 **Since:** 8
 
@@ -65,27 +58,27 @@ API version 11开始，Checkbox默认样式由圆角方形变为圆形。
 Switch
 ```
 
-提供开关样式。
+Switch type.
 
-**说明：**
+**NOTE：**
 
-[通用属性margin](../arkts-apis/arkts-arkui-common-commonmethod-i.md/arkts-arkui-common-commonmethod-i.md#margin)默认值为：
+The default value of the universal attribute [margin](../arkts-apis/arkts-arkui-common-commonmethod-i.md/arkts-arkui-common-commonmethod-i.md#margin) is as follows:
 
 {
 
- top: '6px',
+ top: '6px',
 
- right: '14px',
+ right: '14px',
 
- bottom: '6px',
+ bottom: '6px',
 
- left: '14px'
+ left: '14px'
 
-}。
+}.
 
-默认尺寸为：
+Default size:
 
-{width:'36vp', height:'20vp'}。
+{width:'36vp', height:'20vp'}
 
 **Since:** 8
 
@@ -105,7 +98,7 @@ Switch
 Button
 ```
 
-提供状态按钮样式。如子组件设置文本，文本内容将显示在按钮内。默认高度为28vp，宽度无默认值。
+Status button type. If child content contains text, the text is displayed on the button. The default height is 28 vp, and there is no default width.
 
 **Since:** 8
 

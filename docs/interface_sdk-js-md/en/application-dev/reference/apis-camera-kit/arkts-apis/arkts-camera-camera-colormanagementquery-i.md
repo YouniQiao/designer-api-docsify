@@ -1,6 +1,6 @@
 # ColorManagementQuery
 
-色彩管理类，用于查询色彩空间参数。
+ColorManagementQuery provides the APIs for color space query.
 
 **Since:** 12
 
@@ -22,7 +22,7 @@ import { camera } from 'kits/@kit.CameraKit';
 getSupportedColorSpaces(): Array<colorSpaceManager.ColorSpace>
 ```
 
-获取支持的色彩空间列表。
+Obtains the supported color spaces.
 
 **Since:** 12
 
@@ -38,11 +38,11 @@ getSupportedColorSpaces(): Array<colorSpaceManager.ColorSpace>
 
 | Type | Description |
 | --- | --- |
-| Array&lt;colorSpaceManager.ColorSpace&gt; | 支持的色彩空间列表。若接口调用失败，返回undefined。 |
+| Array&lt;colorSpaceManager.ColorSpace&gt; | Array of color spaces supported. If the API call fails, undefined is returned. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 7400103 | Session not config, only throw in session usage.<br>**Applicable version:** 12 - 17 |
+| [7400103](../errorcode-camera.md#7400103-session-not-configured) | Session not config, only throw in session usage.<br>**Applicable version:** 12 - 17 |
 

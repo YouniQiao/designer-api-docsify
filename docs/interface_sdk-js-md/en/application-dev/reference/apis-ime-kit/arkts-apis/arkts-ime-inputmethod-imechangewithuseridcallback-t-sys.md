@@ -5,7 +5,7 @@ export type ImeChangeWithUserIdCallback =
       (inputMethodProperty: InputMethodProperty, inputMethodSubtype: InputMethodSubtype, userId: int) => void
 ```
 
-输入法变更事件回调，携带发生输入法变更的用户ID。
+The callback of the inputmethod change event which carries the user ID whose inputmethod is changed.
 
 **Since:** 26.0.0
 
@@ -23,7 +23,7 @@ export type ImeChangeWithUserIdCallback =
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| inputMethodProperty | [InputMethodProperty](arkts-ime-inputmethod-inputmethodproperty-i.md) | Yes | 当前输入法的属性。 |
-| inputMethodSubtype | [InputMethodSubtype](arkts-ime-inputmethodsubtype-i.md) | Yes | 当前输入法的子类型。 |
-| userId | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | 输入法发生变化的用户ID。 |
+| inputMethodProperty | [InputMethodProperty](arkts-ime-inputmethod-inputmethodproperty-i.md) | Yes | the property of current inputmethod. |
+| inputMethodSubtype | [InputMethodSubtype](arkts-ime-inputmethodsubtype-i.md) | Yes | the subtype of current inputmethod. |
+| userId | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | the user ID whose inputmethod is changed. |
 

@@ -12,7 +12,7 @@ import { config } from 'kits/@kit.AccessibilityKit';
 function enableAbility(name: string, capability: Array<accessibility.Capability>): Promise<void>
 ```
 
-启用辅助扩展。使用Promise异步回调。
+Enables an accessibility extension ability. This API uses a promise to return the result.
 
 **Since:** 9
 
@@ -30,40 +30,24 @@ function enableAbility(name: string, capability: Array<accessibility.Capability>
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| name | string | Yes | 辅助应用的名称，格式为：'bundleName/abilityName'。 |
-| capability | Array&lt;accessibility.Capability&gt; | Yes | 辅助应用的能力属性。 |
+| name | string | Yes | Name of the accessibility extension ability, in the format of 'bundleName/abilityName'. |
+| capability | Array&lt;accessibility.Capability&gt; | Yes | Capability of the accessibility extension ability. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise对象，无返回结果。 |
+| Promise&lt;void&gt; | Promise that returns no value. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
-| 201 | Permission verification failed. The application does not have the permission required to call the API. |
-| 202 | Permission verification failed. A non-system application calls a system API. |
-| 9300001 | Invalid bundle name or ability name. |
-| 9300002 | Target ability already enabled. |
-
-## Examples
-
-```TypeScript
-import { accessibility, config } from '@kit.AccessibilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let name: string = 'com.ohos.example/axExtension';
-let capability: accessibility.Capability[] = ['retrieve'];
-
-config.enableAbility(name, capability).then(() => {
-  console.info(`Succeeded in enabling ability, name is ${name}, capability is ${capability}`);
-}).catch((err: BusinessError) => {
-  console.error(`Failed to enable ability. Code: ${err.code}, message: ${err.message}`);
-});
-```
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed. The application does not have the permission required to call the API. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
+| [9300001](../errorcode-accessibility.md#9300001-invalid-bundle-name-or-ability-name) | Invalid bundle name or ability name. |
+| [9300002](../errorcode-accessibility.md#9300002-target-ability-already-enabled) | Target ability already enabled. |
 
 
 ## enableAbility
@@ -76,7 +60,7 @@ function enableAbility(
   ): void
 ```
 
-启用辅助扩展，使用callback异步回调。
+Enables an accessibility extension ability. This API uses an asynchronous callback to return the result.
 
 **Since:** 9
 
@@ -94,35 +78,17 @@ function enableAbility(
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| name | string | Yes | 辅助应用的名称，格式为：'bundleName/abilityName'。 |
-| capability | Array&lt;accessibility.Capability&gt; | Yes | 辅助应用的能力属性。 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | 回调函数。 |
+| name | string | Yes | Name of the accessibility extension ability, in the format of 'bundleName/abilityName'. |
+| capability | Array&lt;accessibility.Capability&gt; | Yes | Capability of the accessibility extension ability. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
-| 201 | Permission verification failed. The application does not have the permission required to call the API. |
-| 202 | Permission verification failed. A non-system application calls a system API. |
-| 9300001 | Invalid bundle name or ability name. |
-| 9300002 | Target ability already enabled. |
-
-## Examples
-
-```TypeScript
-import { accessibility, config } from '@kit.AccessibilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let name: string = 'com.ohos.example/axExtension';
-let capability: accessibility.Capability[] = ['retrieve'];
-
-config.enableAbility(name, capability, (err: BusinessError) => {
-  if (err) {
-    console.error(`Failed to enable ability. Code: ${err.code}, message: ${err.message}`);
-    return;
-  }
-  console.info(`Succeeded in enabling ability, name is ${name}, capability is ${capability}`); 
-});
-```
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed. The application does not have the permission required to call the API. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
+| [9300001](../errorcode-accessibility.md#9300001-invalid-bundle-name-or-ability-name) | Invalid bundle name or ability name. |
+| [9300002](../errorcode-accessibility.md#9300002-target-ability-already-enabled) | Target ability already enabled. |
 

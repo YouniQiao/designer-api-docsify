@@ -10,12 +10,6 @@
 
 **系统能力：** SystemCapability.Print.PrintFramework
 
-## 导入模块
-
-```TypeScript
-import { PrintExtensionAbility } from 'kits/@kit.BasicServicesKit';
-```
-
 ## onCancelPrintJob
 
 ```TypeScript
@@ -44,7 +38,7 @@ public onCancelPrintJob(jobInfo: print.PrintJob): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 202 | not system application<br>**适用版本：** 10 - 23 |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | not system application<br>**适用版本：** 10 - 23 |
 
 ## onConnectPrinter
 
@@ -78,11 +72,26 @@ onConnectPrinter(printerId: int): void
 
 ## 示例
 
+ArkTS-Dyn示例:
+
 ```TypeScript
 import { PrintExtensionAbility } from '@kit.BasicServicesKit';
 
-export default class CustomPrintExtension extends PrintExtensionAbility {
+export default class HWPrintExtension extends PrintExtensionAbility {
     onConnectPrinter(printerId: number): void {
+        console.info('onConnectPrinter enter');
+        // ...
+    }
+}
+```
+
+ArkTS-Sta示例:
+
+```TypeScript
+import { PrintExtensionAbility } from '@kit.BasicServicesKit';
+
+export default class HWPrintExtension extends PrintExtensionAbility {
+    onConnectPrinter(printerId: int): void {
         console.info('onConnectPrinter enter');
         // ...
     }
@@ -119,7 +128,7 @@ onCreate(want: Want): void
 import { PrintExtensionAbility } from '@kit.BasicServicesKit';
 import { Want } from '@kit.AbilityKit';
 
-export default class CustomPrintExtension extends PrintExtensionAbility {
+export default class HWPrintExtension extends PrintExtensionAbility {
     onCreate(want: Want): void {
         console.info('onCreate');
         // ...
@@ -150,7 +159,7 @@ onDestroy(): void
 ```TypeScript
 import { PrintExtensionAbility } from '@kit.BasicServicesKit';
 
-export default class CustomPrintExtension extends PrintExtensionAbility {
+export default class HWPrintExtension extends PrintExtensionAbility {
     onDestroy(): void {
         console.info('onDestroy');
     }
@@ -189,11 +198,26 @@ onDisconnectPrinter(printerId: int): void
 
 ## 示例
 
+ArkTS-Dyn示例:
+
 ```TypeScript
 import { PrintExtensionAbility } from '@kit.BasicServicesKit';
 
-export default class CustomPrintExtension extends PrintExtensionAbility {
+export default class HWPrintExtension extends PrintExtensionAbility {
     onDisconnectPrinter(printerId: number): void {
+        console.info('onDisconnectPrinter enter');
+        // ...
+    }
+}
+```
+
+ArkTS-Sta示例:
+
+```TypeScript
+import { PrintExtensionAbility } from '@kit.BasicServicesKit';
+
+export default class HWPrintExtension extends PrintExtensionAbility {
+    onDisconnectPrinter(printerId: int): void {
         console.info('onDisconnectPrinter enter');
         // ...
     }
@@ -234,7 +258,7 @@ onRequestPreview(jobInfo: print.PrintJob): string
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 202 | not system application |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | not system application |
 
 ## 示例
 
@@ -245,8 +269,8 @@ export default class HWPrintExtension extends PrintExtensionAbility {
     onRequestPreview(jobInfo: print.PrintJob): string {
         console.info('onRequestPreview enter');
         // ...
-        let previewResult: string = '';
-        return previewResult;
+        let tmp : string = '';
+        return tmp;
     }
 }
 ```
@@ -291,7 +315,7 @@ public onRequestPrinterCapability(printerId: int): print.PrinterCapability
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 202 | not system application<br>**适用版本：** 10 - 23 |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | not system application<br>**适用版本：** 10 - 23 |
 
 ## onStartDiscoverPrinter
 
@@ -316,7 +340,7 @@ onStartDiscoverPrinter(): void
 ```TypeScript
 import { PrintExtensionAbility } from '@kit.BasicServicesKit';
 
-export default class CustomPrintExtension extends PrintExtensionAbility {
+export default class HWPrintExtension extends PrintExtensionAbility {
     onStartDiscoverPrinter(): void {
         console.info('onStartDiscoverPrinter enter');
         // ...
@@ -352,7 +376,7 @@ public onStartPrintJob(jobInfo: print.PrintJob): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 202 | not system application<br>**适用版本：** 10 - 23 |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | not system application<br>**适用版本：** 10 - 23 |
 
 ## onStopDiscoverPrinter
 
@@ -377,7 +401,7 @@ onStopDiscoverPrinter(): void
 ```TypeScript
 import { PrintExtensionAbility } from '@kit.BasicServicesKit';
 
-export default class CustomPrintExtension extends PrintExtensionAbility {
+export default class HWPrintExtension extends PrintExtensionAbility {
     onStopDiscoverPrinter(): void {
         console.info('onStopDiscoverPrinter enter');
         // ...

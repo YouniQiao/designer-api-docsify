@@ -1,6 +1,6 @@
 # MediaElement
 
-媒体元素Singer/Radio/Banner结构体定义
+The definition of Singer/Radio/Banner.
 
 **Inheritance/Implementation:** MediaElement extends [MediaEntity](arkts-avsession-avmusictemplate-mediaentity-i.md)
 

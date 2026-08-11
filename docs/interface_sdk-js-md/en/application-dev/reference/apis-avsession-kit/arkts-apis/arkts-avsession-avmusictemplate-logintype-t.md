@@ -4,7 +4,7 @@
 type LoginType = 'queryLoginInfo' | 'refreshLoginInfo' | 'cancel' | 'logout'
 ```
 
-登录的类型。该类型可取的值为下表字符串。
+Login type queryLoginInfo & refreshLoginInfo, logout.
 
 **Since:** 23
 

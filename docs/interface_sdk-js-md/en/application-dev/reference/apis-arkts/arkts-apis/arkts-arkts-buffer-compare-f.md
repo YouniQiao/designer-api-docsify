@@ -12,7 +12,7 @@ import { buffer } from 'kits/@kit.ArkTS';
 function compare(buf1: Buffer | Uint8Array, buf2: Buffer | Uint8Array): -1 | 0 | 1
 ```
 
-返回两个Buffer或Uint8Array对象的比较结果，通常用于对Buffer或Uint8Array对象数组进行排序。
+Compares two **Buffer** objects. This API is used for sorting **Buffer** objects.
 
 **Since:** 9
 
@@ -28,14 +28,14 @@ function compare(buf1: Buffer | Uint8Array, buf2: Buffer | Uint8Array): -1 | 0 |
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| buf1 | [Buffer](arkts-arkts-buffer-buffer-c.md) \| Uint8Array | Yes | 待比较的第一个Buffer或Uint8Array实例。 |
-| buf2 | [Buffer](arkts-arkts-buffer-buffer-c.md) \| Uint8Array | Yes | 待比较的第二个Buffer或Uint8Array实例。 |
+| buf1 | [Buffer](arkts-arkts-buffer-buffer-c.md) \| Uint8Array | Yes | Buffer** object to compare. |
+| buf2 | [Buffer](arkts-arkts-buffer-buffer-c.md) \| Uint8Array | Yes | Buffer** object to compare. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| -1 | 如果buf1与buf2相同，则返回0。 &lt;br/&gt;如果排序时buf1位于buf2之后，则返回1。 &lt;br/&gt;如果排序时buf1位于buf2之前，则返回-1。 |
+| -1 | Returns **0** if **buf1** is the same as **buf2**. &lt;br&gt;Returns **1** if **buf1** comes after **buf2** when sorted. &lt;br&gt;Returns **-1** if **buf1** comes before **buf2** when sorted. |
 
 ## Examples
 
@@ -57,7 +57,7 @@ console.info(Number(res).toString());
 function compare(buf1: Buffer | Uint8Array, buf2: Buffer | Uint8Array): int
 ```
 
-返回两个Buffer或Uint8Array对象的比较结果，通常用于对Buffer或Uint8Array对象数组进行排序。
+Compares buf1 to buf2
 
 **Since:** 23
 
@@ -73,12 +73,12 @@ function compare(buf1: Buffer | Uint8Array, buf2: Buffer | Uint8Array): int
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| buf1 | [Buffer](arkts-arkts-buffer-buffer-c.md) \| Uint8Array | Yes | 待比较的第一个Buffer或Uint8Array实例。 |
-| buf2 | [Buffer](arkts-arkts-buffer-buffer-c.md) \| Uint8Array | Yes | 待比较的第二个Buffer或Uint8Array实例。 |
+| buf1 | [Buffer](arkts-arkts-buffer-buffer-c.md) \| Uint8Array | Yes | First buffer for comparison |
+| buf2 | [Buffer](arkts-arkts-buffer-buffer-c.md) \| Uint8Array | Yes | Second buffer for comparison |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| int | 如果buf1与buf2相同，则返回0。&lt;br/&gt;如果排序时buf1位于buf2之后，则返回1。&lt;br/&gt;如果排序时buf1位于buf2之前，则返回-1。 |
+| int | 0 is returned if target is the same as buf 1 is returned if target should come before buf when sorted. -1 is returned if target should come after buf when sorted. |
 

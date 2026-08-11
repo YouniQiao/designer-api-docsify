@@ -10,12 +10,6 @@
 
 **系统能力：** SystemCapability.MiscServices.Upload
 
-## 导入模块
-
-```TypeScript
-import { request } from 'kits/@kit.BasicServicesKit';
-```
-
 ## begins
 
 ```TypeScript

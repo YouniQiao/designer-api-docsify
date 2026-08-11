@@ -32,7 +32,7 @@ export declare function Stack(
 
 | 类型 | 说明 |
 | --- | --- |
-| [StackAttribute](../arkts-components/arkts-arkui-stack-attribute.md) |  |
+| [StackAttribute](arkts-arkui-stack-stackattribute-i.md) |  |
 
 
 ## Stack
@@ -69,5 +69,5 @@ Defines Stack Component.
 
 | 类型 | 说明 |
 | --- | --- |
-| [StackAttribute](../arkts-components/arkts-arkui-stack-attribute.md) |  |
+| [StackAttribute](arkts-arkui-stack-stackattribute-i.md) |  |
 

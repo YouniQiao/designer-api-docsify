@@ -1,6 +1,6 @@
 # MenuPreviewMode
 
-菜单的预览样式。
+Defines the preview style of a menu.
 
 **Since:** 11
 
@@ -16,7 +16,7 @@
 NONE = 0
 ```
 
-不显示预览内容。
+No preview is displayed.
 
 **Since:** 11
 
@@ -36,7 +36,7 @@ NONE = 0
 IMAGE = 1
 ```
 
-预览内容为触发长按悬浮菜单组件的截图。
+The preview is a screenshot of the component on which a long-press triggers the context menu.
 
 **Since:** 11
 

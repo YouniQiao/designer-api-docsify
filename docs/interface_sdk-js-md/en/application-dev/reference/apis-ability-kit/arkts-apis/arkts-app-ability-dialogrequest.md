@@ -1,13 +1,14 @@
 # @ohos.app.ability.dialogRequest
 
-dialogRequest模块用于处理模态弹框的能力，包括获取RequestInfo（用于绑定模态弹框）、获取RequestCallback（用于设置结果）。
+The dialogRequest module provides APIs related to modal dialog box processing, including obtaining the request information (used to bind a modal dialog box) and request callback (used to set the request result).
 
-模态弹框是指一个系统弹框，该弹框会拦截弹框之下的页面的鼠标、键盘、触屏等事件。销毁该弹框后，才能对页面进行操作。
+A modal dialog box is a system-level dialog box that blocks interactions such as mouse clicks, keyboard input, and touch events on the underlying page. The page can only be interacted with after the modal dialog box is closed.
 
-> **说明：**
+> **NOTE：**
 > 
-> - 本模块接口可以在ServiceExtensionAbility下使用，如果ServiceExtensionAbility实现了模态弹框，则可以使用本模块的接口获取请求方的RequestInfo、RequestCallback并
-> 返回请求结果。
+> - The APIs provided by this module are used in ServiceExtensionAbilities. For a ServiceExtensionAbility that
+> implements modal dialog boxes, you can use the APIs to obtain the request information and request callback and
+> return the request result.
 
 **Since:** 9
 
@@ -29,21 +30,21 @@ import { dialogRequest } from 'kits/@kit.AbilityKit';
 
 | Name | Description |
 | --- | --- |
-| [getRequestCallback](arkts-ability-dialogrequest-getrequestcallback-f.md#getrequestcallback) | 从Want中获取请求方的RequestCallback。 |
-| [getRequestInfo](arkts-ability-dialogrequest-getrequestinfo-f.md#getrequestinfo) | 从Want中获取请求方的RequestInfo。 |
+| [getRequestCallback](arkts-ability-dialogrequest-getrequestcallback-f.md#getrequestcallback) | Obtains the request callback from Want.  > **NOTE：** >  > This API can be used by a ServiceExtensionAbility. If the ServiceExtensionAbility implements modal dialog boxes, > the request callback can be obtained from Want. If this API is used in other scenarios, no return value is > obtained. |
+| [getRequestInfo](arkts-ability-dialogrequest-getrequestinfo-f.md#getrequestinfo) | > **NOTE：** >  > This API can be used by a ServiceExtensionAbility. If the ServiceExtensionAbility implements modal dialog boxes, > the request information can be obtained from Want. If this API is used in other scenarios, no return value is > obtained.  Obtains the request information from Want. |
 
 ### Interfaces
 
 | Name | Description |
 | --- | --- |
-| [RequestCallback](arkts-ability-dialogrequest-requestcallback-i.md) | 用于设置模态弹框请求结果的callback接口。 |
-| [RequestInfo](arkts-ability-dialogrequest-requestinfo-i.md) | 表示发起方请求信息，作为窗口绑定模态弹框的入参。 |
-| [RequestResult](arkts-ability-dialogrequest-requestresult-i.md) | 模态弹框请求结果，包含结果码ResultCode和请求结果ResultWant。 |
-| [WindowRect](arkts-ability-dialogrequest-windowrect-i.md) | 表示模态弹框的属性。 |
+| [RequestCallback](arkts-ability-dialogrequest-requestcallback-i.md) | Provides a callback for setting the modal dialog box request result. |
+| [RequestInfo](arkts-ability-dialogrequest-requestinfo-i.md) | Defines the request information, which is used as an input parameter for binding the modal dialog box. |
+| [RequestResult](arkts-ability-dialogrequest-requestresult-i.md) | Defines the result of the request for the modal dialog box. It contains **ResultCode** and **ResultWant**. |
+| [WindowRect](arkts-ability-dialogrequest-windowrect-i.md) | Defines the location attributes of a modal dialog box. |
 
 ### Enums
 
 | Name | Description |
 | --- | --- |
-| [ResultCode](arkts-ability-dialogrequest-resultcode-e.md) | 模态弹框请求结果码。 |
+| [ResultCode](arkts-ability-dialogrequest-resultcode-e.md) | Enumerates the result codes of the request for the modal dialog box. |
 

@@ -12,12 +12,6 @@
 
 **系统能力：** SystemCapability.Security.CertificateManager
 
-## 导入模块
-
-```TypeScript
-import { certificateManager } from 'kits/@kit.DeviceCertificateKit';
-```
-
 ## 汇总
 
 ### 函数

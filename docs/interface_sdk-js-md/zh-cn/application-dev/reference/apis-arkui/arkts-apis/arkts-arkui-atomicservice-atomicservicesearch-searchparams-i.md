@@ -10,12 +10,6 @@ AtomicServiceSearch中“搜索区”的可选属性。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
-## 导入模块
-
-```TypeScript
-import { SearchParams, AtomicServiceSearch, SearchButtonParams, OperationParams, SelectParams, InputFilterParams, MenuAlignParams } from 'kits/@kit.ArkUI';
-```
-
 ## onChange
 
 ```TypeScript
@@ -118,7 +112,7 @@ caretStyle?: CaretStyle
 
 光标样式。默认值：`{width: '1.5vp', color: '#007DFF'}`。
 
-**类型：** [CaretStyle](arkts-arkui-caretstyle-i.md)
+**类型：** [CaretStyle](arkts-arkui-textcommon-caretstyle-i.md)
 
 **起始版本：** 18
 
@@ -158,7 +152,7 @@ copyOptions?: CopyOptions
 
 输入的文本是否可复制。默认值：`CopyOptions.LocalDevice`，支持设备内复制。
 
-**类型：** [CopyOptions](arkts-arkui-copyoptions-e.md)
+**类型：** [CopyOptions](arkts-arkui-enums-copyoptions-e.md)
 
 **起始版本：** 18
 
@@ -178,7 +172,7 @@ decoration?: TextDecorationOptions
 
 文本装饰线对象。默认值：`{type: TextDecorationType.None, color: Color.Black, style: TextDecorationStyle.SOLID}`。
 
-**类型：** [TextDecorationOptions](arkts-arkui-common-textdecorationoptions-i.md)
+**类型：** [TextDecorationOptions](../arkts-components/arkts-arkui-textdecorationoptions-i.md)
 
 **起始版本：** 18
 
@@ -198,7 +192,7 @@ editMenuOptions?: EditMenuOptions
 
 设置自定义菜单扩展项，允许用户设置扩展项的文本内容、图标、回调方法。默认值为`undefined`。
 
-**类型：** [EditMenuOptions](arkts-arkui-editmenuoptions-i.md)
+**类型：** [EditMenuOptions](arkts-arkui-textcommon-editmenuoptions-i.md)
 
 **起始版本：** 18
 
@@ -280,7 +274,7 @@ enterKeyType?: EnterKeyType
 
 输入法回车键类型。默认值：`EnterKeyType.Search`。
 
-**类型：** [EnterKeyType](arkts-arkui-textinput-enterkeytype-e.md)
+**类型：** [EnterKeyType](../arkts-components/arkts-arkui-enterkeytype-e.md)
 
 **起始版本：** 18
 

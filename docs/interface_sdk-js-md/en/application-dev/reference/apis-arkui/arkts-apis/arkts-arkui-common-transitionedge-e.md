@@ -1,6 +1,6 @@
 # TransitionEdge
 
-转场边缘类型。
+Defines the Edge object.
 
 **Since:** 23
 
@@ -16,7 +16,7 @@
 TOP = 0
 ```
 
-窗口的上边缘。
+Top edge
 
 **Since:** 23
 
@@ -34,7 +34,7 @@ TOP = 0
 BOTTOM = 1
 ```
 
-窗口的下边缘。
+Bottom edge of the window.
 
 **Since:** 23
 
@@ -52,7 +52,7 @@ BOTTOM = 1
 START = 2
 ```
 
-窗口的起始边缘，LTR时为左边缘，RTL时为右边缘。
+Start edge of the window, which is the left edge for left-to-right scripts and the right edge for right-to-left scripts.
 
 **Since:** 23
 
@@ -67,10 +67,10 @@ START = 2
 ## END
 
 ```TypeScript
-END
+END = 3
 ```
 
-窗口的终止边缘，LTR时为右边缘，RTL时为左边缘。
+End edge of the window, which is the right edge for left-to-right scripts and the left edge for right-to-left scripts.
 
 **Since:** 23
 
@@ -78,7 +78,7 @@ END
 
 **Model restriction:** This API can be used only in the stage model.
 
-<!--Device-TransitionEdge-END--><!--Device-TransitionEdge-END-End-->
+<!--Device-TransitionEdge-END = 3--><!--Device-TransitionEdge-END = 3-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 

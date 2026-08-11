@@ -1,6 +1,6 @@
 # Group
 
-联系人的群组类。
+Defines a contact group.
 
 **Since:** 7
 
@@ -22,7 +22,7 @@ import { contact } from 'kits/@kit.ContactsKit';
 groupId?: number
 ```
 
-联系人群组的Id。
+ID of a contact group.
 
 **Type:** number
 
@@ -42,7 +42,7 @@ groupId?: number
 title: string
 ```
 
-联系人群组的名称。
+Name of a contact group.
 
 **Type:** string
 

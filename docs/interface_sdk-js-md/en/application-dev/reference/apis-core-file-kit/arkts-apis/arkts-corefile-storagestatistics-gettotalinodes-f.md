@@ -12,7 +12,7 @@ import { storageStatistics } from 'kits/@kit.CoreFileKit';
 function getTotalInodes(): Promise<long>
 ```
 
-获取文件系统的inode资源总量，仅支持查询系统数据分区。使用Promise异步回调。
+Get the total inodes.
 
 **Since:** 24
 
@@ -28,7 +28,7 @@ function getTotalInodes(): Promise<long>
 
 | Type | Description |
 | --- | --- |
-| ArkTS-Dyn: Promise&lt;number&gt;  <br>ArkTS-Sta：Promise&lt;long&gt; | Promise对象，返回文件系统inode资源总量。 |
+| ArkTS-Dyn: Promise&lt;number&gt;  <br>ArkTS-Sta：Promise&lt;long&gt; | return Promise |
 
 **Error codes:**
 

@@ -1,6 +1,6 @@
 # DeviceInfo
 
-播放设备的相关信息。
+Device Information Definition
 
 **Since:** 10
 
@@ -22,7 +22,7 @@ import { avSession } from 'kits/@kit.AVSessionKit';
 audioCapabilities?: AudioCapabilities
 ```
 
-播放设备支持的音频能力。
+Audio capabilities supported by the device.
 
 **Type:** [AudioCapabilities](arkts-avsession-avsession-audiocapabilities-i.md)
 
@@ -42,7 +42,7 @@ audioCapabilities?: AudioCapabilities
 castCategory: AVCastCategory
 ```
 
-投播的类别。
+The playback type supported by the device. See {@link AVCastCategory}
 
 **Type:** [AVCastCategory](arkts-avsession-avsession-avcastcategory-e.md)
 
@@ -62,7 +62,7 @@ castCategory: AVCastCategory
 deviceId: string
 ```
 
-播放设备的ID。
+Audio device id.The length of the audioDeviceId array is greater than 1if output to multiple devices at the same time.
 
 **Type:** string
 
@@ -82,7 +82,7 @@ deviceId: string
 deviceName: string
 ```
 
-播放设备的名称。
+Device name. The length of the deviceName array is greater than 1if output to multiple devices at the same time.
 
 **Type:** string
 
@@ -102,7 +102,7 @@ deviceName: string
 deviceType: DeviceType
 ```
 
-播放设备的类型。
+device type.
 
 **Type:** [DeviceType](arkts-avsession-avsession-devicetype-e.md)
 
@@ -122,7 +122,7 @@ deviceType: DeviceType
 manufacturer?: string
 ```
 
-播放设备生产厂家。
+Device manufacturer.
 
 **Type:** string
 
@@ -142,7 +142,7 @@ manufacturer?: string
 modelName?: string
 ```
 
-播放设备型号名称。
+Device model name.
 
 **Type:** string
 
@@ -162,7 +162,7 @@ modelName?: string
 supportedDrmCapabilities?: Array<string>
 ```
 
-播放设备支持的DRM能力。
+The drm capability supported by current device, each drm is represented by uuid.
 
 **Type:** Array&lt;string&gt;
 
@@ -182,11 +182,7 @@ supportedDrmCapabilities?: Array<string>
 supportedProtocols?: int
 ```
 
-播放设备支持的协议。
-
-默认为TYPE_LOCAL,具体取值来自[ProtocolType](arkts-avsession-avsession-protocoltype-e.md)，可以是ProtocolType中的某个协议或者多个协议的组合。
-
-设备仅支持一种协议，返回对应枚举值；设备支持多种协议，返回对应枚举值之和。
+The protocols supported by current device, can be union of {@link ProtocolType}.
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
@@ -206,7 +202,7 @@ supportedProtocols?: int
 supportedPullClients?: Array<int>
 ```
 
-支持拉端客户端的ID集合（只有支持4K投播的设备会返回此字段）。
+Whether the device supports pull-end playback, including a collection of pull-end client IDs.
 
 **Type:** ArkTS-Dyn: Array&lt;number&gt;  <br>ArkTS-Sta：Array&lt;int&gt;
 

@@ -1,6 +1,6 @@
 # CertInfo
 
-表示证书详细信息。
+Represents detailed information about a certificate.
 
 **Since:** 11
 
@@ -22,7 +22,7 @@ import { certificateManager } from 'kits/@kit.DeviceCertificateKit';
 cert: Uint8Array
 ```
 
-表示证书二进制数据，最大长度为8196字节。
+Binary data of a certificate. The value contains up to 8196 bytes.
 
 **Type:** Uint8Array
 
@@ -40,7 +40,7 @@ cert: Uint8Array
 certAlias: string
 ```
 
-表示证书的别名，最大长度为128字节。
+Alias of a certificate. The value contains up to 128 bytes.
 
 **Type:** string
 
@@ -58,7 +58,7 @@ certAlias: string
 fingerprintSha256: string
 ```
 
-表示证书的指纹值，最大长度为128字节。
+Fingerprint of a certificate. The value contains up to 128 bytes.
 
 **Type:** string
 
@@ -76,7 +76,7 @@ fingerprintSha256: string
 issuerName: string
 ```
 
-表示证书的颁发者名称，最大长度为256字节。
+Name of the certificate issuer. The value contains up to 256 bytes.
 
 **Type:** string
 
@@ -94,7 +94,7 @@ issuerName: string
 notAfter: string
 ```
 
-表示证书有效期截止日期，最大长度为32字节。
+Expiry date of a certificate. The value contains up to 32 bytes.
 
 **Type:** string
 
@@ -112,7 +112,7 @@ notAfter: string
 notBefore: string
 ```
 
-表示证书有效期起始日期，最大长度为32字节。
+Start date of a certificate. The value contains up to 32 bytes.
 
 **Type:** string
 
@@ -130,7 +130,7 @@ notBefore: string
 serial: string
 ```
 
-表示证书的序列号，最大长度为64字节。格式为16进制字符串，例如：62C2CB4DE8405E96。
+Serial number of a certificate. The value contains up to 64 bytes. The value is a hexadecimal string, for example, **62C2CB4DE8405E96**.
 
 **Type:** string
 
@@ -148,7 +148,7 @@ serial: string
 state: boolean
 ```
 
-表示证书的状态，true为启用状态、false为禁用状态。
+Certificate state. The value **true** indicates that the certificate is enabled, and **false** means the opposite.
 
 **Type:** boolean
 
@@ -166,7 +166,7 @@ state: boolean
 subjectName: string
 ```
 
-表示证书的使用者名称，最大长度为1024字节。
+Name of the certificate subject. The value contains up to 1024 bytes.
 
 **Type:** string
 
@@ -184,7 +184,7 @@ subjectName: string
 uri: string
 ```
 
-表示证书的唯一标识符，最大长度为256字节。
+Unique identifier of a certificate. The value contains up to 256 bytes.
 
 **Type:** string
 

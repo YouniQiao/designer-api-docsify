@@ -1,6 +1,6 @@
 # SpeedGear (System API)
 
-速度档位定义
+Speed gear definition.
 
 **Since:** 26.0.0
 
@@ -18,7 +18,7 @@
 LOW_SPEED = 0
 ```
 
-低速档定义
+Low speed definition.
 
 **Since:** 26.0.0
 
@@ -36,7 +36,7 @@ LOW_SPEED = 0
 MIDDLE_SPEED = 1
 ```
 
-中速档定义，默认值即为中速
+Middle speed definition, default speed.
 
 **Since:** 26.0.0
 
@@ -54,7 +54,7 @@ MIDDLE_SPEED = 1
 HIGH_SPEED = 2
 ```
 
-高速档定义
+High speed definition.
 
 **Since:** 26.0.0
 

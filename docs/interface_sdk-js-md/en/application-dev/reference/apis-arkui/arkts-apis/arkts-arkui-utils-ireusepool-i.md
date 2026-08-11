@@ -1,6 +1,6 @@
 # IReusePool
 
-`IReusePool` 接口提供自定义组件上的全局复用池的相关功能。
+IReusePool is a reuse pool interface for custom component.
 
 **Since:** 26.0.0
 
@@ -17,7 +17,7 @@ getReusableInfo(componentConstructor : Class,
     reuseId?: string): IReusableInfo[] | IReusableInfo | undefined
 ```
 
-检索此复用池中给定可复用组件类型的回收实例信息。
+Get IReusableInfo for given Component/V2 in the pool.
 
 **Since:** 26.0.0
 
@@ -33,8 +33,8 @@ getReusableInfo(componentConstructor : Class,
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| componentConstructor | [Class](../../apis-arkts/arkts-apis/arkts-arkts-class-c.md) | Yes | 要查询的可复用自定义组件的类型。 |
-| reuseId | string | No | 可选的reuseId用于过滤结果。如果指定，则仅返回此特定reuseId复用池的信息。默认值是undefined，返回所有reuseId复用池信息。 |
+| componentConstructor | [Class](../../apis-arkts/arkts-apis/arkts-arkts-class-c.md) | Yes | @ReusableV2 @ComponentV2 or @Reusable @Component. |
+| reuseId | string | No | the reuse-id. |
 
 **Return value:**
 
@@ -48,7 +48,7 @@ getReusableInfo(componentConstructor : Class,
 preRender(builder: WrappedBuilder<CustomBuilder>, times: int): Promise<void>
 ```
 
-预创建@Reusable/@ReusableV2组件并将它们放入此复用池中。
+The preRender function pre-render n instances and add to pool.
 
 **Since:** 26.0.0
 
@@ -64,12 +64,12 @@ preRender(builder: WrappedBuilder<CustomBuilder>, times: int): Promise<void>
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| builder | [WrappedBuilder](arkts-arkui-builder-wrappedbuilder-c.md)&lt;[CustomBuilder](arkts-arkui-custombuilder-t.md)&gt; | Yes | 包含要执行`times`次的@Builder函数的 `WrappedBuilder`。每次执行应创建一个或多个@Reusable /@ReusableV2组件。 |
-| times | int | Yes | 执行@Builder函数的次数。 |
+| builder | [WrappedBuilder](arkts-arkui-builder-wrappedbuilder-c.md)&lt;[CustomBuilder](arkts-arkui-custombuilder-t.md)&gt; | Yes | builder a WrappedBuilder containing a @Builder function that accepts no parameter. |
+| times | int | Yes | number of times to exec the given @Builder function. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | 当空闲任务成功完成时解析的Promise。Promise对象无返回结果。 |
+| Promise&lt;void&gt; | Promise that returns no value. |
 

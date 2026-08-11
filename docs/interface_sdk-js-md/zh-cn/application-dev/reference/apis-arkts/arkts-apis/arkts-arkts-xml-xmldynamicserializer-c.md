@@ -14,12 +14,6 @@ XmlDynamicSerializer类用于动态生成XML字符串。当无法确定XML内容
 
 **系统能力：** SystemCapability.Utils.Lang
 
-## 导入模块
-
-```TypeScript
-import { xml } from 'kits/@kit.ArkTS';
-```
-
 ## addEmptyElement
 
 ```TypeScript
@@ -46,14 +40,14 @@ addEmptyElement(name: string): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| name | string | 是 | 该空元素的元素名。所组成的XML长度不能超过100000。 |
+| name | string | 是 | 该空元素的元素名，所组成的XML长度不能超过100000。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 10200062 | xml累计长度超过上限100000。 |
-| 10200064 | 不能为空字符串。 |
+| [10200062](../errorcode-utils.md#10200062-xml的累积长度已超过上限) | xml累计长度超过上限100000。 |
+| [10200064](../errorcode-utils.md#10200064-入参字符串不能为空) | 不能为空字符串。 |
 
 ## 示例
 
@@ -74,7 +68,7 @@ console.info(result); // <d/>
 constructor(encoding?: string)
 ```
 
-XmlDynamicSerializer的构造函数。
+构造并返回一个XmlDynamicSerializer对象，该对象支持动态扩容生成XML字符串，无需预先指定缓存大小。
 
 **起始版本：** 20
 
@@ -90,13 +84,13 @@ XmlDynamicSerializer的构造函数。
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| encoding | string | 否 | 编码格式，默认'utf-8'(目前仅支持'utf-8')。 |
+| encoding | string | 否 | 编码格式，默认'utf-8'（目前仅支持'utf-8'）。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 10200066 | 编码格式错误，目前仅支持utf-8。 |
+| [10200066](../errorcode-utils.md#10200066-编码格式错误) | 编码格式错误，目前仅支持utf-8。 |
 
 ## 示例
 
@@ -130,8 +124,8 @@ endElement(): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 10200062 | xml累计长度超过上限100000。 |
-| 10200065 | startElement和endElement不匹配。 |
+| [10200062](../errorcode-utils.md#10200062-xml的累积长度已超过上限) | xml累计长度超过上限100000。 |
+| [10200065](../errorcode-utils.md#10200065-元素开始标记与元素结束标记未匹配使用) | startElement和endElement不匹配。 |
 
 ## 示例
 
@@ -213,16 +207,16 @@ setAttributes(name: string, value: string): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| name | string | 是 | 属性。所组成的XML长度不能超过100000，不可为空字符。 |
-| value | string | 是 | 属性值。所组成的XML长度不能超过100000。 |
+| name | string | 是 | 属性名。所组成的XML长度不能超过100000，不可为空字符。 |
+| value | string | 是 | 属性值。所组成的XML长度不能超过100000字符。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 10200063 | xml位置非法。 |
-| 10200062 | xml累计长度超过上限100000。 |
-| 10200064 | 不能为空字符串。 |
+| [10200063](../errorcode-utils.md#10200063-xml文件声明或属性位置设置错误) | xml位置非法。 |
+| [10200062](../errorcode-utils.md#10200062-xml的累积长度已超过上限) | xml累计长度超过上限100000。 |
+| [10200064](../errorcode-utils.md#10200064-入参字符串不能为空) | 不能为空字符串。 |
 
 ## 示例
 
@@ -245,7 +239,7 @@ console.info(result); // <note importance="high"/>
 setCdata(text: string): void
 ```
 
-提供在CDATA标签中添加数据的能力，所生成的CDATA标签结构为："\&lt;!\[CDATA\[" + 所添加的数据 + "\]\]\&gt;"。
+提供在CDATA标签中添加数据的能力，所生成的CDATA标签结构为：`&lt;![CDATA[` + 所添加的数据 + `]]&gt;`。
 
 > **说明：**
 > 
@@ -265,14 +259,14 @@ setCdata(text: string): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| text | string | 是 | CDATA属性的内容。所组成的XML长度不能超过100000。 |
+| text | string | 是 | CDATA标签中的数据内容。所组成的XML长度不能超过100000。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 10200062 | xml累计长度超过上限100000。 |
-| 10200064 | 不能为空字符串。 |
+| [10200062](../errorcode-utils.md#10200062-xml的累积长度已超过上限) | xml累计长度超过上限100000。 |
+| [10200064](../errorcode-utils.md#10200064-入参字符串不能为空) | 不能为空字符串。 |
 
 ## 示例
 
@@ -293,7 +287,7 @@ console.info(result); // <![CDATA[root SYSTEM]]>
 setComment(text: string): void
 ```
 
-写入注释内容。
+写入注释内容，所生成的注释结构为：`&lt;!--` + 注释内容 + `--&gt;`。
 
 **起始版本：** 20
 
@@ -309,14 +303,14 @@ setComment(text: string): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| text | string | 是 | 当前元素的注释内容。所组成的XML长度不能超过100000。 |
+| text | string | 是 | 当前元素的注释内容。所组成的XML长度不能超过100000，不可为空字符。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 10200062 | xml累计长度超过上限100000。 |
-| 10200064 | 不能为空字符串。 |
+| [10200062](../errorcode-utils.md#10200062-xml的累积长度已超过上限) | xml累计长度超过上限100000。 |
+| [10200064](../errorcode-utils.md#10200064-入参字符串不能为空) | 不能为空字符串。 |
 
 ## 示例
 
@@ -337,7 +331,7 @@ console.info(result); // <!--Hello, World!-->
 setDeclaration(): void
 ```
 
-编写带有编码的文件声明。
+编写带有编码的文件声明，调用后将在XML文本中生成`&lt;?xml version="1.0" encoding="utf-8"?&gt;`格式的声明。
 
 **起始版本：** 20
 
@@ -353,8 +347,8 @@ setDeclaration(): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 10200063 | xml位置非法。 |
-| 10200062 | xml累计长度超过上限100000。 |
+| [10200063](../errorcode-utils.md#10200063-xml文件声明或属性位置设置错误) | xml位置非法。 |
+| [10200062](../errorcode-utils.md#10200062-xml的累积长度已超过上限) | xml累计长度超过上限100000。 |
 
 ## 示例
 
@@ -391,14 +385,14 @@ setDocType(text: string): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| text | string | 是 | DocType属性的内容。所组成的XML长度不能超过100000。 |
+| text | string | 是 | 文档类型声明的内容。所组成的XML长度不能超过100000。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 10200062 | xml累计长度超过上限100000。 |
-| 10200064 | 不能为空字符串。 |
+| [10200062](../errorcode-utils.md#10200062-xml的累积长度已超过上限) | xml累计长度超过上限100000。 |
+| [10200064](../errorcode-utils.md#10200064-入参字符串不能为空) | 不能为空字符串。 |
 
 ## 示例
 
@@ -423,6 +417,9 @@ setNamespace(prefix: string, namespace: string): void
 
 > **说明：**
 > 
+> 该接口应在[startElement](arkts-arkts-xml-xmldynamicserializer-c.md#startelement)之前调用，为即将开启的元素设置命名空间前缀。调用顺序：
+> 先调用setNamespace设置命名空间，再调用startElement开启元素。
+> 
 > 该接口对所添加数据不做标准XML校验处理，请确保所添加的数据符合标准XML规范。比如不允许添加数字开头的前缀以及对同一个元素设置多个命名空间。
 
 **起始版本：** 20
@@ -439,15 +436,15 @@ setNamespace(prefix: string, namespace: string): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| prefix | string | 是 | 当前元素及其子元素的前缀。所组成的XML长度不能超过100000，不可为空字符。 |
-| namespace | string | 是 | 当前元素及其子元素的命名空间。所组成的XML长度不能超过100000，不可为空字符。 |
+| prefix | string | 是 | 当前元素及其子元素的前缀。所组成的XML长度不能超过100000，不可为空字符串。 |
+| namespace | string | 是 | 当前元素及其子元素的命名空间。所组成的XML长度不能超过100000，不可为空字符串。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 10200062 | xml累计长度超过上限100000。 |
-| 10200064 | 不能为空字符串。 |
+| [10200062](../errorcode-utils.md#10200062-xml的累积长度已超过上限) | xml累计长度超过上限100000。 |
+| [10200064](../errorcode-utils.md#10200064-入参字符串不能为空) | 不能为空字符串。 |
 
 ## 示例
 
@@ -472,6 +469,11 @@ setText(text: string): void
 
 写入标签值。
 
+> **说明：**
+> 
+> 该接口必须在[startElement](arkts-arkts-xml-xmldynamicserializer-c.md#startelement)之后、
+> [endElement](arkts-arkts-xml-xmldynamicserializer-c.md#endelement)之前调用，用于设置当前元素的文本内容。
+
 **起始版本：** 20
 
 **ArkTS模式：** ArkTS-Dyn起始版本为20；ArkTS-Sta起始版本为23。
@@ -486,14 +488,14 @@ setText(text: string): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| text | string | 是 | 标签值。所组成的XML长度不能超过100000。 |
+| text | string | 是 | 标签值。所组成的XML长度不能超过100000，不可为空字符。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 10200062 | xml累计长度超过上限100000。 |
-| 10200064 | 不能为空字符串。 |
+| [10200062](../errorcode-utils.md#10200062-xml的累积长度已超过上限) | xml累计长度超过上限100000。 |
+| [10200064](../errorcode-utils.md#10200064-入参字符串不能为空) | 不能为空字符串。 |
 
 ## 示例
 
@@ -539,14 +541,14 @@ startElement(name: string): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| name | string | 是 | 当前元素的元素名。所组成的XML长度不能超过100000。 |
+| name | string | 是 | 当前元素的元素名。所组成的XML长度不能超过100000，不可为空字符。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 10200062 | xml累计长度超过上限100000。 |
-| 10200064 | 不能为空字符串。 |
+| [10200062](../errorcode-utils.md#10200062-xml的累积长度已超过上限) | xml累计长度超过上限100000。 |
+| [10200064](../errorcode-utils.md#10200064-入参字符串不能为空) | 不能为空字符串。 |
 
 ## 示例
 

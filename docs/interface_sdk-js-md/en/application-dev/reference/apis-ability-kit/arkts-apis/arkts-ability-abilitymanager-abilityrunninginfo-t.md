@@ -4,7 +4,7 @@
 export type AbilityRunningInfo = _AbilityRunningInfo
 ```
 
-AbilityRunningInfo二级模块。
+Defines the level-2 module AbilityRunningInfo.
 
 **Since:** 14
 

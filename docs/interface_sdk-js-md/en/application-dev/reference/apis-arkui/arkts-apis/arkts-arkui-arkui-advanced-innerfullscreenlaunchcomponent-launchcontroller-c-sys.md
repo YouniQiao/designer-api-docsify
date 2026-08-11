@@ -1,6 +1,6 @@
 # LaunchController (System API)
 
-拉起原子化服务的控制器。
+Controller for launching the atomic service.
 
 **Since:** 12
 
@@ -24,7 +24,7 @@ import { InnerFullScreenLaunchComponent, LaunchController } from 'kits/@kit.ArkU
 public launchAtomicService: LaunchAtomicServiceCallback
 ```
 
-拉起原子化服务。
+Function to launch atomicservice.
 
 **Since:** 12
 

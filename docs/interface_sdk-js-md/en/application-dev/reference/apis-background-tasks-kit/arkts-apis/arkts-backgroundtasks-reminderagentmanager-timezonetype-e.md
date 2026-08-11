@@ -1,6 +1,6 @@
 # TimeZoneType
 
-时区类型。用于时区变更时，按照变更后的时区重新计算提醒的目标时间。
+Enumerates the time zone types. When the time zone is changed, the reminder time is recalculated based on the new time zone.
 
 **Since:** 26.0.0
 
@@ -16,7 +16,7 @@
 DEFAULT = 0
 ```
 
-默认。修改时区，提醒时间的计算方式与固定时区的行为相同；修改时间，提醒时间的计算方式与跟随系统时区的行为相同。建议根据业务场景，明确指定FIXED_TIME_ZONE或者SYSTEM_TIME_ZONE类型。
+Default value. When the time zone is changed, the reminder time is calculated in the same way as that for the time zone type of **FIXED_TIME_ZONE**. When the time is changed, the reminder time is calculated in the same way as that for the time zone type of **SYSTEM_TIME_ZONE**. You are advised to set the time zone type to **FIXED_TIME_ZONE** or **SYSTEM_TIME_ZONE** based on the service scenario.
 
 **Since:** 26.0.0
 
@@ -34,7 +34,7 @@ DEFAULT = 0
 FIXED_TIME_ZONE = 1
 ```
 
-固定时区，用于抢票、开会等场景。例如：设备在东八区创建08:00的提醒，那么无论设备时区如何变化，都会在东八区的08:00提醒，即在东四区显示为04:00，修改系统时间不影响提醒目标时间。
+Fixed time zone, which is used in scenarios such as ticket booking and meetings. For example, if the reminder time is set to 08:00 (GMT+8), the reminder will be triggered at 08:00 (GMT+8) no matter whether the device time zone is changed. If the device time zone is changed to GMT+4, the reminder will be triggered at 04:00. The reminder time is not affected by the change of the system time.
 
 **Since:** 26.0.0
 
@@ -52,7 +52,7 @@ FIXED_TIME_ZONE = 1
 SYSTEM_TIME_ZONE = 2
 ```
 
-跟随系统时区，用于早起闹钟、定点运动、睡觉等场景，例如：设备在东八区创建08:00的提醒，在东四区仍为08:00的提醒，修改系统时间不影响提醒目标时间。
+System time zone, which is used in scenarios such as setting the alarm clock, fixed time for exercise, and sleep time.For example, if the reminder time is set to 08:00 (GMT+8), and the time zone is changed to GMT+4, the reminder will still be triggered at 08:00. The reminder time is not affected by the change of the system time.
 
 **Since:** 26.0.0
 

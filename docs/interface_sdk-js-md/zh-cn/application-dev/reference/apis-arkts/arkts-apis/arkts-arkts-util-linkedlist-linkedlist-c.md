@@ -10,12 +10,6 @@ LinkedList底层通过双向链表实现，每个节点都包含对前一个元�
 
 **系统能力：** SystemCapability.Utils.Lang
 
-## 导入模块
-
-```TypeScript
-import { LinkedList } from 'kits/@kit.ArkTS';
-```
-
 ## $_iterator
 
 ```TypeScript
@@ -38,7 +32,30 @@ $_iterator(): IterableIterator<T>
 
 | 类型 | 说明 |
 | --- | --- |
-| [IterableIterator](arkts-arkts-iterator-iterableiterator-i.md)&lt;T&gt; |  |
+| IterableIterator&lt;T&gt; |  |
+
+## 示例
+
+```TypeScript
+let linkedList: LinkedList<int> = new LinkedList<int>();
+linkedList.add(2);
+linkedList.add(4);
+linkedList.add(5);
+linkedList.add(4);
+
+// 使用方法一：
+for (let item of linkedList) {
+  console.info("value:" + item);
+}
+
+// 使用方法二：
+let iter = linkedList.$_iterator();
+let temp: IteratorResult<int> = iter.next();
+while(!temp.done) {
+  console.info("value:" + temp.value);
+  temp = iter.next();
+}
+```
 
 ## [Symbol.iterator]
 
@@ -62,13 +79,13 @@ $_iterator(): IterableIterator<T>
 
 | 类型 | 说明 |
 | --- | --- |
-| [IterableIterator](arkts-arkts-iterator-iterableiterator-i.md)&lt;T&gt; | 返回一个迭代器。 |
+| IterableIterator&lt;T&gt; | 返回一个迭代器。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 10200011 | The Symbol.iterator method cannot be bound. |
+| [10200011](../errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) | The Symbol.iterator method cannot be bound. |
 
 ## 示例
 
@@ -135,9 +152,11 @@ add(element: T): boolean
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 10200011 | The add method cannot be bound. |
+| [10200011](../errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) | The add method cannot be bound. |
 
 ## 示例
+
+ArkTS-Dyn示例：
 
 ```TypeScript
 let linkedList = new LinkedList<string | number | boolean | object>();
@@ -157,6 +176,24 @@ let result3 = linkedList.add(personInfo);
 console.info("result = ", result3); // result =  true
 let result4 = linkedList.add(false);
 console.info("result = ", result4); // result =  true
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+let linkedList: LinkedList<string | int | boolean | object> = new LinkedList<string | int | boolean | object>();
+let result = linkedList.add("a");
+let result1 = linkedList.add(1);
+let b = [1, 2, 3];
+let result2 = linkedList.add(b);
+class C {
+  name: string = ''
+  age: string = ''
+}
+let c: C = {name : "Dylan", age : "13"};
+let result3 = linkedList.add(c);
+let result4 = linkedList.add(false);
+console.info("result = ", result4) // result =  true
 ```
 
 ## addFirst
@@ -187,9 +224,11 @@ addFirst(element: T): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 10200011 | The addFirst method cannot be bound. |
+| [10200011](../errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) | The addFirst method cannot be bound. |
 
 ## 示例
+
+ArkTS-Dyn示例：
 
 ```TypeScript
 let linkedList = new LinkedList<string | number | boolean | object>();
@@ -205,6 +244,25 @@ let personInfo: PersonInfo = {name : "Dylan", age : "13"};
 linkedList.addFirst(personInfo);
 linkedList.addFirst(false);
 let result = linkedList.get(2);
+console.info("result:", result);  // result: 1,2,3
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+let linkedList: LinkedList<string | int | boolean | object> = new LinkedList<string | int | boolean | object>();
+linkedList.addFirst("a");
+linkedList.addFirst(1);
+let b = [1, 2, 3];
+linkedList.addFirst(b);
+class C {
+  name: string = ''
+  age: string = ''
+}
+let c: C = {name : "Dylan", age : "13"};
+linkedList.addFirst(c);
+linkedList.addFirst(false);
+let result = linkedList.get(2); 
 console.info("result:", result);  // result: 1,2,3
 ```
 
@@ -230,12 +288,27 @@ clear(): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 10200011 | The clear method cannot be bound. |
+| [10200011](../errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) | The clear method cannot be bound. |
 
 ## 示例
 
+ArkTS-Dyn示例：
+
 ```TypeScript
 let linkedList = new LinkedList<number>();
+linkedList.add(2);
+linkedList.add(4);
+linkedList.add(5);
+linkedList.add(4);
+linkedList.clear();
+let result = linkedList.has(2);
+console.info("result:", result);  // result: false
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+let linkedList = new LinkedList<int>();
 linkedList.add(2);
 linkedList.add(4);
 linkedList.add(5);
@@ -273,12 +346,26 @@ clone(): LinkedList<T>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 10200011 | The clone method cannot be bound. |
+| [10200011](../errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) | The clone method cannot be bound. |
 
 ## 示例
 
+ArkTS-Dyn示例：
+
 ```TypeScript
 let linkedList = new LinkedList<number>();
+linkedList.add(2);
+linkedList.add(4);
+linkedList.add(5);
+linkedList.add(4);
+let result = linkedList.clone();
+console.info("result:", result.has(4));  // result: true
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+let linkedList = new LinkedList<int>();
 linkedList.add(2);
 linkedList.add(4);
 linkedList.add(5);
@@ -309,12 +396,20 @@ LinkedList的构造函数。调用后，创建一个空的LinkedList实例。
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 10200012 | The LinkedList's constructor cannot be directly invoked. |
+| [10200012](../errorcode-utils.md#10200012-构造函数调用异常) | The LinkedList's constructor cannot be directly invoked. |
 
 ## 示例
 
+ArkTS-Dyn示例：
+
 ```TypeScript
 let linkedList = new LinkedList<string | number | boolean | object>();
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+let linkedList: LinkedList<string | int | boolean | object> = new LinkedList<string | int | boolean | object>();
 ```
 
 ## convertToArray
@@ -345,12 +440,26 @@ convertToArray(): Array<T>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 10200011 | The convertToArray method cannot be bound. |
+| [10200011](../errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) | The convertToArray method cannot be bound. |
 
 ## 示例
 
+ArkTS-Dyn示例：
+
 ```TypeScript
 let linkedList = new LinkedList<number>();
+linkedList.add(2);
+linkedList.add(4);
+linkedList.add(5);
+linkedList.add(4);
+let result = linkedList.convertToArray();
+console.info("result:", result);  // result: 2,4,5,4
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+let linkedList = new LinkedList<int>();
 linkedList.add(2);
 linkedList.add(4);
 linkedList.add(5);
@@ -388,7 +497,7 @@ forEach(callbackFn: (value: T, index?: number, LinkedList?: LinkedList<T>) => vo
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 10200011 | The forEach method cannot be bound. |
+| [10200011](../errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) | The forEach method cannot be bound. |
 
 ## 示例
 
@@ -467,19 +576,36 @@ get(index: int): T
 
 | 类型 | 说明 |
 | --- | --- |
-| T | 返回指定下标位置的元素，如果元素不存在返回undefined。 |
+| T | 根据下标查找到的元素，元素不存在返回undefined。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 10200011 | The get method cannot be bound. |
-| 10200001 | The value of index is out of range.<br>**适用版本：** 23+  **ArkTS模式：** 该错误码仅适用于ArkTS-Sta。 |
+| [10200011](../errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) | The get method cannot be bound. |
+| [10200001](../errorcode-utils.md#10200001-参数范围越界错误) | The value of index is out of range.<br>**适用版本：** 23+  **ArkTS模式：** 该错误码仅适用于ArkTS-Sta。 |
 
 ## 示例
 
+ArkTS-Dyn示例：
+
 ```TypeScript
 let linkedList = new LinkedList<number>();
+linkedList.add(2);
+linkedList.add(4);
+linkedList.add(5);
+linkedList.add(2);
+linkedList.add(1);
+linkedList.add(2);
+linkedList.add(4);
+let result = linkedList.get(2);
+console.info("result:", result);  // result: 5
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+let linkedList = new LinkedList<int>();
 linkedList.add(2);
 linkedList.add(4);
 linkedList.add(5);
@@ -513,19 +639,33 @@ getFirst(): T
 
 | 类型 | 说明 |
 | --- | --- |
-| T | 返回对应元素，如果元素为undefined则返回undefined，为null则返回null。 |
+| T | 返回对应元素，若元素为空则返回undefined。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 10200011 | The getFirst method cannot be bound. |
-| 10200010 | Container is empty.<br>**适用版本：** 23+  **ArkTS模式：** 该错误码仅适用于ArkTS-Sta。 |
+| [10200011](../errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) | The getFirst method cannot be bound. |
+| [10200010](../errorcode-utils.md#10200010-容器为空) | Container is empty.<br>**适用版本：** 23+  **ArkTS模式：** 该错误码仅适用于ArkTS-Sta。 |
 
 ## 示例
 
+ArkTS-Dyn示例：
+
 ```TypeScript
 let linkedList = new LinkedList<number>();
+linkedList.add(2);
+linkedList.add(4);
+linkedList.add(5);
+linkedList.add(4);
+let result = linkedList.getFirst();
+console.info("result:", result);  // result: 2
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+let linkedList = new LinkedList<int>();
 linkedList.add(2);
 linkedList.add(4);
 linkedList.add(5);
@@ -574,12 +714,29 @@ getIndexOf(element: T): int
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 10200011 | The getIndexOf method cannot be bound. |
+| [10200011](../errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) | The getIndexOf method cannot be bound. |
 
 ## 示例
 
+ArkTS-Dyn示例：
+
 ```TypeScript
 let linkedList = new LinkedList<number>();
+linkedList.add(2);
+linkedList.add(4);
+linkedList.add(5);
+linkedList.add(2);
+linkedList.add(1);
+linkedList.add(2);
+linkedList.add(4);
+let result = linkedList.getIndexOf(2);
+console.info("result:", result);  // result: 0
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+let linkedList = new LinkedList<int>();
 linkedList.add(2);
 linkedList.add(4);
 linkedList.add(5);
@@ -619,13 +776,27 @@ getLast(): T
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 10200011 | The getLast method cannot be bound. |
-| 10200010 | Container is empty.<br>**适用版本：** 23+  **ArkTS模式：** 该错误码仅适用于ArkTS-Sta。 |
+| [10200011](../errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) | The getLast method cannot be bound. |
+| [10200010](../errorcode-utils.md#10200010-容器为空) | Container is empty.<br>**适用版本：** 23+  **ArkTS模式：** 该错误码仅适用于ArkTS-Sta。 |
 
 ## 示例
 
+ArkTS-Dyn示例：
+
 ```TypeScript
 let linkedList = new LinkedList<number>();
+linkedList.add(2);
+linkedList.add(4);
+linkedList.add(5);
+linkedList.add(4);
+let result = linkedList.getLast();
+console.info("result:", result);  // result: 4
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+let linkedList = new LinkedList<int>();
 linkedList.add(2);
 linkedList.add(4);
 linkedList.add(5);
@@ -674,12 +845,29 @@ getLastIndexOf(element: T): int
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 10200011 | The getLastIndexOf method cannot be bound. |
+| [10200011](../errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) | The getLastIndexOf method cannot be bound. |
 
 ## 示例
 
+ArkTS-Dyn示例：
+
 ```TypeScript
 let linkedList = new LinkedList<number>();
+linkedList.add(2);
+linkedList.add(4);
+linkedList.add(5);
+linkedList.add(2);
+linkedList.add(1);
+linkedList.add(2);
+linkedList.add(4);
+let result = linkedList.getLastIndexOf(2);
+console.info("result:", result);  // result: 5
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+let linkedList = new LinkedList<int>();
 linkedList.add(2);
 linkedList.add(4);
 linkedList.add(5);
@@ -725,7 +913,7 @@ has(element: T): boolean
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 10200011 | The has method cannot be bound. |
+| [10200011](../errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) | The has method cannot be bound. |
 
 ## 示例
 
@@ -771,10 +959,12 @@ insert(index: int, element: T): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 10200011 | The insert method cannot be bound. |
-| 10200001 | The value of index is out of range. |
+| [10200011](../errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) | The insert method cannot be bound. |
+| [10200001](../errorcode-utils.md#10200001-参数范围越界错误) | The value of index is out of range. |
 
 ## 示例
+
+ArkTS-Dyn示例：
 
 ```TypeScript
 let linkedList = new LinkedList<string | number | boolean | object>();
@@ -782,6 +972,17 @@ linkedList.insert(0, "A");
 linkedList.insert(1, 0);
 linkedList.insert(2, true);
 let result = linkedList.get(1);
+console.info("result:", result);  // result: 0
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+let linkedList: LinkedList<string | int | boolean | object> = new LinkedList<string | int | boolean | object>();
+linkedList.insert(0, "A");
+linkedList.insert(1, 0);
+linkedList.insert(2, true);
+let result = linkedList.get(1); 
 console.info("result:", result);  // result: 0
 ```
 
@@ -819,12 +1020,26 @@ remove(element: T): boolean
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 10200011 | The remove method cannot be bound. |
+| [10200011](../errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) | The remove method cannot be bound. |
 
 ## 示例
 
+ArkTS-Dyn示例：
+
 ```TypeScript
 let linkedList = new LinkedList<number>();
+linkedList.add(2);
+linkedList.add(4);
+linkedList.add(5);
+linkedList.add(4);
+let result = linkedList.remove(2);
+console.info("result:", result);  // result: true
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+let linkedList = new LinkedList<int>();
 linkedList.add(2);
 linkedList.add(4);
 linkedList.add(5);
@@ -867,8 +1082,8 @@ removeByIndex(index: number): T
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 10200011 | The removeByIndex method cannot be bound. |
-| 10200001 | The value of index is out of range. |
+| [10200011](../errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) | The removeByIndex method cannot be bound. |
+| [10200001](../errorcode-utils.md#10200001-参数范围越界错误) | The value of index is out of range. |
 
 ## 示例
 
@@ -917,8 +1132,20 @@ removeByIndex(index: int): T | undefined
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 10200010 | Container is empty. |
-| 10200001 | The value of "index" is out of range. It must be >= 0 && <= \\${length}. Received value is: \\${index} |
+| [10200010](../errorcode-utils.md#10200010-容器为空) | Container is empty. |
+| [10200001](../errorcode-utils.md#10200001-参数范围越界错误) | The value of "index" is out of range. It must be >= 0 && <= \\${length}. Received value is: \\${index} |
+
+## 示例
+
+```TypeScript
+let linkedList: LinkedList<int> = new LinkedList<int>();
+linkedList.add(2);
+linkedList.add(4);
+linkedList.add(5);
+linkedList.add(2);
+linkedList.add(4);
+let result = linkedList.removeByIndex(2);
+```
 
 ## removeFirst
 
@@ -948,8 +1175,8 @@ removeFirst(): T
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 10200011 | The removeFirst method cannot be bound. |
-| 10200010 | Container is empty. |
+| [10200011](../errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) | The removeFirst method cannot be bound. |
+| [10200010](../errorcode-utils.md#10200010-容器为空) | Container is empty. |
 
 ## 示例
 
@@ -992,7 +1219,19 @@ removeFirst(): T | undefined
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 10200010 | Container is empty. |
+| [10200010](../errorcode-utils.md#10200010-容器为空) | Container is empty. |
+
+## 示例
+
+```TypeScript
+let linkedList: LinkedList<int> = new LinkedList<int>();
+linkedList.add(2);
+linkedList.add(4);
+linkedList.add(5);
+linkedList.add(2);
+linkedList.add(4);
+let result = linkedList.removeFirst();
+```
 
 ## removeFirstFound
 
@@ -1028,11 +1267,13 @@ removeFirstFound(element: T): boolean
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 10200011 | The removeFirstFound method cannot be bound. |
-| 10200010 | Container is empty. |
-| 10200017 | The element does not exist in this container. |
+| [10200011](../errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) | The removeFirstFound method cannot be bound. |
+| [10200010](../errorcode-utils.md#10200010-容器为空) | Container is empty. |
+| [10200017](../errorcode-utils.md#10200017-删除不存在的元素错误) | The element does not exist in this container. |
 
 ## 示例
+
+ArkTS-Dyn示例：
 
 ```TypeScript
 let linkedList = new LinkedList<number>();
@@ -1042,6 +1283,17 @@ linkedList.add(5);
 linkedList.add(4);
 let result = linkedList.removeFirstFound(4);
 console.info("result:", result);  // result: true
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+let linkedList = new LinkedList<int>();
+linkedList.add(2);
+linkedList.add(4);
+linkedList.add(5);
+linkedList.add(4);
+let result = linkedList.removeFirstFound(4);
 ```
 
 ## removeLast
@@ -1072,8 +1324,8 @@ removeLast(): T
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 10200011 | The removeLast method cannot be bound. |
-| 10200010 | Container is empty. |
+| [10200011](../errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) | The removeLast method cannot be bound. |
+| [10200010](../errorcode-utils.md#10200010-容器为空) | Container is empty. |
 
 ## 示例
 
@@ -1116,7 +1368,19 @@ removeLast(): T | undefined
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 10200010 | Container is empty. |
+| [10200010](../errorcode-utils.md#10200010-容器为空) | Container is empty. |
+
+## 示例
+
+```TypeScript
+let linkedList: LinkedList<int> = new LinkedList<int>();
+linkedList.add(2);
+linkedList.add(4);
+linkedList.add(5);
+linkedList.add(2);
+linkedList.add(4);
+let result = linkedList.removeLast();
+```
 
 ## removeLastFound
 
@@ -1152,11 +1416,13 @@ removeLastFound(element: T): boolean
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 10200011 | The removeLastFound method cannot be bound. |
-| 10200010 | Container is empty. |
-| 10200017 | The element does not exist in this container. |
+| [10200011](../errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) | The removeLastFound method cannot be bound. |
+| [10200010](../errorcode-utils.md#10200010-容器为空) | Container is empty. |
+| [10200017](../errorcode-utils.md#10200017-删除不存在的元素错误) | The element does not exist in this container. |
 
 ## 示例
+
+ArkTS-Dyn示例：
 
 ```TypeScript
 let linkedList = new LinkedList<number>();
@@ -1166,6 +1432,17 @@ linkedList.add(5);
 linkedList.add(4);
 let result = linkedList.removeLastFound(4);
 console.info("result:", result);  // result: true
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+let linkedList: LinkedList<int> = new LinkedList<int>();
+linkedList.add(2);
+linkedList.add(4);
+linkedList.add(5);
+linkedList.add(4);
+let result = linkedList.removeLastFound(4);
 ```
 
 ## set
@@ -1209,14 +1486,28 @@ set(index: int, element: T): T
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 10200011 | The set method cannot be bound. |
-| 10200010 | Container is empty.<br>**适用版本：** 23+  **ArkTS模式：** 该错误码仅适用于ArkTS-Sta。 |
-| 10200001 | The value of index is out of range. |
+| [10200011](../errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) | The set method cannot be bound. |
+| [10200010](../errorcode-utils.md#10200010-容器为空) | Container is empty.<br>**适用版本：** 23+  **ArkTS模式：** 该错误码仅适用于ArkTS-Sta。 |
+| [10200001](../errorcode-utils.md#10200001-参数范围越界错误) | The value of index is out of range. |
 
 ## 示例
 
+ArkTS-Dyn示例：
+
 ```TypeScript
 let linkedList = new LinkedList<number | string>();
+linkedList.add(2);
+linkedList.add(4);
+linkedList.add(5);
+linkedList.add(4);
+let result = linkedList.set(2, "b");
+console.info("result:", result);  // result: b
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+let linkedList = new LinkedList<int | string>();
 linkedList.add(2);
 linkedList.add(4);
 linkedList.add(5);

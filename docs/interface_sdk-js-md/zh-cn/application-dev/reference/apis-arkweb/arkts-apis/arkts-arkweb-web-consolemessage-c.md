@@ -90,7 +90,7 @@ Gets the message level of a console message.
 
 | 类型 | 说明 |
 | --- | --- |
-| [MessageLevel](arkts-arkweb-web-messagelevel-e.md) | Return the message level of a console message, which can be { |
+| [MessageLevel](../arkts-components/arkts-arkweb-messagelevel-e.md) | Return the message level of a console message, which can be { |
 
 ## getSource
 
@@ -112,7 +112,7 @@ Gets the source of a console message.
 
 | 类型 | 说明 |
 | --- | --- |
-| [ConsoleMessageSource](../arkts-components/arkts-arkweb-consolemessagesource-e.md) | Return the source of a console message. |
+| [ConsoleMessageSource](arkts-arkweb-web-consolemessagesource-e.md) | Return the source of a console message. |
 
 ## getSourceId
 

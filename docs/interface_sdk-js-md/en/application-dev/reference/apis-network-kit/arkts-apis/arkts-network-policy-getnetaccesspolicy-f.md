@@ -34,19 +34,6 @@ Query the network access policy of the calling application.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 2100002 | Failed to connect to the service. |
-| 2100003 | System internal error, such as nullptr。 |
-
-## Examples
-
-```TypeScript
-import { policy } from '@kit.NetworkKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-policy.getNetAccessPolicy().then((policyInfo: policy.NetAccessPolicy) => {
-  console.info(`getNetAccessPolicy success. WiFi: ${policyInfo.allowWiFi}, Cellular: ${policyInfo.allowCellular}`);
-}).catch((err: BusinessError) => {
-  console.error(`getNetAccessPolicy fail. error info: ${err.code} - ${err.message}`);
-});
-```
+| [2100002](../errorcode-net-connection.md#2100002-service-connection-failure) | Failed to connect to the service. |
+| [2100003](../errorcode-net-connection.md#2100003-system-internal-error) | System internal error, such as nullptr。 |
 

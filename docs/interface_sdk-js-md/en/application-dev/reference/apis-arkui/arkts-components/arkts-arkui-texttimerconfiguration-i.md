@@ -1,8 +1,8 @@
 # TextTimerConfiguration
 
-ContentModifier接口使用的TextTimer配置。
+Defines the **TextTimer** configuration used by the **ContentModifier** API.
 
-开发者需要自定义class实现ContentModifier接口。
+You need a custom class to implement the **ContentModifier** API.
 
 **Inheritance/Implementation:** TextTimerConfiguration extends [CommonConfiguration<TextTimerConfiguration>](CommonConfiguration<TextTimerConfiguration>)
 
@@ -20,11 +20,9 @@ ContentModifier接口使用的TextTimer配置。
 count: number
 ```
 
-计时器初始时间，单位为毫秒，isCountDown为true时生效。
+Timer duration, in milliseconds. It is effective only when **isCountDown** is **true**. The maximum value is 86400000 ms (24 hours). If the value is between 0 and 86,400,000, it is used as the initial countdown time. Otherwise,the default value is used as the initial countdown time.
 
-默认值：60000
-
-取值范围为(0, 86400000)，即不超过24小时。超出取值范围时置为默认值。
+Default value: **60000**
 
 **Type:** number
 
@@ -48,7 +46,7 @@ count: number
 elapsedTime: number
 ```
 
-计时器经过的时间，单位为设置格式的最小单位。
+Elapsed time of the timer, in the minimum unit of the format.
 
 **Type:** number
 
@@ -70,11 +68,11 @@ elapsedTime: number
 isCountDown: boolean
 ```
 
-是否倒计时。
+Whether the timer is a countdown.
 
-true：计时器开启倒计时，例如从30秒 ~ 0秒；false：计时器开始计时，例如从0秒 ~ 30秒。
+**true**: The timer counts down, e.g., from 30s to 0s. **false**: The timer counts up, e.g., from 0s to 30s.
 
-默认值：false
+Default value: **false**
 
 **Type:** boolean
 
@@ -98,15 +96,13 @@ true：计时器开启倒计时，例如从30秒 ~ 0秒；false：计时器开�
 startTime?: number
 ```
 
-计时器正向计时模式下的初始时间，仅当isCountDown为false时该参数设置生效。
+The start time of the timer.It is effective when isCountDown is false.
 
-取值范围：无上限，支持负数。
+Default value: **0**
 
-默认值：0 
+Unit: ms.
 
-单位：毫秒 
-
-当值为负数时，计时器将从负值开始计时，经过0后继续向正数计时。
+When the value is negative, the timer starts with a negative value and continues with a positive value after 0.
 
 **Type:** number
 
@@ -130,11 +126,11 @@ startTime?: number
 started: boolean
 ```
 
-是否已经开始了计时。
+Whether the timer has already started.
 
-true：开始计时；false：未开始计时。
+**true**: The timer has started. **false**: The timer has not started.
 
-默认值：false
+Default value: **false**
 
 **Type:** boolean
 

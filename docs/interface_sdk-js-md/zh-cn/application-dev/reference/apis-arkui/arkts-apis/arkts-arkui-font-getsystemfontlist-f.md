@@ -1,11 +1,5 @@
 # getSystemFontList
 
-## 导入模块
-
-```TypeScript
-import { font } from 'kits/@kit.ArkUI';
-```
-
 ## getSystemFontList
 
 ```TypeScript

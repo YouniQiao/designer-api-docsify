@@ -69,8 +69,8 @@ Creates a TLSSocket object with a TCPSocket object.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. |
-| 2300002 | System internal error. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. |
+| [2300002](../errorcode-net-socket.md#2300002-system-internal-error) | System internal error. |
 | 2303602 | Socket is not connected. |
 | 2303601 | Invalid socket FD. |
 

@@ -1,6 +1,6 @@
 # AVMetadata
 
-媒体元数据的相关属性。
+The metadata of the current media.Used to set the properties of the current media file
 
 **Since:** 10
 
@@ -22,7 +22,7 @@ import { avSession } from 'kits/@kit.AVSessionKit';
 album?: string
 ```
 
-专辑名称。
+The album of this media
 
 **Type:** string
 
@@ -42,7 +42,7 @@ album?: string
 artist?: string
 ```
 
-艺术家。
+The artist of this media
 
 **Type:** string
 
@@ -62,11 +62,7 @@ artist?: string
 assetId: string
 ```
 
-媒体ID。媒体信息的唯一标识，由应用自定义。
-
-- 该属性发生变化则其他元数据属性都将被刷新。  
-- 若该属性维持不变，且不设置相应的媒体元数据信息，那么将不会更新对应的媒体元数据信息。  
-- 当该属性设为空值时，调用[setAVMetadata](arkts-avsession-avsession-avsession-i.md#setavmetadata)方法将失败，返回错误码6600101。
+Unique ID used to represent this media.
 
 **Type:** string
 
@@ -86,7 +82,7 @@ assetId: string
 author?: string
 ```
 
-专辑作者。
+The author of this media
 
 **Type:** string
 
@@ -106,7 +102,7 @@ author?: string
 avQueueId?: string
 ```
 
-歌单（歌曲列表）唯一标识Id。
+The id of play list which current media belongs to, it should be an unique identifier in the application.
 
 **Type:** string
 
@@ -124,12 +120,7 @@ avQueueId?: string
 avQueueImage?: image.PixelMap | string
 ```
 
-歌单（歌曲列表）封面图。
-
-图片的像素数据或者图片路径地址（本地路径或网络路径）。应用通过setAVMetadata设置图片数据。
-
-- 设置的数据类型为PixelMap时，通过getAVMetadata获取的将为PixelMap。  
-- 设置为url图片路径，获取的为url图片路径。
+The artwork of play list as a {@link PixelMap} or an uri formatted String,
 
 **Type:** image.PixelMap \| string
 
@@ -147,7 +138,7 @@ avQueueImage?: image.PixelMap | string
 avQueueName?: string
 ```
 
-歌单（歌曲列表）名称。
+The name of play list which current media belongs to
 
 **Type:** string
 
@@ -165,7 +156,7 @@ avQueueName?: string
 readonly bundleIcon?: image.PixelMap
 ```
 
-应用图标图片的像素数据。只读类型，不从应用侧设置。
+The image of the bundle icon as a {@link PixelMap}, no need to be set by application.
 
 **Type:** image.PixelMap
 
@@ -183,7 +174,7 @@ readonly bundleIcon?: image.PixelMap
 composer?: string
 ```
 
-作曲者。
+The composer of this media
 
 **Type:** string
 
@@ -201,7 +192,7 @@ composer?: string
 description?: string
 ```
 
-媒体描述。
+The description of the media, used for display
 
 **Type:** string
 
@@ -221,7 +212,7 @@ description?: string
 displayTags?: int
 ```
 
-媒体资源的金标类型，取值参考[DisplayTag](arkts-avsession-avsession-displaytag-e.md)。
+The display tags supported by application to be displayed on media center
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
@@ -239,7 +230,7 @@ displayTags?: int
 drmSchemes?: Array<string>
 ```
 
-当前session支持的DRM方案，取值为DRM方案uuid。
+The drm schemes supported by this session which are represented by uuid.
 
 **Type:** Array&lt;string&gt;
 
@@ -257,7 +248,7 @@ drmSchemes?: Array<string>
 duration?: long
 ```
 
-媒体时长，单位毫秒（ms）。
+The duration of this media, used to automatically calculate playback position, described by milliseconds.
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：long
 
@@ -277,13 +268,7 @@ duration?: long
 fastForwardSkipIntervals?: SkipIntervals
 ```
 
-快进支持的时间间隔。默认为SECONDS_15，即15秒。
-
-系统会使用此值作为快进操作的时间间隔，而非skipIntervals的值。
-
-若未设置此参数，快进操作的时间间隔仍会沿用skipIntervals的值。
-
-**起始版本**：26.0.0
+The supported skipIntervals when doing fast forward operation, the default is {@link SECONDS_15}.The system will use this value for fastforward skip intervals instead of {@link skipIntervals}.If not set, the fast forward skip intervals still use {@link skipIntervals}.See {@link SkipIntervals}
 
 **Type:** [SkipIntervals](arkts-avsession-avsession-skipintervals-e.md)
 
@@ -303,7 +288,7 @@ fastForwardSkipIntervals?: SkipIntervals
 filter?: int
 ```
 
-当前会话支持的协议，默认为TYPE_CAST_PLUS_STREAM。具体取值参考[ProtocolType](arkts-avsession-avsession-protocoltype-e.md)。
+The protocols supported by this session, if not set, the default is {@link TYPE_CAST_PLUS_STREAM}.See {@link ProtocolType}
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
@@ -323,11 +308,7 @@ filter?: int
 lyric?: string
 ```
 
-媒体歌词内容。应用需将歌词内容拼接为一个字符串传入。
-
-字符串长度需小于40960字节。
-
-**说明：** 系统支持简单版的LRC格式（Simple LRC format）的歌词文本内容。当传入的歌词内容不规范（例如：出现重复的时间戳等），将导致解析失败，并在系统中显示异常。
+The lyric of the media, it should be in standard lyric format
 
 **Type:** string
 
@@ -345,10 +326,7 @@ lyric?: string
 mediaImage?: image.PixelMap | string
 ```
 
-图片的像素数据或者图片路径地址（本地路径或网络路径）。应用通过setAVMetadata设置图片数据。
-
-- 设置的数据类型为PixelMap时，通过getAVMetadata获取的将为PixelMap。  
-- 设置为url图片路径，获取的为url图片路径。
+The image of the media as a {@link PixelMap} or an uri formatted String,used to display in media center.
 
 **Type:** image.PixelMap \| string
 
@@ -368,7 +346,7 @@ mediaImage?: image.PixelMap | string
 nextAssetId?: string
 ```
 
-下一首媒体ID。
+The next playable media id.Used to tell the controller if there is a next playable media
 
 **Type:** string
 
@@ -388,7 +366,7 @@ nextAssetId?: string
 previousAssetId?: string
 ```
 
-上一首媒体ID。
+The previous playable media id.Used to tell the controller if there is a previous playable media
 
 **Type:** string
 
@@ -408,7 +386,7 @@ previousAssetId?: string
 publishDate?: Date
 ```
 
-发行日期。
+The publishDate of the media
 
 **Type:** Date
 
@@ -426,13 +404,7 @@ publishDate?: Date
 rewindSkipIntervals?: SkipIntervals
 ```
 
-快退支持的时间间隔。默认为SECONDS_15，即15秒。
-
-系统会使用此值作为快退操作的时间间隔，而非skipIntervals的值。
-
-若未设置此参数，快退操作的时间间隔仍会沿用skipIntervals的值。
-
-**起始版本**：26.0.0
+The supported skipIntervals when doing rewind operation, the default is {@link SECONDS_15}.The system will use this value for rewind skip intervals instead of {@link skipIntervals}.If not set, the rewind skip intervals still use {@link skipIntervals}.See {@link SkipIntervals}
 
 **Type:** [SkipIntervals](arkts-avsession-avsession-skipintervals-e.md)
 
@@ -452,9 +424,7 @@ rewindSkipIntervals?: SkipIntervals
 singleLyricText?: string
 ```
 
-单条媒体歌词内容。应用需将歌词内容拼接为一个字符串传入（不包含时间戳）。
-
-字符串长度小于40960字节。
+The single lyric text of the media, not including time prefix
 
 **Type:** string
 
@@ -474,7 +444,7 @@ singleLyricText?: string
 skipIntervals?: SkipIntervals
 ```
 
-快进快退支持的时间间隔。默认为SECONDS_15，即15秒。
+The supported skipIntervals when doing fast forward and rewind operation, the default is {@link SECONDS_15}.See {@link SkipIntervals}
 
 **Type:** [SkipIntervals](arkts-avsession-avsession-skipintervals-e.md)
 
@@ -492,7 +462,7 @@ skipIntervals?: SkipIntervals
 subtitle?: string
 ```
 
-子标题。
+The subtitle of the media, used for display
 
 **Type:** string
 
@@ -512,7 +482,7 @@ subtitle?: string
 title?: string
 ```
 
-标题。
+The title of this media, for display in media center.
 
 **Type:** string
 
@@ -532,7 +502,7 @@ title?: string
 writer?: string
 ```
 
-词作者。
+The writer of this media
 
 **Type:** string
 

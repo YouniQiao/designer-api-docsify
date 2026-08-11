@@ -1,11 +1,5 @@
 # offGenericEventData
 
-## 导入模块
-
-```TypeScript
-import { emitter } from 'kits/@kit.BasicServicesKit';
-```
-
 ## offGenericEventData
 
 ```TypeScript
@@ -32,4 +26,29 @@ function offGenericEventData<T>(eventId: string, callback: Callback<GenericEvent
 | --- | --- | --- | --- |
 | eventId | string | 是 | 事件ID。取值为长度不超过10240字节的自定义字符串，且不可为空字符。 |
 | callback | [Callback](arkts-basicservices-base-callback-i.md)&lt;GenericEventData&lt;T&gt;&gt; | 是 | 事件的回调处理函数。 |
+
+## 示例
+
+```TypeScript
+import { Callback } from '@kit.BasicServicesKit';
+
+class Sample {
+  constructor() {
+    this.count = 100;
+  }
+  printCount() {
+    console.info('Print count : ' + this.count);
+  }
+  count: number;
+}
+
+let callback: Callback<emitter.GenericEventData<Sample>> = (eventData: emitter.GenericEventData<Sample>): void => {
+  console.info(`eventData: ${JSON.stringify(eventData?.data)}`);
+  let storage: Sample = eventData.data! as Sample;
+  storage.printCount();
+}
+// 取消eventID为"eventId"的事件回调处理函数，callback对象应使用订阅时的对象
+// 如果该回调处理函数没有被订阅，则不做任何处理
+emitter.offGenericEventData("eventId", callback);
+```
 

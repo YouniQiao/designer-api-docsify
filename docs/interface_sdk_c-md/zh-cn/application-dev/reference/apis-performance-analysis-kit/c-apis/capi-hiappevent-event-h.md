@@ -2,7 +2,7 @@
 
 ## 概述
 
-定义所有预定义事件的事件名称。除了与特定应用关联的自定义事件之外，您还可以使用预定义事件进行日志记录。示例代码：<pre>ParamList list = OH_HiAppEvent_CreateParamList();OH_HiAppEvent_AddInt32Param(list, PARAM_USER_ID, 123);int res = OH_HiAppEvent_Write("user_domain", EVENT_USER_LOGIN, BEHAVIOR, list);OH_HiAppEvent_DestroyParamList(list);</pre>
+定义所有预定义事件的事件名称。除了与特定应用关联的自定义事件之外，开发者还可以使用预定义事件进行打点。示例代码：<pre>ParamList list = OH_HiAppEvent_CreateParamList();OH_HiAppEvent_AddInt32Param(list, PARAM_USER_ID, 123);int res = OH_HiAppEvent_Write("user_domain", EVENT_USER_LOGIN, BEHAVIOR, list);OH_HiAppEvent_DestroyParamList(list);</pre>
 
 **库：** libhiappevent_ndk.z.so
 
@@ -31,9 +31,9 @@
 | EVENT_ADDRESS_SANITIZER "ADDRESS_SANITIZER" | 地址越界事件。<br>**起始版本：** 12 |
 | EVENT_MAIN_THREAD_JANK "MAIN_THREAD_JANK" | 主线程超时事件。<br>**起始版本：** 12 |
 | EVENT_MAIN_THREAD_JANK_V2 "MAIN_THREAD_JANK_V2" | 用于设置主线程超时事件配置策略。<br>**起始版本：** 22 |
-| EVENT_APP_HICOLLIE "APP_HICOLLIE" | app hicollie event.<br>**起始版本：** 18 |
+| EVENT_APP_HICOLLIE "APP_HICOLLIE" | 任务执行超时事件。<br>**起始版本：** 18 |
 | DOMAIN_OS "OS" | OS作用域。<br>**起始版本：** 12 |
-| EVENT_APP_KILLED "APP_KILLED" | app killed event.<br>**起始版本：** 20 |
-| EVENT_AUDIO_JANK_FRAME "AUDIO_JANK_FRAME" | audio jank frame event.<br>**起始版本：** 21 |
+| EVENT_APP_KILLED "APP_KILLED" | 应用终止事件。<br>**起始版本：** 20 |
+| EVENT_AUDIO_JANK_FRAME "AUDIO_JANK_FRAME" | 音频卡顿事件。<br>**起始版本：** 21 |
 | OH_EVENT_APP_FREEZE_WARNING "APPFREEZE_WARNING" | 应用冻屏告警事件。<br>**起始版本：** 26.0.0 |
 

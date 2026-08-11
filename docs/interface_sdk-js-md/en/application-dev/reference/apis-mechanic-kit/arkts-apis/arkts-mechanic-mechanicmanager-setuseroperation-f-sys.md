@@ -12,7 +12,7 @@ import { mechanicManager } from 'kits/@kit.MechanicKit';
 function setUserOperation(operation: Operation, mac: string, params: string): void
 ```
 
-设置用户操作
+Sets a user operation.
 
 **Since:** 20
 
@@ -30,7 +30,7 @@ function setUserOperation(operation: Operation, mac: string, params: string): vo
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| operation | [Operation](../../apis-mdm-kit/arkts-apis/arkts-mdm-devicecontrol-operation-e.md) | Yes | 操作类型 |
+| operation | [Operation](../../apis-mdm-kit/arkts-apis/arkts-mdm-devicecontrol-operation-e.md) | Yes | Operation type. |
 | mac | string | Yes | MAC address. |
 | params | string | Yes | Operation parameters. |
 
@@ -38,9 +38,9 @@ function setUserOperation(operation: Operation, mac: string, params: string): vo
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 201 | Permission denied. |
-| 202 | Not system application. |
-| 33300001 | Service exception. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system application. |
+| [33300001](../errorcode-mechanic.md#33300001-system-error) | Service exception. |
 
 ## Examples
 

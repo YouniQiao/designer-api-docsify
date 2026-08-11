@@ -1,6 +1,6 @@
 # DocumentSelectOptions
 
-文档选择选项。
+Defines the options for selecting documents.
 
 **Since:** 23
 

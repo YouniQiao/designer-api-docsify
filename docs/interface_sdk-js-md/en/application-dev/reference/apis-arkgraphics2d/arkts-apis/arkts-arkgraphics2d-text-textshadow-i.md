@@ -1,6 +1,6 @@
 # TextShadow
 
-文本阴影。
+Represents a text shadow.
 
 **Since:** 12
 
@@ -22,7 +22,7 @@ import { text } from 'kits/@kit.ArkGraphics2D';
 blurRadius?: double
 ```
 
-模糊半径，浮点数，单位为物理像素px，默认为0.0。
+Blur radius, a floating-point value in physical pixels (px), with a default value of **0.0**.
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：double
 
@@ -42,7 +42,7 @@ blurRadius?: double
 color?: common2D.Color
 ```
 
-文本阴影的颜色，默认为黑色Color(255, 0, 0, 0)。
+Color of the text shadow. The default value is black Color(255, 0, 0, 0).
 
 **Type:** common2D.Color
 
@@ -62,7 +62,7 @@ color?: common2D.Color
 point?: common2D.Point
 ```
 
-文本阴影基于当前文本的偏移位置，横、纵坐标要大于等于零，单位为物理像素px，默认为common2D.Point(0, 0)。
+Offset position of the text shadow relative to the current text. The horizontal and vertical coordinates must be greater than or equal to 0, in physical pixels (px). The default value is common2D.Point(0, 0).
 
 **Type:** common2D.Point
 

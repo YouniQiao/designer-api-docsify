@@ -1,6 +1,6 @@
 # SecurityLevel
 
-数据库的安全级别枚举。
+Enumerates the KV store security levels.
 
 **Since:** 7
 
@@ -20,7 +20,7 @@
 NO_LEVEL = 0
 ```
 
-表示数据库不设置安全级别(已废弃)。
+No security level is set for the KV store (deprecated).
 
 **Since:** 7
 
@@ -38,7 +38,7 @@ NO_LEVEL = 0
 S0 = 1
 ```
 
-表示数据库的安全级别为公共级别(已废弃)。
+The KV store security level is public (deprecated).
 
 **Since:** 7
 
@@ -56,7 +56,7 @@ S0 = 1
 S1 = 2
 ```
 
-表示数据库的安全级别为低级别，当数据泄露时会产生较低影响。例如，包含壁纸等系统数据的数据库。
+Low security level. If data leakage occurs, minor impact will be caused. For example, a KV store that contains system data such as wallpapers.
 
 **Since:** 7
 
@@ -76,7 +76,7 @@ S1 = 2
 S2 = 3
 ```
 
-表示数据库的安全级别为中级别，当数据泄露时会产生较大影响。例如，包含录音、视频等用户生成数据或通话记录等信息的数据库。
+Medium security level. If data leakage occurs, moderate impact will be caused. For example, a KV store that contains information created by users or call records, such as audio or video clips.
 
 **Since:** 7
 
@@ -96,7 +96,7 @@ S2 = 3
 S3 = 5
 ```
 
-表示数据库的安全级别为高级别，当数据泄露时会产生重大影响。例如，包含用户运动、健康、位置等信息的数据库。
+High security level. If data leakage occurs, major impact will be caused. For example, a KV store that contains information such as user fitness, health, and location data.
 
 **Since:** 7
 
@@ -116,7 +116,7 @@ S3 = 5
 S4 = 6
 ```
 
-表示数据库的安全级别为关键级别，当数据泄露时会产生严重影响。例如，包含认证凭据、财务数据等信息的数据库。
+Critical security level. If data leakage occurs, severe impact will be caused. For example, a KV store that contains information such as authentication credentials and financial data.
 
 **Since:** 7
 

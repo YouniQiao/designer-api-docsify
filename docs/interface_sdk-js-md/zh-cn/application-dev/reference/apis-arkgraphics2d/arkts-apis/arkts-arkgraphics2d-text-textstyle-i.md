@@ -11,12 +11,6 @@
 
 **系统能力：** SystemCapability.Graphics.Drawing
 
-## 导入模块
-
-```TypeScript
-import { text } from 'kits/@kit.ArkGraphics2D';
-```
-
 ## backgroundRect
 
 ```TypeScript
@@ -165,7 +159,7 @@ ellipsisMode?: EllipsisMode
 
 省略号类型，默认为END，行尾省略号。
 
-**类型：** [EllipsisMode](../../apis-arkui/arkts-apis/arkts-arkui-enums-ellipsismode-e.md)
+**类型：** [EllipsisMode](arkts-arkgraphics2d-text-ellipsismode-e.md)
 
 **起始版本：** 12
 
@@ -267,7 +261,7 @@ fontStyle?: FontStyle
 
 字体样式，默认为常规样式。
 
-**类型：** [FontStyle](arkts-arkgraphics2d-text-fontstyle-e.md)
+**类型：** [FontStyle](../../apis-arkui/arkts-apis/arkts-arkui-enums-fontstyle-e.md)
 
 **起始版本：** 12
 

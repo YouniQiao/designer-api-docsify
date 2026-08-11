@@ -1,10 +1,12 @@
 # PathOptions
 
-用于描述Path组件绘制属性。
+Describes the options of the path.
 
-> **说明：**
+> **NOTE：**
 > 
-> 为规范匿名对象的定义，API 18版本修改了此处的元素定义。其中，保留了历史匿名对象的起始版本信息，会出现外层元素@since版本号高于内层元素版本号的情况，但这不影响接口的使用。
+> To standardize anonymous object definitions, the element definitions here have been revised in API version 18.
+> While historical version information is preserved for anonymous objects, there may be cases where the outer element
+> 's @since version number is higher than inner elements'. This does not affect interface usability.
 
 **Since:** 18
 
@@ -20,11 +22,7 @@
 commands?: ResourceStr
 ```
 
-路径绘制的命令字符串，符合[SVG路径描述规范](../../../reference/apis-arkui/arkui-ts/ts-drawing-components-path.md#svg路径描述规范)，单位为px。
-
-默认值：空字符串
-
-异常值按照默认值处理。
+Command string for drawing the path.If the value is invalid or the default value is used, the width and height required for the content are used. The default value is an empty string. An invalid value is handled as the default value.
 
 **Type:** [ResourceStr](../arkts-apis/arkts-arkui-resourcestr-t.md)
 
@@ -46,11 +44,7 @@ commands?: ResourceStr
 height?: Length
 ```
 
-路径所在矩形的高度。取值范围≥0。
-
-值为异常值或缺省时按照路径内容自动计算高度。
-
-默认单位：vp
+Height of the rectangle where the path is located.If the value is invalid or the default value is used, the height required for the content is used.Default Unit: vp.
 
 **Type:** [Length](../arkts-apis/arkts-arkui-length-t.md)
 
@@ -72,11 +66,7 @@ height?: Length
 width?: Length
 ```
 
-路径所在矩形的宽度。取值范围≥0。
-
-值为异常值或缺省时按照路径内容自动计算宽度。
-
-默认单位：vp
+Width of the rectangle where the path is located.If the value is invalid or the default value is used, the width required for the content is used.Default Unit: vp.
 
 **Type:** [Length](../arkts-apis/arkts-arkui-length-t.md)
 

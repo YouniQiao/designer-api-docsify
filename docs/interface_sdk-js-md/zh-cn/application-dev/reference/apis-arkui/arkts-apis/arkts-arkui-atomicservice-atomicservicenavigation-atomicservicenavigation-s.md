@@ -17,12 +17,6 @@
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
-## 导入模块
-
-```TypeScript
-import { GradientBackground, TitleBarType, MixMode, AtomicServiceNavigation, SideBarOptions, TitleOptions, GradientAlpha, NavDestinationBuilder, BackgroundTheme } from 'kits/@kit.ArkUI';
-```
-
 ## navDestinationBuilder
 
 ```TypeScript
@@ -95,7 +89,7 @@ menus?: CustomBuilder | Array<NavigationMenuItem>
 
 宽屏场景下用户自定义插入的布局样式。默认值为空，不显示任何样式。屏幕宽度低于600vp为非宽屏场景，大于等于600vp为宽屏场景。
 
-**类型：** [CustomBuilder](../arkts-components/arkts-arkui-custombuilder-t.md) \| Array&lt;NavigationMenuItem&gt;
+**类型：** [CustomBuilder](arkts-arkui-custombuilder-t.md) \| Array&lt;NavigationMenuItem&gt;
 
 **起始版本：** 18
 
@@ -139,7 +133,7 @@ mode?: NavigationMode
 
 设置导航栏的显示模式。默认值为Auto。支持Stack、Split与Auto模式。
 
-**类型：** [NavigationMode](arkts-arkui-navigation-navigationmode-e.md)
+**类型：** [NavigationMode](../arkts-components/arkts-arkui-navigationmode-e.md)
 
 **起始版本：** 12
 
@@ -206,7 +200,7 @@ navBarWidthRange?: [
 
 设置导航栏最小和最大宽度（双栏模式下生效）。默认值：最小为240vp，最大为组件宽度的40%，且不大于432vp，如果只设置一个值，则未设置的值按照默认值计算。单位：vp。
 
-**类型：** [     Dimension,     Dimension   ]
+**类型：** [     Dimension,     Dimension   ]
 
 **起始版本：** 12
 

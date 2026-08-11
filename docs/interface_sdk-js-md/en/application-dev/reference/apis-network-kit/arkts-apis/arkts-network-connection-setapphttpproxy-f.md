@@ -32,8 +32,8 @@ Set application level http proxy {@link HttpProxy}.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. |
-| 2100001 | Invalid http proxy. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. |
+| [2100001](../errorcode-net-connection.md#2100001-invalid-parameter-value) | Invalid http proxy. |
 
 ## Examples
 
@@ -54,7 +54,7 @@ let options: http.HttpRequestOptions = {
   usingProxy: true, // This field specifies whether to use the network proxy. It is supported since API version 10.
 };
 // Initiate an HTTP request.
-httpRequest.request("EXAMPLE_URL", options, (err: BusinessError, data: http.HttpResponse) => {
+httpRequest.request("EXAMPLE_URL", options, (err: Error, data: http.HttpResponse) => {
   if (!err) {
    console.info(`Result: ${data.result}`);
    console.info(`code: ${data.responseCode}`);

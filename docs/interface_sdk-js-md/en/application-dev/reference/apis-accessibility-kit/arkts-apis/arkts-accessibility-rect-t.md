@@ -4,7 +4,7 @@
 export type Rect = _Rect
 ```
 
-表示矩形区域，请参考[Rect](arkts-accessibility-rect-t.md)。
+Defines a rectangle. For details, see [Rect](arkts-accessibility-rect-t.md).
 
 **Since:** 10
 

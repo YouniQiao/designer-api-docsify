@@ -1,6 +1,6 @@
 # KemAlgNameId
 
-枚举KEM算法名称ID。
+Enumerates the KEM algorithm name IDs.
 
 **Since:** 26.0.0
 
@@ -16,7 +16,7 @@
 ML_KEM_512 = 0
 ```
 
-ML_KEM_512算法名称ID。
+Indicates the ML_KEM_512 algorithm name ID.
 
 **Since:** 26.0.0
 
@@ -36,7 +36,7 @@ ML_KEM_512算法名称ID。
 ML_KEM_768 = 1
 ```
 
-ML_KEM_768算法名称ID。
+Indicates the ML_KEM_768 algorithm name ID.
 
 **Since:** 26.0.0
 
@@ -56,7 +56,7 @@ ML_KEM_768算法名称ID。
 ML_KEM_1024 = 2
 ```
 
-ML_KEM_1024算法名称ID。
+Indicates the ML_KEM_1024 algorithm name ID.
 
 **Since:** 26.0.0
 

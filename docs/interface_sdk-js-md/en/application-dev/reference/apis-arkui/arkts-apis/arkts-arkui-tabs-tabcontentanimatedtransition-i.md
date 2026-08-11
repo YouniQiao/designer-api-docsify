@@ -1,6 +1,6 @@
 # TabContentAnimatedTransition
 
-Tabs自定义切换动画相关信息。
+Defines the Tab Content animated transition options.
 
 **Since:** 23
 
@@ -16,7 +16,7 @@ Tabs自定义切换动画相关信息。
 timeout?: int
 ```
 
-Tabs自定义切换动画超时时间。从自定义动画开始切换计时，如果到达该时间后，开发者仍未调用[TabContentTransitionProxy](../arkts-components/arkts-arkui-tabcontenttransitionproxy-i.md/arkts-arkui-tabcontenttransitionproxy-i.md)的finishTransition接口通知Tabs组件自定义动画结束，那么组件就会认为此次自定义动画已结束，直接执行后续操作。单位为： ms，取值应为≥0的整数。 默认值： 1000。
+Defines the timeout of custom content transition animation. The unit is ms.If TabContentTransitionProxy.finishTransition() is not invoked, use the timeout as animation end time.Unit: ms, The value must be an integer greater than or equal to 0. Default value: 1000.
 
 **Type:** int
 
@@ -38,7 +38,7 @@ Tabs自定义切换动画超时时间。从自定义动画开始切换计时，�
 transition: Callback<TabContentTransitionProxy>
 ```
 
-自定义切换动画具体内容。
+Called when custom content transition animation start.Anonymous Object Rectification
 
 **Type:** [Callback](../arkts-components/arkts-arkui-callback-i.md)&lt;TabContentTransitionProxy&gt;
 

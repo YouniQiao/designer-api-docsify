@@ -12,7 +12,7 @@ import { advertising } from 'kits/@kit.ConnectivityKit';
 function startAdvertising(advertisingParams: AdvertisingParams): Promise<int>
 ```
 
-开始广播。
+Starts advertising.
 
 **Since:** 26.0.0
 
@@ -30,22 +30,22 @@ function startAdvertising(advertisingParams: AdvertisingParams): Promise<int>
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| advertisingParams | [AdvertisingParams](arkts-connectivity-ble-advertisingparams-i.md) | Yes | 表示广播参数。 |
+| advertisingParams | [AdvertisingParams](arkts-connectivity-ble-advertisingparams-i.md) | Yes | Indicates the param for advertising. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| ArkTS-Dyn: Promise&lt;number&gt;  <br>ArkTS-Sta：Promise&lt;int&gt; | 返回广播句柄promise对象。 |
+| ArkTS-Dyn: Promise&lt;number&gt;  <br>ArkTS-Sta：Promise&lt;int&gt; | Returns the promise object advertise handle. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 801 | Capability not supported because the chip does not support it. |
+| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported because the chip does not support it. |
 | 36100003 | NearLink disabled. |
 | 36100099 | Operation failed. |
-| 201 | Permission denied. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
 | 36100043 | Invalid UUID. |
 | 36100040 | Integer out of range. |
 

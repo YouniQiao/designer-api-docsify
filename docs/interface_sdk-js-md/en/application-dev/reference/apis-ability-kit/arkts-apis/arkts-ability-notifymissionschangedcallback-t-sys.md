@@ -4,7 +4,7 @@
 type NotifyMissionsChangedCallback = (deviceId: string) => void
 ```
 
-任务回调函数已更改。
+Callback function on mission changed.
 
 **Since:** 9
 

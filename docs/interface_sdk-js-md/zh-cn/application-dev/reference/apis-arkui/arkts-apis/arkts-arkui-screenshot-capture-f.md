@@ -1,11 +1,5 @@
 # capture
 
-## 导入模块
-
-```TypeScript
-import { screenshot } from 'kits/@kit.ArkUI';
-```
-
 ## capture
 
 ```TypeScript
@@ -46,12 +40,14 @@ function capture(options?: CaptureOption): Promise<image.PixelMap>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1.Incorrect parameter types. 2.Parameter verification failed. |
-| 801 | Capability not supported on this device. |
-| 1400003 | This display manager service works abnormally. |
-| 201 | Permission verification failed. The application does not have the permission required to call the API. |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1.Incorrect parameter types. 2.Parameter verification failed. |
+| [801](../../errorcode-universal.md#801-该设备不支持此api) | Capability not supported on this device. |
+| [1400003](../errorcode-display.md#1400003-系统服务工作异常) | This display manager service works abnormally. |
+| [201](../../errorcode-universal.md#201-权限校验失败) | Permission verification failed. The application does not have the permission required to call the API. |
 
 ## 示例
+
+ArkTS-Dyn示例：
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -72,6 +68,29 @@ try {
   });
 } catch (exception) {
   console.error(`Failed to save screenshot. Code: ${exception.code}, message: ${exception.message}`);
-}
+};
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+import { image } from '@kit.ImageKit';
+
+let captureOption: screenshot.CaptureOption = {
+  "displayId": 0
+};
+try {
+  let promise = screenshot.capture(captureOption);
+  promise.then((pixelMap: image.PixelMap) => {
+    console.info(`Succeeded in saving screenshot. Pixel bytes number: ${pixelMap.getPixelBytesNumber()}`);
+    pixelMap.release(); // PixelMap使用完后及时释放内存
+  }).catch((err: Error) => {
+    console.error(`Failed to save screenshot. Code: ${err?.code}, message: ${err?.message}`);
+  });
+} catch (exception) {
+  let error = exception as BusinessError;
+  console.error(`Failed to save screenshot. Code: ${error.code}, message: ${error.message}`);
+};
 ```
 

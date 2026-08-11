@@ -1,6 +1,6 @@
 # FloatViewLimits
 
-标准悬浮窗窗口的限制。
+Provides the limits of the float view.
 
 **Since:** 26.0.0
 
@@ -22,7 +22,7 @@ import { floatView } from 'kits/@kit.ArkUI';
 maxSize: window.Size
 ```
 
-标准悬浮窗的最大尺寸。
+Maximum size of the float view.
 
 **Type:** window.Size
 
@@ -42,7 +42,7 @@ maxSize: window.Size
 minSize: window.Size
 ```
 
-标准悬浮窗的最小尺寸。
+Minimum size of the float view.
 
 **Type:** window.Size
 
@@ -62,7 +62,7 @@ minSize: window.Size
 ratioLimits: Array<RatioLimit>
 ```
 
-标准悬浮窗的宽高比限制范围。
+Aspect ratio range of the float view.
 
 **Type:** Array&lt;RatioLimit&gt;
 

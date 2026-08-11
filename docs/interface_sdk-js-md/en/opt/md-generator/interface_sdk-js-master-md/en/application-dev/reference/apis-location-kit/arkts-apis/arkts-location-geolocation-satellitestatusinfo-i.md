@@ -1,0 +1,129 @@
+# SatelliteStatusInfo
+
+Satellite status information
+
+**Since:** 8
+
+**Deprecated since:** 9
+
+**Substitutes:** ohos.geoLocationManager/geoLocationManager.SatelliteStatusInfo
+
+**Required permissions:** ohos.permission.LOCATION
+
+<!--Device-geolocation-export interface SatelliteStatusInfo--><!--Device-geolocation-export interface SatelliteStatusInfo-End-->
+
+**System capability:** SystemCapability.Location.Location.Gnss
+
+## Modules to Import
+
+```TypeScript
+import { geolocation } from 'kits/@kit.LocationKit';
+```
+
+## altitudes
+
+```TypeScript
+altitudes: Array<number>
+```
+
+**Type:** Array&lt;number&gt;
+
+**Since:** 8
+
+**Deprecated since:** 9
+
+**Substitutes:** ohos.geoLocationManager/geoLocationManager.SatelliteStatusInfo#altitudes
+
+<!--Device-SatelliteStatusInfo-altitudes: Array<number>--><!--Device-SatelliteStatusInfo-altitudes: Array<number>-End-->
+
+**System capability:** SystemCapability.Location.Location.Gnss
+
+## azimuths
+
+```TypeScript
+azimuths: Array<number>
+```
+
+**Type:** Array&lt;number&gt;
+
+**Since:** 8
+
+**Deprecated since:** 9
+
+**Substitutes:** ohos.geoLocationManager/geoLocationManager.SatelliteStatusInfo#azimuths
+
+<!--Device-SatelliteStatusInfo-azimuths: Array<number>--><!--Device-SatelliteStatusInfo-azimuths: Array<number>-End-->
+
+**System capability:** SystemCapability.Location.Location.Gnss
+
+## carrierFrequencies
+
+```TypeScript
+carrierFrequencies: Array<number>
+```
+
+**Type:** Array&lt;number&gt;
+
+**Since:** 8
+
+**Deprecated since:** 9
+
+**Substitutes:** ohos.geoLocationManager/geoLocationManager.SatelliteStatusInfo#carrierFrequencies
+
+<!--Device-SatelliteStatusInfo-carrierFrequencies: Array<number>--><!--Device-SatelliteStatusInfo-carrierFrequencies: Array<number>-End-->
+
+**System capability:** SystemCapability.Location.Location.Gnss
+
+## carrierToNoiseDensitys
+
+```TypeScript
+carrierToNoiseDensitys: Array<number>
+```
+
+**Type:** Array&lt;number&gt;
+
+**Since:** 8
+
+**Deprecated since:** 9
+
+**Substitutes:** ohos.geoLocationManager/geoLocationManager.SatelliteStatusInfo#carrierToNoiseDensitys
+
+<!--Device-SatelliteStatusInfo-carrierToNoiseDensitys: Array<number>--><!--Device-SatelliteStatusInfo-carrierToNoiseDensitys: Array<number>-End-->
+
+**System capability:** SystemCapability.Location.Location.Gnss
+
+## satelliteIds
+
+```TypeScript
+satelliteIds: Array<number>
+```
+
+**Type:** Array&lt;number&gt;
+
+**Since:** 8
+
+**Deprecated since:** 9
+
+**Substitutes:** ohos.geoLocationManager/geoLocationManager.SatelliteStatusInfo#satelliteIds
+
+<!--Device-SatelliteStatusInfo-satelliteIds: Array<number>--><!--Device-SatelliteStatusInfo-satelliteIds: Array<number>-End-->
+
+**System capability:** SystemCapability.Location.Location.Gnss
+
+## satellitesNumber
+
+```TypeScript
+satellitesNumber: number
+```
+
+**Type:** number
+
+**Since:** 8
+
+**Deprecated since:** 9
+
+**Substitutes:** ohos.geoLocationManager/geoLocationManager.SatelliteStatusInfo#satellitesNumber
+
+<!--Device-SatelliteStatusInfo-satellitesNumber: number--><!--Device-SatelliteStatusInfo-satellitesNumber: number-End-->
+
+**System capability:** SystemCapability.Location.Location.Gnss

@@ -12,7 +12,7 @@ import { appManager } from 'kits/@kit.AbilityKit';
 function clearUpAppData(bundleName: string, appCloneIndex?: int): Promise<void>
 ```
 
-根据Bundle名称和应用分身索引，清除指定应用的数据。使用Promise异步回调。
+Clears data of a specified application based on the bundle name and application clone index. This API uses a promise to return the result.
 
 **Since:** 13
 
@@ -30,24 +30,24 @@ function clearUpAppData(bundleName: string, appCloneIndex?: int): Promise<void>
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| bundleName | string | Yes | 表示Bundle名称。 |
-| appCloneIndex | ArkTS-Dyn: number  <br>ArkTS-Sta：int | No | 表示应用分身索引。 |
+| bundleName | string | Yes | Bundle name. |
+| appCloneIndex | ArkTS-Dyn: number  <br>ArkTS-Sta：int | No | Index of the application clone. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise对象。无返回结果的Promise对象。 |
+| Promise&lt;void&gt; | Promise that returns no value. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
-| 16000050 | Internal error. |
-| 201 | Permission denied. |
-| 202 | Not system application. |
-| 16000073 | The app clone index is invalid. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| [16000050](../errorcode-ability.md#16000050-internal-error) | Internal error. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system application. |
+| [16000073](../errorcode-ability.md#16000073-appcloneindex-is-invalid) | The app clone index is invalid. |
 
 ## Examples
 

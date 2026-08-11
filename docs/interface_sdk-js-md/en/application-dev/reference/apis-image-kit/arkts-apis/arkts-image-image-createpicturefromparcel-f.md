@@ -12,9 +12,10 @@ import { image } from 'kits/@kit.ImageKit';
 function createPictureFromParcel(sequence: rpc.MessageSequence): Picture
 ```
 
-从MessageSequence中获取Picture。
+Creates a Picture object from a MessageSequence object.
 
-由于图片占用内存较大，所以当Picture对象使用完成后，应主动调用[release](arkts-image-image-picture-i.md#release)方法及时释放内存。释放时应确保该对象的所有异步方法均执行完成，且后续不再使用该对象。
+Images occupy a large amount of memory. When you finish using a Picture instance, call   
+[release](arkts-image-image-picture-i.md#release) to free the memory promptly. Before releasing the instance, ensure that all asynchronous operations associated with the instance have finished and the instance is no longer needed.
 
 **Since:** 13
 
@@ -28,20 +29,20 @@ function createPictureFromParcel(sequence: rpc.MessageSequence): Picture
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| sequence | rpc.MessageSequence | Yes | 保存有Picture信息的MessageSequence。 |
+| sequence | rpc.MessageSequence | Yes | MessageSequence object that stores the Picture information. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [Picture](arkts-image-image-picture-i.md) | 返回Picture对象。 |
+| [Picture](arkts-image-image-picture-i.md) | Picture object. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 62980097 | IPC error. Possible cause: 1.IPC communication failed. 2. Image upload exception. 3. Decode process exception. 4. Insufficient memory. |
-| 401 | Parameter error.Possible causes: 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types; 3.Parameter verification failed. |
+| [62980097](../errorcode-image.md#62980097-pixelmap-serialization-failed) | IPC error. Possible cause: 1.IPC communication failed. 2. Image upload exception. 3. Decode process exception. 4. Insufficient memory. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error.Possible causes: 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types; 3.Parameter verification failed. |
 
 ## Examples
 
@@ -57,10 +58,10 @@ class MySequence implements rpc.Parcelable {
   marshalling(messageSequence: rpc.MessageSequence) {
     if(this.picture != null) {
       this.picture.marshalling(messageSequence);
-      console.info('Succeeded in marshalling.');
+      console.info('Marshalling success !');
       return true;
     } else {
-      console.error('Failed to marshal.');
+      console.error('Marshalling failed !');
       return false;
     }
   }
@@ -75,13 +76,13 @@ class MySequence implements rpc.Parcelable {
   }
 }
 
-async function marshallingUnmarshalling(context: Context) {
+async function Marshalling_UnMarshalling(context: Context) {
   const resourceMgr = context.resourceManager;
   const rawFile = await resourceMgr.getRawFileContent("test.jpg");
-  let opts: image.SourceOptions = {
+  let ops: image.SourceOptions = {
     sourceDensity: 98,
   }
-  let imageSource: image.ImageSource = image.createImageSource(rawFile.buffer as ArrayBuffer, opts);
+  let imageSource: image.ImageSource = image.createImageSource(rawFile.buffer as ArrayBuffer, ops);
   let commodityPixelMap: image.PixelMap = await imageSource.createPixelMap();
   let pictureObj: image.Picture = image.createPicture(commodityPixelMap);
   if (pictureObj != null) {

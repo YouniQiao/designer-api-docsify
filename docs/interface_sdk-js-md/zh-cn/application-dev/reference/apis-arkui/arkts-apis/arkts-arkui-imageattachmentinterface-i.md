@@ -40,7 +40,7 @@ layoutStyle?: ImageAttachmentLayoutStyle
 
 设置图片布局。不传入时使用默认布局（外边距、内边距和圆角均为0）。
 
-**类型：** [ImageAttachmentLayoutStyle](arkts-arkui-imageattachmentlayoutstyle-i.md)
+**类型：** [ImageAttachmentLayoutStyle](arkts-arkui-styledstring-imageattachmentlayoutstyle-i.md)
 
 **起始版本：** 12
 
@@ -110,7 +110,7 @@ value: PixelMap
 
 设置图片数据源。
 
-**类型：** [PixelMap](../../apis-image-kit/arkts-apis/arkts-image-image-pixelmap-i.md)
+**类型：** [PixelMap](arkts-arkui-pixelmap-t.md)
 
 **起始版本：** 12
 

@@ -1,26 +1,24 @@
 # CanvasLineJoin
 
 ```TypeScript
-declare type CanvasLineJoin = "bevel" | "miter" | "round"
+export type CanvasLineJoin = 'bevel' | 'miter' | 'round'
 ```
 
-定义长度不为0的两个连接部分（线段、圆弧和曲线）的类型。取值类型为下表类型中的并集。
+Sets the attribute of how two connected parts (line segments, arcs, and curves) whose length is not 0 are connected together. The following three configurations are supported:'bevel': Fill the ends of the connected sections with an additional triangle-base area, each with its own independent rectangular corner.'miter': (Default) An additional diamond region is formed by extending the outer edges of the connected portions  so that they intersect at a point.'round': Draw the shape of the corner by filling in an additional sector with the center at the end of the  connected section. The radius of the fillet is the width of the segment.
 
-**Since:** 8
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
+**ArkTS mode:** ArkTS-Sta only, since version 23.
 
-**Atomic service API:** This API can be used in atomic services since API version 11.
+**Model restriction:** This API can be used only in the stage model.
 
-**Widget capability:** This API can be used in ArkTS widgets since API version 9.
-
-<!--Device-unnamed-declare type CanvasLineJoin = "bevel" | "miter" | "round"--><!--Device-unnamed-declare type CanvasLineJoin = "bevel" | "miter" | "round"-End-->
+<!--Device-unnamed-export type CanvasLineJoin = 'bevel' | 'miter' | 'round'--><!--Device-unnamed-export type CanvasLineJoin = 'bevel' | 'miter' | 'round'-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 | Type | Description |
 | --- | --- |
-| "bevel" | 在线段相连处使用三角形为底填充，每个部分矩形拐角独立。 |
-| "miter" | 在相连部分的外边缘处进行延伸，使其相交于一点，形成一个菱形区域， 该属性可以通过设置miterLimit属性展现效果。 |
-| "round" | 在线段相连处绘制一个扇形，扇形的圆角半径是线段的宽度。 |
+| 'bevel' |  |
+| 'miter' |  |
+| 'round' |  |
 

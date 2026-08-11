@@ -1,6 +1,6 @@
 # ServiceData
 
-服务数据。
+Describes the service data.
 
 **Since:** 26.0.0
 
@@ -22,7 +22,7 @@ import { advertising } from 'kits/@kit.ConnectivityKit';
 serviceData: ArrayBuffer
 ```
 
-服务数据。
+Indicates the service data.
 
 **Type:** ArrayBuffer
 
@@ -42,7 +42,7 @@ serviceData: ArrayBuffer
 serviceUuid: string
 ```
 
-服务UUID。
+Indicates the service UUID.The length must be 36, The value consists of 36 hexadecimal digits and hyphens (-),for example, FFFFFFFF-1234-5678-ABCD-000000001234, indicating a 128-bit identifier.
 
 **Type:** string
 

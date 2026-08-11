@@ -10,12 +10,6 @@
 
 **系统能力：** SystemCapability.FileManagement.StorageService.Backup
 
-## 导入模块
-
-```TypeScript
-import { BundleVersion } from 'kits/@kit.CoreFileKit';
-```
-
 ## onBackup
 
 ```TypeScript

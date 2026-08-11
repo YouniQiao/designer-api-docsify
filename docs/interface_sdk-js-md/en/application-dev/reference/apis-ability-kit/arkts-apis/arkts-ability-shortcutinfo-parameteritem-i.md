@@ -1,6 +1,6 @@
 # ParameterItem
 
-快捷方式配置信息中的自定义数据。由开发者自行决定传入的键值对，可以通过key值获取对应的value值。
+Describes the custom data in the shortcut configuration. You can define your own key-value pairs, and obtain the values using the keys.
 
 **Since:** 20
 
@@ -16,7 +16,7 @@
 key: string
 ```
 
-快捷方式配置信息中的自定义数据的键。
+Key of the custom data.
 
 **Type:** string
 
@@ -34,7 +34,7 @@ key: string
 value: string
 ```
 
-快捷方式配置信息中的自定义数据的值。
+Value of the custom data.
 
 **Type:** string
 

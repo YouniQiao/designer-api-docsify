@@ -1,6 +1,6 @@
 # PerformanceInfo
 
-预下载的性能信息。
+Describes the pre-downloaded performance information.
 
 **Since:** 20
 
@@ -22,7 +22,7 @@ import { cacheDownload } from 'kits/@kit.BasicServicesKit';
 readonly connectTime: double
 ```
 
-从启动到tcp连接完成所需的时间，单位：毫秒（ms）。
+Time taken from TCP startup to connection completion, in milliseconds.
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：double
 
@@ -40,7 +40,7 @@ readonly connectTime: double
 readonly dnsTime: double
 ```
 
-从启动到dns解析完成所需的时间，单位：毫秒（ms）。
+Time taken from DNS startup to resolution completion, in milliseconds.
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：double
 
@@ -58,7 +58,7 @@ readonly dnsTime: double
 readonly firstReceiveTime: double
 ```
 
-从启动到接收第一个字节所需的时间，单位：毫秒（ms）。
+Time taken from startup to receiving the first byte, in milliseconds.
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：double
 
@@ -76,7 +76,7 @@ readonly firstReceiveTime: double
 readonly firstSendTime: double
 ```
 
-从启动到开始发送第一个字节所需的时间，单位：毫秒（ms）。
+Time taken from startup to sending the first byte, in milliseconds.
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：double
 
@@ -94,7 +94,7 @@ readonly firstSendTime: double
 readonly redirectTime: double
 ```
 
-从启动到完成所有重定向步骤所需的时间，单位：毫秒（ms）。
+Time taken from startup to redirection completion, in milliseconds.
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：double
 
@@ -112,7 +112,7 @@ readonly redirectTime: double
 readonly tlsTime: double
 ```
 
-从启动到tls连接完成所需的时间，单位：毫秒（ms）。
+Time taken from TLS startup to connection completion, in milliseconds.
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：double
 
@@ -130,7 +130,7 @@ readonly tlsTime: double
 readonly totalTime: double
 ```
 
-从启动到完成请求所需的时间，单位：毫秒（ms）。
+Time taken from startup to request completion, in milliseconds.
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：double
 

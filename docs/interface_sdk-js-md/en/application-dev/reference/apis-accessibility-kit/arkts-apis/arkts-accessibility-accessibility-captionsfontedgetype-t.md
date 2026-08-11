@@ -4,7 +4,7 @@
 type CaptionsFontEdgeType = 'none' | 'raised' | 'depressed' | 'uniform' | 'dropShadow'
 ```
 
-字幕字体边缘类型。
+Enumerates the font edge types of captions.
 
 **Since:** 8
 
@@ -20,9 +20,9 @@ type CaptionsFontEdgeType = 'none' | 'raised' | 'depressed' | 'uniform' | 'dropS
 
 | Type | Description |
 | --- | --- |
-| 'none' | 表示无效果。 |
-| 'raised' | 表示凸起效果。 |
-| 'depressed' | 表示凹陷效果。 |
-| 'uniform' | 表示轮廓效果。 |
-| 'dropShadow' | 表示阴影效果。 |
+| 'none' | No effect. |
+| 'raised' | Raised effect. |
+| 'depressed' | Depressed effect. |
+| 'uniform' | Uniform effect. |
+| 'dropShadow' | Drop shadow effect. |
 

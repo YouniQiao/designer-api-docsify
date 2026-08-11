@@ -1,6 +1,6 @@
 # ResponseRegionSupportedTool
 
-触摸热区适用的输入工具类型。
+Sets the type of the input tool applicable to the touch target.
 
 **Since:** 22
 
@@ -16,7 +16,7 @@
 ALL = 0
 ```
 
-所有输入工具类型。
+All input tool types.
 
 **Since:** 22
 
@@ -36,7 +36,7 @@ ALL = 0
 FINGER = 1
 ```
 
-手指。
+Finger.
 
 **Since:** 22
 
@@ -56,7 +56,7 @@ FINGER = 1
 PEN = 2
 ```
 
-手写笔。
+Stylus.
 
 **Since:** 22
 
@@ -76,7 +76,7 @@ PEN = 2
 MOUSE = 3
 ```
 
-鼠标。
+Mouse.
 
 **Since:** 22
 

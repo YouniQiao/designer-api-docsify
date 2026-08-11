@@ -1,8 +1,8 @@
 # SlotType
 
-通知渠道类型。
+Enumerates the notification slot types.
 
-不同类型对应不同的SlotLevel，决定通知的提醒行为。
+Different types correspond to different [SlotLevel](arkts-notification-notificationmanager-slotlevel-e.md) values,determining the reminder behavior of the notification.
 
 **Since:** 9
 
@@ -18,7 +18,8 @@
 UNKNOWN_TYPE = 0
 ```
 
-未知类型。该类型对应SlotLevel为LEVEL_MIN。
+Unknown type. This type corresponds to the  
+[SlotLevel](arkts-notification-notificationmanager-slotlevel-e.md) of **LEVEL_MIN**.
 
 **Since:** 9
 
@@ -36,7 +37,8 @@ UNKNOWN_TYPE = 0
 SOCIAL_COMMUNICATION = 1
 ```
 
-社交通讯。该类型对应SlotLevel为LEVEL_HIGH。
+Social communication. This type corresponds to the  
+[SlotLevel](arkts-notification-notificationmanager-slotlevel-e.md) of **LEVEL_HIGH**.
 
 **Since:** 9
 
@@ -54,7 +56,8 @@ SOCIAL_COMMUNICATION = 1
 SERVICE_INFORMATION = 2
 ```
 
-服务提醒。该类型对应SlotLevel为LEVEL_HIGH。
+Service information. This type corresponds to the  
+[SlotLevel](arkts-notification-notificationmanager-slotlevel-e.md) of **LEVEL_HIGH**.
 
 **Since:** 9
 
@@ -72,7 +75,8 @@ SERVICE_INFORMATION = 2
 CONTENT_INFORMATION = 3
 ```
 
-内容资讯。该类型对应SlotLevel为LEVEL_MIN。
+Content information. This type corresponds to the  
+[SlotLevel](arkts-notification-notificationmanager-slotlevel-e.md) of **LEVEL_MIN**.
 
 **Since:** 9
 
@@ -90,7 +94,8 @@ CONTENT_INFORMATION = 3
 LIVE_VIEW = 4
 ```
 
-实况窗。不支持三方应用直接创建该渠道类型通知，可以由系统代理创建后， 三方应用发布同ID的通知来更新指定内容。该类型对应SlotLevel为LEVEL_DEFAULT。
+Live view. A third-party application cannot directly create a notification of this type. Instead, after the system proxy creates a notification, the third-party application can release the notification with the same ID to update the specified content. This type corresponds to the  
+[SlotLevel](arkts-notification-notificationmanager-slotlevel-e.md) of **LEVEL_DEFAULT**.
 
 **Since:** 11
 
@@ -108,7 +113,8 @@ LIVE_VIEW = 4
 CUSTOMER_SERVICE = 5
 ```
 
-客服消息。该类型用于用户与商家之间的客服消息，需由用户主动发起。 该类型对应SlotLevel为LEVEL_DEFAULT。
+Customer service message. This type is used for messages between users and customer service providers. The messages must be initiated by users. This type corresponds to the  
+[SlotLevel](arkts-notification-notificationmanager-slotlevel-e.md) of **LEVEL_DEFAULT**.
 
 **Since:** 11
 
@@ -126,7 +132,8 @@ CUSTOMER_SERVICE = 5
 OTHER_TYPES = 0xFFFF
 ```
 
-其他。该类型对应SlotLevel为LEVEL_MIN。
+Other types. This type corresponds to the  
+[SlotLevel](arkts-notification-notificationmanager-slotlevel-e.md) of **LEVEL_MIN**.
 
 **Since:** 9
 

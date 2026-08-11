@@ -12,7 +12,7 @@ import { Options, ReaderIteratorResult, Watcher, ReadTextOptions, WatchEventList
 declare function dup(fd: number): File
 ```
 
-复制文件描述符，并返回对应的File对象。
+Duplicates the file descriptor and returns the corresponding **File** object.
 
 **Since:** 10
 
@@ -26,13 +26,13 @@ declare function dup(fd: number): File
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| fd | number | Yes | 文件描述符。 |
+| fd | number | Yes | File descriptor. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [File](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-request-file-i.md) | 打开的File对象。 |
+| [File](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-request-file-i.md) | File object opened. |
 
 **Error codes:**
 

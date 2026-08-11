@@ -1,6 +1,6 @@
 # StackOptions
 
-设置堆叠容器的子组件对齐方式。
+Options used to construct the stack.
 
 **Since:** 23
 
@@ -16,7 +16,9 @@
 alignContent?: Alignment
 ```
 
-设置子组件在容器内的对齐方式。默认值：Alignment.Center，非法值：按默认值处理。
+Alignment of child components in the container.
+
+Anonymous Object Rectification
 
 **Type:** [Alignment](arkts-arkui-alignment-e.md)
 

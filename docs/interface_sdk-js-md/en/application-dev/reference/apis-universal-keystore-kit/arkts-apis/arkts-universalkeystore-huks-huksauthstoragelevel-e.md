@@ -1,12 +1,13 @@
 # HuksAuthStorageLevel
 
-表示生成或导入密钥时，指定该密钥的存储安全等级。
+Enumerates the storage security levels of a key.
 
-> **说明：**
+> **NOTE：**
 > 
-> 业务在使用存储等级为ECE的密钥时，建议通过感知
-> [锁屏事件](../../../reference/apis-basic-services-kit/common_event/commonEventManager-definitions.md#common_event_screen_locked)
-> 来清理使用该密钥创建的会话资源，以保证安全性。
+> When using a key whose storage level is ECE, you are advised to clear the session resources created using the key
+> by detecting the
+> [lock screen event](../../../reference/apis-basic-services-kit/common_event/commonEventManager-definitions.md#common_event_screen_locked)
+> to ensure security.
 
 **Since:** 11
 
@@ -24,7 +25,7 @@
 HUKS_AUTH_STORAGE_LEVEL_DE = 0
 ```
 
-表示密钥仅在开机后可访问。
+The key can be accessed only after the device is started.
 
 **Since:** 11
 
@@ -44,7 +45,7 @@ HUKS_AUTH_STORAGE_LEVEL_DE = 0
 HUKS_AUTH_STORAGE_LEVEL_CE = 1
 ```
 
-表示密钥仅在首次解锁后可访问。
+The key can be accessed only after the first unlock of the device.
 
 **Since:** 11
 
@@ -64,7 +65,7 @@ HUKS_AUTH_STORAGE_LEVEL_CE = 1
 HUKS_AUTH_STORAGE_LEVEL_ECE = 2
 ```
 
-表示密钥仅在解锁状态时可访问。
+The key can be accessed only when the device is unlocked.
 
 **Since:** 11
 

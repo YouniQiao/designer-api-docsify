@@ -1,6 +1,6 @@
 # SoftShadowConfig
 
-软阴影配置参数，控制算法类型及其配置
+param config for soft shadow, control the algorithm type and its configuration
 
 **Since:** 26.0.0
 
@@ -16,7 +16,7 @@
 get shadowAlgorithmType(): ShadowAlgorithmType
 ```
 
-阴影渲染算法类型
+type of shadow shading algorithms
 
 **Type:** [ShadowAlgorithmType](arkts-arkgraphics3d-scenetypes-shadowalgorithmtype-e.md)
 

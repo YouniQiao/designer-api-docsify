@@ -1,6 +1,6 @@
 # USBAccessory
 
-USB配件信息。
+Describes the USB accessory information.
 
 **Since:** 14
 
@@ -22,7 +22,7 @@ import { usbManager } from 'kits/@kit.BasicServicesKit';
 description: string
 ```
 
-配件的描述。
+Description of an accessory.
 
 **Type:** string
 
@@ -40,7 +40,7 @@ description: string
 manufacturer: string
 ```
 
-配件的生产厂商。
+Manufacturer of an accessory.
 
 **Type:** string
 
@@ -58,7 +58,7 @@ manufacturer: string
 product: string
 ```
 
-配件的产品类型。
+Product type of an accessory.
 
 **Type:** string
 
@@ -76,7 +76,7 @@ product: string
 serialNumber: string
 ```
 
-配件的SN号。
+SN of an accessory.
 
 **Type:** string
 
@@ -94,7 +94,7 @@ serialNumber: string
 version: string
 ```
 
-配件的版本。
+Version of an accessory.
 
 **Type:** string
 

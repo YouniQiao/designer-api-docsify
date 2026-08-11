@@ -1,6 +1,6 @@
 # ReusePoolOwnership
 
-重用池所有权的枚举
+Enum for reuse pool ownership
 
 **Since:** 26.0.0
 
@@ -16,7 +16,7 @@
 SHARED = 'shared'
 ```
 
-共享所有权。
+Shared ownership.
 
 **Since:** 26.0.0
 
@@ -34,7 +34,7 @@ SHARED = 'shared'
 PER_INSTANCE = 'perInstance'
 ```
 
-重用池是每个实例拥有的，而不是共享的。这是自定义组件复用池的默认模式。
+Reuse pool is owned per instance and not shared.
 
 **Since:** 26.0.0
 
@@ -52,7 +52,7 @@ PER_INSTANCE = 'perInstance'
 OFF = 'off'
 ```
 
-复用池关闭。这是自定义组件复用池的默认模式。
+Reuse pool is turned off.This is the default mode for custom component reuse pool.
 
 **Since:** 26.0.0
 

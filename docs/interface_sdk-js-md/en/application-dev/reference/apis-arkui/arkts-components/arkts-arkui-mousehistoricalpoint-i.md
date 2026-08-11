@@ -1,10 +1,10 @@
 # MouseHistoricalPoint
 
-鼠标事件历史点信息。
+Mouse event historical point information.
 
-历史点按时间顺序排列，获取到的第一个历史点是最早发生的事件的信息，最后一个是最新发生事件的信息。历史点的数量取决于系统事件队列的配置和硬件性能。历史点主要用于如下场景：
+Historical points are arranged in chronological order. The first historical point obtained is the earliest event, and the last is the most recent event. The number of historical points depends on the system event queue configuration and hardware performance. Historical points are mainly used for the following scenarios:
 
- 1. 平滑绘制：使用历史点可以实现更平滑的绘制效果，特别是在鼠标快速移动时。  2. 手势识别：通过分析历史点的轨迹，可以识别各种鼠标手势。  3. 性能优化：在一个事件回调中处理多个历史点，减少事件处理频率，提升性能。  4. 轨迹分析：分析鼠标移动轨迹，用于绘图应用或手势控制。  5. 数据分析：历史点中的timestamp可用于计算鼠标移动速度。
+1. Smooth drawing: Historical points enable smoother drawing effects, especially when the mouse moves quickly.2. Gesture recognition: By analyzing the trajectory of historical points, various mouse gestures can be recognized.3. Performance optimization: Processing multiple historical points in one event callback reduces event processing frequency and improves performance.4. Trajectory analysis: Analyzing mouse movement trajectories for drawing applications or gesture control.5. Data analysis: The **timestamp** in historical points can be used to calculate mouse movement speed.
 
 **Since:** 26.0.0
 
@@ -20,9 +20,9 @@
 displayX: double
 ```
 
-鼠标指针相对于整个屏幕左上角的X坐标。
+X coordinate of the mouse pointer relative to the upper-left corner of the entire screen.
 
-单位：vp
+Unit: vp
 
 **Type:** double
 
@@ -44,9 +44,9 @@ displayX: double
 displayY: double
 ```
 
-鼠标指针相对于整个屏幕左上角的Y坐标。
+Y coordinate of the mouse pointer relative to the upper-left corner of the entire screen.
 
-单位：vp
+Unit: vp
 
 **Type:** double
 
@@ -68,9 +68,10 @@ displayY: double
 globalDisplayX: double
 ```
 
-鼠标位置在[全局坐标系](../../../windowmanager/window-terminology.md#全局坐标系)中的X坐标。
+X coordinate of the mouse position in the  
+[global coordinate system](../../../windowmanager/window-terminology.md#global-coordinate-system).
 
-单位：vp
+Unit: vp
 
 **Type:** double
 
@@ -92,9 +93,10 @@ globalDisplayX: double
 globalDisplayY: double
 ```
 
-鼠标位置在[全局坐标系](../../../windowmanager/window-terminology.md#全局坐标系)中的Y坐标。
+Y coordinate of the mouse position in the  
+[global coordinate system](../../../windowmanager/window-terminology.md#global-coordinate-system).
 
-单位：vp
+Unit: vp
 
 **Type:** double
 
@@ -116,9 +118,9 @@ globalDisplayY: double
 timestamp: long
 ```
 
-鼠标事件的时间戳。
+Timestamp of the mouse event.
 
-单位：ns
+Unit: ns
 
 **Type:** long
 
@@ -140,9 +142,9 @@ timestamp: long
 windowX: double
 ```
 
-鼠标指针相对于应用窗口左上角的X坐标。
+X coordinate of the mouse pointer relative to the upper-left corner of the application window.
 
-单位：vp
+Unit: vp
 
 **Type:** double
 
@@ -164,9 +166,9 @@ windowX: double
 windowY: double
 ```
 
-鼠标指针相对于应用窗口左上角的Y坐标。
+Y coordinate of the mouse pointer relative to the upper-left corner of the application window.
 
-单位：vp
+Unit: vp
 
 **Type:** double
 
@@ -188,9 +190,9 @@ windowY: double
 x: double
 ```
 
-鼠标指针相对于被点击组件左上角的X坐标。
+X coordinate of the mouse pointer relative to the upper-left corner of the clicked component.
 
-单位：vp
+Unit: vp
 
 **Type:** double
 
@@ -212,9 +214,9 @@ x: double
 y: double
 ```
 
-鼠标指针相对于被点击组件左上角的Y坐标。
+Y coordinate of the mouse pointer relative to the upper-left corner of the clicked component.
 
-单位：vp
+Unit: vp
 
 **Type:** double
 

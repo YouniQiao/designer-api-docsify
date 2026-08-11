@@ -36,10 +36,10 @@ export function verifyControlledDevicePackage(ticketInfo: RemoteAuthPackage[]): 
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 201 | Permission denial. The interface caller does not have permission "ohos.permission.QUERY_TOOL_PERMISSIONS". |
-| 202 | The caller is not a system application. |
-| 24010002 | Common internal error. possible cause: dependent service unavailable, resource access failure, etc. |
-| 24010003 | The account is not logged in, network is unavailable, timeout, etc. |
-| 24010000 | Invalid parameter. Format of ticketInfo is invalid. |
-| 24010001 | Service is abnormal. possible cause: IPC failed. |
+| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denial. The interface caller does not have permission "ohos.permission.QUERY_TOOL_PERMISSIONS". |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | The caller is not a system application. |
+| [24010002](../errorcode-abilityToolAccessCtrl-sys.md#24010002-服务内部错误) | Common internal error. possible cause: dependent service unavailable, resource access failure, etc. |
+| [24010003](../errorcode-abilityToolAccessCtrl-sys.md#24010003-环境错误) | The account is not logged in, network is unavailable, timeout, etc. |
+| [24010000](../errorcode-abilityToolAccessCtrl-sys.md#24010000-入参错误) | Invalid parameter. Format of ticketInfo is invalid. |
+| [24010001](../errorcode-abilityToolAccessCtrl-sys.md#24010001-系统服务工作异常) | Service is abnormal. possible cause: IPC failed. |
 

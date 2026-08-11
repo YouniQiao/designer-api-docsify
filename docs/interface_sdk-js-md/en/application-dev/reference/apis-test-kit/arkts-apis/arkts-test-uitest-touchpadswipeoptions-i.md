@@ -1,6 +1,6 @@
 # TouchPadSwipeOptions
 
-触摸板多指滑动手势选项相关信息。
+Describes information about the touchpad swipe gesture option.
 
 **Since:** 18
 
@@ -22,7 +22,7 @@ import { ResizeDirection, WindowMode, PenMode, PenKeyOperation, Driver, MatchPat
 speed?: int
 ```
 
-滑动速率，取值范围为200-40000的整数，默认值为2000，单位：px/s。为不在范围内的非负数或为null/undefined时设为默认值2000。为负数时抛出参数错误的错误码。
+Swipe speed.&lt;br&gt;Value range:[200, 40000]&lt;br&gt;Unit: px/s.&lt;br&gt;Throws error code 17000007 if negative.&lt;br&gt;Default value: 2000
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
@@ -42,7 +42,7 @@ speed?: int
 stay?: boolean
 ```
 
-触摸板多指滑动结束是否停留1s后再抬起，true：停留，false：不停留，默认为false（不停留1s）。
+Whether the swipe gesture stays on the touchpad for 1s before it is lifted.The value **true** indicates that the swipe gesture stays on the touchpad for 1s, and **false** indicates the opposite.&lt;br&gt;Default value: false
 
 **Type:** boolean
 

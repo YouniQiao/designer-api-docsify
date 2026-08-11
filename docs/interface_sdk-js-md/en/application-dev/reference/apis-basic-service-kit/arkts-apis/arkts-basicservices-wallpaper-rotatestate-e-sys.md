@@ -1,6 +1,6 @@
 # RotateState (System API)
 
-定义设备的横竖屏状态枚举类型。
+Define the rotation state of wallpaper
 
 **Since:** 14
 
@@ -18,7 +18,7 @@
 PORTRAIT = 0
 ```
 
-设备默认为竖屏状态。
+Indicates the screen type is vertical screen.
 
 **Since:** 14
 
@@ -36,7 +36,7 @@ PORTRAIT = 0
 LANDSCAPE = 1
 ```
 
-横屏状态。
+Indicates the screen type is horizontal screen.
 
 **Since:** 14
 

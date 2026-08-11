@@ -1,6 +1,6 @@
 # DatePickerMode
 
-设置日期展示模式。
+Enumerates date display modes.
 
 **Since:** 18
 
@@ -16,7 +16,7 @@
 DATE = 0
 ```
 
-显示年、月、日三列。
+Three-column display: year, month, and day.
 
 **Since:** 18
 
@@ -36,7 +36,7 @@ DATE = 0
 YEAR_AND_MONTH = 1
 ```
 
-显示年、月二列。
+Two-column display: year and month.
 
 **Since:** 18
 
@@ -56,9 +56,9 @@ YEAR_AND_MONTH = 1
 MONTH_AND_DAY = 2
 ```
 
-显示月、日二列。
+Two-column display: month and day.
 
-在此模式下，年份始终保持不变，取值为selected参数指定的年份。若selected未指定则取当前系统年份。当月份滚动导致日期超出有效范围时，日期会自动调整至该月最后一天。
+In this mode, the year value remains fixed.
 
 **Since:** 18
 

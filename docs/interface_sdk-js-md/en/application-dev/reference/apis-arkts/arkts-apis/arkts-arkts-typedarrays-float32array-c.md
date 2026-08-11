@@ -1556,7 +1556,7 @@ Calls the specified callback function for all the elements in an array.The retur
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callbackfn | (previousValue: U, currentValue: double, currentIndex: int,         array: Float32Array) =&gt; U | Yes | A function that accepts four arguments. The reduce method calls the callbackfn function one time for each element in the array. |
+| callbackfn | (previousValue: U, currentValue: double, currentIndex: int,         array: Float32Array) =&gt; U | Yes | A function that accepts four arguments. The reduce method calls the callbackfn function one time for each element in the array. |
 | initialValue | U | Yes | The parameter which value is used as the initial value to start the accumulation. The first call to the callbackfn function provides this value as an argument. |
 
 **Return value:**
@@ -1588,7 +1588,7 @@ Calls the specified callback function for all the elements in an array.The retur
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callbackfn | (previousValue: double, currentValue: double, currentIndex: int,         array: Float32Array) =&gt; double | Yes | A function that accepts four arguments. The reduce method calls the callbackfn function one time for each element in the array. The first call to the callbackfn function provides array first element value as an argument |
+| callbackfn | (previousValue: double, currentValue: double, currentIndex: int,         array: Float32Array) =&gt; double | Yes | A function that accepts four arguments. The reduce method calls the callbackfn function one time for each element in the array. The first call to the callbackfn function provides array first element value as an argument |
 
 **Return value:**
 
@@ -1619,7 +1619,7 @@ Calls the specified callback function for all the elements in an array, in desce
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callbackfn | (previousValue: U, currentValue: double, currentIndex: int,         array: Float32Array) =&gt; U | Yes | A function that accepts four arguments. The reduceRight method calls the callbackfn function one time for each element in the array. |
+| callbackfn | (previousValue: U, currentValue: double, currentIndex: int,         array: Float32Array) =&gt; U | Yes | A function that accepts four arguments. The reduceRight method calls the callbackfn function one time for each element in the array. |
 | initialValue | U | Yes | The parameter which value is used as the initial value to start the accumulation. |
 
 **Return value:**
@@ -1651,7 +1651,7 @@ Calls the specified callback function for all the elements in an array, in desce
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callbackfn | (previousValue: double, currentValue: double, currentIndex: int,         array: Float32Array) =&gt; double | Yes | A function that accepts four arguments. The reduceRight method calls the callbackfn function one time for each element in the array. The first call to the callbackfn function provides array last element value as an argument. |
+| callbackfn | (previousValue: double, currentValue: double, currentIndex: int,         array: Float32Array) =&gt; double | Yes | A function that accepts four arguments. The reduceRight method calls the callbackfn function one time for each element in the array. The first call to the callbackfn function provides array last element value as an argument. |
 
 **Return value:**
 

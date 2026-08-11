@@ -1,6 +1,6 @@
 # Skill
 
-skill标签对象。
+The module defines a skill object.
 
 **Since:** 12
 
@@ -16,7 +16,7 @@ skill标签对象。
 readonly actions: Array<string>
 ```
 
-Skill接收的[Action集合](arkts-ability-wantconstant-action-depr-e.md)。
+Indicates the actions of the skill
 
 **Type:** Array&lt;string&gt;
 
@@ -36,7 +36,7 @@ Skill接收的[Action集合](arkts-ability-wantconstant-action-depr-e.md)。
 readonly domainVerify: boolean
 ```
 
-Skill接收的DomainVerify值，仅在AbilityInfo中存在，表示是否开启域名校验，取值为true表示开启域名校验，取值为false表示未开启域名校验。
+Indicates the domainVerify of the skill
 
 **Type:** boolean
 
@@ -56,7 +56,7 @@ Skill接收的DomainVerify值，仅在AbilityInfo中存在，表示是否开启�
 readonly entities: Array<string>
 ```
 
-Skill接收的[Entity集合](arkts-ability-wantconstant-entity-depr-e.md)。
+Indicates the entities of the skill
 
 **Type:** Array&lt;string&gt;
 
@@ -76,7 +76,7 @@ Skill接收的[Entity集合](arkts-ability-wantconstant-entity-depr-e.md)。
 readonly uris: Array<SkillUri>
 ```
 
-Want匹配的Uri集合。
+Indicates the uris of the skill
 
 **Type:** Array&lt;SkillUri&gt;
 

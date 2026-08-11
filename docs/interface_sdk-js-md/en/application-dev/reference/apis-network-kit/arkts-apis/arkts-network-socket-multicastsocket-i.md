@@ -47,9 +47,9 @@ Add the socket to the multicast group.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. |
 | 2301088 | Not a socket. |
-| 201 | Permission denied. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
 | 2301098 | Address in use. |
 | 2301022 | Invalid argument. |
 
@@ -106,9 +106,9 @@ Add the socket to the multicast group.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. |
 | 2301088 | Not a socket. |
-| 201 | Permission denied. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
 | 2301098 | Address in use. |
 
 ## Examples
@@ -157,9 +157,9 @@ Drop the socket from the multicast group.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. |
 | 2301088 | Not a socket. |
-| 201 | Permission denied. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
 | 2301098 | Address in use. |
 
 ## Examples
@@ -215,9 +215,9 @@ Drop the socket from the multicast group.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. |
 | 2301088 | Not a socket. |
-| 201 | Permission denied. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
 | 2301098 | Address in use. |
 
 ## Examples
@@ -263,7 +263,7 @@ Get the loopback mode of the socket.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. |
 | 2301088 | Not a socket. |
 
 ## Examples
@@ -307,7 +307,7 @@ Get the loopback mode of the socket.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. |
 | 2301088 | Not a socket. |
 
 ## Examples
@@ -349,7 +349,7 @@ Get the TTL value of socket multicast packet.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. |
 | 2301088 | Not a socket. |
 
 ## Examples
@@ -393,7 +393,7 @@ Get the TTL value of socket multicast packet.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. |
 | 2301088 | Not a socket. |
 
 ## Examples
@@ -445,7 +445,7 @@ Obtains the file descriptor of the MulticastSocket.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 201 | Permission denied. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
 
 ## Examples
 
@@ -498,7 +498,7 @@ Set the loopback mode for the socket.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. |
 | 2301088 | Not a socket. |
 
 ## Examples
@@ -548,7 +548,7 @@ Set the loopback mode for the socket.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. |
 | 2301088 | Not a socket. |
 
 ## Examples
@@ -591,7 +591,7 @@ Set the TTL value for socket multicast packets.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. |
 | 2301088 | Not a socket. |
 | 2301022 | Invalid argument. |
 
@@ -643,7 +643,7 @@ Set the TTL value for socket multicast packet.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. |
 | 2301088 | Not a socket. |
 | 2301022 | Invalid argument. |
 
@@ -683,30 +683,4 @@ Sets whether the multicast socket supports address reuse.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | reuse | boolean | Yes | whether the multicast socket supports address reuse. |
-
-## Examples
-
-```TypeScript
-import { socket } from '@kit.NetworkKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let multicast: socket.MulticastSocket = socket.constructMulticastSocketInstance();
-let bindAddr: socket.NetAddress = {
-  // 0.0.0.0 indicates that port 8080 on all IPv4 network APIs of the local host is bound. This is commonly used to receive data from this port in multicast scenarios.
-  address: '0.0.0.0',
-  port: 8080
-}
-
-try {
-  multicast.setReuseAddress(true);
-  multicast.bind(bindAddr).then(() => {
-    console.info('setReuseAddress success');
-  }).catch((err: BusinessError) => {
-    console.error(`bind failed, code is ${err.code}, message is ${err.message}`);
-  });
-} catch (err) {
-  let error = err as BusinessError;
-  console.error(`setReuseAddress failed, code is ${error.code}, message is ${error.message}`);
-}
-```
 

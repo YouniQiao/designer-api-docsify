@@ -1,6 +1,6 @@
 # FaceTips
 
-表示人脸认证过程中提示码的枚举。
+Enumerates the tip codes used during the facial authentication process.
 
 **Since:** 8
 
@@ -18,7 +18,7 @@
 FACE_AUTH_TIP_TOO_BRIGHT = 1
 ```
 
-光线太强，获取的图像太亮。
+The obtained facial image is too bright due to high illumination.
 
 **Since:** 8
 
@@ -36,7 +36,7 @@ FACE_AUTH_TIP_TOO_BRIGHT = 1
 FACE_AUTH_TIP_TOO_DARK = 2
 ```
 
-光线太暗，获取的图像太暗。
+The obtained facial image is too dark due to low illumination.
 
 **Since:** 8
 
@@ -54,7 +54,7 @@ FACE_AUTH_TIP_TOO_DARK = 2
 FACE_AUTH_TIP_TOO_CLOSE = 3
 ```
 
-人脸距离设备过近。
+The face is too close to the device.
 
 **Since:** 8
 
@@ -72,7 +72,7 @@ FACE_AUTH_TIP_TOO_CLOSE = 3
 FACE_AUTH_TIP_TOO_FAR = 4
 ```
 
-人脸距离设备过远。
+The face is too far away from the device.
 
 **Since:** 8
 
@@ -90,7 +90,7 @@ FACE_AUTH_TIP_TOO_FAR = 4
 FACE_AUTH_TIP_TOO_HIGH = 5
 ```
 
-设备太高，仅获取到人脸上部。
+Only the upper part of the face is captured because the device is angled too high.
 
 **Since:** 8
 
@@ -108,7 +108,7 @@ FACE_AUTH_TIP_TOO_HIGH = 5
 FACE_AUTH_TIP_TOO_LOW = 6
 ```
 
-设备太低，仅获取到人脸下部。
+Only the lower part of the face is captured because the device is angled too low.
 
 **Since:** 8
 
@@ -126,7 +126,7 @@ FACE_AUTH_TIP_TOO_LOW = 6
 FACE_AUTH_TIP_TOO_RIGHT = 7
 ```
 
-设备太靠右，仅获取到人脸右部。
+Only the right part of the face is captured because the device is deviated to the right.
 
 **Since:** 8
 
@@ -144,7 +144,7 @@ FACE_AUTH_TIP_TOO_RIGHT = 7
 FACE_AUTH_TIP_TOO_LEFT = 8
 ```
 
-设备太靠左，仅获取到人脸左部。
+Only the left part of the face is captured because the device is deviated to the left.
 
 **Since:** 8
 
@@ -162,7 +162,7 @@ FACE_AUTH_TIP_TOO_LEFT = 8
 FACE_AUTH_TIP_TOO_MUCH_MOTION = 9
 ```
 
-在图像采集过程中，用户人脸移动太快。
+The face moves too fast during facial information collection.
 
 **Since:** 8
 
@@ -180,7 +180,7 @@ FACE_AUTH_TIP_TOO_MUCH_MOTION = 9
 FACE_AUTH_TIP_POOR_GAZE = 10
 ```
 
-没有正视摄像头。
+The face is not facing the camera.
 
 **Since:** 8
 
@@ -198,7 +198,7 @@ FACE_AUTH_TIP_POOR_GAZE = 10
 FACE_AUTH_TIP_NOT_DETECTED = 11
 ```
 
-没有检测到人脸信息。
+No face is detected.
 
 **Since:** 8
 

@@ -1,6 +1,6 @@
 # PathInfo (System API)
 
-文件迁移的路径信息。
+Path information for file migration.
 
 **Since:** 26.0.0
 
@@ -24,7 +24,7 @@ import { backup } from 'kits/@kit.CoreFileKit';
 destPath: string
 ```
 
-迁移的目标路径。
+Destination path for migration.
 
 **Type:** string
 
@@ -46,7 +46,7 @@ destPath: string
 srcPath: string
 ```
 
-迁移的源路径。
+Source path for migration.
 
 **Type:** string
 

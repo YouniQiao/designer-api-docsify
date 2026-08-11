@@ -1,6 +1,6 @@
 # KioskFeature
 
-Kiosk模式的特征。
+Defines the features of the kiosk mode.
 
 **Since:** 20
 
@@ -16,7 +16,7 @@ Kiosk模式的特征。
 ALLOW_NOTIFICATION_CENTER = 1
 ```
 
-允许进入通知中心（通过单指左上方下滑进入）。
+Allow access to the notification center (by swiping down from the upper left corner with one finger).
 
 **Since:** 20
 
@@ -34,7 +34,7 @@ ALLOW_NOTIFICATION_CENTER = 1
 ALLOW_CONTROL_CENTER = 2
 ```
 
-允许进入控制中心（通过单指右上方下滑进入）。
+Allow access to the control panel (by swiping down from the upper right corner with one finger).
 
 **Since:** 20
 
@@ -52,7 +52,7 @@ ALLOW_CONTROL_CENTER = 2
 ALLOW_GESTURE_CONTROL = 3
 ```
 
-允许进入最近任务栏（通过单指底部上滑停留进入）。
+Allow access to the recent task bar (by swiping up from the bottom with one finger and holding).
 
 **Since:** 24
 
@@ -70,7 +70,7 @@ ALLOW_GESTURE_CONTROL = 3
 ALLOW_SIDE_DOCK = 4
 ```
 
-允许进入侧边DOCK栏（通过单指边缘内滑停留进入）。
+Allow access to the side dock (by swiping inward from the edge with one finger and holding).
 
 **Since:** 24
 

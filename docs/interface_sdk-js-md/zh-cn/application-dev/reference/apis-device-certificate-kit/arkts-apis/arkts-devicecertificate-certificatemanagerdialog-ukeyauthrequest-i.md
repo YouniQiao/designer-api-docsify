@@ -10,12 +10,6 @@ USB Key PIN码认证请求。
 
 **系统能力：** SystemCapability.Security.CertificateManagerDialog
 
-## 导入模块
-
-```TypeScript
-import { certificateManagerDialog } from 'kits/@kit.DeviceCertificateKit';
-```
-
 ## keyUri
 
 ```TypeScript

@@ -1,9 +1,10 @@
 # UIExtensionAbility
 
-UIExtensionAbility组件是带界面的ExtensionAbility组件，继承自  
-[ExtensionAbility](arkts-ability-app-ability-extensionability-extensionability-c.md)，提供了组件创建、销毁、前后台切换等基础生命周期。和UIAbility组件不同，UIExtensionAbility组件不会作为单独的任务在任务视图中体现。UIExtensionAbility组件被宿主窗口启动，该组件的前后台切换状态、以及是否可见均跟随宿主窗口。开发者不可以直接继承UIExtensionAbility组件，但可以根据实际业务场景选择使用继承自UIExtensionAbility组件的其他组件。例如，开发者处理其他应用分享的数据时，可以使用  
-[ShareExtensionAbility组件](arkts-ability-app-ability-shareextensionability-shareextensionability-c.md)；开发者提供卡片编辑功能时，可以使用  
-[FormEditExtensionAbility组件](../../apis-form-kit/arkts-apis/arkts-form-app-form-formeditextensionability-formeditextensionability-c.md/arkts-form-app-form-formeditextensionability-formeditextensionability-c.md)。各类Ability组件的继承关系详见[继承关系说明](../../../reference/apis-ability-kit/js-apis-app-ability-ability.md#ability的继承关系说明)。
+UIExtensionAbility is an ExtensionAbility component with a User Interface (UI). It inherits from  
+[ExtensionAbility](arkts-ability-app-ability-extensionability-extensionability-c.md) and provides basic lifecycle capabilities such as component creation, destruction, and foreground/background switching. Unlike the UIAbility, the UIExtensionAbility does not appear as a separate mission in the mission view. The foreground/background state and visibility of the UIExtensionAbility follow those of its host window.You cannot directly inherit from the UIExtensionAbility. However, you can choose other components that inherit from UIExtensionAbility based on specific service scenarios. For example, when handling data shared from other applications, you can use the  
+[ShareExtensionAbility](arkts-ability-app-ability-shareextensionability-shareextensionability-c.md); when providing widget editing functionality, you can use the  
+[FormEditExtensionAbility](../../apis-form-kit/arkts-apis/arkts-form-app-form-formeditextensionability-formeditextensionability-c.md/arkts-form-app-form-formeditextensionability-formeditextensionability-c.md).For details about the inheritance relationship of each ability, see  
+[Inheritance Relationship](../../../reference/apis-ability-kit/js-apis-app-ability-ability.md#ability-inheritance-relationship).
 
 **Inheritance/Implementation:** UIExtensionAbility extends [ExtensionAbility](arkts-ability-app-ability-extensionability-extensionability-c.md)
 
@@ -27,7 +28,7 @@ import { UIExtensionAbility } from 'kits/@kit.AbilityKit';
 onBackground(): void
 ```
 
-当UIExtensionAbility组件从前台转入到后台时，系统触发该回调。开发者可在该回调中实现UI不可见时的资源释放操作。
+Called when a UIExtensionAbility transitions from the foreground to the background. You can release resources when the UI is no longer invisible within this callback.
 
 **Since:** 10
 
@@ -60,7 +61,7 @@ export default class ShareExtAbility extends ShareExtensionAbility {
 onCreate(launchParam: AbilityConstant.LaunchParam): void
 ```
 
-当UIExtensionAbility组件实例完成创建时，系统会触发该回调。开发者可在该回调中执行初始化逻辑（如定义变量、加载资源等）。
+Called when a UIExtensionAbility instance is created. You can execute initialization logic (such as defining variables and loading resources) within this callback.
 
 **Since:** 10
 
@@ -76,7 +77,7 @@ onCreate(launchParam: AbilityConstant.LaunchParam): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| launchParam | AbilityConstant.LaunchParam | Yes | 应用启动参数，包含应用启动原因、应用上次退出原因等。<br>**Since:** 12 |
+| launchParam | AbilityConstant.LaunchParam | Yes | Parameters for application launch, including the reason for application launch and the reason for the last application exit.<br>**Since:** 12 |
 
 ## Examples
 
@@ -99,7 +100,7 @@ export default class ShareExtAbility extends ShareExtensionAbility {
 onDestroy(): void | Promise<void>
 ```
 
-当UIExtensionAbility组件被销毁时，系统触发该回调。开发者可以在该生命周期中执行资源清理、数据保存等相关操作。使用同步回调或Promise异步回调。在执行完onDestroy生命周期回调后，应用可能会退出，从而可能导致onDestroy中的异步函数未能正确执行，比如异步写入数据库。推荐使用Promise异步回调，避免因应用退出导致onDestroy中的异步函数（比如异步写入数据库）未能正确执行。
+Called when a UIExtensionAbility is destroyed. You can clear resources and save data during this lifecycle. This API returns the result synchronously or uses a promise to return the result.After the **onDestroy()** lifecycle callback is executed, the application may exit. Consequently, the asynchronous function (for example, asynchronously writing data to the database) in **onDestroy()** may fail to be executed.Using a Promise for asynchronous callback is recommended to prevent such issues.
 
 **Since:** 10
 
@@ -161,7 +162,7 @@ export default class ShareExtAbility extends ShareExtensionAbility {
 onDestroy(): Promise<void> | undefined
 ```
 
-UIExtensionAbility生命周期回调，在销毁时回调，执行资源清理等操作。在执行完onDestroy生命周期回调后，应用可能会退出，从而可能导致onDestroy中的异步函数未能正确执行，比如异步写入数据库。可以使用异步生命周期，以确保异步onDestroy完成后再继续后续的生命周期。
+Called back before an UI extension is destroyed.
 
 **Since:** 23
 
@@ -177,7 +178,7 @@ UIExtensionAbility生命周期回调，在销毁时回调，执行资源清理�
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | 以Promise形式返回或返回未定义。 |
+| Promise&lt;void&gt; | the promise returned by the function. |
 
 ## onForeground
 
@@ -185,7 +186,7 @@ UIExtensionAbility生命周期回调，在销毁时回调，执行资源清理�
 onForeground(): void
 ```
 
-当UIExtensionAbility组件首次启动到前台或者从后台转入到前台时，系统触发该回调。开发者可在该回调中实现UI可见时的资源申请操作。
+Called when a UIExtensionAbility is initially launched into the foreground or transitions from the background to the foreground. You can apply for resources when the UI becomes visible within this callback.
 
 **Since:** 10
 
@@ -218,7 +219,7 @@ export default class ShareExtAbility extends ShareExtensionAbility {
 onSessionCreate(want: Want, session: UIExtensionContentSession): void
 ```
 
-当[UIExtensionContentSession](arkts-app-ability-uiextensioncontentsession.md)实例创建完成后，系统会触发该回调。开发者可在该回调中通过UIExtensionContentSession实例加载页面。
+Called when a [UIExtensionContentSession](arkts-app-ability-uiextensioncontentsession.md) instance is created.You can load a page through the UIExtensionContentSession instance within this callback.
 
 **Since:** 10
 
@@ -234,8 +235,8 @@ onSessionCreate(want: Want, session: UIExtensionContentSession): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| want | [Want](arkts-ability-app-ability-want-want-c.md) | Yes | 调用方拉起该UIExtensionAbility组件时传递的数据。 |
-| session | [UIExtensionContentSession](arkts-ability-app-ability-uiextensioncontentsession-uiextensioncontentsession-c.md) | Yes | UIExtensionContentSession实例对象。 |
+| want | [Want](arkts-ability-app-ability-want-want-c.md) | Yes | Data passed by the caller when launching the UIExtensionAbility. |
+| session | [UIExtensionContentSession](arkts-ability-app-ability-uiextensioncontentsession-uiextensioncontentsession-c.md) | Yes | UIExtensionContentSession instance. |
 
 ## Examples
 
@@ -266,7 +267,7 @@ export default class ShareExtAbility extends ShareExtensionAbility {
 onSessionDestroy(session: UIExtensionContentSession): void
 ```
 
-当UIExtensionContentSession实例销毁后，系统触发该回调。该回调用于通知开发者UIExtensionContentSession实例已被销毁，不能再继续使用。
+Called when a UIExtensionContentSession is destroyed. It informs applications that the UIExtensionContentSession instance is no longer available for use.
 
 **Since:** 10
 
@@ -282,7 +283,7 @@ onSessionDestroy(session: UIExtensionContentSession): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| session | [UIExtensionContentSession](arkts-ability-app-ability-uiextensioncontentsession-uiextensioncontentsession-c.md) | Yes | UIExtensionContentSession实例对象。 |
+| session | [UIExtensionContentSession](arkts-ability-app-ability-uiextensioncontentsession-uiextensioncontentsession-c.md) | Yes | UIExtensionContentSession instance. |
 
 ## Examples
 
@@ -305,7 +306,7 @@ export default class ShareExtAbility extends ShareExtensionAbility {
 context: UIExtensionContext
 ```
 
-UIExtensionAbility组件的上下文。
+Context of the UIExtensionAbility.
 
 **Type:** [UIExtensionContext](arkts-ability-uiextensioncontext-c.md)
 

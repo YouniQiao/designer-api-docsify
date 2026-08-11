@@ -1,6 +1,6 @@
 # LongPressGestureHandlerOptions
 
-长按手势处理器配置参数。继承自[BaseHandlerOptions](arkts-arkui-basehandleroptions-i.md)。
+Defines the LongPressGestureHandler options.
 
 **Inheritance/Implementation:** LongPressGestureHandlerOptions extends [BaseHandlerOptions](arkts-arkui-basehandleroptions-i.md)
 
@@ -18,11 +18,7 @@
 allowableMovement?: double
 ```
 
-长按手势识别器识别的手势的最大移动距离，单位为px。
-
-默认值：15 
-
-取值范围：(0, +∞)，设置小于等于0时，按照默认值15处理。
+Indicates maximum moving distance, in px.The default value is 15px.
 
 **Type:** double
 
@@ -42,13 +38,7 @@ allowableMovement?: double
 duration?: int
 ```
 
-触发长按的最短时间，单位为毫秒（ms）。
-
-默认值：500 
-
-**说明：**
-
-取值范围：[0, +∞)，设置小于等于0时，按照默认值500处理。
+Indicates minimum press and hold time, in milliseconds.The default value is 500ms.
 
 **Type:** int
 
@@ -68,15 +58,7 @@ duration?: int
 fingers?: int
 ```
 
-触发长按的最少手指数，最小为1指， 最大取值为10指。
-
-默认值：1 
-
-取值范围：[1, 10]
-
-**说明：**
-
-手指按下后若发生超过15px的移动，则判定当前长按手势识别失败。
+Indicates the hand index that triggers the long press. If the value is less than 1, the default value is used.The default value is 1.
 
 **Type:** int
 
@@ -96,9 +78,7 @@ fingers?: int
 repeat?: boolean
 ```
 
-是否连续触发事件回调。true表示为连续触发事件回调，false表示不连续触发事件回调。
-
-默认值：false
+Indicates whether an event is triggered repeatedly.The default value is false.
 
 **Type:** boolean
 

@@ -1,13 +1,14 @@
 # CalendarDialogOptions
 
-日历选择器弹窗选项。
+Defines the configuration options of the calendar picker dialog box.
 
-继承自[CalendarOptions](arkts-arkui-calendaroptions-i.md)。
+Inherits from [CalendarOptions](arkts-arkui-calendaroptions-i.md).
 
-> **说明：**
+> **NOTE：**
 > 
-> 在应用窗口缩小过程中，弹窗的宽度会被不断压缩，当缩小到一定程度时会导致其内容无法完整显示，保证CalendarPickerDialog内容能够完整显示的最小
-> 窗口宽度为386vp。
+> When the application window is resized, the width of the dialog box is continuously compressed. If the window width
+> is reduced below a certain threshold, the content of the dialog box may not be fully visible. To ensure that the
+> content of the **CalendarPickerDialog** component is fully displayed, the minimum window width required is 386 vp.
 
 **Inheritance/Implementation:** CalendarDialogOptions extends [CalendarOptions](arkts-arkui-calendaroptions-i.md)
 
@@ -25,7 +26,7 @@
 onCancel?: VoidCallback
 ```
 
-点击弹窗中的“取消”按钮时触发该回调。
+Triggered when the Cancel button in the dialog box is clicked.
 
 **Since:** 10
 
@@ -45,24 +46,12 @@ onCancel?: VoidCallback
 onDidAppear?: VoidCallback
 ```
 
-弹窗弹出后的事件回调。
+Event callback after the dialog box appears.
 
-> **说明：**
-> 
-> 1. 正常时序依次为：onWillAppear>>onDidAppear>>(onAccept/onCancel/onChange)>>onWillDisappear>>onDidDisappear。
-> 
-> 2. 在onDidAppear内设置改变显示效果的回调事件，再次调用show时生效。
-> 
-> 3. 快速连续触发弹出与关闭时，存在onWillDisappear在onDidAppear前生效。
-> 
-> 4. 当弹窗入场动效未完成时关闭弹窗，该回调不会触发。
+**NOTE：**
 
-> **选取指导：**
-> 
-> - onWillAppear：适合在弹窗显示前准备数据、重置状态。
-> - onDidAppear：适合在弹窗完全显示后执行动画、发起网络请求、设置焦点等需要弹窗可见才能进行的操作。
-> - onWillDisappear：适合在弹窗消失前保存数据、清理资源、取消网络请求。
-> - onDidDisappear：适合在弹窗完全消失后执行清理工作、重置状态、恢复其他UI。
+1. The normal timing sequence is as follows: onWillAppear > onDidAppear > (onAccept/onCancel/onChange) > onWillDisappear > onDidDisappear.2. You can set the callback event for changing the dialog box display effect in **onDidAppear**. The settings take effect next time the dialog box appears.3. If the user dismisses the dialog box immediately after it appears,  
+ **onWillDisappear** is invoked before **onDidAppear**.4. If the dialog box is dismissed before its entrance animation is finished, this callback is not invoked.
 
 **Since:** 12
 
@@ -82,11 +71,11 @@ onDidAppear?: VoidCallback
 onDidDisappear?: VoidCallback
 ```
 
-弹窗消失后的事件回调。
+Event callback after the dialog box disappears.
 
-> **说明：**
-> 
-> 1. 正常时序依次为：onWillAppear>>onDidAppear>>(onAccept/onCancel/onChange)>>onWillDisappear>>onDidDisappear。
+**NOTE：**
+
+1. The normal timing sequence is as follows: onWillAppear > onDidAppear > (onAccept/onCancel/onChange) > onWillDisappear > onDidDisappear.
 
 **Since:** 12
 
@@ -106,13 +95,11 @@ onDidDisappear?: VoidCallback
 onWillAppear?: VoidCallback
 ```
 
-弹窗显示动效前的事件回调。
+Event callback when the dialog box is about to appear.
 
-> **说明：**
-> 
-> 1. 正常时序依次为：onWillAppear>>onDidAppear>>(onAccept/onCancel/onChange)>>onWillDisappear>>onDidDisappear。
-> 
-> 2. 在onWillAppear内设置改变弹窗显示效果的回调事件，二次弹出生效。
+**NOTE：**
+
+1. The normal timing sequence is as follows: onWillAppear > onDidAppear > (onAccept/onCancel/onChange) > onWillDisappear > onDidDisappear.2. You can set the callback event for changing the dialog box display effect in **onWillAppear**. The settings take effect next time the dialog box appears.
 
 **Since:** 12
 
@@ -132,13 +119,12 @@ onWillAppear?: VoidCallback
 onWillDisappear?: VoidCallback
 ```
 
-弹窗退出动效前的事件回调。
+Event callback when the dialog box is about to disappear.
 
-> **说明：**
-> 
-> 1. 正常时序依次为：onWillAppear>>onDidAppear>>(onAccept/onCancel/onChange)>>onWillDisappear>>onDidDisappear。
-> 
-> 2. 快速连续触发弹出与关闭时，存在onWillDisappear在onDidAppear前生效。
+**NOTE：**
+
+1. The normal timing sequence is as follows: onWillAppear > onDidAppear > (onAccept/onCancel/onChange) > onWillDisappear > onDidDisappear.2. If the user closes the dialog box immediately after it appears,  
+ **onWillDisappear** is invoked before **onDidAppear**.
 
 **Since:** 12
 
@@ -158,15 +144,12 @@ onWillDisappear?: VoidCallback
 acceptButtonStyle?: PickerDialogButtonStyle
 ```
 
-设置确认按钮显示样式、重要程度、角色、背景色、圆角、文本颜色、字号、字体粗细、字体样式、字体列表、按钮是否默认响应Enter键。
+Style of the accept button.
 
-> **说明：**
-> 
-> 1. acceptButtonStyle与cancelButtonStyle中最多只能有一个primary字段配置为true，二者primary字段均配置为true时均不生效。
-> 
-> 2. 按钮高度默认40vp，在关怀模式-大字体场景下高度不变。即使按钮样式设置为圆角矩形
-> [ROUNDED_RECTANGLE](../arkts-apis/arkts-arkui-button-buttontype-e.md/arkts-arkui-button-buttontype-e.md#rounded_rectangle)，在关怀模式-大字体场景下按钮形状仍呈现为胶囊型按钮
-> [Capsule](../arkts-apis/arkts-arkui-button-buttontype-e.md/arkts-arkui-button-buttontype-e.md#capsule)的样式。
+**NOTE：**
+
+In the **acceptButtonStyle** and **cancelButtonStyle** configurations, only one **primary** field can be set to  
+**true** at most. If both the **primary** fields are set to **true**, neither will take effect.
 
 **Type:** [PickerDialogButtonStyle](arkts-arkui-pickerdialogbuttonstyle-i.md)
 
@@ -188,14 +171,13 @@ acceptButtonStyle?: PickerDialogButtonStyle
 backgroundBlurStyle?: BlurStyle
 ```
 
-弹窗背板模糊材质。
+Background blur style of the dialog box.
 
-> 默认值：BlurStyle.COMPONENT_ULTRA_THICK
+Default value: **BlurStyle.COMPONENT_ULTRA_THICK**
 
-> **说明：**
-> 
-> 设置为BlurStyle.NONE即可关闭背景虚化。当设置了backgroundBlurStyle为非NONE值时，则不要设置backgroundColor，否则背景颜色显示效果
-> 不符合预期。设置backgroundEffect后将覆盖本属性效果。
+**NOTE：**
+
+Setting this parameter to **BlurStyle.NONE** disables the background blur. When **backgroundBlurStyle** is set to a value other than **NONE**, do not set **backgroundColor**. If you do, the color display may not produce the expected visual effect.
 
 **Type:** [BlurStyle](arkts-arkui-blurstyle-e.md)
 
@@ -219,11 +201,7 @@ backgroundBlurStyle?: BlurStyle
 backgroundBlurStyleOptions?: BackgroundBlurStyleOptions
 ```
 
-背景模糊效果参数，用于自定义弹窗背景模糊的显示样式，支持配置颜色模式、自适应颜色、缩放比例等属性，实现不同的背景模糊视觉效果。默认值请参考BackgroundBlurStyleOptions。
-
-> **说明：**
-> 
-> 未设置时沿用backgroundBlurStyle的默认效果（BlurStyle.COMPONENT_ULTRA_THICK）。
+Options for customizing the background blur style.
 
 **Type:** [BackgroundBlurStyleOptions](../arkts-apis/arkts-arkui-common-backgroundblurstyleoptions-i.md)
 
@@ -245,13 +223,14 @@ backgroundBlurStyleOptions?: BackgroundBlurStyleOptions
 backgroundColor?: ResourceColor
 ```
 
-弹窗背板颜色。
+Backplane color of the dialog box.
 
-> 默认值：Color.Transparent
+Default value: **Color.Transparent**
 
-> **说明：**
-> 
-> 当设置了backgroundColor为非透明色时，backgroundBlurStyle需要设置为BlurStyle.NONE，否则背景颜色显示效果不符合预期。
+**NOTE：**
+
+When **backgroundColor** is set to a non-transparent color, **backgroundBlurStyle** must be set to  
+**BlurStyle.NONE**; otherwise, the color display may not meet the expected effect.
 
 **Type:** [ResourceColor](../arkts-apis/arkts-arkui-resourcecolor-t.md)
 
@@ -275,12 +254,7 @@ backgroundColor?: ResourceColor
 backgroundEffect?: BackgroundEffectOptions
 ```
 
-背景效果参数，用于自定义弹窗背景的显示效果，支持配置模糊半径、饱和度、亮度、颜色等属性，实现不同的背景视觉效果。默认值请参考[BackgroundEffectOptions](../arkts-apis/arkts-arkui-common-backgroundeffectoptions-i.md/arkts-arkui-common-backgroundeffectoptions-i.md)。
-
-> **说明：**
-> 
-> 未设置时不生效，此时弹窗背景模糊效果由backgroundBlurStyle决定；设置后将覆盖backgroundBlurStyle的效果。从API版本26.0.0开始，
-> 设置systemMaterial后backgroundEffect与backgroundBlurStyle均不生效。
+Options for customizing the background effect.
 
 **Type:** [BackgroundEffectOptions](arkts-arkui-backgroundeffectoptions-i.md)
 
@@ -302,15 +276,12 @@ backgroundEffect?: BackgroundEffectOptions
 cancelButtonStyle?: PickerDialogButtonStyle
 ```
 
-设置取消按钮显示样式、重要程度、角色、背景色、圆角、文本颜色、字号、字体粗细、字体样式、字体列表、按钮是否默认响应Enter键。
+Style of the cancel button.
 
-> **说明：**
-> 
-> 1. acceptButtonStyle与cancelButtonStyle中最多只能有一个primary字段配置为true，二者primary字段均配置为true时均不生效。
-> 
-> 2. 按钮高度默认40vp，在关怀模式-大字体场景下高度不变。即使按钮样式设置为圆角矩形
-> [ROUNDED_RECTANGLE](../arkts-apis/arkts-arkui-button-buttontype-e.md/arkts-arkui-button-buttontype-e.md#rounded_rectangle)，在关怀模式-大字体场景下按钮形状仍呈现为胶囊型按钮
-> [Capsule](../arkts-apis/arkts-arkui-button-buttontype-e.md/arkts-arkui-button-buttontype-e.md#capsule)的样式。
+**NOTE：**
+
+In the **acceptButtonStyle** and **cancelButtonStyle** configurations, only one **primary** field can be set to  
+**true** at most. If both the **primary** fields are set to **true**, neither will take effect.
 
 **Type:** [PickerDialogButtonStyle](arkts-arkui-pickerdialogbuttonstyle-i.md)
 
@@ -332,12 +303,12 @@ cancelButtonStyle?: PickerDialogButtonStyle
 enableHoverMode?: boolean
 ```
 
-设置弹窗是否响应悬停态，适用于折叠屏等支持悬停模式的设备。
+Whether to respond when the device is in semi-folded mode.
 
-- true：弹窗响应悬停态，在折叠屏悬停模式下会自适应调整布局区域，提供更好的多任务体验。  
-- false：弹窗不响应悬停态，在悬停模式下保持默认布局。
+- **true**: Respond when the device is in semi-folded mode.  
+- **false**: Do not respond when the device is in semi-folded mode.
 
-默认值：false
+Default value: **false**.
 
 **Type:** boolean
 
@@ -361,9 +332,9 @@ enableHoverMode?: boolean
 hoverModeArea?: HoverModeAreaType
 ```
 
-设置悬停态下弹窗的默认展示区域，仅在enableHoverMode为true时生效。不同的区域值对应弹窗在折叠屏悬停模式下的不同布局位置（如BOTTOM_SCREEN表示弹窗展示在下半屏区域，TOP_SCREEN表示弹窗展示在上半屏区域）。
+Display area of the dialog box when the device is in semi-folded mode.
 
-> 默认值：HoverModeAreaType.BOTTOM_SCREEN
+Default value: **HoverModeAreaType.BOTTOM_SCREEN**
 
 **Type:** [HoverModeAreaType](arkts-arkui-hovermodeareatype-e.md)
 
@@ -387,12 +358,12 @@ hoverModeArea?: HoverModeAreaType
 markToday?: boolean
 ```
 
-设置日历选择器弹窗中系统当前日期是否保持高亮显示。
+Whether to highlight the current system date.
 
-- true：系统当前日期在日历选择器弹窗内保持高亮显示。  
-- false：系统当前日期在日历选择器弹窗内不保持高亮显示。
+- **true**: Highlight the current system date.  
+- **false**: Do not highlight the current system date.
 
-> 默认值：false
+Default value: **false**.
 
 **Type:** boolean
 
@@ -416,9 +387,9 @@ markToday?: boolean
 onAccept?: Callback<Date>
 ```
 
-点击弹窗中的“确定”按钮时触发该回调。
+Triggered when the OK button in the dialog box is clicked.
 
-回调函数的参数表示选中的日期值。
+The callback parameter represents the selected date value.
 
 **Type:** [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;Date&gt;
 
@@ -440,9 +411,9 @@ onAccept?: Callback<Date>
 onChange?: Callback<Date>
 ```
 
-选择弹窗中日期使当前选中项改变时触发该回调。
+Triggered when the selection in the picker changes the selected date.
 
-回调函数的参数表示选中的日期值。
+The callback parameter represents the selected date value.
 
 **Type:** [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;Date&gt;
 
@@ -464,9 +435,10 @@ onChange?: Callback<Date>
 shadow?: ShadowOptions | ShadowStyle
 ```
 
-设置弹窗背板的阴影。
+Shadow of the dialog box.
 
-当设备为2in1时，默认场景下获焦阴影值为ShadowStyle.OUTER_FLOATING_MD，失焦为ShadowStyle.OUTER_FLOATING_SM。
+Default value on 2-in-1 devices: **ShadowStyle.OUTER_FLOATING_MD** when the dialog box is focused and  
+**ShadowStyle.OUTER_FLOATING_SM** otherwise
 
 **Type:** [ShadowOptions](../arkts-apis/arkts-arkui-common-shadowoptions-i.md) \| ShadowStyle
 
@@ -488,18 +460,7 @@ shadow?: ShadowOptions | ShadowStyle
 systemMaterial?: SystemUiMaterial
 ```
 
-设置弹窗的系统材质。
-
-> **说明：**
-> 
-> - 默认值：[ImmersiveOptions](ImmersiveOptions)的style为ImmersiveStyle.ULTRA_THICK的
-> [ImmersiveMaterial](ImmersiveMaterial)对象。设置undefined时与默认值保持一致。
-> - 不同的材质具有不同的视觉效果，包括背景透明度、模糊程度、阴影样式等方面的差异，该接口影响背景色
-> [backgroundColor](../arkts-apis/arkts-arkui-common-commonmethod-i.md/arkts-arkui-common-commonmethod-i.md#backgroundcolor)、背景模糊
-> [backgroundBlurStyle](../arkts-apis/arkts-arkui-common-commonmethod-i.md/arkts-arkui-common-commonmethod-i.md#backgroundblurstyle)
-> 、背景效果[backgroundEffect](../arkts-apis/arkts-arkui-common-commonmethod-i.md/arkts-arkui-common-commonmethod-i.md#backgroundeffect)、边框颜色
-> [borderColor](../arkts-apis/arkts-arkui-common-commonmethod-i.md/arkts-arkui-common-commonmethod-i.md#bordercolor)、边框宽度[borderWidth](../arkts-apis/arkts-arkui-common-commonmethod-i.md/arkts-arkui-common-commonmethod-i.md#borderwidth)、阴影
-> [shadow](../arkts-apis/arkts-arkui-common-commonmethod-i.md/arkts-arkui-common-commonmethod-i.md#shadow)，当设置系统材质时，上述接口不生效。
+Set system-styled materials for dialog. Different materials have different effects,which can influence backgroundColor, border, shadow, and other visual attributes of dialog.
 
 **Type:** [SystemUiMaterial](../arkts-apis/arkts-arkui-systemuimaterial-t.md)
 

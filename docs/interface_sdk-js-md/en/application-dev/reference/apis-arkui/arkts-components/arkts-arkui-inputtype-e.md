@@ -1,6 +1,6 @@
 # InputType
 
-单行文本输入框类型。
+Sets the single-line text box type.
 
 **Since:** 7
 
@@ -16,9 +16,9 @@
 Normal
 ```
 
-基本输入模式，无特殊限制。
+Normal input mode. In this mode, there is no special restriction on the input characters.
 
-内联输入风格只支持InputType.Normal类型。
+The inline style supports only the **InputType.Normal** type.
 
 **Since:** 7
 
@@ -36,9 +36,9 @@ Normal
 Number
 ```
 
-纯数字输入模式。
+Digit input mode.
 
-不支持负数、小数。
+Negative numbers and decimals are not supported.
 
 **Since:** 7
 
@@ -56,9 +56,9 @@ Number
 PhoneNumber
 ```
 
-电话号码输入模式。
+Phone number input mode.
 
-支持输入数字、空格、+ 、-、*、#、(、)，长度不限。
+In this mode, the following characters are allowed: digits, spaces, plus signs (+), hyphens (-), asterisks (*), and number signs (#), opening parentheses ((), and closing parenthesis ()); the length is not limited.
 
 **Since:** 9
 
@@ -76,9 +76,9 @@ PhoneNumber
 Email
 ```
 
-邮箱地址输入模式。
+Email address input mode.
 
-支持数字、字母、下划线、小数点、!、#、\$、%、&、'、"、*、+、-、/、=、?、^、`、{、|、}、~，以及@字符（只能存在一个@字符）。
+This mode accepts only digits, letters, underscores (_), dots (.), and the following special characters: ! # \$ % &' " * + - / = ? ^ ` { | } ~ @. The at sign can appear only once.
 
 **Since:** 7
 
@@ -96,16 +96,16 @@ Email
 Password
 ```
 
-密码输入模式。
+Password input mode.
 
-默认输入文字短暂显示后变成圆点。从API version 12开始，PC/2in1设备上输入文字直接显示为圆点。
+The entered text is briefly displayed before turning to dots by default. Since API version 12, the entered text is directly displayed as dots on PCs and 2-in-1 devices.
 
-TV设备上输入框末尾默认不显示小眼睛图标，其他设备输入框末尾默认显示小眼睛图标。
+The eye icon at the end of the input box is hidden by default on TV devices, and shown by default on other devices.
 
-密码输入模式中，[decoration](TextInputAttribute#decoration)、[showUnderline](TextInputAttribute#showUnderline)、  
-[lineHeight](TextInputAttribute#lineHeight)不生效。
+The [decoration](TextInputAttribute#decoration), [showUnderline](TextInputAttribute#showUnderline), and  
+[lineHeight](TextInputAttribute#lineHeight) attributes do not take effect in password input mode.
 
-在已启用密码保险箱的情况下，支持用户名、密码的自动保存和自动填充。
+If Password Vault is enabled, autofill is available for the username and password.
 
 **Since:** 7
 
@@ -123,14 +123,13 @@ TV设备上输入框末尾默认不显示小眼睛图标，其他设备输入框
 NUMBER_PASSWORD = 8
 ```
 
-纯数字密码输入模式。
+Numeric password input mode.
 
-默认输入文字短暂显示后变成圆点。从API version 12开始，PC/2in1设备上输入文字直接显示为圆点。
+The entered text is briefly displayed before turning to dots by default. Since API version 12, the entered text is directly displayed as dots on PCs and 2-in-1 devices.
 
-TV设备上输入框末尾默认不显示小眼睛图标，其他设备输入框末尾默认显示小眼睛图标。
+The eye icon at the end of the input box is hidden by default on TV devices, and shown by default on other devices.
 
-密码输入模式中，[decoration](TextInputAttribute#decoration)、[showUnderline](TextInputAttribute#showUnderline)、  
-[lineHeight](TextInputAttribute#lineHeight)、[fontFeature](TextInputAttribute#fontFeature)不生效。在已启用密码保险箱的情况下，支持用户名、密码的自动保存和自动填充。
+The password input mode does not support underlines. If Password Vault is enabled, autofill is available for the username and password.
 
 **Since:** 11
 
@@ -150,10 +149,9 @@ TV设备上输入框末尾默认不显示小眼睛图标，其他设备输入框
 USER_NAME = 10
 ```
 
-用户名输入模式，无特殊限制。
+User name input mode with no special restrictions.
 
-在已启用密码保险箱的情况下，支持用户名的自动保存和自动填充，用于配合[InputType.Password](arkts-arkui-inputtype-e.md)、  
-[InputType.NUMBER_PASSWORD](arkts-arkui-inputtype-e.md)、[InputType.NEW_PASSWORD](arkts-arkui-inputtype-e.md)完成用户名密码配对填充。
+If Password Vault is enabled, autofill is available for the username and password.
 
 **Since:** 11
 
@@ -173,14 +171,13 @@ USER_NAME = 10
 NEW_PASSWORD = 11
 ```
 
-新密码输入模式。
+New password input mode with no special restrictions.
 
-默认输入文字短暂显示后变成圆点。从API version 12开始，PC/2in1设备上输入文字直接显示为圆点。
+The entered text is briefly displayed before turning to dots by default. Since API version 12, the entered text is directly displayed as dots on PCs and 2-in-1 devices.
 
-TV设备上输入框末尾默认不显示小眼睛图标，其他设备输入框末尾默认显示小眼睛图标。
+The eye icon at the end of the input box is hidden by default on TV devices, and shown by default on other devices.
 
-密码输入模式中，[decoration](TextInputAttribute#decoration)、[showUnderline](TextInputAttribute#showUnderline)、  
-[lineHeight](TextInputAttribute#lineHeight)、[fontFeature](TextInputAttribute#fontFeature)不生效。在已启用密码保险箱的情况下，支持自动生成新密码。
+If Password Vault is enabled, a new password can be automatically generated.
 
 **Since:** 11
 
@@ -200,9 +197,9 @@ TV设备上输入框末尾默认不显示小眼睛图标，其他设备输入框
 NUMBER_DECIMAL = 12
 ```
 
-带小数点的数字输入模式。
+Number input mode with a decimal point.
 
-支持数字，小数点（只能存在一个小数点）。不支持负数（包括负数整数和负数小数）。若需支持负数输入，请使用[inputFilter](TextInputAttribute#inputFilter)属性实现负数过滤。
+The value can contain digits and only one decimal point. Negative decimals are not supported. For the input mode of negative decimals, use **inputFilter**.
 
 **Since:** 11
 
@@ -222,7 +219,7 @@ NUMBER_DECIMAL = 12
 URL = 13
 ```
 
-带URL的输入模式，无特殊限制。
+URL input mode with no special restrictions.
 
 **Since:** 12
 
@@ -242,7 +239,7 @@ URL = 13
 ONE_TIME_CODE = 14
 ```
 
-验证码输入模式，无特殊限制。
+One-time code (verification code) input mode with no special restrictions.
 
 **Since:** 20
 

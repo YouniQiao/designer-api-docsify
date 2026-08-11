@@ -1,7 +1,6 @@
 # WantAgentInfo
 
-定义触发WantAgent所需要的信息，可以作为  
-[getWantAgent](../../../reference/apis-ability-kit/js-apis-app-ability-wantAgent.md#wantagentgetwantagent)的入参创建指定的WantAgent对象。
+Defines the information required for triggering a WantAgent object. The information can be used as an input parameter in [getWantAgent](../../../reference/apis-ability-kit/js-apis-app-ability-wantAgent.md#wantagentgetwantagent) to obtain a specified WantAgent object.
 
 **Since:** 7
 
@@ -17,11 +16,13 @@
 userId?: int
 ```
 
-用户ID。
+User ID.
 
-取值范围：大于等于0。
+The value must be greater than or equal to 0.
 
-默认值为调用方所在用户ID。
+The default value is the user ID of the caller.
+
+This API can be used only in the stage model.
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 

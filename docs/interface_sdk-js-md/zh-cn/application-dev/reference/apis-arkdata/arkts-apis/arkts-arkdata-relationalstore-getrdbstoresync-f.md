@@ -1,11 +1,5 @@
 # getRdbStoreSync
 
-## 导入模块
-
-```TypeScript
-import { relationalStore } from 'kits/@kit.ArkData';
-```
-
 ## getRdbStoreSync
 
 ```TypeScript
@@ -52,20 +46,44 @@ getRdbStoreSync支持多线程并发操作。
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 14800001 | Invalid args. |
-| 14800017 | Config changed. |
-| 14800021 | SQLite: Generic error. |
-| 14800020 | The secret key is corrupted or lost. |
-| 14801001 | The operation is supported in the stage model only. |
-| 14800011 | The current operation failed because the database is corrupted. |
-| 14800027 | SQLite: Attempt to write a readonly database. |
-| 14800010 | Invalid database path. |
-| 14801002 | Invalid data group ID. |
-| 14800029 | SQLite: The database is full. |
-| 14800028 | SQLite: Some kind of disk I/O error occurred. |
-| 14800030 | SQLite: Unable to open the database file. |
+| [14800001](../errorcode-data-rdb.md#14800001-无效的参数) | Invalid args. |
+| [14800017](../errorcode-data-rdb.md#14800017-关键配置已被更改) | Config changed. |
+| [14800021](../errorcode-data-rdb.md#14800021-sqlite通用错误) | SQLite: Generic error. |
+| [14800020](../errorcode-data-rdb.md#14800020-密钥损坏或丢失) | The secret key is corrupted or lost. |
+| [14801001](../errorcode-data-rdb.md#14801001-上下文环境非stage模型) | The operation is supported in the stage model only. |
+| [14800011](../errorcode-data-rdb.md#14800011-数据库文件异常) | The current operation failed because the database is corrupted. |
+| [14800027](../errorcode-data-rdb.md#14800027-sqlite尝试写入只读数据库) | SQLite: Attempt to write a readonly database. |
+| [14800010](../../apis-basic-services-kit/errorcode-settings.md#14800010-上下文参数不是uiability类型) | Invalid database path. |
+| [14801002](../errorcode-data-rdb.md#14801002-storeconfig中传入的datagroupid参数非法) | Invalid data group ID. |
+| [14800029](../errorcode-data-rdb.md#14800029-sqlite数据库已满) | SQLite: The database is full. |
+| [14800028](../errorcode-data-rdb.md#14800028-sqlite发生了某种磁盘io错误) | SQLite: Some kind of disk I/O error occurred. |
+| [14800030](../errorcode-data-rdb.md#14800030-sqlite无法打开数据库文件) | SQLite: Unable to open the database file. |
 
 ## 示例
+
+```TypeScript
+import { UIAbility } from '@kit.AbilityKit';
+import { window } from '@kit.ArkUI';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let store: relationalStore.RdbStore | undefined = undefined;
+
+class EntryAbility extends UIAbility {
+  onWindowStageCreate(windowStage: window.WindowStage) {
+    const STORE_CONFIG: relationalStore.StoreConfig = {
+      name: "RdbTest.db",
+      securityLevel: relationalStore.SecurityLevel.S1
+    };
+
+    try {
+      store = relationalStore.getRdbStoreSync(this.context, STORE_CONFIG);
+      console.info('Get RdbStore successfully.');
+    } catch (err) {
+      console.error(`Get RdbStore failed, code is ${err.code},message is ${err.message}`);
+    };
+  }
+}
+```
 
 ```TypeScript
 import { UIAbility } from '@kit.AbilityKit';

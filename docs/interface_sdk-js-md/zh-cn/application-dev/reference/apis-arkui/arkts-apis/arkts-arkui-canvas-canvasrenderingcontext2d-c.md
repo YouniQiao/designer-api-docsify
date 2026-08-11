@@ -34,7 +34,7 @@ constructor(settings?: RenderingContextSettings, unit?: LengthMetricsUnit)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| settings | [RenderingContextSettings](arkts-arkui-canvas-renderingcontextsettings-c.md) | 否 | 用来配置CanvasRenderingContext2D对象的参数， 见RenderingContextSettings。 异常值undefined和null按RenderingContextSettings的默认值处理。 |
+| settings | [RenderingContextSettings](arkts-arkui-renderingcontextsettings-c.md) | 否 | 用来配置CanvasRenderingContext2D对象的参数， 见RenderingContextSettings。 异常值undefined和null按RenderingContextSettings的默认值处理。 |
 | unit | [LengthMetricsUnit](arkts-arkui-lengthmetricsunit-t.md) | 否 | 用来配置CanvasRenderingContext2D对象的单位模式， 配置后无法更改。异常值undefined、NaN和Infinity按默认值处理。默认值：DEFAULT。 |
 
 ## getContext2DFromDrawingContext
@@ -79,7 +79,7 @@ static getContext2DFromDrawingContext(drawingContext: DrawingRenderingContext, o
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 103702 | The drawingContext is not bound to a canvas component. @static |
+| [103702](../errorcode-canvas.md#103702-绘制上下文未绑定canvas组件) | The drawingContext is not bound to a canvas component. @static |
 
 ## offAttach
 
@@ -109,7 +109,7 @@ offAttach(callback?: VoidCallback): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 401 | Input parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Input parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
 
 ## offDetach
 
@@ -139,7 +139,7 @@ offDetach(callback?: VoidCallback): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 401 | Input parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Input parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
 
 ## onAttach
 
@@ -179,7 +179,7 @@ onAttach(callback: VoidCallback): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 401 | Input parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Input parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
 
 ## onDetach
 
@@ -217,7 +217,7 @@ onDetach(callback: VoidCallback): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 401 | Input parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Input parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
 
 ## startImageAnalyzer
 
@@ -259,9 +259,9 @@ startImageAnalyzer(config: ImageAnalyzerConfig): Promise<void>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 110001 | Image analysis feature is not supported. |
-| 110003 | Image analysis is stopped. |
-| 110002 | Image analysis is currently being executed. |
+| [110001](../arkui-ts/errorcode-image-analyzer.md#110001-ai图像分析功能不支持) | Image analysis feature is not supported. |
+| [110003](../arkui-ts/errorcode-image-analyzer.md#110003-ai图像分析已停止) | Image analysis is stopped. |
+| [110002](../arkui-ts/errorcode-image-analyzer.md#110002-ai图像分析正在进行中) | Image analysis is currently being executed. |
 
 ## stopImageAnalyzer
 

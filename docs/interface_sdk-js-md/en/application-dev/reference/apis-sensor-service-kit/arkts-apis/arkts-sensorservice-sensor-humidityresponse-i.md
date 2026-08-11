@@ -1,6 +1,6 @@
 # HumidityResponse
 
-湿度传感器数据，继承于[Response](arkts-sensorservice-sensor-response-i.md)。
+Describes the humidity sensor data. It extends from [Response](arkts-sensorservice-sensor-response-i.md).
 
 **Inheritance/Implementation:** HumidityResponse extends [Response](arkts-sensorservice-sensor-response-i.md)
 
@@ -24,7 +24,7 @@ import { sensor } from 'kits/@kit.SensorServiceKit';
 humidity: double
 ```
 
-环境的相对湿度。单位：%（百分比），表示环境的相对湿度百分比。
+Ambient relative humidity, in a percentage (%).
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：double
 

@@ -1,11 +1,5 @@
 # registerThermalLevelCallback
 
-## 导入模块
-
-```TypeScript
-import { thermal } from 'kits/@kit.BasicServicesKit';
-```
-
 ## registerThermalLevelCallback
 
 ```TypeScript
@@ -32,7 +26,7 @@ function registerThermalLevelCallback(callback: Callback<ThermalLevel>): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1. Incorrect parameter types; |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1. Incorrect parameter types; |
 
 ## 示例
 
@@ -42,8 +36,8 @@ try {
         console.info('thermal level is: ' + level);
     });
     console.info('register thermal level callback success.');
-} catch (err) {
-    console.error(`Failed to register thermal level callback. Code: ${err.code}, message: ${err.message}`);
+} catch(err) {
+    console.error('register thermal level callback failed, err: ' + err);
 }
 ```
 

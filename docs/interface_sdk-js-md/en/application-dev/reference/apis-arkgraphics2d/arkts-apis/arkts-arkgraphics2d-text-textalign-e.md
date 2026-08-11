@@ -1,6 +1,6 @@
 # TextAlign
 
-文本对齐方式枚举。
+Enumerates the text alignment modes.
 
 **Since:** 12
 
@@ -16,7 +16,7 @@
 LEFT = 0
 ```
 
-文本靠左对齐。
+Left-aligned.
 
 **Since:** 12
 
@@ -34,7 +34,7 @@ LEFT = 0
 RIGHT = 1
 ```
 
-文本靠右对齐。
+Right-aligned.
 
 **Since:** 12
 
@@ -52,7 +52,7 @@ RIGHT = 1
 CENTER = 2
 ```
 
-文本居中对齐。
+Center-aligned.
 
 **Since:** 12
 
@@ -70,7 +70,7 @@ CENTER = 2
 JUSTIFY = 3
 ```
 
-文本两侧对齐，对最后一行无效。
+Justified, which means that each line (except the last line) is stretched so that every line has equal width, and the left and right margins are straight.
 
 **Since:** 12
 
@@ -88,7 +88,7 @@ JUSTIFY = 3
 START = 4
 ```
 
-基于文本的方向[TextDirection](arkts-arkgraphics2d-text-textdirection-e.md)，文本靠开头方向对齐。
+Aligned with the start position, which depends on [TextDirection](arkts-arkgraphics2d-text-textdirection-e.md).
 
 **Since:** 12
 
@@ -106,7 +106,7 @@ START = 4
 END = 5
 ```
 
-基于文本的方向[TextDirection](arkts-arkgraphics2d-text-textdirection-e.md)，文本以结束方向对齐。
+Aligned with the end position, which depends on [TextDirection](arkts-arkgraphics2d-text-textdirection-e.md).
 
 **Since:** 12
 

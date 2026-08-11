@@ -1,6 +1,6 @@
 # CacheStrategy
 
-表示缓存刷新策略的枚举。
+Enumerates cache update strategies.
 
 **Since:** 23
 
@@ -16,7 +16,7 @@
 FORCE = 0
 ```
 
-强制更新缓存，无论缓存是否已经存在。
+Forcibly updates the cache, regardless of whether the cache already exists.
 
 **Since:** 23
 
@@ -32,7 +32,7 @@ FORCE = 0
 LAZY = 1
 ```
 
-延迟更新缓存，只有当缓存不存在时才会更新。
+Updates the cache only when the cache does not exist.
 
 **Since:** 23
 

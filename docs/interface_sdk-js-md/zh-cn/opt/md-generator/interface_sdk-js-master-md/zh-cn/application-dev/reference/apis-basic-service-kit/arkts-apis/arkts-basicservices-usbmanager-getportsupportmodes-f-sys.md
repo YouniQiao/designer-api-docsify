@@ -1,0 +1,40 @@
+# getPortSupportModes（系统接口）
+
+## getPortSupportModes
+
+```TypeScript
+function getPortSupportModes(portId: number): PortModeType
+```
+
+获取指定的端口支持的模式列表的组合掩码。
+
+**起始版本：** 12
+
+**需要权限：** ohos.permission.MANAGE_USB_CONFIG
+
+<!--Device-usbManager-function getPortSupportModes(portId: int): PortModeType--><!--Device-usbManager-function getPortSupportModes(portId: int): PortModeType-End-->
+
+**系统能力：** SystemCapability.USB.USBManager
+
+**系统接口：** 此接口为系统接口。
+
+**参数：**
+
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| portId | number | 是 |
+
+**返回值：**
+
+| 类型 |
+| --- |
+| [PortModeType](arkts-basicservices-usbmanager-portmodetype-e-sys.md) |
+
+**错误码：**
+
+| 错误码ID |
+| --- |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
+| [801](../../errorcode-universal.md#801-该设备不支持此api) |
+| [201](../../errorcode-universal.md#201-权限校验失败) |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) |

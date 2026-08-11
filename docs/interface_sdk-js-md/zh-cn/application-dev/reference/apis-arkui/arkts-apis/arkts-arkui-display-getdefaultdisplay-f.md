@@ -1,11 +1,5 @@
 # getDefaultDisplay
 
-## 导入模块
-
-```TypeScript
-import { display } from 'kits/@kit.ArkUI';
-```
-
 ## getDefaultDisplay
 
 ```TypeScript

@@ -1,6 +1,6 @@
 # IProviderDecoratedVariable
 
-Provider装饰的变量。
+Define Provider decoration variable interface.
 
 **Inheritance/Implementation:** IProviderDecoratedVariable extends [IDecoratedMutableVariable<T>](IDecoratedMutableVariable<T>), [IDecoratedV2Variable<T>](IDecoratedV2Variable<T>)
 

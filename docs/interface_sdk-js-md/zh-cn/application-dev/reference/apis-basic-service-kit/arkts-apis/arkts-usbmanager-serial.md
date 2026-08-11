@@ -10,12 +10,6 @@
 
 **系统能力：** SystemCapability.USB.USBManager.Serial
 
-## 导入模块
-
-```TypeScript
-import { serialManager } from 'kits/@kit.BasicServicesKit';
-```
-
 ## 汇总
 
 ### 函数

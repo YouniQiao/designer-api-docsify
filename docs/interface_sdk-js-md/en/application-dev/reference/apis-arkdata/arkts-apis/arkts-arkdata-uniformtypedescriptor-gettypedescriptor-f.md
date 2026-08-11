@@ -12,7 +12,7 @@ import { uniformTypeDescriptor } from 'kits/@kit.ArkData';
 function getTypeDescriptor(typeId: string): TypeDescriptor
 ```
 
-按给定的标准化数据类型ID查询并返回对应的标准化数据类型描述类对象。
+Obtains the **TypeDescriptor** object based on the uniform data type ID.
 
 **Since:** 11
 
@@ -28,19 +28,19 @@ function getTypeDescriptor(typeId: string): TypeDescriptor
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| typeId | string | Yes | [标准化数据类型ID]。 |
+| typeId | string | Yes | [Uniform data type ID]. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [TypeDescriptor](arkts-arkdata-uniformtypedescriptor-typedescriptor-c.md) | 返回标准化数据类型描述类对象。如果要查询的标准化数据类型不存在，则返回null。 |
+| [TypeDescriptor](arkts-arkdata-uniformtypedescriptor-typedescriptor-c.md) | TypeDescriptor** object obtained. If the uniform data type does not exist, **null** is returned. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. Possible causes:1.Mandatory parameters are left unspecified; &lt;br&gt;2.Incorrect parameter types; &lt;br&gt;3. Parameter verification failed. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes:1.Mandatory parameters are left unspecified; &lt;br&gt;2.Incorrect parameter types; &lt;br&gt;3. Parameter verification failed. |
 
 ## Examples
 
@@ -75,7 +75,7 @@ try {
 function getTypeDescriptor(typeId: string): TypeDescriptor | null
 ```
 
-按给定的标准化数据类型ID查询并返回对应的标准化数据类型描述类对象。
+Queries and returns the uniform type descriptor by the given uniform data type ID.
 
 **Since:** 23
 
@@ -91,17 +91,17 @@ function getTypeDescriptor(typeId: string): TypeDescriptor | null
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| typeId | string | Yes | [标准化数据类型ID]。 |
+| typeId | string | Yes | Uniform data type ID. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [TypeDescriptor](arkts-arkdata-uniformtypedescriptor-typedescriptor-c.md) | 返回标准化数据类型描述类对象。如果要查询的标准化数据类型不存在，则返回null。 |
+| [TypeDescriptor](arkts-arkdata-uniformtypedescriptor-typedescriptor-c.md) | Returns the uniform type descriptor corresponding to the uniform data type ID or null if the uniform data type does not exist. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2.Incorrect parameter types; &lt;br&gt;3. Parameter verification failed. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2.Incorrect parameter types; &lt;br&gt;3. Parameter verification failed. |
 

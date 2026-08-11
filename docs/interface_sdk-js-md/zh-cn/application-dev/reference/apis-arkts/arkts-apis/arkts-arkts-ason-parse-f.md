@@ -1,11 +1,5 @@
 # parse
 
-## 导入模块
-
-```TypeScript
-import { ArkTSUtils } from 'kits/@kit.ArkTS';
-```
-
 ## parse
 
 ```TypeScript
@@ -36,5 +30,5 @@ function parse(text: string, reviver?: Transformer, options?: ParseOptions): ISe
 
 | 类型 | 说明 |
 | --- | --- |
-| [ISendable](../../apis-image-kit/arkts-apis/arkts-image-sendableimage-isendable-t.md) | 返回ISendable数据或null。入参为null时，返回null。 |
+| [ISendable](arkts-arkts-ason-isendable-t.md) | 返回ISendable数据或null。入参为null时，返回null。 |
 

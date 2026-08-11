@@ -1,11 +1,5 @@
 # @ohos.web.WebNativeMessagingExtensionContext
 
-## 导入模块
-
-```TypeScript
-import { WebNativeMessagingExtensionContext } from 'kits/@kit.ArkWeb';
-```
-
 ## 汇总
 
 ### 类

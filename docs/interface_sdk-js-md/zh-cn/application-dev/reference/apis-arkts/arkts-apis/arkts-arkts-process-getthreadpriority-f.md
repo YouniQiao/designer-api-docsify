@@ -1,11 +1,5 @@
 # getThreadPriority
 
-## 导入模块
-
-```TypeScript
-import { process } from 'kits/@kit.ArkTS';
-```
-
 ## getThreadPriority
 
 ```TypeScript

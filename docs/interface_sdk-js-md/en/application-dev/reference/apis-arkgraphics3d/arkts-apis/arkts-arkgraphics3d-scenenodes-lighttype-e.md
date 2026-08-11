@@ -1,6 +1,6 @@
 # LightType
 
-光源类型枚举.
+The enum of light type.
 
 **Since:** 12
 
@@ -16,7 +16,7 @@
 DIRECTIONAL = 1
 ```
 
-平行光.
+Directional light.
 
 **Since:** 12
 
@@ -32,7 +32,7 @@ DIRECTIONAL = 1
 SPOT = 2
 ```
 
-聚光灯.
+Spot light.
 
 **Since:** 12
 

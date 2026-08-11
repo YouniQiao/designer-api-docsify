@@ -1,6 +1,6 @@
 # Material
 
-UI侧的系统材质对象。
+Base class of the system material object on the UI.
 
 **Since:** 26.0.0
 
@@ -22,7 +22,7 @@ import { uiMaterial } from 'kits/@kit.ArkUI';
 constructor(options?: MaterialOptions)
 ```
 
-Material的构造函数。
+Constructor of material class.
 
 **Since:** 23
 
@@ -38,7 +38,7 @@ Material的构造函数。
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| options | [MaterialOptions](arkts-arkui-uimaterial-materialoptions-i.md) | No | 系统材质配置选项，包括材质类型。&lt;br/&gt;默认值：{type:MaterialType.NONE} |
+| options | [MaterialOptions](arkts-arkui-uimaterial-materialoptions-i.md) | No | the options to construct a material. &lt;br&gt;Default value:{type:uiMaterial.MaterialType.NONE} |
 
 ## empty
 
@@ -46,9 +46,10 @@ Material的构造函数。
 static get empty(): Material
 ```
 
-返回空材质对象，用于组件单独关闭沉浸式系统材质效果。使用方式为`uiMaterial.Material.empty`。
+Returns an empty material object, which is used to disable the immersive system material effect for a component. The usage method is **uiMaterial.Material.empty**.
 
-在enable模式下，可通过设置`systemMaterial(uiMaterial.Material.empty)`来单独关闭某个组件的沉浸式系统材质效果。如果组件未支持组件级沉浸式系统材质接口，则无法通过此方法关闭材质效果。
+In enabled state, you can disable the immersive system material effect for a component by setting   
+**systemMaterial(uiMaterial.Material.empty)**. If the component does not support the component-level immersive system material API, the material effect cannot be disabled using this API.
 
 **Since:** 26.0.0
 

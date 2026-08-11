@@ -1,6 +1,6 @@
 # MixedMode
 
-混合内容模式。默认设置为 MixedMode.None。
+The Web's behavior to load from HTTP or HTTPS. Defaults to MixedMode.None.
 
 **Since:** 8
 
@@ -16,7 +16,7 @@
 All = 0
 ```
 
-宽松模式：允许加载HTTP和HTTPS混合内容。所有不安全的内容都可以被加载。
+Loose mode: Allow a secure origin to load content from any other origin.
 
 **Since:** 8
 
@@ -34,7 +34,7 @@ All = 0
 Compatible = 1
 ```
 
-兼容模式：混合内容兼容性模式，部分不安全的内容可能被加载。
+Compatible mode: Some insecure content may be allowed to be loaded by a secure origin.
 
 **Since:** 8
 
@@ -52,7 +52,7 @@ Compatible = 1
 None = 2
 ```
 
-严格模式：不允许加载HTTP和HTTPS混合内容。
+Strict mode: Not allow a secure origin to load content from an insecure origin.
 
 **Since:** 8
 

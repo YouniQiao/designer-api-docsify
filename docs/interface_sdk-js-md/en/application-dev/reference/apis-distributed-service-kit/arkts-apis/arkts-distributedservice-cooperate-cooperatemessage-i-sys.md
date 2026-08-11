@@ -1,6 +1,6 @@
 # CooperateMessage (System API)
 
-键鼠穿越的消息。
+Defines a screen hopping status change event.
 
 **Since:** 11
 
@@ -24,7 +24,7 @@ import { cooperate } from 'kits/@kit.DistributedServiceKit';
 networkId: string
 ```
 
-键鼠穿越目标设备描述符。
+Descriptor of the target device for screen hopping.
 
 **Type:** string
 
@@ -44,7 +44,7 @@ networkId: string
 state: CooperateState
 ```
 
-键鼠穿越的状态。
+Screen hopping status.
 
 **Type:** [CooperateState](arkts-distributedservice-cooperate-cooperatestate-e-sys.md)
 

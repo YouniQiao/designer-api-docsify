@@ -12,7 +12,7 @@ import { avSession } from 'kits/@kit.AVSessionKit';
 function setDiscoverable(enable: boolean, callback: AsyncCallback<void>): void
 ```
 
-设置设备是否可被发现，用于投播接收端。结果通过callback异步回调方式返回。
+Enable or disable device to be discoverable, used at sink side.
 
 **Since:** 10
 
@@ -28,21 +28,27 @@ function setDiscoverable(enable: boolean, callback: AsyncCallback<void>): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| enable | boolean | Yes | 是否允许本设备被发现。true表示允许被发现，false表示不允许被发现。 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | 回调函数。当设置成功，err为undefined，否则返回错误对象。 |
+| enable | boolean | Yes | true: can be discoverable, false: cannot be discoverable. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | a callback function |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | parameter check failed. 1.Mandatory parameters are left unspecified. 2.Parameter verification failed. |
-| 202 | Not System App. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | parameter check failed. 1.Mandatory parameters are left unspecified. 2.Parameter verification failed. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not System App. |
 
 ## Examples
 
 ```TypeScript
-avSession.setDiscoverable(true, () => {
-    console.info('Succeeded in setting discoverable.');
+import { BusinessError } from '@kit.BasicServicesKit';
+
+avSession.setDiscoverable(true, (err: BusinessError) => {
+  if (err) {
+    console.error(`setDiscoverable BusinessError: code: ${err.code}, message: ${err.message}`);
+  } else {
+    console.info('setDiscoverable successfully');
+  }
 });
 ```
 
@@ -53,7 +59,7 @@ avSession.setDiscoverable(true, () => {
 function setDiscoverable(enable: boolean): Promise<void>
 ```
 
-设置设备是否可被发现，用于投播接收端。结果通过Promise异步回调方式返回。
+Enable or disable device to be discoverable, used at sink side.
 
 **Since:** 10
 
@@ -69,26 +75,30 @@ function setDiscoverable(enable: boolean): Promise<void>
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| enable | boolean | Yes | 是否允许本设备被发现。true表示允许被发现，false表示不允许被发现。 |
+| enable | boolean | Yes | true: can be discoverable, false: cannot be discoverable. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise对象，无返回结果。 |
+| Promise&lt;void&gt; | Promise for the result |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | parameter check failed. 1.Mandatory parameters are left unspecified. 2.Parameter verification failed. |
-| 202 | Not System App. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | parameter check failed. 1.Mandatory parameters are left unspecified. 2.Parameter verification failed. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not System App. |
 
 ## Examples
 
 ```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
 avSession.setDiscoverable(true).then(() => {
-  console.info('Succeeded in setting discoverable.');
+  console.info('setDiscoverable successfully');
+}).catch((err: BusinessError) => {
+  console.error(`setDiscoverable BusinessError: code: ${err.code}, message: ${err.message}`);
 });
 ```
 

@@ -11,12 +11,6 @@ Popup是用于显示特定样式气泡。
  无
 
 
-## 导入模块
-
-```TypeScript
-import { Popup, PopupOptions, PopupButtonOptions, PopupIconOptions, PopupTextOptions } from 'kits/@kit.ArkUI';
-```
-
 ## 汇总
 
 ### 函数

@@ -1,50 +1,44 @@
 # WaterFlow
 
-瀑布流容器，由“行”和“列”分割的单元格所组成，通过容器自身的排列规则，将不同大小的“项目”自上而下，如瀑布般紧密布局。支持多列布局、分组混合布局、懒加载、自动计算列数和边缘渐隐等功能，适用于图片画廊、商品展示、内容信息流等需要展示不
-同尺寸内容的场景。
+The **WaterFlow** component is a water flow container that consists of cells formed by rows and columns and arranges
+items of different sizes from top to bottom according to the preset rules.
 
-> **说明：**
+> **NOTE**
+
+> The **WaterFlow** component supports the waterfall layout but does not support the edit mode or dragging of child
+> elements.
 >
-> 该组件从API version 9 开始支持。后续版本如有新增内容，则采用上角标单独标记该内容的起始版本。
->
-> WaterFlow组件支持展示瀑布流布局，不支持编辑模式和子元素拖动功能。
->
-> 组件内部已绑定手势实现跟手滚动等功能，需要增加自定义手势操作时请参考[手势拦截增强]{@link ./common}进行处理。
+> The component has been bound with gestures to implement functions such as following the finger. If you need to add
+> custom gestures, refer to [Enhanced Gesture Interception]{@link common}.
 
-## 子组件
+## Child Components
 
-仅支持[FlowItem]{@link ./flow_item}子组件和自定义组件。自定义组件在WaterFlow下使用时，建议使用FlowItem作为自定义组件的顶层组件，不建议给自定义组件设置属性和事件方法。
+Only the [FlowItem]{@link flow_item} child component and custom components are supported. When a custom component is used in **WaterFlow**, you are advised to use **FlowItem** as the top-level component of the custom component. You are not advised to set attributes and event methods for the custom component.
 
-支持通过渲染控制类型（[if/else](docroot://ui/rendering-control/arkts-rendering-control-ifelse.md)、  
-[ForEach](docroot://ui/rendering-control/arkts-rendering-control-foreach.md)、  
-[LazyForEach](docroot://ui/rendering-control/arkts-rendering-control-lazyforeach.md)和  
-[Repeat](docroot://ui/rendering-control/arkts-new-rendering-control-repeat.md)）动态生成子组件，更推荐使用LazyForEach或Repeat以优化性能。
+Child components can be dynamically generated using rendering control types  
+[if/else](docroot://ui/rendering-control/arkts-rendering-control-ifelse.md),  
+[ForEach](docroot://ui/rendering-control/arkts-rendering-control-foreach.md),  
+[LazyForEach](docroot://ui/rendering-control/arkts-rendering-control-lazyforeach.md), and  
+[Repeat](docroot://ui/rendering-control/arkts-new-rendering-control-repeat.md). **LazyForEach** or **Repeat** is recommended to optimize performance.
 
-> **说明：**
+> **NOTE：**
 > 
-> WaterFlow子组件的visibility属性设置为None时不显示，但该子组件周围的columnsGap、rowsGap、margin仍会生效。
-> > 在涉及大量子组件的情况下，建议采用懒加载、缓存数据、组件复用、固定宽高以及布局优化等方法，以提升性能和减少内存占用。最佳实践请参考
-> [优化瀑布流加载慢丢帧问题](https://developer.huawei.com/consumer/cn/doc/best-practices/bpta-waterflow-performance-optimization)
-> 。
+> When the **visibility** attribute of a child component of **WaterFlow** is set to **None**, this child component is
+> not displayed in the container, but its **columnsGap**, **rowsGap**, and **margin** settings are still effective.
+> > If there are a large number of child components, you are advised to adopt methods such as lazy loading, data
+> caching, component reuse, fixed dimensions, and layout optimization to improve performance and reduce memory usage.
+> For best practices, see
+> [Optimizing Frame Loss for Waterfall Loading](https://developer.huawei.com/consumer/en/doc/best-practices/bpta-waterflow-performance-optimization).
 > 
-> 纵向布局时，WaterFlow会计算每一列中已放置子组件的累计高度，并将新子组件放入累计高度最小的那一列，以保持整体布局紧凑。
+> In vertical layout mode, **WaterFlow** calculates the cumulative height of child components in each column and
+> places new child components in the column with the smallest cumulative height to maintain a compact overall layout.
 > 
-> 当FlowItem的主轴大小在显示后发生变化时，WaterFlow会清理受影响的布局信息，并根据当前[layoutMode]{@link WaterFlowLayoutMode}从变化位置或当前窗口起始位置重新计算相关
-> FlowItem的布局位置。由于瀑布流会将重新参与布局的FlowItem放入当前累计主轴大小最小的列或行，这些FlowItem所在列或行及偏移可能发生变化，表现为位置跳动。为减少位置跳动，建议保持FlowItem主轴大小稳定；图片
-> 等异步内容建议预先设置固定宽高或占位大小，使用分组混合布局时也可以通过[GetItemMainSizeByIndex]{@link GetItemMainSizeByIndex}回调提供稳定的主轴大小。
+> If the heights of multiple columns are the same, the leftmost column is prioritized. In RTL mode, the rightmost
+> column is prioritized.
 > 
-> 使用[LazyForEach](docroot://ui/rendering-control/arkts-rendering-control-lazyforeach.md)或
-> [Repeat](docroot://ui/rendering-control/arkts-new-rendering-control-repeat.md)动态生成FlowItem时，如果影响FlowItem主轴大小的数据发生变
-> 化，应同时通知框架数据已变化：LazyForEach场景请调用[DataChangeListener]{@link DataChangeListener}对应方法（如
-> [onDataChange]{@link DataChangeListener.onDataChange}、[onDataReloaded]{@link DataChangeListener.onDataReloaded()}或
-> [onDatasetChange]{@link DataChangeListener.onDatasetChange}）；Repeat场景应按
-> [Repeat](docroot://ui/rendering-control/arkts-new-rendering-control-repeat.md)的数据更新规则修改状态数组。否则可能复用旧节点或旧缓存，导致显示内容、布局
-> 结果与数据不一致。
-> 
-> 若多个列的高度相同，优先放入最左边的列。在RTL模式下，优先放入最右边的列。
-> 
-> 从API version 21开始，WaterFlow单个子组件的宽高最大为16777216px；API version 20及之前，WaterFlow单个子组件的宽高最大为1000000px。子组件超出该大小可能导致滚动或显示异
-> 常。
+> Starting from API version 21, the maximum width or height for a single child component inside a **WaterFlow**
+> container is 16,777,216 px. In API version 20 and earlier versions, the limit was 1,000,000 px. If a child
+> component exceeds the applicable size limit, scrolling or display behavior may become abnormal.
 
 ## WaterFlow
 
@@ -52,7 +46,7 @@
 WaterFlow(options?: WaterFlowOptions)
 ```
 
-创建瀑布流容器。
+Creates a **WaterFlow** component.
 
 **Since:** 9
 
@@ -68,7 +62,7 @@ WaterFlow(options?: WaterFlowOptions)
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| options | [WaterFlowOptions](arkts-arkui-waterflowoptions-i.md) | No | 瀑布流组件参数，用于设置滚动控制器、尾部组件、分组和布局模式。 |
+| options | [WaterFlowOptions](arkts-arkui-waterflowoptions-i.md) | No | Parameters of the **WaterFlow** component. |
 
 ## Summary
 

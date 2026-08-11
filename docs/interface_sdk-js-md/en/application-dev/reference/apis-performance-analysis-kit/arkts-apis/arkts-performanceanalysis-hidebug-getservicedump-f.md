@@ -12,7 +12,7 @@ import { hidebug } from 'kits/@kit.PerformanceAnalysisKit';
 function getServiceDump(serviceid : int, fd : int, args : Array<string>) : void
 ```
 
-��ȡϵͳ������Ϣ��
+Obtains system service information.It need dump permission.This API can be called only by system application.
 
 **Since:** 9
 
@@ -28,16 +28,16 @@ function getServiceDump(serviceid : int, fd : int, args : Array<string>) : void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| serviceid | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | ϵͳ����ID�����ڱ�ʶҪ��ȡ��Ϣ��ϵͳ����ȡֵ��ϵͳ���壬ȡֵ��Χ[0, 255]��������Чֵʱ���ش�����401�� |
-| fd | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | �ļ����������ӿڻ����fdд�����ݡ�������Ч�ļ�������ʱ���ش�����401�� |
-| args | Array&lt;string&gt; | Yes | ϵͳ�����dump�ӿڲ����б���string���ȵ����ֵΪ254���������ֽ��ᱻ�ضϡ� |
+| serviceid | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | Service ID used to obtain system service information. |
+| fd | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | File descriptor to which data is written by the API. |
+| args | Array&lt;string&gt; | Yes | Parameter list of the **Dump** API of the system service. The maximum length of a string is 254 characters. The excess part will be truncated. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | the parameter check failed, Possible causes: 1.the parameter type error 2.the args parameter is not string array |
-| 11400101 | ServiceId invalid. The system ability does not exist. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | The parameter check failed, Possible causes: 1.The parameter type error. 2.The args parameter is not string array. |
+| [11400101](../errorcode-hiviewdfx-hidebug.md#11400101-failed-to-obtain-the-system-service) | ServiceId invalid. The system ability does not exist. |
 
 ## Examples
 

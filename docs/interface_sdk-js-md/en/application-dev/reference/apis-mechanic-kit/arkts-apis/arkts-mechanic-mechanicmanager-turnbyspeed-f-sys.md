@@ -12,7 +12,7 @@ import { mechanicManager } from 'kits/@kit.MechanicKit';
 function turnBySpeed(mechId: int, angleSpeed: double, duration: int): Promise<Result>
 ```
 
-以固定速度原地旋转
+Rotate in place according to the speed.
 
 **Since:** 26.0.0
 
@@ -28,22 +28,22 @@ function turnBySpeed(mechId: int, angleSpeed: double, duration: int): Promise<Re
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| mechId | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | 具身设备ID。 &lt;br&gt;取值限定为整数。 |
-| angleSpeed | ArkTS-Dyn: number  <br>ArkTS-Sta：double | Yes | 角速度。 |
-| duration | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | 转动时长，单位ms。 &lt;br&gt;取值限定为整数。 |
+| mechId | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | ID of the mechanical device. &lt;br&gt;The value should be an integer. |
+| angleSpeed | ArkTS-Dyn: number  <br>ArkTS-Sta：double | Yes | angular velocity. |
+| duration | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | Duration of movement, unit ms. &lt;br&gt;The value should be an integer. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;Result&gt; | 202 - 非系统应用 |
+| Promise&lt;Result&gt; | Promise that returns the execution result. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 202 | Not system application. |
-| 33300001 | Service exception. |
-| 33300002 | Device not connected. |
-| 33300003 | Feature not supported. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system application. |
+| [33300001](../errorcode-mechanic.md#33300001-system-error) | Service exception. |
+| [33300002](../errorcode-mechanic.md#33300002-device-not-connected) | Device not connected. |
+| [33300003](../errorcode-mechanic.md#33300003-function-not-supported) | Feature not supported. |
 

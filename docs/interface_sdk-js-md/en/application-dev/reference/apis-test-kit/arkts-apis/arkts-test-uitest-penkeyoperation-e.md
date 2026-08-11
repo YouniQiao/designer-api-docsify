@@ -1,6 +1,6 @@
 # PenKeyOperation
 
-笔按键操作类型枚举。
+Pen key operation type enum.
 
 **Since:** 26.0.0
 
@@ -16,7 +16,7 @@
 CLICK = 0
 ```
 
-单击。
+Single click.
 
 **Since:** 26.0.0
 
@@ -34,7 +34,7 @@ CLICK = 0
 DOUBLE_CLICK = 1
 ```
 
-双击。
+Double click.
 
 **Since:** 26.0.0
 

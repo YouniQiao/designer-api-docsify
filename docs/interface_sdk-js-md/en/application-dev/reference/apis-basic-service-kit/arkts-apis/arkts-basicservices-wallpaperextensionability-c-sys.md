@@ -26,7 +26,7 @@ import { WallpaperExtensionAbility } from 'kits/@kit.BasicServicesKit';
 onCreate(want: object): void
 ```
 
-初始化壁纸扩展应用。在拉起Extension壁纸扩展应用时触发回调，执行初始化应用操作。不支持多线程并发调用。
+Called once to initialize the extension ability.
 
 **Since:** 10
 
@@ -46,7 +46,7 @@ onCreate(want: object): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| want | object | Yes | 当前Extension相关的Want类型信息，包括ability名称、bundle名称等。 |
+| want | object | Yes | Indicates connection information about the wallpaper extension ability. |
 
 ## Examples
 
@@ -67,7 +67,7 @@ class WallpaperExt extends WallpaperExtensionAbility {
 onDestroy(): void
 ```
 
-清理壁纸扩展应用资源。在销毁壁纸扩展应用时触发回调，执行资源清理。不支持多线程并发调用。
+Called once to destroy the extension ability.
 
 **Since:** 10
 
@@ -101,7 +101,7 @@ class WallpaperExt extends WallpaperExtensionAbility {
 onWallpaperChange(wallpaperType: number): void
 ```
 
-监听壁纸变化。在壁纸变化时触发回调。不支持多线程并发调用。
+The onWallpaperChange callback is triggered when the user modifies the wallpaper settings.
 
 **Since:** 10
 
@@ -121,7 +121,7 @@ onWallpaperChange(wallpaperType: number): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| wallpaperType | number | Yes | 壁纸类型。主屏幕壁纸为0，锁屏壁纸为1。 |
+| wallpaperType | number | Yes | Indicates the wallpaper type. |
 
 ## Examples
 

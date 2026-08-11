@@ -4,7 +4,7 @@
 declare type GetItemMainSizeByIndex = (index: number) => number
 ```
 
-根据index获取指定Item的主轴大小。
+Obtains the main axis size of a specified water flow item based on its index.
 
 **Since:** 12
 
@@ -22,11 +22,11 @@ declare type GetItemMainSizeByIndex = (index: number) => number
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| index | number | Yes | FlowItem在WaterFlow中的索引。<br/>取值范围：[0, 子组件总数-1] |
+| index | number | Yes | Index of the target water flow item.<br>Value range: [0, total number of child nodes - 1]. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| number | 指定index的FlowItem的主轴大小，纵向瀑布流时为高度，横向瀑布流时为宽度，单位vp。 |
+| number | Main axis size, in vp, of the water flow item at the specified index, which is the height for a vertical **WaterFlow** component and the width for a horizontal **WaterFlow** component. |
 

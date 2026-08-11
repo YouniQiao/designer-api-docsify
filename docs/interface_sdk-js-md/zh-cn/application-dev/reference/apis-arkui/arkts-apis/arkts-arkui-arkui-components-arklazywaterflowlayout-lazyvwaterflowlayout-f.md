@@ -1,11 +1,5 @@
 # LazyVWaterFlowLayout
 
-## 导入模块
-
-```TypeScript
-import { LazyVWaterFlowLayout, LazyWaterFlowLayoutAttribute, LazyVWaterFlowLayoutAttribute } from 'kits/@kit.ArkUI';
-```
-
 ## LazyVWaterFlowLayout
 
 ```TypeScript

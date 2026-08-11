@@ -1,8 +1,9 @@
 # X25519PriKeySpec
 
-密钥参数[AsyKeySpec](arkts-cryptoarchitecture-cryptoframework-asykeyspec-i.md)的子类，用于指定X25519算法中私钥包含的参数。
+Defines a child class of [AsyKeySpec](arkts-cryptoarchitecture-cryptoframework-asykeyspec-i.md) used to specify the parameters of the private key in the X25519 algorithm.
 
-&lt;br&gt;在使用密钥参数生成密钥时，将其传入[createAsyKeyGeneratorBySpec()](arkts-cryptoarchitecture-cryptoframework-createasykeygeneratorbyspec-f.md#createasykeygeneratorbyspec)方法创建密钥生成器。
+&lt;br&gt;To generate a key based on key parameters, pass it to  
+[createAsyKeyGeneratorBySpec()](arkts-cryptoarchitecture-cryptoframework-createasykeygeneratorbyspec-f.md#createasykeygeneratorbyspec) to create a key generator.
 
 **Inheritance/Implementation:** X25519PriKeySpec extends [AsyKeySpec](arkts-cryptoarchitecture-cryptoframework-asykeyspec-i.md)
 
@@ -28,7 +29,7 @@ import { cryptoFramework } from 'kits/@kit.CryptoArchitectureKit';
 sk: bigint
 ```
 
-X25519算法中的私钥sk。
+Private key **sk** in the X25519 algorithm.
 
 **Type:** bigint
 

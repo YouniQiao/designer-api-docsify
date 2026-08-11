@@ -1,6 +1,6 @@
 # SwitchConfig (System API)
 
-端云协同数据库级配置。
+Defines the switch configuration of a device-cloud synergy database.
 
 **Since:** 23
 
@@ -24,7 +24,7 @@ import { cloudData } from 'kits/@kit.ArkData';
 dbInfo: Record<string, DBSwitchInfo>
 ```
 
-数据库级别的开关配置信息。键为库名称，值为该库的配置信息。
+Switch configuration information of a database. The key is the database name, and the value is the configuration information of the database.
 
 **Type:** [Record](../../apis-default/arkts-apis/arkts-record-t.md)&lt;string, DBSwitchInfo&gt;
 

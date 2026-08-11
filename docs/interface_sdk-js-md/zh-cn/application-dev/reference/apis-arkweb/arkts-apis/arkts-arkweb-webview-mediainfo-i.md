@@ -10,12 +10,6 @@
 
 **系统能力：** SystemCapability.Web.Webview.Core
 
-## 导入模块
-
-```TypeScript
-import { webview } from 'kits/@kit.ArkWeb';
-```
-
 ## attributes
 
 ```TypeScript
@@ -24,7 +18,7 @@ attributes: Record<string, string>
 
 Attributes in **&lt;video&gt;** or **&lt;audio&gt;**.
 
-**类型：** [Record](../../apis-default/arkts-apis/arkts-record-t.md)&lt;string, string&gt;
+**类型：** Record&lt;string, string&gt;
 
 **起始版本：** 23
 
@@ -98,7 +92,7 @@ headers: Record<string, string>
 
 HTTP headers that need to be included in the player's request for media resources.
 
-**类型：** [Record](../../apis-default/arkts-apis/arkts-record-t.md)&lt;string, string&gt;
+**类型：** Record&lt;string, string&gt;
 
 **起始版本：** 23
 
@@ -134,7 +128,7 @@ mediaType: MediaType
 
 Type of the media.
 
-**类型：** [MediaType](arkts-arkweb-webview-mediatype-e.md)
+**类型：** [MediaType](../../apis-media-kit/arkts-apis/arkts-media-multimedia-media-mediatype-e.md)
 
 **起始版本：** 23
 

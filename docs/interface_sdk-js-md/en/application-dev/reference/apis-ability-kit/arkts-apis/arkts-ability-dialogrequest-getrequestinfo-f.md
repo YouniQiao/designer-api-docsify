@@ -12,11 +12,13 @@ import { dialogRequest } from 'kits/@kit.AbilityKit';
 function getRequestInfo(want: Want): RequestInfo
 ```
 
-从Want中获取请求方的RequestInfo。
-
-> **说明：**
+> **NOTE：**
 > 
-> 该接口可以在ServiceExtensionAbility下使用，如果ServiceExtensionAbility实现了模态弹框，则能从Want中获取请求方的RequestInfo。其他场景使用该接口，均无法获取返回值。
+> This API can be used by a ServiceExtensionAbility. If the ServiceExtensionAbility implements modal dialog boxes,
+> the request information can be obtained from Want. If this API is used in other scenarios, no return value is
+> obtained.
+
+Obtains the request information from Want.
 
 **Since:** 9
 
@@ -30,19 +32,19 @@ function getRequestInfo(want: Want): RequestInfo
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| want | [Want](arkts-ability-app-ability-want-want-c.md) | Yes | 表示发起方请求弹框时传入的want信息。 |
+| want | [Want](arkts-ability-app-ability-want-want-c.md) | Yes | Want passed in the request for a modal dialog box. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [RequestInfo](arkts-ability-dialogrequest-requestinfo-i.md) | 请求方RequestInfo，用于绑定模态窗口。 |
+| [RequestInfo](arkts-ability-dialogrequest-requestinfo-i.md) | RequestInfo object obtained, which is used to bind a modal dialog box. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
 
 ## Examples
 

@@ -60,6 +60,6 @@ abstract onDraw(context: DrawContext, drawInfo: LeadingMarginSpanDrawInfo): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| context | [DrawContext](arkts-arkui-graphics-drawcontext-c.md) | 是 | 图形绘制上下文。 &lt;br&gt;DrawContext的canvas方法获取的是组件的画布，绘制时不会超出组件的范围。 |
-| drawInfo | [LeadingMarginSpanDrawInfo](arkts-arkui-styledstring-leadingmarginspandrawinfo-i.md) | 是 | 自定义绘制信息。 |
+| context | [DrawContext](arkts-arkui-drawcontext-t.md) | 是 | 图形绘制上下文。 &lt;br&gt;DrawContext的canvas方法获取的是组件的画布，绘制时不会超出组件的范围。 |
+| drawInfo | [LeadingMarginSpanDrawInfo](arkts-arkui-leadingmarginspandrawinfo-i.md) | 是 | 自定义绘制信息。 |
 

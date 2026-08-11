@@ -1,6 +1,6 @@
 # GridDirection
 
-主轴布局方向枚举。
+The enum of property layoutDirection
 
 **Since:** 23
 

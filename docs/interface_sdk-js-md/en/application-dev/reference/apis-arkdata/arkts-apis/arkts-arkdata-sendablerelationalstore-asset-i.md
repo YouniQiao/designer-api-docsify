@@ -1,8 +1,8 @@
 # Asset
 
-记录资产附件（文件、图片、视频等类型文件）的相关信息。用于支持资产数据跨线程传递，继承自  
-[lang.ISendable](../../../reference/apis-arkts/js-apis-arkts-lang.md#langisendable)。资产类型的相关接口暂不支持Datashare。使用  
-[sendableRelationalStore.toSendableAsset](arkts-arkdata-sendablerelationalstore-tosendableasset-f.md#tosendableasset)方法创建。
+Represent the asset (such as a document, image, or video). **Asset** inherits from  
+[lang.ISendable](../../apis-arkts/arkts-apis/arkts-arkts-lang-isendable-i.md/arkts-arkts-lang-isendable-i.md) and is used to implement cross-thread transfer of asset data.The asset data does not support **Datashare** APIs. Use   
+[sendableRelationalStore.toSendableAsset](arkts-arkdata-sendablerelationalstore-tosendableasset-f.md#tosendableasset) to create an **Asset**instance.
 
 **Inheritance/Implementation:** Asset extends [lang.ISendable](../../apis-arkts/arkts-apis/arkts-arkts-lang-isendable-i.md/arkts-arkts-lang-isendable-i.md)
 
@@ -26,7 +26,7 @@ import { sendableRelationalStore } from 'kits/@kit.ArkData';
 createTime: string
 ```
 
-资产被创建出来的时间。
+Time when the asset was created.
 
 **Type:** string
 
@@ -44,7 +44,7 @@ createTime: string
 modifyTime: string
 ```
 
-资产最后一次被修改的时间。
+Time when the asset was last modified.
 
 **Type:** string
 
@@ -62,7 +62,7 @@ modifyTime: string
 name: string
 ```
 
-资产的名称。
+Asset name.
 
 **Type:** string
 
@@ -80,7 +80,7 @@ name: string
 path: string
 ```
 
-资产在应用沙箱里的路径。
+Application sandbox path of the asset.
 
 **Type:** string
 
@@ -98,7 +98,7 @@ path: string
 size: string
 ```
 
-资产占用空间的大小。
+Size of the asset.
 
 **Type:** string
 
@@ -116,7 +116,9 @@ size: string
 status?: number
 ```
 
-资产的状态，取值与[relationalStore.AssetStatus](arkts-arkdata-relationalstore-assetstatus-e.md)枚举值保持一致，默认值为relationalStore.AssetStatus.ASSET_NORMAL。
+Asset status. For details, see  
+[relationalStore.AssetStatus](arkts-arkdata-relationalstore-assetstatus-e.md). The default value is  
+**relationalStore.AssetStatus.ASSET_NORMAL**.
 
 **Type:** number
 
@@ -134,7 +136,7 @@ status?: number
 uri: string
 ```
 
-资产的uri，在系统里的绝对路径。
+Asset URI, which is an absolute path in the system.
 
 **Type:** string
 

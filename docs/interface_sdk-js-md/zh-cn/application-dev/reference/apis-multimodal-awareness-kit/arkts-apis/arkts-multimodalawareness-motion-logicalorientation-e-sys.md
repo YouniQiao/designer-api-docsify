@@ -1,6 +1,6 @@
 # LogicalOrientation（系统接口）
 
-Enum for logical orientation calculated by smart algorithms.
+智能算法计算得到的逻辑方向枚举。
 
 **起始版本：** 26.0.0
 
@@ -18,7 +18,7 @@ Enum for logical orientation calculated by smart algorithms.
 UNKNOWN = -1
 ```
 
-Indicates the orientation is unknown or cannot be determined(e.g., non-grip).
+表示方向未知或无法确定（例如非握持状态）。
 
 **起始版本：** 26.0.0
 
@@ -38,7 +38,7 @@ Indicates the orientation is unknown or cannot be determined(e.g., non-grip).
 UPRIGHT = 0
 ```
 
-Indicates upright.
+表示竖直放置。
 
 **起始版本：** 26.0.0
 
@@ -58,7 +58,7 @@ Indicates upright.
 LEFT = 1
 ```
 
-Indicates left.
+表示向左旋转。
 
 **起始版本：** 26.0.0
 
@@ -78,7 +78,7 @@ Indicates left.
 INVERTED = 2
 ```
 
-Indicates the logical orientation is inverted.
+表示倒置。
 
 **起始版本：** 26.0.0
 
@@ -98,7 +98,7 @@ Indicates the logical orientation is inverted.
 RIGHT = 3
 ```
 
-Indicates right.
+表示向右旋转。
 
 **起始版本：** 26.0.0
 

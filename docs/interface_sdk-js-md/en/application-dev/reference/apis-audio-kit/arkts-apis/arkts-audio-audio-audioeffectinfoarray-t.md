@@ -4,7 +4,9 @@
 type AudioEffectInfoArray = Array<Readonly<AudioEffectMode>>
 ```
 
-待查询ContentType和StreamUsage组合场景下的音效模式数组类型，[AudioEffectMode](arkts-audio-audio-audioeffectmode-e.md)数组，只读。
+Defines an array that contains the audio effect mode corresponding to a specific audio content type (specified by  
+**ContentType**) and audio stream usage (specified by **StreamUsage**). The  
+[AudioEffectMode](arkts-audio-audio-audioeffectmode-e.md) array is read-only.
 
 **Since:** 10
 

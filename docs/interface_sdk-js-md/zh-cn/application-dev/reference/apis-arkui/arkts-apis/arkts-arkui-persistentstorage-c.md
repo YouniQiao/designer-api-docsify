@@ -136,7 +136,7 @@ static PersistProps(
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| properties | {       key: string;       defaultValue: any;     }[] | 是 |  |
+| properties | {       key: string;       defaultValue: any;     }[] | 是 |  |
 
 ## deleteProp
 
@@ -246,5 +246,5 @@ static persistProps(props: PersistPropsOptions[]): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| props | [PersistPropsOptions](arkts-arkui-persistpropsoptions-i.md)[] | 是 | 持久化数组，每项包含属性名和默认值。 |
+| props | [PersistPropsOptions](../../apis-default/arkts-apis/arkts-persistentstorage-persistpropsoptions-i.md)[] | 是 | 持久化数组，每项包含属性名和默认值。 |
 

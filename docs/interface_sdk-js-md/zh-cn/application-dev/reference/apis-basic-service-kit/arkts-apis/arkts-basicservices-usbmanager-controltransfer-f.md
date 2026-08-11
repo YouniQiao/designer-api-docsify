@@ -1,11 +1,5 @@
 # controlTransfer
 
-## 导入模块
-
-```TypeScript
-import { usbManager } from 'kits/@kit.BasicServicesKit';
-```
-
 ## controlTransfer
 
 ```TypeScript
@@ -44,12 +38,11 @@ function controlTransfer(pipe: USBDevicePipe, controlparam: USBControlParams, ti
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 401 | Parameter error. Possible causes:  &lt;br&gt;1.Mandatory parameters are left unspecified.  &lt;br&gt;2.Incorrect parameter types. |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes:  &lt;br&gt;1.Mandatory parameters are left unspecified.  &lt;br&gt;2.Incorrect parameter types. |
 
 ## 示例
 
 ```TypeScript
-import {BusinessError} from '@kit.BasicServicesKit';
 let param: usbManager.USBControlParams = {
   request: 0x06,
   reqType: 0x80,
@@ -66,19 +59,19 @@ async function controlTransfer() {
     return;
   }
 
-  let rightResult = await usbManager.requestRight(devicesList[0].name);
+  let rightResult = await usbManager.requestRight(devicesList?.[0]?.name);
   if (!rightResult) {
     console.error(`request right failed`);
     return;
   }
-  let devicePipe: usbManager.USBDevicePipe = usbManager.connectDevice(devicesList[0]);
+  let devicePipe: usbManager.USBDevicePipe = usbManager.connectDevice(devicesList?.[0]);
   if (devicePipe == undefined) {
     console.error(`connect device failed`);
     return;
   }
   usbManager.controlTransfer(devicePipe, param).then((ret: number) => {
     console.info(`controlTransfer = ${ret}`);
-  }).catch((error: BusinessError) => {
+  }).catch((error) => {
     console.error(`Failed to transfer. Code: ${error.code}, message: ${error.message}`);
   }).finally(() => {
     usbManager.closePipe(devicePipe);

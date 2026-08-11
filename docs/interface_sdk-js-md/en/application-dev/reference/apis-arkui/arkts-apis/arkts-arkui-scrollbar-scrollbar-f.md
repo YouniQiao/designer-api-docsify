@@ -4,12 +4,12 @@
 
 ```TypeScript
 export declare function ScrollBar(
-    value: ScrollBarOptions, 
+    value: ScrollBarOptions,
     content_?: CustomBuilder,
 ): ScrollBarAttribute
 ```
 
-定义滚动条组件。
+Defines ScrollBar Component.
 
 **Since:** 23
 
@@ -17,7 +17,7 @@ export declare function ScrollBar(
 
 **Model restriction:** This API can be used only in the stage model.
 
-<!--Device-unnamed-export declare function ScrollBar(    value: ScrollBarOptions,     content_?: CustomBuilder,): ScrollBarAttribute--><!--Device-unnamed-export declare function ScrollBar(    value: ScrollBarOptions,     content_?: CustomBuilder,): ScrollBarAttribute-End-->
+<!--Device-unnamed-export declare function ScrollBar(    value: ScrollBarOptions,    content_?: CustomBuilder,): ScrollBarAttribute--><!--Device-unnamed-export declare function ScrollBar(    value: ScrollBarOptions,    content_?: CustomBuilder,): ScrollBarAttribute-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -25,8 +25,8 @@ export declare function ScrollBar(
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | [ScrollBarOptions](arkts-arkui-scrollbar-scrollbaroptions-i.md) | Yes |  |
-| content_ | [CustomBuilder](../arkts-components/arkts-arkui-custombuilder-t.md) | No | 子组件 |
+| value | [ScrollBarOptions](arkts-arkui-scrollbar-scrollbaroptions-i.md) | Yes | value |
+| content_ | [CustomBuilder](../arkts-components/arkts-arkui-custombuilder-t.md) | No | container |
 
 **Return value:**
 
@@ -39,22 +39,22 @@ export declare function ScrollBar(
 
 ```TypeScript
 export declare function ScrollBar(
-    style_: CustomBuilderT<ScrollBarAttribute>, 
+    style_: CustomBuilderT<ScrollBarAttribute>,
     content_?: CustomBuilder
 ): ScrollBarAttribute
 ```
 
-定义滚动条组件。
+Defines ScrollBar Component.
 
-**Since:** 26.0.0
+**Since:** 26.1.0
 
-**ArkTS mode:** ArkTS-Sta only, since version 26.0.0.
+**ArkTS mode:** ArkTS-Sta only, since version 26.1.0.
 
 **Decorator:** @Builder
 
 **Model restriction:** This API can be used only in the stage model.
 
-<!--Device-unnamed-export declare function ScrollBar(    style_: CustomBuilderT<ScrollBarAttribute>,     content_?: CustomBuilder): ScrollBarAttribute--><!--Device-unnamed-export declare function ScrollBar(    style_: CustomBuilderT<ScrollBarAttribute>,     content_?: CustomBuilder): ScrollBarAttribute-End-->
+<!--Device-unnamed-export declare function ScrollBar(    style_: CustomBuilderT<ScrollBarAttribute>,    content_?: CustomBuilder): ScrollBarAttribute--><!--Device-unnamed-export declare function ScrollBar(    style_: CustomBuilderT<ScrollBarAttribute>,    content_?: CustomBuilder): ScrollBarAttribute-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -69,5 +69,5 @@ export declare function ScrollBar(
 
 | Type | Description |
 | --- | --- |
-| [ScrollBarAttribute](../arkts-components/arkts-arkui-scrollbar-attribute.md) | ScrollBar的属性。 |
+| [ScrollBarAttribute](../arkts-components/arkts-arkui-scrollbar-attribute.md) | The attribute of the ScrollBar. |
 

@@ -1,4 +1,4 @@
-# @ohos.arkui.WithEnv(定义WithEnv组件，允许为子组件设置环境属性。)
+# @ohos.arkui.WithEnv(Define the WithEnv component that allows setting environment properties for child components.)
 
 ## Modules to Import
 
@@ -12,11 +12,11 @@ import { WithEnvAttribute, WithEnv } from 'kits/@kit.ArkUI';
 
 | Name | Description |
 | --- | --- |
-| [WithEnv](arkts-arkui-arkui-withenv-withenv-f.md#withenv) | WithEnv组件用于为子组件树设置局部环境变量作用域。开发者可以通过该组件为后代组件提供自定义环境变量，或设置系统环境变量。 |
+| [WithEnv](arkts-arkui-arkui-withenv-withenv-f.md#withenv) | Define the WithEnv component that allows setting environment properties for child components. |
 
 ### Interfaces
 
 | Name | Description |
 | --- | --- |
-| [WithEnvAttribute](arkts-arkui-arkui-withenv-withenvattribute-i.md) | 定义WithEnv组件的属性功能。 |
+| [WithEnvAttribute](arkts-arkui-arkui-withenv-withenvattribute-i.md) | Define the WithEnv attribute functions. |
 

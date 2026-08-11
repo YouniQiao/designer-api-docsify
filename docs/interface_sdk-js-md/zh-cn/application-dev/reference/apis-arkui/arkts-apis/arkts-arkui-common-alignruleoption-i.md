@@ -40,7 +40,7 @@ bottom?: VerticalAlignParam
 
 The param of bottom align.
 
-**类型：** [VerticalAlignParam](../arkts-components/arkts-arkui-verticalalignparam-i.md)
+**类型：** [VerticalAlignParam](arkts-arkui-common-verticalalignparam-i.md)
 
 **起始版本：** 23
 
@@ -60,7 +60,7 @@ center?: VerticalAlignParam
 
 The param of center align.
 
-**类型：** [VerticalAlignParam](../arkts-components/arkts-arkui-verticalalignparam-i.md)
+**类型：** [VerticalAlignParam](arkts-arkui-common-verticalalignparam-i.md)
 
 **起始版本：** 23
 
@@ -140,7 +140,7 @@ top?: VerticalAlignParam
 
 The param of top align.
 
-**类型：** [VerticalAlignParam](../arkts-components/arkts-arkui-verticalalignparam-i.md)
+**类型：** [VerticalAlignParam](arkts-arkui-common-verticalalignparam-i.md)
 
 **起始版本：** 23
 

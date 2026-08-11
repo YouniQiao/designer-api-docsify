@@ -12,7 +12,7 @@ import { freeInstall } from 'kits/@kit.AbilityKit';
 function getDispatchInfo(callback: AsyncCallback<DispatchInfo>): void
 ```
 
-获取有关dispatch版本的信息。使用callback异步回调。
+Obtains the dispatch information. This API uses an asynchronous callback to return the result.
 
 **Since:** 9
 
@@ -30,15 +30,15 @@ function getDispatchInfo(callback: AsyncCallback<DispatchInfo>): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;DispatchInfo&gt; | Yes | [回调函数](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md/arkts-basicservices-base-asynccallback-i.md)。当函数调用成功，err为undefined，data 为获取到的[DispatchInfo](arkts-ability-freeinstall-dispatchinfo-t-sys.md)信息。否则为错误对象。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;DispatchInfo&gt; | Yes | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md/arkts-basicservices-base-asynccallback-i.md) used to return the result. If the operation is successful, **err** is **null**, and **data** is the [DispatchInfo](arkts-ability-freeinstall-dispatchinfo-t-sys.md) object obtained. otherwise, **err** is an error object. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 801 | Capability not supported. |
-| 201 | Permission denied. |
-| 202 | Permission denied, non-system app called system api. |
+| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission denied, non-system app called system api. |
 
 
 ## getDispatchInfo
@@ -47,7 +47,7 @@ function getDispatchInfo(callback: AsyncCallback<DispatchInfo>): void
 function getDispatchInfo(): Promise<DispatchInfo>
 ```
 
-获取有关dispatch版本的信息。使用Promise异步回调。
+Obtains the dispatch information. This API uses a promise to return the result.
 
 **Since:** 9
 
@@ -65,13 +65,13 @@ function getDispatchInfo(): Promise<DispatchInfo>
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;DispatchInfo&gt; | Promise对象，返回[DispatchInfo]{ |
+| Promise&lt;DispatchInfo&gt; | Promise used to return the [DispatchInfo]{ |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 801 | Capability not supported. |
-| 201 | Permission denied. |
-| 202 | Permission denied, non-system app called system api. |
+| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission denied, non-system app called system api. |
 

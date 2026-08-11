@@ -1,7 +1,7 @@
 # Orientation
 
-窗口显示方向类型枚举。&lt;!--Del--&gt;不同枚举值之间的区别可查询  
-[窗口Orientation枚举值8\~10或12和枚举值13\~16的区别(API9)](../../../faqs/faqs-window-manager.md#窗口orientation枚举值810或12和枚举值1316的区别api9)。&lt;!--DelEnd--&gt;
+Enumerates the window orientations. &lt;!--Del--&gt;For details of the differences between different enumerated values,see  
+[What is the difference between orientation values 8 to 10 or 12 and values 13 to 16 (API version 9)](../../../faqs/faqs-window-manager.md#what-is-the-difference-between-orientation-values-8-to-10-or-12-and-values-13-to-16-api-version-9).&lt;!--DelEnd--&gt;
 
 **Since:** 9
 
@@ -17,7 +17,7 @@
 UNSPECIFIED = 0
 ```
 
-表示未定义方向模式，由系统判定。
+Unspecified. The orientation is determined by the system.
 
 **Since:** 9
 
@@ -35,7 +35,7 @@ UNSPECIFIED = 0
 PORTRAIT = 1
 ```
 
-表示竖屏显示模式。
+Portrait.
 
 **Since:** 9
 
@@ -53,7 +53,7 @@ PORTRAIT = 1
 LANDSCAPE = 2
 ```
 
-表示横屏显示模式。
+Landscape.
 
 **Since:** 9
 
@@ -71,7 +71,7 @@ LANDSCAPE = 2
 PORTRAIT_INVERTED = 3
 ```
 
-表示反向竖屏显示模式。
+Reverse portrait.
 
 **Since:** 9
 
@@ -89,7 +89,7 @@ PORTRAIT_INVERTED = 3
 LANDSCAPE_INVERTED = 4
 ```
 
-表示反向横屏显示模式。
+Reverse landscape.
 
 **Since:** 9
 
@@ -107,7 +107,7 @@ LANDSCAPE_INVERTED = 4
 AUTO_ROTATION = 5
 ```
 
-跟随传感器自动旋转，可以旋转到竖屏、横屏、反向竖屏、反向横屏四个方向，且不受控制中心的旋转开关控制。
+Automatically rotates with the sensor to four orientations: portrait, landscape, reverse portrait, and reverse landscape. This rotation is not controlled by the rotation switch in Control Panel.
 
 **Since:** 9
 
@@ -125,7 +125,7 @@ AUTO_ROTATION = 5
 AUTO_ROTATION_PORTRAIT = 6
 ```
 
-跟随传感器自动竖向旋转，可以旋转到竖屏、反向竖屏，无法旋转到横屏、反向横屏，且不受控制中心的旋转开关控制。
+Automatically rotates with the sensor to two orientations: portrait and reverse portrait. This rotation is not controlled by the rotation switch in Control Panel.
 
 **Since:** 9
 
@@ -143,7 +143,7 @@ AUTO_ROTATION_PORTRAIT = 6
 AUTO_ROTATION_LANDSCAPE = 7
 ```
 
-跟随传感器自动横向旋转，可以旋转到横屏、反向横屏，无法旋转到竖屏、反向竖屏，且不受控制中心的旋转开关控制。
+Automatically rotates with the sensor to two orientations: landscape and reverse landscape. This rotation is not controlled by the rotation switch in Control Panel.
 
 **Since:** 9
 
@@ -161,7 +161,7 @@ AUTO_ROTATION_LANDSCAPE = 7
 AUTO_ROTATION_RESTRICTED = 8
 ```
 
-跟随传感器自动旋转，可以旋转到竖屏、横屏、反向竖屏、反向横屏四个方向，且受控制中心的旋转开关控制。
+Automatically rotates with the sensor to four orientations: portrait, landscape, reverse portrait, and reverse landscape. This rotation is controlled by the rotation switch in Control Panel.
 
 **Since:** 9
 
@@ -179,7 +179,7 @@ AUTO_ROTATION_RESTRICTED = 8
 AUTO_ROTATION_PORTRAIT_RESTRICTED = 9
 ```
 
-跟随传感器自动竖向旋转，可以旋转到竖屏、反向竖屏，无法旋转到横屏、反向横屏，且受控制中心的旋转开关控制。
+Automatically rotates with the sensor to two orientations: portrait and reverse portrait. This rotation is controlled by the rotation switch in Control Panel.
 
 **Since:** 9
 
@@ -197,7 +197,7 @@ AUTO_ROTATION_PORTRAIT_RESTRICTED = 9
 AUTO_ROTATION_LANDSCAPE_RESTRICTED = 10
 ```
 
-跟随传感器自动横向旋转，可以旋转到横屏、反向横屏，无法旋转到竖屏、反向竖屏，且受控制中心的旋转开关控制。
+Automatically rotates with the sensor to two orientations: landscape and reverse landscape. This rotation is controlled by the rotation switch in Control Panel.
 
 **Since:** 9
 
@@ -215,7 +215,7 @@ AUTO_ROTATION_LANDSCAPE_RESTRICTED = 10
 LOCKED = 11
 ```
 
-表示锁定模式，窗口显示方向与屏幕当前方向一致。
+Locked mode, where the window orientation is consistent with the current screen orientation.
 
 **Since:** 9
 
@@ -233,7 +233,7 @@ LOCKED = 11
 AUTO_ROTATION_UNSPECIFIED = 12
 ```
 
-跟随传感器自动旋转，受控制中心的旋转开关控制，且可旋转方向受系统判定（如在某种设备，可以旋转到竖屏、横屏、反向横屏三个方向，无法旋转到反向竖屏）。
+Automatically rotates with the sensor, under the restriction of the rotation switch in Control Panel. The orientation that can be rotated to is determined by the system. For example, the window can rotate to portrait,landscape, or reverse landscape, but not reverse portrait, on a certain device.
 
 **Since:** 12
 
@@ -251,7 +251,7 @@ AUTO_ROTATION_UNSPECIFIED = 12
 USER_ROTATION_PORTRAIT = 13
 ```
 
-调用时临时旋转到竖屏，之后跟随传感器自动旋转，受控制中心的旋转开关控制，且可旋转方向受系统判定。
+Temporarily rotates to portrait mode, and then automatically rotates with the sensor, under the restriction of the rotation switch in Control Panel. The orientation that can be rotated to is determined by the system.
 
 **Since:** 12
 
@@ -269,7 +269,7 @@ USER_ROTATION_PORTRAIT = 13
 USER_ROTATION_LANDSCAPE = 14
 ```
 
-调用时临时旋转到横屏，之后跟随传感器自动旋转，受控制中心的旋转开关控制，且可旋转方向受系统判定。
+Temporarily rotates to landscape mode, and then automatically rotates with the sensor, under the restriction of the rotation switch in Control Panel. The orientation that can be rotated to is determined by the system.
 
 **Since:** 12
 
@@ -287,7 +287,7 @@ USER_ROTATION_LANDSCAPE = 14
 USER_ROTATION_PORTRAIT_INVERTED = 15
 ```
 
-调用时临时旋转到反向竖屏，之后跟随传感器自动旋转，受控制中心的旋转开关控制，且可旋转方向受系统判定。
+Temporarily rotates to reverse portrait mode, and then automatically rotates with the sensor, under the restriction of the rotation switch in Control Panel. The orientation that can be rotated to is determined by the system.
 
 **Since:** 12
 
@@ -305,7 +305,7 @@ USER_ROTATION_PORTRAIT_INVERTED = 15
 USER_ROTATION_LANDSCAPE_INVERTED = 16
 ```
 
-调用时临时旋转到反向横屏，之后跟随传感器自动旋转，受控制中心的旋转开关控制，且可旋转方向受系统判定。
+Temporarily rotates to reverse landscape mode, and then automatically rotates with the sensor, under the restriction of the rotation switch in Control Panel. The orientation that can be rotated to is determined by the system.
 
 **Since:** 12
 
@@ -323,7 +323,7 @@ USER_ROTATION_LANDSCAPE_INVERTED = 16
 FOLLOW_DESKTOP = 17
 ```
 
-表示跟随桌面的旋转模式，如果桌面可以旋转则可旋转，桌面不可旋转则不可旋转。
+Follows the orientation of the home screen, where the window will rotate if the home screen rotates and will not rotate if the home screen does not.
 
 **Since:** 12
 

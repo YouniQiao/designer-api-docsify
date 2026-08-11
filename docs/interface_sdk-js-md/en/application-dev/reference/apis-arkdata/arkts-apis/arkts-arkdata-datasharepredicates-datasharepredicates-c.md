@@ -1,6 +1,7 @@
 # DataSharePredicates
 
-提供用于不同实现不同查询方法的数据共享谓词。该类型不是多线程安全的，如果应用中存在多线程同时操作该类派生出的实例，注意加锁保护。
+Provides APIs for setting different **DataSharePredicates** objects. This type is not multi-thread safe. If a  
+**DataSharePredicates** instance is operated by multiple threads at the same time in an application, use a lock for it.
 
 **Since:** 10
 
@@ -22,9 +23,9 @@ import { dataSharePredicates } from 'kits/@kit.ArkData';
 and(): DataSharePredicates
 ```
 
-该接口用于将和条件添加到谓词中。
+Creates a **DataSharePredicates** object to add the AND condition.
 
-目前仅关系型数据库及键值型数据库支持该谓词。
+Currently, both the RDB store and KV store support this predicate.
 
 **Since:** 10
 
@@ -42,7 +43,7 @@ and(): DataSharePredicates
 
 | Type | Description |
 | --- | --- |
-| [DataSharePredicates](arkts-arkdata-datasharepredicates-datasharepredicates-c.md) | 返回带有和条件的谓词。 |
+| [DataSharePredicates](arkts-arkdata-datasharepredicates-datasharepredicates-c.md) | DataSharePredicates** object with the AND operator. |
 
 ## Examples
 
@@ -59,9 +60,9 @@ predicates.equalTo("NAME", "lisi")
 beginWrap(): DataSharePredicates
 ```
 
-该接口用于向谓词添加左括号，相当于sql语句的“(”，必须和右括号一起使用。
+Adds a left parenthesis to this **DataSharePredicates**. This API is similar to "(" in an SQL statement and must be used with the right parenthesis.
 
-目前仅关系型数据库支持该谓词。
+Currently, only RDB store supports this predicate.
 
 **Since:** 23
 
@@ -77,7 +78,7 @@ beginWrap(): DataSharePredicates
 
 | Type | Description |
 | --- | --- |
-| [DataSharePredicates](arkts-arkdata-datasharepredicates-datasharepredicates-c.md) | 返回带有左括号的谓词。 |
+| [DataSharePredicates](arkts-arkdata-datasharepredicates-datasharepredicates-c.md) | DataSharePredicates** object with a left parenthesis. |
 
 ## Examples
 
@@ -97,9 +98,9 @@ predicates.equalTo("NAME", "lisi")
 beginsWith(field: string, value: string): DataSharePredicates
 ```
 
-该接口用于配置谓词以匹配值以指定字符串起始的字段。
+Creates a **DataSharePredicates** object to match the data that begins with the specified value.
 
-目前仅关系型数据库支持该谓词。
+Currently, only RDB store supports this predicate.
 
 **Since:** 9
 
@@ -115,14 +116,14 @@ beginsWith(field: string, value: string): DataSharePredicates
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| field | string | Yes | 数据库表中的列名。 |
-| value | string | Yes | 指示值以该字符串起始。 |
+| field | string | Yes | Column name in the database table. |
+| value | string | Yes | Start value to match. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [DataSharePredicates](arkts-arkdata-datasharepredicates-datasharepredicates-c.md) | 返回与指定字段匹配的谓词。 |
+| [DataSharePredicates](arkts-arkdata-datasharepredicates-datasharepredicates-c.md) | DataSharePredicates** object created. |
 
 ## Examples
 
@@ -137,9 +138,9 @@ predicates.beginsWith("NAME", "os");
 between(field: string, low: ValueType, high: ValueType): DataSharePredicates
 ```
 
-该接口用于配置谓词以匹配值在指定范围内的字段。包含两端边界值，为左闭右闭区间。
+Creates a **DataSharePredicates** object to match the data that is within the specified range, including the start and end values.
 
-目前仅关系型数据库支持该谓词。
+Currently, only RDB store supports this predicate.
 
 **Since:** 23
 
@@ -155,15 +156,15 @@ between(field: string, low: ValueType, high: ValueType): DataSharePredicates
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| field | string | Yes | 数据库表中的列名。field为undefined或null时，此次调用接口配置的谓词无效。当field为字符串'null'或'undefined'时，键值 型数据库和关系型数据库接口使用该谓词时，可能匹配结果非预期或抛出异常。 |
-| low | [ValueType](arkts-arkdata-valuetype-t.md) | Yes | 指示与谓词匹配的最小值。low为number时，按数值排序指定匹配范围。low为string时，按字典序排序指定匹配范围。low为 boolean时，按数值排序指定匹配范围。 |
-| high | [ValueType](arkts-arkdata-valuetype-t.md) | Yes | 指示与谓词匹配的最大值。high为number时，按数值排序指定匹配范围。high为string时，按字典序排序指定匹配范围。high为 boolean时，按数值排序指定匹配范围。 |
+| field | string | Yes | Column name in the database table.If this parameter is set to **undefined** or **null**, the predicate used is invalid.If this parameter is set to **'null'** or **'undefined'** in string, the matching result may not be as expected or an exception may be thrown when the predicate is used by the KV store and RDB store APIs. |
+| low | [ValueType](arkts-arkdata-valuetype-t.md) | Yes | Minimum value of the range to set.If **low** is set to a number, the matching range is specified based on the numeric order.If **low** is set to a string, the matching range is specified based on the lexicographical order.If **low** is set to boolean, the matching range is specified based on the numeric order. |
+| high | [ValueType](arkts-arkdata-valuetype-t.md) | Yes | Maximum value to match the **DataAbilityPredicates**.If **high** is set to a number, the matching range is specified based on the numeric order.If **high** is set to a string, the matching range is specified based on the lexicographical order.If **high** is set to boolean, the matching range is specified based on the numeric order. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [DataSharePredicates](arkts-arkdata-datasharepredicates-datasharepredicates-c.md) | 返回与指定字段匹配的谓词。 |
+| [DataSharePredicates](arkts-arkdata-datasharepredicates-datasharepredicates-c.md) | DataSharePredicates** object created. |
 
 ## Examples
 
@@ -178,9 +179,9 @@ predicates.between("AGE", 10, 50);
 contains(field: string, value: string): DataSharePredicates
 ```
 
-该接口用于配置谓词以匹配值包含指定字段的字段。
+Creates a **DataSharePredicates** object to match the data that contains the specified value.
 
-目前仅关系型数据库支持该谓词。
+Currently, only RDB store supports this predicate.
 
 **Since:** 9
 
@@ -196,14 +197,14 @@ contains(field: string, value: string): DataSharePredicates
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| field | string | Yes | 数据库表中的列名。 |
-| value | string | Yes | 指示值中包含该字段。 |
+| field | string | Yes | Column name in the database table. |
+| value | string | Yes | Value to match. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [DataSharePredicates](arkts-arkdata-datasharepredicates-datasharepredicates-c.md) | 返回与指定字段匹配的谓词。 |
+| [DataSharePredicates](arkts-arkdata-datasharepredicates-datasharepredicates-c.md) | DataSharePredicates** object created. |
 
 ## Examples
 
@@ -218,9 +219,9 @@ predicates.contains("NAME", "os");
 distinct(): DataSharePredicates
 ```
 
-该接口用于配置谓词以过滤重复记录并仅保留其中一个。
+Creates a **DataSharePredicates** object to filter out duplicate data records.
 
-目前仅关系型数据库支持该谓词。
+Currently, only RDB store supports this predicate.
 
 **Since:** 9
 
@@ -236,7 +237,7 @@ distinct(): DataSharePredicates
 
 | Type | Description |
 | --- | --- |
-| [DataSharePredicates](arkts-arkdata-datasharepredicates-datasharepredicates-c.md) | 返回与指定字段匹配的谓词。 |
+| [DataSharePredicates](arkts-arkdata-datasharepredicates-datasharepredicates-c.md) | DataSharePredicates** object created. |
 
 ## Examples
 
@@ -251,9 +252,9 @@ predicates.equalTo("NAME", "Rose").distinct();
 endWrap(): DataSharePredicates
 ```
 
-该接口用于向谓词添加右括号，相当于sql语句的“)”，必须和左括号一起使用。
+Adds a right parenthesis to this **DataSharePredicates**. This API is similar to ")" in an SQL statement and must be used with the left parenthesis.
 
-目前仅关系型数据库支持该谓词。
+Currently, only RDB store supports this predicate.
 
 **Since:** 23
 
@@ -269,7 +270,7 @@ endWrap(): DataSharePredicates
 
 | Type | Description |
 | --- | --- |
-| [DataSharePredicates](arkts-arkdata-datasharepredicates-datasharepredicates-c.md) | 返回带有右括号的谓词。 |
+| [DataSharePredicates](arkts-arkdata-datasharepredicates-datasharepredicates-c.md) | DataSharePredicates** object with a right parenthesis. |
 
 ## Examples
 
@@ -289,9 +290,9 @@ predicates.equalTo("NAME", "lisi")
 endsWith(field: string, value: string): DataSharePredicates
 ```
 
-该接口用于配置谓词以匹配值以指定字符串结尾的字段。
+Creates a **DataSharePredicates** object to match the data that ends with the specified value.
 
-目前仅关系型数据库支持该谓词。
+Currently, only RDB store supports this predicate.
 
 **Since:** 9
 
@@ -307,14 +308,14 @@ endsWith(field: string, value: string): DataSharePredicates
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| field | string | Yes | 数据库表中的列名。 |
-| value | string | Yes | 指示值以该字符串结尾。 |
+| field | string | Yes | Column name in the database table. |
+| value | string | Yes | End value to match. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [DataSharePredicates](arkts-arkdata-datasharepredicates-datasharepredicates-c.md) | 返回与指定字段匹配的谓词。 |
+| [DataSharePredicates](arkts-arkdata-datasharepredicates-datasharepredicates-c.md) | DataSharePredicates** object created. |
 
 ## Examples
 
@@ -329,9 +330,9 @@ predicates.endsWith("NAME", "os");
 equalTo(field: string, value: ValueType): DataSharePredicates
 ```
 
-该接口用于配置谓词以匹配值等于指定值的字段。
+Creates a **DataSharePredicates** object to search for the records in the specified column that are equal to the given value.
 
-目前仅关系型数据库及键值型数据库支持该谓词。
+Currently, both the RDB store and KV store support this predicate.
 
 **Since:** 10
 
@@ -349,14 +350,14 @@ equalTo(field: string, value: ValueType): DataSharePredicates
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| field | string | Yes | 数据库表中的列名。field为undefined或者null时，此次调用接口配置的谓词无效。 |
-| value | [ValueType](arkts-arkdata-valuetype-t.md) | Yes | 指示要与谓词匹配的值。value为undefined或者null时，此次调用接口配置的谓词无效。 |
+| field | string | Yes | Column name in the database table.If this parameter is set to **undefined** or **null**, the predicate used is invalid. |
+| value | [ValueType](arkts-arkdata-valuetype-t.md) | Yes | Value to match.If this parameter is set to **undefined** or **null**, the predicate used is invalid. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [DataSharePredicates](arkts-arkdata-datasharepredicates-datasharepredicates-c.md) | 返回与指定字段匹配的谓词。 |
+| [DataSharePredicates](arkts-arkdata-datasharepredicates-datasharepredicates-c.md) | DataSharePredicates** object created. |
 
 ## Examples
 
@@ -371,9 +372,9 @@ predicates.equalTo("NAME", "Rose");
 glob(field: string, value: string): DataSharePredicates
 ```
 
-该接口用于配置谓词以匹配指定通配符表达式的字段。
+Creates a **DataSharePredicates** object to match the data that matches the specified wildcard expression.
 
-目前仅关系型数据库支持该谓词。
+Currently, only RDB store supports this predicate.
 
 **Since:** 9
 
@@ -389,14 +390,14 @@ glob(field: string, value: string): DataSharePredicates
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| field | string | Yes | 数据库表中的列名。 |
-| value | string | Yes | 指示要与谓词匹配的通配符表达式。表达式中'*'代表零个、一个或多个数字或字符，'?'代表一个单一的数字或字符，区分大小写。 |
+| field | string | Yes | Column name in the database table. |
+| value | string | Yes | Wildcard expression to match.In the expression, '*' represents zero, one, or more digits or characters, and '?' represents a single digit or character. It is case sensitive. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [DataSharePredicates](arkts-arkdata-datasharepredicates-datasharepredicates-c.md) | 返回与指定字段匹配的谓词。 |
+| [DataSharePredicates](arkts-arkdata-datasharepredicates-datasharepredicates-c.md) | DataSharePredicates** object created. |
 
 ## Examples
 
@@ -411,9 +412,9 @@ predicates.glob("NAME", "?h*g");
 greaterThan(field: string, value: ValueType): DataSharePredicates
 ```
 
-该接口用于配置谓词以匹配值大于指定值的字段。
+Creates a **DataSharePredicates** object to match the data that is greater than the specified value.
 
-目前仅关系型数据库及键值型数据库支持该谓词。
+Currently, both the RDB store and KV store support this predicate.
 
 **Since:** 23
 
@@ -429,14 +430,14 @@ greaterThan(field: string, value: ValueType): DataSharePredicates
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| field | string | Yes | 数据库表中的列名。field为undefined或null时，此次调用接口配置的谓词无效。当field为字符串'null'或'undefined'时，键值 型数据库和关系型数据库接口使用该谓词时，可能匹配结果非预期或抛出异常。 |
-| value | [ValueType](arkts-arkdata-valuetype-t.md) | Yes | 指示要与谓词匹配的值。value为undefined或null时，此次调用接口配置的谓词无效。 |
+| field | string | Yes | Column name in the database table.If this parameter is set to **undefined** or **null**, the predicate used is invalid.If this parameter is set to **'null'** or **'undefined'** in string, the matching result may not be as expected or an exception may be thrown when the predicate is used by the KV store and RDB store APIs. |
+| value | [ValueType](arkts-arkdata-valuetype-t.md) | Yes | Value to match.If this parameter is set to **undefined** or **null**, the predicate used is invalid. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [DataSharePredicates](arkts-arkdata-datasharepredicates-datasharepredicates-c.md) | 返回与指定字段匹配的谓词。 |
+| [DataSharePredicates](arkts-arkdata-datasharepredicates-datasharepredicates-c.md) | DataSharePredicates** object created. |
 
 ## Examples
 
@@ -451,9 +452,9 @@ predicates.greaterThan("AGE", 10);
 greaterThanOrEqualTo(field: string, value: ValueType): DataSharePredicates
 ```
 
-该接口用于配置谓词以匹配值大于或等于指定值的字段。
+Creates a **DataSharePredicates** object to match the data that is greater than or equal to the specified value.
 
-目前仅关系型数据库及键值型数据库支持该谓词。
+Currently, both the RDB store and KV store support this predicate.
 
 **Since:** 23
 
@@ -469,14 +470,14 @@ greaterThanOrEqualTo(field: string, value: ValueType): DataSharePredicates
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| field | string | Yes | 数据库表中的列名。field为undefined或null时，此次调用接口配置的谓词无效。当field为字符串'null'或'undefined'时，此次 调用接口配置的谓词匹配结果非预期或抛出异常。 |
-| value | [ValueType](arkts-arkdata-valuetype-t.md) | Yes | 指示要与谓词匹配的值。value为undefined或null时，此次调用接口配置的谓词无效。 |
+| field | string | Yes | Column name in the database table.If this parameter is set to **undefined** or **null**, the predicate used is invalid.If this parameter is set to **'null'** or **'undefined'** in string, the matching result may not be as expected or an exception may be thrown. |
+| value | [ValueType](arkts-arkdata-valuetype-t.md) | Yes | Value to match.If this parameter is set to **undefined** or **null**, the predicate used is invalid. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [DataSharePredicates](arkts-arkdata-datasharepredicates-datasharepredicates-c.md) | 返回与指定字段匹配的谓词。 |
+| [DataSharePredicates](arkts-arkdata-datasharepredicates-datasharepredicates-c.md) | DataSharePredicates** object created. |
 
 ## Examples
 
@@ -491,9 +492,9 @@ predicates.greaterThanOrEqualTo("AGE", 10);
 groupBy(fields: Array<string>): DataSharePredicates
 ```
 
-该接口用于配置谓词按指定列分组查询结果。
+Creates a **DataSharePredicates** object group the records according to the specified fields.
 
-目前仅关系型数据库支持该谓词。
+Currently, only RDB store supports this predicate.
 
 **Since:** 9
 
@@ -509,13 +510,13 @@ groupBy(fields: Array<string>): DataSharePredicates
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| fields | Array&lt;string&gt; | Yes | 指定分组依赖的列名。 |
+| fields | Array&lt;string&gt; | Yes | Names of the columns by which the records are grouped. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [DataSharePredicates](arkts-arkdata-datasharepredicates-datasharepredicates-c.md) | 返回与指定字段匹配的谓词。 |
+| [DataSharePredicates](arkts-arkdata-datasharepredicates-datasharepredicates-c.md) | DataSharePredicates** object created. |
 
 ## Examples
 
@@ -530,9 +531,9 @@ predicates.groupBy(["AGE", "NAME"]);
 in(field: string, value: Array<ValueType>): DataSharePredicates
 ```
 
-该接口用于配置谓词以匹配值在指定范围内的字段。
+Creates a **DataSharePredicates** object to match the data that is within the specified range.
 
-目前仅关系型数据库及键值型数据库支持该谓词。
+Currently, both the RDB store and KV store support this predicate.
 
 **Since:** 10
 
@@ -550,14 +551,14 @@ in(field: string, value: Array<ValueType>): DataSharePredicates
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| field | string | Yes | 数据库表中的列名。field为undefined或者null时，此次调用接口配置的谓词无效。 |
-| value | Array&lt;[ValueType](arkts-arkdata-valuetype-t.md)&gt; | Yes | 以ValueType型数组形式指定的要匹配的值。 |
+| field | string | Yes | Column name in the database table.If this parameter is set to **undefined** or **null**, the predicate used is invalid. |
+| value | Array&lt;[ValueType](arkts-arkdata-valuetype-t.md)&gt; | Yes | Array of the values to match. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [DataSharePredicates](arkts-arkdata-datasharepredicates-datasharepredicates-c.md) | 返回与指定字段匹配的谓词。 |
+| [DataSharePredicates](arkts-arkdata-datasharepredicates-datasharepredicates-c.md) | DataSharePredicates** object created. |
 
 ## Examples
 
@@ -572,9 +573,9 @@ predicates.in("AGE", [18, 20]);
 inKeys(keys: Array<string>): DataSharePredicates
 ```
 
-该接口用于配置谓词以匹配键在指定范围内的字段。
+Creates a **DataSharePredicates** object to match the data whose keys are within the given range.
 
-目前仅KVDB支持该谓词。
+Currently, only the KVDB supports this **DataSharePredicates** object.
 
 **Since:** 9
 
@@ -590,13 +591,13 @@ inKeys(keys: Array<string>): DataSharePredicates
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| keys | Array&lt;string&gt; | Yes | 指定范围的键数组。 |
+| keys | Array&lt;string&gt; | Yes | Array of the keys to match. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [DataSharePredicates](arkts-arkdata-datasharepredicates-datasharepredicates-c.md) | 返回与指定字段匹配的谓词。 |
+| [DataSharePredicates](arkts-arkdata-datasharepredicates-datasharepredicates-c.md) | DataSharePredicates** object created. |
 
 ## Examples
 
@@ -642,9 +643,9 @@ Configure {@code DataSharePredicates} to match the specified field whose data ty
 indexedBy(field: string): DataSharePredicates
 ```
 
-该接口用于配置谓词按指定索引列查询结果。使用该方法前，需要设置索引列。
+Creates a **DataSharePredicates** object to list data by the specified index. Before using this API, ensure that the index column exists.
 
-目前仅关系型数据库支持该谓词。
+Currently, only RDB store supports this predicate.
 
 **Since:** 9
 
@@ -660,13 +661,13 @@ indexedBy(field: string): DataSharePredicates
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| field | string | Yes | 索引列的名称。 |
+| field | string | Yes | Name of the index column. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [DataSharePredicates](arkts-arkdata-datasharepredicates-datasharepredicates-c.md) | 返回与指定字段匹配的谓词。 |
+| [DataSharePredicates](arkts-arkdata-datasharepredicates-datasharepredicates-c.md) | DataSharePredicates** object created. |
 
 ## Examples
 
@@ -681,9 +682,9 @@ predicates.indexedBy("SALARY_INDEX");
 isNotNull(field: string): DataSharePredicates
 ```
 
-该接口用于配置谓词以匹配值不为null的字段。
+Creates a **DataSharePredicates** object to match the data whose value is not null.
 
-目前仅关系型数据库及键值型数据库支持该谓词。
+Currently, both the RDB store and KV store support this predicate.
 
 **Since:** 9
 
@@ -699,13 +700,13 @@ isNotNull(field: string): DataSharePredicates
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| field | string | Yes | 数据库表中的列名。 |
+| field | string | Yes | Column name in the database table. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [DataSharePredicates](arkts-arkdata-datasharepredicates-datasharepredicates-c.md) | 返回与指定字段匹配的谓词。 |
+| [DataSharePredicates](arkts-arkdata-datasharepredicates-datasharepredicates-c.md) | DataSharePredicates** object created. |
 
 ## Examples
 
@@ -720,9 +721,9 @@ predicates.isNotNull("NAME");
 isNull(field: string): DataSharePredicates
 ```
 
-该接口用于配置谓词以匹配值为null的字段。
+Creates a **DataSharePredicates** object to match the data whose value is null.
 
-目前仅关系型数据库及键值型数据库支持该谓词。
+Currently, both the RDB store and KV store support this predicate.
 
 **Since:** 9
 
@@ -738,7 +739,7 @@ isNull(field: string): DataSharePredicates
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| field | string | Yes | 数据库表中的列名。 |
+| field | string | Yes | Column name in the database table. |
 
 **Return value:**
 
@@ -759,9 +760,9 @@ predicates.isNull("NAME");
 lessThan(field: string, value: ValueType): DataSharePredicates
 ```
 
-该接口用于配置谓词以匹配值小于指定值的字段。
+Creates a **DataSharePredicates** object to match the data that is less than the specified value.
 
-目前仅关系型数据库及键值型数据库支持该谓词。
+Currently, both the RDB store and KV store support this predicate.
 
 **Since:** 23
 
@@ -777,14 +778,14 @@ lessThan(field: string, value: ValueType): DataSharePredicates
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| field | string | Yes | 数据库表中的列名。当field为null或undefined时，此次调用接口配置的谓词无效。当field为字符串'null'或'undefined'时，键 值型数据库和关系型数据库接口使用该谓词时，可能匹配结果非预期或抛出异常。 |
-| value | [ValueType](arkts-arkdata-valuetype-t.md) | Yes | 指示要与谓词匹配的值。value为undefined或null时，此次调用接口配置的谓词无效。 |
+| field | string | Yes | Column name in the database table.If field is null or undefined, the predicate configured by calling this API is invalid.If this parameter is set to **'null'** or **'undefined'** in string, the matching result may not be as expected or an exception may be thrown when the predicate is used by the KV store and RDB store APIs. |
+| value | [ValueType](arkts-arkdata-valuetype-t.md) | Yes | Value to match.If this parameter is set to **undefined** or **null**, the predicate used is invalid. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [DataSharePredicates](arkts-arkdata-datasharepredicates-datasharepredicates-c.md) | 返回与指定字段匹配的谓词。 |
+| [DataSharePredicates](arkts-arkdata-datasharepredicates-datasharepredicates-c.md) | DataSharePredicates** object created. |
 
 ## Examples
 
@@ -799,9 +800,9 @@ predicates.lessThan("AGE", 50);
 lessThanOrEqualTo(field: string, value: ValueType): DataSharePredicates
 ```
 
-该接口用于配置谓词以匹配值小于或等于指定值的字段。
+Creates a **DataSharePredicates** object to match the data that is less than or equal to the specified value.
 
-目前仅关系型数据库及键值型数据库支持该谓词。
+Currently, both the RDB store and KV store support this predicate.
 
 **Since:** 23
 
@@ -817,14 +818,14 @@ lessThanOrEqualTo(field: string, value: ValueType): DataSharePredicates
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| field | string | Yes | 数据库表中的列名。field为undefined或null时，此次调用接口配置的谓词无效。当field为字符串'null'或'undefined'时，键值 型数据库和关系型数据库接口使用该谓词时，可能匹配结果非预期或抛出异常。 |
-| value | [ValueType](arkts-arkdata-valuetype-t.md) | Yes | 指示要与谓词匹配的值。value为undefined或null时，此次调用接口配置的谓词无效。 |
+| field | string | Yes | Column name in the database table.If this parameter is set to **undefined** or **null**, the predicate used is invalid.If this parameter is set to **'null'** or **'undefined'** in string, the matching result may not be as expected or an exception may be thrown when the predicate is used by the KV store and RDB store APIs. |
+| value | [ValueType](arkts-arkdata-valuetype-t.md) | Yes | Value to match.If this parameter is set to **undefined** or **null**, the predicate used is invalid. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [DataSharePredicates](arkts-arkdata-datasharepredicates-datasharepredicates-c.md) | 返回与指定字段匹配的谓词。 |
+| [DataSharePredicates](arkts-arkdata-datasharepredicates-datasharepredicates-c.md) | DataSharePredicates** object created. |
 
 ## Examples
 
@@ -839,9 +840,9 @@ predicates.lessThanOrEqualTo("AGE", 50);
 like(field: string, value: string): DataSharePredicates
 ```
 
-该接口用于配置谓词以匹配指定通配符表达式的字段。
+Creates a **DataSharePredicates** object to match the data that matches the specified wildcard expression.
 
-目前仅关系型数据库及键值型数据库支持该谓词。
+Currently, both the RDB store and KV store support this predicate.
 
 **Since:** 23
 
@@ -857,14 +858,14 @@ like(field: string, value: string): DataSharePredicates
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| field | string | Yes | 数据库表中的列名。field为undefined或null时，此次调用接口配置的谓词无效。当field为字符串'null'或'undefined'时，键值 型数据库和关系型数据库接口使用该谓词时，可能匹配结果非预期或抛出异常。 |
-| value | string | Yes | 指示要与谓词匹配的通配符表达式。 表达式中'%'代表零个、一个或多个数字或字符，'_'代表一个单一的数字或字符，不区分大小写。value为undefined 或null时，此次调用接口配置的谓词无效。 |
+| field | string | Yes | Column name in the database table.If this parameter is set to **undefined** or **null**, the predicate used is invalid.If this parameter is set to **'null'** or **'undefined'** in string, the matching result may not be as expected or an exception may be thrown when the predicate is used by the KV store and RDB store APIs. |
+| value | string | Yes | Wildcard expression to match.In the expression, '%' represents zero, one, or more digits or characters, and '_' represents a single digit or character. It is case insensitive.If this parameter is set to **undefined** or **null**, the predicate used is invalid. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [DataSharePredicates](arkts-arkdata-datasharepredicates-datasharepredicates-c.md) | 返回与指定字段匹配的谓词。 |
+| [DataSharePredicates](arkts-arkdata-datasharepredicates-datasharepredicates-c.md) | DataSharePredicates** object created. |
 
 ## Examples
 
@@ -885,9 +886,9 @@ ArkTS-Sta:
 limit(total: int, offset: int): DataSharePredicates
 ```
 
-该接口用于配置谓词以指定结果数和起始位置。
+Creates a **DataSharePredicates** object to specify the number of records in the result and the start position.
 
-目前仅关系型数据库及键值型数据库支持该谓词。
+Currently, both the RDB store and KV store support this predicate.
 
 **Since:** 10
 
@@ -905,14 +906,14 @@ limit(total: int, offset: int): DataSharePredicates
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| total | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | 最大数据记录数。当使用键值型数据库且total为undefined或null时，会限制最大记录数为0。当使用关系型数据库且total为undefined或 null时，不会限制最大记录数。当使用键值型数据库时，取值范围参考 [键值型数据库limit接口](arkts-arkdata-distributedkvstore-query-c.md#limit)中的total参数说明。当使用关系型数据库 时，取值范围参考[关系型数据库limitAs接口](arkts-arkdata-relationalstore-rdbpredicates-c.md#limitas)中的value参数说明。 |
-| offset | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | 指定查询结果的起始位置。当offset为undefined或null时，起始位置为结果集的最前端。当使用键值型数据库时，取值范围参考 [键值型数据库limit接口](arkts-arkdata-distributedkvstore-query-c.md#limit)中的offset参数说明。当使用关系型数据 库时，取值范围参考[关系型数据库offsetAs接口](arkts-arkdata-relationalstore-rdbpredicates-c.md#offsetas)中的 rowOffset参数说明。 |
+| total | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | Maximum number of records.If the KV store is used and **total** is **undefined** or **null**, the maximum number of records is 0. For details about the value range, see the description of this parameter in [limit](arkts-arkdata-distributedkvstore-query-c.md#limit).If the RDB store is used and **total** is **undefined** or **null**, the maximum number of records is not limited. For details about the value range, see the description of this parameter in [limitAs](arkts-arkdata-distributedkvstore-query-c.md#limit). |
+| offset | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | Start position of the query result.If this parameter is set to **undefined** or **null**, the start position is the beginning of the result set.For details about the value range in a KV store, see the description of this parameter in [limit](arkts-arkdata-distributedkvstore-query-c.md#limit).For details about the value range in an RDB store, see the description of the **rowOffset** parameter in [offsetAs](arkts-arkdata-relationalstore-rdbpredicates-c.md#offsetas). |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [DataSharePredicates](arkts-arkdata-datasharepredicates-datasharepredicates-c.md) | 返回与指定字段匹配的谓词。 |
+| [DataSharePredicates](arkts-arkdata-datasharepredicates-datasharepredicates-c.md) | DataSharePredicates** object created. |
 
 ## Examples
 
@@ -927,9 +928,9 @@ predicates.equalTo("NAME", "Rose").limit(10, 3);
 notBetween(field: string, low: ValueType, high: ValueType): DataSharePredicates
 ```
 
-该接口用于配置谓词以匹配值超出指定范围的字段。不包含两端边界值，为左开右开区间。
+Creates a **DataSharePredicates** object to match the data that is out of the specified range, excluding the start and end values.
 
-目前仅关系型数据库支持该谓词。
+Currently, only RDB store supports this predicate.
 
 **Since:** 23
 
@@ -945,15 +946,15 @@ notBetween(field: string, low: ValueType, high: ValueType): DataSharePredicates
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| field | string | Yes | 数据库表中的列名。field为undefined或null时，此次调用接口配置的谓词无效。当field为字符串'null'或'undefined'时，键值 型数据库和关系型数据库接口使用该谓词时，可能匹配结果非预期或抛出异常。 |
-| low | [ValueType](arkts-arkdata-valuetype-t.md) | Yes | 指示与谓词匹配的最小值。low为number时，按数值排序指定匹配范围。low为string时，按字典序排序指定匹配范围。low为 boolean时，按数值排序指定匹配范围。 |
-| high | [ValueType](arkts-arkdata-valuetype-t.md) | Yes | 指示与谓词匹配的最大值。high为number时，按数值排序指定匹配范围。high为string时，按字典序排序指定匹配范围。high为 boolean时，按数值排序指定匹配范围。 |
+| field | string | Yes | Column name in the database table.If this parameter is set to **undefined** or **null**, the predicate used is invalid.If this parameter is set to **'null'** or **'undefined'** in string, the matching result may not be as expected or an exception may be thrown when the predicate is used by the KV store and RDB store APIs. |
+| low | [ValueType](arkts-arkdata-valuetype-t.md) | Yes | Minimum value of the range to set.If **low** is set to a number, the matching range is specified based on the numeric order.If **low** is set to a string, the matching range is specified based on the lexicographical order.If **low** is set to boolean, the matching range is specified based on the numeric order. |
+| high | [ValueType](arkts-arkdata-valuetype-t.md) | Yes | Maximum value to match the **DataAbilityPredicates**.If **high** is set to a number, the matching range is specified based on the numeric order.If **high** is set to a string, the matching range is specified based on the lexicographical order.If **high** is set to boolean, the matching range is specified based on the numeric order. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [DataSharePredicates](arkts-arkdata-datasharepredicates-datasharepredicates-c.md) | 返回与指定字段匹配的谓词。 |
+| [DataSharePredicates](arkts-arkdata-datasharepredicates-datasharepredicates-c.md) | DataSharePredicates** object created. |
 
 ## Examples
 
@@ -968,9 +969,9 @@ predicates.notBetween("AGE", 10, 50);
 notEqualTo(field: string, value: ValueType): DataSharePredicates
 ```
 
-该接口用于配置谓词以匹配值不等于指定值的字段。
+Creates a **DataSharePredicates** object to match the data that is not equal to the specified value.
 
-目前仅关系型数据库及键值型数据库支持该谓词。
+Currently, both the RDB store and KV store support this predicate.
 
 **Since:** 23
 
@@ -986,14 +987,14 @@ notEqualTo(field: string, value: ValueType): DataSharePredicates
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| field | string | Yes | 数据库表中的列名。当field为undefined或null时，此次调用接口配置的谓词无效。当field为字符串'null'或'undefined'时，键 值型数据库和关系型数据库接口使用该谓词时，可能匹配结果非预期或抛出异常。 |
-| value | [ValueType](arkts-arkdata-valuetype-t.md) | Yes | 指示要与谓词匹配的值。value为undefined或null时，此次调用接口配置的谓词无效。 |
+| field | string | Yes | Column name in the database table.If this parameter is set to **undefined** or **null**, the predicate used is invalid.If this parameter is set to **'null'** or **'undefined'** in string, the matching result may not be as expected or an exception may be thrown when the predicate is used by the KV store and RDB store APIs. |
+| value | [ValueType](arkts-arkdata-valuetype-t.md) | Yes | Value to match.If this parameter is set to **undefined** or **null**, the predicate used is invalid. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [DataSharePredicates](arkts-arkdata-datasharepredicates-datasharepredicates-c.md) | 返回与指定字段匹配的谓词。 |
+| [DataSharePredicates](arkts-arkdata-datasharepredicates-datasharepredicates-c.md) | DataSharePredicates** object created. |
 
 ## Examples
 
@@ -1008,9 +1009,9 @@ predicates.notEqualTo("NAME", "Rose");
 notIn(field: string, value: Array<ValueType>): DataSharePredicates
 ```
 
-该接口用于配置谓词以匹配值不在指定范围内的字段。
+Creates a **DataSharePredicates** object to match the data that is not in the specified value.
 
-目前仅关系型数据库及键值型数据库支持该谓词。
+Currently, both the RDB store and KV store support this predicate.
 
 **Since:** 23
 
@@ -1026,14 +1027,14 @@ notIn(field: string, value: Array<ValueType>): DataSharePredicates
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| field | string | Yes | 数据库表中的列名。field为undefined或null时，此次调用接口配置的谓词无效。当field为字符串'null'或'undefined'时，键值 型数据库和关系型数据库接口使用该谓词时，可能匹配结果非预期或抛出异常。 |
-| value | Array&lt;[ValueType](arkts-arkdata-valuetype-t.md)&gt; | Yes | 以ValueType型数组形式指定的要匹配的值。value为undefined或null时，此次调用接口配置的谓词无效。 |
+| field | string | Yes | Column name in the database table.If this parameter is set to **undefined** or **null**, the predicate used is invalid.If this parameter is set to **'null'** or **'undefined'** in string, the matching result may not be as expected or an exception may be thrown when the predicate is used by the KV store and RDB store APIs. |
+| value | Array&lt;[ValueType](arkts-arkdata-valuetype-t.md)&gt; | Yes | Array of the values to match.If this parameter is set to **undefined** or **null**, the predicate used is invalid. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [DataSharePredicates](arkts-arkdata-datasharepredicates-datasharepredicates-c.md) | 返回与指定字段匹配的谓词。 |
+| [DataSharePredicates](arkts-arkdata-datasharepredicates-datasharepredicates-c.md) | DataSharePredicates** object created. |
 
 ## Examples
 
@@ -1079,9 +1080,9 @@ Configure {@code DataSharePredicates} to match the specified field whose data ty
 or(): DataSharePredicates
 ```
 
-该接口用于将或条件添加到谓词中。
+Creates a **DataSharePredicates** object to add the OR condition.
 
-目前仅关系型数据库及键值型数据库支持该谓词。
+Currently, both the RDB store and KV store support this predicate.
 
 **Since:** 23
 
@@ -1097,7 +1098,7 @@ or(): DataSharePredicates
 
 | Type | Description |
 | --- | --- |
-| [DataSharePredicates](arkts-arkdata-datasharepredicates-datasharepredicates-c.md) | 返回带有或条件的谓词。 |
+| [DataSharePredicates](arkts-arkdata-datasharepredicates-datasharepredicates-c.md) | DataSharePredicates** object with the OR operator. |
 
 ## Examples
 
@@ -1114,9 +1115,9 @@ predicates.equalTo("NAME", "lisi")
 orderByAsc(field: string): DataSharePredicates
 ```
 
-该接口用于配置谓词以匹配其值按升序排序的列。
+Creates a **DataSharePredicates** object that sorts records in ascending order.
 
-目前仅关系型数据库及键值型数据库支持该谓词。
+Currently, both the RDB store and KV store support this predicate.
 
 **Since:** 10
 
@@ -1134,13 +1135,13 @@ orderByAsc(field: string): DataSharePredicates
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| field | string | Yes | 数据库表中的列名。 field为undefined或者null时，此次调用接口配置的谓词无效。 |
+| field | string | Yes | Column name in the database table.If this parameter is set to **undefined** or **null**, the predicate used is invalid. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [DataSharePredicates](arkts-arkdata-datasharepredicates-datasharepredicates-c.md) | 返回与指定字段匹配的谓词。 |
+| [DataSharePredicates](arkts-arkdata-datasharepredicates-datasharepredicates-c.md) | DataSharePredicates** object created. |
 
 ## Examples
 
@@ -1155,9 +1156,9 @@ predicates.orderByAsc("AGE");
 orderByDesc(field: string): DataSharePredicates
 ```
 
-该接口用于配置谓词以匹配其值按降序排序的列。
+Creates a **DataSharePredicates** object that sorts data in descending order.
 
-目前仅关系型数据库及键值型数据库支持该谓词。
+Currently, both the RDB store and KV store support this predicate.
 
 **Since:** 10
 
@@ -1175,13 +1176,13 @@ orderByDesc(field: string): DataSharePredicates
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| field | string | Yes | 数据库表中的列名。field为undefined或者null时，此次调用接口配置的谓词无效。 |
+| field | string | Yes | Column name in the database table.If this parameter is set to **undefined** or **null**, the predicate used is invalid. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [DataSharePredicates](arkts-arkdata-datasharepredicates-datasharepredicates-c.md) | 返回与指定字段匹配的谓词。 |
+| [DataSharePredicates](arkts-arkdata-datasharepredicates-datasharepredicates-c.md) | DataSharePredicates** object created. |
 
 ## Examples
 
@@ -1196,9 +1197,9 @@ predicates.orderByDesc("AGE");
 prefixKey(prefix: string): DataSharePredicates
 ```
 
-该接口用于配置谓词以匹配键前缀的指定字段。
+Creates a **DataSharePredicates** object to match the data with the specified key prefix.
 
-目前仅KVDB支持该谓词。
+Currently, only the KVDB supports this **DataSharePredicates** object.
 
 **Since:** 9
 
@@ -1214,13 +1215,13 @@ prefixKey(prefix: string): DataSharePredicates
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| prefix | string | Yes | 指定的键前缀。 |
+| prefix | string | Yes | Key prefix to match. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [DataSharePredicates](arkts-arkdata-datasharepredicates-datasharepredicates-c.md) | 返回与指定字段匹配的谓词。 |
+| [DataSharePredicates](arkts-arkdata-datasharepredicates-datasharepredicates-c.md) | DataSharePredicates** object created. |
 
 ## Examples
 
@@ -1235,9 +1236,9 @@ predicates.prefixKey("NAME");
 unlike(field: string, value: string): DataSharePredicates
 ```
 
-该接口用于配置谓词以匹配不类似指定通配符表达式的字段。
+Creates a **DataSharePredicates** object to match the data that does not match the specified wildcard expression.
 
-目前仅关系型数据库及键值型数据库支持该谓词。
+Currently, both the RDB store and KV store support this predicate.
 
 **Since:** 9
 
@@ -1253,14 +1254,14 @@ unlike(field: string, value: string): DataSharePredicates
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| field | string | Yes | 数据库表中的列名。 |
-| value | string | Yes | 指示要与谓词匹配的通配符表达式。表达式中'%'代表零个、一个或多个数字或字符，'_'代表一个单一的数字或字符，不区分大小写。 |
+| field | string | Yes | Column name in the database table. |
+| value | string | Yes | Wildcard expression to match.In the expression, '%' represents zero, one, or more digits or characters, and '_' represents a single digit or character. It is case insensitive. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [DataSharePredicates](arkts-arkdata-datasharepredicates-datasharepredicates-c.md) | 返回与指定字段匹配的谓词。 |
+| [DataSharePredicates](arkts-arkdata-datasharepredicates-datasharepredicates-c.md) | DataSharePredicates** object created. |
 
 ## Examples
 

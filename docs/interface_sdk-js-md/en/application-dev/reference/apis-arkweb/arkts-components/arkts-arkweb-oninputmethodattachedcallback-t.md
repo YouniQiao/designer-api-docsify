@@ -4,7 +4,7 @@
 type OnInputmethodAttachedCallback = () => void
 ```
 
-当inputmethod被附加时，会触发回调。
+The callback will be triggered when inputmethod is attached.
 
 **Since:** 26.0.0
 

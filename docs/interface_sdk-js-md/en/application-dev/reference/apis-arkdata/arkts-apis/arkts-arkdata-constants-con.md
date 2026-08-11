@@ -6,7 +6,7 @@
 const MAX_BATCH_SIZE = 128
 ```
 
-最大批处理操作数量。
+max batch operation size.Maximum number of batch operations.
 
 **Since:** 7
 
@@ -26,7 +26,7 @@ const MAX_BATCH_SIZE = 128
 const MAX_KEY_LENGTH = 1024
 ```
 
-数据库中Key允许的最大长度，单位字节。
+max key length.Maximum length of a key in the KV store, in bytes.
 
 **Since:** 7
 
@@ -46,7 +46,7 @@ const MAX_KEY_LENGTH = 1024
 const MAX_KEY_LENGTH_DEVICE = 896
 ```
 
-设备密钥长度，单位字节。
+max device coordinate key length.Maximum length of a device key, in bytes.
 
 **Since:** 7
 
@@ -66,7 +66,7 @@ const MAX_KEY_LENGTH_DEVICE = 896
 const MAX_QUERY_LENGTH = 512000
 ```
 
-最大查询长度，单位字节。
+max query length.Maximum query length, in bytes.
 
 **Since:** 7
 
@@ -86,7 +86,7 @@ const MAX_QUERY_LENGTH = 512000
 const MAX_STORE_ID_LENGTH = 128
 ```
 
-数据库标识符允许的最大长度，单位字节。
+max store id length.Maximum length of a KV store ID, in bytes.
 
 **Since:** 7
 
@@ -106,7 +106,7 @@ const MAX_STORE_ID_LENGTH = 128
 const MAX_VALUE_LENGTH = 4194303
 ```
 
-数据库中Value允许的最大长度，单位字节。
+max value length.Maximum length of a value in the KV store, in bytes.
 
 **Since:** 7
 

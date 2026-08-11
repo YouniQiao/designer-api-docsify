@@ -1,11 +1,5 @@
 # createPort
 
-## 导入模块
-
-```TypeScript
-import { dataTransfer } from 'kits/@kit.ConnectivityKit';
-```
-
 ## createPort
 
 ```TypeScript
@@ -36,12 +30,12 @@ function createPort(uuid: string): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 801 | Capability not supported because the chip does not support it. |
-| 36100020 | The UUID is already registered. |
-| 36100021 | Port exceeds the upper limit. |
-| 36100003 | NearLink disabled. |
-| 36100099 | Operation failed. |
-| 201 | Permission denied. |
-| 36100044 | NearLink standard UUID not allowed. |
-| 36100043 | Invalid UUID. |
+| [801](../../errorcode-universal.md#801-该设备不支持此api) | Capability not supported because the chip does not support it. |
+| [36100020](../errorcode-nearlink-service.md#36100020-端口重复注册) | The UUID is already registered. |
+| [36100021](../errorcode-nearlink-service.md#36100021-端口注册数量超出上限) | Port exceeds the upper limit. |
+| [36100003](../errorcode-nearlink-service.md#36100003--星闪关闭) | NearLink disabled. |
+| [36100099](../errorcode-nearlink-service.md#36100099-操作失败) | Operation failed. |
+| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
+| [36100044](../errorcode-nearlink-service.md#36100044-禁止使用星闪标准服务uuid) | NearLink standard UUID not allowed. |
+| [36100043](../errorcode-nearlink-service.md#36100043-无效uuid) | Invalid UUID. |
 

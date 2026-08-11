@@ -12,7 +12,7 @@ import { Options, ReaderIteratorResult, Watcher, ReadTextOptions, WatchEventList
 declare function closeSync(file: number | File): void
 ```
 
-以同步方法关闭文件或目录。
+Closes a file or directory. This API returns the result synchronously.
 
 **Since:** 9
 
@@ -28,7 +28,7 @@ declare function closeSync(file: number | File): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| file | number \| File | Yes | 已打开的File对象或已打开的文件描述符fd。关闭后file对象或文件描述符fd不再具备实际意义，不可再用于进行读写等操作。 |
+| file | number \| File | Yes | File** object or FD of the file to close. Once closed, the **File** object or FD cannot be used for read or write operations. |
 
 **Error codes:**
 

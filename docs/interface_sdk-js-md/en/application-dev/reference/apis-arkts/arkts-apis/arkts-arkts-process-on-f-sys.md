@@ -12,7 +12,7 @@ import { process } from 'kits/@kit.ArkTS';
 function on(type: string, listener: EventListener): void
 ```
 
-注册事件。
+Register for an event
 
 **Since:** 7
 
@@ -28,6 +28,6 @@ function on(type: string, listener: EventListener): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | string | Yes | 表示注册的事件类型。 |
-| listener | [EventListener](arkts-arkts-worker-eventlistener-i.md) | Yes | 表示注册的事件函数。 |
+| type | string | Yes | Indicates the type of event registered. |
+| listener | [EventListener](arkts-arkts-worker-eventlistener-i.md) | Yes | Represents the registered event function |
 

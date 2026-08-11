@@ -12,7 +12,7 @@ import { certificateManager } from 'kits/@kit.DeviceCertificateKit';
 function uninstallUserTrustedCertificateSync(certUri: string): void
 ```
 
-卸载用户CA证书。
+Uninstalls a user CA certificate.
 
 **Since:** 18
 
@@ -28,27 +28,27 @@ function uninstallUserTrustedCertificateSync(certUri: string): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| certUri | string | Yes | 表示待卸载证书的唯一标识符，长度限制256字节以内 |
+| certUri | string | Yes | Unique identifier of the certificate to be uninstalled. The value contains a maximum of 256 bytes. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; 3. Parameter verification failed. |
-| 201 | Permission verification failed. The application does not have the permission required to call the API. |
-| 17500002 | Indicates that the certificate does not exist. |
-| 17500001 | Internal error. Possible causes: 1. IPC communication failed; &lt;br&gt;2. Memory operation error; 3. File operation error. Please try again. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; 3. Parameter verification failed. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed. The application does not have the permission required to call the API. |
+| [17500002](../errorcode-certManager.md#17500002-certificate-not-exist) | Indicates that the certificate does not exist. |
+| [17500001](../errorcode-certManager.md#17500001-internal-error) | Internal error. Possible causes: 1. IPC communication failed; &lt;br&gt;2. Memory operation error; 3. File operation error. Please try again. |
 
 ## Examples
 
 ```TypeScript
-import { certificateManager } from '@kit.DeviceCertificateKit';
+import {certificateManager} from '@kit.DeviceCertificateKit';
 
 let certUri: string = "test"; /* The service needs to use the certificate identifier to delete the certificate, which is not elaborated here. */
 try {
-  certificateManager.uninstallUserTrustedCertificateSync(certUri);
+    certificateManager.uninstallUserTrustedCertificateSync(certUri);
 } catch (error) {
-  console.error(`Failed to uninstall user trusted certificate. Code: ${error.code}, message: ${error.message}`);
+    console.error(`Failed to uninstall user trusted certificate. Code: ${error.code}, message: ${error.message}`);
 }
 ```
 

@@ -1,11 +1,5 @@
 # downloadFile
 
-## 导入模块
-
-```TypeScript
-import { request } from 'kits/@kit.BasicServicesKit';
-```
-
 ## downloadFile
 
 ```TypeScript
@@ -42,13 +36,15 @@ function downloadFile(context: BaseContext, config: DownloadConfig, callback: As
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 401 | The parameters check fails. Possible causes: &lt;br&gt; 1. Missing mandatory parameters. &lt;br&gt; 2. Incorrect parameter type. &lt;br&gt; 3. Parameter verification failed. |
-| 201 | The permissions check fails. |
-| 13400001 | Invalid file or file system error. |
-| 13400002 | File path not supported or invalid. |
-| 13400003 | Task service ability error. |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | The parameters check fails. Possible causes: &lt;br&gt; 1. Missing mandatory parameters. &lt;br&gt; 2. Incorrect parameter type. &lt;br&gt; 3. Parameter verification failed. |
+| [201](../../errorcode-universal.md#201-权限校验失败) | The permissions check fails. |
+| [13400001](../../apis-basic-services-kit/errorcode-request.md#13400001-文件操作异常) | Invalid file or file system error. |
+| [13400002](../../apis-basic-services-kit/errorcode-request.md#13400002-文件路径异常) | File path not supported or invalid. |
+| [13400003](../../apis-basic-services-kit/errorcode-request.md#13400003-服务异常) | Task service ability error. |
 
 ## 示例
+
+ArkTS-Dyn示例：
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -62,6 +58,30 @@ try {
     url: 'https://xxxx/xxxxx.hap',
     filePath: 'xxx/xxxxx.hap'
   }, (err: BusinessError, data: request.DownloadTask) => {
+    if (err) {
+      console.error(`Failed to request the download. Code: ${err.code}, message: ${err.message}`);
+      return;
+    }
+  });
+} catch (err) {
+  console.error(`Failed to request the download. Code: ${err.code}, message: ${err.message}`);
+}
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+import { common } from '@kit.AbilityKit';
+
+// 请在组件内获取context，确保this.getUIContext().getHostContext()返回结果为UIAbilityContext
+let context = this.getUIContext().getHostContext() as common.UIAbilityContext;
+try {
+  // 需要手动将url替换为真实服务器的HTTP协议地址
+  request.downloadFile(context, {
+    url: 'https://xxxx/xxxxx.hap',
+    filePath: 'xxx/xxxxx.hap'
+  }, (err: Error, data: request.DownloadTask): void => {
     if (err) {
       console.error(`Failed to request the download. Code: ${err.code}, message: ${err.message}`);
       return;
@@ -114,13 +134,15 @@ function downloadFile(context: BaseContext, config: DownloadConfig): Promise<Dow
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 401 | The parameters check fails. Possible causes: &lt;br&gt; 1. Missing mandatory parameters. &lt;br&gt; 2. Incorrect parameter type. &lt;br&gt; 3. Parameter verification failed. |
-| 201 | The permissions check fails. |
-| 13400001 | Invalid file or file system error. |
-| 13400002 | File path not supported or invalid. |
-| 13400003 | Task service ability error. |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | The parameters check fails. Possible causes: &lt;br&gt; 1. Missing mandatory parameters. &lt;br&gt; 2. Incorrect parameter type. &lt;br&gt; 3. Parameter verification failed. |
+| [201](../../errorcode-universal.md#201-权限校验失败) | The permissions check fails. |
+| [13400001](../../apis-basic-services-kit/errorcode-request.md#13400001-文件操作异常) | Invalid file or file system error. |
+| [13400002](../../apis-basic-services-kit/errorcode-request.md#13400002-文件路径异常) | File path not supported or invalid. |
+| [13400003](../../apis-basic-services-kit/errorcode-request.md#13400003-服务异常) | Task service ability error. |
 
 ## 示例
+
+ArkTS-Dyn示例：
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -134,9 +156,29 @@ try {
      let downloadTask: request.DownloadTask = data;
   }).catch((err: BusinessError) => {
     console.error(`Failed to request the download. Code: ${err.code}, message: ${err.message}`);
-  });
+  })
 } catch (err) {
   console.error(`Failed to request the download. Code: ${err.code}, message: ${err.message}`);
 }
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+  import { common } from '@kit.AbilityKit';
+
+  // 请在组件内获取context，确保this.getUIContext().getHostContext()返回结果为UIAbilityContext
+  let context = this.getUIContext().getHostContext() as common.UIAbilityContext;
+  try {
+    // 需要手动将url替换为真实服务器的HTTP协议地址
+    request.downloadFile(context, { url: 'https://xxxx/xxxx.hap' }).then((data: request.DownloadTask) => {
+      let downloadTask: request.DownloadTask = data;
+    }).catch((err: Error) => {
+      console.error(`Failed to request the download. Code: ${err.code}, message: ${err.message}`);
+    })
+  } catch (err) {
+    console.error(`Failed to request the download. Code: ${err.code}, message: ${err.message}`);
+  }
 ```
 

@@ -6,7 +6,7 @@ typedef struct ColorSpacePrimaries {...} ColorSpacePrimaries
 
 ## Overview
 
-Describes the color space primaries.
+Provides the declaration for the color primary structure, which is used to store the coordinates of the red,green, and blue primary colors and white point in the color space.
 
 **Since**: 13
 

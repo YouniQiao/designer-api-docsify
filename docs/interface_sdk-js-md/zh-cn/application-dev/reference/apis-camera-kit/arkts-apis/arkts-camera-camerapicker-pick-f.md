@@ -1,11 +1,5 @@
 # pick
 
-## 导入模块
-
-```TypeScript
-import { cameraPicker } from 'kits/@kit.CameraKit';
-```
-
 ## pick
 
 ```TypeScript

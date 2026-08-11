@@ -1,6 +1,6 @@
 # RotateOption
 
-旋转参数。
+Set Rotation Parameters.
 
 **Since:** 23
 
@@ -22,9 +22,7 @@ import { matrix4 } from 'kits/@kit.ArkUI';
 angle?: double
 ```
 
-旋转角度。
-
-默认值：0
+Rotation angle.
 
 **Type:** double
 
@@ -44,13 +42,7 @@ angle?: double
 centerX?: double
 ```
 
-变换中心点x轴坐标。
-
-单位：px
-
-默认值：组件中心点x轴坐标。
-
-取值范围 (-∞, +∞)
+Transform the x-axis coordinate of the center point.
 
 **Type:** double
 
@@ -70,13 +62,7 @@ centerX?: double
 centerY?: double
 ```
 
-变换中心点y轴坐标。
-
-单位：px
-
-默认值：组件中心点y轴坐标。
-
-取值范围 (-∞, +∞)
+Transform the y-axis coordinate of the center point.
 
 **Type:** double
 
@@ -96,11 +82,7 @@ centerY?: double
 x?: double
 ```
 
-旋转轴向量x坐标。
-
-默认值：0。
-
-取值范围 (-∞, +∞)
+Axis of rotation vector x coordinate.
 
 **Type:** double
 
@@ -120,11 +102,7 @@ x?: double
 y?: double
 ```
 
-旋转轴向量y坐标。
-
-默认值：0。
-
-取值范围 (-∞, +∞)
+Axis of rotation vector y coordinate.
 
 **Type:** double
 
@@ -144,13 +122,7 @@ y?: double
 z?: double
 ```
 
-旋转轴向量z坐标。
-
-默认值：0。
-
-取值范围 (-∞, +∞)。
-
-**说明：** 旋转向量中x、y、z至少有一个不为0才有意义。
+Axis of rotation vector z coordinate.
 
 **Type:** double
 

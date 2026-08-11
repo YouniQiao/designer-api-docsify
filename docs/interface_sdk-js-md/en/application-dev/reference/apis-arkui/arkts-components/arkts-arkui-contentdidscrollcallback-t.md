@@ -4,7 +4,8 @@
 declare type ContentDidScrollCallback = (selectedIndex: number, index: number, position: number, mainAxisLength: number) => void
 ```
 
-Swiper滑动时触发的回调，参数可参考[SwiperContentTransitionProxy](arkts-arkui-swipercontenttransitionproxy-i.md)中的说明。
+Triggered during the swipe action of the **Swiper** component. For details about the parameters, see  
+[SwiperContentTransitionProxy](arkts-arkui-swipercontenttransitionproxy-i.md).
 
 **Since:** 12
 
@@ -22,8 +23,8 @@ Swiper滑动时触发的回调，参数可参考[SwiperContentTransitionProxy](a
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| selectedIndex | number | Yes | 当前选中页面的索引。 |
-| index | number | Yes | 视窗内页面的索引。 |
-| position | number | Yes | 视窗内页面的索引。 |
-| mainAxisLength | number | Yes | 视窗内页面的索引。 |
+| selectedIndex | number | Yes | Index of the currently selected page. |
+| index | number | Yes | Index of a page in the viewport. |
+| position | number | Yes | Position of the page specified by **index** relative to the start position of the **Swiper** main axis (start position of the page corresponding to **selectedIndex**). |
+| mainAxisLength | number | Yes | Length of the page specified by **index** along the main axis, in vp. |
 

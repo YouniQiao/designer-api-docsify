@@ -1,6 +1,6 @@
 # CornerPos
 
-圆角位置枚举。
+Enumerates the corner positions of a rounded rectangle.
 
 **Since:** 12
 
@@ -16,7 +16,7 @@
 TOP_LEFT_POS = 0
 ```
 
-左上角圆角位置。
+Top left corner of the rounded rectangle.
 
 **Since:** 12
 
@@ -32,7 +32,7 @@ TOP_LEFT_POS = 0
 TOP_RIGHT_POS = 1
 ```
 
-右上角圆角位置。
+Top right corner of the rounded rectangle.
 
 **Since:** 12
 
@@ -48,7 +48,7 @@ TOP_RIGHT_POS = 1
 BOTTOM_RIGHT_POS = 2
 ```
 
-右下角圆角位置。
+Bottom right corner of the rounded rectangle.
 
 **Since:** 12
 
@@ -64,7 +64,7 @@ BOTTOM_RIGHT_POS = 2
 BOTTOM_LEFT_POS = 3
 ```
 
-左下角圆角位置。
+Bottom left corner of the rounded rectangle.
 
 **Since:** 12
 

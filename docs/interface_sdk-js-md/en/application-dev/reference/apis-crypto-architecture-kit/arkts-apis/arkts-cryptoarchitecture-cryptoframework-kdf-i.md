@@ -1,7 +1,6 @@
 # Kdf
 
-密钥派生函数（KDF）接口，定义基于密钥派生参数派生密钥的方法。调用前，需通过  
-[createKdf](arkts-cryptoarchitecture-cryptoframework-createkdf-f.md#createkdf)方法创建一个Kdf实例。
+Key derivation function (KDF) interface, defining methods for deriving keys based on key derivation parameters.Before use, you must create a **Kdf** instance by using [createKdf](arkts-cryptoarchitecture-cryptoframework-createkdf-f.md#createkdf).
 
 **Since:** 11
 
@@ -25,7 +24,7 @@ import { cryptoFramework } from 'kits/@kit.CryptoArchitectureKit';
 generateSecret(params: KdfSpec, callback: AsyncCallback<DataBlob>): void
 ```
 
-基于传入的密钥派生参数进行密钥派生。使用callback异步回调。
+Generates a key based on the specified key derivation parameters. This API uses an asynchronous callback to return the result.
 
 **Since:** 11
 
@@ -43,17 +42,17 @@ generateSecret(params: KdfSpec, callback: AsyncCallback<DataBlob>): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| params | [KdfSpec](arkts-cryptoarchitecture-cryptoframework-kdfspec-i.md) | Yes | 设置密钥派生函数的参数。 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;DataBlob&gt; | Yes | 回调函数。当密钥派生成功时，err为undefined，data为派生的密钥；否则为错误对象。 |
+| params | [KdfSpec](arkts-cryptoarchitecture-cryptoframework-kdfspec-i.md) | Yes | Parameters of the key derivation function. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;DataBlob&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined**, and **data** is the derived key obtained. Otherwise, **err** is an error object. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | 非法入参。可能的原因： &lt;br&gt;1. 必填参数未指定； &lt;br&gt;2. 参数类型不正确； &lt;br&gt;3. 参数验证失败。 |
-| 17630001 | 密码操作错误。 |
-| 17620001 | 内存操作失败。 |
-| 17620003 | 参数检查失败。可能的原因： &lt;br&gt;1. 参数中的密钥长度无效； &lt;br&gt;2. 参数中的info长度无效； &lt;br&gt;3. 参数中的keySize无效。<br>**Applicable version:** 22 and later |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Invalid parameters. Possible causes: &lt;br&gt;1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; &lt;br&gt;3. Parameter verification failed. |
+| [17630001](../errorcode-crypto-framework.md#17630001-cryptographic-operation-error) | Crypto operation error. |
+| [17620001](../errorcode-crypto-framework.md#17620001-memory-operation-failed) | Memory operation failed. |
+| [17620003](../errorcode-crypto-framework.md#17620003-parameter-check-failed) | Parameter check failed. Possible causes: &lt;br&gt;1. Invalid key length in the params; &lt;br&gt;2. Invalid info length in the params; &lt;br&gt;3. Invalid keySize in the params.<br>**Applicable version:** 22 and later |
 
 ## Examples
 
@@ -72,7 +71,7 @@ let spec: cryptoFramework.PBKDF2Spec = {
 let kdf = cryptoFramework.createKdf('PBKDF2|SHA256');
 kdf.generateSecret(spec, (err, secret) => {
   if (err) {
-    console.error(`key derivation failed, errCode: ${err.code}, errMsg: ${err.message}`);
+    console.error('key derivation result: fail.');
     return;
   }
   console.info('key derivation output = ' + secret.data);
@@ -94,7 +93,7 @@ let spec: cryptoFramework.HKDFSpec = {
 let kdf = cryptoFramework.createKdf('HKDF|SHA256|EXTRACT_AND_EXPAND');
 kdf.generateSecret(spec, (err, secret) => {
   if (err) {
-    console.error(`key derivation failed, errCode: ${err.code}, errMsg: ${err.message}`);
+    console.error('key derivation result: fail.');
     return;
   }
   console.info('key derivation output = ' + secret.data);
@@ -107,7 +106,7 @@ kdf.generateSecret(spec, (err, secret) => {
 generateSecret(params: KdfSpec): Promise<DataBlob>
 ```
 
-基于传入的密钥派生参数进行密钥派生。使用Promise异步回调。
+Generates a key based on the specified key derivation parameters. This API uses a promise to return the result.
 
 **Since:** 11
 
@@ -125,22 +124,22 @@ generateSecret(params: KdfSpec): Promise<DataBlob>
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| params | [KdfSpec](arkts-cryptoarchitecture-cryptoframework-kdfspec-i.md) | Yes | 设置密钥派生函数的参数。 |
+| params | [KdfSpec](arkts-cryptoarchitecture-cryptoframework-kdfspec-i.md) | Yes | Parameters of the key derivation function. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;DataBlob&gt; | Promise对象，返回派生的密钥。 |
+| Promise&lt;DataBlob&gt; | Promise used to return the derived key. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | 非法入参。可能的原因： &lt;br&gt;1. 必填参数未指定； &lt;br&gt;2. 参数类型不正确； &lt;br&gt;3. 参数验证失败。 |
-| 17630001 | 密码操作错误。 |
-| 17620001 | 内存操作失败。 |
-| 17620003 | 参数检查失败。可能的原因： &lt;br&gt;1. 参数中的密钥长度无效； &lt;br&gt;2. 参数中的info长度无效； &lt;br&gt;3. 参数中的keySize无效。<br>**Applicable version:** 22 and later |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Invalid parameters. Possible causes: &lt;br&gt;1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; &lt;br&gt;3. Parameter verification failed. |
+| [17630001](../errorcode-crypto-framework.md#17630001-cryptographic-operation-error) | Crypto operation error. |
+| [17620001](../errorcode-crypto-framework.md#17620001-memory-operation-failed) | Memory operation failed. |
+| [17620003](../errorcode-crypto-framework.md#17620003-parameter-check-failed) | Parameter check failed. Possible causes: &lt;br&gt;1. Invalid key length in the params; &lt;br&gt;2. Invalid info length in the params; &lt;br&gt;3. Invalid keySize in the params.<br>**Applicable version:** 22 and later |
 
 ## Examples
 
@@ -194,9 +193,9 @@ kdfPromise.then(secret => {
 generateSecretSync(params: KdfSpec): DataBlob
 ```
 
-基于传入的密钥派生参数进行密钥派生，通过同步方式返回派生得到的密钥。
+Generates a key based on the specified key derivation parameters. This API returns the result synchronously.
 
-&lt;br&gt;&lt;br&gt;**说明：**&lt;br&gt;建议优先使用异步API，{@link generateSecret}。同步API可能因系统繁忙、高负载等原因耗时较长而阻塞主线程。因此建议在子线程中调用同步API，以避免阻塞主线程。
+&lt;br&gt;&lt;br&gt;**NOTE：**&lt;br&gt;It is recommended to prioritize the use of asynchronous API, {@link generateSecret}. Synchronous API may take a long time and block the main thread due to system busyness, high load, and other reasons. Therefore,it is advised to invoke synchronous API within a child thread to avoid blocking the main thread.
 
 **Since:** 12
 
@@ -212,23 +211,23 @@ generateSecretSync(params: KdfSpec): DataBlob
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| params | [KdfSpec](arkts-cryptoarchitecture-cryptoframework-kdfspec-i.md) | Yes | 设置密钥派生函数的参数。 |
+| params | [KdfSpec](arkts-cryptoarchitecture-cryptoframework-kdfspec-i.md) | Yes | Parameters of the key derivation function. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [DataBlob](arkts-cryptoarchitecture-cryptoframework-datablob-i.md) | 用于获取派生得到的密钥DataBlob数据。 |
+| [DataBlob](arkts-cryptoarchitecture-cryptoframework-datablob-i.md) | The derived key. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | 非法入参。可能的原因： &lt;br&gt;1. 必填参数未指定； &lt;br&gt;2. 参数类型不正确； &lt;br&gt;3. 参数验证失败。 |
-| 17630001 | 密码操作错误。 |
-| 17620001 | 内存操作失败。 |
-| 17620002 | 获取Native对象失败或参数转换失败。 |
-| 17620003 | 参数检查失败。可能的原因： &lt;br&gt;1. 参数中的密钥长度无效； &lt;br&gt;2. 参数中的info长度无效； &lt;br&gt;3. 参数中的keySize无效。<br>**Applicable version:** 22 and later |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Invalid parameters. Possible causes: &lt;br&gt;1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; &lt;br&gt;3. Parameter verification failed. |
+| [17630001](../errorcode-crypto-framework.md#17630001-cryptographic-operation-error) | Crypto operation error. |
+| [17620001](../errorcode-crypto-framework.md#17620001-memory-operation-failed) | Memory operation failed. |
+| [17620002](../errorcode-crypto-framework.md#17620002-failed-to-obtain-the-native-object-or-convert-parameters) | Failed to obtain the native object or convert parameters. |
+| [17620003](../errorcode-crypto-framework.md#17620003-parameter-check-failed) | Parameter check failed. Possible causes: &lt;br&gt;1. Invalid key length in the params; &lt;br&gt;2. Invalid info length in the params; &lt;br&gt;3. Invalid keySize in the params.<br>**Applicable version:** 22 and later |
 
 ## Examples
 
@@ -272,7 +271,7 @@ console.info('[Sync]key derivation output = ' + secret.data);
 readonly algName: string
 ```
 
-密钥派生函数的算法名称。
+Indicates the algorithm name of the key derivation function.
 
 **Type:** string
 

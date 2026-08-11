@@ -1,10 +1,6 @@
 # TabBarOptions
 
-设置页签内的图片和文字内容。
-
-> **说明：**
-> 
-> 为规范匿名对象的定义，API 18版本修改了此处的元素定义。其中，保留了历史匿名对象的起始版本信息，会出现外层元素@since版本号高于内层元素版本号的情况，但这不影响接口的使用。
+Icon and text for TabBar.
 
 **Since:** 23
 
@@ -14,33 +10,15 @@
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
-## badge
-
-```TypeScript
-badge?: BadgeParamWithNumber | BadgeParamWithString
-```
-
-TabBar 信息标记组件。
-
-**Type:** [BadgeParamWithNumber](arkts-arkui-badge-badgeparamwithnumber-i.md) \| BadgeParamWithString
-
-**Since:** 26.0.0
-
-**ArkTS mode:** ArkTS-Sta only, since version 26.0.0.
-
-**Model restriction:** This API can be used only in the stage model.
-
-<!--Device-TabBarOptions-badge?: BadgeParamWithNumber | BadgeParamWithString--><!--Device-TabBarOptions-badge?: BadgeParamWithNumber | BadgeParamWithString-End-->
-
-**System capability:** SystemCapability.ArkUI.ArkUI.Full
-
 ## icon
 
 ```TypeScript
 icon?: string | Resource
 ```
 
-页签内的图片内容。未设置时不显示图片。
+TabBar icon.Anonymous Object Rectification
+
+&lt;p&gt;&lt;strong&gt;NOTE&lt;/strong&gt;:&lt;br&gt;If the icon uses an SVG image, the width and height attributes of the SVG image must be deleted.Otherwise, the icon size will be determined by the width and height attributes of the SVG image.&lt;/p&gt;
 
 **Type:** string \| Resource
 
@@ -60,7 +38,7 @@ icon?: string | Resource
 text?: string | Resource
 ```
 
-页签内的文字内容。未设置时不显示文字。
+TabBar text.Anonymous Object Rectification
 
 **Type:** string \| Resource
 

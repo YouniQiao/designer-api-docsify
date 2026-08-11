@@ -1,6 +1,6 @@
 # PrivateKeyInfo
 
-表示私钥信息。
+Represents the private key information.
 
 **Since:** 18
 
@@ -22,7 +22,7 @@ import { cert } from 'kits/@kit.DeviceCertificateKit';
 key: string | Uint8Array
 ```
 
-未加密或加密的私钥，支持PEM或DER格式。
+Encrypted or unencrypted private key in PEM or DER format.
 
 **Type:** string \| Uint8Array
 
@@ -42,7 +42,7 @@ key: string | Uint8Array
 password?: string
 ```
 
-私钥的密码，如果私钥是加密的。
+Password of the private key, if the private key is encrypted.
 
 **Type:** string
 

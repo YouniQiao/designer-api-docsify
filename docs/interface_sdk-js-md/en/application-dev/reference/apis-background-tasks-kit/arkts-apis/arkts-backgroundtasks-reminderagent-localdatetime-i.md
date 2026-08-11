@@ -1,6 +1,6 @@
 # LocalDateTime
 
-用于日历类提醒设置时指定时间信息。
+Sets the time information for a calendar reminder.
 
 **Since:** 7
 
@@ -26,7 +26,7 @@ import { reminderAgent } from 'kits/@kit.BackgroundTasksKit';
 day: number
 ```
 
-日
+Date.
 
 **Type:** number
 
@@ -48,7 +48,7 @@ day: number
 hour: number
 ```
 
-时
+Hour.
 
 **Type:** number
 
@@ -70,7 +70,7 @@ hour: number
 minute: number
 ```
 
-分
+Minute.
 
 **Type:** number
 
@@ -92,7 +92,7 @@ minute: number
 month: number
 ```
 
-月
+Month.
 
 **Type:** number
 
@@ -114,7 +114,7 @@ month: number
 second?: number
 ```
 
-秒
+Second.
 
 **Type:** number
 
@@ -136,7 +136,7 @@ second?: number
 year: number
 ```
 
-年
+Year.
 
 **Type:** number
 

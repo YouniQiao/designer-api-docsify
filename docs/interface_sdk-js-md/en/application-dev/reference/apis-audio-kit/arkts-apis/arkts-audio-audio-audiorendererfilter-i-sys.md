@@ -1,5 +1,7 @@
 # AudioRendererFilter (System API)
 
+Describes audio renderer filter.
+
 **Since:** 9
 
 **ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
@@ -41,6 +43,8 @@ AudioRenderer id.
 ```TypeScript
 rendererInfo?: AudioRendererInfo
 ```
+
+Renderer information.
 
 **Type:** [AudioRendererInfo](arkts-audio-audio-audiorendererinfo-i.md)
 

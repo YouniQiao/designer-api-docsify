@@ -4,7 +4,7 @@
 type ImageType = image.Image | image.Picture
 ```
 
-图片容器类型，用于获取全质量图和未压缩图(YUV)。
+Defines the image container type, which is used to obtain full-quality images or uncompressed images (YUV).
 
 **Since:** 23
 
@@ -18,6 +18,6 @@ type ImageType = image.Image | image.Picture
 
 | Type | Description |
 | --- | --- |
-| image.Image | 图片容器类型，用于获取全质量图。 |
-| image.Picture | 图片容器类型，用于获取未压缩图(YUV)。 |
+| image.Image | Image container type that obtains full-quality images. |
+| image.Picture | Image container type that obtains uncompressed images (YUV). |
 

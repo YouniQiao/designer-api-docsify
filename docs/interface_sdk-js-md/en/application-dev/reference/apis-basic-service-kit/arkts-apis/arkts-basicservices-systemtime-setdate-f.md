@@ -12,7 +12,7 @@ import { systemTime } from 'kits/@kit.BasicServicesKit';
 function setDate(date: Date, callback: AsyncCallback<void>): void
 ```
 
-设置系统日期，使用callback异步回调。
+Sets the system date. This API uses an asynchronous callback to return the result.
 
 **Since:** 7
 
@@ -32,8 +32,8 @@ function setDate(date: Date, callback: AsyncCallback<void>): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| date | Date | Yes | 目标日期。 |
-| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | 回调函数。 |
+| date | Date | Yes | Target date to set. |
+| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. |
 
 **Error codes:**
 
@@ -50,7 +50,7 @@ let date = new Date();
 try {
   systemTime.setDate(date, (error: BusinessError) => {
     if (error) {
-      console.info(`Failed to set date. message: ${error.message}, code: ${error.code}`);
+      console.info(`Failed to setting date. message: ${error.message}, code: ${error.code}`);
       return;
     }
     console.info(`Succeeded in setting date.`);
@@ -68,7 +68,7 @@ try {
 function setDate(date: Date): Promise<void>
 ```
 
-设置系统日期，使用Promise异步回调。
+Sets the system date. This API uses a promise to return the result.
 
 **Since:** 7
 
@@ -88,13 +88,13 @@ function setDate(date: Date): Promise<void>
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| date | Date | Yes | 目标日期。 |
+| date | Date | Yes | Target date to set. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | 无返回结果的Promise对象。 |
+| Promise&lt;void&gt; | Promise that returns no value. |
 
 **Error codes:**
 
@@ -112,7 +112,7 @@ try {
   systemTime.setDate(date).then(() => {
     console.info(`Succeeded in setting date.`);
   }).catch((error: BusinessError) => {
-    console.info(`Failed to set date. message: ${error.message}, code: ${error.code}`);
+    console.info(`Failed to setting date. message: ${error.message}, code: ${error.code}`);
   });
 } catch(e) {
   let error = e as BusinessError;

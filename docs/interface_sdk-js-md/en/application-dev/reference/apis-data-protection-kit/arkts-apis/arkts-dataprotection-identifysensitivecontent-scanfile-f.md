@@ -12,7 +12,7 @@ import { identifySensitiveContent } from 'kits/@kit.DataProtectionKit';
 function scanFile(filePath: string, identifyPolicies: Array<Policy>): Promise<Array<MatchResult>>
 ```
 
-根据设置的策略，识别指定文件中的敏感内容，返回识别的结果数组，包含匹配的敏感标签、匹配内容及匹配数量。使用Promise异步回调。
+Identifies sensitive content in a specified file based on the configured policy and returns the identified result array,including the matched sensitivity labels, matched content, and number of matched items. This API uses a promise to return the result.
 
 **Since:** 21
 
@@ -28,52 +28,40 @@ function scanFile(filePath: string, identifyPolicies: Array<Policy>): Promise<Ar
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| filePath | string | Yes | 识别的文件路径，需使用物理路径，路径指向的文件必须存在且支持访问。 |
-| identifyPolicies | Array&lt;Policy&gt; | Yes | 用于识别敏感内容的策略数组。每个Policy定义识别规则（标签、关键字、正则表达式），系统将根据这些规则扫描文件内容并返回匹配结果。 |
+| filePath | string | Yes | File path identified. The path must be a physical path. The file to which the path points must exist and can be accessed. |
+| identifyPolicies | Array&lt;Policy&gt; | Yes | An array of policies used to identify sensitive content. Each policy defines an identification rule (tags, keywords, and regular expressions). The system scans file content based on these rules and returns the matching result. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;Array&lt;MatchResult&gt;&gt; | Promise对象，返回敏感内容识别的结果。成功时返回匹配结果数组，异常返回错误码。 |
+| Promise&lt;Array&lt;MatchResult&gt;&gt; | Promise used to return the identification result of sensitive content. If the operation is successful, the matching result array is returned. If the operation fails, an error code is returned. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 19110003 | The file is not supported. Possible causes: 1. The file path does not exist. 2. The file type is not supported. 3. The file permission is not supported. |
-| 801 | Capability not supported. |
-| 19110002 | Sensitive file content identification timed out. |
-| 19110001 | Parameter error. Possible causes: 1. Incorrect policy format. 2. Invalid parameter range. |
-| 19110004 | A system error has occurred. |
-| 201 | permission denied. |
+| [19110003](../errorcode-dlp.md#19110003-file-not-supported) | The file is not supported. Possible causes: 1. The file path does not exist. 2. The file type is not supported. 3. The file permission is not supported. |
+| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. |
+| [19110002](../errorcode-dlp.md#19110002-file-sensitive-content-identification-timed-out) | Sensitive file content identification timed out. |
+| [19110001](../errorcode-dlp.md#19110001-invalid-parameter) | Parameter error. Possible causes: 1. Incorrect policy format. 2. Invalid parameter range. |
+| [19110004](../errorcode-dlp.md#19110004-system-function-abnormal) | A system error has occurred. |
+| [201](../../errorcode-universal.md#201-permission-denied) | permission denied. |
 
 ## Examples
 
 ```TypeScript
 import { identifySensitiveContent } from '@kit.DataProtectionKit';
 
-// Define the physical file path to be scanned.
-let filePath = "/data/service/el2/100/hmdfs/account/files/Docs/Documents/test.txt";
-
-// Configure the policy for sensitive content identification.
+let filepath = "file://docs/storage/Users/currentUser/Desktop/test.txt";
 let policies: Array<identifySensitiveContent.Policy> = [
-  {"sensitiveLabel":"name", "keywords":["name"], "regex":""},
-  {"sensitiveLabel":"phone", "keywords":[], "regex":"phone"},
-  {"sensitiveLabel":"address", "keywords":["address"], "regex":"xx City, xx Province"}
+  {"sensitiveLabel":"1", "keywords":[], "regex":""}
 ];
 try {
-  identifySensitiveContent.scanFile(filePath, policies).then(records => {
+  identifySensitiveContent.scanFile(filepath, policies).then(records => {
     console.info('scanFile finish');
-    for (let i = 0; i < records.length; ++i) {
-      const sensitiveLabel = records[i].sensitiveLabel;
-      const matchContent = records[i].matchContent;
-      const matchNumber = records[i].matchNumber;
-      console.info(`scanFile result sensitiveLabel: ${sensitiveLabel} matchNumber ${matchNumber} matchContent ${matchContent}`);
-    }
-  }).catch((err: BusinessError) => {
-    // Identification fails.
-    console.error(`Failed to scanFile. Code:${err.code}, message:${err.message}`);
+  }).catch((err:Error) => {
+    console.error('error message', err.message);
   })
 } catch (err) {
   console.error('error message', err.message);

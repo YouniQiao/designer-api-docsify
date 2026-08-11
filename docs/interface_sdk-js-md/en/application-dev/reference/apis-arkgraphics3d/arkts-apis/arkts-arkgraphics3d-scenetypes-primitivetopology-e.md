@@ -1,6 +1,6 @@
 # PrimitiveTopology
 
-顶点序列如何构成三角形.
+How vertices in a sequence form triangles.
 
 **Since:** 18
 
@@ -16,7 +16,7 @@
 TRIANGLE_LIST = 0
 ```
 
-顶点形成一组独立的三角形. 顶点(0, 1, 2)、(3, 4, 5)、...定义独立的三角形.
+The vertices form a set of independent triangle. Vertices (0, 1, 2), (3, 4, 5), ... define separate triangles.
 
 **Since:** 18
 
@@ -32,7 +32,7 @@ TRIANGLE_LIST = 0
 TRIANGLE_STRIP = 1
 ```
 
-顶点形成三角形条带. 从第三个顶点开始，每个顶点与前两个顶点构成三角形.
+The vertices form a triangle strip. Starting from the 3rd, each vertex defines a triangle with the previous two.
 
 **Since:** 18
 

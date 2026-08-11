@@ -1,6 +1,6 @@
 # WorkerGlobalScope
 
-Worker线程自身的运行环境，与宿主线程环境隔离。
+Specifies the worker thread running environment, which is isolated from the host thread environment.
 
 **Inheritance/Implementation:** WorkerGlobalScope extends [EventTarget](arkts-arkts-worker-eventtarget-i.md)
 
@@ -28,7 +28,7 @@ import { MessageEvents, PostMessageOptions, MessageEvent, Priority, WorkerEventT
 onerror?: (ev: ErrorEvent) => void
 ```
 
-onerror属性用于指定Worker在执行过程中发生异常被调用的回调函数，该回调函数在Worker线程中执行。
+The onerror attribute of parentPort specifies the event handler to be called when an exception occurs during worker execution.The event handler is executed in the worker thread.
 
 **Since:** 7
 
@@ -54,7 +54,7 @@ onerror属性用于指定Worker在执行过程中发生异常被调用的回调�
 readonly name: string
 ```
 
-Worker的名字，new Worker时指定。
+Worker name specified when there is a new worker.
 
 **Type:** string
 
@@ -76,7 +76,7 @@ Worker的名字，new Worker时指定。
 readonly self: WorkerGlobalScope & typeof globalThis
 ```
 
-为self指定的type属性。
+Specify the type attribute for self.
 
 **Type:** [WorkerGlobalScope](arkts-arkts-worker-workerglobalscope-i.md) & typeof globalThis
 

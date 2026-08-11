@@ -1,11 +1,5 @@
 # @system.prompt(弹窗)
 
-## 导入模块
-
-```TypeScript
-import { ShowActionMenuOptions, Button, ShowToastOptions, ShowDialogOptions, ShowDialogSuccessResponse } from 'kits/@kit.ArkUI';
-```
-
 ## 汇总
 
 ### 类

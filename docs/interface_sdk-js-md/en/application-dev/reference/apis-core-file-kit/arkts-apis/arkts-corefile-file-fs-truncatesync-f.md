@@ -12,7 +12,7 @@ import { Options, ReaderIteratorResult, Watcher, ReadTextOptions, WatchEventList
 declare function truncateSync(file: string | number, len?: number): void
 ```
 
-以同步方法截断文件内容。
+Truncates the file content. This API returns the result synchronously.
 
 **Since:** 9
 
@@ -28,8 +28,8 @@ declare function truncateSync(file: string | number, len?: number): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| file | string \| number | Yes | 文件的应用沙箱路径或已打开的文件描述符fd。 |
-| len | number | No | 文件截断后的长度，单位为Byte。默认为0。 |
+| file | string \| number | Yes | Application sandbox path or FD of the file. |
+| len | number | No | File length after truncation, in bytes. The default value is **0**. |
 
 **Error codes:**
 

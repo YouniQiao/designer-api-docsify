@@ -1,7 +1,5 @@
 # AppGroupCallbackInfo (System API)
 
-应用分组变化回调返回的属性集合
-
 **Since:** 9
 
 **ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
@@ -24,7 +22,7 @@ import { usageStatistics } from 'kits/@kit.BackgroundTasksKit';
 appNewGroup: int
 ```
 
-变化后的应用分组。
+The usage new group of the application
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
@@ -44,7 +42,7 @@ appNewGroup: int
 appOldGroup: int
 ```
 
-变化前的应用分组。
+The usage old group of the application
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
@@ -64,7 +62,7 @@ appOldGroup: int
 bundleName: string
 ```
 
-应用名称。
+The bundle name
 
 **Type:** string
 
@@ -84,12 +82,7 @@ bundleName: string
 changeReason: long
 ```
 
-分组变化原因。
-
-- 256:使用记录初创建时，默认匹配的原因。  
-- 512:计算优先级分组时异常。  
-- 768:使用时长变化。   
-- 1024:有其他应用为当前应用强制设置优先级分组。
+The change reason
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：long
 
@@ -109,7 +102,7 @@ changeReason: long
 userId: int
 ```
 
-用户id。
+The use id
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 

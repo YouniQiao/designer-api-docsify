@@ -1,11 +1,5 @@
 # onApplicationStateChange
 
-## 导入模块
-
-```TypeScript
-import { appManager } from 'kits/@kit.AbilityKit';
-```
-
 ## onApplicationStateChange
 
 ```TypeScript
@@ -40,8 +34,62 @@ function onApplicationStateChange(observer: ApplicationStateObserver): int
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 16000050 | Internal error. |
-| 201 | Permission denied. |
+| [16000050](../errorcode-ability.md#16000050-内部错误) | Internal error. |
+| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
+
+## 示例
+
+ArkTS-Sta示例：
+
+```TypeScript
+'use static'
+import { appManager } from '@kit.AbilityKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+class CustomApplicationStateObserver implements appManager.ApplicationStateObserver {
+  public appStateData?: appManager.AppStateData;
+  public abilityStateData?: appManager.AbilityStateData;
+  public processData?: appManager.ProcessData;
+
+  onForegroundApplicationChanged(appStateData: appManager.AppStateData): void {
+    console.info(`[appManager] onForegroundApplicationChanged: ${JSON.stringify(appStateData)}`);
+  }
+
+  onAbilityStateChanged(abilityStateData: appManager.AbilityStateData): void {
+    console.info(`[appManager] onAbilityStateChanged: ${JSON.stringify(abilityStateData)}`);
+  }
+
+  onProcessCreated(processData: appManager.ProcessData): void {
+    console.info(`[appManager] onProcessCreated: ${JSON.stringify(processData)}`);
+  }
+
+  onProcessDied(processData: appManager.ProcessData): void {
+    console.info(`[appManager] onProcessDied: ${JSON.stringify(processData)}`);
+  }
+
+  onProcessStateChanged(processData: appManager.ProcessData) {
+    console.info(`[appManager] onProcessStateChanged: ${JSON.stringify(processData)}`);
+  }
+
+  onAppStarted(appStateData: appManager.AppStateData) {
+    console.info(`[appManager] onAppStarted: ${JSON.stringify(appStateData)}`);
+  }
+
+  onAppStopped(appStateData: appManager.AppStateData) {
+    console.info(`[appManager] onAppStopped: ${JSON.stringify(appStateData)}`);
+  }
+}
+
+try {
+  let applicationStateObserver = new CustomApplicationStateObserver();
+  const observerId = appManager.onApplicationStateChange(applicationStateObserver);
+  console.info(`[appManager] observerCode: ${observerId}`);
+} catch (paramError) {
+  let code = (paramError as BusinessError).code;
+  let message = (paramError as BusinessError).message;
+  console.error(`[appManager] error: ${code}, ${message}`);
+}
+```
 
 
 ## onApplicationStateChange
@@ -79,6 +127,61 @@ function onApplicationStateChange(observer: ApplicationStateObserver, bundleName
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 16000050 | Internal error. |
-| 201 | Permission denied. |
+| [16000050](../errorcode-ability.md#16000050-内部错误) | Internal error. |
+| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
+
+## 示例
+
+ArkTS-Sta示例：
+
+```TypeScript
+'use static'
+import { appManager } from '@kit.AbilityKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+class CustomApplicationStateObserver implements appManager.ApplicationStateObserver {
+  public appStateData?: appManager.AppStateData;
+  public abilityStateData?: appManager.AbilityStateData;
+  public processData?: appManager.ProcessData;
+
+  onForegroundApplicationChanged(appStateData: appManager.AppStateData): void {
+    console.info(`[appManager] onForegroundApplicationChanged: ${JSON.stringify(appStateData)}`);
+  }
+
+  onAbilityStateChanged(abilityStateData: appManager.AbilityStateData): void {
+    console.info(`[appManager] onAbilityStateChanged: ${JSON.stringify(abilityStateData)}`);
+  }
+
+  onProcessCreated(processData: appManager.ProcessData): void {
+    console.info(`[appManager] onProcessCreated: ${JSON.stringify(processData)}`);
+  }
+
+  onProcessDied(processData: appManager.ProcessData): void {
+    console.info(`[appManager] onProcessDied: ${JSON.stringify(processData)}`);
+  }
+
+  onProcessStateChanged(processData: appManager.ProcessData) {
+    console.info(`[appManager] onProcessStateChanged: ${JSON.stringify(processData)}`);
+  }
+
+  onAppStarted(appStateData: appManager.AppStateData) {
+    console.info(`[appManager] onAppStarted: ${JSON.stringify(appStateData)}`);
+  }
+
+  onAppStopped(appStateData: appManager.AppStateData) {
+    console.info(`[appManager] onAppStopped:  ${JSON.stringify(appStateData)}`);
+  }
+}
+
+try {
+  let bundleNameList = ['bundleName1', 'bundleName2'];
+  let applicationStateObserver = new CustomApplicationStateObserver();
+  const observerId = appManager.onApplicationStateChange(applicationStateObserver, bundleNameList);
+  console.info(`[appManager] observerCode: ${observerId}`);
+} catch (paramError) {
+  let code = (paramError as BusinessError).code;
+  let message = (paramError as BusinessError).message;
+  console.error(`[appManager] error: ${code}, ${message}`);
+}
+```
 

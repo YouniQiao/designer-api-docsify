@@ -1,6 +1,6 @@
 # ReminderRequest
 
-提醒实例对象，用于设置提醒类型、响铃时长等具体信息。
+Defines the reminder to publish.
 
 **Since:** 7
 
@@ -26,7 +26,7 @@ import { reminderAgent } from 'kits/@kit.BackgroundTasksKit';
 actionButton?: [ActionButton?, ActionButton?]
 ```
 
-弹出的提醒通知栏中显示的按钮（参数可选，支持0/1/2个按钮）。
+Button displayed in the reminder notification. (The parameter is optional. Up to two buttons are supported.)
 
 **Type:** [ActionButton?, ActionButton?]
 
@@ -48,7 +48,7 @@ actionButton?: [ActionButton?, ActionButton?]
 content?: string
 ```
 
-指明提醒内容。
+Reminder content.
 
 **Type:** string
 
@@ -70,7 +70,7 @@ content?: string
 expiredContent?: string
 ```
 
-指明提醒过期后需要显示的内容。
+Content to be displayed after the reminder expires.
 
 **Type:** string
 
@@ -92,7 +92,7 @@ expiredContent?: string
 maxScreenWantAgent?: MaxScreenWantAgent
 ```
 
-提醒到达时跳转的目标包。如果设备正在使用中，则弹出一个通知框。
+Information about the ability that is automatically started when the reminder arrives. If the device is in use, a notification will be displayed.
 
 **Type:** [MaxScreenWantAgent](arkts-backgroundtasks-reminderagentmanager-maxscreenwantagent-i.md)
 
@@ -114,7 +114,7 @@ maxScreenWantAgent?: MaxScreenWantAgent
 notificationId?: number
 ```
 
-指明提醒使用的通知的id号，相同id号的提醒会覆盖。
+Notification ID used by the reminder. If there are reminders with the same notification ID, the later one will overwrite the earlier one.
 
 **Type:** number
 
@@ -136,7 +136,7 @@ notificationId?: number
 reminderType: ReminderType
 ```
 
-指明提醒类型。
+Type of the reminder.
 
 **Type:** [ReminderType](arkts-backgroundtasks-reminderagent-remindertype-e.md)
 
@@ -158,7 +158,7 @@ reminderType: ReminderType
 ringDuration?: number
 ```
 
-指明响铃时长（单位：秒），默认1秒。
+Ringing duration, in seconds. The default value is **1**.Unit: s.
 
 **Type:** number
 
@@ -180,7 +180,7 @@ ringDuration?: number
 slotType?: notification.SlotType
 ```
 
-指明提醒的slot类型。
+Type of the slot used by the reminder.
 
 **Type:** notification.SlotType
 
@@ -202,7 +202,7 @@ slotType?: notification.SlotType
 snoozeContent?: string
 ```
 
-指明延迟提醒时需要显示的内容。
+Content to be displayed when the reminder is snoozing.
 
 **Type:** string
 
@@ -224,7 +224,7 @@ snoozeContent?: string
 snoozeTimes?: number
 ```
 
-指明延迟提醒次数，默认0次。
+Number of reminder snooze times. The default value is **0**.
 
 **Type:** number
 
@@ -246,7 +246,7 @@ snoozeTimes?: number
 timeInterval?: number
 ```
 
-执行延迟提醒间隔（单位：秒），默认0秒。
+Reminder snooze interval, in seconds. The default value is **0**.Unit: s.
 
 **Type:** number
 
@@ -268,7 +268,7 @@ timeInterval?: number
 title?: string
 ```
 
-指明提醒标题。
+Reminder title.
 
 **Type:** string
 
@@ -290,7 +290,7 @@ title?: string
 wantAgent?: WantAgent
 ```
 
-点击通知后需要跳转的目标ability信息。
+Information about the ability that is redirected to when the notification is clicked.
 
 **Type:** [WantAgent](../../apis-ability-kit/arkts-apis/arkts-ability-wantagent-t.md)
 

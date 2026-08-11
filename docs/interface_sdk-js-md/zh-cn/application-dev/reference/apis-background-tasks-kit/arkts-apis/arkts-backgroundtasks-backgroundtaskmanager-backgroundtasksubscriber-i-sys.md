@@ -12,12 +12,6 @@
 
 **系统接口：** 此接口为系统接口。
 
-## 导入模块
-
-```TypeScript
-import { backgroundTaskManager } from 'kits/@kit.BackgroundTasksKit';
-```
-
 ## onContinuousTaskStart
 
 ```TypeScript
@@ -49,16 +43,16 @@ onContinuousTaskStart(info: ContinuousTaskInfo): void
 ```TypeScript
 import { backgroundTaskManager } from '@kit.BackgroundTasksKit';
 
-let backgroundTaskSubscriber : backgroundTaskManager.BackgroundTaskSubscriber = {
-    onContinuousTaskStart: (info: backgroundTaskManager.ContinuousTaskInfo): void => {
-        console.info('Operation onContinuousTaskStart succeeded. data: ' + JSON.stringify(info));
-    },
-    onContinuousTaskUpdate: (info: backgroundTaskManager.ContinuousTaskInfo): void => {
-        console.info('Operation onContinuousTaskUpdate succeeded. data: ' + JSON.stringify(info));
-    },
-    onContinuousTaskStop: (info: backgroundTaskManager.ContinuousTaskInfo): void => {
-        console.info('Operation onContinuousTaskStop succeeded. data: ' + JSON.stringify(info));
-    }
+let backgroundTaskSubscriber: backgroundTaskManager.BackgroundTaskSubscriber = {
+  onContinuousTaskStart: (info: backgroundTaskManager.ContinuousTaskInfo): void => {
+    console.info('Operation onContinuousTaskStart succeeded. data: ' + JSON.stringify(info));
+  },
+  onContinuousTaskUpdate: (info: backgroundTaskManager.ContinuousTaskInfo): void => {
+    console.info('Operation onContinuousTaskUpdate succeeded. data: ' + JSON.stringify(info));
+  },
+  onContinuousTaskStop: (info: backgroundTaskManager.ContinuousTaskInfo): void => {
+    console.info('Operation onContinuousTaskStop succeeded. data: ' + JSON.stringify(info));
+  }
 }
 ```
 
@@ -93,16 +87,16 @@ onContinuousTaskStop(info: ContinuousTaskInfo): void
 ```TypeScript
 import { backgroundTaskManager } from '@kit.BackgroundTasksKit';
 
-let backgroundTaskSubscriber : backgroundTaskManager.BackgroundTaskSubscriber = {
-    onContinuousTaskStart: (info: backgroundTaskManager.ContinuousTaskInfo): void => {
-        console.info('Operation onContinuousTaskStart succeeded. data: ' + JSON.stringify(info));
-    },
-    onContinuousTaskUpdate: (info: backgroundTaskManager.ContinuousTaskInfo): void => {
-        console.info('Operation onContinuousTaskUpdate succeeded. data: ' + JSON.stringify(info));
-    },
-    onContinuousTaskStop: (info: backgroundTaskManager.ContinuousTaskInfo): void => {
-        console.info('Operation onContinuousTaskStop succeeded. data: ' + JSON.stringify(info));
-    }
+let backgroundTaskSubscriber: backgroundTaskManager.BackgroundTaskSubscriber = {
+  onContinuousTaskStart: (info: backgroundTaskManager.ContinuousTaskInfo): void => {
+    console.info('Operation onContinuousTaskStart succeeded. data: ' + JSON.stringify(info));
+  },
+  onContinuousTaskUpdate: (info: backgroundTaskManager.ContinuousTaskInfo): void => {
+    console.info('Operation onContinuousTaskUpdate succeeded. data: ' + JSON.stringify(info));
+  },
+  onContinuousTaskStop: (info: backgroundTaskManager.ContinuousTaskInfo): void => {
+    console.info('Operation onContinuousTaskStop succeeded. data: ' + JSON.stringify(info));
+  }
 }
 ```
 
@@ -137,16 +131,16 @@ onContinuousTaskUpdate(info: ContinuousTaskInfo): void
 ```TypeScript
 import { backgroundTaskManager } from '@kit.BackgroundTasksKit';
 
-let backgroundTaskSubscriber : backgroundTaskManager.BackgroundTaskSubscriber = {
-    onContinuousTaskStart: (info: backgroundTaskManager.ContinuousTaskInfo): void => {
-        console.info('Operation onContinuousTaskStart succeeded. data: ' + JSON.stringify(info));
-    },
-    onContinuousTaskUpdate: (info: backgroundTaskManager.ContinuousTaskInfo): void => {
-        console.info('Operation onContinuousTaskUpdate succeeded. data: ' + JSON.stringify(info));
-    },
-    onContinuousTaskStop: (info: backgroundTaskManager.ContinuousTaskInfo): void => {
-        console.info('Operation onContinuousTaskStop succeeded. data: ' + JSON.stringify(info));
-    }
+let backgroundTaskSubscriber: backgroundTaskManager.BackgroundTaskSubscriber = {
+  onContinuousTaskStart: (info: backgroundTaskManager.ContinuousTaskInfo): void => {
+    console.info('Operation onContinuousTaskStart succeeded. data: ' + JSON.stringify(info));
+  },
+  onContinuousTaskUpdate: (info: backgroundTaskManager.ContinuousTaskInfo): void => {
+    console.info('Operation onContinuousTaskUpdate succeeded. data: ' + JSON.stringify(info));
+  },
+  onContinuousTaskStop: (info: backgroundTaskManager.ContinuousTaskInfo): void => {
+    console.info('Operation onContinuousTaskStop succeeded. data: ' + JSON.stringify(info));
+  }
 }
 ```
 

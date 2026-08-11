@@ -1,11 +1,5 @@
 # setDefaultVoiceSlotId（系统接口）
 
-## 导入模块
-
-```TypeScript
-import { sim } from 'kits/@kit.TelephonyKit';
-```
-
 ## setDefaultVoiceSlotId
 
 ```TypeScript
@@ -37,15 +31,15 @@ Set the card slot ID of the default voice service.
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. |
-| 8301001 | SIM card is not activated. |
-| 201 | Permission denied. |
-| 8300999 | Unknown error. |
-| 202 | Non-system applications use system APIs. |
-| 8300004 | No SIM card found. |
-| 8300002 | Service connection failed. |
-| 8300003 | System internal error. |
-| 8300001 | Invalid parameter value. |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. |
+| [8301001](../errorcode-telephony.md#8301001-sim卡未激活) | SIM card is not activated. |
+| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
+| [8300999](../errorcode-telephony.md#8300999-内部错误) | Unknown error. |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Non-system applications use system APIs. |
+| [8300004](../errorcode-telephony.md#8300004-未识别sim卡) | No SIM card found. |
+| [8300002](../errorcode-telephony.md#8300002-服务连接失败) | Service connection failed. |
+| [8300003](../errorcode-telephony.md#8300003-系统内部错误) | System internal error. |
+| [8300001](../errorcode-telephony.md#8300001-输入参数不在处理范围内) | Invalid parameter value. |
 
 ## 示例
 
@@ -95,15 +89,15 @@ Set the card slot ID of the default voice service.
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. |
-| 8301001 | SIM card is not activated. |
-| 201 | Permission denied. |
-| 8300999 | Unknown error. |
-| 202 | Non-system applications use system APIs. |
-| 8300004 | No SIM card found. |
-| 8300002 | Service connection failed. |
-| 8300003 | System internal error. |
-| 8300001 | Invalid parameter value. |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. |
+| [8301001](../errorcode-telephony.md#8301001-sim卡未激活) | SIM card is not activated. |
+| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
+| [8300999](../errorcode-telephony.md#8300999-内部错误) | Unknown error. |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Non-system applications use system APIs. |
+| [8300004](../errorcode-telephony.md#8300004-未识别sim卡) | No SIM card found. |
+| [8300002](../errorcode-telephony.md#8300002-服务连接失败) | Service connection failed. |
+| [8300003](../errorcode-telephony.md#8300003-系统内部错误) | System internal error. |
+| [8300001](../errorcode-telephony.md#8300001-输入参数不在处理范围内) | Invalid parameter value. |
 
 ## 示例
 

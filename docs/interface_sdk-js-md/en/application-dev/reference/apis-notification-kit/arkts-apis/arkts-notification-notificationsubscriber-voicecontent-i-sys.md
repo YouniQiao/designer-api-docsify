@@ -1,6 +1,6 @@
 # VoiceContent (System API)
 
-通知语音播报内容。
+Returns the notification voice broadcast content.
 
 **Since:** 26.0.0
 
@@ -15,10 +15,10 @@
 ## textContent
 
 ```TypeScript
-textContent?: string
+readonly textContent?: string
 ```
 
-文本语音播报内容。
+Text voice broadcast content.
 
 **Type:** string
 
@@ -28,7 +28,7 @@ textContent?: string
 
 **Model restriction:** This API can be used only in the stage model.
 
-<!--Device-VoiceContent-textContent?: string--><!--Device-VoiceContent-textContent?: string-End-->
+<!--Device-VoiceContent-readonly textContent?: string--><!--Device-VoiceContent-readonly textContent?: string-End-->
 
 **System capability:** SystemCapability.Notification.Notification
 

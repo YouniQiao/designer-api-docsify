@@ -10,12 +10,6 @@
 
 **系统能力：** SystemCapability.BarrierFree.Accessibility.Core
 
-## 导入模块
-
-```TypeScript
-import { accessibility } from 'kits/@kit.AccessibilityKit';
-```
-
 ## constructor
 
 ```TypeScript
@@ -47,7 +41,7 @@ constructor(jsonObject: Object)
 ```TypeScript
 import { accessibility } from '@kit.AccessibilityKit';
 
-let eventInfo = new accessibility.EventInfo({
+let eventInfo: accessibility.EventInfo = ({
   type: 'click',
   bundleName: 'com.example.MyApplication',
   triggerAction: 'click',
@@ -74,6 +68,18 @@ A constructor used to create a EventInfo object.
 
 **系统能力：** SystemCapability.BarrierFree.Accessibility.Core
 
+## 示例
+
+```TypeScript
+import { accessibility } from '@kit.AccessibilityKit';
+
+let eventInfo: accessibility.EventInfo = ({
+  type: 'click',
+  bundleName: 'com.example.MyApplication',
+  triggerAction: 'click',
+});
+```
+
 ## constructor
 
 ```TypeScript
@@ -98,7 +104,7 @@ constructor(type: EventType, bundleName: string, triggerAction: Action)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| type | [EventType](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-screenlock-eventtype-t-sys.md) | 是 | 无障碍事件类型。 |
+| type | [EventType](../../apis-arkts/arkts-apis/arkts-arkts-xml-eventtype-e.md) | 是 | 无障碍事件类型。 |
 | bundleName | string | 是 | 目标应用名。 |
 | triggerAction | [Action](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-agent-action-e.md) | 是 | 触发事件的 Action。 |
 
@@ -476,7 +482,7 @@ type: EventType
 
 无障碍事件类型，不可缺省。
 
-**类型：** [EventType](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-screenlock-eventtype-t-sys.md)
+**类型：** [EventType](../../apis-arkts/arkts-apis/arkts-arkts-xml-eventtype-e.md)
 
 **起始版本：** 7
 

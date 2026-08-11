@@ -4,7 +4,7 @@
 export type NodePosition = Vector2
 ```
 
-用于设置或返回组件的位置。
+Position info.
 
 **Since:** 23
 

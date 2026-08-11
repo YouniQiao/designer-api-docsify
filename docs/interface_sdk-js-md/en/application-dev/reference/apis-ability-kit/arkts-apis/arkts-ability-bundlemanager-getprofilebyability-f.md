@@ -12,12 +12,14 @@ import { bundleManager } from 'kits/@kit.AbilityKit';
 function getProfileByAbility(moduleName: string, abilityName: string, metadataName: string, callback: AsyncCallback<Array<string>>): void
 ```
 
-根据给定的moduleName、abilityName和metadataName（module.json5中  
-[abilities标签](../../../quick-start/module-configuration-file.md#abilities标签)下的metadata标签的name）获取自身相应配置文件的json格式字符串。使用callback异步回调。
+Obtains the JSON string array of the current application's configuration file based on the given module name,ability name, and metadata name (name configured under **metadata** in  
+[abilities](../../../quick-start/module-configuration-file.md#abilities) of the **module.json5** file). This API uses an asynchronous callback to return the result.
 
-> 说明：
->> 如果配置文件信息采用了资源引用格式，则返回值将保持资源引用格式（例如 \$string:res_id），开发者可以通过[资源管理](../../apis-localization-kit/arkts-apis/arkts-resourcemanager.md/arkts-resourcemanager.md)的相
-> 关接口，来获取引用的资源。
+> NOTE
+> 
+> If the profile uses the resource reference format, the return value retains this format (for example,
+> **\$string:res_id**). You can obtain the referenced resources through related APIs of the
+> [resource manager module](../../apis-localization-kit/arkts-apis/arkts-resourcemanager.md/arkts-resourcemanager.md).
 
 **Since:** 9
 
@@ -33,20 +35,20 @@ function getProfileByAbility(moduleName: string, abilityName: string, metadataNa
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| moduleName | string | Yes | 表示Module名称。 |
-| abilityName | string | Yes | 表示UIAbility组件的名称。 |
-| metadataName | string | Yes | 表示UIAbility组件的 [元信息名称](../../../quick-start/module-configuration-file.md#metadata标签)，即module.json5配置文件中 [abilities标签](../../../quick-start/module-configuration-file.md#abilities标签)下的metadata标签的name。 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;string&gt;&gt; | Yes | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md/arkts-basicservices-base-asynccallback-i.md)，当获取成功时，err为 undefined，data为获取到的Array&lt;string&gt;；否则为错误对象。 |
+| moduleName | string | Yes | Module name. |
+| abilityName | string | Yes | Name of the UIAbility component. |
+| metadataName | string | Yes | [Metadata name](../../../quick-start/module-configuration-file.md#metadata) of the UIAbility component, that is, **name** of the **metadata** tag under [abilities](../../../quick-start/module-configuration-file.md#abilities) in the **module.json5** file. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;string&gt;&gt; | Yes | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md/arkts-basicservices-base-asynccallback-i.md) used to return the result. If the information is successfully obtained, **err** is **null** and **data** is **Array&lt;string&gt;**. Otherwise, **err** is an error object. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types. |
-| 17700029 | The specified ability is disabled. |
-| 17700024 | Failed to get the profile because there is no profile in the HAP. |
-| 17700002 | The specified moduleName is not existed. |
-| 17700003 | The specified abilityName is not existed. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types. |
+| [17700029](../errorcode-bundle.md#17700029-disabled-ability) | The specified ability is disabled. |
+| [17700024](../errorcode-bundle.md#17700024-profile-does-not-exist) | Failed to get the profile because there is no profile in the HAP. |
+| [17700002](../errorcode-bundle.md#17700002-module-name-does-not-exist) | The specified moduleName is not existed. |
+| [17700003](../errorcode-bundle.md#17700003-ability-name-does-not-exist) | The specified abilityName is not existed. |
 
 ## Examples
 
@@ -80,12 +82,14 @@ try {
 function getProfileByAbility(moduleName: string, abilityName: string, metadataName?: string): Promise<Array<string>>
 ```
 
-根据给定的moduleName、abilityName和metadataName（module.json5中  
-[abilities标签](../../../quick-start/module-configuration-file.md#abilities标签)下的metadata标签的name）获取自身相应配置文件的json格式字符串。使用Promise异步回调。
+Obtains the JSON string array of the current application's configuration file based on the given module name,ability name, and metadata name (name configured under **metadata** in  
+[abilities](../../../quick-start/module-configuration-file.md#abilities) of the **module.json5** file). This API uses a promise to return the result.
 
-> 说明：
->> 如果配置文件信息采用了资源引用格式，则返回值将保持资源引用格式（例如 \$string:res_id），开发者可以通过[资源管理](../../apis-localization-kit/arkts-apis/arkts-resourcemanager.md/arkts-resourcemanager.md)的相
-> 关接口，来获取引用的资源。
+> NOTE
+> 
+> If the profile uses the resource reference format, the return value retains this format (for example,
+> **\$string:res_id**). You can obtain the referenced resources through related APIs of the
+> [resource manager module](../../apis-localization-kit/arkts-apis/arkts-resourcemanager.md/arkts-resourcemanager.md).
 
 **Since:** 9
 
@@ -101,25 +105,25 @@ function getProfileByAbility(moduleName: string, abilityName: string, metadataNa
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| moduleName | string | Yes | 表示Module名称。 |
-| abilityName | string | Yes | 表示UIAbility组件的名称。 |
-| metadataName | string | No | 表示UIAbility组件的元信息名称，即module.json5配置文件中 [abilities标签](../../../quick-start/module-configuration-file.md#abilities标签)下的metadata标签的name，默认值为空。 |
+| moduleName | string | Yes | Module name. |
+| abilityName | string | Yes | Name of the UIAbility component. |
+| metadataName | string | No | Metadata name of the UIAbility component, that is, **name** of the **metadata** tag under [abilities](../../../quick-start/module-configuration-file.md#abilities) in the **module.json5** file. The default value is null. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;Array&lt;string&gt;&gt; | Promise对象，返回Array&lt;string&gt;。 |
+| Promise&lt;Array&lt;string&gt;&gt; | Promise used to return the array of JSON strings obtained. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types. |
-| 17700029 | The specified ability is disabled. |
-| 17700024 | Failed to get the profile because there is no profile in the HAP. |
-| 17700002 | The specified moduleName is not existed. |
-| 17700003 | The specified abilityName is not existed. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types. |
+| [17700029](../errorcode-bundle.md#17700029-disabled-ability) | The specified ability is disabled. |
+| [17700024](../errorcode-bundle.md#17700024-profile-does-not-exist) | Failed to get the profile because there is no profile in the HAP. |
+| [17700002](../errorcode-bundle.md#17700002-module-name-does-not-exist) | The specified moduleName is not existed. |
+| [17700003](../errorcode-bundle.md#17700003-ability-name-does-not-exist) | The specified abilityName is not existed. |
 
 ## Examples
 

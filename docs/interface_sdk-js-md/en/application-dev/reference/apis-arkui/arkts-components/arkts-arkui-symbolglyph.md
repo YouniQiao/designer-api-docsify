@@ -1,11 +1,12 @@
 # SymbolGlyph
 
-SymbolGlyph组件用于显示系统预置的图标小符号，支持设置颜色、大小、粗细、渲染策略、动效策略等样式属性，适用于需要在应用中展示系统图标的场景，如导航栏图标、按钮图标、状态指示图标等。相比使用图片资源，SymbolGlyph具有
-体积小、可动态着色、支持动效等优势。<!--RP1--><!--RP1End-->
+The **SymbolGlyph** component represents a symbol glyph.<!--RP1--><!--RP1End-->
 
-## 子组件
+> **NOTE**
 
-不支持子组件。
+## Child Components
+
+Not supported
 
 ## SymbolGlyph
 
@@ -13,7 +14,7 @@ SymbolGlyph组件用于显示系统预置的图标小符号，支持设置颜色
 SymbolGlyph(value?: Resource)
 ```
 
-定义SymbolGlyph组件构造函数。
+Defines the constructor of SymbolGlyph.
 
 **Since:** 11
 
@@ -33,7 +34,7 @@ SymbolGlyph(value?: Resource)
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | [Resource](../../apis-localization-kit/arkts-apis/arkts-localization-resource-resource-i.md) | No | SymbolGlyph组件的资源名，如 \$r('sys.symbol.ohos_wifi')。不传入时不显示图标。 |
+| value | [Resource](../../apis-localization-kit/arkts-apis/arkts-localization-resource-resource-i.md) | No | Resource of the **SymbolGlyph** component, for example, **\$r('sys.symbol.ohos_wifi')**. |
 
 ## Summary
 

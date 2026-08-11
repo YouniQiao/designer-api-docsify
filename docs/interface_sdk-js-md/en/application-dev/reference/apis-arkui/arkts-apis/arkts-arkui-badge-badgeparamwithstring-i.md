@@ -1,6 +1,6 @@
 # BadgeParamWithString
 
-BadgeParamWithNumber继承自[BadgeParam](../arkts-components/arkts-arkui-badgeparam-i.md/arkts-arkui-badgeparam-i.md)，具有BadgeParam的全部属性。
+Inherits from BadgeParam and has all attributes of BadgeParam.
 
 **Inheritance/Implementation:** BadgeParamWithString extends [BadgeParam](../arkts-components/arkts-arkui-badgeparam-i.md/arkts-arkui-badgeparam-i.md)
 
@@ -18,7 +18,7 @@ BadgeParamWithNumber继承自[BadgeParam](../arkts-components/arkts-arkui-badgep
 value: ResourceStr
 ```
 
-提示内容的文本字符串。
+Text string of the prompt content.
 
 **Type:** [ResourceStr](arkts-arkui-resourcestr-t.md)
 

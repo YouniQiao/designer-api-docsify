@@ -1,11 +1,5 @@
 # @ohos.file.BackupExtensionContext
 
-## 导入模块
-
-```TypeScript
-import { BackupExtensionContext } from 'kits/@kit.CoreFileKit';
-```
-
 ## 汇总
 
 ### 类

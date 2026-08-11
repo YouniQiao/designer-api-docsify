@@ -57,10 +57,10 @@ Connect a service extension ability.The destination of the connection must be a 
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 16501000 | An internal functional error occurred. |
-| 16501011 | The form can not support this operation |
-| 202 | Permission verification failed, application which is not a system application uses system API. |
-| 16500100 | Failed to obtain the configuration information. |
+| [16501000](../errorcode-form.md#16501000-internal-function-error) | An internal functional error occurred. |
+| [16501011](../errorcode-form.md#16501011-api-not-supported) | The form can not support this operation |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed, application which is not a system application uses system API. |
+| [16500100](../errorcode-form.md#16500100-failed-to-obtain-widget-configuration-information) | Failed to obtain the configuration information. |
 
 ## disconnectServiceExtensionAbility
 
@@ -104,7 +104,7 @@ Disconnect an ability to a service extension, in contrast to {@link connectServi
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 16501000 | An internal functional error occurred. |
-| 16501011 | The form can not support this operation |
-| 202 | Permission verification failed, application which is not a system application uses system API. |
+| [16501000](../errorcode-form.md#16501000-internal-function-error) | An internal functional error occurred. |
+| [16501011](../errorcode-form.md#16501011-api-not-supported) | The form can not support this operation |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed, application which is not a system application uses system API. |
 

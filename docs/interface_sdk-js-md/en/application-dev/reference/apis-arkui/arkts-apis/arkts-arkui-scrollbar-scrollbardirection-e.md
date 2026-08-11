@@ -1,6 +1,6 @@
 # ScrollBarDirection
 
-内容滚动方向。
+Content scroll direction.
 
 **Since:** 23
 

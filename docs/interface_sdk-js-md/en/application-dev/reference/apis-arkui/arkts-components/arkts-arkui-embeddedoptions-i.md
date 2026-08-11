@@ -1,6 +1,6 @@
 # EmbeddedOptions
 
-用于在EmbeddedComponent创建时传递可选的构造参数。
+This interface is used to set the options for EmbeddedComponentAttribute during construction
 
 **Since:** 26.0.0
 
@@ -16,9 +16,7 @@
 areaChangePlaceholder?: Record<string, ComponentContent>
 ```
 
-设置尺寸变化占位符，在EmbeddedComponent尺寸发生变化并且内部渲染未完成时显示。key为尺寸变化场景类型（如"FOLD_TO_EXPAND"表示折叠展开场景），value为对应场景的占位符组件。当前支持的键值包括：FOLD_TO_EXPAND。传入不支持的键值时，该占位符不生效。
-
-默认值：null，表示不设置尺寸变化占位符。
+Set Areachange placeholder.If the Areachange placeholder ComponentContent is set, the placeholder node is displayed until the EmbeddedComponent size change is complete.
 
 **Type:** [Record](../../apis-default/arkts-apis/arkts-record-t.md)&lt;string, ComponentContent&gt;
 
@@ -40,9 +38,7 @@ areaChangePlaceholder?: Record<string, ComponentContent>
 dpiFollowStrategy?: EmbeddedDpiFollowStrategy
 ```
 
-设置DPI，使其能够跟随宿主或EmbeddedUIExtensionAbility。
-
-默认值：FOLLOW_UI_EXTENSION_ABILITY_DPI，表示跟随EmbeddedUIExtensionAbility。
+Set EmbeddedComponent Content Dpi Follow Strategy.
 
 **Type:** [EmbeddedDpiFollowStrategy](../arkts-apis/arkts-arkui-embeddedcomponent-embeddeddpifollowstrategy-e.md)
 
@@ -66,9 +62,7 @@ dpiFollowStrategy?: EmbeddedDpiFollowStrategy
 placeholder?: ComponentContent
 ```
 
-设置占位符，在EmbeddedComponent与EmbeddedUIExtensionAbility建立连接前显示。
-
-默认值：null，表示不显示占位符。
+Set placeholder.If set placeholder ComponentContent, show placeholder node when connection is not established.
 
 **Type:** [ComponentContent](../arkts-apis/arkts-arkui-componentcontent-c.md)
 
@@ -90,9 +84,7 @@ placeholder?: ComponentContent
 windowModeFollowStrategy?: EmbeddedWindowModeFollowStrategy
 ```
 
-设置窗口模式，使其能够跟随宿主或EmbeddedUIExtensionAbility。
-
-默认值：FOLLOW_UI_EXTENSION_ABILITY_WINDOW_MODE，表示窗口模式跟随EmbeddedUIExtensionAbility。
+Set EmbeddedComponent Content Window Mode Follow Strategy.
 
 **Type:** [EmbeddedWindowModeFollowStrategy](../arkts-apis/arkts-arkui-embeddedcomponent-embeddedwindowmodefollowstrategy-e.md)
 

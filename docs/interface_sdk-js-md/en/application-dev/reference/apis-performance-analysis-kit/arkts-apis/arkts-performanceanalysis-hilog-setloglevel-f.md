@@ -12,13 +12,13 @@ import { hilog } from 'kits/@kit.PerformanceAnalysisKit';
 function setLogLevel(level: LogLevel, prefer: PreferStrategy): void
 ```
 
-设置当前应用程序进程的最低日志级别。
+Sets the minimum log level of the current application process.
 
-可通过prefer参数配置不同的偏好策略。如果选择策略PREFER_CLOSE_LOG，等同于调用setMinLogLevel函数。
+You can configure different preference strategies using the **prefer** parameter. The **PREFER_CLOSE_LOG** strategy has the same effect as the **setMinLogLevel()** function.
 
-> **注意：**
+> **NOTE：**
 > 
-> debug版本应用下，此函数不生效。
+> This function does not take effect for debug applications.
 
 **Since:** 21
 
@@ -34,6 +34,6 @@ function setLogLevel(level: LogLevel, prefer: PreferStrategy): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| level | [LogLevel](arkts-performanceanalysis-hilog-loglevel-e.md) | Yes | 日志级别。 |
-| prefer | [PreferStrategy](arkts-performanceanalysis-hilog-preferstrategy-e.md) | Yes | 偏好策略。 |
+| level | [LogLevel](arkts-performanceanalysis-hilog-loglevel-e.md) | Yes | Log level. |
+| prefer | [PreferStrategy](arkts-performanceanalysis-hilog-preferstrategy-e.md) | Yes | Preference strategy. |
 

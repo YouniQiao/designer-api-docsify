@@ -6,7 +6,7 @@
 function unsubscribe(subscriber: CommonEventSubscriber, callback?: AsyncCallback<void>): void
 ```
 
-以回调形式取消订阅公共事件。
+Unsubscribes from common events. This API uses an asynchronous callback to return the result.
 
 **Since:** 7
 
@@ -24,8 +24,8 @@ function unsubscribe(subscriber: CommonEventSubscriber, callback?: AsyncCallback
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| subscriber | [CommonEventSubscriber](arkts-basicservices-commoneventsubscriber-commoneventsubscriber-i.md) | Yes | 表示订阅者对象。 |
-| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | No | 表示取消订阅的回调方法。 |
+| subscriber | [CommonEventSubscriber](arkts-basicservices-commoneventsubscriber-commoneventsubscriber-i.md) | Yes | Subscriber object. |
+| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | No | Callback used to return the result. |
 
 ## Examples
 
@@ -41,40 +41,39 @@ let subscribeInfo:CommonEventManager.CommonEventSubscribeInfo = {
 };
 
 // Callback for common event subscription.
-let subscribeCallBack = (err:Base.BusinessError, data:CommonEventManager.CommonEventData) => {
+function subscribeCB(err:Base.BusinessError, data:CommonEventManager.CommonEventData) {
     if (err.code) {
-        console.error(`subscribe failed, code is ${err.code}, message is ${err.message}`);
+        console.error(`subscribe failed, code is ${err.code}`);
     } else {
         console.info("subscribe " + JSON.stringify(data));
     }
 }
 
 // Callback for subscriber creation.
-let createCallBack = (err:Base.BusinessError, commonEventSubscriber:CommonEventManager.CommonEventSubscriber) => {
+function createCB(err:Base.BusinessError, commonEventSubscriber:CommonEventManager.CommonEventSubscriber) {
     if (err.code) {
-        console.error(`createSubscriber failed, code is ${err.code}, message is ${err.message}`);
+        console.error(`createSubscriber failed, code is ${err.code}`);
     } else {
         console.info("createSubscriber");
         subscriber = commonEventSubscriber;
-         // Subscribe to a common event.
-        commonEvent.subscribe(subscriber, subscribeCallBack);
+        // Subscribe to a common event.
+        commonEvent.subscribe(subscriber, subscribeCB);
     }
 }
 
 // Callback for common event unsubscription.
-let unsubscribeCallback = (err: Base.BusinessError) => {
+function unsubscribeCB(err:Base.BusinessError) {
     if (err.code) {
-        console.error(`unsubscribe failed, code is ${err.code}, message is ${err.message}`);
+        console.error(`unsubscribe failed, code is ${err.code}`);
     } else {
         console.info("unsubscribe");
     }
 }
 
 // Create a subscriber.
-commonEvent.createSubscriber(subscribeInfo, createCallBack);
+commonEvent.createSubscriber(subscribeInfo, createCB);
 
 // Unsubscribe from the common event.
-// Note: This API must be called after the subscriber is successfully created (that is, after the createCallBack callback is executed). Only the API usage is displayed here.
-commonEvent.unsubscribe(subscriber, unsubscribeCallback);
+commonEvent.unsubscribe(subscriber, unsubscribeCB);
 ```
 

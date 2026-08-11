@@ -1,6 +1,6 @@
 # TransitionEffect
 
-定义TransitionEffect类指定转场效果。
+Defines the transition effect
 
 **Since:** 23
 
@@ -16,7 +16,7 @@
 animation(value: AnimateParam): TransitionEffect
 ```
 
-指定该TransitionEffect的动画参数。
+Set the animation of current transition effect
 
 **Since:** 23
 
@@ -32,13 +32,13 @@ animation(value: AnimateParam): TransitionEffect
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | [AnimateParam](../arkts-components/arkts-arkui-animateparam-i.md) | Yes | 动画参数。&lt;/br&gt;该参数只用来指定动画参数，其入参AnimateParam的onFinish回调不生效。&lt;/br&gt;如果通过combine进行 TransitionEffect的组合，前一TransitionEffect的动画参数也可用于后一TransitionEffect。 |
+| value | [AnimateParam](../arkts-components/arkts-arkui-animateparam-i.md) | Yes | animation parameters |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [TransitionEffect](arkts-arkui-common-transitioneffect-c.md) | 当前动画效果。 |
+| [TransitionEffect](arkts-arkui-common-transitioneffect-c.md) |  |
 
 ## asymmetric
 
@@ -46,7 +46,7 @@ animation(value: AnimateParam): TransitionEffect
 static asymmetric(appear: TransitionEffect, disappear: TransitionEffect): TransitionEffect
 ```
 
-设置非对称的转场效果。
+Creates an asymmetric transition effect
 
 **Since:** 23
 
@@ -62,14 +62,14 @@ static asymmetric(appear: TransitionEffect, disappear: TransitionEffect): Transi
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| appear | [TransitionEffect](arkts-arkui-common-transitioneffect-c.md) | Yes | 指定出现的转场效果。&lt;br/&gt;如不通过asymmetric函数构造TransitionEffect，则表明该效果在组件出现和消失时均生效。 |
-| disappear | [TransitionEffect](arkts-arkui-common-transitioneffect-c.md) | Yes | 指定消失的转场效果。&lt;br/&gt;如不通过asymmetric函数构造TransitionEffect，则表明该效果在组件出现和消失时均生效。 |
+| appear | [TransitionEffect](arkts-arkui-common-transitioneffect-c.md) | Yes | the transition which will be attached when the component is appear |
+| disappear | [TransitionEffect](arkts-arkui-common-transitioneffect-c.md) | Yes | the transition which will be attached when the component is disappear |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [TransitionEffect](arkts-arkui-common-transitioneffect-c.md) | 当前动画非对称的转场效果。 |
+| [TransitionEffect](arkts-arkui-common-transitioneffect-c.md) |  |
 
 ## combine
 
@@ -77,7 +77,7 @@ static asymmetric(appear: TransitionEffect, disappear: TransitionEffect): Transi
 combine(transitionEffect: TransitionEffect): TransitionEffect
 ```
 
-对TransitionEffect进行链式组合，以形成包含多种转场效果的TransitionEffect。
+Combines another transition effect
 
 **Since:** 23
 
@@ -93,13 +93,13 @@ combine(transitionEffect: TransitionEffect): TransitionEffect
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| transitionEffect | [TransitionEffect](arkts-arkui-common-transitioneffect-c.md) | Yes | 被组合的过渡效果。 |
+| transitionEffect | [TransitionEffect](arkts-arkui-common-transitioneffect-c.md) | Yes | transition effect which is be combined |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [TransitionEffect](arkts-arkui-common-transitioneffect-c.md) | 组合过渡效应。 |
+| [TransitionEffect](arkts-arkui-common-transitioneffect-c.md) | combined transition effect |
 
 ## constructor
 
@@ -107,7 +107,7 @@ combine(transitionEffect: TransitionEffect): TransitionEffect
 constructor(type: 'identity' | 'slideSwitch', effect: undefined)
 ```
 
-构造TransitionEffect对象。
+identity or slideSwitch TransitionEffect constructor
 
 **Since:** 23
 
@@ -123,8 +123,8 @@ constructor(type: 'identity' | 'slideSwitch', effect: undefined)
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'identity' \| 'slideSwitch' | Yes | 转场类型。 |
-| effect | undefined | Yes | 转场参数。 |
+| type | 'identity' \| 'slideSwitch' | Yes | transition type |
+| effect | undefined | Yes | transition options |
 
 ## constructor
 
@@ -132,7 +132,7 @@ constructor(type: 'identity' | 'slideSwitch', effect: undefined)
 constructor(type: 'opacity', effect: double)
 ```
 
-构造TransitionEffect对象。
+opacity TransitionEffect constructor
 
 **Since:** 23
 
@@ -148,8 +148,8 @@ constructor(type: 'opacity', effect: double)
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'opacity' | Yes | 转场类型。 |
-| effect | double | Yes | 转场参数。 |
+| type | 'opacity' | Yes | transition type |
+| effect | double | Yes | transition options |
 
 ## constructor
 
@@ -157,7 +157,7 @@ constructor(type: 'opacity', effect: double)
 constructor(type: 'move', effect: TransitionEdge)
 ```
 
-构造TransitionEffect对象。
+move TransitionEffect constructor
 
 **Since:** 23
 
@@ -173,8 +173,8 @@ constructor(type: 'move', effect: TransitionEdge)
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'move' | Yes | 转场类型。 |
-| effect | [TransitionEdge](../arkts-components/arkts-arkui-transitionedge-e.md) | Yes | 转场参数。 |
+| type | 'move' | Yes | transition type |
+| effect | [TransitionEdge](../arkts-components/arkts-arkui-transitionedge-e.md) | Yes | transition options |
 
 ## constructor
 
@@ -182,7 +182,7 @@ constructor(type: 'move', effect: TransitionEdge)
 constructor(type: 'translate', effect: TranslateOptions)
 ```
 
-构造TransitionEffect对象。
+translate TransitionEffect constructor
 
 **Since:** 23
 
@@ -198,8 +198,8 @@ constructor(type: 'translate', effect: TranslateOptions)
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'translate' | Yes | 转场类型。 |
-| effect | [TranslateOptions](arkts-arkui-common-translateoptions-i.md) | Yes | 转场参数。 |
+| type | 'translate' | Yes | transition type |
+| effect | [TranslateOptions](arkts-arkui-common-translateoptions-i.md) | Yes | transition options |
 
 ## constructor
 
@@ -207,7 +207,7 @@ constructor(type: 'translate', effect: TranslateOptions)
 constructor(type: 'rotate', effect: RotateOptions)
 ```
 
-构造TransitionEffect对象。
+rotate TransitionEffect constructor
 
 **Since:** 23
 
@@ -223,8 +223,8 @@ constructor(type: 'rotate', effect: RotateOptions)
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'rotate' | Yes | 转场类型。 |
-| effect | [RotateOptions](../arkts-components/arkts-arkui-rotateoptions-i.md) | Yes | 转场参数。 |
+| type | 'rotate' | Yes | transition type |
+| effect | [RotateOptions](../arkts-components/arkts-arkui-rotateoptions-i.md) | Yes | transition options |
 
 ## constructor
 
@@ -232,7 +232,7 @@ constructor(type: 'rotate', effect: RotateOptions)
 constructor(type: 'scale', effect: ScaleOptions)
 ```
 
-构造TransitionEffect对象。
+scale TransitionEffect constructor
 
 **Since:** 23
 
@@ -248,8 +248,8 @@ constructor(type: 'scale', effect: ScaleOptions)
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'scale' | Yes | 转场类型。 |
-| effect | [ScaleOptions](../arkts-components/arkts-arkui-scaleoptions-i.md) | Yes | 转场参数。 |
+| type | 'scale' | Yes | transition type |
+| effect | [ScaleOptions](../arkts-components/arkts-arkui-scaleoptions-i.md) | Yes | transition options |
 
 ## constructor
 
@@ -257,7 +257,7 @@ constructor(type: 'scale', effect: ScaleOptions)
 constructor(type: 'asymmetric', effect: AsymmetricTransitionOption)
 ```
 
-构造TransitionEffect对象。
+asymmetric TransitionEffect constructor
 
 **Since:** 23
 
@@ -273,8 +273,8 @@ constructor(type: 'asymmetric', effect: AsymmetricTransitionOption)
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'asymmetric' | Yes | 转场类型。 |
-| effect | [AsymmetricTransitionOption](arkts-arkui-common-asymmetrictransitionoption-i.md) | Yes | 转场参数。 |
+| type | 'asymmetric' | Yes | transition type |
+| effect | [AsymmetricTransitionOption](arkts-arkui-common-asymmetrictransitionoption-i.md) | Yes | transition options |
 
 ## move
 
@@ -282,7 +282,7 @@ constructor(type: 'asymmetric', effect: AsymmetricTransitionOption)
 static move(edge: TransitionEdge): TransitionEffect
 ```
 
-设置组件转场时从屏幕边缘滑入和滑出的效果。
+Creates a move transition effect
 
 **Since:** 23
 
@@ -298,13 +298,13 @@ static move(edge: TransitionEdge): TransitionEffect
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| edge | [TransitionEdge](../arkts-components/arkts-arkui-transitionedge-e.md) | Yes | 组件转场时从屏幕边缘滑入和滑出的效果，本质为平移效果，为插入时起点和删除时终点的值。 |
+| edge | [TransitionEdge](../arkts-components/arkts-arkui-transitionedge-e.md) | Yes | the edge that component will move to |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [TransitionEffect](arkts-arkui-common-transitioneffect-c.md) | 当前动画从屏幕边缘滑入和滑出的效果。 |
+| [TransitionEffect](arkts-arkui-common-transitioneffect-c.md) |  |
 
 ## opacity
 
@@ -312,7 +312,7 @@ static move(edge: TransitionEdge): TransitionEffect
 static opacity(alpha: double): TransitionEffect
 ```
 
-设置组件转场时的透明度效果。
+Creates an opacity transition effect with alpha value
 
 **Since:** 23
 
@@ -328,13 +328,13 @@ static opacity(alpha: double): TransitionEffect
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| alpha | double | Yes | 组件转场时的透明度效果，为插入时起点和删除时终点的值。&lt;br/&gt;取值范围：[0, 1]&lt;br/&gt;**说明：** &lt;br/&gt;设置小于0的非法值按0处理，大于1的非法值按1处理。 |
+| alpha | double | Yes | opacity alpha value, value range [0, 1]. Illegal values less than 0 are treated as 0, and illegal values greater than 1 are treated as 1. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [TransitionEffect](arkts-arkui-common-transitioneffect-c.md) | 当前动画透明度效果。 |
+| [TransitionEffect](arkts-arkui-common-transitioneffect-c.md) |  |
 
 ## rotate
 
@@ -342,7 +342,7 @@ static opacity(alpha: double): TransitionEffect
 static rotate(options: RotateOptions): TransitionEffect
 ```
 
-设置组件转场时的旋转效果。
+Creates a rotation transition effect
 
 **Since:** 23
 
@@ -358,13 +358,13 @@ static rotate(options: RotateOptions): TransitionEffect
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| options | [RotateOptions](../arkts-components/arkts-arkui-rotateoptions-i.md) | Yes | 组件转场时的旋转效果，为插入时起点和删除时终点的值。&lt;br/&gt;-x：横向的旋转向量分量。&lt;br/&gt;-y：纵向的旋转向量分量。&lt;br/&gt;-z：竖向的旋转向量分 量。&lt;br/&gt;- centerX、centerY指旋转中心点，centerX和centerY默认值是"50%"，即默认以组件的中心点为旋转中心点。&lt;br/&gt;- 中心点为(0, 0)代表组件的左上角。&lt;br/&gt;- centerZ指z轴锚点，即3D旋转中心点的z轴分量，centerZ默认值是0。&lt;br/&gt;-perspective指视距，不支持perspective属性做转场动画。 |
+| options | [RotateOptions](../arkts-components/arkts-arkui-rotateoptions-i.md) | Yes | rotate options Set the rotation effect for component transitions when inserting and deleting. The value represents the starting rotation point for the inserting animation and the ending rotation point for the deleting animation. -x: Horizontal component of the rotational vector. -y: Vertical component of the rotational vector. -z: Vertical component of the rotational vector. -centerX, centerY specify the rotation center point, with default values of "50%", meaning that the default rotation center point is the center point of the component. -The center point of (0, 0) represents the upper-left corner of the component. -centerZ refers to the Z-axis anchor point. The default value of centerZ is 0. -perspective indicates the visual distance. The perspective property does not support transition animation. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [TransitionEffect](arkts-arkui-common-transitioneffect-c.md) | 当前动画旋转效果。 |
+| [TransitionEffect](arkts-arkui-common-transitioneffect-c.md) |  |
 
 ## scale
 
@@ -372,7 +372,7 @@ static rotate(options: RotateOptions): TransitionEffect
 static scale(options: ScaleOptions): TransitionEffect
 ```
 
-设置组件转场时的缩放效果。
+Creates a scale transition effect
 
 **Since:** 23
 
@@ -388,13 +388,13 @@ static scale(options: ScaleOptions): TransitionEffect
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| options | [ScaleOptions](../arkts-components/arkts-arkui-scaleoptions-i.md) | Yes | 组件转场时的缩放效果，为插入时起点和删除时终点的值。设置的缩放值在组件当前的scale属性上进行叠加，如组件当前scale值为0.8，当转场缩放值设置为0.5 时，组件入场动画的缩放值将从0.4开始执行。&lt;br/&gt;-x：横向放大倍数（或缩小比例）。&lt;br/&gt;-y：纵向放大倍数（或缩小比例）。&lt;br/&gt;-z：当前为二维显示，该参数无效。&lt;br/&gt;- centerX、 centerY指缩放中心点，centerX和centerY默认值是"50%"，即默认以组件的中心点为缩放中心点。&lt;br/&gt;- 中心点为(0, 0)代表组件的左上角。&lt;br&gt;**说明：** &lt;br&gt;设置centerX、 centerY为非法字符串时（例如，"illegalString"），默认值为"0"。 |
+| options | [ScaleOptions](../arkts-components/arkts-arkui-scaleoptions-i.md) | Yes | scale options |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [TransitionEffect](arkts-arkui-common-transitioneffect-c.md) | 当前动画缩放效果。 |
+| [TransitionEffect](arkts-arkui-common-transitioneffect-c.md) |  |
 
 ## translate
 
@@ -402,7 +402,7 @@ static scale(options: ScaleOptions): TransitionEffect
 static translate(options: TranslateOptions): TransitionEffect
 ```
 
-设置组件转场时的平移效果。
+Creates a translate transition effect
 
 **Since:** 23
 
@@ -418,13 +418,13 @@ static translate(options: TranslateOptions): TransitionEffect
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| options | [TranslateOptions](arkts-arkui-common-translateoptions-i.md) | Yes | 组件转场时的平移效果，为插入时起点和删除时终点的值。&lt;br/&gt;-x：横向的平移距离。&lt;br/&gt;-y：纵向的平移距离。&lt;br/&gt;-z：竖向的平移距离。 |
+| options | [TranslateOptions](arkts-arkui-common-translateoptions-i.md) | Yes | translate options |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [TransitionEffect](arkts-arkui-common-transitioneffect-c.md) | 当前动画平移效果。 |
+| [TransitionEffect](arkts-arkui-common-transitioneffect-c.md) |  |
 
 ## IDENTITY
 
@@ -432,7 +432,7 @@ static translate(options: TranslateOptions): TransitionEffect
 static get IDENTITY(): TransitionEffect
 ```
 
-禁用转场效果。
+Disables the transition effect
 
 **Since:** 23
 
@@ -450,7 +450,7 @@ static get IDENTITY(): TransitionEffect
 static get OPACITY(): TransitionEffect
 ```
 
-为组件添加透明度转场效果，出现时透明度从0到1、消失时透明度从1到0，相当于TransitionEffect.opacity(0)。
+Specifies a transition effect with transparency of 0, which is equivalent to TransitionEffect.opacity(0).
 
 **Since:** 23
 
@@ -468,7 +468,7 @@ static get OPACITY(): TransitionEffect
 static get SLIDE(): TransitionEffect
 ```
 
-相当于TransitionEffect.asymmetric(TransitionEffect.move(TransitionEdge.START), TransitionEffect.move(TransitionEdge.END))。从START边滑入，END边滑出。即在LTR模式下，从左侧滑入，右侧滑出；在RTL模式下，从右侧滑入，左侧滑出。
+Defines a slide transition effect
 
 **Since:** 23
 
@@ -486,7 +486,7 @@ static get SLIDE(): TransitionEffect
 static get SLIDE_SWITCH(): TransitionEffect
 ```
 
-指定出现时从右侧先缩小再放大滑入、消失时从左侧先缩小再放大滑出的转场效果。自带动画参数，也可覆盖动画参数，自带的动画参数时长600ms，指定动画曲线cubicBezierCurve(0.24, 0.0, 0.50, 1.0)，最小缩放比例为0.8。
+Specify a transition effect where the element enters by shrinking first and then expanding as it slides in from the right,and exits by shrinking first and then expanding as it slides out to the left, with a minimum scale ratio of 0.8.It comes with default animation parameters, which can also be overridden.The default animation duration is set to 600ms, and the specified animation curve is cubicBezierCurve(0.24, 0.0, 0.50, 1.0).
 
 **Since:** 23
 

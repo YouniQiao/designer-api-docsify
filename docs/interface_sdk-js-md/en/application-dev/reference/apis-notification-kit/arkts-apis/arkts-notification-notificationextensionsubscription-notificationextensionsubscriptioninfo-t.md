@@ -4,7 +4,7 @@
 export type NotificationExtensionSubscriptionInfo = _NotificationExtensionSubscriptionInfo
 ```
 
-用于描述通知扩展订阅的信息。
+Describes the information about the notification extension subscription.
 
 **Since:** 22
 

@@ -41,29 +41,11 @@ Obtains call transfer information with the phone number.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 801 | Capability not supported. |
-| 201 | Permission denied. |
-| 8401002 | Invalid input call number. |
-| 8401003 | Operation too frequent. |
-| 8300002 | Operation failed. Cannot connect to service. |
-| 8300003 | System internal error. |
-| 8300001 | Invalid parameter value. |
-
-## Examples
-
-```TypeScript
-import { call } from '@kit.TelephonyKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let type: call.CallTransferType = call.CallTransferType.TRANSFER_TYPE_UNCONDITIONAL;
-let number: string = "138xxxxxxxx";
-
-call.getCallTransferInfo(type, number)
-    .then((data: call.CallTransferResult) => {
-        console.info(`getCallTransferInfo success, data->${JSON.stringify(data)}`);
-    })
-    .catch((err:BusinessError) => {
-        console.error(`getCallTransferInfo fail, err->${JSON.stringify(err)}`);
-    });
-```
+| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
+| [8401002](../errorcode-telephony.md#8401002-incorrect-number) | Invalid input call number. |
+| [8401003](../errorcode-telephony.md#8401003-frequent-operations) | Operation too frequent. |
+| [8300002](../errorcode-telephony.md#8300002-service-connection-error) | Operation failed. Cannot connect to service. |
+| [8300003](../errorcode-telephony.md#8300003-system-internal-error) | System internal error. |
+| [8300001](../errorcode-telephony.md#8300001-input-parameter-value-out-of-range) | Invalid parameter value. |
 

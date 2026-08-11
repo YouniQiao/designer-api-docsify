@@ -1,6 +1,6 @@
 # KeyType
 
-定义按键操作的状态类型。
+Type of a key.
 
 **Since:** 23
 
@@ -16,7 +16,7 @@
 Down = 0
 ```
 
-按键按下。
+Press the key.
 
 **Since:** 23
 
@@ -34,7 +34,7 @@ Down = 0
 Up = 1
 ```
 
-按键松开。
+The key is released.
 
 **Since:** 23
 
@@ -52,7 +52,7 @@ Up = 1
 CANCEL = 3
 ```
 
-取消按键事件。
+The key event is canceled.
 
 **Since:** 26.0.0
 

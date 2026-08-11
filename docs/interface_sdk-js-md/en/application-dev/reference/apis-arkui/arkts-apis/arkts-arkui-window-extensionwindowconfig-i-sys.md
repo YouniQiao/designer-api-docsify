@@ -1,6 +1,6 @@
 # ExtensionWindowConfig (System API)
 
-创建扩展窗口时需要配置的参数。
+Describes the parameters for creating a window for a UI ServiceExtensionAbility.
 
 **Since:** 14
 
@@ -24,7 +24,8 @@ import { window } from 'kits/@kit.ArkUI';
 subWindowOptions?: SubWindowOptions
 ```
 
-创建子窗口的参数。无默认参数，当windowAttribute配置为SUB_WINDOW时必选，否则会导致窗口创建失败。
+Parameters used for creating a child window. There is no default value. This parameter is mandatory when  
+**windowAttribute** is set to **SUB_WINDOW**. Otherwise, the window fails to be created.
 
 **Type:** [SubWindowOptions](arkts-arkui-window-subwindowoptions-i-sys.md)
 
@@ -46,7 +47,8 @@ subWindowOptions?: SubWindowOptions
 systemWindowOptions?: SystemWindowOptions
 ```
 
-创建系统窗口的参数。无默认参数，当windowAttribute配置为SYSTEM_WINDOW时必选，否则会导致窗口创建失败。
+Parameters for creating a system window. There is no default value. This parameter is mandatory when  
+**windowAttribute** is set to **SYSTEM_WINDOW**. Otherwise, the window fails to be created.
 
 **Type:** [SystemWindowOptions](arkts-arkui-window-systemwindowoptions-i-sys.md)
 
@@ -68,7 +70,8 @@ systemWindowOptions?: SystemWindowOptions
 windowAttribute: ExtensionWindowAttribute
 ```
 
-窗口的属性。用于配置创建的窗口是子窗口还是系统窗口。当windowAttribute配置为SUB_WINDOW时须配置subWindowOptions，当windowAttribute配置为SYSTEM_WINDOW时须配置systemWindowOptions，否则创建窗口失败。
+Window attribute. It specifies whether the created window is a child window or a system window. When  
+**windowAttribute** is set to **SUB_WINDOW**, **subWindowOptions** is mandatory. When **windowAttribute** is set to **SYSTEM_WINDOW**, **systemWindowOptions** is mandatory. Otherwise, the window fails to be created.
 
 **Type:** [ExtensionWindowAttribute](arkts-arkui-window-extensionwindowattribute-e-sys.md)
 
@@ -90,7 +93,7 @@ windowAttribute: ExtensionWindowAttribute
 windowName: string
 ```
 
-窗口名。
+Window name.
 
 **Type:** string
 
@@ -112,7 +115,7 @@ windowName: string
 windowRect: Rect
 ```
 
-窗口矩形区域。
+Rectangular area of the window.
 
 **Type:** [Rect](../../apis-form-kit/arkts-apis/arkts-form-forminfo-rect-i.md)
 

@@ -1,9 +1,9 @@
 # KeyCode
 
-按键编码。添加按键事件处理策略[addKeyEventPolicies](arkts-mdm-systemmanager-addkeyeventpolicies-f.md#addkeyeventpolicies)、删除按键事件处理策略  
-[removeKeyEventPolicies](arkts-mdm-systemmanager-removekeyeventpolicies-f.md#removekeyeventpolicies)、获取按键事件处理策略  
-[getKeyEventPolicies](arkts-mdm-systemmanager-getkeyeventpolicies-f.md#getkeyeventpolicies)和按键事件回调  
-[onKeyEvent](../../apis-default/arkts-apis/arkts-enterprise-enterpriseadminextensionability-enterpriseadminextensionability-c.md/arkts-enterprise-enterpriseadminextensionability-enterpriseadminextensionability-c.md#onkeyevent)接口通过按键编码映射到设备对应实际按键。
+Key code. The [addKeyEventPolicies](arkts-mdm-systemmanager-addkeyeventpolicies-f.md#addkeyeventpolicies),  
+[removeKeyEventPolicies](arkts-mdm-systemmanager-removekeyeventpolicies-f.md#removekeyeventpolicies),  
+[getKeyEventPolicies](arkts-mdm-systemmanager-getkeyeventpolicies-f.md#getkeyeventpolicies), and  
+[onKeyEvent](arkts-mdm-enterprise-enterpriseadminextensionability-enterpriseadminextensionability-c.md#onkeyevent)APIs map key codes to the corresponding physical keys on the device.
 
 **Since:** 23
 
@@ -19,7 +19,7 @@
 POWER = 0
 ```
 
-电源键。
+Power key
 
 **Since:** 23
 
@@ -37,7 +37,7 @@ POWER = 0
 VOLUME_UP = 1
 ```
 
-音量加。
+Volume up
 
 **Since:** 23
 
@@ -55,7 +55,7 @@ VOLUME_UP = 1
 VOLUME_DOWN = 2
 ```
 
-音量减。
+Volume down
 
 **Since:** 23
 
@@ -73,7 +73,7 @@ VOLUME_DOWN = 2
 BACK = 3
 ```
 
-导航键-回退。
+Navigation key - back
 
 **Since:** 23
 
@@ -91,7 +91,7 @@ BACK = 3
 HOME = 4
 ```
 
-导航键-主页。
+Navigation key - home
 
 **Since:** 23
 
@@ -109,7 +109,7 @@ HOME = 4
 RECENT = 5
 ```
 
-导航键-最近打开。
+Navigation key - recently opened
 
 **Since:** 23
 

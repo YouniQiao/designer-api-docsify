@@ -1,11 +1,5 @@
 # @ohos.app.ability.OpenLinkOptions
 
-## 导入模块
-
-```TypeScript
-import { OpenLinkOptions } from 'kits/@kit.AbilityKit';
-```
-
 ## 汇总
 
 ### 接口

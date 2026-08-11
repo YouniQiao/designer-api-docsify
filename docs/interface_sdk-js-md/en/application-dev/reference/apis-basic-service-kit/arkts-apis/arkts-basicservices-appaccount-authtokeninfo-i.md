@@ -1,6 +1,6 @@
 # AuthTokenInfo
 
-表示Auth令牌信息。
+Defines authorization token information.
 
 **Since:** 9
 
@@ -22,7 +22,7 @@ import { appAccount } from 'kits/@kit.BasicServicesKit';
 account?: AppAccountInfo
 ```
 
-令牌所属的账号信息，默认为空。
+Information about the account to which the token belongs. By default, no value is passed in.
 
 **Type:** [AppAccountInfo](arkts-basicservices-appaccount-appaccountinfo-i.md)
 
@@ -40,7 +40,7 @@ account?: AppAccountInfo
 authType: string
 ```
 
-令牌的鉴权类型。
+Authentication type.
 
 **Type:** string
 
@@ -58,7 +58,7 @@ authType: string
 token: string
 ```
 
-令牌的取值。
+Value of the authorization token.
 
 **Type:** string
 

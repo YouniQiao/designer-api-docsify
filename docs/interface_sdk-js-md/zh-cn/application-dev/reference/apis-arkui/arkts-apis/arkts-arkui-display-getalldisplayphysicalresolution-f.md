@@ -1,11 +1,5 @@
 # getAllDisplayPhysicalResolution
 
-## 导入模块
-
-```TypeScript
-import { display } from 'kits/@kit.ArkUI';
-```
-
 ## getAllDisplayPhysicalResolution
 
 ```TypeScript
@@ -34,16 +28,18 @@ function getAllDisplayPhysicalResolution(): Promise<Array<DisplayPhysicalResolut
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 1400003 | This display manager service works abnormally. |
+| [1400003](../errorcode-display.md#1400003-系统服务工作异常) | This display manager service works abnormally. |
 
 ## 示例
+
+ArkTS-Dyn示例：
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
 
 let promise = display.getAllDisplayPhysicalResolution();
-promise.then((resolutionObjects) => {
-  console.info('Obtaining physical resolution length: ' + resolutionObjects.length);
+promise.then((resolutionObjects: Array<display.DisplayPhysicalResolution>) => {
+  console.info(`Obtaining physical resolution length: ${ resolutionObjects.length}`);
   for (let i = 0; i < resolutionObjects.length; i++) {
      console.info(`resolutionObjects[${i}].foldDisplayMode: ${resolutionObjects[i].foldDisplayMode}`);
      console.info(`resolutionObjects[${i}].physicalWidth: ${resolutionObjects[i].physicalWidth}`); 
@@ -51,6 +47,25 @@ promise.then((resolutionObjects) => {
   }
 }).catch((err: BusinessError) => {
   console.error(`Failed to obtain physical resolution. Code: ${err.code}, message: ${err.message}`);
+});
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+import { display } from '@kit.ArkUI';
+
+let promise = display.getAllDisplayPhysicalResolution();
+promise.then((resolutionObjects: Array<display.DisplayPhysicalResolution>) => {
+  console.info(`Obtaining physical resolution length: ${ resolutionObjects.length}`);
+  for (let i = 0; i < resolutionObjects.length; i++) {
+     console.info(`resolutionObjects[${i}].foldDisplayMode: ${resolutionObjects[i].foldDisplayMode}`);
+     console.info(`resolutionObjects[${i}].physicalWidth: ${resolutionObjects[i].physicalWidth}`); 
+     console.info(`resolutionObjects[${i}].physicalHeight: ${resolutionObjects[i].physicalHeight}`); 
+  }
+}).catch((err: Error) => {
+  console.error(`Failed to obtain physical resolution. Code: ${err?.code}, message: ${err?.message}`);
 });
 ```
 

@@ -2,7 +2,7 @@
 
 2D path object for path drawing
 
-**Inheritance/Implementation:** Path2D extends [CanvasPath](arkts-arkui-canvaspath-c.md)
+**Inheritance/Implementation:** Path2D extends [CanvasPath](../arkts-components/arkts-arkui-canvaspath-c.md/arkts-arkui-canvaspath-c.md)
 
 **Since:** 23
 

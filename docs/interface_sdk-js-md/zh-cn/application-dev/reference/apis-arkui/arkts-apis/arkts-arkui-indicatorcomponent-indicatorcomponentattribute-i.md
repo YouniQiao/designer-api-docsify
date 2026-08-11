@@ -160,7 +160,7 @@ default setIndicatorComponentOptions(controller?: IndicatorComponentController):
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| controller | [IndicatorComponentController](../arkts-components/arkts-arkui-indicatorcomponentcontroller-c.md) | 否 | IndicatorComponent构造函数选项 |
+| controller | [IndicatorComponentController](arkts-arkui-indicatorcomponent-indicatorcomponentcontroller-c.md) | 否 | IndicatorComponent构造函数选项 |
 
 **返回值：**
 

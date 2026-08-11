@@ -38,20 +38,19 @@ Creates a PixelMap object based on MessageSequence parameter.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 62980097 | IPC error. |
-| 62980177 | Abnormal API environment. |
-| 62980096 | Operation failed. |
-| 62980115 | Invalid input parameter. |
-| 62980179 | Abnormal buffer size. |
-| 62980178 | Failed to create the PixelMap. |
-| 62980180 | FD mapping failed. |
-| 62980246 | Failed to read the PixelMap. |
-| 62980105 | Failed to get the data. |
+| [62980097](../errorcode-image.md#62980097-pixelmap-serialization-failed) | IPC error. |
+| [62980177](../errorcode-image.md#62980177-abnormal-api-environment) | Abnormal API environment. |
+| [62980096](../errorcode-image.md#62980096-operation-failed) | Operation failed. |
+| [62980115](../errorcode-image.md#62980115-invalid-image-parameter) | Invalid input parameter. |
+| [62980179](../errorcode-image.md#62980179-abnormal-buffer-size) | Abnormal buffer size. |
+| [62980178](../errorcode-image.md#62980178-failure-in-creating-a-pixelmap) | Failed to create the PixelMap. |
+| [62980180](../errorcode-image.md#62980180-failure-in-mapping-the-file-descriptor) | FD mapping failed. |
+| [62980246](../errorcode-image.md#62980246-failure-in-reading-the-pixelmap) | Failed to read the PixelMap. |
+| [62980105](../errorcode-image.md#62980105-failure-in-obtaining-image-data) | Failed to get the data. |
 
 ## Examples
 
 ```TypeScript
-// EntryAbility.ets
 import { sendableImage } from '@kit.ImageKit';
 import { image } from '@kit.ImageKit';
 import { rpc } from '@kit.IPCKit';
@@ -71,13 +70,13 @@ class MySequence implements rpc.Parcelable {
       this.pixel_map = sendableImage.createPixelMapFromParcel(messageSequence);
     } catch(e) {
       let error = e as BusinessError;
-      console.error(`Failed to create a PixelMap from a parcel. Code: ${error.code}, message: ${error.message}.`);
+      console.error(`createPixelMapFromParcel error. code is ${error.code}, message is ${error.message}`);
       return false;
     }
     return true;
   }
 }
-async function CreatePixelMapFromParcel() {
+async function Demo() {
   const color: ArrayBuffer = new ArrayBuffer(96);
   let bufferArr: Uint8Array = new Uint8Array(color);
   for (let i = 0; i < bufferArr.length; i++) {

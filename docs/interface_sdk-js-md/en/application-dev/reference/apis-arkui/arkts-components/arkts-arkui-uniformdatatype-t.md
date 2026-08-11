@@ -4,7 +4,7 @@
 declare type UniformDataType = import('../api/@ohos.data.uniformTypeDescriptor').default.UniformDataType
 ```
 
-标准化数据类型。
+Import the UniformDataType type object for ui component.
 
 **Since:** 10
 

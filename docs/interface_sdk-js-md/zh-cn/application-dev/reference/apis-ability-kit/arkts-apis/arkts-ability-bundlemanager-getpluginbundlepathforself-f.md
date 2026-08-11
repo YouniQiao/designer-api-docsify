@@ -1,11 +1,5 @@
 # getPluginBundlePathForSelf
 
-## 导入模块
-
-```TypeScript
-import { bundleManager } from 'kits/@kit.AbilityKit';
-```
-
 ## getPluginBundlePathForSelf
 
 ```TypeScript
@@ -38,7 +32,7 @@ function getPluginBundlePathForSelf(pluginBundleName: string): string
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 17700001 | The specified bundleName is not found. |
+| [17700001](../errorcode-bundle.md#17700001-指定的bundlename不存在) | The specified bundleName is not found. |
 
 ## 示例
 

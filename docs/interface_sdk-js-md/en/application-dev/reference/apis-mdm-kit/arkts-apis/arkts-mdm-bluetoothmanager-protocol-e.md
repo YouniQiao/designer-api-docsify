@@ -1,6 +1,6 @@
 # Protocol
 
-蓝牙协议类型。
+Represents the Bluetooth protocol type.
 
 **Since:** 20
 
@@ -16,7 +16,7 @@
 GATT = 0
 ```
 
-[GATT协议](../../../connectivity/terminology.md#gatt)。
+[Generic Attribute Profile (GATT)](../../../connectivity/terminology.md#gatt)
 
 **Since:** 20
 
@@ -34,7 +34,7 @@ GATT = 0
 SPP = 1
 ```
 
-[SPP协议](../../../connectivity/terminology.md#spp)。
+[Serial Port Profile (SPP)](../../../connectivity/terminology.md#spp)
 
 **Since:** 20
 
@@ -52,7 +52,7 @@ SPP = 1
 OPP = 2
 ```
 
-[OPP协议](../../../connectivity/terminology.md#opp)。
+[Object Push Profile (OPP)](../../../connectivity/terminology.md#opp)
 
 **Since:** 20
 

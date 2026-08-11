@@ -34,7 +34,7 @@ Returns the event object if it is a keyboard event, otherwise returns null.
 
 | 类型 | 说明 |
 | --- | --- |
-| [KeyEvent](../../apis-ime-kit/arkts-apis/arkts-ime-inputmethodengine-keyevent-i.md) | The keyboard event object or null. |
+| [KeyEvent](arkts-arkui-common-keyevent-i.md) | The keyboard event object or null. |
 
 ## asMouseEvent
 

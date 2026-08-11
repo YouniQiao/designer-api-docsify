@@ -1,11 +1,5 @@
 # getAllLauncherAbilityInfo（系统接口）
 
-## 导入模块
-
-```TypeScript
-import { launcherBundleManager } from 'kits/@kit.AbilityKit';
-```
-
 ## getAllLauncherAbilityInfo
 
 ```TypeScript
@@ -37,13 +31,15 @@ function getAllLauncherAbilityInfo(userId: int, callback: AsyncCallback<Array<La
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types. |
-| 801 | Capability not support. |
-| 201 | Verify permission denied. |
-| 202 | Permission denied, non-system app called system api. |
-| 17700004 | The specified user ID is not found. |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types. |
+| [801](../../errorcode-universal.md#801-该设备不支持此api) | Capability not support. |
+| [201](../../errorcode-universal.md#201-权限校验失败) | Verify permission denied. |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission denied, non-system app called system api. |
+| [17700004](../errorcode-bundle.md#17700004-指定的用户不存在) | The specified user ID is not found. |
 
 ## 示例
+
+ArkTS-Dyn示例:
 
 ```TypeScript
 import { launcherBundleManager } from '@kit.AbilityKit';
@@ -62,6 +58,30 @@ try {
   let code = (errData as BusinessError).code;
   let message = (errData as BusinessError).message;
   console.error(`errData is errCode:${code}  message:${message}`);
+}
+```
+
+ArkTS-Sta示例:
+
+```TypeScript
+'use static'
+
+import { launcherBundleManager } from '@kit.AbilityKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+// 代码中使用的useId需为应用实际的用户ID。
+try {
+  launcherBundleManager.getAllLauncherAbilityInfo(100, (errData, data) => {
+    if (errData !== null) {
+      console.error(`getAllLauncherAbilityInfo errData is errCode:${errData.code}  message:${errData.message}`);
+    } else {
+      console.info('getAllLauncherAbilityInfo data is ' + JSON.stringify(data));
+    }
+  });
+} catch (errData) {
+  let code = (errData as BusinessError).code;
+  let message = (errData as BusinessError).message;
+  console.error(`getAllLauncherAbilityInfo errData is errCode:${code}  message:${message}`);
 }
 ```
 
@@ -102,13 +122,15 @@ function getAllLauncherAbilityInfo(userId: int) : Promise<Array<LauncherAbilityI
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types. |
-| 801 | Capability not support. |
-| 201 | Verify permission denied. |
-| 202 | Permission denied, non-system app called system api. |
-| 17700004 | The specified user ID is not found. |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types. |
+| [801](../../errorcode-universal.md#801-该设备不支持此api) | Capability not support. |
+| [201](../../errorcode-universal.md#201-权限校验失败) | Verify permission denied. |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission denied, non-system app called system api. |
+| [17700004](../errorcode-bundle.md#17700004-指定的用户不存在) | The specified user ID is not found. |
 
 ## 示例
+
+ArkTS-Dyn示例:
 
 ```TypeScript
 import { launcherBundleManager } from '@kit.AbilityKit';
@@ -119,12 +141,35 @@ try {
     .then((data: launcherBundleManager.LauncherAbilityInfo[]) => {
       console.info('data is ' + JSON.stringify(data));
     }).catch((errData: BusinessError) => {
-    console.error(`errData is errCode:${errData.code}  message:${errData.message}`);
-  });
+      console.error(`errData is errCode:${errData.code}  message:${errData.message}`);
+    });
 } catch (errData) {
   let code = (errData as BusinessError).code;
   let message = (errData as BusinessError).message;
   console.error(`errData is errCode:${code}  message:${message}`);
+}
+```
+
+ArkTS-Sta示例:
+
+```TypeScript
+'use static'
+
+import { launcherBundleManager } from '@kit.AbilityKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+// 代码中使用的useId需为应用实际的用户ID。
+try {
+  launcherBundleManager.getAllLauncherAbilityInfo(100)
+    .then((data: launcherBundleManager.LauncherAbilityInfo[]) => {
+      console.info('getAllLauncherAbilityInfo data is ' + JSON.stringify(data));
+    }).catch ((errData: Error) => {
+      console.error(`getAllLauncherAbilityInfo errData is errCode:${(errData as BusinessError).code}  message:${(errData as BusinessError).message}`);
+    });
+} catch (errData) {
+  let code = (errData as BusinessError).code;
+  let message = (errData as BusinessError).message;
+  console.error(`getAllLauncherAbilityInfo errData is errCode:${code}  message:${message}`);
 }
 ```
 

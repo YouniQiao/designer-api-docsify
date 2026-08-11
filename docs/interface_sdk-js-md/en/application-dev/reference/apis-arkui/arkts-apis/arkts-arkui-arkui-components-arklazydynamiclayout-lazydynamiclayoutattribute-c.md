@@ -1,6 +1,6 @@
 # LazyDynamicLayoutAttribute
 
-定义LazyDynamicLayout组件。
+Defines the LazyDynamicLayout attribute functions.
 
 **Inheritance/Implementation:** LazyDynamicLayoutAttribute extends [CommonMethod<LazyDynamicLayoutAttribute>](CommonMethod<LazyDynamicLayoutAttribute>)
 
@@ -24,7 +24,7 @@ import { LazyDynamicLayoutAttribute, LazyDynamicLayout } from 'kits/@kit.ArkUI';
 onVisibleIndexesChange(callback: Callback<int[]> | undefined): LazyDynamicLayoutAttribute
 ```
 
-当可见索引更改时调用。
+Called when visible indexes change.
 
 **Since:** 26.0.0
 
@@ -42,7 +42,7 @@ onVisibleIndexesChange(callback: Callback<int[]> | undefined): LazyDynamicLayout
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](../arkts-components/arkts-arkui-callback-i.md)&lt;int[]&gt; \| undefined | Yes | 可见索引变化时回调的回调函数。 &lt;br&gt;传递undefined将取消注册回调。 |
+| callback | [Callback](../arkts-components/arkts-arkui-callback-i.md)&lt;int[]&gt; \| undefined | Yes | Callback used to return the list of index numbers of visible subcomponents. &lt;br&gt;Passing undefined will unregister the callback. |
 
 **Return value:**
 

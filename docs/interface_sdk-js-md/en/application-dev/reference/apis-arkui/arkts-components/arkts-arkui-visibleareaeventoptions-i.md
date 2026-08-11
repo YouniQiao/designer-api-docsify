@@ -1,6 +1,6 @@
 # VisibleAreaEventOptions
 
-关于区域变化相关的参数。
+Describes visible area change configuration options.
 
 **Since:** 12
 
@@ -16,9 +16,9 @@
 expectedUpdateInterval?: number
 ```
 
-定义了开发者期望的计算间隔，单位为ms。当该字段小于100或为NaN时，默认取值为100；当该字段大于2^31-1时，默认取值为2^31-1。
+Expected calculation interval, in ms. If the value is less than 100 or set to **NaN**, the default value **100** is used. If the value is greater than 2^31-1, the default value **2^31-1** is used.
 
-默认值：1000
+Default value: **1000**.
 
 **Type:** number
 
@@ -42,15 +42,15 @@ expectedUpdateInterval?: number
 measureFromViewport?: boolean
 ```
 
-设置可见区域计算模式。
+Visible area calculation mode.
 
-当measureFromViewport设置为true时，系统在计算该组件的可见区域时，会考虑父组件的[clip](arkts-arkui-commonmethod-c.md#clip) 属性设置。如果父组件的  
-[clip](arkts-arkui-commonmethod-c.md#clip)为false，则认为其内的子组件可以超出其区域进行显示，因此超出父组件的区域也将被视为可见区域纳入计算；如果父组件的  
-[clip](arkts-arkui-commonmethod-c.md#clip)设置为true，则组件超出父组件的区域会被裁剪，无法显示，因此会被视为不可见区域进行计算。而当measureFromViewport设置为false时，则不考虑[clip](arkts-arkui-commonmethod-c.md#clip)的影响，直接将组件超出父组件的部分视为不可见区域。
+**true**: considers the parent's [clip](arkts-arkui-commonmethod-c.md#clip) attribute. If  
+[clip](arkts-arkui-commonmethod-c.md#clip) is **false**, areas of the child component beyond the parent's bounds are counted as visible; if [clip](arkts-arkui-commonmethod-c.md#clip) is **true**, such areas are counted as invisible. **false**: ignores the parent's [clip](arkts-arkui-commonmethod-c.md#clip) attribute,treating areas beyond the parent's bounds as invisible.
 
-默认值：false 
+Default value: **false**.
 
-measureFromViewport设置为true时，祖先节点设置[scale](arkts-arkui-commonmethod-c.md#scale)属性，组件可见比例会被正确计算。
+When **measureFromViewport** is set to **true**, and an ancestor node has the  
+[scale](arkts-arkui-commonmethod-c.md#scale) attribute set, the component's visible ratio will be correctly calculated.
 
 **Type:** boolean
 
@@ -74,7 +74,7 @@ measureFromViewport设置为true时，祖先节点设置[scale](arkts-arkui-comm
 ratios: Array<number>
 ```
 
-阈值数组。其中，每个阈值代表组件可见面积（即组件在屏幕显示区的面积，只计算父组件内的面积，超出父组件部分不会计算）与组件自身面积的比值。每个阈值的取值范围为[0.0, 1.0]，如果开发者设置的阈值小于0.0，则实际取值为0.0；如果设置的阈值大于1.0，则实际取值为1.0。
+Threshold array. Each threshold represents a ratio of the component's visible area (that is, the area of the component that is visible on screen; only the area within the parent component is counted) to the component's total area. The value of each threshold ranges from 0.0 to 1.0. If a threshold value is less than 0.0, it is clamped to 0.0; if it is greater than 1.0, it is clamped to 1.0.
 
 **Type:** Array&lt;number&gt;
 

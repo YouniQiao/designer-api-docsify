@@ -1,6 +1,6 @@
 # AudioDevicePair
 
-描述返听使用的音频设备对，包含输入设备和输出设备。
+Describes an audio device pair including both input and output devices.
 
 **Since:** 26.0.0
 
@@ -22,7 +22,7 @@ import { audio } from 'kits/@kit.AudioKit';
 inputDevice: AudioDeviceDescriptor
 ```
 
-输入音频设备描述。
+Input audio device descriptor.
 
 **Type:** [AudioDeviceDescriptor](arkts-audio-audio-audiodevicedescriptor-i.md)
 
@@ -42,7 +42,7 @@ inputDevice: AudioDeviceDescriptor
 outputDevice: AudioDeviceDescriptor
 ```
 
-输出音频设备描述。
+Output audio device descriptor.
 
 **Type:** [AudioDeviceDescriptor](arkts-audio-audio-audiodevicedescriptor-i.md)
 

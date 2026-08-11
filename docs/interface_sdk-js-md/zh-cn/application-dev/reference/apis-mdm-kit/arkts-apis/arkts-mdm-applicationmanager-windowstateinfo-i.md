@@ -10,12 +10,6 @@
 
 **系统能力：** SystemCapability.Customization.EnterpriseDeviceManager
 
-## 导入模块
-
-```TypeScript
-import { applicationManager } from 'kits/@kit.MDMKit';
-```
-
 ## isOnDock
 
 ```TypeScript

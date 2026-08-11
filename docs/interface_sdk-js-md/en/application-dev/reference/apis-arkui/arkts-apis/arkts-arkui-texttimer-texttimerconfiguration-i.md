@@ -1,8 +1,6 @@
 # TextTimerConfiguration
 
-ContentModifier接口使用的TextTimer配置。
-
-开发者需要自定义class实现ContentModifier接口。
+TextTimerConfiguration used by content modifier.
 
 **Inheritance/Implementation:** TextTimerConfiguration extends [CommonConfiguration<TextTimerConfiguration>](CommonConfiguration<TextTimerConfiguration>)
 
@@ -20,7 +18,9 @@ ContentModifier接口使用的TextTimer配置。
 count: long
 ```
 
-计时器时间（isCountDown为true时生效），单位为毫秒。最长不超过86400000毫秒（24小时）。 0<count<86400000时，count值为倒计时初始值。否则，使用默认值为倒计时初始值。
+Timer duration, in milliseconds.It is effective only when isCountDown is true.The maximum value is 86400000 ms (24 hours).
+
+&lt;p&gt;&lt;strong&gt;NOTE&lt;/strong&gt;:&lt;br&gt;If the value is between 0 and 86,400,000, it is used as the initial countdown time.&lt;br&gt;Otherwise, the default value is used as the initial countdown time.&lt;/p&gt;
 
 **Type:** long
 
@@ -40,7 +40,7 @@ count: long
 elapsedTime: long
 ```
 
-计时器经过的时间，单位为设置格式的最小单位。
+Elapsed time of the timer, in the minimum unit of the format.
 
 **Type:** long
 
@@ -60,11 +60,7 @@ elapsedTime: long
 isCountDown: boolean
 ```
 
-是否倒计时。
-
-true：计时器开启倒计时，例如从30秒 ~ 0秒；false：计时器开始计时，例如从0秒 ~ 30秒。
-
-默认值：false。
+Whether the timer is a countdown.The value true means that the timer counts down,and false means that the timer counts up.
 
 **Type:** boolean
 
@@ -86,7 +82,9 @@ true：计时器开启倒计时，例如从30秒 ~ 0秒；false：计时器开�
 startTime?: int
 ```
 
-计时器经过的时间，单位为设置格式的最小单位。
+The start time of the timer.It is effective only when isCountDown is false.The value should be an integer.
+
+Unit: ms.Default value: 0.
 
 **Type:** int
 
@@ -106,11 +104,7 @@ startTime?: int
 started: boolean
 ```
 
-是否已经开始了计时。
-
-true：开始计时；false：未开始计时。
-
-默认值：false。
+Whether the timer has already started.
 
 **Type:** boolean
 

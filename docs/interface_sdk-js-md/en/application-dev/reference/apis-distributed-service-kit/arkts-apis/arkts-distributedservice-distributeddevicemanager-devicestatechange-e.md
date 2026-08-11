@@ -1,6 +1,6 @@
 # DeviceStateChange
 
-表示设备状态。
+Enumerates the device states.
 
 **Since:** 10
 
@@ -16,7 +16,7 @@
 UNKNOWN = 0
 ```
 
-设备物理上线，此时状态未知，在状态更改为可用之前，分布式业务无法使用。
+The device state is unknown after the device goes online. Before the device state changes to available,distributed services cannot be used.
 
 **Since:** 10
 
@@ -32,7 +32,7 @@ UNKNOWN = 0
 AVAILABLE = 1
 ```
 
-设备可用状态，表示设备间信息已在分布式数据中同步完成，可以运行分布式业务。
+The information between devices has been synchronized in the Distributed Data Service (DDS) module, and the device is ready for running distributed services.
 
 **Since:** 10
 
@@ -48,7 +48,7 @@ AVAILABLE = 1
 UNAVAILABLE = 2
 ```
 
-设备物理下线，此时状态未知。
+The device goes offline, and the device state is unknown.
 
 **Since:** 10
 

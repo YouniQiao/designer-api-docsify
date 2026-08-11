@@ -1,6 +1,6 @@
 # PreviewScaleMode
 
-预览图的缩放方式。
+Enumerates the scale modes of the preview image.
 
 **Since:** 20
 
@@ -16,7 +16,7 @@
 AUTO = 0
 ```
 
-预览图根据[Placement](../arkts-apis/arkts-arkui-enums-placement-e.md/arkts-arkui-enums-placement-e.md)自动调整预览图宽高及缩放。
+The preview image automatically adjusts its width, height, and scale based on [Placement](../arkts-apis/arkts-arkui-enums-placement-e.md/arkts-arkui-enums-placement-e.md).
 
 **Since:** 20
 
@@ -36,7 +36,7 @@ AUTO = 0
 CONSTANT = 1
 ```
 
-预览图不缩放，大小保持不变。最终仍会受到安全区的限制而出现压缩、裁剪。
+The preview image retains its original size. However, the preview image may still be compressed or cropped due to the safe area constraints.
 
 **Since:** 20
 
@@ -56,7 +56,7 @@ CONSTANT = 1
 MAINTAIN = 2
 ```
 
-预览图缩放时保持宽高比。
+The preview image maintains its aspect ratio when scaled.
 
 **Since:** 20
 

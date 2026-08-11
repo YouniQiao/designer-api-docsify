@@ -12,12 +12,6 @@
 
 **系统能力：** SystemCapability.Utils.Lang
 
-## 导入模块
-
-```TypeScript
-import { process } from 'kits/@kit.ArkTS';
-```
-
 ## exit
 
 ```TypeScript
@@ -275,14 +269,14 @@ kill(signal: number, pid: number): boolean
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| signal | number | 是 | 发送特定的信号给目标进程。取值范围：1 <= signal <= 64。 |
-| pid | number | 是 | 进程的 id。 |
+| signal | number | 是 | 发送特定的信号给指定进程。取值范围：1 <= signal <= 64。 |
+| pid | number | 是 | 进程的id。可通过process.pid获取。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| boolean | 信号是否发送成功。如果信号发送成功则返回 true； 否则返回 false。 |
+| boolean | 信号是否发送成功。如果信号发送成功则返回true，否则返回false。 |
 
 ## 示例
 

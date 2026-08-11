@@ -12,7 +12,7 @@ import { accessibility } from 'kits/@kit.AccessibilityKit';
 function isAudioMonoEnabledSync(): boolean
 ```
 
-使用同步方法判断单声道音频模式是否开启。
+Checks whether mono audio mode is enabled with a synchronous mode.
 
 **Since:** 23
 
@@ -28,7 +28,7 @@ function isAudioMonoEnabledSync(): boolean
 
 | Type | Description |
 | --- | --- |
-| boolean | 表示是否开启单声道音频模式。true表示开启单声道音频模式，false表示未开启单声道音频模式。 |
+| boolean | Whether mono audio mode is enabled. Returns **true** if mono audio mode is enabled; returns **false** otherwise. |
 
 ## Examples
 

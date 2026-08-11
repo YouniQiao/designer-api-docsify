@@ -1,10 +1,12 @@
 # MarqueeOptions
 
-Marquee初始化参数。
+Describes the initialization options of the **Marquee** component.
 
-> **说明：**
+> **NOTE：**
 > 
-> 为规范匿名对象的定义，API 18版本修改了此处的元素定义。其中，保留了历史匿名对象的起始版本信息，会出现外层元素@since版本号高于内层元素版本号的情况，但这不影响接口的使用。
+> To standardize anonymous object definitions, the element definitions here have been revised in API version 18.
+> While historical version information is preserved for anonymous objects, there may be cases where the outer element
+> 's @since version number is higher than inner elements'. This does not affect interface usability.
 
 **Since:** 18
 
@@ -20,13 +22,11 @@ Marquee初始化参数。
 delay?: number
 ```
 
-设置两轮滚动之间的延迟时间。
+The waiting time between each round of the marquee.
 
-默认值：0 
+Default value: 0.
 
-取值范围：[0, +∞)，设置的值小于0时等价于设置0。
-
-单位：毫秒
+Unit: ms.
 
 **Type:** number
 
@@ -50,11 +50,13 @@ delay?: number
 fromStart?: boolean
 ```
 
-设置文本的滚动方向。
+Whether the text scrolls from the start.
 
-true：表示文本从头部位置开始正向滚动；false：表示文本反向滚动。
+**true**: Scroll from the start.
 
-默认值：true
+**false**: Scroll from the end.
+
+Default value: **true**.
 
 **Type:** boolean
 
@@ -78,13 +80,13 @@ true：表示文本从头部位置开始正向滚动；false：表示文本反�
 loop?: number
 ```
 
-设置重复滚动的次数，小于等于零时无限循环。
+Number of times the marquee will scroll. If the value is less than or equal to **0**, the marquee will scroll continuously.
 
-默认值：-1
+Default value: **-1**
 
-**说明：**
+**NOTE：**
 
-ArkTS卡片上该参数设置任意值都仅在可见时滚动一次。当设置为大于0的有限次数且播放完毕后，不可以通过改变start参数重置滚动次数重新开始播放。
+Regardless of the value, the marquee scrolls only once on an ArkTS widget.
 
 **Type:** number
 
@@ -108,9 +110,9 @@ ArkTS卡片上该参数设置任意值都仅在可见时滚动一次。当设置
 spacing?: LengthMetrics
 ```
 
-两轮跑马灯之间的间距。如果LengthMetrics的unit值是PERCENT，当前设置不生效，按默认值处理。
+The spacing between two rounds of marquee.
 
-默认值：跑马灯组件宽度。
+Default value is marquee width.
 
 **Type:** [LengthMetrics](../arkts-apis/arkts-arkui-lengthmetrics-t.md)
 
@@ -134,7 +136,7 @@ spacing?: LengthMetrics
 src: string
 ```
 
-需要滚动的文本。
+Text to scroll.
 
 **Type:** string
 
@@ -156,13 +158,13 @@ src: string
 start: boolean
 ```
 
-控制跑马灯是否进入播放状态。
+Whether to start scrolling.
 
-true：播放；false：不播放。
+**true**: yes; **false**: no
 
-**说明：**
+**NOTE：**
 
-当loop参数设置为大于0的有限次数且播放完毕后，不可以通过改变start参数重置滚动次数重新开始播放。
+This parameter cannot be used to restart scrolling that has been completed.
 
 **Type:** boolean
 
@@ -184,13 +186,11 @@ true：播放；false：不播放。
 step?: number
 ```
 
-滚动动画的文本步长。
+Step length of the scrolling animation text. If the value is greater than the text width of the marquee, the default value is used.
 
-取值范围：[0, 文本宽度]，当step大于Marquee的文本宽度时，取默认值。
+Default value: **6**
 
-默认值：6 
-
-单位：[vp](../../../reference/apis-arkui/arkui-ts/ts-pixel-units.md#基本像素单位)
+Unit: [vp](../../apis-ability-kit/arkts-apis/arkts-app-ability-common.md/arkts-app-ability-common.md)
 
 **Type:** number
 

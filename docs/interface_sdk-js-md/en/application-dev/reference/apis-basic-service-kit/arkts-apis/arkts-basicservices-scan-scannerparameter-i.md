@@ -1,6 +1,6 @@
 # ScannerParameter
 
-定义扫描仪参数的接口。
+Defines the scanner parameters.
 
 **Since:** 20
 
@@ -22,7 +22,7 @@ import { scan } from 'kits/@kit.BasicServicesKit';
 optionConstraintInt?: int[]
 ```
 
-选项整数约束。
+Integer constraints of the option.
 
 **Type:** ArkTS-Dyn: number[]  <br>ArkTS-Sta：int[]
 
@@ -40,7 +40,7 @@ optionConstraintInt?: int[]
 optionConstraintRange?: Range
 ```
 
-选项范围约束。
+Range constraint of the option.
 
 **Type:** [Range](arkts-basicservices-scan-range-i.md)
 
@@ -58,7 +58,7 @@ optionConstraintRange?: Range
 optionConstraintString?: string[]
 ```
 
-选项字符串约束。
+String constraints of the option.
 
 **Type:** string[]
 
@@ -76,7 +76,7 @@ optionConstraintString?: string[]
 optionConstraintType: ConstraintType
 ```
 
-选项约束类型。
+Constraint type of the option.
 
 **Type:** [ConstraintType](arkts-basicservices-scan-constrainttype-e.md)
 
@@ -94,7 +94,7 @@ optionConstraintType: ConstraintType
 optionDesc: string
 ```
 
-选项描述。
+Option description.
 
 **Type:** string
 
@@ -112,7 +112,7 @@ optionDesc: string
 optionIndex: int
 ```
 
-选项索引。
+Option index.
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
@@ -130,7 +130,7 @@ optionIndex: int
 optionName: string
 ```
 
-选项名称。
+Option name.
 
 **Type:** string
 
@@ -148,7 +148,7 @@ optionName: string
 optionTitle: string
 ```
 
-选项标题。
+Option title.
 
 **Type:** string
 
@@ -166,7 +166,7 @@ optionTitle: string
 optionType: OptionValueType
 ```
 
-选项值类型。
+Option value type.
 
 **Type:** [OptionValueType](arkts-basicservices-scan-optionvaluetype-e.md)
 
@@ -184,7 +184,7 @@ optionType: OptionValueType
 optionUnit: PhysicalUnit
 ```
 
-选项物理单位。
+Physical unit of the option.
 
 **Type:** [PhysicalUnit](arkts-basicservices-scan-physicalunit-e.md)
 

@@ -1,6 +1,6 @@
 # ImageRotation
 
-枚举，图片旋转角度。
+Enumerates the image rotation angles.
 
 **Since:** 10
 
@@ -16,7 +16,7 @@
 ROTATION_0 = 0
 ```
 
-图片旋转0度。
+The image rotates 0 degrees.
 
 **Since:** 10
 
@@ -34,7 +34,7 @@ ROTATION_0 = 0
 ROTATION_90 = 90
 ```
 
-图片旋转90度。
+The image rotates 90 degrees.
 
 **Since:** 10
 
@@ -52,7 +52,7 @@ ROTATION_90 = 90
 ROTATION_180 = 180
 ```
 
-图片旋转180度。
+The image rotates 180 degrees.
 
 **Since:** 10
 
@@ -70,7 +70,7 @@ ROTATION_180 = 180
 ROTATION_270 = 270
 ```
 
-图片旋转270度。
+The image rotates 270 degrees.
 
 **Since:** 10
 

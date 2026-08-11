@@ -12,12 +12,6 @@ Describes the Try AE parameters. Try AE indicates that the hardware reports the 
 
 **系统接口：** 此接口为系统接口。
 
-## 导入模块
-
-```TypeScript
-import { camera } from 'kits/@kit.CameraKit';
-```
-
 ## captureInterval
 
 ```TypeScript

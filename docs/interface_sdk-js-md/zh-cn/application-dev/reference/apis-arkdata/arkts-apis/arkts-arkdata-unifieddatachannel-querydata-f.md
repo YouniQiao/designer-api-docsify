@@ -1,11 +1,5 @@
 # queryData
 
-## 导入模块
-
-```TypeScript
-import { unifiedDataChannel } from 'kits/@kit.ArkData';
-```
-
 ## queryData
 
 ```TypeScript
@@ -37,9 +31,11 @@ function queryData(options: Options, callback: AsyncCallback<Array<UnifiedData>>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 401 | Parameter error. Possible causes:1.Mandatory parameters are left unspecified; &lt;br&gt;2.Incorrect parameter types; &lt;br&gt;3. Parameter verification failed. |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes:1.Mandatory parameters are left unspecified; &lt;br&gt;2.Incorrect parameter types; &lt;br&gt;3. Parameter verification failed. |
 
 ## 示例
+
+ArkTS-Dyn示例：
 
 ```TypeScript
 import { uniformDataStruct, uniformTypeDescriptor } from '@kit.ArkData';
@@ -70,6 +66,39 @@ try {
 } catch (e) {
   let error: BusinessError = e as BusinessError;
   console.error(`Query data throws an exception. code is ${error.code}, message is ${error.message}`);
+}
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+import { uniformDataStruct, uniformTypeDescriptor } from '@kit.ArkData';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let options1: unifiedDataChannel.Options = {
+  intention: unifiedDataChannel.Intention.DATA_HUB
+};
+
+try {
+  unifiedDataChannel.queryData(options1, (err, ret) => {
+    if (ret !== undefined) {
+      let size = ret.length;
+      for (let i = 0; i < size; i++) {
+        let records = ret[i].getRecords();
+        let size = records.length;
+        for (let j = 0; j < size; j++) {
+          if (records[j].getTypes().includes(uniformTypeDescriptor.UniformDataType.PLAIN_TEXT)) {
+            let text =
+              records[j].getEntry(uniformTypeDescriptor.UniformDataType.PLAIN_TEXT) as uniformDataStruct.PlainText;
+            console.info(`${i + 1}.${text.textContent}`);
+          }
+        }
+      }
+    }
+  });
+} catch (e) {
+  let error: BusinessError = e as BusinessError;
+  console.error(`Query data throws an exception. code is ${error.code}, message is ${error.message} `);
 }
 ```
 
@@ -110,9 +139,11 @@ function queryData(options: Options): Promise<Array<UnifiedData>>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 401 | Parameter error. Possible causes:1.Mandatory parameters are left unspecified; &lt;br&gt;2.Incorrect parameter types; &lt;br&gt;3. Parameter verification failed. |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes:1.Mandatory parameters are left unspecified; &lt;br&gt;2.Incorrect parameter types; &lt;br&gt;3. Parameter verification failed. |
 
 ## 示例
+
+ArkTS-Dyn示例：
 
 ```TypeScript
 import { uniformDataStruct, uniformTypeDescriptor } from '@kit.ArkData';
@@ -141,6 +172,24 @@ try {
 } catch (e) {
   let error: BusinessError = e as BusinessError;
   console.error(`Query data throws an exception. code is ${error.code}, message is ${error.message}`);
+}
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+let options: unifiedDataChannel.Options = {
+  key: 'udmf://DataHub/com.ohos.test/0123456789'
+};
+try {
+  unifiedDataChannel.queryData(options).then((data) => {
+    console.info(`Succeeded in querying data. size = ${data.length}`);
+  }).catch((err: Error) => {
+    console.error(`Failed to query data. code is ${err.code}, message is ${err.message} `);
+  });
+} catch (e) {
+  let error: BusinessError = e as BusinessError;
+  console.error(`Query data throws an exception. code is ${error.code}, message is ${error.message} `);
 }
 ```
 

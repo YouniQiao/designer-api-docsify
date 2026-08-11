@@ -1,11 +1,12 @@
 # ApplicationInfo
 
-应用程序信息，未做特殊说明的属性，均通过  
-[bundle.getApplicationInfo](arkts-ability-bundle-getapplicationinfo-f.md#getapplicationinfo)获取。
+The module provides application information. Unless otherwise specified, the information is obtained through  
+[bundle.getApplicationInfo](arkts-ability-bundle-getapplicationinfo-f.md#getapplicationinfo).
 
-> **说明：**
+> **NOTE：**
 > 
-> 从API version 9开始，该模块不再维护，建议使用[bundleManager-ApplicationInfo](arkts-ability-applicationinfo-applicationinfo-depr-i.md)替代。
+> The APIs of this module have been deprecated since API version 9. You are advised to use
+> [bundleManager-ApplicationInfo](arkts-ability-applicationinfo-applicationinfo-depr-i.md) instead.
 
 **Since:** 7
 
@@ -25,7 +26,7 @@
 readonly accessTokenId: number
 ```
 
-应用程序的accessTokenId。
+Access token ID of the application.
 
 **Type:** number
 
@@ -49,7 +50,8 @@ readonly accessTokenId: number
 readonly codePath: string
 ```
 
-应用程序的安装目录。不能拼接路径访问资源文件，请使用[资源管理接口](../../apis-localization-kit/arkts-apis/arkts-resourcemanager.md/arkts-resourcemanager.md)访问资源。
+Installation directory of the application. Do not access resource files using concatenated paths. Use  
+[@ohos.resourceManager](../../apis-localization-kit/arkts-apis/arkts-resourcemanager.md/arkts-resourcemanager.md) instead.
 
 **Type:** string
 
@@ -73,7 +75,7 @@ readonly codePath: string
 readonly description: string
 ```
 
-应用程序的描述信息。
+Application description.
 
 **Type:** string
 
@@ -97,7 +99,7 @@ readonly description: string
 readonly descriptionId: number
 ```
 
-应用程序的描述信息的资源ID。
+ID of the application description.
 
 **Type:** number
 
@@ -121,7 +123,7 @@ readonly descriptionId: number
 readonly enabled: boolean
 ```
 
-判断应用程序是否可以使用，取值为true表示可以使用，取值为false表示不可使用。
+Whether the application is enabled. **true** if enabled, **false** otherwise.
 
 **Type:** boolean
 
@@ -145,7 +147,7 @@ readonly enabled: boolean
 readonly entityType: string
 ```
 
-应用程序的类别，例如游戏、社交、影视、新闻。
+Type of the application, for example, gaming, social networking, movies, and news.
 
 **Type:** string
 
@@ -167,7 +169,8 @@ readonly entityType: string
 readonly entryDir: string
 ```
 
-应用程序的文件保存路径。不能拼接路径访问资源文件，请使用[资源管理接口](../../apis-localization-kit/arkts-apis/arkts-resourcemanager.md/arkts-resourcemanager.md)访问资源。
+Path for storing application files. Do not access resource files using concatenated paths. Use  
+[@ohos.resourceManager](../../apis-localization-kit/arkts-apis/arkts-resourcemanager.md/arkts-resourcemanager.md) instead.
 
 **Type:** string
 
@@ -189,7 +192,7 @@ readonly entryDir: string
 readonly icon: string
 ```
 
-应用程序的图标。
+Application icon.
 
 **Type:** string
 
@@ -213,7 +216,7 @@ readonly icon: string
 readonly iconId: string
 ```
 
-应用程序图标的资源ID值。
+ID of the application icon.
 
 **Type:** string
 
@@ -237,7 +240,7 @@ readonly iconId: string
 readonly label: string
 ```
 
-应用程序显示的标签。
+Application label.
 
 **Type:** string
 
@@ -261,7 +264,7 @@ readonly label: string
 readonly labelId: string
 ```
 
-应用程序的标签的资源ID值。
+ID of the application label.
 
 **Type:** string
 
@@ -285,10 +288,10 @@ readonly labelId: string
 readonly metaData: Map<string, Array<CustomizeData>>
 ```
 
-应用程序的自定义元信息。
+Custom metadata of the application.
 
-通过调用  
-[bundle.getApplicationInfo](arkts-ability-bundle-getapplicationinfo-f.md#getapplicationinfo)接口时，传入GET_APPLICATION_INFO_WITH_METADATA获取。
+The value is obtained by passing in GET_APPLICATION_INFO_WITH_METADATA to  
+[bundle.getApplicationInfo](arkts-ability-bundle-getapplicationinfo-f.md#getapplicationinfo).
 
 **Type:** Map&lt;string, Array&lt;[CustomizeData](arkts-ability-customizedata-customizedata-depr-i.md)&gt;&gt;
 
@@ -312,7 +315,7 @@ readonly metaData: Map<string, Array<CustomizeData>>
 readonly moduleInfos: Array<ModuleInfo>
 ```
 
-应用程序的模块信息。
+Application module information.
 
 **Type:** Array&lt;[ModuleInfo](arkts-ability-moduleinfo-moduleinfo-depr-i.md)&gt;
 
@@ -336,7 +339,8 @@ readonly moduleInfos: Array<ModuleInfo>
 readonly moduleSourceDirs: Array<string>
 ```
 
-应用程序的资源存放的相对路径。不能拼接路径访问资源文件，请使用[资源管理接口](../../apis-localization-kit/arkts-apis/arkts-resourcemanager.md/arkts-resourcemanager.md)访问资源。
+Relative paths for storing application resources. Do not access resource files using concatenated paths. Use  
+[@ohos.resourceManager](../../apis-localization-kit/arkts-apis/arkts-resourcemanager.md/arkts-resourcemanager.md) instead.
 
 **Type:** Array&lt;string&gt;
 
@@ -358,7 +362,7 @@ readonly moduleSourceDirs: Array<string>
 readonly name: string
 ```
 
-应用程序的名称。
+Application name.
 
 **Type:** string
 
@@ -382,10 +386,10 @@ readonly name: string
 readonly permissions: Array<string>
 ```
 
-访问应用程序所需的权限。
+Permissions required for accessing the application.
 
-通过调用  
-[bundle.getApplicationInfo](arkts-ability-bundle-getapplicationinfo-f.md#getapplicationinfo)接口时，传入GET_APPLICATION_INFO_WITH_PERMISSION获取。
+The value is obtained by passing in GET_APPLICATION_INFO_WITH_PERMISSION to  
+[bundle.getApplicationInfo](arkts-ability-bundle-getapplicationinfo-f.md#getapplicationinfo).
 
 **Type:** Array&lt;string&gt;
 
@@ -409,7 +413,7 @@ readonly permissions: Array<string>
 readonly process: string
 ```
 
-应用程序的进程名称。
+Process name.
 
 **Type:** string
 
@@ -433,7 +437,7 @@ readonly process: string
 readonly removable: boolean
 ```
 
-应用程序是否可以被移除，取值为true表示可以被移除，取值为false表示不可以被移除。
+Whether the application is removable. **true** if removable, **false** otherwise.
 
 **Type:** boolean
 
@@ -457,7 +461,7 @@ readonly removable: boolean
 readonly supportedModes: number
 ```
 
-标识应用支持的运行模式，当前只定义了驾驶模式（drive）。该标签只适用于车机。
+Modes supported by the application. Currently, only the **drive** mode is defined. This attribute applies only to telematics devices.
 
 **Type:** number
 
@@ -479,7 +483,7 @@ readonly supportedModes: number
 readonly systemApp: boolean
 ```
 
-判断是否为系统应用程序，取值为true表示系统应用，取值为false表示非系统应用。
+Whether the application is a system application. **true** if yes, **false** otherwise.
 
 **Type:** boolean
 
@@ -503,7 +507,7 @@ readonly systemApp: boolean
 readonly uid: number
 ```
 
-应用程序的uid。
+UID of the application.
 
 **Type:** number
 

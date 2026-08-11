@@ -22,12 +22,6 @@ Vector是一种线性数据结构，底层基于数组实现，解决了需要�
 
 **系统能力：** SystemCapability.Utils.Lang
 
-## 导入模块
-
-```TypeScript
-import { Vector } from 'kits/@kit.ArkTS';
-```
-
 ## [Symbol.iterator]
 
 ```TypeScript
@@ -50,7 +44,7 @@ import { Vector } from 'kits/@kit.ArkTS';
 
 | 类型 | 说明 |
 | --- | --- |
-| [IterableIterator](arkts-arkts-iterator-iterableiterator-i.md)&lt;T&gt; | 返回一个迭代器，用于遍历Vector实例中的元素。 |
+| IterableIterator&lt;T&gt; | 返回一个迭代器，用于遍历Vector实例中的元素。 |
 
 ## 示例
 
@@ -104,7 +98,7 @@ add(element: T): boolean
 
 | 类型 | 说明 |
 | --- | --- |
-| boolean | 成功添加元素返回true，否则返回false。 |
+| boolean | 插入成功返回true，失败返回false。 |
 
 ## 示例
 
@@ -179,7 +173,7 @@ clone(): Vector<T>
 
 | 类型 | 说明 |
 | --- | --- |
-| [Vector](arkts-arkts-util-vector-vector-c.md)&lt;T&gt; | 返回新的Vector实例。 |
+| [Vector](arkts-arkts-util-vector-vector-c.md)&lt;T&gt; | 返回与原实例内容相同的克隆Vector对象实例，修改克隆实例不影响原实例。 |
 
 ## 示例
 
@@ -238,7 +232,7 @@ convertToArray(): Array<T>
 
 | 类型 | 说明 |
 | --- | --- |
-| Array&lt;T&gt; | 返回数组。 |
+| Array&lt;T&gt; | 返回包含Vector中所有元素的数组。 |
 
 ## 示例
 
@@ -273,7 +267,7 @@ copyToArray(array: Array<T>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| array | Array&lt;T&gt; | 是 | 接收Vector中复制元素的数组。 |
+| array | Array&lt;T&gt; | 是 | 接收复制元素的目标数组。 |
 
 ## forEach
 
@@ -297,7 +291,7 @@ forEach(callbackFn: (value: T, index?: number, vector?: Vector<T>) => void, this
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callbackFn | (value: T, index?: number, vector?: Vector&lt;T&gt;) =&gt; void | 是 | 回调函数。 |
+| callbackFn | (value: T, index?: number, vector?: Vector&lt;T&gt;) =&gt; void | 是 | 回调函数，用于遍历Vector中的每个元素。 |
 | thisArg | Object | 否 | callbackFn被调用时用作this值，默认值为当前实例对象。 |
 
 ## 示例
@@ -337,13 +331,13 @@ get(index: number): T
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| index | number | 是 | 查找的下标位置。 |
+| index | number | 是 | 查找的下标值，取值范围：0 ≤ index < length。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| T | 返回指定下标对应的元素。 |
+| T | 返回获取到的元素。 |
 
 ## 示例
 
@@ -378,7 +372,7 @@ getCapacity(): number
 
 | 类型 | 说明 |
 | --- | --- |
-| number | 返回Vector的容量。 |
+| number | 返回Vector的容量大小。 |
 
 ## 示例
 
@@ -397,7 +391,7 @@ let result = vector.getCapacity();
 getFirstElement(): T
 ```
 
-获取Vector实例中的第一个元素。
+获取Vector实例中的第一个元素。Vector为空时返回undefined。
 
 **起始版本：** 8
 
@@ -413,7 +407,7 @@ getFirstElement(): T
 
 | 类型 | 说明 |
 | --- | --- |
-| T | 返回Vector实例中的第一个元素。 |
+| T | 返回Vector实例中的第一个元素；若Vector为空，返回undefined。 |
 
 ## 示例
 
@@ -518,7 +512,7 @@ let result = vector.getIndexOf(2);
 getLastElement(): T
 ```
 
-获取Vector实例中的最后一个元素。
+获取Vector实例中的最后一个元素。Vector为空时返回undefined。
 
 **起始版本：** 8
 
@@ -534,7 +528,7 @@ getLastElement(): T
 
 | 类型 | 说明 |
 | --- | --- |
-| T | 返回Vector实例中的最后一个元素。 |
+| T | 返回Vector实例中的最后一个元素；若Vector为空，返回undefined。 |
 
 ## 示例
 
@@ -639,7 +633,7 @@ let result = vector.getLastIndexOf(2);
 has(element: T): boolean
 ```
 
-判断此Vector中是否包含指定元素。
+判断此Vector中是否含有该指定元素。
 
 **起始版本：** 8
 
@@ -661,7 +655,7 @@ has(element: T): boolean
 
 | 类型 | 说明 |
 | --- | --- |
-| boolean | 如果包含指定元素返回true，否则返回false。 |
+| boolean | 是否包含指定元素，true表示包含该元素，false表示不包含。 |
 
 ## 示例
 
@@ -816,7 +810,7 @@ remove(element: T): boolean
 
 | 类型 | 说明 |
 | --- | --- |
-| boolean | 成功删除元素返回true，否则返回false。 |
+| boolean | 删除成功返回true，删除失败返回false。 |
 
 ## 示例
 
@@ -931,7 +925,7 @@ replaceAllElements(callbackFn: (value: T, index?: number, vector?: Vector<T>) =>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callbackFn | (value: T, index?: number, vector?: Vector&lt;T&gt;) =&gt; T | 是 | 回调函数。 |
+| callbackFn | (value: T, index?: number, vector?: Vector&lt;T&gt;) =&gt; T | 是 | 回调函数，用于操作Vector中的元素，并用操作后的结果替换原元素。 |
 | thisArg | Object | 否 | callbackFn被调用时用作this值，默认值为当前实例对象。 |
 
 ## 示例
@@ -1023,7 +1017,7 @@ vector.setLength(2);
 sort(comparator?: (firstValue: T, secondValue: T) => number): void
 ```
 
-对Vector中的元素进行排序。
+对Vector中的元素进行一个排序操作。排序后元素的索引位置会发生改变，排序前通过getIndexOf、getLastIndexOf等方法获取的索引值将不再有效，需重新查询索引。
 
 **起始版本：** 8
 
@@ -1039,7 +1033,7 @@ sort(comparator?: (firstValue: T, secondValue: T) => number): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| comparator | (firstValue: T, secondValue: T) =&gt; number | 否 | 排序的回调函数。默认值为当前实例对象。 |
+| comparator | (firstValue: T, secondValue: T) =&gt; number | 否 | 回调函数，若不传入此参数，则按照默认排序规则对元素进行排序。 |
 
 ## 示例
 
@@ -1080,14 +1074,14 @@ subVector(fromIndex: number, toIndex: number): Vector<T>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| fromIndex | number | 是 | 起始位置的下标。 |
-| toIndex | number | 是 | 结束位置的下标。 |
+| fromIndex | number | 是 | 起始下标，取值范围：0 ≤ fromIndex < length。 |
+| toIndex | number | 是 | 终止下标，取值范围：0 ≤ toIndex ≤ length，且toIndex应大于fromIndex。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| [Vector](arkts-arkts-util-vector-vector-c.md)&lt;T&gt; | 返回新的Vector实例。 |
+| [Vector](arkts-arkts-util-vector-vector-c.md)&lt;T&gt; | 返回包含从起始下标到终止下标（不包括终止下标）元素的Vector对象实例。 |
 
 ## 示例
 
@@ -1128,7 +1122,7 @@ toString(): string
 
 | 类型 | 说明 |
 | --- | --- |
-| string | 返回对应字符串。 |
+| string | 返回用","将Vector中的元素按顺序拼接成的字符串。 |
 
 ## 示例
 

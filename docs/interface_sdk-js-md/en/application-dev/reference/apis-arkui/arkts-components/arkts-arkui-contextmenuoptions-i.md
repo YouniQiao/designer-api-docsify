@@ -1,28 +1,28 @@
 # ContextMenuOptions
 
-菜单项的信息。
+Configures menu item information.
 
-**表1：同时设置offset与placement时菜单的偏移位置** 
+**Table 1: Menu offset when both offset and placement are set**
 
-| placement设置的值 | 菜单的偏移量说明 |  
+| Value of placement | Menu Offset |  
 | ------------------------------------------------------------ | ------------------------------------------------------------ |  
-| Placement.TopLeft、Placement.Top、Placement.TopRight | offset的x为正数，菜单相对组件向右进行偏移，offset的y为正数，菜单相对组件向上进行偏移。 |  
-| Placement.BottomLeft、Placement.Bottom、Placement.BottomRight | offset的x为正数，菜单相对组件向左进行偏移，offset的y为正数，菜单相对组件向下进行偏移。 |  
-| Placement.RightTop、Placement.Right、Placement.RightBottom | offset的x为正数，菜单相对组件向右进行偏移，offset的y为正数，菜单相对组件向下进行偏移。 |
+| Placement.TopLeft, Placement.Top, or Placement.TopRight | If the value of **x** is a positive number for **offset**, the menu shifts to the right relative to the component. If the value of **y** is a positive number, the menu shifts upward relative to the component.|  
+| Placement.BottomLeft, Placement.Bottom, or Placement.BottomRight| If the value of **x** is a positive number for **offset**, the menu shifts to the left relative to the component. If the value of **y** is a positive number, the menu shifts downward relative to the component.|  
+| Placement.RightTop, Placement.Right, or Placement.RightBottom | If the value of **x** is a positive number for **offset**, the menu shifts to the right relative to the component. If the value of **y** is a positive number, the menu shifts downward relative to the component.|
 
-**表2：同时设置arrowOffset与placement时菜单箭头的默认位置** 
+**Table 2: Default position of the menu arrow when both arrowOffset and placement are set**
 
-| placement设置的值 | 菜单箭头的位置说明 |  
+| Value of placement | Menu Arrow Position |  
 | ------------------------------------------- | ------------------------------------------------------------ |  
-| Placement.Top、Placement.Bottom | 箭头显示在水平方向且默认居中，且距离菜单左侧边缘距离为箭头安全距离。 |  
-| Placement.Left、Placement.Right | 箭头显示在垂直方向且默认居中，且距离菜单上侧距离为箭头安全距离。 |  
-| Placement.TopLeft、Placement.BottomLeft | 箭头默认显示在水平方向，且距离菜单左侧边缘距离为箭头安全距离。 |  
-| Placement.TopRight、Placement.BottomRight | 箭头默认显示在水平方向，且距离菜单右侧距离为箭头安全距离。 |  
-| Placement.LeftTop、Placement.RightTop | 箭头默认显示在垂直方向，且距离菜单上侧距离为箭头安全距离。 |  
-| Placement.LeftBottom、Placement.RightBottom | 箭头默认显示在垂直方向，且距离菜单下侧距离为箭头安全距离。 |
+| Placement.Top or Placement.Bottom | The arrow is displayed horizontally and centered by default, with a distance from the left edge of the menu equal to the arrow's safe distance.|  
+| Placement.Left or Placement.Right | The arrow is displayed vertically and centered by default, with a distance from the top edge of the menu equal to the arrow's safe distance.|  
+| Placement.TopLeft or Placement.BottomLeft | The arrow is displayed horizontally by default, with a distance from the left edge of the menu equal to the arrow's safe distance.|  
+| Placement.TopRight or Placement.BottomRight | The arrow is displayed horizontally by default, with a distance from the right edge of the menu equal to the arrow's safe distance. |  
+| Placement.LeftTop or Placement.RightTop | The arrow is displayed vertically by default, with a distance from the top edge of the menu equal to the arrow's safe distance. |  
+| Placement.LeftBottom or Placement.RightBottom| The arrow is displayed vertically by default, with a distance from the bottom edge of the menu equal to the arrow's safe distance. |
 
-**表3：enableArrow为true且placement未设置或者值为非法值的菜单默认位置**   
-| 接口 | 菜单默认位置 |  
+**Table 3 Default menu position when enableArrow is set to true and placement is not set or set to an invalid value**  
+| API| Default Menu Position|  
 |------|-------------|  
 | [bindMenu](arkts-arkui-commonmethod-c.md#bindmenu) | Placement.BottomLeft |  
 | [bindMenu&lt;sup&gt;11+&lt;/sup&gt;](arkts-arkui-commonmethod-c.md#bindmenu) | Placement.BottomLeft |  
@@ -44,7 +44,7 @@
 aboutToAppear?: () => void
 ```
 
-菜单显示动效前的事件回调。
+Callback triggered when the menu is about to appear.
 
 **Since:** 11
 
@@ -64,7 +64,7 @@ aboutToAppear?: () => void
 aboutToDisappear?: () => void
 ```
 
-菜单退出动效前的事件回调。
+Callback triggered when the menu is about to disappear.
 
 **Since:** 11
 
@@ -84,7 +84,7 @@ aboutToDisappear?: () => void
 onAppear?: () => void
 ```
 
-菜单弹出后的事件回调。
+Callback invoked after the menu appears.
 
 **Since:** 10
 
@@ -104,7 +104,7 @@ onAppear?: () => void
 onDisappear?: () => void
 ```
 
-菜单消失后的事件回调。
+Callback invoked after the menu disappears.
 
 **Since:** 10
 
@@ -124,13 +124,13 @@ onDisappear?: () => void
 anchorPosition?: Position
 ```
 
-通过设定水平与垂直偏移量，控制菜单相对于绑定组件左上角的弹出位置，与单独使用offset接口不同的是可以覆盖显示在绑定组件上。
+Display position of the menu relative to the upper left corner of the bound component by setting the horizontal and vertical offsets. Unlike using the **offset** API alone, this allows the menu to overlay the bound component.
 
-默认值：{ x: undefined, y: undefined }，不支持设置百分比。
+Default value: **{ x: undefined, y: undefined }**. Percentage values are not supported.
 
-**说明：**
+**NOTE：**
 
-1. 当菜单处于预览状态时，设定的偏移量将无法生效。2. 预设的placement对齐参数将不再生效。3. 叠加offset参数的偏移量，最终确定菜单的精确弹出位置。4. 当水平与垂直偏移量均设为负值时，菜单重置到Placement.BottomLeft进行显示。5. 当水平或垂直偏移量存在undefined或null时，效果等同于不设置anchorPosition，此时预设的placement对齐参数可以生效。
+1. Offsets do not apply during menu preview state.2. The preset value of **placement** does not take effect.3. The **offset** parameter is added to determine the exact display position of the menu.4. When both horizontal and vertical offsets are set to negative values, the menu is reset to **Placement.BottomLeft** for display.5. If the horizontal or vertical offset is **undefined** or **null**, the effect is the same as that of not setting **anchorPosition**. In this case, the preset value of **placement** can take effect.
 
 **Type:** [Position](../arkts-apis/arkts-arkui-position-i.md)
 
@@ -154,25 +154,25 @@ anchorPosition?: Position
 arrowOffset?: Length
 ```
 
-箭头在菜单处的偏移。偏移量必须合法且转换为具体数值时大于0才会生效，另外该值生效时不会导致箭头超出菜单四周的安全距离。
+Offset of the arrow relative to the context menu. The offset settings take effect only when the value is valid, can be converted to a number greater than 0, and does not cause the arrow to extend beyond the safe area of the context menu.
 
-默认值：0
+Default value: **0**
 
-单位：vp
+Unit: vp
 
-**说明：**
+**NOTE：**
 
-箭头距菜单四周的安全距离为菜单圆角大小与箭头宽度的一半之和。
+The safe distance of the arrow from the four sides of the menu is the sum of the menu's corner radius and half the width of the arrow.
 
-根据配置的placement来计算是在水平还是垂直方向上偏移。
+The value of **placement** determines whether the offset is horizontal or vertical.
 
-箭头在菜单水平方向时，偏移量为箭头至最左侧箭头安全距离处的距离。箭头在菜单垂直方向时，偏移量为箭头至最上侧箭头安全距离处的距离。
+When the arrow is in the horizontal direction of the menu, the offset is the distance from the arrow to the leftmost arrow's safe distance. When the arrow is in the vertical direction of the menu, the offset is the distance from the arrow to the topmost arrow's safe distance.
 
-根据配置的placement的不同，箭头展示的默认位置不同：
+The default position where the arrow is displayed varies with the value of **placement**:
 
-在菜单不发生避让的情况下，箭头最终位置与placement设置值的关系参见表2：同时设置arrowOffset与placement时菜单箭头的默认位置。
+Table 2 describes the relationship between the final position of the arrow and the value of **placement** in cases where the menu does not trigger repositioning.
 
-bindContextMenu从API version 10开始支持该属性；bindMenu从API version 12开始支持该属性。
+This API is supported in **bindContextMenu** since API version 10 and **bindMenu** since API version 12.
 
 **Type:** [Length](../arkts-apis/arkts-arkui-length-t.md)
 
@@ -196,11 +196,11 @@ bindContextMenu从API version 10开始支持该属性；bindMenu从API version 1
 availableLayoutArea?: AvailableLayoutArea
 ```
 
-设置预览图宽高的可布局区域，预览图的百分比依据此设置计算，最终可能因安全区限制而被压缩或裁剪。
+Available layout area of the preview image. The percentage of the preview image is calculated based on this setting. The preview image may be compressed or cropped due to the safe area restriction.
 
-**说明：**
+**NOTE：**
 
-未设置或设置为undefined时，百分比依据窗口大小计算。若设置为AvailableLayoutArea.SAFE_AREA，预览图的可布局区域为窗口大小减去上下左右的安全边距。
+If this parameter is not set or is set to **undefined**, the percentage is calculated based on the window size. If this parameter is set to **AvailableLayoutArea.SAFE_AREA**, the available layout area of the preview image is the window size minus the safe margins on all sides.
 
 **Type:** [AvailableLayoutArea](../arkts-apis/arkts-arkui-common-availablelayoutarea-e.md)
 
@@ -222,9 +222,9 @@ availableLayoutArea?: AvailableLayoutArea
 backgroundBlurStyle?: BlurStyle
 ```
 
-菜单背板模糊材质。
+Background blur style of the menu.
 
-默认值：BlurStyle.COMPONENT_ULTRA_THICK。
+Default value: **BlurStyle.COMPONENT_ULTRA_THICK**
 
 **Type:** [BlurStyle](arkts-arkui-blurstyle-e.md)
 
@@ -248,7 +248,7 @@ backgroundBlurStyle?: BlurStyle
 backgroundBlurStyleOptions?: BackgroundBlurStyleOptions
 ```
 
-背景模糊效果。
+Background blur style.
 
 **Type:** [BackgroundBlurStyleOptions](../arkts-apis/arkts-arkui-common-backgroundblurstyleoptions-i.md)
 
@@ -270,9 +270,9 @@ backgroundBlurStyleOptions?: BackgroundBlurStyleOptions
 backgroundColor?: ResourceColor
 ```
 
-菜单背板颜色。
+Background color of the menu.
 
-默认值：Color.Transparent。
+Default value: **Color.Transparent**
 
 **Type:** [ResourceColor](../arkts-apis/arkts-arkui-resourcecolor-t.md)
 
@@ -296,7 +296,7 @@ backgroundColor?: ResourceColor
 backgroundEffect?: BackgroundEffectOptions
 ```
 
-背景效果参数。
+Background effect.
 
 **Type:** [BackgroundEffectOptions](arkts-arkui-backgroundeffectoptions-i.md)
 
@@ -318,19 +318,17 @@ backgroundEffect?: BackgroundEffectOptions
 borderRadius?: Length | BorderRadiuses | LocalizedBorderRadiuses
 ```
 
-设置菜单的边框圆角半径。
+Default value: **8vp** for 2-in-1 devices and **20vp** for other devices
 
-默认值：2in1设备上默认值8vp，其他设备上默认值20vp。
+**NOTE：**
 
-**说明：**
+The value can be in percentage.
 
-支持百分比。
+If the sum of the two maximum corner radii in the horizontal direction exceeds the menu's width, or if the sum of the two maximum corner radii in the vertical direction exceeds the menu's height, the default corner radius of the menu will be used.
 
-当水平方向两个圆角半径之和的最大值超出菜单宽度或垂直方向两个圆角半径之和的最大值超出菜单高度时，采用菜单默认圆角半径值。
+When the Length type is used: Invalid input values will trigger a fallback to the default corner radius.
 
-当设置Length类型且传参为异常值时，菜单圆角取默认值。
-
-当设置BorderRadiuses或LocalizedBorderRadiuses类型且传参为异常值时，菜单默认没有圆角。
+When the BorderRadiuses or LocalizedBorderRadiuses type is used: Invalid input values will result in the menu having no rounded corners by default.
 
 **Type:** [Length](../arkts-apis/arkts-arkui-length-t.md) \| BorderRadiuses \| LocalizedBorderRadiuses
 
@@ -354,13 +352,7 @@ borderRadius?: Length | BorderRadiuses | LocalizedBorderRadiuses
 colorMode?: AnchoredColorMode
 ```
 
-设置菜单深浅色模式，默认跟随绑定组件深浅色模式。
-
-默认值：AnchoredColorMode.FOLLOW_TARGET
-
-**说明：**
-
-1. 仅当绑定组件使用了[WithTheme](../../../reference/apis-arkui/arkui-ts/ts-container-with-theme.md#接口)标签时，该属性才会生效。2. 该属性仅影响组件的默认样式，以及开发者设置的涉及深浅色资源的属性。3. 设置为AnchoredColorMode.FOLLOW_SYSTEM时，模糊材质可以跟随，文字颜色以及涉及深浅色资源的属性仍保持跟随绑定组件的深浅色配置。
+Define the menu theme color mode.
 
 **Type:** [AnchoredColorMode](arkts-arkui-anchoredcolormode-e.md)
 
@@ -384,13 +376,15 @@ colorMode?: AnchoredColorMode
 enableArrow?: boolean
 ```
 
-是否显示箭头。如果菜单的大小和位置不足以放置箭头时，不会显示箭头。 
+Whether to display an arrow. If the size and position of the context menu are insufficient for holding an arrow, no arrow is displayed.
 
-默认值：false，不显示箭头。
+Default value: **false**, indicating that no arrow is displayed.
 
-**说明：**
+**NOTE：**
 
-enableArrow为true时，placement未设置或者值为非法值，默认在目标物上方显示（此时菜单默认位置与接口的关系参见表3：enableArrow为true且placement未设置或者值为非法值的菜单默认位置），否则按照placement的位置优先显示。当前位置显示不下时，会自动调整位置，enableArrow为undefined时，不显示箭头。bindContextMenu从API version 10开始支持该属性；bindMenu从API version 12开始支持该属性。
+When **enableArrow** is set to **true** and **placement** is not set or set to an invalid value, the arrow is displayed above the target object by default. (For details about the relationship between the default menu position and the API, see Table 3.) Otherwise, the arrow is displayed based on the position specified by **placement**. If the position is insufficient for holding the arrow, it is automatically adjusted. When **enableArrow** is   
+**undefined**, no arrow is displayed. This API is supported in **bindContextMenu** since API version 10 and   
+**bindMenu** since API version 12.
 
 **Type:** boolean
 
@@ -414,13 +408,13 @@ enableArrow为true时，placement未设置或者值为非法值，默认在目�
 enableHoverMode?: boolean
 ```
 
-菜单组件是否响应悬停态（半折叠状态）变化，即在悬停态下是否触发避让折痕区域。
+Whether to respond when the device is in hover mode (semi-folded state), that is, whether it triggers avoidance of the crease area in hover mode.
 
-默认值：false，2in1设备默认为true。未设置或者值为非法值时，生效默认值。
+Default value: **false** (**true** for 2-in-1 devices by default) If this parameter is not set or set to an invalid value, the default value is used.
 
-**说明：**
+**NOTE：**
 
-1. 如果菜单的弹出位置在悬停态折痕区域，菜单组件不会响应悬停态。2. 2in1设备从API version 20开始生效。3. 2in1设备仅在窗口瀑布模式下生效。
+1. If the menu display position is within the crease area in hover mode, it will not respond in hover mode.2. This parameter is supported on 2-in-1 devices since API version 20.3. This parameter only takes effect in window waterfall mode for 2-in-1 devices.
 
 **Type:** boolean
 
@@ -444,11 +438,7 @@ enableHoverMode?: boolean
 gridStyle?: MenuGridStyleOptions
 ```
 
-设置菜单的栅格样式。仅固定样式菜单生效，例如在  
-[bindMenu](arkts-arkui-commonmethod-c.md#bindmenu)、  
-[bindContextMenu](arkts-arkui-commonmethod-c.md#bindcontextmenu)、[bindContextMenuByResponseType](arkts-arkui-commonmethod-c.md#bindcontextmenubyresponsetype)、  
-[bindContextMenuByIsShow](arkts-arkui-commonmethod-c.md#bindcontextmenubyisshow)、  
-[bindContextMenuWithResponse](arkts-arkui-commonmethod-c.md#bindcontextmenuwithresponse)中使用[MenuElement](arkts-arkui-menuelement-i.md)或在[MenuItem](menu_item)中使用MenuItemOptions。
+Define the grid style of menu. Only fixed-style menus are effective.For example, using MenuElement in bindMenu/bindContextMenu or using MenuItemOptions in MenuItem.
 
 **Type:** [MenuGridStyleOptions](arkts-arkui-menugridstyleoptions-i.md)
 
@@ -470,15 +460,17 @@ gridStyle?: MenuGridStyleOptions
 hapticFeedbackMode?: HapticFeedbackMode
 ```
 
-菜单弹出时振动效果。
+Haptic feedback mode when the menu is displayed.
 
-默认值：HapticFeedbackMode.DISABLED，菜单弹出时不振动。
+Default value: **HapticFeedbackMode.DISABLED**, indicating no vibration when the menu is displayed.
 
-**说明：**
+**NOTE：**
 
-只有一级菜单可配置弹出时振动效果。
+The haptic feedback mode is only configurable for level-1 menus.
 
-仅当用户启用系统触感反馈且在工程的[module.json5](../../../quick-start/module-configuration-file.md)中配置requestPermissions字段开启ohos.permission.VIBRATE振动权限时，方可生效。配置如下：
+This parameter takes effect only when the user enables the haptic feedback function and the   
+**ohos.permission.VIBRATE** permission is added to the **requestPermissions** field in the   
+[module.json5](../../../quick-start/module-configuration-file.md) file. The configuration is as follows:
 
 ![menuEnableHapticFeedback](../../../reference/apis-arkui/arkui-ts/figures/menuEnableHapticFeedback.png)
 
@@ -504,11 +496,11 @@ hapticFeedbackMode?: HapticFeedbackMode
 keyboardAvoidMode?: MenuKeyboardAvoidMode
 ```
 
-设置菜单是否避让软键盘。
+Whether the menu avoids the soft keyboard.
 
-**说明：**
+**NOTE：**
 
-未设置或设置为undefined时，按照MenuKeyboardAvoidMode.NONE处理。
+If this parameter is not set or is set to **undefined**, the value **MenuKeyboardAvoidMode.NONE** will be used.
 
 **Type:** [MenuKeyboardAvoidMode](../arkts-apis/arkts-arkui-common-menukeyboardavoidmode-e.md)
 
@@ -532,23 +524,23 @@ keyboardAvoidMode?: MenuKeyboardAvoidMode
 layoutRegionMargin?: Margin
 ```
 
-设置预览图与菜单布局时距上下左右边界的最小边距。
+Minimum margin between the preview and menu layout for top, bottom, left, and right edges.
 
-**说明：**
+**NOTE：**
 
-仅支持vp、px、fp、lpx、百分比。
+Only vp, px, fp, lpx, and percentage units are supported.
 
-当margin设置异常值或负值时，按默认值处理。
+Any abnormal or negative values will be treated as the default values.
 
-若preview为CustomBuilder，设置margin.left或margin.right时，预览图取消最大栅格的宽度限制。
+If **preview** is set to **CustomBuilder**, setting **margin.left** or **margin.right** will remove the maximum grid width restriction for the preview.
 
-注意应避免设置过大的margin导致布局区域变小，使得预览图和菜单无法正常布局。
+Be cautious not to set excessively large margins that are too large, which could reduce the layout area and affect the proper layout of the preview and menu.
 
-当水平方向上margin之和超过布局最大宽度时，margin.left和margin.right均不生效，按默认值处理。
+If the sum of horizontal margins exceeds the maximum layout width, **margin.left** and **margin.right** will be ignored and default values will be applied.
 
-当垂直方向上margin之和超过布局最大高度时，margin.top和margin.bottom均不生效，按默认值处理。
+If the sum of vertical margins exceeds the maximum layout width, **margin.top** and **margin.bottom** will be ignored and default values will be applied.
 
-边距默认值为左右边距16vp，上边距16vp, 下边距为4vp。
+The default margin values are 16 vp for the left and right, 16 vp for top, and 4 vp for bottom.
 
 **Type:** [Margin](../arkts-apis/arkts-arkui-margin-t.md)
 
@@ -572,15 +564,15 @@ layoutRegionMargin?: Margin
 mask?: boolean | MenuMaskType
 ```
 
-设置菜单是否有蒙层及蒙层样式。
+Sets whether a menu has a mask and the mask style.
 
-true：有蒙层；false：没有蒙层；MenuMaskType：自定义蒙层的样式。
+**true**: yes; **false**: no; **MenuMaskType**: custom mask style
 
-默认值：菜单有预览图时默认显示蒙层，否则不显示。
+Default value: If a preview image is displayed for a menu, a mask is displayed by default. Otherwise, no mask is displayed.
 
-**说明：**
+**NOTE：**
 
-当设备配置不显示菜单蒙层时，该接口不生效。如当前在2in1设备上该接口不生效。
+This API does not take effect when the device is configured not to display the menu mask. For example, this API does not take effect on 2-in-1 devices.
 
 **Type:** boolean \| MenuMaskType
 
@@ -604,15 +596,7 @@ true：有蒙层；false：没有蒙层；MenuMaskType：自定义蒙层的样�
 maxHeight?: LengthMetrics
 ```
 
-设置菜单显示的最大高度。
-
-**说明：** 默认最大高度是可用高度的80%。
-
-设置为0或负数以及设置为undefined时，按照默认最大高度处理。设置的菜单最大高度不能超过可用高度的100%。
-
-预览图场景下不支持此能力，菜单按默认最大高度显示。
-
-如果菜单所有选项的实际高度之和小于设定的高度，菜单的高度按实际高度显示。
+Defines the max height of menu.
 
 **Type:** [LengthMetrics](../arkts-apis/arkts-arkui-graphics-lengthmetrics-c.md)
 
@@ -634,11 +618,11 @@ maxHeight?: LengthMetrics
 minKeyboardAvoidDistance?: LengthMetrics
 ```
 
-设置菜单避让软键盘的最小距离。
+Minimum distance for the menu to avoid the soft keyboard.
 
-**说明：**
+**NOTE：**
 
-未设置、设置为负数或undefined时，按照8vp处理。仅在keyboardAvoidMode设置为避让软键盘时生效。
+If this parameter is not set, or set to a negative value or **undefined**, the value will be treated as 8 vp. This API is valid only when **keyboardAvoidMode** is set to avoid the soft keyboard.
 
 **Type:** [LengthMetrics](../arkts-apis/arkts-arkui-graphics-lengthmetrics-c.md)
 
@@ -660,11 +644,11 @@ minKeyboardAvoidDistance?: LengthMetrics
 modalMode?: ModalMode
 ```
 
-设置菜单的模态模式。
+Modal mode of a menu.
 
-**说明：**
+**NOTE：**
 
-默认值：ModalMode.AUTO
+Default value: **ModalMode.AUTO**
 
 **Type:** [ModalMode](../arkts-apis/arkts-arkui-common-modalmode-e.md)
 
@@ -688,19 +672,19 @@ modalMode?: ModalMode
 offset?: Position
 ```
 
-菜单弹出位置的偏移量，不会导致菜单显示超出屏幕范围。
+Offset for showing the context menu, which should not cause the menu to extend beyond the screen.
 
-默认值：{ x: 0, y: 0 }，不支持设置百分比。
+Default value: **{ x: 0, y: 0 }**. Percentage values are not supported.
 
-**说明：**
+**NOTE：**
 
-菜单类型为相对父组件区域弹出时，自动根据菜单位置属性 (placement)将区域的宽或高计入偏移量中。
+When the menu is displayed relative to the parent component area, the width or height of the area is automatically counted into the offset based on the **placement** attribute of the menu.
 
-offset最终取值与placement设置值的关系参见表1：同时设置offset与placement时菜单的偏移位置。
+Table 1 describes the relationship between the final **offset** value and the **placement** value.
 
-未设置、异常值或者undefined时按默认{ x: 0, y: 0 }处理。若传入偏移量超出屏幕范围外，则会就近约束到屏幕范围内。
+If this parameter is not set, or set to an abnormal value or **undefined**, the default value **{ x: 0, y: 0 }** is used. If the offset exceeds the screen range, it will be constrained to the nearest point within the screen range.
 
-如果菜单调整了显示位置（与placement初始值主方向不一致），则偏移值 (offset) 失效。
+If the display position of the menu is adjusted (different from the main direction of the initial **placement** value), the offset value is invalid.
 
 **Type:** [Position](../arkts-apis/arkts-arkui-position-i.md)
 
@@ -724,13 +708,11 @@ offset最终取值与placement设置值的关系参见表1：同时设置offset�
 onDidAppear?: Callback<void>
 ```
 
-菜单弹出后的事件回调。
+Callback invoked after the menu appears.
 
-**说明：**
+**NOTE：**
 
-1. 正常时序依次为：aboutToAppear>>onWillAppear>>onAppear>>onDidAppear>>aboutToDisappear>>onWillDisappear>>onDisappear>>onDidDisappear。2. 快速点击弹出，消失菜单时，存在onWillDisappear在onDidAppear前生效。3. 当菜单入场动效未完成时关闭菜单，该回调不会触发。
-
-4.onAppear和onDidAppear触发时机相同，onDidAppear在onAppear后生效。
+1. The normal sequence is **aboutToAppear** > **onWillAppear** > **onAppear** > **onDidAppear** > **aboutToDisappear** > **onWillDisappear** > **onDisappear** > **onDidDisappear**.2. If rapid clicks are triggered to display and then dismiss the menu, there may be cases where **onWillDisappear** is invoked before **onDidAppear**.3. If the menu is closed before the menu entrance animation is complete, this callback is not triggered.4. **onAppear** and **onDidAppear** are invoked at the same time, but **onDidAppear** takes effect after **onAppear**.
 
 **Type:** [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;void&gt;
 
@@ -752,11 +734,11 @@ onDidAppear?: Callback<void>
 onDidDisappear?: Callback<void>
 ```
 
-菜单消失后的事件回调。
+Callback invoked after the menu disappears.
 
-**说明：**
+**NOTE：**
 
-1. 正常时序依次为：aboutToAppear>>onWillAppear>>onAppear>>onDidAppear>>aboutToDisappear>>onWillDisappear>>onDisappear>>onDidDisappear。2. onDisappear和onDidDisappear触发时机相同，onDidDisappear在onDisappear后生效。
+1. The normal sequence is **aboutToAppear** > **onWillAppear** > **onAppear** > **onDidAppear** > **aboutToDisappear** > **onWillDisappear** > **onDisappear** > **onDidDisappear**.2. **onDisappear** and **onDidDisappear** are triggered at the same time, but **onDidDisappear** takes effect after **onDisappear**.
 
 **Type:** [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;void&gt;
 
@@ -778,11 +760,11 @@ onDidDisappear?: Callback<void>
 onWillAppear?: Callback<void>
 ```
 
-菜单显示动效前的事件回调。
+Callback triggered when the menu is about to appear.
 
-**说明：**
+**NOTE：**
 
-1. 正常时序依次为：aboutToAppear>>onWillAppear>>onAppear>>onDidAppear>>aboutToDisappear>>onWillDisappear>>onDisappear>>onDidDisappear。2. aboutToAppear是初始化时触发调用，onWillAppear是在动画执行前触发调用，onWillAppear在aboutToAppear之后执行。
+1. The normal sequence is **aboutToAppear** > **onWillAppear** > **onAppear** > **onDidAppear** > **aboutToDisappear** > **onWillDisappear** > **onDisappear** > **onDidDisappear**.2. **aboutToAppear** is invoked during initialization; **onWillAppear** is invoked before the animation starts but after **aboutToAppear**.
 
 **Type:** [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;void&gt;
 
@@ -804,11 +786,11 @@ onWillAppear?: Callback<void>
 onWillDisappear?: Callback<void>
 ```
 
-菜单退出动效前的事件回调。
+Callback triggered when the menu is about to disappear.
 
-**说明：**
+**NOTE：**
 
-1. 正常时序依次为：aboutToAppear>>onWillAppear>>onAppear>>onDidAppear>>aboutToDisappear>>onWillDisappear>>onDisappear>>onDidDisappear。2. 快速点击弹出，消失菜单时，存在onWillDisappear在onDidAppear前生效。3. aboutToDisappear和onWillDisappear触发时机相同，onWillDisappear在aboutToDisappear后生效。
+1. The normal sequence is **aboutToAppear** > **onWillAppear** > **onAppear** > **onDidAppear** > **aboutToDisappear** > **onWillDisappear** > **onDisappear** > **onDidDisappear**.2. If rapid clicks are triggered to display and then dismiss the menu, there may be cases where **onWillDisappear** is invoked before **onDidAppear**.3. **aboutToDisappear** and **onWillDisappear** are invoked at the same time, but **onWillDisappear** takes effect after **aboutToDisappear**.
 
 **Type:** [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;void&gt;
 
@@ -830,11 +812,11 @@ onWillDisappear?: Callback<void>
 outlineColor?: ResourceColor | EdgeColors
 ```
 
-设置菜单边框外描边颜色。
+Outline color of the menu border.
 
-**说明：**
+**NOTE：**
 
-默认值：'#19ffffff'
+Default value: **'#19ffffff'**
 
 **Type:** [ResourceColor](../arkts-apis/arkts-arkui-resourcecolor-t.md) \| EdgeColors
 
@@ -858,13 +840,13 @@ outlineColor?: ResourceColor | EdgeColors
 outlineWidth?: Dimension | EdgeOutlineWidths
 ```
 
-设置菜单边框外描边宽度。
+Outline width of the menu border.
 
-默认值：0vp
+Default value: **0vp**
 
-**说明：**
+**NOTE：**
 
-不支持百分比，若需要外描边效果，outlineWidth为必填项。
+Percentage values are not supported. **outlineWidth** is mandatory for customizing an outline effect.
 
 **Type:** [Dimension](../arkts-apis/arkts-arkui-dimension-t.md) \| EdgeOutlineWidths
 
@@ -888,11 +870,11 @@ outlineWidth?: Dimension | EdgeOutlineWidths
 placement?: Placement
 ```
 
-菜单组件优先显示的位置，当前位置显示不下时，会自动调整位置。
+Preferred position of the context menu. If the set position is insufficient for holding the component, it will be automatically adjusted.
 
-**说明：**
+**NOTE：**
 
-1. 作为[bindMenu](arkts-arkui-commonmethod-c.md#bindmenu)入参时，默认值为Placement.BottomLeft。2. 作为[bindContextMenu&lt;sup&gt;8+&lt;/sup&gt;](arkts-arkui-commonmethod-c.md#bindcontextmenu)或[bindContextMenuWithResponse&lt;sup&gt;23+&lt;/sup&gt;](arkts-arkui-commonmethod-c.md#bindcontextmenuwithresponse)入参时，默认效果为菜单跟随点击位置弹出。3. 作为[bindContextMenu&lt;sup&gt;12+&lt;/sup&gt;](arkts-arkui-commonmethod-c.md#bindcontextmenu)入参时，默认值为Placement.BottomLeft。4. placement值设置为undefined、null或缺省时，按默认值处理。
+1. When this parameter is used as the input parameter of [bindMenu](arkts-arkui-commonmethod-c.md#bindmenu), its default value is **Placement.BottomLeft**.2. When this parameter is used as the input parameter of [bindContextMenu&lt;sup&gt;8+&lt;/sup&gt;](arkts-arkui-commonmethod-c.md#bindcontextmenu) or [bindContextMenuWithResponse&lt;sup&gt;23+&lt;/sup&gt;](arkts-arkui-commonmethod-c.md#bindcontextmenuwithresponse), the menu is displayed at the click position.3. When this parameter is used as the input parameter of [bindContextMenu&lt;sup&gt;12+&lt;/sup&gt;](arkts-arkui-commonmethod-c.md#bindcontextmenu), its default value is **Placement.BottomLeft**.4. If the value of **placement** is **undefined**, **null**, or empty, the default value is used.
 
 **Type:** [Placement](../arkts-apis/arkts-arkui-placement-e.md)
 
@@ -916,16 +898,17 @@ placement?: Placement
 preview?: MenuPreviewMode | CustomBuilder
 ```
 
-长按悬浮菜单或使用  
-[bindContextMenu&lt;sup&gt;12+&lt;/sup&gt;](arkts-arkui-commonmethod-c.md#bindcontextmenu)显示菜单的预览内容样式，可以为目标组件的截图，也可以为用户自定义的内容。
+Preview displayed when the context menu is triggered by a long-press or by calling   
+[bindContextMenu&lt;sup&gt;12+&lt;/sup&gt;](arkts-arkui-commonmethod-c.md#bindcontextmenu).It can be a screenshot of the target component or custom content.
 
-默认值：MenuPreviewMode.NONE，无预览内容。
+Default value: **MenuPreviewMode.NONE**, indicating no preview.
 
-**说明：**
+**NOTE：**
 
-- 不支持responseType为ResponseType.RightClick时触发，如果responseType为ResponseType.RightClick，则不会显示预览内容。  
-- 当未设置preview参数或preview参数设置为MenuPreviewMode.NONE时，enableArrow参数生效。  
-- 当preview参数设置为MenuPreviewMode.IMAGE或CustomBuilder时，enableArrow为true时也不显示箭头。
+- This parameter has no effect when **responseType** is set to **ResponseType.RightClick**.  
+- If **preview** is set to **MenuPreviewMode.NONE** or is not set, the **enableArrow** parameter is effective.  
+- If **preview** is set to **MenuPreviewMode.IMAGE** or **CustomBuilder**, no arrow will be displayed even when   
+**enableArrow** is **true**.
 
 **Type:** [MenuPreviewMode](arkts-arkui-menupreviewmode-e.md) \| CustomBuilder
 
@@ -949,13 +932,13 @@ preview?: MenuPreviewMode | CustomBuilder
 previewAnimationOptions?: ContextMenuAnimationOptions
 ```
 
-控制长按预览的显示效果。
+Display effect of the long-press preview.
 
-默认值：{ scale: [0.95, 1.1], transition: undefined, hoverScale: undefined }。
+Default value: **{ scale: [0.95, 1.1], transition: undefined, hoverScale: undefined }**
 
-**说明：**
+**NOTE：**
 
-倍率设置参数小于等于0时，不生效。
+If the value is less than or equal to **0**, this parameter does not take effect.
 
 **Type:** [ContextMenuAnimationOptions](arkts-arkui-contextmenuanimationoptions-i.md)
 
@@ -979,15 +962,15 @@ previewAnimationOptions?: ContextMenuAnimationOptions
 previewBorderRadius?: BorderRadiusType
 ```
 
-设置预览图边框圆角半径。
+Border corner radius for the preview image.
 
-默认值：16vp 
+Default value: **16vp**
 
-**说明：**
+**NOTE：**
 
-当水平方向上两个圆角半径之和的最大值超过预览图的宽度，或者垂直方向上两个圆角半径之和的最大值超过预览图的高度时，应采用预览图所能允许的最大圆角半径值。
+If the sum of the two corner radii in the horizontal direction exceeds the width of the preview image, or the sum of the two corner radii in the vertical direction exceeds the height of the preview image, the maximum allowable radius should be used.
 
-圆角设置越大，圆角动画变化越快。
+A larger corner radius results in a faster animation change for the corners.
 
 **Type:** [BorderRadiusType](../arkts-apis/arkts-arkui-borderradiustype-t.md)
 
@@ -1011,15 +994,16 @@ previewBorderRadius?: BorderRadiusType
 previewScaleMode?: PreviewScaleMode
 ```
 
-预览图缩放方式。
+Preview image scaling mode.
 
-默认值：PreviewScaleMode.AUTO
+Default value: **PreviewScaleMode.AUTO**
 
-**说明：**
+**NOTE：**
 
-布局空间不足时，控制预览图的缩放方式。未设置或设置undefined按照PreviewScaleMode.AUTO处理。当设置成PreviewScaleMode.CONSTANT时，如果预览图过大，剩余的空间不足以放置菜单时，菜单将重叠显示在预览图之下。
+This parameter applies to the scenarios where the layout space is insufficient. If this parameter is not set or is set to **undefined**, the value **PreviewScaleMode.AUTO** will be used. When this parameter is set to   
+**PreviewScaleMode.CONSTANT**, if the preview image is too large and the remaining space is insufficient for placing the menu, the menu is displayed under the preview image.
 
-预览图的最大宽高不会超过预览图最大可布局区域（窗口大小减去上下左右的安全边距）。
+The maximum width and height of the preview image do not exceed the maximum available layout area of the preview image (the window size minus the safe margins on all sides).
 
 **Type:** [PreviewScaleMode](../arkts-apis/arkts-arkui-common-previewscalemode-e.md)
 
@@ -1043,11 +1027,7 @@ previewScaleMode?: PreviewScaleMode
 scrollBar?: BarState
 ```
 
-设置菜单滚动条状态。 
-
-默认值：BarState.Auto 
-
-未设置或者设置为undefined时，按照BarState.Auto处理。
+Defines the scroll bar state of menu.
 
 **Type:** [BarState](../arkts-apis/arkts-arkui-barstate-e.md)
 
@@ -1071,10 +1051,7 @@ scrollBar?: BarState
 systemMaterial?: SystemUiMaterial
 ```
 
-设置菜单的系统材质。不同系统材质对应不同的属性影响效果，该接口影响背景色[backgroundColor](arkts-arkui-commonmethod-c.md#backgroundcolor)、边框颜色[borderColor](arkts-arkui-commonmethod-c.md#bordercolor)、边框宽度[borderWidth](arkts-arkui-commonmethod-c.md#borderwidth)、阴影  
-[shadow](arkts-arkui-commonmethod-c.md#shadow)，不建议与上述接口一起使用。材质设置为非法值、undefined时，按照不设置系统材质处理。
-
-默认值： undefined
+Set system-styled materials for menu. The material effect behaves differently on devices with different level of computing powers. On devices with lower computing power, it affects attributes such as the backgroundColor, borderWidth, borderColor, shadow. On devices with higher computing power, it adds a filter effect at the system material layer, which can produce an effect similar to glass.
 
 **Type:** [SystemUiMaterial](../arkts-apis/arkts-arkui-systemuimaterial-t.md)
 
@@ -1096,16 +1073,7 @@ systemMaterial?: SystemUiMaterial
 targetSpace?: LengthMetrics
 ```
 
-设置菜单与目标组件之间的间距。
-
-**说明：**
-
-- 同时使用targetSpace与offset时，两者会叠加生效。推荐使用targetSpace设置菜单与目标的间距，使用offset设置菜单弹出位置的偏移量。  
-- 二级菜单会避让targetSpace范围。  
-- 设置为负数或undefined时，菜单与目标组件之间的间距为默认8vp，且子菜单不避让targetSpace。  
-- targetSpace属性在存在默认placement时可直接生效，无默认placement的场景，需配合placement属性使用才可生效。  
-- anchorPosition的优先级要高于targetSpace。  
-- 不支持设置百分比。
+Sets the space between the menu and target.When both targetSpace and offset are set, they take effect additively. It is recommended to use targetSpace to set the space between the menu and target, and use offset for additional offset.
 
 **Type:** [LengthMetrics](../arkts-apis/arkts-arkui-graphics-lengthmetrics-c.md)
 
@@ -1127,17 +1095,15 @@ targetSpace?: LengthMetrics
 transition?: TransitionEffect
 ```
 
-设置菜单显示和退出的过渡效果。
+Transition effect for the entrance and exit of the menu.
 
-**说明：**
+**NOTE：**
 
-菜单退出动效过程中，进行横竖屏切换，菜单会避让。二级菜单不继承自定义动效。弹出过程可以点击二级菜单，退出动效执行过程不允许点击二级菜单。
+During the exit animation of the menu, if there is a switch between landscape and portrait modes, the menu will make way. Level-2 menus do not inherit custom animations. The level-2 menu can be clicked during the pop-up process, but not during the execution of the exit animation.
 
-详细描述见[TransitionEffect](arkts-arkui-transitioneffect-c.md)对象说明。 
+For details, see [TransitionEffect](arkts-arkui-transitioneffect-c.md).
 
-动效曲线使用弹簧曲线，在动效退出时，由于弹簧曲线的回弹震荡，菜单消失后有较长的拖尾，使得其他事件无法响应。
-
-当设置transition自定义动效时，菜单的默认显示和退出动效不生效。
+The menu animation uses a spring curve. Due to the rebound and oscillation of the spring curve during the exit of the animation, there is a prolonged tail effect, which prevents the menu from responding to other events after it disappears.
 
 **Type:** [TransitionEffect](../arkts-apis/arkts-arkui-common-transitioneffect-c.md)
 

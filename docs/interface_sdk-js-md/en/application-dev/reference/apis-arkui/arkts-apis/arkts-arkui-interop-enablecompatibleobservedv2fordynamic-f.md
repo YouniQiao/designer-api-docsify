@@ -6,7 +6,7 @@
 export declare function enableCompatibleObservedV2ForDynamic<T>(value: T): T
 ```
 
-在ArkTS-Dyn中引用ArkTS-Sta中使用@ObservedV2和@Trace修饰的类。
+Enable compatible ObservedV2 for Dynamic
 
 **Since:** 23
 
@@ -22,11 +22,11 @@ export declare function enableCompatibleObservedV2ForDynamic<T>(value: T): T
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | T | Yes | ArkTS-Sta@ObservedV2修饰的class。 |
+| value | T | Yes | the source value |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| T | 返回当前组件。 |
+| T | the result |
 

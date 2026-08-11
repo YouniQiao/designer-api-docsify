@@ -1,23 +1,29 @@
 # SoundPool
 
-音频池提供了系统声音的加载、播放、音量设置、循环设置、停止播放和资源卸载等功能，在调用SoundPool的接口前，需要先通过  
-[media.createSoundPool](../../../reference/apis-media-kit/arkts-apis-media-f.md)创建实例。
+Implements a sound pool that provides APIs for loading, unloading, playing, and stopping playing system sounds, setting the volume, and setting the number of loops. Before using these APIs, you must call   
+[media.createSoundPool](../../../reference/apis-media-kit/arkts-apis-media-f.md)to create a SoundPool instance.
 
-> **说明：**
+> **NOTE：**
 > 
-> - 在使用SoundPool实例的方法时，建议开发者注册相关回调，主动获取当前状态变化。
-> > - [on('loadComplete')](SoundPool.on(type: 'loadComplete', callback: Callback&lt;int&gt;))：监听资源加载完成。建议开发者监听此回调以确
-> 保音频在加载完成后进行播放。
+> - When using the SoundPool instance, you are advised to register the following callbacks to proactively obtain
+> status changes:
+> > - [on('loadComplete')](SoundPool.on(type: 'loadComplete', callback: Callback&lt;int&gt;)): listens for the
+> event indicating that the resource loading is finished. You are advised to listen for this callback to ensure that
+> the audio is played after being loaded.
 > > -
-> [on('playFinishedWithStreamId')](SoundPool.on(type: 'playFinishedWithStreamId', callback: Callback&lt;int&gt;))：监听播
-> 放完成，同时返回播放结束的音频的streamId。
-> > - [on('playFinished')](SoundPool.on(type: 'playFinishedWithStreamId', callback: Callback&lt;int&gt;))：监听播放完成。
-> > - [on('error')](SoundPool.on(type: 'error', callback: ErrorCallback))：监听错误事件。
-> > - [on('errorOccurred')](SoundPool.on(type:'errorOccurred', callback:Callback&lt;ErrorInfo&gt;))：监听错误事件，同时返回
-> [errorInfo](arkts-media-soundpool-errorinfo-i.md)。
+> [on('playFinishedWithStreamId')](SoundPool.on(type: 'playFinishedWithStreamId', callback: Callback&lt;int&gt;)):
+> listens for the event indicating that the playback is finished and returns the stream ID of the audio that finishes
+> playing.
+> > - [on('playFinished')](SoundPool.on(type: 'playFinishedWithStreamId', callback: Callback&lt;int&gt;)): listens
+> for the event indicating that the playback is finished.
+> > - [on('error')](SoundPool.on(type: 'error', callback: ErrorCallback)): listens for error events.
+> > - [on('errorOccurred')](SoundPool.on(type: 'errorOccurred', callback: Callback&lt;ErrorInfo&gt;)): listens for
+> error events and returns [errorInfo](arkts-media-soundpool-errorinfo-i.md).
 > 
-> - SoundPool目前不支持后台播放、设置音频打断等音频焦点策略和跳过音频头尾的静音帧。SoundPool低时延播放可参考
-> [使用SoundPool播放短音频(ArkTS)](../../../media/media/using-soundpool-for-playback.md)。
+> - Currently, SoundPool does not support audio focus policies such as background playback and audio interruption, or
+> skipping the silent frames at the beginning and end of an audio file. For details about low-latency playback using
+> SoundPool, see
+> [Using SoundPool to Play Short Sounds (ArkTS)](../../../media/media/using-soundpool-for-playback.md).
 
 **Since:** 10
 
@@ -39,19 +45,23 @@ ArkTS-Sta:
 load(uri: string, callback: AsyncCallback<int>): void
 ```
 
-加载音频资源。使用callback异步回调。
+Loads a sound. This API uses an asynchronous callback to return the result.
 
-通过callback异步回调获取资源ID，入参URL通过获取文件fd生成以"fd://"开头的文件描述字符串。
+This API uses an asynchronous callback to obtain the resource ID. The input parameter URL is a string starting with  
+**fd://**, which is generated based on the file descriptor (FD) obtained.
 
-该方法不支持加载rawfile目录资源，需要通过  
-[load(fd: number, offset: number, length: number, callback: AsyncCallback\&lt;number&gt;): void](arkts-media-soundpool-soundpool-i.md#load)或者  
-[load(fd: number, offset: number, length: number): Promise\&lt;number&gt;](arkts-media-soundpool-soundpool-i.md#load)实现。
+This API cannot be used to load resources in the **rawfile** directory. Instead, use   
+[load(fd: number, offset: number, length: number, callback: AsyncCallback\&lt;number&gt;): void](arkts-media-soundpool-soundpool-i.md#load)or   
+[load(fd: number, offset: number, length: number): Promise\&lt;number&gt;](arkts-media-soundpool-soundpool-i.md#load).
 
-> **说明：**
+> **NOTE：**
 > 
-> - 将资源句柄（fd）或加载路径描述（uri）传递给音频池播放器之后，请不要通过该资源句柄或加载路径描述做其他读写操作，包括但不限于将同一个资源句柄或加载路径描述传递给多个音频池播放器。
+> - After the resource handle (in the form of an FD) or path description (in the form of a URI) is transferred to
+> the player, do not use the resource handle or path description in read or write operations, including but not
+> limited to transferring it to multiple players.
 > 
-> - 同一时间通过同一个资源句柄或加载路径描述读写文件时存在竞争关系，将导致播放异常。
+> - Competition occurs when multiple players use the same resource handle or path description to read and write
+> files at the same time, resulting in playback errors.
 
 **Since:** 10
 
@@ -65,16 +75,16 @@ load(uri: string, callback: AsyncCallback<int>): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| uri | string | Yes | 音频文件的加载路径描述，一般以"fd://"开头的文件描述。 |
-| callback | ArkTS-Dyn: [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;number&gt;  <br>ArkTS-Sta：[AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;int&gt; | Yes | 异步音频资源加载返回的资源id，有效值大于0。 |
+| uri | string | Yes | URI of the audio file to load. Generally, the URI starts with **fd://**. |
+| callback | ArkTS-Dyn: [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;number&gt;  <br>ArkTS-Sta：[AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;int&gt; | Yes | Callback used to return the sound ID. A valid value must be greater than 0. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 5400102 | Operation not allowed. Return by callback. |
-| 5400103 | I/O error. Return by callback. |
-| 5400105 | Service died. Return by callback. |
+| [5400102](../errorcode-media.md#5400102-unsupported-operation) | Operation not allowed. Return by callback. |
+| [5400103](../errorcode-media.md#5400103-io-error) | I/O error. Return by callback. |
+| [5400105](../errorcode-media.md#5400105-play-service-dead) | Service died. Return by callback. |
 
 ## load
 
@@ -88,19 +98,22 @@ ArkTS-Sta:
 load(uri: string): Promise<int>
 ```
 
-加载音频资源。使用Promise异步回调。
+Loads a sound. This API uses a promise to return the result.
 
-通过Promise异步回调获取资源ID，入参URL通过获取文件fd生成以"fd://"开头的文件描述字符串。
+This API uses a promise to obtain the resource ID. The input parameter URL is a string starting with **fd://**, which is generated based on the file descriptor (FD) obtained.
 
-该方法不支持加载rawfile目录资源，需要通过  
-[load(fd: number, offset: number, length: number, callback: AsyncCallback\&lt;number&gt;): void](arkts-media-soundpool-soundpool-i.md#load)或者  
-[load(fd: number, offset: number, length: number): Promise\&lt;number&gt;](arkts-media-soundpool-soundpool-i.md#load)实现。
+This API cannot be used to load resources in the **rawfile** directory. Instead, use   
+[load(fd: number, offset: number, length: number, callback: AsyncCallback\&lt;number&gt;): void](arkts-media-soundpool-soundpool-i.md#load)or   
+[load(fd: number, offset: number, length: number): Promise\&lt;number&gt;](arkts-media-soundpool-soundpool-i.md#load).
 
-> **说明：**
+> **NOTE：**
 > 
-> - 将资源句柄（fd）或加载路径描述（uri）传递给音频池播放器之后，请不要通过该资源句柄或加载路径描述做其他读写操作，包括但不限于将同一个资源句柄或加载路径描述传递给多个音频池播放器。
+> - After the resource handle (in the form of an FD) or path description (in the form of a URI) is transferred to
+> the player, do not use the resource handle or path description in read or write operations, including but not
+> limited to transferring it to multiple players.
 > 
-> - 同一时间通过同一个资源句柄或加载路径描述读写文件时存在竞争关系，将导致播放异常。
+> - Competition occurs when multiple players use the same resource handle or path description to read and write
+> files at the same time, resulting in playback errors.
 
 **Since:** 10
 
@@ -114,21 +127,21 @@ load(uri: string): Promise<int>
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| uri | string | Yes | 音频文件的加载路径描述，一般以"fd://"开头的文件描述。 |
+| uri | string | Yes | URI of the audio file to load. Generally, the URI starts with **fd://**. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| ArkTS-Dyn: Promise&lt;number&gt;  <br>ArkTS-Sta：Promise&lt;int&gt; | Promise对象，返回资源的id，有效值大于0。 |
+| ArkTS-Dyn: Promise&lt;number&gt;  <br>ArkTS-Sta：Promise&lt;int&gt; | Promise used to return the sound ID. A valid value must be greater than 0 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 5400102 | Operation not allowed. Return by promise. |
-| 5400103 | I/O error. Return by promise. |
-| 5400105 | Service died. Return by promise. |
+| [5400102](../errorcode-media.md#5400102-unsupported-operation) | Operation not allowed. Return by promise. |
+| [5400103](../errorcode-media.md#5400103-io-error) | I/O error. Return by promise. |
+| [5400105](../errorcode-media.md#5400105-play-service-dead) | Service died. Return by promise. |
 
 ## load
 
@@ -142,15 +155,18 @@ ArkTS-Sta:
 load(fd: int, offset: long, length: long, callback: AsyncCallback<int>): void
 ```
 
-加载音频资源。使用callback异步回调。
+Loads a sound. This API uses an asynchronous callback to return the result.
 
-通过callback异步回调获取资源ID，入参可手动传入资源信息或通过读取应用内置资源自动获取。
+This API uses an asynchronous callback to obtain the resource ID. For the input parameter, resource information can be passed in manually or acquired automatically by reading the application's built-in resources.
 
-> **说明：**
+> **NOTE：**
 > 
-> - 将资源句柄（fd）或加载路径描述（uri）传递给音频池播放器之后，请不要通过该资源句柄或加载路径描述做其他读写操作，包括但不限于将同一个资源句柄或加载路径描述传递给多个音频池播放器。
+> - After the resource handle (in the form of an FD) or path description (in the form of a URI) is transferred to
+> the player, do not use the resource handle or path description in read or write operations, including but not
+> limited to transferring it to multiple players.
 > 
-> - 同一时间通过同一个资源句柄或加载路径描述读写文件时存在竞争关系，将导致播放异常。
+> - Competition occurs when multiple players use the same resource handle or path description to read and write
+> files at the same time, resulting in playback errors.
 
 **Since:** 10
 
@@ -164,18 +180,18 @@ load(fd: int, offset: long, length: long, callback: AsyncCallback<int>): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| fd | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | 资源句柄，通过 [resourceManager.getRawFd](../../../reference/apis-localization-kit/js-apis-resource-manager.md) 获取。 |
-| offset | ArkTS-Dyn: number  <br>ArkTS-Sta：long | Yes | 资源偏移量，需要基于预置资源的信息输入，非法值会造成音视频资源解析错误。 |
-| length | ArkTS-Dyn: number  <br>ArkTS-Sta：long | Yes | 资源长度，需要基于预置资源的信息输入，非法值会造成音视频资源解析错误。 |
-| callback | ArkTS-Dyn: [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;number&gt;  <br>ArkTS-Sta：[AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;int&gt; | Yes | 获取回调的soundID，有效值大于0。 |
+| fd | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | Resource handle, which is obtained by calling [resourceManager.getRawFd](../../../reference/apis-localization-kit/js-apis-resource-manager.md). |
+| offset | ArkTS-Dyn: number  <br>ArkTS-Sta：long | Yes | Resource offset, which needs to be entered based on the preset resource information. An invalid value causes a failure to parse audio and video resources. |
+| length | ArkTS-Dyn: number  <br>ArkTS-Sta：long | Yes | Resource length, which needs to be entered based on the preset resource information. An invalid value causes a failure to parse audio and video resources. |
+| callback | ArkTS-Dyn: [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;number&gt;  <br>ArkTS-Sta：[AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;int&gt; | Yes | Callback used to return the sound ID. A valid value must be greater than 0. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 5400102 | Operation not allowed. Return by callback. |
-| 5400103 | I/O error. Return by callback. |
-| 5400105 | Service died. Return by callback. |
+| [5400102](../errorcode-media.md#5400102-unsupported-operation) | Operation not allowed. Return by callback. |
+| [5400103](../errorcode-media.md#5400103-io-error) | I/O error. Return by callback. |
+| [5400105](../errorcode-media.md#5400105-play-service-dead) | Service died. Return by callback. |
 
 ## load
 
@@ -189,15 +205,18 @@ ArkTS-Sta:
 load(fd: int, offset: long, length: long): Promise<int>
 ```
 
-加载音频资源。使用Promise异步回调。
+Loads a sound. This API uses a promise to return the result.
 
-通过Promise异步回调获取资源ID，入参可手动传入资源信息或通过读取应用内置资源自动获取。
+This API uses a promise to obtain the resource ID. For the input parameter, resource information can be passed in manually or acquired automatically by reading the application's built-in resources.
 
-> **说明：**
+> **NOTE：**
 > 
-> - 将资源句柄（fd）或加载路径描述（uri）传递给音频池播放器之后，请不要通过该资源句柄或加载路径描述做其他读写操作，包括但不限于将同一个资源句柄或加载路径描述传递给多个音频池播放器。
+> - After the resource handle (in the form of an FD) or path description (in the form of a URI) is transferred to
+> the player, do not use the resource handle or path description in read or write operations, including but not
+> limited to transferring it to multiple players.
 > 
-> - 同一时间通过同一个资源句柄或加载路径描述读写文件时存在竞争关系，将导致播放异常。
+> - Competition occurs when multiple players use the same resource handle or path description to read and write
+> files at the same time, resulting in playback errors.
 
 **Since:** 10
 
@@ -211,23 +230,23 @@ load(fd: int, offset: long, length: long): Promise<int>
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| fd | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | 资源句柄，通过 [resourceManager.getRawFd](../../../reference/apis-localization-kit/js-apis-resource-manager.md) 获取。 |
-| offset | ArkTS-Dyn: number  <br>ArkTS-Sta：long | Yes | 资源偏移量，需要基于预置资源的信息输入，非法值会造成音视频资源解析错误。 |
-| length | ArkTS-Dyn: number  <br>ArkTS-Sta：long | Yes | 资源长度，需要基于预置资源的信息输入，非法值会造成音视频资源解析错误。 |
+| fd | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | Resource handle, which is obtained by calling [resourceManager.getRawFd](../../../reference/apis-localization-kit/js-apis-resource-manager.md) |
+| offset | ArkTS-Dyn: number  <br>ArkTS-Sta：long | Yes | Resource offset, which needs to be entered based on the preset resource information. An invalid value causes a failure to parse audio and video resources. |
+| length | ArkTS-Dyn: number  <br>ArkTS-Sta：long | Yes | Resource length, which needs to be entered based on the preset resource information. An invalid value causes a failure to parse audio and video resources. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| ArkTS-Dyn: Promise&lt;number&gt;  <br>ArkTS-Sta：Promise&lt;int&gt; | Promise对象，返回soundID，有效值大于0。 |
+| ArkTS-Dyn: Promise&lt;number&gt;  <br>ArkTS-Sta：Promise&lt;int&gt; | Promise used to return the sound ID. A valid value must be greater than 0 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 5400102 | Operation not allowed. Return by promise. |
-| 5400103 | I/O error. Return by promise. |
-| 5400105 | Service died. Return by promise. |
+| [5400102](../errorcode-media.md#5400102-unsupported-operation) | Operation not allowed. Return by promise. |
+| [5400103](../errorcode-media.md#5400103-io-error) | I/O error. Return by promise. |
+| [5400105](../errorcode-media.md#5400105-play-service-dead) | Service died. Return by promise. |
 
 ## off('loadComplete')
 
@@ -235,7 +254,7 @@ load(fd: int, offset: long, length: long): Promise<int>
 off(type: 'loadComplete'): void
 ```
 
-取消监听资源的加载完成。
+Unsubscribes from events indicating that a sound finishes loading.
 
 **Since:** 10
 
@@ -249,51 +268,7 @@ off(type: 'loadComplete'): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'loadComplete' | Yes | 取消注册的事件：'loadComplete'。 |
-
-## off('playFinished')
-
-```TypeScript
-off(type: 'playFinished'): void
-```
-
-取消监听音频池资源播放完成。
-
-**Since:** 10
-
-**ArkTS mode:** ArkTS-Dyn only, since version 10.
-
-<!--Device-SoundPool-off(type: 'playFinished'): void--><!--Device-SoundPool-off(type: 'playFinished'): void-End-->
-
-**System capability:** SystemCapability.Multimedia.Media.SoundPool
-
-**Parameters:**
-
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| type | 'playFinished' | Yes | 取消注册的事件：'playFinished'。 |
-
-## off('error')
-
-```TypeScript
-off(type: 'error'): void
-```
-
-取消监听音频池的错误事件。
-
-**Since:** 10
-
-**ArkTS mode:** ArkTS-Dyn only, since version 10.
-
-<!--Device-SoundPool-off(type: 'error'): void--><!--Device-SoundPool-off(type: 'error'): void-End-->
-
-**System capability:** SystemCapability.Multimedia.Media.SoundPool
-
-**Parameters:**
-
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| type | 'error' | Yes | 错误事件回调类型，取消注册的事件：'error'。 |
+| type | 'loadComplete' | Yes | Event type. The value is fixed at **'loadComplete'**. |
 
 ## off('playFinishedWithStreamId')
 
@@ -301,7 +276,7 @@ off(type: 'error'): void
 off(type: 'playFinishedWithStreamId'): void
 ```
 
-取消监听音频池资源播放完成。
+Unsubscribes from events indicating that a sound finishes playing.
 
 **Since:** 18
 
@@ -315,21 +290,21 @@ off(type: 'playFinishedWithStreamId'): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'playFinishedWithStreamId' | Yes | 取消注册的事件：'playFinishedWithStreamId'。 |
+| type | 'playFinishedWithStreamId' | Yes | Event type. The value is fixed at **'playFinishedWithStreamId'**. |
 
-## off('errorOccurred')
+## off('playFinished')
 
 ```TypeScript
-off(type: 'errorOccurred', callback?:Callback<ErrorInfo>): void
+off(type: 'playFinished'): void
 ```
 
-取消监听音频池的错误事件。
+Unsubscribes from events indicating that a sound finishes playing.
 
-**Since:** 20
+**Since:** 10
 
-**ArkTS mode:** ArkTS-Dyn only, since version 20.
+**ArkTS mode:** ArkTS-Dyn only, since version 10.
 
-<!--Device-SoundPool-off(type: 'errorOccurred', callback?:Callback<ErrorInfo>): void--><!--Device-SoundPool-off(type: 'errorOccurred', callback?:Callback<ErrorInfo>): void-End-->
+<!--Device-SoundPool-off(type: 'playFinished'): void--><!--Device-SoundPool-off(type: 'playFinished'): void-End-->
 
 **System capability:** SystemCapability.Multimedia.Media.SoundPool
 
@@ -337,8 +312,52 @@ off(type: 'errorOccurred', callback?:Callback<ErrorInfo>): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'errorOccurred' | Yes | 事件回调类型，取消注册的事件为'errorOccurred'。 |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;ErrorInfo&gt; | No | 错误事件回调方法。在使用播放器的过程中发生错误时，提供错误信息[ErrorInfo](arkts-media-soundpool-errorinfo-i.md)，不设置callback 时不提供相关信息。 |
+| type | 'playFinished' | Yes | Event type. The value is fixed at **'playFinished'**. |
+
+## off('error')
+
+```TypeScript
+off(type: 'error'): void
+```
+
+Unsubscribes from error events of a SoundPool instance.
+
+**Since:** 10
+
+**ArkTS mode:** ArkTS-Dyn only, since version 10.
+
+<!--Device-SoundPool-off(type: 'error'): void--><!--Device-SoundPool-off(type: 'error'): void-End-->
+
+**System capability:** SystemCapability.Multimedia.Media.SoundPool
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| type | 'error' | Yes | Event type, which is **'error'** in this case. |
+
+## off('errorOccurred')
+
+```TypeScript
+off(type: 'errorOccurred', callback?: Callback<ErrorInfo>): void
+```
+
+Unsubscribes from error events of a SoundPool instance.
+
+**Since:** 20
+
+**ArkTS mode:** ArkTS-Dyn only, since version 20.
+
+<!--Device-SoundPool-off(type: 'errorOccurred', callback?: Callback<ErrorInfo>): void--><!--Device-SoundPool-off(type: 'errorOccurred', callback?: Callback<ErrorInfo>): void-End-->
+
+**System capability:** SystemCapability.Multimedia.Media.SoundPool
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| type | 'errorOccurred' | Yes | Event type, which is **'errorOccurred'** in this case. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;ErrorInfo&gt; | No | Callback used to return [ErrorInfo](arkts-media-soundpool-errorinfo-i.md) if an error occurs during the use of the player. If the callback is not set, no related information is provided. |
 
 ## offError
 
@@ -359,7 +378,7 @@ Unsubscribes from error events of this **SoundPool** instance.
 ## offErrorOccurred
 
 ```TypeScript
-offErrorOccurred(callback?:Callback<ErrorInfo>): void
+offErrorOccurred(callback?: Callback<ErrorInfo>): void
 ```
 
 Unsubscribes from errorOccurred events of this **SoundPool** instance.
@@ -368,7 +387,7 @@ Unsubscribes from errorOccurred events of this **SoundPool** instance.
 
 **ArkTS mode:** ArkTS-Sta only, since version 23.
 
-<!--Device-SoundPool-offErrorOccurred(callback?:Callback<ErrorInfo>): void--><!--Device-SoundPool-offErrorOccurred(callback?:Callback<ErrorInfo>): void-End-->
+<!--Device-SoundPool-offErrorOccurred(callback?: Callback<ErrorInfo>): void--><!--Device-SoundPool-offErrorOccurred(callback?: Callback<ErrorInfo>): void-End-->
 
 **System capability:** SystemCapability.Multimedia.Media.SoundPool
 
@@ -432,7 +451,7 @@ Unsubscribes from events indicating that a sound finishes playing.
 on(type: 'loadComplete', callback: Callback<int>): void
 ```
 
-音频池资源加载完成监听。使用callback异步回调。
+Subscribes to events indicating that a sound finishes loading. This API uses an asynchronous callback to return the result.
 
 **Since:** 10
 
@@ -446,54 +465,8 @@ on(type: 'loadComplete', callback: Callback<int>): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'loadComplete' | Yes | 支持的事件：'loadComplete'，对应的ID加载完成会触发此回调。 |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;int&gt; | Yes | 回调函数，返回对应资源加载完成的资源ID。 |
-
-## on('playFinished')
-
-```TypeScript
-on(type: 'playFinished', callback: Callback<void>): void
-```
-
-音频池资源播放完成监听。使用callback异步回调。
-
-**Since:** 10
-
-**ArkTS mode:** ArkTS-Dyn only, since version 10.
-
-<!--Device-SoundPool-on(type: 'playFinished', callback: Callback<void>): void--><!--Device-SoundPool-on(type: 'playFinished', callback: Callback<void>): void-End-->
-
-**System capability:** SystemCapability.Multimedia.Media.SoundPool
-
-**Parameters:**
-
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| type | 'playFinished' | Yes | 支持的事件：'playFinished'，音频流播放完成会触发此回调。 |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;void&gt; | Yes | 异步'playFinished'的回调方法。 |
-
-## on('error')
-
-```TypeScript
-on(type: 'error', callback: ErrorCallback): void
-```
-
-监听[SoundPool](../../../reference/apis-media-kit/js-apis-inner-multimedia-soundPool.md#soundpool)的错误事件，该事件仅用于错误提示。使用callback异步回调。
-
-**Since:** 10
-
-**ArkTS mode:** ArkTS-Dyn only, since version 10.
-
-<!--Device-SoundPool-on(type: 'error', callback: ErrorCallback): void--><!--Device-SoundPool-on(type: 'error', callback: ErrorCallback): void-End-->
-
-**System capability:** SystemCapability.Multimedia.Media.SoundPool
-
-**Parameters:**
-
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| type | 'error' | Yes | 错误事件回调类型，支持的事件：'error'，用户操作和系统都会触发此事件。 |
-| callback | [ErrorCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-errorcallback-i.md) | Yes | 错误事件回调方法：使用播放器的过程中发生错误，会提供错误码ID和错误信息。 |
+| type | 'loadComplete' | Yes | Event type, which is **'loadComplete'** in this case. This event is triggered when a sound is loaded. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;int&gt; | Yes | Callback used to return the ID of the resource that has been loaded. |
 
 ## on('playFinishedWithStreamId')
 
@@ -501,13 +474,13 @@ on(type: 'error', callback: ErrorCallback): void
 on(type: 'playFinishedWithStreamId', callback: Callback<int>): void
 ```
 
-音频池资源播放完成监听，同时返回播放结束的音频的streamId。使用callback异步回调。
+Subscribes to events indicating the completion of audio playback and returns the stream ID of the audio that finishes playing. This API uses an asynchronous callback to return the result.
 
-当仅单独注册[on('playFinished')](SoundPool.on(type: 'playFinishedWithStreamId', callback: Callback&lt;int&gt;))事件回调或者  
-[on('playFinishedWithStreamId')](SoundPool.on(type: 'playFinishedWithStreamId', callback: Callback&lt;int&gt;))事件回调时，当音频播放完成的时候，都会触发注册的回调。
+When only [on('playFinished')](SoundPool.on(type: 'playFinishedWithStreamId', callback: Callback&lt;int&gt;)) or   
+[on('playFinishedWithStreamId')](SoundPool.on(type: 'playFinishedWithStreamId', callback: Callback&lt;int&gt;)) is subscribed to, the registered callback is triggered when the audio playback is complete.
 
-当同时注册[on('playFinished')](SoundPool.on(type: 'playFinishedWithStreamId', callback: Callback&lt;int&gt;))事件回调和  
-[on('playFinishedWithStreamId')](SoundPool.on(type: 'playFinishedWithStreamId', callback: Callback&lt;int&gt;))事件回调时，当音频播放完成的时候，仅会触发'playFinishedWithStreamId'事件回调，不会触发'playFinished'事件回调。
+When both [on('playFinished')](SoundPool.on(type: 'playFinishedWithStreamId', callback: Callback&lt;int&gt;)) and   
+[on('playFinishedWithStreamId')](SoundPool.on(type: 'playFinishedWithStreamId', callback: Callback&lt;int&gt;)) are subscribed to, the 'playFinishedWithStreamId' callback is triggered, but the 'playFinished' callback is not triggered, when the audio playback is complete.
 
 **Since:** 18
 
@@ -521,22 +494,22 @@ on(type: 'playFinishedWithStreamId', callback: Callback<int>): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'playFinishedWithStreamId' | Yes | 支持的事件：'playFinishedWithStreamId'，音频流播放完成会触发此回调，并返回播放完成的音频的streamId。 |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;int&gt; | Yes | 回调函数，返回播放完成的音频的streamId。 |
+| type | 'playFinishedWithStreamId' | Yes | Event type, which is **'playFinishedWithStreamId'** in this case. This event is triggered when an audio stream finishes playing, and the stream ID is returned. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;int&gt; | Yes | Callback used to return the stream ID of the audio that has finished playing. |
 
-## on('errorOccurred')
+## on('playFinished')
 
 ```TypeScript
-on(type:'errorOccurred', callback:Callback<ErrorInfo>): void
+on(type: 'playFinished', callback: Callback<void>): void
 ```
 
-监听[SoundPool](../../../reference/apis-media-kit/js-apis-inner-multimedia-soundPool.md#soundpool)的错误事件，并返回包含错误码、错误发生阶段、资源ID和音频流ID的[ErrorInfo](arkts-media-soundpool-errorinfo-i.md)。使用callback异步回调。
+Subscribes to events indicating that a sound finishes playing. This API uses an asynchronous callback to return the result.
 
-**Since:** 20
+**Since:** 10
 
-**ArkTS mode:** ArkTS-Dyn only, since version 20.
+**ArkTS mode:** ArkTS-Dyn only, since version 10.
 
-<!--Device-SoundPool-on(type:'errorOccurred', callback:Callback<ErrorInfo>): void--><!--Device-SoundPool-on(type:'errorOccurred', callback:Callback<ErrorInfo>): void-End-->
+<!--Device-SoundPool-on(type: 'playFinished', callback: Callback<void>): void--><!--Device-SoundPool-on(type: 'playFinished', callback: Callback<void>): void-End-->
 
 **System capability:** SystemCapability.Multimedia.Media.SoundPool
 
@@ -544,8 +517,56 @@ on(type:'errorOccurred', callback:Callback<ErrorInfo>): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'errorOccurred' | Yes | 事件回调类型，支持的事件为'errorOccurred'，当用户或系统操作导致错误，触发该事件。 |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;ErrorInfo&gt; | Yes | 回调函数，返回错误事件回调方法。在使用播放器的过程中发生错误时，提供错误信息[ErrorInfo](arkts-media-soundpool-errorinfo-i.md)。 |
+| type | 'playFinished' | Yes | Event type, which is **'playFinished'** in this case. This event is triggered when a sound finishes playing. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;void&gt; | Yes | Callback used to return the result. |
+
+## on('error')
+
+```TypeScript
+on(type: 'error', callback: ErrorCallback): void
+```
+
+Subscribes to error events of a   
+[SoundPool](../../../reference/apis-media-kit/js-apis-inner-multimedia-soundPool.md#soundpool) instance. This event is used only for error prompt. This API uses an asynchronous callback to return the result.
+
+**Since:** 10
+
+**ArkTS mode:** ArkTS-Dyn only, since version 10.
+
+<!--Device-SoundPool-on(type: 'error', callback: ErrorCallback): void--><!--Device-SoundPool-on(type: 'error', callback: ErrorCallback): void-End-->
+
+**System capability:** SystemCapability.Multimedia.Media.SoundPool
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| type | 'error' | Yes | Event type, which is **'error'** in this case. This event can be triggered by both user operations and the system. |
+| callback | [ErrorCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-errorcallback-i.md) | Yes | Callback used to return the error code ID and error message. |
+
+## on('errorOccurred')
+
+```TypeScript
+on(type: 'errorOccurred', callback: Callback<ErrorInfo>): void
+```
+
+Subscribes to error events of a   
+[SoundPool](../../../reference/apis-media-kit/js-apis-inner-multimedia-soundPool.md#soundpool) instance and returns [ErrorInfo](arkts-media-soundpool-errorinfo-i.md) that contains the error code, error stage, resource ID, and audio stream ID. This API uses an asynchronous callback to return the result.
+
+**Since:** 20
+
+**ArkTS mode:** ArkTS-Dyn only, since version 20.
+
+<!--Device-SoundPool-on(type: 'errorOccurred', callback: Callback<ErrorInfo>): void--><!--Device-SoundPool-on(type: 'errorOccurred', callback: Callback<ErrorInfo>): void-End-->
+
+**System capability:** SystemCapability.Multimedia.Media.SoundPool
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| type | 'errorOccurred' | Yes | Event type, which is **'errorOccurred'** in this case. This event can be triggered by both user operations and the system. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;ErrorInfo&gt; | Yes | Callback used to return [ErrorInfo](arkts-media-soundpool-errorinfo-i.md). |
 
 ## onError
 
@@ -572,7 +593,7 @@ Subscribes to error events of this **SoundPool** instance. This event is used on
 ## onErrorOccurred
 
 ```TypeScript
-onErrorOccurred(callback:Callback<ErrorInfo>): void
+onErrorOccurred(callback: Callback<ErrorInfo>): void
 ```
 
 Subscribes to errorOccurred events of this **SoundPool** instance.
@@ -581,7 +602,7 @@ Subscribes to errorOccurred events of this **SoundPool** instance.
 
 **ArkTS mode:** ArkTS-Sta only, since version 23.
 
-<!--Device-SoundPool-onErrorOccurred(callback:Callback<ErrorInfo>): void--><!--Device-SoundPool-onErrorOccurred(callback:Callback<ErrorInfo>): void-End-->
+<!--Device-SoundPool-onErrorOccurred(callback: Callback<ErrorInfo>): void--><!--Device-SoundPool-onErrorOccurred(callback: Callback<ErrorInfo>): void-End-->
 
 **System capability:** SystemCapability.Multimedia.Media.SoundPool
 
@@ -643,9 +664,9 @@ onPlayFinishedWithStreamId(callback: Callback<int>): void
 
 Subscribes to events indicating the completion of audio playback and returns the stream ID of the audio that finishes playing.
 
-When only onPlayFinished or onPlayFinishedWithStreamId is subscribed to, the registered callback is triggered when the audio playback is complete.
+When only on('playFinished') or on('playFinishedWithStreamId') is subscribed to, the registered callback is triggered when the audio playback is complete.
 
-When both onPlayFinished and onPlayFinishedWithStreamId are subscribed to,the 'playFinishedWithStreamId' callback is triggered, but the 'playFinished' callback is not triggered,when the audio playback is complete.
+When both on('playFinished') and on('playFinishedWithStreamId') are subscribed to,the 'playFinishedWithStreamId' callback is triggered, but the 'playFinished' callback is not triggered,when the audio playback is complete.
 
 **Since:** 23
 
@@ -673,7 +694,7 @@ ArkTS-Sta:
 play(soundID: int, params: PlayParameters, callback: AsyncCallback<int>): void
 ```
 
-播放音频资源，获取音频流streamID。使用callback异步回调。
+Plays a sound and obtains the stream ID. This API uses an asynchronous callback to return the result.
 
 **Since:** 10
 
@@ -687,17 +708,17 @@ play(soundID: int, params: PlayParameters, callback: AsyncCallback<int>): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| soundID | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | 资源ID，通过load方法获取。 |
-| params | [PlayParameters](arkts-media-media-playparameters-t.md) | Yes | play播放相关参数的设置。 |
-| callback | ArkTS-Dyn: [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;number&gt;  <br>ArkTS-Sta：[AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;int&gt; | Yes | 获取回调的音频流ID，有效值大于0。 |
+| soundID | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | Sound ID, which is obtained by calling **load()**. |
+| params | [PlayParameters](arkts-media-media-playparameters-t.md) | Yes | Playback parameters. |
+| callback | ArkTS-Dyn: [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;number&gt;  <br>ArkTS-Sta：[AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;int&gt; | Yes | Callback used to return the audio stream ID. A valid value must be greater than 0. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. 3.Parameter verification failed. Return by callback. |
-| 5400102 | Operation not allowed. Return by callback. |
-| 5400105 | Service died. Return by callback. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. 3.Parameter verification failed. Return by callback. |
+| [5400102](../errorcode-media.md#5400102-unsupported-operation) | Operation not allowed. Return by callback. |
+| [5400105](../errorcode-media.md#5400105-play-service-dead) | Service died. Return by callback. |
 
 ## play
 
@@ -711,7 +732,7 @@ ArkTS-Sta:
 play(soundID: int, callback: AsyncCallback<int>): void
 ```
 
-使用默认参数播放音频资源，获取音频流streamID。使用callback异步回调。
+Plays a sound using default parameters and obtains the stream ID. This API uses an asynchronous callback to return the result.
 
 **Since:** 10
 
@@ -725,16 +746,16 @@ play(soundID: int, callback: AsyncCallback<int>): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| soundID | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | 资源ID，通过load方法获取。 |
-| callback | ArkTS-Dyn: [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;number&gt;  <br>ArkTS-Sta：[AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;int&gt; | Yes | 获取回调的音频流ID，有效值大于0。 |
+| soundID | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | Sound ID, which is obtained by calling **load()**. |
+| callback | ArkTS-Dyn: [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;number&gt;  <br>ArkTS-Sta：[AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;int&gt; | Yes | Callback used to return the audio stream ID. A valid value must be greater than 0. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. 3.Parameter verification failed. Return by callback. |
-| 5400102 | Operation not allowed. Return by callback. |
-| 5400105 | Service died. Return by callback. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. 3.Parameter verification failed. Return by callback. |
+| [5400102](../errorcode-media.md#5400102-unsupported-operation) | Operation not allowed. Return by callback. |
+| [5400105](../errorcode-media.md#5400105-play-service-dead) | Service died. Return by callback. |
 
 ## play
 
@@ -748,7 +769,7 @@ ArkTS-Sta:
 play(soundID: int, params?: PlayParameters): Promise<int>
 ```
 
-播放音频资源，获取音频流streamID。使用Promise异步回调。
+Plays a sound and obtains the stream ID. This API uses a promise to return the result.
 
 **Since:** 10
 
@@ -762,22 +783,22 @@ play(soundID: int, params?: PlayParameters): Promise<int>
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| soundID | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | 资源ID，通过load方法获取。 |
-| params | [PlayParameters](arkts-media-media-playparameters-t.md) | No | play播放相关参数的设置。 |
+| soundID | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | Sound ID, which is obtained by calling **load()**. |
+| params | [PlayParameters](arkts-media-media-playparameters-t.md) | No | Playback parameters. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| ArkTS-Dyn: Promise&lt;number&gt;  <br>ArkTS-Sta：Promise&lt;int&gt; | Promise对象，返回音频流ID，有效值大于0。 |
+| ArkTS-Dyn: Promise&lt;number&gt;  <br>ArkTS-Sta：Promise&lt;int&gt; | Promise used to return the audio stream ID. A valid value must be greater than 0 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. 3.Parameter verification failed. Return by promise. |
-| 5400102 | Operation not allowed. Return by promise. |
-| 5400105 | Service died. Return by promise. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. 3.Parameter verification failed. Return by promise. |
+| [5400102](../errorcode-media.md#5400102-unsupported-operation) | Operation not allowed. Return by promise. |
+| [5400105](../errorcode-media.md#5400105-play-service-dead) | Service died. Return by promise. |
 
 ## release
 
@@ -785,7 +806,7 @@ play(soundID: int, params?: PlayParameters): Promise<int>
 release(callback: AsyncCallback<void>): void
 ```
 
-释放音频池实例。使用callback异步回调。
+Releases a **SoundPool** instance. This API uses an asynchronous callback to return the result.
 
 **Since:** 10
 
@@ -799,13 +820,13 @@ release(callback: AsyncCallback<void>): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | 回调函数。当音频池release方法回调成功，err为undefined，否则为错误对象。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback function. If the operation is successful, **err** is **undefined**. Otherwise, **err** is an error object. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 5400105 | Service died. Return by callback. |
+| [5400105](../errorcode-media.md#5400105-play-service-dead) | Service died. Return by callback. |
 
 ## release
 
@@ -813,7 +834,7 @@ release(callback: AsyncCallback<void>): void
 release(): Promise<void>
 ```
 
-释放音频池实例。使用Promise异步回调。
+Releases a **SoundPool** instance. This API uses a promise to return the result.
 
 **Since:** 10
 
@@ -827,13 +848,13 @@ release(): Promise<void>
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise对象，无返回结果。 |
+| Promise&lt;void&gt; | Promise that returns no value. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 5400105 | Service died. Return by promise. |
+| [5400105](../errorcode-media.md#5400105-play-service-dead) | Service died. Return by promise. |
 
 ## setInterruptMode
 
@@ -841,8 +862,8 @@ release(): Promise<void>
 setInterruptMode(interruptMode: media.SoundInterruptMode): void
 ```
 
-设置同一ID音频在播放时的打断模式。创建soundPool之后，该接口仅在首次调用soundPool的Play函数之前设置有效，期间可多次设置，否则将默认使用  
-[SAME_SOUND_INTERRUPT](../../../reference/apis-media-kit/arkts-apis-media-e.md)，即对同一ID的音频，如果前者尚未播放完成，后者在播放前会先打断前者的播放。
+Sets the interruption mode of the audio files with the same ID during playback. After the **SoundPool** is created,this API is valid only when the **Play** function of the **SoundPool** is called for the first time. You can set the interruption mode for multiple times. If the interruption mode is not set, the   
+[SAME_SOUND_INTERRUPT](../../../reference/apis-media-kit/arkts-apis-media-e.md) mode is used by default. That is, if the former audio file is not completely played, the latter audio file with the same ID interrupts the former audio file.
 
 **Since:** 23
 
@@ -858,7 +879,7 @@ setInterruptMode(interruptMode: media.SoundInterruptMode): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| interruptMode | media.SoundInterruptMode | Yes | 同一ID音频在播放时的打断模式，通过media.SoundInterruptMode枚举获取。 |
+| interruptMode | media.SoundInterruptMode | Yes | Interruption mode of the audio files with the same ID during playback, which is obtained through the **media.SoundInterruptMode** enum. |
 
 ## setLoop
 
@@ -872,7 +893,7 @@ ArkTS-Sta:
 setLoop(streamID: int, loop: int, callback: AsyncCallback<void>): void
 ```
 
-设置循环模式。使用callback异步回调。
+Sets the loop mode. This API uses an asynchronous callback to return the result.
 
 **Since:** 10
 
@@ -886,17 +907,17 @@ setLoop(streamID: int, loop: int, callback: AsyncCallback<void>): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| streamID | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | 音频流ID，通过play方法获取。 |
-| loop | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | 设置循环次数。&lt;br&gt;当loop≥0时，实际播放次数为loop+1。&lt;br&gt; 当loop＜0时，表示一直循环。 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | 回调函数。当setLoop的回调成功，err为undefined，否则为错误对象。 |
+| streamID | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | Audio stream ID, which is obtained by calling **play()**. |
+| loop | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | Number of loops.&lt;br&gt;If this parameter is set to a value greater than or equal to 0, the number of times the content is actually played is the value of **loop** plus 1.&lt;br&gt; If this parameter is set to a value less than 0, the content is played repeatedly. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback function. If the operation is successful, **err** is **undefined**. Otherwise, **err** is an error object. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. 3.Parameter verification failed. Return by callback. |
-| 5400102 | Operation not allowed. Return by callback. |
-| 5400105 | Service died. Return by callback. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. 3.Parameter verification failed. Return by callback. |
+| [5400102](../errorcode-media.md#5400102-unsupported-operation) | Operation not allowed. Return by callback. |
+| [5400105](../errorcode-media.md#5400105-play-service-dead) | Service died. Return by callback. |
 
 ## setLoop
 
@@ -910,7 +931,7 @@ ArkTS-Sta:
 setLoop(streamID: int, loop: int): Promise<void>
 ```
 
-设置循环模式。使用Promise异步回调。
+Sets the loop mode. This API uses a promise to return the result.
 
 **Since:** 10
 
@@ -924,22 +945,22 @@ setLoop(streamID: int, loop: int): Promise<void>
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| streamID | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | 音频流ID，通过play方法获取。 |
-| loop | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | 设置循环次数。&lt;br&gt;当loop≥0时，实际播放次数为loop+1。&lt;br&gt; 当loop＜0时，表示一直循环。 |
+| streamID | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | Audio stream ID, which is obtained by calling **play()**. |
+| loop | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | Number of loops.&lt;br&gt;If this parameter is set to a value greater than or equal to 0, the number of times the content is actually played is the value of **loop** plus 1.&lt;br&gt; If this parameter is set to a value less than 0, the content is played repeatedly. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise对象，无返回结果。 |
+| Promise&lt;void&gt; | Promise that returns no value. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. 3.Parameter verification failed. Return by promise. |
-| 5400102 | Operation not allowed. Return by promise. |
-| 5400105 | Service died. Return by promise. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. 3.Parameter verification failed. Return by promise. |
+| [5400102](../errorcode-media.md#5400102-unsupported-operation) | Operation not allowed. Return by promise. |
+| [5400105](../errorcode-media.md#5400105-play-service-dead) | Service died. Return by promise. |
 
 ## setPriority
 
@@ -953,7 +974,7 @@ ArkTS-Sta:
 setPriority(streamID: int, priority: int, callback: AsyncCallback<void>): void
 ```
 
-设置音频流播放的优先级。使用callback异步回调。
+Sets the priority for an audio stream. This API uses an asynchronous callback to return the result.
 
 **Since:** 10
 
@@ -967,17 +988,17 @@ setPriority(streamID: int, priority: int, callback: AsyncCallback<void>): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| streamID | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | 音频流ID，通过play方法获取。 |
-| priority | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | 优先级，0表示最低优先级。设置范围为大于等于0的整数。 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | 回调函数。当音频池setPriority方法回调成功，err为undefined，否则为错误对象。 |
+| streamID | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | Audio stream ID, which is obtained by calling **play()**. |
+| priority | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | Priority. The value **0** means the lowest priority. The value is an integer greater than or equal to 0. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback function. If the operation is successful, **err** is **undefined**. Otherwise, **err** is an error object. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. 3.Parameter verification failed. Return by callback. |
-| 5400102 | Operation not allowed. Return by callback. |
-| 5400105 | Service died. Return by callback. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. 3.Parameter verification failed. Return by callback. |
+| [5400102](../errorcode-media.md#5400102-unsupported-operation) | Operation not allowed. Return by callback. |
+| [5400105](../errorcode-media.md#5400105-play-service-dead) | Service died. Return by callback. |
 
 ## setPriority
 
@@ -991,7 +1012,7 @@ ArkTS-Sta:
 setPriority(streamID: int, priority: int): Promise<void>
 ```
 
-设置音频流优先级。使用Promise异步回调。
+Sets the priority for an audio stream. This API uses a promise to return the result.
 
 **Since:** 10
 
@@ -1005,22 +1026,22 @@ setPriority(streamID: int, priority: int): Promise<void>
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| streamID | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | 音频流ID，通过play方法获取。 |
-| priority | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | 优先级，0表示最低优先级。设置范围为大于等于0的整数。 |
+| streamID | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | Audio stream ID, which is obtained by calling **play()**. |
+| priority | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | Priority. The value **0** means the lowest priority. The value is an integer greater than or equal to 0. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise对象，无返回结果。 |
+| Promise&lt;void&gt; | Promise that returns no value. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. 3.Parameter verification failed. Return by promise. |
-| 5400102 | Operation not allowed. Return by promise. |
-| 5400105 | Service died. Return by promise. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. 3.Parameter verification failed. Return by promise. |
+| [5400102](../errorcode-media.md#5400102-unsupported-operation) | Operation not allowed. Return by promise. |
+| [5400105](../errorcode-media.md#5400105-play-service-dead) | Service died. Return by promise. |
 
 ## setRate
 
@@ -1034,7 +1055,7 @@ ArkTS-Sta:
 setRate(streamID: int, rate: audio.AudioRendererRate, callback: AsyncCallback<void>): void
 ```
 
-设置音频流播放速率。使用callback异步回调。
+Sets the playback rate for an audio stream. This API uses an asynchronous callback to return the result.
 
 **Since:** 10
 
@@ -1048,17 +1069,17 @@ setRate(streamID: int, rate: audio.AudioRendererRate, callback: AsyncCallback<vo
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| streamID | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | 音频流ID，通过play方法获取。 |
-| rate | audio.AudioRendererRate | Yes | 音频rate相关参数。 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | 回调函数。当音频池setRate方法回调成功，err为undefined，否则为错误对象。 |
+| streamID | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | Audio stream ID, which is obtained by calling **play()**. |
+| rate | audio.AudioRendererRate | Yes | Playback rate. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback function. If the operation is successful, **err** is **undefined**. Otherwise, **err** is an error object. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. 3.Parameter verification failed. Return by callback. |
-| 5400102 | Operation not allowed. Return by callback. |
-| 5400105 | Service died. Return by callback. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. 3.Parameter verification failed. Return by callback. |
+| [5400102](../errorcode-media.md#5400102-unsupported-operation) | Operation not allowed. Return by callback. |
+| [5400105](../errorcode-media.md#5400105-play-service-dead) | Service died. Return by callback. |
 
 ## setRate
 
@@ -1072,7 +1093,7 @@ ArkTS-Sta:
 setRate(streamID: int, rate: audio.AudioRendererRate): Promise<void>
 ```
 
-设置音频流的播放速率。使用Promise异步回调。
+Sets the playback rate for an audio stream. This API uses a promise to return the result.
 
 **Since:** 10
 
@@ -1086,22 +1107,22 @@ setRate(streamID: int, rate: audio.AudioRendererRate): Promise<void>
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| streamID | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | 音频流ID，通过play方法获取。 |
-| rate | audio.AudioRendererRate | Yes | 音频rate相关参数。 |
+| streamID | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | Audio stream ID, which is obtained by calling **play()**. |
+| rate | audio.AudioRendererRate | Yes | Playback rate. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise对象，无返回结果。 |
+| Promise&lt;void&gt; | Promise that returns no value. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. 3.Parameter verification failed. Return by promise. |
-| 5400102 | Operation not allowed. Return by promise. |
-| 5400105 | Service died. Return by promise. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. 3.Parameter verification failed. Return by promise. |
+| [5400102](../errorcode-media.md#5400102-unsupported-operation) | Operation not allowed. Return by promise. |
+| [5400105](../errorcode-media.md#5400105-play-service-dead) | Service died. Return by promise. |
 
 ## setVolume
 
@@ -1115,7 +1136,7 @@ ArkTS-Sta:
 setVolume(streamID: int, leftVolume: double, rightVolume: double, callback: AsyncCallback<void>): void
 ```
 
-设置音频流播放音量。使用callback异步回调。
+Sets the volume for an audio stream. This API uses an asynchronous callback to return the result.
 
 **Since:** 10
 
@@ -1129,18 +1150,18 @@ setVolume(streamID: int, leftVolume: double, rightVolume: double, callback: Asyn
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| streamID | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | 音频流ID，通过play方法获取。 |
-| leftVolume | ArkTS-Dyn: number  <br>ArkTS-Sta：double | Yes | 左声道音量，设置范围为[0.0, 1.0]。 |
-| rightVolume | ArkTS-Dyn: number  <br>ArkTS-Sta：double | Yes | 右声道音量，设置范围为[0.0, 1.0]，当前右声道设置无效，以左声道为准。 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | 回调函数。当音频池setVolume方法回调成功，err为undefined，否则为错误对象。 |
+| streamID | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | Audio stream ID, which is obtained by calling **play()**. |
+| leftVolume | ArkTS-Dyn: number  <br>ArkTS-Sta：double | Yes | Volume of the left channel. The value range is [0.0, 1.0]. |
+| rightVolume | ArkTS-Dyn: number  <br>ArkTS-Sta：double | Yes | Volume of the right channel. The value range is [0.0, 1.0]. Currently, setting the volume for the right channel does not take effect. The volume set for the left channel is used. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback function. If the operation is successful, **err** is **undefined**. Otherwise, **err** is an error object. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. 3.Parameter verification failed. Return by callback. |
-| 5400102 | Operation not allowed. Return by callback. |
-| 5400105 | Service died. Return by callback. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. 3.Parameter verification failed. Return by callback. |
+| [5400102](../errorcode-media.md#5400102-unsupported-operation) | Operation not allowed. Return by callback. |
+| [5400105](../errorcode-media.md#5400105-play-service-dead) | Service died. Return by callback. |
 
 ## setVolume
 
@@ -1154,7 +1175,7 @@ ArkTS-Sta:
 setVolume(streamID: int, leftVolume: double, rightVolume: double): Promise<void>
 ```
 
-设置音频流的播放音量。使用Promise异步回调。
+Sets the volume for an audio stream. This API uses a promise to return the result.
 
 **Since:** 10
 
@@ -1168,23 +1189,23 @@ setVolume(streamID: int, leftVolume: double, rightVolume: double): Promise<void>
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| streamID | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | 音频流ID，通过play方法获取。 |
-| leftVolume | ArkTS-Dyn: number  <br>ArkTS-Sta：double | Yes | 左声道音量，设置范围为[0.0, 1.0]。 |
-| rightVolume | ArkTS-Dyn: number  <br>ArkTS-Sta：double | Yes | 右声道音量，设置范围为[0.0, 1.0]，当前右声道设置无效，以左声道为准。 |
+| streamID | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | Audio stream ID, which is obtained by calling **play()**. |
+| leftVolume | ArkTS-Dyn: number  <br>ArkTS-Sta：double | Yes | Volume of the left channel. The value range is [0.0, 1.0]. |
+| rightVolume | ArkTS-Dyn: number  <br>ArkTS-Sta：double | Yes | Volume of the right channel. The value range is [0.0, 1.0]. Currently, setting the volume for the right channel does not take effect. The volume set for the left channel is used. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise对象，无返回结果。 |
+| Promise&lt;void&gt; | Promise that returns no value. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. 3.Parameter verification failed. Return by promise. |
-| 5400102 | Operation not allowed. Return by promise. |
-| 5400105 | Service died. Return by promise. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. 3.Parameter verification failed. Return by promise. |
+| [5400102](../errorcode-media.md#5400102-unsupported-operation) | Operation not allowed. Return by promise. |
+| [5400105](../errorcode-media.md#5400105-play-service-dead) | Service died. Return by promise. |
 
 ## stop
 
@@ -1198,7 +1219,7 @@ ArkTS-Sta:
 stop(streamID: int, callback: AsyncCallback<void>): void
 ```
 
-停止播放音频资源。使用callback异步回调。
+Stops audio playback. This API uses an asynchronous callback to return the result.
 
 **Since:** 10
 
@@ -1212,16 +1233,16 @@ stop(streamID: int, callback: AsyncCallback<void>): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| streamID | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | 音频流ID，通过play方法获取。 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | 回调函数。当音频池stop回调成功，err为undefined，否则为错误对象。 |
+| streamID | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | Audio stream ID, which is obtained by calling **play()**. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback function. If the operation is successful, **err** is **undefined**. Otherwise, **err** is an error object. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. 3.Parameter verification failed. Return by callback. |
-| 5400102 | Operation not allowed. Return by callback. |
-| 5400105 | Service died. Return by callback. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. 3.Parameter verification failed. Return by callback. |
+| [5400102](../errorcode-media.md#5400102-unsupported-operation) | Operation not allowed. Return by callback. |
+| [5400105](../errorcode-media.md#5400105-play-service-dead) | Service died. Return by callback. |
 
 ## stop
 
@@ -1235,7 +1256,7 @@ ArkTS-Sta:
 stop(streamID: int): Promise<void>
 ```
 
-停止streamID对应的音频播放。使用Promise异步回调。
+Stops audio playback. This API uses a promise to return the result.
 
 **Since:** 10
 
@@ -1249,21 +1270,21 @@ stop(streamID: int): Promise<void>
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| streamID | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | 音频流ID，通过play方法获取。 |
+| streamID | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | Audio stream ID, which is obtained by calling **play()**. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise对象，无返回结果。 |
+| Promise&lt;void&gt; | Promise that returns no value. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. 3.Parameter verification failed. Return by promise. |
-| 5400102 | Operation not allowed. Return by promise. |
-| 5400105 | Service died. Return by promise. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. 3.Parameter verification failed. Return by promise. |
+| [5400102](../errorcode-media.md#5400102-unsupported-operation) | Operation not allowed. Return by promise. |
+| [5400105](../errorcode-media.md#5400105-play-service-dead) | Service died. Return by promise. |
 
 ## unload
 
@@ -1277,7 +1298,7 @@ ArkTS-Sta:
 unload(soundID: int, callback: AsyncCallback<void>): void
 ```
 
-卸载音频资源。使用callback异步回调。
+Unloads a sound. This API uses an asynchronous callback to return the result.
 
 **Since:** 10
 
@@ -1291,16 +1312,16 @@ unload(soundID: int, callback: AsyncCallback<void>): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| soundID | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | 资源ID，通过load方法获取。 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | 回调函数。当音频池unload方法回调成功，err为undefined，否则为错误对象。 |
+| soundID | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | Sound ID, which is obtained by calling **load()**. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback function. If the operation is successful, **err** is **undefined**. Otherwise, **err** is an error object. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 5400102 | Operation not allowed. Return by callback. |
-| 5400103 | I/O error. Return by callback. |
-| 5400105 | Service died. Return by callback. |
+| [5400102](../errorcode-media.md#5400102-unsupported-operation) | Operation not allowed. Return by callback. |
+| [5400103](../errorcode-media.md#5400103-io-error) | I/O error. Return by callback. |
+| [5400105](../errorcode-media.md#5400105-play-service-dead) | Service died. Return by callback. |
 
 ## unload
 
@@ -1314,7 +1335,7 @@ ArkTS-Sta:
 unload(soundID: int): Promise<void>
 ```
 
-卸载音频资源。使用Promise异步回调。
+Unloads a sound. This API uses a promise to return the result.
 
 **Since:** 10
 
@@ -1328,19 +1349,19 @@ unload(soundID: int): Promise<void>
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| soundID | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | 资源ID，通过load方法获取。 |
+| soundID | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | Sound ID, which is obtained by calling **load()**. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise对象，无返回结果。 |
+| Promise&lt;void&gt; | Promise that returns no value. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 5400102 | Operation not allowed. Return by promise. |
-| 5400103 | I/O error. Return by promise. |
-| 5400105 | Service died. Return by promise. |
+| [5400102](../errorcode-media.md#5400102-unsupported-operation) | Operation not allowed. Return by promise. |
+| [5400103](../errorcode-media.md#5400103-io-error) | I/O error. Return by promise. |
+| [5400105](../errorcode-media.md#5400105-play-service-dead) | Service died. Return by promise. |
 

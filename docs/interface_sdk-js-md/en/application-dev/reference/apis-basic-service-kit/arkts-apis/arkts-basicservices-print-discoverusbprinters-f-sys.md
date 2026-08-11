@@ -12,7 +12,7 @@ import { print } from 'kits/@kit.BasicServicesKit';
 function discoverUsbPrinters(): Promise<Array<PrinterInformation>>
 ```
 
-发现usb打印机，使用Promise异步回调。
+Discovers USB printers. This API uses a promise to return the result.
 
 **Since:** 18
 
@@ -30,14 +30,14 @@ function discoverUsbPrinters(): Promise<Array<PrinterInformation>>
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;Array&lt;PrinterInformation&gt;&gt; | Promise对象，返回发现到的usb打印机信息。 |
+| Promise&lt;Array&lt;PrinterInformation&gt;&gt; | Promise used to return the information about the discovered USB printers. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 201 | the application does not have permission to call this function. |
-| 202 | not system application |
+| [201](../../errorcode-universal.md#201-permission-denied) | the application does not have permission to call this function. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | not system application |
 
 ## Examples
 

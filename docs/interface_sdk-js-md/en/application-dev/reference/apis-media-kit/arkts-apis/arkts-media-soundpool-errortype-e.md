@@ -1,6 +1,6 @@
 # ErrorType
 
-枚举，错误类型（用于区分错误发生阶段）。
+Enumerates the error types (used to distinguish error stages).
 
 **Since:** 20
 
@@ -16,7 +16,7 @@
 LOAD_ERROR = 1
 ```
 
-表示加载资源时发生错误。
+An error occurred during resource loading.
 
 **Since:** 20
 
@@ -32,7 +32,7 @@ LOAD_ERROR = 1
 PLAY_ERROR = 2
 ```
 
-表示播放资源时发生错误。
+An error occurred during resource playback.
 
 **Since:** 20
 

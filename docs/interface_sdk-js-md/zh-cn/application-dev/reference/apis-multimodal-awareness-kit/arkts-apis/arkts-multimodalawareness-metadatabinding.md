@@ -1,6 +1,6 @@
 # @ohos.multimodalAwareness.metadataBinding
 
-The **metadataBinding** module provides metadata binding–specific functions such as metadata transfer, event subscription, and event unsubscription.
+本模块提供记忆链接能力调用，包括编码内容传递、订阅事件和取消订阅事件。记忆链接允许系统应用获取第三方应用的编码内容，支持实时事件监听和回调机制，适用于系统应用请求（如截图）并获取应用链接数据的场景，通过跨应用数据传递提升用户体验。
 
 **起始版本：** 18
 
@@ -10,31 +10,25 @@ The **metadataBinding** module provides metadata binding–specific functions su
 
 **系统能力：** SystemCapability.MultimodalAwareness.MetadataBinding
 
-## 导入模块
-
-```TypeScript
-import { metadataBinding } from 'kits/@kit.MultimodalAwarenessKit';
-```
-
 ## 汇总
 
 ### 函数
 
 | 名称 | 说明 |
 | --- | --- |
-| [off](arkts-multimodalawareness-metadatabinding-off-f.md#off) | Unsubscribes from system events that are used to obtain the encoded metadata. The respective callback will be unregistered. |
-| [offOperationSubmitMetadata](arkts-multimodalawareness-metadatabinding-offoperationsubmitmetadata-f.md#offoperationsubmitmetadata) | Unsubscribes from system events that are used to obtain the encoded metadata. |
-| [on](arkts-multimodalawareness-metadatabinding-on-f.md#on) | Subscribes to a system event to obtain the encoded metadata. The application needs to register a callback to return the encoded metadata when the registered system event occurs. |
-| [onOperationSubmitMetadata](arkts-multimodalawareness-metadatabinding-onoperationsubmitmetadata-f.md#onoperationsubmitmetadata) | Subscribes to a system event to obtain the encoded metadata. |
-| [submitMetadata](arkts-multimodalawareness-metadatabinding-submitmetadata-f.md#submitmetadata) | Transfers the metadata to be encoded to the MSDP. The MSDP determines whether to transfer the metadata to the system application or service that calls the encoding API. |
+| [off](arkts-multimodalawareness-metadatabinding-off-f.md#off) | 取消订阅系统获取编码内容的事件。 |
+| [offOperationSubmitMetadata](arkts-multimodalawareness-metadatabinding-offoperationsubmitmetadata-f.md#offoperationsubmitmetadata) | 取消订阅系统获取编码内容的事件。 |
+| [on](arkts-multimodalawareness-metadatabinding-on-f.md#on) | 订阅系统获取编码内容的事件。应用注册回调，事件发生时通过回调通知应用。调用on()方法订阅事件后，必须在不再需要监听事件时调用off()方法取消订阅，释放监听资源。 |
+| [onOperationSubmitMetadata](arkts-multimodalawareness-metadatabinding-onoperationsubmitmetadata-f.md#onoperationsubmitmetadata) | 订阅系统获取编码内容的事件。 |
+| [submitMetadata](arkts-multimodalawareness-metadatabinding-submitmetadata-f.md#submitmetadata) | 第三方应用将需要编码的内容传递给接口服务，接口服务将内容传递给调用编码接口的系统应用或服务。 |
 
 <!--Del-->
 ### 函数（系统接口）
 
 | 名称 | 说明 |
 | --- | --- |
-| [decodeImage](arkts-multimodalawareness-metadatabinding-decodeimage-f-sys.md#decodeimage) | Decodes the information carried in the image. This API uses a promise to return the result. |
-| [encodeImage](arkts-multimodalawareness-metadatabinding-encodeimage-f-sys.md#encodeimage) | Encodes metadata into an image. This API uses a promise to return the result. |
-| [notifyMetadataBindingEvent](arkts-multimodalawareness-metadatabinding-notifymetadatabindingevent-f-sys.md#notifymetadatabindingevent) | Transfers metadata to the application or service that calls the encoding API. This API uses a promise to return the result. |
+| [decodeImage](arkts-multimodalawareness-metadatabinding-decodeimage-f-sys.md#decodeimage) | 解析图片中携带的信息。通过对应的解码算法从图片中提取嵌入的metadata信息。使用promise异步回调。 |
+| [encodeImage](arkts-multimodalawareness-metadatabinding-encodeimage-f-sys.md#encodeimage) | 在图片中加入信息。通过特定的编码算法将metadata信息嵌入到图片中。可用于防伪、版权保护等场景。使用promise异步回调。 |
+| [notifyMetadataBindingEvent](arkts-multimodalawareness-metadatabinding-notifymetadatabindingevent-f-sys.md#notifymetadatabindingevent) | 推送待嵌入的信息给调用编码接口的应用或服务。使用promise异步回调。 |
 <!--DelEnd-->
 

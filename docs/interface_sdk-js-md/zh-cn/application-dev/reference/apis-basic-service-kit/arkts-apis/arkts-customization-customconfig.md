@@ -10,12 +10,6 @@
 
 **系统能力：** SystemCapability.Customization.CustomConfig
 
-## 导入模块
-
-```TypeScript
-import { customConfig } from 'kits/@kit.BasicServicesKit';
-```
-
 ## 汇总
 
 ### 函数

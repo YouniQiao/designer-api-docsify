@@ -2,9 +2,9 @@
 
 LineCapStyle enumeration description
 
-**Since:** 11
+**Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 11.
+**ArkTS mode:** ArkTS-Dyn only, since version 7.
 
 <!--Device-unnamed-declare enum LineCapStyle--><!--Device-unnamed-declare enum LineCapStyle-End-->
 
@@ -18,13 +18,13 @@ Butt
 
 The two ends of the dividing line are parallel lines.
 
-**Since:** 11
+**Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 11.
+**ArkTS mode:** ArkTS-Dyn only, since version 7.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
-**Widget capability:** This API can be used in ArkTS widgets since API version 11.
+**Widget capability:** This API can be used in ArkTS widgets since API version 9.
 
 <!--Device-LineCapStyle-Butt--><!--Device-LineCapStyle-Butt-End-->
 
@@ -38,13 +38,13 @@ Round
 
 The two ends of the dividing line are semicircles.
 
-**Since:** 11
+**Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 11.
+**ArkTS mode:** ArkTS-Dyn only, since version 7.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
-**Widget capability:** This API can be used in ArkTS widgets since API version 11.
+**Widget capability:** This API can be used in ArkTS widgets since API version 9.
 
 <!--Device-LineCapStyle-Round--><!--Device-LineCapStyle-Round-End-->
 
@@ -56,15 +56,15 @@ The two ends of the dividing line are semicircles.
 Square
 ```
 
-Extends half a circle at the end of the path with a width equal to half the dividing line width and a height equal to the dividing line width.
+Extends half a circle at the end of the path with a width equal to half the line width and a height equal to the line width.
 
-**Since:** 11
+**Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn only, since version 11.
+**ArkTS mode:** ArkTS-Dyn only, since version 7.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
-**Widget capability:** This API can be used in ArkTS widgets since API version 11.
+**Widget capability:** This API can be used in ArkTS widgets since API version 9.
 
 <!--Device-LineCapStyle-Square--><!--Device-LineCapStyle-Square-End-->
 

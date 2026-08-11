@@ -68,7 +68,7 @@ ListItemGroup(options?: ListItemGroupOptions)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| options | [ListItemGroupOptions](../arkts-apis/arkts-arkui-listitemgroup-listitemgroupoptions-i.md) | 否 | ListItemGroup组件参数，用于配置header、footer、间距和样式等。不传入时使用默认配置（无header、footer，间距为 0，无卡片样式）。 |
+| options | [ListItemGroupOptions](arkts-arkui-listitemgroupoptions-i.md) | 否 | ListItemGroup组件参数，用于配置header、footer、间距和样式等。不传入时使用默认配置（无header、footer，间距为 0，无卡片样式）。 |
 
 ## 汇总
 

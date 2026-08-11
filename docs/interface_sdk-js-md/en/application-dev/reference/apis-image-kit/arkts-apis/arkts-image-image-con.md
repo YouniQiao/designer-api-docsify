@@ -3,10 +3,10 @@
 ## CAPTURE_MODE_FRONT_LENS_NIGHT_VIEW
 
 ```TypeScript
-const CAPTURE_MODE_FRONT_LENS_NIGHT_VIEW = 7
+const CAPTURE_MODE_FRONT_LENS_NIGHT_VIEW : int
 ```
 
-拍摄模式：前置摄像头夜景模式。
+Capture mode: night view with front lens.The value is 7.
 
 **Since:** 23
 
@@ -14,17 +14,17 @@ const CAPTURE_MODE_FRONT_LENS_NIGHT_VIEW = 7
 
 **Model restriction:** This API can be used only in the stage model.
 
-<!--Device-image-const CAPTURE_MODE_FRONT_LENS_NIGHT_VIEW = 7--><!--Device-image-const CAPTURE_MODE_FRONT_LENS_NIGHT_VIEW = 7-End-->
+<!--Device-image-const CAPTURE_MODE_FRONT_LENS_NIGHT_VIEW : int--><!--Device-image-const CAPTURE_MODE_FRONT_LENS_NIGHT_VIEW : int-End-->
 
 **System capability:** SystemCapability.Multimedia.Image.Core
 
 ## CAPTURE_MODE_LIGHT_GRAFFITI
 
 ```TypeScript
-const CAPTURE_MODE_LIGHT_GRAFFITI = 10
+const CAPTURE_MODE_LIGHT_GRAFFITI : int
 ```
 
-拍摄模式：轻涂鸦模式。
+Capture mode: light graffiti.The value is 10.
 
 **Since:** 23
 
@@ -32,17 +32,17 @@ const CAPTURE_MODE_LIGHT_GRAFFITI = 10
 
 **Model restriction:** This API can be used only in the stage model.
 
-<!--Device-image-const CAPTURE_MODE_LIGHT_GRAFFITI = 10--><!--Device-image-const CAPTURE_MODE_LIGHT_GRAFFITI = 10-End-->
+<!--Device-image-const CAPTURE_MODE_LIGHT_GRAFFITI : int--><!--Device-image-const CAPTURE_MODE_LIGHT_GRAFFITI : int-End-->
 
 **System capability:** SystemCapability.Multimedia.Image.Core
 
 ## CAPTURE_MODE_MOVING_PHOTO
 
 ```TypeScript
-const CAPTURE_MODE_MOVING_PHOTO = 20
+const CAPTURE_MODE_MOVING_PHOTO : int
 ```
 
-拍摄模式：动态照片模式。
+Capture mode: moving photos.The value is 20.
 
 **Since:** 23
 
@@ -50,17 +50,17 @@ const CAPTURE_MODE_MOVING_PHOTO = 20
 
 **Model restriction:** This API can be used only in the stage model.
 
-<!--Device-image-const CAPTURE_MODE_MOVING_PHOTO = 20--><!--Device-image-const CAPTURE_MODE_MOVING_PHOTO = 20-End-->
+<!--Device-image-const CAPTURE_MODE_MOVING_PHOTO : int--><!--Device-image-const CAPTURE_MODE_MOVING_PHOTO : int-End-->
 
 **System capability:** SystemCapability.Multimedia.Image.Core
 
 ## CAPTURE_MODE_PANORAMA
 
 ```TypeScript
-const CAPTURE_MODE_PANORAMA = 8
+const CAPTURE_MODE_PANORAMA : int
 ```
 
-拍摄模式：全景模式。
+Capture mode: panorama.The value is 8.
 
 **Since:** 23
 
@@ -68,17 +68,17 @@ const CAPTURE_MODE_PANORAMA = 8
 
 **Model restriction:** This API can be used only in the stage model.
 
-<!--Device-image-const CAPTURE_MODE_PANORAMA = 8--><!--Device-image-const CAPTURE_MODE_PANORAMA = 8-End-->
+<!--Device-image-const CAPTURE_MODE_PANORAMA : int--><!--Device-image-const CAPTURE_MODE_PANORAMA : int-End-->
 
 **System capability:** SystemCapability.Multimedia.Image.Core
 
 ## CAPTURE_MODE_PORTRAIT
 
 ```TypeScript
-const CAPTURE_MODE_PORTRAIT = 23
+const CAPTURE_MODE_PORTRAIT : int
 ```
 
-拍摄模式：人像模式。
+Capture mode: portrait.The value is 23.
 
 **Since:** 23
 
@@ -86,17 +86,17 @@ const CAPTURE_MODE_PORTRAIT = 23
 
 **Model restriction:** This API can be used only in the stage model.
 
-<!--Device-image-const CAPTURE_MODE_PORTRAIT = 23--><!--Device-image-const CAPTURE_MODE_PORTRAIT = 23-End-->
+<!--Device-image-const CAPTURE_MODE_PORTRAIT : int--><!--Device-image-const CAPTURE_MODE_PORTRAIT : int-End-->
 
 **System capability:** SystemCapability.Multimedia.Image.Core
 
 ## CAPTURE_MODE_PROFESSIONAL
 
 ```TypeScript
-const CAPTURE_MODE_PROFESSIONAL = 2
+const CAPTURE_MODE_PROFESSIONAL : int
 ```
 
-拍摄模式：专业模式。
+Capture mode: professional.The value is 2.
 
 **Since:** 23
 
@@ -104,17 +104,17 @@ const CAPTURE_MODE_PROFESSIONAL = 2
 
 **Model restriction:** This API can be used only in the stage model.
 
-<!--Device-image-const CAPTURE_MODE_PROFESSIONAL = 2--><!--Device-image-const CAPTURE_MODE_PROFESSIONAL = 2-End-->
+<!--Device-image-const CAPTURE_MODE_PROFESSIONAL : int--><!--Device-image-const CAPTURE_MODE_PROFESSIONAL : int-End-->
 
 **System capability:** SystemCapability.Multimedia.Image.Core
 
 ## CAPTURE_MODE_REAR_LENS_NIGHT_VIEW
 
 ```TypeScript
-const CAPTURE_MODE_REAR_LENS_NIGHT_VIEW = 42
+const CAPTURE_MODE_REAR_LENS_NIGHT_VIEW : int
 ```
 
-拍摄模式：后镜头夜景模式。
+Capture mode: night view with rear lens.The value is 42.
 
 **Since:** 23
 
@@ -122,17 +122,17 @@ const CAPTURE_MODE_REAR_LENS_NIGHT_VIEW = 42
 
 **Model restriction:** This API can be used only in the stage model.
 
-<!--Device-image-const CAPTURE_MODE_REAR_LENS_NIGHT_VIEW = 42--><!--Device-image-const CAPTURE_MODE_REAR_LENS_NIGHT_VIEW = 42-End-->
+<!--Device-image-const CAPTURE_MODE_REAR_LENS_NIGHT_VIEW : int--><!--Device-image-const CAPTURE_MODE_REAR_LENS_NIGHT_VIEW : int-End-->
 
 **System capability:** SystemCapability.Multimedia.Image.Core
 
 ## CAPTURE_MODE_SILKY_WATER
 
 ```TypeScript
-const CAPTURE_MODE_SILKY_WATER = 11
+const CAPTURE_MODE_SILKY_WATER : int
 ```
 
-拍摄模式：缎面感水流模式。
+Capture mode: silky water.The value is 11.
 
 **Since:** 23
 
@@ -140,17 +140,17 @@ const CAPTURE_MODE_SILKY_WATER = 11
 
 **Model restriction:** This API can be used only in the stage model.
 
-<!--Device-image-const CAPTURE_MODE_SILKY_WATER = 11--><!--Device-image-const CAPTURE_MODE_SILKY_WATER = 11-End-->
+<!--Device-image-const CAPTURE_MODE_SILKY_WATER : int--><!--Device-image-const CAPTURE_MODE_SILKY_WATER : int-End-->
 
 **System capability:** SystemCapability.Multimedia.Image.Core
 
 ## CAPTURE_MODE_SNAP_SHOT
 
 ```TypeScript
-const CAPTURE_MODE_SNAP_SHOT = 62
+const CAPTURE_MODE_SNAP_SHOT : int
 ```
 
-拍摄模式：抓拍模式。
+Capture mode: snap shot.The value is 62.
 
 **Since:** 23
 
@@ -158,17 +158,17 @@ const CAPTURE_MODE_SNAP_SHOT = 62
 
 **Model restriction:** This API can be used only in the stage model.
 
-<!--Device-image-const CAPTURE_MODE_SNAP_SHOT = 62--><!--Device-image-const CAPTURE_MODE_SNAP_SHOT = 62-End-->
+<!--Device-image-const CAPTURE_MODE_SNAP_SHOT : int--><!--Device-image-const CAPTURE_MODE_SNAP_SHOT : int-End-->
 
 **System capability:** SystemCapability.Multimedia.Image.Core
 
 ## CAPTURE_MODE_STAR_TRACK
 
 ```TypeScript
-const CAPTURE_MODE_STAR_TRACK = 12
+const CAPTURE_MODE_STAR_TRACK : int
 ```
 
-拍摄模式：星轨模式。
+Capture mode: star track.The value is 12.
 
 **Since:** 23
 
@@ -176,17 +176,17 @@ const CAPTURE_MODE_STAR_TRACK = 12
 
 **Model restriction:** This API can be used only in the stage model.
 
-<!--Device-image-const CAPTURE_MODE_STAR_TRACK = 12--><!--Device-image-const CAPTURE_MODE_STAR_TRACK = 12-End-->
+<!--Device-image-const CAPTURE_MODE_STAR_TRACK : int--><!--Device-image-const CAPTURE_MODE_STAR_TRACK : int-End-->
 
 **System capability:** SystemCapability.Multimedia.Image.Core
 
 ## CAPTURE_MODE_SUPER_MACRO
 
 ```TypeScript
-const CAPTURE_MODE_SUPER_MACRO = 47
+const CAPTURE_MODE_SUPER_MACRO : int
 ```
 
-拍摄模式：超微距模式。
+Capture mode: super macro.The value is 47.
 
 **Since:** 23
 
@@ -194,17 +194,17 @@ const CAPTURE_MODE_SUPER_MACRO = 47
 
 **Model restriction:** This API can be used only in the stage model.
 
-<!--Device-image-const CAPTURE_MODE_SUPER_MACRO = 47--><!--Device-image-const CAPTURE_MODE_SUPER_MACRO = 47-End-->
+<!--Device-image-const CAPTURE_MODE_SUPER_MACRO : int--><!--Device-image-const CAPTURE_MODE_SUPER_MACRO : int-End-->
 
 **System capability:** SystemCapability.Multimedia.Image.Core
 
 ## CAPTURE_MODE_TAIL_LIGHT
 
 ```TypeScript
-const CAPTURE_MODE_TAIL_LIGHT = 9
+const CAPTURE_MODE_TAIL_LIGHT : int
 ```
 
-拍摄模式：尾灯模式。
+Capture mode: tail light.The value is 9.
 
 **Since:** 23
 
@@ -212,17 +212,17 @@ const CAPTURE_MODE_TAIL_LIGHT = 9
 
 **Model restriction:** This API can be used only in the stage model.
 
-<!--Device-image-const CAPTURE_MODE_TAIL_LIGHT = 9--><!--Device-image-const CAPTURE_MODE_TAIL_LIGHT = 9-End-->
+<!--Device-image-const CAPTURE_MODE_TAIL_LIGHT : int--><!--Device-image-const CAPTURE_MODE_TAIL_LIGHT : int-End-->
 
 **System capability:** SystemCapability.Multimedia.Image.Core
 
 ## CAPTURE_MODE_WIDEAPERTURE
 
 ```TypeScript
-const CAPTURE_MODE_WIDEAPERTURE = 19
+const CAPTURE_MODE_WIDEAPERTURE : int
 ```
 
-拍摄模式：广角模式。
+Capture mode: wide aperture.The value is 19.
 
 **Since:** 23
 
@@ -230,7 +230,7 @@ const CAPTURE_MODE_WIDEAPERTURE = 19
 
 **Model restriction:** This API can be used only in the stage model.
 
-<!--Device-image-const CAPTURE_MODE_WIDEAPERTURE = 19--><!--Device-image-const CAPTURE_MODE_WIDEAPERTURE = 19-End-->
+<!--Device-image-const CAPTURE_MODE_WIDEAPERTURE : int--><!--Device-image-const CAPTURE_MODE_WIDEAPERTURE : int-End-->
 
 **System capability:** SystemCapability.Multimedia.Image.Core
 
@@ -240,7 +240,7 @@ const CAPTURE_MODE_WIDEAPERTURE = 19
 const DUBLIN_CORE: XMPNamespace
 ```
 
-Dublin Core元数据命名空间。Namespace uri: 'http://purl.org/dc/elements/1.1/', prefix: 'dc'
+XMP namespace: dublin core.Namespace uri: 'http://purl.org/dc/elements/1.1/', prefix: 'dc'
 
 **Since:** 26.0.0
 
@@ -258,7 +258,7 @@ Dublin Core元数据命名空间。Namespace uri: 'http://purl.org/dc/elements/1
 const EXIF: XMPNamespace
 ```
 
-EXIF元数据命名空间。Namespace uri: 'http://ns.adobe.com/exif/1.0/', prefix: 'exif'
+XMP namespace: exif.Namespace uri: 'http://ns.adobe.com/exif/1.0/', prefix: 'exif'
 
 **Since:** 26.0.0
 
@@ -276,7 +276,7 @@ EXIF元数据命名空间。Namespace uri: 'http://ns.adobe.com/exif/1.0/', pref
 const TIFF: XMPNamespace
 ```
 
-TIFF图像格式参数命名空间。Namespace uri: 'http://ns.adobe.com/tiff/1.0/', prefix: 'tiff'
+XMP namespace: tiff.Namespace uri: 'http://ns.adobe.com/tiff/1.0/', prefix: 'tiff'
 
 **Since:** 26.0.0
 
@@ -291,10 +291,10 @@ TIFF图像格式参数命名空间。Namespace uri: 'http://ns.adobe.com/tiff/1.
 ## XMAGE_WATERMARK_MODE_AT_THE_BOTTOM
 
 ```TypeScript
-const XMAGE_WATERMARK_MODE_AT_THE_BOTTOM = 9
+const XMAGE_WATERMARK_MODE_AT_THE_BOTTOM : int
 ```
 
-XMAGE水印模式：XMAGE水印固定位于图像底部中央。
+The XMAGE watermark is at the bottom of the photo.The value is 9.
 
 **Since:** 23
 
@@ -302,17 +302,17 @@ XMAGE水印模式：XMAGE水印固定位于图像底部中央。
 
 **Model restriction:** This API can be used only in the stage model.
 
-<!--Device-image-const XMAGE_WATERMARK_MODE_AT_THE_BOTTOM = 9--><!--Device-image-const XMAGE_WATERMARK_MODE_AT_THE_BOTTOM = 9-End-->
+<!--Device-image-const XMAGE_WATERMARK_MODE_AT_THE_BOTTOM : int--><!--Device-image-const XMAGE_WATERMARK_MODE_AT_THE_BOTTOM : int-End-->
 
 **System capability:** SystemCapability.Multimedia.Image.Core
 
 ## XMAGE_WATERMARK_MODE_BORDER
 
 ```TypeScript
-const XMAGE_WATERMARK_MODE_BORDER = 10
+const XMAGE_WATERMARK_MODE_BORDER : int
 ```
 
-XMAGE水印模式：XMAGE水印会自动调整到边界位置，系统根据图像内容选择最适合的边界区域。
+The XMAGE watermark is around the edges of the photo.The value is 10.
 
 **Since:** 23
 
@@ -320,7 +320,7 @@ XMAGE水印模式：XMAGE水印会自动调整到边界位置，系统根据图�
 
 **Model restriction:** This API can be used only in the stage model.
 
-<!--Device-image-const XMAGE_WATERMARK_MODE_BORDER = 10--><!--Device-image-const XMAGE_WATERMARK_MODE_BORDER = 10-End-->
+<!--Device-image-const XMAGE_WATERMARK_MODE_BORDER : int--><!--Device-image-const XMAGE_WATERMARK_MODE_BORDER : int-End-->
 
 **System capability:** SystemCapability.Multimedia.Image.Core
 
@@ -330,7 +330,7 @@ XMAGE水印模式：XMAGE水印会自动调整到边界位置，系统根据图�
 const XMP_BASIC: XMPNamespace
 ```
 
-XMP基础命名空间。Namespace uri: 'http://ns.adobe.com/xap/1.0/', prefix: 'xmp'
+XMP namespace: XMP basic.Namespace uri: 'http://ns.adobe.com/xap/1.0/', prefix: 'xmp'
 
 **Since:** 26.0.0
 
@@ -348,7 +348,7 @@ XMP基础命名空间。Namespace uri: 'http://ns.adobe.com/xap/1.0/', prefix: '
 const XMP_RIGHTS: XMPNamespace
 ```
 
-XMP版权与权限命名空间。Namespace uri: 'http://ns.adobe.com/xap/1.0/rights/', prefix: 'xmpRights'
+XMP namespace: XMP rights.Namespace uri: 'http://ns.adobe.com/xap/1.0/rights/', prefix: 'xmpRights'
 
 **Since:** 26.0.0
 

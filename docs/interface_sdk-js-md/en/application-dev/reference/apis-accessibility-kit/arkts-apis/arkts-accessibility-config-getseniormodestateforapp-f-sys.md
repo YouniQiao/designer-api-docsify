@@ -45,21 +45,8 @@ Get the senior mode state for app.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 9300008 | The appIndex is invalid. Possible causes: &lt;br&gt;1.The appIndex is out of the valid range. &lt;br&gt;2.The application corresponding to the appIndex does not exist. |
-| 201 | Permission verification failed. &lt;br&gt;The application does not have the permission required to call the API. |
-| 202 | Permission verification failed. &lt;br&gt;A non-system application calls a system API. |
-| 9300000 | System abnormality. |
-
-## Examples
-
-```TypeScript
-import { config } from '@kit.AccessibilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-config.getSeniorModeStateForApp('com.example.myapplication', 0).then((data: boolean) => {
-  console.info(`Succeeded in getting seniorModeState for app, data: ${data}`);
-}).catch((err: BusinessError) => {
-  console.error(`Failed to get seniorModeState for app. Code: ${err.code}, message: ${err.message}`);
-});
-```
+| [9300008](../errorcode-accessibility.md#9300008-app-clone-index-invalid) | The appIndex is invalid. Possible causes: &lt;br&gt;1.The appIndex is out of the valid range. &lt;br&gt;2.The application corresponding to the appIndex does not exist. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed. &lt;br&gt;The application does not have the permission required to call the API. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. &lt;br&gt;A non-system application calls a system API. |
+| [9300000](../errorcode-accessibility.md#9300000-accessibility-system-service-abnormal) | System abnormality. |
 

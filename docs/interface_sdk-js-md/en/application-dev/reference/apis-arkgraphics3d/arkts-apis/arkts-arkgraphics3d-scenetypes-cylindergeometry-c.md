@@ -1,6 +1,11 @@
 # CylinderGeometry
 
-定义圆柱体.
+A cylinder geometry type that inherits from [GeometryDefinition](arkts-arkgraphics3d-scenetypes-geometrydefinition-c.md).
+
+> **NOTE：**
+> 
+> You must ensure that all three parameters are set correctly.
+> Invalid values may prevent cylinder creation or cause undefined behavior.
 
 **Inheritance/Implementation:** CylinderGeometry extends [GeometryDefinition](arkts-arkgraphics3d-scenetypes-geometrydefinition-c.md)
 
@@ -18,7 +23,7 @@
 set height(value: double)
 ```
 
-圆柱体的高度, 单位为世界坐标系下的场景单位（例如cm、m、km等）.
+The height of the cylinder, the unit is the scene unit in the world coordinate system (e.g., cm, m, km).
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：double
 
@@ -36,7 +41,7 @@ set height(value: double)
 set radius(value: double)
 ```
 
-圆柱体底面的半径, 单位为世界坐标系下的场景单位（例如cm、m、km等）.
+The radius of the base of the cylinder, the unit is the scene unit in the world coordinate system (e.g., cm, m, km).
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：double
 
@@ -54,7 +59,7 @@ set radius(value: double)
 set segmentCount(value: int)
 ```
 
-使用正多边形近似圆柱体的圆形底面,其中segmentCount是正多边形的边数.
+Use regular polygons to approximate the circular base of the cylinder,where segmentCount is the number of sides of the regular polygon used.
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 

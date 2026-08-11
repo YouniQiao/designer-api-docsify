@@ -1,11 +1,5 @@
 # startChildProcess
 
-## 导入模块
-
-```TypeScript
-import { childProcessManager } from 'kits/@kit.AbilityKit';
-```
-
 ## startChildProcess
 
 ```TypeScript
@@ -48,12 +42,14 @@ function startChildProcess(srcEntry: string, startMode: StartMode): Promise<int>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types; 3.Parameter verification failed. |
-| 16000050 | Internal error. |
-| 16000061 | Operation not supported. |
-| 16000062 | The number of child processes exceeds the upper limit. |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types; 3.Parameter verification failed. |
+| [16000050](../errorcode-ability.md#16000050-内部错误) | Internal error. |
+| [16000061](../errorcode-ability.md#16000061-不支持的操作) | Operation not supported. |
+| [16000062](../errorcode-ability.md#16000062-子进程数量超出上限) | The number of child processes exceeds the upper limit. |
 
 ## 示例
+
+ArkTS-Dyn示例：
 
 ```TypeScript
 // 在entry模块的src/main/ets/process下创建DemoProcess.ets子进程类:
@@ -61,29 +57,136 @@ function startChildProcess(srcEntry: string, startMode: StartMode): Promise<int>
 import { ChildProcess } from '@kit.AbilityKit';
 
 export default class DemoProcess extends ChildProcess {
-  onStart() {
+  onStart(): void {
     console.info('DemoProcess OnStart() called');
   }
 }
 ```
 
+ArkTS-Sta示例：
+
+```TypeScript
+'use static'
+// 在entry模块的src/main/ets/process下创建StaticDemoProcess.ets子进程类:
+// entry/src/main/ets/process/StaticDemoProcess.ets
+import { ChildProcess, ChildProcessArgs } from '@kit.AbilityKit';
+
+export default class StaticDemoProcess extends ChildProcess {
+  onStart(args?: ChildProcessArgs): void {
+    console.info('StaticDemoProcess OnStart() called');
+  }
+}
+```
+
+ArkTS-Dyn示例：
+
 ```TypeScript
 // 使用childProcessManager.startChildProcess方法启动子进程:
-// entry/src/main/ets/tool/Tool.ets
+// entry/src/main/ets/pages/Index.ets
 import { childProcessManager } from '@kit.AbilityKit';
 import { BusinessError } from '@kit.BasicServicesKit';
 import DemoProcess from '../process/DemoProcess';
 
-try {
-  DemoProcess.toString(); // 这里要调用下DemoProcess类的任意方法，防止没有引用到而被构建工具优化掉
-  childProcessManager.startChildProcess("./ets/process/DemoProcess.ets", childProcessManager.StartMode.SELF_FORK)
-    .then((data) => {
-      console.info(`startChildProcess success, pid: ${data}`);
-    }, (err: BusinessError) => {
-      console.error(`startChildProcess error, errorCode: ${err.code}`);
-    })
-} catch (err: BusinessError) {
-  console.error(`startChildProcess error, errorCode: ${(err as BusinessError).code}, errorMsg: ${(err as BusinessError).message}.`);
+@Entry
+@Component
+struct Index {
+  build() {
+    Row() {
+      Column() {
+        Button('拉起ArkTS-Dyn类型子进程')
+          .fontSize(30)
+          .fontWeight(FontWeight.Bold)
+          .onClick(() => {
+            try {
+              DemoProcess.toString(); // 这里要调用下DemoProcess类的任意方法，防止没有引用到而被构建工具优化掉
+              childProcessManager.startChildProcess('./ets/process/DemoProcess.ets',
+                childProcessManager.StartMode.SELF_FORK)
+                .then((data) => {
+                  console.info(`startChildProcess success, pid: ${data}`);
+                })
+                .catch((err: BusinessError) => {
+                  console.error(`startChildProcess error, errorCode: ${err.code}`);
+                })
+            } catch (err: BusinessError) {
+              console.error(`startChildProcess error, errorCode: ${(err as BusinessError).code}, errorMsg: ${(err as BusinessError).message}.`);
+            }
+          });
+
+        Button('拉起ArkTS-Sta类型子进程')
+        .onClick(() => {
+            try {
+              //拉起ArkTS-Sta类型的子进程示例
+              childProcessManager.startChildProcess('entry/src/main/ets/process/StaticDemoProcess',
+                childProcessManager.StartMode.SELF_FORK)
+                .then((data) => {
+                  console.info(`startChildProcess success, pid: ${data}`);
+                })
+                .catch((err: BusinessError) => {
+                  console.error(`startChildProcess error, errorCode: ${err.code}`);
+                })
+            } catch (err: BusinessError) {
+              console.error(`startChildProcess error, errorCode: ${(err as BusinessError).code}, errorMsg: ${(err as BusinessError).message}.`);
+            }
+        })
+      }
+      .width('100%')
+    }
+    .height('100%')
+  }
+}
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+'use static'
+// 使用childProcessManager.startChildProcess方法启动子进程:
+// entry/src/main/ets/pages/Index.ets
+import { Entry, Text, Column, Component, Button } from '@ohos.arkui.component';
+import { childProcessManager } from '@kit.AbilityKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+import DemoProcess from '../process/DemoProcess';
+
+@Entry
+@Component
+struct Index {
+  build() {
+    Column() {
+      Button('拉起ArkTS-Dyn类型子进程')
+        .onClick(() => {
+          try {
+            childProcessManager.startChildProcess('./ets/process/DemoProcess.ets',
+              childProcessManager.StartMode.SELF_FORK)
+              .then((data) => {
+                console.info(`startChildProcess success, pid: ${data}`);
+              })
+              .catch((err: BusinessError) => {
+                console.error(`startChildProcess error, errorCode: ${err.code}`);
+              })
+          } catch (err: BusinessError) {
+            console.error(`startChildProcess error, errorCode: ${(err as BusinessError).code}, errorMsg: ${(err as BusinessError).message}.`);
+          }
+        });
+
+      Button('拉起ArkTS-Sta类型子进程')
+      .onClick(() => {
+          try {
+            //拉起ArkTS-Sta类型的子进程示例
+            childProcessManager.startChildProcess('entry/src/main/ets/process/StaticDemoProcess',
+              childProcessManager.StartMode.SELF_FORK)
+              .then((data) => {
+                console.info(`startChildProcess success, pid: ${data}`);
+              })
+              .catch((err: BusinessError) => {
+                console.error(`startChildProcess error, errorCode: ${err.code}`);
+              })
+          } catch (err: BusinessError) {
+            console.error(`startChildProcess error, errorCode: ${(err as BusinessError).code}, errorMsg: ${(err as BusinessError).message}.`);
+          }
+      })
+    }
+    .width('100%')
+  }
 }
 ```
 
@@ -125,12 +228,14 @@ function startChildProcess(srcEntry: string, startMode: StartMode, callback: Asy
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types; 3.Parameter verification failed. |
-| 16000050 | Internal error. |
-| 16000061 | Operation not supported. |
-| 16000062 | The number of child processes exceeds the upper limit. |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types; 3.Parameter verification failed. |
+| [16000050](../errorcode-ability.md#16000050-内部错误) | Internal error. |
+| [16000061](../errorcode-ability.md#16000061-不支持的操作) | Operation not supported. |
+| [16000062](../errorcode-ability.md#16000062-子进程数量超出上限) | The number of child processes exceeds the upper limit. |
 
 ## 示例
+
+ArkTS-Dyn示例：
 
 ```TypeScript
 // 在entry模块的src/main/ets/process下创建DemoProcess.ets子进程类:
@@ -138,30 +243,136 @@ function startChildProcess(srcEntry: string, startMode: StartMode, callback: Asy
 import { ChildProcess } from '@kit.AbilityKit';
 
 export default class DemoProcess extends ChildProcess {
-  onStart() {
+  onStart(): void {
     console.info('DemoProcess OnStart() called');
   }
 }
 ```
 
+ArkTS-Sta示例：
+
+```TypeScript
+'use static'
+// 在entry模块的src/main/ets/process下创建StaticDemoProcess.ets子进程类:
+// entry/src/main/ets/process/StaticDemoProcess.ets
+import { ChildProcess, ChildProcessArgs } from '@kit.AbilityKit';
+
+export default class StaticDemoProcess extends ChildProcess {
+  onStart(args?: ChildProcessArgs): void {
+    console.info('StaticDemoProcess OnStart() called');
+  }
+}
+```
+
+ArkTS-Dyn示例：
+
 ```TypeScript
 // 使用childProcessManager.startChildProcess方法启动子进程:
-// entry/src/main/ets/tool/Tool.ets
+// entry/src/main/ets/pages/Index.ets
 import { childProcessManager } from '@kit.AbilityKit';
 import { BusinessError } from '@kit.BasicServicesKit';
 import DemoProcess from '../process/DemoProcess';
 
-try {
-  DemoProcess.toString(); // 这里要调用下DemoProcess类的任意方法，防止没有引用到而被构建工具优化掉
-  childProcessManager.startChildProcess("./ets/process/DemoProcess.ets", childProcessManager.StartMode.SELF_FORK, (err, data) => {
-    if (err) {
-      console.error(`startChildProcess error. Code: ${err.code}, message: ${err.message}`);
-    } else {
-      console.info(`startChildProcess success, pid: ${data}`);
+@Entry
+@Component
+struct Index {
+  build() {
+    Row() {
+      Column() {
+        Button('拉起ArkTS-Dyn类型子进程')
+          .fontSize(30)
+          .fontWeight(FontWeight.Bold)
+          .onClick(() => {
+            try {
+              DemoProcess.toString(); // 这里要调用下DemoProcess类的任意方法，防止没有引用到而被构建工具优化掉
+              childProcessManager.startChildProcess('./ets/process/DemoProcess.ets',
+                childProcessManager.StartMode.SELF_FORK,
+                (err, data) => {
+                  if (err?.code != 0) {
+                    console.error(`startChildProcess error, errorCode: ${err?.code}`);
+                  }
+                  console.info(`startChildProcess success, pid: ${data}`);
+              });
+            } catch (err: BusinessError) {
+              console.error(`startChildProcess error, errorCode: ${(err as BusinessError).code}, errorMsg: ${(err as BusinessError).message}.`);
+            }
+          });
+
+        Button('拉起ArkTS-Sta类型子进程')
+        .onClick(() => {
+            try {
+              //拉起ArkTS-Sta类型的子进程示例
+              childProcessManager.startChildProcess('entry/src/main/ets/process/StaticDemoProcess',
+                childProcessManager.StartMode.SELF_FORK,
+                (err, data) => {
+                  if (err?.code != 0) {
+                    console.error(`startChildProcess error, errorCode: ${err?.code}`);
+                  }
+                  console.info(`startChildProcess success, pid: ${data}`);
+              });
+            } catch (err: BusinessError) {
+              console.error(`startChildProcess error, errorCode: ${(err as BusinessError).code}, errorMsg: ${(err as BusinessError).message}.`);
+            }
+        })
+      }
+      .width('100%')
     }
-  });
-} catch (err: BusinessError) {
-  console.error(`startChildProcess error, errorCode: ${(err as BusinessError).code}, errorMsg: ${(err as BusinessError).message}.`);
+    .height('100%')
+  }
+}
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+'use static'
+// 使用childProcessManager.startChildProcess方法启动子进程:
+// entry/src/main/ets/pages/Index.ets
+import { Entry, Text, Column, Component, Button} from '@ohos.arkui.component';
+import { childProcessManager } from '@kit.AbilityKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+import DemoProcess from '../process/DemoProcess';
+
+@Entry
+@Component
+struct Index {
+  build() {
+    Column() {
+      Button('拉起ArkTS-Dyn类型子进程')
+        .onClick(() => {
+          try {
+            childProcessManager.startChildProcess('./ets/process/DemoProcess.ets',
+              childProcessManager.StartMode.SELF_FORK,
+              (err, data) => {
+                if (err?.code != 0) {
+                  console.error(`startChildProcess error, errorCode: ${err?.code}`);
+                }
+                console.info(`startChildProcess success, pid: ${data}`);
+            });
+          } catch (err: BusinessError) {
+            console.error(`startChildProcess error, errorCode: ${(err as BusinessError).code}, errorMsg: ${(err as BusinessError).message}.`);
+          }
+        });
+
+      Button('拉起ArkTS-Sta类型子进程')
+      .onClick(() => {
+          try {
+            //拉起ArkTS-Sta类型的子进程示例
+            childProcessManager.startChildProcess('entry/src/main/ets/process/StaticDemoProcess',
+              childProcessManager.StartMode.SELF_FORK,
+              (err, data) => {
+                if (err?.code != 0) {
+                  console.error(`startChildProcess error, errorCode: ${err?.code}`);
+                }
+                console.info(`startChildProcess success, pid: ${data}`);
+            });
+          } catch (err: BusinessError) {
+            console.error(`startChildProcess error, errorCode: ${(err as BusinessError).code}, errorMsg: ${(err as BusinessError).message}.`);
+          }
+      })
+    }
+    .width('100%')
+  }
 }
 ```
 

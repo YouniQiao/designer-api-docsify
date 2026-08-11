@@ -1,6 +1,6 @@
 # TitleOptions
 
-标题栏选项。
+Title bar options.
 
 **Since:** 12
 
@@ -22,7 +22,7 @@ import { GradientBackground, TitleBarType, MixMode, AtomicServiceNavigation, Sid
 backgroundColor?: ResourceColor
 ```
 
-标题栏背景颜色。
+Background color.
 
 **Type:** [ResourceColor](arkts-arkui-resourcecolor-t.md)
 
@@ -42,7 +42,7 @@ backgroundColor?: ResourceColor
 barStyle?: BarStyle
 ```
 
-设置标题栏样式。
+Set title bar style.
 
 **Type:** [BarStyle](../arkts-components/arkts-arkui-barstyle-e.md)
 
@@ -64,7 +64,7 @@ barStyle?: BarStyle
 isBlurEnabled?: boolean
 ```
 
-标题栏是否模糊。
+Whether to enable the blur effect.
 
 **Type:** boolean
 
@@ -86,7 +86,7 @@ isBlurEnabled?: boolean
 titleBarType?: TitleBarType
 ```
 
-设置标题栏类型。
+Set title bar type.
 
 **Type:** [TitleBarType](arkts-arkui-atomicservice-atomicservicenavigation-titlebartype-e.md)
 
@@ -108,7 +108,7 @@ titleBarType?: TitleBarType
 titleIcon?: Resource | SymbolGlyphModifier
 ```
 
-设置标题栏的图标。
+Set title bar icon.
 
 **Type:** [Resource](../../apis-localization-kit/arkts-apis/arkts-localization-resource-resource-i.md) \| SymbolGlyphModifier
 

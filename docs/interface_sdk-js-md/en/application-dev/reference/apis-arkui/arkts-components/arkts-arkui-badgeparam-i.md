@@ -1,6 +1,6 @@
 # BadgeParam
 
-包含用于创建Badge组件的基础参数。
+Provides basic parameters for creating a badge.
 
 **Since:** 7
 
@@ -16,15 +16,16 @@
 position?: BadgePosition | Position
 ```
 
-设置标记显示位置。
+Position to display the badge relative to the parent component.
 
-默认值：BadgePosition.RightTop 
+Default value: **BadgePosition.RightTop**
 
-**说明：**
+**NOTE：**
 
-Position作为入参，不支持设置百分比；设置为非法值时，按(0,0)处理，(0,0)为组件左上角位置。
+With the **Position** type, percentage values are not supported. If an invalid value is set, the default value  
+**(0,0)**, which indicates the upper left corner of the component, will be used.
 
-BadgePosition作为入参时，会跟随[Direction](../arkts-apis/arkts-arkui-enums-direction-e.md/arkts-arkui-enums-direction-e.md)属性控制镜像显示。
+With the **BadgePosition** type, the position is mirrored based on the [Direction](../arkts-apis/arkts-arkui-enums-direction-e.md/arkts-arkui-enums-direction-e.md) property.
 
 **Type:** [BadgePosition](../arkts-apis/arkts-arkui-badge-badgeposition-e.md) \| Position
 
@@ -48,7 +49,7 @@ BadgePosition作为入参时，会跟随[Direction](../arkts-apis/arkts-arkui-en
 style: BadgeStyle
 ```
 
-Badge组件可设置样式，支持设置文本颜色、大小、标记颜色和标记大小。
+Style of the badge, including the font color, font size, badge color, and badge size.
 
 **Type:** [BadgeStyle](arkts-arkui-badgestyle-i.md)
 

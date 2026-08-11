@@ -1,6 +1,6 @@
 # DownloadInfo
 
-预下载的下载信息。
+Describes the pre-downloaded download information.
 
 **Since:** 20
 
@@ -22,7 +22,7 @@ import { cacheDownload } from 'kits/@kit.BasicServicesKit';
 readonly network: NetworkInfo
 ```
 
-预下载的网络信息。
+Pre-downloaded network information.
 
 **Type:** [NetworkInfo](arkts-basicservices-cachedownload-networkinfo-i.md)
 
@@ -40,7 +40,7 @@ readonly network: NetworkInfo
 readonly performance: PerformanceInfo
 ```
 
-预下载的性能信息。
+Pre-downloaded performance information.
 
 **Type:** [PerformanceInfo](arkts-basicservices-cachedownload-performanceinfo-i.md)
 
@@ -58,7 +58,7 @@ readonly performance: PerformanceInfo
 readonly resource: ResourceInfo
 ```
 
-预下载的资源信息。
+Pre-downloaded resource information.
 
 **Type:** [ResourceInfo](arkts-basicservices-cachedownload-resourceinfo-i.md)
 

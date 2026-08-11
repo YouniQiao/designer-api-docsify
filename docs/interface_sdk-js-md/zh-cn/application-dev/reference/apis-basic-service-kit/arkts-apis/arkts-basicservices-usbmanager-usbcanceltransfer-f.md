@@ -1,11 +1,5 @@
 # usbCancelTransfer
 
-## 导入模块
-
-```TypeScript
-import { usbManager } from 'kits/@kit.BasicServicesKit';
-```
-
 ## usbCancelTransfer
 
 ```TypeScript
@@ -39,11 +33,11 @@ function usbCancelTransfer(transfer: UsbDataTransferParams): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 14400011 | The transfer is not in progress, or is already complete or cancelled. |
-| 801 | Capability not supported. |
-| 14400010 | Other USB error. Possible causes:  &lt;br&gt;1.Unrecognized discard error code. |
-| 14400008 | No such device (it may have been disconnected). |
-| 14400001 | Access right denied. Call requestRight to get the USBDevicePipe access right first. |
+| [14400011](../../apis-basic-services-kit/errorcode-usb.md#14400011-未找到正在进行的传输) | The transfer is not in progress, or is already complete or cancelled. |
+| [801](../../errorcode-universal.md#801-该设备不支持此api) | Capability not supported. |
+| [14400010](../../apis-basic-services-kit/errorcode-usb.md#14400010-无法识别的错误) | Other USB error. Possible causes:  &lt;br&gt;1.Unrecognized discard error code. |
+| [14400008](../../apis-basic-services-kit/errorcode-usb.md#14400008-没有设备连接已断开) | No such device (it may have been disconnected). |
+| [14400001](../../apis-basic-services-kit/errorcode-usb.md#14400001-usb设备访问权限被拒绝) | Access right denied. Call requestRight to get the USBDevicePipe access right first. |
 
 ## 示例
 
@@ -67,7 +61,7 @@ async function usbCancelTransfer() {
   }
   let devicePipe: usbManager.USBDevicePipe = usbManager.connectDevice(device);
   if (devicePipe === undefined) {
-    console.info(`connect device fail`);
+    console.error(`connect device fail`);
     return;
   }
   // 获取endpoint端点地址。
@@ -79,10 +73,9 @@ async function usbCancelTransfer() {
     return;
   }
   // 声明接口控制权，force参数为true表示强制获取。
-  let ret: number = usbManager.claimInterface(devicePipe, device.configs?.[0]?.interfaces?.[0], true);
+  let ret: int = usbManager.claimInterface(devicePipe, device.configs?.[0]?.interfaces?.[0], true);
   if (ret !== 0) {
     console.error(`claim interface failed`);
-    usbManager.closePipe(devicePipe);
     return;
   }
   let transferParams: usbManager.UsbDataTransferParams = {
@@ -98,7 +91,7 @@ async function usbCancelTransfer() {
     isoPacketCount: 0,
   };
   try {
-    transferParams.endpoint = endpoint?.address as number;
+    transferParams.endpoint = endpoint?.address as int;
     transferParams.callback = (err, callbackData: usbManager.SubmitTransferCallback)=>{
       console.info('callbackData =' + JSON.stringify(callbackData));
     };

@@ -12,20 +12,20 @@
 
 | Name | Description |
 | --- | --- |
-| [CalendarDialogOptions](arkts-arkui-calendarpicker-calendardialogoptions-i.md) | 日历选择器弹窗选项。  继承自[CalendarOptions](arkts-arkui-calendarpicker-calendaroptions-i.md)。 |
-| [CalendarOptions](arkts-arkui-calendarpicker-calendaroptions-i.md) | 日历选择器组件的参数说明。 |
+| [CalendarDialogOptions](arkts-arkui-calendarpicker-calendardialogoptions-i.md) | Defines the DatePickerDialogOptions for Calendar Picker Dialog. |
+| [CalendarOptions](arkts-arkui-calendarpicker-calendaroptions-i.md) | Defines the options of CalendarPicker. |
 
 <!--Del-->
 ### Interfaces（系统接口）
 
 | Name | Description |
 | --- | --- |
-| [CalendarDialogOptions](arkts-arkui-calendarpicker-calendardialogoptions-i-sys.md) | 日历选择器弹窗选项。  继承自[CalendarOptions](arkts-arkui-calendarpicker-calendaroptions-i.md)。 |
+| [CalendarDialogOptions](arkts-arkui-calendarpicker-calendardialogoptions-i-sys.md) | Defines the DatePickerDialogOptions for Calendar Picker Dialog. |
 <!--DelEnd-->
 
 ### Enums
 
 | Name | Description |
 | --- | --- |
-| [CalendarAlign](arkts-arkui-calendarpicker-calendaralign-e.md) | 对齐方式类型。 |
+| [CalendarAlign](arkts-arkui-calendarpicker-calendaralign-e.md) | The type of alignment between entry and calendar. |
 

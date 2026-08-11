@@ -34,5 +34,5 @@ constructor(colorStops: ColorStop[])
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| colorStops | [ColorStop](../arkts-apis/arkts-arkui-datapanel-colorstop-i.md)[] | 是 | 存储渐变颜色和渐变点。 |
+| colorStops | [ColorStop](arkts-arkui-colorstop-i.md)[] | 是 | 存储渐变颜色和渐变点。 |
 

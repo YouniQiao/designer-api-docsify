@@ -24,7 +24,7 @@ angle?: ParticlePropertyOptions<number, ACC_ANGLE_UPDATER>
 
 默认值：{range:[0.0,0.0]}
 
-**类型：** [ParticlePropertyOptions](arkts-arkui-particlepropertyoptions-i.md)&lt;number, ACC_ANGLE_UPDATER&gt;
+**类型：** [ParticlePropertyOptions](../arkts-apis/arkts-arkui-particle-particlepropertyoptions-i.md)&lt;number, ACC_ANGLE_UPDATER&gt;
 
 **起始版本：** 10
 
@@ -48,7 +48,7 @@ speed?: ParticlePropertyOptions<number, ACC_SPEED_UPDATER>
 
 默认值：{range:[0.0,0.0]}
 
-**类型：** [ParticlePropertyOptions](arkts-arkui-particlepropertyoptions-i.md)&lt;number, ACC_SPEED_UPDATER&gt;
+**类型：** [ParticlePropertyOptions](../arkts-apis/arkts-arkui-particle-particlepropertyoptions-i.md)&lt;number, ACC_SPEED_UPDATER&gt;
 
 **起始版本：** 10
 

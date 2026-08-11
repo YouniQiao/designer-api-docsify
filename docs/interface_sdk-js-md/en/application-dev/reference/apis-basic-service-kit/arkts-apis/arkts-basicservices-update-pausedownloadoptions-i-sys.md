@@ -1,6 +1,7 @@
 # PauseDownloadOptions (System API)
 
-暂停下载选项，用于控制暂停行为。对象包含isAllowAutoResume字段，true表示允许自动恢复，false表示需手动恢复。
+Defines the pausing download options, which are used to control the pause behavior. The object contains the   
+**isAllowAutoResume** field. The value **true** indicates that automatically resuming download is allowed, and the value **false** indicates that download needs to be manually resumed.
 
 **Since:** 9
 
@@ -24,11 +25,12 @@ import { update } from 'kits/@kit.BasicServicesKit';
 isAllowAutoResume: boolean
 ```
 
-是否允许自动恢复。仅当有正在进行的下载任务时才能设置此参数。
+Whether to allow automatic resuming of download. This parameter is set only when there is an ongoing download task.
 
-true表示允许自动恢复，系统可能自动恢复下载；false表示不允许，需手动调用resumeDownload恢复。
+The value **true** indicates that automatically resuming download is allowed and the system may automatically resume the download. The value **false** indicates that automatically resuming download is not allowed and you need to manually call **resumeDownload** to resume the download.
 
-使用建议：网络不稳定场景建议设置true启用自动恢复，提升下载成功率；需要精确控制下载时机或避免在特定网络环境下恢复的场景建议设置false，通过手动调用resumeDownload控制恢复时机。
+You are advised to set this parameter to **true** when the network is unstable, improving the download success rate. You are advised to set this parameter to **false** when the download time needs to be precisely controlled or resuming download needs to be prevented in specific network environments. In this case, you can call   
+**resumeDownload** to control when to resume the download.
 
 **Type:** boolean
 

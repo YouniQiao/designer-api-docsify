@@ -1,11 +1,6 @@
 # ContextMenuController
 
-提供控制菜单关闭的能力。  
-> **说明：**
-> 
-> - 本Class首批接口从API version 12开始支持。
-> - 以下API需先使用UIContext中的[getContextMenuController()](arkts-arkui-arkui-uicontext-uicontext-c.md#getcontextmenucontroller)方
-> 法获取ContextMenuController实例，再通过此实例调用对应方法。
+class ContextMenuController
 
 **Since:** 23
 
@@ -27,7 +22,7 @@ import { OverlayManager, FrameCallback, ResolvedUIContext, NodeRenderStateChange
 close(): void
 ```
 
-关闭菜单。
+Close context menu.
 
 **Since:** 23
 

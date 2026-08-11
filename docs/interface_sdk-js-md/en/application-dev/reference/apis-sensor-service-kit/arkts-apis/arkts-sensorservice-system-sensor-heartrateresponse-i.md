@@ -1,6 +1,6 @@
 # HeartRateResponse
 
-心率传感器数据改变后的回调函数的响应对象，包含心率值数据。
+Defines a **HeartRateResponse** object.
 
 **Since:** 3
 
@@ -28,7 +28,7 @@ import { OnBodyStateResponse, subscribeAccelerometerOptions, ProximityResponse, 
 heartRate: number
 ```
 
-心率值。单位：次/分钟（bpm）。取值范围：取值为实际上报物理量，由硬件传感器决定。正常成人静息心率约为60-100 bpm。
+Heart rate.
 
 **Type:** number
 

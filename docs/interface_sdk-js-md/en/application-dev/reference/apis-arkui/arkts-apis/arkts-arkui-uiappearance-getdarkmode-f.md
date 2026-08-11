@@ -32,5 +32,5 @@ Acquire the current dark-mode.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 500001 | Internal error. |
+| [500001](../errorcode-uiappearance.md#500001-internal-error) | Internal error. |
 

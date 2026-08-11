@@ -1,6 +1,6 @@
 # SetBrightnessModeOptions
 
-设置屏幕亮度模式的参数对象。
+Options for setting the screen brightness mode.
 
 **Since:** 3
 
@@ -24,7 +24,7 @@ import { BrightnessResponse, BrightnessModeResponse, SetBrightnessModeOptions, G
 complete?: () => void
 ```
 
-接口调用结束的回调函数。
+Called when an API call is complete.
 
 **Since:** 3
 
@@ -42,7 +42,7 @@ complete?: () => void
 fail?: (data: string, code: number) => void
 ```
 
-接口调用失败的回调函数。data为错误信息，code为错误码。
+Called when an API call has failed. **data** indicates the error information, and **code** indicates the error code.
 
 **Since:** 3
 
@@ -67,7 +67,7 @@ fail?: (data: string, code: number) => void
 success?: () => void
 ```
 
-接口调用成功的回调函数。
+Called when an API call is successful.
 
 **Since:** 3
 
@@ -85,7 +85,7 @@ success?: () => void
 mode: number
 ```
 
-0表示手动调节屏幕亮度模式，1表示自动调节屏幕亮度模式。
+The value **0** indicates the manual adjustment mode, and the value **1** indicates the automatic adjustment mode.
 
 **Type:** number
 

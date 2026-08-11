@@ -1,11 +1,5 @@
 # create
 
-## 导入模块
-
-```TypeScript
-import { displaySync } from 'kits/@kit.ArkGraphics2D';
-```
-
 ## create
 
 ```TypeScript

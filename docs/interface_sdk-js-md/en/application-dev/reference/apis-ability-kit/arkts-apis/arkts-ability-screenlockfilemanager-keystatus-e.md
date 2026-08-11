@@ -1,6 +1,6 @@
 # KeyStatus
 
-表示锁屏下敏感数据密钥状态的枚举。
+Enumerates the statuses of sensitive data keys under the lock screen.
 
 **Since:** 18
 
@@ -16,7 +16,7 @@
 KEY_NOT_EXIST = -2
 ```
 
-密钥不存在。此状态表示应用未开启锁屏下敏感数据保护功能，或当前设备上该保护功能不可用。
+The key does not exist. This status indicates that the app has not enabled the sensitive data protection function under lock screen, or the protection function is unavailable on the current device.
 
 **Since:** 18
 
@@ -32,7 +32,7 @@ KEY_NOT_EXIST = -2
 KEY_RELEASED = -1
 ```
 
-密钥已释放。此状态表示锁屏下敏感数据无法被操作。
+The key has been released. This status indicates that sensitive data under lock screen cannot be operated.
 
 **Since:** 18
 
@@ -48,7 +48,7 @@ KEY_RELEASED = -1
 KEY_EXIST = 0
 ```
 
-密钥存在。此状态表示锁屏下敏感数据可以被正常操作。
+The key exists. This status indicates that sensitive data under lock screen can be operated normally.
 
 **Since:** 18
 

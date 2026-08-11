@@ -9,4 +9,4 @@ Describes the OpenHarmony Universal KeyStore (HUKS) capabilities, including key 
 
 | Name | Description |
 | -- | -- |
-| [native_huks_api.h](capi-native-huks-api-h.md) | Declares the APIs used to access the HUKS. |
+| [native_huks_api.h](capi-native-huks-api-h.md) | Declares the APIs used to access HUKS. |

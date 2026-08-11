@@ -1,10 +1,10 @@
 # SkillType
 
-枚举Skill类型。
+Enumerates the skill types.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
 
 <!--Device-unnamed-export enum SkillType--><!--Device-unnamed-export enum SkillType-End-->
 
@@ -16,11 +16,11 @@
 APP_SKILL = 0
 ```
 
-应用Skill。
+Indicates an app skill.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -36,11 +36,11 @@ APP_SKILL = 0
 INDEPENDENT_SKILL = 1
 ```
 
-独立Skill
+Indicates an independent skill.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
 

@@ -1,11 +1,5 @@
 # createImageCreator
 
-## 导入模块
-
-```TypeScript
-import { image } from 'kits/@kit.ImageKit';
-```
-
 ## createImageCreator
 
 ```TypeScript
@@ -90,7 +84,7 @@ function createImageCreator(size: Size, format: ImageFormat, capacity: int): Ima
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types; |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types; |
 
 ## 示例
 

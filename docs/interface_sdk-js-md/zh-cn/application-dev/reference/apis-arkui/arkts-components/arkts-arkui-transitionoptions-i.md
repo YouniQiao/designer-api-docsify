@@ -161,7 +161,7 @@ type?: TransitionType
 
 不指定type时默认为TransitionType.All，即插入删除都生效。
 
-**类型：** [TransitionType](../arkts-apis/arkts-arkui-transitiontype-e.md)
+**类型：** [TransitionType](../arkts-apis/arkts-arkui-enums-transitiontype-e.md)
 
 **起始版本：** 7
 

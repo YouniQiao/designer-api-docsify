@@ -22,7 +22,8 @@ Provides UI capabilities of ArkUI on the native side, such as UI component creat
 | [native_type.h](capi-native-type-h.md) | Defines the common types for the native module. |
 | [native_dialog.h](capi-native-dialog-h.md) | Defines a set of custom dialog box APIs of ArkUI on the native side. |
 | [error_code.h](capi-error-code-h.md) | Defines the error code for the native module. |
-| [drawable_descriptor.h](capi-drawable-descriptor-h.md) | Defines theNativeDrawableDescriptor for the native module. |
+| [common_type.h](capi-common-type-h.md) | Defines the common types for ArkUI native APIs. |
+| [drawable_descriptor.h](capi-drawable-descriptor-h.md) | Declares the APIs of **NativeDrawableDescriptor**. |
 | [native_node_napi.h](capi-native-node-napi-h.md) | Declares APIs for converting <b>FrameNode</b> objects on the ArkTS side to <b>ArkUI_NodeHandle</b> objects onthe native side. |
 | [styled_string.h](capi-styled-string-h.md) | Defines the text style and layout manager for the component whose {@link type} is set to **ARKUI_NODE_TEXTon the native side. |
 | [custom_span.h](capi-custom-span-h.md) | Defines a set of CustomSpan enum and interface. |
@@ -31,6 +32,7 @@ Provides UI capabilities of ArkUI on the native side, such as UI component creat
 | [common_attributes.h](capi-common-attributes-h.md) | Defines the common property and method types for the native module. |
 | [navigation_router.h](capi-navigation-router-h.md) | Defines a set of navigation or router enum and interface. |
 | [scroll.h](capi-scroll-h.md) | Provides shared scroll-related enum definitions for <b>NativeNode</b> APIs. |
+| [list_item.h](capi-list-item-h.md) | Provides shared list item-related type and function definitions for <b>NativeNode</b> APIs. |
 | [grid.h](capi-grid-h.md) | Provides Grid-related type and function definitions for <b>NativeNode</b> APIs. |
 | [custom_attributes.h](capi-custom-attributes-h.md) | Provides custom node event definitions for <b>NativeNode</b> APIs. |
 | [xcomponent.h](capi-xcomponent-h.md) | Defines xcomponent attribute enum value. |

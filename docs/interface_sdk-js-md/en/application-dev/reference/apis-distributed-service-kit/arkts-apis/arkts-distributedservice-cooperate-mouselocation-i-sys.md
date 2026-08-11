@@ -1,6 +1,6 @@
 # MouseLocation (System API)
 
-键鼠穿越的位置。
+Defines the mouse pointer position for screen hopping.
 
 **Since:** 12
 
@@ -24,7 +24,7 @@ import { cooperate } from 'kits/@kit.DistributedServiceKit';
 displayHeight: int
 ```
 
-屏幕高度，单位：px。
+Screen height, in pixels.
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
@@ -44,7 +44,7 @@ displayHeight: int
 displayWidth: int
 ```
 
-屏幕宽度，单位：px。
+Screen width, in pixels.
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
@@ -64,7 +64,7 @@ displayWidth: int
 displayX: int
 ```
 
-鼠标指针位于屏幕的X坐标上的位置。
+Position of the mouse pointer on the X coordinate of the screen.
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
@@ -84,7 +84,7 @@ displayX: int
 displayY: int
 ```
 
-鼠标指针位于屏幕的Y坐标上的位置。
+Position of the mouse pointer on the Y coordinate of the screen.
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 

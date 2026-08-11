@@ -1,6 +1,6 @@
 # GaugeConfiguration
 
-开发者需要自定义class实现ContentModifier接口。继承自[CommonConfiguration](arkts-arkui-common-commonconfiguration-i.md)。
+GaugeConfiguration used by content modifier
 
 **Inheritance/Implementation:** GaugeConfiguration extends [CommonConfiguration<GaugeConfiguration>](CommonConfiguration<GaugeConfiguration>)
 
@@ -18,7 +18,7 @@
 max: double
 ```
 
-当前数据段最大值。
+Current Segment Maximum Value.
 
 **Type:** double
 
@@ -38,7 +38,7 @@ max: double
 min: double
 ```
 
-当前数据段最小值。
+Current Segment Minimum Value.
 
 **Type:** double
 
@@ -58,7 +58,7 @@ min: double
 value: double
 ```
 
-当前数据值。
+Current data value.
 
 **Type:** double
 

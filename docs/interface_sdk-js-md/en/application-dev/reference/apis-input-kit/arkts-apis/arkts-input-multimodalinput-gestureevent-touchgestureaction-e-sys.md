@@ -1,6 +1,6 @@
 # TouchGestureAction (System API)
 
-触摸屏手势类型。
+Enumerates touchscreen gesture types.
 
 **Since:** 18
 
@@ -18,7 +18,7 @@
 SWIPE_DOWN = 0
 ```
 
-多指向下滑动。
+Multi-finger downward swipe.
 
 **Since:** 18
 

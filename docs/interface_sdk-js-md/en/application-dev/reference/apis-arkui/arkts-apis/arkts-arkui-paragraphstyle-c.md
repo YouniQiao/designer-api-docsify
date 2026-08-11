@@ -1,12 +1,13 @@
 # ParagraphStyle
 
-文本段落样式对象说明。
+Describes the text paragraph style.
 
-除首个段落外，后续段落按'\n'划分。
+Except the first paragraph, all paragraphs are formed using the escape character '\n'.
 
-每个段落的段落样式按首个占位设置的段落样式生效，未设置时，段落按被绑定组件的段落样式生效。
+The style of a paragraph is the one (if any) set for the first element or the paragraph style of the bound component.
 
-在API版本26.0.0之前，如果属性字符串段落内首个占位为[CustomSpan](arkts-arkui-customspan-c.md)或[ImageAttachment](arkts-arkui-imageattachment-c.md)时，设置在该段落上的段落样式不生效。从API版本26.0.0开始，设置段落样式生效。
+Before API version 26.0.0, if the first placeholder in a paragraph of the styled string is a  
+[CustomSpan](arkts-arkui-customspan-c.md) or [ImageAttachment](arkts-arkui-imageattachment-c.md), the paragraph style set for that paragraph does not take effect. From API version 26.0.0, the paragraph style takes effect.
 
 **Since:** 12
 
@@ -22,7 +23,7 @@
 constructor(value?: ParagraphStyleInterface)
 ```
 
-文本段落样式的构造函数。
+A constructor used to create a text paragraph style.
 
 **Since:** 12
 
@@ -40,7 +41,7 @@ constructor(value?: ParagraphStyleInterface)
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | [ParagraphStyleInterface](arkts-arkui-styledstring-paragraphstyleinterface-i.md) | No | 段落样式设置项。 &lt;br&gt;默认值：不传入时继承ParagraphStyleInterface各属性的默认值。 |
+| value | [ParagraphStyleInterface](arkts-arkui-styledstring-paragraphstyleinterface-i.md) | No | Paragraph style options. |
 
 ## leadingMargin
 
@@ -48,9 +49,9 @@ constructor(value?: ParagraphStyleInterface)
 readonly leadingMargin?: number | LeadingMarginPlaceholder
 ```
 
-获取属性字符串文本段落的缩进。
+Indent of the text paragraph.
 
-返回为number类型时，单位为vp。
+If the return value is of the number type, the unit is vp.
 
 **Type:** number \| LeadingMarginPlaceholder
 
@@ -72,7 +73,7 @@ readonly leadingMargin?: number | LeadingMarginPlaceholder
 readonly leadingMarginSpan?: LeadingMarginSpan
 ```
 
-获取属性字符串文本段落的自定义缩进信息。
+Custom indentation information for text paragraphs in the styled string.
 
 **Type:** [LeadingMarginSpan](arkts-arkui-styledstring-leadingmarginspan-c.md)
 
@@ -94,9 +95,7 @@ readonly leadingMarginSpan?: LeadingMarginSpan
 readonly maxLines?: number
 ```
 
-获取属性字符串文本段落的最大行数。
-
-取值范围：[0, INT32_MAX]，传入负数时不限制。
+Maximum number of lines in the text paragraph.
 
 **Type:** number
 
@@ -118,11 +117,7 @@ readonly maxLines?: number
 readonly overflow?: TextOverflow
 ```
 
-获取属性字符串文本段落超长时的显示方式。
-
-默认值：TextOverflow.None。
-
-需配合maxLines使用，单独设置不生效。不支持TextOverflow.MARQUEE。
+Display mode when the text is too long in the text paragraph.
 
 **Type:** [TextOverflow](arkts-arkui-enums-textoverflow-e.md)
 
@@ -144,9 +139,9 @@ readonly overflow?: TextOverflow
 readonly paragraphSpacing?: number
 ```
 
-获取属性字符串文本段落的段落间距。
+Paragraph spacing of the styled string text.
 
-单位：[vp](../../../reference/apis-arkui/arkui-ts/ts-pixel-units.md#基本像素单位)
+Unit: vp
 
 **Type:** number
 
@@ -168,10 +163,9 @@ readonly paragraphSpacing?: number
 readonly shaderStyle?: ShaderStyle
 ```
 
-获取文本着色器效果。
+Text shader effect.
 
-**说明：** 该接口与[TextStyleInterface](arkts-arkui-textstyleinterface-i.md)的strokeWidth同时设置时，该接口不生效，shaderStyle的优先级高于
-[TextStyleInterface](arkts-arkui-textstyleinterface-i.md)中的fontColor。
+**Since**: 26.0.0.
 
 **Type:** [ShaderStyle](arkts-arkui-shaderstyle-c.md)
 
@@ -193,15 +187,7 @@ readonly shaderStyle?: ShaderStyle
 readonly tailIndents?: Array<number>
 ```
 
-获取属性字符串文本段落的文本尾部缩进距离。
-
-单位：[vp](../../../reference/apis-arkui/arkui-ts/ts-pixel-units.md#基本像素单位) 
-
-取值范围：[0, INT32_MAX]
-
-值为0时不做尾部缩进。
-
-**说明：** tailIndents数组在同一段落内的每一行按数组索引依次取值做缩进；新的段落首行重新从tailIndents数组索引0位置开始取值做缩进。
+Get the tail indentation of the StyledString.The unit is vp.
 
 **Type:** Array&lt;number&gt;
 
@@ -223,9 +209,7 @@ readonly tailIndents?: Array<number>
 readonly textAlign?: TextAlign
 ```
 
-获取属性字符串文本段落在水平方向的对齐方式。
-
-**说明：** textAlign只能调整文本整体的布局，不影响字符的显示顺序。
+Horizontal alignment mode of the text paragraph.
 
 **Type:** [TextAlign](../../apis-arkgraphics2d/arkts-apis/arkts-arkgraphics2d-text-textalign-e.md)
 
@@ -247,7 +231,7 @@ readonly textAlign?: TextAlign
 readonly textDirection?: TextDirection
 ```
 
-获取文本方向。
+Text direction.
 
 **Type:** [TextDirection](../../apis-arkgraphics2d/arkts-apis/arkts-arkgraphics2d-text-textdirection-e.md)
 
@@ -269,7 +253,9 @@ readonly textDirection?: TextDirection
 readonly textIndent?: number
 ```
 
-获取属性字符串文本段落的首行文本缩进。单位：[vp](../../../reference/apis-arkui/arkui-ts/ts-pixel-units.md#基本像素单位)
+First line indent of the text paragraph.
+
+Unit: VP.
 
 **Type:** number
 
@@ -291,9 +277,11 @@ readonly textIndent?: number
 readonly textVerticalAlign?: TextVerticalAlign
 ```
 
-获取属性字符串文本段落在垂直方向的对齐方式。
+Vertical alignment mode of the text paragraph.
 
-一个段落下使用同一字号必须同时设置行高[lineHeight](arkts-arkui-text-textattribute-i.md#lineheight)或者同一个段落不同字号文本混排时才有效果差异，否则设置了该属性任意枚举值和未设置该属性都是一样的排版效果。属性字符串[TextStyle](arkts-arkui-textstyle-c.md)中的SuperscriptStyle上下角标样式仅在[TextVerticalAlign](arkts-arkui-textcommon-textverticalalign-e.md)属性值为TextVerticalAlign.BASELINE时生效，其余垂直对齐方式下上下角标文本和普通文本表现一致，无上下角标效果。
+The effect of this attribute is noticeable only when the same font size is used in a paragraph and  
+[lineHeight](arkts-arkui-text-textattribute-i.md#lineheight) is set, or when different font sizes are used in a paragraph and the font sizes are mixed. The **SuperscriptStyle** in [TextStyle](arkts-arkui-textstyle-c.md) takes effect only when the value of  
+[TextVerticalAlign](arkts-arkui-textcommon-textverticalalign-e.md) is set to **TextVerticalAlign.BASELINE**. In other vertical alignment modes, the superscript and subscript texts are displayed in the same way as the normal text.
 
 **Type:** [TextVerticalAlign](arkts-arkui-textverticalalign-e.md)
 
@@ -315,7 +303,7 @@ readonly textVerticalAlign?: TextVerticalAlign
 readonly wordBreak?: WordBreak
 ```
 
-获取属性字符串文本段落的断行规则。
+Word break rule of the text paragraph.
 
 **Type:** [WordBreak](arkts-arkui-enums-wordbreak-e.md)
 

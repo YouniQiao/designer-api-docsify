@@ -12,11 +12,14 @@ import { applicationManager } from 'kits/@kit.MDMKit';
 function removeHideLauncherIcon(admin: Want, bundleNames: Array<string>): void
 ```
 
-取消隐藏桌面应用图标名单。
+Removes applications from the home screen icon hide list.
 
-> **说明：**
+> **NOTE：**
 > 
-> 取消隐藏的应用会从桌面第2屏开始找空位显示；如果第2~18屏无空位，则在第1屏找空位；如果第1屏无空位，则在第2屏第1个应用的位置创建小文件夹放置应用。
+> After unhiding, applications will be placed in the first available slot starting from the second screen of the
+> home screen. If no empty slot is found on screens 2 to 18, it will search for an empty slot on the first screen.
+> If no empty slot is available on the first screen, a small folder will be created at the position of the first
+> application on the second screen to contain the applications.
 
 **Since:** 26.0.0
 
@@ -34,37 +37,16 @@ function removeHideLauncherIcon(admin: Want, bundleNames: Array<string>): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| admin | [Want](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-want-want-c.md) | Yes | 企业设备管理扩展组件。Want中必须包含企业设备管理扩展能力的abilityName和所在应用的bundleName。 |
-| bundleNames | Array&lt;string&gt; | Yes | 应用包名数组，指定需要取消隐藏的应用，最大支持500个。 |
+| admin | [Want](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-want-want-c.md) | Yes | EnterpriseAdminExtensionAbility. **Want** must contain the ability name of the EnterpriseAdminExtensionAbility and the bundle name of the application. |
+| bundleNames | Array&lt;string&gt; | Yes | Application bundle name array, which specifies the applications to be unhidden. A maximum of 500 applications are supported. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 9200012 | Parameter verification failed. |
-| 801 | Capability not supported. Failed to call the API due to limited device capabilities. |
-| 201 | Permission verification failed. The application does not have the permission required to call the API. |
-| 9200001 | The application is not an administrator application of the device. |
-| 9200002 | The administrator application does not have permission to manage the device. |
-
-## Examples
-
-```TypeScript
-import { applicationManager } from '@kit.MDMKit';
-import { Want } from '@kit.AbilityKit';
-
-let wantTemp: Want = {
-  // Replace it as required.
-  bundleName: 'com.example.myapplication',
-  abilityName: 'EnterpriseAdminAbility'
-};
-// Replace it as required.
-let bundleNames: Array<string> = ['com.example.test'];
-try {
-  applicationManager.removeHideLauncherIcon(wantTemp, bundleNames);
-  console.info('Succeeded in removing hide launcher icon.');
-} catch (err) {
-  console.error(`Failed to remove hide launcher icon. Code is ${err.code}, message is ${err.message}`);
-}
-```
+| [9200012](../errorcode-enterpriseDeviceManager.md#9200012-parameter-verification-failed) | Parameter verification failed. |
+| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. Failed to call the API due to limited device capabilities. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed. The application does not have the permission required to call the API. |
+| [9200001](../errorcode-enterpriseDeviceManager.md#9200001-deviceadmin-not-enabled) | The application is not an administrator application of the device. |
+| [9200002](../errorcode-enterpriseDeviceManager.md#9200002-permission-denied) | The administrator application does not have permission to manage the device. |
 

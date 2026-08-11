@@ -1,6 +1,6 @@
 # RingtoneOptions (System API)
 
-铃声参数选项。
+Enumerates the ringtone parameters.
 
 **Since:** 10
 
@@ -18,7 +18,7 @@
 loop: boolean
 ```
 
-是否开启循环播放，true表示开启循环播放，false表示不开启循环播放。
+Whether to enable loop playback. **true** to enable, **false** otherwise.
 
 **Type:** boolean
 
@@ -38,7 +38,7 @@ loop: boolean
 volume: double
 ```
 
-指定的相对音量大小，取值范围为[0.00, 1.00]，1表示最大音量，即100%。
+Relative volume. The value ranges from 0.00 to 1.00. The value **1.00** indicates the maximum volume (100%).
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：double
 

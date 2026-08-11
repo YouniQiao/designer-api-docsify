@@ -12,7 +12,7 @@ import { inputMethod } from 'kits/@kit.IMEKit';
 function getInputMethodSetting(): InputMethodSetting
 ```
 
-获取客户端设置实例[InputMethodSetting](arkts-ime-inputmethod-inputmethodsetting-i.md)。
+Input method setting
 
 **Since:** 8
 
@@ -30,7 +30,7 @@ function getInputMethodSetting(): InputMethodSetting
 
 | Type | Description |
 | --- | --- |
-| [InputMethodSetting](arkts-ime-inputmethod-inputmethodsetting-i.md) | 返回当前客户端设置实例。 |
+| [InputMethodSetting](arkts-ime-inputmethod-inputmethodsetting-i.md) | the object of InputMethodSetting |
 
 ## Examples
 

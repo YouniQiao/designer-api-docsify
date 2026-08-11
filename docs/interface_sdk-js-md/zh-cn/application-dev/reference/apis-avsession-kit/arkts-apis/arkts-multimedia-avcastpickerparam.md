@@ -3,12 +3,6 @@
 投播组件参数
 
 
-## 导入模块
-
-```TypeScript
-import { AVCastPickerColorMode, AVCastPickerState, AVCastPickerStyle } from 'kits/@kit.AVSessionKit';
-```
-
 ## 汇总
 
 ### 枚举

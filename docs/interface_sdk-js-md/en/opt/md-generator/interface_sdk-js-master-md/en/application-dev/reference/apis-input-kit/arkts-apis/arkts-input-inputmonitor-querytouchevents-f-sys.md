@@ -1,0 +1,66 @@
+# queryTouchEvents (System API)
+
+## Modules to Import
+
+```TypeScript
+import { inputMonitor } from 'kits/@kit.InputKit';
+```
+
+## queryTouchEvents
+
+```TypeScript
+function queryTouchEvents(count: number) : Promise<Array<TouchEvent>>
+```
+
+Queries recent touchscreen input events. A maximum of 100 events can be queried. Since API version 26.0.0, a maximum of 60 events can be queried. This API uses a promise to return the result.
+
+**Since:** 20
+
+**Required permissions:** ohos.permission.INPUT_MONITORING
+
+<!--Device-inputMonitor-function queryTouchEvents(count: int) : Promise<Array<TouchEvent>>--><!--Device-inputMonitor-function queryTouchEvents(count: int) : Promise<Array<TouchEvent>>-End-->
+
+**System capability:** SystemCapability.MultimodalInput.Input.InputMonitor
+
+**System API:** This is a system API.
+
+**Parameters:**
+
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| count | number | Yes |
+
+**Return value:**
+
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| Promise&lt;Array&lt;[TouchEvent](arkts-input-multimodalinput-touchevent-touchevent-i-sys.md)&gt;&gt; |
+
+**Error codes:**
+
+| Error Code ID |
+| --- |
+| [201](../../errorcode-universal.md#201-permission-denied) |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+
+## Examples
+
+```TypeScript
+import { inputMonitor, TouchEvent } from '@kit.InputKit'
+import { BusinessError } from '@kit.BasicServicesKit';
+
+try {
+  // Querying the Number of Touchscreen Events
+  inputMonitor.queryTouchEvents(10).then((events: Array<TouchEvent>) => {
+    events.forEach((event, index) => {
+      console.info(`Succeeded in querying touch event ${index}, actionTime=${event.actionTime}, sourceType=${event.sourceType}.`);
+    });
+  }).catch((error: BusinessError) => {
+    console.error(`Failed to query touch events promise, Code: ${(error as BusinessError).code}, message: ${(error as BusinessError).message}.`);
+  });
+} catch (error) {
+  const code = (error as BusinessError).code;
+  const message = (error as BusinessError).message;
+  console.error(`Failed to query touch events, Code: ${code}, message: ${message}.`);
+}
+```

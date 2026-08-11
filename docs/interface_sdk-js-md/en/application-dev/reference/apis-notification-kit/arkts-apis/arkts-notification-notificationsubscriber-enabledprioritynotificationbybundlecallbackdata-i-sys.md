@@ -1,6 +1,6 @@
 # EnabledPriorityNotificationByBundleCallbackData (System API)
 
-应用通知优先级开关状态。
+Returns the notification priority switch state.
 
 **Since:** 23
 
@@ -18,7 +18,7 @@
 readonly bundle: string
 ```
 
-应用的包名。
+Bundle name of the application.
 
 **Type:** string
 
@@ -38,7 +38,7 @@ readonly bundle: string
 readonly enableStatus: notificationManager.PriorityEnableStatus
 ```
 
-应用通知的优先使能状态。
+Whether the priority notification for an application is enabled.
 
 **Type:** notificationManager.PriorityEnableStatus
 
@@ -58,7 +58,7 @@ readonly enableStatus: notificationManager.PriorityEnableStatus
 readonly uid: int
 ```
 
-应用的uid。
+UID of the application.
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 

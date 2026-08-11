@@ -1,6 +1,6 @@
 # Table (System API)
 
-表结构信息。
+Represents the table information.
 
 **Since:** 11
 
@@ -24,7 +24,7 @@ import { cloudExtension } from 'kits/@kit.ArkData';
 alias: string
 ```
 
-该表在服务器数据库中的别名。
+Alias of the table in the database.
 
 **Type:** string
 
@@ -44,7 +44,7 @@ alias: string
 fields: Array<Field>
 ```
 
-数据库表中的字段结构信息。
+Field information in the table.
 
 **Type:** Array&lt;Field&gt;
 
@@ -64,7 +64,7 @@ fields: Array<Field>
 name: string
 ```
 
-表名。
+Table name.
 
 **Type:** string
 

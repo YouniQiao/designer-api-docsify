@@ -1,15 +1,15 @@
 # SaveButtonOptions
 
-用于设置保存控件的图标、文本、按钮类型等属性。
+Defines options for the save button, including icon, text, and button type.
 
-> **说明：**
+> **NOTE：**
 > 
-> - 建议icon或text至少传入一个。
+> - You are advised to specify at least one of **icon** or **text**.
+> - If neither **icon** nor **text** is specified, **SaveButton** is created with default styles as follows:
+> **SaveIconStyle** defaults to **FULL_FILLED**, **SaveDescription** to **DOWNLOAD**, and **ButtonType** to
+> **Capsule**.
 > 
-> - 如果icon、text都不传入，SaveButton将使用默认样式创建，默认样式：SaveIconStyle默认样式为FULL_FILLED；
-> SaveDescription默认样式为DOWNLOAD；ButtonType默认样式为Capsule。
-> 
-> - icon、text和buttonType不支持动态修改。
+> - The **icon**, **text**, and **buttonType** parameters do not support dynamic modification.
 
 **Since:** 10
 
@@ -25,7 +25,7 @@
 buttonType?: ButtonType
 ```
 
-设置保存控件的背景样式。默认值：ButtonType.Capsule。
+Background type of the **SaveButton** component.Default value: ButtonType.Capsule.
 
 **Type:** [ButtonType](../arkts-apis/arkts-arkui-button-buttontype-e.md)
 
@@ -47,7 +47,7 @@ buttonType?: ButtonType
 icon?: SaveIconStyle
 ```
 
-设置保存控件的图标风格。&lt;br&gt;不传入该参数表示不显示图标；若同时也不传text，整体配置将显示为默认样式。
+Icon style of the **SaveButton** component.&lt;br&gt;If this parameter is not specified, no icon is displayed. If neither **icon** nor **text** is provided, the component uses the default style.
 
 **Type:** [SaveIconStyle](arkts-arkui-saveiconstyle-e.md)
 
@@ -69,7 +69,7 @@ icon?: SaveIconStyle
 text?: SaveDescription
 ```
 
-设置保存控件的文本描述。&lt;br&gt;不传入该参数表示不显示文本描述；若同时也不传icon，整体配置将显示为默认样式。
+Text on the **SaveButton** component.&lt;br&gt;If this parameter is not specified, no text is displayed. If neither **text** nor **icon** is provided, the component uses the default style.
 
 **Type:** [SaveDescription](arkts-arkui-savedescription-e.md)
 

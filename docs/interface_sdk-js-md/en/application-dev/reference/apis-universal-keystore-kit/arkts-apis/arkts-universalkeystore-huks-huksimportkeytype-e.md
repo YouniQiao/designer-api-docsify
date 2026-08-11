@@ -1,6 +1,6 @@
 # HuksImportKeyType
 
-表示导入密钥的密钥类型，默认为导入公钥，导入对称密钥时不需要该字段。
+Enumerates the types of keys to import. By default, a public key is imported. This field is not required when a symmetric key is imported.
 
 **Since:** 9
 
@@ -18,7 +18,7 @@
 HUKS_KEY_TYPE_PUBLIC_KEY = 0
 ```
 
-表示导入的密钥类型为公钥。
+Public key
 
 **Since:** 9
 
@@ -38,7 +38,7 @@ HUKS_KEY_TYPE_PUBLIC_KEY = 0
 HUKS_KEY_TYPE_PRIVATE_KEY = 1
 ```
 
-表示导入的密钥类型为私钥。
+Private key
 
 **Since:** 9
 
@@ -58,7 +58,7 @@ HUKS_KEY_TYPE_PRIVATE_KEY = 1
 HUKS_KEY_TYPE_KEY_PAIR = 2
 ```
 
-表示导入的密钥类型为公私钥对。
+Public and private key pair
 
 **Since:** 9
 

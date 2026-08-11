@@ -1,6 +1,6 @@
 # RouterState
 
-定义路由器的状态。
+Defines the routing state.
 
 **Since:** 3
 
@@ -26,7 +26,7 @@ import { BackRouterOptions, DisableAlertBeforeBackPageOptions, RouterOptions, Ro
 index: number
 ```
 
-表示当前页面在页面栈中的索引。从栈底到栈顶，index从1开始递增。
+Index of the current page in the stack. The index starts from 1 from the bottom to the top of the stack.
 
 **Type:** number
 
@@ -48,7 +48,7 @@ index: number
 name: string
 ```
 
-表示当前页面的名称，即对应文件名。
+Name of the current page, that is, the file name.
 
 **Type:** string
 
@@ -70,7 +70,7 @@ name: string
 path: string
 ```
 
-表示当前页面的路径。
+Path of the current page.
 
 **Type:** string
 

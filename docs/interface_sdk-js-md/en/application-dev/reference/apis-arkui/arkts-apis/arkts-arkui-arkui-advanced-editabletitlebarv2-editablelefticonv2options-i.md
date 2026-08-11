@@ -1,6 +1,6 @@
 # EditableLeftIconV2Options
 
-左侧图标配置选项接口。
+Indicates the options of the left icon.
 
 **Since:** 26.0.0
 
@@ -22,7 +22,7 @@ import { EditableSaveButtonV2, EditableTitleBarStyleV2Options, EditableTitleBarS
 onAction?: OnActionCallback
 ```
 
-点击左侧图标的回调函数。未设置时，Back类型默认执行路由返回，Cancel类型无操作。
+Callback function when click on the left icon.
 
 **Since:** 26.0.0
 
@@ -40,13 +40,7 @@ onAction?: OnActionCallback
 defaultFocus?: boolean
 ```
 
-是否默认获取焦点。
-
-true：获焦。
-
-false：不获焦。
-
-默认值：false。
+Whether to get focus by default.
 
 **Type:** boolean
 
@@ -68,7 +62,7 @@ false：不获焦。
 iconType?: EditableLeftIconTypeV2
 ```
 
-图标类型。
+Icon type, Back or Cancel.
 
 **Type:** [EditableLeftIconTypeV2](arkts-arkui-arkui-advanced-editabletitlebarv2-editablelefticontypev2-e.md)
 

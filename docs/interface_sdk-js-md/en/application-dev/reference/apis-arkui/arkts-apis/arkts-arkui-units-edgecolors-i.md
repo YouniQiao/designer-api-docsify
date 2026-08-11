@@ -1,10 +1,6 @@
 # EdgeColors
 
-type EdgeColors = { top: ResourceColor; right: ResourceColor; bottom: ResourceColor; left: ResourceColor; }
-
-边框颜色，用于描述组件边框四条边的颜色。
-
-引入该对象时，至少传入一个参数。
+Defines the border color property.
 
 **Since:** 23
 
@@ -20,7 +16,7 @@ type EdgeColors = { top: ResourceColor; right: ResourceColor; bottom: ResourceCo
 bottom?: ResourceColor
 ```
 
-组件下边框颜色。
+bottom property.
 
 **Type:** [ResourceColor](arkts-arkui-resourcecolor-t.md)
 
@@ -40,7 +36,7 @@ bottom?: ResourceColor
 left?: ResourceColor
 ```
 
-组件左边框颜色。
+left property.
 
 **Type:** [ResourceColor](arkts-arkui-resourcecolor-t.md)
 
@@ -60,7 +56,7 @@ left?: ResourceColor
 right?: ResourceColor
 ```
 
-组件右边框颜色。
+right property.
 
 **Type:** [ResourceColor](arkts-arkui-resourcecolor-t.md)
 
@@ -80,7 +76,7 @@ right?: ResourceColor
 top?: ResourceColor
 ```
 
-组件上边框颜色。
+top property.
 
 **Type:** [ResourceColor](arkts-arkui-resourcecolor-t.md)
 

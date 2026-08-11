@@ -1,6 +1,6 @@
 # PanGestureEvent
 
-继承自[BaseGestureEvent](arkts-arkui-basegestureevent-i.md)。可将该对象作为[onGestureJudgeBegin](arkts-arkui-common-commonmethod-i.md#ongesturejudgebegin)的event参数来传递。
+Defines event info for pan gesture.
 
 **Inheritance/Implementation:** PanGestureEvent extends [BaseGestureEvent](arkts-arkui-basegestureevent-i.md)
 
@@ -18,7 +18,7 @@
 offsetX: double
 ```
 
-手势事件x轴相对当前组件元素原始区域的偏移量，单位为vp，从左向右滑动offsetX为正，反之为负。
+Gesture event offset X.The unit is vp.
 
 **Type:** double
 
@@ -38,7 +38,7 @@ offsetX: double
 offsetY: double
 ```
 
-手势事件y轴相对当前组件元素原始区域的偏移量，单位为vp，从上向下滑动offsetY为正，反之为负。
+Gesture event offset Y.The unit is vp.
 
 **Type:** double
 
@@ -58,7 +58,7 @@ offsetY: double
 velocity: double
 ```
 
-获取当前的主方向速度。为xy轴方向速度的平方和的算术平方根。单位为vp/s。
+velocity of the gesture.
 
 **Type:** double
 
@@ -78,7 +78,7 @@ velocity: double
 velocityX: double
 ```
 
-获取当前手势的x轴方向速度。坐标轴原点为屏幕左上角，分正负方向速度，从左往右为正，反之为负。单位为vp/s。
+X-axis velocity of the gesture.
 
 **Type:** double
 
@@ -98,7 +98,7 @@ velocityX: double
 velocityY: double
 ```
 
-获取当前手势的y轴方向速度。坐标轴原点为屏幕左上角，分正负方向速度，从上往下为正，反之为负。单位为vp/s。
+Y-axis velocity of the gesture.
 
 **Type:** double
 

@@ -1,6 +1,6 @@
 # QueryArg (System API)
 
-系统事件查询参数对象接口。
+Defines arguments for an event query.
 
 **Since:** 9
 
@@ -24,7 +24,7 @@ import { hiSysEvent } from 'kits/@kit.PerformanceAnalysisKit';
 beginTime: long
 ```
 
-查询的系统事件起始时间（13位时间戳），表示距1970年1月1日0时0分0秒0毫秒的毫秒数。
+Start time of the system event to be queried. The value is a 13-digit timestamp, indicating the number of milliseconds elapsed since 00:00:00:00 on January 1, 1970.
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：long
 
@@ -44,7 +44,7 @@ beginTime: long
 endTime: long
 ```
 
-查询的系统事件结束时间（13位时间戳），表示距1970年1月1日0时0分0秒0毫秒的毫秒数。
+End time of the system event to be queried. The value is a 13-digit timestamp, indicating the number of milliseconds elapsed since 00:00:00:00 on January 1, 1970.
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：long
 
@@ -64,7 +64,7 @@ endTime: long
 fromSeq?: long
 ```
 
-查询的系统事件起始序列号，默认值为-1。
+Start SN of the events to be queried. The default value is **-1**
 
 **Type:** long
 
@@ -84,7 +84,7 @@ fromSeq?: long
 maxEvents: long
 ```
 
-查询的系统事件最多条数。
+Maximum number of events that can be queried.
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：long
 
@@ -104,7 +104,7 @@ maxEvents: long
 toSeq?: long
 ```
 
-查询的系统事件结束序列号，默认值为-1。
+End SN of the system events to be queried. The default value is **-1**.
 
 **Type:** long
 

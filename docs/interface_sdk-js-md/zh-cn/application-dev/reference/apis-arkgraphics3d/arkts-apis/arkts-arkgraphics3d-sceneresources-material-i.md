@@ -1,6 +1,6 @@
 # Material
 
-材质资源.
+材质类型，继承自[SceneResource](arkts-arkgraphics3d-sceneresources-sceneresource-i.md)。
 
 **继承/实现关系：** Material extends [SceneResource](arkts-arkgraphics3d-sceneresources-sceneresource-i.md)
 
@@ -18,7 +18,7 @@
 alphaCutoff?: double
 ```
 
-透明度截止值[0,1]. Enabled if < 1.
+透明通道阈值，如果像素的alpha值等于或高于此阈值，则渲染该像素；如果低于此阈值，则不会渲染该像素。设置值小于1时，则开启该模式，取值范围为[0, 1]，默认值为1。
 
 **类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：double
 
@@ -36,7 +36,7 @@ alphaCutoff?: double
 blend?: Blend
 ```
 
-控制是否启用混合
+材质的透明效果设置，默认值为undefined，即禁用材质的透明属性。
 
 **类型：** [Blend](arkts-arkgraphics3d-sceneresources-blend-i.md)
 
@@ -56,7 +56,7 @@ blend?: Blend
 cullMode?: CullMode
 ```
 
-剔除模式.
+当前材质的剔除模式设置，用于控制是否剔除背面几何面片，默认值为BACK。
 
 **类型：** [CullMode](arkts-arkgraphics3d-sceneresources-cullmode-e.md)
 
@@ -74,7 +74,7 @@ cullMode?: CullMode
 readonly materialType: MaterialType
 ```
 
-材质资源类型.
+材质类型。
 
 **类型：** [MaterialType](../../apis-arkui/arkts-apis/arkts-arkui-uimaterial-materialtype-e.md)
 
@@ -92,7 +92,7 @@ readonly materialType: MaterialType
 polygonMode?: PolygonMode
 ```
 
-材质的多边形模式
+模型的多边形绘制模式，默认值为FILL。
 
 **类型：** [PolygonMode](arkts-arkgraphics3d-sceneresources-polygonmode-e.md)
 
@@ -112,7 +112,7 @@ polygonMode?: PolygonMode
 renderSort?: RenderSort
 ```
 
-层的渲染排序优先级.
+渲染排序设置，用于控制材质在渲染管线中的渲染顺序，渲染图层id默认值为32，同一图层内的渲染顺序默认值为0。
 
 **类型：** [RenderSort](arkts-arkgraphics3d-sceneresources-rendersort-i.md)
 
@@ -130,7 +130,7 @@ renderSort?: RenderSort
 shadowReceiver?: boolean
 ```
 
-定义材质是否可以接收阴影.
+材质是否接收阴影。true表示该材质接收阴影，false表示不接收，默认值为false。
 
 **类型：** boolean
 

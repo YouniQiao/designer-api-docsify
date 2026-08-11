@@ -4,7 +4,7 @@
 export type SelectionMenuOnCopyCallback = (event?: EditorEventInfo) => void
 ```
 
-替代内置系统菜单复制项的事件回调。
+Defines a SelectionMenu callback when onCopy.
 
 **Since:** 23
 
@@ -20,5 +20,5 @@ export type SelectionMenuOnCopyCallback = (event?: EditorEventInfo) => void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| event | [EditorEventInfo](arkts-arkui-arkui-advanced-selectionmenu-editoreventinfo-i.md) | No | 事件信息。 |
+| event | [EditorEventInfo](arkts-arkui-arkui-advanced-selectionmenu-editoreventinfo-i.md) | No | the event info. |
 

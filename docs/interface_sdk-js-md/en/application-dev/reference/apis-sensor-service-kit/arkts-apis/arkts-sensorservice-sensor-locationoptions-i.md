@@ -1,6 +1,6 @@
 # LocationOptions
 
-指示地理位置，用于传入经纬度和海拔信息以计算地磁场。
+Describes the geographical location.
 
 **Since:** 8
 
@@ -22,7 +22,7 @@ import { sensor } from 'kits/@kit.SensorServiceKit';
 altitude: double
 ```
 
-海拔高度。单位：m（米）。
+Altitude, in m.
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：double
 
@@ -40,7 +40,7 @@ altitude: double
 latitude: double
 ```
 
-纬度。取值范围：[-90, 90]。单位：degree（度）。
+Latitude, in degrees.
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：double
 
@@ -58,7 +58,7 @@ latitude: double
 longitude: double
 ```
 
-经度。取值范围：[-180, 180]。单位：degree（度）。
+Longitude, in degrees.
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：double
 

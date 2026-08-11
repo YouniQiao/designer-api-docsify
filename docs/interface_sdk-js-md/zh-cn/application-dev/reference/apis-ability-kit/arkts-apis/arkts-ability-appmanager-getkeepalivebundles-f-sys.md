@@ -1,11 +1,5 @@
 # getKeepAliveBundles（系统接口）
 
-## 导入模块
-
-```TypeScript
-import { appManager } from 'kits/@kit.AbilityKit';
-```
-
 ## getKeepAliveBundles
 
 ```TypeScript
@@ -44,11 +38,11 @@ function getKeepAliveBundles(type: KeepAliveAppType, userId?: int): Promise<Arra
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
-| 801 | Capability not supported. |
-| 16000050 | Internal error. |
-| 201 | Permission denied. |
-| 202 | Not system application. |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| [801](../../errorcode-universal.md#801-该设备不支持此api) | Capability not supported. |
+| [16000050](../errorcode-ability.md#16000050-内部错误) | Internal error. |
+| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not system application. |
 
 ## 示例
 
@@ -60,9 +54,11 @@ let userId = 100;
 let type: appManager.KeepAliveAppType = appManager.KeepAliveAppType.THIRD_PARTY;
 try {
   appManager.getKeepAliveBundles(type, userId).then((data) => {
-    console.info(`getKeepAliveBundles success, data: ${JSON.stringify(data)}`);
-  }).catch((err: BusinessError) => {
-    console.error(`getKeepAliveBundles fail, err: ${JSON.stringify(err)}`);
+    console.info(`getKeepAliveBundles success, data: ${data}`);
+  }).catch((paramError: Error) => {
+    let code = (paramError as BusinessError).code;
+    let message = (paramError as BusinessError).message;
+    console.error(`getKeepAliveBundles fail, err: ${code}, ${message}`);
   });
 } catch (paramError) {
   let code = (paramError as BusinessError).code;

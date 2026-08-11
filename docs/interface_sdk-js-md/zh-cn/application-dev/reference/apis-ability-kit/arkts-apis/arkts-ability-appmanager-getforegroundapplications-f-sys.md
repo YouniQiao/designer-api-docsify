@@ -1,11 +1,5 @@
 # getForegroundApplications（系统接口）
 
-## 导入模块
-
-```TypeScript
-import { appManager } from 'kits/@kit.AbilityKit';
-```
-
 ## getForegroundApplications
 
 ```TypeScript
@@ -36,10 +30,10 @@ function getForegroundApplications(callback: AsyncCallback<Array<AppStateData>>)
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
-| 16000050 | Internal error. |
-| 201 | Permission denied. |
-| 202 | Not system application. |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| [16000050](../errorcode-ability.md#16000050-内部错误) | Internal error. |
+| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not system application. |
 
 ## 示例
 
@@ -47,7 +41,8 @@ function getForegroundApplications(callback: AsyncCallback<Array<AppStateData>>)
 import { appManager } from '@kit.AbilityKit';
 import { BusinessError } from '@kit.BasicServicesKit';
 
-function getForegroundApplicationsCallback(err: BusinessError, data: Array<appManager.AppStateData>) {
+function getForegroundApplicationsCallback(err: BusinessError | null,
+  data: Array<appManager.AppStateData> | undefined) {
   if (err) {
     console.error(`getForegroundApplicationsCallback fail, err: ${JSON.stringify(err)}`);
   } else {
@@ -95,9 +90,9 @@ function getForegroundApplications(): Promise<Array<AppStateData>>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 16000050 | Internal error. |
-| 201 | Permission denied. |
-| 202 | Not system application. |
+| [16000050](../errorcode-ability.md#16000050-内部错误) | Internal error. |
+| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not system application. |
 
 ## 示例
 

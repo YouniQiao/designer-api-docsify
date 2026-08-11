@@ -1,8 +1,6 @@
 # ImageCompleteEvent
 
-图片数据加载成功和解码成功时触发回调的返回对象。
-
-当组件的参数类型为[AnimatedDrawableDescriptor](arkts-arkui-arkui-drawabledescriptor-animateddrawabledescriptor-c.md)时该事件不触发。
+ImageCompleteEvent
 
 **Since:** 23
 
@@ -18,9 +16,7 @@
 componentHeight: int
 ```
 
-组件的高。
-
-单位：像素
+The height of the component source.
 
 **Type:** int
 
@@ -40,9 +36,7 @@ componentHeight: int
 componentWidth: int
 ```
 
-组件的宽。
-
-单位：像素
+The width of the component source.
 
 **Type:** int
 
@@ -62,13 +56,7 @@ componentWidth: int
 contentHeight: int
 ```
 
-图片实际绘制的高度。
-
-单位：像素
-
-**说明：**
-
-仅在loadingStatus返回1时有效。
+The height of the picture that is actually drawn.
 
 **Type:** int
 
@@ -88,13 +76,7 @@ contentHeight: int
 contentOffsetX: int
 ```
 
-实际绘制内容相对于组件自身的x轴偏移。
-
-单位：像素
-
-**说明：**
-
-仅在loadingStatus返回1时有效。
+The actual draw is offset from the x-axis of the component itself.
 
 **Type:** int
 
@@ -114,13 +96,7 @@ contentOffsetX: int
 contentOffsetY: int
 ```
 
-实际绘制内容相对于组件自身的y轴偏移。
-
-单位：像素
-
-**说明：**
-
-仅在loadingStatus返回1时有效。
+The actual draw is offset from the y-axis of the component itself.
 
 **Type:** int
 
@@ -140,13 +116,7 @@ contentOffsetY: int
 contentWidth: int
 ```
 
-图片实际绘制的宽度。
-
-单位：像素
-
-**说明：**
-
-仅在loadingStatus返回1时有效。
+The width of the picture that is actually drawn.
 
 **Type:** int
 
@@ -166,9 +136,7 @@ contentWidth: int
 height: int
 ```
 
-图片的高。
-
-单位：像素
+The height of the image source.
 
 **Type:** int
 
@@ -188,11 +156,7 @@ height: int
 loadingStatus: int
 ```
 
-图片加载成功的状态值。
-
-**说明：**
-
-返回的状态值为0时，表示图片数据加载成功。返回的状态值为1时，表示图片解码成功。
+The value of the status of the image being loaded successfully.If the returned status value is 0, the image data is successfully loaded.If the returned status value is 1, the image is successfully decoded.
 
 **Type:** int
 
@@ -212,9 +176,7 @@ loadingStatus: int
 width: int
 ```
 
-图片的宽。
-
-单位：像素
+The width of the image source.
 
 **Type:** int
 

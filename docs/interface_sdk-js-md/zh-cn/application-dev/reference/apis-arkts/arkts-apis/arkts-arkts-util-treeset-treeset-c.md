@@ -10,12 +10,6 @@ TreeSet基于[TreeMap](arkts-util-treemap.md)实现，在TreeSet中，仅处理�
 
 **系统能力：** SystemCapability.Utils.Lang
 
-## 导入模块
-
-```TypeScript
-import { TreeSet } from 'kits/@kit.ArkTS';
-```
-
 ## $_iterator
 
 ```TypeScript
@@ -38,7 +32,26 @@ $_iterator(): IterableIterator<T>
 
 | 类型 | 说明 |
 | --- | --- |
-| [IterableIterator](arkts-arkts-iterator-iterableiterator-i.md)&lt;T&gt; | TreeSet的迭代器。 |
+| IterableIterator&lt;T&gt; | TreeSet的迭代器。 |
+
+## 示例
+
+```TypeScript
+let treeSet : TreeSet<string> = new TreeSet<string>();
+treeSet.add("squirrel");
+treeSet.add("sparrow");
+// 使用方法一：
+for (let item of treeSet) {
+  console.info("value:" + item);
+}
+// 使用方法二：
+let iter = treeSet.$_iterator();
+let temp = iter.next().value;
+while(temp != undefined) {
+  console.info("value:" + temp);
+  temp = iter.next().value;
+}
+```
 
 ## [Symbol.iterator]
 
@@ -62,13 +75,13 @@ $_iterator(): IterableIterator<T>
 
 | 类型 | 说明 |
 | --- | --- |
-| [IterableIterator](arkts-arkts-iterator-iterableiterator-i.md)&lt;T&gt; | 返回包含TreeSet中所有元素的迭代器。 |
+| IterableIterator&lt;T&gt; | 返回包含TreeSet中所有元素的迭代器。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 10200011 | The Symbol.iterator method cannot be bound. |
+| [10200011](../errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) | The Symbol.iterator method cannot be bound. |
 
 ## 示例
 
@@ -139,7 +152,7 @@ add(value: T): boolean
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 10200011 | The add method cannot be bound. |
+| [10200011](../errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) | The add method cannot be bound. |
 
 ## 示例
 
@@ -171,7 +184,7 @@ clear(): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 10200011 | The clear method cannot be bound. |
+| [10200011](../errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) | The clear method cannot be bound. |
 
 ## 示例
 
@@ -206,13 +219,13 @@ TreeSet的构造函数，支持通过比较函数对元素进行升序或降序�
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| comparator | (firstValue: T, secondValue: T) =&gt; boolean | 否 | 比较函数。 comparator（可选）用户自定义的比较函数。 firstValue（必填）前一项元素。 secondValue（必填）后一项元素。 |
+| comparator | (firstValue: T, secondValue: T) =&gt; boolean | 否 | 用户自定义的比较函数，可通过比较关系对元素排序。默认值为null，表示不提供比较函数。 取值原则：比较函数返回值决定排序方向，返回firstValue &lt; secondValue为升序排序，返回firstValue &gt; secondValue为降序排序。 firstValue（必填）比较函数中的第一个比较元素，与secondValue比较后决定排序方向。 secondValue（必填）比较函数中的第二个比较元素，与firstValue比较后决定排序方向。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 10200012 | The TreeSet's constructor cannot be directly invoked. |
+| [10200012](../errorcode-utils.md#10200012-构造函数调用异常) | The TreeSet's constructor cannot be directly invoked. |
 
 ## 示例
 
@@ -280,6 +293,51 @@ TreeSet的构造函数，支持通过比较函数对元素进行升序或降序�
 | --- | --- | --- | --- |
 | comparator | [TreeSetComparator](arkts-arkts-treesetcomparator-t.md)&lt;T&gt; | 否 | 比较函数。 comparator（可选）用户自定义的比较函数。 |
 
+## 示例
+
+```TypeScript
+// 默认构造
+let treeSet : TreeSet<string | int | boolean | Object> = new TreeSet<string | int | boolean | Object>();
+```
+
+```TypeScript
+import { TreeSetComparator } from '@kit.ArkTS';
+
+// 使用comparator firstValue < secondValue，表示期望结果为升序排序。反之firstValue > secondValue，表示为降序排序。
+let treeSetCb: TreeSetComparator<string> = (firstValue: string, secondValue: string): double => {
+  return secondValue.compareTo(firstValue);
+};
+let treeSet: TreeSet<string> = new TreeSet<string>(treeSetCb);
+treeSet.add("a");
+treeSet.add("c");
+treeSet.add("d");
+treeSet.add("b");
+let numbers = Array.from(treeSet.values());
+for (let item of numbers) {
+  console.info("TreeSet: " + item);
+}
+```
+
+```TypeScript
+// 当插入自定义类型时，则必须要提供比较函数。
+class TestEntry{
+  public id: int = 0;
+}
+let treeSetCb: TreeSetComparator<TestEntry> = (firstValue: TestEntry, secondValue: TestEntry): double => {
+  return secondValue.compareTo(firstValue);
+};
+let ts1: TreeSet<TestEntry> = new TreeSet<TestEntry>(treeSetCb);
+let entry1: TestEntry = {
+  id: 0
+};
+let entry2: TestEntry = {
+  id: 1
+}
+ts1.add(entry1);
+ts1.add(entry2);
+console.info("treeSet: ", ts1.length);
+```
+
 ## entries
 
 ```TypeScript
@@ -302,15 +360,17 @@ entries(): IterableIterator<[T, T]>
 
 | 类型 | 说明 |
 | --- | --- |
-| [IterableIterator](arkts-arkts-iterator-iterableiterator-i.md)&lt;[T, T]&gt; | 返回包含TreeSet中所有元素键值对的迭代器对象，每个键值对中键与值相同，均为元素本身。 |
+| IterableIterator&lt;[T, T]&gt; | 返回包含TreeSet中所有元素键值对的迭代器对象，每个键值对中键与值相同，均为元素本身。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 10200011 | The entries method cannot be bound. |
+| [10200011](../errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) | The entries method cannot be bound. |
 
 ## 示例
+
+ArkTS-Dyn示例：
 
 ```TypeScript
 let treeSet = new TreeSet<string>();
@@ -339,6 +399,31 @@ for(let i = 0; i < 10; i++) {
 }
 ```
 
+ArkTS-Sta示例：
+
+```TypeScript
+let treeSet : TreeSet<string> = new TreeSet<string>();
+treeSet.add("squirrel");
+treeSet.add("sparrow");
+let it = treeSet.entries();
+let t: IteratorResult<[string, string]> = it.next();
+while(!t.done) {
+  console.info("TreeSet: " + t.value);
+  t = it.next()
+}
+```
+
+```TypeScript
+// 不建议在entries中使用set、remove方法，因其可能导致迭代过程中的状态异常，建议使用for循环来进行安全的插入与删除操作。
+let treeSet : TreeSet<string> = new TreeSet<string>();
+for(let i = 0; i < 10; i++) {
+  treeSet.add("sparrow" + i);
+}
+for(let i = 0; i < 10; i++) {
+  treeSet.remove("sparrow" + i);
+}
+```
+
 ## forEach
 
 ```TypeScript
@@ -362,13 +447,13 @@ forEach(callbackFn: (value?: T, key?: T, set?: TreeSet<T>) => void, thisArg?: Ob
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | callbackFn | (value?: T, key?: T, set?: TreeSet&lt;T&gt;) =&gt; void | 是 | 遍历实例对象中每个元素时调用的回调函数，开发者可在回调中对元素及其下标进行自定义处理。 |
-| thisArg | Object | 否 | callbackFn被调用时用作this值。当需要在回调函数中使用特定的this上下文（如访问外部对象属性）时传入此参数。 不传入时默认值为当前实例对象，回调函数中的this指向TreeSet实例本身。 |
+| thisArg | Object | 否 | callbackFn被调用时用作this值。当需要在回调函数中使用特定的this上下文（如访问外部对象属性）时传入此参数。不传入时默认值为当前实例对象， 回调函数中的this指向TreeSet实例本身。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 10200011 | The forEach method cannot be bound. |
+| [10200011](../errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) | The forEach method cannot be bound. |
 
 ## 示例
 
@@ -401,7 +486,7 @@ for (let i = 0; i < 10; i++) {
 forEach(callbackFn: TreeSetForEachCb<T>): void
 ```
 
-通过回调函数来遍历实例对象上的元素及其下标。
+通过回调函数来遍历实例对象上的元素。
 
 **起始版本：** 23
 
@@ -417,7 +502,21 @@ forEach(callbackFn: TreeSetForEachCb<T>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callbackFn | [TreeSetForEachCb](arkts-arkts-treesetforeachcb-t.md)&lt;T&gt; | 是 | 回调函数。 |
+| callbackFn | [TreeSetForEachCb](arkts-arkts-treesetforeachcb-t.md)&lt;T&gt; | 是 | 遍历实例对象中每个元素时调用的回调函数，开发者可在回调中对元素及其下标进行自定义处理。 |
+
+## 示例
+
+```TypeScript
+import { TreeSetForEachCb } from '@kit.ArkTS';
+
+let treeSet: TreeSet<string> = new TreeSet<string>();
+treeSet.add("sparrow");
+treeSet.add("gull");
+let treeSetCb: TreeSetForEachCb<string> = (value: string, key: string, set: TreeSet<string>) => {
+  console.info("value: " + value, " key: "+ key);
+};
+treeSet.forEach(treeSetCb);
+```
 
 ## getFirstValue
 
@@ -447,8 +546,8 @@ getFirstValue(): T
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 10200011 | The getFirstValue method cannot be bound. |
-| 10200010 | Container is empty.<br>**适用版本：** 23+  **ArkTS模式：** 该错误码仅适用于ArkTS-Sta。 |
+| [10200011](../errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) | The getFirstValue method cannot be bound. |
+| [10200010](../errorcode-utils.md#10200010-容器为空) | Container is empty.<br>**适用版本：** 23+  **ArkTS模式：** 该错误码仅适用于ArkTS-Sta。 |
 
 ## 示例
 
@@ -494,7 +593,7 @@ getHigherValue(key: T): T
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 10200011 | The getHigherValue method cannot be bound. |
+| [10200011](../errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) | The getHigherValue method cannot be bound. |
 
 ## 示例
 
@@ -541,7 +640,17 @@ getHigherValue(key: T): T | undefined
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 10200010 | Container is empty. |
+| [10200010](../errorcode-utils.md#10200010-容器为空) | Container is empty. |
+
+## 示例
+
+```TypeScript
+let treeSet : TreeSet<string> = new TreeSet<string>();
+treeSet.add("squirrel");
+treeSet.add("sparrow");
+treeSet.add("gander");
+let result = treeSet.getHigherValue("sparrow");
+```
 
 ## getLastValue
 
@@ -571,8 +680,8 @@ getLastValue(): T
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 10200011 | The getLastValue method cannot be bound. |
-| 10200010 | Container is empty.<br>**适用版本：** 23+  **ArkTS模式：** 该错误码仅适用于ArkTS-Sta。 |
+| [10200011](../errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) | The getLastValue method cannot be bound. |
+| [10200010](../errorcode-utils.md#10200010-容器为空) | Container is empty.<br>**适用版本：** 23+  **ArkTS模式：** 该错误码仅适用于ArkTS-Sta。 |
 
 ## 示例
 
@@ -618,7 +727,7 @@ getLowerValue(key: T): T
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 10200011 | The getLowerValue method cannot be bound. |
+| [10200011](../errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) | The getLowerValue method cannot be bound. |
 
 ## 示例
 
@@ -665,7 +774,17 @@ getLowerValue(key: T): T | undefined
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 10200010 | Container is empty. |
+| [10200010](../errorcode-utils.md#10200010-容器为空) | Container is empty. |
+
+## 示例
+
+```TypeScript
+let treeSet : TreeSet<string> = new TreeSet<string>();
+treeSet.add("squirrel");
+treeSet.add("sparrow");
+treeSet.add("gander");
+let result = treeSet.getLowerValue("sparrow");
+```
 
 ## has
 
@@ -701,9 +820,11 @@ has(value: T): boolean
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 10200011 | The has method cannot be bound. |
+| [10200011](../errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) | The has method cannot be bound. |
 
 ## 示例
+
+ArkTS-Dyn示例：
 
 ```TypeScript
 let treeSet = new TreeSet<number>();
@@ -711,6 +832,15 @@ treeSet.add(123);
 // 判断容器中是否包含指定元素
 let result = treeSet.has(123);
 console.info('result:', result); // result: true
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+let treeSet : TreeSet<int> = new TreeSet<int>();
+treeSet.add(123);
+let result = treeSet.has(123);
+console.info("result = " + result); // result = true
 ```
 
 ## isEmpty
@@ -741,9 +871,19 @@ isEmpty(): boolean
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 10200011 | The isEmpty method cannot be bound. |
+| [10200011](../errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) | The isEmpty method cannot be bound. |
 
 ## 示例
+
+ArkTS-Dyn示例：
+
+```TypeScript
+const treeSet : TreeSet<string | number | boolean | Object>  = new TreeSet<string | number | boolean | Object>();
+let result = treeSet.isEmpty();
+console.info("result:", result);  // result: true
+```
+
+ArkTS-Sta示例：
 
 ```TypeScript
 let treeSet = new TreeSet<string>();
@@ -780,8 +920,8 @@ popFirst(): T
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 10200011 | The popFirst method cannot be bound. |
-| 10200010 | Container is empty.<br>**适用版本：** 23+  **ArkTS模式：** 该错误码仅适用于ArkTS-Sta。 |
+| [10200011](../errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) | The popFirst method cannot be bound. |
+| [10200010](../errorcode-utils.md#10200010-容器为空) | Container is empty.<br>**适用版本：** 23+  **ArkTS模式：** 该错误码仅适用于ArkTS-Sta。 |
 
 ## 示例
 
@@ -821,8 +961,8 @@ popLast(): T
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 10200011 | The popLast method cannot be bound. |
-| 10200010 | Container is empty.<br>**适用版本：** 23+  **ArkTS模式：** 该错误码仅适用于ArkTS-Sta。 |
+| [10200011](../errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) | The popLast method cannot be bound. |
+| [10200010](../errorcode-utils.md#10200010-容器为空) | Container is empty.<br>**适用版本：** 23+  **ArkTS模式：** 该错误码仅适用于ArkTS-Sta。 |
 
 ## 示例
 
@@ -868,7 +1008,7 @@ remove(value: T): boolean
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 10200011 | The remove method cannot be bound. |
+| [10200011](../errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) | The remove method cannot be bound. |
 
 ## 示例
 
@@ -902,13 +1042,13 @@ values(): IterableIterator<T>
 
 | 类型 | 说明 |
 | --- | --- |
-| [IterableIterator](arkts-arkts-iterator-iterableiterator-i.md)&lt;T&gt; | 返回包含TreeSet中所有元素的迭代器。 |
+| IterableIterator&lt;T&gt; | 返回包含TreeSet中所有元素的迭代器。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 10200011 | The values method cannot be bound. |
+| [10200011](../errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) | The values method cannot be bound. |
 
 ## 示例
 

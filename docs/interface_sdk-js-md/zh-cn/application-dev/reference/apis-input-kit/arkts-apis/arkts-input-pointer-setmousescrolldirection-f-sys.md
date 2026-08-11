@@ -1,11 +1,5 @@
 # setMouseScrollDirection（系统接口）
 
-## 导入模块
-
-```TypeScript
-import { pointer } from 'kits/@kit.InputKit';
-```
-
 ## setMouseScrollDirection
 
 ```TypeScript
@@ -42,11 +36,13 @@ function setMouseScrollDirection(inverted: boolean): Promise<void>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 3800001 | Input service exception. |
-| 201 | permission denied. |
-| 202 | SystemAPI permission error. |
+| [3800001](../errorcode-infraredemitter.md#3800001-多模输入服务内部错误) | Input service exception. |
+| [201](../../errorcode-universal.md#201-权限校验失败) | permission denied. |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | SystemAPI permission error. |
 
 ## 示例
+
+ArkTS-Dyn示例:
 
 ```TypeScript
 import { pointer } from '@kit.InputKit';
@@ -66,6 +62,34 @@ struct Index {
             }).catch((error: BusinessError) => {
               console.error(`Failed to set mouse scroll direction, Code: ${(error as BusinessError).code}, message: ${(error as BusinessError).message}.`);
             })
+          } catch (error) {
+            console.error(`Failed to set mouse scroll direction, Code: ${(error as BusinessError).code}, message: ${(error as BusinessError).message}.`);
+          }
+        })
+    }
+  }
+}
+```
+
+ArkTS-Sta示例:
+
+```TypeScript
+import { Entry, Text, RelativeContainer, Component } from '@kit.ArkUI';
+import { pointer } from '@kit.InputKit';
+import { BusinessError, AsyncCallback } from '@kit.BasicServicesKit';
+
+@Entry
+@Component
+struct Index {
+  build() {
+    RelativeContainer() {
+      Text("setMouseScrollDirection")
+        .onClick(() => {
+          try {
+            // 设置鼠标滚动方向
+            pointer.setMouseScrollDirection(false).then(() => {
+              console.info(`Succeeded in setting mouse scroll direction.`);
+            });
           } catch (error) {
             console.error(`Failed to set mouse scroll direction, Code: ${(error as BusinessError).code}, message: ${(error as BusinessError).message}.`);
           }

@@ -1,6 +1,6 @@
 # DngMetadata
 
-Dng图像元数据类，用于存储图像的元数据。
+DNG metadata.
 
 **Since:** 24
 
@@ -22,7 +22,7 @@ import { image } from 'kits/@kit.ImageKit';
 readonly activeArea?: int[]
 ```
 
-有效图像区域。
+The active area.
 
 **Type:** ArkTS-Dyn: number[]  <br>ArkTS-Sta：int[]
 
@@ -42,7 +42,7 @@ readonly activeArea?: int[]
 readonly analogBalance?: double[]
 ```
 
-模拟增益平衡系数。
+The analog balance.
 
 **Type:** ArkTS-Dyn: number[]  <br>ArkTS-Sta：double[]
 
@@ -62,7 +62,7 @@ readonly analogBalance?: double[]
 readonly antiAliasStrength?: double
 ```
 
-抗锯齿滤波器强度。
+The anti-alias strength.
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：double
 
@@ -82,7 +82,7 @@ readonly antiAliasStrength?: double
 readonly asShotICCProfile?: ArrayBuffer
 ```
 
-拍摄时使用的ICC色彩配置文件。
+An ICC profile.
 
 **Type:** ArrayBuffer
 
@@ -102,7 +102,7 @@ readonly asShotICCProfile?: ArrayBuffer
 readonly asShotNeutral?: double[]
 ```
 
-拍摄时的中性白点。
+The as-shot neutral.
 
 **Type:** ArkTS-Dyn: number[]  <br>ArkTS-Sta：double[]
 
@@ -122,7 +122,7 @@ readonly asShotNeutral?: double[]
 readonly asShotPreProfileMatrix?: double[]
 ```
 
-应用ICC配置文件前的预变换矩阵。
+The as-shot pre-profile matrix.
 
 **Type:** ArkTS-Dyn: number[]  <br>ArkTS-Sta：double[]
 
@@ -142,7 +142,7 @@ readonly asShotPreProfileMatrix?: double[]
 readonly asShotProfileName?: string
 ```
 
-拍摄时使用的配置文件名称。
+The as-shot camera profile.
 
 **Type:** string
 
@@ -162,7 +162,7 @@ readonly asShotProfileName?: string
 readonly asShotWhiteXY?: double[]
 ```
 
-拍摄时白点的CIE（1931色彩空间） x-y色度坐标。
+The as-shot white, encoded as x-y chromaticity coordinates.
 
 **Type:** ArkTS-Dyn: number[]  <br>ArkTS-Sta：double[]
 
@@ -182,7 +182,7 @@ readonly asShotWhiteXY?: double[]
 readonly baselineExposure?: double
 ```
 
-基准曝光补偿值，单位：EV。
+The baseline exposure.
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：double
 
@@ -202,7 +202,7 @@ readonly baselineExposure?: double
 readonly baselineExposureOffset?: double
 ```
 
-基准曝光偏移量，单位：EV。
+The baseline exposure offset.
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：double
 
@@ -222,7 +222,7 @@ readonly baselineExposureOffset?: double
 readonly baselineNoise?: double
 ```
 
-基准噪声水平。
+The baseline noise.
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：double
 
@@ -242,7 +242,7 @@ readonly baselineNoise?: double
 readonly baselineSharpness?: double
 ```
 
-基准锐度增益。
+The baseline sharpness.
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：double
 
@@ -262,7 +262,7 @@ readonly baselineSharpness?: double
 readonly bayerGreenSplit?: int
 ```
 
-Bayer图像中两个绿色通道的分离程度。
+The Bayer green split.
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
@@ -282,7 +282,7 @@ Bayer图像中两个绿色通道的分离程度。
 readonly bestQualityScale?: double
 ```
 
-最佳画质缩放比例。
+The best quality scale.
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：double
 
@@ -302,7 +302,7 @@ readonly bestQualityScale?: double
 readonly blackLevel?: double[]
 ```
 
-零光照下的编码电平。
+The zero-light encoding level.
 
 **Type:** ArkTS-Dyn: number[]  <br>ArkTS-Sta：double[]
 
@@ -322,7 +322,7 @@ readonly blackLevel?: double[]
 readonly blackLevelDeltaH?: double[]
 ```
 
-水平方向黑电平校正增量。
+The black level delta H.
 
 **Type:** ArkTS-Dyn: number[]  <br>ArkTS-Sta：double[]
 
@@ -342,7 +342,7 @@ readonly blackLevelDeltaH?: double[]
 readonly blackLevelDeltaV?: double[]
 ```
 
-垂直方向黑电平校正增量。
+The black level delta V.
 
 **Type:** ArkTS-Dyn: number[]  <br>ArkTS-Sta：double[]
 
@@ -362,7 +362,7 @@ readonly blackLevelDeltaV?: double[]
 readonly blackLevelRepeatDim?: int[]
 ```
 
-黑电平重复维度。
+The black level repeat dimension.
 
 **Type:** ArkTS-Dyn: number[]  <br>ArkTS-Sta：int[]
 
@@ -382,7 +382,7 @@ readonly blackLevelRepeatDim?: int[]
 readonly calibrationIlluminant1?: int
 ```
 
-第一校准光源类型。
+The first calibration illuminant.
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
@@ -402,7 +402,7 @@ readonly calibrationIlluminant1?: int
 readonly calibrationIlluminant2?: int
 ```
 
-第二校准光源类型。
+The second calibration illuminant.
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
@@ -422,7 +422,7 @@ readonly calibrationIlluminant2?: int
 readonly cameraCalibration1?: double[]
 ```
 
-第一校准光源下的相机校准矩阵。
+A calibration matrix under the first calibration illuminant.
 
 **Type:** ArkTS-Dyn: number[]  <br>ArkTS-Sta：double[]
 
@@ -442,7 +442,7 @@ readonly cameraCalibration1?: double[]
 readonly cameraCalibration2?: double[]
 ```
 
-第二校准光源下的相机校准矩阵。
+A calibration matrix under the second calibration illuminant.
 
 **Type:** ArkTS-Dyn: number[]  <br>ArkTS-Sta：double[]
 
@@ -462,7 +462,7 @@ readonly cameraCalibration2?: double[]
 readonly cameraCalibrationSignature?: string
 ```
 
-相机校准签名。
+The camera calibration signature.
 
 **Type:** string
 
@@ -482,7 +482,7 @@ readonly cameraCalibrationSignature?: string
 readonly cameraSerialNumber?: string
 ```
 
-相机序列号。
+The serial number of the camera.
 
 **Type:** string
 
@@ -502,7 +502,7 @@ readonly cameraSerialNumber?: string
 readonly cfaLayout?: int
 ```
 
-CFA（Color Filter Array）布局类型。
+The CFA (color filter array) layout.
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
@@ -522,7 +522,7 @@ CFA（Color Filter Array）布局类型。
 readonly cfaPlaneColor?: int[]
 ```
 
-CFA（Color Filter Array）各平面的颜色通道定义。
+The CFA (color filter array) plane color.
 
 **Type:** ArkTS-Dyn: number[]  <br>ArkTS-Sta：int[]
 
@@ -542,7 +542,7 @@ CFA（Color Filter Array）各平面的颜色通道定义。
 readonly chromaBlurRadius?: double
 ```
 
-色度模糊半径。单位：像素（px）。
+The chroma blur radius.
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：double
 
@@ -562,7 +562,7 @@ readonly chromaBlurRadius?: double
 readonly colorMatrix1?: double[]
 ```
 
-第一校准光源下的色彩变换矩阵。
+A transformation matrix under the first calibration illuminant.
 
 **Type:** ArkTS-Dyn: number[]  <br>ArkTS-Sta：double[]
 
@@ -582,7 +582,7 @@ readonly colorMatrix1?: double[]
 readonly colorMatrix2?: double[]
 ```
 
-第二校准光源下的色彩变换矩阵。
+A transformation matrix under the second calibration illuminant.
 
 **Type:** ArkTS-Dyn: number[]  <br>ArkTS-Sta：double[]
 
@@ -602,7 +602,7 @@ readonly colorMatrix2?: double[]
 readonly colorimetricReference?: int
 ```
 
-色度参考标准。
+The colorimetric reference.
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
@@ -622,7 +622,7 @@ readonly colorimetricReference?: int
 readonly currentICCProfile?: ArrayBuffer
 ```
 
-当前使用的ICC色彩配置文件。
+The current ICC profile.
 
 **Type:** ArrayBuffer
 
@@ -642,7 +642,7 @@ readonly currentICCProfile?: ArrayBuffer
 readonly currentPreProfileMatrix?: double[]
 ```
 
-当前ICC配置文件前的预变换矩阵。
+The current pre-profile matrix.
 
 **Type:** ArkTS-Dyn: number[]  <br>ArkTS-Sta：double[]
 
@@ -662,7 +662,7 @@ readonly currentPreProfileMatrix?: double[]
 readonly defaultBlackRender?: int
 ```
 
-默认黑场渲染方式。
+The default black render.
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
@@ -682,7 +682,7 @@ readonly defaultBlackRender?: int
 readonly defaultCropOrigin?: double[]
 ```
 
-默认裁剪区域的左上角坐标（x, y）。
+The default crop origin.
 
 **Type:** ArkTS-Dyn: number[]  <br>ArkTS-Sta：double[]
 
@@ -702,7 +702,7 @@ readonly defaultCropOrigin?: double[]
 readonly defaultCropSize?: int[]
 ```
 
-默认裁剪区域的宽度和高度。
+The default crop size.
 
 **Type:** ArkTS-Dyn: number[]  <br>ArkTS-Sta：int[]
 
@@ -722,7 +722,7 @@ readonly defaultCropSize?: int[]
 readonly defaultScale?: double[]
 ```
 
-默认缩放比例。格式为[水平缩放比例, 垂直缩放比例]。
+The default scale.
 
 **Type:** ArkTS-Dyn: number[]  <br>ArkTS-Sta：double[]
 
@@ -742,7 +742,7 @@ readonly defaultScale?: double[]
 readonly defaultUserCrop?: int[]
 ```
 
-默认用户裁剪区域。
+The default user crop.
 
 **Type:** ArkTS-Dyn: number[]  <br>ArkTS-Sta：int[]
 
@@ -762,7 +762,7 @@ readonly defaultUserCrop?: int[]
 readonly dngBackwardVersion?: int[]
 ```
 
-DNG文件向后兼容的最低版本号。
+The DNG backward compatibility version.
 
 **Type:** ArkTS-Dyn: number[]  <br>ArkTS-Sta：int[]
 
@@ -782,7 +782,7 @@ DNG文件向后兼容的最低版本号。
 readonly dngPrivateData?: ArrayBuffer
 ```
 
-厂商私有数据块。
+The private data.
 
 **Type:** ArrayBuffer
 
@@ -802,7 +802,7 @@ readonly dngPrivateData?: ArrayBuffer
 readonly dngVersion?: int[]
 ```
 
-DNG图片的版本号。
+The DNG version.
 
 **Type:** ArkTS-Dyn: number[]  <br>ArkTS-Sta：int[]
 
@@ -822,7 +822,7 @@ DNG图片的版本号。
 readonly extraCameraProfiles?: int[]
 ```
 
-额外相机配置文件索引列表。
+The extra camera profiles.
 
 **Type:** ArkTS-Dyn: number[]  <br>ArkTS-Sta：int[]
 
@@ -842,7 +842,7 @@ readonly extraCameraProfiles?: int[]
 readonly forwardMatrix1?: double[]
 ```
 
-第一前向变换矩阵。
+The first forward matrix.
 
 **Type:** ArkTS-Dyn: number[]  <br>ArkTS-Sta：double[]
 
@@ -862,7 +862,7 @@ readonly forwardMatrix1?: double[]
 readonly forwardMatrix2?: double[]
 ```
 
-第二前向变换矩阵。
+The second forward matrix.
 
 **Type:** ArkTS-Dyn: number[]  <br>ArkTS-Sta：double[]
 
@@ -882,7 +882,7 @@ readonly forwardMatrix2?: double[]
 readonly lensInfo?: double[]
 ```
 
-镜头信息。
+Information about the lens.
 
 **Type:** ArkTS-Dyn: number[]  <br>ArkTS-Sta：double[]
 
@@ -902,7 +902,7 @@ readonly lensInfo?: double[]
 readonly linearResponseLimit?: double
 ```
 
-线性响应上限。
+The linear response limit.
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：double
 
@@ -922,7 +922,7 @@ readonly linearResponseLimit?: double
 readonly linearizationTable?: int[]
 ```
 
-线性化查找表，用于将原始传感器值映射为线性光强度。
+The linearization table.
 
 **Type:** ArkTS-Dyn: number[]  <br>ArkTS-Sta：int[]
 
@@ -942,7 +942,7 @@ readonly linearizationTable?: int[]
 readonly localizedCameraModel?: string
 ```
 
-本地化后的相机型号名称。
+A localized camera model.
 
 **Type:** string
 
@@ -962,7 +962,7 @@ readonly localizedCameraModel?: string
 readonly makerNoteSafety?: boolean
 ```
 
-EXIF MakerNote是否安全可保留。true表示安全，false表示不安全。
+Whether the EXIF MakerNote tag is safe.
 
 **Type:** boolean
 
@@ -982,7 +982,7 @@ EXIF MakerNote是否安全可保留。true表示安全，false表示不安全。
 readonly maskedAreas?: int[]
 ```
 
-被遮蔽区域列表。
+The masked areas.
 
 **Type:** ArkTS-Dyn: number[]  <br>ArkTS-Sta：int[]
 
@@ -1002,7 +1002,7 @@ readonly maskedAreas?: int[]
 readonly newRawImageDigest?: string
 ```
 
-修改后原始图像数据的新MD5摘要。
+A modified MD5 digest of the raw image data.
 
 **Type:** string
 
@@ -1022,7 +1022,7 @@ readonly newRawImageDigest?: string
 readonly noiseProfile?: double[]
 ```
 
-噪声剖面参数。
+The noise profile.
 
 **Type:** ArkTS-Dyn: number[]  <br>ArkTS-Sta：double[]
 
@@ -1042,7 +1042,7 @@ readonly noiseProfile?: double[]
 readonly noiseReductionApplied?: double
 ```
 
-已应用的降噪强度级别。
+The applied noise reduction.
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：double
 
@@ -1062,7 +1062,7 @@ readonly noiseReductionApplied?: double
 readonly opcodeList1?: ArrayBuffer
 ```
 
-第一操作码列表。
+The first opcode list.
 
 **Type:** ArrayBuffer
 
@@ -1082,7 +1082,7 @@ readonly opcodeList1?: ArrayBuffer
 readonly opcodeList2?: ArrayBuffer
 ```
 
-第二操作码列表。
+The second opcode list.
 
 **Type:** ArrayBuffer
 
@@ -1102,7 +1102,7 @@ readonly opcodeList2?: ArrayBuffer
 readonly opcodeList3?: ArrayBuffer
 ```
 
-第三操作码列表。
+The third opcode list.
 
 **Type:** ArrayBuffer
 
@@ -1122,7 +1122,7 @@ readonly opcodeList3?: ArrayBuffer
 readonly originalBestQualityFinalSize?: int[]
 ```
 
-原始最佳画质输出尺寸。
+The original best quality final size.
 
 **Type:** ArkTS-Dyn: number[]  <br>ArkTS-Sta：int[]
 
@@ -1142,7 +1142,7 @@ readonly originalBestQualityFinalSize?: int[]
 readonly originalDefaultCropSize?: double[]
 ```
 
-原始默认裁剪尺寸。
+The original default crop size.
 
 **Type:** ArkTS-Dyn: number[]  <br>ArkTS-Sta：double[]
 
@@ -1162,7 +1162,7 @@ readonly originalDefaultCropSize?: double[]
 readonly originalDefaultFinalSize?: int[]
 ```
 
-原始默认最终输出尺寸。
+The original default final size.
 
 **Type:** ArkTS-Dyn: number[]  <br>ArkTS-Sta：int[]
 
@@ -1182,7 +1182,7 @@ readonly originalDefaultFinalSize?: int[]
 readonly originalRawFileData?: ArrayBuffer
 ```
 
-原始RAW文件的完整数据。
+The original raw file data.
 
 **Type:** ArrayBuffer
 
@@ -1202,7 +1202,7 @@ readonly originalRawFileData?: ArrayBuffer
 readonly originalRawFileDigest?: string
 ```
 
-原始RAW文件数据的MD5摘要。
+An MD5 digest of the data stored in the OriginalRawFileData.
 
 **Type:** string
 
@@ -1222,7 +1222,7 @@ readonly originalRawFileDigest?: string
 readonly originalRawFileName?: string
 ```
 
-原始RAW文件名。
+The original raw file name.
 
 **Type:** string
 
@@ -1242,7 +1242,7 @@ readonly originalRawFileName?: string
 readonly previewApplicationName?: string
 ```
 
-预览图生成应用程序名称。
+The preview application name.
 
 **Type:** string
 
@@ -1262,7 +1262,7 @@ readonly previewApplicationName?: string
 readonly previewApplicationVersion?: string
 ```
 
-预览图生成应用程序版本。
+The preview application version.
 
 **Type:** string
 
@@ -1282,7 +1282,7 @@ readonly previewApplicationVersion?: string
 readonly previewColorSpace?: int
 ```
 
-预览图色彩空间。
+The preview color space.
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
@@ -1302,7 +1302,7 @@ readonly previewColorSpace?: int
 readonly previewDateTime?: string
 ```
 
-预览图生成时间。
+The preview date time.
 
 **Type:** string
 
@@ -1322,7 +1322,7 @@ readonly previewDateTime?: string
 readonly previewSettingsDigest?: string
 ```
 
-预览图设置的MD5摘要。
+The preview settings digest.
 
 **Type:** string
 
@@ -1342,7 +1342,7 @@ readonly previewSettingsDigest?: string
 readonly previewSettingsName?: string
 ```
 
-预览图处理设置名称。
+The preview settings name.
 
 **Type:** string
 
@@ -1362,7 +1362,7 @@ readonly previewSettingsName?: string
 readonly profileCalibrationSignature?: string
 ```
 
-配置文件校准签名。
+The profile calibration signature.
 
 **Type:** string
 
@@ -1382,7 +1382,7 @@ readonly profileCalibrationSignature?: string
 readonly profileCopyright?: string
 ```
 
-配置文件版权信息。
+The profile copyright.
 
 **Type:** string
 
@@ -1402,7 +1402,7 @@ readonly profileCopyright?: string
 readonly profileEmbedPolicy?: int
 ```
 
-配置文件嵌入策略。
+The profile embed policy.
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
@@ -1422,7 +1422,7 @@ readonly profileEmbedPolicy?: int
 readonly profileHueSatMapData1?: double[]
 ```
 
-第一组色调/饱和度映射表数据。
+The first hue/saturation mapping table data.
 
 **Type:** ArkTS-Dyn: number[]  <br>ArkTS-Sta：double[]
 
@@ -1442,7 +1442,7 @@ readonly profileHueSatMapData1?: double[]
 readonly profileHueSatMapData2?: double[]
 ```
 
-第二组色调/饱和度映射表数据。
+The second hue/saturation mapping table data.
 
 **Type:** ArkTS-Dyn: number[]  <br>ArkTS-Sta：double[]
 
@@ -1462,7 +1462,7 @@ readonly profileHueSatMapData2?: double[]
 readonly profileHueSatMapDims?: int[]
 ```
 
-色调/饱和度映射表维度。
+The profile hue/saturation map dims.
 
 **Type:** ArkTS-Dyn: number[]  <br>ArkTS-Sta：int[]
 
@@ -1482,7 +1482,7 @@ readonly profileHueSatMapDims?: int[]
 readonly profileHueSatMapEncoding?: int
 ```
 
-色调/饱和度映射表编码方式。
+The profile hue/saturation map encoding.
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
@@ -1502,7 +1502,7 @@ readonly profileHueSatMapEncoding?: int
 readonly profileLookTableData?: double[]
 ```
 
-色彩表数据。
+The profile lookup table data.
 
 **Type:** ArkTS-Dyn: number[]  <br>ArkTS-Sta：double[]
 
@@ -1522,7 +1522,7 @@ readonly profileLookTableData?: double[]
 readonly profileLookTableDims?: int[]
 ```
 
-ProfileLookTableData的维度。
+The profile lookup table dimensions.
 
 **Type:** ArkTS-Dyn: number[]  <br>ArkTS-Sta：int[]
 
@@ -1542,7 +1542,7 @@ ProfileLookTableData的维度。
 readonly profileLookTableEncoding?: int
 ```
 
-色彩表编码方式。
+The profile lookup table encoding.
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
@@ -1562,7 +1562,7 @@ readonly profileLookTableEncoding?: int
 readonly profileName?: string
 ```
 
-色彩配置文件名称。
+The profile name.
 
 **Type:** string
 
@@ -1582,7 +1582,7 @@ readonly profileName?: string
 readonly profileToneCurve?: double[]
 ```
 
-配置文件色调曲线。
+The profile tone curve.
 
 **Type:** ArkTS-Dyn: number[]  <br>ArkTS-Sta：double[]
 
@@ -1602,7 +1602,7 @@ readonly profileToneCurve?: double[]
 readonly rawDataUniqueID?: string
 ```
 
-原始图像数据的唯一标识符。
+The unique identifier of raw image data.
 
 **Type:** string
 
@@ -1622,7 +1622,7 @@ readonly rawDataUniqueID?: string
 readonly rawImageDigest?: string
 ```
 
-原始图像数据的MD5摘要。
+An MD5 digest of the raw image data.
 
 **Type:** string
 
@@ -1642,7 +1642,7 @@ readonly rawImageDigest?: string
 readonly rawToPreviewGain?: double
 ```
 
-主RAW图与预览图之间的增益比。
+The gain between the main raw IFD and the preview IFD.
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：double
 
@@ -1662,7 +1662,7 @@ readonly rawToPreviewGain?: double
 readonly reductionMatrix1?: double[]
 ```
 
-第一校准光源下的降维矩阵。
+A dimensionality reduction matrix under the first calibration illuminant.
 
 **Type:** ArkTS-Dyn: number[]  <br>ArkTS-Sta：double[]
 
@@ -1682,7 +1682,7 @@ readonly reductionMatrix1?: double[]
 readonly reductionMatrix2?: double[]
 ```
 
-第二校准光源下的降维矩阵。
+A dimensionality reduction matrix under the second calibration illuminant.
 
 **Type:** ArkTS-Dyn: number[]  <br>ArkTS-Sta：double[]
 
@@ -1702,7 +1702,7 @@ readonly reductionMatrix2?: double[]
 readonly rowInterleaveFactor?: int
 ```
 
-行交织因子。
+The row interleave factor.
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
@@ -1722,7 +1722,7 @@ readonly rowInterleaveFactor?: int
 readonly shadowScale?: double
 ```
 
-阴影区域缩放因子。
+The shadow scale.
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：double
 
@@ -1742,7 +1742,7 @@ readonly shadowScale?: double
 readonly subTileBlockSize?: int[]
 ```
 
-图像分块存储，定义块的长和宽。
+The sub‑tile block size.
 
 **Type:** ArkTS-Dyn: number[]  <br>ArkTS-Sta：int[]
 
@@ -1762,7 +1762,7 @@ readonly subTileBlockSize?: int[]
 readonly uniqueCameraModel?: string
 ```
 
-相机的唯一型号标识，用于区分不同设备。
+A unique camera model.
 
 **Type:** string
 
@@ -1782,7 +1782,7 @@ readonly uniqueCameraModel?: string
 readonly whiteLevel?: double[]
 ```
 
-白电平，表示传感器最大有效输出。
+The white level.
 
 **Type:** ArkTS-Dyn: number[]  <br>ArkTS-Sta：double[]
 

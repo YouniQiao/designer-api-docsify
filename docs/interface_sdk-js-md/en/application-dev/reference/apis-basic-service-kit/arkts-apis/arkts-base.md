@@ -1,11 +1,12 @@
 # @ohos.base
 
-本模块定义了OpenHarmony ArkTS接口的公共回调类型，包括接口调用时出现的公共回调和公共错误信息。
- > **说明**
+The **Base** module defines the public callback types of ArkTS APIs, including the common and error callbacks.
+ > **NOTE**
  >
- > - 本模块首批接口从API version 6 开始支持。后续版本的新增接口，采用上角标单独标记接口的起始版本。
+ > - The initial APIs of this module are supported since API version 6. Newly added APIs will be marked with a
+ >   superscript to indicate their earliest API version.
  >
- > - 从API version 12开始，本模块接口支持在ArkTS卡片中使用。
+ > - Since API version 12, the APIs of this module are supported in ArkTS widgets.
 
 
 ## Modules to Import
@@ -20,14 +21,14 @@ import { Callback, BusinessError, ErrorCallback, AsyncCallback } from 'kits/@kit
 
 | Name | Description |
 | --- | --- |
-| [BusinessError](arkts-basicservices-base-businesserror-c.md) | 错误参数。 |
+| [BusinessError](arkts-basicservices-base-businesserror-c.md) | Defines the error parameter. |
 
 ### Types
 
 | Name | Description |
 | --- | --- |
-| [AsyncCallback](arkts-basicservices-asynccallback-t.md) | 通用回调函数，携带错误参数和异步返回值。错误参数为[BusinessError](arkts-basicservices-base-businesserror-i.md)类型的信息。异步返回值的类型由开发者自定义，回调将返回对应类型的信息。 |
-| [Callback](arkts-basicservices-callback-t.md) | 通用回调函数。开发者在使用时，可自定义data的类型，回调将返回对应类型的信息。 |
-| [ErrorCallback](arkts-basicservices-errorcallback-t.md) | 通用回调函数，携带错误参数。回调返回的信息为[BusinessError](arkts-basicservices-base-businesserror-i.md)类型的信息。 |
-| [RecordData](arkts-basicservices-recorddata-t.md) | RecordData 是一个联合类型，用于层级和每层数量都不确定的对象结构。 |
+| [AsyncCallback](arkts-basicservices-asynccallback-t.md) | Defines a common callback that carries an error parameter and asynchronous return value.The error parameter is of the [BusinessError](arkts-basicservices-base-businesserror-i.md) type. The type of the asynchronous return value is defined by the developer. |
+| [Callback](arkts-basicservices-callback-t.md) | Defines a common callback. You can set **data** to customize the data type of the information returned by the callback. |
+| [ErrorCallback](arkts-basicservices-errorcallback-t.md) | Defines a common callback that carries an error parameter. The information returned by the callback is of the [BusinessError](arkts-basicservices-base-businesserror-i.md) type. |
+| [RecordData](arkts-basicservices-recorddata-t.md) | RecordData is a union type used for object structures with uncertain levels and quantities at each level. |
 

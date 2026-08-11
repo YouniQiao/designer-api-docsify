@@ -1,6 +1,6 @@
 # ToneMappingSettings
 
-定义色调映射参数.
+Describes the tone mapping settings.
 
 **Since:** 12
 
@@ -16,7 +16,7 @@
 exposure?: double
 ```
 
-色调映射曝光度.
+Exposure. The value must be greater than 0. The default value is undefined.
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：double
 
@@ -34,7 +34,7 @@ exposure?: double
 type?: ToneMappingType
 ```
 
-色调映射类型.
+Tone mapping type. The default value is undefined.
 
 **Type:** [ToneMappingType](arkts-arkgraphics3d-scenepostprocesssettings-tonemappingtype-e.md)
 

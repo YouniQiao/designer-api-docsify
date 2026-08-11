@@ -64,7 +64,7 @@ Deserialize web download from typed array.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1. Incorrect parameter types. &lt;br&gt;2. Parameter verification failed. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Incorrect parameter types. &lt;br&gt;2. Parameter verification failed. |
 
 ## getCurrentSpeed
 
@@ -398,7 +398,7 @@ Pause the web download.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 17100019 | The download task is not started yet. |
+| [17100019](../errorcode-webview.md#17100019-download-not-started-yet) | The download task is not started yet. |
 
 ## resume
 
@@ -420,7 +420,7 @@ Resume the web download.Use WebDownloadManager.resumeDownload to resume deserial
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 17100016 | The download task is not paused. |
+| [17100016](../errorcode-webview.md#17100016-download-task-not-paused) | The download task is not paused. |
 
 ## serialize
 
@@ -470,5 +470,5 @@ Start the web download.Used in onBeforeDownload, If you want to start the curren
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1. Incorrect parameter types. &lt;br&gt;2. Parameter verification failed. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Incorrect parameter types. &lt;br&gt;2. Parameter verification failed. |
 

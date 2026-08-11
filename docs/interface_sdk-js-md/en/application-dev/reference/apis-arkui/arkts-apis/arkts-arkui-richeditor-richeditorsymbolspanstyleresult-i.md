@@ -1,6 +1,6 @@
 # RichEditorSymbolSpanStyleResult
 
-后端返回的SymbolSpan样式信息。
+Defines the symbol span style result.
 
 **Since:** 23
 
@@ -16,9 +16,7 @@
 effectStrategy: SymbolEffectStrategy
 ```
 
-SymbolSpan组件动效策略。
-
-默认值：SymbolEffectStrategy.NONE。
+The symbol span effect strategy.
 
 **Type:** [SymbolEffectStrategy](../arkts-components/arkts-arkui-symboleffectstrategy-e.md)
 
@@ -38,9 +36,7 @@ SymbolSpan组件动效策略。
 fontColor: Array<ResourceColor>
 ```
 
-SymbolSpan组件颜色。
-
-默认值：不同渲染策略下默认值不同。
+The font color.
 
 **Type:** Array&lt;[ResourceColor](arkts-arkui-resourcecolor-t.md)&gt;
 
@@ -60,9 +56,7 @@ SymbolSpan组件颜色。
 fontSize: double | string | Resource
 ```
 
-SymbolSpan组件大小，默认单位为fp。
-
-默认值：跟随主题。
+The font size.
 
 **Type:** double \| string \| Resource
 
@@ -82,13 +76,7 @@ SymbolSpan组件大小，默认单位为fp。
 fontWeight: int | FontWeight | string
 ```
 
-SymbolSpan组件粗细。
-
-number类型取值[100,900]，取值间隔为100，默认为400，取值越大，字体越粗。
-
-string类型仅支持number类型取值的字符串形式，例如“400”，以及“bold”、“bolder”、“lighter”、“regular” 、“medium”分别对应FontWeight中相应的枚举值。
-
-默认值：FontWeight.Normal。
+The font weight.
 
 **Type:** int \| FontWeight \| string
 
@@ -108,9 +96,7 @@ string类型仅支持number类型取值的字符串形式，例如“400”，�
 renderingStrategy: SymbolRenderingStrategy
 ```
 
-SymbolSpan组件渲染策略。
-
-默认值：SymbolRenderingStrategy.SINGLE。
+The symbol span rendering strategy.
 
 **Type:** [SymbolRenderingStrategy](../arkts-components/arkts-arkui-symbolrenderingstrategy-e.md)
 

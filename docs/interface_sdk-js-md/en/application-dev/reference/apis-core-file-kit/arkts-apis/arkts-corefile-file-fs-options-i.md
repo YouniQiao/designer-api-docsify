@@ -1,6 +1,6 @@
 # Options
 
-可选项类型，支持readLines接口使用。
+Defines the options used in **readLines()**.
 
 **Since:** 23
 
@@ -22,7 +22,7 @@ import { Options, ReaderIteratorResult, Watcher, ReadTextOptions, WatchEventList
 encoding?: string
 ```
 
-文件编码方式。可选项。
+File encoding format. It is optional.
 
 **Type:** string
 

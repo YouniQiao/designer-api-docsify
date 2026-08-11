@@ -13,12 +13,6 @@
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 
-## 导入模块
-
-```TypeScript
-import { AtomicServiceOptions } from 'kits/@kit.AbilityKit';
-```
-
 ## completionHandlerForAtomicService
 
 ```TypeScript
@@ -71,7 +65,7 @@ parameters?: Record<string, Object>
 
 表示额外参数描述。具体描述参考[Want](arkts-ability-app-ability-want-want-c.md)中parameters字段描述。
 
-**类型：** [Record](../../apis-default/arkts-apis/arkts-record-t.md)&lt;string, Object&gt;
+**类型：** Record&lt;string, Object&gt;
 
 **起始版本：** 12
 

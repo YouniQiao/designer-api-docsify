@@ -9,7 +9,7 @@ export declare function Swiper(
 ): SwiperAttribute
 ```
 
-创建滑块视图容器。
+Defines Swiper Component
 
 **Since:** 23
 
@@ -25,8 +25,8 @@ export declare function Swiper(
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| controller | [SwiperController](arkts-arkui-swiper-swipercontroller-c.md) | No | 给组件绑定一个控制器，用来控制组件翻页或者预加载指定子节点。 |
-| content_ | [CustomBuilder](../arkts-components/arkts-arkui-custombuilder-t.md) | No | 子组件。 |
+| controller | [SwiperController](arkts-arkui-swiper-swipercontroller-c.md) | No | Swiper constructor options |
+| content_ | [CustomBuilder](../arkts-components/arkts-arkui-custombuilder-t.md) | No | container |
 
 **Return value:**
 
@@ -44,11 +44,11 @@ export declare function Swiper(
 ): SwiperAttribute
 ```
 
-定义Swiper组件
+Defines Swiper Component
 
-**Since:** 26.0.0
+**Since:** 26.1.0
 
-**ArkTS mode:** ArkTS-Sta only, since version 26.0.0.
+**ArkTS mode:** ArkTS-Sta only, since version 26.1.0.
 
 **Decorator:** @Builder
 
@@ -62,8 +62,8 @@ export declare function Swiper(
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| style_ | [CustomBuilderT](../arkts-components/arkts-arkui-custombuildert-t.md)&lt;SwiperAttribute&gt; | Yes | swiper属性实例 |
-| content_ | [CustomBuilder](../arkts-components/arkts-arkui-custombuilder-t.md) | No | 内容区。 |
+| style_ | [CustomBuilderT](../arkts-components/arkts-arkui-custombuildert-t.md)&lt;SwiperAttribute&gt; | Yes | swiper attribute instance |
+| content_ | [CustomBuilder](../arkts-components/arkts-arkui-custombuilder-t.md) | No | container |
 
 **Return value:**
 

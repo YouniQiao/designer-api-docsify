@@ -12,11 +12,11 @@ import { Options, ReaderIteratorResult, Watcher, ReadTextOptions, WatchEventList
 declare function rmdirSync(path: string): void
 ```
 
-以同步方法删除目录及其所有子目录和文件。
+Removes a directory and all its subdirectories and files synchronously.
 
-> **说明：**
+> **NOTE：**
 > 
-> 该接口支持删除单个文件，但不推荐使用此方法删除单个文件，推荐使用unlinkSync接口删除单个文件。
+> This API can be used to remove a single file. However, you are advised to use **unlinkSync** instead.
 
 **Since:** 9
 
@@ -32,7 +32,7 @@ declare function rmdirSync(path: string): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| path | string | Yes | 目录的应用沙箱路径。 |
+| path | string | Yes | Application sandbox path of the directory. |
 
 **Error codes:**
 

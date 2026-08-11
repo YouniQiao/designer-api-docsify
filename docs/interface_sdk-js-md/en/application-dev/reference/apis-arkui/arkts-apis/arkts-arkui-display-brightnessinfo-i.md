@@ -1,6 +1,6 @@
 # BrightnessInfo
 
-屏幕亮度信息。此类型中的信息均来自底层屏幕信息数据。
+Describes the screen brightness information. The information comes from the underlying screen data.
 
 **Since:** 22
 
@@ -16,13 +16,35 @@
 import { display } from 'kits/@kit.ArkUI';
 ```
 
+## brightnessPosition
+
+```TypeScript
+readonly brightnessPosition?: double
+```
+
+Position of the brightness bar corresponding to the current screen brightness. The value is a floating-point number ranging from 0.0 to 1.0. The default value is 0.0. The value 0.0 indicates the lowest screen brightness,and 1.0 indicates the highest screen brightness. The returned brightness bar position may have an error of 0.01compared with the actual brightness bar position.Value range: [0.0,1.0]. Default value: 0.0.
+
+**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：double
+
+**Since:** 26.0.0
+
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
+
+**Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API:** This API can be used in atomic services since API version 26.0.0.
+
+<!--Device-BrightnessInfo-readonly brightnessPosition?: double--><!--Device-BrightnessInfo-readonly brightnessPosition?: double-End-->
+
+**System capability:** SystemCapability.Window.SessionManager
+
 ## currentHeadroom
 
 ```TypeScript
 readonly currentHeadroom: double
 ```
 
-当前亮度动态余量，该参数为大于0的浮点数。默认值为1.0。
+Dynamic brightness headroom. The value is a floating-point number greater than 0. The default value is **1.0**.
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：double
 
@@ -42,7 +64,7 @@ readonly currentHeadroom: double
 readonly maxHeadroom: double
 ```
 
-当前最大亮度余量，该参数为大于0的浮点数。默认值为1.0。
+Maximum brightness headroom. The value is a floating-point number greater than 0. The default value is **1.0**.
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：double
 
@@ -62,7 +84,7 @@ readonly maxHeadroom: double
 readonly sdrNits: double
 ```
 
-屏幕的亮度，该参数为大于0的浮点数。默认值为500.0。
+Screen brightness, in nit. The value is a floating-point number greater than 0. The default value is **500.0**.
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：double
 

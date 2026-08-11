@@ -5,12 +5,6 @@
  从API version 10开始，推荐使用[NavPathStack](arkts-arkui-navigation-navpathstack-c.md)进行页面路由。
 
 
-## 导入模块
-
-```TypeScript
-import { GradientBackground, TitleBarType, MixMode, AtomicServiceNavigation, SideBarOptions, TitleOptions, GradientAlpha, NavDestinationBuilder, BackgroundTheme } from 'kits/@kit.ArkUI';
-```
-
 ## 汇总
 
 ### 结构体

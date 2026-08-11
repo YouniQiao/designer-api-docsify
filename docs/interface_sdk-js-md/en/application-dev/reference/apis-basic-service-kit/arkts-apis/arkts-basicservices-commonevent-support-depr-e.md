@@ -1,6 +1,6 @@
 # Support
 
-系统公共事件是指由系统服务或系统应用发布的事件，订阅这些系统公共事件需要特定的权限。
+A system common event is an event that is published by a system service or system application and requires specific permissions to subscribe to. To publish or subscribe to this type of event, you must follow the event-specific definitions.
 
 **Since:** 7
 
@@ -20,9 +20,9 @@
 COMMON_EVENT_BOOT_COMPLETED = 'usual.event.BOOT_COMPLETED'
 ```
 
-提示用户已完成引导并加载系统。
+Indicates that the boot is complete and the system is loaded.
 
-要订阅此事件，您的应用必须具备ohos.permission.RECEIVER_STARTUP_COMPLETED权限（该权限仅系统应用可申请）。
+To subscribe to this common event, your application must have the ohos.permission.RECEIVER_STARTUP_COMPLETED permission. (This permission is available only for system applications.)
 
 **Since:** 7
 
@@ -42,7 +42,7 @@ COMMON_EVENT_BOOT_COMPLETED = 'usual.event.BOOT_COMPLETED'
 COMMON_EVENT_LOCKED_BOOT_COMPLETED = 'usual.event.LOCKED_BOOT_COMPLETED'
 ```
 
-（预留事件，暂未支持）提示用户已完成引导，系统已加载，但屏幕仍锁定。
+(reserved, not supported yet) Indicates that the guidance is complete and the system is loaded, but the screen is still locked.
 
 **Since:** 7
 
@@ -62,7 +62,7 @@ COMMON_EVENT_LOCKED_BOOT_COMPLETED = 'usual.event.LOCKED_BOOT_COMPLETED'
 COMMON_EVENT_SHUTDOWN = 'usual.event.SHUTDOWN'
 ```
 
-提示设备正在关闭并将继续直至最终关闭。
+Indicates that the device is being shut down and will continue until it is finally shut down.
 
 **Since:** 7
 
@@ -82,7 +82,7 @@ COMMON_EVENT_SHUTDOWN = 'usual.event.SHUTDOWN'
 COMMON_EVENT_BATTERY_CHANGED = 'usual.event.BATTERY_CHANGED'
 ```
 
-提示电池充电状态、电量和其他信息发生变化。
+Indicates that the battery charging status, battery level, and other information has changed.
 
 **Since:** 7
 
@@ -102,7 +102,7 @@ COMMON_EVENT_BATTERY_CHANGED = 'usual.event.BATTERY_CHANGED'
 COMMON_EVENT_BATTERY_LOW = 'usual.event.BATTERY_LOW'
 ```
 
-提示电池电量低。
+Indicates that the battery level is low.
 
 **Since:** 7
 
@@ -122,7 +122,7 @@ COMMON_EVENT_BATTERY_LOW = 'usual.event.BATTERY_LOW'
 COMMON_EVENT_BATTERY_OKAY = 'usual.event.BATTERY_OKAY'
 ```
 
-提示电池退出低电量状态。
+Indicates that the battery level is normal.
 
 **Since:** 7
 
@@ -142,7 +142,7 @@ COMMON_EVENT_BATTERY_OKAY = 'usual.event.BATTERY_OKAY'
 COMMON_EVENT_POWER_CONNECTED = 'usual.event.POWER_CONNECTED'
 ```
 
-提示设备连接到外部电源。
+Indicates that the device is connected to an external power supply.
 
 **Since:** 7
 
@@ -162,7 +162,7 @@ COMMON_EVENT_POWER_CONNECTED = 'usual.event.POWER_CONNECTED'
 COMMON_EVENT_POWER_DISCONNECTED = 'usual.event.POWER_DISCONNECTED'
 ```
 
-提示设备与外部电源断开。
+Indicates that the device is disconnected from the external power supply.
 
 **Since:** 7
 
@@ -182,7 +182,7 @@ COMMON_EVENT_POWER_DISCONNECTED = 'usual.event.POWER_DISCONNECTED'
 COMMON_EVENT_SCREEN_OFF = 'usual.event.SCREEN_OFF'
 ```
 
-提示设备屏幕关闭且设备处于睡眠状态。
+Indicates that the device screen is off and the device is in sleep mode.
 
 **Since:** 7
 
@@ -202,7 +202,7 @@ COMMON_EVENT_SCREEN_OFF = 'usual.event.SCREEN_OFF'
 COMMON_EVENT_SCREEN_ON = 'usual.event.SCREEN_ON'
 ```
 
-提示设备屏幕打开且设备处于交互状态。
+Indicates that the device screen is on and the device is in interactive state.
 
 **Since:** 7
 
@@ -222,7 +222,7 @@ COMMON_EVENT_SCREEN_ON = 'usual.event.SCREEN_ON'
 COMMON_EVENT_THERMAL_LEVEL_CHANGED = 'usual.event.THERMAL_LEVEL_CHANGED'
 ```
 
-提示设备热状态（温度等级）发生变化。
+Indicates that the device thermal level has changed.
 
 **Since:** 8
 
@@ -242,7 +242,7 @@ COMMON_EVENT_THERMAL_LEVEL_CHANGED = 'usual.event.THERMAL_LEVEL_CHANGED'
 COMMON_EVENT_USER_PRESENT = 'usual.event.USER_PRESENT'
 ```
 
-（预留事件，暂未支持）提示用户解锁了设备。
+(reserved, not supported yet) Indicates that the user unlocks the device.
 
 **Since:** 7
 
@@ -262,7 +262,7 @@ COMMON_EVENT_USER_PRESENT = 'usual.event.USER_PRESENT'
 COMMON_EVENT_TIME_TICK = 'usual.event.TIME_TICK'
 ```
 
-提示系统时间发生更改（指时间正常流逝）。
+Indicates that the system time has changed as time ticks by.
 
 **Since:** 7
 
@@ -282,7 +282,7 @@ COMMON_EVENT_TIME_TICK = 'usual.event.TIME_TICK'
 COMMON_EVENT_TIME_CHANGED = 'usual.event.TIME_CHANGED'
 ```
 
-提示系统时间被重新设置。
+Indicates that the system time is set.
 
 **Since:** 7
 
@@ -302,7 +302,7 @@ COMMON_EVENT_TIME_CHANGED = 'usual.event.TIME_CHANGED'
 COMMON_EVENT_DATE_CHANGED = 'usual.event.DATE_CHANGED'
 ```
 
-（预留事件，暂未支持）提示系统日期已更改。
+(reserved, not supported yet) Indicates that the system date has been changed.
 
 **Since:** 7
 
@@ -322,7 +322,7 @@ COMMON_EVENT_DATE_CHANGED = 'usual.event.DATE_CHANGED'
 COMMON_EVENT_TIMEZONE_CHANGED = 'usual.event.TIMEZONE_CHANGED'
 ```
 
-提示系统时区发生变更。
+Indicates that the system time zone is changed.
 
 **Since:** 7
 
@@ -342,7 +342,7 @@ COMMON_EVENT_TIMEZONE_CHANGED = 'usual.event.TIMEZONE_CHANGED'
 COMMON_EVENT_CLOSE_SYSTEM_DIALOGS = 'usual.event.CLOSE_SYSTEM_DIALOGS'
 ```
 
-（预留事件，暂未支持）提示用户关闭临时系统对话框。
+(reserved, not supported yet) Indicates that the user closes a temporary system dialog box.
 
 **Since:** 7
 
@@ -362,7 +362,7 @@ COMMON_EVENT_CLOSE_SYSTEM_DIALOGS = 'usual.event.CLOSE_SYSTEM_DIALOGS'
 COMMON_EVENT_PACKAGE_ADDED = 'usual.event.PACKAGE_ADDED'
 ```
 
-提示设备上已安装新应用程序包。
+Indicates that a new application package has been installed on the device.
 
 **Since:** 7
 
@@ -382,7 +382,7 @@ COMMON_EVENT_PACKAGE_ADDED = 'usual.event.PACKAGE_ADDED'
 COMMON_EVENT_PACKAGE_REPLACED = 'usual.event.PACKAGE_REPLACED'
 ```
 
-（预留事件，暂未支持）提示设备上已安装的旧版本应用程序已被新版本所替换。
+(reserved, not supported yet) Indicates that a later version of an installed application package has replaced the previous one on the device.
 
 **Since:** 7
 
@@ -402,7 +402,7 @@ COMMON_EVENT_PACKAGE_REPLACED = 'usual.event.PACKAGE_REPLACED'
 COMMON_EVENT_MY_PACKAGE_REPLACED = 'usual.event.MY_PACKAGE_REPLACED'
 ```
 
-（预留事件，暂未支持）提示应用程序包的新版本已取代前一个版本。
+(reserved, not supported yet) Indicates that the new version of the application package has replaced the previous version.
 
 **Since:** 7
 
@@ -422,7 +422,7 @@ COMMON_EVENT_MY_PACKAGE_REPLACED = 'usual.event.MY_PACKAGE_REPLACED'
 COMMON_EVENT_PACKAGE_REMOVED = 'usual.event.PACKAGE_REMOVED'
 ```
 
-提示已安装的应用程序已从设备卸载，但应用程序数据得到保留的。
+Indicates that an installed application has been uninstalled from the device with the application data retained.
 
 **Since:** 7
 
@@ -442,7 +442,7 @@ COMMON_EVENT_PACKAGE_REMOVED = 'usual.event.PACKAGE_REMOVED'
 COMMON_EVENT_BUNDLE_REMOVED = 'usual.event.BUNDLE_REMOVED'
 ```
 
-（预留事件，暂未支持）提示已从设备中卸载已安装应用程序的附加包，但应用程序数据得到保留。
+(reserved, not supported yet) Indicates that an installed bundle has been uninstalled from the device with the application data retained.
 
 **Since:** 7
 
@@ -462,7 +462,7 @@ COMMON_EVENT_BUNDLE_REMOVED = 'usual.event.BUNDLE_REMOVED'
 COMMON_EVENT_PACKAGE_FULLY_REMOVED = 'usual.event.PACKAGE_FULLY_REMOVED'
 ```
 
-（预留事件，暂未支持）提示已从设备中完全卸载已安装的应用程序（包括应用程序数据和代码）。
+(reserved, not supported yet) Indicates that an installed application, including both the application data and code, has been completely uninstalled from the device.
 
 **Since:** 7
 
@@ -482,7 +482,7 @@ COMMON_EVENT_PACKAGE_FULLY_REMOVED = 'usual.event.PACKAGE_FULLY_REMOVED'
 COMMON_EVENT_PACKAGE_CHANGED = 'usual.event.PACKAGE_CHANGED'
 ```
 
-提示应用程序包已发生更改（例如，包中的组件已启用或禁用）。
+Indicates that an application package has been changed (for example, an ability in the package has been enabled or disabled).
 
 **Since:** 7
 
@@ -502,7 +502,7 @@ COMMON_EVENT_PACKAGE_CHANGED = 'usual.event.PACKAGE_CHANGED'
 COMMON_EVENT_PACKAGE_RESTARTED = 'usual.event.PACKAGE_RESTARTED'
 ```
 
-提示用户终止了应用程序的所有进程并重启应用程序。
+Indicates that the user closed all processes of the application and restarted the application.
 
 **Since:** 7
 
@@ -522,7 +522,7 @@ COMMON_EVENT_PACKAGE_RESTARTED = 'usual.event.PACKAGE_RESTARTED'
 COMMON_EVENT_PACKAGE_DATA_CLEARED = 'usual.event.PACKAGE_DATA_CLEARED'
 ```
 
-提示用户清除了应用包数据。
+Indicates that the user cleared the application package data.
 
 **Since:** 7
 
@@ -542,7 +542,7 @@ COMMON_EVENT_PACKAGE_DATA_CLEARED = 'usual.event.PACKAGE_DATA_CLEARED'
 COMMON_EVENT_PACKAGES_SUSPENDED = 'usual.event.PACKAGES_SUSPENDED'
 ```
 
-（预留事件，暂未支持）提示应用程序已挂起。
+(reserved, not supported yet) Indicates that application packages have been suspended.
 
 **Since:** 7
 
@@ -562,7 +562,7 @@ COMMON_EVENT_PACKAGES_SUSPENDED = 'usual.event.PACKAGES_SUSPENDED'
 COMMON_EVENT_PACKAGES_UNSUSPENDED = 'usual.event.PACKAGES_UNSUSPENDED'
 ```
 
-（预留事件，暂未支持）提示应用HAP包未挂起（从挂起状态恢复）。
+(reserved, not supported yet) Indicates that the application HAP package is not suspended (resumed from the suspended state).
 
 **Since:** 7
 
@@ -582,7 +582,7 @@ COMMON_EVENT_PACKAGES_UNSUSPENDED = 'usual.event.PACKAGES_UNSUSPENDED'
 COMMON_EVENT_MY_PACKAGE_SUSPENDED = 'usual.event.MY_PACKAGE_SUSPENDED'
 ```
 
-提示应用HAP包被挂起的。
+Indicates that the application HAP package is suspended.
 
 **Since:** 7
 
@@ -602,7 +602,7 @@ COMMON_EVENT_MY_PACKAGE_SUSPENDED = 'usual.event.MY_PACKAGE_SUSPENDED'
 COMMON_EVENT_MY_PACKAGE_UNSUSPENDED = 'usual.event.MY_PACKAGE_UNSUSPENDED'
 ```
 
-提示应用包未挂起。
+Indicates that the application package is not suspended.
 
 **Since:** 7
 
@@ -622,7 +622,7 @@ COMMON_EVENT_MY_PACKAGE_UNSUSPENDED = 'usual.event.MY_PACKAGE_UNSUSPENDED'
 COMMON_EVENT_UID_REMOVED = 'usual.event.UID_REMOVED'
 ```
 
-（预留事件，暂未支持）提示用户ID已从系统中删除。
+(reserved, not supported yet) Indicates that a user ID has been removed from the system.
 
 **Since:** 7
 
@@ -642,7 +642,7 @@ COMMON_EVENT_UID_REMOVED = 'usual.event.UID_REMOVED'
 COMMON_EVENT_PACKAGE_FIRST_LAUNCH = 'usual.event.PACKAGE_FIRST_LAUNCH'
 ```
 
-（预留事件，暂未支持）提示首次启动已安装的应用程序。
+(reserved, not supported yet) Indicates that an installed application is started for the first time.
 
 **Since:** 7
 
@@ -662,7 +662,7 @@ COMMON_EVENT_PACKAGE_FIRST_LAUNCH = 'usual.event.PACKAGE_FIRST_LAUNCH'
 COMMON_EVENT_PACKAGE_NEEDS_VERIFICATION = 'usual.event.PACKAGE_NEEDS_VERIFICATION'
 ```
 
-（预留事件，暂未支持）提示应用需要系统校验。
+(reserved, not supported yet) Indicates that an application requires system verification.
 
 **Since:** 7
 
@@ -682,7 +682,7 @@ COMMON_EVENT_PACKAGE_NEEDS_VERIFICATION = 'usual.event.PACKAGE_NEEDS_VERIFICATIO
 COMMON_EVENT_PACKAGE_VERIFIED = 'usual.event.PACKAGE_VERIFIED'
 ```
 
-（预留事件，暂未支持）提示应用已被系统校验。
+(reserved, not supported yet) Indicates that an application has been verified by the system.
 
 **Since:** 7
 
@@ -702,7 +702,7 @@ COMMON_EVENT_PACKAGE_VERIFIED = 'usual.event.PACKAGE_VERIFIED'
 COMMON_EVENT_EXTERNAL_APPLICATIONS_AVAILABLE = 'usual.event.EXTERNAL_APPLICATIONS_AVAILABLE'
 ```
 
-（预留事件，暂未支持）提示安装在外部存储上的应用程序对系统可用。
+(reserved, not supported yet) Indicates that applications installed on the external storage are available for the system.
 
 **Since:** 7
 
@@ -722,7 +722,7 @@ COMMON_EVENT_EXTERNAL_APPLICATIONS_AVAILABLE = 'usual.event.EXTERNAL_APPLICATION
 COMMON_EVENT_EXTERNAL_APPLICATIONS_UNAVAILABLE = 'usual.event.EXTERNAL_APPLICATIONS_UNAVAILABLE'
 ```
 
-（预留事件，暂未支持）提示安装在外部存储上的应用程序对系统不可用。
+(reserved, not supported yet) Indicates that applications installed on the external storage are not available for the system.
 
 **Since:** 7
 
@@ -730,7 +730,7 @@ COMMON_EVENT_EXTERNAL_APPLICATIONS_UNAVAILABLE = 'usual.event.EXTERNAL_APPLICATI
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.commonEventManage/commonEventManager.Support#COMMON_EVENT_EXTERNAL_APPLICATIONS_UNAVAILABLE
+**Substitutes:** [@ohos.commonEventManager:commonEventManager.Support#COMMON_EVENT_EXTERNAL_APPLICATIONS_UNAVAILABLE](arkts-basicservices-commoneventmanager-support-e.md#common_event_external_applications_unavailable)
 
 <!--Device-Support-COMMON_EVENT_EXTERNAL_APPLICATIONS_UNAVAILABLE = 'usual.event.EXTERNAL_APPLICATIONS_UNAVAILABLE'--><!--Device-Support-COMMON_EVENT_EXTERNAL_APPLICATIONS_UNAVAILABLE = 'usual.event.EXTERNAL_APPLICATIONS_UNAVAILABLE'-End-->
 
@@ -742,7 +742,7 @@ COMMON_EVENT_EXTERNAL_APPLICATIONS_UNAVAILABLE = 'usual.event.EXTERNAL_APPLICATI
 COMMON_EVENT_CONFIGURATION_CHANGED = 'usual.event.CONFIGURATION_CHANGED'
 ```
 
-（预留事件，暂未支持）提示设备状态（例如，方向、区域设置等）已更改。
+(reserved, not supported yet) Indicates that the device state (for example, orientation and locale) has changed.
 
 **Since:** 7
 
@@ -762,7 +762,7 @@ COMMON_EVENT_CONFIGURATION_CHANGED = 'usual.event.CONFIGURATION_CHANGED'
 COMMON_EVENT_LOCALE_CHANGED = 'usual.event.LOCALE_CHANGED'
 ```
 
-（预留事件，暂未支持）提示设备区域设置已更改。
+(reserved, not supported yet) Indicates that the device locale has changed.
 
 **Since:** 7
 
@@ -782,7 +782,7 @@ COMMON_EVENT_LOCALE_CHANGED = 'usual.event.LOCALE_CHANGED'
 COMMON_EVENT_MANAGE_PACKAGE_STORAGE = 'usual.event.MANAGE_PACKAGE_STORAGE'
 ```
 
-（预留事件，暂未支持）提示设备存储空间不足。
+(reserved, not supported yet) Indicates that the device storage is insufficient.
 
 **Since:** 7
 
@@ -802,7 +802,7 @@ COMMON_EVENT_MANAGE_PACKAGE_STORAGE = 'usual.event.MANAGE_PACKAGE_STORAGE'
 COMMON_EVENT_DRIVE_MODE = 'common.event.DRIVE_MODE'
 ```
 
-（预留事件，暂未支持）提示系统处于驾驶模式。
+(reserved, not supported yet) Indicates that the system is in driving mode.
 
 **Since:** 7
 
@@ -822,7 +822,7 @@ COMMON_EVENT_DRIVE_MODE = 'common.event.DRIVE_MODE'
 COMMON_EVENT_HOME_MODE = 'common.event.HOME_MODE'
 ```
 
-（预留事件，暂未支持）提示系统处于HOME模式。
+(reserved, not supported yet) Indicates that the system is in home mode.
 
 **Since:** 7
 
@@ -842,7 +842,7 @@ COMMON_EVENT_HOME_MODE = 'common.event.HOME_MODE'
 COMMON_EVENT_OFFICE_MODE = 'common.event.OFFICE_MODE'
 ```
 
-（预留事件，暂未支持）提示系统处于办公模式。
+(reserved, not supported yet) Indicates that the system is in office mode.
 
 **Since:** 7
 
@@ -862,7 +862,7 @@ COMMON_EVENT_OFFICE_MODE = 'common.event.OFFICE_MODE'
 COMMON_EVENT_USER_STARTED = 'usual.event.USER_STARTED'
 ```
 
-（预留事件，暂未支持）提示用户已启动。
+(reserved, not supported yet) Indicates that the user has been started.
 
 **Since:** 7
 
@@ -882,7 +882,7 @@ COMMON_EVENT_USER_STARTED = 'usual.event.USER_STARTED'
 COMMON_EVENT_USER_BACKGROUND = 'usual.event.USER_BACKGROUND'
 ```
 
-（预留事件，暂未支持）提示用户已被带到后台。
+(reserved, not supported yet) Indicates that the user has been brought to the background.
 
 **Since:** 7
 
@@ -902,7 +902,7 @@ COMMON_EVENT_USER_BACKGROUND = 'usual.event.USER_BACKGROUND'
 COMMON_EVENT_USER_FOREGROUND = 'usual.event.USER_FOREGROUND'
 ```
 
-（预留事件，暂未支持）提示用户已被带到前台。
+(reserved, not supported yet) Indicates that the user has been brought to the foreground.
 
 **Since:** 7
 
@@ -922,9 +922,9 @@ COMMON_EVENT_USER_FOREGROUND = 'usual.event.USER_FOREGROUND'
 COMMON_EVENT_USER_SWITCHED = 'usual.event.USER_SWITCHED'
 ```
 
-提示用户正在切换。
+Indicates that user switching is in progress.
 
-要订阅此事件，您的应用必须具备ohos.permission.MANAGE_LOCAL_ACCOUNTS权限（该权限仅系统应用可申请）。
+To subscribe to this common event, your application must have the ohos.permission.MANAGE_LOCAL_ACCOUNTS permission. (This permission is available only for system applications.)
 
 **Since:** 7
 
@@ -944,9 +944,7 @@ COMMON_EVENT_USER_SWITCHED = 'usual.event.USER_SWITCHED'
 COMMON_EVENT_USER_STARTING = 'usual.event.USER_STARTING'
 ```
 
-（预留事件，暂未支持）提示用户正在启动。
-
-要订阅此事件，您的应用必须具备ohos.permission.INTERACT_ACROSS_LOCAL_ACCOUNTS权限（该权限仅系统应用可申请）。
+(reserved, not supported yet) Indicates that user starting is in progress.To subscribe to this common event, your application must have the ohos.permission.INTERACT_ACROSS_LOCAL_ACCOUNTS permission. (This permission is available only for system applications.)
 
 **Since:** 7
 
@@ -966,7 +964,7 @@ COMMON_EVENT_USER_STARTING = 'usual.event.USER_STARTING'
 COMMON_EVENT_USER_UNLOCKED = 'usual.event.USER_UNLOCKED'
 ```
 
-（预留事件，暂未支持）在重启后解锁时，提示当前用户的凭据加密存储已解锁。
+(reserved, not supported yet) Indicates that the credential encryption storage of the current user has been unlocked upon restart.
 
 **Since:** 7
 
@@ -986,9 +984,9 @@ COMMON_EVENT_USER_UNLOCKED = 'usual.event.USER_UNLOCKED'
 COMMON_EVENT_USER_STOPPING = 'usual.event.USER_STOPPING'
 ```
 
-（预留事件，暂未支持）提示要停止用户。
+(reserved, not supported yet) Indicates the user to be stopped.
 
-要订阅此事件，您的应用必须具备ohos.permission.INTERACT_ACROSS_LOCAL_ACCOUNTS权限（该权限仅系统应用可申请）。
+To subscribe to this common event, your application must have the ohos.permission.INTERACT_ACROSS_LOCAL_ACCOUNTS permission. (This permission is available only for system applications.)
 
 **Since:** 7
 
@@ -1008,7 +1006,7 @@ COMMON_EVENT_USER_STOPPING = 'usual.event.USER_STOPPING'
 COMMON_EVENT_USER_STOPPED = 'usual.event.USER_STOPPED'
 ```
 
-（预留事件，暂未支持）提示用户已停止。
+(reserved, not supported yet) Indicates that the user has been stopped.
 
 **Since:** 7
 
@@ -1028,7 +1026,7 @@ COMMON_EVENT_USER_STOPPED = 'usual.event.USER_STOPPED'
 COMMON_EVENT_HWID_LOGIN = 'common.event.HWID_LOGIN'
 ```
 
-表示分布式账号登录成功的动作。
+HW id login successfully.
 
 **Since:** 7
 
@@ -1048,7 +1046,7 @@ COMMON_EVENT_HWID_LOGIN = 'common.event.HWID_LOGIN'
 COMMON_EVENT_HWID_LOGOUT = 'common.event.HWID_LOGOUT'
 ```
 
-表示分布式账号登出成功的动作。
+HW id logout successfully.
 
 **Since:** 7
 
@@ -1068,7 +1066,7 @@ COMMON_EVENT_HWID_LOGOUT = 'common.event.HWID_LOGOUT'
 COMMON_EVENT_HWID_TOKEN_INVALID = 'common.event.HWID_TOKEN_INVALID'
 ```
 
-表示分布式账号token令牌无效的动作。
+HW id is invalid.
 
 **Since:** 7
 
@@ -1088,7 +1086,7 @@ COMMON_EVENT_HWID_TOKEN_INVALID = 'common.event.HWID_TOKEN_INVALID'
 COMMON_EVENT_HWID_LOGOFF = 'common.event.HWID_LOGOFF'
 ```
 
-表示分布式账号注销的动作。
+HW id logs off.
 
 **Since:** 7
 
@@ -1108,7 +1106,7 @@ COMMON_EVENT_HWID_LOGOFF = 'common.event.HWID_LOGOFF'
 COMMON_EVENT_WIFI_POWER_STATE = 'usual.event.wifi.POWER_STATE'
 ```
 
-提示Wi-Fi功能状态的变更，如启用或禁用。
+Indicates a change in the Wi-Fi state (enabled or disabled).
 
 **Since:** 7
 
@@ -1128,9 +1126,9 @@ COMMON_EVENT_WIFI_POWER_STATE = 'usual.event.wifi.POWER_STATE'
 COMMON_EVENT_WIFI_SCAN_FINISHED = 'usual.event.wifi.SCAN_FINISHED'
 ```
 
-提示Wi-Fi接入点已被扫描并证明可用。
+Indicates that the Wi-Fi access point has been scanned and proved available.
 
-要订阅此事件，您的应用必须具备ohos.permission.LOCATION权限。
+To subscribe to this common event, your application must have the ohos.permission.LOCATION permission.
 
 **Since:** 7
 
@@ -1150,9 +1148,9 @@ COMMON_EVENT_WIFI_SCAN_FINISHED = 'usual.event.wifi.SCAN_FINISHED'
 COMMON_EVENT_WIFI_RSSI_VALUE = 'usual.event.wifi.RSSI_VALUE'
 ```
 
-提示Wi-Fi信号强度（RSSI）改变。
+Indicates that the Wi-Fi signal strength (RSSI) has changed.
 
-要订阅此事件，您的应用必须具备ohos.permission.GET_WIFI_INFO权限。
+To subscribe to this common event, your application must have the ohos.permission.GET_WIFI_INFO permission.
 
 **Since:** 7
 
@@ -1172,7 +1170,7 @@ COMMON_EVENT_WIFI_RSSI_VALUE = 'usual.event.wifi.RSSI_VALUE'
 COMMON_EVENT_WIFI_CONN_STATE = 'usual.event.wifi.CONN_STATE'
 ```
 
-提示Wi-Fi连接状态发生改变。
+Indicates that the Wi-Fi connection state has changed.
 
 **Since:** 7
 
@@ -1192,7 +1190,7 @@ COMMON_EVENT_WIFI_CONN_STATE = 'usual.event.wifi.CONN_STATE'
 COMMON_EVENT_WIFI_HOTSPOT_STATE = 'usual.event.wifi.HOTSPOT_STATE'
 ```
 
-提示Wi-Fi热点功能状态的变更，如启用或禁用。
+Indicates a change in the Wi-Fi hotspot state (enabled or disabled).
 
 **Since:** 7
 
@@ -1212,9 +1210,9 @@ COMMON_EVENT_WIFI_HOTSPOT_STATE = 'usual.event.wifi.HOTSPOT_STATE'
 COMMON_EVENT_WIFI_AP_STA_JOIN = 'usual.event.wifi.WIFI_HS_STA_JOIN'
 ```
 
-提示有客户端加入当前设备Wi-Fi热点。
+Indicates that a client has joined the Wi-Fi hotspot of the current device.
 
-要订阅此事件，您的应用必须具备ohos.permission.GET_WIFI_INFO权限。
+To subscribe to this common event, your application must have the ohos.permission.GET_WIFI_INFO permission.
 
 **Since:** 7
 
@@ -1234,9 +1232,9 @@ COMMON_EVENT_WIFI_AP_STA_JOIN = 'usual.event.wifi.WIFI_HS_STA_JOIN'
 COMMON_EVENT_WIFI_AP_STA_LEAVE = 'usual.event.wifi.WIFI_HS_STA_LEAVE'
 ```
 
-提示客户端已断开与当前设备Wi-Fi热点的连接。
+Indicates that the client is disconnected from the Wi-Fi hotspot of the current device.
 
-要订阅此事件，您的应用必须具备ohos.permission.GET_WIFI_INFO权限。
+To subscribe to this common event, your application must have the ohos.permission.GET_WIFI_INFO permission.
 
 **Since:** 7
 
@@ -1256,7 +1254,7 @@ COMMON_EVENT_WIFI_AP_STA_LEAVE = 'usual.event.wifi.WIFI_HS_STA_LEAVE'
 COMMON_EVENT_WIFI_MPLINK_STATE_CHANGE = 'usual.event.wifi.mplink.STATE_CHANGE'
 ```
 
-提示MPLink（增强Wi-Fi功能）状态已更改（暂不支持）。
+(not supported yet) Indicates that the state of MPLINK (an enhanced Wi-Fi feature) has changed.
 
 **Since:** 7
 
@@ -1276,9 +1274,9 @@ COMMON_EVENT_WIFI_MPLINK_STATE_CHANGE = 'usual.event.wifi.mplink.STATE_CHANGE'
 COMMON_EVENT_WIFI_P2P_CONN_STATE = 'usual.event.wifi.p2p.CONN_STATE_CHANGE'
 ```
 
-提示Wi-Fi P2P连接状态改变。
+Indicates that the Wi-Fi P2P connection state has changed.
 
-要订阅此事件，您的应用必须具备ohos.permission.GET_WIFI_INFO和ohos.permission.LOCATION权限。
+To subscribe to this common event, your application must have the ohos.permission.GET_WIFI_INFO and ohos.permission.LOCATION permissions.
 
 **Since:** 7
 
@@ -1298,9 +1296,9 @@ COMMON_EVENT_WIFI_P2P_CONN_STATE = 'usual.event.wifi.p2p.CONN_STATE_CHANGE'
 COMMON_EVENT_WIFI_P2P_STATE_CHANGED = 'usual.event.wifi.p2p.STATE_CHANGE'
 ```
 
-提示Wi-Fi P2P状态发生变更，如启用和禁用。
+Indicates a change in the Wi-Fi P2P state (enabled or disabled).
 
-要订阅此事件，您的应用必须具备ohos.permission.GET_WIFI_INFO权限。
+To subscribe to this common event, your application must have the ohos.permission.GET_WIFI_INFO permission.
 
 **Since:** 7
 
@@ -1320,9 +1318,9 @@ COMMON_EVENT_WIFI_P2P_STATE_CHANGED = 'usual.event.wifi.p2p.STATE_CHANGE'
 COMMON_EVENT_WIFI_P2P_PEERS_STATE_CHANGED = 'usual.event.wifi.p2p.DEVICES_CHANGE'
 ```
 
-提示Wi-Fi P2P对等体状态变化。
+Indicates that the state of the Wi-Fi P2P peer device has changed.
 
-要订阅此事件，您的应用必须具备ohos.permission.GET_WIFI_INFO权限。
+To subscribe to this common event, your application must have the ohos.permission.GET_WIFI_INFO permission.
 
 **Since:** 7
 
@@ -1342,9 +1340,9 @@ COMMON_EVENT_WIFI_P2P_PEERS_STATE_CHANGED = 'usual.event.wifi.p2p.DEVICES_CHANGE
 COMMON_EVENT_WIFI_P2P_PEERS_DISCOVERY_STATE_CHANGED = 'usual.event.wifi.p2p.PEER_DISCOVERY_STATE_CHANGE'
 ```
 
-提示Wi-Fi P2P发现状态变化。
+Indicates that the Wi-Fi P2P discovery state has changed.
 
-要订阅此事件，您的应用必须具备ohos.permission.GET_WIFI_INFO权限。
+To subscribe to this common event, your application must have the ohos.permission.GET_WIFI_INFO permission.
 
 **Since:** 7
 
@@ -1364,9 +1362,9 @@ COMMON_EVENT_WIFI_P2P_PEERS_DISCOVERY_STATE_CHANGED = 'usual.event.wifi.p2p.PEER
 COMMON_EVENT_WIFI_P2P_CURRENT_DEVICE_STATE_CHANGED = 'usual.event.wifi.p2p.CURRENT_DEVICE_CHANGE'
 ```
 
-提示Wi-Fi P2P当前设备状态变化。
+Indicates that the state of the Wi-Fi P2P local device has changed.
 
-要订阅此事件，您的应用必须具备ohos.permission.GET_WIFI_INFO权限。
+To subscribe to this common event, your application must have the ohos.permission.GET_WIFI_INFO permission.
 
 **Since:** 7
 
@@ -1386,9 +1384,9 @@ COMMON_EVENT_WIFI_P2P_CURRENT_DEVICE_STATE_CHANGED = 'usual.event.wifi.p2p.CURRE
 COMMON_EVENT_WIFI_P2P_GROUP_STATE_CHANGED = 'usual.event.wifi.p2p.GROUP_STATE_CHANGED'
 ```
 
-提示Wi-Fi P2P群组信息已更改。
+Indicates that the Wi-Fi P2P group information has changed.
 
-要订阅此事件，您的应用必须具备ohos.permission.GET_WIFI_INFO权限。
+To subscribe to this common event, your application must have the ohos.permission.GET_WIFI_INFO permission.
 
 **Since:** 7
 
@@ -1408,9 +1406,9 @@ COMMON_EVENT_WIFI_P2P_GROUP_STATE_CHANGED = 'usual.event.wifi.p2p.GROUP_STATE_CH
 COMMON_EVENT_BLUETOOTH_HANDSFREE_AG_CONNECT_STATE_UPDATE = 'usual.event.bluetooth.handsfree.ag.CONNECT_STATE_UPDATE'
 ```
 
-（预留事件，暂未支持）提示蓝牙免提通信连接状态。
+(reserved, not supported yet) Indicates the connection state of Bluetooth handsfree communication.
 
-要订阅此事件，您的应用必须具备ohos.permission.USE_BLUETOOTH权限。
+To subscribe to this common event, your application must have the ohos.permission.USE_BLUETOOTH permission.
 
 **Since:** 7
 
@@ -1430,9 +1428,9 @@ COMMON_EVENT_BLUETOOTH_HANDSFREE_AG_CONNECT_STATE_UPDATE = 'usual.event.bluetoot
 COMMON_EVENT_BLUETOOTH_HANDSFREE_AG_CURRENT_DEVICE_UPDATE = 'usual.event.bluetooth.handsfree.ag.CURRENT_DEVICE_UPDATE'
 ```
 
-（预留事件，暂未支持）提示连接到具有蓝牙免提功能的设备处于活动状态。
+(reserved, not supported yet) Indicates that the device connected to the Bluetooth handsfree function is active. 
 
-要订阅此事件，您的应用必须具备ohos.permission.USE_BLUETOOTH权限。
+To subscribe to this common event, your application must have the ohos.permission.USE_BLUETOOTH permission.
 
 **Since:** 7
 
@@ -1452,9 +1450,9 @@ COMMON_EVENT_BLUETOOTH_HANDSFREE_AG_CURRENT_DEVICE_UPDATE = 'usual.event.bluetoo
 COMMON_EVENT_BLUETOOTH_HANDSFREE_AG_AUDIO_STATE_UPDATE = 'usual.event.bluetooth.handsfree.ag.AUDIO_STATE_UPDATE'
 ```
 
-（预留事件，暂未支持）提示蓝牙A2DP连接状态已更改。
+(reserved, not supported yet) Indicates that the connection state of Bluetooth A2DP has changed.
 
-要订阅此事件，您的应用必须具备ohos.permission.USE_BLUETOOTH权限。
+To subscribe to this common event, your application must have the ohos.permission.USE_BLUETOOTH permission.
 
 **Since:** 7
 
@@ -1474,9 +1472,9 @@ COMMON_EVENT_BLUETOOTH_HANDSFREE_AG_AUDIO_STATE_UPDATE = 'usual.event.bluetooth.
 COMMON_EVENT_BLUETOOTH_A2DPSOURCE_CONNECT_STATE_UPDATE = 'usual.event.bluetooth.a2dpsource.CONNECT_STATE_UPDATE'
 ```
 
-（预留事件，暂未支持）提示蓝牙A2DP连接状态。
+(reserved, not supported yet) Indicates the connection state of Bluetooth A2DP.
 
-要订阅此事件，您的应用必须具备ohos.permission.USE_BLUETOOTH权限。
+To subscribe to this common event, your application must have the ohos.permission.USE_BLUETOOTH permission.
 
 **Since:** 7
 
@@ -1496,9 +1494,9 @@ COMMON_EVENT_BLUETOOTH_A2DPSOURCE_CONNECT_STATE_UPDATE = 'usual.event.bluetooth.
 COMMON_EVENT_BLUETOOTH_A2DPSOURCE_CURRENT_DEVICE_UPDATE = 'usual.event.bluetooth.a2dpsource.CURRENT_DEVICE_UPDATE'
 ```
 
-（预留事件，暂未支持）提示使用蓝牙A2DP连接的设备处于活动状态。
+(reserved, not supported yet) Indicates that the device connected using Bluetooth A2DP is active.
 
-要订阅此事件，您的应用必须具备ohos.permission.USE_BLUETOOTH权限。
+To subscribe to this common event, your application must have the ohos.permission.USE_BLUETOOTH permission.
 
 **Since:** 7
 
@@ -1518,9 +1516,9 @@ COMMON_EVENT_BLUETOOTH_A2DPSOURCE_CURRENT_DEVICE_UPDATE = 'usual.event.bluetooth
 COMMON_EVENT_BLUETOOTH_A2DPSOURCE_PLAYING_STATE_UPDATE = 'usual.event.bluetooth.a2dpsource.PLAYING_STATE_UPDATE'
 ```
 
-（预留事件，暂未支持）提示蓝牙A2DP播放状态发生改变。
+(reserved, not supported yet) Indicates that the playing state of Bluetooth A2DP has changed.
 
-要订阅此事件，您的应用必须具备ohos.permission.USE_BLUETOOTH权限。
+To subscribe to this common event, your application must have the ohos.permission.USE_BLUETOOTH permission.
 
 **Since:** 7
 
@@ -1540,9 +1538,9 @@ COMMON_EVENT_BLUETOOTH_A2DPSOURCE_PLAYING_STATE_UPDATE = 'usual.event.bluetooth.
 COMMON_EVENT_BLUETOOTH_A2DPSOURCE_AVRCP_CONNECT_STATE_UPDATE = 'usual.event.bluetooth.a2dpsource.AVRCP_CONNECT_STATE_UPDATE'
 ```
 
-（预留事件，暂未支持）提示蓝牙A2DP的AVRCP连接状态已更改。
+(reserved, not supported yet) Indicates that the AVRCP connection state of Bluetooth A2DP has changed.
 
-要订阅此事件，您的应用必须具备ohos.permission.USE_BLUETOOTH权限。
+To subscribe to this common event, your application must have the ohos.permission.USE_BLUETOOTH permission.
 
 **Since:** 7
 
@@ -1562,9 +1560,9 @@ COMMON_EVENT_BLUETOOTH_A2DPSOURCE_AVRCP_CONNECT_STATE_UPDATE = 'usual.event.blue
 COMMON_EVENT_BLUETOOTH_A2DPSOURCE_CODEC_VALUE_UPDATE = 'usual.event.bluetooth.a2dpsource.CODEC_VALUE_UPDATE'
 ```
 
-（预留事件，暂未支持）提示蓝牙A2DP音频编解码状态更改。
+(reserved, not supported yet) Indicates that the audio codec state of Bluetooth A2DP has changed.
 
-要订阅此事件，您的应用必须具备ohos.permission.USE_BLUETOOTH权限。
+To subscribe to this common event, your application must have the ohos.permission.USE_BLUETOOTH permission.
 
 **Since:** 7
 
@@ -1584,9 +1582,9 @@ COMMON_EVENT_BLUETOOTH_A2DPSOURCE_CODEC_VALUE_UPDATE = 'usual.event.bluetooth.a2
 COMMON_EVENT_BLUETOOTH_REMOTEDEVICE_DISCOVERED = 'usual.event.bluetooth.remotedevice.DISCOVERED'
 ```
 
-（预留事件，暂未支持）提示发现远程蓝牙设备。
+(reserved, not supported yet) Indicates that a remote Bluetooth device is discovered.
 
-要订阅此事件，您的应用必须具备ohos.permission.LOCATION和ohos.permission.USE_BLUETOOTH权限。
+To subscribe to this common event, your application must have the ohos.permission.LOCATION and ohos.permission.USE_BLUETOOTH permissions.
 
 **Since:** 7
 
@@ -1606,9 +1604,9 @@ COMMON_EVENT_BLUETOOTH_REMOTEDEVICE_DISCOVERED = 'usual.event.bluetooth.remotede
 COMMON_EVENT_BLUETOOTH_REMOTEDEVICE_CLASS_VALUE_UPDATE = 'usual.event.bluetooth.remotedevice.CLASS_VALUE_UPDATE'
 ```
 
-（预留事件，暂未支持）提示远程蓝牙设备的蓝牙类别已更改。
+(reserved, not supported yet) Indicates that the Bluetooth class of a remote Bluetooth device has changed.
 
-要订阅此事件，您的应用必须具备ohos.permission.USE_BLUETOOTH权限。
+To subscribe to this common event, your application must have the ohos.permission.USE_BLUETOOTH permission.
 
 **Since:** 7
 
@@ -1628,9 +1626,9 @@ COMMON_EVENT_BLUETOOTH_REMOTEDEVICE_CLASS_VALUE_UPDATE = 'usual.event.bluetooth.
 COMMON_EVENT_BLUETOOTH_REMOTEDEVICE_ACL_CONNECTED = 'usual.event.bluetooth.remotedevice.ACL_CONNECTED'
 ```
 
-（预留事件，暂未支持）提示已与远程蓝牙设备建立低级别（ACL）连接。
+(reserved, not supported yet) Indicates that a low-level (ACL) connection has been established with the remote Bluetooth device.
 
-要订阅此事件，您的应用必须具备ohos.permission.USE_BLUETOOTH权限。
+To subscribe to this common event, your application must have the ohos.permission.USE_BLUETOOTH permission.
 
 **Since:** 7
 
@@ -1650,9 +1648,9 @@ COMMON_EVENT_BLUETOOTH_REMOTEDEVICE_ACL_CONNECTED = 'usual.event.bluetooth.remot
 COMMON_EVENT_BLUETOOTH_REMOTEDEVICE_ACL_DISCONNECTED = 'usual.event.bluetooth.remotedevice.ACL_DISCONNECTED'
 ```
 
-（预留事件，暂未支持）提示低级别（ACL）连接已从远程蓝牙设备断开。
+(reserved, not supported yet) Indicates that the low-level (ACL) connection has been disconnected from the remote Bluetooth device.
 
-要订阅此事件，您的应用必须具备ohos.permission.USE_BLUETOOTH权限。
+To subscribe to this common event, your application must have the ohos.permission.USE_BLUETOOTH permission.
 
 **Since:** 7
 
@@ -1672,9 +1670,9 @@ COMMON_EVENT_BLUETOOTH_REMOTEDEVICE_ACL_DISCONNECTED = 'usual.event.bluetooth.re
 COMMON_EVENT_BLUETOOTH_REMOTEDEVICE_NAME_UPDATE = 'usual.event.bluetooth.remotedevice.NAME_UPDATE'
 ```
 
-（预留事件，暂未支持）提示远程蓝牙设备的友好名称首次被检索或自上次检索以来被更改。
+(reserved, not supported yet) Indicates that the friendly name of a remote Bluetooth device is retrieved for the first time or has changed since the last retrieval.
 
-要订阅此事件，您的应用必须具备ohos.permission.USE_BLUETOOTH权限。
+To subscribe to this common event, your application must have the ohos.permission.USE_BLUETOOTH permission.
 
 **Since:** 7
 
@@ -1694,9 +1692,9 @@ COMMON_EVENT_BLUETOOTH_REMOTEDEVICE_NAME_UPDATE = 'usual.event.bluetooth.remoted
 COMMON_EVENT_BLUETOOTH_REMOTEDEVICE_PAIR_STATE = 'usual.event.bluetooth.remotedevice.PAIR_STATE'
 ```
 
-（预留事件，暂未支持）提示远程蓝牙设备连接状态更改。
+(reserved, not supported yet) Indicates the connection state with a remote Bluetooth device is changed.
 
-要订阅此事件，您的应用必须具备ohos.permission.USE_BLUETOOTH权限。
+To subscribe to this common event, your application must have the ohos.permission.USE_BLUETOOTH permission.
 
 **Since:** 7
 
@@ -1716,9 +1714,9 @@ COMMON_EVENT_BLUETOOTH_REMOTEDEVICE_PAIR_STATE = 'usual.event.bluetooth.remotede
 COMMON_EVENT_BLUETOOTH_REMOTEDEVICE_BATTERY_VALUE_UPDATE = 'usual.event.bluetooth.remotedevice.BATTERY_VALUE_UPDATE'
 ```
 
-（预留事件，暂未支持）提示远程蓝牙设备的电池电量首次被检索或自上次检索以来被更改。
+(reserved, not supported yet) Indicates that the battery level of a remote Bluetooth device is retrieved for the first time or has changed since the last retrieval.
 
-要订阅此事件，您的应用必须具备ohos.permission.USE_BLUETOOTH权限。
+To subscribe to this common event, your application must have the ohos.permission.USE_BLUETOOTH permission.
 
 **Since:** 7
 
@@ -1738,7 +1736,7 @@ COMMON_EVENT_BLUETOOTH_REMOTEDEVICE_BATTERY_VALUE_UPDATE = 'usual.event.bluetoot
 COMMON_EVENT_BLUETOOTH_REMOTEDEVICE_SDP_RESULT = 'usual.event.bluetooth.remotedevice.SDP_RESULT'
 ```
 
-（预留事件，暂未支持）提示远程蓝牙设备SDP状态。
+(reserved, not supported yet) Indicates the SDP state of a remote Bluetooth device.
 
 **Since:** 7
 
@@ -1758,9 +1756,9 @@ COMMON_EVENT_BLUETOOTH_REMOTEDEVICE_SDP_RESULT = 'usual.event.bluetooth.remotede
 COMMON_EVENT_BLUETOOTH_REMOTEDEVICE_UUID_VALUE = 'usual.event.bluetooth.remotedevice.UUID_VALUE'
 ```
 
-（预留事件，暂未支持）提示远程蓝牙设备UUID连接状态。
+(reserved, not supported yet) Indicates the UUID connection state with a remote Bluetooth device.
 
-要订阅此事件，您的应用必须具备ohos.permission.DISCOVER_BLUETOOTH权限。
+To subscribe to this common event, your application must have the ohos.permission.DISCOVER_BLUETOOTH permission.
 
 **Since:** 7
 
@@ -1780,9 +1778,9 @@ COMMON_EVENT_BLUETOOTH_REMOTEDEVICE_UUID_VALUE = 'usual.event.bluetooth.remotede
 COMMON_EVENT_BLUETOOTH_REMOTEDEVICE_PAIRING_REQ = 'usual.event.bluetooth.remotedevice.PAIRING_REQ'
 ```
 
-（预留事件，暂未支持）提示远程蓝牙设备配对请求。
+(reserved, not supported yet) Indicates the pairing request from a remote Bluetooth device.
 
-要订阅此事件，您的应用必须具备ohos.permission.DISCOVER_BLUETOOTH权限。
+To subscribe to this common event, your application must have the ohos.permission.DISCOVER_BLUETOOTH permission.
 
 **Since:** 7
 
@@ -1802,7 +1800,7 @@ COMMON_EVENT_BLUETOOTH_REMOTEDEVICE_PAIRING_REQ = 'usual.event.bluetooth.remoted
 COMMON_EVENT_BLUETOOTH_REMOTEDEVICE_PAIRING_CANCEL = 'usual.event.bluetooth.remotedevice.PAIRING_CANCEL'
 ```
 
-（预留事件，暂未支持）提示取消蓝牙配对。
+(reserved, not supported yet) Indicates that Bluetooth pairing has been canceled.
 
 **Since:** 7
 
@@ -1822,7 +1820,7 @@ COMMON_EVENT_BLUETOOTH_REMOTEDEVICE_PAIRING_CANCEL = 'usual.event.bluetooth.remo
 COMMON_EVENT_BLUETOOTH_REMOTEDEVICE_CONNECT_REQ = 'usual.event.bluetooth.remotedevice.CONNECT_REQ'
 ```
 
-（预留事件，暂未支持）提示远程蓝牙设备连接请求。
+(reserved, not supported yet) Indicates the connection request from a remote Bluetooth device.
 
 **Since:** 7
 
@@ -1842,7 +1840,7 @@ COMMON_EVENT_BLUETOOTH_REMOTEDEVICE_CONNECT_REQ = 'usual.event.bluetooth.remoted
 COMMON_EVENT_BLUETOOTH_REMOTEDEVICE_CONNECT_REPLY = 'usual.event.bluetooth.remotedevice.CONNECT_REPLY'
 ```
 
-（预留事件，暂未支持）提示远程蓝牙设备连接请求响应。
+(reserved, not supported yet) Indicates the response to the connection request from a remote Bluetooth device.
 
 **Since:** 7
 
@@ -1862,7 +1860,7 @@ COMMON_EVENT_BLUETOOTH_REMOTEDEVICE_CONNECT_REPLY = 'usual.event.bluetooth.remot
 COMMON_EVENT_BLUETOOTH_REMOTEDEVICE_CONNECT_CANCEL = 'usual.event.bluetooth.remotedevice.CONNECT_CANCEL'
 ```
 
-（预留事件，暂未支持）提示取消与远程蓝牙设备的连接。
+(reserved, not supported yet) Indicates that the connection to a remote Bluetooth device has been canceled.
 
 **Since:** 7
 
@@ -1882,7 +1880,7 @@ COMMON_EVENT_BLUETOOTH_REMOTEDEVICE_CONNECT_CANCEL = 'usual.event.bluetooth.remo
 COMMON_EVENT_BLUETOOTH_HANDSFREEUNIT_CONNECT_STATE_UPDATE = 'usual.event.bluetooth.handsfreeunit.CONNECT_STATE_UPDATE'
 ```
 
-（预留事件，暂未支持）提示蓝牙免提连接状态已更改。
+(reserved, not supported yet) Indicates that the connection state with a Bluetooth handsfree has changed.
 
 **Since:** 7
 
@@ -1902,7 +1900,7 @@ COMMON_EVENT_BLUETOOTH_HANDSFREEUNIT_CONNECT_STATE_UPDATE = 'usual.event.bluetoo
 COMMON_EVENT_BLUETOOTH_HANDSFREEUNIT_AUDIO_STATE_UPDATE = 'usual.event.bluetooth.handsfreeunit.AUDIO_STATE_UPDATE'
 ```
 
-（预留事件，暂未支持）提示蓝牙免提音频状态已更改。
+(reserved, not supported yet) Indicates that the audio state of a Bluetooth handsfree has changed.
 
 **Since:** 7
 
@@ -1922,7 +1920,7 @@ COMMON_EVENT_BLUETOOTH_HANDSFREEUNIT_AUDIO_STATE_UPDATE = 'usual.event.bluetooth
 COMMON_EVENT_BLUETOOTH_HANDSFREEUNIT_AG_COMMON_EVENT = 'usual.event.bluetooth.handsfreeunit.AG_COMMON_EVENT'
 ```
 
-（预留事件，暂未支持）提示蓝牙免提音频网关状态已更改。
+(reserved, not supported yet) Indicates that the audio gateway state of a Bluetooth handsfree has changed.
 
 **Since:** 7
 
@@ -1942,7 +1940,7 @@ COMMON_EVENT_BLUETOOTH_HANDSFREEUNIT_AG_COMMON_EVENT = 'usual.event.bluetooth.ha
 COMMON_EVENT_BLUETOOTH_HANDSFREEUNIT_AG_CALL_STATE_UPDATE = 'usual.event.bluetooth.handsfreeunit.AG_CALL_STATE_UPDATE'
 ```
 
-（预留事件，暂未支持）提示蓝牙免提呼叫状态已更改。
+(reserved, not supported yet) Indicates that the calling state of a Bluetooth handsfree has changed.
 
 **Since:** 7
 
@@ -1962,9 +1960,9 @@ COMMON_EVENT_BLUETOOTH_HANDSFREEUNIT_AG_CALL_STATE_UPDATE = 'usual.event.bluetoo
 COMMON_EVENT_BLUETOOTH_HOST_STATE_UPDATE = 'usual.event.bluetooth.host.STATE_UPDATE'
 ```
 
-（预留事件，暂未支持）提示蓝牙适配器状态已更改，例如蓝牙已打开或关闭。
+(reserved, not supported yet) Indicates a change in the Bluetooth adapter state (enabled or disabled).
 
-要订阅此事件，您的应用必须具备ohos.permission.USE_BLUETOOTH权限。
+To subscribe to this common event, your application must have the ohos.permission.USE_BLUETOOTH permission.
 
 **Since:** 7
 
@@ -1984,7 +1982,7 @@ COMMON_EVENT_BLUETOOTH_HOST_STATE_UPDATE = 'usual.event.bluetooth.host.STATE_UPD
 COMMON_EVENT_BLUETOOTH_HOST_REQ_DISCOVERABLE = 'usual.event.bluetooth.host.REQ_DISCOVERABLE'
 ```
 
-（预留事件，暂未支持）提示用户允许扫描蓝牙请求。
+(reserved, not supported yet) Indicates that Bluetooth is discoverable.
 
 **Since:** 7
 
@@ -2004,9 +2002,9 @@ COMMON_EVENT_BLUETOOTH_HOST_REQ_DISCOVERABLE = 'usual.event.bluetooth.host.REQ_D
 COMMON_EVENT_BLUETOOTH_HOST_REQ_ENABLE = 'usual.event.bluetooth.host.REQ_ENABLE'
 ```
 
-（预留事件，暂未支持）提示用户打开蓝牙请求。
+(reserved, not supported yet) Indicates that Bluetooth is enabled.
 
-要订阅此事件，您的应用必须具备ohos.permission.USE_BLUETOOTH权限。
+To subscribe to this common event, your application must have the ohos.permission.USE_BLUETOOTH permission.
 
 **Since:** 7
 
@@ -2026,9 +2024,9 @@ COMMON_EVENT_BLUETOOTH_HOST_REQ_ENABLE = 'usual.event.bluetooth.host.REQ_ENABLE'
 COMMON_EVENT_BLUETOOTH_HOST_REQ_DISABLE = 'usual.event.bluetooth.host.REQ_DISABLE'
 ```
 
-（预留事件，暂未支持）提示用户关闭蓝牙请求。
+(reserved, not supported yet) Indicates that Bluetooth is disabled.
 
-要订阅此事件，您的应用必须具备ohos.permission.USE_BLUETOOTH权限。
+To subscribe to this common event, your application must have the ohos.permission.USE_BLUETOOTH permission.
 
 **Since:** 7
 
@@ -2048,9 +2046,9 @@ COMMON_EVENT_BLUETOOTH_HOST_REQ_DISABLE = 'usual.event.bluetooth.host.REQ_DISABL
 COMMON_EVENT_BLUETOOTH_HOST_SCAN_MODE_UPDATE = 'usual.event.bluetooth.host.SCAN_MODE_UPDATE'
 ```
 
-（预留事件，暂未支持）提示设备蓝牙扫描模式更改。
+(reserved, not supported yet) Indicates that the Bluetooth scan mode of the device is changed.
 
-要订阅此事件，您的应用必须具备ohos.permission.USE_BLUETOOTH权限。
+To subscribe to this common event, your application must have the ohos.permission.USE_BLUETOOTH permission.
 
 **Since:** 7
 
@@ -2070,9 +2068,9 @@ COMMON_EVENT_BLUETOOTH_HOST_SCAN_MODE_UPDATE = 'usual.event.bluetooth.host.SCAN_
 COMMON_EVENT_BLUETOOTH_HOST_DISCOVERY_STARTED = 'usual.event.bluetooth.host.DISCOVERY_STARTED'
 ```
 
-（预留事件，暂未支持）提示设备上已启动蓝牙扫描。
+(reserved, not supported yet) Indicates that Bluetooth discovery is started on the device.
 
-要订阅此事件，您的应用必须具备ohos.permission.USE_BLUETOOTH权限。
+To subscribe to this common event, your application must have the ohos.permission.USE_BLUETOOTH permission.
 
 **Since:** 7
 
@@ -2092,9 +2090,9 @@ COMMON_EVENT_BLUETOOTH_HOST_DISCOVERY_STARTED = 'usual.event.bluetooth.host.DISC
 COMMON_EVENT_BLUETOOTH_HOST_DISCOVERY_FINISHED = 'usual.event.bluetooth.host.DISCOVERY_FINISHED'
 ```
 
-（预留事件，暂未支持）提示设备上蓝牙扫描完成。
+(reserved, not supported yet) Indicates that Bluetooth discovery is finished on the device.
 
-要订阅此事件，您的应用必须具备ohos.permission.USE_BLUETOOTH权限。
+To subscribe to this common event, your application must have the ohos.permission.USE_BLUETOOTH permission.
 
 **Since:** 7
 
@@ -2114,9 +2112,9 @@ COMMON_EVENT_BLUETOOTH_HOST_DISCOVERY_FINISHED = 'usual.event.bluetooth.host.DIS
 COMMON_EVENT_BLUETOOTH_HOST_NAME_UPDATE = 'usual.event.bluetooth.host.NAME_UPDATE'
 ```
 
-（预留事件，暂未支持）提示设备蓝牙适配器名称已更改。
+(reserved, not supported yet) Indicates that the name of the device Bluetooth adapter has changed.
 
-要订阅此事件，您的应用必须具备ohos.permission.USE_BLUETOOTH权限。
+To subscribe to this common event, your application must have the ohos.permission.USE_BLUETOOTH permission.
 
 **Since:** 7
 
@@ -2136,9 +2134,9 @@ COMMON_EVENT_BLUETOOTH_HOST_NAME_UPDATE = 'usual.event.bluetooth.host.NAME_UPDAT
 COMMON_EVENT_BLUETOOTH_A2DPSINK_CONNECT_STATE_UPDATE = 'usual.event.bluetooth.a2dpsink.CONNECT_STATE_UPDATE'
 ```
 
-（预留事件，暂未支持）提示蓝牙A2DP宿的连接状态已更改。
+(reserved, not supported yet) Indicates that the connection state of Bluetooth A2DP Sink has changed.
 
-要订阅此事件，您的应用必须具备ohos.permission.USE_BLUETOOTH权限。
+To subscribe to this common event, your application must have the ohos.permission.USE_BLUETOOTH permission.
 
 **Since:** 7
 
@@ -2158,9 +2156,9 @@ COMMON_EVENT_BLUETOOTH_A2DPSINK_CONNECT_STATE_UPDATE = 'usual.event.bluetooth.a2
 COMMON_EVENT_BLUETOOTH_A2DPSINK_PLAYING_STATE_UPDATE = 'usual.event.bluetooth.a2dpsink.PLAYING_STATE_UPDATE'
 ```
 
-（预留事件，暂未支持）提示蓝牙A2DP宿的播放状态发生改变。
+(reserved, not supported yet) Indicates that the playing state of Bluetooth A2DP Sink has changed.
 
-要订阅此事件，您的应用必须具备ohos.permission.USE_BLUETOOTH权限。
+To subscribe to this common event, your application must have the ohos.permission.USE_BLUETOOTH permission.
 
 **Since:** 7
 
@@ -2180,9 +2178,9 @@ COMMON_EVENT_BLUETOOTH_A2DPSINK_PLAYING_STATE_UPDATE = 'usual.event.bluetooth.a2
 COMMON_EVENT_BLUETOOTH_A2DPSINK_AUDIO_STATE_UPDATE = 'usual.event.bluetooth.a2dpsink.AUDIO_STATE_UPDATE'
 ```
 
-（预留事件，暂未支持）提示蓝牙A2DP宿的音频状态已更改。
+(reserved, not supported yet) Indicates that the audio state of Bluetooth A2DP Sink has changed.
 
-要订阅此事件，您的应用必须具备ohos.permission.USE_BLUETOOTH权限。
+To subscribe to this common event, your application must have the ohos.permission.USE_BLUETOOTH permission.
 
 **Since:** 7
 
@@ -2202,7 +2200,7 @@ COMMON_EVENT_BLUETOOTH_A2DPSINK_AUDIO_STATE_UPDATE = 'usual.event.bluetooth.a2dp
 COMMON_EVENT_NFC_ACTION_ADAPTER_STATE_CHANGED = 'usual.event.nfc.action.ADAPTER_STATE_CHANGED'
 ```
 
-（预留事件，暂未支持）提示设备NFC适配器状态已更改。
+(reserved, not supported yet) Indicates that the state of the device NFC adapter has changed.
 
 **Since:** 7
 
@@ -2222,9 +2220,9 @@ COMMON_EVENT_NFC_ACTION_ADAPTER_STATE_CHANGED = 'usual.event.nfc.action.ADAPTER_
 COMMON_EVENT_NFC_ACTION_RF_FIELD_ON_DETECTED = 'usual.event.nfc.action.RF_FIELD_ON_DETECTED'
 ```
 
-（预留事件，暂未支持）提示检测到NFC设备RF字段处于使能状态。
+(reserved, not supported yet) Indicates that the NFC RF field is detected to be in the enabled state.
 
-要订阅此事件，您的应用必须具备ohos.permission.MANAGE_SECURE_SETTINGS权限（该权限仅系统应用可申请）。
+To subscribe to this common event, your application must have the ohos.permission.MANAGE_SECURE_SETTINGS permission. (This permission is available only for system applications.)
 
 **Since:** 7
 
@@ -2244,9 +2242,9 @@ COMMON_EVENT_NFC_ACTION_RF_FIELD_ON_DETECTED = 'usual.event.nfc.action.RF_FIELD_
 COMMON_EVENT_NFC_ACTION_RF_FIELD_OFF_DETECTED = 'usual.event.nfc.action.RF_FIELD_OFF_DETECTED'
 ```
 
-（预留事件，暂未支持）提示检测到NFC设备RF字段处于关闭状态。
+(reserved, not supported yet) Indicates that the NFC RF field is detected to be in the disabled state.
 
-要订阅此事件，您的应用必须具备ohos.permission.MANAGE_SECURE_SETTINGS权限（该权限仅系统应用可申请）。
+To subscribe to this common event, your application must have the ohos.permission.MANAGE_SECURE_SETTINGS permission. (This permission is available only for system applications.)
 
 **Since:** 7
 
@@ -2266,7 +2264,7 @@ COMMON_EVENT_NFC_ACTION_RF_FIELD_OFF_DETECTED = 'usual.event.nfc.action.RF_FIELD
 COMMON_EVENT_DISCHARGING = 'usual.event.DISCHARGING'
 ```
 
-提示系统停止为电池充电。
+Indicates that the system stops charging the battery.
 
 **Since:** 7
 
@@ -2286,7 +2284,7 @@ COMMON_EVENT_DISCHARGING = 'usual.event.DISCHARGING'
 COMMON_EVENT_CHARGING = 'usual.event.CHARGING'
 ```
 
-提示系统开始为电池充电。
+Indicates that the system starts charging the battery.
 
 **Since:** 7
 
@@ -2306,7 +2304,7 @@ COMMON_EVENT_CHARGING = 'usual.event.CHARGING'
 COMMON_EVENT_DEVICE_IDLE_MODE_CHANGED = 'usual.event.DEVICE_IDLE_MODE_CHANGED'
 ```
 
-（预留事件，暂未支持）提示系统空闲模式已更改。
+(reserved, not supported yet) Indicates that the system idle mode has changed.
 
 **Since:** 7
 
@@ -2326,7 +2324,7 @@ COMMON_EVENT_DEVICE_IDLE_MODE_CHANGED = 'usual.event.DEVICE_IDLE_MODE_CHANGED'
 COMMON_EVENT_POWER_SAVE_MODE_CHANGED = 'usual.event.POWER_SAVE_MODE_CHANGED'
 ```
 
-提示系统节能模式更改。
+Indicates that the system power-saving mode has changed.
 
 **Since:** 7
 
@@ -2346,9 +2344,9 @@ COMMON_EVENT_POWER_SAVE_MODE_CHANGED = 'usual.event.POWER_SAVE_MODE_CHANGED'
 COMMON_EVENT_USER_ADDED = 'usual.event.USER_ADDED'
 ```
 
-提示用户已添加到系统中。
+Indicates that a user has been added to the system.
 
-要订阅此事件，您的应用必须具备ohos.permission.MANAGE_LOCAL_ACCOUNTS权限（该权限仅系统应用可申请）。
+To subscribe to this common event, your application must have the ohos.permission.MANAGE_LOCAL_ACCOUNTS permission. (This permission is available only for system applications.)
 
 **Since:** 7
 
@@ -2368,9 +2366,9 @@ COMMON_EVENT_USER_ADDED = 'usual.event.USER_ADDED'
 COMMON_EVENT_USER_REMOVED = 'usual.event.USER_REMOVED'
 ```
 
-提示用户已从系统中删除。
+Indicates that a user has been removed from the system.
 
-要订阅此事件，您的应用必须具备ohos.permission.MANAGE_LOCAL_ACCOUNTS权限（该权限仅系统应用可申请）。
+To subscribe to this common event, your application must have the ohos.permission.MANAGE_LOCAL_ACCOUNTS permission. (This permission is available only for system applications.)
 
 **Since:** 7
 
@@ -2390,9 +2388,9 @@ COMMON_EVENT_USER_REMOVED = 'usual.event.USER_REMOVED'
 COMMON_EVENT_ABILITY_ADDED = 'common.event.ABILITY_ADDED'
 ```
 
-（预留事件，暂未支持）提示有某个能力已被添加。
+(reserved, not supported yet) Indicates that an ability has been added.
 
-要订阅此事件，您的应用必须具备ohos.permission.LISTEN_BUNDLE_CHANGE权限。
+To subscribe to this common event, your application must have the ohos.permission.LISTEN_BUNDLE_CHANGE permission.
 
 **Since:** 7
 
@@ -2412,9 +2410,9 @@ COMMON_EVENT_ABILITY_ADDED = 'common.event.ABILITY_ADDED'
 COMMON_EVENT_ABILITY_REMOVED = 'common.event.ABILITY_REMOVED'
 ```
 
-（预留事件，暂未支持）提示已删除某个能力。
+(reserved, not supported yet) Indicates that an ability has been removed.
 
-要订阅此事件，您的应用必须具备ohos.permission.LISTEN_BUNDLE_CHANGE权限。
+To subscribe to this common event, your application must have the ohos.permission.LISTEN_BUNDLE_CHANGE permission.
 
 **Since:** 7
 
@@ -2434,9 +2432,9 @@ COMMON_EVENT_ABILITY_REMOVED = 'common.event.ABILITY_REMOVED'
 COMMON_EVENT_ABILITY_UPDATED = 'common.event.ABILITY_UPDATED'
 ```
 
-（预留事件，暂未支持）提示能力已更新。
+(reserved, not supported yet) Indicates that an ability has been updated.
 
-要订阅此事件，您的应用必须具备ohos.permission.LISTEN_BUNDLE_CHANGE权限。
+To subscribe to this common event, your application must have the ohos.permission.LISTEN_BUNDLE_CHANGE permission.
 
 **Since:** 7
 
@@ -2456,7 +2454,7 @@ COMMON_EVENT_ABILITY_UPDATED = 'common.event.ABILITY_UPDATED'
 COMMON_EVENT_LOCATION_MODE_STATE_CHANGED = 'usual.event.location.MODE_STATE_CHANGED'
 ```
 
-（预留事件，暂未支持）提示系统定位模式已更改。
+(reserved, not supported yet) Indicates that the location mode of the system has changed.
 
 **Since:** 7
 
@@ -2476,7 +2474,7 @@ COMMON_EVENT_LOCATION_MODE_STATE_CHANGED = 'usual.event.location.MODE_STATE_CHAN
 COMMON_EVENT_IVI_SLEEP = 'common.event.IVI_SLEEP'
 ```
 
-（预留事件，暂未支持）提示车辆的车载信息娱乐（IVI）系统正在休眠。
+(reserved, not supported yet) Indicates that the in-vehicle infotainment (IVI) system of the vehicle is sleeping.
 
 **Since:** 7
 
@@ -2496,7 +2494,7 @@ COMMON_EVENT_IVI_SLEEP = 'common.event.IVI_SLEEP'
 COMMON_EVENT_IVI_PAUSE = 'common.event.IVI_PAUSE'
 ```
 
-（预留事件，暂未支持）提示车辆的车载信息娱乐（IVI）系统已休眠，并通知应用程序停止播放。
+(reserved, not supported yet) Indicates that the IVI system of the vehicle is in sleep mode and notifies the application to stop playing.
 
 **Since:** 7
 
@@ -2516,7 +2514,7 @@ COMMON_EVENT_IVI_PAUSE = 'common.event.IVI_PAUSE'
 COMMON_EVENT_IVI_STANDBY = 'common.event.IVI_STANDBY'
 ```
 
-（预留事件，暂未支持）提示车辆的车载信息娱乐（IVI）系统中的第三方应用暂停当前工作。
+(reserved, not supported yet) Indicates that a third-party application in the IVI system of a vehicle is suspended.
 
 **Since:** 7
 
@@ -2536,7 +2534,7 @@ COMMON_EVENT_IVI_STANDBY = 'common.event.IVI_STANDBY'
 COMMON_EVENT_IVI_LASTMODE_SAVE = 'common.event.IVI_LASTMODE_SAVE'
 ```
 
-（预留事件，暂未支持）提示车辆的车载信息娱乐（IVI）系统中的第三方应用保存其最后一个模式。
+(reserved, not supported yet) Indicates that the third-party application in the IVI system of the vehicle saves the last mode.
 
 **Since:** 7
 
@@ -2556,7 +2554,7 @@ COMMON_EVENT_IVI_LASTMODE_SAVE = 'common.event.IVI_LASTMODE_SAVE'
 COMMON_EVENT_IVI_VOLTAGE_ABNORMAL = 'common.event.IVI_VOLTAGE_ABNORMAL'
 ```
 
-（预留事件，暂未支持）提示车辆电源系统电压异常。
+(reserved, not supported yet) Indicates that the voltage of the vehicle's power system is abnormal.
 
 **Since:** 7
 
@@ -2576,7 +2574,7 @@ COMMON_EVENT_IVI_VOLTAGE_ABNORMAL = 'common.event.IVI_VOLTAGE_ABNORMAL'
 COMMON_EVENT_IVI_HIGH_TEMPERATURE = 'common.event.IVI_HIGH_TEMPERATURE'
 ```
 
-（预留事件，暂未支持）提示车辆的车载信息娱乐（IVI）系统温度过高。
+(reserved, not supported yet) Indicates that the temperature of the IVI system of the vehicle is too high.
 
 **Since:** 7
 
@@ -2596,7 +2594,7 @@ COMMON_EVENT_IVI_HIGH_TEMPERATURE = 'common.event.IVI_HIGH_TEMPERATURE'
 COMMON_EVENT_IVI_EXTREME_TEMPERATURE = 'common.event.IVI_EXTREME_TEMPERATURE'
 ```
 
-（预留事件，暂未支持）提示车辆的车载信息娱乐（IVI）系统温度极高。
+(reserved, not supported yet) Indicates that the temperature of the IVI system of the vehicle is extremely high.
 
 **Since:** 7
 
@@ -2616,7 +2614,7 @@ COMMON_EVENT_IVI_EXTREME_TEMPERATURE = 'common.event.IVI_EXTREME_TEMPERATURE'
 COMMON_EVENT_IVI_TEMPERATURE_ABNORMAL = 'common.event.IVI_TEMPERATURE_ABNORMAL'
 ```
 
-（预留事件，暂未支持）提示车辆的车载信息娱乐（IVI）系统具有极端温度。
+(reserved, not supported yet) Indicates that the IVI system of the vehicle has an extreme temperature.
 
 **Since:** 7
 
@@ -2636,7 +2634,7 @@ COMMON_EVENT_IVI_TEMPERATURE_ABNORMAL = 'common.event.IVI_TEMPERATURE_ABNORMAL'
 COMMON_EVENT_IVI_VOLTAGE_RECOVERY = 'common.event.IVI_VOLTAGE_RECOVERY'
 ```
 
-（预留事件，暂未支持）提示车辆电源系统电压恢复正常。
+(reserved, not supported yet) Indicates that the voltage of the vehicle's power system is restored to normal.
 
 **Since:** 7
 
@@ -2656,7 +2654,7 @@ COMMON_EVENT_IVI_VOLTAGE_RECOVERY = 'common.event.IVI_VOLTAGE_RECOVERY'
 COMMON_EVENT_IVI_TEMPERATURE_RECOVERY = 'common.event.IVI_TEMPERATURE_RECOVERY'
 ```
 
-（预留事件，暂未支持）提示车载系统温度恢复正常。
+(reserved, not supported yet) Indicates that the temperature of the IVI system is restored to normal.
 
 **Since:** 7
 
@@ -2676,7 +2674,7 @@ COMMON_EVENT_IVI_TEMPERATURE_RECOVERY = 'common.event.IVI_TEMPERATURE_RECOVERY'
 COMMON_EVENT_IVI_ACTIVE = 'common.event.IVI_ACTIVE'
 ```
 
-（预留事件，暂未支持）提示车载系统电池服务处于活动状态。
+(reserved, not supported yet) Indicates that the battery service of the vehicle-mounted system is active.
 
 **Since:** 7
 
@@ -2696,7 +2694,7 @@ COMMON_EVENT_IVI_ACTIVE = 'common.event.IVI_ACTIVE'
 COMMON_EVENT_USB_DEVICE_ATTACHED = 'usual.event.hardware.usb.action.USB_DEVICE_ATTACHED'
 ```
 
-当用户设备作为USB主机时，提示USB设备已挂载。
+Indicates that a USB device has been attached to the device functioning as a USB host.
 
 **Since:** 7
 
@@ -2716,7 +2714,7 @@ COMMON_EVENT_USB_DEVICE_ATTACHED = 'usual.event.hardware.usb.action.USB_DEVICE_A
 COMMON_EVENT_USB_DEVICE_DETACHED = 'usual.event.hardware.usb.action.USB_DEVICE_DETACHED'
 ```
 
-当用户设备作为USB主机时，提示USB设备被卸载。
+Indicates that a USB device has been detached from the device functioning as a USB host.
 
 **Since:** 7
 
@@ -2736,7 +2734,7 @@ COMMON_EVENT_USB_DEVICE_DETACHED = 'usual.event.hardware.usb.action.USB_DEVICE_D
 COMMON_EVENT_USB_ACCESSORY_ATTACHED = 'usual.event.hardware.usb.action.USB_ACCESSORY_ATTACHED'
 ```
 
-（预留事件，暂未支持）提示已连接USB附件。
+(reserved, not supported yet) Indicates that a USB accessory was attached.
 
 **Since:** 7
 
@@ -2756,7 +2754,7 @@ COMMON_EVENT_USB_ACCESSORY_ATTACHED = 'usual.event.hardware.usb.action.USB_ACCES
 COMMON_EVENT_USB_ACCESSORY_DETACHED = 'usual.event.hardware.usb.action.USB_ACCESSORY_DETACHED'
 ```
 
-（预留事件，暂未支持）提示USB附件被卸载。
+(reserved, not supported yet) Indicates that the USB attachment is uninstalled.
 
 **Since:** 7
 
@@ -2776,9 +2774,9 @@ COMMON_EVENT_USB_ACCESSORY_DETACHED = 'usual.event.hardware.usb.action.USB_ACCES
 COMMON_EVENT_DISK_REMOVED = 'usual.event.data.DISK_REMOVED'
 ```
 
-（预留事件，暂未支持）提示外部存储设备状态变更为移除。
+(reserved, not supported yet) Indicates that an external storage device was removed.
 
-要订阅此事件，您的应用必须具备ohos.permission.STORAGE_MANAGER权限（该权限仅系统应用可申请）。
+To subscribe to this common event, your application must have the ohos.permission.STORAGE_MANAGER permission. (This permission is available only for system applications.)
 
 **Since:** 7
 
@@ -2798,9 +2796,9 @@ COMMON_EVENT_DISK_REMOVED = 'usual.event.data.DISK_REMOVED'
 COMMON_EVENT_DISK_UNMOUNTED = 'usual.event.data.DISK_UNMOUNTED'
 ```
 
-（预留事件，暂未支持）提示外部存储设备状态变更为卸载。
+(reserved, not supported yet) Indicates that an external storage device was unmounted.
 
-要订阅此事件，您的应用必须具备ohos.permission.STORAGE_MANAGER权限（该权限仅系统应用可申请）。
+To subscribe to this common event, your application must have the ohos.permission.STORAGE_MANAGER permission. (This permission is available only for system applications.)
 
 **Since:** 7
 
@@ -2820,9 +2818,9 @@ COMMON_EVENT_DISK_UNMOUNTED = 'usual.event.data.DISK_UNMOUNTED'
 COMMON_EVENT_DISK_MOUNTED = 'usual.event.data.DISK_MOUNTED'
 ```
 
-（预留事件，暂未支持）提示外部存储设备状态变更为挂载。
+(reserved, not supported yet) Indicates that an external storage device was mounted.
 
-要订阅此事件，您的应用必须具备ohos.permission.STORAGE_MANAGER权限（该权限仅系统应用可申请）。
+To subscribe to this common event, your application must have the ohos.permission.STORAGE_MANAGER permission. (This permission is available only for system applications.)
 
 **Since:** 7
 
@@ -2842,9 +2840,9 @@ COMMON_EVENT_DISK_MOUNTED = 'usual.event.data.DISK_MOUNTED'
 COMMON_EVENT_DISK_BAD_REMOVAL = 'usual.event.data.DISK_BAD_REMOVAL'
 ```
 
-（预留事件，暂未支持）提示外部存储设备在挂载状态下被移除。
+(reserved, not supported yet) Indicates that an external storage device was removed without being unmounted.
 
-要订阅此事件，您的应用必须具备ohos.permission.STORAGE_MANAGER权限（该权限仅系统应用可申请）。
+To subscribe to this common event, your application must have the ohos.permission.STORAGE_MANAGER permission. (This permission is available only for system applications.)
 
 **Since:** 7
 
@@ -2864,9 +2862,9 @@ COMMON_EVENT_DISK_BAD_REMOVAL = 'usual.event.data.DISK_BAD_REMOVAL'
 COMMON_EVENT_DISK_UNMOUNTABLE = 'usual.event.data.DISK_UNMOUNTABLE'
 ```
 
-（预留事件，暂未支持）提示外部存储设备在插卡情况下无法挂载。
+(reserved, not supported yet) Indicates that the external storage device cannot be mounted when a card is inserted.
 
-要订阅此事件，您的应用必须具备ohos.permission.STORAGE_MANAGER权限（该权限仅系统应用可申请）。
+To subscribe to this common event, your application must have the ohos.permission.STORAGE_MANAGER permission. (This permission is available only for system applications.)
 
 **Since:** 7
 
@@ -2886,9 +2884,9 @@ COMMON_EVENT_DISK_UNMOUNTABLE = 'usual.event.data.DISK_UNMOUNTABLE'
 COMMON_EVENT_DISK_EJECT = 'usual.event.data.DISK_EJECT'
 ```
 
-（预留事件，暂未支持）提示用户已作出弹出外部存储介质的操作（系统软件层面的交互操作，非直接物理弹出）。
+(reserved, not supported yet) Indicates that the external storage medium has been ejected (interactive operation at the system software layer, not directly ejected physically).
 
-要订阅此事件，您的应用必须具备ohos.permission.STORAGE_MANAGER权限（该权限仅系统应用可申请）。
+To subscribe to this common event, your application must have the ohos.permission.STORAGE_MANAGER permission. (This permission is available only for system applications.)
 
 **Since:** 7
 
@@ -2908,9 +2906,9 @@ COMMON_EVENT_DISK_EJECT = 'usual.event.data.DISK_EJECT'
 COMMON_EVENT_VISIBLE_ACCOUNTS_UPDATED = 'usual.event.data.VISIBLE_ACCOUNTS_UPDATED'
 ```
 
-（预留事件，暂未支持）提示账户发生可见性的更改。
+(reserved, not supported yet) Indicates that the account visibility changed.
 
-要订阅此事件，您的应用必须具备ohos.permission.GET_APP_ACCOUNTS权限（该权限仅系统应用可申请）。
+To subscribe to this common event, your application must have the ohos.permission.GET_APP_ACCOUNTS permission. (This permission is available only for system applications.)
 
 **Since:** 7
 
@@ -2930,9 +2928,9 @@ COMMON_EVENT_VISIBLE_ACCOUNTS_UPDATED = 'usual.event.data.VISIBLE_ACCOUNTS_UPDAT
 COMMON_EVENT_ACCOUNT_DELETED = 'usual.event.data.ACCOUNT_DELETED'
 ```
 
-（预留事件，暂未支持）提示有账户被删除。
+(reserved, not supported yet) Indicates that an account was deleted.
 
-要订阅此事件，您的应用必须具备ohos.permission.INTERACT_ACROSS_LOCAL_ACCOUNTS权限（该权限仅系统应用可申请）。
+To subscribe to this common event, your application must have the ohos.permission.INTERACT_ACROSS_LOCAL_ACCOUNTS permission. (This permission is available only for system applications.)
 
 **Since:** 7
 
@@ -2952,9 +2950,9 @@ COMMON_EVENT_ACCOUNT_DELETED = 'usual.event.data.ACCOUNT_DELETED'
 COMMON_EVENT_FOUNDATION_READY = 'common.event.FOUNDATION_READY'
 ```
 
-（预留事件，暂未支持）提示foundation已准备好。
+(reserved, not supported yet) Indicates that the foundation is ready.
 
-要订阅此事件，您的应用必须具备ohos.permission.RECEIVER_STARTUP_COMPLETED权限（该权限仅系统应用可申请）。
+To subscribe to this common event, your application must have the ohos.permission.RECEIVER_STARTUP_COMPLETED permission. (This permission is available only for system applications.)
 
 **Since:** 7
 
@@ -2974,7 +2972,7 @@ COMMON_EVENT_FOUNDATION_READY = 'common.event.FOUNDATION_READY'
 COMMON_EVENT_AIRPLANE_MODE_CHANGED = 'usual.event.AIRPLANE_MODE'
 ```
 
-提示设备飞行模式发生了切换。
+Indicates that the airplane mode of the device has changed.
 
 **Since:** 7
 
@@ -2994,7 +2992,7 @@ COMMON_EVENT_AIRPLANE_MODE_CHANGED = 'usual.event.AIRPLANE_MODE'
 COMMON_EVENT_SPLIT_SCREEN = 'common.event.SPLIT_SCREEN'
 ```
 
-提示分屏。
+Indicates that the screen has been split.
 
 **Since:** 8
 

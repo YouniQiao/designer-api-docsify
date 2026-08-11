@@ -1,6 +1,6 @@
 # LruBuffer
 
-LruBuffer 算法在缓存空间不足时使用新数据替换最不常使用的数据。
+The LruBuffer algorithm replaces the least used data with new data when the buffer space is insufficient.
 
 **Since:** 8
 
@@ -26,7 +26,7 @@ import { util } from 'kits/@kit.ArkTS';
 [Symbol.iterator](): IterableIterator<[K, V]>
 ```
 
-指定对象的默认迭代器。
+Specifies the default iterator for an object.
 
 **Since:** 8
 
@@ -44,7 +44,7 @@ import { util } from 'kits/@kit.ArkTS';
 
 | Type | Description |
 | --- | --- |
-| [IterableIterator](arkts-arkts-iterator-iterableiterator-i.md)&lt;[K, V]&gt; | 返回以键值对形式的二维数组。 |
+| [IterableIterator](arkts-arkts-iterator-iterableiterator-i.md)&lt;[K, V]&gt; | Returns a two - dimensional array in the form of key - value pairs. |
 
 ## Examples
 
@@ -60,7 +60,7 @@ let result = pro[Symbol.iterator]();
 afterRemoval(isEvict: boolean, key: K, value: V, newValue: V): void
 ```
 
-在移除值后执行后续操作。
+Performs subsequent operations after a value is removed.
 
 **Since:** 8
 
@@ -78,10 +78,10 @@ afterRemoval(isEvict: boolean, key: K, value: V, newValue: V): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| isEvict | boolean | Yes | 容量是否不足。如果值为 **true**，则由于容量不足而调用此 API。 |
-| key | K | Yes | 被移除的 key。 |
-| value | V | Yes | 被移除的值。 |
-| newValue | V | Yes | 如果调用了 **put()** 方法并且要添加的 key 已存在时该 key 的新值。其他情况下此参数为空。 |
+| isEvict | boolean | Yes | Whether the capacity is insufficient. If the value is **true**, this API is called due to insufficient capacity. |
+| key | K | Yes | Key removed. |
+| value | V | Yes | Value removed. |
+| newValue | V | Yes | New value for the key if the **put()** method is called and the key to be added already exists. In other cases, this parameter is left blank. |
 
 ## Examples
 
@@ -114,7 +114,7 @@ lru.put(33, 3);
 clear(): void
 ```
 
-从此缓存中清除键值对。将调用 **afterRemoval()** API 执行后续操作。
+Clears key-value pairs from this cache. The **afterRemoval()** API will be called to perform subsequent operations.
 
 **Since:** 8
 
@@ -143,7 +143,7 @@ pro.clear();
 constructor(capacity?: number)
 ```
 
-用于创建 **LruBuffer** 实例的构造函数。缓存的默认容量为 64。
+A constructor used to create a **LruBuffer** instance. The default capacity of the cache is 64.
 
 **Since:** 8
 
@@ -161,7 +161,7 @@ constructor(capacity?: number)
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| capacity | number | No | 要创建的缓存的容量。默认值为 **64**。 |
+| capacity | number | No | Capacity of the cache to create. The default value is **64**. |
 
 ## Examples
 
@@ -175,7 +175,7 @@ let pro : util.LruBuffer<number,number> = new util.LruBuffer();
 contains(key: K): boolean
 ```
 
-判断此缓存是否包含指定的 key。
+Checks whether this cache contains the specified key.
 
 **Since:** 8
 
@@ -193,13 +193,13 @@ contains(key: K): boolean
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| key | K | Yes | 要检查的 key。 |
+| key | K | Yes | Key to check. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| boolean | 检查结果。如果缓存包含指定的 key，则返回 **true**；否则返回 **false**。 |
+| boolean | Check result. The value **true** is returned if the cache contains the specified key; otherwise, **false** is returned. |
 
 ## Examples
 
@@ -217,7 +217,7 @@ console.info('result = ' + result);
 createDefault(key: K): V
 ```
 
-当指定 key 的值不可用时，创建一个值。
+Creates a value if the value of the specified key is not available.
 
 **Since:** 8
 
@@ -235,13 +235,13 @@ createDefault(key: K): V
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| key | K | Yes | 缺少值的 key。 |
+| key | K | Yes | Key of which the value is missing. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| V | key 对应的值。 |
+| V | Value of the key. |
 
 ## Examples
 
@@ -256,7 +256,7 @@ let result = pro.createDefault(50);
 entries(): IterableIterator<[K, V]>
 ```
 
-获取一个新的迭代器对象，该对象包含此对象中的所有键值对。
+Obtains a new iterator object that contains all key-value pairs in this object.
 
 **Since:** 8
 
@@ -274,7 +274,7 @@ entries(): IterableIterator<[K, V]>
 
 | Type | Description |
 | --- | --- |
-| [IterableIterator](arkts-arkts-iterator-iterableiterator-i.md)&lt;[K, V]&gt; | 可迭代的数组。 |
+| [IterableIterator](arkts-arkts-iterator-iterableiterator-i.md)&lt;[K, V]&gt; | Iterable array. |
 
 ## Examples
 
@@ -290,7 +290,7 @@ let result = pro.entries();
 get(key: K): V | undefined
 ```
 
-获取指定 key 对应的值。
+Obtains the value of the specified key.
 
 **Since:** 8
 
@@ -308,13 +308,13 @@ get(key: K): V | undefined
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| key | K | Yes | 要查询值的 key。 |
+| key | K | Yes | Key based on which the value is queried. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| V | key 对应的值。如果未找到匹配项，则返回 **undefined**。 |
+| V | Value of the key. If no match is found, **undefined** is returned. |
 
 ## Examples
 
@@ -332,7 +332,7 @@ console.info("result = " + result);
 getCapacity(): number
 ```
 
-获取此缓存的容量。
+Obtains the capacity of this cache.
 
 **Since:** 8
 
@@ -350,7 +350,7 @@ getCapacity(): number
 
 | Type | Description |
 | --- | --- |
-| number | 缓存的容量。 |
+| number | Capacity of the cache. |
 
 ## Examples
 
@@ -367,7 +367,7 @@ console.info("result = " + result);
 getCreateCount(): number
 ```
 
-获取 **createDefault()** 的返回值数量。
+Obtains the number of return values for **createDefault()**.
 
 **Since:** 8
 
@@ -385,7 +385,7 @@ getCreateCount(): number
 
 | Type | Description |
 | --- | --- |
-| number | createDefault()** 的返回值数量。 |
+| number | Number of return values for **createDefault()**. |
 
 ## Examples
 
@@ -403,7 +403,7 @@ console.info("result = " + result);
 getMatchCount(): number
 ```
 
-获取查询值匹配的次数。
+Obtains the number of times that the queried values are matched.
 
 **Since:** 8
 
@@ -421,7 +421,7 @@ getMatchCount(): number
 
 | Type | Description |
 | --- | --- |
-| number | 查询值匹配的次数。 |
+| number | Number of times that the queried values are matched. |
 
 ## Examples
 
@@ -440,7 +440,7 @@ console.info("result = " + result);
 getMissCount(): number
 ```
 
-获取查询值未匹配的次数。
+Obtains the number of times that the queried values are mismatched.
 
 **Since:** 8
 
@@ -458,7 +458,7 @@ getMissCount(): number
 
 | Type | Description |
 | --- | --- |
-| number | 查询值未匹配的次数。 |
+| number | Number of times that the queried values are mismatched. |
 
 ## Examples
 
@@ -477,7 +477,7 @@ console.info("result = " + result);
 getPutCount(): number
 ```
 
-获取向此缓存添加的次数。
+Obtains the number of additions to this cache.
 
 **Since:** 8
 
@@ -495,7 +495,7 @@ getPutCount(): number
 
 | Type | Description |
 | --- | --- |
-| number | 向缓存添加的次数。 |
+| number | Number of additions to the cache. |
 
 ## Examples
 
@@ -513,7 +513,7 @@ console.info("result = " + result);
 getRemovalCount(): number
 ```
 
-获取从此缓存中移除的次数。
+Obtains the number of removals from this cache.
 
 **Since:** 8
 
@@ -531,7 +531,7 @@ getRemovalCount(): number
 
 | Type | Description |
 | --- | --- |
-| number | 从缓存中移除的次数。 |
+| number | Number of removals from the cache. |
 
 ## Examples
 
@@ -551,7 +551,7 @@ console.info("result = " + result);
 isEmpty(): boolean
 ```
 
-判断此缓存是否为空。
+Checks whether this cache is empty.
 
 **Since:** 8
 
@@ -569,7 +569,7 @@ isEmpty(): boolean
 
 | Type | Description |
 | --- | --- |
-| boolean | 如果缓存不包含任何值，则返回 **true**。 |
+| boolean | Returns **true** if the cache does not contain any value. |
 
 ## Examples
 
@@ -587,7 +587,7 @@ console.info("result = " + result);
 keys(): K[]
 ```
 
-获取此缓存中的所有 key，按从最近最多访问到最近最少访问的顺序排列。
+Obtains all keys in this cache, listed from the most to the least recently accessed.
 
 **Since:** 8
 
@@ -605,7 +605,7 @@ keys(): K[]
 
 | Type | Description |
 | --- | --- |
-| K[] | 此缓存中的所有 key，按从最近最多访问到最近最少访问的顺序排列。 |
+| K[] | All keys in the cache, listed from the most to the least recently accessed. |
 
 ## Examples
 
@@ -623,7 +623,7 @@ console.info("result = " + result);
 put(key: K, value: V): V
 ```
 
-向此缓存添加键值对。
+Adds a key-value pair to this cache.
 
 **Since:** 8
 
@@ -641,14 +641,14 @@ put(key: K, value: V): V
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| key | K | Yes | 要添加的键值对的 key。 |
-| value | V | Yes | 要添加的键值对的 value。 |
+| key | K | Yes | Key of the key-value pair to add. |
+| value | V | Yes | Value of the key-value pair to add. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| V | 添加的值。如果 key 已存在，则返回已存在的值；如果 **key** 或 **value** 传入 **null**，则抛出错误。 |
+| V | Value added. If the key already exists, the existing value is returned; if **null** is passed in for **key** or **value**, an error is thrown. |
 
 ## Examples
 
@@ -665,7 +665,7 @@ console.info("result = " + result);
 remove(key: K): V | undefined
 ```
 
-从此缓存中移除指定的 key 及其对应的值。
+Removes the specified key and its value from this cache.
 
 **Since:** 8
 
@@ -683,13 +683,13 @@ remove(key: K): V | undefined
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| key | K | Yes | 要移除的 key。 |
+| key | K | Yes | Key to remove. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| V | 包含被移除键值对的 **Optional** 对象。如果 key 不存在，则返回空的 **Optional** 对象；如果 **key** 传入 **null**，则抛出错误。 |
+| V | Optional** object containing the removed key-value pair. If the key does not exist, an empty **Optional** object is returned; if **null** is passed in for **key**, an error is thrown. |
 
 ## Examples
 
@@ -707,7 +707,7 @@ console.info("result = " + result);
 toString(): string
 ```
 
-获取此缓存的字符串表示形式。
+Obtains the string representation of this cache.
 
 **Since:** 8
 
@@ -725,7 +725,7 @@ toString(): string
 
 | Type | Description |
 | --- | --- |
-| string | 此缓存的字符串表示形式。 |
+| string | String representation of this cache. |
 
 ## Examples
 
@@ -745,7 +745,7 @@ console.info("result = " + result);
 updateCapacity(newCapacity: number): void
 ```
 
-改变缓存容量。如果新容量小于等于 **0**，则抛出异常。
+Changes the cache capacity. If the new capacity is less than or equal to **0**, an exception will be thrown.
 
 **Since:** 8
 
@@ -763,7 +763,7 @@ updateCapacity(newCapacity: number): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| newCapacity | number | Yes | 缓存的新容量。 |
+| newCapacity | number | Yes | New capacity of the cache. |
 
 ## Examples
 
@@ -778,7 +778,7 @@ pro.updateCapacity(100);
 values(): V[]
 ```
 
-获取此缓存中的所有值，按从最近最多访问到最近最少访问的顺序排列。
+Obtains all values in this cache, listed from the most to the least recently accessed.
 
 **Since:** 8
 
@@ -796,7 +796,7 @@ values(): V[]
 
 | Type | Description |
 | --- | --- |
-| V[] | 此缓存中的所有值，按从最近最多访问到最近最少访问的顺序排列。 |
+| V[] | All values in the cache, listed from the most to the least recently accessed. |
 
 ## Examples
 
@@ -816,7 +816,7 @@ console.info("result = " + result);
 length: number
 ```
 
-此缓存中值的总数。
+Total number of values in this cache.
 
 **Type:** number
 

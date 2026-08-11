@@ -1,6 +1,6 @@
 # HolidayInfoItem
 
-节假日信息。
+Represents the holiday information.
 
 **Since:** 23
 
@@ -22,7 +22,7 @@ import { i18n } from 'kits/@kit.LocalizationKit';
 baseName: string
 ```
 
-节假日的英文名称。
+Holiday name.
 
 **Type:** string
 
@@ -42,7 +42,7 @@ baseName: string
 day: int
 ```
 
-节假日所在日。
+Day of the holiday.The value should be an integer.
 
 **Type:** int
 
@@ -62,7 +62,7 @@ day: int
 localNames?: Array<HolidayLocalName>
 ```
 
-节假日的本地名称列表。
+Local names of the holiday.
 
 **Type:** Array&lt;HolidayLocalName&gt;
 
@@ -82,7 +82,7 @@ localNames?: Array<HolidayLocalName>
 month: int
 ```
 
-节假日所在月。
+Month of the holiday.The value should be an integer.
 
 **Type:** int
 
@@ -102,7 +102,7 @@ month: int
 year: int
 ```
 
-节假日所在年。
+Year of the holiday.The value should be an integer.
 
 **Type:** int
 

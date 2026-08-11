@@ -31,11 +31,11 @@ Defines the ImageAnimator component.
 export declare function ImageAnimator(style: CustomBuilderT<ImageAnimatorAttribute>): ImageAnimatorAttribute
 ```
 
-定义ImageAnimator组件。它需要在组件开始时调用setImageAnimatorOptions属性设置。并且它需要在组件属性设置结束时调用applyAttributeFinish。
+Defines the ImageAnimator component. It requires call setImageAnimatorOptions at start of the component attribute set-up. and it requires call applyAttributeFinish at the end of the component attribute set-up.
 
-**Since:** 26.0.0
+**Since:** 26.1.0
 
-**ArkTS mode:** ArkTS-Sta only, since version 26.0.0.
+**ArkTS mode:** ArkTS-Sta only, since version 26.1.0.
 
 **Decorator:** @Builder
 
@@ -49,11 +49,11 @@ export declare function ImageAnimator(style: CustomBuilderT<ImageAnimatorAttribu
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| style | [CustomBuilderT](../arkts-components/arkts-arkui-custombuildert-t.md)&lt;ImageAnimatorAttribute&gt; | Yes | 设置组件属性的回调。 |
+| style | [CustomBuilderT](../arkts-components/arkts-arkui-custombuildert-t.md)&lt;ImageAnimatorAttribute&gt; | Yes | the callback to set up component's attribute. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [ImageAnimatorAttribute](../arkts-components/arkts-arkui-imageanimator-attribute.md) | ImageAnimator的属性。 |
+| [ImageAnimatorAttribute](../arkts-components/arkts-arkui-imageanimator-attribute.md) | The attribute of the ImageAnimator. |
 

@@ -12,12 +12,6 @@ GesturePath表示手势路径信息。
 
 **系统能力：** SystemCapability.BarrierFree.Accessibility.Core
 
-## 导入模块
-
-```TypeScript
-import { GesturePath } from 'kits/@kit.AccessibilityKit';
-```
-
 ## constructor
 
 ```TypeScript

@@ -1,6 +1,6 @@
 # ProgressStatus
 
-进度条的当前状态。
+Current status of progress bar.
 
 **Since:** 23
 

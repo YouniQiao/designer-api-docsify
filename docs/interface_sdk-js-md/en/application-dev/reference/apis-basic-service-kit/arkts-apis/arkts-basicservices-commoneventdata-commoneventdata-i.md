@@ -1,6 +1,6 @@
 # CommonEventData
 
-表示公共事件的数据。CommonEventData用于在公共事件订阅场景中承载订阅者接收到的公共事件数据，包含事件名称、发布者包名、code数据、data数据及附加参数等信息，适用于应用订阅并处理公共事件、解析事件携带数据的场景。
+Describes the data of a common event. The **CommonEventData** module is used to carry the common event data received by subscribers in common event subscription scenarios. The data includes the event name, publisher bundle name, code, data, and additional parameters. This module is applicable to scenarios where apps subscribe to and process common events and parse the data carried in the events.
 
 **Since:** 7
 
@@ -16,7 +16,7 @@
 bundleName?: string
 ```
 
-表示发布公共事件的应用包名，默认为空字符串。
+Bundle name of the common event publisher. The default value is an empty string.
 
 **Type:** string
 
@@ -36,8 +36,9 @@ bundleName?: string
 code?: int
 ```
 
-表示订阅者接收到的公共事件数据。该字段取值与发布者使用  
-[commonEventManager.publish](arkts-basicservices-commoneventmanager-publish-f.md#publish)发布公共事件时，通过[CommonEventPublishData](arkts-basicservices-commoneventpublishdata-commoneventpublishdata-i.md)中的`code`字段传递的数据一致。取值范围[-2147483648, 2147483647]，默认值为0。
+Common event data received by the subscriber. The value of this field is the same as that of the **code** field in   
+[CommonEventPublishData](arkts-basicservices-commoneventpublishdata-commoneventpublishdata-i.md) when the publisher uses   
+[commonEventManager.publish](arkts-basicservices-commoneventmanager-publish-f.md#publish)to publish a common event. The value ranges from –2147483648 to 2147483647.The default value is **0**.
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
@@ -59,8 +60,9 @@ code?: int
 data?: string
 ```
 
-表示订阅者接收到的公共事件数据，数据大小不超过64KB。该字段取值与发布者使用  
-[commonEventManager.publish](arkts-basicservices-commoneventmanager-publish-f.md#publish)发布公共事件时，通过[CommonEventPublishData](arkts-basicservices-commoneventpublishdata-commoneventpublishdata-i.md)中的`data`字段传递的数据一致。
+Common event data received by the subscriber. The data size cannot exceed 64 KB.The value of this field is the same as that of the **data** field in  
+[CommonEventPublishData](arkts-basicservices-commoneventpublishdata-commoneventpublishdata-i.md) when the publisher uses  
+[commonEventManager.publish](arkts-basicservices-commoneventmanager-publish-f.md#publish)to publish a common event.
 
 **Type:** string
 
@@ -80,7 +82,7 @@ data?: string
 event: string
 ```
 
-表示当前接收的公共事件名称。
+Name of the common event that is being received.
 
 **Type:** string
 
@@ -100,8 +102,8 @@ event: string
 parameters?: { [key: string]: any }
 ```
 
-表示订阅者接收到的公共事件的附加信息。该字段取值与发布者使用  
-[commonEventManager.publish](arkts-basicservices-commoneventmanager-publish-f.md#publish)发布公共事件时，通过[CommonEventPublishData](arkts-basicservices-commoneventpublishdata-commoneventpublishdata-i.md)中的`parameters`字段传递的数据一致。
+Additional information about the common event received by the subscriber. The value of this field is the same as that of the **parameters** field in [CommonEventPublishData](arkts-basicservices-commoneventpublishdata-commoneventpublishdata-i.md) when the publisher uses   
+[commonEventManager.publish](arkts-basicservices-commoneventmanager-publish-f.md#publish)to publish a common event.
 
 **Type:** { [key: string]: any }
 

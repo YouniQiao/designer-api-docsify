@@ -1,6 +1,6 @@
 # RichEditorParagraphStyle
 
-段落样式。
+Defines the paragraph style.
 
 **Since:** 23
 
@@ -16,7 +16,7 @@
 leadingMargin?: Dimension | LeadingMarginPlaceholder
 ```
 
-设置文本段落缩进，当段落仅存在ImageSpan或BuilderSpan时，此属性值不生效。参数为Dimension类型时，不支持以Percentage形式设置。默认值：{"size":["0.00px","0.00px"]}
+Leading margin.
 
 **Type:** [Dimension](arkts-arkui-dimension-t.md) \| LeadingMarginPlaceholder
 
@@ -36,11 +36,7 @@ leadingMargin?: Dimension | LeadingMarginPlaceholder
 lineBreakStrategy?: LineBreakStrategy
 ```
 
-设置折行规则。 
-
-默认值：LineBreakStrategy.GREEDY
-
-在wordBreak不等于breakAll的时候生效，不支持连字符。
+Set line break strategy type.
 
 **Type:** [LineBreakStrategy](arkts-arkui-linebreakstrategy-e.md)
 
@@ -60,11 +56,7 @@ lineBreakStrategy?: LineBreakStrategy
 paragraphSpacing?: double
 ```
 
-设置段落间距大小。
-
-单位：fp
-
-段落间距默认大小为0。
+Set paragraph spacing.
 
 **Type:** double
 
@@ -84,12 +76,7 @@ paragraphSpacing?: double
 shaderStyle?: ShaderStyle
 ```
 
-设置文本着色器效果。
-
-该接口与[RichEditorTextStyle](arkts-arkui-richeditor-richeditortextstyleresult-i.md)中的strokeWidth同时设置时，该接口不生效，shaderStyle的优先级高于  
-[RichEditorTextStyle](arkts-arkui-richeditor-richeditortextstyleresult-i.md)的fontColor。
-
-**模型约束：** 此接口仅可在Stage模型下使用。
+Set shader style.
 
 **Type:** [ShaderStyle](arkts-arkui-shaderstyle-c.md)
 
@@ -109,7 +96,7 @@ shaderStyle?: ShaderStyle
 textAlign?: TextAlign
 ```
 
-设置文本段落在水平方向的对齐方式。默认值：TextAlign.START
+Text alignment.
 
 **Type:** [TextAlign](arkts-arkui-textalign-e.md)
 
@@ -129,9 +116,7 @@ textAlign?: TextAlign
 textDirection?: TextDirection
 ```
 
-设置文本书写方向。
-
-默认值：TextDirection.DEFAULT
+Text direction, the default value is TextDirection.DEFAULT.
 
 **Type:** [TextDirection](arkts-arkui-textdirection-e.md)
 
@@ -151,11 +136,7 @@ textDirection?: TextDirection
 textVerticalAlign?: TextVerticalAlign
 ```
 
-设置文本段落在垂直方向的对齐方式。
-
-默认值：TextVerticalAlign.BASELINE 
-
-**模型约束：** 此接口仅可在Stage模型下使用。
+Vertical alignment of text.
 
 **Type:** [TextVerticalAlign](arkts-arkui-textverticalalign-e.md)
 
@@ -175,9 +156,7 @@ textVerticalAlign?: TextVerticalAlign
 wordBreak?: WordBreak
 ```
 
-设置断行规则。 
-
-默认值：WordBreak.BREAK_WORD
+Set word break type.
 
 **Type:** [WordBreak](arkts-arkui-wordbreak-e.md)
 

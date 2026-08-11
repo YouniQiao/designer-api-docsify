@@ -12,13 +12,13 @@ import { BundleStatusCallback } from 'kits/@kit.AbilityKit';
 function off(type: 'BundleStatusChange', callback: AsyncCallback<string>): void
 ```
 
-取消注册Callback。
+Unregisters the callback that receives bundle status changes. This API uses an asynchronous callback to return the result.
 
-> **说明：**
+> **NOTE：**
 > 
-> 从API version 8开始支持，从API version 9开始废弃，建议使用
+> This API has been supported since API version 8 and deprecated since API version 9. You are advised to use
 > [off](@ohos.bundle.bundleMonitor:bundleMonitor.off(type: BundleChangedEvent, callback?: Callback&lt;BundleChangedInfo&gt;))
-> 替代。
+> instead.
 
 **Since:** 8
 
@@ -40,8 +40,8 @@ function off(type: 'BundleStatusChange', callback: AsyncCallback<string>): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'BundleStatusChange' | Yes | 指示应执行命令，只支持BundleStatusChange。 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;string&gt; | Yes | 程序启动作为入参的回调函数，返回正确结果或错误信息。 |
+| type | 'BundleStatusChange' | Yes | Event type. Only **BundleStatusChange** is supported. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;string&gt; | Yes | Callback used to return a successful result or error information. |
 
 
 ## off('BundleStatusChange')
@@ -50,13 +50,13 @@ function off(type: 'BundleStatusChange', callback: AsyncCallback<string>): void
 function off(type: 'BundleStatusChange'): Promise<string>
 ```
 
-取消注册Callback。
+Unregisters the callback that receives bundle status changes. This API uses an asynchronous callback to return the result.
 
-> **说明：**
+> **NOTE：**
 > 
-> 从API version 8开始支持，从API version 9开始废弃，建议使用
+> This API has been supported since API version 8 and deprecated since API version 9. You are advised to use
 > [off](@ohos.bundle.bundleMonitor:bundleMonitor.off(type: BundleChangedEvent, callback?: Callback&lt;BundleChangedInfo&gt;))
-> 替代。
+> instead.
 
 **Since:** 8
 
@@ -78,11 +78,11 @@ function off(type: 'BundleStatusChange'): Promise<string>
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'BundleStatusChange' | Yes | 指示应执行命令，只支持BundleStatusChange。 |
+| type | 'BundleStatusChange' | Yes | Event type. Only **BundleStatusChange** is supported. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;string&gt; | Promise形式返回正确结果或错误信息。 |
+| Promise&lt;string&gt; | Promise used to return a successful result or error information. |
 

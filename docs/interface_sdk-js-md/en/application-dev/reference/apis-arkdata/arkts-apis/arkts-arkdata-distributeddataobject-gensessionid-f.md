@@ -12,7 +12,7 @@ import { distributedDataObject } from 'kits/@kit.ArkData';
 function genSessionId(): string
 ```
 
-随机创建一个sessionId。
+Creates a random session ID.
 
 **Since:** 8
 
@@ -26,7 +26,7 @@ function genSessionId(): string
 
 | Type | Description |
 | --- | --- |
-| string | 随机创建的sessionId。 |
+| string | Session ID created. |
 
 ## Examples
 

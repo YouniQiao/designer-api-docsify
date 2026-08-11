@@ -1,6 +1,6 @@
 # AbilityForegroundStateObserver (System API)
 
-定义应用前后台状态监听。
+The module defines the listener used to listen for ability foreground and background state changes.
 
 **Since:** 11
 
@@ -18,7 +18,7 @@
 onAbilityStateChanged(abilityStateData: AbilityStateData): void
 ```
 
-当Ability前后台状态发生变化时，系统会触发该回调。
+Called when the ability is switched between foreground and background.
 
 **Since:** 11
 
@@ -34,5 +34,5 @@ onAbilityStateChanged(abilityStateData: AbilityStateData): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| abilityStateData | [AbilityStateData](arkts-ability-abilitystatedata-c.md) | Yes | Ability状态信息。 |
+| abilityStateData | [AbilityStateData](arkts-ability-abilitystatedata-c.md) | Yes | Ability state data. |
 

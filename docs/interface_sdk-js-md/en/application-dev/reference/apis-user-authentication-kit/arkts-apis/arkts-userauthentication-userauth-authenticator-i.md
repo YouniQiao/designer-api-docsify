@@ -1,6 +1,6 @@
 # Authenticator
 
-认证器对象。
+Provides APIs for managing the **Authenticator** object.
 
 **Since:** 6
 
@@ -26,7 +26,7 @@ import { userAuth } from 'kits/@kit.UserAuthenticationKit';
 execute(type: AuthType, level: SecureLevel, callback: AsyncCallback<number>): void
 ```
 
-执行用户认证，使用callback方式作为异步方法。
+Starts user authentication. This API uses an asynchronous callback to return the result.
 
 **Since:** 6
 
@@ -46,9 +46,9 @@ execute(type: AuthType, level: SecureLevel, callback: AsyncCallback<number>): vo
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | [AuthType](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-osaccount-authtype-e-sys.md) | Yes | 认证类型，当前只支持"FACE_ONLY"。&lt;br/&gt;ALL为预留参数。当前版本暂不支持ALL类型的认证。 |
-| level | [SecureLevel](arkts-userauthentication-userauth-securelevel-t.md) | Yes | 安全级别，对应认证的安全级别，有效值为"S1"（最低）、"S2"、"S3"、"S4"（最高）。&lt;br/&gt;具备3D人脸识别能力的设备支持"S3"及以下安全级别的认证。 &lt;br/&gt;具备2D人脸识别能力的设备支持"S2"及以下安全级别的认证。 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;number&gt; | Yes | 回调函数。number表示认证结果，参见 [AuthenticationResult](arkts-userauthentication-userauth-authenticationresult-e.md)。 |
+| type | [AuthType](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-osaccount-authtype-e-sys.md) | Yes | Authentication type. Currently, only **FACE_ONLY** is supported. &lt;br&gt;**ALL** is reserved and not supported by the current version. |
+| level | [SecureLevel](arkts-userauthentication-userauth-securelevel-t.md) | Yes | Security level of the authentication. It can be **S1** (lowest), **S2**, **S3**, or **S4** (highest). &lt;br&gt;Devices capable of 3D facial recognition support S3 and lower-level authentication. &lt;br&gt;Devices capable of 2D facial recognition support S2 and lower-level authentication. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;number&gt; | Yes | Callback used to return the result. **number** indicates the [AuthenticationResult](arkts-userauthentication-userauth-authenticationresult-e.md). |
 
 ## Examples
 
@@ -56,12 +56,12 @@ execute(type: AuthType, level: SecureLevel, callback: AsyncCallback<number>): vo
 import { userAuth } from '@kit.UserAuthenticationKit';
 
 let authenticator = userAuth.getAuthenticator();
-authenticator.execute('FACE_ONLY', 'S2', (error, code) => {
+authenticator.execute('FACE_ONLY', 'S2', (error, code)=>{
   if (code === userAuth.ResultCode.SUCCESS) {
-    console.info('auth successfully.');
+    console.info('auth success');
     return;
   }
-  console.error(`auth failed, code = ${code}`);
+  console.error(`auth fail, code = ${code}`);
 });
 ```
 
@@ -71,7 +71,7 @@ authenticator.execute('FACE_ONLY', 'S2', (error, code) => {
 execute(type: AuthType, level: SecureLevel): Promise<number>
 ```
 
-执行用户认证，使用promise方式作为异步方法。
+Starts user authentication. This API uses a promise to return the result.
 
 **Since:** 6
 
@@ -91,14 +91,14 @@ execute(type: AuthType, level: SecureLevel): Promise<number>
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | [AuthType](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-osaccount-authtype-e-sys.md) | Yes | 认证类型，当前只支持"FACE_ONLY"。&lt;br/&gt;ALL为预留参数。当前版本暂不支持ALL类型的认证。 |
-| level | [SecureLevel](arkts-userauthentication-userauth-securelevel-t.md) | Yes | 安全级别，对应认证的安全级别，有效值为"S1"（最低）、"S2"、"S3"、"S4"（最高）。&lt;br/&gt;具备3D人脸识别能力的设备支持"S3"及以下安全级别的认证。 &lt;br/&gt;具备2D人脸识别能力的设备支持"S2"及以下安全级别的认证。 |
+| type | [AuthType](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-osaccount-authtype-e-sys.md) | Yes | Authentication type. Currently, only **FACE_ONLY** is supported. &lt;br&gt;**ALL** is reserved and not supported by the current version. |
+| level | [SecureLevel](arkts-userauthentication-userauth-securelevel-t.md) | Yes | Security level of the authentication. It can be **S1** (lowest), **S2**, **S3**, or **S4** (highest). &lt;br&gt;Devices capable of 3D facial recognition support S3 and lower-level authentication. &lt;br&gt;Devices capable of 2D facial recognition support S2 and lower-level authentication. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;number&gt; | 返回携带一个number的Promise。number 为认证结果，参见 [AuthenticationResult]{ |
+| Promise&lt;number&gt; | Promise used to return the authentication result, which is a number. For details, see [AuthenticationResult]{ |
 
 ## Examples
 
@@ -107,11 +107,11 @@ import { userAuth } from '@kit.UserAuthenticationKit';
 
 try {
   let authenticator = userAuth.getAuthenticator();
-  authenticator.execute('FACE_ONLY', 'S2').then((code) => {
-    console.info('auth successfully.');
+  authenticator.execute('FACE_ONLY', 'S2').then((code)=>{
+    console.info('auth success');
   })
 } catch (error) {
-  console.error(`auth failed, Code: ${error?.code}, message: ${error?.message}`);
+  console.error(`auth fail, code = ${error}`);
 }
 ```
 

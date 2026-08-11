@@ -12,7 +12,7 @@ import { avSession } from 'kits/@kit.AVSessionKit';
 function getDistributedSessionController(distributedSessionType: DistributedSessionType): Promise<Array<AVSessionController>>
 ```
 
-根据远端会话类型，获取远端分布式会话控制器。结果通过Promise异步回调方式返回。
+Get distributed avsession controller
 
 **Since:** 18
 
@@ -30,30 +30,33 @@ function getDistributedSessionController(distributedSessionType: DistributedSess
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| distributedSessionType | [DistributedSessionType](arkts-avsession-avsession-distributedsessiontype-e-sys.md) | Yes | 远端会话类型。 |
+| distributedSessionType | [DistributedSessionType](arkts-avsession-avsession-distributedsessiontype-e-sys.md) | Yes | Specifies the distributed session type. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;Array&lt;AVSessionController&gt;&gt; | Promise对象。返回对应类型的会话控制器实例列表，可查看会话ID，并完成对会话发送命令及事件，获取元数据、播放状态信息等操作。 |
+| Promise&lt;Array&lt;AVSessionController&gt;&gt; | Promise for AVSessionController. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 6600101 | Session service exception. |
-| 201 | permission denied |
-| 6600109 | The remote connection is not established. |
-| 202 | Not System App. |
+| [6600101](../errorcode-avsession.md#6600101-session-service-exception) | Session service exception. |
+| [201](../../errorcode-universal.md#201-permission-denied) | permission denied |
+| [6600109](../errorcode-avsession.md#6600109-remote-session-does-not-exist) | The remote connection is not established. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not System App. |
 
 ## Examples
 
 ```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
 import { avSession } from '@kit.AVSessionKit';
 
 avSession.getDistributedSessionController(avSession.DistributedSessionType.TYPE_SESSION_REMOTE).then((sessionControllers: Array<avSession.AVSessionController>) => {
-  console.info(`Succeeded in getting distributed session controller, length: ${sessionControllers.length}`);
+  console.info(`getDistributedSessionController : SUCCESS : sessionControllers.length : ${sessionControllers.length}`);
+}).catch((err: BusinessError) => {
+  console.error(`getDistributedSessionController BusinessError: code: ${err.code}, message: ${err.message}`);
 });
 ```
 

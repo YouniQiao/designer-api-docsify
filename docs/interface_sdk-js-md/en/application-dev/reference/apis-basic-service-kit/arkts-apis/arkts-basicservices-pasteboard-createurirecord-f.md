@@ -12,7 +12,7 @@ import { pasteboard } from 'kits/@kit.BasicServicesKit';
 function createUriRecord(uri: string): PasteDataRecord
 ```
 
-创建一条URI内容的条目。
+Creates a **PasteDataRecord** object of the URI type.
 
 **Since:** 7
 
@@ -30,13 +30,13 @@ function createUriRecord(uri: string): PasteDataRecord
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| uri | string | Yes | URI内容，需符合标准URI格式。 |
+| uri | string | Yes | URI content. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [PasteDataRecord](arkts-basicservices-pasteboard-pastedatarecord-i.md) | 一条新建的URI内容条目。 |
+| [PasteDataRecord](arkts-basicservices-pasteboard-pastedatarecord-i.md) | New **PasteDataRecord** object of the URI type. |
 
 ## Examples
 

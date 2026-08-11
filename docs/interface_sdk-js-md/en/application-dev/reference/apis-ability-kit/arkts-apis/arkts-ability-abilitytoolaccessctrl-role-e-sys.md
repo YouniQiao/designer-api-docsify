@@ -1,6 +1,6 @@
 # Role (System API)
 
-设备角色。
+Device role.
 
 **Since:** 26.1.0
 
@@ -18,7 +18,7 @@
 CONTROLLER = 0x01
 ```
 
-控制器设备。
+Controller device.
 
 **Since:** 26.1.0
 
@@ -36,7 +36,7 @@ CONTROLLER = 0x01
 CONTROLLED = 0x02
 ```
 
-受控设备。
+Controlled device.
 
 **Since:** 26.1.0
 

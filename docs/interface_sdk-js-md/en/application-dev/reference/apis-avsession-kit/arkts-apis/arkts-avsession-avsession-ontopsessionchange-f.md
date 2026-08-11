@@ -28,38 +28,12 @@ Register top session changed callback
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;AVSessionDescriptor&gt; | Yes | Top会话变化回调函数 |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;AVSessionDescriptor&gt; | Yes | Used to handle ('topSessionChange' command) |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 6600101 | Session service exception. |
-| 201 | permission denied. |
-
-## Examples
-
-```TypeScript
-import { avSession } from '@kit.AVSessionKit';
-@Entry
-@Component
-struct Index {
-  @State message: string = 'hello world';
-
-  build() {
-    Column() {
-        Text(this.message)
-          .onClick(()=>{
-            avSession.onTopSessionChange((descriptor: avSession.AVSessionDescriptor) => {
-              console.info(`on topSessionChange : isActive : ${descriptor.isActive}`);
-              console.info(`on topSessionChange : type : ${descriptor.type}`);
-              console.info(`on topSessionChange : sessionTag : ${descriptor.sessionTag}`);
-            });
-          })
-      }
-    .width('100%')
-    .height('100%')
-  }
-}
-```
+| [6600101](../errorcode-avsession.md#6600101-session-service-exception) | Session service exception. |
+| [201](../../errorcode-universal.md#201-permission-denied) | permission denied. |
 

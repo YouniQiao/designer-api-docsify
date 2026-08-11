@@ -1,6 +1,6 @@
 # Size (System API)
 
-表示截取图像的大小。
+Describes the size of the screen region to capture.
 
 **Since:** 7
 
@@ -24,7 +24,7 @@ import { screenshot } from 'kits/@kit.ArkUI';
 height: long
 ```
 
-表示截取图像的高度，单位为px，该参数应为整数。
+Height of the screen region to capture, in px. The value must be a positive integer.
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：long
 
@@ -44,7 +44,7 @@ height: long
 width: long
 ```
 
-表示截取图像的宽度，单位为px，该参数应为整数。
+Width of the screen region to capture, in px. The value must be a positive integer.
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：long
 

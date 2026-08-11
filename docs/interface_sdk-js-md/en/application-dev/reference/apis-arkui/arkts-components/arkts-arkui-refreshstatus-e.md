@@ -1,6 +1,6 @@
 # RefreshStatus
 
-RefreshStatus刷新状态枚举。
+Enumerates the states of a refresh operation.
 
 **Since:** 8
 
@@ -16,7 +16,7 @@ RefreshStatus刷新状态枚举。
 Inactive
 ```
 
-默认未下拉状态。
+The component is not pulled down. This is the default value.
 
 **Since:** 8
 
@@ -34,9 +34,9 @@ Inactive
 Drag
 ```
 
-下拉中，下拉距离小于刷新距离。
+The component is being pulled down, but the pull-down distance is shorter than the refresh threshold.
 
-若此时松手，组件进入Inactive状态；若此时继续下拉使下拉距离超过刷新距离，组件进入OverDrag状态。
+If you release the component, it enters the **Inactive** state. If you continue to pull down the component and the pull-down distance exceeds the refresh threshold, the component enters the **OverDrag** state.
 
 **Since:** 8
 
@@ -54,9 +54,9 @@ Drag
 OverDrag
 ```
 
-下拉中，下拉距离超过刷新距离。
+The component is being pulled down, and the pull-down distance exceeds the refresh threshold.
 
-若此时松手，组件进入Refresh状态；若此时上滑使下拉距离小于刷新距离，组件进入Drag状态。
+If you release the component, the component enters the **Refresh** state. If you swipe upward and the pull-down distance is less than the refresh threshold, the component enters the **Drag** state.
 
 **Since:** 8
 
@@ -74,7 +74,7 @@ OverDrag
 Refresh
 ```
 
-After the pull-down, it rebounds to the refresh distance and enters the refresh state.
+The pull-down ends, and the component rebounds to the minimum length required to trigger the refresh and enters the refreshing state.
 
 **Since:** 8
 
@@ -92,7 +92,7 @@ After the pull-down, it rebounds to the refresh distance and enters the refresh 
 Done
 ```
 
-刷新结束，返回初始状态（顶部）。
+The refresh is complete, and the component returns to the initial state (at the top).
 
 **Since:** 8
 

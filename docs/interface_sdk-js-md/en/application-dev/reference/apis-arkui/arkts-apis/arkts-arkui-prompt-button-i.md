@@ -1,6 +1,6 @@
 # Button
 
-菜单中的菜单项按钮。
+Defines the prompt info of button.
 
 **Since:** 8
 
@@ -26,7 +26,7 @@ import { prompt } from 'kits/@kit.ArkUI';
 color: string
 ```
 
-按钮文本颜色。
+Defines the color of button.
 
 **Type:** string
 
@@ -48,7 +48,7 @@ color: string
 text: string
 ```
 
-按钮文本内容。
+Defines the button info.
 
 **Type:** string
 

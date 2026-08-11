@@ -1,6 +1,6 @@
 # Version (System API)
 
-包的版本。
+Version: the bundle version class.
 
 **Since:** 9
 
@@ -18,7 +18,7 @@
 readonly code: int
 ```
 
-标识应用的版本号，值为32位非负整数。此数字仅用于确定某个版本是否比另一个版本更新，数值越大表示版本越高。
+Version number of the bundle used only for bundle management. The value is a 32-bit non-negative integer. It is used only to determine whether a version is later than another version. A larger value indicates a later version.
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
@@ -38,7 +38,7 @@ readonly code: int
 readonly minCompatibleVersionCode: int
 ```
 
-能够兼容的最低历史版本号，用于跨设备兼容性判断。该值为32位整型数值，非负整数。
+Minimum compatible version of the bundle. It is used to check whether the bundle is compatible with a version on other devices in the cross-device scenario. The value is a 32-bit non-negative integer.
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
@@ -58,7 +58,7 @@ readonly minCompatibleVersionCode: int
 readonly name: string
 ```
 
-标识版本号的文字描述，用于向用户展示。
+Version number of the bundle visible to users.
 
 **Type:** string
 

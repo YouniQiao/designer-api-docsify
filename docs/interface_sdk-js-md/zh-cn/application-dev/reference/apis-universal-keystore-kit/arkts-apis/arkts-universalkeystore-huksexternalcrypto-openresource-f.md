@@ -1,11 +1,5 @@
 # openResource
 
-## 导入模块
-
-```TypeScript
-import { huksExternalCrypto } from 'kits/@kit.UniversalKeystoreKit';
-```
-
 ## openResource
 
 ```TypeScript
@@ -45,17 +39,17 @@ function openResource(resourceId: string, params?: HuksExternalCryptoParam[]): P
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 801 | API is not supported. |
-| 12000006 | Failed to call the UKey driver interface. Please check the UKey connection and driver status. |
-| 12000005 | IPC communication failed. |
-| 12000020 | The provider operation failed. This means an error occurred in the crypto extension before calling the UKey driver interface. |
-| 12000018 | Input parameters are invalid. Possible causes: 1. The resourceId length is invalid. 2. The parameters contain invalid tags or invalid value types. |
-| 12000017 | The resource with the resource ID is already open. |
-| 12000014 | The memory is insufficient. |
-| 12000012 | Device environment or input parameters are abnormal. This error may occur if the process function is not found, or due to other issues. |
-| 12000011 | The cached resource ID is not found. This may happen because the resource ID has not been opened. |
-| 12000025 | The opened resources exceed the limit. |
-| 12000024 | The provider or UKey is busy. |
+| [801](../../errorcode-universal.md#801-该设备不支持此api) | API is not supported. |
+| [12000006](../errorcode-huks.md#12000006-算法库操作失败) | Failed to call the UKey driver interface. Please check the UKey connection and driver status. |
+| [12000005](../errorcode-huks.md#12000005-进程通信错误) | IPC communication failed. |
+| [12000020](../errorcode-huks.md#12000020-依赖的模块报错) | The provider operation failed. This means an error occurred in the crypto extension before calling the UKey driver interface. |
+| [12000018](../errorcode-huks.md#12000018-输入参数非法) | Input parameters are invalid. Possible causes: 1. The resourceId length is invalid. 2. The parameters contain invalid tags or invalid value types. |
+| [12000017](../errorcode-huks.md#12000017-同名密钥已存在) | The resource with the resource ID is already open. |
+| [12000014](../errorcode-huks.md#12000014-内存不足) | The memory is insufficient. |
+| [12000012](../errorcode-huks.md#12000012-外部错误) | Device environment or input parameters are abnormal. This error may occur if the process function is not found, or due to other issues. |
+| [12000011](../errorcode-huks.md#12000011-目标对象不存在) | The cached resource ID is not found. This may happen because the resource ID has not been opened. |
+| [12000025](../errorcode-huks.md#12000025-资源超过限制) | The opened resources exceed the limit. |
+| [12000024](../errorcode-huks.md#12000024-设备或资源繁忙) | The provider or UKey is busy. |
 
 ## 示例
 

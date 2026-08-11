@@ -1,6 +1,6 @@
 # SwiperContentTransitionProxy
 
-Swiper自定义切换动画执行过程中，返回给开发者的proxy对象。开发者可通过该对象获取自定义动画视窗内的页面信息，同时，也可以通过调用该对象的finishTransition接口通知Swiper组件页面自定义动画已结束。
+Implements the proxy object returned during the execution of the custom page transition animation of the **Swiper**component. You can use this object to obtain the page information in the custom animation viewport. You can also call the **finishTransition** API of this object to notify the **Swiper** component that the custom animation has finished playing.
 
 **Since:** 12
 
@@ -16,7 +16,7 @@ Swiper自定义切换动画执行过程中，返回给开发者的proxy对象。
 finishTransition(): void
 ```
 
-通知Swiper组件，此页面的自定义动画已结束。
+Notifies the **Swiper** component that the custom animation has finished playing.
 
 **Since:** 12
 
@@ -38,7 +38,7 @@ finishTransition(): void
 index: number
 ```
 
-视窗内页面的索引。
+Index of a page in the viewport.
 
 **Type:** number
 
@@ -62,7 +62,7 @@ index: number
 mainAxisLength: number
 ```
 
-index对应页面在主轴方向上的长度，单位vp。
+Length of the page specified by **index** along the main axis, in vp.
 
 **Type:** number
 
@@ -86,7 +86,7 @@ index对应页面在主轴方向上的长度，单位vp。
 position: number
 ```
 
-index页面相对于Swiper主轴起始位置（selectedIndex对应页面的起始位置）的移动比例。
+Position of the page specified by **index** relative to the start position of the **Swiper** main axis (start position of the page corresponding to **selectedIndex**).
 
 **Type:** number
 
@@ -110,7 +110,7 @@ index页面相对于Swiper主轴起始位置（selectedIndex对应页面的起�
 selectedIndex: number
 ```
 
-当前选中页面的索引。
+Index of the currently selected page.
 
 **Type:** number
 

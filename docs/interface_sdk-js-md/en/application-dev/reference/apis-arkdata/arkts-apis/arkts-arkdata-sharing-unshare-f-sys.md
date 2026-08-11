@@ -16,7 +16,7 @@ function unshare(
     ): void
 ```
 
-根据指定的共享资源标识和共享参与者发起共享邀请，使用callback异步回调。
+Unshares data based on the specified shared resource ID and participants.This API uses an asynchronous callback to return the result.
 
 **Since:** 11
 
@@ -32,17 +32,17 @@ function unshare(
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| sharingResource | string | Yes | 端云共享数据的资源标识。 |
-| participants | Array&lt;Participant&gt; | Yes | 端云共享的参与者。 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Result&lt;Array&lt;Result&lt;Participant&gt;&gt;&gt;&gt; | Yes | 回调函数。返回端云共享的结果。 |
+| sharingResource | string | Yes | Shared resource ID. |
+| participants | Array&lt;Participant&gt; | Yes | Participants of the share. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Result&lt;Array&lt;Result&lt;Participant&gt;&gt;&gt;&gt; | Yes | Callback used to return the result. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
-| 801 | Capability not supported. |
-| 202 | Permission verification failed, application which is not a system application uses system API. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed, application which is not a system application uses system API. |
 
 ## Examples
 
@@ -82,7 +82,7 @@ function unshare(
     ): Promise<Result<Array<Result<Participant>>>>
 ```
 
-根据指定的共享资源标识和共享参与者发起共享邀请，使用Promise异步回调。
+Unshares data based on the specified shared resource ID and participants.This API uses a promise to return the result.
 
 **Since:** 11
 
@@ -98,22 +98,22 @@ function unshare(
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| sharingResource | string | Yes | 端云共享数据的资源标识。 |
-| participants | Array&lt;Participant&gt; | Yes | 端云共享的参与者。 |
+| sharingResource | string | Yes | Shared resource ID. |
+| participants | Array&lt;Participant&gt; | Yes | Participants of the share. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;Result&lt;Array&lt;Result&lt;Participant&gt;&gt;&gt;&gt; | Promise对象，返回端云共享的结果。 |
+| Promise&lt;Result&lt;Array&lt;Result&lt;Participant&gt;&gt;&gt;&gt; | Promise used to return the result. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
-| 801 | Capability not supported. |
-| 202 | Permission verification failed, application which is not a system application uses system API. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed, application which is not a system application uses system API. |
 
 ## Examples
 

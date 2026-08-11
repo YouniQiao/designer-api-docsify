@@ -1,6 +1,6 @@
 # CmsCertType
 
-从CMS中获取证书不同类型的枚举。
+Enumerates certificate types obtained from CMS.
 
 **Since:** 22
 
@@ -16,7 +16,7 @@
 SIGNER_CERTS = 0
 ```
 
-签名者证书。
+Signer certificates.
 
 **Since:** 22
 
@@ -34,7 +34,7 @@ SIGNER_CERTS = 0
 ALL_CERTS = 1
 ```
 
-全部证书。
+All certificates.
 
 **Since:** 22
 

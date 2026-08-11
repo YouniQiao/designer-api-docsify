@@ -5,7 +5,7 @@ type DomainPluginBindAccountFunc = (domainAccountInfo: DomainAccountInfo,
     localId: int, callback: AsyncCallback<void>) => void
 ```
 
-绑定指定的域账号。
+Binds the specified domain account with an OS account.
 
 **Since:** 23
 
@@ -21,7 +21,7 @@ type DomainPluginBindAccountFunc = (domainAccountInfo: DomainAccountInfo,
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| domainAccountInfo | [DomainAccountInfo](arkts-basicservices-osaccount-domainaccountinfo-i-sys.md) | Yes | 表示域账号信息。 |
-| localId | int | Yes | 系统账号ID。 |
-| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | 表示绑定结果回调。 |
+| domainAccountInfo | [DomainAccountInfo](arkts-basicservices-osaccount-domainaccountinfo-i-sys.md) | Yes | Indicates the domain account information. |
+| localId | int | Yes | Indicates the local ID of the OS account. <br>The value should be an integer. |
+| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Indicates the callback for notifying the binding result. |
 

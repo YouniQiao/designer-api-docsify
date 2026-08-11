@@ -12,12 +12,6 @@
 
 **系统接口：** 此接口为系统接口。
 
-## 导入模块
-
-```TypeScript
-import { hiSysEvent } from 'kits/@kit.PerformanceAnalysisKit';
-```
-
 ## domain
 
 ```TypeScript
@@ -46,7 +40,7 @@ eventType: EventType
 
 事件类型。
 
-**类型：** [EventType](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-screenlock-eventtype-t-sys.md)
+**类型：** [EventType](../../apis-arkts/arkts-apis/arkts-arkts-xml-eventtype-e.md)
 
 **起始版本：** 9
 

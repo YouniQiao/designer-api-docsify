@@ -12,7 +12,7 @@ import { uiMaterial } from 'kits/@kit.ArkUI';
 export function getMaterialInfo(): MaterialInfo
 ```
 
-获取当前应用的材质配置信息。返回的配置信息来自应用在[module.json5](../../../quick-start/module-configuration-file.md)中配置的metadata。
+Obtains the material configuration information of this application. The returned configuration information comes from the metadata configured in the [module.json5](../../../quick-start/module-configuration-file.md) file of the application.
 
 **Since:** 26.0.0
 
@@ -28,5 +28,5 @@ export function getMaterialInfo(): MaterialInfo
 
 | Type | Description |
 | --- | --- |
-| [MaterialInfo](arkts-arkui-uimaterial-materialinfo-i.md) | 返回当前应用的材质配置信息，包含材质使能状态和材质类型。 |
+| [MaterialInfo](arkts-arkui-uimaterial-materialinfo-i.md) | Material configuration information of this application, including the material enabling state and material type. |
 

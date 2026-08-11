@@ -1,11 +1,5 @@
 # onPrinterInfoQuery（系统接口）
 
-## 导入模块
-
-```TypeScript
-import { print } from 'kits/@kit.BasicServicesKit';
-```
-
 ## onPrinterInfoQuery
 
 ```TypeScript
@@ -38,6 +32,6 @@ function onPrinterInfoQuery(callback: PrinterInfoQueryCallback): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 201 | the application does not have permission to call this function. |
-| 202 | not system application. |
+| [201](../../errorcode-universal.md#201-权限校验失败) | the application does not have permission to call this function. |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | not system application. |
 

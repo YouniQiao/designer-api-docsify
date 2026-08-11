@@ -1,11 +1,5 @@
 # on
 
-## 导入模块
-
-```TypeScript
-import { selectionManager } from 'kits/@kit.BasicServicesKit';
-```
-
 ## on('selectionCompleted')
 
 ```TypeScript
@@ -34,7 +28,7 @@ function on(type: 'selectionCompleted', callback: Callback<SelectionInfo>): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 33600003 | The application calling the API does not match the application selected in the system settings. |
+| [33600003](../../apis-basic-services-kit/errorcode-selection.md#33600003-调用接口的应用与系统设置中选择的应用不匹配) | The application calling the API does not match the application selected in the system settings. |
 
 ## 示例
 

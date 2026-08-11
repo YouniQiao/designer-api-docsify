@@ -1,11 +1,5 @@
 # @ohos.InputMethodSubtype(输入法子类型)
 
-## 导入模块
-
-```TypeScript
-import { InputMethodSubtype } from 'kits/@kit.IMEKit';
-```
-
 ## 汇总
 
 ### 接口

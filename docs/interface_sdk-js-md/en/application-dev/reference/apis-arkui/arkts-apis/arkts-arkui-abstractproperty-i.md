@@ -1,10 +1,7 @@
 # AbstractProperty
 
-AbstractProperty是AppStorage/LocalStorage中属性的引用，提供读取、修改所引用属性数据及查询属性名的能力。与SubscribedAbstractProperty不同，AbstractProperty实例无需手动释放。
-
-> **说明：**
-> 
-> 从API version 12开始，AppStorage/LocalStorage支持Map、Set、Date类型，支持null、undefined以及联合类型。
+Provides a reference to properties stored in [AppStorage](../../../ui/state-management/arkts-appstorage.md) or  
+[LocalStorage](../../../ui/state-management/arkts-localstorage.md).
 
 **Since:** 12
 
@@ -20,8 +17,8 @@ AbstractProperty是AppStorage/LocalStorage中属性的引用，提供读取、�
 get(): T
 ```
 
-读取[AppStorage](../../../ui/state-management/arkts-appstorage.md)/  
-[LocalStorage](../../../ui/state-management/arkts-localstorage.md)中所引用属性的数据。
+Reads data of the referenced property from [AppStorage](../../../ui/state-management/arkts-appstorage.md) or  
+[LocalStorage](../../../ui/state-management/arkts-localstorage.md).
 
 **Since:** 12
 
@@ -37,7 +34,7 @@ get(): T
 
 | Type | Description |
 | --- | --- |
-| T | AppStorage/LocalStorage中所引用属性的数据。 |
+| T | Data of the referenced property in AppStorage or LocalStorage. |
 
 ## info
 
@@ -45,8 +42,9 @@ get(): T
 info(): string
 ```
 
-读取[AppStorage](../../../ui/state-management/arkts-appstorage.md)/  
-[LocalStorage](../../../ui/state-management/arkts-localstorage.md)中所引用属性的属性名。
+Reads the property name of the referenced property from  
+[AppStorage](../../../ui/state-management/arkts-appstorage.md) or  
+[LocalStorage](../../../ui/state-management/arkts-localstorage.md).
 
 **Since:** 12
 
@@ -62,7 +60,7 @@ info(): string
 
 | Type | Description |
 | --- | --- |
-| string | AppStorage/LocalStorage中所引用属性的属性名。 |
+| string | Property name of the referenced property in AppStorage or LocalStorage. |
 
 ## set
 
@@ -70,8 +68,13 @@ info(): string
 set(newValue: T): void
 ```
 
-更新[AppStorage](../../../ui/state-management/arkts-appstorage.md)/  
-[LocalStorage](../../../ui/state-management/arkts-localstorage.md)中所引用属性的数据，newValue必须是T类型，可以为null或undefined。
+Updates the data of the referenced property in [AppStorage](../../../ui/state-management/arkts-appstorage.md) or  
+[LocalStorage](../../../ui/state-management/arkts-localstorage.md). The value of **newValue** must be of the **T**type and can be **null** or **undefined**.
+
+> **NOTE：**
+
+> Since API version 12, AppStorage and LocalStorage support the Map, Set, Date types, as well as **null**,
+> **undefined**, and union types.
 
 **Since:** 12
 
@@ -87,5 +90,5 @@ set(newValue: T): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| newValue | T | Yes | AppStorage/LocalStorage中所引用属性的新值，可以为null或undefined。 |
+| newValue | T | Yes | New data to update. The value can be **null** or **undefined**. |
 

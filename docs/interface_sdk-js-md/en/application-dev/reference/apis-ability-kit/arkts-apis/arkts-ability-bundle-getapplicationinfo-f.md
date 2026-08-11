@@ -13,9 +13,9 @@ function getApplicationInfo(bundleName: string,
     bundleFlags: number, userId: number, callback: AsyncCallback<ApplicationInfo>): void
 ```
 
-根据给定的Bundle名称获取指定用户下的ApplicationInfo，使用callback异步回调。
+Obtains the application information of the specified user based on a given bundle name. This API uses an asynchronous callback to return the result.
 
-获取调用方自己的信息时不需要权限。
+No permission is required for obtaining the caller's own information.
 
 **Since:** 7
 
@@ -33,10 +33,10 @@ function getApplicationInfo(bundleName: string,
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| bundleName | string | Yes | 要查询的应用Bundle名称。 |
-| bundleFlags | number | Yes | 用于指定返回的应用信息对象中包含信息的标记。取值范围：参考[BundleFlag说明](arkts-ability-bundle-bundleflag-e.md)中应用信息相关flag。 |
-| userId | number | Yes | 用户ID。取值范围：大于等于0。 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[ApplicationInfo](arkts-ability-applicationinfo-applicationinfo-depr-i.md)&gt; | Yes | 程序启动作为入参的回调函数，返回应用程序信息。 |
+| bundleName | string | Yes | Bundle name. |
+| bundleFlags | number | Yes | Type of information that will be returned. For details about the available enumerated values, see the application information flags in [BundleFlag](arkts-ability-bundle-bundleflag-e.md). |
+| userId | number | Yes | User ID. The value must be greater than or equal to 0. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[ApplicationInfo](arkts-ability-applicationinfo-applicationinfo-depr-i.md)&gt; | Yes | Callback used to return the application information. |
 
 
 ## getApplicationInfo
@@ -45,9 +45,9 @@ function getApplicationInfo(bundleName: string,
 function getApplicationInfo(bundleName: string, bundleFlags: number, callback: AsyncCallback<ApplicationInfo>): void
 ```
 
-根据给定的Bundle名称获取ApplicationInfo，使用callback异步回调。
+Obtains the application information based on a given bundle name. This API uses an asynchronous callback to return the result.
 
-获取调用方自己的信息时不需要权限。
+No permission is required for obtaining the caller's own information.
 
 **Since:** 7
 
@@ -65,9 +65,9 @@ function getApplicationInfo(bundleName: string, bundleFlags: number, callback: A
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| bundleName | string | Yes | 要查询的应用Bundle名称。 |
-| bundleFlags | number | Yes | 用于指定返回的应用信息对象中包含信息的标记。取值范围：参考[BundleFlag说明](arkts-ability-bundle-bundleflag-e.md)中应用信息相关flag。 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[ApplicationInfo](arkts-ability-applicationinfo-applicationinfo-depr-i.md)&gt; | Yes | 程序启动作为入参的回调函数，返回应用程序信息。 |
+| bundleName | string | Yes | Bundle name. |
+| bundleFlags | number | Yes | Type of information that will be returned. For details about the available enumerated values, see the application information flags in [BundleFlag](arkts-ability-bundle-bundleflag-e.md). |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[ApplicationInfo](arkts-ability-applicationinfo-applicationinfo-depr-i.md)&gt; | Yes | Callback used to return the application information. |
 
 
 ## getApplicationInfo
@@ -76,9 +76,9 @@ function getApplicationInfo(bundleName: string, bundleFlags: number, callback: A
 function getApplicationInfo(bundleName: string, bundleFlags: number, userId?: number): Promise<ApplicationInfo>
 ```
 
-根据给定的Bundle名称获取ApplicationInfo。使用Promise异步回调。
+Obtains the application information based on a given bundle name. This API uses a promise to return the result.
 
-获取调用方自己的信息时不需要权限。
+No permission is required for obtaining the caller's own information.
 
 **Since:** 7
 
@@ -96,13 +96,13 @@ function getApplicationInfo(bundleName: string, bundleFlags: number, userId?: nu
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| bundleName | string | Yes | 要查询的应用Bundle名称。 |
-| bundleFlags | number | Yes | 用于指定返回的应用信息对象中包含信息的标记。取值范围请参考[BundleFlag说明](arkts-ability-bundle-bundleflag-e.md)中应用信息相关flag。 |
-| userId | number | No | 用户ID。默认值：调用方所在用户，取值范围：大于等于0。 |
+| bundleName | string | Yes | Bundle name. |
+| bundleFlags | number | Yes | Type of information that will be returned. For details about the available enumerated values, see the application information flags in [BundleFlag](arkts-ability-bundle-bundleflag-e.md). |
+| userId | number | No | User ID. The default value is the user ID of the caller. The value must be greater than or equal to 0. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;[ApplicationInfo](arkts-ability-applicationinfo-applicationinfo-depr-i.md)&gt; | Promise形式返回应用程序信息。 |
+| Promise&lt;[ApplicationInfo](arkts-ability-applicationinfo-applicationinfo-depr-i.md)&gt; | Promise used to return the application information. |
 

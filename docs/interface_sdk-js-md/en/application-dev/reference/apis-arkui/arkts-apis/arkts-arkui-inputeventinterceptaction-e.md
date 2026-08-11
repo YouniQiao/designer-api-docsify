@@ -1,6 +1,6 @@
 # InputEventInterceptAction
 
-输入事件拦截动作枚举。
+Defines the input event intercept action.
 
 **Since:** 26.0.0
 
@@ -16,7 +16,7 @@
 CONTINUE = 0
 ```
 
-允许事件继续传递到UI框架。
+Continue to deliver the event to the UI framework.
 
 **Since:** 26.0.0
 
@@ -36,7 +36,7 @@ CONTINUE = 0
 BLOCK = 1
 ```
 
-阻止事件传递到UI框架。
+Block the event from being delivered to the UI framework.
 
 **Since:** 26.0.0
 

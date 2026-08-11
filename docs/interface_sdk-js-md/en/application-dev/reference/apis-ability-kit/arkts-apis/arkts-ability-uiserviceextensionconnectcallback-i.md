@@ -1,10 +1,10 @@
 # UIServiceExtensionConnectCallback
 
-UIServiceExtensionConnectCallback是UIServiceExtension连接回调接口类，提供UIServiceExtension连接回调数据能力。
+UIServiceExtensionConnectCallback provides callbacks for the connection to a UIServiceExtensionAbility.
 
-> **说明：**
+> **NOTE：**
 > 
-> - 本模块接口需要在主线程中使用，不要在Worker、TaskPool等子线程中使用。
+> - The APIs of this module must be used in the main thread, but not in child threads such as Worker and TaskPool.
 
 **Since:** 14
 
@@ -20,11 +20,12 @@ UIServiceExtensionConnectCallback是UIServiceExtension连接回调接口类，�
 onData(data: Record<string, Object>): void
 ```
 
-接收UIServiceExtension连接的回调数据。
+Called to receive data when a connection to the UIServiceExtensionAbility is established.
 
-> **说明：**
+> **NOTE：**
 > 
-> 组件启动规则详见：[组件启动规则（Stage模型）](../../../application-models/component-startup-rules.md)。
+> For details about the startup rules for the components in the stage model, see
+> [Component Startup Rules (Stage Model)](../../../application-models/component-startup-rules.md).
 
 **Since:** 14
 
@@ -42,7 +43,7 @@ onData(data: Record<string, Object>): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| data | [Record](../../apis-default/arkts-apis/arkts-record-t.md)&lt;string, Object&gt; | Yes | 接收UIServiceExtension连接回调数据。 |
+| data | [Record](../../apis-default/arkts-apis/arkts-record-t.md)&lt;string, Object&gt; | Yes | Data about the UIServiceExtensionAbility connection. |
 
 ## onData
 
@@ -74,11 +75,12 @@ Called back when data is sent.
 onDisconnect(): void
 ```
 
-成功断开UIServiceExtension连接的回调。
+Called when the connection to the UIServiceExtensionAbility is interrupted.
 
-> **说明：**
+> **NOTE：**
 > 
-> 组件启动规则详见：[组件启动规则（Stage模型）](../../../application-models/component-startup-rules.md)。
+> For details about the startup rules for the components in the stage model, see
+> [Component Startup Rules (Stage Model)](../../../application-models/component-startup-rules.md).
 
 **Since:** 14
 

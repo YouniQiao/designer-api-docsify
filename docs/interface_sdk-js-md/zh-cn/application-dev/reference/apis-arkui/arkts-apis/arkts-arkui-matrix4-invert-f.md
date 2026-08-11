@@ -1,11 +1,5 @@
 # invert
 
-## 导入模块
-
-```TypeScript
-import { matrix4 } from 'kits/@kit.ArkUI';
-```
-
 ## invert
 
 ```TypeScript

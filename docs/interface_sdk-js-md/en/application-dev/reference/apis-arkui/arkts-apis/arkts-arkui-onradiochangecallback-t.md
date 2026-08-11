@@ -4,7 +4,7 @@
 export type OnRadioChangeCallback = (isChecked: boolean) => void
 ```
 
-单选框选中状态改变时触发的回调函数类型定义。
+Callback of radio box selection status changes event.
 
 **Since:** 23
 
@@ -20,5 +20,5 @@ export type OnRadioChangeCallback = (isChecked: boolean) => void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| isChecked | boolean | Yes | 单选框的状态。<br/>值为true时，表示从未选中变为选中。值为false时，表示从选中变为未选中。 |
+| isChecked | boolean | Yes |  |
 

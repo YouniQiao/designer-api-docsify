@@ -2,9 +2,13 @@
 
 Defining interface for _invokeImpl options.
 
-**ArkTS mode:** ArkTS-Sta only
+**Inheritance/Implementation:** CustomComponentInvokeOptions extends [CustomComponentBaseOptions](arkts-arkui-customcomponent-customcomponentbaseoptions-i.md)
 
-<!--Device-unnamed-export interface CustomComponentInvokeOptions--><!--Device-unnamed-export interface CustomComponentInvokeOptions-End-->
+**Since:** 24
+
+**ArkTS mode:** ArkTS-Sta only, since version 24.
+
+<!--Device-unnamed-export interface CustomComponentInvokeOptions extends CustomComponentBaseOptions--><!--Device-unnamed-export interface CustomComponentInvokeOptions extends CustomComponentBaseOptions-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -18,7 +22,9 @@ CustomComponent Class object. Used to generate default reuse key.
 
 **Type:** [Class](../../apis-arkts/arkts-apis/arkts-arkts-class-c.md)
 
-**ArkTS mode:** ArkTS-Sta only
+**Since:** 24
+
+**ArkTS mode:** ArkTS-Sta only, since version 24.
 
 **Model restriction:** This API can be used only in the stage model.
 

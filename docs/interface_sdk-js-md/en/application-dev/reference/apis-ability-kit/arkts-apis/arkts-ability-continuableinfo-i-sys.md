@@ -1,7 +1,7 @@
 # ContinuableInfo (System API)
 
-当注册应用任务流转状态监听的回调时，返回应用任务流转状态和流转信息，注册详见：  
-[on('continueStateChange')接口](@ohos.distributedMissionManager:distributedMissionManager.on(type: 'continueStateChange', callback: Callback&lt;ContinueCallbackInfo&gt;))。
+The module provides the mission continuation information to be returned when the listener for listening for the mission continuation state is registered. For details about the registration, see  
+[on('continueStateChange')](@ohos.distributedMissionManager:distributedMissionManager.on(type: 'continueStateChange', callback: Callback&lt;ContinueCallbackInfo&gt;)).
 
 **Since:** 10
 
@@ -19,7 +19,7 @@
 bundleName: string
 ```
 
-表示任务所属目标端应用包名。
+Bundle name of the target application to which the mission belongs.
 
 **Type:** string
 
@@ -41,7 +41,7 @@ bundleName: string
 continueType?: string
 ```
 
-表示任务所属应用迁移类型。
+Continuation type of the application to which the mission belongs.
 
 **Type:** string
 
@@ -63,7 +63,7 @@ continueType?: string
 srcBundleName?: string
 ```
 
-表示任务所属源端应用包名，默认与bundleName相同。
+Bundle name of the source application to which the mission belongs. The value is the same as that of **bundleName** by default.
 
 **Type:** string
 
@@ -85,7 +85,7 @@ srcBundleName?: string
 srcDeviceId: string
 ```
 
-表示任务迁移源设备ID。
+ID of the source device.
 
 **Type:** string
 
@@ -107,7 +107,7 @@ srcDeviceId: string
 targetAppIds?: Array<string>
 ```
 
-表示任务所属目标应用ID列表。
+Target AppId list of the application to which the mission belongs.
 
 **Type:** Array&lt;string&gt;
 

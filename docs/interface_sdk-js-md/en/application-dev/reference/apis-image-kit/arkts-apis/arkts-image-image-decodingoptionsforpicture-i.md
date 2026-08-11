@@ -1,6 +1,6 @@
 # DecodingOptionsForPicture
 
-图像解码设置选项。
+Describes the image decoding options.
 
 **Since:** 13
 
@@ -22,9 +22,9 @@ import { image } from 'kits/@kit.ImageKit';
 desiredAuxiliaryPictures: Array<AuxiliaryPictureType>
 ```
 
-设置AuxiliaryPicture类型，当未指定或传入空的Array时，系统会解码所有可用的AuxiliaryPicture类型。 
+Auxiliary picture type. If no auxiliary picture type is specified or an empty array is passed, the system decodes all available auxiliary picture types.
 
-如果不希望解码任何辅助图，可以直接解码为PixelMap，使用PixelMap创建仅包含主图的Picture。
+To exclude all auxiliary picture, you can decode the auxiliary picture to a PixelMap and use the PixelMap to create a Picture that contains only the main picture.
 
 **Type:** Array&lt;AuxiliaryPictureType&gt;
 
@@ -42,11 +42,7 @@ desiredAuxiliaryPictures: Array<AuxiliaryPictureType>
 desiredPixelFormat?: PixelMapFormat
 ```
 
-解码的像素格式。默认值为RGBA_8888。
-
-仅支持设置：RGBA_8888、BGRA_8888、RGB_565、NV12及NV21。
-
-当设置其他不支持的像素格式时，返回解码失败。
+Desired Pixel format, RGBA_8888\BGRA_8888\RGB_565\NV12\NV21 are supported.
 
 **Type:** [PixelMapFormat](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-multimedia-movingphotoview-pixelmapformat-e.md)
 
@@ -66,11 +62,7 @@ desiredPixelFormat?: PixelMapFormat
 desiredSizeForMainPixelMap?: Size
 ```
 
-期望输出主图大小（必须为正整数），默认为主图原始尺寸。单位：像素（px）。
-
-若主图原始尺寸与指定尺寸不一致，则会进行拉伸/缩放到指定尺寸。
-
-辅助图的宽度与高度均与主图按照同比例进行相应拉伸/缩放。
+Desired size of the main pixel map. The value (0, 0) indicates that the pixels are decoded based on the original image size.
 
 **Type:** [Size](../../apis-arkui/arkts-apis/arkts-arkui-window-size-i.md)
 

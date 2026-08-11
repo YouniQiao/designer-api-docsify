@@ -1,0 +1,31 @@
+# OnRemoteStateChangeCallback
+
+注册协同场景下跨设备组件状态变化监听通知的回调函数类型。
+
+**起始版本：** 10
+
+<!--Device-unnamed-export interface OnRemoteStateChangeCallback--><!--Device-unnamed-export interface OnRemoteStateChangeCallback-End-->
+
+**系统能力：** SystemCapability.Ability.AbilityRuntime.AbilityCore
+
+## [[Call]]
+
+```TypeScript
+(msg: string): void
+```
+
+定义OnRemoteStateChange的回调函数。
+
+**起始版本：** 10
+
+**模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-OnRemoteStateChangeCallback-(msg: string): void--><!--Device-OnRemoteStateChangeCallback-(msg: string): void-End-->
+
+**系统能力：** SystemCapability.Ability.AbilityRuntime.AbilityCore
+
+**参数：**
+
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| msg | string | 是 |

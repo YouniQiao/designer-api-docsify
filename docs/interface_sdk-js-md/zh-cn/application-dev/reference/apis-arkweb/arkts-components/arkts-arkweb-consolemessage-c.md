@@ -37,7 +37,7 @@ Constructor.
 | message | string | 是 | ConsoleMessage的日志输出信息。 |
 | sourceId | string | 是 | 网页源文件的路径和文件名。 |
 | lineNumber | number | 是 | ConsoleMessage的行号。 |
-| messageLevel | [MessageLevel](../arkts-apis/arkts-arkweb-web-messagelevel-e.md) | 是 | ConsoleMessage的日志级别。 |
+| messageLevel | [MessageLevel](arkts-arkweb-messagelevel-e.md) | 是 | ConsoleMessage的日志级别。 |
 
 ## constructor
 
@@ -127,7 +127,7 @@ getMessageLevel(): MessageLevel
 
 | 类型 | 说明 |
 | --- | --- |
-| [MessageLevel](../arkts-apis/arkts-arkweb-web-messagelevel-e.md) | 返回ConsoleMessage的信息级别。 |
+| [MessageLevel](arkts-arkweb-messagelevel-e.md) | 返回ConsoleMessage的信息级别。 |
 
 ## getSource
 
@@ -149,7 +149,7 @@ getSource() : ConsoleMessageSource
 
 | 类型 | 说明 |
 | --- | --- |
-| [ConsoleMessageSource](arkts-arkweb-consolemessagesource-e.md) | 返回ConsoleMessage的日志来源。 |
+| [ConsoleMessageSource](../arkts-apis/arkts-arkweb-web-consolemessagesource-e.md) | 返回ConsoleMessage的日志来源。 |
 
 ## getSourceId
 

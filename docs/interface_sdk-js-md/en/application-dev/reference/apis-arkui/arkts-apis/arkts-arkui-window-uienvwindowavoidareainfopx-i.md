@@ -1,6 +1,6 @@
 # UIEnvWindowAvoidAreaInfoPX
 
-窗口不同类型避让区域信息组成的[环境变量](../../../ui/arkts-env-system-property.md)数据类型，每种类型避让区域单位为px。
+Describes [environment variable](../../../ui/arkts-env-system-property.md) data types for window avoidance areas of different types. All types of window avoidance areas are measured in px.
 
 **Since:** 23
 
@@ -22,7 +22,7 @@ import { window } from 'kits/@kit.ArkUI';
 cutout: AvoidArea
 ```
 
-表示[AvoidAreaType](arkts-arkui-window-avoidareatype-e.md)为TYPE_CUTOUT类型的避让区域，单位为px。
+Avoidance area whose [AvoidAreaType](arkts-arkui-window-avoidareatype-e.md) is **TYPE_CUTOUT** type, in px.
 
 **Type:** [AvoidArea](arkts-arkui-window-avoidarea-i.md)
 
@@ -40,7 +40,7 @@ cutout: AvoidArea
 keyboard: AvoidArea
 ```
 
-表示[AvoidAreaType](arkts-arkui-window-avoidareatype-e.md)为TYPE_KEYBOARD类型的避让区域，单位为px。
+Avoidance area whose [AvoidAreaType](arkts-arkui-window-avoidareatype-e.md) is **TYPE_KEYBOARD** type, in px.
 
 **Type:** [AvoidArea](arkts-arkui-window-avoidarea-i.md)
 
@@ -58,7 +58,7 @@ keyboard: AvoidArea
 navigationIndicator: AvoidArea
 ```
 
-表示[AvoidAreaType](arkts-arkui-window-avoidareatype-e.md)为TYPE_NAVIGATION_INDICATOR类型的避让区域，单位为px。
+Avoidance area whose [AvoidAreaType](arkts-arkui-window-avoidareatype-e.md) is **TYPE_NAVIGATION_INDICATOR**type, in px.
 
 **Type:** [AvoidArea](arkts-arkui-window-avoidarea-i.md)
 
@@ -76,7 +76,7 @@ navigationIndicator: AvoidArea
 statusBar: AvoidArea
 ```
 
-表示[AvoidAreaType](arkts-arkui-window-avoidareatype-e.md)为TYPE_SYSTEM类型的避让区域，单位为px。
+Avoidance area whose [AvoidAreaType](arkts-arkui-window-avoidareatype-e.md) is **TYPE_SYSTEM** type, in px.
 
 **Type:** [AvoidArea](arkts-arkui-window-avoidarea-i.md)
 

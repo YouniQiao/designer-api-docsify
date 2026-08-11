@@ -12,7 +12,8 @@ import { bundleManager } from 'kits/@kit.AbilityKit';
 function getPluginBundlePathForSelf(pluginBundleName: string): string
 ```
 
-获取指定插件在当前[应用沙箱](../../../file-management/app-sandbox-directory.md)内的安装路径。
+Obtains the installation path of a specified plugin in the current  
+[application sandbox](../../../file-management/app-sandbox-directory.md).
 
 **Since:** 22
 
@@ -26,19 +27,19 @@ function getPluginBundlePathForSelf(pluginBundleName: string): string
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| pluginBundleName | string | Yes | 目标插件的包名。 |
+| pluginBundleName | string | Yes | Bundle name of the target plugin. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| string | 目标插件在当前应用沙箱内的安装路径。 |
+| string | Installation path of the target plugin in the current application sandbox. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 17700001 | The specified bundleName is not found. |
+| [17700001](../errorcode-bundle.md#17700001-bundle-name-does-not-exist) | The specified bundleName is not found. |
 
 ## Examples
 

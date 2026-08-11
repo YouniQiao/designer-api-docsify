@@ -1,7 +1,8 @@
 # AbilityLifecycleState
 
-Ability生命周期状态，该类型为枚举，可配合[AbilityDelegator](arkts-test-abilitydelegatorregistry-abilitydelegator-t.md)的  
-[getAbilityState(ability)](../../apis-ability-kit/arkts-apis/arkts-ability-abilitydelegator-i.md/arkts-ability-abilitydelegator-i.md#getabilitystate)方法返回不同ability生命周期。
+Enumerates the ability lifecycle states. It can be used in  
+[getAbilityState(ability)](../../apis-ability-kit/arkts-apis/arkts-ability-abilitydelegator-i.md/arkts-ability-abilitydelegator-i.md#getabilitystate) of  
+[AbilityDelegator](arkts-test-abilitydelegatorregistry-abilitydelegator-t.md) to return different ability lifecycle states.
 
 **Since:** 9
 
@@ -17,7 +18,7 @@ Ability生命周期状态，该类型为枚举，可配合[AbilityDelegator](ark
 UNINITIALIZED = 0
 ```
 
-表示Ability处于无效状态。
+The ability is in an invalid state.
 
 **Since:** 9
 
@@ -35,7 +36,7 @@ UNINITIALIZED = 0
 CREATE = 1
 ```
 
-表示Ability处于已创建状态。
+The ability is created.
 
 **Since:** 9
 
@@ -53,7 +54,7 @@ CREATE = 1
 FOREGROUND = 2
 ```
 
-表示Ability处于前台状态。
+The ability is running in the foreground.
 
 **Since:** 9
 
@@ -71,7 +72,7 @@ FOREGROUND = 2
 BACKGROUND = 3
 ```
 
-表示Ability处于后台状态。
+The ability is running in the background.
 
 **Since:** 9
 
@@ -89,7 +90,7 @@ BACKGROUND = 3
 DESTROY = 4
 ```
 
-表示Ability处于已销毁状态。
+The ability is destroyed.
 
 **Since:** 9
 

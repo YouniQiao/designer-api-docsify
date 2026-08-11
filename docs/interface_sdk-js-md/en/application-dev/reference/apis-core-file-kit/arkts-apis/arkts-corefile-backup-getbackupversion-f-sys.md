@@ -12,7 +12,7 @@ import { backup } from 'kits/@kit.CoreFileKit';
 function getBackupVersion(): string
 ```
 
-获取备份版本信息。
+Obtain the backupVersion.
 
 **Since:** 18
 
@@ -30,14 +30,14 @@ function getBackupVersion(): string
 
 | Type | Description |
 | --- | --- |
-| string | 返回备份版本信息。 |
+| string | Return the backupVersion. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 201 | Permission verification failed, usually the result returned by VerifyAccessToken. |
-| 202 | Permission verification failed, application which is not a system application uses system API. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed, usually the result returned by VerifyAccessToken. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed, application which is not a system application uses system API. |
 
 ## Examples
 

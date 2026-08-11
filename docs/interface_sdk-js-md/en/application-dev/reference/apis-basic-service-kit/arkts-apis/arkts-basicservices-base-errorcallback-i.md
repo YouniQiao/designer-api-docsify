@@ -1,8 +1,8 @@
 # ErrorCallback
 
-通用回调函数，携带错误参数，用于在接口调用失败时回传错误信息。具体错误码值由各接口定义，请参考对应接口的错误码说明。
+Defines a common callback that carries an error parameter.It is used to return error information when an asynchronous operation fails.The specific error code is defined by each API.For details, please refer to the error code description of the corresponding API.
 
-回调返回的信息为[BusinessError](arkts-basicservices-base-businesserror-i.md)类型的错误参数。
+The information returned by the callback is an error parameter of the [BusinessError](arkts-basicservices-base-businesserror-i.md) type.
 
 **Since:** 6
 
@@ -38,5 +38,5 @@ import { Callback, BusinessError, ErrorCallback, AsyncCallback } from 'kits/@kit
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| err | T | Yes | 接口调用失败的公共错误信息，类型默认为[BusinessError](arkts-basicservices-base-businesserror-i.md)，包含错误码（code）和可选附加数据（data）。 |
+| err | T | Yes | Common error information returned when the API fails to be called. The default type is **BusinessError**, including the error code (**code**) and optional additional data (**data**). |
 

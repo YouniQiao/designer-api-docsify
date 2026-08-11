@@ -41,8 +41,7 @@ This method queries usage information at the {@link #BY_OPTIMIZED} interval by d
 ## Examples
 
 ```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-import { bundleState } from '@kit.BackgroundTasksKit';
+import { BusinessError } from '@ohos.base';
 
 bundleState.queryBundleStateInfos(0, 20000000000000, (err: BusinessError ,
   res: bundleState.BundleActiveInfoResponse ) => {
@@ -96,8 +95,7 @@ This method queries usage information at the {@link #BY_OPTIMIZED} interval by d
 ## Examples
 
 ```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-import { bundleState } from '@kit.BackgroundTasksKit';
+import { BusinessError } from '@ohos.base';
 
 bundleState.queryBundleStateInfos(0, 20000000000000).then((res: bundleState.BundleActiveInfoResponse) => {
   console.info('BUNDLE_ACTIVE queryBundleStateInfos promise success.');

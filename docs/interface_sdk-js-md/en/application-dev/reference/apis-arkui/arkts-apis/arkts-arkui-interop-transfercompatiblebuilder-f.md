@@ -6,7 +6,7 @@
 export declare function transferCompatibleBuilder<T extends Function>(@Builder builder: T): ESValue
 ```
 
-在ArkTS-Sta中给ArkTS-Dyn的@BuilderParam传递@Builder函数（适用于非字面量更新场景）。
+Transfer compatible Builder.
 
 **Since:** 23
 
@@ -24,11 +24,11 @@ export declare function transferCompatibleBuilder<T extends Function>(@Builder b
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| builder | T | Yes | 自定义构建函数。 |
+| builder | T | Yes | the source builder |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| ESValue | 可互操作的自定义构建函数。 |
+| ESValue | the compatible builder |
 

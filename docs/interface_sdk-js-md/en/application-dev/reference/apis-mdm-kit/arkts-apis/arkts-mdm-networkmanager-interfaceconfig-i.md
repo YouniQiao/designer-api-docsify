@@ -1,6 +1,6 @@
 # InterfaceConfig
 
-以太网的网络接口配置。仅支持IPv4。
+Enumerates Ethernet network interface configurations. Only IPv4 is supported.
 
 **Since:** 23
 
@@ -22,7 +22,7 @@ import { networkManager } from 'kits/@kit.MDMKit';
 dnsServers?: string
 ```
 
-DNS服务地址，地址值范围0.0.0.0到255.255.255.255（DHCP模式无需配置），多地址间用“,”隔开。
+DNS service address. The value ranges from **0.0.0.0** to **255.255.255.255**. (This parameter is not required in DHCP mode.) Multiple addresses are separated by commas (,).
 
 **Type:** string
 
@@ -42,7 +42,7 @@ DNS服务地址，地址值范围0.0.0.0到255.255.255.255（DHCP模式无需配
 gateway?: string
 ```
 
-网关，地址值范围0.0.0.0到255.255.255.255（DHCP模式无需配置）。
+Gateway. The value ranges from **0.0.0.0** to **255.255.255.255**. (This parameter is not required in DHCP mode.)
 
 **Type:** string
 
@@ -62,7 +62,7 @@ gateway?: string
 ipAddress?: string
 ```
 
-静态IP地址，地址值范围0.0.0.0到255.255.255.255（DHCP模式无需配置）。
+Static IP address. The value ranges from **0.0.0.0** to **255.255.255.255**. (This parameter is not required in DHCP mode.)
 
 **Type:** string
 
@@ -82,7 +82,7 @@ ipAddress?: string
 ipSetMode: IpSetMode
 ```
 
-以太网连接配置模式。
+Ethernet connection configuration mode.
 
 **Type:** [IpSetMode](arkts-mdm-networkmanager-ipsetmode-e.md)
 
@@ -102,7 +102,7 @@ ipSetMode: IpSetMode
 netMask?: string
 ```
 
-子网掩码，地址值范围0.0.0.0到255.255.255.255（DHCP模式无需配置）。
+Subnet mask. The value ranges from **0.0.0.0** to **255.255.255.255**. (This parameter is not required in DHCP mode.)
 
 **Type:** string
 

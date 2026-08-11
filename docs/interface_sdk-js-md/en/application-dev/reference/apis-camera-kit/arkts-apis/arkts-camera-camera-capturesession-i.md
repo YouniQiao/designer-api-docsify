@@ -1,10 +1,7 @@
 # CaptureSession
 
-拍照会话类，保存一次相机运行所需要的所有资源[CameraInput](arkts-camera-camera-camerainput-i.md)、[CameraOutput](arkts-camera-camera-cameraoutput-i.md)，并向相机设备申请完成相机功能(录像，拍照)。
-
-> **说明：**
-> 
-> 从 API version 10开始支持，从API version 11开始废弃。
+**CaptureSession** implements a capture session, which saves all [CameraInput](arkts-camera-camera-camerainput-i.md) and   
+[CameraOutput](arkts-camera-camera-cameraoutput-i.md) instances required to run the camera and requests the camera to complete shooting or video recording.
 
 **Since:** 10
 
@@ -30,11 +27,7 @@ import { camera } from 'kits/@kit.CameraKit';
 addInput(cameraInput: CameraInput): void
 ```
 
-把[CameraInput](arkts-camera-camera-camerainput-i.md)加入到会话。
-
-> **说明：**
-> 
-> 从 API version 10开始支持，从API version 11开始废弃。
+Adds a [CameraInput](arkts-camera-camera-camerainput-i.md) instance to this session.
 
 **Since:** 10
 
@@ -52,14 +45,14 @@ addInput(cameraInput: CameraInput): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| cameraInput | [CameraInput](arkts-camera-camera-camerainput-i.md) | Yes | 需要添加的CameraInput实例。 |
+| cameraInput | [CameraInput](arkts-camera-camera-camerainput-i.md) | Yes | CameraInput instance to add. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 7400101 | Parameter missing or parameter type incorrect. |
-| 7400102 | Operation not allowed. |
+| [7400101](../errorcode-camera.md#7400101-invalid-parameter) | Parameter missing or parameter type incorrect. |
+| [7400102](../errorcode-camera.md#7400102-invalid-operation) | Operation not allowed. |
 
 ## addOutput
 
@@ -67,11 +60,7 @@ addInput(cameraInput: CameraInput): void
 addOutput(cameraOutput: CameraOutput): void
 ```
 
-把[CameraOutput](arkts-camera-camera-cameraoutput-i.md)加入到会话。
-
-> **说明：**
-> 
-> 从 API version 10开始支持，从API version 11开始废弃。
+Adds a [CameraOutput](arkts-camera-camera-cameraoutput-i.md) instance to this session.
 
 **Since:** 10
 
@@ -89,14 +78,14 @@ addOutput(cameraOutput: CameraOutput): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| cameraOutput | [CameraOutput](arkts-camera-camera-cameraoutput-i.md) | Yes | 需要添加的CameraOutput实例。 |
+| cameraOutput | [CameraOutput](arkts-camera-camera-cameraoutput-i.md) | Yes | CameraOutput instance to add. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 7400101 | Parameter missing or parameter type incorrect. |
-| 7400102 | Operation not allowed. |
+| [7400101](../errorcode-camera.md#7400101-invalid-parameter) | Parameter missing or parameter type incorrect. |
+| [7400102](../errorcode-camera.md#7400102-invalid-operation) | Operation not allowed. |
 
 ## beginConfig
 
@@ -104,11 +93,7 @@ addOutput(cameraOutput: CameraOutput): void
 beginConfig(): void
 ```
 
-开始配置会话。
-
-> **说明：**
-> 
-> 从 API version 10开始支持，从API version 11开始废弃。
+Starts configuration for the session.
 
 **Since:** 10
 
@@ -126,7 +111,7 @@ beginConfig(): void
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 7400105 | Session config locked. |
+| [7400105](../errorcode-camera.md#7400105-session-configuration-locked) | Session config locked. |
 
 ## commitConfig
 
@@ -134,11 +119,7 @@ beginConfig(): void
 commitConfig(callback: AsyncCallback<void>): void
 ```
 
-提交配置信息，通过注册回调函数获取结果。使用callback异步回调。
-
-> **说明：**
-> 
-> 从 API version 10开始支持，从API version 11开始废弃。
+Commits the configuration for this session. This API uses an asynchronous callback to return the result.
 
 **Since:** 10
 
@@ -156,14 +137,14 @@ commitConfig(callback: AsyncCallback<void>): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | 回调函数。当提交配置信息成功，err为undefined，否则为错误对象。错误码类型 [CameraErrorCode](arkts-camera-camera-cameraerrorcode-e.md) |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. If the configuration is successfully committed, **err** is **undefined**; otherwise, **err** is an error object with an error code defined in [CameraErrorCode](arkts-camera-camera-cameraerrorcode-e.md). |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 7400102 | Operation not allowed. |
-| 7400201 | Camera service fatal error. |
+| [7400102](../errorcode-camera.md#7400102-invalid-operation) | Operation not allowed. |
+| [7400201](../errorcode-camera.md#7400201-camera-service-error) | Camera service fatal error. |
 
 ## commitConfig
 
@@ -171,11 +152,7 @@ commitConfig(callback: AsyncCallback<void>): void
 commitConfig(): Promise<void>
 ```
 
-提交配置信息。使用Promise异步回调。
-
-> **说明：**
-> 
-> 从 API version 10开始支持，从API version 11开始废弃。
+Commits the configuration for this session. This API uses a promise to return the result.
 
 **Since:** 10
 
@@ -193,14 +170,14 @@ commitConfig(): Promise<void>
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise对象，无返回结果。 |
+| Promise&lt;void&gt; | Promise that returns no value. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 7400102 | Operation not allowed. |
-| 7400201 | Camera service fatal error. |
+| [7400102](../errorcode-camera.md#7400102-invalid-operation) | Operation not allowed. |
+| [7400201](../errorcode-camera.md#7400201-camera-service-error) | Camera service fatal error. |
 
 ## getActiveVideoStabilizationMode
 
@@ -208,11 +185,7 @@ commitConfig(): Promise<void>
 getActiveVideoStabilizationMode(): VideoStabilizationMode
 ```
 
-查询当前正在使用的视频防抖模式。
-
-> **说明：**
-> 
-> 从 API version 10开始支持，从API version 11开始废弃。
+Obtains the video stabilization mode in use.
 
 **Since:** 10
 
@@ -230,13 +203,13 @@ getActiveVideoStabilizationMode(): VideoStabilizationMode
 
 | Type | Description |
 | --- | --- |
-| [VideoStabilizationMode](arkts-camera-camera-videostabilizationmode-e.md) | 视频防抖是否正在使用。接口调用失败会返回相应错误码，错误码类型 [CameraErrorCode]{ |
+| [VideoStabilizationMode](arkts-camera-camera-videostabilizationmode-e.md) | Video stabilization mode obtained. If the operation fails, an error code defined in [CameraErrorCode]{ |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 7400103 | Session not config. |
+| [7400103](../errorcode-camera.md#7400103-session-not-configured) | Session not config. |
 
 ## getExposureBiasRange
 
@@ -244,11 +217,7 @@ getActiveVideoStabilizationMode(): VideoStabilizationMode
 getExposureBiasRange(): Array<number>
 ```
 
-查询曝光补偿范围。
-
-> **说明：**
-> 
-> 从 API version 10开始支持，从API version 11开始废弃。
+Obtains the exposure compensation values of the camera device.
 
 **Since:** 10
 
@@ -266,13 +235,13 @@ getExposureBiasRange(): Array<number>
 
 | Type | Description |
 | --- | --- |
-| Array&lt;number&gt; | 获取补偿范围的数组。接口调用失败会返回相应错误码，错误码类型[CameraErrorCode]{ |
+| Array&lt;number&gt; | Array of compensation values. If the operation fails, an error code defined in [CameraErrorCode]{ |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 7400103 | Session not config. |
+| [7400103](../errorcode-camera.md#7400103-session-not-configured) | Session not config. |
 
 ## getExposureMode
 
@@ -280,11 +249,7 @@ getExposureBiasRange(): Array<number>
 getExposureMode(): ExposureMode
 ```
 
-获取当前曝光模式。
-
-> **说明：**
-> 
-> 从 API version 10开始支持，从API version 11开始废弃。
+Obtains the exposure mode in use.
 
 **Since:** 10
 
@@ -302,13 +267,13 @@ getExposureMode(): ExposureMode
 
 | Type | Description |
 | --- | --- |
-| [ExposureMode](arkts-camera-camera-exposuremode-e.md) | 获取当前曝光模式。接口调用失败会返回相应错误码，错误码类型[CameraErrorCode]{ |
+| [ExposureMode](arkts-camera-camera-exposuremode-e.md) | Exposure mode obtained. If the operation fails, an error code defined in [CameraErrorCode]{ |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 7400103 | Session not config. |
+| [7400103](../errorcode-camera.md#7400103-session-not-configured) | Session not config. |
 
 ## getExposureValue
 
@@ -316,11 +281,7 @@ getExposureMode(): ExposureMode
 getExposureValue(): number
 ```
 
-查询当前的曝光值。
-
-> **说明：**
-> 
-> 从 API version 10开始支持，从API version 11开始废弃。
+Obtains the exposure value in use.
 
 **Since:** 10
 
@@ -338,13 +299,13 @@ getExposureValue(): number
 
 | Type | Description |
 | --- | --- |
-| number | 获取曝光值。曝光补偿存在步长，如步长为0.5。则设置1.2时，获取到实际生效曝光补偿为1.0。接口调用失败会返回相应错误码，错误码类型 [CameraErrorCode]{ |
+| number | Exposure value obtained. There is a step for EV. For example, if the step is 0.5 and this parameter is set to 1.2, the EV that takes effect is 1.0. If the operation fails, an error code defined in [CameraErrorCode]{ |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 7400103 | Session not config. |
+| [7400103](../errorcode-camera.md#7400103-session-not-configured) | Session not config. |
 
 ## getFlashMode
 
@@ -352,11 +313,7 @@ getExposureValue(): number
 getFlashMode(): FlashMode
 ```
 
-获取当前设备的闪光灯模式。
-
-> **说明：**
-> 
-> 从 API version 10开始支持，从API version 11开始废弃。
+Obtains the flash mode in use.
 
 **Since:** 10
 
@@ -374,13 +331,13 @@ getFlashMode(): FlashMode
 
 | Type | Description |
 | --- | --- |
-| [FlashMode](arkts-camera-camera-flashmode-e.md) | 获取当前设备的闪光灯模式。接口调用失败会返回相应错误码，错误码类型[CameraErrorCode]{ |
+| [FlashMode](arkts-camera-camera-flashmode-e.md) | Flash mode obtained. If the operation fails, an error code defined in [CameraErrorCode]{ |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 7400103 | Session not config. |
+| [7400103](../errorcode-camera.md#7400103-session-not-configured) | Session not config. |
 
 ## getFocalLength
 
@@ -388,11 +345,7 @@ getFlashMode(): FlashMode
 getFocalLength(): number
 ```
 
-查询焦距值。
-
-> **说明：**
-> 
-> 从 API version 10开始支持，从API version 11开始废弃。
+Obtains the focal length of the camera device.
 
 **Since:** 10
 
@@ -410,13 +363,13 @@ getFocalLength(): number
 
 | Type | Description |
 | --- | --- |
-| number | 用于获取当前焦距。接口调用失败会返回相应错误码，错误码类型[CameraErrorCode]{ |
+| number | Focal length obtained. If the operation fails, an error code defined in [CameraErrorCode]{ |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 7400103 | Session not config. |
+| [7400103](../errorcode-camera.md#7400103-session-not-configured) | Session not config. |
 
 ## getFocusMode
 
@@ -424,11 +377,7 @@ getFocalLength(): number
 getFocusMode(): FocusMode
 ```
 
-获取当前的对焦模式。
-
-> **说明：**
-> 
-> 从 API version 10开始支持，从API version 11开始废弃。
+Obtains the focus mode in use.
 
 **Since:** 10
 
@@ -446,13 +395,13 @@ getFocusMode(): FocusMode
 
 | Type | Description |
 | --- | --- |
-| [FocusMode](arkts-camera-camera-focusmode-e.md) | 获取当前设备的焦距模式。接口调用失败会返回相应错误码，错误码类型[CameraErrorCode]{ |
+| [FocusMode](arkts-camera-camera-focusmode-e.md) | Focus mode obtained. If the operation fails, an error code defined in [CameraErrorCode]{ |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 7400103 | Session not config. |
+| [7400103](../errorcode-camera.md#7400103-session-not-configured) | Session not config. |
 
 ## getFocusPoint
 
@@ -460,11 +409,7 @@ getFocusMode(): FocusMode
 getFocusPoint(): Point
 ```
 
-查询焦点。
-
-> **说明：**
-> 
-> 从 API version 10开始支持，从API version 11开始废弃。
+Obtains the focal point of the camera device.
 
 **Since:** 10
 
@@ -482,13 +427,13 @@ getFocusPoint(): Point
 
 | Type | Description |
 | --- | --- |
-| [Point](arkts-camera-camera-point-i.md) | 用于获取当前焦点。接口调用失败会返回相应错误码，错误码类型[CameraErrorCode]{ |
+| [Point](arkts-camera-camera-point-i.md) | Focal point obtained. If the operation fails, an error code defined in [CameraErrorCode]{ |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 7400103 | Session not config. |
+| [7400103](../errorcode-camera.md#7400103-session-not-configured) | Session not config. |
 
 ## getMeteringPoint
 
@@ -496,11 +441,7 @@ getFocusPoint(): Point
 getMeteringPoint(): Point
 ```
 
-查询曝光区域中心点。
-
-> **说明：**
-> 
-> 从 API version 10开始支持，从API version 11开始废弃。
+Obtains the metering point of the camera device.
 
 **Since:** 10
 
@@ -518,13 +459,13 @@ getMeteringPoint(): Point
 
 | Type | Description |
 | --- | --- |
-| [Point](arkts-camera-camera-point-i.md) | 获取当前曝光点。接口调用失败会返回相应错误码，错误码类型[CameraErrorCode]{ |
+| [Point](arkts-camera-camera-point-i.md) | Metering point obtained. If the operation fails, an error code defined in [CameraErrorCode]{ |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 7400103 | Session not config. |
+| [7400103](../errorcode-camera.md#7400103-session-not-configured) | Session not config. |
 
 ## getZoomRatio
 
@@ -532,11 +473,7 @@ getMeteringPoint(): Point
 getZoomRatio(): number
 ```
 
-获取当前的变焦比。
-
-> **说明：**
-> 
-> 从 API version 10开始支持，从API version 11开始废弃。
+Obtains the zoom ratio in use.
 
 **Since:** 10
 
@@ -554,13 +491,13 @@ getZoomRatio(): number
 
 | Type | Description |
 | --- | --- |
-| number | 获取当前的变焦比结果。接口调用失败会返回相应错误码，错误码类型[CameraErrorCode]{ |
+| number | Zoom ratio obtained. If the operation fails, an error code defined in [CameraErrorCode]{ |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 7400103 | Session not config. |
+| [7400103](../errorcode-camera.md#7400103-session-not-configured) | Session not config. |
 
 ## getZoomRatioRange
 
@@ -568,11 +505,7 @@ getZoomRatio(): number
 getZoomRatioRange(): Array<number>
 ```
 
-获取支持的变焦范围。
-
-> **说明：**
-> 
-> 从 API version 10开始支持，从API version 11开始废弃。
+Obtains the supported zoom ratio range.
 
 **Since:** 10
 
@@ -590,13 +523,13 @@ getZoomRatioRange(): Array<number>
 
 | Type | Description |
 | --- | --- |
-| Array&lt;number&gt; | 用于获取可变焦距比范围，返回的数组包括其最小值和最大值。接口调用失败会返回相应错误码，错误码类型 [CameraErrorCode]{ |
+| Array&lt;number&gt; | Array containing the minimum and maximum zoom ratios. If the operation fails, an error code defined in [CameraErrorCode]{ |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 7400103 | Session not config. |
+| [7400103](../errorcode-camera.md#7400103-session-not-configured) | Session not config. |
 
 ## hasFlash
 
@@ -604,11 +537,7 @@ getZoomRatioRange(): Array<number>
 hasFlash(): boolean
 ```
 
-检测是否有闪光灯。
-
-> **说明：**
-> 
-> 从 API version 10开始支持，从API version 11开始废弃。
+Checks whether the camera device has flash.
 
 **Since:** 10
 
@@ -626,13 +555,13 @@ hasFlash(): boolean
 
 | Type | Description |
 | --- | --- |
-| boolean | 设备支持闪光灯。true表示支持，false表示不支持。接口调用失败会返回相应错误码，错误码类型 [CameraErrorCode]{ |
+| boolean | Check result for whether the camera device has flash. **true** if it has flash, **false** otherwise. If the operation fails, an error code defined in [CameraErrorCode]{ |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 7400103 | Session not config. |
+| [7400103](../errorcode-camera.md#7400103-session-not-configured) | Session not config. |
 
 ## isExposureModeSupported
 
@@ -640,11 +569,7 @@ hasFlash(): boolean
 isExposureModeSupported(aeMode: ExposureMode): boolean
 ```
 
-查询曝光模式是否支持。
-
-> **说明：**
-> 
-> 从 API version 10开始支持，从API version 11开始废弃。
+Checks whether an exposure mode is supported.
 
 **Since:** 10
 
@@ -662,19 +587,19 @@ isExposureModeSupported(aeMode: ExposureMode): boolean
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| aeMode | [ExposureMode](arkts-camera-camera-exposuremode-e.md) | Yes | 曝光模式。 |
+| aeMode | [ExposureMode](arkts-camera-camera-exposuremode-e.md) | Yes | Exposure mode. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| boolean | 获取是否支持曝光模式。true表示支持，false表示不支持。接口调用失败会返回相应错误码，错误码类型 [CameraErrorCode]{ |
+| boolean | Check result for the support of the exposure mode. **true** if supported, **false** otherwise. If the operation fails, an error code defined in [CameraErrorCode]{ |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 7400103 | Session not config. |
+| [7400103](../errorcode-camera.md#7400103-session-not-configured) | Session not config. |
 
 ## isFlashModeSupported
 
@@ -682,11 +607,7 @@ isExposureModeSupported(aeMode: ExposureMode): boolean
 isFlashModeSupported(flashMode: FlashMode): boolean
 ```
 
-检测闪光灯模式是否支持。
-
-> **说明：**
-> 
-> 从 API version 10开始支持，从API version 11开始废弃。
+Checks whether the flash mode is supported.
 
 **Since:** 10
 
@@ -704,19 +625,19 @@ isFlashModeSupported(flashMode: FlashMode): boolean
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| flashMode | [FlashMode](arkts-camera-camera-flashmode-e.md) | Yes | 指定闪光灯模式。 |
+| flashMode | [FlashMode](arkts-camera-camera-flashmode-e.md) | Yes | Flash mode. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| boolean | 检测闪光灯模式是否支持。true表示支持，false表示不支持。接口调用失败会返回相应错误码，错误码类型 [CameraErrorCode]{ |
+| boolean | Check result for the support of the flash mode. **true** if supported, **false** otherwise. If the operation fails, an error code defined in [CameraErrorCode]{ |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 7400103 | Session not config. |
+| [7400103](../errorcode-camera.md#7400103-session-not-configured) | Session not config. |
 
 ## isFocusModeSupported
 
@@ -724,11 +645,7 @@ isFlashModeSupported(flashMode: FlashMode): boolean
 isFocusModeSupported(afMode: FocusMode): boolean
 ```
 
-查询对焦模式是否支持。
-
-> **说明：**
-> 
-> 从 API version 10开始支持，从API version 11开始废弃。
+Checks whether a focus mode is supported.
 
 **Since:** 10
 
@@ -746,19 +663,19 @@ isFocusModeSupported(afMode: FocusMode): boolean
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| afMode | [FocusMode](arkts-camera-camera-focusmode-e.md) | Yes | 指定的焦距模式。 |
+| afMode | [FocusMode](arkts-camera-camera-focusmode-e.md) | Yes | Focus mode. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| boolean | 检测对焦模式是否支持。true表示支持，false表示不支持。接口调用失败会返回相应错误码，错误码类型 [CameraErrorCode]{ |
+| boolean | Check result for the support of the focus mode. **true** if supported, **false** otherwise. If the operation fails, an error code defined in [CameraErrorCode]{ |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 7400103 | Session not config. |
+| [7400103](../errorcode-camera.md#7400103-session-not-configured) | Session not config. |
 
 ## isVideoStabilizationModeSupported
 
@@ -766,11 +683,7 @@ isFocusModeSupported(afMode: FocusMode): boolean
 isVideoStabilizationModeSupported(vsMode: VideoStabilizationMode): boolean
 ```
 
-查询是否支持指定的视频防抖模式。
-
-> **说明：**
-> 
-> 从 API version 10开始支持，从API version 11开始废弃。
+Checks whether a video stabilization mode is supported.
 
 **Since:** 10
 
@@ -788,19 +701,19 @@ isVideoStabilizationModeSupported(vsMode: VideoStabilizationMode): boolean
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| vsMode | [VideoStabilizationMode](arkts-camera-camera-videostabilizationmode-e.md) | Yes | 视频防抖模式。传参为null或者undefined，作为0处理，超级防抖模式关闭。 |
+| vsMode | [VideoStabilizationMode](arkts-camera-camera-videostabilizationmode-e.md) | Yes | Video stabilization mode. If the input parameter is null or undefined, it is treated as 0 and video stabilization is disabled. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| boolean | 返回视频防抖模式是否支持。true表示支持，false表示不支持。接口调用失败会返回相应错误码，错误码类型 [CameraErrorCode]{ |
+| boolean | Check result for the support of the video stabilization mode. **true** if supported, **false** otherwise. If the operation fails, an error code defined in [CameraErrorCode]{ |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 7400103 | Session not config. |
+| [7400103](../errorcode-camera.md#7400103-session-not-configured) | Session not config. |
 
 ## off('focusStateChange')
 
@@ -808,11 +721,7 @@ isVideoStabilizationModeSupported(vsMode: VideoStabilizationMode): boolean
 off(type: 'focusStateChange', callback?: AsyncCallback<FocusState>): void
 ```
 
-注销监听相机聚焦的状态变化。
-
-> **说明：**
-> 
-> 从 API version 10开始支持，从API version 11开始废弃。
+Unsubscribes from focus state change events.
 
 **Since:** 10
 
@@ -830,8 +739,8 @@ off(type: 'focusStateChange', callback?: AsyncCallback<FocusState>): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'focusStateChange' | Yes | 监听事件，固定为'focusStateChange'，session 创建成功可监听。 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;FocusState&gt; | No | 回调函数，如果指定参数则取消对应callback（callback对象不可是匿名函数），否则取消所有callback。 |
+| type | 'focusStateChange' | Yes | Event type. The value is fixed at **'focusStateChange'**. The event can be listened for when a session is created. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;FocusState&gt; | No | Callback used to return the result. If this parameter is specified, the subscription to the specified event with the specified callback is canceled. (The callback object cannot be an anonymous function.) Otherwise, the subscriptions to the specified event with all the callbacks are canceled. |
 
 ## off('error')
 
@@ -839,11 +748,7 @@ off(type: 'focusStateChange', callback?: AsyncCallback<FocusState>): void
 off(type: 'error', callback?: ErrorCallback): void
 ```
 
-注销监听拍照会话的错误事件，通过注册回调函数获取结果。
-
-> **说明：**
-> 
-> 从 API version 10开始支持，从API version 11开始废弃。
+Unsubscribes from CaptureSession error events. This API uses a callback to return the result.
 
 **Since:** 10
 
@@ -861,8 +766,8 @@ off(type: 'error', callback?: ErrorCallback): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'error' | Yes | 监听事件，固定为'error'，session创建成功之后可监听该接口。 |
-| callback | [ErrorCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-errorcallback-i.md) | No | 回调函数，如果指定参数则取消对应callback（callback对象不可是匿名函数），否则取消所有callback。 |
+| type | 'error' | Yes | Event type. The value is fixed at **'error'**. The event can be listened for when a session is created. |
+| callback | [ErrorCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-errorcallback-i.md) | No | Callback used to return the result. If this parameter is specified, the subscription to the specified event with the specified callback is canceled. (The callback object cannot be an anonymous function.) Otherwise, the subscriptions to the specified event with all the callbacks are canceled. |
 
 ## on('focusStateChange')
 
@@ -870,13 +775,11 @@ off(type: 'error', callback?: ErrorCallback): void
 on(type: 'focusStateChange', callback: AsyncCallback<FocusState>): void
 ```
 
-监听相机聚焦的状态变化，通过注册回调函数获取结果。使用callback异步回调。
+Subscribes to focus state change events. This API uses an asynchronous callback to return the result.
 
-> **说明：**
+> **NOTE：**
 > 
-> 从 API version 10开始支持，从API version 11开始废弃。
-> 
-> 当前注册监听接口，不支持在on监听的回调方法里，调用off注销回调。
+> Currently, you cannot use **off()** to unregister the callback in the callback method of **on()**.
 
 **Since:** 10
 
@@ -894,8 +797,8 @@ on(type: 'focusStateChange', callback: AsyncCallback<FocusState>): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'focusStateChange' | Yes | 监听事件，固定为'focusStateChange'，session 创建成功可监听。仅当自动对焦模式时,且相机对焦状态发生改变时可触发该事件。 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;FocusState&gt; | Yes | 回调函数，用于获取当前对焦状态。 |
+| type | 'focusStateChange' | Yes | Event type. The value is fixed at **'focusStateChange'**. The event can be listened for when a session is created. This event is triggered only when the camera focus state changes in auto focus mode. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;FocusState&gt; | Yes | Callback used to return the focus state change. |
 
 ## on('error')
 
@@ -903,13 +806,11 @@ on(type: 'focusStateChange', callback: AsyncCallback<FocusState>): void
 on(type: 'error', callback: ErrorCallback): void
 ```
 
-监听拍照会话的错误事件，通过注册回调函数获取结果。使用callback异步回调。
+Subscribes to CaptureSession error events. This API uses an asynchronous callback to return the result.
 
-> **说明：**
+> **NOTE：**
 > 
-> 当前注册监听接口，不支持在on监听的回调方法里，调用off注销回调。
-> 
-> 从 API version 10开始支持，从API version 11开始废弃。
+> Currently, you cannot use **off()** to unregister the callback in the callback method of **on()**.
 
 **Since:** 10
 
@@ -927,8 +828,8 @@ on(type: 'error', callback: ErrorCallback): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'error' | Yes | 监听事件，固定为'error'，session创建成功之后可监听该接口。session调用相关接口出现错误时会触发该事件，比如调用 [beginConfig](arkts-camera-camera-capturesession-i.md#beginconfig)， [commitConfig](arkts-camera-camera-capturesession-i.md#commitconfig)，[addInput](arkts-camera-camera-capturesession-i.md#addinput)等接 口发生错误时返回错误信息。 |
-| callback | [ErrorCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-errorcallback-i.md) | Yes | 回调函数，用于获取错误信息。返回错误码，错误码类型[CameraErrorCode](arkts-camera-camera-cameraerrorcode-e.md)。 |
+| type | 'error' | Yes | Event type. The value is fixed at **'error'**. The event can be listened for when a session is created. This event is triggered and the error message is returned when an error occurs during the calling of a session-related API such as [beginConfig](arkts-camera-camera-capturesession-i.md#beginconfig), [commitConfig](arkts-camera-camera-capturesession-i.md#commitconfig), and [addInput](arkts-camera-camera-capturesession-i.md#addinput). |
+| callback | [ErrorCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-errorcallback-i.md) | Yes | Callback used to return an error code defined in [CameraErrorCode](arkts-camera-camera-cameraerrorcode-e.md). |
 
 ## release
 
@@ -936,11 +837,7 @@ on(type: 'error', callback: ErrorCallback): void
 release(callback: AsyncCallback<void>): void
 ```
 
-释放会话资源，通过注册回调函数获取结果。使用callback异步回调。
-
-> **说明：**
-> 
-> 从 API version 10开始支持，从API version 11开始废弃。
+Releases this session. This API uses an asynchronous callback to return the result.
 
 **Since:** 10
 
@@ -958,13 +855,13 @@ release(callback: AsyncCallback<void>): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | 回调函数。当释放会话资源成功，err为undefined，否则为错误对象。错误码类型 [CameraErrorCode](arkts-camera-camera-cameraerrorcode-e.md)。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. If the session is released successfully, **err** is **undefined**; otherwise, **err** is an error object with an error code defined in [CameraErrorCode](arkts-camera-camera-cameraerrorcode-e.md). |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 7400201 | Camera service fatal error. |
+| [7400201](../errorcode-camera.md#7400201-camera-service-error) | Camera service fatal error. |
 
 ## release
 
@@ -972,11 +869,7 @@ release(callback: AsyncCallback<void>): void
 release(): Promise<void>
 ```
 
-释放会话资源。使用Promise异步回调。
-
-> **说明：**
-> 
-> 从 API version 10开始支持，从API version 11开始废弃。
+Releases this session. This API uses a promise to return the result.
 
 **Since:** 10
 
@@ -994,13 +887,13 @@ release(): Promise<void>
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise对象，无返回结果。 |
+| Promise&lt;void&gt; | Promise that returns no value. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 7400201 | Camera service fatal error. |
+| [7400201](../errorcode-camera.md#7400201-camera-service-error) | Camera service fatal error. |
 
 ## removeInput
 
@@ -1008,11 +901,7 @@ release(): Promise<void>
 removeInput(cameraInput: CameraInput): void
 ```
 
-移除[CameraInput](arkts-camera-camera-camerainput-i.md)。
-
-> **说明：**
-> 
-> 从 API version 10开始支持，从API version 11开始废弃。
+Removes a [CameraInput](arkts-camera-camera-camerainput-i.md) instance from this session.
 
 **Since:** 10
 
@@ -1030,14 +919,14 @@ removeInput(cameraInput: CameraInput): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| cameraInput | [CameraInput](arkts-camera-camera-camerainput-i.md) | Yes | 需要移除的CameraInput实例。 |
+| cameraInput | [CameraInput](arkts-camera-camera-camerainput-i.md) | Yes | CameraInput instance to remove. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 7400101 | Parameter missing or parameter type incorrect. |
-| 7400102 | Operation not allowed. |
+| [7400101](../errorcode-camera.md#7400101-invalid-parameter) | Parameter missing or parameter type incorrect. |
+| [7400102](../errorcode-camera.md#7400102-invalid-operation) | Operation not allowed. |
 
 ## removeOutput
 
@@ -1045,11 +934,7 @@ removeInput(cameraInput: CameraInput): void
 removeOutput(cameraOutput: CameraOutput): void
 ```
 
-从会话中移除[CameraOutput](arkts-camera-camera-cameraoutput-i.md)。
-
-> **说明：**
-> 
-> 从 API version 10开始支持，从API version 11开始废弃。
+Removes a [CameraOutput](arkts-camera-camera-cameraoutput-i.md) instance from this session.
 
 **Since:** 10
 
@@ -1067,14 +952,14 @@ removeOutput(cameraOutput: CameraOutput): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| cameraOutput | [CameraOutput](arkts-camera-camera-cameraoutput-i.md) | Yes | 需要移除的CameraOutput实例。 |
+| cameraOutput | [CameraOutput](arkts-camera-camera-cameraoutput-i.md) | Yes | CameraOutput instance to remove. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 7400101 | Parameter missing or parameter type incorrect. |
-| 7400102 | Operation not allowed. |
+| [7400101](../errorcode-camera.md#7400101-invalid-parameter) | Parameter missing or parameter type incorrect. |
+| [7400102](../errorcode-camera.md#7400102-invalid-operation) | Operation not allowed. |
 
 ## setExposureBias
 
@@ -1082,13 +967,10 @@ removeOutput(cameraOutput: CameraOutput): void
 setExposureBias(exposureBias: number): void
 ```
 
-设置曝光补偿，曝光补偿值（EV）。
+Sets an exposure compensation value (EV).
 
-进行设置之前，建议先通过方法[getExposureBiasRange](arkts-camera-camera-capturesession-i.md#getexposurebiasrange)查询支持的范围。
-
-> **说明：**
-> 
-> 从 API version 10开始支持，从API version 11开始废弃。
+Before the setting, you are advised to use   
+[getExposureBiasRange](arkts-camera-camera-capturesession-i.md#getexposurebiasrange) to obtain the supported values.
 
 **Since:** 10
 
@@ -1106,13 +988,13 @@ setExposureBias(exposureBias: number): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| exposureBias | number | Yes | 曝光补偿，[getExposureBiasRange](arkts-camera-camera-autoexposurequery-i.md#getexposurebiasrange) 查询支持的范围，如果设置超过支持范围的值，自动匹配到就近临界点。曝光补偿存在步长，如步长为0.5。则设置1.2时，获取到实际生效曝光补偿为1.0。接口调用失败会返回相应错误码，错误码类型 [CameraErrorCode](arkts-camera-camera-cameraerrorcode-e.md)。传参为null或者undefined，作为0处理，曝光补偿设置0。 |
+| exposureBias | number | Yes | EV. The supported EV range can be obtained by calling [getExposureBiasRange](arkts-camera-camera-autoexposurequery-i.md#getexposurebiasrange). If the value passed is not within the supported range, the nearest critical point is used. There is a step for EV. For example, if the step is 0.5 and this parameter is set to 1.2, the EV that takes effect is 1.0. If the operation fails, an error code defined in [CameraErrorCode](arkts-camera-camera-cameraerrorcode-e.md) is returned. If the input parameter is null or undefined, the EV is set to 0. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 7400103 | Session not config. |
+| [7400103](../errorcode-camera.md#7400103-session-not-configured) | Session not config. |
 
 ## setExposureMode
 
@@ -1120,12 +1002,8 @@ setExposureBias(exposureBias: number): void
 setExposureMode(aeMode: ExposureMode): void
 ```
 
-设置曝光模式。进行设置之前，需要先检查设备是否支持指定的曝光模式，可使用方法  
-[isExposureModeSupported](arkts-camera-camera-capturesession-i.md#isexposuremodesupported)。
-
-> **说明：**
-> 
-> 从 API version 10开始支持，从API version 11开始废弃。
+Sets an exposure mode. Before the setting, call   
+[isExposureModeSupported](arkts-camera-camera-capturesession-i.md#isexposuremodesupported) to check whether the target exposure mode is supported.
 
 **Since:** 10
 
@@ -1143,13 +1021,13 @@ setExposureMode(aeMode: ExposureMode): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| aeMode | [ExposureMode](arkts-camera-camera-exposuremode-e.md) | Yes | 曝光模式。 |
+| aeMode | [ExposureMode](arkts-camera-camera-exposuremode-e.md) | Yes | Exposure mode. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 7400103 | Session not config. |
+| [7400103](../errorcode-camera.md#7400103-session-not-configured) | Session not config. |
 
 ## setFlashMode
 
@@ -1157,15 +1035,11 @@ setExposureMode(aeMode: ExposureMode): void
 setFlashMode(flashMode: FlashMode): void
 ```
 
-设置闪光灯模式。
+Sets a flash mode.
 
-进行设置之前，需要先检查：
+Before the setting, do the following checks:
 
-1. 设备是否支持闪光灯，可使用方法[hasFlash](arkts-camera-camera-capturesession-i.md#hasflash)。2. 设备是否支持指定的闪光灯模式，可使用方法[isFlashModeSupported](arkts-camera-camera-capturesession-i.md#isflashmodesupported)。
-
-> **说明：**
-> 
-> 从 API version 10开始支持，从API version 11开始废弃。
+1. Use [hasFlash](arkts-camera-camera-capturesession-i.md#hasflash) to check whether the camera device has flash.2. Use [isFlashModeSupported](arkts-camera-camera-capturesession-i.md#isflashmodesupported) to check whether the camera device supports the flash mode.
 
 **Since:** 10
 
@@ -1183,13 +1057,13 @@ setFlashMode(flashMode: FlashMode): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| flashMode | [FlashMode](arkts-camera-camera-flashmode-e.md) | Yes | 指定闪光灯模式。 |
+| flashMode | [FlashMode](arkts-camera-camera-flashmode-e.md) | Yes | Flash mode. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 7400103 | Session not config. |
+| [7400103](../errorcode-camera.md#7400103-session-not-configured) | Session not config. |
 
 ## setFocusMode
 
@@ -1197,13 +1071,9 @@ setFlashMode(flashMode: FlashMode): void
 setFocusMode(afMode: FocusMode): void
 ```
 
-设置对焦模式。
+Sets a focus mode.
 
-进行设置之前，需要先检查设备是否支持指定的焦距模式，可使用方法[isFocusModeSupported](arkts-camera-camera-capturesession-i.md#isfocusmodesupported)。
-
-> **说明：**
-> 
-> 从 API version 10开始支持，从API version 11开始废弃。
+Before the setting, call [isFocusModeSupported](arkts-camera-camera-capturesession-i.md#isfocusmodesupported) to check whether the focus mode is supported.
 
 **Since:** 10
 
@@ -1221,13 +1091,13 @@ setFocusMode(afMode: FocusMode): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| afMode | [FocusMode](arkts-camera-camera-focusmode-e.md) | Yes | 指定的焦距模式。 |
+| afMode | [FocusMode](arkts-camera-camera-focusmode-e.md) | Yes | Focus mode. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 7400103 | Session not config. |
+| [7400103](../errorcode-camera.md#7400103-session-not-configured) | Session not config. |
 
 ## setFocusPoint
 
@@ -1235,13 +1105,9 @@ setFocusMode(afMode: FocusMode): void
 setFocusPoint(point: Point): void
 ```
 
-设置焦点，焦点应在0-1坐标系内，该坐标系左上角为{0，0}，右下角为{1，1}。
+Sets the focal point. The focal point must be in the coordinate system (0-1), where the top-left corner is {0, 0}and the bottom-right corner is {1, 1}.
 
-此坐标系是以设备充电口在右侧时的横向设备方向为基准的，例如应用的预览界面布局以设备充电口在下侧时的竖向方向为基准，布局宽高为{w，h}，且触碰点为{x，y}，则转换后的坐标点为{y/h，1-x/w}。
-
-> **说明：**
-> 
-> 从 API version 10开始支持，从API version 11开始废弃。
+The coordinate system is based on the horizontal device direction with the device's charging port on the right. If the layout of the preview screen of an application is based on the vertical direction with the charging port on the lower side, the layout width and height are {w, h}, and the touch point is {x, y}, then the coordinate point after conversion is {y/h, 1-x/w}.
 
 **Since:** 10
 
@@ -1259,13 +1125,13 @@ setFocusPoint(point: Point): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| point | [Point](arkts-camera-camera-point-i.md) | Yes | 焦点。x,y设置范围应在[0,1]之内，超过范围，如果小于0设置0，大于1设置1。 |
+| point | [Point](arkts-camera-camera-point-i.md) | Yes | Focal point. The value range of x and y must be within [0,1]. If a value less than 0 is passed, the value **0** is used. If a value greater than **1** is passed, the value **1** is used. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 7400103 | Session not config. |
+| [7400103](../errorcode-camera.md#7400103-session-not-configured) | Session not config. |
 
 ## setMeteringPoint
 
@@ -1273,13 +1139,9 @@ setFocusPoint(point: Point): void
 setMeteringPoint(point: Point): void
 ```
 
-设置曝光区域中心点，曝光点应位于0-1坐标系内，该坐标系左上角为{0，0}，右下角为{1，1}。
+Sets the metering point, which is the center point of the metering rectangle. The metering point must be in the coordinate system (0-1), where the top-left corner is {0, 0} and the bottom-right corner is {1, 1}.
 
-此坐标系是以设备充电口在右侧时的横向设备方向为基准的，例如应用的预览界面布局以设备充电口在下侧时的竖向方向为基准，布局宽高为{w，h}，且触碰点为{x，y}，则转换后的坐标点为{y/h，1-x/w}。
-
-> **说明：**
-> 
-> 从 API version 10开始支持，从API version 11开始废弃。
+The coordinate system is based on the horizontal device direction with the device's charging port on the right. If the layout of the preview screen of an application is based on the vertical direction with the charging port on the lower side, the layout width and height are {w, h}, and the touch point is {x, y}, then the coordinate point after conversion is {y/h, 1-x/w}.
 
 **Since:** 10
 
@@ -1297,13 +1159,13 @@ setMeteringPoint(point: Point): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| point | [Point](arkts-camera-camera-point-i.md) | Yes | 曝光点，x,y设置范围应在[0,1]之内，超过范围，如果小于0设置0，大于1设置1。 |
+| point | [Point](arkts-camera-camera-point-i.md) | Yes | Metering point. The value range of x and y must be within [0,1]. If a value less than 0 is passed, the value **0** is used. If a value greater than **1** is passed, the value **1** is used. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 7400103 | Session not config. |
+| [7400103](../errorcode-camera.md#7400103-session-not-configured) | Session not config. |
 
 ## setVideoStabilizationMode
 
@@ -1311,12 +1173,8 @@ setMeteringPoint(point: Point): void
 setVideoStabilizationMode(mode: VideoStabilizationMode): void
 ```
 
-设置视频防抖模式。需要先检查设备是否支持对应的防抖模式，可以通过  
-[isVideoStabilizationModeSupported](arkts-camera-camera-capturesession-i.md#isvideostabilizationmodesupported)方法判断所设置的模式是否支持。
-
-> **说明：**
-> 
-> 从 API version 10开始支持，从API version 11开始废弃。
+Sets a video stabilization mode. Before the setting, call   
+[isVideoStabilizationModeSupported](arkts-camera-camera-capturesession-i.md#isvideostabilizationmodesupported) to check whether the target video stabilization mode is supported.
 
 **Since:** 10
 
@@ -1334,13 +1192,13 @@ setVideoStabilizationMode(mode: VideoStabilizationMode): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| mode | [VideoStabilizationMode](arkts-camera-camera-videostabilizationmode-e.md) | Yes | 需要设置的视频防抖模式。传参为null或者undefined，作为0处理，超级防抖模式关闭。 |
+| mode | [VideoStabilizationMode](arkts-camera-camera-videostabilizationmode-e.md) | Yes | Video stabilization mode. If the input parameter is null or undefined, it is treated as 0 and video stabilization is disabled. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 7400103 | Session not config. |
+| [7400103](../errorcode-camera.md#7400103-session-not-configured) | Session not config. |
 
 ## setZoomRatio
 
@@ -1348,11 +1206,7 @@ setVideoStabilizationMode(mode: VideoStabilizationMode): void
 setZoomRatio(zoomRatio: number): void
 ```
 
-设置变焦比，变焦精度最高为小数点后两位，如果设置超过支持的精度范围，则只保留精度范围内数值。
-
-> **说明：**
-> 
-> 从 API version 10开始支持，从API version 11开始废弃。
+Sets a zoom ratio, with a maximum precision of two decimal places.
 
 **Since:** 10
 
@@ -1370,13 +1224,13 @@ setZoomRatio(zoomRatio: number): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| zoomRatio | number | Yes | 可变焦距比，通过[getZoomRatioRange](arkts-camera-camera-zoomquery-i.md#getzoomratiorange)获取支持的变焦范围，如果设置 超过支持范围的值，则只保留精度范围内数值。传参为null或者undefined，作为0处理，变焦设置最小值。 |
+| zoomRatio | number | Yes | Zoom ratio. The supported zoom ratio range can be obtained by calling [getZoomRatioRange](arkts-camera-camera-zoomquery-i.md#getzoomratiorange). If the value passed in is not within the supported range, the value within the precision range is retained. If the input parameter is null or undefined, it is treated as 0 and the minimum zoom ratio is used. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 7400103 | Session not config. |
+| [7400103](../errorcode-camera.md#7400103-session-not-configured) | Session not config. |
 
 ## start
 
@@ -1384,11 +1238,7 @@ setZoomRatio(zoomRatio: number): void
 start(callback: AsyncCallback<void>): void
 ```
 
-开始会话工作，通过注册回调函数获取结果。使用callback异步回调。
-
-> **说明：**
-> 
-> 从 API version 10开始支持，从API version 11开始废弃。
+Starts this session. This API uses an asynchronous callback to return the result.
 
 **Since:** 10
 
@@ -1406,14 +1256,14 @@ start(callback: AsyncCallback<void>): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | 回调函数。当开始会话工作成功，err为undefined，否则为错误对象。错误码类型 [CameraErrorCode](arkts-camera-camera-cameraerrorcode-e.md)。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. If the session starts successfully, **err** is **undefined**; otherwise, **err** is an error object with an error code defined in [CameraErrorCode](arkts-camera-camera-cameraerrorcode-e.md). |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 7400103 | Session not config. |
-| 7400201 | Camera service fatal error. |
+| [7400103](../errorcode-camera.md#7400103-session-not-configured) | Session not config. |
+| [7400201](../errorcode-camera.md#7400201-camera-service-error) | Camera service fatal error. |
 
 ## start
 
@@ -1421,11 +1271,7 @@ start(callback: AsyncCallback<void>): void
 start(): Promise<void>
 ```
 
-开始会话工作。使用Promise异步回调。
-
-> **说明：**
-> 
-> 从 API version 10开始支持，从API version 11开始废弃。
+Starts this session. This API uses a promise to return the result.
 
 **Since:** 10
 
@@ -1443,14 +1289,14 @@ start(): Promise<void>
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise对象，无返回结果。 |
+| Promise&lt;void&gt; | Promise that returns no value. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 7400103 | Session not config. |
-| 7400201 | Camera service fatal error. |
+| [7400103](../errorcode-camera.md#7400103-session-not-configured) | Session not config. |
+| [7400201](../errorcode-camera.md#7400201-camera-service-error) | Camera service fatal error. |
 
 ## stop
 
@@ -1458,11 +1304,7 @@ start(): Promise<void>
 stop(callback: AsyncCallback<void>): void
 ```
 
-停止会话工作，通过注册回调函数获取结果。使用callback异步回调。
-
-> **说明：**
-> 
-> 从 API version 10开始支持，从API version 11开始废弃。
+Stops this session. This API uses an asynchronous callback to return the result.
 
 **Since:** 10
 
@@ -1480,13 +1322,13 @@ stop(callback: AsyncCallback<void>): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | 回调函数。当停止会话工作成功，err为undefined，否则为错误对象。错误码类型 [CameraErrorCode](arkts-camera-camera-cameraerrorcode-e.md)。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. If the session stops successfully, **err** is **undefined**; otherwise, **err** is an error object with an error code defined in [CameraErrorCode](arkts-camera-camera-cameraerrorcode-e.md). |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 7400201 | Camera service fatal error. |
+| [7400201](../errorcode-camera.md#7400201-camera-service-error) | Camera service fatal error. |
 
 ## stop
 
@@ -1494,11 +1336,7 @@ stop(callback: AsyncCallback<void>): void
 stop(): Promise<void>
 ```
 
-停止会话工作。使用Promise异步回调。
-
-> **说明：**
-> 
-> 从 API version 10开始支持，从API version 11开始废弃。
+Stops this session. This API uses a promise to return the result.
 
 **Since:** 10
 
@@ -1516,11 +1354,11 @@ stop(): Promise<void>
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise对象，无返回结果。 |
+| Promise&lt;void&gt; | Promise that returns no value. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 7400201 | Camera service fatal error. |
+| [7400201](../errorcode-camera.md#7400201-camera-service-error) | Camera service fatal error. |
 

@@ -1,6 +1,6 @@
 # Direction
 
-用于表示设备屏幕方向。
+Enumerates the screen directions.
 
 **Since:** 6
 
@@ -16,7 +16,7 @@
 DIRECTION_VERTICAL = 0
 ```
 
-竖屏。
+Portrait
 
 **Since:** 6
 
@@ -34,7 +34,7 @@ DIRECTION_VERTICAL = 0
 DIRECTION_HORIZONTAL = 1
 ```
 
-横屏。
+Landscape
 
 **Since:** 6
 

@@ -10,12 +10,6 @@
 
 **系统能力：** SystemCapability.Multimedia.AVSession.Core
 
-## 导入模块
-
-```TypeScript
-import { avSession } from 'kits/@kit.AVSessionKit';
-```
-
 ## activeItemId
 
 ```TypeScript
@@ -222,7 +216,7 @@ state?: PlaybackState
 
 播放状态。
 
-**类型：** [PlaybackState](arkts-avsession-avsession-playbackstate-e.md)
+**类型：** [PlaybackState](arkts-avsession-avmusictemplate-playbackstate-e.md)
 
 **起始版本：** 10
 

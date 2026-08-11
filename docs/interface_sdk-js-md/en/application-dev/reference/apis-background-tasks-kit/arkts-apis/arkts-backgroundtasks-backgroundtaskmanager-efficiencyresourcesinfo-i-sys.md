@@ -1,6 +1,6 @@
 # EfficiencyResourcesInfo (System API)
 
-能效资源信息。
+Defines the efficiency resource information.
 
 **Since:** 20
 
@@ -24,7 +24,7 @@ import { backgroundTaskManager } from 'kits/@kit.BackgroundTasksKit';
 cpuLevel?: EfficiencyResourcesCpuLevel
 ```
 
-指定CPU级别，能效资源类型resourceTypes为CPU时该参数用于指定CPU资源大小，系统会在负载空闲时间（例如灭屏场景）分配指定的CPU资源给应用。
+CPU level. If **resourceTypes** is set to **CPU**, this parameter specifies the CPU resource size. The system allocates the specified CPU resources to the application during the idle time of load (for example, when the screen is off).
 
 **Type:** [EfficiencyResourcesCpuLevel](arkts-backgroundtasks-backgroundtaskmanager-efficiencyresourcescpulevel-e-sys.md)
 
@@ -46,7 +46,7 @@ cpuLevel?: EfficiencyResourcesCpuLevel
 isForProcess: boolean
 ```
 
-进程或应用申请，取值为true表示进程申请。取值为false表示应用申请。
+Whether the resource is requested by a process or an application. The value **true** indicates that the resource is requested by a process. The value **false** indicates that the resource is requested by an application.
 
 **Type:** boolean
 
@@ -66,7 +66,7 @@ isForProcess: boolean
 isPersistent: boolean
 ```
 
-是否永久持有资源，默认为false。取值为true表示永久持有。取值为false表示有限时间内持有。
+Whether the resource is permanently held. The default value is **false**. The value **true** indicates the resource is permanently held. The value **false** indicates that the resource is held within a limited time.
 
 **Type:** boolean
 
@@ -86,7 +86,7 @@ isPersistent: boolean
 pid: int
 ```
 
-应用进程的PID。
+Application PID.
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
@@ -106,7 +106,7 @@ pid: int
 reason: string
 ```
 
-申请资源原因。
+Reason for requesting the resource.
 
 **Type:** string
 
@@ -126,7 +126,7 @@ reason: string
 resourceTypes: int
 ```
 
-能效资源类型。
+Enumerates the efficiency resource types.
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
@@ -146,7 +146,7 @@ resourceTypes: int
 timeout: int
 ```
 
-超时时间，单位：ms。
+Timeout, in milliseconds.
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
@@ -166,7 +166,7 @@ timeout: int
 uid: int
 ```
 
-应用的UID。
+Application UID.
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 

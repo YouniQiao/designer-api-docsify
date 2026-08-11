@@ -1,6 +1,6 @@
 # AudioPlaybackCaptureConfig
 
-音频内录的配置信息。
+Defines configuration for capturing played audio.
 
 **Since:** 10
 
@@ -26,7 +26,7 @@ import { audio } from 'kits/@kit.AudioKit';
 filterOptions: CaptureFilterOptions
 ```
 
-需要录制的播放音频流的筛选信息。
+Options for filtering the played audio streams to be recorded.
 
 **Type:** [CaptureFilterOptions](arkts-audio-audio-capturefilteroptions-i.md)
 

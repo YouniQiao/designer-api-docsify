@@ -1,10 +1,12 @@
 # OverlayOffset
 
-设置浮层基于自身左上角的偏移量。浮层默认处于组件左上角。
+Offset of the overlay from the upper left corner. By default, the overlay is in the upper left corner of the component.
 
-> **说明：**
+> **NOTE：**
 > 
-> 为规范匿名对象的定义，API 12版本修改了此处的元素定义。其中，保留了历史匿名对象的起始版本信息，会出现外层元素@since版本号高于内层元素版本号的情况，但这不影响接口的使用。
+> To standardize anonymous object definitions, the element definitions here have been revised in API version 12.
+> While historical version information is preserved for anonymous objects, there may be cases where the outer element
+> 's @since version number is higher than inner elements'. This does not affect interface usability.
 
 **Since:** 12
 
@@ -20,11 +22,9 @@
 x?: number
 ```
 
-横向偏移量。
+Horizontal offset.
 
-默认值：0
-
-单位：vp
+Unit: vp.
 
 **Type:** number
 
@@ -46,11 +46,9 @@ x?: number
 y?: number
 ```
 
-纵向偏移量。
+Vertical offset.
 
-默认值：0
-
-单位：vp
+Unit: vp.
 
 **Type:** number
 

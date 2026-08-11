@@ -1,12 +1,13 @@
 # KeyEncodingConfig
 
-RSA私钥编码参数，使用获取私钥字符串时，可以添加此参数，生成指定算法、密码的编码后的私钥字符串。
+Represents the RSA private key encoding parameters. You can use it to generate an encoded private key string with the specified algorithm and password.
 
-> **说明：**
+> **NOTE：**
 > 
-> - password是必选参数，表示编码用到的密码。
+> - **password** specifies the password used for encoding the private key. It is mandatory.
 > 
-> - cipherName是必选参数，指定编码用到的算法。当前仅支持AES-128-CBC、AES-192-CBC、AES-256-CBC、DES-EDE3-CBC。
+> - **cipherName** specifies the algorithm used for encoding. It is mandatory. Currently, only **AES-128-CBC**,
+> **AES-192-CBC**, **AES-256-CBC**, and **DES-EDE3-CBC** are supported.
 
 **Since:** 18
 
@@ -28,7 +29,7 @@ import { cryptoFramework } from 'kits/@kit.CryptoArchitectureKit';
 cipherName: string
 ```
 
-用于编码私钥的对称密码算法。
+Symmetric cipher algorithm used for encoding the private key.
 
 **Type:** string
 
@@ -48,7 +49,7 @@ cipherName: string
 password: string
 ```
 
-密码。
+Password used for encoding the private key.
 
 **Type:** string
 

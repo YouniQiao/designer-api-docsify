@@ -9,7 +9,7 @@ export declare function Text(
 ): TextAttribute
 ```
 
-定义Text组件。
+Defines Text Component.
 
 **Since:** 26.1.0
 
@@ -27,8 +27,8 @@ export declare function Text(
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| style | [CustomBuilderT](../arkts-components/arkts-arkui-custombuildert-t.md)&lt;TextAttribute&gt; | Yes | Text属性实例。 |
-| content_ | [CustomBuilder](../arkts-components/arkts-arkui-custombuilder-t.md) | No | 容器。 |
+| style | [CustomBuilderT](../arkts-components/arkts-arkui-custombuildert-t.md)&lt;TextAttribute&gt; | Yes | Text attribute instance. |
+| content_ | [CustomBuilder](../arkts-components/arkts-arkui-custombuilder-t.md) | No | content. |
 
 **Return value:**
 
@@ -46,7 +46,7 @@ export declare function Text(
 ): TextAttribute
 ```
 
-定义Text组件。
+Defines Text Component.
 
 **Since:** 23
 

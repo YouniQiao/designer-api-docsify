@@ -1,17 +1,15 @@
 # Rect
 
-矩形绘制组件，用于在界面中绘制矩形图形，支持设置填充颜色、边框样式、圆角等属性。
-
-> **说明：**
+The **Rect** component is used to draw a rectangle.
+> **NOTE**
 >
-> 该组件从API version 7开始支持。后续版本的新增接口，采用上角标单独标记接口的起始版本。
+> This component supports dynamic constructor parameter updates using the
+> [updateConstructorParams](docroot://reference/apis-arkui/js-apis-arkui-AttributeUpdater.md#properties) API of the
+> [AttributeUpdater](docroot://reference/apis-arkui/js-apis-arkui-AttributeUpdater.md) class since API version 20.
 >
-> 该组件从API version 20开始支持使用[AttributeUpdater]{@link ../../../arkui/AttributeUpdater}类的
-> [updateConstructorParams](docroot://reference/apis-arkui/js-apis-arkui-AttributeUpdater.md#属性)接口更新构造参数。
-
-## 子组件
-
-无
+> **Child Components**
+>
+> None
 
 ## Rect
 
@@ -49,7 +47,7 @@ Rect(
   )
 ```
 
-用于绘制矩形的构造函数。调用后创建一个Rect对象，可设置宽度、高度、圆角等属性。
+Defines the constructor of Rect component.
 
 **Since:** 7
 
@@ -67,7 +65,7 @@ Rect(
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| options | [RectOptions](../arkts-apis/arkts-arkui-rect-rectoptions-i.md) \| RoundedRectOptions | No | Rect绘制属性，包含宽度、高度、圆角等配置。不传入时使用各属性默认值绘制矩形（宽高和圆角均为0）。 <br>异常值undefined和null按照无效值处理，本次设置不生效。 |
+| options | [RectOptions](../arkts-apis/arkts-arkui-rect-rectoptions-i.md) \| RoundedRectOptions | No | Options of the rectangle. <br>The **undefined** and **null** values are treated as invalid and will not take effect. |
 
 ## Summary
 

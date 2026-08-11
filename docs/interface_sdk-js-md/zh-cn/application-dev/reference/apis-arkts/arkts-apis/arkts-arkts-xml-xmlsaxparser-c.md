@@ -14,19 +14,13 @@ XmlSAXParser类用于以流式方式解析XML文本。适用于需要边读取�
 
 **系统能力：** SystemCapability.Utils.Lang
 
-## 导入模块
-
-```TypeScript
-import { xml } from 'kits/@kit.ArkTS';
-```
-
 ## constructor
 
 ```TypeScript
 constructor(inputStream: stream.Readable, encoding?: string)
 ```
 
-XmlSAXParser的构造函数。
+构造并返回一个XmlSAXParser对象，用于以SAX方式从可读流中流式解析XML文本。
 
 > **说明：**
 > 
@@ -55,6 +49,8 @@ XmlSAXParser的构造函数。
 
 ## 示例
 
+ArkTS-Dyn示例：
+
 ```TypeScript
 import { xml, stream } from '@kit.ArkTS';
 
@@ -64,6 +60,24 @@ class TestReadable extends stream.Readable {
   }
 
   doRead(size: number) {
+  }
+}
+
+let readableStream = new TestReadable();
+let saxParser = new xml.XmlSAXParser(readableStream, 'utf-8');
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+import { xml, stream } from '@kit.ArkTS';
+
+class TestReadable extends stream.Readable {
+  constructor() {
+    super();
+  }
+
+  doRead(size: int) {
   }
 }
 
@@ -108,6 +122,8 @@ parse(xmlSAXHandler: XmlSAXHandler): void
 
 ## 示例
 
+ArkTS-Dyn示例：
+
 ```TypeScript
 import { xml, stream } from '@kit.ArkTS';
 
@@ -117,6 +133,40 @@ class TestReadable extends stream.Readable {
   }
 
   doRead(size: number) {
+  }
+}
+
+let readableStream = new TestReadable();
+let saxParser = new xml.XmlSAXParser(readableStream);
+
+let handler: xml.XmlSAXHandler = {
+  startDocument: () => {
+  },
+  endDocument: () => {
+  },
+  startElement: (elementName: string, namespaceURI: string | undefined, qName: string | undefined,
+    attributes: Map<string, string>) => {
+  },
+  endElement: (elementName: string, namespaceURI: string | undefined, qName: string | undefined) => {
+  },
+  characters: (content: string) => {
+  }
+};
+
+saxParser.parse(handler);
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+import { xml, stream } from '@kit.ArkTS';
+
+class TestReadable extends stream.Readable {
+  constructor() {
+    super();
+  }
+
+  doRead(size: int) {
   }
 }
 

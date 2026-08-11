@@ -12,7 +12,7 @@ import { inputEventClient } from 'kits/@kit.InputKit';
 function injectTouchEvent(touchEvent: TouchEventData): void
 ```
 
-触屏输入事件注入。
+Injects a touch event.
 
 **Since:** 11
 
@@ -29,15 +29,15 @@ function injectTouchEvent(touchEvent: TouchEventData): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| touchEvent | [TouchEventData](arkts-input-inputeventclient-toucheventdata-i.md) | Yes | 触屏注入描述信息。此参数中[Action](arkts-input-multimodalinput-keyevent-action-e.md)属性不支持设置为 CANCEL。 |
+| touchEvent | [TouchEventData](arkts-input-inputeventclient-toucheventdata-i.md) | Yes | Touch event data. [Action](arkts-input-multimodalinput-keyevent-action-e.md) in this parameter cannot be set to **CANCEL**. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; 3. Parameter verification failed. |
-| 201 | Permission denied.<br>**Applicable version:** 12 and later |
-| 202 | SystemAPI permission error. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; 3. Parameter verification failed. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied.<br>**Applicable version:** 12 and later |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | SystemAPI permission error. |
 
 ## Examples
 
@@ -89,7 +89,6 @@ struct Index {
             let touchEventUp: inputEventClient.TouchEventData = {
               touchEvent: touchEventUpData
             }
-            // Inject touch event
             inputEventClient.injectTouchEvent(touchEventUp);
 
             let touchEventDownData: TouchEvent = {
@@ -107,10 +106,9 @@ struct Index {
             let touchEventDown: inputEventClient.TouchEventData = {
               touchEvent: touchEventDownData
             }
-            // Inject touch event
             inputEventClient.injectTouchEvent(touchEventDown);
           } catch (error) {
-            console.error(`Failed to inject touchEvent, Code: ${(error as BusinessError).code}, message: ${(error as BusinessError).message}.`);
+            console.error(`Failed to inject touchEvent, error: ${JSON.stringify(error, [`code`, `message`])}`);
           }
         })
     }

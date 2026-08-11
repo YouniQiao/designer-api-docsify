@@ -6,40 +6,36 @@
 
 | Name | Description |
 | --- | --- |
-| [CanvasGradient](arkts-arkui-canvasgradient-c.md) | OffscreenCanvas支持以下属性： |
-| [CanvasPath](arkts-arkui-canvaspath-c.md) | 路径对象，提供基本的路径绘制方法。路径相关API的详细说明请参见CanvasRenderingContext2D中的描述。 |
-| [CanvasRenderer](arkts-arkui-canvasrenderer-c.md) | CanvasRenderingContext2D对象与Canvas组件绑定后，可在Canvas组件上绘制，绘制对象可以是形状、文本、图片等。 |
-| [CanvasRenderingContext2D](arkts-arkui-canvasrenderingcontext2d-c.md) | CanvasRenderingContext2D对象与Canvas组件绑定后，可在Canvas组件上绘制，绘制对象可以是形状、文本、图片等。 |
-| [DrawingRenderingContext](arkts-arkui-drawingrenderingcontext-c.md) | DrawingRenderingContext对象与Canvas组件绑定后，可在Canvas组件上进行绘制，绘制对象可以是形状、文本、图片等。 |
-| [ImageBitmap](arkts-arkui-imagebitmap-c.md) | ImageBitmap对象可以存储canvas渲染的像素数据。从API version 11开始，当应用创建  [Worker线程](../../../arkts-utils/worker-introduction.md)，支持使用postMessage将ImageBitmap实例传到Worker中进行绘制，并使用onmessage接收Worker线程发送的绘制结果进行显示。 |
-| [ImageData](arkts-arkui-imagedata-c.md) | ImageData对象可以存储canvas渲染的像素数据。 |
-| [OffscreenCanvas](arkts-arkui-offscreencanvas-c.md) | OffscreenCanvas组件用于绘制自定义图形。  使用[Canvas](../../../reference/apis-arkui/arkui-ts/ts-components-canvas-canvas.md)组件或  [CanvasRenderingContext2D](../../../reference/apis-arkui/arkui-ts/ts-canvasrenderingcontext2d.md)对象时，渲染、动画和用户交互通常发生在应用程序的主线程上，与画布动画和渲染相关的计算可能会影响应用程序性能。OffscreenCanvas提供了一个可以在屏幕外渲染的画布，这样可以在单独的线程中运行一些任务，从而避免影响应用程序主线程性能。 |
-| [OffscreenCanvasRenderingContext2D](arkts-arkui-offscreencanvasrenderingcontext2d-c.md) |  |
-| [Path2D](arkts-arkui-path2d-c.md) | 路径对象，支持通过对象的接口进行路径的描述，并通过Canvas的stroke接口或者fill接口进行绘制。 |
-| [RenderingContextSettings](arkts-arkui-renderingcontextsettings-c.md) | 用于配置CanvasRenderingContext2D对象的参数，包括是否开启抗锯齿。 |
+| [CanvasGradient](arkts-arkui-canvas-canvasgradient-c.md) | Opaque objects that describe gradients, created by createLinearGradient() or createRadialGradient() |
+| [CanvasPath](arkts-arkui-canvas-canvaspath-c.md) | Path object, which provides basic methods for drawing paths. |
+| [CanvasRenderer](arkts-arkui-canvas-canvasrenderer-c.md) | Canvas renderer for drawing shapes, text, images and other objects |
+| [CanvasRenderingContext2D](arkts-arkui-canvas-canvasrenderingcontext2d-c.md) | Draw context object for the Canvas component. |
+| [DrawingRenderingContext](arkts-arkui-canvas-drawingrenderingcontext-c.md) | Defines DrawingRenderingContext. |
+| [ImageBitmap](arkts-arkui-canvas-imagebitmap-c.md) | Bitmap image object that can be drawn onto the current Canvas |
+| [ImageData](arkts-arkui-canvas-imagedata-c.md) | Image data object |
+| [OffscreenCanvas](arkts-arkui-canvas-offscreencanvas-c.md) | Draw an object off the screen. The drawing content is not directly displayed on the screen. |
+| [OffscreenCanvasRenderingContext2D](arkts-arkui-canvas-offscreencanvasrenderingcontext2d-c.md) | Draw context object for the OffscreenCanvas component. |
+| [Path2D](arkts-arkui-canvas-path2d-c.md) | 2D path object for path drawing |
+| [RenderingContextSettings](arkts-arkui-canvas-renderingcontextsettings-c.md) | This object allows you to set properties when creating a rendering context |
 
 ### Interfaces
 
 | Name | Description |
 | --- | --- |
-| [CanvasParams](arkts-arkui-canvasparams-i.md) | 定义Canvas的具体配置参数。 |
-| [CanvasPattern](arkts-arkui-canvaspattern-i.md) | 一个Object对象，使用  [createPattern](../../../reference/apis-arkui/arkui-ts/ts-canvasrenderingcontext2d.md#createpattern)方法创建，通过指定图像和重复方式创建图片填充的模板。 |
-| [OffscreenCanvasRenderingContext2DInterface](arkts-arkui-offscreencanvasrenderingcontext2dinterface-i.md) | 使用OffscreenCanvasRenderingContext2D在Canvas上进行离屏绘制，绘制对象可以是形状、文本、图片等。离屏绘制是指将需要绘制的内容先绘制在缓存区，然后将其转换成图片，一次性绘制到Canvas上。离屏绘制使用CPU进行绘制，绘制速度较慢，对绘制速度有要求的场景应避免使用离屏绘制。 |
-| [RenderingContextOptions](arkts-arkui-renderingcontextoptions-i.md) | 定义渲染上下文的具体配置参数。 |
-| [Size](arkts-arkui-size-i.md) | DrawingRenderingContext的尺寸信息。 |
-| [TextMetrics](arkts-arkui-textmetrics-i.md) | 文本的尺寸信息。 |
+| [CanvasParams](arkts-arkui-canvas-canvasparams-i.md) | Defines the parameters for creating Canvas. |
+| [CanvasPattern](arkts-arkui-canvas-canvaspattern-i.md) | Describes an opaque object of a template, which is created using the createPattern() method. |
+| [RenderingContextOptions](arkts-arkui-canvas-renderingcontextoptions-i.md) | Defines the options for rendering context. |
+| [TextMetrics](arkts-arkui-canvas-textmetrics-i.md) | Size information of the text |
 
 ### Types
 
 | Name | Description |
 | --- | --- |
-| [CanvasDirection](arkts-arkui-canvasdirection-t.md) | 定义当前文本方向的类型。取值类型为下表类型中的并集。 |
-| [CanvasFillRule](arkts-arkui-canvasfillrule-t.md) | 定义用于确定点是在路径内还是路径外的填充样式算法的类型。取值类型为下表类型中的并集。 |
-| [CanvasLineCap](arkts-arkui-canvaslinecap-t.md) | 定义绘制每条线段端点的类型。取值类型为下表类型中的并集。 |
-| [CanvasLineJoin](arkts-arkui-canvaslinejoin-t.md) | 定义长度不为0的两个连接部分（线段、圆弧和曲线）的类型。取值类型为下表类型中的并集。 |
-| [CanvasTextAlign](arkts-arkui-canvastextalign-t.md) | 定义文本对齐方式的类型。取值类型为下表类型中的并集。 |
-| [CanvasTextBaseline](arkts-arkui-canvastextbaseline-t.md) | 定义文本基线类型。取值类型为下表类型中的并集。 |
-| [DrawingCanvas](arkts-arkui-drawingcanvas-t.md) | 可用于向DrawingRenderingContext上绘制内容的画布对象。 |
-| [FrameNode](arkts-arkui-framenode-t.md) | Import the frame node type object for Canvas. |
-| [ImageSmoothingQuality](arkts-arkui-imagesmoothingquality-t.md) | 定义图片平滑度类型。取值类型为下表类型中的并集。 |
+| [CanvasDirection](arkts-arkui-canvasdirection-t.md) | Indicates the attribute of the current text direction. The options are as follows:'inherit': (Default) Inherit current Canvas component settings'ltr': The text direction is left to right.'rtl': The text direction is from right to left. |
+| [CanvasFillRule](arkts-arkui-canvasfillrule-t.md) | Filling style algorithm, which determines whether a point is within or outside the path. The following two configurations are supported:'evenodd': odd and even round rule'nonzero': (Default) Non-zero Wrap Rules |
+| [CanvasLineCap](arkts-arkui-canvaslinecap-t.md) | Specifies the attribute of drawing the end of each line segment. The following configurations are supported:'butt': (Default) Segment Ends in Square'round': Segment ends in a circle'square': The end of the segment ends in a square, but a rectangular area is added that is the same width as the segment and is half the thickness of the segment. |
+| [CanvasLineJoin](arkts-arkui-canvaslinejoin-t.md) | Sets the attribute of how two connected parts (line segments, arcs, and curves) whose length is not 0 are connected together. The following three configurations are supported:'bevel': Fill the ends of the connected sections with an additional triangle-base area, each with its own independent rectangular corner.'miter': (Default) An additional diamond region is formed by extending the outer edges of the connected portions so that they intersect at a point.'round': Draw the shape of the corner by filling in an additional sector with the center at the end of the connected section. The radius of the fillet is the width of the segment. |
+| [CanvasTextAlign](arkts-arkui-canvastextalign-t.md) | Describes the alignment mode for drawing text. The options are as follows:'center': The text is centered.'end': Where text aligns lines end (Left alignment refers to the local from left to right, and right alignment refers to the local from right to left)'left': (Default) The text is left-aligned.'right': The text is right-aligned.'start': Where the text snap line begins (Left alignment refers to the local from left to right, and right alignment refers to the local from right to left) |
+| [CanvasTextBaseline](arkts-arkui-canvastextbaseline-t.md) | Text baseline, which supports the following configurations:'alphabetic': (Default) The text baseline is the standard letter baseline.'bottom': The text baseline is at the bottom of the text block. The difference between the ideographic baseline and the ideographic baseline is that the ideographic baseline does not need to consider downlink letters.'hanging': The text baseline is a hanging baseline.'ideographic': The text baseline is the ideographic baseline; If the character itself exceeds the alphabetic baseline, the ideographic baseline is at the bottom of the character itself.'middle': The text baseline is in the middle of the text block.'top': The text baseline is at the top of the text block. |
+| [ImageSmoothingQuality](arkts-arkui-imagesmoothingquality-t.md) | Sets the image smoothness attribute. The options are as follows:'high': height'low': (default)low'medium': medium |
 

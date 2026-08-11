@@ -1,6 +1,6 @@
 # ISO8601DateTimeFormatOptions
 
-符合ISO 8601标准的日期格式化对象创建时的配置项。
+Represents optional configuration items for the ISO8601DateTimeFormat object.These options determine which elements need to be displayed after formatting and the corresponding format.
 
 **Since:** 26.0.0
 
@@ -22,16 +22,7 @@ import { i18n } from 'kits/@kit.LocalizationKit';
 dateFormat?: 'calendar' | 'ordinal' | 'week'
 ```
 
-日期格式。取值包括：
-
-**calendar**：日期模式为**YYYY-MM-DD**。
-
-**ordinal**：日期模式为**YYYY-DDD**。
-
-**week**：日期模式为**YYYY-Www-D**。
-
-默认值：**calendar**。模式中字符含义参考  
-[日期字段符号表](https://www.unicode.org/reports/tr35/tr35-dates.html#Date_Field_Symbol_Table)。
+The ISO 8601 date format to format. The value can be: "calendar", the format is yyyy-MM-dd; "ordinal",the format is yyyy-DDD; "week", the format is YYYY-Www-e. Default value is "calendar".
 
 **Type:** 'calendar' \| 'ordinal' \| 'week'
 
@@ -53,7 +44,7 @@ dateFormat?: 'calendar' | 'ordinal' | 'week'
 displayTimeZone?: boolean
 ```
 
-是否显示时区，true表示显示时区，false表示不显示时区。默认值：true。
+Check if need to show time zone part. Default value is true that show time zone.
 
 **Type:** boolean
 
@@ -75,13 +66,7 @@ displayTimeZone?: boolean
 separatorStyle?: 'extended' | 'basic'
 ```
 
-分隔符风格。取值包括：
-
-**extended**：显示日期和时间分隔符。
-
-**basic**：不显示日期和时间分隔符。
-
-默认值：**extended**。
+The date time separator style. The value can be: "extended": with -/:, "basic": compact mode.Default separator style is "extended".
 
 **Type:** 'extended' \| 'basic'
 
@@ -103,19 +88,7 @@ separatorStyle?: 'extended' | 'basic'
 timePrecision?: 'dateOnly' | 'hours' | 'minutes' | 'seconds' | 'milliSeconds'
 ```
 
-时间精度。取值包括：
-
-**dateOnly**：只显示日期。
-
-**hours**：显示小时。
-
-**minutes**：显示时分。
-
-**seconds**：显示时分秒。
-
-**milliSeconds**：显示时分秒毫秒。
-
-默认值：**seconds**。
+The ISO 8601 time precision to format. The value can be: "dateOnly", "hours", "minutes", "seconds", "milliSeconds". Default value is "seconds".
 
 **Type:** 'dateOnly' \| 'hours' \| 'minutes' \| 'seconds' \| 'milliSeconds'
 
@@ -137,7 +110,7 @@ timePrecision?: 'dateOnly' | 'hours' | 'minutes' | 'seconds' | 'milliSeconds'
 timeZone?: TimeZone
 ```
 
-时区。默认值：**UTC**。
+TimeZone object used to format date, default value UTC.
 
 **Type:** [TimeZone](arkts-localization-i18n-timezone-c.md)
 

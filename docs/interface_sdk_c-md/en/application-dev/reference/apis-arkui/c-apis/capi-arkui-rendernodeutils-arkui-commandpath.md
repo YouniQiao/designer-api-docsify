@@ -6,7 +6,7 @@ typedef struct ArkUI_CommandPath ArkUI_CommandPathOption
 
 ## Overview
 
-Command path option.
+Defines a custom path option.
 
 **Since**: 20
 

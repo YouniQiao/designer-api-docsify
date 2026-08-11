@@ -114,7 +114,7 @@ measureResult: MeasureResult
 
 Measurement result of the child component.
 
-**类型：** [MeasureResult](arkts-arkui-common-measureresult-i.md)
+**类型：** [MeasureResult](../arkts-components/arkts-arkui-measureresult-i.md)
 
 **起始版本：** 23
 

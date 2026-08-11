@@ -44,9 +44,9 @@ let subscribeInfo:CommonEventManager.CommonEventSubscribeInfo = {
 };
 
 // 创建订阅者回调
-let createCallBack = (err:Base.BusinessError, commonEventSubscriber:CommonEventManager.CommonEventSubscriber) => {
+function createCB(err:Base.BusinessError, commonEventSubscriber:CommonEventManager.CommonEventSubscriber) {
     if (err.code) {
-        console.error(`createSubscriber failed, code is ${err.code}, message is ${err.message}`);
+        console.error(`createSubscriber failed, code is ${err.code}`);
     } else {
         console.info("createSubscriber");
         subscriber = commonEventSubscriber;
@@ -54,7 +54,7 @@ let createCallBack = (err:Base.BusinessError, commonEventSubscriber:CommonEventM
 }
 
 // 创建订阅者
-commonEvent.createSubscriber(subscribeInfo, createCallBack);
+commonEvent.createSubscriber(subscribeInfo, createCB);
 ```
 
 
@@ -108,7 +108,7 @@ commonEvent.createSubscriber(subscribeInfo).then((commonEventSubscriber:CommonEv
     console.info("createSubscriber");
     subscriber = commonEventSubscriber;
 }).catch((err:Base.BusinessError) => {
-    console.error(`createSubscriber failed, code is ${err.code}, message is ${err.message}`);
+    console.error(`createSubscriber failed, code is ${err.code}`);
 });
 ```
 

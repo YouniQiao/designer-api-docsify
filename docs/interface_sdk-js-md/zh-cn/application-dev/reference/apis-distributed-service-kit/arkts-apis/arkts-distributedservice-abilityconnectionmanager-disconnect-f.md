@@ -1,11 +1,5 @@
 # disconnect
 
-## 导入模块
-
-```TypeScript
-import { abilityConnectionManager } from 'kits/@kit.DistributedServiceKit';
-```
-
 ## disconnect
 
 ```TypeScript
@@ -32,9 +26,22 @@ function disconnect(sessionId: int): void
 
 ## 示例
 
+ArkTS-Dyn示例：
+
 ```TypeScript
 import { abilityConnectionManager } from '@kit.DistributedServiceKit';
 import { hilog } from '@kit.PerformanceAnalysisKit';
+
+hilog.info(0x0000, 'testTag', 'disconnectRemoteAbility begin');
+let sessionId = 100;
+abilityConnectionManager.disconnect(sessionId);
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+import abilityConnectionManager from '@ohos.distributedsched.abilityConnectionManager';
+import hilog from '@ohos.hilog';
 
 hilog.info(0x0000, 'testTag', 'disconnectRemoteAbility begin');
 let sessionId = 100;

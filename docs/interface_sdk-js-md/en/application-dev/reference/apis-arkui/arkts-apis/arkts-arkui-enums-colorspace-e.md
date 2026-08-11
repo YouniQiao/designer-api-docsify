@@ -1,6 +1,6 @@
 # ColorSpace
 
-定义了颜色空间的类型，用于指定颜色显示的模式。
+Define ColorSpace enumeration.
 
 **Since:** 23
 
@@ -16,7 +16,7 @@
 SRGB = 0
 ```
 
-SRGB颜色空间，适用于大多数显示设备。
+SRGB ColorSpace.
 
 **Since:** 23
 
@@ -34,7 +34,7 @@ SRGB颜色空间，适用于大多数显示设备。
 DISPLAY_P3 = 1
 ```
 
-Display-P3颜色空间，具有更广的色域，适用于高端显示设备。
+Display-P3 ColorSpace.
 
 **Since:** 23
 

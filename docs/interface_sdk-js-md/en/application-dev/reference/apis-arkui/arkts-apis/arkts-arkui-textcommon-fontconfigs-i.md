@@ -1,6 +1,6 @@
 # FontConfigs
 
-字体配置项。
+Defines the configuration of font.
 
 **Since:** 26.0.0
 
@@ -16,7 +16,7 @@
 fontWeightConfigs?: FontWeightConfigs
 ```
 
-字体粗细配置。默认值继承[FontWeightConfigs](arkts-arkui-textcommon-fontweightconfigs-i.md)。
+Defines font weight configurations.
 
 **Type:** [FontWeightConfigs](arkts-arkui-fontweightconfigs-i.md)
 

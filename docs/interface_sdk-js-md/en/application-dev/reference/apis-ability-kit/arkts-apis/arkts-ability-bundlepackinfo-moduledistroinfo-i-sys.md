@@ -1,6 +1,6 @@
 # ModuleDistroInfo (System API)
 
-module发行版信息。
+ModuleDistroInfo: the bundle info summary class.
 
 **Since:** 9
 
@@ -18,7 +18,7 @@ module发行版信息。
 readonly deliveryWithInstall: boolean
 ```
 
-是否跟随应用一起安装。true表示跟随应用一起安装，false表示不跟随应用一起安装。
+Whether it should be installed together with the application. **true** if it should be installed together with the application, **false** otherwise.
 
 **Type:** boolean
 
@@ -38,7 +38,7 @@ readonly deliveryWithInstall: boolean
 readonly installationFree: boolean
 ```
 
-表示当前HAP是否支持免安装特性。true表示支持免安装特性，且符合免安装约束，false表示不支持免安装特性。
+Whether the HAP file supports the installation-free feature. **true** if the HAP file supports the installation-free feature and meets installation-free constraints, **false** otherwise.
 
 **Type:** boolean
 
@@ -58,7 +58,7 @@ readonly installationFree: boolean
 readonly moduleName: string
 ```
 
-module名称。
+Module name.
 
 **Type:** string
 
@@ -78,7 +78,7 @@ module名称。
 readonly moduleType: string
 ```
 
-module类型。
+Module type.
 
 **Type:** string
 

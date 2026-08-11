@@ -1,6 +1,6 @@
 # LeadingMarginSpan
 
-文本段落的自定义缩进，仅提供基类，具体实现由开发者定义。
+Defines LeadingMarginSpan.
 
 **Since:** 24
 
@@ -16,7 +16,7 @@
 abstract getLeadingMargin(): LengthMetrics
 ```
 
-返回文本段落的缩进距离。
+Get the amount by which to adjust the leading margin.
 
 **Since:** 24
 
@@ -32,7 +32,7 @@ abstract getLeadingMargin(): LengthMetrics
 
 | Type | Description |
 | --- | --- |
-| [LengthMetrics](arkts-arkui-lengthmetrics-t.md) | 文本段落的缩进。不支持百分比。&lt;br/&gt;默认值：0&lt;br/&gt; |
+| [LengthMetrics](arkts-arkui-lengthmetrics-t.md) | the literal content of the StyledString |
 
 ## onDraw
 
@@ -40,7 +40,7 @@ abstract getLeadingMargin(): LengthMetrics
 abstract onDraw(context: DrawContext, drawInfo: LeadingMarginSpanDrawInfo): void
 ```
 
-绘制自定义图案。段落中的每一行文本都会触发一次onDraw。
+Draw the leading margin span.
 
 **Since:** 24
 

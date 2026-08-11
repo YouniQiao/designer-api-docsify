@@ -1,11 +1,5 @@
 # clear
 
-## 导入模块
-
-```TypeScript
-import { router } from 'kits/@kit.ArkUI';
-```
-
 ## clear
 
 ```TypeScript

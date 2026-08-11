@@ -1,6 +1,6 @@
 # HapModuleQuickFixInfo (System API)
 
-hap级别的快速修复信息。
+Defines the quick fix information at the HAP file level.
 
 **Since:** 9
 
@@ -24,7 +24,7 @@ import { quickFixManager } from 'kits/@kit.AbilityKit';
 readonly moduleName: string
 ```
 
-HAP的名称。
+Name of the HAP file.
 
 **Type:** string
 
@@ -44,7 +44,7 @@ HAP的名称。
 readonly originHapHash: string
 ```
 
-指示hap的哈希值。
+Hash value of the HAP file.
 
 **Type:** string
 
@@ -64,7 +64,7 @@ readonly originHapHash: string
 readonly quickFixFilePath: string
 ```
 
-指示快速修复文件的安装路径。
+Installation path of the quick fix patch file.
 
 **Type:** string
 

@@ -1,10 +1,10 @@
 # StopCode
 
-枚举停止代码， 用于ON_STOP函数。
+Enumerates the stop code, which is used to ON_STOP function.
 
-**Since:** 26.1.0
+**Since:** 26.0.0
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.1.0.
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
 <!--Device-backgroundLoader-export enum StopCode--><!--Device-backgroundLoader-export enum StopCode-End-->
 
@@ -16,11 +16,11 @@
 SUCCESS = 0
 ```
 
-执行成功码。
+Success code.
 
-**Since:** 26.1.0
+**Since:** 26.0.0
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.1.0.
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -34,11 +34,11 @@ SUCCESS = 0
 SYSTEM_ERROR = 1
 ```
 
-任务执行中发生系统错误。
+System error during task execution.
 
-**Since:** 26.1.0
+**Since:** 26.0.0
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.1.0.
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -52,11 +52,11 @@ SYSTEM_ERROR = 1
 PERCEPTIBLE_ERROR = 2
 ```
 
-任务执行中发生可感知任务错误
+Perceptible anomalies during task execution.
 
-**Since:** 26.1.0
+**Since:** 26.0.0
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.1.0.
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -70,11 +70,11 @@ PERCEPTIBLE_ERROR = 2
 TIMEOUT_ERROR = 3
 ```
 
-任务执行超时。
+Timeout during task execution.
 
-**Since:** 26.1.0
+**Since:** 26.0.0
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.1.0.
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -88,11 +88,11 @@ TIMEOUT_ERROR = 3
 EXECUTE_ERROR = 4
 ```
 
-执行任务异常。
+Anomalies during task execution.
 
-**Since:** 26.1.0
+**Since:** 26.0.0
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.1.0.
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
 
 **Model restriction:** This API can be used only in the stage model.
 

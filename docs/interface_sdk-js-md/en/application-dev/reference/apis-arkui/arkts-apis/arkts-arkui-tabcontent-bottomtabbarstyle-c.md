@@ -1,6 +1,6 @@
 # BottomTabBarStyle
 
-底部页签和侧边页签样式。
+Define BottomTabBarStyle, the style is icon and text.
 
 **Since:** 23
 
@@ -16,7 +16,7 @@
 constructor(icon: ResourceStr | TabBarSymbol, text: ResourceStr)
 ```
 
-BottomTabBarStyle的构造函数。
+constructor.
 
 **Since:** 23
 
@@ -32,8 +32,8 @@ BottomTabBarStyle的构造函数。
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| icon | [ResourceStr](arkts-arkui-resourcestr-t.md) \| TabBarSymbol | Yes | 页签内的图片内容。 |
-| text | [ResourceStr](arkts-arkui-resourcestr-t.md) | Yes | 页签内的文字内容。 |
+| icon | [ResourceStr](arkts-arkui-resourcestr-t.md) \| TabBarSymbol | Yes | indicates the icon of the bottom tab bar |
+| text | [ResourceStr](arkts-arkui-resourcestr-t.md) | Yes | indicates the text of the bottom tab bar |
 
 ## iconStyle
 
@@ -41,7 +41,7 @@ BottomTabBarStyle的构造函数。
 iconStyle(style: TabBarIconStyle): BottomTabBarStyle
 ```
 
-设置底部页签的label图标的样式。
+Sets the style of the label icon on the bottom tab.
 
 **Since:** 23
 
@@ -57,13 +57,13 @@ iconStyle(style: TabBarIconStyle): BottomTabBarStyle
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| style | [TabBarIconStyle](../arkts-components/arkts-arkui-tabbariconstyle-i.md) | Yes | 底部页签的label图标的样式。 |
+| style | [TabBarIconStyle](../arkts-components/arkts-arkui-tabbariconstyle-i.md) | Yes | style of the label icon on the bottom tab. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [BottomTabBarStyle](arkts-arkui-tabcontent-bottomtabbarstyle-c.md) | 返回BottomTabBarStyle对象本身。 |
+| [BottomTabBarStyle](arkts-arkui-tabcontent-bottomtabbarstyle-c.md) | the style of the bottom tab bar |
 
 ## id
 
@@ -71,7 +71,7 @@ iconStyle(style: TabBarIconStyle): BottomTabBarStyle
 id(value: string): BottomTabBarStyle
 ```
 
-设置底部页签的id。
+Set an id to the bottom tab bar to identify it
 
 **Since:** 23
 
@@ -87,13 +87,13 @@ id(value: string): BottomTabBarStyle
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | string | Yes | 设置底部页签的id。 |
+| value | string | Yes | id of the bottom tab bar to identify it |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [BottomTabBarStyle](arkts-arkui-tabcontent-bottomtabbarstyle-c.md) | 返回BottomTabBarStyle对象本身。 |
+| [BottomTabBarStyle](arkts-arkui-tabcontent-bottomtabbarstyle-c.md) | the style of the bottom tab bar |
 
 ## labelStyle
 
@@ -101,7 +101,7 @@ id(value: string): BottomTabBarStyle
 labelStyle(style: TabBarLabelStyle): BottomTabBarStyle
 ```
 
-设置底部页签的label文本和字体的样式。
+Set the label style of the bottom tab bar
 
 **Since:** 23
 
@@ -117,13 +117,13 @@ labelStyle(style: TabBarLabelStyle): BottomTabBarStyle
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| style | [TabBarLabelStyle](arkts-arkui-tabcontent-tabbarlabelstyle-i.md) | Yes | 底部页签的label文本和字体的样式。 |
+| style | [TabBarLabelStyle](arkts-arkui-tabcontent-tabbarlabelstyle-i.md) | Yes | indicates the label style of the bottom tab bar |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [BottomTabBarStyle](arkts-arkui-tabcontent-bottomtabbarstyle-c.md) | 返回BottomTabBarStyle对象本身。 |
+| [BottomTabBarStyle](arkts-arkui-tabcontent-bottomtabbarstyle-c.md) | the style of the bottom tab bar |
 
 ## layoutMode
 
@@ -131,7 +131,7 @@ labelStyle(style: TabBarLabelStyle): BottomTabBarStyle
 layoutMode(value: LayoutMode): BottomTabBarStyle
 ```
 
-设置底部页签的图片、文字排布的方式。
+Sets the layout mode of the images and texts on the bottom tab.
 
 **Since:** 23
 
@@ -147,13 +147,13 @@ layoutMode(value: LayoutMode): BottomTabBarStyle
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | [LayoutMode](arkts-arkui-tabcontent-layoutmode-e.md) | Yes | 底部页签的图片、文字排布的方式，具体参照LayoutMode枚举。&lt;br/&gt;默认值：LayoutMode.VERTICAL |
+| value | [LayoutMode](arkts-arkui-tabcontent-layoutmode-e.md) | Yes | layout mode of the images and text on the bottom tab. Default value is LayoutMode.VERTICAL. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [BottomTabBarStyle](arkts-arkui-tabcontent-bottomtabbarstyle-c.md) | 返回BottomTabBarStyle对象本身。 |
+| [BottomTabBarStyle](arkts-arkui-tabcontent-bottomtabbarstyle-c.md) | the style of the bottom tab bar |
 
 ## of
 
@@ -161,7 +161,7 @@ layoutMode(value: LayoutMode): BottomTabBarStyle
 static of(icon: ResourceStr | TabBarSymbol, text: ResourceStr): BottomTabBarStyle
 ```
 
-BottomTabBarStyle的静态构造函数。
+Static constructor used to create a BottomTabBarStyle instance.
 
 **Since:** 23
 
@@ -177,14 +177,14 @@ BottomTabBarStyle的静态构造函数。
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| icon | [ResourceStr](arkts-arkui-resourcestr-t.md) \| TabBarSymbol | Yes | 页签内的图片内容。 |
-| text | [ResourceStr](arkts-arkui-resourcestr-t.md) | Yes | 页签内的文字内容。 |
+| icon | [ResourceStr](arkts-arkui-resourcestr-t.md) \| TabBarSymbol | Yes | indicates the icon of the bottom tab bar |
+| text | [ResourceStr](arkts-arkui-resourcestr-t.md) | Yes | indicates the text of the bottom tab bar |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [BottomTabBarStyle](arkts-arkui-tabcontent-bottomtabbarstyle-c.md) | 返回创建的BottomTabBarStyle对象。 |
+| [BottomTabBarStyle](arkts-arkui-tabcontent-bottomtabbarstyle-c.md) | the style of the bottom tab bar |
 
 ## padding
 
@@ -192,7 +192,9 @@ BottomTabBarStyle的静态构造函数。
 padding(value: Padding | Dimension | LocalizedPadding): BottomTabBarStyle
 ```
 
-设置底部页签的内边距属性（不支持百分比设置）。使用Dimension时，四个方向内边距同时生效。
+Set the padding of the bottom tab bar
+
+&lt;p&gt;&lt;strong&gt;NOTE&lt;/strong&gt;:&lt;br&gt;It cannot be set in percentage.&lt;br&gt;When the parameter is of the Dimension type, the value applies to all sides.&lt;/p&gt;
 
 **Since:** 23
 
@@ -208,13 +210,13 @@ padding(value: Padding | Dimension | LocalizedPadding): BottomTabBarStyle
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | [Padding](arkts-arkui-units-padding-i.md) \| Dimension \| LocalizedPadding | Yes | 底部页签的内边距。&lt;br/&gt;取值范围：[0, +∞]&lt;br/&gt;默认值：{left:4.0vp,right:4.0 vp,top:0.0vp,bottom:0.0vp}&lt;br/&gt;使用LocalizedPadding时，支持镜像能力。&lt;br /&gt;默认值：{start:LengthMetrics.vp(4),end: LengthMetrics.vp(4),&lt;br/&gt;top:LengthMetrics.vp(0),bottom:LengthMetrics.vp(0)} |
+| value | [Padding](arkts-arkui-units-padding-i.md) \| Dimension \| LocalizedPadding | Yes | indicates the padding of the bottom tab bar Default value is { left:4.0vp, right:4.0vp, top:0.0vp, bottom:0.0vp }. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [BottomTabBarStyle](arkts-arkui-tabcontent-bottomtabbarstyle-c.md) | 返回BottomTabBarStyle对象本身。 |
+| [BottomTabBarStyle](arkts-arkui-tabcontent-bottomtabbarstyle-c.md) | the style of the bottom tab bar |
 
 ## symmetricExtensible
 
@@ -222,7 +224,9 @@ padding(value: Padding | Dimension | LocalizedPadding): BottomTabBarStyle
 symmetricExtensible(value: boolean): BottomTabBarStyle
 ```
 
-设置底部页签的图片、文字是否可以对称借用左右底部页签的空余位置中的最小值，仅fixed水平模式下在底部页签之间有效。
+Sets whether the images and text on the bottom tab can be symmetrically extended by the minimum value of the available space on the left and right bottom tabs.
+
+&lt;p&gt;&lt;strong&gt;NOTE&lt;/strong&gt;:&lt;br&gt;This parameter is valid only between bottom tabs in fixed horizontal mode.&lt;/p&gt;
 
 **Since:** 23
 
@@ -238,13 +242,13 @@ symmetricExtensible(value: boolean): BottomTabBarStyle
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | boolean | Yes | 底部页签的图片、文字是否可以对称借用左右底部页签的空余位置中的最小值。&lt;br/&gt;true：可以对称借用；false：不可以对称借用。&lt;br/&gt;默认值：false，底部页签的图片 、文字不可以对称借用左右底部页签的空余位置中的最小值。 |
+| value | boolean | Yes | indicates whether the bottom tab bar is extensible. Default value is false. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [BottomTabBarStyle](arkts-arkui-tabcontent-bottomtabbarstyle-c.md) | 返回BottomTabBarStyle对象本身。 |
+| [BottomTabBarStyle](arkts-arkui-tabcontent-bottomtabbarstyle-c.md) | the style of the bottom tab bar |
 
 ## verticalAlign
 
@@ -252,7 +256,7 @@ symmetricExtensible(value: boolean): BottomTabBarStyle
 verticalAlign(value: VerticalAlign): BottomTabBarStyle
 ```
 
-设置底部页签的图片、文字在垂直方向上的对齐格式。
+Sets the vertical alignment mode of the images and text on the bottom tab.
 
 **Since:** 23
 
@@ -268,11 +272,11 @@ verticalAlign(value: VerticalAlign): BottomTabBarStyle
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | [VerticalAlign](arkts-arkui-verticalalign-e.md) | Yes | 底部页签的图片、文字在垂直方向上的对齐格式。&lt;br/&gt;默认值：VerticalAlign.Center |
+| value | [VerticalAlign](arkts-arkui-verticalalign-e.md) | Yes | vertical alignment mode of the images and text on the bottom tab. Default value is VerticalAlign.Center. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [BottomTabBarStyle](arkts-arkui-tabcontent-bottomtabbarstyle-c.md) | 返回BottomTabBarStyle对象本身。 |
+| [BottomTabBarStyle](arkts-arkui-tabcontent-bottomtabbarstyle-c.md) | the style of the bottom tab bar |
 

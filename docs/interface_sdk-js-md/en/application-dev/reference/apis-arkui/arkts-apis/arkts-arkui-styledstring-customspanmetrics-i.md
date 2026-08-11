@@ -1,6 +1,6 @@
 # CustomSpanMetrics
 
-定义CustomSpanMetrics接口。
+Defines the CustomSpanMetrics interface.
 
 **Since:** 23
 
@@ -16,9 +16,7 @@
 height?: double
 ```
 
-自定义绘制Span的高。
-
-单位：[vp](../../../reference/apis-arkui/arkui-ts/ts-pixel-units.md#基本像素单位)
+CustomSpan Height.The unit is vp.
 
 **Type:** double
 
@@ -38,9 +36,7 @@ height?: double
 width: double
 ```
 
-自定义绘制Span的宽。
-
-单位：[vp](../../../reference/apis-arkui/arkui-ts/ts-pixel-units.md#基本像素单位)
+CustomSpan Width.The unit is vp.
 
 **Type:** double
 

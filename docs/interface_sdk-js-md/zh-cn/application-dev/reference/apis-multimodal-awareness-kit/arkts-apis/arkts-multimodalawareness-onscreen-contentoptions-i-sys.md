@@ -1,6 +1,6 @@
 # ContentOptions（系统接口）
 
-Defines the options for obtaining the onscreen content.
+屏上内容的获取选项。
 
 **起始版本：** 20
 
@@ -12,19 +12,13 @@ Defines the options for obtaining the onscreen content.
 
 **系统接口：** 此接口为系统接口。
 
-## 导入模块
-
-```TypeScript
-import { onScreen } from 'kits/@kit.MultimodalAwarenessKit';
-```
-
 ## contentUnderstand
 
 ```TypeScript
 contentUnderstand?: boolean
 ```
 
-Whether content understanding is required. The default value is **False**.
+是否需要进行内容理解，默认为否。
 
 **类型：** boolean
 
@@ -44,7 +38,7 @@ Whether content understanding is required. The default value is **False**.
 pageLink?: boolean
 ```
 
-Whether to obtain the page link. The default value is **False**.
+是否获取复访链接，默认为否。
 
 **类型：** boolean
 
@@ -64,7 +58,7 @@ Whether to obtain the page link. The default value is **False**.
 textOnly?: boolean
 ```
 
-Whether to obtain only the text and divide the text into paragraphs. The default value is **False**.
+是否只获取文本并划分段落，默认为否。
 
 **类型：** boolean
 
@@ -84,7 +78,7 @@ Whether to obtain only the text and divide the text into paragraphs. The default
 windowId?: int
 ```
 
-ID of the window whose content needs to be obtained. If this parameter is not set or is set to **undefined**, the content of the full-screen window is obtained by default.
+需要获取内容的窗口ID，不赋值或赋值undefined则默认获取全屏窗口。
 
 **类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 

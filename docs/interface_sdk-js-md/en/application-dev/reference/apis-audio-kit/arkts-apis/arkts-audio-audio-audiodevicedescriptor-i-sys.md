@@ -1,6 +1,6 @@
 # AudioDeviceDescriptor
 
-描述音频设备。
+Describes an audio device.
 
 **Since:** 7
 
@@ -22,7 +22,7 @@ import { audio } from 'kits/@kit.AudioKit';
 readonly dmDeviceInfo?: string
 ```
 
-Extended information for distributed device, including whether the device supports stereo, Device SN, etc.
+Extended information for distributed device, includes whether the device supports stereo, Device SN, etc.
 
 **Type:** string
 
@@ -44,7 +44,7 @@ Extended information for distributed device, including whether the device suppor
 readonly dmDeviceType?: int
 ```
 
-Only {@link DeviceType.SPEAKER} with networkId, {@link DeviceType.REMOTE_CAST}or {@link DeviceType.REMOTE_DAUDIO} has dmDeviceType which indicated deviceTypeId.
+Only {@link DeviceType.SPEAKER} with networkId、{@link DeviceType.REMOTE_CAST}or {@link DeviceType.REMOTE_DAUDIO} has dmDeviceType which indicated deviceTypeId.
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
@@ -64,7 +64,7 @@ Only {@link DeviceType.SPEAKER} with networkId, {@link DeviceType.REMOTE_CAST}or
 readonly highQualityRecordingSupported?: boolean
 ```
 
-Whether device supports high quality recording.
+whether supports high-quality recording.
 
 **Type:** boolean
 
@@ -103,6 +103,8 @@ Interrupt group id
 ```TypeScript
 readonly networkId: string
 ```
+
+Device network id
 
 **Type:** string
 

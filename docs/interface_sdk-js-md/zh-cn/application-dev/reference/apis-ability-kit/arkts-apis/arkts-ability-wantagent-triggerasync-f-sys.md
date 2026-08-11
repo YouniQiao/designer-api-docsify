@@ -1,11 +1,5 @@
 # triggerAsync（系统接口）
 
-## 导入模块
-
-```TypeScript
-import { WantAgent } from 'kits/@kit.AbilityKit';
-```
-
 ## triggerAsync
 
 ```TypeScript
@@ -30,8 +24,8 @@ function triggerAsync(agent: WantAgent, triggerInfo: TriggerInfo, context: Conte
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| agent | [WantAgent](arkts-ability-wantagent-t.md) | 是 | WantAgent对象。 |
-| triggerInfo | [TriggerInfo](arkts-ability-triggerinfo-triggerinfo-i-sys.md) | 是 | TriggerInfo对象。 |
+| agent | [WantAgent](../../apis-background-tasks-kit/arkts-apis/arkts-backgroundtasks-reminderagent-wantagent-i.md) | 是 | WantAgent对象。 |
+| triggerInfo | [TriggerInfo](arkts-ability-wantagent-triggerinfo-t.md) | 是 | TriggerInfo对象。 |
 | context | [Context](arkts-ability-context-c-sys.md) | 是 | 请求触发WantAgent的UIAbility/ExtensionAbility的Context。 |
 
 **返回值：**
@@ -44,11 +38,11 @@ function triggerAsync(agent: WantAgent, triggerInfo: TriggerInfo, context: Conte
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 16000020 | The context is not ability context. |
-| 16000151 | Invalid wantagent object. |
-| 201 | The application does not have permission to call the interface. |
-| 202 | The application is not system-app, can not use system-api. |
-| 16000153 | The Wantagent has been canceled. |
+| [16000020](../errorcode-ability.md#16000020-传入的context对象不是ability级别context) | The context is not ability context. |
+| [16000151](../errorcode-ability.md#16000151-无效wantagent对象) | Invalid wantagent object. |
+| [201](../../errorcode-universal.md#201-权限校验失败) | The application does not have permission to call the interface. |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | The application is not system-app, can not use system-api. |
+| [16000153](../errorcode-ability.md#16000153-wantagent对象已被取消) | The Wantagent has been canceled. |
 
 ## 示例
 

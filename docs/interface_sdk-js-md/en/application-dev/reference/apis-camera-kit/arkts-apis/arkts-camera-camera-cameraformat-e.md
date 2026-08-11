@@ -1,6 +1,6 @@
 # CameraFormat
 
-枚举，输出格式。
+Enumerates the camera output formats.
 
 **Since:** 10
 
@@ -16,7 +16,7 @@
 CAMERA_FORMAT_RGBA_8888 = 3
 ```
 
-RGBA_8888格式的图片。
+RGBA_8888 image.
 
 **Since:** 10
 
@@ -34,7 +34,7 @@ RGBA_8888格式的图片。
 CAMERA_FORMAT_DNG = 4
 ```
 
-DNG（数字负片）格式的图片。
+Digital Negative (DNG) image.
 
 **Since:** 24
 
@@ -52,7 +52,7 @@ DNG（数字负片）格式的图片。
 CAMERA_FORMAT_YUV_420_SP = 1003
 ```
 
-YUV_420_SP格式的图片，对应为NV21格式的图片。
+YUV_420_SP image, which corresponds to the NV21 image.
 
 **Since:** 10
 
@@ -70,7 +70,7 @@ YUV_420_SP格式的图片，对应为NV21格式的图片。
 CAMERA_FORMAT_JPEG = 2000
 ```
 
-JPEG格式的图片。
+JPEG image.
 
 **Since:** 10
 
@@ -88,7 +88,7 @@ JPEG格式的图片。
 CAMERA_FORMAT_YCBCR_P010
 ```
 
-YCBCR_P010格式的图片。
+YCBCR_P010 image.
 
 **Since:** 11
 
@@ -106,7 +106,7 @@ YCBCR_P010格式的图片。
 CAMERA_FORMAT_YCRCB_P010 = 2002
 ```
 
-YCRCB_P010格式的图片。
+YCRCB_P010 image.
 
 **Since:** 11
 
@@ -124,7 +124,7 @@ YCRCB_P010格式的图片。
 CAMERA_FORMAT_HEIC = 2003
 ```
 
-HEIF格式的图片。
+HEIF image.
 
 **Since:** 13
 
@@ -142,7 +142,7 @@ HEIF格式的图片。
 CAMERA_FORMAT_DNG_XDRAW = 5
 ```
 
-增强型DNG格式的图片。
+Enhanced image in DNG format.
 
 **Since:** 26.0.0
 

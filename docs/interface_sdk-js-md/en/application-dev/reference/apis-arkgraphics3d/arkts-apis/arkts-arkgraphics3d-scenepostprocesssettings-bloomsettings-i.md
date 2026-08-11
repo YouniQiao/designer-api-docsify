@@ -1,6 +1,6 @@
 # BloomSettings
 
-定义泛光参数.
+Describes the settings for bloom effects.It is unavailable when RenderingPipelineType is set to FORWARD_LIGHTWEIGHT.
 
 **Since:** 18
 
@@ -16,7 +16,7 @@
 scaleFactor?: double
 ```
 
-缩放因子. 控制缩放和泛光扩散量.减少降缩放和上缩放步骤.取值范围0-1. 值为0.5时减半缩放步骤.
+Scale factor. The value must be greater than 0. The default value is 1.0.
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：double
 
@@ -34,7 +34,7 @@ scaleFactor?: double
 scatter?: double
 ```
 
-扩散（泛光扩散量）. (1.0 full spread / default).
+Scatter amount. The value must be greater than 0. The default value is 1.0.
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：double
 
@@ -52,7 +52,7 @@ scatter?: double
 thresholdHard?: double
 ```
 
-泛光硬阈值.
+Hard threshold. The value is a non-negative number. The default value is 1.0.
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：double
 
@@ -70,7 +70,7 @@ thresholdHard?: double
 thresholdSoft?: double
 ```
 
-泛光软阈值.
+Soft threshold. The value is a non-negative number. The default value is 2.0.
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：double
 

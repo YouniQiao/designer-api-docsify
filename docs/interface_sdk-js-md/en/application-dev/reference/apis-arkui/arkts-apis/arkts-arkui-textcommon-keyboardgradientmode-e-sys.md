@@ -1,6 +1,6 @@
 # KeyboardGradientMode (System API)
 
-键盘渐变模糊效果。
+Keyboard Gradient mode.
 
 **Since:** 24
 
@@ -18,7 +18,7 @@
 NONE = 0
 ```
 
-键盘无模糊效果。
+Disable gradient mode.
 
 **Since:** 24
 
@@ -38,7 +38,7 @@ NONE = 0
 LINEAR_GRADIENT = 1
 ```
 
-键盘设置线性渐变模糊效果。
+Linear gradient mode.
 
 **Since:** 24
 

@@ -1,6 +1,6 @@
 # FileListResponse
 
-文件列表返回，包含文件列表信息。
+Returns a file list, including the file list information.
 
 **Since:** 3
 
@@ -18,7 +18,7 @@
 fileList: Array<FileResponse>
 ```
 
-获取的文件列表，其中每个文件的信息的格式为：{uri:'file1',lastModifiedTime:1589965924479,length:10240,type:?'file'}
+File list. The format of each file is as follows:{uri:'file1',lastModifiedTime:1589965924479,length:10240,type:'file'}
 
 **Type:** Array&lt;FileResponse&gt;
 

@@ -12,7 +12,7 @@ import { mechanicManager } from 'kits/@kit.MechanicKit';
 function move(mechId: int, params: MoveParams): Promise<Result>
 ```
 
-以特定参数移动一个具身设备
+Move a mechanical device with the specified parameters.
 
 **Since:** 26.0.0
 
@@ -28,21 +28,21 @@ function move(mechId: int, params: MoveParams): Promise<Result>
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| mechId | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | 具身设备ID。 &lt;br&gt;取值限定为整数。 |
-| params | [MoveParams](arkts-mechanic-mechanicmanager-moveparams-i-sys.md) | Yes | 移动参数。 |
+| mechId | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | ID of the mechanical device. &lt;br&gt;The value should be an integer. |
+| params | [MoveParams](arkts-mechanic-mechanicmanager-moveparams-i-sys.md) | Yes | Parameters to use when moving. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;Result&gt; | 202 - 非系统应用 |
+| Promise&lt;Result&gt; | Promise that returns the execution result. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 202 | Not system application. |
-| 33300001 | Service exception. |
-| 33300002 | Device not connected. |
-| 33300003 | Feature not supported. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system application. |
+| [33300001](../errorcode-mechanic.md#33300001-system-error) | Service exception. |
+| [33300002](../errorcode-mechanic.md#33300002-device-not-connected) | Device not connected. |
+| [33300003](../errorcode-mechanic.md#33300003-function-not-supported) | Feature not supported. |
 

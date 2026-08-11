@@ -16,7 +16,7 @@ Component content cover dismiss
 dismiss(): void
 ```
 
-全屏模态页面关闭回调函数。开发者需要退出页面时调用。
+Defines content cover dismiss function
 
 **Since:** 23
 
@@ -34,7 +34,7 @@ dismiss(): void
 reason: DismissReason
 ```
 
-返回本次拦截全屏模态页面退出的事件原因。
+Defines content cover dismiss reason
 
 **Type:** [DismissReason](../arkts-components/arkts-arkui-dismissreason-e.md)
 

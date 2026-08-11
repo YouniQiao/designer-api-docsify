@@ -12,7 +12,7 @@ import { print } from 'kits/@kit.BasicServicesKit';
 function deletePrinterFromCups(printerName: string): Promise<void>
 ```
 
-从cups中删除打印机，使用Promise异步回调。
+Delete a printer from cups.
 
 **Since:** 24
 
@@ -32,20 +32,20 @@ function deletePrinterFromCups(printerName: string): Promise<void>
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| printerName | string | Yes | 表示打印机名称。 |
+| printerName | string | Yes | Indicates the printer name. &lt;br&gt;Printer name to be deleted. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise对象，无返回结果。 |
+| Promise&lt;void&gt; | the promise returned by the function. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 201 | the application does not have permission to call this function. |
-| 202 | not system application. |
+| [201](../../errorcode-universal.md#201-permission-denied) | the application does not have permission to call this function. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | not system application. |
 
 ## Examples
 

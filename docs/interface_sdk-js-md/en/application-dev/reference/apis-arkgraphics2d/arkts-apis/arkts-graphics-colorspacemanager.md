@@ -1,6 +1,6 @@
-# @ohos.graphics.colorSpaceManager(色彩管理)
+# @ohos.graphics.colorSpaceManager(Color Space Management)
 
-本模块提供管理抽象化色域对象的基础能力，包括创建标准色域对象（如SRGB、DCI-P3、BT2020等）和自定义色域对象，获取色域类型、白点值、gamma值等属性。适用于需要保证色彩一致性的场景，如图像处理、视频渲染、跨设备色彩显示等，帮助开发者实现准确的色彩管理和转换，提升应用在色彩显示方面的用户体验。
+This module provides basic capabilities for managing abstract color space objects, including creating criterion color space objects (such as sRGB, DCI-P3, and BT2020) and custom color space objects, as well as obtaining attributes such as the color space type, white point value, and gamma value. It is suitable for scenarios where color consistency needs to be ensured, such as image processing, video rendering, and cross-device color display. It helps you implement accurate color management and conversion, improving user experience in color display.
 
 **Since:** 9
 
@@ -22,19 +22,19 @@ import { colorSpaceManager } from 'kits/@kit.ArkGraphics2D';
 
 | Name | Description |
 | --- | --- |
-| [create](arkts-arkgraphics2d-colorspacemanager-create-f.md#create) | 创建标准色域对象。 |
-| [create](arkts-arkgraphics2d-colorspacemanager-create-f.md#create-1) | 创建用户自定义色域对象。 |
+| [create](arkts-arkgraphics2d-colorspacemanager-create-f.md#create) | Creates a standard color space object. |
+| [create](arkts-arkgraphics2d-colorspacemanager-create-f.md#create-1) | Creates a custom color space object. |
 
 ### Interfaces
 
 | Name | Description |
 | --- | --- |
-| [ColorSpaceManager](arkts-arkgraphics2d-colorspacemanager-colorspacemanager-i.md) | 当前色域对象实例。  下列API示例中都需先使用[create()](arkts-arkgraphics2d-colorspacemanager-create-f.md#create)获取到ColorSpaceManager实例，再通过此实例调用对应方法。 |
-| [ColorSpacePrimaries](arkts-arkgraphics2d-colorspacemanager-colorspaceprimaries-i.md) | 色域标准三原色（红、绿、蓝）和白色，基于现实世界的色度，使用(x, y)表示其在色彩空间中的位置。 |
+| [ColorSpaceManager](arkts-arkgraphics2d-colorspacemanager-colorspacemanager-i.md) | Implements management of color space objects.  Before calling any of the following APIs, you must use [create()](arkts-arkgraphics2d-colorspacemanager-create-f.md#create) to create a color space manager. |
+| [ColorSpacePrimaries](arkts-arkgraphics2d-colorspacemanager-colorspaceprimaries-i.md) | The three primary colors (red, green, blue) and white as defined by the color space standard, whose positions in the color space are represented by (x, y) coordinates based on real-world chromaticity. |
 
 ### Enums
 
 | Name | Description |
 | --- | --- |
-| [ColorSpace](arkts-arkgraphics2d-colorspacemanager-colorspace-e.md) | 色域类型枚举。 |
+| [ColorSpace](arkts-arkgraphics2d-colorspacemanager-colorspace-e.md) | Enumerates the color space types. |
 

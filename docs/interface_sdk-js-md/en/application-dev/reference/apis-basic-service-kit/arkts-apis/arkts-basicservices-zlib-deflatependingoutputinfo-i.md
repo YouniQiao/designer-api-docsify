@@ -1,6 +1,6 @@
 # DeflatePendingOutputInfo
 
-压缩等待返回信息。
+DeflatePending return value information.
 
 **Since:** 12
 
@@ -22,7 +22,7 @@ import { zlib } from 'kits/@kit.BasicServicesKit';
 bits: int
 ```
 
-已生成的输出位数。
+Number of output bits that have been generated.
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
@@ -42,7 +42,7 @@ bits: int
 pending: int
 ```
 
-已生成的输出字节数。
+Number of output bytes that have been generated.
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
@@ -62,7 +62,7 @@ pending: int
 status: ReturnStatus
 ```
 
-参考[ReturnStatus枚举定义](arkts-basicservices-zlib-returnstatus-e.md)。
+For details, see [ReturnStatus](arkts-basicservices-zlib-returnstatus-e.md).
 
 **Type:** [ReturnStatus](arkts-basicservices-zlib-returnstatus-e.md)
 

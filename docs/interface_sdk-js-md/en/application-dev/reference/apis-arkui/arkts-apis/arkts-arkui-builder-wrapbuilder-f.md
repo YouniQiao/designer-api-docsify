@@ -6,7 +6,7 @@
 export declare function wrapBuilder<T>(builder: T): WrappedBuilder<T>
 ```
 
-wrapBuilder是一个模板函数，返回一个`WrappedBuilder`对象。模板参数`T`是@Builder的函数类型。
+Defining wrapBuilder function.
 
 **Since:** 23
 
@@ -15,6 +15,8 @@ wrapBuilder是一个模板函数，返回一个`WrappedBuilder`对象。模板�
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-unnamed-export declare function wrapBuilder<T>(builder: T): WrappedBuilder<T>--><!--Device-unnamed-export declare function wrapBuilder<T>(builder: T): WrappedBuilder<T>-End-->
+
+**System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
 
@@ -26,5 +28,5 @@ wrapBuilder是一个模板函数，返回一个`WrappedBuilder`对象。模板�
 
 | Type | Description |
 | --- | --- |
-| [WrappedBuilder](../arkts-components/arkts-arkui-wrappedbuilder-c.md)&lt;T&gt; | WrappedBuilder对象。 |
+| [WrappedBuilder](../arkts-components/arkts-arkui-wrappedbuilder-c.md)&lt;T&gt; |  |
 

@@ -1,6 +1,6 @@
 # Animation
 
-动画资源.
+Animation resource, which inherits from [SceneResource](arkts-arkgraphics3d-sceneresources-sceneresource-i.md).
 
 **Inheritance/Implementation:** Animation extends [SceneResource](arkts-arkgraphics3d-sceneresources-sceneresource-i.md)
 
@@ -18,7 +18,7 @@
 finish(): void
 ```
 
-结束动画并将位置设置到结尾.
+Finishes the playing of the animation and sets its progress of 1 (finished).
 
 **Since:** 12
 
@@ -34,7 +34,7 @@ finish(): void
 onFinished(callback: Callback<void>): void
 ```
 
-动画播放结束时执行的回调函数，动画播放完成或者finish操作会触发这个回调。
+Called when the animation playback is complete or the finish API is called.
 
 **Since:** 12
 
@@ -48,7 +48,7 @@ onFinished(callback: Callback<void>): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;void&gt; | Yes | 动画完成时调用的回调 |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;void&gt; | Yes | Callback function. The return value is null. |
 
 ## onStarted
 
@@ -56,7 +56,7 @@ onFinished(callback: Callback<void>): void
 onStarted(callback: Callback<void>): void
 ```
 
-注册动画开始时的回调.
+Called when the animation starts to play. The start operation is triggered by calling start or restart.
 
 **Since:** 12
 
@@ -70,7 +70,7 @@ onStarted(callback: Callback<void>): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;void&gt; | Yes | 动画开始时调用的回调 |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;void&gt; | Yes | Callback function. The return value is null. |
 
 ## pause
 
@@ -78,7 +78,7 @@ onStarted(callback: Callback<void>): void
 pause(): void
 ```
 
-暂停动画.
+Pauses the animation. The animation remains in the current playing progress.
 
 **Since:** 12
 
@@ -94,7 +94,7 @@ pause(): void
 restart(): void
 ```
 
-重新启动动画.
+Plays the animation from the beginning.
 
 **Since:** 12
 
@@ -116,7 +116,7 @@ ArkTS-Sta:
 seek(position: double): void
 ```
 
-将动画跳转到指定位置.
+Plays the animation from the specified position.
 
 **Since:** 12
 
@@ -130,7 +130,7 @@ seek(position: double): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| position | ArkTS-Dyn: number  <br>ArkTS-Sta：double | Yes | 跳转到0~1之间的位置 |
+| position | ArkTS-Dyn: number  <br>ArkTS-Sta：double | Yes | Position from which the animation playback starts. The value range is [0, 1]. |
 
 ## start
 
@@ -138,7 +138,7 @@ seek(position: double): void
 start(): void
 ```
 
-开始动画.
+Plays the animation based on the current progress.
 
 **Since:** 12
 
@@ -154,7 +154,7 @@ start(): void
 stop(): void
 ```
 
-停止动画并将位置设置到开头.
+Stops playing the animation and sets its progress to 0 (not started).
 
 **Since:** 12
 
@@ -170,7 +170,7 @@ stop(): void
 readonly duration: double
 ```
 
-动画持续时间, 单位为秒.
+Animation duration, in seconds. The value must be greater than or equal to 0.
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：double
 
@@ -188,7 +188,7 @@ readonly duration: double
 enabled: boolean
 ```
 
-动画是否启用.
+Whether the animation is enabled. true if enabled, false otherwise.
 
 **Type:** boolean
 
@@ -206,7 +206,7 @@ enabled: boolean
 readonly progress: double
 ```
 
-动画在0~1之间的进度.
+Playing progress of the animation. The value range is [0, 1].
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：double
 
@@ -224,7 +224,7 @@ readonly progress: double
 readonly running: boolean
 ```
 
-动画是否正在运行.
+Whether the animation is running. true if running, false otherwise.
 
 **Type:** boolean
 
@@ -242,7 +242,7 @@ readonly running: boolean
 speed?: double
 ```
 
-动画速度因子负值使用给定速度因子反向播放动画
+Playback speed factor of the animation. The default value is 1.0, indicating that the animation is played at normal speed.If the value is negative, the animation plays in reverse.
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：double
 

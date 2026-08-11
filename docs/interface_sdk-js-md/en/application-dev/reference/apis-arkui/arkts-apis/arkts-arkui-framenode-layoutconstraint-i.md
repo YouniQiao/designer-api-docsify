@@ -1,6 +1,6 @@
 # LayoutConstraint
 
-描述组件的布局约束。
+Layout constraint, including the max size, the min size and the reference size for children to calculate percent.
 
 **Since:** 23
 
@@ -16,7 +16,7 @@
 maxSize: Size
 ```
 
-最大尺寸。
+MaxSize
 
 **Type:** [Size](arkts-arkui-graphics-size-i.md)
 
@@ -36,7 +36,7 @@ maxSize: Size
 minSize: Size
 ```
 
-最小尺寸。
+MinSize
 
 **Type:** [Size](arkts-arkui-graphics-size-i.md)
 
@@ -56,7 +56,7 @@ minSize: Size
 percentReference: Size
 ```
 
-子节点计算百分比时的尺寸基准。
+PercentReference, if the size unit of the child nodes is percentage, then they use PercentReference to calculate the px size.
 
 **Type:** [Size](arkts-arkui-graphics-size-i.md)
 

@@ -1,0 +1,251 @@
+# downloadMms (System API)
+
+## Modules to Import
+
+```TypeScript
+import { sms } from 'kits/@kit.TelephonyKit';
+```
+
+## downloadMms
+
+```TypeScript
+function downloadMms(context: Context, mmsParams: MmsParams, callback: AsyncCallback<void>): void
+```
+
+Downloads an MMS message.
+
+**Since:** 11
+
+**Required permissions:** ohos.permission.RECEIVE_MMS
+
+<!--Device-sms-function downloadMms(context: Context, mmsParams: MmsParams, callback: AsyncCallback<void>): void--><!--Device-sms-function downloadMms(context: Context, mmsParams: MmsParams, callback: AsyncCallback<void>): void-End-->
+
+**System capability:** SystemCapability.Telephony.SmsMms
+
+**System API:** This is a system API.
+
+**Parameters:**
+
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| context | [Context](../../apis-arkui/arkts-components/arkts-arkui-context-t.md) | Yes |
+| mmsParams | [MmsParams](arkts-telephony-sms-mmsparams-i-sys.md) | Yes |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes |
+
+**Error codes:**
+
+| Error Code ID |
+| --- |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [201](../../errorcode-universal.md#201-permission-denied) |
+| [8300999](../errorcode-telephony.md#8300999-internal-error) |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+| [8300002](../errorcode-telephony.md#8300002-service-connection-error) |
+| [8300003](../errorcode-telephony.md#8300003-system-internal-error) |
+| [8300001](../errorcode-telephony.md#8300001-input-parameter-value-out-of-range) |
+
+## Examples
+
+FA model:
+
+```TypeScript
+import { sms } from '@kit.TelephonyKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+import { common, featureAbility } from '@kit.AbilityKit';
+
+// Obtain the context.
+let context: common.BaseContext = featureAbility.getContext();
+
+// Configure the path for storing the PDU of the MMS message.
+const sandBoxPath: string = '/data/storage/el2/base/files/';
+let filePath: string = sandBoxPath + 'RetrieveConf.mms';
+
+// Parse the MMS URL from the WAP Push message.
+let wapPushUrl: string = 'URL';
+
+// Configure the parameters (including the callback) for downloading MMS messages.
+let mmsPars: sms.MmsParams = {
+  slotId: 0,
+  mmsc: wapPushUrl,
+  data: filePath,
+  mmsConfig: {
+   userAgent:'ua',
+   userAgentProfile: 'uaprof'
+  }
+};
+
+// Call the downloadMms API.
+sms.downloadMms(context, mmsPars, async(err: BusinessError) =>{
+  if (err) {
+      console.error(`downloadMms fail, err : ${JSON.stringify(err)}`);
+      return;
+  }
+  console.info(`downloadMms Success`);
+})
+```
+
+Stage model:
+
+```TypeScript
+import { UIAbility } from '@kit.AbilityKit';
+import { sms } from '@kit.TelephonyKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+import { window } from '@kit.ArkUI';
+
+// Configure the path for storing the PDU of the MMS message.
+const sandBoxPath = '/data/storage/el2/base/files/';
+let filePath  = sandBoxPath + 'RetrieveConf.mms';
+
+// Parse the MMS URL from the WAP Push message.
+let wapPushUrl  = 'URL';
+
+// Configure the MMS user agent and profile. The default values are ua and uaprof, respectively. The configuration is subject to the carrier's requirements. 
+let mmsConf: sms.MmsConfig = {
+  userAgent:'ua',
+  userAgentProfile: 'uaprof'
+};
+
+// Configure the parameters (including the callback) for downloading MMS messages.
+let mmsPars: sms.MmsParams = {
+  slotId : 0,
+  mmsc: wapPushUrl,
+  data: filePath,
+  mmsConfig: mmsConf
+};
+
+class EntryAbility extends UIAbility {
+    onWindowStageCreate(windowStage: window.WindowStage) {
+    sms.downloadMms(this.context, mmsPars, async(err: BusinessError) =>{
+        if (err) {
+            console.error(`downloadMms fail, err : ${JSON.stringify(err)}`);
+            return;
+        }
+        console.info(`downloadMms Success`);
+        });
+    }
+}
+```
+
+
+## downloadMms
+
+```TypeScript
+function downloadMms(context: Context, mmsParams: MmsParams): Promise<void>
+```
+
+Downloads an MMS message.
+
+**Since:** 11
+
+**Required permissions:** ohos.permission.RECEIVE_MMS
+
+<!--Device-sms-function downloadMms(context: Context, mmsParams: MmsParams): Promise<void>--><!--Device-sms-function downloadMms(context: Context, mmsParams: MmsParams): Promise<void>-End-->
+
+**System capability:** SystemCapability.Telephony.SmsMms
+
+**System API:** This is a system API.
+
+**Parameters:**
+
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| context | [Context](../../apis-arkui/arkts-components/arkts-arkui-context-t.md) | Yes |
+| mmsParams | [MmsParams](arkts-telephony-sms-mmsparams-i-sys.md) | Yes |
+
+**Return value:**
+
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| Promise&lt;void&gt; |
+
+**Error codes:**
+
+| Error Code ID |
+| --- |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [201](../../errorcode-universal.md#201-permission-denied) |
+| [8300999](../errorcode-telephony.md#8300999-internal-error) |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+| [8300002](../errorcode-telephony.md#8300002-service-connection-error) |
+| [8300003](../errorcode-telephony.md#8300003-system-internal-error) |
+| [8300001](../errorcode-telephony.md#8300001-input-parameter-value-out-of-range) |
+
+## Examples
+
+FA model:
+
+```TypeScript
+import { sms } from '@kit.TelephonyKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+import { common, featureAbility } from '@kit.AbilityKit';
+
+// Obtain the context.
+let context: common.BaseContext = featureAbility.getContext();
+
+// Configure the path for storing the PDU of the MMS message.
+const sandBoxPath: string = '/data/storage/el2/base/files/';
+let filePath: string = sandBoxPath + 'RetrieveConf.mms';
+
+// Parse the MMS URL from the WAP Push message.
+let wapPushUrl: string = 'URL';
+
+// Configure the parameters (including the callback) for downloading MMS messages.
+let mmsPars: sms.MmsParams = {
+  slotId: 0,
+  mmsc: wapPushUrl,
+  data: filePath,
+  mmsConfig: {
+   userAgent:'ua',
+   userAgentProfile: 'uaprof'
+  }
+};
+
+// Call the sendMms API.
+let promise = sms.downloadMms(context, mmsPars);
+promise.then(() => {
+    console.info(`downloadMms success`);
+}).catch((err: BusinessError) => {
+    console.error(`downloadMms failed, promise: err->${JSON.stringify(err)}`);
+});
+```
+
+Stage model:
+
+```TypeScript
+import { UIAbility } from '@kit.AbilityKit';
+import { sms } from '@kit.TelephonyKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+import { window } from '@kit.ArkUI';
+
+// Configure the path for storing the PDU of the MMS message.
+const sandBoxPath = '/data/storage/el2/base/files/';
+let filePath  = sandBoxPath + 'RetrieveConf.mms';
+
+// Parse the MMS URL from the WAP Push message.
+let wapPushUrl  = 'URL';
+
+// Configure the MMS user agent and profile. The default values are ua and uaprof, respectively. The configuration is subject to the carrier's requirements. 
+let mmsConf: sms.MmsConfig = {
+  userAgent:'ua',
+  userAgentProfile: 'uaprof'
+};
+
+// Configure the parameters (including the callback) for downloading MMS messages.
+let mmsPars: sms.MmsParams = {
+  slotId : 0,
+  mmsc: wapPushUrl,
+  data: filePath,
+  mmsConfig: mmsConf
+};
+
+class EntryAbility extends UIAbility {
+    onWindowStageCreate(windowStage: window.WindowStage) {
+    let promise = sms.downloadMms(this.context, mmsPars);
+    promise.then(() => {
+        console.info(`downloadMms success`);
+    }).catch((err: BusinessError) => {
+        console.error(`downloadMms failed, promise: err->${JSON.stringify(err)}`);
+    });
+    }
+}
+```

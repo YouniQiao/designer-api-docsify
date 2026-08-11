@@ -1,6 +1,6 @@
 # ProgressMask
 
-ProgressMask设置遮罩的进度、最大值和颜色。
+Sets the progress, maximum value, and color for a mask.
 
 **Since:** 10
 
@@ -16,7 +16,7 @@ ProgressMask设置遮罩的进度、最大值和颜色。
 constructor(value: number, total: number, color: ResourceColor)
 ```
 
-构造ProgressMask对象。
+Constructs a **ProgressMask** object.
 
 **Since:** 10
 
@@ -34,9 +34,9 @@ constructor(value: number, total: number, color: ResourceColor)
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | number | Yes | 进度遮罩的当前值。&lt;br/&gt; 取值范围：[0.0, +∞) |
-| total | number | Yes | 进度遮罩的最大值。&lt;br/&gt; 取值范围：[0.0, +∞) |
-| color | [ResourceColor](../arkts-apis/arkts-arkui-resourcecolor-t.md) | Yes | 进度遮罩的颜色。 |
+| value | number | Yes | Current value of the progress mask.&lt;br&gt; Value range: [0.0, +∞) |
+| total | number | Yes | Maximum value of the progress mask.&lt;br&gt; Value range: [0.0, +∞) |
+| color | [ResourceColor](../arkts-apis/arkts-arkui-resourcecolor-t.md) | Yes | Color of the progress mask. |
 
 ## enableBreathingAnimation
 
@@ -44,7 +44,7 @@ constructor(value: number, total: number, color: ResourceColor)
 enableBreathingAnimation(value: boolean): void
 ```
 
-进度满时的呼吸光晕动画开关。不设置该接口时，默认关闭呼吸光晕动画。
+Sets whether to enable the breathing animation when the progress indicator is full. If this API is not set, the breathing animation is disabled by default.
 
 **Since:** 12
 
@@ -62,7 +62,7 @@ enableBreathingAnimation(value: boolean): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | boolean | Yes | 是否开启呼吸光晕动画。&lt;br/&gt;true：开启呼吸光晕动画。&lt;br/&gt;false：关闭呼吸光晕动画。 |
+| value | boolean | Yes | Whether to enable the breathing animation.&lt;br&gt;**true**: The breathing animation is enabled.&lt;br&gt;**false**: The breathing halo animation is disabled. |
 
 ## updateColor
 
@@ -70,7 +70,7 @@ enableBreathingAnimation(value: boolean): void
 updateColor(value: ResourceColor): void
 ```
 
-更新进度遮罩的颜色。
+Updates the color of the progress mask.
 
 **Since:** 10
 
@@ -88,7 +88,7 @@ updateColor(value: ResourceColor): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | [ResourceColor](../arkts-apis/arkts-arkui-resourcecolor-t.md) | Yes | 进度遮罩的颜色。 |
+| value | [ResourceColor](../arkts-apis/arkts-arkui-resourcecolor-t.md) | Yes | Color of the progress mask. |
 
 ## updateProgress
 
@@ -96,7 +96,7 @@ updateColor(value: ResourceColor): void
 updateProgress(value: number): void
 ```
 
-更新进度遮罩的进度值。
+Updates the progress value of the progress mask.
 
 **Since:** 10
 
@@ -114,5 +114,5 @@ updateProgress(value: number): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | number | Yes | 进度遮罩的当前值。 |
+| value | number | Yes | Current value of the progress mask. |
 

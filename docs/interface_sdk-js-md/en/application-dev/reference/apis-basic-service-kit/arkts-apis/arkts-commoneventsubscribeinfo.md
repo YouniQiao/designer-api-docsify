@@ -6,5 +6,5 @@
 
 | Name | Description |
 | --- | --- |
-| [CommonEventSubscribeInfo](arkts-basicservices-commoneventsubscribeinfo-commoneventsubscribeinfo-i.md) | 用于表示公共事件订阅者的信息，支持配置订阅的公共事件类型、发布者权限、发布者设备ID、用户ID、订阅优先级等参数，适用于应用需要订阅系统公共事件或自定义公共事件并精细化控制事件来源的场景。 |
+| [CommonEventSubscribeInfo](arkts-basicservices-commoneventsubscribeinfo-commoneventsubscribeinfo-i.md) | This module provides APIs for providing subscriber information. It allows you to configure parameters such as the subscribed common event type, publisher permission,publisher device ID, user ID, and subscription priority. This module is applicable to scenarios where an app needs to subscribe to system common events or custom common events and requires refined control over event sources.  > **NOTE：** >  > After users subscribing to custom common events, any application can send potential > malicious common events to subscribers. The **publisherPermission** and > **publisherBundleName** parameters of this module can be used to restrict the publisher > scope of common events. |
 

@@ -12,7 +12,7 @@ import { userAuth } from 'kits/@kit.UserAuthenticationKit';
 function sendNotice(noticeType: NoticeType, eventData: string): void
 ```
 
-发送来自身份认证组件的通知。在使用统一身份认证控件进行用户身份认证时，该接口用于接收来自统一身份认证组件的通知，并将通知发送给用户认证框架。
+Sends a notification from the user authentication widget. When the unified authentication widget is used for user authentication, this API is used to receive notifications from the unified authentication widget and send the notifications to the user authentication framework.
 
 **Since:** 10
 
@@ -30,17 +30,17 @@ function sendNotice(noticeType: NoticeType, eventData: string): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| noticeType | [NoticeType](arkts-userauthentication-userauth-noticetype-e-sys.md) | Yes | 通知类型。用于标识通知的来源，当前支持WIDGET_NOTICE（1），表示来自身份认证组件的通知。 |
-| eventData | string | Yes | 事件数据。JSON格式的字符串，包含通知的具体内容，如认证类型就绪事件等。数据长度范围为(0, 65536)字节。JSON对象应包含widgetContextId（ number类型，控件上下文ID）、event（string类型，事件类型）、version（string类型，版本号）、payload（object类型，事件载荷对象）等字段。 |
+| noticeType | [NoticeType](arkts-userauthentication-userauth-noticetype-e-sys.md) | Yes | Notification type. It identifies the source of a notification. Currently, **WIDGET_NOTICE (1)** is supported, indicating that the notification is from the authentication widget. |
+| eventData | string | Yes | Event data, which is a JSON string that contains the specific content of the notification, such as the authentication type ready event. The data length ranges from 0 to 65536 bytes. The JSON object should contain fields such as **widgetContextId** (number type, widget context ID), **event** ( string type, event type), **version** (string type, version number), and **payload** (object type, event payload object). |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. Possible causes: &lt;br&gt;1. Mandatory parameters are left unspecified. &lt;br&gt;2. Incorrect parameter types. &lt;br&gt;3. Parameter verification failed. |
-| 201 | Permission denied. |
-| 202 | Permission denied. Called by non-system application. |
-| 12500002 | General operation error. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: &lt;br&gt;1. Mandatory parameters are left unspecified. &lt;br&gt;2. Incorrect parameter types. &lt;br&gt;3. Parameter verification failed. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission denied. Called by non-system application. |
+| [12500002](../errorcode-useriam.md#12500002-common-error-code-of-the-identity-authentication-system) | General operation error. |
 
 ## Examples
 
@@ -52,9 +52,9 @@ interface  EventData {
   widgetContextId: number;
   event: string;
   version: string;
-  payload: Payload;
+  payload: PayLoad;
 }
-interface Payload {
+interface PayLoad {
   type: string[];
 }
 try {
@@ -64,15 +64,15 @@ try {
     version: '1',
     payload: {
       type: ['pin']
-    } as Payload,
+    } as PayLoad,
   };
   const jsonEventData = JSON.stringify(eventData);
   let noticeType = userAuth.NoticeType.WIDGET_NOTICE;
   userAuth.sendNotice(noticeType, jsonEventData);
-  console.info('sendNotice successfully.');
+  console.info('sendNotice success');
 } catch (error) {
   const err: BusinessError = error as BusinessError;
-  console.error(`sendNotice failed. Code is ${err?.code}, message is ${err?.message}`);
+  console.error(`sendNotice catch error: Code is ${err?.code}, message is ${err?.message}`);
 }
 ```
 

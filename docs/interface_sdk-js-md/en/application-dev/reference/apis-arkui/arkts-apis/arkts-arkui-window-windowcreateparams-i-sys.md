@@ -1,6 +1,6 @@
 # WindowCreateParams
 
-应用启动时的窗口参数配置。
+Describes the window parameters during application startup.
 
 **Since:** 20
 
@@ -22,7 +22,7 @@ import { window } from 'kits/@kit.ArkUI';
 isWindowLimitsForcible?: boolean
 ```
 
-是否覆盖系统窗口尺寸限制。如果为true，则当前主窗口可以设置超出系统限制的窗口尺寸限制。
+Whether to override system window limits.If true, the main window of the current ability can set a window limit that exceeds system restrictions.
 
 **Type:** boolean
 
@@ -46,9 +46,9 @@ isWindowLimitsForcible?: boolean
 systemAnimationParams?: StartAnimationSystemParams
 ```
 
-启动动画配置，仅对全屏应用生效。
+Describes the start animation configuration. This API works only for full-screen applications.
 
-不同应用间跳转场景不生效，仍保持系统默认动效。
+The configuration does not take effect for inter-application transitions, where the default animation of the system is used.
 
 **Type:** [StartAnimationSystemParams](arkts-arkui-window-startanimationsystemparams-i-sys.md)
 

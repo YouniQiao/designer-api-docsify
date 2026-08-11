@@ -1,6 +1,6 @@
 # XMPNamespace
 
-表示XMP命名空间。
+Describes XMP namespace parameters.
 
 **Since:** 26.0.0
 
@@ -22,7 +22,7 @@ import { image } from 'kits/@kit.ImageKit';
 prefix: string
 ```
 
-XMP命名空间前缀。
+The prefix of XMP namespace.
 
 **Type:** string
 
@@ -42,7 +42,7 @@ XMP命名空间前缀。
 uri: string
 ```
 
-XMP命名空间URI。
+The uri of XMP namespace.
 
 **Type:** string
 

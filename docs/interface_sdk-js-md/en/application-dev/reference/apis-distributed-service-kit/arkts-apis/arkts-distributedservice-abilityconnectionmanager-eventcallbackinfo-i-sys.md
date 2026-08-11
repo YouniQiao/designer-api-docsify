@@ -1,6 +1,6 @@
 # EventCallbackInfo
 
-回调方法的接收信息。
+Defines the event callback information.
 
 **Since:** 18
 
@@ -22,7 +22,7 @@ import { abilityConnectionManager } from 'kits/@kit.DistributedServiceKit';
 image?: image.PixelMap
 ```
 
-接收的图片。
+Received image.
 
 **Type:** image.PixelMap
 

@@ -4,7 +4,7 @@
 [Intl.NumberFormat](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/NumberFormat)，支持  
 [Intl.NumberFormat](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/NumberFormat)的方法。
 
-**继承/实现关系：** SymbolNumberFormat extends [Intl.NumberFormat](../../apis-arkts/arkts-apis/arkts-arkts-intl-numberformat-c.md/arkts-arkts-intl-numberformat-c.md)
+**继承/实现关系：** SymbolNumberFormat extends [Intl.NumberFormat](arkts-localization-intl-numberformat-c.md)
 
 **起始版本：** 26.0.0
 
@@ -13,12 +13,6 @@
 <!--Device-i18n-export class SymbolNumberFormat extends Intl.NumberFormat--><!--Device-i18n-export class SymbolNumberFormat extends Intl.NumberFormat-End-->
 
 **系统能力：** SystemCapability.Global.I18n
-
-## 导入模块
-
-```TypeScript
-import { i18n } from 'kits/@kit.LocalizationKit';
-```
 
 ## constructor
 
@@ -84,7 +78,7 @@ public parse(text: string, lenientMode: boolean): double
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 8900001 | Invalid parameter. Possible causes: Parameter verification failed. |
+| [8900001](../errorcode-i18n.md#8900001-参数校验错误) | Invalid parameter. Possible causes: Parameter verification failed. |
 
 ## resolvedOptions
 

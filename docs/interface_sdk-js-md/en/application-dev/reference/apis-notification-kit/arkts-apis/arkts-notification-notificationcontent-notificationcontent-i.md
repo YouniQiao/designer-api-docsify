@@ -1,6 +1,6 @@
 # NotificationContent
 
-通知内容。
+Describes the notification contents.
 
 **Since:** 7
 
@@ -16,7 +16,7 @@
 contentType?: notification.ContentType
 ```
 
-通知内容类型。
+Notification content type.
 
 **Type:** notification.ContentType
 
@@ -38,7 +38,8 @@ contentType?: notification.ContentType
 longText?: NotificationLongTextContent
 ```
 
-长文本类型通知内容。当notificationContentType为NOTIFICATION_CONTENT_LONG_TEXT时使用，通知展开后可展示完整长文本内容。
+Long text notification content. This parameter is used when **notificationContentType** is  
+**NOTIFICATION_CONTENT_LONG_TEXT**. The complete long text content can be displayed after the notification is expanded.
 
 **Type:** [NotificationLongTextContent](arkts-notification-notificationmanager-notificationlongtextcontent-t.md)
 
@@ -56,7 +57,8 @@ longText?: NotificationLongTextContent
 multiLine?: NotificationMultiLineContent
 ```
 
-多行类型通知内容。当notificationContentType为NOTIFICATION_CONTENT_MULTILINE时使用，通知展开后以多行列表样式展示。
+Multi-line notification content. This parameter is used when **notificationContentType** is  
+**NOTIFICATION_CONTENT_MULTILINE**. The notification is displayed in a multi-line list style after expansion.
 
 **Type:** [NotificationMultiLineContent](arkts-notification-notificationcontent-notificationmultilinecontent-i.md)
 
@@ -74,7 +76,8 @@ multiLine?: NotificationMultiLineContent
 normal?: NotificationBasicContent
 ```
 
-基本类型通知内容。当notificationContentType为NOTIFICATION_CONTENT_BASIC_TEXT时使用，通知以普通文本样式展示标题和正文。
+Basic notification content. This parameter is used when **notificationContentType** is  
+**NOTIFICATION_CONTENT_BASIC_TEXT**. The notification displays the title and body in a plain text style.
 
 **Type:** [NotificationBasicContent](arkts-notification-notificationmanager-notificationbasiccontent-t.md)
 
@@ -92,7 +95,8 @@ normal?: NotificationBasicContent
 notificationContentType?: notificationManager.ContentType
 ```
 
-通知内容类型，用于指定通知的内容布局类型，决定了通知在通知中心中的展示样式。需与对应类型的通知内容对象配合使用，例如设置为NOTIFICATION_CONTENT_BASIC_TEXT时需同时填充normal字段。
+Notification content type, used to specify the content layout type of the notification, which determines the display style of the notification in the notification center. It must be used together with the corresponding notification content object. For example, when this parameter is set to **NOTIFICATION_CONTENT_BASIC_TEXT**, the  
+**normal** field must be specified at the same time.
 
 **Type:** notificationManager.ContentType
 
@@ -110,7 +114,8 @@ notificationContentType?: notificationManager.ContentType
 picture?: NotificationPictureContent
 ```
 
-图片类型通知内容。当notificationContentType为NOTIFICATION_CONTENT_PICTURE时使用。通知展开后可展示图片。
+Picture notification content. This parameter is used when **notificationContentType** is  
+**NOTIFICATION_CONTENT_PICTURE**. The picture can be displayed after the notification is expanded.
 
 **Type:** [NotificationPictureContent](arkts-notification-notificationcontent-notificationpicturecontent-i.md)
 
@@ -128,7 +133,7 @@ picture?: NotificationPictureContent
 systemLiveView?: NotificationSystemLiveViewContent
 ```
 
-系统实况窗类型通知内容。不支持三方应用直接创建该类型通知，可以由系统代理创建系统实况窗类型通知后，三方应用发布同ID的通知来更新指定内容。
+System live view notification content. Third-party applications are not supported to directly create this type of notification. After a system agent creates a system live view notification, a third-party application can publish a notification with the same ID to update the specified content.
 
 **Type:** [NotificationSystemLiveViewContent](arkts-notification-notificationcontent-notificationsystemliveviewcontent-i.md)
 

@@ -1,11 +1,5 @@
 # disableGwpAsanGrayscale
 
-## 导入模块
-
-```TypeScript
-import { hidebug } from 'kits/@kit.PerformanceAnalysisKit';
-```
-
 ## disableGwpAsanGrayscale
 
 ```TypeScript

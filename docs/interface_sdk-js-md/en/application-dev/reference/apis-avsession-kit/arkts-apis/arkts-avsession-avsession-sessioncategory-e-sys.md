@@ -1,6 +1,6 @@
 # SessionCategory (System API)
 
-表示不同场景会话类别的枚举。
+Session category for different scenes.
 
 **Since:** 22
 
@@ -18,7 +18,7 @@
 CATEGORY_ACTIVE = 1
 ```
 
-允许在系统控制入口显示的会话类别。
+The active session category which can be shown on system control entrance.
 
 **Since:** 22
 
@@ -36,7 +36,7 @@ CATEGORY_ACTIVE = 1
 CATEGORY_NOT_ACTIVE = 2
 ```
 
-禁止在系统控制入口显示的会话类别。
+The session category which is partially integrated with AVSession function.
 
 **Since:** 22
 
@@ -54,7 +54,7 @@ CATEGORY_NOT_ACTIVE = 2
 CATEGORY_ALL = 3
 ```
 
-所有会话类别。
+The all session category including all the applications using AVSession.
 
 **Since:** 22
 
@@ -72,7 +72,7 @@ CATEGORY_ALL = 3
 CATEGORY_HIPLAY = 4
 ```
 
-会话类别是HiPlay
+The session category for HiPlay casting AVSession.
 
 **Since:** 24
 

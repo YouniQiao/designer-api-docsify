@@ -12,9 +12,10 @@ import { emitter } from 'kits/@kit.BasicServicesKit';
 function off(eventId: long): void
 ```
 
-取消事件ID为eventId的所有订阅。
+Unsubscribes from all events with the specified event ID.
 
-使用该接口取消某个事件订阅后，已通过[emit](emitter.emit(eventId: string))接口发布但尚未被执行的事件将被取消。
+After this API is used to unsubscribe from an event, the event that has been published through the   
+[emit](emitter.emit(eventId: string)) API but has not been executed will be unsubscribed.
 
 **Since:** 7
 
@@ -30,12 +31,12 @@ function off(eventId: long): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| eventId | ArkTS-Dyn: number  <br>ArkTS-Sta：long | Yes | 事件ID，由开发者定义，用于辨别事件。 |
+| eventId | ArkTS-Dyn: number  <br>ArkTS-Sta：long | Yes | Event ID. |
 
 ## Examples
 
 ```TypeScript
-// Unregister all callbacks for events whose event ID is 1.
+// Unregister the callbacks of all events whose ID is 1.
 emitter.off(1);
 ```
 
@@ -46,9 +47,10 @@ emitter.off(1);
 function off(eventId: string): void
 ```
 
-取消事件ID为eventId的所有订阅。
+Unsubscribes from all events with the specified event ID.
 
-使用该接口取消某个事件订阅后，已通过[emit](emitter.emit(eventId: string))接口发布但尚未被执行的事件将被取消。
+After this API is used to unsubscribe from an event, the event that has been published through the   
+[emit](emitter.emit(eventId: string)) API but has not been executed will be unsubscribed.
 
 **Since:** 11
 
@@ -64,12 +66,12 @@ function off(eventId: string): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| eventId | string | Yes | 事件ID。 不可为空字符串，大小不超过10240字节，超出部分会被截断。 |
+| eventId | string | Yes | Event ID, which cannot be empty or exceed 10,240 bytes. Excess content will be truncated. |
 
 ## Examples
 
 ```TypeScript
-// Unregister all callbacks for events whose event ID is eventId1.
+// Unregister the callbacks of all events whose ID is eventId1.
 emitter.off('eventId1');
 ```
 
@@ -80,10 +82,12 @@ emitter.off('eventId1');
 function off(eventId: long, callback: Callback<EventData>): void
 ```
 
-取消事件ID为eventId且回调处理函数为callback的订阅。仅当已使用[on](emitter.on(event: InnerEvent, callback: Callback&lt;EventData&gt;))或  
-[once](emitter.once(event: InnerEvent, callback: Callback&lt;EventData&gt;))接口订阅callback时，该接口才生效。
+Unsubscribes from an event with the specified event ID and processed by the specified callback. This API takes effect only when **Callback\&lt;EventData&gt;** has been registered through the   
+[on](emitter.on(event: InnerEvent, callback: Callback&lt;EventData&gt;)) or   
+[once](emitter.once(event: InnerEvent, callback: Callback&lt;EventData&gt;)) API. Otherwise, no processing is performed.
 
-使用该接口取消某个事件订阅后，已通过[emit](emitter.emit(eventId: string))接口发布但尚未被执行的事件将被取消。
+After this API is used to unsubscribe from an event, the event that has been published through the   
+[emit](emitter.emit(eventId: string)) API but has not been executed will be unsubscribed.
 
 **Since:** 10
 
@@ -99,19 +103,34 @@ function off(eventId: long, callback: Callback<EventData>): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| eventId | ArkTS-Dyn: number  <br>ArkTS-Sta：long | Yes | 事件ID，由开发者定义，用于辨别事件。 |
-| callback | [Callback](arkts-basicservices-base-callback-i.md)&lt;EventData&gt; | Yes | 回调函数，指定要取消订阅的事件处理函数，需与订阅时使用的 callback一致。 |
+| eventId | ArkTS-Dyn: number  <br>ArkTS-Sta：long | Yes | Event ID. |
+| callback | [Callback](arkts-basicservices-base-callback-i.md)&lt;EventData&gt; | Yes | Callback to unregister, which must be the same as the callback used during registration. |
 
 ## Examples
+
+ArkTS-Dyn example:
 
 ```TypeScript
 import { Callback } from '@kit.BasicServicesKit';
 
 let callback: Callback<emitter.EventData> = (eventData: emitter.EventData) => {
   console.info(`eventData: ${JSON.stringify(eventData)}`);
-};
-// Unregister all callbacks for events whose event ID is 1. The callback object must be the object used during registration.
+}
+// Cancel the callback handler for the event with eventId 1. The callback object must be the same as the one used for subscription.
 // If the callback has not been registered, no processing is performed.
+emitter.off(1, callback);
+```
+
+ArkTS-Sta example:
+
+```TypeScript
+import { Callback } from '@kit.BasicServicesKit';
+
+let callback: Callback<emitter.EventData> = (eventData: emitter.EventData | undefined | null) => {
+  console.info(`eventData: ${JSON.stringify(eventData?.data)}`);
+}
+// Unregister the callbacks for events whose ID is 1. The callback object must be the object used during registration.
+// If the callback handler has not been subscribed, no processing is performed.
 emitter.off(1, callback);
 ```
 
@@ -122,10 +141,12 @@ emitter.off(1, callback);
 function off(eventId: string, callback: Callback<EventData>): void
 ```
 
-取消事件ID为eventId且回调处理函数为callback的订阅。仅当已使用[on](emitter.on(eventId: string, callback: Callback&lt;EventData&gt;))或  
-[once](emitter.once(eventId: string, callback: Callback&lt;EventData&gt;))接口订阅callback时，该接口才生效。
+Unsubscribes from an event with the specified event ID and processed by the specified callback. This API takes effect only when **Callback\&lt;EventData&gt;** has been registered through the   
+[on](emitter.on(eventId: string, callback: Callback&lt;EventData&gt;)) or   
+[once](emitter.once(eventId: string, callback: Callback&lt;EventData&gt;)) API. Otherwise, no processing is performed.
 
-使用该接口取消某个事件订阅后，已通过[emit](emitter.emit(eventId: string))接口发布但尚未被执行的事件将被取消。
+After this API is used to unsubscribe from an event, the event that has been published through the   
+[emit](emitter.emit(eventId: string)) API but has not been executed will be unsubscribed.
 
 **Since:** 11
 
@@ -141,8 +162,8 @@ function off(eventId: string, callback: Callback<EventData>): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| eventId | string | Yes | 事件ID。 不可为空字符串，大小不超过10240字节，超出部分会被截断。 |
-| callback | [Callback](arkts-basicservices-base-callback-i.md)&lt;EventData&gt; | Yes | 回调函数，指定要取消订阅的事件处理函数，需与订阅时使用的 callback一致。 |
+| eventId | string | Yes | Event ID, which cannot be empty or exceed 10,240 bytes. Excess content will be truncated. |
+| callback | [Callback](arkts-basicservices-base-callback-i.md)&lt;EventData&gt; | Yes | Callback to unregister, which must be the same as the callback used during registration. |
 
 ## Examples
 
@@ -151,8 +172,8 @@ import { Callback } from '@kit.BasicServicesKit';
 
 let callback: Callback<emitter.EventData> = (eventData: emitter.EventData) => {
   console.info(`eventData: ${JSON.stringify(eventData)}`);
-};
-// Unregister all callbacks for events whose event ID is eventId1. The callback object must be the object used during registration.
+}
+// Unregister the callbacks for events whose ID is eventId1. The callback object must be the object used during registration.
 // If the callback has not been registered, no processing is performed.
 emitter.off('eventId1', callback);
 ```
@@ -164,11 +185,12 @@ emitter.off('eventId1', callback);
 function off<T>(eventId: string, callback: Callback<GenericEventData<T>>): void
 ```
 
-取消事件ID为eventId且回调处理函数为callback的订阅。仅当已使用  
-[on](emitter.on&lt;T&gt;(eventId: string, callback: Callback&lt;GenericEventData<T>&gt;&lt;T&gt;>))或  
-[once](emitter.once&lt;T&gt;(eventId: string, callback: Callback&lt;GenericEventData<T>&gt;&lt;T&gt;>))接口订阅callback时，该接口才生效。
+Unsubscribes from an event with the specified event ID and processed by the specified callback. This API takes effect only when **Callback\&lt;EventData&gt;** has been registered through the   
+[on](emitter.on&lt;T&gt;(eventId: string, callback: Callback&lt;GenericEventData<T>&gt;&lt;T&gt;>)) or   
+[once](emitter.once&lt;T&gt;(eventId: string, callback: Callback&lt;GenericEventData<T>&gt;&lt;T&gt;>)) API. Otherwise, no processing is performed.
 
-使用该接口取消某个事件订阅后，已通过[emit](emitter.emit(eventId: string))接口发布但尚未被执行的事件将被取消。
+After this API is used to unsubscribe from an event, the event that has been published through the   
+[emit](emitter.emit(eventId: string)) API but has not been executed will be unsubscribed.
 
 **Since:** 12
 
@@ -184,8 +206,8 @@ function off<T>(eventId: string, callback: Callback<GenericEventData<T>>): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| eventId | string | Yes | 事件ID。 不可为空字符串，大小不超过10240字节，超出部分会被截断。 |
-| callback | [Callback](arkts-basicservices-base-callback-i.md)&lt;GenericEventData&lt;T&gt;&gt; | Yes | 回调函数，指定要取消订阅的事件处理函数，需与订阅时使用的 callback一致。 |
+| eventId | string | Yes | Event ID, which cannot be empty or exceed 10,240 bytes. Excess content will be truncated. |
+| callback | [Callback](arkts-basicservices-base-callback-i.md)&lt;GenericEventData&lt;T&gt;&gt; | Yes | Callback to unregister, which must be the same as the callback used during registration. |
 
 ## Examples
 
@@ -208,8 +230,8 @@ let callback: Callback<emitter.GenericEventData<Sample>> = (eventData: emitter.G
   if (eventData?.data instanceof Sample) {
     eventData?.data?.printCount();
   }
-};
-// Unregister all callbacks for events whose event ID is eventId1. The callback object must be the object used during registration.
+}
+// Unregister the callbacks for events whose ID is eventId1. The callback object must be the object used during registration.
 // If the callback has not been registered, no processing is performed.
 emitter.off('eventId1', callback);
 ```

@@ -4,7 +4,7 @@
 type Blender = BrightnessBlender | HdrBrightnessBlender | HdrDarkenBlender
 ```
 
-混合器类型，用于描述混合效果。
+Blender type, used to describe the blending effect.
 
 **Since:** 13
 
@@ -20,7 +20,7 @@ type Blender = BrightnessBlender | HdrBrightnessBlender | HdrDarkenBlender
 
 | Type | Description |
 | --- | --- |
-| BrightnessBlender | 提亮混合器 |
-| HdrBrightnessBlender | 支持HDR的提亮混合器 [since 20] |
-| HdrDarkenBlender | 支持HDR的压暗混合器 [since 26.0.0] |
+| BrightnessBlender | Brightness blender |
+| HdrBrightnessBlender | HDR-enabled brightness blender [since 20] |
+| HdrDarkenBlender | HDR-adaptive darken blender [since 26.0.0] |
 

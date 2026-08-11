@@ -22,7 +22,7 @@ import { OverlayManager, FrameCallback, ResolvedUIContext, NodeRenderStateChange
 interruptFollowHandMorphDropAnimation(): boolean
 ```
 
-中断挂起的后续变形放下动画并立即触发完成序列。
+Interrupt the pending follow-hand morph drop animation and trigger the finish sequence immediately.
 
 **Since:** 26.0.0
 
@@ -40,5 +40,5 @@ interruptFollowHandMorphDropAnimation(): boolean
 
 | Type | Description |
 | --- | --- |
-| boolean | 后续的变形掉落动画来中断。 |
+| boolean | Returns true if interrupted successfully; false if there is no pending follow-hand morph drop animation to interrupt. |
 

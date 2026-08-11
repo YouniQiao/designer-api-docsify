@@ -1,0 +1,85 @@
+# SerialAttribute
+
+Represents the configuration parameters of a serial port.
+
+**Since:** 19
+
+<!--Device-serialManager-interface SerialAttribute--><!--Device-serialManager-interface SerialAttribute-End-->
+
+**System capability:** SystemCapability.USB.USBManager.Serial
+
+## Modules to Import
+
+```TypeScript
+import { serialManager } from 'kits/@kit.BasicServicesKit';
+```
+
+## baudRate
+
+```TypeScript
+baudRate: BaudRates
+```
+
+Baud rate.
+
+**Type:** [BaudRates](arkts-basicservices-serialmanager-baudrates-e.md)
+
+**Since:** 19
+
+<!--Device-SerialAttribute-baudRate: BaudRates--><!--Device-SerialAttribute-baudRate: BaudRates-End-->
+
+**System capability:** SystemCapability.USB.USBManager.Serial
+
+## dataBits
+
+```TypeScript
+dataBits?: DataBits
+```
+
+Data bits. The default value is **8**.
+
+**Type:** [DataBits](arkts-basicservices-serial-databits-e.md)
+
+**Default:** DATABIT_8
+
+**Since:** 19
+
+<!--Device-SerialAttribute-dataBits?: DataBits--><!--Device-SerialAttribute-dataBits?: DataBits-End-->
+
+**System capability:** SystemCapability.USB.USBManager.Serial
+
+## parity
+
+```TypeScript
+parity?: Parity
+```
+
+Parity check. The default value is **None**, indicating that no parity check is performed.
+
+**Type:** [Parity](arkts-basicservices-serialmanager-parity-e.md)
+
+**Default:** NONE
+
+**Since:** 19
+
+<!--Device-SerialAttribute-parity?: Parity--><!--Device-SerialAttribute-parity?: Parity-End-->
+
+**System capability:** SystemCapability.USB.USBManager.Serial
+
+## stopBits
+
+```TypeScript
+stopBits?: StopBits
+```
+
+Stop bits. The default value is **1**.
+
+**Type:** [StopBits](arkts-basicservices-serialmanager-stopbits-e.md)
+
+**Default:** STOPBIT_1
+
+**Since:** 19
+
+<!--Device-SerialAttribute-stopBits?: StopBits--><!--Device-SerialAttribute-stopBits?: StopBits-End-->
+
+**System capability:** SystemCapability.USB.USBManager.Serial

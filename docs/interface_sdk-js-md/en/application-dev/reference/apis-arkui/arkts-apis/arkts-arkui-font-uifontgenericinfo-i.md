@@ -20,7 +20,7 @@ import { font } from 'kits/@kit.ArkUI';
 adjust: Array<UIFontAdjustInfo>
 ```
 
-字体原本的weight值对应需显示的值。
+Adjust info of the font set.
 
 **Type:** Array&lt;UIFontAdjustInfo&gt;
 
@@ -40,7 +40,7 @@ adjust: Array<UIFontAdjustInfo>
 alias: Array<UIFontAliasInfo>
 ```
 
-别名列表。
+Alias info of the font set.
 
 **Type:** Array&lt;UIFontAliasInfo&gt;
 
@@ -60,7 +60,7 @@ alias: Array<UIFontAliasInfo>
 family: string
 ```
 
-字体集名，字体文件中指定的"family"值。
+Name of the font set.
 
 **Type:** string
 

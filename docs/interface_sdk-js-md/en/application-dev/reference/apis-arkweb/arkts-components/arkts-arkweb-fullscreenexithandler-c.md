@@ -1,10 +1,14 @@
 # FullScreenExitHandler
 
-Define the handler to exit the full screen mode, related to the {@link onFullScreenEnter} event.
+Implements the **FullScreenExitHandler** object to notify you that the **Web** component exits full screen mode.For details about the sample code,see [onFullScreenEnter](./arkts-basic-components-web-events.md#onfullscreenenter9).
 
-**Since:** 18
+> **NOTE：**
+> 
+> - The sample effect is subject to the actual device.
 
-**ArkTS mode:** ArkTS-Dyn only, since version 18.
+**Since:** 9
+
+**ArkTS mode:** ArkTS-Dyn only, since version 9.
 
 <!--Device-unnamed-declare class FullScreenExitHandler--><!--Device-unnamed-declare class FullScreenExitHandler-End-->
 
@@ -16,13 +20,13 @@ Define the handler to exit the full screen mode, related to the {@link onFullScr
 constructor()
 ```
 
-Constructor.
+Constructs a **FullScreenExitHandler** API.
 
-**Since:** 18
+**Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn only, since version 18.
+**ArkTS mode:** ArkTS-Dyn only, since version 9.
 
-**Atomic service API:** This API can be used in atomic services since API version 18.
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-FullScreenExitHandler-constructor()--><!--Device-FullScreenExitHandler-constructor()-End-->
 
@@ -34,13 +38,13 @@ Constructor.
 exitFullScreen(): void
 ```
 
-Exit the full screen mode.
+Exits full screen mode.
 
-**Since:** 18
+**Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn only, since version 18.
+**ArkTS mode:** ArkTS-Dyn only, since version 9.
 
-**Atomic service API:** This API can be used in atomic services since API version 18.
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-FullScreenExitHandler-exitFullScreen(): void--><!--Device-FullScreenExitHandler-exitFullScreen(): void-End-->
 

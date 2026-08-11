@@ -82,7 +82,7 @@ particle: EmitterParticleOptions<PARTICLE>
 
 lifetimeRange表示粒子生命周期取值范围，设置lifetimeRange后粒子的生命周期为[lifetime-lifetimeRange, lifetime+lifetimeRange]中间的一个随机整数。lifetimeRange默认值为0，取值范围为[0, +∞）。设置为负值时取默认值。
 
-**类型：** [EmitterParticleOptions](arkts-arkui-emitterparticleoptions-i.md)&lt;PARTICLE&gt;
+**类型：** [EmitterParticleOptions](../arkts-apis/arkts-arkui-particle-emitterparticleoptions-i.md)&lt;PARTICLE&gt;
 
 **起始版本：** 10
 

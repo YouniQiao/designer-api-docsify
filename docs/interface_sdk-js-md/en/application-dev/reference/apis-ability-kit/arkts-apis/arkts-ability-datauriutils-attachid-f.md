@@ -12,7 +12,7 @@ import { dataUriUtils } from 'kits/@kit.AbilityKit';
 function attachId(uri: string, id: double): string
 ```
 
-将ID附加到uri的路径末尾。
+Attaches an ID to the end of a given URI.
 
 **Since:** 9
 
@@ -26,20 +26,20 @@ function attachId(uri: string, id: double): string
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| uri | string | Yes | 表示uri对象。 |
-| id | ArkTS-Dyn: number  <br>ArkTS-Sta：double | Yes | 表示要附加的ID。 |
+| uri | string | Yes | Target URI object. |
+| id | ArkTS-Dyn: number  <br>ArkTS-Sta：double | Yes | ID to be attached. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| string | 返回附加ID之后的uri对象。 |
+| string | URI object with the ID attached. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
 
 ## Examples
 

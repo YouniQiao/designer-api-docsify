@@ -1,13 +1,10 @@
 # AVMetadataExtractor
 
-元数据获取类，用于从媒体资源中获取元数据、缩略图。在调用AVMetadataExtractor的方法前，需要先通过  
-[media.createAVMetadataExtractor](arkts-media-media-createavmetadataextractor-f.md#createavmetadataextractor)构建一个AVMetadataExtractor实例。
+AVMetadataExtractor is a class for metadata retrieval. It provides APIs to obtain metadata and thumbnails from media assets. Before calling any API of AVMetadataExtractor, you must use   
+[media.createAVMetadataExtractor](arkts-media-media-createavmetadataextractor-f.md#createavmetadataextractor)to create an AVMetadataExtractor instance.
 
-获取音频或视频元数据、视频缩略图的demo可参考：[使用AVMetadataExtractor提取音视频元数据信息(ArkTS)](../../../media/media/avmetadataextractor.md)。
-
-> **说明：**
-> 
-> - 本Interface首批接口从API version 11开始支持。
+For details about the demo of obtaining audio or video metadata and video thumbnails, see   
+[Using AVMetadataExtractor to Extract Audio and Video Metadata (ArkTS)](../../../media/media/avmetadataextractor.md).
 
 **Since:** 11
 
@@ -29,7 +26,7 @@ import { media } from 'kits/@kit.MediaKit';
 cancelAllFetchFrames(): void
 ```
 
-取消正在进行的批量获取缩略图任务（已完成部分不受影响）。
+Cancels the ongoing task of obtaining thumbnails in batches. (The thumbnails that have been obtained are not affected.)
 
 **Since:** 23
 
@@ -47,7 +44,7 @@ cancelAllFetchFrames(): void
 fetchAlbumCover(callback: AsyncCallback<image.PixelMap>): void
 ```
 
-获取音频专辑封面。使用callback异步回调。
+Obtains the cover of the audio album. This API uses an asynchronous callback to return the result.
 
 **Since:** 11
 
@@ -61,14 +58,14 @@ fetchAlbumCover(callback: AsyncCallback<image.PixelMap>): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;image.PixelMap&gt; | Yes | 回调函数。异步返回专辑封面。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;image.PixelMap&gt; | Yes | Callback used to return the album cover. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 5400102 | Operation not allowed. Return by callback. |
-| 5400106 | Unsupported format. Returned by callback. |
+| [5400102](../errorcode-media.md#5400102-unsupported-operation) | Operation not allowed. Return by callback. |
+| [5400106](../errorcode-media.md#5400106-format-not-supported) | Unsupported format. Returned by callback. |
 
 ## fetchAlbumCover
 
@@ -96,8 +93,8 @@ Obtains the cover of the audio album. This API uses an asynchronous callback to 
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 5400102 | Operation not allowed. Return by callback. |
-| 5400106 | Unsupported format. Returned by callback. |
+| [5400102](../errorcode-media.md#5400102-unsupported-operation) | Operation not allowed. Return by callback. |
+| [5400106](../errorcode-media.md#5400106-format-not-supported) | Unsupported format. Returned by callback. |
 
 ## fetchAlbumCover
 
@@ -105,7 +102,7 @@ Obtains the cover of the audio album. This API uses an asynchronous callback to 
 fetchAlbumCover(): Promise<image.PixelMap>
 ```
 
-获取专辑封面。使用Promise异步回调。
+Obtains the cover of the audio album. This API uses a promise to return the result.
 
 **Since:** 11
 
@@ -119,14 +116,14 @@ fetchAlbumCover(): Promise<image.PixelMap>
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;image.PixelMap&gt; | Promise对象。异步返回专辑封面。 |
+| Promise&lt;image.PixelMap&gt; | Promise used to return the album cover. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 5400102 | Operation not allowed. Returned by promise. |
-| 5400106 | Unsupported format. Returned by promise. |
+| [5400102](../errorcode-media.md#5400102-unsupported-operation) | Operation not allowed. Returned by promise. |
+| [5400106](../errorcode-media.md#5400106-format-not-supported) | Unsupported format. Returned by promise. |
 
 ## fetchAlbumCover
 
@@ -154,8 +151,8 @@ Obtains the cover of the audio album. This API uses a promise to return the resu
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 5400102 | Operation not allowed. Returned by promise. |
-| 5400106 | Unsupported format. Returned by promise. |
+| [5400102](../errorcode-media.md#5400102-unsupported-operation) | Operation not allowed. Returned by promise. |
+| [5400106](../errorcode-media.md#5400106-format-not-supported) | Unsupported format. Returned by promise. |
 
 ## fetchFrameByTime
 
@@ -163,7 +160,7 @@ Obtains the cover of the audio album. This API uses a promise to return the resu
 fetchFrameByTime(timeUs: number, options: AVImageQueryOptions, param: PixelMapParams): Promise<image.PixelMap>
 ```
 
-获取视频缩略图。使用Promise异步回调。
+Obtains a video thumbnail. This API uses a promise to return the result.
 
 **Since:** 20
 
@@ -177,24 +174,24 @@ fetchFrameByTime(timeUs: number, options: AVImageQueryOptions, param: PixelMapPa
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| timeUs | number | Yes | 需要获取的缩略图在视频中的时间点，单位为微秒（us）。 |
-| options | [AVImageQueryOptions](arkts-media-media-avimagequeryoptions-e.md) | Yes | 需要获取的缩略图时间点与视频帧的对应关系。 |
-| param | [PixelMapParams](arkts-media-media-pixelmapparams-i.md) | Yes | 需要获取的缩略图的格式参数。 |
+| timeUs | number | Yes | Time of the video for which a thumbnail is to be obtained, in us. |
+| options | [AVImageQueryOptions](arkts-media-media-avimagequeryoptions-e.md) | Yes | Relationship between the time passed in and the video frame. |
+| param | [PixelMapParams](arkts-media-media-pixelmapparams-i.md) | Yes | Format parameters of the thumbnail to be obtained. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;image.PixelMap&gt; | Promise对象，返回视频缩略图对象。 |
+| Promise&lt;image.PixelMap&gt; | Promise used to return the video thumbnail. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 5400102 | Operation not allowed. Returned by promise. |
-| 5411012 | Http cleartext traffic is not permitted.<br>**Applicable version:** 23 and later |
-| 5400106 | Unsupported format. Returned by promise. |
-| 5400108 | Parameter check failed. Returned by promise. |
+| [5400102](../errorcode-media.md#5400102-unsupported-operation) | Operation not allowed. Returned by promise. |
+| [5411012](../errorcode-media.md#5411012-request-not-supported-due-to-http-plaintext-interception) | Http cleartext traffic is not permitted.<br>**Applicable version:** 23 and later |
+| [5400106](../errorcode-media.md#5400106-format-not-supported) | Unsupported format. Returned by promise. |
+| [5400108](../errorcode-media.md#5400108-parameter-value-out-of-range) | Parameter check failed. Returned by promise. |
 
 ## fetchFrameByTime
 
@@ -230,10 +227,10 @@ It will decode the given video resource. Then fetch a picture at @timeUs accordi
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 5400102 | Operation not allowed. Returned by promise. |
-| 5411012 | Http cleartext traffic is not permitted. |
-| 5400106 | Unsupported format. Returned by promise. |
-| 5400108 | Parameter check failed. Returned by promise. |
+| [5400102](../errorcode-media.md#5400102-unsupported-operation) | Operation not allowed. Returned by promise. |
+| [5411012](../errorcode-media.md#5411012-request-not-supported-due-to-http-plaintext-interception) | Http cleartext traffic is not permitted. |
+| [5400106](../errorcode-media.md#5400106-format-not-supported) | Unsupported format. Returned by promise. |
+| [5400108](../errorcode-media.md#5400108-parameter-value-out-of-range) | Parameter check failed. Returned by promise. |
 
 ## fetchFrameByTimeWithTimeout
 
@@ -249,7 +246,7 @@ fetchFrameByTimeWithTimeout(timeUs: long, options: AVImageQueryOptions, param: P
       timeoutMs: long): Promise<image.PixelMap | undefined>
 ```
 
-获取视频缩略图，支持设置缩略图获取最大耗时timeoutMs。使用Promise异步回调。
+Obtains a video thumbnail. You can set the maximum timeout interval (**timeoutMs**) for obtaining the thumbnail. This API uses a promise to return the result.
 
 **Since:** 26.0.0
 
@@ -265,26 +262,26 @@ fetchFrameByTimeWithTimeout(timeUs: long, options: AVImageQueryOptions, param: P
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| timeUs | ArkTS-Dyn: number  <br>ArkTS-Sta：long | Yes | 需要获取的缩略图在视频中的时间点，单位为微秒（μs）。 |
-| options | [AVImageQueryOptions](arkts-media-media-avimagequeryoptions-e.md) | Yes | 需要获取的缩略图时间点与视频帧的对应关系。 |
-| param | [PixelMapParams](arkts-media-media-pixelmapparams-i.md) | Yes | 需要获取的缩略图的格式参数。 |
-| timeoutMs | ArkTS-Dyn: number  <br>ArkTS-Sta：long | Yes | 获取缩略图的最大等待时间，时间范围为(0, 20000]，单位为毫秒（ms）。&lt;br&gt;在指定的超时时间内未获取缩略图则返回错误码5400104。 |
+| timeUs | ArkTS-Dyn: number  <br>ArkTS-Sta：long | Yes | Time of the video for which a thumbnail is to be obtained, in μs. |
+| options | [AVImageQueryOptions](arkts-media-media-avimagequeryoptions-e.md) | Yes | Relationship between the time passed in and the video frame. |
+| param | [PixelMapParams](arkts-media-media-pixelmapparams-i.md) | Yes | Format parameters of the thumbnail to be obtained. |
+| timeoutMs | ArkTS-Dyn: number  <br>ArkTS-Sta：long | Yes | Timeout interval for obtaining the thumbnail. The value range is (0, 20000], in milliseconds.&lt;br&gt;If the thumbnail is not obtained within the specified timeout interval, error code 5400104 is returned. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;image.PixelMap \| undefined&gt; | Promise对象，返回视频缩略图对象。 |
+| Promise&lt;image.PixelMap \| undefined&gt; | Promise used to return the video thumbnail. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 5400102 | Operation not allowed. Returned by promise. |
-| 5411012 | Http cleartext traffic is not permitted. |
-| 5400106 | Unsupported format. Returned by promise. |
-| 5400104 | Operation timeout. |
-| 5400108 | Parameter check failed. Returned by promise. |
+| [5400102](../errorcode-media.md#5400102-unsupported-operation) | Operation not allowed. Returned by promise. |
+| [5411012](../errorcode-media.md#5411012-request-not-supported-due-to-http-plaintext-interception) | Http cleartext traffic is not permitted. |
+| [5400106](../errorcode-media.md#5400106-format-not-supported) | Unsupported format. Returned by promise. |
+| [5400104](../errorcode-media.md#5400104-operation-timeout) | Operation timeout. |
+| [5400108](../errorcode-media.md#5400108-parameter-value-out-of-range) | Parameter check failed. Returned by promise. |
 
 ## fetchFramesByTimes
 
@@ -300,13 +297,16 @@ fetchFramesByTimes(timesUs: long[], queryOption: AVImageQueryOptions, param: Pix
         callback: OnFrameFetched): void
 ```
 
-批量获取视频缩略图。使用Callback异步回调。
+Obtains video thumbnails in batches. This API uses an asynchronous callback to return the result.
 
-> **说明：**
+> **NOTE：**
 > 
-> - 先对给定的视频资源进行解码，随后依据提供的参数options和param，从timesUs数组中的每个时间点提取图像帧。
+> - The given video resource is decoded first, and then image frames are extracted from each time point in the
+> **timesUs** array based on the provided **options** and **param**.
 > 
-> - 当每一次图像提取完成时，系统将调用回调函数并传递提取结果。请注意，回调函数的执行顺序会与timesUs数组中时间点的先后顺序不一致。
+> - When each image extraction is complete, the system calls the callback function and passes the extraction
+> result. Note that the execution order of the callback function may be inconsistent with the time points in the
+> **timesUs** array.
 
 **Since:** 23
 
@@ -322,21 +322,21 @@ fetchFramesByTimes(timesUs: long[], queryOption: AVImageQueryOptions, param: Pix
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| timesUs | ArkTS-Dyn: number[]  <br>ArkTS-Sta：long[] | Yes | 需要获取的所有缩略图在视频中的时间点集合。&lt;br&gt;时间单位为微秒（μs），数组长度取值范围为(0, 4096]。 |
-| queryOption | [AVImageQueryOptions](arkts-media-media-avimagequeryoptions-e.md) | Yes | 需要获取的缩略图时间点与视频帧的对应关系。 |
-| param | [PixelMapParams](arkts-media-media-pixelmapparams-i.md) | Yes | 需要获取的缩略图的格式参数。 |
-| callback | [OnFrameFetched](arkts-media-media-onframefetched-t.md) | Yes | 需要返回的缩略图信息及可能的异常类型。&lt;br&gt;异常类型请参考具体返回的错误码信息。 |
+| timesUs | ArkTS-Dyn: number[]  <br>ArkTS-Sta：long[] | Yes | Set of time points of all thumbnails to be obtained in the video.&lt;br&gt;The unit is microsecond (μs), and the value range of the array length is (0, 4096]. |
+| queryOption | [AVImageQueryOptions](arkts-media-media-avimagequeryoptions-e.md) | Yes | Relationship between the time passed in and the video frame. |
+| param | [PixelMapParams](arkts-media-media-pixelmapparams-i.md) | Yes | Format parameters of the thumbnail to be obtained. |
+| callback | [OnFrameFetched](arkts-media-media-onframefetched-t.md) | Yes | Thumbnail information to be returned and possible exception types.&lt;br&gt;For details about the exception types, see the returned error code information. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 5400102 | Operation not allowed. Returned by callback. |
-| 5411012 | Http cleartext not permitted. |
-| 5400106 | Unsupported format. Returned by callback. |
-| 5400104 | Fetch timeout, Returned by callback. |
-| 5400105 | Service died. |
-| 5400108 | Parameter check failed. e.g. The size of timesUs is larger than 4096. |
+| [5400102](../errorcode-media.md#5400102-unsupported-operation) | Operation not allowed. Returned by callback. |
+| [5411012](../errorcode-media.md#5411012-request-not-supported-due-to-http-plaintext-interception) | Http cleartext not permitted. |
+| [5400106](../errorcode-media.md#5400106-format-not-supported) | Unsupported format. Returned by callback. |
+| [5400104](../errorcode-media.md#5400104-operation-timeout) | Fetch timeout, Returned by callback. |
+| [5400105](../errorcode-media.md#5400105-play-service-dead) | Service died. |
+| [5400108](../errorcode-media.md#5400108-parameter-value-out-of-range) | Parameter check failed. e.g. The size of timesUs is larger than 4096. |
 
 ## fetchFramesByTimesWithTimeout
 
@@ -352,15 +352,19 @@ fetchFramesByTimesWithTimeout(timesUs: long[], queryOption: AVImageQueryOptions,
       timeoutMs: long, callback: OnFrameFetched): void
 ```
 
-批量获取视频缩略图，支持设置每一帧缩略图获取最大耗时timeoutMs。使用Callback异步回调。
+Obtains video thumbnails in batches. You can set the maximum timeout interval (**timeoutMs**) for obtaining each thumbnail. This API uses an asynchronous callback to return the result.
 
-> **说明：**
+> **NOTE：**
 > 
-> - 先对给定的视频资源进行解码，随后依据提供的参数options和param，从timesUs数组中的每个时间点提取图像帧。
+> - The given video resource is decoded first, and then image frames are extracted from each time point in the
+> **timesUs** array based on the provided **options** and **param**.
 > 
-> - 当每一次图像提取完成时，系统将调用回调函数并传递提取结果。请注意，回调函数的执行顺序会与timesUs数组中时间点的先后顺序不一致。
+> - When each image extraction is complete, the system calls the callback function and passes the extraction
+> result. Note that the execution order of the callback function may be inconsistent with the time points in the
+> **timesUs** array.
 > 
-> - 超时时间timeoutMs是针对每一帧的获取时间，而非整个批量抽帧流程。
+> - The **timeoutMs** parameter indicates the maximum timeout interval for obtaining each thumbnail frame, not
+> the entire batch thumbnail extraction process.
 
 **Since:** 26.0.0
 
@@ -376,22 +380,22 @@ fetchFramesByTimesWithTimeout(timesUs: long[], queryOption: AVImageQueryOptions,
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| timesUs | ArkTS-Dyn: number[]  <br>ArkTS-Sta：long[] | Yes | 需要获取的所有缩略图在视频中的时间点集合。&lt;br&gt;时间单位为微秒（μs），数组长度取值范围为(0, 4096]。 |
-| queryOption | [AVImageQueryOptions](arkts-media-media-avimagequeryoptions-e.md) | Yes | 需要获取的缩略图时间点与视频帧的对应关系。 |
-| param | [PixelMapParams](arkts-media-media-pixelmapparams-i.md) | Yes | 需要获取的缩略图的格式参数。 |
-| timeoutMs | ArkTS-Dyn: number  <br>ArkTS-Sta：long | Yes | 获取每一帧缩略图的最大等待时间，时间范围为(0, 20000]，单位为毫秒（ms）。&lt;br&gt;对于每一帧缩略图，在指定的超时时间内未获取缩略图则返回错误码5400104。 |
-| callback | [OnFrameFetched](arkts-media-media-onframefetched-t.md) | Yes | 需要返回的缩略图信息及可能的异常类型。&lt;br&gt;异常类型请参考具体返回的错误码信息。 |
+| timesUs | ArkTS-Dyn: number[]  <br>ArkTS-Sta：long[] | Yes | Set of time points of all thumbnails to be obtained in the video.&lt;br&gt;The unit is microsecond (μs), and the value range of the array length is (0, 4096]. |
+| queryOption | [AVImageQueryOptions](arkts-media-media-avimagequeryoptions-e.md) | Yes | Relationship between the time passed in and the video frame. |
+| param | [PixelMapParams](arkts-media-media-pixelmapparams-i.md) | Yes | Format parameters of the thumbnail to be obtained. |
+| timeoutMs | ArkTS-Dyn: number  <br>ArkTS-Sta：long | Yes | Timeout interval for obtaining each thumbnail. The value range is (0, 20000], in milliseconds.&lt;br&gt;If a thumbnail is not obtained within the specified timeout interval, error code 5400104 is returned. |
+| callback | [OnFrameFetched](arkts-media-media-onframefetched-t.md) | Yes | Thumbnail information to be returned and possible exception types.&lt;br&gt;For details about the exception types, see the returned error code information. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 5400102 | Operation not allowed. Returned by callback. |
-| 5411012 | Http cleartext not permitted. |
-| 5400106 | Unsupported format. Returned by callback. |
-| 5400104 | Fetch timeout, Returned by callback. |
-| 5400105 | Service died. |
-| 5400108 | Parameter check failed. e.g. The size of timesUs is larger than 4096. |
+| [5400102](../errorcode-media.md#5400102-unsupported-operation) | Operation not allowed. Returned by callback. |
+| [5411012](../errorcode-media.md#5411012-request-not-supported-due-to-http-plaintext-interception) | Http cleartext not permitted. |
+| [5400106](../errorcode-media.md#5400106-format-not-supported) | Unsupported format. Returned by callback. |
+| [5400104](../errorcode-media.md#5400104-operation-timeout) | Fetch timeout, Returned by callback. |
+| [5400105](../errorcode-media.md#5400105-play-service-dead) | Service died. |
+| [5400108](../errorcode-media.md#5400108-parameter-value-out-of-range) | Parameter check failed. e.g. The size of timesUs is larger than 4096. |
 
 ## fetchMetadata
 
@@ -399,7 +403,7 @@ fetchFramesByTimesWithTimeout(timesUs: long[], queryOption: AVImageQueryOptions,
 fetchMetadata(callback: AsyncCallback<AVMetadata>): void
 ```
 
-获取媒体元数据。使用callback异步回调。
+Obtains the media metadata. This API uses an asynchronous callback to return the result.
 
 **Since:** 11
 
@@ -413,15 +417,15 @@ fetchMetadata(callback: AsyncCallback<AVMetadata>): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;AVMetadata&gt; | Yes | 回调函数。异步返回音视频元数据对象（AVMetadata）。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;AVMetadata&gt; | Yes | Callback used to return the result, which is an AVMetadata instance. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 5400102 | Operation not allowed. Returned by callback. |
-| 5411012 | Http cleartext traffic is not permitted.<br>**Applicable version:** 23 and later |
-| 5400106 | Unsupported format. Returned by callback. |
+| [5400102](../errorcode-media.md#5400102-unsupported-operation) | Operation not allowed. Returned by callback. |
+| [5411012](../errorcode-media.md#5411012-request-not-supported-due-to-http-plaintext-interception) | Http cleartext traffic is not permitted.<br>**Applicable version:** 23 and later |
+| [5400106](../errorcode-media.md#5400106-format-not-supported) | Unsupported format. Returned by callback. |
 
 ## fetchMetadata
 
@@ -449,9 +453,9 @@ Obtains media metadata. This API uses an asynchronous callback to return the res
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 5400102 | Operation not allowed. Returned by callback. |
-| 5411012 | Http cleartext traffic is not permitted. |
-| 5400106 | Unsupported format. Returned by callback. |
+| [5400102](../errorcode-media.md#5400102-unsupported-operation) | Operation not allowed. Returned by callback. |
+| [5411012](../errorcode-media.md#5411012-request-not-supported-due-to-http-plaintext-interception) | Http cleartext traffic is not permitted. |
+| [5400106](../errorcode-media.md#5400106-format-not-supported) | Unsupported format. Returned by callback. |
 
 ## fetchMetadata
 
@@ -459,7 +463,7 @@ Obtains media metadata. This API uses an asynchronous callback to return the res
 fetchMetadata(): Promise<AVMetadata>
 ```
 
-获取媒体元数据。使用Promise异步回调。
+Obtains the media metadata. This API uses a promise to return the result.
 
 **Since:** 11
 
@@ -473,15 +477,15 @@ fetchMetadata(): Promise<AVMetadata>
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;AVMetadata&gt; | Promise对象。异步返回音视频元数据对象（AVMetadata）。 |
+| Promise&lt;AVMetadata&gt; | Promise used to return the result, which is an AVMetadata instance. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 5400102 | Operation not allowed. Returned by promise. |
-| 5411012 | Http cleartext traffic is not permitted.<br>**Applicable version:** 23 and later |
-| 5400106 | Unsupported format. Returned by promise. |
+| [5400102](../errorcode-media.md#5400102-unsupported-operation) | Operation not allowed. Returned by promise. |
+| [5411012](../errorcode-media.md#5411012-request-not-supported-due-to-http-plaintext-interception) | Http cleartext traffic is not permitted.<br>**Applicable version:** 23 and later |
+| [5400106](../errorcode-media.md#5400106-format-not-supported) | Unsupported format. Returned by promise. |
 
 ## fetchMetadata
 
@@ -509,9 +513,9 @@ Obtains media metadata. This API uses a promise to return the result.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 5400102 | Operation not allowed. Returned by promise. |
-| 5411012 | Http cleartext traffic is not permitted. |
-| 5400106 | Unsupported format. Returned by promise. |
+| [5400102](../errorcode-media.md#5400102-unsupported-operation) | Operation not allowed. Returned by promise. |
+| [5411012](../errorcode-media.md#5411012-request-not-supported-due-to-http-plaintext-interception) | Http cleartext traffic is not permitted. |
+| [5400106](../errorcode-media.md#5400106-format-not-supported) | Unsupported format. Returned by promise. |
 
 ## fetchMetadataWithTimeout
 
@@ -525,7 +529,7 @@ ArkTS-Sta:
 fetchMetadataWithTimeout(timeoutMs: long): Promise<AVMetadata | undefined>
 ```
 
-获取媒体元数据，支持设置获取最大耗时timeoutMs。使用Promise异步回调。
+Obtains the media metadata. You can set the maximum timeout interval (**timeoutMs**) for obtaining the metadata. This API uses a promise to return the result.
 
 **Since:** 26.0.0
 
@@ -541,23 +545,23 @@ fetchMetadataWithTimeout(timeoutMs: long): Promise<AVMetadata | undefined>
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| timeoutMs | ArkTS-Dyn: number  <br>ArkTS-Sta：long | Yes | 获取媒体元数据的最大等待时间，时间范围为(0, 20000]，单位为毫秒（ms）。&lt;br&gt;在给定的超时时间内未返回元数据则返回错误码5400104。 |
+| timeoutMs | ArkTS-Dyn: number  <br>ArkTS-Sta：long | Yes | Timeout interval for obtaining media metadata. The value range is (0, 20000], in milliseconds.&lt;br&gt;If no metadata is returned within the specified timeout interval, error code 5400104 is returned. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;AVMetadata \| undefined&gt; | Promise对象，异步返回音视频元数据对象（AVMetadata）。 |
+| Promise&lt;AVMetadata \| undefined&gt; | Promise used to return the audio and video metadata object ( **AVMetadata**) asynchronously. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 5400102 | Operation not allowed. Returned by promise. |
-| 5411012 | Http cleartext traffic is not permitted. |
-| 5400106 | Unsupported format. Returned by promise. |
-| 5400104 | Operation timeout. |
-| 5400108 | Parameter check failed. Returned by promise. |
+| [5400102](../errorcode-media.md#5400102-unsupported-operation) | Operation not allowed. Returned by promise. |
+| [5411012](../errorcode-media.md#5411012-request-not-supported-due-to-http-plaintext-interception) | Http cleartext traffic is not permitted. |
+| [5400106](../errorcode-media.md#5400106-format-not-supported) | Unsupported format. Returned by promise. |
+| [5400104](../errorcode-media.md#5400104-operation-timeout) | Operation timeout. |
+| [5400108](../errorcode-media.md#5400108-parameter-value-out-of-range) | Parameter check failed. Returned by promise. |
 
 ## release
 
@@ -565,7 +569,7 @@ fetchMetadataWithTimeout(timeoutMs: long): Promise<AVMetadata | undefined>
 release(callback: AsyncCallback<void>): void
 ```
 
-释放资源。使用callback异步回调。
+Releases this AVMetadataExtractor instance. This API uses an asynchronous callback to return the result.
 
 **Since:** 11
 
@@ -579,13 +583,13 @@ release(callback: AsyncCallback<void>): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | 回调函数。当释放资源成功，err为undefined，否则为错误对象。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined**; otherwise, **err** is an error object. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 5400102 | Operation not allowed. Returned by callback. |
+| [5400102](../errorcode-media.md#5400102-unsupported-operation) | Operation not allowed. Returned by callback. |
 
 ## release
 
@@ -593,7 +597,7 @@ release(callback: AsyncCallback<void>): void
 release(): Promise<void>
 ```
 
-释放资源。使用Promise异步回调。
+Releases this AVMetadataExtractor instance. This API uses a promise to return the result.
 
 **Since:** 11
 
@@ -607,13 +611,13 @@ release(): Promise<void>
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | 异步方式释放资源release方法的Promise返回值。 |
+| Promise&lt;void&gt; | Promise that returns no value. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 5400102 | Operation not allowed. Returned by promise. |
+| [5400102](../errorcode-media.md#5400102-unsupported-operation) | Operation not allowed. Returned by promise. |
 
 ## setUrlSource
 
@@ -621,9 +625,9 @@ release(): Promise<void>
 setUrlSource(url: string, headers?: Record<string, string>): void
 ```
 
-网络点播资源地址描述，通过该接口设置数据源。只支持获取网络  
-[fetchMetadata](arkts-media-media-avmetadataextractor-i.md#fetchmetadata)（元数据）和  
-[fetchFrameByTime](arkts-media-media-avmetadataextractor-i.md#fetchframebytime)（缩略图），在获取之前，必须设置媒体资源URL。
+Sets the data source for a network on-demand resource. Only network metadata (  
+[fetchMetadata](arkts-media-media-avmetadataextractor-i.md#fetchmetadata)) and thumbnails (  
+[fetchFrameByTime](arkts-media-media-avmetadataextractor-i.md#fetchframebytime)) can be obtained. The media resource URL must be set before the retrieval.
 
 **Since:** 20
 
@@ -637,8 +641,8 @@ setUrlSource(url: string, headers?: Record<string, string>): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| url | string | Yes | 媒体资源URL。&lt;br/&gt;1. 支持的视频格式包括：mp4、mpeg-ts、mkv。&lt;br/&gt;2. 支持的音频格式包括：m4a、aac、mp3、ogg、wav、flac、amr。 &lt;br/&gt;**支持路径示例**：&lt;br/&gt;1. http网络播放：`http://xx`。&lt;br/&gt;2. https网络播放：`https://xx`。&lt;br/&gt;**说明：** 不支持设置HLS/Dash、直播资源。 |
-| headers | [Record](../../apis-default/arkts-apis/arkts-record-t.md)&lt;string, string&gt; | No | 支持访问网络资源HttpHeader自定义。默认为空。 |
+| url | string | Yes | URL of the media resource.&lt;br&gt;1. The video formats MP4, MPEG-TS, and MKV are supported.&lt; br&gt;2. The audio formats M4A, AAC, MP3, OGG, WAV, FLAC, and AMR are supported.&lt;br&gt; **Example of supported URLs**:&lt;br&gt;1. HTTP: http://xx&lt;br&gt;2. HTTPS: https://xx&lt;br&gt;Note: HLS/DASH and live streaming resources are not supported. |
+| headers | [Record](../../apis-default/arkts-apis/arkts-record-t.md)&lt;string, string&gt; | No | Custom HTTP headers for accessing the network resource. The default value is empty. |
 
 ## dataSrc
 
@@ -646,11 +650,11 @@ setUrlSource(url: string, headers?: Record<string, string>): void
 dataSrc ?: AVDataSrcDescriptor
 ```
 
-流式媒体资源描述，通过该属性设置数据源。在获取元数据之前，必须设置数据源属性，只能设置fdSrc和dataSrc的其中一个。
+Streaming media resource descriptor, which specifies the data source. Before obtaining metadata, you must set the data source through either **fdSrc** or **dataSrc**.
 
-当应用从远端获取音视频媒体文件，在应用未下载完整音视频资源时，可以设置dataSrc提前获取该资源的元数据。
+When an application obtains a media file from the remote, you can set **dataSrc** to obtain the metadata before the application finishes the downloading.
 
-**Type:** [AVDataSrcDescriptor](arkts-media-multimedia-media-avdatasrcdescriptor-i.md)
+**Type:** [AVDataSrcDescriptor](arkts-media-media-avdatasrcdescriptor-i.md)
 
 **Since:** 11
 
@@ -666,17 +670,15 @@ dataSrc ?: AVDataSrcDescriptor
 fdSrc ?: AVFileDescriptor
 ```
 
-媒体文件描述，通过该属性设置数据源。在获取元数据之前，必须设置数据源属性，只能设置fdSrc和dataSrc的其中一个。
+Media file descriptor, which specifies the data source. Before obtaining metadata, you must set the data source through either **fdSrc** or **dataSrc**.
 
-**使用示例**：
+There is a media file that stores continuous assets, the address offset is 0, and the byte length is 100. Its file descriptor is **AVFileDescriptor { fd = resourceHandle; offset = 0; length = 100; }**.
 
-假设一个连续存储的媒体文件，地址偏移：0，字节长度：100。其文件描述为AVFileDescriptor { fd = 资源句柄; offset = 0; length = 100; }。
+**NOTE：**
 
-**说明：**
+After the resource handle (FD) is transferred to an AVMetadataExtractor instance, do not use the resource handle to perform other read and write operations, including but not limited to transferring this handle to other AVPlayer, AVMetadataExtractor, AVImageGenerator, or AVTranscoder instance. Competition occurs when multiple AVMetadataExtractor use the same resource handle to read and write files at the same time, resulting in errors in obtaining data.
 
-将资源句柄（fd）传递给AVMetadataExtractor实例之后，不允许通过该资源句柄做其他读写操作，包括但不限于将同一个资源句柄传递给多个AVPlayer/AVMetadataExtractor/AVImageGenerator/AVTranscoder。同一时间通过同一个资源句柄读写文件时存在竞争关系，将导致音视频元数据获取异常。
-
-**Type:** [AVFileDescriptor](arkts-media-multimedia-media-avfiledescriptor-i.md)
+**Type:** [AVFileDescriptor](arkts-media-media-avfiledescriptor-i.md)
 
 **Since:** 11
 

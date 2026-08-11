@@ -4,7 +4,7 @@
 export type DriverExtensionContext = _DriverExtensionContext
 ```
 
-DriverExtensionAbility的上下文环境。
+Define a DriverExtensionContext for store context.
 
 **Since:** 10
 

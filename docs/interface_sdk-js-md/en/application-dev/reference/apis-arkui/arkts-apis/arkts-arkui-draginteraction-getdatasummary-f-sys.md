@@ -12,7 +12,7 @@ import { dragInteraction } from 'kits/@kit.ArkUI';
 function getDataSummary(): Array<Summary>
 ```
 
-获取所有拖拽对象的摘要。
+Obtains the data summary of all dragged objects.
 
 **Since:** 11
 
@@ -28,13 +28,13 @@ function getDataSummary(): Array<Summary>
 
 | Type | Description |
 | --- | --- |
-| Array&lt;Summary&gt; | 所有拖拽对象的数据摘要，包含拖拽对象的类型和数据长度。 |
+| Array&lt;Summary&gt; | Data summary of all dragged objects, including their type and data length. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 202 | Permission verification failed. A non-system application calls a system API. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
 
 ## Examples
 

@@ -1,6 +1,6 @@
 # BundlePackInfo (System API)
 
-应用包信息
+The bundle pack info class.
 
 **Since:** 9
 
@@ -18,7 +18,7 @@
 readonly packages: Array<PackageConfig>
 ```
 
-pack.info的包信息。
+Package configuration information in the **pack.info** file.
 
 **Type:** Array&lt;PackageConfig&gt;
 
@@ -38,7 +38,7 @@ pack.info的包信息。
 readonly summary: PackageSummary
 ```
 
-pack.info中的包摘要信息。
+Package summary information in the **pack.info** file.
 
 **Type:** [PackageSummary](arkts-ability-freeinstall-packagesummary-t-sys.md)
 

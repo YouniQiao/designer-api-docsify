@@ -1,6 +1,6 @@
 # BarrierStyle
 
-barrier参数，用于定义一条barrier的id、方向和生成时所依赖的组件。
+Specifies the BarrierStyle of relative container
 
 **Since:** 23
 
@@ -16,7 +16,7 @@ barrier参数，用于定义一条barrier的id、方向和生成时所依赖的�
 direction: BarrierDirection
 ```
 
-指定barrier的方向。垂直方向（TOP，BOTTOM）的barrier仅能作为组件的水平方向锚点，用作垂直方向锚点时值为0；水平方向（LEFT，RIGHT）的barrier仅能作为组件的垂直方向锚点，用作水平方向锚点时值为0。默认值：BarrierDirection.LEFT，非法值：按默认值处理。
+Specifies the direction of barrier
 
 **Type:** [BarrierDirection](arkts-arkui-relativecontainer-barrierdirection-e.md)
 
@@ -36,7 +36,7 @@ direction: BarrierDirection
 id: string
 ```
 
-barrier的id，必须是唯一的并且不可与容器内组件重名。
+Specifies the id of barrier
 
 **Type:** string
 
@@ -56,7 +56,7 @@ barrier的id，必须是唯一的并且不可与容器内组件重名。
 referencedId: Array<string>
 ```
 
-指定生成barrier所依赖的组件。
+Specifies the referencedId of barrier
 
 **Type:** Array&lt;string&gt;
 

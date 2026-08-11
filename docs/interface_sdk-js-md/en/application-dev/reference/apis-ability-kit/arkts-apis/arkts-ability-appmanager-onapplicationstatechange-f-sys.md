@@ -12,7 +12,7 @@ import { appManager } from 'kits/@kit.AbilityKit';
 function onApplicationStateChange(observer: ApplicationStateObserver, filter: AppStateFilter): int
 ```
 
-注册应用程序的状态监听器，并通过设置过滤条件来筛选所需监听的应用生命周期变化事件。
+Register application state observer with filter.
 
 **Since:** 23
 
@@ -30,20 +30,20 @@ function onApplicationStateChange(observer: ApplicationStateObserver, filter: Ap
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| observer | [ApplicationStateObserver](arkts-ability-applicationstateobserver-c.md) | Yes | 应用状态监听器，用于监听应用的生命周期变化。 |
-| filter | [AppStateFilter](arkts-ability-appmanager-appstatefilter-i-sys.md) | Yes | 应用生命周期变化事件的过滤器。 |
+| observer | [ApplicationStateObserver](arkts-ability-applicationstateobserver-c.md) | Yes | The application state observer. |
+| filter | [AppStateFilter](arkts-ability-appmanager-appstatefilter-i-sys.md) | Yes | Filter configuration for targeted monitoring. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| int | 已注册监听器ID。 |
+| int | Returns the number code of the observer. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 16000050 | Internal error. Possible causes: 1. Failed to connect to the system service; 2. The system service failed to communicate with dependency module. |
-| 201 | Permission denied. |
-| 202 | Not system application. |
+| [16000050](../errorcode-ability.md#16000050-internal-error) | Internal error. Possible causes: 1. Failed to connect to the system service; 2. The system service failed to communicate with dependency module. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system application. |
 

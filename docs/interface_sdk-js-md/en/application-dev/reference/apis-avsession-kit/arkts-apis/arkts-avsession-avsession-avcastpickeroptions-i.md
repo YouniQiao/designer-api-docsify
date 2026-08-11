@@ -1,6 +1,6 @@
 # AVCastPickerOptions
 
-拉起的投播组件包含的配置属性。
+An option to make different picker usage
 
 **Since:** 14
 
@@ -22,7 +22,7 @@ import { avSession } from 'kits/@kit.AVSessionKit';
 menuPosition?: MenuPosition
 ```
 
-当pickerStyle设置为STYLE_MENU时，可以设置弹出菜单的位置。
+Set the popup menu position if pickerstyple is set to STYLE_MENU.
 
 **Type:** [MenuPosition](arkts-avsession-avsession-menuposition-i.md)
 
@@ -40,7 +40,7 @@ menuPosition?: MenuPosition
 pickerStyle?: AVCastPickerStyle
 ```
 
-设置组件样式。
+Set the picker style.
 
 **Type:** [AVCastPickerStyle](arkts-avsession-multimedia-avcastpickerparam-avcastpickerstyle-e.md)
 
@@ -58,9 +58,7 @@ pickerStyle?: AVCastPickerStyle
 sessionType?: AVSessionType
 ```
 
-会话类型，默认值为audio。
-
-当前仅支持的会话类型有audio和video。如果传入voice_call或video_call，将默认按照传入audio处理。
+Indicates current session type to show different picker ui.If not set, default value is 'audio'.
 
 **Type:** [AVSessionType](arkts-avsession-avsession-avsessiontype-t.md)
 

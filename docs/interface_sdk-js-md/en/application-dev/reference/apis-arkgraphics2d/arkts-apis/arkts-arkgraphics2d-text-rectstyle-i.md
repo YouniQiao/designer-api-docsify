@@ -1,6 +1,6 @@
 # RectStyle
 
-矩形框样式。
+Describes the style of a rectangle.
 
 **Since:** 12
 
@@ -22,7 +22,7 @@ import { text } from 'kits/@kit.ArkGraphics2D';
 color: common2D.Color
 ```
 
-矩形框的颜色。
+Color of the rectangle.
 
 **Type:** common2D.Color
 
@@ -42,7 +42,7 @@ color: common2D.Color
 leftBottomRadius: double
 ```
 
-矩形框的左下半径，单位为物理像素px。
+Lower left radius of the rectangle, in physical pixels (px).
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：double
 
@@ -62,7 +62,7 @@ leftBottomRadius: double
 leftTopRadius: double
 ```
 
-矩形框的左上半径，单位为物理像素px。
+Upper left radius of the rectangle, in physical pixels (px).
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：double
 
@@ -82,7 +82,7 @@ leftTopRadius: double
 rightBottomRadius: double
 ```
 
-矩形框的右下半径，单位为物理像素px。
+Lower right radius of the rectangle, in physical pixels (px).
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：double
 
@@ -102,7 +102,7 @@ rightBottomRadius: double
 rightTopRadius: double
 ```
 
-矩形框的右上半径，单位为物理像素px。
+Upper right radius of the rectangle, in physical pixels (px).
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：double
 

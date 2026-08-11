@@ -87,7 +87,12 @@ GameController_ErrorCode OH_GamePad_LeftShoulder_RegisterButtonInputMonitor(Game
 
 | 类型 | 说明 |
 | -- | -- |
-| [GameController_ErrorCode](capi-game-controller-type-h.md#gamecontroller_errorcode) | <ul><li>如果执行成功，返回[GAME_CONTROLLER_SUCCESS](capi-game-controller-type-h.md#gamecontroller_errorcode)。</li><br>     <li>如果参数inputMonitorCallback为null，返回[GAME_CONTROLLER_PARAM_ERROR](capi-game-controller-type-h.md#gamecontroller_errorcode)。</li></ul> |
+| [GameController_ErrorCode](capi-game-controller-type-h.md#gamecontroller_errorcode) | <ul><li>如果执行成功，返回[GAME_CONTROLLER_SUCCESS](capi-game-controller-type-h.md#gamecontroller_errorcode)。</li>     <li>如果参数inputMonitorCallback为null，返回<br>     [GAME_CONTROLLER_PARAM_ERROR](capi-game-controller-type-h.md#gamecontroller_errorcode)。</li></ul> |
+
+**参考：**
+
+[OH_GamePad_LeftShoulder_UnregisterButtonInputMonitor](capi-game-pad-h.md#oh_gamepad_leftshoulder_unregisterbuttoninputmonitor) 取消注册LeftShoulder按键事件的监听回调。
+
 
 ### OH_GamePad_LeftShoulder_UnregisterButtonInputMonitor()
 
@@ -129,7 +134,12 @@ GameController_ErrorCode OH_GamePad_RightShoulder_RegisterButtonInputMonitor(Gam
 
 | 类型 | 说明 |
 | -- | -- |
-| [GameController_ErrorCode](capi-game-controller-type-h.md#gamecontroller_errorcode) | <ul><li>如果执行成功，返回[GAME_CONTROLLER_SUCCESS](capi-game-controller-type-h.md#gamecontroller_errorcode)。</li><br>     <li>如果参数inputMonitorCallback为null，返回[GAME_CONTROLLER_PARAM_ERROR](capi-game-controller-type-h.md#gamecontroller_errorcode)。</li></ul> |
+| [GameController_ErrorCode](capi-game-controller-type-h.md#gamecontroller_errorcode) | <ul><li>如果执行成功，返回[GAME_CONTROLLER_SUCCESS](capi-game-controller-type-h.md#gamecontroller_errorcode)。</li>     <li>如果参数inputMonitorCallback为null，返回<br>     [GAME_CONTROLLER_PARAM_ERROR](capi-game-controller-type-h.md#gamecontroller_errorcode)。</li></ul> |
+
+**参考：**
+
+[OH_GamePad_RightShoulder_UnregisterButtonInputMonitor](capi-game-pad-h.md#oh_gamepad_rightshoulder_unregisterbuttoninputmonitor) 取消注册RightShoulder按键事件的监听回调。
+
 
 ### OH_GamePad_RightShoulder_UnregisterButtonInputMonitor()
 
@@ -171,7 +181,12 @@ GameController_ErrorCode OH_GamePad_LeftTrigger_RegisterButtonInputMonitor(GameP
 
 | 类型 | 说明 |
 | -- | -- |
-| [GameController_ErrorCode](capi-game-controller-type-h.md#gamecontroller_errorcode) | <ul><li>如果执行成功，返回[GAME_CONTROLLER_SUCCESS](capi-game-controller-type-h.md#gamecontroller_errorcode)。</li><br>     <li>如果参数inputMonitorCallback为null，返回[GAME_CONTROLLER_PARAM_ERROR](capi-game-controller-type-h.md#gamecontroller_errorcode)。</li></ul> |
+| [GameController_ErrorCode](capi-game-controller-type-h.md#gamecontroller_errorcode) | <ul><li>如果执行成功，返回[GAME_CONTROLLER_SUCCESS](capi-game-controller-type-h.md#gamecontroller_errorcode)。</li>     <li>如果参数inputMonitorCallback为null，返回<br>     [GAME_CONTROLLER_PARAM_ERROR](capi-game-controller-type-h.md#gamecontroller_errorcode)。</li></ul> |
+
+**参考：**
+
+[OH_GamePad_LeftTrigger_UnregisterButtonInputMonitor](capi-game-pad-h.md#oh_gamepad_lefttrigger_unregisterbuttoninputmonitor) 取消注册LeftTrigger按键事件的监听回调。
+
 
 ### OH_GamePad_LeftTrigger_UnregisterButtonInputMonitor()
 
@@ -213,7 +228,12 @@ GameController_ErrorCode OH_GamePad_LeftTrigger_RegisterAxisInputMonitor(GamePad
 
 | 类型 | 说明 |
 | -- | -- |
-| [GameController_ErrorCode](capi-game-controller-type-h.md#gamecontroller_errorcode) | <ul><li>如果执行成功，返回[GAME_CONTROLLER_SUCCESS](capi-game-controller-type-h.md#gamecontroller_errorcode)。</li><br>     <li>如果参数inputMonitorCallback为null，返回[GAME_CONTROLLER_PARAM_ERROR](capi-game-controller-type-h.md#gamecontroller_errorcode)。</li></ul> |
+| [GameController_ErrorCode](capi-game-controller-type-h.md#gamecontroller_errorcode) | <ul><li>如果执行成功，返回[GAME_CONTROLLER_SUCCESS](capi-game-controller-type-h.md#gamecontroller_errorcode)。</li>      <li>如果参数inputMonitorCallback为null，返回<br>     [GAME_CONTROLLER_PARAM_ERROR](capi-game-controller-type-h.md#gamecontroller_errorcode)。</li></ul> |
+
+**参考：**
+
+[OH_GamePad_LeftTrigger_UnregisterAxisInputMonitor](capi-game-pad-h.md#oh_gamepad_lefttrigger_unregisteraxisinputmonitor) 取消注册LeftTrigger轴事件的监听回调。
+
 
 ### OH_GamePad_LeftTrigger_UnregisterAxisInputMonitor()
 
@@ -255,7 +275,12 @@ GameController_ErrorCode OH_GamePad_RightTrigger_RegisterButtonInputMonitor(Game
 
 | 类型 | 说明 |
 | -- | -- |
-| [GameController_ErrorCode](capi-game-controller-type-h.md#gamecontroller_errorcode) | <ul><li>如果执行成功，返回[GAME_CONTROLLER_SUCCESS](capi-game-controller-type-h.md#gamecontroller_errorcode)。</li><br>     <li>如果参数inputMonitorCallback为null，返回[GAME_CONTROLLER_PARAM_ERROR](capi-game-controller-type-h.md#gamecontroller_errorcode)。</li></ul> |
+| [GameController_ErrorCode](capi-game-controller-type-h.md#gamecontroller_errorcode) | <ul><li>如果执行成功，返回[GAME_CONTROLLER_SUCCESS](capi-game-controller-type-h.md#gamecontroller_errorcode)。</li>      <li>如果参数inputMonitorCallback为null，返回<br>     [GAME_CONTROLLER_PARAM_ERROR](capi-game-controller-type-h.md#gamecontroller_errorcode)。</li></ul> |
+
+**参考：**
+
+[OH_GamePad_RightTrigger_UnregisterButtonInputMonitor](capi-game-pad-h.md#oh_gamepad_righttrigger_unregisterbuttoninputmonitor) 取消注册RightTrigger按键事件的监听回调。
+
 
 ### OH_GamePad_RightTrigger_UnregisterButtonInputMonitor()
 
@@ -297,7 +322,12 @@ GameController_ErrorCode OH_GamePad_RightTrigger_RegisterAxisInputMonitor(GamePa
 
 | 类型 | 说明 |
 | -- | -- |
-| [GameController_ErrorCode](capi-game-controller-type-h.md#gamecontroller_errorcode) | <ul><li>如果执行成功，返回[GAME_CONTROLLER_SUCCESS](capi-game-controller-type-h.md#gamecontroller_errorcode)。</li><br>     <li>如果参数inputMonitorCallback为null，返回[GAME_CONTROLLER_PARAM_ERROR](capi-game-controller-type-h.md#gamecontroller_errorcode)。</li></ul> |
+| [GameController_ErrorCode](capi-game-controller-type-h.md#gamecontroller_errorcode) | <ul><li>如果执行成功，返回[GAME_CONTROLLER_SUCCESS](capi-game-controller-type-h.md#gamecontroller_errorcode)。</li>     <li>如果参数inputMonitorCallback为null，返回<br>     [GAME_CONTROLLER_PARAM_ERROR](capi-game-controller-type-h.md#gamecontroller_errorcode)。</li></ul> |
+
+**参考：**
+
+[OH_GamePad_RightTrigger_UnregisterAxisInputMonitor](capi-game-pad-h.md#oh_gamepad_righttrigger_unregisteraxisinputmonitor) 取消注册RightTrigger轴事件的监听回调。
+
 
 ### OH_GamePad_RightTrigger_UnregisterAxisInputMonitor()
 
@@ -339,7 +369,12 @@ GameController_ErrorCode OH_GamePad_ButtonMenu_RegisterButtonInputMonitor(GamePa
 
 | 类型 | 说明 |
 | -- | -- |
-| [GameController_ErrorCode](capi-game-controller-type-h.md#gamecontroller_errorcode) | <ul><li>如果执行成功，返回[GAME_CONTROLLER_SUCCESS](capi-game-controller-type-h.md#gamecontroller_errorcode)。</li><br>     <li>如果参数inputMonitorCallback为null，返回[GAME_CONTROLLER_PARAM_ERROR](capi-game-controller-type-h.md#gamecontroller_errorcode)。</li></ul> |
+| [GameController_ErrorCode](capi-game-controller-type-h.md#gamecontroller_errorcode) | <ul><li>如果执行成功，返回[GAME_CONTROLLER_SUCCESS](capi-game-controller-type-h.md#gamecontroller_errorcode)。</li>     <li>如果参数inputMonitorCallback为null，返回<br>     [GAME_CONTROLLER_PARAM_ERROR](capi-game-controller-type-h.md#gamecontroller_errorcode)。</li></ul> |
+
+**参考：**
+
+[OH_GamePad_ButtonMenu_UnregisterButtonInputMonitor](capi-game-pad-h.md#oh_gamepad_buttonmenu_unregisterbuttoninputmonitor) 取消注册Menu按键事件的监听回调。
+
 
 ### OH_GamePad_ButtonMenu_UnregisterButtonInputMonitor()
 
@@ -381,7 +416,12 @@ GameController_ErrorCode OH_GamePad_ButtonHome_RegisterButtonInputMonitor(GamePa
 
 | 类型 | 说明 |
 | -- | -- |
-| [GameController_ErrorCode](capi-game-controller-type-h.md#gamecontroller_errorcode) | <ul><li>如果执行成功，返回[GAME_CONTROLLER_SUCCESS](capi-game-controller-type-h.md#gamecontroller_errorcode)。</li><br>     <li>如果参数inputMonitorCallback为null，返回[GAME_CONTROLLER_PARAM_ERROR](capi-game-controller-type-h.md#gamecontroller_errorcode)。</li></ul> |
+| [GameController_ErrorCode](capi-game-controller-type-h.md#gamecontroller_errorcode) | <ul><li>如果执行成功，返回[GAME_CONTROLLER_SUCCESS](capi-game-controller-type-h.md#gamecontroller_errorcode)。</li>     <li>如果参数inputMonitorCallback为null，返回<br>     [GAME_CONTROLLER_PARAM_ERROR](capi-game-controller-type-h.md#gamecontroller_errorcode)。</li></ul> |
+
+**参考：**
+
+[OH_GamePad_ButtonHome_UnregisterButtonInputMonitor](capi-game-pad-h.md#oh_gamepad_buttonhome_unregisterbuttoninputmonitor) 取消注册Home按键事件的监听回调。
+
 
 ### OH_GamePad_ButtonHome_UnregisterButtonInputMonitor()
 
@@ -423,7 +463,12 @@ GameController_ErrorCode OH_GamePad_ButtonA_RegisterButtonInputMonitor(GamePad_B
 
 | 类型 | 说明 |
 | -- | -- |
-| [GameController_ErrorCode](capi-game-controller-type-h.md#gamecontroller_errorcode) | <ul><li>如果执行成功，返回[GAME_CONTROLLER_SUCCESS](capi-game-controller-type-h.md#gamecontroller_errorcode)。</li><br>     <li>如果参数inputMonitorCallback为null，返回[GAME_CONTROLLER_PARAM_ERROR](capi-game-controller-type-h.md#gamecontroller_errorcode)。</li></ul> |
+| [GameController_ErrorCode](capi-game-controller-type-h.md#gamecontroller_errorcode) | <ul><li>如果执行成功，返回[GAME_CONTROLLER_SUCCESS](capi-game-controller-type-h.md#gamecontroller_errorcode)。</li>     <li>如果参数inputMonitorCallback为null，返回<br>     [GAME_CONTROLLER_PARAM_ERROR](capi-game-controller-type-h.md#gamecontroller_errorcode)。</li></ul> |
+
+**参考：**
+
+[OH_GamePad_ButtonA_UnregisterButtonInputMonitor](capi-game-pad-h.md#oh_gamepad_buttona_unregisterbuttoninputmonitor) 取消注册A按键事件的监听回调。
+
 
 ### OH_GamePad_ButtonA_UnregisterButtonInputMonitor()
 
@@ -465,7 +510,12 @@ GameController_ErrorCode OH_GamePad_ButtonB_RegisterButtonInputMonitor(GamePad_B
 
 | 类型 | 说明 |
 | -- | -- |
-| [GameController_ErrorCode](capi-game-controller-type-h.md#gamecontroller_errorcode) | <ul><li>如果执行成功，返回[GAME_CONTROLLER_SUCCESS](capi-game-controller-type-h.md#gamecontroller_errorcode)。</li><br>     <li>如果参数inputMonitorCallback为null，返回[GAME_CONTROLLER_PARAM_ERROR](capi-game-controller-type-h.md#gamecontroller_errorcode)。</li></ul> |
+| [GameController_ErrorCode](capi-game-controller-type-h.md#gamecontroller_errorcode) | <ul><li>如果执行成功，返回[GAME_CONTROLLER_SUCCESS](capi-game-controller-type-h.md#gamecontroller_errorcode)。</li>     <li>如果参数inputMonitorCallback为null，返回<br>     [GAME_CONTROLLER_PARAM_ERROR](capi-game-controller-type-h.md#gamecontroller_errorcode)。</li></ul> |
+
+**参考：**
+
+[OH_GamePad_ButtonB_UnregisterButtonInputMonitor](capi-game-pad-h.md#oh_gamepad_buttonb_unregisterbuttoninputmonitor) 取消注册B按键事件的监听回调。
+
 
 ### OH_GamePad_ButtonB_UnregisterButtonInputMonitor()
 
@@ -507,7 +557,12 @@ GameController_ErrorCode OH_GamePad_ButtonX_RegisterButtonInputMonitor(GamePad_B
 
 | 类型 | 说明 |
 | -- | -- |
-| [GameController_ErrorCode](capi-game-controller-type-h.md#gamecontroller_errorcode) | <ul><li>如果执行成功，返回[GAME_CONTROLLER_SUCCESS](capi-game-controller-type-h.md#gamecontroller_errorcode)。</li><br>     <li>如果参数inputMonitorCallback为null，返回[GAME_CONTROLLER_PARAM_ERROR](capi-game-controller-type-h.md#gamecontroller_errorcode)。</li></ul> |
+| [GameController_ErrorCode](capi-game-controller-type-h.md#gamecontroller_errorcode) | <ul><li>如果执行成功，返回[GAME_CONTROLLER_SUCCESS](capi-game-controller-type-h.md#gamecontroller_errorcode)。</li>     <li>如果参数inputMonitorCallback为null，返回<br>     [GAME_CONTROLLER_PARAM_ERROR](capi-game-controller-type-h.md#gamecontroller_errorcode)。</li></ul> |
+
+**参考：**
+
+[OH_GamePad_ButtonX_UnregisterButtonInputMonitor](capi-game-pad-h.md#oh_gamepad_buttonx_unregisterbuttoninputmonitor) 取消注册X按键事件的监听回调。
+
 
 ### OH_GamePad_ButtonX_UnregisterButtonInputMonitor()
 
@@ -549,7 +604,12 @@ GameController_ErrorCode OH_GamePad_ButtonY_RegisterButtonInputMonitor(GamePad_B
 
 | 类型 | 说明 |
 | -- | -- |
-| [GameController_ErrorCode](capi-game-controller-type-h.md#gamecontroller_errorcode) | <ul><li>如果执行成功，返回[GAME_CONTROLLER_SUCCESS](capi-game-controller-type-h.md#gamecontroller_errorcode)。</li><br>     <li>如果参数inputMonitorCallback为null，返回[GAME_CONTROLLER_PARAM_ERROR](capi-game-controller-type-h.md#gamecontroller_errorcode)。</li></ul> |
+| [GameController_ErrorCode](capi-game-controller-type-h.md#gamecontroller_errorcode) | <ul><li>如果执行成功，返回[GAME_CONTROLLER_SUCCESS](capi-game-controller-type-h.md#gamecontroller_errorcode)。</li>     <li>如果参数inputMonitorCallback为null，返回<br>     [GAME_CONTROLLER_PARAM_ERROR](capi-game-controller-type-h.md#gamecontroller_errorcode)。</li></ul> |
+
+**参考：**
+
+[OH_GamePad_ButtonY_UnregisterButtonInputMonitor](capi-game-pad-h.md#oh_gamepad_buttony_unregisterbuttoninputmonitor) 取消注册Y按键事件的监听回调。
+
 
 ### OH_GamePad_ButtonY_UnregisterButtonInputMonitor()
 
@@ -591,7 +651,12 @@ GameController_ErrorCode OH_GamePad_ButtonC_RegisterButtonInputMonitor(GamePad_B
 
 | 类型 | 说明 |
 | -- | -- |
-| [GameController_ErrorCode](capi-game-controller-type-h.md#gamecontroller_errorcode) | <ul><li>如果执行成功，返回[GAME_CONTROLLER_SUCCESS](capi-game-controller-type-h.md#gamecontroller_errorcode)。</li><br>     <li>如果参数inputMonitorCallback为null，返回[GAME_CONTROLLER_PARAM_ERROR](capi-game-controller-type-h.md#gamecontroller_errorcode)。</li></ul> |
+| [GameController_ErrorCode](capi-game-controller-type-h.md#gamecontroller_errorcode) | <ul><li>如果执行成功，返回[GAME_CONTROLLER_SUCCESS](capi-game-controller-type-h.md#gamecontroller_errorcode)。</li>     <li>如果参数inputMonitorCallback为null，返回<br>     [GAME_CONTROLLER_PARAM_ERROR](capi-game-controller-type-h.md#gamecontroller_errorcode)。</li></ul> |
+
+**参考：**
+
+[OH_GamePad_ButtonC_UnregisterButtonInputMonitor](capi-game-pad-h.md#oh_gamepad_buttonc_unregisterbuttoninputmonitor) 取消注册C按键事件的监听回调。
+
 
 ### OH_GamePad_ButtonC_UnregisterButtonInputMonitor()
 
@@ -633,7 +698,12 @@ GameController_ErrorCode OH_GamePad_Dpad_LeftButton_RegisterButtonInputMonitor(G
 
 | 类型 | 说明 |
 | -- | -- |
-| [GameController_ErrorCode](capi-game-controller-type-h.md#gamecontroller_errorcode) | <ul><li>如果执行成功，返回[GAME_CONTROLLER_SUCCESS](capi-game-controller-type-h.md#gamecontroller_errorcode)。</li><br>     <li>如果参数inputMonitorCallback为null，返回[GAME_CONTROLLER_PARAM_ERROR](capi-game-controller-type-h.md#gamecontroller_errorcode)。</li></ul> |
+| [GameController_ErrorCode](capi-game-controller-type-h.md#gamecontroller_errorcode) | <ul><li>如果执行成功，返回[GAME_CONTROLLER_SUCCESS](capi-game-controller-type-h.md#gamecontroller_errorcode)。</li>     <li>如果参数inputMonitorCallback为null，返回<br>     [GAME_CONTROLLER_PARAM_ERROR](capi-game-controller-type-h.md#gamecontroller_errorcode)。</li></ul> |
+
+**参考：**
+
+[OH_GamePad_Dpad_LeftButton_UnregisterButtonInputMonitor](capi-game-pad-h.md#oh_gamepad_dpad_leftbutton_unregisterbuttoninputmonitor) 取消注册方向按键的向左按键事件的监听回调。
+
 
 ### OH_GamePad_Dpad_LeftButton_UnregisterButtonInputMonitor()
 
@@ -675,7 +745,12 @@ GameController_ErrorCode OH_GamePad_Dpad_RightButton_RegisterButtonInputMonitor(
 
 | 类型 | 说明 |
 | -- | -- |
-| [GameController_ErrorCode](capi-game-controller-type-h.md#gamecontroller_errorcode) | <ul><li>如果执行成功，返回[GAME_CONTROLLER_SUCCESS](capi-game-controller-type-h.md#gamecontroller_errorcode)。</li><br>     <li>如果参数inputMonitorCallback为null，返回[GAME_CONTROLLER_PARAM_ERROR](capi-game-controller-type-h.md#gamecontroller_errorcode)。</li></ul> |
+| [GameController_ErrorCode](capi-game-controller-type-h.md#gamecontroller_errorcode) | <ul><li>如果执行成功，返回[GAME_CONTROLLER_SUCCESS](capi-game-controller-type-h.md#gamecontroller_errorcode)。</li>     <li>如果参数inputMonitorCallback为null，返回<br>     [GAME_CONTROLLER_PARAM_ERROR](capi-game-controller-type-h.md#gamecontroller_errorcode)。</li></ul> |
+
+**参考：**
+
+[OH_GamePad_Dpad_RightButton_UnregisterButtonInputMonitor](capi-game-pad-h.md#oh_gamepad_dpad_rightbutton_unregisterbuttoninputmonitor) 取消注册方向按键的向右按键事件的监听回调。
+
 
 ### OH_GamePad_Dpad_RightButton_UnregisterButtonInputMonitor()
 
@@ -717,7 +792,12 @@ GameController_ErrorCode OH_GamePad_Dpad_UpButton_RegisterButtonInputMonitor(Gam
 
 | 类型 | 说明 |
 | -- | -- |
-| [GameController_ErrorCode](capi-game-controller-type-h.md#gamecontroller_errorcode) | <ul><li>如果执行成功，返回[GAME_CONTROLLER_SUCCESS](capi-game-controller-type-h.md#gamecontroller_errorcode)。</li><br>     <li>如果参数inputMonitorCallback为null，返回[GAME_CONTROLLER_PARAM_ERROR](capi-game-controller-type-h.md#gamecontroller_errorcode)。</li></ul> |
+| [GameController_ErrorCode](capi-game-controller-type-h.md#gamecontroller_errorcode) | <ul><li>如果执行成功，返回[GAME_CONTROLLER_SUCCESS](capi-game-controller-type-h.md#gamecontroller_errorcode)。</li>     <li>如果参数inputMonitorCallback为null，返回<br>     [GAME_CONTROLLER_PARAM_ERROR](capi-game-controller-type-h.md#gamecontroller_errorcode)。</li></ul> |
+
+**参考：**
+
+[OH_GamePad_Dpad_UpButton_UnregisterButtonInputMonitor](capi-game-pad-h.md#oh_gamepad_dpad_upbutton_unregisterbuttoninputmonitor) 取消注册方向按键的向上按键事件的监听回调。
+
 
 ### OH_GamePad_Dpad_UpButton_UnregisterButtonInputMonitor()
 
@@ -759,7 +839,12 @@ GameController_ErrorCode OH_GamePad_Dpad_DownButton_RegisterButtonInputMonitor(G
 
 | 类型 | 说明 |
 | -- | -- |
-| [GameController_ErrorCode](capi-game-controller-type-h.md#gamecontroller_errorcode) | <ul><li>如果执行成功，返回[GAME_CONTROLLER_SUCCESS](capi-game-controller-type-h.md#gamecontroller_errorcode)。</li><br>     <li>如果参数inputMonitorCallback为null，返回[GAME_CONTROLLER_PARAM_ERROR](capi-game-controller-type-h.md#gamecontroller_errorcode)。</li></ul> |
+| [GameController_ErrorCode](capi-game-controller-type-h.md#gamecontroller_errorcode) | <ul><li>如果执行成功，返回[GAME_CONTROLLER_SUCCESS](capi-game-controller-type-h.md#gamecontroller_errorcode)。</li>     <li>如果参数inputMonitorCallback为null，返回<br>     [GAME_CONTROLLER_PARAM_ERROR](capi-game-controller-type-h.md#gamecontroller_errorcode)。</li></ul> |
+
+**参考：**
+
+[OH_GamePad_Dpad_DownButton_UnregisterButtonInputMonitor](capi-game-pad-h.md#oh_gamepad_dpad_downbutton_unregisterbuttoninputmonitor) 取消注册方向按键的向下按键事件的监听回调。
+
 
 ### OH_GamePad_Dpad_DownButton_UnregisterButtonInputMonitor()
 
@@ -801,7 +886,12 @@ GameController_ErrorCode OH_GamePad_Dpad_RegisterAxisInputMonitor(GamePad_AxisIn
 
 | 类型 | 说明 |
 | -- | -- |
-| [GameController_ErrorCode](capi-game-controller-type-h.md#gamecontroller_errorcode) | <ul><li>如果执行成功，返回[GAME_CONTROLLER_SUCCESS](capi-game-controller-type-h.md#gamecontroller_errorcode)。</li><br>     <li>如果参数inputMonitorCallback为null，返回[GAME_CONTROLLER_PARAM_ERROR](capi-game-controller-type-h.md#gamecontroller_errorcode)。</li></ul> |
+| [GameController_ErrorCode](capi-game-controller-type-h.md#gamecontroller_errorcode) | <ul><li>如果执行成功，返回[GAME_CONTROLLER_SUCCESS](capi-game-controller-type-h.md#gamecontroller_errorcode)。</li>     <li>如果参数inputMonitorCallback为null，返回<br>     [GAME_CONTROLLER_PARAM_ERROR](capi-game-controller-type-h.md#gamecontroller_errorcode)。</li></ul> |
+
+**参考：**
+
+[OH_GamePad_Dpad_UnregisterAxisInputMonitor](capi-game-pad-h.md#oh_gamepad_dpad_unregisteraxisinputmonitor) 取消注册方向按键轴事件的监听回调。
+
 
 ### OH_GamePad_Dpad_UnregisterAxisInputMonitor()
 
@@ -843,7 +933,12 @@ GameController_ErrorCode OH_GamePad_LeftThumbstick_RegisterButtonInputMonitor(Ga
 
 | 类型 | 说明 |
 | -- | -- |
-| [GameController_ErrorCode](capi-game-controller-type-h.md#gamecontroller_errorcode) | <ul><li>如果执行成功，返回[GAME_CONTROLLER_SUCCESS](capi-game-controller-type-h.md#gamecontroller_errorcode)。</li><br>     <li>如果参数inputMonitorCallback为null，返回[GAME_CONTROLLER_PARAM_ERROR](capi-game-controller-type-h.md#gamecontroller_errorcode)。</li></ul> |
+| [GameController_ErrorCode](capi-game-controller-type-h.md#gamecontroller_errorcode) | <ul><li>如果执行成功，返回[GAME_CONTROLLER_SUCCESS](capi-game-controller-type-h.md#gamecontroller_errorcode)。</li>     <li>如果参数inputMonitorCallback为null，返回<br>     [GAME_CONTROLLER_PARAM_ERROR](capi-game-controller-type-h.md#gamecontroller_errorcode)。</li></ul> |
+
+**参考：**
+
+[OH_GamePad_LeftThumbstick_UnregisterButtonInputMonitor](capi-game-pad-h.md#oh_gamepad_leftthumbstick_unregisterbuttoninputmonitor) 取消注册LeftThumbstick按键事件的监听回调。
+
 
 ### OH_GamePad_LeftThumbstick_UnregisterButtonInputMonitor()
 
@@ -885,7 +980,12 @@ GameController_ErrorCode OH_GamePad_LeftThumbstick_RegisterAxisInputMonitor(Game
 
 | 类型 | 说明 |
 | -- | -- |
-| [GameController_ErrorCode](capi-game-controller-type-h.md#gamecontroller_errorcode) | <ul><li>如果执行成功，返回[GAME_CONTROLLER_SUCCESS](capi-game-controller-type-h.md#gamecontroller_errorcode)。</li><br>     <li>如果参数inputMonitorCallback为null，返回[GAME_CONTROLLER_PARAM_ERROR](capi-game-controller-type-h.md#gamecontroller_errorcode)。</li></ul> |
+| [GameController_ErrorCode](capi-game-controller-type-h.md#gamecontroller_errorcode) | <ul><li>如果执行成功，返回[GAME_CONTROLLER_SUCCESS](capi-game-controller-type-h.md#gamecontroller_errorcode)。</li>     <li>如果参数inputMonitorCallback为null，返回<br>     [GAME_CONTROLLER_PARAM_ERROR](capi-game-controller-type-h.md#gamecontroller_errorcode)。</li></ul> |
+
+**参考：**
+
+[OH_GamePad_LeftThumbstick_UnregisterAxisInputMonitor](capi-game-pad-h.md#oh_gamepad_leftthumbstick_unregisteraxisinputmonitor) 取消注册LeftThumbstick轴事件的监听回调。
+
 
 ### OH_GamePad_LeftThumbstick_UnregisterAxisInputMonitor()
 
@@ -927,7 +1027,12 @@ GameController_ErrorCode OH_GamePad_RightThumbstick_RegisterButtonInputMonitor(G
 
 | 类型 | 说明 |
 | -- | -- |
-| [GameController_ErrorCode](capi-game-controller-type-h.md#gamecontroller_errorcode) | <ul><li>如果执行成功，返回[GAME_CONTROLLER_SUCCESS](capi-game-controller-type-h.md#gamecontroller_errorcode)。</li><br>     <li>如果参数inputMonitorCallback为null，返回[GAME_CONTROLLER_PARAM_ERROR](capi-game-controller-type-h.md#gamecontroller_errorcode)。</li></ul> |
+| [GameController_ErrorCode](capi-game-controller-type-h.md#gamecontroller_errorcode) | <ul><li>如果执行成功，返回[GAME_CONTROLLER_SUCCESS](capi-game-controller-type-h.md#gamecontroller_errorcode)。</li>     <li>如果参数inputMonitorCallback为null，返回<br>     [GAME_CONTROLLER_PARAM_ERROR](capi-game-controller-type-h.md#gamecontroller_errorcode)。</li></ul> |
+
+**参考：**
+
+[OH_GamePad_RightThumbstick_UnregisterButtonInputMonitor](capi-game-pad-h.md#oh_gamepad_rightthumbstick_unregisterbuttoninputmonitor) 取消注册RightThumbstick按键事件的监听回调。
+
 
 ### OH_GamePad_RightThumbstick_UnregisterButtonInputMonitor()
 
@@ -969,7 +1074,12 @@ GameController_ErrorCode OH_GamePad_RightThumbstick_RegisterAxisInputMonitor(Gam
 
 | 类型 | 说明 |
 | -- | -- |
-| [GameController_ErrorCode](capi-game-controller-type-h.md#gamecontroller_errorcode) | <ul><li>如果执行成功，返回[GAME_CONTROLLER_SUCCESS](capi-game-controller-type-h.md#gamecontroller_errorcode)。</li><br>     <li>如果参数inputMonitorCallback为null，返回[GAME_CONTROLLER_PARAM_ERROR](capi-game-controller-type-h.md#gamecontroller_errorcode)。</li></ul> |
+| [GameController_ErrorCode](capi-game-controller-type-h.md#gamecontroller_errorcode) | <ul><li>如果执行成功，返回[GAME_CONTROLLER_SUCCESS](capi-game-controller-type-h.md#gamecontroller_errorcode)。</li>     <li>如果参数inputMonitorCallback为null，返回<br>     [GAME_CONTROLLER_PARAM_ERROR](capi-game-controller-type-h.md#gamecontroller_errorcode)。</li></ul> |
+
+**参考：**
+
+[OH_GamePad_RightThumbstick_UnregisterAxisInputMonitor](capi-game-pad-h.md#oh_gamepad_rightthumbstick_unregisteraxisinputmonitor) 取消注册RightThumbstick轴事件的监听回调。
+
 
 ### OH_GamePad_RightThumbstick_UnregisterAxisInputMonitor()
 

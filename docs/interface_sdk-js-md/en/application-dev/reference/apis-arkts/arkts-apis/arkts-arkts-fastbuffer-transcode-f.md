@@ -12,7 +12,7 @@ import { fastbuffer } from 'kits/@kit.ArkTS';
 function transcode(source: FastBuffer | Uint8Array, fromEnc: string, toEnc: string): FastBuffer
 ```
 
-将FastBuffer或Uint8Array对象从fromEnc编码转换为toEnc编码。
+Re-encodes the given FastBuffer or Uint8Array instance from one character encoding to another.
 
 **Since:** 20
 
@@ -28,15 +28,15 @@ function transcode(source: FastBuffer | Uint8Array, fromEnc: string, toEnc: stri
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| source | [FastBuffer](arkts-arkts-fastbuffer-fastbuffer-c.md) \| Uint8Array | Yes | 待转码的FastBuffer或Uint8Array实例，提供需要重新编码的源数据。 |
-| fromEnc | string | Yes | 当前编码格式。支持的格式范围为BufferEncoding。传入空字符串时，表示使用编码格式'utf8'。 |
-| toEnc | string | Yes | 目标编码。支持的格式范围为BufferEncoding。 |
+| source | [FastBuffer](arkts-arkts-fastbuffer-fastbuffer-c.md) \| Uint8Array | Yes | The buffer to re-encode |
+| fromEnc | string | Yes | The source character encoding |
+| toEnc | string | Yes | The target character encoding |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [FastBuffer](arkts-arkts-fastbuffer-fastbuffer-c.md) | 将当前编码转换成目标编码，并返回一个新的FastBuffer对象。 |
+| [FastBuffer](arkts-arkts-fastbuffer-fastbuffer-c.md) | Returns a new FastBuffer instance |
 
 ## Examples
 

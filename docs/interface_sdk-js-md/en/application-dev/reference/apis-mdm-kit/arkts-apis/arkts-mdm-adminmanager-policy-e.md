@@ -1,6 +1,6 @@
 # Policy
 
-允许或禁用名单的策略类型。
+Defines the policy type for the trustlist or blocklist.
 
 **Since:** 20
 
@@ -16,7 +16,7 @@
 BLOCK_LIST = 0
 ```
 
-禁用名单。
+Blocklist.
 
 **Since:** 20
 
@@ -34,7 +34,7 @@ BLOCK_LIST = 0
 TRUST_LIST = 1
 ```
 
-允许名单。
+Trustlist.
 
 **Since:** 20
 

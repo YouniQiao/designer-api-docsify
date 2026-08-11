@@ -16,7 +16,7 @@ Enumerates of the number of stop bits.
 STOPBIT_1 = 0
 ```
 
-报文的有效停止位宽为1比特。
+The number of stop bits is 1.
 
 **Since:** 19
 
@@ -32,7 +32,7 @@ STOPBIT_1 = 0
 STOPBIT_2 = 1
 ```
 
-报文的有效停止位宽为2比特。
+The number of stop bits is 2.
 
 **Since:** 19
 

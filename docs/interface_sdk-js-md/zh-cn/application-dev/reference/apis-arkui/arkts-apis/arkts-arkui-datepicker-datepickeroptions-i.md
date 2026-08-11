@@ -58,7 +58,7 @@ mode?: DatePickerMode
 
 在[DatePickerDialog](./datePicker.static)中，当[DatePickerDialogOptions](../../../reference/apis-arkui/arkui-ts/ts-methods-datepicker-dialog.md#datepickerdialogoptions)的showTime设置为true时，此参数不生效，默认显示年、月、日三列。
 
-**类型：** [DatePickerMode](arkts-arkui-datepicker-datepickermode-e.md)
+**类型：** [DatePickerMode](../arkts-components/arkts-arkui-datepickermode-e.md)
 
 **默认值：** DatePickerMode.DATE - which means to display three columns: year, month, and day. <br>Decimal values are rounded off.
 

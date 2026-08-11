@@ -1,6 +1,6 @@
 # Light
 
-定义Light接口.
+Defines light interface.
 
 **Inheritance/Implementation:** Light extends [Node](arkts-arkgraphics3d-scenenodes-node-i.md)
 
@@ -18,7 +18,7 @@
 color: Color
 ```
 
-光源颜色.
+The color of the light.
 
 **Type:** [Color](arkts-arkgraphics3d-scenetypes-color-i.md)
 
@@ -36,7 +36,7 @@ color: Color
 enabled: boolean
 ```
 
-是否启用光源.
+Whether the light is used. true if used, false otherwise.
 
 **Type:** boolean
 
@@ -54,7 +54,7 @@ enabled: boolean
 intensity: double
 ```
 
-光照强度，单位为坎德拉（cd），取值范围是大于0的实数。
+Light density in candelas (cd) with a value range of real numbers greater than 0.
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：double
 
@@ -72,7 +72,7 @@ intensity: double
 readonly lightType: LightType
 ```
 
-光源类型.
+The type of the light.
 
 **Type:** [LightType](arkts-arkgraphics3d-scenenodes-lighttype-e.md)
 
@@ -90,7 +90,7 @@ readonly lightType: LightType
 shadowEnabled: boolean
 ```
 
-是否投射阴影.
+Whether the shadow effect is enabled. true if enabled, false otherwise.
 
 **Type:** boolean
 

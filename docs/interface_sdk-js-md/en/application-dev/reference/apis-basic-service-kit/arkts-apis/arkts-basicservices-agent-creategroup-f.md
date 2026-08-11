@@ -12,7 +12,8 @@ import { request } from 'kits/@kit.BasicServicesKit';
 function createGroup(config: GroupConfig): Promise<string>
 ```
 
-根据[GroupConfig](arkts-basicservices-agent-groupconfig-i.md)分组条件创建分组，并返回分组id。使用Promise异步回调。
+Creates a group based on   
+[GroupConfig](arkts-basicservices-agent-groupconfig-i.md). This API uses a promise to return the result.
 
 **Since:** 15
 
@@ -26,18 +27,18 @@ function createGroup(config: GroupConfig): Promise<string>
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| config | [GroupConfig](arkts-basicservices-agent-groupconfig-i.md) | Yes | 下载任务分组选项。 |
+| config | [GroupConfig](arkts-basicservices-agent-groupconfig-i.md) | Yes | Group options for a download task. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;string&gt; | Promise对象。返回创建完成的分组id。 |
+| Promise&lt;string&gt; | Promise used to return the ID of the created group. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. Possible causes: &lt;br&gt; 1. Missing mandatory parameters. &lt;br&gt; 2. Incorrect parameter type. &lt;br&gt; 3. Parameter verification failed. |
-| 13400003 | Task service ability error. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: &lt;br&gt; 1. Missing mandatory parameters. &lt;br&gt; 2. Incorrect parameter type. &lt;br&gt; 3. Parameter verification failed. |
+| [13400003](../../apis-basic-services-kit/errorcode-request.md#13400003-service-error) | Task service ability error. |
 

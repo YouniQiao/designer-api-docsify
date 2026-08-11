@@ -10,12 +10,6 @@
 
 **系统能力：** SystemCapability.ResourceSchedule.SystemLoad
 
-## 导入模块
-
-```TypeScript
-import { systemLoad } from 'kits/@kit.BasicServicesKit';
-```
-
 ## 汇总
 
 ### 函数

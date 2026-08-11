@@ -14,12 +14,6 @@ Zoom继承自[ZoomQuery](arkts-camera-camera-zoomquery-i.md)。
 
 **系统能力：** SystemCapability.Multimedia.Camera.Core
 
-## 导入模块
-
-```TypeScript
-import { camera } from 'kits/@kit.CameraKit';
-```
-
 ## getZoomRatio
 
 ArkTS-Dyn:
@@ -54,8 +48,8 @@ getZoomRatio(): double
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 7400103 | Session not config. |
-| 7400201 | Camera service fatal error.<br>**适用版本：** 12+ |
+| [7400103](../errorcode-camera.md#7400103-会话未配置) | Session not config. |
+| [7400201](../errorcode-camera.md#7400201-相机服务异常) | Camera service fatal error.<br>**适用版本：** 12+ |
 
 ## setSmoothZoom
 
@@ -92,7 +86,7 @@ setSmoothZoom(targetRatio: double, mode?: SmoothZoomMode): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 7400103 | Session not config.<br>**适用版本：** 11 - 17 |
+| [7400103](../errorcode-camera.md#7400103-会话未配置) | Session not config.<br>**适用版本：** 11 - 17 |
 
 ## setZoomRatio
 
@@ -128,5 +122,5 @@ setZoomRatio(zoomRatio: double): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 7400103 | Session not config. |
+| [7400103](../errorcode-camera.md#7400103-会话未配置) | Session not config. |
 

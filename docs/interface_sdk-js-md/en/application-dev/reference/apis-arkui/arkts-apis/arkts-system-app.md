@@ -12,13 +12,13 @@ import { AppResponse, ScreenOnVisibleOptions, RequestFullWindowOptions } from 'k
 
 | Name | Description |
 | --- | --- |
-| [App](arkts-arkui-system-app-app-c.md) | 定义App类的静态函数 |
+| [App](arkts-arkui-system-app-app-c.md) | Defines static functions of App class |
 
 ### Interfaces
 
 | Name | Description |
 | --- | --- |
-| [AppResponse](arkts-arkui-system-app-appresponse-i.md) | 定义AppResponse信息。 |
-| [RequestFullWindowOptions](arkts-arkui-system-app-requestfullwindowoptions-i.md) | 定义RequestFullWindow接口的选项。 |
-| [ScreenOnVisibleOptions](arkts-arkui-system-app-screenonvisibleoptions-i.md) | 定义屏幕上可见接口的选项。 |
+| [AppResponse](arkts-arkui-system-app-appresponse-i.md) | Defines the application response information. |
+| [RequestFullWindowOptions](arkts-arkui-system-app-requestfullwindowoptions-i.md) | Defines the option of RequestFullWindow interface. |
+| [ScreenOnVisibleOptions](arkts-arkui-system-app-screenonvisibleoptions-i.md) | Defines the options of the visible interface on the screen. |
 

@@ -1,11 +1,5 @@
 # getPortList
 
-## 导入模块
-
-```TypeScript
-import { serialManager } from 'kits/@kit.BasicServicesKit';
-```
-
 ## getPortList
 
 ```TypeScript
@@ -26,7 +20,7 @@ function getPortList(): Readonly<SerialPort>[]
 
 | 类型 | 说明 |
 | --- | --- |
-| [Readonly](../../apis-default/arkts-apis/arkts-readonly-t.md)&lt;SerialPort&gt;[] | Serial port information list. |
+| Readonly&lt;SerialPort&gt;[] | Serial port information list. |
 
 ## 示例
 
@@ -34,16 +28,17 @@ function getPortList(): Readonly<SerialPort>[]
 
 ```TypeScript
 import { JSON } from '@kit.ArkTS';
-import { serialManager } from '@kit.BasicServicesKit';
+import serialManager from '@ohos.usbManager.serial';
 
 // 获取串口设备清单 
 function getPortListExample() {
   let portList: serialManager.SerialPort[] = serialManager.getPortList();
   console.info('usbSerial portList: ' + JSON.stringify(portList));
-  if (!portList || portList.length === 0) {
+  if (portList === undefined || portList.length === 0) {
     console.error('usbSerial portList is empty');
     return;
   }
+  let portId: int = portList[0].portId;
 }
 ```
 

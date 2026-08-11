@@ -1,6 +1,6 @@
 # RenderingContextOptions
 
-定义渲染上下文的具体配置参数。
+Defines the options for rendering context.
 
 **Since:** 23
 
@@ -16,7 +16,7 @@
 antialias?: boolean
 ```
 
-表明RenderingContext是否需要开启抗锯齿。&lt;br&gt;取值为undefined时按默认值处理。&lt;br&gt;true：开启抗锯齿；false：不开启抗锯齿。&lt;br&gt;默认值：false
+Indicates whether anti-aliasing is enabled for rendering context.Default value is false, undefined means setting to default value.
 
 **Type:** boolean
 

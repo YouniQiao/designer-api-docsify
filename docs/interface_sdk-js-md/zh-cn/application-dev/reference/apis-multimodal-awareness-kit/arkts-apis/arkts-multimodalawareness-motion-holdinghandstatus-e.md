@@ -1,6 +1,6 @@
 # HoldingHandStatus
 
-Represents the holding hand status. The holding hand status is returned if listening for holding hand status changes is enabled.
+握持手状态信息，表示握持手状态变化感知事件的结果。订阅握持手状态变化感知事件后，返回当前握持手状态信息。
 
 **起始版本：** 20
 
@@ -16,7 +16,7 @@ Represents the holding hand status. The holding hand status is returned if liste
 NOT_HELD = 0
 ```
 
-No holding.
+表示未握持。
 
 **起始版本：** 20
 
@@ -32,7 +32,7 @@ No holding.
 LEFT_HAND_HELD = 1
 ```
 
-Holding with the left hand.
+表示左手握持。
 
 **起始版本：** 20
 
@@ -48,7 +48,7 @@ Holding with the left hand.
 RIGHT_HAND_HELD = 2
 ```
 
-Holding with the right hand.
+表示右手握持。
 
 **起始版本：** 20
 
@@ -64,7 +64,7 @@ Holding with the right hand.
 BOTH_HANDS_HELD = 3
 ```
 
-Holding with both hands.
+表示双手握持。
 
 **起始版本：** 20
 
@@ -80,7 +80,7 @@ Holding with both hands.
 UNKNOWN_STATUS = 16
 ```
 
-Unknown status.
+表示未识别。
 
 **起始版本：** 20
 

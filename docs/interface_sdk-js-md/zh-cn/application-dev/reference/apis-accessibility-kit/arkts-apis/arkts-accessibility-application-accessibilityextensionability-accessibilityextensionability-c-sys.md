@@ -10,12 +10,6 @@ AccessibilityExtensionAbility基于ExtensionAbility框架，提供辅助功能�
 
 **系统能力：** SystemCapability.BarrierFree.Accessibility.Core
 
-## 导入模块
-
-```TypeScript
-import { Rect, TouchPosition, AccessibilityVirtualNode, ElementAttributeKeys, FocusCondition, AccessibilityExtensionContext, ElementAttributeValues, AccessibilityEventInfo, AccessibilityEvent, AccessibilityElement, FocusRule, FocusMoveResult, FocusType, Parameter, FocusDirection, WindowType } from 'kits/@kit.AccessibilityKit';
-```
-
 ## onAccessibilityConnect
 
 ```TypeScript
@@ -42,8 +36,8 @@ onAccessibilityConnect(): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 201 | Permission verification failed.The application does not have the permission required to call the API. |
-| 202 | Permission verification failed. A non-system application calls a system API. |
+| [201](../../errorcode-universal.md#201-权限校验失败) | Permission verification failed.The application does not have the permission required to call the API. |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed. A non-system application calls a system API. |
 
 ## 示例
 
@@ -83,8 +77,8 @@ onAccessibilityDisconnect(): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 201 | Permission verification failed.The application does not have the permission required to call the API. |
-| 202 | Permission verification failed. A non-system application calls a system API. |
+| [201](../../errorcode-universal.md#201-权限校验失败) | Permission verification failed.The application does not have the permission required to call the API. |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed. A non-system application calls a system API. |
 
 ## 示例
 
@@ -128,8 +122,8 @@ onAccessibilityEventInfo(event: AccessibilityEventInfo): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 201 | Permission verification failed.The application does not have the permission required to call the API. |
-| 202 | Permission verification failed. A non-system application calls a system API. |
+| [201](../../errorcode-universal.md#201-权限校验失败) | Permission verification failed.The application does not have the permission required to call the API. |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed. A non-system application calls a system API. |
 
 ## 示例
 
@@ -182,8 +176,8 @@ onAccessibilityKeyEvent(keyEvent: KeyEvent): boolean
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 201 | Permission verification failed.The application does not have the permission required to call the API. |
-| 202 | Permission verification failed. A non-system application calls a system API. |
+| [201](../../errorcode-universal.md#201-权限校验失败) | Permission verification failed.The application does not have the permission required to call the API. |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed. A non-system application calls a system API. |
 
 ## 示例
 

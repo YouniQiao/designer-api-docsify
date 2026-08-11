@@ -1,6 +1,6 @@
 # DialogSheet
 
-Dialog sheet的配置项。
+The information of sheet item for action sheet style.
 
 **Since:** 26.1.0
 
@@ -22,7 +22,7 @@ import { DialogButtonOrientation, DialogState, DialogResult, DialogBaseControlle
 action: VoidCallback
 ```
 
-单击选项时执行的回调。
+Callback executed when the sheet item is clicked.
 
 **Since:** 26.1.0
 
@@ -42,7 +42,7 @@ action: VoidCallback
 icon?: ResourceStr
 ```
 
-图标内容。
+Icon of the sheet item.
 
 **Type:** [ResourceStr](arkts-arkui-resourcestr-t.md)
 
@@ -64,7 +64,7 @@ icon?: ResourceStr
 title: ResourceStr
 ```
 
-标题内容。
+Title of the sheet item.
 
 **Type:** [ResourceStr](arkts-arkui-resourcestr-t.md)
 

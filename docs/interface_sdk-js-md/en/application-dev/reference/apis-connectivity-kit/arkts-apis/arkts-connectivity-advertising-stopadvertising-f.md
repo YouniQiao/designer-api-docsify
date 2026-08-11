@@ -12,7 +12,7 @@ import { advertising } from 'kits/@kit.ConnectivityKit';
 function stopAdvertising(advertisingId: int): Promise<void>
 ```
 
-停止广播ID对应的广播。
+Stops advertising with advertising ID.
 
 **Since:** 26.0.0
 
@@ -30,21 +30,21 @@ function stopAdvertising(advertisingId: int): Promise<void>
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| advertisingId | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | 表示广播ID &lt;br&gt;取值应为≥0的整数，取值为当前广播的广播ID。 |
+| advertisingId | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | Indicates the ID for this advertising &lt;br&gt;The value must be an integer greater than or equal to 0, The value is the current advertising ID. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | 返回promise对象。 |
+| Promise&lt;void&gt; | Returns the promise object. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 801 | Capability not supported because the chip does not support it. |
+| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported because the chip does not support it. |
 | 36100003 | NearLink disabled. |
 | 36100099 | Operation failed. |
-| 201 | Permission denied. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
 | 36100040 | Invalid advertising ID. |
 

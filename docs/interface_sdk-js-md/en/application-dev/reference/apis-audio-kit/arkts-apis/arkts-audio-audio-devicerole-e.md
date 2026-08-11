@@ -1,6 +1,6 @@
 # DeviceRole
 
-表示设备角色的枚举。
+Enumerates the device roles.
 
 **Since:** 7
 
@@ -16,7 +16,7 @@
 INPUT_DEVICE = 1
 ```
 
-输入设备角色。
+Input role.
 
 **Since:** 7
 
@@ -34,7 +34,7 @@ INPUT_DEVICE = 1
 OUTPUT_DEVICE = 2
 ```
 
-输出设备角色。
+Output role.
 
 **Since:** 7
 

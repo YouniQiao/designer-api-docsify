@@ -1,6 +1,6 @@
 # ILocalDecoratedVariable
 
-Local装饰的变量。
+Define Local decoration variable interface.
 
 **Inheritance/Implementation:** ILocalDecoratedVariable extends [IDecoratedMutableVariable<T>](IDecoratedMutableVariable<T>), [IDecoratedV2Variable<T>](IDecoratedV2Variable<T>)
 

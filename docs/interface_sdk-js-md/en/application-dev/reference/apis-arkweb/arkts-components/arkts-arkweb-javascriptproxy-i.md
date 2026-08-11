@@ -1,6 +1,6 @@
 # JavaScriptProxy
 
-定义要注入的JavaScript对象。
+Defines the JavaScript object to be injected.
 
 **Since:** 12
 
@@ -16,7 +16,7 @@
 asyncMethodList?: Array<string>
 ```
 
-参与注册的应用侧JavaScript对象的异步方法。异步方法无法获取返回值。
+The async method of the application side JavaScript object participating in the registration.
 
 **Type:** Array&lt;string&gt;
 
@@ -56,7 +56,7 @@ Controller.
 methodList: Array<string>
 ```
 
-参与注册的应用侧JavaScript对象的同步方法。
+The method of the application side JavaScript object participating  in the registration.
 
 **Type:** Array&lt;string&gt;
 
@@ -76,7 +76,7 @@ methodList: Array<string>
 name: string
 ```
 
-注册对象的名称，与window中调用的对象名一致。
+The name of the registered object, which is consistent with the  object name called in the window.
 
 **Type:** string
 
@@ -96,7 +96,7 @@ name: string
 object: object
 ```
 
-参与注册的对象。
+Objects participating in registration.
 
 **Type:** object
 

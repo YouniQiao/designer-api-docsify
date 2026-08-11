@@ -1,6 +1,6 @@
 # ModuleConfigInfo (System API)
 
-包的module配置信息。
+ModuleConfigInfo: the module summary of a bundle.
 
 **Since:** 9
 
@@ -18,7 +18,7 @@
 readonly abilities: Array<ModuleAbilityInfo>
 ```
 
-module包含的ability组件信息。
+Ability information of the module.
 
 **Type:** Array&lt;ModuleAbilityInfo&gt;
 
@@ -38,7 +38,7 @@ module包含的ability组件信息。
 readonly apiVersion: ApiVersion
 ```
 
-module的api版本。
+API version of the module.
 
 **Type:** [ApiVersion](arkts-ability-freeinstall-apiversion-t-sys.md)
 
@@ -58,7 +58,7 @@ module的api版本。
 readonly deviceTypes: Array<string>
 ```
 
-module的设备类型。
+Device types supported by the module.
 
 **Type:** Array&lt;string&gt;
 
@@ -78,7 +78,7 @@ module的设备类型。
 readonly distro: ModuleDistroInfo
 ```
 
-module发行版信息。
+Distribution information of the module.
 
 **Type:** [ModuleDistroInfo](arkts-ability-freeinstall-moduledistroinfo-t-sys.md)
 
@@ -98,7 +98,7 @@ module发行版信息。
 readonly extensionAbilities: Array<ExtensionAbility>
 ```
 
-描述extensionAbilities的配置信息。
+ExtensionAbility information of the module.
 
 **Type:** Array&lt;ExtensionAbility&gt;
 
@@ -118,7 +118,7 @@ readonly extensionAbilities: Array<ExtensionAbility>
 readonly mainAbility: string
 ```
 
-应用主ability的名称。
+Name of the main ability.
 
 **Type:** string
 

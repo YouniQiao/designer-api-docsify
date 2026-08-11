@@ -1,6 +1,6 @@
 # TipInfo
 
-表示认证过程中的提示信息，用于提供认证过程的反馈。
+Represents the tip information displayed during the authentication, which is used to provide feedback during the authentication process.
 
 **Since:** 9
 
@@ -26,7 +26,7 @@ import { userAuth } from 'kits/@kit.UserAuthenticationKit';
 module: number
 ```
 
-发送提示信息的模块标识。
+ID of the module that sends the tip information.
 
 **Type:** number
 
@@ -48,7 +48,7 @@ module: number
 tip: number
 ```
 
-认证过程提示信息。
+Tip to be given during the authentication process.
 
 **Type:** number
 

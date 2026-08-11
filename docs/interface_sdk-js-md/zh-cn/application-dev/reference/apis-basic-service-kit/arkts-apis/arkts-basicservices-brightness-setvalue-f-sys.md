@@ -1,11 +1,5 @@
 # setValue（系统接口）
 
-## 导入模块
-
-```TypeScript
-import { brightness } from 'kits/@kit.BasicServicesKit';
-```
-
 ## setValue
 
 ```TypeScript
@@ -34,17 +28,17 @@ function setValue(value: int): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2. Incorrect parameter types; |
-| 4700101 | Failed to connect to the service. |
-| 202 | Permission verification failed. A non-system application calls a system API. |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2. Incorrect parameter types; |
+| [4700101](../../apis-basic-services-kit/errorcode-brightness.md#4700101-连接服务失败) | Failed to connect to the service. |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed. A non-system application calls a system API. |
 
 ## 示例
 
 ```TypeScript
 try {
     brightness.setValue(128);
-} catch (err) {
-    console.error(`Failed to set brightness. Code: ${err.code}, message: ${err.message}`);
+} catch(err) {
+    console.error('set brightness failed, err: ' + err);
 }
 ```
 
@@ -78,17 +72,17 @@ function setValue(value: int, continuous: boolean): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2. Incorrect parameter types; |
-| 4700101 | Failed to connect to the service. |
-| 202 | Permission verification failed. A non-system application calls a system API. |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2. Incorrect parameter types; |
+| [4700101](../../apis-basic-services-kit/errorcode-brightness.md#4700101-连接服务失败) | Failed to connect to the service. |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed. A non-system application calls a system API. |
 
 ## 示例
 
 ```TypeScript
 try {
     brightness.setValue(128, true);
-} catch (err) {
-    console.error(`Failed to set brightness. Code: ${err.code}, message: ${err.message}`);
+} catch(err) {
+    console.error('set brightness failed, err: ' + err);
 }
 ```
 

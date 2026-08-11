@@ -1,11 +1,15 @@
 # ErrorType
 
-端云同步失败类型，为枚举类型。
+Enumerates the device-cloud sync errors.
 
-- 当前阶段，同步过程中，当开启无限量使用移动数据网络，移动数据网络和WIFI均不可用时，才会返回NETWORK_UNAVAILABLE；开启无限量使用移动数据网络，若有一种类型网络可用，则能正常同步。  
-- 同步过程中，非充电场景下，电量低于10%，完成当前批上行同步后停止同步，返回低电量；  
-- 触发同步时，非充电场景下，若电量低于10%，则不允许同步  
-- 上行时，若云端空间不足，则文件上行失败，云端无该文件记录。
+- In the current phase, **NETWORK_UNAVAILABLE** is returned only when the mobile data network and Wi-Fi are  
+unavailable. If the mobile data network is available, the synchronization can be performed normally.  
+- During the sync process, if the battery level is lower than 10% in non-charging scenarios, **BATTERY_LEVEL_LOW**  
+will be return when the current upload is complete.  
+- When sync is being triggered, if the battery level is lower than 10% in non-charging scenarios, sync is not  
+allowed.  
+- If the cloud space is insufficient when a file is uploaded, the upload will fail and there is no such a file in  
+the cloud.
 
 **Since:** 12
 
@@ -21,9 +25,7 @@
 RESPONSE_TIME_OUT = 9
 ```
 
-云服务超时。
-
-26.0.0
+Upload aborted due to cloud response time out.
 
 **Since:** 26.0.0
 
@@ -43,9 +45,7 @@ RESPONSE_TIME_OUT = 9
 UNKNOWN_ERROR = 10
 ```
 
-未知错误。
-
-26.0.0
+Upload aborted due to unknown error.
 
 **Since:** 26.0.0
 

@@ -1,6 +1,6 @@
 # ViewportFit
 
-网页meta中viewport-fit配置的视口类型。
+Enumerates the viewport types available for **viewport-fit** in the web page **\&lt;meta&gt;** tag.
 
 **Since:** 12
 
@@ -16,7 +16,7 @@
 AUTO = 0
 ```
 
-默认值，整个网页可见。
+The entire web page is visible. Default value.
 
 **Since:** 12
 
@@ -34,7 +34,7 @@ AUTO = 0
 CONTAINS = 1
 ```
 
-初始布局视口和视觉视口为适应设备显示屏的最大矩形内。
+The initial layout viewport and the visual viewport are confined within the bounding rectangle of the device's physical screen.
 
 **Since:** 12
 
@@ -52,7 +52,7 @@ CONTAINS = 1
 COVER = 2
 ```
 
-初始布局视口和视觉视口为适应设备显示屏的最大矩形内。
+The initial layout viewport and the visual viewport are confined within the bounding rectangle of the device's physical screen.
 
 **Since:** 12
 

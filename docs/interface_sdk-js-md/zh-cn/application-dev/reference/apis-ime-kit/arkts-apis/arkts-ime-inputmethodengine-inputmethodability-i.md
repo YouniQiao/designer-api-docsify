@@ -13,12 +13,6 @@ InputMethodAbility是输入法应用的核心能力对象，提供输入法生�
 
 **系统能力：** SystemCapability.MiscServices.InputMethodFramework
 
-## 导入模块
-
-```TypeScript
-import { inputMethodEngine } from 'kits/@kit.IMEKit';
-```
-
 ## createPanel
 
 ```TypeScript
@@ -48,8 +42,8 @@ createPanel(ctx: BaseContext, info: PanelInfo, callback: AsyncCallback<Panel>): 
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
-| 12800004 | not an input method application. |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
+| [12800004](../errorcode-inputmethod-framework.md#12800004-不是输入法应用) | not an input method application. |
 
 ## 示例
 
@@ -117,8 +111,8 @@ createPanel(ctx: BaseContext, info: PanelInfo): Promise<Panel>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
-| 12800004 | not an input method application. |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
+| [12800004](../errorcode-inputmethod-framework.md#12800004-不是输入法应用) | not an input method application. |
 
 ## 示例
 
@@ -175,7 +169,7 @@ destroyPanel(panel: Panel, callback: AsyncCallback<void>): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types; 3.Parameter verification failed. |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types; 3.Parameter verification failed. |
 
 ## 示例
 
@@ -245,7 +239,7 @@ destroyPanel(panel: Panel): Promise<void>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types; 3.Parameter verification failed. |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types; 3.Parameter verification failed. |
 
 ## 示例
 
@@ -307,7 +301,7 @@ getSecurityMode(): SecurityMode
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 12800004 | not an input method application. |
+| [12800004](../errorcode-inputmethod-framework.md#12800004-不是输入法应用) | not an input method application. |
 
 ## 示例
 
@@ -568,7 +562,7 @@ off(type: 'privateCommand', callback?: Callback<Record<string, CommandDataType>>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 12800010 | not the preconfigured default input method. |
+| [12800010](../errorcode-inputmethod-framework.md#12800010-不是系统配置的默认输入法) | not the preconfigured default input method. |
 
 ## 示例
 
@@ -671,6 +665,20 @@ offCallingDisplayDidChange(callback?: Callback<int>): void
 | --- | --- | --- | --- |
 | callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;int&gt; | 否 | 取消订阅的回调函数。 参数不填写时，取消订阅type对应的所有回调事件。 |
 
+## 示例
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+import { inputMethodEngine } from '@kit.IMEKit';
+
+let inputMethodAbility = inputMethodEngine.getInputMethodAbility();
+
+console.info(`unregist calling display changed `);
+inputMethodAbility!.offCallingDisplayDidChange((num: int) => {
+  console.info('inputMethodAbility delete calling display  notification.');
+});
+```
+
 ## offDiscardTypingText
 
 ```TypeScript
@@ -692,6 +700,19 @@ offDiscardTypingText(callback?: Callback<void>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;void&gt; | 否 | 取消订阅的回调函数。参数不填写时，取消订阅type对应的所有回调事件。 |
+
+## 示例
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+import inputMethodEngine from '@ohos.inputMethodEngine';
+
+let inputMethodAbility = inputMethodEngine.getInputMethodAbility();
+console.info(`discard the typing text`);
+inputMethodAbility!.offDiscardTypingText(() => {
+  console.info('inputMethodAbility discard the typing text.');
+});
+```
 
 ## offInputStart
 
@@ -715,6 +736,17 @@ offInputStart(callback?: IMAInputStartCallback): void
 | --- | --- | --- | --- |
 | callback | [IMAInputStartCallback](arkts-ime-inputmethodengine-imainputstartcallback-t.md) | 否 | 取消订阅的回调函数。参数不填写时，取消订阅type对应的所有回调事件。 |
 
+## 示例
+
+```TypeScript
+let inputMethodAbility = inputMethodEngine.getInputMethodAbility();
+
+inputMethodAbility!
+  .offInputStart((kbController: inputMethodEngine.KeyboardController, textClient: inputMethodEngine.InputClient) => {
+  console.info('delete inputStart notification.');
+});
+```
+
 ## offInputStop
 
 ```TypeScript
@@ -736,6 +768,15 @@ offInputStop(callback: Callback<void>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;void&gt; | 是 | 取消订阅的回调函数。参数不填写时，取消订阅type对应的所有回调事件。 to terminate itself. |
+
+## 示例
+
+```TypeScript
+let inputMethodAbility = inputMethodEngine.getInputMethodAbility();
+inputMethodAbility!.offInputStop(() => {
+  console.info('inputMethodAbility delete inputStop notification.');
+});
+```
 
 ## offKeyboardHide
 
@@ -759,6 +800,18 @@ offKeyboardHide(callback?: Callback<void>): void
 | --- | --- | --- | --- |
 | callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;void&gt; | 否 | 回调函数。 |
 
+## 示例
+
+```TypeScript
+let inputMethodAbility = inputMethodEngine.getInputMethodAbility();
+inputMethodAbility!.offKeyboardShow(() => {
+  console.info('inputMethodAbility delete keyboardShow notification.');
+});
+inputMethodAbility!.offKeyboardHide(() => {
+  console.info('inputMethodAbility delete keyboardHide notification.');
+});
+```
+
 ## offKeyboardShow
 
 ```TypeScript
@@ -780,6 +833,19 @@ offKeyboardShow(callback?: Callback<void>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;void&gt; | 否 | 回调函数。 |
+
+## 示例
+
+```TypeScript
+let inputMethodAbility = inputMethodEngine.getInputMethodAbility();
+
+inputMethodAbility!.offKeyboardShow(() => {
+  console.info('inputMethodAbility delete keyboardShow notification.');
+});
+inputMethodAbility!.offKeyboardHide(() => {
+  console.info('inputMethodAbility delete keyboardHide notification.');
+});
+```
 
 ## offPrivateCommand
 
@@ -807,7 +873,23 @@ offPrivateCommand(callback?: Callback<Record<string, CommandDataType>>): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 12800010 | not the preconfigured default input method. |
+| [12800010](../errorcode-inputmethod-framework.md#12800010-不是系统配置的默认输入法) | not the preconfigured default input method. |
+
+## 示例
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+import { inputMethodEngine } from '@kit.IMEKit';
+
+let inputMethodAbility = inputMethodEngine.getInputMethodAbility();
+let privateCommandCallback = (record: Record<string, inputMethodEngine.CommandDataType>) => {
+  record.forEach((key, value) => {
+    console.info(`private command key: ${key}, value: ${value}`);
+  });
+}
+console.info(`regist private command `);
+inputMethodAbility!.offPrivateCommand(privateCommandCallback);
+```
 
 ## offSecurityModeChange
 
@@ -831,6 +913,17 @@ offSecurityModeChange(callback?: Callback<SecurityMode>): void
 | --- | --- | --- | --- |
 | callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;SecurityMode&gt; | 否 | 取消订阅的回调函数。参数不填写时，取消订阅type对应的所有回调事件。 |
 
+## 示例
+
+```TypeScript
+let InputMethodEngine = inputMethodEngine.getInputMethodAbility();
+let securityChangeCallback = (securityMode: inputMethodEngine.SecurityMode) => {
+  console.info(`inputMethodAbility securityModeChange, security is ${securityMode}`);
+};
+InputMethodEngine.onSecurityModeChange(securityChangeCallback);
+InputMethodEngine.offSecurityModeChange(securityChangeCallback);
+```
+
 ## offSetCallingWindow
 
 ```TypeScript
@@ -853,6 +946,15 @@ offSetCallingWindow(callback: Callback<int>): void
 | --- | --- | --- | --- |
 | callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;int&gt; | 是 | 取消订阅的回调函数。参数不填写时，取消订阅type对应的所有回调事件。 |
 
+## 示例
+
+```TypeScript
+let inputMethodAbility = inputMethodEngine.getInputMethodAbility();
+inputMethodAbility!.offSetCallingWindow((wid: int) => {
+  console.info('inputMethodAbility delete setCallingWindow notification.');
+});
+```
+
 ## offSetSubtype
 
 ```TypeScript
@@ -874,6 +976,17 @@ offSetSubtype(callback?: Callback<InputMethodSubtype>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[InputMethodSubtype](arkts-ime-inputmethodsubtype-i.md)&gt; | 否 | 取消订阅的回调函数。参数不填写时，取消订阅type对应的所有回调事件。 to switch subtype. |
+
+## 示例
+
+```TypeScript
+import { InputMethodSubtype } from '@kit.IMEKit';
+let inputMethodAbility = inputMethodEngine.getInputMethodAbility();
+
+inputMethodAbility!.offSetSubtype((inputMethodSubtype: InputMethodSubtype) => {
+  console.info('inputMethodAbility setSubtype.');
+});
+```
 
 ## on('inputStart')
 
@@ -1162,7 +1275,7 @@ on(type: 'privateCommand', callback: Callback<Record<string, CommandDataType>>):
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 12800010 | not the preconfigured default input method. |
+| [12800010](../errorcode-inputmethod-framework.md#12800010-不是系统配置的默认输入法) | not the preconfigured default input method. |
 
 ## 示例
 
@@ -1207,7 +1320,7 @@ on(type: 'callingDisplayDidChange', callback: Callback<number>): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 801 | capability not supported. |
+| [801](../../errorcode-universal.md#801-该设备不支持此api) | capability not supported. |
 
 ## 示例
 
@@ -1279,7 +1392,22 @@ onCallingDisplayDidChange(callback: Callback<int>): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 801 | capability not supported. |
+| [801](../../errorcode-universal.md#801-该设备不支持此api) | capability not supported. |
+
+## 示例
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+import { inputMethodEngine } from '@kit.IMEKit';
+
+let inputMethodAbility = inputMethodEngine.getInputMethodAbility();
+let callingDisplayDidChangeCallback = (num: int) => {
+  console.info(`display id: ${num}`);
+}
+
+console.info(`regist calling display changed`);
+inputMethodAbility!.onCallingDisplayDidChange(callingDisplayDidChangeCallback);
+```
 
 ## onDiscardTypingText
 
@@ -1303,6 +1431,19 @@ onDiscardTypingText(callback: Callback<void>): void
 | --- | --- | --- | --- |
 | callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;void&gt; | 是 | 回调函数。 |
 
+## 示例
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+import inputMethodEngine from '@ohos.inputMethodEngine';
+
+let inputMethodAbility = inputMethodEngine.getInputMethodAbility();
+console.info(`discard the typing text`);
+inputMethodAbility!.onDiscardTypingText(() => {
+  console.info('inputMethodAbility discard the typing text.');
+});
+```
+
 ## onInputStart
 
 ```TypeScript
@@ -1324,6 +1465,18 @@ onInputStart(callback: IMAInputStartCallback): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | callback | [IMAInputStartCallback](arkts-ime-inputmethodengine-imainputstartcallback-t.md) | 是 | 回调函数，返回订阅输入法的KeyboardController和TextInputClient实例。 |
+
+## 示例
+
+```TypeScript
+let inputMethodAbility = inputMethodEngine.getInputMethodAbility();
+
+inputMethodAbility!
+.onInputStart((kbController: inputMethodEngine.KeyboardController, client: inputMethodEngine.InputClient) => {
+  let keyboardController = kbController;
+  let inputClient = client;
+});
+```
 
 ## onInputStop
 
@@ -1347,6 +1500,15 @@ onInputStop(callback: Callback<void>): void
 | --- | --- | --- | --- |
 | callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;void&gt; | 是 | 系统要求输入法终止输入流程时触发的回调函数，无入参，用于执行输入停止后的清理逻辑（如隐藏键盘、释放资源等）。 to terminate itself. |
 
+## 示例
+
+```TypeScript
+let inputMethodAbility = inputMethodEngine.getInputMethodAbility();
+inputMethodAbility!.onInputStop(() => {
+  console.info('inputMethodAbility inputStop');
+});
+```
+
 ## onKeyboardHide
 
 ```TypeScript
@@ -1369,6 +1531,18 @@ onKeyboardHide(callback: Callback<void>): void
 | --- | --- | --- | --- |
 | callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;void&gt; | 是 | 回调函数。 |
 
+## 示例
+
+```TypeScript
+let inputMethodAbility = inputMethodEngine.getInputMethodAbility();
+inputMethodAbility!.onKeyboardShow(() => {
+  console.info('inputMethodEngine keyboardShow.');
+});
+inputMethodAbility!.onKeyboardHide(() => {
+  console.info('inputMethodEngine keyboardHide.');
+});
+```
+
 ## onKeyboardShow
 
 ```TypeScript
@@ -1390,6 +1564,18 @@ onKeyboardShow(callback: Callback<void>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;void&gt; | 是 | 回调函数。 |
+
+## 示例
+
+```TypeScript
+let inputMethodAbility = inputMethodEngine.getInputMethodAbility();
+inputMethodAbility!.onKeyboardShow(() => {
+  console.info('inputMethodEngine keyboardShow.');
+});
+inputMethodAbility!.onKeyboardHide(() => {
+  console.info('inputMethodEngine keyboardHide.');
+});
+```
 
 ## onPrivateCommand
 
@@ -1417,7 +1603,25 @@ onPrivateCommand(callback: Callback<Record<string, CommandDataType>>): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 12800010 | not the preconfigured default input method. |
+| [12800010](../errorcode-inputmethod-framework.md#12800010-不是系统配置的默认输入法) | not the preconfigured default input method. |
+
+## 示例
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+import { inputMethodEngine } from '@kit.IMEKit';
+
+let inputMethodAbility = inputMethodEngine.getInputMethodAbility();
+
+let privateCommandCallback = (record: Record<string, inputMethodEngine.CommandDataType>) => {
+  record.forEach((key, value) => {
+    console.info(`private command key: ${key}, value: ${value}`);
+  });
+}
+
+console.info(`regist private command `);
+inputMethodAbility!.onPrivateCommand(privateCommandCallback);
+```
 
 ## onSecurityModeChange
 
@@ -1441,6 +1645,16 @@ onSecurityModeChange(callback: Callback<SecurityMode>): void
 | --- | --- | --- | --- |
 | callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;SecurityMode&gt; | 是 | 回调函数，返回当前输入法应用的安全模式。 |
 
+## 示例
+
+```TypeScript
+let inputMethodAbility = inputMethodEngine.getInputMethodAbility();
+
+inputMethodAbility!.onSecurityModeChange((securityMode: inputMethodEngine.SecurityMode) => {
+  console.info(`inputMethodAbility securityModeChange, security is ${securityMode}`);
+});
+```
+
 ## onSetCallingWindow
 
 ```TypeScript
@@ -1463,6 +1677,15 @@ onSetCallingWindow(callback: Callback<int>): void
 | --- | --- | --- | --- |
 | callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;int&gt; | 是 | 回调函数，返回调用方窗口的Id。 |
 
+## 示例
+
+```TypeScript
+let inputMethodAbility = inputMethodEngine.getInputMethodAbility();
+inputMethodAbility!.onSetCallingWindow((wid: int) => {
+  console.info('inputMethodAbility setCallingWindow');
+});
+```
+
 ## onSetSubtype
 
 ```TypeScript
@@ -1484,4 +1707,15 @@ onSetSubtype(callback: Callback<InputMethodSubtype>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[InputMethodSubtype](arkts-ime-inputmethodsubtype-i.md)&gt; | 是 | 回调函数，返回设置的输入法子类型。 to switch subtype. |
+
+## 示例
+
+```TypeScript
+import { InputMethodSubtype } from '@kit.IMEKit';
+let inputMethodAbility = inputMethodEngine.getInputMethodAbility();
+
+inputMethodAbility!.onSetSubtype((inputMethodSubtype: InputMethodSubtype) => {
+  console.info('inputMethodAbility setSubtype.');
+});
+```
 

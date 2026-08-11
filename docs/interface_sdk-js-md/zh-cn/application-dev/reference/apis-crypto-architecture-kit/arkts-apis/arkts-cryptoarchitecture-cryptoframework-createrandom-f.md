@@ -1,11 +1,5 @@
 # createRandom
 
-## 导入模块
-
-```TypeScript
-import { cryptoFramework } from 'kits/@kit.CryptoArchitectureKit';
-```
-
 ## createRandom
 
 ```TypeScript
@@ -40,7 +34,7 @@ function createRandom(): Random
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 17620001 | 内存操作失败。 |
+| [17620001](../errorcode-crypto-framework.md#17620001-内存操作失败) | 内存操作失败。 |
 
 ## 示例
 

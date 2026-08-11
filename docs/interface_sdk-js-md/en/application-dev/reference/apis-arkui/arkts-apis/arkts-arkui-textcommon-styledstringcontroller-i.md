@@ -1,6 +1,6 @@
 # StyledStringController
 
-定义StyledString控制器。
+Define the StyledString controller.
 
 **Since:** 23
 
@@ -16,9 +16,7 @@
 getStyledString(): MutableStyledString | undefined
 ```
 
-ArkTS-Sta: getStyledString(): MutableStyledString | undefined
-
-获取富文本组件显示的属性字符串。
+Get the StyledString of the component.
 
 **Since:** 23
 
@@ -28,11 +26,13 @@ ArkTS-Sta: getStyledString(): MutableStyledString | undefined
 
 <!--Device-StyledStringController-getStyledString(): MutableStyledString | undefined--><!--Device-StyledStringController-getStyledString(): MutableStyledString | undefined-End-->
 
+**System capability:** SystemCapability.ArkUI.ArkUI.Full
+
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [MutableStyledString](arkts-arkui-mutablestyledstring-c.md) | 富文本组件显示的属性字符串。 |
+| [MutableStyledString](arkts-arkui-mutablestyledstring-c.md) |  |
 
 ## setStyledString
 
@@ -40,7 +40,7 @@ ArkTS-Sta: getStyledString(): MutableStyledString | undefined
 setStyledString(styledString: StyledString): void
 ```
 
-设置富文本组件显示的属性字符串。
+Set the StyledString of the component.
 
 **Since:** 23
 
@@ -56,5 +56,5 @@ setStyledString(styledString: StyledString): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| styledString | [StyledString](arkts-arkui-styledstring-c.md) | Yes | 属性字符串。&lt;br/&gt;**说明：** &lt;br/&gt;StyledString的子类 [MutableStyledString](../../../reference/apis-arkui/arkui-ts/ts-universal-styled-string.md#mutablestyledstring) 也可以作为入参值。 |
+| styledString | [StyledString](arkts-arkui-styledstring-c.md) | Yes | StyledString. |
 

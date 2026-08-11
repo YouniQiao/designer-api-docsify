@@ -6,7 +6,7 @@
 function isNotificationEnabled(bundle: BundleOption, callback: AsyncCallback<boolean>): void
 ```
 
-获取指定应用的通知使能状态（Callback形式）。
+Checks whether notification is enabled for a specified application.This API uses an asynchronous callback to return the result.
 
 **Since:** 7
 
@@ -28,8 +28,8 @@ function isNotificationEnabled(bundle: BundleOption, callback: AsyncCallback<boo
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| bundle | [BundleOption](arkts-notification-notificationextensionsubscription-bundleoption-t.md) | Yes | 指定应用的包信息。 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;boolean&gt; | Yes | 获取通知使能状态回调函数。 |
+| bundle | [BundleOption](arkts-notification-notificationextensionsubscription-bundleoption-t.md) | Yes | Bundle information of the application. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;boolean&gt; | Yes | Callback used to return the result. |
 
 
 ## isNotificationEnabled
@@ -38,7 +38,7 @@ function isNotificationEnabled(bundle: BundleOption, callback: AsyncCallback<boo
 function isNotificationEnabled(bundle: BundleOption): Promise<boolean>
 ```
 
-获取指定应用的通知使能状态（Promise形式）。
+Checks whether notification is enabled for a specified application. This API uses a promise to return the result.
 
 **Since:** 7
 
@@ -60,13 +60,13 @@ function isNotificationEnabled(bundle: BundleOption): Promise<boolean>
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| bundle | [BundleOption](arkts-notification-notificationextensionsubscription-bundleoption-t.md) | Yes | 指定应用的包信息。 |
+| bundle | [BundleOption](arkts-notification-notificationextensionsubscription-bundleoption-t.md) | Yes | Bundle information of the application. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;boolean&gt; | 以Promise形式返回获取指定应用的通知使能状态的结果。 |
+| Promise&lt;boolean&gt; | Promise used to return the result. |
 
 
 ## isNotificationEnabled
@@ -75,7 +75,7 @@ function isNotificationEnabled(bundle: BundleOption): Promise<boolean>
 function isNotificationEnabled(callback: AsyncCallback<boolean>): void
 ```
 
-获取通知使能状态（Callback形式）。
+Checks whether notification is enabled for this application.This API uses an asynchronous callback to return the result.
 
 **Since:** 7
 
@@ -97,7 +97,7 @@ function isNotificationEnabled(callback: AsyncCallback<boolean>): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;boolean&gt; | Yes | 获取通知使能状态回调函数。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;boolean&gt; | Yes | Callback used to return the result. |
 
 
 ## isNotificationEnabled
@@ -106,7 +106,7 @@ function isNotificationEnabled(callback: AsyncCallback<boolean>): void
 function isNotificationEnabled(): Promise<boolean>
 ```
 
-获取通知使能状态（Promise形式）。
+Checks whether notification is enabled for this application. This API uses a promise to return the result.
 
 **Since:** 7
 
@@ -128,7 +128,7 @@ function isNotificationEnabled(): Promise<boolean>
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;boolean&gt; | 以Promise形式返回获取通知使能状态的结果。 |
+| Promise&lt;boolean&gt; | Promise used to return the result. |
 
 
 ## isNotificationEnabled
@@ -137,7 +137,7 @@ function isNotificationEnabled(): Promise<boolean>
 function isNotificationEnabled(userId: number, callback: AsyncCallback<boolean>): void
 ```
 
-获取指定用户ID下的通知使能状态。使用callback异步回调。
+Checks whether notification is enabled for a specified user.This API uses an asynchronous callback to return the result.
 
 **Since:** 8
 
@@ -159,8 +159,8 @@ function isNotificationEnabled(userId: number, callback: AsyncCallback<boolean>)
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| userId | number | Yes | 指定的用户ID。 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;boolean&gt; | Yes | 获取通知使能状态回调函数（true：使能，false：禁止）。 |
+| userId | number | Yes | User ID. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;boolean&gt; | Yes | Callback used to return the result. The value **true** means that the notification is enabled, and **false** means the opposite. |
 
 
 ## isNotificationEnabled
@@ -169,7 +169,7 @@ function isNotificationEnabled(userId: number, callback: AsyncCallback<boolean>)
 function isNotificationEnabled(userId: number): Promise<boolean>
 ```
 
-获取指定用户下的通知使能状态。使用Promise异步回调。
+Checks whether notification is enabled for a specified user. This API uses a promise to return the result.
 
 **Since:** 8
 
@@ -191,11 +191,11 @@ function isNotificationEnabled(userId: number): Promise<boolean>
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| userId | number | Yes | 指定的用户ID。 |
+| userId | number | Yes | User ID. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;boolean&gt; | 以Promise形式返回获取通知使能状态的结果（true：使能，false：禁止）。 |
+| Promise&lt;boolean&gt; | Promise used to return the result. The value **true** means that the notification is enabled, and **false** means the opposite. |
 

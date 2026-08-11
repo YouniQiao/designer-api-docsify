@@ -12,7 +12,7 @@ import { abilityDelegatorRegistry } from 'kits/@kit.TestKit';
 function getAbilityDelegator(): AbilityDelegator
 ```
 
-获取应用程序的[AbilityDelegator](arkts-test-abilitydelegatorregistry-abilitydelegator-t.md)对象，该对象能够使用调度测试框架的相关功能。
+Obtains an [AbilityDelegator](arkts-test-abilitydelegatorregistry-abilitydelegator-t.md) object.
 
 **Since:** 9
 
@@ -36,15 +36,12 @@ function getAbilityDelegator(): AbilityDelegator
 import { abilityDelegatorRegistry } from '@kit.TestKit';
 import { Want } from '@kit.AbilityKit';
 
-// Obtain the AbilityDelegator object of the application.
 let abilityDelegator = abilityDelegatorRegistry.getAbilityDelegator();
-// Construct a Want parameter to specify the target ability.
 let want: Want = {
   bundleName: 'com.example.myapplication',
   abilityName: 'EntryAbility'
 };
 
-// Start the specified ability.
 abilityDelegator.startAbility(want, (err) => {
   if (err) {
     console.error(`Failed start ability, error: ${JSON.stringify(err)}`);

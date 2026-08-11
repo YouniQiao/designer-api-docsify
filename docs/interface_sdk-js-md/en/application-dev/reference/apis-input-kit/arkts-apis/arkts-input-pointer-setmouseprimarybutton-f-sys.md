@@ -12,7 +12,7 @@ import { pointer } from 'kits/@kit.InputKit';
 function setMousePrimaryButton(primary: PrimaryButton, callback: AsyncCallback<void>): void
 ```
 
-设置鼠标主键，使用callback异步回调。
+Sets the primary mouse button. This API uses an asynchronous callback to return the result.
 
 **Since:** 10
 
@@ -28,15 +28,15 @@ function setMousePrimaryButton(primary: PrimaryButton, callback: AsyncCallback<v
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| primary | [PrimaryButton](arkts-input-pointer-primarybutton-e.md) | Yes | 鼠标主键类型。 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | 回调函数。当设置鼠标主键成功，err为undefined，否则为错误对象。 |
+| primary | [PrimaryButton](arkts-input-pointer-primarybutton-e.md) | Yes | Type of the primary mouse button. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined**. Otherwise, **err** is an error object. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; 3. Parameter verification failed. |
-| 202 | SystemAPI permission error. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; 3. Parameter verification failed. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | SystemAPI permission error. |
 
 ## Examples
 
@@ -52,16 +52,15 @@ struct Index {
       Text()
         .onClick(() => {
           try {
-            // Set the primary mouse button.
             pointer.setMousePrimaryButton(pointer.PrimaryButton.RIGHT, (error: BusinessError) => {
               if (error) {
-                console.error(`Failed to set mouse primary button, Code: ${(error as BusinessError).code}, message: ${(error as BusinessError).message}.`);
+                console.error(`Set mouse primary button failed, error: ${JSON.stringify(error, [`code`, `message`])}`);
                 return;
               }
-              console.info(`Succeeded in setting mouse primary button.`);
+              console.info(`Set mouse primary button success`);
             });
           } catch (error) {
-            console.error(`Failed to set mouse primary button, Code: ${(error as BusinessError).code}, message: ${(error as BusinessError).message}.`);
+            console.error(`Set mouse primary button failed, error: ${JSON.stringify(error, [`code`, `message`])}`);
           }
         })
     }
@@ -76,7 +75,7 @@ struct Index {
 function setMousePrimaryButton(primary: PrimaryButton): Promise<void>
 ```
 
-设置鼠标主键，使用Promise异步回调。
+Sets the primary mouse button. This API uses a promise to return the result.
 
 **Since:** 10
 
@@ -92,20 +91,20 @@ function setMousePrimaryButton(primary: PrimaryButton): Promise<void>
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| primary | [PrimaryButton](arkts-input-pointer-primarybutton-e.md) | Yes | 鼠标主键类型。 |
+| primary | [PrimaryButton](arkts-input-pointer-primarybutton-e.md) | Yes | Type of the primary mouse button. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise对象，无返回结果。 |
+| Promise&lt;void&gt; | Promise that returns no value. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; 3. Parameter verification failed. |
-| 202 | SystemAPI permission error. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; 3. Parameter verification failed. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | SystemAPI permission error. |
 
 ## Examples
 
@@ -121,14 +120,13 @@ struct Index {
       Text()
         .onClick(() => {
           try {
-            // Set the primary mouse button.
             pointer.setMousePrimaryButton(pointer.PrimaryButton.RIGHT).then(() => {
-              console.info(`Succeeded in setting mouse primary button.`);
+              console.info(`Set mouse primary button success`);
             }).catch((error: BusinessError) => {
-              console.error(`Failed to set mouse primary button, Code: ${(error as BusinessError).code}, message: ${(error as BusinessError).message}.`);
+              console.error(`Set mouse failed, error: ${JSON.stringify(error, [`code`, `message`])}`);
             })
           } catch (error) {
-            console.error(`Failed to set mouse primary button, Code: ${(error as BusinessError).code}, message: ${(error as BusinessError).message}.`);
+            console.error(`Set mouse primary button failed, error: ${JSON.stringify(error, [`code`, `message`])}`);
           }
         })
     }

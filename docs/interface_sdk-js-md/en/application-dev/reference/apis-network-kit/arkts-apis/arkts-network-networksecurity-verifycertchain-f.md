@@ -42,16 +42,16 @@ Verifies the server certificate chain and returns a sorted chain.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 2305027 | Certificate is untrusted. |
-| 2305010 | Certificate has expired. |
-| 2305009 | Certificate is not yet valid. |
-| 2305024 | Invalid certificate authority (CA). |
+| [2305027](../errorcode-net-networkSecurity.md#2305027-untrusted-certificate) | Certificate is untrusted. |
+| [2305010](../errorcode-net-networkSecurity.md#2305010-certificate-expired) | Certificate has expired. |
+| [2305009](../errorcode-net-networkSecurity.md#2305009-invalid-certificate) | Certificate is not yet valid. |
+| [2305024](../errorcode-net-networkSecurity.md#2305024-invalid-ca) | Invalid certificate authority (CA). |
 | 2305062 | Invalid hostname. |
-| 2305002 | Unable to get issuer certificate. |
-| 2305018 | Self-signed certificate. |
-| 2305001 | Unspecified error. |
-| 2305007 | Certificate signature failure. |
-| 2305006 | Unable to decode issuer public key. |
-| 2305069 | Invalid certificate verification context. |
-| 2305004 | Unable to decrypt certificate signature. |
+| [2305002](../errorcode-net-networkSecurity.md#2305002-failed-to-obtain-the-issuer-certificate) | Unable to get issuer certificate. |
+| [2305018](../errorcode-net-networkSecurity.md#2305018-selfsigned-certificate) | Self-signed certificate. |
+| [2305001](../errorcode-net-networkSecurity.md#2305001-unspecified-error) | Unspecified error. |
+| [2305007](../errorcode-net-networkSecurity.md#2305007-failed-to-sign-the-certificate) | Certificate signature failure. |
+| [2305006](../errorcode-net-networkSecurity.md#2305006-failed-to-decode-the-issuer-public-key) | Unable to decode issuer public key. |
+| [2305069](../errorcode-net-networkSecurity.md#2305069-invalid-certificate-verification-context) | Invalid certificate verification context. |
+| [2305004](../errorcode-net-networkSecurity.md#2305004-failed-to-decrypt-the-certificate-signature) | Unable to decrypt certificate signature. |
 

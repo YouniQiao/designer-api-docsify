@@ -34,5 +34,5 @@ Defines a DistortionComponent that provides spatial distortion visual effects.
 
 | 类型 | 说明 |
 | --- | --- |
-| [DistortionComponentAttribute](arkts-arkui-distortioncomponent-distortioncomponentattribute-i.md) |  |
+| [DistortionComponentAttribute](../arkts-components/arkts-arkui-distortioncomponent-attribute.md) |  |
 

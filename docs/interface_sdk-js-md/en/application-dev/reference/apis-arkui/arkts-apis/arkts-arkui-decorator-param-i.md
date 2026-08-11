@@ -1,5 +1,7 @@
 # Param
 
+Defining Param annotation Param indicates the state passed in from the external, ensuring that data can be synchronized between the parent and child components.
+
 **Since:** 23
 
 **ArkTS mode:** ArkTS-Sta only, since version 23.

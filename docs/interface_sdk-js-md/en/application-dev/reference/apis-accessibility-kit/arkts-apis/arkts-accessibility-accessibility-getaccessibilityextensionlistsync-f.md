@@ -15,7 +15,7 @@ function getAccessibilityExtensionListSync(
   ): Array<AccessibilityAbilityInfo>
 ```
 
-查询当前系统内辅助应用列表，支持按条件查询。
+Query the list of accessibility applications in the current system, which can be queried by criteria.
 
 **Since:** 12
 
@@ -33,12 +33,12 @@ function getAccessibilityExtensionListSync(
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| abilityType | [AbilityType](arkts-accessibility-accessibility-abilitytype-t.md) | Yes | 辅助应用的类型。 |
-| stateType | [AbilityState](arkts-accessibility-accessibility-abilitystate-t.md) | Yes | 辅助应用的状态。 |
+| abilityType | [AbilityType](arkts-accessibility-accessibility-abilitytype-t.md) | Yes | Accessibility application type. |
+| stateType | [AbilityState](arkts-accessibility-accessibility-abilitystate-t.md) | Yes | Accessibility application status. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Array&lt;AccessibilityAbilityInfo&gt; | 返回辅助应用信息列表。 |
+| Array&lt;AccessibilityAbilityInfo&gt; | Promise used to return the accessibility application list. |
 

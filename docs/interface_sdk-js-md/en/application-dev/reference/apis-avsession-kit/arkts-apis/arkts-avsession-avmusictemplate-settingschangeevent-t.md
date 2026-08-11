@@ -4,7 +4,7 @@
 type SettingsChangeEvent = (settingItem: SettingItem) => Promise<SettingItem>
 ```
 
-设置变更事件类型。使用Promise异步回调。
+The settings change event.
 
 **Since:** 23
 
@@ -20,11 +20,11 @@ type SettingsChangeEvent = (settingItem: SettingItem) => Promise<SettingItem>
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| settingItem | [SettingItem](arkts-avsession-avmusictemplate-settingitem-i.md) | Yes | 设置项。 |
+| settingItem | [SettingItem](arkts-avsession-avmusictemplate-settingitem-i.md) | Yes | setting item |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;SettingItem&gt; | Promise对象，返回变更过的设置项。 |
+| Promise&lt;SettingItem&gt; | (SettingItem) returned through promise |
 

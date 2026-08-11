@@ -1,6 +1,6 @@
 # RotateEvent（系统接口）
 
-Enum for rotate event.
+旋转事件枚举。
 
 **起始版本：** 26.0.0
 
@@ -18,7 +18,7 @@ Enum for rotate event.
 UNCHANGED = -1
 ```
 
-Indicates the device has rotated, but the movement is insufficient to change the current orientation. The orientation remains the same as before.
+表示设备已旋转，但旋转幅度不足以改变当前方向，方向与之前保持一致。
 
 **起始版本：** 26.0.0
 
@@ -38,7 +38,7 @@ Indicates the device has rotated, but the movement is insufficient to change the
 UPRIGHT = 0
 ```
 
-Indicates the device is upright.
+表示设备竖直放置。
 
 **起始版本：** 26.0.0
 
@@ -58,7 +58,7 @@ Indicates the device is upright.
 LEFT = 1
 ```
 
-Indicates the device is rotated left.
+表示设备向左旋转。
 
 **起始版本：** 26.0.0
 
@@ -78,7 +78,7 @@ Indicates the device is rotated left.
 INVERTED = 2
 ```
 
-Indicates the device is inverted.
+表示设备倒置。
 
 **起始版本：** 26.0.0
 
@@ -98,7 +98,7 @@ Indicates the device is inverted.
 RIGHT = 3
 ```
 
-Indicates the device is rotated right.
+表示设备向右旋转。
 
 **起始版本：** 26.0.0
 

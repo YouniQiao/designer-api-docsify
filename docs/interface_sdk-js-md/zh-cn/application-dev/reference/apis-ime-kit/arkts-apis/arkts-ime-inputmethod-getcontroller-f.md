@@ -1,11 +1,5 @@
 # getController
 
-## 导入模块
-
-```TypeScript
-import { inputMethod } from 'kits/@kit.IMEKit';
-```
-
 ## getController
 
 ```TypeScript
@@ -38,7 +32,7 @@ function getController(): InputMethodController
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 12800006 | input method controller error. Possible cause: create InputMethodController object failed. |
+| [12800006](../errorcode-inputmethod-framework.md#12800006-输入法控制器异常) | input method controller error. Possible cause: create InputMethodController object failed. |
 
 ## 示例
 

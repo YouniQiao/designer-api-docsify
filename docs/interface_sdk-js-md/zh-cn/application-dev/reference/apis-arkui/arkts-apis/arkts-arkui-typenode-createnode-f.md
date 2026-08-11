@@ -677,7 +677,7 @@ function createNode(context: UIContext, nodeType: 'Button'): Button
 
 | 类型 | 说明 |
 | --- | --- |
-| [Button](../../apis-input-kit/arkts-apis/arkts-input-multimodalinput-mouseevent-button-e.md) | Button类型的FrameNode节点。 |
+| [Button](arkts-arkui-typenode-button-t.md) | Button类型的FrameNode节点。 |
 
 
 ## createNode

@@ -10,12 +10,6 @@
 
 **系统能力：** SystemCapability.Applications.ContactsData
 
-## 导入模块
-
-```TypeScript
-import { contact } from 'kits/@kit.ContactsKit';
-```
-
 ## INVALID_CONTACT_ID
 
 ```TypeScript
@@ -102,7 +96,7 @@ events?: Event[]
 groups?: Group[]
 ```
 
-联系人的群组列表。
+联系人的群组列表。添加或更新联系人时，仅支持关联到已有群组，不支持创建新群组。
 
 **类型：** [Group](arkts-contacts-contact-group-c.md)[]
 

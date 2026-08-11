@@ -1,6 +1,6 @@
 # PenKeyOperationOptions
 
-笔按键操作选项。
+Pen key operation options.
 
 **Since:** 26.0.0
 
@@ -22,7 +22,7 @@ import { ResizeDirection, WindowMode, PenMode, PenKeyOperation, Driver, MatchPat
 point?: Point
 ```
 
-空鼠模式操作的坐标点。当按键为 AIR_MOUSE 并处于空鼠模式时，该坐标点是必需的。
+The coordinate point for air mouse mode operations. Required when key is AIR_MOUSE in air mouse mode.
 
 **Type:** [Point](../../apis-camera-kit/arkts-apis/arkts-camera-camera-point-i.md)
 

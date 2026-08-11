@@ -1,6 +1,6 @@
 # ExemptedAppInfo (System API)
 
-豁免应用信息，未进入待机管控的应用信息。
+Information about an exempted application.
 
 **Since:** 10
 
@@ -24,7 +24,7 @@ import { deviceStandby } from 'kits/@kit.BackgroundTasksKit';
 duration: int
 ```
 
-豁免时长。单位：s
+The exemption duration.&lt;br&gt;Unit:s
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
@@ -44,7 +44,7 @@ duration: int
 name: string
 ```
 
-应用名。
+The application name.
 
 **Type:** string
 
@@ -64,7 +64,7 @@ name: string
 resourceTypes: int
 ```
 
-资源类型，类型具体说明请参考[ResourceType](arkts-backgroundtasks-devicestandby-resourcetype-e-sys.md)。
+The set of resource types that an application requests.
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 

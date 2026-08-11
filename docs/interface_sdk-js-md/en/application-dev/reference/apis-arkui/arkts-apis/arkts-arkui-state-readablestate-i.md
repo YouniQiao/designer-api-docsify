@@ -1,6 +1,6 @@
 # ReadableState
 
-Define the ReadableState interface to observed date changes.
+Define the ReadableState interface to observed data changes.
 
 **Since:** 23
 
@@ -16,7 +16,7 @@ Define the ReadableState interface to observed date changes.
 readonly value: T
 ```
 
-获取状态变量值
+Get state variable value.
 
 **Type:** T
 

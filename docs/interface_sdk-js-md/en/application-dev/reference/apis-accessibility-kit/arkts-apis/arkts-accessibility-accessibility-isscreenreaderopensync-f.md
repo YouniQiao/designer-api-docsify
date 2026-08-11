@@ -12,7 +12,7 @@ import { accessibility } from 'kits/@kit.AccessibilityKit';
 function isScreenReaderOpenSync(): boolean
 ```
 
-是否开启了屏幕朗读模式。
+Checks whether screen reader mode is enabled.
 
 **Since:** 18
 
@@ -30,7 +30,7 @@ function isScreenReaderOpenSync(): boolean
 
 | Type | Description |
 | --- | --- |
-| boolean | 表示是否开启了屏幕朗读。true表示开启了屏幕朗读，false表示未开启屏幕朗读。 |
+| boolean | Whether the screen reader is enabled. Returns **true** if the screen reader is enabled; returns **false** otherwise. |
 
 ## Examples
 

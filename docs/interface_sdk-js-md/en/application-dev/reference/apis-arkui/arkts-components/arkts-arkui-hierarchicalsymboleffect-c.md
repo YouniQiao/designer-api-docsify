@@ -1,6 +1,6 @@
 # HierarchicalSymbolEffect
 
-HierarchicalSymbolEffect继承自父类SymbolEffect。
+Defines HierarchicalSymbolEffect class, which inherits from **SymbolEffect**.
 
 **Inheritance/Implementation:** HierarchicalSymbolEffect extends [SymbolEffect](arkts-arkui-symboleffect-c.md)
 
@@ -18,7 +18,7 @@ HierarchicalSymbolEffect继承自父类SymbolEffect。
 constructor(fillStyle?: EffectFillStyle)
 ```
 
-HierarchicalSymbolEffect的构造函数，层级动效。
+A constructor used to create a **HierarchicalSymbolEffect** instance, which comes with a hierarchical animation effect.
 
 **Since:** 12
 
@@ -38,7 +38,7 @@ HierarchicalSymbolEffect的构造函数，层级动效。
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| fillStyle | [EffectFillStyle](../arkts-apis/arkts-arkui-symbolglyph-effectfillstyle-e.md) | No | 动效模式。具体枚举值及说明请参考EffectFillStyle枚举说明。 &lt;br&gt;默认值：EffectFillStyle.CUMULATIVE |
+| fillStyle | [EffectFillStyle](../arkts-apis/arkts-arkui-symbolglyph-effectfillstyle-e.md) | No | Effect fill style.&lt;br&gt;Default value: **EffectFillStyle.CUMULATIVE |
 
 ## fillStyle
 
@@ -46,9 +46,9 @@ HierarchicalSymbolEffect的构造函数，层级动效。
 fillStyle?: EffectFillStyle
 ```
 
-动效模式。
+Effect fill style.
 
-默认值：EffectFillStyle.CUMULATIVE
+Default value: **EffectFillStyle.CUMULATIVE**
 
 **Type:** [EffectFillStyle](../arkts-apis/arkts-arkui-symbolglyph-effectfillstyle-e.md)
 

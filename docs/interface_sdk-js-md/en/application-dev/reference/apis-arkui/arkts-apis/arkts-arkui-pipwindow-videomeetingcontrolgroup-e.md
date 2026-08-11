@@ -1,6 +1,7 @@
 # VideoMeetingControlGroup
 
-视频会议控件组枚举。仅当[PiPTemplateType](arkts-arkui-pipwindow-piptemplatetype-e.md) 为VIDEO_MEETING时使用。
+Enumerates the video meeting component groups. They are used only when  
+[PiPTemplateType](arkts-arkui-pipwindow-piptemplatetype-e.md) is set to **VIDEO_MEETING**.
 
 **Since:** 12
 
@@ -16,7 +17,7 @@
 HANG_UP_BUTTON = 301
 ```
 
-挂断控件组。
+Hang-up component group.
 
 **Since:** 12
 
@@ -34,7 +35,7 @@ HANG_UP_BUTTON = 301
 CAMERA_SWITCH = 302
 ```
 
-打开/关闭摄像头控件组。
+Camera on/off component group.
 
 **Since:** 12
 
@@ -52,7 +53,7 @@ CAMERA_SWITCH = 302
 MUTE_SWITCH = 303
 ```
 
-静音控件组。
+Mute/Unmute component group.
 
 **Since:** 12
 
@@ -70,7 +71,7 @@ MUTE_SWITCH = 303
 MICROPHONE_SWITCH = 304
 ```
 
-打开/关闭麦克风控件组。
+Microphone on/off component group.
 
 **Since:** 12
 

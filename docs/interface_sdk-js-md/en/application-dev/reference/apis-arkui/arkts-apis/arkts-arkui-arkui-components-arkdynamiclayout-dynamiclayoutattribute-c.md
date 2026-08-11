@@ -1,8 +1,27 @@
 # DynamicLayoutAttribute
 
-支持[通用属性](../../apis-ability-kit/arkts-apis/arkts-app-ability-common.md/arkts-app-ability-common.md)。
+The [universal attributes](arkts-arkui-common-commonmethod-i.md) are supported.
 
-支持[通用事件](../../apis-ability-kit/arkts-apis/arkts-app-ability-common.md/arkts-app-ability-common.md)。
+> **NOTE：**
+> 
+> - When the layout algorithm is [RowLayoutAlgorithm](arkts-arkui-layoutalgorithm-rowlayoutalgorithm-c.md) or
+> [ColumnLayoutAlgorithm](arkts-arkui-layoutalgorithm-columnlayoutalgorithm-c.md),
+> the [Flex layout](../../../reference/apis-arkui/arkui-ts/ts-universal-attributes-flex-layout.md) attributes set
+> for child components take effect.
+> 
+> - When the layout algorithm is [StackLayoutAlgorithm](arkts-arkui-layoutalgorithm-stacklayoutalgorithm-c.md),
+> the [layoutGravity](arkts-arkui-common-commonmethod-i.md#layoutgravity) attribute set for child components takes effect.
+> 
+> - When the layout algorithm is
+> [CustomLayoutAlgorithm](arkts-arkui-layoutalgorithm-customlayoutalgorithm-c.md),
+> the [setMeasuredSize](arkts-arkui-framenode-c.md#setmeasuredsize) method of the
+> [FrameNode](arkts-arkui-framenode-c.md) component of **DynamicLayout** has a higher priority than the
+> [sizing](arkts-arkui-common-commonmethod-i.md#size) and [border styling](arkts-arkui-common-commonmethod-i.md#border) attributes. The
+> [measure](arkts-arkui-framenode-c.md#measure) and [layout](arkts-arkui-framenode-c.md#layout) methods
+> of the child component [FrameNode](arkts-arkui-framenode-c.md) have a higher priority than the
+> [ignoreLayoutSafeArea](arkts-arkui-common-commonmethod-i.md#ignorelayoutsafearea) attribute.
+
+The [universal events](../../../reference/apis-arkui/arkui-ts/ts-component-general-events.md) are supported.
 
 **Inheritance/Implementation:** DynamicLayoutAttribute extends [CommonMethod<DynamicLayoutAttribute>](CommonMethod<DynamicLayoutAttribute>)
 

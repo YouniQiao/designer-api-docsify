@@ -1,24 +1,34 @@
 # Flex
 
-Flex是以弹性方式布局子组件的容器组件，能够高效地排列、对齐子元素并分配剩余空间。
-
-具体指南请参考[弹性布局](docroot://ui/arkts-layout-development-flex-layout.md)。
-
-> **说明：**
+The **Flex** component is a container that uses the flexible box model for layout. It provides an efficient mechanism
+for arranging and aligning child elements, as well as distributing available space among them.
+For details, see [Flex Layout](docroot://ui/arkts-layout-development-flex-layout.md).
+> **NOTE**
 >
-> - Flex组件在渲染时存在二次布局过程，因此在对性能有严格要求的场景下建议使用[Column]{@link ./column}、[Row]{@link ./row}代替。最佳实践请参考布局优化指导-合理使用布局组件。
+> - This component is supported since API version 7. Updates will be marked with a superscript to indicate their
+> earliest API version.
 >
-> - Flex组件主轴不设置长度时默认撑满父容器，如果包含设置[position]{@link CommonMethod#position}的子组件，此时Flex组件不会撑满父容器。[Column]{@link ./column}、
-> [Row]{@link ./row}组件主轴不设置长度时默认跟随子节点大小。
+> - The **Flex** component adapts the layout of flex items during rendering. This may affect the performance.
+> Therefore, you are advised to use [Column]{@link Column} or [Row]{@link Row} instead under scenarios where
+> consistently high performance is required. For best practices, see
+> [Using Layout Components Properly](https://developer.huawei.com/consumer/en/doc/best-practices/bpta-improve-layout-performance#section12745188175420)
 >
-> - Flex、Column、Row组件在没有子节点且不设置宽高时，默认宽高为-1。
+> - If the main axis length of the **Flex** component is unspecified, it follows the size of the parent container by
+> default. If the **Flex** component contains child components for which
+> [position]{@link CommonMethod#position} is set, the
+> **Flex** component does not follow the size of the parent container. If the main axis length of the **Column** or
+> **Row** component is unspecified, it follows the size of the child nodes by default.
 >
-> - 主轴长度可设置为auto使Flex自适应子组件布局，自适应时，Flex长度受[constraintSize]{@link CommonMethod#constraintSize}属性以及父容器传递的最大最小长度限制，且
-> constraintSize属性优先级更高。
-
-## 子组件
-
-可以包含子组件。
+> - If **Flex**, **Column**, or **Row** containers have no child components and no explicit width or height settings,
+> their default width or height is **-1**.
+>
+> - You can set the main axis length of a **Flex** component to **auto** to make it adapt to the layout of its child
+> components. This way, the **Flex** component's length is subject to the **constraintSize** attribute and the
+> maximum and minimum length constraints passed from the parent container, with **constraintSize** taking precedence.
+>
+> **Child Components**
+>
+> This component can contain child components.
 
 ## Flex
 
@@ -26,7 +36,7 @@ Flex是以弹性方式布局子组件的容器组件，能够高效地排列、�
 Flex(value?: FlexOptions)
 ```
 
-创建Flex布局容器，用于以弹性方式排列、对齐子组件并分配剩余空间。
+Creates a **Flex** component.
 
 **Since:** 7
 
@@ -44,7 +54,7 @@ Flex(value?: FlexOptions)
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | [FlexOptions](arkts-arkui-flexoptions-i.md) | No | Flex容器的配置选项，用于设置子组件的排列方向、换行方式、对齐方式和间距。不传入时使用默认配置，各属性默认值详见 [FlexOptions](docroot://reference/apis-arkui/arkui-ts/ts-container-flex.md#flexoptions对象说明)对象说明。 |
+| value | [FlexOptions](arkts-arkui-flexoptions-i.md) | No | Parameters of the child components in the **Flex** component. |
 
 ## Summary
 

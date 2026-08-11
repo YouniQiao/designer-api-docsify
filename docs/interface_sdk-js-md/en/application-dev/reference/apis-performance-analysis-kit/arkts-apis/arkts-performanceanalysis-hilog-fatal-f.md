@@ -12,7 +12,7 @@ import { hilog } from 'kits/@kit.PerformanceAnalysisKit';
 function fatal(domain: number, tag: string, format: string, ...args: any[]): void
 ```
 
-打印FATAL级别的日志。
+Prints FATAL logs.
 
 **Since:** 7
 
@@ -28,10 +28,10 @@ function fatal(domain: number, tag: string, format: string, ...args: any[]): voi
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| domain | number | Yes | 日志对应的领域标识，范围是0x0~0xFFFF，超出范围则日志无法打印。&lt;br/&gt;建议开发者在应用内根据需要自定义划分。 |
-| tag | string | Yes | 指定日志标识，可以为任意字符串，建议用于标识调用所在的类或者业务行为。tag长度最多为31字节，超出后会截断，不建议使用中文字符，可能出现乱码或者对齐问题。 |
-| format | string | Yes | 格式字符串，用于日志的格式化输出。格式字符串中可以设置多个参数，参数需要包含参数类型、隐私标识。&lt;br/&gt;隐私标识分为{public}和{private}，缺省为{ private}。标识{public}的内容明文输出，标识{private}的内容以&lt;private&gt;过滤回显。 |
-| args | any[] | Yes | 与格式字符串format对应的可变长度参数列表。参数数目、参数类型必须与格式字符串中的标识一一对应。 |
+| domain | number | Yes | Service domain of logs. The value ranges from **0x0** to **0xFFFF**. If the value exceeds the range, logs cannot be printed.&lt;br&gt;You can define the value as required. |
+| tag | string | Yes | Log tag in the string format. You are advised to use this parameter to identify a particular service behavior or the class holding the ongoing method. A tag can contain a maximum of 31 bytes. If a tag exceeds this limit, it will be truncated. Chinese characters are not recommended because garbled characters or alignment problems may occur. |
+| format | string | Yes | Format string used to output logs in a specified format. It can contain several elements , where the parameter type and privacy identifier are mandatory.&lt;br&gt;Parameters labeled **{public}** are public data and are displayed in plaintext; parameters labeled **{private}** (default value) are private data and are filtered by **&lt;private&gt;**. |
+| args | any[] | Yes | Variable-length parameter list corresponding to the format string. The number and type of parameters must map to the identifier in the format string. |
 
 ## Examples
 
@@ -54,7 +54,7 @@ If "hello" is filled in %{public}s and 3 in %{private}d, the output log is as fo
 function fatal(domain: int, tag: string, format: string, ...args: RecordData[]): void
 ```
 
-打印FATAL级别的日志。
+Prints FATAL logs.
 
 **Since:** 23
 
@@ -70,8 +70,8 @@ function fatal(domain: int, tag: string, format: string, ...args: RecordData[]):
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| domain | int | Yes | 日志对应的领域标识，范围是0x0~0xFFFF，超出范围则日志无法打印。&lt;br/&gt;建议开发者在应用内根据需要自定义划分。 |
-| tag | string | Yes | 指定日志标识，可以为任意字符串，建议用于标识调用所在的类或者业务行为。tag长度最多为31字节，超出后会截断，不建议使用中文字符，可能出现乱码或者对齐问题。 |
-| format | string | Yes | 格式字符串，用于日志的格式化输出。格式字符串中可以设置多个参数，参数需要包含参数类型、隐私标识。&lt;br/&gt;隐私标识分为{public}和{private}，缺省为{ private}。标识{public}的内容明文输出，标识{private}的内容以&lt;private&gt;过滤回显。 |
-| args | [RecordData](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-recorddata-t.md)[] | Yes | 与格式字符串format对应的可变长度参数列表。参数数目、参数类型必须与格式字符串中的标识一一对应。 |
+| domain | int | Yes | Service domain of logs. The value ranges from **0x0** to **0xFFFF**. If the value exceeds the range, logs cannot be printed.&lt;br&gt;You can define the value as required. |
+| tag | string | Yes | Log tag in the string format. You are advised to use this parameter to identify a particular service behavior or the class holding the ongoing method. A tag can contain a maximum of 31 bytes. If a tag exceeds this limit, it will be truncated. Chinese characters are not recommended because garbled characters or alignment problems may occur. |
+| format | string | Yes | Format string used to output logs in a specified format. It can contain several elements , where the parameter type and privacy identifier are mandatory.&lt;br&gt;Parameters labeled **{public}** are public data and are displayed in plaintext; parameters labeled **{private}** (default value) are private data and are filtered by **&lt;private&gt;**. |
+| args | [RecordData](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-recorddata-t.md)[] | Yes | Variable-length parameter list corresponding to the format string. The number and type of parameters must map to the identifier in the format string. |
 

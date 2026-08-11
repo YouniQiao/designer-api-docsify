@@ -1,6 +1,6 @@
 # PhotoSelectResult
 
-返回图库选择后的结果集。
+Defines information about the images or videos selected.
 
 **Since:** 9
 
@@ -26,7 +26,7 @@ import { picker } from 'kits/@kit.CoreFileKit';
 isOriginalPhoto: boolean
 ```
 
-返回图库选择后的媒体文件是否为原图。true为原图；false不是原图。
+Whether the selected image is the original one. The value **true** means the selected image is the original one;the value **false** means the opposite.
 
 **Type:** boolean
 
@@ -50,8 +50,9 @@ isOriginalPhoto: boolean
 photoUris: Array<string>
 ```
 
-返回图库选择后的媒体文件的URI数组。此URI数组只能通过临时授权的方式调用接口  
-[photoAccessHelper.getAssets](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-photoaccesshelper-photoaccesshelper-i.md/arkts-medialibrary-photoaccesshelper-photoaccesshelper-i.md#getassets)去使用，具体使用方式参见用户文件URI介绍中的[媒体文件URI的使用方式](../../../file-management/user-file-uri-intro.md#媒体文件uri的使用方式)。
+URIs of the media files selected. This URI array can be used only by  
+[photoAccessHelper.getAssets](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-photoaccesshelper-photoaccesshelper-i.md/arkts-medialibrary-photoaccesshelper-photoaccesshelper-i.md#getassets). For details, see  
+[Using a Media File URI](../../../file-management/user-file-uri-intro.md#using-a-media-file-uri).
 
 **Type:** Array&lt;string&gt;
 

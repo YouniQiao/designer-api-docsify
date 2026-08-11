@@ -12,7 +12,7 @@ import { serialManager } from 'kits/@kit.BasicServicesKit';
 function getPortList(): Readonly<SerialPort>[]
 ```
 
-查询串口设备清单，包括设备名称和对应的端口号。
+Obtains the serial port device list, including the device name and port number.
 
 **Since:** 19
 
@@ -40,10 +40,11 @@ import { serialManager } from '@kit.BasicServicesKit';
 function getPortList() {
   let portList: serialManager.SerialPort[] = serialManager.getPortList();
   console.info('usbSerial portList: ' + JSON.stringify(portList));
-  if (!portList || portList.length === 0) {
-    console.error('usbSerial portList is empty');
+  if (portList === undefined || portList.length === 0) {
+    console.info('usbSerial portList is empty');
     return;
   }
+  let portId: number = portList[0].portId;
 }
 ```
 

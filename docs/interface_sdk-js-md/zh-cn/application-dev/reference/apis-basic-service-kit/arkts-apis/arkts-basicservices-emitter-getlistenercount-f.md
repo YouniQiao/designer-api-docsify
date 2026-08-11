@@ -1,11 +1,5 @@
 # getListenerCount
 
-## 导入模块
-
-```TypeScript
-import { emitter } from 'kits/@kit.BasicServicesKit';
-```
-
 ## getListenerCount
 
 ```TypeScript
@@ -38,7 +32,15 @@ function getListenerCount(eventId: long | string): long
 
 ## 示例
 
+ArkTS-Dyn示例：
+
 ```TypeScript
-let count: number = emitter.getListenerCount('eventId');
+let count: number = emitter.getListenerCount("eventId");
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+let count: long = emitter.getListenerCount("eventId");
 ```
 

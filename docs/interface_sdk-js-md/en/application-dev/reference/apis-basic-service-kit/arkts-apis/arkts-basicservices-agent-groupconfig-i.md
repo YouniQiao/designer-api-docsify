@@ -1,6 +1,6 @@
 # GroupConfig
 
-下载任务分组配置选项。
+Describes group configuration options for download tasks.
 
 **Since:** 15
 
@@ -22,12 +22,12 @@ import { request } from 'kits/@kit.BasicServicesKit';
 gauge?: boolean
 ```
 
-后台任务的进度通知策略。 
+Whether to send progress notifications. This parameter applies only to background tasks.
 
-- true，显示进度、成功、失败通知。   
-- false，仅显示成功、失败通知。
+- **true**: The progress, success, and failure notifications are displayed.  
+- **false**: Only success and failure notifications are displayed.
 
-默认为false。
+The default value is **false**.
 
 **Type:** boolean
 
@@ -45,7 +45,7 @@ gauge?: boolean
 notification: Notification
 ```
 
-通知栏自定义设置。默认值为`{}`
+Custom settings for the notification bar. The default value is **{}**.
 
 **Type:** [Notification](arkts-basicservices-agent-notification-i.md)
 

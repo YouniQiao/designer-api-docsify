@@ -4,7 +4,7 @@
 type PiPCallActionEvent = 'hangUp' | 'micStateChanged' | 'videoStateChanged' | 'voiceStateChanged'
 ```
 
-视频通话控制事件类型。
+Defines the PiP action event in a video call.
 
 **Since:** 11
 
@@ -18,8 +18,8 @@ type PiPCallActionEvent = 'hangUp' | 'micStateChanged' | 'videoStateChanged' | '
 
 | Type | Description |
 | --- | --- |
-| 'hangUp' | 挂断视频通话。 |
-| 'micStateChanged' | 打开或关闭麦克风。 |
-| 'videoStateChanged' | 打开或关闭摄像头。 |
-| 'voiceStateChanged' | 静音或解除静音。 [since 12] |
+| 'hangUp' | The video call is hung up. |
+| 'micStateChanged' | The microphone is muted or unmuted. |
+| 'videoStateChanged' | The camera is turned on or off. |
+| 'voiceStateChanged' | The speaker is muted or unmuted. [since 12] |
 

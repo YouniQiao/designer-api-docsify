@@ -1,6 +1,6 @@
 # GridRowColumnOption
 
-栅格在不同宽度设备类型下，栅格列数。
+Defines the option in int unit of grid-container component.
 
 **Since:** 23
 
@@ -16,7 +16,7 @@
 lg?: int
 ```
 
-在栅格大小为lg的设备上，栅格容器组件的栅格列数。
+Grid Row Column Option lg, select lg column num based on gridRow current breakpoint
 
 **Type:** int
 
@@ -36,7 +36,7 @@ lg?: int
 md?: int
 ```
 
-在栅格大小为md的设备上，栅格容器组件的栅格列数。
+Grid Row Column Option md
 
 **Type:** int
 
@@ -56,7 +56,7 @@ md?: int
 sm?: int
 ```
 
-在栅格大小为sm的设备上，栅格容器组件的栅格列数。
+Grid Row Column Option sm, select sm column num based on gridRow current breakpoint
 
 **Type:** int
 
@@ -76,7 +76,7 @@ sm?: int
 xl?: int
 ```
 
-在栅格大小为xl的设备上，栅格容器组件的栅格列数。
+Grid Row Column Option xl, select xl column num based on gridRow current breakpoint
 
 **Type:** int
 
@@ -96,7 +96,7 @@ xl?: int
 xs?: int
 ```
 
-在栅格大小为xs的设备上，栅格容器组件的栅格列数。
+Grid Row Column Option xs, select xs column num based on gridRow current breakpoint
 
 **Type:** int
 
@@ -116,7 +116,7 @@ xs?: int
 xxl?: int
 ```
 
-在栅格大小为xxl的设备上，栅格容器组件的栅格列数。
+Grid Row Column Option xxl, select xxl column num based on gridRow current breakpoint
 
 **Type:** int
 

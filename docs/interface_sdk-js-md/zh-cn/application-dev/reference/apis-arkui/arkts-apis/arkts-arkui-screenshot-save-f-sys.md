@@ -1,11 +1,5 @@
 # save（系统接口）
 
-## 导入模块
-
-```TypeScript
-import { screenshot } from 'kits/@kit.ArkUI';
-```
-
 ## save
 
 ```TypeScript
@@ -40,11 +34,13 @@ function save(options: ScreenshotOptions, callback: AsyncCallback<image.PixelMap
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 1400001 | Invalid display or screen.<br>**适用版本：** 11+ |
-| 201 | Permission verification failed. The application does not have the permission required to call the API. |
-| 202 | Permission verification failed. A non-system application calls a system API.<br>**适用版本：** 11+ |
+| [1400001](../errorcode-display.md#1400001-无效的显示设备) | Invalid display or screen.<br>**适用版本：** 11+ |
+| [201](../../errorcode-universal.md#201-权限校验失败) | Permission verification failed. The application does not have the permission required to call the API. |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed. A non-system application calls a system API.<br>**适用版本：** 11+ |
 
 ## 示例
+
+ArkTS-Dyn示例：
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -72,6 +68,37 @@ screenshot.save(screenshotOptions, (err: BusinessError, pixelMap: image.PixelMap
   }
   console.info(`Succeeded in saving screenshot. Pixel bytes number: ${pixelMap.getPixelBytesNumber()}`);
   pixelMap.release(); // PixelMap使用完后及时释放内存
+});
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+import  { image } from '@kit.ImageKit';
+
+let screenshotOptions: screenshot.ScreenshotOptions = {
+  "screenRect": {
+    "left": 200,
+    "top": 100,
+    "width": 200,
+    "height": 200 },
+  "imageSize": {
+    "width": 300,
+    "height": 300 },
+  "rotation": 0,
+  "displayId": 0,
+  "isNotificationNeeded": true,
+  "isCaptureFullOfScreen": true
+};
+screenshot.save(screenshotOptions, (err: BusinessError | null, pixelMap: image.PixelMap | undefined) => {
+  const errCode = err?.code;
+  if (errCode) {
+    console.error(`Failed to save screenshot. Code: ${err?.code}, message : ${err?.message}`);
+    return;
+  }
+  console.info(`Succeeded in saving screenshot. Pixel bytes number: ${pixelMap?.getPixelBytesNumber()}`);
+  pixelMap?.release(); // PixelMap使用完后及时释放内存
 });
 ```
 
@@ -109,10 +136,12 @@ function save(callback: AsyncCallback<image.PixelMap>): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 201 | Permission verification failed. The application does not have the permission required to call the API. |
-| 202 | Permission verification failed. A non-system application calls a system API. |
+| [201](../../errorcode-universal.md#201-权限校验失败) | Permission verification failed. The application does not have the permission required to call the API. |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed. A non-system application calls a system API. |
 
 ## 示例
+
+ArkTS-Dyn示例：
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -126,6 +155,23 @@ screenshot.save((err: BusinessError, pixelMap: image.PixelMap) => {
   }
   console.info(`Succeeded in saving screenshot. Pixel bytes number: ${pixelMap.getPixelBytesNumber()}`);
   pixelMap.release(); // PixelMap使用完后及时释放内存
+});
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+import { image } from '@kit.ImageKit';
+
+screenshot.save((err: BusinessError | null, pixelMap: image.PixelMap | undefined) => {
+  const errCode = err?.code;
+  if (errCode) {
+    console.error(`Failed to save screenshot. Code: ${err?.code}, message: ${err?.message}`);
+    return;
+  }
+  console.info(`Succeeded in saving screenshot. Pixel bytes number: ${pixelMap?.getPixelBytesNumber()}`);
+  pixelMap?.release(); // PixelMap使用完后及时释放内存
 });
 ```
 
@@ -169,11 +215,13 @@ function save(options?: ScreenshotOptions): Promise<image.PixelMap>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 1400001 | Invalid display or screen. |
-| 201 | Permission verification failed. The application does not have the permission required to call the API. |
-| 202 | Permission verification failed. A non-system application calls a system API. |
+| [1400001](../errorcode-display.md#1400001-无效的显示设备) | Invalid display or screen. |
+| [201](../../errorcode-universal.md#201-权限校验失败) | Permission verification failed. The application does not have the permission required to call the API. |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed. A non-system application calls a system API. |
 
 ## 示例
+
+ArkTS-Dyn示例：
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -205,5 +253,40 @@ try {
 } catch (exception) {
   console.error(`Failed to save screenshot. Code: ${exception.code}, message: ${exception.message}`);
 }
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+import { image } from '@kit.ImageKit';
+
+let screenshotOptions: screenshot.ScreenshotOptions = {
+  "screenRect": {
+    "left": 200,
+    "top": 100,
+    "width": 200,
+    "height": 200 },
+  "imageSize": {
+    "width": 300,
+    "height": 300 },
+  "rotation": 0,
+  "displayId": 0,
+  "isNotificationNeeded": true,
+  "isCaptureFullOfScreen": true
+};
+try {
+  let promise = screenshot.save(screenshotOptions);
+  promise.then((pixelMap: image.PixelMap) => {
+    let pixelNumber = pixelMap.getPixelBytesNumber();
+    console.info(`Succeeded in saving screenshot. Pixel bytes number: ${pixelNumber}`);
+    pixelMap.release(); // PixelMap使用完后及时释放内存
+  }).catch((err: Error) => {
+    console.error(`Failed to save screenshot. Code: ${err?.code}, message: ${err?.message}`);
+  });
+} catch (exception) {
+  let error = exception as BusinessError;
+  console.error(`Failed to save screenshot. Code: ${error.code}, message: ${error.message}`);
+};
 ```
 

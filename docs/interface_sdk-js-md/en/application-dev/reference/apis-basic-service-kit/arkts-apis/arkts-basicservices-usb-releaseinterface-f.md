@@ -12,9 +12,10 @@ import { usb } from 'kits/@kit.BasicServicesKit';
 function releaseInterface(pipe: USBDevicePipe, iface: USBInterface): number
 ```
 
-释放注册过的通信接口。
+Releases a USB interface.
 
-需要调用[usb.claimInterface](arkts-basicservices-usb-claiminterface-f.md#claiminterface)先获取接口，才能使用此方法释放接口。
+Before you do this, ensure that you have claimed the interface by calling  
+[usb.claimInterface](arkts-basicservices-usb-claiminterface-f.md#claiminterface).
 
 **Since:** 8
 
@@ -32,14 +33,14 @@ function releaseInterface(pipe: USBDevicePipe, iface: USBInterface): number
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| pipe | [USBDevicePipe](arkts-basicservices-usbmanager-usbdevicepipe-i.md) | Yes | 用于确定总线号和设备地址。 |
-| iface | [USBInterface](arkts-basicservices-usb-usbinterface-i.md) | Yes | 用于确定需要释放接口的索引。 |
+| pipe | [USBDevicePipe](arkts-basicservices-usbmanager-usbdevicepipe-i.md) | Yes | Device pipe, which is used to determine the bus number and device address. |
+| iface | [USBInterface](arkts-basicservices-usb-usbinterface-i.md) | Yes | USB interface, which is used to determine the index of the interface to release. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| number | 释放接口成功返回0；释放接口失败返回其他错误码。 |
+| number | Returns **0** if the USB interface is successfully released; returns an error code otherwise. |
 
 ## Examples
 

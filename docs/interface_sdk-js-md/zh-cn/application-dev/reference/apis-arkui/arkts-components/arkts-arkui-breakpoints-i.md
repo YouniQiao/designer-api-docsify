@@ -24,7 +24,7 @@ reference?: BreakpointsReference
 
 非法值：按默认值处理。
 
-**类型：** [BreakpointsReference](../arkts-apis/arkts-arkui-gridrow-breakpointsreference-e.md)
+**类型：** [BreakpointsReference](arkts-arkui-breakpointsreference-e.md)
 
 **起始版本：** 9
 

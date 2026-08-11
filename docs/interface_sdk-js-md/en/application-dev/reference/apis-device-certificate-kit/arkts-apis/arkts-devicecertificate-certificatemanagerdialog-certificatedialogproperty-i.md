@@ -1,6 +1,6 @@
 # CertificateDialogProperty
 
-表示证书管理对话框的属性。
+Defines the property of the certificate management dialog box.
 
 **Since:** 18
 
@@ -22,7 +22,7 @@ import { certificateManagerDialog } from 'kits/@kit.DeviceCertificateKit';
 showInstallButton: boolean
 ```
 
-表示是否显示安装证书的按钮，true为显示，false为不显示。
+Whether to display the button for installing the certificate. The value **true** means to display the button; the value **false** means the opposite.
 
 **Type:** boolean
 

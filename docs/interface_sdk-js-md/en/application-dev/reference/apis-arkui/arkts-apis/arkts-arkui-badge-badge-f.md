@@ -9,7 +9,7 @@ export declare function Badge(
 ): BadgeAttribute
 ```
 
-根据数字或者字符串创建标记组件。
+Defines Badge Component.
 
 **Since:** 23
 
@@ -25,8 +25,8 @@ export declare function Badge(
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | [BadgeParamWithNumber](arkts-arkui-badge-badgeparamwithnumber-i.md) \| BadgeParamWithString | Yes | 数字、字符串类型的标记组件参数。 |
-| content_ | [CustomBuilder](../arkts-components/arkts-arkui-custombuilder-t.md) | No | 子组件。 |
+| value | [BadgeParamWithNumber](arkts-arkui-badge-badgeparamwithnumber-i.md) \| BadgeParamWithString | Yes | Markup component parameters of the numeric and character string types |
+| content_ | [CustomBuilder](../arkts-components/arkts-arkui-custombuilder-t.md) | No | Child component |
 
 **Return value:**
 
@@ -44,11 +44,11 @@ export declare function Badge(
 ): BadgeAttribute
 ```
 
-定义Badge组件
+Defines Badge Component.
 
-**Since:** 26.0.0
+**Since:** 26.1.0
 
-**ArkTS mode:** ArkTS-Sta only, since version 26.0.0.
+**ArkTS mode:** ArkTS-Sta only, since version 26.1.0.
 
 **Decorator:** @Builder
 
@@ -62,8 +62,8 @@ export declare function Badge(
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| style | [CustomBuilderT](../arkts-components/arkts-arkui-custombuildert-t.md)&lt;BadgeAttribute&gt; | Yes | badge属性实例。 |
-| content_ | [CustomBuilder](../arkts-components/arkts-arkui-custombuilder-t.md) | No | 子组件。 |
+| style | [CustomBuilderT](../arkts-components/arkts-arkui-custombuildert-t.md)&lt;BadgeAttribute&gt; | Yes | badge attribute instance |
+| content_ | [CustomBuilder](../arkts-components/arkts-arkui-custombuilder-t.md) | No | Child component |
 
 **Return value:**
 

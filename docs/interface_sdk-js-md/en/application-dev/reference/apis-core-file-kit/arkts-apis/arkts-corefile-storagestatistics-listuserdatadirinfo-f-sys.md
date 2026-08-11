@@ -12,7 +12,7 @@ import { storageStatistics } from 'kits/@kit.CoreFileKit';
 function listUserdataDirInfo(): Promise<Array<UserdataDirInfo>>
 ```
 
-查询用户设备中/data目录下的空间占用详情，使用Promise异步回调。
+Queries the space usage of the **\/data** directory on the user device.This API uses a promise to return the result.
 
 **Since:** 23
 
@@ -32,15 +32,15 @@ function listUserdataDirInfo(): Promise<Array<UserdataDirInfo>>
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;Array&lt;UserdataDirInfo&gt;&gt; | Promise对象，返回用户设备中/data目录下的空间占用详情。 |
+| Promise&lt;Array&lt;UserdataDirInfo&gt;&gt; | Promise used to return the space usage of the **\/data** directory on the user device. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
 | 13600015 | Failed to traverse the query data partition directory. |
-| 201 | Permission verification failed. |
-| 202 | The caller is not a system application. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | The caller is not a system application. |
 | 13600001 | IPC error. |
 
 ## Examples

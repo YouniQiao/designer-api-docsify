@@ -1,6 +1,6 @@
 # CloudFileInfo
 
-应用本地和云端文件个数以及大小信息。
+Represents the number and size of local and cloud files of an application.
 
 **Since:** 20
 
@@ -22,7 +22,7 @@ import { cloudSyncManager } from 'kits/@kit.CoreFileKit';
 bothFileCount: int
 ```
 
-本地已上传云端的文件总个数，取值范围[0, INT32_MAX]，单位：个。
+Total number of local files that have been uploaded to the cloud. The value range is [0, INT32_MAX].
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
@@ -40,7 +40,7 @@ bothFileCount: int
 bothFileTotalSize: long
 ```
 
-本地已上传云端的文件总大小，取值范围[0, INT64_MAX]，单位：Byte。
+Total size of local files that have been uploaded to the cloud, in bytes. The value range is [0, INT64_MAX].
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：long
 
@@ -58,7 +58,7 @@ bothFileTotalSize: long
 cloudFileCount: int
 ```
 
-本地未下载的云端文件总个数，取值范围[0, INT32_MAX]，单位：个。
+Total number of cloud files that are not downloaded locally. The value range is [0, INT32_MAX].
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
@@ -76,7 +76,7 @@ cloudFileCount: int
 cloudFileTotalSize: long
 ```
 
-本地未下载的云端文件总大小，取值范围[0, INT64_MAX]，单位：Byte。
+Total size of cloud files that are not downloaded locally, in bytes. The value range is [0, INT64_MAX].
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：long
 
@@ -94,7 +94,7 @@ cloudFileTotalSize: long
 localFileCount: int
 ```
 
-本地未上传云端的文件总个数，取值范围[0, INT32_MAX]，单位：个。
+Total number of local files that are not uploaded to the cloud. The value range is [0, INT32_MAX].
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
@@ -112,7 +112,7 @@ localFileCount: int
 localFileTotalSize: long
 ```
 
-本地未上传云端的文件总大小，取值范围[0, INT64_MAX]，单位：Byte。
+Total size of local files that are not uploaded to the cloud, in bytes. The value range is [0, INT64_MAX].
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：long
 

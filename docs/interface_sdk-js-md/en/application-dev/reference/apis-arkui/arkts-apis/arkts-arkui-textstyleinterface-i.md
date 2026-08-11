@@ -1,6 +1,6 @@
 # TextStyleInterface
 
-文本字体样式。
+TextStyleInterface
 
 **Since:** 12
 
@@ -16,9 +16,9 @@
 fontColor?: ResourceColor
 ```
 
-字体颜色。
+Font color.
 
-默认为主题色。
+Default value: theme color.
 
 **Type:** [ResourceColor](arkts-arkui-resourcecolor-t.md)
 
@@ -40,7 +40,7 @@ fontColor?: ResourceColor
 fontConfigs?: FontConfigs
 ```
 
-字体配置。默认值继承[FontConfigs](arkts-arkui-textcommon-fontconfigs-i.md)。
+Font configuration. The default value is inherited from [FontConfigs](arkts-arkui-textcommon-fontconfigs-i.md).
 
 **Type:** [FontConfigs](arkts-arkui-fontconfigs-i.md)
 
@@ -62,9 +62,9 @@ fontConfigs?: FontConfigs
 fontFamily?: ResourceStr
 ```
 
-文本字体。
+Font family.
 
-默认为主题字体。
+Default value: theme font.
 
 **Type:** [ResourceStr](arkts-arkui-resourcestr-t.md)
 
@@ -86,13 +86,13 @@ fontFamily?: ResourceStr
 fontSize?: LengthMetrics
 ```
 
-字体大小。
+Font size.
 
-默认字体大小为16fp。
+Default value: 16 fp.
 
-如果LengthMetrics的unit值是PERCENT，当前设置不生效，处理为16fp。
+If **unit** of **LengthMetrics** is percent, the setting does not take effect, and 16 fp is used instead.
 
-单位：[fp](../../../reference/apis-arkui/arkui-ts/ts-pixel-units.md#基本像素单位) 
+Unit: [fp](../../apis-ability-kit/arkts-apis/arkts-app-ability-common.md/arkts-app-ability-common.md)
 
 **Type:** [LengthMetrics](arkts-arkui-lengthmetrics-t.md)
 
@@ -114,9 +114,9 @@ fontSize?: LengthMetrics
 fontStyle?: FontStyle
 ```
 
-字体样式。
+Font style.
 
-默认值：FontStyle.Normal
+Default value: **FontStyle.Normal**.
 
 **Type:** [FontStyle](../../apis-arkgraphics2d/arkts-apis/arkts-arkgraphics2d-text-fontstyle-e.md)
 
@@ -138,11 +138,13 @@ fontStyle?: FontStyle
 fontVariations?: Array<FontVariation>
 ```
 
-可变字体的属性。
+Variable font attributes.
 
-默认值：undefined，表示未设置可变字体的属性。
+Default value: **undefined**, indicating that variable font attributes are not set.
 
-fontVariations属性的优先级高于fontWeight。
+The priority of **fontVariations** is higher than that of **fontWeight**.
+
+**Since**: 26.0.0
 
 **Type:** Array&lt;FontVariation&gt;
 
@@ -164,11 +166,11 @@ fontVariations属性的优先级高于fontWeight。
 fontWeight?: number | FontWeight | string
 ```
 
-字体粗细。
+Font weight.
 
-number类型取值[100, 900]，取值间隔为100，默认为400，取值越大，字体越粗。string类型仅支持number类型取值的字符串形式，例如"400"，以及"bold"、"bolder"、"lighter"、"regular"、"medium"，分别对应FontWeight中相应的枚举值。设置过大可能会在不同字体下有截断。传入超出取值范围或不符合间隔要求的值时取默认值。
-
-默认值：FontWeight.Normal
+For the number type, the value ranges from 100 to 900, at an interval of 100. A larger value indicates a heavier font weight. The default value is **400**. For the string type, only strings that represent a number, for example,  
+**400**, and the following enumerated values of **FontWeight** are supported: **bold**, **bolder**, **lighter**,  
+**regular**, and **medium**.
 
 **Type:** number \| FontWeight \| string
 
@@ -190,9 +192,9 @@ number类型取值[100, 900]，取值间隔为100，默认为400，取值越大
 strokeColor?: ResourceColor
 ```
 
-文本描边颜色。
+Text stroke color.
 
-默认值为字体颜色，设置异常值时取字体颜色。
+Default value: text color. If invalid values are provided, the text color is used.
 
 **Type:** [ResourceColor](arkts-arkui-resourcecolor-t.md)
 
@@ -214,9 +216,11 @@ strokeColor?: ResourceColor
 strokeJoinStyle?: StrokeJoinStyle
 ```
 
-文本描边拐角样式。具体枚举及说明请参考StrokeJoinStyle。
+Text stroke join style.
 
-默认值：StrokeJoinStyle.MITER_JOIN。
+Default value: **StrokeJoinStyle.MITER_JOIN**.
+
+**Since**: 26.0.0.
 
 **Type:** [StrokeJoinStyle](arkts-arkui-textcommon-strokejoinstyle-e.md)
 
@@ -238,11 +242,11 @@ strokeJoinStyle?: StrokeJoinStyle
 strokeWidth?: LengthMetrics
 ```
 
-文本描边宽度。如果LengthMetrics的unit值是PERCENT，当前设置不生效，处理为0。
+Text stroke width. If **unit** of **LengthMetrics** is percent, the setting does not take effect, and 0 is used instead.
 
-设置值小于0时为实心字，大于0时为空心字。
+If the value is less than 0, the text is solid. If the value is greater than 0, the text is hollow.
 
-默认值为0。
+Default value: **0**.
 
 **Type:** [LengthMetrics](arkts-arkui-lengthmetrics-t.md)
 
@@ -264,9 +268,9 @@ strokeWidth?: LengthMetrics
 superscript?: SuperscriptStyle
 ```
 
-文本上下角标。
+Superscript or subscript for the text.
 
-默认值：SuperscriptStyle.NORMAL
+Default value: **SuperscriptStyle.NORMAL**.
 
 **Type:** [SuperscriptStyle](arkts-arkui-textcommon-superscriptstyle-e.md)
 

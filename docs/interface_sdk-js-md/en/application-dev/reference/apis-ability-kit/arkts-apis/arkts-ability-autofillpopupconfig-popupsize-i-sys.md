@@ -1,6 +1,6 @@
 # PopupSize (System API)
 
-表示气泡弹窗的宽和高。
+Describes the width and height of the auto-fill pop-up.
 
 **Since:** 12
 
@@ -18,7 +18,7 @@
 height: double
 ```
 
-气泡弹窗的高。
+Height of the auto-fill pop-up.
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：double
 
@@ -40,7 +40,7 @@ height: double
 width: double
 ```
 
-气泡弹窗的宽。
+Width of the auto-fill pop-up.
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：double
 

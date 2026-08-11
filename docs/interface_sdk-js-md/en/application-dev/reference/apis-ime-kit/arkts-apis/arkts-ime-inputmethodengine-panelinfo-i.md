@@ -1,6 +1,6 @@
 # PanelInfo
 
-输入法面板属性。
+Describes the attributes of the input method panel.
 
 **Since:** 10
 
@@ -22,7 +22,7 @@ import { inputMethodEngine } from 'kits/@kit.IMEKit';
 flag?: PanelFlag
 ```
 
-面板的状态类型。
+State type of the panel.
 
 **Type:** [PanelFlag](arkts-ime-inputmethodengine-panelflag-e.md)
 
@@ -42,7 +42,7 @@ flag?: PanelFlag
 type: PanelType
 ```
 
-面板的类型。
+Type of the panel.
 
 **Type:** [PanelType](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-selectioninput-selectionpanel-paneltype-e.md)
 

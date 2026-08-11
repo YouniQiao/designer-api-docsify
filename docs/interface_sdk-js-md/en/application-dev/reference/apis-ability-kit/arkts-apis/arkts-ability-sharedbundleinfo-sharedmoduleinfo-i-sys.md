@@ -1,6 +1,6 @@
 # SharedModuleInfo (System API)
 
-共享模块信息。
+Defines the shared module information.
 
 **Since:** 10
 
@@ -18,7 +18,7 @@
 readonly description: string
 ```
 
-共享包的模块描述信息。
+Description of the shared bundle.
 
 **Type:** string
 
@@ -38,7 +38,7 @@ readonly description: string
 readonly descriptionId: long
 ```
 
-共享包描述的资源id值。
+Description ID of the shared bundle.
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：long
 
@@ -58,7 +58,7 @@ readonly descriptionId: long
 readonly name: string
 ```
 
-共享包模块名称。
+Module name of the shared bundle.
 
 **Type:** string
 
@@ -78,7 +78,7 @@ readonly name: string
 readonly versionCode: long
 ```
 
-共享包的版本号。
+Version number of the shared bundle.
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：long
 
@@ -98,7 +98,7 @@ readonly versionCode: long
 readonly versionName: string
 ```
 
-共享包的版本文本描述信息。
+Version description of the shared bundle.
 
 **Type:** string
 

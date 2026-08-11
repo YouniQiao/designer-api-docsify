@@ -1,6 +1,7 @@
 # CameraOutput
 
-会话中[Session](arkts-camera-camera-session-i.md)使用的输出信息，output的基类。
+CameraOutput implements output information used in [Session](arkts-camera-camera-session-i.md). It is the base class of   
+**output**.
 
 **Since:** 10
 
@@ -22,7 +23,7 @@ import { camera } from 'kits/@kit.CameraKit';
 release(callback: AsyncCallback<void>): void
 ```
 
-释放输出资源，通过注册回调函数获取结果。使用callback异步回调。
+Releases output resources. This API uses an asynchronous callback to return the result.
 
 **Since:** 10
 
@@ -38,13 +39,13 @@ release(callback: AsyncCallback<void>): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | 回调函数。当释放输出资源成功，err为undefined，否则为错误对象。错误码类型 [CameraErrorCode](arkts-camera-camera-cameraerrorcode-e.md)。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. If the output resources are released successfully, **err** is **undefined**; otherwise, **err** is an error object with an error code defined in [CameraErrorCode](arkts-camera-camera-cameraerrorcode-e.md). |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 7400201 | Camera service fatal error. |
+| [7400201](../errorcode-camera.md#7400201-camera-service-error) | Camera service fatal error. |
 
 ## release
 
@@ -52,7 +53,7 @@ release(callback: AsyncCallback<void>): void
 release(): Promise<void>
 ```
 
-释放输出资源。使用Promise异步回调。
+Releases output resources. This API uses a promise to return the result.
 
 **Since:** 10
 
@@ -68,11 +69,11 @@ release(): Promise<void>
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise对象，无返回结果。 |
+| Promise&lt;void&gt; | Promise that returns no value. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 7400201 | Camera service fatal error. |
+| [7400201](../errorcode-camera.md#7400201-camera-service-error) | Camera service fatal error. |
 

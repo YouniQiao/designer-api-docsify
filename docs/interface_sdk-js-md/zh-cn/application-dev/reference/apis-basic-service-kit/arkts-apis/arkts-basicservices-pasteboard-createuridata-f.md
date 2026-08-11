@@ -1,11 +1,5 @@
 # createUriData
 
-## 导入模块
-
-```TypeScript
-import { pasteboard } from 'kits/@kit.BasicServicesKit';
-```
-
 ## createUriData
 
 ```TypeScript

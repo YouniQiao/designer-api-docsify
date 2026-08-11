@@ -5,7 +5,7 @@ declare type GestureCollectInterceptCallback = (recognizers: Array<GestureRecogn
    touchRecognizers?: Array<TouchRecognizer>) => GestureCollectIntervention
 ```
 
-定义在[onGestureCollectIntercept](arkts-arkui-commonmethod-c.md#ongesturecollectintercept)中使用的回调类型。
+Defines the callback type used in [onGestureCollectIntercept](arkts-arkui-commonmethod-c.md#ongesturecollectintercept).
 
 **Since:** 26.0.0
 
@@ -23,12 +23,12 @@ declare type GestureCollectInterceptCallback = (recognizers: Array<GestureRecogn
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| recognizers | Array&lt;[GestureRecognizer](../arkts-apis/arkts-arkui-gesturerecognizer-c.md)&gt; | Yes | 响应链上组件的手势识别器对象。 |
-| touchRecognizers | Array&lt;[TouchRecognizer](../arkts-apis/arkts-arkui-touchrecognizer-c.md)&gt; | No | 响应链上组件的触摸识别器对象。<br/>默认值为null。 |
+| recognizers | Array&lt;[GestureRecognizer](../arkts-apis/arkts-arkui-gesturerecognizer-c.md)&gt; | Yes | Gesture recognizer objects of the component on the response chain. |
+| touchRecognizers | Array&lt;[TouchRecognizer](../arkts-apis/arkts-arkui-touchrecognizer-c.md)&gt; | No | Touch recognizer objects of the component on the response chain.<br>The default value is **null**. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [GestureCollectIntervention](../arkts-apis/arkts-arkui-gesturecollectintervention-e.md) | 手势收集干预结果。 |
+| [GestureCollectIntervention](../arkts-apis/arkts-arkui-gesturecollectintervention-e.md) | Gesture collection intervention result. |
 

@@ -1,6 +1,6 @@
 # ConstraintSourceTypeInfo (System API)
 
-表示约束来源类型信息。
+Defines the constraint source type.
 
 **Since:** 9
 
@@ -24,7 +24,7 @@ import { osAccount } from 'kits/@kit.BasicServicesKit';
 localId: int
 ```
 
-系统账号ID
+ID of the target OS account.
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
@@ -44,7 +44,7 @@ localId: int
 type: ConstraintSourceType
 ```
 
-约束来源类型。
+Type of the constraint source.
 
 **Type:** [ConstraintSourceType](arkts-basicservices-osaccount-constraintsourcetype-e-sys.md)
 

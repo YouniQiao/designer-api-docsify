@@ -1,6 +1,6 @@
 # ColorSpacePrimaries
 
-色域标准三原色（红、绿、蓝）和白色，基于现实世界的色度，使用(x, y)表示其在色彩空间中的位置。
+The three primary colors (red, green, blue) and white as defined by the color space standard, whose positions in the color space are represented by (x, y) coordinates based on real-world chromaticity.
 
 **Since:** 9
 
@@ -22,7 +22,7 @@ import { colorSpaceManager } from 'kits/@kit.ArkGraphics2D';
 blueX: double
 ```
 
-标准蓝色在色彩空间的x坐标值。
+X coordinate of the blue color in the color space.
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：double
 
@@ -40,7 +40,7 @@ blueX: double
 blueY: double
 ```
 
-标准蓝色在色彩空间的y坐标值。
+Y coordinate of the blue color in the color space.
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：double
 
@@ -58,7 +58,7 @@ blueY: double
 greenX: double
 ```
 
-标准绿色在色彩空间的x坐标值。
+X coordinate of the green color in the color space.
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：double
 
@@ -76,7 +76,7 @@ greenX: double
 greenY: double
 ```
 
-标准绿色在色彩空间的y坐标值。
+Y coordinate of the green color in the color space.
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：double
 
@@ -94,7 +94,7 @@ greenY: double
 redX: double
 ```
 
-标准红色在色彩空间的x坐标值。
+X coordinate of the red color in the color space.
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：double
 
@@ -112,7 +112,7 @@ redX: double
 redY: double
 ```
 
-标准红色在色彩空间的y坐标值。
+Y coordinate of the red color in the color space.
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：double
 
@@ -130,7 +130,7 @@ redY: double
 whitePointX: double
 ```
 
-标准白色在色彩空间的x坐标值。
+X coordinate of the white point in the color space.
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：double
 
@@ -148,7 +148,7 @@ whitePointX: double
 whitePointY: double
 ```
 
-标准白色在色彩空间的y坐标值。
+Y coordinate of the white point in the color space.
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：double
 

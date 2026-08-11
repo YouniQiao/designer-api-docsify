@@ -24,12 +24,6 @@
 
 **系统接口：** 此接口为系统接口。
 
-## 导入模块
-
-```TypeScript
-import { update } from 'kits/@kit.BasicServicesKit';
-```
-
 ## applyNewVersion
 
 ```TypeScript
@@ -74,33 +68,25 @@ applyNewVersion(upgradeFiles: Array<UpgradeFile>, callback: AsyncCallback<void>)
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 401 | Parameter verification failed. |
-| 11500104 | IPC error. |
-| 201 | Permission denied. |
-| 202 | Permission verification failed. A non-system application calls a system API. |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter verification failed. |
+| [11500104](../../apis-basic-services-kit/errorcode-update.md#11500104-ipc通信异常) | IPC error. |
+| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed. A non-system application calls a system API. |
 
 ## 示例
 
 ```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
 const upgradeFiles: Array<update.UpgradeFile> = [{
   fileType: update.ComponentType.OTA, // OTA包
-  filePath: '/data/local/tmp/updater.zip' // 本地升级包路径，用户需从设备厂商官网或官方渠道下载升级包文件，放置到设备可访问的存储路径，（如/data/local/tmp/updater.zip）
+  filePath: "path" // 本地升级包路径
 }];
 
 try {
-  // 获取本地升级对象
   let localUpdater = update.getLocalUpdater();
-  // 安装新版本
-  localUpdater.applyNewVersion(upgradeFiles, (applyNewVersionError: BusinessError) => {
-    if (applyNewVersionError) {
-      console.error(`applyNewVersion error, code:${applyNewVersionError.code}, message:${applyNewVersionError.message}.`);
-      return;
-    }
-    console.info(`applyNewVersion success`);
+  localUpdater.applyNewVersion(upgradeFiles, (err) => {
+    console.info(`applyNewVersion error ${JSON.stringify(err)}`);
   });
-} catch (error) {
+} catch(error) {
   console.error(`Fail to get localUpdater error: ${error}`);
 }
 ```
@@ -154,10 +140,10 @@ applyNewVersion(upgradeFiles: Array<UpgradeFile>): Promise<void>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 401 | Parameter verification failed. |
-| 11500104 | IPC error. |
-| 201 | Permission denied. |
-| 202 | Permission verification failed. A non-system application calls a system API. |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter verification failed. |
+| [11500104](../../apis-basic-services-kit/errorcode-update.md#11500104-ipc通信异常) | IPC error. |
+| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed. A non-system application calls a system API. |
 
 ## 示例
 
@@ -166,19 +152,17 @@ import { BusinessError } from '@kit.BasicServicesKit';
 
 const upgradeFiles: Array<update.UpgradeFile> = [{
   fileType: update.ComponentType.OTA, // OTA包
-  filePath: '/data/local/tmp/updater.zip' // 本地升级包路径，用户需从设备厂商官网或官方渠道下载升级包文件，放置到设备可访问的存储路径，（如/data/local/tmp/updater.zip）
+  filePath: "path" // 本地升级包路径
 }];
 
 try {
-  // 获取本地升级对象
   let localUpdater = update.getLocalUpdater();
-  // 安装新版本
   localUpdater.applyNewVersion(upgradeFiles).then(() => {
     console.info(`applyNewVersion success`);
-  }).catch((applyNewVersionError: BusinessError) => {
-    console.error(`applyNewVersion error, code:${applyNewVersionError.code}, message:${applyNewVersionError.message}.`);
+  }).catch((err: BusinessError) => {
+    console.error(`applyNewVersion error ${JSON.stringify(err)}`);
   });
-} catch (error) {
+} catch(error) {
   console.error(`Fail to get localUpdater error: ${error}`);
 }
 ```
@@ -224,26 +208,24 @@ off(eventClassifyInfo: EventClassifyInfo, taskCallback?: UpgradeTaskCallback): v
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 202 | Permission verification failed. A non-system application calls a system API. |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed. A non-system application calls a system API. |
 
 ## 示例
 
 ```TypeScript
 const eventClassifyInfo: update.EventClassifyInfo = {
-  eventClassify: update.EventClassify.TASK, // 任务事件类型
-  extraInfo: ''
+  eventClassify: update.EventClassify.TASK, // 订阅升级更新事件
+  extraInfo: ""
 };
-// 定义任务更新回调函数，用于处理升级任务事件
+
 let onTaskUpdate: update.UpgradeTaskCallback = (eventInfo: update.EventInfo) => {
   console.info(`on eventInfo id `, eventInfo.eventId);
 };
 
 try {
-  // 获取本地升级对象
   let localUpdater = update.getLocalUpdater();
-  // 取消本地升级事件监听
   localUpdater.off(eventClassifyInfo, onTaskUpdate);
-} catch (error) {
+} catch(error) {
   console.error(`Fail to get localUpdater error: ${error}`);
 }
 ```
@@ -294,26 +276,24 @@ on(eventClassifyInfo: EventClassifyInfo, taskCallback: UpgradeTaskCallback): voi
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 202 | Permission verification failed. A non-system application calls a system API. |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed. A non-system application calls a system API. |
 
 ## 示例
 
 ```TypeScript
 const eventClassifyInfo: update.EventClassifyInfo = {
-  eventClassify: update.EventClassify.TASK, // 任务事件类型
-  extraInfo: ''
+  eventClassify: update.EventClassify.TASK, // 订阅升级更新事件
+  extraInfo: ""
 };
-// 定义任务更新回调函数，用于处理升级任务事件
+
 let onTaskUpdate: update.UpgradeTaskCallback = (eventInfo: update.EventInfo) => {
   console.info(`on eventInfo id `, eventInfo.eventId);
 };
 
 try {
-  // 获取本地升级对象
   let localUpdater = update.getLocalUpdater();
-  // 注册本地升级事件监听
   localUpdater.on(eventClassifyInfo, onTaskUpdate);
-} catch (error) {
+} catch(error) {
   console.error(`Fail to get localUpdater error: ${error}`);
 }
 ```
@@ -367,37 +347,26 @@ verifyUpgradePackage(upgradeFile: UpgradeFile, certsFile: string, callback: Asyn
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 401 | Parameter verification failed. |
-| 11500104 | IPC error. |
-| 201 | Permission denied. |
-| 202 | Permission verification failed. A non-system application calls a system API. |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter verification failed. |
+| [11500104](../../apis-basic-services-kit/errorcode-update.md#11500104-ipc通信异常) | IPC error. |
+| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed. A non-system application calls a system API. |
 
 ## 示例
 
 ```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
 const upgradeFile: update.UpgradeFile = {
   fileType: update.ComponentType.OTA, // OTA包
-  filePath: '/data/local/tmp/updater.zip' // 本地升级包路径，用户需从设备厂商官网或官方渠道下载升级包文件，放置到设备可访问的存储路径，（如/data/local/tmp/updater.zip）
+  filePath: "path" // 本地升级包路径
 };
-// certsFile为证书文件路径，需从设备厂商官网下载并放置到设备可访问路径 
-const certsFile = '/path/to/certificate.cert'; // 证书文件路径，从厂商官网下载
 
 try {
-  // 获取本地升级对象
   let localUpdater = update.getLocalUpdater();
-  // 验证升级包
-  localUpdater.verifyUpgradePackage(upgradeFile, certsFile, (verifyUpgradePackageError: BusinessError) => {
-    if (verifyUpgradePackageError) {
-      console.error(`verifyUpgradePackage error, code:${verifyUpgradePackageError.code}, message:${verifyUpgradePackageError.message}.`);
-      return;
-    }
-    console.info(`verifyUpgradePackage success`);
+  localUpdater.verifyUpgradePackage(upgradeFile, "certFilePath", (err) => {
+    console.info(`verifyUpgradePackage error ${JSON.stringify(err)}`);
   });
-} catch (error) {
-  let err: BusinessError = error as BusinessError;
-  console.error(`Fail to get localUpdater. Code: ${err.code}, message: ${err.message}.`);
+} catch(error) {
+  console.error(`Fail to get localUpdater error: ${error}`);
 }
 ```
 
@@ -451,10 +420,10 @@ verifyUpgradePackage(upgradeFile: UpgradeFile, certsFile: string): Promise<void>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 401 | Parameter verification failed. |
-| 11500104 | IPC error. |
-| 201 | Permission denied. |
-| 202 | Permission verification failed. A non-system application calls a system API. |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter verification failed. |
+| [11500104](../../apis-basic-services-kit/errorcode-update.md#11500104-ipc通信异常) | IPC error. |
+| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed. A non-system application calls a system API. |
 
 ## 示例
 
@@ -463,22 +432,17 @@ import { BusinessError } from '@kit.BasicServicesKit';
 
 const upgradeFile: update.UpgradeFile = {
   fileType: update.ComponentType.OTA, // OTA包
-  filePath: '/data/local/tmp/updater.zip' // 本地升级包路径，用户需从设备厂商官网或官方渠道下载升级包文件，放置到设备可访问的存储路径，（如/data/local/tmp/updater.zip）
+  filePath: "path" // 本地升级包路径
 };
 
-// certsFile为证书文件路径，需从设备厂商官网下载并放置到设备可访问路径 
-const certsFile = '/path/to/certificate.cert'; // 证书文件路径，从厂商官网下载
-
 try {
-  // 获取本地升级对象
   let localUpdater = update.getLocalUpdater();
-  // 验证升级包
-  localUpdater.verifyUpgradePackage(upgradeFile, certsFile).then(() => {
+  localUpdater.verifyUpgradePackage(upgradeFile, "certFilePath").then(() => {
     console.info(`verifyUpgradePackage success`);
-  }).catch((verifyUpgradePackageError: BusinessError) => {
-    console.error(`verifyUpgradePackage error, code:${verifyUpgradePackageError.code}, message:${verifyUpgradePackageError.message}.`);
+  }).catch((err: BusinessError) => {
+    console.error(`verifyUpgradePackage error ${JSON.stringify(err)}`);
   });
-} catch (error) {
+} catch(error) {
   console.error(`Fail to get localUpdater error: ${error}`);
 }
 ```

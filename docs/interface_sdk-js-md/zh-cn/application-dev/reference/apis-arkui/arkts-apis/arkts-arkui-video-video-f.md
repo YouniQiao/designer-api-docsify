@@ -24,7 +24,7 @@ export declare function Video(
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | [VideoOptions](../arkts-components/arkts-arkui-videooptions-i.md) | 是 | 视频信息。 |
+| value | [VideoOptions](arkts-arkui-video-videooptions-i.md) | 是 | 视频信息。 |
 
 **返回值：**
 

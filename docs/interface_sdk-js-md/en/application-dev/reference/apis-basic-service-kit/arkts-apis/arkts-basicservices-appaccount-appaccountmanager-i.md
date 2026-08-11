@@ -1,6 +1,6 @@
 # AppAccountManager
 
-应用账号管理器，可用于管理应用自身的账号信息。
+Defines the application account manager, which is used to manage account information of applications.
 
 **Since:** 7
 
@@ -22,13 +22,13 @@ import { appAccount } from 'kits/@kit.BasicServicesKit';
 addAccount(name: string, callback: AsyncCallback<void>): void
 ```
 
-根据账号名添加应用账号。使用callback异步回调。
+Adds an application account with the given name. This API uses an asynchronous callback to return the result.
 
-> **说明：**
+> **NOTE：**
 > 
-> 从API version 7开始支持，从API version 9开始废弃。建议使用
-> [createAccount](arkts-basicservices-appaccount-appaccountmanager-i.md#createaccount)替
-> 代。
+> This API is supported since API version 7 and deprecated since API version 9. You are advised to use
+> [createAccount](arkts-basicservices-appaccount-appaccountmanager-i.md#createaccount)
+> instead.
 
 **Since:** 7
 
@@ -46,8 +46,8 @@ addAccount(name: string, callback: AsyncCallback<void>): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| name | string | Yes | 应用账号的名称。最大长度为512个字符。 |
-| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | 回调函数。当创建成功时，err为null，否则为错误对象。 |
+| name | string | Yes | Name of the application account. The value cannot exceed 512 characters. |
+| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **null**. Otherwise, **err** is an error object. |
 
 ## Examples
 
@@ -65,13 +65,13 @@ appAccountManager.addAccount('WangWu', (err: BusinessError) => {
 addAccount(name: string, extraInfo: string, callback: AsyncCallback<void>): void
 ```
 
-根据账号名和额外信息添加应用账号。使用callback异步回调。
+Adds an application account name and additional information. This API uses an asynchronous callback to return the  result.
 
-> **说明：**
+> **NOTE：**
 > 
-> 从API version 7开始支持，从API version 9开始废弃。建议使用
+> This API is supported since API version 7 and deprecated since API version 9. You are advised to use
 > [createAccount](arkts-basicservices-appaccount-appaccountmanager-i.md#createaccount)
-> 替代。
+> instead.
 
 **Since:** 7
 
@@ -89,9 +89,9 @@ addAccount(name: string, extraInfo: string, callback: AsyncCallback<void>): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| name | string | Yes | 应用账号的名称。最大长度为512个字符。 |
-| extraInfo | string | Yes | 额外信息(能转换string类型的其它信息)，额外信息不能是应用账号的敏感信息（如应用账号密码、token等）。 |
-| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | 回调函数。当创建成功时，err为null，否则为错误对象。 |
+| name | string | Yes | Name of the application account. The value cannot exceed 512 characters. |
+| extraInfo | string | Yes | Additional information (information that can be converted to the string type). It cannot contain sensitive information, such as the application account password and token. |
+| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **null**. Otherwise, **err** is an error object. |
 
 ## Examples
 
@@ -109,12 +109,12 @@ appAccountManager.addAccount('LiSi', 'token101', (err: BusinessError) => {
 addAccount(name: string, extraInfo?: string): Promise<void>
 ```
 
-根据账号名和额外信息添加应用账号。使用Promise异步回调。
+Adds an application account name and additional information. This API uses a promise to return the result.
 
-> **说明：**
-> > 从API version 7开始支持，从API version 9开始废弃。建议使用
+> **NOTE：**
+> > This API is supported since API version 7 and deprecated since API version 9. You are advised to use
 > [createAccount](arkts-basicservices-appaccount-appaccountmanager-i.md#createaccount)
-> 替代。
+> instead.
 
 **Since:** 7
 
@@ -132,14 +132,14 @@ addAccount(name: string, extraInfo?: string): Promise<void>
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| name | string | Yes | 应用账号的名称。最大长度为512个字符。 |
-| extraInfo | string | No | 额外信息(能转换string类型的其它信息)，额外信息不能是应用账号的敏感信息（如应用账号密码、token等），默认为空，表示创建的该账号无额外信息需要添加。 |
+| name | string | Yes | Name of the application account. The value cannot exceed 512 characters. |
+| extraInfo | string | No | Additional information (information that can be converted to the string type). &lt;br&gt;The additional information cannot be sensitive information (such as the password and token) of the application account. &lt;br&gt;By default, no value is passed, which means no additional information needs to be added for the account. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | 无返回结果的Promise对象。 |
+| Promise&lt;void&gt; | Promise that returns no value. |
 
 ## Examples
 
@@ -164,13 +164,13 @@ addAccountImplicitly(
     ): void
 ```
 
-根据指定的账号所有者隐式地添加应用账号。使用callback异步回调。
+Adds an application account implicitly based on the specified owner. This API uses an asynchronous callback to return the result.
 
-> **说明：**
+> **NOTE：**
 > 
-> 从API version 8开始支持，从API version 9开始废弃。建议使用
+> This API is supported since API version 8 and deprecated since API version 9. You are advised to use
 > [createAccountImplicitly](arkts-basicservices-appaccount-appaccountmanager-i.md#createaccountimplicitly)
-> 替代。
+> instead.
 
 **Since:** 8
 
@@ -188,51 +188,10 @@ addAccountImplicitly(
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| owner | string | Yes | 应用账号所有者的包名。最大长度为1024个字符。 |
-| authType | string | Yes | 鉴权类型。自定义数据，最大长度为1024个字符。 |
-| options | { [key: string]: any } | Yes | 鉴权所需要的可选项。可选项可根据自己需要设置。 |
-| callback | [AuthenticatorCallback](arkts-basicservices-appaccount-authenticatorcallback-i.md) | Yes | 认证器回调对象，返回添加结果。 |
-
-## Examples
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-import { Want, common } from '@kit.AbilityKit';
-
-@Entry
-@Component
-struct Index {
-  context = this.getUIContext().getHostContext() as common.UIAbilityContext; // UIAbilityContext
-
-  onResultCallback(code: number, result: Record<string, Object>): void {
-    console.info('resultCode: ' + code);
-    console.info('result: ' + JSON.stringify(result));
-  }
-
-  onRequestRedirectedCallback(request: Want): void {
-    let wantInfo: Want = {
-      deviceId: '',
-      bundleName: 'com.example.accountjsdemo',
-      action: 'ohos.want.action.viewData',
-      entities: ['entity.system.default'],
-    }
-    this.context.startAbility(wantInfo).then(() => {
-      console.info('startAbility successfully');
-    }).catch((err: BusinessError) => {
-      console.error(`startAbility err: code is ${err.code}, message is ${err.message}`);
-    })
-  }
-
-  aboutToAppear(): void {
-    appAccountManager.addAccountImplicitly('com.example.accountjsdemo', 'getSocialData', {}, {
-      onResult: this.onResultCallback,
-      onRequestRedirected: this.onRequestRedirectedCallback
-    });
-  }
-
-  build() {}
-}
-```
+| owner | string | Yes | Owner of the application account. The value is the Bundle name of the application. The value cannot exceed 1024 characters. |
+| authType | string | Yes | Authentication type. The custom type, The value cannot exceed 1024 characters. |
+| options | { [key: string]: any } | Yes | Options for the authentication, which can be set as required. |
+| callback | [AuthenticatorCallback](arkts-basicservices-appaccount-authenticatorcallback-i.md) | Yes | Authenticator callback used to return the result. |
 
 ## auth
 
@@ -240,7 +199,7 @@ struct Index {
 auth(name: string, owner: string, authType: string, callback: AuthCallback): void
 ```
 
-对应用账号进行鉴权以获取授权令牌。使用callback异步回调。
+Authenticates an application account. This API uses an asynchronous callback to return the result.
 
 **Since:** 9
 
@@ -254,22 +213,22 @@ auth(name: string, owner: string, authType: string, callback: AuthCallback): voi
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| name | string | Yes | 应用账号的名称。最大长度为512个字符。 |
-| owner | string | Yes | 应用账号所有者的包名。最大长度为1024个字符。 |
-| authType | string | Yes | 鉴权类型。自定义数据，最大长度为1024个字符。 |
-| callback | [AuthCallback](arkts-basicservices-appaccount-authcallback-i.md) | Yes | 回调对象，返回鉴权结果。 |
+| name | string | Yes | Name of the application account. The value cannot exceed 512 characters. |
+| owner | string | Yes | Owner of the application account. The value is the Bundle name of the application. The value cannot exceed 1024 characters. |
+| authType | string | Yes | Authentication type. The custom type, The value cannot exceed 1024 characters. |
+| callback | [AuthCallback](arkts-basicservices-appaccount-authcallback-i.md) | Yes | Authenticator callback used to return the result. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameter types. |
-| 12300010 | Account service busy. |
-| 12300003 | Account not found. |
-| 12300002 | Invalid name, owner or authType. |
-| 12300114 | Authenticator service exception. |
-| 12300001 | System service exception. |
-| 12300113 | Authenticator service not found. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameter types. |
+| [12300010](../../apis-basic-services-kit/errorcode-account.md#12300010-account-service-not-respond) | Account service busy. |
+| [12300003](../../apis-basic-services-kit/errorcode-account.md#12300003-account-not-found) | Account not found. |
+| [12300002](../../apis-basic-services-kit/errorcode-account.md#12300002-invalid-parameter) | Invalid name, owner or authType. |
+| [12300114](../../apis-basic-services-kit/errorcode-account.md#12300114-authentication-service-abnormal) | Authenticator service exception. |
+| [12300001](../../apis-basic-services-kit/errorcode-account.md#12300001-system-service-abnormal) | System service exception. |
+| [12300113](../../apis-basic-services-kit/errorcode-account.md#12300113-authentication-service-not-found) | Authenticator service not found. |
 
 ## Examples
 
@@ -329,7 +288,7 @@ auth(
     ): void
 ```
 
-对应用账号进行鉴权以获取授权令牌。使用callback异步回调。
+Authenticates an application account. This API uses an asynchronous callback to return the result.
 
 **Since:** 9
 
@@ -343,23 +302,23 @@ auth(
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| name | string | Yes | 应用账号的名称。最大长度为512个字符。 |
-| owner | string | Yes | 应用账号所有者的包名。最大长度为1024个字符。 |
-| authType | string | Yes | 鉴权类型。自定义数据，最大长度为1024个字符。 |
-| options | [Record](../../apis-default/arkts-apis/arkts-record-t.md)&lt;string, Object&gt; | Yes | 鉴权所需的可选项。 |
-| callback | [AuthCallback](arkts-basicservices-appaccount-authcallback-i.md) | Yes | 回调对象，返回鉴权结果。 |
+| name | string | Yes | Name of the application account. The value cannot exceed 512 characters. |
+| owner | string | Yes | Owner of the application account. The value is the Bundle name of the application. The value cannot exceed 1024 characters. |
+| authType | string | Yes | Authentication type. The custom type, The value cannot exceed 1024 characters. |
+| options | [Record](../../apis-default/arkts-apis/arkts-record-t.md)&lt;string, Object&gt; | Yes | Options for the authentication. |
+| callback | [AuthCallback](arkts-basicservices-appaccount-authcallback-i.md) | Yes | Authenticator callback used to return the result. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameter types. |
-| 12300010 | Account service busy. |
-| 12300003 | Account not found. |
-| 12300002 | Invalid name, owner, authType or options. |
-| 12300114 | Authenticator service exception. |
-| 12300001 | System service exception. |
-| 12300113 | Authenticator service not found. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameter types. |
+| [12300010](../../apis-basic-services-kit/errorcode-account.md#12300010-account-service-not-respond) | Account service busy. |
+| [12300003](../../apis-basic-services-kit/errorcode-account.md#12300003-account-not-found) | Account not found. |
+| [12300002](../../apis-basic-services-kit/errorcode-account.md#12300002-invalid-parameter) | Invalid name, owner, authType or options. |
+| [12300114](../../apis-basic-services-kit/errorcode-account.md#12300114-authentication-service-abnormal) | Authenticator service exception. |
+| [12300001](../../apis-basic-services-kit/errorcode-account.md#12300001-system-service-abnormal) | System service exception. |
+| [12300113](../../apis-basic-services-kit/errorcode-account.md#12300113-authentication-service-not-found) | Authenticator service not found. |
 
 ## Examples
 
@@ -422,7 +381,7 @@ auth(
     ): void
 ```
 
-对应用账号进行鉴权以获取授权令牌。使用callback异步回调。
+Authenticates an application account. This API uses an asynchronous callback to return the result.
 
 **Since:** 23
 
@@ -436,22 +395,22 @@ auth(
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| name | string | Yes | 应用账号的名称。最大长度为512个字符。 |
-| owner | string | Yes | 应用账号所有者的包名。最大长度为1024个字符。 |
-| authType | string | Yes | 鉴权类型。自定义数据，最大长度为1024个字符。 |
-| options | [Record](../../apis-default/arkts-apis/arkts-record-t.md)&lt;string, RecordData&gt; | Yes | 鉴权所需的可选项。 |
-| callback | [AuthCallback](arkts-basicservices-appaccount-authcallback-i.md) | Yes | 回调对象，返回鉴权结果。 |
+| name | string | Yes | Name of the application account. The value cannot exceed 512 characters. |
+| owner | string | Yes | Owner of the application account. The value is the Bundle name of the application. The value cannot exceed 1024 characters. |
+| authType | string | Yes | Authentication type. The custom type, The value cannot exceed 1024 characters. |
+| options | [Record](../../apis-default/arkts-apis/arkts-record-t.md)&lt;string, RecordData&gt; | Yes | Options for the authentication. |
+| callback | [AuthCallback](arkts-basicservices-appaccount-authcallback-i.md) | Yes | Authenticator callback used to return the result. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 12300010 | Account service busy. |
-| 12300003 | Account not found. |
-| 12300002 | Invalid name, owner, authType or options. |
-| 12300114 | Authenticator service exception. |
-| 12300001 | System service exception. |
-| 12300113 | Authenticator service not found. |
+| [12300010](../../apis-basic-services-kit/errorcode-account.md#12300010-account-service-not-respond) | Account service busy. |
+| [12300003](../../apis-basic-services-kit/errorcode-account.md#12300003-account-not-found) | Account not found. |
+| [12300002](../../apis-basic-services-kit/errorcode-account.md#12300002-invalid-parameter) | Invalid name, owner, authType or options. |
+| [12300114](../../apis-basic-services-kit/errorcode-account.md#12300114-authentication-service-abnormal) | Authenticator service exception. |
+| [12300001](../../apis-basic-services-kit/errorcode-account.md#12300001-system-service-abnormal) | System service exception. |
+| [12300113](../../apis-basic-services-kit/errorcode-account.md#12300113-authentication-service-not-found) | Authenticator service not found. |
 
 ## authenticate
 
@@ -465,13 +424,13 @@ authenticate(
     ): void
 ```
 
-对应用账号进行鉴权以获取授权令牌。使用callback异步回调。
+Authenticates an application account. This API uses an asynchronous callback to return the result.
 
-> **说明：**
+> **NOTE：**
 > 
-> 从API version 8开始支持，从API version 9开始废弃。建议使用
+> This API is supported since API version 8 and deprecated since API version 9. You are advised to use
 > [auth](arkts-basicservices-appaccount-appaccountmanager-i.md#auth)
-> 替代。
+> instead.
 
 **Since:** 8
 
@@ -489,52 +448,11 @@ authenticate(
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| name | string | Yes | 应用账号的名称。最大长度为512个字符。 |
-| owner | string | Yes | 应用账号所有者的包名。最大长度为1024个字符。 |
-| authType | string | Yes | 鉴权类型。自定义数据，最大长度为1024个字符。 |
-| options | { [key: string]: any } | Yes | 鉴权所需的可选项。 |
-| callback | [AuthenticatorCallback](arkts-basicservices-appaccount-authenticatorcallback-i.md) | Yes | 回调对象，返回鉴权结果。 |
-
-## Examples
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-import { Want, common } from '@kit.AbilityKit';
-
-@Entry
-@Component
-struct Index {
-  context = this.getUIContext().getHostContext() as common.UIAbilityContext; // UIAbilityContext
-
-  onResultCallback(code: number, result: Record<string, Object>): void {
-    console.info('resultCode: ' + code);
-    console.info('result: ' + JSON.stringify(result));
-  }
-
-  onRequestRedirectedCallback(request: Want): void {
-    let wantInfo: Want = {
-      deviceId: '',
-      bundleName: 'com.example.accountjsdemo',
-      action: 'ohos.want.action.viewData',
-      entities: ['entity.system.default'],
-    }
-    this.context.startAbility(wantInfo).then(() => {
-      console.info('startAbility successfully');
-    }).catch((err: BusinessError) => {
-      console.error(`startAbility err: code is ${err.code}, message is ${err.message}`);
-    })
-  }
-
-  aboutToAppear(): void {
-    appAccountManager.authenticate('LiSi', 'com.example.accountjsdemo', 'getSocialData', {}, {
-      onResult: this.onResultCallback,
-      onRequestRedirected: this.onRequestRedirectedCallback
-    });
-  }
-
-  build() {}
-}
-```
+| name | string | Yes | Name of the application account. The value cannot exceed 512 characters. |
+| owner | string | Yes | Owner of the application account. The value is the Bundle name of the application. The value cannot exceed 1024 characters. |
+| authType | string | Yes | Authentication type. The custom type, The value cannot exceed 1024 characters. |
+| options | { [key: string]: any } | Yes | Options for the authentication. |
+| callback | [AuthenticatorCallback](arkts-basicservices-appaccount-authenticatorcallback-i.md) | Yes | Authenticator callback used to return the result. |
 
 ## checkAccountLabels
 
@@ -542,7 +460,7 @@ struct Index {
 checkAccountLabels(name: string, owner: string, labels: Array<string>, callback: AsyncCallback<boolean>): void
 ```
 
-检查指定应用账号是否满足特定的标签集合。使用callback异步回调。该方法依赖目标应用的认证器提供标签检查的能力。
+Checks whether an application account has specific labels. This API uses an asynchronous callback to return the result. The labels are checked by the authenticator of the target application.
 
 **Since:** 9
 
@@ -556,22 +474,22 @@ checkAccountLabels(name: string, owner: string, labels: Array<string>, callback:
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| name | string | Yes | 应用账号的名称。最大长度为512个字符。 |
-| owner | string | Yes | 应用账号所有者的包名。最大长度为1024个字符。 |
-| labels | Array&lt;string&gt; | Yes | 标签数组。 |
-| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;boolean&gt; | Yes | 回调函数。当检查成功时，err为null，data为true表示满足特定的标签集合，data为false表示不满足；否则为错误对象。 |
+| name | string | Yes | Name of the application account. The value cannot exceed 512 characters. |
+| owner | string | Yes | Owner of the application account. The value is the Bundle name of the application. The value cannot exceed 1024 characters. |
+| labels | Array&lt;string&gt; | Yes | Labels to check. |
+| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;boolean&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **null** and **data** can be **true** or **false**. The value **true** means the application account has the labels; the value **false** means the opposite. If the operation fails, **err** is an error object. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameter types. |
-| 12300010 | Account service busy. |
-| 12300003 | Account not found. |
-| 12300002 | Invalid name, owner or labels. |
-| 12300114 | Authenticator service exception. |
-| 12300001 | System service exception. |
-| 12300113 | Authenticator service not found. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameter types. |
+| [12300010](../../apis-basic-services-kit/errorcode-account.md#12300010-account-service-not-respond) | Account service busy. |
+| [12300003](../../apis-basic-services-kit/errorcode-account.md#12300003-account-not-found) | Account not found. |
+| [12300002](../../apis-basic-services-kit/errorcode-account.md#12300002-invalid-parameter) | Invalid name, owner or labels. |
+| [12300114](../../apis-basic-services-kit/errorcode-account.md#12300114-authentication-service-abnormal) | Authenticator service exception. |
+| [12300001](../../apis-basic-services-kit/errorcode-account.md#12300001-system-service-abnormal) | System service exception. |
+| [12300113](../../apis-basic-services-kit/errorcode-account.md#12300113-authentication-service-not-found) | Authenticator service not found. |
 
 ## Examples
 
@@ -600,7 +518,7 @@ try {
 checkAccountLabels(name: string, owner: string, labels: Array<string>): Promise<boolean>
 ```
 
-检查指定应用账号是否满足特定的标签集合。使用Promise异步回调。该方法依赖目标应用的认证器提供标签检查的能力。
+Checks whether an application account has specific labels. This API uses a promise to return the result. The labels are checked by the authenticator of the target application.
 
 **Since:** 9
 
@@ -614,27 +532,27 @@ checkAccountLabels(name: string, owner: string, labels: Array<string>): Promise<
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| name | string | Yes | 应用账号的名称。最大长度为512个字符。 |
-| owner | string | Yes | 应用账号所有者的包名。最大长度为1024个字符。 |
-| labels | Array&lt;string&gt; | Yes | 标签数组。 |
+| name | string | Yes | Name of the application account. The value cannot exceed 512 characters. |
+| owner | string | Yes | Owner of the application account. The value is the Bundle name of the application. The value cannot exceed 1024 characters. |
+| labels | Array&lt;string&gt; | Yes | Labels to check. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;boolean&gt; | Promise对象。返回true表示指定账号满足特定的标签集合，返回false表示不满足。 |
+| Promise&lt;boolean&gt; | Promise used to return the result. The value **true** means the application account has the labels; the value **false** means the opposite. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameter types. |
-| 12300010 | Account service busy. |
-| 12300003 | Account not found. |
-| 12300002 | Invalid name, owner or labels. |
-| 12300114 | Authenticator service exception. |
-| 12300001 | System service exception. |
-| 12300113 | Authenticator service not found. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameter types. |
+| [12300010](../../apis-basic-services-kit/errorcode-account.md#12300010-account-service-not-respond) | Account service busy. |
+| [12300003](../../apis-basic-services-kit/errorcode-account.md#12300003-account-not-found) | Account not found. |
+| [12300002](../../apis-basic-services-kit/errorcode-account.md#12300002-invalid-parameter) | Invalid name, owner or labels. |
+| [12300114](../../apis-basic-services-kit/errorcode-account.md#12300114-authentication-service-abnormal) | Authenticator service exception. |
+| [12300001](../../apis-basic-services-kit/errorcode-account.md#12300001-system-service-abnormal) | System service exception. |
+| [12300113](../../apis-basic-services-kit/errorcode-account.md#12300113-authentication-service-not-found) | Authenticator service not found. |
 
 ## Examples
 
@@ -661,7 +579,7 @@ try {
 checkAppAccess(name: string, bundleName: string, callback: AsyncCallback<boolean>): void
 ```
 
-检查指定应用对特定账号的数据是否可访问。使用callback异步回调。
+Checks whether an application can access the data of an account. This API uses an asynchronous callback to return  the result.
 
 **Since:** 9
 
@@ -675,18 +593,18 @@ checkAppAccess(name: string, bundleName: string, callback: AsyncCallback<boolean
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| name | string | Yes | 应用账号的名称。最大长度为512个字符。 |
-| bundleName | string | Yes | 第三方应用的包名。最大长度为512个字符。 |
-| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;boolean&gt; | Yes | 回调函数。返回true表示指定应用可访问特定账号的数据；返回false表示不可访问。 |
+| name | string | Yes | Name of the application account. The value cannot exceed 512 characters. |
+| bundleName | string | Yes | Bundle name of the application. The value cannot exceed 512 characters. |
+| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;boolean&gt; | Yes | Callback used to return the result. The value **true** means the application can access the account data; the value **false** means the opposite. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameter types. |
-| 12300003 | Account not found. |
-| 12300002 | Invalid name or bundleName. |
-| 12300001 | System service exception. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameter types. |
+| [12300003](../../apis-basic-services-kit/errorcode-account.md#12300003-account-not-found) | Account not found. |
+| [12300002](../../apis-basic-services-kit/errorcode-account.md#12300002-invalid-parameter) | Invalid name or bundleName. |
+| [12300001](../../apis-basic-services-kit/errorcode-account.md#12300001-system-service-abnormal) | System service exception. |
 
 ## Examples
 
@@ -714,7 +632,7 @@ try {
 checkAppAccess(name: string, bundleName: string): Promise<boolean>
 ```
 
-检查指定应用对特定账号的数据是否可访问。使用Promise异步回调。
+Checks whether an application can access the data of an account. This API uses a promise to return the result.
 
 **Since:** 9
 
@@ -728,23 +646,23 @@ checkAppAccess(name: string, bundleName: string): Promise<boolean>
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| name | string | Yes | 应用账号的名称。最大长度为512个字符。 |
-| bundleName | string | Yes | 第三方应用的包名。最大长度为512个字符。 |
+| name | string | Yes | Name of the application account. The value cannot exceed 512 characters. |
+| bundleName | string | Yes | Bundle name of the application. The value cannot exceed 512 characters. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;boolean&gt; | Promise对象。返回true表示指定应用可访问特定账号的数据；返回false表示不可访问。 |
+| Promise&lt;boolean&gt; | Promise used to return the result. The value **true** means the application can access the account data; the value **false** means the opposite. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameter types. |
-| 12300003 | Account not found. |
-| 12300002 | Invalid name or bundleName. |
-| 12300001 | System service exception. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameter types. |
+| [12300003](../../apis-basic-services-kit/errorcode-account.md#12300003-account-not-found) | Account not found. |
+| [12300002](../../apis-basic-services-kit/errorcode-account.md#12300002-invalid-parameter) | Invalid name or bundleName. |
+| [12300001](../../apis-basic-services-kit/errorcode-account.md#12300001-system-service-abnormal) | System service exception. |
 
 ## Examples
 
@@ -769,13 +687,13 @@ try {
 checkAppAccountSyncEnable(name: string, callback: AsyncCallback<boolean>): void
 ```
 
-检查指定应用账号是否开启数据同步功能。使用callback异步回调。
+Checks whether data synchronization is enabled for an application account. This API uses an asynchronous callback  to return the result.
 
-> **说明：**
+> **NOTE：**
 > 
-> 从API version 7开始支持，从API version 9开始废弃。建议使用
+> This API is supported since API version 7 and deprecated since API version 9. You are advised to use
 > [checkDataSyncEnabled](arkts-basicservices-appaccount-appaccountmanager-i.md#checkdatasyncenabled)
-> 替代。
+> instead.
 
 **Since:** 7
 
@@ -795,8 +713,8 @@ checkAppAccountSyncEnable(name: string, callback: AsyncCallback<boolean>): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| name | string | Yes | 应用账号的名称。最大长度为512个字符。 |
-| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;boolean&gt; | Yes | 回调函数。返回true表示指定应用账号已开启数据同步功能；返回false表示未开启。 |
+| name | string | Yes | Name of the application account. The value cannot exceed 512 characters. |
+| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;boolean&gt; | Yes | Callback used to return the result. The value **true** means data synchronization is enabled for the application account; the value **false** means the opposite. |
 
 ## Examples
 
@@ -818,12 +736,12 @@ appAccountManager.checkAppAccountSyncEnable('ZhangSan', (err: BusinessError, res
 checkAppAccountSyncEnable(name: string): Promise<boolean>
 ```
 
-检查指定应用账号是否开启数据同步功能。使用Promise异步回调。
+Checks whether data synchronization is enabled for an application account. This API uses a promise to return the result.
 
-> **说明：**
+> **NOTE：**
 > 
-> 从API version 7开始支持，从API version 9开始废弃。建议使用
-> [checkDataSyncEnabled](arkts-basicservices-appaccount-appaccountmanager-i.md#checkdatasyncenabled)替代。
+> This API is supported since API version 7 and deprecated since API version 9. You are advised to use
+> [checkDataSyncEnabled](arkts-basicservices-appaccount-appaccountmanager-i.md#checkdatasyncenabled) instead.
 
 **Since:** 7
 
@@ -843,13 +761,13 @@ checkAppAccountSyncEnable(name: string): Promise<boolean>
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| name | string | Yes | 应用账号的名称。最大长度为512个字符。 |
+| name | string | Yes | Name of the application account. The value cannot exceed 512 characters. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;boolean&gt; | Promise对象。返回true表示指定应用账号已开启数据同步功能；返回false表示未开启。 |
+| Promise&lt;boolean&gt; | Promise used to return the result. The value **true** means data synchronization is enabled for the application account; the value **false** means the opposite. |
 
 ## Examples
 
@@ -869,7 +787,7 @@ appAccountManager.checkAppAccountSyncEnable('ZhangSan').then((data: boolean) => 
 checkAuthTokenVisibility(name: string, authType: string, bundleName: string, callback: AsyncCallback<boolean>): void
 ```
 
-检查指定应用账号的特定鉴权类型的授权令牌对指定应用的可见性。使用callback异步回调。
+Checks the visibility of an authorization token of the specified authentication type to an application. This API uses an asynchronous callback to return the result.
 
 **Since:** 9
 
@@ -883,20 +801,20 @@ checkAuthTokenVisibility(name: string, authType: string, bundleName: string, cal
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| name | string | Yes | 应用账号的名称。最大长度为512个字符。 |
-| authType | string | Yes | 鉴权类型。自定义数据，最大长度为1024个字符。 |
-| bundleName | string | Yes | 检查可见性的应用包名。最大长度为512个字符。 |
-| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;boolean&gt; | Yes | 回调函数。当检查成功时，err为null，data为true表示可见，data为false表示不可见；否则为错误对象。 |
+| name | string | Yes | Name of the application account. The value cannot exceed 512 characters. |
+| authType | string | Yes | Authentication type. The custom type, The value cannot exceed 1024 characters. |
+| bundleName | string | Yes | Bundle name of the application. The value cannot exceed 512 characters. |
+| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;boolean&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **null** and **data** can be **true** (the authorization token is visible to the application) or **false** (the authorization token is not visible to the application). If the operation fails, **err** is an error object. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 12300107 | AuthType not found. |
-| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameter types. |
-| 12300003 | Account not found. |
-| 12300002 | Invalid name, authType or bundleName. |
-| 12300001 | System service exception. |
+| [12300107](../../apis-basic-services-kit/errorcode-account.md#12300107-authentication-type-not-found) | AuthType not found. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameter types. |
+| [12300003](../../apis-basic-services-kit/errorcode-account.md#12300003-account-not-found) | Account not found. |
+| [12300002](../../apis-basic-services-kit/errorcode-account.md#12300002-invalid-parameter) | Invalid name, authType or bundleName. |
+| [12300001](../../apis-basic-services-kit/errorcode-account.md#12300001-system-service-abnormal) | System service exception. |
 
 ## Examples
 
@@ -924,7 +842,7 @@ try {
 checkAuthTokenVisibility(name: string, authType: string, bundleName: string): Promise<boolean>
 ```
 
-检查指定应用账号的特定鉴权类型的授权令牌对指定应用的可见性。使用Promise异步回调。
+Checks the visibility of an authorization token of the specified authentication type to an application. This API uses a promise to return the result.
 
 **Since:** 9
 
@@ -938,25 +856,25 @@ checkAuthTokenVisibility(name: string, authType: string, bundleName: string): Pr
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| name | string | Yes | 应用账号的名称。最大长度为512个字符。 |
-| authType | string | Yes | 鉴权类型。自定义数据，最大长度为1024个字符。 |
-| bundleName | string | Yes | 用于检查可见性的应用包名。最大长度为512个字符。 |
+| name | string | Yes | Name of the application account. The value cannot exceed 512 characters. |
+| authType | string | Yes | Authentication type. The custom type, The value cannot exceed 1024 characters. |
+| bundleName | string | Yes | Bundle name of the application. The value cannot exceed 512 characters. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;boolean&gt; | Promise对象。返回true表示授权令牌对指定应用的可见，返回false表示不可见。 |
+| Promise&lt;boolean&gt; | Promise used to return the result. The value **true** means the authorization token is visible to the application; the value **false** means the opposite. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 12300107 | AuthType not found. |
-| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameter types. |
-| 12300003 | Account not found. |
-| 12300002 | Invalid name, authType or bundleName. |
-| 12300001 | System service exception. |
+| [12300107](../../apis-basic-services-kit/errorcode-account.md#12300107-authentication-type-not-found) | AuthType not found. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameter types. |
+| [12300003](../../apis-basic-services-kit/errorcode-account.md#12300003-account-not-found) | Account not found. |
+| [12300002](../../apis-basic-services-kit/errorcode-account.md#12300002-invalid-parameter) | Invalid name, authType or bundleName. |
+| [12300001](../../apis-basic-services-kit/errorcode-account.md#12300001-system-service-abnormal) | System service exception. |
 
 ## Examples
 
@@ -982,7 +900,7 @@ try {
 checkDataSyncEnabled(name: string, callback: AsyncCallback<boolean>): void
 ```
 
-检查指定应用账号是否开启数据同步功能。使用callback异步回调。
+Checks whether data synchronization is enabled for an application account. This API uses an asynchronous callback  to return the result.
 
 **Since:** 9
 
@@ -998,18 +916,18 @@ checkDataSyncEnabled(name: string, callback: AsyncCallback<boolean>): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| name | string | Yes | 应用账号的名称。最大长度为512个字符。 |
-| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;boolean&gt; | Yes | 回调函数。返回true表示指定应用账号已开启数据同步功能；返回false表示未开启。 |
+| name | string | Yes | Name of the application account. The value cannot exceed 512 characters. |
+| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;boolean&gt; | Yes | Callback used to return the result. The value **true** means data synchronization is enabled for the application account; the value **false** means the opposite. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameter types. |
-| 12300003 | Account not found. |
-| 201 | Permission denied. |
-| 12300002 | Invalid name. |
-| 12300001 | System service exception. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameter types. |
+| [12300003](../../apis-basic-services-kit/errorcode-account.md#12300003-account-not-found) | Account not found. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
+| [12300002](../../apis-basic-services-kit/errorcode-account.md#12300002-invalid-parameter) | Invalid name. |
+| [12300001](../../apis-basic-services-kit/errorcode-account.md#12300001-system-service-abnormal) | System service exception. |
 
 ## Examples
 
@@ -1036,7 +954,7 @@ try {
 checkDataSyncEnabled(name: string): Promise<boolean>
 ```
 
-检查指定应用账号是否开启数据同步功能。使用Promise异步回调。
+Checks whether data synchronization is enabled for an application account. This API uses a promise to return the result.
 
 **Since:** 9
 
@@ -1052,23 +970,23 @@ checkDataSyncEnabled(name: string): Promise<boolean>
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| name | string | Yes | 应用账号的名称。最大长度为512个字符。 |
+| name | string | Yes | Name of the application account. The value cannot exceed 512 characters. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;boolean&gt; | Promise对象。返回true表示指定应用账号已开启数据同步功能；返回false表示未开启。 |
+| Promise&lt;boolean&gt; | Promise used to return the result. The value **true** means data synchronization is enabled for the application account; the value **false** means the opposite. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameter types. |
-| 12300003 | Account not found. |
-| 201 | Permission denied. |
-| 12300002 | Invalid name. |
-| 12300001 | System service exception. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameter types. |
+| [12300003](../../apis-basic-services-kit/errorcode-account.md#12300003-account-not-found) | Account not found. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
+| [12300002](../../apis-basic-services-kit/errorcode-account.md#12300002-invalid-parameter) | Invalid name. |
+| [12300001](../../apis-basic-services-kit/errorcode-account.md#12300001-system-service-abnormal) | System service exception. |
 
 ## Examples
 
@@ -1098,13 +1016,13 @@ checkOAuthTokenVisibility(
     ): void
 ```
 
-检查指定应用账号的特定鉴权类型的授权令牌对指定应用的可见性。使用callback异步回调。
+Checks the visibility of an authorization token of the specified authentication type to an application. This API uses an asynchronous callback to return the result.
 
-> **说明：**
+> **NOTE：**
 > 
-> 从API version 8开始支持，从API version 9开始废弃。建议使用
+> This API is supported since API version 8 and deprecated since API version 9. You are advised to use
 > [checkAuthTokenVisibility](arkts-basicservices-appaccount-appaccountmanager-i.md#checkauthtokenvisibility)
-> 替代。
+> instead.
 
 **Since:** 8
 
@@ -1122,10 +1040,10 @@ checkOAuthTokenVisibility(
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| name | string | Yes | 应用账号的名称。最大长度为512个字符。 |
-| authType | string | Yes | 鉴权类型。自定义数据，最大长度为1024个字符。 |
-| bundleName | string | Yes | 检查可见性的应用包名。最大长度为512个字符。 |
-| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;boolean&gt; | Yes | 回调函数。当检查成功时，err为null，data为true表示可见，data为false表示不可见；否则为错误对象。 |
+| name | string | Yes | Name of the application account. The value cannot exceed 512 characters. |
+| authType | string | Yes | Authentication type. The custom type, The value cannot exceed 1024 characters. |
+| bundleName | string | Yes | Bundle name of the application. The value cannot exceed 512 characters. |
+| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;boolean&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **null** and **data** can be **true** (the authorization token is visible to the application) or **false** (the authorization token is not visible to the application). If the operation fails, **err** is an error object. |
 
 ## Examples
 
@@ -1148,13 +1066,13 @@ appAccountManager.checkOAuthTokenVisibility('LiSi', 'getSocialData', 'com.exampl
 checkOAuthTokenVisibility(name: string, authType: string, bundleName: string): Promise<boolean>
 ```
 
-检查指定应用账号的特定鉴权类型的授权令牌对指定应用的可见性。使用Promise异步回调。
+Checks the visibility of an authorization token of the specified authentication type to an application. This API uses a promise to return the result.
 
-> **说明：**
+> **NOTE：**
 > 
-> 从API version 8开始支持，从API version 9开始废弃。建议使用
+> This API is supported since API version 8 and deprecated since API version 9. You are advised to use
 > [checkAuthTokenVisibility](arkts-basicservices-appaccount-appaccountmanager-i.md#checkauthtokenvisibility)
-> 替代。
+> instead.
 
 **Since:** 8
 
@@ -1172,15 +1090,15 @@ checkOAuthTokenVisibility(name: string, authType: string, bundleName: string): P
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| name | string | Yes | 应用账号的名称。最大长度为512个字符。 |
-| authType | string | Yes | 鉴权类型。自定义数据，最大长度为1024个字符。 |
-| bundleName | string | Yes | 用于检查可见性的应用包名。最大长度为512个字符。 |
+| name | string | Yes | Name of the application account. The value cannot exceed 512 characters. |
+| authType | string | Yes | Authentication type. The custom type, The value cannot exceed 1024 characters. |
+| bundleName | string | Yes | Bundle name of the application. The value cannot exceed 512 characters. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;boolean&gt; | Promise对象。返回true表示指定鉴权类型的OAuth令牌对特定应用的可见，返回false表示不可见。 |
+| Promise&lt;boolean&gt; | Promise used to return the result. The value **true** means the authorization token is visible to the application; the value **false** means the opposite. |
 
 ## Examples
 
@@ -1201,7 +1119,7 @@ appAccountManager.checkOAuthTokenVisibility('LiSi', 'getSocialData', 'com.exampl
 createAccount(name: string, callback: AsyncCallback<void>): void
 ```
 
-根据账号名创建应用账号。使用callback异步回调。
+Creates an application account with the given name. This API uses an asynchronous callback to return the result.
 
 **Since:** 9
 
@@ -1215,18 +1133,18 @@ createAccount(name: string, callback: AsyncCallback<void>): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| name | string | Yes | 应用账号的名称。最大长度为512个字符。 |
-| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | 回调函数。当创建成功时，err为null，否则为错误对象。 |
+| name | string | Yes | Name of the application account. The value cannot exceed 512 characters. |
+| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **null**. Otherwise, **err** is an error object. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameter types. |
-| 12300002 | Invalid name. |
-| 12300001 | System service exception. |
-| 12300007 | The number of accounts reaches the upper limit. |
-| 12300004 | Account already exists. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameter types. |
+| [12300002](../../apis-basic-services-kit/errorcode-account.md#12300002-invalid-parameter) | Invalid name. |
+| [12300001](../../apis-basic-services-kit/errorcode-account.md#12300001-system-service-abnormal) | System service exception. |
+| [12300007](../../apis-basic-services-kit/errorcode-account.md#12300007-account-count-reached-the-limit) | The number of accounts reaches the upper limit. |
+| [12300004](../../apis-basic-services-kit/errorcode-account.md#12300004-account-already-exists) | Account already exists. |
 
 ## Examples
 
@@ -1253,7 +1171,7 @@ try {
 createAccount(name: string, options: CreateAccountOptions, callback: AsyncCallback<void>): void
 ```
 
-根据账号名和可选项创建应用账号。使用callback异步回调。
+Creates an application account with custom data. This API uses an asynchronous callback to return the result.
 
 **Since:** 9
 
@@ -1267,19 +1185,19 @@ createAccount(name: string, options: CreateAccountOptions, callback: AsyncCallba
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| name | string | Yes | 应用账号的名称。最大长度为512个字符。 |
-| options | [CreateAccountOptions](arkts-basicservices-appaccount-createaccountoptions-i.md) | Yes | 创建应用账号的选项，可提供自定义数据，但不建议包含敏感数据（如密码、Token等）。 |
-| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | 回调函数。当创建成功时，err为null，否则为错误对象。 |
+| name | string | Yes | Name of the application account. The value cannot exceed 512 characters. |
+| options | [CreateAccountOptions](arkts-basicservices-appaccount-createaccountoptions-i.md) | Yes | Options for creating the application account. You can customize data based on service requirements, but do not add sensitive data (such as passwords and tokens). |
+| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **null**. Otherwise, **err** is an error object. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameter types. |
-| 12300002 | Invalid name or options. |
-| 12300001 | System service exception. |
-| 12300007 | The number of accounts reaches the upper limit. |
-| 12300004 | Account already exists. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameter types. |
+| [12300002](../../apis-basic-services-kit/errorcode-account.md#12300002-invalid-parameter) | Invalid name or options. |
+| [12300001](../../apis-basic-services-kit/errorcode-account.md#12300001-system-service-abnormal) | System service exception. |
+| [12300007](../../apis-basic-services-kit/errorcode-account.md#12300007-account-count-reached-the-limit) | The number of accounts reaches the upper limit. |
+| [12300004](../../apis-basic-services-kit/errorcode-account.md#12300004-account-already-exists) | Account already exists. |
 
 ## Examples
 
@@ -1311,7 +1229,7 @@ try {
 createAccount(name: string, options?: CreateAccountOptions): Promise<void>
 ```
 
-根据账号名和可选项创建应用账号。使用Promise异步回调。
+Creates an application account with custom data. This API uses a promise to return the result.
 
 **Since:** 9
 
@@ -1325,24 +1243,24 @@ createAccount(name: string, options?: CreateAccountOptions): Promise<void>
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| name | string | Yes | 应用账号的名称。最大长度为512个字符。 |
-| options | [CreateAccountOptions](arkts-basicservices-appaccount-createaccountoptions-i.md) | No | 创建应用账号的选项，可提供自定义数据，但不建议包含敏感数据（如密码、Token等）。不填无影响，默认为空，表示创建的该账号无额外信息需要添加。 |
+| name | string | Yes | Name of the application account. The value cannot exceed 512 characters. |
+| options | [CreateAccountOptions](arkts-basicservices-appaccount-createaccountoptions-i.md) | No | Options for creating the application account. You can customize data based on service requirements, but do not add sensitive data (such as passwords and tokens).&lt;br&gt;By default, no value is passed in, which means no additional information needs to be added for the account. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | 无返回结果的Promise对象。 |
+| Promise&lt;void&gt; | Promise that returns no value. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameter types. |
-| 12300002 | Invalid name or options. |
-| 12300001 | System service exception. |
-| 12300007 | The number of accounts reaches the upper limit. |
-| 12300004 | Account already exists. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameter types. |
+| [12300002](../../apis-basic-services-kit/errorcode-account.md#12300002-invalid-parameter) | Invalid name or options. |
+| [12300001](../../apis-basic-services-kit/errorcode-account.md#12300001-system-service-abnormal) | System service exception. |
+| [12300007](../../apis-basic-services-kit/errorcode-account.md#12300007-account-count-reached-the-limit) | The number of accounts reaches the upper limit. |
+| [12300004](../../apis-basic-services-kit/errorcode-account.md#12300004-account-already-exists) | Account already exists. |
 
 ## Examples
 
@@ -1372,7 +1290,7 @@ try {
 createAccountImplicitly(owner: string, callback: AuthCallback): void
 ```
 
-根据指定的账号所有者隐式地创建应用账号。使用callback异步回调。
+Creates an application account implicitly based on the specified account owner. This API uses an asynchronous callback to return the result.
 
 **Since:** 9
 
@@ -1386,20 +1304,20 @@ createAccountImplicitly(owner: string, callback: AuthCallback): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| owner | string | Yes | 应用账号所有者的包名。最大长度为1024个字符。 |
-| callback | [AuthCallback](arkts-basicservices-appaccount-authcallback-i.md) | Yes | 认证器回调对象，返回创建结果。 |
+| owner | string | Yes | Owner of the application account. The value is the Bundle name of the application. The value cannot exceed 1024 characters. |
+| callback | [AuthCallback](arkts-basicservices-appaccount-authcallback-i.md) | Yes | Authenticator callback used to return the result. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameter types. |
-| 12300010 | Account service busy. |
-| 12300002 | Invalid owner. |
-| 12300114 | Authenticator service exception. |
-| 12300001 | System service exception. |
-| 12300113 | Authenticator service not found. |
-| 12300007 | The number of accounts reaches the upper limit. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameter types. |
+| [12300010](../../apis-basic-services-kit/errorcode-account.md#12300010-account-service-not-respond) | Account service busy. |
+| [12300002](../../apis-basic-services-kit/errorcode-account.md#12300002-invalid-parameter) | Invalid owner. |
+| [12300114](../../apis-basic-services-kit/errorcode-account.md#12300114-authentication-service-abnormal) | Authenticator service exception. |
+| [12300001](../../apis-basic-services-kit/errorcode-account.md#12300001-system-service-abnormal) | System service exception. |
+| [12300113](../../apis-basic-services-kit/errorcode-account.md#12300113-authentication-service-not-found) | Authenticator service not found. |
+| [12300007](../../apis-basic-services-kit/errorcode-account.md#12300007-account-count-reached-the-limit) | The number of accounts reaches the upper limit. |
 
 ## Examples
 
@@ -1452,7 +1370,7 @@ struct Index {
 createAccountImplicitly(owner: string, options: CreateAccountImplicitlyOptions, callback: AuthCallback): void
 ```
 
-根据指定的账号所有者和可选项隐式地创建应用账号。使用callback异步回调。
+Creates an application account implicitly based on the specified account owner and options. This API uses an asynchronous callback to return the result.
 
 **Since:** 9
 
@@ -1466,21 +1384,21 @@ createAccountImplicitly(owner: string, options: CreateAccountImplicitlyOptions, 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| owner | string | Yes | 应用账号所有者的包名。最大长度为1024个字符。 |
-| options | [CreateAccountImplicitlyOptions](arkts-basicservices-appaccount-createaccountimplicitlyoptions-i.md) | Yes | 隐式创建账号的选项。 |
-| callback | [AuthCallback](arkts-basicservices-appaccount-authcallback-i.md) | Yes | 认证器回调对象，返回创建结果。 |
+| owner | string | Yes | Owner of the application account. The value is the Bundle name of the application. The value cannot exceed 1024 characters. |
+| options | [CreateAccountImplicitlyOptions](arkts-basicservices-appaccount-createaccountimplicitlyoptions-i.md) | Yes | Options for implicitly creating the account. |
+| callback | [AuthCallback](arkts-basicservices-appaccount-authcallback-i.md) | Yes | Authenticator callback used to return the result. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameter types. |
-| 12300010 | Account service busy. |
-| 12300002 | Invalid owner or options. |
-| 12300114 | Authenticator service exception. |
-| 12300001 | System service exception. |
-| 12300113 | Authenticator service not found. |
-| 12300007 | The number of accounts reaches the upper limit. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameter types. |
+| [12300010](../../apis-basic-services-kit/errorcode-account.md#12300010-account-service-not-respond) | Account service busy. |
+| [12300002](../../apis-basic-services-kit/errorcode-account.md#12300002-invalid-parameter) | Invalid owner or options. |
+| [12300114](../../apis-basic-services-kit/errorcode-account.md#12300114-authentication-service-abnormal) | Authenticator service exception. |
+| [12300001](../../apis-basic-services-kit/errorcode-account.md#12300001-system-service-abnormal) | System service exception. |
+| [12300113](../../apis-basic-services-kit/errorcode-account.md#12300113-authentication-service-not-found) | Authenticator service not found. |
+| [12300007](../../apis-basic-services-kit/errorcode-account.md#12300007-account-count-reached-the-limit) | The number of accounts reaches the upper limit. |
 
 ## Examples
 
@@ -1537,13 +1455,13 @@ struct Index {
 deleteAccount(name: string, callback: AsyncCallback<void>): void
 ```
 
-删除应用账号。使用callback异步回调。
+Deletes an application account. This API uses an asynchronous callback to return the result.
 
-> **说明：**
+> **NOTE：**
 > 
-> 从API version 7开始支持，从API version 9开始废弃。建议使用
-> [removeAccount](arkts-basicservices-appaccount-appaccountmanager-i.md#removeaccount)替
-> 代。
+> This API is supported since API version 7 and deprecated since API version 9. You are advised to use
+> [removeAccount](arkts-basicservices-appaccount-appaccountmanager-i.md#removeaccount)
+> instead.
 
 **Since:** 7
 
@@ -1561,8 +1479,8 @@ deleteAccount(name: string, callback: AsyncCallback<void>): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| name | string | Yes | 应用账号的名称。最大长度为512个字符。 |
-| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | 回调函数。当删除成功时，err为null，否则为错误对象。 |
+| name | string | Yes | Name of the application account. The value cannot exceed 512 characters. |
+| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **null**. Otherwise, **err** is an error object. |
 
 ## Examples
 
@@ -1580,13 +1498,13 @@ appAccountManager.deleteAccount('ZhaoLiu', (err: BusinessError) => {
 deleteAccount(name: string): Promise<void>
 ```
 
-删除应用账号。使用Promise异步回调。
+Deletes an application account. This API uses a promise to return the result.
 
-> **说明：**
+> **NOTE：**
 > 
-> 从API version 7开始支持，从API version 9开始废弃。建议使用
-> [removeAccount](arkts-basicservices-appaccount-appaccountmanager-i.md#removeaccount)替
-> 代。
+> This API is supported since API version 7 and deprecated since API version 9. You are advised to use
+> [removeAccount](arkts-basicservices-appaccount-appaccountmanager-i.md#removeaccount)
+> instead.
 
 **Since:** 7
 
@@ -1604,13 +1522,13 @@ deleteAccount(name: string): Promise<void>
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| name | string | Yes | 应用账号的名称。最大长度为512个字符。 |
+| name | string | Yes | Name of the application account. The value cannot exceed 512 characters. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | 无返回结果的Promise对象。 |
+| Promise&lt;void&gt; | Promise that returns no value. |
 
 ## Examples
 
@@ -1630,7 +1548,7 @@ appAccountManager.deleteAccount('ZhaoLiu').then(() => {
 deleteAuthToken(name: string, owner: string, authType: string, token: string, callback: AsyncCallback<void>): void
 ```
 
-删除指定应用账号的特定鉴权类型的授权令牌。使用callback异步回调。
+Deletes the authorization token of the specified authentication type for an application account. This API uses an  asynchronous callback to return the result.
 
 **Since:** 9
 
@@ -1644,21 +1562,21 @@ deleteAuthToken(name: string, owner: string, authType: string, token: string, ca
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| name | string | Yes | 应用账号的名称。最大长度为512个字符。 |
-| owner | string | Yes | 应用账号所有者的包名。最大长度为1024个字符。 |
-| authType | string | Yes | 鉴权类型。自定义数据，最大长度为1024个字符。 |
-| token | string | Yes | 授权令牌。最大长度为1024个字符。如果授权令牌不存在，则不执行任何操作。 |
-| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | 回调函数。当删除成功时，err为null；否则为错误对象。 |
+| name | string | Yes | Name of the application account. The value cannot exceed 512 characters. |
+| owner | string | Yes | Owner of the application account. The value is the Bundle name of the application. The value cannot exceed 1024 characters. |
+| authType | string | Yes | Authentication type. The custom type, The value cannot exceed 1024 characters. |
+| token | string | Yes | Authorization token. The value cannot exceed 1024 characters. If the token does not exist, no operation is performed. |
+| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **null**. Otherwise, **err** is an error object. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 12300107 | AuthType not found. |
-| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameter types. |
-| 12300003 | Account not found. |
-| 12300002 | Invalid name, owner, authType or token. |
-| 12300001 | System service exception. |
+| [12300107](../../apis-basic-services-kit/errorcode-account.md#12300107-authentication-type-not-found) | AuthType not found. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameter types. |
+| [12300003](../../apis-basic-services-kit/errorcode-account.md#12300003-account-not-found) | Account not found. |
+| [12300002](../../apis-basic-services-kit/errorcode-account.md#12300002-invalid-parameter) | Invalid name, owner, authType or token. |
+| [12300001](../../apis-basic-services-kit/errorcode-account.md#12300001-system-service-abnormal) | System service exception. |
 
 ## Examples
 
@@ -1686,7 +1604,7 @@ try {
 deleteAuthToken(name: string, owner: string, authType: string, token: string): Promise<void>
 ```
 
-删除指定应用账号的特定鉴权类型的授权令牌。使用Promise异步回调。
+Deletes the authorization token of the specified authentication type for an application account. This API uses a promise to return the result.
 
 **Since:** 9
 
@@ -1700,26 +1618,26 @@ deleteAuthToken(name: string, owner: string, authType: string, token: string): P
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| name | string | Yes | 应用账号的名称。最大长度为512个字符。 |
-| owner | string | Yes | 应用账号所有者的包名。最大长度为1024个字符。 |
-| authType | string | Yes | 鉴权类型。自定义数据，最大长度为1024个字符。 |
-| token | string | Yes | 授权令牌。最大长度为1024个字符。如果授权令牌不存在，则不执行任何操作。 |
+| name | string | Yes | Name of the application account. The value cannot exceed 512 characters. |
+| owner | string | Yes | Owner of the application account. The value is the Bundle name of the application. The value cannot exceed 1024 characters. |
+| authType | string | Yes | Authentication type. The custom type, The value cannot exceed 1024 characters. |
+| token | string | Yes | Authorization token. The value cannot exceed 1024 characters. If the token does not exist, no operation is performed. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | 无返回结果的Promise对象。 |
+| Promise&lt;void&gt; | Promise that returns no value. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 12300107 | AuthType not found. |
-| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameter types. |
-| 12300003 | Account not found. |
-| 12300002 | Invalid name, owner, authType or token. |
-| 12300001 | System service exception. |
+| [12300107](../../apis-basic-services-kit/errorcode-account.md#12300107-authentication-type-not-found) | AuthType not found. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameter types. |
+| [12300003](../../apis-basic-services-kit/errorcode-account.md#12300003-account-not-found) | Account not found. |
+| [12300002](../../apis-basic-services-kit/errorcode-account.md#12300002-invalid-parameter) | Invalid name, owner, authType or token. |
+| [12300001](../../apis-basic-services-kit/errorcode-account.md#12300001-system-service-abnormal) | System service exception. |
 
 ## Examples
 
@@ -1744,7 +1662,7 @@ try {
 deleteCredential(name: string, credentialType: string, callback: AsyncCallback<void>): void
 ```
 
-删除指定应用账号的特定类型的凭据信息。使用callback异步回调。
+Deletes the credential of the specified type from an application account. This API uses an asynchronous callback to return the result.
 
 **Since:** 9
 
@@ -1758,19 +1676,19 @@ deleteCredential(name: string, credentialType: string, callback: AsyncCallback<v
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| name | string | Yes | 应用账号的名称。最大长度为512个字符。 |
-| credentialType | string | Yes | 凭据类型。自定义的类型，最大长度为1024个字符。 |
-| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | 回调函数。当删除成功时，err为null；否则为错误对象。 |
+| name | string | Yes | Name of the application account. The value cannot exceed 512 characters. |
+| credentialType | string | Yes | Credential type. The custom type, the value cannot exceed 1024 characters. |
+| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **null**. Otherwise, **err** is an error object. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameter types. |
-| 12300003 | Account not found. |
-| 12300002 | Invalid name or credentialType. |
-| 12300001 | System service exception. |
-| 12300102 | Credential not found. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameter types. |
+| [12300003](../../apis-basic-services-kit/errorcode-account.md#12300003-account-not-found) | Account not found. |
+| [12300002](../../apis-basic-services-kit/errorcode-account.md#12300002-invalid-parameter) | Invalid name or credentialType. |
+| [12300001](../../apis-basic-services-kit/errorcode-account.md#12300001-system-service-abnormal) | System service exception. |
+| [12300102](../../apis-basic-services-kit/errorcode-account.md#12300102-credential-not-found) | Credential not found. |
 
 ## Examples
 
@@ -1797,7 +1715,7 @@ try {
 deleteCredential(name: string, credentialType: string): Promise<void>
 ```
 
-删除指定应用账号的特定类型的凭据信息。使用Promise异步回调。
+Deletes the credential of the specified type from an application account. This API uses a promise to return the result.
 
 **Since:** 9
 
@@ -1811,24 +1729,24 @@ deleteCredential(name: string, credentialType: string): Promise<void>
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| name | string | Yes | 应用账号的名称。最大长度为512个字符。 |
-| credentialType | string | Yes | 凭据类型。自定义的类型，最大长度为1024个字符。 |
+| name | string | Yes | Name of the application account. The value cannot exceed 512 characters. |
+| credentialType | string | Yes | Credential type. The custom type, the value cannot exceed 1024 characters. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | 无返回结果的Promise对象。 |
+| Promise&lt;void&gt; | Promise that returns no value. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameter types. |
-| 12300003 | Account not found. |
-| 12300002 | Invalid name or credentialType. |
-| 12300001 | System service exception. |
-| 12300102 | Credential not found. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameter types. |
+| [12300003](../../apis-basic-services-kit/errorcode-account.md#12300003-account-not-found) | Account not found. |
+| [12300002](../../apis-basic-services-kit/errorcode-account.md#12300002-invalid-parameter) | Invalid name or credentialType. |
+| [12300001](../../apis-basic-services-kit/errorcode-account.md#12300001-system-service-abnormal) | System service exception. |
+| [12300102](../../apis-basic-services-kit/errorcode-account.md#12300102-credential-not-found) | Credential not found. |
 
 ## Examples
 
@@ -1853,13 +1771,13 @@ try {
 deleteOAuthToken(name: string, owner: string, authType: string, token: string, callback: AsyncCallback<void>): void
 ```
 
-删除指定应用账号的特定鉴权类型的授权令牌。使用callback异步回调。
+Deletes the authorization token of the specified authentication type for an application account. This API uses an  asynchronous callback to return the result.
 
-> **说明：**
+> **NOTE：**
 > 
-> 从API version 8开始支持，从API version 9开始废弃。建议使用
+> This API is supported since API version 8 and deprecated since API version 9. You are advised to use
 > [deleteAuthToken](arkts-basicservices-appaccount-appaccountmanager-i.md#deleteauthtoken)
-> 替代。
+> instead.
 
 **Since:** 8
 
@@ -1877,11 +1795,11 @@ deleteOAuthToken(name: string, owner: string, authType: string, token: string, c
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| name | string | Yes | 应用账号的名称。最大长度为512个字符。 |
-| owner | string | Yes | 应用账号所有者的包名。最大长度为1024个字符。 |
-| authType | string | Yes | 鉴权类型。自定义数据，最大长度为1024个字符。 |
-| token | string | Yes | 授权令牌。最大长度为1024个字符。 |
-| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | 回调函数。当删除成功时，err为null；否则为错误对象。 |
+| name | string | Yes | Name of the application account. The value cannot exceed 512 characters. |
+| owner | string | Yes | Owner of the application account. The value is the Bundle name of the application. The value cannot exceed 1024 characters. |
+| authType | string | Yes | Authentication type. The custom type, The value cannot exceed 1024 characters. |
+| token | string | Yes | Authorization token. The value cannot exceed 1024 characters. |
+| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **null**. Otherwise, **err** is an error object. |
 
 ## Examples
 
@@ -1904,13 +1822,13 @@ appAccountManager.deleteOAuthToken('LiSi', 'com.example.accountjsdemo', 'getSoci
 deleteOAuthToken(name: string, owner: string, authType: string, token: string): Promise<void>
 ```
 
-删除指定应用账号的特定鉴权类型的授权令牌。使用Promise异步回调。
+Deletes the authorization token of the specified authentication type for an application account. This API uses a promise to return the result.
 
-> **说明：**
+> **NOTE：**
 > 
-> 从API version 8开始支持，从API version 9开始废弃。建议使用
+> This API is supported since API version 8 and deprecated since API version 9. You are advised to use
 > [deleteAuthToken](arkts-basicservices-appaccount-appaccountmanager-i.md#deleteauthtoken)
-> 替代。
+> instead.
 
 **Since:** 8
 
@@ -1928,16 +1846,16 @@ deleteOAuthToken(name: string, owner: string, authType: string, token: string): 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| name | string | Yes | 应用账号的名称。最大长度为512个字符。 |
-| owner | string | Yes | 应用账号所有者的包名。最大长度为1024个字符。 |
-| authType | string | Yes | 鉴权类型。自定义数据，最大长度为1024个字符。 |
-| token | string | Yes | 授权令牌。最大长度为1024个字符。 |
+| name | string | Yes | Name of the application account. The value cannot exceed 512 characters. |
+| owner | string | Yes | Owner of the application account. The value is the Bundle name of the application. The value cannot exceed 1024 characters. |
+| authType | string | Yes | Authentication type. The custom type, The value cannot exceed 1024 characters. |
+| token | string | Yes | Authorization token. The value cannot exceed 1024 characters. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | 无返回结果的Promise对象。 |
+| Promise&lt;void&gt; | Promise that returns no value. |
 
 ## Examples
 
@@ -1957,13 +1875,13 @@ appAccountManager.deleteOAuthToken('LiSi', 'com.example.accountjsdemo', 'getSoci
 disableAppAccess(name: string, bundleName: string, callback: AsyncCallback<void>): void
 ```
 
-禁止指定第三方应用账号名称对指定的第三方应用进行访问。使用callback异步回调。
+Disables an application account from accessing an application. This API uses an asynchronous callback to return the result.
 
-> **说明：**
+> **NOTE：**
 > 
-> 从API version 7开始支持，从API version 9开始废弃。建议使用
+> This API is supported since API version 7 and deprecated since API version 9. You are advised to use
 > [setAppAccess](arkts-basicservices-appaccount-appaccountmanager-i.md#setappaccess)
-> 替代。
+> instead.
 
 **Since:** 7
 
@@ -1981,9 +1899,9 @@ disableAppAccess(name: string, bundleName: string, callback: AsyncCallback<void>
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| name | string | Yes | 应用账号的名称。最大长度为512个字符。 |
-| bundleName | string | Yes | 第三方应用的包名。最大长度为512个字符。 |
-| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | 回调函数。当禁止指定第三方应用账号名称对指定包名称的第三方应用进行访问设置成功时，err为null，否则为错误对象。 |
+| name | string | Yes | Name of the application account. The value cannot exceed 512 characters. |
+| bundleName | string | Yes | Bundle name of the application. The value cannot exceed 512 characters. |
+| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **null**. Otherwise, **err** is an error object. |
 
 ## Examples
 
@@ -2001,13 +1919,13 @@ appAccountManager.disableAppAccess('ZhangSan', 'com.example.accountjsdemo', (err
 disableAppAccess(name: string, bundleName: string): Promise<void>
 ```
 
-禁止指定第三方应用账号名称对指定包名称的第三方应用进行访问。使用Promise异步回调。
+Disables an application account from accessing an application. This API uses a promise to return the result.
 
-> **说明：**
+> **NOTE：**
 > 
-> 从API version 7开始支持，从API version 9开始废弃。建议使用
+> This API is supported since API version 7 and deprecated since API version 9. You are advised to use
 > [setAppAccess](arkts-basicservices-appaccount-appaccountmanager-i.md#setappaccess)
-> 替代。
+> instead.
 
 **Since:** 7
 
@@ -2025,14 +1943,14 @@ disableAppAccess(name: string, bundleName: string): Promise<void>
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| name | string | Yes | 要禁用访问的第三方应用账号的名称。最大长度为512个字符。 |
-| bundleName | string | Yes | 第三方应用的包名。最大长度为512个字符。 |
+| name | string | Yes | Name of the target application account. The value cannot exceed 512 characters. |
+| bundleName | string | Yes | Bundle name of the application. The value cannot exceed 512 characters. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | 无返回结果的Promise对象。 |
+| Promise&lt;void&gt; | Promise that returns no value. |
 
 ## Examples
 
@@ -2052,13 +1970,13 @@ appAccountManager.disableAppAccess('ZhangSan', 'com.example.accountjsdemo').then
 enableAppAccess(name: string, bundleName: string, callback: AsyncCallback<void>): void
 ```
 
-允许指定第三方应用账号名称对指定包名称的第三方应用进行访问。使用callback异步回调。
+Enables an application account to access an application. This API uses an asynchronous callback to return the result.
 
-> **说明：**
+> **NOTE：**
 > 
-> 从API version 7开始支持，从API version 9开始废弃。建议使用
+> This API is supported since API version 7 and deprecated since API version 9. You are advised to use
 > [setAppAccess](arkts-basicservices-appaccount-appaccountmanager-i.md#setappaccess)
-> 替代。
+> instead.
 
 **Since:** 7
 
@@ -2076,9 +1994,9 @@ enableAppAccess(name: string, bundleName: string, callback: AsyncCallback<void>)
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| name | string | Yes | 应用账号的名称。最大长度为512个字符。 |
-| bundleName | string | Yes | 第三方应用的包名。最大长度为512个字符。 |
-| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | 回调函数。当允许指定第三方应用账号名称对指定包名称的第三方应用进行访问设置成功时，err为null，否则为错误对象。 |
+| name | string | Yes | Name of the application account. The value cannot exceed 512 characters. |
+| bundleName | string | Yes | Bundle name of the application. The value cannot exceed 512 characters. |
+| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **null**. Otherwise, **err** is an error object. |
 
 ## Examples
 
@@ -2100,13 +2018,13 @@ appAccountManager.enableAppAccess('ZhangSan', 'com.example.accountjsdemo', (err:
 enableAppAccess(name: string, bundleName: string): Promise<void>
 ```
 
-允许指定第三方应用账号的名称对指定包名称的第三方应用进行访问。使用Promise异步回调。
+Enables an application account to access an application. This API uses a promise to return the result.
 
-> **说明：**
+> **NOTE：**
 > 
-> 从API version 7开始支持，从API version 9开始废弃。建议使用
+> This API is supported since API version 7 and deprecated since API version 9. You are advised to use
 > [setAppAccess](arkts-basicservices-appaccount-appaccountmanager-i.md#setappaccess)
-> 替代。
+> instead.
 
 **Since:** 7
 
@@ -2124,14 +2042,14 @@ enableAppAccess(name: string, bundleName: string): Promise<void>
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| name | string | Yes | 应用账号的名称。最大长度为512个字符。 |
-| bundleName | string | Yes | 第三方应用的包名。最大长度为512个字符。 |
+| name | string | Yes | Name of the application account. The value cannot exceed 512 characters. |
+| bundleName | string | Yes | Bundle name of the application. The value cannot exceed 512 characters. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | 无返回结果的Promise对象。 |
+| Promise&lt;void&gt; | Promise that returns no value. |
 
 ## Examples
 
@@ -2151,13 +2069,13 @@ appAccountManager.enableAppAccess('ZhangSan', 'com.example.accountjsdemo').then(
 getAccountCredential(name: string, credentialType: string, callback: AsyncCallback<string>): void
 ```
 
-获取指定应用账号的凭据。使用callback异步回调。
+Obtains the credential of an application account. This API uses an asynchronous callback to return the result.
 
-> **说明：**
+> **NOTE：**
 > 
-> 从API version 7开始支持，从API version 9开始废弃。建议使用
+> This API is supported since API version 7 and deprecated since API version 9. You are advised to use
 > [getCredential](arkts-basicservices-appaccount-appaccountmanager-i.md#getcredential)
-> 替代。
+> instead.
 
 **Since:** 7
 
@@ -2175,9 +2093,9 @@ getAccountCredential(name: string, credentialType: string, callback: AsyncCallba
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| name | string | Yes | 应用账号的名称。最大长度为512个字符。 |
-| credentialType | string | Yes | 凭据类型。自定义的类型，最大长度为1024个字符。 |
-| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;string&gt; | Yes | 回调函数。当获取凭据成功时，err为null，data为指定应用账号的凭据；否则为错误对象。 |
+| name | string | Yes | Name of the application account. The value cannot exceed 512 characters. |
+| credentialType | string | Yes | Credential type. The custom type, the value cannot exceed 1024 characters. |
+| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;string&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **null** and **data** is the credential obtained. Otherwise, **err** is an error object. |
 
 ## Examples
 
@@ -2199,12 +2117,13 @@ appAccountManager.getAccountCredential('ZhangSan', 'credentialType001', (err: Bu
 getAccountCredential(name: string, credentialType: string): Promise<string>
 ```
 
-获取指定应用账号的凭据。使用Promise异步回调。
+Obtains the credential of an application account. This API uses a promise to return the result.
 
-> **说明：**
+> **NOTE：**
 > 
-> 从API version 7开始支持，从API version 9开始废弃。建议使用
-> [getCredential](arkts-basicservices-appaccount-appaccountmanager-i.md#getcredential)替代。
+> This API is supported since API version 7 and deprecated since API version 9. You are advised to use
+> [getCredential](arkts-basicservices-appaccount-appaccountmanager-i.md#getcredential)
+> instead.
 
 **Since:** 7
 
@@ -2222,14 +2141,14 @@ getAccountCredential(name: string, credentialType: string): Promise<string>
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| name | string | Yes | 应用账号的名称。最大长度为512个字符。 |
-| credentialType | string | Yes | 凭据类型。自定义的类型，最大长度为1024个字符。 |
+| name | string | Yes | Name of the application account. The value cannot exceed 512 characters. |
+| credentialType | string | Yes | Credential type. The custom type, the value cannot exceed 1024 characters. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;string&gt; | Promise对象，返回指定应用账号的凭据。 |
+| Promise&lt;string&gt; | Promise used to return the credential obtained. |
 
 ## Examples
 
@@ -2249,13 +2168,13 @@ appAccountManager.getAccountCredential('ZhangSan', 'credentialType001').then((da
 getAccountExtraInfo(name: string, callback: AsyncCallback<string>): void
 ```
 
-获取指定应用账号的额外信息（能转换成string类型的其它信息）。使用callback异步回调。
+Obtains additional information of an application account. Additional information refers to other information that  can be converted to the string type. It cannot contain sensitive information, such as the application account password and token. This API uses an asynchronous callback to return the result.
 
-> **说明：**
+> **NOTE：**
 > 
-> 从API version 7开始支持，从API version 9开始废弃。建议使用
+> This API is supported since API version 7 and deprecated since API version 9. You are advised to use
 > [getCustomData](arkts-basicservices-appaccount-appaccountmanager-i.md#getcustomdata)
-> 替代。
+> instead.
 
 **Since:** 7
 
@@ -2273,8 +2192,8 @@ getAccountExtraInfo(name: string, callback: AsyncCallback<string>): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| name | string | Yes | 应用账号的名称。最大长度为512个字符。 |
-| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;string&gt; | Yes | 回调函数。当获取此应用账号的额外信息成功时，err为null，data返回此应用账号的额外信息对象；否则为错误对象。 |
+| name | string | Yes | Name of the application account. The value cannot exceed 512 characters. |
+| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;string&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **null** and **data** is the additional information obtained. Otherwise, **err** is an error object. |
 
 ## Examples
 
@@ -2296,12 +2215,12 @@ appAccountManager.getAccountExtraInfo('ZhangSan', (err: BusinessError, result: s
 getAccountExtraInfo(name: string): Promise<string>
 ```
 
-获取指定应用账号的额外信息（能转换成string类型的其它信息）。使用Promise异步回调。
+Obtains additional information of an application account. Additional information refers to other information that  can be converted to the string type. It cannot contain sensitive information, such as the application account password and token. This API uses a promise to return the result.
 
-> **说明：**
+> **NOTE：**
 > 
-> 从API version 7开始支持，从API version 9开始废弃。建议使用
-> [getCustomData](arkts-basicservices-appaccount-appaccountmanager-i.md#getcustomdata)替代。
+> This API is supported since API version 7 and deprecated since API version 9. You are advised to use
+> [getCustomData](arkts-basicservices-appaccount-appaccountmanager-i.md#getcustomdata) instead.
 
 **Since:** 7
 
@@ -2319,13 +2238,13 @@ getAccountExtraInfo(name: string): Promise<string>
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| name | string | Yes | 应用账号的名称。最大长度为512个字符。 |
+| name | string | Yes | Name of the application account. The value cannot exceed 512 characters. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;string&gt; | Promise对象，返回此应用程序账号的额外信息对象。 |
+| Promise&lt;string&gt; | Promise used to return the additional information obtained. |
 
 ## Examples
 
@@ -2345,7 +2264,7 @@ appAccountManager.getAccountExtraInfo('ZhangSan').then((data: string) => {
 getAccountsByOwner(owner: string, callback: AsyncCallback<Array<AppAccountInfo>>): void
 ```
 
-根据应用账号所有者获取调用方可访问的应用账号列表。使用callback异步回调。此方法适用于以下账户：&lt;br&gt; 本应用的账户。&lt;br&gt; 第三方应用的账户。要获取此类信息，&lt;br&gt; 您的应用必须已获得第三方应用的授权，或&lt;br&gt; 已获得ohos.permission.GET_ALL_APP_ACCOUNTS权限。
+Obtains the application accounts that can be accessed by the invoker based on the application account owner. This  API uses an asynchronous callback to return the result.This method applies to the following accounts:&lt;br&gt; Accounts of this application.&lt;br&gt; Accounts of third-party applications. To obtain such information,&lt;br&gt; your application must have gained authorization from the third-party applications or&lt;br&gt; have gained the ohos.permission.GET_ALL_APP_ACCOUNTS permission.
 
 **Since:** 9
 
@@ -2359,16 +2278,16 @@ getAccountsByOwner(owner: string, callback: AsyncCallback<Array<AppAccountInfo>>
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| owner | string | Yes | 应用账号所有者的包名。最大长度为1024个字符。 |
-| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;AppAccountInfo&gt;&gt; | Yes | 回调函数。如果获取成功，err为null，data为获取到的应用账号列表；否则为错误对象。 |
+| owner | string | Yes | Owner of the application account. The value is the Bundle name of the application. The value cannot exceed 1024 characters. |
+| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;AppAccountInfo&gt;&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is null and **data** is the application account information obtained. Otherwise, **err** is an error object. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 12300002 | Invalid owner. |
-| 12300001 | System service exception. |
-| 12400001 | Application not found.<br>**Applicable version:** 9 - 13 |
+| [12300002](../../apis-basic-services-kit/errorcode-account.md#12300002-invalid-parameter) | Invalid owner. |
+| [12300001](../../apis-basic-services-kit/errorcode-account.md#12300001-system-service-abnormal) | System service exception. |
+| [12400001](../../apis-basic-services-kit/errorcode-account.md#12400001-application-not-found) | Application not found.<br>**Applicable version:** 9 - 13 |
 
 ## Examples
 
@@ -2396,7 +2315,7 @@ try {
 getAccountsByOwner(owner: string): Promise<Array<AppAccountInfo>>
 ```
 
-根据应用账号所有者获取调用方可访问的应用账号列表。使用Promise异步回调。此方法适用于以下账户：&lt;br&gt; 本应用的账户。&lt;br&gt; 第三方应用的账户。要获取此类信息，&lt;br&gt; 您的应用必须已获得第三方应用的授权，或&lt;br&gt; 已获得ohos.permission.GET_ALL_APP_ACCOUNTS权限。
+Obtains the application accounts that can be accessed by the invoker based on the application account owner. This  API uses a promise to return the result.This method applies to the following accounts:&lt;br&gt; Accounts of this application.&lt;br&gt; Accounts of third-party applications. To obtain such information,&lt;br&gt; your application must have gained authorization from the third-party applications or&lt;br&gt; have gained the ohos.permission.GET_ALL_APP_ACCOUNTS permission.
 
 **Since:** 9
 
@@ -2410,21 +2329,21 @@ getAccountsByOwner(owner: string): Promise<Array<AppAccountInfo>>
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| owner | string | Yes | 应用账号所有者的包名。最大长度为1024个字符。 |
+| owner | string | Yes | Owner of the application account. The value is the Bundle name of the application. The value cannot exceed 1024 characters. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;Array&lt;AppAccountInfo&gt;&gt; | Promise对象，返回获取到的应用账号列表。 |
+| Promise&lt;Array&lt;AppAccountInfo&gt;&gt; | Promise used to return the application account information obtained. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 12300002 | Invalid owner. |
-| 12300001 | System service exception. |
-| 12400001 | Application not found.<br>**Applicable version:** 9 - 13 |
+| [12300002](../../apis-basic-services-kit/errorcode-account.md#12300002-invalid-parameter) | Invalid owner. |
+| [12300001](../../apis-basic-services-kit/errorcode-account.md#12300001-system-service-abnormal) | System service exception. |
+| [12400001](../../apis-basic-services-kit/errorcode-account.md#12400001-application-not-found) | Application not found.<br>**Applicable version:** 9 - 13 |
 
 ## Examples
 
@@ -2450,13 +2369,13 @@ try {
 getAllAccessibleAccounts(callback: AsyncCallback<Array<AppAccountInfo>>): void
 ```
 
-获取所有可访问的应用账号信息。使用callback异步回调。此方法适用于以下账户：&lt;br&gt; 本应用的账户。&lt;br&gt; 第三方应用的账户。要获取此类信息，&lt;br&gt; 您的应用必须已获得第三方应用的授权。
+Obtains information about all accessible application accounts. This API uses an asynchronous callback to return the result.This method applies to the following accounts:&lt;br&gt; Accounts of this application.&lt;br&gt; Accounts of third-party applications. To obtain such information,&lt;br&gt; your application must have gained authorization from the third-party applications.
 
-> **说明：**
+> **NOTE：**
 > 
-> 从API version 7开始支持，从API version 9开始废弃。建议使用
+> This API is supported since API version 7 and deprecated since API version 9. You are advised to use
 > [getAllAccounts](arkts-basicservices-appaccount-appaccountmanager-i.md#getallaccounts)
-> 替代。
+> instead.
 
 **Since:** 7
 
@@ -2476,7 +2395,7 @@ getAllAccessibleAccounts(callback: AsyncCallback<Array<AppAccountInfo>>): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;AppAccountInfo&gt;&gt; | Yes | 回调函数。当查询成功时，err为null，data为获取到的应用账号信息列表；否则为错误对象。 |
+| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;AppAccountInfo&gt;&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **null** and **data** is a list of accessible application accounts. Otherwise, **err** is an error object. |
 
 ## Examples
 
@@ -2498,12 +2417,12 @@ appAccountManager.getAllAccessibleAccounts((err: BusinessError, data: appAccount
 getAllAccessibleAccounts(): Promise<Array<AppAccountInfo>>
 ```
 
-获取所有可访问的应用账号信息。使用Promise异步回调。此方法适用于以下账户：&lt;br&gt; 本应用的账户。&lt;br&gt; 第三方应用的账户。要获取此类信息，&lt;br&gt; 您的应用必须已获得第三方应用的授权。
+Obtains information about all accessible application accounts. This API uses a promise to return the result.This method applies to the following accounts:&lt;br&gt; Accounts of this application.&lt;br&gt; Accounts of third-party applications. To obtain such information,&lt;br&gt; your application must have gained authorization from the third-party applications.
 
-> **说明：**
+> **NOTE：**
 > 
-> 从API version 7开始支持，从API version 9开始废弃。建议使用[getAllAccounts](arkts-basicservices-appaccount-appaccountmanager-i.md#getallaccounts)
-> 替代。
+> This API is supported since API version 7 and deprecated since API version 9. You are advised to use
+> [getAllAccounts](arkts-basicservices-appaccount-appaccountmanager-i.md#getallaccounts) instead.
 
 **Since:** 7
 
@@ -2523,7 +2442,7 @@ getAllAccessibleAccounts(): Promise<Array<AppAccountInfo>>
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;Array&lt;AppAccountInfo&gt;&gt; | Promise对象，返回全部应用已授权账号信息对象。 |
+| Promise&lt;Array&lt;AppAccountInfo&gt;&gt; | Promise used to return information about all accessible accounts. |
 
 ## Examples
 
@@ -2543,7 +2462,7 @@ appAccountManager.getAllAccessibleAccounts().then((data: appAccount.AppAccountIn
 getAllAccounts(callback: AsyncCallback<Array<AppAccountInfo>>): void
 ```
 
-获取所有可访问的应用账号信息。使用callback异步回调。此方法适用于以下账户：&lt;br&gt; 本应用的账户。&lt;br&gt; 第三方应用的账户。要获取此类信息，&lt;br&gt; 您的应用必须已获得第三方应用的授权，或&lt;br&gt; 已获得ohos.permission.GET_ALL_APP_ACCOUNTS权限。
+Obtains information about all accessible application accounts. This API uses an asynchronous callback to return the result.This method applies to the following accounts:&lt;br&gt; Accounts of this application.&lt;br&gt; Accounts of third-party applications. To obtain such information,&lt;br&gt; your application must have gained authorization from the third-party applications or&lt;br&gt; have gained the ohos.permission.GET_ALL_APP_ACCOUNTS permission.
 
 **Since:** 9
 
@@ -2557,14 +2476,14 @@ getAllAccounts(callback: AsyncCallback<Array<AppAccountInfo>>): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;AppAccountInfo&gt;&gt; | Yes | 回调函数。当查询成功时，err为null，data为获取到的应用账号信息列表；否则为错误对象。 |
+| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;AppAccountInfo&gt;&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **null** and **data** is a list of accessible application accounts. Otherwise, **err** is an error object. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameter types. |
-| 12300001 | System service exception. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameter types. |
+| [12300001](../../apis-basic-services-kit/errorcode-account.md#12300001-system-service-abnormal) | System service exception. |
 
 ## Examples
 
@@ -2591,7 +2510,7 @@ try {
 getAllAccounts(): Promise<Array<AppAccountInfo>>
 ```
 
-获取所有可访问的应用账号信息。使用Promise异步回调。此方法适用于以下账户：&lt;br&gt; 本应用的账户。&lt;br&gt; 第三方应用的账户。要获取此类信息，&lt;br&gt; 您的应用必须已获得第三方应用的授权，或&lt;br&gt; 已获得ohos.permission.GET_ALL_APP_ACCOUNTS权限。
+Obtains information about all accessible application accounts. This API uses a promise to return the result.This method applies to the following accounts:&lt;br&gt; Accounts of this application.&lt;br&gt; Accounts of third-party applications. To obtain such information,&lt;br&gt; your application must have gained authorization from the third-party applications or&lt;br&gt; have gained the ohos.permission.GET_ALL_APP_ACCOUNTS permission.
 
 **Since:** 9
 
@@ -2605,13 +2524,13 @@ getAllAccounts(): Promise<Array<AppAccountInfo>>
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;Array&lt;AppAccountInfo&gt;&gt; | Promise对象，返回全部应用已授权账号信息对象。 |
+| Promise&lt;Array&lt;AppAccountInfo&gt;&gt; | Promise used to return information about all accessible accounts. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 12300001 | System service exception. |
+| [12300001](../../apis-basic-services-kit/errorcode-account.md#12300001-system-service-abnormal) | System service exception. |
 
 ## Examples
 
@@ -2636,13 +2555,13 @@ try {
 getAllAccounts(owner: string, callback: AsyncCallback<Array<AppAccountInfo>>): void
 ```
 
-根据应用账号所有者获取调用方可访问的应用账号列表。使用callback异步回调。此方法适用于以下账户：&lt;br&gt; 本应用的账户。&lt;br&gt; 第三方应用的账户。要获取此类信息，&lt;br&gt; 您的应用必须已获得第三方应用的授权。
+Obtains the application accounts that can be accessed by the invoker based on the application account owner. This  API uses an asynchronous callback to return the result.This method applies to the following accounts:&lt;br&gt; Accounts of this application.&lt;br&gt; Accounts of third-party applications. To obtain such information,&lt;br&gt; your application must have gained authorization from the third-party applications.
 
-> **说明：**
+> **NOTE：**
 > 
-> 从API version 7开始支持，从API version 9开始废弃。建议使用
+> This API is supported since API version 7 and deprecated since API version 9. You are advised to use
 > [getAccountsByOwner](arkts-basicservices-appaccount-appaccountmanager-i.md#getaccountsbyowner)
-> 替代。
+> instead.
 
 **Since:** 7
 
@@ -2662,8 +2581,8 @@ getAllAccounts(owner: string, callback: AsyncCallback<Array<AppAccountInfo>>): v
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| owner | string | Yes | 应用账号所有者的包名。最大长度为1024个字符。 |
-| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;AppAccountInfo&gt;&gt; | Yes | 应用账号信息列表。 |
+| owner | string | Yes | Owner of the application account. The value is the Bundle name of the application. The value cannot exceed 1024 characters. |
+| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;AppAccountInfo&gt;&gt; | Yes | Callback used to return information about all accessible application accounts. |
 
 ## Examples
 
@@ -2686,12 +2605,12 @@ appAccountManager.getAllAccounts(selfBundle, (err: BusinessError, data: appAccou
 getAllAccounts(owner: string): Promise<Array<AppAccountInfo>>
 ```
 
-根据应用账号所有者获取调用方可访问的应用账号列表。使用Promise异步回调。此方法适用于以下账户：&lt;br&gt; 本应用的账户。&lt;br&gt; 第三方应用的账户。要获取此类信息，&lt;br&gt; 您的应用必须已获得第三方应用的授权。
+Obtains the application accounts that can be accessed by the invoker based on the application account owner. This  API uses a promise to return the result.This method applies to the following accounts:&lt;br&gt; Accounts of this application.&lt;br&gt; Accounts of third-party applications. To obtain such information,&lt;br&gt; your application must have gained authorization from the third-party applications.
 
-> **说明：**
+> **NOTE：**
 > 
-> 从API version 7开始支持，从API version 9开始废弃。建议使用
-> [getAccountsByOwner](arkts-basicservices-appaccount-appaccountmanager-i.md#getaccountsbyowner)替代。
+> This API is supported since API version 7 and deprecated since API version 9. You are advised to use
+> [getAccountsByOwner](arkts-basicservices-appaccount-appaccountmanager-i.md#getaccountsbyowner) instead.
 
 **Since:** 7
 
@@ -2711,13 +2630,13 @@ getAllAccounts(owner: string): Promise<Array<AppAccountInfo>>
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| owner | string | Yes | 应用账号所有者的包名。最大长度为1024个字符。 |
+| owner | string | Yes | Owner of the application account. The value is the Bundle name of the application. The value cannot exceed 1024 characters. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;Array&lt;AppAccountInfo&gt;&gt; | Promise对象，返回指定应用全部账号信息对象。 |
+| Promise&lt;Array&lt;AppAccountInfo&gt;&gt; | Promise used to return the application accounts that can be accessed by the invoker. |
 
 ## Examples
 
@@ -2738,7 +2657,7 @@ appAccountManager.getAllAccounts(selfBundle).then((data: appAccount.AppAccountIn
 getAllAuthTokens(name: string, owner: string, callback: AsyncCallback<Array<AuthTokenInfo>>): void
 ```
 
-获取指定账号对调用方可见的所有授权令牌。使用callback异步回调。
+Obtains all tokens visible to the invoker for an application account. This API uses an asynchronous callback to return the result.
 
 **Since:** 9
 
@@ -2752,18 +2671,18 @@ getAllAuthTokens(name: string, owner: string, callback: AsyncCallback<Array<Auth
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| name | string | Yes | 应用账号的名称。最大长度为512个字符。 |
-| owner | string | Yes | 应用账号所有者的包名。最大长度为1024个字符。 |
-| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;AuthTokenInfo&gt;&gt; | Yes | 回调函数。当获取成功时，err为null，data为授权令牌数组；否则为错误对象。 |
+| name | string | Yes | Name of the application account. The value cannot exceed 512 characters. |
+| owner | string | Yes | Owner of the application account. The value is the Bundle name of the application. The value cannot exceed 1024 characters. |
+| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;AuthTokenInfo&gt;&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **null** and **data** is a list of all tokens visible to the invoker. Otherwise, **err** is an error object. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameter types. |
-| 12300003 | Account not found. |
-| 12300002 | Invalid name or owner. |
-| 12300001 | System service exception. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameter types. |
+| [12300003](../../apis-basic-services-kit/errorcode-account.md#12300003-account-not-found) | Account not found. |
+| [12300002](../../apis-basic-services-kit/errorcode-account.md#12300002-invalid-parameter) | Invalid name or owner. |
+| [12300001](../../apis-basic-services-kit/errorcode-account.md#12300001-system-service-abnormal) | System service exception. |
 
 ## Examples
 
@@ -2791,7 +2710,7 @@ try {
 getAllAuthTokens(name: string, owner: string): Promise<Array<AuthTokenInfo>>
 ```
 
-获取指定账号对调用方可见的所有授权令牌。使用Promise异步回调。
+Obtains all tokens visible to the invoker for an application account. This API uses a promise to return the result.
 
 **Since:** 9
 
@@ -2805,23 +2724,23 @@ getAllAuthTokens(name: string, owner: string): Promise<Array<AuthTokenInfo>>
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| name | string | Yes | 应用账号的名称。最大长度为512个字符。 |
-| owner | string | Yes | 应用账号所有者的包名。最大长度为1024个字符。 |
+| name | string | Yes | Name of the application account. The value cannot exceed 512 characters. |
+| owner | string | Yes | Owner of the application account. The value is the Bundle name of the application. The value cannot exceed 1024 characters. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;Array&lt;AuthTokenInfo&gt;&gt; | Promise对象，返回授权令牌数组。 |
+| Promise&lt;Array&lt;AuthTokenInfo&gt;&gt; | Promise used to return the tokens obtained. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameter types. |
-| 12300003 | Account not found. |
-| 12300002 | Invalid name or owner. |
-| 12300001 | System service exception. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameter types. |
+| [12300003](../../apis-basic-services-kit/errorcode-account.md#12300003-account-not-found) | Account not found. |
+| [12300002](../../apis-basic-services-kit/errorcode-account.md#12300002-invalid-parameter) | Invalid name or owner. |
+| [12300001](../../apis-basic-services-kit/errorcode-account.md#12300001-system-service-abnormal) | System service exception. |
 
 ## Examples
 
@@ -2847,13 +2766,13 @@ try {
 getAllOAuthTokens(name: string, owner: string, callback: AsyncCallback<Array<OAuthTokenInfo>>): void
 ```
 
-获取指定账号对调用方可见的所有授权令牌。使用callback异步回调。
+Obtains all tokens visible to the invoker for an application account. This API uses an asynchronous callback to return the result.
 
-> **说明：**
+> **NOTE：**
 > 
-> 从API version 8开始支持，从API version 9开始废弃。建议使用
+> This API is supported since API version 8 and deprecated since API version 9. You are advised to use
 > [getAllAuthTokens](arkts-basicservices-appaccount-appaccountmanager-i.md#getallauthtokens)
-> 替代。
+> instead.
 
 **Since:** 8
 
@@ -2871,9 +2790,9 @@ getAllOAuthTokens(name: string, owner: string, callback: AsyncCallback<Array<OAu
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| name | string | Yes | 应用账号的名称。最大长度为512个字符。 |
-| owner | string | Yes | 应用账号所有者的包名。最大长度为1024个字符。 |
-| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;OAuthTokenInfo&gt;&gt; | Yes | 回调函数。当获取成功时，err为null，data为授权令牌数组；否则为错误对象。 |
+| name | string | Yes | Name of the application account. The value cannot exceed 512 characters. |
+| owner | string | Yes | Owner of the application account. The value is the Bundle name of the application. The value cannot exceed 1024 characters. |
+| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;OAuthTokenInfo&gt;&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **null** and **data** is a list of all tokens visible to the invoker. Otherwise, **err** is an error object. |
 
 ## Examples
 
@@ -2896,12 +2815,12 @@ appAccountManager.getAllOAuthTokens('LiSi', 'com.example.accountjsdemo',
 getAllOAuthTokens(name: string, owner: string): Promise<Array<OAuthTokenInfo>>
 ```
 
-获取指定账号对调用方可见的所有授权令牌。使用Promise异步回调。
+Obtains all tokens visible to the invoker for an application account. This API uses a promise to return the result.
 
-> **说明：**
+> **NOTE：**
 > 
-> 从API version 8开始支持，从API version 9开始废弃。建议使用
-> [getAllAuthTokens](arkts-basicservices-appaccount-appaccountmanager-i.md#getallauthtokens)替代。
+> This API is supported since API version 8 and deprecated since API version 9. You are advised to use
+> [getAllAuthTokens](arkts-basicservices-appaccount-appaccountmanager-i.md#getallauthtokens) instead.
 
 **Since:** 8
 
@@ -2919,14 +2838,14 @@ getAllOAuthTokens(name: string, owner: string): Promise<Array<OAuthTokenInfo>>
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| name | string | Yes | 应用账号的名称。最大长度为512个字符。 |
-| owner | string | Yes | 应用账号所有者的包名。最大长度为1024个字符。 |
+| name | string | Yes | Name of the application account. The value cannot exceed 512 characters. |
+| owner | string | Yes | Owner of the application account. The value is the Bundle name of the application. The value cannot exceed 1024 characters. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;Array&lt;OAuthTokenInfo&gt;&gt; | Promise对象，返回授权令牌数组。 |
+| Promise&lt;Array&lt;OAuthTokenInfo&gt;&gt; | Promise used to return the tokens obtained. |
 
 ## Examples
 
@@ -2947,13 +2866,13 @@ appAccountManager.getAllOAuthTokens('LiSi', 'com.example.accountjsdemo').then((
 getAssociatedData(name: string, key: string, callback: AsyncCallback<string>): void
 ```
 
-根据指定键名获取特定应用账号的关联数据。使用callback异步回调。
+Obtains the associated data of an application account based on the specified key. This API uses an asynchronous callback to return the result.
 
-> **说明：**
+> **NOTE：**
 > 
-> 从API version 7开始支持，从API version 9开始废弃。建议使用
+> This API is supported since API version 7 and deprecated since API version 9. You are advised to use
 > [getCustomData](arkts-basicservices-appaccount-appaccountmanager-i.md#getcustomdata)
-> 替代。
+> instead.
 
 **Since:** 7
 
@@ -2971,9 +2890,9 @@ getAssociatedData(name: string, key: string, callback: AsyncCallback<string>): v
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| name | string | Yes | 应用账号的名称。最大长度为512个字符。 |
-| key | string | Yes | 关联数据的键名。 |
-| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;string&gt; | Yes | 回调函数。当获取成功时，err为null，data为关联数据的取值；否则为错误对象。 |
+| name | string | Yes | Name of the application account. The value cannot exceed 512 characters. |
+| key | string | Yes | Key of the associated data. |
+| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;string&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **null** and **data** is the data obtained. Otherwise, **err** is an error object. |
 
 ## Examples
 
@@ -2995,12 +2914,12 @@ appAccountManager.getAssociatedData('ZhangSan', 'k001', (err: BusinessError, res
 getAssociatedData(name: string, key: string): Promise<string>
 ```
 
-获取与此应用程序账号关联的数据。使用Promise异步回调。
+Obtains data associated with an application account. This API uses a promise to return the result.
 
-> **说明：**
+> **NOTE：**
 > 
-> 从API version 7开始支持，从API version 9开始废弃。建议使用
-> [getCustomData](arkts-basicservices-appaccount-appaccountmanager-i.md#getcustomdata)替代。
+> This API is supported since API version 7 and deprecated since API version 9. You are advised to use
+> [getCustomData](arkts-basicservices-appaccount-appaccountmanager-i.md#getcustomdata) instead.
 
 **Since:** 7
 
@@ -3018,14 +2937,14 @@ getAssociatedData(name: string, key: string): Promise<string>
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| name | string | Yes | 应用账号的名称。最大长度为512个字符。 |
-| key | string | Yes | 关联数据的键名。 |
+| name | string | Yes | Name of the application account. The value cannot exceed 512 characters. |
+| key | string | Yes | Key of the associated data. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;string&gt; | Promise对象，返回关联数据的取值。 |
+| Promise&lt;string&gt; | Promise used to return the data obtained. |
 
 ## Examples
 
@@ -3045,7 +2964,7 @@ appAccountManager.getAssociatedData('ZhangSan', 'k001').then((data: string) => {
 getAuthCallback(sessionId: string, callback: AsyncCallback<AuthCallback>): void
 ```
 
-获取鉴权会话的认证器回调对象。使用callback异步回调。
+Obtains the authenticator callback for an authentication session. This API uses an asynchronous callback to return the result.
 
 **Since:** 9
 
@@ -3059,17 +2978,17 @@ getAuthCallback(sessionId: string, callback: AsyncCallback<AuthCallback>): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| sessionId | string | Yes | 鉴权会话的标识。 |
-| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;AuthCallback&gt; | Yes | 回调函数。当获取成功时，err为null，data为鉴权会话的认证器回调对象；否则为错误对象。 |
+| sessionId | string | Yes | ID of the authentication session. |
+| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;AuthCallback&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **null** and **data** is the authenticator callback object obtained. Otherwise, **err** is an error object. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameter types. |
-| 12300108 | Session not found. |
-| 12300002 | Invalid sessionId. |
-| 12300001 | System service exception. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameter types. |
+| [12300108](../../apis-basic-services-kit/errorcode-account.md#12300108-authentication-session-not-found) | Session not found. |
+| [12300002](../../apis-basic-services-kit/errorcode-account.md#12300002-invalid-parameter) | Invalid sessionId. |
+| [12300001](../../apis-basic-services-kit/errorcode-account.md#12300001-system-service-abnormal) | System service exception. |
 
 ## Examples
 
@@ -3112,7 +3031,7 @@ export default class EntryAbility extends UIAbility {
 getAuthCallback(sessionId: string): Promise<AuthCallback>
 ```
 
-获取鉴权会话的认证器回调对象。使用Promise异步回调。
+Obtains the authenticator callback for an authentication session. This API uses a promise to return the result.
 
 **Since:** 9
 
@@ -3126,22 +3045,22 @@ getAuthCallback(sessionId: string): Promise<AuthCallback>
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| sessionId | string | Yes | 鉴权会话的标识。 |
+| sessionId | string | Yes | ID of the authentication session. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;AuthCallback&gt; | Promise对象，返回鉴权会话的认证器回调对象。 |
+| Promise&lt;AuthCallback&gt; | Promise used to return the authenticator callback obtained. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameter types. |
-| 12300108 | Session not found. |
-| 12300002 | Invalid sessionId. |
-| 12300001 | System service exception. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameter types. |
+| [12300108](../../apis-basic-services-kit/errorcode-account.md#12300108-authentication-session-not-found) | Session not found. |
+| [12300002](../../apis-basic-services-kit/errorcode-account.md#12300002-invalid-parameter) | Invalid sessionId. |
+| [12300001](../../apis-basic-services-kit/errorcode-account.md#12300001-system-service-abnormal) | System service exception. |
 
 ## Examples
 
@@ -3182,8 +3101,8 @@ export default class EntryAbility extends UIAbility {
 getAuthList(name: string, authType: string, callback: AsyncCallback<Array<string>>): void
 ```
 
-获取指定应用账号的特定鉴权类型的授权列表，即被授权的包名数组（令牌的授权列表通过  
-[setAuthTokenVisibility](arkts-basicservices-appaccount-appaccountmanager-i.md#setauthtokenvisibility)来设置）。使用callback异步回调。
+Obtains the authorization list of the specified authentication type for an application account. The authorization  list contains all authorized bundles. The token authorization list is set by  
+[setAuthTokenVisibility](arkts-basicservices-appaccount-appaccountmanager-i.md#setauthtokenvisibility). This API uses an asynchronous callback to return the result.
 
 **Since:** 9
 
@@ -3197,19 +3116,19 @@ getAuthList(name: string, authType: string, callback: AsyncCallback<Array<string
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| name | string | Yes | 应用账号的名称。最大长度为512个字符。 |
-| authType | string | Yes | 鉴权类型。自定义数据，最大长度为1024个字符。 |
-| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;string&gt;&gt; | Yes | 回调函数。当获取成功时，err为null，data为被授权的包名数组；否则为错误对象。 |
+| name | string | Yes | Name of the application account. The value cannot exceed 512 characters. |
+| authType | string | Yes | Authentication type. The custom type, The value cannot exceed 1024 characters. |
+| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;string&gt;&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **null** and **data** is a list of authorized bundles obtained. Otherwise, **err** is an error object. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 12300107 | AuthType not found. |
-| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameter types. |
-| 12300003 | Account not found. |
-| 12300002 | Invalid name or authType. |
-| 12300001 | System service exception. |
+| [12300107](../../apis-basic-services-kit/errorcode-account.md#12300107-authentication-type-not-found) | AuthType not found. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameter types. |
+| [12300003](../../apis-basic-services-kit/errorcode-account.md#12300003-account-not-found) | Account not found. |
+| [12300002](../../apis-basic-services-kit/errorcode-account.md#12300002-invalid-parameter) | Invalid name or authType. |
+| [12300001](../../apis-basic-services-kit/errorcode-account.md#12300001-system-service-abnormal) | System service exception. |
 
 ## Examples
 
@@ -3236,8 +3155,8 @@ try {
 getAuthList(name: string, authType: string): Promise<Array<string>>
 ```
 
-获取指定应用账号的特定鉴权类型的授权列表，即被授权的包名数组（令牌的授权列表通过  
-[setAuthTokenVisibility](arkts-basicservices-appaccount-appaccountmanager-i.md#setauthtokenvisibility)来设置）。使用Promise异步回调。
+Obtains the authorization list of the specified authentication type for an application account. The authorization  list contains all authorized bundles. The token authorization list is set by  
+[setAuthTokenVisibility](arkts-basicservices-appaccount-appaccountmanager-i.md#setauthtokenvisibility). This API uses a promise to return the result.
 
 **Since:** 9
 
@@ -3251,24 +3170,24 @@ getAuthList(name: string, authType: string): Promise<Array<string>>
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| name | string | Yes | 应用账号的名称。最大长度为512个字符。 |
-| authType | string | Yes | 鉴权类型。自定义数据，最大长度为1024个字符。 |
+| name | string | Yes | Name of the application account. The value cannot exceed 512 characters. |
+| authType | string | Yes | Authentication type. The custom type, The value cannot exceed 1024 characters. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;Array&lt;string&gt;&gt; | Promise对象，返回被授权的包名数组。 |
+| Promise&lt;Array&lt;string&gt;&gt; | Promise used to return a list of authorized bundles. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 12300107 | AuthType not found. |
-| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameter types. |
-| 12300003 | Account not found. |
-| 12300002 | Invalid name or authType. |
-| 12300001 | System service exception. |
+| [12300107](../../apis-basic-services-kit/errorcode-account.md#12300107-authentication-type-not-found) | AuthType not found. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameter types. |
+| [12300003](../../apis-basic-services-kit/errorcode-account.md#12300003-account-not-found) | Account not found. |
+| [12300002](../../apis-basic-services-kit/errorcode-account.md#12300002-invalid-parameter) | Invalid name or authType. |
+| [12300001](../../apis-basic-services-kit/errorcode-account.md#12300001-system-service-abnormal) | System service exception. |
 
 ## Examples
 
@@ -3293,7 +3212,7 @@ try {
 getAuthToken(name: string, owner: string, authType: string, callback: AsyncCallback<string>): void
 ```
 
-获取指定应用账号的特定鉴权类型的授权令牌。使用callback异步回调。
+Obtains the authorization token of the specified authentication type for an application account. This API uses an  asynchronous callback to return the result.
 
 **Since:** 9
 
@@ -3307,20 +3226,20 @@ getAuthToken(name: string, owner: string, authType: string, callback: AsyncCallb
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| name | string | Yes | 应用账号的名称。最大长度为512个字符。 |
-| owner | string | Yes | 应用账号所有者的包名。最大长度为1024个字符。 |
-| authType | string | Yes | 鉴权类型。自定义数据，最大长度为1024个字符。 |
-| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;string&gt; | Yes | 回调函数。当获取成功时，err为null，data为授权令牌值；否则为错误对象。 |
+| name | string | Yes | Name of the application account. The value cannot exceed 512 characters. |
+| owner | string | Yes | Owner of the application account. The value is the Bundle name of the application. The value cannot exceed 1024 characters. |
+| authType | string | Yes | Authentication type. The custom type, The value cannot exceed 1024 characters. |
+| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;string&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **null** and **data** is the authorization token value obtained. Otherwise, **err** is an error object. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 12300107 | AuthType not found. |
-| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameter types. |
-| 12300003 | Account not found. |
-| 12300002 | Invalid name, owner or authType. |
-| 12300001 | System service exception. |
+| [12300107](../../apis-basic-services-kit/errorcode-account.md#12300107-authentication-type-not-found) | AuthType not found. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameter types. |
+| [12300003](../../apis-basic-services-kit/errorcode-account.md#12300003-account-not-found) | Account not found. |
+| [12300002](../../apis-basic-services-kit/errorcode-account.md#12300002-invalid-parameter) | Invalid name, owner or authType. |
+| [12300001](../../apis-basic-services-kit/errorcode-account.md#12300001-system-service-abnormal) | System service exception. |
 
 ## Examples
 
@@ -3348,7 +3267,7 @@ try {
 getAuthToken(name: string, owner: string, authType: string): Promise<string>
 ```
 
-获取指定应用账号的特定鉴权类型的授权令牌。使用Promise异步回调。
+Obtains the authorization token of the specified authentication type for an application account. This API uses a promise to return the result.
 
 **Since:** 9
 
@@ -3362,25 +3281,25 @@ getAuthToken(name: string, owner: string, authType: string): Promise<string>
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| name | string | Yes | 应用账号的名称。最大长度为512个字符。 |
-| owner | string | Yes | 应用账号所有者的包名。最大长度为1024个字符。 |
-| authType | string | Yes | 鉴权类型。自定义数据，最大长度为1024个字符。 |
+| name | string | Yes | Name of the application account. The value cannot exceed 512 characters. |
+| owner | string | Yes | Owner of the application account. The value is the Bundle name of the application. The value cannot exceed 1024 characters. |
+| authType | string | Yes | Authentication type. The custom type, The value cannot exceed 1024 characters. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;string&gt; | Promise对象，返回授权令牌。 |
+| Promise&lt;string&gt; | Promise used to return the authorization token obtained. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 12300107 | AuthType not found. |
-| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameter types. |
-| 12300003 | Account not found. |
-| 12300002 | Invalid name, owner or authType. |
-| 12300001 | System service exception. |
+| [12300107](../../apis-basic-services-kit/errorcode-account.md#12300107-authentication-type-not-found) | AuthType not found. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameter types. |
+| [12300003](../../apis-basic-services-kit/errorcode-account.md#12300003-account-not-found) | Account not found. |
+| [12300002](../../apis-basic-services-kit/errorcode-account.md#12300002-invalid-parameter) | Invalid name, owner or authType. |
+| [12300001](../../apis-basic-services-kit/errorcode-account.md#12300001-system-service-abnormal) | System service exception. |
 
 ## Examples
 
@@ -3405,13 +3324,13 @@ try {
 getAuthenticatorCallback(sessionId: string, callback: AsyncCallback<AuthenticatorCallback>): void
 ```
 
-获取鉴权会话的认证器回调。使用callback异步回调。
+Obtains the authenticator callback for an authentication session. This API uses an asynchronous callback to return the result.
 
-> **说明：**
+> **NOTE：**
 > 
-> 从API version 8开始支持，从API version 9开始废弃。建议使用
+> This API is supported since API version 8 and deprecated since API version 9. You are advised to use
 > [getAuthCallback](arkts-basicservices-appaccount-appaccountmanager-i.md#getauthcallback)
-> 替代。
+> instead.
 
 **Since:** 8
 
@@ -3429,8 +3348,8 @@ getAuthenticatorCallback(sessionId: string, callback: AsyncCallback<Authenticato
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| sessionId | string | Yes | 鉴权会话的标识。 |
-| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;AuthenticatorCallback&gt; | Yes | 回调函数。当获取鉴权会话的认证器回调函数成功时，err为null，data为认证器回调函数；否则为错误对象。 |
+| sessionId | string | Yes | ID of the authentication session. |
+| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;AuthenticatorCallback&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **null** and **data** is the authenticator callback obtained. Otherwise, **err** is an error object. |
 
 ## Examples
 
@@ -3464,12 +3383,12 @@ export default class EntryAbility extends UIAbility {
 getAuthenticatorCallback(sessionId: string): Promise<AuthenticatorCallback>
 ```
 
-获取鉴权会话的认证器回调。使用Promise异步回调。
+Obtains the authenticator callback for an authentication session. This API uses a promise to return the result.
 
-> **说明：**
+> **NOTE：**
 > 
-> 从API version 8开始支持，从API version 9开始废弃。建议使用
-> [getAuthCallback](arkts-basicservices-appaccount-appaccountmanager-i.md#getauthcallback)替代。
+> This API is supported since API version 8 and deprecated since API version 9. You are advised to use
+> [getAuthCallback](arkts-basicservices-appaccount-appaccountmanager-i.md#getauthcallback) instead.
 
 **Since:** 8
 
@@ -3487,13 +3406,13 @@ getAuthenticatorCallback(sessionId: string): Promise<AuthenticatorCallback>
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| sessionId | string | Yes | 鉴权会话的标识。 |
+| sessionId | string | Yes | ID of the authentication session. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;AuthenticatorCallback&gt; | Promise对象，返回鉴权会话的认证器回调对象。 |
+| Promise&lt;AuthenticatorCallback&gt; | Promise used to return the authenticator callback obtained. |
 
 ## Examples
 
@@ -3525,13 +3444,13 @@ export default class EntryAbility extends UIAbility {
 getAuthenticatorInfo(owner: string, callback: AsyncCallback<AuthenticatorInfo>): void
 ```
 
-获取指定应用的认证器信息。使用callback异步回调。
+Obtains the authenticator information of an application. This API uses an asynchronous callback to return the result.
 
-> **说明：**
+> **NOTE：**
 > 
-> 从API version 8开始支持，从API version 9开始废弃。建议使用
+> This API is supported since API version 8 and deprecated since API version 9. You are advised to use
 > [queryAuthenticatorInfo](arkts-basicservices-appaccount-appaccountmanager-i.md#queryauthenticatorinfo)
-> 替代。
+> instead.
 
 **Since:** 8
 
@@ -3549,8 +3468,8 @@ getAuthenticatorInfo(owner: string, callback: AsyncCallback<AuthenticatorInfo>):
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| owner | string | Yes | 应用账号所有者的包名。最大长度为1024个字符。 |
-| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;AuthenticatorInfo&gt; | Yes | 回调函数。当获取成功时，err为null，data为认证器信息对象；否则为错误对象。 |
+| owner | string | Yes | Owner of the application account. The value is the Bundle name of the application. The value cannot exceed 1024 characters. |
+| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;AuthenticatorInfo&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **null** and **data** is the authenticator information obtained. Otherwise, **err** is an error object. |
 
 ## Examples
 
@@ -3573,12 +3492,12 @@ appAccountManager.getAuthenticatorInfo('com.example.accountjsdemo',
 getAuthenticatorInfo(owner: string): Promise<AuthenticatorInfo>
 ```
 
-获取指定应用的认证器信息。使用Promise异步回调。
+Obtains the authenticator information of an application. This API uses a promise to return the result.
 
-> **说明：**
+> **NOTE：**
 > 
-> 从API version 8开始支持，从API version 9开始废弃。建议使用
-> [queryAuthenticatorInfo](arkts-basicservices-appaccount-appaccountmanager-i.md#queryauthenticatorinfo)替代。
+> This API is supported since API version 8 and deprecated since API version 9. You are advised to use
+> [queryAuthenticatorInfo](arkts-basicservices-appaccount-appaccountmanager-i.md#queryauthenticatorinfo) instead.
 
 **Since:** 8
 
@@ -3596,13 +3515,13 @@ getAuthenticatorInfo(owner: string): Promise<AuthenticatorInfo>
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| owner | string | Yes | 应用账号所有者的包名。最大长度为1024个字符。 |
+| owner | string | Yes | Owner of the application account. The value is the Bundle name of the application. The value cannot exceed 1024 characters. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;AuthenticatorInfo&gt; | Promise对象，返回指定应用的认证器信息对象。 |
+| Promise&lt;AuthenticatorInfo&gt; | Promise used to return the authenticator information obtained. |
 
 ## Examples
 
@@ -3623,7 +3542,7 @@ appAccountManager.getAuthenticatorInfo('com.example.accountjsdemo').then((
 getCredential(name: string, credentialType: string, callback: AsyncCallback<string>): void
 ```
 
-获取指定应用账号的凭据。使用callback异步回调。
+Obtains the credential of an application account. This API uses an asynchronous callback to return the result.
 
 **Since:** 9
 
@@ -3637,19 +3556,19 @@ getCredential(name: string, credentialType: string, callback: AsyncCallback<stri
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| name | string | Yes | 应用账号的名称。最大长度为512个字符。 |
-| credentialType | string | Yes | 凭据类型。自定义的类型，最大长度为1024个字符。 |
-| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;string&gt; | Yes | 回调函数。当获取凭据成功时，err为null，data为指定应用账号的凭据；否则为错误对象。 |
+| name | string | Yes | Name of the application account. The value cannot exceed 512 characters. |
+| credentialType | string | Yes | Credential type. The custom type, the value cannot exceed 1024 characters. |
+| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;string&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **null** and **data** is the credential obtained. Otherwise, **err** is an error object. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameter types. |
-| 12300003 | Account not found. |
-| 12300002 | Invalid name or credentialType. |
-| 12300001 | System service exception. |
-| 12300102 | Credential not found. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameter types. |
+| [12300003](../../apis-basic-services-kit/errorcode-account.md#12300003-account-not-found) | Account not found. |
+| [12300002](../../apis-basic-services-kit/errorcode-account.md#12300002-invalid-parameter) | Invalid name or credentialType. |
+| [12300001](../../apis-basic-services-kit/errorcode-account.md#12300001-system-service-abnormal) | System service exception. |
+| [12300102](../../apis-basic-services-kit/errorcode-account.md#12300102-credential-not-found) | Credential not found. |
 
 ## Examples
 
@@ -3676,7 +3595,7 @@ try {
 getCredential(name: string, credentialType: string): Promise<string>
 ```
 
-获取指定应用账号的凭据。使用Promise异步回调。
+Obtains the credential of an application account. This API uses a promise to return the result.
 
 **Since:** 9
 
@@ -3690,24 +3609,24 @@ getCredential(name: string, credentialType: string): Promise<string>
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| name | string | Yes | 应用账号的名称。最大长度为512个字符。 |
-| credentialType | string | Yes | 凭据类型。自定义的类型，最大长度为1024个字符。 |
+| name | string | Yes | Name of the application account. The value cannot exceed 512 characters. |
+| credentialType | string | Yes | Credential type. The custom type, the value cannot exceed 1024 characters. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;string&gt; | Promise对象，返回指定应用账号的凭据。 |
+| Promise&lt;string&gt; | Promise used to return the credential obtained. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameter types. |
-| 12300003 | Account not found. |
-| 12300002 | Invalid name or credentialType. |
-| 12300001 | System service exception. |
-| 12300102 | Credential not found. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameter types. |
+| [12300003](../../apis-basic-services-kit/errorcode-account.md#12300003-account-not-found) | Account not found. |
+| [12300002](../../apis-basic-services-kit/errorcode-account.md#12300002-invalid-parameter) | Invalid name or credentialType. |
+| [12300001](../../apis-basic-services-kit/errorcode-account.md#12300001-system-service-abnormal) | System service exception. |
+| [12300102](../../apis-basic-services-kit/errorcode-account.md#12300102-credential-not-found) | Credential not found. |
 
 ## Examples
 
@@ -3732,7 +3651,7 @@ try {
 getCustomData(name: string, key: string, callback: AsyncCallback<string>): void
 ```
 
-根据指定键名获取特定应用账号的自定义数据。使用callback异步回调。
+Obtains the custom data of an application account based on the specified key. This API uses an asynchronous callback to return the result.
 
 **Since:** 9
 
@@ -3746,19 +3665,19 @@ getCustomData(name: string, key: string, callback: AsyncCallback<string>): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| name | string | Yes | 应用账号的名称。最大长度为512个字符。 |
-| key | string | Yes | 自定义数据的键名。最大长度为1024个字符。 |
-| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;string&gt; | Yes | 回调函数。当获取成功时，err为null，data为自定义数据的取值；否则为错误对象。 |
+| name | string | Yes | Name of the application account. The value cannot exceed 512 characters. |
+| key | string | Yes | Key of the custom data. The value cannot exceed 512 characters. |
+| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;string&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **null** and **data** is the custom data value obtained. Otherwise, **err** is an error object. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameter types. |
-| 12300003 | Account not found. |
-| 12300002 | Invalid name or key. |
-| 12300001 | System service exception. |
-| 12400002 | Custom data not found. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameter types. |
+| [12300003](../../apis-basic-services-kit/errorcode-account.md#12300003-account-not-found) | Account not found. |
+| [12300002](../../apis-basic-services-kit/errorcode-account.md#12300002-invalid-parameter) | Invalid name or key. |
+| [12300001](../../apis-basic-services-kit/errorcode-account.md#12300001-system-service-abnormal) | System service exception. |
+| [12400002](../../apis-basic-services-kit/errorcode-account.md#12400002-custom-data-not-found) | Custom data not found. |
 
 ## Examples
 
@@ -3785,7 +3704,7 @@ try {
 getCustomData(name: string, key: string): Promise<string>
 ```
 
-根据指定键名获取特定应用账号的自定义数据。使用Promise异步回调。
+Obtains the custom data of an application account based on the specified key. This API uses a promise to return the result.
 
 **Since:** 9
 
@@ -3799,24 +3718,24 @@ getCustomData(name: string, key: string): Promise<string>
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| name | string | Yes | 应用账号的名称。最大长度为512个字符。 |
-| key | string | Yes | 自定义数据的键名。最大长度为1024个字符。 |
+| name | string | Yes | Name of the application account. The value cannot exceed 512 characters. |
+| key | string | Yes | Key of the custom data. The value cannot exceed 512 characters. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;string&gt; | Promise对象，返回自定义数据的取值。 |
+| Promise&lt;string&gt; | Promise used to return the custom data value obtained. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameter types. |
-| 12300003 | Account not found. |
-| 12300002 | Invalid name or key. |
-| 12300001 | System service exception. |
-| 12400002 | Custom data not found |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameter types. |
+| [12300003](../../apis-basic-services-kit/errorcode-account.md#12300003-account-not-found) | Account not found. |
+| [12300002](../../apis-basic-services-kit/errorcode-account.md#12300002-invalid-parameter) | Invalid name or key. |
+| [12300001](../../apis-basic-services-kit/errorcode-account.md#12300001-system-service-abnormal) | System service exception. |
+| [12400002](../../apis-basic-services-kit/errorcode-account.md#12400002-custom-data-not-found) | Custom data not found |
 
 ## Examples
 
@@ -3841,7 +3760,7 @@ try {
 getCustomDataSync(name: string, key: string): string
 ```
 
-根据指定键名获取特定应用账号的自定义数据。使用同步方式返回结果。
+Obtains the custom data of an application account based on the specified key. The API returns the result synchronously.
 
 **Since:** 9
 
@@ -3855,24 +3774,24 @@ getCustomDataSync(name: string, key: string): string
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| name | string | Yes | 应用账号的名称。最大长度为512个字符。 |
-| key | string | Yes | 自定义数据的键名。最大长度为1024个字符。 |
+| name | string | Yes | Name of the application account. The value cannot exceed 512 characters. |
+| key | string | Yes | Key of the custom data. The value cannot exceed 512 characters. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| string | 自定义数据的取值，默认为空。 |
+| string | Value of the custom data, by default, no value is passed in. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameter types. |
-| 12300003 | Account not found. |
-| 12300002 | Invalid name or key. |
-| 12300001 | System service exception. |
-| 12400002 | Custom data not found. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameter types. |
+| [12300003](../../apis-basic-services-kit/errorcode-account.md#12300003-account-not-found) | Account not found. |
+| [12300002](../../apis-basic-services-kit/errorcode-account.md#12300002-invalid-parameter) | Invalid name or key. |
+| [12300001](../../apis-basic-services-kit/errorcode-account.md#12300001-system-service-abnormal) | System service exception. |
+| [12400002](../../apis-basic-services-kit/errorcode-account.md#12400002-custom-data-not-found) | Custom data not found. |
 
 ## Examples
 
@@ -3894,14 +3813,14 @@ try {
 getOAuthList(name: string, authType: string, callback: AsyncCallback<Array<string>>): void
 ```
 
-获取指定应用账号的特定鉴权类型的授权列表，即被授权的包名数组（令牌的授权列表通过  
-[setOAuthTokenVisibility](arkts-basicservices-appaccount-appaccountmanager-i.md#setoauthtokenvisibility)来设置）。使用callback异步回调。
+Obtains the authorization list of the specified authentication type for an application account. The authorization  list contains all authorized bundles. The token authorization list is set by  
+[setOAuthTokenVisibility](arkts-basicservices-appaccount-appaccountmanager-i.md#setoauthtokenvisibility). This API uses an asynchronous callback to return the result.
 
-> **说明：**
+> **NOTE：**
 > 
-> 从API version 8开始支持，从API version 9开始废弃。建议使用
+> This API is supported since API version 8 and deprecated since API version 9. You are advised to use
 > [getAuthList](arkts-basicservices-appaccount-appaccountmanager-i.md#getauthlist)
-> 替代。
+> instead.
 
 **Since:** 8
 
@@ -3919,9 +3838,9 @@ getOAuthList(name: string, authType: string, callback: AsyncCallback<Array<strin
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| name | string | Yes | 应用账号的名称。最大长度为512个字符。 |
-| authType | string | Yes | 鉴权类型。自定义数据，最大长度为1024个字符。 |
-| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;string&gt;&gt; | Yes | 回调函数。当获取成功时，err为null，data为被授权的包名数组；否则为错误对象。 |
+| name | string | Yes | Name of the application account. The value cannot exceed 512 characters. |
+| authType | string | Yes | Authentication type. The custom type, The value cannot exceed 1024 characters. |
+| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;string&gt;&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **null** and **data** is a list of authorized bundles obtained. Otherwise, **err** is an error object. |
 
 ## Examples
 
@@ -3943,13 +3862,13 @@ appAccountManager.getOAuthList('LiSi', 'getSocialData', (err: BusinessError, dat
 getOAuthList(name: string, authType: string): Promise<Array<string>>
 ```
 
-获取指定应用账号的特定鉴权类型的授权列表，即被授权的包名数组（令牌的授权列表通过  
-[setOAuthTokenVisibility](arkts-basicservices-appaccount-appaccountmanager-i.md#setoauthtokenvisibility)来设置）。使用Promise异步回调。
+Obtains the authorization list of the specified authentication type for an application account. The authorization  list contains all authorized bundles. The token authorization list is set by  
+[setOAuthTokenVisibility](arkts-basicservices-appaccount-appaccountmanager-i.md#setoauthtokenvisibility). This API uses a promise to return the result.
 
-> **说明：**
+> **NOTE：**
 > 
-> 从API version 8开始支持，从API version 9开始废弃。建议使用
-> [getAuthList](arkts-basicservices-appaccount-appaccountmanager-i.md#getauthlist)替代。
+> This API is supported since API version 8 and deprecated since API version 9. You are advised to use
+> [getAuthList](arkts-basicservices-appaccount-appaccountmanager-i.md#getauthlist) instead.
 
 **Since:** 8
 
@@ -3967,14 +3886,14 @@ getOAuthList(name: string, authType: string): Promise<Array<string>>
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| name | string | Yes | 应用账号的名称。最大长度为512个字符。 |
-| authType | string | Yes | 鉴权类型。自定义数据，最大长度为1024个字符。 |
+| name | string | Yes | Name of the application account. The value cannot exceed 512 characters. |
+| authType | string | Yes | Authentication type. The custom type, The value cannot exceed 1024 characters. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;Array&lt;string&gt;&gt; | Promise对象，返回被授权的包名数组。 |
+| Promise&lt;Array&lt;string&gt;&gt; | Promise used to return a list of authorized bundles. |
 
 ## Examples
 
@@ -3994,13 +3913,13 @@ appAccountManager.getOAuthList('LiSi', 'getSocialData').then((data: string[]) =>
 getOAuthToken(name: string, owner: string, authType: string, callback: AsyncCallback<string>): void
 ```
 
-获取指定应用账号的特定鉴权类型的授权令牌。使用callback异步回调。
+Obtains the authorization token of the specified authentication type for an application account. This API uses an  asynchronous callback to return the result.
 
-> **说明：**
+> **NOTE：**
 > 
-> 从API version 8开始支持，从API version 9开始废弃。建议使用
+> This API is supported since API version 8 and deprecated since API version 9. You are advised to use
 > [getAuthToken](arkts-basicservices-appaccount-appaccountmanager-i.md#getauthtoken)
-> 替代。
+> instead.
 
 **Since:** 8
 
@@ -4018,10 +3937,10 @@ getOAuthToken(name: string, owner: string, authType: string, callback: AsyncCall
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| name | string | Yes | 应用账号的名称。最大长度为512个字符。 |
-| owner | string | Yes | 应用账号所有者的包名。最大长度为1024个字符。 |
-| authType | string | Yes | 鉴权类型。自定义数据，最大长度为1024个字符。 |
-| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;string&gt; | Yes | 回调函数。当获取成功时，err为null，data为授权令牌值；否则为错误对象。 |
+| name | string | Yes | Name of the application account. The value cannot exceed 512 characters. |
+| owner | string | Yes | Owner of the application account. The value is the Bundle name of the application. The value cannot exceed 1024 characters. |
+| authType | string | Yes | Authentication type. The custom type, The value cannot exceed 1024 characters. |
+| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;string&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **null** and **data** is the authorization token value obtained. Otherwise, **err** is an error object. |
 
 ## Examples
 
@@ -4044,13 +3963,13 @@ appAccountManager.getOAuthToken('LiSi', 'com.example.accountjsdemo', 'getSocialD
 getOAuthToken(name: string, owner: string, authType: string): Promise<string>
 ```
 
-获取指定应用账号的特定鉴权类型的授权令牌。使用Promise异步回调。
+Obtains the authorization token of the specified authentication type for an application account. This API uses a promise to return the result.
 
-> **说明：**
+> **NOTE：**
 > 
-> 从API version 8开始支持，从API version 9开始废弃。建议使用
-> [getAuthToken](arkts-basicservices-appaccount-appaccountmanager-i.md#getauthtoken)替
-> 代。
+> This API is supported since API version 8 and deprecated since API version 9. You are advised to use
+> [getAuthToken](arkts-basicservices-appaccount-appaccountmanager-i.md#getauthtoken)
+> instead.
 
 **Since:** 8
 
@@ -4068,15 +3987,15 @@ getOAuthToken(name: string, owner: string, authType: string): Promise<string>
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| name | string | Yes | 应用账号的名称。最大长度为512个字符。 |
-| owner | string | Yes | 应用账号所有者的包名。最大长度为1024个字符。 |
-| authType | string | Yes | 鉴权类型。自定义数据，最大长度为1024个字符。 |
+| name | string | Yes | Name of the application account. The value cannot exceed 512 characters. |
+| owner | string | Yes | Owner of the application account. The value is the Bundle name of the application. The value cannot exceed 1024 characters. |
+| authType | string | Yes | Authentication type. The custom type, The value cannot exceed 1024 characters. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;string&gt; | Promise对象，返回授权令牌。 |
+| Promise&lt;string&gt; | Promise used to return the authorization token obtained. |
 
 ## Examples
 
@@ -4096,13 +4015,13 @@ appAccountManager.getOAuthToken('LiSi', 'com.example.accountjsdemo', 'getSocialD
 off(type: 'change', callback?: Callback<Array<AppAccountInfo>>): void
 ```
 
-取消订阅账号信息变更事件。
+Unsubscribes from account information changes.
 
-> **说明：**
+> **NOTE：**
 > 
-> 从API version 7开始支持，从API version 9开始废弃。建议使用
+> This API is supported since API version 7 and deprecated since API version 9. You are advised to use
 > [off('accountChange')](appAccount.AppAccountManager.off(type: 'accountChange', callback?: Callback&lt;Array<AppAccountInfo>&gt;&lt;AppAccountInfo&gt;>))
-> 替代。
+> instead.
 
 **Since:** 7
 
@@ -4120,8 +4039,8 @@ off(type: 'change', callback?: Callback<Array<AppAccountInfo>>): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'change' | Yes | 事件回调类型，支持的事件为'change'，当账号所有者更新账号信息时，触发该事件。 |
-| callback | [Callback](arkts-basicservices-base-callback-i.md)&lt;Array&lt;AppAccountInfo&gt;&gt; | No | 需要注销的回调函数，默认为空，表示取消该类型事件的所有回调。 |
+| type | 'change' | Yes | Event type to subscribe to. The value is **'change'**. An event will be reported when the account information changes. |
+| callback | [Callback](arkts-basicservices-base-callback-i.md)&lt;Array&lt;AppAccountInfo&gt;&gt; | No | Callback to unregister. By default, no value is passed, which means to unregister all callbacks for the specified event. |
 
 ## Examples
 
@@ -4149,7 +4068,7 @@ try {
 off(type: 'accountChange', callback?: Callback<Array<AppAccountInfo>>): void
 ```
 
-取消订阅账号信息变更事件。
+Unsubscribes from account information changes.
 
 **Since:** 9
 
@@ -4163,16 +4082,16 @@ off(type: 'accountChange', callback?: Callback<Array<AppAccountInfo>>): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'accountChange' | Yes | 事件回调类型，支持的事件为'accountChange'，当账号所有者更新账号信息时，触发该事件。 |
-| callback | [Callback](arkts-basicservices-base-callback-i.md)&lt;Array&lt;AppAccountInfo&gt;&gt; | No | 需要注销的回调函数，默认为空，表示取消该类型事件所有的回调。 |
+| type | 'accountChange' | Yes | Event type to unsubscribe from. The value is **'accountChange'**. |
+| callback | [Callback](arkts-basicservices-base-callback-i.md)&lt;Array&lt;AppAccountInfo&gt;&gt; | No | Callback to unregister. By default, no value is passed, which means to unregister all callbacks for the specified event. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameter types. |
-| 12300002 | Invalid type. |
-| 12300001 | System service exception. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameter types. |
+| [12300002](../../apis-basic-services-kit/errorcode-account.md#12300002-invalid-parameter) | Invalid type. |
+| [12300001](../../apis-basic-services-kit/errorcode-account.md#12300001-system-service-abnormal) | System service exception. |
 
 ## Examples
 
@@ -4203,7 +4122,7 @@ try {
 offAccountChange(callback?: Callback<Array<AppAccountInfo>>): void
 ```
 
-取消订阅账号信息变更事件。
+Unsubscribes from account events.
 
 **Since:** 23
 
@@ -4217,13 +4136,13 @@ offAccountChange(callback?: Callback<Array<AppAccountInfo>>): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](arkts-basicservices-base-callback-i.md)&lt;Array&lt;AppAccountInfo&gt;&gt; | No | 需要注销的回调函数，默认为空，表示取消该类型事件所有的回调。 |
+| callback | [Callback](arkts-basicservices-base-callback-i.md)&lt;Array&lt;AppAccountInfo&gt;&gt; | No | Asynchronous callback interface. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 12300001 | System service exception. |
+| [12300001](../../apis-basic-services-kit/errorcode-account.md#12300001-system-service-abnormal) | System service exception. |
 
 ## on('change')
 
@@ -4231,13 +4150,13 @@ offAccountChange(callback?: Callback<Array<AppAccountInfo>>): void
 on(type: 'change', owners: Array<string>, callback: Callback<Array<AppAccountInfo>>): void
 ```
 
-订阅指定应用的账号信息变更事件。
+Subscribes to account information changes of apps.
 
-> **说明：**
+> **NOTE：**
 > 
-> 从API version 7开始支持，从API version 9开始废弃。建议使用
+> This API is supported since API version 7 and deprecated since API version 9. You are advised to use
 > [on('accountChange')](appAccount.AppAccountManager.on(type: 'accountChange', owners: Array&lt;string&gt;, callback: Callback&lt;Array<AppAccountInfo>&gt;&lt;AppAccountInfo&gt;>))
-> 替代。
+> instead.
 
 **Since:** 7
 
@@ -4255,9 +4174,9 @@ on(type: 'change', owners: Array<string>, callback: Callback<Array<AppAccountInf
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'change' | Yes | 事件回调类型，支持的事件为'change'，当账号所有者更新账号信息时，触发该事件。 |
-| owners | Array&lt;string&gt; | Yes | 应用账号所有者的包名列表。 |
-| callback | [Callback](arkts-basicservices-base-callback-i.md)&lt;Array&lt;AppAccountInfo&gt;&gt; | Yes | 需要注册的回调函数，返回信息发生变更的应用账号列表。 |
+| type | 'change' | Yes | Event type to subscribe to. The value is **'change'**. An event will be reported when the account information changes. |
+| owners | Array&lt;string&gt; | Yes | Application bundle names of the account. |
+| callback | [Callback](arkts-basicservices-base-callback-i.md)&lt;Array&lt;AppAccountInfo&gt;&gt; | Yes | Callback registered to return the list of changed application accounts. |
 
 ## Examples
 
@@ -4282,7 +4201,7 @@ try {
 on(type: 'accountChange', owners: Array<string>, callback: Callback<Array<AppAccountInfo>>): void
 ```
 
-订阅指定应用的账号信息变更事件。
+Subscribes to account information changes of apps.
 
 **Since:** 9
 
@@ -4296,17 +4215,17 @@ on(type: 'accountChange', owners: Array<string>, callback: Callback<Array<AppAcc
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'accountChange' | Yes | 事件回调类型，支持的事件为'accountChange'，当目标应用更新账号信息时，触发该事件。 |
-| owners | Array&lt;string&gt; | Yes | 应用账号所有者的包名列表。 |
-| callback | [Callback](arkts-basicservices-base-callback-i.md)&lt;Array&lt;AppAccountInfo&gt;&gt; | Yes | 需要注册的回调函数，返回信息为发生变更的应用账号列表。 |
+| type | 'accountChange' | Yes | Event type to subscribe to. The value is **'accountChange'**. An event will be reported when the account information of the target application changes. |
+| owners | Array&lt;string&gt; | Yes | Application bundle names of the account. |
+| callback | [Callback](arkts-basicservices-base-callback-i.md)&lt;Array&lt;AppAccountInfo&gt;&gt; | Yes | Callback registered to return the list of changed application accounts. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 12300002 | Invalid type or owners. |
-| 12300001 | System service exception. |
-| 12400001 | Application not found.<br>**Applicable version:** 9 - 13 |
+| [12300002](../../apis-basic-services-kit/errorcode-account.md#12300002-invalid-parameter) | Invalid type or owners. |
+| [12300001](../../apis-basic-services-kit/errorcode-account.md#12300001-system-service-abnormal) | System service exception. |
+| [12400001](../../apis-basic-services-kit/errorcode-account.md#12400001-application-not-found) | Application not found.<br>**Applicable version:** 9 - 13 |
 
 ## Examples
 
@@ -4331,7 +4250,7 @@ try {
 onAccountChange(owners: Array<string>, callback: Callback<Array<AppAccountInfo>>): void
 ```
 
-订阅指定应用的账号信息变更事件。
+Subscribes to the change events of accounts of the specified owners.
 
 **Since:** 23
 
@@ -4345,15 +4264,15 @@ onAccountChange(owners: Array<string>, callback: Callback<Array<AppAccountInfo>>
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| owners | Array&lt;string&gt; | Yes | 应用账号所有者的包名列表。 |
-| callback | [Callback](arkts-basicservices-base-callback-i.md)&lt;Array&lt;AppAccountInfo&gt;&gt; | Yes | 需要注册的回调函数，返回信息为发生变更的应用账号列表。 |
+| owners | Array&lt;string&gt; | Yes | Indicates the account owners, which are specified by {@link AppAccount#AppAccount(String name, String owner)}. |
+| callback | [Callback](arkts-basicservices-base-callback-i.md)&lt;Array&lt;AppAccountInfo&gt;&gt; | Yes | Asynchronous callback interface. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 12300002 | Invalid owners. |
-| 12300001 | System service exception. |
+| [12300002](../../apis-basic-services-kit/errorcode-account.md#12300002-invalid-parameter) | Invalid owners. |
+| [12300001](../../apis-basic-services-kit/errorcode-account.md#12300001-system-service-abnormal) | System service exception. |
 
 ## queryAuthenticatorInfo
 
@@ -4361,7 +4280,7 @@ onAccountChange(owners: Array<string>, callback: Callback<Array<AppAccountInfo>>
 queryAuthenticatorInfo(owner: string, callback: AsyncCallback<AuthenticatorInfo>): void
 ```
 
-获取指定应用的认证器信息。使用callback异步回调。
+Obtains the authenticator information of an application. This API uses an asynchronous callback to return the result.
 
 **Since:** 9
 
@@ -4375,17 +4294,17 @@ queryAuthenticatorInfo(owner: string, callback: AsyncCallback<AuthenticatorInfo>
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| owner | string | Yes | 应用账号所有者的包名。最大长度为1024个字符。 |
-| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;AuthenticatorInfo&gt; | Yes | 回调函数。当获取成功时，err为null，data为认证器信息对象；否则为错误对象。 |
+| owner | string | Yes | Owner of the application account. The value is the Bundle name of the application. The value cannot exceed 1024 characters. |
+| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;AuthenticatorInfo&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **null** and **data** is the authenticator information obtained. Otherwise, **err** is an error object. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameter types. |
-| 12300002 | Invalid owner. |
-| 12300001 | System service exception. |
-| 12300113 | Authenticator service not found. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameter types. |
+| [12300002](../../apis-basic-services-kit/errorcode-account.md#12300002-invalid-parameter) | Invalid owner. |
+| [12300001](../../apis-basic-services-kit/errorcode-account.md#12300001-system-service-abnormal) | System service exception. |
+| [12300113](../../apis-basic-services-kit/errorcode-account.md#12300113-authentication-service-not-found) | Authenticator service not found. |
 
 ## Examples
 
@@ -4413,7 +4332,7 @@ try {
 queryAuthenticatorInfo(owner: string): Promise<AuthenticatorInfo>
 ```
 
-获取指定应用的认证器信息。使用Promise异步回调。
+Obtains the authenticator information of an application. This API uses a promise to return the result.
 
 **Since:** 9
 
@@ -4427,22 +4346,22 @@ queryAuthenticatorInfo(owner: string): Promise<AuthenticatorInfo>
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| owner | string | Yes | 应用账号所有者的包名。最大长度为1024个字符。 |
+| owner | string | Yes | Owner of the application account. The value is the Bundle name of the application. The value cannot exceed 1024 characters. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;AuthenticatorInfo&gt; | Promise对象，返回指定应用的认证器信息对象。 |
+| Promise&lt;AuthenticatorInfo&gt; | Promise used to return the authenticator information obtained. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameter types. |
-| 12300002 | Invalid owner. |
-| 12300001 | System service exception. |
-| 12300113 | Authenticator service not found. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameter types. |
+| [12300002](../../apis-basic-services-kit/errorcode-account.md#12300002-invalid-parameter) | Invalid owner. |
+| [12300001](../../apis-basic-services-kit/errorcode-account.md#12300001-system-service-abnormal) | System service exception. |
+| [12300113](../../apis-basic-services-kit/errorcode-account.md#12300113-authentication-service-not-found) | Authenticator service not found. |
 
 ## Examples
 
@@ -4468,7 +4387,7 @@ try {
 removeAccount(name: string, callback: AsyncCallback<void>): void
 ```
 
-删除应用账号。使用callback异步回调。
+Removes an application account. This API uses an asynchronous callback to return the result.
 
 **Since:** 9
 
@@ -4482,17 +4401,17 @@ removeAccount(name: string, callback: AsyncCallback<void>): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| name | string | Yes | 应用账号的名称。最大长度为512个字符。 |
-| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | 回调函数。当删除成功时，err为null，否则为错误对象。 |
+| name | string | Yes | Name of the application account. The value cannot exceed 512 characters. |
+| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **null**. Otherwise, **err** is an error object. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameter types. |
-| 12300003 | Account not found. |
-| 12300002 | Invalid name. |
-| 12300001 | System service exception. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameter types. |
+| [12300003](../../apis-basic-services-kit/errorcode-account.md#12300003-account-not-found) | Account not found. |
+| [12300002](../../apis-basic-services-kit/errorcode-account.md#12300002-invalid-parameter) | Invalid name. |
+| [12300001](../../apis-basic-services-kit/errorcode-account.md#12300001-system-service-abnormal) | System service exception. |
 
 ## Examples
 
@@ -4519,7 +4438,7 @@ try {
 removeAccount(name: string): Promise<void>
 ```
 
-删除应用账号。使用Promise异步回调。
+Removes an application account. This API uses a promise to return the result.
 
 **Since:** 9
 
@@ -4533,22 +4452,22 @@ removeAccount(name: string): Promise<void>
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| name | string | Yes | 应用账号的名称。最大长度为512个字符。 |
+| name | string | Yes | Name of the application account. The value cannot exceed 512 characters. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | 无返回结果的Promise对象。 |
+| Promise&lt;void&gt; | Promise that returns no value. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameter types. |
-| 12300003 | Account not found. |
-| 12300002 | Invalid name. |
-| 12300001 | System service exception. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameter types. |
+| [12300003](../../apis-basic-services-kit/errorcode-account.md#12300003-account-not-found) | Account not found. |
+| [12300002](../../apis-basic-services-kit/errorcode-account.md#12300002-invalid-parameter) | Invalid name. |
+| [12300001](../../apis-basic-services-kit/errorcode-account.md#12300001-system-service-abnormal) | System service exception. |
 
 ## Examples
 
@@ -4573,7 +4492,7 @@ try {
 selectAccountsByOptions(options: SelectAccountsOptions, callback: AsyncCallback<Array<AppAccountInfo>>): void
 ```
 
-根据选项选择调用方可访问的账号列表。使用callback异步回调。如果选项中包含标签约束，则该方法依赖目标应用的认证器提供标签检查的能力。
+Selects the accounts that can be accessed by the invoker based on the options. This API uses an asynchronous callback to return the result. If the options contain label constraints, the authenticator of the target application provides the capability of checking the labels.
 
 **Since:** 9
 
@@ -4587,18 +4506,18 @@ selectAccountsByOptions(options: SelectAccountsOptions, callback: AsyncCallback<
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| options | [SelectAccountsOptions](arkts-basicservices-appaccount-selectaccountsoptions-i.md) | Yes | 选择账号的选项。 |
-| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;AppAccountInfo&gt;&gt; | Yes | 回调函数。当根据选项选择请求方可访问的账号列表时，err为null，data为可访问的账号信息对象；否则为错误对象。 |
+| options | [SelectAccountsOptions](arkts-basicservices-appaccount-selectaccountsoptions-i.md) | Yes | Options for selecting accounts. |
+| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;AppAccountInfo&gt;&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **null** and **data** is a list of accounts selected. Otherwise, **err** is an error object. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameter types. |
-| 12300010 | Account service busy. |
-| 12300002 | Invalid options. |
-| 12300114 | Authenticator service exception. |
-| 12300001 | System service exception. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameter types. |
+| [12300010](../../apis-basic-services-kit/errorcode-account.md#12300010-account-service-not-respond) | Account service busy. |
+| [12300002](../../apis-basic-services-kit/errorcode-account.md#12300002-invalid-parameter) | Invalid options. |
+| [12300114](../../apis-basic-services-kit/errorcode-account.md#12300114-authentication-service-abnormal) | Authenticator service exception. |
+| [12300001](../../apis-basic-services-kit/errorcode-account.md#12300001-system-service-abnormal) | System service exception. |
 
 ## Examples
 
@@ -4630,7 +4549,7 @@ try {
 selectAccountsByOptions(options: SelectAccountsOptions): Promise<Array<AppAccountInfo>>
 ```
 
-根据选项选择调用方可访问的账号列表。使用Promise异步回调。如果选项中包含标签约束，则该方法依赖目标应用的认证器提供标签检查的能力。
+Selects the accounts that can be accessed by the invoker based on the options. This API uses a promise to return the result. If the options contain label constraints, the authenticator of the target application provides the capability of checking the labels.
 
 **Since:** 9
 
@@ -4644,23 +4563,23 @@ selectAccountsByOptions(options: SelectAccountsOptions): Promise<Array<AppAccoun
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| options | [SelectAccountsOptions](arkts-basicservices-appaccount-selectaccountsoptions-i.md) | Yes | 选择账号的选项。 |
+| options | [SelectAccountsOptions](arkts-basicservices-appaccount-selectaccountsoptions-i.md) | Yes | Options for selecting accounts. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;Array&lt;AppAccountInfo&gt;&gt; | Promise对象，返回调用方可访问的账号列表。 |
+| Promise&lt;Array&lt;AppAccountInfo&gt;&gt; | Promise used to return the accounts selected. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameter types. |
-| 12300010 | Account service busy. |
-| 12300002 | Invalid options. |
-| 12300114 | Authenticator service exception. |
-| 12300001 | System service exception. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameter types. |
+| [12300010](../../apis-basic-services-kit/errorcode-account.md#12300010-account-service-not-respond) | Account service busy. |
+| [12300002](../../apis-basic-services-kit/errorcode-account.md#12300002-invalid-parameter) | Invalid options. |
+| [12300114](../../apis-basic-services-kit/errorcode-account.md#12300114-authentication-service-abnormal) | Authenticator service exception. |
+| [12300001](../../apis-basic-services-kit/errorcode-account.md#12300001-system-service-abnormal) | System service exception. |
 
 ## Examples
 
@@ -4688,13 +4607,13 @@ try {
 setAccountCredential(name: string, credentialType: string, credential: string, callback: AsyncCallback<void>): void
 ```
 
-设置指定应用账号的凭据。使用callback异步回调。
+Sets a credential for an application account. This API uses an asynchronous callback to return the result.
 
-> **说明：**
+> **NOTE：**
 > 
-> 从API version 7开始支持，从API version 9开始废弃，建议使用
+> This API is supported since API version 7 and deprecated since API version 9. You are advised to use
 > [setCredential](arkts-basicservices-appaccount-appaccountmanager-i.md#setcredential)
-> 替代。
+> instead.
 
 **Since:** 7
 
@@ -4712,10 +4631,10 @@ setAccountCredential(name: string, credentialType: string, credential: string, c
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| name | string | Yes | 应用账号的名称。最大长度为512个字符。 |
-| credentialType | string | Yes | 凭据类型。自定义的类型，最大长度为1024个字符。 |
-| credential | string | Yes | 凭据取值。自定义的数据，最大长度为1024个字符。 |
-| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | 回调函数。当设置此应用程序账号的凭据成功时，err为null，否则为错误对象。 |
+| name | string | Yes | Name of the application account. The value cannot exceed 512 characters. |
+| credentialType | string | Yes | Credential type. The custom type, the value cannot exceed 1024 characters. |
+| credential | string | Yes | Credential value. The custom value, the value cannot exceed 1024 characters. |
+| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **null**. Otherwise, **err** is an error object. |
 
 ## Examples
 
@@ -4737,13 +4656,13 @@ appAccountManager.setAccountCredential('ZhangSan', 'credentialType001', 'credent
 setAccountCredential(name: string, credentialType: string, credential: string): Promise<void>
 ```
 
-设置指定应用账号的凭据。使用Promise异步回调。
+Sets a credential for an application account. This API uses a promise to return the result.
 
-> **说明：**
+> **NOTE：**
 > 
-> 从API version 7开始支持，从API version 9开始废弃，建议使用
+> This API is supported since API version 7 and deprecated since API version 9. You are advised to use
 > [setCredential](arkts-basicservices-appaccount-appaccountmanager-i.md#setcredential)
-> 替代。
+> instead.
 
 **Since:** 7
 
@@ -4761,15 +4680,15 @@ setAccountCredential(name: string, credentialType: string, credential: string): 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| name | string | Yes | 应用账号的名称。最大长度为512个字符。 |
-| credentialType | string | Yes | 凭据类型。自定义的类型，最大长度为1024个字符。 |
-| credential | string | Yes | 凭据取值。自定义的数据，最大长度为1024个字符。 |
+| name | string | Yes | Name of the application account. The value cannot exceed 512 characters. |
+| credentialType | string | Yes | Credential type. The custom type, the value cannot exceed 1024 characters. |
+| credential | string | Yes | Credential value. The custom value, the value cannot exceed 1024 characters. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | 无返回结果的Promise对象。 |
+| Promise&lt;void&gt; | Promise that returns no value. |
 
 ## Examples
 
@@ -4789,13 +4708,13 @@ appAccountManager.setAccountCredential('ZhangSan', 'credentialType001', 'credent
 setAccountExtraInfo(name: string, extraInfo: string, callback: AsyncCallback<void>): void
 ```
 
-设置指定应用账号的额外信息。使用callback异步回调。
+Sets additional information for an application account. This API uses an asynchronous callback to return the result.
 
-> **说明：**
+> **NOTE：**
 > 
-> 从API version 7开始支持，从API version 9开始废弃。建议使用
+> This API is supported since API version 7 and deprecated since API version 9. You are advised to use
 > [setCustomData](arkts-basicservices-appaccount-appaccountmanager-i.md#setcustomdata)
-> 替代。
+> instead.
 
 **Since:** 7
 
@@ -4813,9 +4732,9 @@ setAccountExtraInfo(name: string, extraInfo: string, callback: AsyncCallback<voi
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| name | string | Yes | 应用账号的名称。最大长度为512个字符。 |
-| extraInfo | string | Yes | 额外信息(能转换string类型的其它信息)，额外信息不能是应用账号的敏感信息（如应用账号密码、token等）。 |
-| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | 回调函数。当设置成功时，err为null，否则为错误对象。 |
+| name | string | Yes | Name of the application account. The value cannot exceed 512 characters. |
+| extraInfo | string | Yes | Additional information (information that can be converted to the string type). It cannot contain sensitive information, such as the application account password and token. |
+| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **null**. Otherwise, **err** is an error object. |
 
 ## Examples
 
@@ -4837,12 +4756,13 @@ appAccountManager.setAccountExtraInfo('ZhangSan', 'Tk002', (err: BusinessError) 
 setAccountExtraInfo(name: string, extraInfo: string): Promise<void>
 ```
 
-设置此应用程序账号的额外信息。使用Promise异步回调。
+Sets additional information for an application account. This API uses a promise to return the result.
 
-> **说明：**
+> **NOTE：**
 > 
-> 从API version 7开始支持，从API version 9开始废弃。建议使用
-> [setCustomData](arkts-basicservices-appaccount-appaccountmanager-i.md#setcustomdata)替代。
+> This API is supported since API version 7 and deprecated since API version 9. You are advised to use
+> [setCustomData](arkts-basicservices-appaccount-appaccountmanager-i.md#setcustomdata)
+> instead.
 
 **Since:** 7
 
@@ -4860,14 +4780,14 @@ setAccountExtraInfo(name: string, extraInfo: string): Promise<void>
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| name | string | Yes | 应用账号的名称。最大长度为512个字符。 |
-| extraInfo | string | Yes | 额外信息(能转换string类型的其它信息)，额外信息不能是应用账号的敏感信息（如应用账号密码、token等）。 |
+| name | string | Yes | Name of the application account. The value cannot exceed 512 characters. |
+| extraInfo | string | Yes | Additional information (information that can be converted to the string type). It cannot contain sensitive information, such as the application account password and token. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | 无返回结果的Promise对象。 |
+| Promise&lt;void&gt; | Promise that returns no value. |
 
 ## Examples
 
@@ -4887,7 +4807,7 @@ appAccountManager.setAccountExtraInfo('ZhangSan', 'Tk002').then(() => {
 setAppAccess(name: string, bundleName: string, isAccessible: boolean, callback: AsyncCallback<void>): void
 ```
 
-设置指定应用对特定账号的访问权限。使用callback异步回调。
+Sets the access to the data of an account for an application. This API uses an asynchronous callback to return the result.
 
 **Since:** 9
 
@@ -4901,20 +4821,20 @@ setAppAccess(name: string, bundleName: string, isAccessible: boolean, callback: 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| name | string | Yes | 应用账号的名称。最大长度为512个字符。 |
-| bundleName | string | Yes | 第三方应用的包名。最大长度为512个字符。 |
-| isAccessible | boolean | Yes | 是否可访问。true表示允许访问，false表示禁止访问。 |
-| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | 回调函数，如果设置成功，err为null，否则为错误对象。 |
+| name | string | Yes | Name of the application account. The value cannot exceed 512 characters. |
+| bundleName | string | Yes | Bundle name of the application. The value cannot exceed 512 characters. |
+| isAccessible | boolean | Yes | Whether the access is allowed. The value **true** means to allow the access; the value **false** means the opposite. |
+| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **null**. Otherwise, **err** is an error object. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 12300003 | Account not found. |
-| 12400005 | The size of authorization list reaches the upper limit.<br>**Applicable version:** 14 and later |
-| 12300002 | Invalid name or bundleName. |
-| 12300001 | System service exception. |
-| 12400001 | Application not found.<br>**Applicable version:** 9 - 13 |
+| [12300003](../../apis-basic-services-kit/errorcode-account.md#12300003-account-not-found) | Account not found. |
+| [12400005](../../apis-basic-services-kit/errorcode-account.md#12400005-bundles-in-the-oauth-list-reached-the-limit) | The size of authorization list reaches the upper limit.<br>**Applicable version:** 14 and later |
+| [12300002](../../apis-basic-services-kit/errorcode-account.md#12300002-invalid-parameter) | Invalid name or bundleName. |
+| [12300001](../../apis-basic-services-kit/errorcode-account.md#12300001-system-service-abnormal) | System service exception. |
+| [12400001](../../apis-basic-services-kit/errorcode-account.md#12400001-application-not-found) | Application not found.<br>**Applicable version:** 9 - 13 |
 
 ## Examples
 
@@ -4941,7 +4861,7 @@ try {
 setAppAccess(name: string, bundleName: string, isAccessible: boolean): Promise<void>
 ```
 
-设置指定应用对特定账号的数据访问权限。使用Promise异步回调。
+Sets the access to the data of an account for an application. This API uses a promise to return the result.
 
 **Since:** 9
 
@@ -4955,25 +4875,25 @@ setAppAccess(name: string, bundleName: string, isAccessible: boolean): Promise<v
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| name | string | Yes | 应用账号的名称。最大长度为512个字符。 |
-| bundleName | string | Yes | 第三方应用的包名。最大长度为512个字符。 |
-| isAccessible | boolean | Yes | 是否可访问。true表示允许访问，false表示禁止访问。 |
+| name | string | Yes | Name of the application account. The value cannot exceed 512 characters. |
+| bundleName | string | Yes | Bundle name of the application. The value cannot exceed 512 characters. |
+| isAccessible | boolean | Yes | Whether the access is allowed. The value **true** means to allow the access; the value **false** means the opposite. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | 无返回结果的Promise对象。 |
+| Promise&lt;void&gt; | Promise that returns no value. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 12300003 | Account not found. |
-| 12400005 | The size of authorization list reaches the upper limit.<br>**Applicable version:** 14 and later |
-| 12300002 | Invalid name or bundleName. |
-| 12300001 | System service exception. |
-| 12400001 | Application not found.<br>**Applicable version:** 9 - 13 |
+| [12300003](../../apis-basic-services-kit/errorcode-account.md#12300003-account-not-found) | Account not found. |
+| [12400005](../../apis-basic-services-kit/errorcode-account.md#12400005-bundles-in-the-oauth-list-reached-the-limit) | The size of authorization list reaches the upper limit.<br>**Applicable version:** 14 and later |
+| [12300002](../../apis-basic-services-kit/errorcode-account.md#12300002-invalid-parameter) | Invalid name or bundleName. |
+| [12300001](../../apis-basic-services-kit/errorcode-account.md#12300001-system-service-abnormal) | System service exception. |
+| [12400001](../../apis-basic-services-kit/errorcode-account.md#12400001-application-not-found) | Application not found.<br>**Applicable version:** 9 - 13 |
 
 ## Examples
 
@@ -4998,13 +4918,13 @@ try {
 setAppAccountSyncEnable(name: string, isEnable: boolean, callback: AsyncCallback<void>): void
 ```
 
-开启或禁止指定应用账号的数据同步功能。使用callback异步回调。
+Sets data synchronization for an application account. This API uses an asynchronous callback to return the result.
 
-> **说明：**
+> **NOTE：**
 > 
-> 从API version 7开始支持，从API version 9开始废弃。建议使用
+> This API is supported since API version 7 and deprecated since API version 9. You are advised to use
 > [setDataSyncEnabled](arkts-basicservices-appaccount-appaccountmanager-i.md#setdatasyncenabled)
-> 替代。
+> instead.
 
 **Since:** 7
 
@@ -5024,9 +4944,9 @@ setAppAccountSyncEnable(name: string, isEnable: boolean, callback: AsyncCallback
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| name | string | Yes | 应用账号的名称。最大长度为512个字符。 |
-| isEnable | boolean | Yes | 是否开启数据同步。true表示开启数据同步，false表示关闭数据同步。 |
-| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | 回调函数。当开启或禁止成功时，err为null，否则为错误对象。 |
+| name | string | Yes | Name of the application account. The value cannot exceed 512 characters. |
+| isEnable | boolean | Yes | Whether to enable data synchronization. The value **true** means that data synchronization is enabled, and **false** means the opposite. |
+| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **null**. Otherwise, **err** is an error object. |
 
 ## Examples
 
@@ -5048,13 +4968,13 @@ appAccountManager.setAppAccountSyncEnable('ZhangSan', true, (err: BusinessError)
 setAppAccountSyncEnable(name: string, isEnable: boolean): Promise<void>
 ```
 
-开启或禁止指定应用账号的数据同步功能。使用Promise异步回调。
+Sets data synchronization for an application account. This API uses a promise to return the result.
 
-> **说明：**
+> **NOTE：**
 > 
-> 从API version 7开始支持，从API version 9开始废弃。建议使用
-> [setDataSyncEnabled](arkts-basicservices-appaccount-appaccountmanager-i.md#setdatasyncenabled)替代
-> 。
+> This API is supported since API version 7 and deprecated since API version 9. You are advised to use
+> [setDataSyncEnabled](arkts-basicservices-appaccount-appaccountmanager-i.md#setdatasyncenabled)
+> instead.
 
 **Since:** 7
 
@@ -5074,14 +4994,14 @@ setAppAccountSyncEnable(name: string, isEnable: boolean): Promise<void>
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| name | string | Yes | 应用账号的名称。最大长度为512个字符。 |
-| isEnable | boolean | Yes | 是否开启数据同步。true表示开启数据同步，false表示关闭数据同步。 |
+| name | string | Yes | Name of the application account. The value cannot exceed 512 characters. |
+| isEnable | boolean | Yes | Whether to enable data synchronization. The value **true** means that data synchronization is enabled, and **false** means the opposite. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | 无返回结果的Promise对象。 |
+| Promise&lt;void&gt; | Promise that returns no value. |
 
 ## Examples
 
@@ -5101,13 +5021,13 @@ appAccountManager.setAppAccountSyncEnable('ZhangSan', true).then(() => {
 setAssociatedData(name: string, key: string, value: string, callback: AsyncCallback<void>): void
 ```
 
-设置指定应用账号的关联数据。使用callback异步回调。
+Sets data to be associated with an application account. This API uses an asynchronous callback to return the result.
 
-> **说明：**
+> **NOTE：**
 > 
-> 从API version 7开始支持，从API version 9开始废弃。建议使用
+> This API is supported since API version 7 and deprecated since API version 9. You are advised to use
 > [setCustomData](arkts-basicservices-appaccount-appaccountmanager-i.md#setcustomdata)
-> 替代。
+> instead.
 
 **Since:** 7
 
@@ -5125,10 +5045,10 @@ setAssociatedData(name: string, key: string, value: string, callback: AsyncCallb
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| name | string | Yes | 应用账号的名称。最大长度为512个字符。 |
-| key | string | Yes | 关联数据的键名。 |
-| value | string | Yes | 关联数据的取值。 |
-| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | 回调函数。当设置与此应用账号关联的数据成功时，err为null，否则为错误对象。 |
+| name | string | Yes | Name of the application account. The value cannot exceed 512 characters. |
+| key | string | Yes | Key of the associated data. |
+| value | string | Yes | Value of the data to set. |
+| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **null**. Otherwise, **err** is an error object. |
 
 ## Examples
 
@@ -5150,12 +5070,13 @@ appAccountManager.setAssociatedData('ZhangSan', 'k001', 'v001', (err: BusinessEr
 setAssociatedData(name: string, key: string, value: string): Promise<void>
 ```
 
-设置指定应用账号的关联数据。使用Promise异步回调。
+Sets data to be associated with an application account. This API uses a promise to return the result.
 
-> **说明：**
+> **NOTE：**
 > 
-> 从API version 7开始支持，从API version 9开始废弃。建议使用
-> [setCustomData](arkts-basicservices-appaccount-appaccountmanager-i.md#setcustomdata)替代。
+> This API is supported since API version 7 and deprecated since API version 9. You are advised to use
+> [setCustomData](arkts-basicservices-appaccount-appaccountmanager-i.md#setcustomdata)
+> instead.
 
 **Since:** 7
 
@@ -5173,15 +5094,15 @@ setAssociatedData(name: string, key: string, value: string): Promise<void>
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| name | string | Yes | 应用账号的名称。最大长度为512个字符。 |
-| key | string | Yes | 关联数据的键名。 |
-| value | string | Yes | 关联数据的取值。 |
+| name | string | Yes | Name of the application account. The value cannot exceed 512 characters. |
+| key | string | Yes | Key of the associated data. |
+| value | string | Yes | Value of the data to set. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | 无返回结果的Promise对象。 |
+| Promise&lt;void&gt; | Promise that returns no value. |
 
 ## Examples
 
@@ -5201,7 +5122,7 @@ appAccountManager.setAssociatedData('ZhangSan', 'k001', 'v001').then(() => {
 setAuthToken(name: string, authType: string, token: string, callback: AsyncCallback<void>): void
 ```
 
-为指定应用账号设置特定鉴权类型的授权令牌。使用callback异步回调。
+Sets an authorization token of the specific authentication type for an application account. This API uses an asynchronous callback to return the result.
 
 **Since:** 9
 
@@ -5215,20 +5136,20 @@ setAuthToken(name: string, authType: string, token: string, callback: AsyncCallb
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| name | string | Yes | 应用账号的名称。最大长度为512个字符。 |
-| authType | string | Yes | 鉴权类型。自定义数据，最大长度为1024个字符。 |
-| token | string | Yes | 授权令牌。最大长度为1024个字符。 |
-| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | 回调函数。当设置成功时，err为null；否则为错误对象。 |
+| name | string | Yes | Name of the application account. The value cannot exceed 512 characters. |
+| authType | string | Yes | Authentication type. The custom type, The value cannot exceed 1024 characters. |
+| token | string | Yes | Authorization token. The value cannot exceed 1024 characters. |
+| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **null**. Otherwise, **err** is an error object. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameter types. |
-| 12300003 | Account not found. |
-| 12300002 | Invalid name, authType or token. |
-| 12400004 | The number of tokens reaches the upper limit. |
-| 12300001 | System service exception. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameter types. |
+| [12300003](../../apis-basic-services-kit/errorcode-account.md#12300003-account-not-found) | Account not found. |
+| [12300002](../../apis-basic-services-kit/errorcode-account.md#12300002-invalid-parameter) | Invalid name, authType or token. |
+| [12400004](../../apis-basic-services-kit/errorcode-account.md#12400004-token-count-reached-the-limit) | The number of tokens reaches the upper limit. |
+| [12300001](../../apis-basic-services-kit/errorcode-account.md#12300001-system-service-abnormal) | System service exception. |
 
 ## Examples
 
@@ -5255,7 +5176,7 @@ try {
 setAuthToken(name: string, authType: string, token: string): Promise<void>
 ```
 
-为指定应用账号设置特定鉴权类型的授权令牌。使用Promise异步回调。
+Sets an authorization token of the specific authentication type for an application account. This API uses a promise to return the result.
 
 **Since:** 9
 
@@ -5269,25 +5190,25 @@ setAuthToken(name: string, authType: string, token: string): Promise<void>
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| name | string | Yes | 应用账号的名称。最大长度为512个字符。 |
-| authType | string | Yes | 鉴权类型。自定义数据，最大长度为1024个字符。 |
-| token | string | Yes | 授权令牌。最大长度为1024个字符。 |
+| name | string | Yes | Name of the application account. The value cannot exceed 512 characters. |
+| authType | string | Yes | Authentication type. The custom type, The value cannot exceed 1024 characters. |
+| token | string | Yes | Authorization token. The value cannot exceed 1024 characters. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | 无返回结果的Promise对象。 |
+| Promise&lt;void&gt; | Promise that returns no value. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameter types. |
-| 12300003 | Account not found. |
-| 12300002 | Invalid name, authType or token. |
-| 12400004 | The number of tokens reaches the upper limit. |
-| 12300001 | System service exception. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameter types. |
+| [12300003](../../apis-basic-services-kit/errorcode-account.md#12300003-account-not-found) | Account not found. |
+| [12300002](../../apis-basic-services-kit/errorcode-account.md#12300002-invalid-parameter) | Invalid name, authType or token. |
+| [12400004](../../apis-basic-services-kit/errorcode-account.md#12400004-token-count-reached-the-limit) | The number of tokens reaches the upper limit. |
+| [12300001](../../apis-basic-services-kit/errorcode-account.md#12300001-system-service-abnormal) | System service exception. |
 
 ## Examples
 
@@ -5318,7 +5239,7 @@ setAuthTokenVisibility(
     ): void
 ```
 
-设置指定账号的特定鉴权类型的授权令牌对指定应用的可见性。使用callback异步回调。
+Sets the visibility of an authorization token to an application. This API uses an asynchronous callback to return  the result.
 
 **Since:** 9
 
@@ -5332,22 +5253,22 @@ setAuthTokenVisibility(
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| name | string | Yes | 应用账号的名称。最大长度为512个字符。 |
-| authType | string | Yes | 鉴权类型。自定义数据，最大长度为1024个字符。 |
-| bundleName | string | Yes | 被设置可见性的应用包名。最大长度为512个字符。 |
-| isVisible | boolean | Yes | 是否可见。true表示可见，false表示不可见。 |
-| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | 回调函数。当设置成功时，err为null；否则为错误对象。 |
+| name | string | Yes | Name of the application account. The value cannot exceed 512 characters. |
+| authType | string | Yes | Authentication type. The custom type, The value cannot exceed 1024 characters. |
+| bundleName | string | Yes | Bundle name of the application. The value cannot exceed 512 characters. |
+| isVisible | boolean | Yes | Whether the authorization token is visible to the application. The value **true** means the authorization token is visible to the application; the value **false** means the opposite. |
+| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **null**. Otherwise, **err** is an error object. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 12300107 | AuthType not found. |
-| 12300003 | Account not found. |
-| 12400005 | The size of authorization list reaches the upper limit. |
-| 12300002 | Invalid name, authType or bundleName. |
-| 12300001 | System service exception. |
-| 12400001 | Application not found.<br>**Applicable version:** 9 - 13 |
+| [12300107](../../apis-basic-services-kit/errorcode-account.md#12300107-authentication-type-not-found) | AuthType not found. |
+| [12300003](../../apis-basic-services-kit/errorcode-account.md#12300003-account-not-found) | Account not found. |
+| [12400005](../../apis-basic-services-kit/errorcode-account.md#12400005-bundles-in-the-oauth-list-reached-the-limit) | The size of authorization list reaches the upper limit. |
+| [12300002](../../apis-basic-services-kit/errorcode-account.md#12300002-invalid-parameter) | Invalid name, authType or bundleName. |
+| [12300001](../../apis-basic-services-kit/errorcode-account.md#12300001-system-service-abnormal) | System service exception. |
+| [12400001](../../apis-basic-services-kit/errorcode-account.md#12400001-application-not-found) | Application not found.<br>**Applicable version:** 9 - 13 |
 
 ## Examples
 
@@ -5375,7 +5296,7 @@ try {
 setAuthTokenVisibility(name: string, authType: string, bundleName: string, isVisible: boolean): Promise<void>
 ```
 
-设置指定账号的特定鉴权类型的授权令牌对指定应用的可见性。使用Promise异步回调。
+Sets the visibility of an authorization token to an application. This API uses a promise to return the result.
 
 **Since:** 9
 
@@ -5389,27 +5310,27 @@ setAuthTokenVisibility(name: string, authType: string, bundleName: string, isVis
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| name | string | Yes | 应用账号的名称。最大长度为512个字符。 |
-| authType | string | Yes | 鉴权类型。自定义数据，最大长度为1024个字符。 |
-| bundleName | string | Yes | 被设置可见性的应用包名。最大长度为512个字符。 |
-| isVisible | boolean | Yes | 是否可见。true表示可见，false表示不可见。 |
+| name | string | Yes | Name of the application account. The value cannot exceed 512 characters. |
+| authType | string | Yes | Authentication type. The custom type, The value cannot exceed 1024 characters. |
+| bundleName | string | Yes | Bundle name of the application. The value cannot exceed 512 characters. |
+| isVisible | boolean | Yes | Whether the authorization token is visible to the application. The value **true** means the authorization token is visible to the application; the value **false** means the opposite. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | 无返回结果的Promise对象。 |
+| Promise&lt;void&gt; | Promise that returns no value. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 12300107 | AuthType not found. |
-| 12300003 | Account not found. |
-| 12400005 | The size of authorization list reaches the upper limit. |
-| 12300002 | Invalid name, authType or bundleName. |
-| 12300001 | System service exception. |
-| 12400001 | Application not found.<br>**Applicable version:** 9 - 13 |
+| [12300107](../../apis-basic-services-kit/errorcode-account.md#12300107-authentication-type-not-found) | AuthType not found. |
+| [12300003](../../apis-basic-services-kit/errorcode-account.md#12300003-account-not-found) | Account not found. |
+| [12400005](../../apis-basic-services-kit/errorcode-account.md#12400005-bundles-in-the-oauth-list-reached-the-limit) | The size of authorization list reaches the upper limit. |
+| [12300002](../../apis-basic-services-kit/errorcode-account.md#12300002-invalid-parameter) | Invalid name, authType or bundleName. |
+| [12300001](../../apis-basic-services-kit/errorcode-account.md#12300001-system-service-abnormal) | System service exception. |
+| [12400001](../../apis-basic-services-kit/errorcode-account.md#12400001-application-not-found) | Application not found.<br>**Applicable version:** 9 - 13 |
 
 ## Examples
 
@@ -5434,7 +5355,7 @@ try {
 setAuthenticatorProperties(owner: string, callback: AuthCallback): void
 ```
 
-设置指定应用的认证器属性。使用callback异步回调。
+Sets the authenticator attributes of an application. This API uses an asynchronous callback to return the result.
 
 **Since:** 9
 
@@ -5448,19 +5369,19 @@ setAuthenticatorProperties(owner: string, callback: AuthCallback): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| owner | string | Yes | 认证器的所有者的包名。 |
-| callback | [AuthCallback](arkts-basicservices-appaccount-authcallback-i.md) | Yes | 回调函数，返回设置属性的结果。 |
+| owner | string | Yes | Owner of the authenticator. The value is the Bundle name of the application. The value cannot exceed 1024 characters. |
+| callback | [AuthCallback](arkts-basicservices-appaccount-authcallback-i.md) | Yes | Callback used to return the result. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameter types. |
-| 12300010 | Account service busy. |
-| 12300002 | Invalid owner. |
-| 12300114 | Authenticator service exception. |
-| 12300001 | System service exception. |
-| 12300113 | Authenticator service not found. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameter types. |
+| [12300010](../../apis-basic-services-kit/errorcode-account.md#12300010-account-service-not-respond) | Account service busy. |
+| [12300002](../../apis-basic-services-kit/errorcode-account.md#12300002-invalid-parameter) | Invalid owner. |
+| [12300114](../../apis-basic-services-kit/errorcode-account.md#12300114-authentication-service-abnormal) | Authenticator service exception. |
+| [12300001](../../apis-basic-services-kit/errorcode-account.md#12300001-system-service-abnormal) | System service exception. |
+| [12300113](../../apis-basic-services-kit/errorcode-account.md#12300113-authentication-service-not-found) | Authenticator service not found. |
 
 ## Examples
 
@@ -5490,7 +5411,7 @@ try {
 setAuthenticatorProperties(owner: string, options: SetPropertiesOptions, callback: AuthCallback): void
 ```
 
-设置认证器属性。使用callback异步回调。
+Sets the authenticator properties. This API uses an asynchronous callback to return the result.
 
 **Since:** 9
 
@@ -5504,20 +5425,20 @@ setAuthenticatorProperties(owner: string, options: SetPropertiesOptions, callbac
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| owner | string | Yes | 认证器的所有者的包名。 |
-| options | [SetPropertiesOptions](arkts-basicservices-appaccount-setpropertiesoptions-i.md) | Yes | 设置属性的选项。 |
-| callback | [AuthCallback](arkts-basicservices-appaccount-authcallback-i.md) | Yes | 认证器回调，返回设置属性的结果。 |
+| owner | string | Yes | Owner of the authenticator. The value is the Bundle name of the application. The value cannot exceed 1024 characters. |
+| options | [SetPropertiesOptions](arkts-basicservices-appaccount-setpropertiesoptions-i.md) | Yes | Authenticator properties to set. |
+| callback | [AuthCallback](arkts-basicservices-appaccount-authcallback-i.md) | Yes | Authenticator callback used to return the result. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameter types. |
-| 12300010 | Account service busy. |
-| 12300002 | Invalid owner or options. |
-| 12300114 | Authenticator service exception. |
-| 12300001 | System service exception. |
-| 12300113 | Authenticator service not found. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameter types. |
+| [12300010](../../apis-basic-services-kit/errorcode-account.md#12300010-account-service-not-respond) | Account service busy. |
+| [12300002](../../apis-basic-services-kit/errorcode-account.md#12300002-invalid-parameter) | Invalid owner or options. |
+| [12300114](../../apis-basic-services-kit/errorcode-account.md#12300114-authentication-service-abnormal) | Authenticator service exception. |
+| [12300001](../../apis-basic-services-kit/errorcode-account.md#12300001-system-service-abnormal) | System service exception. |
+| [12300113](../../apis-basic-services-kit/errorcode-account.md#12300113-authentication-service-not-found) | Authenticator service not found. |
 
 ## Examples
 
@@ -5551,7 +5472,7 @@ setCredential(name: string, credentialType: string, credential: string,
                              callback: AsyncCallback<void>): void
 ```
 
-设置指定应用账号的凭据。使用callback异步回调。
+Sets a credential for an application account. This API uses an asynchronous callback to return the result.
 
 **Since:** 9
 
@@ -5565,19 +5486,19 @@ setCredential(name: string, credentialType: string, credential: string,
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| name | string | Yes | 应用账号的名称。最大长度为512个字符。 |
-| credentialType | string | Yes | 凭据类型。自定义的类型，最大长度为1024个字符。 |
-| credential | string | Yes | 凭据取值。自定义的数据，最大长度为1024个字符。 |
-| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | 回调函数。当凭据设置成功时，err为null，否则为错误对象。 |
+| name | string | Yes | Name of the application account. The value cannot exceed 512 characters. |
+| credentialType | string | Yes | Credential type. The custom type, the value cannot exceed 1024 characters. |
+| credential | string | Yes | Credential value. The custom value, the value cannot exceed 1024 characters. |
+| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. If the credential is set successfully, **err** is **null**. Otherwise, **err** is an error object. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameter types. |
-| 12300003 | Account not found. |
-| 12300002 | Invalid name, credentialType or credential. |
-| 12300001 | System service exception. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameter types. |
+| [12300003](../../apis-basic-services-kit/errorcode-account.md#12300003-account-not-found) | Account not found. |
+| [12300002](../../apis-basic-services-kit/errorcode-account.md#12300002-invalid-parameter) | Invalid name, credentialType or credential. |
+| [12300001](../../apis-basic-services-kit/errorcode-account.md#12300001-system-service-abnormal) | System service exception. |
 
 ## Examples
 
@@ -5604,7 +5525,7 @@ try {
 setCredential(name: string, credentialType: string, credential: string): Promise<void>
 ```
 
-设置指定应用账号的凭据。使用Promise异步回调。
+Sets a credential for an application account. This API uses a promise to return the result.
 
 **Since:** 9
 
@@ -5618,24 +5539,24 @@ setCredential(name: string, credentialType: string, credential: string): Promise
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| name | string | Yes | 应用账号的名称。最大长度为512个字符。 |
-| credentialType | string | Yes | 凭据类型。自定义的类型，最大长度为1024个字符。 |
-| credential | string | Yes | 凭据取值。自定义的数据，最大长度为1024个字符。 |
+| name | string | Yes | Name of the application account. The value cannot exceed 512 characters. |
+| credentialType | string | Yes | Credential type. The custom type, the value cannot exceed 1024 characters. |
+| credential | string | Yes | Credential value. The custom value, the value cannot exceed 1024 characters. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | 无返回结果的Promise对象。 |
+| Promise&lt;void&gt; | Promise that returns no value. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameter types. |
-| 12300003 | Account not found. |
-| 12300002 | Invalid name, credentialType or credential. |
-| 12300001 | System service exception. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameter types. |
+| [12300003](../../apis-basic-services-kit/errorcode-account.md#12300003-account-not-found) | Account not found. |
+| [12300002](../../apis-basic-services-kit/errorcode-account.md#12300002-invalid-parameter) | Invalid name, credentialType or credential. |
+| [12300001](../../apis-basic-services-kit/errorcode-account.md#12300001-system-service-abnormal) | System service exception. |
 
 ## Examples
 
@@ -5660,7 +5581,7 @@ try {
 setCustomData(name: string, key: string, value: string, callback: AsyncCallback<void>): void
 ```
 
-设置指定应用账号的自定义数据。使用callback异步回调。
+Sets custom data for an application account. This API uses an asynchronous callback to return the result.
 
 **Since:** 9
 
@@ -5674,20 +5595,20 @@ setCustomData(name: string, key: string, value: string, callback: AsyncCallback<
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| name | string | Yes | 应用账号的名称。最大长度为512个字符。 |
-| key | string | Yes | 自定义数据的键名。最大长度为1024个字符。 |
-| value | string | Yes | 自定义数据的取值。最大长度为1024个字符。 |
-| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | 回调函数。当设置自定义数据成功时，err为null，否则为错误对象。 |
+| name | string | Yes | Name of the application account. The value cannot exceed 512 characters. |
+| key | string | Yes | Key of the custom data. The value cannot exceed 512 characters. |
+| value | string | Yes | Value of the custom data. The value cannot exceed 512 characters. |
+| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **null**. Otherwise, **err** is an error object. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameter types. |
-| 12300003 | Account not found. |
-| 12300002 | Invalid name, key or value. |
-| 12300001 | System service exception. |
-| 12400003 | The number of custom data reaches the upper limit. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameter types. |
+| [12300003](../../apis-basic-services-kit/errorcode-account.md#12300003-account-not-found) | Account not found. |
+| [12300002](../../apis-basic-services-kit/errorcode-account.md#12300002-invalid-parameter) | Invalid name, key or value. |
+| [12300001](../../apis-basic-services-kit/errorcode-account.md#12300001-system-service-abnormal) | System service exception. |
+| [12400003](../../apis-basic-services-kit/errorcode-account.md#12400003-custom-data-records-reached-the-limit) | The number of custom data reaches the upper limit. |
 
 ## Examples
 
@@ -5714,7 +5635,7 @@ try {
 setCustomData(name: string, key: string, value: string): Promise<void>
 ```
 
-设置指定应用账号的自定义数据。使用Promise异步回调。
+Sets custom data for an application account. This API uses a promise to return the result.
 
 **Since:** 9
 
@@ -5728,25 +5649,25 @@ setCustomData(name: string, key: string, value: string): Promise<void>
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| name | string | Yes | 应用账号的名称。最大长度为512个字符。 |
-| key | string | Yes | 自定义数据的键名。最大长度为1024个字符。 |
-| value | string | Yes | 自定义数据的取值。最大长度为1024个字符。 |
+| name | string | Yes | Name of the application account. The value cannot exceed 512 characters. |
+| key | string | Yes | Key of the custom data. The value cannot exceed 512 characters. |
+| value | string | Yes | Value of the custom data. The value cannot exceed 512 characters. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | 无返回结果的Promise对象。 |
+| Promise&lt;void&gt; | Promise that returns no value. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameter types. |
-| 12300003 | Account not found. |
-| 12300002 | Invalid name, key or value. |
-| 12300001 | System service exception. |
-| 12400003 | The number of custom data reaches the upper limit. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameter types. |
+| [12300003](../../apis-basic-services-kit/errorcode-account.md#12300003-account-not-found) | Account not found. |
+| [12300002](../../apis-basic-services-kit/errorcode-account.md#12300002-invalid-parameter) | Invalid name, key or value. |
+| [12300001](../../apis-basic-services-kit/errorcode-account.md#12300001-system-service-abnormal) | System service exception. |
+| [12400003](../../apis-basic-services-kit/errorcode-account.md#12400003-custom-data-records-reached-the-limit) | The number of custom data reaches the upper limit. |
 
 ## Examples
 
@@ -5771,7 +5692,7 @@ try {
 setDataSyncEnabled(name: string, isEnabled: boolean, callback: AsyncCallback<void>): void
 ```
 
-开启或禁止指定应用账号的数据同步功能。使用callback异步回调。
+Sets data synchronization for an application account. This API uses an asynchronous callback to return the result.
 
 **Since:** 9
 
@@ -5787,19 +5708,19 @@ setDataSyncEnabled(name: string, isEnabled: boolean, callback: AsyncCallback<voi
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| name | string | Yes | 应用账号的名称。最大长度为512个字符。 |
-| isEnabled | boolean | Yes | 是否开启数据同步。true表示开启数据同步，false表示关闭数据同步。 |
-| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | 回调函数。当开启或禁止成功时，err为null，否则为错误对象。 |
+| name | string | Yes | Name of the application account. The value cannot exceed 512 characters. |
+| isEnabled | boolean | Yes | Whether to enable data synchronization. The value **true** means that data synchronization is enabled, and **false** means the opposite. |
+| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **null**. Otherwise, **err** is an error object. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameter types. |
-| 12300003 | Account not found. |
-| 201 | Permission denied. |
-| 12300002 | Invalid name. |
-| 12300001 | System service exception. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameter types. |
+| [12300003](../../apis-basic-services-kit/errorcode-account.md#12300003-account-not-found) | Account not found. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
+| [12300002](../../apis-basic-services-kit/errorcode-account.md#12300002-invalid-parameter) | Invalid name. |
+| [12300001](../../apis-basic-services-kit/errorcode-account.md#12300001-system-service-abnormal) | System service exception. |
 
 ## Examples
 
@@ -5822,7 +5743,7 @@ try {
 setDataSyncEnabled(name: string, isEnabled: boolean): Promise<void>
 ```
 
-开启或禁止指定应用账号的数据同步功能。使用Promise异步回调。
+Sets data synchronization for an application account. This API uses a promise to return the result.
 
 **Since:** 9
 
@@ -5838,24 +5759,24 @@ setDataSyncEnabled(name: string, isEnabled: boolean): Promise<void>
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| name | string | Yes | 应用账号的名称。最大长度为512个字符。 |
-| isEnabled | boolean | Yes | 是否开启数据同步。true表示开启数据同步，false表示关闭数据同步。 |
+| name | string | Yes | Name of the application account. The value cannot exceed 512 characters. |
+| isEnabled | boolean | Yes | Whether to enable data synchronization. The value **true** means that data synchronization is enabled, and **false** means the opposite. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | 无返回结果的Promise对象。 |
+| Promise&lt;void&gt; | Promise that returns no value. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameter types. |
-| 12300003 | Account not found. |
-| 201 | Permission denied. |
-| 12300002 | Invalid name. |
-| 12300001 | System service exception. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameter types. |
+| [12300003](../../apis-basic-services-kit/errorcode-account.md#12300003-account-not-found) | Account not found. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
+| [12300002](../../apis-basic-services-kit/errorcode-account.md#12300002-invalid-parameter) | Invalid name. |
+| [12300001](../../apis-basic-services-kit/errorcode-account.md#12300001-system-service-abnormal) | System service exception. |
 
 ## Examples
 
@@ -5880,13 +5801,13 @@ try {
 setOAuthToken(name: string, authType: string, token: string, callback: AsyncCallback<void>): void
 ```
 
-为指定应用账号设置特定鉴权类型的授权令牌。使用callback异步回调。
+Sets an authorization token of the specific authentication type for an application account. This API uses an asynchronous callback to return the result.
 
-> **说明：**
+> **NOTE：**
 > 
-> 从API version 8开始支持，从API version 9开始废弃。建议使用
+> This API is supported since API version 8 and deprecated since API version 9. You are advised to use
 > [setAuthToken](arkts-basicservices-appaccount-appaccountmanager-i.md#setauthtoken)
-> 替代。
+> instead.
 
 **Since:** 8
 
@@ -5904,10 +5825,10 @@ setOAuthToken(name: string, authType: string, token: string, callback: AsyncCall
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| name | string | Yes | 应用账号的名称。最大长度为512个字符。 |
-| authType | string | Yes | 鉴权类型。自定义数据，最大长度为1024个字符。 |
-| token | string | Yes | 授权令牌。最大长度为1024个字符。 |
-| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | 回调函数。当设置成功时，err为null；否则为错误对象。 |
+| name | string | Yes | Name of the application account. The value cannot exceed 512 characters. |
+| authType | string | Yes | Authentication type. The custom type, The value cannot exceed 1024 characters. |
+| token | string | Yes | Authorization token. The value cannot exceed 1024 characters. |
+| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **null**. Otherwise, **err** is an error object. |
 
 ## Examples
 
@@ -5929,13 +5850,13 @@ appAccountManager.setOAuthToken('LiSi', 'getSocialData', 'xxxx', (err: BusinessE
 setOAuthToken(name: string, authType: string, token: string): Promise<void>
 ```
 
-为指定应用账号设置特定鉴权类型的授权令牌。使用Promise异步回调。
+Sets an authorization token of the specific authentication type for an application account. This API uses a promise to return the result.
 
-> **说明：**
+> **NOTE：**
 > 
-> 从API version 8开始支持，从API version 9开始废弃。建议使用
-> [setAuthToken](arkts-basicservices-appaccount-appaccountmanager-i.md#setauthtoken)替
-> 代。
+> This API is supported since API version 8 and deprecated since API version 9. You are advised to use
+> [setAuthToken](arkts-basicservices-appaccount-appaccountmanager-i.md#setauthtoken)
+> instead.
 
 **Since:** 8
 
@@ -5953,15 +5874,15 @@ setOAuthToken(name: string, authType: string, token: string): Promise<void>
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| name | string | Yes | 应用账号的名称。最大长度为512个字符。 |
-| authType | string | Yes | 鉴权类型。自定义数据，最大长度为1024个字符。 |
-| token | string | Yes | 授权令牌。最大长度为1024个字符。 |
+| name | string | Yes | Name of the application account. The value cannot exceed 512 characters. |
+| authType | string | Yes | Authentication type. The custom type, The value cannot exceed 1024 characters. |
+| token | string | Yes | Authorization token. The value cannot exceed 1024 characters. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | 无返回结果的Promise对象。 |
+| Promise&lt;void&gt; | Promise that returns no value. |
 
 ## Examples
 
@@ -5987,13 +5908,13 @@ setOAuthTokenVisibility(
     ): void
 ```
 
-设置指定账号的特定鉴权类型的授权令牌对指定应用的可见性。使用callback异步回调。
+Sets the visibility of an authorization token to an application. This API uses an asynchronous callback to return  the result.
 
-> **说明：**
+> **NOTE：**
 > 
-> 从API version 8开始支持，从API version 9开始废弃。建议使用
+> This API is supported since API version 8 and deprecated since API version 9. You are advised to use
 > [setAuthTokenVisibility](arkts-basicservices-appaccount-appaccountmanager-i.md#setauthtokenvisibility)
-> 替代。
+> instead.
 
 **Since:** 8
 
@@ -6011,11 +5932,11 @@ setOAuthTokenVisibility(
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| name | string | Yes | 应用账号的名称。最大长度为512个字符。 |
-| authType | string | Yes | 鉴权类型。自定义数据，最大长度为1024个字符。 |
-| bundleName | string | Yes | 被设置可见性的应用包名。最大长度为512个字符。 |
-| isVisible | boolean | Yes | 是否可见。true表示可见，false表示不可见。 |
-| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | 回调函数。当设置成功时，err为null；否则为错误对象。 |
+| name | string | Yes | Name of the application account. The value cannot exceed 512 characters. |
+| authType | string | Yes | Authentication type. The custom type, The value cannot exceed 1024 characters. |
+| bundleName | string | Yes | Bundle name of the application. The value cannot exceed 512 characters. |
+| isVisible | boolean | Yes | Whether the authorization token is visible to the application. The value **true** means the authorization token is visible to the application; the value **false** means the opposite. |
+| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **null**. Otherwise, **err** is an error object. |
 
 ## Examples
 
@@ -6038,13 +5959,13 @@ appAccountManager.setOAuthTokenVisibility('LiSi', 'getSocialData', 'com.example.
 setOAuthTokenVisibility(name: string, authType: string, bundleName: string, isVisible: boolean): Promise<void>
 ```
 
-设置指定账号的特定鉴权类型的授权令牌对指定应用的可见性。使用Promise异步回调。
+Sets the visibility of an authorization token to an application. This API uses a promise to return the result.
 
-> **说明：**
+> **NOTE：**
 > 
-> 从API version 8开始支持，从API version 9开始废弃。建议使用
+> This API is supported since API version 8 and deprecated since API version 9. You are advised to use
 > [setAuthTokenVisibility](arkts-basicservices-appaccount-appaccountmanager-i.md#setauthtokenvisibility)
-> 替代。
+> instead.
 
 **Since:** 8
 
@@ -6062,16 +5983,16 @@ setOAuthTokenVisibility(name: string, authType: string, bundleName: string, isVi
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| name | string | Yes | 应用账号的名称。最大长度为512个字符。 |
-| authType | string | Yes | 鉴权类型。自定义数据，最大长度为1024个字符。 |
-| bundleName | string | Yes | 被设置可见性的应用包名。最大长度为512个字符。 |
-| isVisible | boolean | Yes | 是否可见。true表示可见，false表示不可见。 |
+| name | string | Yes | Name of the application account. The value cannot exceed 512 characters. |
+| authType | string | Yes | Authentication type. The custom type, The value cannot exceed 1024 characters. |
+| bundleName | string | Yes | Bundle name of the application. The value cannot exceed 512 characters. |
+| isVisible | boolean | Yes | Whether the authorization token is visible to the application. The value **true** means the authorization token is visible to the application; the value **false** means the opposite. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | 无返回结果的Promise对象。 |
+| Promise&lt;void&gt; | Promise that returns no value. |
 
 ## Examples
 
@@ -6091,7 +6012,7 @@ appAccountManager.setOAuthTokenVisibility('LiSi', 'getSocialData', 'com.example.
 verifyCredential(name: string, owner: string, callback: AuthCallback): void
 ```
 
-验证指定账号的凭据。使用callback异步回调。
+Verifies the credential of an application account. This API uses an asynchronous callback to return the result.
 
 **Since:** 9
 
@@ -6105,21 +6026,21 @@ verifyCredential(name: string, owner: string, callback: AuthCallback): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| name | string | Yes | 应用账号的名称。最大长度为512个字符。 |
-| owner | string | Yes | 应用账号所有者的包名。最大长度为1024个字符。 |
-| callback | [AuthCallback](arkts-basicservices-appaccount-authcallback-i.md) | Yes | 回调函数，返回验证结果。 |
+| name | string | Yes | Name of the application account. The value cannot exceed 512 characters. |
+| owner | string | Yes | Owner of the application account. The value is the Bundle name of the application. The value cannot exceed 1024 characters. |
+| callback | [AuthCallback](arkts-basicservices-appaccount-authcallback-i.md) | Yes | Callback used to return the result. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameter types. |
-| 12300010 | Account service busy. |
-| 12300003 | Account not found. |
-| 12300002 | Invalid name or owner. |
-| 12300114 | Authenticator service exception. |
-| 12300001 | System service exception. |
-| 12300113 | Authenticator service not found. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameter types. |
+| [12300010](../../apis-basic-services-kit/errorcode-account.md#12300010-account-service-not-respond) | Account service busy. |
+| [12300003](../../apis-basic-services-kit/errorcode-account.md#12300003-account-not-found) | Account not found. |
+| [12300002](../../apis-basic-services-kit/errorcode-account.md#12300002-invalid-parameter) | Invalid name or owner. |
+| [12300114](../../apis-basic-services-kit/errorcode-account.md#12300114-authentication-service-abnormal) | Authenticator service exception. |
+| [12300001](../../apis-basic-services-kit/errorcode-account.md#12300001-system-service-abnormal) | System service exception. |
+| [12300113](../../apis-basic-services-kit/errorcode-account.md#12300113-authentication-service-not-found) | Authenticator service not found. |
 
 ## Examples
 
@@ -6149,7 +6070,7 @@ try {
 verifyCredential(name: string, owner: string, options: VerifyCredentialOptions, callback: AuthCallback): void
 ```
 
-验证用户凭据。使用callback异步回调。
+Verifies the user credential. This API uses an asynchronous callback to return the result.
 
 **Since:** 9
 
@@ -6163,22 +6084,22 @@ verifyCredential(name: string, owner: string, options: VerifyCredentialOptions, 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| name | string | Yes | 应用账号的名称。最大长度为512个字符。 |
-| owner | string | Yes | 应用账号所有者的包名。最大长度为1024个字符。 |
-| options | [VerifyCredentialOptions](arkts-basicservices-appaccount-verifycredentialoptions-i.md) | Yes | 验证凭据的选项。 |
-| callback | [AuthCallback](arkts-basicservices-appaccount-authcallback-i.md) | Yes | 回调函数，返回验证结果。 |
+| name | string | Yes | Name of the application account. The value cannot exceed 512 characters. |
+| owner | string | Yes | Owner of the application account. The value is the Bundle name of the application. The value cannot exceed 1024 characters. |
+| options | [VerifyCredentialOptions](arkts-basicservices-appaccount-verifycredentialoptions-i.md) | Yes | Options for credential verification. |
+| callback | [AuthCallback](arkts-basicservices-appaccount-authcallback-i.md) | Yes | Callback used to return the result. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameter types. |
-| 12300010 | Account service busy. |
-| 12300003 | Account not found. |
-| 12300002 | Invalid name, owner or options. |
-| 12300114 | Authenticator service exception. |
-| 12300001 | System service exception. |
-| 12300113 | Authenticator service not found. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameter types. |
+| [12300010](../../apis-basic-services-kit/errorcode-account.md#12300010-account-service-not-respond) | Account service busy. |
+| [12300003](../../apis-basic-services-kit/errorcode-account.md#12300003-account-not-found) | Account not found. |
+| [12300002](../../apis-basic-services-kit/errorcode-account.md#12300002-invalid-parameter) | Invalid name, owner or options. |
+| [12300114](../../apis-basic-services-kit/errorcode-account.md#12300114-authentication-service-abnormal) | Authenticator service exception. |
+| [12300001](../../apis-basic-services-kit/errorcode-account.md#12300001-system-service-abnormal) | System service exception. |
+| [12300113](../../apis-basic-services-kit/errorcode-account.md#12300113-authentication-service-not-found) | Authenticator service not found. |
 
 ## Examples
 

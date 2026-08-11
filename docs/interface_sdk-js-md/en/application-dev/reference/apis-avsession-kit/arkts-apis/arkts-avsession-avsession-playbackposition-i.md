@@ -1,6 +1,6 @@
 # PlaybackPosition
 
-媒体播放位置的相关属性。
+Playback position definition
 
 **Since:** 10
 
@@ -22,7 +22,7 @@ import { avSession } from 'kits/@kit.AVSessionKit';
 elapsedTime: long
 ```
 
-已用时间，单位毫秒（ms）。
+Elapsed time(position) of this media set by the app, described by milliseconds.
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：long
 
@@ -42,7 +42,7 @@ elapsedTime: long
 updateTime: long
 ```
 
-更新时间，单位毫秒（ms）。
+Record the system time when elapsedTime is set, described by milliseconds.
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：long
 

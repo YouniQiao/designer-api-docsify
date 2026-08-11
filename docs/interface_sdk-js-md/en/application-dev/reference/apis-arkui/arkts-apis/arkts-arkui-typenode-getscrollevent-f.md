@@ -6,7 +6,7 @@
 export function getScrollEvent(node: FrameNode): UIScrollEvent | undefined
 ```
 
-获取Scroll节点的事件实例
+Get the event instance of Scroll node.
 
 **Since:** 26.0.0
 
@@ -22,7 +22,7 @@ export function getScrollEvent(node: FrameNode): UIScrollEvent | undefined
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| node | [FrameNode](arkts-arkui-framenode-c.md) | Yes | 目标FrameNode. |
+| node | [FrameNode](arkts-arkui-framenode-c.md) | Yes | the target FrameNode. |
 
 **Return value:**
 

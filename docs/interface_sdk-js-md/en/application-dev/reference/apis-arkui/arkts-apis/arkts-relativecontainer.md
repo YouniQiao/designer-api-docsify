@@ -12,15 +12,15 @@
 
 | Name | Description |
 | --- | --- |
-| [BarrierStyle](arkts-arkui-relativecontainer-barrierstyle-i.md) | barrier参数，用于定义一条barrier的id、方向和生成时所依赖的组件。 |
-| [GuideLinePosition](arkts-arkui-relativecontainer-guidelineposition-i.md) | guideLine位置参数，用于定义guideLine的位置。 |
-| [GuideLineStyle](arkts-arkui-relativecontainer-guidelinestyle-i.md) | guideLine参数，用于定义一条guideLine的id、方向和位置。 |
-| [LocalizedBarrierStyle](arkts-arkui-relativecontainer-localizedbarrierstyle-i.md) | barrier参数，用于定义一条barrier的id、方向和生成时所依赖的组件。 |
+| [BarrierStyle](arkts-arkui-relativecontainer-barrierstyle-i.md) | Specifies the BarrierStyle of relative container |
+| [GuideLinePosition](arkts-arkui-relativecontainer-guidelineposition-i.md) | Specifies the position of guideLine |
+| [GuideLineStyle](arkts-arkui-relativecontainer-guidelinestyle-i.md) | Specifies the GuideLineStyle of relative container |
+| [LocalizedBarrierStyle](arkts-arkui-relativecontainer-localizedbarrierstyle-i.md) | Specifies the Localized BarrierStyle of relative container |
 
 ### Enums
 
 | Name | Description |
 | --- | --- |
-| [BarrierDirection](arkts-arkui-relativecontainer-barrierdirection-e.md) | 定义屏障线的方向。 |
-| [LocalizedBarrierDirection](arkts-arkui-relativecontainer-localizedbarrierdirection-e.md) | 定义支持镜像模式的屏障线的方向。 |
+| [BarrierDirection](arkts-arkui-relativecontainer-barrierdirection-e.md) | Specifies the direction value of Barrier. |
+| [LocalizedBarrierDirection](arkts-arkui-relativecontainer-localizedbarrierdirection-e.md) | Specifies the localized direction value of Barrier. |
 

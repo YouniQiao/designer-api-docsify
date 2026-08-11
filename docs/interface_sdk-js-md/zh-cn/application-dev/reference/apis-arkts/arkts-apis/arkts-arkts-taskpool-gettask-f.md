@@ -1,11 +1,5 @@
 # getTask
 
-## 导入模块
-
-```TypeScript
-import { taskpool } from 'kits/@kit.ArkTS';
-```
-
 ## getTask
 
 ```TypeScript

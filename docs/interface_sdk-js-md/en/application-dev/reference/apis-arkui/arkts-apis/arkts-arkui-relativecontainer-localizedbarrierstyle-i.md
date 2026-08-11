@@ -1,6 +1,6 @@
 # LocalizedBarrierStyle
 
-barrier参数，用于定义一条barrier的id、方向和生成时所依赖的组件。
+Specifies the Localized BarrierStyle of relative container
 
 **Since:** 23
 
@@ -16,7 +16,7 @@ barrier参数，用于定义一条barrier的id、方向和生成时所依赖的�
 id: string
 ```
 
-barrier的id，必须是唯一的并且不可与容器内组件重名。
+Specifies the id of localized barrier
 
 **Type:** string
 
@@ -36,7 +36,7 @@ barrier的id，必须是唯一的并且不可与容器内组件重名。
 localizedDirection: LocalizedBarrierDirection
 ```
 
-指定barrier的方向。垂直方向（TOP，BOTTOM）的barrier仅能作为组件的水平方向锚点，作为垂直方向锚点时值为0。水平方向（START，END）的barrier仅能作为组件的垂直方向锚点，作为水平方向锚点时值为0。
+Specifies the localized barrier direction of barrier
 
 **Type:** [LocalizedBarrierDirection](../arkts-components/arkts-arkui-localizedbarrierdirection-e.md)
 
@@ -56,7 +56,7 @@ localizedDirection: LocalizedBarrierDirection
 referencedId: Array<string>
 ```
 
-指定生成barrier所依赖的组件。
+Specifies the referencedId of localized barrier
 
 **Type:** Array&lt;string&gt;
 

@@ -1,10 +1,10 @@
 # CmacSpec
 
-消息认证码参数[MacSpec](arkts-cryptoarchitecture-cryptoframework-macspec-i.md)的子类，作为CMAC计算的输入。
+Represents the child class of [MacSpec](arkts-cryptoarchitecture-cryptoframework-macspec-i.md). It is used as an input parameter for CMAC computation.
 
-> **说明：**
+> **NOTE：**
 > 
-> cipherName是必选参数，表示CMAC使用的对称密码算法。
+> **cipherName** specifies the symmetric cipher algorithm used by CMAC. It is mandatory.
 
 **Inheritance/Implementation:** CmacSpec extends [MacSpec](arkts-cryptoarchitecture-cryptoframework-macspec-i.md)
 
@@ -28,7 +28,7 @@ import { cryptoFramework } from 'kits/@kit.CryptoArchitectureKit';
 cipherName: string
 ```
 
-CMAC使用的对称密码算法名。
+Symmetric cipher algorithm used by CMAC.
 
 **Type:** string
 

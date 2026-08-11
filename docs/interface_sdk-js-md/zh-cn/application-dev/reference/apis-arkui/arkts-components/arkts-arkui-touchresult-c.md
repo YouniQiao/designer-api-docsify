@@ -42,7 +42,7 @@ strategy: TouchTestStrategy
 
 事件派发策略。
 
-**类型：** [TouchTestStrategy](../arkts-apis/arkts-arkui-common-touchteststrategy-e.md)
+**类型：** [TouchTestStrategy](arkts-arkui-touchteststrategy-e.md)
 
 **起始版本：** 11
 

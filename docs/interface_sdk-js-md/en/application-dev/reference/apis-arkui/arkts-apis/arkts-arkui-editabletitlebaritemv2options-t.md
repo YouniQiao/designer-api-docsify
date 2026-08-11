@@ -4,7 +4,7 @@
 export type EditableTitleBarItemV2Options = EditableTitleBarMenuItemV2Options
 ```
 
-左侧图像项配置选项类型别名。
+Indicates the options of the image item.
 
 **Since:** 26.0.0
 

@@ -10,12 +10,6 @@ XmlSerializer接口用于生成XML文件。该接口基于预分配的ArrayBuffe
 
 **系统能力：** SystemCapability.Utils.Lang
 
-## 导入模块
-
-```TypeScript
-import { xml } from 'kits/@kit.ArkTS';
-```
-
 ## addEmptyElement
 
 ```TypeScript
@@ -295,7 +289,7 @@ console.info(result);
 setDocType(text: string): void
 ```
 
-添加文档类型。
+添加文档类型，调用后将在XML文本中生成`&lt;!DOCTYPE ...&gt;`格式的文档类型声明。
 
 **起始版本：** 8
 
@@ -311,7 +305,7 @@ setDocType(text: string): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| text | string | 是 | DocType属性的内容。 |
+| text | string | 是 | 文档类型声明的内容。 |
 
 ## 示例
 
@@ -380,6 +374,10 @@ setText(text: string): void
 ```
 
 添加标签值，标签值将作为当前元素的文本内容，写入元素的开始标记与结束标记之间。
+
+> **说明：**
+> 
+> 调用该接口前必须先调用[startElement](arkts-arkts-xml-xmlserializer-c.md#startelement)接口写入元素开始标记。
 
 **起始版本：** 8
 

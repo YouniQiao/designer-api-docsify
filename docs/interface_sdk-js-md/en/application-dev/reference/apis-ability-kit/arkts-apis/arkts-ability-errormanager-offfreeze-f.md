@@ -12,7 +12,7 @@ import { errorManager } from 'kits/@kit.AbilityKit';
 function offFreeze(observer?: FreezeObserver): void
 ```
 
-注销冻屏事件观测器。此函数只能在主线程中调用。
+Unregister the observer for freeze event.This function can only be called from main thread.
 
 **Since:** 24
 
@@ -26,13 +26,13 @@ function offFreeze(observer?: FreezeObserver): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| observer | [FreezeObserver](arkts-ability-errormanager-freezeobserver-t.md) | No | 冻屏事件观测器。 |
+| observer | [FreezeObserver](arkts-ability-errormanager-freezeobserver-t.md) | No | The freeze event observer. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | 参数错误。可能的原因：1. 必填参数未填写； 2. 参数类型不正确；3. 参数校验失败。 |
-| 16200001 | 调用者无效。 |
-| 16300004 | 观测器不存在。 |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| [16200001](../errorcode-ability.md#16200001-caller-released) | If the caller is invalid. |
+| [16300004](../errorcode-ability.md#16300004-observer-does-not-exist) | If the observer does not exist. |
 

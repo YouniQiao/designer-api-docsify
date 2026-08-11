@@ -12,7 +12,7 @@ import { avMusicTemplate } from 'kits/@kit.AVSessionKit';
 function getAllAVMusicTemplateDescriptors(userId?: int): AVMusicTemplateDescriptor[]
 ```
 
-获取所有的音频模板描述，返回音频模板描述的集合。
+Get all AVMusicTemplate descriptors.
 
 **Since:** 23
 
@@ -32,19 +32,19 @@ function getAllAVMusicTemplateDescriptors(userId?: int): AVMusicTemplateDescript
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| userId | ArkTS-Dyn: number  <br>ArkTS-Sta：int | No | 用户ID。以用户传递为准，可为空。 |
+| userId | ArkTS-Dyn: number  <br>ArkTS-Sta：int | No | user id |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [AVMusicTemplateDescriptor](arkts-avsession-avmusictemplate-avmusictemplatedescriptor-i-sys.md)[] | 音频模板描述的集合。 |
+| [AVMusicTemplateDescriptor](arkts-avsession-avmusictemplate-avmusictemplatedescriptor-i-sys.md)[] | an AVMusicTemplate descriptor array |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 801 | Capability not supported.function getAllAVMusicTemplateDescriptors can not work correctly due to limited device capabilities. |
-| 201 | Permission verify failed. |
-| 202 | Not System App. |
+| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported.function getAllAVMusicTemplateDescriptors can not work correctly due to limited device capabilities. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission verify failed. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not System App. |
 

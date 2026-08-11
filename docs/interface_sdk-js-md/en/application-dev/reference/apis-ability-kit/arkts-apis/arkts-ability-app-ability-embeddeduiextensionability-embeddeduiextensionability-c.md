@@ -1,8 +1,10 @@
 # EmbeddedUIExtensionAbility
 
-EmbeddedUIExtensionAbility为开发者提供了跨进程界面嵌入的能力，继承自  
-[UIExtensionAbility](arkts-ability-app-ability-uiextensionability-uiextensionability-c.md)。开发者通过实现EmbeddedUIExtensionAbility，为本应用提供跨进程界面嵌入能力。例如，开发者可以在[UIAbility](arkts-app-ability-uiability.md)的页面中通过  
-[EmbeddedComponent](../../apis-arkui/arkts-components/arkts-arkui-embedded_component-i)嵌入本应用的EmbeddedUIExtensionAbility提供的界面。各类Ability的继承关系详见[继承关系说明](../../../reference/apis-ability-kit/js-apis-app-ability-ability.md#ability的继承关系说明)。该接口在PC/2in1、Tablet中可正常调用，在其他设备类型中无法被启动。
+EmbeddedUIExtensionAbility is a component that enables cross-process UI embedding. It inherits from  
+[UIExtensionAbility](arkts-ability-app-ability-uiextensionability-uiextensionability-c.md).You can implement this class to add cross-process UI embedding capabilities to your applications. A typical use case is embedding a UI, provided by the application's own EmbeddedUIExtensionAbility, into a  
+[UIAbility](arkts-app-ability-uiability.md) page using an  
+[EmbeddedComponent](../../apis-arkui/arkts-components/arkts-arkui-embedded_component-i).For details about the inheritance relationship of each ability, see  
+[Inheritance Relationship](../../../reference/apis-ability-kit/js-apis-app-ability-ability.md#ability-inheritance-relationship).This API can be properly called on PCs/2-in-1 devices and tablets. It is unavailable on other devices.
 
 **Inheritance/Implementation:** EmbeddedUIExtensionAbility extends [UIExtensionAbility](arkts-ability-app-ability-uiextensionability-uiextensionability-c.md)
 

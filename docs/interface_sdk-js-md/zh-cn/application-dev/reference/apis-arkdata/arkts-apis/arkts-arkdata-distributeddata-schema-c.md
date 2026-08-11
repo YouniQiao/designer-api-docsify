@@ -86,7 +86,7 @@ root: FieldNode
 
 表示json根对象。
 
-**类型：** [FieldNode](arkts-arkdata-distributedkvstore-fieldnode-c.md)
+**类型：** [FieldNode](arkts-arkdata-distributeddata-fieldnode-c.md)
 
 **起始版本：** 8
 

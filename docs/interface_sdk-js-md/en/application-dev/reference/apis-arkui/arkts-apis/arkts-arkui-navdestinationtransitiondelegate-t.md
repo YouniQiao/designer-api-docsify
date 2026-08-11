@@ -4,7 +4,7 @@
 export type NavDestinationTransitionDelegate = (operation: NavigationOperation, isEnter: boolean) => (Array<NavDestinationTransition> | undefined)
 ```
 
-NavDestination自定义转场动画的代理函数。
+Delegate function for NavDestination custom animation.
 
 **Since:** 23
 
@@ -20,8 +20,8 @@ NavDestination自定义转场动画的代理函数。
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| operation | [NavigationOperation](../arkts-components/arkts-arkui-navigationoperation-e.md) | Yes | 当前页面转场的操作类型。 |
-| isEnter | boolean | Yes | 当前页面是否为入场页面。 <br>true：当前页面是入场页面； false：当前页面不是入场页面。 |
+| operation | [NavigationOperation](../arkts-components/arkts-arkui-navigationoperation-e.md) | Yes | the operation type of current Navigation animation. |
+| isEnter | boolean | Yes | whether current NavDestination will do enter-type transition. |
 
 **Return value:**
 

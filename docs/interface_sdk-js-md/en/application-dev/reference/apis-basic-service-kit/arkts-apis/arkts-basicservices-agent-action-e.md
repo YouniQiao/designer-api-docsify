@@ -1,6 +1,6 @@
 # Action
 
-定义操作选项。
+Defines action options.
 
 **Since:** 10
 
@@ -16,7 +16,7 @@
 DOWNLOAD
 ```
 
-表示下载任务。
+Download.
 
 **Since:** 10
 
@@ -34,7 +34,7 @@ DOWNLOAD
 UPLOAD
 ```
 
-表示上传任务。
+Upload.
 
 **Since:** 10
 

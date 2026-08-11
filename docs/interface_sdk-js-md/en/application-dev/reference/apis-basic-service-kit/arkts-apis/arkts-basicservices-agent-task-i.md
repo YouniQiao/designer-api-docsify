@@ -1,12 +1,13 @@
 # Task
 
-上传或下载任务。使用该方法前需要先获取Task对象，promise形式通过  
-[request.agent.create](arkts-basicservices-agent-create-f.md#create)获取，callback形式通过  
-[request.agent.create](arkts-basicservices-agent-create-f.md#create)获取。
+Implements an upload or download task. Before using this API, you must obtain a **Task** object, from a promise through   
+[request.agent.create](arkts-basicservices-agent-create-f.md#create) or from a callback through   
+[request.agent.create](arkts-basicservices-agent-create-f.md#create).
 
-> **说明：**
+> **NOTE：**
 > 
-> Task对象及其挂载回调函数会在调用remove方法后释放并被系统自动回收。
+> The **Task** object and its mounting callback function are released and automatically reclaimed by the system
+> after the **remove** method is called.
 
 **Since:** 10
 
@@ -28,11 +29,13 @@ import { request } from 'kits/@kit.BasicServicesKit';
 off(event: 'progress', callback?: (progress: Progress) => void): void
 ```
 
-取消订阅任务进度事件。
+Unsubscribes from task progress events.
 
-> **说明：**
+> **NOTE：**
 > 
-> 示例中context的获取方式请参见[获取UIAbility的上下文信息](../../../application-models/uiability-usage.md#获取uiability的上下文信息)。
+> For details about how to obtain the context in the example, see
+> [Obtaining the Context of UIAbility](../../../application-models/uiability-usage.md#obtaining-the-context-of-uiability)
+> .
 
 **Since:** 10
 
@@ -48,15 +51,15 @@ off(event: 'progress', callback?: (progress: Progress) => void): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| event | 'progress' | Yes | 取消订阅的事件类型。&lt;br&gt;- 取值为'progress'，表示任务进度。 |
-| callback | (progress: Progress) =&gt; void | No | 回调函数，发生相关的事件时触发该回调方法。若无此参数，则取消订阅的所有进度回调函数。 |
+| event | 'progress' | Yes | Event type.&lt;br&gt;- **'progress'**: task progress. |
+| callback | (progress: Progress) =&gt; void | No | Callback to be invoked when the specified event occurs. If this parameter is not specified, all callbacks of the task progress events are unregistered. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. Possible causes: &lt;br&gt; 1. Missing mandatory parameters. &lt;br&gt; 2. Incorrect parameter type. &lt;br&gt; 3. Parameter verification failed. |
-| 21900005 | task mode error.<br>**Applicable version:** 10 and later |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: &lt;br&gt; 1. Missing mandatory parameters. &lt;br&gt; 2. Incorrect parameter type. &lt;br&gt; 3. Parameter verification failed. |
+| [21900005](../../apis-basic-services-kit/errorcode-request.md#21900005-task-mode-error) | task mode error.<br>**Applicable version:** 10 and later |
 
 ## off
 
@@ -64,11 +67,13 @@ off(event: 'progress', callback?: (progress: Progress) => void): void
 off(event: 'completed', callback?: (progress: Progress) => void): void
 ```
 
-取消订阅任务完成事件。
+Unsubscribes from task completion events.
 
-> **说明：**
+> **NOTE：**
 > 
-> 示例中context的获取方式请参见[获取UIAbility的上下文信息](../../../application-models/uiability-usage.md#获取uiability的上下文信息)。
+> For details about how to obtain the context in the example, see
+> [Obtaining the Context of UIAbility](../../../application-models/uiability-usage.md#obtaining-the-context-of-uiability)
+> .
 
 **Since:** 10
 
@@ -84,15 +89,15 @@ off(event: 'completed', callback?: (progress: Progress) => void): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| event | 'completed' | Yes | 取消订阅的事件类型。&lt;br&gt;- 取值为'completed'，表示任务完成。 |
-| callback | (progress: Progress) =&gt; void | No | 回调函数，发生相关的事件时触发该回调方法。若无此参数，则取消订阅的所有完成回调函数。 |
+| event | 'completed' | Yes | Event type.&lt;br&gt;- **'completed'**: task completion. |
+| callback | (progress: Progress) =&gt; void | No | Callback to be invoked when the specified event occurs. If this parameter is not specified, all callbacks of the task completion events are unregistered. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. Possible causes: &lt;br&gt; 1. Missing mandatory parameters. &lt;br&gt; 2. Incorrect parameter type. &lt;br&gt; 3. Parameter verification failed. |
-| 21900005 | Operation with wrong task mode.<br>**Applicable version:** 10 and later |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: &lt;br&gt; 1. Missing mandatory parameters. &lt;br&gt; 2. Incorrect parameter type. &lt;br&gt; 3. Parameter verification failed. |
+| [21900005](../../apis-basic-services-kit/errorcode-request.md#21900005-task-mode-error) | Operation with wrong task mode.<br>**Applicable version:** 10 and later |
 
 ## off
 
@@ -100,11 +105,13 @@ off(event: 'completed', callback?: (progress: Progress) => void): void
 off(event: 'failed', callback?: (progress: Progress) => void): void
 ```
 
-取消订阅任务失败事件。
+Unsubscribes from task failure events.
 
-> **说明：**
+> **NOTE：**
 > 
-> 示例中context的获取方式请参见[获取UIAbility的上下文信息](../../../application-models/uiability-usage.md#获取uiability的上下文信息)。
+> For details about how to obtain the context in the example, see
+> [Obtaining the Context of UIAbility](../../../application-models/uiability-usage.md#obtaining-the-context-of-uiability)
+> .
 
 **Since:** 10
 
@@ -120,15 +127,15 @@ off(event: 'failed', callback?: (progress: Progress) => void): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| event | 'failed' | Yes | 取消订阅的事件类型。&lt;br&gt;- 取值为'failed'，表示任务失败。 |
-| callback | (progress: Progress) =&gt; void | No | 回调函数，发生相关的事件时触发该回调方法。若无此参数，则取消订阅的所有失败回调函数。 |
+| event | 'failed' | Yes | Event type.&lt;br&gt;- **'failed'**: task failure. |
+| callback | (progress: Progress) =&gt; void | No | Callback to be invoked when the specified event occurs. If this parameter is not specified, all callbacks of the task failure events are unregistered. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. Possible causes: &lt;br&gt; 1. Missing mandatory parameters. &lt;br&gt; 2. Incorrect parameter type. &lt;br&gt; 3. Parameter verification failed. |
-| 21900005 | Operation with wrong task mode.<br>**Applicable version:** 10 and later |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: &lt;br&gt; 1. Missing mandatory parameters. &lt;br&gt; 2. Incorrect parameter type. &lt;br&gt; 3. Parameter verification failed. |
+| [21900005](../../apis-basic-services-kit/errorcode-request.md#21900005-task-mode-error) | Operation with wrong task mode.<br>**Applicable version:** 10 and later |
 
 ## off
 
@@ -136,11 +143,13 @@ off(event: 'failed', callback?: (progress: Progress) => void): void
 off(event: 'pause', callback?: (progress: Progress) => void): void
 ```
 
-取消订阅任务暂停事件。
+Unsubscribes from the foreground task pause event.
 
-> **说明：**
+> **NOTE：**
 > 
-> 示例中context的获取方式请参见[获取UIAbility的上下文信息](../../../application-models/uiability-usage.md#获取uiability的上下文信息)。
+> For details about how to obtain the context in the example, see
+> [Obtaining the Context of UIAbility](../../../application-models/uiability-usage.md#obtaining-the-context-of-uiability)
+> .
 
 **Since:** 11
 
@@ -154,14 +163,14 @@ off(event: 'pause', callback?: (progress: Progress) => void): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| event | 'pause' | Yes | 取消订阅的事件类型。&lt;br&gt;- 取值为'pause'，表示任务暂停。 |
-| callback | (progress: Progress) =&gt; void | No | 回调函数，发生相关的事件时触发该回调方法。若无此参数，则取消订阅的所有暂停回调函数。 |
+| event | 'pause' | Yes | Event type.&lt;br&gt;- **'pause'**: task pause. |
+| callback | (progress: Progress) =&gt; void | No | Callback to be invoked when the specified event occurs. If this parameter is not specified, all callbacks of the task pause events are unregistered. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. Possible causes: &lt;br&gt; 1. Missing mandatory parameters. &lt;br&gt; 2. Incorrect parameter type. &lt;br&gt; 3. Parameter verification failed. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: &lt;br&gt; 1. Missing mandatory parameters. &lt;br&gt; 2. Incorrect parameter type. &lt;br&gt; 3. Parameter verification failed. |
 
 ## off
 
@@ -169,11 +178,13 @@ off(event: 'pause', callback?: (progress: Progress) => void): void
 off(event: 'resume', callback?: (progress: Progress) => void): void
 ```
 
-取消订阅任务恢复事件。
+Unsubscribes from foreground task resume events.
 
-> **说明：**
+> **NOTE：**
 > 
-> 示例中context的获取方式请参见[获取UIAbility的上下文信息](../../../application-models/uiability-usage.md#获取uiability的上下文信息)。
+> For details about how to obtain the context in the example, see
+> [Obtaining the Context of UIAbility](../../../application-models/uiability-usage.md#obtaining-the-context-of-uiability)
+> .
 
 **Since:** 11
 
@@ -187,14 +198,14 @@ off(event: 'resume', callback?: (progress: Progress) => void): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| event | 'resume' | Yes | 取消订阅的事件类型。&lt;br&gt;- 取值为'resume'，表示任务恢复。 |
-| callback | (progress: Progress) =&gt; void | No | 回调函数，发生相关的事件时触发该回调方法。若无此参数，则取消订阅的所有恢复回调函数。 |
+| event | 'resume' | Yes | Event type.&lt;br&gt;- **'resume'**: task resume. |
+| callback | (progress: Progress) =&gt; void | No | Callback to be invoked when the specified event occurs. If this parameter is not specified, all callbacks of the task resume events are unregistered. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. Possible causes: &lt;br&gt; 1. Missing mandatory parameters. &lt;br&gt; 2. Incorrect parameter type. &lt;br&gt; 3. Parameter verification failed. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: &lt;br&gt; 1. Missing mandatory parameters. &lt;br&gt; 2. Incorrect parameter type. &lt;br&gt; 3. Parameter verification failed. |
 
 ## off
 
@@ -202,11 +213,13 @@ off(event: 'resume', callback?: (progress: Progress) => void): void
 off(event: 'remove', callback?: (progress: Progress) => void): void
 ```
 
-取消订阅任务移除事件。
+Unsubscribes from the task removal event.
 
-> **说明：**
+> **NOTE：**
 > 
-> 示例中context的获取方式请参见[获取UIAbility的上下文信息](../../../application-models/uiability-usage.md#获取uiability的上下文信息)。
+> For details about how to obtain the context in the example, see
+> [Obtaining the Context of UIAbility](../../../application-models/uiability-usage.md#obtaining-the-context-of-uiability)
+> .
 
 **Since:** 11
 
@@ -220,14 +233,14 @@ off(event: 'remove', callback?: (progress: Progress) => void): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| event | 'remove' | Yes | 取消订阅的事件类型。&lt;br&gt;- 取值为'remove'，表示任务被移除。 |
-| callback | (progress: Progress) =&gt; void | No | 回调函数，发生相关的事件时触发该回调方法。若无此参数，则取消订阅的所有移除回调函数。 |
+| event | 'remove' | Yes | Event type.&lt;br&gt;- **'remove'**: task removal. |
+| callback | (progress: Progress) =&gt; void | No | Callback to be invoked when the specified event occurs. If this parameter is not specified, all callbacks of the task removal events are unregistered. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. Possible causes: &lt;br&gt; 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameter types. &lt;br&gt; 3. Parameter verification failed. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: &lt;br&gt; 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameter types. &lt;br&gt; 3. Parameter verification failed. |
 
 ## off
 
@@ -235,11 +248,13 @@ off(event: 'remove', callback?: (progress: Progress) => void): void
 off(event: 'response', callback?: Callback<HttpResponse>): void
 ```
 
-取消订阅任务响应事件。
+Unsubscribes from task response headers.
 
-> **说明：**
+> **NOTE：**
 > 
-> 示例中context的获取方式请参见[获取UIAbility的上下文信息](../../../application-models/uiability-usage.md#获取uiability的上下文信息)。
+> For details about how to obtain the context in the example, see
+> [Obtaining the Context of UIAbility](../../../application-models/uiability-usage.md#obtaining-the-context-of-uiability)
+> .
 
 **Since:** 12
 
@@ -255,14 +270,14 @@ off(event: 'response', callback?: Callback<HttpResponse>): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| event | 'response' | Yes | 取消订阅的事件类型。&lt;br&gt;- 取值为'response'，表示任务响应。 |
-| callback | [Callback](arkts-basicservices-base-callback-i.md)&lt;HttpResponse&gt; | No | 需要取消订阅的回调函数。若无此参数，则取消订阅当前类型的所有回调函数。 |
+| event | 'response' | Yes | Event type.&lt;br&gt;- **response**: task response. |
+| callback | [Callback](arkts-basicservices-base-callback-i.md)&lt;HttpResponse&gt; | No | Callback to unregister. If this parameter is not specified, all callbacks of the current type will be unregistered. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. Possible causes: &lt;br&gt; 1. Missing mandatory parameters. &lt;br&gt; 2. Incorrect parameter type. &lt;br&gt; 3. Parameter verification failed. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: &lt;br&gt; 1. Missing mandatory parameters. &lt;br&gt; 2. Incorrect parameter type. &lt;br&gt; 3. Parameter verification failed. |
 
 ## off
 
@@ -270,11 +285,13 @@ off(event: 'response', callback?: Callback<HttpResponse>): void
 off(event: 'faultOccur', callback?: Callback<Faults>): void
 ```
 
-取消订阅任务失败原因相关的事件。
+Unsubscribes from task failure events.
 
-> **说明：**
+> **NOTE：**
 > 
-> 示例中context的获取方式请参见[获取UIAbility的上下文信息](../../../application-models/uiability-usage.md#获取uiability的上下文信息)。
+> For details about how to obtain the context in the example, see
+> [Obtaining the Context of UIAbility](../../../application-models/uiability-usage.md#obtaining-the-context-of-uiability)
+> .
 
 **Since:** 20
 
@@ -288,14 +305,14 @@ off(event: 'faultOccur', callback?: Callback<Faults>): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| event | 'faultOccur' | Yes | 订阅的事件类型。&lt;br&gt;- 取值为'faultOccur'，表示任务失败。 |
-| callback | [Callback](arkts-basicservices-base-callback-i.md)&lt;Faults&gt; | No | 需要取消订阅的回调函数。若无此参数，则默认取消订阅当前类型的所有回调函数。 |
+| event | 'faultOccur' | Yes | Event type.&lt;br&gt;- **'faultOccur'**: task failure. |
+| callback | [Callback](arkts-basicservices-base-callback-i.md)&lt;Faults&gt; | No | Callback to unregister. If this parameter is not specified, all callbacks of the current type will be unregistered. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. Possible causes: &lt;br&gt; 1. Missing mandatory parameters. &lt;br&gt; 2. Incorrect parameter type. &lt;br&gt; 3. Parameter verification failed. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: &lt;br&gt; 1. Missing mandatory parameters. &lt;br&gt; 2. Incorrect parameter type. &lt;br&gt; 3. Parameter verification failed. |
 
 ## off
 
@@ -303,11 +320,13 @@ off(event: 'faultOccur', callback?: Callback<Faults>): void
 off(event: 'wait', callback?: Callback<WaitingReason>): void
 ```
 
-取消订阅任务等待原因相关的事件。
+Unsubscribes from task waiting events.
 
-> **说明：**
+> **NOTE：**
 > 
-> 示例中context的获取方式请参见[获取UIAbility的上下文信息](../../../application-models/uiability-usage.md#获取uiability的上下文信息)。
+> For details about how to obtain the context in the example, see
+> [Obtaining the Context of UIAbility](../../../application-models/uiability-usage.md#obtaining-the-context-of-uiability)
+> .
 
 **Since:** 20
 
@@ -321,14 +340,14 @@ off(event: 'wait', callback?: Callback<WaitingReason>): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| event | 'wait' | Yes | 订阅的事件类型。&lt;br&gt;- 取值为'wait'，表示任务等待。 |
-| callback | [Callback](arkts-basicservices-base-callback-i.md)&lt;WaitingReason&gt; | No | 需要取消订阅的回调函数。若无此参数，则默认取消订阅当前类型的所有回调函数。 |
+| event | 'wait' | Yes | Event type.&lt;br&gt;- 'wait': The task is waiting. |
+| callback | [Callback](arkts-basicservices-base-callback-i.md)&lt;WaitingReason&gt; | No | Callback to unregister. If this parameter is not specified, all callbacks of the current type will be unregistered. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. Possible causes: &lt;br&gt; 1. Missing mandatory parameters. &lt;br&gt; 2. Incorrect parameter type. &lt;br&gt; 3. Parameter verification failed. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: &lt;br&gt; 1. Missing mandatory parameters. &lt;br&gt; 2. Incorrect parameter type. &lt;br&gt; 3. Parameter verification failed. |
 
 ## offCompleted
 
@@ -534,11 +553,13 @@ Disables the wait callback.
 on(event: 'progress', callback: (progress: Progress) => void): void
 ```
 
-订阅任务进度的事件，使用callback异步回调。
+Subscribes to task progress changes. This API uses an asynchronous callback to return the result.
 
-> **说明：**
+> **NOTE：**
 > 
-> 示例中context的获取方式请参见[获取UIAbility的上下文信息](../../../application-models/uiability-usage.md#获取uiability的上下文信息)。
+> For details about how to obtain the context in the example, see
+> [Obtaining the Context of UIAbility](../../../application-models/uiability-usage.md#obtaining-the-context-of-uiability)
+> .
 
 **Since:** 10
 
@@ -554,15 +575,15 @@ on(event: 'progress', callback: (progress: Progress) => void): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| event | 'progress' | Yes | 订阅的事件类型。&lt;br&gt;- 取值为'progress'，表示任务进度，任务进度有进展时触发该事件。 |
-| callback | (progress: Progress) =&gt; void | Yes | 回调函数，发生相关的事件时触发该回调方法。 |
+| event | 'progress' | Yes | Event type.&lt;br&gt;- **'progress'**: task progress. |
+| callback | (progress: Progress) =&gt; void | Yes | Callback to be invoked when the specified event occurs. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. Possible causes: &lt;br&gt; 1. Missing mandatory parameters. &lt;br&gt; 2. Incorrect parameter type. &lt;br&gt; 3. Parameter verification failed. |
-| 21900005 | task mode error.<br>**Applicable version:** 10 and later |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: &lt;br&gt; 1. Missing mandatory parameters. &lt;br&gt; 2. Incorrect parameter type. &lt;br&gt; 3. Parameter verification failed. |
+| [21900005](../../apis-basic-services-kit/errorcode-request.md#21900005-task-mode-error) | task mode error.<br>**Applicable version:** 10 and later |
 
 ## on
 
@@ -570,11 +591,13 @@ on(event: 'progress', callback: (progress: Progress) => void): void
 on(event: 'completed', callback: (progress: Progress) => void): void
 ```
 
-订阅任务完成事件，使用callback异步回调。
+Subscribes to task completion events. This API uses an asynchronous callback to return the result.
 
-> **说明：**
+> **NOTE：**
 > 
-> 示例中context的获取方式请参见[获取UIAbility的上下文信息](../../../application-models/uiability-usage.md#获取uiability的上下文信息)。
+> For details about how to obtain the context in the example, see
+> [Obtaining the Context of UIAbility](../../../application-models/uiability-usage.md#obtaining-the-context-of-uiability)
+> .
 
 **Since:** 10
 
@@ -590,15 +613,15 @@ on(event: 'completed', callback: (progress: Progress) => void): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| event | 'completed' | Yes | 订阅的事件类型。&lt;br&gt;- 取值为'completed'，表示任务完成，任务完成时触发该事件。 |
-| callback | (progress: Progress) =&gt; void | Yes | 回调函数，发生相关的事件时触发该回调方法。 |
+| event | 'completed' | Yes | Event type.&lt;br&gt;- **'completed'**: task completion. |
+| callback | (progress: Progress) =&gt; void | Yes | Callback to be invoked when the specified event occurs. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. Possible causes: &lt;br&gt; 1. Missing mandatory parameters. &lt;br&gt; 2. Incorrect parameter type. &lt;br&gt; 3. Parameter verification failed. |
-| 21900005 | task mode error.<br>**Applicable version:** 10 and later |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: &lt;br&gt; 1. Missing mandatory parameters. &lt;br&gt; 2. Incorrect parameter type. &lt;br&gt; 3. Parameter verification failed. |
+| [21900005](../../apis-basic-services-kit/errorcode-request.md#21900005-task-mode-error) | task mode error.<br>**Applicable version:** 10 and later |
 
 ## on
 
@@ -606,12 +629,14 @@ on(event: 'completed', callback: (progress: Progress) => void): void
 on(event: 'failed', callback: (progress: Progress) => void): void
 ```
 
-订阅任务失败事件，使用callback异步回调。可通过调用  
-[request.agent.show](arkts-basicservices-agent-show-f.md#show)查看错误原因。
+Subscribes to task failure events. This API uses an asynchronous callback to return the result. You can call   
+[request.agent.show](arkts-basicservices-agent-show-f.md#show) to view the error cause.
 
-> **说明：**
+> **NOTE：**
 > 
-> 示例中context的获取方式请参见[获取UIAbility的上下文信息](../../../application-models/uiability-usage.md#获取uiability的上下文信息)。
+> For details about how to obtain the context in the example, see
+> [Obtaining the Context of UIAbility](../../../application-models/uiability-usage.md#obtaining-the-context-of-uiability)
+> .
 
 **Since:** 10
 
@@ -627,15 +652,15 @@ on(event: 'failed', callback: (progress: Progress) => void): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| event | 'failed' | Yes | 订阅的事件类型。&lt;br&gt;- 取值为'failed'，表示任务失败，任务失败时触发该事件。 |
-| callback | (progress: Progress) =&gt; void | Yes | 回调函数，发生相关的事件时触发该回调方法。 |
+| event | 'failed' | Yes | Event type.&lt;br&gt;- **'failed'**: task failure. |
+| callback | (progress: Progress) =&gt; void | Yes | Callback to be invoked when the specified event occurs. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. Possible causes: &lt;br&gt; 1. Missing mandatory parameters. &lt;br&gt; 2. Incorrect parameter type. &lt;br&gt; 3. Parameter verification failed. |
-| 21900005 | Operation with wrong task mode.<br>**Applicable version:** 10 and later |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: &lt;br&gt; 1. Missing mandatory parameters. &lt;br&gt; 2. Incorrect parameter type. &lt;br&gt; 3. Parameter verification failed. |
+| [21900005](../../apis-basic-services-kit/errorcode-request.md#21900005-task-mode-error) | Operation with wrong task mode.<br>**Applicable version:** 10 and later |
 
 ## on
 
@@ -643,11 +668,13 @@ on(event: 'failed', callback: (progress: Progress) => void): void
 on(event: 'pause', callback: (progress: Progress) => void): void
 ```
 
-订阅任务暂停事件，使用callback异步回调。
+Subscribes to task pause events. This API uses an asynchronous callback to return the result.
 
-> **说明：**
+> **NOTE：**
 > 
-> 示例中context的获取方式请参见[获取UIAbility的上下文信息](../../../application-models/uiability-usage.md#获取uiability的上下文信息)。
+> For details about how to obtain the context in the example, see
+> [Obtaining the Context of UIAbility](../../../application-models/uiability-usage.md#obtaining-the-context-of-uiability)
+> .
 
 **Since:** 11
 
@@ -661,14 +688,14 @@ on(event: 'pause', callback: (progress: Progress) => void): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| event | 'pause' | Yes | 订阅的事件类型。&lt;br&gt;- 取值为'pause'，表示任务已暂停，任务暂停时触发该事件。 |
-| callback | (progress: Progress) =&gt; void | Yes | 回调函数，发生相关的事件时触发该回调方法。 |
+| event | 'pause' | Yes | Event type.&lt;br&gt;- **'pause'**: task pause. |
+| callback | (progress: Progress) =&gt; void | Yes | Callback to be invoked when the specified event occurs. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. Possible causes: &lt;br&gt; 1. Missing mandatory parameters. &lt;br&gt; 2. Incorrect parameter type. &lt;br&gt; 3. Parameter verification failed. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: &lt;br&gt; 1. Missing mandatory parameters. &lt;br&gt; 2. Incorrect parameter type. &lt;br&gt; 3. Parameter verification failed. |
 
 ## on
 
@@ -676,11 +703,13 @@ on(event: 'pause', callback: (progress: Progress) => void): void
 on(event: 'resume', callback: (progress: Progress) => void): void
 ```
 
-订阅任务恢复事件，使用callback异步回调。
+Subscribes to task resume events. This API uses an asynchronous callback to return the result.
 
-> **说明：**
+> **NOTE：**
 > 
-> 示例中context的获取方式请参见[获取UIAbility的上下文信息](../../../application-models/uiability-usage.md#获取uiability的上下文信息)。
+> For details about how to obtain the context in the example, see
+> [Obtaining the Context of UIAbility](../../../application-models/uiability-usage.md#obtaining-the-context-of-uiability)
+> .
 
 **Since:** 11
 
@@ -694,14 +723,14 @@ on(event: 'resume', callback: (progress: Progress) => void): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| event | 'resume' | Yes | 订阅的事件类型。&lt;br&gt;- 取值为'resume'，表示任务恢复，任务恢复时触发该事件。 |
-| callback | (progress: Progress) =&gt; void | Yes | 回调函数，发生相关的事件时触发该回调方法。 |
+| event | 'resume' | Yes | Event type.&lt;br&gt;- **'resume'**: task resume. |
+| callback | (progress: Progress) =&gt; void | Yes | Callback to be invoked when the specified event occurs. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. Possible causes: &lt;br&gt; 1. Missing mandatory parameters. &lt;br&gt; 2. Incorrect parameter type. &lt;br&gt; 3. Parameter verification failed. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: &lt;br&gt; 1. Missing mandatory parameters. &lt;br&gt; 2. Incorrect parameter type. &lt;br&gt; 3. Parameter verification failed. |
 
 ## on
 
@@ -709,11 +738,13 @@ on(event: 'resume', callback: (progress: Progress) => void): void
 on(event: 'remove', callback: (progress: Progress) => void): void
 ```
 
-订阅任务移除事件，使用callback异步回调。
+Subscribes to task removal events. This API uses an asynchronous callback to return the result.
 
-> **说明：**
+> **NOTE：**
 > 
-> 示例中context的获取方式请参见[获取UIAbility的上下文信息](../../../application-models/uiability-usage.md#获取uiability的上下文信息)。
+> For details about how to obtain the context in the example, see
+> [Obtaining the Context of UIAbility](../../../application-models/uiability-usage.md#obtaining-the-context-of-uiability)
+> .
 
 **Since:** 11
 
@@ -727,14 +758,14 @@ on(event: 'remove', callback: (progress: Progress) => void): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| event | 'remove' | Yes | 订阅的事件类型。&lt;br&gt;- 取值为'remove'，表示任务被移除，任务移除时触发该事件。 |
-| callback | (progress: Progress) =&gt; void | Yes | 回调函数，发生相关的事件时触发该回调方法。 |
+| event | 'remove' | Yes | Event type.&lt;br&gt;- **'remove'**: task removal. |
+| callback | (progress: Progress) =&gt; void | Yes | Callback to be invoked when the specified event occurs. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. Possible causes: &lt;br&gt; 1. Missing mandatory parameters. &lt;br&gt; 2. Incorrect parameter type. &lt;br&gt; 3. Parameter verification failed. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: &lt;br&gt; 1. Missing mandatory parameters. &lt;br&gt; 2. Incorrect parameter type. &lt;br&gt; 3. Parameter verification failed. |
 
 ## on
 
@@ -742,11 +773,13 @@ on(event: 'remove', callback: (progress: Progress) => void): void
 on(event: 'response', callback: Callback<HttpResponse>): void
 ```
 
-订阅任务响应头，使用callback异步回调。
+Subscribes to task response headers. This API uses an asynchronous callback to return the result.
 
-> **说明：**
+> **NOTE：**
 > 
-> 示例中context的获取方式请参见[获取UIAbility的上下文信息](../../../application-models/uiability-usage.md#获取uiability的上下文信息)。
+> For details about how to obtain the context in the example, see
+> [Obtaining the Context of UIAbility](../../../application-models/uiability-usage.md#obtaining-the-context-of-uiability)
+> .
 
 **Since:** 12
 
@@ -762,14 +795,14 @@ on(event: 'response', callback: Callback<HttpResponse>): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| event | 'response' | Yes | 订阅的事件类型。&lt;br&gt;- 取值为'response'，表示任务响应，请求接收到响应时触发该事件。 |
-| callback | [Callback](arkts-basicservices-base-callback-i.md)&lt;HttpResponse&gt; | Yes | 回调函数，发生相关的事件时触发该回调方法，返回任务响应头的数据结构。 |
+| event | 'response' | Yes | Event type.&lt;br&gt;- **'response'**: task response. |
+| callback | [Callback](arkts-basicservices-base-callback-i.md)&lt;HttpResponse&gt; | Yes | Callback used to return the data structure of the task response header. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. Possible causes: &lt;br&gt; 1. Missing mandatory parameters. &lt;br&gt; 2. Incorrect parameter type. &lt;br&gt; 3. Parameter verification failed. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: &lt;br&gt; 1. Missing mandatory parameters. &lt;br&gt; 2. Incorrect parameter type. &lt;br&gt; 3. Parameter verification failed. |
 
 ## on
 
@@ -777,11 +810,13 @@ on(event: 'response', callback: Callback<HttpResponse>): void
 on(event: 'faultOccur', callback: Callback<Faults>): void
 ```
 
-订阅任务失败原因，使用callback形式返回结果。
+Subscribes to task failure events. This API uses a callback to return the result.
 
-> **说明：**
+> **NOTE：**
 > 
-> 示例中context的获取方式请参见[获取UIAbility的上下文信息](../../../application-models/uiability-usage.md#获取uiability的上下文信息)。
+> For details about how to obtain the context in the example, see
+> [Obtaining the Context of UIAbility](../../../application-models/uiability-usage.md#obtaining-the-context-of-uiability)
+> .
 
 **Since:** 20
 
@@ -795,14 +830,14 @@ on(event: 'faultOccur', callback: Callback<Faults>): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| event | 'faultOccur' | Yes | 订阅的事件类型。&lt;br&gt;- 取值为'faultOccur'，表示任务失败。 |
-| callback | [Callback](arkts-basicservices-base-callback-i.md)&lt;Faults&gt; | Yes | 发生相关的事件时触发该回调方法，返回任务失败的原因。 |
+| event | 'faultOccur' | Yes | Event type.&lt;br&gt;- **'faultOccur'**: task failure. |
+| callback | [Callback](arkts-basicservices-base-callback-i.md)&lt;Faults&gt; | Yes | Callback used to return the failure cause of the task. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. Possible causes: &lt;br&gt; 1. Missing mandatory parameters. &lt;br&gt; 2. Incorrect parameter type. &lt;br&gt; 3. Parameter verification failed. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: &lt;br&gt; 1. Missing mandatory parameters. &lt;br&gt; 2. Incorrect parameter type. &lt;br&gt; 3. Parameter verification failed. |
 
 ## on
 
@@ -810,11 +845,13 @@ on(event: 'faultOccur', callback: Callback<Faults>): void
 on(event: 'wait', callback: Callback<WaitingReason>): void
 ```
 
-订阅任务等待原因，使用callback形式返回结果。
+Subscribes to task wait events. This API uses a callback to return the result.
 
-> **说明：**
+> **NOTE：**
 > 
-> 示例中context的获取方式请参见[获取UIAbility的上下文信息](../../../application-models/uiability-usage.md#获取uiability的上下文信息)。
+> For details about how to obtain the context in the example, see
+> [Obtaining the Context of UIAbility](../../../application-models/uiability-usage.md#obtaining-the-context-of-uiability)
+> .
 
 **Since:** 20
 
@@ -828,14 +865,14 @@ on(event: 'wait', callback: Callback<WaitingReason>): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| event | 'wait' | Yes | 订阅的事件类型。&lt;br&gt;- 取值为'wait'，表示任务等待。 |
-| callback | [Callback](arkts-basicservices-base-callback-i.md)&lt;WaitingReason&gt; | Yes | 发生相关的事件时触发该回调方法，返回任务等待的原因。 |
+| event | 'wait' | Yes | Event type.&lt;br&gt;- 'wait': The task is waiting. |
+| callback | [Callback](arkts-basicservices-base-callback-i.md)&lt;WaitingReason&gt; | Yes | Callback used to return the waiting reason of the task. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. Possible causes: &lt;br&gt; 1. Missing mandatory parameters. &lt;br&gt; 2. Incorrect parameter type. &lt;br&gt; 3. Parameter verification failed. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: &lt;br&gt; 1. Missing mandatory parameters. &lt;br&gt; 2. Incorrect parameter type. &lt;br&gt; 3. Parameter verification failed. |
 
 ## onCompleted
 
@@ -1041,8 +1078,8 @@ Enables the wait callback.This callback is triggered when the task changes from 
 pause(callback: AsyncCallback<void>): void
 ```
 
-暂停任务，可以暂停正在等待/正在运行/正在重试的任务，已暂停的任务可被  
-[resume](arkts-basicservices-agent-task-i.md#resume)恢复。使用callback异步回调。
+Pauses a task that is waiting, running, or retrying. A paused task can be resumed by   
+[resume](arkts-basicservices-agent-task-i.md#resume). This API uses an asynchronous callback to return the result.
 
 **Since:** 10
 
@@ -1056,15 +1093,15 @@ pause(callback: AsyncCallback<void>): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | 回调函数。当暂停任务成功，err为undefined，否则为错误对象。 |
+| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined**. Otherwise, **err** is an error object. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 21900007 | Operation with wrong task state. |
-| 21900005 | Operation with wrong task mode.<br>**Applicable version:** 10 and later |
-| 13400003 | Task service ability error. |
+| [21900007](../../apis-basic-services-kit/errorcode-request.md#21900007-operation-not-supported-by-the-task-state) | Operation with wrong task state. |
+| [21900005](../../apis-basic-services-kit/errorcode-request.md#21900005-task-mode-error) | Operation with wrong task mode.<br>**Applicable version:** 10 and later |
+| [13400003](../../apis-basic-services-kit/errorcode-request.md#13400003-service-error) | Task service ability error. |
 
 ## pause
 
@@ -1072,8 +1109,8 @@ pause(callback: AsyncCallback<void>): void
 pause(): Promise<void>
 ```
 
-暂停任务，可以暂停正在等待/正在运行/正在重试的任务，已暂停的任务可被  
-[resume](arkts-basicservices-agent-task-i.md#resume)恢复。使用Promise异步回调。
+Pauses a task that is waiting, running, or retrying. A paused task can be resumed by   
+[resume](arkts-basicservices-agent-task-i.md#resume). This API uses a promise to return the result.
 
 **Since:** 10
 
@@ -1087,15 +1124,15 @@ pause(): Promise<void>
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise对象。无返回结果的Promise对象。 |
+| Promise&lt;void&gt; | Promise that returns no value. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 21900007 | Operation with wrong task state. |
-| 21900005 | Operation with wrong task mode.<br>**Applicable version:** 10 and later |
-| 13400003 | Task service ability error. |
+| [21900007](../../apis-basic-services-kit/errorcode-request.md#21900007-operation-not-supported-by-the-task-state) | Operation with wrong task state. |
+| [21900005](../../apis-basic-services-kit/errorcode-request.md#21900005-task-mode-error) | Operation with wrong task mode.<br>**Applicable version:** 10 and later |
+| [13400003](../../apis-basic-services-kit/errorcode-request.md#13400003-service-error) | Task service ability error. |
 
 ## resume
 
@@ -1103,7 +1140,7 @@ pause(): Promise<void>
 resume(callback: AsyncCallback<void>): void
 ```
 
-重新启动任务，可以恢复被暂停的任务。使用callback异步回调。
+Resumes a paused task. This API uses an asynchronous callback to return the result.
 
 **Since:** 10
 
@@ -1119,16 +1156,16 @@ resume(callback: AsyncCallback<void>): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | 回调函数。当重新启动任务成功，err为undefined，否则为错误对象。 |
+| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined**. Otherwise, **err** is an error object. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 201 | Permission denied. |
-| 21900007 | Operation with wrong task state. |
-| 21900005 | Operation with wrong task mode.<br>**Applicable version:** 10 and later |
-| 13400003 | Task service ability error. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
+| [21900007](../../apis-basic-services-kit/errorcode-request.md#21900007-operation-not-supported-by-the-task-state) | Operation with wrong task state. |
+| [21900005](../../apis-basic-services-kit/errorcode-request.md#21900005-task-mode-error) | Operation with wrong task mode.<br>**Applicable version:** 10 and later |
+| [13400003](../../apis-basic-services-kit/errorcode-request.md#13400003-service-error) | Task service ability error. |
 
 ## resume
 
@@ -1136,7 +1173,7 @@ resume(callback: AsyncCallback<void>): void
 resume(): Promise<void>
 ```
 
-重新启动任务，可以恢复被暂停的任务。使用Promise异步回调。
+Resumes a paused task. This API uses a promise to return the result.
 
 **Since:** 10
 
@@ -1152,16 +1189,16 @@ resume(): Promise<void>
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise对象。无返回结果的Promise对象。 |
+| Promise&lt;void&gt; | Promise that returns no value. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 201 | Permission denied. |
-| 21900007 | Operation with wrong task state. |
-| 21900005 | Operation with wrong task mode.<br>**Applicable version:** 10 and later |
-| 13400003 | Task service ability error. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
+| [21900007](../../apis-basic-services-kit/errorcode-request.md#21900007-operation-not-supported-by-the-task-state) | Operation with wrong task state. |
+| [21900005](../../apis-basic-services-kit/errorcode-request.md#21900005-task-mode-error) | Operation with wrong task mode.<br>**Applicable version:** 10 and later |
+| [13400003](../../apis-basic-services-kit/errorcode-request.md#13400003-service-error) | Task service ability error. |
 
 ## setMaxSpeed
 
@@ -1175,7 +1212,7 @@ ArkTS-Sta:
 setMaxSpeed(speed: long): Promise<void>
 ```
 
-设置任务每秒能传输的字节数上限。使用Promise异步回调。
+Sets the maximum number of bytes that can be transmitted by a task per second. This API uses a promise to return the result.
 
 **Since:** 18
 
@@ -1189,20 +1226,20 @@ setMaxSpeed(speed: long): Promise<void>
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| speed | ArkTS-Dyn: number  <br>ArkTS-Sta：long | Yes | 设置任务每秒能传输的字节数上限，单位为字节（B），最小值为16384字节，同时该值不得低于 [MinSpeed](arkts-basicservices-agent-minspeed-i.md)设置的最低速度。 |
+| speed | ArkTS-Dyn: number  <br>ArkTS-Sta：long | Yes | Maximum number of bytes that can be transmitted by a task per second, with a minimum of 16384 bytes. The value cannot be less than the minimum speed value specified by [MinSpeed](arkts-basicservices-agent-minspeed-i.md). |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise对象。无返回结果的Promise对象。 |
+| Promise&lt;void&gt; | Promise that returns no value. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. Possible causes: &lt;br&gt; 1. Missing mandatory parameters. &lt;br&gt; 2. Incorrect parameter type. &lt;br&gt; 3. Parameter verification failed. |
-| 13400003 | Task service ability error. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: &lt;br&gt; 1. Missing mandatory parameters. &lt;br&gt; 2. Incorrect parameter type. &lt;br&gt; 3. Parameter verification failed. |
+| [13400003](../../apis-basic-services-kit/errorcode-request.md#13400003-service-error) | Task service ability error. |
 
 ## start
 
@@ -1210,15 +1247,17 @@ setMaxSpeed(speed: long): Promise<void>
 start(callback: AsyncCallback<void>): void
 ```
 
-启动一个任务。使用callback异步回调。
+Starts a task. This API uses an asynchronous callback to return the result.
 
-以下状态的任务可以被启动：
+Tasks in the following states can be started:
 
-1. 刚被request.agent.create接口创建的任务。2. 使用request.agent.create接口创建的已经失败或者停止的下载任务。
+1. Task created by **request.agent.create**.2. Download tasks that are created by **request.agent.create** but have failed or paused.
 
-> **说明：**
+> **NOTE：**
 > 
-> 示例中context的获取方式请参见[获取UIAbility的上下文信息](../../../application-models/uiability-usage.md#获取uiability的上下文信息)。
+> For details about how to obtain the context in the example, see
+> [Obtaining the Context of UIAbility](../../../application-models/uiability-usage.md#obtaining-the-context-of-uiability)
+> .
 
 **Since:** 10
 
@@ -1236,15 +1275,15 @@ start(callback: AsyncCallback<void>): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | 回调函数。当开启任务成功，err为undefined，否则为错误对象。 |
+| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined**. Otherwise, **err** is an error object. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 201 | Permission denied. |
-| 21900007 | Operation with wrong task state. |
-| 13400003 | Task service ability error. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
+| [21900007](../../apis-basic-services-kit/errorcode-request.md#21900007-operation-not-supported-by-the-task-state) | Operation with wrong task state. |
+| [13400003](../../apis-basic-services-kit/errorcode-request.md#13400003-service-error) | Task service ability error. |
 
 ## start
 
@@ -1252,15 +1291,17 @@ start(callback: AsyncCallback<void>): void
 start(): Promise<void>
 ```
 
-启动一个任务。使用Promise异步回调。
+Starts a task. This API uses a promise to return the result.
 
-以下状态的任务可以被启动：
+Tasks in the following states can be started:
 
-1. 刚被request.agent.create接口创建的任务。2. 使用request.agent.create接口创建的已经失败或者停止的下载任务。
+1. Task created by **request.agent.create**.2. Download tasks that are created by **request.agent.create** but have failed or paused.
 
-> **说明：**
+> **NOTE：**
 > 
-> 示例中context的获取方式请参见[获取UIAbility的上下文信息](../../../application-models/uiability-usage.md#获取uiability的上下文信息)。
+> For details about how to obtain the context in the example, see
+> [Obtaining the Context of UIAbility](../../../application-models/uiability-usage.md#obtaining-the-context-of-uiability)
+> .
 
 **Since:** 10
 
@@ -1278,15 +1319,15 @@ start(): Promise<void>
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise对象。无返回结果的Promise对象。 |
+| Promise&lt;void&gt; | Promise that returns no value. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 201 | Permission denied. |
-| 21900007 | Operation with wrong task state. |
-| 13400003 | Task service ability error. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
+| [21900007](../../apis-basic-services-kit/errorcode-request.md#21900007-operation-not-supported-by-the-task-state) | Operation with wrong task state. |
+| [13400003](../../apis-basic-services-kit/errorcode-request.md#13400003-service-error) | Task service ability error. |
 
 ## stop
 
@@ -1294,8 +1335,8 @@ start(): Promise<void>
 stop(callback: AsyncCallback<void>): void
 ```
 
-停止任务，可以停止正在运行/正在等待/正在重试的任务，已停止的任务可被  
-[start](arkts-basicservices-agent-task-i.md#start)恢复。使用callback异步回调。
+Stops a task that is running, waiting, or retrying. A paused task can be resumed by   
+[start](arkts-basicservices-agent-task-i.md#start). This API uses an asynchronous callback to return the result.
 
 **Since:** 10
 
@@ -1311,14 +1352,14 @@ stop(callback: AsyncCallback<void>): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | 回调函数。当停止任务成功，err为undefined，否则为错误对象。 |
+| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined**. Otherwise, **err** is an error object. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 21900007 | Operation with wrong task state. |
-| 13400003 | Task service ability error. |
+| [21900007](../../apis-basic-services-kit/errorcode-request.md#21900007-operation-not-supported-by-the-task-state) | Operation with wrong task state. |
+| [13400003](../../apis-basic-services-kit/errorcode-request.md#13400003-service-error) | Task service ability error. |
 
 ## stop
 
@@ -1326,8 +1367,8 @@ stop(callback: AsyncCallback<void>): void
 stop(): Promise<void>
 ```
 
-停止任务，可以停止正在运行/正在等待/正在重试的任务，已停止的任务可被  
-[start](arkts-basicservices-agent-task-i.md#start)恢复。使用Promise异步回调。
+Stops a task that is running, waiting, or retrying. A paused task can be resumed by   
+[start](arkts-basicservices-agent-task-i.md#start). This API uses a promise to return the result.
 
 **Since:** 10
 
@@ -1343,14 +1384,14 @@ stop(): Promise<void>
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise对象。无返回结果的Promise对象。 |
+| Promise&lt;void&gt; | Promise that returns no value. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 21900007 | Operation with wrong task state. |
-| 13400003 | Task service ability error. |
+| [21900007](../../apis-basic-services-kit/errorcode-request.md#21900007-operation-not-supported-by-the-task-state) | Operation with wrong task state. |
+| [13400003](../../apis-basic-services-kit/errorcode-request.md#13400003-service-error) | Task service ability error. |
 
 ## config
 
@@ -1358,7 +1399,7 @@ stop(): Promise<void>
 config: Config
 ```
 
-任务的配置信息。
+Task configuration.
 
 **Type:** [Config](arkts-basicservices-agent-config-i.md)
 
@@ -1378,7 +1419,7 @@ config: Config
 readonly tid: string
 ```
 
-任务id，由系统自动生成且唯一。
+Task ID, which is unique and automatically generated by the system.
 
 **Type:** string
 

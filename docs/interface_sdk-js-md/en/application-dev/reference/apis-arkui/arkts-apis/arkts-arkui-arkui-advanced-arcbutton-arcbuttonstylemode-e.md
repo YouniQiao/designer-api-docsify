@@ -1,6 +1,6 @@
 # ArcButtonStyleMode
 
-定义ArcButton可设置弧形按钮样式模式。
+Provides an arc button style.
 
 **Since:** 23
 
@@ -16,7 +16,7 @@
 EMPHASIZED_LIGHT = 0
 ```
 
-强调样式，亮色，表现为蓝色背景、白色文字。
+Emphasis status, light style.
 
 **Since:** 23
 
@@ -32,7 +32,7 @@ EMPHASIZED_LIGHT = 0
 EMPHASIZED_DARK = 1
 ```
 
-强调样式，暗色，表现为红色背景、白色文字。
+Emphasis status, dark style.
 
 **Since:** 23
 
@@ -48,7 +48,7 @@ EMPHASIZED_DARK = 1
 NORMAL_LIGHT = 2
 ```
 
-常规样式，亮色，表现为深蓝色背景、蓝色文字。
+Normal status, light style.
 
 **Since:** 23
 
@@ -64,7 +64,7 @@ NORMAL_LIGHT = 2
 NORMAL_DARK = 3
 ```
 
-常规样式，暗色，表现为深灰色背景、蓝色文字。
+Normal status, dark style.
 
 **Since:** 23
 
@@ -80,7 +80,7 @@ NORMAL_DARK = 3
 CUSTOM = 4
 ```
 
-自定义按钮颜色和字体颜色。
+Custom status, custom style.
 
 **Since:** 23
 

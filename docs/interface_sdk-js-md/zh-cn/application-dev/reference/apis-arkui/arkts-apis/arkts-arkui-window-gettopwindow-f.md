@@ -1,11 +1,5 @@
 # getTopWindow
 
-## 导入模块
-
-```TypeScript
-import { window } from 'kits/@kit.ArkUI';
-```
-
 ## getTopWindow
 
 ```TypeScript

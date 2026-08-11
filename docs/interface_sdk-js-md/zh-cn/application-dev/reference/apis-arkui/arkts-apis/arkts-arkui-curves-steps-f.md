@@ -1,11 +1,5 @@
 # steps
 
-## 导入模块
-
-```TypeScript
-import { curves } from 'kits/@kit.ArkUI';
-```
-
 ## steps
 
 ```TypeScript

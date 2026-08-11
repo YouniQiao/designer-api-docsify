@@ -1,5 +1,7 @@
 # StorageObserver
 
+Define the change data information object.
+
 **Since:** 6
 
 **ArkTS mode:** ArkTS-Dyn only, since version 6.
@@ -16,7 +18,7 @@
 key: string
 ```
 
-变更的数据内容。
+Data changed.
 
 **Type:** string
 

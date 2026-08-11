@@ -12,7 +12,7 @@ import { bundleManager } from 'kits/@kit.AbilityKit';
 function getBundleNameByUidSync(uid: int): string
 ```
 
-以同步方法根据给定的uid获取对应应用的bundleName。
+Obtains the bundle name based on the given UID. This API returns the result synchronously.
 
 **Since:** 14
 
@@ -28,23 +28,38 @@ function getBundleNameByUidSync(uid: int): string
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| uid | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | 表示应用程序的UID。 |
+| uid | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | UID of the application. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| string | 返回获取到的bundleName。 |
+| string | Bundle name obtained. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types. |
-| 201 | Permission denied. |
-| 17700021 | The uid is not found. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
+| [17700021](../errorcode-bundle.md#17700021-invalid-uid) | The uid is not found. |
 
 ## Examples
+
+```TypeScript
+import { bundleManager } from '@kit.AbilityKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+import { hilog } from '@kit.PerformanceAnalysisKit';
+
+let uid = 20010005;
+try {
+  let data = bundleManager.getBundleNameByUidSync(uid);
+  hilog.info(0x0000, 'testTag', 'getBundleNameByUidSync successfully. Data: %{public}s', JSON.stringify(data));
+} catch (err) {
+  let message = (err as BusinessError).message;
+  hilog.error(0x0000, 'testTag', 'getBundleNameByUidSync failed. Cause: %{public}s', message);
+}
+```
 
 ```TypeScript
 import { bundleManager } from '@kit.AbilityKit';

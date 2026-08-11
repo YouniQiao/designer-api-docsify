@@ -4,7 +4,7 @@
 type BufferEncoding = 'ascii' | 'utf8' | 'utf-8' | 'utf16le' | 'ucs2' | 'ucs-2' | 'base64' | 'base64url' | 'latin1' | 'binary' | 'hex'
 ```
 
-表示支持的编码格式类型。
+Enumerates the supported encoding formats.
 
 **Since:** 9
 
@@ -18,15 +18,15 @@ type BufferEncoding = 'ascii' | 'utf8' | 'utf-8' | 'utf16le' | 'ucs2' | 'ucs-2' 
 
 | Type | Description |
 | --- | --- |
-| 'ascii' | 表示ascii格式。 |
-| 'utf8' | 表示utf8格式。 |
-| 'utf-8' | 表示utf8格式。 |
-| 'utf16le' | 表示utf16小端序格式。 |
-| 'ucs2' | utf16le的别名。 |
-| 'ucs-2' | utf16le的别名。 |
-| 'base64' | 表示base64格式。 |
-| 'base64url' | 表示base64url格式。 |
-| 'latin1' | iso-8859-1的别名，向下兼容ascii格式。 |
-| 'binary' | 表示二进制格式。 |
-| 'hex' | 表示十六进制格式。 |
+| 'ascii' | ASCII format. |
+| 'utf8' | UTF-8 format. |
+| 'utf-8' | UTF-8 format. |
+| 'utf16le' | UTF-16LE format. |
+| 'ucs2' | Alias of UTF-16LE. |
+| 'ucs-2' | Alias of UTF-16LE. |
+| 'base64' | Base64 format. |
+| 'base64url' | Base64URL format. |
+| 'latin1' | Alias of iso-8859-1, which is backward compatible with the ASCII format. |
+| 'binary' | Binary format. |
+| 'hex' | Hexadecimal format. |
 

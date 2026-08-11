@@ -1,6 +1,6 @@
 # OnSearchResultReceiveEvent
 
-定义通知调用方网页页内查找的结果。
+Defines function Triggered when the host application call searchAllAsync.
 
 **Since:** 12
 
@@ -16,7 +16,7 @@
 activeMatchOrdinal: number
 ```
 
-当前匹配的查找项的序号（从0开始）。
+The ordinal number of the currently matched lookup item (starting from 0).
 
 **Type:** number
 
@@ -36,7 +36,7 @@ activeMatchOrdinal: number
 isDoneCounting: boolean
 ```
 
-当次页内查找操作是否结束。该方法可能会回调多次，直到isDoneCounting为true为止。
+Indicates whether the current in-page search operation is complete. The method may be called back multiple times until isDoneCounting is true.
 
 **Type:** boolean
 
@@ -56,7 +56,7 @@ isDoneCounting: boolean
 numberOfMatches: number
 ```
 
-所有匹配到的关键词的个数。
+The number of all matched keywords.
 
 **Type:** number
 

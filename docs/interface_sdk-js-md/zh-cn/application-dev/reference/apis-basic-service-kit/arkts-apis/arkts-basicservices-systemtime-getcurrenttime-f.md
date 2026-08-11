@@ -1,11 +1,5 @@
 # getCurrentTime
 
-## 导入模块
-
-```TypeScript
-import { systemTime } from 'kits/@kit.BasicServicesKit';
-```
-
 ## getCurrentTime
 
 ```TypeScript

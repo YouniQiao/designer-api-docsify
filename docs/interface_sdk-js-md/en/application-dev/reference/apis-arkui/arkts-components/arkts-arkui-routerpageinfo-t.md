@@ -4,7 +4,7 @@
 declare type RouterPageInfo = import('../api/@ohos.arkui.observer').default.RouterPageInfo
 ```
 
-RouterPageInfo实例对象。
+The router page information.
 
 **Since:** 12
 

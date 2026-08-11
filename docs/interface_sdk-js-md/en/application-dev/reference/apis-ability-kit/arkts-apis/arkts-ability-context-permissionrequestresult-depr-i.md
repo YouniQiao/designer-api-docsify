@@ -1,7 +1,5 @@
 # PermissionRequestResult
 
-授权结果信息。
-
 **Since:** 7
 
 **ArkTS mode:** ArkTS-Dyn only, since version 7.
@@ -16,7 +14,7 @@
 authResults: Array<number>
 ```
 
-请求权限的结果。
+Permission request result.
 
 **Type:** Array&lt;number&gt;
 
@@ -38,7 +36,7 @@ authResults: Array<number>
 permissions: Array<string>
 ```
 
-用户传入的权限。
+Permissions requested.
 
 **Type:** Array&lt;string&gt;
 
@@ -60,7 +58,7 @@ permissions: Array<string>
 requestCode: number
 ```
 
-用户传入的请求代码。
+Request code passed.
 
 **Type:** number
 

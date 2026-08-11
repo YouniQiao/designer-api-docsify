@@ -1,6 +1,6 @@
 # DepthVector4 (System API)
 
-深度空间中的4D向量。
+4D vector in depth space.
 
 **Since:** 26.0.0
 
@@ -18,7 +18,7 @@
 w: double
 ```
 
-W分量。
+W component.
 
 **Type:** double
 
@@ -42,7 +42,7 @@ W分量。
 x: double
 ```
 
-X分量。
+X component.
 
 **Type:** double
 
@@ -68,7 +68,7 @@ X分量。
 y: double
 ```
 
-Y分量。
+Y component.
 
 **Type:** double
 
@@ -92,7 +92,7 @@ Y分量。
 z: double
 ```
 
-Z分量。
+Z component.
 
 **Type:** double
 

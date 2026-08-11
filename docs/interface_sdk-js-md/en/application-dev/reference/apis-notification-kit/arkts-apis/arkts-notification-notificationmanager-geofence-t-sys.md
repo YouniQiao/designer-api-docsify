@@ -4,7 +4,7 @@
 export type Geofence = _Geofence
 ```
 
-地理围栏的配置信息。
+Defines the configuration of a geofence.
 
 **Since:** 23
 

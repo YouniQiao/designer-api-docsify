@@ -1,6 +1,6 @@
 # RemoteUserAuthItem (System API)
 
-远程用户授权项。
+Remote user authorization item.
 
 **Since:** 26.1.0
 
@@ -18,7 +18,7 @@
 authResult: string
 ```
 
-授权结果。
+Authorization result.
 
 **Type:** string
 
@@ -38,7 +38,7 @@ authResult: string
 permission: string
 ```
 
-权限名称。
+Permission name.
 
 **Type:** string
 

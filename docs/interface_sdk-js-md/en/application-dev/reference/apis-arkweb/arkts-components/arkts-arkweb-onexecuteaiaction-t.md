@@ -4,7 +4,7 @@
 type OnExecuteAIAction = (id: string, params: string, result: OnAISessionCallback) => void
 ```
 
-AI会话执行操作回调函数类型。用于自定义实现AI模型执行。
+Triggered when executing an AI session action.Enables custom implementation of AI model execution.
 
 **Since:** 26.0.0
 
@@ -20,7 +20,7 @@ AI会话执行操作回调函数类型。用于自定义实现AI模型执行。
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| id | string | Yes | 会话任务ID。 |
-| params | string | Yes | 执行期间传递的上下文数据（以JSON字符串格式）。 |
-| result | [OnAISessionCallback](arkts-arkweb-onaisessioncallback-t.md) | Yes | 通知执行结果的回调函数。 |
+| id | string | Yes | The session task ID. |
+| params | string | Yes | Contextual data passed during execution (in JSON string format). |
+| result | [OnAISessionCallback](arkts-arkweb-onaisessioncallback-t.md) | Yes | Callback function to notify the system of the execution result. |
 

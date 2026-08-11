@@ -12,7 +12,8 @@ import { JSON } from 'kits/@kit.ArkTS';
 function has(obj: object, property: string): boolean
 ```
 
-检查ArkTS对象是否包含某种属性，可用于[JSON.parse](arkts-arkts-json-parse-f.md#parse)解析JSON字符串之后。has接口仅支持最外层为字典形式（即大括号而非中括号包围）的合法JSON串，传入非字典形式的对象时无法正确判断属性是否存在。
+Checks whether an ArkTS object contains a key. This API can be used for related operations after  
+[JSON.parse](arkts-arkts-json-parse-f.md#parse) is called to parse a JSON string. This API supports only valid JSON strings whose outermost layer is in dictionary format (in braces instead of square brackets).
 
 **Since:** 12
 
@@ -28,12 +29,12 @@ function has(obj: object, property: string): boolean
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| obj | object | Yes | ArkTS对象，仅支持最外层为字典形式（即大括号而非中括号包围）的合法JSON串解析后的对象。 |
-| property | string | Yes | 要检查的属性名称，用于指定需在ArkTS对象中查找是否存在的属性。 |
+| obj | object | Yes | ArkTS object. |
+| property | string | Yes | Key to check. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| boolean | 返回ArkTS对象是否包含指定属性的结果。true表示对象包含指定属性；false表示对象不包含指定属性。 |
+| boolean | Return true if the key is in the object, otherwise return false. |
 

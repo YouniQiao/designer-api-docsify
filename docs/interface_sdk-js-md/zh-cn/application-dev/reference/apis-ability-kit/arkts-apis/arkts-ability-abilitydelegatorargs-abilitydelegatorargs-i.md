@@ -42,7 +42,7 @@ parameters: Record<string, string>
 
 当前启动单元测试的参数。
 
-**类型：** [Record](../../apis-default/arkts-apis/arkts-record-t.md)&lt;string, string&gt;
+**类型：** Record&lt;string, string&gt;
 
 **起始版本：** 8
 

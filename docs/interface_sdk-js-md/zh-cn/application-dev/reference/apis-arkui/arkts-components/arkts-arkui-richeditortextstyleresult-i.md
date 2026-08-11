@@ -134,7 +134,7 @@ fontStyle: FontStyle
 
 字体样式。
 
-**类型：** [FontStyle](../../apis-arkgraphics2d/arkts-apis/arkts-arkgraphics2d-text-fontstyle-e.md)
+**类型：** [FontStyle](../arkts-apis/arkts-arkui-enums-fontstyle-e.md)
 
 **起始版本：** 10
 

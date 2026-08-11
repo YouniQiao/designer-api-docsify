@@ -1,11 +1,5 @@
 # getAngleVariation
 
-## 导入模块
-
-```TypeScript
-import { sensor } from 'kits/@kit.SensorServiceKit';
-```
-
 ## getAngleVariation
 
 ```TypeScript
@@ -35,14 +29,16 @@ function getAngleVariation(currentRotationMatrix: Array<double>, preRotationMatr
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt; 2. Incorrect parameter types; 3. Parameter verification failed. |
-| 14500101 | Service exception. Possible causes: 1. Sensor hdf service exception; &lt;br&gt; 2. Sensor service ipc exception;3. Sensor data channel exception. |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| [14500101](../errorcode-sensor.md#14500101-传感器服务异常) | Service exception. Possible causes: 1. Sensor hdf service exception; &lt;br&gt; 2. Sensor service ipc exception;3. Sensor data channel exception. |
 
 ## 示例
 
+ArkTS-Dyn示例：
+
 ```TypeScript
-import { sensor } from '@kit.SensorServiceKit';
 import { BusinessError } from '@kit.BasicServicesKit';
+import { sensor } from '@kit.SensorServiceKit';
 
 // 使用try catch对可能出现的异常进行捕获
 try {
@@ -57,18 +53,58 @@ try {
     0, 0.87, -0.50,
     0, 0.50, 0.87
   ];
-  sensor.getAngleVariation(currentRotationMatrix, preRotationMatrix, (err: BusinessError, data: Array<number>) => {
-    if (err) {
-      console.error(`Failed to get angle variation. Code: ${err.code}, message: ${err.message}`);
+  sensor.getAngleVariation(currentRotationMatrix, preRotationMatrix, (err, data) => {
+    let error = err as BusinessError;
+    let dataValue = data as Array<number>;
+    if (error) {
+      console.error(`Failed to get angle variation. Code: ${error.code}, message: ${error.message}`);
       return;
     }
-    if (data.length < 3) {
-      console.error("Failed to get angle variation, length" + data.length);
+    if (dataValue.length < 3) {
+      console.error("Failed to get angle variation, length" + dataValue.length);
+    }
+    console.info("Z: " + dataValue[0]);
+    console.info("X: " + dataValue[1]);
+    console.info("Y  : " + dataValue[2]);
+  })
+} catch (error) {
+  let e: BusinessError = error as BusinessError;
+  console.error(`Failed to get angle variation. Code: ${e.code}, message: ${e.message}`);
+}
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+import { sensor } from '@kit.SensorServiceKit';
+
+// 使用try catch对可能出现的异常进行捕获
+try {
+  // 旋转矩阵可以为3*3，或者4*4
+  let currentRotationMatrix = [
+    1, 0, 0,
+    0, 1, 0,
+    0, 0, 1
+  ];
+  let preRotationMatrix = [
+    1, 0, 0,
+    0, 0.87, -0.50,
+    0, 0.50, 0.87
+  ];
+  sensor.getAngleVariation(currentRotationMatrix, preRotationMatrix, (err, data) => {
+    let error = err as BusinessError;
+    let dataValue = data as Array<double>;
+    if (error) {
+      console.error(`Failed to get angle variation. Code: ${error.code}, message: ${error.message}`);
       return;
     }
-    console.info("Z: " + data[0]);
-    console.info("X: " + data[1]);
-    console.info("Y: " + data[2]);
+    if (dataValue.length < 3) {
+      console.error("Failed to get angle variation, length" + dataValue.length);
+    }
+    console.info("Z: " + dataValue[0]);
+    console.info("X: " + dataValue[1]);
+    console.info("Y  : " + dataValue[2]);
   })
 } catch (error) {
   let e: BusinessError = error as BusinessError;
@@ -110,14 +146,16 @@ function getAngleVariation(currentRotationMatrix: Array<double>, preRotationMatr
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt; 2. Incorrect parameter types; 3. Parameter verification failed. |
-| 14500101 | Service exception. Possible causes: 1. Sensor hdf service exception; &lt;br&gt; 2. Sensor service ipc exception;3. Sensor data channel exception. |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| [14500101](../errorcode-sensor.md#14500101-传感器服务异常) | Service exception. Possible causes: 1. Sensor hdf service exception; &lt;br&gt; 2. Sensor service ipc exception;3. Sensor data channel exception. |
 
 ## 示例
 
+ArkTS-Dyn示例：
+
 ```TypeScript
-import { sensor } from '@kit.SensorServiceKit';
 import { BusinessError } from '@kit.BasicServicesKit';
+import { sensor } from '@kit.SensorServiceKit';
 
 // 使用try catch对可能出现的异常进行捕获
 try {
@@ -141,6 +179,42 @@ try {
     console.info("Z: " + data[0]);
     console.info("X: " + data[1]);
     console.info("Y: " + data[2]);
+  }, (err: BusinessError) => {
+    console.error(`Failed to get angle variation. Code: ${err.code}, message: ${err.message}`);
+  });
+} catch (error) {
+  let e: BusinessError = error as BusinessError;
+  console.error(`Failed to get angle variation. Code: ${e.code}, message: ${e.message}`);
+}
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+import { sensor } from '@kit.SensorServiceKit';
+
+// 使用try catch对可能出现的异常进行捕获
+try {
+  // 旋转矩阵可以为3*3，或者4*4
+  let currentRotationMatrix = [
+    1, 0, 0,
+    0, 1, 0,
+    0, 0, 1
+  ];
+  let preRotationMatrix = [
+    1, 0, 0,
+    0, 0.87, -0.50,
+    0, 0.50, 0.87
+  ];
+  const promise = sensor.getAngleVariation(currentRotationMatrix, preRotationMatrix);
+  promise.then((data: Array<double>) => {
+    if (data.length < 3) {
+      console.error("Failed to get angle variation, length" + data.length);
+    }
+    console.info("Z: " + data[0]);
+    console.info("X: " + data[1]);
+    console.info("Y  : " + data[2]);
   }, (err: BusinessError) => {
     console.error(`Failed to get angle variation. Code: ${err.code}, message: ${err.message}`);
   });

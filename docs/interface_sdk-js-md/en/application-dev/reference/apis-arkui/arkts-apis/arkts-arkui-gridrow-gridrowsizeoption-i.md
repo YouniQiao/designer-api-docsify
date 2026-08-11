@@ -1,6 +1,6 @@
 # GridRowSizeOption
 
-栅格在不同宽度设备类型下，gutter的大小。
+Defines the option in length unit of grid-row component.
 
 **Since:** 23
 
@@ -16,7 +16,7 @@
 lg?: Length
 ```
 
-在大宽度类型设备上，栅格子组件的间距。
+Grid Row Size Option lg, select lg gutter size based on gridRow current breakpoint
 
 **Type:** [Length](arkts-arkui-length-t.md)
 
@@ -36,7 +36,7 @@ lg?: Length
 md?: Length
 ```
 
-在中等宽度类型设备上，栅格子组件的间距。
+Grid Row Size Option md, select md gutter size based on gridRow current breakpoint
 
 **Type:** [Length](arkts-arkui-length-t.md)
 
@@ -56,7 +56,7 @@ md?: Length
 sm?: Length
 ```
 
-在小宽度类型设备上，栅格子组件的间距。
+Grid Row Size Option sm, select sm gutter size based on gridRow current breakpoint
 
 **Type:** [Length](arkts-arkui-length-t.md)
 
@@ -76,7 +76,7 @@ sm?: Length
 xl?: Length
 ```
 
-在特大宽度类型设备上，栅格子组件的间距。
+Grid Row Size Option xl, select xl gutter size based on gridRow current breakpoint
 
 **Type:** [Length](arkts-arkui-length-t.md)
 
@@ -96,7 +96,7 @@ xl?: Length
 xs?: Length
 ```
 
-在最小宽度类型设备上，栅格子组件的间距。
+Grid Row Size Option xs, select xs gutter size based on gridRow current breakpoint
 
 **Type:** [Length](arkts-arkui-length-t.md)
 
@@ -116,7 +116,7 @@ xs?: Length
 xxl?: Length
 ```
 
-在超大宽度类型设备上，栅格子组件的间距。
+Grid Row Size Option xxl, select xxl gutter size based on gridRow current breakpoint
 
 **Type:** [Length](arkts-arkui-length-t.md)
 

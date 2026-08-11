@@ -1,8 +1,6 @@
 # SymbolDateTimeFormat
 
-提供自定义时间日期符号的能力。继承自  
-[Intl.DateTimeFormat](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/DateTimeFormat)，支持  
-[Intl.DateTimeFormat](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/DateTimeFormat)的方法。
+Provide a DateTime formatting interface that supports custom symbols.This interface formats date time values into strings with custom symbols,and can replace variable symbols in the formatted result with custom fixed symbols(e.g., replacing "2:23 PM" with "2:23 afternoon").
 
 **Inheritance/Implementation:** SymbolDateTimeFormat extends [Intl.DateTimeFormat](../../apis-arkts/arkts-apis/arkts-arkts-intl-datetimeformat-c.md/arkts-arkts-intl-datetimeformat-c.md)
 
@@ -26,7 +24,7 @@ import { i18n } from 'kits/@kit.LocalizationKit';
 public constructor(locale?: Intl.Locale, options?: SymbolDateTimeFormatOptions)
 ```
 
-创建使用自定义符号的时间日期格式化对象。
+A constructor used to create a SymbolDateTimeFormat object.
 
 **Since:** 26.0.0
 
@@ -44,14 +42,14 @@ public constructor(locale?: Intl.Locale, options?: SymbolDateTimeFormatOptions)
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| locale | Intl.Locale | No | 区域对象。默认值：系统区域对象。 |
-| options | [SymbolDateTimeFormatOptions](arkts-localization-i18n-symboldatetimeformatoptions-i.md) | No | 自定义符号时间日期格式化的配置项。默认值：区域对象默认的符号。 |
+| locale | Intl.Locale | No | Locale object used for formatting the date time value. The default value is the current system locale. |
+| options | [SymbolDateTimeFormatOptions](arkts-localization-i18n-symboldatetimeformatoptions-i.md) | No | Indicates the symbols used to replace. The symbols that support replacement are "AM" and "PM". |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 8900001 | Invalid parameter. Possible causes: Parameter verification failed. |
+| [8900001](../errorcode-i18n.md#8900001-parameter-verification-error) | Invalid parameter. Possible causes: Parameter verification failed. |
 
 ## parse
 
@@ -59,7 +57,7 @@ public constructor(locale?: Intl.Locale, options?: SymbolDateTimeFormatOptions)
 public parse(text: string, lenientMode: boolean): long
 ```
 
-解析本地化时间日期字符串，返回对应的时间戳。
+Parse a date time localized string to Unix timestamp.Unix timestamp, indicating the number of milliseconds elapsed since 00:00:00 on January 1, 1970 GMT.
 
 **Since:** 26.0.0
 
@@ -77,20 +75,20 @@ public parse(text: string, lenientMode: boolean): long
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| text | string | Yes | 待解析的本地化时间日期字符串。 |
-| lenientMode | boolean | Yes | 是否采用宽松模式，true表示采用宽松模式，false表示不采用宽松模式。 &lt;br&gt;宽松模式下，能够处理不符合常规逻辑的时间日期值，如"5月32日"会自动转换成"6月1日"进行解析。 |
+| text | string | Yes | Localized string to be parse. &lt;br&gt;Text to be parsed |
+| lenientMode | boolean | Yes | Indicates whether parsing allows any non-compliant localized strings. For example, "2023/02-25" is a invalid separator date string, it will parse failure when lenientMode is false, and will parse success with value (2023, 02, 25) when lenientMode is true. it's better set to false, ensure the data is not polluted. &lt;br&gt;Whether to use loose parsing rules |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| long | 时间日期字符串解析后对应的时间戳，单位为毫秒（ms）。 |
+| long | Unix timestamp, which indicates the number of milliseconds that have elapsed since the Unix epoch. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 8900001 | Invalid parameter. Possible causes: Parameter verification failed. |
+| [8900001](../errorcode-i18n.md#8900001-parameter-verification-error) | Invalid parameter. Possible causes: Parameter verification failed. |
 
 ## resolvedOptions
 
@@ -98,7 +96,7 @@ public parse(text: string, lenientMode: boolean): long
 public resolvedOptions(): ResolvedSymbolDateTimeFormatOptions
 ```
 
-解析自定义时间日期符号的配置项。
+Obtains the options for creating a SymbolDateTimeFormat object.This will allow us to check the current config symbols.
 
 **Since:** 26.0.0
 
@@ -116,5 +114,5 @@ public resolvedOptions(): ResolvedSymbolDateTimeFormatOptions
 
 | Type | Description |
 | --- | --- |
-| [ResolvedSymbolDateTimeFormatOptions](arkts-localization-i18n-resolvedsymboldatetimeformatoptions-i.md) | 自定义符号时间日期格式化对象配置项的解析结果。 |
+| [ResolvedSymbolDateTimeFormatOptions](arkts-localization-i18n-resolvedsymboldatetimeformatoptions-i.md) | Symbol options for SymbolDateTimeFormat. |
 

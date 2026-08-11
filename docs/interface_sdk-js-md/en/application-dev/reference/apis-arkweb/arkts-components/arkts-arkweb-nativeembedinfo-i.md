@@ -1,6 +1,6 @@
 # NativeEmbedInfo
 
-提供同层标签的详细信息。
+Provides detailed information about the same-layer tag.
 
 **Since:** 11
 
@@ -16,7 +16,7 @@
 height?: number
 ```
 
-同层标签的高，单位为px。
+The embed tag height.&lt;br&gt;Unit:px.
 
 **Type:** number
 
@@ -36,7 +36,7 @@ height?: number
 id?: string
 ```
 
-同层标签的id信息。
+ID of the same-layer tag.
 
 **Type:** string
 
@@ -56,7 +56,7 @@ id?: string
 params?: Map<string, string>
 ```
 
-object标签包含的param标签键值对列表，该map本质为Object类型，请使用Object提供的方法操作该对象，即`embed.info?.param?.["name"]`。
+List of key-value pairs contained in the **object** tag that form a map of the Object type. Use the methods provided by the Object type, such as **embed.info?.param?.["name"]** to operate the map object.
 
 **Type:** Map&lt;string, string&gt;
 
@@ -76,7 +76,7 @@ object标签包含的param标签键值对列表，该map本质为Object类型，
 position?: Position
 ```
 
-同层标签相对于Web组件左上角为坐标原点的位置信息，此处区别于标准Position，单位为px。
+Position of the same-layer tag relative to the upper left corner of the **Web** component as the coordinate origin,This position is different from the standard position.&lt;br&gt;Unit: pixels.
 
 **Type:** [Position](../../apis-arkui/arkts-apis/arkts-arkui-position-i.md)
 
@@ -96,7 +96,7 @@ position?: Position
 src?: string
 ```
 
-同层标签的src信息。
+**src** information of the same-layer tag.
 
 **Type:** string
 
@@ -116,7 +116,7 @@ src?: string
 tag?: string
 ```
 
-标签名，统一为大写字符。
+Tag name, which is in uppercase.
 
 **Type:** string
 
@@ -136,7 +136,7 @@ tag?: string
 type?: string
 ```
 
-同层标签的type信息，统一为小写字符。
+Type of the same-layer tag. The value is in lowercase.
 
 **Type:** string
 
@@ -156,7 +156,7 @@ type?: string
 url?: string
 ```
 
-同层标签的url信息。
+URL of the same-layer tag.
 
 **Type:** string
 
@@ -176,7 +176,7 @@ url?: string
 width?: number
 ```
 
-同层标签的宽，单位为px。
+The embed tag width.&lt;br&gt;Unit:px.
 
 **Type:** number
 

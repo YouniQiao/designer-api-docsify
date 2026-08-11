@@ -1,10 +1,10 @@
 # Package
 
-> **说明：**
+> **NOTE：**
 > 
-> 从API version 3开始支持，从API version 9开始废弃。
+> This API has been supported since API version 3 and deprecated since API version 9.
 
-指示应用包是否已安装。
+Checks whether a bundle has been installed.
 
 **Since:** 3
 
@@ -28,7 +28,7 @@ import { CheckPackageHasInstalledResponse, CheckPackageHasInstalledOptions } fro
 static hasInstalled(options: CheckPackageHasInstalledOptions): void
 ```
 
-查询指定应用是否存在，或者原生应用是否安装。
+Checks whether an application exists, or whether a native application has been installed.
 
 **Since:** 3
 

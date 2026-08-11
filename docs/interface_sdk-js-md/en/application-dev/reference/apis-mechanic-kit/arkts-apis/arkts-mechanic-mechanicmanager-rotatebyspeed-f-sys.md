@@ -12,7 +12,7 @@ import { mechanicManager } from 'kits/@kit.MechanicKit';
 function rotateBySpeed(mechId: int, speed: RotationSpeed, duration: int): Promise<Result>
 ```
 
-以指定的速度旋转机械设备
+Rotates a mechanical device at the specified speed.
 
 **Since:** 20
 
@@ -28,23 +28,23 @@ function rotateBySpeed(mechId: int, speed: RotationSpeed, duration: int): Promis
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| mechId | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | 机械设备ID |
-| speed | [RotationSpeed](arkts-mechanic-mechanicmanager-rotationspeed-i-sys.md) | Yes | 旋转速度 |
-| duration | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | 执行时间 |
+| mechId | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | ID of the mechanical device. |
+| speed | [RotationSpeed](arkts-mechanic-mechanicmanager-rotationspeed-i-sys.md) | Yes | Rotation speed. |
+| duration | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | Rotation duration. Unit: millisecond. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;Result&gt; | 返回执行结果 |
+| Promise&lt;Result&gt; | Promise that return the execution result. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 202 | Not system application. |
-| 33300001 | Service exception. |
-| 33300002 | Device not connected. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system application. |
+| [33300001](../errorcode-mechanic.md#33300001-system-error) | Service exception. |
+| [33300002](../errorcode-mechanic.md#33300002-device-not-connected) | Device not connected. |
 
 ## Examples
 

@@ -1,6 +1,6 @@
 # GetBrightnessModeOptions
 
-获取屏幕亮度模式的参数对象。
+Options for obtaining the screen brightness mode.
 
 **Since:** 3
 
@@ -24,7 +24,7 @@ import { BrightnessResponse, BrightnessModeResponse, SetBrightnessModeOptions, G
 complete?: () => void
 ```
 
-接口调用结束的回调函数。
+Called when an API call is complete.
 
 **Since:** 3
 
@@ -42,7 +42,7 @@ complete?: () => void
 fail?: (data: string, code: number) => void
 ```
 
-接口调用失败的回调函数。data为错误信息，code为错误码。
+Called when an API call has failed. **data** indicates the error information, and **code** indicates the error code.
 
 **Since:** 3
 
@@ -67,7 +67,8 @@ fail?: (data: string, code: number) => void
 success?: (data: BrightnessModeResponse) => void
 ```
 
-接口调用成功的回调函数。data为[BrightnessModeResponse](arkts-basicservices-system-brightness-brightnessmoderesponse-i.md)类型的返回值。
+Called when an API call is successful. **data** is a return value of the  
+[BrightnessModeResponse](arkts-basicservices-system-brightness-brightnessmoderesponse-i.md) type.
 
 **Since:** 3
 

@@ -1,8 +1,8 @@
 # AlertDialogParamWithConfirm
 
-继承自[AlertDialogParam](arkts-arkui-alertdialogparam-i.md)。
+Inherited from [AlertDialogParam](arkts-arkui-alertdialogparam-i.md).
 
-confirm参数优先级：fontColor、backgroundColor > style > defaultFocus
+Priorities of the **confirm** parameters: **fontColor** and **backgroundColor** > **style** > **defaultFocus**
 
 **Inheritance/Implementation:** AlertDialogParamWithConfirm extends [AlertDialogParam](arkts-arkui-alertdialogparam-i.md)
 
@@ -20,7 +20,8 @@ confirm参数优先级：fontColor、backgroundColor > style > defaultFocus
 confirm?: AlertDialogButtonBaseOptions
 ```
 
-确认Button的使能状态、默认焦点、按钮风格、文本内容、文本色、按钮背景色和点击回调。在弹窗获焦且未进行tab键走焦时，该按钮默认响应Enter键。多重弹窗情况下，可自动获焦并连续响应。默认响应Enter键能力在defaultFocus为true时不生效。
+Information about the confirm button. When the dialog box has focus and the **Tab** key is not pressed for sequential focus navigation, the button responds to the **Enter** key by default. Multiple dialog boxes can automatically gain focus and respond to user interactions in a sequential manner. The default response to the   
+**Enter** key does not work when **defaultFocus** is set to **true**.
 
 **Type:** [AlertDialogButtonBaseOptions](arkts-arkui-alertdialog-alertdialogbuttonbaseoptions-i.md)
 

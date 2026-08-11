@@ -1,6 +1,7 @@
 # SaveModeFlag
 
-状态保存标志，[enableAppRecovery](arkts-ability-apprecovery-enableapprecovery-f.md#enableapprecovery)接口状态保存方式的参数，该类型为枚举。
+Enumerates the application state saving modes. This enum is used as an input parameter of   
+[enableAppRecovery](arkts-ability-apprecovery-enableapprecovery-f.md#enableapprecovery).
 
 **Since:** 9
 
@@ -16,7 +17,7 @@
 SAVE_WITH_FILE = 0x0001
 ```
 
-每次状态保存都会写入到本地文件缓存。
+The application state is saved and written to the local file cache.
 
 **Since:** 9
 
@@ -34,7 +35,7 @@ SAVE_WITH_FILE = 0x0001
 SAVE_WITH_SHARED_MEMORY = 0x0002
 ```
 
-状态先保存在内存中，应用故障退出时写入到本地文件缓存。
+The application state is saved in the memory. When the application exits due to a fault, it is written to the local file cache.
 
 **Since:** 9
 

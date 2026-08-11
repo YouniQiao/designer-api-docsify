@@ -1,6 +1,6 @@
 # GestureObserverConfigs
 
-该参数用于指定需要监听的手势回调阶段（传入空数组将无效），仅当手势触发指定阶段时才会发送通知。
+The observer options for global gesture listener.
 
 **Since:** 26.0.0
 
@@ -22,7 +22,7 @@ import { OverlayManager, FrameCallback, ResolvedUIContext, NodeRenderStateChange
 actionPhases: Array<GestureActionPhase>
 ```
 
-手势事件对象。
+The gesture callback phases want to monitor. Only the specific action phases can be notified when the gesture is triggered. If empty array provided, the register will has no any effect.
 
 **Type:** Array&lt;GestureActionPhase&gt;
 

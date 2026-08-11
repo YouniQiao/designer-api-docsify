@@ -1,8 +1,6 @@
 # Size
 
-表示图片尺寸。
-
-继承自[lang.ISendable](../../../arkts-utils/arkts-sendable.md#isendable)。
+Describes the size of an image.It inherits from [lang.ISendable](../../../arkts-utils/arkts-sendable.md#isendable).
 
 **Inheritance/Implementation:** Size extends [lang.ISendable](../../apis-arkts/arkts-apis/arkts-arkts-lang-isendable-i.md/arkts-arkts-lang-isendable-i.md)
 
@@ -26,7 +24,7 @@ import { sendableImage } from 'kits/@kit.ImageKit';
 height: number
 ```
 
-输出图片的高，单位：像素。
+Height of the output image, in px.
 
 **Type:** number
 
@@ -48,7 +46,7 @@ height: number
 width: number
 ```
 
-输出图片的宽，单位：像素。
+Width of the output image, in px.
 
 **Type:** number
 

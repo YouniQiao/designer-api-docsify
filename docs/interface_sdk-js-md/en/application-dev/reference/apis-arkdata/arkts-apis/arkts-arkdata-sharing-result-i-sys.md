@@ -1,6 +1,6 @@
 # Result (System API)
 
-端云共享结果的返回值。
+Represents the device-cloud sharing result.
 
 **Since:** 11
 
@@ -24,7 +24,7 @@ import { cloudData } from 'kits/@kit.ArkData';
 code: int
 ```
 
-错误码。
+Error code.
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
@@ -44,7 +44,7 @@ code: int
 description?: string
 ```
 
-错误码详细描述，默认为undefined。
+Detailed description of the error code. The default value is undefined.
 
 **Type:** string
 
@@ -64,7 +64,7 @@ description?: string
 value?: T
 ```
 
-返回结果的值，具体类型由参数T指定，默认为undefined。
+Value returned. The specific type is specified by the T parameter. The default value is undefined.
 
 **Type:** T
 

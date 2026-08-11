@@ -1,14 +1,6 @@
 # StarStyleOptions
 
-评分组件选中、未选中以及部分选中的星级样式。
-
-> **说明：**
-> 
-> 为规范匿名对象的定义，API 18版本修改了此处的元素定义。其中，保留了历史匿名对象的起始版本信息，会出现外层元素@since版本号高于内层元素版本号的情况，但这不影响接口的使用。
-
-> **说明：**
-> 
-> string格式可用于加载网络图片和本地图片。当使用相对路径引用本地图片时，例如Image("common/test.jpg")，其中common目录与pages同级，同时支持Base64字符串。
+Define star style options.
 
 **Since:** 23
 
@@ -24,14 +16,7 @@
 backgroundUri: ResourceStr | undefined
 ```
 
-未选中的星级的图片链接，可由用户自定义或使用系统默认图片。取值为undefined时，则使用系统默认图片。
-
-**卡片能力（仅ArkTS-Dyn）：** 从API version 9开始，该接口支持在ArkTS卡片中使用。
-
-**原子化服务API（仅ArkTS-Dyn）：** 从API version 11开始，该接口支持在原子化服务中使用。
-
-从API version 20开始，该接口支持设置Resource资源。参考  
-[示例3（通过Resource资源设置评分的样式）](../../../reference/apis-arkui/arkui-ts/ts-basic-components-rating copy.md#示例3通过resource资源设置评分的样式)代码。
+Background URI option.Anonymous Object Rectification.
 
 **Type:** [ResourceStr](arkts-arkui-resourcestr-t.md) \| undefined
 
@@ -51,14 +36,7 @@ backgroundUri: ResourceStr | undefined
 foregroundUri: ResourceStr | undefined
 ```
 
-选中的星级的图片路径，可由用户自定义或使用系统默认图片。取值为undefined时，则使用系统默认图片。
-
-**卡片能力（仅ArkTS-Dyn）：** 从API version 9开始，该接口支持在ArkTS卡片中使用。
-
-**原子化服务API（仅ArkTS-Dyn）：** 从API version 11开始，该接口支持在原子化服务中使用。
-
-从API version 20开始，该接口支持设置Resource资源。参考  
-[示例3（通过Resource资源设置评分的样式）](../../../reference/apis-arkui/arkui-ts/ts-basic-components-rating copy.md#示例3通过resource资源设置评分的样式)代码。
+Foreground URI option.Anonymous Object Rectification.
 
 **Type:** [ResourceStr](arkts-arkui-resourcestr-t.md) \| undefined
 
@@ -78,14 +56,7 @@ foregroundUri: ResourceStr | undefined
 secondaryUri?: ResourceStr
 ```
 
-部分选中的星级的图片路径，可由用户自定义或使用系统默认图片。
-
-**卡片能力（仅ArkTS-Dyn）：** 从API version 9开始，该接口支持在ArkTS卡片中使用。
-
-**原子化服务API（仅ArkTS-Dyn）：** 从API version 11开始，该接口支持在原子化服务中使用。
-
-从API version 20开始，该接口支持设置Resource资源。参考  
-[示例3（通过Resource资源设置评分的样式）](../../../reference/apis-arkui/arkui-ts/ts-basic-components-rating copy.md#示例3通过resource资源设置评分的样式)代码。
+Secondary URI option.Anonymous Object Rectification.
 
 **Type:** [ResourceStr](arkts-arkui-resourcestr-t.md)
 

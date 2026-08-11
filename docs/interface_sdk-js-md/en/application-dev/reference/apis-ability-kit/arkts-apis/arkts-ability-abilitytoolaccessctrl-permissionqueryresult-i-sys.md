@@ -1,6 +1,6 @@
 # PermissionQueryResult (System API)
 
-权限查询结果。
+Permission query result.
 
 **Since:** 26.0.0
 
@@ -18,7 +18,7 @@
 needDialog: boolean
 ```
 
-是否需要对话。
+Whether a dialog is required.
 
 **Type:** boolean
 
@@ -38,7 +38,7 @@ needDialog: boolean
 permissionResults: PermissionInfo[]
 ```
 
-权限结果列表。
+Permission result list.
 
 **Type:** [PermissionInfo](arkts-ability-abilitytoolaccessctrl-permissioninfo-i-sys.md)[]
 
@@ -58,7 +58,7 @@ permissionResults: PermissionInfo[]
 ticket?: TicketInfo
 ```
 
-票证信息。
+Ticket information.
 
 **Type:** [TicketInfo](arkts-ability-abilitytoolaccessctrl-ticketinfo-i-sys.md)
 

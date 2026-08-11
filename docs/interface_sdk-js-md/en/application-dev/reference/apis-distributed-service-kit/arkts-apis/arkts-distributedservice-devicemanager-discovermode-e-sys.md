@@ -1,6 +1,6 @@
 # DiscoverMode (System API)
 
-表示发现模式的枚举。
+Enumerates the device discovery modes.
 
 **Since:** 7
 
@@ -20,7 +20,7 @@
 DISCOVER_MODE_PASSIVE = 0x55
 ```
 
-被动模式。
+Passive discovery.
 
 **Since:** 7
 
@@ -40,7 +40,7 @@ DISCOVER_MODE_PASSIVE = 0x55
 DISCOVER_MODE_ACTIVE = 0xAA
 ```
 
-主动模式。
+Active discovery.
 
 **Since:** 7
 

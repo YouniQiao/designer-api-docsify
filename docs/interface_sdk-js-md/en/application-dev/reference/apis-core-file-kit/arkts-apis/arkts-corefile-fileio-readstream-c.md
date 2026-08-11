@@ -1,9 +1,9 @@
 # ReadStream
 
-文件可读流，需要先通过[fileIo.createReadStream](arkts-corefile-fileio-createreadstream-f.md#createreadstream)方法来构建一个ReadStream实例。ReadStream继承自数据流基类  
-[stream.Readable](../../apis-arkts/arkts-apis/arkts-arkts-stream-readable-c.md/arkts-arkts-stream-readable-c.md)。
+Defines a readable stream. You need to use [fileIo.createReadStream](arkts-corefile-fileio-createreadstream-f.md#createreadstream) to create a  
+**ReadStream** instance, which is inherited from [stream.Readable](../../apis-arkts/arkts-apis/arkts-arkts-stream-readable-c.md/arkts-arkts-stream-readable-c.md).
 
-**规格**：ReadStream读到的数据为解码后的字符串，其编码格式当前仅支持'utf-8'。
+The data obtained by **ReadStream** is a decoded string. Currently, only the UTF-8 format is supported.
 
 **Inheritance/Implementation:** ReadStream extends [stream.Readable](../../apis-arkts/arkts-apis/arkts-arkts-stream-readable-c.md/arkts-arkts-stream-readable-c.md)
 
@@ -27,7 +27,7 @@ import { Options, ReaderIteratorResult, Watcher, ReadTextOptions, WatchEventList
 close(): void
 ```
 
-关闭可读流。
+Closes this readable stream.
 
 **Since:** 23
 
@@ -70,7 +70,7 @@ The ReadStream constructor.
 seek(offset: long, whence?: WhenceType): long
 ```
 
-调整可读流偏移指针位置。
+Adjusts the position of the readable stream offset pointer.
 
 **Since:** 23
 
@@ -84,21 +84,21 @@ seek(offset: long, whence?: WhenceType): long
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| offset | long | Yes | 相对偏移位置，单位为Byte。 |
+| offset | long | Yes | Relative offset, in bytes. |
 | whence | [WhenceType](arkts-corefile-fileio-whencetype-e.md) | No | = WhenceType.SEEK_SET] - Where to start the offset. The default value is SEEK_SET, &lt;br&gt;which indicates the beginning of the file. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| long | 当前可读流偏移指针位置（相对于文件头的偏移量，单位为Byte）。 |
+| long | Position of the current offset pointer (offset relative to the file header, in bytes). |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
 | 13900020 | Invalid argument |
-| 401 | Parameter error |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error |
 | 13900026 | Illegal seek |
 | 13900042 | Unknown error |
 
@@ -108,7 +108,7 @@ seek(offset: long, whence?: WhenceType): long
 readonly bytesRead: long
 ```
 
-可读流已经读取的字节数。
+Number of bytes read by the readable stream.
 
 **Type:** long
 
@@ -126,7 +126,7 @@ readonly bytesRead: long
 readonly path: string
 ```
 
-当前可读流对应的文件路径。
+Path of the file corresponding to the readable stream.
 
 **Type:** string
 

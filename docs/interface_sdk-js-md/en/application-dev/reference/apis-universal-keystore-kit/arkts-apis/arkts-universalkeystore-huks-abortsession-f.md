@@ -12,7 +12,7 @@ import { huks } from 'kits/@kit.UniversalKeystoreKit';
 function abortSession(handle: number, options: HuksOptions, callback: AsyncCallback<void>): void
 ```
 
-abortSession终止密钥操作。使用callback异步回调。
+Aborts a key operation. This API uses an asynchronous callback to return the result.
 
 **Since:** 9
 
@@ -28,25 +28,25 @@ abortSession终止密钥操作。使用callback异步回调。
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| handle | number | Yes | abortSession操作的uint64类型的handle值。 |
-| options | [HuksOptions](arkts-universalkeystore-huks-huksoptions-i.md) | Yes | abortSession操作的参数集合。 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | 回调函数。当密钥操作abort成功时，err为undefined，否则为错误对象。 |
+| handle | number | Yes | Handle of the **abortSession** operation, which is of the uint64 type. |
+| options | [HuksOptions](arkts-universalkeystore-huks-huksoptions-i.md) | Yes | Parameter set used for the **abortSession** operation. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined**. Otherwise, **err** is an error object. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. 3. Parameter verification failed. |
-| 801 | api is not supported |
-| 12000006 | error occurred in crypto engine or UKey driver |
-| 12000005 | IPC communication failed |
-| 12000004 | operating file failed |
-| 12000020 | the provider operation failed<br>**Applicable version:** 22 and later |
-| 12000018 | the group id specified by the access group tag is invalid<br>**Applicable version:** 23 and later |
-| 12000014 | memory is insufficient |
-| 12000012 | Device environment or input parameter abnormal |
-| 12000026 | the secure element is not available<br>**Applicable version:** 26.0.0 and later |
-| 12000024 | the provider or UKey is busy<br>**Applicable version:** 22 and later |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. 3. Parameter verification failed. |
+| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | api is not supported |
+| [12000006](../errorcode-huks.md#12000006-algorithm-library-operation-failed) | error occurred in crypto engine or UKey driver |
+| [12000005](../errorcode-huks.md#12000005-ipc-error) | IPC communication failed |
+| [12000004](../errorcode-huks.md#12000004-file-error) | operating file failed |
+| [12000020](../errorcode-huks.md#12000020-dependent-module-error) | the provider operation failed<br>**Applicable version:** 22 and later |
+| [12000018](../errorcode-huks.md#12000018-invalid-input-parameter) | the group id specified by the access group tag is invalid<br>**Applicable version:** 23 and later |
+| [12000014](../errorcode-huks.md#12000014-insufficient-memory) | memory is insufficient |
+| [12000012](../errorcode-huks.md#12000012-external-error) | Device environment or input parameter abnormal |
+| [12000026](../errorcode-huks.md#12000026-secure-element-fault) | the secure element is not available<br>**Applicable version:** 26.0.0 and later |
+| [12000024](../errorcode-huks.md#12000024-device-or-resource-busy) | the provider or UKey is busy<br>**Applicable version:** 22 and later |
 
 ## Examples
 
@@ -90,7 +90,7 @@ async function huksAbort() {
     value: huks.HuksCipherMode.HUKS_MODE_ECB,
   }];
 
-  huks.generateKeyItem(keyAlias, options, (error) => {
+  huks.generateKeyItem(keyAlias, options, (error, data) => {
     if (error) {
       console.error(`callback: generateKeyItem failed`);
     } else {
@@ -101,7 +101,7 @@ async function huksAbort() {
         } else {
           console.info(`callback: initSession success, data = ${JSON.stringify(data)}`);
           handle = data.handle;
-          huks.abortSession(handle, options, (error) => {
+          huks.abortSession(handle, options, (error, data) => {
             if (error) {
               console.error(`callback: abortSession failed`);
             } else {
@@ -420,7 +420,7 @@ export default {
 function abortSession(handle: number, options: HuksOptions): Promise<void>
 ```
 
-abortSession终止密钥操作。使用Promise异步回调。
+Aborts a key operation. This API uses a promise to return the result.
 
 **Since:** 9
 
@@ -436,30 +436,30 @@ abortSession终止密钥操作。使用Promise异步回调。
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| handle | number | Yes | abortSession操作的uint64类型的handle值。 |
-| options | [HuksOptions](arkts-universalkeystore-huks-huksoptions-i.md) | Yes | abortSession操作的参数集合。 |
+| handle | number | Yes | Handle of the **abortSession** operation, which is of the uint64 type. |
+| options | [HuksOptions](arkts-universalkeystore-huks-huksoptions-i.md) | Yes | Parameter set used for the **abortSession** operation. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise对象，无返回结果。 |
+| Promise&lt;void&gt; | Promise that returns no value. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. 3. Parameter verification failed. |
-| 801 | api is not supported |
-| 12000006 | error occurred in crypto engine or UKey driver |
-| 12000005 | IPC communication failed |
-| 12000004 | operating file failed |
-| 12000020 | the provider operation failed<br>**Applicable version:** 22 and later |
-| 12000018 | the group id specified by the access group tag is invalid<br>**Applicable version:** 23 and later |
-| 12000014 | memory is insufficient |
-| 12000012 | Device environment or input parameter abnormal |
-| 12000026 | the secure element is not available<br>**Applicable version:** 26.0.0 and later |
-| 12000024 | the provider or UKey is busy<br>**Applicable version:** 22 and later |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. 3. Parameter verification failed. |
+| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | api is not supported |
+| [12000006](../errorcode-huks.md#12000006-algorithm-library-operation-failed) | error occurred in crypto engine or UKey driver |
+| [12000005](../errorcode-huks.md#12000005-ipc-error) | IPC communication failed |
+| [12000004](../errorcode-huks.md#12000004-file-error) | operating file failed |
+| [12000020](../errorcode-huks.md#12000020-dependent-module-error) | the provider operation failed<br>**Applicable version:** 22 and later |
+| [12000018](../errorcode-huks.md#12000018-invalid-input-parameter) | the group id specified by the access group tag is invalid<br>**Applicable version:** 23 and later |
+| [12000014](../errorcode-huks.md#12000014-insufficient-memory) | memory is insufficient |
+| [12000012](../errorcode-huks.md#12000012-external-error) | Device environment or input parameter abnormal |
+| [12000026](../errorcode-huks.md#12000026-secure-element-fault) | the secure element is not available<br>**Applicable version:** 26.0.0 and later |
+| [12000024](../errorcode-huks.md#12000024-device-or-resource-busy) | the provider or UKey is busy<br>**Applicable version:** 22 and later |
 
 ## Examples
 
@@ -471,8 +471,26 @@ import { huks } from '@kit.UniversalKeystoreKit';
  *
  * The following uses a 2048-bit RSA key as an example. The promise-based APIs are used.
  */
+
+function stringToUint8Array(str: string) {
+  let arr: number[] = [];
+  for (let i = 0, j = str.length; i < j; ++i) {
+    arr.push(str.charCodeAt(i));
+  }
+  let tmpUint8Array = new Uint8Array(arr);
+  return tmpUint8Array;
+}
+
 let keyAlias = "HuksDemoRSA";
-let genProperties: Array<huks.HuksParam> = [{
+let properties: Array<huks.HuksParam> = [];
+let options: huks.HuksOptions = {
+  properties: properties,
+  inData: new Uint8Array(0)
+};
+let handle: number = 0;
+
+async function generateKey() {
+  properties = [{
     tag: huks.HuksTag.HUKS_TAG_ALGORITHM,
     value: huks.HuksKeyAlg.HUKS_ALG_RSA
   }, {
@@ -490,16 +508,10 @@ let genProperties: Array<huks.HuksParam> = [{
   }, {
     tag: huks.HuksTag.HUKS_TAG_BLOCK_MODE,
     value: huks.HuksCipherMode.HUKS_MODE_ECB,
-}];
-let options: huks.HuksOptions = {
-  properties: genProperties,
-  inData: new Uint8Array(0)
-};
-let handle: number = 0;
+  }];
 
-async function generateKey() {
   await huks.generateKeyItem(keyAlias, options)
-    .then(() => {
+    .then((data) => {
       console.info(`promise: generateKeyItem success`);
     });
 }
@@ -513,10 +525,28 @@ async function huksInit() {
     });
 }
 
+async function huksUpdate() {
+  console.info('enter huksUpdate');
+  options.inData = stringToUint8Array("huksHmacTest");
+  await huks.updateSession(handle, options)
+    .then((data) => {
+      console.info(`promise: updateSession success, data = ${JSON.stringify(data)}`);
+    });
+}
+
+async function huksFinish() {
+  console.info('enter huksFinish');
+  options.inData = new Uint8Array(0);
+  await huks.finishSession(handle, options)
+    .then((data) => {
+      console.info(`promise: finishSession success, data = ${JSON.stringify(data)}`);
+    });
+}
+
 async function huksAbort() {
   console.info('enter huksAbort');
   await huks.abortSession(handle, options)
-    .then(() => {
+    .then((data) => {
       console.info(`promise: abortSession success`);
     });
 }

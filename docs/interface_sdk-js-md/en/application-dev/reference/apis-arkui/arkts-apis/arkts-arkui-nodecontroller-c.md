@@ -1,10 +1,6 @@
 # NodeController
 
-NodeController用于实现自定义节点的创建、显示、更新等操作的管理，并负责将自定义节点挂载到[NodeContainer](node_container)上。
-
-> **说明：**
-> 
-> - NodeController对象不支持使用JSON序列化。
+Defines the controller of the node container. Provides lifecycle callbacks for the associated NodeContainer and methods to control the child node of the NodeContainer.
 
 **Since:** 23
 
@@ -20,9 +16,7 @@ NodeController用于实现自定义节点的创建、显示、更新等操作的
 aboutToAppear(): void
 ```
 
-> **说明：**
-> 
-> 回调时机参考[onAppear](arkts-arkui-common-commonmethod-i.md#onappear)。
+AboutToAppear Method. Executed when the associated NodeContainer is aboutToAppear.
 
 **Since:** 23
 
@@ -42,9 +36,7 @@ aboutToAppear(): void
 aboutToDisappear(): void
 ```
 
-> **说明：**
-> 
-> 回调时机参考[onDisAppear](arkts-arkui-common-commonmethod-i.md#ondisappear)。
+AboutToDisappear Method. Executed before the associated NodeContainer is destroyed.
 
 **Since:** 23
 
@@ -64,6 +56,8 @@ aboutToDisappear(): void
 aboutToResize(size: Size): void
 ```
 
+AboutToResize Method. Executed when the associated NodeContainer performs the measure method.
+
 **Since:** 23
 
 **ArkTS mode:** ArkTS-Sta only, since version 23.
@@ -80,7 +74,7 @@ aboutToResize(size: Size): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| size | [Size](arkts-arkui-graphics-size-i.md) | Yes | 用于返回组件布局大小的宽和高，单位为vp。 |
+| size | [Size](arkts-arkui-graphics-size-i.md) | Yes | size used to resize |
 
 ## makeNode
 
@@ -88,17 +82,7 @@ aboutToResize(size: Size): void
 abstract makeNode(uiContext: UIContext): FrameNode | null
 ```
 
-当实例绑定的[NodeContainer](node_container)创建的时候进行回调。回调方法将返回一个节点，将该节点挂载至[NodeContainer](node_container)。
-
-或者可以通过NodeController的rebuild()方法进行回调的触发。
-
-> **说明：**
-> 
-> [NodeContainer](node_container)不支持跨实例复用。如果出现跨实例复用[NodeContainer](node_container)，传入
-> [NodeContainer](node_container)的[NodeController](arkts-arkui-nodecontroller-c.md)触发
-> [makeNode](arkts-arkui-nodecontroller-c.md#makenode)回调方法时，入参中的[UIContext](arkts-arkui-uicontext.md)对象可能为undefined，此时需要开发者
-> 判断入参中的[UIContext](arkts-arkui-uicontext.md)对象是否为undefined，防止后续使用此入参时出现
-> [UIContext无效的JS异常](../../../ui/arkts-wrong-uicontext-debug.md#定位uicontext错误问题)。
+MakeNode Method. Used to build a node tree and return a FrameNode or null, and attach the return result to the associated NodeContainer.Executed when the associated NodeContainer is created or the rebuild function is called.
 
 **Since:** 23
 
@@ -116,7 +100,7 @@ abstract makeNode(uiContext: UIContext): FrameNode | null
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| uiContext | [UIContext](arkts-arkui-arkui-uicontext-uicontext-c.md) | Yes | 回调该方法的时候，绑定[NodeContainer](node_container)的UI上下文。 |
+| uiContext | [UIContext](arkts-arkui-arkui-uicontext-uicontext-c.md) | Yes | uiContext used to makeNode |
 
 **Return value:**
 
@@ -130,9 +114,7 @@ abstract makeNode(uiContext: UIContext): FrameNode | null
 onAttach(): void
 ```
 
-> **说明：**
-> 
-> 回调时机参考[onAttach](arkts-arkui-common-commonmethod-i.md#onattach)。
+OnAttach Method. Executed when the associated NodeContainer is attached to the main tree.
 
 **Since:** 23
 
@@ -152,6 +134,8 @@ onAttach(): void
 onBind(containerId: long): void
 ```
 
+OnBind Method. Executed when the NodeController is bound to a NodeContainer.
+
 **Since:** 23
 
 **ArkTS mode:** ArkTS-Sta only, since version 23.
@@ -168,7 +152,7 @@ onBind(containerId: long): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| containerId | long | Yes | 回调该方法时，NodeController与NodeContainerId对应的[NodeContainer](node_container)绑定完成。 |
+| containerId | long | Yes | the uniqueId of the NodeContainer. |
 
 ## onDetach
 
@@ -176,9 +160,7 @@ onBind(containerId: long): void
 onDetach(): void
 ```
 
-> **说明：**
-> 
-> 回调时机参考[onDetach](arkts-arkui-common-commonmethod-i.md#ondetach)。
+OnDetach Method. Executed when the associated NodeContainer is detached from the main tree.
 
 **Since:** 23
 
@@ -198,6 +180,8 @@ onDetach(): void
 onTouchEvent(event: TouchEvent): void
 ```
 
+OnTouchEvent Method. Executed when associated NodeContainer is touched.
+
 **Since:** 23
 
 **ArkTS mode:** ArkTS-Sta only, since version 23.
@@ -214,7 +198,7 @@ onTouchEvent(event: TouchEvent): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| event | [TouchEvent](../arkts-components/arkts-arkui-touchevent-i.md) | Yes | 触摸事件。 |
+| event | [TouchEvent](../arkts-components/arkts-arkui-touchevent-i.md) | Yes | The TouchEvent when associated NodeContainer is touched. |
 
 ## onUnbind
 
@@ -222,7 +206,7 @@ onTouchEvent(event: TouchEvent): void
 onUnbind(containerId: long): void
 ```
 
-OnUnbind方法。解除NodeController与NodeContainer的绑定时执行。
+OnUnbind Method. Executed when the NodeController is unbound with the NodeContainer.
 
 **Since:** 23
 
@@ -240,13 +224,15 @@ OnUnbind方法。解除NodeController与NodeContainer的绑定时执行。
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| containerId | long | Yes | 回调该方法时，NodeController与NodeContainerId对应的[NodeContainer](node_container)解绑完成。 |
+| containerId | long | Yes | the uniqueId of the NodeContainer. |
 
 ## onWillBind
 
 ```TypeScript
 onWillBind(containerId: long): void
 ```
+
+OnWillBind Method. Executed before the NodeController is bound to a NodeContainer.
 
 **Since:** 23
 
@@ -264,13 +250,15 @@ onWillBind(containerId: long): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| containerId | long | Yes | 回调该方法时，NodeController与NodeContainerId对应的[NodeContainer](node_container)即将绑定。 |
+| containerId | long | Yes | the uniqueId of the NodeContainer. |
 
 ## onWillUnbind
 
 ```TypeScript
 onWillUnbind(containerId: long): void
 ```
+
+OnWillUnbind Method. Executed before the NodeController is unbound with the NodeContainer.
 
 **Since:** 23
 
@@ -288,7 +276,7 @@ onWillUnbind(containerId: long): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| containerId | long | Yes | 回调该方法时，NodeController与NodeContainerId对应的[NodeContainer](node_container)即将解绑。 |
+| containerId | long | Yes | the uniqueId of the NodeContainer. |
 
 ## rebuild
 
@@ -296,13 +284,7 @@ onWillUnbind(containerId: long): void
 rebuild(): void
 ```
 
-调用此接口通知[NodeContainer](node_container)组件重新回调[makeNode](arkts-arkui-nodecontroller-c.md#makenode)方法，更改子节点。
-
-> **说明：**
-> > 由于rebuild方法为应用主动调用的方法，且该操作与UI相关。需要开发者自行保证调用该接口时UI上下文有效，即与绑定的NodeContainer保持UI上下文一致。
-> 
-> 监听回调等[UI上下文不明确](../../../ui/arkts-global-interface.md#ui上下文不明确)时，可以通过[UIContext](arkts-arkui-uicontext.md)的
-> [runScopedTask](../../../reference/apis-arkui/arkts-apis-uicontext-uicontext.md#runscopedtask)方法明确调用时的UI上下文。
+Rebuild Method. Used to re-invoke the makeNode method.
 
 **Since:** 23
 

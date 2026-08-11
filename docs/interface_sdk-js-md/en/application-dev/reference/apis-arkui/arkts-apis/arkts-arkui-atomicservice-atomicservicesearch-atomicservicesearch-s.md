@@ -1,10 +1,6 @@
 # AtomicServiceSearch
 
-AtomicServiceSearch为开发者提供满足定制化需求的功能，内容包括默认显示的搜索区、可自定义的选择区和功能区（最多两个）。
-
-> **说明：**
-> 
-> 该组件从API version 18开始支持。后续版本的新增接口，采用上角标单独标记接口的起始版本。
+**AtomicServiceSearch** allows you to customize the default search area, customizable selection area, and function area (a maximum of two).
 
 **Since:** 18
 
@@ -28,7 +24,7 @@ import { SearchParams, AtomicServiceSearch, SearchButtonParams, OperationParams,
 controller?: SearchController
 ```
 
-Search组件控制器，用于设置输入光标的位置、退出编辑态等操作。默认值为undefined。
+Set the Search component controller.
 
 **Type:** [SearchController](../arkts-components/arkts-arkui-searchcontroller-c.md)
 
@@ -48,7 +44,7 @@ Search组件控制器，用于设置输入光标的位置、退出编辑态等�
 operation?: OperationParams
 ```
 
-功能区（右侧）的功能设置项。默认值为undefined。
+Function settings in the selection area (right).
 
 **Type:** [OperationParams](arkts-arkui-atomicservice-atomicservicesearch-operationparams-i.md)
 
@@ -68,7 +64,7 @@ operation?: OperationParams
 placeholder?: ResourceStr
 ```
 
-搜索框内默认显示的提示文本。默认值为Search。
+Indicates default prompt text displayed in the search box.The default value is Search, which supports globalization.
 
 **Type:** [ResourceStr](arkts-arkui-resourcestr-t.md)
 
@@ -90,7 +86,7 @@ placeholder?: ResourceStr
 search?: SearchParams
 ```
 
-search搜索区可支持的事件及样式。默认值为undefined。
+Events and styles supported by the search area.
 
 **Type:** [SearchParams](arkts-arkui-atomicservice-atomicservicesearch-searchparams-i.md)
 
@@ -112,7 +108,7 @@ search搜索区可支持的事件及样式。默认值为undefined。
 select?: SelectParams
 ```
 
-select选择区的内容、事件及样式。默认值为undefined。
+Contents, events, and styles of the select area.
 
 **Type:** [SelectParams](arkts-arkui-atomicservice-atomicservicesearch-selectparams-i.md)
 
@@ -134,7 +130,7 @@ select选择区的内容、事件及样式。默认值为undefined。
 value?: ResourceStr
 ```
 
-设置当前显示的搜索文本内容。默认值为空字符串。
+Sets the search text content that is currently displayed.
 
 **Type:** [ResourceStr](arkts-arkui-resourcestr-t.md)
 

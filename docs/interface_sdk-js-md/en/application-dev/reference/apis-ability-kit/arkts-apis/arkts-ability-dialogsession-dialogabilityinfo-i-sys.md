@@ -1,6 +1,6 @@
 # DialogAbilityInfo (System API)
 
-提供会话组件信息，包括包名、模块名、组件名等信息。
+Provides DialogAbility information, including the bundle name, module name, and ability name.
 
 **Since:** 11
 
@@ -24,7 +24,7 @@ import { dialogSession } from 'kits/@kit.AbilityKit';
 abilityIconId: int
 ```
 
-表示Ability图标ID。
+ID of the ability icon.
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
@@ -46,7 +46,7 @@ abilityIconId: int
 abilityLabelId: int
 ```
 
-表示Ability标签ID。
+ID of the ability label.
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
@@ -68,7 +68,7 @@ abilityLabelId: int
 abilityName: string
 ```
 
-表示组件名。
+Ability name.
 
 **Type:** string
 
@@ -90,7 +90,7 @@ abilityName: string
 appIndex: int
 ```
 
-表示应用的分身索引。
+Index of the application clone.
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
@@ -112,7 +112,7 @@ appIndex: int
 bundleIconId: int
 ```
 
-表示Bundle图标ID。
+ID of the bundle icon.
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
@@ -134,7 +134,7 @@ bundleIconId: int
 bundleLabelId: int
 ```
 
-表示Bundle标签ID。
+ID of the bundle label.
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
@@ -156,7 +156,7 @@ bundleLabelId: int
 bundleName: string
 ```
 
-表示包名。
+Bundle name.
 
 **Type:** string
 
@@ -178,7 +178,7 @@ bundleName: string
 codePath?: string
 ```
 
-表示应用程序的安装目录。
+Installation directory of the application.
 
 **Type:** string
 
@@ -200,13 +200,14 @@ codePath?: string
 installSource?: string
 ```
 
-表示应用程序的安装来源，支持的取值如下：
+Installation source of the application. The options are as follows:
 
-- pre-installed：表示首次开机时安装的预置应用。  
-- ota：表示系统升级时新增的预置应用。  
-- recovery：表示用户卸载后又手动恢复的预置应用。  
-- bundleName：表示由此包名对应的应用安装。该bundleName代表变量，以实际值为准。  
-- unknown：表示应用安装来源未知。
+- **pre-installed**: pre-installed application installed during the first boot.  
+- **ota**: pre-installed application added during system upgrade.  
+- **recovery**: pre-installed application manually restored by the user after uninstallation.  
+- **bundleName**: installation by the application corresponding to this bundle name. **bundleName** represents a  
+variable, subject to the actual value.  
+- **unknown**: unknown application installation source.
 
 **Type:** string
 
@@ -228,7 +229,7 @@ installSource?: string
 moduleName: string
 ```
 
-表示模块名。
+Module name.
 
 **Type:** string
 
@@ -250,7 +251,7 @@ moduleName: string
 multiAppMode: MultiAppMode
 ```
 
-表示应用的多开模式。
+Multi-app mode.
 
 **Type:** [MultiAppMode](arkts-ability-applicationinfo-multiappmode-i.md)
 
@@ -272,7 +273,7 @@ multiAppMode: MultiAppMode
 visible: boolean
 ```
 
-表示Ability是否可见。true表示Ability可见，false表示Ability不可见。
+Whether the ability is visible. **true** if visible, **false** otherwise.
 
 **Type:** boolean
 

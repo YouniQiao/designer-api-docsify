@@ -1,12 +1,12 @@
 # Slider
 
-滑动条组件，通常用于快速调节设置值，如音量调节、亮度调节等应用场景。支持样式定制、方向配置、交互方式和无障碍功能，能解决UI一致性问题，提升开发效率，从而改善用户体验并降低开发成本。
+The **Slider** component is used to quickly adjust settings, such as the volume and brightness.
 
-> **说明：**
+> **NOTE**
 
-## 子组件
+## Child Components
 
-无
+Not supported
 
 ## Slider
 
@@ -30,7 +30,7 @@ Slider(options?: SliderOptions)
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| options | [SliderOptions](arkts-arkui-slideroptions-i.md) | No | 配置滑动条的参数。若不传入，则使用SliderOptions中各属性的默认值。 |
+| options | [SliderOptions](arkts-arkui-slideroptions-i.md) | No | Parameters of the slider. |
 
 ## Summary
 

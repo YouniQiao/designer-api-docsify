@@ -12,7 +12,7 @@ import { hidebug } from 'kits/@kit.PerformanceAnalysisKit';
 function getVMRuntimeStats(): GcStats
 ```
 
-��ȡϵͳGCͳ����Ϣ��
+Obtains the system GC statistics.
 
 **Since:** 12
 
@@ -26,7 +26,7 @@ function getVMRuntimeStats(): GcStats
 
 | Type | Description |
 | --- | --- |
-| [GcStats](arkts-performanceanalysis-hidebug-gcstats-t.md) | ϵͳGCͳ����Ϣ�� |
+| [GcStats](arkts-performanceanalysis-hidebug-gcstats-t.md) | System GC statistics. |
 
 ## Examples
 

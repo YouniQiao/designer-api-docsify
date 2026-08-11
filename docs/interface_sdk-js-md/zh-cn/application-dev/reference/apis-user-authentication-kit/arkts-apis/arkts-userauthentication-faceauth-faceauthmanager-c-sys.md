@@ -12,12 +12,6 @@
 
 **系统接口：** 此接口为系统接口。
 
-## 导入模块
-
-```TypeScript
-import { faceAuth } from 'kits/@kit.UserAuthenticationKit';
-```
-
 ## constructor
 
 ```TypeScript
@@ -76,9 +70,9 @@ setSurfaceId(surfaceId: string): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 12700001 | The service is unavailable. |
-| 201 | Permission denied. |
-| 202 | Permission denied. Called by non-system application. |
+| [12700001](../errorcode-useriam.md#12700001-人脸服务不可用) | The service is unavailable. |
+| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission denied. Called by non-system application. |
 
 ## 示例
 

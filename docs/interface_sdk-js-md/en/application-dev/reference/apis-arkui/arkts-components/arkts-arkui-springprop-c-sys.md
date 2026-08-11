@@ -1,6 +1,6 @@
 # SpringProp (System API)
 
-自定义弹簧特性。
+Customize spring properties.
 
 **Since:** 7
 
@@ -20,7 +20,7 @@
 constructor(mass: number, stiffness: number, damping: number)
 ```
 
-构造器参数。
+Constructor parameters
 
 **Since:** 7
 

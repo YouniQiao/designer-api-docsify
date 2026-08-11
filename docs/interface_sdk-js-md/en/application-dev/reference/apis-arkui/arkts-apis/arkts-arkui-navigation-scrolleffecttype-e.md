@@ -1,6 +1,6 @@
 # ScrollEffectType
 
-标题栏滑动模糊效果类型。
+Declares the scroll blur effect type for the title bar.
 
 **Since:** 26.0.0
 
@@ -16,7 +16,7 @@
 COMMON_BLUR = 0
 ```
 
-普通模糊样式，对标题栏背景应用统一模糊效果，模糊背伴随透明渐变出现或消失。
+Common blur style. It applies uniform blur to the background.The blurred background appear/disappear with transparent gradient.
 
 **Since:** 26.0.0
 
@@ -34,7 +34,7 @@ COMMON_BLUR = 0
 GRADUAL_BLUR = 1
 ```
 
-渐变模糊样式，对标题栏背景应用统一模糊效果，具有清晰边界。标题栏内容在滑动前后改变颜色或状态，滑动过程中跟随手势线性变化。
+Gradual blur style. It applies uniform blur to the title background with clear boundaries.The title bar content changes color/state before and after scrolling.During scrolling, it changes linearly following the gesture.
 
 **Since:** 26.0.0
 

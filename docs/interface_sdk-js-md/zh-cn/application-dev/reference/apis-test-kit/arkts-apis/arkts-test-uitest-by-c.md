@@ -29,12 +29,6 @@ By类提供的所有API均为同步接口，建议使用者通过静态构造器
 
 **系统能力：** SystemCapability.Test.UiTest
 
-## 导入模块
-
-```TypeScript
-import { ResizeDirection, WindowMode, PenMode, PenKeyOperation, Driver, MatchPattern, UiDirection, TouchOptions, ComponentEventType, PointerMatrix, WindowChangeType, Component, ON, PenKey, Rect, InputTextMode, UIEventObserver, WindowFilter, WindowChangeOptions, UiWindow, TouchPadSwipeOptions, Point, KeyOptions, DisplayRotation, UIElementInfo, PenKeyOperationOptions, ComponentEventOptions, MouseButton, On } from 'kits/@kit.TestKit';
-```
-
 ## clickable
 
 ```TypeScript
@@ -77,7 +71,7 @@ clickable(b?: boolean): By
 // xxx.test.ets
 import { By, BY } from '@kit.TestKit';
 
-let by: By = BY.clickable(true); // 使用静态构造器BY创建By对象，指定目标控件的可点击状态属性。
+let by: By = BY.clickable(true); // 使用静态构造器BY创建by对象，指定目标控件的可点击状态属性。
 ```
 
 ## enabled
@@ -122,7 +116,7 @@ enabled(b?: boolean): By
 // xxx.test.ets
 import { By, BY } from '@kit.TestKit';
 
-let by: By = BY.enabled(true); // 使用静态构造器BY创建By对象，指定目标控件的使能状态属性。
+let by: By = BY.enabled(true); // 使用静态构造器BY创建by对象，指定目标控件的使能状态属性。
 ```
 
 ## focused
@@ -167,7 +161,7 @@ focused(b?: boolean): By
 // xxx.test.ets
 import { By, BY } from '@kit.TestKit';
 
-let by: By = BY.focused(true); // 使用静态构造器BY创建By对象，指定目标控件的获焦状态属性。
+let by: By = BY.focused(true); // 使用静态构造器BY创建by对象，指定目标控件的获焦状态属性。
 ```
 
 ## id
@@ -212,7 +206,7 @@ id(id: number): By
 // xxx.test.ets
 import { By, BY } from '@kit.TestKit';
 
-let by: By = BY.id(123); // 使用静态构造器BY创建By对象，指定目标控件的id属性。
+let by: By = BY.id(123); // 使用静态构造器BY创建by对象，指定目标控件的id属性。
 ```
 
 ## isAfter
@@ -257,7 +251,7 @@ isAfter(by: By): By
 // xxx.test.ets
 import { By, BY } from '@kit.TestKit';
 
-// 使用静态构造器BY创建By对象，指定目标控件位于给出的特征属性控件之后。
+// 使用静态构造器BY创建by对象，指定目标控件位于给出的特征属性控件之后。
 let by: By = BY.type('Text').isAfter(BY.text('123')); // 查找text为123之后的第一个Text组件。
 ```
 
@@ -303,7 +297,7 @@ isBefore(by: By): By
 // xxx.test.ets
 import { By, BY } from '@kit.TestKit';
 
-// 使用静态构造器BY创建By对象，指定目标控件位于给出的特征属性控件之前。
+// 使用静态构造器BY创建by对象，指定目标控件位于给出的特征属性控件之前。
 let by: By = BY.type('Button').isBefore(BY.text('123')); // 查找text为123之前的第一个Button组件。
 ```
 
@@ -349,7 +343,7 @@ key(key: string): By
 // xxx.test.ets
 import { By, BY } from '@kit.TestKit';
 
-let by: By = BY.key('123'); // 使用静态构造器BY创建By对象，指定目标控件的key值属性。
+let by: By = BY.key('123'); // 使用静态构造器BY创建by对象，指定目标控件的key值属性。
 ```
 
 ## scrollable
@@ -394,7 +388,7 @@ scrollable(b?: boolean): By
 // xxx.test.ets
 import { By, BY } from '@kit.TestKit';
 
-let by: By = BY.scrollable(true); // 使用静态构造器BY创建By对象，指定目标控件的可滑动状态属性。
+let by: By = BY.scrollable(true); // 使用静态构造器BY创建by对象，指定目标控件的可滑动状态属性。
 ```
 
 ## selected
@@ -439,7 +433,7 @@ selected(b?: boolean): By
 // xxx.test.ets
 import { By, BY } from '@kit.TestKit';
 
-let by: By = BY.selected(true); // 使用静态构造器BY创建By对象，指定目标控件的被选中状态属性。
+let by: By = BY.selected(true); // 使用静态构造器BY创建by对象，指定目标控件的被选中状态属性。
 ```
 
 ## text
@@ -485,7 +479,7 @@ text(txt: string, pattern?: MatchPattern): By
 // xxx.test.ets
 import { BY, By } from '@kit.TestKit';
 
-let by: By = BY.text('123'); // 使用静态构造器BY创建By对象，指定目标控件的text属性。
+let by: By = BY.text('123'); // 使用静态构造器BY创建by对象，指定目标控件的text属性。
 ```
 
 ## type
@@ -530,6 +524,6 @@ type(tp: string): By
 // xxx.test.ets
 import { By, BY } from '@kit.TestKit';
 
-let by: By = BY.type('Button'); // 使用静态构造器BY创建By对象，指定目标控件的控件类型属性。
+let by: By = BY.type('Button'); // 使用静态构造器BY创建by对象，指定目标控件的控件类型属性。
 ```
 

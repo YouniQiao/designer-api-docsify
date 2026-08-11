@@ -12,12 +12,6 @@
 
 **系统能力：** SystemCapability.Utils.Lang
 
-## 导入模块
-
-```TypeScript
-import { ArkTSUtils } from 'kits/@kit.ArkTS';
-```
-
 ## constructor
 
 ```TypeScript
@@ -70,7 +64,7 @@ lockAsync<T>(callback: AsyncLockCallback<T>): Promise<T>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 10200030 | The lock does not exist. |
+| [10200030](../errorcode-utils.md#10200030-锁不存在) | The lock does not exist. |
 
 ## lockAsync
 
@@ -107,7 +101,7 @@ lockAsync<T>(callback: AsyncLockCallback<T>, mode: AsyncLockMode): Promise<T>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 10200030 | The lock does not exist. |
+| [10200030](../errorcode-utils.md#10200030-锁不存在) | The lock does not exist. |
 
 ## lockAsync
 
@@ -146,8 +140,8 @@ lockAsync<T, U>(callback: AsyncLockCallback<T>, mode: AsyncLockMode,
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 10200031 | Timeout exceeded. |
-| 10200030 | The lock does not exist. |
+| [10200031](../errorcode-utils.md#10200031-lockasync超时) | Timeout exceeded. |
+| [10200030](../errorcode-utils.md#10200030-锁不存在) | The lock does not exist. |
 
 ## query
 
@@ -183,7 +177,7 @@ static query(name: string): AsyncLockState
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 10200030 | The lock does not exist. |
+| [10200030](../errorcode-utils.md#10200030-锁不存在) | The lock does not exist. |
 
 ## queryAll
 

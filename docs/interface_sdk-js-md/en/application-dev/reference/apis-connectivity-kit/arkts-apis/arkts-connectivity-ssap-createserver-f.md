@@ -12,7 +12,7 @@ import { ssap } from 'kits/@kit.ConnectivityKit';
 function createServer(): Server
 ```
 
-创建SSAP服务端实例。
+Creates a SSAP server instance.
 
 **Since:** 26.0.0
 
@@ -30,14 +30,14 @@ function createServer(): Server
 
 | Type | Description |
 | --- | --- |
-| [Server](arkts-connectivity-ssap-server-i.md) | 返回一个SSAP服务端实例{ |
+| [Server](arkts-connectivity-ssap-server-i.md) | Returns a SSAP server instance { |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 801 | Capability not supported because the chip does not support it. |
+| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported because the chip does not support it. |
 | 36100003 | NearLink disabled. |
 | 36100099 | Operation failed. |
-| 201 | Permission denied. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
 

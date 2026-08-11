@@ -1,11 +1,5 @@
 # startScannerDiscovery
 
-## 导入模块
-
-```TypeScript
-import { scan } from 'kits/@kit.BasicServicesKit';
-```
-
 ## startScannerDiscovery
 
 ```TypeScript
@@ -34,7 +28,7 @@ function startScannerDiscovery(): Promise<void>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 201 | Permission denied. |
+| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
 
 ## 示例
 
@@ -45,7 +39,7 @@ import { BusinessError } from '@kit.BasicServicesKit';
 scan.startScannerDiscovery().then(() => {
     console.info('start scanner discovery success');
 }).catch((error: BusinessError) => {
-    console.error(`Failed to start scanner discovery. Code: ${error.code}, message: ${error.message}`);
-});
+    console.error('start scanner discovery failed: ' + JSON.stringify(error));
+})
 ```
 

@@ -1,6 +1,6 @@
 # LinearGradient
 
-线性渐变颜色类。
+LinearGradient class
 
 **Since:** 10
 
@@ -16,7 +16,7 @@
 constructor(colorStops: ColorStop[])
 ```
 
-线性渐变颜色描述。
+Creates a linear gradient color object.
 
 **Since:** 10
 
@@ -34,5 +34,5 @@ constructor(colorStops: ColorStop[])
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| colorStops | [ColorStop](../arkts-apis/arkts-arkui-datapanel-colorstop-i.md)[] | Yes | 存储渐变颜色和渐变点。 |
+| colorStops | [ColorStop](../arkts-apis/arkts-arkui-datapanel-colorstop-i.md)[] | Yes | Gradient colors and color stops. |
 

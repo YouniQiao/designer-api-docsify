@@ -1,6 +1,6 @@
 # AccessibilityEventInfo (System API)
 
-无障碍事件信息。
+Describes the accessibility event information.
 
 **Since:** 20
 
@@ -24,7 +24,7 @@ import { Rect, TouchPosition, AccessibilityVirtualNode, ElementAttributeKeys, Fo
 eventType: AccessibilityEventType
 ```
 
-无障碍事件类型。
+Event type.
 
 **Type:** [AccessibilityEventType](arkts-accessibility-accessibility-accessibilityeventtype-e-sys.md)
 
@@ -44,7 +44,7 @@ eventType: AccessibilityEventType
 extraInfo?: string
 ```
 
-针对TextArea、TextInput、SearchField、RichEdit组件， 组件文本内容有新增或删除时，新增或删除的文本内容。
+Added or deleted text content carried by the **TextArea**, **TextInput**, **SearchField**, or **RichEdit** component.
 
 **Type:** string
 
@@ -64,7 +64,7 @@ extraInfo?: string
 target?: AccessibilityElement
 ```
 
-发生事件的目标组件。
+Target component where the event occurs.
 
 **Type:** [AccessibilityElement](arkts-accessibility-accessibilityextensioncontext-accessibilityelement-i-sys.md)
 
@@ -84,7 +84,7 @@ target?: AccessibilityElement
 timestamp?: long
 ```
 
-事件时间戳，单位是毫秒。默认值为0。
+Timestamp of the event, in milliseconds. The default value is **0**.
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：long
 

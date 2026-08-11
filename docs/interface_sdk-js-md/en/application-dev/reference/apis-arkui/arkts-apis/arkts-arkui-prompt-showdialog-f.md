@@ -12,7 +12,7 @@ import { prompt } from 'kits/@kit.ArkUI';
 function showDialog(options: ShowDialogOptions, callback: AsyncCallback<ShowDialogSuccessResponse>): void
 ```
 
-创建并显示对话框，对话框响应结果异步返回。
+Displays the dialog box.
 
 **Since:** 8
 
@@ -30,8 +30,8 @@ function showDialog(options: ShowDialogOptions, callback: AsyncCallback<ShowDial
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| options | [ShowDialogOptions](arkts-arkui-promptaction-showdialogoptions-i.md) | Yes | 页面显示对话框信息描述。 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;ShowDialogSuccessResponse&gt; | Yes | 对话框响应结果回调。 |
+| options | [ShowDialogOptions](arkts-arkui-promptaction-showdialogoptions-i.md) | Yes | Options. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;ShowDialogSuccessResponse&gt; | Yes |  |
 
 ## Examples
 
@@ -66,7 +66,7 @@ prompt.showDialog({
 function showDialog(options: ShowDialogOptions): Promise<ShowDialogSuccessResponse>
 ```
 
-创建并显示对话框，对话框响应后同步返回结果。
+Displays the dialog box.
 
 **Since:** 8
 
@@ -84,13 +84,13 @@ function showDialog(options: ShowDialogOptions): Promise<ShowDialogSuccessRespon
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| options | [ShowDialogOptions](arkts-arkui-promptaction-showdialogoptions-i.md) | Yes | 对话框选项。 |
+| options | [ShowDialogOptions](arkts-arkui-promptaction-showdialogoptions-i.md) | Yes | Options. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;ShowDialogSuccessResponse&gt; | 对话框响应结果。 |
+| Promise&lt;ShowDialogSuccessResponse&gt; |  |
 
 ## Examples
 

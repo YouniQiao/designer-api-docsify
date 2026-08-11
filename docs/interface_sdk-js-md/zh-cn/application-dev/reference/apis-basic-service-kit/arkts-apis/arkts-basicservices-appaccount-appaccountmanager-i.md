@@ -10,12 +10,6 @@
 
 **系统能力：** SystemCapability.Account.AppAccount
 
-## 导入模块
-
-```TypeScript
-import { appAccount } from 'kits/@kit.BasicServicesKit';
-```
-
 ## addAccount
 
 ```TypeScript
@@ -263,17 +257,20 @@ auth(name: string, owner: string, authType: string, callback: AuthCallback): voi
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameter types. |
-| 12300010 | Account service busy. |
-| 12300003 | Account not found. |
-| 12300002 | Invalid name, owner or authType. |
-| 12300114 | Authenticator service exception. |
-| 12300001 | System service exception. |
-| 12300113 | Authenticator service not found. |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameter types. |
+| [12300010](../../apis-basic-services-kit/errorcode-account.md#12300010-账号服务忙碌) | Account service busy. |
+| [12300003](../../apis-basic-services-kit/errorcode-account.md#12300003-账号不存在) | Account not found. |
+| [12300002](../../apis-basic-services-kit/errorcode-account.md#12300002-无效参数) | Invalid name, owner or authType. |
+| [12300114](../../apis-basic-services-kit/errorcode-account.md#12300114-认证服务异常) | Authenticator service exception. |
+| [12300001](../../apis-basic-services-kit/errorcode-account.md#12300001-系统服务异常) | System service exception. |
+| [12300113](../../apis-basic-services-kit/errorcode-account.md#12300113-认证服务不存在) | Authenticator service not found. |
 
 ## 示例
 
+ArkTS-Dyn示例：
+
 ```TypeScript
+import { appAccount } from '@kit.BasicServicesKit';
 import { BusinessError } from '@kit.BasicServicesKit';
 import { Want, common } from '@kit.AbilityKit';
 
@@ -312,7 +309,56 @@ struct Index {
       console.error(`auth exception: code is ${err.code}, message is ${err.message}`);
     }
   }
+  build() {}
+}
+```
 
+ArkTS-Sta示例：
+
+```TypeScript
+import appAccount from '@ohos.account.appAccount';
+import { BusinessError } from '@kit.BasicServicesKit';
+import { Want, common } from '@kit.AbilityKit';
+
+let appAccountManager: appAccount.AppAccountManager = appAccount.createAppAccountManager();
+
+
+@Entry
+@Component
+struct Index {
+  context: common.UIAbilityContext = this.getUIContext().getHostContext() as common.UIAbilityContext; // UIAbilityContext
+
+  onResultCallback(code: int, authResult?: appAccount.AuthResult): void {
+    console.info('resultCode: ' + code);
+    console.info('authResult: ' + JSON.stringify(authResult));
+  }
+
+  onRequestRedirectedCallback(request: Want): void {
+    let wantInfo: Want = {
+      deviceId: '',
+      bundleName: 'com.example.accountjsdemo',
+      action: 'ohos.want.action.viewData',
+      entities: ['entity.system.default'],
+    }
+    this.context.startAbility(wantInfo).then(():void => {
+      console.info('startAbility successfully');
+    }).catch((e:Error):void => {
+      const err = e as BusinessError;
+      console.error(`startAbility err: code is ${err.code}, message is ${err.message}`);
+    })
+  }
+
+  aboutToAppear(): void {
+    try {
+      appAccountManager.auth('LiSi', 'com.example.accountjsdemo', 'getSocialData', {
+        onResult: this.onResultCallback,
+        onRequestRedirected: this.onRequestRedirectedCallback
+      });
+    } catch (e: Error) {
+      const err = e as BusinessError;
+      console.error(`auth exception: code is ${err.code}, message is ${err.message}`);
+    }
+  }
   build() {}
 }
 ```
@@ -346,24 +392,25 @@ auth(
 | name | string | 是 | 应用账号的名称。最大长度为512个字符。 |
 | owner | string | 是 | 应用账号所有者的包名。最大长度为1024个字符。 |
 | authType | string | 是 | 鉴权类型。自定义数据，最大长度为1024个字符。 |
-| options | [Record](../../apis-default/arkts-apis/arkts-record-t.md)&lt;string, Object&gt; | 是 | 鉴权所需的可选项。 |
+| options | Record&lt;string, Object&gt; | 是 | 鉴权所需的可选项。 |
 | callback | [AuthCallback](arkts-basicservices-appaccount-authcallback-i.md) | 是 | 回调对象，返回鉴权结果。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameter types. |
-| 12300010 | Account service busy. |
-| 12300003 | Account not found. |
-| 12300002 | Invalid name, owner, authType or options. |
-| 12300114 | Authenticator service exception. |
-| 12300001 | System service exception. |
-| 12300113 | Authenticator service not found. |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameter types. |
+| [12300010](../../apis-basic-services-kit/errorcode-account.md#12300010-账号服务忙碌) | Account service busy. |
+| [12300003](../../apis-basic-services-kit/errorcode-account.md#12300003-账号不存在) | Account not found. |
+| [12300002](../../apis-basic-services-kit/errorcode-account.md#12300002-无效参数) | Invalid name, owner, authType or options. |
+| [12300114](../../apis-basic-services-kit/errorcode-account.md#12300114-认证服务异常) | Authenticator service exception. |
+| [12300001](../../apis-basic-services-kit/errorcode-account.md#12300001-系统服务异常) | System service exception. |
+| [12300113](../../apis-basic-services-kit/errorcode-account.md#12300113-认证服务不存在) | Authenticator service not found. |
 
 ## 示例
 
 ```TypeScript
+import { appAccount } from '@kit.BasicServicesKit';
 import { BusinessError } from '@kit.BasicServicesKit';
 import { Want, common } from '@kit.AbilityKit';
 
@@ -439,19 +486,74 @@ auth(
 | name | string | 是 | 应用账号的名称。最大长度为512个字符。 |
 | owner | string | 是 | 应用账号所有者的包名。最大长度为1024个字符。 |
 | authType | string | 是 | 鉴权类型。自定义数据，最大长度为1024个字符。 |
-| options | [Record](../../apis-default/arkts-apis/arkts-record-t.md)&lt;string, RecordData&gt; | 是 | 鉴权所需的可选项。 |
+| options | Record&lt;string, RecordData&gt; | 是 | 鉴权所需的可选项。 |
 | callback | [AuthCallback](arkts-basicservices-appaccount-authcallback-i.md) | 是 | 回调对象，返回鉴权结果。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 12300010 | Account service busy. |
-| 12300003 | Account not found. |
-| 12300002 | Invalid name, owner, authType or options. |
-| 12300114 | Authenticator service exception. |
-| 12300001 | System service exception. |
-| 12300113 | Authenticator service not found. |
+| [12300010](../../apis-basic-services-kit/errorcode-account.md#12300010-账号服务忙碌) | Account service busy. |
+| [12300003](../../apis-basic-services-kit/errorcode-account.md#12300003-账号不存在) | Account not found. |
+| [12300002](../../apis-basic-services-kit/errorcode-account.md#12300002-无效参数) | Invalid name, owner, authType or options. |
+| [12300114](../../apis-basic-services-kit/errorcode-account.md#12300114-认证服务异常) | Authenticator service exception. |
+| [12300001](../../apis-basic-services-kit/errorcode-account.md#12300001-系统服务异常) | System service exception. |
+| [12300113](../../apis-basic-services-kit/errorcode-account.md#12300113-认证服务不存在) | Authenticator service not found. |
+
+## 示例
+
+```TypeScript
+import appAccount from '@ohos.account.appAccount';
+import { BusinessError } from '@kit.BasicServicesKit';
+import { Want, common } from '@kit.AbilityKit';
+import { RecordData } from '@ohos.base';
+
+let appAccountManager: appAccount.AppAccountManager = appAccount.createAppAccountManager();
+
+
+@Entry
+@Component
+struct Index {
+  context: common.UIAbilityContext = this.getUIContext().getHostContext() as common.UIAbilityContext; // UIAbilityContext
+
+  onResultCallback(code: int, authResult?: appAccount.AuthResult): void {
+    console.info('resultCode: ' + code);
+    console.info('authResult: ' + JSON.stringify(authResult));
+  }
+
+  onRequestRedirectedCallback(request: Want): void {
+    let wantInfo: Want = {
+      deviceId: '',
+      bundleName: 'com.example.accountjsdemo',
+      action: 'ohos.want.action.viewData',
+      entities: ['entity.system.default'],
+    }
+    this.context.startAbility(wantInfo).then(():void => {
+      console.info('startAbility successfully');
+    }).catch((e:Error):void => {
+      const err = e as BusinessError;
+      console.error(`startAbility err: code is ${err.code}, message is ${err.message}`);
+    })
+  }
+
+  aboutToAppear(): void {
+    let options: Record<string, RecordData> = {
+      'password': 'xxxx',
+    };
+    const authCallback: appAccount.AuthCallback = {
+      onResult: this.onResultCallback,
+      onRequestRedirected: this.onRequestRedirectedCallback
+    };
+    try {
+      appAccountManager.auth('LiSi', 'com.example.accountjsdemo', 'getSocialData', options, authCallback);
+    } catch (e: Error) {
+      const err = e as BusinessError;
+      console.error(`auth exception: code is ${err.code}, message is ${err.message}`);
+    }
+  }
+  build() {}
+}
+```
 
 ## authenticate
 
@@ -565,20 +667,24 @@ checkAccountLabels(name: string, owner: string, labels: Array<string>, callback:
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameter types. |
-| 12300010 | Account service busy. |
-| 12300003 | Account not found. |
-| 12300002 | Invalid name, owner or labels. |
-| 12300114 | Authenticator service exception. |
-| 12300001 | System service exception. |
-| 12300113 | Authenticator service not found. |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameter types. |
+| [12300010](../../apis-basic-services-kit/errorcode-account.md#12300010-账号服务忙碌) | Account service busy. |
+| [12300003](../../apis-basic-services-kit/errorcode-account.md#12300003-账号不存在) | Account not found. |
+| [12300002](../../apis-basic-services-kit/errorcode-account.md#12300002-无效参数) | Invalid name, owner or labels. |
+| [12300114](../../apis-basic-services-kit/errorcode-account.md#12300114-认证服务异常) | Authenticator service exception. |
+| [12300001](../../apis-basic-services-kit/errorcode-account.md#12300001-系统服务异常) | System service exception. |
+| [12300113](../../apis-basic-services-kit/errorcode-account.md#12300113-认证服务不存在) | Authenticator service not found. |
 
 ## 示例
 
+ArkTS-Dyn示例：
+
 ```TypeScript
+import { appAccount } from '@kit.BasicServicesKit';
 import { BusinessError } from '@kit.BasicServicesKit';
 
 let labels = ['student'];
+let appAccountManager: appAccount.AppAccountManager = appAccount.createAppAccountManager();
 try {
   appAccountManager.checkAccountLabels('zhangsan', 'com.example.accountjsdemo', labels,
     (err: BusinessError, hasAllLabels: boolean) => {
@@ -589,6 +695,29 @@ try {
       }
     });
 } catch (e) {
+  const err = e as BusinessError;
+  console.error(`checkAccountLabels exception: code is ${err.code}, message is ${err.message}`);
+}
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+import appAccount from '@ohos.account.appAccount';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let labels = ['student'];
+let appAccountManager: appAccount.AppAccountManager = appAccount.createAppAccountManager();
+try {
+  appAccountManager.checkAccountLabels('zhangsan', 'com.example.accountjsdemo', labels,
+    (err: BusinessError | null, hasAllLabels: boolean | undefined) => {
+      if (err) {
+        console.error(`checkAccountLabels failed, code is ${err.code}, message is ${err.message}`);
+      } else {
+        console.info('checkAccountLabels successfully, hasAllLabels: ' + hasAllLabels);
+      }
+    });
+} catch (e: Error) {
   const err = e as BusinessError;
   console.error(`checkAccountLabels exception: code is ${err.code}, message is ${err.message}`);
 }
@@ -628,20 +757,24 @@ checkAccountLabels(name: string, owner: string, labels: Array<string>): Promise<
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameter types. |
-| 12300010 | Account service busy. |
-| 12300003 | Account not found. |
-| 12300002 | Invalid name, owner or labels. |
-| 12300114 | Authenticator service exception. |
-| 12300001 | System service exception. |
-| 12300113 | Authenticator service not found. |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameter types. |
+| [12300010](../../apis-basic-services-kit/errorcode-account.md#12300010-账号服务忙碌) | Account service busy. |
+| [12300003](../../apis-basic-services-kit/errorcode-account.md#12300003-账号不存在) | Account not found. |
+| [12300002](../../apis-basic-services-kit/errorcode-account.md#12300002-无效参数) | Invalid name, owner or labels. |
+| [12300114](../../apis-basic-services-kit/errorcode-account.md#12300114-认证服务异常) | Authenticator service exception. |
+| [12300001](../../apis-basic-services-kit/errorcode-account.md#12300001-系统服务异常) | System service exception. |
+| [12300113](../../apis-basic-services-kit/errorcode-account.md#12300113-认证服务不存在) | Authenticator service not found. |
 
 ## 示例
 
+ArkTS-Dyn示例：
+
 ```TypeScript
+import { appAccount } from '@kit.BasicServicesKit';
 import { BusinessError } from '@kit.BasicServicesKit';
 
 let labels = ['student'];
+let appAccountManager: appAccount.AppAccountManager = appAccount.createAppAccountManager();
 try {
   appAccountManager.checkAccountLabels('zhangsan', 'com.example.accountjsdemo', labels).then((
     hasAllLabels: boolean) => {
@@ -650,6 +783,28 @@ try {
     console.error(`checkAccountLabels failed, code is ${err.code}, message is ${err.message}`);
   });
 } catch (e) {
+  const err = e as BusinessError;
+  console.error(`checkAccountLabels exception: code is ${err.code}, message is ${err.message}`);
+}
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+import appAccount from '@ohos.account.appAccount';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let labels = ['student'];
+let appAccountManager: appAccount.AppAccountManager = appAccount.createAppAccountManager();
+try {
+  appAccountManager.checkAccountLabels('zhangsan', 'com.example.accountjsdemo', labels).then((
+    hasAllLabels: boolean) => {
+    console.info('checkAccountLabels successfully: ' + hasAllLabels);
+  }).catch((e: Error) => {
+    const err = e as BusinessError;
+    console.error(`checkAccountLabels failed, code is ${err.code}, message is ${err.message}`);
+  });
+} catch (e: Error) {
   const err = e as BusinessError;
   console.error(`checkAccountLabels exception: code is ${err.code}, message is ${err.message}`);
 }
@@ -683,16 +838,20 @@ checkAppAccess(name: string, bundleName: string, callback: AsyncCallback<boolean
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameter types. |
-| 12300003 | Account not found. |
-| 12300002 | Invalid name or bundleName. |
-| 12300001 | System service exception. |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameter types. |
+| [12300003](../../apis-basic-services-kit/errorcode-account.md#12300003-账号不存在) | Account not found. |
+| [12300002](../../apis-basic-services-kit/errorcode-account.md#12300002-无效参数) | Invalid name or bundleName. |
+| [12300001](../../apis-basic-services-kit/errorcode-account.md#12300001-系统服务异常) | System service exception. |
 
 ## 示例
 
+ArkTS-Dyn示例：
+
 ```TypeScript
+import { appAccount } from '@kit.BasicServicesKit';
 import { BusinessError } from '@kit.BasicServicesKit';
 
+let appAccountManager: appAccount.AppAccountManager = appAccount.createAppAccountManager();
 try {
   appAccountManager.checkAppAccess('ZhangSan', 'com.example.accountjsdemo',
     (err: BusinessError, isAccessible: boolean) => {
@@ -703,6 +862,28 @@ try {
       }
     });
 } catch (e) {
+  const err = e as BusinessError;
+  console.error(`checkAppAccess exception: code is ${err.code}, message is ${err.message}`);
+}
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+import appAccount from '@ohos.account.appAccount';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let appAccountManager: appAccount.AppAccountManager = appAccount.createAppAccountManager();
+try {
+  appAccountManager.checkAppAccess('ZhangSan', 'com.example.accountjsdemo',
+    (err: BusinessError | null, isAccessible: boolean | undefined) => {
+      if (err) {
+        console.error(`checkAppAccess failed, code is ${err.code}, message is ${err.message}`);
+      } else {
+        console.info('checkAppAccess successfully');
+      }
+    });
+} catch (e: Error) {
   const err = e as BusinessError;
   console.error(`checkAppAccess exception: code is ${err.code}, message is ${err.message}`);
 }
@@ -741,16 +922,20 @@ checkAppAccess(name: string, bundleName: string): Promise<boolean>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameter types. |
-| 12300003 | Account not found. |
-| 12300002 | Invalid name or bundleName. |
-| 12300001 | System service exception. |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameter types. |
+| [12300003](../../apis-basic-services-kit/errorcode-account.md#12300003-账号不存在) | Account not found. |
+| [12300002](../../apis-basic-services-kit/errorcode-account.md#12300002-无效参数) | Invalid name or bundleName. |
+| [12300001](../../apis-basic-services-kit/errorcode-account.md#12300001-系统服务异常) | System service exception. |
 
 ## 示例
 
+ArkTS-Dyn示例：
+
 ```TypeScript
+import { appAccount } from '@kit.BasicServicesKit';
 import { BusinessError } from '@kit.BasicServicesKit';
 
+let appAccountManager: appAccount.AppAccountManager = appAccount.createAppAccountManager();
 try {
   appAccountManager.checkAppAccess('ZhangSan', 'com.example.accountjsdemo').then((isAccessible: boolean) => {
     console.info('checkAppAccess successfully, isAccessible: ' + isAccessible);
@@ -758,6 +943,26 @@ try {
     console.error(`checkAppAccess failed, code is ${err.code}, message is ${err.message}`);
   });
 } catch (e) {
+  const err = e as BusinessError;
+  console.error(`checkAppAccess exception: code is ${err.code}, message is ${err.message}`);
+}
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+import appAccount from '@ohos.account.appAccount';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let appAccountManager: appAccount.AppAccountManager = appAccount.createAppAccountManager();
+try {
+  appAccountManager.checkAppAccess('ZhangSan', 'com.example.accountjsdemo').then((isAccessible: boolean) => {
+    console.info('checkAppAccess successfully, isAccessible: ' + isAccessible);
+  }).catch((e: Error) => {
+    const err = e as BusinessError;
+    console.error(`checkAppAccess failed, code is ${err.code}, message is ${err.message}`);
+  });
+} catch (e: Error) {
   const err = e as BusinessError;
   console.error(`checkAppAccess exception: code is ${err.code}, message is ${err.message}`);
 }
@@ -892,17 +1097,21 @@ checkAuthTokenVisibility(name: string, authType: string, bundleName: string, cal
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 12300107 | AuthType not found. |
-| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameter types. |
-| 12300003 | Account not found. |
-| 12300002 | Invalid name, authType or bundleName. |
-| 12300001 | System service exception. |
+| [12300107](../../apis-basic-services-kit/errorcode-account.md#12300107-认证类型不存在) | AuthType not found. |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameter types. |
+| [12300003](../../apis-basic-services-kit/errorcode-account.md#12300003-账号不存在) | Account not found. |
+| [12300002](../../apis-basic-services-kit/errorcode-account.md#12300002-无效参数) | Invalid name, authType or bundleName. |
+| [12300001](../../apis-basic-services-kit/errorcode-account.md#12300001-系统服务异常) | System service exception. |
 
 ## 示例
 
+ArkTS-Dyn示例：
+
 ```TypeScript
+import { appAccount } from '@kit.BasicServicesKit';
 import { BusinessError } from '@kit.BasicServicesKit';
 
+let appAccountManager: appAccount.AppAccountManager = appAccount.createAppAccountManager();
 try {
   appAccountManager.checkAuthTokenVisibility('LiSi', 'getSocialData', 'com.example.accountjsdemo',
     (err: BusinessError, isVisible: boolean) => {
@@ -913,6 +1122,28 @@ try {
       }
     });
 } catch (e) {
+  const err = e as BusinessError;
+  console.error(`checkAuthTokenVisibility exception: code is ${err.code}, message is ${err.message}`);
+}
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+import appAccount from '@ohos.account.appAccount';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let appAccountManager: appAccount.AppAccountManager = appAccount.createAppAccountManager();
+try {
+  appAccountManager.checkAuthTokenVisibility('LiSi', 'getSocialData', 'com.example.accountjsdemo',
+    (err: BusinessError | null, isVisible: boolean | undefined) => {
+      if (err) {
+        console.error(`checkAuthTokenVisibility failed, code is ${err.code}, message is ${err.message}`);
+      } else {
+        console.info('checkAuthTokenVisibility successfully, isVisible: ' + isVisible);
+      }
+    });
+} catch (e: Error) {
   const err = e as BusinessError;
   console.error(`checkAuthTokenVisibility exception: code is ${err.code}, message is ${err.message}`);
 }
@@ -952,17 +1183,21 @@ checkAuthTokenVisibility(name: string, authType: string, bundleName: string): Pr
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 12300107 | AuthType not found. |
-| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameter types. |
-| 12300003 | Account not found. |
-| 12300002 | Invalid name, authType or bundleName. |
-| 12300001 | System service exception. |
+| [12300107](../../apis-basic-services-kit/errorcode-account.md#12300107-认证类型不存在) | AuthType not found. |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameter types. |
+| [12300003](../../apis-basic-services-kit/errorcode-account.md#12300003-账号不存在) | Account not found. |
+| [12300002](../../apis-basic-services-kit/errorcode-account.md#12300002-无效参数) | Invalid name, authType or bundleName. |
+| [12300001](../../apis-basic-services-kit/errorcode-account.md#12300001-系统服务异常) | System service exception. |
 
 ## 示例
 
+ArkTS-Dyn示例：
+
 ```TypeScript
+import { appAccount } from '@kit.BasicServicesKit';
 import { BusinessError } from '@kit.BasicServicesKit';
 
+let appAccountManager: appAccount.AppAccountManager = appAccount.createAppAccountManager();
 try {
   appAccountManager.checkAuthTokenVisibility('LiSi', 'getSocialData', 'com.example.accountjsdemo').then((
     isVisible: boolean) => {
@@ -971,6 +1206,27 @@ try {
     console.error(`checkAuthTokenVisibility failed, code is ${err.code}, message is ${err.message}`);
   });
 } catch (e) {
+  const err = e as BusinessError;
+  console.error(`checkAuthTokenVisibility exception: code is ${err.code}, message is ${err.message}`);
+}
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+import appAccount from '@ohos.account.appAccount';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let appAccountManager: appAccount.AppAccountManager = appAccount.createAppAccountManager();
+try {
+  appAccountManager.checkAuthTokenVisibility('LiSi', 'getSocialData', 'com.example.accountjsdemo').then((
+    isVisible: boolean) => {
+    console.info('checkAuthTokenVisibility successfully, isVisible: ' + isVisible);
+  }).catch((e: Error) => {
+    const err = e as BusinessError;
+    console.error(`checkAuthTokenVisibility failed, code is ${err.code}, message is ${err.message}`);
+  });
+} catch (e: Error) {
   const err = e as BusinessError;
   console.error(`checkAuthTokenVisibility exception: code is ${err.code}, message is ${err.message}`);
 }
@@ -1005,17 +1261,21 @@ checkDataSyncEnabled(name: string, callback: AsyncCallback<boolean>): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameter types. |
-| 12300003 | Account not found. |
-| 201 | Permission denied. |
-| 12300002 | Invalid name. |
-| 12300001 | System service exception. |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameter types. |
+| [12300003](../../apis-basic-services-kit/errorcode-account.md#12300003-账号不存在) | Account not found. |
+| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
+| [12300002](../../apis-basic-services-kit/errorcode-account.md#12300002-无效参数) | Invalid name. |
+| [12300001](../../apis-basic-services-kit/errorcode-account.md#12300001-系统服务异常) | System service exception. |
 
 ## 示例
 
+ArkTS-Dyn示例：
+
 ```TypeScript
+import { appAccount } from '@kit.BasicServicesKit';
 import { BusinessError } from '@kit.BasicServicesKit';
 
+let appAccountManager: appAccount.AppAccountManager = appAccount.createAppAccountManager();
 try {
   appAccountManager.checkDataSyncEnabled('ZhangSan', (err: BusinessError, isEnabled: boolean) => {
     if (err) {
@@ -1025,6 +1285,28 @@ try {
     }
   });
 } catch (e) {
+  const err = e as BusinessError;
+  console.error(`checkDataSyncEnabled err: code is ${err.code}, message is ${err.message}`);
+}
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+import appAccount from '@ohos.account.appAccount';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let appAccountManager: appAccount.AppAccountManager = appAccount.createAppAccountManager();
+try {
+  appAccountManager.checkDataSyncEnabled('ZhangSan',
+    (err: BusinessError | null, isEnabled: boolean | undefined) => {
+      if (err) {
+        console.error(`checkDataSyncEnabled failed, err: code is ${err.code}, message is ${err.message}`);
+      } else {
+        console.info('checkDataSyncEnabled successfully, isEnabled: ' + isEnabled);
+      }
+    });
+} catch (e: Error) {
   const err = e as BusinessError;
   console.error(`checkDataSyncEnabled err: code is ${err.code}, message is ${err.message}`);
 }
@@ -1064,17 +1346,21 @@ checkDataSyncEnabled(name: string): Promise<boolean>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameter types. |
-| 12300003 | Account not found. |
-| 201 | Permission denied. |
-| 12300002 | Invalid name. |
-| 12300001 | System service exception. |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameter types. |
+| [12300003](../../apis-basic-services-kit/errorcode-account.md#12300003-账号不存在) | Account not found. |
+| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
+| [12300002](../../apis-basic-services-kit/errorcode-account.md#12300002-无效参数) | Invalid name. |
+| [12300001](../../apis-basic-services-kit/errorcode-account.md#12300001-系统服务异常) | System service exception. |
 
 ## 示例
 
+ArkTS-Dyn示例：
+
 ```TypeScript
+import { appAccount } from '@kit.BasicServicesKit';
 import { BusinessError } from '@kit.BasicServicesKit';
 
+let appAccountManager: appAccount.AppAccountManager = appAccount.createAppAccountManager();
 try {
   appAccountManager.checkDataSyncEnabled('ZhangSan').then((isEnabled: boolean) => {
       console.info('checkDataSyncEnabled successfully, isEnabled: ' + isEnabled);
@@ -1082,6 +1368,26 @@ try {
     console.error(`checkDataSyncEnabled failed, err: code is ${err.code}, message is ${err.message}`);
   });
 } catch (e) {
+  const err = e as BusinessError;
+  console.error(`checkDataSyncEnabled err: code is ${err.code}, message is ${err.message}`);
+}
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+import appAccount from '@ohos.account.appAccount';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let appAccountManager: appAccount.AppAccountManager = appAccount.createAppAccountManager();
+try {
+  appAccountManager.checkDataSyncEnabled('ZhangSan').then((isEnabled: boolean) => {
+    console.info('checkDataSyncEnabled successfully, isEnabled: ' + isEnabled);
+  }).catch((e: Error) => {
+    const err = e as BusinessError;
+    console.error(`checkDataSyncEnabled failed, err: code is ${err.code}, message is ${err.message}`);
+  });
+} catch (e: Error) {
   const err = e as BusinessError;
   console.error(`checkDataSyncEnabled err: code is ${err.code}, message is ${err.message}`);
 }
@@ -1222,17 +1528,21 @@ createAccount(name: string, callback: AsyncCallback<void>): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameter types. |
-| 12300002 | Invalid name. |
-| 12300001 | System service exception. |
-| 12300007 | The number of accounts reaches the upper limit. |
-| 12300004 | Account already exists. |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameter types. |
+| [12300002](../../apis-basic-services-kit/errorcode-account.md#12300002-无效参数) | Invalid name. |
+| [12300001](../../apis-basic-services-kit/errorcode-account.md#12300001-系统服务异常) | System service exception. |
+| [12300007](../../apis-basic-services-kit/errorcode-account.md#12300007-账号数量已达上限) | The number of accounts reaches the upper limit. |
+| [12300004](../../apis-basic-services-kit/errorcode-account.md#12300004-账号已存在) | Account already exists. |
 
 ## 示例
 
+ArkTS-Dyn示例：
+
 ```TypeScript
+import { appAccount } from '@kit.BasicServicesKit';
 import { BusinessError } from '@kit.BasicServicesKit';
 
+let appAccountManager: appAccount.AppAccountManager = appAccount.createAppAccountManager();
 try {
   appAccountManager.createAccount('WangWu', (err: BusinessError) => { 
     if (err) {
@@ -1242,6 +1552,27 @@ try {
     }
   });
 } catch (e) {
+  const err = e as BusinessError;
+  console.error(`createAccount err: code is ${err.code}, message is ${err.message}`);
+}
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+import appAccount from '@ohos.account.appAccount';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let appAccountManager: appAccount.AppAccountManager = appAccount.createAppAccountManager();
+try {
+  appAccountManager.createAccount('WangWu', (err: BusinessError | null) => {
+    if (err) {
+      console.error(`createAccount code: code is ${err.code}, message is ${err.message}`);
+    } else {
+      console.info('createAccount successful.');
+    }
+  });
+} catch (e: Error) {
   const err = e as BusinessError;
   console.error(`createAccount err: code is ${err.code}, message is ${err.message}`);
 }
@@ -1275,18 +1606,22 @@ createAccount(name: string, options: CreateAccountOptions, callback: AsyncCallba
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameter types. |
-| 12300002 | Invalid name or options. |
-| 12300001 | System service exception. |
-| 12300007 | The number of accounts reaches the upper limit. |
-| 12300004 | Account already exists. |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameter types. |
+| [12300002](../../apis-basic-services-kit/errorcode-account.md#12300002-无效参数) | Invalid name or options. |
+| [12300001](../../apis-basic-services-kit/errorcode-account.md#12300001-系统服务异常) | System service exception. |
+| [12300007](../../apis-basic-services-kit/errorcode-account.md#12300007-账号数量已达上限) | The number of accounts reaches the upper limit. |
+| [12300004](../../apis-basic-services-kit/errorcode-account.md#12300004-账号已存在) | Account already exists. |
 
 ## 示例
 
+ArkTS-Dyn示例：
+
 ```TypeScript
+import { appAccount } from '@kit.BasicServicesKit';
 import { BusinessError } from '@kit.BasicServicesKit';
 
-let options: appAccount.CreateAccountOptions = {
+let appAccountManager: appAccount.AppAccountManager = appAccount.createAppAccountManager();
+let options:appAccount.CreateAccountOptions  = {
   customData: {
     age: '10'
   }
@@ -1299,7 +1634,30 @@ try {
       console.info('createAccount successfully');
     }
   });
-} catch (e) {
+} catch(err) {
+  console.error(`createAccount exception: code is ${err.code}, message is ${err.message}`);
+}
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+import appAccount from '@ohos.account.appAccount';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let appAccountManager: appAccount.AppAccountManager = appAccount.createAppAccountManager();
+let customData: Record<string, string> = { 'age': '10' }
+let options: appAccount.CreateAccountOptions = { customData }
+
+try {
+  appAccountManager.createAccount('LiSi', options, (err: BusinessError | null) => {
+    if (err) {
+      console.error(`createAccount failed, code is ${err.code}, message is ${err.message}`);
+    } else {
+      console.info('createAccount successfully');
+    }
+  });
+} catch (e: Error) {
   const err = e as BusinessError;
   console.error(`createAccount exception: code is ${err.code}, message is ${err.message}`);
 }
@@ -1338,17 +1696,21 @@ createAccount(name: string, options?: CreateAccountOptions): Promise<void>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameter types. |
-| 12300002 | Invalid name or options. |
-| 12300001 | System service exception. |
-| 12300007 | The number of accounts reaches the upper limit. |
-| 12300004 | Account already exists. |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameter types. |
+| [12300002](../../apis-basic-services-kit/errorcode-account.md#12300002-无效参数) | Invalid name or options. |
+| [12300001](../../apis-basic-services-kit/errorcode-account.md#12300001-系统服务异常) | System service exception. |
+| [12300007](../../apis-basic-services-kit/errorcode-account.md#12300007-账号数量已达上限) | The number of accounts reaches the upper limit. |
+| [12300004](../../apis-basic-services-kit/errorcode-account.md#12300004-账号已存在) | Account already exists. |
 
 ## 示例
 
+ArkTS-Dyn示例：
+
 ```TypeScript
+import { appAccount } from '@kit.BasicServicesKit';
 import { BusinessError } from '@kit.BasicServicesKit';
 
+let appAccountManager: appAccount.AppAccountManager = appAccount.createAppAccountManager();
 let options: appAccount.CreateAccountOptions = {
   customData: {
     age: '10'
@@ -1360,7 +1722,29 @@ try {
   }).catch((err: BusinessError) => {
     console.error(`createAccount failed, code is ${err.code}, message is ${err.message}`);
   });
-} catch (e) {
+} catch(err) {
+  console.error(`createAccount exception: code is ${err.code}, message is ${err.message}`);
+}
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+import appAccount from '@ohos.account.appAccount';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let appAccountManager: appAccount.AppAccountManager = appAccount.createAppAccountManager();
+let customData: Record<string, string> = { 'age': '10' }
+let options: appAccount.CreateAccountOptions = { customData }
+
+try {
+  appAccountManager.createAccount('LiSi', options).then(() => {
+    console.info('createAccount successfully');
+  }).catch((e: Error) => {
+    const err = e as BusinessError;
+    console.error(`createAccount failed, code is ${err.code}, message is ${err.message}`);
+  });
+} catch (e: Error) {
   const err = e as BusinessError;
   console.error(`createAccount exception: code is ${err.code}, message is ${err.message}`);
 }
@@ -1393,17 +1777,20 @@ createAccountImplicitly(owner: string, callback: AuthCallback): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameter types. |
-| 12300010 | Account service busy. |
-| 12300002 | Invalid owner. |
-| 12300114 | Authenticator service exception. |
-| 12300001 | System service exception. |
-| 12300113 | Authenticator service not found. |
-| 12300007 | The number of accounts reaches the upper limit. |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameter types. |
+| [12300010](../../apis-basic-services-kit/errorcode-account.md#12300010-账号服务忙碌) | Account service busy. |
+| [12300002](../../apis-basic-services-kit/errorcode-account.md#12300002-无效参数) | Invalid owner. |
+| [12300114](../../apis-basic-services-kit/errorcode-account.md#12300114-认证服务异常) | Authenticator service exception. |
+| [12300001](../../apis-basic-services-kit/errorcode-account.md#12300001-系统服务异常) | System service exception. |
+| [12300113](../../apis-basic-services-kit/errorcode-account.md#12300113-认证服务不存在) | Authenticator service not found. |
+| [12300007](../../apis-basic-services-kit/errorcode-account.md#12300007-账号数量已达上限) | The number of accounts reaches the upper limit. |
 
 ## 示例
 
+ArkTS-Dyn示例：
+
 ```TypeScript
+import { appAccount } from '@kit.BasicServicesKit';
 import { BusinessError } from '@kit.BasicServicesKit';
 import { Want, common } from '@kit.AbilityKit';
 
@@ -1446,6 +1833,54 @@ struct Index {
 }
 ```
 
+ArkTS-Sta示例：
+
+```TypeScript
+import appAccount from '@ohos.account.appAccount';
+import { BusinessError } from '@kit.BasicServicesKit';
+import { Want, common } from '@kit.AbilityKit';
+
+let appAccountManager: appAccount.AppAccountManager = appAccount.createAppAccountManager();
+
+@Entry
+@Component
+struct Index {
+  context: common.UIAbilityContext = this.getUIContext().getHostContext() as common.UIAbilityContext; // UIAbilityContext
+  onResultCallback(code: int, result?: appAccount.AuthResult): void {
+    console.info('resultCode: ' + code);
+    console.info('result: ' + JSON.stringify(result));
+  }
+
+  onRequestRedirectedCallback(request: Want): void {
+    let wantInfo: Want = {
+      deviceId: '',
+      bundleName: 'com.example.accountjsdemo',
+      action: 'ohos.want.action.viewData',
+      entities: ['entity.system.default'],
+    }
+    this.context.startAbility(wantInfo).then(():void => {
+      console.info('startAbility successfully');
+    }).catch((e: Error):void => {
+      const err = e as BusinessError;
+      console.error(`startAbility err: code is ${err.code}, message is ${err.message}`);
+    })
+  }
+
+  aboutToAppear(): void {
+    try {
+      appAccountManager.createAccountImplicitly('com.example.accountjsdemo', {
+        onResult: this.onResultCallback,
+        onRequestRedirected: this.onRequestRedirectedCallback
+      });
+    } catch (e: Error) {
+      const err = e as BusinessError;
+      console.error(`createAccountImplicitly exception: code is ${err.code}, message is ${err.message}`);
+    }
+  }
+  build() {}
+}
+```
+
 ## createAccountImplicitly
 
 ```TypeScript
@@ -1474,17 +1909,20 @@ createAccountImplicitly(owner: string, options: CreateAccountImplicitlyOptions, 
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameter types. |
-| 12300010 | Account service busy. |
-| 12300002 | Invalid owner or options. |
-| 12300114 | Authenticator service exception. |
-| 12300001 | System service exception. |
-| 12300113 | Authenticator service not found. |
-| 12300007 | The number of accounts reaches the upper limit. |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameter types. |
+| [12300010](../../apis-basic-services-kit/errorcode-account.md#12300010-账号服务忙碌) | Account service busy. |
+| [12300002](../../apis-basic-services-kit/errorcode-account.md#12300002-无效参数) | Invalid owner or options. |
+| [12300114](../../apis-basic-services-kit/errorcode-account.md#12300114-认证服务异常) | Authenticator service exception. |
+| [12300001](../../apis-basic-services-kit/errorcode-account.md#12300001-系统服务异常) | System service exception. |
+| [12300113](../../apis-basic-services-kit/errorcode-account.md#12300113-认证服务不存在) | Authenticator service not found. |
+| [12300007](../../apis-basic-services-kit/errorcode-account.md#12300007-账号数量已达上限) | The number of accounts reaches the upper limit. |
 
 ## 示例
 
+ArkTS-Dyn示例：
+
 ```TypeScript
+import { appAccount } from '@kit.BasicServicesKit';
 import { BusinessError } from '@kit.BasicServicesKit';
 import { Want, common } from '@kit.AbilityKit';
 
@@ -1515,7 +1953,7 @@ struct Index {
   aboutToAppear(): void {
     let options: appAccount.CreateAccountImplicitlyOptions = {
       authType: 'getSocialData',
-      requiredLabels: ['student']
+      requiredLabels: [ 'student' ]
     };
     try {
       appAccountManager.createAccountImplicitly('com.example.accountjsdemo', options, {
@@ -1523,6 +1961,59 @@ struct Index {
         onRequestRedirected: this.onRequestRedirectedCallback
       });
     } catch (e) {
+      const err = e as BusinessError;
+      console.error(`createAccountImplicitly exception: code is ${err.code}, message is ${err.message}`);
+    }
+  }
+  build() {}
+}
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+import appAccount from '@ohos.account.appAccount';
+import { BusinessError } from '@kit.BasicServicesKit';
+import { Want, common } from '@kit.AbilityKit';
+
+let appAccountManager: appAccount.AppAccountManager = appAccount.createAppAccountManager();
+
+@Entry
+@Component
+struct Index {
+  context: common.UIAbilityContext = this.getUIContext().getHostContext() as common.UIAbilityContext; // UIAbilityContext
+
+  onResultCallback(code: int, result?: appAccount.AuthResult): void {
+    console.info('resultCode: ' + code);
+    console.info('result: ' + JSON.stringify(result));
+  }
+
+  onRequestRedirectedCallback(request: Want): void {
+    let wantInfo: Want = {
+      deviceId: '',
+      bundleName: 'com.example.accountjsdemo',
+      action: 'ohos.want.action.viewData',
+      entities: ['entity.system.default'],
+    }
+    this.context.startAbility(wantInfo).then(():void => {
+      console.info('startAbility successfully');
+    }).catch((e:Error):void => {
+      const err = e as BusinessError;
+      console.error(`startAbility err: code is ${err.code}, message is ${err.message}`);
+    })
+  }
+
+  aboutToAppear(): void {
+    let options: appAccount.CreateAccountImplicitlyOptions = {
+      authType: 'getSocialData',
+      requiredLabels: [ 'student' ]
+    };
+    try {
+      appAccountManager.createAccountImplicitly('com.example.accountjsdemo', options, {
+        onResult: this.onResultCallback,
+        onRequestRedirected: this.onRequestRedirectedCallback
+      });
+    } catch (e: Error) {
       const err = e as BusinessError;
       console.error(`createAccountImplicitly exception: code is ${err.code}, message is ${err.message}`);
     }
@@ -1617,7 +2108,7 @@ deleteAccount(name: string): Promise<void>
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
 
-appAccountManager.deleteAccount('ZhaoLiu').then(() => { 
+appAccountManager.deleteAccount('ZhaoLiu').then(() => {
   console.info('deleteAccount Success');
 }).catch((err: BusinessError) => {
   console.error(`deleteAccount err: code is ${err.code}, message is ${err.message}`);
@@ -1654,17 +2145,21 @@ deleteAuthToken(name: string, owner: string, authType: string, token: string, ca
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 12300107 | AuthType not found. |
-| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameter types. |
-| 12300003 | Account not found. |
-| 12300002 | Invalid name, owner, authType or token. |
-| 12300001 | System service exception. |
+| [12300107](../../apis-basic-services-kit/errorcode-account.md#12300107-认证类型不存在) | AuthType not found. |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameter types. |
+| [12300003](../../apis-basic-services-kit/errorcode-account.md#12300003-账号不存在) | Account not found. |
+| [12300002](../../apis-basic-services-kit/errorcode-account.md#12300002-无效参数) | Invalid name, owner, authType or token. |
+| [12300001](../../apis-basic-services-kit/errorcode-account.md#12300001-系统服务异常) | System service exception. |
 
 ## 示例
 
+ArkTS-Dyn示例：
+
 ```TypeScript
+import { appAccount } from '@kit.BasicServicesKit';
 import { BusinessError } from '@kit.BasicServicesKit';
 
+let appAccountManager: appAccount.AppAccountManager = appAccount.createAppAccountManager();
 try {
   appAccountManager.deleteAuthToken('LiSi', 'com.example.accountjsdemo', 'getSocialData', 'xxxxx',
     (err: BusinessError) => {
@@ -1675,6 +2170,28 @@ try {
       }
     });
 } catch (e) {
+  const err = e as BusinessError;
+  console.error(`deleteAuthToken exception: code is ${err.code}, message is ${err.message}`);
+}
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+import appAccount from '@ohos.account.appAccount';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let appAccountManager: appAccount.AppAccountManager = appAccount.createAppAccountManager();
+try {
+  appAccountManager.deleteAuthToken('LiSi', 'com.example.accountjsdemo', 'getSocialData', 'xxxxx',
+    (err: BusinessError | null) => {
+      if (err) {
+        console.error(`deleteAuthToken failed, code is ${err.code}, message is ${err.message}`);
+      } else {
+        console.info('deleteAuthToken successfully');
+      }
+    });
+} catch (e: Error) {
   const err = e as BusinessError;
   console.error(`deleteAuthToken exception: code is ${err.code}, message is ${err.message}`);
 }
@@ -1715,17 +2232,21 @@ deleteAuthToken(name: string, owner: string, authType: string, token: string): P
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 12300107 | AuthType not found. |
-| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameter types. |
-| 12300003 | Account not found. |
-| 12300002 | Invalid name, owner, authType or token. |
-| 12300001 | System service exception. |
+| [12300107](../../apis-basic-services-kit/errorcode-account.md#12300107-认证类型不存在) | AuthType not found. |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameter types. |
+| [12300003](../../apis-basic-services-kit/errorcode-account.md#12300003-账号不存在) | Account not found. |
+| [12300002](../../apis-basic-services-kit/errorcode-account.md#12300002-无效参数) | Invalid name, owner, authType or token. |
+| [12300001](../../apis-basic-services-kit/errorcode-account.md#12300001-系统服务异常) | System service exception. |
 
 ## 示例
 
+ArkTS-Dyn示例：
+
 ```TypeScript
+import { appAccount } from '@kit.BasicServicesKit';
 import { BusinessError } from '@kit.BasicServicesKit';
 
+let appAccountManager: appAccount.AppAccountManager = appAccount.createAppAccountManager();
 try {
   appAccountManager.deleteAuthToken('LiSi', 'com.example.accountjsdemo', 'getSocialData', 'xxxxx').then(() => {
     console.info('deleteAuthToken successfully');
@@ -1733,6 +2254,26 @@ try {
     console.error(`deleteAuthToken failed, code is ${err.code}, message is ${err.message}`);
   });
 } catch (e) {
+  const err = e as BusinessError;
+  console.error(`deleteAuthToken exception: code is ${err.code}, message is ${err.message}`);
+}
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+import appAccount from '@ohos.account.appAccount';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let appAccountManager: appAccount.AppAccountManager = appAccount.createAppAccountManager();
+try {
+  appAccountManager.deleteAuthToken('LiSi', 'com.example.accountjsdemo', 'getSocialData', 'xxxxx').then(() => {
+    console.info('deleteAuthToken successfully');
+  }).catch((e: Error) => {
+    const err = e as BusinessError;
+    console.error(`deleteAuthToken failed, code is ${err.code}, message is ${err.message}`);
+  });
+} catch (e: Error) {
   const err = e as BusinessError;
   console.error(`deleteAuthToken exception: code is ${err.code}, message is ${err.message}`);
 }
@@ -1766,17 +2307,21 @@ deleteCredential(name: string, credentialType: string, callback: AsyncCallback<v
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameter types. |
-| 12300003 | Account not found. |
-| 12300002 | Invalid name or credentialType. |
-| 12300001 | System service exception. |
-| 12300102 | Credential not found. |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameter types. |
+| [12300003](../../apis-basic-services-kit/errorcode-account.md#12300003-账号不存在) | Account not found. |
+| [12300002](../../apis-basic-services-kit/errorcode-account.md#12300002-无效参数) | Invalid name or credentialType. |
+| [12300001](../../apis-basic-services-kit/errorcode-account.md#12300001-系统服务异常) | System service exception. |
+| [12300102](../../apis-basic-services-kit/errorcode-account.md#12300102-凭据不存在) | Credential not found. |
 
 ## 示例
 
+ArkTS-Dyn示例：
+
 ```TypeScript
+import { appAccount } from '@kit.BasicServicesKit';
 import { BusinessError } from '@kit.BasicServicesKit';
 
+let appAccountManager: appAccount.AppAccountManager = appAccount.createAppAccountManager();
 try {
   appAccountManager.deleteCredential('zhangsan', 'PIN_SIX', (err: BusinessError) => {
     if (err) {
@@ -1786,6 +2331,27 @@ try {
     }
   });
 } catch (e) {
+  const err = e as BusinessError;
+  console.error(`deleteCredential exception: code is ${err.code}, message is ${err.message}`);
+}
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+import appAccount from '@ohos.account.appAccount';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let appAccountManager: appAccount.AppAccountManager = appAccount.createAppAccountManager();
+try {
+  appAccountManager.deleteCredential('zhangsan', 'PIN_SIX', (err: BusinessError | null) => {
+    if (err) {
+      console.error(`deleteCredential failed, code is ${err.code}, message is ${err.message}`);
+    } else {
+      console.info('deleteCredential successfully');
+    }
+  });
+} catch (e: Error) {
   const err = e as BusinessError;
   console.error(`deleteCredential exception: code is ${err.code}, message is ${err.message}`);
 }
@@ -1824,17 +2390,21 @@ deleteCredential(name: string, credentialType: string): Promise<void>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameter types. |
-| 12300003 | Account not found. |
-| 12300002 | Invalid name or credentialType. |
-| 12300001 | System service exception. |
-| 12300102 | Credential not found. |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameter types. |
+| [12300003](../../apis-basic-services-kit/errorcode-account.md#12300003-账号不存在) | Account not found. |
+| [12300002](../../apis-basic-services-kit/errorcode-account.md#12300002-无效参数) | Invalid name or credentialType. |
+| [12300001](../../apis-basic-services-kit/errorcode-account.md#12300001-系统服务异常) | System service exception. |
+| [12300102](../../apis-basic-services-kit/errorcode-account.md#12300102-凭据不存在) | Credential not found. |
 
 ## 示例
 
+ArkTS-Dyn示例：
+
 ```TypeScript
+import { appAccount } from '@kit.BasicServicesKit';
 import { BusinessError } from '@kit.BasicServicesKit';
 
+let appAccountManager: appAccount.AppAccountManager = appAccount.createAppAccountManager();
 try {
   appAccountManager.deleteCredential('zhangsan', 'PIN_SIX').then(() => {
     console.info('deleteCredential successfully');
@@ -1842,6 +2412,26 @@ try {
     console.error(`deleteCredential failed, code is ${err.code}, message is ${err.message}`);
   });
 } catch (e) {
+  const err = e as BusinessError;
+  console.error(`deleteCredential exception: code is ${err.code}, message is ${err.message}`);
+}
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+import appAccount from '@ohos.account.appAccount';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let appAccountManager: appAccount.AppAccountManager = appAccount.createAppAccountManager();
+try {
+  appAccountManager.deleteCredential('zhangsan', 'PIN_SIX').then(() => {
+    console.info('deleteCredential successfully');
+  }).catch((e: Error) => {
+    const err = e as BusinessError;
+    console.error(`deleteCredential failed, code is ${err.code}, message is ${err.message}`);
+  });
+} catch (e: Error) {
   const err = e as BusinessError;
   console.error(`deleteCredential exception: code is ${err.code}, message is ${err.message}`);
 }
@@ -1991,7 +2581,7 @@ disableAppAccess(name: string, bundleName: string, callback: AsyncCallback<void>
 import { BusinessError } from '@kit.BasicServicesKit';
 
 appAccountManager.disableAppAccess('ZhangSan', 'com.example.accountjsdemo', (err: BusinessError) => { 
-  console.error(`disableAppAccess err: code is ${err.code}, message is ${err.message}`);
+    console.error(`disableAppAccess err: code is ${err.code}, message is ${err.message}`);
 });
 ```
 
@@ -2366,15 +2956,19 @@ getAccountsByOwner(owner: string, callback: AsyncCallback<Array<AppAccountInfo>>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 12300002 | Invalid owner. |
-| 12300001 | System service exception. |
-| 12400001 | Application not found.<br>**适用版本：** 9 - 13 |
+| [12300002](../../apis-basic-services-kit/errorcode-account.md#12300002-无效参数) | Invalid owner. |
+| [12300001](../../apis-basic-services-kit/errorcode-account.md#12300001-系统服务异常) | System service exception. |
+| [12400001](../../apis-basic-services-kit/errorcode-account.md#12400001-应用不存在) | Application not found.<br>**适用版本：** 9 - 13 |
 
 ## 示例
 
+ArkTS-Dyn示例：
+
 ```TypeScript
+import { appAccount } from '@kit.BasicServicesKit';
 import { BusinessError } from '@kit.BasicServicesKit';
 
+let appAccountManager: appAccount.AppAccountManager = appAccount.createAppAccountManager();
 try {
   appAccountManager.getAccountsByOwner('com.example.accountjsdemo2',
     (err: BusinessError, data: appAccount.AppAccountInfo[]) => {
@@ -2385,6 +2979,28 @@ try {
       }
     });
 } catch (e) {
+  const err = e as BusinessError;
+  console.error(`getAccountsByOwner exception:code is ${err.code}, message is ${err.message}`);
+}
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+import appAccount from '@ohos.account.appAccount';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let appAccountManager: appAccount.AppAccountManager = appAccount.createAppAccountManager();
+try {
+  appAccountManager.getAccountsByOwner('com.example.accountjsdemo2',
+    (err: BusinessError | null, data: appAccount.AppAccountInfo[] | undefined) => {
+      if (err) {
+        console.error(`getAccountsByOwner failed, code is ${err.code}, message is ${err.message}`);
+      } else {
+        console.info('getAccountsByOwner successfully, data:' + JSON.stringify(data));
+      }
+    });
+} catch (e: Error) {
   const err = e as BusinessError;
   console.error(`getAccountsByOwner exception:code is ${err.code}, message is ${err.message}`);
 }
@@ -2422,15 +3038,19 @@ getAccountsByOwner(owner: string): Promise<Array<AppAccountInfo>>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 12300002 | Invalid owner. |
-| 12300001 | System service exception. |
-| 12400001 | Application not found.<br>**适用版本：** 9 - 13 |
+| [12300002](../../apis-basic-services-kit/errorcode-account.md#12300002-无效参数) | Invalid owner. |
+| [12300001](../../apis-basic-services-kit/errorcode-account.md#12300001-系统服务异常) | System service exception. |
+| [12400001](../../apis-basic-services-kit/errorcode-account.md#12400001-应用不存在) | Application not found.<br>**适用版本：** 9 - 13 |
 
 ## 示例
 
+ArkTS-Dyn示例：
+
 ```TypeScript
+import { appAccount } from '@kit.BasicServicesKit';
 import { BusinessError } from '@kit.BasicServicesKit';
 
+let appAccountManager: appAccount.AppAccountManager = appAccount.createAppAccountManager();
 try {
   appAccountManager.getAccountsByOwner('com.example.accountjsdemo2').then((
     data: appAccount.AppAccountInfo[]) => {
@@ -2439,6 +3059,27 @@ try {
     console.error(`getAccountsByOwner failed, code is ${err.code}, message is ${err.message}`);
   });
 } catch (e) {
+  const err = e as BusinessError;
+  console.error(`getAccountsByOwner exception: code is ${err.code}, message is ${err.message}`);
+}
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+import appAccount from '@ohos.account.appAccount';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let appAccountManager: appAccount.AppAccountManager = appAccount.createAppAccountManager();
+try {
+  appAccountManager.getAccountsByOwner('com.example.accountjsdemo2').then((
+    data: appAccount.AppAccountInfo[]) => {
+    console.info('getAccountsByOwner successfully, data: ' + JSON.stringify(data));
+  }).catch((e: Error) => {
+    const err = e as BusinessError;
+    console.error(`getAccountsByOwner failed, code is ${err.code}, message is ${err.message}`);
+  });
+} catch (e: Error) {
   const err = e as BusinessError;
   console.error(`getAccountsByOwner exception: code is ${err.code}, message is ${err.message}`);
 }
@@ -2563,14 +3204,18 @@ getAllAccounts(callback: AsyncCallback<Array<AppAccountInfo>>): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameter types. |
-| 12300001 | System service exception. |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameter types. |
+| [12300001](../../apis-basic-services-kit/errorcode-account.md#12300001-系统服务异常) | System service exception. |
 
 ## 示例
 
+ArkTS-Dyn示例：
+
 ```TypeScript
+import { appAccount } from '@kit.BasicServicesKit';
 import { BusinessError } from '@kit.BasicServicesKit';
 
+let appAccountManager: appAccount.AppAccountManager = appAccount.createAppAccountManager();
 try {
   appAccountManager.getAllAccounts((err: BusinessError, data: appAccount.AppAccountInfo[]) => {
     if (err) {
@@ -2580,6 +3225,28 @@ try {
     }
   });
 } catch (e) {
+    const err = e as BusinessError;
+    console.error(`getAllAccounts exception: code is ${err.code}, message is ${err.message}`);
+}
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+import appAccount from '@ohos.account.appAccount';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let appAccountManager: appAccount.AppAccountManager = appAccount.createAppAccountManager();
+try {
+  appAccountManager.getAllAccounts((err: BusinessError | null,
+    data: appAccount.AppAccountInfo[] | undefined) => {
+    if (err) {
+      console.error(`getAllAccounts failed, code is ${err.code}, message is ${err.message}`);
+    } else {
+      console.info('getAllAccounts successfully');
+    }
+  });
+} catch (e: Error) {
   const err = e as BusinessError;
   console.error(`getAllAccounts exception: code is ${err.code}, message is ${err.message}`);
 }
@@ -2611,13 +3278,17 @@ getAllAccounts(): Promise<Array<AppAccountInfo>>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 12300001 | System service exception. |
+| [12300001](../../apis-basic-services-kit/errorcode-account.md#12300001-系统服务异常) | System service exception. |
 
 ## 示例
 
+ArkTS-Dyn示例：
+
 ```TypeScript
+import { appAccount } from '@kit.BasicServicesKit';
 import { BusinessError } from '@kit.BasicServicesKit';
 
+let appAccountManager: appAccount.AppAccountManager = appAccount.createAppAccountManager();
 try {
   appAccountManager.getAllAccounts().then((data: appAccount.AppAccountInfo[]) => {
     console.info('getAllAccounts successfully');
@@ -2625,6 +3296,26 @@ try {
     console.error(`getAllAccounts failed, code is ${err.code}, message is ${err.message}`);
   });
 } catch (e) {
+  const err = e as BusinessError;
+  console.error(`getAllAccounts exception: code is ${err.code}, message is ${err.message}`);
+}
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+import appAccount from '@ohos.account.appAccount';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let appAccountManager: appAccount.AppAccountManager = appAccount.createAppAccountManager();
+try {
+  appAccountManager.getAllAccounts().then((data: appAccount.AppAccountInfo[]) => {
+    console.info('getAllAccounts successfully');
+  }).catch((e: Error) => {
+    const err = e as BusinessError;
+    console.error(`getAllAccounts failed, code is ${err.code}, message is ${err.message}`);
+  });
+} catch (e: Error) {
   const err = e as BusinessError;
   console.error(`getAllAccounts exception: code is ${err.code}, message is ${err.message}`);
 }
@@ -2760,16 +3451,20 @@ getAllAuthTokens(name: string, owner: string, callback: AsyncCallback<Array<Auth
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameter types. |
-| 12300003 | Account not found. |
-| 12300002 | Invalid name or owner. |
-| 12300001 | System service exception. |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameter types. |
+| [12300003](../../apis-basic-services-kit/errorcode-account.md#12300003-账号不存在) | Account not found. |
+| [12300002](../../apis-basic-services-kit/errorcode-account.md#12300002-无效参数) | Invalid name or owner. |
+| [12300001](../../apis-basic-services-kit/errorcode-account.md#12300001-系统服务异常) | System service exception. |
 
 ## 示例
 
+ArkTS-Dyn示例：
+
 ```TypeScript
+import { appAccount } from '@kit.BasicServicesKit';
 import { BusinessError } from '@kit.BasicServicesKit';
 
+let appAccountManager: appAccount.AppAccountManager = appAccount.createAppAccountManager();
 try {
   appAccountManager.getAllAuthTokens('LiSi', 'com.example.accountjsdemo',
     (err: BusinessError, tokenArr: appAccount.AuthTokenInfo[]) => {
@@ -2780,6 +3475,27 @@ try {
       }
     });
 } catch (e) {
+  const err = e as BusinessError;
+  console.error(`getAllAuthTokens exception: code is ${err.code}, message is ${err.message}`);
+}
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+import appAccount from '@ohos.account.appAccount';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+try {
+  appAccountManager.getAllAuthTokens('LiSi', 'com.example.accountjsdemo',
+    (err: BusinessError | null, tokenArr: appAccount.AuthTokenInfo[] | undefined) => {
+      if (err) {
+        console.error(`getAllAuthTokens failed, code is ${err.code}, message is ${err.message}`);
+      } else {
+        console.info('getAllAuthTokens successfully, tokenArr: ' + tokenArr);
+      }
+    });
+} catch (e: Error) {
   const err = e as BusinessError;
   console.error(`getAllAuthTokens exception: code is ${err.code}, message is ${err.message}`);
 }
@@ -2818,16 +3534,20 @@ getAllAuthTokens(name: string, owner: string): Promise<Array<AuthTokenInfo>>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameter types. |
-| 12300003 | Account not found. |
-| 12300002 | Invalid name or owner. |
-| 12300001 | System service exception. |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameter types. |
+| [12300003](../../apis-basic-services-kit/errorcode-account.md#12300003-账号不存在) | Account not found. |
+| [12300002](../../apis-basic-services-kit/errorcode-account.md#12300002-无效参数) | Invalid name or owner. |
+| [12300001](../../apis-basic-services-kit/errorcode-account.md#12300001-系统服务异常) | System service exception. |
 
 ## 示例
 
+ArkTS-Dyn示例：
+
 ```TypeScript
+import { appAccount } from '@kit.BasicServicesKit';
 import { BusinessError } from '@kit.BasicServicesKit';
 
+let appAccountManager: appAccount.AppAccountManager = appAccount.createAppAccountManager();
 try {
   appAccountManager.getAllAuthTokens('LiSi', 'com.example.accountjsdemo').then((
     tokenArr: appAccount.AuthTokenInfo[]) => {
@@ -2836,6 +3556,27 @@ try {
     console.error(`getAllAuthTokens failed, code is ${err.code}, message is ${err.message}`);
   });
 } catch (e) {
+  const err = e as BusinessError;
+  console.error(`getAllAuthTokens exception: code is ${err.code}, message is ${err.message}`);
+}
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+import appAccount from '@ohos.account.appAccount';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let appAccountManager: appAccount.AppAccountManager = appAccount.createAppAccountManager();
+try {
+  appAccountManager.getAllAuthTokens('LiSi', 'com.example.accountjsdemo').then((
+    tokenArr: appAccount.AuthTokenInfo[]) => {
+    console.info('getAllAuthTokens successfully, tokenArr: ' + JSON.stringify(tokenArr));
+  }).catch((e: Error) => {
+    const err = e as BusinessError;
+    console.error(`getAllAuthTokens failed, code is ${err.code}, message is ${err.message}`);
+  });
+} catch (e: Error) {
   const err = e as BusinessError;
   console.error(`getAllAuthTokens exception: code is ${err.code}, message is ${err.message}`);
 }
@@ -3066,17 +3807,21 @@ getAuthCallback(sessionId: string, callback: AsyncCallback<AuthCallback>): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameter types. |
-| 12300108 | Session not found. |
-| 12300002 | Invalid sessionId. |
-| 12300001 | System service exception. |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameter types. |
+| [12300108](../../apis-basic-services-kit/errorcode-account.md#12300108-认证会话不存在) | Session not found. |
+| [12300002](../../apis-basic-services-kit/errorcode-account.md#12300002-无效参数) | Invalid sessionId. |
+| [12300001](../../apis-basic-services-kit/errorcode-account.md#12300001-系统服务异常) | System service exception. |
 
 ## 示例
 
+ArkTS-Dyn示例：
+
 ```TypeScript
+import { appAccount } from '@kit.BasicServicesKit';
 import { BusinessError } from '@kit.BasicServicesKit';
 import { Want, UIAbility, AbilityConstant } from '@kit.AbilityKit';
 
+let appAccountManager: appAccount.AppAccountManager = appAccount.createAppAccountManager();
 export default class EntryAbility extends UIAbility {
   onCreate(want: Want, param: AbilityConstant.LaunchParam) { // ability 生命周期函数
     let sessionId: string = want.parameters![appAccount.Constants.KEY_SESSION_ID] as string;
@@ -3095,10 +3840,48 @@ export default class EntryAbility extends UIAbility {
             token: 'xxxxxx',
             authType: 'getSocialData'
           }
-        }; 
+        };
         callback.onResult(0, result);
       });
     } catch (e) {
+      const err = e as BusinessError;
+      console.error(`getAuthCallback exception: code is ${err.code}, message is ${err.message}`);
+    }
+  }
+}
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+import { Want, UIAbility, AbilityConstant } from '@kit.AbilityKit';
+
+let appAccountManager: appAccount.AppAccountManager = appAccount.createAppAccountManager();
+export default class EntryAbility extends UIAbility {
+  onCreate(want: Want, param: AbilityConstant.LaunchParam) { // ability 生命周期函数
+    let sessionId: string = want.parameters![appAccount.Constants.KEY_SESSION_ID] as string;
+    try {
+      appAccountManager.getAuthCallback(sessionId, (err: BusinessError | null, callback: appAccount.AuthCallback | undefined) => {
+        if (err != null) {
+          console.error(`getAuthCallback err: code is ${err.code}, message is ${err.message}`);
+          return;
+        }
+        let result: appAccount.AuthResult = {
+          account: {
+            name: 'Lisi',
+            owner: 'com.example.accountjsdemo',
+          },
+          tokenInfo: {
+            token: 'xxxxxx',
+            authType: 'getSocialData'
+          }
+        };
+        if (callback) {
+          callback.onResult(0, result);
+        }
+      });
+    } catch (e: Error) {
       const err = e as BusinessError;
       console.error(`getAuthCallback exception: code is ${err.code}, message is ${err.message}`);
     }
@@ -3138,17 +3921,21 @@ getAuthCallback(sessionId: string): Promise<AuthCallback>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameter types. |
-| 12300108 | Session not found. |
-| 12300002 | Invalid sessionId. |
-| 12300001 | System service exception. |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameter types. |
+| [12300108](../../apis-basic-services-kit/errorcode-account.md#12300108-认证会话不存在) | Session not found. |
+| [12300002](../../apis-basic-services-kit/errorcode-account.md#12300002-无效参数) | Invalid sessionId. |
+| [12300001](../../apis-basic-services-kit/errorcode-account.md#12300001-系统服务异常) | System service exception. |
 
 ## 示例
 
+ArkTS-Dyn示例：
+
 ```TypeScript
+import { appAccount } from '@kit.BasicServicesKit';
 import { BusinessError } from '@kit.BasicServicesKit';
 import { Want, UIAbility, AbilityConstant } from '@kit.AbilityKit';
 
+let appAccountManager: appAccount.AppAccountManager = appAccount.createAppAccountManager();
 export default class EntryAbility extends UIAbility {
   onCreate(want: Want, param: AbilityConstant.LaunchParam) { // ability 生命周期函数
     let sessionId: string = want.parameters![appAccount.Constants.KEY_SESSION_ID] as string;
@@ -3169,6 +3956,42 @@ export default class EntryAbility extends UIAbility {
         console.error(`getAuthCallback err: code is ${err.code}, message is ${err.message}`);
       });
     } catch (e) {
+      const err = e as BusinessError;
+      console.error(`getAuthCallback exception: code is ${err.code}, message is ${err.message}`);
+    }
+  }
+}
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+import appAccount from '@ohos.account.appAccount';
+import { BusinessError } from '@kit.BasicServicesKit';
+import { Want, UIAbility, AbilityConstant } from '@kit.AbilityKit';
+
+let appAccountManager: appAccount.AppAccountManager = appAccount.createAppAccountManager();
+export default class EntryAbility extends UIAbility {
+  onCreate(want: Want, param: AbilityConstant.LaunchParam) { // ability 生命周期函数
+    let sessionId: string = want.parameters![appAccount.Constants.KEY_SESSION_ID] as string;
+    try {
+      appAccountManager.getAuthCallback(sessionId).then((callback: appAccount.AuthCallback) => {
+        let result: appAccount.AuthResult = {
+          account: {
+            name: 'Lisi',
+            owner: 'com.example.accountjsdemo',
+          },
+          tokenInfo: {
+            token: 'xxxxxx',
+            authType: 'getSocialData'
+          }
+        };
+        callback.onResult(0, result);
+      }).catch((e: Error) => {
+        const err = e as BusinessError;
+        console.error(`getAuthCallback err: code is ${err.code}, message is ${err.message}`);
+      });
+    } catch (e: Error) {
       const err = e as BusinessError;
       console.error(`getAuthCallback exception: code is ${err.code}, message is ${err.message}`);
     }
@@ -3205,17 +4028,21 @@ getAuthList(name: string, authType: string, callback: AsyncCallback<Array<string
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 12300107 | AuthType not found. |
-| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameter types. |
-| 12300003 | Account not found. |
-| 12300002 | Invalid name or authType. |
-| 12300001 | System service exception. |
+| [12300107](../../apis-basic-services-kit/errorcode-account.md#12300107-认证类型不存在) | AuthType not found. |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameter types. |
+| [12300003](../../apis-basic-services-kit/errorcode-account.md#12300003-账号不存在) | Account not found. |
+| [12300002](../../apis-basic-services-kit/errorcode-account.md#12300002-无效参数) | Invalid name or authType. |
+| [12300001](../../apis-basic-services-kit/errorcode-account.md#12300001-系统服务异常) | System service exception. |
 
 ## 示例
 
+ArkTS-Dyn示例：
+
 ```TypeScript
+import { appAccount } from '@kit.BasicServicesKit';
 import { BusinessError } from '@kit.BasicServicesKit';
 
+let appAccountManager: appAccount.AppAccountManager = appAccount.createAppAccountManager();
 try {
   appAccountManager.getAuthList('LiSi', 'getSocialData', (err: BusinessError, authList: string[]) => {
     if (err) {
@@ -3225,6 +4052,28 @@ try {
     }
   });
 } catch (e) {
+  const err = e as BusinessError;
+  console.error(`getAuthList exception: code is ${err.code}, message is ${err.message}`);
+}
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+import appAccount from '@ohos.account.appAccount';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let appAccountManager: appAccount.AppAccountManager = appAccount.createAppAccountManager();
+try {
+  appAccountManager.getAuthList('LiSi', 'getSocialData',
+    (err: BusinessError | null, authList: string[] | undefined) => {
+      if (err) {
+        console.error(`getAuthList failed, code is ${err.code}, message is ${err.message}`);
+      } else {
+        console.info('getAuthList successfully, authList: ' + authList);
+      }
+    });
+} catch (e: Error) {
   const err = e as BusinessError;
   console.error(`getAuthList exception: code is ${err.code}, message is ${err.message}`);
 }
@@ -3264,24 +4113,48 @@ getAuthList(name: string, authType: string): Promise<Array<string>>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 12300107 | AuthType not found. |
-| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameter types. |
-| 12300003 | Account not found. |
-| 12300002 | Invalid name or authType. |
-| 12300001 | System service exception. |
+| [12300107](../../apis-basic-services-kit/errorcode-account.md#12300107-认证类型不存在) | AuthType not found. |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameter types. |
+| [12300003](../../apis-basic-services-kit/errorcode-account.md#12300003-账号不存在) | Account not found. |
+| [12300002](../../apis-basic-services-kit/errorcode-account.md#12300002-无效参数) | Invalid name or authType. |
+| [12300001](../../apis-basic-services-kit/errorcode-account.md#12300001-系统服务异常) | System service exception. |
 
 ## 示例
 
+ArkTS-Dyn示例：
+
 ```TypeScript
+import { appAccount } from '@kit.BasicServicesKit';
 import { BusinessError } from '@kit.BasicServicesKit';
 
+let appAccountManager: appAccount.AppAccountManager = appAccount.createAppAccountManager();
+try {
+  appAccountManager.getAuthList('LiSi', 'getSocialData').then((authList: string[]) => {
+      console.info('getAuthList successfully, authList: ' + authList);
+  }).catch((err: BusinessError) => {
+      console.error(`getAuthList failed, code is ${err.code}, message is ${err.message}`);
+  });
+} catch (e) {
+  const err = e as BusinessError;
+  console.error(`getAuthList exception: code is ${err.code}, message is ${err.message}`);
+}
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+import appAccount from '@ohos.account.appAccount';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let appAccountManager: appAccount.AppAccountManager = appAccount.createAppAccountManager();
 try {
   appAccountManager.getAuthList('LiSi', 'getSocialData').then((authList: string[]) => {
     console.info('getAuthList successfully, authList: ' + authList);
-  }).catch((err: BusinessError) => {
+  }).catch((e: Error) => {
+    const err = e as BusinessError;
     console.error(`getAuthList failed, code is ${err.code}, message is ${err.message}`);
   });
-} catch (e) {
+} catch (e: Error) {
   const err = e as BusinessError;
   console.error(`getAuthList exception: code is ${err.code}, message is ${err.message}`);
 }
@@ -3316,17 +4189,21 @@ getAuthToken(name: string, owner: string, authType: string, callback: AsyncCallb
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 12300107 | AuthType not found. |
-| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameter types. |
-| 12300003 | Account not found. |
-| 12300002 | Invalid name, owner or authType. |
-| 12300001 | System service exception. |
+| [12300107](../../apis-basic-services-kit/errorcode-account.md#12300107-认证类型不存在) | AuthType not found. |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameter types. |
+| [12300003](../../apis-basic-services-kit/errorcode-account.md#12300003-账号不存在) | Account not found. |
+| [12300002](../../apis-basic-services-kit/errorcode-account.md#12300002-无效参数) | Invalid name, owner or authType. |
+| [12300001](../../apis-basic-services-kit/errorcode-account.md#12300001-系统服务异常) | System service exception. |
 
 ## 示例
 
+ArkTS-Dyn示例：
+
 ```TypeScript
+import { appAccount } from '@kit.BasicServicesKit';
 import { BusinessError } from '@kit.BasicServicesKit';
 
+let appAccountManager: appAccount.AppAccountManager = appAccount.createAppAccountManager();
 try {
   appAccountManager.getAuthToken('LiSi', 'com.example.accountjsdemo', 'getSocialData',
     (err: BusinessError, token: string) => {
@@ -3337,6 +4214,28 @@ try {
       }
     });
 } catch (e) {
+    const err = e as BusinessError;
+    console.error(`getAuthToken exception: code is ${err.code}, message is ${err.message}`);
+}
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+import appAccount from '@ohos.account.appAccount';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let appAccountManager: appAccount.AppAccountManager = appAccount.createAppAccountManager();
+try {
+  appAccountManager.getAuthToken('LiSi', 'com.example.accountjsdemo', 'getSocialData',
+    (err: BusinessError | null, token: string | undefined) => {
+      if (err) {
+        console.error(`getAuthToken failed, code is ${err.code}, message is ${err.message}`);
+      } else {
+        console.info('getAuthToken successfully, token: ' + token);
+      }
+    });
+} catch (e: Error) {
   const err = e as BusinessError;
   console.error(`getAuthToken exception: code is ${err.code}, message is ${err.message}`);
 }
@@ -3376,17 +4275,21 @@ getAuthToken(name: string, owner: string, authType: string): Promise<string>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 12300107 | AuthType not found. |
-| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameter types. |
-| 12300003 | Account not found. |
-| 12300002 | Invalid name, owner or authType. |
-| 12300001 | System service exception. |
+| [12300107](../../apis-basic-services-kit/errorcode-account.md#12300107-认证类型不存在) | AuthType not found. |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameter types. |
+| [12300003](../../apis-basic-services-kit/errorcode-account.md#12300003-账号不存在) | Account not found. |
+| [12300002](../../apis-basic-services-kit/errorcode-account.md#12300002-无效参数) | Invalid name, owner or authType. |
+| [12300001](../../apis-basic-services-kit/errorcode-account.md#12300001-系统服务异常) | System service exception. |
 
 ## 示例
 
+ArkTS-Dyn示例：
+
 ```TypeScript
+import { appAccount } from '@kit.BasicServicesKit';
 import { BusinessError } from '@kit.BasicServicesKit';
 
+let appAccountManager: appAccount.AppAccountManager = appAccount.createAppAccountManager();
 try {
   appAccountManager.getAuthToken('LiSi', 'com.example.accountjsdemo', 'getSocialData').then((token: string) => {
     console.info('getAuthToken successfully, token: ' + token);
@@ -3394,6 +4297,26 @@ try {
     console.error(`getAuthToken failed, code is ${err.code}, message is ${err.message}`);
   });
 } catch (e) {
+    const err = e as BusinessError;
+    console.error(`getAuthToken exception: code is ${err.code}, message is ${err.message}`);
+}
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+import appAccount from '@ohos.account.appAccount';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let appAccountManager: appAccount.AppAccountManager = appAccount.createAppAccountManager();
+try {
+  appAccountManager.getAuthToken('LiSi', 'com.example.accountjsdemo', 'getSocialData').then((token: string) => {
+    console.info('getAuthToken successfully, token: ' + token);
+  }).catch((e: Error) => {
+    const err = e as BusinessError;
+    console.error(`getAuthToken failed, code is ${err.code}, message is ${err.message}`);
+  });
+} catch (e: Error) {
   const err = e as BusinessError;
   console.error(`getAuthToken exception: code is ${err.code}, message is ${err.message}`);
 }
@@ -3451,8 +4374,8 @@ export default class EntryAbility extends UIAbility {
           name: 'LiSi',
           owner: 'com.example.accountjsdemo',
           authType: 'getSocialData',
-          token: 'xxxxxx'
-        });
+          token: 'xxxxxx'}
+        );
       });
   }
 }
@@ -3510,8 +4433,8 @@ export default class EntryAbility extends UIAbility {
         name: 'LiSi',
         owner: 'com.example.accountjsdemo',
         authType: 'getSocialData',
-        token: 'xxxxxx'
-      });
+        token: 'xxxxxx'}
+      );
     }).catch((err: BusinessError) => {
       console.error(`getAuthenticatorCallback err: code is ${err.code}, message is ${err.message}`);
     });
@@ -3645,17 +4568,21 @@ getCredential(name: string, credentialType: string, callback: AsyncCallback<stri
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameter types. |
-| 12300003 | Account not found. |
-| 12300002 | Invalid name or credentialType. |
-| 12300001 | System service exception. |
-| 12300102 | Credential not found. |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameter types. |
+| [12300003](../../apis-basic-services-kit/errorcode-account.md#12300003-账号不存在) | Account not found. |
+| [12300002](../../apis-basic-services-kit/errorcode-account.md#12300002-无效参数) | Invalid name or credentialType. |
+| [12300001](../../apis-basic-services-kit/errorcode-account.md#12300001-系统服务异常) | System service exception. |
+| [12300102](../../apis-basic-services-kit/errorcode-account.md#12300102-凭据不存在) | Credential not found. |
 
 ## 示例
 
+ArkTS-Dyn示例：
+
 ```TypeScript
+import { appAccount } from '@kit.BasicServicesKit';
 import { BusinessError } from '@kit.BasicServicesKit';
 
+let appAccountManager: appAccount.AppAccountManager = appAccount.createAppAccountManager();
 try {
   appAccountManager.getCredential('ZhangSan', 'PIN_SIX', (err: BusinessError, result: string) => {
     if (err) {
@@ -3665,6 +4592,28 @@ try {
     }
   });
 } catch (e) {
+  const err = e as BusinessError;
+  console.error(`getCredential err: code is ${err.code}, message is ${err.message}`);
+}
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+import appAccount from '@ohos.account.appAccount';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let appAccountManager: appAccount.AppAccountManager = appAccount.createAppAccountManager();
+try {
+  appAccountManager.getCredential('ZhangSan', 'PIN_SIX',
+    (err: BusinessError | null, result: string | undefined) => {
+      if (err) {
+        console.error(`getCredential failed, code is ${err.code}, message is ${err.message}`);
+      } else {
+        console.info('getCredential successfully, result: ' + result);
+      }
+    });
+} catch (e: Error) {
   const err = e as BusinessError;
   console.error(`getCredential err: code is ${err.code}, message is ${err.message}`);
 }
@@ -3703,24 +4652,48 @@ getCredential(name: string, credentialType: string): Promise<string>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameter types. |
-| 12300003 | Account not found. |
-| 12300002 | Invalid name or credentialType. |
-| 12300001 | System service exception. |
-| 12300102 | Credential not found. |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameter types. |
+| [12300003](../../apis-basic-services-kit/errorcode-account.md#12300003-账号不存在) | Account not found. |
+| [12300002](../../apis-basic-services-kit/errorcode-account.md#12300002-无效参数) | Invalid name or credentialType. |
+| [12300001](../../apis-basic-services-kit/errorcode-account.md#12300001-系统服务异常) | System service exception. |
+| [12300102](../../apis-basic-services-kit/errorcode-account.md#12300102-凭据不存在) | Credential not found. |
 
 ## 示例
 
+ArkTS-Dyn示例：
+
 ```TypeScript
+import { appAccount } from '@kit.BasicServicesKit';
 import { BusinessError } from '@kit.BasicServicesKit';
 
+let appAccountManager: appAccount.AppAccountManager = appAccount.createAppAccountManager();
+try {
+  appAccountManager.getCredential('ZhangSan', 'PIN_SIX').then((credential: string) => {
+      console.info('getCredential successfully, credential: ' + credential);
+  }).catch((err: BusinessError) => {
+      console.error(`getCredential failed, code is ${err.code}, message is ${err.message}`);
+  });
+} catch (e) {
+  const err = e as BusinessError;
+  console.error(`getCredential exception: code is ${err.code}, message is ${err.message}`);
+}
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+import appAccount from '@ohos.account.appAccount';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let appAccountManager: appAccount.AppAccountManager = appAccount.createAppAccountManager();
 try {
   appAccountManager.getCredential('ZhangSan', 'PIN_SIX').then((credential: string) => {
     console.info('getCredential successfully, credential: ' + credential);
-  }).catch((err: BusinessError) => {
+  }).catch((e: Error) => {
+    const err = e as BusinessError;
     console.error(`getCredential failed, code is ${err.code}, message is ${err.message}`);
   });
-} catch (e) {
+} catch (e: Error) {
   const err = e as BusinessError;
   console.error(`getCredential exception: code is ${err.code}, message is ${err.message}`);
 }
@@ -3754,17 +4727,21 @@ getCustomData(name: string, key: string, callback: AsyncCallback<string>): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameter types. |
-| 12300003 | Account not found. |
-| 12300002 | Invalid name or key. |
-| 12300001 | System service exception. |
-| 12400002 | Custom data not found. |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameter types. |
+| [12300003](../../apis-basic-services-kit/errorcode-account.md#12300003-账号不存在) | Account not found. |
+| [12300002](../../apis-basic-services-kit/errorcode-account.md#12300002-无效参数) | Invalid name or key. |
+| [12300001](../../apis-basic-services-kit/errorcode-account.md#12300001-系统服务异常) | System service exception. |
+| [12400002](../../apis-basic-services-kit/errorcode-account.md#12400002-自定义数据不存在) | Custom data not found. |
 
 ## 示例
 
+ArkTS-Dyn示例：
+
 ```TypeScript
+import { appAccount } from '@kit.BasicServicesKit';
 import { BusinessError } from '@kit.BasicServicesKit';
 
+let appAccountManager: appAccount.AppAccountManager = appAccount.createAppAccountManager();
 try {
   appAccountManager.getCustomData('ZhangSan', 'age', (err: BusinessError, data: string) => {
     if (err) {
@@ -3774,6 +4751,27 @@ try {
     }
   });
 } catch (e) {
+  const err = e as BusinessError;
+  console.error(`getCustomData exception: code is ${err.code}, message is ${err.message}`);
+}
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+import appAccount from '@ohos.account.appAccount';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let appAccountManager: appAccount.AppAccountManager = appAccount.createAppAccountManager();
+try {
+  appAccountManager.getCustomData('ZhangSan', 'age', (err: BusinessError | null, data: string | undefined) => {
+    if (err) {
+      console.error('getCustomData failed, error: ' + err);
+    } else {
+      console.info('getCustomData successfully, data: ' + data);
+    }
+  });
+} catch (e: Error) {
   const err = e as BusinessError;
   console.error(`getCustomData exception: code is ${err.code}, message is ${err.message}`);
 }
@@ -3812,17 +4810,21 @@ getCustomData(name: string, key: string): Promise<string>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameter types. |
-| 12300003 | Account not found. |
-| 12300002 | Invalid name or key. |
-| 12300001 | System service exception. |
-| 12400002 | Custom data not found |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameter types. |
+| [12300003](../../apis-basic-services-kit/errorcode-account.md#12300003-账号不存在) | Account not found. |
+| [12300002](../../apis-basic-services-kit/errorcode-account.md#12300002-无效参数) | Invalid name or key. |
+| [12300001](../../apis-basic-services-kit/errorcode-account.md#12300001-系统服务异常) | System service exception. |
+| [12400002](../../apis-basic-services-kit/errorcode-account.md#12400002-自定义数据不存在) | Custom data not found |
 
 ## 示例
 
+ArkTS-Dyn示例：
+
 ```TypeScript
+import { appAccount } from '@kit.BasicServicesKit';
 import { BusinessError } from '@kit.BasicServicesKit';
 
+let appAccountManager: appAccount.AppAccountManager = appAccount.createAppAccountManager();
 try {
   appAccountManager.getCustomData('ZhangSan', 'age').then((data: string) => {
     console.info('getCustomData successfully, data: ' + data);
@@ -3830,6 +4832,26 @@ try {
     console.error(`getCustomData failed, code is ${err.code}, message is ${err.message}`);
   });
 } catch (e) {
+  const err = e as BusinessError;
+  console.error(`getCustomData exception: code is ${err.code}, message is ${err.message}`);
+}
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+import appAccount from '@ohos.account.appAccount';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let appAccountManager: appAccount.AppAccountManager = appAccount.createAppAccountManager();
+try {
+  appAccountManager.getCustomData('ZhangSan', 'age').then((data: string) => {
+    console.info('getCustomData successfully, data: ' + data);
+  }).catch((e: Error) => {
+    const err = e as BusinessError;
+    console.error(`getCustomData failed, code is ${err.code}, message is ${err.message}`);
+  });
+} catch (e: Error) {
   const err = e as BusinessError;
   console.error(`getCustomData exception: code is ${err.code}, message is ${err.message}`);
 }
@@ -3868,11 +4890,11 @@ getCustomDataSync(name: string, key: string): string
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameter types. |
-| 12300003 | Account not found. |
-| 12300002 | Invalid name or key. |
-| 12300001 | System service exception. |
-| 12400002 | Custom data not found. |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameter types. |
+| [12300003](../../apis-basic-services-kit/errorcode-account.md#12300003-账号不存在) | Account not found. |
+| [12300002](../../apis-basic-services-kit/errorcode-account.md#12300002-无效参数) | Invalid name or key. |
+| [12300001](../../apis-basic-services-kit/errorcode-account.md#12300001-系统服务异常) | System service exception. |
+| [12400002](../../apis-basic-services-kit/errorcode-account.md#12400002-自定义数据不存在) | Custom data not found. |
 
 ## 示例
 
@@ -4129,17 +5151,20 @@ off(type: 'change', callback?: Callback<Array<AppAccountInfo>>): void
 import { BusinessError } from '@kit.BasicServicesKit';
 
 function changeOnCallback(data: appAccount.AppAccountInfo[]): void {
-  console.info('receive change data: ' + JSON.stringify(data));
-  appAccountManager.off('change', () => {
-    console.info('off finish');
-  })
+  console.info('receive change data:' + JSON.stringify(data));
 }
 
 try {
   appAccountManager.on('change', ['com.example.actsaccounttest'], changeOnCallback);
 } catch (e) {
   const err = e as BusinessError;
-  console.error(`on accountOnOffDemo err: code is ${err.code}, message is ${err.message}`);
+  console.error(`on change failed, code is ${err.code}, message is ${err.message}`);
+}
+try {
+  appAccountManager.off('change', changeOnCallback);
+} catch (e) {
+  const err = e as BusinessError;
+  console.error(`off change failed, code is ${err.code}, message is ${err.message}`);
 }
 ```
 
@@ -4170,29 +5195,27 @@ off(type: 'accountChange', callback?: Callback<Array<AppAccountInfo>>): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameter types. |
-| 12300002 | Invalid type. |
-| 12300001 | System service exception. |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameter types. |
+| [12300002](../../apis-basic-services-kit/errorcode-account.md#12300002-无效参数) | Invalid type. |
+| [12300001](../../apis-basic-services-kit/errorcode-account.md#12300001-系统服务异常) | System service exception. |
 
 ## 示例
 
 ```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
+import { appAccount } from '@kit.BasicServicesKit';
+let appAccountManager: appAccount.AppAccountManager = appAccount.createAppAccountManager();
 function changeOnCallback(data: appAccount.AppAccountInfo[]): void {
   console.info('receive change data:' + JSON.stringify(data));
 }
-
-try {
+try{
   appAccountManager.on('accountChange', ['com.example.actsaccounttest'], changeOnCallback);
-} catch (e) {
-  const err = e as BusinessError;
+} catch(err) {
   console.error(`on accountChange failed, code is ${err.code}, message is ${err.message}`);
 }
-try {
+try{
   appAccountManager.off('accountChange', changeOnCallback);
-} catch (e) {
-  const err = e as BusinessError;
+}
+catch(err){
   console.error(`off accountChange failed, code is ${err.code}, message is ${err.message}`);
 }
 ```
@@ -4223,7 +5246,32 @@ offAccountChange(callback?: Callback<Array<AppAccountInfo>>): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 12300001 | System service exception. |
+| [12300001](../../apis-basic-services-kit/errorcode-account.md#12300001-系统服务异常) | System service exception. |
+
+## 示例
+
+```TypeScript
+import appAccount from '@ohos.account.appAccount';
+let appAccountManager: appAccount.AppAccountManager = appAccount.createAppAccountManager();
+try {
+  appAccountManager.onAccountChange(['com.example.actsaccounttest'],
+    (data: appAccount.AppAccountInfo[]) => {
+      console.info('receive change data:' + JSON.stringify(data));
+    });
+} catch (e: Error) {
+  const err = e as BusinessError;
+  console.error(`onAccountChange failed, code is ${err.code}, message is ${err.message}`);
+}
+
+try {
+  appAccountManager.offAccountChange((data: appAccount.AppAccountInfo[]) => {
+    console.info('receive change data:' + JSON.stringify(data));
+  });
+} catch (e: Error) {
+  const err = e as BusinessError;
+  console.error(`offAccountChange failed, code is ${err.code}, message is ${err.message}`);
+}
+```
 
 ## on('change')
 
@@ -4267,11 +5315,10 @@ import { BusinessError } from '@kit.BasicServicesKit';
 function changeOnCallback(data: appAccount.AppAccountInfo[]): void {
   console.info('receive change data:' + JSON.stringify(data));
 }
-
-try {
+try{
   appAccountManager.on('change', ['com.example.actsaccounttest'], changeOnCallback);
-} catch (e) {
-  const err = e as BusinessError;
+}
+catch(err){
   console.error(`on accountOnOffDemo code is ${err.code}, message is ${err.message}`);
 }
 ```
@@ -4304,23 +5351,21 @@ on(type: 'accountChange', owners: Array<string>, callback: Callback<Array<AppAcc
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 12300002 | Invalid type or owners. |
-| 12300001 | System service exception. |
-| 12400001 | Application not found.<br>**适用版本：** 9 - 13 |
+| [12300002](../../apis-basic-services-kit/errorcode-account.md#12300002-无效参数) | Invalid type or owners. |
+| [12300001](../../apis-basic-services-kit/errorcode-account.md#12300001-系统服务异常) | System service exception. |
+| [12400001](../../apis-basic-services-kit/errorcode-account.md#12400001-应用不存在) | Application not found.<br>**适用版本：** 9 - 13 |
 
 ## 示例
 
 ```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
+import { appAccount } from '@kit.BasicServicesKit';
+let appAccountManager: appAccount.AppAccountManager = appAccount.createAppAccountManager();
 function changeOnCallback(data: appAccount.AppAccountInfo[]): void {
   console.info('receive change data:' + JSON.stringify(data));
 }
-
-try {
+try{
   appAccountManager.on('accountChange', ['com.example.actsaccounttest'], changeOnCallback);
-} catch (e) {
-  const err = e as BusinessError;
+} catch(err) {
   console.error(`on accountChange failed, code is ${err.code}, message is ${err.message}`);
 }
 ```
@@ -4352,8 +5397,24 @@ onAccountChange(owners: Array<string>, callback: Callback<Array<AppAccountInfo>>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 12300002 | Invalid owners. |
-| 12300001 | System service exception. |
+| [12300002](../../apis-basic-services-kit/errorcode-account.md#12300002-无效参数) | Invalid owners. |
+| [12300001](../../apis-basic-services-kit/errorcode-account.md#12300001-系统服务异常) | System service exception. |
+
+## 示例
+
+```TypeScript
+import appAccount from '@ohos.account.appAccount';
+let appAccountManager: appAccount.AppAccountManager = appAccount.createAppAccountManager();
+try {
+  appAccountManager.onAccountChange(['com.example.actsaccounttest'],
+    (data: appAccount.AppAccountInfo[]) => {
+      console.info('receive change data:' + JSON.stringify(data));
+    });
+} catch (e: Error) {
+  const err = e as BusinessError;
+  console.error(`on accountChange failed, code is ${err.code}, message is ${err.message}`);
+}
+```
 
 ## queryAuthenticatorInfo
 
@@ -4382,16 +5443,20 @@ queryAuthenticatorInfo(owner: string, callback: AsyncCallback<AuthenticatorInfo>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameter types. |
-| 12300002 | Invalid owner. |
-| 12300001 | System service exception. |
-| 12300113 | Authenticator service not found. |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameter types. |
+| [12300002](../../apis-basic-services-kit/errorcode-account.md#12300002-无效参数) | Invalid owner. |
+| [12300001](../../apis-basic-services-kit/errorcode-account.md#12300001-系统服务异常) | System service exception. |
+| [12300113](../../apis-basic-services-kit/errorcode-account.md#12300113-认证服务不存在) | Authenticator service not found. |
 
 ## 示例
 
+ArkTS-Dyn示例：
+
 ```TypeScript
+import { appAccount } from '@kit.BasicServicesKit';
 import { BusinessError } from '@kit.BasicServicesKit';
 
+let appAccountManager: appAccount.AppAccountManager = appAccount.createAppAccountManager();
 try {
   appAccountManager.queryAuthenticatorInfo('com.example.accountjsdemo',
     (err: BusinessError, info: appAccount.AuthenticatorInfo) => {
@@ -4402,6 +5467,28 @@ try {
       }
     });
 } catch (e) {
+  const err = e as BusinessError;
+  console.error(`queryAuthenticatorInfo exception: code is ${err.code}, message is ${err.message}`);
+}
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+import appAccount from '@ohos.account.appAccount';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let appAccountManager: appAccount.AppAccountManager = appAccount.createAppAccountManager();
+try {
+  appAccountManager.queryAuthenticatorInfo('com.example.accountjsdemo',
+    (err: BusinessError | null, info: appAccount.AuthenticatorInfo | undefined) => {
+      if (err) {
+        console.error(`queryAuthenticatorInfo failed, code is ${err.code}, message is ${err.message}`);
+      } else {
+        console.info('queryAuthenticatorInfo successfully, info: ' + JSON.stringify(info));
+      }
+    });
+} catch (e: Error) {
   const err = e as BusinessError;
   console.error(`queryAuthenticatorInfo exception: code is ${err.code}, message is ${err.message}`);
 }
@@ -4439,16 +5526,20 @@ queryAuthenticatorInfo(owner: string): Promise<AuthenticatorInfo>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameter types. |
-| 12300002 | Invalid owner. |
-| 12300001 | System service exception. |
-| 12300113 | Authenticator service not found. |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameter types. |
+| [12300002](../../apis-basic-services-kit/errorcode-account.md#12300002-无效参数) | Invalid owner. |
+| [12300001](../../apis-basic-services-kit/errorcode-account.md#12300001-系统服务异常) | System service exception. |
+| [12300113](../../apis-basic-services-kit/errorcode-account.md#12300113-认证服务不存在) | Authenticator service not found. |
 
 ## 示例
 
+ArkTS-Dyn示例：
+
 ```TypeScript
+import { appAccount } from '@kit.BasicServicesKit';
 import { BusinessError } from '@kit.BasicServicesKit';
 
+let appAccountManager: appAccount.AppAccountManager = appAccount.createAppAccountManager();
 try {
   appAccountManager.queryAuthenticatorInfo('com.example.accountjsdemo').then((
     info: appAccount.AuthenticatorInfo) => { 
@@ -4457,6 +5548,27 @@ try {
     console.error(`queryAuthenticatorInfo failed, code is ${err.code}, message is ${err.message}`);
   });
 } catch (e) {
+  const err = e as BusinessError;
+  console.error(`queryAuthenticatorInfo exception: code is ${err.code}, message is ${err.message}`);
+}
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+import appAccount from '@ohos.account.appAccount';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let appAccountManager: appAccount.AppAccountManager = appAccount.createAppAccountManager();
+try {
+  appAccountManager.queryAuthenticatorInfo('com.example.accountjsdemo').then((
+    info: appAccount.AuthenticatorInfo) => {
+    console.info('queryAuthenticatorInfo successfully, info: ' + JSON.stringify(info));
+  }).catch((e: Error) => {
+    const err = e as BusinessError;
+    console.error(`queryAuthenticatorInfo failed, code is ${err.code}, message is ${err.message}`);
+  });
+} catch (e: Error) {
   const err = e as BusinessError;
   console.error(`queryAuthenticatorInfo exception: code is ${err.code}, message is ${err.message}`);
 }
@@ -4489,16 +5601,20 @@ removeAccount(name: string, callback: AsyncCallback<void>): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameter types. |
-| 12300003 | Account not found. |
-| 12300002 | Invalid name. |
-| 12300001 | System service exception. |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameter types. |
+| [12300003](../../apis-basic-services-kit/errorcode-account.md#12300003-账号不存在) | Account not found. |
+| [12300002](../../apis-basic-services-kit/errorcode-account.md#12300002-无效参数) | Invalid name. |
+| [12300001](../../apis-basic-services-kit/errorcode-account.md#12300001-系统服务异常) | System service exception. |
 
 ## 示例
 
+ArkTS-Dyn示例：
+
 ```TypeScript
+import { appAccount } from '@kit.BasicServicesKit';
 import { BusinessError } from '@kit.BasicServicesKit';
 
+let appAccountManager: appAccount.AppAccountManager = appAccount.createAppAccountManager();
 try {
   appAccountManager.removeAccount('ZhaoLiu', (err: BusinessError) => {
     if (err) {
@@ -4507,7 +5623,27 @@ try {
       console.info('removeAccount successfully');
     }
  });
-} catch (e) {
+} catch(err) {
+  console.error(`removeAccount exception: code is ${err.code}, message is ${err.message}`);
+}
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+import appAccount from '@ohos.account.appAccount';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let appAccountManager: appAccount.AppAccountManager = appAccount.createAppAccountManager();
+try {
+  appAccountManager.removeAccount('ZhaoLiu', (err: BusinessError | null) => {
+    if (err) {
+      console.error(`removeAccount failed, code is ${err.code}, message is ${err.message}`);
+    } else {
+      console.info('removeAccount successfully');
+    }
+  });
+} catch (e: Error) {
   const err = e as BusinessError;
   console.error(`removeAccount exception: code is ${err.code}, message is ${err.message}`);
 }
@@ -4545,16 +5681,20 @@ removeAccount(name: string): Promise<void>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameter types. |
-| 12300003 | Account not found. |
-| 12300002 | Invalid name. |
-| 12300001 | System service exception. |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameter types. |
+| [12300003](../../apis-basic-services-kit/errorcode-account.md#12300003-账号不存在) | Account not found. |
+| [12300002](../../apis-basic-services-kit/errorcode-account.md#12300002-无效参数) | Invalid name. |
+| [12300001](../../apis-basic-services-kit/errorcode-account.md#12300001-系统服务异常) | System service exception. |
 
 ## 示例
 
+ArkTS-Dyn示例：
+
 ```TypeScript
+import { appAccount } from '@kit.BasicServicesKit';
 import { BusinessError } from '@kit.BasicServicesKit';
 
+let appAccountManager: appAccount.AppAccountManager = appAccount.createAppAccountManager();
 try {
   appAccountManager.removeAccount('Lisi').then(() => {
     console.info('removeAccount successfully');
@@ -4562,6 +5702,26 @@ try {
     console.error(`removeAccount failed, code is ${err.code}, message is ${err.message}`);
   });
 } catch (e) {
+  const err = e as BusinessError;
+  console.error(`removeAccount exception: code is ${err.code}, message is ${err.message}`);
+}
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+import appAccount from '@ohos.account.appAccount';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let appAccountManager: appAccount.AppAccountManager = appAccount.createAppAccountManager();
+try {
+  appAccountManager.removeAccount('Lisi').then(() => {
+    console.info('removeAccount successfully');
+  }).catch((e: Error) => {
+    const err = e as BusinessError;
+    console.error(`removeAccount failed, code is ${err.code}, message is ${err.message}`);
+  });
+} catch (e: Error) {
   const err = e as BusinessError;
   console.error(`removeAccount exception: code is ${err.code}, message is ${err.message}`);
 }
@@ -4594,20 +5754,24 @@ selectAccountsByOptions(options: SelectAccountsOptions, callback: AsyncCallback<
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameter types. |
-| 12300010 | Account service busy. |
-| 12300002 | Invalid options. |
-| 12300114 | Authenticator service exception. |
-| 12300001 | System service exception. |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameter types. |
+| [12300010](../../apis-basic-services-kit/errorcode-account.md#12300010-账号服务忙碌) | Account service busy. |
+| [12300002](../../apis-basic-services-kit/errorcode-account.md#12300002-无效参数) | Invalid options. |
+| [12300114](../../apis-basic-services-kit/errorcode-account.md#12300114-认证服务异常) | Authenticator service exception. |
+| [12300001](../../apis-basic-services-kit/errorcode-account.md#12300001-系统服务异常) | System service exception. |
 
 ## 示例
 
+ArkTS-Dyn示例：
+
 ```TypeScript
+import { appAccount } from '@kit.BasicServicesKit';
 import { BusinessError } from '@kit.BasicServicesKit';
 
+let appAccountManager: appAccount.AppAccountManager = appAccount.createAppAccountManager();
 let options: appAccount.SelectAccountsOptions = {
-  allowedOwners: ['com.example.accountjsdemo'],
-  requiredLabels: ['student']
+  allowedOwners: [ 'com.example.accountjsdemo' ],
+  requiredLabels: [ 'student' ]
 };
 try {
   appAccountManager.selectAccountsByOptions(options,
@@ -4619,6 +5783,32 @@ try {
       }
     });
 } catch (e) {
+  const err = e as BusinessError;
+  console.error(`selectAccountsByOptions exception: code is ${err.code}, message is ${err.message}`);
+}
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+import appAccount from '@ohos.account.appAccount';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let appAccountManager: appAccount.AppAccountManager = appAccount.createAppAccountManager();
+let options: appAccount.SelectAccountsOptions = {
+  allowedOwners: ['com.example.accountjsdemo'],
+  requiredLabels: ['student']
+};
+try {
+  appAccountManager.selectAccountsByOptions(options,
+    (err: BusinessError | null, accountArr: appAccount.AppAccountInfo[] | undefined) => {
+      if (err) {
+        console.error(`selectAccountsByOptions failed, code is ${err.code}, message is ${err.message}`);
+      } else {
+        console.info('selectAccountsByOptions successfully, accountArr: ' + JSON.stringify(accountArr));
+      }
+    });
+} catch (e: Error) {
   const err = e as BusinessError;
   console.error(`selectAccountsByOptions exception: code is ${err.code}, message is ${err.message}`);
 }
@@ -4656,17 +5846,21 @@ selectAccountsByOptions(options: SelectAccountsOptions): Promise<Array<AppAccoun
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameter types. |
-| 12300010 | Account service busy. |
-| 12300002 | Invalid options. |
-| 12300114 | Authenticator service exception. |
-| 12300001 | System service exception. |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameter types. |
+| [12300010](../../apis-basic-services-kit/errorcode-account.md#12300010-账号服务忙碌) | Account service busy. |
+| [12300002](../../apis-basic-services-kit/errorcode-account.md#12300002-无效参数) | Invalid options. |
+| [12300114](../../apis-basic-services-kit/errorcode-account.md#12300114-认证服务异常) | Authenticator service exception. |
+| [12300001](../../apis-basic-services-kit/errorcode-account.md#12300001-系统服务异常) | System service exception. |
 
 ## 示例
 
+ArkTS-Dyn示例：
+
 ```TypeScript
+import { appAccount } from '@kit.BasicServicesKit';
 import { BusinessError } from '@kit.BasicServicesKit';
 
+let appAccountManager: appAccount.AppAccountManager = appAccount.createAppAccountManager();
 let options: appAccount.SelectAccountsOptions = {
   allowedOwners: ['com.example.accountjsdemo']
 };
@@ -4677,6 +5871,29 @@ try {
     console.error(`selectAccountsByOptions failed, code is ${err.code}, message is ${err.message}`);
   });
 } catch (e) {
+  const err = e as BusinessError;
+  console.error(`selectAccountsByOptions exception: code is ${err.code}, message is ${err.message}`);
+}
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+import appAccount from '@ohos.account.appAccount';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let appAccountManager: appAccount.AppAccountManager = appAccount.createAppAccountManager();
+let options: appAccount.SelectAccountsOptions = {
+  allowedOwners: ['com.example.accountjsdemo']
+};
+try {
+  appAccountManager.selectAccountsByOptions(options).then((accountArr: appAccount.AppAccountInfo[]) => {
+    console.info('selectAccountsByOptions successfully, accountArr: ' + JSON.stringify(accountArr));
+  }).catch((e: Error) => {
+    const err = e as BusinessError;
+    console.error(`selectAccountsByOptions failed, code is ${err.code}, message is ${err.message}`);
+  });
+} catch (e: Error) {
   const err = e as BusinessError;
   console.error(`selectAccountsByOptions exception: code is ${err.code}, message is ${err.message}`);
 }
@@ -4910,17 +6127,21 @@ setAppAccess(name: string, bundleName: string, isAccessible: boolean, callback: 
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 12300003 | Account not found. |
-| 12400005 | The size of authorization list reaches the upper limit.<br>**适用版本：** 14+ |
-| 12300002 | Invalid name or bundleName. |
-| 12300001 | System service exception. |
-| 12400001 | Application not found.<br>**适用版本：** 9 - 13 |
+| [12300003](../../apis-basic-services-kit/errorcode-account.md#12300003-账号不存在) | Account not found. |
+| [12400005](../../apis-basic-services-kit/errorcode-account.md#12400005-授权列表已达上限) | The size of authorization list reaches the upper limit.<br>**适用版本：** 14+ |
+| [12300002](../../apis-basic-services-kit/errorcode-account.md#12300002-无效参数) | Invalid name or bundleName. |
+| [12300001](../../apis-basic-services-kit/errorcode-account.md#12300001-系统服务异常) | System service exception. |
+| [12400001](../../apis-basic-services-kit/errorcode-account.md#12400001-应用不存在) | Application not found.<br>**适用版本：** 9 - 13 |
 
 ## 示例
 
+ArkTS-Dyn示例：
+
 ```TypeScript
+import { appAccount } from '@kit.BasicServicesKit';
 import { BusinessError } from '@kit.BasicServicesKit';
 
+let appAccountManager: appAccount.AppAccountManager = appAccount.createAppAccountManager();
 try {
   appAccountManager.setAppAccess('ZhangSan', 'com.example.accountjsdemo', true, (err: BusinessError) => {
     if (err) {
@@ -4930,6 +6151,27 @@ try {
     }
   });
 } catch (e) {
+  const err = e as BusinessError;
+  console.error(`setAppAccess exception: code is ${err.code}, message is ${err.message}`);
+}
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+import appAccount from '@ohos.account.appAccount';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let appAccountManager: appAccount.AppAccountManager = appAccount.createAppAccountManager();
+try {
+  appAccountManager.setAppAccess('ZhangSan', 'com.example.accountjsdemo', true, (err: BusinessError | null) => {
+    if (err) {
+      console.error(`setAppAccess failed: code is ${err.code}, message is ${err.message}`);
+    } else {
+      console.info('setAppAccess successfully');
+    }
+  });
+} catch (e: Error) {
   const err = e as BusinessError;
   console.error(`setAppAccess exception: code is ${err.code}, message is ${err.message}`);
 }
@@ -4969,17 +6211,21 @@ setAppAccess(name: string, bundleName: string, isAccessible: boolean): Promise<v
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 12300003 | Account not found. |
-| 12400005 | The size of authorization list reaches the upper limit.<br>**适用版本：** 14+ |
-| 12300002 | Invalid name or bundleName. |
-| 12300001 | System service exception. |
-| 12400001 | Application not found.<br>**适用版本：** 9 - 13 |
+| [12300003](../../apis-basic-services-kit/errorcode-account.md#12300003-账号不存在) | Account not found. |
+| [12400005](../../apis-basic-services-kit/errorcode-account.md#12400005-授权列表已达上限) | The size of authorization list reaches the upper limit.<br>**适用版本：** 14+ |
+| [12300002](../../apis-basic-services-kit/errorcode-account.md#12300002-无效参数) | Invalid name or bundleName. |
+| [12300001](../../apis-basic-services-kit/errorcode-account.md#12300001-系统服务异常) | System service exception. |
+| [12400001](../../apis-basic-services-kit/errorcode-account.md#12400001-应用不存在) | Application not found.<br>**适用版本：** 9 - 13 |
 
 ## 示例
 
+ArkTS-Dyn示例：
+
 ```TypeScript
+import { appAccount } from '@kit.BasicServicesKit';
 import { BusinessError } from '@kit.BasicServicesKit';
 
+let appAccountManager: appAccount.AppAccountManager = appAccount.createAppAccountManager();
 try {
   appAccountManager.setAppAccess('ZhangSan', 'com.example.accountjsdemo', true).then(() => {
     console.info('setAppAccess successfully');
@@ -4987,6 +6233,26 @@ try {
     console.error(`setAppAccess failed: code is ${err.code}, message is ${err.message}`);
   });
 } catch (e) {
+  const err = e as BusinessError;
+  console.error(`setAppAccess exception: code is ${err.code}, message is ${err.message}`);
+}
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+import appAccount from '@ohos.account.appAccount';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let appAccountManager: appAccount.AppAccountManager = appAccount.createAppAccountManager();
+try {
+  appAccountManager.setAppAccess('ZhangSan', 'com.example.accountjsdemo', true).then(() => {
+    console.info('setAppAccess successfully');
+  }).catch((e: Error) => {
+    const err = e as BusinessError;
+    console.error(`setAppAccess failed: code is ${err.code}, message is ${err.message}`);
+  });
+} catch (e: Error) {
   const err = e as BusinessError;
   console.error(`setAppAccess exception: code is ${err.code}, message is ${err.message}`);
 }
@@ -5224,17 +6490,21 @@ setAuthToken(name: string, authType: string, token: string, callback: AsyncCallb
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameter types. |
-| 12300003 | Account not found. |
-| 12300002 | Invalid name, authType or token. |
-| 12400004 | The number of tokens reaches the upper limit. |
-| 12300001 | System service exception. |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameter types. |
+| [12300003](../../apis-basic-services-kit/errorcode-account.md#12300003-账号不存在) | Account not found. |
+| [12300002](../../apis-basic-services-kit/errorcode-account.md#12300002-无效参数) | Invalid name, authType or token. |
+| [12400004](../../apis-basic-services-kit/errorcode-account.md#12400004-令牌数量已达上限) | The number of tokens reaches the upper limit. |
+| [12300001](../../apis-basic-services-kit/errorcode-account.md#12300001-系统服务异常) | System service exception. |
 
 ## 示例
 
+ArkTS-Dyn示例：
+
 ```TypeScript
+import { appAccount } from '@kit.BasicServicesKit';
 import { BusinessError } from '@kit.BasicServicesKit';
 
+let appAccountManager: appAccount.AppAccountManager = appAccount.createAppAccountManager();
 try {
   appAccountManager.setAuthToken('LiSi', 'getSocialData', 'xxxx', (err: BusinessError) => {
     if (err) {
@@ -5244,6 +6514,27 @@ try {
     }
   });
 } catch (e) {
+  const err = e as BusinessError;
+  console.error(`setAuthToken exception: code is ${err.code}, message is ${err.message}`);
+}
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+import appAccount from '@ohos.account.appAccount';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let appAccountManager: appAccount.AppAccountManager = appAccount.createAppAccountManager();
+try {
+  appAccountManager.setAuthToken('LiSi', 'getSocialData', 'xxxx', (err: BusinessError | null) => {
+    if (err) {
+      console.error(`setAuthToken failed, code is ${err.code}, message is ${err.message}`);
+    } else {
+      console.info('setAuthToken successfully');
+    }
+  });
+} catch (e: Error) {
   const err = e as BusinessError;
   console.error(`setAuthToken exception: code is ${err.code}, message is ${err.message}`);
 }
@@ -5283,24 +6574,48 @@ setAuthToken(name: string, authType: string, token: string): Promise<void>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameter types. |
-| 12300003 | Account not found. |
-| 12300002 | Invalid name, authType or token. |
-| 12400004 | The number of tokens reaches the upper limit. |
-| 12300001 | System service exception. |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameter types. |
+| [12300003](../../apis-basic-services-kit/errorcode-account.md#12300003-账号不存在) | Account not found. |
+| [12300002](../../apis-basic-services-kit/errorcode-account.md#12300002-无效参数) | Invalid name, authType or token. |
+| [12400004](../../apis-basic-services-kit/errorcode-account.md#12400004-令牌数量已达上限) | The number of tokens reaches the upper limit. |
+| [12300001](../../apis-basic-services-kit/errorcode-account.md#12300001-系统服务异常) | System service exception. |
 
 ## 示例
 
+ArkTS-Dyn示例：
+
 ```TypeScript
+import { appAccount } from '@kit.BasicServicesKit';
 import { BusinessError } from '@kit.BasicServicesKit';
 
+let appAccountManager: appAccount.AppAccountManager = appAccount.createAppAccountManager();
+try {
+  appAccountManager.setAuthToken('LiSi', 'getSocialData', 'xxxx').then(() => {
+      console.info('setAuthToken successfully');
+  }).catch((err: BusinessError) => {
+      console.error(`setAuthToken failed, code is ${err.code}, message is ${err.message}`);
+  });
+} catch (e) {
+  const err = e as BusinessError;
+  console.error(`setAuthToken exception: code is ${err.code}, message is ${err.message}`);
+}
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+import appAccount from '@ohos.account.appAccount';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let appAccountManager: appAccount.AppAccountManager = appAccount.createAppAccountManager();
 try {
   appAccountManager.setAuthToken('LiSi', 'getSocialData', 'xxxx').then(() => {
     console.info('setAuthToken successfully');
-  }).catch((err: BusinessError) => {
+  }).catch((e: Error) => {
+    const err = e as BusinessError;
     console.error(`setAuthToken failed, code is ${err.code}, message is ${err.message}`);
   });
-} catch (e) {
+} catch (e: Error) {
   const err = e as BusinessError;
   console.error(`setAuthToken exception: code is ${err.code}, message is ${err.message}`);
 }
@@ -5342,18 +6657,22 @@ setAuthTokenVisibility(
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 12300107 | AuthType not found. |
-| 12300003 | Account not found. |
-| 12400005 | The size of authorization list reaches the upper limit. |
-| 12300002 | Invalid name, authType or bundleName. |
-| 12300001 | System service exception. |
-| 12400001 | Application not found.<br>**适用版本：** 9 - 13 |
+| [12300107](../../apis-basic-services-kit/errorcode-account.md#12300107-认证类型不存在) | AuthType not found. |
+| [12300003](../../apis-basic-services-kit/errorcode-account.md#12300003-账号不存在) | Account not found. |
+| [12400005](../../apis-basic-services-kit/errorcode-account.md#12400005-授权列表已达上限) | The size of authorization list reaches the upper limit. |
+| [12300002](../../apis-basic-services-kit/errorcode-account.md#12300002-无效参数) | Invalid name, authType or bundleName. |
+| [12300001](../../apis-basic-services-kit/errorcode-account.md#12300001-系统服务异常) | System service exception. |
+| [12400001](../../apis-basic-services-kit/errorcode-account.md#12400001-应用不存在) | Application not found.<br>**适用版本：** 9 - 13 |
 
 ## 示例
 
+ArkTS-Dyn示例：
+
 ```TypeScript
+import { appAccount } from '@kit.BasicServicesKit';
 import { BusinessError } from '@kit.BasicServicesKit';
 
+let appAccountManager: appAccount.AppAccountManager = appAccount.createAppAccountManager();
 try {
   appAccountManager.setAuthTokenVisibility('LiSi', 'getSocialData', 'com.example.accountjsdemo', true,
     (err: BusinessError) => {
@@ -5364,6 +6683,28 @@ try {
       }
     });
 } catch (e) {
+    const err = e as BusinessError;
+    console.error(`setAuthTokenVisibility exception: code is ${err.code}, message is ${err.message}`);
+}
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+import appAccount from '@ohos.account.appAccount';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let appAccountManager: appAccount.AppAccountManager = appAccount.createAppAccountManager();
+try {
+  appAccountManager.setAuthTokenVisibility('LiSi', 'getSocialData', 'com.example.accountjsdemo', true,
+    (err: BusinessError | null) => {
+      if (err) {
+        console.error(`setAuthTokenVisibility failed, code is ${err.code}, message is ${err.message}`);
+      } else {
+        console.info('setAuthTokenVisibility successfully');
+      }
+    });
+} catch (e: Error) {
   const err = e as BusinessError;
   console.error(`setAuthTokenVisibility exception: code is ${err.code}, message is ${err.message}`);
 }
@@ -5404,18 +6745,22 @@ setAuthTokenVisibility(name: string, authType: string, bundleName: string, isVis
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 12300107 | AuthType not found. |
-| 12300003 | Account not found. |
-| 12400005 | The size of authorization list reaches the upper limit. |
-| 12300002 | Invalid name, authType or bundleName. |
-| 12300001 | System service exception. |
-| 12400001 | Application not found.<br>**适用版本：** 9 - 13 |
+| [12300107](../../apis-basic-services-kit/errorcode-account.md#12300107-认证类型不存在) | AuthType not found. |
+| [12300003](../../apis-basic-services-kit/errorcode-account.md#12300003-账号不存在) | Account not found. |
+| [12400005](../../apis-basic-services-kit/errorcode-account.md#12400005-授权列表已达上限) | The size of authorization list reaches the upper limit. |
+| [12300002](../../apis-basic-services-kit/errorcode-account.md#12300002-无效参数) | Invalid name, authType or bundleName. |
+| [12300001](../../apis-basic-services-kit/errorcode-account.md#12300001-系统服务异常) | System service exception. |
+| [12400001](../../apis-basic-services-kit/errorcode-account.md#12400001-应用不存在) | Application not found.<br>**适用版本：** 9 - 13 |
 
 ## 示例
 
+ArkTS-Dyn示例：
+
 ```TypeScript
+import { appAccount } from '@kit.BasicServicesKit';
 import { BusinessError } from '@kit.BasicServicesKit';
 
+let appAccountManager: appAccount.AppAccountManager = appAccount.createAppAccountManager();
 try {
   appAccountManager.setAuthTokenVisibility('LiSi', 'getSocialData', 'com.example.accountjsdemo', true).then(() => {
     console.info('setAuthTokenVisibility successfully');
@@ -5423,6 +6768,28 @@ try {
     console.error(`setAuthTokenVisibility failed, code is ${err.code}, message is ${err.message}`);
   });
 } catch (e) {
+  const err = e as BusinessError;
+  console.error(`setAuthTokenVisibility exception: code is ${err.code}, message is ${err.message}`);
+}
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+import appAccount from '@ohos.account.appAccount';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let appAccountManager: appAccount.AppAccountManager = appAccount.createAppAccountManager();
+try {
+  appAccountManager.setAuthTokenVisibility('LiSi', 'getSocialData', 'com.example.accountjsdemo', true)
+    .then(() => {
+      console.info('setAuthTokenVisibility successfully');
+    })
+    .catch((e: Error) => {
+      const err = e as BusinessError;
+      console.error(`setAuthTokenVisibility failed, code is ${err.code}, message is ${err.message}`);
+    });
+} catch (e: Error) {
   const err = e as BusinessError;
   console.error(`setAuthTokenVisibility exception: code is ${err.code}, message is ${err.message}`);
 }
@@ -5455,19 +6822,23 @@ setAuthenticatorProperties(owner: string, callback: AuthCallback): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameter types. |
-| 12300010 | Account service busy. |
-| 12300002 | Invalid owner. |
-| 12300114 | Authenticator service exception. |
-| 12300001 | System service exception. |
-| 12300113 | Authenticator service not found. |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameter types. |
+| [12300010](../../apis-basic-services-kit/errorcode-account.md#12300010-账号服务忙碌) | Account service busy. |
+| [12300002](../../apis-basic-services-kit/errorcode-account.md#12300002-无效参数) | Invalid owner. |
+| [12300114](../../apis-basic-services-kit/errorcode-account.md#12300114-认证服务异常) | Authenticator service exception. |
+| [12300001](../../apis-basic-services-kit/errorcode-account.md#12300001-系统服务异常) | System service exception. |
+| [12300113](../../apis-basic-services-kit/errorcode-account.md#12300113-认证服务不存在) | Authenticator service not found. |
 
 ## 示例
 
+ArkTS-Dyn示例：
+
 ```TypeScript
+import { appAccount } from '@kit.BasicServicesKit';
 import { Want } from '@kit.AbilityKit';
 import { BusinessError } from '@kit.BasicServicesKit';
 
+let appAccountManager: appAccount.AppAccountManager = appAccount.createAppAccountManager();
 try {
   appAccountManager.setAuthenticatorProperties('com.example.accountjsdemo', {
     onResult: (resultCode: number, result?: appAccount.AuthResult) => {
@@ -5479,6 +6850,30 @@ try {
     }
   });
 } catch (e) {
+  const err = e as BusinessError;
+  console.error(`setAuthenticatorProperties err: code is ${err.code}, message is ${err.message}`);
+}
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+import appAccount from '@ohos.account.appAccount';
+import { Want } from '@kit.AbilityKit';
+
+let appAccountManager: appAccount.AppAccountManager = appAccount.createAppAccountManager();
+const authCallback: appAccount.AuthCallback = {
+  onResult: (resultCode: int, result?: appAccount.AuthResult) => {
+    console.info('setAuthenticatorProperties onResult, resultCode: ' + JSON.stringify(resultCode));
+    console.info('setAuthenticatorProperties onResult, result: ' + JSON.stringify(result));
+  },
+  onRequestRedirected: (request: Want) => {
+    console.info('setAuthenticatorProperties onRequestRedirected, request: ' + JSON.stringify(request));
+  }
+}
+try {
+  appAccountManager.setAuthenticatorProperties('com.example.accountjsdemo', authCallback);
+} catch (e: Error) {
   const err = e as BusinessError;
   console.error(`setAuthenticatorProperties err: code is ${err.code}, message is ${err.message}`);
 }
@@ -5512,21 +6907,25 @@ setAuthenticatorProperties(owner: string, options: SetPropertiesOptions, callbac
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameter types. |
-| 12300010 | Account service busy. |
-| 12300002 | Invalid owner or options. |
-| 12300114 | Authenticator service exception. |
-| 12300001 | System service exception. |
-| 12300113 | Authenticator service not found. |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameter types. |
+| [12300010](../../apis-basic-services-kit/errorcode-account.md#12300010-账号服务忙碌) | Account service busy. |
+| [12300002](../../apis-basic-services-kit/errorcode-account.md#12300002-无效参数) | Invalid owner or options. |
+| [12300114](../../apis-basic-services-kit/errorcode-account.md#12300114-认证服务异常) | Authenticator service exception. |
+| [12300001](../../apis-basic-services-kit/errorcode-account.md#12300001-系统服务异常) | System service exception. |
+| [12300113](../../apis-basic-services-kit/errorcode-account.md#12300113-认证服务不存在) | Authenticator service not found. |
 
 ## 示例
 
+ArkTS-Dyn示例：
+
 ```TypeScript
+import { appAccount } from '@kit.BasicServicesKit';
 import { Want } from '@kit.AbilityKit';
 import { BusinessError } from '@kit.BasicServicesKit';
 
+let appAccountManager: appAccount.AppAccountManager = appAccount.createAppAccountManager();
 let options: appAccount.SetPropertiesOptions = {
-  properties: { prop1: 'value1' }
+  properties: {prop1: 'value1'}
 };
 try {
   appAccountManager.setAuthenticatorProperties('com.example.accountjsdemo', options, {
@@ -5539,6 +6938,34 @@ try {
     }
   });
 } catch (e) {
+  const err = e as BusinessError;
+  console.error(`setAuthenticatorProperties err: code is ${err.code}, message is ${err.message}`);
+}
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+import appAccount from '@ohos.account.appAccount';
+import { Want } from '@kit.AbilityKit';
+import { RecordData } from '@ohos.base';
+
+let appAccountManager: appAccount.AppAccountManager = appAccount.createAppAccountManager();
+let properties: Record<string, RecordData> = { 'prop1': 'value1' }
+let options: appAccount.SetPropertiesOptions = { properties };
+const authCallback: appAccount.AuthCallback = {
+  onResult: (resultCode: int, result?: appAccount.AuthResult) => {
+    console.info('setAuthenticatorProperties onResult, resultCode: ' + JSON.stringify(resultCode));
+    console.info('setAuthenticatorProperties onResult, result: ' + JSON.stringify(result));
+  },
+  onRequestRedirected: (request: Want) => {
+    console.info('setAuthenticatorProperties onRequestRedirected, request: ' + JSON.stringify(request));
+  }
+}
+
+try {
+  appAccountManager.setAuthenticatorProperties('com.example.accountjsdemo', options, authCallback);
+} catch (e: Error) {
   const err = e as BusinessError;
   console.error(`setAuthenticatorProperties err: code is ${err.code}, message is ${err.message}`);
 }
@@ -5574,16 +7001,20 @@ setCredential(name: string, credentialType: string, credential: string,
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameter types. |
-| 12300003 | Account not found. |
-| 12300002 | Invalid name, credentialType or credential. |
-| 12300001 | System service exception. |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameter types. |
+| [12300003](../../apis-basic-services-kit/errorcode-account.md#12300003-账号不存在) | Account not found. |
+| [12300002](../../apis-basic-services-kit/errorcode-account.md#12300002-无效参数) | Invalid name, credentialType or credential. |
+| [12300001](../../apis-basic-services-kit/errorcode-account.md#12300001-系统服务异常) | System service exception. |
 
 ## 示例
 
+ArkTS-Dyn示例：
+
 ```TypeScript
+import { appAccount } from '@kit.BasicServicesKit';
 import { BusinessError } from '@kit.BasicServicesKit';
 
+let appAccountManager: appAccount.AppAccountManager = appAccount.createAppAccountManager();
 try {
   appAccountManager.setCredential('ZhangSan', 'PIN_SIX', 'xxxxxx', (err: BusinessError) => {
     if (err) {
@@ -5593,6 +7024,27 @@ try {
     }
   });
 } catch (e) {
+  const err = e as BusinessError;
+  console.error(`setCredential exception: code is ${err.code}, message is ${err.message}`);
+}
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+import appAccount from '@ohos.account.appAccount';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let appAccountManager: appAccount.AppAccountManager = appAccount.createAppAccountManager();
+try {
+  appAccountManager.setCredential('ZhangSan', 'PIN_SIX', 'xxxxxx', (err: BusinessError | null) => {
+    if (err) {
+      console.error(`setCredential failed, code is ${err.code}, message is ${err.message}`);
+    } else {
+      console.info('setCredential successfully');
+    }
+  });
+} catch (e: Error) {
   const err = e as BusinessError;
   console.error(`setCredential exception: code is ${err.code}, message is ${err.message}`);
 }
@@ -5632,16 +7084,20 @@ setCredential(name: string, credentialType: string, credential: string): Promise
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameter types. |
-| 12300003 | Account not found. |
-| 12300002 | Invalid name, credentialType or credential. |
-| 12300001 | System service exception. |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameter types. |
+| [12300003](../../apis-basic-services-kit/errorcode-account.md#12300003-账号不存在) | Account not found. |
+| [12300002](../../apis-basic-services-kit/errorcode-account.md#12300002-无效参数) | Invalid name, credentialType or credential. |
+| [12300001](../../apis-basic-services-kit/errorcode-account.md#12300001-系统服务异常) | System service exception. |
 
 ## 示例
 
+ArkTS-Dyn示例：
+
 ```TypeScript
+import { appAccount } from '@kit.BasicServicesKit';
 import { BusinessError } from '@kit.BasicServicesKit';
 
+let appAccountManager: appAccount.AppAccountManager = appAccount.createAppAccountManager();
 try {
   appAccountManager.setCredential('ZhangSan', 'PIN_SIX', 'xxxxxx').then(() => {
     console.info('setCredential successfully');
@@ -5649,6 +7105,26 @@ try {
     console.error(`setCredential failed, code is ${err.code}, message is ${err.message}`);
   });
 } catch (e) {
+  const err = e as BusinessError;
+  console.error(`setCredential exception: code is ${err.code}, message is ${err.message}`);
+}
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+import appAccount from '@ohos.account.appAccount';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let appAccountManager: appAccount.AppAccountManager = appAccount.createAppAccountManager();
+try {
+  appAccountManager.setCredential('ZhangSan', 'PIN_SIX', 'xxxxxx').then(() => {
+    console.info('setCredential successfully');
+  }).catch((e: Error) => {
+    const err = e as BusinessError;
+    console.error(`setCredential failed, code is ${err.code}, message is ${err.message}`);
+  });
+} catch (e: Error) {
   const err = e as BusinessError;
   console.error(`setCredential exception: code is ${err.code}, message is ${err.message}`);
 }
@@ -5683,17 +7159,21 @@ setCustomData(name: string, key: string, value: string, callback: AsyncCallback<
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameter types. |
-| 12300003 | Account not found. |
-| 12300002 | Invalid name, key or value. |
-| 12300001 | System service exception. |
-| 12400003 | The number of custom data reaches the upper limit. |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameter types. |
+| [12300003](../../apis-basic-services-kit/errorcode-account.md#12300003-账号不存在) | Account not found. |
+| [12300002](../../apis-basic-services-kit/errorcode-account.md#12300002-无效参数) | Invalid name, key or value. |
+| [12300001](../../apis-basic-services-kit/errorcode-account.md#12300001-系统服务异常) | System service exception. |
+| [12400003](../../apis-basic-services-kit/errorcode-account.md#12400003-自定义数据的数量已达上限) | The number of custom data reaches the upper limit. |
 
 ## 示例
 
+ArkTS-Dyn示例：
+
 ```TypeScript
+import { appAccount } from '@kit.BasicServicesKit';
 import { BusinessError } from '@kit.BasicServicesKit';
 
+let appAccountManager: appAccount.AppAccountManager = appAccount.createAppAccountManager();
 try {
   appAccountManager.setCustomData('ZhangSan', 'age', '12', (err: BusinessError) => {
     if (err) {
@@ -5703,6 +7183,27 @@ try {
     }
   });
 } catch (e) {
+  const err = e as BusinessError;
+  console.error(`setCustomData exception: code is ${err.code}, message is ${err.message}`);
+}
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+import appAccount from '@ohos.account.appAccount';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let appAccountManager: appAccount.AppAccountManager = appAccount.createAppAccountManager();
+try {
+  appAccountManager.setCustomData('ZhangSan', 'age', '12', (err: BusinessError | null) => {
+    if (err) {
+      console.error(`setCustomData failed, code is ${err.code}, message is ${err.message}`);
+    } else {
+      console.info('setCustomData successfully');
+    }
+  });
+} catch (e: Error) {
   const err = e as BusinessError;
   console.error(`setCustomData exception: code is ${err.code}, message is ${err.message}`);
 }
@@ -5742,17 +7243,21 @@ setCustomData(name: string, key: string, value: string): Promise<void>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameter types. |
-| 12300003 | Account not found. |
-| 12300002 | Invalid name, key or value. |
-| 12300001 | System service exception. |
-| 12400003 | The number of custom data reaches the upper limit. |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameter types. |
+| [12300003](../../apis-basic-services-kit/errorcode-account.md#12300003-账号不存在) | Account not found. |
+| [12300002](../../apis-basic-services-kit/errorcode-account.md#12300002-无效参数) | Invalid name, key or value. |
+| [12300001](../../apis-basic-services-kit/errorcode-account.md#12300001-系统服务异常) | System service exception. |
+| [12400003](../../apis-basic-services-kit/errorcode-account.md#12400003-自定义数据的数量已达上限) | The number of custom data reaches the upper limit. |
 
 ## 示例
 
+ArkTS-Dyn示例：
+
 ```TypeScript
+import { appAccount } from '@kit.BasicServicesKit';
 import { BusinessError } from '@kit.BasicServicesKit';
 
+let appAccountManager: appAccount.AppAccountManager = appAccount.createAppAccountManager();
 try {
   appAccountManager.setCustomData('ZhangSan', 'age', '12').then(() => {
     console.info('setCustomData successfully');
@@ -5760,6 +7265,26 @@ try {
     console.error(`setCustomData failed, code is ${err.code}, message is ${err.message}`);
   });
 } catch (e) {
+  const err = e as BusinessError;
+  console.error(`setCustomData exception: code is ${err.code}, message is ${err.message}`);
+}
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+import appAccount from '@ohos.account.appAccount';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let appAccountManager: appAccount.AppAccountManager = appAccount.createAppAccountManager();
+try {
+  appAccountManager.setCustomData('ZhangSan', 'age', '12').then(() => {
+    console.info('setCustomData successfully');
+  }).catch((e: Error) => {
+    const err = e as BusinessError;
+    console.error(`setCustomData failed, code is ${err.code}, message is ${err.message}`);
+  });
+} catch (e: Error) {
   const err = e as BusinessError;
   console.error(`setCustomData exception: code is ${err.code}, message is ${err.message}`);
 }
@@ -5795,17 +7320,21 @@ setDataSyncEnabled(name: string, isEnabled: boolean, callback: AsyncCallback<voi
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameter types. |
-| 12300003 | Account not found. |
-| 201 | Permission denied. |
-| 12300002 | Invalid name. |
-| 12300001 | System service exception. |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameter types. |
+| [12300003](../../apis-basic-services-kit/errorcode-account.md#12300003-账号不存在) | Account not found. |
+| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
+| [12300002](../../apis-basic-services-kit/errorcode-account.md#12300002-无效参数) | Invalid name. |
+| [12300001](../../apis-basic-services-kit/errorcode-account.md#12300001-系统服务异常) | System service exception. |
 
 ## 示例
 
+ArkTS-Dyn示例：
+
 ```TypeScript
+import { appAccount } from '@kit.BasicServicesKit';
 import { BusinessError } from '@kit.BasicServicesKit';
 
+let appAccountManager: appAccount.AppAccountManager = appAccount.createAppAccountManager();
 try {
     appAccountManager.setDataSyncEnabled('ZhangSan', true, (err: BusinessError) => { 
         console.error(`setDataSyncEnabled err: code is ${err.code}, message is ${err.message}`);
@@ -5813,6 +7342,25 @@ try {
 } catch (e) {
     const err = e as BusinessError;
     console.error(`setDataSyncEnabled err: code is ${err.code}, message is ${err.message}`);
+}
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+import appAccount from '@ohos.account.appAccount';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let appAccountManager: appAccount.AppAccountManager = appAccount.createAppAccountManager();
+try {
+  appAccountManager.setDataSyncEnabled('ZhangSan', true, (err: BusinessError | null) => {
+    if (err) {
+      console.error(`setDataSyncEnabled err: code is ${err.code}, message is ${err.message}`);
+    }
+  });
+} catch (e: Error) {
+  const err = e as BusinessError;
+  console.error(`setDataSyncEnabled err: code is ${err.code}, message is ${err.message}`);
 }
 ```
 
@@ -5851,17 +7399,21 @@ setDataSyncEnabled(name: string, isEnabled: boolean): Promise<void>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameter types. |
-| 12300003 | Account not found. |
-| 201 | Permission denied. |
-| 12300002 | Invalid name. |
-| 12300001 | System service exception. |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameter types. |
+| [12300003](../../apis-basic-services-kit/errorcode-account.md#12300003-账号不存在) | Account not found. |
+| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
+| [12300002](../../apis-basic-services-kit/errorcode-account.md#12300002-无效参数) | Invalid name. |
+| [12300001](../../apis-basic-services-kit/errorcode-account.md#12300001-系统服务异常) | System service exception. |
 
 ## 示例
 
+ArkTS-Dyn示例：
+
 ```TypeScript
+import { appAccount } from '@kit.BasicServicesKit';
 import { BusinessError } from '@kit.BasicServicesKit';
 
+let appAccountManager: appAccount.AppAccountManager = appAccount.createAppAccountManager();
 try {
     appAccountManager.setDataSyncEnabled('ZhangSan', true).then(() => { 
         console.info('setDataSyncEnabled Success');
@@ -5871,6 +7423,26 @@ try {
 } catch (e) {
     const err = e as BusinessError;
     console.error(`setDataSyncEnabled err: code is ${err.code}, message is ${err.message}`);
+}
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+import appAccount from '@ohos.account.appAccount';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let appAccountManager: appAccount.AppAccountManager = appAccount.createAppAccountManager();
+try {
+  appAccountManager.setDataSyncEnabled('ZhangSan', true).then(() => {
+    console.info('setDataSyncEnabled Success');
+  }).catch((e: Error) => {
+    const err = e as BusinessError;
+    console.error(`setDataSyncEnabled err: code is ${err.code}, message is ${err.message}`);
+  });
+} catch (e: Error) {
+  const err = e as BusinessError;
+  console.error(`setDataSyncEnabled err: code is ${err.code}, message is ${err.message}`);
 }
 ```
 
@@ -6113,20 +7685,24 @@ verifyCredential(name: string, owner: string, callback: AuthCallback): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameter types. |
-| 12300010 | Account service busy. |
-| 12300003 | Account not found. |
-| 12300002 | Invalid name or owner. |
-| 12300114 | Authenticator service exception. |
-| 12300001 | System service exception. |
-| 12300113 | Authenticator service not found. |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameter types. |
+| [12300010](../../apis-basic-services-kit/errorcode-account.md#12300010-账号服务忙碌) | Account service busy. |
+| [12300003](../../apis-basic-services-kit/errorcode-account.md#12300003-账号不存在) | Account not found. |
+| [12300002](../../apis-basic-services-kit/errorcode-account.md#12300002-无效参数) | Invalid name or owner. |
+| [12300114](../../apis-basic-services-kit/errorcode-account.md#12300114-认证服务异常) | Authenticator service exception. |
+| [12300001](../../apis-basic-services-kit/errorcode-account.md#12300001-系统服务异常) | System service exception. |
+| [12300113](../../apis-basic-services-kit/errorcode-account.md#12300113-认证服务不存在) | Authenticator service not found. |
 
 ## 示例
 
+ArkTS-Dyn示例：
+
 ```TypeScript
+import { appAccount } from '@kit.BasicServicesKit';
 import { Want } from '@kit.AbilityKit';
 import { BusinessError } from '@kit.BasicServicesKit';
 
+let appAccountManager: appAccount.AppAccountManager = appAccount.createAppAccountManager();
 try {
   appAccountManager.verifyCredential('zhangsan', 'com.example.accountjsdemo', {
     onResult: (resultCode: number, result?: appAccount.AuthResult) => {
@@ -6138,6 +7714,30 @@ try {
     }
   });
 } catch (e) {
+  const err = e as BusinessError;
+  console.error(`verifyCredential err: code is ${err.code}, message is ${err.message}`);
+}
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+import appAccount from '@ohos.account.appAccount';
+import { Want } from '@kit.AbilityKit';
+
+let appAccountManager: appAccount.AppAccountManager = appAccount.createAppAccountManager();
+const authCallback: appAccount.AuthCallback = {
+  onResult: (resultCode: int, result?: appAccount.AuthResult) => {
+    console.info('verifyCredential onResult, resultCode: ' + JSON.stringify(resultCode));
+    console.info('verifyCredential onResult, result: ' + JSON.stringify(result));
+  },
+  onRequestRedirected: (request: Want) => {
+    console.info('verifyCredential onRequestRedirected, request: ' + JSON.stringify(request));
+  }
+}
+try {
+  appAccountManager.verifyCredential('zhangsan', 'com.example.accountjsdemo', authCallback);
+} catch (e: Error) {
   const err = e as BusinessError;
   console.error(`verifyCredential err: code is ${err.code}, message is ${err.message}`);
 }
@@ -6172,20 +7772,24 @@ verifyCredential(name: string, owner: string, options: VerifyCredentialOptions, 
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameter types. |
-| 12300010 | Account service busy. |
-| 12300003 | Account not found. |
-| 12300002 | Invalid name, owner or options. |
-| 12300114 | Authenticator service exception. |
-| 12300001 | System service exception. |
-| 12300113 | Authenticator service not found. |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameter types. |
+| [12300010](../../apis-basic-services-kit/errorcode-account.md#12300010-账号服务忙碌) | Account service busy. |
+| [12300003](../../apis-basic-services-kit/errorcode-account.md#12300003-账号不存在) | Account not found. |
+| [12300002](../../apis-basic-services-kit/errorcode-account.md#12300002-无效参数) | Invalid name, owner or options. |
+| [12300114](../../apis-basic-services-kit/errorcode-account.md#12300114-认证服务异常) | Authenticator service exception. |
+| [12300001](../../apis-basic-services-kit/errorcode-account.md#12300001-系统服务异常) | System service exception. |
+| [12300113](../../apis-basic-services-kit/errorcode-account.md#12300113-认证服务不存在) | Authenticator service not found. |
 
 ## 示例
 
+ArkTS-Dyn示例：
+
 ```TypeScript
+import { appAccount } from '@kit.BasicServicesKit';
 import { Want } from '@kit.AbilityKit';
 import { BusinessError } from '@kit.BasicServicesKit';
 
+let appAccountManager: appAccount.AppAccountManager = appAccount.createAppAccountManager();
 let options: appAccount.VerifyCredentialOptions = {
   credentialType: 'pin',
   credential: '123456'
@@ -6201,6 +7805,35 @@ try {
     }
   });
 } catch (e) {
+  const err = e as BusinessError;
+  console.error(`verifyCredential err: code is ${err.code}, message is ${err.message}`);
+}
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+import appAccount from '@ohos.account.appAccount';
+import { Want } from '@kit.AbilityKit';
+
+let appAccountManager: appAccount.AppAccountManager = appAccount.createAppAccountManager();
+let options: appAccount.VerifyCredentialOptions = {
+  credentialType: 'pin',
+  credential: '123456'
+};
+const authCallback: appAccount.AuthCallback = {
+  onResult: (resultCode: int, result?: appAccount.AuthResult) => {
+    console.info('verifyCredential onResult, resultCode: ' + JSON.stringify(resultCode));
+    console.info('verifyCredential onResult, result: ' + JSON.stringify(result));
+  },
+  onRequestRedirected: (request: Want) => {
+    console.info('verifyCredential onRequestRedirected, request: ' + JSON.stringify(request));
+  }
+}
+
+try {
+  appAccountManager.verifyCredential('zhangsan', 'com.example.accountjsdemo', options, authCallback);
+} catch (e: Error) {
   const err = e as BusinessError;
   console.error(`verifyCredential err: code is ${err.code}, message is ${err.message}`);
 }

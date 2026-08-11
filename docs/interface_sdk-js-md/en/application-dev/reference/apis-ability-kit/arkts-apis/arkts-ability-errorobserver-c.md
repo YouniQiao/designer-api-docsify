@@ -1,7 +1,7 @@
 # ErrorObserver
 
-定义异常监听，可以作为  
-[errorManager.on('error')](./../@ohos.app.ability.errorManager:errorManager.on(type: 'error', observer: ErrorObserver))的入参监听当前应用发生的异常。
+The ErrorObserver module defines an observer to listen for application errors. It can be used as an input parameter in   
+[ErrorManager.on](./../@ohos.app.ability.errorManager:errorManager.on(type: 'error', observer: ErrorObserver)) to listen for errors that occur in the current application.
 
 **Since:** 9
 
@@ -17,7 +17,7 @@
 onException?(errObject: Error): void
 ```
 
-应用产生异常，上报js层时的回调。
+Called when the application encounters an exception and reports it to the JavaScript layer.
 
 **Since:** 10
 
@@ -33,7 +33,7 @@ onException?(errObject: Error): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| errObject | Error | Yes | 有关异常事件名字、消息和错误堆栈信息的对象。 |
+| errObject | Error | Yes | Event name, message, and error stack of the exception. |
 
 ## onUnhandledException
 
@@ -41,7 +41,7 @@ onException?(errObject: Error): void
 onUnhandledException(errMsg: string): void
 ```
 
-应用产生未捕获的异常时的回调。
+Called when an uncaught exception occurs in the application.
 
 **Since:** 9
 
@@ -57,5 +57,5 @@ onUnhandledException(errMsg: string): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| errMsg | string | Yes | 有关异常的消息和错误堆栈跟踪。 |
+| errMsg | string | Yes | Message and error stack trace about the exception. |
 

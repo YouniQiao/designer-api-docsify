@@ -1,6 +1,6 @@
 # DecorationStyle
 
-文本装饰线样式对象说明。
+Describes the text decorative line style.
 
 **Since:** 12
 
@@ -16,7 +16,7 @@
 constructor(value: DecorationStyleInterface)
 ```
 
-文本装饰线样式的构造函数。未通过该接口设置时，默认装饰线类型为TextDecorationType.None，颜色为Color.Black，样式为TextDecorationStyle.SOLID。
+A constructor used to create a text decorative line style.
 
 **Since:** 12
 
@@ -34,7 +34,7 @@ constructor(value: DecorationStyleInterface)
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | [DecorationStyleInterface](arkts-arkui-decorationstyleinterface-i.md) | Yes | 文本装饰线设置项。 |
+| value | [DecorationStyleInterface](arkts-arkui-decorationstyleinterface-i.md) | Yes | Text decorative line options.&lt;br&gt;Default value:&lt;br&gt;{&lt;br&gt; type: TextDecorationType.None,&lt;br&gt; color: Color.Black,&lt;br&gt; style: TextDecorationStyle.SOLID &lt;br&gt;} |
 
 ## constructor
 
@@ -42,7 +42,7 @@ constructor(value: DecorationStyleInterface)
 constructor(value: DecorationStyleInterface, options?: DecorationOptions)
 ```
 
-文本装饰线样式的构造函数，包含额外配置选项。未通过该接口设置时，默认装饰线类型为TextDecorationType.None，颜色为Color.Black，样式为TextDecorationStyle.SOLID，粗细缩放为1.0。
+Constructor of a text decoration line style, including additional configuration options.
 
 **Since:** 20
 
@@ -60,8 +60,8 @@ constructor(value: DecorationStyleInterface, options?: DecorationOptions)
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | [DecorationStyleInterface](arkts-arkui-decorationstyleinterface-i.md) | Yes | 文本装饰线设置项。 |
-| options | [DecorationOptions](arkts-arkui-styledstring-decorationoptions-i.md) | No | 文本装饰线额外配置选项。 |
+| value | [DecorationStyleInterface](arkts-arkui-decorationstyleinterface-i.md) | Yes | Text decorative line options.&lt;br&gt;Default value:&lt;br&gt;{&lt;br&gt; type: TextDecorationType.None,&lt;br&gt; color: Color.Black,&lt;br&gt; style: TextDecorationStyle.SOLID, &lt;br&gt; thicknessScale: 1.0 &lt;br&gt;} |
+| options | [DecorationOptions](arkts-arkui-styledstring-decorationoptions-i.md) | No | Additional configuration options for the text decoration line.&lt;br&gt;Default value:&lt;br&gt;{&lt;br&gt; enableMultiType: undefined&lt;br&gt;} |
 
 ## color
 
@@ -69,7 +69,7 @@ constructor(value: DecorationStyleInterface, options?: DecorationOptions)
 readonly color?: ResourceColor
 ```
 
-获取属性字符串的文本装饰线颜色。
+Color of the text decorative line.
 
 **Type:** [ResourceColor](arkts-arkui-resourcecolor-t.md)
 
@@ -91,7 +91,7 @@ readonly color?: ResourceColor
 readonly options?: DecorationOptions
 ```
 
-获取属性字符串的文本装饰线样式的额外配置选项。
+Additional configuration options for the text decoration line style.
 
 **Type:** [DecorationOptions](arkts-arkui-styledstring-decorationoptions-i.md)
 
@@ -113,7 +113,7 @@ readonly options?: DecorationOptions
 readonly style?: TextDecorationStyle
 ```
 
-获取属性字符串的文本装饰线样式。
+Style of the text decorative line.
 
 **Type:** [TextDecorationStyle](arkts-arkui-enums-textdecorationstyle-e.md)
 
@@ -135,7 +135,7 @@ readonly style?: TextDecorationStyle
 readonly thicknessScale?: number
 ```
 
-获取属性字符串的文本装饰线粗细缩放值。
+Scale factor for the thickness of the text decoration line.
 
 **Type:** number
 
@@ -157,7 +157,7 @@ readonly thicknessScale?: number
 readonly type: TextDecorationType
 ```
 
-获取属性字符串的文本装饰线类型。
+Type of the text decorative line.
 
 **Type:** [TextDecorationType](arkts-arkui-textdecorationtype-e.md)
 

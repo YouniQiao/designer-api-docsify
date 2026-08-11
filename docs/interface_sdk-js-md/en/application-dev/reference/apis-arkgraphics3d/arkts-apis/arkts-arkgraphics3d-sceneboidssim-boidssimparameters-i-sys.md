@@ -1,14 +1,15 @@
 # BoidsSimParameters (System API)
 
-群组模拟参数，用于配置每个个体的行为属性。
+Boids simulation parameters used to configure the behavioral attributes of each individual.
 
-> **说明：**
-> 模拟帧是指群组模拟中按固定时间步长执行的更新周期，类似Unity中的FixedUpdate。
-> 默认时间步长为16ms（约62.5FPS），模拟通过累积真实时间并按固定步长消耗来驱动。
-> 下文部分参数的默认值基于该时间步长计算：
-> - maxVelocityMag： 0.01 / 0.016 ≈ 0.625（m/s）。
-> - maxAccelerationMag： maxVelocityMag / 0.016 ≈ 39.06（m/s²）。
-> - maxTurnRate： π × 0.75 × 0.016 ≈ 0.0377（rad/模拟帧）。
+> **NOTE：**
+> 
+> A simulation frame refers to the update cycle executed at a fixed time step in the Boids simulation, similar to FixedUpdate in Unity.
+> The default time step is 16 ms (approximately 62.5 FPS). The simulation is driven by accumulating real time and consuming it in fixed steps.
+> The default values of some parameters below are calculated based on this time step:
+> - maxVelocityMag: 0.01 / 0.016 ≈ 0.625 (m/s).
+> - maxAccelerationMag: maxVelocityMag / 0.016 ≈ 39.06 (m/s²).
+> - maxTurnRate: π × 0.75 × 0.016 ≈ 0.0377 (rad/simulation frame).
 
 **Since:** 26.0.0
 
@@ -26,7 +27,7 @@
 alignmentDistance?: double
 ```
 
-对齐规则的感知半径。此距离范围内的boid会对齐航向。取值范围：[0, +∞)。默认值：0.0
+Perception radius of the alignment rule. Unit is m.Neighboring individuals within this distance (inclusive) contribute to the alignment force.Value >= 0.Default value: 0.0.
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：double
 
@@ -48,7 +49,7 @@ alignmentDistance?: double
 alignmentWeight?: double
 ```
 
-boid在alignmentDistance范围内匹配邻近个体平均航向的强度。取值范围：[0, +∞)。默认值：0.0
+Weight of the alignment rule.The intensity with which the individual steers toward the average heading of neighboring individuals within the alignmentDistance.Value >= 0.Default value: 0.0.
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：double
 
@@ -70,7 +71,7 @@ boid在alignmentDistance范围内匹配邻近个体平均航向的强度。取�
 boundaryDistance?: double
 ```
 
-边界斥力生效的距离。取值范围：[0, +∞)。默认值：0.0
+Effective distance of the boundary constraint force. Unit is m.The individual is subject to a repulsive force when its distance to the boundary wall is within this distance.Value >= 0.Default value: 0.0.
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：double
 
@@ -92,7 +93,7 @@ boundaryDistance?: double
 boundaryMaxPos?: Vec3
 ```
 
-约束boid运动的轴对齐包围盒最大角点. 默认值：(0, 0, 0).
+Maximum corner of the axis-aligned bounding box that constrains the individual's movement range.Each component unit is m.Default value: (0, 0, 0).
 
 **Type:** [Vec3](arkts-arkgraphics3d-scenetypes-vec3-i.md)
 
@@ -114,7 +115,7 @@ boundaryMaxPos?: Vec3
 boundaryMinPos?: Vec3
 ```
 
-约束boid运动的轴对齐包围盒最小角点。当boundaryMinPos的任何分量大于等于对应boundaryMaxPos分量时，该boid被视为无边界。默认值：(0, 0, 0)。
+Minimum corner of the axis-aligned bounding box that constrains the individual's movement range.Each component unit is m. When any component of boundaryMinPos is greater than or equal to the corresponding component of boundaryMaxPos,the individual is considered to have no boundary constraint.Default value: (0, 0, 0).
 
 **Type:** [Vec3](arkts-arkgraphics3d-scenetypes-vec3-i.md)
 
@@ -136,7 +137,7 @@ boundaryMinPos?: Vec3
 boundaryWeight?: double
 ```
 
-边界约束力权重。个体在boundaryDistance范围内被边界墙推回的强度。取值 >= 0。默认值为0.0。
+Weight of the boundary constraint force.The intensity with which the individual is pushed back by the boundary wall within the boundaryDistance.Value >= 0.Default value: 0.0.
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：double
 
@@ -158,7 +159,7 @@ boundaryWeight?: double
 cohesionDistance?: double
 ```
 
-凝聚规则的感知半径。此距离范围内的boid会相互聚集。取值范围：[0, +∞)。默认值：0.0
+Perception radius of the cohesion rule. Unit is m.Neighboring individuals within this distance (inclusive) contribute to the cohesion force.Value >= 0.Default value: 0.0.
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：double
 
@@ -180,7 +181,7 @@ cohesionDistance?: double
 cohesionWeight?: double
 ```
 
-boid在cohesionDistance范围内朝向邻近个体平均位置的强度。取值范围：[0, +∞)。默认值：0.0
+Weight of the cohesion rule.The intensity with which the individual is attracted toward the average position of neighboring individuals within the cohesionDistance.Value >= 0.Default value: 0.0.
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：double
 
@@ -202,7 +203,7 @@ boid在cohesionDistance范围内朝向邻近个体平均位置的强度。取值
 gravityWeight?: double
 ```
 
-引力场对该boid的吸引强度。取值范围：[0, +∞)。默认值：0.0
+Attraction intensity of the attraction field on this individual.Value >= 0.Default value: 0.0.
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：double
 
@@ -224,7 +225,7 @@ gravityWeight?: double
 initialPosition?: Vec3
 ```
 
-每个个体的初始位置，各分量单位为m。未设置时保留当前实体位置。默认值为(NaN, NaN, NaN)。
+Initial position of each individual. Each component unit is m.If not set, the current entity position is retained.Default value: (NaN, NaN, NaN).
 
 **Type:** [Vec3](arkts-arkgraphics3d-scenetypes-vec3-i.md)
 
@@ -246,7 +247,7 @@ initialPosition?: Vec3
 initialRotation?: Quaternion
 ```
 
-boid的初始旋转. 未设置时，使用实体的当前变换旋转.默认值：(NaN, NaN, NaN, NaN).
+Quaternion of the initial rotation direction of each individual.If not set, the quaternion of the current entity rotation direction is retained.Default value: (NaN, NaN, NaN, NaN).
 
 **Type:** [Quaternion](arkts-arkgraphics3d-scenetypes-quaternion-i.md)
 
@@ -268,7 +269,7 @@ boid的初始旋转. 未设置时，使用实体的当前变换旋转.默认值�
 initialVelocity?: Vec3
 ```
 
-每个个体的初始速度向量，各分量单位为m/s。默认值为(0, 0, 0)。
+Initial velocity vector of each individual. Each component unit is m/s.Default value: (0, 0, 0).
 
 **Type:** [Vec3](arkts-arkgraphics3d-scenetypes-vec3-i.md)
 
@@ -290,7 +291,7 @@ initialVelocity?: Vec3
 maxAccelerationMag?: double
 ```
 
-个体每模拟帧可达到的最大加速度，单位为m/s²。取值 >= 0。默认值约为39.06。
+Maximum acceleration that the individual can reach per simulation frame. Unit is m/s².Value >= 0.Default value is approximately 39.06.
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：double
 
@@ -312,7 +313,7 @@ maxAccelerationMag?: double
 maxTurnRate?: Vec3
 ```
 
-每模拟帧每轴最大转向速率，各分量单位为rad/模拟帧。每个分量取值 >= 0。默认值各分量约为0.0377。
+Maximum turn rate per axis per simulation frame. Each component unit is rad/simulation frame.Each component value >= 0.Default value for each component is approximately 0.0377.
 
 **Type:** [Vec3](arkts-arkgraphics3d-scenetypes-vec3-i.md)
 
@@ -334,7 +335,7 @@ maxTurnRate?: Vec3
 maxVelocityMag?: double
 ```
 
-个体每模拟帧可达到的最大速度，单位为m/s。取值 >= 0。默认值约为0.625。
+Maximum velocity that the individual can reach per simulation frame. Unit is m/s.Value >= 0.Default value is approximately 0.625.
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：double
 
@@ -356,7 +357,7 @@ maxVelocityMag?: double
 repulsionWeight?: double
 ```
 
-斥力场对该boid的排斥强度。取值范围：[0, +∞)。默认值：0.0
+Repulsion intensity of the repulsion field on this individual.Value >= 0.Default value: 0.0.
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：double
 
@@ -378,7 +379,7 @@ repulsionWeight?: double
 separationDistance?: double
 ```
 
-分离规则的感知半径，单位为m。仅严格在该距离内的邻近个体对分离力有贡献（边界处力为0）。取值 >= 0。默认值为0.0。
+Perception radius of the separation rule. Unit is m.Only neighboring individuals strictly within this distance contribute to the separation force (boundary force is 0).Value >= 0.Default value: 0.0.
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：double
 
@@ -400,7 +401,7 @@ separationDistance?: double
 separationWeight?: double
 ```
 
-分离规则权重。个体在separationDistance范围内受邻近个体排斥的强度。取值 >= 0。默认值为0.0。
+Weight of the separation rule.The intensity with which the individual is repelled by neighboring individuals within the separationDistance.Value >= 0.Default value: 0.0.
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：double
 

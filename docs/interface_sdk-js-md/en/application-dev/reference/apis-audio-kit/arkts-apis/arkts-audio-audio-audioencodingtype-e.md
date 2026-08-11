@@ -1,6 +1,6 @@
 # AudioEncodingType
 
-表示音频编码类型的枚举。
+Enumerates the audio encoding types.
 
 **Since:** 8
 
@@ -16,7 +16,7 @@
 ENCODING_TYPE_INVALID = -1
 ```
 
-无效。
+Invalid.
 
 **Since:** 8
 
@@ -34,7 +34,7 @@ ENCODING_TYPE_INVALID = -1
 ENCODING_TYPE_RAW = 0
 ```
 
-PCM编码。
+PCM encoding.
 
 **Since:** 8
 

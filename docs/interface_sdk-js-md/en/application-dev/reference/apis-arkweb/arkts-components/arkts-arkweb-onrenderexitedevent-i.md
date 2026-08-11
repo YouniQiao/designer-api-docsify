@@ -1,6 +1,6 @@
 # OnRenderExitedEvent
 
-Defines the triggered when the render process exits.
+Represents the callback invoked when the rendering process exits.
 
 **Since:** 12
 
@@ -16,7 +16,7 @@ Defines the triggered when the render process exits.
 renderExitReason: RenderExitReason
 ```
 
-The specific reason why the rendering process exits abnormally.
+Cause for the abnormal exit of the rendering process.
 
 **Type:** [RenderExitReason](../arkts-apis/arkts-arkweb-web-renderexitreason-e.md)
 

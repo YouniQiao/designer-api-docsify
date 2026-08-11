@@ -1,7 +1,6 @@
 # PictureDrawableDescriptor
 
-支持通过传入Picture对象创建PictureDrawableDescriptor对象。继承自  
-[DrawableDescriptor](arkts-arkui-arkui-drawabledescriptor-drawabledescriptorloadedresult-i.md)。
+Use the PictureDrawableDescriptor class to get the resource of picture or resource descriptor information.
 
 **Inheritance/Implementation:** PictureDrawableDescriptor extends [DrawableDescriptor](arkts-arkui-arkui-drawabledescriptor-drawabledescriptor-c.md)
 
@@ -25,7 +24,7 @@ import { DrawableDescriptor, AnimatedDrawableDescriptor, AnimationStopMode, Anim
 constructor(src: image.Picture)
 ```
 
-PictureDrawableDescriptor的构造函数。
+Creates a new PictureDrawableDescriptor.
 
 **Since:** 26.0.0
 
@@ -41,7 +40,7 @@ PictureDrawableDescriptor的构造函数。
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| src | image.Picture | Yes | 用于创建PictureDrawableDescriptor的Picture对象。 |
+| src | image.Picture | Yes | Indicates the resource to create PictureDrawableDescriptor. |
 
 ## setHdrComposition
 
@@ -49,7 +48,7 @@ PictureDrawableDescriptor的构造函数。
 setHdrComposition(config: HdrCompositionConfig): void
 ```
 
-设置HDR合成配置。
+Set HDR composition config.
 
 **Since:** 26.0.0
 
@@ -65,5 +64,5 @@ setHdrComposition(config: HdrCompositionConfig): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| config | [HdrCompositionConfig](arkts-arkui-arkui-drawabledescriptor-hdrcompositionconfig-i.md) | Yes | HDR合成配置。 |
+| config | [HdrCompositionConfig](arkts-arkui-arkui-drawabledescriptor-hdrcompositionconfig-i.md) | Yes | Indicates the HDR composition config. |
 

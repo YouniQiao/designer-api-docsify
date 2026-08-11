@@ -6,7 +6,7 @@
 function registerMissionListener(listener: MissionListener): number
 ```
 
-注册系统任务状态监听器。
+Registers a listener to observe the mission status.
 
 **Since:** 8
 
@@ -28,13 +28,13 @@ function registerMissionListener(listener: MissionListener): number
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| listener | [MissionListener](arkts-ability-missionlistener-i-sys.md) | Yes | 系统任务监听器。 |
+| listener | [MissionListener](arkts-ability-missionlistener-i-sys.md) | Yes | Mission status listener to register. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| number | 监听器的index值，由系统创建，在注册系统任务状态监听器时分配，和监听器一一对应 。 |
+| number | Index of the mission status listener, which is created by the system and allocated when the listener is registered. |
 
 ## Examples
 

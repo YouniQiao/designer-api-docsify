@@ -1,5 +1,7 @@
 # StorageStats (System API)
 
+Get the user storage statistics.
+
 **Since:** 9
 
 **ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
@@ -22,7 +24,7 @@ import { storageStatistics } from 'kits/@kit.CoreFileKit';
 app: long
 ```
 
-应用数据大小，单位为Byte。
+The size of application.&lt;br&gt;Unit: Byte.
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：long
 
@@ -42,7 +44,7 @@ app: long
 audio: long
 ```
 
-音频数据大小，单位为Byte。
+The size of audio file.&lt;br&gt;Unit: Byte.
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：long
 
@@ -62,7 +64,7 @@ audio: long
 file: long
 ```
 
-文件数据大小，单位为Byte。
+The size of other file.&lt;br&gt;Unit: Byte.
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：long
 
@@ -82,7 +84,7 @@ file: long
 image: long
 ```
 
-图像数据大小，单位为Byte。
+The size of image file.&lt;br&gt;Unit: Byte.
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：long
 
@@ -102,7 +104,7 @@ image: long
 total: long
 ```
 
-内置存储总空间大小，单位为Byte。
+The total size of device.&lt;br&gt;Unit: Byte.
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：long
 
@@ -122,7 +124,7 @@ total: long
 video: long
 ```
 
-视频数据大小，单位为Byte。
+The size of video file.&lt;br&gt;Unit: Byte.
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：long
 

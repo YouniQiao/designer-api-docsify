@@ -1,6 +1,6 @@
 # AVPlaybackState
 
-媒体播放状态的相关属性。
+Used to indicate the playback state of the current media.If the playback state of the media changes, it needs to be updated synchronously
 
 **Since:** 10
 
@@ -22,7 +22,7 @@ import { avSession } from 'kits/@kit.AVSessionKit';
 activeItemId?: int
 ```
 
-正在播放的媒体ID。
+Current active item id
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
@@ -42,7 +42,7 @@ activeItemId?: int
 bufferedTime?: long
 ```
 
-缓冲时间。
+The current buffered time, the maximum playable position, described by milliseconds.
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：long
 
@@ -62,7 +62,7 @@ bufferedTime?: long
 duration?: int
 ```
 
-当前媒体资源的时长，单位为毫秒（ms）。
+The duration of this media asset, described by milliseconds.
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
@@ -80,7 +80,7 @@ duration?: int
 extras?: {[key: string]: Object}
 ```
 
-自定义媒体数据。
+Current custom media packets
 
 **Type:** {[key: string]: Object}
 
@@ -100,7 +100,7 @@ extras?: {[key: string]: Object}
 isFavorite?: boolean
 ```
 
-表示是否收藏。true表示收藏，false表示不收藏。
+Current Favorite Status
 
 **Type:** boolean
 
@@ -120,7 +120,7 @@ isFavorite?: boolean
 loopMode?: LoopMode
 ```
 
-循环模式。
+Current playback loop mode. See {@link LoopMode}
 
 **Type:** [LoopMode](arkts-avsession-avsession-loopmode-e.md)
 
@@ -140,7 +140,7 @@ loopMode?: LoopMode
 maxVolume?: int
 ```
 
-最大音量。
+maximum volume
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
@@ -160,7 +160,7 @@ maxVolume?: int
 muted?: boolean
 ```
 
-当前是否是静音状态。true表示是，false表示不是。
+Current muted status
 
 **Type:** boolean
 
@@ -180,7 +180,7 @@ muted?: boolean
 position?: PlaybackPosition
 ```
 
-播放位置。
+Current playback position of this media. See {@link PlaybackPosition}
 
 **Type:** [PlaybackPosition](arkts-avsession-avsession-playbackposition-i.md)
 
@@ -200,7 +200,7 @@ position?: PlaybackPosition
 speed?: double
 ```
 
-播放倍速。
+Current playback speed
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：double
 
@@ -220,7 +220,7 @@ speed?: double
 state?: PlaybackState
 ```
 
-播放状态。
+Current playback state. See {@link PlaybackState}
 
 **Type:** [PlaybackState](arkts-avsession-avsession-playbackstate-e.md)
 
@@ -240,7 +240,7 @@ state?: PlaybackState
 videoHeight?: int
 ```
 
-媒体资源的视频高度，单位为像素（px）。
+The video height of this media asset.
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
@@ -260,7 +260,7 @@ videoHeight?: int
 videoWidth?: int
 ```
 
-媒体资源的视频宽度，单位为像素（px）。
+The video width of this media asset.
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
@@ -280,7 +280,7 @@ videoWidth?: int
 volume?: int
 ```
 
-正在播放的媒体音量。
+Current player volume
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 

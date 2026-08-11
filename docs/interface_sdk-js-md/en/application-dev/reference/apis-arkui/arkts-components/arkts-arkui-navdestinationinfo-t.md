@@ -4,7 +4,7 @@
 declare type NavDestinationInfo = import('../api/@ohos.arkui.observer').default.NavDestinationInfo
 ```
 
-NavDestinationInfo实例对象。
+The navigation destination information.
 
 **Since:** 11
 

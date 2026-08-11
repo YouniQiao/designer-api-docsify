@@ -1,6 +1,6 @@
 # ChainAnimationOptions (System API)
 
-定义链式联动动效选项。
+Defines the chain animation options.
 
 **Since:** 23
 
@@ -18,7 +18,7 @@
 conductivity?: double
 ```
 
-链式动效的传导系数。
+Conductivity of chain animation.
 
 **Type:** double
 
@@ -42,7 +42,7 @@ conductivity?: double
 damping?: double
 ```
 
-链式弹簧的阻尼。
+Damping of chain spring.
 
 **Type:** double
 
@@ -66,7 +66,7 @@ damping?: double
 edgeEffect?: ChainEdgeEffect
 ```
 
-链式动效的边缘效果。
+Edge effect of chain animation.
 
 **Type:** [ChainEdgeEffect](../arkts-components/arkts-arkui-chainedgeeffect-e-sys.md)
 
@@ -90,7 +90,7 @@ edgeEffect?: ChainEdgeEffect
 intensity?: double
 ```
 
-链式动效的强度。
+Intensity of chain animation.
 
 **Type:** double
 
@@ -114,7 +114,7 @@ intensity?: double
 maxSpace: Length
 ```
 
-链式动效的最大间距。
+Maximum space for chain animation.
 
 **Type:** [Length](arkts-arkui-length-t.md)
 
@@ -136,7 +136,7 @@ maxSpace: Length
 minSpace: Length
 ```
 
-链式动效的最小间距。
+Minimum space for chain animation.
 
 **Type:** [Length](arkts-arkui-length-t.md)
 
@@ -158,7 +158,7 @@ minSpace: Length
 stiffness?: double
 ```
 
-链式弹簧的刚度。
+Stiffness of chain spring.
 
 **Type:** double
 

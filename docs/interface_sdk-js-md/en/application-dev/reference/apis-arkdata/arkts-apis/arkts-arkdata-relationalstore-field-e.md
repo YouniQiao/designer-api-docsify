@@ -1,6 +1,6 @@
 # Field
 
-用于谓词查询条件的特殊字段。请使用枚举名称而非枚举值。
+Enumerates predicates used as query conditions. Use the enum name rather than the enum value.
 
 **Since:** 11
 
@@ -16,7 +16,7 @@
 CURSOR_FIELD = '#_cursor'
 ```
 
-用于cursor查找的字段名。
+Field name used for cursor-based search.
 
 **Since:** 11
 
@@ -32,7 +32,7 @@ CURSOR_FIELD = '#_cursor'
 ORIGIN_FIELD = '#_origin'
 ```
 
-用于cursor查找时指定数据来源的字段名。
+Field name used to specify the data source in cursor-based search.
 
 **Since:** 11
 
@@ -48,9 +48,9 @@ ORIGIN_FIELD = '#_origin'
 DELETED_FLAG_FIELD = '#_deleted_flag'
 ```
 
-用于cursor查找的结果集返回时填充的字段，表示云端删除的数据同步到本地后数据是否清理。
+Whether the dirty data (data deleted from the cloud) is cleared from the local device. It fills in the result set returned upon the cursor-based search.
 
-返回的结果集中，该字段对应的value为false表示数据未清理，true表示数据已清理。
+The value **true** means the dirty data is cleared; the value **false** means the opposite.
 
 **Since:** 11
 
@@ -66,7 +66,7 @@ DELETED_FLAG_FIELD = '#_deleted_flag'
 DATA_STATUS_FIELD = '#_data_status'
 ```
 
-用于cursor查找的结果集返回时填充的字段，返回的结果集中，该字段对应的0表示正常数据，1表示退出账号保留数据，2表示云侧同步删除，3表示退出账户删除数据。
+Data status in the cursor-based search result set. The value **0** indicates normal data status; **1** indicates that data is retained after the account is logged out; **2** indicates that data is deleted from the cloud; **3**indicates that data is deleted after the account is logged out.
 
 **Since:** 12
 
@@ -82,7 +82,7 @@ DATA_STATUS_FIELD = '#_data_status'
 OWNER_FIELD = '#_cloud_owner'
 ```
 
-用于共享表中查找owner时，返回的结果集中填充的字段，表示当前共享记录的共享发起者。
+Party who shares the data. It fills in the result set returned when the owner of the shared data is searched.
 
 **Since:** 11
 
@@ -98,7 +98,7 @@ OWNER_FIELD = '#_cloud_owner'
 PRIVILEGE_FIELD = '#_cloud_privilege'
 ```
 
-用于共享表中查找共享数据权限时，返回的结果集中填充的字段，表示当前共享记录的允许的操作权限。
+Operation permission on the shared data. It fills in the result set returned when the permission on the shared data is searched.
 
 **Since:** 11
 
@@ -114,7 +114,7 @@ PRIVILEGE_FIELD = '#_cloud_privilege'
 SHARING_RESOURCE_FIELD = '#_sharing_resource_field'
 ```
 
-用于数据共享查找共享数据的共享资源时，返回的结果集中填充的字段，表示共享数据的共享资源标识。
+Resource shared. It fills in the result set returned when the shared resource is searched.
 
 **Since:** 11
 

@@ -12,7 +12,7 @@ import { wallpaper } from 'kits/@kit.BasicServicesKit';
 function isChangePermitted(callback: AsyncCallback<boolean>): void
 ```
 
-是否允许应用改变当前用户的壁纸。
+Checks whether to allow the application to change the wallpaper for the current user.Returns true if the application is allowed to set a wallpaper for the current user. returns false otherwise.
 
 **Since:** 7
 
@@ -28,7 +28,7 @@ function isChangePermitted(callback: AsyncCallback<boolean>): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;boolean&gt; | Yes |  |
+| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;boolean&gt; | Yes | the callback of isChangePermitted. |
 
 ## Examples
 
@@ -51,7 +51,7 @@ wallpaper.isChangePermitted((error: BusinessError, data: Boolean) => {
 function isChangePermitted(): Promise<boolean>
 ```
 
-是否允许应用改变当前用户的壁纸。
+Checks whether to allow the application to change the wallpaper for the current user.Returns true if the application is allowed to set a wallpaper for the current user. returns false otherwise.
 
 **Since:** 7
 
@@ -67,7 +67,7 @@ function isChangePermitted(): Promise<boolean>
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;boolean&gt; | 返回是否允许应用改变当前用户的壁纸。如果允许返回true，否则返回false。 |
+| Promise&lt;boolean&gt; | the promise returned by the function. |
 
 ## Examples
 

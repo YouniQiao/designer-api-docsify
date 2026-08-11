@@ -4,7 +4,7 @@
 type ToneAttrsArray = Array<ToneAttrs>
 ```
 
-铃音属性数组。
+Array of tone attributes.
 
 **Since:** 12
 

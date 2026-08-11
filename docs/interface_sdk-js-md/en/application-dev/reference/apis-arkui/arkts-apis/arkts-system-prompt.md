@@ -1,4 +1,4 @@
-# @system.prompt(弹窗)
+# @system.prompt
 
 ## Modules to Import
 
@@ -12,15 +12,15 @@ import { ShowActionMenuOptions, Button, ShowToastOptions, ShowDialogOptions, Sho
 
 | Name | Description |
 | --- | --- |
-| [Prompt](arkts-arkui-system-prompt-prompt-c.md) | 创建并显示文本提示框、对话框和操作菜单。 |
+| [Prompt](arkts-arkui-system-prompt-prompt-c.md) | Defines the prompt interface. |
 
 ### Interfaces
 
 | Name | Description |
 | --- | --- |
-| [Button](arkts-arkui-system-prompt-button-i.md) | 定义按钮的提示信息。 |
-| [ShowActionMenuOptions](arkts-arkui-system-prompt-showactionmenuoptions-i.md) | 定义ShowActionMenu的选项。 |
-| [ShowDialogOptions](arkts-arkui-system-prompt-showdialogoptions-i.md) | 定义显示对话框的选项。 |
-| [ShowDialogSuccessResponse](arkts-arkui-system-prompt-showdialogsuccessresponse-i.md) | 定义ShowDialog的响应。 |
-| [ShowToastOptions](arkts-arkui-system-prompt-showtoastoptions-i.md) | 定义ShowToast的选项。 |
+| [Button](arkts-arkui-system-prompt-button-i.md) | Defines the prompt info of button. |
+| [ShowActionMenuOptions](arkts-arkui-system-prompt-showactionmenuoptions-i.md) | Defines the option of ShowActionMenu. |
+| [ShowDialogOptions](arkts-arkui-system-prompt-showdialogoptions-i.md) | Defines the option of show dialog. |
+| [ShowDialogSuccessResponse](arkts-arkui-system-prompt-showdialogsuccessresponse-i.md) | Defines the response of ShowDialog. |
+| [ShowToastOptions](arkts-arkui-system-prompt-showtoastoptions-i.md) | Defines the options of ShowToast. |
 

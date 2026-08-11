@@ -1,6 +1,6 @@
 # SlideEffect
 
-页面转场时的滑入滑出效果。
+Declare the sliding effect of transition.
 
 **Since:** 23
 
@@ -16,7 +16,7 @@
 Left
 ```
 
-设置到入场时表示从左边滑入，出场时表示滑出到左边。
+Swipe left.
 
 **Since:** 23
 
@@ -34,7 +34,7 @@ Left
 Right
 ```
 
-设置到入场时表示从右边滑入，出场时表示滑出到右边。
+Swipe right.
 
 **Since:** 23
 
@@ -52,7 +52,7 @@ Right
 Top
 ```
 
-设置到入场时表示从上边滑入，出场时表示滑出到上边。
+Swipe top.
 
 **Since:** 23
 
@@ -70,7 +70,7 @@ Top
 Bottom
 ```
 
-设置到入场时表示从下边滑入，出场时表示滑出到下边。
+Swipe bottom.
 
 **Since:** 23
 
@@ -88,7 +88,7 @@ Bottom
 START = 5
 ```
 
-设置LTR入场时表示从左边滑入，出场时表示滑出到左边。RTL入场时表示从右边滑入，出场时表示滑出到右边。
+Swipe start.
 
 **Since:** 23
 
@@ -106,7 +106,7 @@ START = 5
 END = 6
 ```
 
-设置LTR入场时表示从右边滑入，出场时表示滑出到右边。RTL入场时表示从左边滑入，出场时表示滑出到左边。
+Swipe end.
 
 **Since:** 23
 

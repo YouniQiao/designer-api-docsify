@@ -1,6 +1,6 @@
 # ReadyState
 
-播放器的缓存状态。
+Enumerates the cache states of the player.
 
 **Since:** 23
 
@@ -16,7 +16,7 @@
 HAVE_NOTHING = 0
 ```
 
-没有缓存。
+There is no data cached.
 
 **Since:** 23
 
@@ -32,7 +32,7 @@ HAVE_NOTHING = 0
 HAVE_METADATA = 1
 ```
 
-只缓存了媒体元数据。
+Only media metadata is cached.
 
 **Since:** 23
 
@@ -48,7 +48,7 @@ HAVE_METADATA = 1
 HAVE_CURRENT_DATA = 2
 ```
 
-只缓存到当前的播放进度。
+Data up to the current playback position is cached.
 
 **Since:** 23
 
@@ -64,7 +64,7 @@ HAVE_CURRENT_DATA = 2
 HAVE_FUTURE_DATA = 3
 ```
 
-缓存时长超过了当前的播放进度, 但是仍有可能导致卡顿。
+Data beyond the current playback position is cached, but there might still be stutters during playback.
 
 **Since:** 23
 
@@ -80,7 +80,7 @@ HAVE_FUTURE_DATA = 3
 HAVE_ENOUGH_DATA = 4
 ```
 
-缓存了足够的数据，保证播放流畅。
+Sufficient data has been cached to ensure smooth playback.
 
 **Since:** 23
 

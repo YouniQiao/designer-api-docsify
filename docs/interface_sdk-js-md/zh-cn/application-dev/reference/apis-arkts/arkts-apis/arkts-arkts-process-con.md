@@ -24,7 +24,7 @@ const pid: number
 const tid: number
 ```
 
-线程的 ID（TID）。
+当前线程的tid。
 
 **起始版本：** 8
 
@@ -42,7 +42,7 @@ const tid: number
 const uid: number
 ```
 
-进程的用户标识（UID）。
+进程的用户标识。
 
 **起始版本：** 7
 

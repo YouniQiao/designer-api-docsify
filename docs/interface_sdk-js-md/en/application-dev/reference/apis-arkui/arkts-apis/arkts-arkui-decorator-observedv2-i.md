@@ -1,5 +1,7 @@
 # ObservedV2
 
+Defining ObservedV2 annotation ObservedV2 is used to decorate with class.
+
 **Since:** 23
 
 **ArkTS mode:** ArkTS-Sta only, since version 23.

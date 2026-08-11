@@ -1,11 +1,5 @@
 # getValidReminders
 
-## 导入模块
-
-```TypeScript
-import { reminderAgentManager } from 'kits/@kit.BackgroundTasksKit';
-```
-
 ## getValidReminders
 
 ```TypeScript
@@ -32,10 +26,12 @@ function getValidReminders(callback: AsyncCallback<Array<ReminderRequest>>): voi
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 401 | If the input parameter is not valid parameter. |
-| 1700004 | The bundle name does not exist. |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | If the input parameter is not valid parameter. |
+| [1700004](../../apis-backgroundtasks-kit/errorcode-reminderAgentManager.md#1700004-包名不存在) | The bundle name does not exist. |
 
 ## 示例
+
+ArkTS-Dyn示例：
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -45,29 +41,26 @@ reminderAgentManager.getValidReminders((err: BusinessError, reminders: Array<rem
   if (err.code) {
     console.error("callback err code:" + err.code + " message:" + err.message);
   } else {
-    console.info("callback, getValidReminders length = " + reminders.length);
-    for (let i = 0; i < reminders.length; i++) {
-      console.info("getValidReminders = " + reminders[i]);
-      console.info("getValidReminders, reminderType = " + reminders[i].reminderType);
-      const actionButton = reminders[i].actionButton || [];
-      for (let j = 0; j < actionButton.length; j++) {
-        console.info("getValidReminders, actionButton.title = " + actionButton[j]?.title);
-        console.info("getValidReminders, actionButton.type = " + actionButton[j]?.type);
-      }
-      console.info("getValidReminders, wantAgent.pkgName = " + reminders[i].wantAgent?.pkgName);
-      console.info("getValidReminders, wantAgent.abilityName = " + reminders[i].wantAgent?.abilityName);
-      console.info("getValidReminders, ringDuration = " + reminders[i].ringDuration);
-      console.info("getValidReminders, snoozeTimes = " + reminders[i].snoozeTimes);
-      console.info("getValidReminders, timeInterval = " + reminders[i].timeInterval);
-      console.info("getValidReminders, title = " + reminders[i].title);
-      console.info("getValidReminders, content = " + reminders[i].content);
-      console.info("getValidReminders, expiredContent = " + reminders[i].expiredContent);
-      console.info("getValidReminders, snoozeContent = " + reminders[i].snoozeContent);
-      console.info("getValidReminders, notificationId = " + reminders[i].notificationId);
-      console.info("getValidReminders, slotType = " + reminders[i].slotType);
-    }
+    console.info(`Succeeded in getting reminder, info is ${JSON.stringify(reminders)}.`);
   }
 });
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+import { reminderAgentManager } from '@kit.BackgroundTasksKit';
+
+let getCallback = (err: BusinessError | null, reminders: Array<reminderAgentManager.ReminderRequest> | undefined | null) => {
+  if (err) {
+    console.error(`Failed to get reminder. Code is ${err.code}, message is ${err.message}`);
+  } else {
+    console.info(`Succeeded in getting reminder, info is ${JSON.stringify(reminders)}.`);
+  }
+}
+
+reminderAgentManager.getValidReminders(getCallback);
 ```
 
 
@@ -97,39 +90,33 @@ function getValidReminders(): Promise<Array<ReminderRequest>>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 401 | If the input parameter is not valid parameter. |
-| 1700004 | The bundle name does not exist. |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | If the input parameter is not valid parameter. |
+| [1700004](../../apis-backgroundtasks-kit/errorcode-reminderAgentManager.md#1700004-包名不存在) | The bundle name does not exist. |
 
 ## 示例
+
+ArkTS-Dyn示例：
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
 import { reminderAgentManager } from '@kit.BackgroundTasksKit';
 
 reminderAgentManager.getValidReminders().then((reminders: Array<reminderAgentManager.ReminderRequest>) => {
-  console.info("promise, getValidReminders length = " + reminders.length);
-  for (let i = 0; i < reminders.length; i++) {
-    console.info("getValidReminders = " + reminders[i]);
-    console.info("getValidReminders, reminderType = " + reminders[i].reminderType);
-    const actionButton = reminders[i].actionButton || [];
-    for (let j = 0; j < actionButton.length; j++) {
-      console.info("getValidReminders, actionButton.title = " + actionButton[j]?.title);
-      console.info("getValidReminders, actionButton.type = " + actionButton[j]?.type);
-    }
-    console.info("getValidReminders, wantAgent.pkgName = " + reminders[i].wantAgent?.pkgName);
-    console.info("getValidReminders, wantAgent.abilityName = " + reminders[i].wantAgent?.abilityName);
-    console.info("getValidReminders, ringDuration = " + reminders[i].ringDuration);
-    console.info("getValidReminders, snoozeTimes = " + reminders[i].snoozeTimes);
-    console.info("getValidReminders, timeInterval = " + reminders[i].timeInterval);
-    console.info("getValidReminders, title = " + reminders[i].title);
-    console.info("getValidReminders, content = " + reminders[i].content);
-    console.info("getValidReminders, expiredContent = " + reminders[i].expiredContent);
-    console.info("getValidReminders, snoozeContent = " + reminders[i].snoozeContent);
-    console.info("getValidReminders, notificationId = " + reminders[i].notificationId);
-    console.info("getValidReminders, slotType = " + reminders[i].slotType);
-  }
+  console.info(`Succeeded in getting reminder, info is ${JSON.stringify(reminders)}.`);
 }).catch((err: BusinessError) => {
   console.error("promise err code:" + err.code + " message:" + err.message);
+});
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+import { reminderAgentManager } from '@kit.BackgroundTasksKit';
+
+reminderAgentManager.getValidReminders().then((reminders: Array<reminderAgentManager.ReminderRequest>) => {
+  console.info(`Succeeded in getting reminder, info is ${JSON.stringify(reminders)}.`);
+}).catch((err): void => {
+  console.error(`Failed to get reminder. Code is ${err.code}, message is ${err.message}`);
 });
 ```
 

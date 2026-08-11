@@ -12,15 +12,17 @@ import { update } from 'kits/@kit.BasicServicesKit';
 function getOnlineUpdater(upgradeInfo: UpgradeInfo): Updater
 ```
 
-获取在线升级对象，可用于在线检查新版本、下载升级包、安装升级包等操作。适用于设备厂商的OTA(详见[术语](../../../basic-services/update/update-kit-term.md))升级客户端应用、在线系统升级等场景，帮助用户及时获取系统更新，提升升级效率和用户体验。
+Obtains an **OnlineUpdater** object, which can be used to check for new versions online, download update packages, and install update packages. This API can be used in scenarios such as OTA upgrade (for details, see   
+[Upgrading Service Terms](../../../basic-services/update/update-kit-term.md))of client applications and online system upgrade. This API can help users obtain system updates in a timely manner,improving upgrade efficiency and user experience.
 
-**原理说明**：
+**Overview**
 
-该方法通过系统服务接口获取在线升级对象，该对象提供检查新版本、下载升级包、安装升级包等核心功能。
+This API obtains an **OnlineUpdater** object through the system service interface. The object provides core functions such as checking for new versions, downloading update packages, and installing update packages.
 
-**约束和限制**：
+**Constraints**
 
-- 检查新版本和下载升级包都必须依赖设备厂商部署的升级包管理服务器。
+- The upgrade package management server deployed by the vendor is required for checking for new versions and   
+downloading update packages.
 
 **Since:** 9
 
@@ -36,32 +38,34 @@ function getOnlineUpdater(upgradeInfo: UpgradeInfo): Updater
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| upgradeInfo | [UpgradeInfo](arkts-basicservices-update-upgradeinfo-i-sys.md) | Yes | 升级对象信息（UpgradeInfo），用于标识调用方和升级业务类型。upgradeApp字段为调用方包名，格式为com.xxx.xxx.xxx，长度范围 [1，255]，单位：字符。每段长度范围[1，64]，单位：字符。仅支持字母、数字和点号，每段必须以字母开头，不能包含连续点号或以点号开头结尾，超出范围或格式错误时抛出异常。 |
+| upgradeInfo | [UpgradeInfo](arkts-basicservices-update-upgradeinfo-i-sys.md) | Yes | UpgradeInfo** is the upgrade object information, which is used to identify the caller and upgrade service type. **upgradeApp** is the package name of the caller. The value is a string of 1 to 255 characters in the format **com.***xxx.xxx.xxx*. The length of each segment ranges from 1 to 64 characters. Only letters, digits, and periods (.) are supported. Each segment must start with a letter and cannot contain consecutive periods (.) or start or end with a period (.). If the value is out of range or the format is incorrect, an exception is thrown. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [Updater](arkts-basicservices-update-updater-i-sys.md) | 用于执行在线升级相关操作的工具类对象。 |
+| [Updater](arkts-basicservices-update-updater-i-sys.md) | Utility object used to perform online update operations. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 202 | Permission verification failed. A non-system application calls a system API. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
 
 ## Examples
 
 ```TypeScript
-// Define an UpgradeInfo object.
-  const upgradeInfo: update.UpgradeInfo = {
-    upgradeApp: 'com.ohos.ota.updateclient',  // App package name
-    businessType: {
-      vendor: update.BusinessVendor.PUBLIC, // Vendor type
-      subType: update.BusinessSubType.FIRMWARE // The update type is firmware.
+try {
+      const upgradeInfo: update.UpgradeInfo = {
+        upgradeApp: "com.ohos.ota.updateclient",
+        businessType: {
+          vendor: update.BusinessVendor.PUBLIC,
+          subType: update.BusinessSubType.FIRMWARE
+        }
+      };
+      let updater = update.getOnlineUpdater(upgradeInfo);
+    } catch(error) {
+      console.error(`Fail to get updater error: ${error}`);
     }
-  };  
-  // Obtain an OnlineUpdater object.
-  let onlineUpdater = update.getOnlineUpdater(upgradeInfo);
 ```
 

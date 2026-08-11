@@ -1,6 +1,6 @@
 # ListItemGroupArea
 
-枚举了ListItemGroup各个区域。
+Enumerates the areas of **ListItemGroup**.
 
 **Since:** 12
 
@@ -16,7 +16,7 @@
 NONE = 0
 ```
 
-ListItemGroup内部ListItem区域、header区域以及footer区域以外的区域。
+Area other than the **ListItem**, header, and footer areas in **ListItemGroup**.
 
 **Since:** 12
 
@@ -36,7 +36,7 @@ ListItemGroup内部ListItem区域、header区域以及footer区域以外的区�
 IN_LIST_ITEM_AREA = 1
 ```
 
-ListItemGroup内部ListItem区域。
+**ListItem** area in **ListItemGroup**.
 
 **Since:** 12
 
@@ -56,7 +56,7 @@ ListItemGroup内部ListItem区域。
 IN_HEADER_AREA = 2
 ```
 
-ListItemGroup内部header区域。
+Header area in **ListItemGroup**.
 
 **Since:** 12
 
@@ -76,7 +76,7 @@ ListItemGroup内部header区域。
 IN_FOOTER_AREA = 3
 ```
 
-ListItemGroup内部footer区域。
+Footer area in **ListItemGroup**.
 
 **Since:** 12
 

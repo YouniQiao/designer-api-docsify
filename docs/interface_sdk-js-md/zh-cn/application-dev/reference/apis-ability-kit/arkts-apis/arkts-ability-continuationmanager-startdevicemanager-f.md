@@ -1,11 +1,5 @@
 # startDeviceManager
 
-## 导入模块
-
-```TypeScript
-import { continuationManager } from 'kits/@kit.AbilityKit';
-```
-
 ## startDeviceManager
 
 ```TypeScript
@@ -78,7 +72,7 @@ function startDeviceManager(token: number, options: ContinuationExtraParams, cal
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | token | number | 是 | 注册后的token。 |
-| options | [ContinuationExtraParams](arkts-ability-continuationmanager-continuationextraparams-t.md) | 是 | 过滤可选择设备列表的额外参数。 |
+| options | [ContinuationExtraParams](arkts-ability-continuationextraparams-continuationextraparams-i.md) | 是 | 过滤可选择设备列表的额外参数。 |
 | callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数。当模块选择完成，err为undefined，否则返回错误对象。 |
 
 ## 示例
@@ -129,7 +123,7 @@ function startDeviceManager(token: number, options?: ContinuationExtraParams): P
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | token | number | 是 | 注册后的token。 |
-| options | [ContinuationExtraParams](arkts-ability-continuationmanager-continuationextraparams-t.md) | 否 | 过滤可选择设备列表的额外参数，该参数可缺省。 |
+| options | [ContinuationExtraParams](arkts-ability-continuationextraparams-continuationextraparams-i.md) | 否 | 过滤可选择设备列表的额外参数，该参数可缺省。 |
 
 **返回值：**
 

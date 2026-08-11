@@ -6,6 +6,8 @@
 export declare function borderStyles(all: BorderStyle): NodeEdges<BorderStyle>
 ```
 
+Obtain an object with all edges are set to the same style.
+
 **Since:** 23
 
 **ArkTS mode:** ArkTS-Sta only, since version 23.
@@ -20,11 +22,11 @@ export declare function borderStyles(all: BorderStyle): NodeEdges<BorderStyle>
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| all | [BorderStyle](arkts-arkui-borderstyle-e.md) | Yes | 边框样式。 |
+| all | [BorderStyle](arkts-arkui-borderstyle-e.md) | Yes | The edge style will be set. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [NodeEdges](arkts-arkui-graphics-nodeedges-i.md)&lt;[BorderStyle](arkts-arkui-borderstyle-e.md)&gt; | 边框样式均设置为传入值的边框样式对象。 |
+| [NodeEdges](arkts-arkui-graphics-nodeedges-i.md)&lt;[BorderStyle](arkts-arkui-borderstyle-e.md)&gt; | The object with all edges are set to the same style. |
 

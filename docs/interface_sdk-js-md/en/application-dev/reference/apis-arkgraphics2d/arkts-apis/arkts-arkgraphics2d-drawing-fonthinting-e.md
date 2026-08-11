@@ -1,6 +1,6 @@
 # FontHinting
 
-字型轮廓效果类型枚举。
+Enumerates the font hinting types.
 
 **Since:** 12
 
@@ -16,7 +16,7 @@
 NONE = 0
 ```
 
-不修改字型轮廓。
+No font hinting is used.
 
 **Since:** 12
 
@@ -34,7 +34,7 @@ NONE = 0
 SLIGHT = 1
 ```
 
-最小限度修改字型轮廓以改善对比度。
+Slight font hinting is used to improve contrast.
 
 **Since:** 12
 
@@ -52,7 +52,7 @@ SLIGHT = 1
 NORMAL = 2
 ```
 
-修改字型轮廓以提高对比度。
+Normal font hinting is used to improve contrast.
 
 **Since:** 12
 
@@ -70,7 +70,7 @@ NORMAL = 2
 FULL = 3
 ```
 
-修改字型轮廓以获得最大对比度。
+Full font hinting is used to improve contrast.
 
 **Since:** 12
 

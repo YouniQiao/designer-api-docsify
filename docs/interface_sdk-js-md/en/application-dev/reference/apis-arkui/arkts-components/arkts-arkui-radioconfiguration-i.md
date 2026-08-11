@@ -1,6 +1,7 @@
 # RadioConfiguration
 
-开发者需要自定义class实现ContentModifier接口。继承自[CommonConfiguration](../arkts-apis/arkts-arkui-common-commonconfiguration-i.md/arkts-arkui-common-commonconfiguration-i.md)。
+You need a custom class to implement the **ContentModifier** API. Inherits from   
+[CommonConfiguration](../arkts-apis/arkts-arkui-common-commonconfiguration-i.md/arkts-arkui-common-commonconfiguration-i.md).
 
 **Inheritance/Implementation:** RadioConfiguration extends [CommonConfiguration<RadioConfiguration>](CommonConfiguration<RadioConfiguration>)
 
@@ -18,11 +19,11 @@
 checked: boolean
 ```
 
-设置单选框的选中状态。
+Whether the radio button is selected.
 
-默认值：false
+Default value: **false**
 
-值为true时，单选框被选中。值为false时，单选框不被选中。
+**true**: The radio button is selected. **false**: The radio button is not selected.
 
 **Type:** boolean
 
@@ -44,9 +45,9 @@ checked: boolean
 triggerChange: Callback<boolean>
 ```
 
-用于触发单选框选中状态变化的回调函数。
+Changes the selected state of the radio button.
 
-值为true时，表示从未选中变为选中。值为false时，表示从选中变为未选中。
+The value **true** means that the radio button changes from unselected to selected, and **false** means that the radio button changes from selected to unselected.
 
 **Type:** [Callback](arkts-arkui-callback-i.md)&lt;boolean&gt;
 
@@ -68,7 +69,7 @@ triggerChange: Callback<boolean>
 value: string
 ```
 
-当前单选框的值。
+Current value of the radio button.
 
 **Type:** string
 

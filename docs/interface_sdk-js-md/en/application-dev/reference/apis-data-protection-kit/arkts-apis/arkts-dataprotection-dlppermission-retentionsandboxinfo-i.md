@@ -1,6 +1,6 @@
 # RetentionSandboxInfo
 
-保留沙箱的沙箱信息。
+Represents the sandbox retention information.
 
 **Since:** 10
 
@@ -22,7 +22,7 @@ import { dlpPermission } from 'kits/@kit.DataProtectionKit';
 appIndex: number
 ```
 
-表示DLP沙箱应用索引。取值范围为1001到1100。
+Index of the DLP sandbox application. The value ranges from 1001 to 1100.
 
 **Type:** number
 
@@ -40,7 +40,7 @@ appIndex: number
 bundleName: string
 ```
 
-表示应用包名。最小7字节，最大128字节。
+Bundle name of the application. The value contains 7 to 128 bytes. If the value is out of range, error code 19100001 is thrown.
 
 **Type:** string
 
@@ -58,7 +58,7 @@ bundleName: string
 docUris: Array<string>
 ```
 
-表示DLP文件的URI列表。不对Array长度进行限制，每个string长度不超过4095字节。
+URI list of the DLP files. The array has no length limit, but each string cannot exceed 4095 bytes.
 
 **Type:** Array&lt;string&gt;
 

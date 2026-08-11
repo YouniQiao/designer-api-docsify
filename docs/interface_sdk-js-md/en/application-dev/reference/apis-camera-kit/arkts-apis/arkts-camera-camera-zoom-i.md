@@ -1,8 +1,8 @@
 # Zoom
 
-Zoom继承自[ZoomQuery](arkts-camera-camera-zoomquery-i.md)。
+**Zoom** inherits from [ZoomQuery](arkts-camera-camera-zoomquery-i.md).
 
-变焦类，对设备变焦操作。
+It provides APIs related to zoom operations.
 
 **Inheritance/Implementation:** Zoom extends [ZoomQuery](arkts-camera-camera-zoomquery-i.md)
 
@@ -32,7 +32,7 @@ ArkTS-Sta:
 getZoomRatio(): double
 ```
 
-获取当前的变焦比。
+Obtains the zoom ratio in use.
 
 **Since:** 11
 
@@ -48,14 +48,14 @@ getZoomRatio(): double
 
 | Type | Description |
 | --- | --- |
-| ArkTS-Dyn: number  <br>ArkTS-Sta：double | 获取当前的变焦比结果。接口调用失败会返回相应错误码，错误码类型[CameraErrorCode]{ |
+| ArkTS-Dyn: number  <br>ArkTS-Sta：double | Zoom ratio obtained. If the operation fails, an error code defined in [CameraErrorCode]{ |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 7400103 | Session not config. |
-| 7400201 | Camera service fatal error.<br>**Applicable version:** 12 and later |
+| [7400103](../errorcode-camera.md#7400103-session-not-configured) | Session not config. |
+| [7400201](../errorcode-camera.md#7400201-camera-service-error) | Camera service fatal error.<br>**Applicable version:** 12 and later |
 
 ## setSmoothZoom
 
@@ -69,7 +69,7 @@ ArkTS-Sta:
 setSmoothZoom(targetRatio: double, mode?: SmoothZoomMode): void
 ```
 
-触发平滑变焦。
+Sets smooth zoom.
 
 **Since:** 11
 
@@ -85,14 +85,14 @@ setSmoothZoom(targetRatio: double, mode?: SmoothZoomMode): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| targetRatio | ArkTS-Dyn: number  <br>ArkTS-Sta：double | Yes | 目标值。通过[getZoomRatioRange](arkts-camera-camera-zoomquery-i.md#getzoomratiorange)获取支持的变焦范围，如果设置 超过支持范围的值，则只保留精度范围内数值。 |
-| mode | [SmoothZoomMode](arkts-camera-camera-smoothzoommode-e.md) | No | 平滑变焦模式。默认为0。 |
+| targetRatio | ArkTS-Dyn: number  <br>ArkTS-Sta：double | Yes | Target zoom ratio. The supported zoom ratio range can be obtained by calling [getZoomRatioRange](arkts-camera-camera-zoomquery-i.md#getzoomratiorange). If the value passed in is not within the supported range, the value within the precision range is retained. |
+| mode | [SmoothZoomMode](arkts-camera-camera-smoothzoommode-e.md) | No | Smooth zoom mode. The default value is **0**. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 7400103 | Session not config.<br>**Applicable version:** 11 - 17 |
+| [7400103](../errorcode-camera.md#7400103-session-not-configured) | Session not config.<br>**Applicable version:** 11 - 17 |
 
 ## setZoomRatio
 
@@ -106,7 +106,7 @@ ArkTS-Sta:
 setZoomRatio(zoomRatio: double): void
 ```
 
-设置变焦比，变焦精度最高为小数点后两位，如果设置超过支持的精度范围，则只保留精度范围内数值。
+Sets a zoom ratio, with a maximum precision of two decimal places.
 
 **Since:** 11
 
@@ -122,11 +122,11 @@ setZoomRatio(zoomRatio: double): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| zoomRatio | ArkTS-Dyn: number  <br>ArkTS-Sta：double | Yes | 可变焦距比，通过[getZoomRatioRange](arkts-camera-camera-zoomquery-i.md#getzoomratiorange)获取支持的变焦范围，如果设置 超过支持范围的值，则只保留精度范围内数值。 &lt;br&gt;设置可变焦距比到底层生效需要一定时间，获取正确设置的可变焦距比需要等待1~2帧的时间。 |
+| zoomRatio | ArkTS-Dyn: number  <br>ArkTS-Sta：double | Yes | Zoom ratio. The supported zoom ratio range can be obtained by calling [getZoomRatioRange](arkts-camera-camera-zoomquery-i.md#getzoomratiorange). If the value passed in is not within the supported range, the value within the precision range is retained. &lt;br&gt;It takes some time for the zoom ratio to take effect at the bottom layer. To obtain the correct zoom ratio, you need to wait for one to two frames. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 7400103 | Session not config. |
+| [7400103](../errorcode-camera.md#7400103-session-not-configured) | Session not config. |
 

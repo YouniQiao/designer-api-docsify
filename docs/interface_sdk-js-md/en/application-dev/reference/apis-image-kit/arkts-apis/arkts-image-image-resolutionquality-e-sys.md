@@ -1,6 +1,6 @@
 # ResolutionQuality (System API)
 
-枚举，画质效果等级类型。
+Enumerates the image quality levels.
 
 **Since:** 12
 
@@ -18,7 +18,7 @@
 LOW = 1
 ```
 
-低画质效果，解码耗时短。<br/
+Low image quality, requiring a short decoding time.
 
 **Since:** 12
 
@@ -36,7 +36,7 @@ LOW = 1
 MEDIUM = 2
 ```
 
-中等画质效果，解码耗时中等。<br/
+Medium image quality, requiring a medium decoding time
 
 **Since:** 12
 
@@ -54,7 +54,7 @@ MEDIUM = 2
 HIGH = 3
 ```
 
-最高等级画质效果，解码耗时长。<br/
+High image quality, requiring a long decoding time.
 
 **Since:** 12
 

@@ -1,11 +1,5 @@
 # startAsyncTrace
 
-## 导入模块
-
-```TypeScript
-import { hiTraceMeter } from 'kits/@kit.PerformanceAnalysisKit';
-```
-
 ## startAsyncTrace
 
 ```TypeScript

@@ -1,6 +1,6 @@
 # UserStatusData（系统接口）
 
-Defines user status data.
+用户状态数据。
 
 **起始版本：** 26.0.0
 
@@ -12,19 +12,13 @@ Defines user status data.
 
 **系统接口：** 此接口为系统接口。
 
-## 导入模块
-
-```TypeScript
-import { userStatus } from 'kits/@kit.MultimodalAwarenessKit';
-```
-
 ## errCode
 
 ```TypeScript
 errCode: int
 ```
 
-Business error code.The value `0` indicates success, and other values indicate failure.
+业务错误码。值为0表示成功，其他值表示失败。
 
 **类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
@@ -46,7 +40,7 @@ Business error code.The value `0` indicates success, and other values indicate f
 feature: UserStatusFeature
 ```
 
-User status detection feature type.
+用户状态检测特性类型。
 
 **类型：** [UserStatusFeature](arkts-multimodalawareness-userstatus-userstatusfeature-e-sys.md)
 
@@ -68,7 +62,7 @@ User status detection feature type.
 result: int
 ```
 
-User status detection result.The value `0` indicates success, and other values indicate failure.
+用户状态检测结果。值为0表示成功，其他值表示失败。
 
 **类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
@@ -90,7 +84,7 @@ User status detection result.The value `0` indicates success, and other values i
 status: string
 ```
 
-Multi-stage detection states under a single perception feature.
+单一感知特性下的多阶段检测状态。
 
 **类型：** string
 

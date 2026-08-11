@@ -12,7 +12,7 @@ import { wallpaper } from 'kits/@kit.BasicServicesKit';
 function onWallpaperChange(callback: WallpaperChangeObserver): void
 ```
 
-订阅壁纸变化通知事件。不支持多线程并发调用。
+Registers a listener for wallpaper changes to receive notifications about the changes.
 
 **Since:** 23
 
@@ -28,11 +28,11 @@ function onWallpaperChange(callback: WallpaperChangeObserver): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [WallpaperChangeObserver](arkts-basicservices-wallpaper-wallpaperchangeobserver-t.md) | Yes |  |
+| callback | [WallpaperChangeObserver](arkts-basicservices-wallpaper-wallpaperchangeobserver-t.md) | Yes | The observer of wallpaper change. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 202 | permission verification failed, application which is not a system application uses system API. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | permission verification failed, application which is not a system application uses system API. |
 

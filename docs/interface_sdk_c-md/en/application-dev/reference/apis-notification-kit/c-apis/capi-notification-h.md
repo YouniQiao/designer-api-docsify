@@ -2,7 +2,7 @@
 
 ## Overview
 
-Declares the APIs of notification service.
+Defines APIs for notification services.
 
 **Library**: libohnotification.so
 
@@ -18,7 +18,7 @@ Declares the APIs of notification service.
 
 | Name | Description |
 | -- | -- |
-| [bool OH_Notification_IsNotificationEnabled(void)](#oh_notification_isnotificationenabled) | Checks whether this application is allowed to publish notifications. |
+| [bool OH_Notification_IsNotificationEnabled(void)](#oh_notification_isnotificationenabled) | Checks whether the notification of the specified application is enabled. |
 
 ## Function description
 
@@ -30,7 +30,7 @@ bool OH_Notification_IsNotificationEnabled(void)
 
 **Description**
 
-Checks whether this application is allowed to publish notifications.
+Checks whether the notification of the specified application is enabled.
 
 **Since**: 13
 
@@ -38,6 +38,6 @@ Checks whether this application is allowed to publish notifications.
 
 | Type | Description |
 | -- | -- |
-| bool | true  - This application is allowed to publish notifications.<br>         false - This application is not allowed to publish notifications. |
+| bool | true  - Notification is enabled for the specified application.<br>         false - Notification is not enabled for the specified application. |
 
 

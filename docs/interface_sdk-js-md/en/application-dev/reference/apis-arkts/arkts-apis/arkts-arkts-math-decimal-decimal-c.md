@@ -1,6 +1,6 @@
 # Decimal
 
-任意精度的Decimal类型。
+An arbitrary-precision Decimal type
 
 **Since:** 12
 
@@ -22,7 +22,7 @@ import { Decimal } from 'kits/@kit.ArkTS';
 abs(): Decimal
 ```
 
-返回一个新的Decimal对象，其值是此Decimal的绝对值。
+Return a new Decimal whose value is the absolute value of this Decimal.
 
 **Since:** 12
 
@@ -46,7 +46,7 @@ abs(): Decimal
 static abs(n: Value): Decimal
 ```
 
-返回一个新的Decimal对象，Decimal的值为参数n的绝对值。
+Return a new Decimal whose value is the absolute value of `n`.
 
 **Since:** 12
 
@@ -74,7 +74,7 @@ static abs(n: Value): Decimal
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1. Incorrect parameter types; 2. Parameter verification failed. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Incorrect parameter types; 2. Parameter verification failed. |
 
 ## acos
 
@@ -82,7 +82,7 @@ static abs(n: Value): Decimal
 acos(): Decimal
 ```
 
-返回一个新的Decimal对象，其值是此Decimal的反余弦值。
+Return a new Decimal whose value is the arccosine (inverse cosine) in radians of the value of this Decimal.
 
 **Since:** 12
 
@@ -104,7 +104,7 @@ acos(): Decimal
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 10200060 | Precision limit exceeded. |
+| [10200060](../errorcode-utils.md#10200060-precision-limit-is-exceeded) | Precision limit exceeded. |
 
 ## acos
 
@@ -112,7 +112,7 @@ acos(): Decimal
 static acos(n: Value): Decimal
 ```
 
-返回一个新的Decimal对象，其值是n的反余弦值。
+Return a new Decimal whose value is the arccosine in radians of `n`.
 
 **Since:** 12
 
@@ -140,8 +140,8 @@ static acos(n: Value): Decimal
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1. Incorrect parameter types; 2. Parameter verification failed. |
-| 10200060 | Precision limit exceeded. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Incorrect parameter types; 2. Parameter verification failed. |
+| [10200060](../errorcode-utils.md#10200060-precision-limit-is-exceeded) | Precision limit exceeded. |
 
 ## acosh
 
@@ -149,7 +149,7 @@ static acos(n: Value): Decimal
 acosh(): Decimal
 ```
 
-返回一个新的Decimal对象，其值是此Decimal值的双曲余弦的倒数。
+Return a new Decimal whose value is the inverse of the hyperbolic cosine in radians of the value of this Decimal.
 
 **Since:** 12
 
@@ -171,7 +171,7 @@ acosh(): Decimal
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 10200060 | Precision limit exceeded. |
+| [10200060](../errorcode-utils.md#10200060-precision-limit-is-exceeded) | Precision limit exceeded. |
 
 ## acosh
 
@@ -179,7 +179,7 @@ acosh(): Decimal
 static acosh(n: Value): Decimal
 ```
 
-返回一个新的Decimal对象，其值是n的双曲余弦的倒数。按照precision设置有效位数，按照rounding设置舍入模式。
+Return a new Decimal whose value is the inverse of the hyperbolic cosine of `n`, rounded to`precision` significant digits using rounding mode `rounding`.
 
 **Since:** 12
 
@@ -207,8 +207,8 @@ static acosh(n: Value): Decimal
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1. Incorrect parameter types; 2. Parameter verification failed. |
-| 10200060 | Precision limit exceeded. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Incorrect parameter types; 2. Parameter verification failed. |
+| [10200060](../errorcode-utils.md#10200060-precision-limit-is-exceeded) | Precision limit exceeded. |
 
 ## add
 
@@ -216,7 +216,7 @@ static acosh(n: Value): Decimal
 add(n: Value): Decimal
 ```
 
-返回一个新的Decimal对象，其值是将此Decimal的值加上n。按照precision设置有效位数，按照rounding设置舍入模式。
+Return a new Decimal whose value is the value of this Decimal plus `n`, rounded to `precision`significant digits using rounding mode `rounding`.
 
 **Since:** 12
 
@@ -244,7 +244,7 @@ add(n: Value): Decimal
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1. Incorrect parameter types; 2. Parameter verification failed. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Incorrect parameter types; 2. Parameter verification failed. |
 
 ## add
 
@@ -252,7 +252,7 @@ add(n: Value): Decimal
 static add(x: Value, y: Value): Decimal
 ```
 
-返回一个新的Decimal对象，其值为x加y的和。按照precision设置有效位数，按照rounding设置舍入模式。
+Return a new Decimal whose value is the sum of `x` and `y`, rounded to `precision` significant digits using rounding mode `rounding`.
 
 **Since:** 12
 
@@ -281,7 +281,7 @@ static add(x: Value, y: Value): Decimal
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1. Incorrect parameter types; 2. Parameter verification failed. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Incorrect parameter types; 2. Parameter verification failed. |
 
 ## asin
 
@@ -289,7 +289,7 @@ static add(x: Value, y: Value): Decimal
 asin(): Decimal
 ```
 
-返回一个新的Decimal对象，其值是此Decimal的反正弦值。
+Return a new Decimal whose value is the arcsine (inverse sine) in radians of the value of this Decimal.
 
 **Since:** 12
 
@@ -311,7 +311,7 @@ asin(): Decimal
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 10200060 | Precision limit exceeded. |
+| [10200060](../errorcode-utils.md#10200060-precision-limit-is-exceeded) | Precision limit exceeded. |
 
 ## asin
 
@@ -319,7 +319,7 @@ asin(): Decimal
 static asin(n: Value): Decimal
 ```
 
-返回一个新的Decimal对象，其值是n的反正弦值。按照precision设置有效位数，按照rounding设置舍入模式。
+Return a new Decimal whose value is the arcsine in radians of `n`, rounded to `precision`significant digits using rounding mode `rounding`.
 
 **Since:** 12
 
@@ -347,8 +347,8 @@ static asin(n: Value): Decimal
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1. Incorrect parameter types; 2. Parameter verification failed. |
-| 10200060 | Precision limit exceeded. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Incorrect parameter types; 2. Parameter verification failed. |
+| [10200060](../errorcode-utils.md#10200060-precision-limit-is-exceeded) | Precision limit exceeded. |
 
 ## asinh
 
@@ -356,7 +356,7 @@ static asin(n: Value): Decimal
 asinh(): Decimal
 ```
 
-返回一个新的Decimal对象，其值是此Decimal值的双曲正弦的倒数。
+Return a new Decimal whose value is the inverse of the hyperbolic sine in radians of the value of this Decimal.
 
 **Since:** 12
 
@@ -378,7 +378,7 @@ asinh(): Decimal
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 10200060 | Precision limit exceeded. |
+| [10200060](../errorcode-utils.md#10200060-precision-limit-is-exceeded) | Precision limit exceeded. |
 
 ## asinh
 
@@ -386,7 +386,7 @@ asinh(): Decimal
 static asinh(n: Value): Decimal
 ```
 
-返回一个新的Decimal对象，其值是n的双曲正弦的倒数。按照precision设置有效位数，按照rounding设置舍入模式。
+Return a new Decimal whose value is the inverse of the hyperbolic sine of `n`, rounded to`precision` significant digits using rounding mode `rounding`.
 
 **Since:** 12
 
@@ -402,7 +402,7 @@ static asinh(n: Value): Decimal
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| n | [Value](../../apis-arkdata/arkts-apis/arkts-arkdata-distributeddata-value-i.md) | Yes | {double \| string \| Decimal} 以弧度为单位的值。 |
+| n | [Value](../../apis-arkdata/arkts-apis/arkts-arkdata-distributeddata-value-i.md) | Yes | {double \| string \| Decimal} A value in radians. |
 
 **Return value:**
 
@@ -414,8 +414,8 @@ static asinh(n: Value): Decimal
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1. Incorrect parameter types; 2. Parameter verification failed. |
-| 10200060 | Precision limit exceeded. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Incorrect parameter types; 2. Parameter verification failed. |
+| [10200060](../errorcode-utils.md#10200060-precision-limit-is-exceeded) | Precision limit exceeded. |
 
 ## atan
 
@@ -423,7 +423,7 @@ static asinh(n: Value): Decimal
 atan(): Decimal
 ```
 
-返回一个新的Decimal对象，其值是此Decimal的反正切值。
+Return a new Decimal whose value is the arctangent (inverse tangent) in radians of the value of this Decimal.
 
 **Since:** 12
 
@@ -445,7 +445,7 @@ atan(): Decimal
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 10200060 | Precision limit exceeded. |
+| [10200060](../errorcode-utils.md#10200060-precision-limit-is-exceeded) | Precision limit exceeded. |
 
 ## atan
 
@@ -453,7 +453,7 @@ atan(): Decimal
 static atan(n: Value): Decimal
 ```
 
-返回一个新的Decimal对象，其值是n的反正切值。按照precision设置有效位数，按照rounding设置舍入模式。
+Return a new Decimal whose value is the arctangent in radians of `n`, rounded to `precision`significant digits using rounding mode `rounding`.
 
 **Since:** 12
 
@@ -481,8 +481,8 @@ static atan(n: Value): Decimal
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1. Incorrect parameter types; 2. Parameter verification failed. |
-| 10200060 | Precision limit exceeded. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Incorrect parameter types; 2. Parameter verification failed. |
+| [10200060](../errorcode-utils.md#10200060-precision-limit-is-exceeded) | Precision limit exceeded. |
 
 ## atan2
 
@@ -490,7 +490,7 @@ static atan(n: Value): Decimal
 static atan2(y: Value, x: Value): Decimal
 ```
 
-返回一个新的Decimal对象，其值是-π到π（含边界）范围内y/x的反正切值。按照precision设置有效位数，按照rounding设置舍入模式。
+Return a new Decimal whose value is the arctangent in radians of `y/x` in the range -pi to pi(inclusive), rounded to `precision` significant digits using rounding mode `rounding`.
 
 **Since:** 12
 
@@ -506,8 +506,8 @@ static atan2(y: Value, x: Value): Decimal
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| y | [Value](../../apis-arkdata/arkts-apis/arkts-arkdata-distributeddata-value-i.md) | Yes | {double \| string \| Decimal} 除法的被除数。 |
-| x | [Value](../../apis-arkdata/arkts-apis/arkts-arkdata-distributeddata-value-i.md) | Yes | {double \| string \| Decimal} 除法的除数。 |
+| y | [Value](../../apis-arkdata/arkts-apis/arkts-arkdata-distributeddata-value-i.md) | Yes | {double \| string \| Decimal} The y-coordinate. |
+| x | [Value](../../apis-arkdata/arkts-apis/arkts-arkdata-distributeddata-value-i.md) | Yes | {double \| string \| Decimal} The x-coordinate. |
 
 **Return value:**
 
@@ -519,8 +519,8 @@ static atan2(y: Value, x: Value): Decimal
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1. Incorrect parameter types; 2. Parameter verification failed. |
-| 10200060 | Precision limit exceeded. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Incorrect parameter types; 2. Parameter verification failed. |
+| [10200060](../errorcode-utils.md#10200060-precision-limit-is-exceeded) | Precision limit exceeded. |
 
 ## atanh
 
@@ -528,7 +528,7 @@ static atan2(y: Value, x: Value): Decimal
 atanh(): Decimal
 ```
 
-返回一个新的Decimal对象，其值是此Decimal值的双曲正切的倒数。
+Return a new Decimal whose value is the inverse of the hyperbolic tangent in radians of the value of this Decimal.
 
 **Since:** 12
 
@@ -550,7 +550,7 @@ atanh(): Decimal
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 10200060 | Precision limit exceeded. |
+| [10200060](../errorcode-utils.md#10200060-precision-limit-is-exceeded) | Precision limit exceeded. |
 
 ## atanh
 
@@ -558,7 +558,7 @@ atanh(): Decimal
 static atanh(n: Value): Decimal
 ```
 
-返回一个新的Decimal对象，其值是n的双曲正切的倒数。按照precision设置有效位数，按照rounding设置舍入模式。
+Return a new Decimal whose value is the inverse of the hyperbolic tangent of `n`, rounded to`precision` significant digits using rounding mode `rounding`.
 
 **Since:** 12
 
@@ -574,7 +574,7 @@ static atanh(n: Value): Decimal
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| n | [Value](../../apis-arkdata/arkts-apis/arkts-arkdata-distributeddata-value-i.md) | Yes | {double \| string \| Decimal} 以弧度为单位的值。 |
+| n | [Value](../../apis-arkdata/arkts-apis/arkts-arkdata-distributeddata-value-i.md) | Yes | {double \| string \| Decimal} A value in radians. |
 
 **Return value:**
 
@@ -586,8 +586,8 @@ static atanh(n: Value): Decimal
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1. Incorrect parameter types; 2. Parameter verification failed. |
-| 10200060 | Precision limit exceeded. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Incorrect parameter types; 2. Parameter verification failed. |
+| [10200060](../errorcode-utils.md#10200060-precision-limit-is-exceeded) | Precision limit exceeded. |
 
 ## cbrt
 
@@ -595,7 +595,7 @@ static atanh(n: Value): Decimal
 cbrt(): Decimal
 ```
 
-返回一个新的Decimal对象，其值是当前Decimal对象的立方根。按照precision设置有效位数，按照rounding设置舍入模式。
+Return a new Decimal whose value is the cube root of the value of this Decimal, rounded to`precision` significant digits using rounding mode `rounding`.
 
 **Since:** 12
 
@@ -619,7 +619,7 @@ cbrt(): Decimal
 static cbrt(n: Value): Decimal
 ```
 
-返回一个新的Decimal对象，其值为n的立方根。按照precision设置有效位数，按照rounding设置舍入模式。
+Return a new Decimal whose value is the cube root of `n`, rounded to `precision` significant digits using rounding mode `rounding`.
 
 **Since:** 12
 
@@ -647,7 +647,7 @@ static cbrt(n: Value): Decimal
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1. Incorrect parameter types; 2. Parameter verification failed. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Incorrect parameter types; 2. Parameter verification failed. |
 
 ## ceil
 
@@ -655,7 +655,7 @@ static cbrt(n: Value): Decimal
 ceil(): Decimal
 ```
 
-返回一个新的Decimal对象，其值是此Decimal向正无穷方向舍入得到的结果。
+Return a new Decimal whose value is the value of this Decimal rounded to a whole number in the direction of positive Infinity.
 
 **Since:** 12
 
@@ -679,7 +679,7 @@ ceil(): Decimal
 static ceil(n: Value): Decimal
 ```
 
-返回一个新的Decimal对象，其值为使用ROUND_CEIL将n舍入为整数的结果。
+Return a new Decimal whose value is `n` rounded to an integer using `ROUND_CEIL`.
 
 **Since:** 12
 
@@ -707,7 +707,7 @@ static ceil(n: Value): Decimal
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1. Incorrect parameter types; 2. Parameter verification failed. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Incorrect parameter types; 2. Parameter verification failed. |
 
 ## clamp
 
@@ -715,7 +715,7 @@ static ceil(n: Value): Decimal
 clamp(min: Value, max: Value): Decimal
 ```
 
-返回一个将Decimal值限制在min到max范围内的Decimal对象。如果值大于max，返回max；如果值小于min，返回min；否则，返回原值。
+Return a new Decimal whose value is the value of this Decimal clamped to the range delineated by `min` and `max`.
 
 **Since:** 12
 
@@ -744,8 +744,8 @@ clamp(min: Value, max: Value): Decimal
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1. Incorrect parameter types; 2. Parameter verification failed. |
-| 10200001 | The value of `min` is out of range. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Incorrect parameter types; 2. Parameter verification failed. |
+| [10200001](../errorcode-utils.md#10200001-value-out-of-range) | The value of `min` is out of range. |
 
 ## clamp
 
@@ -753,7 +753,7 @@ clamp(min: Value, max: Value): Decimal
 static clamp(n: Value, min: Value, max: Value): Decimal
 ```
 
-返回一个值为将n限制在min到max范围内的Decimal对象。当大于限制的最大值时返回max，小于限制的最小值时返回min，在范围内返回值不变。
+Return a new Decimal whose value is `n` clamped to the range delineated by `min` and `max`.
 
 **Since:** 12
 
@@ -783,8 +783,8 @@ static clamp(n: Value, min: Value, max: Value): Decimal
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1. Incorrect parameter types; 2. Parameter verification failed. |
-| 10200001 | The value of `min` is out of range. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Incorrect parameter types; 2. Parameter verification failed. |
+| [10200001](../errorcode-utils.md#10200001-value-out-of-range) | The value of `min` is out of range. |
 
 ## comparedTo
 
@@ -798,9 +798,9 @@ ArkTS-Sta:
 comparedTo(n: Value): double
 ```
 
-Decimal的比较方法。1 如果此Decimal大于n的值，  
--1 如果此Decimal小于n的值，  
-0 如果两者的值相等，NaN 如果两者中任一Decimal的值为NaN。
+Return1 if the value of this Decimal is greater than the value of `n`,  
+-1 if the value of this Decimal is less than the value of `n`,  
+0 if they have the same value,NaN if the value of either Decimal is NaN.
 
 **Since:** 12
 
@@ -828,7 +828,7 @@ Decimal的比较方法。1 如果此Decimal大于n的值，
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1. Incorrect parameter types; 2. Parameter verification failed. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Incorrect parameter types; 2. Parameter verification failed. |
 
 ## constructor
 
@@ -836,7 +836,7 @@ Decimal的比较方法。1 如果此Decimal大于n的值，
 constructor(n: Value)
 ```
 
-Decimal的构造函数。
+Return a new Decimal whose value is the absolute value of this Decimal.
 
 **Since:** 12
 
@@ -858,7 +858,7 @@ Decimal的构造函数。
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1. Incorrect parameter types; 2. Parameter verification failed. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Incorrect parameter types; 2. Parameter verification failed. |
 
 ## cos
 
@@ -866,7 +866,7 @@ Decimal的构造函数。
 cos(): Decimal
 ```
 
-返回一个新的Decimal对象，其值是此Decimal的余弦值。
+Return a new Decimal whose value is the cosine of the value in radians of this Decimal.
 
 **Since:** 12
 
@@ -890,7 +890,7 @@ cos(): Decimal
 static cos(n: Value): Decimal
 ```
 
-返回一个新的Decimal对象，其值是n的余弦值。按照precision设置有效位数，按照rounding设置舍入模式。
+Return a new Decimal whose value is the cosine of `n`, rounded to `precision` significant digits using rounding mode `rounding`
 
 **Since:** 12
 
@@ -906,7 +906,7 @@ static cos(n: Value): Decimal
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| n | [Value](../../apis-arkdata/arkts-apis/arkts-arkdata-distributeddata-value-i.md) | Yes | {double \| string \| Decimal} 以弧度为单位的值。 |
+| n | [Value](../../apis-arkdata/arkts-apis/arkts-arkdata-distributeddata-value-i.md) | Yes | {double \| string \| Decimal} A value in radians. |
 
 **Return value:**
 
@@ -918,7 +918,7 @@ static cos(n: Value): Decimal
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1. Incorrect parameter types; 2. Parameter verification failed. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Incorrect parameter types; 2. Parameter verification failed. |
 
 ## cosh
 
@@ -926,7 +926,7 @@ static cos(n: Value): Decimal
 cosh(): Decimal
 ```
 
-返回一个新的Decimal对象，其值是此Decimal的双曲余弦值。
+Return a new Decimal whose value is the hyperbolic cosine of the value in radians of this Decimal.
 
 **Since:** 12
 
@@ -950,7 +950,7 @@ cosh(): Decimal
 static cosh(n: Value): Decimal
 ```
 
-返回一个新的Decimal对象，其值是n的双曲余弦值。按照precision设置有效位数，按照rounding设置舍入模式。
+Return a new Decimal whose value is the hyperbolic cosine of `n`, rounded to precision significant digits using rounding mode `rounding`.
 
 **Since:** 12
 
@@ -966,7 +966,7 @@ static cosh(n: Value): Decimal
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| n | [Value](../../apis-arkdata/arkts-apis/arkts-arkdata-distributeddata-value-i.md) | Yes | {double \| string \| Decimal} 以弧度为单位的值。 |
+| n | [Value](../../apis-arkdata/arkts-apis/arkts-arkdata-distributeddata-value-i.md) | Yes | {double \| string \| Decimal} A value in radians. |
 
 **Return value:**
 
@@ -978,7 +978,7 @@ static cosh(n: Value): Decimal
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1. Incorrect parameter types; 2. Parameter verification failed. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Incorrect parameter types; 2. Parameter verification failed. |
 
 ## decimalPlaces
 
@@ -992,7 +992,7 @@ ArkTS-Sta:
 decimalPlaces(): double
 ```
 
-返回Decimal对象的小数位数。
+Return the number of decimal places of the value of this Decimal.
 
 **Since:** 12
 
@@ -1016,7 +1016,7 @@ decimalPlaces(): double
 div(n: Value): Decimal
 ```
 
-返回一个新的Decimal对象，其值是将此Decimal的值除以n。按照precision设置有效位数，按照rounding设置舍入模式。
+Return a new Decimal whose value is the value of this Decimal divided by `n`, rounded to`precision` significant digits using rounding mode `rounding`.
 
 **Since:** 12
 
@@ -1044,7 +1044,7 @@ div(n: Value): Decimal
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1. Incorrect parameter types; 2. Parameter verification failed. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Incorrect parameter types; 2. Parameter verification failed. |
 
 ## div
 
@@ -1052,7 +1052,7 @@ div(n: Value): Decimal
 static div(x: Value, y: Value): Decimal
 ```
 
-返回一个新的Decimal对象，其值为x除以y的商。按照precision设置有效位数，按照rounding设置舍入模式。
+Return a new Decimal whose value is `x` divided by `y`, rounded to `precision` significant digits using rounding mode `rounding`.
 
 **Since:** 12
 
@@ -1081,7 +1081,7 @@ static div(x: Value, y: Value): Decimal
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1. Incorrect parameter types; 2. Parameter verification failed. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Incorrect parameter types; 2. Parameter verification failed. |
 
 ## dividedToIntegerBy
 
@@ -1089,7 +1089,7 @@ static div(x: Value, y: Value): Decimal
 dividedToIntegerBy(n: Value): Decimal
 ```
 
-返回该Decimal除以n后获得的整数部分。按照precision设置有效位数，按照rounding设置舍入模式。
+Return a new Decimal whose value is the integer part of dividing the value of this Decimal by the value of `n`, rounded to `precision` significant digits using rounding mode `rounding`.
 
 **Since:** 12
 
@@ -1117,7 +1117,7 @@ dividedToIntegerBy(n: Value): Decimal
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1. Incorrect parameter types; 2. Parameter verification failed. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Incorrect parameter types; 2. Parameter verification failed. |
 
 ## equals
 
@@ -1125,7 +1125,7 @@ dividedToIntegerBy(n: Value): Decimal
 equals(n: Value): boolean
 ```
 
-返回此Decimal是否等于比较值n，相等返回true，否则返回false。
+Return true if the value of this Decimal is equal to the value of `n`, otherwise return false.
 
 **Since:** 12
 
@@ -1153,7 +1153,7 @@ equals(n: Value): boolean
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1. Incorrect parameter types; 2. Parameter verification failed. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Incorrect parameter types; 2. Parameter verification failed. |
 
 ## exp
 
@@ -1161,7 +1161,7 @@ equals(n: Value): boolean
 exp(): Decimal
 ```
 
-返回一个新的Decimal对象，其值是此Decimal值的自然指数（即以e为底，此Decimal值为指数的幂）。按照precision设置有效位数，按照rounding设置舍入模式。
+Return a new Decimal whose value is the natural exponential of the value of this Decimal,i.e. the base e raised to the power the value of this Decimal, rounded to `precision`significant digits using rounding mode `rounding`.
 
 **Since:** 12
 
@@ -1183,7 +1183,7 @@ exp(): Decimal
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 10200060 | Precision limit exceeded. |
+| [10200060](../errorcode-utils.md#10200060-precision-limit-is-exceeded) | Precision limit exceeded. |
 
 ## exp
 
@@ -1191,7 +1191,7 @@ exp(): Decimal
 static exp(n: Value): Decimal
 ```
 
-返回一个新的Decimal对象，其值为n的自然指数。按照precision设置有效位数，按照rounding设置舍入模式。
+Return a new Decimal whose value is the natural exponential of `n`, rounded to `precision`significant digits using rounding mode `rounding`.
 
 **Since:** 12
 
@@ -1219,8 +1219,8 @@ static exp(n: Value): Decimal
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1. Incorrect parameter types; 2. Parameter verification failed. |
-| 10200060 | Precision limit exceeded. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Incorrect parameter types; 2. Parameter verification failed. |
+| [10200060](../errorcode-utils.md#10200060-precision-limit-is-exceeded) | Precision limit exceeded. |
 
 ## floor
 
@@ -1228,7 +1228,7 @@ static exp(n: Value): Decimal
 floor(): Decimal
 ```
 
-返回一个新的Decimal对象，其值是此Decimal向负无穷方向舍入得到的结果。
+Return a new Decimal whose value is the value of this Decimal rounded to a whole number in the direction of negative Infinity.
 
 **Since:** 12
 
@@ -1252,7 +1252,7 @@ floor(): Decimal
 static floor(n: Value): Decimal
 ```
 
-返回一个新的Decimal对象，其值为使用ROUND_FLOOR将n舍入为整数的结果。
+Return a new Decimal whose value is `n` round to an integer using `ROUND_FLOOR`.
 
 **Since:** 12
 
@@ -1280,7 +1280,7 @@ static floor(n: Value): Decimal
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1. Incorrect parameter types; 2. Parameter verification failed. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Incorrect parameter types; 2. Parameter verification failed. |
 
 ## greaterThan
 
@@ -1288,7 +1288,7 @@ static floor(n: Value): Decimal
 greaterThan(n: Value): boolean
 ```
 
-返回此Decimal是否大于比较值n，大于返回true，否则返回false。
+Return true if the value of this Decimal is greater than the value of `n`, otherwise return false.
 
 **Since:** 12
 
@@ -1316,7 +1316,7 @@ greaterThan(n: Value): boolean
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1. Incorrect parameter types; 2. Parameter verification failed. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Incorrect parameter types; 2. Parameter verification failed. |
 
 ## greaterThanOrEqualTo
 
@@ -1324,7 +1324,7 @@ greaterThan(n: Value): boolean
 greaterThanOrEqualTo(n: Value): boolean
 ```
 
-返回此Decimal是否大于等于比较值n，大于等于返回true，否则返回false。
+Return true if the value of this Decimal is greater than or equal to the value of `n`,otherwise return false.
 
 **Since:** 12
 
@@ -1352,7 +1352,7 @@ greaterThanOrEqualTo(n: Value): boolean
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1. Incorrect parameter types; 2. Parameter verification failed. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Incorrect parameter types; 2. Parameter verification failed. |
 
 ## hypot
 
@@ -1360,7 +1360,7 @@ greaterThanOrEqualTo(n: Value): boolean
 static hypot(...n: Value[]): Decimal
 ```
 
-返回一个新的Decimal对象，其值是参数平方和的平方根。无入参时默认返回0。按照precision设置有效位数，按照rounding设置舍入模式。
+Return a new Decimal whose value is the square root of the sum of the squares of the arguments,rounded to `precision` significant digits using rounding mode `rounding`.
 
 **Since:** 12
 
@@ -1388,7 +1388,7 @@ static hypot(...n: Value[]): Decimal
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1. Incorrect parameter types; 2. Parameter verification failed. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Incorrect parameter types; 2. Parameter verification failed. |
 
 ## isFinite
 
@@ -1396,7 +1396,7 @@ static hypot(...n: Value[]): Decimal
 isFinite(): boolean
 ```
 
-返回此Decimal是否为有限值，是有限值返回true，否则返回false。
+Return true if the value of this Decimal is a finite number, otherwise return false.
 
 **Since:** 12
 
@@ -1420,7 +1420,7 @@ isFinite(): boolean
 isInteger(): boolean
 ```
 
-返回此Decimal是否为整数，是整数返回true，否则返回false。
+Return true if the value of this Decimal is an integer, otherwise return false.
 
 **Since:** 12
 
@@ -1444,7 +1444,7 @@ isInteger(): boolean
 isNaN(): boolean
 ```
 
-返回此Decimal是否为无效值（NaN），是NaN返回true，否则返回false。
+Return true if the value of this Decimal is NaN, otherwise return false.
 
 **Since:** 12
 
@@ -1468,7 +1468,7 @@ isNaN(): boolean
 isNegative(): boolean
 ```
 
-返回此Decimal是否为负数（区分正负零），是负数返回true，否则返回false。
+Return true if the value of this Decimal is negative, otherwise return false.
 
 **Since:** 12
 
@@ -1492,7 +1492,7 @@ isNegative(): boolean
 isPositive(): boolean
 ```
 
-返回此Decimal是否为正数（区分正负零），是正数返回true，否则返回false。
+Return true if the value of this Decimal is positive, otherwise return false.
 
 **Since:** 12
 
@@ -1516,7 +1516,7 @@ isPositive(): boolean
 isZero(): boolean
 ```
 
-返回此Decimal是否为0或是-0，是返回true，否则返回false。
+Return true if the value of this Decimal is 0 or -0, otherwise return false.
 
 **Since:** 12
 
@@ -1540,7 +1540,7 @@ isZero(): boolean
 lessThan(n: Value): boolean
 ```
 
-返回此Decimal是否小于比较值n，小于返回true，否则返回false。
+Return true if the value of this Decimal is less than `n`, otherwise return false.
 
 **Since:** 12
 
@@ -1568,7 +1568,7 @@ lessThan(n: Value): boolean
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1. Incorrect parameter types; 2. Parameter verification failed. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Incorrect parameter types; 2. Parameter verification failed. |
 
 ## lessThanOrEqualTo
 
@@ -1576,7 +1576,7 @@ lessThan(n: Value): boolean
 lessThanOrEqualTo(n: Value): boolean
 ```
 
-返回此Decimal是否小于等于比较值n，小于等于返回true，否则返回false。
+Return true if the value of this Decimal is less than or equal to `n`, otherwise return false.
 
 **Since:** 12
 
@@ -1604,7 +1604,7 @@ lessThanOrEqualTo(n: Value): boolean
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1. Incorrect parameter types; 2. Parameter verification failed. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Incorrect parameter types; 2. Parameter verification failed. |
 
 ## ln
 
@@ -1612,7 +1612,7 @@ lessThanOrEqualTo(n: Value): boolean
 ln(): Decimal
 ```
 
-返回一个新的Decimal对象，其值是此Decimal值的自然对数。按照precision设置有效位数，按照rounding设置舍入模式。
+Return a new Decimal whose value is the natural logarithm of the value of this Decimal,rounded to `precision` significant digits using rounding mode `rounding`.
 
 **Since:** 12
 
@@ -1634,7 +1634,7 @@ ln(): Decimal
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 10200060 | Precision limit exceeded. |
+| [10200060](../errorcode-utils.md#10200060-precision-limit-is-exceeded) | Precision limit exceeded. |
 
 ## ln
 
@@ -1642,7 +1642,7 @@ ln(): Decimal
 static ln(n: Value): Decimal
 ```
 
-返回一个新的Decimal对象，其值为n的自然对数。按照precision设置有效位数，按照rounding设置舍入模式。
+Return a new Decimal whose value is the natural logarithm of `n`, rounded to `precision`significant digits using rounding mode `rounding`.
 
 **Since:** 12
 
@@ -1670,8 +1670,8 @@ static ln(n: Value): Decimal
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1. Incorrect parameter types; 2. Parameter verification failed. |
-| 10200060 | Precision limit exceeded. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Incorrect parameter types; 2. Parameter verification failed. |
+| [10200060](../errorcode-utils.md#10200060-precision-limit-is-exceeded) | Precision limit exceeded. |
 
 ## log
 
@@ -1679,7 +1679,7 @@ static ln(n: Value): Decimal
 log(n: Value): Decimal
 ```
 
-返回一个对数运算后的Decimal对象，其值是以n为底的对数值。按照precision设置有效位数，按照rounding设置舍入模式。
+Return the logarithm of the value of this Decimal to the specified base, rounded to `precision`significant digits using rounding mode `rounding`.
 
 **Since:** 12
 
@@ -1707,8 +1707,8 @@ log(n: Value): Decimal
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1. Incorrect parameter types; 2. Parameter verification failed. |
-| 10200060 | Precision limit exceeded. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Incorrect parameter types; 2. Parameter verification failed. |
+| [10200060](../errorcode-utils.md#10200060-precision-limit-is-exceeded) | Precision limit exceeded. |
 
 ## log
 
@@ -1716,7 +1716,7 @@ log(n: Value): Decimal
 static log(n: Value, base: Value): Decimal
 ```
 
-返回一个新的Decimal对象，其值是以base为底n的对数。按照precision设置有效位数，按照rounding设置舍入模式。
+Return a new Decimal whose value is the log of `n` to the base `base`, rounded to `precision`significant digits using rounding mode `rounding`.
 
 **Since:** 12
 
@@ -1745,8 +1745,8 @@ static log(n: Value, base: Value): Decimal
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1. Incorrect parameter types; 2. Parameter verification failed. |
-| 10200060 | Precision limit exceeded. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Incorrect parameter types; 2. Parameter verification failed. |
+| [10200060](../errorcode-utils.md#10200060-precision-limit-is-exceeded) | Precision limit exceeded. |
 
 ## log10
 
@@ -1754,7 +1754,7 @@ static log(n: Value, base: Value): Decimal
 static log10(n: Value): Decimal
 ```
 
-返回一个新的Decimal对象，其值是以10为底n的对数。按照precision设置有效位数，按照rounding设置舍入模式。
+Return a new Decimal whose value is the base 10 logarithm of `n`, rounded to `precision`significant digits using rounding mode `rounding`.
 
 **Since:** 12
 
@@ -1782,8 +1782,8 @@ static log10(n: Value): Decimal
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1. Incorrect parameter types; 2. Parameter verification failed. |
-| 10200060 | Precision limit exceeded. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Incorrect parameter types; 2. Parameter verification failed. |
+| [10200060](../errorcode-utils.md#10200060-precision-limit-is-exceeded) | Precision limit exceeded. |
 
 ## log2
 
@@ -1791,7 +1791,7 @@ static log10(n: Value): Decimal
 static log2(n: Value): Decimal
 ```
 
-返回一个新的Decimal对象，其值是以2为底n的对数。按照precision设置有效位数，按照rounding设置舍入模式。
+Return a new Decimal whose value is the base 2 logarithm of `n`, rounded to `precision`significant digits using rounding mode `rounding`.
 
 **Since:** 12
 
@@ -1819,8 +1819,8 @@ static log2(n: Value): Decimal
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1. Incorrect parameter types; 2. Parameter verification failed. |
-| 10200060 | Precision limit exceeded. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Incorrect parameter types; 2. Parameter verification failed. |
+| [10200060](../errorcode-utils.md#10200060-precision-limit-is-exceeded) | Precision limit exceeded. |
 
 ## max
 
@@ -1828,7 +1828,7 @@ static log2(n: Value): Decimal
 static max(...n: Value[]): Decimal
 ```
 
-返回一个新的Decimal对象，其值是所有参数中的最大值。
+Return a new Decimal whose value is the maximum of the arguments.
 
 **Since:** 12
 
@@ -1856,7 +1856,7 @@ static max(...n: Value[]): Decimal
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1. Incorrect parameter types; 2. Parameter verification failed. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Incorrect parameter types; 2. Parameter verification failed. |
 
 ## min
 
@@ -1864,7 +1864,7 @@ static max(...n: Value[]): Decimal
 static min(...n: Value[]): Decimal
 ```
 
-返回一个新的Decimal对象，其值是所有参数中的最小值。
+Return a new Decimal whose value is the minimum of the arguments.
 
 **Since:** 12
 
@@ -1892,7 +1892,7 @@ static min(...n: Value[]): Decimal
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1. Incorrect parameter types; 2. Parameter verification failed. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Incorrect parameter types; 2. Parameter verification failed. |
 
 ## mod
 
@@ -1900,7 +1900,7 @@ static min(...n: Value[]): Decimal
 mod(n: Value): Decimal
 ```
 
-返回一个新的Decimal对象，其值是将此Decimal的值除以n后的模。按照precision设置有效位数，按照rounding设置舍入模式。
+Return a new Decimal whose value is the value of this Decimal modulo `n`, rounded to`precision` significant digits using rounding mode `rounding`.
 
 **Since:** 12
 
@@ -1928,7 +1928,7 @@ mod(n: Value): Decimal
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1. Incorrect parameter types; 2. Parameter verification failed. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Incorrect parameter types; 2. Parameter verification failed. |
 
 ## mod
 
@@ -1936,7 +1936,7 @@ mod(n: Value): Decimal
 static mod(x: Value, y: Value): Decimal
 ```
 
-返回一个新的Decimal对象，其值是x除以y的模。按照precision设置有效位数，按照rounding设置舍入模式。
+Return a new Decimal whose value is `x` modulo `y`, rounded to `precision` significant digits using rounding mode `rounding`.
 
 **Since:** 12
 
@@ -1965,7 +1965,7 @@ static mod(x: Value, y: Value): Decimal
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1. Incorrect parameter types; 2. Parameter verification failed. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Incorrect parameter types; 2. Parameter verification failed. |
 
 ## mul
 
@@ -1973,7 +1973,7 @@ static mod(x: Value, y: Value): Decimal
 mul(n: Value): Decimal
 ```
 
-返回一个新的Decimal对象，其值是将此Decimal的值乘以n。按照precision设置有效位数，按照rounding设置舍入模式。
+Return a new Decimal whose value is this Decimal times `n`, rounded to `precision` significant digits using rounding mode `rounding`.
 
 **Since:** 12
 
@@ -2001,7 +2001,7 @@ mul(n: Value): Decimal
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1. Incorrect parameter types; 2. Parameter verification failed. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Incorrect parameter types; 2. Parameter verification failed. |
 
 ## mul
 
@@ -2009,7 +2009,7 @@ mul(n: Value): Decimal
 static mul(x: Value, y: Value): Decimal
 ```
 
-返回一个新的Decimal对象，其值为x乘以y的积。按照precision设置有效位数，按照rounding设置舍入模式。
+Return a new Decimal whose value is `x` multiplied by `y`, rounded to `precision` significant digits using rounding mode `rounding`.
 
 **Since:** 12
 
@@ -2038,7 +2038,7 @@ static mul(x: Value, y: Value): Decimal
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1. Incorrect parameter types; 2. Parameter verification failed. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Incorrect parameter types; 2. Parameter verification failed. |
 
 ## negate
 
@@ -2046,7 +2046,7 @@ static mul(x: Value, y: Value): Decimal
 negate(): Decimal
 ```
 
-返回一个新的Decimal对象，其值将此Decimal的值乘以-1。
+Return a new Decimal whose value is the value of this Decimal negated, i.e. as if multiplied by -1.
 
 **Since:** 12
 
@@ -2070,7 +2070,7 @@ negate(): Decimal
 pow(n: Value): Decimal
 ```
 
-返回一个新的Decimal对象，其值是这个Decimal值的n次幂。按照precision设置有效位数，按照rounding设置舍入模式。
+Return a new Decimal whose value is the value of this Decimal raised to the power `n`, rounded to `precision` significant digits using rounding mode `rounding`.
 
 **Since:** 12
 
@@ -2098,8 +2098,8 @@ pow(n: Value): Decimal
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1. Incorrect parameter types; 2. Parameter verification failed. |
-| 10200060 | Precision limit exceeded. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Incorrect parameter types; 2. Parameter verification failed. |
+| [10200060](../errorcode-utils.md#10200060-precision-limit-is-exceeded) | Precision limit exceeded. |
 
 ## pow
 
@@ -2107,7 +2107,7 @@ pow(n: Value): Decimal
 static pow(base: Value, exponent: Value): Decimal
 ```
 
-返回一个新的Decimal对象，其值为base的exponent次幂。按照precision设置有效位数，按照rounding设置舍入模式。
+Return a new Decimal whose value is `base` raised to the power `exponent`, rounded to precision significant digits using rounding mode `rounding`.
 
 **Since:** 12
 
@@ -2123,8 +2123,8 @@ static pow(base: Value, exponent: Value): Decimal
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| base | [Value](../../apis-arkdata/arkts-apis/arkts-arkdata-distributeddata-value-i.md) | Yes | {double \| string \| Decimal} 幂运算的底数的值。 |
-| exponent | [Value](../../apis-arkdata/arkts-apis/arkts-arkdata-distributeddata-value-i.md) | Yes | {double \| string \| Decimal} 幂运算的幂的值。 |
+| base | [Value](../../apis-arkdata/arkts-apis/arkts-arkdata-distributeddata-value-i.md) | Yes | {double \| string \| Decimal} The base. |
+| exponent | [Value](../../apis-arkdata/arkts-apis/arkts-arkdata-distributeddata-value-i.md) | Yes | {double \| string \| Decimal} The exponent. |
 
 **Return value:**
 
@@ -2136,8 +2136,8 @@ static pow(base: Value, exponent: Value): Decimal
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1. Incorrect parameter types; 2. Parameter verification failed. |
-| 10200060 | Precision limit exceeded. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Incorrect parameter types; 2. Parameter verification failed. |
+| [10200060](../errorcode-utils.md#10200060-precision-limit-is-exceeded) | Precision limit exceeded. |
 
 ## precision
 
@@ -2151,7 +2151,7 @@ ArkTS-Sta:
 precision(): double
 ```
 
-返回Decimal对象的有效数字位数。
+Return the number of significant digits of the value of this Decimal.
 
 **Since:** 12
 
@@ -2181,7 +2181,7 @@ ArkTS-Sta:
 precision(includeZeros: boolean | int): double
 ```
 
-返回Decimal对象的有效数字位数，可通过includeZeros判断是否计算整数部分的尾随零。
+Return the number of significant digits of the value of this Decimal, whether to count integer-part trailing zeros.
 
 **Since:** 12
 
@@ -2197,7 +2197,7 @@ precision(includeZeros: boolean | int): double
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| includeZeros | ArkTS-Dyn: boolean \| number  <br>ArkTS-Sta：boolean \| int | Yes | 是否计算整数部分尾随零。true或1表示计算，false或0表示不计算。 |
+| includeZeros | ArkTS-Dyn: boolean \| number  <br>ArkTS-Sta：boolean \| int | Yes | Whether to count integer-part trailing zeros: true, false, 1 or 0. |
 
 **Return value:**
 
@@ -2209,7 +2209,7 @@ precision(includeZeros: boolean | int): double
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 10200001 | The value of `includeZeros` is out of range. |
+| [10200001](../errorcode-utils.md#10200001-value-out-of-range) | The value of `includeZeros` is out of range. |
 
 ## random
 
@@ -2217,7 +2217,7 @@ precision(includeZeros: boolean | int): double
 static random(): Decimal
 ```
 
-返回一个新的Decimal对象，其值为大于等于0且小于1的随机值。
+Returns a new Decimal with a random value equal to or greater than 0 and less than 1.
 
 **Since:** 12
 
@@ -2239,7 +2239,7 @@ static random(): Decimal
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 10200061 | Crypto unavailable |
+| [10200061](../errorcode-utils.md#10200061-encryption-method-is-unavailable) | Crypto unavailable |
 
 ## random
 
@@ -2253,7 +2253,7 @@ ArkTS-Sta:
 static random(significantDigits: double): Decimal
 ```
 
-返回一个新的Decimal对象，其值为大于等于0且小于1的随机值，并保留significantDigits位有效数字（若产生尾随零则可能少于该位数）。
+Returns a new Decimal with a random value equal to or greater than 0 and less than 1, and with`significantDigits` significant digits (or less if trailing zeros are produced).
 
 **Since:** 12
 
@@ -2269,7 +2269,7 @@ static random(significantDigits: double): Decimal
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| significantDigits | ArkTS-Dyn: number  <br>ArkTS-Sta：double | Yes | {number} 随机值保留的有效数字。取值范围为[0, 1e9]的整数。[since 12 - 17] |
+| significantDigits | ArkTS-Dyn: number  <br>ArkTS-Sta：double | Yes | {number} Significant digits. Integer, 0 to MAX_DIGITS inclusive. [since 12 - 17] |
 
 **Return value:**
 
@@ -2281,8 +2281,8 @@ static random(significantDigits: double): Decimal
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1. Incorrect parameter types; 2. Parameter verification failed. |
-| 10200061 | Crypto unavailable |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Incorrect parameter types; 2. Parameter verification failed. |
+| [10200061](../errorcode-utils.md#10200061-encryption-method-is-unavailable) | Crypto unavailable |
 
 ## round
 
@@ -2290,7 +2290,7 @@ static random(significantDigits: double): Decimal
 static round(n: Value): Decimal
 ```
 
-返回一个新的Decimal对象，其值是使用rounding舍入模式将n舍入为整数的结果。
+Return a new Decimal whose value is `n` rounded to an integer using rounding mode `rounding`.
 
 **Since:** 12
 
@@ -2318,7 +2318,7 @@ static round(n: Value): Decimal
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1. Incorrect parameter types; 2. Parameter verification failed. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Incorrect parameter types; 2. Parameter verification failed. |
 
 ## set
 
@@ -2326,7 +2326,7 @@ static round(n: Value): Decimal
 static set(config: DecimalConfig): void
 ```
 
-用于设置Decimal的配置属性，通过set设置的属性是全局生效的。
+Configures the 'global' settings for this particular Decimal constructor.
 
 **Since:** 12
 
@@ -2348,9 +2348,9 @@ static set(config: DecimalConfig): void
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1. Incorrect parameter types; 2. Parameter verification failed. |
-| 10200061 | Crypto unavailable |
-| 10200001 | The value of `DecimalConfig.properties` is out of range. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Incorrect parameter types; 2. Parameter verification failed. |
+| [10200061](../errorcode-utils.md#10200061-encryption-method-is-unavailable) | Crypto unavailable |
+| [10200001](../errorcode-utils.md#10200001-value-out-of-range) | The value of `DecimalConfig.properties` is out of range. |
 
 ## sign
 
@@ -2364,11 +2364,11 @@ ArkTS-Sta:
 static sign(n: Value): double
 ```
 
-根据参数n的值返回对应的符号：1 如果 n > 0，  
--1 如果 n < 0，  
-0 如果 n 为 0，  
--0 如果 n 为 -0，  
-NaN 其他情况
+Return the sign of the passed value to the method.1 if x > 0,  
+-1 if x < 0,  
+0 if x is 0,  
+-0 if x is -0,  
+NaN otherwise
 
 **Since:** 12
 
@@ -2397,7 +2397,7 @@ NaN 其他情况
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1. Incorrect parameter types; 2. Parameter verification failed. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Incorrect parameter types; 2. Parameter verification failed. |
 
 ## sin
 
@@ -2405,7 +2405,7 @@ NaN 其他情况
 sin(): Decimal
 ```
 
-返回一个新的Decimal对象，其值是此Decimal的正弦值。
+Return a new Decimal whose value is the sine of the value in radians of this Decimal.
 
 **Since:** 12
 
@@ -2429,7 +2429,7 @@ sin(): Decimal
 static sin(n: Value): Decimal
 ```
 
-返回一个新的Decimal对象，其值是n的正弦值。按照precision设置有效位数，按照rounding设置舍入模式。
+Return a new Decimal whose value is the sine of `n`, rounded to `precision` significant digits using rounding mode `rounding`.
 
 **Since:** 12
 
@@ -2445,7 +2445,7 @@ static sin(n: Value): Decimal
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| n | [Value](../../apis-arkdata/arkts-apis/arkts-arkdata-distributeddata-value-i.md) | Yes | {double \| string \| Decimal} 以弧度为单位的值。 |
+| n | [Value](../../apis-arkdata/arkts-apis/arkts-arkdata-distributeddata-value-i.md) | Yes | {double \| string \| Decimal} A value in radians. |
 
 **Return value:**
 
@@ -2457,7 +2457,7 @@ static sin(n: Value): Decimal
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1. Incorrect parameter types; 2. Parameter verification failed. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Incorrect parameter types; 2. Parameter verification failed. |
 
 ## sinh
 
@@ -2465,7 +2465,7 @@ static sin(n: Value): Decimal
 sinh(): Decimal
 ```
 
-返回一个新的Decimal对象，其值是此Decimal的双曲正弦值。
+Return a new Decimal whose value is the hyperbolic sine of the value in radians of this Decimal.
 
 **Since:** 12
 
@@ -2489,7 +2489,7 @@ sinh(): Decimal
 static sinh(n: Value): Decimal
 ```
 
-返回一个新的Decimal对象，其值是n的双曲正弦值。按照precision设置有效位数，按照rounding设置舍入模式。
+Return a new Decimal whose value is the hyperbolic sine of `n`, rounded to `precision`significant digits using rounding mode `rounding`.
 
 **Since:** 12
 
@@ -2517,7 +2517,7 @@ static sinh(n: Value): Decimal
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1. Incorrect parameter types; 2. Parameter verification failed. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Incorrect parameter types; 2. Parameter verification failed. |
 
 ## sqrt
 
@@ -2525,7 +2525,7 @@ static sinh(n: Value): Decimal
 sqrt(): Decimal
 ```
 
-返回一个新的Decimal对象，其值是当前Decimal的平方根。按照precision设置有效位数，按照rounding设置舍入模式。
+Return a new Decimal whose value is the square root of this Decimal, rounded to `precision`significant digits using rounding mode `rounding`.
 
 **Since:** 12
 
@@ -2549,7 +2549,7 @@ sqrt(): Decimal
 static sqrt(n: Value): Decimal
 ```
 
-返回一个新的Decimal对象，其值为n的平方根。按照precision设置有效位数，按照rounding设置舍入模式。
+Return a new Decimal whose value is the square root of `n`, rounded to `precision` significant digits using rounding mode `rounding`.
 
 **Since:** 12
 
@@ -2577,7 +2577,7 @@ static sqrt(n: Value): Decimal
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1. Incorrect parameter types; 2. Parameter verification failed. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Incorrect parameter types; 2. Parameter verification failed. |
 
 ## sub
 
@@ -2585,7 +2585,7 @@ static sqrt(n: Value): Decimal
 sub(n: Value): Decimal
 ```
 
-返回一个新的Decimal对象，其值是将此Decimal的值减去n。按照precision设置有效位数，按照rounding设置舍入模式。
+Return a new Decimal whose value is the value of this Decimal minus `n`, rounded to `precision`significant digits using rounding mode `rounding`.
 
 **Since:** 12
 
@@ -2613,7 +2613,7 @@ sub(n: Value): Decimal
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1. Incorrect parameter types; 2. Parameter verification failed. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Incorrect parameter types; 2. Parameter verification failed. |
 
 ## sub
 
@@ -2621,7 +2621,7 @@ sub(n: Value): Decimal
 static sub(x: Value, y: Value): Decimal
 ```
 
-返回一个新的Decimal对象，其值为x减y的差。按照precision设置有效位数，按照rounding设置舍入模式。
+Return a new Decimal whose value is `x` minus `y`, rounded to `precision` significant digits using rounding mode `rounding`.
 
 **Since:** 12
 
@@ -2650,7 +2650,7 @@ static sub(x: Value, y: Value): Decimal
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1. Incorrect parameter types; 2. Parameter verification failed. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Incorrect parameter types; 2. Parameter verification failed. |
 
 ## sum
 
@@ -2658,9 +2658,9 @@ static sub(x: Value, y: Value): Decimal
 static sum(...n: Value[]): Decimal
 ```
 
-返回一个新的Decimal对象，其值为参数的和。按照precision设置有效位数，按照rounding设置舍入模式。
+Return a new Decimal whose value is the sum of the arguments, rounded to `precision`significant digits using rounding mode `rounding`.
 
-仅对结果进行舍入，不对中间计算结果进行舍入。
+Only the result is rounded, not the intermediate calculations.
 
 **Since:** 12
 
@@ -2688,7 +2688,7 @@ static sum(...n: Value[]): Decimal
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1. Incorrect parameter types; 2. Parameter verification failed. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Incorrect parameter types; 2. Parameter verification failed. |
 
 ## tan
 
@@ -2696,7 +2696,7 @@ static sum(...n: Value[]): Decimal
 tan(): Decimal
 ```
 
-返回一个新的Decimal对象，其值是此Decimal的正切值。
+Return a new Decimal whose value is the tangent of the value in radians of this Decimal.
 
 **Since:** 12
 
@@ -2720,7 +2720,7 @@ tan(): Decimal
 static tan(n: Value): Decimal
 ```
 
-返回一个新的Decimal对象，其值是n的正切值。按照precision设置有效位数，按照rounding设置舍入模式。
+Return a new Decimal whose value is the tangent of `n`, rounded to `precision` significant digits using rounding mode `rounding`.
 
 **Since:** 12
 
@@ -2736,7 +2736,7 @@ static tan(n: Value): Decimal
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| n | [Value](../../apis-arkdata/arkts-apis/arkts-arkdata-distributeddata-value-i.md) | Yes | {double \| string \| Decimal} 以弧度为单位的值。 |
+| n | [Value](../../apis-arkdata/arkts-apis/arkts-arkdata-distributeddata-value-i.md) | Yes | {double \| string \| Decimal} A value in radians. |
 
 **Return value:**
 
@@ -2748,7 +2748,7 @@ static tan(n: Value): Decimal
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1. Incorrect parameter types; 2. Parameter verification failed. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Incorrect parameter types; 2. Parameter verification failed. |
 
 ## tanh
 
@@ -2756,7 +2756,7 @@ static tan(n: Value): Decimal
 tanh(): Decimal
 ```
 
-返回一个新的Decimal对象，其值是此Decimal的双曲正切值。
+Return a new Decimal whose value is the hyperbolic tangent of the value in radians of this Decimal.
 
 **Since:** 12
 
@@ -2780,7 +2780,7 @@ tanh(): Decimal
 static tanh(n: Value): Decimal
 ```
 
-返回一个新的Decimal对象，其值是n的双曲正切值。按照precision设置有效位数，按照rounding设置舍入模式。
+Return a new Decimal whose value is the hyperbolic tangent of `n`, rounded to `precision`significant digits using rounding mode `rounding`.
 
 **Since:** 12
 
@@ -2796,7 +2796,7 @@ static tanh(n: Value): Decimal
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| n | [Value](../../apis-arkdata/arkts-apis/arkts-arkdata-distributeddata-value-i.md) | Yes | {double \| string \| Decimal} 以弧度为单位的值。 |
+| n | [Value](../../apis-arkdata/arkts-apis/arkts-arkdata-distributeddata-value-i.md) | Yes | {double \| string \| Decimal} A value in radians. |
 
 **Return value:**
 
@@ -2808,7 +2808,7 @@ static tanh(n: Value): Decimal
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1. Incorrect parameter types; 2. Parameter verification failed. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Incorrect parameter types; 2. Parameter verification failed. |
 
 ## toBinary
 
@@ -2816,7 +2816,7 @@ static tanh(n: Value): Decimal
 toBinary(): string
 ```
 
-将Decimal转换为二进制表示的字符串。
+Return a string representing the value of this Decimal in base 2.
 
 **Since:** 12
 
@@ -2846,7 +2846,7 @@ ArkTS-Sta:
 toBinary(significantDigits: double): string
 ```
 
-将Decimal转换为二进制表示的字符串，可按照significantDigits设置有效数字。
+Return a string representing the value of this Decimal in base 2, round to `significantDigits`significant digits.
 
 **Since:** 12
 
@@ -2862,7 +2862,7 @@ toBinary(significantDigits: double): string
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| significantDigits | ArkTS-Dyn: number  <br>ArkTS-Sta：double | Yes | 转换时保留的有效数字。取值范围为[1, 1e9]的整数。 |
+| significantDigits | ArkTS-Dyn: number  <br>ArkTS-Sta：double | Yes | Significant digits. Integer, 1 to MAX_DIGITS inclusive. |
 
 **Return value:**
 
@@ -2874,7 +2874,7 @@ toBinary(significantDigits: double): string
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 10200001 | The value of `significantDigits` is out of range. |
+| [10200001](../errorcode-utils.md#10200001-value-out-of-range) | The value of `significantDigits` is out of range. |
 
 ## toBinary
 
@@ -2888,7 +2888,7 @@ ArkTS-Sta:
 toBinary(significantDigits: double, rounding: Rounding): string
 ```
 
-将Decimal转换为二进制表示的字符串，可按照significantDigits设置有效数字，可按照rounding设置舍入模式。
+Return a string representing the value of this Decimal in base 2, round to `significantDigits`significant digits using rounding mode `rounding`.
 
 **Since:** 12
 
@@ -2904,8 +2904,8 @@ toBinary(significantDigits: double, rounding: Rounding): string
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| significantDigits | ArkTS-Dyn: number  <br>ArkTS-Sta：double | Yes | 转换时保留的有效数字。取值范围为[1, 1e9]的整数。 |
-| rounding | [Rounding](arkts-arkts-rounding-t.md) | Yes | 转换时使用的舍入模式。取值范围为0到8的整数。 |
+| significantDigits | ArkTS-Dyn: number  <br>ArkTS-Sta：double | Yes | Significant digits. Integer, 1 to MAX_DIGITS inclusive. |
+| rounding | [Rounding](arkts-arkts-rounding-t.md) | Yes | Rounding mode. Integer, 0 to 8 inclusive. |
 
 **Return value:**
 
@@ -2917,7 +2917,7 @@ toBinary(significantDigits: double, rounding: Rounding): string
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 10200001 | The value of `significantDigits \| rounding` is out of range. |
+| [10200001](../errorcode-utils.md#10200001-value-out-of-range) | The value of `significantDigits \| rounding` is out of range. |
 
 ## toDecimalPlaces
 
@@ -2925,7 +2925,7 @@ toBinary(significantDigits: double, rounding: Rounding): string
 toDecimalPlaces(): Decimal
 ```
 
-返回一个保留小数点后指定位数的Decimal对象，不进行小数的取舍。
+Return a new Decimal whose value is the value of this Decimal.
 
 **Since:** 12
 
@@ -2955,7 +2955,7 @@ ArkTS-Sta:
 toDecimalPlaces(decimalPlaces: double): Decimal
 ```
 
-返回一个保留小数点后指定位数的Decimal对象，可按照decimalPlaces设置小数位数。
+Return a new Decimal whose value is the value of this Decimal rounded to a maximum of `decimalPlaces`decimal places.
 
 **Since:** 12
 
@@ -2971,7 +2971,7 @@ toDecimalPlaces(decimalPlaces: double): Decimal
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| decimalPlaces | ArkTS-Dyn: number  <br>ArkTS-Sta：double | Yes | 转换时保留的小数点后有效位数。取值范围为[0, 1e9]的整数。 |
+| decimalPlaces | ArkTS-Dyn: number  <br>ArkTS-Sta：double | Yes | Significant digits. Integer, 1 to MAX_DIGITS inclusive. |
 
 **Return value:**
 
@@ -2983,7 +2983,7 @@ toDecimalPlaces(decimalPlaces: double): Decimal
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 10200001 | The value of `decimalPlaces` is out of range. |
+| [10200001](../errorcode-utils.md#10200001-value-out-of-range) | The value of `decimalPlaces` is out of range. |
 
 ## toDecimalPlaces
 
@@ -2997,7 +2997,7 @@ ArkTS-Sta:
 toDecimalPlaces(decimalPlaces: double, rounding: Rounding): Decimal
 ```
 
-返回一个保留小数点后指定位数的Decimal对象，可按照decimalPlaces设置小数位数，可按照rounding设置舍入模式。
+Return a new Decimal whose value is the value of this Decimal rounded to a maximum of `decimalPlaces`decimal places using rounding mode `rounding`.
 
 **Since:** 12
 
@@ -3013,8 +3013,8 @@ toDecimalPlaces(decimalPlaces: double, rounding: Rounding): Decimal
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| decimalPlaces | ArkTS-Dyn: number  <br>ArkTS-Sta：double | Yes | 转换时保留的小数点后有效位数。取值范围为[0, 1e9]的整数。 |
-| rounding | [Rounding](arkts-arkts-rounding-t.md) | Yes | 转换时使用的舍入模式。取值范围为0到8的整数。 |
+| decimalPlaces | ArkTS-Dyn: number  <br>ArkTS-Sta：double | Yes | Significant digits. Integer, 1 to MAX_DIGITS inclusive. |
+| rounding | [Rounding](arkts-arkts-rounding-t.md) | Yes | Rounding mode. Integer, 0 to 8 inclusive. |
 
 **Return value:**
 
@@ -3026,7 +3026,7 @@ toDecimalPlaces(decimalPlaces: double, rounding: Rounding): Decimal
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 10200001 | The value of `decimalPlaces \| rounding` is out of range. |
+| [10200001](../errorcode-utils.md#10200001-value-out-of-range) | The value of `decimalPlaces \| rounding` is out of range. |
 
 ## toExponential
 
@@ -3034,7 +3034,7 @@ toDecimalPlaces(decimalPlaces: double, rounding: Rounding): Decimal
 toExponential(): string
 ```
 
-将数值转换为指数表示法的字符串，不进行小数部分的舍入。
+Return a string representing the value of this Decimal in exponential notation.
 
 **Since:** 12
 
@@ -3064,7 +3064,7 @@ ArkTS-Sta:
 toExponential(decimalPlaces: double): string
 ```
 
-将数值转换为指数表示法的字符串，可按照decimalPlaces设置小数位数。
+Return a string representing the value of this Decimal in exponential notation rounded to`decimalPlaces` fixed decimal places.
 
 **Since:** 12
 
@@ -3080,7 +3080,7 @@ toExponential(decimalPlaces: double): string
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| decimalPlaces | ArkTS-Dyn: number  <br>ArkTS-Sta：double | Yes | 转换时保留的小数点后有效位数。取值范围为[0, 1e9]的整数。 |
+| decimalPlaces | ArkTS-Dyn: number  <br>ArkTS-Sta：double | Yes | Decimal places. Integer, 0 to MAX_DIGITS inclusive. |
 
 **Return value:**
 
@@ -3092,7 +3092,7 @@ toExponential(decimalPlaces: double): string
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 10200001 | The value of `decimalPlaces` is out of range. |
+| [10200001](../errorcode-utils.md#10200001-value-out-of-range) | The value of `decimalPlaces` is out of range. |
 
 ## toExponential
 
@@ -3106,7 +3106,7 @@ ArkTS-Sta:
 toExponential(decimalPlaces: double, rounding: Rounding): string
 ```
 
-将数值转换为指数表示法的字符串，可按照decimalPlaces设置小数位数，可按照rounding设置舍入模式。
+Return a string representing the value of this Decimal in exponential notation rounded to`decimalPlaces` fixed decimal places using rounding mode `rounding`.
 
 **Since:** 12
 
@@ -3122,8 +3122,8 @@ toExponential(decimalPlaces: double, rounding: Rounding): string
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| decimalPlaces | ArkTS-Dyn: number  <br>ArkTS-Sta：double | Yes | 转换时保留的小数点后有效位数。取值范围为[0, 1e9]的整数。 |
-| rounding | [Rounding](arkts-arkts-rounding-t.md) | Yes | 转换时使用的舍入模式。取值范围为0到8的整数。 |
+| decimalPlaces | ArkTS-Dyn: number  <br>ArkTS-Sta：double | Yes | Decimal places. Integer, 0 to MAX_DIGITS inclusive. |
+| rounding | [Rounding](arkts-arkts-rounding-t.md) | Yes | Rounding mode. Integer, 0 to 8 inclusive. |
 
 **Return value:**
 
@@ -3135,7 +3135,7 @@ toExponential(decimalPlaces: double, rounding: Rounding): string
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 10200001 | The value of `decimalPlaces \| rounding` is out of range. |
+| [10200001](../errorcode-utils.md#10200001-value-out-of-range) | The value of `decimalPlaces \| rounding` is out of range. |
 
 ## toFixed
 
@@ -3143,7 +3143,7 @@ toExponential(decimalPlaces: double, rounding: Rounding): string
 toFixed(): string
 ```
 
-将数值转换为十进制定点模式表示的字符串，不进行小数的取舍。
+Return a string representing the value of this Decimal in normal (fixed-point).
 
 **Since:** 12
 
@@ -3173,7 +3173,7 @@ ArkTS-Sta:
 toFixed(decimalPlaces: double): string
 ```
 
-将数值转换为十进制定点模式表示的字符串，可按照decimalPlaces设置小数位数。
+Return a string representing the value of this Decimal in normal (fixed-point) notation to`decimalPlaces` fixed decimal places.
 
 **Since:** 12
 
@@ -3183,13 +3183,14 @@ toFixed(decimalPlaces: double): string
 
 <!--Device-Decimal-toFixed(decimalPlaces: double): string--><!--Device-Decimal-toFixed(decimalPlaces: double): string-End-->
 
-**System capability:** SystemCapability.Utils.Lang
+**System capability:** 
+- API version 18 and later: SystemCapability.Utils.Lang
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| decimalPlaces | ArkTS-Dyn: number  <br>ArkTS-Sta：double | Yes | 转换时保留的小数点后有效位数。取值范围为[0, 1e9]的整数。 |
+| decimalPlaces | ArkTS-Dyn: number  <br>ArkTS-Sta：double | Yes | Decimal places. Integer, 0 to MAX_DIGITS inclusive. |
 
 **Return value:**
 
@@ -3201,7 +3202,7 @@ toFixed(decimalPlaces: double): string
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 10200001 | The value of `decimalPlaces` is out of range. |
+| [10200001](../errorcode-utils.md#10200001-value-out-of-range) | The value of `decimalPlaces` is out of range. |
 
 ## toFixed
 
@@ -3215,7 +3216,7 @@ ArkTS-Sta:
 toFixed(decimalPlaces: double, rounding: Rounding): string
 ```
 
-将数值转换为十进制定点模式表示的字符串，可按照decimalPlaces设置小数位数，可按照rounding设置舍入模式。
+Return a string representing the value of this Decimal in normal (fixed-point) notation to`decimalPlaces` fixed decimal places and rounded using rounding mode `rounding`.
 
 **Since:** 12
 
@@ -3231,8 +3232,8 @@ toFixed(decimalPlaces: double, rounding: Rounding): string
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| decimalPlaces | ArkTS-Dyn: number  <br>ArkTS-Sta：double | Yes | 转换时保留的小数点后有效位数。取值范围为[0, 1e9]的整数。 |
-| rounding | [Rounding](arkts-arkts-rounding-t.md) | Yes | 转换时使用的舍入模式。取值范围为0到8的整数。 |
+| decimalPlaces | ArkTS-Dyn: number  <br>ArkTS-Sta：double | Yes | Decimal places. Integer, 0 to MAX_DIGITS inclusive. |
+| rounding | [Rounding](arkts-arkts-rounding-t.md) | Yes | Rounding mode. Integer, 0 to 8 inclusive. |
 
 **Return value:**
 
@@ -3244,7 +3245,7 @@ toFixed(decimalPlaces: double, rounding: Rounding): string
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 10200001 | The value of `decimalPlaces \| rounding` is out of range. |
+| [10200001](../errorcode-utils.md#10200001-value-out-of-range) | The value of `decimalPlaces \| rounding` is out of range. |
 
 ## toFraction
 
@@ -3252,7 +3253,7 @@ toFixed(decimalPlaces: double, rounding: Rounding): string
 toFraction(): Decimal[]
 ```
 
-转换为分数表示的数。返回一个长度固定为2的Decimal数组，分别表示分子和分母。
+Return an array representing the value of this Decimal as a simple fraction with an integer numerator and an integer denominator.
 
 **Since:** 12
 
@@ -3276,7 +3277,7 @@ toFraction(): Decimal[]
 toFraction(maxDenominator: Value): Decimal[]
 ```
 
-转换为分数表示的数，可以通过maxDenominator设置最大分母值。返回一个长度固定为2的Decimal数组，分别表示分子和分母。
+Return an array representing the value of this Decimal as a simple fraction with an integer numerator and an integer denominator. The denominator will be a positive non-zero value less than or equal to `max_denominator`.
 
 **Since:** 12
 
@@ -3304,7 +3305,7 @@ toFraction(maxDenominator: Value): Decimal[]
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1. Incorrect parameter types; 2. Parameter verification failed. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Incorrect parameter types; 2. Parameter verification failed. |
 
 ## toHexadecimal
 
@@ -3312,7 +3313,7 @@ toFraction(maxDenominator: Value): Decimal[]
 toHexadecimal(): string
 ```
 
-将Decimal转换为十六进制表示的字符串。
+Return a string representing the value of this Decimal in base 16
 
 **Since:** 12
 
@@ -3342,7 +3343,7 @@ ArkTS-Sta:
 toHexadecimal(significantDigits: double): string
 ```
 
-将Decimal转换为十六进制表示的字符串，可按照significantDigits设置有效数字。
+Return a string representing the value of this Decimal in base 16, round to `significantDigits` significant.
 
 **Since:** 12
 
@@ -3358,7 +3359,7 @@ toHexadecimal(significantDigits: double): string
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| significantDigits | ArkTS-Dyn: number  <br>ArkTS-Sta：double | Yes | 转换时保留的有效数字。取值范围为[1, 1e9]的整数。 |
+| significantDigits | ArkTS-Dyn: number  <br>ArkTS-Sta：double | Yes | Significant digits. Integer, 1 to MAX_DIGITS inclusive. |
 
 **Return value:**
 
@@ -3370,7 +3371,7 @@ toHexadecimal(significantDigits: double): string
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 10200001 | The value of `significantDigits` is out of range. |
+| [10200001](../errorcode-utils.md#10200001-value-out-of-range) | The value of `significantDigits` is out of range. |
 
 ## toHexadecimal
 
@@ -3384,7 +3385,7 @@ ArkTS-Sta:
 toHexadecimal(significantDigits: double, rounding: Rounding): string
 ```
 
-将Decimal转换为十六进制表示的字符串，可按照significantDigits设置有效数字，可按照rounding设置舍入模式。
+Return a string representing the value of this Decimal in base 16, round to `significantDigits` significant digits using rounding mode `rounding`.
 
 **Since:** 12
 
@@ -3400,8 +3401,8 @@ toHexadecimal(significantDigits: double, rounding: Rounding): string
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| significantDigits | ArkTS-Dyn: number  <br>ArkTS-Sta：double | Yes | 转换时保留的有效数字。取值范围为[1, 1e9]的整数。 |
-| rounding | [Rounding](arkts-arkts-rounding-t.md) | Yes | 转换时使用的舍入模式。取值范围为0到8的整数。 |
+| significantDigits | ArkTS-Dyn: number  <br>ArkTS-Sta：double | Yes | Significant digits. Integer, 1 to MAX_DIGITS inclusive. |
+| rounding | [Rounding](arkts-arkts-rounding-t.md) | Yes | Rounding mode. Integer, 0 to 8 inclusive. |
 
 **Return value:**
 
@@ -3413,7 +3414,7 @@ toHexadecimal(significantDigits: double, rounding: Rounding): string
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 10200001 | The value of `significantDigits \| rounding` is out of range. |
+| [10200001](../errorcode-utils.md#10200001-value-out-of-range) | The value of `significantDigits \| rounding` is out of range. |
 
 ## toNearest
 
@@ -3421,7 +3422,7 @@ toHexadecimal(significantDigits: double, rounding: Rounding): string
 toNearest(n: Value): Decimal
 ```
 
-返回一个新的Decimal对象，此Decimal为指定值n乘以一个倍数后与原Decimal最接近的值。
+Returns a new Decimal whose value is the nearest multiple of `n`.
 
 **Since:** 12
 
@@ -3449,7 +3450,7 @@ toNearest(n: Value): Decimal
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1. Incorrect parameter types; 2. Parameter verification failed. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Incorrect parameter types; 2. Parameter verification failed. |
 
 ## toNearest
 
@@ -3457,7 +3458,7 @@ toNearest(n: Value): Decimal
 toNearest(n: Value, rounding: Rounding): Decimal
 ```
 
-返回一个新的Decimal对象，此Decimal为指定值n乘以一个倍数后与原Decimal最接近的值，可按照rounding设置舍入模式。
+Returns a new Decimal whose value is the nearest multiple of `n` in the direction of rounding mode `rounding`, to the value of this Decimal.
 
 **Since:** 12
 
@@ -3474,7 +3475,7 @@ toNearest(n: Value, rounding: Rounding): Decimal
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | n | [Value](../../apis-arkdata/arkts-apis/arkts-arkdata-distributeddata-value-i.md) | Yes | {double \| string \| Decimal} |
-| rounding | [Rounding](arkts-arkts-rounding-t.md) | Yes | 转换时使用的舍入模式。取值范围为0到8的整数。 |
+| rounding | [Rounding](arkts-arkts-rounding-t.md) | Yes | Rounding mode. Integer, 0 to 8 inclusive. |
 
 **Return value:**
 
@@ -3486,8 +3487,8 @@ toNearest(n: Value, rounding: Rounding): Decimal
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1. Incorrect parameter types; 2. Parameter verification failed. |
-| 10200001 | The value of `rounding` is out of range. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Incorrect parameter types; 2. Parameter verification failed. |
+| [10200001](../errorcode-utils.md#10200001-value-out-of-range) | The value of `rounding` is out of range. |
 
 ## toNumber
 
@@ -3501,7 +3502,7 @@ ArkTS-Sta:
 toNumber(): double
 ```
 
-将值转换为number类型。零保留其符号。
+Return the value of this Decimal converted to a number primitive. Zero keeps its sign.
 
 **Since:** 12
 
@@ -3525,7 +3526,7 @@ toNumber(): double
 toOctal(): string
 ```
 
-将Decimal转换为八进制表示的字符串。
+Return a string representing the value of this Decimal in base 8.
 
 **Since:** 12
 
@@ -3555,7 +3556,7 @@ ArkTS-Sta:
 toOctal(significantDigits: double): string
 ```
 
-将Decimal转换为八进制表示的字符串，可按照significantDigits设置有效数字。
+Return a string representing the value of this Decimal in base 8, round to `significantDigits` significant.
 
 **Since:** 12
 
@@ -3583,7 +3584,7 @@ toOctal(significantDigits: double): string
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 10200001 | The value of `significantDigits` is out of range. |
+| [10200001](../errorcode-utils.md#10200001-value-out-of-range) | The value of `significantDigits` is out of range. |
 
 ## toOctal
 
@@ -3597,7 +3598,7 @@ ArkTS-Sta:
 toOctal(significantDigits: double, rounding: Rounding): string
 ```
 
-将Decimal转换为八进制表示的字符串，可按照significantDigits设置有效数字，可按照rounding设置舍入模式。
+Return a string representing the value of this Decimal in base 8, round to `significantDigits` significant digits using rounding mode `rounding`.
 
 **Since:** 12
 
@@ -3614,7 +3615,7 @@ toOctal(significantDigits: double, rounding: Rounding): string
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | significantDigits | ArkTS-Dyn: number  <br>ArkTS-Sta：double | Yes | {double \| string \| Decimal} |
-| rounding | [Rounding](arkts-arkts-rounding-t.md) | Yes | 转换时使用的舍入模式。取值范围为0到8的整数。 |
+| rounding | [Rounding](arkts-arkts-rounding-t.md) | Yes | Rounding mode. Integer, 0 to 8 inclusive. |
 
 **Return value:**
 
@@ -3626,7 +3627,7 @@ toOctal(significantDigits: double, rounding: Rounding): string
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 10200001 | The value of `significantDigits \| rounding` is out of range. |
+| [10200001](../errorcode-utils.md#10200001-value-out-of-range) | The value of `significantDigits \| rounding` is out of range. |
 
 ## toPrecision
 
@@ -3634,7 +3635,7 @@ toOctal(significantDigits: double, rounding: Rounding): string
 toPrecision(): string
 ```
 
-将Decimal对象转换为字符串。
+Return a string representing the value of this Decimal.
 
 **Since:** 12
 
@@ -3664,7 +3665,7 @@ ArkTS-Sta:
 toPrecision(significantDigits: double): string
 ```
 
-将数值转换为字符串，可按照significantDigits设置有效数字。
+Return a string representing the value of this Decimal rounded to `significantDigits` significant digits.
 
 **Since:** 12
 
@@ -3680,7 +3681,7 @@ toPrecision(significantDigits: double): string
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| significantDigits | ArkTS-Dyn: number  <br>ArkTS-Sta：double | Yes | 转换时保留的有效数字。取值范围为[1, 1e9]的整数。 |
+| significantDigits | ArkTS-Dyn: number  <br>ArkTS-Sta：double | Yes | Significant digits. Integer, 1 to MAX_DIGITS inclusive. |
 
 **Return value:**
 
@@ -3692,7 +3693,7 @@ toPrecision(significantDigits: double): string
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 10200001 | The value of `significantDigits` is out of range. |
+| [10200001](../errorcode-utils.md#10200001-value-out-of-range) | The value of `significantDigits` is out of range. |
 
 ## toPrecision
 
@@ -3706,7 +3707,7 @@ ArkTS-Sta:
 toPrecision(significantDigits: double, rounding: Rounding): string
 ```
 
-将数值转换为字符串，可按照significantDigits设置有效数字，可按照rounding设置舍入模式。
+Return a string representing the value of this Decimal rounded to `significantDigits` significant digits using rounding mode `rounding`.
 
 **Since:** 12
 
@@ -3722,8 +3723,8 @@ toPrecision(significantDigits: double, rounding: Rounding): string
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| significantDigits | ArkTS-Dyn: number  <br>ArkTS-Sta：double | Yes | 转换时保留的有效数字。取值范围为[1, 1e9]的整数。 |
-| rounding | [Rounding](arkts-arkts-rounding-t.md) | Yes | 转换时使用的舍入模式。取值范围为0到8的整数。 |
+| significantDigits | ArkTS-Dyn: number  <br>ArkTS-Sta：double | Yes | Significant digits. Integer, 1 to MAX_DIGITS inclusive. |
+| rounding | [Rounding](arkts-arkts-rounding-t.md) | Yes | Rounding mode. Integer, 0 to 8 inclusive. |
 
 **Return value:**
 
@@ -3735,7 +3736,7 @@ toPrecision(significantDigits: double, rounding: Rounding): string
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 10200001 | The value of `significantDigits \| rounding` is out of range. |
+| [10200001](../errorcode-utils.md#10200001-value-out-of-range) | The value of `significantDigits \| rounding` is out of range. |
 
 ## toSignificantDigits
 
@@ -3743,7 +3744,7 @@ toPrecision(significantDigits: double, rounding: Rounding): string
 toSignificantDigits(): Decimal
 ```
 
-返回一个按照保留有效数字转换的Decimal对象。
+Return a new Decimal whose value is the value of this Decimal.
 
 **Since:** 12
 
@@ -3773,7 +3774,7 @@ ArkTS-Sta:
 toSignificantDigits(significantDigits: double): Decimal
 ```
 
-返回一个按照保留有效数字转换的Decimal对象，可按照significantDigits设置有效数字。
+Return a new Decimal whose value is the value of this Decimal rounded to a maximum of `significantDigits`significant digits.
 
 **Since:** 12
 
@@ -3789,7 +3790,7 @@ toSignificantDigits(significantDigits: double): Decimal
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| significantDigits | ArkTS-Dyn: number  <br>ArkTS-Sta：double | Yes | 转换时保留的有效数字。取值范围为[1, 1e9]的整数。 |
+| significantDigits | ArkTS-Dyn: number  <br>ArkTS-Sta：double | Yes | Significant digits. Integer, 1 to MAX_DIGITS inclusive. |
 
 **Return value:**
 
@@ -3801,7 +3802,7 @@ toSignificantDigits(significantDigits: double): Decimal
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 10200001 | The value of `significantDigits` is out of range. |
+| [10200001](../errorcode-utils.md#10200001-value-out-of-range) | The value of `significantDigits` is out of range. |
 
 ## toSignificantDigits
 
@@ -3815,7 +3816,7 @@ ArkTS-Sta:
 toSignificantDigits(significantDigits: double, rounding: Rounding): Decimal
 ```
 
-返回一个按照保留有效数字转换的Decimal对象，可按照significantDigits设置有效数字，可按照rounding设置舍入模式。
+Return a new Decimal whose value is the value of this Decimal rounded to a maximum of `significantDigits`significant digits using rounding mode `rounding`.
 
 **Since:** 12
 
@@ -3831,8 +3832,8 @@ toSignificantDigits(significantDigits: double, rounding: Rounding): Decimal
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| significantDigits | ArkTS-Dyn: number  <br>ArkTS-Sta：double | Yes | 转换时保留的有效数字。取值范围为[1, 1e9]的整数。 |
-| rounding | [Rounding](arkts-arkts-rounding-t.md) | Yes | 转换时使用的舍入模式。取值范围为0到8的整数。 |
+| significantDigits | ArkTS-Dyn: number  <br>ArkTS-Sta：double | Yes | Significant digits. Integer, 1 to MAX_DIGITS inclusive. |
+| rounding | [Rounding](arkts-arkts-rounding-t.md) | Yes | Rounding mode. Integer, 0 to 8 inclusive. |
 
 **Return value:**
 
@@ -3844,7 +3845,7 @@ toSignificantDigits(significantDigits: double, rounding: Rounding): Decimal
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 10200001 | The value of `significantDigits \| rounding` is out of range. |
+| [10200001](../errorcode-utils.md#10200001-value-out-of-range) | The value of `significantDigits \| rounding` is out of range. |
 
 ## toString
 
@@ -3852,7 +3853,7 @@ toSignificantDigits(significantDigits: double, rounding: Rounding): Decimal
 toString(): string
 ```
 
-返回一个字符串，表示此 Decimal 的值。如果此 Decimal 的正指数等于或大于toExpPos，或负指数等于或小于toExpNeg，则将返回指数表示法。
+Return a string representing the value of this Decimal.Return exponential notation if this Decimal has a positive exponent equal to or greater than`toExpPos`, or a negative exponent equal to or less than `toExpNeg`.
 
 **Since:** 12
 
@@ -3876,7 +3877,7 @@ toString(): string
 trunc(): Decimal
 ```
 
-返回一个新的Decimal对象，其值是将此Decimal截断为整数部分。
+Return a new Decimal whose value is the value of this Decimal truncated to a whole number.
 
 **Since:** 12
 
@@ -3900,7 +3901,7 @@ trunc(): Decimal
 static trunc(n: Value): Decimal
 ```
 
-返回一个新的Decimal对象，其值为将n截断为整数的结果。
+Return a new Decimal whose value is `n` truncated to an integer.
 
 **Since:** 12
 
@@ -3928,7 +3929,7 @@ static trunc(n: Value): Decimal
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1. Incorrect parameter types; 2. Parameter verification failed. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Incorrect parameter types; 2. Parameter verification failed. |
 
 ## valueOf
 
@@ -3936,7 +3937,7 @@ static trunc(n: Value): Decimal
 valueOf(): string
 ```
 
-返回一个字符串，表示此 Decimal 的值。与toString不同，负零将包含负号。
+Return a string representing the value of this Decimal.Unlike `toString`, negative zero will include the minus sign.
 
 **Since:** 12
 
@@ -3960,7 +3961,7 @@ valueOf(): string
 static readonly EUCLIDEAN : 9
 ```
 
-模运算下，余数始终为正。使用欧几里得除法：q = sign(x) * floor(a / abs(x))。
+Not a rounding mode, see modulo
 
 **Type:** 9
 
@@ -3980,7 +3981,7 @@ static readonly EUCLIDEAN : 9
 static readonly ROUND_CEILING : 2
 ```
 
-向正无穷方向舍入。
+Rounds towards Infinity
 
 **Type:** 2
 
@@ -4000,7 +4001,7 @@ static readonly ROUND_CEILING : 2
 static readonly ROUND_DOWN : 1
 ```
 
-向靠近零的方向舍入。模运算下，余数与被除数的符号相同，使用截断除法。
+Rounds towards zero
 
 **Type:** 1
 
@@ -4020,7 +4021,7 @@ static readonly ROUND_DOWN : 1
 static readonly ROUND_FLOOR : 3
 ```
 
-向负无穷方向舍入。模运算下，余数与除数的符号相同。
+Rounds towards -Infinity
 
 **Type:** 3
 
@@ -4040,7 +4041,7 @@ static readonly ROUND_FLOOR : 3
 static readonly ROUND_HALF_CEILING : 7
 ```
 
-向最近的邻值舍入。如果距离相等，则向正无穷方向舍入。
+Rounds towards nearest neighbour. If equidistant, rounds towards Infinity
 
 **Type:** 7
 
@@ -4060,7 +4061,7 @@ static readonly ROUND_HALF_CEILING : 7
 static readonly ROUND_HALF_DOWN : 5
 ```
 
-向最近的邻值舍入。如果距离相等，则向靠近零方向舍入。
+Rounds towards nearest neighbour. If equidistant, rounds towards zero
 
 **Type:** 5
 
@@ -4080,7 +4081,7 @@ static readonly ROUND_HALF_DOWN : 5
 static readonly ROUND_HALF_EVEN : 6
 ```
 
-向最近的邻值舍入。如果距离相等，则向偶数邻值舍入。模运算下，IEEE 754 求余函数。
+Rounds towards nearest neighbour. If equidistant, rounds towards even neighbour
 
 **Type:** 6
 
@@ -4100,7 +4101,7 @@ static readonly ROUND_HALF_EVEN : 6
 static readonly ROUND_HALF_FLOOR : 8
 ```
 
-向最近的邻值舍入。如果距离相等，则向负无穷方向舍入。
+Rounds towards nearest neighbour. If equidistant, rounds towards -Infinity
 
 **Type:** 8
 
@@ -4120,7 +4121,7 @@ static readonly ROUND_HALF_FLOOR : 8
 static readonly ROUND_HALF_UP : 4
 ```
 
-向最近的邻值舍入。如果距离相等，则向远离零的方向舍入。
+Rounds towards nearest neighbour. If equidistant, rounds away from zero
 
 **Type:** 4
 
@@ -4140,7 +4141,7 @@ static readonly ROUND_HALF_UP : 4
 static readonly ROUND_UP : 0
 ```
 
-向远离零的方向舍入。模运算下，如果被除数为负，则余数为正，否则为负。
+Rounds away from zero
 
 **Type:** 0
 
@@ -4160,7 +4161,7 @@ static readonly ROUND_UP : 0
 readonly d: number[]
 ```
 
-digits：表示Decimal数整数部分和小数部分的数组。
+The numbers of decimal digits.
 
 **Type:** number[]
 
@@ -4180,7 +4181,7 @@ digits：表示Decimal数整数部分和小数部分的数组。
 get e(): double
 ```
 
-exponent：表示Decimal数的十进制指数。
+The number of decimal exponent.
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：double
 
@@ -4200,7 +4201,7 @@ exponent：表示Decimal数的十进制指数。
 get s(): double
 ```
 
-sign：表示Decimal数的符号位，0表示正数，1表示负数。
+The number of decimal sign.
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：double
 

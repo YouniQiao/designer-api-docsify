@@ -34,7 +34,7 @@ static $_instantiate(factory: () => GestureGroup, mode: GestureMode, ...gesture:
 | --- | --- | --- | --- |
 | factory | () =&gt; GestureGroup | 是 |  |
 | mode | [GestureMode](arkts-arkui-gesture-gesturemode-e.md) | 是 | 设置组合手势识别模式。&lt;br/&gt;默认值：GestureMode.Sequence |
-| gesture | [GestureType](arkts-arkui-gesturecontrol-gesturetype-e.md)[] | 是 | 设置一个或者多个基础手势类型时，这些手势会被识别为组合手势。 若此参数不填则组合手势识别功能不生效。&lt;br/&gt;**说明：**&lt;br/&gt;当需要为一个组件同时添加单击和双击手势时，可在组合手势中添加两个[TapGesture](arkts-arkui-gesture-con.md#tapgesture)， 需要双击手势在前，单击手势在后，否则不生效。 |
+| gesture | [GestureType](../../apis-accessibility-kit/arkts-apis/arkts-accessibility-gesturetype-t.md)[] | 是 | 设置一个或者多个基础手势类型时，这些手势会被识别为组合手势。 若此参数不填则组合手势识别功能不生效。&lt;br/&gt;**说明：**&lt;br/&gt;当需要为一个组件同时添加单击和双击手势时，可在组合手势中添加两个[TapGesture](arkts-arkui-gesture-con.md#tapgesture)， 需要双击手势在前，单击手势在后，否则不生效。 |
 
 **返回值：**
 

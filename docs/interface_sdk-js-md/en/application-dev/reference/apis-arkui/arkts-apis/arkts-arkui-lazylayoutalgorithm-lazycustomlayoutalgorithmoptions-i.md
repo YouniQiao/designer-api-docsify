@@ -1,6 +1,6 @@
 # LazyCustomLayoutAlgorithmOptions
 
-LazyCustomLayoutAlgorithm构造函数选项。
+LazyCustomLayoutAlgorithm constructor options.
 
 **Since:** 26.0.0
 
@@ -16,7 +16,7 @@ LazyCustomLayoutAlgorithm构造函数选项。
 axis?: Axis
 ```
 
-定义懒加载布局轴。
+Defines the lazy layout axis.
 
 **Type:** [Axis](arkts-arkui-enums-axis-e.md)
 

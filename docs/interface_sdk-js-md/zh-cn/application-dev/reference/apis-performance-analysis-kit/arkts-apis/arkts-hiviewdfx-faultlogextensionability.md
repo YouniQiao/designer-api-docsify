@@ -1,11 +1,5 @@
 # @ohos.hiviewdfx.FaultLogExtensionAbility(故障延迟通知)
 
-## 导入模块
-
-```TypeScript
-import { FaultLogExtensionAbility } from 'kits/@kit.PerformanceAnalysisKit';
-```
-
 ## 汇总
 
 ### 类

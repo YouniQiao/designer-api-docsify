@@ -1,6 +1,6 @@
 # ReaderIterator
 
-文件读取迭代器。在调用ReaderIterator的方法前，需要先通过readLines方法（同步或异步）来构建一个ReaderIterator实例。
+Provides a **ReaderIterator** object. Before calling APIs of **ReaderIterator**, you need to use **readLines()** to create a **ReaderIterator** instance.
 
 **Since:** 11
 
@@ -22,7 +22,7 @@ import { Options, ReaderIteratorResult, Watcher, ReadTextOptions, WatchEventList
 next(): ReaderIteratorResult
 ```
 
-获取迭代器下一项内容。
+Obtains the **ReaderIterator** result.
 
 **Since:** 11
 
@@ -36,7 +36,7 @@ next(): ReaderIteratorResult
 
 | Type | Description |
 | --- | --- |
-| [ReaderIteratorResult](arkts-corefile-file-fs-readeriteratorresult-i.md) | 文件读取迭代器返回结果。 |
+| [ReaderIteratorResult](arkts-corefile-file-fs-readeriteratorresult-i.md) | ReaderIteratorResult** object obtained. |
 
 **Error codes:**
 
@@ -50,18 +50,17 @@ next(): ReaderIteratorResult
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
-import { Options } from '@kit.CoreFileKit';
-
+import { fileIo as fs, Options } from '@kit.CoreFileKit';
 let filePath = pathDir + "/test.txt";
 let options: Options = {
   encoding: 'utf-8'
 };
-fileIo.readLines(filePath, options).then((readerIterator: fileIo.ReaderIterator) => {
+fs.readLines(filePath, options).then((readerIterator: fs.ReaderIterator) => {
   for (let it = readerIterator.next(); !it.done; it = readerIterator.next()) {
-    console.info(`Succeeded in reading lines, content: ${it.value}`);
+    console.info("content: " + it.value);
   }
 }).catch((err: BusinessError) => {
-  console.error(`Failed to read lines. Code: ${err.code}, message: ${err.message}`);
+  console.error("readLines failed with error message: " + err.message + ", error code: " + err.code);
 });
 ```
 

@@ -1,11 +1,5 @@
 # demoteCurrentFromCandidateMasterProcess
 
-## 导入模块
-
-```TypeScript
-import { application } from 'kits/@kit.AbilityKit';
-```
-
 ## demoteCurrentFromCandidateMasterProcess
 
 ```TypeScript
@@ -34,9 +28,9 @@ export function demoteCurrentFromCandidateMasterProcess(): Promise<void>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 16000116 | The current process is already a master process and does not support cancellation. |
-| 801 | Capability not supported. |
-| 16000117 | The current process is not a candidate master process and does not support cancellation. |
+| [16000116](../errorcode-ability.md#16000116-当前进程已经是主控进程) | The current process is already a master process and does not support cancellation. |
+| [801](../../errorcode-universal.md#801-该设备不支持此api) | Capability not supported. |
+| [16000117](../errorcode-ability.md#16000117-当前进程非备选主控进程) | The current process is not a candidate master process and does not support cancellation. |
 
 ## 示例
 
@@ -51,7 +45,8 @@ export default class EntryAbility extends UIAbility {
         .then(() => {
           console.info('demote succeed');
         })
-        .catch((err: BusinessError) => {
+        .catch((error: Error) => {
+          let err = error as BusinessError;
           console.error(`demote failed, code is ${err.code}, message is ${err.message}`);
         });
     } catch (error) {

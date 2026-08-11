@@ -1,6 +1,6 @@
 # StackLayoutAlgorithmOptions
 
-设置堆叠布局算法的对齐方式。
+StackLayoutAlgorithm constructor options.
 
 **Since:** 24
 
@@ -16,7 +16,7 @@
 alignContent?: LocalizedAlignment
 ```
 
-设置子组件在堆叠布局算法中对齐格式。非法值：按默认值处理。
+Defines the align rules of child components in stack layout algorithm.
 
 **Type:** [LocalizedAlignment](arkts-arkui-enums-localizedalignment-e.md)
 
@@ -25,6 +25,8 @@ alignContent?: LocalizedAlignment
 **Since:** 24
 
 **ArkTS mode:** ArkTS-Sta only, since version 24.
+
+**Model restriction:** This API can be used only in the stage model.
 
 <!--Device-StackLayoutAlgorithmOptions-alignContent?: LocalizedAlignment--><!--Device-StackLayoutAlgorithmOptions-alignContent?: LocalizedAlignment-End-->
 

@@ -1,6 +1,7 @@
 # DocumentViewPicker
 
-文件选择器对象，用来支撑选择和保存各种格式文档。在使用前，需要先创建DocumentViewPicker实例。
+Provides APIs for selecting and saving documents in different formats. Before using the APIs of  
+**DocumentViewPicker**, you need to create a **DocumentViewPicker** instance.
 
 **Since:** 9
 
@@ -22,7 +23,7 @@ import { picker } from 'kits/@kit.CoreFileKit';
 constructor()
 ```
 
-创建DocumentViewPicker对象，不推荐使用该构造函数，会出现概率性失败问题。
+A constructor used to create a **DocumentViewPicker** instance. This constructor is not recommended due to the potential risk of operation failure.
 
 **Since:** 12
 
@@ -46,8 +47,8 @@ let documentPicker = new picker.DocumentViewPicker(); // Construction without pa
 constructor(context: Context)
 ```
 
-创建DocumentViewPicker对象，推荐使用该构造函数，获取context参考  
-[getHostContext](../../../reference/apis-arkui/arkts-apis-uicontext-uicontext.md#gethostcontext12)。
+A constructor used to create a **DocumentViewPicker** instance. This constructor is recommended. For details about how to obtain the context, see  
+[getHostContext](../../../reference/apis-arkui/arkts-apis-uicontext-uicontext.md#gethostcontext12).
 
 **Since:** 12
 
@@ -63,7 +64,7 @@ constructor(context: Context)
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| context | [Context](../../apis-ability-kit/arkts-apis/arkts-ability-context-c.md) | Yes | 应用上下文（仅支持UIAbilityContext）。Stage模型的应用Context定义见[Context](../../apis-ability-kit/arkts-apis/arkts-ability-context-t.md/arkts-ability-context-t.md)。 |
+| context | [Context](../../apis-ability-kit/arkts-apis/arkts-ability-context-c.md) | Yes | Application context (only **UIAbilityContext** is supported). For details about the application context of the stage model, see [Context](../../apis-ability-kit/arkts-apis/arkts-ability-context-t.md/arkts-ability-context-t.md). |
 
 ## Examples
 
@@ -99,11 +100,11 @@ struct Index {
 constructor(context: Context, window: window.Window)
 ```
 
-应用自行创建窗口中，可用通过该构造函数创建DocumentViewPicker对象。一般场景推荐使用constructor(context: Context)方法创建DocumentViewPicker对象。
+A constructor used to create a **DocumentViewPicker** object in a window created by an application. In other scenarios, you are advised to use **constructor(context: Context)** to create a **DocumentViewPicker** object.
 
-> **说明：**
+> **NOTE：**
 > 
-> 从API version 19开始，2in1和Tablet设备支持该方法。
+> This method is supported on 2-in-1 devices and tablets since API version 19.
 
 **Since:** 13
 
@@ -117,8 +118,8 @@ constructor(context: Context, window: window.Window)
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| context | [Context](../../apis-ability-kit/arkts-apis/arkts-ability-context-c.md) | Yes | 应用上下文（仅支持UIAbilityContext）。Stage模型的应用Context定义见[Context](../../apis-ability-kit/arkts-apis/arkts-ability-context-t.md/arkts-ability-context-t.md)。 |
-| window | window.Window | Yes | 应用创建的窗口实例。 |
+| context | [Context](../../apis-ability-kit/arkts-apis/arkts-ability-context-c.md) | Yes | Application context (only **UIAbilityContext** is supported). For details about the application context of the stage model, see [Context](../../apis-ability-kit/arkts-apis/arkts-ability-context-t.md/arkts-ability-context-t.md). |
+| window | window.Window | Yes | Window instance created by the application. |
 
 ## Examples
 
@@ -163,8 +164,10 @@ ArkTS-Sta:
 getSelectedIndex(): int
 ```
 
-获取保存成功后的文件后缀类型的下标。该方法只在调用 [save()](arkts-corefile-picker-documentviewpicker-c.md#save)时使用生效，其他场景下不适用。该方法需要配置参数[DocumentSaveOptions.fileSuffixChoices](arkts-corefile-picker-documentsaveoptions-c.md)。该方法返回的是所选后缀类型的下标(number)。所选的后缀类型是开发者所传的参数  
-[DocumentSaveOptions.fileSuffixChoices](arkts-corefile-picker-documentsaveoptions-c.md)里的某个后缀类型。如果没有传参，并且调用了getSelectedIndex()方法，返回值为-1。
+Obtains the index of the file suffix type of the file saved.This method takes effect only when used with  
+[save()](arkts-corefile-picker-documentviewpicker-c.md#save).This method can be used only after [DocumentSaveOptions.fileSuffixChoices](arkts-corefile-picker-documentsaveoptions-c.md) is configured.The index (number) returned by this method indicates the location of the file suffix specified in  
+[DocumentSaveOptions.fileSuffixChoices](arkts-corefile-picker-documentsaveoptions-c.md). If no file suffix is specified,  
+**getSelectedIndex()** returns **-1**.
 
 **Since:** 14
 
@@ -180,7 +183,7 @@ getSelectedIndex(): int
 
 | Type | Description |
 | --- | --- |
-| ArkTS-Dyn: number  <br>ArkTS-Sta：int | 返回所选后缀类型在[DocumentSaveOptions.fileSuffixChoices]{ |
+| ArkTS-Dyn: number  <br>ArkTS-Sta：int | Subscript (number) of the selected suffix type in [DocumentSaveOptions.fileSuffixChoices]{ |
 
 ## save
 
@@ -188,7 +191,7 @@ getSelectedIndex(): int
 save(option?: DocumentSaveOptions): Promise<Array<string>>
 ```
 
-通过保存模式拉起documentPicker界面，用户可以保存一个或多个文件。使用Promise异步回调。
+Starts a **documentPicker** page for the user to save one or more documents. This API uses a promise to return the result.
 
 **Since:** 9
 
@@ -204,13 +207,13 @@ save(option?: DocumentSaveOptions): Promise<Array<string>>
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| option | [DocumentSaveOptions](arkts-corefile-picker-documentsaveoptions-c.md) | No | documentPicker保存选项。若无此参数， 则拉起documentPicker界面后需用户自行输入保存的文件名。 |
+| option | [DocumentSaveOptions](arkts-corefile-picker-documentsaveoptions-c.md) | No | Options for saving the documents. If this parameter is not specified, a **documentPicker** page will be displayed for the user to enter the names of the documents to save. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;Array&lt;string&gt;&gt; | Promise对象。返回documentPicker保存后的结果集。 &lt;br&gt;**注意**：此接口返回的URI数组的具体使用方式参见用户文件URI介绍中的 [文档类uri的使用方式](../../../file-management/user-file-uri-intro.md#文档类uri的使用方式)。 |
+| Promise&lt;Array&lt;string&gt;&gt; | Promise used to return the URIs of the documents saved. &lt;br&gt;**Note：**: For details about how to use the returned URIs, see [Using a Document URI](../../../file-management/user-file-uri-intro.md#using-a-document-uri). |
 
 ## Examples
 
@@ -241,7 +244,7 @@ async function example10(context: common.UIAbilityContext) { // Ensure that cont
 save(option: DocumentSaveOptions, callback: AsyncCallback<Array<string>>): void
 ```
 
-通过保存模式拉起documentPicker界面，用户可以保存一个或多个文件。使用callback异步回调。
+Starts a **documentPicker** page for the user to save one or more documents. This API uses an asynchronous callback to return the result.
 
 **Since:** 9
 
@@ -257,8 +260,8 @@ save(option: DocumentSaveOptions, callback: AsyncCallback<Array<string>>): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| option | [DocumentSaveOptions](arkts-corefile-picker-documentsaveoptions-c.md) | Yes | documentPicker保存选项。 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;string&gt;&gt; | Yes | callback 返回documentPicker保存后的结果集。 &lt;br&gt;**注意**：此接口返回的URI数组的具体使用方式参见用户文件URI介绍中的 [文档类uri的使用方式](../../../file-management/user-file-uri-intro.md#文档类uri的使用方式)。 |
+| option | [DocumentSaveOptions](arkts-corefile-picker-documentsaveoptions-c.md) | Yes | Options for saving the documents. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;string&gt;&gt; | Yes | Callback invoked to return the URIs of the documents saved. &lt;br&gt;**Note：**: For details about how to use the returned URIs, see [Using a Document URI](../../../file-management/user-file-uri-intro.md#using-a-document-uri). |
 
 ## Examples
 
@@ -291,7 +294,7 @@ async function example11(context: common.UIAbilityContext) { // Ensure that cont
 save(callback: AsyncCallback<Array<string>>): void
 ```
 
-通过保存模式拉起documentPicker界面，用户可以保存一个或多个文件。使用callback异步回调。
+Starts a **documentPicker** page for the user to save one or more documents. This API uses an asynchronous callback to return the result.
 
 **Since:** 9
 
@@ -307,7 +310,7 @@ save(callback: AsyncCallback<Array<string>>): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;string&gt;&gt; | Yes | callback 返回documentPicker保存后的结果集。 &lt;br&gt;**注意**：此接口返回的URI数组的具体使用方式参见用户文件URI介绍中的 [文档类uri的使用方式](../../../file-management/user-file-uri-intro.md#文档类uri的使用方式)。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;string&gt;&gt; | Yes | Callback invoked to return the URIs of the documents saved. &lt;br&gt;**Note：**: For details about how to use the returned URIs, see [Using a Document URI](../../../file-management/user-file-uri-intro.md#using-a-document-uri). |
 
 ## Examples
 
@@ -338,7 +341,7 @@ async function example12(context: common.UIAbilityContext) { // Ensure that cont
 select(option?: DocumentSelectOptions): Promise<Array<string>>
 ```
 
-通过选择模式拉起documentPicker界面，用户可以选择一个或多个文件。使用Promise异步回调。
+Starts a **documentPicker** page for the user to select one or more documents. This API uses a promise to return the result.
 
 **Since:** 9
 
@@ -354,13 +357,13 @@ select(option?: DocumentSelectOptions): Promise<Array<string>>
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| option | [DocumentSelectOptions](arkts-corefile-picker-documentselectoptions-c.md) | No | documentPicker选择选项。若无此参数，则默认拉起documentPicker主界面。 |
+| option | [DocumentSelectOptions](arkts-corefile-picker-documentselectoptions-c.md) | No | Options for selecting documents. If this parameter is not specified, the **documentPicker** page is displayed by default. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;Array&lt;string&gt;&gt; | Promise对象。返回documentPicker选择后的结果集。 &lt;br&gt;**注意**：此接口返回的URI数组的具体使用方式参见用户文件URI介绍中的 [文档类uri的使用方式](../../../file-management/user-file-uri-intro.md#文档类uri的使用方式)。 |
+| Promise&lt;Array&lt;string&gt;&gt; | Promise used to return the URIs of the documents selected. &lt;br&gt; **Note：**: For details about how to use the returned URIs, see [Using a Document URI](../../../file-management/user-file-uri-intro.md#using-a-document-uri). |
 
 ## Examples
 
@@ -390,7 +393,7 @@ async function example07(context: common.UIAbilityContext) { // Ensure that cont
 select(option: DocumentSelectOptions, callback: AsyncCallback<Array<string>>): void
 ```
 
-通过选择模式拉起documentPicker界面，用户可以选择一个或多个文件。使用callback异步回调。
+Starts a **documentPicker** page for the user to select one or more documents. This API uses an asynchronous callback to return the result.
 
 **Since:** 9
 
@@ -406,8 +409,8 @@ select(option: DocumentSelectOptions, callback: AsyncCallback<Array<string>>): v
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| option | [DocumentSelectOptions](arkts-corefile-picker-documentselectoptions-c.md) | Yes | documentPicker选择选项。 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;string&gt;&gt; | Yes | callback 返回documentPicker选择后的结果集。 &lt;br&gt;**注意**：此接口返回的URI数组的具体使用方式参见用户文件URI介绍中的 [文档类uri的使用方式](../../../file-management/user-file-uri-intro.md#文档类uri的使用方式)。 |
+| option | [DocumentSelectOptions](arkts-corefile-picker-documentselectoptions-c.md) | Yes | Options for selecting documents. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;string&gt;&gt; | Yes | Callback invoked to return the URIs of the documents selected. &lt;br&gt;**Note：**: For details about how to use the returned URIs, see [Using a Document URI](../../../file-management/user-file-uri-intro.md#using-a-document-uri). |
 
 ## Examples
 
@@ -439,7 +442,7 @@ async function example08(context: common.UIAbilityContext) { // Ensure that cont
 select(callback: AsyncCallback<Array<string>>): void
 ```
 
-通过选择模式拉起documentPicker界面，用户可以选择一个或多个文件。使用callback异步回调。
+Starts a **documentPicker** page for the user to select one or more documents. This API uses an asynchronous callback to return the result.
 
 **Since:** 9
 
@@ -455,7 +458,7 @@ select(callback: AsyncCallback<Array<string>>): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;string&gt;&gt; | Yes | callback 返回documentPicker选择后的结果集。 &lt;br&gt;**注意**：此接口返回的URI数组的具体使用方式参见用户文件URI介绍中的 [文档类uri的使用方式](../../../file-management/user-file-uri-intro.md#文档类uri的使用方式)。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;string&gt;&gt; | Yes | Callback invoked to return the URIs of the documents selected. &lt;br&gt;**Note：**: For details about how to use the returned URIs, see [Using a Document URI](../../../file-management/user-file-uri-intro.md#using-a-document-uri). |
 
 ## Examples
 

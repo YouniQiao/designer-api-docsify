@@ -1,0 +1,33 @@
+# isImmersiveMaterialSupported
+
+## Modules to Import
+
+```TypeScript
+import { uiMaterial } from 'kits/@kit.ArkUI';
+```
+
+## isImmersiveMaterialSupported
+
+```TypeScript
+export function isImmersiveMaterialSupported(): boolean
+```
+
+Check whether [ImmersiveMaterial](arkts-arkui-uimaterial-immersivematerial-c.md) is supported on the current device.If it is true, the ImmersiveMaterial object can be used in the  
+[systemMaterial](arkts-arkui-common-commonmethod-i.md#systemmaterial) attribute.If it is false, setting the ImmersiveMaterial object in the systemMaterial attribute will not take effect.It is defined by the device and cannot be modified.
+
+**Since:** 26.0.0
+
+**ArkTS mode:** ArkTS-Sta only, since version 26.0.0.
+
+**Model restriction:** This API can be used only in the stage model.
+
+<!--Device-uiMaterial-export function isImmersiveMaterialSupported(): boolean--><!--Device-uiMaterial-export function isImmersiveMaterialSupported(): boolean-End-->
+
+**System capability:** SystemCapability.ArkUI.ArkUI.Full
+
+**Return value:**
+
+| Type | Description |
+| --- | --- |
+| boolean | Whether the current device supports ImmersiveMaterial. The value true indicates that the current device supports ImmersiveMaterial, and false indicates the opposite. |
+

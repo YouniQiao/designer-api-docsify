@@ -1,11 +1,5 @@
 # batteryTemperature
 
-## 导入模块
-
-```TypeScript
-import { batteryInfo } from 'kits/@kit.BasicServicesKit';
-```
-
 ## batteryTemperature
 
 ```TypeScript
@@ -27,4 +21,12 @@ function batteryTemperature(): int
 | 类型 | 说明 |
 | --- | --- |
 | int | 返回当前设备电池的温度，单位0.1摄氏度。 |
+
+## 示例
+
+```TypeScript
+// ArkTS-Sta示例
+let result = batteryInfo.batteryTemperature();
+console.info("The result is: " + result);
+```
 

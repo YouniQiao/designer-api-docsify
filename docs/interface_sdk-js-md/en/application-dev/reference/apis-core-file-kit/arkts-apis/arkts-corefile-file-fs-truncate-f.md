@@ -12,7 +12,7 @@ import { Options, ReaderIteratorResult, Watcher, ReadTextOptions, WatchEventList
 declare function truncate(file: string | number, len?: number): Promise<void>
 ```
 
-截断文件，使用promise异步回调。
+Truncates a file. This API uses a promise to return the result.
 
 **Since:** 9
 
@@ -28,14 +28,14 @@ declare function truncate(file: string | number, len?: number): Promise<void>
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| file | string \| number | Yes | 文件的应用沙箱路径或已打开的文件描述符fd。 |
-| len | number | No | 文件截断后的长度，单位为Byte。默认为0。 |
+| file | string \| number | Yes | Application sandbox path or FD of the file. |
+| len | number | No | File length after truncation, in bytes. The default value is **0**. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise对象。无返回值。 |
+| Promise&lt;void&gt; | Promise that returns no value. |
 
 **Error codes:**
 
@@ -65,7 +65,7 @@ declare function truncate(file: string | number, len?: number): Promise<void>
 declare function truncate(file: string | number, callback: AsyncCallback<void>): void
 ```
 
-截断文件，使用callback异步回调。
+Truncates a file. This API uses an asynchronous callback to return the result.
 
 **Since:** 9
 
@@ -81,8 +81,8 @@ declare function truncate(file: string | number, callback: AsyncCallback<void>):
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| file | string \| number | Yes | 文件的应用沙箱路径或已打开的文件描述符fd。 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | 回调函数，本调用无返回值。 |
+| file | string \| number | Yes | Application sandbox path or FD of the file. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback that returns no value. |
 
 **Error codes:**
 
@@ -112,7 +112,7 @@ declare function truncate(file: string | number, callback: AsyncCallback<void>):
 declare function truncate(file: string | number, len: number, callback: AsyncCallback<void>): void
 ```
 
-截断文件，使用callback异步回调。
+Truncates a file. This API uses an asynchronous callback to return the result.
 
 **Since:** 9
 
@@ -128,9 +128,9 @@ declare function truncate(file: string | number, len: number, callback: AsyncCal
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| file | string \| number | Yes | 文件的应用沙箱路径或已打开的文件描述符fd。 |
-| len | number | Yes | 文件截断后的长度，单位为Byte。默认为0。<br>**Since:** 11 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | 回调函数，本调用无返回值。 |
+| file | string \| number | Yes | Application sandbox path or FD of the file. |
+| len | number | Yes | File length after truncation, in bytes. The default value is **0**.<br>**Since:** 11 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback that returns no value. |
 
 **Error codes:**
 

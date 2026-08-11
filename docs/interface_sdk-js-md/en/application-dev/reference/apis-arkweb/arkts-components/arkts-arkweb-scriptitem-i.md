@@ -16,7 +16,7 @@ Defines the contents of the JavaScript to be injected.
 script: string
 ```
 
-需要注入、执行的JavaScript脚本。
+Sets the JavaScript to be injected.
 
 **Type:** string
 
@@ -36,7 +36,7 @@ script: string
 scriptRules: Array<string>
 ```
 
-一组允许来源的匹配规则。.1.如果需要允许所有来源的网址，使用通配符“ * ”。2.如果需要精确匹配，则描述网站地址，如"https://www.example.com"。3.如果模糊匹配网址，可以使用“ * ”通配符替代，如"https://*.example.com"。不允许使用"x. * .y.com"、" * foobar.com"等。4.如果来源是ip地址，则使用规则2。5.对于http/https以外的协议（自定义协议），不支持使用精确匹配和模糊匹配，且必须以`://`结尾，例如"resource://"。6.一组scriptRule中，如果其中一条不满足以上规则，则整组scriptRule都不生效。
+Sets the rules of the JavaScript.1. To allow URLs from all sources, use the wildcard (*).2. If exact match is required, specify the exact URL, for example, **https://www.example.com**.3. For fuzzy match, you can use a wildcard (*) in the website URL, for example, **https://*.example.com**. Websites such as "x,*.y.com" and "* foobar.com" are not allowed.4. If the source is an IP address, follow rule 2.5. For protocols other than HTTP/HTTPS (custom protocols), exact match and fuzzy match are not supported, and the protocol must end with **://**, for example, **resource://**.6. If one of the preceding rules is not met in **scriptRules**, the **scriptRules** does not take effect.
 
 **Type:** Array&lt;string&gt;
 
@@ -53,10 +53,10 @@ scriptRules: Array<string>
 ## urlRegexRules
 
 ```TypeScript
-urlRegexRules? : Array<UrlRegexRule>
+urlRegexRules?: Array<UrlRegexRule>
 ```
 
-一组允许来源的正则匹配规则。 当scriptRules设置为[]时，才使用urlRegexRules进行匹配。
+Set the regular expression rule that allows execution of this JavaScript.
 
 **Type:** Array&lt;UrlRegexRule&gt;
 
@@ -66,7 +66,7 @@ urlRegexRules? : Array<UrlRegexRule>
 
 **Model restriction:** This API can be used only in the stage model.
 
-<!--Device-ScriptItem-urlRegexRules? : Array<UrlRegexRule>--><!--Device-ScriptItem-urlRegexRules? : Array<UrlRegexRule>-End-->
+<!--Device-ScriptItem-urlRegexRules?: Array<UrlRegexRule>--><!--Device-ScriptItem-urlRegexRules?: Array<UrlRegexRule>-End-->
 
 **System capability:** SystemCapability.Web.Webview.Core
 

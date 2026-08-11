@@ -1,6 +1,6 @@
 # Support
 
-系统公共事件是指由系统服务或系统应用发布的事件，订阅这些公共事件需要特定的权限，并使用相应的事件值。
+System common events are events published by system services or system apps. Subscribing to these common events requires specific permissions and event values.
 
 **Since:** 9
 
@@ -16,11 +16,11 @@
 COMMON_EVENT_BOOT_COMPLETED = 'usual.event.BOOT_COMPLETED'
 ```
 
-表示用户已完成引导并加载系统。
+Indicates that the boot is complete and the system is loaded.
 
-在设备上指定用户已完成引导并加载系统，将会触发事件通知服务发布该系统公共事件。
+When the specified user finishes the boot process on the device, the common event service is triggered to publish this event.
 
-要订阅此事件，您的应用必须具备ohos.permission.RECEIVER_STARTUP_COMPLETED权限（该权限仅系统应用可申请）
+To subscribe to this common event, your application must have the ohos.permission.RECEIVER_STARTUP_COMPLETED permission.(This permission is available only for system applications.)
 
 **Since:** 9
 
@@ -36,7 +36,7 @@ COMMON_EVENT_BOOT_COMPLETED = 'usual.event.BOOT_COMPLETED'
 COMMON_EVENT_LOCKED_BOOT_COMPLETED = 'usual.event.LOCKED_BOOT_COMPLETED'
 ```
 
-（预留事件，暂未支持）提示用户已完成引导，系统已加载，但屏幕仍锁定。
+(Reserved, not supported yet) Indicates that the guidance is complete and the system is loaded, but the screen is still locked.
 
 **Since:** 9
 
@@ -52,9 +52,9 @@ COMMON_EVENT_LOCKED_BOOT_COMPLETED = 'usual.event.LOCKED_BOOT_COMPLETED'
 COMMON_EVENT_SHUTDOWN = 'usual.event.SHUTDOWN'
 ```
 
-表示设备正在关闭并将继续最终关闭的公共事件的操作。
+Indicates that the device is being shut down and the final shutdown will proceed.
 
-当设备正在关闭并将继续最终关闭时，将会触发事件通知服务发布该系统公共事件。
+When the device is being shut down until it is powered off, the event notification service is triggered to publish this event.
 
 **Since:** 9
 
@@ -70,9 +70,9 @@ COMMON_EVENT_SHUTDOWN = 'usual.event.SHUTDOWN'
 COMMON_EVENT_BATTERY_CHANGED = 'usual.event.BATTERY_CHANGED'
 ```
 
-表示电池充电状态、电平和其他信息发生变化的公共事件的动作。
+Indicates that the charging state, level, and other information about the battery have changed.
 
-当电池电量、电池温度、电池健康状态、设备连接的充电器类型、充电器最大电流、充电器最大电压、电池充电状态、充电次数、电池的总容量、电池剩余容量、电池的技术型号、电池的充电类型变化时，将会触发事件通知服务发布该系统公共事件。
+When any of the following information changes, the event notification service is triggered to publish this event:battery level, battery temperature, battery health status, type of the charger connected to the device, maximum current of the charger, maximum voltage of the charger, battery charging status, number of charging times, total battery capacity, remaining battery capacity, battery model, and battery charging type.
 
 **Since:** 9
 
@@ -88,10 +88,10 @@ COMMON_EVENT_BATTERY_CHANGED = 'usual.event.BATTERY_CHANGED'
 COMMON_EVENT_BATTERY_LOW = 'usual.event.BATTERY_LOW'
 ```
 
-表示电池电量低的公共事件的动作。
+Indicates that the battery level is low.
 
-当电池电量低于设备设置的低电量百分比值时，将会触发事件通知服务发布该系统公共事件。&lt;!--Del--&gt;设备设置低电量百分比值请参考  
-[电量等级定制开发指导](../../../../../device-dev/subsystems/subsys-power-battery-level-customization.md)。&lt;!--DelEnd--&gt;
+When the battery level drops to lower than the low battery level set for the device, the event notification service is triggered to publish this event. &lt;!--Del--&gt;For details about how to set the low battery level percentage, see   
+[Battery Level Customization](https://gitee.com/openharmony/docs/blob/master/en/device-dev/subsystems/subsys-power-battery-level-customization.md).&lt;!--DelEnd--&gt;
 
 **Since:** 9
 
@@ -107,9 +107,9 @@ COMMON_EVENT_BATTERY_LOW = 'usual.event.BATTERY_LOW'
 COMMON_EVENT_BATTERY_OKAY = 'usual.event.BATTERY_OKAY'
 ```
 
-表示电池退出低电量状态的公共事件的动作。
+Indicates that the battery level is normal.
 
-当电池电量从低电量等级上升到高于低电量等级时，将会触发事件通知服务发布该系统公共事件。
+When the battery level increases from a low level to a level higher than the low level, the event notification service is triggered to publish this event.
 
 **Since:** 9
 
@@ -125,9 +125,9 @@ COMMON_EVENT_BATTERY_OKAY = 'usual.event.BATTERY_OKAY'
 COMMON_EVENT_POWER_CONNECTED = 'usual.event.POWER_CONNECTED'
 ```
 
-表示设备连接到外部电源的公共事件的动作。
+Indicates that the device is connected to an external power supply.
 
-当设备连接到外部可识别的充电器类型充电时，将会触发事件通知服务发布该系统公共事件。
+When the device connects to an external charger, the event notification service is triggered to publish this event.
 
 **Since:** 9
 
@@ -143,9 +143,9 @@ COMMON_EVENT_POWER_CONNECTED = 'usual.event.POWER_CONNECTED'
 COMMON_EVENT_POWER_DISCONNECTED = 'usual.event.POWER_DISCONNECTED'
 ```
 
-表示设备与外部电源断开的公共事件的动作。
+Indicates that the device is disconnected from the external power supply.
 
-当设备与外部电源断开时，将会触发事件通知服务发布该系统公共事件。
+When the device is disconnected from the external power supply, the event notification service is triggered to publish this event.
 
 **Since:** 9
 
@@ -161,9 +161,9 @@ COMMON_EVENT_POWER_DISCONNECTED = 'usual.event.POWER_DISCONNECTED'
 COMMON_EVENT_SCREEN_OFF = 'usual.event.SCREEN_OFF'
 ```
 
-表示由电源服务发起的设备灭屏完成的普通事件的动作。
+Indicates that a device screen-off initiated by the power service is complete.
 
-当由电源服务发起的设备灭屏完成时，将会触发事件通知服务发布该系统公共事件。
+When the device screen-off initiated by the power service is complete, the event notification service is triggered to release this event.
 
 **Since:** 9
 
@@ -179,9 +179,9 @@ COMMON_EVENT_SCREEN_OFF = 'usual.event.SCREEN_OFF'
 COMMON_EVENT_SCREEN_ON = 'usual.event.SCREEN_ON'
 ```
 
-表示由电源服务发起的设备亮屏完成的普通事件的动作。
+Indicates that a device screen-on initiated by the power service is complete.
 
-当由电源服务发起的设备亮屏完成时，将会触发事件通知服务发布该系统公共事件。
+When the device screen-on initiated by the power service is complete, the event notification service is triggered to release this event.
 
 **Since:** 9
 
@@ -197,10 +197,10 @@ COMMON_EVENT_SCREEN_ON = 'usual.event.SCREEN_ON'
 COMMON_EVENT_THERMAL_LEVEL_CHANGED = 'usual.event.THERMAL_LEVEL_CHANGED'
 ```
 
-表示设备热状态的公共事件的动作。
+Indicates that the device's thermal level has changed.
 
-当设备热等级变化时，将会触发事件通知服务发布该系统公共事件。&lt;!--Del--&gt;设备热等级配置请参考  
-[热等级定制开发指导](../../../../../device-dev/subsystems/subsys-thermal_level.md)。&lt;!--DelEnd--&gt;
+When the device's thermal level changes, the event notification service is triggered to publish this event. &lt;!--Del--&gt;For details about how to configure the device thermal level, see   
+[Thermal Level Customization](https://gitee.com/openharmony/docs/blob/master/en/device-dev/subsystems/subsys-thermal_level.md).&lt;!--DelEnd--&gt;
 
 **Since:** 9
 
@@ -216,9 +216,9 @@ COMMON_EVENT_THERMAL_LEVEL_CHANGED = 'usual.event.THERMAL_LEVEL_CHANGED'
 COMMON_EVENT_ENTER_FORCE_SLEEP = 'usual.event.ENTER_FORCE_SLEEP'
 ```
 
-表示设备即将进入强制睡眠模式的公共事件的动作。
+Indicates that the device is about to enter the forced sleep mode.
 
-当设备即将进入强制睡眠模式时，将会触发事件通知服务发布该系统公共事件。所有订阅者必须在1秒钟内处理该事件。
+When the device is about to enter the forced sleep mode, the event notification service is triggered to publish this event. This event should be processed within one second.
 
 **Since:** 12
 
@@ -234,9 +234,9 @@ COMMON_EVENT_ENTER_FORCE_SLEEP = 'usual.event.ENTER_FORCE_SLEEP'
 COMMON_EVENT_EXIT_FORCE_SLEEP = 'usual.event.EXIT_FORCE_SLEEP'
 ```
 
-表示设备退出强制睡眠模式的公共事件的动作。
+Indicates that the device exits the forced sleep mode.
 
-当设备退出强制睡眠模式时，将会触发事件通知服务发布该系统公共事件。
+When the device exits the forced sleep mode, the event notification service is triggered to publish this event.
 
 **Since:** 12
 
@@ -252,9 +252,9 @@ COMMON_EVENT_EXIT_FORCE_SLEEP = 'usual.event.EXIT_FORCE_SLEEP'
 COMMON_EVENT_ENTER_HIBERNATE = 'usual.event.ENTER_HIBERNATE'
 ```
 
-表示设备即将进入休眠模式的公共事件的动作。
+Indicates that the device is about to enter the hibernation mode.
 
-当设备即将进入休眠模式时，将会触发事件通知服务发布该系统公共事件。所有订阅者必须在1秒钟内处理该事件。
+When the device is about to enter the hibernation mode, the event notification service is triggered to publish this event. This event should be processed within one second.
 
 **Since:** 15
 
@@ -270,9 +270,9 @@ COMMON_EVENT_ENTER_HIBERNATE = 'usual.event.ENTER_HIBERNATE'
 COMMON_EVENT_EXIT_HIBERNATE = 'usual.event.EXIT_HIBERNATE'
 ```
 
-表示设备退出休眠模式的公共事件的动作。
+Indicates that the device exits the hibernation mode.
 
-当设备退出休眠模式时，将会触发事件通知服务发布该系统公共事件。
+When the device exits the hibernation mode, the event notification service is triggered to publish this event.
 
 **Since:** 15
 
@@ -288,13 +288,15 @@ COMMON_EVENT_EXIT_HIBERNATE = 'usual.event.EXIT_HIBERNATE'
 COMMON_EVENT_USER_PRESENT = 'usual.event.USER_PRESENT'
 ```
 
-用户解锁设备的公共事件的动作。
+Indicates the action of a common event that the user unlocks the device.
 
 **Since:** 9
 
 **ArkTS mode:** ArkTS-Dyn only, since version 9.
 
 **Deprecated since:** 10
+
+**Substitutes:** [commonEventManager.Support#COMMON_EVENT_SCREEN_UNLOCKED](arkts-basicservices-commoneventmanager-support-e.md#common_event_screen_unlocked)
 
 <!--Device-Support-COMMON_EVENT_USER_PRESENT = 'usual.event.USER_PRESENT'--><!--Device-Support-COMMON_EVENT_USER_PRESENT = 'usual.event.USER_PRESENT'-End-->
 
@@ -306,9 +308,9 @@ COMMON_EVENT_USER_PRESENT = 'usual.event.USER_PRESENT'
 COMMON_EVENT_TIME_TICK = 'usual.event.TIME_TICK'
 ```
 
-表示系统时间更改的公共事件的动作。
+Indicates that the system time has changed.
 
-当以整分钟为单位的系统时间更改时，将会触发事件通知服务发布该系统公共事件。
+When the system time in the unit of minute changes, the event notification service is triggered to publish this event.
 
 **Since:** 9
 
@@ -324,9 +326,9 @@ COMMON_EVENT_TIME_TICK = 'usual.event.TIME_TICK'
 COMMON_EVENT_TIME_CHANGED = 'usual.event.TIME_CHANGED'
 ```
 
-设置系统时间的公共事件的动作。
+Indicates that the system time is set.
 
-当设置系统时间时，将会触发事件通知服务发布该系统公共事件。
+When the system time is set, the event notification service is triggered to publish this event.
 
 **Since:** 9
 
@@ -342,7 +344,7 @@ COMMON_EVENT_TIME_CHANGED = 'usual.event.TIME_CHANGED'
 COMMON_EVENT_DATE_CHANGED = 'usual.event.DATE_CHANGED'
 ```
 
-（预留事件，暂未支持）表示系统日期已更改的公共事件的动作。
+(Reserved, not supported yet) Indicates that the system time has changed.
 
 **Since:** 9
 
@@ -358,9 +360,9 @@ COMMON_EVENT_DATE_CHANGED = 'usual.event.DATE_CHANGED'
 COMMON_EVENT_TIMEZONE_CHANGED = 'usual.event.TIMEZONE_CHANGED'
 ```
 
-表示系统时区更改的公共事件的动作。
+Indicates that the system time zone has changed.
 
-当系统时区更改时，将会触发事件通知服务发布该系统公共事件。
+When the system time zone changes, the event notification service is triggered to publish this event.
 
 **Since:** 9
 
@@ -376,7 +378,7 @@ COMMON_EVENT_TIMEZONE_CHANGED = 'usual.event.TIMEZONE_CHANGED'
 COMMON_EVENT_CLOSE_SYSTEM_DIALOGS = 'usual.event.CLOSE_SYSTEM_DIALOGS'
 ```
 
-（预留事件，暂未支持）表示用户关闭临时系统对话框的公共事件的动作。
+(Reserved, not supported yet) Indicates that a user closes a temporary system dialog box.
 
 **Since:** 9
 
@@ -392,13 +394,13 @@ COMMON_EVENT_CLOSE_SYSTEM_DIALOGS = 'usual.event.CLOSE_SYSTEM_DIALOGS'
 COMMON_EVENT_PACKAGE_ADDED = 'usual.event.PACKAGE_ADDED'
 ```
 
-表示设备上已安装新应用包的公共事件的动作。
+Indicates that a new application package has been installed on the device.
 
-在设备上指定用户下安装了新的应用程序，将会触发事件通知服务发布该系统公共事件。
+When a new application is installed by a specified user on the device, the event notification service is triggered to publish this event.
 
-> **说明：**
+> **NOTE：**
 > 
-> 三方应用只能监听自身应用的安装事件。
+> Third-party applications can only listen for the installation event of themselves.
 
 **Since:** 9
 
@@ -414,7 +416,7 @@ COMMON_EVENT_PACKAGE_ADDED = 'usual.event.PACKAGE_ADDED'
 COMMON_EVENT_PACKAGE_REPLACED = 'usual.event.PACKAGE_REPLACED'
 ```
 
-（预留事件，暂未支持）表示设备上安装了新版本的应用程序包并替换了旧版本的动作。数据包含包的名称。
+(Reserved, not supported yet) Indicates the action of a common event that a new version of an installed application package has replaced the previous one on the device. Data contains the name of the package.
 
 **Since:** 9
 
@@ -430,7 +432,7 @@ COMMON_EVENT_PACKAGE_REPLACED = 'usual.event.PACKAGE_REPLACED'
 COMMON_EVENT_MY_PACKAGE_REPLACED = 'usual.event.MY_PACKAGE_REPLACED'
 ```
 
-（预留事件，暂未支持）表示设备上安装了新版本的应用程序包并替换了旧版本的应用程序包的动作，不包含额外的数据，只发送给被替换的应用程序。
+(Reserved, not supported yet) Indicates the action of a common event that a new version of an installed application package has replaced the previous one on the device. This event does not contain additional data and is sent only to the replaced application.
 
 **Since:** 9
 
@@ -446,7 +448,7 @@ COMMON_EVENT_MY_PACKAGE_REPLACED = 'usual.event.MY_PACKAGE_REPLACED'
 COMMON_EVENT_PACKAGE_REMOVED = 'usual.event.PACKAGE_REMOVED'
 ```
 
-表示现有的应用程序包从设备中移除的事件。
+Indicates that an installed bundle has been uninstalled from the device.
 
 **Since:** 9
 
@@ -462,7 +464,7 @@ COMMON_EVENT_PACKAGE_REMOVED = 'usual.event.PACKAGE_REMOVED'
 COMMON_EVENT_BUNDLE_REMOVED = 'usual.event.BUNDLE_REMOVED'
 ```
 
-（预留事件，暂未支持）表示现有的应用程序包从设备中移除的事件。
+(Reserved, not supported yet) Indicates that an installed bundle has been uninstalled from the device.
 
 **Since:** 9
 
@@ -478,7 +480,7 @@ COMMON_EVENT_BUNDLE_REMOVED = 'usual.event.BUNDLE_REMOVED'
 COMMON_EVENT_PACKAGE_FULLY_REMOVED = 'usual.event.PACKAGE_FULLY_REMOVED'
 ```
 
-表示现有的应用程序包从设备上完全删除的事件。
+Indicates that an installed application has been completely uninstalled from the device.
 
 **Since:** 9
 
@@ -494,13 +496,13 @@ COMMON_EVENT_PACKAGE_FULLY_REMOVED = 'usual.event.PACKAGE_FULLY_REMOVED'
 COMMON_EVENT_PACKAGE_CHANGED = 'usual.event.PACKAGE_CHANGED'
 ```
 
-表示应用包已更改的公共事件的动作（例如，包中的组件已启用或禁用）。
+Indicates that an application package has been changed (for example, an ability in the package has been enabled or disabled).
 
-在设备上安装的应用程序包更新或者包的组件被启用/禁用，将会触发事件通知服务发布该系统公共事件。
+When an application package installed on the device is updated or an ability in the package is enabled or disabled, the event notification service is triggered to publish this event.
 
-> **说明：**
+> **NOTE：**
 > 
-> 三方应用只能监听自身应用的更改事件。
+> Third-party applications can only listen for the change event of themselves.
 
 **Since:** 9
 
@@ -516,13 +518,13 @@ COMMON_EVENT_PACKAGE_CHANGED = 'usual.event.PACKAGE_CHANGED'
 COMMON_EVENT_PACKAGE_RESTARTED = 'usual.event.PACKAGE_RESTARTED'
 ```
 
-表示用户重启应用包并终止其所有进程。
+Indicates that the user has restarted the application package and killed all its processes.
 
-在设备上指定用户重启应用包并终止其所有进程，将会触发事件通知服务发布该系统公共事件。
+When the specified user restarts the application and kills all its processes, the event notification service is triggered to publish this event.
 
-> **说明：**
+> **NOTE：**
 > 
-> 三方应用只能监听自身应用的重启事件。
+> Third-party applications can only listen for the restart event of themselves.
 
 **Since:** 9
 
@@ -538,13 +540,13 @@ COMMON_EVENT_PACKAGE_RESTARTED = 'usual.event.PACKAGE_RESTARTED'
 COMMON_EVENT_PACKAGE_DATA_CLEARED = 'usual.event.PACKAGE_DATA_CLEARED'
 ```
 
-表示用户清除应用包数据。
+Indicates that the user has cleared the application package data.
 
-在设备上指定用户清除应用包数据，将会触发事件通知服务发布该系统公共事件。
+When the specified user clears the application package data on the device, the event notification service is triggered to publish this event.
 
-> **说明：**
+> **NOTE：**
 > 
-> 三方应用只能监听自身应用的数据清理事件。
+> Third-party applications can only listen for the data clearance event of themselves.
 
 **Since:** 9
 
@@ -560,13 +562,13 @@ COMMON_EVENT_PACKAGE_DATA_CLEARED = 'usual.event.PACKAGE_DATA_CLEARED'
 COMMON_EVENT_PACKAGE_CACHE_CLEARED = 'usual.event.PACKAGE_CACHE_CLEARED'
 ```
 
-表示用户清除应用包缓存数据的公共事件的动作。
+Indicates that the user cleared the application package cache.
 
-对设备上安装的应用程序包清除缓存时，将会触发事件通知服务发布该系统公共事件。
+When the cache of an application package installed on the device is cleared, the event notification service is triggered to publish this event.
 
-> **说明：**
+> **NOTE：**
 > 
-> 三方应用只能监听自身应用的缓存清理事件。
+> Third-party applications can only listen for the cache clearance event of themselves.
 
 **Since:** 9
 
@@ -582,7 +584,7 @@ COMMON_EVENT_PACKAGE_CACHE_CLEARED = 'usual.event.PACKAGE_CACHE_CLEARED'
 COMMON_EVENT_PACKAGES_SUSPENDED = 'usual.event.PACKAGES_SUSPENDED'
 ```
 
-（预留事件，暂未支持）表示包已经被挂起。
+(Reserved, not supported yet) Indicates that the package has been suspended.
 
 **Since:** 9
 
@@ -598,7 +600,7 @@ COMMON_EVENT_PACKAGES_SUSPENDED = 'usual.event.PACKAGES_SUSPENDED'
 COMMON_EVENT_PACKAGES_UNSUSPENDED = 'usual.event.PACKAGES_UNSUSPENDED'
 ```
 
-（预留事件，暂未支持）表示包已经被解除挂起。
+(Reserved, not supported yet) Indicates that the package has been unsuspended.
 
 **Since:** 9
 
@@ -614,7 +616,7 @@ COMMON_EVENT_PACKAGES_UNSUSPENDED = 'usual.event.PACKAGES_UNSUSPENDED'
 COMMON_EVENT_MY_PACKAGE_SUSPENDED = 'usual.event.MY_PACKAGE_SUSPENDED'
 ```
 
-（预留事件，暂未支持）发送到已被系统挂起的包。
+(Reserved, not supported yet) Indicates that application packages have been suspended by the system.
 
 **Since:** 9
 
@@ -630,7 +632,7 @@ COMMON_EVENT_MY_PACKAGE_SUSPENDED = 'usual.event.MY_PACKAGE_SUSPENDED'
 COMMON_EVENT_MY_PACKAGE_UNSUSPENDED = 'usual.event.MY_PACKAGE_UNSUSPENDED'
 ```
 
-（预留事件，暂未支持）发送到已被系统解除挂起的包。
+(Reserved, not supported yet) Indicates that application packages have been unsuspended by the system.
 
 **Since:** 9
 
@@ -646,7 +648,7 @@ COMMON_EVENT_MY_PACKAGE_UNSUSPENDED = 'usual.event.MY_PACKAGE_UNSUSPENDED'
 COMMON_EVENT_UID_REMOVED = 'usual.event.UID_REMOVED'
 ```
 
-（预留事件，暂未支持）表示用户ID已从系统中删除的公共事件的动作。
+(Reserved, not supported yet) Indicates that a user ID has been removed from the system.
 
 **Since:** 9
 
@@ -662,7 +664,7 @@ COMMON_EVENT_UID_REMOVED = 'usual.event.UID_REMOVED'
 COMMON_EVENT_PACKAGE_FIRST_LAUNCH = 'usual.event.PACKAGE_FIRST_LAUNCH'
 ```
 
-（预留事件，暂未支持）应用程序在安装后首次启动。
+(Reserved, not supported yet) Indicates an initial start of an application after installation.
 
 **Since:** 9
 
@@ -678,7 +680,7 @@ COMMON_EVENT_PACKAGE_FIRST_LAUNCH = 'usual.event.PACKAGE_FIRST_LAUNCH'
 COMMON_EVENT_PACKAGE_NEEDS_VERIFICATION = 'usual.event.PACKAGE_NEEDS_VERIFICATION'
 ```
 
-（预留事件，暂未支持）当一个包需要被验证时，由系统包验证者发送。
+(Reserved, not supported yet) Indicates that a package is sent by the system verifier when the package needs verification.
 
 **Since:** 9
 
@@ -694,7 +696,7 @@ COMMON_EVENT_PACKAGE_NEEDS_VERIFICATION = 'usual.event.PACKAGE_NEEDS_VERIFICATIO
 COMMON_EVENT_PACKAGE_VERIFIED = 'usual.event.PACKAGE_VERIFIED'
 ```
 
-（预留事件，暂未支持）当一个包被验证时，由系统包验证者发送。
+(Reserved, not supported yet) Indicates that a package is sent by the system verifier when the package is verified.
 
 **Since:** 9
 
@@ -710,7 +712,7 @@ COMMON_EVENT_PACKAGE_VERIFIED = 'usual.event.PACKAGE_VERIFIED'
 COMMON_EVENT_EXTERNAL_APPLICATIONS_AVAILABLE = 'usual.event.EXTERNAL_APPLICATIONS_AVAILABLE'
 ```
 
-（预留事件，暂未支持）表示安装在外部存储上的应用程序对系统可用的公共事件的操作。
+(Reserved, not supported yet) Indicates that applications installed on the external storage become available for the system.
 
 **Since:** 9
 
@@ -726,7 +728,7 @@ COMMON_EVENT_EXTERNAL_APPLICATIONS_AVAILABLE = 'usual.event.EXTERNAL_APPLICATION
 COMMON_EVENT_EXTERNAL_APPLICATIONS_UNAVAILABLE = 'usual.event.EXTERNAL_APPLICATIONS_UNAVAILABLE'
 ```
 
-（预留事件，暂未支持）表示安装在外部存储上的应用程序对系统不可用的公共事件的操作。
+(Reserved, not supported yet) Indicates that applications installed on the external storage become unavailable for the system.
 
 **Since:** 9
 
@@ -742,7 +744,7 @@ COMMON_EVENT_EXTERNAL_APPLICATIONS_UNAVAILABLE = 'usual.event.EXTERNAL_APPLICATI
 COMMON_EVENT_CONFIGURATION_CHANGED = 'usual.event.CONFIGURATION_CHANGED'
 ```
 
-（预留事件，暂未支持）表示设备状态（例如，方向和区域设置）已更改的公共事件的操作。
+(Reserved, not supported yet) Indicates that the device state (for example, orientation and locale) has changed.
 
 **Since:** 9
 
@@ -758,9 +760,9 @@ COMMON_EVENT_CONFIGURATION_CHANGED = 'usual.event.CONFIGURATION_CHANGED'
 COMMON_EVENT_LOCALE_CHANGED = 'usual.event.LOCALE_CHANGED'
 ```
 
-设置系统语言的公共事件的动作。
+Indicates that the system language is set.
 
-当设置系统语言时，将会触发事件通知服务发布该系统公共事件。
+When the system language is set, the event notification service is triggered to publish this event.
 
 **Since:** 9
 
@@ -776,7 +778,7 @@ COMMON_EVENT_LOCALE_CHANGED = 'usual.event.LOCALE_CHANGED'
 COMMON_EVENT_MANAGE_PACKAGE_STORAGE = 'usual.event.MANAGE_PACKAGE_STORAGE'
 ```
 
-通知用户低内存状态并且应该启动包管理。
+Notifies the low memory state and package management should be started.
 
 **Since:** 9
 
@@ -792,7 +794,7 @@ COMMON_EVENT_MANAGE_PACKAGE_STORAGE = 'usual.event.MANAGE_PACKAGE_STORAGE'
 COMMON_EVENT_DRIVE_MODE = 'common.event.DRIVE_MODE'
 ```
 
-（预留事件，暂未支持）表示系统处于驾驶模式的公共事件的动作。
+(Reserved, not supported yet) Indicates that the system is in driving mode.
 
 **Since:** 9
 
@@ -808,7 +810,7 @@ COMMON_EVENT_DRIVE_MODE = 'common.event.DRIVE_MODE'
 COMMON_EVENT_HOME_MODE = 'common.event.HOME_MODE'
 ```
 
-（预留事件，暂未支持）表示系统处于HOME模式的公共事件的动作。
+(Reserved, not supported yet) Indicates that the system is in home mode.
 
 **Since:** 9
 
@@ -824,7 +826,7 @@ COMMON_EVENT_HOME_MODE = 'common.event.HOME_MODE'
 COMMON_EVENT_OFFICE_MODE = 'common.event.OFFICE_MODE'
 ```
 
-（预留事件，暂未支持）表示系统处于办公模式的公共事件的动作。
+(Reserved, not supported yet) Indicates that the system is in office mode.
 
 **Since:** 9
 
@@ -840,7 +842,7 @@ COMMON_EVENT_OFFICE_MODE = 'common.event.OFFICE_MODE'
 COMMON_EVENT_USER_STARTED = 'usual.event.USER_STARTED'
 ```
 
-（预留事件，暂未支持）表示用户已启动的公共事件的动作。
+(Reserved, not supported yet) Indicates that the user has been started.
 
 **Since:** 9
 
@@ -856,7 +858,7 @@ COMMON_EVENT_USER_STARTED = 'usual.event.USER_STARTED'
 COMMON_EVENT_USER_BACKGROUND = 'usual.event.USER_BACKGROUND'
 ```
 
-（预留事件，暂未支持）表示用户已被带到后台的公共事件的动作。
+(Reserved, not supported yet) Indicates that the user has been brought to the background.
 
 **Since:** 9
 
@@ -872,7 +874,7 @@ COMMON_EVENT_USER_BACKGROUND = 'usual.event.USER_BACKGROUND'
 COMMON_EVENT_USER_FOREGROUND = 'usual.event.USER_FOREGROUND'
 ```
 
-（预留事件，暂未支持）表示用户已被带到前台的公共事件的动作。
+(Reserved, not supported yet) Indicates that the user has been brought to the foreground.
 
 **Since:** 9
 
@@ -888,13 +890,14 @@ COMMON_EVENT_USER_FOREGROUND = 'usual.event.USER_FOREGROUND'
 COMMON_EVENT_USER_SWITCHED = 'usual.event.USER_SWITCHED'
 ```
 
-表示用户切换完成的公共事件的动作。
+Indicates that a user switchover is complete.
 
-切换系统账号将会触发事件通知服务发布该系统公共事件，事件携带系统账号ID。
+When a system account is switched, the common event service is triggered to publish this event carrying the system account ID.
 
-与这个公共事件相关的接口：activateOsAccount, 为系统API，具体参看[@ohos.account.osAccount](../../../reference/js-apis-osAccount.md)。
+The system API related to this common event is **activateOsAccount**. For details, see   
+[@ohos.account.osAccount (System Account Management)](../../../reference/js-apis-osAccount.md).
 
-要订阅此事件，在API version 21之前，需要申请ohos.permission.MANAGE_LOCAL_ACCOUNTS权限；从API version 21开始，需要申请ohos.permission.MANAGE_LOCAL_ACCOUNTS或ohos.permission.INTERACT_ACROSS_LOCAL_ACCOUNTS权限
+To subscribe to this common event, your application must have the ohos.permission.MANAGE_LOCAL_ACCOUNTS permission (before API version 21); ohos.permission.MANAGE_LOCAL_ACCOUNTS or ohos.permission.INTERACT_ACROSS_LOCAL_ACCOUNTS permission (since API version 21).
 
 **Since:** 9
 
@@ -910,9 +913,10 @@ COMMON_EVENT_USER_SWITCHED = 'usual.event.USER_SWITCHED'
 COMMON_EVENT_USER_STARTING = 'usual.event.USER_STARTING'
 ```
 
-（预留事件，暂未支持）表示要启动用户的公共事件的动作。
+(Reserved, not supported yet) Indicates that the user is going to be started.
 
-要订阅此事件，您的应用必须具备ohos.permission.INTERACT_ACROSS_LOCAL_ACCOUNTS权限（该权限仅系统应用可申请）。
+To subscribe to this common event, your application must have the   
+**ohos.permission.INTERACT_ACROSS_LOCAL_ACCOUNTS** permission.(This permission is available only for system applications.)
 
 **Since:** 9
 
@@ -928,9 +932,9 @@ COMMON_EVENT_USER_STARTING = 'usual.event.USER_STARTING'
 COMMON_EVENT_USER_UNLOCKED = 'usual.event.USER_UNLOCKED'
 ```
 
-表示设备重启后解锁时，当前用户的凭据加密存储已解锁的公共事件的动作。
+Indicates that the credential-encrypted storage has been unlocked for the current user after the device is restarted.
 
-切换到带有锁屏密码的用户，并且首次解锁会发出触发事件通知服务发布该系统公共事件，事件携带标识该用户的系统账号ID。
+When the device is unlocked with the lock screen password the first time after user switching, the event notification service is triggered to publish this event carrying the system account ID that identifies the user.
 
 **Since:** 9
 
@@ -946,9 +950,10 @@ COMMON_EVENT_USER_UNLOCKED = 'usual.event.USER_UNLOCKED'
 COMMON_EVENT_USER_STOPPING = 'usual.event.USER_STOPPING'
 ```
 
-（预留事件，暂未支持）表示要停止用户的公共事件的动作。
+(Reserved, not supported yet) Indicates that the user is going to be stopped.
 
-要订阅此事件，您的应用必须具备ohos.permission.INTERACT_ACROSS_LOCAL_ACCOUNTS权限（该权限仅系统应用可申请）。
+To subscribe to this common event, your application must have the   
+**ohos.permission.INTERACT_ACROSS_LOCAL_ACCOUNTS** permission.(This permission is available only for system applications.)
 
 **Since:** 9
 
@@ -964,7 +969,7 @@ COMMON_EVENT_USER_STOPPING = 'usual.event.USER_STOPPING'
 COMMON_EVENT_USER_STOPPED = 'usual.event.USER_STOPPED'
 ```
 
-（预留事件，暂未支持）表示用户已停止的公共事件的动作。
+(Reserved, not supported yet) Indicates that the user has been stopped.
 
 **Since:** 9
 
@@ -980,11 +985,12 @@ COMMON_EVENT_USER_STOPPED = 'usual.event.USER_STOPPED'
 COMMON_EVENT_DISTRIBUTED_ACCOUNT_LOGIN = 'common.event.DISTRIBUTED_ACCOUNT_LOGIN'
 ```
 
-表示分布式账号登录成功的动作。
+Indicates a successful login from a distributed account.
 
-分布式账号登录成功时会触发事件通知服务发布该系统公共事件，事件携带系统账号ID和子身份ID。
+When a distributed account is successfully logged in, the event notification service is triggered to publish this event carrying the OS account ID and the sub-profile ID.
 
-与这个公共事件相关的接口：setOsAccountDistributedInfo、updateOsAccountDistributedInfo(已废弃)，这些为公共API，setOsAccountDistributedInfoByLocalId为系统API，具体参看[分布式账号接口文档](../../../reference/js-apis-distributed-account.md)。
+APIs related to this event: **setOsAccountDistributedInfo** and **updateOsAccountDistributedInfo** (discarded), and **setOsAccountDistributedInfoByLocalId**. The first two are public APIs, and the last one is a system API. For details, see   
+[@ohos.account.distributedAccount (Distributed Account Management)](../../../reference/js-apis-distributed-account.md).
 
 **Since:** 9
 
@@ -1002,11 +1008,12 @@ COMMON_EVENT_DISTRIBUTED_ACCOUNT_LOGIN = 'common.event.DISTRIBUTED_ACCOUNT_LOGIN
 COMMON_EVENT_DISTRIBUTED_ACCOUNT_LOGOUT = 'common.event.DISTRIBUTED_ACCOUNT_LOGOUT'
 ```
 
-表示分布式账号登出成功的动作。
+Indicates a successful logout from a distributed account.
 
-分布式账号登出时会触发事件通知服务发布该系统公共事件，事件携带系统账号ID和子身份ID。
+When a distributed account is successfully logged out, the event notification service is triggered to publish this event carrying the OS account ID and the sub-profile ID.
 
-与这个公共事件相关的接口：setOsAccountDistributedInfo、updateOsAccountDistributedInfo(已废弃)，这些为公共API，setOsAccountDistributedInfoByLocalId为系统API，具体参看[分布式账号接口文档](../../../reference/js-apis-distributed-account.md)。
+APIs related to this event: **setOsAccountDistributedInfo** and **updateOsAccountDistributedInfo** (discarded), and **setOsAccountDistributedInfoByLocalId**. The first two are public APIs, and the last one is a system API. For details, see   
+[@ohos.account.distributedAccount (Distributed Account Management)](../../../reference/js-apis-distributed-account.md).
 
 **Since:** 9
 
@@ -1024,11 +1031,12 @@ COMMON_EVENT_DISTRIBUTED_ACCOUNT_LOGOUT = 'common.event.DISTRIBUTED_ACCOUNT_LOGO
 COMMON_EVENT_DISTRIBUTED_ACCOUNT_TOKEN_INVALID = 'common.event.DISTRIBUTED_ACCOUNT_TOKEN_INVALID'
 ```
 
-表示分布式账号token令牌无效的动作。
+Indicates that the token of a distributed account is invalid.
 
-分布式账号的token令牌无效时会触发事件通知服务发布该系统公共事件，事件携带系统账号ID和子身份ID。
+When the token of a distributed account is invalid, the event notification service is triggered to publish this event carrying the OS account ID and the sub-profile ID.
 
-与这个公共事件相关的接口：setOsAccountDistributedInfo、updateOsAccountDistributedInfo(已废弃)，这些为公共API，setOsAccountDistributedInfoByLocalId为系统API，具体参看[分布式账号接口文档](../../../reference/js-apis-distributed-account.md)。
+APIs related to this event: **setOsAccountDistributedInfo** and **updateOsAccountDistributedInfo** (discarded), and **setOsAccountDistributedInfoByLocalId**. The first two are public APIs, and the last one is a system API. For details, see   
+[@ohos.account.distributedAccount (Distributed Account Management)](../../../reference/js-apis-distributed-account.md).
 
 **Since:** 9
 
@@ -1046,11 +1054,12 @@ COMMON_EVENT_DISTRIBUTED_ACCOUNT_TOKEN_INVALID = 'common.event.DISTRIBUTED_ACCOU
 COMMON_EVENT_DISTRIBUTED_ACCOUNT_LOGOFF = 'common.event.DISTRIBUTED_ACCOUNT_LOGOFF'
 ```
 
-表示分布式账号注销的动作。
+Indicates that a distributed account is deregistered.
 
-分布式账号注销成功会触发事件通知服务发布该系统公共事件，事件携带系统账号ID和子身份ID。
+When a distributed account is deregistered, the event notification service is triggered to publish this event carrying the OS account ID and the sub-profile ID.
 
-与这个公共事件相关的接口：setOsAccountDistributedInfo、updateOsAccountDistributedInfo(已废弃)，这些为公共API，setOsAccountDistributedInfoByLocalId为系统API，具体参看[分布式账号接口文档](../../../reference/js-apis-distributed-account.md)。
+APIs related to this event: **setOsAccountDistributedInfo** and **updateOsAccountDistributedInfo** (discarded), and **setOsAccountDistributedInfoByLocalId**. The first two are public APIs, and the last one is a system API. For details, see   
+[@ohos.account.distributedAccount (Distributed Account Management)](../../../reference/js-apis-distributed-account.md).
 
 **Since:** 9
 
@@ -1068,11 +1077,11 @@ COMMON_EVENT_DISTRIBUTED_ACCOUNT_LOGOFF = 'common.event.DISTRIBUTED_ACCOUNT_LOGO
 COMMON_EVENT_WIFI_POWER_STATE = 'usual.event.wifi.POWER_STATE'
 ```
 
-Wi-Fi状态变化。
+Indicates that the Wi-Fi state changes.
 
-当Wi-Fi状态发生变化时（如启用、禁用Wi-Fi），将会触发事件通知服务发布该系统公共事件。
+When the Wi-Fi state changes (such as enabled or disabled), the event notification service is triggered to release the system public event.
 
-状态值：0：WLAN正在关闭，1：WLAN已关闭，2：WLAN正在打开，3：WLAN已启动。
+State values: **0** indicates that the Wi-Fi is being disabling; **1** indicates that the Wi-Fi has been disabled; **2** indicates that the Wi-Fi is being enabled; **3** indicates that the Wi-Fi has been enabled.
 
 **Since:** 9
 
@@ -1088,11 +1097,11 @@ Wi-Fi状态变化。
 COMMON_EVENT_WIFI_SCAN_FINISHED = 'usual.event.wifi.SCAN_FINISHED'
 ```
 
-表示Wi-Fi接入点已被扫描并证明可用的动作。
+Indicates that a Wi-Fi access point is detected and proven to be available.
 
-当Wi-Fi接入点已被扫描并证明可用，将会触发事件通知服务发布该系统公共事件。
+When a Wi-Fi access point is detected and proven to be available, the event notification service is triggered to publish this event.
 
-要订阅此事件，您的应用必须具备ohos.permission.LOCATION权限。
+To subscribe to this common event, your application must have the **ohos.permission.LOCATION** permission.
 
 **Since:** 9
 
@@ -1108,11 +1117,11 @@ COMMON_EVENT_WIFI_SCAN_FINISHED = 'usual.event.wifi.SCAN_FINISHED'
 COMMON_EVENT_WIFI_RSSI_VALUE = 'usual.event.wifi.RSSI_VALUE'
 ```
 
-表示Wi-Fi信号强度（RSSI）改变。
+Indicates that the Wi-Fi signal strength (RSSI) has changed.
 
-当Wi-Fi信号强度（RSSI）发生变化，将会触发事件通知服务发布该系统公共事件。
+When the Wi-Fi signal strength (RSSI) changes, the event notification service is triggered to publish this event.
 
-要订阅此事件，您的应用必须具备ohos.permission.GET_WIFI_INFO权限。
+To subscribe to this common event, your application must have the **ohos.permission.GET_WIFI_INFO** permission.
 
 **Since:** 9
 
@@ -1128,9 +1137,9 @@ COMMON_EVENT_WIFI_RSSI_VALUE = 'usual.event.wifi.RSSI_VALUE'
 COMMON_EVENT_WIFI_CONN_STATE = 'usual.event.wifi.CONN_STATE'
 ```
 
-Wi-Fi连接状态发生改变。
+Indicates that the Wi-Fi connection state has changed.
 
-当Wi-Fi连接状态发生变化，将会触发事件通知服务发布该系统公共事件。
+When the Wi-Fi connection state changes, the event notification service is triggered to publish this event.
 
 **Since:** 9
 
@@ -1146,11 +1155,11 @@ Wi-Fi连接状态发生改变。
 COMMON_EVENT_WIFI_HOTSPOT_STATE = 'usual.event.wifi.HOTSPOT_STATE'
 ```
 
-表示Wi-Fi热点状态变化。
+Indicates that the Wi-Fi hotspot state has changed.
 
-当Wi-Fi热点状态发生变化，将会触发事件通知服务发布该系统公共事件。
+When the Wi-Fi hotspot state changes, the event notification service is triggered to publish this event.
 
-状态值：2：AP正在打开，3：AP已启动，4：AP正在关闭，5：AP已关闭。
+State values: **2** indicates that the AP is being enabled, **3** indicates that the AP has been enabled; **4** indicates that the AP is being disabled; **5** indicates that the AP has been disabled.
 
 **Since:** 9
 
@@ -1166,11 +1175,11 @@ COMMON_EVENT_WIFI_HOTSPOT_STATE = 'usual.event.wifi.HOTSPOT_STATE'
 COMMON_EVENT_WIFI_AP_STA_JOIN = 'usual.event.wifi.WIFI_HS_STA_JOIN'
 ```
 
-表示客户端加入当前设备Wi-Fi热点。
+Indicates that a client has joined the Wi-Fi hotspot of the current device.
 
-当客户端加入当前设备Wi-Fi热点，将会触发事件通知服务发布该系统公共事件。
+When a client joins the Wi-Fi hotspot of the current device, the event notification service is triggered to publish this event.
 
-要订阅此事件，您的应用必须具备ohos.permission.GET_WIFI_INFO权限。
+To subscribe to this common event, your application must have the **ohos.permission.GET_WIFI_INFO** permission.
 
 **Since:** 9
 
@@ -1186,11 +1195,11 @@ COMMON_EVENT_WIFI_AP_STA_JOIN = 'usual.event.wifi.WIFI_HS_STA_JOIN'
 COMMON_EVENT_WIFI_AP_STA_LEAVE = 'usual.event.wifi.WIFI_HS_STA_LEAVE'
 ```
 
-表示客户端已断开与当前设备Wi-Fi热点的连接。
+Indicates that the client is disconnected from the Wi-Fi hotspot of the current device.
 
-当客户端已断开与当前设备Wi-Fi热点的连接，将会触发事件通知服务发布该系统公共事件。
+When a client is disconnected from the Wi-Fi hotspot of the current device, the event notification service is triggered to publish this event.
 
-要订阅此事件，您的应用必须具备ohos.permission.GET_WIFI_INFO权限。
+To subscribe to this common event, your application must have the **ohos.permission.GET_WIFI_INFO** permission.
 
 **Since:** 9
 
@@ -1206,9 +1215,9 @@ COMMON_EVENT_WIFI_AP_STA_LEAVE = 'usual.event.wifi.WIFI_HS_STA_LEAVE'
 COMMON_EVENT_WIFI_MPLINK_STATE_CHANGE = 'usual.event.wifi.mplink.STATE_CHANGE'
 ```
 
-表示MPLink（增强Wi-Fi功能）状态已更改。
+Indicates that the state of MPLINK (an enhanced Wi-Fi feature) has changed.
 
-当MPLink（增强Wi-Fi功能）状态发生变化，将会触发事件通知服务发布该系统公共事件（暂不支持）。
+When the state of MPLINK changes, the event notification service is triggered to publish this event (not supported yet).
 
 **Since:** 9
 
@@ -1224,11 +1233,12 @@ COMMON_EVENT_WIFI_MPLINK_STATE_CHANGE = 'usual.event.wifi.mplink.STATE_CHANGE'
 COMMON_EVENT_WIFI_P2P_CONN_STATE = 'usual.event.wifi.p2p.CONN_STATE_CHANGE'
 ```
 
-表示Wi-Fi P2P连接状态改变。
+Indicates that the Wi-Fi P2P connection state has changed.
 
-当Wi-Fi P2P连接状态发生变化，将会触发事件通知服务发布该系统公共事件。
+When the Wi-Fi P2P connection state changes, the event notification service is triggered to publish this event.
 
-要订阅此事件，您的应用必须具备ohos.permission.GET_WIFI_INFO和ohos.permission.LOCATION权限。
+To subscribe to this common event, your application must have the **ohos.permission.GET_WIFI_INFO** and   
+**ohos.permission.LOCATION** permissions.
 
 **Since:** 9
 
@@ -1244,13 +1254,13 @@ COMMON_EVENT_WIFI_P2P_CONN_STATE = 'usual.event.wifi.p2p.CONN_STATE_CHANGE'
 COMMON_EVENT_WIFI_P2P_STATE_CHANGED = 'usual.event.wifi.p2p.STATE_CHANGE'
 ```
 
-表示Wi-Fi P2P状态变化。
+Indicates that the Wi-Fi P2P state has changed.
 
-当Wi-Fi P2P状态发生变化，将会触发事件通知服务发布该系统公共事件。
+When the Wi-Fi P2P state changes, the event notification service is triggered to publish this event.
 
-状态值：2：P2P正在打开，3：P2P已启动，4：P2P正在关闭，5：P2P已关闭。
+State values: **2** indicates that the P2P is being enabled, **3** indicates that the P2P has been enabled; **4**indicates that the P2P is being disabled; **5** indicates that the P2P has been disabled.
 
-要订阅此事件，您的应用必须具备ohos.permission.GET_WIFI_INFO权限。
+To subscribe to this common event, your application must have the **ohos.permission.GET_WIFI_INFO** permission.
 
 **Since:** 9
 
@@ -1266,11 +1276,11 @@ COMMON_EVENT_WIFI_P2P_STATE_CHANGED = 'usual.event.wifi.p2p.STATE_CHANGE'
 COMMON_EVENT_WIFI_P2P_PEERS_STATE_CHANGED = 'usual.event.wifi.p2p.DEVICES_CHANGE'
 ```
 
-表示Wi-Fi P2P对等体状态变化。
+Indicates that the state of the Wi-Fi P2P peer device has changed.
 
-当Wi-Fi P2P对等体状态变化，将会触发事件通知服务发布该系统公共事件。
+When the state of the Wi-Fi P2P peer device changes, the event notification service is triggered to publish this event.
 
-要订阅此事件，您的应用必须具备ohos.permission.GET_WIFI_INFO权限。
+To subscribe to this common event, your application must have the **ohos.permission.GET_WIFI_INFO** permission.
 
 **Since:** 9
 
@@ -1286,11 +1296,11 @@ COMMON_EVENT_WIFI_P2P_PEERS_STATE_CHANGED = 'usual.event.wifi.p2p.DEVICES_CHANGE
 COMMON_EVENT_WIFI_P2P_PEERS_DISCOVERY_STATE_CHANGED = 'usual.event.wifi.p2p.PEER_DISCOVERY_STATE_CHANGE'
 ```
 
-表示Wi-Fi P2P发现状态变化。
+Indicates that the Wi-Fi P2P discovery state has changed.
 
-当Wi-Fi P2P发现状态变化，将会触发事件通知服务发布该系统公共事件。
+When the Wi-Fi P2P discovery state changes, the event notification service is triggered to publish this event.
 
-要订阅此事件，您的应用必须具备ohos.permission.GET_WIFI_INFO权限。
+To subscribe to this common event, your application must have the **ohos.permission.GET_WIFI_INFO** permission.
 
 **Since:** 9
 
@@ -1306,11 +1316,11 @@ COMMON_EVENT_WIFI_P2P_PEERS_DISCOVERY_STATE_CHANGED = 'usual.event.wifi.p2p.PEER
 COMMON_EVENT_WIFI_P2P_CURRENT_DEVICE_STATE_CHANGED = 'usual.event.wifi.p2p.CURRENT_DEVICE_CHANGE'
 ```
 
-表示Wi-Fi P2P当前设备状态变化。
+Indicates that the state of the Wi-Fi P2P local device has changed.
 
-当Wi-Fi P2P当前设备状态变化，将会触发事件通知服务发布该系统公共事件。
+When the state of the Wi-Fi P2P local device changes, the event notification service is triggered to publish this event.
 
-要订阅此事件，您的应用必须具备ohos.permission.GET_WIFI_INFO权限。
+To subscribe to this common event, your application must have the **ohos.permission.GET_WIFI_INFO** permission.
 
 **Since:** 9
 
@@ -1326,11 +1336,11 @@ COMMON_EVENT_WIFI_P2P_CURRENT_DEVICE_STATE_CHANGED = 'usual.event.wifi.p2p.CURRE
 COMMON_EVENT_WIFI_P2P_GROUP_STATE_CHANGED = 'usual.event.wifi.p2p.GROUP_STATE_CHANGED'
 ```
 
-表示Wi-Fi P2P群组信息已更改。
+Indicates that the Wi-Fi P2P group information has changed.
 
-当Wi-Fi P2P群组信息发生变化，将会触发事件通知服务发布该系统公共事件。
+When the Wi-Fi P2P group information changes, the event notification service is triggered to publish this event.
 
-要订阅此事件，您的应用必须具备ohos.permission.GET_WIFI_INFO权限。
+To subscribe to this common event, your application must have the **ohos.permission.GET_WIFI_INFO** permission.
 
 **Since:** 9
 
@@ -1347,9 +1357,9 @@ COMMON_EVENT_BLUETOOTH_HANDSFREE_AG_CONNECT_STATE_UPDATE =
         'usual.event.bluetooth.handsfree.ag.CONNECT_STATE_UPDATE'
 ```
 
-（预留事件，暂未支持）蓝牙免提通信连接状态公共事件的动作。
+(Reserved, not supported yet) Indicates the common event about the connection state of Bluetooth handsfree communication.
 
-要订阅此事件，您的应用必须具备ohos.permission.USE_BLUETOOTH权限。
+To subscribe to this common event, your application must have the **ohos.permission.USE_BLUETOOTH** permission.
 
 **Since:** 9
 
@@ -1370,9 +1380,9 @@ COMMON_EVENT_BLUETOOTH_HANDSFREE_AG_CURRENT_DEVICE_UPDATE =
         'usual.event.bluetooth.handsfree.ag.CURRENT_DEVICE_UPDATE'
 ```
 
-（预留事件，暂未支持）表示连接到蓝牙免提的设备处于活动状态的公共事件的动作。
+(Reserved, not supported yet) Indicates that the device connected to the Bluetooth handsfree is active.
 
-要订阅此事件，您的应用必须具备ohos.permission.USE_BLUETOOTH权限。
+To subscribe to this common event, your application must have the **ohos.permission.USE_BLUETOOTH** permission.
 
 **Since:** 9
 
@@ -1391,9 +1401,9 @@ COMMON_EVENT_BLUETOOTH_HANDSFREE_AG_AUDIO_STATE_UPDATE =
         'usual.event.bluetooth.handsfree.ag.AUDIO_STATE_UPDATE'
 ```
 
-（预留事件，暂未支持）表示蓝牙A2DP连接状态已更改的公共事件的动作。
+(Reserved, not supported yet) Indicates that the connection state of Bluetooth A2DP has changed.
 
-要订阅此事件，您的应用必须具备ohos.permission.USE_BLUETOOTH权限。
+To subscribe to this common event, your application must have the **ohos.permission.USE_BLUETOOTH** permission.
 
 **Since:** 9
 
@@ -1412,9 +1422,9 @@ COMMON_EVENT_BLUETOOTH_A2DPSOURCE_CONNECT_STATE_UPDATE =
         'usual.event.bluetooth.a2dpsource.CONNECT_STATE_UPDATE'
 ```
 
-（预留事件，暂未支持）蓝牙A2DP连接状态公共事件的动作。
+(Reserved, not supported yet) Indicates the common event about the connection state of Bluetooth A2DP.
 
-要订阅此事件，您的应用必须具备ohos.permission.USE_BLUETOOTH权限。
+To subscribe to this common event, your application must have the **ohos.permission.USE_BLUETOOTH** permission.
 
 **Since:** 9
 
@@ -1435,9 +1445,9 @@ COMMON_EVENT_BLUETOOTH_A2DPSOURCE_CURRENT_DEVICE_UPDATE =
         'usual.event.bluetooth.a2dpsource.CURRENT_DEVICE_UPDATE'
 ```
 
-（预留事件，暂未支持）表示使用蓝牙A2DP连接的设备处于活动状态的公共事件的动作。
+(Reserved, not supported yet) Indicates that the device connected using Bluetooth A2DP is active.
 
-要订阅此事件，您的应用必须具备ohos.permission.USE_BLUETOOTH权限。
+To subscribe to this common event, your application must have the **ohos.permission.USE_BLUETOOTH** permission.
 
 **Since:** 9
 
@@ -1456,9 +1466,9 @@ COMMON_EVENT_BLUETOOTH_A2DPSOURCE_PLAYING_STATE_UPDATE =
         'usual.event.bluetooth.a2dpsource.PLAYING_STATE_UPDATE'
 ```
 
-（预留事件，暂未支持）蓝牙A2DP播放状态改变的普通事件的动作。
+(Reserved, not supported yet) Indicates that the playing state of Bluetooth A2DP has changed.
 
-要订阅此事件，您的应用必须具备ohos.permission.USE_BLUETOOTH权限。
+To subscribe to this common event, your application must have the **ohos.permission.USE_BLUETOOTH** permission.
 
 **Since:** 9
 
@@ -1477,9 +1487,9 @@ COMMON_EVENT_BLUETOOTH_A2DPSOURCE_AVRCP_CONNECT_STATE_UPDATE =
         'usual.event.bluetooth.a2dpsource.AVRCP_CONNECT_STATE_UPDATE'
 ```
 
-（预留事件，暂未支持）表示蓝牙A2DP的AVRCP连接状态已更改的公共事件的动作。
+(Reserved, not supported yet) Indicates that the AVRCP connection state of Bluetooth A2DP has changed.
 
-要订阅此事件，您的应用必须具备ohos.permission.USE_BLUETOOTH权限。
+To subscribe to this common event, your application must have the **ohos.permission.USE_BLUETOOTH** permission.
 
 **Since:** 9
 
@@ -1500,9 +1510,9 @@ COMMON_EVENT_BLUETOOTH_A2DPSOURCE_CODEC_VALUE_UPDATE =
         'usual.event.bluetooth.a2dpsource.CODEC_VALUE_UPDATE'
 ```
 
-（预留事件，暂未支持）表示蓝牙A2DP音频编解码状态更改的公共事件的动作。
+(Reserved, not supported yet) Indicates that the audio codec state of Bluetooth A2DP has changed.
 
-要订阅此事件，您的应用必须具备ohos.permission.USE_BLUETOOTH权限。
+To subscribe to this common event, your application must have the **ohos.permission.USE_BLUETOOTH** permission.
 
 **Since:** 9
 
@@ -1523,9 +1533,10 @@ COMMON_EVENT_BLUETOOTH_REMOTEDEVICE_DISCOVERED =
         'usual.event.bluetooth.remotedevice.DISCOVERED'
 ```
 
-（预留事件，暂未支持）表示发现远程蓝牙设备的公共事件的动作。
+(Reserved, not supported yet) Indicates that a remote Bluetooth device is discovered.
 
-要订阅此事件，您的应用必须具备ohos.permission.LOCATION和ohos.permission.USE_BLUETOOTH权限。
+To subscribe to this common event, your application must have the **ohos.permission.LOCATION** and   
+**ohos.permission.USE_BLUETOOTH** permissions.
 
 **Since:** 9
 
@@ -1544,9 +1555,9 @@ COMMON_EVENT_BLUETOOTH_REMOTEDEVICE_CLASS_VALUE_UPDATE =
         'usual.event.bluetooth.remotedevice.CLASS_VALUE_UPDATE'
 ```
 
-（预留事件，暂未支持）表示远程蓝牙设备的蓝牙类别已更改的公共事件的动作。
+(Reserved, not supported yet) Indicates that the Bluetooth class of a remote Bluetooth device has changed.
 
-要订阅此事件，您的应用必须具备ohos.permission.USE_BLUETOOTH权限。
+To subscribe to this common event, your application must have the **ohos.permission.USE_BLUETOOTH** permission.
 
 **Since:** 9
 
@@ -1565,7 +1576,7 @@ COMMON_EVENT_BLUETOOTH_REMOTEDEVICE_ACL_CONNECTED =
         'usual.event.bluetooth.remotedevice.ACL_CONNECTED'
 ```
 
-（预留事件，暂未支持）表示已与远程蓝牙设备建立低级别（ACL）连接的公共事件的动作。
+(Reserved, not supported yet) Indicates that a low-ACL connection has been established with a remote Bluetooth device.
 
 **Since:** 9
 
@@ -1586,9 +1597,9 @@ COMMON_EVENT_BLUETOOTH_REMOTEDEVICE_ACL_DISCONNECTED =
         'usual.event.bluetooth.remotedevice.ACL_DISCONNECTED'
 ```
 
-（预留事件，暂未支持）表示低电平（ACL）连接已从远程蓝牙设备断开的普通事件的动作。
+(Reserved, not supported yet) Indicates that a low-ACL connection has been disconnected from a remote Bluetooth device.
 
-要订阅此事件，您的应用必须具备ohos.permission.USE_BLUETOOTH权限。
+To subscribe to this common event, your application must have the **ohos.permission.USE_BLUETOOTH** permission.
 
 **Since:** 9
 
@@ -1609,9 +1620,9 @@ COMMON_EVENT_BLUETOOTH_REMOTEDEVICE_NAME_UPDATE =
         'usual.event.bluetooth.remotedevice.NAME_UPDATE'
 ```
 
-（预留事件，暂未支持）表示远程蓝牙设备的友好名称首次被检索或自上次检索以来被更改的公共事件的操作。
+(Reserved, not supported yet) Indicates that the friendly name of a remote Bluetooth device is retrieved for the first time or has changed since the last retrieval.
 
-要订阅此事件，您的应用必须具备ohos.permission.ACCESS_BLUETOOTH权限。
+To subscribe to this common event, your application must have the **ohos.permission.ACCESS_BLUETOOTH** permission.
 
 **Since:** 9
 
@@ -1630,9 +1641,9 @@ COMMON_EVENT_BLUETOOTH_REMOTEDEVICE_PAIR_STATE =
         'usual.event.bluetooth.remotedevice.PAIR_STATE'
 ```
 
-（预留事件，暂未支持）远程蓝牙设备连接状态更改的公共事件的动作。
+(Reserved, not supported yet) Indicates that the connection state of a remote Bluetooth device has changed.
 
-要订阅此事件，您的应用必须具备ohos.permission.USE_BLUETOOTH权限。
+To subscribe to this common event, your application must have the **ohos.permission.USE_BLUETOOTH** permission.
 
 **Since:** 9
 
@@ -1653,9 +1664,9 @@ COMMON_EVENT_BLUETOOTH_REMOTEDEVICE_BATTERY_VALUE_UPDATE =
         'usual.event.bluetooth.remotedevice.BATTERY_VALUE_UPDATE'
 ```
 
-（预留事件，暂未支持）表示远程蓝牙设备的电池电量首次被检索或自上次检索以来被更改的公共事件的动作。
+(Reserved, not supported yet) Indicates that the battery level of a remote Bluetooth device is retrieved for the first time or has changed since the last retrieval.
 
-要订阅此事件，您的应用必须具备ohos.permission.USE_BLUETOOTH权限。
+To subscribe to this common event, your application must have the **ohos.permission.USE_BLUETOOTH** permission.
 
 **Since:** 9
 
@@ -1674,7 +1685,7 @@ COMMON_EVENT_BLUETOOTH_REMOTEDEVICE_SDP_RESULT =
         'usual.event.bluetooth.remotedevice.SDP_RESULT'
 ```
 
-（预留事件，暂未支持）远程蓝牙设备SDP状态公共事件的动作。
+(Reserved, not supported yet) Indicates the common event about the SDP state of a remote Bluetooth device.
 
 **Since:** 9
 
@@ -1693,9 +1704,9 @@ COMMON_EVENT_BLUETOOTH_REMOTEDEVICE_UUID_VALUE =
         'usual.event.bluetooth.remotedevice.UUID_VALUE'
 ```
 
-远程蓝牙设备UUID连接状态公共事件的动作。
+Indicates the action of a common event about the UUID connection state of a remote Bluetooth device.
 
-要订阅此事件，您的应用必须具备ohos.permission.ACCESS_BLUETOOTH权限。
+To subscribe to this common event, your application must have the **ohos.permission.ACCESS_BLUETOOTH** permission.
 
 **Since:** 9
 
@@ -1714,9 +1725,9 @@ COMMON_EVENT_BLUETOOTH_REMOTEDEVICE_PAIRING_REQ =
         'usual.event.bluetooth.remotedevice.PAIRING_REQ'
 ```
 
-（预留事件，暂未支持）表示远程蓝牙设备配对请求的公共事件的动作。
+(Reserved, not supported yet) Indicates the common event about the pairing request from a remote Bluetooth device.
 
-要订阅此事件，您的应用必须具备ohos.permission.DISCOVER_BLUETOOTH权限。
+To subscribe to this common event, your application must have the **ohos.permission.DISCOVER_BLUETOOTH** permission.
 
 **Since:** 9
 
@@ -1735,7 +1746,7 @@ COMMON_EVENT_BLUETOOTH_REMOTEDEVICE_PAIRING_CANCEL =
         'usual.event.bluetooth.remotedevice.PAIRING_CANCEL'
 ```
 
-（预留事件，暂未支持）取消蓝牙配对的公共事件的动作。
+(Reserved, not supported yet) Indicates that Bluetooth pairing is canceled.
 
 **Since:** 9
 
@@ -1754,7 +1765,7 @@ COMMON_EVENT_BLUETOOTH_REMOTEDEVICE_CONNECT_REQ =
         'usual.event.bluetooth.remotedevice.CONNECT_REQ'
 ```
 
-（预留事件，暂未支持）表示远程蓝牙设备连接请求的公共事件的动作。
+(Reserved, not supported yet) Indicates the common event about the connection request from a remote Bluetooth device.
 
 **Since:** 9
 
@@ -1773,7 +1784,7 @@ COMMON_EVENT_BLUETOOTH_REMOTEDEVICE_CONNECT_REPLY =
         'usual.event.bluetooth.remotedevice.CONNECT_REPLY'
 ```
 
-（预留事件，暂未支持）表示远程蓝牙设备连接请求响应的公共事件的动作。
+(Reserved, not supported yet) Indicates the common event about the response to the connection request from a remote Bluetooth device.
 
 **Since:** 9
 
@@ -1792,7 +1803,7 @@ COMMON_EVENT_BLUETOOTH_REMOTEDEVICE_CONNECT_CANCEL =
         'usual.event.bluetooth.remotedevice.CONNECT_CANCEL'
 ```
 
-（预留事件，暂未支持）表示取消与远程蓝牙设备的连接的公共事件的动作。
+(Reserved, not supported yet) Indicates that the connection to a remote Bluetooth device has been canceled.
 
 **Since:** 9
 
@@ -1811,7 +1822,7 @@ COMMON_EVENT_BLUETOOTH_HANDSFREEUNIT_CONNECT_STATE_UPDATE =
         'usual.event.bluetooth.handsfreeunit.CONNECT_STATE_UPDATE'
 ```
 
-（预留事件，暂未支持）表示蓝牙免提连接状态已更改的公共事件的动作。
+(Reserved, not supported yet) Indicates that the connection state of a Bluetooth handsfree has changed.
 
 **Since:** 9
 
@@ -1830,7 +1841,7 @@ COMMON_EVENT_BLUETOOTH_HANDSFREEUNIT_AUDIO_STATE_UPDATE =
         'usual.event.bluetooth.handsfreeunit.AUDIO_STATE_UPDATE'
 ```
 
-（预留事件，暂未支持）表示蓝牙免提音频状态已更改的公共事件的动作。
+(Reserved, not supported yet) Indicates that the audio state of a Bluetooth handsfree has changed.
 
 **Since:** 9
 
@@ -1849,7 +1860,7 @@ COMMON_EVENT_BLUETOOTH_HANDSFREEUNIT_AG_COMMON_EVENT =
         'usual.event.bluetooth.handsfreeunit.AG_COMMON_EVENT'
 ```
 
-（预留事件，暂未支持）表示蓝牙免提音频网关状态已更改的公共事件的动作。
+(Reserved, not supported yet) Indicates that the audio gateway state of a Bluetooth handsfree has changed.
 
 **Since:** 9
 
@@ -1868,7 +1879,7 @@ COMMON_EVENT_BLUETOOTH_HANDSFREEUNIT_AG_CALL_STATE_UPDATE =
         'usual.event.bluetooth.handsfreeunit.AG_CALL_STATE_UPDATE'
 ```
 
-（预留事件，暂未支持）表示蓝牙免提呼叫状态已更改的公共事件的动作。
+(Reserved, not supported yet) Indicates that the calling state of a Bluetooth handsfree has changed.
 
 **Since:** 9
 
@@ -1887,7 +1898,7 @@ COMMON_EVENT_BLUETOOTH_HOST_STATE_UPDATE =
         'usual.event.bluetooth.host.STATE_UPDATE'
 ```
 
-表示蓝牙适配器状态已更改的公共事件的操作，例如蓝牙已打开或关闭。
+Indicates that the state of a Bluetooth adapter has been changed, for example, Bluetooth has been enabled or disabled.
 
 **Since:** 9
 
@@ -1906,7 +1917,7 @@ COMMON_EVENT_BLUETOOTH_HOST_REQ_DISCOVERABLE =
         'usual.event.bluetooth.host.REQ_DISCOVERABLE'
 ```
 
-（预留事件，暂未支持）表示用户允许扫描蓝牙请求的公共事件的动作。
+(Reserved, not supported yet) Indicates the common event about the request for the user to allow Bluetooth device scanning.
 
 **Since:** 9
 
@@ -1924,9 +1935,9 @@ COMMON_EVENT_BLUETOOTH_HOST_REQ_DISCOVERABLE =
 COMMON_EVENT_BLUETOOTH_HOST_REQ_ENABLE = 'usual.event.bluetooth.host.REQ_ENABLE'
 ```
 
-（预留事件，暂未支持）表示用户打开蓝牙请求的公共事件的动作。
+(Reserved, not supported yet) Indicates the common event about the request for the user to enable Bluetooth.
 
-要订阅此事件，您的应用必须具备ohos.permission.USE_BLUETOOTH权限。
+To subscribe to this common event, your application must have the **ohos.permission.USE_BLUETOOTH** permission.
 
 **Since:** 9
 
@@ -1945,9 +1956,9 @@ COMMON_EVENT_BLUETOOTH_HOST_REQ_DISABLE =
         'usual.event.bluetooth.host.REQ_DISABLE'
 ```
 
-（预留事件，暂未支持）表示用户关闭蓝牙请求的公共事件的动作。
+(Reserved, not supported yet) Indicates the common event about the request for the user to disable Bluetooth.
 
-要订阅此事件，您的应用必须具备ohos.permission.USE_BLUETOOTH权限。
+To subscribe to this common event, your application must have the **ohos.permission.USE_BLUETOOTH** permission.
 
 **Since:** 9
 
@@ -1966,9 +1977,9 @@ COMMON_EVENT_BLUETOOTH_HOST_SCAN_MODE_UPDATE =
         'usual.event.bluetooth.host.SCAN_MODE_UPDATE'
 ```
 
-（预留事件，暂未支持）设备蓝牙扫描模式更改的公共事件的动作。
+(Reserved, not supported yet) Indicates that the Bluetooth scanning mode of a device has changed.
 
-要订阅此事件，您的应用必须具备ohos.permission.USE_BLUETOOTH权限。
+To subscribe to this common event, your application must have the **ohos.permission.USE_BLUETOOTH** permission.
 
 **Since:** 9
 
@@ -1987,11 +1998,11 @@ COMMON_EVENT_BLUETOOTH_HOST_SCAN_MODE_CHANGE =
         'usual.event.bluetooth.host.SCAN_MODE_CHANGE'
 ```
 
-表示蓝牙扫描模式变化的公共事件的操作。
+Indicates that the Bluetooth scanning mode changes.
 
-当蓝牙扫描模式变化时，将会触发事件通知服务发布该系统公共事件。
+When the Bluetooth scanning mode changes, the event notification service is triggered to publish this event.
 
-要订阅此事件，您的应用必须具备ohos.permission.ACCESS_BLUETOOTH权限。
+To subscribe to this common event, your application must have the **ohos.permission.ACCESS_BLUETOOTH** permission.
 
 **Since:** 23
 
@@ -2008,9 +2019,9 @@ COMMON_EVENT_BLUETOOTH_HOST_DISCOVERY_STARTED =
         'usual.event.bluetooth.host.DISCOVERY_STARTED'
 ```
 
-设备上已启动蓝牙扫描的公共事件的动作。
+Indicates that the Bluetooth scanning has been started on the device.
 
-要订阅此事件，您的应用必须具备ohos.permission.ACCESS_BLUETOOTH权限。
+To subscribe to this common event, your application must have the **ohos.permission.ACCESS_BLUETOOTH** permission.
 
 **Since:** 9
 
@@ -2029,9 +2040,9 @@ COMMON_EVENT_BLUETOOTH_HOST_DISCOVERY_FINISHED =
         'usual.event.bluetooth.host.DISCOVERY_FINISHED'
 ```
 
-设备上蓝牙扫描完成的公共事件的动作。
+Indicates that the Bluetooth scanning is finished on the device.
 
-要订阅此事件，您的应用必须具备ohos.permission.ACCESS_BLUETOOTH权限。
+To subscribe to this common event, your application must have the **ohos.permission.ACCESS_BLUETOOTH** permission.
 
 **Since:** 9
 
@@ -2050,9 +2061,9 @@ COMMON_EVENT_BLUETOOTH_HOST_NAME_UPDATE =
         'usual.event.bluetooth.host.NAME_UPDATE'
 ```
 
-表示设备蓝牙适配器名称已更改的公共事件的操作。
+Indicates that the Bluetooth adapter name of the device has changed.
 
-要订阅此事件，您的应用必须具备ohos.permission.ACCESS_BLUETOOTH权限。
+To subscribe to this common event, your application must have the **ohos.permission.ACCESS_BLUETOOTH** permission.
 
 **Since:** 9
 
@@ -2071,9 +2082,9 @@ COMMON_EVENT_BLUETOOTH_A2DPSINK_CONNECT_STATE_UPDATE =
         'usual.event.bluetooth.a2dpsink.CONNECT_STATE_UPDATE'
 ```
 
-（预留事件，暂未支持）表示蓝牙A2DP连接状态已更改的公共事件的动作。
+(Reserved, not supported yet) Indicates that the connection state of Bluetooth A2DP has changed.
 
-要订阅此事件，您的应用必须具备ohos.permission.USE_BLUETOOTH权限。
+To subscribe to this common event, your application must have the **ohos.permission.USE_BLUETOOTH** permission.
 
 **Since:** 9
 
@@ -2092,9 +2103,9 @@ COMMON_EVENT_BLUETOOTH_A2DPSINK_PLAYING_STATE_UPDATE =
         'usual.event.bluetooth.a2dpsink.PLAYING_STATE_UPDATE'
 ```
 
-（预留事件，暂未支持）蓝牙A2DP播放状态改变的普通事件的动作。
+(Reserved, not supported yet) Indicates that the playing state of Bluetooth A2DP has changed.
 
-要订阅此事件，您的应用必须具备ohos.permission.USE_BLUETOOTH权限。
+To subscribe to this common event, your application must have the **ohos.permission.USE_BLUETOOTH** permission.
 
 **Since:** 9
 
@@ -2113,9 +2124,9 @@ COMMON_EVENT_BLUETOOTH_A2DPSINK_AUDIO_STATE_UPDATE =
         'usual.event.bluetooth.a2dpsink.AUDIO_STATE_UPDATE'
 ```
 
-（预留事件，暂未支持）表示蓝牙A2DP宿的音频状态已更改的公共事件的动作。
+(Reserved, not supported yet) Indicates that the audio state of Bluetooth A2DP Sink has changed.
 
-要订阅此事件，您的应用必须具备ohos.permission.USE_BLUETOOTH权限。
+To subscribe to this common event, your application must have the **ohos.permission.USE_BLUETOOTH** permission.
 
 **Since:** 9
 
@@ -2133,9 +2144,9 @@ COMMON_EVENT_BLUETOOTH_A2DPSINK_AUDIO_STATE_UPDATE =
 COMMON_EVENT_NFC_ACTION_ADAPTER_STATE_CHANGED = 'usual.event.nfc.action.ADAPTER_STATE_CHANGED'
 ```
 
-表示设备NFC状态已更改的公共事件的操作。
+Indicates that the state of the device NFC adapter has changed.
 
-表示设备NFC状态更改时，将会触发事件通知服务发布该系统公共事件。
+When the state of the device NFC adapter changes, the event notification service is triggered to publish this event.
 
 **Since:** 9
 
@@ -2151,9 +2162,9 @@ COMMON_EVENT_NFC_ACTION_ADAPTER_STATE_CHANGED = 'usual.event.nfc.action.ADAPTER_
 COMMON_EVENT_NFC_ACTION_RF_FIELD_ON_DETECTED = 'usual.event.nfc.action.RF_FIELD_ON_DETECTED'
 ```
 
-检测到NFC场强进入的公共事件。
+Indicates that the NFC RF field is on.
 
-当检测到NFC场强进入时，将会触发事件通知服务发布该系统公共事件。
+When the NFC RF field becomes available, the event notification service is triggered to publish this event.
 
 **Since:** 9
 
@@ -2169,9 +2180,9 @@ COMMON_EVENT_NFC_ACTION_RF_FIELD_ON_DETECTED = 'usual.event.nfc.action.RF_FIELD_
 COMMON_EVENT_NFC_ACTION_RF_FIELD_OFF_DETECTED = 'usual.event.nfc.action.RF_FIELD_OFF_DETECTED'
 ```
 
-检测到NFC场强离开的公共事件。
+Indicates that the NFC RF field is off.
 
-当检测到NFC场强离开时，将会触发事件通知服务发布该系统公共事件。
+When the NFC RF field becomes unavailable, the event notification service is triggered to publish this event.
 
 **Since:** 9
 
@@ -2187,9 +2198,9 @@ COMMON_EVENT_NFC_ACTION_RF_FIELD_OFF_DETECTED = 'usual.event.nfc.action.RF_FIELD
 COMMON_EVENT_DISCHARGING = 'usual.event.DISCHARGING'
 ```
 
-表示系统停止为电池充电的公共事件的动作。
+Indicates that the system stops charging the battery.
 
-当系统停止为电池充电时，将会触发事件通知服务发布该系统公共事件。
+When the system stops charging the battery, the event notification service is triggered to publish this event.
 
 **Since:** 9
 
@@ -2205,9 +2216,9 @@ COMMON_EVENT_DISCHARGING = 'usual.event.DISCHARGING'
 COMMON_EVENT_CHARGING = 'usual.event.CHARGING'
 ```
 
-表示系统开始为电池充电的公共事件的动作。
+Indicates that the system starts charging the battery.
 
-当系统开始为电池充电时，将会触发事件通知服务发布该系统公共事件。
+When the system starts charging the battery, the event notification service is triggered to publish this event.
 
 **Since:** 9
 
@@ -2223,9 +2234,9 @@ COMMON_EVENT_CHARGING = 'usual.event.CHARGING'
 COMMON_EVENT_DEVICE_IDLE_MODE_CHANGED = 'usual.event.DEVICE_IDLE_MODE_CHANGED'
 ```
 
-表示设备上待机状态变化，触发公共事件发布动作。
+Indicates that the system idle mode has changed.
 
-如果用户一段时间没有使用设备且屏幕已经关闭情况下，系统延迟后台应用程序CPU和网络访问，将会触发公共事件服务发布该系统公共事件。
+When the user does not use the device for the specified period of time and the screen is turned off, the system delays the CPU and network access by background applications, and the event notification service is triggered to publish this event.
 
 **Since:** 9
 
@@ -2241,9 +2252,9 @@ COMMON_EVENT_DEVICE_IDLE_MODE_CHANGED = 'usual.event.DEVICE_IDLE_MODE_CHANGED'
 COMMON_EVENT_CHARGE_IDLE_MODE_CHANGED = 'usual.event.CHARGE_IDLE_MODE_CHANGED'
 ```
 
-表示设备进入充电空闲模式的公共事件的动作。
+Indicates that the device enters the charging idle mode.
 
-当设备处于空闲、正在充电并且温升可接受的一种状态时，将会触发事件通知服务发布该系统公共事件。
+When the device starts charging in idle mode, and the temperature rise is acceptable, the event notification service is triggered to publish this event.
 
 **Since:** 10
 
@@ -2259,9 +2270,9 @@ COMMON_EVENT_CHARGE_IDLE_MODE_CHANGED = 'usual.event.CHARGE_IDLE_MODE_CHANGED'
 COMMON_EVENT_POWER_SAVE_MODE_CHANGED = 'usual.event.POWER_SAVE_MODE_CHANGED'
 ```
 
-表示系统节能模式更改的公共事件的动作。
+Indicates that the system power-saving mode has changed.
 
-当系统节能模式更改时，将会触发事件通知服务发布该系统公共事件。
+When the system power saving mode changes, the event notification service is triggered to publish this event.
 
 **Since:** 9
 
@@ -2277,14 +2288,13 @@ COMMON_EVENT_POWER_SAVE_MODE_CHANGED = 'usual.event.POWER_SAVE_MODE_CHANGED'
 COMMON_EVENT_USER_ADDED = 'usual.event.USER_ADDED'
 ```
 
-表示用户已添加到系统中的公共事件的动作。
+Indicates that a user has been added to the system.
 
-创建系统账号将会触发事件通知服务发布该系统公共事件，事件携带系统账号ID。
+When a system account is created, the common event service is triggered to publish this event carrying the system account ID.
 
-与这个公共事件相关的接口：createOsAccount、createOsAccountForDomain, 这些为系统API，具体参看  
-[@ohos.account.osAccount](../../../reference/js-apis-osAccount.md)。
+The system APIs related to this common event are **createOsAccount** and **createOsAccountForDomain**. For details, see [@ohos.account.osAccount (System Account Management)](../../../reference/js-apis-osAccount.md).
 
-要订阅此事件，您的应用必须具备ohos.permission.MANAGE_LOCAL_ACCOUNTS权限（该权限仅系统应用可申请）
+To subscribe to this common event, your application must have the ohos.permission.MANAGE_LOCAL_ACCOUNTS permission.(This permission is available only for system applications.)
 
 **Since:** 9
 
@@ -2300,13 +2310,14 @@ COMMON_EVENT_USER_ADDED = 'usual.event.USER_ADDED'
 COMMON_EVENT_USER_REMOVED = 'usual.event.USER_REMOVED'
 ```
 
-表示用户已从系统中删除的公共事件的动作。
+Indicates that a user has been removed from the system.
 
-删除系统账号将会触发事件通知服务发布该系统公共事件，事件携带系统账号ID。
+When a system account is removed, the common event service is triggered to publish this event carrying the system account ID.
 
-与这个公共事件相关的接口：removeOsAccount, 为系统API，具体参看[@ohos.account.osAccount](../../../reference/js-apis-osAccount.md)。
+The system API related to this common event is **removeOsAccount**. For details, see   
+[@ohos.account.osAccount (System Account Management)](../../../reference/js-apis-osAccount.md).
 
-要订阅此事件，您的应用必须具备ohos.permission.MANAGE_LOCAL_ACCOUNTS权限（该权限仅系统应用可申请）
+To subscribe to this common event, your application must have the ohos.permission.MANAGE_LOCAL_ACCOUNTS permission.(This permission is available only for system applications.)
 
 **Since:** 9
 
@@ -2322,9 +2333,9 @@ COMMON_EVENT_USER_REMOVED = 'usual.event.USER_REMOVED'
 COMMON_EVENT_ABILITY_ADDED = 'common.event.ABILITY_ADDED'
 ```
 
-（预留事件，暂未支持）表示已添加能力的公共事件的动作。
+(Reserved, not supported yet) Indicates that an ability has been added.
 
-要订阅此事件，您的应用必须具备ohos.permission.LISTEN_BUNDLE_CHANGE权限。
+To subscribe to this common event, your application must have the **ohos.permission.LISTEN_BUNDLE_CHANGE** permission.
 
 **Since:** 9
 
@@ -2340,9 +2351,9 @@ COMMON_EVENT_ABILITY_ADDED = 'common.event.ABILITY_ADDED'
 COMMON_EVENT_ABILITY_REMOVED = 'common.event.ABILITY_REMOVED'
 ```
 
-（预留事件，暂未支持）表示已删除能力的公共事件的动作。
+(Reserved, not supported yet) Indicates that an ability has been removed.
 
-要订阅此事件，您的应用必须具备ohos.permission.LISTEN_BUNDLE_CHANGE权限。
+To subscribe to this common event, your application must have the **ohos.permission.LISTEN_BUNDLE_CHANGE** permission.
 
 **Since:** 9
 
@@ -2358,9 +2369,9 @@ COMMON_EVENT_ABILITY_REMOVED = 'common.event.ABILITY_REMOVED'
 COMMON_EVENT_ABILITY_UPDATED = 'common.event.ABILITY_UPDATED'
 ```
 
-（预留事件，暂未支持）表示能力已更新的公共事件的动作。
+(Reserved, not supported yet) Indicates that an ability has been updated.
 
-要订阅此事件，您的应用必须具备ohos.permission.LISTEN_BUNDLE_CHANGE权限。
+To subscribe to this common event, your application must have the **ohos.permission.LISTEN_BUNDLE_CHANGE** permission.
 
 **Since:** 9
 
@@ -2376,7 +2387,7 @@ COMMON_EVENT_ABILITY_UPDATED = 'common.event.ABILITY_UPDATED'
 COMMON_EVENT_LOCATION_MODE_STATE_CHANGED = 'usual.event.location.MODE_STATE_CHANGED'
 ```
 
-（预留事件，暂未支持）表示系统定位模式已更改的公共事件的动作。
+(Reserved, not supported yet) Indicates that the location mode of the system has changed.
 
 **Since:** 9
 
@@ -2392,7 +2403,7 @@ COMMON_EVENT_LOCATION_MODE_STATE_CHANGED = 'usual.event.location.MODE_STATE_CHAN
 COMMON_EVENT_IVI_SLEEP = 'common.event.IVI_SLEEP'
 ```
 
-（预留事件，暂未支持）表示车辆的车载信息娱乐（IVI）系统正在休眠的公共事件的动作。
+(Reserved, not supported yet) Indicates that the in-vehicle infotainment (IVI) system of a vehicle is sleeping.
 
 **Since:** 9
 
@@ -2408,7 +2419,7 @@ COMMON_EVENT_IVI_SLEEP = 'common.event.IVI_SLEEP'
 COMMON_EVENT_IVI_PAUSE = 'common.event.IVI_PAUSE'
 ```
 
-（预留事件，暂未支持）表示IVI已休眠，并通知应用程序停止播放。
+(Reserved, not supported yet) Indicates that the IVI system of a vehicle has entered sleep mode and the playing application is instructed to stop playback.
 
 **Since:** 9
 
@@ -2424,7 +2435,7 @@ COMMON_EVENT_IVI_PAUSE = 'common.event.IVI_PAUSE'
 COMMON_EVENT_IVI_STANDBY = 'common.event.IVI_STANDBY'
 ```
 
-（预留事件，暂未支持）表示第三方应用暂停当前工作的公共事件的动作。
+(Reserved, not supported yet) Indicates that a third-party application is instructed to pause the current work.
 
 **Since:** 9
 
@@ -2440,7 +2451,7 @@ COMMON_EVENT_IVI_STANDBY = 'common.event.IVI_STANDBY'
 COMMON_EVENT_IVI_LASTMODE_SAVE = 'common.event.IVI_LASTMODE_SAVE'
 ```
 
-（预留事件，暂未支持）表示第三方应用保存其最后一个模式的公共事件的动作。
+(Reserved, not supported yet) Indicates that a third-party application is instructed to save its last mode.
 
 **Since:** 9
 
@@ -2456,7 +2467,7 @@ COMMON_EVENT_IVI_LASTMODE_SAVE = 'common.event.IVI_LASTMODE_SAVE'
 COMMON_EVENT_IVI_VOLTAGE_ABNORMAL = 'common.event.IVI_VOLTAGE_ABNORMAL'
 ```
 
-（预留事件，暂未支持）表示车辆电源系统电压异常的公共事件的动作。
+(Reserved, not supported yet) Indicates that the voltage of the vehicle's power system is abnormal.
 
 **Since:** 9
 
@@ -2472,7 +2483,7 @@ COMMON_EVENT_IVI_VOLTAGE_ABNORMAL = 'common.event.IVI_VOLTAGE_ABNORMAL'
 COMMON_EVENT_IVI_HIGH_TEMPERATURE = 'common.event.IVI_HIGH_TEMPERATURE'
 ```
 
-（预留事件，暂未支持）表示IVI温度过高。
+(Reserved, not supported yet) Indicates that the temperature of the IVI system is high.
 
 **Since:** 9
 
@@ -2488,7 +2499,7 @@ COMMON_EVENT_IVI_HIGH_TEMPERATURE = 'common.event.IVI_HIGH_TEMPERATURE'
 COMMON_EVENT_IVI_EXTREME_TEMPERATURE = 'common.event.IVI_EXTREME_TEMPERATURE'
 ```
 
-（预留事件，暂未支持）表示IVI温度极高。
+(Reserved, not supported yet) Indicates that the temperature of the IVI system is extremely high.
 
 **Since:** 9
 
@@ -2504,7 +2515,7 @@ COMMON_EVENT_IVI_EXTREME_TEMPERATURE = 'common.event.IVI_EXTREME_TEMPERATURE'
 COMMON_EVENT_IVI_TEMPERATURE_ABNORMAL = 'common.event.IVI_TEMPERATURE_ABNORMAL'
 ```
 
-（预留事件，暂未支持）表示车载系统具有极端温度的公共事件的动作。
+(Reserved, not supported yet) Indicates that the IVI system has an extreme temperature.
 
 **Since:** 9
 
@@ -2520,7 +2531,7 @@ COMMON_EVENT_IVI_TEMPERATURE_ABNORMAL = 'common.event.IVI_TEMPERATURE_ABNORMAL'
 COMMON_EVENT_IVI_VOLTAGE_RECOVERY = 'common.event.IVI_VOLTAGE_RECOVERY'
 ```
 
-（预留事件，暂未支持）表示车辆电源系统电压恢复正常的公共事件的动作。
+(Reserved, not supported yet) Indicates that the voltage of the vehicle's power system is restored to normal.
 
 **Since:** 9
 
@@ -2536,7 +2547,7 @@ COMMON_EVENT_IVI_VOLTAGE_RECOVERY = 'common.event.IVI_VOLTAGE_RECOVERY'
 COMMON_EVENT_IVI_TEMPERATURE_RECOVERY = 'common.event.IVI_TEMPERATURE_RECOVERY'
 ```
 
-（预留事件，暂未支持）表示车载系统温度恢复正常的公共事件的动作。
+(Reserved, not supported yet) Indicates that the temperature of the IVI system is restored to normal.
 
 **Since:** 9
 
@@ -2552,7 +2563,7 @@ COMMON_EVENT_IVI_TEMPERATURE_RECOVERY = 'common.event.IVI_TEMPERATURE_RECOVERY'
 COMMON_EVENT_IVI_ACTIVE = 'common.event.IVI_ACTIVE'
 ```
 
-（预留事件，暂未支持）表示电池服务处于活动状态的公共事件的动作。
+(Reserved, not supported yet) Indicates that the battery service is active.
 
 **Since:** 9
 
@@ -2568,9 +2579,9 @@ COMMON_EVENT_IVI_ACTIVE = 'common.event.IVI_ACTIVE'
 COMMON_EVENT_USB_STATE = 'usual.event.hardware.usb.action.USB_STATE'
 ```
 
-表示USB设备状态发生变化。
+Indicates that the USB device state has changed.
 
-当USB断开或者连接时状态发生变化，将会触发事件通知服务发布该系统公共事件。
+When a USB device is connected to or disconnected from the device, the event notification service is triggered to publish this event.
 
 **Since:** 9
 
@@ -2586,9 +2597,9 @@ COMMON_EVENT_USB_STATE = 'usual.event.hardware.usb.action.USB_STATE'
 COMMON_EVENT_USB_PORT_CHANGED = 'usual.event.hardware.usb.action.USB_PORT_CHANGED'
 ```
 
-提示用户设备的USB端口状态发生改变。
+Indicates that the USB port state of the device has changed.
 
-当USB的端口状态发生变化，将会触发事件通知服务发布该系统公共事件。
+When the USB port state changes, the event notification service is triggered to publish this event.
 
 **Since:** 9
 
@@ -2604,9 +2615,9 @@ COMMON_EVENT_USB_PORT_CHANGED = 'usual.event.hardware.usb.action.USB_PORT_CHANGE
 COMMON_EVENT_USB_DEVICE_ATTACHED = 'usual.event.hardware.usb.action.USB_DEVICE_ATTACHED'
 ```
 
-当用户设备作为USB主机时，提示USB设备已挂载。
+Indicates that a USB device has been attached to the device functioning as a USB host.
 
-当USB连接时状态发生变化，将会触发事件通知服务发布该系统公共事件。
+When a USB device is attached, the event notification service is triggered to publish this event.
 
 **Since:** 9
 
@@ -2622,9 +2633,9 @@ COMMON_EVENT_USB_DEVICE_ATTACHED = 'usual.event.hardware.usb.action.USB_DEVICE_A
 COMMON_EVENT_USB_DEVICE_DETACHED = 'usual.event.hardware.usb.action.USB_DEVICE_DETACHED'
 ```
 
-当用户设备作为USB主机时，提示USB设备被卸载。
+Indicates that a USB device has been detached from the device functioning as a USB host.
 
-当USB断开时状态发生变化，将会触发事件通知服务发布该系统公共事件。
+When a USB device is detached, the event notification service is triggered to publish this event.
 
 **Since:** 9
 
@@ -2640,7 +2651,7 @@ COMMON_EVENT_USB_DEVICE_DETACHED = 'usual.event.hardware.usb.action.USB_DEVICE_D
 COMMON_EVENT_USB_ACCESSORY_ATTACHED = 'usual.event.hardware.usb.action.USB_ACCESSORY_ATTACHED'
 ```
 
-表示已连接USB配件的公共事件的动作。
+Indicates that a USB accessory has been attached.
 
 **Since:** 9
 
@@ -2656,7 +2667,7 @@ COMMON_EVENT_USB_ACCESSORY_ATTACHED = 'usual.event.hardware.usb.action.USB_ACCES
 COMMON_EVENT_USB_ACCESSORY_DETACHED = 'usual.event.hardware.usb.action.USB_ACCESSORY_DETACHED'
 ```
 
-表示USB配件被卸载的公共事件的动作。
+Indicates that a USB accessory has been detached.
 
 **Since:** 9
 
@@ -2672,9 +2683,9 @@ COMMON_EVENT_USB_ACCESSORY_DETACHED = 'usual.event.hardware.usb.action.USB_ACCES
 COMMON_EVENT_DISK_REMOVED = 'usual.event.data.DISK_REMOVED'
 ```
 
-（预留事件，暂未支持）外部存储设备状态变更为移除时发送此公共事件。
+(Reserved, not supported yet) Indicates that an external storage device was removed.
 
-要订阅此事件，您的应用必须具备ohos.permission.STORAGE_MANAGER权限（该权限仅系统应用可申请）。
+To subscribe to this common event, your application must have the **ohos.permission.STORAGE_MANAGER** permission.(This permission is available only for system applications.)
 
 **Since:** 9
 
@@ -2690,9 +2701,9 @@ COMMON_EVENT_DISK_REMOVED = 'usual.event.data.DISK_REMOVED'
 COMMON_EVENT_DISK_UNMOUNTED = 'usual.event.data.DISK_UNMOUNTED'
 ```
 
-（预留事件，暂未支持）外部存储设备状态变更为卸载时发送此公共事件。
+(Reserved, not supported yet) Indicates that an external storage device was unmounted.
 
-要订阅此事件，您的应用必须具备ohos.permission.STORAGE_MANAGER权限（该权限仅系统应用可申请）。
+To subscribe to this common event, your application must have the **ohos.permission.STORAGE_MANAGER** permission.(This permission is available only for system applications.)
 
 **Since:** 9
 
@@ -2708,9 +2719,9 @@ COMMON_EVENT_DISK_UNMOUNTED = 'usual.event.data.DISK_UNMOUNTED'
 COMMON_EVENT_DISK_MOUNTED = 'usual.event.data.DISK_MOUNTED'
 ```
 
-（预留事件，暂未支持）外部存储设备状态变更为挂载时发送此公共事件。
+(Reserved, not supported yet) Indicates that an external storage device was mounted.
 
-要订阅此事件，您的应用必须具备ohos.permission.STORAGE_MANAGER权限（该权限仅系统应用可申请）。
+To subscribe to this common event, your application must have the **ohos.permission.STORAGE_MANAGER** permission.(This permission is available only for system applications.)
 
 **Since:** 9
 
@@ -2726,9 +2737,9 @@ COMMON_EVENT_DISK_MOUNTED = 'usual.event.data.DISK_MOUNTED'
 COMMON_EVENT_DISK_BAD_REMOVAL = 'usual.event.data.DISK_BAD_REMOVAL'
 ```
 
-（预留事件，暂未支持）外部存储设备状态变更为挂载状态下移除时发送此公共事件。
+(Reserved, not supported yet) Indicates that an external storage device was removed without being unmounted.
 
-要订阅此事件，您的应用必须具备ohos.permission.STORAGE_MANAGER权限（该权限仅系统应用可申请）。
+To subscribe to this common event, your application must have the **ohos.permission.STORAGE_MANAGER** permission.(This permission is available only for system applications.)
 
 **Since:** 9
 
@@ -2744,9 +2755,9 @@ COMMON_EVENT_DISK_BAD_REMOVAL = 'usual.event.data.DISK_BAD_REMOVAL'
 COMMON_EVENT_DISK_UNMOUNTABLE = 'usual.event.data.DISK_UNMOUNTABLE'
 ```
 
-（预留事件，暂未支持）外部存储设备状态变更为插卡情况下无法挂载时发送此公共事件。
+(Reserved, not supported yet) Indicates that an external storage device becomes unmountable.
 
-要订阅此事件，您的应用必须具备ohos.permission.STORAGE_MANAGER权限（该权限仅系统应用可申请）。
+To subscribe to this common event, your application must have the **ohos.permission.STORAGE_MANAGER** permission.(This permission is available only for system applications.)
 
 **Since:** 9
 
@@ -2762,9 +2773,9 @@ COMMON_EVENT_DISK_UNMOUNTABLE = 'usual.event.data.DISK_UNMOUNTABLE'
 COMMON_EVENT_DISK_EJECT = 'usual.event.data.DISK_EJECT'
 ```
 
-（预留事件，暂未支持）用户已表示希望删除外部存储介质时发送此公共事件。
+(Reserved, not supported yet) Indicates that an external storage device was ejected.
 
-要订阅此事件，您的应用必须具备ohos.permission.STORAGE_MANAGER权限（该权限仅系统应用可申请）。
+To subscribe to this common event, your application must have the **ohos.permission.STORAGE_MANAGER** permission.(This permission is available only for system applications.)
 
 **Since:** 9
 
@@ -2780,11 +2791,11 @@ COMMON_EVENT_DISK_EJECT = 'usual.event.data.DISK_EJECT'
 COMMON_EVENT_VOLUME_REMOVED = 'usual.event.data.VOLUME_REMOVED'
 ```
 
-表示外部存储设备正常移除的公共事件。
+Indicates that an external storage device was removed.
 
-当外部存储设备处于卸载状态，移除该设备时，会发送此公共事件。
+This common event is triggered when an external storage device is removed.
 
-要订阅此事件，您的应用必须具备ohos.permission.STORAGE_MANAGER权限
+To subscribe to this common event, your application must have the ohos.permission.STORAGE_MANAGER permission.
 
 **Since:** 9
 
@@ -2800,11 +2811,12 @@ COMMON_EVENT_VOLUME_REMOVED = 'usual.event.data.VOLUME_REMOVED'
 COMMON_EVENT_VOLUME_UNMOUNTED = 'usual.event.data.VOLUME_UNMOUNTED'
 ```
 
-表示外部存储设备状态变更为卸载的公共事件。
+Indicates that an external storage device was unmounted.
 
-当外部存储设备处于挂载状态时，用户选择通过调用unmount接口或者直接移除设备的方法弹出该设备，并且已将外部存储设备卸载成功后，会发送此公共事件。
+This common event is triggered when an external storage device is successfully unmounted by calling the   
+**unmount** API or by removing the device.
 
-要订阅此事件，您的应用必须具备ohos.permission.STORAGE_MANAGER权限
+To subscribe to this common event, your application must have the ohos.permission.STORAGE_MANAGER permission.
 
 **Since:** 9
 
@@ -2820,11 +2832,11 @@ COMMON_EVENT_VOLUME_UNMOUNTED = 'usual.event.data.VOLUME_UNMOUNTED'
 COMMON_EVENT_VOLUME_MOUNTED = 'usual.event.data.VOLUME_MOUNTED'
 ```
 
-表示外部存储设备状态变更为挂载的公共事件。
+Indicates that an external storage device was mounted.
 
-当用户插入外部存储设备自动挂载成功或者将处于卸载状态的外部存储设备调用mount接口进行挂载成功后，会发送此公共事件。
+This common event is triggered when an external storage device is successfully mounted by calling the **mount** API or by inserting the device.
 
-要订阅此事件，您的应用必须具备ohos.permission.STORAGE_MANAGER权限
+To subscribe to this common event, your application must have the ohos.permission.STORAGE_MANAGER permission.
 
 **Since:** 9
 
@@ -2840,11 +2852,11 @@ COMMON_EVENT_VOLUME_MOUNTED = 'usual.event.data.VOLUME_MOUNTED'
 COMMON_EVENT_VOLUME_BAD_REMOVAL = 'usual.event.data.VOLUME_BAD_REMOVAL'
 ```
 
-表示外部存储设备异常移除的公共事件。
+Indicates that an external storage device was removed without being unmounted.
 
-当外部存储设备处于挂载状态时，用户直接移除该外部存储设备，会发送此公共事件。
+This common event is triggered when an external storage device is directly removed without being unmounted.
 
-要订阅此事件，您的应用必须具备ohos.permission.STORAGE_MANAGER权限
+To subscribe to this common event, your application must have the ohos.permission.STORAGE_MANAGER permission.
 
 **Since:** 9
 
@@ -2860,11 +2872,11 @@ COMMON_EVENT_VOLUME_BAD_REMOVAL = 'usual.event.data.VOLUME_BAD_REMOVAL'
 COMMON_EVENT_VOLUME_EJECT = 'usual.event.data.VOLUME_EJECT'
 ```
 
-表示外部存储设备即将被弹出的公共事件。
+Indicates that an external storage device is about to be ejected.
 
-当外部存储设备处于挂载状态时，用户选择通过调用unmount接口或者直接移除设备的方法弹出该设备时，会发送此公共事件。
+This common event is triggered when the user calls the **unmount** API on a mounted external storage device or removes the device.
 
-要订阅此事件，您的应用必须具备ohos.permission.STORAGE_MANAGER权限
+To subscribe to this common event, your application must have the ohos.permission.STORAGE_MANAGER permission.
 
 **Since:** 9
 
@@ -2880,9 +2892,9 @@ COMMON_EVENT_VOLUME_EJECT = 'usual.event.data.VOLUME_EJECT'
 COMMON_EVENT_VISIBLE_ACCOUNTS_UPDATED = 'usual.event.data.VISIBLE_ACCOUNTS_UPDATED'
 ```
 
-（预留事件，暂未支持）表示账户可见更改的公共事件的动作。
+(Reserved, not supported yet) Indicates that the account visibility changed.
 
-要订阅此事件，您的应用必须具备ohos.permission.GET_APP_ACCOUNTS权限（该权限仅系统应用可申请）。
+To subscribe to this common event, your application must have the **ohos.permission.GET_APP_ACCOUNTS** permission.(This permission is available only for system applications.)
 
 **Since:** 9
 
@@ -2898,9 +2910,10 @@ COMMON_EVENT_VISIBLE_ACCOUNTS_UPDATED = 'usual.event.data.VISIBLE_ACCOUNTS_UPDAT
 COMMON_EVENT_ACCOUNT_DELETED = 'usual.event.data.ACCOUNT_DELETED'
 ```
 
-（预留事件，暂未支持）删除账户的公共事件的动作。
+(Reserved, not supported yet) Indicates that the account was deleted.
 
-要订阅此事件，您的应用必须具备ohos.permission.INTERACT_ACROSS_LOCAL_ACCOUNTS权限（该权限仅系统应用可申请）。
+To subscribe to this common event, your application must have the   
+**ohos.permission.INTERACT_ACROSS_LOCAL_ACCOUNTS** permission.(This permission is available only for system applications.)
 
 **Since:** 9
 
@@ -2916,9 +2929,9 @@ COMMON_EVENT_ACCOUNT_DELETED = 'usual.event.data.ACCOUNT_DELETED'
 COMMON_EVENT_FOUNDATION_READY = 'common.event.FOUNDATION_READY'
 ```
 
-（预留事件，暂未支持）表示foundation已准备好的公共事件的动作。
+(Reserved, not supported yet) Indicates that the foundation is ready.
 
-要订阅此事件，您的应用必须具备ohos.permission.RECEIVER_STARTUP_COMPLETED权限（该权限仅系统应用可申请）。
+To subscribe to this common event, your application must have the **ohos.permission.RECEIVER_STARTUP_COMPLETED** permission.(This permission is available only for system applications.)
 
 **Since:** 9
 
@@ -2934,9 +2947,9 @@ COMMON_EVENT_FOUNDATION_READY = 'common.event.FOUNDATION_READY'
 COMMON_EVENT_AIRPLANE_MODE_CHANGED = 'usual.event.AIRPLANE_MODE'
 ```
 
-表示飞行模式状态变化。
+Indicates that the airplane mode state has changed.
 
-在开启或者关闭系统飞行模式状态后，将会触发事件通知服务发布该系统公共事件。
+When the airplane mode is enabled or disabled, the event notification service is triggered to publish this event.
 
 **Since:** 9
 
@@ -2952,9 +2965,9 @@ COMMON_EVENT_AIRPLANE_MODE_CHANGED = 'usual.event.AIRPLANE_MODE'
 COMMON_EVENT_SPLIT_SCREEN = 'common.event.SPLIT_SCREEN'
 ```
 
-表示分屏行为的公共事件。
+Indicates a screen splitting action.
 
-启动最近任务窗口、创建或销毁分屏条，都会触发通知服务发布这个系统公共事件。
+When any of the following actions is performed, the event notification service is triggered to publish this event: accessing the recent tasks screen, creating a split-screen bar, and destroying a split-screen bar.
 
 **Since:** 9
 
@@ -2972,11 +2985,11 @@ COMMON_EVENT_SPLIT_SCREEN = 'common.event.SPLIT_SCREEN'
 COMMON_EVENT_SLOT_CHANGE = 'usual.event.SLOT_CHANGE'
 ```
 
-表示通知渠道或通知开关发生变化。
+Indicates that the notification slot or notification switch settings have changed.
 
-通知设置里修改应用的渠道参数、渠道开关，或者开启、关闭通知使能开关时，都会触发通知服务发布这个系统公共事件。
+When the notification slot settings (including the switch) change or the notification feature is enabled or disabled, the notification service is triggered to publish this event.
 
-要订阅此事件，您的应用必须具备ohos.permission.NOTIFICATION_CONTROLLER权限。
+To subscribe to this common event, your application must have the **ohos.permission.NOTIFICATION_CONTROLLER** permission.
 
 **Since:** 9
 
@@ -2992,7 +3005,7 @@ COMMON_EVENT_SLOT_CHANGE = 'usual.event.SLOT_CHANGE'
 COMMON_EVENT_SPN_INFO_CHANGED = 'usual.event.SPN_INFO_CHANGED'
 ```
 
-表示spn显示信息已更新的公共事件的动作。
+Indicates that the SPN information had changed.
 
 **Since:** 9
 
@@ -3008,13 +3021,13 @@ COMMON_EVENT_SPN_INFO_CHANGED = 'usual.event.SPN_INFO_CHANGED'
 COMMON_EVENT_QUICK_FIX_APPLY_RESULT = 'usual.event.QUICK_FIX_APPLY_RESULT'
 ```
 
-表示快速修复应用。
+Indicates the result of applying a quick fix to the application.
 
-在设备上指定用户快速修复应用，将会触发事件通知服务发布该系统公共事件。
+When the specified user applies a quick fix to the application on the device, the event notification service is triggered to publish this event.
 
-> **说明：**
+> **NOTE：**
 > 
-> 三方应用只能监听自身应用的快速修复事件。
+> Third-party applications can only listen for the quick fix event of themselves.
 
 **Since:** 9
 
@@ -3030,9 +3043,9 @@ COMMON_EVENT_QUICK_FIX_APPLY_RESULT = 'usual.event.QUICK_FIX_APPLY_RESULT'
 COMMON_EVENT_QUICK_FIX_REVOKE_RESULT = 'usual.event.QUICK_FIX_REVOKE_RESULT'
 ```
 
-表示撤销快速修复。
+Indicates the result of revoking a quick fix to the application.
 
-在设备上撤销快速修复时，将会触发事件通知服务发布该系统公共事件。
+When a quick fix to the application is revoked on the device, the event notification service is triggered to publish this event.
 
 **Since:** 10
 
@@ -3048,13 +3061,14 @@ COMMON_EVENT_QUICK_FIX_REVOKE_RESULT = 'usual.event.QUICK_FIX_REVOKE_RESULT'
 COMMON_EVENT_USER_INFO_UPDATED = 'usual.event.USER_INFO_UPDATED'
 ```
 
-表示用户信息已更新。
+Indicates that the user information has been updated.
 
-分布式账号信息变更、系统账号头像信息变更、系统账号名称变更将会触发事件通知服务发布该系统公共事件，事件携带系统账号ID。
+When the distributed account information, system account profile picture, or system account name is changed, the event notification service is triggered to publish this event carrying the system account ID.
 
-与这个公共事件相关的接口：setOsAccountName、setOsAccountProfilePhoto, 这些为系统API，setOsAccountDistributedInfo为公共API，具体参看  
-[系统账号接口文档](../../../reference/js-apis-osAccount.md)、  
-[分布式账号接口文档](../../../reference/js-apis-distributed-account.md)。
+APIs related to this event: **setOsAccountName**, **setOsAccountProfilePhoto**, and   
+**setOsAccountDistributedInfo**. The first two are system APIs, and the last is a public API. For details, see   
+[@ohos.account.osAccount (System Account Management)](../../../reference/js-apis-osAccount.md) and   
+[@ohos.account.distributedAccount (Distributed Account Management)](../../../reference/js-apis-distributed-account.md).
 
 **Since:** 9
 
@@ -3070,9 +3084,9 @@ COMMON_EVENT_USER_INFO_UPDATED = 'usual.event.USER_INFO_UPDATED'
 COMMON_EVENT_HTTP_PROXY_CHANGE = 'usual.event.HTTP_PROXY_CHANGE'
 ```
 
-表示网络Http代理配置信息更新。
+Indicates that the HTTP proxy configuration has changed.
 
-在系统全局代理或者各类网络（以太网、Wi-Fi、蜂窝等）Http代理配置信息发生变化时，将会触发事件通知服务发布该系统公共事件。
+When the configuration information of the system global proxy or HTTP proxy on various networks (such as Ethernet, Wi-Fi, and cellular networks) changes, the event notification service is triggered to release the system common event.
 
 **Since:** 10
 
@@ -3088,9 +3102,9 @@ COMMON_EVENT_HTTP_PROXY_CHANGE = 'usual.event.HTTP_PROXY_CHANGE'
 COMMON_EVENT_SIM_STATE_CHANGED = 'usual.event.SIM_STATE_CHANGED'
 ```
 
-提示SIM卡状态更新。
+Indicates that the SIM card status has changed.
 
-在设备上面的SIM卡状态发生变化时，将会触发事件通知服务发布该系统公共事件。
+When there is a change in the SIM card status of the device, the event notification service is triggered to publish this event.
 
 **Since:** 10
 
@@ -3106,11 +3120,11 @@ COMMON_EVENT_SIM_STATE_CHANGED = 'usual.event.SIM_STATE_CHANGED'
 COMMON_EVENT_CALL_STATE_CHANGED = 'usual.event.CALL_STATE_CHANGED'
 ```
 
-提示呼叫状态更新。
+Indicates that the call state has been updated.
 
-在设备呼叫状态更新时，将会触发事件通知服务发布该系统公共事件。
+When the call state of the device is updated, the event notification service is triggered to publish this event.
 
-要订阅此事件，您的应用必须具备ohos.permission.GET_TELEPHONY_STATE权限（该权限仅系统应用可申请）。
+To subscribe to this common event, your application must have the **ohos.permission.GET_TELEPHONY_STATE** permission.(This permission is available only for system applications.)
 
 **Since:** 10
 
@@ -3126,9 +3140,9 @@ COMMON_EVENT_CALL_STATE_CHANGED = 'usual.event.CALL_STATE_CHANGED'
 COMMON_EVENT_NETWORK_STATE_CHANGED = 'usual.event.NETWORK_STATE_CHANGED'
 ```
 
-提示网络状态更新。
+Indicates that the network state has been updated.
 
-在设备网络状态更新时，将会触发事件通知服务发布该系统公共事件。
+When the network state of the device is updated, the event notification service is triggered to publish this event.
 
 **Since:** 10
 
@@ -3144,9 +3158,9 @@ COMMON_EVENT_NETWORK_STATE_CHANGED = 'usual.event.NETWORK_STATE_CHANGED'
 COMMON_EVENT_SIGNAL_INFO_CHANGED = 'usual.event.SIGNAL_INFO_CHANGED'
 ```
 
-提示信号信息更新。
+Indicates that the signal information has been updated.
 
-在设备信号信息更新时，将会触发事件通知服务发布该系统公共事件。
+When the signal information of the device is updated, the event notification service is triggered to publish this event.
 
 **Since:** 10
 
@@ -3162,9 +3176,9 @@ COMMON_EVENT_SIGNAL_INFO_CHANGED = 'usual.event.SIGNAL_INFO_CHANGED'
 COMMON_EVENT_SCREEN_UNLOCKED = 'usual.event.SCREEN_UNLOCKED'
 ```
 
-表示屏幕解锁的公共事件。
+Indicates that the screen has been unlocked.
 
-当锁屏解锁时，将会触发事件通知服务发布该系统公共事件。
+When the screen is unlocked, the event notification service is triggered to publish this event.
 
 **Since:** 10
 
@@ -3182,9 +3196,9 @@ COMMON_EVENT_SCREEN_UNLOCKED = 'usual.event.SCREEN_UNLOCKED'
 COMMON_EVENT_SCREEN_LOCKED = 'usual.event.SCREEN_LOCKED'
 ```
 
-表示屏幕锁定的公共事件。
+Indicates that the screen has been locked.
 
-当锁屏锁定时，将会触发事件通知服务发布该系统公共事件。
+When the screen is locked, the event notification service is triggered to publish this event.
 
 **Since:** 10
 
@@ -3202,21 +3216,21 @@ COMMON_EVENT_SCREEN_LOCKED = 'usual.event.SCREEN_LOCKED'
 COMMON_EVENT_CONNECTIVITY_CHANGE = 'usual.event.CONNECTIVITY_CHANGE'
 ```
 
-表示网络连接状态变化。
+Indicates that the network connection state has changed.
 
-各类网络（以太网、Wi-Fi、蜂窝等）在连接状态变化时（断开、断开中、连接中、已连接等），将会触发事件通知服务发布该系统公共事件。
+When the (Ethernet, Wi-Fi, or cellular) network connection state changes (disconnected, connecting, or connected), the event notification service is triggered to publish this event.
 
-具体枚举值及其对应的连接状态如下表所示：
+The following table lists the enum values and their corresponding connection status.
 
-> **说明：**
-> 具体枚举值及其对应的连接状态如下表所示：
+> **NOTE：**
+> The following table lists the enum values and their corresponding connection status
 > 
-> | 枚举值 | 连接状态 |
+> | Value | Connection State |
 > | ------ | ---------- |
-> | 2 | 连接中 |
-> | 3 | 已连接 |
-> | 4 | 正在断开 |
-> | 5 | 已断开 |。
+> | 2 | Connecting. |
+> | 3 | Connected. |
+> | 4 | Disconnecting.|
+> | 5 | Disconnected. |.
 
 **Since:** 10
 
@@ -3235,11 +3249,11 @@ COMMON_EVENT_BLUETOOTH_HANDSFREE_AG_CONNECT_STATE_CHANGE =
         'usual.event.bluetooth.handsfree.ag.CONNECT_STATE_CHANGE'
 ```
 
-表示蓝牙HFP AG连接状态变化的公共事件的操作。
+Indicates that the Bluetooth HFP AG connection state changes.
 
-当蓝牙HFP AG连接状态变化时，将会触发事件通知服务发布该系统公共事件。
+When the Bluetooth HFP AG connection state changes, the event notification service is triggered to publish this event.
 
-要订阅此事件，您的应用必须具备ohos.permission.ACCESS_BLUETOOTH权限。
+To subscribe to this common event, your application must have the **ohos.permission.ACCESS_BLUETOOTH** permission.
 
 **Since:** 20
 
@@ -3255,9 +3269,9 @@ COMMON_EVENT_BLUETOOTH_HANDSFREE_AG_CONNECT_STATE_CHANGE =
 COMMON_EVENT_MINORSMODE_ON = 'usual.event.MINORSMODE_ON'
 ```
 
-表示用户开启未成年人模式。
+Indicates that the minor mode is enabled.
 
-在设备上开启未成年人模式，将会触发事件通知服务发布该系统公共事件。
+When the minor mode is enabled on the device, the event notification service is triggered to publish this event.
 
 **Since:** 12
 
@@ -3275,9 +3289,9 @@ COMMON_EVENT_MINORSMODE_ON = 'usual.event.MINORSMODE_ON'
 COMMON_EVENT_MINORSMODE_OFF = 'usual.event.MINORSMODE_OFF'
 ```
 
-表示用户关闭未成年人模式。
+Indicates that the minor mode is disabled.
 
-在设备上关闭未成年人模式，将会触发事件通知服务发布该系统公共事件。
+When the minor mode is disabled on the device, the event notification service is triggered to publish this event.
 
 **Since:** 12
 
@@ -3295,9 +3309,9 @@ COMMON_EVENT_MINORSMODE_OFF = 'usual.event.MINORSMODE_OFF'
 COMMON_EVENT_DATA_SHARE_READY = 'usual.event.DATA_SHARE_READY'
 ```
 
-表示datashare服务可用。
+Indicates that the DataShare service is available.
 
-datashare服务启动完成后，将会触发事件通知服务发布该系统公共事件。
+After the DataShare service is started, the event notification service is triggered to publish this event.
 
 **Since:** 12
 
@@ -3316,11 +3330,11 @@ COMMON_EVENT_BLUETOOTH_A2DPSOURCE_CONNECT_STATE_CHANGE =
         'usual.event.bluetooth.a2dpsource.CONNECT_STATE_CHANGE'
 ```
 
-表示蓝牙A2DP Source连接状态变化的公共事件的操作。
+Indicates that the Bluetooth A2DP source connection state changes.
 
-当蓝牙A2DP Source连接状态变化时，将会触发事件通知服务发布该系统公共事件。
+When the Bluetooth A2DP source connection state changes, the event notification service is triggered to publish this event.
 
-要订阅此事件，您的应用必须具备ohos.permission.ACCESS_BLUETOOTH权限。
+To subscribe to this common event, your application must have the **ohos.permission.ACCESS_BLUETOOTH** permission.
 
 **Since:** 20
 
@@ -3337,11 +3351,11 @@ COMMON_EVENT_BLUETOOTH_A2DPSOURCE_AVRCP_CONNECT_STATE_CHANGE =
         'usual.event.bluetooth.a2dpsource.AVRCP_CONNECT_STATE_CHANGE'
 ```
 
-表示蓝牙AVRCP连接状态变化的公共事件的操作。
+Indicates that the Bluetooth AVRCP connection state changes.
 
-当蓝牙AVRCP连接状态变化时，将会触发事件通知服务发布该系统公共事件。
+When the Bluetooth AVRCP connection state changes, the event notification service is triggered to publish this event.
 
-要订阅此事件，您的应用必须具备ohos.permission.ACCESS_BLUETOOTH权限。
+To subscribe to this common event, your application must have the **ohos.permission.ACCESS_BLUETOOTH** permission.
 
 **Since:** 20
 
@@ -3358,11 +3372,11 @@ COMMON_EVENT_BLUETOOTH_A2DPSOURCE_CODEC_VALUE_CHANGE =
         'usual.event.bluetooth.a2dpsource.CODEC_VALUE_CHANGE'
 ```
 
-表示蓝牙媒体编解码器变化的公共事件的操作。
+Indicates that the Bluetooth media codec changes.
 
-当蓝牙媒体编解码器变化时，将会触发事件通知服务发布该系统公共事件。
+When the Bluetooth media codec changes, the event notification service is triggered to publish this event.
 
-要订阅此事件，您的应用必须具备ohos.permission.ACCESS_BLUETOOTH权限。
+To subscribe to this common event, your application must have the **ohos.permission.ACCESS_BLUETOOTH** permission.
 
 **Since:** 20
 
@@ -3379,11 +3393,11 @@ COMMON_EVENT_BLUETOOTH_A2DPSOURCE_PLAY_STATE_CHANGE =
         'usual.event.bluetooth.a2dpsource.PLAY_STATE_CHANGE'
 ```
 
-表示蓝牙媒体A2DP播放状态变化的公共事件的操作。
+Indicates that the Bluetooth A2DP playback state changes.
 
-当蓝牙媒体A2DP播放状态变化时，将会触发事件通知服务发布该系统公共事件。
+When the Bluetooth A2DP playback state changes, the event notification service is triggered to publish this event.
 
-要订阅此事件，您的应用必须具备ohos.permission.ACCESS_BLUETOOTH权限。
+To subscribe to this common event, your application must have the **ohos.permission.ACCESS_BLUETOOTH** permission.
 
 **Since:** 24
 
@@ -3402,11 +3416,11 @@ COMMON_EVENT_BLUETOOTH_SCO_CONNECT_STATE_CHANGE =
         'usual.event.bluetooth.SCO_CONNECT_STATE_CHANGE'
 ```
 
-表示蓝牙SCO状态变化的公共事件的操作。
+Indicates that the Bluetooth SCO state changes.
 
-当蓝牙SCO状态变化时，将会触发事件通知服务发布该系统公共事件。
+When the Bluetooth SCO state changes, the event notification service is triggered to publish this event.
 
-要订阅此事件，您的应用必须具备ohos.permission.ACCESS_BLUETOOTH权限。
+To subscribe to this common event, your application must have the **ohos.permission.ACCESS_BLUETOOTH** permission.
 
 **Since:** 24
 
@@ -3425,11 +3439,11 @@ COMMON_EVENT_BLUETOOTH_REMOTEDEVICE_ACL_STATE_CHANGE =
         'usual.event.bluetooth.remotedevice.ACL_STATE_CHANGE'
 ```
 
-表示蓝牙远程设备ACL连接状态变化的公共事件的操作。
+Indicates that the Bluetooth ACL connection state changes.
 
-当蓝牙远程设备ACL连接状态变化时，将会触发事件通知服务发布该系统公共事件。
+When the Bluetooth ACL connection state changes, the event notification service is triggered to publish this event.
 
-要订阅此事件，您的应用必须具备ohos.permission.ACCESS_BLUETOOTH权限。
+To subscribe to this common event, your application must have the **ohos.permission.ACCESS_BLUETOOTH** permission.
 
 **Since:** 20
 
@@ -3446,11 +3460,11 @@ COMMON_EVENT_BLUETOOTH_REMOTEDEVICE_PAIR_STATE_CHANGE =
         'usual.event.bluetooth.remotedevice.PAIR_STATE_CHANGE'
 ```
 
-表示蓝牙配对状态变化的公共事件的操作。
+Indicates that the Bluetooth pairing state changes.
 
-当蓝牙配对状态变化时，将会触发事件通知服务发布该系统公共事件。
+When the Bluetooth pairing state changes, the event notification service is triggered to publish this event.
 
-要订阅此事件，您的应用必须具备ohos.permission.ACCESS_BLUETOOTH权限。
+To subscribe to this common event, your application must have the **ohos.permission.ACCESS_BLUETOOTH** permission.
 
 **Since:** 20
 
@@ -3466,9 +3480,9 @@ COMMON_EVENT_BLUETOOTH_REMOTEDEVICE_PAIR_STATE_CHANGE =
 COMMON_EVENT_MANAGED_BROWSER_POLICY_CHANGED = 'usual.event.MANAGED_BROWSER_POLICY_CHANGED'
 ```
 
-表示浏览器托管策略已更改。
+Indicates that the browser hosting policy has been changed.
 
-当浏览器托管策略发生变化，将会触发事件通知服务发布该系统公共事件。
+When the browser hosting policy changes, the event notification service is triggered to publish this system common event.
 
 **Since:** 15
 
@@ -3484,7 +3498,7 @@ COMMON_EVENT_MANAGED_BROWSER_POLICY_CHANGED = 'usual.event.MANAGED_BROWSER_POLIC
 COMMON_EVENT_KIOSK_MODE_ON = 'usual.event.KIOSK_MODE_ON'
 ```
 
-进入Kiosk模式时，事件通知服务将触发并发布系统公共事件。此事件仅由系统发送。
+Indicates that the kiosk mode is enabled. When this mode is on, the common event service is triggered to publish this system common event.
 
 **Since:** 20
 
@@ -3500,7 +3514,7 @@ COMMON_EVENT_KIOSK_MODE_ON = 'usual.event.KIOSK_MODE_ON'
 COMMON_EVENT_KIOSK_MODE_OFF = 'usual.event.KIOSK_MODE_OFF'
 ```
 
-退出Kiosk模式时，事件通知服务将触发并发布系统公共事件。
+Indicates that the kiosk mode is disabled. When this mode is off, the common event service is triggered to publish this system common event.
 
 **Since:** 20
 
@@ -3516,7 +3530,9 @@ COMMON_EVENT_KIOSK_MODE_OFF = 'usual.event.KIOSK_MODE_OFF'
 COMMON_EVENT_TABLET_MODE_CHANGED = 'usual.event.TABLET_MODE_CHANGED'
 ```
 
-表示可感知支架开合的设备，例如具有支架的平板电脑，其支架开合状态变化时，将会触发事件通知服务发布该系统公共事件。
+Indicates that the tablet mode of a device (such as a tablet with bracket) has been changed.
+
+When the tablet mode of a device has been changed, the event notification service is triggered to publish this event.
 
 **Since:** 23
 
@@ -3526,29 +3542,13 @@ COMMON_EVENT_TABLET_MODE_CHANGED = 'usual.event.TABLET_MODE_CHANGED'
 
 **System capability:** SystemCapability.Notification.CommonEvent
 
-## COMMON_EVENT_LID_STATE_CHANGED
-
-```TypeScript
-COMMON_EVENT_LID_STATE_CHANGED = 'usual.event.LID_STATE_CHANGED'
-```
-
-表示可感知开合盖子的设备，例如具有开合盖子的笔记本电脑，其开合盖状态变化时，将会触发事件通知服务发布该系统公共事件。
-
-**Since:** 23
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
-
-<!--Device-Support-COMMON_EVENT_LID_STATE_CHANGED = 'usual.event.LID_STATE_CHANGED'--><!--Device-Support-COMMON_EVENT_LID_STATE_CHANGED = 'usual.event.LID_STATE_CHANGED'-End-->
-
-**System capability:** SystemCapability.Notification.CommonEvent
-
 ## COMMON_EVENT_VOLUME_DECRYPTED
 
 ```TypeScript
 COMMON_EVENT_VOLUME_DECRYPTED = 'usual.event.VOLUME_DECRYPTED'
 ```
 
-表示设备上的特定卷已被解密。
+This common event indicates that specific volumes on the device have been decrypted.
 
 **Since:** 26.0.0
 
@@ -3566,7 +3566,7 @@ COMMON_EVENT_VOLUME_DECRYPTED = 'usual.event.VOLUME_DECRYPTED'
 COMMON_EVENT_VOLUME_ENCRYPTED = 'usual.event.VOLUME_ENCRYPTED'
 ```
 
-表示设备上的特定卷已被加密。
+This common event indicates that specific volumes on the device have been encrypted.
 
 **Since:** 26.0.0
 
@@ -3584,9 +3584,9 @@ COMMON_EVENT_VOLUME_ENCRYPTED = 'usual.event.VOLUME_ENCRYPTED'
 COMMON_EVENT_VOLUME_ENCRYPTION_POLICY_SET = 'usual.event.VOLUME_ENCRYPTION_POLICY_SET'
 ```
 
-表示设备上的特定卷已设置其加密策略。
+This common event indicates that specific volumes on the device have had their encryption policy set.
 
-要订阅此事件，您的应用必须具备ohos.permission.QUERY_VOLUME_ENCRYPTION_STATUS权限.
+To subscribe to this common event, your application must have the ohos.permission.QUERY_VOLUME_ENCRYPTION_STATUS permission.
 
 **Since:** 26.0.0
 
@@ -3595,6 +3595,46 @@ COMMON_EVENT_VOLUME_ENCRYPTION_POLICY_SET = 'usual.event.VOLUME_ENCRYPTION_POLIC
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-Support-COMMON_EVENT_VOLUME_ENCRYPTION_POLICY_SET = 'usual.event.VOLUME_ENCRYPTION_POLICY_SET'--><!--Device-Support-COMMON_EVENT_VOLUME_ENCRYPTION_POLICY_SET = 'usual.event.VOLUME_ENCRYPTION_POLICY_SET'-End-->
+
+**System capability:** SystemCapability.Notification.CommonEvent
+
+## COMMON_EVENT_SKILL_CHANGED
+
+```TypeScript
+COMMON_EVENT_SKILL_CHANGED = 'usual.event.SKILL_CHANGED'
+```
+
+This common event indicates that the skill information of an application has been changed.
+
+To receive this common event, your application must have the ohos.permission.MANAGE_SKILL_PRIVILEGE permission.
+
+**Since:** 26.0.0
+
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
+
+**Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API:** This API can be used in atomic services since API version 26.0.0.
+
+<!--Device-Support-COMMON_EVENT_SKILL_CHANGED = 'usual.event.SKILL_CHANGED'--><!--Device-Support-COMMON_EVENT_SKILL_CHANGED = 'usual.event.SKILL_CHANGED'-End-->
+
+**System capability:** SystemCapability.Notification.CommonEvent
+
+## COMMON_EVENT_LID_STATE_CHANGED
+
+```TypeScript
+COMMON_EVENT_LID_STATE_CHANGED = 'usual.event.LID_STATE_CHANGED'
+```
+
+Indicates that the lid state of a device (such as a laptop) has been changed.
+
+When the lid state of a device has been changed, the event notification service is triggered to publish this event.
+
+**Since:** 23
+
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+
+<!--Device-Support-COMMON_EVENT_LID_STATE_CHANGED = 'usual.event.LID_STATE_CHANGED'--><!--Device-Support-COMMON_EVENT_LID_STATE_CHANGED = 'usual.event.LID_STATE_CHANGED'-End-->
 
 **System capability:** SystemCapability.Notification.CommonEvent
 

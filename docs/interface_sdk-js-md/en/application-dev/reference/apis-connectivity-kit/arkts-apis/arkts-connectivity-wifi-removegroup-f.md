@@ -40,9 +40,9 @@ Removes a P2P group.
 import wifi from '@ohos.wifi';
 
 try {
-  wifi.removeGroup();  
+	wifi.removeGroup();	
 }catch(error){
-  console.error("failed:" + JSON.stringify(error));
+	console.error("failed:" + JSON.stringify(error));
 }
 ```
 

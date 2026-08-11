@@ -1,6 +1,6 @@
 # EffectDirection
 
-符号动效方向的枚举值。
+The direction type of symbol effect.
 
 **Since:** 12
 
@@ -16,7 +16,7 @@
 DOWN = 0
 ```
 
-图标缩小再复原。
+The symbol scales down and then returns to its original size.
 
 **Since:** 12
 
@@ -38,7 +38,7 @@ DOWN = 0
 UP = 1
 ```
 
-图标放大再复原。
+The symbol scales up and then returns to its original size.
 
 **Since:** 12
 

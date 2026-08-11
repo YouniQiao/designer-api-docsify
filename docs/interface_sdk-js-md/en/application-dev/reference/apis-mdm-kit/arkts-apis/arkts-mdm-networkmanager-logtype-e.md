@@ -1,6 +1,6 @@
 # LogType
 
-日志类型。
+Enumerates the log types.
 
 **Since:** 23
 
@@ -16,7 +16,7 @@
 NFLOG = 0
 ```
 
-内核Netfilter框架中的数据包日志功能。
+Data packet logging function in the kernel Netfilter framework.
 
 **Since:** 23
 

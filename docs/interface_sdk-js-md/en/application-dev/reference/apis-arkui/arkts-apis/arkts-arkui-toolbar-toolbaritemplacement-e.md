@@ -1,6 +1,6 @@
 # ToolBarItemPlacement
 
-定义工具栏项在标题栏对应分栏的放置位置选项。
+Declare the placement of the toolbar item.
 
 **Since:** 23
 
@@ -16,7 +16,7 @@
 TOP_BAR_LEADING = 0
 ```
 
-表示将工具栏项放置在对应顶部栏的开头位置。
+Place toolbar item at the leading of top bar.
 
 **Since:** 23
 
@@ -34,7 +34,7 @@ TOP_BAR_LEADING = 0
 TOP_BAR_TRAILING = 1
 ```
 
-表示将工具栏项放置在对应顶部栏的末尾位置。
+Place toolbar item at the trailing of top bar.
 
 **Since:** 23
 

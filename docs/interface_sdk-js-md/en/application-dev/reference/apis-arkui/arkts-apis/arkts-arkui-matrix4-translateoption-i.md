@@ -1,6 +1,6 @@
 # TranslateOption
 
-平移参数。
+Set translation parameters
 
 **Since:** 23
 
@@ -22,13 +22,7 @@ import { matrix4 } from 'kits/@kit.ArkUI';
 x?: double
 ```
 
-x轴的平移距离。
-
-单位：px
-
-默认值：0
-
-取值范围 (-∞, +∞)
+Indicates the translation distance of the x-axis, in px.
 
 **Type:** double
 
@@ -48,13 +42,7 @@ x轴的平移距离。
 y?: double
 ```
 
-y轴的平移距离。
-
-单位：px
-
-默认值：0
-
-取值范围 (-∞, +∞)
+Indicates the translation distance of the y-axis, in px.
 
 **Type:** double
 
@@ -74,13 +62,7 @@ y轴的平移距离。
 z?: double
 ```
 
-z轴的平移距离。
-
-单位：px
-
-默认值：0
-
-取值范围 (-∞, +∞)
+Indicates the translation distance of the z-axis, in px.
 
 **Type:** double
 

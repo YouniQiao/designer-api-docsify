@@ -1,6 +1,6 @@
 # IDataSourcePrefetching
 
-用于实现具有预加载能力的LazyForEach数据源。
+Implement this interface to provide data prefetching for the LazyForEach component.
 
 **Inheritance/Implementation:** IDataSourcePrefetching extends [IDataSource<T>](IDataSource<T>)
 
@@ -24,7 +24,7 @@ import { IDataSourcePrefetching, BasicPrefetcher, IPrefetcher } from 'kits/@kit.
 default cancel(index: int): Promise<void> | undefined
 ```
 
-取消指定数据项的预加载。该方法可以为同步，也可以为异步。
+Cancels prefetching data for the specified element in the data collection.This method can be either synchronous or asynchronous.
 
 **Since:** 23
 
@@ -40,7 +40,7 @@ default cancel(index: int): Promise<void> | undefined
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| index | int | Yes | 指定项的序号。 |
+| index | int | Yes | Index of the item in the collection. |
 
 **Return value:**
 
@@ -54,7 +54,7 @@ default cancel(index: int): Promise<void> | undefined
 prefetch(index: int): Promise<void> | undefined
 ```
 
-预加载数据源中的指定项。该方法可以为同步，也可以为异步。
+Prefetches data for the specified element in the data collection.This method can be either synchronous or asynchronous.
 
 **Since:** 23
 
@@ -70,7 +70,7 @@ prefetch(index: int): Promise<void> | undefined
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| index | int | Yes | 指定项的序号。 |
+| index | int | Yes | Index of the item in the collection. |
 
 **Return value:**
 

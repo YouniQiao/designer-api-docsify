@@ -1,6 +1,6 @@
 # SourceTool
 
-定义输入源对应的工具类型。
+Enumerates the input source tool types.
 
 **Since:** 9
 
@@ -16,7 +16,7 @@
 Unknown
 ```
 
-未知输入源。
+Unknown input source.
 
 **Since:** 9
 
@@ -34,7 +34,7 @@ Unknown
 Finger
 ```
 
-手指输入。
+Finger.
 
 **Since:** 9
 
@@ -52,7 +52,7 @@ Finger
 Pen
 ```
 
-手写笔输入。
+Stylus.
 
 **Since:** 9
 
@@ -70,7 +70,7 @@ Pen
 MOUSE
 ```
 
-鼠标输入。
+Mouse device.
 
 **Since:** 12
 
@@ -90,7 +90,7 @@ MOUSE
 TOUCHPAD
 ```
 
-触控板输入。触控板单指输入被视为鼠标输入操作。
+Touchpad. Single-finger input on the touchpad is treated as a mouse input operation.
 
 **Since:** 12
 
@@ -110,7 +110,7 @@ TOUCHPAD
 JOYSTICK
 ```
 
-手柄输入。
+Joystick.
 
 **Since:** 12
 

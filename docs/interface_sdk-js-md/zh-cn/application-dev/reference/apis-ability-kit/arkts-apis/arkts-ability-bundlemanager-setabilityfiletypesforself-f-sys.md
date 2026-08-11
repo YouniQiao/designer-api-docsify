@@ -1,11 +1,5 @@
 # setAbilityFileTypesForSelf（系统接口）
 
-## 导入模块
-
-```TypeScript
-import { bundleManager } from 'kits/@kit.AbilityKit';
-```
-
 ## setAbilityFileTypesForSelf
 
 ```TypeScript
@@ -38,11 +32,11 @@ function setAbilityFileTypesForSelf(moduleName: string, abilityName: string, fil
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 17700351 | Invalid fileTypes. Possible causes: 1. The array length exceeds 1024; 2. The array contains an empty item; 3. An item exceeds 512 characters; 4. The array contains wildcard or general.object. |
-| 201 | Permission denied. |
-| 202 | Permission denied, non-system app called system api. |
-| 17700002 | The specified moduleName is not found. |
-| 17700003 | The specified abilityName is not found. |
+| [17700351](../errorcode-bundle.md#17700351-无效的文件类型) | Invalid fileTypes. Possible causes: 1. The array length exceeds 1024; 2. The array contains an empty item; 3. An item exceeds 512 characters; 4. The array contains wildcard or general.object. |
+| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission denied, non-system app called system api. |
+| [17700002](../errorcode-bundle.md#17700002-指定的modulename不存在) | The specified moduleName is not found. |
+| [17700003](../errorcode-bundle.md#17700003-指定的abilityname不存在) | The specified abilityName is not found. |
 
 ## 示例
 

@@ -20,7 +20,7 @@ import { font } from 'kits/@kit.ArkUI';
 fallbackGroups: Array<UIFontFallbackGroupInfo>
 ```
 
-备用字体集。
+The fallback font info.
 
 **Type:** Array&lt;UIFontFallbackGroupInfo&gt;
 
@@ -40,7 +40,7 @@ fallbackGroups: Array<UIFontFallbackGroupInfo>
 fontDir: Array<string>
 ```
 
-系统字体文件所在的路径。
+The paths of system font files.
 
 **Type:** Array&lt;string&gt;
 
@@ -60,7 +60,7 @@ fontDir: Array<string>
 generic: Array<UIFontGenericInfo>
 ```
 
-系统所支持的通用字体集列表。
+The generic font info.
 
 **Type:** Array&lt;UIFontGenericInfo&gt;
 

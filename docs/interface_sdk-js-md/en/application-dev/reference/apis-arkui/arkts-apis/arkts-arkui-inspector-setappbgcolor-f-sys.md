@@ -6,7 +6,7 @@
 declare function setAppBgColor(value: string): void
 ```
 
-设置应用背景颜色。
+Set app background color.
 
 **Since:** 8
 

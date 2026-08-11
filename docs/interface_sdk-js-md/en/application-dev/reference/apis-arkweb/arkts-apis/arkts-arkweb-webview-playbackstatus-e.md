@@ -1,6 +1,7 @@
 # PlaybackStatus
 
-[handleStatusChanged](../../../reference/apis-arkweb/arkts-apis-webview-NativeMediaPlayerHandler.md#handlestatuschanged12)接口参数， 用于表示播放器的播放状态。
+Enumerates the playback statuses of the player, which is an input parameter of the  
+[handleStatusChanged](../../../reference/apis-arkweb/arkts-apis-webview-NativeMediaPlayerHandler.md#handlestatuschanged12)API.
 
 **Since:** 23
 
@@ -16,7 +17,7 @@
 PAUSED = 0
 ```
 
-播放状态为暂停状态，表示媒体已暂停。
+Paused.
 
 **Since:** 23
 
@@ -32,7 +33,7 @@ PAUSED = 0
 PLAYING = 1
 ```
 
-播放状态为播放状态，表示媒体正在播放。
+Playing.
 
 **Since:** 23
 

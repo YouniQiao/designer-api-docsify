@@ -1,6 +1,6 @@
 # ColumnLayoutAlgorithmOptions
 
-设置垂直方向线性布局算法的间距、主轴对齐方式、交叉轴对齐方式及主轴排列方向。
+ColumnLayoutAlgorithm constructor options.
 
 **Since:** 24
 
@@ -16,7 +16,7 @@
 alignItems?: HorizontalAlign
 ```
 
-所有子组件在水平方向上的对齐格式。非法值：按默认值处理。
+Set the alignment format of the subassembly in the horizontal direction.
 
 **Type:** [HorizontalAlign](arkts-arkui-enums-horizontalalign-e.md)
 
@@ -25,6 +25,8 @@ alignItems?: HorizontalAlign
 **Since:** 24
 
 **ArkTS mode:** ArkTS-Sta only, since version 24.
+
+**Model restriction:** This API can be used only in the stage model.
 
 <!--Device-ColumnLayoutAlgorithmOptions-alignItems?: HorizontalAlign--><!--Device-ColumnLayoutAlgorithmOptions-alignItems?: HorizontalAlign-End-->
 
@@ -36,7 +38,7 @@ alignItems?: HorizontalAlign
 isReverse?: boolean
 ```
 
-子组件在垂直方向上的排列是否反转。取值为true表示子组件在垂直方向上反转排列。取值为false表示子组件在垂直方向上正序排列。非法值：按默认值处理。
+Whether the main axis is reversed.
 
 **Type:** boolean
 
@@ -45,6 +47,8 @@ isReverse?: boolean
 **Since:** 24
 
 **ArkTS mode:** ArkTS-Sta only, since version 24.
+
+**Model restriction:** This API can be used only in the stage model.
 
 <!--Device-ColumnLayoutAlgorithmOptions-isReverse?: boolean--><!--Device-ColumnLayoutAlgorithmOptions-isReverse?: boolean-End-->
 
@@ -56,7 +60,7 @@ isReverse?: boolean
 justifyContent?: FlexAlign
 ```
 
-所有子组件在垂直方向上的对齐格式。非法值：按默认值处理。
+Set alignment mode of the child components along the vertical axis.
 
 **Type:** [FlexAlign](arkts-arkui-enums-flexalign-e.md)
 
@@ -65,6 +69,8 @@ justifyContent?: FlexAlign
 **Since:** 24
 
 **ArkTS mode:** ArkTS-Sta only, since version 24.
+
+**Model restriction:** This API can be used only in the stage model.
 
 <!--Device-ColumnLayoutAlgorithmOptions-justifyContent?: FlexAlign--><!--Device-ColumnLayoutAlgorithmOptions-justifyContent?: FlexAlign-End-->
 
@@ -76,7 +82,7 @@ justifyContent?: FlexAlign
 space?: LengthMetrics
 ```
 
-纵向布局元素垂直方向间距。非法值：按默认值处理。
+Vertical layout element space.
 
 **Type:** [LengthMetrics](arkts-arkui-graphics-lengthmetrics-c.md)
 
@@ -85,6 +91,8 @@ space?: LengthMetrics
 **Since:** 24
 
 **ArkTS mode:** ArkTS-Sta only, since version 24.
+
+**Model restriction:** This API can be used only in the stage model.
 
 <!--Device-ColumnLayoutAlgorithmOptions-space?: LengthMetrics--><!--Device-ColumnLayoutAlgorithmOptions-space?: LengthMetrics-End-->
 

@@ -12,7 +12,7 @@ import { manager } from 'kits/@kit.ConnectivityKit';
 function getLocalName(): string
 ```
 
-获取本地设备的名称。
+Gets the local device's name.
 
 **Since:** 26.0.0
 
@@ -30,14 +30,14 @@ function getLocalName(): string
 
 | Type | Description |
 | --- | --- |
-| string | 返回设备的名称。 |
+| string | Returns the device's name. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 801 | Capability not supported because the chip does not support it. |
+| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported because the chip does not support it. |
 | 36100003 | NearLink disabled. |
 | 36100099 | Operation failed. |
-| 201 | Permission denied. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
 

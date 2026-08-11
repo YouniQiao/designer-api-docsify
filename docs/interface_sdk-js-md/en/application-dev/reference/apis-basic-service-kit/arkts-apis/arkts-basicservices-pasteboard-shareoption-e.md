@@ -1,6 +1,6 @@
 # ShareOption
 
-可粘贴数据的范围类型枚举。
+Enumerates the pasteable ranges of PasteData.
 
 **Since:** 9
 
@@ -16,7 +16,7 @@
 INAPP = 0
 ```
 
-表示仅允许同应用内粘贴。
+Only intra-application pasting is allowed.
 
 **Since:** 9
 
@@ -34,7 +34,7 @@ INAPP = 0
 LOCALDEVICE = 1
 ```
 
-表示允许在任何应用内粘贴。
+Paste is allowed in any application.
 
 **Since:** 9
 
@@ -51,6 +51,10 @@ LOCALDEVICE = 1
 ```TypeScript
 CROSSDEVICE = 2
 ```
+
+Paste is allowed in any application across devices.
+
+This API is deprecated since API version 12 without any alternative API or method.
 
 **Since:** 9
 

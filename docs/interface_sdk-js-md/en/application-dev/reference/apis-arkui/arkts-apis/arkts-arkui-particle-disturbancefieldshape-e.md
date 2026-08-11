@@ -1,6 +1,6 @@
 # DisturbanceFieldShape
 
-粒子形状。
+Defines particle disturbance shape.
 
 **Since:** 23
 
@@ -16,7 +16,7 @@
 RECT
 ```
 
-长方形。
+Shape rect.
 
 **Since:** 23
 
@@ -34,7 +34,7 @@ RECT
 CIRCLE
 ```
 
-圆。
+Shape circle.
 
 **Since:** 23
 
@@ -52,7 +52,7 @@ CIRCLE
 ELLIPSE
 ```
 
-椭圆。
+Shape eclipse.
 
 **Since:** 23
 

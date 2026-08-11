@@ -1,11 +1,5 @@
 # restartApp
 
-## 导入模块
-
-```TypeScript
-import { appRecovery } from 'kits/@kit.AbilityKit';
-```
-
 ## restartApp
 
 ```TypeScript

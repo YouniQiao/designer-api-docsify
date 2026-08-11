@@ -1,6 +1,6 @@
 # SwipeActionItem
 
-SwipeActionOptions的滑动操作项。
+Defines the swipe action item for SwipeActionOptions.
 
 **Since:** 23
 
@@ -16,7 +16,7 @@ SwipeActionOptions的滑动操作项。
 onAction?: () => void
 ```
 
-组件进入长距删除区后抬手时触发。
+Called when ListItem need to be deleted.
 
 **Since:** 23
 
@@ -34,7 +34,7 @@ onAction?: () => void
 onEnterActionArea?: () => void
 ```
 
-在滑动条目进入删除区域时调用。
+Called when swipe entry delete area.
 
 **Since:** 23
 
@@ -52,7 +52,7 @@ onEnterActionArea?: () => void
 onExitActionArea?: () => void
 ```
 
-当滑动条目退出删除区域时调用。
+Called when swipe exit delete area.
 
 **Since:** 23
 
@@ -70,7 +70,7 @@ onExitActionArea?: () => void
 onStateChange?: (state: SwipeActionState) => void
 ```
 
-当列表项滑动状态变化时候触发。
+Called when component swipe action state changed.
 
 **Since:** 23
 
@@ -94,7 +94,7 @@ onStateChange?: (state: SwipeActionState) => void
 actionAreaDistance?: Length
 ```
 
-设置组件长距离滑动删除距离阈值。
+Defines distance for the delete area.
 
 **Type:** [Length](arkts-arkui-length-t.md)
 
@@ -116,7 +116,7 @@ actionAreaDistance?: Length
 builder?: CustomBuilder
 ```
 
-当列表项向左或向右滑动（当列表方向为"垂直"时），向上或向下滑动（当列表方向为"水平"时）时显示的操作项。
+An action item that appears when a list item slides right (when list direction is Vertical) or slides down (when list direction Horizontal).
 
 **Type:** [CustomBuilder](../arkts-components/arkts-arkui-custombuilder-t.md)
 
@@ -136,7 +136,7 @@ builder?: CustomBuilder
 builderComponent?: ComponentContentBase
 ```
 
-当列表项向左或向右滑动（当列表方向为"垂直"时），向上或向下滑动（当列表方向为"水平"时）时显示的操作项。
+An action item that appears when a list item slides right (when list direction is Vertical) or slides down (when list direction Horizontal).
 
 **Type:** [ComponentContentBase](arkts-arkui-componentcontent-componentcontentbase-c.md)
 

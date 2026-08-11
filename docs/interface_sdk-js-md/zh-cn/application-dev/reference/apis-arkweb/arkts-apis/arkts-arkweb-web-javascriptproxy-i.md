@@ -36,7 +36,7 @@ controller: WebviewController
 
 Controller.
 
-**类型：** [WebviewController](arkts-arkweb-webview-webviewcontroller-c.md)
+**类型：** [WebviewController](../arkts-components/arkts-arkweb-webviewcontroller-t.md)
 
 **起始版本：** 23
 

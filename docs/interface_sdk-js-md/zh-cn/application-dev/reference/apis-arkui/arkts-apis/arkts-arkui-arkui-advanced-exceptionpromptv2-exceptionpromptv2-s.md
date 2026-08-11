@@ -12,12 +12,6 @@ Declare struct ExceptionPromptV2 higher-order component.The exception prompt com
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
-## 导入模块
-
-```TypeScript
-import { MarginTypeV2, PromptOptionsV2, ExceptionPromptV2, PromptOptionsV2Config } from 'kits/@kit.ArkUI';
-```
-
 ## build
 
 ```TypeScript

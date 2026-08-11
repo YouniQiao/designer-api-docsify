@@ -1,14 +1,12 @@
 # HalfScreenLaunchComponent
 
-半屏嵌入式启动原子化服务组件，当被拉起方未授权嵌入式运行原子化服务时，宿主将使用跳出式拉起原子化服务。
+**HalfScreenLaunchComponent** is a component designed for launching atomic services in half screen. If the invoked application (the one being launched) grants the invoker the authorization to run the atomic service in an embedded manner, the invoker can operate the atomic service in half-screen embedded mode. If authorization is not provided,the invoker will launch the atomic service in a pop-up manner.
 
-> **说明：**
+> **NOTE：**
 > 
-> 该组件从API version 18开始支持。后续版本的新增接口，采用上角标单独标记接口的起始版本。
-> 
-> 当需要在该组件中实现一个可嵌入式运行的原子化服务时，原子化服务必须继承自
-> [EmbeddableUIAbility](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-embeddableuiability-embeddableuiability-c.md/arkts-ability-app-ability-embeddableuiability-embeddableuiability-c.md)。若不继承自EmbeddableUIAbility，系统无
-> 法确保原子化服务正常运行。
+> To implement an embeddable atomic service, make sure it inherits from
+> [EmbeddableUIAbility](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-embeddableuiability-embeddableuiability-c.md/arkts-ability-app-ability-embeddableuiability-embeddableuiability-c.md). If the atomic service does
+> not inherit from **EmbeddableUIAbility**, the system cannot guarantee its proper operation.
 
 **Since:** 18
 
@@ -32,7 +30,7 @@ import { HalfScreenLaunchComponent } from 'kits/@kit.ArkUI';
 appId: string
 ```
 
-原子化服务appId。
+Application ID for the atomic service.
 
 **Type:** string
 
@@ -52,7 +50,7 @@ appId: string
 content: Callback<void>
 ```
 
-组件显示内容。
+Content displayed in the component.
 
 **Type:** [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;void&gt;
 
@@ -74,7 +72,7 @@ content: Callback<void>
 onError?: ErrorCallback
 ```
 
-被拉起的原子化服务在运行过程中发生异常时触发本回调。
+Invoked when an error occurs during the running of the atomic service.
 
 **Type:** [ErrorCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-errorcallback-i.md)
 
@@ -94,7 +92,7 @@ onError?: ErrorCallback
 onReceive?: Callback<Record<string, Object>>
 ```
 
-被拉起的嵌入式运行原子化服务通过[@ohos.window (窗口)](arkts-window.md)调用相关API时，触发本回调。
+Callback triggered when an embedded atomic service calls [@ohos.window (window)](arkts-window.md) APIs.
 
 **Type:** [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;Record&lt;string, Object&gt;&gt;
 
@@ -114,9 +112,9 @@ onReceive?: Callback<Record<string, Object>>
 onTerminated?: Callback<TerminationInfo>
 ```
 
-被拉起的嵌入式运行原子化服务通过点击原子化服务退出按钮、手势侧滑、调用  
-[terminateSelfWithResult](../../apis-ability-kit/arkts-apis/arkts-ability-uiabilitycontext-c.md/arkts-ability-uiabilitycontext-c.md#terminateselfwithresult)或者  
-[terminateSelf](../../apis-ability-kit/arkts-apis/arkts-ability-uiabilitycontext-c.md/arkts-ability-uiabilitycontext-c.md#terminateself)正常退出时，触发本回调。
+Callback triggered when an embedded atomic service exits normally. Exit scenarios include user-triggered exit button taps or edge swipes, or calls to  
+[terminateSelfWithResult](../../apis-ability-kit/arkts-apis/arkts-ability-uiabilitycontext-c.md/arkts-ability-uiabilitycontext-c.md#terminateselfwithresult)or  
+[terminateSelf](../../apis-ability-kit/arkts-apis/arkts-ability-uiabilitycontext-c.md/arkts-ability-uiabilitycontext-c.md#terminateself).
 
 **Type:** [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;TerminationInfo&gt;
 
@@ -136,7 +134,7 @@ onTerminated?: Callback<TerminationInfo>
 options?: AtomicServiceOptions
 ```
 
-拉起原子化服务参数。不填时使用默认参数拉起原子化服务。
+Parameters for starting the atomic service. The default value is empty.
 
 **Type:** [AtomicServiceOptions](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-atomicserviceoptions-atomicserviceoptions-c.md)
 

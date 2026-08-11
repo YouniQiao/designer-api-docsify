@@ -12,7 +12,7 @@ import { sendableRelationalStore } from 'kits/@kit.ArkData';
 function toSendableAsset(asset: NonSendableAsset): Asset
 ```
 
-将不可跨线程传递的附件数据，转换为可跨线程传递的附件数据。
+Converts the asset data that cannot be passed across threads into the data that can be passed across threads.
 
 **Since:** 12
 
@@ -26,20 +26,20 @@ function toSendableAsset(asset: NonSendableAsset): Asset
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| asset | [NonSendableAsset](arkts-arkdata-sendablerelationalstore-nonsendableasset-t.md) | Yes | 不可跨线程传递的Asset数据。 |
+| asset | [NonSendableAsset](arkts-arkdata-sendablerelationalstore-nonsendableasset-t.md) | Yes | Asset data that cannot be passed across threads. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [Asset](arkts-arkdata-commontype-asset-i.md) | 可跨线程传递的Asset数据。 |
+| [Asset](arkts-arkdata-commontype-asset-i.md) | Asset data that can be passed across threads. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. Possible causes: &lt;br&gt;1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; &lt;br&gt;3. Parameter verification failed. |
-| 14800000 | Inner error. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: &lt;br&gt;1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; &lt;br&gt;3. Parameter verification failed. |
+| [14800000](../../apis-basic-services-kit/errorcode-settings.md#14800000-parameter-check-failed) | Inner error. |
 
 ## Examples
 

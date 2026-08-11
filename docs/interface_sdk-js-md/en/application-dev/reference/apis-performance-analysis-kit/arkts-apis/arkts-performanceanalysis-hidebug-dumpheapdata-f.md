@@ -12,7 +12,7 @@ import { hidebug } from 'kits/@kit.PerformanceAnalysisKit';
 function dumpHeapData(filename: string): void
 ```
 
-�����������ת��������`filename.heapsnapshot`�ļ���
+Exports the VM heap data and generates a filename.heapsnapshot file.The input parameter is a user-defined file name, excluding the file suffix.The generated file is in the files folder under the application directory.Such as "/data/accounts/account_0/appdata/[package name]/files/xxx.heapsnapshot".
 
 **Since:** 8
 
@@ -20,7 +20,7 @@ function dumpHeapData(filename: string): void
 
 **Deprecated since:** 9
 
-**Substitutes:** [hidebug.dumpJsHeapData](arkts-performanceanalysis-hidebug-dumpjsheapdata-f.md#dumpjsheapdata)(filename
+**Substitutes:** [hidebug.dumpJsHeapData](arkts-performanceanalysis-hidebug-dumpjsheapdata-f.md#dumpjsheapdata)
 
 <!--Device-hidebug-function dumpHeapData(filename: string): void--><!--Device-hidebug-function dumpHeapData(filename: string): void-End-->
 
@@ -30,7 +30,7 @@ function dumpHeapData(filename: string): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| filename | string | Yes | �û��Զ�����������ת���ļ���������Ӧ�õ�`files`Ŀ¼�������Ըò���������heapsnapshot�ļ���string���ȵ����ֵΪ128�� |
+| filename | string | Yes | User-defined heap file name. The .heapsnapshot file is generated in the **files** directory of the application based on the specified file name. The maximum length of a string is 128. |
 
 ## Examples
 

@@ -38,8 +38,8 @@ Open the network manager settings page.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 14800000 | Parameter error. |
-| 14800010 | Original service error. @atomicservice |
+| [14800000](../../apis-basic-services-kit/errorcode-settings.md#14800000-parameter-check-failed) | Parameter error. |
+| [14800010](../../apis-basic-services-kit/errorcode-settings.md#14800010-uiability-required) | Original service error. @atomicservice |
 
 ## Examples
 

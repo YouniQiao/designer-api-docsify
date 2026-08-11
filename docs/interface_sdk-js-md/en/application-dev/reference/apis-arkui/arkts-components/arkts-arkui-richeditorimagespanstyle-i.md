@@ -1,6 +1,6 @@
 # RichEditorImageSpanStyle
 
-图片样式。
+Sets the image span style.
 
 **Since:** 10
 
@@ -16,7 +16,7 @@
 layoutStyle?: RichEditorLayoutStyle
 ```
 
-图片布局样式。默认值：{"borderRadius":"","margin":""}
+Image layout style. Default value: **{"borderRadius":"","margin":""}**
 
 **Type:** [RichEditorLayoutStyle](arkts-arkui-richeditorlayoutstyle-i.md)
 
@@ -38,9 +38,7 @@ layoutStyle?: RichEditorLayoutStyle
 objectFit?: ImageFit
 ```
 
-图片缩放类型。
-
-默认值：ImageFit.Cover。
+Scale mode of the image.
 
 **Type:** [ImageFit](../arkts-apis/arkts-arkui-imagefit-e.md)
 
@@ -62,7 +60,8 @@ objectFit?: ImageFit
 size?: [Dimension, Dimension]
 ```
 
-图片宽度和高度，默认单位为vp。默认值：与objectFit的值相关，不同的objectFit值有不同的默认尺寸。objectFit的值为Cover时，图片高度为组件高度减去组件上下内边距，宽度为组件宽度减去组件左右内边距。不支持以Percentage形式设置。
+Width and height of the image, in px. Default value: varies by the value of **objectFit**. If the value of   
+**objectFit** is **Cover**, the image height is the component height minus the top and bottom paddings, and the image width is the component width minus the left and right paddings.
 
 **Type:** [Dimension, Dimension]
 
@@ -84,9 +83,7 @@ size?: [Dimension, Dimension]
 verticalAlign?: ImageSpanAlignment
 ```
 
-图片垂直对齐方式。
-
-默认值：ImageSpanAlignment.BOTTOM
+Vertical alignment mode of the image.
 
 **Type:** [ImageSpanAlignment](../arkts-apis/arkts-arkui-enums-imagespanalignment-e.md)
 

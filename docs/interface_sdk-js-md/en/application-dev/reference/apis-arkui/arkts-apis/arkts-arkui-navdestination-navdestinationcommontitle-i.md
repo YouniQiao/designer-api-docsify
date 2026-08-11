@@ -1,6 +1,6 @@
 # NavDestinationCommonTitle
 
-NavDestination通用标题。
+Defines the navigation destination common title.
 
 **Since:** 23
 
@@ -16,7 +16,7 @@ NavDestination通用标题。
 main: string | Resource
 ```
 
-设置主标题。
+Sets the main title.
 
 **Type:** string \| Resource
 
@@ -36,7 +36,7 @@ main: string | Resource
 sub: string | Resource
 ```
 
-设置副标题。
+Sets the sub title.
 
 **Type:** string \| Resource
 

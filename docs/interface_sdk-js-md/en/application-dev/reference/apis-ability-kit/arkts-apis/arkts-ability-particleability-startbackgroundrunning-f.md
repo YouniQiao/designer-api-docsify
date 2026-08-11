@@ -12,7 +12,7 @@ import { particleAbility } from 'kits/@kit.AbilityKit';
 function startBackgroundRunning(id: number, request: NotificationRequest, callback: AsyncCallback<void>): void
 ```
 
-向系统申请长时任务。使用callback异步回调。
+Requests a continuous task from the system. This API uses an asynchronous callback to return the result.
 
 **Since:** 7
 
@@ -34,9 +34,9 @@ function startBackgroundRunning(id: number, request: NotificationRequest, callba
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| id | number | Yes | 长时任务通知id号。 |
-| request | [NotificationRequest](../../apis-notification-kit/arkts-apis/arkts-notification-notificationrequest-notificationrequest-i.md) | Yes | 通知参数，用于显示通知栏的信息。 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | 回调函数。当向系统申请长时任务成功，err为undefined，否则为错误对象。 |
+| id | number | Yes | Notification ID of the continuous task. |
+| request | [NotificationRequest](../../apis-notification-kit/arkts-apis/arkts-notification-notificationrequest-notificationrequest-i.md) | Yes | Notification parameter, which is used to display information in the notification bar. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. If the continuous task is requested, **err** is **undefined**. Otherwise, **err** is an error object. |
 
 ## Examples
 
@@ -89,7 +89,7 @@ wantAgent.getWantAgent(wantAgentInfo).then((wantAgentObj) => {
 function startBackgroundRunning(id: number, request: NotificationRequest): Promise<void>
 ```
 
-向系统申请长时任务。使用Promise异步回调。
+Requests a continuous task from the system. This API uses a promise to return the result.
 
 **Since:** 7
 
@@ -111,14 +111,14 @@ function startBackgroundRunning(id: number, request: NotificationRequest): Promi
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| id | number | Yes | 长时任务通知id号。 |
-| request | [NotificationRequest](../../apis-notification-kit/arkts-apis/arkts-notification-notificationrequest-notificationrequest-i.md) | Yes | 通知参数，用于显示通知栏的信息。 |
+| id | number | Yes | Notification ID of the continuous task. |
+| request | [NotificationRequest](../../apis-notification-kit/arkts-apis/arkts-notification-notificationrequest-notificationrequest-i.md) | Yes | Notification parameter, which is used to display information in the notification bar. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise对象。无返回结果的Promise对象。 |
+| Promise&lt;void&gt; | Promise used to return the result. Promise that returns no value. |
 
 ## Examples
 

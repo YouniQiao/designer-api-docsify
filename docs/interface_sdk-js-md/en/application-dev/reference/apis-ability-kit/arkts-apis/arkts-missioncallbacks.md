@@ -12,7 +12,7 @@ The module defines the callbacks invoked after synchronization starts. These cal
 
 | Name | Description |
 | --- | --- |
-| [MissionCallback](arkts-ability-missioncallbacks-missioncallback-i-sys.md) | 任务回调已注册 |
+| [MissionCallback](arkts-ability-missioncallbacks-missioncallback-i-sys.md) | MissionCallback registered by app. |
 <!--DelEnd-->
 
 <!--Del-->
@@ -20,8 +20,8 @@ The module defines the callbacks invoked after synchronization starts. These cal
 
 | Name | Description |
 | --- | --- |
-| [NotifyMissionsChangedCallback](arkts-ability-notifymissionschangedcallback-t-sys.md) | 任务回调函数已更改。 |
-| [NotifyNetDisconnectCallback](arkts-ability-notifynetdisconnectcallback-t-sys.md) | 断开连接时的回调函数。 |
-| [NotifySnapshotCallback](arkts-ability-notifysnapshotcallback-t-sys.md) | 快照更改时的回调函数。 |
+| [NotifyMissionsChangedCallback](arkts-ability-notifymissionschangedcallback-t-sys.md) | Callback function on mission changed. |
+| [NotifyNetDisconnectCallback](arkts-ability-notifynetdisconnectcallback-t-sys.md) | Callback function on network disconnect. |
+| [NotifySnapshotCallback](arkts-ability-notifysnapshotcallback-t-sys.md) | Callback function on snapshot changed. |
 <!--DelEnd-->
 

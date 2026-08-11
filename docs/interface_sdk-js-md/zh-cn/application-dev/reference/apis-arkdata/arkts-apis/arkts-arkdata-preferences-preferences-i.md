@@ -12,12 +12,6 @@
 
 **系统能力：** SystemCapability.DistributedDataManager.Preferences.Core
 
-## 导入模块
-
-```TypeScript
-import { preferences } from 'kits/@kit.ArkData';
-```
-
 ## clear
 
 ```TypeScript
@@ -46,17 +40,33 @@ clear(callback: AsyncCallback<void>): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 401 | Parameter error. Mandatory parameters are left unspecified. |
-| 15500000 | Inner error.<br>**适用版本：** 11+ |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Mandatory parameters are left unspecified. |
+| [15500000](../errorcode-preferences.md#15500000-内部错误) | Inner error.<br>**适用版本：** 11+ |
 
 ## 示例
+
+ArkTS-Dyn示例：
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
 
 dataPreferences.clear((err: BusinessError) =>{
   if (err) {
-    console.error("Failed to clear. code =" + err.code + ", message = " + err.message);
+    console.error("Failed to clear. code =" + err.code + ", message =" + err.message);
+    return;
+  }
+  console.info("Succeeded in clearing.");
+})
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+dataPreferences!.clear((err: BusinessError | null) =>{
+  if (err) {
+    console.error("Failed to clear. code =" + err.code + ", message =" + err.message);
     return;
   }
   console.info("Succeeded in clearing.");
@@ -91,9 +101,11 @@ clear(): Promise<void>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 15500000 | Inner error.<br>**适用版本：** 11+ |
+| [15500000](../errorcode-preferences.md#15500000-内部错误) | Inner error.<br>**适用版本：** 11+ |
 
 ## 示例
+
+ArkTS-Dyn示例：
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -102,7 +114,18 @@ let promise = dataPreferences.clear();
 promise.then(() => {
   console.info("Succeeded in clearing.");
 }).catch((err: BusinessError) => {
-  console.error("Failed to clear. code =" + err.code + ", message = " + err.message);
+  console.error("Failed to clear. code =" + err.code + ", message =" + err.message);
+})
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+let promise = dataPreferences!.clear();
+promise.then(() => {
+  console.info("Succeeded in clearing.");
+}).catch((err) => {
+  console.error("Failed to clear. code =" + err.code + ", message =" + err.message);
 })
 ```
 
@@ -126,8 +149,16 @@ clearSync(): void
 
 ## 示例
 
+ArkTS-Dyn示例：
+
 ```TypeScript
 dataPreferences.clearSync();
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+dataPreferences!.clearSync();
 ```
 
 ## delete
@@ -159,17 +190,33 @@ delete(key: string, callback: AsyncCallback<void>): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 401 | Parameter error. Possible causes: &lt;br&gt;1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; &lt;br&gt;3. Parameter verification failed. |
-| 15500000 | Inner error.<br>**适用版本：** 11+ |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: &lt;br&gt;1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; &lt;br&gt;3. Parameter verification failed. |
+| [15500000](../errorcode-preferences.md#15500000-内部错误) | Inner error.<br>**适用版本：** 11+ |
 
 ## 示例
+
+ArkTS-Dyn示例：
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
 
 dataPreferences.delete('startup', (err: BusinessError) => {
   if (err) {
-    console.error("Failed to delete the key 'startup'. code =" + err.code + ", message = " + err.message);
+    console.error("Failed to delete the key 'startup'. code =" + err.code + ", message =" + err.message);
+    return;
+  }
+  console.info("Succeeded in deleting the key 'startup'.");
+})
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+dataPreferences!.delete('startup', (err: BusinessError | null) => {
+  if (err) {
+    console.error("Failed to delete the key 'startup'. code =" + err.code + ", message =" + err.message);
     return;
   }
   console.info("Succeeded in deleting the key 'startup'.");
@@ -210,19 +257,32 @@ delete(key: string): Promise<void>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 401 | Parameter error. Possible causes: &lt;br&gt;1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; &lt;br&gt;3. Parameter verification failed. |
-| 15500000 | Inner error.<br>**适用版本：** 11+ |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: &lt;br&gt;1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; &lt;br&gt;3. Parameter verification failed. |
+| [15500000](../errorcode-preferences.md#15500000-内部错误) | Inner error.<br>**适用版本：** 11+ |
 
 ## 示例
+
+ArkTS-Dyn示例：
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
 
-let deleteStartupPromise = dataPreferences.delete('startup');
-deleteStartupPromise.then(() => {
+let promise = dataPreferences.delete('startup');
+promise.then(() => {
   console.info("Succeeded in deleting the key 'startup'.");
 }).catch((err: BusinessError) => {
-  console.error("Failed to delete the key 'startup'. code =" + err.code +", message = " + err.message);
+  console.error("Failed to delete the key 'startup'. code =" + err.code + ", message =" + err.message);
+})
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+let promise = dataPreferences!.delete('startup');
+promise.then(() => {
+  console.info("Succeeded in deleting the key 'startup'.");
+}).catch((err) => {
+  console.error("Failed to delete the key 'startup'. code =" + err.code + ", message =" + err.message);
 })
 ```
 
@@ -254,13 +314,21 @@ deleteSync(key: string): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 401 | Parameter error. Possible causes: &lt;br&gt;1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; &lt;br&gt;3. Parameter verification failed. |
-| 15500000 | Inner error.<br>**适用版本：** 11+ |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: &lt;br&gt;1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; &lt;br&gt;3. Parameter verification failed. |
+| [15500000](../errorcode-preferences.md#15500000-内部错误) | Inner error.<br>**适用版本：** 11+ |
 
 ## 示例
 
+ArkTS-Dyn示例：
+
 ```TypeScript
 dataPreferences.deleteSync('startup');
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+dataPreferences!.deleteSync('startup');
 ```
 
 ## flush
@@ -298,17 +366,33 @@ flush(callback: AsyncCallback<void>): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 401 | Parameter error. Mandatory parameters are left unspecified. |
-| 15500000 | Inner error.<br>**适用版本：** 11+ |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Mandatory parameters are left unspecified. |
+| [15500000](../errorcode-preferences.md#15500000-内部错误) | Inner error.<br>**适用版本：** 11+ |
 
 ## 示例
+
+ArkTS-Dyn示例：
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
 
 dataPreferences.flush((err: BusinessError) => {
   if (err) {
-    console.error("Failed to flush. code =" + err.code + ", message = " + err.message);
+    console.error("Failed to flush. code =" + err.code + ", message =" + err.message);
+    return;
+  }
+  console.info("Succeeded in flushing.");
+})
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+dataPreferences!.flush((err: BusinessError | null) => {
+  if (err) {
+    console.error("Failed to flush. code =" + err.code + ", message =" + err.message);
     return;
   }
   console.info("Succeeded in flushing.");
@@ -350,9 +434,11 @@ flush(): Promise<void>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 15500000 | Inner error.<br>**适用版本：** 11+ |
+| [15500000](../errorcode-preferences.md#15500000-内部错误) | Inner error.<br>**适用版本：** 11+ |
 
 ## 示例
+
+ArkTS-Dyn示例：
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -361,7 +447,18 @@ let flushResult = dataPreferences.flush();
 flushResult.then(() => {
   console.info("Succeeded in flushing.");
 }).catch((err: BusinessError) => {
-  console.error("Failed to flush. code =" + err.code + ", message = " + err.message);
+  console.error("Failed to flush. code =" + err.code + ", message =" + err.message);
+})
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+let flushResult = dataPreferences!.flush();
+flushResult.then(() => {
+  console.info("Succeeded in flushing.");
+}).catch((err) => {
+  console.error("Failed to flush. code =" + err.code + ", message =" + err.message);
 })
 ```
 
@@ -391,12 +488,20 @@ flushSync(): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 15500000 | Inner error. |
+| [15500000](../errorcode-preferences.md#15500000-内部错误) | Inner error. |
 
 ## 示例
 
+ArkTS-Dyn示例：
+
 ```TypeScript
 dataPreferences.flushSync();
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+dataPreferences!.flushSync();
 ```
 
 ## get
@@ -429,17 +534,33 @@ get(key: string, defValue: ValueType, callback: AsyncCallback<ValueType>): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 401 | Parameter error. Possible causes: &lt;br&gt;1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; &lt;br&gt;3. Parameter verification failed. |
-| 15500000 | Inner error.<br>**适用版本：** 11+ |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: &lt;br&gt;1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; &lt;br&gt;3. Parameter verification failed. |
+| [15500000](../errorcode-preferences.md#15500000-内部错误) | Inner error.<br>**适用版本：** 11+ |
 
 ## 示例
+
+ArkTS-Dyn示例：
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
 
 dataPreferences.get('startup', 'default', (err: BusinessError, val: preferences.ValueType) => {
   if (err) {
-    console.error("Failed to get value of 'startup'. code =" + err.code + ", message = " + err.message);
+    console.error("Failed to get value of 'startup'. code =" + err.code + ", message =" + err.message);
+    return;
+  }
+  console.info("Succeeded in getting value of 'startup'. val: " + val);
+})
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+dataPreferences!.get('startup', 'default', (err: BusinessError | null, val: preferences.ValueType | undefined) => {
+  if (err) {
+    console.error("Failed to get value of 'startup'. code =" + err.code + ", message =" + err.message);
     return;
   }
   console.info("Succeeded in getting value of 'startup'. val: " + val);
@@ -481,10 +602,12 @@ get(key: string, defValue: ValueType): Promise<ValueType>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 401 | Parameter error. Possible causes: &lt;br&gt;1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; &lt;br&gt;3. Parameter verification failed. |
-| 15500000 | Inner error.<br>**适用版本：** 11+ |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: &lt;br&gt;1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; &lt;br&gt;3. Parameter verification failed. |
+| [15500000](../errorcode-preferences.md#15500000-内部错误) | Inner error.<br>**适用版本：** 11+ |
 
 ## 示例
+
+ArkTS-Dyn示例：
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -493,7 +616,18 @@ let data = dataPreferences.get('startup', 'default');
 data.then((data: preferences.ValueType) => {
   console.info("Succeeded in getting value of 'startup'. Data: " + data);
 }).catch((err: BusinessError) => {
-  console.error("Failed to get value of 'startup'. code =" + err.code + ", message = " + err.message);
+  console.error("Failed to get value of 'startup'. code =" + err.code + ", message =" + err.message);
+})
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+let promise = dataPreferences!.get('startup', 'default');
+promise.then((data: preferences.ValueType | undefined) => {
+  console.info("Succeeded in getting value of 'startup'. Data: " + data);
+}).catch((err) => {
+  console.error("Failed to get value of 'startup'. code =" + err.code + ", message =" + err.message);
 })
 ```
 
@@ -525,10 +659,12 @@ getAll(callback: AsyncCallback<Object>): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 401 | Parameter error. Mandatory parameters are left unspecified. |
-| 15500000 | Inner error.<br>**适用版本：** 11+ |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Mandatory parameters are left unspecified. |
+| [15500000](../errorcode-preferences.md#15500000-内部错误) | Inner error.<br>**适用版本：** 11+ |
 
 ## 示例
+
+ArkTS-Dyn示例：
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -542,12 +678,27 @@ function getObjKeys(obj: Object): string[] {
 
 dataPreferences.getAll((err: BusinessError, value: Object) => {
   if (err) {
-    console.error("Failed to get all key-values. code =" + err.code + ", message = " + err.message);
+    console.error("Failed to get all key-values. code =" + err.code + ", message =" + err.message);
     return;
   }
   let allKeys = getObjKeys(value);
   console.info("getAll keys = " + allKeys);
   console.info("getAll object = " + JSON.stringify(value));
+})
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+dataPreferences!.getAll((err: BusinessError | null, value: Object | undefined) => {
+  if (err) {
+    console.error("Failed to get all key-values. code =" + err.code + ", message =" + err.message);
+    return;
+  }
+  let obj = value as Record<string, object>;
+  console.info("getAll keys = " + obj);
 })
 ```
 
@@ -579,9 +730,11 @@ getAll(): Promise<Object>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 15500000 | Inner error.<br>**适用版本：** 11+ |
+| [15500000](../errorcode-preferences.md#15500000-内部错误) | Inner error.<br>**适用版本：** 11+ |
 
 ## 示例
+
+ArkTS-Dyn示例：
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -599,7 +752,19 @@ allData.then((value: Object) => {
   console.info('getAll keys = ' + allKeys);
   console.info("getAll object = " + JSON.stringify(value));
 }).catch((err: BusinessError) => {
-  console.error("Failed to get all key-values. code =" + err.code + ", message = " + err.message);
+  console.error("Failed to get all key-values. code =" + err.code + ", message =" + err.message);
+})
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+let allData = dataPreferences!.getAll();
+allData.then((value: Object | undefined) => {
+  let obj = value as Record<string, object>;
+  console.info("getAll keys = " + obj);
+}).catch((err) => {
+  console.error("Failed to get all key-values. code =" + err.code + ", message =" + err.message);
 })
 ```
 
@@ -631,9 +796,11 @@ getAllSync(): Object
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 15500000 | Inner error.<br>**适用版本：** 11+ |
+| [15500000](../errorcode-preferences.md#15500000-内部错误) | Inner error.<br>**适用版本：** 11+ |
 
 ## 示例
+
+ArkTS-Dyn示例：
 
 ```TypeScript
 // 由于ArkTS中无Object.keys，且无法使用for..in...
@@ -647,6 +814,14 @@ let value = dataPreferences.getAllSync();
 let allKeys = getObjKeys(value);
 console.info('getAll keys = ' + allKeys);
 console.info("getAll object = " + JSON.stringify(value));
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+let value1 = dataPreferences!.getAllSync();
+let obj = value1 as Record<string, object>;
+console.info('getAll keys = ' + obj);
 ```
 
 ## getSync
@@ -684,13 +859,21 @@ getSync(key: string, defValue: ValueType): ValueType
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 401 | Parameter error. Possible causes: &lt;br&gt;1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; &lt;br&gt;3. Parameter verification failed. |
-| 15500000 | Inner error.<br>**适用版本：** 11+ |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: &lt;br&gt;1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; &lt;br&gt;3. Parameter verification failed. |
+| [15500000](../errorcode-preferences.md#15500000-内部错误) | Inner error.<br>**适用版本：** 11+ |
 
 ## 示例
 
+ArkTS-Dyn示例：
+
 ```TypeScript
 let value: preferences.ValueType = dataPreferences.getSync('startup', 'default');
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+let value: preferences.ValueType = dataPreferences!.getSync('startup', 'default');
 ```
 
 ## has
@@ -722,17 +905,37 @@ has(key: string, callback: AsyncCallback<boolean>): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 401 | Parameter error. Possible causes: &lt;br&gt;1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; &lt;br&gt;3. Parameter verification failed. |
-| 15500000 | Inner error.<br>**适用版本：** 11+ |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: &lt;br&gt;1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; &lt;br&gt;3. Parameter verification failed. |
+| [15500000](../errorcode-preferences.md#15500000-内部错误) | Inner error.<br>**适用版本：** 11+ |
 
 ## 示例
+
+ArkTS-Dyn示例：
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
 
 dataPreferences.has('startup', (err: BusinessError, val: boolean) => {
   if (err) {
-    console.error("Failed to check the key 'startup'. code =" + err.code + ", message = " + err.message);
+    console.error("Failed to check the key 'startup'. code =" + err.code + ", message =" + err.message);
+    return;
+  }
+  if (val) {
+    console.info("The key 'startup' is contained.");
+  } else {
+    console.info("The key 'startup' is not contained.");
+  }
+})
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+dataPreferences!.has('startup', (err: BusinessError | null, val: boolean | undefined) => {
+  if (err) {
+    console.error("Failed to check the key 'startup'. code =" + err.code + ", message =" + err.message);
     return;
   }
   if (val) {
@@ -777,10 +980,12 @@ has(key: string): Promise<boolean>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 401 | Parameter error. Possible causes: &lt;br&gt;1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; &lt;br&gt;3. Parameter verification failed. |
-| 15500000 | Inner error.<br>**适用版本：** 11+ |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: &lt;br&gt;1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; &lt;br&gt;3. Parameter verification failed. |
+| [15500000](../errorcode-preferences.md#15500000-内部错误) | Inner error.<br>**适用版本：** 11+ |
 
 ## 示例
+
+ArkTS-Dyn示例：
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -793,7 +998,22 @@ isStartupSet.then((val: boolean) => {
     console.info("The key 'startup' does not contain.");
   }
 }).catch((err: BusinessError) => {
-  console.error("Failed to check the key 'startup'. code =" + err.code + ", message = " + err.message);
+  console.error("Failed to check the key 'startup'. code =" + err.code + ", message =" + err.message);
+})
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+let isStartupSet = dataPreferences!.has('startup');
+isStartupSet.then((val: boolean) => {
+  if (val) {
+    console.info("The key 'startup' is contained.");
+  } else {
+    console.info("The key 'startup' does not contain.");
+  }
+}).catch((err) => {
+  console.error("Failed to check the key 'startup'. code =" + err.code + ", message =" + err.message);
 })
 ```
 
@@ -831,13 +1051,26 @@ hasSync(key: string): boolean
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 401 | Parameter error. Possible causes: &lt;br&gt;1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; &lt;br&gt;3. Parameter verification failed. |
-| 15500000 | Inner error.<br>**适用版本：** 11+ |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: &lt;br&gt;1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; &lt;br&gt;3. Parameter verification failed. |
+| [15500000](../errorcode-preferences.md#15500000-内部错误) | Inner error.<br>**适用版本：** 11+ |
 
 ## 示例
 
+ArkTS-Dyn示例：
+
 ```TypeScript
 let isExist: boolean = dataPreferences.hasSync('startup');
+if (isExist) {
+  console.info("The key 'startup' is contained.");
+} else {
+  console.info("The key 'startup' does not contain.");
+}
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+let isExist: boolean = dataPreferences!.hasSync('startup');
 if (isExist) {
   console.info("The key 'startup' is contained.");
 } else {
@@ -874,8 +1107,8 @@ off(type: 'change', callback?: Callback<string>): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 401 | Parameter error. Possible causes: &lt;br&gt;1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; &lt;br&gt;3. Parameter verification failed. |
-| 15500000 | Inner error.<br>**适用版本：** 11+ |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: &lt;br&gt;1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; &lt;br&gt;3. Parameter verification failed. |
+| [15500000](../errorcode-preferences.md#15500000-内部错误) | Inner error.<br>**适用版本：** 11+ |
 
 ## 示例
 
@@ -889,7 +1122,7 @@ dataPreferences.on('change', observer);
 dataPreferences.putSync('startup', 'auto');
 dataPreferences.flush((err: BusinessError) => {
   if (err) {
-    console.error("Failed to flush. code =" + err.code + ", message = " + err.message);
+    console.error("Failed to flush. code =" + err.code + ", message =" + err.message);
     return;
   }
   console.info("Succeeded in flushing.");
@@ -928,8 +1161,8 @@ off(type: 'multiProcessChange', callback?: Callback<string>): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 401 | Parameter error. Possible causes: &lt;br&gt;1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; &lt;br&gt;3. Parameter verification failed. |
-| 15500000 | Inner error.<br>**适用版本：** 11+ |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: &lt;br&gt;1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; &lt;br&gt;3. Parameter verification failed. |
+| [15500000](../errorcode-preferences.md#15500000-内部错误) | Inner error.<br>**适用版本：** 11+ |
 
 ## 示例
 
@@ -943,7 +1176,7 @@ dataPreferences.on('multiProcessChange', observer);
 dataPreferences.putSync('startup', 'auto');
 dataPreferences.flush((err: BusinessError) => {
   if (err) {
-    console.error("Failed to flush. code =" + err.code + ", message = " + err.message);
+    console.error("Failed to flush. code =" + err.code + ", message =" + err.message);
     return;
   }
   console.info("Succeeded in flushing.");
@@ -981,8 +1214,8 @@ off(type: 'dataChange', keys: Array<string>, callback?: Callback<Record<string, 
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 401 | Parameter error. Possible causes: &lt;br&gt;1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; &lt;br&gt;3. Parameter verification failed. |
-| 15500000 | Inner error. |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: &lt;br&gt;1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; &lt;br&gt;3. Parameter verification failed. |
+| [15500000](../errorcode-preferences.md#15500000-内部错误) | Inner error. |
 
 ## 示例
 
@@ -1001,7 +1234,7 @@ dataPreferences.putSync('name', 'xiaohong');
 dataPreferences.putSync('weight', 125);
 dataPreferences.flush((err: BusinessError) => {
   if (err) {
-    console.error("Failed to flush. code =" + err.code + ", message = " + err.message);
+    console.error("Failed to flush. code =" + err.code + ", message =" + err.message);
     return;
   }
   console.info("Succeeded in flushing.");
@@ -1035,7 +1268,27 @@ Unregisters an existing observer.
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 15500000 | Inner error. |
+| [15500000](../errorcode-preferences.md#15500000-内部错误) | Inner error. |
+
+## 示例
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let observer = (key: string) => {
+  console.info("The key " + key + " changed.");
+}
+dataPreferences.onChange(observer);
+dataPreferences.putSync('startup', 'auto');
+dataPreferences.flush((err: BusinessError | null) => {
+  if (err) {
+    console.error("Failed to flush. code =" + err.code + ", message =" + err.message);
+    return;
+  }
+  console.info("Succeeded in flushing.");
+})
+dataPreferences.offChange(observer);
+```
 
 ## offDataChange
 
@@ -1064,7 +1317,32 @@ Unregisters an observer for changes to the {@ link Preferences} object.
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 15500000 | Inner error. |
+| [15500000](../errorcode-preferences.md#15500000-内部错误) | Inner error. |
+
+## 示例
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let observer = (data: Record<string, preferences.ValueType>) => {
+  for (const keyValue of Object.entries(data)) {
+    console.info(`observer : ${keyValue}`);
+  }
+  console.info("The observer called.");
+}
+let keys = ['name', 'age'];
+dataPreferences.onDataChange(keys, observer);
+dataPreferences.putSync('name', 'xiaohong');
+dataPreferences.putSync('weight', 125);
+dataPreferences.flush((err: BusinessError | null) => {
+  if (err) {
+    console.error("Failed to flush. code =" + err.code + ", message =" + err.message);
+    return;
+  }
+  console.info("Succeeded in flushing.");
+})
+dataPreferences.offDataChange(keys, observer);
+```
 
 ## offMultiProcessChange
 
@@ -1092,7 +1370,27 @@ Unregisters an existing observer.
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 15500000 | Inner error. |
+| [15500000](../errorcode-preferences.md#15500000-内部错误) | Inner error. |
+
+## 示例
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let observer = (key: string) => {
+  console.info("The key " + key + " changed.");
+}
+dataPreferences.onMultiProcessChange(observer);
+dataPreferences.putSync('startup', 'auto');
+dataPreferences.flush((err: BusinessError | null) => {
+  if (err) {
+    console.error("Failed to flush. code =" + err.code + ", message =" + err.message);
+    return;
+  }
+  console.info("Succeeded in flushing.");
+})
+dataPreferences.offMultiProcessChange(observer);
+```
 
 ## on('change')
 
@@ -1139,8 +1437,8 @@ on(type: 'change', callback: Callback<string>): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 401 | Parameter error. Possible causes: &lt;br&gt;1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; &lt;br&gt;3. Parameter verification failed. |
-| 15500000 | Inner error.<br>**适用版本：** 11+ |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: &lt;br&gt;1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; &lt;br&gt;3. Parameter verification failed. |
+| [15500000](../errorcode-preferences.md#15500000-内部错误) | Inner error.<br>**适用版本：** 11+ |
 
 ## 示例
 
@@ -1154,7 +1452,7 @@ dataPreferences.on('change', observer);
 dataPreferences.putSync('startup', 'manual');
 dataPreferences.flush((err: BusinessError) => {
   if (err) {
-    console.error("Failed to flush. code =" + err.code + ", message = " + err.message);
+    console.error("Failed to flush. code =" + err.code + ", message =" + err.message);
     return;
   }
   console.info("Succeeded in flushing.");
@@ -1201,9 +1499,9 @@ on(type: 'multiProcessChange', callback: Callback<string>): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 401 | Parameter error. Possible causes: &lt;br&gt;1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; &lt;br&gt;3. Parameter verification failed. |
-| 15500000 | Inner error.<br>**适用版本：** 11+ |
-| 15500019 | Failed to obtain the subscription service. |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: &lt;br&gt;1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; &lt;br&gt;3. Parameter verification failed. |
+| [15500000](../errorcode-preferences.md#15500000-内部错误) | Inner error.<br>**适用版本：** 11+ |
+| [15500019](../errorcode-preferences.md#15500019-获取订阅服务失败) | Failed to obtain the subscription service. |
 
 ## 示例
 
@@ -1217,7 +1515,7 @@ dataPreferences.on('multiProcessChange', observer);
 dataPreferences.putSync('startup', 'manual');
 dataPreferences.flush((err: BusinessError) => {
   if (err) {
-    console.error("Failed to flush. code =" + err.code + ", message = " + err.message);
+    console.error("Failed to flush. code =" + err.code + ", message =" + err.message);
     return;
   }
   console.info("Succeeded in flushing.");
@@ -1260,8 +1558,8 @@ on(type: 'dataChange', keys: Array<string>, callback: Callback<Record<string, Va
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
-| 15500000 | Inner error. |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| [15500000](../errorcode-preferences.md#15500000-内部错误) | Inner error. |
 
 ## 示例
 
@@ -1280,7 +1578,7 @@ dataPreferences.putSync('name', 'xiaohong');
 dataPreferences.putSync('weight', 125);
 dataPreferences.flush((err: BusinessError) => {
   if (err) {
-    console.error("Failed to flush. code =" + err.code + ", message = " + err.message);
+    console.error("Failed to flush. code =" + err.code + ", message =" + err.message);
     return;
   }
   console.info("Succeeded in flushing.");
@@ -1313,7 +1611,26 @@ Registers an observer to listen for the change of a {@link Preferences} object.
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 15500000 | Inner error. |
+| [15500000](../errorcode-preferences.md#15500000-内部错误) | Inner error. |
+
+## 示例
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let observer = (key: string) => {
+  console.info("The key " + key + " changed.");
+}
+dataPreferences.onChange(observer);
+dataPreferences.putSync('startup', 'manual');
+dataPreferences.flush((err: BusinessError | null) => {
+  if (err) {
+    console.error("Failed to flush. code =" + err.code + ", message =" + err.message);
+    return;
+  }
+  console.info("Succeeded in flushing.");
+})
+```
 
 ## onDataChange
 
@@ -1342,7 +1659,31 @@ Registers an observer to listen for changes to the {@ link Preferences} object.
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 15500000 | Inner error. |
+| [15500000](../errorcode-preferences.md#15500000-内部错误) | Inner error. |
+
+## 示例
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let observer = (data: Record<string, preferences.ValueType>) => {
+  for (const keyValue of Object.entries(data)) {
+    console.info(`observer : ${keyValue}`);
+  }
+  console.info("The observer called.");
+}
+let keys = ['name', 'age'];
+dataPreferences.onDataChange(keys, observer);
+dataPreferences.putSync('name', 'xiaohong');
+dataPreferences.putSync('weight', 125);
+dataPreferences.flush((err: BusinessError | null) => {
+  if (err) {
+    console.error("Failed to flush. code =" + err.code + ", message =" + err.message);
+    return;
+  }
+  console.info("Succeeded in flushing.");
+})
+```
 
 ## onMultiProcessChange
 
@@ -1370,8 +1711,27 @@ Registers an observer to listen for the change of a {@link Preferences} object.
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 15500000 | Inner error. |
-| 15500019 | Failed to obtain the subscription service. |
+| [15500000](../errorcode-preferences.md#15500000-内部错误) | Inner error. |
+| [15500019](../errorcode-preferences.md#15500019-获取订阅服务失败) | Failed to obtain the subscription service. |
+
+## 示例
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let observer = (key: string) => {
+  console.info("The key " + key + " changed.");
+}
+dataPreferences.onMultiProcessChange(observer);
+dataPreferences.putSync('startup', 'manual');
+dataPreferences.flush((err: BusinessError | null) => {
+  if (err) {
+    console.error("Failed to flush. code =" + err.code + ", message =" + err.message);
+    return;
+  }
+  console.info("Succeeded in flushing.");
+})
+```
 
 ## put
 
@@ -1409,17 +1769,33 @@ put(key: string, value: ValueType, callback: AsyncCallback<void>): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 401 | Parameter error. Possible causes: &lt;br&gt;1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; &lt;br&gt;3. Parameter verification failed. |
-| 15500000 | Inner error.<br>**适用版本：** 11+ |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: &lt;br&gt;1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; &lt;br&gt;3. Parameter verification failed. |
+| [15500000](../errorcode-preferences.md#15500000-内部错误) | Inner error.<br>**适用版本：** 11+ |
 
 ## 示例
+
+ArkTS-Dyn示例：
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
 
 dataPreferences.put('startup', 'auto', (err: BusinessError) => {
   if (err) {
-    console.error("Failed to put value of 'startup'. code =" + err.code + ", message = " + err.message);
+    console.error("Failed to put value of 'startup'. code =" + err.code + ", message =" + err.message);
+    return;
+  }
+  console.info("Succeeded in putting value of 'startup'.");
+})
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+dataPreferences!.put('startup', 'auto', (err: BusinessError | null) => {
+  if (err) {
+    console.error("Failed to put value of 'startup'. code =" + err.code + ", message =" + err.message);
     return;
   }
   console.info("Succeeded in putting value of 'startup'.");
@@ -1467,10 +1843,12 @@ put(key: string, value: ValueType): Promise<void>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 401 | Parameter error. Possible causes: &lt;br&gt;1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; &lt;br&gt;3. Parameter verification failed. |
-| 15500000 | Inner error.<br>**适用版本：** 11+ |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: &lt;br&gt;1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; &lt;br&gt;3. Parameter verification failed. |
+| [15500000](../errorcode-preferences.md#15500000-内部错误) | Inner error.<br>**适用版本：** 11+ |
 
 ## 示例
+
+ArkTS-Dyn示例：
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -1479,7 +1857,18 @@ let putStartupPref = dataPreferences.put('startup', 'auto');
 putStartupPref.then(() => {
   console.info("Succeeded in putting value of 'startup'.");
 }).catch((err: BusinessError) => {
-  console.error("Failed to put value of 'startup'. code =" + err.code + ", message = " + err.message);
+  console.error("Failed to put value of 'startup'. code =" + err.code + ", message =" + err.message);
+})
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+let putStartupPref = dataPreferences!.put('startup', 'auto');
+putStartupPref.then(() => {
+  console.info("Succeeded in putting value of 'startup'.");
+}).catch((err) => {
+  console.error("Failed to put value of 'startup'. code =" + err.code + ", message =" + err.message);
 })
 ```
 
@@ -1518,12 +1907,20 @@ putSync(key: string, value: ValueType): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 401 | Parameter error. Possible causes: &lt;br&gt;1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; &lt;br&gt;3. Parameter verification failed. |
-| 15500000 | Inner error.<br>**适用版本：** 11+ |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: &lt;br&gt;1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; &lt;br&gt;3. Parameter verification failed. |
+| [15500000](../errorcode-preferences.md#15500000-内部错误) | Inner error.<br>**适用版本：** 11+ |
 
 ## 示例
 
+ArkTS-Dyn示例：
+
 ```TypeScript
 dataPreferences.putSync('startup', 'auto');
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+dataPreferences!.putSync('startup', 'auto');
 ```
 

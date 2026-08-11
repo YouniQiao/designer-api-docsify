@@ -1,15 +1,16 @@
 # LiteResultSet
 
-提供查询数据库后生成的结果集的访问方法。结果集是指用户调用关系型数据库查询接口之后返回的结果集合，提供了多种灵活的数据访问方式，以便用户获取各项数据。
+Defines APIs to access the result set obtained by querying the RDB store. This result set is the collection of results returned with the **query()** method called.
 
-LiteResultSet实例不会实时刷新。使用结果集后，如果数据库中的数据发生变化（如增删改操作），需要重新查询才能获取到最新的数据。
+The **LiteResultSet** instance is not refreshed in real time. After using the result set, if the data in the database is changed (by being added, deleted, or modified), you need to query the result set again to obtain the latest data.
 
-下列API示例中，都需先使用[queryWithoutRowCount](arkts-arkdata-relationalstore-rdbstore-i.md#querywithoutrowcount)、  
-[querySqlWithoutRowCount](arkts-arkdata-relationalstore-rdbstore-i.md#querysqlwithoutrowcount)等query类方法中任一方法获取到LiteResultSet实例，再通过此实例调用对应方法。
+In the following API examples, you need to obtain an **LiteResultSet** instance by using a query method, such as   
+[queryWithoutRowCount](arkts-arkdata-relationalstore-rdbstore-i.md#querywithoutrowcount) or   
+[querySqlWithoutRowCount](arkts-arkdata-relationalstore-rdbstore-i.md#querysqlwithoutrowcount), and then call the corresponding method through this instance.
 
-> **说明：**
+> **NOTE：**
 > 
-> - 本class首批接口从API version 23开始支持。
+> - The initial APIs of this class are supported since API version 23.
 
 **Since:** 23
 
@@ -31,7 +32,7 @@ import { relationalStore } from 'kits/@kit.ArkData';
 close(): void
 ```
 
-关闭结果集，若不关闭可能会引起fd泄漏和内存泄漏。
+Closes this **resultSet** to release memory. If the **resultSet** is not closed, FD or memory leaks may occur.
 
 **Since:** 23
 
@@ -55,9 +56,10 @@ ArkTS-Sta:
 getAsset(columnIndex: int): Asset
 ```
 
-以[Asset](arkts-arkdata-relationalstore-asset-i.md)形式获取当前行中指定列的值。
+Obtains the value in the specified column in the current row as an   
+[Asset](arkts-arkdata-relationalstore-asset-i.md).
 
-如果当前列的数据类型为Asset类型，会以Asset类型返回指定值；如果当前列中的值为null时，会返回null；如果当前列的数据类型非Asset类型，则返回14800041。
+If the data type of the current column is Asset, the value is returned as an Asset. If the value in the current column is **null**, **null** is returned. If the data type of the current column is not Asset, 14800041 is returned.
 
 **Since:** 23
 
@@ -73,22 +75,22 @@ getAsset(columnIndex: int): Asset
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| columnIndex | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | 指定的列索引，从0开始。 |
+| columnIndex | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | Index of the target column, starting from 0. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [Asset](arkts-arkdata-commontype-asset-i.md) | 以Asset形式返回指定列的值。 |
+| [Asset](arkts-arkdata-commontype-asset-i.md) | Value obtained. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 14800041 | Type conversion failed. |
-| 14800013 | Column index is out of bounds. |
-| 14800012 | ResultSet is empty or pointer index is out of bounds. |
-| 14800014 | The target instance is already closed. |
+| [14800041](../errorcode-data-rdb.md#14800041-type-conversion-failure) | Type conversion failed. |
+| [14800013](../errorcode-data-rdb.md#14800013-null-column-value-or-column-data-type-incompatible-with-the-api-called) | Column index is out of bounds. |
+| [14800012](../errorcode-data-rdb.md#14800012-empty-result-set-or-invalid-position) | ResultSet is empty or pointer index is out of bounds. |
+| [14800014](../errorcode-data-rdb.md#14800014-target-instance-closed) | The target instance is already closed. |
 
 ## getAssets
 
@@ -102,9 +104,10 @@ ArkTS-Sta:
 getAssets(columnIndex: int): Assets
 ```
 
-以[Assets](arkts-arkdata-relationalstore-assets-t.md)形式获取当前行中指定列的值。
+Obtains the value in the specified column in the current row as   
+[Assets](arkts-arkdata-relationalstore-assets-t.md).
 
-如果当前列的数据类型为Assets类型，会以Assets类型返回指定值；如果当前列中的值为null时，会返回null；如果当前列的数据类型非Assets类型，则返回14800041。
+If the data type of the current column is Assets, the value is returned as Assets. If the value in the current column is **null**, **null** is returned. If the data type of the current column is not Assets, 14800041 is returned.
 
 **Since:** 23
 
@@ -120,22 +123,22 @@ getAssets(columnIndex: int): Assets
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| columnIndex | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | 指定的列索引，从0开始。 |
+| columnIndex | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | Index of the target column, starting from 0. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [Assets](arkts-arkdata-sendablerelationalstore-assets-t.md) | 以Assets形式返回指定列的值。 |
+| [Assets](arkts-arkdata-sendablerelationalstore-assets-t.md) | Value obtained. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 14800041 | Type conversion failed. |
-| 14800013 | Column index is out of bounds. |
-| 14800012 | ResultSet is empty or pointer index is out of bounds. |
-| 14800014 | The target instance is already closed. |
+| [14800041](../errorcode-data-rdb.md#14800041-type-conversion-failure) | Type conversion failed. |
+| [14800013](../errorcode-data-rdb.md#14800013-null-column-value-or-column-data-type-incompatible-with-the-api-called) | Column index is out of bounds. |
+| [14800012](../errorcode-data-rdb.md#14800012-empty-result-set-or-invalid-position) | ResultSet is empty or pointer index is out of bounds. |
+| [14800014](../errorcode-data-rdb.md#14800014-target-instance-closed) | The target instance is already closed. |
 
 ## getBlob
 
@@ -149,11 +152,11 @@ ArkTS-Sta:
 getBlob(columnIndex: int): Uint8Array
 ```
 
-以字节数组的形式获取当前行中指定列的值。
+Obtains the value in the specified column in the current row as a byte array.
 
-如果当前列的数据类型为INTEGER、DOUBLE、TEXT、BLOB类型，会转成字节数组类型返回指定值，如果该列内容为空时，会返回空字节数组。
+If the data type of the current column is INTEGER, DOUBLE, TEXT, or BLOB, the data is converted to a byte array and returned. If the content of the column is null/empty, an empty byte array is returned.
 
-如果当前列的数据类型为ASSET、ASSETS、FLOATVECTOR、BIGINT类型，会抛出错误码14800041。
+If the data type of the current column is ASSET, ASSETS, FLOATVECTOR, or BIGINT, 14800041 is returned.
 
 **Since:** 23
 
@@ -169,22 +172,22 @@ getBlob(columnIndex: int): Uint8Array
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| columnIndex | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | 指定的列索引，从0开始。 |
+| columnIndex | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | Index of the target column, starting from 0. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Uint8Array | 以字节数组的形式返回指定列的值。 |
+| Uint8Array | Value obtained. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 14800041 | Type conversion failed. |
-| 14800013 | Column index is out of bounds. |
-| 14800012 | ResultSet is empty or pointer index is out of bounds. |
-| 14800014 | The target instance is already closed. |
+| [14800041](../errorcode-data-rdb.md#14800041-type-conversion-failure) | Type conversion failed. |
+| [14800013](../errorcode-data-rdb.md#14800013-null-column-value-or-column-data-type-incompatible-with-the-api-called) | Column index is out of bounds. |
+| [14800012](../errorcode-data-rdb.md#14800012-empty-result-set-or-invalid-position) | ResultSet is empty or pointer index is out of bounds. |
+| [14800014](../errorcode-data-rdb.md#14800014-target-instance-closed) | The target instance is already closed. |
 
 ## getColumnIndex
 
@@ -198,7 +201,7 @@ ArkTS-Sta:
 getColumnIndex(columnName: string): int
 ```
 
-根据指定的列名获取列索引。
+Obtains the column index based on the column name.
 
 **Since:** 23
 
@@ -214,26 +217,26 @@ getColumnIndex(columnName: string): int
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| columnName | string | Yes | 表示结果集中指定列的名称。 |
+| columnName | string | Yes | Column name. If the result set contains duplicate column names, the return value is not as expected. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| ArkTS-Dyn: number  <br>ArkTS-Sta：int | 返回指定列的索引。当结果集中包含重名列时，返回值会不符合预期。 |
+| ArkTS-Dyn: number  <br>ArkTS-Sta：int | Column index obtained. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 14800001 | Invalid arguments. Possible causes: 1. Parameter is out of valid range. |
-| 14800019 | The SQL must be a query statement. |
-| 14800021 | SQLite: Generic error. |
-| 14800011 | The current operation failed because the database is corrupted. |
-| 14800026 | SQLite: The database is out of memory. |
-| 14800028 | SQLite: Some kind of disk I/O error occurred. |
-| 14800014 | The target instance is already closed. |
-| 14800030 | SQLite: Unable to open the database file. |
+| [14800001](../errorcode-data-rdb.md#14800001-invalid-arguments) | Invalid arguments. Possible causes: 1. Parameter is out of valid range. |
+| [14800019](../errorcode-data-rdb.md#14800019-sql-query-statement-required) | The SQL must be a query statement. |
+| [14800021](../errorcode-data-rdb.md#14800021-sqlite-generic-error) | SQLite: Generic error. |
+| [14800011](../errorcode-data-rdb.md#14800011-database-file-corrupted) | The current operation failed because the database is corrupted. |
+| [14800026](../errorcode-data-rdb.md#14800026-sqlite-insufficient-database-memory) | SQLite: The database is out of memory. |
+| [14800028](../errorcode-data-rdb.md#14800028-sqlite-io-error) | SQLite: Some kind of disk I/O error occurred. |
+| [14800014](../errorcode-data-rdb.md#14800014-target-instance-closed) | The target instance is already closed. |
+| [14800030](../errorcode-data-rdb.md#14800030-sqlite-unable-to-open-the-database-file) | SQLite: Unable to open the database file. |
 
 ## getColumnName
 
@@ -247,7 +250,7 @@ ArkTS-Sta:
 getColumnName(columnIndex: int): string
 ```
 
-根据指定的列索引获取列名。
+Obtains the column name based on the column index.
 
 **Since:** 23
 
@@ -263,27 +266,27 @@ getColumnName(columnIndex: int): string
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| columnIndex | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | 表示结果集中指定列的索引，从0开始。 |
+| columnIndex | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | Index of the column in the result set, starting from 0. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| string | 返回指定列的名称。当结果集中包含重名列时，返回值会不符合预期。 |
+| string | Column name obtained. If the result set contains duplicate column names, the return value is not as expected. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 14800001 | Invalid arguments. Possible causes: 1. Parameter is out of valid range. |
-| 14800019 | The SQL must be a query statement. |
-| 14800021 | SQLite: Generic error. |
-| 14800011 | The current operation failed because the database is corrupted. |
-| 14800026 | SQLite: The database is out of memory. |
-| 14800013 | Column index is out of bounds. |
-| 14800028 | SQLite: Some kind of disk I/O error occurred. |
-| 14800014 | The target instance is already closed. |
-| 14800030 | SQLite: Unable to open the database file. |
+| [14800001](../errorcode-data-rdb.md#14800001-invalid-arguments) | Invalid arguments. Possible causes: 1. Parameter is out of valid range. |
+| [14800019](../errorcode-data-rdb.md#14800019-sql-query-statement-required) | The SQL must be a query statement. |
+| [14800021](../errorcode-data-rdb.md#14800021-sqlite-generic-error) | SQLite: Generic error. |
+| [14800011](../errorcode-data-rdb.md#14800011-database-file-corrupted) | The current operation failed because the database is corrupted. |
+| [14800026](../errorcode-data-rdb.md#14800026-sqlite-insufficient-database-memory) | SQLite: The database is out of memory. |
+| [14800013](../errorcode-data-rdb.md#14800013-null-column-value-or-column-data-type-incompatible-with-the-api-called) | Column index is out of bounds. |
+| [14800028](../errorcode-data-rdb.md#14800028-sqlite-io-error) | SQLite: Some kind of disk I/O error occurred. |
+| [14800014](../errorcode-data-rdb.md#14800014-target-instance-closed) | The target instance is already closed. |
+| [14800030](../errorcode-data-rdb.md#14800030-sqlite-unable-to-open-the-database-file) | SQLite: Unable to open the database file. |
 
 ## getColumnNames
 
@@ -291,9 +294,9 @@ getColumnName(columnIndex: int): string
 getColumnNames(): Array<string>
 ```
 
-获取结果集中所有列的名称。
+Obtains the names of all columns in the result set.
 
-列名以字符串数组的形式返回，数组中字符串的顺序与结果集中列的顺序一致。
+The column names are returned in a string array. The sequence of strings in the array is the same as that of columns in the result set.
 
 **Since:** 23
 
@@ -309,20 +312,20 @@ getColumnNames(): Array<string>
 
 | Type | Description |
 | --- | --- |
-| Array&lt;string&gt; | 返回结果集中所有列的名称。支持获取包含重名列的列名。 |
+| Array&lt;string&gt; | Names of all columns in the result set obtained. Duplicate column names can be obtained. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 14800001 | Invalid arguments. Possible causes: 1. Parameter is out of valid range. |
-| 14800019 | The SQL must be a query statement. |
-| 14800021 | SQLite: Generic error. |
-| 14800011 | The current operation failed because the database is corrupted. |
-| 14800026 | SQLite: The database is out of memory. |
-| 14800028 | SQLite: Some kind of disk I/O error occurred. |
-| 14800014 | The target instance is already closed. |
-| 14800030 | SQLite: Unable to open the database file. |
+| [14800001](../errorcode-data-rdb.md#14800001-invalid-arguments) | Invalid arguments. Possible causes: 1. Parameter is out of valid range. |
+| [14800019](../errorcode-data-rdb.md#14800019-sql-query-statement-required) | The SQL must be a query statement. |
+| [14800021](../errorcode-data-rdb.md#14800021-sqlite-generic-error) | SQLite: Generic error. |
+| [14800011](../errorcode-data-rdb.md#14800011-database-file-corrupted) | The current operation failed because the database is corrupted. |
+| [14800026](../errorcode-data-rdb.md#14800026-sqlite-insufficient-database-memory) | SQLite: The database is out of memory. |
+| [14800028](../errorcode-data-rdb.md#14800028-sqlite-io-error) | SQLite: Some kind of disk I/O error occurred. |
+| [14800014](../errorcode-data-rdb.md#14800014-target-instance-closed) | The target instance is already closed. |
+| [14800030](../errorcode-data-rdb.md#14800030-sqlite-unable-to-open-the-database-file) | SQLite: Unable to open the database file. |
 
 ## getColumnType
 
@@ -336,7 +339,7 @@ ArkTS-Sta:
 getColumnType(columnIdentifier: int | string): Promise<ColumnType>
 ```
 
-根据指定的列索引或列名称获取列数据类型，使用Promise异步回调。
+Obtains the column type based on the specified column index or column name. This API uses a promise to return the result.
 
 **Since:** 23
 
@@ -352,28 +355,28 @@ getColumnType(columnIdentifier: int | string): Promise<ColumnType>
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| columnIdentifier | ArkTS-Dyn: number \| string  <br>ArkTS-Sta：int \| string | Yes | 表示结果集中指定列的索引或名称，索引从0开始。 |
+| columnIdentifier | ArkTS-Dyn: number \| string  <br>ArkTS-Sta：int \| string | Yes | Index or name of the column in the result set. The index starts from 0 . |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;ColumnType&gt; | Promise对象。返回指定列的数据类型。当结果集中包含重名列时，通过列名获取的结果会不符合预期。 |
+| Promise&lt;ColumnType&gt; | Promise used to return the column type obtained. If the result set contains duplicate column names, the return value is not as expected. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 14800001 | Invalid arguments. Possible causes: 1. Parameter is out of valid range. |
-| 14800019 | The SQL must be a query statement. |
-| 14800021 | SQLite: Generic error. |
-| 14800011 | The current operation failed because the database is corrupted. |
-| 14800026 | SQLite: The database is out of memory. |
-| 14800013 | Column index is out of bounds. |
-| 14800012 | ResultSet is empty or pointer index is out of bounds. |
-| 14800028 | SQLite: Some kind of disk I/O error occurred. |
-| 14800014 | The target instance is already closed. |
-| 14800030 | SQLite: Unable to open the database file. |
+| [14800001](../errorcode-data-rdb.md#14800001-invalid-arguments) | Invalid arguments. Possible causes: 1. Parameter is out of valid range. |
+| [14800019](../errorcode-data-rdb.md#14800019-sql-query-statement-required) | The SQL must be a query statement. |
+| [14800021](../errorcode-data-rdb.md#14800021-sqlite-generic-error) | SQLite: Generic error. |
+| [14800011](../errorcode-data-rdb.md#14800011-database-file-corrupted) | The current operation failed because the database is corrupted. |
+| [14800026](../errorcode-data-rdb.md#14800026-sqlite-insufficient-database-memory) | SQLite: The database is out of memory. |
+| [14800013](../errorcode-data-rdb.md#14800013-null-column-value-or-column-data-type-incompatible-with-the-api-called) | Column index is out of bounds. |
+| [14800012](../errorcode-data-rdb.md#14800012-empty-result-set-or-invalid-position) | ResultSet is empty or pointer index is out of bounds. |
+| [14800028](../errorcode-data-rdb.md#14800028-sqlite-io-error) | SQLite: Some kind of disk I/O error occurred. |
+| [14800014](../errorcode-data-rdb.md#14800014-target-instance-closed) | The target instance is already closed. |
+| [14800030](../errorcode-data-rdb.md#14800030-sqlite-unable-to-open-the-database-file) | SQLite: Unable to open the database file. |
 
 ## getColumnTypeSync
 
@@ -387,7 +390,7 @@ ArkTS-Sta:
 getColumnTypeSync(columnIdentifier: int | string): ColumnType
 ```
 
-根据指定的列索引或列名称获取列数据类型。
+Obtains the column type based on the specified column index or column name.
 
 **Since:** 23
 
@@ -403,28 +406,28 @@ getColumnTypeSync(columnIdentifier: int | string): ColumnType
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| columnIdentifier | ArkTS-Dyn: number \| string  <br>ArkTS-Sta：int \| string | Yes | 表示结果集中指定列的索引或名称，索引从0开始。 |
+| columnIdentifier | ArkTS-Dyn: number \| string  <br>ArkTS-Sta：int \| string | Yes | Index or name of the column in the result set. The index starts from 0 . |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [ColumnType](arkts-arkdata-relationalstore-columntype-e.md) | 返回指定列的数据类型。当结果集中包含重名列时，通过列名获取的结果会不符合预期。 |
+| [ColumnType](arkts-arkdata-relationalstore-columntype-e.md) | Column type obtained. If the result set contains duplicate column names, the return value is not as expected. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 14800001 | Invalid arguments. Possible causes: 1. Parameter is out of valid range. |
-| 14800019 | The SQL must be a query statement. |
-| 14800021 | SQLite: Generic error. |
-| 14800011 | The current operation failed because the database is corrupted. |
-| 14800026 | SQLite: The database is out of memory. |
-| 14800013 | Column index is out of bounds. |
-| 14800012 | ResultSet is empty or pointer index is out of bounds. |
-| 14800028 | SQLite: Some kind of disk I/O error occurred. |
-| 14800014 | The target instance is already closed. |
-| 14800030 | SQLite: Unable to open the database file. |
+| [14800001](../errorcode-data-rdb.md#14800001-invalid-arguments) | Invalid arguments. Possible causes: 1. Parameter is out of valid range. |
+| [14800019](../errorcode-data-rdb.md#14800019-sql-query-statement-required) | The SQL must be a query statement. |
+| [14800021](../errorcode-data-rdb.md#14800021-sqlite-generic-error) | SQLite: Generic error. |
+| [14800011](../errorcode-data-rdb.md#14800011-database-file-corrupted) | The current operation failed because the database is corrupted. |
+| [14800026](../errorcode-data-rdb.md#14800026-sqlite-insufficient-database-memory) | SQLite: The database is out of memory. |
+| [14800013](../errorcode-data-rdb.md#14800013-null-column-value-or-column-data-type-incompatible-with-the-api-called) | Column index is out of bounds. |
+| [14800012](../errorcode-data-rdb.md#14800012-empty-result-set-or-invalid-position) | ResultSet is empty or pointer index is out of bounds. |
+| [14800028](../errorcode-data-rdb.md#14800028-sqlite-io-error) | SQLite: Some kind of disk I/O error occurred. |
+| [14800014](../errorcode-data-rdb.md#14800014-target-instance-closed) | The target instance is already closed. |
+| [14800030](../errorcode-data-rdb.md#14800030-sqlite-unable-to-open-the-database-file) | SQLite: Unable to open the database file. |
 
 ## getCurrentRowData
 
@@ -432,7 +435,7 @@ getColumnTypeSync(columnIdentifier: int | string): ColumnType
 getCurrentRowData(): RowData
 ```
 
-获取当前行所有列的值。
+Obtains the values of all columns in this row.
 
 **Since:** 23
 
@@ -448,21 +451,21 @@ getCurrentRowData(): RowData
 
 | Type | Description |
 | --- | --- |
-| [RowData](arkts-arkdata-relationalstore-rowdata-t.md) | 返回当前行所有列的值。支持获取包含重名列的值。 |
+| [RowData](arkts-arkdata-relationalstore-rowdata-t.md) | Values of all columns in this row obtained. The values of columns with the same name can be obtained. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 14800001 | Invalid arguments. Possible causes: 1. Parameter is out of valid range. |
-| 14800019 | The SQL must be a query statement. |
-| 14800021 | SQLite: Generic error. |
-| 14800011 | The current operation failed because the database is corrupted. |
-| 14800026 | SQLite: The database is out of memory. |
-| 14800012 | ResultSet is empty or pointer index is out of bounds. |
-| 14800028 | SQLite: Some kind of disk I/O error occurred. |
-| 14800014 | The target instance is already closed. |
-| 14800030 | SQLite: Unable to open the database file. |
+| [14800001](../errorcode-data-rdb.md#14800001-invalid-arguments) | Invalid arguments. Possible causes: 1. Parameter is out of valid range. |
+| [14800019](../errorcode-data-rdb.md#14800019-sql-query-statement-required) | The SQL must be a query statement. |
+| [14800021](../errorcode-data-rdb.md#14800021-sqlite-generic-error) | SQLite: Generic error. |
+| [14800011](../errorcode-data-rdb.md#14800011-database-file-corrupted) | The current operation failed because the database is corrupted. |
+| [14800026](../errorcode-data-rdb.md#14800026-sqlite-insufficient-database-memory) | SQLite: The database is out of memory. |
+| [14800012](../errorcode-data-rdb.md#14800012-empty-result-set-or-invalid-position) | ResultSet is empty or pointer index is out of bounds. |
+| [14800028](../errorcode-data-rdb.md#14800028-sqlite-io-error) | SQLite: Some kind of disk I/O error occurred. |
+| [14800014](../errorcode-data-rdb.md#14800014-target-instance-closed) | The target instance is already closed. |
+| [14800030](../errorcode-data-rdb.md#14800030-sqlite-unable-to-open-the-database-file) | SQLite: Unable to open the database file. |
 
 ## getDouble
 
@@ -476,11 +479,11 @@ ArkTS-Sta:
 getDouble(columnIndex: int): double
 ```
 
-以double形式获取当前行中指定列的值。
+Obtains the value in the specified column in the current row as a Double.
 
-如果当前列的数据类型为INTEGER、DOUBLE、TEXT会转成double类型返回指定值，非数字的TEXT、BLOB类型会返回0.0。如果该列内容为空时，会返回0.0。
+If the data type of the current column is INTEGER, DOUBLE, or TEXT, the value is converted to the Double type and returned. Non-numeric TEXT and BLOB types return **0.0**. If the content of the column is null/empty, **0.0** is returned.
 
-如果当前列的数据类型为ASSET、ASSETS、FLOATVECTOR、BIGINT类型，会返回14800041。
+If the data type of the current column is ASSET, ASSETS, FLOATVECTOR, or BIGINT, 14800041 is returned.
 
 **Since:** 23
 
@@ -496,22 +499,22 @@ getDouble(columnIndex: int): double
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| columnIndex | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | 指定的列索引，从0开始。 |
+| columnIndex | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | Index of the target column, starting from 0. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| ArkTS-Dyn: number  <br>ArkTS-Sta：double | 以double形式返回指定列的值。 |
+| ArkTS-Dyn: number  <br>ArkTS-Sta：double | Value obtained. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 14800041 | Type conversion failed. |
-| 14800013 | Column index is out of bounds. |
-| 14800012 | ResultSet is empty or pointer index is out of bounds. |
-| 14800014 | The target instance is already closed. |
+| [14800041](../errorcode-data-rdb.md#14800041-type-conversion-failure) | Type conversion failed. |
+| [14800013](../errorcode-data-rdb.md#14800013-null-column-value-or-column-data-type-incompatible-with-the-api-called) | Column index is out of bounds. |
+| [14800012](../errorcode-data-rdb.md#14800012-empty-result-set-or-invalid-position) | ResultSet is empty or pointer index is out of bounds. |
+| [14800014](../errorcode-data-rdb.md#14800014-target-instance-closed) | The target instance is already closed. |
 
 ## getLong
 
@@ -525,16 +528,14 @@ ArkTS-Sta:
 getLong(columnIndex: int): long
 ```
 
-以Long形式获取当前行中指定列的值。
+Obtains the value from the specified column in the current row, and returns a value of Long type.
 
-如果当前列的数据类型为INTEGER、DOUBLE、TEXT会转成Long类型返回指定值，非数字的TEXT、BLOB类型会返回0。如果该列内容为空时，会返回0。
+If the data type of the current column is INTEGER, DOUBLE, TEXT, or BLOB, a value of Long type is returned. If the column is null, **0** is returned. If the data type is INTEGER and the value is greater than  
+**Number.MAX_SAFE_INTEGER** or less than **Number.MIN_SAFE_INTEGER**, you are advised to use the  
+[getString](arkts-arkdata-relationalstore-literesultset-c.md#getstring) API to obtain the value without losing precision. If the data type in the specified column is DOUBLE, you are advised to use the  
+[getDouble](arkts-arkdata-relationalstore-literesultset-c.md#getdouble) API to obtain the value without precision loss.
 
-如果当前列的数据类型为INTEGER，值大于Number.MAX_SAFE_INTEGER 或小于Number.MIN_SAFE_INTEGER时，如果不希望丢失精度，建议使用  
-[getString](arkts-arkdata-relationalstore-literesultset-c.md#getstring)接口获取。
-
-如果当前列的数据类型为DOUBLE时，如果不希望丢失精度，建议使用[getDouble](arkts-arkdata-relationalstore-literesultset-c.md#getdouble)接口获取。
-
-如果当前列的数据类型为ASSET、ASSETS、FLOATVECTOR、BIGINT类型，会返回14800041。
+If the data type of the current column is ASSET, ASSETS, FLOATVECTOR, or BIGINT, 14800041 is returned.
 
 **Since:** 23
 
@@ -550,22 +551,22 @@ getLong(columnIndex: int): long
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| columnIndex | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | 指定的列索引，从0开始。 |
+| columnIndex | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | Index of the target column, starting from 0. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| ArkTS-Dyn: number  <br>ArkTS-Sta：long | 以Long形式返回指定列的值。 &lt;br&gt;该接口支持的精度范围是：Number.MIN_SAFE_INTEGER ~ Number.MAX_SAFE_INTEGER，若超出该范围，建议对于DOUBLE类型的值使用 [getDouble]{ |
+| ArkTS-Dyn: number  <br>ArkTS-Sta：long | Value obtained. &lt;br&gt;The value range supported by this API is **Number.MIN_SAFE_INTEGER** to **Number.MAX_SAFE_INTEGER**. If the value is out of this range, use [getDouble]{ |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 14800041 | Type conversion failed. |
-| 14800013 | Column index is out of bounds. |
-| 14800012 | ResultSet is empty or pointer index is out of bounds. |
-| 14800014 | The target instance is already closed. |
+| [14800041](../errorcode-data-rdb.md#14800041-type-conversion-failure) | Type conversion failed. |
+| [14800013](../errorcode-data-rdb.md#14800013-null-column-value-or-column-data-type-incompatible-with-the-api-called) | Column index is out of bounds. |
+| [14800012](../errorcode-data-rdb.md#14800012-empty-result-set-or-invalid-position) | ResultSet is empty or pointer index is out of bounds. |
+| [14800014](../errorcode-data-rdb.md#14800014-target-instance-closed) | The target instance is already closed. |
 
 ## getRow
 
@@ -573,7 +574,7 @@ getLong(columnIndex: int): long
 getRow(): ValuesBucket
 ```
 
-获取当前行的数据。
+Obtains data for the current row.
 
 **Since:** 23
 
@@ -589,21 +590,21 @@ getRow(): ValuesBucket
 
 | Type | Description |
 | --- | --- |
-| [ValuesBucket](arkts-arkdata-rdb-valuesbucket-t.md) | 返回指定行的值。当结果集中包含重名列时，返回值会不符合预期，建议使用 [getCurrentRowData]{ |
+| [ValuesBucket](arkts-arkdata-rdb-valuesbucket-t.md) | Value of the specified row. If the result set contains duplicate column names, the return value is not as expected. You are advised to use the [getCurrentRowData]{ |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 14800001 | Invalid arguments. Possible causes: 1. Parameter is out of valid range. |
-| 14800019 | The SQL must be a query statement. |
-| 14800021 | SQLite: Generic error. |
-| 14800011 | The current operation failed because the database is corrupted. |
-| 14800026 | SQLite: The database is out of memory. |
-| 14800012 | ResultSet is empty or pointer index is out of bounds. |
-| 14800028 | SQLite: Some kind of disk I/O error occurred. |
-| 14800014 | The target instance is already closed. |
-| 14800030 | SQLite: Unable to open the database file. |
+| [14800001](../errorcode-data-rdb.md#14800001-invalid-arguments) | Invalid arguments. Possible causes: 1. Parameter is out of valid range. |
+| [14800019](../errorcode-data-rdb.md#14800019-sql-query-statement-required) | The SQL must be a query statement. |
+| [14800021](../errorcode-data-rdb.md#14800021-sqlite-generic-error) | SQLite: Generic error. |
+| [14800011](../errorcode-data-rdb.md#14800011-database-file-corrupted) | The current operation failed because the database is corrupted. |
+| [14800026](../errorcode-data-rdb.md#14800026-sqlite-insufficient-database-memory) | SQLite: The database is out of memory. |
+| [14800012](../errorcode-data-rdb.md#14800012-empty-result-set-or-invalid-position) | ResultSet is empty or pointer index is out of bounds. |
+| [14800028](../errorcode-data-rdb.md#14800028-sqlite-io-error) | SQLite: Some kind of disk I/O error occurred. |
+| [14800014](../errorcode-data-rdb.md#14800014-target-instance-closed) | The target instance is already closed. |
+| [14800030](../errorcode-data-rdb.md#14800030-sqlite-unable-to-open-the-database-file) | SQLite: Unable to open the database file. |
 
 ## getRows
 
@@ -617,7 +618,7 @@ ArkTS-Sta:
 getRows(maxCount: int, position?: int): Promise<Array<ValuesBucket>>
 ```
 
-从结果集中获取指定数量的数据，使用Promise异步回调。禁止与[LiteResultSet](arkts-arkdata-relationalstore-literesultset-c.md)的其他接口并发调用，否则获取的数据可能非预期。
+Obtains a specified amount of data from the result set. This API uses a promise to return the result. Do not call this API concurrently with other APIs of [LiteResultSet](arkts-data-relationalstore.md). Otherwise, unexpected data may be obtained.
 
 **Since:** 23
 
@@ -633,29 +634,29 @@ getRows(maxCount: int, position?: int): Promise<Array<ValuesBucket>>
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| maxCount | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | 正整数，指定要从结果集中获取数据的条数。 |
-| position | ArkTS-Dyn: number  <br>ArkTS-Sta：int | No | 非负整数，指定从结果集中获取数据的起始位置，不填则从结果集的当前行（默认首次获取数据时为当前结果集的第一行）开始获取数据。 |
+| maxCount | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | Number of rows to obtain. The value is a positive integer. |
+| position | ArkTS-Dyn: number  <br>ArkTS-Sta：int | No | Start position for obtaining data from the result set. The value is a non-negative integer. If this parameter is not specified, data is obtained from the current row of the result set (by default, it is the first row of the result set when data is obtained for the first time). |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;Array&lt;ValuesBucket&gt;&gt; | 返回maxCount条数据，剩余数据不足maxCount条则返回剩余数据，返回空数组时代表已经遍历到结果集的末尾。当结果集中包含重名列时，返回 值会不符合预期，建议使用[getRowsData]{ |
+| Promise&lt;Array&lt;ValuesBucket&gt;&gt; | Promise used to return **maxCount** rows of data obtained. If the number of remaining records is less than **maxCount**, the remaining records are returned. Returning an empty array indicates that the end of the result set is reached. If the result set contains duplicate column names, the return values are not as expected. You are advised to use the [getRowsData]{ |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 14800001 | Invalid arguments. Possible causes: 1. Parameter is out of valid range. |
-| 14800019 | The SQL must be a query statement. |
-| 14800021 | SQLite: Generic error. |
-| 14800011 | The current operation failed because the database is corrupted. |
-| 14800026 | SQLite: The database is out of memory. |
-| 14800012 | ResultSet is empty or pointer index is out of bounds. |
-| 14800028 | SQLite: Some kind of disk I/O error occurred. |
-| 14800031 | SQLite: TEXT or BLOB exceeds size limit. |
-| 14800014 | The target instance is already closed. |
-| 14800030 | SQLite: Unable to open the database file. |
+| [14800001](../errorcode-data-rdb.md#14800001-invalid-arguments) | Invalid arguments. Possible causes: 1. Parameter is out of valid range. |
+| [14800019](../errorcode-data-rdb.md#14800019-sql-query-statement-required) | The SQL must be a query statement. |
+| [14800021](../errorcode-data-rdb.md#14800021-sqlite-generic-error) | SQLite: Generic error. |
+| [14800011](../errorcode-data-rdb.md#14800011-database-file-corrupted) | The current operation failed because the database is corrupted. |
+| [14800026](../errorcode-data-rdb.md#14800026-sqlite-insufficient-database-memory) | SQLite: The database is out of memory. |
+| [14800012](../errorcode-data-rdb.md#14800012-empty-result-set-or-invalid-position) | ResultSet is empty or pointer index is out of bounds. |
+| [14800028](../errorcode-data-rdb.md#14800028-sqlite-io-error) | SQLite: Some kind of disk I/O error occurred. |
+| [14800031](../errorcode-data-rdb.md#14800031-sqlite-text-or-blob-exceeds-the-limit) | SQLite: TEXT or BLOB exceeds size limit. |
+| [14800014](../errorcode-data-rdb.md#14800014-target-instance-closed) | The target instance is already closed. |
+| [14800030](../errorcode-data-rdb.md#14800030-sqlite-unable-to-open-the-database-file) | SQLite: Unable to open the database file. |
 
 ## getRowsData
 
@@ -669,7 +670,8 @@ ArkTS-Sta:
 getRowsData(maxCount: int, position?: int): Promise<RowsData>
 ```
 
-从指定位置position开始，最多获取maxCount行数据。使用Promise异步回调。禁止与[LiteResultSet](arkts-arkdata-relationalstore-literesultset-c.md)的其他接口并发调用，否则获取的数据可能非预期。
+Obtains data of a specified number of rows from the specified position. This API uses a promise to return the result. Do not call this API concurrently with other APIs of   
+[ResultSet](arkts-data-relationalstore.md). Otherwise, unexpected data may be obtained.
 
 **Since:** 23
 
@@ -685,29 +687,29 @@ getRowsData(maxCount: int, position?: int): Promise<RowsData>
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| maxCount | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | 正整数，指定从结果集中获取数据的条数。不为正整数则参数非法，抛出错误码14800001。 |
-| position | ArkTS-Dyn: number  <br>ArkTS-Sta：int | No | 非负整数，指定从结果集中获取数据的起始位置，不填则从结果集的当前行（默认首次获取数据时为当前结果集的第一行）开始获取数据。不为非负整数则参数非法，抛出错误码1480000 1。 |
+| maxCount | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | Number of rows to obtain. The value is a positive integer. If the value is not a positive integer, error 14800001 will be thrown. |
+| position | ArkTS-Dyn: number  <br>ArkTS-Sta：int | No | Start position for obtaining data from the result set. The value is a non-negative integer. If this parameter is not specified, data is obtained from the current row of the result set (by default, it is the first row of the result set when data is obtained for the first time). If the value is not a non-negative integer, error code 14800001 will be thrown. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;RowsData&gt; | 返回maxCount条数据，剩余数据不足maxCount条则返回剩余数据，返回空数组时代表已经遍历到结果集的末尾。支持获取包含重名列的值。 |
+| Promise&lt;RowsData&gt; | Promise used to return **maxCount** rows of data obtained. If the number of remaining records is less than **maxCount**, the remaining records are returned. Returning an empty array indicates that the end of the result set is reached. The values of columns with the same name can be obtained. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 14800001 | Invalid arguments. Possible causes: 1. Parameter is out of valid range. |
-| 14800019 | The SQL must be a query statement. |
-| 14800021 | SQLite: Generic error. |
-| 14800011 | The current operation failed because the database is corrupted. |
-| 14800026 | SQLite: The database is out of memory. |
-| 14800012 | ResultSet is empty or pointer index is out of bounds. |
-| 14800028 | SQLite: Some kind of disk I/O error occurred. |
-| 14800031 | SQLite: TEXT or BLOB exceeds size limit. |
-| 14800014 | The target instance is already closed. |
-| 14800030 | SQLite: Unable to open the database file. |
+| [14800001](../errorcode-data-rdb.md#14800001-invalid-arguments) | Invalid arguments. Possible causes: 1. Parameter is out of valid range. |
+| [14800019](../errorcode-data-rdb.md#14800019-sql-query-statement-required) | The SQL must be a query statement. |
+| [14800021](../errorcode-data-rdb.md#14800021-sqlite-generic-error) | SQLite: Generic error. |
+| [14800011](../errorcode-data-rdb.md#14800011-database-file-corrupted) | The current operation failed because the database is corrupted. |
+| [14800026](../errorcode-data-rdb.md#14800026-sqlite-insufficient-database-memory) | SQLite: The database is out of memory. |
+| [14800012](../errorcode-data-rdb.md#14800012-empty-result-set-or-invalid-position) | ResultSet is empty or pointer index is out of bounds. |
+| [14800028](../errorcode-data-rdb.md#14800028-sqlite-io-error) | SQLite: Some kind of disk I/O error occurred. |
+| [14800031](../errorcode-data-rdb.md#14800031-sqlite-text-or-blob-exceeds-the-limit) | SQLite: TEXT or BLOB exceeds size limit. |
+| [14800014](../errorcode-data-rdb.md#14800014-target-instance-closed) | The target instance is already closed. |
+| [14800030](../errorcode-data-rdb.md#14800030-sqlite-unable-to-open-the-database-file) | SQLite: Unable to open the database file. |
 
 ## getString
 
@@ -721,13 +723,14 @@ ArkTS-Sta:
 getString(columnIndex: int): string
 ```
 
-以字符串形式获取当前行中指定列的值。
+Obtains the value in the specified column in the current row as a string.
 
-如果当前列中的值为INTEGER、DOUBLE、TEXT、BLOB类型，会以字符串形式返回指定值；如果该列内容为空，则会返回空字符串""。
+If the data type of the current column is INTEGER, DOUBLE, TEXT, or BLOB type, the value is returned as a string.If the content of the column is null/empty, an empty string **""** is returned.
 
-如果当前列中的值为DOUBLE类型，可能存在精度的丢失，建议使用[getDouble](arkts-arkdata-relationalstore-literesultset-c.md#getdouble)接口获取。
+If the data type of the current column is DOUBLE, precision loss may occur. You are advised to use   
+[getDouble](arkts-arkdata-relationalstore-literesultset-c.md#getdouble) API to obtain the value.
 
-如果当前列的数据类型为ASSET、ASSETS、FLOATVECTOR、BIGINT类型，会返回14800041。
+If the data type of the current column is ASSET, ASSETS, FLOATVECTOR, or BIGINT, 14800041 is returned.
 
 **Since:** 23
 
@@ -743,22 +746,22 @@ getString(columnIndex: int): string
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| columnIndex | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | 指定的列索引，从0开始。 |
+| columnIndex | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | Index of the target column, starting from 0. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| string | 以字符串形式返回指定列的值。 |
+| string | Value obtained. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 14800041 | Type conversion failed. |
-| 14800013 | Column index is out of bounds. |
-| 14800012 | ResultSet is empty or pointer index is out of bounds. |
-| 14800014 | The target instance is already closed. |
+| [14800041](../errorcode-data-rdb.md#14800041-type-conversion-failure) | Type conversion failed. |
+| [14800013](../errorcode-data-rdb.md#14800013-null-column-value-or-column-data-type-incompatible-with-the-api-called) | Column index is out of bounds. |
+| [14800012](../errorcode-data-rdb.md#14800012-empty-result-set-or-invalid-position) | ResultSet is empty or pointer index is out of bounds. |
+| [14800014](../errorcode-data-rdb.md#14800014-target-instance-closed) | The target instance is already closed. |
 
 ## getValue
 
@@ -772,10 +775,11 @@ ArkTS-Sta:
 getValue(columnIndex: int): ValueType
 ```
 
-获取当前行中指定列的值。
+Obtains the value of the specified column in the current row.
 
-如果值类型为INTEGER，值大于Number.MAX_SAFE_INTEGER或小于Number.MIN_SAFE_INTEGER时，如果不希望丢失精度，建议使用  
-[getString](arkts-arkdata-relationalstore-literesultset-c.md#getstring)接口获取。
+If the value type is INTEGER and the value is greater than **Number.MAX_SAFE_INTEGER** or less than   
+**Number.MIN_SAFE_INTEGER**, you are advised to use the   
+[getString](arkts-arkdata-relationalstore-literesultset-c.md#getstring) API to obtain the value without precision loss.
 
 **Since:** 23
 
@@ -791,21 +795,21 @@ getValue(columnIndex: int): ValueType
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| columnIndex | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | 指定的列索引，从0开始。 |
+| columnIndex | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | Index of the target column, starting from 0. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [ValueType](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-pasteboard-valuetype-t.md) | 允许返回的数据字段类型。 |
+| [ValueType](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-pasteboard-valuetype-t.md) | Type of the data field returned. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 14800013 | Column index is out of bounds. |
-| 14800012 | ResultSet is empty or pointer index is out of bounds. |
-| 14800014 | The target instance is already closed. |
+| [14800013](../errorcode-data-rdb.md#14800013-null-column-value-or-column-data-type-incompatible-with-the-api-called) | Column index is out of bounds. |
+| [14800012](../errorcode-data-rdb.md#14800012-empty-result-set-or-invalid-position) | ResultSet is empty or pointer index is out of bounds. |
+| [14800014](../errorcode-data-rdb.md#14800014-target-instance-closed) | The target instance is already closed. |
 
 ## goToNextRow
 
@@ -813,7 +817,7 @@ getValue(columnIndex: int): ValueType
 goToNextRow(): boolean
 ```
 
-移动结果集到下一行。
+Moves the result set to the next row.
 
 **Since:** 23
 
@@ -829,22 +833,22 @@ goToNextRow(): boolean
 
 | Type | Description |
 | --- | --- |
-| boolean | 如果成功移动结果集到下一行，返回true；否则返回false。 |
+| boolean | Returns **true** if the result set is successfully moved to the next row; returns **false** otherwise. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 14800001 | Invalid arguments. Possible causes: 1. Parameter is out of valid range. |
-| 14800019 | The SQL must be a query statement. |
-| 14800021 | SQLite: Generic error. |
-| 14800011 | The current operation failed because the database is corrupted. |
-| 14800026 | SQLite: The database is out of memory. |
-| 14800012 | ResultSet is empty or pointer index is out of bounds. |
-| 14800028 | SQLite: Some kind of disk I/O error occurred. |
-| 14800031 | SQLite: TEXT or BLOB exceeds size limit. |
-| 14800014 | The target instance is already closed. |
-| 14800030 | SQLite: Unable to open the database file. |
+| [14800001](../errorcode-data-rdb.md#14800001-invalid-arguments) | Invalid arguments. Possible causes: 1. Parameter is out of valid range. |
+| [14800019](../errorcode-data-rdb.md#14800019-sql-query-statement-required) | The SQL must be a query statement. |
+| [14800021](../errorcode-data-rdb.md#14800021-sqlite-generic-error) | SQLite: Generic error. |
+| [14800011](../errorcode-data-rdb.md#14800011-database-file-corrupted) | The current operation failed because the database is corrupted. |
+| [14800026](../errorcode-data-rdb.md#14800026-sqlite-insufficient-database-memory) | SQLite: The database is out of memory. |
+| [14800012](../errorcode-data-rdb.md#14800012-empty-result-set-or-invalid-position) | ResultSet is empty or pointer index is out of bounds. |
+| [14800028](../errorcode-data-rdb.md#14800028-sqlite-io-error) | SQLite: Some kind of disk I/O error occurred. |
+| [14800031](../errorcode-data-rdb.md#14800031-sqlite-text-or-blob-exceeds-the-limit) | SQLite: TEXT or BLOB exceeds size limit. |
+| [14800014](../errorcode-data-rdb.md#14800014-target-instance-closed) | The target instance is already closed. |
+| [14800030](../errorcode-data-rdb.md#14800030-sqlite-unable-to-open-the-database-file) | SQLite: Unable to open the database file. |
 
 ## isColumnNull
 
@@ -858,7 +862,7 @@ ArkTS-Sta:
 isColumnNull(columnIndex: int): boolean
 ```
 
-检查当前行中指定列的值是否为null。
+Checks whether the value in the specified column is null.
 
 **Since:** 23
 
@@ -874,26 +878,26 @@ isColumnNull(columnIndex: int): boolean
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| columnIndex | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | 指定的列索引，从0开始。 |
+| columnIndex | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | Index of the target column, starting from 0. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| boolean | 如果当前行中指定列的值为null，则返回true；否则返回false。 |
+| boolean | Returns **true** if the value is null; returns **false** otherwise. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 14800001 | Invalid arguments. Possible causes: 1. Parameter is out of valid range. |
-| 14800019 | The SQL must be a query statement. |
-| 14800021 | SQLite: Generic error. |
-| 14800011 | The current operation failed because the database is corrupted. |
-| 14800026 | SQLite: The database is out of memory. |
-| 14800013 | Column index is out of bounds. |
-| 14800012 | ResultSet is empty or pointer index is out of bounds. |
-| 14800028 | SQLite: Some kind of disk I/O error occurred. |
-| 14800014 | The target instance is already closed. |
-| 14800030 | SQLite: Unable to open the database file |
+| [14800001](../errorcode-data-rdb.md#14800001-invalid-arguments) | Invalid arguments. Possible causes: 1. Parameter is out of valid range. |
+| [14800019](../errorcode-data-rdb.md#14800019-sql-query-statement-required) | The SQL must be a query statement. |
+| [14800021](../errorcode-data-rdb.md#14800021-sqlite-generic-error) | SQLite: Generic error. |
+| [14800011](../errorcode-data-rdb.md#14800011-database-file-corrupted) | The current operation failed because the database is corrupted. |
+| [14800026](../errorcode-data-rdb.md#14800026-sqlite-insufficient-database-memory) | SQLite: The database is out of memory. |
+| [14800013](../errorcode-data-rdb.md#14800013-null-column-value-or-column-data-type-incompatible-with-the-api-called) | Column index is out of bounds. |
+| [14800012](../errorcode-data-rdb.md#14800012-empty-result-set-or-invalid-position) | ResultSet is empty or pointer index is out of bounds. |
+| [14800028](../errorcode-data-rdb.md#14800028-sqlite-io-error) | SQLite: Some kind of disk I/O error occurred. |
+| [14800014](../errorcode-data-rdb.md#14800014-target-instance-closed) | The target instance is already closed. |
+| [14800030](../errorcode-data-rdb.md#14800030-sqlite-unable-to-open-the-database-file) | SQLite: Unable to open the database file |
 

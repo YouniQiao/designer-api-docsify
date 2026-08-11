@@ -12,7 +12,7 @@ import { Environment } from 'kits/@kit.CoreFileKit';
 function getExternalStorageDir(): string
 ```
 
-获取外卡根目录的沙箱路径，该接口仅对具有该系统能力的设备开放。
+Obtains the sandbox path of the root directory of an external storage card. This API is available only to the devices with the SystemCapability.FileManagement.File.Environment.FolderObtain system capability.
 
 **Since:** 11
 
@@ -30,14 +30,14 @@ function getExternalStorageDir(): string
 
 | Type | Description |
 | --- | --- |
-| string | 返回外卡根目录的沙箱路径。 |
+| string | Sandbox path of the root directory obtained. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 801 | Capability not supported. |
-| 201 | Permission verification failed, usually the result returned by VerifyAccessToken. |
-| 202 | Permission verification failed, application which is not a system application uses system API. |
+| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed, usually the result returned by VerifyAccessToken. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed, application which is not a system application uses system API. |
 | 13900042 | Unknown error. |
 

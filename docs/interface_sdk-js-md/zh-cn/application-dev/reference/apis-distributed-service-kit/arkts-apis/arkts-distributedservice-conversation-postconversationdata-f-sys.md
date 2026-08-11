@@ -1,11 +1,5 @@
 # postConversationData（系统接口）
 
-## 导入模块
-
-```TypeScript
-import { conversation } from 'kits/@kit.DistributedServiceKit';
-```
-
 ## postConversationData
 
 ```TypeScript
@@ -52,15 +46,15 @@ function postConversationData(
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 401 | Invalid parameter. The deviceId, bundleName, abilityName or msg is invalid or empty. |
-| 801 | Capability not supported. |
-| 201 | Permission denied. The application does not have the required permission to access distributed data. |
-| 202 | Permission verification failed. A non-system application calls a system API. |
-| 2004004 | Timeout while waiting for acknowledgement from the remote side. |
-| 2004002 | Failed to start ability on the remote side. |
-| 2004003 | Failed to send data. |
-| 2000001 | Internal error. |
-| 2004001 | Remote system version is too low. |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Invalid parameter. The deviceId, bundleName, abilityName or msg is invalid or empty. |
+| [801](../../errorcode-universal.md#801-该设备不支持此api) | Capability not supported. |
+| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. The application does not have the required permission to access distributed data. |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed. A non-system application calls a system API. |
+| [2004004](../../apis-distributedservice-kit/errorcode-conversation.md#2004004-等待对端确认超时) | Timeout while waiting for acknowledgement from the remote side. |
+| [2004002](../../apis-distributedservice-kit/errorcode-conversation.md#2004002-对端拉起ability失败) | Failed to start ability on the remote side. |
+| [2004003](../../apis-distributedservice-kit/errorcode-conversation.md#2004003-发送数据失败) | Failed to send data. |
+| [2000001](../../apis-distributedservice-kit/errorcode-conversation.md#2000001-内部错误) | Internal error. |
+| [2004001](../../apis-distributedservice-kit/errorcode-conversation.md#2004001-对端设备系统版本过低) | Remote system version is too low. |
 
 ## 示例
 

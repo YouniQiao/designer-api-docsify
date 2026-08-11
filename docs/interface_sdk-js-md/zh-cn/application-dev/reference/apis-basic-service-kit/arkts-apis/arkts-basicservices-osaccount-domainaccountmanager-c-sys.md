@@ -10,12 +10,6 @@
 
 **系统能力：** SystemCapability.Account.OsAccount
 
-## 导入模块
-
-```TypeScript
-import { osAccount } from 'kits/@kit.BasicServicesKit';
-```
-
 ## auth
 
 ```TypeScript
@@ -48,24 +42,26 @@ static auth(domainAccountInfo: DomainAccountInfo, credential: Uint8Array, callba
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 801 | Capability not supported. |
+| [801](../../errorcode-universal.md#801-该设备不支持此api) | Capability not supported. |
 | 12300211 | Server unreachable. |
-| 201 | Permission denied. |
-| 12300114 | The account authentication service works abnormally. |
-| 202 | Not system application. |
-| 12300113 | The account authentication service does not exist. |
-| 12300112 | The authentication service is busy. |
-| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameter types. |
-| 12300111 | The authentication time out. |
-| 12300110 | The authentication is locked. |
-| 12300013 | Network exception. |
-| 12300109 | The authentication, enrollment, or update operation is canceled. |
-| 12300003 | Domain account does not exist. |
-| 12300002 | Invalid domainAccountInfo or credential. |
-| 12300001 | The system service works abnormally. |
-| 12300101 | Authentication failed. |
+| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
+| [12300114](../../apis-basic-services-kit/errorcode-account.md#12300114-认证服务异常) | The account authentication service works abnormally. |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not system application. |
+| [12300113](../../apis-basic-services-kit/errorcode-account.md#12300113-认证服务不存在) | The account authentication service does not exist. |
+| [12300112](../../apis-basic-services-kit/errorcode-account.md#12300112-认证服务忙) | The authentication service is busy. |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameter types. |
+| [12300111](../../apis-basic-services-kit/errorcode-account.md#12300111-认证超时) | The authentication time out. |
+| [12300110](../../apis-basic-services-kit/errorcode-account.md#12300110-认证被锁定) | The authentication is locked. |
+| [12300013](../../apis-basic-services-kit/errorcode-account.md#12300013-网络异常) | Network exception. |
+| [12300109](../../apis-basic-services-kit/errorcode-account.md#12300109-认证凭据录入更新等操作被取消) | The authentication, enrollment, or update operation is canceled. |
+| [12300003](../../apis-basic-services-kit/errorcode-account.md#12300003-账号不存在) | Domain account does not exist. |
+| [12300002](../../apis-basic-services-kit/errorcode-account.md#12300002-无效参数) | Invalid domainAccountInfo or credential. |
+| [12300001](../../apis-basic-services-kit/errorcode-account.md#12300001-系统服务异常) | The system service works abnormally. |
+| [12300101](../../apis-basic-services-kit/errorcode-account.md#12300101-凭据不正确) | Authentication failed. |
 
 ## 示例
+
+ArkTS-Dyn示例：
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -83,6 +79,27 @@ try {
     }
   });
 } catch (e) {
+  const err = e as BusinessError;
+  console.error(`auth exception = code is ${err.code}, message is ${err.message}`);
+}
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+let domainAccountInfo: osAccount.DomainAccountInfo = {
+  domain: 'CHINA',
+  accountName: 'zhangsan'
+}
+let credential = new Uint8Array([0])
+try {
+  osAccount.DomainAccountManager.auth(domainAccountInfo, credential, {
+    onResult: (resultCode: int, authResult: osAccount.AuthResult) => {
+      console.info('auth resultCode = ' + resultCode);
+      console.info('auth authResult = ' + JSON.stringify(authResult));
+    }
+  });
+} catch (e: Error) {
   const err = e as BusinessError;
   console.error(`auth exception = code is ${err.code}, message is ${err.message}`);
 }
@@ -125,23 +142,25 @@ static auth(
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 801 | Capability not supported. |
+| [801](../../errorcode-universal.md#801-该设备不支持此api) | Capability not supported. |
 | 12300211 | Server unreachable. |
-| 201 | Permission denied. |
-| 12300114 | The account authentication service works abnormally. |
-| 202 | Not system application. |
-| 12300113 | The account authentication service does not exist. |
-| 12300112 | The authentication service is busy. |
-| 12300111 | The authentication time out. |
-| 12300110 | The authentication is locked. |
-| 12300013 | Network exception. |
-| 12300109 | The authentication, enrollment, or update operation is canceled. |
-| 12300003 | Domain account does not exist. |
-| 12300002 | Invalid domainAccountInfo or credential. |
-| 12300001 | The system service works abnormally. |
-| 12300101 | Authentication failed. |
+| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
+| [12300114](../../apis-basic-services-kit/errorcode-account.md#12300114-认证服务异常) | The account authentication service works abnormally. |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not system application. |
+| [12300113](../../apis-basic-services-kit/errorcode-account.md#12300113-认证服务不存在) | The account authentication service does not exist. |
+| [12300112](../../apis-basic-services-kit/errorcode-account.md#12300112-认证服务忙) | The authentication service is busy. |
+| [12300111](../../apis-basic-services-kit/errorcode-account.md#12300111-认证超时) | The authentication time out. |
+| [12300110](../../apis-basic-services-kit/errorcode-account.md#12300110-认证被锁定) | The authentication is locked. |
+| [12300013](../../apis-basic-services-kit/errorcode-account.md#12300013-网络异常) | Network exception. |
+| [12300109](../../apis-basic-services-kit/errorcode-account.md#12300109-认证凭据录入更新等操作被取消) | The authentication, enrollment, or update operation is canceled. |
+| [12300003](../../apis-basic-services-kit/errorcode-account.md#12300003-账号不存在) | Domain account does not exist. |
+| [12300002](../../apis-basic-services-kit/errorcode-account.md#12300002-无效参数) | Invalid domainAccountInfo or credential. |
+| [12300001](../../apis-basic-services-kit/errorcode-account.md#12300001-系统服务异常) | The system service works abnormally. |
+| [12300101](../../apis-basic-services-kit/errorcode-account.md#12300101-凭据不正确) | Authentication failed. |
 
 ## 示例
+
+ArkTS-Dyn示例：
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -150,7 +169,7 @@ let domainAccountInfo: osAccount.DomainAccountInfo = {
   domain: 'CHINA',
   accountName: 'zhangsan'
 }
-let credential = new Uint8Array([0]);
+let credential = new Uint8Array([0])
 try {
   let serverParams: Record<string, Object> = {
     "uri": "test.example.com",
@@ -166,6 +185,34 @@ try {
     }
   });
 } catch (e) {
+  const err = e as BusinessError;
+  console.error(`auth exception = code is ${err.code}, message is ${err.message}`);
+}
+```
+
+ArkTS--Sta示例：
+
+```TypeScript
+let domainAccountInfo: osAccount.DomainAccountInfo = {
+  domain: 'CHINA',
+  accountName: 'zhangsan'
+}
+let credential = new Uint8Array([0])
+try {
+  let serverParams: Record<string, RecordData> = {
+    "uri": "test.example.com",
+    "port": 100
+  }
+  let authOptions: osAccount.DomainAccountAuthOptions = {
+    serverParams: serverParams
+  }
+  osAccount.DomainAccountManager.auth(domainAccountInfo, credential, authOptions, {
+    onResult: (resultCode: int, authResult: osAccount.AuthResult) => {
+      console.info('auth resultCode = ' + resultCode);
+      console.info('auth authResult = ' + JSON.stringify(authResult));
+    }
+  });
+} catch (e: Error) {
   const err = e as BusinessError;
   console.error(`auth exception = code is ${err.code}, message is ${err.message}`);
 }
@@ -202,22 +249,24 @@ static authWithPopup(callback: IUserAuthCallback): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 801 | Capability not supported. |
+| [801](../../errorcode-universal.md#801-该设备不支持此api) | Capability not supported. |
 | 12300211 | Server unreachable.<br>**适用版本：** 11+ |
-| 201 | Permission denied.<br>**适用版本：** 10+ |
-| 12300114 | The account authentication service works abnormally. |
-| 202 | Not system application. |
-| 12300113 | The account authentication service does not exist. |
-| 12300112 | The authentication service is busy. |
-| 12300111 | The authentication time out. |
-| 12300110 | The authentication is locked. |
-| 12300013 | Network exception. |
-| 12300109 | The authentication, enrollment, or update operation is canceled. |
-| 12300003 | No domain account is bound. |
-| 12300001 | The system service works abnormally. |
-| 12300101 | Authentication failed. |
+| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied.<br>**适用版本：** 10+ |
+| [12300114](../../apis-basic-services-kit/errorcode-account.md#12300114-认证服务异常) | The account authentication service works abnormally. |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not system application. |
+| [12300113](../../apis-basic-services-kit/errorcode-account.md#12300113-认证服务不存在) | The account authentication service does not exist. |
+| [12300112](../../apis-basic-services-kit/errorcode-account.md#12300112-认证服务忙) | The authentication service is busy. |
+| [12300111](../../apis-basic-services-kit/errorcode-account.md#12300111-认证超时) | The authentication time out. |
+| [12300110](../../apis-basic-services-kit/errorcode-account.md#12300110-认证被锁定) | The authentication is locked. |
+| [12300013](../../apis-basic-services-kit/errorcode-account.md#12300013-网络异常) | Network exception. |
+| [12300109](../../apis-basic-services-kit/errorcode-account.md#12300109-认证凭据录入更新等操作被取消) | The authentication, enrollment, or update operation is canceled. |
+| [12300003](../../apis-basic-services-kit/errorcode-account.md#12300003-账号不存在) | No domain account is bound. |
+| [12300001](../../apis-basic-services-kit/errorcode-account.md#12300001-系统服务异常) | The system service works abnormally. |
+| [12300101](../../apis-basic-services-kit/errorcode-account.md#12300101-凭据不正确) | Authentication failed. |
 
 ## 示例
+
+ArkTS-Dyn示例：
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -230,6 +279,22 @@ try {
     }
   })
 } catch (e) {
+  const err = e as BusinessError;
+  console.error(`auth exception = code is ${err.code}, message is ${err.message}`);
+}
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+try {
+  osAccount.DomainAccountManager.authWithPopup({
+    onResult: (resultCode: int, authResult: osAccount.AuthResult) => {
+      console.info('auth resultCode = ' + resultCode);
+      console.info('auth authResult = ' + JSON.stringify(authResult));
+    }
+  })
+} catch (e: Error) {
   const err = e as BusinessError;
   console.error(`auth exception = code is ${err.code}, message is ${err.message}`);
 }
@@ -273,23 +338,25 @@ static authWithPopup(localId: int, callback: IUserAuthCallback): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 801 | Capability not supported. |
+| [801](../../errorcode-universal.md#801-该设备不支持此api) | Capability not supported. |
 | 12300211 | Server unreachable.<br>**适用版本：** 11+ |
-| 201 | Permission denied.<br>**适用版本：** 10+ |
-| 12300114 | The account authentication service works abnormally. |
-| 202 | Not system application. |
-| 12300113 | The account authentication service does not exist. |
-| 12300112 | The authentication service is busy. |
-| 12300111 | The authentication time out. |
-| 12300110 | The authentication is locked. |
-| 12300013 | Network exception. |
-| 12300109 | The authentication, enrollment, or update operation is canceled. |
-| 12300003 | No domain account is bound. |
-| 12300002 | Invalid localId. |
-| 12300001 | The system service works abnormally. |
-| 12300101 | Authentication failed. |
+| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied.<br>**适用版本：** 10+ |
+| [12300114](../../apis-basic-services-kit/errorcode-account.md#12300114-认证服务异常) | The account authentication service works abnormally. |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not system application. |
+| [12300113](../../apis-basic-services-kit/errorcode-account.md#12300113-认证服务不存在) | The account authentication service does not exist. |
+| [12300112](../../apis-basic-services-kit/errorcode-account.md#12300112-认证服务忙) | The authentication service is busy. |
+| [12300111](../../apis-basic-services-kit/errorcode-account.md#12300111-认证超时) | The authentication time out. |
+| [12300110](../../apis-basic-services-kit/errorcode-account.md#12300110-认证被锁定) | The authentication is locked. |
+| [12300013](../../apis-basic-services-kit/errorcode-account.md#12300013-网络异常) | Network exception. |
+| [12300109](../../apis-basic-services-kit/errorcode-account.md#12300109-认证凭据录入更新等操作被取消) | The authentication, enrollment, or update operation is canceled. |
+| [12300003](../../apis-basic-services-kit/errorcode-account.md#12300003-账号不存在) | No domain account is bound. |
+| [12300002](../../apis-basic-services-kit/errorcode-account.md#12300002-无效参数) | Invalid localId. |
+| [12300001](../../apis-basic-services-kit/errorcode-account.md#12300001-系统服务异常) | The system service works abnormally. |
+| [12300101](../../apis-basic-services-kit/errorcode-account.md#12300101-凭据不正确) | Authentication failed. |
 
 ## 示例
+
+ArkTS-Dyn示例：
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -302,6 +369,22 @@ try {
     }
   })
 } catch (e) {
+  const err = e as BusinessError;
+  console.error(`authWithPopup exception = code is ${err.code}, message is ${err.message}`);
+}
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+try {
+  osAccount.DomainAccountManager.authWithPopup(100, {
+    onResult: (resultCode: int, authResult: osAccount.AuthResult) => {
+      console.info('authWithPopup resultCode = ' + resultCode);
+      console.info('authWithPopup authResult = ' + JSON.stringify(authResult));
+    }
+  })
+} catch (e: Error) {
   const err = e as BusinessError;
   console.error(`authWithPopup exception = code is ${err.code}, message is ${err.message}`);
 }
@@ -329,28 +412,29 @@ static getAccessToken(businessParams: Record<string, Object>, callback: AsyncCal
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| businessParams | [Record](../../apis-default/arkts-apis/arkts-record-t.md)&lt;string, Object&gt; | 是 | 指示业务参数，具体格式取决于域插件的实现要求。 |
+| businessParams | Record&lt;string, Object&gt; | 是 | 指示业务参数，具体格式取决于域插件的实现要求。 |
 | callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;Uint8Array&gt; | 是 | 指示结果回调。如果获取成功，err返回null，否则为错误对象。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameter types. |
-| 801 | Capability not supported. |
-| 12300111 | The operation time out. |
-| 12300014 | The domain account is not authenticated. |
-| 12300013 | Network exception. |
-| 12300003 | Domain account not found. |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameter types. |
+| [801](../../errorcode-universal.md#801-该设备不支持此api) | Capability not supported. |
+| [12300111](../../apis-basic-services-kit/errorcode-account.md#12300111-认证超时) | The operation time out. |
+| [12300014](../../apis-basic-services-kit/errorcode-account.md#12300014-域账号未认证) | The domain account is not authenticated. |
+| [12300013](../../apis-basic-services-kit/errorcode-account.md#12300013-网络异常) | Network exception. |
+| [12300003](../../apis-basic-services-kit/errorcode-account.md#12300003-账号不存在) | Domain account not found. |
 | 12300211 | Server unreachable. |
-| 12300002 | Invalid business parameters. |
-| 12300114 | The authentication service works abnormally. |
-| 202 | Not system application. |
-| 12300001 | The system service works abnormally. |
+| [12300002](../../apis-basic-services-kit/errorcode-account.md#12300002-无效参数) | Invalid business parameters. |
+| [12300114](../../apis-basic-services-kit/errorcode-account.md#12300114-认证服务异常) | The authentication service works abnormally. |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not system application. |
+| [12300001](../../apis-basic-services-kit/errorcode-account.md#12300001-系统服务异常) | The system service works abnormally. |
 
 ## 示例
 
 ```TypeScript
+import { osAccount } from '@kit.BasicServicesKit';
 import { BusinessError } from '@kit.BasicServicesKit';
 
 let businessParams: Record<string, Object> = {
@@ -394,23 +478,49 @@ static getAccessToken(businessParams: Record<string, RecordData>, callback: Asyn
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| businessParams | [Record](../../apis-default/arkts-apis/arkts-record-t.md)&lt;string, RecordData&gt; | 是 | 指示业务参数，具体格式取决于域插件的实现要求。 |
+| businessParams | Record&lt;string, RecordData&gt; | 是 | 指示业务参数，具体格式取决于域插件的实现要求。 |
 | callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;Uint8Array&gt; | 是 | 指示结果回调。如果获取成功，err返回null，否则为错误对象。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 801 | Capability not supported. |
-| 12300111 | The operation time out. |
-| 12300014 | The domain account is not authenticated. |
-| 12300013 | Network exception. |
-| 12300003 | Domain account not found. |
+| [801](../../errorcode-universal.md#801-该设备不支持此api) | Capability not supported. |
+| [12300111](../../apis-basic-services-kit/errorcode-account.md#12300111-认证超时) | The operation time out. |
+| [12300014](../../apis-basic-services-kit/errorcode-account.md#12300014-域账号未认证) | The domain account is not authenticated. |
+| [12300013](../../apis-basic-services-kit/errorcode-account.md#12300013-网络异常) | Network exception. |
+| [12300003](../../apis-basic-services-kit/errorcode-account.md#12300003-账号不存在) | Domain account not found. |
 | 12300211 | Server unreachable. |
-| 12300002 | Invalid business parameters. |
-| 12300114 | The authentication service works abnormally. |
-| 202 | Not system application. |
-| 12300001 | The system service works abnormally. |
+| [12300002](../../apis-basic-services-kit/errorcode-account.md#12300002-无效参数) | Invalid business parameters. |
+| [12300114](../../apis-basic-services-kit/errorcode-account.md#12300114-认证服务异常) | The authentication service works abnormally. |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not system application. |
+| [12300001](../../apis-basic-services-kit/errorcode-account.md#12300001-系统服务异常) | The system service works abnormally. |
+
+## 示例
+
+```TypeScript
+import osAccount from '@ohos.account.osAccount';
+import { BusinessError } from '@kit.BasicServicesKit';
+import { RecordData } from '@ohos.base';
+
+let businessParams: Record<string, RecordData> = {
+  'clientId': 'xxx',
+  'secretId': 'yyy'
+};  // depends on the implementation of the domain plugin
+try {
+  osAccount.DomainAccountManager.getAccessToken(businessParams,
+    (err: BusinessError | null, result: Uint8Array | undefined) => {
+      if (err) {
+        console.error(`getAccessToken failed, code is ${err.code}, message is ${err.message}`);
+      } else {
+        console.info('getAccessToken result: ' + result);
+      }
+    });
+} catch (e: Error) {
+  const err = e as BusinessError;
+  console.error(`getAccessToken exception = code is ${err.code}, message is ${err.message}`);
+}
+```
 
 ## getAccessToken
 
@@ -434,7 +544,7 @@ static getAccessToken(businessParams: Record<string, Object>): Promise<Uint8Arra
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| businessParams | [Record](../../apis-default/arkts-apis/arkts-record-t.md)&lt;string, Object&gt; | 是 | 指示业务参数，具体格式取决于域插件的实现要求。 |
+| businessParams | Record&lt;string, Object&gt; | 是 | 指示业务参数，具体格式取决于域插件的实现要求。 |
 
 **返回值：**
 
@@ -446,21 +556,22 @@ static getAccessToken(businessParams: Record<string, Object>): Promise<Uint8Arra
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameter types. |
-| 801 | Capability not supported. |
-| 12300111 | The operation time out. |
-| 12300014 | The domain account is not authenticated. |
-| 12300013 | Network exception. |
-| 12300003 | Domain account not found. |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameter types. |
+| [801](../../errorcode-universal.md#801-该设备不支持此api) | Capability not supported. |
+| [12300111](../../apis-basic-services-kit/errorcode-account.md#12300111-认证超时) | The operation time out. |
+| [12300014](../../apis-basic-services-kit/errorcode-account.md#12300014-域账号未认证) | The domain account is not authenticated. |
+| [12300013](../../apis-basic-services-kit/errorcode-account.md#12300013-网络异常) | Network exception. |
+| [12300003](../../apis-basic-services-kit/errorcode-account.md#12300003-账号不存在) | Domain account not found. |
 | 12300211 | Server unreachable. |
-| 12300002 | Invalid business parameters. |
-| 12300114 | The authentication service works abnormally. |
-| 202 | Not system application. |
-| 12300001 | The system service works abnormally. |
+| [12300002](../../apis-basic-services-kit/errorcode-account.md#12300002-无效参数) | Invalid business parameters. |
+| [12300114](../../apis-basic-services-kit/errorcode-account.md#12300114-认证服务异常) | The authentication service works abnormally. |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not system application. |
+| [12300001](../../apis-basic-services-kit/errorcode-account.md#12300001-系统服务异常) | The system service works abnormally. |
 
 ## 示例
 
 ```TypeScript
+import { osAccount } from '@kit.BasicServicesKit';
 import { BusinessError } from '@kit.BasicServicesKit';
 
 let businessParams: Record<string, Object> = {
@@ -502,7 +613,7 @@ static getAccessToken(businessParams: Record<string, RecordData>): Promise<Uint8
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| businessParams | [Record](../../apis-default/arkts-apis/arkts-record-t.md)&lt;string, RecordData&gt; | 是 | 指示业务参数，具体格式取决于域插件的实现要求。 |
+| businessParams | Record&lt;string, RecordData&gt; | 是 | 指示业务参数，具体格式取决于域插件的实现要求。 |
 
 **返回值：**
 
@@ -514,16 +625,41 @@ static getAccessToken(businessParams: Record<string, RecordData>): Promise<Uint8
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 801 | Capability not supported. |
-| 12300111 | The operation time out. |
-| 12300014 | The domain account is not authenticated. |
-| 12300013 | Network exception. |
-| 12300003 | Domain account not found. |
+| [801](../../errorcode-universal.md#801-该设备不支持此api) | Capability not supported. |
+| [12300111](../../apis-basic-services-kit/errorcode-account.md#12300111-认证超时) | The operation time out. |
+| [12300014](../../apis-basic-services-kit/errorcode-account.md#12300014-域账号未认证) | The domain account is not authenticated. |
+| [12300013](../../apis-basic-services-kit/errorcode-account.md#12300013-网络异常) | Network exception. |
+| [12300003](../../apis-basic-services-kit/errorcode-account.md#12300003-账号不存在) | Domain account not found. |
 | 12300211 | Server unreachable. |
-| 12300002 | Invalid business parameters. |
-| 12300114 | The authentication service works abnormally. |
-| 202 | Not system application. |
-| 12300001 | The system service works abnormally. |
+| [12300002](../../apis-basic-services-kit/errorcode-account.md#12300002-无效参数) | Invalid business parameters. |
+| [12300114](../../apis-basic-services-kit/errorcode-account.md#12300114-认证服务异常) | The authentication service works abnormally. |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not system application. |
+| [12300001](../../apis-basic-services-kit/errorcode-account.md#12300001-系统服务异常) | The system service works abnormally. |
+
+## 示例
+
+```TypeScript
+import osAccount from '@ohos.account.osAccount';
+import { BusinessError } from '@kit.BasicServicesKit';
+import { RecordData } from '@ohos.base';
+
+let businessParams: Record<string, RecordData> = {
+  'clientId': 'xxx',
+  'secretId': 'yyy'
+};  // depends on the implementation of the domain plugin
+try {
+  osAccount.DomainAccountManager.getAccessToken(businessParams)
+    .then((result: Uint8Array) => {
+      console.info('getAccessToken result: ' + result);
+    }).catch((e: Error) => {
+    const err = e as BusinessError;
+    console.error(`getAccessToken failed, code is ${err.code}, message is ${err.message}`);
+  });
+} catch (e: Error) {
+  const err = e as BusinessError;
+  console.error(`getAccessToken exception = code is ${err.code}, message is ${err.message}`);
+}
+```
 
 ## getAccountInfo
 
@@ -556,21 +692,24 @@ static getAccountInfo(options: GetDomainAccountInfoOptions, callback: AsyncCallb
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameter types. |
-| 801 | Capability not supported. |
-| 12300111 | The operation time out. |
-| 12300014 | Not authenticated. |
-| 12300013 | Network exception. |
-| 12300003 | Account not found. |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameter types. |
+| [801](../../errorcode-universal.md#801-该设备不支持此api) | Capability not supported. |
+| [12300111](../../apis-basic-services-kit/errorcode-account.md#12300111-认证超时) | The operation time out. |
+| [12300014](../../apis-basic-services-kit/errorcode-account.md#12300014-域账号未认证) | Not authenticated. |
+| [12300013](../../apis-basic-services-kit/errorcode-account.md#12300013-网络异常) | Network exception. |
+| [12300003](../../apis-basic-services-kit/errorcode-account.md#12300003-账号不存在) | Account not found. |
 | 12300211 | Server unreachable. |
-| 201 | Permission denied. |
-| 12300114 | The authentication service works abnormally. |
-| 202 | Not system application. |
-| 12300001 | The system service works abnormally. |
+| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
+| [12300114](../../apis-basic-services-kit/errorcode-account.md#12300114-认证服务异常) | The authentication service works abnormally. |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not system application. |
+| [12300001](../../apis-basic-services-kit/errorcode-account.md#12300001-系统服务异常) | The system service works abnormally. |
 
 ## 示例
 
+ArkTS-Dyn示例：
+
 ```TypeScript
+import { osAccount } from '@kit.BasicServicesKit';
 import { BusinessError } from '@kit.BasicServicesKit';
 
 let domainAccountInfo: osAccount.GetDomainAccountInfoOptions = {
@@ -587,6 +726,31 @@ try {
     }
   });
 } catch (e) {
+  const err = e as BusinessError;
+  console.error(`getAccountInfo exception = code is ${err.code}, message is ${err.message}`);
+}
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+import osAccount from '@ohos.account.osAccount';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let domainAccountInfo: osAccount.GetDomainAccountInfoOptions = {
+  domain: 'CHINA',
+  accountName: 'zhangsan'
+}
+try {
+  osAccount.DomainAccountManager.getAccountInfo(domainAccountInfo,
+    (err: BusinessError | null, result: osAccount.DomainAccountInfo | undefined) => {
+      if (err) {
+        console.error(`call getAccountInfo failed, code is ${err.code}, message is ${err.message}`);
+      } else {
+        console.info('getAccountInfo result: ' + result);
+      }
+    });
+} catch (e: Error) {
   const err = e as BusinessError;
   console.error(`getAccountInfo exception = code is ${err.code}, message is ${err.message}`);
 }
@@ -628,21 +792,24 @@ static getAccountInfo(options: GetDomainAccountInfoOptions): Promise<DomainAccou
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameter types. |
-| 801 | Capability not supported. |
-| 12300111 | The operation time out. |
-| 12300014 | Not authenticated. |
-| 12300013 | Network exception. |
-| 12300003 | Account not found. |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameter types. |
+| [801](../../errorcode-universal.md#801-该设备不支持此api) | Capability not supported. |
+| [12300111](../../apis-basic-services-kit/errorcode-account.md#12300111-认证超时) | The operation time out. |
+| [12300014](../../apis-basic-services-kit/errorcode-account.md#12300014-域账号未认证) | Not authenticated. |
+| [12300013](../../apis-basic-services-kit/errorcode-account.md#12300013-网络异常) | Network exception. |
+| [12300003](../../apis-basic-services-kit/errorcode-account.md#12300003-账号不存在) | Account not found. |
 | 12300211 | Server unreachable. |
-| 201 | Permission denied. |
-| 12300114 | The authentication service works abnormally. |
-| 202 | Not system application. |
-| 12300001 | The system service works abnormally. |
+| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
+| [12300114](../../apis-basic-services-kit/errorcode-account.md#12300114-认证服务异常) | The authentication service works abnormally. |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not system application. |
+| [12300001](../../apis-basic-services-kit/errorcode-account.md#12300001-系统服务异常) | The system service works abnormally. |
 
 ## 示例
 
+ArkTS-Dyn示例：
+
 ```TypeScript
+import { osAccount } from '@kit.BasicServicesKit';
 import { BusinessError } from '@kit.BasicServicesKit';
 
 let domainAccountInfo: osAccount.GetDomainAccountInfoOptions = {
@@ -657,6 +824,30 @@ try {
     console.error(`call getAccountInfo failed, code is ${err.code}, message is ${err.message}`);
   });
 } catch (e) {
+  const err = e as BusinessError;
+  console.error(`getAccountInfo exception = code is ${err.code}, message is ${err.message}`);
+}
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+import osAccount from '@ohos.account.osAccount';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let domainAccountInfo: osAccount.GetDomainAccountInfoOptions = {
+  domain: 'CHINA',
+  accountName: 'zhangsan'
+}
+try {
+  osAccount.DomainAccountManager.getAccountInfo(domainAccountInfo)
+    .then((result: osAccount.DomainAccountInfo) => {
+      console.info('getAccountInfo result: ' + result);
+    }).catch((e: Error) => {
+    const err = e as BusinessError;
+    console.error(`call getAccountInfo failed, code is ${err.code}, message is ${err.message}`);
+  });
+} catch (e: Error) {
   const err = e as BusinessError;
   console.error(`getAccountInfo exception = code is ${err.code}, message is ${err.message}`);
 }
@@ -693,21 +884,24 @@ static hasAccount(domainAccountInfo: DomainAccountInfo, callback: AsyncCallback<
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameter types. |
-| 801 | Capability not supported. |
-| 12300111 | The operation time out. |
-| 12300014 | Not authenticated. |
-| 12300013 | Network exception. |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameter types. |
+| [801](../../errorcode-universal.md#801-该设备不支持此api) | Capability not supported. |
+| [12300111](../../apis-basic-services-kit/errorcode-account.md#12300111-认证超时) | The operation time out. |
+| [12300014](../../apis-basic-services-kit/errorcode-account.md#12300014-域账号未认证) | Not authenticated. |
+| [12300013](../../apis-basic-services-kit/errorcode-account.md#12300013-网络异常) | Network exception. |
 | 12300211 | Server unreachable. |
-| 201 | Permission denied. |
-| 12300002 | Invalid domainAccountInfo. |
-| 12300114 | The authentication service works abnormally. |
-| 202 | Not system application. |
-| 12300001 | The system service works abnormally. |
+| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
+| [12300002](../../apis-basic-services-kit/errorcode-account.md#12300002-无效参数) | Invalid domainAccountInfo. |
+| [12300114](../../apis-basic-services-kit/errorcode-account.md#12300114-认证服务异常) | The authentication service works abnormally. |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not system application. |
+| [12300001](../../apis-basic-services-kit/errorcode-account.md#12300001-系统服务异常) | The system service works abnormally. |
 
 ## 示例
 
+ArkTS-Dyn示例：
+
 ```TypeScript
+import { osAccount } from '@kit.BasicServicesKit';
 import { BusinessError } from '@kit.BasicServicesKit';
 
 let domainAccountInfo: osAccount.DomainAccountInfo = {
@@ -723,6 +917,30 @@ try {
     }
   });
 } catch (e) {
+  const err = e as BusinessError;
+  console.error(`hasAccount exception = code is ${err.code}, message is ${err.message}`);
+}
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+import osAccount from '@ohos.account.osAccount';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let domainAccountInfo: osAccount.DomainAccountInfo = {
+  domain: 'CHINA',
+  accountName: 'zhangsan'
+}
+try {
+  osAccount.DomainAccountManager.hasAccount(domainAccountInfo, (err: BusinessError | null, result: boolean | undefined) => {
+    if (err) {
+      console.error(`call hasAccount failed, code is ${err.code}, message is ${err.message}`);
+    } else {
+      console.info('hasAccount result: ' + result);
+    }
+  });
+} catch (e: Error) {
   const err = e as BusinessError;
   console.error(`hasAccount exception = code is ${err.code}, message is ${err.message}`);
 }
@@ -764,21 +982,24 @@ static hasAccount(domainAccountInfo: DomainAccountInfo): Promise<boolean>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameter types. |
-| 801 | Capability not supported. |
-| 12300111 | The operation time out. |
-| 12300014 | Not authenticated. |
-| 12300013 | Network exception. |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameter types. |
+| [801](../../errorcode-universal.md#801-该设备不支持此api) | Capability not supported. |
+| [12300111](../../apis-basic-services-kit/errorcode-account.md#12300111-认证超时) | The operation time out. |
+| [12300014](../../apis-basic-services-kit/errorcode-account.md#12300014-域账号未认证) | Not authenticated. |
+| [12300013](../../apis-basic-services-kit/errorcode-account.md#12300013-网络异常) | Network exception. |
 | 12300211 | Server unreachable. |
-| 201 | Permission denied. |
-| 12300002 | Invalid domainAccountInfo. |
-| 12300114 | The authentication service works abnormally. |
-| 202 | Not system application. |
-| 12300001 | The system service works abnormally. |
+| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
+| [12300002](../../apis-basic-services-kit/errorcode-account.md#12300002-无效参数) | Invalid domainAccountInfo. |
+| [12300114](../../apis-basic-services-kit/errorcode-account.md#12300114-认证服务异常) | The authentication service works abnormally. |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not system application. |
+| [12300001](../../apis-basic-services-kit/errorcode-account.md#12300001-系统服务异常) | The system service works abnormally. |
 
 ## 示例
 
+ArkTS-Dyn示例：
+
 ```TypeScript
+import { osAccount } from '@kit.BasicServicesKit';
 import { BusinessError } from '@kit.BasicServicesKit';
 
 let domainAccountInfo: osAccount.DomainAccountInfo = {
@@ -792,6 +1013,29 @@ try {
       console.error(`call hasAccount failed, code is ${err.code}, message is ${err.message}`);
   });
 } catch (e) {
+  const err = e as BusinessError;
+  console.error(`hasAccount exception = code is ${err.code}, message is ${err.message}`);
+}
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+import osAccount from '@ohos.account.osAccount';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let domainAccountInfo: osAccount.DomainAccountInfo = {
+  domain: 'CHINA',
+  accountName: 'zhangsan'
+}
+try {
+  osAccount.DomainAccountManager.hasAccount(domainAccountInfo).then((result: boolean) => {
+    console.info('hasAccount result: ' + result);
+  }).catch((e: Error) => {
+    const err = e as BusinessError;
+    console.error(`call hasAccount failed, code is ${err.code}, message is ${err.message}`);
+  });
+} catch (e: Error) {
   const err = e as BusinessError;
   console.error(`hasAccount exception = code is ${err.code}, message is ${err.message}`);
 }
@@ -833,16 +1077,19 @@ static isAuthenticationExpired(domainAccountInfo: DomainAccountInfo): Promise<bo
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameter types. |
-| 801 | Capability not supported. |
-| 12300003 | Domain account not found. |
-| 201 | Permission denied. |
-| 202 | Not system application. |
-| 12300001 | The system service works abnormally. |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameter types. |
+| [801](../../errorcode-universal.md#801-该设备不支持此api) | Capability not supported. |
+| [12300003](../../apis-basic-services-kit/errorcode-account.md#12300003-账号不存在) | Domain account not found. |
+| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not system application. |
+| [12300001](../../apis-basic-services-kit/errorcode-account.md#12300001-系统服务异常) | The system service works abnormally. |
 
 ## 示例
 
+ArkTS-Dyn示例：
+
 ```TypeScript
+import { osAccount } from '@kit.BasicServicesKit';
 import { BusinessError } from '@kit.BasicServicesKit';
 
 let domainInfo: osAccount.DomainAccountInfo =
@@ -854,6 +1101,27 @@ try {
     console.error('isAuthenticationExpired err: ' + err);
   });
 } catch (e) {
+  const err = e as BusinessError;
+  console.error('isAuthenticationExpired exception: ' + e);
+}
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+import osAccount from '@ohos.account.osAccount';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let domainInfo: osAccount.DomainAccountInfo =
+  {domain: 'testDomain', accountName: 'testAccountName'};
+try {
+  osAccount.DomainAccountManager.isAuthenticationExpired(domainInfo).then((result: boolean | undefined) => {
+    console.info('isAuthenticationExpired, result: ' + result);
+  }).catch((e: Error) => {
+    const err = e as BusinessError;
+    console.error('isAuthenticationExpired err: ' + err);
+  });
+} catch (e: Error) {
   const err = e as BusinessError;
   console.error('isAuthenticationExpired exception: ' + e);
 }
@@ -889,15 +1157,18 @@ static registerPlugin(plugin: DomainPlugin): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 801 | Capability not supported.<br>**适用版本：** 18+ |
+| [801](../../errorcode-universal.md#801-该设备不支持此api) | Capability not supported.<br>**适用版本：** 18+ |
 | 12300201 | The domain plugin has been registered. |
-| 201 | Permission denied. |
-| 202 | Not system application. |
+| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not system application. |
 
 ## 示例
 
+ArkTS-Dyn示例：
+
 ```TypeScript
-import { AsyncCallback, BusinessError } from '@kit.BasicServicesKit';
+import { osAccount } from '@kit.BasicServicesKit';
+import { AsyncCallback } from '@kit.BasicServicesKit';
 
 let plugin: osAccount.DomainPlugin = {
   auth: (domainAccountInfo: osAccount.DomainAccountInfo, credential: Uint8Array,
@@ -920,7 +1191,39 @@ let plugin: osAccount.DomainPlugin = {
 try {
   osAccount.DomainAccountManager.registerPlugin(plugin);
   console.info('registerPlugin success.');
-} catch (e) {
+} catch(err) {
+  console.error(`registerPlugin code is ${err.code}, message is ${err.message}`);
+}
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+import osAccount from '@ohos.account.osAccount';
+import  { AsyncCallback } from '@ohos.base';
+
+let plugin: osAccount.DomainPlugin = {
+  auth: (domainAccountInfo: osAccount.DomainAccountInfo, credential: Uint8Array,
+    callback: osAccount.IUserAuthCallback) => {},
+  authWithPopup: (domainAccountInfo: osAccount.DomainAccountInfo,
+    callback: osAccount.IUserAuthCallback) => {},
+  authWithToken: (domainAccountInfo: osAccount.DomainAccountInfo, token: Uint8Array,
+    callback: osAccount.IUserAuthCallback) => {},
+  getAccountInfo: (options: osAccount.GetDomainAccountInfoPluginOptions,
+    callback: AsyncCallback<osAccount.DomainAccountInfo>) => {},
+  getAuthStatusInfo: (domainAccountInfo: osAccount.DomainAccountInfo,
+    callback: AsyncCallback<osAccount.AuthStatusInfo>) => {},
+  bindAccount: (domainAccountInfo: osAccount.DomainAccountInfo, localId: int,
+    callback: AsyncCallback<void>) => {},
+  unbindAccount: (domainAccountInfo: osAccount.DomainAccountInfo, callback: AsyncCallback<void>) => {},
+  isAccountTokenValid: (domainAccountInfo: osAccount.DomainAccountInfo, token: Uint8Array,
+    callback: AsyncCallback<boolean>) => {},
+  getAccessToken: (options: osAccount.GetDomainAccessTokenOptions, callback: AsyncCallback<Uint8Array>) => {}
+}
+try {
+  osAccount.DomainAccountManager.registerPlugin(plugin);
+  console.info('registerPlugin success.');
+} catch(e: Error) {
   const err = e as BusinessError;
   console.error(`registerPlugin code is ${err.code}, message is ${err.message}`);
 }
@@ -950,11 +1253,13 @@ static unregisterPlugin(): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 801 | Capability not supported.<br>**适用版本：** 18+ |
-| 201 | Permission denied. |
-| 202 | Not system application. |
+| [801](../../errorcode-universal.md#801-该设备不支持此api) | Capability not supported.<br>**适用版本：** 18+ |
+| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not system application. |
 
 ## 示例
+
+ArkTS-Dyn示例：
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -962,7 +1267,18 @@ import { BusinessError } from '@kit.BasicServicesKit';
 try {
   osAccount.DomainAccountManager.unregisterPlugin();
   console.info('unregisterPlugin success.');
-} catch (e) {
+} catch(err) {
+  console.error(`unregisterPlugin code is ${err.code}, message is ${err.message}`);
+}
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+try {
+  osAccount.DomainAccountManager.unregisterPlugin();
+  console.info('unregisterPlugin success.');
+} catch(e: Error) {
   const err = e as BusinessError;
   console.error(`unregisterPlugin code is ${err.code}, message is ${err.message}`);
 }
@@ -1004,16 +1320,19 @@ static updateAccountToken(
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameter types. |
-| 12300003 | Account not found. |
-| 201 | Permission denied. |
-| 12300002 | Invalid token. |
-| 202 | Not system application. |
-| 12300001 | The system service works abnormally. |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameter types. |
+| [12300003](../../apis-basic-services-kit/errorcode-account.md#12300003-账号不存在) | Account not found. |
+| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
+| [12300002](../../apis-basic-services-kit/errorcode-account.md#12300002-无效参数) | Invalid token. |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not system application. |
+| [12300001](../../apis-basic-services-kit/errorcode-account.md#12300001-系统服务异常) | The system service works abnormally. |
 
 ## 示例
 
+ArkTS-Dyn示例：
+
 ```TypeScript
+import { osAccount } from '@kit.BasicServicesKit';
 import { BusinessError } from '@kit.BasicServicesKit';
 
 let domainAccountInfo: osAccount.DomainAccountInfo = {
@@ -1031,6 +1350,32 @@ try {
     }
   })
 } catch (e) {
+  const err = e as BusinessError;
+  console.error(`updateAccountToken exception = code is ${err.code}, message is ${err.message}`);
+}
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+import osAccount from '@ohos.account.osAccount';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let domainAccountInfo: osAccount.DomainAccountInfo = {
+  domain: 'CHINA',
+  accountName: 'zhangsan',
+  accountId: '123456'
+}
+let token = new Uint8Array([0])
+try {
+  osAccount.DomainAccountManager.updateAccountToken(domainAccountInfo, token, (err: BusinessError |null) => {
+    if (err != null) {
+      console.error(`updateAccountToken failed, code is ${err.code}, message is ${err.message}`);
+    } else {
+      console.info('updateAccountToken successfully');
+    }
+  })
+} catch (e: Error) {
   const err = e as BusinessError;
   console.error(`updateAccountToken exception = code is ${err.code}, message is ${err.message}`);
 }
@@ -1073,16 +1418,19 @@ static updateAccountToken(domainAccountInfo: DomainAccountInfo, token: Uint8Arra
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameter types. |
-| 12300003 | Account not found. |
-| 201 | Permission denied. |
-| 12300002 | Invalid token. |
-| 202 | Not system application. |
-| 12300001 | The system service works abnormally. |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameter types. |
+| [12300003](../../apis-basic-services-kit/errorcode-account.md#12300003-账号不存在) | Account not found. |
+| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
+| [12300002](../../apis-basic-services-kit/errorcode-account.md#12300002-无效参数) | Invalid token. |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not system application. |
+| [12300001](../../apis-basic-services-kit/errorcode-account.md#12300001-系统服务异常) | The system service works abnormally. |
 
 ## 示例
 
+ArkTS-Dyn示例：
+
 ```TypeScript
+import { osAccount } from '@kit.BasicServicesKit';
 import { BusinessError } from '@kit.BasicServicesKit';
 
 let domainAccountInfo: osAccount.DomainAccountInfo = {
@@ -1095,9 +1443,34 @@ try {
   osAccount.DomainAccountManager.updateAccountToken(domainAccountInfo, token).then(() => {
     console.info('updateAccountToken successfully');
   }).catch((err: BusinessError) => {
-    console.error(`updateAccountToken failed, code is ${err.code}, message is ${err.message}`);
+      console.error(`updateAccountToken failed, code is ${err.code}, message is ${err.message}`);
   });
 } catch (e) {
+  const err = e as BusinessError;
+  console.error(`updateAccountToken exception = code is ${err.code}, message is ${err.message}`);
+}
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+import osAccount from '@ohos.account.osAccount';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let domainAccountInfo: osAccount.DomainAccountInfo = {
+  domain: 'CHINA',
+  accountName: 'zhangsan',
+  accountId: '123456'
+}
+let token = new Uint8Array([0])
+try {
+  osAccount.DomainAccountManager.updateAccountToken(domainAccountInfo, token).then(() => {
+    console.info('updateAccountToken successfully');
+  }).catch((e: Error) => {
+    const err = e as BusinessError;
+    console.error(`updateAccountToken failed, code is ${err.code}, message is ${err.message}`);
+  });
+} catch (e: Error) {
   const err = e as BusinessError;
   console.error(`updateAccountToken exception = code is ${err.code}, message is ${err.message}`);
 }

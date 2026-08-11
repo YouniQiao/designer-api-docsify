@@ -12,7 +12,7 @@ import { scan } from 'kits/@kit.BasicServicesKit';
 function getPictureScanProgress(scannerId: string): Promise<PictureScanProgress>
 ```
 
-获取图片扫描进度。使用Promise异步回调。
+Obtains the progress of scanning a picture. This API uses a promise to return the result.
 
 **Since:** 20
 
@@ -28,19 +28,19 @@ function getPictureScanProgress(scannerId: string): Promise<PictureScanProgress>
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| scannerId | string | Yes | 扫描仪的ID。 |
+| scannerId | string | Yes | Scanner ID. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;PictureScanProgress&gt; | Promise对象，返回图片扫描进度信息。 |
+| Promise&lt;PictureScanProgress&gt; | Promise used to return the progress. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 201 | Permission denied. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
 
 ## Examples
 

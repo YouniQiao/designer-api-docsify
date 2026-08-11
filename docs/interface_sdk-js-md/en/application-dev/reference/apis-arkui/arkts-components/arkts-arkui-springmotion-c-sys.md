@@ -1,6 +1,6 @@
 # SpringMotion (System API)
 
-弹簧动画模型。可以基于起点、终点、初始速度和弹簧属性构建弹簧动画。
+Spring animation model. You can build a spring animation based on the start point, end point, initial speed, and spring attributes.
 
 **Since:** 7
 
@@ -20,7 +20,7 @@
 constructor(start: number, end: number, velocity: number, prop: SpringProp)
 ```
 
-构造器参数。
+Constructor parameters
 
 **Since:** 7
 

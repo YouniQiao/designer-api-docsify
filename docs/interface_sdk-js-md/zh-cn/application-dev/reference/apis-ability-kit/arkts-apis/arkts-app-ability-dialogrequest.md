@@ -17,12 +17,6 @@ dialogRequest模块用于处理模态弹框的能力，包括获取RequestInfo�
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 
-## 导入模块
-
-```TypeScript
-import { dialogRequest } from 'kits/@kit.AbilityKit';
-```
-
 ## 汇总
 
 ### 函数

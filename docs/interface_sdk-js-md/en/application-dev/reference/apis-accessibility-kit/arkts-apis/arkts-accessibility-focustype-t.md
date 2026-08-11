@@ -4,7 +4,7 @@
 export type FocusType = 'accessibility' | 'normal'
 ```
 
-表示查询焦点元素的类型。
+Enumerates the focus types.
 
 **Since:** 9
 
@@ -16,6 +16,6 @@ export type FocusType = 'accessibility' | 'normal'
 
 | Type | Description |
 | --- | --- |
-| 'accessibility' | 表示无障碍的焦点类型。 |
-| 'normal' | 表示普通的焦点类型。 |
+| 'accessibility' | Accessibility focus. |
+| 'normal' | Normal focus. |
 

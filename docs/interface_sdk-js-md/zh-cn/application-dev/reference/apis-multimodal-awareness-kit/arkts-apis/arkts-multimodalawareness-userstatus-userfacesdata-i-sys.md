@@ -1,6 +1,6 @@
 # UserFacesData（系统接口）
 
-Defines user face data.
+用户面部数据。
 
 **继承/实现关系：** UserFacesData extends [UserStatusData](arkts-multimodalawareness-userstatus-userstatusdata-i-sys.md)
 
@@ -14,19 +14,13 @@ Defines user face data.
 
 **系统接口：** 此接口为系统接口。
 
-## 导入模块
-
-```TypeScript
-import { userStatus } from 'kits/@kit.MultimodalAwarenessKit';
-```
-
 ## angularVelocity
 
 ```TypeScript
 angularVelocity?: double[]
 ```
 
-Angular velocity of user motion status, in rad/s.
+用户运动状态的角速度，单位：rad/s。
 
 **类型：** ArkTS-Dyn: number[]  <br>ArkTS-Sta：double[]
 
@@ -48,7 +42,7 @@ Angular velocity of user motion status, in rad/s.
 azimuth?: double[]
 ```
 
-Azimuth of user motion status.The value ranges from 0 to 360, in degrees.
+用户运动状态的方位角。取值范围为0到360，单位：度。
 
 **类型：** ArkTS-Dyn: number[]  <br>ArkTS-Sta：double[]
 
@@ -70,7 +64,7 @@ Azimuth of user motion status.The value ranges from 0 to 360, in degrees.
 faceNum?: int
 ```
 
-Number of faces detected.The value must be an integer within [0,3].
+检测到的面部数量。取值范围为[0,3]的整数。
 
 **类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
@@ -92,7 +86,7 @@ Number of faces detected.The value must be an integer within [0,3].
 gravityAcceleration?: double[]
 ```
 
-Gravity acceleration of user motion status, in m/s².
+用户运动状态的重力加速度，单位：m/s²。
 
 **类型：** ArkTS-Dyn: number[]  <br>ArkTS-Sta：double[]
 
@@ -114,7 +108,7 @@ Gravity acceleration of user motion status, in m/s².
 linearAcceleration?: double[][]
 ```
 
-Linear acceleration of user motion status, in m/s².
+用户运动状态的线性加速度，单位：m/s²。
 
 **类型：** ArkTS-Dyn: number[][]  <br>ArkTS-Sta：double[][]
 
@@ -136,7 +130,7 @@ Linear acceleration of user motion status, in m/s².
 visualAngle?: double[]
 ```
 
-User visual angle.The value ranges from 0 to 90, in degrees.
+用户视角。取值范围为0到90，单位：度。
 
 **类型：** ArkTS-Dyn: number[]  <br>ArkTS-Sta：double[]
 

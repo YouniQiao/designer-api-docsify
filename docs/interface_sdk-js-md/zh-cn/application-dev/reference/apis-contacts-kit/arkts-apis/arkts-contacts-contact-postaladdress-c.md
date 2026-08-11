@@ -10,12 +10,6 @@
 
 **系统能力：** SystemCapability.Applications.ContactsData
 
-## 导入模块
-
-```TypeScript
-import { contact } from 'kits/@kit.ContactsKit';
-```
-
 ## ADDR_HOME
 
 ```TypeScript
@@ -82,7 +76,7 @@ static readonly ADDR_WORK: 2
 static readonly CUSTOM_LABEL: 0
 ```
 
-自定义邮箱类型，默认值为0。
+自定义邮政地址类型，默认值为0。
 
 **类型：** 0
 
@@ -102,7 +96,7 @@ static readonly CUSTOM_LABEL: 0
 static readonly INVALID_LABEL_ID: -1
 ```
 
-无效邮箱类型，默认值为-1。
+无效地址类型，默认值为-1。
 
 **类型：** -1
 
@@ -162,7 +156,7 @@ country?: string
 labelId?: number
 ```
 
-邮箱的类型。
+邮政地址的类型。
 
 **类型：** number
 
@@ -182,7 +176,7 @@ labelId?: number
 labelName?: string
 ```
 
-邮箱的类型名称。
+邮政地址类型名称。
 
 **类型：** string
 

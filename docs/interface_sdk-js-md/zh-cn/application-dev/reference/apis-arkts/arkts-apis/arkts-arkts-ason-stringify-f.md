@@ -1,11 +1,5 @@
 # stringify
 
-## 导入模块
-
-```TypeScript
-import { ArkTSUtils } from 'kits/@kit.ArkTS';
-```
-
 ## stringify
 
 ```TypeScript

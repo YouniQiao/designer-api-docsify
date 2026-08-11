@@ -6,5 +6,5 @@
 
 | Name | Description |
 | --- | --- |
-| [ResultSet](arkts-arkdata-resultset-resultset-depr-i.md) | 结果集是指用户调用关系型数据库查询接口之后返回的结果集合，提供了多种灵活的数据访问方式，以便用户获取各项数据。 |
+| [ResultSet](arkts-arkdata-resultset-resultset-depr-i.md) | A result set is a set of results returned after the relational database (RDB) query APIs are called. You can use the  **resultset** APIs to obtain required data. |
 

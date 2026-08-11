@@ -10,12 +10,6 @@
 
 **系统能力：** SystemCapability.FileManagement.DistributedFileService.CloudSync.Core
 
-## 导入模块
-
-```TypeScript
-import { cloudSync } from 'kits/@kit.CoreFileKit';
-```
-
 ## cleanFileCache
 
 ```TypeScript
@@ -52,6 +46,8 @@ cleanFileCache(uri: string): void
 
 ## 示例
 
+ArkTS-Dyn示例：
+
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
 import { fileUri } from '@kit.CoreFileKit';
@@ -65,6 +61,23 @@ try {
 } catch (err) {
   let error: BusinessError = err as BusinessError;
   console.error(`clean file cache failed with error message: ${error.message}, error code: ${error.code}`);
+}
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+import { fileUri } from '@kit.CoreFileKit';
+
+let fileCache = new cloudSync.CloudFileCache();
+let path: string = "/data/storage/el2/cloud/1.txt";
+let uri: string = fileUri.getUriFromPath(path);
+try {
+  fileCache.cleanFileCache(uri);
+} catch (e) {
+  const error = e as BusinessError;
+  console.error(`clean file cache failed with error message: ${error.code}, message is ${error.message}`);
 }
 ```
 
@@ -116,7 +129,7 @@ A constructor used to create a **CloudFileCache** instance. Data is not shared b
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 401 | The input parameter is invalid.Possible causes:Incorrect parameter types. |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | The input parameter is invalid.Possible causes:Incorrect parameter types. |
 
 ## 示例
 
@@ -160,15 +173,28 @@ getCachedTotalSize(): Promise<long>
 
 ## 示例
 
+ArkTS-Dyn示例：
+
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
-import { fileUri } from '@kit.CoreFileKit';
 
 let fileCache = new cloudSync.CloudFileCache();
-
 fileCache.getCachedTotalSize().then((totalDownloadSize: number) => {
   console.info("totalDownloadSize: " + totalDownloadSize);
 }).catch((err: BusinessError) => {
+  console.error("get totalDownloadSize failed with error message: " + err.message + ", error code: " + err.code);
+});
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let fileCache = new cloudSync.CloudFileCache();
+fileCache.getCachedTotalSize().then<long>((totalDownloadSize: long): void => {
+  console.info("totalDownloadSize: " + totalDownloadSize);
+}).catch((err: BusinessError<void>): void => {
   console.error("get totalDownloadSize failed with error message: " + err.message + ", error code: " + err.code);
 });
 ```
@@ -200,7 +226,7 @@ off(event: 'progress', callback?: Callback<DownloadProgress>): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 401 | The input parameter is invalid.Possible causes:1.Mandatory parameters are left unspecified; &lt;br&gt;2.Incorrect parameter types. |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | The input parameter is invalid.Possible causes:1.Mandatory parameters are left unspecified; &lt;br&gt;2.Incorrect parameter types. |
 | 13600001 | IPC error |
 
 ## 示例
@@ -302,6 +328,24 @@ Unsubscribes from cloud file cache download progress event.
 | 13900020 | Invalid argument. Possible causes:Incorrect parameter types. |
 | 22400005 | Inner error. Possible causes: &lt;br&gt;1.Failed to access the database or execute the SQL statement. &lt;br&gt;2.System error, such as a null pointer, insufficient memory or a JS engine exception. |
 
+## 示例
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let fileCache = new cloudSync.CloudFileCache();
+let callback = (pg: cloudSync.MultiDownloadProgress): void => {
+  console.info("download state: " + pg.state);
+}
+try {
+  fileCache.onBatchDownload(callback);
+  fileCache.offBatchDownload(callback);
+} catch (e) {
+  let error = e as BusinessError;
+  console.error(`Failed to unregister download callback, error code: ${error.code}, message: ${error.message}`);
+}
+```
+
 ## offProgress
 
 ```TypeScript
@@ -328,8 +372,25 @@ Unsubscribes from cloud file cache download progress event.
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 401 | The input parameter is invalid.Possible causes:Incorrect parameter types. |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | The input parameter is invalid.Possible causes:Incorrect parameter types. |
 | 13600001 | IPC error |
+
+## 示例
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let fileCache = new cloudSync.CloudFileCache();
+let callback = (pg: cloudSync.DownloadProgress): void => {
+  console.info("download state: " + pg.state);
+}
+try {
+  fileCache.onProgress(callback);
+  fileCache.offProgress(callback);
+} catch (error) {
+  console.error(`Error code: ${error.code}, message: ${error.message}`);
+}
+```
 
 ## on
 
@@ -358,7 +419,7 @@ on(event: 'progress', callback: Callback<DownloadProgress>): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 401 | The input parameter is invalid.Possible causes:1.Mandatory parameters are left unspecified; &lt;br&gt;2.Incorrect parameter types. |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | The input parameter is invalid.Possible causes:1.Mandatory parameters are left unspecified; &lt;br&gt;2.Incorrect parameter types. |
 | 13600001 | IPC error |
 
 ## 示例
@@ -461,6 +522,28 @@ Subscribes to a batch of cloud file cache download progress change event.This me
 | 13900020 | Invalid argument. Possible causes: &lt;br&gt;1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
 | 22400005 | Inner error. Possible causes: &lt;br&gt;1.Failed to access the database or execute the SQL statement. &lt;br&gt;2.System error, such as a null pointer, insufficient memory or a JS engine exception. |
 
+## 示例
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let fileCache = new cloudSync.CloudFileCache();
+let callback = (data: cloudSync.MultiDownloadProgress): void => {
+  console.info(`Batch download progress: downloadedSize: ${data.downloadedSize}, totalSize: ${data.totalSize}`);
+  if (data.state == cloudSync.State.COMPLETED) {
+    console.info('Batch download finished.');
+  } else if (data.state == cloudSync.State.FAILED) {
+    console.info(`Batch download stopped, error type: ${data.errType}.`);
+  }
+};
+try {
+  fileCache.onBatchDownload(callback);
+} catch (e) {
+  let error = e as BusinessError;
+  console.error(`Failed to register download callback, error code: ${error.code}, message: ${error.message}`);
+}
+```
+
 ## onProgress
 
 ```TypeScript
@@ -487,8 +570,24 @@ Subscribes to cloud file cache download progress change event.This method uses a
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 401 | The input parameter is invalid.Possible causes: &lt;br&gt;1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | The input parameter is invalid.Possible causes: &lt;br&gt;1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
 | 13600001 | IPC error |
+
+## 示例
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let fileCache = new cloudSync.CloudFileCache();
+let callback = (pg: cloudSync.DownloadProgress): void => {
+  console.info("download state: " + pg.state);
+};
+try {
+  fileCache.onProgress(callback);
+} catch (error) {
+  console.error(`Error code: ${error.code}, message: ${error.message}`);
+}
+```
 
 ## start
 
@@ -522,13 +621,15 @@ start(uri: string): Promise<void>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 401 | The input parameter is invalid.Possible causes:1.Mandatory parameters are left unspecified; &lt;br&gt;2.Incorrect parameter types. |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | The input parameter is invalid.Possible causes:1.Mandatory parameters are left unspecified; &lt;br&gt;2.Incorrect parameter types. |
 | 13900002 | No such file or directory. |
 | 14000002 | Invalid uri. |
 | 13900025 | No space left on device. |
 | 13600001 | IPC error. |
 
 ## 示例
+
+ArkTS-Dyn示例：
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -550,6 +651,29 @@ try {
 fileCache.start(uri).then(() => {
   console.info("start download successfully");
 }).catch((err: BusinessError) => {
+  console.error("start download failed with error message: " + err.message + ", error code: " + err.code);
+});
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+import { fileUri } from '@kit.CoreFileKit';
+
+let fileCache = new cloudSync.CloudFileCache();
+let path: string = "/data/storage/el2/cloud/1.txt";
+let uri: string = fileUri.getUriFromPath(path);
+try {
+  fileCache.on('progress', (pg: cloudSync.DownloadProgress): void => {
+    console.info("download state: " + pg.state);
+  });
+} catch (error) {
+  console.error(`Error code: ${error.code}, message: ${error.message}`);
+}
+fileCache.start(uri).then<void>((): void => {
+  console.info("start download successfully");
+}).catch((err: BusinessError<void>): void => {
   console.error("start download failed with error message: " + err.message + ", error code: " + err.code);
 });
 ```
@@ -581,13 +705,15 @@ start(uri: string, callback: AsyncCallback<void>): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 401 | The input parameter is invalid.Possible causes:1.Mandatory parameters are left unspecified; &lt;br&gt;2.Incorrect parameter types. |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | The input parameter is invalid.Possible causes:1.Mandatory parameters are left unspecified; &lt;br&gt;2.Incorrect parameter types. |
 | 13900002 | No such file or directory. |
 | 14000002 | Invalid uri. |
 | 13900025 | No space left on device. |
 | 13600001 | IPC error. |
 
 ## 示例
+
+ArkTS-Dyn示例：
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -599,6 +725,24 @@ let uri = fileUri.getUriFromPath(path);
 
 fileCache.start(uri, (err: BusinessError) => {
   if (err) {
+    console.error("start download failed with error message: " + err.message + ", error code: " + err.code);
+  } else {
+    console.info("start download successfully");
+  }
+});
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+import { fileUri } from '@kit.CoreFileKit';
+
+let fileCache = new cloudSync.CloudFileCache();
+let path: string = "/data/storage/el2/cloud/1.txt";
+let uri: string = fileUri.getUriFromPath(path);
+fileCache.start(uri, (err: BusinessError<void> | null): void => {
+  if (err && err.code) {
     console.error("start download failed with error message: " + err.message + ", error code: " + err.code);
   } else {
     console.info("start download successfully");
@@ -655,6 +799,8 @@ startBatch(uris: Array<string>, fileType?: DownloadFileType): Promise<long>
 
 ## 示例
 
+ArkTS-Dyn示例：
+
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
 
@@ -672,6 +818,28 @@ let uriList: Array<string> = [];
 fileCache.startBatch(uriList, cloudSync.DownloadFileType.CONTENT).then((downloadId: number) => {
   console.info(`start batch download successfully, taskId: ${downloadId}`);
 }).catch((err: BusinessError) => {
+  console.error(`start download failed with error message: ${err.message}, error code: ${err.code}`);
+});
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let fileCache = new cloudSync.CloudFileCache();
+try {
+  fileCache.on('batchDownload', (pg: cloudSync.MultiDownloadProgress): void => {
+    console.info(`batch download state: ${pg.state}`);
+  });
+} catch (e) {
+  const error = e as BusinessError;
+  console.error(`Failed to unregister download callback, error code: ${error.code}, message: ${error.message}`);
+}
+let uriList: Array<string> = [];
+fileCache.startBatch(uriList, cloudSync.DownloadFileType.CONTENT).then<long>((downloadId: long): void => {
+  console.info(`start batch download successfully, taskId: ${downloadId}`);
+}).catch((err: BusinessError<void>): void => {
   console.error(`start download failed with error message: ${err.message}, error code: ${err.code}`);
 });
 ```
@@ -711,12 +879,14 @@ When **stop()** is called, the current file download process terminates, and dow
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 401 | The input parameter is invalid.Possible causes:1.Mandatory parameters are left unspecified; &lt;br&gt;2.Incorrect parameter types. |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | The input parameter is invalid.Possible causes:1.Mandatory parameters are left unspecified; &lt;br&gt;2.Incorrect parameter types. |
 | 13900002 | No such file or directory. |
 | 14000002 | Invalid uri. |
 | 13600001 | IPC error. |
 
 ## 示例
+
+ArkTS-Dyn示例：
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -729,6 +899,22 @@ let uri = fileUri.getUriFromPath(path);
 fileCache.stop(uri, true).then(() => {
   console.info("stop download successfully");
 }).catch((err: BusinessError) => {
+  console.error("stop download failed with error message: " + err.message + ", error code: " + err.code);
+});
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+import { fileUri } from '@kit.CoreFileKit';
+
+let fileCache = new cloudSync.CloudFileCache();
+let path: string = "/data/storage/el2/cloud/1.txt";
+let uri: string = fileUri.getUriFromPath(path);
+fileCache.stop(uri, true).then<void>((): void => {
+  console.info("stop download successfully");
+}).catch((err: BusinessError<void>): void => {
   console.error("stop download failed with error message: " + err.message + ", error code: " + err.code);
 });
 ```
@@ -762,12 +948,14 @@ stop(uri: string, callback: AsyncCallback<void>): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 401 | The input parameter is invalid.Possible causes:1.Mandatory parameters are left unspecified; &lt;br&gt;2.Incorrect parameter types. |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | The input parameter is invalid.Possible causes:1.Mandatory parameters are left unspecified; &lt;br&gt;2.Incorrect parameter types. |
 | 13900002 | No such file or directory. |
 | 14000002 | Invalid uri. |
 | 13600001 | IPC error. |
 
 ## 示例
+
+ArkTS-Dyn示例：
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -779,6 +967,24 @@ let uri = fileUri.getUriFromPath(path);
 
 fileCache.stop(uri, (err: BusinessError) => {
   if (err) {
+    console.error("stop download failed with error message: " + err.message + ", error code: " + err.code);
+  } else {
+    console.info("stop download successfully");
+  }
+});
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+import { fileUri } from '@kit.CoreFileKit';
+
+let fileCache = new cloudSync.CloudFileCache();
+let path: string = "/data/storage/el2/cloud/1.txt";
+let uri: string = fileUri.getUriFromPath(path);
+fileCache.stop(uri, (err: BusinessError<void> | null): void => {
+  if (err && err.code) {
     console.error("stop download failed with error message: " + err.message + ", error code: " + err.code);
   } else {
     console.info("stop download successfully");
@@ -833,6 +1039,8 @@ stopBatch(downloadId: long, needClean?: boolean): Promise<void>
 
 ## 示例
 
+ArkTS-Dyn示例：
+
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
 
@@ -851,6 +1059,30 @@ if (needStop && taskId > 0) {
   fileCache.stopBatch(taskId, true).then(() => {
     console.info("stop batch download successfully");
   }).catch((err: BusinessError) => {
+    console.error(`stop batch download failed with error message: ${err.message}, error code: ${err.code}`);
+  });
+}
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let taskId: long = -1;
+let uriList: Array<string> = [];
+let fileCache = new cloudSync.CloudFileCache();
+fileCache.startBatch(uriList, cloudSync.DownloadFileType.CONTENT).then<long>((downloadId: long): void => {
+  taskId = downloadId;
+  console.info("start batch download successfully");
+}).catch((err: BusinessError<void>): void => {
+  console.error(`start batch download failed with error message: ${err.message}, error code: ${err.code}`);
+});
+let needStop: boolean = true;
+if (needStop && taskId > 0) {
+  fileCache.stopBatch(taskId, true).then<void>((): void => {
+    console.info("stop batch download successfully");
+  }).catch((err: BusinessError<void>): void => {
     console.error(`stop batch download failed with error message: ${err.message}, error code: ${err.code}`);
   });
 }

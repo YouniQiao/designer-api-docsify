@@ -12,12 +12,6 @@ AudioCapturer
 **系统能力：** 
 - API版本12+：SystemCapability.Multimedia.Audio.Core
 
-## 导入模块
-
-```TypeScript
-import { audio } from 'kits/@kit.AudioKit';
-```
-
 ## 汇总
 
 ### 函数

@@ -1,6 +1,6 @@
 # ImageLoadResult
 
-图片数据加载成功和解码成功触发回调时返回的对象。
+The information about the successfully loaded image.
 
 **Since:** 23
 
@@ -16,9 +16,7 @@
 componentHeight: double
 ```
 
-组件的高。
-
-单位：[px](../../../reference/apis-arkui/arkui-ts/ts-pixel-units.md#基本像素单位)
+The height of the component source.Unit: px.
 
 **Type:** double
 
@@ -38,9 +36,7 @@ componentHeight: double
 componentWidth: double
 ```
 
-组件的宽。
-
-单位：[px](../../../reference/apis-arkui/arkui-ts/ts-pixel-units.md#基本像素单位)
+The width of the component source.Unit: px.
 
 **Type:** double
 
@@ -60,13 +56,7 @@ componentWidth: double
 contentHeight: double
 ```
 
-图片实际绘制的高度。
-
-单位：[px](../../../reference/apis-arkui/arkui-ts/ts-pixel-units.md#基本像素单位)
-
-**说明：**
-
-仅在loadingStatus返回1时有效。
+The height of the picture that is actually drawn.Unit: px.
 
 **Type:** double
 
@@ -86,13 +76,7 @@ contentHeight: double
 contentOffsetX: double
 ```
 
-实际绘制内容相对于组件自身的x轴偏移。
-
-单位：[px](../../../reference/apis-arkui/arkui-ts/ts-pixel-units.md#基本像素单位)
-
-**说明：**
-
-仅在loadingStatus返回1时有效。
+The offset between image content and image component on the X-axis.Unit: px.
 
 **Type:** double
 
@@ -112,13 +96,7 @@ contentOffsetX: double
 contentOffsetY: double
 ```
 
-实际绘制内容相对于组件自身的y轴偏移。
-
-单位：[px](../../../reference/apis-arkui/arkui-ts/ts-pixel-units.md#基本像素单位)
-
-**说明：**
-
-仅在loadingStatus返回1时有效。
+The offset between image content and image component on the Y-axis.Unit: px.
 
 **Type:** double
 
@@ -138,13 +116,7 @@ contentOffsetY: double
 contentWidth: double
 ```
 
-图片实际绘制的宽度。
-
-单位：[px](../../../reference/apis-arkui/arkui-ts/ts-pixel-units.md#基本像素单位)
-
-**说明：**
-
-仅在loadingStatus返回1时有效。
+The width of the picture that is actually drawn.Unit: px.
 
 **Type:** double
 
@@ -164,9 +136,7 @@ contentWidth: double
 height: double
 ```
 
-图片的高。
-
-单位：[px](../../../reference/apis-arkui/arkui-ts/ts-pixel-units.md#基本像素单位)
+The height of the image source.Unit: px.
 
 **Type:** double
 
@@ -186,11 +156,7 @@ height: double
 loadingStatus: double
 ```
 
-图片加载成功的状态值。
-
-**说明：**
-
-返回的状态值为0时，表示图片数据加载成功。返回的状态值为1时，表示图片解码成功。
+The value of the status of the image being loaded successfully.If the returned status value is 0, the image data is successfully loaded.If the returned status value is 1, the image is successfully decoded.
 
 **Type:** double
 
@@ -210,9 +176,7 @@ loadingStatus: double
 width: double
 ```
 
-图片的宽。
-
-单位：[px](../../../reference/apis-arkui/arkui-ts/ts-pixel-units.md#基本像素单位)
+The width of the image source.Unit: px.
 
 **Type:** double
 

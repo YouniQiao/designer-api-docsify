@@ -1,6 +1,6 @@
 # SystemLiveViewSubscriber (System API)
 
-系统实况窗订阅者。
+Subscriber of the system live view notification.
 
 **Since:** 11
 
@@ -30,7 +30,7 @@ ArkTS-Sta:
 onResponse?: (notificationId: int, buttonOptions: ButtonOptions) => void
 ```
 
-点击按钮的回调。
+Callback when the button is touched.
 
 **Since:** 11
 

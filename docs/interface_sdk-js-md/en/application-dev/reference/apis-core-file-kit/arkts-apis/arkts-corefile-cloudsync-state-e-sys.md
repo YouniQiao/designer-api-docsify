@@ -1,6 +1,6 @@
 # State
 
-云文件下载状态，为枚举类型。
+Enumerates the download states of a cloud file.
 
 **Since:** 11
 

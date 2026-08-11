@@ -1,6 +1,6 @@
 # AtomicFile
 
-AtomicFile是一个用于对文件进行原子读写等操作的类。在写操作时，通过写入临时文件，并在写入成功后将其重命名到原始文件位置来确保写入文件的完整性；而在写入失败时删除临时文件，不修改原始文件内容。使用者可以自行调用finishWrite或failWrite来完成文件内容的写入或回滚。
+AtomicFile is a class used to perform atomic read and write operations on files.A temporary file is written and renamed to the original file location, which ensures file integrity.If the write operation fails, the temporary file is deleted without modifying the original file content.You can call finishWrite() or failWrite() to write or roll back file content.
 
 **Since:** 23
 
@@ -22,7 +22,7 @@ import { Options, ReaderIteratorResult, Watcher, ReadTextOptions, WatchEventList
 constructor(path: string)
 ```
 
-对于给定路径的文件创建一个AtomicFile类。
+The AtomicFile constructor.
 
 **Since:** 23
 
@@ -36,13 +36,13 @@ constructor(path: string)
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| path | string | Yes | 文件的沙箱路径。 |
+| path | string | Yes | Application sandbox path of the file. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. Possible causes:1.Mandatory parameters are left unspecified; &lt;br&gt;2.Incorrect parameter types. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes:1.Mandatory parameters are left unspecified; &lt;br&gt;2.Incorrect parameter types. |
 
 ## delete
 
@@ -50,7 +50,7 @@ constructor(path: string)
 delete(): void
 ```
 
-删除AtomicFile类，会删除原始文件和临时文件。
+Deletes the AtomicFile class, including the original files and temporary files.
 
 **Since:** 23
 
@@ -76,7 +76,7 @@ delete(): void
 failWrite(): void
 ```
 
-文件写入失败后调用，将执行文件回滚操作。
+Rolls back the file after the file fails to be written.
 
 **Since:** 23
 
@@ -98,7 +98,7 @@ failWrite(): void
 finishWrite(): void
 ```
 
-在完成对startWrite返回流的写入操作时调用，表示文件写入成功。
+Finishes writing file data when the write operation is complete.
 
 **Since:** 23
 
@@ -120,7 +120,7 @@ finishWrite(): void
 getBaseFile(): File
 ```
 
-通过AtomicFile对象获取文件对象。
+Obtains the file object through the AtomicFile object. The FD needs to be closed by calling close().
 
 **Since:** 23
 
@@ -151,7 +151,7 @@ getBaseFile(): File
 openRead(): ReadStream
 ```
 
-创建一个读文件流。
+Creates a ReadStream instance.
 
 **Since:** 23
 
@@ -182,7 +182,7 @@ openRead(): ReadStream
 readFully(): ArrayBuffer
 ```
 
-读取文件全部内容。
+Reads all content of a file.
 
 **Since:** 23
 
@@ -211,7 +211,7 @@ readFully(): ArrayBuffer
 startWrite(): WriteStream
 ```
 
-对文件开始新的写入操作。将返回一个WriteStream，用于在其中写入新的文件数据。当文件不存在时新建文件。在写入文件完成后，写入成功需要调用finishWrite()，写入失败需要调用failWrite()。
+Starts to write new file data in the WriteStream object returned. If the file does not exist, create a file.Call finishWrite() if the write operation is successful; call failWrite() if the write operation fails.
 
 **Since:** 23
 

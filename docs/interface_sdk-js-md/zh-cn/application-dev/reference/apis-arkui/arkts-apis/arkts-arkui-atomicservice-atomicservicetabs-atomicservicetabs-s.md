@@ -16,12 +16,6 @@ AtomicServiceTabs高级组件，对Tabs组件中不需要暴露给用户进行�
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
-## 导入模块
-
-```TypeScript
-import { TabBarPosition, TabBarOptions, AtomicServiceTabs, TabContentBuilder, OnContentWillChangeCallback } from 'kits/@kit.ArkUI';
-```
-
 ## onContentWillChange
 
 ```TypeScript
@@ -202,7 +196,7 @@ tabBarOptionsArray: [
 
 页签选项数组，最多支持5个页签。
 
-**类型：** [     TabBarOptions,     TabBarOptions,     TabBarOptions?,     TabBarOptions?,     TabBarOptions?   ]
+**类型：** [     TabBarOptions,     TabBarOptions,     TabBarOptions?,     TabBarOptions?,     TabBarOptions?   ]
 
 **起始版本：** 12
 
@@ -252,7 +246,7 @@ tabContents?: [
 
 内容视图容器数组，最多支持5个页签，默认值为空。
 
-**类型：** [      TabContentBuilder?,     TabContentBuilder?,     TabContentBuilder?,     TabContentBuilder?,     TabContentBuilder?   ]
+**类型：** [      TabContentBuilder?,     TabContentBuilder?,     TabContentBuilder?,     TabContentBuilder?,     TabContentBuilder?   ]
 
 **起始版本：** 12
 

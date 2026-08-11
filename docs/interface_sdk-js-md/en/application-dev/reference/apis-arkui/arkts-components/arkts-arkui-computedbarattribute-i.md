@@ -1,6 +1,6 @@
 # ComputedBarAttribute
 
-滚动条位置和长度对象。
+Provides information about the position and length of the scrollbar.
 
 **Since:** 10
 
@@ -16,7 +16,7 @@
 totalLength: number
 ```
 
-Grid内容总长度，单位px。
+Total length of the grid content, in px.
 
 **Type:** number
 
@@ -38,7 +38,7 @@ Grid内容总长度，单位px。
 totalOffset: number
 ```
 
-Grid内容相对显示区域的总偏移，单位px。
+Total offset of the grid content relative to the display area, in px.
 
 **Type:** number
 

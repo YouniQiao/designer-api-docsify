@@ -17,12 +17,6 @@
 
 **系统能力：** SystemCapability.Security.CryptoFramework.Kdf
 
-## 导入模块
-
-```TypeScript
-import { cryptoFramework } from 'kits/@kit.CryptoArchitectureKit';
-```
-
 ## keySize
 
 ```TypeScript

@@ -1,6 +1,6 @@
 # PreviewText
 
-预上屏信息。
+The previewText.
 
 **Since:** 23
 
@@ -16,7 +16,7 @@
 offset: int
 ```
 
-预上屏内容的起始位置。
+Start offset of the previewText.The value should be an integer.
 
 **Type:** int
 
@@ -36,7 +36,7 @@ offset: int
 value: string
 ```
 
-预上屏的内容。
+Value of the previewText.
 
 **Type:** string
 

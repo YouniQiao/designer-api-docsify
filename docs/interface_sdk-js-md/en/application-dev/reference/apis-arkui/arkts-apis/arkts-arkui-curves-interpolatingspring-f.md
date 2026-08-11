@@ -12,7 +12,7 @@ import { curves } from 'kits/@kit.ArkUI';
 export function interpolatingSpring(velocity: double, mass: double, stiffness: double, damping: double): ICurve
 ```
 
-构造插值器弹簧曲线对象，生成一条从0到1的动画曲线，实际动画值根据曲线进行插值计算。动画时间由曲线参数决定，不受animation、animateTo中的duration参数控制。
+Creates an interpolating spring curve animated from 0 to 1. The actual animation value is calculated based on the curve. The animation duration is subject to the curve parameters, rather than the **duration** parameter in **animation** or **animateTo**.
 
 **Since:** 23
 
@@ -37,5 +37,5 @@ export function interpolatingSpring(velocity: double, mass: double, stiffness: d
 
 | Type | Description |
 | --- | --- |
-| [ICurve](arkts-arkui-curves-icurve-i.md) | 曲线对象。 &lt;br&gt;**说明:** 弹性动画曲线为物理曲线，[animation]{ |
+| [ICurve](arkts-arkui-curves-icurve-i.md) |  |
 

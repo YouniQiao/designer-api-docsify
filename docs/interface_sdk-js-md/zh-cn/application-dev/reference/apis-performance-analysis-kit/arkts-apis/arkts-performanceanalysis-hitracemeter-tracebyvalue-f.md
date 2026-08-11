@@ -1,11 +1,5 @@
 # traceByValue
 
-## 导入模块
-
-```TypeScript
-import { hiTraceMeter } from 'kits/@kit.PerformanceAnalysisKit';
-```
-
 ## traceByValue
 
 ```TypeScript
@@ -14,7 +8,8 @@ function traceByValue(name: string, count: long): void
 
 用来标记一个跟踪的整数变量，该变量的数值会不断变化。适用于需要实时监控数值变化（如网络请求次数、缓存命中率、内存占用等）的场景，能够帮助开发者快速发现异常波动，分析数据趋势。
 
-从API version 19开始，建议使用[traceByValue&lt;sup&gt;19+&lt;/sup&gt;()](arkts-performanceanalysis-hitracemeter-tracebyvalue-f.md#tracebyvalue)接口，以便分级控制跟踪输出。
+从API version 19开始，建议使用  
+[traceByValue](arkts-performanceanalysis-hitracemeter-tracebyvalue-f.md#tracebyvalue)接口，以便分级控制跟踪输出。
 
 **起始版本：** 8
 
@@ -35,9 +30,21 @@ function traceByValue(name: string, count: long): void
 
 ## 示例
 
+ArkTS-Dyn示例：
+
 ```TypeScript
-let traceCount = 3;  // 定义要跟踪的整数变量初始值
-hiTraceMeter.traceByValue("myTestCount", traceCount);
+let traceCount: number = 3;
+hiTraceMeter.traceByValue("myTestCount", traceCount);  // 使用trace打点记录myTestCount的值。
+traceCount = 4;
+hiTraceMeter.traceByValue("myTestCount", traceCount);  // 当myTestCount发生变化时，记录新值。
+// 业务流程......
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+let traceCount: long = 3;  // 定义要跟踪的整数变量初始值
+hiTraceMeter.traceByValue("myTestCount", traceCount);  // 使用trace打点记录myTestCount的值。
 traceCount = 4;
 hiTraceMeter.traceByValue("myTestCount", traceCount);  // 当myTestCount发生变化时，记录新值。
 // 业务流程......
@@ -72,9 +79,22 @@ function traceByValue(level: HiTraceOutputLevel, name: string, count: long): voi
 
 ## 示例
 
+ArkTS-Dyn示例：
+
 ```TypeScript
 const COMMERCIAL = hiTraceMeter.HiTraceOutputLevel.COMMERCIAL;
-let traceCount = 3;
+let traceCount: number = 3;
+hiTraceMeter.traceByValue(COMMERCIAL, "myTestCount", traceCount);
+traceCount = 4;
+hiTraceMeter.traceByValue(COMMERCIAL, "myTestCount", traceCount);
+// 业务流程......
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+const COMMERCIAL = hiTraceMeter.HiTraceOutputLevel.COMMERCIAL;
+let traceCount: long = 3;
 hiTraceMeter.traceByValue(COMMERCIAL, "myTestCount", traceCount);
 traceCount = 4;
 hiTraceMeter.traceByValue(COMMERCIAL, "myTestCount", traceCount);

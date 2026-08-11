@@ -12,7 +12,7 @@ import { cloudSync } from 'kits/@kit.CoreFileKit';
 function getCoreFileSyncState(uri: string): FileState
 ```
 
-同步方法获取云盘文件同步上行状态。
+Obtains the upload sync state of a cloud file. This API returns the result synchronously.
 
 **Since:** 20
 
@@ -26,13 +26,13 @@ function getCoreFileSyncState(uri: string): FileState
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| uri | string | Yes | 待获取云盘文件同步上行状态的文件URI。 |
+| uri | string | Yes | URI of the file whose sync state is to be obtained. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [FileState](arkts-corefile-cloudsync-filestate-e.md) | 返回给定云盘文件的同步上行状态。 |
+| [FileState](arkts-corefile-cloudsync-filestate-e.md) | Upload sync state of the given cloud file. |
 
 **Error codes:**
 

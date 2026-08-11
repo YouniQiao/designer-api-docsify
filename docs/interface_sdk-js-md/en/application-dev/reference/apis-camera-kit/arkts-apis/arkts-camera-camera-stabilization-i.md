@@ -1,10 +1,10 @@
 # Stabilization
 
-Stabilization继承自[StabilizationQuery](arkts-camera-camera-stabilizationquery-i.md)。
+**Stabilization** inherits from [StabilizationQuery](arkts-camera-camera-stabilizationquery-i.md).
 
-提供设备在录像模式下设置视频防抖的操作。
+It provides APIs to set video stabilization.
 
-需要会话中有录像流（[VideoOutput](arkts-camera-camera-videooutput-i.md)）的前提下，才可以对视频进行防抖设置。
+You can set video stabilization only when a [VideoOutput](arkts-camera-camera-videooutput-i.md) stream exists in the session.
 
 **Inheritance/Implementation:** Stabilization extends [StabilizationQuery](arkts-camera-camera-stabilizationquery-i.md)
 
@@ -28,7 +28,7 @@ import { camera } from 'kits/@kit.CameraKit';
 getActiveVideoStabilizationMode(): VideoStabilizationMode
 ```
 
-查询当前正在使用的视频防抖模式。
+Obtains the video stabilization mode in use.
 
 **Since:** 11
 
@@ -44,13 +44,13 @@ getActiveVideoStabilizationMode(): VideoStabilizationMode
 
 | Type | Description |
 | --- | --- |
-| [VideoStabilizationMode](arkts-camera-camera-videostabilizationmode-e.md) | 视频防抖是否正在使用。若接口调用失败，返回undefined。 |
+| [VideoStabilizationMode](arkts-camera-camera-videostabilizationmode-e.md) | Video stabilization mode obtained. If the API call fails, undefined is returned. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 7400103 | Session not config. |
+| [7400103](../errorcode-camera.md#7400103-session-not-configured) | Session not config. |
 
 ## setVideoStabilizationMode
 
@@ -58,8 +58,8 @@ getActiveVideoStabilizationMode(): VideoStabilizationMode
 setVideoStabilizationMode(mode: VideoStabilizationMode): void
 ```
 
-设置视频防抖模式。需要先检查设备是否支持对应的防抖模式，可以通过  
-[isVideoStabilizationModeSupported](arkts-camera-camera-stabilizationquery-i.md#isvideostabilizationmodesupported)方法判断所设置的模式是否支持。建议在[commitConfig](arkts-camera-camera-session-i.md#commitconfig)与[Start](arkts-camera-camera-session-i.md#start)之间设置视频防抖。
+Sets a video stabilization mode. Before the setting, call   
+[isVideoStabilizationModeSupported](arkts-camera-camera-stabilizationquery-i.md#isvideostabilizationmodesupported) to check whether the target video stabilization mode is supported. It is recommended that you set the video stabilization mode between [commitConfig](arkts-camera-camera-session-i.md#commitconfig) and [Start](arkts-camera-camera-session-i.md#start).
 
 **Since:** 11
 
@@ -75,11 +75,11 @@ setVideoStabilizationMode(mode: VideoStabilizationMode): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| mode | [VideoStabilizationMode](arkts-camera-camera-videostabilizationmode-e.md) | Yes | 需要设置的视频防抖模式。 |
+| mode | [VideoStabilizationMode](arkts-camera-camera-videostabilizationmode-e.md) | Yes | Video stabilization mode. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 7400103 | Session not config. |
+| [7400103](../errorcode-camera.md#7400103-session-not-configured) | Session not config. |
 

@@ -1,6 +1,6 @@
 # HdrType
 
-HDR视频的高动态范围渲染类型。
+Sets the HDR type of the XComponent.
 
 **Since:** 24
 
@@ -16,7 +16,7 @@ HDR视频的高动态范围渲染类型。
 DEFAULT = 0
 ```
 
-默认HDR类型，使用标准高动态范围渲染模式。
+Default type.
 
 **Since:** 24
 
@@ -34,7 +34,7 @@ DEFAULT = 0
 AIHDR = 1
 ```
 
-AI HDR类型，使用AI算法对非HDR内容进行智能动态范围扩展，实现HDR的显示效果。
+AIHDR type.
 
 **Since:** 24
 

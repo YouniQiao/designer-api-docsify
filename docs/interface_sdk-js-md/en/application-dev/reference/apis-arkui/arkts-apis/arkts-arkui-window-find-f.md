@@ -12,11 +12,7 @@ import { window } from 'kits/@kit.ArkUI';
 function find(id: string, callback: AsyncCallback<Window>): void
 ```
 
-查找id所对应的窗口，使用callback异步回调。
-
-> **说明：**
-> 
-> 从API version 7开始支持，从API version 9开始废弃，建议使用[findWindow()](arkts-arkui-window-findwindow-f.md#findwindow)替代。
+Finds a window based on the ID. This API uses an asynchronous callback to return the result.
 
 **Since:** 7
 
@@ -34,8 +30,8 @@ function find(id: string, callback: AsyncCallback<Window>): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| id | string | Yes | 窗口名字，即[Configuration](arkts-arkui-window-configuration-i.md)中的name。 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Window&gt; | Yes | 回调函数。返回当前查找到的窗口对象。 |
+| id | string | Yes | Window name, that is, the value of name in [Configuration](arkts-arkui-window-configuration-i.md). |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Window&gt; | Yes | Callback used to return the window found. |
 
 ## Examples
 
@@ -61,11 +57,7 @@ window.find('test', (err: BusinessError, data) => {
 function find(id: string): Promise<Window>
 ```
 
-查找id所对应的窗口，使用Promise异步回调。
-
-> **说明：**
-> 
-> 从API version 7开始支持，从API version 9开始废弃，建议使用[findWindow()](arkts-arkui-window-findwindow-f.md#findwindow)替代。
+Finds a window based on the ID. This API uses a promise to return the result.
 
 **Since:** 7
 
@@ -83,13 +75,13 @@ function find(id: string): Promise<Window>
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| id | string | Yes | 窗口名字，即[Configuration](arkts-arkui-window-configuration-i.md)中的name。 |
+| id | string | Yes | Window name, that is, the value of name in [Configuration](arkts-arkui-window-configuration-i.md). |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;Window&gt; | Promise对象。返回当前查找的窗口对象。 |
+| Promise&lt;Window&gt; | Promise used to return the window found. |
 
 ## Examples
 

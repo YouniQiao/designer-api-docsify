@@ -12,7 +12,7 @@ import { contact } from 'kits/@kit.ContactsKit';
 function addContacts(context: Context, contacts: Array<Contact>): Promise<Array<int>>
 ```
 
-批量添加联系人。使用Promise异步回调。
+Adds contacts in batches. This API uses a promise to return the result.
 
 **Since:** 23
 
@@ -30,30 +30,30 @@ function addContacts(context: Context, contacts: Array<Contact>): Promise<Array<
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| context | [Context](../../apis-arkui/arkts-components/arkts-arkui-context-t.md) | Yes | 应用上下文Context。 |
-| contacts | Array&lt;Contact&gt; | Yes | 联系人信息数组。 |
+| context | [Context](../../apis-arkui/arkts-components/arkts-arkui-context-t.md) | Yes | Indicates the context of application or capability. |
+| contacts | Array&lt;Contact&gt; | Yes | Indicates the contact information. array. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;Array&lt;int&gt;&gt; | Promise对象，返回批量添加的联系人id数组。 |
+| Promise&lt;Array&lt;int&gt;&gt; | Promise used to return the result, which is the ID array of the contacts added in batches. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 201 | Permission denied. |
-| 16700002 | Invalid parameter value. |
-| 16700001 | General error. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
+| [16700002](../errorcode-contacts.md#16700002-parameter-check-failed) | Invalid parameter value. |
+| [16700001](../errorcode-contacts.md#16700001-system-internal-error) | General error. |
 
 ## Examples
 
-In the examples in this document, this.context is used to obtain the UIAbilityContext, where this represents a UIAbility instance inherited from UIAbility. If you need to use the capabilities provided by UIAbilityContext in the UI, see [Obtaining the Context of UIAbility](../../application-models/uiability-usage.md#obtaining-the-context-of-uiability).
+In the sample code provided in this topic, this.context is used to obtain UIAbilityContext, where this indicates a UIAbility instance inherited from UIAbility. To use UIAbilityContext APIs on pages, see [Obtaining the Context of UIAbility](../../application-models/uiability-usage.md#obtaining-the-context-of-uiability).
 
 ```TypeScript
 import { common } from '@kit.AbilityKit';
-import { contact } from '@kit.ContactsKit';
+import { BusinessError } from '@kit.BasicServicesKit';
 
 const contactInfo1: contact.Contact = {
   name: { fullName: 'xxx1'},
@@ -63,10 +63,11 @@ const contactInfo2: contact.Contact = {
   name: { fullName: 'xxx2'},
   phoneNumbers: [{ phoneNumber: '139xxxxxx' }]
 };
-// Obtain the context in the component.
 const context = this.getUIContext().getHostContext() as common.UIAbilityContext;
 contact.addContacts(context, [contactInfo1, contactInfo2]).then((data) => {
   console.info(`Succeeded in addContacts.data->${JSON.stringify(data)}`);
+}).catch((err: BusinessError) => {
+  console.error(`Failed to addContacts. Code: ${err.code}, message: ${err.message}`);
 });
 ```
 

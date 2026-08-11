@@ -8,12 +8,6 @@
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Lite
 
-## 导入模块
-
-```TypeScript
-import { LocaleResponse } from 'kits/@kit.ArkUI';
-```
-
 ## countryOrRegion
 
 ```TypeScript

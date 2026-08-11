@@ -1,6 +1,6 @@
 # WebNativeMessagingExtensionAbility
 
-为开发者提供Web原生消息通信能力，继承自ExtensionAbility。
+class of web native messaging extension ability.
 
 **Inheritance/Implementation:** WebNativeMessagingExtensionAbility extends [ExtensionAbility](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-extensionability-extensionability-c.md/arkts-ability-app-ability-extensionability-extensionability-c.md)
 
@@ -24,7 +24,7 @@ import { ConnectionInfo } from 'kits/@kit.ArkWeb';
 onConnectNative(info: ConnectionInfo): void
 ```
 
-Web原生消息连接建立时回调此方法。在此回调中，可以获取连接信息，用于后续的消息通信处理。
+Called when a web native messaging connection is established.
 
 **Since:** 23
 
@@ -40,7 +40,7 @@ Web原生消息连接建立时回调此方法。在此回调中，可以获取�
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| info | [ConnectionInfo](arkts-arkweb-web-webnativemessagingextensionability-connectioninfo-i.md) | Yes | 连接信息对象。 |
+| info | [ConnectionInfo](arkts-arkweb-web-webnativemessagingextensionability-connectioninfo-i.md) | Yes | Indicates connection information about new native connection. |
 
 ## onDestroy
 
@@ -48,7 +48,7 @@ Web原生消息连接建立时回调此方法。在此回调中，可以获取�
 onDestroy(): void
 ```
 
-WebNativeMessagingExtensionAbility销毁时回调。在此回调中，可以释放所有占用的资源，并完成最终的清理操作。
+Called when the WebNativeMessagingExtensionAbility is destroyed.
 
 **Since:** 23
 
@@ -66,7 +66,7 @@ WebNativeMessagingExtensionAbility销毁时回调。在此回调中，可以释�
 onDisconnectNative(info: ConnectionInfo): void
 ```
 
-Web原生消息连接断开时回调此方法。在此回调中，可以释放与该连接相关的资源，并完成必要的清理工作。
+Called when a web native messaging connection is disconnected.
 
 **Since:** 23
 
@@ -90,7 +90,7 @@ Web原生消息连接断开时回调此方法。在此回调中，可以释放�
 context: WebNativeMessagingExtensionContext
 ```
 
-当前Web原生消息扩展Ability的上下文。
+Context of web native messaging.
 
 **Type:** [WebNativeMessagingExtensionContext](arkts-arkweb-web-webnativemessagingextensioncontext-webnativemessagingextensioncontext-c.md)
 

@@ -1,6 +1,6 @@
 # RouteMapConfig
 
-路由配置信息。
+Indicates configuration info of destination.
 
 **Since:** 23
 
@@ -16,7 +16,7 @@
 data: Object
 ```
 
-页面自定义字段信息。
+Indicate the custom data of current destination.
 
 **Type:** Object
 
@@ -36,7 +36,7 @@ data: Object
 name: string
 ```
 
-页面名称。
+Get destination name.
 
 **Type:** string
 
@@ -56,7 +56,7 @@ name: string
 pageSourceFile: string
 ```
 
-页面在当前包中的路径。
+Get destination builder file position
 
 **Type:** string
 

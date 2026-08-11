@@ -4,7 +4,7 @@
 declare type PX = `${number}px`
 ```
 
-定义长度属性，单位为像素（px）。
+Defines the length property with number in units of px.
 
 **Since:** 23
 

@@ -1,6 +1,6 @@
 # DataItem
 
-描述模块配置的路由表中的自定义数据。
+Describes the user-defined data in the routing table configuration of the module.
 
 **Since:** 12
 
@@ -16,7 +16,7 @@
 readonly key: string
 ```
 
-标识路由表自定义数据的键。
+Key of the user-defined data.
 
 **Type:** string
 
@@ -36,7 +36,7 @@ readonly key: string
 readonly value: string
 ```
 
-标识路由表自定义数据的值。
+Value of the user-defined data.
 
 **Type:** string
 

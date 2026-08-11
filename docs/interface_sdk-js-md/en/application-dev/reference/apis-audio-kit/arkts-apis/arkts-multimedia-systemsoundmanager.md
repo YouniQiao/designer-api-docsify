@@ -1,7 +1,6 @@
 # @ohos.multimedia.systemSoundManager
 
-系统声音管理
-
+This module provides basic capabilities for managing system sound effects, including defining system sound effect types and obtaining system sound effect players.
 
 **Since:** 23
 
@@ -23,55 +22,55 @@ import { systemSoundManager } from 'kits/@kit.AudioKit';
 
 | Name | Description |
 | --- | --- |
-| [createCustomizedToneAttrs](arkts-audio-systemsoundmanager-createcustomizedtoneattrs-f.md#createcustomizedtoneattrs) | 创建自定义铃声属性。 |
-| [createSystemSoundPlayer](arkts-audio-systemsoundmanager-createsystemsoundplayer-f.md#createsystemsoundplayer) | 创建系统音效播放器对象。使用Promise异步回调。 |
-| [getSystemSoundManager](arkts-audio-systemsoundmanager-getsystemsoundmanager-f.md#getsystemsoundmanager) | 获取系统声音管理器。 |
+| [createCustomizedToneAttrs](arkts-audio-systemsoundmanager-createcustomizedtoneattrs-f.md#createcustomizedtoneattrs) | Create customized tone attributes. |
+| [createSystemSoundPlayer](arkts-audio-systemsoundmanager-createsystemsoundplayer-f.md#createsystemsoundplayer) | Creates a SystemSoundPlayer instance. This function uses a promise to return the result.This player can be used to play some system sounds for media or camera actions. |
+| [getSystemSoundManager](arkts-audio-systemsoundmanager-getsystemsoundmanager-f.md#getsystemsoundmanager) | Gets system sound manager for all type sound. |
 
 ### Interfaces
 
 | Name | Description |
 | --- | --- |
-| [SystemSoundManager](arkts-audio-systemsoundmanager-systemsoundmanager-i.md) | 管理系统声音。在调用SystemSoundManager的接口前，需要先通过[getSystemSoundManager](arkts-audio-systemsoundmanager-getsystemsoundmanager-f.md#getsystemsoundmanager)创建实例。 |
-| [ToneAttrs](arkts-audio-systemsoundmanager-toneattrs-i.md) | 管理铃声属性。在调用ToneAttrs&lt;sup&gt;12+&lt;/sup&gt;的接口前，需要先通过  [createCustomizedToneAttrs](arkts-audio-systemsoundmanager-createcustomizedtoneattrs-f.md#createcustomizedtoneattrs)或  [getDefaultRingtoneAttrs](arkts-audio-systemsoundmanager-systemsoundmanager-i.md#getdefaultringtoneattrs)、  [getRingtoneAttrList](arkts-audio-systemsoundmanager-systemsoundmanager-i.md#getringtoneattrlist)等方法获取实例。 |
-| [ToneHapticsAttrs](arkts-audio-systemsoundmanager-tonehapticsattrs-i.md) | 系统铃音的振动属性。在调用ToneHapticsAttrs&lt;sup&gt;14+&lt;/sup&gt;的接口前，需要先通过  [getToneHapticsList](arkts-audio-systemsoundmanager-systemsoundmanager-i.md#gettonehapticslist)或  [getHapticsAttrsSyncedWithTone](arkts-audio-systemsoundmanager-systemsoundmanager-i.md#gethapticsattrssyncedwithtone)方法获取实例。 |
-| [ToneHapticsSettings](arkts-audio-systemsoundmanager-tonehapticssettings-i.md) | 系统铃音的振动设置。 |
+| [SystemSoundManager](arkts-audio-systemsoundmanager-systemsoundmanager-i.md) | System sound manager object. |
+| [ToneAttrs](arkts-audio-systemsoundmanager-toneattrs-i.md) | Tone attributes. |
+| [ToneHapticsAttrs](arkts-audio-systemsoundmanager-tonehapticsattrs-i.md) | Haptics attributes in tone scenario. |
+| [ToneHapticsSettings](arkts-audio-systemsoundmanager-tonehapticssettings-i.md) | Haptics settings in tone scenario. |
 
 ### Enums
 
 | Name | Description |
 | --- | --- |
-| [MediaType](arkts-audio-systemsoundmanager-mediatype-e.md) | 枚举，媒体类型。 |
-| [RingtoneType](arkts-audio-systemsoundmanager-ringtonetype-e.md) | 枚举，铃声类型。 |
-| [SystemSoundError](arkts-audio-systemsoundmanager-systemsounderror-e.md) | 枚举，系统声音错误类型。 |
-| [SystemSoundType](arkts-audio-systemsoundmanager-systemsoundtype-e.md) | 枚举，表示系统音效类型。 |
-| [SystemToneType](arkts-audio-systemsoundmanager-systemtonetype-e.md) | 枚举，系统铃声类型。 |
-| [ToneCustomizedType](arkts-audio-systemsoundmanager-tonecustomizedtype-e.md) | 枚举，铃声自定义类型。 |
-| [ToneHapticsFeature](arkts-audio-systemsoundmanager-tonehapticsfeature-e.md) | 枚举，系统振动风格定义。  \| 名称 \| 值 \| 说明 \|  \| ----------------------------- \| -- \| -------------------- \|  \| STANDARD\| 0 \| 标准振动风格。 \|  \| GENTLE \| 1 \| 轻柔振动风格。 \| |
-| [ToneHapticsMode](arkts-audio-systemsoundmanager-tonehapticsmode-e.md) | 枚举，系统铃音场景的振动模式。  \| 名称 \| 值 \| 说明 \|  \| ----------------------------- \| -- \| -------------------- \|  \| NONE \| 0 \| 无振动模式。 \|  \| SYNC \| 1 \| 与铃音同步模式。 \|  \| NON_SYNC \| 2 \| 非同步模式。 \| |
-| [ToneHapticsType](arkts-audio-systemsoundmanager-tonehapticstype-e.md) | 枚举，系统铃音的振动类型。 |
+| [MediaType](arkts-audio-systemsoundmanager-mediatype-e.md) | Enum for media type. |
+| [RingtoneType](arkts-audio-systemsoundmanager-ringtonetype-e.md) | Enum for ringtone type. |
+| [SystemSoundError](arkts-audio-systemsoundmanager-systemsounderror-e.md) | Error enum for system sound. |
+| [SystemSoundType](arkts-audio-systemsoundmanager-systemsoundtype-e.md) | Enumerates the system sound effect types. |
+| [SystemToneType](arkts-audio-systemsoundmanager-systemtonetype-e.md) | Enum for system tone type. |
+| [ToneCustomizedType](arkts-audio-systemsoundmanager-tonecustomizedtype-e.md) | Enum for tone customized type. |
+| [ToneHapticsFeature](arkts-audio-systemsoundmanager-tonehapticsfeature-e.md) | Definition of haptics feature in tone scenario. |
+| [ToneHapticsMode](arkts-audio-systemsoundmanager-tonehapticsmode-e.md) | Enum for haptics mode in tone scenario. |
+| [ToneHapticsType](arkts-audio-systemsoundmanager-tonehapticstype-e.md) | Enum for haptics in tone scenario. |
 
 ### Types
 
 | Name | Description |
 | --- | --- |
-| [RingtoneOptions](arkts-audio-systemsoundmanager-ringtoneoptions-t.md) | 系统铃音播放器配置项。 |
-| [RingtonePlayer](arkts-audio-systemsoundmanager-ringtoneplayer-t.md) | 系统铃音播放器对象。 |
-| [SystemSoundPlayer](arkts-audio-systemsoundmanager-systemsoundplayer-t.md) | 系统音效播放器对象。 |
-| [SystemToneOptions](arkts-audio-systemsoundmanager-systemtoneoptions-t.md) | 系统提示音播放器配置项。 |
-| [SystemTonePlayer](arkts-audio-systemsoundmanager-systemtoneplayer-t.md) | 系统提示音播放器对象。 |
-| [ToneAttrsArray](arkts-audio-systemsoundmanager-toneattrsarray-t.md) | 铃音属性数组。 |
-| [ToneHapticsAttrsArray](arkts-audio-systemsoundmanager-tonehapticsattrsarray-t.md) | 系统铃音的振动属性数组。 |
+| [RingtoneOptions](arkts-audio-systemsoundmanager-ringtoneoptions-t.md) | Interface for ringtone options. |
+| [RingtonePlayer](arkts-audio-systemsoundmanager-ringtoneplayer-t.md) | Ringtone player object. |
+| [SystemSoundPlayer](arkts-audio-systemsoundmanager-systemsoundplayer-t.md) | Represents the system sound effect player object. |
+| [SystemToneOptions](arkts-audio-systemsoundmanager-systemtoneoptions-t.md) | System tone options. |
+| [SystemTonePlayer](arkts-audio-systemsoundmanager-systemtoneplayer-t.md) | SystemTone player object. |
+| [ToneAttrsArray](arkts-audio-systemsoundmanager-toneattrsarray-t.md) | Array of tone attributes. |
+| [ToneHapticsAttrsArray](arkts-audio-systemsoundmanager-tonehapticsattrsarray-t.md) | Type definition of tone haptics array. |
 
 <!--Del-->
 ### Constants（系统接口）
 
 | Name | Description |
 | --- | --- |
-| [TONE_CATEGORY_ALARM](arkts-audio-systemsoundmanager-con-sys.md#tone_category_alarm) | 闹钟铃声类别。 |
-| [TONE_CATEGORY_CONTACTS](arkts-audio-systemsoundmanager-con-sys.md#tone_category_contacts) | 联系人铃声类别。 |
-| [TONE_CATEGORY_NOTIFICATION](arkts-audio-systemsoundmanager-con-sys.md#tone_category_notification) | 通知铃声类别。 |
-| [TONE_CATEGORY_NOTIFICATION_APP](arkts-audio-systemsoundmanager-con-sys.md#tone_category_notification_app) | 应用级通知铃声类别。 |
-| [TONE_CATEGORY_RINGTONE](arkts-audio-systemsoundmanager-con-sys.md#tone_category_ringtone) | 铃声类别。 |
-| [TONE_CATEGORY_TEXT_MESSAGE](arkts-audio-systemsoundmanager-con-sys.md#tone_category_text_message) | 短信铃声类别。 |
+| [TONE_CATEGORY_ALARM](arkts-audio-systemsoundmanager-con-sys.md#tone_category_alarm) | Define the alarm tone category. |
+| [TONE_CATEGORY_CONTACTS](arkts-audio-systemsoundmanager-con-sys.md#tone_category_contacts) | Define the contact tone category. |
+| [TONE_CATEGORY_NOTIFICATION](arkts-audio-systemsoundmanager-con-sys.md#tone_category_notification) | Define the notification tone category. |
+| [TONE_CATEGORY_NOTIFICATION_APP](arkts-audio-systemsoundmanager-con-sys.md#tone_category_notification_app) | Define the app notification tone category. |
+| [TONE_CATEGORY_RINGTONE](arkts-audio-systemsoundmanager-con-sys.md#tone_category_ringtone) | Define the ringtone category. |
+| [TONE_CATEGORY_TEXT_MESSAGE](arkts-audio-systemsoundmanager-con-sys.md#tone_category_text_message) | Define the text message tone category. |
 <!--DelEnd-->
 

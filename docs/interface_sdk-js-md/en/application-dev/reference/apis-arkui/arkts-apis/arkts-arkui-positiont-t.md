@@ -4,7 +4,7 @@
 export type PositionT<T> = Vector2T<T>
 ```
 
-用于设置或返回组件的位置。
+PositionT info.
 
 **Since:** 23
 

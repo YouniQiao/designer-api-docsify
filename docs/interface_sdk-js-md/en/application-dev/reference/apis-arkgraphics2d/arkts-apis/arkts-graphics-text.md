@@ -1,7 +1,23 @@
 # @ohos.graphics.text
 
-文本模块
+The Text module provides a set of APIs for text layout and font management. It aims to deliver high-quality typesetting through features like character-to-glyph conversion, kerning, line breaking, alignment, and text measurement. Additionally, it provides font management capabilities, including font registration, font descriptors,and font collection management.
 
+This module provides the following classes for creating complex text paragraphs:
+
+- [TextStyle](arkts-arkgraphics2d-text-textstyle-i.md): defines the font type, size, spacing, and other text properties.  
+- [FontCollection](arkts-arkgraphics2d-text-fontcollection-c.md): manages a collection of different fonts.  
+- [FontDescriptor](arkts-arkgraphics2d-text-fontdescriptor-i.md): provides information about font descriptors.  
+- [ParagraphStyle](arkts-arkgraphics2d-text-paragraphstyle-i.md): controls line break and word break strategies for the entire  
+paragraph.  
+- [ParagraphBuilder](arkts-arkgraphics2d-text-paragraphbuilder-c.md): used to create different paragraph objects.  
+- [Paragraph](arkts-arkgraphics2d-text-paragraph-c.md): created by calling [build()](arkts-arkgraphics2d-text-paragraphbuilder-c.md#build) of the  
+**ParagraphBuilder** class.  
+- [LineTypeset](arkts-arkgraphics2d-text-linetypeset-c.md): created by calling  
+[buildLineTypeset()](arkts-arkgraphics2d-text-paragraphbuilder-c.md#buildlinetypeset) of the **ParagraphBuilder** class.  
+- [TextLine](arkts-arkgraphics2d-text-textline-c.md): paragraph text on a line-by-line basis, obtained by calling  
+[getTextLines()](arkts-arkgraphics2d-text-paragraph-c.md#gettextlines) of the **Paragraph** class.  
+- [Run](arkts-arkgraphics2d-text-run-c.md): text typesetting unit, obtained by calling  
+[getGlyphRuns()](arkts-arkgraphics2d-text-textline-c.md#getglyphruns) of the **TextLine** class.
 
 **Since:** 12
 
@@ -23,86 +39,86 @@ import { text } from 'kits/@kit.ArkGraphics2D';
 
 | Name | Description |
 | --- | --- |
-| [getFontCount](arkts-arkgraphics2d-text-getfontcount-f.md#getfontcount) | 根据字体文件路径获取包含的字体文件数。  如果字体文件未找到、字体文件路径无效、字体文件无权限或者文件非字体格式，返回0。 |
-| [getFontDescriptorByFullName](arkts-arkgraphics2d-text-getfontdescriptorbyfullname-f.md#getfontdescriptorbyfullname) | 根据字体名称和类型获取字体描述符，使用Promise异步回调。  字体描述符是描述字体特征的数据结构，包含字体外观和属性的详细信息。 |
-| [getFontDescriptorsFromPath](arkts-arkgraphics2d-text-getfontdescriptorsfrompath-f.md#getfontdescriptorsfrompath) | 根据字体文件路径获取字体描述符数组。使用Promise异步回调。 |
-| [getFontPathsByType](arkts-arkgraphics2d-text-getfontpathsbytype-f.md#getfontpathsbytype) | 获取指定字体类型的所有字体文件路径。 |
-| [getFontUnicodeSet](arkts-arkgraphics2d-text-getfontunicodeset-f.md#getfontunicodeset) | 根据字体文件路径获取字体unicode数组。使用Promise异步回调。  如果字体文件未找到、字体文件路径无效、字体文件无权限或者文件非字体格式，返回空数组。 |
-| [getSystemFontFullNamesByType](arkts-arkgraphics2d-text-getsystemfontfullnamesbytype-f.md#getsystemfontfullnamesbytype) | 根据字体类型返回该类型对应的所有字体的字体名称，使用Promise异步回调。 |
-| [isFontSupported](arkts-arkgraphics2d-text-isfontsupported-f.md#isfontsupported) | 检查系统是否支持指定的字体文件。可在加载自定义字体前预先验证字体文件的可用性，避免因字体不支持导致文本渲染异常。 |
-| [matchFontDescriptors](arkts-arkgraphics2d-text-matchfontdescriptors-f.md#matchfontdescriptors) | 根据指定的字体描述符返回所有符合要求的系统字体描述符，使用Promise异步回调。 |
-| [setTextHighContrast](arkts-arkgraphics2d-text-settexthighcontrast-f.md#settexthighcontrast) | 用于设置文字渲染高对比度模式。  该接口设置后整个进程都会生效，进程内所有页面共用相同模式。  可调用此接口设置，也可通过系统设置界面中**高对比度文字配置开关**进行开启/关闭。使用此接口设置开启/关闭文字渲染高对比度配置的优先级高于系统开关设置。  该接口针对应用通过Canvas等接口自行绘制文字的场景不生效，仅对使用系统文本组件渲染的场景生效。 |
-| [setTextUndefinedGlyphDisplay](arkts-arkgraphics2d-text-settextundefinedglyphdisplay-f.md#settextundefinedglyphdisplay) | 设置字符映射到.notdef（未定义）字形时要使用的字形类型。  调用此接口后，后续渲染的文本若包含未定义字形，均按此设置显示。  此配置会影响显示字体中未定义字符的方式：  - 默认使用字体的.notdef字形设计。  - 开启后，缺失字形的字符将以豆腐块形式显示。 |
+| [getFontCount](arkts-arkgraphics2d-text-getfontcount-f.md#getfontcount) | Obtains the number of font files contained in a font file based on the font file path.  Returns **0** if the font file is not found, the font file path is invalid, the font file does not have the required permission, or the file is not in the font format. |
+| [getFontDescriptorByFullName](arkts-arkgraphics2d-text-getfontdescriptorbyfullname-f.md#getfontdescriptorbyfullname) | Obtains the font descriptor based on the font name and type. This API uses a promise to return the result.  A font descriptor is a data structure that describes font features. It contains details of the font appearance and properties. |
+| [getFontDescriptorsFromPath](arkts-arkgraphics2d-text-getfontdescriptorsfrompath-f.md#getfontdescriptorsfrompath) | Obtains an array of font descriptors by font file path. This API uses a promise to return the result.  > **NOTE：** >  > - An empty array is returned if the font file is not found, the font file path is invalid, the font file does not > have the required permission, or the file is not in the font format. >  > - The **weight** field in [FontDescriptor](arkts-arkgraphics2d-text-fontdescriptor-i.md) does not exactly correspond to the weight > value in the font file. Instead, the actual weight value in the font file is rounded off and mapped to the > [FontWeight](arkts-arkgraphics2d-text-fontweight-e.md) enum value. For example, the weight value 350 in the font file is mapped to 4 > 00, and the corresponding enum value is W400. |
+| [getFontPathsByType](arkts-arkgraphics2d-text-getfontpathsbytype-f.md#getfontpathsbytype) | Obtains the paths of all font files of a specified font type. |
+| [getFontUnicodeSet](arkts-arkgraphics2d-text-getfontunicodeset-f.md#getfontunicodeset) | Obtains an array of font Unicode by font file path. This API uses a promise to return the result.  An empty array is returned if the font file is not found, the font file path is invalid, the font file does not have the required permission, or the file is not in the font format. |
+| [getSystemFontFullNamesByType](arkts-arkgraphics2d-text-getsystemfontfullnamesbytype-f.md#getsystemfontfullnamesbytype) | Obtains the full names of all fonts of the specified type. This API uses a promise to return the result. |
+| [isFontSupported](arkts-arkgraphics2d-text-isfontsupported-f.md#isfontsupported) | Checks whether the system supports the specified font file. You can use this API to verify the availability of a font file before loading a custom font, preventing text rendering exceptions caused by unsupported fonts. |
+| [matchFontDescriptors](arkts-arkgraphics2d-text-matchfontdescriptors-f.md#matchfontdescriptors) | Obtains all system font descriptors that match the provided font descriptor. This API uses a promise to return the result. |
+| [setTextHighContrast](arkts-arkgraphics2d-text-settexthighcontrast-f.md#settexthighcontrast) | Sets the high contrast mode for text rendering.  The setting of this API takes effect for the entire process, and all pages in the process share the same mode.  You can call this API to set the high contrast mode, or enable or disable the high contrast mode by toggling the switch on the system settings screen. This API is used to set the high contrast mode for text rendering. The setting of this API takes precedence over the one based on system settings.  This API does not take effect for text drawn by the app through APIs such as Canvas. It only takes effect for text rendered using system text components. |
+| [setTextUndefinedGlyphDisplay](arkts-arkgraphics2d-text-settextundefinedglyphdisplay-f.md#settextundefinedglyphdisplay) | Sets the glyph type to be used when characters are mapped to the .notdef (undefined) glyph.  After this API is called, any subsequently rendered text containing undefined glyphs will be displayed according to this setting.  This setting affects how to display undefined characters in the font:  - The default behavior follows the .notdef glyph design of the font.  - After this feature is enabled, characters without glyphs are displayed as a tofu block. |
 
 ### Classes
 
 | Name | Description |
 | --- | --- |
-| [FontCollection](arkts-arkgraphics2d-text-fontcollection-c.md) | 字体集，用于管理文本排版所需的字体资源。FontCollection为[ParagraphBuilder](arkts-arkgraphics2d-text-paragraphbuilder-c.md)提供字体匹配和字形查找能力，是文本排版管线的基础组件。提供全局实例（[getGlobalInstance](arkts-arkgraphics2d-text-fontcollection-c.md#getglobalinstance)）和本地实例（  [getLocalInstance](arkts-arkgraphics2d-text-fontcollection-c.md#getlocalinstance)），全局实例加载的字体在应用内共享，适用于普通应用场景；本地实例各实例独立，加载的字体仅对当前实例生效、实例间互不影响，推荐卡片场景使用。支持通过[loadFontSync](arkts-arkgraphics2d-text-fontcollection-c.md#loadfontsync)或  [loadFont](arkts-arkgraphics2d-text-fontcollection-c.md#loadfont)加载自定义字体。 |
-| [LineTypeset](arkts-arkgraphics2d-text-linetypeset-c.md) | 保存文本内容及样式的载体，可用于计算单行排版信息。  下列API示例中都需先使用[ParagraphBuilder](arkts-arkgraphics2d-text-paragraphbuilder-c.md)类的  [buildLineTypeset()](arkts-arkgraphics2d-text-paragraphbuilder-c.md#buildlinetypeset)接口获取到LineTypeset对象实例，再通过此实例调用对应方法。 |
-| [Paragraph](arkts-arkgraphics2d-text-paragraph-c.md) | 保存文本内容及样式的载体，支持排版与绘制操作。  下列API示例中都需先使用[ParagraphBuilder](arkts-arkgraphics2d-text-paragraphbuilder-c.md)类的[build()](arkts-arkgraphics2d-text-paragraphbuilder-c.md#build)接口获取到Paragraph对象实例，再通过此实例调用对应方法。 |
-| [ParagraphBuilder](arkts-arkgraphics2d-text-paragraphbuilder-c.md) | 段落生成器，采用建造者模式构建段落对象。开发者通过构造函数传入[ParagraphStyle](arkts-arkgraphics2d-text-paragraphstyle-i.md)和  [FontCollection](arkts-arkgraphics2d-text-fontcollection-c.md)初始化ParagraphBuilder，然后通过  [pushStyle](arkts-arkgraphics2d-text-paragraphbuilder-c.md#pushstyle)设置文本样式、[addText](arkts-arkgraphics2d-text-paragraphbuilder-c.md#addtext)添加文本内容，最终调用  [build()](arkts-arkgraphics2d-text-paragraphbuilder-c.md#build)接口生成[Paragraph](arkts-arkgraphics2d-text-paragraph-c.md)对象进行排版和绘制。 |
-| [Run](arkts-arkgraphics2d-text-run-c.md) | 文本排版单元，表示一段具有相同样式属性的连续文本片段。Run由[TextLine](arkts-arkgraphics2d-text-textline-c.md)类的[getGlyphRuns()](arkts-arkgraphics2d-text-textline-c.md#getglyphruns)接口获取。  下列API示例中都需先使用[TextLine](arkts-arkgraphics2d-text-textline-c.md)类的[getGlyphRuns()](arkts-arkgraphics2d-text-textline-c.md#getglyphruns)接口获取Run对象实例，再通过此实例调用对应方法。 |
-| [TextLine](arkts-arkgraphics2d-text-textline-c.md) | 描述段落基础文本行结构的载体。  下列API示例中都需先使用[Paragraph](arkts-arkgraphics2d-text-paragraph-c.md)类的[getTextLines()](arkts-arkgraphics2d-text-paragraph-c.md#gettextlines)接口或者  [LineTypeset](arkts-arkgraphics2d-text-linetypeset-c.md)类的[createLine()](arkts-arkgraphics2d-text-linetypeset-c.md#createline)接口获取到TextLine对象实例，再通过此实例调用对应方法。 |
+| [FontCollection](arkts-arkgraphics2d-text-fontcollection-c.md) | Represents a font collection, which manages the font resources required for text typesetting. FontCollection provides font matching and glyph lookup capabilities for [ParagraphBuilder](arkts-arkgraphics2d-text-paragraphbuilder-c.md), and serves as a fundamental component of the text typesetting pipeline. It provides a global instance (  [getGlobalInstance](arkts-arkgraphics2d-text-fontcollection-c.md#getglobalinstance)) and local instances (  [getLocalInstance](arkts-arkgraphics2d-text-fontcollection-c.md#getlocalinstance)). Fonts loaded by the global instance are shared within the app, making it suitable for common app scenarios. Local instances are independent of each other, and fonts loaded by a local instance take effect only for that instance without affecting others, making them recommended for widget scenarios. Custom fonts can be loaded through  [loadFontSync](arkts-arkgraphics2d-text-fontcollection-c.md#loadfontsync) or [loadFont](arkts-arkgraphics2d-text-fontcollection-c.md#loadfont). |
+| [LineTypeset](arkts-arkgraphics2d-text-linetypeset-c.md) | Implements a carrier that stores the text content and style. It can be used to compute layout details for individual lines of text.  Before calling any of the following APIs, you must use  [buildLineTypeset()](arkts-arkgraphics2d-text-paragraphbuilder-c.md#buildlinetypeset) in the  [ParagraphBuilder](arkts-arkgraphics2d-text-paragraphbuilder-c.md) class to create a **LineTypeset** object. |
+| [Paragraph](arkts-arkgraphics2d-text-paragraph-c.md) | Implements a carrier that stores the text content and style. You can perform operations such as layout and drawing.  Before calling any of the following APIs, you must use [build()](arkts-arkgraphics2d-text-paragraphbuilder-c.md#build) of the  [ParagraphBuilder](arkts-arkgraphics2d-text-paragraphbuilder-c.md) class to create a **Paragraph** object. |
+| [ParagraphBuilder](arkts-arkgraphics2d-text-paragraphbuilder-c.md) | Implements a paragraph builder that uses the builder pattern to construct paragraph objects. Developers initialize ParagraphBuilder by passing [ParagraphStyle](arkts-arkgraphics2d-text-paragraphstyle-i.md) and  [FontCollection](arkts-arkgraphics2d-text-fontcollection-c.md) to the constructor, then set the text style through  [pushStyle](arkts-arkgraphics2d-text-paragraphbuilder-c.md#pushstyle), add text content through  [addText](arkts-arkgraphics2d-text-paragraphbuilder-c.md#addtext), and finally call [build()](arkts-arkgraphics2d-text-paragraphbuilder-c.md#build) to generate a [Paragraph](arkts-arkgraphics2d-text-paragraph-c.md) object for typesetting and drawing. |
+| [Run](arkts-arkgraphics2d-text-run-c.md) | Represents a text typesetting unit, which is a continuous text segment with the same style attributes. Run is obtained through the [getGlyphRuns()](arkts-arkgraphics2d-text-textline-c.md#getglyphruns) API of the [TextLine](arkts-arkgraphics2d-text-textline-c.md)class.  Before calling any of the following APIs, you must use [getGlyphRuns()](arkts-arkgraphics2d-text-textline-c.md#getglyphruns) of the  [TextLine](arkts-arkgraphics2d-text-textline-c.md) class to create a **Run** object. |
+| [TextLine](arkts-arkgraphics2d-text-textline-c.md) | Implements a carrier that describes the basic text line structure of a paragraph.  Before calling any of the following APIs, you must use [getTextLines()](arkts-arkgraphics2d-text-paragraph-c.md#gettextlines) of the  [Paragraph](arkts-arkgraphics2d-text-paragraph-c.md) class or [createLine()](arkts-arkgraphics2d-text-linetypeset-c.md#createline) of the  [LineTypeset](arkts-arkgraphics2d-text-linetypeset-c.md) class to create a **TextLine** object. |
 
 ### Interfaces
 
 | Name | Description |
 | --- | --- |
-| [Decoration](arkts-arkgraphics2d-text-decoration-i.md) | 文本装饰线。 |
-| [FontDescriptor](arkts-arkgraphics2d-text-fontdescriptor-i.md) | 字体描述符信息。 |
-| [FontFeature](arkts-arkgraphics2d-text-fontfeature-i.md) | 文本字体特征。 |
-| [FontVariation](arkts-arkgraphics2d-text-fontvariation-i.md) | 可变字体属性。 |
-| [FontVariationAxis](arkts-arkgraphics2d-text-fontvariationaxis-i.md) | 字体可变轴信息。 |
-| [FontVariationInstance](arkts-arkgraphics2d-text-fontvariationinstance-i.md) | 字体可变实例信息，存放预设的可变字体样式信息。 |
-| [LineMetrics](arkts-arkgraphics2d-text-linemetrics-i.md) | 描述文本布局中单行文字的度量信息。 |
-| [ParagraphStyle](arkts-arkgraphics2d-text-paragraphstyle-i.md) | 段落样式，用于控制段落的整体布局行为，包括对齐方式、断行策略和最大行数等属性。ParagraphStyle作为[ParagraphBuilder](arkts-arkgraphics2d-text-paragraphbuilder-c.md)构造函数的必要参数，与  [TextStyle](arkts-arkgraphics2d-text-textstyle-i.md)（控制文本级别样式）分工协作，共同决定段落的最终排版效果。 |
-| [PlaceholderSpan](arkts-arkgraphics2d-text-placeholderspan-i.md) | 描述占位符样式。 |
-| [PositionWithAffinity](arkts-arkgraphics2d-text-positionwithaffinity-i.md) | 位置和亲和度。 |
-| [Range](arkts-arkgraphics2d-text-range-i.md) | 描述左闭右开区间。 |
-| [RectStyle](arkts-arkgraphics2d-text-rectstyle-i.md) | 矩形框样式。 |
-| [RunMetrics](arkts-arkgraphics2d-text-runmetrics-i.md) | 描述文本行中连续文本块的布局信息和度量数据。 |
-| [StrutStyle](arkts-arkgraphics2d-text-strutstyle-i.md) | 支柱样式，用于控制绘制文本的行间距、基线对齐方式以及其他与行高相关的属性，默认不开启。 |
-| [TextBox](arkts-arkgraphics2d-text-textbox-i.md) | 文本矩形区域，表示文本在布局时所占用的矩形空间。 |
-| [TextLayoutResult](arkts-arkgraphics2d-text-textlayoutresult-i.md) | 文本布局结果。 |
-| [TextRectSize](arkts-arkgraphics2d-text-textrectsize-i.md) | 文本矩形尺寸，用于描述文本的矩形宽高属性。值为浮点数，单位为物理像素px。 |
-| [TextShadow](arkts-arkgraphics2d-text-textshadow-i.md) | 文本阴影。 |
-| [TextStyle](arkts-arkgraphics2d-text-textstyle-i.md) | 文本样式，用于控制文本的视觉表现属性，包括字体、颜色、字号、间距、装饰线和阴影等。TextStyle通过[ParagraphBuilder](arkts-arkgraphics2d-text-paragraphbuilder-c.md)的  [pushStyle](arkts-arkgraphics2d-text-paragraphbuilder-c.md#pushstyle)方法应用到后续添加的文本内容，与[ParagraphStyle](arkts-arkgraphics2d-text-paragraphstyle-i.md)（控制段落级别属性）配合使用。同一段落中可通过多次pushStyle实现对不同文本片段应用不同样式。 |
-| [TextTab](arkts-arkgraphics2d-text-texttab-i.md) | 段落风格的文本制表符，储存了对齐方式和位置。 |
-| [TypographicBounds](arkts-arkgraphics2d-text-typographicbounds-i.md) | 文本行的排版边界。文本行排版边界与排版字体、排版字号有关，与字符本身无关，例如字符串为" a b "，'a'字符前面有1个空格，'b'字符后面有1个空格，排版边界就包括行首和末尾空格的边界。例如字符串为"j"或"E"，排版边界相同，即与字符本身无关。 |
+| [Decoration](arkts-arkgraphics2d-text-decoration-i.md) | Describes a text decoration. |
+| [FontDescriptor](arkts-arkgraphics2d-text-fontdescriptor-i.md) | Describes the font descriptor information. |
+| [FontFeature](arkts-arkgraphics2d-text-fontfeature-i.md) | Describes a font feature. |
+| [FontVariation](arkts-arkgraphics2d-text-fontvariation-i.md) | Describes a font variation. |
+| [FontVariationAxis](arkts-arkgraphics2d-text-fontvariationaxis-i.md) | Represents the font variable axis information. |
+| [FontVariationInstance](arkts-arkgraphics2d-text-fontvariationinstance-i.md) | Font variable instance information, which stores preset variable font style information. |
+| [LineMetrics](arkts-arkgraphics2d-text-linemetrics-i.md) | Describes the measurement information of a single line of text in the text layout. |
+| [ParagraphStyle](arkts-arkgraphics2d-text-paragraphstyle-i.md) | Represents a paragraph style, which controls the overall layout behavior of a paragraph, including attributes such as alignment, line break strategy, and maximum number of lines. ParagraphStyle serves as a required parameter of the [ParagraphBuilder](arkts-arkgraphics2d-text-paragraphbuilder-c.md) constructor, and works together with  [TextStyle](arkts-arkgraphics2d-text-textstyle-i.md) (which controls text-level styles) to determine the final typesetting result of the paragraph. |
+| [PlaceholderSpan](arkts-arkgraphics2d-text-placeholderspan-i.md) | Describes the placeholder style. |
+| [PositionWithAffinity](arkts-arkgraphics2d-text-positionwithaffinity-i.md) | Describes the position and affinity of a glyph. |
+| [Range](arkts-arkgraphics2d-text-range-i.md) | Describes a left-closed and right-open interval. |
+| [RectStyle](arkts-arkgraphics2d-text-rectstyle-i.md) | Describes the style of a rectangle. |
+| [RunMetrics](arkts-arkgraphics2d-text-runmetrics-i.md) | Describes the layout information and measurement information of a run of text in a text line. |
+| [StrutStyle](arkts-arkgraphics2d-text-strutstyle-i.md) | Describes the strut style, which determines the line spacing, baseline alignment mode, and other properties related to the line height when drawing texts. The strut style is disabled by default. |
+| [TextBox](arkts-arkgraphics2d-text-textbox-i.md) | Rectangular area of the text, indicating the rectangular space occupied by the text during layout. |
+| [TextLayoutResult](arkts-arkgraphics2d-text-textlayoutresult-i.md) | Represents the text layout result. |
+| [TextRectSize](arkts-arkgraphics2d-text-textrectsize-i.md) | Represents the text rectangle size, which is used to describe the width and height of the text rectangle. It is a floating-point value in physical pixels (px). |
+| [TextShadow](arkts-arkgraphics2d-text-textshadow-i.md) | Represents a text shadow. |
+| [TextStyle](arkts-arkgraphics2d-text-textstyle-i.md) | Represents a text style, which controls the visual appearance attributes of text, including font, color, font size,spacing, decoration lines, and shadows. TextStyle is applied to subsequently added text content through the  [pushStyle](arkts-arkgraphics2d-text-paragraphbuilder-c.md#pushstyle) method of [ParagraphBuilder](arkts-arkgraphics2d-text-paragraphbuilder-c.md), and works together with [ParagraphStyle](arkts-arkgraphics2d-text-paragraphstyle-i.md) (which controls paragraph-level attributes). Within the same paragraph, you can call pushStyle multiple times to apply different styles to different text segments. |
+| [TextTab](arkts-arkgraphics2d-text-texttab-i.md) | Implements a paragraph-style text tab, which stores the alignment mode and position. |
+| [TypographicBounds](arkts-arkgraphics2d-text-typographicbounds-i.md) | Describes the typographic boundaries of a text line. These boundaries depend on the typographic font and font size,but not on the characters themselves. For example, for the string " a b " (which has a space before "a" and a space after "b"), the typographic boundaries include the spaces at the beginning and end of the line. Similarly, the strings "j" and "E" have identical typographic boundaries, independent of the characters themselves.  > **NOTE：** >  > The figure shows the text line typesetting parameters: width (the width of the text line including left and right > spaces), ascent (the highest point of the ascent), descent (the lowest point of the descent), leading (line > spacing), top (the highest point of the current line), baseline (the character baseline), bottom (the lowest > point of the current line), and next line top (the highest point of the next line). >  > ![Typographic.png](../../../reference/apis-arkgraphics2d/figures/Typographic.png) >  > The figure shows the typesetting boundaries for the string " a b ". >  > ![TypographicBounds.png](../../../reference/apis-arkgraphics2d/figures/TypographicBounds.png) >  > The figure shows the typesetting boundaries for the string "j" or "E". >  > ! > [TypographicBounds-Character.png](../../../reference/apis-arkgraphics2d/figures/TypographicBounds-Character.png) |
 
 ### Enums
 
 | Name | Description |
 | --- | --- |
-| [Affinity](arkts-arkgraphics2d-text-affinity-e.md) | 位置亲和度枚举。 |
-| [BreakStrategy](arkts-arkgraphics2d-text-breakstrategy-e.md) | 断行策略枚举。 |
-| [EllipsisMode](arkts-arkgraphics2d-text-ellipsismode-e.md) | 省略号类型枚举。  EllipsisMode.START和EllipsisMode.MIDDLE仅在单行超长文本生效。 |
-| [FontStyle](arkts-arkgraphics2d-text-fontstyle-e.md) | 字体样式枚举。 |
-| [FontWeight](arkts-arkgraphics2d-text-fontweight-e.md) | 字重枚举。 |
-| [FontWidth](arkts-arkgraphics2d-text-fontwidth-e.md) | 字体宽度的枚举。 |
-| [LineHeightStyle](arkts-arkgraphics2d-text-lineheightstyle-e.md) | 行高缩放基数枚举。 |
-| [PlaceholderAlignment](arkts-arkgraphics2d-text-placeholderalignment-e.md) | 占位符相对于周围文本的纵向对齐方式。  ![PlaceholderAlignment.png](../../../reference/apis-arkgraphics2d/figures/PlaceholderAlignment.png) |
-| [RectHeightStyle](arkts-arkgraphics2d-text-rectheightstyle-e.md) | 矩形区域高度规格枚举。 |
-| [RectWidthStyle](arkts-arkgraphics2d-text-rectwidthstyle-e.md) | 矩形区域宽度规格枚举。 |
-| [SystemFontType](arkts-arkgraphics2d-text-systemfonttype-e.md) | 字体类型枚举，通过位或运算可实现组合类型。 |
-| [TextAlign](arkts-arkgraphics2d-text-textalign-e.md) | 文本对齐方式枚举。 |
-| [TextBadgeType](arkts-arkgraphics2d-text-textbadgetype-e.md) | 文本上下标枚举。 |
-| [TextBaseline](arkts-arkgraphics2d-text-textbaseline-e.md) | 文本基线类型枚举。 |
-| [TextDecorationStyle](arkts-arkgraphics2d-text-textdecorationstyle-e.md) | 装饰线样式枚举。 |
-| [TextDecorationType](arkts-arkgraphics2d-text-textdecorationtype-e.md) | 装饰线类型枚举。 |
-| [TextDirection](arkts-arkgraphics2d-text-textdirection-e.md) | 文本排版方向枚举。 |
-| [TextDisplayState](arkts-arkgraphics2d-text-textdisplaystate-e.md) | 文本显示状态的枚举。表示文本排版后的原生结果，与外部画布裁切、溢出屏幕等外部显示因素无关。 |
-| [TextHeightBehavior](arkts-arkgraphics2d-text-textheightbehavior-e.md) | 文本高度修饰符模式枚举。 |
-| [TextHighContrast](arkts-arkgraphics2d-text-texthighcontrast-e.md) | 文字渲染高对比度配置类型枚举。 |
-| [TextProcessState](arkts-arkgraphics2d-text-textprocessstate-e.md) | 文本处理状态的枚举。 |
-| [TextUndefinedGlyphDisplay](arkts-arkgraphics2d-text-textundefinedglyphdisplay-e.md) | 文本未定义字形时的显示方式枚举。 |
-| [TextVerticalAlign](arkts-arkgraphics2d-text-textverticalalign-e.md) | 文本垂直对齐方式枚举。 |
-| [WordBreak](arkts-arkgraphics2d-text-wordbreak-e.md) | 断词策略枚举。 |
+| [Affinity](arkts-arkgraphics2d-text-affinity-e.md) | Enumerates the affinity modes. |
+| [BreakStrategy](arkts-arkgraphics2d-text-breakstrategy-e.md) | Enumerates the text break strategies. |
+| [EllipsisMode](arkts-arkgraphics2d-text-ellipsismode-e.md) | Enumerates the ellipsis styles.  **EllipsisMode.START** and **EllipsisMode.MIDDLE** take effect only when text overflows in a single line. |
+| [FontStyle](arkts-arkgraphics2d-text-fontstyle-e.md) | Enumerates the font styles. |
+| [FontWeight](arkts-arkgraphics2d-text-fontweight-e.md) | Enumerates the font weights. |
+| [FontWidth](arkts-arkgraphics2d-text-fontwidth-e.md) | Enumerates the font widths. |
+| [LineHeightStyle](arkts-arkgraphics2d-text-lineheightstyle-e.md) | Enumerates the line height scaling base. |
+| [PlaceholderAlignment](arkts-arkgraphics2d-text-placeholderalignment-e.md) | Enumerates the vertical alignment modes of a placeholder relative to the surrounding text.  ![PlaceholderAlignment.png](../../../reference/apis-arkgraphics2d/figures/PlaceholderAlignment.png)  > **NOTE：** >  > The figure shows the last three alignment modes. The first three alignment modes are similar in text baseline > alignment, with the comparison reference being the text baseline, indicated by the green line. >  > ![Baseline.png](../../../reference/apis-arkgraphics2d/figures/Baseline.png) |
+| [RectHeightStyle](arkts-arkgraphics2d-text-rectheightstyle-e.md) | Enumerates the rectangle height styles. |
+| [RectWidthStyle](arkts-arkgraphics2d-text-rectwidthstyle-e.md) | Enumerates the rectangle width styles. |
+| [SystemFontType](arkts-arkgraphics2d-text-systemfonttype-e.md) | Enumerates the font types, which can be combined through bitwise OR operations. |
+| [TextAlign](arkts-arkgraphics2d-text-textalign-e.md) | Enumerates the text alignment modes. |
+| [TextBadgeType](arkts-arkgraphics2d-text-textbadgetype-e.md) | Enumerates the text badges. |
+| [TextBaseline](arkts-arkgraphics2d-text-textbaseline-e.md) | Enumerates the text baseline types. |
+| [TextDecorationStyle](arkts-arkgraphics2d-text-textdecorationstyle-e.md) | Enumerates the text decoration styles. |
+| [TextDecorationType](arkts-arkgraphics2d-text-textdecorationtype-e.md) | Enumerates the text decoration types. |
+| [TextDirection](arkts-arkgraphics2d-text-textdirection-e.md) | Enumerates the text directions. |
+| [TextDisplayState](arkts-arkgraphics2d-text-textdisplaystate-e.md) | Enumerates text display states. Native result after text typesetting, which is irrelevant to external display factors such as external canvas cropping and screen overflow. |
+| [TextHeightBehavior](arkts-arkgraphics2d-text-textheightbehavior-e.md) | Enumerates the text height modifier patterns. |
+| [TextHighContrast](arkts-arkgraphics2d-text-texthighcontrast-e.md) | Enumerates the high contrast types for text rendering. |
+| [TextProcessState](arkts-arkgraphics2d-text-textprocessstate-e.md) | Enumerates text processing states. |
+| [TextUndefinedGlyphDisplay](arkts-arkgraphics2d-text-textundefinedglyphdisplay-e.md) | Enumerates the modes for displaying undefined text glyphs. |
+| [TextVerticalAlign](arkts-arkgraphics2d-text-textverticalalign-e.md) | Enumerates the vertical alignment modes of text. |
+| [WordBreak](arkts-arkgraphics2d-text-wordbreak-e.md) | Enumerates the word break types. |
 
 ### Types
 
 | Name | Description |
 | --- | --- |
-| [CaretOffsetsCallback](arkts-arkgraphics2d-text-caretoffsetscallback-t.md) | 将文本行中每个字符的偏移量和索引值作为参数的回调方法。 |
+| [CaretOffsetsCallback](arkts-arkgraphics2d-text-caretoffsetscallback-t.md) | Defines the callback used to receive the offset and index of each character in a text line object as its parameters. |
 

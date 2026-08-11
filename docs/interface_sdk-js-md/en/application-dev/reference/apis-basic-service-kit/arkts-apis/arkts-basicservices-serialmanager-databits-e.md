@@ -16,7 +16,7 @@ Enumerates the number of data bits.
 DATABIT_8 = 8
 ```
 
-报文的有效数据位宽为8比特。
+The number of data bits is 8.
 
 **Since:** 19
 
@@ -32,7 +32,7 @@ DATABIT_8 = 8
 DATABIT_7 = 7
 ```
 
-报文的有效数据位宽为7比特。
+The number of data bits is 7.
 
 **Since:** 19
 
@@ -48,7 +48,7 @@ DATABIT_7 = 7
 DATABIT_6 = 6
 ```
 
-报文的有效数据位宽为6比特。
+The number of data bits is 6.
 
 **Since:** 19
 
@@ -64,7 +64,7 @@ DATABIT_6 = 6
 DATABIT_5 = 5
 ```
 
-报文的有效数据位宽为5比特。
+The number of data bits is 5.
 
 **Since:** 19
 

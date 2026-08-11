@@ -1,6 +1,6 @@
 # DownloadConfig
 
-下载任务的配置信息。
+Defines the download task configuration.
 
 **Since:** 6
 
@@ -22,7 +22,7 @@ import { request } from 'kits/@kit.BasicServicesKit';
 background?: boolean
 ```
 
-后台任务通知开关，启用后可在通知中显示下载状态。true表示启用，false表示禁用。默认值为false。
+Whether to enable the background task notification. When this parameter is enabled, the download status is displayed in the notification panel. The value **true** means the parameter is enabled, and **false** means the opposite. The default value is **false**.
 
 **Type:** boolean
 
@@ -40,7 +40,7 @@ background?: boolean
 description?: string
 ```
 
-设置下载会话的描述。默认值为空字符串。
+Description of the download session. The default value is an empty string.
 
 **Type:** string
 
@@ -58,11 +58,12 @@ description?: string
 enableMetered?: boolean
 ```
 
-表示设置是否允许在按流量计费的连接下下载任务的配置信息。true表示允许，false表示不允许。默认值为false。
+Whether download is allowed on a metered connection. The value **true** means the download is allowed, and   
+**false** means the opposite. The default value is **false**.
 
-> **说明：**
+> **NOTE：**
 > 
-> Wi-Fi为非计费网络，数据流量为计费网络。
+> In general cases, a mobile data connection is metered, while a Wi-Fi connection is not.
 
 **Type:** boolean
 
@@ -80,7 +81,7 @@ enableMetered?: boolean
 enableRoaming?: boolean
 ```
 
-表示设置是否允许在漫游网络中下载任务的配置信息。true表示允许，false表示不允许。默认值为false。
+Whether download is allowed on a roaming network. The value **true** means the download is allowed, and **false**means the opposite. The default value is **false**.
 
 **Type:** boolean
 
@@ -98,12 +99,12 @@ enableRoaming?: boolean
 filePath?: string
 ```
 
-设置下载路径。默认为调用方（即传入的context）对应的缓存路径。默认文件名从url的最后一个"/"后截取。
+Path where the downloaded file is stored. The default value is the cache directory of the caller (that is, the input **context**). The default file name is the part truncated from the last slash (/) in the URL.
 
-- FA模型下使用  
-[Context.getCacheDir](../../../reference/apis-ability-kit/js-apis-inner-app-context.md#contextgetcachedir)方法获取应用存储路径。
-
-- Stage模型下使用[Context (Stage模型的上下文基类)](../../apis-ability-kit/arkts-apis/arkts-ability-context-t.md/arkts-ability-context-t.md)中AbilityContext的类获取文件路径。
+- In the FA model, use the   
+[Context.getCacheDir](../../../reference/apis-ability-kit/js-apis-inner-app-context.md#contextgetcachedir) method to obtain the application storage path.  
+- In the Stage model, use the **AbilityContext** class in   
+[Context (Context Base Class of the Stage Model)](../../apis-ability-kit/arkts-apis/arkts-ability-context-t.md/arkts-ability-context-t.md) to obtain the file path.
 
 **Type:** string
 
@@ -121,7 +122,7 @@ filePath?: string
 header?: Object
 ```
 
-添加要包含在下载请求中的HTTPS标志头。默认值为空。
+HTTPS flag header to be included in the download request. The default value is empty.
 
 **Type:** Object
 
@@ -139,14 +140,13 @@ header?: Object
 networkType?: int
 ```
 
-设置允许下载的网络类型，通过  
-[网络类型常量](../../../reference/apis-basic-services-kit/js-apis-request.md#constants)的位运算方式决定允许的网络类型，支持如下几种设置方式: 
+Network type that can be used for download. The allowed network type is determined by bitwise operation of   
+[network type constants](../../../reference/apis-basic-services-kit/js-apis-request.md#constants). The following settings are supported:
 
-- 仅支持蜂窝网络下载，参数为NETWORK_MOBILE或0x00000001   
-- 仅支持WLAN网络下载，参数为NETWORK_WIFI或0x00010000  
-- 参数默认值，支持蜂窝/WLAN网络下载，参数为NETWORK_MOBILE | NETWORK_WIFI或0x00010001。
-
-当参数为NETWORK_MOBILE | NETWORK_WIFI时，enableMetered和enableRoaming参数不生效。
+- Only the cellular network is supported. The parameter is **NETWORK_MOBILE** or **0x00000001**.  
+- Only WLAN is supported. The parameter is **NETWORK_WIFI** or **0x00010000**.  
+- Both cellular network and WLAN are supported, which is the default settings. The parameter is   
+**NETWORK_MOBILE **
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
@@ -164,7 +164,7 @@ networkType?: int
 title?: string
 ```
 
-设置下载任务名称。默认值为download。
+Download task name. The default value is **download**.
 
 **Type:** string
 
@@ -182,8 +182,8 @@ title?: string
 url: string
 ```
 
-资源地址。从API 6到API 14，最大长度为2048个字符；从API 15开始，最大长度为8192个字符。支持  
-[HTTP拦截](../../../basic-services/request/app-file-upload-download.md#http拦截)功能。
+Resource URL. From API version 6 to 14, the value contains a maximum of 2048 characters; since API version 15, the value contains a maximum of 8192 characters.   
+[Intercepting HTTP](../../../basic-services/request/app-file-upload-download.md#intercepting-http) is supported.
 
 **Type:** string
 

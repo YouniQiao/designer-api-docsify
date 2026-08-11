@@ -12,7 +12,7 @@ import { skillManager } from 'kits/@kit.AbilityKit';
 function getAllSkillInfos(flags: int, userId?: int): Promise<Array<SkillInfo>>
 ```
 
-获取设备上安装应用的所有技能信息。使用Promise异步回调。
+Obtains all SkillInfo objects installed on the device.To query information for other local accounts, the permission ohos.permission.INTERACT_ACROSS_LOCAL_ACCOUNTS must additionally be granted.
 
 **Since:** 26.0.0
 
@@ -33,18 +33,18 @@ function getAllSkillInfos(flags: int, userId?: int): Promise<Array<SkillInfo>>
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | flags | int | Yes | { |
-| userId | int | No | 指定查询的用户ID，可以通过getOsAccountLocalId获取。默认值：调用方所在用户。取值范围：大于等于0。 |
+| userId | int | No | Indicates the user ID. If not provided, the user ID of the caller is used. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;Array&lt;SkillInfo&gt;&gt; | Promise对象，返回所有应用的技能信息数组。 |
+| Promise&lt;Array&lt;SkillInfo&gt;&gt; | Returns the list of SkillInfo objects. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 201 | Permission denied. |
-| 17700004 | The specified user ID is not found. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
+| [17700004](../errorcode-bundle.md#17700004-user-id-does-not-exist) | The specified user ID is not found. |
 

@@ -4,7 +4,7 @@
 export type BorderRadiuses = Corners<number>
 ```
 
-设置四个角的圆角半径。
+Sets the uniform radius of the four corners.
 
 **Since:** 12
 

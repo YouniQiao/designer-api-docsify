@@ -1,8 +1,8 @@
 # FloatViewController
 
-标准悬浮窗控制器实例。用于启动、停止标准悬浮窗以及注册回调等操作。
+Defines a float view controller instance, which is used to start and stop the float view and register callbacks.
 
-下列API示例中都需先使用[floatView.create()](arkts-arkui-floatview-create-f.md#create)方法获取到标准悬浮窗控制器实例（即floatViewController），再通过此实例调用对应方法。
+Before calling the following APIs, you must use [floatView.create()](arkts-arkui-floatview-create-f.md#create) to create a float view controller instance (that is, **floatViewController**).
 
 **Since:** 26.0.0
 
@@ -24,7 +24,7 @@ import { floatView } from 'kits/@kit.ArkUI';
 getWindowProperties(): FloatViewProperties
 ```
 
-获取标准悬浮窗窗口的属性。
+Obtains the properties of the float view.
 
 **Since:** 26.0.0
 
@@ -40,26 +40,14 @@ getWindowProperties(): FloatViewProperties
 
 | Type | Description |
 | --- | --- |
-| [FloatViewProperties](arkts-arkui-floatview-floatviewproperties-i.md) | 返回标准悬浮窗窗口的属性。 |
+| [FloatViewProperties](arkts-arkui-floatview-floatviewproperties-i.md) | Properties of the float view. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 1300002 | This window state is abnormal. Possible cause: The float view controller object is null. |
-| 1300031 | This operation is not supported on the float view in the current state. Possible cause: The float view window has not started, has stopped, or is in an error state. |
-
-## Examples
-
-```TypeScript
-try {
-  // Obtain the properties of the float view.
-  let properties: floatView.FloatViewProperties | undefined = this.floatViewController?.getWindowProperties();
-  console.info('Float view properties: ' + JSON.stringify(properties));
-} catch (e) {
-  console.error(`Failed to get window properties. Cause:${e.code}, message:${e.message}`);
-}
-```
+| [1300002](../errorcode-window.md#1300002-abnormal-window-state) | This window state is abnormal. Possible cause: The float view controller object is null. |
+| [1300031](../errorcode-window.md#1300031-operation-not-supported-in-the-current-float-view-state) | This operation is not supported on the float view in the current state. Possible cause: The float view window has not started, has stopped, or is in an error state. |
 
 ## offLimitsChange
 
@@ -67,7 +55,7 @@ try {
 offLimitsChange(callback?: Callback<FloatViewLimits>): void
 ```
 
-取消标准悬浮窗限制变化的监听事件。
+Unregisters the callback for listening to limit changes of the float view.
 
 **Since:** 26.0.0
 
@@ -83,28 +71,13 @@ offLimitsChange(callback?: Callback<FloatViewLimits>): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;FloatViewLimits&gt; | No | 回调函数。返回当前的标准悬浮窗限制变化信息。若传入参数，则停止该监听。若未传入参数，则停止所有标准悬浮窗限制变化的监听。 |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;FloatViewLimits&gt; | No | Callback used to return the limit change information of the current float view. If a value is passed in, the corresponding callback is unregistered. If no value is passed in, all callbacks associated with the limit change event of the float view are unregistered. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 1300002 | This window state is abnormal. Possible cause: The float view controller object is null. |
-
-## Examples
-
-```TypeScript
-// Define the callback function for limit changes.
-let onLimitsChange = (limits: floatView.FloatViewLimits) => {
-  console.info('Float view limitsChange: ' + JSON.stringify(limits));
-};
-try {
-  // Unregister the callback for listening to limit changes of the float view.
-  this.floatViewController?.offLimitsChange(onLimitsChange);
-} catch (e) {
-  console.error(`Failed to off limitsChange float view. Cause:${e.code}, message:${e.message}`);
-}
-```
+| [1300002](../errorcode-window.md#1300002-abnormal-window-state) | This window state is abnormal. Possible cause: The float view controller object is null. |
 
 ## offRectChange
 
@@ -112,7 +85,7 @@ try {
 offRectChange(callback?: Callback<FloatViewRectChangeInfo>): void
 ```
 
-取消标准悬浮窗矩形区域变化的监听事件。
+Unregisters the callback for listening to changes in the rectangular area of the float view.
 
 **Since:** 26.0.0
 
@@ -128,28 +101,13 @@ offRectChange(callback?: Callback<FloatViewRectChangeInfo>): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;FloatViewRectChangeInfo&gt; | No | 回调函数。返回当前的标准悬浮窗矩形区域变化信息。若传入参数，则停止该监听。若未传入参数，则停止所有标准悬浮窗矩 形区域变化的监听。 |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;FloatViewRectChangeInfo&gt; | No | Callback used to return the rectangle area change information of the current float view. If a value is passed in, the corresponding callback is unregistered. If no value is passed in, all callbacks associated with the rectangle area change event of the float view are unregistered. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 1300002 | This window state is abnormal. Possible cause: The float view controller object is null. |
-
-## Examples
-
-```TypeScript
-// Define the callback function for rectangular area changes.
-let onRectChange = (info: floatView.FloatViewRectChangeInfo) => {
-  console.info('Float view rectChange: ' + JSON.stringify(info));
-};
-try {
-  // Unregister the callback for listening to changes in the rectangle area of the float view.
-  this.floatViewController?.offRectChange(onRectChange);
-} catch (e) {
-  console.error(`Failed to off rectChange float view. Cause:${e.code}, message:${e.message}`);
-}
-```
+| [1300002](../errorcode-window.md#1300002-abnormal-window-state) | This window state is abnormal. Possible cause: The float view controller object is null. |
 
 ## offStateChange
 
@@ -157,7 +115,7 @@ try {
 offStateChange(callback?: Callback<FloatViewStateChangeInfo>): void
 ```
 
-取消标准悬浮窗状态变化的监听事件。
+Unregisters the callback for listening to float view state changes.
 
 **Since:** 26.0.0
 
@@ -173,28 +131,13 @@ offStateChange(callback?: Callback<FloatViewStateChangeInfo>): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;FloatViewStateChangeInfo&gt; | No | 回调函数。返回当前的标准悬浮窗状态变化信息。若传入参数，则停止该监听。若未传入参数，则停止所有标准悬浮窗状态 变化的监听。 |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;FloatViewStateChangeInfo&gt; | No | Callback used to return the status change information of the current float view. If a value is passed in, the corresponding callback is unregistered. If no value is passed in, all callbacks associated with the status change event of the float view are unregistered. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 1300002 | This window state is abnormal. Possible cause: The float view controller object is null. |
-
-## Examples
-
-```TypeScript
-// Define the callback function for status changes.
-let onStateChange = (info: floatView.FloatViewStateChangeInfo) => {
-  console.info('Float view stateChange: ' + JSON.stringify(info));
-};
-try {
-  // Unregister the callback for listening to float view state changes.
-  this.floatViewController?.offStateChange(onStateChange);
-} catch (e) {
-  console.error(`Failed to off stateChange float view. Cause:${e.code}, message:${e.message}`);
-}
-```
+| [1300002](../errorcode-window.md#1300002-abnormal-window-state) | This window state is abnormal. Possible cause: The float view controller object is null. |
 
 ## onLimitsChange
 
@@ -202,7 +145,7 @@ try {
 onLimitsChange(callback: Callback<FloatViewLimits>): void
 ```
 
-注册标准悬浮窗限制变化的监听事件，当限制规格变化时触发回调，例如设备折叠或者展开。不再使用时，取消监听以避免内存泄漏。
+Registers a callback for listening to limit changes of the float view. When the limit changes, for example, when the device is folded or unfolded, the callback is triggered. To prevent memory leaks, remember to unregister the callback when it is no longer needed.
 
 **Since:** 26.0.0
 
@@ -218,29 +161,14 @@ onLimitsChange(callback: Callback<FloatViewLimits>): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;FloatViewLimits&gt; | Yes | 回调函数。返回当前的标准悬浮窗限制变化信息。 |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;FloatViewLimits&gt; | Yes | Callback used to return the limit change information of the current float view. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 1300002 | This window state is abnormal. Possible cause: The float view controller object is null. |
-| 1300030 | Repeated operations on the float view. Possible cause: The callback has already registered. |
-
-## Examples
-
-```TypeScript
-// Define the callback function for limit changes.
-let onLimitsChange = (limits: floatView.FloatViewLimits) => {
-  console.info('Float view limitsChange: ' + JSON.stringify(limits));
-};
-try {
-  // Register the callback for listening to limit changes of the float view.
-  this.floatViewController?.onLimitsChange(onLimitsChange);
-} catch (e) {
-  console.error(`Failed to on limitsChange float view. Cause:${e.code}, message:${e.message}`);
-}
-```
+| [1300002](../errorcode-window.md#1300002-abnormal-window-state) | This window state is abnormal. Possible cause: The float view controller object is null. |
+| [1300030](../errorcode-window.md#1300030-repeated-operations-on-the-float-view) | Repeated operations on the float view. Possible cause: The callback has already registered. |
 
 ## onRectChange
 
@@ -248,7 +176,7 @@ try {
 onRectChange(callback: Callback<FloatViewRectChangeInfo>): void
 ```
 
-注册标准悬浮窗矩形区域（位置和大小）变化的监听事件。不再使用时，取消监听以避免内存泄漏。
+Registers a callback for listening to changes in the rectangular area (position and size) of the float view. To prevent memory leaks, remember to unregister the callback when it is no longer needed.
 
 **Since:** 26.0.0
 
@@ -264,29 +192,14 @@ onRectChange(callback: Callback<FloatViewRectChangeInfo>): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;FloatViewRectChangeInfo&gt; | Yes | 回调函数。返回当前的标准悬浮窗矩形区域变化信息。 |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;FloatViewRectChangeInfo&gt; | Yes | Callback used to return the rectangle area change information of the current float view. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 1300002 | This window state is abnormal. Possible cause: The float view controller object is null. |
-| 1300030 | Repeated operations on the float view. Possible cause: The callback has already registered. |
-
-## Examples
-
-```TypeScript
-// Define the callback function for rectangular area changes.
-let onRectChange = (info: floatView.FloatViewRectChangeInfo) => {
-  console.info('Float view rectChange: ' + JSON.stringify(info));
-};
-try {
-  // Register the callback for listening to changes in the rectangle area of the float view.
-  this.floatViewController?.onRectChange(onRectChange);
-} catch (e) {
-  console.error(`Failed to on rectChange float view. Cause:${e.code}, message:${e.message}`);
-}
-```
+| [1300002](../errorcode-window.md#1300002-abnormal-window-state) | This window state is abnormal. Possible cause: The float view controller object is null. |
+| [1300030](../errorcode-window.md#1300030-repeated-operations-on-the-float-view) | Repeated operations on the float view. Possible cause: The callback has already registered. |
 
 ## onStateChange
 
@@ -294,7 +207,7 @@ try {
 onStateChange(callback: Callback<FloatViewStateChangeInfo>): void
 ```
 
-注册标准悬浮窗状态变化的监听事件。不再使用时，取消监听以避免内存泄漏。
+Registers a callback for listening to float view state changes. To prevent memory leaks, remember to unregister the callback when it is no longer needed.
 
 **Since:** 26.0.0
 
@@ -310,29 +223,14 @@ onStateChange(callback: Callback<FloatViewStateChangeInfo>): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;FloatViewStateChangeInfo&gt; | Yes | 回调函数。返回当前的标准悬浮窗状态变化信息。 |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;FloatViewStateChangeInfo&gt; | Yes | Callback used to return the status change information of the current float view. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 1300002 | This window state is abnormal. Possible cause: The float view controller object is null. |
-| 1300030 | Repeated operations on the float view. Possible cause: The callback has already registered. |
-
-## Examples
-
-```TypeScript
-// Define the callback function for status changes.
-let onStateChange = (info: floatView.FloatViewStateChangeInfo) => {
-  console.info('Float view stateChange: ' + JSON.stringify(info));
-};
-try {
-  // Register the callback for listening to float view state changes.
-  this.floatViewController?.onStateChange(onStateChange);
-} catch (e) {
-  console.error(`Failed to on stateChange float view. Cause:${e.code}, message:${e.message}`);
-}
-```
+| [1300002](../errorcode-window.md#1300002-abnormal-window-state) | This window state is abnormal. Possible cause: The float view controller object is null. |
+| [1300030](../errorcode-window.md#1300030-repeated-operations-on-the-float-view) | Repeated operations on the float view. Possible cause: The callback has already registered. |
 
 ## restoreMainWindow
 
@@ -340,7 +238,7 @@ try {
 restoreMainWindow(wantParameters?: Record<string, Object>): Promise<void>
 ```
 
-恢复标准悬浮窗的主窗口到前台显示。如果主窗口已处于前台时调用，将抬升主窗口层级。此接口只能在标准悬浮窗窗口被点击后使用。当主窗口处于PAUSED生命周期或处于多任务状态时，调用接口将抛出错误码1300032。使用Promise异步回调。
+Restores the main window of the float view to display in the foreground. If this API is called when the main window is already in the foreground, the main window level will be raised. This API can be used only after the float view is clicked. If the main window is in the **PAUSED** state or in the multitasking state, error code 1300032 will be returned if this API is called. This API uses a promise to return the result.
 
 **Since:** 26.0.0
 
@@ -356,45 +254,22 @@ restoreMainWindow(wantParameters?: Record<string, Object>): Promise<void>
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| wantParameters | [Record](../../apis-default/arkts-apis/arkts-record-t.md)&lt;string, Object&gt; | No | 恢复标准悬浮窗的主窗口时会给主窗口传递的自定义参数，主窗口会在触发 [onNewWant](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-abilitylifecyclecallback-abilitylifecyclecallback-c.md/arkts-ability-app-ability-abilitylifecyclecallback-abilitylifecyclecallback-c.md#onabilitycreate) 回调时收到。默认值为空，代表不向主窗传入任何自定义参数。 |
+| wantParameters | [Record](../../apis-default/arkts-apis/arkts-record-t.md)&lt;string, Object&gt; | No | Custom parameters passed to the main window when the main window of the float view is restored. The main window will receive the parameters when the [onNewWant](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-abilitylifecyclecallback-abilitylifecyclecallback-c.md/arkts-ability-app-ability-abilitylifecyclecallback-abilitylifecyclecallback-c.md#onabilitycreate) callback is triggered. The default value is empty, indicating that no custom parameters are passed to the main window. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise对象，无返回结果。 |
+| Promise&lt;void&gt; | Promise that returns no value. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 1300003 | This window manager service works abnormally. Possible cause: Internal IPC error. |
-| 1300002 | This window state is abnormal. Possible cause: The float view controller object is null. |
-| 1300032 | Failed to restore the main window. Possible cause: 1. User has never clicked the float view window before restore. 2. The float view window is not in the foreground. 3. The main window is in PAUSED lifecycle state. 4. The main window is in background during recent. |
-| 1300031 | This operation is not supported on the float view in the current state. Possible cause: The float view window is not started when restoring. |
-
-## Examples
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-import { floatView } from '@kit.ArkUI';
-
-// Define the parameter for restoring the main window.
-let param: Record<string, Object> = {
-  'info': 'helloworld',
-};
-// The float view must be in the STARTED state.
-try {
-  // Restore the main window of the float view to display in the foreground.
-  this.floatViewController?.restoreMainWindow(param).then(() => {
-    console.info('Succeeded in restoring main window.');
-  }).catch((err: BusinessError): void => {
-    console.error(`Failed to restore main window. Cause:${err.code}, message:${err.message}`);
-  });
-} catch (e) {
-  console.error(`Failed to restore main window. Cause:${e.code}, message:${e.message}`);
-}
-```
+| [1300003](../errorcode-window.md#1300003-abnormal-window-manager-service) | This window manager service works abnormally. Possible cause: Internal IPC error. |
+| [1300002](../errorcode-window.md#1300002-abnormal-window-state) | This window state is abnormal. Possible cause: The float view controller object is null. |
+| [1300032](../errorcode-window.md#1300032-failed-to-restore-the-main-window) | Failed to restore the main window. Possible cause: 1. User has never clicked the float view window before restore. 2. The float view window is not in the foreground. 3. The main window is in PAUSED lifecycle state. 4. The main window is in background during recent. |
+| [1300031](../errorcode-window.md#1300031-operation-not-supported-in-the-current-float-view-state) | This operation is not supported on the float view in the current state. Possible cause: The float view window is not started when restoring. |
 
 ## setFloatViewVisibilityInApp
 
@@ -402,9 +277,9 @@ try {
 setFloatViewVisibilityInApp(isVisible: boolean): Promise<void>
 ```
 
-设置应用在前台时标准悬浮窗窗口是否可见。使用Promise异步回调。
+Sets whether the float view is visible when the application is running in the foreground. This API uses a promise to return the result.
 
-创建标准悬浮窗后未调用此接口前，默认其在应用处于前台时为可见状态。
+After the float view is created and before this API is called, the float view is visible by default when the application is running in the foreground.
 
 **Since:** 26.0.0
 
@@ -420,38 +295,20 @@ setFloatViewVisibilityInApp(isVisible: boolean): Promise<void>
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| isVisible | boolean | Yes | 应用在前台时标准悬浮窗是否可见，true表示可见，false表示不可见。 |
+| isVisible | boolean | Yes | Whether the float view is visible when the application is running in the foreground. The value **true** indicates that the window is visible, and **false** indicates the opposite. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise对象，无返回结果。 |
+| Promise&lt;void&gt; | Promise that returns no value. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 1300003 | This window manager service works abnormally. Possible cause: Internal IPC error. |
-| 1300002 | This window state is abnormal. Possible cause: The float view controller object is null. |
-
-## Examples
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-import { floatView } from '@kit.ArkUI';
-
-try {
-  // Set whether the float view is visible when the application is running in the foreground.
-  this.floatViewController?.setFloatViewVisibilityInApp(true).then(() => {
-    console.info('Succeeded in setting float view visibility in app.');
-  }).catch((err: BusinessError): void => {
-    console.error(`Failed to set float view visibility in app. Cause:${err.code}, message:${err.message}`);
-  });
-} catch (e) {
-  console.error(`Failed to set float view visibility in app. Cause:${e.code}, message:${e.message}`);
-}
-```
+| [1300003](../errorcode-window.md#1300003-abnormal-window-manager-service) | This window manager service works abnormally. Possible cause: Internal IPC error. |
+| [1300002](../errorcode-window.md#1300002-abnormal-window-state) | This window state is abnormal. Possible cause: The float view controller object is null. |
 
 ## setUIContext
 
@@ -459,7 +316,7 @@ try {
 setUIContext(path: string, storage?: LocalStorage): Promise<void>
 ```
 
-根据当前工程中指定的页面路径为标准悬浮窗加载具体页面内容，通过LocalStorage传递状态属性至加载页面。使用Promise异步回调。
+Loads the content of a page, with its path specified in the current project, for the float view, and transfers the state attribute to the page through **LocalStorage**. This API uses a promise to return the result.
 
 **Since:** 26.0.0
 
@@ -475,40 +332,21 @@ setUIContext(path: string, storage?: LocalStorage): Promise<void>
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| path | string | Yes | 要加载到窗口中的页面内容的路径，该路径需添加到工程的main_pages.json文件中。不支持相对路径写法，需与main_pages.json中的src取值保持一致。 |
-| storage | [LocalStorage](arkts-arkui-localstorage-c.md) | No | 页面级UI状态存储单元，用于为加载到窗口的页面内容传递状态属性。默认值为空。 |
+| path | string | Yes | Path of the page content which needs to be loaded to the window. The path needs to be configured in the **main_pages.json** file of the project. The path cannot be a relative path and must be the same as the value of **src** in the **main_pages.json** file. |
+| storage | [LocalStorage](arkts-arkui-localstorage-c.md) | No | Page-level UI state storage unit, which is used to transfer the state attribute for the page. By default, the value is empty. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise对象，无返回结果。 |
+| Promise&lt;void&gt; | Promise that returns no value. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 1300002 | This window state is abnormal. Possible cause: The float view controller object is null. |
-| 1300016 | Parameter error. Possible causes: Invalid path. |
-
-## Examples
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-import { floatView } from '@kit.ArkUI';
-
-try {
-  // Obtain floatViewController using floatView.create(). For details, see the floatView.create() sample.
-  // Set the page content path of the float view.
-  this.floatViewController?.setUIContext('pages/Index').then(() => {
-    console.info('Succeeded in setting UI context.');
-  }).catch((err: BusinessError): void => {
-    console.error(`Failed to set UI context. Cause:${err.code}, message:${err.message}`);
-  });
-} catch (e) {
-  console.error(`Failed to set UI context. Cause:${e.code}, message:${e.message}`);
-}
-```
+| [1300002](../errorcode-window.md#1300002-abnormal-window-state) | This window state is abnormal. Possible cause: The float view controller object is null. |
+| [1300016](../errorcode-window.md#1300016-parameter-verification-error) | Parameter error. Possible causes: Invalid path. |
 
 ## setUIContextByName
 
@@ -516,7 +354,7 @@ try {
 setUIContextByName(name: string, storage?: LocalStorage): Promise<void>
 ```
 
-根据指定路由页面名称为当前窗口加载[命名路由](../../../ui/arkts-routing.md#命名路由)页面，通过LocalStorage传递状态属性至加载页面，使用Promise异步回调。
+Sets the UI content of a [named route](../../../ui/arkts-routing.md#named-route) page to this float view window.
 
 **Since:** 26.0.0
 
@@ -532,69 +370,21 @@ setUIContextByName(name: string, storage?: LocalStorage): Promise<void>
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| name | string | Yes | 命名路由页面的名称。 |
-| storage | [LocalStorage](arkts-arkui-localstorage-c.md) | No | 页面级UI状态存储单元，用于为加载到窗口的页面内容传递状态属性。默认值为空。 |
+| name | string | Yes | Name of the named route page. |
+| storage | [LocalStorage](arkts-arkui-localstorage-c.md) | No | The data object shared within the content instance loaded by the window. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise对象，无返回结果。 |
+| Promise&lt;void&gt; | Promise that returns no value. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 1300002 | This window state is abnormal. Possible cause: The float view controller object is null. |
-| 1300016 | Parameter error. Possible causes: Invalid name. |
-
-## Examples
-
-```TypeScript
-// Index.ets
-import { BusinessError } from '@kit.BasicServicesKit';
-import { entryName } from './Hello'; // Import the named route page.
-import { floatView } from '@kit.ArkUI';
-
-@Entry
-@Component
-struct Index {
-  private floatViewController: floatView.FloatViewController | undefined = undefined;
-  // Create a controller.
-  // ...
-  public setUIContextByName(): void {
-    try {
-      // Set the page content of the float view based on the named route page.
-      this.floatViewController?.setUIContextByName(entryName).then(() => {
-        console.info('Succeeded in loading the content.');
-      }).catch((err: BusinessError): void => {
-        console.error(`Failed to load the content. Cause code: ${err.code}, message: ${err.message}`);
-      });
-    } catch (e) {
-      console.error(`Failed to load the content. Cause code: ${e.code}, message: ${e.message}`);
-    }
-  }
-}
-```
-
-```TypeScript
-// Hello.ets
-export const entryName : string = 'Hello';
-@Entry({routeName: entryName, useSharedStorage: true})
-@Component
-export struct Hello {
-  @State message: string = 'Hello World'
-  build() {
-    Row() {
-      Column() {
-        Text(this.message)
-      }
-      .width('100%')
-    }
-    .height('100%')
-  }
-}
-```
+| [1300002](../errorcode-window.md#1300002-abnormal-window-state) | This window state is abnormal. Possible cause: The float view controller object is null. |
+| [1300016](../errorcode-window.md#1300016-parameter-verification-error) | Parameter error. Possible causes: Invalid name. |
 
 ## setWindowSize
 
@@ -602,7 +392,9 @@ export struct Hello {
 setWindowSize(size: window.Size): Promise<void>
 ```
 
-设置标准悬浮窗窗口大小。建议先调用[getFloatViewLimits](arkts-arkui-floatview-getfloatviewlimits-f.md#getfloatviewlimits)接口获取推荐的宽高范围和宽高比范围，再根据推荐值调用本接口。窗口实际大小变化可通过[onRectChange](floatView.FloatViewController.onRectChange(callback: Callback&lt;FloatViewRectChangeInfo&gt;))接口监听。使用Promise异步回调。
+Sets the size of the float view. You are advised to call the  
+[getFloatViewLimits](arkts-arkui-floatview-getfloatviewlimits-f.md#getfloatviewlimits) API to obtain the recommended width and height ranges and aspect ratio range, and then call this API based on the recommended values. The actual window size change can be listened to through the  
+[onRectChange](floatView.FloatViewController.onRectChange(callback: Callback&lt;FloatViewRectChangeInfo&gt;))API. This API uses a promise to return the result.
 
 **Since:** 26.0.0
 
@@ -618,44 +410,21 @@ setWindowSize(size: window.Size): Promise<void>
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| size | window.Size | Yes | 表示窗口的大小。建议大小满足[getFloatViewLimits](arkts-arkui-floatview-getfloatviewlimits-f.md#getfloatviewlimits)接口返回的限制。 |
+| size | window.Size | Yes | Window size. It is recommended that the size meet the limits returned by the [getFloatViewLimits](arkts-arkui-floatview-getfloatviewlimits-f.md#getfloatviewlimits) API. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise对象，无返回结果。 |
+| Promise&lt;void&gt; | Promise that returns no value. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 1300003 | This window manager service works abnormally. Possible cause: Internal IPC error. |
-| 1300002 | This window state is abnormal. Possible cause: The float view controller object is null. |
-| 1300016 | Parameter error. Possible cause: The value of the size is less than or equal to 0. |
-
-## Examples
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-import { floatView, window } from '@kit.ArkUI';
-
-// Set the window size.
-let size: window.Size = {
-  width: 400,
-  height: 600
-};
-try {
-  // Set the size of the float view.
-  this.floatViewController?.setWindowSize(size).then(() => {
-    console.info('Succeeded in setting window size.');
-  }).catch((err: BusinessError): void => {
-    console.error(`Failed to set window size. Cause:${err.code}, message:${err.message}`);
-  });
-} catch (e) {
-  console.error(`Failed to set window size. Cause:${e.code}, message:${e.message}`);
-}
-```
+| [1300003](../errorcode-window.md#1300003-abnormal-window-manager-service) | This window manager service works abnormally. Possible cause: Internal IPC error. |
+| [1300002](../errorcode-window.md#1300002-abnormal-window-state) | This window state is abnormal. Possible cause: The float view controller object is null. |
+| [1300016](../errorcode-window.md#1300016-parameter-verification-error) | Parameter error. Possible cause: The value of the size is less than or equal to 0. |
 
 ## start
 
@@ -663,9 +432,9 @@ try {
 start(): Promise<void>
 ```
 
-启动标准悬浮窗窗口。接口返回不表示start流程结束，需要通过  
-[onStateChange](floatView.FloatViewController.onStateChange(callback: Callback&lt;FloatViewStateChangeInfo&gt;))接口监听到STARTED回调时判断启动成功。建议在调用[setUIContext()](arkts-arkui-floatview-floatviewcontroller-i.md#setuicontext)或  
-[setUIContextByName()](arkts-arkui-floatview-floatviewcontroller-i.md#setuicontextbyname)后调用start()。使用Promise异步回调。
+Starts the float view. The return value of this API does not indicate that the start process is complete. You need to use the  
+[onStateChange](floatView.FloatViewController.onStateChange(callback: Callback&lt;FloatViewStateChangeInfo&gt;))API to listen for the **STARTED** callback to determine whether the start is successful. You are advised to call  
+**start ()** after calling [setUIContext()](arkts-arkui-floatview-floatviewcontroller-i.md#setuicontext). This API uses a promise to return the result.
 
 **Since:** 26.0.0
 
@@ -683,37 +452,19 @@ start(): Promise<void>
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise对象，无返回结果。 |
+| Promise&lt;void&gt; | Promise that returns no value. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 1300003 | This window manager service works abnormally. Possible cause: Internal IPC error. |
-| 1300002 | This window state is abnormal. Possible cause: The float view controller object is null. |
-| 1300034 | This operation conflicts with other floating windows. Possible cause: App has already started floating ball or pip window. |
-| 1300033 | Failed to start float view. Possible causes: 1. Start multiple float views. 2. The main window of context is not foreground. |
-| 201 | Permission verification failed. Possible cause: The application does not have the permission required to call the API. |
-| 1300031 | The float view state does not support this operation. Possible cause: The float view is stopping. |
-| 1300030 | Repeated operations on the float view. Possible cause: The float view is starting or has already started. |
-
-## Examples
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-import { floatView } from '@kit.ArkUI';
-
-try {
-  // Start the float view.
-  this.floatViewController?.start().then(() => {
-    console.info('Succeeded in starting float view.');
-  }).catch((err: BusinessError): void => {
-    console.error(`Failed to start float view. Cause:${err.code}, message:${err.message}`);
-  });
-} catch (e) {
-  console.error(`Failed to start float view. Cause:${e.code}, message:${e.message}`);
-}
-```
+| [1300003](../errorcode-window.md#1300003-abnormal-window-manager-service) | This window manager service works abnormally. Possible cause: Internal IPC error. |
+| [1300002](../errorcode-window.md#1300002-abnormal-window-state) | This window state is abnormal. Possible cause: The float view controller object is null. |
+| [1300034](../errorcode-window.md#1300034-operation-of-the-float-view-conflicts-with-those-of-other-floating-windows) | This operation conflicts with other floating windows. Possible cause: App has already started floating ball or pip window. |
+| [1300033](../errorcode-window.md#1300033-failed-to-start-the-float-view) | Failed to start float view. Possible causes: 1. Start multiple float views. 2. The main window of context is not foreground. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed. Possible cause: The application does not have the permission required to call the API. |
+| [1300031](../errorcode-window.md#1300031-operation-not-supported-in-the-current-float-view-state) | The float view state does not support this operation. Possible cause: The float view is stopping. |
+| [1300030](../errorcode-window.md#1300030-repeated-operations-on-the-float-view) | Repeated operations on the float view. Possible cause: The float view is starting or has already started. |
 
 ## stop
 
@@ -721,8 +472,8 @@ try {
 stop(): Promise<void>
 ```
 
-停止标准悬浮窗窗口。接口返回不表示stop流程结束，需要通过  
-[onStateChange](floatView.FloatViewController.onStateChange(callback: Callback&lt;FloatViewStateChangeInfo&gt;))接口监听到STOPPED回调时判断停止成功。使用Promise异步回调。
+Stops the float view. The return value of this API does not indicate that the stop process is complete. You need to use the  
+[onStateChange](floatView.FloatViewController.onStateChange(callback: Callback&lt;FloatViewStateChangeInfo&gt;))API to listen for the **STOPPED** callback to determine whether the stop is successful. This API uses a promise to return the result.
 
 **Since:** 26.0.0
 
@@ -738,34 +489,16 @@ stop(): Promise<void>
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise对象，无返回结果。 |
+| Promise&lt;void&gt; | Promise that returns no value. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 1300003 | This window manager service works abnormally. Possible cause: Internal IPC error. |
-| 1300002 | This window state is abnormal. Possible cause: The float view controller object is null. |
-| 1300031 | This operation is not supported on the float view in the current state. Possible cause: The float view window is not started. |
-| 1300030 | Repeated operations on the float view. Possible cause: The float view is stopping or has already stopped. |
-
-## Examples
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-import { floatView } from '@kit.ArkUI';
-
-try {
-  // Stop the float view.
-  this.floatViewController?.stop().then(() => {
-    console.info('Succeeded in stopping float view.');
-  }).catch((err: BusinessError): void => {
-    console.error(`Failed to stop float view. Cause:${err.code}, message:${err.message}`);
-  });
-} catch (e) {
-  console.error(`Failed to stop float view. Cause:${e.code}, message:${e.message}`);
-}
-```
+| [1300003](../errorcode-window.md#1300003-abnormal-window-manager-service) | This window manager service works abnormally. Possible cause: Internal IPC error. |
+| [1300002](../errorcode-window.md#1300002-abnormal-window-state) | This window state is abnormal. Possible cause: The float view controller object is null. |
+| [1300031](../errorcode-window.md#1300031-operation-not-supported-in-the-current-float-view-state) | This operation is not supported on the float view in the current state. Possible cause: The float view window is not started. |
+| [1300030](../errorcode-window.md#1300030-repeated-operations-on-the-float-view) | Repeated operations on the float view. Possible cause: The float view is stopping or has already stopped. |
 
 ## switchTemplate
 
@@ -773,8 +506,9 @@ try {
 switchTemplate(templateProperty: TemplateProperty): Promise<void>
 ```
 
-切换标准悬浮窗的模板并改变其窗口尺寸。建议先调用[getFloatViewLimits](arkts-arkui-floatview-getfloatviewlimits-f.md#getfloatviewlimits)接口获取目标模板类型推荐的宽高范围和宽高比范围，再根据推荐值调用本接口。窗口实际大小变化可通过  
-[onRectChange](floatView.FloatViewController.onRectChange(callback: Callback&lt;FloatViewRectChangeInfo&gt;))接口监听。使用Promise异步回调。
+Switches the template of the flow view and changes the window size. You are advised to call the  
+[getFloatViewLimits](arkts-arkui-floatview-getfloatviewlimits-f.md#getfloatviewlimits) API to obtain the recommended width and height ranges and aspect ratio range of the target template, and then call this API based on the recommended values. The actual window size change can be listened to through the  
+[onRectChange](floatView.FloatViewController.onRectChange(callback: Callback&lt;FloatViewRectChangeInfo&gt;))API. This API uses a promise to return the result.
 
 **Since:** 26.0.0
 
@@ -790,47 +524,19 @@ switchTemplate(templateProperty: TemplateProperty): Promise<void>
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| templateProperty | [TemplateProperty](arkts-arkui-floatview-templateproperty-i.md) | Yes | 表示需要切换的窗口模板类型及大小。建议大小满足 [getFloatViewLimits](arkts-arkui-floatview-getfloatviewlimits-f.md#getfloatviewlimits)接口返回的限制。 |
+| templateProperty | [TemplateProperty](arkts-arkui-floatview-templateproperty-i.md) | Yes | Target flow view template and window size. It is recommended that the size meet the limits returned by the [getFloatViewLimits](arkts-arkui-floatview-getfloatviewlimits-f.md#getfloatviewlimits) API. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise对象，无返回结果。 |
+| Promise&lt;void&gt; | Promise that returns no value. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 1300003 | This window manager service works abnormally. Possible cause: Internal IPC error. |
-| 1300002 | This window state is abnormal. Possible cause: The float view controller object is null. |
-| 1300016 | Parameter error. Possible cause: 1. Invalid template type. 2. The value of the size is less than or equal to 0. |
-
-## Examples
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-import { floatView, window } from '@kit.ArkUI';
-
-// Set the size of the new window.
-let newSize: window.Size = {
-  width: 800,
-  height: 100
-};
-// Set the template property.
-let templateProperty: floatView.TemplateProperty = {
-  templateType: floatView.FloatViewTemplateType.HORIZONTAL_BAR,
-  size: newSize
-}
-try {
-  // Switch the template of the float view and change the window size.
-  this.floatViewController?.switchTemplate(templateProperty).then(() => {
-    console.info('Succeeded in switching window type and size.');
-  }).catch((err: BusinessError): void => {
-    console.error(`Failed to switch window type and size. Cause:${err.code}, message:${err.message}`);
-  });
-} catch (e) {
-  console.error(`Failed to switch window type and size. Cause:${e.code}, message:${e.message}`);
-}
-```
+| [1300003](../errorcode-window.md#1300003-abnormal-window-manager-service) | This window manager service works abnormally. Possible cause: Internal IPC error. |
+| [1300002](../errorcode-window.md#1300002-abnormal-window-state) | This window state is abnormal. Possible cause: The float view controller object is null. |
+| [1300016](../errorcode-window.md#1300016-parameter-verification-error) | Parameter error. Possible cause: 1. Invalid template type. 2. The value of the size is less than or equal to 0. |
 

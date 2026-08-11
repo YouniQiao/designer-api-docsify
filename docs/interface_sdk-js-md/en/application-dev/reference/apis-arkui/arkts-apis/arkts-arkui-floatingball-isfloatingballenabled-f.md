@@ -12,7 +12,7 @@ import { floatingBall } from 'kits/@kit.ArkUI';
 function isFloatingBallEnabled(): boolean
 ```
 
-判断当前设备是否支持闪控球功能。
+Checks whether the device supports floating balls.
 
 **Since:** 20
 
@@ -26,12 +26,11 @@ function isFloatingBallEnabled(): boolean
 
 | Type | Description |
 | --- | --- |
-| boolean | 当前设备是否支持闪控球功能。true表示支持，false则表示不支持。 |
+| boolean | Check result for the support of floating balls. **true** if supported, **false** otherwise. |
 
 ## Examples
 
 ```TypeScript
-// Check whether the current device supports the floating ball feature.
 let enable: boolean = floatingBall.isFloatingBallEnabled();
 console.info('Floating ball enabled is: ' + enable);
 ```

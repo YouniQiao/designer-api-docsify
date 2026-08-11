@@ -9,4 +9,4 @@ Defines the macros, enumerated values, data structures,used by OpenHarmony Unive
 
 | Name | Description |
 | -- | -- |
-| [native_huks_external_crypto_type.h](capi-native-huks-external-crypto-type-h.md) | Defines the structs and enums for external key management extensions. |
+| [native_huks_external_crypto_type.h](capi-native-huks-external-crypto-type-h.md) | Defines the structs, enums, and macros for external key management extensions. |

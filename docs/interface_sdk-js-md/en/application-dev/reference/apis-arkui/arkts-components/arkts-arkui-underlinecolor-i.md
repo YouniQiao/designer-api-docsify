@@ -1,6 +1,6 @@
 # UnderlineColor
 
-定义下划线颜色宽度属性。
+Defines the underline color width property.
 
 **Since:** 12
 
@@ -16,7 +16,8 @@
 disable?: ResourceColor | undefined
 ```
 
-禁用时下划线颜色。不填写、undefined、null、无效值时恢复默认，默认为主题配置的下划线颜色。
+Underline color in the disabled state. If no value is specified or if the value specified is **undefined**,  
+**null**, or invalid, the default value is used.
 
 **Type:** [ResourceColor](../arkts-apis/arkts-arkui-resourcecolor-t.md) \| undefined
 
@@ -38,7 +39,8 @@ disable?: ResourceColor | undefined
 error?: ResourceColor | undefined
 ```
 
-错误时下划线颜色。不填写、undefined、null、无效值时恢复默认，默认为主题配置的下划线颜色。此选项会修改showCounter属性中达到最大字符数时的颜色。
+Underline color when an error occurs. If no value is specified or if the value specified is **undefined**,  
+**null**, or invalid, the default value is used. This option changes the color used in the **showCounter**attribute when the maximum number of characters is reached.
 
 **Type:** [ResourceColor](../arkts-apis/arkts-arkui-resourcecolor-t.md) \| undefined
 
@@ -60,7 +62,7 @@ error?: ResourceColor | undefined
 normal?: ResourceColor | undefined
 ```
 
-非特殊状态时下划线颜色。不填写、undefined、null、无效值时恢复默认，默认为主题配置的下划线颜色。
+Underline color in the normal state. If no value is specified or if the value specified is **undefined**, **null**,or invalid, the default value is used.
 
 **Type:** [ResourceColor](../arkts-apis/arkts-arkui-resourcecolor-t.md) \| undefined
 
@@ -82,7 +84,7 @@ normal?: ResourceColor | undefined
 typing?: ResourceColor | undefined
 ```
 
-键入时下划线颜色。不填写、undefined、null、无效值时恢复默认，默认为主题配置的下划线颜色。
+Underline color in the typing state. If no value is specified or if the value specified is **undefined**, **null**,or invalid, the default value is used.
 
 **Type:** [ResourceColor](../arkts-apis/arkts-arkui-resourcecolor-t.md) \| undefined
 

@@ -12,9 +12,10 @@ import { userAccessCtrl } from 'kits/@kit.UserAuthenticationKit';
 function verifyAuthToken(authToken: Uint8Array, allowableDuration: int): Promise<AuthToken>
 ```
 
-验证认证令牌。该接口用于校验AuthToken的有效性，包括完整性校验和时效性校验，校验通过后返回解析后的AuthToken详细信息。使用Promise异步回调。
+Verifies an authentication token. This API is used to verify the validity of an **AuthToken**, including the integrity and validity check. After the verification is successful, the detailed information about the parsed  
+**AuthToken** is returned. This API uses a promise to return the result.
 
-完整性校验通过验证AuthToken的数字签名确保令牌未被篡改；时效性校验通过比对AuthToken的签发时间与当前时间，并结合allowableDuration参数判断令牌是否在有效期内。
+The integrity check verifies the digital signature of the **AuthToken** to ensure that the token has not been tampered with. The validity check compares the issuance time of the **AuthToken** with the current time and determines whether the token is within the validity period based on the **allowableDuration** parameter.
 
 **Since:** 18
 
@@ -32,25 +33,25 @@ function verifyAuthToken(authToken: Uint8Array, allowableDuration: int): Promise
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| authToken | Uint8Array | Yes | 待验证的认证令牌。最大长度为1024字节，由用户认证通过后返回。令牌中包含用户身份认证的凭证信息，用于后续的安全操作验证。 |
-| allowableDuration | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | 允许的认证有效时长。从AuthToken签发起允许使用的最大时间间隔，单位为毫秒。值需大于0且小于等于86400000（24小时）。用于校验令牌的时效性，防止过 期令牌被使用。 |
+| authToken | Uint8Array | Yes | Authentication token to be verified. The value contains a maximum of 1024 bytes and is returned after the user is authenticated. The token contains the credentials information for user authentication, which is used for subsequent security operation verification. |
+| allowableDuration | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | Authentication validity period. It indicates the maximum time interval for using the token from the time when the token is issued. The unit is millisecond. The value must be greater than 0 and less than or equal to 86400000 (24 hours). It is used to verify the validity of a token to prevent expired tokens from being used. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;AuthToken&gt; | Promise对象，验证成功时返回解析后的AuthToken数据，包含挑战值、认证信任等级、认证类型、用户ID等详细信息；验证失败时抛出相应错误码。 |
+| Promise&lt;AuthToken&gt; | Promise used to return the result. If the verification is successful, the parsed **AuthToken** data is returned, including the challenge value, authentication trust level, authentication type, and user ID. If the verification fails, the corresponding error code is returned. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. Possible causes: &lt;br&gt;1. Mandatory parameters are left unspecified. &lt;br&gt;2. Incorrect parameter types. &lt;br&gt;3. Parameter verification failed. |
-| 12500015 | AuthToken integrity check failed. |
-| 201 | Permission denied. |
-| 202 | Permission denied. Called by non-system application. |
-| 12500002 | General operation error. |
-| 12500016 | AuthToken has expired. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: &lt;br&gt;1. Mandatory parameters are left unspecified. &lt;br&gt;2. Incorrect parameter types. &lt;br&gt;3. Parameter verification failed. |
+| [12500015](../errorcode-useriam.md#12500015-authtoken-integrity-check-failed) | AuthToken integrity check failed. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission denied. Called by non-system application. |
+| [12500002](../errorcode-useriam.md#12500002-common-error-code-of-the-identity-authentication-system) | General operation error. |
+| [12500016](../errorcode-useriam.md#12500016-authtoken-has-expired) | AuthToken has expired. |
 
 ## Examples
 
@@ -66,14 +67,14 @@ try {
   const len: number = 16;
   let randData: Uint8Array | null = null;
   let retryCount = 0;
-  while (retryCount < 3) {
+  while(retryCount < 3){
     randData = rand?.generateRandomSync(len)?.data;
-    if (randData) {
+    if(randData){
       break;
     }
     retryCount++;
   }
-  if (!randData) {
+  if(!randData){
     return;
   }
   const authParam: userAuth.AuthParam = {
@@ -86,10 +87,10 @@ try {
   };
 
   const userAuthInstance = userAuth.getUserAuthInstance(authParam, widgetParam);
-  console.info('get userAuth instance successfully.');
+  console.info('get userAuth instance success');
   // The authentication result is returned by onResult() only after the authentication is started by start() of UserAuthInstance.
   userAuthInstance.on('result', {
-    onResult: (result) => {
+    onResult (result) {
         if (!result.token) {
             console.error('userAuthInstance callback result.token is null');
             return;
@@ -103,21 +104,21 @@ try {
                       console.info(`retAuthToken key:${key}`);
                   })
               }).catch ((error: BusinessError) => {
-                  console.error(`verify authToken failed. Code is ${error?.code}, message is ${error?.message}`);
+                  console.error(`verify authToken error. Code is ${error?.code}, message is ${error?.message}`);
               })
         } catch (error) {
           const err: BusinessError = error as BusinessError;
-          console.error(`verify authToken failed. Code is ${err?.code}, message is ${err?.message}`);
+          console.error(`verify authToken error. Code is ${err?.code}, message is ${err?.message}`);
         }
     }
   });
-  console.info('auth on successfully.');
+  console.info('auth on success');
   // Start authentication.
   userAuthInstance.start();
-  console.info('auth start successfully.');
+  console.info('auth start success');
 } catch (error) {
   const err: BusinessError = error as BusinessError;
-  console.error(`auth failed. Code is ${err?.code}, message is ${err?.message}`);
+  console.error(`auth catch error. Code is ${err?.code}, message is ${err?.message}`);
 }
 ```
 

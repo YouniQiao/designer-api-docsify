@@ -1,6 +1,6 @@
 # Action (System API)
 
-清理本地云相关数据时的Action，为枚举类型。
+Enumerates the actions that can be taken to clear local cloud data.
 
 **Since:** 10
 
@@ -18,7 +18,7 @@
 RETAIN_DATA = 0
 ```
 
-仅清除云端标识，保留本地缓存文件。
+Clear the cloud identifier but retain the files cached locally.
 
 **Since:** 10
 
@@ -36,7 +36,7 @@ RETAIN_DATA = 0
 CLEAR_DATA = 1
 ```
 
-清除云端标识信息，若存在本地缓存文件，一并删除。
+Clear the cloud identifier and the files cached locally.
 
 **Since:** 10
 

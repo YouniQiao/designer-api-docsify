@@ -12,7 +12,7 @@ import { emitter } from 'kits/@kit.BasicServicesKit';
 function on(event: InnerEvent, callback: Callback<EventData>): void
 ```
 
-持续订阅指定的事件，并在接收到该事件时，执行对应的回调处理函数。
+Subscribes to an event in persistent manner and executes a callback after the event is received.
 
 **Since:** 7
 
@@ -28,10 +28,12 @@ function on(event: InnerEvent, callback: Callback<EventData>): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| event | [InnerEvent](arkts-basicservices-emitter-innerevent-i.md) | Yes | 持续订阅的事件，其中[EventPriority](arkts-basicservices-emitter-eventpriority-e.md)在订阅事件时无需指定，也不生效。 |
-| callback | [Callback](arkts-basicservices-base-callback-i.md)&lt;EventData&gt; | Yes | 接收到该事件时需要执行的回调处理函数。 |
+| event | [InnerEvent](arkts-basicservices-emitter-innerevent-i.md) | Yes | Event to subscribe to in persistent manner. The [EventPriority](arkts-basicservices-emitter-eventpriority-e.md) parameter is not required and does not take effect. |
+| callback | [Callback](arkts-basicservices-base-callback-i.md)&lt;EventData&gt; | Yes | Callback to be invoked when the event is received. |
 
 ## Examples
+
+ArkTS-Dyn example:
 
 ```TypeScript
 import { Callback } from '@kit.BasicServicesKit';
@@ -42,9 +44,26 @@ let innerEvent: emitter.InnerEvent = {
 
 let callback: Callback<emitter.EventData> = (eventData: emitter.EventData) => {
   console.info(`eventData: ${JSON.stringify(eventData)}`);
-};
+}
 
 // Execute the callback after receiving the event whose ID is 1.
+emitter.on(innerEvent, callback);
+```
+
+ArkTS-Sta example:
+
+```TypeScript
+import { Callback } from '@kit.BasicServicesKit';
+
+let innerEvent: emitter.InnerEvent = {
+  eventId: 1
+};
+
+let callback: Callback<emitter.EventData> = (eventData: emitter.EventData) => {
+  console.info(`eventData: ${JSON.stringify(eventData?.data)}`);
+}
+
+// Execute the callback after receiving the event whose eventId is 1.
 emitter.on(innerEvent, callback);
 ```
 
@@ -55,7 +74,7 @@ emitter.on(innerEvent, callback);
 function on(eventId: string, callback: Callback<EventData>): void
 ```
 
-持续订阅指定的事件，并在接收到该事件时，执行对应的回调处理函数。
+Subscribes to an event in persistent manner and executes a callback after the event is received.
 
 **Since:** 11
 
@@ -71,8 +90,8 @@ function on(eventId: string, callback: Callback<EventData>): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| eventId | string | Yes | 持续订阅的事件ID。 不可为空字符串，大小不超过10240字节，超出部分会被截断。 |
-| callback | [Callback](arkts-basicservices-base-callback-i.md)&lt;EventData&gt; | Yes | 接收到该事件时需要执行的回调处理函数。 |
+| eventId | string | Yes | Event ID, which cannot be empty or exceed 10,240 bytes. Excess content will be truncated. |
+| callback | [Callback](arkts-basicservices-base-callback-i.md)&lt;EventData&gt; | Yes | Callback to be invoked when the event is received. |
 
 ## Examples
 
@@ -81,9 +100,9 @@ import { Callback } from '@kit.BasicServicesKit';
 
 let callback: Callback<emitter.EventData> = (eventData: emitter.EventData) => {
   console.info(`eventData: ${JSON.stringify(eventData)}`);
-};
-// Execute the callback after receiving the event whose ID is eventId.
-emitter.on('eventId', callback);
+}
+// Execute the callback after receiving the event whose event ID is eventId.
+emitter.on(`eventId`, callback);
 ```
 
 
@@ -93,7 +112,7 @@ emitter.on('eventId', callback);
 function on<T>(eventId: string, callback: Callback<GenericEventData<T>>): void
 ```
 
-持续订阅指定的事件，并在接收到该事件时，执行对应的回调处理函数。
+Subscribes to an event in persistent manner and executes a callback after the event is received.
 
 **Since:** 12
 
@@ -109,8 +128,8 @@ function on<T>(eventId: string, callback: Callback<GenericEventData<T>>): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| eventId | string | Yes | 持续订阅的事件ID。 不可为空字符串，大小不超过10240字节，超出部分会被截断。 |
-| callback | [Callback](arkts-basicservices-base-callback-i.md)&lt;GenericEventData&lt;T&gt;&gt; | Yes | 接收到该事件时需要执行的回调处理函数。 |
+| eventId | string | Yes | Event ID, which cannot be empty or exceed 10,240 bytes. Excess content will be truncated. |
+| callback | [Callback](arkts-basicservices-base-callback-i.md)&lt;GenericEventData&lt;T&gt;&gt; | Yes | Callback to be invoked when the event is received. |
 
 ## Examples
 
@@ -133,8 +152,8 @@ let callback: Callback<emitter.GenericEventData<Sample>> = (eventData: emitter.G
   if (eventData?.data instanceof Sample) {
     eventData?.data?.printCount();
   }
-};
+}
 // Execute the callback after receiving the event whose event ID is eventId.
-emitter.on('eventId', callback);
+emitter.on("eventId", callback);
 ```
 

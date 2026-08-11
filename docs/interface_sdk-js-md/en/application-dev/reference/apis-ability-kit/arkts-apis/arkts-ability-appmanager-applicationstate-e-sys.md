@@ -1,6 +1,7 @@
 # ApplicationState (System API)
 
-应用状态，该类型为枚举，可配合[AbilityStateData](arkts-ability-appmanager-abilitystatedata-t.md)返回相应的应用状态。
+Enumerates the application states. This enum can be used together with  
+[AbilityStateData](arkts-ability-appmanager-abilitystatedata-t.md) to return the application state.
 
 **Since:** 9
 
@@ -15,7 +16,7 @@
 ## STATE_CREATE
 
 ```TypeScript
-STATE_CREATE = 0
+STATE_CREATE
 ```
 
 The application is being created.
@@ -24,7 +25,7 @@ The application is being created.
 
 **ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
-<!--Device-ApplicationState-STATE_CREATE = 0--><!--Device-ApplicationState-STATE_CREATE = 0-End-->
+<!--Device-ApplicationState-STATE_CREATE--><!--Device-ApplicationState-STATE_CREATE-End-->
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
 
@@ -33,7 +34,7 @@ The application is being created.
 ## STATE_FOREGROUND
 
 ```TypeScript
-STATE_FOREGROUND = 1
+STATE_FOREGROUND
 ```
 
 The application is running in the foreground.
@@ -42,7 +43,7 @@ The application is running in the foreground.
 
 **ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
-<!--Device-ApplicationState-STATE_FOREGROUND = 1--><!--Device-ApplicationState-STATE_FOREGROUND = 1-End-->
+<!--Device-ApplicationState-STATE_FOREGROUND--><!--Device-ApplicationState-STATE_FOREGROUND-End-->
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
 
@@ -51,7 +52,7 @@ The application is running in the foreground.
 ## STATE_ACTIVE
 
 ```TypeScript
-STATE_ACTIVE = 2
+STATE_ACTIVE
 ```
 
 The application is active.
@@ -60,7 +61,7 @@ The application is active.
 
 **ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
-<!--Device-ApplicationState-STATE_ACTIVE = 2--><!--Device-ApplicationState-STATE_ACTIVE = 2-End-->
+<!--Device-ApplicationState-STATE_ACTIVE--><!--Device-ApplicationState-STATE_ACTIVE-End-->
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
 
@@ -69,7 +70,7 @@ The application is active.
 ## STATE_BACKGROUND
 
 ```TypeScript
-STATE_BACKGROUND = 3
+STATE_BACKGROUND
 ```
 
 The application is running in the background.
@@ -78,7 +79,7 @@ The application is running in the background.
 
 **ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
-<!--Device-ApplicationState-STATE_BACKGROUND = 3--><!--Device-ApplicationState-STATE_BACKGROUND = 3-End-->
+<!--Device-ApplicationState-STATE_BACKGROUND--><!--Device-ApplicationState-STATE_BACKGROUND-End-->
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
 
@@ -87,7 +88,7 @@ The application is running in the background.
 ## STATE_DESTROY
 
 ```TypeScript
-STATE_DESTROY = 4
+STATE_DESTROY
 ```
 
 The application is being destroyed.
@@ -96,7 +97,7 @@ The application is being destroyed.
 
 **ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
 
-<!--Device-ApplicationState-STATE_DESTROY = 4--><!--Device-ApplicationState-STATE_DESTROY = 4-End-->
+<!--Device-ApplicationState-STATE_DESTROY--><!--Device-ApplicationState-STATE_DESTROY-End-->
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
 

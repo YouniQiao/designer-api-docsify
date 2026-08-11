@@ -14,12 +14,6 @@
 
 **系统能力：** SystemCapability.Security.CryptoFramework.Signature
 
-## 导入模块
-
-```TypeScript
-import { cryptoFramework } from 'kits/@kit.CryptoArchitectureKit';
-```
-
 ## r
 
 ```TypeScript

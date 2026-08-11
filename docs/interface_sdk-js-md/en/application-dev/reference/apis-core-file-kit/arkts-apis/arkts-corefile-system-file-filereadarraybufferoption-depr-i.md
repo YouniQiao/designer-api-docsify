@@ -1,6 +1,6 @@
 # FileReadArrayBufferOption
 
-可选项类型，支持readArrayBuffer接口使用。
+Defines the options used in readArrayBuffer().
 
 **Since:** 3
 
@@ -18,7 +18,7 @@
 complete?: () => void
 ```
 
-接口调用结束的回调函数。
+Callback invoked when the API call is complete.
 
 **Since:** 3
 
@@ -36,7 +36,12 @@ complete?: () => void
 fail?: (data: string, code: number) => void
 ```
 
-接口调用失败的回调函数。
+Callback invoked when the API call fails.  
+**data** indicates the error information.  
+**code** indicates the returned error code:  
+**202**: invalid parameter  
+**300**: I/O error  
+**301**: file or directory not found
 
 **Since:** 3
 
@@ -61,7 +66,8 @@ fail?: (data: string, code: number) => void
 success?: (data: FileReadArrayBufferResponse) => void
 ```
 
-接口调用成功的回调函数。返回[FileReadArrayBufferResponse](arkts-corefile-system-file-filereadarraybufferresponse-depr-i.md)。
+Callback invoked when the API call is successful. **data** is  
+[FileReadArrayBufferResponse](arkts-corefile-system-file-filereadarraybufferresponse-depr-i.md).
 
 **Since:** 3
 
@@ -85,7 +91,7 @@ success?: (data: FileReadArrayBufferResponse) => void
 length?: number
 ```
 
-需要读取的长度，单位为Byte，缺省则读取到文件结尾。
+Length of data to read, in bytes. If this parameter is not set, the reading proceeds until the end of the file.
 
 **Type:** number
 
@@ -105,7 +111,7 @@ length?: number
 position?: number
 ```
 
-读取的起始位置，单位为Byte，缺省为文件的起始位置。
+Position where the reading starts, in bytes. The default value is the start position of the file.
 
 **Type:** number
 
@@ -125,7 +131,7 @@ position?: number
 uri: string
 ```
 
-本地文件URI。由于轻量级穿戴设备底层文件系统的限制，该值必须满足以下要求：1. URI 中不得包含以下特殊字符：\"*+,:;&lt;=&gt;?[]|\x7F等。2. 最大允许字符长度为128个字符。
+URI of the file to which the content is written. Restricted by the underlying file system of lite wearables, the value must meet the following requirements:1. The URI cannot contain the following special characters: \"*+,:;&lt;=&gt;?[]|\x7F.2. The value can contain a maximum of 128 characters.
 
 **Type:** string
 

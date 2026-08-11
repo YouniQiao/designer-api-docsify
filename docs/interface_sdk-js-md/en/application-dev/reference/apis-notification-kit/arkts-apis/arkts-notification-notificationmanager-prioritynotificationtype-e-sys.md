@@ -1,6 +1,6 @@
 # PriorityNotificationType
 
-描述通知的优先级类型。
+Describes the priority type of a notification.
 
 **Since:** 23
 
@@ -16,7 +16,7 @@
 PAYMENT_DUE = 'PAYMENT_DUE'
 ```
 
-表示通知优先级类型为缴费还款。
+Payment and repayment.
 
 **Since:** 23
 
@@ -34,7 +34,7 @@ PAYMENT_DUE = 'PAYMENT_DUE'
 TRANSACTION_ALERT = 'TRANSACTION_ALERT'
 ```
 
-表示通知优先级类型为动账提醒。
+Account balance reminder.
 
 **Since:** 23
 
@@ -52,7 +52,7 @@ TRANSACTION_ALERT = 'TRANSACTION_ALERT'
 EXPRESS_PROGRESS = 'EXPRESS_PROGRESS'
 ```
 
-表示通知优先级类型为物流进展。
+Express progress.
 
 **Since:** 23
 
@@ -70,7 +70,7 @@ EXPRESS_PROGRESS = 'EXPRESS_PROGRESS'
 MISS_CALL = 'MISS_CALL'
 ```
 
-表示通知优先级类型为未接来电。
+Missed call.
 
 **Since:** 23
 
@@ -88,7 +88,7 @@ MISS_CALL = 'MISS_CALL'
 TRAVEL_ALERT = 'TRAVEL_ALERT'
 ```
 
-表示通知优先级类型为出行异常。
+Abnormal traveling.
 
 **Since:** 23
 
@@ -106,7 +106,7 @@ TRAVEL_ALERT = 'TRAVEL_ALERT'
 ACCOUNT_ALERT = 'ACCOUNT_ALERT'
 ```
 
-表示通知优先级类型为账号安全。
+Account security.
 
 **Since:** 23
 
@@ -124,7 +124,7 @@ ACCOUNT_ALERT = 'ACCOUNT_ALERT'
 APPOINTMENT_REMINDER = 'APPOINTMENT_REMINDER'
 ```
 
-表示通知优先级类型为预约提醒。
+Appointment reminder.
 
 **Since:** 23
 
@@ -142,7 +142,7 @@ APPOINTMENT_REMINDER = 'APPOINTMENT_REMINDER'
 TRAFFIC_NOTICE = 'TRAFFIC_NOTICE'
 ```
 
-表示通知优先级类型为交通违规。
+Traffic violation.
 
 **Since:** 23
 
@@ -160,7 +160,7 @@ TRAFFIC_NOTICE = 'TRAFFIC_NOTICE'
 KEY_PROGRESS = 'KEY_PROGRESS'
 ```
 
-表示通知优先级类型为关键进展通知。
+Key progress.
 
 **Since:** 23
 
@@ -178,7 +178,7 @@ KEY_PROGRESS = 'KEY_PROGRESS'
 PUBLIC_EVENT = 'PUBLIC_EVENT'
 ```
 
-表示通知优先级类型为重要公共事件。
+Important common event.
 
 **Since:** 23
 
@@ -196,7 +196,7 @@ PUBLIC_EVENT = 'PUBLIC_EVENT'
 IOT_WARNING = 'IOT_WARNING'
 ```
 
-表示通知优先级类型为预警通知。
+IoT warning.
 
 **Since:** 23
 
@@ -214,7 +214,7 @@ IOT_WARNING = 'IOT_WARNING'
 CUSTOM_KEYWORD = 'CUSTOM_KEYWORD'
 ```
 
-表示通知优先级类型为用户自定义关键词。
+Custom keyword.
 
 **Since:** 23
 

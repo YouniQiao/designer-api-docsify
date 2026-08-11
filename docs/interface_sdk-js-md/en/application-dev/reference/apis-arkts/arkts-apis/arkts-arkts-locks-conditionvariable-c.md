@@ -1,6 +1,6 @@
 # ConditionVariable
 
-实现异步等待功能的类，支持异步等待通知操作。该类使用@Sendable装饰器装饰。
+Object used for thread synchronization.
 
 **Since:** 18
 
@@ -24,7 +24,7 @@ import { ArkTSUtils } from 'kits/@kit.ArkTS';
 constructor()
 ```
 
-默认构造函数。创建一个异步等待通知操作的对象。
+Default constructor.
 
 **Since:** 18
 
@@ -42,7 +42,7 @@ constructor()
 notifyAll(): void
 ```
 
-通知所有等待的线程。
+Notify all waiting promise.
 
 **Since:** 18
 
@@ -60,7 +60,7 @@ notifyAll(): void
 notifyOne(): void
 ```
 
-通知第一个等待的线程。
+Notify one waiting promise.
 
 **Since:** 18
 
@@ -78,7 +78,7 @@ notifyOne(): void
 static request(name: string): ConditionVariable
 ```
 
-使用指定的名称查找或创建（如果未找到）异步等待通知操作的对象。
+Find or create an instance of ConditionVariable using the specified name.
 
 **Since:** 18
 
@@ -94,13 +94,13 @@ static request(name: string): ConditionVariable
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| name | string | Yes | 按指定名称查找或创建等待通知操作的对象名称，字符串无特别限制。 |
+| name | string | Yes | Name of the ConditionVariable to find or create. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [ConditionVariable](arkts-arkts-locks-conditionvariable-c.md) | 返回查找到或创建后的异步等待通知操作的实例。 |
+| [ConditionVariable](arkts-arkts-locks-conditionvariable-c.md) | Returns an instance of ConditionVariable. |
 
 ## wait
 
@@ -108,7 +108,7 @@ static request(name: string): ConditionVariable
 wait(): Promise<void>
 ```
 
-异步调用进入等待中，将在被唤醒后继续执行。使用Promise异步回调。
+Waits for the ConditionVariable to be notified.
 
 **Since:** 18
 
@@ -124,7 +124,7 @@ wait(): Promise<void>
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | 无返回结果的Promise对象。 |
+| Promise&lt;void&gt; | A promise will be resolved once the ConditionVariable is notified.. |
 
 ## waitFor
 
@@ -132,7 +132,7 @@ wait(): Promise<void>
 waitFor(timeout: number): Promise<void>
 ```
 
-异步调用进入等待中，将在被唤醒或者等待时间结束后继续执行。使用Promise异步回调。
+Waits for the ConditionVariable to be notified, or until the specified time limit is reached.
 
 **Since:** 18
 
@@ -148,11 +148,11 @@ waitFor(timeout: number): Promise<void>
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| timeout | number | Yes | 等待时间，单位为毫秒，正整数。 |
+| timeout | number | Yes | The maximum time to wait. The value should be an integer. &lt;br&gt;Unit: ms. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | 无返回结果的Promise对象。 |
+| Promise&lt;void&gt; | A promise that will be resolved once the ConditionVariable is notified or the specified time limit is reached. |
 

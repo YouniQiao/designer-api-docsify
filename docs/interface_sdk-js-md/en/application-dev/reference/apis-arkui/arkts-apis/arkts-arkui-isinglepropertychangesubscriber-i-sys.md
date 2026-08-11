@@ -1,6 +1,6 @@
 # ISinglePropertyChangeSubscriber (System API)
 
-继承自[IPropertySubscriber](arkts-arkui-ipropertysubscriber-i-sys.md)。用于订阅单个属性值的变化，当被订阅的属性发生变化时接收通知。
+Inherits from [IPropertySubscriber](arkts-arkui-ipropertysubscriber-i-sys.md). Represents a subscriber that subscribes to changes in a property value.
 
 **Inheritance/Implementation:** ISinglePropertyChangeSubscriber extends [IPropertySubscriber](arkts-arkui-ipropertysubscriber-i-sys.md)
 
@@ -20,7 +20,7 @@
 hasChanged(newValue: T): void
 ```
 
-变化时调用。
+Notifies subscribers that the property value has changed.
 
 **Since:** 7
 
@@ -36,5 +36,5 @@ hasChanged(newValue: T): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| newValue | T | Yes | 更改后的新值。 |
+| newValue | T | Yes | Instance of the T type. |
 

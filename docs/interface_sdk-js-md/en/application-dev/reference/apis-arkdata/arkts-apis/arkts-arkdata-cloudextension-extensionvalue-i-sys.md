@@ -1,6 +1,6 @@
 # ExtensionValue (System API)
 
-当前数据记录的扩展信息。
+Represents additional information about a data record.
 
 **Since:** 11
 
@@ -24,7 +24,7 @@ import { cloudExtension } from 'kits/@kit.ArkData';
 readonly createTime: long
 ```
 
-创建行数据的时间（ms）。
+Time when a row of data is created, in ms.
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：long
 
@@ -44,7 +44,7 @@ readonly createTime: long
 readonly id: string
 ```
 
-执行插入操作时系统自动生成的ID。
+ID generated when data is inserted.An ID is generated for each row when data is first inserted to the cloud.The ID must be unique for each table.
 
 **Type:** string
 
@@ -64,7 +64,7 @@ readonly id: string
 readonly modifyTime: long
 ```
 
-修改行数据的时间（ms）。
+Time when a row of data is modified, in ms.
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：long
 
@@ -84,7 +84,7 @@ readonly modifyTime: long
 readonly operation: Flag
 ```
 
-对行数据所做的操作。
+Operation performed.
 
 **Type:** [Flag](arkts-arkdata-cloudextension-flag-e-sys.md)
 

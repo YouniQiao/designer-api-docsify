@@ -1,6 +1,6 @@
 # X509CertRevokedParams
 
-表示证书吊销检查参数。
+Parameters for checking certificate revocation status.
 
 **Since:** 26.0.0
 
@@ -22,11 +22,11 @@ import { cert } from 'kits/@kit.DeviceCertificateKit';
 allowDownloadCrl?: boolean
 ```
 
-是否允许下载CRL，默认值为false。true：尝试使用证书的CDP扩展下载CRL；false：不尝试下载CRL。
+Indicates whether to allow CRL download. The default value is false. true: The CDP extension of the certificate is used to download the CRL. false: Do not attempt to download the CRL.
 
-> **说明：**
+> **NOTE：**
 > 
-> 如果crls中存在匹配的CRL，则跳过下载。
+> Skip download if matching CRL exists in crls.
 
 **Type:** boolean
 
@@ -50,13 +50,14 @@ allowDownloadCrl?: boolean
 allowOcspCheckOnline?: boolean
 ```
 
-是否允许在线OCSP检查，默认值为false。  
-- true：执行在线OCSP检查，即尝试从证书AIA扩展获取OCSP URL并发送请求获取响应；  
-- false：不执行在线OCSP检查。
+Indicates whether to allow online OCSP check. The default value is false.  
+- **true**: performs online OCSP check, that is, attempts to obtain the OCSP URL from the AIA extension of the  
+certificate and send a request to obtain a response;  
+- **false**: does not perform online OCSP check.
 
-> **说明：**
+> **NOTE：**
 > 
-> 如果在ocspResponses中找到匹配的OCSP响应，则跳过在线OCSP检查。
+> Skip online OCSP check if a matching OCSP response is found in ocspResponses.
 
 **Type:** boolean
 
@@ -80,7 +81,7 @@ allowOcspCheckOnline?: boolean
 crls?: Array<X509CRL>
 ```
 
-CRL列表。最大个数：100。
+CRL list. Maximum count: 100.
 
 **Type:** Array&lt;X509CRL&gt;
 
@@ -102,7 +103,7 @@ CRL列表。最大个数：100。
 ocspDigest?: OcspDigest
 ```
 
-OCSP请求使用的摘要算法，默认值为SHA256。
+Digest algorithm used by OCSP requests. The default value is SHA256.
 
 **Type:** [OcspDigest](arkts-devicecertificate-cert-ocspdigest-e.md)
 
@@ -126,7 +127,7 @@ OCSP请求使用的摘要算法，默认值为SHA256。
 ocspResponses?: Array<Uint8Array>
 ```
 
-OCSP响应数据。预置的OCSP响应数据。最大个数：100。
+Preconfigured OCSP response data. Maximum count: 100.
 
 **Type:** Array&lt;Uint8Array&gt;
 
@@ -148,7 +149,7 @@ OCSP响应数据。预置的OCSP响应数据。最大个数：100。
 revocationFlags: Array<CertRevocationFlag>
 ```
 
-吊销检查标志。数组长度范围：[1, 4]。数组必须包含CERT_REVOCATION_CRL_CHECK或CERT_REVOCATION_OCSP_CHECK。
+Revocation check flag. Array length range: [1,4]. The array must contain either CERT_REVOCATION_CRL_CHECK or CERT_REVOCATION_OCSP_CHECK.
 
 **Type:** Array&lt;CertRevocationFlag&gt;
 

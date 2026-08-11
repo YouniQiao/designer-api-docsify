@@ -276,7 +276,7 @@ Constructs a new Promise with the given callback.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | (resolve: (value: PromiseLike&lt;T&gt; \| T) =&gt; void,         reject: (error: Error) =&gt; void) =&gt; void | Yes | The callback to execute. |
+| callback | (resolve: (value: PromiseLike&lt;T&gt; \| T) =&gt; void,         reject: (error: Error) =&gt; void) =&gt; void | Yes | The callback to execute. |
 
 ## finally
 

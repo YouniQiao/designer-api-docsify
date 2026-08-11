@@ -1,6 +1,6 @@
 # NotificationSubscribeInfo (System API)
 
-通知发布者的信息。
+The **NotificationSubscribeInfo** module provides APIs for defining the information about the publisher for notification subscription.
 
 **Since:** 7
 
@@ -18,7 +18,7 @@
 bundleNames?: Array<string>
 ```
 
-应用Bundle名称。 不传递该参数时，默认订阅所有应用的通知。
+Bundle names of the applications whose notifications to subscribe to. If this parameter is not specified, the subscription defaults to notifications from all applications.
 
 **Type:** Array&lt;string&gt;
 
@@ -38,7 +38,7 @@ bundleNames?: Array<string>
 deviceType?: string
 ```
 
-设备类型。不传递该参数时，默认订阅当前设备的通知。根据[设备信息](../../apis-basic-service-kit/arkts-apis/arkts-deviceinfo.md/arkts-deviceinfo.md)获取。
+Device type. If this parameter is not specified, the subscription defaults to notifications from the current device. The value is obtained based on [device information](../../apis-basic-service-kit/arkts-apis/arkts-deviceinfo.md/arkts-deviceinfo.md).
 
 **Type:** string
 
@@ -58,9 +58,10 @@ deviceType?: string
 enableClassification?: boolean
 ```
 
-是否启用通知分类。  
-- true：表示启用。  
-- false：表示禁用。默认值为false。
+Whether to enable notification classification.
+
+- **true**: yes.  
+- **false**: no. The default value is **false**.
 
 **Type:** boolean
 
@@ -82,13 +83,15 @@ enableClassification?: boolean
 filterLimit?: long
 ```
 
-通知过滤范围。默认值为0。取值范围包括：
+Notification filtering range. The default value is **0**. The options are as follows:
 
-- 0：不进行任何过滤，订阅全部通知。   
-- 1：将渠道类型为[SOCIAL_COMMUNICATION](arkts-notification-notificationmanager-slottype-e.md)且  
-[userInput](arkts-notification-notificationactionbutton-notificationactionbutton-i.md)为空的通知过滤掉。  
-- 2：将渠道类型为[SOCIAL_COMMUNICATION](arkts-notification-notificationmanager-slottype-e.md)且  
-[userInput](arkts-notification-notificationactionbutton-notificationactionbutton-i.md)不为空的通知过滤掉。
+- **0**: All notifications are included in the subscription.  
+- **1**: Filter out notifications whose slot type is   
+[SOCIAL_COMMUNICATION](arkts-notification-notificationmanager-slottype-e.md) and   
+[userInput](arkts-notification-notificationactionbutton-notificationactionbutton-i.md) is empty.  
+- **2**: Filter out notifications whose slot type is   
+[SOCIAL_COMMUNICATION](arkts-notification-notificationmanager-slottype-e.md) and   
+[userInput](arkts-notification-notificationactionbutton-notificationactionbutton-i.md) is not empty.
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：long
 
@@ -108,10 +111,12 @@ filterLimit?: long
 needSilentReplayOnSubscribe?: boolean
 ```
 
-是否启用订阅时的静默重放。  
-- true：表示启用。  
-- false：表示禁用。默认值为false。  
-启用后，首次订阅时会以静默方式重新推送历史通知，不会出现响铃和振动提醒。
+Whether to enable silent replay upon subscription.
+
+- **true**: yes.  
+- **false**: no. The default value is **false**.
+
+After this feature is enabled, historical notifications are silently re-pushed upon the first subscription,without ringing or vibration reminders.
 
 **Type:** boolean
 
@@ -133,7 +138,7 @@ needSilentReplayOnSubscribe?: boolean
 pictureOptions?: PictureOptions
 ```
 
-实况通知图片配置项。
+Image options of the live notification.
 
 **Type:** [PictureOptions](arkts-notification-notificationsubscribeinfo-pictureoptions-i-sys.md)
 
@@ -155,7 +160,7 @@ pictureOptions?: PictureOptions
 slotTypes?: Array<notificationManager.SlotType>
 ```
 
-通知渠道类型。 不传递该参数时，默认订阅所有渠道类型的通知。
+Types of the notification slots. If this parameter is not specified, the subscription defaults to notifications of all slot types.
 
 **Type:** Array&lt;notificationManager.SlotType&gt;
 
@@ -175,7 +180,7 @@ slotTypes?: Array<notificationManager.SlotType>
 userId?: int
 ```
 
-用户ID。 不传递该参数时，默认订阅当前用户ID的通知。
+User ID. If this parameter is not specified, the subscription defaults to notifications from the current user ID.
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
@@ -195,7 +200,7 @@ userId?: int
 voiceContentOptions?: VoiceContentOptions
 ```
 
-通知语音播报配置项。
+Configuration options for notification voice broadcast.
 
 **Type:** [VoiceContentOptions](arkts-notification-notificationsubscribeinfo-voicecontentoptions-i-sys.md)
 

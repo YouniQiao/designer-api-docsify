@@ -10,12 +10,6 @@
 
 **系统能力：** SystemCapability.Applications.ContactsData
 
-## 导入模块
-
-```TypeScript
-import { contact } from 'kits/@kit.ContactsKit';
-```
-
 ## completedBatches
 
 ```TypeScript
@@ -46,7 +40,7 @@ completedBatches: Array<int>
 lastSyncTime: int
 ```
 
-指示联系人同步的最新时间戳（毫秒）。
+表示联系人同步的最新时间戳（毫秒）。
 
 **类型：** int
 
@@ -112,7 +106,7 @@ syncId: int
 totalBatches: int
 ```
 
-指示要同步的联系人批次总数。
+表示要同步的联系人批次总数。
 
 **类型：** int
 

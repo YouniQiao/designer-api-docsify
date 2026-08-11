@@ -1,6 +1,6 @@
 # Authenticator
 
-认证器基类。
+Provides APIs to operate the authenticator.
 
 **Since:** 8
 
@@ -27,11 +27,13 @@ addAccountImplicitly(
     ): void
 ```
 
-根据指定的鉴权类型和可选项，隐式地添加应用账号。使用callback异步回调。
+Adds an application account implicitly based on the specified authentication type and options. This API uses an asynchronous callback to return the result.
 
-> **说明：**
+> **NOTE：**
 > 
-> 从API version 8开始支持, 从API version 9开始废弃。建议使用[createAccountImplicitly](#createaccountimplicitly9-2)替代。
+> This API is supported since API version 8 and deprecated since API version 9. You are advised to use
+> [createAccountImplicitly](../../../reference/apis-basic-services-kit/js-apis-appAccount.md#createaccountimplicitly9-2)
+> instead.
 
 **Since:** 8
 
@@ -49,10 +51,10 @@ addAccountImplicitly(
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| authType | string | Yes | 应用账号的鉴权类型。自定义数据，最大长度为1024个字符。 |
-| callerBundleName | string | Yes | 鉴权请求方的包名。 |
-| options | { [key: string]: any } | Yes | 鉴权所需要的可选项。 |
-| callback | [AuthenticatorCallback](arkts-basicservices-appaccount-authenticatorcallback-i.md) | Yes | 认证器回调，用于返回鉴权结果。 |
+| authType | string | Yes | Authentication type. The custom type, The value cannot exceed 1024 characters. |
+| callerBundleName | string | Yes | Bundle name of the authentication requester. |
+| options | { [key: string]: any } | Yes | Options for the authentication. |
+| callback | [AuthenticatorCallback](arkts-basicservices-appaccount-authenticatorcallback-i.md) | Yes | Authenticator callback used to return the result. |
 
 ## auth
 
@@ -60,7 +62,7 @@ addAccountImplicitly(
 auth(name: string, authType: string, options: Record<string, Object>, callback: AuthCallback): void
 ```
 
-对应用账号进行鉴权以获取授权令牌。使用callback异步回调。
+Authenticates an application account. This API uses an asynchronous callback to return the result.
 
 **Since:** 9
 
@@ -74,10 +76,10 @@ auth(name: string, authType: string, options: Record<string, Object>, callback: 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| name | string | Yes | 应用账号的名称。最大长度为512个字符。 |
-| authType | string | Yes | 应用账号的鉴权类型。自定义数据，最大长度为1024个字符。 |
-| options | [Record](../../apis-default/arkts-apis/arkts-record-t.md)&lt;string, Object&gt; | Yes | 鉴权所需要的可选项。 |
-| callback | [AuthCallback](arkts-basicservices-appaccount-authcallback-i.md) | Yes | 认证器回调，用于返回鉴权结果。 |
+| name | string | Yes | Name of the application account. The value cannot exceed 512 characters. |
+| authType | string | Yes | Authentication type. The custom type, The value cannot exceed 1024 characters. |
+| options | [Record](../../apis-default/arkts-apis/arkts-record-t.md)&lt;string, Object&gt; | Yes | Options for the authentication. |
+| callback | [AuthCallback](arkts-basicservices-appaccount-authcallback-i.md) | Yes | Authenticator callback used to return the result. |
 
 ## auth
 
@@ -85,7 +87,7 @@ auth(name: string, authType: string, options: Record<string, Object>, callback: 
 auth(name: string, authType: string, options: Record<string, RecordData>, callback: AuthCallback): void
 ```
 
-对应用账号进行鉴权以获取授权令牌。使用callback异步回调。
+Authenticates an application account. This API uses an asynchronous callback to return the result.
 
 **Since:** 23
 
@@ -99,10 +101,10 @@ auth(name: string, authType: string, options: Record<string, RecordData>, callba
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| name | string | Yes | 应用账号的名称。最大长度为512个字符。 |
-| authType | string | Yes | 应用账号的鉴权类型。自定义数据，最大长度为1024个字符。 |
-| options | [Record](../../apis-default/arkts-apis/arkts-record-t.md)&lt;string, RecordData&gt; | Yes | 鉴权所需要的可选项。 |
-| callback | [AuthCallback](arkts-basicservices-appaccount-authcallback-i.md) | Yes | 认证器回调，用于返回鉴权结果。 |
+| name | string | Yes | Name of the application account. The value cannot exceed 512 characters. |
+| authType | string | Yes | Authentication type. The custom type, The value cannot exceed 1024 characters. |
+| options | [Record](../../apis-default/arkts-apis/arkts-record-t.md)&lt;string, RecordData&gt; | Yes | Options for the authentication. |
+| callback | [AuthCallback](arkts-basicservices-appaccount-authcallback-i.md) | Yes | Authenticator callback used to return the result. |
 
 ## authenticate
 
@@ -116,11 +118,12 @@ authenticate(
     ): void
 ```
 
-对应用账号进行鉴权，获取OAuth令牌。使用callback异步回调。
+Authenticates an application account to obtain the OAuth token. This API uses an asynchronous callback to return the result.
 
-> **说明：**
+> **NOTE：**
 > 
-> 从API version 8开始支持, 从API version 9开始废弃。建议使用[auth](#auth9-2)替代。
+> This API is supported since API version 8 and deprecated since API version 9. You are advised to use
+> [auth](../../../reference/apis-basic-services-kit/js-apis-appAccount.md#auth9-2) instead.
 
 **Since:** 8
 
@@ -138,11 +141,11 @@ authenticate(
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| name | string | Yes | 应用账号的名称。最大长度为512个字符。 |
-| authType | string | Yes | 应用账号的鉴权类型。自定义数据，最大长度为1024个字符。 |
-| callerBundleName | string | Yes | 鉴权请求方的包名。 |
-| options | { [key: string]: any } | Yes | 鉴权所需要的可选项。 |
-| callback | [AuthenticatorCallback](arkts-basicservices-appaccount-authenticatorcallback-i.md) | Yes | 认证器回调，用于返回鉴权结果。 |
+| name | string | Yes | Name of the application account. The value cannot exceed 512 characters. |
+| authType | string | Yes | Authentication type. The custom type, The value cannot exceed 1024 characters. |
+| callerBundleName | string | Yes | Bundle name of the authentication requester. |
+| options | { [key: string]: any } | Yes | Options for the authentication. |
+| callback | [AuthenticatorCallback](arkts-basicservices-appaccount-authenticatorcallback-i.md) | Yes | Authenticator callback used to return the result. |
 
 ## checkAccountLabels
 
@@ -150,7 +153,7 @@ authenticate(
 checkAccountLabels(name: string, labels: Array<string>, callback: AuthCallback): void
 ```
 
-检查账号标签。使用callback异步回调。
+Checks the account labels. This API uses an asynchronous callback to return the result.
 
 **Since:** 9
 
@@ -164,9 +167,9 @@ checkAccountLabels(name: string, labels: Array<string>, callback: AuthCallback):
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| name | string | Yes | 应用账号的名称。最大长度为512个字符。 |
-| labels | Array&lt;string&gt; | Yes | 标签数组。 |
-| callback | [AuthCallback](arkts-basicservices-appaccount-authcallback-i.md) | Yes | 认证器回调，用于返回鉴权结果。 |
+| name | string | Yes | Name of the application account. The value cannot exceed 512 characters. |
+| labels | Array&lt;string&gt; | Yes | Labels to check. |
+| callback | [AuthCallback](arkts-basicservices-appaccount-authcallback-i.md) | Yes | Authenticator callback used to return the result. |
 
 ## Examples
 
@@ -178,7 +181,7 @@ This API must be used together with the getRemoteObject API. For details, see th
 checkAccountRemovable(name: string, callback: AuthCallback): void
 ```
 
-判断账号是否可以删除。使用callback异步回调。
+Checks whether an application account can be deleted. This API uses an asynchronous callback to return the result.
 
 **Since:** 9
 
@@ -192,8 +195,8 @@ checkAccountRemovable(name: string, callback: AuthCallback): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| name | string | Yes | 应用账号的名称。最大长度为512个字符。 |
-| callback | [AuthCallback](arkts-basicservices-appaccount-authcallback-i.md) | Yes | 认证器回调，用于返回鉴权结果。 |
+| name | string | Yes | Name of the application account. The value cannot exceed 512 characters. |
+| callback | [AuthCallback](arkts-basicservices-appaccount-authcallback-i.md) | Yes | Authenticator callback used to return the result. |
 
 ## Examples
 
@@ -205,7 +208,7 @@ This API must be used together with the getRemoteObject API. For details, see th
 createAccountImplicitly(options: CreateAccountImplicitlyOptions, callback: AuthCallback): void
 ```
 
-根据指定的账号所有者隐式地创建应用账号。使用callback异步回调。
+Creates an application account implicitly based on the specified account owner. This API uses an asynchronous callback to return the result.
 
 **Since:** 9
 
@@ -219,8 +222,8 @@ createAccountImplicitly(options: CreateAccountImplicitlyOptions, callback: AuthC
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| options | [CreateAccountImplicitlyOptions](arkts-basicservices-appaccount-createaccountimplicitlyoptions-i.md) | Yes | 隐式创建账号的选项。 |
-| callback | [AuthCallback](arkts-basicservices-appaccount-authcallback-i.md) | Yes | 认证器回调对象，用于返回创建结果。 |
+| options | [CreateAccountImplicitlyOptions](arkts-basicservices-appaccount-createaccountimplicitlyoptions-i.md) | Yes | Options for implicitly creating the account. |
+| callback | [AuthCallback](arkts-basicservices-appaccount-authcallback-i.md) | Yes | Authenticator callback used to return the result. |
 
 ## getRemoteObject
 
@@ -228,7 +231,7 @@ createAccountImplicitly(options: CreateAccountImplicitlyOptions, callback: AuthC
 getRemoteObject(): rpc.RemoteObject
 ```
 
-获取认证器的远程对象，不可以重载实现。
+Obtains the remote object of an authenticator. This API cannot be overloaded.
 
 **Since:** 9
 
@@ -242,7 +245,7 @@ getRemoteObject(): rpc.RemoteObject
 
 | Type | Description |
 | --- | --- |
-| rpc.RemoteObject | 认证器Authenticator的远程对象。用于跨进程通信。 |
+| rpc.RemoteObject | Remote object of the authenticator, which is used for inter-process communication. |
 
 ## Examples
 
@@ -297,7 +300,7 @@ export default {
 setProperties(options: SetPropertiesOptions, callback: AuthCallback): void
 ```
 
-设置认证器属性。使用callback异步回调。
+Sets the authenticator properties. This API uses an asynchronous callback to return the result.
 
 **Since:** 9
 
@@ -311,8 +314,8 @@ setProperties(options: SetPropertiesOptions, callback: AuthCallback): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| options | [SetPropertiesOptions](arkts-basicservices-appaccount-setpropertiesoptions-i.md) | Yes | 设置属性的可选项。 |
-| callback | [AuthCallback](arkts-basicservices-appaccount-authcallback-i.md) | Yes | 认证器回调，用于返回鉴权结果。 |
+| options | [SetPropertiesOptions](arkts-basicservices-appaccount-setpropertiesoptions-i.md) | Yes | Authenticator properties to set. |
+| callback | [AuthCallback](arkts-basicservices-appaccount-authcallback-i.md) | Yes | Authenticator callback used to return the result. |
 
 ## Examples
 
@@ -324,7 +327,7 @@ This API must be used together with the getRemoteObject API. For details, see th
 verifyCredential(name: string, options: VerifyCredentialOptions, callback: AuthCallback): void
 ```
 
-验证应用账号的凭据。使用callback异步回调。
+Verifies the credential of an application account. This API uses an asynchronous callback to return the result.
 
 **Since:** 9
 
@@ -338,9 +341,9 @@ verifyCredential(name: string, options: VerifyCredentialOptions, callback: AuthC
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| name | string | Yes | 应用账号的名称。最大长度为512个字符。 |
-| options | [VerifyCredentialOptions](arkts-basicservices-appaccount-verifycredentialoptions-i.md) | Yes | 验证凭据的可选项。 |
-| callback | [AuthCallback](arkts-basicservices-appaccount-authcallback-i.md) | Yes | 认证器回调，用于返回鉴权结果。 |
+| name | string | Yes | Name of the application account. The value cannot exceed 512 characters. |
+| options | [VerifyCredentialOptions](arkts-basicservices-appaccount-verifycredentialoptions-i.md) | Yes | Options for credential verification. |
+| callback | [AuthCallback](arkts-basicservices-appaccount-authcallback-i.md) | Yes | Authenticator callback used to return the result. |
 
 ## Examples
 

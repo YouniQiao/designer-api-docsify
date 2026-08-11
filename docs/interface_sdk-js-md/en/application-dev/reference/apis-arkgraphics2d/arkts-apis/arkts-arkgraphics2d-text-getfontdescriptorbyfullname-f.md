@@ -12,9 +12,9 @@ import { text } from 'kits/@kit.ArkGraphics2D';
 function getFontDescriptorByFullName(fullName: string, fontType: SystemFontType): Promise<FontDescriptor>
 ```
 
-根据字体名称和类型获取字体描述符，使用Promise异步回调。
+Obtains the font descriptor based on the font name and type. This API uses a promise to return the result.
 
-字体描述符是描述字体特征的数据结构，包含字体外观和属性的详细信息。
+A font descriptor is a data structure that describes font features. It contains details of the font appearance and properties.
 
 **Since:** 14
 
@@ -30,20 +30,20 @@ function getFontDescriptorByFullName(fullName: string, fontType: SystemFontType)
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| fullName | string | Yes | 指定的字体名称。可以使用[getSystemFontFullNamesByType](arkts-arkgraphics2d-text-getsystemfontfullnamesbytype-f.md#getsystemfontfullnamesbytype)获取。 |
-| fontType | [SystemFontType](arkts-arkgraphics2d-text-systemfonttype-e.md) | Yes | 指定的字体类型。 |
+| fullName | string | Yes | Font name. It is obtained with [getSystemFontFullNamesByType](arkts-arkgraphics2d-text-getsystemfontfullnamesbytype-f.md#getsystemfontfullnamesbytype) called. |
+| fontType | [SystemFontType](arkts-arkgraphics2d-text-systemfonttype-e.md) | Yes | Font type. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;FontDescriptor&gt; | Promise对象，返回指定的字体描述符。 |
+| Promise&lt;FontDescriptor&gt; | Promise used to return the font descriptor. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types. |
 
 ## Examples
 

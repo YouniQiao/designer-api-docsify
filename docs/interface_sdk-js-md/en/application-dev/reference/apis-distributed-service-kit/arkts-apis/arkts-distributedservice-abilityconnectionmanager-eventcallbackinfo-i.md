@@ -1,6 +1,6 @@
 # EventCallbackInfo
 
-回调方法的接收信息。
+Defines the event callback information.
 
 **Since:** 18
 
@@ -22,7 +22,7 @@ import { abilityConnectionManager } from 'kits/@kit.DistributedServiceKit';
 data?: ArrayBuffer
 ```
 
-表示接收的字节流。
+Received byte stream.
 
 **Type:** ArrayBuffer
 
@@ -42,7 +42,7 @@ data?: ArrayBuffer
 msg?: string
 ```
 
-表示接收的消息。
+Received message.
 
 **Type:** string
 
@@ -62,7 +62,7 @@ msg?: string
 reason?: DisconnectReason
 ```
 
-表示断连原因。
+Disconnection reason.
 
 **Type:** [DisconnectReason](arkts-distributedservice-abilityconnectionmanager-disconnectreason-e.md)
 
@@ -82,7 +82,7 @@ reason?: DisconnectReason
 sessionId: int
 ```
 
-表示当前事件对应的协同会话ID。
+Collaboration session ID.
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 

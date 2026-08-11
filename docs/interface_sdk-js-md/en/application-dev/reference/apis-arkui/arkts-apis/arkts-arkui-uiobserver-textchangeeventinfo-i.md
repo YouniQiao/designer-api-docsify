@@ -1,6 +1,6 @@
 # TextChangeEventInfo
 
-文本更改事件信息
+Text change event info
 
 **Since:** 24
 
@@ -22,7 +22,7 @@ import { uiObserver } from 'kits/@kit.ArkUI';
 content: string
 ```
 
-文本字段组件的当前内容。
+Current content of text field component.
 
 **Type:** string
 
@@ -42,7 +42,7 @@ content: string
 id: string
 ```
 
-文本字段组件的ID。
+The id of text field component.
 
 **Type:** string
 
@@ -62,7 +62,7 @@ id: string
 uniqueId: int
 ```
 
-文本字段组件的唯一ID。
+The uniqueId of the text field component.
 
 **Type:** int
 

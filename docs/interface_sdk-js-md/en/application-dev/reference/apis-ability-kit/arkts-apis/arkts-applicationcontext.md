@@ -6,13 +6,13 @@
 
 | Name | Description |
 | --- | --- |
-| [ApplicationContext](arkts-ability-applicationcontext-c.md) | ApplicationContext作为应用上下文，继承自[Context](arkts-ability-context-t.md)，提供了应用生命周期监听、进程管理、应用环境设置等应用级别的管控能力。 |
+| [ApplicationContext](arkts-ability-applicationcontext-c.md) | ApplicationContext inherits from [Context](arkts-ability-context-t.md) and provides application-level management capabilities, such as application lifecycle listening, process management, and application environment setting.  > **NOTE：** >  > The APIs of this module can be used only in the stage model. |
 
 <!--Del-->
 ### Classes（系统接口）
 
 | Name | Description |
 | --- | --- |
-| [ApplicationContext](arkts-ability-applicationcontext-c-sys.md) | ApplicationContext作为应用上下文，继承自[Context](arkts-ability-context-t.md)，提供了应用生命周期监听、进程管理、应用环境设置等应用级别的管控能力。 |
+| [ApplicationContext](arkts-ability-applicationcontext-c-sys.md) | ApplicationContext inherits from [Context](arkts-ability-context-t.md) and provides application-level management capabilities, such as application lifecycle listening, process management, and application environment setting.  > **NOTE：** >  > The APIs of this module can be used only in the stage model. |
 <!--DelEnd-->
 

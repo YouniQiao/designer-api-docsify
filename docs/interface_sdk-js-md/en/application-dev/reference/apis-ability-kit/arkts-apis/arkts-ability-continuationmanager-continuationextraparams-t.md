@@ -4,7 +4,7 @@
 export type ContinuationExtraParams = _ContinuationExtraParams
 ```
 
-流转管理入口中设备选择模块所需的过滤参数。
+Defines the extra parameters required by the device selection module in the continuation management entry.
 
 **Since:** 10
 

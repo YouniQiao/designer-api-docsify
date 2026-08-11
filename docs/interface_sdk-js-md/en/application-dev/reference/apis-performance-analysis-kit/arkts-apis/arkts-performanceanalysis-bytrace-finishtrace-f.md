@@ -6,11 +6,12 @@
 function finishTrace(name: string, taskId: number): void
 ```
 
-标记一个时间片跟踪事件的结束。
+Marks the end of a timeslice trace task.
 
-> **说明：**
+> **NOTE：**
 > 
-> finishTrace的name和taskId必须与流程开始的startTrace对应参数值一致。
+> To stop a trace task, the values of name and task ID in **finishTrace** must be the same as those in
+> **startTrace**.
 
 **Since:** 7
 
@@ -28,8 +29,8 @@ function finishTrace(name: string, taskId: number): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| name | string | Yes | 时间片跟踪任务名称，必须与startTrace调用时的name参数值一致。 |
-| taskId | number | Yes | 时间片跟踪任务id，必须与startTrace调用时的taskId参数值一致。 |
+| name | string | Yes | Name of a timeslice trace task. |
+| taskId | number | Yes | ID of a timeslice trace task. |
 
 ## Examples
 

@@ -87,7 +87,7 @@ static EnvProps(
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| props | {       key: string;       defaultValue: any;     }[] | 是 |  |
+| props | {       key: string;       defaultValue: any;     }[] | 是 |  |
 
 ## Keys
 

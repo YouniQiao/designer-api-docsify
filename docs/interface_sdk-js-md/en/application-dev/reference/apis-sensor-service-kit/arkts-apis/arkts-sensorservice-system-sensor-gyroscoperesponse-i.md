@@ -1,6 +1,6 @@
 # GyroscopeResponse
 
-陀螺仪传感器数据变化后的回调函数的响应对象，包含设备在x、y、z三轴方向的旋转角速度数据。
+Defines a **GyroscopeResponse** object.
 
 **Since:** 6
 
@@ -28,7 +28,7 @@ import { OnBodyStateResponse, subscribeAccelerometerOptions, ProximityResponse, 
 x: number
 ```
 
-x轴的旋转角速度。单位：rad/s。取值范围：取值为实际上报物理量，由硬件传感器决定。
+Rotation angular velocity of the X axis.
 
 **Type:** number
 
@@ -54,7 +54,7 @@ x轴的旋转角速度。单位：rad/s。取值范围：取值为实际上报�
 y: number
 ```
 
-y轴的旋转角速度。单位：rad/s。取值范围：取值为实际上报物理量，由硬件传感器决定。
+Rotation angular velocity of the Y axis.
 
 **Type:** number
 
@@ -80,7 +80,7 @@ y轴的旋转角速度。单位：rad/s。取值范围：取值为实际上报�
 z: number
 ```
 
-z轴的旋转角速度。单位：rad/s。取值范围：取值为实际上报物理量，由硬件传感器决定。
+Rotation angular velocity of the Z axis.
 
 **Type:** number
 

@@ -1,11 +1,5 @@
 # on
 
-## 导入模块
-
-```TypeScript
-import { display } from 'kits/@kit.ArkUI';
-```
-
 ## on('add' | 'remove' | 'change')
 
 ```TypeScript
@@ -35,7 +29,7 @@ function on(type: 'add' | 'remove' | 'change', callback: Callback<long>): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. |
 
 ## 示例
 
@@ -79,7 +73,7 @@ function on(type: 'add' | 'remove' | 'change', callback: Callback<long>): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. |
 
 ## 示例
 
@@ -123,7 +117,7 @@ function on(type: 'add' | 'remove' | 'change', callback: Callback<long>): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. |
 
 ## 示例
 
@@ -175,8 +169,8 @@ function on(type: 'foldStatusChange', callback: Callback<FoldStatus>): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt;2. Incorrect parameter types. |
-| 1400003 | This display manager service works abnormally. |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt;2. Incorrect parameter types. |
+| [1400003](../errorcode-display.md#1400003-系统服务工作异常) | This display manager service works abnormally. |
 
 ## 示例
 
@@ -223,8 +217,8 @@ function on(type: 'foldAngleChange', callback: Callback<Array<double>>): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. |
-| 1400003 | This display manager service works abnormally. |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. |
+| [1400003](../errorcode-display.md#1400003-系统服务工作异常) | This display manager service works abnormally. |
 
 ## 示例
 
@@ -232,7 +226,7 @@ function on(type: 'foldAngleChange', callback: Callback<Array<double>>): void
 import { Callback } from '@kit.BasicServicesKit';
 
 let callback: Callback<Array<number>> = (angles: Array<number>) => {
-  console.info('Listening fold angles length: ' + angles.length);
+  console.info(`Listening fold angles length: ${angles.length}`);
 };
 display.on('foldAngleChange', callback);
 ```
@@ -267,8 +261,8 @@ function on(type: 'captureStatusChange', callback: Callback<boolean>): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt;2. Incorrect parameter types. |
-| 1400003 | This display manager service works abnormally. |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt;2. Incorrect parameter types. |
+| [1400003](../errorcode-display.md#1400003-系统服务工作异常) | This display manager service works abnormally. |
 
 ## 示例
 
@@ -276,7 +270,7 @@ function on(type: 'captureStatusChange', callback: Callback<boolean>): void
 import { Callback } from '@kit.BasicServicesKit';
 
 let callback: Callback<boolean> = (captureStatus: boolean) => {
-  console.info('Listening capture status: ' + captureStatus);
+  console.info(`Listening capture status: ${captureStatus}`);
 };
 display.on('captureStatusChange', callback);
 ```
@@ -316,8 +310,8 @@ function on(type: 'foldDisplayModeChange', callback: Callback<FoldDisplayMode>):
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt;2. Incorrect parameter types. |
-| 1400003 | This display manager service works abnormally. |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt;2. Incorrect parameter types. |
+| [1400003](../errorcode-display.md#1400003-系统服务工作异常) | This display manager service works abnormally. |
 
 ## 示例
 
@@ -364,9 +358,9 @@ function on(type: 'brightnessInfoChange', callback: BrightnessCallback<long, Bri
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 801 | Capability not supported. |
-| 1400004 | Parameter error. Possible cause: 1. Invalid parameter range. |
-| 1400003 | This display manager service works abnormally. |
+| [801](../../errorcode-universal.md#801-该设备不支持此api) | Capability not supported. |
+| [1400004](../errorcode-display.md#1400004-参数异常) | Parameter error. Possible cause: 1. Invalid parameter range. |
+| [1400003](../errorcode-display.md#1400003-系统服务工作异常) | This display manager service works abnormally. |
 
 ## 示例
 

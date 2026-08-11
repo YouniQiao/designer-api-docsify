@@ -1,11 +1,5 @@
 # getQuerySqlInfo
 
-## 导入模块
-
-```TypeScript
-import { relationalStore } from 'kits/@kit.ArkData';
-```
-
 ## getQuerySqlInfo
 
 ```TypeScript
@@ -26,7 +20,7 @@ function getQuerySqlInfo(predicates: RdbPredicates, columns?: Array<string>):Sql
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| predicates | [RdbPredicates](arkts-arkdata-relationalstore-rdbpredicates-c.md) | 是 | 与指定字段匹配的谓词。 |
+| predicates | [RdbPredicates](arkts-arkdata-rdb-rdbpredicates-c.md) | 是 | 与指定字段匹配的谓词。 |
 | columns | Array&lt;string&gt; | 否 | 要查询的列；如果不指定此参数，则查询所有列。 |
 
 **返回值：**
@@ -39,13 +33,24 @@ function getQuerySqlInfo(predicates: RdbPredicates, columns?: Array<string>):Sql
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 14800001 | Invalid arguments. Possible causes: 1. Parameter is out of valid range. |
+| [14800001](../errorcode-data-rdb.md#14800001-无效的参数) | Invalid arguments. Possible causes: 1. Parameter is out of valid range. |
 
 ## 示例
+
+ArkTS-Dyn示例：
 
 ```TypeScript
 const predicates = new relationalStore.RdbPredicates("users");
 predicates.notEqualTo("age", 18);
+predicates.equalTo("name", "zhangsan");
+const sqlInfo: relationalStore.SqlInfo = relationalStore.getQuerySqlInfo(predicates);
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+const predicates = new relationalStore.RdbPredicates("users");
+predicates.notEqualTo("age", 18 as long);
 predicates.equalTo("name", "zhangsan");
 const sqlInfo: relationalStore.SqlInfo = relationalStore.getQuerySqlInfo(predicates);
 ```

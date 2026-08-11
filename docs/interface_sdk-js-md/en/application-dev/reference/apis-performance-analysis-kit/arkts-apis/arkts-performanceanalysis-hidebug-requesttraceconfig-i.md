@@ -1,6 +1,6 @@
 # RequestTraceConfig
 
-�ṩtrace�ɼ��Ĳ���ѡ�
+Describes the trace request configuration.
 
 **Since:** 24
 
@@ -22,7 +22,7 @@ import { hidebug } from 'kits/@kit.PerformanceAnalysisKit';
 bufferSizeKb: int
 ```
 
-trace�ļ��Ļ����С����KBΪ��λ����ֵΪ32λ�޷����������֣�������Ч��Χ��������ֵ�����ȡֵ��ΧΪ[1024, 15360]�������������ȡֵ��Χ��������������Ϊ����ı߽�ֵ��
+Buffer size of the trace file, in KB.
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
@@ -44,7 +44,7 @@ trace�ļ��Ļ����С����KBΪ��λ����ֵΪ32λ��
 durationMs: int
 ```
 
-trace�ɼ�ʱ������msΪ��λ����ֵΪ32λ�޷����������֣�������Ч��Χ��������ֵ�����ȡֵ��ΧΪ[1000, 15000]�������������ȡֵ��Χ��������������Ϊ����ı߽�ֵ��
+Duration of the trace, in ms.
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
@@ -66,7 +66,7 @@ trace�ɼ�ʱ������msΪ��λ����ֵΪ32λ�޷����
 identifier: string
 ```
 
-�ɼ�trace������ļ���ǰ׺���ļ���ǰ׺ֻȡ�ַ���ǰ20���ַ����������ֽ�������ǰ20���ַ�ֻ������Сд��ĸ���»��ߣ�����������Ĭ��Ϊ���ַ�����
+Identifier used as the prefix of the output trace file name.
 
 **Type:** string
 
@@ -88,7 +88,7 @@ identifier: string
 reserved: int
 ```
 
-Ԥ���ֶΣ���������Ϊ0��
+Reserved field for future use. Set to 0.
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 

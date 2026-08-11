@@ -12,7 +12,7 @@ import { pluginBundleManager } from 'kits/@kit.AbilityKit';
 function uninstallLocalPlugin(pluginBundleName: string): Promise<void>
 ```
 
-卸载当前应用已通过自分发方式安装的指定插件。使用Promise异步回调。
+Uninstall the plugin for self application.
 
 **Since:** 26.0.0
 
@@ -30,18 +30,18 @@ function uninstallLocalPlugin(pluginBundleName: string): Promise<void>
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| pluginBundleName | string | Yes | 插件的Bundle名称，表示要卸载的插件的应用包名。 |
+| pluginBundleName | string | Yes | Indicates the bundle name of plugin application. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise对象，无返回结果。 |
+| Promise&lt;void&gt; | Promise returned by the function. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 17700092 | Failed to uninstall the plugin because the specified plugin is not found. |
-| 201 | Calling interface without permission 'ohos.permission.kernel.SUPPORT_LOCAL_PLUGIN'. |
+| [17700092](../errorcode-bundle.md#17700092-plugin-uninstall-failure-because-of-nonexistent-plugin-bundle-name) | Failed to uninstall the plugin because the specified plugin is not found. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Calling interface without permission 'ohos.permission.kernel.SUPPORT_LOCAL_PLUGIN'. |
 

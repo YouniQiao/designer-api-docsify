@@ -12,7 +12,7 @@ import { accessibility } from 'kits/@kit.AccessibilityKit';
 function offSeniorModeStateChange(callback?: Callback<boolean>): void
 ```
 
-取消监听关怀模式变化事件。使用callback异步回调。
+Cancels listening for the senior mode change event. This API uses an asynchronous callback to return the result.
 
 **Since:** 26.0.0
 
@@ -28,33 +28,5 @@ function offSeniorModeStateChange(callback?: Callback<boolean>): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;boolean&gt; | No | 回调函数。返回true表示关怀模式已开启；返回false表示关怀模式已关闭。取消指定callback对象的事件响应。需与 [accessibility.onSeniorModeStateChange](accessibility.onSeniorModeStateChange(callback: Callback&lt;boolean&gt;)) 的callback一致。缺省时，表示注销所有已注册事件。 |
-
-## Examples
-
-```TypeScript
-import { accessibility } from '@kit.AccessibilityKit';
-
-@Entry
-@Component
-struct Index {
-  callback: (data: boolean) => void = this.eventCallback;
-  eventCallback(data: boolean): void {
-    console.info(`subscribe senior mode state change, result: ${JSON.stringify(data)}`);
-  }
-
-  aboutToAppear(): void {
-    accessibility.onSeniorModeStateChange(this.callback);
-  }
-
-  aboutToDisappear(): void {
-    accessibility.offSeniorModeStateChange(this.callback);
-  }
-
-  build() {
-    Column() {
-    }
-  }
-}
-```
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;boolean&gt; | No | Callback function. The value **true** indicates that the senior mode is enabled, and the value **false** indicates that the senior mode is disabled. Cancels the event response of a specified callback object. It must be consistent with the callback used in [accessibility.onSeniorModeStateChange](accessibility.onSeniorModeStateChange(callback: Callback&lt;boolean&gt;)) . If this parameter is not specified, listening will be disabled for all callbacks corresponding to the specified type. |
 

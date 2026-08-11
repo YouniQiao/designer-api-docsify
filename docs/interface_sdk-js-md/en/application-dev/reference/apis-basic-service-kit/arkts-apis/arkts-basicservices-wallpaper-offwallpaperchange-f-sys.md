@@ -12,7 +12,7 @@ import { wallpaper } from 'kits/@kit.BasicServicesKit';
 function offWallpaperChange(callback?: WallpaperChangeObserver): void
 ```
 
-取消订阅壁纸变化通知事件。不支持多线程并发调用。
+Unregisters a listener for wallpaper changes.
 
 **Since:** 23
 
@@ -28,11 +28,11 @@ function offWallpaperChange(callback?: WallpaperChangeObserver): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [WallpaperChangeObserver](arkts-basicservices-wallpaper-wallpaperchangeobserver-t.md) | No |  |
+| callback | [WallpaperChangeObserver](arkts-basicservices-wallpaper-wallpaperchangeobserver-t.md) | No | The observer of wallpaper change. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 202 | permission verification failed, application which is not a system application uses system API. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | permission verification failed, application which is not a system application uses system API. |
 

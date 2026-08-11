@@ -1,6 +1,6 @@
 # SelectPurpose (System API)
 
-选择伴随设备的目的。
+Selects the purpose of the companion device.
 
 **Since:** 23
 
@@ -18,7 +18,7 @@
 SELECT_ADD_DEVICE = 1
 ```
 
-选择添加模板的伴随设备。表示当前操作目的是选择一个设备用于添加新的认证模板，系统应返回适合添加模板的设备列表。
+Selects a companion device to which the template is to be added. Specifically, the purpose of the current operation is to select a device for adding a new authentication template. The system returns a list of devices suitable for adding a template.
 
 **Since:** 23
 
@@ -38,7 +38,7 @@ SELECT_ADD_DEVICE = 1
 SELECT_AUTH_DEVICE = 2
 ```
 
-选择提供认证能力的伴随设备。表示当前操作目的是选择一个已注册模板的设备用于执行身份认证，系统应返回具备认证能力的设备列表。
+Selects the companion device that provides the authentication capability. Specifically, the purpose of the current operation is to select a device that has a registered template for authentication. The system returns a list of devices that have the authentication capability.
 
 **Since:** 23
 
@@ -58,7 +58,8 @@ SELECT_AUTH_DEVICE = 2
 VENDOR_BEGIN = 10000
 ```
 
-厂商自定义选择目的取值起点。厂商可在此值基础上自定义扩展选择目的，实际取值需大于等于10000，避免与系统保留值[0-9999]冲突。
+Start value of the vendor-defined selection purpose. The vendor can extend the selection purpose based on this value. The actual value must be greater than or equal to 10000 to avoid conflicts with the reserved system values  
+[0-9999].
 
 **Since:** 23
 

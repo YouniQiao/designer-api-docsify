@@ -1,17 +1,15 @@
 # Array
 
-一种线性数据结构，底层基于数组实现，可以在ArkTS上并发实例间传递。
+A linear data structure that is implemented on arrays and can be passed between ArkTS concurrent instances.Pass-by-reference is recommended for better transfer performance.
 
-当需要在ArkTS上并发实例间传递Array时，可以通过传递Array引用提升传递性能。
-
-> **说明：**
+> **NOTE：**
 > 
-> - 本模块仅支持在ArkTS文件（文件后缀为.ets）中导入使用。
-> 本节使用以下标识来表示泛型的使用：
+> - This module can be imported only to ArkTS files (with the file name extension .ets).
+> This section uses the following to identify the use of generics:
 
-- T：Type，支持  
-[Sendable支持的数据类型](../../../arkts-utils/arkts-sendable.md#sendable支持的数据类型)。  
-**装饰器**：\@Sendable
+- T: type, which can be any of the  
+[sendable data types](../../../arkts-utils/arkts-sendable.md#sendable-data-types).  
+**Decorator**: \@Sendable
 
 **Inheritance/Implementation:** Array implements [ConcatArray<T>](ConcatArray<T>)
 
@@ -37,7 +35,7 @@ import { collections } from 'kits/@kit.ArkTS';
 [Symbol.iterator](): IterableIterator<T>
 ```
 
-获取一个迭代器，迭代器的每一项都是一个 JavaScript 对象。
+Obtains an iterator, each item of which is a JavaScript object.
 
 **Since:** 12
 
@@ -53,13 +51,13 @@ import { collections } from 'kits/@kit.ArkTS';
 
 | Type | Description |
 | --- | --- |
-| [IterableIterator](arkts-arkts-iterator-iterableiterator-i.md)&lt;T&gt; | 迭代器对象。 |
+| [IterableIterator](arkts-arkts-iterator-iterableiterator-i.md)&lt;T&gt; | Iterator object. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 10200011 | The Symbol.iterator method cannot be bound. |
+| [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) | The Symbol.iterator method cannot be bound. |
 
 ## at
 
@@ -67,7 +65,7 @@ import { collections } from 'kits/@kit.ArkTS';
 at(index: number): T | undefined
 ```
 
-返回ArkTS Array中指定索引位置的元素。
+Returns the element at a given index in this ArkTS array.
 
 **Since:** 12
 
@@ -83,20 +81,20 @@ at(index: number): T | undefined
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| index | number | Yes | 要返回的Array元素的索引（从零开始），取值为整数。负数索引从 Array末尾开始计数，如果传入负数，则指代**index + array.length**位置的下标。 |
+| index | number | Yes | Index of the element. The index in an array always starts from 0 and is an integer. If a negative number is passed in, it refers to the index of **index + array.length**. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| T | 返回指定索引处的元素；如果索引超出范围或无效， 则返回**undefined**。 |
+| T | Element at the given index. If the index is out of range or invalid, **undefined** is returned. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 10200011 | The at method cannot be bound. |
-| 10200201 | Concurrent modification error. |
+| [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) | The at method cannot be bound. |
+| [10200201](../errorcode-utils.md#10200201-concurrent-modification-error) | Concurrent modification error. |
 
 ## concat
 
@@ -104,7 +102,7 @@ at(index: number): T | undefined
 concat(...items: ConcatArray<T>[]): Array<T>
 ```
 
-将ArkTS Array与一个或多个数组拼接。
+Concatenates this ArkTS array with one or more arrays.
 
 **Since:** 12
 
@@ -120,20 +118,20 @@ concat(...items: ConcatArray<T>[]): Array<T>
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| items | [ConcatArray](arkts-arkts-concatarray-i.md)&lt;T&gt;[] | Yes | 用于拼接ArkTS Array的一个或多个数组。 |
+| items | [ConcatArray](arkts-arkts-concatarray-i.md)&lt;T&gt;[] | Yes | Concatenates this ArkTS array with one or more arrays. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Array&lt;T&gt; | 拼接后生成的新Array。 |
+| Array&lt;T&gt; | New array generated. Not a valid array. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 10200011 | The concat method cannot be bound. |
-| 10200201 | Concurrent modification error. |
+| [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) | The concat method cannot be bound. |
+| [10200201](../errorcode-utils.md#10200201-concurrent-modification-error) | Concurrent modification error. |
 
 ## constructor
 
@@ -141,7 +139,7 @@ concat(...items: ConcatArray<T>[]): Array<T>
 constructor()
 ```
 
-创建一个空的ArkTS Array的构造函数。
+A constructor used to create an empty ArkTS array.
 
 **Since:** 12
 
@@ -157,7 +155,7 @@ constructor()
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 10200012 | The Array's constructor cannot be directly invoked. |
+| [10200012](../errorcode-utils.md#10200012-constructor-calling-failure) | The Array's constructor cannot be directly invoked. |
 
 ## constructor
 
@@ -165,7 +163,7 @@ constructor()
 constructor(first: T, ...left: T[])
 ```
 
-ArkTS Array的构造函数，通过开发者提供的元素进行初始化。
+A constructor used to create an ArkTS array with the given elements.
 
 **Since:** 12
 
@@ -181,14 +179,14 @@ ArkTS Array的构造函数，通过开发者提供的元素进行初始化。
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| first | T | Yes | 初始化ArkTS Array的第一个元素。 |
-| left | T[] | Yes | 初始化ArkTS Array的剩余元素。 |
+| first | T | Yes | First element to be included in the ArkTS array. |
+| left | T[] | Yes | Remaining elements to be included in the ArkTS array. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 10200012 | The Array's constructor cannot be directly invoked. |
+| [10200012](../errorcode-utils.md#10200012-constructor-calling-failure) | The Array's constructor cannot be directly invoked. |
 
 ## constructor
 
@@ -196,7 +194,7 @@ ArkTS Array的构造函数，通过开发者提供的元素进行初始化。
 constructor(...items: T[])
 ```
 
-ArkTS Array的构造函数，通过开发者提供的元素进行初始化。
+A constructor used to create an ArkTS array with the given elements.
 
 **Since:** 12
 
@@ -212,13 +210,13 @@ ArkTS Array的构造函数，通过开发者提供的元素进行初始化。
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| items | T[] | Yes | 初始化ArkTS Array的元素。 |
+| items | T[] | Yes | Elements to be included in the ArkTS array. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 10200012 | The Array's constructor cannot be directly invoked. |
+| [10200012](../errorcode-utils.md#10200012-constructor-calling-failure) | The Array's constructor cannot be directly invoked. |
 
 ## copyWithin
 
@@ -226,7 +224,7 @@ ArkTS Array的构造函数，通过开发者提供的元素进行初始化。
 copyWithin(target: number, start: number, end?: number): Array<T>
 ```
 
-从ArkTS Array指定范围内的元素依次拷贝到目标位置。
+Copies elements within a given range from this ArkTS array to another position in sequence.
 
 **Since:** 18
 
@@ -242,22 +240,22 @@ copyWithin(target: number, start: number, end?: number): Array<T>
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| target | number | Yes | 目标起始位置的下标。如果传入负数，则指代 `target + array.length`位置的下标。 |
-| start | number | Yes | 源起始位置下标。如果传入负数，则指代 **start + array.length**位置的下标。 |
-| end | number | No | 源终止位置下标。如果传入负数，则指代 `end + array.length`位置的下标。默认值为ArkTS Array的长度。 |
+| target | number | Yes | Start index of the range. If a negative number is passed in, it refers to the index of `target + array.length`. |
+| start | number | Yes | Start index of the range. If a negative number is passed in, it refers to the index of **start + array.length**. |
+| end | number | No | End index of the range. If a negative number is passed in, it refers to the index of `end + array.length`. The default value is the length of the ArkTS array. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Array&lt;T&gt; | 修改后的ArkTS Array。可能的原因： 1. 必填参数未指定。 2. 参数类型不正确。 3. 参数校验失败。 |
+| Array&lt;T&gt; | ArkTS array after being modified. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. 3. Parameter verification failed. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 10200011 | The copyWithin method cannot be bound. |
-| 10200201 | Concurrent modification error. |
+| [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) | The copyWithin method cannot be bound. |
+| [10200201](../errorcode-utils.md#10200201-concurrent-modification-error) | Concurrent modification error. |
 
 ## create
 
@@ -265,7 +263,7 @@ copyWithin(target: number, start: number, end?: number): Array<T>
 static create<T>(arrayLength: number, initialValue: T): Array<T>
 ```
 
-生成一个固定长度的ArkTS Array，其中每个元素的初始值为给定的初始值。
+Creates an ArkTS array of a fixed length, with each element set to a given initial value.
 
 **Since:** 12
 
@@ -281,20 +279,20 @@ static create<T>(arrayLength: number, initialValue: T): Array<T>
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| arrayLength | number | Yes | ArkTS Array的长度。 |
-| initialValue | T | Yes | ArkTS Array中每个元素的初始值。 |
+| arrayLength | number | Yes | Length of the ArkTS array. |
+| initialValue | T | Yes | Initial value of each element in the ArkTS array. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Array&lt;T&gt; | 新创建的ArkTS Array实例。 |
+| Array&lt;T&gt; | Newly created ArkTS array. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 10200011 | The create method cannot be bound.<br>**Applicable version:** 12 - 17 |
+| [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) | The create method cannot be bound.<br>**Applicable version:** 12 - 17 |
 
 ## entries
 
@@ -302,7 +300,7 @@ static create<T>(arrayLength: number, initialValue: T): Array<T>
 entries(): IterableIterator<[number, T]>
 ```
 
-返回一个迭代器对象，该对象包含ArkTS Array中每个元素的键值对。
+Returns an iterator object that contains the key-value pair of each element in this ArkTS array.
 
 **Since:** 12
 
@@ -318,14 +316,14 @@ entries(): IterableIterator<[number, T]>
 
 | Type | Description |
 | --- | --- |
-| [IterableIterator](arkts-arkts-iterator-iterableiterator-i.md)&lt;[number, T]&gt; | 包含Array中每个元素的键值对的 迭代器对象。 |
+| [IterableIterator](arkts-arkts-iterator-iterableiterator-i.md)&lt;[number, T]&gt; | Iterator object that contains the key-value pair of each element in the array. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 10200011 | The entries method cannot be bound. |
-| 10200201 | Concurrent modification error. |
+| [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) | The entries method cannot be bound. |
+| [10200201](../errorcode-utils.md#10200201-concurrent-modification-error) | Concurrent modification error. |
 
 ## every
 
@@ -333,7 +331,7 @@ entries(): IterableIterator<[number, T]>
 every(predicate: ArrayPredicateFn<T, Array<T>>): boolean
 ```
 
-测试ArkTS Array中的所有元素是否满足指定条件。
+Checks whether all elements in this ArkTS array meet a given condition.
 
 **Since:** 18
 
@@ -349,20 +347,20 @@ every(predicate: ArrayPredicateFn<T, Array<T>>): boolean
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| predicate | [ArrayPredicateFn](arkts-arkts-collections-arraypredicatefn-t.md)&lt;T, Array&lt;T&gt;&gt; | Yes | 用于测试的断言函数。 |
+| predicate | [ArrayPredicateFn](arkts-arkts-collections-arraypredicatefn-t.md)&lt;T, Array&lt;T&gt;&gt; | Yes | Assertion function used for the test. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| boolean | 检查结果。如果所有元素都满足指定条件，则返回**true**； 否则返回**false**。 |
+| boolean | Check result. The value **true** is returned if all elements meet the given condition; otherwise, **false** is returned. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 10200011 | The every method cannot be bound. |
-| 10200201 | Concurrent modification error. |
+| [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) | The every method cannot be bound. |
+| [10200201](../errorcode-utils.md#10200201-concurrent-modification-error) | Concurrent modification error. |
 
 ## extendTo
 
@@ -370,7 +368,7 @@ every(predicate: ArrayPredicateFn<T, Array<T>>): boolean
 extendTo(arrayLength: number, initialValue: T): void
 ```
 
-使用指定初始值填充新增元素，使Array扩展到指定长度。
+Extends this array to a given length by adding elements with the specified initial value.
 
 **Since:** 12
 
@@ -386,15 +384,15 @@ extendTo(arrayLength: number, initialValue: T): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| arrayLength | number | Yes | Array的新长度。如果传入的值小于或等于当前Array 的长度，Array不发生变化。 |
-| initialValue | T | Yes | 新增元素的初始值。 |
+| arrayLength | number | Yes | New length of the array. If a value less than or equal to the current array length is passed in, the array does not change. |
+| initialValue | T | Yes | Initial value of the elements to be added. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 10200011 | The extendTo method cannot be bound. |
-| 10200201 | Concurrent modification error. |
+| [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) | The extendTo method cannot be bound. |
+| [10200201](../errorcode-utils.md#10200201-concurrent-modification-error) | Concurrent modification error. |
 
 ## fill
 
@@ -402,7 +400,7 @@ extendTo(arrayLength: number, initialValue: T): void
 fill(value: T, start?: number, end?: number): Array<T>
 ```
 
-使用指定的值填充ArkTS Array中指定范围的所有元素。
+Fills elements in the specified range of this ArkTS array with a given value.
 
 **Since:** 12
 
@@ -418,22 +416,22 @@ fill(value: T, start?: number, end?: number): Array<T>
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | T | Yes | 要填充的值。 |
-| start | number | No | 开始填充的索引。默认值为**0**。 |
-| end | number | No | 结束填充的索引（不包括该元素）。如果未传入， 则指代数组的最后一个元素。 |
+| value | T | Yes | Value to fill in. |
+| start | number | No | Start index of the range. The default value is **0**. |
+| end | number | No | End index of the range (exclusive). If no value is passed in, it refers to the last element of the array. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Array&lt;T&gt; | 填充后的Array。 |
+| Array&lt;T&gt; | Filled array. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 10200011 | The fill method cannot be bound. |
-| 10200201 | Concurrent modification error. |
+| [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) | The fill method cannot be bound. |
+| [10200201](../errorcode-utils.md#10200201-concurrent-modification-error) | Concurrent modification error. |
 
 ## filter
 
@@ -441,7 +439,7 @@ fill(value: T, start?: number, end?: number): Array<T>
 filter(predicate: (value: T, index: number, array: Array<T>) => boolean): Array<T>
 ```
 
-返回一个新Array，其中包含通过指定回调函数测试的所有元素。
+Returns a new array containing all elements that pass a test provided by a callback function.
 
 **Since:** 12
 
@@ -457,20 +455,20 @@ filter(predicate: (value: T, index: number, array: Array<T>) => boolean): Array<
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| predicate | (value: T, index: number, array: Array&lt;T&gt;) =&gt; boolean | Yes | 一个接受三个参数的函数，用于筛选元素。返回值为 **true**表示当前元素通过测试，应保留在新数组中；返回值为**false**表示当前元素未通过 测试，应被排除在新数组外。 |
+| predicate | (value: T, index: number, array: Array&lt;T&gt;) =&gt; boolean | Yes | Function that takes three arguments. It is used to filter elements. The value **true** means that the current element passes the test and should be retained in the new array. The value **false** means that the current element fails the test and should be excluded from the new array. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Array&lt;T&gt; | 包含通过测试的元素的新Array。 |
+| Array&lt;T&gt; | New array containing elements that pass the test. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 10200011 | The filter method cannot be bound. |
-| 10200201 | Concurrent modification error. |
+| [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) | The filter method cannot be bound. |
+| [10200201](../errorcode-utils.md#10200201-concurrent-modification-error) | Concurrent modification error. |
 
 ## find
 
@@ -478,7 +476,7 @@ filter(predicate: (value: T, index: number, array: Array<T>) => boolean): Array<
 find(predicate: (value: T, index: number, obj: Array<T>) => boolean): T | undefined
 ```
 
-返回通过回调函数测试的第一个元素的值。如果所有元素都不满足，则返回**undefined**。
+Returns the value of the first element that passes a test provided by a callback function. If none of the elements pass the test, **undefined** is returned.
 
 **Since:** 12
 
@@ -494,20 +492,20 @@ find(predicate: (value: T, index: number, obj: Array<T>) => boolean): T | undefi
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| predicate | (value: T, index: number, obj: Array&lt;T&gt;) =&gt; boolean | Yes | 一个接受三个参数的函数，用于筛选元素。返回值为 **true**表示当前元素满足条件，会立即停止遍历，并将该元素作为结果返回；返回值为 **false**表示当前元素不满足条件，会继续检查下一个元素，直到找到符合条件的元素或遍历 完整个数组。 |
+| predicate | (value: T, index: number, obj: Array&lt;T&gt;) =&gt; boolean | Yes | Function that takes three arguments. It is used to filter elements. The value **true** means that the current element meets the conditions, the traversal stops, and that element is returned. The value **false** means that the current element does not meet the condition, and the traversal continues until the element that meets the condition is found or the entire array is traversed. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| T | 第一个满足条件的元素的值；如果所有元素都不满足条件 ，则返回**undefined**。 |
+| T | Value of the first element that passes the test. If none of the elements pass the test , **undefined** is returned. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 10200011 | The find method cannot be bound. |
-| 10200201 | Concurrent modification error. |
+| [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) | The find method cannot be bound. |
+| [10200201](../errorcode-utils.md#10200201-concurrent-modification-error) | Concurrent modification error. |
 
 ## findIndex
 
@@ -515,7 +513,7 @@ find(predicate: (value: T, index: number, obj: Array<T>) => boolean): T | undefi
 findIndex(predicate: (value: T, index: number, obj: Array<T>) => boolean): number
 ```
 
-返回通过回调函数测试的第一个元素的索引，如果所有元素都不满足，则返回**-1**。
+Returns the index of the first element that passes a test provided by a callback function. If none of the elements pass the test, **-1** is returned.
 
 **Since:** 12
 
@@ -531,20 +529,20 @@ findIndex(predicate: (value: T, index: number, obj: Array<T>) => boolean): numbe
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| predicate | (value: T, index: number, obj: Array&lt;T&gt;) =&gt; boolean | Yes | 一个接受三个参数的函数，用于筛选元素。返回值为 **true**表示当前元素满足条件，会立即停止遍历，并返回该元素的索引；返回值为**false** 表示当前元素不满足条件，会继续检查下一个元素，直到找到符合条件的元素或遍历完整个 数组。 |
+| predicate | (value: T, index: number, obj: Array&lt;T&gt;) =&gt; boolean | Yes | Function that takes three arguments. It is used to filter elements. The value **true** means that the current element meets the conditions, the traversal stops, and the index of that element is returned. The value **false** means that the current element does not meet the condition, and the traversal continues until the element that meets the condition is found or the entire array is traversed. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| number | 第一个满足条件的元素的索引；如果所有元素都不满足条件， 则返回**-1**。 |
+| number | Index of the first element that passes the test. If none of the elements pass the test, **-1** is returned. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 10200011 | The findIndex method cannot be bound. |
-| 10200201 | Concurrent modification error. |
+| [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) | The findIndex method cannot be bound. |
+| [10200201](../errorcode-utils.md#10200201-concurrent-modification-error) | Concurrent modification error. |
 
 ## forEach
 
@@ -552,7 +550,7 @@ findIndex(predicate: (value: T, index: number, obj: Array<T>) => boolean): numbe
 forEach(callbackFn: (value: T, index: number, array: Array<T>) => void): void
 ```
 
-对ArkTS Array中的每个元素执行提供的回调函数。
+Calls a callback function for each element in this ArkTS Array.
 
 **Since:** 12
 
@@ -568,14 +566,14 @@ forEach(callbackFn: (value: T, index: number, array: Array<T>) => void): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callbackFn | (value: T, index: number, array: Array&lt;T&gt;) =&gt; void | Yes | 用于对每个元素执行的回调函数。 |
+| callbackFn | (value: T, index: number, array: Array&lt;T&gt;) =&gt; void | Yes | Callback function to run for each element. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 10200011 | The forEach method cannot be bound. |
-| 10200201 | Concurrent modification error. |
+| [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) | The forEach method cannot be bound. |
+| [10200201](../errorcode-utils.md#10200201-concurrent-modification-error) | Concurrent modification error. |
 
 ## from
 
@@ -583,7 +581,7 @@ forEach(callbackFn: (value: T, index: number, array: Array<T>) => void): void
 static from<T>(arrayLike: ArrayLike<T>): Array<T>
 ```
 
-从一个实现了ArrayLike接口的对象创建一个新的ArkTS Array。
+Creates an ArkTS array from an array-like object.
 
 **Since:** 12
 
@@ -599,19 +597,19 @@ static from<T>(arrayLike: ArrayLike<T>): Array<T>
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| arrayLike | [ArrayLike](arkts-arkts-arraylike-i.md)&lt;T&gt; | Yes | 用于构造ArkTS Array的对象。 |
+| arrayLike | [ArrayLike](arkts-arkts-arraylike-i.md)&lt;T&gt; | Yes | Array-like object. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Array&lt;T&gt; | 新创建的ArkTS Array实例。 |
+| Array&lt;T&gt; | Newly created ArkTS array. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 10200011 | The from method cannot be bound.<br>**Applicable version:** 12 - 17 |
+| [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) | The from method cannot be bound.<br>**Applicable version:** 12 - 17 |
 
 ## from
 
@@ -619,7 +617,7 @@ static from<T>(arrayLike: ArrayLike<T>): Array<T>
 static from<T>(iterable: Iterable<T>): Array<T>
 ```
 
-从一个实现了Iterable接口的对象创建一个新的ArkTS Array。
+Creates an ArkTS array from an iterable object.
 
 **Since:** 12
 
@@ -635,19 +633,19 @@ static from<T>(iterable: Iterable<T>): Array<T>
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| iterable | Iterable&lt;T&gt; | Yes | 用于构造ArkTS Array的对象。 |
+| iterable | Iterable&lt;T&gt; | Yes | Array-like object. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Array&lt;T&gt; | 新创建的ArkTS Array实例。 |
+| Array&lt;T&gt; | Newly created ArkTS array. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 10200011 | The from method cannot be bound.<br>**Applicable version:** 12 - 17 |
+| [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) | The from method cannot be bound.<br>**Applicable version:** 12 - 17 |
 
 ## from
 
@@ -655,7 +653,7 @@ static from<T>(iterable: Iterable<T>): Array<T>
 static from<T>(arrayLike: ArrayLike<T> | Iterable<T>, mapFn: ArrayFromMapFn<T, T>): Array<T>
 ```
 
-从一个实现了ArrayLike接口的对象创建一个新的ArkTS Array，并使用自定义函数处理每个数组元素。
+Creates an ArkTS array from an array-like object, and uses a custom function to process each array element.
 
 **Since:** 18
 
@@ -671,14 +669,14 @@ static from<T>(arrayLike: ArrayLike<T> | Iterable<T>, mapFn: ArrayFromMapFn<T, T
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| arrayLike | [ArrayLike](arkts-arkts-arraylike-i.md)&lt;T&gt; \| Iterable&lt;T&gt; | Yes | 用于构造ArkTS Array的对象。 |
-| mapFn | [ArrayFromMapFn](arkts-arkts-collections-arrayfrommapfn-t.md)&lt;T, T&gt; | Yes | 用于处理数组元素的函数。 |
+| arrayLike | [ArrayLike](arkts-arkts-arraylike-i.md)&lt;T&gt; \| Iterable&lt;T&gt; | Yes | Array-like object. |
+| mapFn | [ArrayFromMapFn](arkts-arkts-collections-arrayfrommapfn-t.md)&lt;T, T&gt; | Yes | Functions used to process the array elements. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Array&lt;T&gt; | 新创建的ArkTS Array实例。 |
+| Array&lt;T&gt; | Newly created ArkTS array. |
 
 ## from
 
@@ -686,7 +684,7 @@ static from<T>(arrayLike: ArrayLike<T> | Iterable<T>, mapFn: ArrayFromMapFn<T, T
 static from<U, T>(arrayLike: ArrayLike<U> | Iterable<U>, mapFn: ArrayFromMapFn<U, T>): Array<T>
 ```
 
-从一个实现了ArrayLike接口的对象创建一个新的ArkTS Array，并使用自定义函数处理每个数组元素。ArrayLike接口对象的元素类型可以和数组元素的类型不一样。
+Creates an ArkTS array from an array-like object, and uses a custom function to process each array element. The type of the elements in the array-like object can be different from that of the array elements.
 
 **Since:** 18
 
@@ -702,14 +700,14 @@ static from<U, T>(arrayLike: ArrayLike<U> | Iterable<U>, mapFn: ArrayFromMapFn<U
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| arrayLike | [ArrayLike](arkts-arkts-arraylike-i.md)&lt;U&gt; \| Iterable&lt;U&gt; | Yes | 用于构造ArkTS Array的对象。 |
-| mapFn | [ArrayFromMapFn](arkts-arkts-collections-arrayfrommapfn-t.md)&lt;U, T&gt; | Yes | 用于处理数组元素的函数。 |
+| arrayLike | [ArrayLike](arkts-arkts-arraylike-i.md)&lt;U&gt; \| Iterable&lt;U&gt; | Yes | Array-like object. |
+| mapFn | [ArrayFromMapFn](arkts-arkts-collections-arrayfrommapfn-t.md)&lt;U, T&gt; | Yes | Functions used to process the array elements. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Array&lt;T&gt; | 新创建的ArkTS Array实例。 |
+| Array&lt;T&gt; | Newly created ArkTS array. |
 
 ## includes
 
@@ -717,7 +715,7 @@ static from<U, T>(arrayLike: ArrayLike<U> | Iterable<U>, mapFn: ArrayFromMapFn<U
 includes(searchElement: T, fromIndex?: number): boolean
 ```
 
-判断ArkTS Array是否包含指定的元素，并返回一个布尔值。
+Checks whether this ArkTS array contains an element and returns a Boolean value.
 
 **Since:** 12
 
@@ -733,21 +731,21 @@ includes(searchElement: T, fromIndex?: number): boolean
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| searchElement | T | Yes | 要搜索的元素。 |
-| fromIndex | number | No | 开始搜索的索引。默认值为**0**。 |
+| searchElement | T | Yes | Element to search for. |
+| fromIndex | number | No | Index from which the search starts. The default value is **0**. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| boolean | 检查结果。如果Array包含指定的元素，则返回**true**；否则返回 **false**。 |
+| boolean | Check result. The value **true** is returned if the element exists; otherwise, **false** is returned. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 10200011 | The includes method cannot be bound. |
-| 10200201 | Concurrent modification error. |
+| [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) | The includes method cannot be bound. |
+| [10200201](../errorcode-utils.md#10200201-concurrent-modification-error) | Concurrent modification error. |
 
 ## indexOf
 
@@ -755,7 +753,7 @@ includes(searchElement: T, fromIndex?: number): boolean
 indexOf(searchElement: T, fromIndex?: number): number
 ```
 
-返回在ArkTS Array中搜索元素首次出现的索引，如果不存在则返回**-1**。
+Returns the index of the first occurrence of a value in this ArkTS Array. If the value is not found, **-1** is returned.
 
 **Since:** 12
 
@@ -771,21 +769,21 @@ indexOf(searchElement: T, fromIndex?: number): number
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| searchElement | T | Yes | 要搜索的值。 |
-| fromIndex | number | No | 开始搜索的索引，从0开始。默认值为**0**。 |
+| searchElement | T | Yes | Value to search for. |
+| fromIndex | number | No | Index from which the search starts. The value begins at 0. The default value is **0**. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| number | 搜索元素首次出现的索引；如果不存在，则返回**-1**。 |
+| number | Index of the first occurrence of the value. If the value is not found, **-1** is returned. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 10200011 | The indexOf method cannot be bound. |
-| 10200201 | Concurrent modification error. |
+| [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) | The indexOf method cannot be bound. |
+| [10200201](../errorcode-utils.md#10200201-concurrent-modification-error) | Concurrent modification error. |
 
 ## isArray
 
@@ -793,7 +791,7 @@ indexOf(searchElement: T, fromIndex?: number): number
 static isArray(value: Object | undefined | null): boolean
 ```
 
-检查传入的参数是否是一个ArkTS Array。
+Check whether the input parameter is an ArkTS array.
 
 **Since:** 18
 
@@ -809,13 +807,13 @@ static isArray(value: Object | undefined | null): boolean
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | Object \| undefined \| null | Yes | 需要检查的值。 |
+| value | Object \| undefined \| null | Yes | Value to check. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| boolean | 检查结果。如果传入的参数是ArkTS Array，则返回**true**； 否则返回**false**。可能的原因： 1. 必填参数未指定。 2. 参数类型不正确。 3. 参数校验失败。 |
+| boolean | Check result. The value **true** is returned if the input parameter is an ArkTS array; otherwise, **false** is returned. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. 3. Parameter verification failed. |
 
 ## join
 
@@ -823,7 +821,7 @@ static isArray(value: Object | undefined | null): boolean
 join(separator?: string): string
 ```
 
-将ArkTS Array的所有元素连接成一个字符串，元素之间可以用指定的分隔符分隔。
+Concatenates all elements in this ArkTS array into a string, with a given separator.
 
 **Since:** 12
 
@@ -839,20 +837,20 @@ join(separator?: string): string
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| separator | string | No | 用于分隔Array元素的字符串。如果未传入，则使用逗号（,）作为 分隔符。 |
+| separator | string | No | Separator to be used. If no value is passed in, a comma (,) is used as the separator. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| string | 连接后得到的字符串。如果Array为空，则返回空字符串。 |
+| string | String obtained. If the array is empty, an empty string is returned. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 10200011 | The join method cannot be bound. |
-| 10200201 | Concurrent modification error. |
+| [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) | The join method cannot be bound. |
+| [10200201](../errorcode-utils.md#10200201-concurrent-modification-error) | Concurrent modification error. |
 
 ## keys
 
@@ -860,7 +858,7 @@ join(separator?: string): string
 keys(): IterableIterator<number>
 ```
 
-返回一个迭代器对象，该对象包含ArkTS Array中每个元素的索引。
+Returns an iterator object that contains the index of each element in this ArkTS array.
 
 **Since:** 12
 
@@ -876,14 +874,14 @@ keys(): IterableIterator<number>
 
 | Type | Description |
 | --- | --- |
-| [IterableIterator](arkts-arkts-iterator-iterableiterator-i.md)&lt;number&gt; | 包含Array中每个元素的索引的迭代器对象。 |
+| [IterableIterator](arkts-arkts-iterator-iterableiterator-i.md)&lt;number&gt; | Iterator object that contains the index of each element in the array. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 10200011 | The keys method cannot be bound. |
-| 10200201 | Concurrent modification error. |
+| [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) | The keys method cannot be bound. |
+| [10200201](../errorcode-utils.md#10200201-concurrent-modification-error) | Concurrent modification error. |
 
 ## lastIndexOf
 
@@ -891,7 +889,7 @@ keys(): IterableIterator<number>
 lastIndexOf(searchElement: T, fromIndex?: number): number
 ```
 
-返回ArkTS Array实例中最后一次出现指定值的索引。
+Obtains the index of the last occurrence of the specified value in this ArkTS array.
 
 **Since:** 18
 
@@ -907,21 +905,21 @@ lastIndexOf(searchElement: T, fromIndex?: number): number
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| searchElement | T | Yes | 要搜索的值。 |
-| fromIndex | number | No | 开始搜索的索引。默认值为**0**。如果索引大于或等于 ArkTS Array的长度，则返回**-1**。如果传入负数，则指代 **fromIndex + array.length**位置的下标。 |
+| searchElement | T | Yes | Value to search for. |
+| fromIndex | number | No | Index from which the search starts. The default value is **0**. If the index is greater than or equal to the length of the ArkTS array, **-1** is returned. If a negative number is passed in , it refers to the index of **fromIndex + array.length**. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| number | 元素最后一次出现的索引；如果不存在，则返回**-1**。 |
+| number | Index of the last occurrence of the value. If the value is not found, **-1** is returned. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 10200011 | The lastIndexOf method cannot be bound. |
-| 10200201 | Concurrent modification error. |
+| [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) | The lastIndexOf method cannot be bound. |
+| [10200201](../errorcode-utils.md#10200201-concurrent-modification-error) | Concurrent modification error. |
 
 ## map
 
@@ -929,7 +927,7 @@ lastIndexOf(searchElement: T, fromIndex?: number): number
 map<U>(callbackFn: (value: T, index: number, array: Array<T>) => U): Array<U>
 ```
 
-对ArkTS Array中的每个元素执行提供的回调函数，并返回一个新的Array，该Array包含回调函数的结果。
+Calls a callback function for each element in this ArkTS Array and returns a new array that contains the result of the callback function.
 
 **Since:** 12
 
@@ -945,20 +943,20 @@ map<U>(callbackFn: (value: T, index: number, array: Array<T>) => U): Array<U>
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callbackFn | (value: T, index: number, array: Array&lt;T&gt;) =&gt; U | Yes | 用于对每个元素执行的回调函数。 |
+| callbackFn | (value: T, index: number, array: Array&lt;T&gt;) =&gt; U | Yes | Callback function to run for each element. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Array&lt;U&gt; | 包含回调函数结果的新Array。 |
+| Array&lt;U&gt; | New array containing the result of the callback function. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 10200011 | The map method cannot be bound. |
-| 10200201 | Concurrent modification error. |
+| [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) | The map method cannot be bound. |
+| [10200201](../errorcode-utils.md#10200201-concurrent-modification-error) | Concurrent modification error. |
 
 ## of
 
@@ -966,7 +964,7 @@ map<U>(callbackFn: (value: T, index: number, array: Array<T>) => U): Array<U>
 static of<T>(...items: T[]): Array<T>
 ```
 
-通过可变数量的参数创建一个新的ArkTS Array。
+Creates an ArkTS array with a variable number of parameters.
 
 **Since:** 18
 
@@ -982,13 +980,13 @@ static of<T>(...items: T[]): Array<T>
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| items | T[] | Yes | 用于创建数组的元素集合，参数个数可以是0个、1个 或多个。 |
+| items | T[] | Yes | Array of elements used to create the array. The number of elements can be zero, one, or more. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Array&lt;T&gt; | 新创建的ArkTS Array实例。可能的原因： 1. 必填参数未指定。 2. 参数类型不正确。 3. 参数校验失败。 |
+| Array&lt;T&gt; | Newly created ArkTS array. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. 3. Parameter verification failed. |
 
 ## pop
 
@@ -996,7 +994,7 @@ static of<T>(...items: T[]): Array<T>
 pop(): T | undefined
 ```
 
-从ArkTS Array中移除并返回最后一个元素。如果Array为空，则返回**undefined**，且Array不发生变化。
+Removes the last element from this ArkTS array and returns that element. If the array is empty, **undefined** is returned and the array does not change.
 
 **Since:** 12
 
@@ -1012,14 +1010,14 @@ pop(): T | undefined
 
 | Type | Description |
 | --- | --- |
-| T | 从Array中移除的元素；如果Array为空，则返回**undefined**。 |
+| T | Element removed. If the array is empty, **undefined** is returned. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 10200011 | The pop method cannot be bound. |
-| 10200201 | Concurrent modification error. |
+| [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) | The pop method cannot be bound. |
+| [10200201](../errorcode-utils.md#10200201-concurrent-modification-error) | Concurrent modification error. |
 
 ## push
 
@@ -1027,7 +1025,7 @@ pop(): T | undefined
 push(...items: T[]): number
 ```
 
-在ArkTS Array的末尾添加元素，并返回新的Array长度。
+Adds elements to the end of this ArkTS array and returns the new length of the array.
 
 **Since:** 12
 
@@ -1043,20 +1041,20 @@ push(...items: T[]): number
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| items | T[] | Yes | 要添加到Array末尾的元素。 |
+| items | T[] | Yes | Elements to add. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| number | 新Array的长度。 |
+| number | New length of the array. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 10200011 | The push method cannot be bound. |
-| 10200201 | Concurrent modification error. |
+| [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) | The push method cannot be bound. |
+| [10200201](../errorcode-utils.md#10200201-concurrent-modification-error) | Concurrent modification error. |
 
 ## reduce
 
@@ -1064,7 +1062,7 @@ push(...items: T[]): number
 reduce(callbackFn: (previousValue: T, currentValue: T, currentIndex: number, array: Array<T>) => T): T
 ```
 
-对ArkTS Array中的每个元素执行回调函数，将上一次的返回值作为累加值，并返回最终的结果。
+Calls a callback function for each element in this ArkTS array, uses the previous return value of the function as an accumulated value, and returns the final result.
 
 **Since:** 12
 
@@ -1080,20 +1078,20 @@ reduce(callbackFn: (previousValue: T, currentValue: T, currentIndex: number, arr
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callbackFn | (previousValue: T, currentValue: T, currentIndex: number, array: Array&lt;T&gt;) =&gt; T | Yes | 一个接受四个参数的函数，用于对每个元素执行操作，并将 结果作为累加值传递给下一个元素。 |
+| callbackFn | (previousValue: T, currentValue: T, currentIndex: number, array: Array&lt;T&gt;) =&gt; T | Yes | Function that takes four arguments. It performs an operation on each element and passes the result as an accumulated value to the next element. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| T | 回调函数执行后的最终结果。 |
+| T | Final result obtained from the last call of the callback function. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 10200011 | The reduce method cannot be bound. |
-| 10200201 | Concurrent modification error. |
+| [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) | The reduce method cannot be bound. |
+| [10200201](../errorcode-utils.md#10200201-concurrent-modification-error) | Concurrent modification error. |
 
 ## reduce
 
@@ -1104,7 +1102,7 @@ reduce<U>(
     ): U
 ```
 
-与前一个API类似，此API接受一个初始值作为第二个参数，用于在Array遍历开始前初始化累加器。
+Similar to the previous API, this API takes an initial value as the second parameter to initialize the accumulator before the array traversal starts.
 
 **Since:** 12
 
@@ -1120,21 +1118,21 @@ reduce<U>(
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callbackFn | (previousValue: U, currentValue: T, currentIndex: number, array: Array&lt;T&gt;) =&gt; U | Yes | 一个接受四个参数的函数，用于对每个元素执行操作，并将 结果作为累加值传递给下一个元素。 |
-| initialValue | U | Yes | 用于初始化累加器的值。 |
+| callbackFn | (previousValue: U, currentValue: T, currentIndex: number, array: Array&lt;T&gt;) =&gt; U | Yes | Function that takes four arguments. It performs an operation on each element and passes the result as an accumulated value to the next element. |
+| initialValue | U | Yes | Initial value of the accumulator. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| U | 回调函数执行后的最终结果。 |
+| U | Final result obtained from the last call of the callback function. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 10200011 | The reduce method cannot be bound. |
-| 10200201 | Concurrent modification error. |
+| [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) | The reduce method cannot be bound. |
+| [10200201](../errorcode-utils.md#10200201-concurrent-modification-error) | Concurrent modification error. |
 
 ## reduceRight
 
@@ -1142,8 +1140,8 @@ reduce<U>(
 reduceRight<U = T>(callbackFn: ArrayReduceCallback<U, T, Array<T>>, initialValue: U): U
 ```
 
-此API与  
-[reduceRight](arkts-arkts-collections-array-c.md#reduceright)方法类似，但它接受一个初始值作为第二个参数，用于在Array从右到左顺序遍历开始前初始化累加器。
+This API is similar to the  
+[reduceRight](arkts-arkts-collections-array-c.md#reduceright) API, but it takes an initial value as the second parameter to initialize the accumulator before the array traversal starts from right to left.
 
 **Since:** 18
 
@@ -1159,21 +1157,21 @@ reduceRight<U = T>(callbackFn: ArrayReduceCallback<U, T, Array<T>>, initialValue
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callbackFn | [ArrayReduceCallback](arkts-arkts-collections-arrayreducecallback-t.md)&lt;U, T, Array&lt;T&gt;&gt; | Yes | 一个接受四个参数的函数，用于对 每个元素执行操作，并将结果作为累加值传递给下一个元素。 |
-| initialValue | U | Yes | 用于初始化累加器的值。 |
+| callbackFn | [ArrayReduceCallback](arkts-arkts-collections-arrayreducecallback-t.md)&lt;U, T, Array&lt;T&gt;&gt; | Yes | Function that takes four arguments. It performs an operation on each element and passes the result as an accumulated value to the next element. |
+| initialValue | U | Yes | Initial value of the accumulator. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| U | 回调函数执行后的最终结果。可能的原因： 1.必填参数未指定。 2.参数类型不正确。 |
+| U | Final result obtained from the last call of the callback function. Possible causes: 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 10200011 | The reduceRight method cannot be bound. |
-| 10200201 | Concurrent modification error. |
+| [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) | The reduceRight method cannot be bound. |
+| [10200201](../errorcode-utils.md#10200201-concurrent-modification-error) | Concurrent modification error. |
 
 ## reduceRight
 
@@ -1181,7 +1179,7 @@ reduceRight<U = T>(callbackFn: ArrayReduceCallback<U, T, Array<T>>, initialValue
 reduceRight(callbackFn: ArrayReduceCallback<T, T, Array<T>>): T
 ```
 
-对ArkTS Array中的每个元素按照从右到左顺序执行回调函数，将其结果作为累加值，并返回最终的值。
+Goes through each element in this ArkTS array from right to left, uses a callback function to combine them into a single value, and returns that final value.
 
 **Since:** 18
 
@@ -1197,20 +1195,20 @@ reduceRight(callbackFn: ArrayReduceCallback<T, T, Array<T>>): T
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callbackFn | [ArrayReduceCallback](arkts-arkts-collections-arrayreducecallback-t.md)&lt;T, T, Array&lt;T&gt;&gt; | Yes | 一个接受四个参数的函数，用于对 每个元素执行操作，并将结果作为累加值传递给下一个元素。 |
+| callbackFn | [ArrayReduceCallback](arkts-arkts-collections-arrayreducecallback-t.md)&lt;T, T, Array&lt;T&gt;&gt; | Yes | Function that takes four arguments. It performs an operation on each element and passes the result as an accumulated value to the next element. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| T | 回调函数执行后的最终结果。可能的原因： 1.必填参数未指定。 2.参数类型不正确。 |
+| T | Final result obtained from the last call of the callback function. Possible causes: 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 10200011 | The reduceRight method cannot be bound. |
-| 10200201 | Concurrent modification error. |
+| [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) | The reduceRight method cannot be bound. |
+| [10200201](../errorcode-utils.md#10200201-concurrent-modification-error) | Concurrent modification error. |
 
 ## reverse
 
@@ -1218,7 +1216,7 @@ reduceRight(callbackFn: ArrayReduceCallback<T, T, Array<T>>): T
 reverse(): Array<T>
 ```
 
-反转ArkTS Array数组中的元素，并返回同一数组的引用。
+Reverses elements in this ArkTS array and returns a reference to the same array.
 
 **Since:** 18
 
@@ -1234,14 +1232,14 @@ reverse(): Array<T>
 
 | Type | Description |
 | --- | --- |
-| Array&lt;T&gt; | 反转后的ArkTS Array对象。 |
+| Array&lt;T&gt; | Reversed ArkTS array. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 10200011 | The reverse method cannot be bound. |
-| 10200201 | Concurrent modification error. |
+| [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) | The reverse method cannot be bound. |
+| [10200201](../errorcode-utils.md#10200201-concurrent-modification-error) | Concurrent modification error. |
 
 ## shift
 
@@ -1249,7 +1247,7 @@ reverse(): Array<T>
 shift(): T | undefined
 ```
 
-从ArkTS Array中移除并返回第一个元素。如果Array为空，则返回**undefined**，且Array不发生变化。
+Removes the first element from this ArkTS array and returns that element. If the array is empty, **undefined** is returned and the array does not change.
 
 **Since:** 12
 
@@ -1265,14 +1263,14 @@ shift(): T | undefined
 
 | Type | Description |
 | --- | --- |
-| T | 从Array中移除的元素；如果Array为空，则返回**undefined**。 |
+| T | Element removed. If the array is empty, **undefined** is returned. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 10200011 | The shift method cannot be bound. |
-| 10200201 | Concurrent modification error. |
+| [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) | The shift method cannot be bound. |
+| [10200201](../errorcode-utils.md#10200201-concurrent-modification-error) | Concurrent modification error. |
 
 ## shrinkTo
 
@@ -1280,7 +1278,7 @@ shift(): T | undefined
 shrinkTo(arrayLength: number): void
 ```
 
-使ArkTS Array收缩到指定长度。
+Shrinks this ArkTS array to a given length.
 
 **Since:** 12
 
@@ -1296,14 +1294,14 @@ shrinkTo(arrayLength: number): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| arrayLength | number | Yes | Array的新长度。如果传入的值大于或等于当前Array 的长度，Array不发生变化。 |
+| arrayLength | number | Yes | New length of the array. If a value greater than or equal to the current array length is passed in, the array does not change. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 10200011 | The shrinkTo method cannot be bound. |
-| 10200201 | Concurrent modification error. |
+| [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) | The shrinkTo method cannot be bound. |
+| [10200201](../errorcode-utils.md#10200201-concurrent-modification-error) | Concurrent modification error. |
 
 ## slice
 
@@ -1311,7 +1309,7 @@ shrinkTo(arrayLength: number): void
 slice(start?: number, end?: number): Array<T>
 ```
 
-选取ArkTS Array中一段范围内的元素创建新数组。
+Selects a range of elements in this ArkTS array to create an array.
 
 **Since:** 12
 
@@ -1327,21 +1325,21 @@ slice(start?: number, end?: number): Array<T>
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| start | number | No | 开始索引。如果传入负数，则指代 start + array.length位置的下标。默认值为0。 |
-| end | number | No | 结束索引（不包括该元素）。如果传入负数，则指代 end + array.length位置的下标。默认值为ArkTS Array的长度。 |
+| start | number | No | Start index of the range. If a negative number is passed in, it refers to the index of start + array.length. The default value is 0. |
+| end | number | No | End index of the range (exclusive). If a negative number is passed in, it refers to the index of end + array.length. The default value is the length of the ArkTS array. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Array&lt;T&gt; | 包含选取元素的新Array。 |
+| Array&lt;T&gt; | New array containing the selected elements. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 10200011 | The slice method cannot be bound. |
-| 10200201 | Concurrent modification error. |
+| [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) | The slice method cannot be bound. |
+| [10200201](../errorcode-utils.md#10200201-concurrent-modification-error) | Concurrent modification error. |
 
 ## some
 
@@ -1349,7 +1347,7 @@ slice(start?: number, end?: number): Array<T>
 some(predicate: ArrayPredicateFn<T, Array<T>>): boolean
 ```
 
-测试ArkTS Array是否存在满足指定条件的元素。
+Checks whether this ArkTS array contains an element that meets certain conditions.
 
 **Since:** 18
 
@@ -1365,20 +1363,20 @@ some(predicate: ArrayPredicateFn<T, Array<T>>): boolean
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| predicate | [ArrayPredicateFn](arkts-arkts-collections-arraypredicatefn-t.md)&lt;T, Array&lt;T&gt;&gt; | Yes | 用于测试的断言函数。 |
+| predicate | [ArrayPredicateFn](arkts-arkts-collections-arraypredicatefn-t.md)&lt;T, Array&lt;T&gt;&gt; | Yes | Assertion function used for the test. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| boolean | 检查结果。如果存在满足指定条件的元素，则返回**true**； 否则返回**false**。 |
+| boolean | Check result. The value **true** is returned if an element meeting the given condition exists; otherwise, **false** is returned. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 10200011 | The some method cannot be bound. |
-| 10200201 | Concurrent modification error. |
+| [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) | The some method cannot be bound. |
+| [10200201](../errorcode-utils.md#10200201-concurrent-modification-error) | Concurrent modification error. |
 
 ## sort
 
@@ -1386,7 +1384,7 @@ some(predicate: ArrayPredicateFn<T, Array<T>>): boolean
 sort(compareFn?: (a: T, b: T) => number): Array<T>
 ```
 
-对ArkTS Array进行排序，并返回排序后的Array。
+Sorts elements in this ArkTS array and returns a new array.
 
 **Since:** 12
 
@@ -1402,20 +1400,20 @@ sort(compareFn?: (a: T, b: T) => number): Array<T>
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| compareFn | (a: T, b: T) =&gt; number | No | 用于确定元素顺序的函数。默认使用升序排序。 |
+| compareFn | (a: T, b: T) =&gt; number | No | Function that determines the sort order. By default, elements are sorted in ascending order. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Array&lt;T&gt; | 排序后的Array。 |
+| Array&lt;T&gt; | Array with the sorted elements. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 10200011 | The sort method cannot be bound. |
-| 10200201 | Concurrent modification error. |
+| [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) | The sort method cannot be bound. |
+| [10200201](../errorcode-utils.md#10200201-concurrent-modification-error) | Concurrent modification error. |
 
 ## splice
 
@@ -1423,7 +1421,7 @@ sort(compareFn?: (a: T, b: T) => number): Array<T>
 splice(start: number): Array<T>
 ```
 
-删除Array中指定位置(start)以及之后的所有元素。
+Removes elements from a specified position (start) and all elements after the specified position in an array.
 
 **Since:** 12
 
@@ -1439,20 +1437,20 @@ splice(start: number): Array<T>
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| start | number | Yes | 开始索引。如果`-array.length =< start < 0`， 则从`start + array.length`开始删除。如果`start < -array.length`，则从0开始删除。 |
+| start | number | Yes | Index from which the removal starts. If -array.length =< start < 0, the removal starts from start + array.length. If start < -array.length, the removal starts from 0. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Array&lt;T&gt; | 返回一个新的包含被删除元素的**Array**对象。如果没有元素被删除， 返回一个空的**Array**对象。可能的原因： 1.必填参数未指定。 2.参数类型不正确。 |
+| Array&lt;T&gt; | Array** object that contains the removed elements. If no element is removed, an empty **Array** object is returned.Possible causes: 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 10200011 | The splice method cannot be bound. |
-| 10200201 | Concurrent modification error. |
+| [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) | The splice method cannot be bound. |
+| [10200201](../errorcode-utils.md#10200201-concurrent-modification-error) | Concurrent modification error. |
 
 ## splice
 
@@ -1460,7 +1458,7 @@ splice(start: number): Array<T>
 splice(start: number, deleteCount: number, ...items: T[]): Array<T>
 ```
 
-删除Array中指定位置的元素，并在同一位置插入新元素。
+Removes elements from a specified position in an array, and inserts new elements from the same position.
 
 **Since:** 12
 
@@ -1476,22 +1474,22 @@ splice(start: number, deleteCount: number, ...items: T[]): Array<T>
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| start | number | Yes | 开始索引。如果`-array.length =< start < 0`， 则从`start + array.length`开始删除。如果`start < -array.length`，则从0开始删除。 |
-| deleteCount | number | Yes | 删除元素的个数。 |
-| items | T[] | Yes | 从start位置开始插入的新元素。 如果未传入，则仅删除Array内的元素。 |
+| start | number | Yes | Index from which the removal starts. If -array.length =< start < 0, the removal starts from start + array.length. If start < -array.length, the removal starts from 0. |
+| deleteCount | number | Yes | Number of elements to remove. |
+| items | T[] | Yes | New elements to insert from the start position. If no value is passed in, only the elements in the array are removed. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Array&lt;T&gt; | 返回一个新的包含被删除元素的**Array**对象。如果没有元素被删除， 返回一个空的**Array**对象。可能的原因： 1.必填参数未指定。 2.参数类型不正确。 |
+| Array&lt;T&gt; | Array** object that contains the removed elements. If no element is removed, an empty **Array** object is returned. Possible causes: 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 10200011 | The splice method cannot be bound. |
-| 10200201 | Concurrent modification error. |
+| [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) | The splice method cannot be bound. |
+| [10200201](../errorcode-utils.md#10200201-concurrent-modification-error) | Concurrent modification error. |
 
 ## toLocaleString
 
@@ -1499,8 +1497,7 @@ splice(start: number, deleteCount: number, ...items: T[]): Array<T>
 toLocaleString(): string
 ```
 
-根据当前应用所在的系统地区获取符合当前文化习惯的字符串表示形式。让每个元素通过自身的  
-**toLocaleString**方法转换为字符串，然后使用逗号（,）将这些字符串按顺序拼接。
+Generates a string that matches the cultural conversions of the current system locale. Each element converts itself to a string via its **toLocaleString** API, and these strings are then joined in sequence with commas (,).
 
 **Since:** 18
 
@@ -1516,14 +1513,14 @@ toLocaleString(): string
 
 | Type | Description |
 | --- | --- |
-| string | 一个包含数组所有元素的字符串。 |
+| string | A string that contains all elements of the array. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 10200011 | The toLocaleString method cannot be bound. |
-| 10200201 | Concurrent modification error. |
+| [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) | The toLocaleString method cannot be bound. |
+| [10200201](../errorcode-utils.md#10200201-concurrent-modification-error) | Concurrent modification error. |
 
 ## toString
 
@@ -1531,7 +1528,7 @@ toLocaleString(): string
 toString(): string
 ```
 
-将ArkTS Array转换为字符串。
+Converts an ArkTS array into a string.
 
 **Since:** 18
 
@@ -1547,14 +1544,14 @@ toString(): string
 
 | Type | Description |
 | --- | --- |
-| string | 一个包含数组所有元素的字符串。 |
+| string | A string that contains all elements of the array. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 10200011 | The toString method cannot be bound. |
-| 10200201 | Concurrent modification error. |
+| [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) | The toString method cannot be bound. |
+| [10200201](../errorcode-utils.md#10200201-concurrent-modification-error) | Concurrent modification error. |
 
 ## unshift
 
@@ -1562,7 +1559,7 @@ toString(): string
 unshift(...items: T[]): number
 ```
 
-在ArkTS Array的首端插入元素，并返回新的Array长度。
+Adds elements to the beginning of this ArkTS array and returns the new length of the array.
 
 **Since:** 12
 
@@ -1578,20 +1575,20 @@ unshift(...items: T[]): number
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| items | T[] | Yes | 要插入到Array首端的元素。 |
+| items | T[] | Yes | Elements to add. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| number | 新Array的长度。 |
+| number | New length of the array. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 10200011 | The unshift method cannot be bound. |
-| 10200201 | Concurrent modification error. |
+| [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) | The unshift method cannot be bound. |
+| [10200201](../errorcode-utils.md#10200201-concurrent-modification-error) | Concurrent modification error. |
 
 ## values
 
@@ -1599,7 +1596,7 @@ unshift(...items: T[]): number
 values(): IterableIterator<T>
 ```
 
-返回一个迭代器对象，该对象包含ArkTS Array中每个元素的值。
+Returns an iterator object that contains the value of each element in this ArkTS array.
 
 **Since:** 12
 
@@ -1615,14 +1612,14 @@ values(): IterableIterator<T>
 
 | Type | Description |
 | --- | --- |
-| [IterableIterator](arkts-arkts-iterator-iterableiterator-i.md)&lt;T&gt; | 包含Array中每个元素的值的迭代器对象。 |
+| [IterableIterator](arkts-arkts-iterator-iterableiterator-i.md)&lt;T&gt; | Iterator object that contains the value of each element in the array. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 10200011 | The values method cannot be bound. |
-| 10200201 | Concurrent modification error. |
+| [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) | The values method cannot be bound. |
+| [10200201](../errorcode-utils.md#10200201-concurrent-modification-error) | Concurrent modification error. |
 
 ## [index: number]
 
@@ -1630,7 +1627,7 @@ values(): IterableIterator<T>
 [index: number]: T
 ```
 
-返回Array中指定索引位置的元素。
+Returns the element at a given index in this array.
 
 **Type:** T
 
@@ -1650,7 +1647,7 @@ values(): IterableIterator<T>
 readonly length: number
 ```
 
-Array的元素个数。
+Number of elements in an ArkTS array.
 
 **Type:** number
 

@@ -15,7 +15,7 @@ declare function write(
 ): Promise<number>
 ```
 
-将数据写入文件，使用Promise异步回调。
+Writes data into a file. This API uses a promise to return the result.
 
 **Since:** 6
 
@@ -33,15 +33,15 @@ declare function write(
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| fd | number | Yes | 待写入文件的文件描述符。 |
-| buffer | ArrayBuffer \| string | Yes | 待写入文件的数据，可来自缓冲区或字符串。 |
-| options | {     offset?: number;     length?: number;     position?: number;     encoding?: string;   } | No | 支持如下选项：&lt;br/&gt;-?offset，number类型，表示期望写入数据的位置相对于数据首地址的偏移，单位为Byte。可选，默认为0。&lt;br/&gt;-?length， number类型，表示期望写入数据的长度，单位为Byte。可选，默认缓冲区长度减去偏移长度。&lt;br/&gt;-?position，number类型，表示期望写入文件的位置，单位为Byte。可选，默认从当前位置开始写。&lt;br/&gt;-? encoding，string类型，当数据是string类型时有效，表示数据的编码方式，默认?'utf-8'。仅支持?'utf-8'。&lt;br/&gt;约束：offset+length<=buffer.size。 |
+| fd | number | Yes | File descriptor of the file to write. |
+| buffer | ArrayBuffer \| string | Yes | Data to write. It can be a string or data from a buffer. |
+| options | {     offset?: number;     length?: number;     position?: number;     encoding?: string;   } | No | The options are as follows:&lt;br&gt;- **offset** (number): offset of the write position relative to the start address of the data, in bytes. This parameter is optional. The default value is **0**.&lt;br&gt;- **length** (number): length of the data to write, in bytes. This parameter is optional. The default value is the buffer length minus the offset.&lt;br&gt;- **position** (number): start position to write the data into the file, in bytes. This parameter is optional. By default, data is written from the current position.&lt;br&gt;- **encoding** ( string): format of the data to be encoded when the data is a string. The default value is **'utf-8'**, which is the only value supported.&lt;br&gt;Constraints: offset + length <= Buffer size |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;number&gt; | Promise对象。返回实际写入的长度，单位为Byte。 |
+| Promise&lt;number&gt; | Promise that returns the length of the data written, in bytes. |
 
 
 ## write
@@ -50,7 +50,7 @@ declare function write(
 declare function write(fd: number, buffer: ArrayBuffer | string, callback: AsyncCallback<number>): void
 ```
 
-将数据写入文件，使用callback异步回调。
+Writes data to a file. This API uses an asynchronous callback to return the result.
 
 **Since:** 6
 
@@ -68,9 +68,9 @@ declare function write(fd: number, buffer: ArrayBuffer | string, callback: Async
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| fd | number | Yes | 待写入文件的文件描述符。 |
-| buffer | ArrayBuffer \| string | Yes | 待写入文件的数据，可来自缓冲区或字符串。 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;number&gt; | Yes | 异步将数据写入完成后执行的回调函数。返回实际写入的长度，单位为Byte。 |
+| fd | number | Yes | File descriptor of the file to write. |
+| buffer | ArrayBuffer \| string | Yes | Data to write. It can be a string or data from a buffer. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;number&gt; | Yes | Callback invoked when the data is written asynchronously. return the length of the data written, in bytes. |
 
 
 ## write
@@ -89,7 +89,7 @@ declare function write(
 ): void
 ```
 
-将数据写入文件，使用callback异步回调。
+Writes data to a file. This API uses an asynchronous callback to return the result.
 
 **Since:** 6
 
@@ -107,8 +107,8 @@ declare function write(
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| fd | number | Yes | 待写入文件的文件描述符。 |
-| buffer | ArrayBuffer \| string | Yes | 待写入文件的数据，可来自缓冲区或字符串。 |
-| options | {     offset?: number;     length?: number;     position?: number;     encoding?: string;   } | Yes | 支持如下选项：&lt;br/&gt;-?offset，number类型，表示期望写入数据的位置相对于数据首地址的偏移，单位为Byte。可选，默认为0。&lt;br/&gt;-?length， number类型，表示期望写入数据的长度，单位为Byte。可选，默认缓冲区长度减去偏移长度。&lt;br/&gt;-?position，number类型，表示期望写入文件的位置，单位为Byte。可选，默认从当前位置开始写。&lt;br/&gt;-? encoding，string类型，当数据是string类型时有效，表示数据的编码方式，默认?'utf-8'。仅支持?'utf-8'。&lt;br/&gt;约束：offset+length<=buffer.size。 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;number&gt; | Yes | 异步将数据写入完成后执行的回调函数。返回实际写入的长度，单位为Byte。 |
+| fd | number | Yes | File descriptor of the file to write. |
+| buffer | ArrayBuffer \| string | Yes | Data to write. It can be a string or data from a buffer. |
+| options | {     offset?: number;     length?: number;     position?: number;     encoding?: string;   } | Yes | The options are as follows:&lt;br&gt;- **offset** (number): offset of the write position relative to the start address of the data, in bytes. This parameter is optional. The default value is **0**.&lt;br&gt;- **length** (number): length of the data to write, in bytes. This parameter is optional. The default value is the buffer length minus the offset.&lt;br&gt;- **position** (number): start position to write the data into the file, in bytes. This parameter is optional. By default, data is written from the current position.&lt;br&gt;- **encoding** ( string): format of the data to be encoded when the data is a string. The default value is **'utf-8'**, which is the only value supported.&lt;br&gt;Constraints: offset + length <= Buffer size |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;number&gt; | Yes | Callback invoked when the data is written asynchronously. return the length of the data written, in bytes. |
 

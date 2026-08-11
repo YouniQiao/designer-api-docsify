@@ -1,6 +1,6 @@
 # NotificationExtensionSubscriptionInfo
 
-用于描述通知扩展订阅的信息。
+The **NotificationExtensionSubscriptionInfo** module describes the information about notification extension subscription.
 
 **Since:** 22
 
@@ -16,7 +16,7 @@
 addr: string
 ```
 
-表示设备的唯一标识符。当type为`SubscribeType.BLUETOOTH`时，指定对应的蓝牙设备地址。例如："11:22:33:AA:BB:FF"。
+Unique identifier of the device. When **type** is set to **SubscribeType.BLUETOOTH**, the corresponding Bluetooth device address is specified. Example: "11:22:33:AA:BB:FF".
 
 **Type:** string
 
@@ -34,7 +34,8 @@ addr: string
 type: notificationExtensionSubscription.SubscribeType
 ```
 
-订阅的类型，指定通知扩展的订阅方式。当前仅支持`SubscribeType.BLUETOOTH`，表示通过蓝牙订阅通知。
+Subscription type, specifying the subscription method for notification extension. Currently, only  
+**SubscribeType.BLUETOOTH** is supported, indicating subscription to notifications via Bluetooth.
 
 **Type:** notificationExtensionSubscription.SubscribeType
 

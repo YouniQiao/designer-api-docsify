@@ -18,7 +18,7 @@ controller: XComponentController
 
 给组件绑定一个控制器，通过控制器调用组件方法，仅类型为SURFACE或TEXTURE时有效。未设置时不绑定控制器。
 
-**类型：** [XComponentController](arkts-arkui-xcomponent-xcomponentcontroller-c.md)
+**类型：** [XComponentController](../arkts-components/arkts-arkui-xcomponentcontroller-c.md)
 
 **起始版本：** 23
 

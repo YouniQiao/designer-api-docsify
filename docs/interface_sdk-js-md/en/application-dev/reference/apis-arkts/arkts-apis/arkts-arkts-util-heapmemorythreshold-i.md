@@ -1,6 +1,6 @@
 # HeapMemoryThreshold
 
-描述 GC 后触发已注册回调的堆内存预警阈值。
+Describes the heap memory threshold at which the registered callback is triggered after a GC.
 
 **Since:** 24
 
@@ -22,7 +22,7 @@ import { util } from 'kits/@kit.ArkTS';
 localHeapThreshold?: number
 ```
 
-该值为 70 到 95 之间的整数，表示 GC 后触发回调的 local 堆内存百分比阈值。超出此范围的值会被自动限制到有效范围内。若未设置，则不会因 local 堆内存压力而触发回调。
+This number is on a scale of 70 to 95, representing the percentage threshold of the local heap memory at which the callback is triggered after a GC. Values outside this range are automatically clamped to the valid range.If not set, the callback will not be triggered by local heap memory pressure.
 
 **Type:** number
 
@@ -42,7 +42,7 @@ localHeapThreshold?: number
 processHeapThreshold?: number
 ```
 
-该值为 70 到 95 之间的整数，表示 GC 后触发回调的进程总堆内存百分比阈值。超出此范围的值会被自动限制到有效范围内。若未设置，则不会因进程堆内存压力而触发回调。
+This number is on a scale of 70 to 95, representing the percentage threshold of the process's total heap memory at which the callback is triggered after a GC. Values outside this range are automatically clamped to the valid range.If not set, the callback will not be triggered by process heap memory pressure.
 
 **Type:** number
 
@@ -62,7 +62,7 @@ processHeapThreshold?: number
 sharedHeapThreshold?: number
 ```
 
-该值为 70 到 95 之间的整数，表示 GC 后触发回调的 shared 堆内存百分比阈值。超出此范围的值会被自动限制到有效范围内。若未设置，则不会因 shared 堆内存压力而触发回调。
+This number is on a scale of 70 to 95, representing the percentage threshold of the shared heap memory at which the callback is triggered after a GC. Values outside this range are automatically clamped to the valid range.If not set, the callback will not be triggered by shared heap memory pressure.
 
 **Type:** number
 

@@ -1,6 +1,6 @@
 # FoldCreaseRegion
 
-折叠折痕区域。
+Describes the crease region of a foldable device.
 
 **Since:** 10
 
@@ -22,7 +22,7 @@ import { display } from 'kits/@kit.ArkUI';
 readonly creaseRects: Array<Rect>
 ```
 
-折痕区域。
+Crease region.
 
 **Type:** Array&lt;Rect&gt;
 
@@ -42,7 +42,7 @@ readonly creaseRects: Array<Rect>
 readonly displayId: long
 ```
 
-屏幕ID，用于识别折痕所在的屏幕。
+ID of the display where the crease is located.
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：long
 

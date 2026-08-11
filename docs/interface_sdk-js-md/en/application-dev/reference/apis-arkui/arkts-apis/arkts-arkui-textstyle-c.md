@@ -1,6 +1,6 @@
 # TextStyle
 
-文本字体样式对象说明。
+Describes the text style.
 
 **Since:** 12
 
@@ -16,7 +16,7 @@
 constructor(value?: TextStyleInterface)
 ```
 
-文本字体样式的构造函数。
+A constructor used to create a text style.
 
 **Since:** 12
 
@@ -34,7 +34,7 @@ constructor(value?: TextStyleInterface)
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | [TextStyleInterface](arkts-arkui-styledstring-textstyleinterface-i.md) | No | 字体样式设置项。 &lt;br&gt;默认值：不传入时继承TextStyleInterface各属性的默认值。 |
+| value | [TextStyleInterface](arkts-arkui-styledstring-textstyleinterface-i.md) | No | Font style options. |
 
 ## fontColor
 
@@ -42,7 +42,7 @@ constructor(value?: TextStyleInterface)
 readonly fontColor?: ResourceColor
 ```
 
-获取属性字符串的文本颜色。
+Text color of the styled string.
 
 **Type:** [ResourceColor](arkts-arkui-resourcecolor-t.md)
 
@@ -64,9 +64,9 @@ readonly fontColor?: ResourceColor
 readonly fontConfigs?: FontConfigs
 ```
 
-获取属性字符串的字体配置。
+Font configuration of the styled string.
 
-默认返回undefined，表示未设置fontConfigs。
+Default value: **undefined**, indicating that fontConfigs is not set.
 
 **Type:** [FontConfigs](arkts-arkui-fontconfigs-i.md)
 
@@ -88,9 +88,9 @@ readonly fontConfigs?: FontConfigs
 readonly fontFamily?: string
 ```
 
-获取属性字符串的文本字体。
+Font family of the styled string.
 
-默认返回undefined。
+Returns **undefined** by default.
 
 **Type:** string
 
@@ -112,9 +112,9 @@ readonly fontFamily?: string
 readonly fontSize?: number
 ```
 
-获取属性字符串的文本字体大小。
+Font size of the styled string.
 
-单位：[vp](../../../reference/apis-arkui/arkui-ts/ts-pixel-units.md#基本像素单位) 
+Unit: [vp](../../apis-ability-kit/arkts-apis/arkts-app-ability-common.md/arkts-app-ability-common.md)
 
 **Type:** number
 
@@ -136,7 +136,7 @@ readonly fontSize?: number
 readonly fontStyle?: FontStyle
 ```
 
-获取属性字符串的文本字体样式。
+Font style of the styled string.
 
 **Type:** [FontStyle](../../apis-arkgraphics2d/arkts-apis/arkts-arkgraphics2d-text-fontstyle-e.md)
 
@@ -158,9 +158,11 @@ readonly fontStyle?: FontStyle
 readonly fontVariations?: Array<FontVariation>
 ```
 
-获取可变字体的属性数组。
+Array of variable font attributes.
 
-默认值：undefined，表示未设置可变字体的属性。
+Default value: **undefined**, indicating that variable font attributes are not set.
+
+**Since**: 26.0.0
 
 **Type:** Array&lt;FontVariation&gt;
 
@@ -182,13 +184,7 @@ readonly fontVariations?: Array<FontVariation>
 readonly fontWeight?: number
 ```
 
-获取属性字符串的文本字体粗细。
-
-默认值：400
-
-**说明：**
-
-返回值为string类型，具体返回值和设置值关系参见下方表格。
+Font weight of the styled string.
 
 **Type:** number
 
@@ -210,9 +206,9 @@ readonly fontWeight?: number
 readonly strokeColor?: ResourceColor
 ```
 
-获取属性字符串的文本描边颜色。
+Text stroke color of the styled string.
 
-默认返回字体颜色。
+Default value: same as the text color.
 
 **Type:** [ResourceColor](arkts-arkui-resourcecolor-t.md)
 
@@ -234,9 +230,11 @@ readonly strokeColor?: ResourceColor
 readonly strokeJoinStyle?: StrokeJoinStyle
 ```
 
-获取属性字符串的文本描边拐角样式。
+Text stroke join style of the styled string.
 
-默认值：StrokeJoinStyle.MITER_JOIN。
+Default value: **StrokeJoinStyle.MITER_JOIN**.
+
+**Since**: 26.0.0.
 
 **Type:** [StrokeJoinStyle](arkts-arkui-textcommon-strokejoinstyle-e.md)
 
@@ -258,9 +256,9 @@ readonly strokeJoinStyle?: StrokeJoinStyle
 readonly strokeWidth?: number
 ```
 
-获取属性字符串的文本描边宽度。
+Text stroke width of the styled string.
 
-默认返回0，单位为[vp](../../../reference/apis-arkui/arkui-ts/ts-pixel-units.md#基本像素单位)。
+Default value: **0**, in [vp](../../apis-ability-kit/arkts-apis/arkts-app-ability-common.md/arkts-app-ability-common.md).
 
 **Type:** number
 
@@ -282,9 +280,9 @@ readonly strokeWidth?: number
 readonly superscript?: SuperscriptStyle
 ```
 
-获取属性字符串的文本上下角标。
+Superscript or subscript for the styled string.
 
-默认值：SuperscriptStyle.NORMAL。
+Default value: **SuperscriptStyle.NORMAL**.
 
 **Type:** [SuperscriptStyle](arkts-arkui-textcommon-superscriptstyle-e.md)
 

@@ -1,6 +1,6 @@
 # AutoStartupCallback (System API)
 
-应用设置为开机自启动时的回调函数。
+The module defines the callback to be invoked when auto-startup is set or canceled for an application component.
 
 **Since:** 11
 
@@ -18,7 +18,7 @@
 onAutoStartupOff(info: AutoStartupInfo): void
 ```
 
-取消应用开机自启动时调用。
+Called when the auto-startup setting of an application component is canceled.
 
 **Since:** 11
 
@@ -36,7 +36,7 @@ onAutoStartupOff(info: AutoStartupInfo): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| info | [AutoStartupInfo](arkts-ability-autostartupinfo-i-sys.md) | Yes | 取消开机自启动的应用组件信息。 |
+| info | [AutoStartupInfo](arkts-ability-autostartupinfo-i-sys.md) | Yes | Information about the target application component. |
 
 ## onAutoStartupOn
 
@@ -44,7 +44,7 @@ onAutoStartupOff(info: AutoStartupInfo): void
 onAutoStartupOn(info: AutoStartupInfo): void
 ```
 
-应用设置为开机自启动时调用。
+Called when auto-startup is set for an application component.
 
 **Since:** 11
 
@@ -62,5 +62,5 @@ onAutoStartupOn(info: AutoStartupInfo): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| info | [AutoStartupInfo](arkts-ability-autostartupinfo-i-sys.md) | Yes | 设置为开机自启动的应用组件信息。 |
+| info | [AutoStartupInfo](arkts-ability-autostartupinfo-i-sys.md) | Yes | Information about the target application component. |
 

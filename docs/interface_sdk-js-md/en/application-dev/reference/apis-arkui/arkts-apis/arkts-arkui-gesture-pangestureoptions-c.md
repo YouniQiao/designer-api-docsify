@@ -1,6 +1,6 @@
 # PanGestureOptions
 
-定义PanGesture配置参数选项。
+Defines the PanGesture options.
 
 **Since:** 23
 
@@ -16,7 +16,7 @@
 constructor(value?: PanGestureHandlerOptions)
 ```
 
-创建滑动手势配置参数对象。通过PanGestureOptions对象接口可以动态修改滑动手势的属性，从而避免通过状态变量修改属性（状态变量修改会导致UI刷新）。
+Constructor parameters.
 
 **Since:** 23
 
@@ -32,7 +32,7 @@ constructor(value?: PanGestureHandlerOptions)
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | [PanGestureHandlerOptions](arkts-arkui-pangesturehandleroptions-i.md) | No | 滑动手势配置参数对象。&lt;br/&gt;fingers用于指定触发滑动的最少手指数，最小为1指， 最大取值为10指。&lt;br/&gt;默认值：1 &lt;br/&gt;direction用于指定触发滑动的手势方向，此枚举值支持逻辑与(&)和逻辑或（\|）运算。&lt;br/&gt;默认值：PanDirection.All&lt;br/&gt;distance用于指定触发滑动手势事件的最小滑动距离，单位 为vp。&lt;br/&gt;手写笔默认值：8，其余输入源默认值：5&lt;br/&gt;**说明：**&lt;br/&gt;[Tabs](../../apis-ability-kit/arkts-apis/arkts-app-ability-common.md/arkts-app-ability-common.md)组件滑动与该滑动手势事件同时存在时，可将distance值设为1，使滑动更灵敏，避免 造成事件错乱。&lt;br/&gt;当设定的值小于0时，按默认值处理。&lt;br/&gt;建议设置合理的滑动距离，滑动距离设置过大时会导致滑动不跟手（响应时延慢）的问题。&lt;br/&gt;当组件应用了 [scale](arkts-arkui-common-commonmethod-i.md#scale)缩放变换时，distance的实际识别距离会按照scale比例进行缩放。 |
+| value | [PanGestureHandlerOptions](arkts-arkui-pangesturehandleroptions-i.md) | No |  |
 
 ## getDirection
 
@@ -40,7 +40,7 @@ constructor(value?: PanGestureHandlerOptions)
 getDirection(): PanDirection
 ```
 
-获取滑动方向。
+Get the pan direction attribute.
 
 **Since:** 23
 
@@ -56,7 +56,7 @@ getDirection(): PanDirection
 
 | Type | Description |
 | --- | --- |
-| [PanDirection](arkts-arkui-gesture-pandirection-e.md) | 滑动方向。 |
+| [PanDirection](arkts-arkui-gesture-pandirection-e.md) | Pan gesture direction |
 
 ## getDistance
 
@@ -64,7 +64,7 @@ getDirection(): PanDirection
 getDistance(): double
 ```
 
-获取触发滑动手势事件的最小滑动距离，单位为vp。
+Returns the pan gesture's distance.The unit is vp.
 
 **Since:** 23
 
@@ -80,7 +80,7 @@ getDistance(): double
 
 | Type | Description |
 | --- | --- |
-| double | 滑动手势事件的最小滑动距离。 |
+| double | the distance of the pan gesture. |
 
 ## setDirection
 
@@ -88,7 +88,7 @@ getDistance(): double
 setDirection(value: PanDirection): void
 ```
 
-设置滑动方向。
+Sets the direction attribute.
 
 **Since:** 23
 
@@ -104,7 +104,7 @@ setDirection(value: PanDirection): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | [PanDirection](arkts-arkui-gesture-pandirection-e.md) | Yes | 用于指定触发滑动的手势方向，此枚举值支持逻辑与(&)和逻辑或（\|）运算。&lt;br/&gt;默认值：PanDirection.All |
+| value | [PanDirection](arkts-arkui-gesture-pandirection-e.md) | Yes |  |
 
 ## setDistance
 
@@ -112,8 +112,7 @@ setDirection(value: PanDirection): void
 setDistance(value: double): void
 ```
 
-设置触发滑动手势事件的最小滑动距离，单位为vp。距离值不宜设置过大，避免因滑动脱手、响应时延过大等问题导致性能劣化，最佳实践请参考：  
-[减小拖动识别距离](https://developer.huawei.com/consumer/cn/doc/best-practices/bpta-application-latency-optimization-cases#section1116134115286)。
+Sets the setDistance attribute.
 
 **Since:** 23
 
@@ -129,7 +128,7 @@ setDistance(value: double): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | double | Yes | 触发滑动手势事件的最小滑动距离，单位为vp。&lt;br/&gt;手写笔默认值：8，其余输入源默认值：5&lt;br/&gt;**说明：**&lt;br/&gt;[Tabs组件](../../apis-ability-kit/arkts-apis/arkts-app-ability-common.md/arkts-app-ability-common.md) 滑动与该滑动手势事件同时存在时，可将distance值设为1，使滑动更灵敏，避免造成事件错乱。&lt;br/&gt;当设定的值小于0时，按默认值处理。&lt;br/&gt;建议设置合理的滑动距离，滑动距离设置过大时会导致滑动不跟手 （响应时延慢）的问题。&lt;br/&gt;当组件应用了[scale](arkts-arkui-common-commonmethod-i.md#scale)缩放变换时，distance的实际识别距离会按照scale比例进行缩放。 |
+| value | double | Yes |  |
 
 ## setFingers
 
@@ -137,7 +136,7 @@ setDistance(value: double): void
 setFingers(value: int): void
 ```
 
-设置触发滑动的最少手指数。
+Sets the setFingers attribute.
 
 **Since:** 23
 
@@ -153,5 +152,5 @@ setFingers(value: int): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | int | Yes | 触发滑动的最少手指数，最小为1指， 最大取值为10指。&lt;br/&gt;默认值：1 |
+| value | int | Yes |  |
 

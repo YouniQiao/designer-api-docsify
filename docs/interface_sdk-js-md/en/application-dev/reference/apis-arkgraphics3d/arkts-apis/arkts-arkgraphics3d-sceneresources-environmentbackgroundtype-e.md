@@ -1,6 +1,6 @@
 # EnvironmentBackgroundType
 
-环境背景类型枚举.
+The enum of environment background type.
 
 **Since:** 12
 
@@ -16,7 +16,7 @@
 BACKGROUND_NONE = 0
 ```
 
-背景为空.
+The background is none.
 
 **Since:** 12
 
@@ -32,7 +32,7 @@ BACKGROUND_NONE = 0
 BACKGROUND_IMAGE = 1
 ```
 
-背景为图像.
+The background is image.
 
 **Since:** 12
 
@@ -48,7 +48,7 @@ BACKGROUND_IMAGE = 1
 BACKGROUND_CUBEMAP = 2
 ```
 
-背景为立方体贴图.
+The background is cubemap.
 
 **Since:** 12
 
@@ -64,7 +64,7 @@ BACKGROUND_CUBEMAP = 2
 BACKGROUND_EQUIRECTANGULAR = 3
 ```
 
-背景为等距柱状投影.
+The background is equirectangular.
 
 **Since:** 12
 

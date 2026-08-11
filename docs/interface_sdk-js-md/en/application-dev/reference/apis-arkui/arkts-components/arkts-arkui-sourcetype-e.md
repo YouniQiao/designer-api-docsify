@@ -1,6 +1,6 @@
 # SourceType
 
-定义输入源对应的设备类型。
+Enumerates the input source device types.
 
 **Since:** 8
 
@@ -16,7 +16,7 @@
 Unknown
 ```
 
-未知输入源。
+Unknown input source.
 
 **Since:** 8
 
@@ -34,7 +34,7 @@ Unknown
 Mouse
 ```
 
-鼠标。
+Mouse.
 
 **Since:** 8
 
@@ -52,7 +52,7 @@ Mouse
 TouchScreen
 ```
 
-触摸屏。
+Touchscreen.
 
 **Since:** 8
 
@@ -70,7 +70,7 @@ TouchScreen
 KEY = 4
 ```
 
-按键。
+Key.
 
 **Since:** 22
 
@@ -90,7 +90,7 @@ KEY = 4
 JOYSTICK = 5
 ```
 
-手柄。
+Joystick.
 
 **Since:** 22
 

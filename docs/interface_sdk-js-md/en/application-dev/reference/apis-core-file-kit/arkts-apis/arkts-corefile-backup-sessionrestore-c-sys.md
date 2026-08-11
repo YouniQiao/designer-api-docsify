@@ -1,6 +1,6 @@
 # SessionRestore (System API)
 
-恢复流程对象，用于支撑应用全量恢复流程。
+Control class for restore procedure.
 
 **Since:** 10
 
@@ -30,7 +30,7 @@ ArkTS-Sta:
 appendBundles(remoteCapabilitiesFd: int, bundlesToBackup: string[], infos?: string[]): Promise<void>
 ```
 
-添加需要恢复的应用及其扩展信息。
+Append new bundles and restoreInfos to be restore up during the restore.
 
 **Since:** 12
 
@@ -48,15 +48,15 @@ appendBundles(remoteCapabilitiesFd: int, bundlesToBackup: string[], infos?: stri
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| remoteCapabilitiesFd | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | 保存远端设备能力信息的已打开JSON文件描述符。 可通过getLocalCapabilities方法获取该值。 |
-| bundlesToBackup | string[] | Yes | 需要恢复的应用名称数组。 |
-| infos | string[] | No | 恢复时各应用所需扩展信息的数组。 |
+| remoteCapabilitiesFd | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | Opened JSON file that stores remote device capabilities. You can use the getLocalCapabilities method to obtain the value. |
+| bundlesToBackup | string[] | Yes | Bundles to restore. |
+| infos | string[] | No | infos to restore |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise对象，无返回结果。 |
+| Promise&lt;void&gt; | The promise returned by the function. |
 
 **Error codes:**
 
@@ -74,7 +74,7 @@ appendBundles(remoteCapabilitiesFd: int, bundlesToBackup: string[], infos?: stri
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
-import { fileIo, backup } from '@kit.CoreFileKit';
+import { fileIo as fs, backup } from '@kit.CoreFileKit';
 
 let generalCallbacks: backup.GeneralCallbacks = {
   onFileReady: (err: BusinessError, file: backup.File) => {
@@ -83,7 +83,7 @@ let generalCallbacks: backup.GeneralCallbacks = {
       return;
     }
     console.info('onFileReady success');
-    fileIo.closeSync(file.fd);
+    fs.closeSync(file.fd);
   },
   onBundleBegin: (err: BusinessError<string|void>, bundleName: string) => {
     if (err) {
@@ -158,7 +158,7 @@ async function appendBundles() {
     let err: BusinessError = error as BusinessError;
     console.error(`getLocalCapabilities failed. Code: ${err.code}, message: ${err.message}`);
   } finally {
-    fileIo.closeSync(fileData.fd);
+    fs.closeSync(fileData.fd);
   }
 }
 ```
@@ -175,7 +175,7 @@ ArkTS-Sta:
 appendBundles(remoteCapabilitiesFd: int, bundlesToBackup: string[], callback: AsyncCallback<void>): void
 ```
 
-添加需要恢复的应用。
+Append new bundles to be restore up during the restore.
 
 **Since:** 10
 
@@ -193,9 +193,9 @@ appendBundles(remoteCapabilitiesFd: int, bundlesToBackup: string[], callback: As
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| remoteCapabilitiesFd | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | 保存远端设备能力信息的已打开JSON文件描述符。 可通过getLocalCapabilities方法获取该值。 |
-| bundlesToBackup | string[] | Yes | 需要恢复的应用名称数组。 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | 添加恢复应用完成后的异步回调。 |
+| remoteCapabilitiesFd | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | Opened JSON file that stores remote device capabilities. You can use the getLocalCapabilities method to obtain the value. |
+| bundlesToBackup | string[] | Yes | Bundles to restore. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Asynchronous callback to be called when appendBundles has finished. |
 
 **Error codes:**
 
@@ -213,7 +213,7 @@ appendBundles(remoteCapabilitiesFd: int, bundlesToBackup: string[], callback: As
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
-import { fileIo, backup } from '@kit.CoreFileKit';
+import { fileIo as fs, backup } from '@kit.CoreFileKit';
 
 let generalCallbacks: backup.GeneralCallbacks = {
   onFileReady: (err: BusinessError, file: backup.File) => {
@@ -222,7 +222,7 @@ let generalCallbacks: backup.GeneralCallbacks = {
       return;
     }
     console.info('onFileReady success');
-    fileIo.closeSync(file.fd);
+    fs.closeSync(file.fd);
   },
   onBundleBegin: (err: BusinessError<string|void>, bundleName: string) => {
     if (err) {
@@ -277,7 +277,7 @@ async function appendBundles() {
     let err: BusinessError = error as BusinessError;
     console.error(`getLocalCapabilities failed. Code: ${err.code}, message: ${err.message}`);
   } finally {
-    fileIo.closeSync(fileData.fd);
+    fs.closeSync(fileData.fd);
   }
 }
 ```
@@ -294,7 +294,7 @@ ArkTS-Sta:
 cancel(bundleName: string): int
 ```
 
-取消指定应用的恢复任务。
+cancel the application being restore.
 
 **Since:** 18
 
@@ -312,26 +312,26 @@ cancel(bundleName: string): int
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| bundleName | string | Yes | 需要取消任务的应用名称。 |
+| bundleName | string | Yes | Set the bundleName of the application to be canceled. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| ArkTS-Dyn: number  <br>ArkTS-Sta：int | 取消结果，0表示成功，13500011表示失败，13500012表示没有对应任务。 |
+| ArkTS-Dyn: number  <br>ArkTS-Sta：int | Return cancel result, 0 is success, 13500011 is fail, 13500012 is not have task. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt;2. Incorrect parameter types. 3.Parameter verification failed. |
-| 201 | Permission verification failed, usually the result returned by VerifyAccessToken. |
-| 202 | Permission verification failed, application which is not a system application uses system API. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt;2. Incorrect parameter types. 3.Parameter verification failed. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed, usually the result returned by VerifyAccessToken. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed, application which is not a system application uses system API. |
 
 ## Examples
 
 ```TypeScript
-import { fileIo, backup} from '@kit.CoreFileKit';
+import { fileIo as fs, backup} from '@kit.CoreFileKit';
 import { BusinessError } from '@kit.BasicServicesKit';
 
 let generalCallbacks: backup.GeneralCallbacks = {
@@ -344,7 +344,7 @@ let generalCallbacks: backup.GeneralCallbacks = {
       return;
     }
     console.info('onFileReady success');
-    fileIo.closeSync(file.fd);
+    fs.closeSync(file.fd);
   },
   onBundleBegin: (err: BusinessError<string|void>, bundleName: string) => {
     if (err) {
@@ -394,7 +394,7 @@ async function cancelTest() {
 cleanBundleTempDir(bundleName: string): Promise<boolean>
 ```
 
-清理指定应用的临时目录。
+Provides an interface for the tool to clear temporary directories
 
 **Since:** 20
 
@@ -412,20 +412,20 @@ cleanBundleTempDir(bundleName: string): Promise<boolean>
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| bundleName | string | Yes | 需要清理临时目录的应用名称。 |
+| bundleName | string | Yes | Set the bundleName of the application to be cleaned. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;boolean&gt; | 清理结果，true表示成功，false表示失败。 |
+| Promise&lt;boolean&gt; | Return clean result, true is success, false is fail. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 201 | Permission verification failed, usually the result returned by VerifyAccessToken. |
-| 202 | Permission verification failed, application which is not a system application uses system API. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed, usually the result returned by VerifyAccessToken. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed, application which is not a system application uses system API. |
 
 ## Examples
 
@@ -499,7 +499,7 @@ let sessionRestore = new backup.SessionRestore(generalCallbacks); // Create a re
 constructor(callbacks: GeneralCallbacks)
 ```
 
-构造SessionRestore实例。
+Constructor for obtaining the instance of the SessionBackup class.
 
 **Since:** 10
 
@@ -517,12 +517,12 @@ constructor(callbacks: GeneralCallbacks)
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callbacks | [GeneralCallbacks](arkts-corefile-backup-generalcallbacks-i-sys.md) | Yes | 恢复流程所需的回调。 |
+| callbacks | [GeneralCallbacks](arkts-corefile-backup-generalcallbacks-i-sys.md) | Yes | Callbacks to be registered for the restore. |
 
 ## Examples
 
 ```TypeScript
-import { fileIo, backup} from '@kit.CoreFileKit';
+import { fileIo as fs, backup} from '@kit.CoreFileKit';
 import { BusinessError } from '@kit.BasicServicesKit';
 
 let generalCallbacks: backup.GeneralCallbacks = {
@@ -532,7 +532,7 @@ let generalCallbacks: backup.GeneralCallbacks = {
       return;
     }
     console.info('onFileReady success');
-    fileIo.closeSync(file.fd);
+    fs.closeSync(file.fd);
   },
   onBundleBegin: (err: BusinessError<string|void>, bundleName: string) => {
     if (err) {
@@ -574,7 +574,7 @@ let sessionRestore = new backup.SessionRestore(generalCallbacks); // Create a re
 getApkFileHandle(path: string, fileName: string): Promise<FileData>
 ```
 
-获取APK文件的文件句柄。
+Get the file handle of an APK file.
 
 **Since:** 26.0.0
 
@@ -594,14 +594,14 @@ getApkFileHandle(path: string, fileName: string): Promise<FileData>
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| path | string | Yes | APK文件路径。 |
-| fileName | string | Yes | APK文件名称。 |
+| path | string | Yes | The path to the APK file. |
+| fileName | string | Yes | The name of the APK file. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;FileData&gt; | Promise对象，返回包含APK文件描述符的FileData。 返回的文件为临时文件，关闭后将自动删除。 |
+| Promise&lt;FileData&gt; | Promise used to return A FileData holding the file descriptor. The returned file is a temporal file that will be deleted automatically when closed. |
 
 **Error codes:**
 
@@ -609,8 +609,8 @@ getApkFileHandle(path: string, fileName: string): Promise<FileData>
 | --- | --- |
 | 13900020 | Invalid argument |
 | 13900001 | Operation not permitted |
-| 201 | Permission verification failed, usually the result returned by VerifyAccessToken. |
-| 202 | Permission verification failed, application which is not a system application uses system API. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed, usually the result returned by VerifyAccessToken. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed, application which is not a system application uses system API. |
 | 13600001 | IPC error |
 
 ## getCompatibilityInfo
@@ -619,7 +619,7 @@ getApkFileHandle(path: string, fileName: string): Promise<FileData>
 getCompatibilityInfo(bundleName: string, extInfo: string): Promise<string>
 ```
 
-获取指定应用的兼容性信息。
+Provides an interface for the tool to get compatibility info.
 
 **Since:** 20
 
@@ -637,21 +637,21 @@ getCompatibilityInfo(bundleName: string, extInfo: string): Promise<string>
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| bundleName | string | Yes | 需要获取兼容性信息的应用名称。 |
-| extInfo | string | Yes | 传递给应用的额外信息，由应用自行处理。 |
+| bundleName | string | Yes | Set the bundleName of the application that need to get compatibilityInfo. |
+| extInfo | string | Yes | Indicates the extension information of application. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;string&gt; | Promise对象，返回应用的兼容性信息。 |
+| Promise&lt;string&gt; | Return compatibility info. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 201 | Permission verification failed, usually the result returned by VerifyAccessToken. |
-| 202 | Permission verification failed, application which is not a system application uses system API. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed, usually the result returned by VerifyAccessToken. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed, application which is not a system application uses system API. |
 
 ## Examples
 
@@ -724,7 +724,7 @@ async function getRestoreCompatibilityInfo() {
 getFileHandle(fileMeta: FileMeta): Promise<void>
 ```
 
-向服务端请求共享文件，该接口属于零拷贝能力。开发者可通过onFileReady回调获取文件。客户端完成文件处理后，调用publishFile发布文件。
+Request to get a shared file from the service. This interface is part of the zero-copy feature.Developers could get the file through onFileReady callback.When the client accomplished the file, use publishFile to publish.
 
 **Since:** 10
 
@@ -742,13 +742,13 @@ getFileHandle(fileMeta: FileMeta): Promise<void>
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| fileMeta | [FileMeta](arkts-corefile-backup-filemeta-i-sys.md) | Yes | 待发送文件的元数据。所有文件都应来自 备份流程或getLocalCapabilities方法。 |
+| fileMeta | [FileMeta](arkts-corefile-backup-filemeta-i-sys.md) | Yes | Metadata of the file to be sent. Note that all the files should come from the backup procedure or the getLocalCapabilities method. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise对象，无返回结果。 |
+| Promise&lt;void&gt; | The promise returned by the function. |
 
 **Error codes:**
 
@@ -762,7 +762,7 @@ getFileHandle(fileMeta: FileMeta): Promise<void>
 ## Examples
 
 ```TypeScript
-import { fileIo, backup} from '@kit.CoreFileKit';
+import { fileIo as fs, backup} from '@kit.CoreFileKit';
 import { BusinessError } from '@kit.BasicServicesKit';
 
 let generalCallbacks: backup.GeneralCallbacks = {
@@ -772,7 +772,7 @@ let generalCallbacks: backup.GeneralCallbacks = {
       return;
     }
     console.info('onFileReady success');
-    fileIo.closeSync(file.fd);
+    fs.closeSync(file.fd);
   },
   onBundleBegin: (err: BusinessError<string|void>, bundleName: string) => {
     if (err) {
@@ -827,7 +827,7 @@ async function getFileHandle() {
 getFileHandle(fileMeta: FileMeta, callback: AsyncCallback<void>): void
 ```
 
-向服务端请求共享文件，该接口属于零拷贝能力。开发者可通过onFileReady回调获取文件。客户端完成文件处理后，调用publishFile发布文件。
+Request to get a shared file from the service. This interface is part of the zero-copy feature.Developers could get the file through onFileReady callback.When the client accomplished the file, use publishFile to publish.
 
 **Since:** 10
 
@@ -845,8 +845,8 @@ getFileHandle(fileMeta: FileMeta, callback: AsyncCallback<void>): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| fileMeta | [FileMeta](arkts-corefile-backup-filemeta-i-sys.md) | Yes | 待发送文件的元数据。所有文件都应来自 备份流程或getLocalCapabilities方法。 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | 获取文件句柄完成后的异步回调。 |
+| fileMeta | [FileMeta](arkts-corefile-backup-filemeta-i-sys.md) | Yes | Metadata of the file to be sent. Note that all the files should come from the backup procedure or the getLocalCapabilities method. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Asynchronous callback to be called when getFileHandle has finished. |
 
 **Error codes:**
 
@@ -860,7 +860,7 @@ getFileHandle(fileMeta: FileMeta, callback: AsyncCallback<void>): void
 ## Examples
 
 ```TypeScript
-import { fileIo, backup} from '@kit.CoreFileKit';
+import { fileIo as fs, backup} from '@kit.CoreFileKit';
 import { BusinessError } from '@kit.BasicServicesKit';
 
 let generalCallbacks: backup.GeneralCallbacks = {
@@ -870,7 +870,7 @@ let generalCallbacks: backup.GeneralCallbacks = {
       return;
     }
     console.info('onFileReady success');
-    fileIo.closeSync(file.fd);
+    fs.closeSync(file.fd);
   },
   onBundleBegin: (err: BusinessError<string|void>, bundleName: string) => {
     if (err) {
@@ -922,7 +922,7 @@ sessionRestore.getFileHandle(fileMeta, (err: BusinessError) => {
 getFileHandles(fileMeta: FileMeta): Promise<void>
 ```
 
-向服务端批量请求共享文件，该接口属于零拷贝能力。开发者可通过onFileReadyBatch回调获取文件。客户端完成文件处理后，调用publishFile发布文件。
+Request to get shared files from the service. This interface is part of the zero-copy feature.Developers could get the file through onFileReadyBatch callback.When the client accomplished the file, use publishFile to publish.
 
 **Since:** 26.0.0
 
@@ -942,13 +942,13 @@ getFileHandles(fileMeta: FileMeta): Promise<void>
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| fileMeta | [FileMeta](arkts-corefile-backup-filemeta-i-sys.md) | Yes | 待发送文件的元数据。所有文件都应来自 备份流程或getLocalCapabilities方法。 |
+| fileMeta | [FileMeta](arkts-corefile-backup-filemeta-i-sys.md) | Yes | Metadata of the file to be sent. Note that all the files should come from the backup procedure or the getLocalCapabilities method. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise对象，无返回结果。 |
+| Promise&lt;void&gt; | Promise that returns no value. |
 
 **Error codes:**
 
@@ -956,8 +956,8 @@ getFileHandles(fileMeta: FileMeta): Promise<void>
 | --- | --- |
 | 13900020 | Invalid argument |
 | 13900001 | Operation not permitted |
-| 201 | Permission verification failed, usually the result returned by VerifyAccessToken. |
-| 202 | Permission verification failed, application which is not a system application uses system API. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed, usually the result returned by VerifyAccessToken. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed, application which is not a system application uses system API. |
 | 13600001 | IPC error |
 
 ## getLocalCapabilities
@@ -966,7 +966,7 @@ getFileHandles(fileMeta: FileMeta): Promise<void>
 getLocalCapabilities(): Promise<FileData>
 ```
 
-获取描述本地能力的JSON文件。
+Obtain a Json file that describes local capabilities.
 
 **Since:** 18
 
@@ -984,7 +984,7 @@ getLocalCapabilities(): Promise<FileData>
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;FileData&gt; | Promise对象，返回包含本地能力文件描述符的FileData。返回的文件为临时文件，关闭后将 自动删除。 |
+| Promise&lt;FileData&gt; | A FileData holding all the local capabilities. The returned file is a temporal file that will be deleted automatically when closed. |
 
 **Error codes:**
 
@@ -992,8 +992,8 @@ getLocalCapabilities(): Promise<FileData>
 | --- | --- |
 | 13900020 | Invalid argument |
 | 13900001 | Operation not permitted |
-| 201 | Permission verification failed, usually the result returned by VerifyAccessToken. |
-| 202 | Permission verification failed, application which is not a system application uses system API. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed, usually the result returned by VerifyAccessToken. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed, application which is not a system application uses system API. |
 | 13600001 | IPC error |
 | 13900042 | Internal error |
 
@@ -1001,7 +1001,7 @@ getLocalCapabilities(): Promise<FileData>
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
-import { fileIo, backup } from '@kit.CoreFileKit';
+import { fileIo as fs, backup } from '@kit.CoreFileKit';
 
 interface test { // Parse the capability file.
   bundleInfos: [];
@@ -1031,7 +1031,7 @@ let generalCallbacks: backup.GeneralCallbacks = { // Define general callbacks to
       return;
     }
     console.info('onFileReady success');
-    fileIo.closeSync(file.fd);
+    fs.closeSync(file.fd);
   },
   onBundleBegin: (err: BusinessError<string|void>, bundleName: string) => {
     if (err) {
@@ -1073,18 +1073,18 @@ async function getLocalCapabilitiesTest() {
     if (fileData) {
       console.info('getLocalCapabilities success');
       console.info('fileData info:' + fileData.fd);
-      if (!fileIo.accessSync(basePath)) {
-        fileIo.mkdirSync(basePath);
+      if (!fs.accessSync(basePath)) {
+        fs.mkdirSync(basePath);
         console.info('create success' + basePath);
       }
-      fileIo.copyFileSync(fileData.fd, path); // Save the obtained local capability file to the local host.
-      fileIo.closeSync(fileData.fd);
+      fs.copyFileSync(fileData.fd, path); // Save the obtained local capability file to the local host.
+      fs.closeSync(fileData.fd);
     }
   } catch (error) {
     let err: BusinessError = error as BusinessError;
     console.error(`getLocalCapabilities failed with code: ${err.code}, message: ${err.message}`);
   }
-  let data = fileIo.readTextSync(path, 'utf8'); // Obtain information from the local capability file.
+  let data = fs.readTextSync(path, 'utf8'); // Obtain information from the local capability file.
   try {
     const jsonsObj: test | null = JSON.parse(data); // Parse the local capability file and print some information.
     if (jsonsObj) {
@@ -1130,7 +1130,7 @@ The capability file can be obtained by using [fileIo.stat](js-apis-file-fs.md#fi
 migrateFile(pathInfo: PathInfo, fileMeta: FileMeta): Promise<void>
 ```
 
-将文件从源路径迁移到目标路径。
+Migrate file from source path to destination path.
 
 **Since:** 26.0.0
 
@@ -1150,14 +1150,14 @@ migrateFile(pathInfo: PathInfo, fileMeta: FileMeta): Promise<void>
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| pathInfo | [PathInfo](arkts-corefile-backup-pathinfo-i-sys.md) | Yes | 包含源路径和目标路径的迁移路径信息。 |
-| fileMeta | [FileMeta](arkts-corefile-backup-filemeta-i-sys.md) | Yes | 包含应用名称及可选文件名的文件元数据。 |
+| pathInfo | [PathInfo](arkts-corefile-backup-pathinfo-i-sys.md) | Yes | Path information containing source and destination paths. |
+| fileMeta | [FileMeta](arkts-corefile-backup-filemeta-i-sys.md) | Yes | File metadata containing bundleName and optional fileName. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise对象，无返回结果。 |
+| Promise&lt;void&gt; | Promise that returns no value. |
 
 **Error codes:**
 
@@ -1165,8 +1165,8 @@ migrateFile(pathInfo: PathInfo, fileMeta: FileMeta): Promise<void>
 | --- | --- |
 | 13900020 | Invalid argument |
 | 13900001 | Operation not permitted |
-| 201 | Permission verification failed, usually the result returned by VerifyAccessToken. |
-| 202 | Permission verification failed, application which is not a system application uses system API. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed, usually the result returned by VerifyAccessToken. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed, application which is not a system application uses system API. |
 | 13600001 | IPC error |
 
 ## publishFile
@@ -1175,7 +1175,7 @@ migrateFile(pathInfo: PathInfo, fileMeta: FileMeta): Promise<void>
 publishFile(fileMeta: FileMeta): Promise<void>
 ```
 
-向备份服务发布文件句柄，通知服务端文件内容已准备完成。该接口属于零拷贝能力。
+Publish the file handle to the backup service to make the service aware that the file's content is ready.This interface is part of the zero-copy feature.
 
 **Since:** 10
 
@@ -1193,13 +1193,13 @@ publishFile(fileMeta: FileMeta): Promise<void>
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| fileMeta | [FileMeta](arkts-corefile-backup-filemeta-i-sys.md) | Yes | 待发送文件的元数据。应确保备份框架已持有 通过getFileHandle获取的文件。 |
+| fileMeta | [FileMeta](arkts-corefile-backup-filemeta-i-sys.md) | Yes | Metadata of the file to be sent. Make sure that the backup framework holds this file by calling getFileHandle. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise对象，无返回结果。 |
+| Promise&lt;void&gt; | The promise returned by the function. |
 
 **Error codes:**
 
@@ -1213,7 +1213,7 @@ publishFile(fileMeta: FileMeta): Promise<void>
 ## Examples
 
 ```TypeScript
-import { fileIo, backup} from '@kit.CoreFileKit';
+import { fileIo as fs, backup} from '@kit.CoreFileKit';
 import { BusinessError } from '@kit.BasicServicesKit';
 
 let g_session: backup.SessionRestore;
@@ -1238,7 +1238,7 @@ function createSessionRestore() {
         return;
       }
       console.info('onFileReady success');
-      fileIo.closeSync(file.fd);
+      fs.closeSync(file.fd);
       let cnt = countMap.get(file.bundleName) || 0;
       countMap.set(file.bundleName, cnt + 1); // Update the number of written files.
       // Called only when the number of files to be restored is the same as the number of files actually written. This ensures data consistency and integrity.
@@ -1290,7 +1290,7 @@ g_session = createSessionRestore();
 publishFile(fileMeta: FileMeta, callback: AsyncCallback<void>): void
 ```
 
-向备份服务发布文件句柄，通知服务端文件内容已准备完成。该接口属于零拷贝能力。
+Publish the file handle to the backup service to make the service aware that the file's content is ready.This interface is part of the zero-copy feature.
 
 **Since:** 10
 
@@ -1308,8 +1308,8 @@ publishFile(fileMeta: FileMeta, callback: AsyncCallback<void>): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| fileMeta | [FileMeta](arkts-corefile-backup-filemeta-i-sys.md) | Yes | 待发送文件的元数据。应确保备份框架已持有 通过getFileHandle获取的文件。 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | 发布文件句柄完成后的异步回调。 |
+| fileMeta | [FileMeta](arkts-corefile-backup-filemeta-i-sys.md) | Yes | Metadata of the file to be sent. Make sure that the backup framework holds this file by calling getFileHandle. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Asynchronous callback to be called when publishFile has finished. |
 
 **Error codes:**
 
@@ -1323,7 +1323,7 @@ publishFile(fileMeta: FileMeta, callback: AsyncCallback<void>): void
 ## Examples
 
 ```TypeScript
-import { fileIo, backup} from '@kit.CoreFileKit';
+import { fileIo as fs, backup} from '@kit.CoreFileKit';
 import { BusinessError } from '@kit.BasicServicesKit';
 
 let g_session: backup.SessionRestore;
@@ -1341,7 +1341,7 @@ function createSessionRestore() {
         return;
       }
       console.info('onFileReady success');
-      fileIo.closeSync(file.fd);
+      fs.closeSync(file.fd);
       let cnt = countMap.get(file.bundleName) || 0;
       countMap.set(file.bundleName, cnt + 1); // Update the number of written files.
       // Called only when the number of files to be restored is the same as the number of files actually written. This ensures data consistency and integrity.
@@ -1402,7 +1402,7 @@ g_session = createSessionRestore();
 release(): Promise<void>
 ```
 
-结束恢复流程，断开应用与备份恢复服务的连接。
+End restore process
 
 **Since:** 12
 
@@ -1420,24 +1420,24 @@ release(): Promise<void>
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise对象，无返回结果。 |
+| Promise&lt;void&gt; | The promise returned by the function. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt;2. Incorrect parameter types. 3.Parameter verification failed. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt;2. Incorrect parameter types. 3.Parameter verification failed. |
 | 13900005 | I/O error |
 | 13900001 | Operation not permitted |
-| 201 | Permission verification failed, usually the result returned by VerifyAccessToken. |
-| 202 | Permission verification failed, application which is not a system application uses system API. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed, usually the result returned by VerifyAccessToken. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed, application which is not a system application uses system API. |
 | 13600001 | IPC error |
 | 13900042 | Unknown error |
 
 ## Examples
 
 ```TypeScript
-import { fileIo, backup} from '@kit.CoreFileKit';
+import { fileIo as fs, backup} from '@kit.CoreFileKit';
 import { BusinessError } from '@kit.BasicServicesKit';
 
 let g_session: backup.SessionRestore;
@@ -1455,7 +1455,7 @@ function createSessionRestore() {
         return;
       }
       console.info('onFileReady success');
-      fileIo.closeSync(file.fd);
+      fs.closeSync(file.fd);
       let cnt = countMap.get(file.bundleName) || 0;
       countMap.set(file.bundleName, cnt + 1); // Update the number of written files.
       // Called only when the number of files to be restored is the same as the number of files actually written. This ensures data consistency and integrity.

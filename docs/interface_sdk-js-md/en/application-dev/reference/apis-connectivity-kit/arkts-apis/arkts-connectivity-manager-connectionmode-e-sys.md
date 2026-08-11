@@ -1,6 +1,6 @@
 # ConnectionMode (System API)
 
-连接模式的枚举。
+The enum of connection mode.
 
 **Since:** 26.0.0
 
@@ -18,7 +18,7 @@
 SLE_MODE_UNCONNECTABLE = 0
 ```
 
-表示设备不可连接。
+Indicates that the device is not connectable.
 
 **Since:** 26.0.0
 
@@ -38,7 +38,7 @@ SLE_MODE_UNCONNECTABLE = 0
 SLE_MODE_CONNECTABLE = 1
 ```
 
-表示设备是可连接的。
+Indicates that the device is connectable.
 
 **Since:** 26.0.0
 

@@ -1,6 +1,6 @@
 # WaterFlowOptions
 
-提供瀑布流组件的参数。
+Provides parameters of the &lt;em&gt;WaterFlow&lt;/em&gt; component.
 
 **Since:** 23
 
@@ -16,7 +16,7 @@
 footer?: CustomBuilder
 ```
 
-瀑布流组件的尾部组件。
+Footer of the WaterFlow component.
 
 **Type:** [CustomBuilder](../arkts-components/arkts-arkui-custombuilder-t.md)
 
@@ -36,7 +36,7 @@ footer?: CustomBuilder
 footerContent?: ComponentContentBase
 ```
 
-瀑布流组件的尾部组件。
+Footer of the WaterFlow component.
 
 **Type:** [ComponentContentBase](arkts-arkui-componentcontent-componentcontentbase-c.md)
 
@@ -56,7 +56,7 @@ footerContent?: ComponentContentBase
 layoutMode?: WaterFlowLayoutMode
 ```
 
-瀑布流组件的布局模式。
+Layout mode of the &lt;em&gt;WaterFlow&lt;/em&gt; component.
 
 **Type:** [WaterFlowLayoutMode](arkts-arkui-waterflow-waterflowlayoutmode-e.md)
 
@@ -78,7 +78,7 @@ layoutMode?: WaterFlowLayoutMode
 scroller?: Scroller
 ```
 
-可滚动组件的控制器，与可滚动组件绑定。&lt;p&gt;&lt;strong&gt;说明&lt;/strong&gt;。&lt;br&gt;不允许和其他滚动类组件，如ArcList、List、Grid、Scroll绑定同一个滚动控制对象。&lt;/p&gt;
+Controller of the scrollable component, bound to the scrollable component.&lt;p&gt;&lt;strong&gt;NOTE&lt;/strong&gt;.&lt;br&gt;The scroller cannot be bound to other scrollable components, such as ArcList, List, Grid, or Scroll.&lt;/p&gt;
 
 **Type:** [Scroller](../arkts-components/arkts-arkui-scroller-c.md)
 
@@ -98,7 +98,7 @@ scroller?: Scroller
 sections?: WaterFlowSections
 ```
 
-瀑布流项分组，不同分组可以设置不同的列数。&lt;p&gt;&lt;strong&gt;说明&lt;/strong&gt;。&lt;br&gt;1. 使用分组时，columnsTemplate和rowsTemplate属性将被忽略。&lt;br&gt;2. 使用分组时不支持单独设置footer，可以使用最后一个分组作为尾部组件。&lt;/p&gt;
+Water flow item sections. Different sections can have different numbers of columns.&lt;p&gt;&lt;strong&gt;NOTE&lt;/strong&gt;.&lt;br&gt;1. When &lt;em&gt;sections&lt;/em&gt; is used, the &lt;em&gt;columnsTemplate&lt;/em&gt;and &lt;em&gt;rowsTemplate&lt;/em&gt; attributes are ignored.&lt;br&gt;2. When &lt;em&gt;sections&lt;/em&gt; is used, the footer cannot be set separately.The last section can function as the footer.&lt;/p&gt;
 
 **Type:** [WaterFlowSections](../arkts-components/arkts-arkui-waterflowsections-c.md)
 

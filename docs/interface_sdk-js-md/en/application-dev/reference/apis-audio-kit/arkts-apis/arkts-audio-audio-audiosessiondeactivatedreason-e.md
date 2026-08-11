@@ -1,6 +1,6 @@
 # AudioSessionDeactivatedReason
 
-表示音频会话停用原因的枚举。
+Enumerates the reasons for deactivating an audio session.
 
 **Since:** 12
 
@@ -16,7 +16,7 @@
 DEACTIVATED_LOWER_PRIORITY = 0
 ```
 
-应用焦点被抢占。
+The application focus is preempted.
 
 **Since:** 12
 
@@ -32,7 +32,7 @@ DEACTIVATED_LOWER_PRIORITY = 0
 DEACTIVATED_TIMEOUT = 1
 ```
 
-音频会话等待超时。
+The audio session times out.
 
 **Since:** 12
 

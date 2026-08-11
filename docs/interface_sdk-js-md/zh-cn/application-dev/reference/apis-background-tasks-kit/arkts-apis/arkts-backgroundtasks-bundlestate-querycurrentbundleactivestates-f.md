@@ -1,11 +1,5 @@
 # queryCurrentBundleActiveStates
 
-## 导入模块
-
-```TypeScript
-import { bundleState } from 'kits/@kit.BackgroundTasksKit';
-```
-
 ## queryCurrentBundleActiveStates
 
 ```TypeScript

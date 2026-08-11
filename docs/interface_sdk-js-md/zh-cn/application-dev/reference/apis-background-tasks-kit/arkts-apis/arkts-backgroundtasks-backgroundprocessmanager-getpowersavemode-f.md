@@ -1,11 +1,5 @@
 # getPowerSaveMode
 
-## 导入模块
-
-```TypeScript
-import { backgroundProcessManager } from 'kits/@kit.BackgroundTasksKit';
-```
-
 ## getPowerSaveMode
 
 ```TypeScript
@@ -40,9 +34,9 @@ function getPowerSaveMode(pid: int): Promise<PowerSaveMode>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 801 | Capability not supported. |
-| 31800002 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; |
-| 201 | Permission denied. |
+| [801](../../errorcode-universal.md#801-该设备不支持此api) | Capability not supported. |
+| [31800002](../../apis-backgroundtasks-kit/errorcode-backgroundProcessManager.md#31800002-参数错误) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; |
+| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
 
 ## 示例
 

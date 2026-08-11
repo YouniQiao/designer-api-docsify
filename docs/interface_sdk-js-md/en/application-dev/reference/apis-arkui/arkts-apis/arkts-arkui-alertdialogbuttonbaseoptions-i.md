@@ -1,10 +1,12 @@
 # AlertDialogButtonBaseOptions
 
-警告弹窗中按钮的样式。
+Defines the button style of the alert dialog box.
 
-> **说明：**
+> **NOTE：**
 > 
-> 为规范匿名对象的定义，API 18版本修改了此处的元素定义。其中，保留了历史匿名对象的起始版本信息，会出现外层元素@since版本号高于内层元素版本号的情况，但这不影响接口的使用。
+> To standardize anonymous object definitions, the element definitions here have been revised in API version 18.
+> While historical version information is preserved for anonymous objects, there may be cases where the outer element
+> 's @since version number is higher than inner elements'. This does not affect interface usability.
 
 **Since:** 18
 
@@ -20,7 +22,7 @@
 action: VoidCallback
 ```
 
-Button选中时的回调。
+Callback upon button clicking.
 
 **Since:** 10
 
@@ -40,7 +42,7 @@ Button选中时的回调。
 backgroundColor?: ResourceColor
 ```
 
-Button背景颜色。
+Background color of the button.
 
 **Type:** [ResourceColor](arkts-arkui-resourcecolor-t.md)
 
@@ -62,7 +64,8 @@ Button背景颜色。
 defaultFocus?: boolean
 ```
 
-设置Button是否是默认焦点，默认值false。值为true表示Button为默认焦点，值为false表示Button不为默认焦点。
+Whether the button is the default focus. Default value: **false**. **true**: The button is the default focus.   
+**false**: The button is not the default focus.
 
 **Type:** boolean
 
@@ -86,9 +89,11 @@ defaultFocus?: boolean
 enabled?: boolean
 ```
 
-点击Button是否响应，默认值true。
+Whether to respond when the button is clicked.
 
-值为true时，Button可以响应。值为false时，Button不可以响应。
+Default value: **true**
+
+**true**: Respond when the button is clicked. **false**: Do not respond when the button is clicked.
 
 **Type:** boolean
 
@@ -112,7 +117,7 @@ enabled?: boolean
 fontColor?: ResourceColor
 ```
 
-Button的文本颜色。
+Font color of the button.
 
 **Type:** [ResourceColor](arkts-arkui-resourcecolor-t.md)
 
@@ -134,7 +139,9 @@ Button的文本颜色。
 style?: DialogButtonStyle
 ```
 
-设置Button的风格样式，默认值DialogButtonStyle.DEFAULT。
+Style of the button.
+
+Default value: **DialogButtonStyle.DEFAULT**
 
 **Type:** [DialogButtonStyle](arkts-arkui-dialogbuttonstyle-e.md)
 
@@ -158,7 +165,7 @@ style?: DialogButtonStyle
 value: ResourceStr
 ```
 
-Button的文本内容，若值为null，则该按钮不显示。
+Text of the button. If the value is null, the button is not displayed.
 
 **Type:** [ResourceStr](arkts-arkui-resourcestr-t.md)
 

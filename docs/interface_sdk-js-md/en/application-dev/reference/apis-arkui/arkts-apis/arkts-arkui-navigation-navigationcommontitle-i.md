@@ -1,6 +1,6 @@
 # NavigationCommonTitle
 
-Navigation通用标题。
+Defines the navigation common title.
 
 **Since:** 23
 
@@ -16,9 +16,7 @@ Navigation通用标题。
 main: string | Resource | undefined
 ```
 
-设置主标题。
-
-取值为undefined时，不显示主标题。
+Sets the main title, default value is "", undefined means set to default value.
 
 **Type:** string \| Resource \| undefined
 
@@ -38,9 +36,7 @@ main: string | Resource | undefined
 sub: string | Resource | undefined
 ```
 
-设置副标题。
-
-取值为undefined时，不显示副标题。
+Sets the sub title, default value is "", undefined means set to default value.
 
 **Type:** string \| Resource \| undefined
 

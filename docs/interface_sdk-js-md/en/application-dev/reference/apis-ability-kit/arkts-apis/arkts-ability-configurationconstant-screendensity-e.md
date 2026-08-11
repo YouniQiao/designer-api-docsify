@@ -1,8 +1,9 @@
 # ScreenDensity
 
-表示屏幕像素密度的枚举，用于[Configuration.screenDensity](arkts-ability-app-ability-configuration-configuration-i.md)字段。开发者可以使用这些预置枚举设置或获取屏幕的像素密度。
+Enumerates the pixel densities of the screen, which are used in the  
+[Configuration.screenDensity](arkts-ability-app-ability-configuration-configuration-i.md) field. You can use these predefined enumerated values to set or obtain the pixel density of the screen.
 
-字体显示大小与屏幕像素密度呈正相关关系。通过监听屏幕像素密度变化，可以感知字体显示大小的调整。通常情况下，对于相同的物理尺寸，屏幕像素密度越高，字体显示效果越大。
+The font size is positively correlated with the screen pixel density. By monitoring changes in the screen pixel density, you can detect adjustments in the font size. Typically, for the same physical size, the higher the screen pixel density, the larger the font display effect.
 
 **Since:** 9
 
@@ -18,7 +19,7 @@
 SCREEN_DENSITY_NOT_SET = 0
 ```
 
-表示未设置屏幕像素密度。
+The screen pixel density is not set.
 
 **Since:** 9
 
@@ -36,7 +37,7 @@ SCREEN_DENSITY_NOT_SET = 0
 SCREEN_DENSITY_SDPI = 120
 ```
 
-表示屏幕像素密度为'SDPI'。
+The pixel density of the screen is 'SDPI'.
 
 **Since:** 9
 
@@ -54,7 +55,7 @@ SCREEN_DENSITY_SDPI = 120
 SCREEN_DENSITY_MDPI = 160
 ```
 
-表示屏幕像素密度为'MDPI'。
+The pixel density of the screen is 'MDPI'.
 
 **Since:** 9
 
@@ -72,7 +73,7 @@ SCREEN_DENSITY_MDPI = 160
 SCREEN_DENSITY_LDPI = 240
 ```
 
-表示屏幕像素密度为'LDPI'。
+The pixel density of the screen is 'LDPI'.
 
 **Since:** 9
 
@@ -90,7 +91,7 @@ SCREEN_DENSITY_LDPI = 240
 SCREEN_DENSITY_XLDPI = 320
 ```
 
-表示屏幕像素密度为'XLDPI'。
+The pixel density of the screen is 'XLDPI'.
 
 **Since:** 9
 
@@ -108,7 +109,7 @@ SCREEN_DENSITY_XLDPI = 320
 SCREEN_DENSITY_XXLDPI = 480
 ```
 
-表示屏幕像素密度为'XXLDPI'。
+The pixel density of the screen is 'XXLDPI'.
 
 **Since:** 9
 
@@ -126,7 +127,7 @@ SCREEN_DENSITY_XXLDPI = 480
 SCREEN_DENSITY_XXXLDPI = 640
 ```
 
-表示屏幕像素密度为'XXXLDPI'。
+The pixel density of the screen is 'XXXLDPI'.
 
 **Since:** 9
 

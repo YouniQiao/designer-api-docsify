@@ -1,6 +1,6 @@
 # OnScrollFrameBeginHandlerResult
 
-[OnScrollFrameBeginCallback]返回的实际相对上一帧滚动偏移量。
+The data returned by the event handler when onScrollFrameBegin.
 
 **Since:** 23
 
@@ -16,7 +16,7 @@
 offsetRemain: double
 ```
 
-实际相对上一帧的滚动偏移量。匿名对象规范化。
+Actual scroll offset.Anonymous Object Rectification.
 
 **Type:** double
 

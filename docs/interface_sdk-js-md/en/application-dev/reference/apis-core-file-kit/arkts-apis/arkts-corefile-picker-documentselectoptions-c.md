@@ -1,6 +1,6 @@
 # DocumentSelectOptions
 
-文档选择选项。
+Defines the options for selecting documents.
 
 **Since:** 9
 
@@ -22,7 +22,7 @@ import { picker } from 'kits/@kit.CoreFileKit';
 allowsMulFolderSelection?: boolean
 ```
 
-是否支持多选文件夹。true表示支持，false表示不支持，默认值为false。该参数需要与selectMode配合使用，当selectMode为FOLDER或者MIXED，并且allowsMulFolderSelection为true，多选文件夹功能生效。
+Whether to support for selecting folders, Only 2-in-1 devices are supported.The value false (default) means not support folder selection;
 
 **Type:** boolean
 
@@ -44,9 +44,15 @@ allowsMulFolderSelection?: boolean
 authMode?: boolean
 ```
 
-拉起授权Picker，默认为false（非授权模式）。当authMode为true时为授权模式，defaultFilePathUri必填，表明待授权URI。
+Whether to start Picker.
 
-该参数在2in1设备中可正常使用，在其他设备中无效果。
+Default value: **false**. If **authMode** is **true**, **defaultFilePathUri** is mandatory, which specifies the URI of the file allowed to access.
+
+This parameter can be used on 2-in-1 devices but has no effect on other devices.
+
+This API can be used in atomic services since API version 12.
+
+SystemCapability.FileManagement.UserFileService.FolderSelection
 
 **Type:** boolean
 
@@ -66,7 +72,7 @@ authMode?: boolean
 defaultFilePathUri?: string
 ```
 
-指定选择的文件或者目录的URI。默认为空（效果为拉起最近打开页）。
+URI of the file or directory that can be selected. It is empty by default (the recently opened page is displayed).
 
 **Type:** string
 
@@ -86,11 +92,14 @@ defaultFilePathUri?: string
 fileSuffixFilters?: Array<string>
 ```
 
-选择文件的后缀类型。传入字符串数组，每一项代表一个后缀选项，每一项内部用"|"分为两部分，第一部分为描述，第二部分为过滤后缀。没有"|"则没有描述，该项整体是一个过滤后缀。每项过滤后缀可以存在多个后缀名，则每一个后缀名之间用英文逗号进行分隔，传入数组长度不能超过100，例如：['图片(.png, .jpg)|.png,.jpg', '文档|.txt', '视频|.mp4', '.pdf']。
+Suffix of the document to select.
 
-默认不过滤，即显示所有文件。此外2in1设备支持通配符方式['所有文件(*.*)|.*']（说明：从API version 17开始，手机支持该配置），表示为显示所有文件。
+The value is a string array. Each element specifies an option, which includes at most two parts with a vertical bar (|) in between. The first part is the description, and the second part is the document suffix.If there is no "|", the option does not have the description. Each filter suffix can contain multiple suffixes,separated by a comma (,). The length of the input array cannot exceed 100 characters, for example,  
+['Images (.png, .jpg)|.png,.jpg', 'Documents|.txt', 'Videos|.mp4', '.pdf'].
 
-仅对具有该系统能力的设备开放。
+By default, no filtering is performed, that is, all documents are selected. The wildcard ['All files (*.*)|.*']can be used on 2-in-1 devices to display all files. (Mobile phones can support this configuration since API version 17.)
+
+This parameter is available only to the devices that have the required system capability.
 
 **Type:** Array&lt;string&gt;
 
@@ -110,7 +119,7 @@ fileSuffixFilters?: Array<string>
 isEncryptionSupported?: boolean
 ```
 
-是否支持加密（仅支持文件，文件夹不生效），默认为false。该参数为true时，在Picker界面可以选择对文件进行加密。
+Whether to support encryption (only files are supported). The default value is **false**. If this parameter is set to **true**, files can be encrypted on the Picker page.
 
 **Type:** boolean
 
@@ -130,13 +139,13 @@ isEncryptionSupported?: boolean
 maxSelectNumber?: number
 ```
 
-选择文件最大个数。
+Maximum number of files that can be selected.
 
-API version 20及之前的版本，单次文件选择的最大数量上限为500个，默认值也为500。目录选择功能仅对具备该系统能力的设备开放，且单次最多可选择1个目录。
+In API version 20 and earlier versions, a maximum of 500 files can be selected at a time.The default value is 500. Directories can be selected only on devices that have the system capability.A maximum of one directory can be selected at a time.
 
-API version 21及之后的版本取消文件选择数量的限制。受系统能力限制，选择文件数量过大可能会出现功能异常或处理性能较差等情况，建议单次选择文件个数不超过1万个。
+In API version 21 and later versions, the maximum number of files that can be selected at a time is not limited.Due to system capability restrictions, if too many files are selected at a time, the functionality may be abnormal or the processing performance may be poor. It is recommended that a maximum of 10,000 files be selected at a time.
 
-API version 23及之后的版本取消目录选择数量的限制。
+In API version 23 and later versions, the maximum number of files that can be selected at a time is not limited.
 
 **Type:** number
 
@@ -156,9 +165,9 @@ API version 23及之后的版本取消目录选择数量的限制。
 mergeMode?: MergeTypeMode
 ```
 
-开启聚合视图模式，支持拉起文件管理应用的聚合视图。默认为DEFAULT，表示该参数不生效，非聚合视图。当该参数置为非DEFAULT时，其他参数不生效。
+Whether to enable the aggregation view mode for a file management application. The default value is **DEFAULT**,indicating that this parameter does not take effect and the aggregation view is disabled. If this parameter is set to a value other than **DEFAULT**, other parameters do not take effect.
 
-该参数在Phone设备中可正常使用，在其他设备中无效果。
+This parameter can be used on smartphones but has no effect on other devices.
 
 **Type:** [MergeTypeMode](arkts-corefile-picker-mergetypemode-e.md)
 
@@ -178,9 +187,12 @@ mergeMode?: MergeTypeMode
 multiAuthMode?: boolean
 ```
 
-支持批量授权模式，默认为false（非批量授权模式）。当multiAuthMode为true时为批量授权模式。当multiAuthMode为true时，只有multiUriArray参数生效，其他参数不生效。
+Whether to enable the batch authorization mode.
 
-该参数在Phone设备中可正常使用，在其他设备中无效果。
+The value **false** (default) means to disable the batch authorization mode; the value **true** means to enable the batch authorization mode. The **multiUriArray** parameter only takes effect when **multiAuthMode** is set to  
+**true**.
+
+This parameter can be used on smartphones but has no effect on other devices.
 
 **Type:** boolean
 
@@ -200,9 +212,10 @@ multiAuthMode?: boolean
 multiUriArray?: Array<string>
 ```
 
-传入需要批量授权的URI数组（仅支持文件，文件夹不生效）。配合multiAuthMode使用。当multiAuthMode为false时，配置该参数不生效。默认为空（效果为拉起批量授权页面后展示的文件为空）。
+Whether to pass the URIs for batch authorization (only files are supported). This parameter is used together with  
+**multiAuthMode** and does not take effect when **multiAuthMode** is set to **false**. By default, this parameter is left empty. (The files displayed on the batch authorization page are empty.)
 
-该参数在Phone设备中可正常使用，在其他设备中无效果。
+This parameter can be used on smartphones but has no effect on other devices.
 
 **Type:** Array&lt;string&gt;
 
@@ -222,7 +235,7 @@ multiUriArray?: Array<string>
 selectMode?: DocumentSelectMode
 ```
 
-Picker选择的文档类型，默认值是FILE(文件类型)。
+Type of the document selected by Picker. The default value is **FILE** (file type).
 
 **Type:** [DocumentSelectMode](arkts-corefile-picker-documentselectmode-e.md)
 

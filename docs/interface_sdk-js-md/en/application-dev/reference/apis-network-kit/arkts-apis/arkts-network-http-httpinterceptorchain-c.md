@@ -52,7 +52,7 @@ Add an interceptor chain to the HTTP client.
 | --- | --- |
 | 2300802 | Duplicated interceptor type in the chain. |
 | 2300801 | Parameter type not supported by the interceptor. |
-| 2300999 | Internal error. |
+| [2300999](../errorcode-net-http.md#2300999-internal-error) | Internal error. |
 
 ## apply
 
@@ -89,7 +89,7 @@ Attach the chain to the target http request.Only one chain can be attached to a 
 | Error Code ID | Error Message |
 | --- | --- |
 | 2300801 | Parameter type not supported by the interceptor. |
-| 2300999 | Internal error. |
+| [2300999](../errorcode-net-http.md#2300999-internal-error) | Internal error. |
 
 ## getChain
 

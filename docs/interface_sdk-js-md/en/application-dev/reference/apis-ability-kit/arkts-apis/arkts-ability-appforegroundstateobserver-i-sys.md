@@ -1,7 +1,7 @@
 # AppForegroundStateObserver (System API)
 
-定义应用启动和退出的状态监听，可以作为  
-[appManager.on('appForegroundState')](./../@ohos.app.ability.appManager:appManager.on(type: 'appForegroundState', observer: AppForegroundStateObserver))的入参监听所有应用的启动和退出的变化。
+The module defines the listener used to listen for application startup and exit state changes. It can be used as an input parameter of  
+[appManager.on('appForegroundState')](./../@ohos.app.ability.appManager:appManager.on(type:'appForegroundState', observer: AppForegroundStateObserver))to listen for the state changes of all applications.
 
 **Since:** 23
 
@@ -19,7 +19,7 @@
 onAppStateChanged(appStateData: AppStateData): void
 ```
 
-应用启动和退出状态发生变化时，系统会触发该回调。
+Called when the application launch or exit state changes.
 
 **Since:** 23
 
@@ -35,5 +35,5 @@ onAppStateChanged(appStateData: AppStateData): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| appStateData | [AppStateData](arkts-ability-appstatedata-c.md) | Yes | 应用状态信息。 |
+| appStateData | [AppStateData](arkts-ability-appstatedata-c.md) | Yes | Application state data. |
 

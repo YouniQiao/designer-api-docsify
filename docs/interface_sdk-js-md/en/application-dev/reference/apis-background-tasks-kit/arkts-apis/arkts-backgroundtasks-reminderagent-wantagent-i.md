@@ -1,6 +1,6 @@
 # WantAgent
 
-点击提醒通知后跳转的目标ability信息。
+Sets the package and ability that are redirected to when the reminder notification is clicked.
 
 **Since:** 7
 
@@ -26,7 +26,7 @@ import { reminderAgent } from 'kits/@kit.BackgroundTasksKit';
 abilityName: string
 ```
 
-指明点击提醒通知栏后跳转的目标ability名称。
+Name of the ability that is redirected to when the reminder notification is clicked.
 
 **Type:** string
 
@@ -48,7 +48,7 @@ abilityName: string
 pkgName: string
 ```
 
-指明点击提醒通知栏后跳转的目标HAP名。
+Name of the HAP that is redirected to when the reminder notification is clicked.
 
 **Type:** string
 

@@ -12,7 +12,7 @@ import { deviceManager } from 'kits/@kit.DriverDevelopmentKit';
 function unbindDriverWithDeviceId(deviceId: long): Promise<int>
 ```
 
-解除设备绑定。使用Promise异步回调。
+Unbinds a peripheral device. This API uses a promise to return the result.
 
 **Since:** 19
 
@@ -28,21 +28,21 @@ function unbindDriverWithDeviceId(deviceId: long): Promise<int>
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| deviceId | ArkTS-Dyn: number  <br>ArkTS-Sta：long | Yes | 设备ID，通过[queryDevices](arkts-driverdevelopment-devicemanager-querydevices-f.md#querydevices)获得。 |
+| deviceId | ArkTS-Dyn: number  <br>ArkTS-Sta：long | Yes | Device ID, which can be obtained via [queryDevices](arkts-driverdevelopment-devicemanager-querydevices-f.md#querydevices). |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| ArkTS-Dyn: Promise&lt;number&gt;  <br>ArkTS-Sta：Promise&lt;int&gt; | Promise对象，返回解除绑定的设备ID。 |
+| ArkTS-Dyn: Promise&lt;number&gt;  <br>ArkTS-Sta：Promise&lt;int&gt; | Promise used to return the ID of the unbound device. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 26300001 | ExternalDeviceManager service exception. |
-| 26300003 | There is no binding relationship. |
-| 201 | The permission check failed. |
+| [26300001](../../apis-driverdevelopment-kit/errorcode-deviceManager.md#26300001-externaldevicemanager-service-exception) | ExternalDeviceManager service exception. |
+| [26300003](../../apis-driverdevelopment-kit/errorcode-deviceManager.md#26300003-driver-client-not-bound-to-any-driver-server) | There is no binding relationship. |
+| [201](../../errorcode-universal.md#201-permission-denied) | The permission check failed. |
 
 ## Examples
 

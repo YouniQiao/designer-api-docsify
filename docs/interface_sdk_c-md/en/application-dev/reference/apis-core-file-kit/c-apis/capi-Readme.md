@@ -34,6 +34,7 @@
     - [CloudDisk_ResultList](capi-clouddisk-clouddisk-resultlist.md)
     - [CloudDisk_DisplayNameInfo](capi-clouddisk-clouddisk-displaynameinfo.md)
     - [CloudDisk_SyncFolder](capi-clouddisk-clouddisk-syncfolder.md)
+    - [OH_CloudDisk_PlaceholderInfo](capi-clouddisk-oh-clouddisk-placeholderinfo.md)
     - [OH_SwapfsConfig](capi-swapfs-oh-swapfsconfig.md)
     - [OH_SwapfsSwapOutRequest](capi-swapfs-oh-swapfsswapoutrequest.md)
     - [OH_SwapfsSwapInRequest](capi-swapfs-oh-swapfsswapinrequest.md)

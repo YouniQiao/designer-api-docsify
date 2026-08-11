@@ -6,7 +6,7 @@ typedef struct NativeChildProcess_Options {...} NativeChildProcess_Options
 
 ## Overview
 
-The options used by the child process.
+The struct describes the options used for starting a child process.
 
 **Since**: 13
 
@@ -20,7 +20,7 @@ The options used by the child process.
 
 | Name | Description |
 | -- | -- |
-| [NativeChildProcess_IsolationMode](capi-native-child-process-h.md#nativechildprocess_isolationmode) isolationMode | the isolation mode used by the child process.For details, see [NativeChildProcess_IsolationMode](capi-native-child-process-h.md#nativechildprocess_isolationmode). |
-| int64_t reserved | reserved field for future extension purposes |
+| [NativeChildProcess_IsolationMode](capi-native-child-process-h.md#nativechildprocess_isolationmode) isolationMode |  |
+| int64_t reserved |  |
 
 

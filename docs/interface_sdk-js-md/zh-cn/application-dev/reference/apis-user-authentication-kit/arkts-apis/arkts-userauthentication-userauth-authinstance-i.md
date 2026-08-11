@@ -14,12 +14,6 @@
 
 **系统能力：** SystemCapability.UserIAM.UserAuth.Core
 
-## 导入模块
-
-```TypeScript
-import { userAuth } from 'kits/@kit.UserAuthenticationKit';
-```
-
 ## cancel
 
 ```TypeScript
@@ -51,9 +45,9 @@ cancel: () => void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 401 | Parameter error. |
-| 201 | Permission denied. |
-| 12500002 | General operation error. |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. |
+| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
+| [12500002](../errorcode-useriam.md#12500002-身份认证系统通用错误码) | General operation error. |
 
 ## 示例
 
@@ -110,8 +104,8 @@ off: (name: AuthEventKey) => void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 401 | Parameter error. |
-| 12500002 | General operation error. |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. |
+| [12500002](../errorcode-useriam.md#12500002-身份认证系统通用错误码) | General operation error. |
 
 ## 示例
 
@@ -177,8 +171,8 @@ on: (name: AuthEventKey, callback: AuthEvent) => void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 401 | Parameter error. |
-| 12500002 | General operation error. |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. |
+| [12500002](../errorcode-useriam.md#12500002-身份认证系统通用错误码) | General operation error. |
 
 ## 示例
 
@@ -249,17 +243,17 @@ start: () => void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 401 | Parameter error. |
-| 12500010 | The type of credential has not been enrolled. |
-| 12500009 | The authenticator is locked. |
-| 12500006 | The authentication trust level is not supported. |
-| 201 | Permission denied. |
-| 12500007 | The authentication task is busy. |
-| 12500004 | The operation is time-out. |
-| 12500005 | The authentication type is not supported. |
-| 12500002 | General operation error. |
-| 12500003 | The operation is canceled. |
-| 12500001 | Authentication failed. |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. |
+| [12500010](../errorcode-useriam.md#12500010-该类型的凭据没有录入) | The type of credential has not been enrolled. |
+| [12500009](../errorcode-useriam.md#12500009-认证被锁定) | The authenticator is locked. |
+| [12500006](../errorcode-useriam.md#12500006-认证信任等级不支持) | The authentication trust level is not supported. |
+| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
+| [12500007](../errorcode-useriam.md#12500007-认证服务繁忙) | The authentication task is busy. |
+| [12500004](../errorcode-useriam.md#12500004-认证操作超时) | The operation is time-out. |
+| [12500005](../errorcode-useriam.md#12500005-认证类型不支持) | The authentication type is not supported. |
+| [12500002](../errorcode-useriam.md#12500002-身份认证系统通用错误码) | General operation error. |
+| [12500003](../errorcode-useriam.md#12500003-认证被取消) | The operation is canceled. |
+| [12500001](../errorcode-useriam.md#12500001-认证不通过) | Authentication failed. |
 
 ## 示例
 

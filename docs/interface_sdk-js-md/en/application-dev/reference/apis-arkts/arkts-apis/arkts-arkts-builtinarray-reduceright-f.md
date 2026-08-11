@@ -24,7 +24,7 @@ Calls the specified callback function for all the elements in an array, in desce
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | self | FixedArray&lt;boolean&gt; | Yes | The array to operate `reduce` on. |
-| callbackfn | (previousValue: U, currentValue: boolean,      index: int, array: FixedArray&lt;boolean&gt;) =&gt; U | Yes | A function that accepts up to four arguments. The reduceRight method calls the callbackfn function one time for each element in the array. |
+| callbackfn | (previousValue: U, currentValue: boolean,      index: int, array: FixedArray&lt;boolean&gt;) =&gt; U | Yes | A function that accepts up to four arguments. The reduceRight method calls the callbackfn function one time for each element in the array. |
 | initialValue | U | Yes | The initial value of the accumulator. |
 
 **Return value:**
@@ -58,7 +58,7 @@ Calls the specified callback function for all the elements in an array, in desce
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | self | FixedArray&lt;boolean&gt; | Yes | The array to reduce. |
-| callbackfn | (previousValue: boolean, currentValue: boolean,      index: int, array: FixedArray&lt;boolean&gt;) =&gt; boolean | Yes | A function that accepts up to four arguments. The reduceRight method calls the callbackfn function one time for each element in the array. |
+| callbackfn | (previousValue: boolean, currentValue: boolean,      index: int, array: FixedArray&lt;boolean&gt;) =&gt; boolean | Yes | A function that accepts up to four arguments. The reduceRight method calls the callbackfn function one time for each element in the array. |
 
 **Return value:**
 
@@ -91,7 +91,7 @@ Calls the specified callback function for all the elements in an array, in desce
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | self | FixedArray&lt;byte&gt; | Yes | The array to operate `reduce` on. |
-| callbackfn | (previousValue: U, currentValue: byte, index: int,      array: FixedArray&lt;byte&gt;) =&gt; U | Yes | A function that accepts up to four arguments. The reduceRight method calls the callbackfn function one time for each element in the array. |
+| callbackfn | (previousValue: U, currentValue: byte, index: int,      array: FixedArray&lt;byte&gt;) =&gt; U | Yes | A function that accepts up to four arguments. The reduceRight method calls the callbackfn function one time for each element in the array. |
 | initialValue | U | Yes | The initial value of the accumulator. |
 
 **Return value:**
@@ -125,7 +125,7 @@ Calls the specified callback function for all the elements in an array, in desce
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | self | FixedArray&lt;byte&gt; | Yes | The array to reduce. |
-| callbackfn | (previousValue: byte, currentValue: byte, index: int,      array: FixedArray&lt;byte&gt;) =&gt; byte | Yes | A function that accepts up to four arguments. The reduceRight method calls the callbackfn function one time for each element in the array. |
+| callbackfn | (previousValue: byte, currentValue: byte, index: int,      array: FixedArray&lt;byte&gt;) =&gt; byte | Yes | A function that accepts up to four arguments. The reduceRight method calls the callbackfn function one time for each element in the array. |
 
 **Return value:**
 
@@ -158,7 +158,7 @@ Calls the specified callback function for all the elements in an array, in desce
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | self | FixedArray&lt;short&gt; | Yes | The array to operate `reduce` on. |
-| callbackfn | (previousValue: U, currentValue: short,      index: int, array: FixedArray&lt;short&gt;) =&gt; U | Yes | A function that accepts up to four arguments. The reduceRight method calls the callbackfn function one time for each element in the array. |
+| callbackfn | (previousValue: U, currentValue: short,      index: int, array: FixedArray&lt;short&gt;) =&gt; U | Yes | A function that accepts up to four arguments. The reduceRight method calls the callbackfn function one time for each element in the array. |
 | initialValue | U | Yes | The initial value of the accumulator. |
 
 **Return value:**
@@ -192,7 +192,7 @@ Calls the specified callback function for all the elements in an array, in desce
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | self | FixedArray&lt;short&gt; | Yes | The array to reduce. |
-| callbackfn | (previousValue: short, currentValue: short,      index: int, array: FixedArray&lt;short&gt;) =&gt; short | Yes | A function that accepts up to four arguments. The reduceRight method calls the callbackfn function one time for each element in the array. |
+| callbackfn | (previousValue: short, currentValue: short,      index: int, array: FixedArray&lt;short&gt;) =&gt; short | Yes | A function that accepts up to four arguments. The reduceRight method calls the callbackfn function one time for each element in the array. |
 
 **Return value:**
 
@@ -225,7 +225,7 @@ Calls the specified callback function for all the elements in an array, in desce
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | self | FixedArray&lt;int&gt; | Yes | The array to operate `reduce` on. |
-| callbackfn | (previousValue: U, currentValue: int, index: int,      array: FixedArray&lt;int&gt;) =&gt; U | Yes | A function that accepts up to four arguments. The reduceRight method calls the callbackfn function one time for each element in the array. |
+| callbackfn | (previousValue: U, currentValue: int, index: int,      array: FixedArray&lt;int&gt;) =&gt; U | Yes | A function that accepts up to four arguments. The reduceRight method calls the callbackfn function one time for each element in the array. |
 | initialValue | U | Yes | The initial value of the accumulator. |
 
 **Return value:**
@@ -259,7 +259,7 @@ Calls the specified callback function for all the elements in an array, in desce
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | self | FixedArray&lt;int&gt; | Yes | The array to reduce. |
-| callbackfn | (previousValue: int, currentValue: int,      index: int, array: FixedArray&lt;int&gt;) =&gt; int | Yes | A function that accepts up to four arguments. The reduceRight method calls the callbackfn function one time for each element in the array. |
+| callbackfn | (previousValue: int, currentValue: int,      index: int, array: FixedArray&lt;int&gt;) =&gt; int | Yes | A function that accepts up to four arguments. The reduceRight method calls the callbackfn function one time for each element in the array. |
 
 **Return value:**
 
@@ -292,7 +292,7 @@ Calls the specified callback function for all the elements in an array, in desce
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | self | FixedArray&lt;long&gt; | Yes | The array to operate `reduce` on. |
-| callbackfn | (previousValue: U, currentValue: long, index: int,      array: FixedArray&lt;long&gt;) =&gt; U | Yes | A function that accepts up to four arguments. The reduceRight method calls the callbackfn function one time for each element in the array. |
+| callbackfn | (previousValue: U, currentValue: long, index: int,      array: FixedArray&lt;long&gt;) =&gt; U | Yes | A function that accepts up to four arguments. The reduceRight method calls the callbackfn function one time for each element in the array. |
 | initialValue | U | Yes | The initial value of the accumulator. |
 
 **Return value:**
@@ -326,7 +326,7 @@ Calls the specified callback function for all the elements in an array, in desce
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | self | FixedArray&lt;long&gt; | Yes | The array to reduce. |
-| callbackfn | (previousValue: long, currentValue: long, index: int,      array: FixedArray&lt;long&gt;) =&gt; long | Yes | A function that accepts up to four arguments. The reduceRight method calls the callbackfn function one time for each element in the array. |
+| callbackfn | (previousValue: long, currentValue: long, index: int,      array: FixedArray&lt;long&gt;) =&gt; long | Yes | A function that accepts up to four arguments. The reduceRight method calls the callbackfn function one time for each element in the array. |
 
 **Return value:**
 
@@ -359,7 +359,7 @@ Calls the specified callback function for all the elements in an array, in desce
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | self | FixedArray&lt;float&gt; | Yes | The array to operate `reduce` on. |
-| callbackfn | (previousValue: U, currentValue: float,      index: int, array: FixedArray&lt;float&gt;) =&gt; U | Yes | A function that accepts up to four arguments. The reduceRight method calls the callbackfn function one time for each element in the array. |
+| callbackfn | (previousValue: U, currentValue: float,      index: int, array: FixedArray&lt;float&gt;) =&gt; U | Yes | A function that accepts up to four arguments. The reduceRight method calls the callbackfn function one time for each element in the array. |
 | initialValue | U | Yes | The initial value of the accumulator. |
 
 **Return value:**
@@ -393,7 +393,7 @@ Calls the specified callback function for all the elements in an array, in desce
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | self | FixedArray&lt;float&gt; | Yes | The array to reduce. |
-| callbackfn | (previousValue: float, currentValue: float,      index: int, array: FixedArray&lt;float&gt;) =&gt; float | Yes | A function that accepts up to four arguments. The reduceRight method calls the callbackfn function one time for each element in the array. |
+| callbackfn | (previousValue: float, currentValue: float,      index: int, array: FixedArray&lt;float&gt;) =&gt; float | Yes | A function that accepts up to four arguments. The reduceRight method calls the callbackfn function one time for each element in the array. |
 
 **Return value:**
 
@@ -426,7 +426,7 @@ Calls the specified callback function for all the elements in an array, in desce
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | self | FixedArray&lt;double&gt; | Yes | The array to operate `reduce` on. |
-| callbackfn | (previousValue: U, currentValue: double,      index: int, array: FixedArray&lt;double&gt;) =&gt; U | Yes | A function that accepts up to four arguments. The reduceRight method calls the callbackfn function one time for each element in the array. |
+| callbackfn | (previousValue: U, currentValue: double,      index: int, array: FixedArray&lt;double&gt;) =&gt; U | Yes | A function that accepts up to four arguments. The reduceRight method calls the callbackfn function one time for each element in the array. |
 | initialValue | U | Yes | The initial value of the accumulator. |
 
 **Return value:**
@@ -460,7 +460,7 @@ Calls the specified callback function for all the elements in an array, in desce
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | self | FixedArray&lt;double&gt; | Yes | The array to reduce. |
-| callbackfn | (previousValue: double, currentValue: double,      index: int, array: FixedArray&lt;double&gt;) =&gt; double | Yes | A function that accepts up to four arguments. The reduceRight method calls the callbackfn function one time for each element in the array. |
+| callbackfn | (previousValue: double, currentValue: double,      index: int, array: FixedArray&lt;double&gt;) =&gt; double | Yes | A function that accepts up to four arguments. The reduceRight method calls the callbackfn function one time for each element in the array. |
 
 **Return value:**
 
@@ -493,7 +493,7 @@ Calls the specified callback function for all the elements in an array, in desce
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | self | FixedArray&lt;char&gt; | Yes | The array to operate `reduce` on. |
-| callbackfn | (previousValue: U, currentValue: char, index: int,      array: FixedArray&lt;char&gt;) =&gt; U | Yes | A function that accepts up to four arguments. The reduceRight method calls the callbackfn function one time for each element in the array. |
+| callbackfn | (previousValue: U, currentValue: char, index: int,      array: FixedArray&lt;char&gt;) =&gt; U | Yes | A function that accepts up to four arguments. The reduceRight method calls the callbackfn function one time for each element in the array. |
 | initialValue | U | Yes | The initial value of the accumulator. |
 
 **Return value:**
@@ -527,7 +527,7 @@ Calls the specified callback function for all the elements in an array, in desce
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | self | FixedArray&lt;char&gt; | Yes | The array to reduce. |
-| callbackfn | (previousValue: char, currentValue: char,      index: int, array: FixedArray&lt;char&gt;) =&gt; char | Yes | A function that accepts up to four arguments. The reduceRight method calls the callbackfn function one time for each element in the array. |
+| callbackfn | (previousValue: char, currentValue: char,      index: int, array: FixedArray&lt;char&gt;) =&gt; char | Yes | A function that accepts up to four arguments. The reduceRight method calls the callbackfn function one time for each element in the array. |
 
 **Return value:**
 

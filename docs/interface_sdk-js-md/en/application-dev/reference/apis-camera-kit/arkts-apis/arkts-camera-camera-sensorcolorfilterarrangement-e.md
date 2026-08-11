@@ -1,6 +1,6 @@
 # SensorColorFilterArrangement
 
-枚举，传感器颜色滤镜排列方式。
+Enumerates the arrangement modes of the sensor color filter.
 
 **Since:** 24
 
@@ -16,7 +16,7 @@
 BGGR = 0
 ```
 
-蓝绿绿红（Blue-Green-Green-Red）滤镜排列方式。
+Blue-green-green-red filter arrangement.
 
 **Since:** 24
 
@@ -36,7 +36,7 @@ BGGR = 0
 GBRG = 1
 ```
 
-绿蓝红绿（Green-Blue-Red-Green）滤镜排列方式。
+Green-blue-red-green filter arrangement.
 
 **Since:** 24
 
@@ -56,7 +56,7 @@ GBRG = 1
 GRBG = 2
 ```
 
-绿红蓝绿（Green-Red-Blue-Green）滤镜排列方式。
+Green-red-blue-green arrangement mode.
 
 **Since:** 24
 
@@ -76,7 +76,7 @@ GRBG = 2
 RGGB = 3
 ```
 
-红绿绿蓝（Red-Green-Green-Blue）滤镜排列方式。
+Red-green-green-blue arrangement mode.
 
 **Since:** 24
 

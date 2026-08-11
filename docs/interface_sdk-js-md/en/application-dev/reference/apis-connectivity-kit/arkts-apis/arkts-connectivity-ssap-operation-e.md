@@ -1,6 +1,6 @@
 # Operation
 
-属性操作指示的枚举。
+Enum of property operation indication.
 
 **Since:** 26.0.0
 
@@ -16,7 +16,7 @@
 READABLE = 0x01
 ```
 
-当该比特置位后，属性值可被读取。
+When this bit is set, the property value can be read.
 
 **Since:** 26.0.0
 
@@ -34,7 +34,7 @@ READABLE = 0x01
 WRITE_NO_RESPONSE = 0x02
 ```
 
-当该比特置位后，属性值可被写入，写入后无反馈。
+When this bit is set, the property value can be written without response after writing.
 
 **Since:** 26.0.0
 
@@ -52,7 +52,7 @@ WRITE_NO_RESPONSE = 0x02
 WRITE_WITH_RESPONSE = 0x04
 ```
 
-当该比特置位后，属性值可被写入，写入后产生反馈给客户端。写操作完成后，会反馈给客户端。
+When this bit is set, the property value can be written, and a response is generated for the client.
 
 **Since:** 26.0.0
 
@@ -70,7 +70,7 @@ WRITE_WITH_RESPONSE = 0x04
 NOTIFY = 0x08
 ```
 
-当该比特置位后，属性值通过通知方式传递给客户端。
+When this bit is set, the property value is delivered to the client via notification.
 
 **Since:** 26.0.0
 

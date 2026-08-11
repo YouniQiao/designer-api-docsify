@@ -1,6 +1,6 @@
 # DownloadProgress
 
-云文件下载过程。
+Represents information about the download progress of a cloud file.
 
 **Since:** 11
 
@@ -22,7 +22,7 @@ import { cloudSync } from 'kits/@kit.CoreFileKit';
 error: DownloadErrorType
 ```
 
-下载的错误类型。
+Download error type.
 
 **Type:** [DownloadErrorType](arkts-corefile-cloudsync-downloaderrortype-e.md)
 
@@ -40,7 +40,7 @@ error: DownloadErrorType
 processed: long
 ```
 
-已下载数据大小，取值范围[0，9223372036854775807]（单位：Byte）。
+Size of the downloaded data, in bytes. The value range is [0, 9223372036854775807].
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：long
 
@@ -58,7 +58,7 @@ processed: long
 size: long
 ```
 
-当前云文件大小，取值范围[0，9223372036854775807]（单位：Byte）。
+Size of the cloud file, in bytes. The value range is [0, 9223372036854775807].
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：long
 
@@ -76,7 +76,7 @@ size: long
 state: State
 ```
 
-枚举值，云文件下载状态。
+File download state.
 
 **Type:** [State](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-agent-state-e.md)
 
@@ -94,7 +94,7 @@ state: State
 uri: string
 ```
 
-当前云文件URI。
+URI of the cloud file.
 
 **Type:** string
 

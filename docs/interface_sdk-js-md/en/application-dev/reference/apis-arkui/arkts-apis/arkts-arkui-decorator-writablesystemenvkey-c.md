@@ -1,6 +1,6 @@
 # WritableSystemEnvKey
 
-可写系统环境变量Key，继承自[SystemEnvKey](../arkts-components/arkts-arkui-systemenvkey-c.md/arkts-arkui-systemenvkey-c.md)。
+Defines writable system environment variable keys.
 
 **Inheritance/Implementation:** WritableSystemEnvKey extends [SystemEnvKey<T>](SystemEnvKey<T>)
 

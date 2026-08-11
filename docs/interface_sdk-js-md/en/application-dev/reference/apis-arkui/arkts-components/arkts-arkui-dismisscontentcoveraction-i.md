@@ -16,7 +16,7 @@ Component content cover dismiss
 dismiss: Callback<void>
 ```
 
-全屏模态页面关闭回调函数。开发者需要退出页面时调用。
+Callback invoked when the modal is dismissed. Call this API when you need to exit the page.
 
 **Type:** [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;void&gt;
 
@@ -38,7 +38,7 @@ dismiss: Callback<void>
 reason: DismissReason
 ```
 
-返回本次拦截全屏模态页面退出的事件原因。
+Type of operation that triggers the dismiss of the modal.
 
 **Type:** [DismissReason](arkts-arkui-dismissreason-e.md)
 

@@ -12,7 +12,7 @@ import { inputEventClient } from 'kits/@kit.InputKit';
 function injectMouseEvent(mouseEvent: MouseEventData): void
 ```
 
-鼠标/触控板事件注入。
+Injects a mouse/touchpad event.
 
 **Since:** 11
 
@@ -29,15 +29,15 @@ function injectMouseEvent(mouseEvent: MouseEventData): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| mouseEvent | [MouseEventData](arkts-input-inputeventclient-mouseeventdata-i.md) | Yes | 鼠标/触控板事件注入描述信息。此参数中[Action](arkts-input-multimodalinput-keyevent-action-e.md)属性 不支持设置为CANCEL。 |
+| mouseEvent | [MouseEventData](arkts-input-inputeventclient-mouseeventdata-i.md) | Yes | Mouse/touchpad event to inject. [Action](arkts-input-multimodalinput-keyevent-action-e.md) in this parameter cannot be set to **CANCEL**. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; 3. Parameter verification failed. |
-| 201 | Permission denied.<br>**Applicable version:** 12 and later |
-| 202 | SystemAPI permission error. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; 3. Parameter verification failed. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied.<br>**Applicable version:** 12 and later |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | SystemAPI permission error. |
 
 ## Examples
 
@@ -83,7 +83,6 @@ struct Index {
             let mouseButtonUp: inputEventClient.MouseEventData = {
               mouseEvent: mouseButtonUpData
             }
-            // Inject Mouse Event
             inputEventClient.injectMouseEvent(mouseButtonUp);
 
             let mouseButtonDownData: MouseEvent = {
@@ -116,12 +115,11 @@ struct Index {
             let mouseButtonDown: inputEventClient.MouseEventData = {
               mouseEvent: mouseButtonDownData
             };
-            // Inject Mouse Event
             inputEventClient.injectMouseEvent(mouseButtonDown);
           }
 
           catch (error) {
-            console.error(`Failed to inject MouseEvent, Code: ${(error as BusinessError).code}, message: ${(error as BusinessError).message}.`);
+            console.error(`Failed to inject MouseEvent, error: ${JSON.stringify(error, [`code`, `message`])}`);
           }
         })
     }

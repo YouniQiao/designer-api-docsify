@@ -1,8 +1,8 @@
 # ListOptions
 
-定义List组件参数。
+Defines the options of the &lt;em&gt;List&lt;/em&gt; component.
 
-&lt;p&gt;&lt;strong&gt;说明&lt;/strong&gt;:&lt;br&gt;- List组件通用属性clip的默认值为true。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;NOTE&lt;/strong&gt;:&lt;br&gt;- The default value of the universal attribute clip is &lt;em&gt;true&lt;/em&gt; for the &lt;em&gt;List&lt;/em&gt; component.&lt;/p&gt;
 
 **Since:** 23
 
@@ -18,7 +18,7 @@
 initialIndex?: int
 ```
 
-设置当前List初次加载时显示区域起始位置的item索引值。匿名对象整改。&lt;p&gt;&lt;strong&gt;说明&lt;/strong&gt;。取值限定为整数。&lt;br&gt;设置为负数或超过了当前List最后一个item的索引值时视为无效取值，无效取值按默认值显示。&lt;/p&gt;
+Index of the item to be displayed at the start when the list is initially loaded.Anonymous Object Rectification.&lt;p&gt;&lt;strong&gt;NOTE&lt;/strong&gt;.The value should be an integer.&lt;br&gt;If the set value is a negative number or is greater than the index of the last item in the list,the value is invalid. In this case, the default value will be used.&lt;/p&gt;
 
 **Type:** int
 
@@ -40,7 +40,7 @@ initialIndex?: int
 scroller?: Scroller
 ```
 
-可滚动组件的控制器，与List绑定后，可以通过它控制List的滚动。匿名对象整改。&lt;p&gt;&lt;strong&gt;说明&lt;/strong&gt;。&lt;br&gt;不允许和其他滚动类组件绑定同一个滚动控制对象。&lt;/p&gt;
+Scroller, which can be bound to scrollable components.Anonymous Object Rectification.&lt;p&gt;&lt;strong&gt;NOTE&lt;/strong&gt;.&lt;br&gt;The scroller cannot be bound to other scrollable components.&lt;/p&gt;
 
 **Type:** [Scroller](../arkts-components/arkts-arkui-scroller-c.md)
 
@@ -60,7 +60,7 @@ scroller?: Scroller
 space?: double | string
 ```
 
-子组件主轴方向的间隔。匿名对象整改。&lt;p&gt;&lt;strong&gt;说明&lt;/strong&gt;。&lt;br&gt;设置为负数或者大于等于List内容区长度时，按默认值显示。&lt;br&gt;space参数值小于List分割线宽度时，子组件主轴方向的间隔取分割线宽度。&lt;br&gt; List子组件的visibility属性设置为None时不显示，但该子组件上下的space还是会生效。&lt;/p&gt;
+Spacing between list items along the main axis.Anonymous Object Rectification.&lt;p&gt;&lt;strong&gt;NOTE&lt;/strong&gt;.&lt;br&gt;If this parameter is set to a negative number or a value greater than or equal to the length of the list  content area, the default value is used.&lt;br&gt;If this parameter is set to a value less than the width of the list divider, the width of the list divider  is used as the spacing.&lt;br&gt; Child components of &lt;em&gt;List&lt;/em&gt; whose &lt;em&gt;visibility&lt;/em&gt; attribute is set to &lt;em&gt;None&lt;/em&gt; are not  displayed, but the spacing above and below them still takes effect.&lt;/p&gt;
 
 **Type:** double \| string
 
@@ -82,7 +82,7 @@ space?: double | string
 spaceWidth?: Dimension
 ```
 
-子组件主轴方向的间隔。&lt;p&gt;&lt;strong&gt;说明&lt;/strong&gt;。&lt;br&gt;设置为负数或者大于等于List内容区长度时，按默认值显示。&lt;br&gt;space参数值小于List分割线宽度时，子组件主轴方向的间隔取分割线宽度。&lt;br&gt; List子组件的visibility属性设置为None时不显示，但该子组件上下的space还是会生效。&lt;br&gt; 如果同时设置了spaceWidth和space，则spaceWidth优先生效。&lt;/p&gt;
+Spacing between list items along the main axis.&lt;p&gt;&lt;strong&gt;NOTE&lt;/strong&gt;.&lt;br&gt;If this parameter is set to a negative number or a value greater than or equal to the length of the list content area, the default value is used.&lt;br&gt;If this parameter is set to a value less than the width of the list divider, the width of the list divider is used as the spacing.&lt;br&gt; Child components of &lt;em&gt;List&lt;/em&gt; whose &lt;em&gt;visibility&lt;/em&gt; attribute is set to &lt;em&gt;None&lt;/em&gt; are not displayed, but the spacing above and below them still takes effect.&lt;br&gt; If both spaceWidth and space are set, spaceWidth will take precedence.&lt;/p&gt;
 
 **Type:** [Dimension](arkts-arkui-dimension-t.md)
 

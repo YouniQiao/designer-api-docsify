@@ -1,6 +1,6 @@
 # GrantedBundleInfo
 
-描述已授权的包信息。
+Describes the authorized bundle information.
 
 **Since:** 22
 
@@ -16,7 +16,8 @@
 readonly appIndex: int
 ```
 
-应用的分身索引标识，仅在分身应用中生效。从[ApplicationInfo](../../apis-ability-kit/arkts-apis/arkts-ability-applicationinfo-i.md/arkts-ability-applicationinfo-i.md)中appIndex获取。
+Index of an application clone, which takes effect only for application clones. The value is obtained from the  
+**appIndex** of ApplicationInfo.
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
@@ -34,7 +35,7 @@ readonly appIndex: int
 readonly appName?: string
 ```
 
-应用的名称。从[ApplicationInfo](../../apis-ability-kit/arkts-apis/arkts-ability-applicationinfo-i.md/arkts-ability-applicationinfo-i.md)中label获取。
+Application name, which is obtained from the **label** of ApplicationInfo.
 
 **Type:** string
 
@@ -52,7 +53,7 @@ readonly appName?: string
 bundleName: string
 ```
 
-应用的包名。
+Bundle name of the application.
 
 **Type:** string
 

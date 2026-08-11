@@ -1,6 +1,6 @@
 # BaseCustomComponent
 
-基础自定义组件的定义，它是所有自定义组件的基类。
+Definition of base custom component, which is base class of custom component.
 
 **Inheritance/Implementation:** BaseCustomComponent extends [ExtendableComponent](arkts-arkui-extendablecomponent-extendablecomponent-c.md) and implements [CommonAttribute](arkts-arkui-commonattribute-t.md)
 
@@ -18,7 +18,7 @@
 aboutToRecycle(): void
 ```
 
-组件复用在放入复用驰时，会触发回调
+aboutToRecycle Method.
 
 **Since:** 23
 

@@ -1,6 +1,6 @@
 # Point
 
-指定椭圆曲线上的一个点。
+Defines a point on the elliptic curve.
 
 **Since:** 10
 
@@ -24,7 +24,7 @@ import { cryptoFramework } from 'kits/@kit.CryptoArchitectureKit';
 x: bigint
 ```
 
-指定椭圆曲线上点的x坐标。
+X coordinate of the point on an elliptic curve.
 
 **Type:** bigint
 
@@ -46,7 +46,7 @@ x: bigint
 y: bigint
 ```
 
-指定椭圆曲线上点的y坐标。
+Y coordinate of the point on an elliptic curve.
 
 **Type:** bigint
 

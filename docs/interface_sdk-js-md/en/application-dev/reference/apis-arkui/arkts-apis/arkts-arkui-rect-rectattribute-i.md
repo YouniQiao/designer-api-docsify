@@ -1,6 +1,6 @@
 # RectAttribute
 
-矩形绘制组件。
+rect attribute declaration.
 
 **Inheritance/Implementation:** RectAttribute extends [CommonShapeMethod](arkts-arkui-arkui-shape-commonshapemethod-c.md)
 
@@ -48,8 +48,7 @@ Call attributeModifier.
 default radius(value: Length | Array<RadiusItem> | undefined): this
 ```
 
-设置圆角半径大小，取值范围≥0，支持  
-[attributeModifier](../../../reference/apis-arkui/arkui-ts/ts-universal-attributes-attribute-modifier.md#attributemodifier)动态设置属性方法。异常值按照默认值处理。
+Called when the fillet size is set.
 
 **Since:** 23
 
@@ -65,7 +64,7 @@ default radius(value: Length | Array<RadiusItem> | undefined): this
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | [Length](arkts-arkui-length-t.md) \| Array&lt;RadiusItem&gt; \| undefined | Yes | 圆角半径大小。 默认值：0 默认单位：vp 异常值undefined和null按照[[0, 0], [0, 0], [0, 0], [0, 0]]处理。 |
+| value | [Length](arkts-arkui-length-t.md) \| Array&lt;RadiusItem&gt; \| undefined | Yes |  |
 
 **Return value:**
 
@@ -79,8 +78,7 @@ default radius(value: Length | Array<RadiusItem> | undefined): this
 default radiusHeight(value: Length | undefined): this
 ```
 
-设置圆角的高度，仅设置高时宽高一致，支持  
-[attributeModifier](../../../reference/apis-arkui/arkui-ts/ts-universal-attributes-attribute-modifier.md#attributemodifier)动态设置属性方法。异常值按照默认值处理。
+Called when the fillet height is set.
 
 **Since:** 23
 
@@ -96,7 +94,7 @@ default radiusHeight(value: Length | undefined): this
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | [Length](arkts-arkui-length-t.md) \| undefined | Yes | 圆角的高度，取值范围≥0。 默认值：0 默认单位：vp 异常值undefined按照默认值处理。 |
+| value | [Length](arkts-arkui-length-t.md) \| undefined | Yes |  |
 
 **Return value:**
 
@@ -110,8 +108,7 @@ default radiusHeight(value: Length | undefined): this
 default radiusWidth(value: Length | undefined): this
 ```
 
-设置圆角的宽度，仅设置宽时宽高一致，支持  
-[attributeModifier](../../../reference/apis-arkui/arkui-ts/ts-universal-attributes-attribute-modifier.md#attributemodifier)动态设置属性方法。异常值按照默认值处理。
+Called when the fillet width is set.
 
 **Since:** 23
 
@@ -127,7 +124,7 @@ default radiusWidth(value: Length | undefined): this
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | [Length](arkts-arkui-length-t.md) \| undefined | Yes | 圆角的宽度，取值范围≥0。 默认值：0 默认单位：vp 异常值undefined按照默认值处理。 |
+| value | [Length](arkts-arkui-length-t.md) \| undefined | Yes |  |
 
 **Return value:**
 
@@ -143,9 +140,9 @@ default setRectOptions(options?: RectOptions | RoundedRectOptions): this
 
 Set Rect options.
 
-**Since:** 26.0.0
+**Since:** 26.1.0
 
-**ArkTS mode:** ArkTS-Sta only, since version 26.0.0.
+**ArkTS mode:** ArkTS-Sta only, since version 26.1.0.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -157,7 +154,7 @@ Set Rect options.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| options | [RectOptions](arkts-arkui-rect-rectoptions-i.md) \| RoundedRectOptions | No | Rect constructor options |
+| options | [RectOptions](arkts-arkui-rect-rectoptions-i.md) \| RoundedRectOptions | No | Rect constructor options. |
 
 **Return value:**
 

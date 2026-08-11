@@ -1,10 +1,10 @@
 # CheckPackageHasInstalledResponse
 
-> **说明：**
+> **NOTE：**
 > 
-> 从API version 3开始支持，从API version 9开始废弃。
+> This API has been supported since API version 3 and deprecated since API version 9.
 
-指示应用包是否已安装。
+Checks whether a bundle has been installed.
 
 **Since:** 3
 
@@ -28,7 +28,7 @@ import { CheckPackageHasInstalledResponse, CheckPackageHasInstalledOptions } fro
 result: boolean
 ```
 
-指示应用是否已安装。
+Check result for whether the bundle has been installed. **true** if installed, **false** otherwise.
 
 **Type:** boolean
 

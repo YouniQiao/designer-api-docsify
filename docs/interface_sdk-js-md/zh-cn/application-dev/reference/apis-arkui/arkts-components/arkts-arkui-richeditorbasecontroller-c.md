@@ -236,7 +236,7 @@ scrollToVisible(range?: TextRange): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| range | [TextRange](../arkts-apis/arkts-arkui-textrange-i.md) | 否 | 滚动到可视区域的内容范围，包括内容起始位置和终止位置。 &lt;br&gt;起始位置应小于等于结束位置，否则接口调用无效。起始位置小于0视为0，结束位置大于全文长度视为全文长度。 &lt;br&gt;未指定范围时，默认为全部内容。未指定起始位置，默认起始位置为0；未指定结束位置，默认结束位置为全文长度。 |
+| range | [TextRange](../arkts-apis/arkts-arkui-textcommon-textrange-i.md) | 否 | 滚动到可视区域的内容范围，包括内容起始位置和终止位置。 &lt;br&gt;起始位置应小于等于结束位置，否则接口调用无效。起始位置小于0视为0，结束位置大于全文长度视为全文长度。 &lt;br&gt;未指定范围时，默认为全部内容。未指定起始位置，默认起始位置为0；未指定结束位置，默认结束位置为全文长度。 |
 
 ## setCaretOffset
 
@@ -332,7 +332,7 @@ setStyledPlaceholder(styledString: StyledString): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| styledString | [StyledString](../arkts-apis/arkts-arkui-styledstring-c.md) | 是 | 设置属性字符串样式的提示文本，其优先级高于[placeholder](RichEditorAttribute#placeholder)属性设 置的提示文本。 &lt;br&gt;提示文本不支持触发属性字符串[GestureStyle](../arkts-apis/arkts-arkui-styledstring-gesturestyle-c.md/arkts-arkui-styledstring-gesturestyle-c.md)样式绑定的手势事件，以及[UrlStyle](../arkts-apis/arkts-arkui-styledstring-urlstyle-c.md/arkts-arkui-styledstring-urlstyle-c.md)样式的超链接跳转能力。 |
+| styledString | [StyledString](../arkts-apis/arkts-arkui-styledstring-styledstring-c.md) | 是 | 设置属性字符串样式的提示文本，其优先级高于[placeholder](RichEditorAttribute#placeholder)属性设 置的提示文本。 &lt;br&gt;提示文本不支持触发属性字符串[GestureStyle](../arkts-apis/arkts-arkui-styledstring-gesturestyle-c.md/arkts-arkui-styledstring-gesturestyle-c.md)样式绑定的手势事件，以及[UrlStyle](../arkts-apis/arkts-arkui-styledstring-urlstyle-c.md/arkts-arkui-styledstring-urlstyle-c.md)样式的超链接跳转能力。 |
 
 ## setTypingParagraphStyle
 

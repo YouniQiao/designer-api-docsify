@@ -40,9 +40,9 @@ Canceling a P2P connection.
 import wifi from '@ohos.wifi';
 
 try {
-  wifi.p2pCancelConnect();  
+	wifi.p2pCancelConnect();	
 }catch(error){
-  console.error("failed:" + JSON.stringify(error));
+	console.error("failed:" + JSON.stringify(error));
 }
 ```
 

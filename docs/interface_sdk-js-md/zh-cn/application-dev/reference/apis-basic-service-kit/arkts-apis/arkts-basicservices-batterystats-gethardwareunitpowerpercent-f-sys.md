@@ -1,11 +1,5 @@
 # getHardwareUnitPowerPercent（系统接口）
 
-## 导入模块
-
-```TypeScript
-import { batteryStats } from 'kits/@kit.BasicServicesKit';
-```
-
 ## getHardwareUnitPowerPercent
 
 ```TypeScript
@@ -40,9 +34,9 @@ function getHardwareUnitPowerPercent(type: ConsumptionType): double
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1. Parameter verification failed. |
-| 4600101 | Failed to connect to the service. |
-| 202 | Permission verification failed. A non-system application calls a system API. |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1. Parameter verification failed. |
+| [4600101](../../apis-basic-services-kit/errorcode-batteryStatistics.md#4600101-连接服务失败) | Failed to connect to the service. |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed. A non-system application calls a system API. |
 
 ## 示例
 
@@ -50,8 +44,8 @@ function getHardwareUnitPowerPercent(type: ConsumptionType): double
 try {
     let percent = batteryStats.getHardwareUnitPowerPercent(batteryStats.ConsumptionType.CONSUMPTION_TYPE_SCREEN);
     console.info('battery statistics percent of hardware is: ' + percent);
-} catch (err) {
-    console.error(`Failed to get battery statistics percent of hardware. Code: ${err.code}, message: ${err.message}`);
+} catch(err) {
+    console.error('get battery statistics percent of hardware failed, err: ' + err);
 }
 ```
 

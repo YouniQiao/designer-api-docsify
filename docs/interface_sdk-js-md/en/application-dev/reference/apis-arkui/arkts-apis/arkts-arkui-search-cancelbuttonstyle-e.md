@@ -1,6 +1,6 @@
 # CancelButtonStyle
 
-清除按钮样式。
+Enum for the style of cancel button
 
 **Since:** 23
 
@@ -13,10 +13,10 @@
 ## CONSTANT
 
 ```TypeScript
-CONSTANT = 0
+CONSTANT
 ```
 
-清除按钮常显样式。
+The value of button style constant
 
 **Since:** 23
 
@@ -24,17 +24,17 @@ CONSTANT = 0
 
 **Model restriction:** This API can be used only in the stage model.
 
-<!--Device-CancelButtonStyle-CONSTANT = 0--><!--Device-CancelButtonStyle-CONSTANT = 0-End-->
+<!--Device-CancelButtonStyle-CONSTANT--><!--Device-CancelButtonStyle-CONSTANT-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## INVISIBLE
 
 ```TypeScript
-INVISIBLE = 1
+INVISIBLE
 ```
 
-清除按钮常隐样式。
+The value of button style invisible
 
 **Since:** 23
 
@@ -42,17 +42,17 @@ INVISIBLE = 1
 
 **Model restriction:** This API can be used only in the stage model.
 
-<!--Device-CancelButtonStyle-INVISIBLE = 1--><!--Device-CancelButtonStyle-INVISIBLE = 1-End-->
+<!--Device-CancelButtonStyle-INVISIBLE--><!--Device-CancelButtonStyle-INVISIBLE-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## INPUT
 
 ```TypeScript
-INPUT = 2
+INPUT
 ```
 
-清除按钮输入样式。
+The value of button style input
 
 **Since:** 23
 
@@ -60,7 +60,7 @@ INPUT = 2
 
 **Model restriction:** This API can be used only in the stage model.
 
-<!--Device-CancelButtonStyle-INPUT = 2--><!--Device-CancelButtonStyle-INPUT = 2-End-->
+<!--Device-CancelButtonStyle-INPUT--><!--Device-CancelButtonStyle-INPUT-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 

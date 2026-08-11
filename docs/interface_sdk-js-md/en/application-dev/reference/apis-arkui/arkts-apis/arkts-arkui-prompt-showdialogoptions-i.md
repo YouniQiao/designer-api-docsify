@@ -1,6 +1,6 @@
 # ShowDialogOptions
 
-对话框的选项。
+Defines the option of show dialog.
 
 **Since:** 8
 
@@ -26,7 +26,7 @@ import { prompt } from 'kits/@kit.ArkUI';
 buttons?: [Button, Button?, Button?]
 ```
 
-对话框中按钮的数组，结构为：{text:'button', color: '#666666'}，支持1-3个按钮。其中第一个为positiveButton，第二个为negativeButton，第三个为neutralButton。
+Array of buttons in the dialog box.The array structure is {text:'button', color: '#666666'}.One to three buttons are supported. The first button is of the positiveButton type, the second is of the negativeButton type, and the third is of the neutralButton type.
 
 **Type:** [Button, Button?, Button?]
 
@@ -48,7 +48,7 @@ buttons?: [Button, Button?, Button?]
 message?: string
 ```
 
-内容文本。
+Text body.
 
 **Type:** string
 
@@ -70,7 +70,7 @@ message?: string
 title?: string
 ```
 
-标题文本。
+Title of the text to display.
 
 **Type:** string
 

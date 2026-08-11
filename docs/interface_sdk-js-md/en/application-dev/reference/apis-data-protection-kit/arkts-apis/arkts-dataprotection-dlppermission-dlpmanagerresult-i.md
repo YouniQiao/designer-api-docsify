@@ -1,6 +1,6 @@
 # DLPManagerResult
 
-表示打开DLP权限管理应用的结果。
+Represents information about the trigger of the DLP manager application.
 
 **Since:** 11
 
@@ -22,7 +22,7 @@ import { dlpPermission } from 'kits/@kit.DataProtectionKit';
 resultCode: number
 ```
 
-表示打开DLP权限管理应用并退出后返回的结果码。取值范围为0到3。
+Result code returned after the DLP manager application is started and exits. The value ranges from 0 to 3.
 
 **Type:** number
 
@@ -42,7 +42,7 @@ resultCode: number
 want: Want
 ```
 
-表示打开DLP权限管理应用并退出后返回的数据。
+Data returned after the DLP manager application is started and exits.
 
 **Type:** [Want](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-want-want-c.md)
 

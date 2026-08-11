@@ -1,6 +1,6 @@
 # PreloadItem
 
-描述原子化服务中模块的预加载模块信息。
+Describes the preloaded module information in the atomic service.
 
 **Since:** 9
 
@@ -16,7 +16,7 @@
 readonly moduleName: string
 ```
 
-模块名称。
+Module name.
 
 **Type:** string
 

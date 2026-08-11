@@ -20,12 +20,6 @@ ArkWeb内核通过该接口类的实例对象来控制应用创建的用来接�
 
 **系统能力：** SystemCapability.Web.Webview.Core
 
-## 导入模块
-
-```TypeScript
-import { webview } from 'kits/@kit.ArkWeb';
-```
-
 ## enterFullscreen
 
 ```TypeScript

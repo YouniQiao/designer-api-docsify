@@ -1,11 +1,5 @@
 # responsiveSpringMotion
 
-## 导入模块
-
-```TypeScript
-import { curves } from 'kits/@kit.ArkUI';
-```
-
 ## responsiveSpringMotion
 
 ```TypeScript
@@ -36,5 +30,5 @@ export function responsiveSpringMotion(response?: double, dampingFraction?: doub
 
 | 类型 | 说明 |
 | --- | --- |
-| [ICurve](arkts-arkui-curves-icurve-i.md) | 曲线对象。 &lt;br&gt;**说明:** &lt;br&gt;1、弹性跟手动画曲线为springMotion的一种特例，仅默认值不同。如果使用自定义参数的弹性曲线，推荐使用springMotion构造曲线；如果使用跟手动画，推荐使用默认参数的弹性跟手动画曲线。 &lt;br&gt;2、[animation]{ |
+| [ICurve](arkts-arkui-icurve-t.md) | 曲线对象。 &lt;br&gt;**说明:** &lt;br&gt;1、弹性跟手动画曲线为springMotion的一种特例，仅默认值不同。如果使用自定义参数的弹性曲线，推荐使用springMotion构造曲线；如果使用跟手动画，推荐使用默认参数的弹性跟手动画曲线。 &lt;br&gt;2、[animation]{ |
 

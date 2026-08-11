@@ -4,12 +4,12 @@
 
 ```TypeScript
 export declare function Refresh(
-    value: RefreshOptions, 
+    value: RefreshOptions,
     content_?: CustomBuilder,
 ): RefreshAttribute
 ```
 
-创建Refresh容器。
+Defines Refresh Component.
 
 **Since:** 23
 
@@ -17,7 +17,7 @@ export declare function Refresh(
 
 **Model restriction:** This API can be used only in the stage model.
 
-<!--Device-unnamed-export declare function Refresh(    value: RefreshOptions,     content_?: CustomBuilder,): RefreshAttribute--><!--Device-unnamed-export declare function Refresh(    value: RefreshOptions,     content_?: CustomBuilder,): RefreshAttribute-End-->
+<!--Device-unnamed-export declare function Refresh(    value: RefreshOptions,    content_?: CustomBuilder,): RefreshAttribute--><!--Device-unnamed-export declare function Refresh(    value: RefreshOptions,    content_?: CustomBuilder,): RefreshAttribute-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -25,14 +25,14 @@ export declare function Refresh(
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | [RefreshOptions](../arkts-components/arkts-arkui-refreshoptions-i.md) | Yes |  |
-| content_ | [CustomBuilder](../arkts-components/arkts-arkui-custombuilder-t.md) | No | 容器内容。 |
+| value | [RefreshOptions](../arkts-components/arkts-arkui-refreshoptions-i.md) | Yes | value |
+| content_ | [CustomBuilder](../arkts-components/arkts-arkui-custombuilder-t.md) | No | container |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [RefreshAttribute](arkts-arkui-refresh-refreshattribute-i.md) | 返回Refresh组件的属性。 |
+| [RefreshAttribute](arkts-arkui-refresh-refreshattribute-i.md) | The attribute of the grid |
 
 
 ## Refresh
@@ -44,11 +44,11 @@ export declare function Refresh(
 ): RefreshAttribute
 ```
 
-定义刷新组件。
+Defines Refresh Component.
 
-**Since:** 26.0.0
+**Since:** 26.1.0
 
-**ArkTS mode:** ArkTS-Sta only, since version 26.0.0.
+**ArkTS mode:** ArkTS-Sta only, since version 26.1.0.
 
 **Decorator:** @Builder
 
@@ -62,12 +62,12 @@ export declare function Refresh(
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| style_ | [CustomBuilderT](../arkts-components/arkts-arkui-custombuildert-t.md)&lt;RefreshAttribute&gt; | Yes | 创建刷新的样式。 |
+| style_ | [CustomBuilderT](../arkts-components/arkts-arkui-custombuildert-t.md)&lt;RefreshAttribute&gt; | Yes | The style to create a Refresh. |
 | content_ | [CustomBuilder](../arkts-components/arkts-arkui-custombuilder-t.md) | No |  |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [RefreshAttribute](arkts-arkui-refresh-refreshattribute-i.md) | Refresh的属性。 |
+| [RefreshAttribute](arkts-arkui-refresh-refreshattribute-i.md) | The attribute of the Refresh. |
 

@@ -1,10 +1,6 @@
 # DepthSpaceType (System API)
 
-景深空间类型枚举。
-
-> **说明：**
-> 
-> 全局模式下，其余进程复用壁纸进程的背景、深度图及相机和光照参数，且不可自定义。
+Depth space type enumeration.
 
 **Since:** 26.0.0
 
@@ -22,7 +18,7 @@
 INSTANCE = 0
 ```
 
-实例模式。使用当前进程的背景、深度图、相机参数及光照参数。
+Instance mode.
 
 **Since:** 26.0.0
 
@@ -42,7 +38,7 @@ INSTANCE = 0
 GLOBAL = 1
 ```
 
-全局模式。使用全局的背景、深度图、相机参数及光照参数。
+Global mode.
 
 **Since:** 26.0.0
 

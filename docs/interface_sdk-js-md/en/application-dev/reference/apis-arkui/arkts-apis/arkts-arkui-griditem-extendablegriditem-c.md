@@ -1,6 +1,6 @@
 # ExtendableGridItem
 
-可扩展的GridItem组件。
+Defines the Extendable GridItem.
 
 **Inheritance/Implementation:** ExtendableGridItem implements [GridItemAttribute](../arkts-components/arkts-arkui-griditem-attribute.md/arkts-arkui-griditem-attribute.md)
 
@@ -22,7 +22,7 @@ static $_instantiate<T extends ExtendableGridItem>(
   ): T
 ```
 
-可扩展的GridItem组件的构造函数。
+Constructor of Extendable GridItem.
 
 **Since:** 26.0.0
 
@@ -58,7 +58,7 @@ static _instantiateImpl<T extends ExtendableGridItem>(
   ): void
 ```
 
-扩展网格项组件入口
+Entry of Extendable GridItem.
 
 **Since:** 26.0.0
 
@@ -86,7 +86,7 @@ static _instantiateImpl<T extends ExtendableGridItem>(
 public setGridItemOptions(value?: GridItemOptions): this
 ```
 
-设置GridItem组件参数。
+Set the GridItem Options.
 
 **Since:** 26.0.0
 

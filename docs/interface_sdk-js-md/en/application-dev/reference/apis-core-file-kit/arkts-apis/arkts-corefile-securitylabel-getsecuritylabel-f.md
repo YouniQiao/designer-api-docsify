@@ -12,7 +12,7 @@ import { securityLabel } from 'kits/@kit.CoreFileKit';
 function getSecurityLabel(path: string): Promise<string>
 ```
 
-获取文件或目录的数据安全等级。若未设置过数据安全等级则默认返回“s3”。使用Promise异步回调。
+Obtains the data security level of a file or directory. If no data security level has been set, **s3** is returned by default. This API uses a promise to return the result.
 
 **Since:** 9
 
@@ -26,13 +26,13 @@ function getSecurityLabel(path: string): Promise<string>
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| path | string | Yes | 文件路径。 |
+| path | string | Yes | File path. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;string&gt; | 返回数据安全等级。 |
+| Promise&lt;string&gt; | Promise used to return the data security level. |
 
 **Error codes:**
 
@@ -66,7 +66,7 @@ securityLabel.getSecurityLabel(filePath).then((type: string) => {
 function getSecurityLabel(path: string, callback: AsyncCallback<string>): void
 ```
 
-获取文件或目录的数据安全等级。若未设置过数据安全等级则默认返回“s3”。使用callback异步回调。
+Obtains the data security level of a file or directory. If no data security level has been set, **s3** is returned by default. This API uses an asynchronous callback to return the result.
 
 **Since:** 9
 
@@ -80,8 +80,8 @@ function getSecurityLabel(path: string, callback: AsyncCallback<string>): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| path | string | Yes | 文件路径。 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;string&gt; | Yes | 异步获取数据安全等级之后的回调。 |
+| path | string | Yes | File path. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;string&gt; | Yes | Callback after the data security level is obtained asynchronously. |
 
 **Error codes:**
 

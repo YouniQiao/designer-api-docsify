@@ -1,6 +1,6 @@
 # RenderStrategy
 
-RenderStrategy 的枚举。定义图形渲染策略。
+Enumerates rendering strategies for drawing rounded corners.
 
 **Since:** 22
 
@@ -16,7 +16,10 @@ RenderStrategy 的枚举。定义图形渲染策略。
 FAST = 0
 ```
 
-当前组件及其子组件将直接绘制到画布上，并应用圆角效果。
+Online rendering mode. The content to be rendered is clipped with rounded corners and directly rendered to the main canvas.
+
+Note: Online rendering may cause display anomalies in certain scenarios. For example, when blur effects are applied within rounded corner components, background colors may interact and create gradient overlay effects. For detailed behavior, see   
+[Example 3: Configuring Offscreen Rounded Corners](../../../reference/apis-arkui/arkui-ts/ts-universal-attributes-border.md#example-3-configuring-offscreen-rounded-corners).
 
 **Since:** 22
 
@@ -38,7 +41,11 @@ FAST = 0
 OFFSCREEN = 1
 ```
 
-当前组件及其子组件会先被画到一个离屏画布上，然后进行一些图形渲染操作，最后绘制到主画布上。
+Offscreen rendering mode. The content to be rendered is first rendered to the offscreen canvas without rounded corners, and then clipped with rounded corners and rendered to the main canvas.
+
+**NOTE：**
+
+1. Compared with online rendering, offscreen rendering requires additional performance overhead.2. In offscreen rendering, the content is first rendered on an additional canvas, and then rendered on the main canvas.3. Use offscreen rendering primarily for multi-layer components requiring rounded corners. For single components,it has effect only when the [clip](arkts-arkui-common-commonmethod-i.md#clip) attribute, [background](../../apis-ability-kit/arkts-apis/arkts-app-ability-common.md/arkts-app-ability-common.md),or [foreground color](../../apis-ability-kit/arkts-apis/arkts-app-ability-common.md/arkts-app-ability-common.md) is configured.
 
 **Since:** 22
 

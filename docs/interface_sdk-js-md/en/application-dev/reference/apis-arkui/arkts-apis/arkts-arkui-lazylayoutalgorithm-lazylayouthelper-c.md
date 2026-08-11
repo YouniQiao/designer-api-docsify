@@ -1,6 +1,6 @@
 # LazyLayoutHelper
 
-懒布局算法的帮助器类，为懒布局提供布局方向和视图位置信息。
+Helper class for lazy layout algorithm.Provides layout direction and view position information for lazy layout.
 
 **Since:** 26.0.0
 
@@ -16,7 +16,7 @@
 getLazyLayoutDirection(): LazyLayoutDirection
 ```
 
-获取懒加载布局方向。
+Get the lazy layout direction.
 
 **Since:** 26.0.0
 
@@ -40,7 +40,7 @@ getLazyLayoutDirection(): LazyLayoutDirection
 getViewEnd(): int
 ```
 
-获取可见视图的结束位置。
+Get the end position of the visible view.
 
 **Since:** 26.0.0
 
@@ -64,7 +64,7 @@ getViewEnd(): int
 getViewStart(): int
 ```
 
-获取可见视图的起始位置。
+Get the start position of the visible view.
 
 **Since:** 26.0.0
 
@@ -88,7 +88,7 @@ getViewStart(): int
 setAdjustedOffset(offset: int): void
 ```
 
-设置懒加载布局调整偏移量。
+Set the adjusted offset for the lazy layout.
 
 **Since:** 26.0.0
 
@@ -104,7 +104,7 @@ setAdjustedOffset(offset: int): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| offset | int | Yes | 设置要的调整偏移值。 &lt;br&gt;单位:单位：px。 |
+| offset | int | Yes | The adjusted offset value to set. &lt;br&gt;Unit: px. |
 
 ## setChildrenInactive
 
@@ -112,9 +112,9 @@ setAdjustedOffset(offset: int): void
 setChildrenInactive(children: int[]): void
 ```
 
-设置子项不活动。
+Set children inactive.
 
-如果子组件是通过ForEach或不带virtualScroll的Repeat生成的，将其设置为inactive后，将不会显示。如果子组件是通过LazyForEach或者通过带virtualScroll的Repeat来生成的，将其设置为非活动状态后将被销毁或回收。带有virtualScroll的LazyForEach和Repeat只支持连续活动的子组件，在两个活动的子组件之间设置子组件为inactive不会生效。布局在显示区域之外的子组件将自动设置为非活动状态。
+If child components are generated via ForEach or Repeat without virtualScroll,they will not be displayed after being set to inactive.If child components are generated via LazyForEach or Repeat with virtualScroll,they will be destroyed or recycled after being set to inactive.LazyForEach and Repeat with virtualScroll only support consecutive active child components;setting a child component to inactive between two active child components will not take effect.Child components laid out outside the display area will be automatically set to inactive.
 
 **Since:** 26.0.0
 
@@ -130,5 +130,5 @@ setChildrenInactive(children: int[]): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| children | int[] | Yes | 要设置非活动状态的子组件的索引。 |
+| children | int[] | Yes | The indices of child components to set inactive. |
 

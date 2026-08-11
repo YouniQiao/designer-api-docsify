@@ -1,6 +1,6 @@
 # GridItemStyle
 
-GridItem样式枚举。
+Defines the grid item style.
 
 **Since:** 23
 
@@ -16,7 +16,7 @@ GridItem样式枚举。
 NONE = 0
 ```
 
-无样式。
+Show none style.
 
 **Since:** 23
 
@@ -34,7 +34,7 @@ NONE = 0
 PLAIN = 1
 ```
 
-显示Hover、Press态样式。
+Show plain style.
 
 **Since:** 23
 

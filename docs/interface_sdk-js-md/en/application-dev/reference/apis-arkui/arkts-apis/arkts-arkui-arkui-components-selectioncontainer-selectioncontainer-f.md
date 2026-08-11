@@ -12,7 +12,7 @@ import { SelectionContainerInstance, SelectionContainer, OnMenuItemClickWithText
 export declare function SelectionContainer(content_?: CustomBuilder): SelectionContainerAttribute
 ```
 
-创建一个SelectionContainer组件。
+Defines SelectionContainer component.
 
 **Since:** 26.0.0
 
@@ -28,7 +28,7 @@ export declare function SelectionContainer(content_?: CustomBuilder): SelectionC
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| content_ | [CustomBuilder](../arkts-components/arkts-arkui-custombuilder-t.md) | No | 容器。 |
+| content_ | [CustomBuilder](../arkts-components/arkts-arkui-custombuilder-t.md) | No | container. |
 
 **Return value:**
 
@@ -45,7 +45,7 @@ export declare function SelectionContainer(
 ): SelectionContainerAttribute
 ```
 
-创建一个SelectionContainer组件。需要在组件属性设置开始时调用setSelectionContainerOptions，并在组件属性设置结束时调用applyAttributesFinish。
+Defines SelectionContainer component.It requires calling setSelectionContainerOptions at start of the component attribute set-up,and it requires calling applyAttributesFinish at the end of the component attribute set-up.
 
 **Since:** 26.0.0
 
@@ -63,7 +63,7 @@ export declare function SelectionContainer(
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| style | [CustomBuilderT](../arkts-components/arkts-arkui-custombuildert-t.md)&lt;SelectionContainerAttribute&gt; | Yes | 设置SelectionContainer属性的回调。 |
+| style | [CustomBuilderT](../arkts-components/arkts-arkui-custombuildert-t.md)&lt;SelectionContainerAttribute&gt; | Yes | the callback to set up SelectionContainer's attributes. |
 
 **Return value:**
 

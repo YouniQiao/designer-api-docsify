@@ -10,12 +10,6 @@ Filter效果类，用于将模糊、边缘像素扩展、水波纹等效果添�
 
 **系统能力：** SystemCapability.Graphics.Drawing
 
-## 导入模块
-
-```TypeScript
-import { uiEffect } from 'kits/@kit.ArkGraphics2D';
-```
-
 ## blur
 
 ArkTS-Dyn:
@@ -56,15 +50,13 @@ blur(blurRadius: double): Filter
 // xxx.ts
 import { uiEffect } from '@kit.ArkGraphics2D';
 
-// 创建Filter实例
 let filter: uiEffect.Filter = uiEffect.createFilter();
-// 设置模糊半径为10px
 filter.blur(10);
 
 @Entry
 @Component
 struct UIEffectFilterExample {
-    build() {
+    build(){
         Column({ space: 15 }) {
             Text('UIEffectFilter').fontSize(20).width('75%').fontColor('#DCDCDC')
             Image($r('app.media.foreground'))
@@ -73,7 +65,6 @@ struct UIEffectFilterExample {
                 .backgroundImage($r('app.media.background'))
                 .backgroundImagePosition(Alignment.Center)
                 .backgroundImageSize({ width: 90, height: 90 })
-                // 将Filter效果应用到组件背景
                 .backgroundFilter(filter)
         }
         .height('100%')
@@ -131,15 +122,12 @@ hdrBrightnessRatio(ratio: double): Filter
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 201 | 权限校验失败，应用无权限使用该API，需要申请权限。<br>**适用版本：** 24+ |
-| 202 | 权限校验失败，非系统应用调用系统接口。<br>**适用版本：** 20 - 23 |
+| [201](../../errorcode-universal.md#201-权限校验失败) | 权限校验失败，应用无权限使用该API，需要申请权限。<br>**适用版本：** 24+ |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | 权限校验失败，非系统应用调用系统接口。<br>**适用版本：** 20 - 23 |
 
 ## 示例
 
 ```TypeScript
-// 创建Filter实例
-let filter: uiEffect.Filter = uiEffect.createFilter();
-// 设置HDR提亮倍数为2.0
-filter.hdrBrightnessRatio(2.0);
+filter.hdrBrightnessRatio(2.0)
 ```
 

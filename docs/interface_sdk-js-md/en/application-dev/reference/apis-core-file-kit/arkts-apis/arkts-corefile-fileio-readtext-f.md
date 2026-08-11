@@ -13,7 +13,7 @@ declare function readText(
 ): Promise<string>
 ```
 
-基于文本方式读取文件（即直接读取文件的文本内容），使用Promise异步回调。
+Reads the text content of a file. This API uses a promise to return the result.
 
 **Since:** 7
 
@@ -31,14 +31,14 @@ declare function readText(
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| filePath | string | Yes | 待读取文件的应用沙箱路径。 |
-| options | {     position?: number;     length?: number;     encoding?: string;   } | No | 支持如下选项：&lt;br/&gt;-?position，number类型，表示期望读取文件的位置，单位为Byte。可选，默认从当前位置开始读取。&lt;br/&gt;-?length，number 类型，表示期望读取数据的长度，单位为Byte。可选，默认缓冲区长度减去偏移长度。&lt;br/&gt;-?encoding，string类型，当数据是?string?类型时有效，表示数据的编码方式，默认?'utf-8'，仅支持?'utf- 8'。 |
+| filePath | string | Yes | Application sandbox path of the file to read. |
+| options | {     position?: number;     length?: number;     encoding?: string;   } | No | The options are as follows:&lt;br&gt;- **position** (number): position of the data to read in the file, in bytes. This parameter is optional. By default, data is read from the current position.&lt;br&gt;- **length** (number): length of the data to read, in bytes. This parameter is optional. The default value is the buffer length minus the offset.&lt;br&gt;- **encoding** (string): format of the data to be encoded.&lt;br&gt;It is valid only when the data is of the string type.&lt;br&gt;The default value is **'utf-8'**, which is the only value supported. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;string&gt; | Promise对象。返回读取文件的内容。 |
+| Promise&lt;string&gt; | Promise that returns the file content read. |
 
 
 ## readText
@@ -55,7 +55,7 @@ declare function readText(
 ): void
 ```
 
-基于文本方式读取文件（即直接读取文件的文本内容），使用callback异步回调。
+Reads the text content of a file. This API uses an asynchronous callback to return the result.
 
 **Since:** 7
 
@@ -73,7 +73,7 @@ declare function readText(
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| filePath | string | Yes | 待读取文件的应用沙箱路径。 |
-| options | {     position?: number;     length?: number;     encoding?: string;   } | Yes | 支持如下选项：&lt;br/&gt;-?position，number类型，表示期望读取文件的位置，单位为Byte。可选，默认从当前位置开始读取。&lt;br/&gt;-?length，number 类型，表示期望读取数据的长度，单位为Byte。可选，默认缓冲区长度减去偏移长度。&lt;br/&gt;-?encoding，string类型，表示数据的编码方式，默认?'utf-8'，仅支持?'utf-8'。 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;string&gt; | Yes | 回调函数，返回读取文件的内容。 |
+| filePath | string | Yes | Application sandbox path of the file to read. |
+| options | {     position?: number;     length?: number;     encoding?: string;   } | Yes | The options are as follows:&lt;br&gt;- **position** (number): position of the data to read in the file, in bytes. This parameter is optional. By default, data is read from the current position.&lt;br&gt;- **length** (number): length of the data to read, in bytes. This parameter is optional. The default value is the buffer length minus the offset.&lt;br&gt;- **encoding**: format of the data to be encoded. The default value is **'utf-8'**, which is the only value supported. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;string&gt; | Yes | Callback used to return the file content read. |
 

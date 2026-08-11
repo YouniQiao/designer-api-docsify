@@ -157,7 +157,7 @@ Set Rect options.
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| options | [RectOptions](arkts-arkui-rect-rectoptions-i.md) \| RoundedRectOptions | 否 | Rect constructor options |
+| options | [RectOptions](../arkts-components/arkts-arkui-rectoptions-i.md) \| RoundedRectOptions | 否 | Rect constructor options |
 
 **返回值：**
 

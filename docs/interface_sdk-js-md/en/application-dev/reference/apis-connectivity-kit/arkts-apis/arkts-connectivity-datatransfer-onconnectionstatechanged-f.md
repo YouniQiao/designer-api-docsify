@@ -12,9 +12,9 @@ import { dataTransfer } from 'kits/@kit.ConnectivityKit';
 function onConnectionStateChanged(callback: Callback<ConnectionResult>): void
 ```
 
-订阅连接状态变化事件。
+Subscribes to the connection state change event.
 
-只有授予了ohos.permission.NEARLINK_ACCESS权限的应用程序才能访问此事件。
+This event is accessible only to applications that granted the ohos.permission.NEARLINK_ACCESS permission.
 
 **Since:** 26.0.0
 
@@ -30,12 +30,12 @@ function onConnectionStateChanged(callback: Callback<ConnectionResult>): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;ConnectionResult&gt; | Yes | 用于监听状态改变事件的回调。 |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;ConnectionResult&gt; | Yes | Callback used to listen for the state change event. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 801 | Capability not supported because the chip does not support it. |
+| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported because the chip does not support it. |
 | 36100099 | Operation failed. |
 

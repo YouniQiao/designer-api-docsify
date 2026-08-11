@@ -22,6 +22,6 @@ declare type OnDidChangeCallback = (rangeBefore: TextRange, rangeAfter: TextRang
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| rangeBefore | [TextRange](arkts-arkui-textrange-i.md) | 是 | Range of the text to be changed. |
-| rangeAfter | [TextRange](arkts-arkui-textrange-i.md) | 是 | Range of the text added. |
+| rangeBefore | [TextRange](arkts-arkui-textcommon-textrange-i.md) | 是 | Range of the text to be changed. |
+| rangeAfter | [TextRange](arkts-arkui-textcommon-textrange-i.md) | 是 | Range of the text added. |
 

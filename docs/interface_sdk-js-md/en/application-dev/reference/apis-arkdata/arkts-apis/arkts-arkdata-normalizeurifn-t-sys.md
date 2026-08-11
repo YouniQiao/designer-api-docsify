@@ -4,7 +4,7 @@
 type NormalizeUriFn = (uri: string, callback: AsyncCallback<string>) => void
 ```
 
-用户给定的URI转换为服务端使用的URI操作的属性类型。
+Callback function called when converting the given URI into a normalized URI.
 
 **Since:** 23
 

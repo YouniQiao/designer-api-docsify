@@ -1,6 +1,6 @@
 # CameraType
 
-枚举，相机类型。
+Enumerates the camera types.
 
 **Since:** 10
 
@@ -16,7 +16,7 @@
 CAMERA_TYPE_DEFAULT = 0
 ```
 
-默认相机类型。
+Default camera type.
 
 **Since:** 10
 
@@ -34,7 +34,7 @@ CAMERA_TYPE_DEFAULT = 0
 CAMERA_TYPE_WIDE_ANGLE = 1
 ```
 
-广角相机。
+Wide camera.
 
 **Since:** 10
 
@@ -52,7 +52,7 @@ CAMERA_TYPE_WIDE_ANGLE = 1
 CAMERA_TYPE_ULTRA_WIDE = 2
 ```
 
-超广角相机。
+Ultra-wide camera.
 
 **Since:** 10
 
@@ -70,7 +70,7 @@ CAMERA_TYPE_ULTRA_WIDE = 2
 CAMERA_TYPE_TELEPHOTO = 3
 ```
 
-长焦相机。
+Telephoto camera.
 
 **Since:** 10
 
@@ -88,7 +88,7 @@ CAMERA_TYPE_TELEPHOTO = 3
 CAMERA_TYPE_TRUE_DEPTH = 4
 ```
 
-带景深信息的相机。
+Camera with depth of field information.
 
 **Since:** 10
 

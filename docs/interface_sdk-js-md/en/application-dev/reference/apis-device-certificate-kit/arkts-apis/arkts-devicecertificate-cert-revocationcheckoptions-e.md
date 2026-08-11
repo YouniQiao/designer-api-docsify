@@ -1,6 +1,6 @@
 # RevocationCheckOptions
 
-表示证书链在线校验证书吊销状态选项的枚举。
+Enumerates the options for checking the certificate revocation status.
 
 **Since:** 12
 
@@ -16,7 +16,7 @@
 REVOCATION_CHECK_OPTION_PREFER_OCSP = 0
 ```
 
-优先采用OCSP进行校验，默认采用CRL校验。
+Use OCSP over CRL (default).
 
 **Since:** 12
 
@@ -34,7 +34,7 @@ REVOCATION_CHECK_OPTION_PREFER_OCSP = 0
 REVOCATION_CHECK_OPTION_ACCESS_NETWORK = 1
 ```
 
-支持通过访问网络获取CRL或OCSP响应进行吊销状态的校验，默认为关闭。仅支持通过证书中的CDP扩展中获取首个CRL分发点地址以检查证书吊销状态，或通过AIA扩展获取首个OCSP服务器地址以进行吊销状态验证，且仅支持http协议。必须声明ohos.permission.INTERNET权限。
+Obtain the CRL/OCSP response over the network. By default, it is disabled. Only the first CRL distribution point address can be obtained from the CDP extension of the certificate to check the certificate revocation status, or the first OCSP server address can be obtained from the AIA extension of the certificate to check the certificate revocation status. Moreover, only HTTP is supported. You must declare the ohos.permission.INTERNET permission.
 
 **Since:** 12
 
@@ -52,7 +52,7 @@ REVOCATION_CHECK_OPTION_ACCESS_NETWORK = 1
 REVOCATION_CHECK_OPTION_FALLBACK_NO_PREFER = 2
 ```
 
-当ACCESS_NETWORK选项打开时有效，如果优选的校验方法由于网络原因导致无法校验证书状态，则采用备选的方案进行校验。
+This parameter is valid when the **ACCESS_NETWORK** option is enabled. It allows the alternative solution to be used to obtain the certificate revocation status if the preferred solution cannot be used due to network problems.
 
 **Since:** 12
 
@@ -70,7 +70,7 @@ REVOCATION_CHECK_OPTION_FALLBACK_NO_PREFER = 2
 REVOCATION_CHECK_OPTION_FALLBACK_LOCAL = 3
 ```
 
-当ACCESS_NETWORK选项打开时有效，如果在线获取CRL和OCSP响应都由于网络的原因导致无法校验证书状态，则采用本地设置的CRL和OCSP响应进行校验。
+This parameter is valid when the **ACCESS_NETWORK** option is enabled. It allows the locally configured CRL/OCSP response to be used to check the certificate revocation status if the online CRL/OCSP response cannot be used due to network problems.
 
 **Since:** 12
 
@@ -88,11 +88,12 @@ REVOCATION_CHECK_OPTION_FALLBACK_LOCAL = 3
 REVOCATION_CHECK_OPTION_CHECK_INTERMEDIATE_CA_ONLINE = 4
 ```
 
-当ACCESS_NETWORK选项打开时有效。如果开启了该能力，对终端实体证书OCSP或CRL校验成功，则会继续校验中间证书的吊销情况。默认关闭。
+This parameter is valid when the **ACCESS_NETWORK** option is enabled. If this capability is enabled, the system continues to check the revocation status of the intermediate certificate if the OCSP or CRL check of the leaf certificate succeeds. This capability is disabled by default.
 
-> **说明：**
+> **NOTE：**
 > 
-> 当前能力与REVOCATION_CHECK_OPTION_LOCAL_CRL_ONLY_CHECK_END_ENTITY_CERT不能同时开启。
+> This capability and **REVOCATION_CHECK_OPTION_LOCAL_CRL_ONLY_CHECK_END_ENTITY_CERT** cannot be enabled at
+> the same time.
 
 **Since:** 22
 
@@ -110,11 +111,12 @@ REVOCATION_CHECK_OPTION_CHECK_INTERMEDIATE_CA_ONLINE = 4
 REVOCATION_CHECK_OPTION_LOCAL_CRL_ONLY_CHECK_END_ENTITY_CERT = 5
 ```
 
-如果开启了该能力，则会拿本地吊销列表校验终端实体证书的吊销情况。默认关闭。
+If this capability is enabled, the system checks the revocation status of the leaf certificate based on the local CRL. This capability is disabled by default.
 
-> **说明：**
+> **NOTE：**
 > 
-> 当前能力与REVOCATION_CHECK_OPTION_CHECK_INTERMEDIATE_CA_ONLINE不能同时开启。
+> This capability and **REVOCATION_CHECK_OPTION_CHECK_INTERMEDIATE_CA_ONLINE** cannot be enabled at the same
+> time.
 
 **Since:** 22
 
@@ -132,7 +134,7 @@ REVOCATION_CHECK_OPTION_LOCAL_CRL_ONLY_CHECK_END_ENTITY_CERT = 5
 REVOCATION_CHECK_OPTION_IGNORE_NETWORK_ERROR = 6
 ```
 
-如果开启了该能力，通过访问网络获取CRL或OCSP响应进行吊销状态的校验时，忽略网络不可达错误。默认关闭，默认情况下，网络不可达可能导致证书链校验失败。
+If this capability is enabled, the system ignores the network unreachable error when obtaining the CRL or OCSP response over the network for revocation status check. This capability is disabled by default. By default, the network unreachable error may cause certificate chain validation failure.
 
 **Since:** 23
 

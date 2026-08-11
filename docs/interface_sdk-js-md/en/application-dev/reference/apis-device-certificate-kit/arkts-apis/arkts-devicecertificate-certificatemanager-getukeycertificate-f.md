@@ -12,7 +12,7 @@ import { certificateManager } from 'kits/@kit.DeviceCertificateKit';
 function getUkeyCertificate(keyUri: string, ukeyInfo: UkeyInfo): Promise<CMResult>
 ```
 
-获取USB Key证书凭据详细信息。使用Promise异步回调。
+Obtains the details of a USB Key credential. This API uses a promise to return the result.
 
 **Since:** 22
 
@@ -28,25 +28,25 @@ function getUkeyCertificate(keyUri: string, ukeyInfo: UkeyInfo): Promise<CMResul
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| keyUri | string | Yes | 表示USB Key证书凭据的唯一标识符，长度限制256字节以内 |
-| ukeyInfo | [UkeyInfo](arkts-devicecertificate-certificatemanager-ukeyinfo-i.md) | Yes | 表示USB Key证书凭据的属性信息 |
+| keyUri | string | Yes | Unique identifier of a USB Key credential. The value contains up to 256 bytes |
+| ukeyInfo | [UkeyInfo](arkts-devicecertificate-certificatemanager-ukeyinfo-i.md) | Yes | Attributes of a USB Key credential |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;CMResult&gt; | Promise对象，返回获取到的USB Key证书凭据详情的结果，返回值为 [CMResult]{ |
+| Promise&lt;CMResult&gt; | Promise used to return the obtained USB Key credential details. The return value is the credentialDetailList attribute of the [CMResult]{ |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 17500011 | Indicates that the input parameters validation failed. For example, the parameter format is incorrect or the value range is invalid. |
-| 801 | Capability not supported. The application does not have the permission required to call the API. |
-| 17500010 | Indicates that access USB Key service failed. |
-| 201 | Permission verification failed. |
-| 17500002 | Indicates that the certificate does not exist. |
-| 17500001 | Internal error. Possible causes: 1. IPC communication failed; &lt;br&gt;2. Memory operation error; 3. File operation error. Please try again. |
+| [17500011](../errorcode-certManager.md#17500011-failed-to-validate-the-input-parameter) | Indicates that the input parameters validation failed. For example, the parameter format is incorrect or the value range is invalid. |
+| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. The application does not have the permission required to call the API. |
+| [17500010](../errorcode-certManager.md#17500010-failed-to-access-the-usb-credential) | Indicates that access USB Key service failed. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed. |
+| [17500002](../errorcode-certManager.md#17500002-certificate-not-exist) | Indicates that the certificate does not exist. |
+| [17500001](../errorcode-certManager.md#17500001-internal-error) | Internal error. Possible causes: 1. IPC communication failed; &lt;br&gt;2. Memory operation error; 3. File operation error. Please try again. |
 
 ## Examples
 
@@ -56,14 +56,13 @@ import { BusinessError } from '@kit.BasicServicesKit';
 
 let keyUri: string = 'test'; /* Unique identifier of the USB credential. The value is omitted here. */
 let ukeyInfo: certificateManager.UkeyInfo = { /* USB credential attributes. The value is omitted here. */
-  certPurpose: certificateManager.CertificatePurpose.PURPOSE_DEFAULT,
-}
+    certPurpose: certificateManager.CertificatePurpose.PURPOSE_DEFAULT,
+  }
 try {
   certificateManager.getUkeyCertificate(keyUri, ukeyInfo).then((cmResult) => {
-    let list = cmResult.credentialDetailList;
-    console.info('Succeeded in getting detail of USB key certificate.');
-  }).catch((error: Error) => {
-    let err = error as BusinessError;
+      let list = cmResult.credentialDetailList;
+      console.info('Succeeded in getting detail of USB key certificate.');
+  }).catch((err: BusinessError) => {
     console.error(`Failed to get detail of USB key certificate. Code: ${err.code}, message: ${err.message}`);
   })
 } catch (error) {

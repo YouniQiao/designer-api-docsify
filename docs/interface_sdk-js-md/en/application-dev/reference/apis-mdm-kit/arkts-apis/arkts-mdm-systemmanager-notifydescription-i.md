@@ -1,6 +1,6 @@
 # NotifyDescription
 
-企业自定义更新通知说明。
+Represents the update notification defined by an enterprise.
 
 **Since:** 12
 
@@ -22,7 +22,7 @@ import { systemManager } from 'kits/@kit.MDMKit';
 installTips?: string
 ```
 
-企业自定义更新提示。
+Update tips provided by the enterprise.
 
 **Type:** string
 
@@ -42,7 +42,7 @@ installTips?: string
 installTipsDetail?: string
 ```
 
-企业自定义更新提示详情。
+Details about the update tips customized by the enterprise.
 
 **Type:** string
 

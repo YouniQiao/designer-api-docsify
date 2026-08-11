@@ -8,7 +8,7 @@ type DeleteFn = (
 ) => void
 ```
 
-删除操作的属性类型。
+Callback function called when deleting one or more data records in the database.
 
 **Since:** 23
 

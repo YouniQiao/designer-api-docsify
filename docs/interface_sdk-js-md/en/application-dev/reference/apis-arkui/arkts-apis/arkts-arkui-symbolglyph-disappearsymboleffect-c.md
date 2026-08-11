@@ -1,6 +1,6 @@
 # DisappearSymbolEffect
 
-DisappearSymbolEffect继承自父类SymbolEffect。
+Defines DisappearSymbolEffect class.
 
 **Inheritance/Implementation:** DisappearSymbolEffect extends [SymbolEffect](../arkts-components/arkts-arkui-symboleffect-c.md/arkts-arkui-symboleffect-c.md)
 
@@ -18,7 +18,7 @@ DisappearSymbolEffect继承自父类SymbolEffect。
 constructor(scope?: EffectScope)
 ```
 
-AppearSymbolEffect的构造函数，出现动效。
+constructor.
 
 **Since:** 23
 
@@ -34,7 +34,7 @@ AppearSymbolEffect的构造函数，出现动效。
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| scope | [EffectScope](../arkts-components/arkts-arkui-effectscope-e.md) | No | 动效范围。&lt;br/&gt;默认值：EffectScope.LAYER |
+| scope | [EffectScope](../arkts-components/arkts-arkui-effectscope-e.md) | No | The scope type of symbol effect. |
 
 ## scope
 
@@ -42,9 +42,7 @@ AppearSymbolEffect的构造函数，出现动效。
 scope?: EffectScope
 ```
 
-动效范围。
-
-默认值：EffectScope.LAYER
+The scope type of symbol effect.
 
 **Type:** [EffectScope](../arkts-components/arkts-arkui-effectscope-e.md)
 

@@ -10,12 +10,6 @@
 
 **系统能力：** SystemCapability.MultimodalInput.Input.InputSimulator
 
-## 导入模块
-
-```TypeScript
-import { inputEventClient } from 'kits/@kit.InputKit';
-```
-
 ## isIntercepted
 
 ```TypeScript

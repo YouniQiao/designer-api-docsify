@@ -14,12 +14,6 @@ API version 21及之前版本，仅支持IPv4。从API version 22开始，支持
 
 **系统能力：** SystemCapability.Customization.EnterpriseDeviceManager
 
-## 导入模块
-
-```TypeScript
-import { networkManager } from 'kits/@kit.MDMKit';
-```
-
 ## action
 
 ```TypeScript
@@ -76,7 +70,7 @@ direction?: Direction
 
 移除域名过滤规则时非必填，当值为空时，表示清空所有的[Direction](arkts-mdm-networkmanager-direction-e.md)链，且domainName，appUid也必须传入空值。
 
-**类型：** [Direction](arkts-mdm-networkmanager-direction-e.md)
+**类型：** [Direction](../../apis-ime-kit/arkts-apis/arkts-ime-inputmethod-direction-e.md)
 
 **起始版本：** 15
 

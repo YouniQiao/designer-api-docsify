@@ -1,6 +1,6 @@
 # SourceType
 
-触屏来源的设备类型，当前仅支持触摸屏、触控板类型上报。
+Enumerates touch sources. Currently, only the touchscreen and touchpad are supported.
 
 **Since:** 9
 
@@ -16,7 +16,7 @@
 TOUCH_SCREEN = 0
 ```
 
-触摸屏。
+Touchscreen.
 
 **Since:** 9
 
@@ -32,7 +32,7 @@ TOUCH_SCREEN = 0
 PEN = 1
 ```
 
-笔。
+Stylus.
 
 **Since:** 9
 
@@ -48,7 +48,7 @@ PEN = 1
 TOUCH_PAD = 2
 ```
 
-触控板。
+Touchpad.
 
 **Since:** 9
 

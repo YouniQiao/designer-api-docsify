@@ -1,6 +1,6 @@
 # ScrollAlign
 
-对齐方式枚举。
+Enumerates alignment modes.
 
 **Since:** 23
 

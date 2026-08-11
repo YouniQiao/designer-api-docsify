@@ -4,7 +4,7 @@
 type OnContextMenuHideCallback = () => void
 ```
 
-上下文菜单自定义隐藏的回调。
+Defines a callback invoked when the context menu is hidden.
 
 **Since:** 11
 

@@ -1,6 +1,6 @@
 # TextMarqueeOptions
 
-Marquee初始化参数。
+Defines the marquee options.
 
 **Since:** 23
 
@@ -16,11 +16,7 @@ Marquee初始化参数。
 delay?: int
 ```
 
-设置每次滚动的时间间隔。
-
-默认值：0
-
-单位：毫秒
+The waiting time between each round of the marquee.The value should be an integer.
 
 **Type:** int
 
@@ -40,13 +36,7 @@ delay?: int
 fadeout?: boolean
 ```
 
-设置文字超长时的渐隐效果。
-
-true表示支持渐隐效果，false表示不支持渐隐效果。
-
-当Text内容超出显示范围时，未完全展现的文字边缘将应用渐隐效果。若两端均有文字未完全显示，则两端同时应用渐隐效果。在渐隐效果开启状态下，clip属性将自动锁定为true，不允许设置为false。
-
-默认值：false
+Set whether the text is faded out.
 
 **Type:** boolean
 
@@ -66,11 +56,7 @@ true表示支持渐隐效果，false表示不支持渐隐效果。
 fromStart?: boolean
 ```
 
-设置文本从头开始滚动或反向滚动。
-
-true表示从头开始滚动，false表示反向滚动。
-
-默认值：true
+The running direction of the marquee.
 
 **Type:** boolean
 
@@ -90,9 +76,7 @@ true表示从头开始滚动，false表示反向滚动。
 loop?: int
 ```
 
-设置重复滚动的次数，小于等于零时无限循环。
-
-默认值：-1
+The rounds of the marquee.The value should be an integer.
 
 **Type:** int
 
@@ -112,9 +96,7 @@ loop?: int
 marqueeStartPolicy?: MarqueeStartPolicy
 ```
 
-设置跑马灯启动策略，该属性值生效需将start设置为true。
-
-默认值：TV设备上默认值为MarqueeStartPolicy.ON_FOCUS，其他设备默认值为MarqueeStartPolicy.DEFAULT
+The start policy for marquee.
 
 **Type:** [MarqueeStartPolicy](../arkts-components/arkts-arkui-marqueestartpolicy-e.md)
 
@@ -134,11 +116,7 @@ marqueeStartPolicy?: MarqueeStartPolicy
 marqueeUpdatePolicy?: MarqueeUpdatePolicy
 ```
 
-跑马灯组件属性更新后，跑马灯的滚动策略。
-
-当跑马灯为播放状态，且文本内容宽度超过跑马灯组件宽度时，该属性生效。
-
-默认值：MarqueeUpdatePolicy.DEFAULT
+Marquee scrolling policy after text update.&lt;p&gt;&lt;strong&gt;NOTE&lt;/strong&gt;:&lt;br&gt;This attribute takes effect when the marquee is in the playing state and the text content width exceeds the width of the marquee component.Default value is MarqueeUpdatePolicy.DEFAULT.&lt;/p&gt;
 
 **Type:** [MarqueeUpdatePolicy](arkts-arkui-text-marqueeupdatepolicy-e.md)
 
@@ -158,9 +136,7 @@ marqueeUpdatePolicy?: MarqueeUpdatePolicy
 spacing?: LengthMetrics
 ```
 
-两轮跑马灯之间的间距。如果LengthMetrics的unit值是PERCENT，当前设置不生效，按默认值处理。
-
-默认值：48.0vp
+The spacing between two rounds of marquee.&lt;p&gt;&lt;strong&gt;NOTE&lt;/strong&gt;:&lt;br&gt;Default value is 48vp.&lt;/p&gt;
 
 **Type:** [LengthMetrics](arkts-arkui-lengthmetrics-t.md)
 
@@ -180,9 +156,7 @@ spacing?: LengthMetrics
 start: boolean
 ```
 
-控制跑马灯进入播放状态。
-
-true表示播放，false表示不播放。
+Is need start marquee.
 
 **Type:** boolean
 
@@ -202,9 +176,7 @@ true表示播放，false表示不播放。
 step?: double
 ```
 
-滚动动画文本滚动步长。
-
-默认值：4.0vp
+The step size of the marquee.
 
 **Type:** double
 

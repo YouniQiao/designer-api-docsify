@@ -1,6 +1,6 @@
 # TextDirection
 
-文本排版方向。
+Defines text direction.
 
 **Since:** 23
 
@@ -16,11 +16,7 @@
 LTR = 0
 ```
 
-文本排版方向从左到右。
-
-**原子化服务API（仅ArkTS-Dyn）：** 从API version 22开始，该接口支持在原子化服务中使用。
-
-**原子化服务API（仅ArkTS-Dyn）：** 从API version 22开始，该接口支持在原子化服务中使用。&lt;sup&gt;23+&lt;/sup&gt;
+Left to right.
 
 **Since:** 23
 
@@ -56,7 +52,7 @@ Right to left.
 DEFAULT = 2
 ```
 
-文本方向遵循组件布局。
+The text direction follows the component layout.
 
 **Since:** 23
 
@@ -74,7 +70,7 @@ DEFAULT = 2
 AUTO = 3
 ```
 
-文本方向遵循实际文本。
+The text direction follows the actual text.
 
 **Since:** 23
 

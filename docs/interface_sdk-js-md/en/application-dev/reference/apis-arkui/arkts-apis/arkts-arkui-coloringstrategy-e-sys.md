@@ -1,6 +1,6 @@
 # ColoringStrategy
 
-智能取色枚举类型。
+Enumerates the coloring strategies.
 
 **Since:** 10
 
@@ -16,7 +16,7 @@
 CONTRAST = 'contrast'
 ```
 
-从组件背景中提取平均颜色，并转换为对比鲜明的黑色或白色。子组件可以通过 Color（'foreground'） 使用此颜色。
+Extract the average color from the component background and convert to a contrasting black or white color.Child components can use this color through Color('foreground').
 
 **Since:** 23
 

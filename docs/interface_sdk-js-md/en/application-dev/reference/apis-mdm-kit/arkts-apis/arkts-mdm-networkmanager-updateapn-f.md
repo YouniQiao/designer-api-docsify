@@ -12,7 +12,7 @@ import { networkManager } from 'kits/@kit.MDMKit';
 function updateApn(admin: Want, apnInfo: Record<string, string>, apnId: string): void
 ```
 
-更新APN。适用于企业移动网络配置管理场景，例如修改APN配置参数、调整运营商设置、优化移动网络连接性能，帮助企业灵活调整移动网络配置，确保设备移动网络连接参数符合实际需求。
+Updates the APN. This API is suitable for enterprise mobile network configuration management scenarios, such as modifying APN configuration parameters, adjusting carrier settings, and optimizing mobile network connection performance. It helps enterprises flexibly adjust mobile network configurations and ensure that the mobile network connection parameters of devices meet actual requirements.
 
 **Since:** 20
 
@@ -30,17 +30,17 @@ function updateApn(admin: Want, apnInfo: Record<string, string>, apnId: string):
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| admin | [Want](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-want-want-c.md) | Yes | 企业设备管理扩展组件。Want中必须包含企业设备管理扩展能力的abilityName和所在应用的bundleName。 |
-| apnInfo | [Record](../../apis-default/arkts-apis/arkts-record-t.md)&lt;string, string&gt; | Yes | 需要更新的APN参数信息。设置后系统将使用更新后的参数修改对应APN配置，影响网络连接方式和数据传输路径。&lt;br/&gt;- apnName：APN 配置的名称标识符，可选。&lt;br/&gt;- mcc：3位数字的移动国家代码，可选。&lt;br/&gt;- mnc：2-3位数字的移动网络代码，可选。&lt;br/&gt;- APN：接入点名称，可选。&lt;br/&gt;- type：APN的服务类型，可选。&lt; br/&gt;- user：APN身份验证的用户名，可选。&lt;br/&gt;- password：APN身份验证的密码，可选。&lt;br/&gt;- proxy：普通数据连接的代理服务器地址，可选。&lt;br/&gt;- mmsproxy：彩信服务的专用代 理地址，可选。&lt;br/&gt;- authType：APN的认证协议类型，可选。 |
-| apnId | string | Yes | 需要更新的APN ID。可以通过[networkManager.queryApn](arkts-mdm-networkmanager-queryapn-f.md#queryapn)获取设备APN信息。 |
+| admin | [Want](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-want-want-c.md) | Yes | EnterpriseAdminExtensionAbility. **Want** must contain the ability name of the EnterpriseAdminExtensionAbility and the bundle name of the application. |
+| apnInfo | [Record](../../apis-default/arkts-apis/arkts-record-t.md)&lt;string, string&gt; | Yes | APN information to be updated. After the setting, the system uses the updated parameters to modify the corresponding APN configuration, affecting the network connection mode and data transmission path. &lt;br&gt;- **apnName**: APN identifier, which is optional. &lt;br&gt;- **mcc**: 3-digit mobile country code (MCC), which is optional. &lt;br&gt;- **mnc**: 2-digit or 3-digit mobile network code (MNC), which is optional. &lt;br&gt;- **APN**: access point name, which is optional. &lt;br&gt;- **type**: APN service type, which is optional. &lt;br&gt;- **user**: user name for APN authentication, which is optional. &lt;br&gt;- **password**: password for APN authentication, which is optional. &lt;br&gt;- **proxy**: address of the proxy server for a common data connection, which is optional. &lt;br&gt;- **mmsproxy**: dedicated proxy address of the MMS service, which is optional. &lt;br&gt;- **authType**: authentication protocol type of the APN, which is optional. |
+| apnId | string | Yes | APN ID to be updated. You can obatin the device APN information via [networkManager.queryApn](arkts-mdm-networkmanager-queryapn-f.md#queryapn). |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 201 | Permission verification failed. The application does not have the permission required to call the API. |
-| 9200001 | The application is not an administrator application of the device. |
-| 9200002 | The administrator application does not have permission to manage the device. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed. The application does not have the permission required to call the API. |
+| [9200001](../errorcode-enterpriseDeviceManager.md#9200001-deviceadmin-not-enabled) | The application is not an administrator application of the device. |
+| [9200002](../errorcode-enterpriseDeviceManager.md#9200002-permission-denied) | The administrator application does not have permission to manage the device. |
 
 ## Examples
 

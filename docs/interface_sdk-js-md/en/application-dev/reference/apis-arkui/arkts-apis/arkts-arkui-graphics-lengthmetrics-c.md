@@ -1,6 +1,6 @@
 # LengthMetrics
 
-用于设置长度属性，当长度单位为PERCENT时，值为1表示100%。
+Defines the Length Metrics.
 
 **Since:** 23
 
@@ -10,11 +10,43 @@
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
+## autoRefresh
+
+```TypeScript
+autoRefresh(value: boolean): LengthMetrics
+```
+
+Sets automatic refresh for the LengthMetrics object.When enabled, the length value of the object created by LengthMetrics.resource() is automatically updated when the system configuration changes.
+
+**Since:** 26.0.0
+
+**ArkTS mode:** ArkTS-Sta only, since version 26.0.0.
+
+**Model restriction:** This API can be used only in the stage model.
+
+<!--Device-LengthMetrics-autoRefresh(value: boolean): LengthMetrics--><!--Device-LengthMetrics-autoRefresh(value: boolean): LengthMetrics-End-->
+
+**System capability:** SystemCapability.ArkUI.ArkUI.Full
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| value | boolean | Yes | whether to automatically update the length value when the system configuration changes. &lt;br&gt;If set to true, the length value of the object created by LengthMetrics.resource() is automatically updated when the system configuration changes. If set to false, the length value of the object created by LengthMetrics.resource() is automatically updated when the system configuration changes. The default value is false. |
+
+**Return value:**
+
+| Type | Description |
+| --- | --- |
+| [LengthMetrics](arkts-arkui-lengthmetrics-t.md) | Returns the LengthMetrics object for chaining. |
+
 ## constructor
 
 ```TypeScript
 constructor(value: double, unit?:LengthUnit)
 ```
+
+Constructor.
 
 **Since:** 23
 
@@ -30,8 +62,8 @@ constructor(value: double, unit?:LengthUnit)
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | double | Yes | 长度属性的值。&lt;br/&gt;取值范围：[0, +∞) |
-| unit | [LengthUnit](arkts-arkui-graphics-lengthunit-e.md) | No | 长度属性的单位。 |
+| value | double | Yes | The value of length. |
+| unit | [LengthUnit](arkts-arkui-graphics-lengthunit-e.md) | No | The length unit. |
 
 ## fp
 
@@ -39,7 +71,7 @@ constructor(value: double, unit?:LengthUnit)
 static fp(value: double): LengthMetrics
 ```
 
-用fp单位初始化一个lengthMetrics。
+Init a lengthMetrics with fp unit.
 
 **Since:** 23
 
@@ -55,13 +87,13 @@ static fp(value: double): LengthMetrics
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | double | Yes | 长度属性的值。&lt;br/&gt;。 &lt;br&gt;取值范围：(-∞, +∞)。 |
+| value | double | Yes | The value of the length metrics. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [LengthMetrics](arkts-arkui-lengthmetrics-t.md) | LengthMetrics 类的实例。 |
+| [LengthMetrics](arkts-arkui-lengthmetrics-t.md) | Returns the lengthMetrics object with unit fp. |
 
 ## lpx
 
@@ -69,7 +101,7 @@ static fp(value: double): LengthMetrics
 static lpx(value: double): LengthMetrics
 ```
 
-用lpx单位初始化一个lengthMetrics。
+Init a lengthMetrics with lpx unit.
 
 **Since:** 23
 
@@ -85,13 +117,13 @@ static lpx(value: double): LengthMetrics
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | double | Yes | 长度属性的值。&lt;br/&gt;。 &lt;br&gt;取值范围：(-∞, +∞)。 |
+| value | double | Yes | The value of the length metrics. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [LengthMetrics](arkts-arkui-lengthmetrics-t.md) | LengthMetrics 类的实例。 |
+| [LengthMetrics](arkts-arkui-lengthmetrics-t.md) | Returns the lengthMetrics object with unit lpx. |
 
 ## percent
 
@@ -99,7 +131,7 @@ static lpx(value: double): LengthMetrics
 static percent(value: double): LengthMetrics
 ```
 
-初始化一个带有百分比单位的lengthMetrics。
+Init a lengthMetrics with percent unit.
 
 **Since:** 23
 
@@ -115,13 +147,13 @@ static percent(value: double): LengthMetrics
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | double | Yes | 长度属性的值。&lt;br/&gt;。 &lt;br&gt;取值范围：[0, 1]。 |
+| value | double | Yes | The value of the length metrics. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [LengthMetrics](arkts-arkui-lengthmetrics-t.md) | LengthMetrics 类的实例。 |
+| [LengthMetrics](arkts-arkui-lengthmetrics-t.md) | Returns the lengthMetrics object with unit percent. |
 
 ## px
 
@@ -129,7 +161,7 @@ static percent(value: double): LengthMetrics
 static px(value: double): LengthMetrics
 ```
 
-初始化一个带有px单位的lengthMetrics。
+Init a lengthMetrics with px unit.
 
 **Since:** 23
 
@@ -145,13 +177,13 @@ static px(value: double): LengthMetrics
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | double | Yes | 长度属性的值。&lt;br/&gt;。 &lt;br&gt;取值范围：(-∞, +∞)。 |
+| value | double | Yes | The value of the length metrics. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [LengthMetrics](arkts-arkui-lengthmetrics-t.md) | LengthMetrics 类的实例。 |
+| [LengthMetrics](arkts-arkui-lengthmetrics-t.md) | Returns the lengthMetrics object with unit px. |
 
 ## resource
 
@@ -159,7 +191,7 @@ static px(value: double): LengthMetrics
 static resource(value: Resource): LengthMetrics
 ```
 
-用于生成Resource类型资源的长度属性。
+Init a lengthMetrics with Resource unit.
 
 **Since:** 23
 
@@ -175,13 +207,13 @@ static resource(value: Resource): LengthMetrics
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | [Resource](../../apis-localization-kit/arkts-apis/arkts-localization-resource-resource-i.md) | Yes | 长度属性的值。 |
+| value | [Resource](../../apis-localization-kit/arkts-apis/arkts-localization-resource-resource-i.md) | Yes | The value of the length metrics. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [LengthMetrics](arkts-arkui-lengthmetrics-t.md) | LengthMetrics 类的实例。 |
+| [LengthMetrics](arkts-arkui-lengthmetrics-t.md) | Returns the lengthMetrics object with unit Resource. |
 
 ## vp
 
@@ -189,7 +221,7 @@ static resource(value: Resource): LengthMetrics
 static vp(value: double): LengthMetrics
 ```
 
-初始化一个带有vp单位的lengthMetrics。
+Init a lengthMetrics with vp unit.
 
 **Since:** 23
 
@@ -205,13 +237,13 @@ static vp(value: double): LengthMetrics
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | double | Yes | 长度属性的值。&lt;br/&gt;。 &lt;br&gt;取值范围：(-∞, +∞)。 |
+| value | double | Yes | The value of the length metrics. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [LengthMetrics](arkts-arkui-lengthmetrics-t.md) | LengthMetrics 类的实例。 |
+| [LengthMetrics](arkts-arkui-lengthmetrics-t.md) | Returns the lengthMetrics object with unit vp. |
 
 ## unit
 
@@ -219,7 +251,7 @@ static vp(value: double): LengthMetrics
 public unit: LengthUnit
 ```
 
-长度属性的单位，默认为VP。
+The unit of the LengthMetrics. The default value is VP.
 
 **Type:** [LengthUnit](arkts-arkui-graphics-lengthunit-e.md)
 
@@ -241,7 +273,7 @@ public unit: LengthUnit
 public value: double
 ```
 
-长度属性的值。
+The value of the LengthMetrics.
 
 **Type:** double
 

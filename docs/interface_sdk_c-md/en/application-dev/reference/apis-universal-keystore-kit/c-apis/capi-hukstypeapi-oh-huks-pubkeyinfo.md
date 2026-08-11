@@ -1,7 +1,7 @@
 # OH_Huks_PubKeyInfo
 
 ```c
-struct OH_Huks_PubKeyInfo {...}
+typedef struct OH_Huks_PubKeyInfo {...} OH_Huks_PubKeyInfo
 ```
 
 ## Overview
@@ -24,6 +24,6 @@ Defines the struct of a public key.
 | uint32_t keySize | Length of the public key. |
 | uint32_t nOrXSize | Length of **n** or **X**. |
 | uint32_t eOrYSize | Length of **e** or **Y**. |
-| uint32_t placeHolder | Placeholder size. |
+| uint32_t placeHolder | Placeholder size, intended for memory alignment or reserving space for future algorithmic extensions. |
 
 

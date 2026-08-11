@@ -166,7 +166,7 @@ space?: FlexSpaceOptions
 
 当space.main或space.cross的值为负数，或者justifyContent设置为FlexAlign.SpaceBetween、FlexAlign.SpaceAround、FlexAlign.SpaceEvenly时，space参数不生效。其中main属性在单行或多行布局时均生效，cross属性仅在wrap为Wrap或WrapReverse（多行布局）时生效。
 
-**类型：** [FlexSpaceOptions](arkts-arkui-flexspaceoptions-i.md)
+**类型：** [FlexSpaceOptions](../arkts-apis/arkts-arkui-flex-flexspaceoptions-i.md)
 
 **起始版本：** 12
 

@@ -12,7 +12,7 @@ import { bundle } from 'kits/@kit.AbilityKit';
 function setApplicationEnabled(bundleName: string, isEnable: boolean, callback: AsyncCallback<void>): void
 ```
 
-设置是否启用指定的应用程序，使用callback异步回调。
+Sets whether to enable an application. This API uses an asynchronous callback to return the result.
 
 **Since:** 8
 
@@ -34,9 +34,9 @@ function setApplicationEnabled(bundleName: string, isEnable: boolean, callback: 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| bundleName | string | Yes | 指示需要启用或禁用的应用Bundle名称。 |
-| isEnable | boolean | Yes | 指定是否启用应用程序。true表示启用，false表示禁用。 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | 回调函数。 |
+| bundleName | string | Yes | Bundle name. |
+| isEnable | boolean | Yes | Whether to enable the application. **true** to enable, **false** otherwise. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. |
 
 
 ## setApplicationEnabled
@@ -45,7 +45,7 @@ function setApplicationEnabled(bundleName: string, isEnable: boolean, callback: 
 function setApplicationEnabled(bundleName: string, isEnable: boolean): Promise<void>
 ```
 
-设置是否启用指定的应用程序，使用Promise异步回调。
+Sets whether to enable an application. This API uses a promise to return the result.
 
 **Since:** 8
 
@@ -67,12 +67,12 @@ function setApplicationEnabled(bundleName: string, isEnable: boolean): Promise<v
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| bundleName | string | Yes | 指示需要启用或禁用的应用Bundle名称。 |
-| isEnable | boolean | Yes | 指定是否启用应用程序。true表示启用，false禁用。 |
+| bundleName | string | Yes | Bundle name. |
+| isEnable | boolean | Yes | Whether to enable the application. **true** to enable, **false** otherwise. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise对象，无返回结果的Promise对象。 |
+| Promise&lt;void&gt; | Promise that returns no value. |
 

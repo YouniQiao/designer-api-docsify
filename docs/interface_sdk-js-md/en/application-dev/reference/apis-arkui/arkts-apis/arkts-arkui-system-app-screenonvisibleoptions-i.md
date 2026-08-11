@@ -1,6 +1,6 @@
 # ScreenOnVisibleOptions
 
-定义屏幕上可见接口的选项。
+Defines the options of the visible interface on the screen.
 
 **Since:** 3
 
@@ -22,7 +22,7 @@ import { AppResponse, ScreenOnVisibleOptions, RequestFullWindowOptions } from 'k
 complete?: () => void
 ```
 
-接口调用结束的回调函数。
+Called when the API call is complete.
 
 **Since:** 3
 
@@ -40,7 +40,7 @@ complete?: () => void
 fail?: (data: string, code: number) => void
 ```
 
-接口调用失败的回调函数。
+Callback upon failure.
 
 **Since:** 3
 
@@ -65,7 +65,7 @@ fail?: (data: string, code: number) => void
 success?: () => void
 ```
 
-接口调用成功的回调函数。
+Callback upon success.
 
 **Since:** 3
 
@@ -83,7 +83,7 @@ success?: () => void
 visible?: boolean
 ```
 
-是否启动保活，默认值false。
+Whether to keep the application visible. The default value is **false**.
 
 **Type:** boolean
 

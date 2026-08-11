@@ -57,13 +57,13 @@ iconStyle(style: TabBarIconStyle): BottomTabBarStyle
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| style | [TabBarIconStyle](../arkts-components/arkts-arkui-tabbariconstyle-i.md) | 是 | 底部页签的label图标的样式。 |
+| style | [TabBarIconStyle](arkts-arkui-tabcontent-tabbariconstyle-i.md) | 是 | 底部页签的label图标的样式。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| [BottomTabBarStyle](arkts-arkui-tabcontent-bottomtabbarstyle-c.md) | 返回BottomTabBarStyle对象本身。 |
+| [BottomTabBarStyle](../arkts-components/arkts-arkui-bottomtabbarstyle-c.md) | 返回BottomTabBarStyle对象本身。 |
 
 ## id
 
@@ -93,7 +93,7 @@ id(value: string): BottomTabBarStyle
 
 | 类型 | 说明 |
 | --- | --- |
-| [BottomTabBarStyle](arkts-arkui-tabcontent-bottomtabbarstyle-c.md) | 返回BottomTabBarStyle对象本身。 |
+| [BottomTabBarStyle](../arkts-components/arkts-arkui-bottomtabbarstyle-c.md) | 返回BottomTabBarStyle对象本身。 |
 
 ## labelStyle
 
@@ -123,7 +123,7 @@ labelStyle(style: TabBarLabelStyle): BottomTabBarStyle
 
 | 类型 | 说明 |
 | --- | --- |
-| [BottomTabBarStyle](arkts-arkui-tabcontent-bottomtabbarstyle-c.md) | 返回BottomTabBarStyle对象本身。 |
+| [BottomTabBarStyle](../arkts-components/arkts-arkui-bottomtabbarstyle-c.md) | 返回BottomTabBarStyle对象本身。 |
 
 ## layoutMode
 
@@ -153,7 +153,7 @@ layoutMode(value: LayoutMode): BottomTabBarStyle
 
 | 类型 | 说明 |
 | --- | --- |
-| [BottomTabBarStyle](arkts-arkui-tabcontent-bottomtabbarstyle-c.md) | 返回BottomTabBarStyle对象本身。 |
+| [BottomTabBarStyle](../arkts-components/arkts-arkui-bottomtabbarstyle-c.md) | 返回BottomTabBarStyle对象本身。 |
 
 ## of
 
@@ -184,7 +184,7 @@ BottomTabBarStyle的静态构造函数。
 
 | 类型 | 说明 |
 | --- | --- |
-| [BottomTabBarStyle](arkts-arkui-tabcontent-bottomtabbarstyle-c.md) | 返回创建的BottomTabBarStyle对象。 |
+| [BottomTabBarStyle](../arkts-components/arkts-arkui-bottomtabbarstyle-c.md) | 返回创建的BottomTabBarStyle对象。 |
 
 ## padding
 
@@ -214,7 +214,7 @@ padding(value: Padding | Dimension | LocalizedPadding): BottomTabBarStyle
 
 | 类型 | 说明 |
 | --- | --- |
-| [BottomTabBarStyle](arkts-arkui-tabcontent-bottomtabbarstyle-c.md) | 返回BottomTabBarStyle对象本身。 |
+| [BottomTabBarStyle](../arkts-components/arkts-arkui-bottomtabbarstyle-c.md) | 返回BottomTabBarStyle对象本身。 |
 
 ## symmetricExtensible
 
@@ -244,7 +244,7 @@ symmetricExtensible(value: boolean): BottomTabBarStyle
 
 | 类型 | 说明 |
 | --- | --- |
-| [BottomTabBarStyle](arkts-arkui-tabcontent-bottomtabbarstyle-c.md) | 返回BottomTabBarStyle对象本身。 |
+| [BottomTabBarStyle](../arkts-components/arkts-arkui-bottomtabbarstyle-c.md) | 返回BottomTabBarStyle对象本身。 |
 
 ## verticalAlign
 
@@ -274,5 +274,5 @@ verticalAlign(value: VerticalAlign): BottomTabBarStyle
 
 | 类型 | 说明 |
 | --- | --- |
-| [BottomTabBarStyle](arkts-arkui-tabcontent-bottomtabbarstyle-c.md) | 返回BottomTabBarStyle对象本身。 |
+| [BottomTabBarStyle](../arkts-components/arkts-arkui-bottomtabbarstyle-c.md) | 返回BottomTabBarStyle对象本身。 |
 

@@ -1,6 +1,6 @@
 # PolicyInfo
 
-需要授予或激活URI访问权限的策略信息。
+Policy information to manager permissions on a URI.
 
 **Since:** 11
 
@@ -22,7 +22,7 @@ import { fileShare } from 'kits/@kit.CoreFileKit';
 operationMode: int
 ```
 
-授予或激活权限的URI访问模式，例如 { OperationMode.READ_MODE } 或{ OperationMode.READ_MODE | OperationMode.WRITE_MODE }。
+Indicates the mode of operation for the URI, example { OperationMode.READ_MODE } or { OperationMode.READ_MODE | OperationMode.WRITE_MODE }
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
@@ -40,7 +40,7 @@ operationMode: int
 uri: string
 ```
 
-需要授予或激活访问权限的URI，需符合URI格式规范。
+Indicates the uri of the policy information.
 
 **Type:** string
 

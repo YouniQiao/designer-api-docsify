@@ -2,7 +2,7 @@
 
 错误参数，继承自Error类，用于在接口调用失败时传递标准化的错误信息，包含错误码和可选的附加信息。
 
-**继承/实现关系：** BusinessError extends [Error](../../apis-arkts/arkts-apis/arkts-arkts-error-c.md/arkts-arkts-error-c.md)
+**继承/实现关系：** BusinessError extends [Error](Error)
 
 **起始版本：** 6
 
@@ -11,12 +11,6 @@
 <!--Device-unnamed-export interface BusinessError<T = void> extends Error--><!--Device-unnamed-export interface BusinessError<T = void> extends Error-End-->
 
 **系统能力：** SystemCapability.Base
-
-## 导入模块
-
-```TypeScript
-import { Callback, BusinessError, ErrorCallback, AsyncCallback } from 'kits/@kit.BasicServicesKit';
-```
 
 ## code
 

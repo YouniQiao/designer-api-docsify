@@ -13,12 +13,6 @@
 
 **系统能力：** SystemCapability.Utils.Lang
 
-## 导入模块
-
-```TypeScript
-import { stream } from 'kits/@kit.ArkTS';
-```
-
 ## constructor
 
 ```TypeScript
@@ -65,7 +59,7 @@ cork(): boolean
 
 | 类型 | 说明 |
 | --- | --- |
-| boolean | 操作结果。**true**表示成功；**false**表示失败。 |
+| boolean | 返回设置cork状态是否成功。true表示设置成功，false表示设置失败。 |
 
 ## 示例
 
@@ -97,11 +91,13 @@ doWrite(chunk: string | Uint8Array, encoding: string, callback: Function): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| chunk | string \| Uint8Array | 是 | 待写入的数据。 |
-| encoding | string | 是 | 编码格式。目前支持**'utf8'**、**'gb18030'**、**'gbk'**和**'gb2312'**。 |
+| chunk | string \| Uint8Array | 是 | 要写出的数据。 |
+| encoding | string | 是 | 字符编码类型。当前版本支持'utf8'、'gb18030'、'gbk'以及'gb2312'。 |
 | callback | Function | 是 | 回调函数。 |
 
 ## 示例
+
+ArkTS-Dyn示例：
 
 ```TypeScript
 class TestDuplex extends stream.Duplex {
@@ -115,6 +111,27 @@ class TestDuplex extends stream.Duplex {
   doWrite(chunk: string | Uint8Array, encoding: string, callback: Function) {
     console.info("duplexStream chunk is", chunk); // duplexStream chunk is data
     callback();
+  }
+}
+
+let duplexStream = new TestDuplex();
+duplexStream.write("data", "utf8");
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+class TestDuplex extends stream.Duplex {
+  constructor() {
+    super();
+  }
+
+  doRead(size: int) {
+  }
+
+  doWrite(chunk: string | Uint8Array, encoding: string, callback: Function) {
+    console.info("duplexStream chunk is", chunk); // 期望结果: duplexStream chunk is data
+    callback.unsafeCall();
   }
 }
 
@@ -144,10 +161,12 @@ doWritev(chunks: string[] | Uint8Array[], callback: Function): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| chunks | string[] \| Uint8Array[] | 是 | 批量写入的数据数组。 |
+| chunks | string[] \| Uint8Array[] | 是 | 待批量写出的数据块数组。 |
 | callback | Function | 是 | 回调函数。 |
 
 ## 示例
+
+ArkTS-Dyn示例：
 
 ```TypeScript
 class TestDuplex extends stream.Duplex {
@@ -165,6 +184,35 @@ class TestDuplex extends stream.Duplex {
   doWritev(chunks: string[] | Uint8Array[], callback: Function) {
     console.info("duplexStream chunk", chunks[0]); // duplexStream chunk data1
     callback();
+  }
+}
+
+let duplexStream = new TestDuplex();
+duplexStream.cork();
+duplexStream.write("data1", "utf8");
+duplexStream.write("data2", "utf8");
+duplexStream.uncork();
+duplexStream.end();
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+class TestDuplex extends stream.Duplex {
+  constructor() {
+    super();
+  }
+
+  doRead(size: int) {
+  }
+
+  doWrite(chunk: string | Uint8Array, encoding: string, callback: Function) {
+    callback.unsafeCall();
+  }
+
+  doWritev(chunks: string[] | Uint8Array[], callback: Function) {
+    console.info("duplexStream chunk", (chunks as string[])[0]); // 期望结果: duplexStream chunk data1
+    callback.unsafeCall();
   }
 }
 
@@ -198,23 +246,25 @@ end(chunk?: string | Uint8Array, encoding?: string, callback?: Function): Writab
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| chunk | string \| Uint8Array | 否 | 待写入的数据。默认值为**undefined**。 |
+| chunk | string \| Uint8Array | 否 | 需要写入的数据。默认值为undefined。 |
 | encoding | string | 否 | 编码格式。默认值为**'utf8'**。目前支持**'utf8'**、**'gb18030'**、**'gbk'**和**'gb2312'**。 |
-| callback | Function | 否 | 用于返回结果的回调函数。默认不调用。 |
+| callback | Function | 否 | 回调函数。传入时异步调用，不传入时，不调用回调函数。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| [Writable](arkts-arkts-stream-writable-c.md) | 当前**Duplex**对象。 |
+| [Writable](arkts-arkts-stream-writable-c.md) | 返回可写流对象。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 10200039 | The doTransform method has not been implemented for a class that inherits from Transform. |
+| [10200039](../errorcode-utils.md#10200039-dotransform接口未实现) | The doTransform method has not been implemented for a class that inherits from Transform. |
 
 ## 示例
+
+ArkTS-Dyn示例：
 
 ```TypeScript
 class TestDuplex extends stream.Duplex {
@@ -237,13 +287,36 @@ duplexStream.end("test", "utf8", () => {
 });
 ```
 
+ArkTS-Sta示例：
+
+```TypeScript
+class TestDuplex extends stream.Duplex {
+  constructor() {
+    super();
+  }
+
+  doRead(size: int) {
+  }
+
+  doWrite(chunk: string | Uint8Array, encoding: string, callback: Function) {
+    console.info("Duplex chunk is", chunk); // 期望结果: Duplex chunk is test
+    callback.unsafeCall();
+  }
+}
+
+let duplexStream = new TestDuplex();
+duplexStream.end("test", "utf8", () => {
+  console.info("Duplex is end"); // 期望结果: Duplex is end
+});
+```
+
 ## setDefaultEncoding
 
 ```TypeScript
 setDefaultEncoding(encoding?: string): boolean
 ```
 
-设置可写流的默认编码格式。
+设置双工流的默认字符编码类型，确保在读取数据时正确解析字符。
 
 **起始版本：** 12
 
@@ -259,15 +332,17 @@ setDefaultEncoding(encoding?: string): boolean
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| encoding | string | 否 | 默认编码格式。默认值为**'utf8'**。目前支持**'utf8'**、**'gb18030'**、**'gbk'**和**'gb2312'**。 |
+| encoding | string | 否 | 需要设置的默认字符编码类型。默认值是'utf8'，当前版本支持'utf8'、'gb18030'、'gbk'以及'gb2312'。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| boolean | 操作结果。**true**表示成功；**false**表示失败。 |
+| boolean | 返回是否设置成功。true表示设置成功，false表示设置失败。 |
 
 ## 示例
+
+ArkTS-Dyn示例：
 
 ```TypeScript
 class TestDuplex extends stream.Duplex {
@@ -286,6 +361,27 @@ class TestDuplex extends stream.Duplex {
 let duplexStream = new TestDuplex();
 let result = duplexStream.setDefaultEncoding("utf8");
 console.info("duplexStream is result", result); // duplexStream is result true
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+class TestDuplex extends stream.Duplex {
+  constructor() {
+    super();
+  }
+
+  doRead(size: int) {
+  }
+
+  doWrite(chunk: string | Uint8Array, encoding: string, callback: Function) {
+    callback.unsafeCall();
+  }
+}
+
+let duplexStream = new TestDuplex();
+let result = duplexStream.setDefaultEncoding("utf8");
+console.info("duplexStream is result", result); // 期望结果: duplexStream is result true
 ```
 
 ## uncork
@@ -310,9 +406,11 @@ uncork(): boolean
 
 | 类型 | 说明 |
 | --- | --- |
-| boolean | 操作结果。**true**表示成功；**false**表示失败。 |
+| boolean | 返回解除cork状态是否成功。true表示成功，false表示失败。 |
 
 ## 示例
+
+ArkTS-Dyn示例：
 
 ```TypeScript
 let dataWritten = "";
@@ -338,6 +436,32 @@ duplexStream.uncork();
 console.info("Duplex test uncork", dataWritten); // Duplex test uncork ab
 ```
 
+ArkTS-Sta示例：
+
+```TypeScript
+let dataWritten = "";
+class TestDuplex extends stream.Duplex {
+  constructor() {
+    super();
+  }
+
+  doRead(size: int) {
+  }
+
+  doWrite(chunk: string | Uint8Array, encoding: string, callback: Function) {
+    dataWritten += chunk;
+    callback.unsafeCall();
+  }
+}
+
+let duplexStream = new TestDuplex();
+duplexStream.cork();
+duplexStream.write("a");
+duplexStream.write("b");
+duplexStream.uncork();
+console.info("Duplex test uncork", dataWritten); // 期望结果: Duplex test uncork
+```
+
 ## write
 
 ```TypeScript
@@ -360,25 +484,27 @@ write(chunk?: string | Uint8Array, encoding?: string, callback?: Function): bool
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| chunk | string \| Uint8Array | 否 | 待写入的数据。不能为**null**、**undefined**或空字符串。 |
+| chunk | string \| Uint8Array | 否 | 需要写入的数据。默认值为undefined。当前版本不支持传入null、undefined和空字符串，会抛出异常。 |
 | encoding | string | 否 | 编码格式。默认值为**'utf8'**。目前支持**'utf8'**、**'gb18030'**、**'gbk'**和**'gb2312'**。 |
-| callback | Function | 否 | 用于返回结果的回调函数。默认不调用。 |
+| callback | Function | 否 | 回调函数，用于在数据写入完成后执行特定逻辑。传入callback时，数据写入缓冲区后会调用该回调函数；不传入时，不调用回调函数。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| boolean | 表示可写流缓冲区中是否还有空间。**true**表示缓冲区中还有空间；**false**表示缓冲区已满，不建议继续写入数据。如果继续调用write函数，数据仍会添加到缓冲区，直到内存溢出。 |
+| boolean | 可写流的缓冲区中是否还有空间。true表示缓冲区还有空间，false表示流的内部缓冲区数据量已达到设定水位线，不建议继续写入，如果连续调用写入函数，数据仍会被添加到缓冲区中， 直到内存溢出为止。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 10200039 | The doTransform method has not been implemented for a class that inherits from Transform. |
-| 10200037 | The callback is invoked multiple times consecutively. |
-| 10200036 | The stream has been ended. |
+| [10200039](../errorcode-utils.md#10200039-dotransform接口未实现) | The doTransform method has not been implemented for a class that inherits from Transform. |
+| [10200037](../errorcode-utils.md#10200037-多次调用callback) | The callback is invoked multiple times consecutively. |
+| [10200036](../errorcode-utils.md#10200036-流已经结束仍进行写操作) | The stream has been ended. |
 
 ## 示例
+
+ArkTS-Dyn示例：
 
 ```TypeScript
 class TestDuplex extends stream.Duplex {
@@ -400,13 +526,35 @@ let result = duplexStream.write("test", "utf8");
 console.info("duplexStream result", result); // duplexStream result true
 ```
 
+ArkTS-Sta示例：
+
+```TypeScript
+class TestDuplex extends stream.Duplex {
+  constructor() {
+    super();
+  }
+
+  doRead(size: int) {
+  }
+
+  doWrite(chunk: string | Uint8Array, encoding: string, callback: Function) {
+    console.info("duplexStream chunk is", chunk); // 期望结果: duplexStream chunk is test
+    callback.unsafeCall();
+  }
+}
+
+let duplexStream = new TestDuplex();
+let result = duplexStream.write("test", "utf8");
+console.info("duplexStream result", result); // 期望结果: duplexStream result true
+```
+
 ## writable
 
 ```TypeScript
 get writable(): boolean
 ```
 
-如果调用writable.write()是安全的，返回true，即表示流未被销毁、未出错或未结束。
+表示双工流是否处于可写状态。true表示当前流是可写的，false表示流当前不再接受写入操作。
 
 **类型：** boolean
 
@@ -426,7 +574,7 @@ get writable(): boolean
 get writableCorked(): int
 ```
 
-为完全释放流，需要调用writable.uncork()的次数。
+表示双工流cork状态计数。值大于0时，双工流处于强制写入缓冲区状态，值为0时，该状态解除。使用cork()方法时计数加一，使用uncork()方法时计数减一，使用end()方法时计数清零。
 
 **类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
@@ -446,7 +594,7 @@ get writableCorked(): int
 get writableEnded(): boolean
 ```
 
-是否已调用Writable.end。
+表示当前双工流的end()是否被调用，该状态不代表数据已经全部写入。true表示end()已被调用，false表示end()未被调用。
 
 **类型：** boolean
 
@@ -466,7 +614,7 @@ get writableEnded(): boolean
 get writableFinished(): boolean
 ```
 
-是否已调用Writable.end并刷新了所有缓冲区。
+表示当前双工流是否处于写入完成状态。true表示当前流已处于写入完成状态，false表示当前流的写入操作可能还在进行中。
 
 **类型：** boolean
 
@@ -486,7 +634,7 @@ get writableFinished(): boolean
 get writableHighWatermark(): int
 ```
 
-highWatermark的值。
+定义双工流的写模式下缓冲区数据量的水位线大小。当前版本不支持开发者自定义修改设置水位线大小。调用write()写入后，若缓冲区数据量达到该值，write()会返回false。默认值为16 * 1024字节。
 
 **类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
@@ -506,7 +654,7 @@ highWatermark的值。
 get writableLength(): int
 ```
 
-可刷新的数据大小，单位为字节或对象。
+表示双工流缓冲区中待写入的字节数。
 
 **类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
@@ -526,7 +674,7 @@ get writableLength(): int
 get writableObjectMode(): boolean
 ```
 
-返回布尔值，表示是否处于ObjectMode。
+用于指定双工流的写模式是否以对象模式工作。true表示流的写模式被配置为对象模式，false表示流的写模式处于非对象模式。当前版本只支持原始数据（字符串和Uint8Array），返回值为false。
 
 **类型：** boolean
 

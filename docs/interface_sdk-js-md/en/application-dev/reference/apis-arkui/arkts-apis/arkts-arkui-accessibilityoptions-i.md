@@ -16,7 +16,7 @@ Defines the struct of AccessibilityOptions.
 accessibilityPreferred?: boolean
 ```
 
-accessibilityPreferred -在连接子组件字符串时，是否应该优先考虑accessibilityText。
+accessibilityPreferred - Should accessibilityText be prioritized when concatenating child component strings.
 
 **Type:** boolean
 
@@ -38,7 +38,7 @@ accessibilityPreferred -在连接子组件字符串时，是否应该优先考�
 actionControllerId?: string
 ```
 
-通过该可选参数指定特定ID的子组件，配置AccessibilityGroup的容器组件进行无障碍聚合后，如果触发无障碍的控制操作时，会将操作转发给该特定类型的子组件。从而聚合屏幕朗读下的点击事件，避免需要对子组件单独进行聚焦。
+actionControllerId - the first component of a specific id found within the composition defined by accessibility group will take over part of the accessibility action of the composition
 
 **Type:** string
 
@@ -60,7 +60,7 @@ actionControllerId?: string
 actionControllerRoleType?: AccessibilityRoleType
 ```
 
-stateControllerRoleType - 通过该可选参数指定特定类型的子组件，配置AccessibilityGroup的容器组件进行无障碍聚合后，如果触发无障碍的控制操作时，会将操作转发给该特定类型的子组件。从而聚合屏幕朗读下的点击事件，避免需要对子组件单独进行聚焦。
+actionControllerRoleType - the first component of a specific type found within the composition defined by accessibility group will take over part of the accessibility action of the composition
 
 **Type:** [AccessibilityRoleType](../arkts-components/arkts-arkui-accessibilityroletype-e.md)
 
@@ -82,7 +82,7 @@ stateControllerRoleType - 通过该可选参数指定特定类型的子组件，
 stateControllerId?: string
 ```
 
-stateControllerId -通过该可选参数指定特定ID的子组件，配置AccessibilityGroup的容器组件进行无障碍聚合后，会将该子组件的选中状态和状态播报文本作为聚合组件的状态和播报文本。从而聚合屏幕朗读下的状态播报，避免需要对子组件单独进行聚焦。
+stateControllerId - the first component of a specific id found within the composition defined by accessibility group will take over the state attributes and announcement of the composition
 
 **Type:** string
 
@@ -104,7 +104,7 @@ stateControllerId -通过该可选参数指定特定ID的子组件，配置Acces
 stateControllerRoleType?: AccessibilityRoleType
 ```
 
-stateControllerRoleType - 通过该可选参数指定特定类型的子组件，配置AccessibilityGroup的容器组件进行无障碍聚合后，会将该子组件的选中状态和状态播报文本作为聚合组件的状态和播报文本。从而聚合屏幕朗读下的状态播报，避免需要对子组件单独进行聚焦。
+stateControllerRoleType - the first component of a specific type found within the composition defined by accessibility group will take over the state attributes and announcement of the composition
 
 **Type:** [AccessibilityRoleType](../arkts-components/arkts-arkui-accessibilityroletype-e.md)
 

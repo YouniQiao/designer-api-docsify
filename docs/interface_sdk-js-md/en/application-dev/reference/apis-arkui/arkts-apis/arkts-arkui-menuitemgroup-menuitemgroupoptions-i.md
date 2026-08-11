@@ -1,5 +1,7 @@
 # MenuItemGroupOptions
 
+Defines the option of MenuItemGroup.
+
 **Since:** 23
 
 **ArkTS mode:** ArkTS-Sta only, since version 23.
@@ -14,9 +16,7 @@
 footer?: ResourceStr | CustomBuilder
 ```
 
-设置对应group的尾部显示信息。 
-
-未设置时，不显示尾部信息。
+Defines the footer display info.
 
 **Type:** [ResourceStr](arkts-arkui-resourcestr-t.md) \| CustomBuilder
 
@@ -36,9 +36,7 @@ footer?: ResourceStr | CustomBuilder
 header?: ResourceStr | CustomBuilder
 ```
 
-设置对应group的标题显示信息。 
-
-未设置时，不显示标题信息。
+Defines the header display info.
 
 **Type:** [ResourceStr](arkts-arkui-resourcestr-t.md) \| CustomBuilder
 

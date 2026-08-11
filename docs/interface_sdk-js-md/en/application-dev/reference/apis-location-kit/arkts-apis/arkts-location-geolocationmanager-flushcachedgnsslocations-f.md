@@ -34,12 +34,12 @@ All prepared GNSS locations are returned to the application through the callback
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
-| 801 | Capability not supported. Failed to call \\${geoLocationManager.flushCachedGnssLocations} due to limited device capabilities. |
-| 3301200 | Failed to obtain the geographical location. |
-| 201 | Permission verification failed. The application does not have the permission required to call the API. |
-| 3301000 | The location service is unavailable. |
-| 3301100 | The location switch is off. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. Failed to call \\${geoLocationManager.flushCachedGnssLocations} due to limited device capabilities. |
+| [3301200](../errorcode-geoLocationManager.md#3301200-failed-to-obtain-the-positioning-result) | Failed to obtain the geographical location. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed. The application does not have the permission required to call the API. |
+| [3301000](../errorcode-geoLocationManager.md#3301000-location-service-unavailable) | The location service is unavailable. |
+| [3301100](../errorcode-geoLocationManager.md#3301100-positioning-failed-because-the-location-switch-is-turned-off) | The location switch is off. |
 
 ## Examples
 
@@ -86,11 +86,11 @@ All prepared GNSS locations are returned to the application,and the bottom-layer
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 801 | Capability not supported. Failed to call \\${geoLocationManager.flushCachedGnssLocations} due to limited device capabilities. |
-| 3301200 | Failed to obtain the geographical location. |
-| 201 | Permission verification failed. The application does not have the permission required to call the API. |
-| 3301000 | The location service is unavailable. |
-| 3301100 | The location switch is off. |
+| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. Failed to call \\${geoLocationManager.flushCachedGnssLocations} due to limited device capabilities. |
+| [3301200](../errorcode-geoLocationManager.md#3301200-failed-to-obtain-the-positioning-result) | Failed to obtain the geographical location. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed. The application does not have the permission required to call the API. |
+| [3301000](../errorcode-geoLocationManager.md#3301000-location-service-unavailable) | The location service is unavailable. |
+| [3301100](../errorcode-geoLocationManager.md#3301100-positioning-failed-because-the-location-switch-is-turned-off) | The location switch is off. |
 
 ## Examples
 

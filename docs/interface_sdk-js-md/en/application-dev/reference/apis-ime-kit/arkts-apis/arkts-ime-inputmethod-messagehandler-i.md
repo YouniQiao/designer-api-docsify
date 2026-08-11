@@ -1,6 +1,6 @@
 # MessageHandler
 
-自定义通信对象。
+&lt;p&gt;Custom message handler.&lt;/p&gt;&lt;p&gt;Implement this interface to respond to custom messages.&lt;/p&gt;
 
 **Since:** 15
 
@@ -22,7 +22,7 @@ import { inputMethod } from 'kits/@kit.IMEKit';
 onMessage: OnMessageCallback
 ```
 
-onMessage(msgId: string, msgParam?: ArrayBuffer): void
+This method is called when a custom message is received.
 
 **Since:** 23
 
@@ -38,7 +38,7 @@ onMessage(msgId: string, msgParam?: ArrayBuffer): void
 onMessage(msgId: string, msgParam?: ArrayBuffer): void
 ```
 
-接收输入法应用发送的自定义数据回调函数。
+This method is called when a custom message is received.
 
 **Since:** 15
 
@@ -52,8 +52,8 @@ onMessage(msgId: string, msgParam?: ArrayBuffer): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| msgId | string | Yes | 接收到的自定义通信数据的标识符。 |
-| msgParam | ArrayBuffer | No | 接收到的自定义通信数据的消息体。 |
+| msgId | string | Yes | the identifier of the message. |
+| msgParam | ArrayBuffer | No | the parameter of the custom message. |
 
 ## Examples
 
@@ -65,7 +65,7 @@ let messageHandler: inputMethod.MessageHandler = {
     console.info('OnTerminated.');
   },
   onMessage(msgId: string, msgParam?: ArrayBuffer): void {
-    console.info(`recv message, msg: ${msgId}, msgParam: ${JSON.stringify(msgParam)}`);
+    console.info('recv message.');
   }
 };
 inputMethodController.recvMessage(messageHandler);
@@ -77,7 +77,7 @@ inputMethodController.recvMessage(messageHandler);
 onTerminated(): void
 ```
 
-监听对象终止回调函数。
+This method is called when a new message handler is set.
 
 **Since:** 15
 
@@ -97,7 +97,7 @@ let messageHandler: inputMethod.MessageHandler = {
     console.info('OnTerminated.');
   },
   onMessage(msgId: string, msgParam?: ArrayBuffer): void {
-    console.info(`recv message, msg: ${msgId}, msgParam: ${JSON.stringify(msgParam)}`);
+    console.info('recv message.');
   }
 };
 inputMethodController.recvMessage(messageHandler);
@@ -109,9 +109,7 @@ inputMethodController.recvMessage(messageHandler);
 onTerminated: Callback<void>
 ```
 
-onTerminated(): void
-
-监听对象终止回调函数。
+This method is called when a new message handler is set.
 
 **Type:** [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;void&gt;
 

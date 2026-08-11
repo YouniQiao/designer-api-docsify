@@ -1,11 +1,5 @@
 # fromSendableValues
 
-## 导入模块
-
-```TypeScript
-import { sendableRelationalStore } from 'kits/@kit.ArkData';
-```
-
 ## fromSendableValues
 
 ```TypeScript
@@ -38,7 +32,7 @@ function fromSendableValues(values: collections.Array<ValueType>): NonSendableVa
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 14800000 | Inner error. |
+| [14800000](../../apis-basic-services-kit/errorcode-settings.md#14800000-参数检查失败) | Inner error. |
 
 ## 示例
 

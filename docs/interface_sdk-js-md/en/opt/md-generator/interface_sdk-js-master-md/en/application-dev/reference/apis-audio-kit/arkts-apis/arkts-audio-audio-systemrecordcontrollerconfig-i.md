@@ -1,0 +1,33 @@
+# SystemRecordControllerConfig
+
+Defines the configuration for the system recording controller panel.
+
+**Since:** 26.0.0
+
+<!--Device-audio-interface SystemRecordControllerConfig--><!--Device-audio-interface SystemRecordControllerConfig-End-->
+
+**System capability:** SystemCapability.Multimedia.Audio.Capturer
+
+## Modules to Import
+
+```TypeScript
+import { audio } from 'kits/@kit.AudioKit';
+```
+
+## sourceType
+
+```TypeScript
+sourceType: SourceType
+```
+
+The system uses this to determine the recording scenario of the application according to the SourceType that the application expects to use for streaming, and provides users with the ability to select matching noise reduction modes. The supported source types include{@link SourceType#SOURCE_TYPE_MIC}, {@link SourceType#SOURCE_TYPE_CAMCORDER}, and{@link SourceType#SOURCE_TYPE_LIVE}.
+
+**Type:** [SourceType](../../apis-arkweb/arkts-apis/arkts-arkweb-webview-sourcetype-e.md)
+
+**Since:** 26.0.0
+
+**Model restriction:** This API can be used only in the stage model.
+
+<!--Device-SystemRecordControllerConfig-sourceType: SourceType--><!--Device-SystemRecordControllerConfig-sourceType: SourceType-End-->
+
+**System capability:** SystemCapability.Multimedia.Audio.Capturer

@@ -12,7 +12,7 @@ import { batteryInfo } from 'kits/@kit.BasicServicesKit';
 function technology(): string
 ```
 
-表示当前设备电池的技术型号。
+Battery technology of the device.
 
 **Since:** 23
 
@@ -26,5 +26,5 @@ function technology(): string
 
 | Type | Description |
 | --- | --- |
-| string | 返回当前设备电池的技术型号。 |
+| string | Returns the battery technology of the device. |
 

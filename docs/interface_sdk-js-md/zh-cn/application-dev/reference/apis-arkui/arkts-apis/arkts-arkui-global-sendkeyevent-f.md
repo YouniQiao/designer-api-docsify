@@ -22,7 +22,7 @@ Send key event.
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| event | [KeyEvent](../../apis-ime-kit/arkts-apis/arkts-ime-inputmethodengine-keyevent-i.md) | 是 | KeyEvent to be sent. |
+| event | [KeyEvent](arkts-arkui-common-keyevent-i.md) | 是 | KeyEvent to be sent. |
 
 **返回值：**
 

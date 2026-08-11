@@ -12,7 +12,7 @@ import { contact } from 'kits/@kit.ContactsKit';
 function hasMatchedCallLog(context: Context, phoneNumber: string, minDuration: int): Promise<boolean>
 ```
 
-检查是否有符合条件的通话记录，默认查询6小时以内的通话记录，仅针对运营商通话。使用Promise异步回调。
+Checks whether there are call records that meet the specified conditions. By default, call records within the last6 hours are queried. This API applies only to carrier calls. This API uses a promise to return the result.
 
 **Since:** 24
 
@@ -32,42 +32,23 @@ function hasMatchedCallLog(context: Context, phoneNumber: string, minDuration: i
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| context | [Context](../../apis-arkui/arkts-components/arkts-arkui-context-t.md) | Yes | 应用上下文Context。 |
-| phoneNumber | string | Yes | 联系人的电话号码。 |
-| minDuration | int | Yes | 最短通话时长，单位为秒，取值范围大于0。 |
+| context | [Context](../../apis-arkui/arkts-components/arkts-arkui-context-t.md) | Yes | Indicates the context of the application or capability. |
+| phoneNumber | string | Yes | Phone number of the contacts. |
+| minDuration | int | Yes | Minimum call duration, in seconds. The value must be greater than 0. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;boolean&gt; | Promise对象，返回是否有符合条件的通话记录，true代表有符合条件的，false代表没有。 |
+| Promise&lt;boolean&gt; | Promise used to return the result of whether there are call records that meet the specified conditions. The value **true** indicates that there are such records, and the value **false** indicates the opposite. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 201 | Permission denied. |
-| 16700002 | Invalid parameter value. |
-| 16700001 | General error. |
-
-## Examples
-
-In the examples in this document, this.context is used to obtain the UIAbilityContext, where this represents a UIAbility instance inherited from UIAbility. If you need to use the capabilities provided by UIAbilityContext in the UI, see [Obtaining the Context of UIAbility](../../application-models/uiability-usage.md#obtaining-the-context-of-uiability).
-
-```TypeScript
-import { contact } from '@kit.ContactsKit';
-import { common } from '@kit.AbilityKit';
-
-// Obtain the context in the component.
-const context = this.getUIContext().getHostContext() as common.UIAbilityContext;
-
-const phoneNumber = '138xxxxxxxx';
-const minDuration = 60;
-// Call the API to query. By default, call logs within the last 6 hours are queried.
-contact.hasMatchedCallLog(context, phoneNumber, minDuration).then((hasMatch:boolean) => {
-  console.info(`Has matched call log: ${hasMatch}`);
-});
-```
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
+| [16700002](../errorcode-contacts.md#16700002-parameter-check-failed) | Invalid parameter value. |
+| [16700001](../errorcode-contacts.md#16700001-system-internal-error) | General error. |
 
 
 ## hasMatchedCallLog
@@ -76,7 +57,7 @@ contact.hasMatchedCallLog(context, phoneNumber, minDuration).then((hasMatch:bool
 function hasMatchedCallLog(context: Context, phoneNumber: string, minDuration: int, withinTime: int): Promise<boolean>
 ```
 
-检查是否有符合条件的通话记录，仅针对运营商通话。使用Promise异步回调。
+Checks whether there are call records that meet the specified conditions. This API applies only to carrier calls.This API uses a promise to return the result.
 
 **Since:** 24
 
@@ -96,43 +77,22 @@ function hasMatchedCallLog(context: Context, phoneNumber: string, minDuration: i
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| context | [Context](../../apis-arkui/arkts-components/arkts-arkui-context-t.md) | Yes | 应用上下文Context。 |
-| phoneNumber | string | Yes | 联系人的电话号码。 |
-| minDuration | int | Yes | 最短通话时长，单位为秒，取值范围大于0。 |
-| withinTime | int | Yes | 表示从当前时间开始计算，通话的起始时间和结束时间应在此时间范围内，单位为秒。最多可设置6小时，超过6小时的默认以6小时查询。 |
+| context | [Context](../../apis-arkui/arkts-components/arkts-arkui-context-t.md) | Yes | Indicates the context of the application or capability. |
+| phoneNumber | string | Yes | Phone number of the contacts. |
+| minDuration | int | Yes | Minimum call duration, in seconds. The value must be greater than 0. |
+| withinTime | int | Yes | Period of time that the start time and end time of calls should be within, in seconds. This period starts from the current time. A maximum of six hours can be set. If the query duration exceeds six hours, the query duration is six hours by default. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;boolean&gt; | Promise对象，返回是否有符合条件的通话记录，true代表有符合条件的，false代表没有。 |
+| Promise&lt;boolean&gt; | Promise used to return the result of whether there are call records that meet the specified conditions. The value **true** indicates that there are such records, and the value **false** indicates the opposite. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 201 | Permission denied. |
-| 16700002 | Invalid parameter value. |
-| 16700001 | General error. |
-
-## Examples
-
-In the examples in this document, this.context is used to obtain the UIAbilityContext, where this represents a UIAbility instance inherited from UIAbility. To use the capabilities provided by UIAbilityContext in the UI, see [Obtaining the Context of UIAbility](../../application-models/uiability-usage.md#obtaining-the-context-of-uiability).
-
-```TypeScript
-import { contact } from '@kit.ContactsKit';
-import { common } from '@kit.AbilityKit';
-
-// Obtain the context in the component.
-const context = this.getUIContext().getHostContext() as common.UIAbilityContext;
-
-const phoneNumber = '138xxxxxxxx';
-const minDuration = 60;
-const withinTime = 2 * 60 *60;
-
-// Call the API to query.
-contact.hasMatchedCallLog(context, phoneNumber, minDuration, withinTime).then((hasMatch:boolean) => {
-  console.info(`Has matched call log: ${hasMatch}`);
-});
-```
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
+| [16700002](../errorcode-contacts.md#16700002-parameter-check-failed) | Invalid parameter value. |
+| [16700001](../errorcode-contacts.md#16700001-system-internal-error) | General error. |
 

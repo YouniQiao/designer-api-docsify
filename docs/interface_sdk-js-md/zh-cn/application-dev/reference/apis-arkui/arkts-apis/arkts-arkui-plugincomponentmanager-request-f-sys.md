@@ -1,11 +1,5 @@
 # request（系统接口）
 
-## 导入模块
-
-```TypeScript
-import { PluginComponentTemplate } from 'kits/@kit.ArkUI';
-```
-
 ## request
 
 ```TypeScript

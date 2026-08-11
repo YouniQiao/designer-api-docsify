@@ -12,9 +12,10 @@ import { cryptoFramework } from 'kits/@kit.CryptoArchitectureKit';
 function createMac(algName: string): Mac
 ```
 
-创建消息认证码实例。
+Creates a **Mac** instance.
 
-&lt;br&gt;支持的规格详见[HMAC消息认证码算法规格](../../../security/CryptoArchitectureKit/crypto-compute-mac-overview.md)。
+&lt;br&gt;For details about the supported specifications, see  
+[MAC Overview and Algorithm Specifications](../../../security/CryptoArchitectureKit/crypto-compute-mac-overview.md).
 
 **Since:** 9
 
@@ -32,20 +33,20 @@ function createMac(algName: string): Mac
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| algName | string | Yes | 指定摘要算法，支持算法请参考 [HMAC消息认证码算法规格](../../../security/CryptoArchitectureKit/crypto-compute-mac-overview.md)。 |
+| algName | string | Yes | Specifies the digest algorithm. For details about the supported algorithms, see [MAC Overview and Algorithm Specifications](../../../security/CryptoArchitectureKit/crypto-compute-mac-overview.md) . |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [Mac](arkts-cryptoarchitecture-cryptoframework-mac-i.md) | 返回对应算法的Mac实例。 |
+| [Mac](arkts-cryptoarchitecture-cryptoframework-mac-i.md) | Returns the **Mac** instance corresponding to the specified algorithm. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | 非法入参。可能的原因： &lt;br&gt;1. 必填参数未指定； &lt;br&gt;2. 参数类型不正确； &lt;br&gt;3. 参数验证失败。 |
-| 17620001 | 内存操作失败。 |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Invalid parameters. Possible causes: &lt;br&gt;1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; &lt;br&gt;3. Parameter verification failed. |
+| [17620001](../errorcode-crypto-framework.md#17620001-memory-operation-failed) | Memory operation failed. |
 
 ## Examples
 
@@ -69,9 +70,10 @@ try {
 function createMac(macSpec: MacSpec): Mac
 ```
 
-创建消息认证码实例。
+Creates a **Mac** instance.
 
-&lt;br&gt;支持的规格详见[MAC消息认证码算法规格](../../../security/CryptoArchitectureKit/crypto-compute-mac-overview.md)。
+&lt;br&gt;For details about the supported specifications, see  
+[MAC Overview and Algorithm Specifications](../../../security/CryptoArchitectureKit/crypto-compute-mac-overview.md).
 
 **Since:** 18
 
@@ -87,22 +89,22 @@ function createMac(macSpec: MacSpec): Mac
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| macSpec | [MacSpec](arkts-cryptoarchitecture-cryptoframework-macspec-i.md) | Yes | 根据消息认证码的不同算法，指定入参参数，支持算法请参考 [MAC消息认证码算法规格](../../../security/CryptoArchitectureKit/crypto-compute-mac-overview.md)。 |
+| macSpec | [MacSpec](arkts-cryptoarchitecture-cryptoframework-macspec-i.md) | Yes | Specifies the input parameter struct based on the MAC algorithm. For details about the supported algorithms, see [MAC Overview and Algorithm Specifications](../../../security/CryptoArchitectureKit/crypto-compute-mac-overview.md) . |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [Mac](arkts-cryptoarchitecture-cryptoframework-mac-i.md) | 返回对应算法的Mac实例。 |
+| [Mac](arkts-cryptoarchitecture-cryptoframework-mac-i.md) | Returns the **Mac** instance corresponding to the specified algorithm. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | 非法入参。可能的原因： &lt;br&gt;1. 必填参数未指定； &lt;br&gt;2. 参数类型不正确； &lt;br&gt;3. 参数验证失败。 |
-| 17630001 | 密码操作错误。 |
-| 17620001 | 内存操作失败。 |
-| 17620002 | 获取Native对象失败或参数转换失败。 |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Invalid parameters. Possible causes: &lt;br&gt;1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; &lt;br&gt;3. Parameter verification failed. |
+| [17630001](../errorcode-crypto-framework.md#17630001-cryptographic-operation-error) | Crypto operation error. |
+| [17620001](../errorcode-crypto-framework.md#17620001-memory-operation-failed) | Memory operation failed. |
+| [17620002](../errorcode-crypto-framework.md#17620002-failed-to-obtain-the-native-object-or-convert-parameters) | Failed to obtain the native object or convert parameters. |
 
 ## Examples
 

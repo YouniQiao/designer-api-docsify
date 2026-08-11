@@ -1,7 +1,7 @@
 # StartupVisibility
 
-UIAbility启动后是否可见。当用户设置目标UIAbility为不可见时，目标UIAbility的窗口不会显示在前台，dock栏也不会有图标，同时目标UIAbility的onForeground生命周期不会被调用。StartupVisibility作为[StartOptions](arkts-ability-app-ability-startoptions-startoptions-c.md)的一个属性，仅在  
-[UIAbilityContext.startAbility](arkts-ability-uiabilitycontext-c.md#startability)中生效，用来指定目标UIAbility启动后的可见性。该功能仅在2in1和Tablet设备上生效，在其他设备中返回801错误码。
+Enumerates the visibility statuses of the UIAbility after it is started.If the target UIAbility is set to invisible, the window of the target UIAbility is not displayed in the foreground, there is no icon in the dock, and the **onForeground** lifecycle of the target UIAbility is not triggered.As a property of [StartOptions](arkts-ability-app-ability-startoptions-startoptions-c.md), **StartupVisibility** takes effect only in  
+[UIAbilityContext.startAbility](arkts-ability-uiabilitycontext-c.md#startability) and specifies the visibility of the target UIAbility after it is started.This value takes effect only on 2-in-1 devices and tablets. If it is used on other devices, error code 801 is returned.
 
 **Since:** 12
 
@@ -17,7 +17,7 @@ UIAbility启动后是否可见。当用户设置目标UIAbility为不可见时�
 STARTUP_HIDE = 0
 ```
 
-目标UIAbility启动后，进入隐藏状态。不会调用UIAbility的onForeground生命周期。
+The target UIAbility is hidden after it is started in the new process. The **onForeground** lifecycle of the UIAbility is not invoked.
 
 **Since:** 12
 
@@ -35,7 +35,7 @@ STARTUP_HIDE = 0
 STARTUP_SHOW = 1
 ```
 
-目标UIAbility启动后，正常显示。
+The target UIAbility is displayed normally after it is started in the new process.
 
 **Since:** 12
 

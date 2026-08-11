@@ -1,6 +1,6 @@
 # AuxiliaryPictureInfo
 
-表示辅助图的图像信息。
+Describes the auxiliary picture information.
 
 **Since:** 13
 
@@ -22,7 +22,7 @@ import { image } from 'kits/@kit.ImageKit';
 auxiliaryPictureType: AuxiliaryPictureType
 ```
 
-辅助图的图像类型。
+Auxiliary picture type.
 
 **Type:** [AuxiliaryPictureType](arkts-image-image-auxiliarypicturetype-e.md)
 
@@ -40,7 +40,7 @@ auxiliaryPictureType: AuxiliaryPictureType
 colorSpace: colorSpaceManager.ColorSpaceManager
 ```
 
-目标色彩空间。
+Color space.
 
 **Type:** colorSpaceManager.ColorSpaceManager
 
@@ -58,7 +58,7 @@ colorSpace: colorSpaceManager.ColorSpaceManager
 pixelFormat: PixelMapFormat
 ```
 
-像素格式。
+Pixel format.
 
 **Type:** [PixelMapFormat](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-multimedia-movingphotoview-pixelmapformat-e.md)
 
@@ -76,7 +76,7 @@ pixelFormat: PixelMapFormat
 rowStride: int
 ```
 
-行跨距。单位：字节（Byte）。应大于或等于图像每行像素数据所占的字节数，不满足时数据读取异常。
+Row stride.
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
@@ -94,7 +94,7 @@ rowStride: int
 size: Size
 ```
 
-图片大小。
+Image size.
 
 **Type:** [Size](../../apis-arkui/arkts-apis/arkts-arkui-window-size-i.md)
 

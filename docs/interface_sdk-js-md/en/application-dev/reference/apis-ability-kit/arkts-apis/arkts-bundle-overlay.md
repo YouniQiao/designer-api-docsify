@@ -1,13 +1,15 @@
 # @ohos.bundle.overlay
 
-本模块提供overlay特征应用的[OverlayModuleInfo](arkts-ability-overlaymoduleinfo-i.md)信息查询以及禁用使能的能力。
+The module provides APIs for querying the  
+[OverlayModuleInfo](arkts-ability-overlaymoduleinfo-i.md) of an application with the overlay feature, and disabling and enabling the feature.
 
-overlay特征应用指应用中包含有overlay资源包，overlay资源包详见  
-[overlay机制](../../../quick-start/resource-categories-and-access.md#overlay机制)。
+An application with the overlay feature contains an overlay resource package. For details about this package, see  
+[Overlay Mechanism](../../../quick-start/resource-categories-and-access.md#overlay-mechanism).
 
-> **说明：**
+> **NOTE：**
 > 
-> 本模块接口仅适用于stage模型，且仅适用于[静态overlay](../../../quick-start/resource-categories-and-access.md#静态overlay配置方式)。
+> The APIs provided by this module apply only to the stage model and
+> [static overlay](../../../quick-start/resource-categories-and-access.md#using-overlay-in-static-mode) mode.
 
 **Since:** 10
 
@@ -29,31 +31,31 @@ import { overlay } from 'kits/@kit.AbilityKit';
 
 | Name | Description |
 | --- | --- |
-| [getOverlayModuleInfo](arkts-ability-overlay-getoverlaymoduleinfo-f.md#getoverlaymoduleinfo) | 获取当前应用中overlay特征module的OverlayModuleInfo信息。使用callback异步回调。 |
-| [getOverlayModuleInfo](arkts-ability-overlay-getoverlaymoduleinfo-f.md#getoverlaymoduleinfo-1) | 获取当前应用中overlay特征module的OverlayModuleInfo信息。使用Promise异步回调。 |
-| [getTargetOverlayModuleInfos](arkts-ability-overlay-gettargetoverlaymoduleinfos-f.md#gettargetoverlaymoduleinfos) | 获取指定的目标module所关联的OverlayModuleInfo。overlay特征的module一般是为设备上存在的非overlay特征的module提供覆盖的资源文件，其中非overlay特征的module被称作目标module。使用callback异步回调。 |
-| [getTargetOverlayModuleInfos](arkts-ability-overlay-gettargetoverlaymoduleinfos-f.md#gettargetoverlaymoduleinfos-1) | 获取指定的目标module所关联的OverlayModuleInfo。overlay特征的module一般是为设备上存在的非overlay特征的module提供覆盖的资源文件，其中非overlay特征的module被称作目标module。使用Promise异步回调。 |
-| [setOverlayEnabled](arkts-ability-overlay-setoverlayenabled-f.md#setoverlayenabled) | 设置当前应用中overlay module的禁用使能状态。使用callback异步回调。 |
-| [setOverlayEnabled](arkts-ability-overlay-setoverlayenabled-f.md#setoverlayenabled-1) | 设置当前应用中overlay特征module的禁用使能状态。使用Promise异步回调。 |
+| [getOverlayModuleInfo](arkts-ability-overlay-getoverlaymoduleinfo-f.md#getoverlaymoduleinfo) | Obtains the OverlayModuleInfo about a module with the overlay feature in the current application. This API uses an asynchronous callback to return the result. |
+| [getOverlayModuleInfo](arkts-ability-overlay-getoverlaymoduleinfo-f.md#getoverlaymoduleinfo-1) | Obtains the OverlayModuleInfo about a module with the overlay feature in the current application. This API uses a promise to return the result. |
+| [getTargetOverlayModuleInfos](arkts-ability-overlay-gettargetoverlaymoduleinfos-f.md#gettargetoverlaymoduleinfos) | Obtains the OverlayModuleInfo associated with the specified target module. Modules with the overlay feature generally provide an overlay resource file for other modules (target module) on the device. This API uses an asynchronous callback to return the result. |
+| [getTargetOverlayModuleInfos](arkts-ability-overlay-gettargetoverlaymoduleinfos-f.md#gettargetoverlaymoduleinfos-1) | Obtains the OverlayModuleInfo associated with the specified target module. Modules with the overlay feature generally provide an overlay resource file for other modules (target module) on the device. This API uses a promise to return the result. |
+| [setOverlayEnabled](arkts-ability-overlay-setoverlayenabled-f.md#setoverlayenabled) | Enables or disables a module with the overlay feature in the current application. This API uses an asynchronous callback to return the result. |
+| [setOverlayEnabled](arkts-ability-overlay-setoverlayenabled-f.md#setoverlayenabled-1) | Enables or disables a module with the overlay feature in the current application. This API uses a promise to return the result. |
 
 <!--Del-->
 ### Functions（系统接口）
 
 | Name | Description |
 | --- | --- |
-| [getOverlayModuleInfoByBundleName](arkts-ability-overlay-getoverlaymoduleinfobybundlename-f-sys.md#getoverlaymoduleinfobybundlename) | 获取指定应用中所有module的OverlayModuleInfo信息。使用callback异步回调。  指定应用是调用方自身时不需要权限。 |
-| [getOverlayModuleInfoByBundleName](arkts-ability-overlay-getoverlaymoduleinfobybundlename-f-sys.md#getoverlaymoduleinfobybundlename-1) | 获取指定应用中指定module的OverlayModuleInfo信息。使用callback异步回调。  指定应用是调用方自身时不需要权限。 |
-| [getOverlayModuleInfoByBundleName](arkts-ability-overlay-getoverlaymoduleinfobybundlename-f-sys.md#getoverlaymoduleinfobybundlename-2) | 获取指定应用中指定module的OverlayModuleInfo信息。使用promise异步回调。  指定应用是调用方自身时不需要权限。 |
-| [getTargetOverlayModuleInfosByBundleName](arkts-ability-overlay-gettargetoverlaymoduleinfosbybundlename-f-sys.md#gettargetoverlaymoduleinfosbybundlename) | 获取指定应用中所有module关联的所有OverlayModuleInfo信息。使用callback异步回调。  指定应用是调用方自身时不需要权限。 |
-| [getTargetOverlayModuleInfosByBundleName](arkts-ability-overlay-gettargetoverlaymoduleinfosbybundlename-f-sys.md#gettargetoverlaymoduleinfosbybundlename-1) | 获取指定应用中指定module关联的所有OverlayModuleInfo信息。使用callback异步回调。  指定应用是调用方自身时不需要权限。 |
-| [getTargetOverlayModuleInfosByBundleName](arkts-ability-overlay-gettargetoverlaymoduleinfosbybundlename-f-sys.md#gettargetoverlaymoduleinfosbybundlename-2) | 获取指定应用中指定module关联的所有OverlayModuleInfo信息。使用promise异步回调。  指定应用是调用方自身时不需要权限。 |
-| [setOverlayEnabledByBundleName](arkts-ability-overlay-setoverlayenabledbybundlename-f-sys.md#setoverlayenabledbybundlename) | 设置指定应用的overlay module的禁用使能状态。使用callback异步回调。  指定应用是调用方自身时不需要权限。 |
-| [setOverlayEnabledByBundleName](arkts-ability-overlay-setoverlayenabledbybundlename-f-sys.md#setoverlayenabledbybundlename-1) | 设置指定应用的overlay module的禁用使能状态。使用Promise异步回调。  指定应用是调用方自身时不需要权限。 |
+| [getOverlayModuleInfoByBundleName](arkts-ability-overlay-getoverlaymoduleinfobybundlename-f-sys.md#getoverlaymoduleinfobybundlename) | Obtains the information about all modules with the overlay feature in another application. This API uses an asynchronous callback to return the result.  No permission is required when the specified application is the caller itself. |
+| [getOverlayModuleInfoByBundleName](arkts-ability-overlay-getoverlaymoduleinfobybundlename-f-sys.md#getoverlaymoduleinfobybundlename-1) | Obtains the information about a module with the overlay feature in another application. This API uses an asynchronous callback to return the result.  No permission is required when the specified application is the caller itself. |
+| [getOverlayModuleInfoByBundleName](arkts-ability-overlay-getoverlaymoduleinfobybundlename-f-sys.md#getoverlaymoduleinfobybundlename-2) | Obtains the information about a module with the overlay feature in another application. This API uses a promise to return the result.  No permission is required when the specified application is the caller itself. |
+| [getTargetOverlayModuleInfosByBundleName](arkts-ability-overlay-gettargetoverlaymoduleinfosbybundlename-f-sys.md#gettargetoverlaymoduleinfosbybundlename) | Obtains the information about all modules with the overlay feature in another application. This API uses an asynchronous callback to return the result.  No permission is required when the specified application is the caller itself. |
+| [getTargetOverlayModuleInfosByBundleName](arkts-ability-overlay-gettargetoverlaymoduleinfosbybundlename-f-sys.md#gettargetoverlaymoduleinfosbybundlename-1) | Obtains the information about modules with the overlay feature in another application based on the target module name. This API uses an asynchronous callback to return the result.  No permission is required when the specified application is the caller itself. |
+| [getTargetOverlayModuleInfosByBundleName](arkts-ability-overlay-gettargetoverlaymoduleinfosbybundlename-f-sys.md#gettargetoverlaymoduleinfosbybundlename-2) | Obtains the information about modules with the overlay feature in another application based on the target module name. This API uses a promise to return the result.  No permission is required when the specified application is the caller itself. |
+| [setOverlayEnabledByBundleName](arkts-ability-overlay-setoverlayenabledbybundlename-f-sys.md#setoverlayenabledbybundlename) | Enables or disables a module with the overlay feature in another application. This API uses an asynchronous callback to return the result.  No permission is required when the specified application is the caller itself. |
+| [setOverlayEnabledByBundleName](arkts-ability-overlay-setoverlayenabledbybundlename-f-sys.md#setoverlayenabledbybundlename-1) | Enables or disables a module with the overlay feature in another application. This API uses a promise to return the result.  No permission is required when the specified application is the caller itself. |
 <!--DelEnd-->
 
 ### Types
 
 | Name | Description |
 | --- | --- |
-| [OverlayModuleInfo](arkts-ability-overlay-overlaymoduleinfo-t.md) | OverlayModuleInfo信息。 |
+| [OverlayModuleInfo](arkts-ability-overlay-overlaymoduleinfo-t.md) | Defines the information about a module with the overlay feature. |
 

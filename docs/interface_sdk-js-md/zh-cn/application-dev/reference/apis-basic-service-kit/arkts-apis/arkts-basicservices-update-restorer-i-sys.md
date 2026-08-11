@@ -25,12 +25,6 @@
 
 **系统接口：** 此接口为系统接口。
 
-## 导入模块
-
-```TypeScript
-import { update } from 'kits/@kit.BasicServicesKit';
-```
-
 ## deepFactoryReset
 
 ```TypeScript
@@ -87,31 +81,28 @@ deepFactoryReset(factoryResetStrategy: FactoryResetStrategy): Promise<void>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 11500104 | IPC error. |
-| 201 | Permission denied. |
-| 202 | Permission verification failed. A non-system application calls a system API. |
-| 203 | This function is prohibited by enterprise management policies. |
+| [11500104](../../apis-basic-services-kit/errorcode-update.md#11500104-ipc通信异常) | IPC error. |
+| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed. A non-system application calls a system API. |
+| [203](../../errorcode-universal.md#203-企业管理策略禁止使用此系统功能) | This function is prohibited by enterprise management policies. |
 
 ## 示例
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
 try {
-  // 获取恢复出厂设置对象
-  let factoryRestorer = update.getRestorer();
-  // 创建恢复出厂设置策略对象
+  let restorer = update.getRestorer();
   let factoryResetStrategy: update.FactoryResetStrategy = {
-    scope: update.FactoryResetScope.DATA, // 重置范围为用户数据
-    strategy: 'deepFactoryReset test' // 重置范围描述
+    scope: update.FactoryResetScope.DATA,
+    strategy: "deepFactoryReset test"
   };
-  // 执行深度恢复出厂设置
-  factoryRestorer.deepFactoryReset(factoryResetStrategy).then(() => {
+  restorer.deepFactoryReset(factoryResetStrategy).then(() => {
     console.info(`deepFactoryReset success`);
-  }).catch((deepResetError: BusinessError) => {
-    console.error(`deepFactoryReset error, code:${deepResetError.code}, message:${deepResetError.message}.`);
+  }).catch((err: BusinessError) => {
+    console.error(`deepFactoryReset error ${JSON.stringify(err)}`);
   });
-} catch (error) {
-  console.error(`Fail to get factoryRestorer: ${error}`);
+} catch(error) {
+  console.error(`Fail to get restorer: ${error}`);
 }
 ```
 
@@ -158,30 +149,21 @@ factoryReset(callback: AsyncCallback<void>): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 11500104 | IPC error. |
-| 201 | Permission denied. |
-| 202 | Permission verification failed. A non-system application calls a system API. |
-| 203 | This function is prohibited by enterprise management policies. |
+| [11500104](../../apis-basic-services-kit/errorcode-update.md#11500104-ipc通信异常) | IPC error. |
+| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed. A non-system application calls a system API. |
+| [203](../../errorcode-universal.md#203-企业管理策略禁止使用此系统功能) | This function is prohibited by enterprise management policies. |
 
 ## 示例
 
 ```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
 try {
-  // 获取恢复出厂设置对象
-  let factoryRestorer = update.getRestorer();
-  // 执行恢复出厂设置
-  factoryRestorer.factoryReset((resetError: BusinessError) => {
-    if (resetError) {
-      console.error(`factoryReset error, code:${resetError.code}, message:${resetError.message}.`);
-      return;
-    }
-    console.info(`factoryReset success`);
+  let restorer = update.getRestorer();
+  restorer.factoryReset((err) => {
+    console.info(`factoryReset error ${JSON.stringify(err)}`);
   });
-} catch (error) {
-  let err: BusinessError = error as BusinessError;
-  console.error(`Fail to get factoryRestorer. Code: ${err.code}, message: ${err.message}.`);
+} catch(error) {
+  console.error(`Fail to get restorer: ${error}`);
 }
 ```
 
@@ -228,27 +210,24 @@ factoryReset(): Promise<void>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 11500104 | IPC error. |
-| 201 | Permission denied. |
-| 202 | Permission verification failed. A non-system application calls a system API. |
-| 203 | This function is prohibited by enterprise management policies. |
+| [11500104](../../apis-basic-services-kit/errorcode-update.md#11500104-ipc通信异常) | IPC error. |
+| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed. A non-system application calls a system API. |
+| [203](../../errorcode-universal.md#203-企业管理策略禁止使用此系统功能) | This function is prohibited by enterprise management policies. |
 
 ## 示例
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
-
 try {
-  // 获取恢复出厂设置对象
-  let factoryRestorer = update.getRestorer();
-  // 执行恢复出厂设置
-  factoryRestorer.factoryReset().then(() => {
+  let restorer = update.getRestorer();
+  restorer.factoryReset().then(() => {
     console.info(`factoryReset success`);
-  }).catch((resetError: BusinessError) => {
-    console.error(`factoryReset error, code:${resetError.code}, message:${resetError.message}.`);
+  }).catch((err: BusinessError) => {
+    console.error(`factoryReset error ${JSON.stringify(err)}`);
   });
-} catch (error) {
-  console.error(`Fail to get factoryRestorer: ${error}`);
+} catch(error) {
+  console.error(`Fail to get restorer: ${error}`);
 }
 ```
 
@@ -297,26 +276,24 @@ forceFactoryReset(): Promise<void>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 11500104 | IPC error. |
-| 201 | Permission denied. |
-| 202 | Permission verification failed. A non-system application calls a system API. |
-| 203 | This function is prohibited by enterprise management policies. |
+| [11500104](../../apis-basic-services-kit/errorcode-update.md#11500104-ipc通信异常) | IPC error. |
+| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed. A non-system application calls a system API. |
+| [203](../../errorcode-universal.md#203-企业管理策略禁止使用此系统功能) | This function is prohibited by enterprise management policies. |
 
 ## 示例
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
 try {
-  // 获取恢复出厂设置对象
-  let factoryRestorer = update.getRestorer();
-  // 执行强制恢复出厂设置
-  factoryRestorer.forceFactoryReset().then(() => {
+  let restorer = update.getRestorer();
+  restorer.forceFactoryReset().then(() => {
     console.info(`forceFactoryReset success`);
-  }).catch((forceResetError: BusinessError) => {
-    console.error(`forceFactoryReset error, code:${forceResetError.code}, message:${forceResetError.message}.`);
+  }).catch((err: BusinessError) => {
+    console.error(`forceFactoryReset error ${JSON.stringify(err)}`);
   });
-} catch (error) {
-  console.error(`Fail to get factoryRestorer: ${error}`);
+} catch(error) {
+  console.error(`Fail to get restorer: ${error}`);
 }
 ```
 
@@ -372,31 +349,28 @@ getDeepFactoryResetInfo(factoryResetStrategy: FactoryResetStrategy): Promise<Fac
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 11500104 | IPC error. |
-| 201 | Permission denied. |
-| 202 | Permission verification failed. A non-system application calls a system API. |
+| [11500104](../../apis-basic-services-kit/errorcode-update.md#11500104-ipc通信异常) | IPC error. |
+| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed. A non-system application calls a system API. |
 
 ## 示例
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
 
-// 创建恢复出厂设置策略对象
 let factoryResetStrategy: update.FactoryResetStrategy = {
-  scope: update.FactoryResetScope.DATA, // 重置范围为用户数据 
-  strategy: 'getDeepFactoryResetInfo test' // 重置范围描述
+  scope: update.FactoryResetScope.DATA,
+  strategy: "deepFactoryReset"
 };
 try {
-  // 获取恢复出厂设置对象
-  let factoryRestorer = update.getRestorer();
-  // 查询深度恢复出厂策略信息
-  factoryRestorer.getDeepFactoryResetInfo(factoryResetStrategy).then((deepResetInfo: update.FactoryResetInfo) => {
+  let restorer = update.getRestorer();
+  restorer.getDeepFactoryResetInfo(factoryResetStrategy).then((info: update.FactoryResetInfo) => {
     console.info(`getDeepFactoryResetInfo success`);
-  }).catch((resetInfoError: BusinessError) => {
-    console.error(`getDeepFactoryResetInfo promise error, code:${resetInfoError.code}, message:${resetInfoError.message}.`);
+  }).catch((err: BusinessError) => {
+    console.error(`getDeepFactoryResetInfo promise error ${JSON.stringify(err)}`);
   });
-} catch (error) {
-  console.error(`Fail to get factoryRestorer: ${error}`);
+} catch(error) {
+  console.error(`Fail to get restorer: ${error}`);
 }
 ```
 

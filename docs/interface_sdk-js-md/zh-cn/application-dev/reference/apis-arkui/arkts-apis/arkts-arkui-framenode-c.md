@@ -38,7 +38,7 @@ addComponentContent<T>(content: ComponentContent<T> | ReactiveComponentContent):
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 100021 | The FrameNode is not modifiable. |
+| [100021](../errorcode-node.md#100021-framenode节点不可修改) | The FrameNode is not modifiable. |
 
 ## addSupportedUIStates
 
@@ -94,9 +94,9 @@ adoptChild(child: FrameNode): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 100021 | The current FrameNode is not modifiable. |
-| 100025 | The parameter is invalid. Details about the invalid parameter and the reason are included in the error message. For example: "The parameter 'child' is invalid: it cannot be disposed." |
-| 100026 | The current FrameNode has been disposed. |
+| [100021](../errorcode-node.md#100021-framenode节点不可修改) | The current FrameNode is not modifiable. |
+| [100025](../errorcode-node.md#100025-传入参数不符合要求) | The parameter is invalid. Details about the invalid parameter and the reason are included in the error message. For example: "The parameter 'child' is invalid: it cannot be disposed." |
+| [100026](../errorcode-node.md#100026-调用接口的实例对象已与后端实体节点解绑) | The current FrameNode has been disposed. |
 
 ## appendChild
 
@@ -128,8 +128,8 @@ appendChild(node: FrameNode): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 100021 | The FrameNode is not modifiable. |
-| 100025 | The parameter is invalid. Details about the invalid parameter and the reason are included in the error message. For example: "The parameter 'node' is invalid: it cannot be adopted." |
+| [100021](../errorcode-node.md#100021-framenode节点不可修改) | The FrameNode is not modifiable. |
+| [100025](../errorcode-node.md#100025-传入参数不符合要求) | The parameter is invalid. Details about the invalid parameter and the reason are included in the error message. For example: "The parameter 'node' is invalid: it cannot be adopted." |
 
 ## cancelAnimations
 
@@ -183,7 +183,7 @@ clearChildren(): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 100021 | The FrameNode is not modifiable. |
+| [100021](../errorcode-node.md#100021-framenode节点不可修改) | The FrameNode is not modifiable. |
 
 ## constructor
 
@@ -245,8 +245,8 @@ convertPosition(position: NodePosition, targetNode: FrameNode): NodePosition
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 100025 | The parameter is invalid. Details about the invalid parameter and the reason are included in the error message. For example: "The parameter 'targetNode' is invalid: it cannot be disposed." |
-| 100024 | The current FrameNode and the target FrameNode do not have a common ancestor node. |
+| [100025](../errorcode-node.md#100025-传入参数不符合要求) | The parameter is invalid. Details about the invalid parameter and the reason are included in the error message. For example: "The parameter 'targetNode' is invalid: it cannot be disposed." |
+| [100024](../errorcode-node.md#100024-节点没有公共祖先节点) | The current FrameNode and the target FrameNode do not have a common ancestor node. |
 
 ## convertPositionFromWindow
 
@@ -280,8 +280,8 @@ convertPositionFromWindow(positionByWindow: NodePosition): NodePosition
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 100026 | The current FrameNode has been disposed. |
-| 100028 | The current FrameNode is not on the main tree. |
+| [100026](../errorcode-node.md#100026-调用接口的实例对象已与后端实体节点解绑) | The current FrameNode has been disposed. |
+| [100028](../errorcode-node.md#100028-当前节点不在主节点树上) | The current FrameNode is not on the main tree. |
 
 ## convertPositionToWindow
 
@@ -315,8 +315,8 @@ convertPositionToWindow(positionByLocal: NodePosition): NodePosition
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 100026 | The current FrameNode has been disposed. |
-| 100028 | The current FrameNode is not on the main tree. |
+| [100026](../errorcode-node.md#100026-调用接口的实例对象已与后端实体节点解绑) | The current FrameNode has been disposed. |
+| [100028](../errorcode-node.md#100028-当前节点不在主节点树上) | The current FrameNode is not on the main tree. |
 
 ## createAnimation
 
@@ -1301,8 +1301,8 @@ insertChildAfter(child: FrameNode, sibling: FrameNode | null): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 100021 | The FrameNode is not modifiable. |
-| 100025 | The parameter is invalid. Details about the invalid parameter and the reason are included in the error message. For example: "The parameter 'child' is invalid: it cannot be adopted." |
+| [100021](../errorcode-node.md#100021-framenode节点不可修改) | The FrameNode is not modifiable. |
+| [100025](../errorcode-node.md#100025-传入参数不符合要求) | The parameter is invalid. Details about the invalid parameter and the reason are included in the error message. For example: "The parameter 'child' is invalid: it cannot be adopted." |
 
 ## invalidate
 
@@ -1516,7 +1516,7 @@ isOnMainTree(): boolean
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 100026 | The curent FrameNode has been disposed. |
+| [100026](../errorcode-node.md#100026-调用接口的实例对象已与后端实体节点解绑) | The curent FrameNode has been disposed. |
 
 ## isTransferred
 
@@ -1647,8 +1647,8 @@ moveTo(targetParent: FrameNode, index?: int): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 100021 | The FrameNode is not modifiable. |
-| 100027 | The current node has been adopted. |
+| [100021](../errorcode-node.md#100021-framenode节点不可修改) | The FrameNode is not modifiable. |
+| [100027](../errorcode-node.md#100027-当前节点已被接纳为附属节点) | The current node has been adopted. |
 
 ## onDraw
 
@@ -1767,9 +1767,9 @@ removeAdoptedChild(child: FrameNode): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 100021 | The current FrameNode is not modifiable. |
-| 100025 | The parameter is invalid. Details about the invalid parameter and the reason are included in the error message. For example: "The parameter 'child' is invalid: it cannot be null." |
-| 100026 | The current FrameNode has been disposed. |
+| [100021](../errorcode-node.md#100021-framenode节点不可修改) | The current FrameNode is not modifiable. |
+| [100025](../errorcode-node.md#100025-传入参数不符合要求) | The parameter is invalid. Details about the invalid parameter and the reason are included in the error message. For example: "The parameter 'child' is invalid: it cannot be null." |
+| [100026](../errorcode-node.md#100026-调用接口的实例对象已与后端实体节点解绑) | The current FrameNode has been disposed. |
 
 ## removeChild
 
@@ -1799,7 +1799,7 @@ removeChild(node: FrameNode): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 100021 | The FrameNode is not modifiable. |
+| [100021](../errorcode-node.md#100021-framenode节点不可修改) | The FrameNode is not modifiable. |
 
 ## removeSupportedUIStates
 
@@ -1898,7 +1898,7 @@ setCrossLanguageOptions(value: CrossLanguageOptions): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 100022 | The FrameNode cannot be set whether to support cross-language common attribute setting. |
+| [100022](../errorcode-node.md#100022-framenode节点的组件类型不支持调整跨语言的通用属性设置权限) | The FrameNode cannot be set whether to support cross-language common attribute setting. |
 
 ## setLayoutPosition
 

@@ -12,11 +12,12 @@ import { usbManager } from 'kits/@kit.BasicServicesKit';
 function resetUsbDevice(pipe: USBDevicePipe): boolean
 ```
 
-重置USB外设。
+Resets a USB peripheral.
 
-> **说明：**
+> **NOTE：**
 > 
-> 本接口调用后会重置此前设置的配置和替换接口，请在调用之前确认相关业务已结束。
+> Previous configurations and APIs will be reset. Ensure that the related services have been completed before
+> calling this API.
 
 **Since:** 20
 
@@ -30,24 +31,24 @@ function resetUsbDevice(pipe: USBDevicePipe): boolean
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| pipe | [USBDevicePipe](arkts-basicservices-usbmanager-usbdevicepipe-i.md) | Yes | 用于确定总线号和设备地址，需要调用[usbManager.connectDevice](arkts-basicservices-usbmanager-connectdevice-f.md#connectdevice)获取。 |
+| pipe | [USBDevicePipe](arkts-basicservices-usbmanager-usbdevicepipe-i.md) | Yes | USB device pipe, which is used to determine the bus number and device address. You need to call [usbManager.connectDevice](arkts-basicservices-usbmanager-connectdevice-f.md#connectdevice) to obtain its value. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| boolean | true表示重置设备成功，false表示重置设备失败。 |
+| boolean | Returns **true** if the device is reset successfully; returns **false** otherwise. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 801 | Capability not supported. |
-| 14400010 | Other USB error. Possible causes:  &lt;br&gt;1.Unrecognized discard error code. |
-| 14400008 | No such device(it may have been disconnected) |
-| 14400013 | The USBDevicePipe validity check failed. Possible causes:  &lt;br&gt;1.The input parameters fail the validation check.  &lt;br&gt;2.The call chain used to obtain the input parameters is not reasonable. |
-| 14400001 | Access right denied. Call requestRight to get the USBDevicePipe access right first. |
-| 14400004 | Service exception. Possible causes: 1. No accessory is plugged in. |
+| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. |
+| [14400010](../../apis-basic-services-kit/errorcode-usb.md#14400010-unrecognized-error) | Other USB error. Possible causes:  &lt;br&gt;1.Unrecognized discard error code. |
+| [14400008](../../apis-basic-services-kit/errorcode-usb.md#14400008-no-device-disconnected) | No such device(it may have been disconnected) |
+| [14400013](../../apis-basic-services-kit/errorcode-usb.md#14400013-parameter-validity-check-failed) | The USBDevicePipe validity check failed. Possible causes:  &lt;br&gt;1.The input parameters fail the validation check.  &lt;br&gt;2.The call chain used to obtain the input parameters is not reasonable. |
+| [14400001](../../apis-basic-services-kit/errorcode-usb.md#14400001-usb-device-connection-denied) | Access right denied. Call requestRight to get the USBDevicePipe access right first. |
+| [14400004](../../apis-basic-services-kit/errorcode-usb.md#14400004-service-exception) | Service exception. Possible causes: 1. No accessory is plugged in. |
 
 ## Examples
 
@@ -59,8 +60,8 @@ function resetUsbDevice() {
     return;
   }
 
-  usbManager.requestRight(devicesList?.[0]?.name);
-  let devicepipe: usbManager.USBDevicePipe = usbManager.connectDevice(devicesList?.[0]);
+  usbManager.requestRight(devicesList[0].name);
+  let devicepipe: usbManager.USBDevicePipe = usbManager.connectDevice(devicesList[0]);
   try {
     let ret: boolean = usbManager.resetUsbDevice(devicepipe);
     console.info(`resetUsbDevice  = ${ret}`);

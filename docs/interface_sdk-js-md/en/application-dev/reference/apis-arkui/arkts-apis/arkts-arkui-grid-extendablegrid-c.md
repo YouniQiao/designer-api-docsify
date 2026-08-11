@@ -1,6 +1,6 @@
 # ExtendableGrid
 
-可扩展Grid组件。
+Defines the Extendable Grid.
 
 **Inheritance/Implementation:** ExtendableGrid implements [GridAttribute](../arkts-components/arkts-arkui-grid-attribute.md/arkts-arkui-grid-attribute.md)
 
@@ -23,7 +23,7 @@ static $_instantiate<T extends ExtendableGrid>(
   ): T
 ```
 
-创建可扩展Grid组件实例。
+Constructor of Extendable Grid.
 
 **Since:** 26.0.0
 
@@ -32,6 +32,8 @@ static $_instantiate<T extends ExtendableGrid>(
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-ExtendableGrid-static $_instantiate<T extends ExtendableGrid>(    factory: ConstructorT<T>,     scroller?: Scroller,     layoutOptions?: GridLayoutOptions,     content_?: CustomBuilder  ): T--><!--Device-ExtendableGrid-static $_instantiate<T extends ExtendableGrid>(    factory: ConstructorT<T>,     scroller?: Scroller,     layoutOptions?: GridLayoutOptions,     content_?: CustomBuilder  ): T-End-->
+
+**System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
 
@@ -46,7 +48,7 @@ static $_instantiate<T extends ExtendableGrid>(
 
 | Type | Description |
 | --- | --- |
-| T | Grid组件实例。 |
+| T |  |
 
 ## _instantiateImpl
 
@@ -58,7 +60,7 @@ static _instantiateImpl<T extends ExtendableGrid>(
   ): void
 ```
 
-扩展网格组件入口
+Entry of Extendable Grid.
 
 **Since:** 26.0.0
 
@@ -89,7 +91,7 @@ public setGridOptions(
   ): this
 ```
 
-设置Grid组件选项。
+Set the Grid Options.
 
 **Since:** 26.0.0
 
@@ -98,6 +100,8 @@ public setGridOptions(
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-ExtendableGrid-public setGridOptions(    scroller?: Scroller,     layoutOptions?: GridLayoutOptions  ): this--><!--Device-ExtendableGrid-public setGridOptions(    scroller?: Scroller,     layoutOptions?: GridLayoutOptions  ): this-End-->
+
+**System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Parameters:**
 
@@ -110,5 +114,5 @@ public setGridOptions(
 
 | Type | Description |
 | --- | --- |
-| this | Grid组件实例。 |
+| this |  |
 

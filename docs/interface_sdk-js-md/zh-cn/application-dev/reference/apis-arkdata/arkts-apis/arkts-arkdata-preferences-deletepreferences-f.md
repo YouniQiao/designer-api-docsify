@@ -1,11 +1,5 @@
 # deletePreferences
 
-## 导入模块
-
-```TypeScript
-import { preferences } from 'kits/@kit.ArkData';
-```
-
 ## deletePreferences
 
 ```TypeScript
@@ -40,9 +34,9 @@ function deletePreferences(context: Context, name: string, callback: AsyncCallba
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 401 | Parameter error. Possible causes: &lt;br&gt;1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; &lt;br&gt;3. Parameter verification failed. |
-| 15500010 | Failed to delete the user preferences persistence file. |
-| 15500000 | Inner error.<br>**适用版本：** 11+ |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: &lt;br&gt;1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; &lt;br&gt;3. Parameter verification failed. |
+| [15500010](../errorcode-preferences.md#15500010-删除用户首选项持久化文件失败) | Failed to delete the user preferences persistence file. |
+| [15500000](../errorcode-preferences.md#15500000-内部错误) | Inner error.<br>**适用版本：** 11+ |
 
 ## 示例
 
@@ -57,14 +51,14 @@ let context = featureAbility.getContext();
 
 preferences.deletePreferences(context, 'myStore', (err: BusinessError) => {
   if (err) {
-    console.error("Failed to delete preferences. Code = " + err.code + ", message = " + err.message);
+    console.error("Failed to delete preferences. code =" + err.code + ", message =" + err.message);
     return;
   }
   console.info("Succeeded in deleting preferences.");
 })
 ```
 
-Stage模型示例：
+ArkTS-Dyn示例：
 
 ```TypeScript
 import { UIAbility } from '@kit.AbilityKit';
@@ -75,7 +69,27 @@ class EntryAbility extends UIAbility {
   onWindowStageCreate(windowStage: window.WindowStage) {
     preferences.deletePreferences(this.context, 'myStore', (err: BusinessError) => {
       if (err) {
-        console.error("Failed to delete preferences. Code = " + err.code + ", message = " + err.message);
+        console.error("Failed to delete preferences. code =" + err.code + ", message =" + err.message);
+        return;
+      }
+      console.info("Succeeded in deleting preferences.");
+    })
+  }
+}
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+import { UIAbility } from '@kit.AbilityKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+import { window } from '@kit.ArkUI';
+
+class EntryAbility extends UIAbility {
+  onWindowStageCreate(windowStage: window.WindowStage) {
+    preferences.deletePreferences(this.context, 'myStore', (err: BusinessError | null) => {
+      if (err) {
+        console.error("Failed to delete preferences. code =" + err.code + ", message =" + err.message);
         return;
       }
       console.info("Succeeded in deleting preferences.");
@@ -119,12 +133,12 @@ function deletePreferences(context: Context, options: Options, callback: AsyncCa
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 401 | Parameter error. Possible causes: &lt;br&gt;1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; &lt;br&gt;3. Parameter verification failed. |
-| 801 | Capability not supported. |
-| 15501001 | The operations is supported in stage mode only. |
-| 15500010 | Failed to delete the user preferences persistence file. |
-| 15501002 | Invalid dataGroupId. |
-| 15500000 | Inner error.<br>**适用版本：** 11+ |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: &lt;br&gt;1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; &lt;br&gt;3. Parameter verification failed. |
+| [801](../../errorcode-universal.md#801-该设备不支持此api) | Capability not supported. |
+| [15501001](../errorcode-preferences.md#15501001-上下文环境非stage模型) | The operations is supported in stage mode only. |
+| [15500010](../errorcode-preferences.md#15500010-删除用户首选项持久化文件失败) | Failed to delete the user preferences persistence file. |
+| [15501002](../errorcode-preferences.md#15501002-options中传入的datagroupid参数非法) | Invalid dataGroupId. |
+| [15500000](../errorcode-preferences.md#15500000-内部错误) | Inner error.<br>**适用版本：** 11+ |
 
 ## 示例
 
@@ -140,14 +154,14 @@ let context = featureAbility.getContext();
 let options: preferences.Options = { name: 'myStore' };
 preferences.deletePreferences(context, options, (err: BusinessError) => {
   if (err) {
-    console.error("Failed to delete preferences. code =" + err.code + ", message = " + err.message);
+    console.error("Failed to delete preferences. code =" + err.code + ", message =" + err.message);
     return;
   }
   console.info("Succeeded in deleting preferences.");
 })
 ```
 
-Stage模型示例：
+ArkTS-Dyn示例：
 
 ```TypeScript
 import { UIAbility } from '@kit.AbilityKit';
@@ -159,7 +173,27 @@ class EntryAbility extends UIAbility {
     let options: preferences.Options = { name: 'myStore' };
     preferences.deletePreferences(this.context, options, (err: BusinessError) => {
       if (err) {
-        console.error("Failed to delete preferences. code =" + err.code + ", message = " + err.message);
+        console.error("Failed to delete preferences. code =" + err.code + ", message =" + err.message);
+        return;
+      }
+      console.info("Succeeded in deleting preferences.");
+    })
+  }
+}
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+import { UIAbility } from '@kit.AbilityKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+import { window } from '@kit.ArkUI';
+
+class EntryAbility extends UIAbility {
+  onWindowStageCreate(windowStage: window.WindowStage) {
+    preferences.deletePreferences(this.context, options, (err: BusinessError | null) => {
+      if (err) {
+        console.error("Failed to delete preferences. code =" + err.code + ", message =" + err.message);
         return;
       }
       console.info("Succeeded in deleting preferences.");
@@ -208,9 +242,9 @@ function deletePreferences(context: Context, name: string): Promise<void>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 401 | Parameter error. Possible causes: &lt;br&gt;1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; &lt;br&gt;3. Parameter verification failed. |
-| 15500010 | Failed to delete the user preferences persistence file. |
-| 15500000 | Inner error.<br>**适用版本：** 11+ |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: &lt;br&gt;1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; &lt;br&gt;3. Parameter verification failed. |
+| [15500010](../errorcode-preferences.md#15500010-删除用户首选项持久化文件失败) | Failed to delete the user preferences persistence file. |
+| [15500000](../errorcode-preferences.md#15500000-内部错误) | Inner error.<br>**适用版本：** 11+ |
 
 ## 示例
 
@@ -227,11 +261,11 @@ let sp = preferences.deletePreferences(context, 'myStore');
 sp.then(() => {
   console.info("Succeeded in deleting preferences.");
 }).catch((err: BusinessError) => {
-  console.error("Failed to delete preferences. Code = " + err.code + ", message = " + err.message);
+  console.error("Failed to delete preferences. code =" + err.code + ", message =" + err.message);
 })
 ```
 
-Stage模型示例：
+ArkTS-Dyn示例：
 
 ```TypeScript
 import { UIAbility } from '@kit.AbilityKit';
@@ -244,7 +278,25 @@ class EntryAbility extends UIAbility {
     sp.then(() => {
       console.info("Succeeded in deleting preferences.");
     }).catch((err: BusinessError) => {
-      console.error("Failed to delete preferences. code =" + err.code + ", message = " + err.message);
+      console.error("Failed to delete preferences. code =" + err.code + ", message =" + err.message);
+    })
+  }
+}
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+import { UIAbility } from '@kit.AbilityKit';
+import { window } from '@kit.ArkUI';
+
+class EntryAbility extends UIAbility {
+  onWindowStageCreate(windowStage: window.WindowStage) {
+    let sp = preferences.deletePreferences(this.context, 'myStore');
+    sp.then(() => {
+      console.info("Succeeded in deleting preferences.");
+    }).catch((err) => {
+      console.error("Failed to delete preferences. code =" + err.code + ", message =" + err.message);
     })
   }
 }
@@ -290,12 +342,12 @@ function deletePreferences(context: Context, options: Options): Promise<void>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 401 | Parameter error. Possible causes: &lt;br&gt;1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; &lt;br&gt;3. Parameter verification failed. |
-| 801 | Capability not supported. |
-| 15501001 | The operations is supported in stage mode only. |
-| 15500010 | Failed to delete the user preferences persistence file. |
-| 15501002 | Invalid dataGroupId. |
-| 15500000 | Inner error.<br>**适用版本：** 11+ |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: &lt;br&gt;1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; &lt;br&gt;3. Parameter verification failed. |
+| [801](../../errorcode-universal.md#801-该设备不支持此api) | Capability not supported. |
+| [15501001](../errorcode-preferences.md#15501001-上下文环境非stage模型) | The operations is supported in stage mode only. |
+| [15500010](../errorcode-preferences.md#15500010-删除用户首选项持久化文件失败) | Failed to delete the user preferences persistence file. |
+| [15501002](../errorcode-preferences.md#15501002-options中传入的datagroupid参数非法) | Invalid dataGroupId. |
+| [15500000](../errorcode-preferences.md#15500000-内部错误) | Inner error.<br>**适用版本：** 11+ |
 
 ## 示例
 
@@ -313,11 +365,11 @@ let sp = preferences.deletePreferences(context, options);
 sp.then(() => {
   console.info("Succeeded in deleting preferences.");
 }).catch((err: BusinessError) => {
-  console.error("Failed to delete preferences. code =" + err.code + ", message = " + err.message);
+  console.error("Failed to delete preferences. code =" + err.code + ", message =" + err.message);
 })
 ```
 
-Stage模型示例：
+ArkTS-Dyn示例：
 
 ```TypeScript
 import { UIAbility } from '@kit.AbilityKit';
@@ -331,7 +383,25 @@ class EntryAbility extends UIAbility {
     sp.then(() => {
       console.info("Succeeded in deleting preferences.");
     }).catch((err: BusinessError) => {
-      console.error("Failed to delete preferences. code =" + err.code + ", message = " + err.message);
+      console.error("Failed to delete preferences. code =" + err.code + ", message =" + err.message);
+    })
+  }
+}
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+import { UIAbility } from '@kit.AbilityKit';
+import { window } from '@kit.ArkUI';
+
+class EntryAbility extends UIAbility {
+  onWindowStageCreate(windowStage: window.WindowStage) {
+    let sp = preferences.deletePreferences(this.context, options);
+    sp.then(() => {
+      console.info("Succeeded in deleting preferences.");
+    }).catch((err) => {
+      console.error("Failed to delete preferences. code =" + err.code + ", message =" + err.message);
     })
   }
 }

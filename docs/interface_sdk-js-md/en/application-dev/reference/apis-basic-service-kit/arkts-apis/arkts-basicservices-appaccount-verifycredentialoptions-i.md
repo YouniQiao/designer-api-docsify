@@ -1,6 +1,6 @@
 # VerifyCredentialOptions
 
-表示用于验证凭据的选项。
+Represents the options for verifying the user credential.
 
 **Since:** 9
 
@@ -22,7 +22,7 @@ import { appAccount } from 'kits/@kit.BasicServicesKit';
 credential?: string
 ```
 
-凭据取值，默认为空。
+Credential value. The custom value, the value cannot exceed 1024 characters. By default, no value is passed in.
 
 **Type:** string
 
@@ -40,7 +40,7 @@ credential?: string
 credentialType?: string
 ```
 
-凭据类型，默认为空。
+Credential type. The custom type, the value cannot exceed 1024 characters. By default, no value is passed in.
 
 **Type:** string
 
@@ -58,7 +58,7 @@ credentialType?: string
 parameters?: Record<string, Object>
 ```
 
-自定义参数对象，默认为空。
+Custom parameter object. By default, no value is passed in.
 
 **Type:** [Record](../../apis-default/arkts-apis/arkts-record-t.md)&lt;string, Object&gt;
 

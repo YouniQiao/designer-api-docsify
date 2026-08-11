@@ -1,6 +1,6 @@
 # ReplaceSymbolEffect
 
-ReplaceSymbolEffect继承自父类SymbolEffect。
+Defines ReplaceSymbolEffect class, which inherits from **SymbolEffect**.
 
 **Inheritance/Implementation:** ReplaceSymbolEffect extends [SymbolEffect](arkts-arkui-symboleffect-c.md)
 
@@ -18,7 +18,7 @@ ReplaceSymbolEffect继承自父类SymbolEffect。
 constructor(scope?: EffectScope)
 ```
 
-AppearSymbolEffect的构造函数，出现动效。
+A constructor used to create an **AppearSymbolEffect** instance, which comes with an appear animation effect.
 
 **Since:** 12
 
@@ -38,7 +38,7 @@ AppearSymbolEffect的构造函数，出现动效。
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| scope | [EffectScope](arkts-arkui-effectscope-e.md) | No | 动效范围。具体枚举值及说明请参考EffectScope枚举说明。 &lt;br&gt;默认值：EffectScope.LAYER |
+| scope | [EffectScope](arkts-arkui-effectscope-e.md) | No | Effect scope.&lt;br&gt;Default value: **EffectScope.LAYER |
 
 ## constructor
 
@@ -46,7 +46,7 @@ AppearSymbolEffect的构造函数，出现动效。
 constructor(scope?: EffectScope, replaceType?: ReplaceEffectType)
 ```
 
-ReplaceSymbolEffect的构造函数，替换动效。支持指定具体的替换动效类型。
+A constructor used to create a **ReplaceSymbolEffect** instance, which comes with a replace animation effect. The replace effect type can be specified.
 
 **Since:** 20
 
@@ -66,8 +66,8 @@ ReplaceSymbolEffect的构造函数，替换动效。支持指定具体的替换�
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| scope | [EffectScope](arkts-arkui-effectscope-e.md) | No | 动效范围。 &lt;br&gt;默认值：EffectScope.LAYER |
-| replaceType | [ReplaceEffectType](arkts-arkui-replaceeffecttype-e.md) | No | 替换动效类型。 &lt;br&gt;默认值：ReplaceEffectType.SEQUENTIAL |
+| scope | [EffectScope](arkts-arkui-effectscope-e.md) | No | Effect scope.&lt;br&gt;Default value: **EffectScope.LAYER |
+| replaceType | [ReplaceEffectType](arkts-arkui-replaceeffecttype-e.md) | No | Replacement effect type.&lt;br&gt;Default value: **ReplaceEffectType.SEQUENTIAL |
 
 ## replaceType
 
@@ -75,9 +75,9 @@ ReplaceSymbolEffect的构造函数，替换动效。支持指定具体的替换�
 replaceType?: ReplaceEffectType
 ```
 
-替换动效类型。具体枚举值及说明请参考ReplaceEffectType枚举说明。
+Replacement effect type.
 
-默认值：ReplaceEffectType.SEQUENTIAL
+Default value: **ReplaceEffectType.SEQUENTIAL**.
 
 **Type:** [ReplaceEffectType](arkts-arkui-replaceeffecttype-e.md)
 
@@ -101,9 +101,9 @@ replaceType?: ReplaceEffectType
 scope?: EffectScope
 ```
 
-动效范围。具体枚举值及说明请参考EffectScope枚举说明。
+Effect scope.
 
-默认值：EffectScope.LAYER
+Default value: **EffectScope.LAYER**
 
 **Type:** [EffectScope](arkts-arkui-effectscope-e.md)
 

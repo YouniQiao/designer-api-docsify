@@ -1,6 +1,6 @@
 # ErrorCode
 
-表示错误返回信息的特定类型枚举。
+Enumerates the specific types of returned error code.
 
 **Since:** 23
 
@@ -16,7 +16,7 @@
 OTHERS = 0xFF
 ```
 
-表示未分类的其他类型错误。
+Other types of errors that are not classified.
 
 **Since:** 23
 
@@ -32,7 +32,7 @@ OTHERS = 0xFF
 DNS = 0x00
 ```
 
-表示DNS相关错误。
+DNS-related errors.
 
 **Since:** 23
 
@@ -48,7 +48,7 @@ DNS = 0x00
 TCP = 0x10
 ```
 
-表示TCP相关错误。
+TCP-related errors.
 
 **Since:** 23
 
@@ -64,7 +64,7 @@ TCP = 0x10
 SSL = 0x20
 ```
 
-表示SSL相关错误。
+SSL-related errors.
 
 **Since:** 23
 
@@ -80,7 +80,7 @@ SSL = 0x20
 HTTP = 0x30
 ```
 
-表示HTTP相关错误。
+HTTP-related errors.
 
 **Since:** 23
 

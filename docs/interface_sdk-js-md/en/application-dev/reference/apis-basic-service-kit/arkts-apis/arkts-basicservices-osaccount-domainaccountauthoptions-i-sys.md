@@ -1,6 +1,6 @@
 # DomainAccountAuthOptions (System API)
 
-表示域账号认证的选项。
+Defines the options for domain account authentication.
 
 **Since:** 24
 
@@ -24,7 +24,7 @@ import { osAccount } from 'kits/@kit.BasicServicesKit';
 serverParams?: Record<string, Object>
 ```
 
-域账号认证服务器配置参数。默认为undefined。
+Configuration parameters of the domain account authentication server. which is **undefined** by default.
 
 **Type:** [Record](../../apis-default/arkts-apis/arkts-record-t.md)&lt;string, Object&gt;
 

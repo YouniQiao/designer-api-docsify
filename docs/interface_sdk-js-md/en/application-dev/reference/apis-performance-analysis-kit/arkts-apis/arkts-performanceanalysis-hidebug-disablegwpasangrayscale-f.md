@@ -12,7 +12,8 @@ import { hidebug } from 'kits/@kit.PerformanceAnalysisKit';
 function disableGwpAsanGrayscale(): void
 ```
 
-ֹͣʹ��GWP-ASan�����øýӿڽ�ȡ���Զ������ã��ָ�Ĭ�ϲ���GwpAsanOptions��
+Disables GWP-ASan. This API is used to cancel the custom configuration and restore the default parameter  
+[GwpAsanOptions](arkts-performanceanalysis-hidebug-gwpasanoptions-i.md).
 
 **Since:** 20
 
@@ -26,14 +27,7 @@ function disableGwpAsanGrayscale(): void
 
 ```TypeScript
 import { hidebug } from '@kit.PerformanceAnalysisKit';
-import { taskpool } from '@kit.ArkTS';
 
-@Concurrent
-function disableGwpAsanTask(): void {
-  hidebug.disableGwpAsanGrayscale();
-}
-taskpool.execute(disableGwpAsanTask).then(() => {
-  console.info(`Disable GWP-ASan succeeded.`);
-})
+hidebug.disableGwpAsanGrayscale();
 ```
 

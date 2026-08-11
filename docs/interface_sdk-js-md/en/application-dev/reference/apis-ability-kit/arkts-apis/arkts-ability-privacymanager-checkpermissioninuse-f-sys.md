@@ -12,7 +12,9 @@ import { privacyManager } from 'kits/@kit.AbilityKit';
 function checkPermissionInUse(permissionName: Permissions): boolean
 ```
 
-查询指定敏感权限是否正在被使用，可用于权限管理界面展示权限实时使用状态场景。判断依据为当前是否存在通过[startUsingPermission](arkts-ability-privacymanager-startusingpermission-f-sys.md#startusingpermission)标记开始使用且尚未通过[stopUsingPermission](arkts-ability-privacymanager-stopusingpermission-f-sys.md#stopusingpermission)标记停止使用的活跃调用。
+Queries whether a specified sensitive permission is currently being used. It can be used in scenarios such as displaying the real-time permission usage status on the permission management interface. The judgment is based on whether there is currently an active call that has been marked as started by  
+[startUsingPermission](arkts-ability-privacymanager-startusingpermission-f-sys.md#startusingpermission) and has not yet been marked as stopped by  
+[stopUsingPermission](arkts-ability-privacymanager-stopusingpermission-f-sys.md#stopusingpermission).
 
 **Since:** 26.0.0
 
@@ -32,37 +34,21 @@ function checkPermissionInUse(permissionName: Permissions): boolean
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| permissionName | [Permissions](arkts-ability-permissions-t.md) | Yes | 需要查询的权限名称。权限名不能为空，且长度不能超过256个字符，传入无效值时返回错误码12100001。 |
+| permissionName | [Permissions](arkts-ability-permissions-t.md) | Yes | Name of the permission to query. The permission name cannot be empty and its length cannot exceed 256 characters. An invalid value returns error code 12100001. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| boolean | 指定的敏感权限是否正在被使用。true：指定的敏感权限正在被使用；false：指定的敏感权限未被使用。 |
+| boolean | Whether the specified sensitive permission is in use. true: The specified sensitive permission is in use. false: The specified sensitive permission is not in use. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 201 | Permission denied. Interface caller does not have permission "ohos.permission.PERMISSION_USED_STATS". |
-| 12100001 | Invalid parameter. The permissionName is empty or exceeds 256 characters. |
-| 202 | Not system app. Interface caller is not a system application. |
-| 12100003 | The specified permission does not exist or is not a user_grant permission. |
-| 12100007 | Service exception. |
-
-## Examples
-
-```TypeScript
-import { privacyManager } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-try {
-  // Query whether a specified permission is being used
-  let isPermissionInUse = privacyManager.checkPermissionInUse('ohos.permission.CAMERA');
-  console.info('checkPermissionInUse success, result: ' + isPermissionInUse);
-} catch (err) {
-  let error = err as BusinessError;
-  console.error(`checkPermissionInUse fail, code: ${error.code}, message: ${error.message}`);
-}
-```
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. Interface caller does not have permission "ohos.permission.PERMISSION_USED_STATS". |
+| [12100001](../errorcode-access-token.md#12100001-invalid-parameters) | Invalid parameter. The permissionName is empty or exceeds 256 characters. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system app. Interface caller is not a system application. |
+| [12100003](../errorcode-access-token.md#12100003-permission-not-exist) | The specified permission does not exist or is not a user_grant permission. |
+| [12100007](../errorcode-access-token.md#12100007-system-service-not-working-properly) | Service exception. |
 

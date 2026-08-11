@@ -1,6 +1,6 @@
 # ButtonStyle
 
-设置侧边栏控制按钮的样式。
+Sets the control button style
 
 **Since:** 23
 
@@ -16,19 +16,7 @@
 height?: double
 ```
 
-设置侧边栏控制按钮的高度。
-
-默认值：
-
-API version 9及之前版本：32vp
-
-从API version 10开始：24vp
-
-单位：vp
-
-取值范围：[0, +∞)
-
-异常值时取默认值。
+Set the height of control button default value is 24vp.
 
 **Type:** double
 
@@ -48,9 +36,7 @@ API version 9及之前版本：32vp
 icons?: ButtonIconOptions
 ```
 
-设置侧边栏控制按钮的图标。
-
-资源获取错误以及未设置该属性时，使用默认图标。
+Set the button icon when sidebar status has changed
 
 **Type:** [ButtonIconOptions](../arkts-components/arkts-arkui-buttoniconoptions-i.md)
 
@@ -70,15 +56,7 @@ icons?: ButtonIconOptions
 left?: double
 ```
 
-设置侧边栏控制按钮距离容器左界限的间距。
-
-默认值：16vp
-
-单位：vp
-
-取值范围：[0, +∞)
-
-异常值时取默认值。
+Set the left of control button default value is 16vp.
 
 **Type:** double
 
@@ -98,15 +76,7 @@ left?: double
 top?: double
 ```
 
-设置侧边栏控制按钮距离容器上界限的间距。
-
-默认值：48vp
-
-单位：vp
-
-取值范围：[0, +∞)
-
-异常值时取默认值。
+Set the top of control button default value is 48vp.
 
 **Type:** double
 
@@ -126,19 +96,7 @@ top?: double
 width?: double
 ```
 
-设置侧边栏控制按钮的宽度。
-
-默认值：
-
-API version 9及之前版本：32vp
-
-从API version 10开始：24vp
-
-单位：vp
-
-取值范围：[0, +∞)
-
-异常值时取默认值。
+Set the width of control button default value is 24vp.
 
 **Type:** double
 

@@ -1,22 +1,21 @@
 # distributedData
 
-分布式数据管理为应用程序提供不同设备间数据库的分布式协同能力。通过调用分布式数据各个接口，应用程序可将数据保存到分布式数据库中，并可对分布式数据库中的数据进行增加、删除、修改、查询、同步等操作。该模块提供以下分布式数据管理相关的常用功能：
+The distributed data management module implements collaboration between databases of different devices for applications. The APIs provided by distributed data management can be used to save data to distributed databases and perform operations such as adding, deleting, modifying, querying, and synchronizing data in distributed databases.This module provides the following functions:
 
-- [KVManager](arkts-arkdata-distributeddata-kvmanagerconfig-i.md)：数据管理实例，用于获取KVStore的相关信息。  
-- [KvStoreResultSet&lt;sup&gt;8+&lt;/sup&gt;](arkts-arkdata-distributeddata-kvstoreresultset-i.md)：提供获取KVStore数据库结果集的相关方法，包括查询和移动数据读取位置等。  
-- [Query&lt;sup&gt;8+&lt;/sup&gt;](arkts-arkdata-distributeddata-query-c.md)：使用谓词表示数据库查询，提供创建Query实例、查询数据库中的数据和添加谓词的方法。  
-- [KVStore](arkts-arkdata-distributeddata-kvstoretype-e.md)：KVStore数据库实例，提供增加数据、删除数据和订阅数据变更、订阅数据同步完成的方法。  
-- [SingleKVStore](arkts-arkdata-distributeddata-singlekvstore-i.md)：单版本分布式数据库，继承自[KVStore](arkts-arkdata-distributeddata-kvstoretype-e.md)，不对数据  
-所属设备进行区分，提供查询数据和同步数据的方法。  
-- [DeviceKVStore&lt;sup&gt;8+&lt;/sup&gt;](arkts-arkdata-distributeddata-devicekvstore-i.md)：设备协同数据库，继承自  
-[KVStore](arkts-arkdata-distributeddata-kvstoretype-e.md)，以设备维度对数据进行区分，提供查询数据和同步数据的方法。
+- [KVManager](arkts-arkdata-distributeddata-kvmanagerconfig-i.md): provides a **KVManager** instance to manage key-value (KV)  
+stores.  
+- [KvStoreResultSet&lt;sup&gt;8+&lt;/sup&gt;](arkts-arkdata-distributeddata-kvstoreresultset-i.md): provides APIs to obtain the KV store  
+result set and query or move the data read position.  
+- [Query&lt;sup&gt;8+&lt;/sup&gt;](arkts-arkdata-distributeddata-query-c.md): provides APIs to query data from the database through a  
+**Query** instance by using predicates.  
+- [KVStore](arkts-arkdata-distributeddata-kvstoretype-e.md): provides APIs to add data, delete data, and observe data changes and  
+data sync through a **KVStore** instance.  
+- [SingleKVStore](arkts-arkdata-distributeddata-singlekvstore-i.md): provides APIs to query and synchronize data in a single KV  
+store. This class inherits from [KVStore](arkts-arkdata-distributeddata-kvstoretype-e.md), and data is not distinguished by device.  
+- [DeviceKVStore&lt;sup&gt;8+&lt;/sup&gt;](arkts-arkdata-distributeddata-devicekvstore-i.md): provides APIs to query and synchronize data in a  
+ device KV store. This class inherits from [KVStore](arkts-arkdata-distributeddata-kvstoretype-e.md), and data is distinguished by  device.
 
-> **说明：**
-
-> - 从API Version 9开始，该接口不再维护，推荐使用新接口
-> [`@ohos.data.distributedKVStore`](arkts-data-distributedkvstore.md)。
-
-> - 本模块中所有需要获取deviceId的接口，都仅系统应用可用。
+[@ohos.data.distributedKVStore](arkts-data-distributedkvstore.md).
 
 **Since:** 7
 
@@ -36,47 +35,47 @@
 
 | Name | Description |
 | --- | --- |
-| [Constants](arkts-arkdata-distributeddata-constants-n.md) | KVStore常量。 |
+| [Constants](arkts-arkdata-distributeddata-constants-n.md) | Defines the KV store constants. |
 
 ### Functions
 
 | Name | Description |
 | --- | --- |
-| [createKVManager](arkts-arkdata-distributeddata-createkvmanager-f.md#createkvmanager) | 创建一个KVManager对象实例，用于管理数据库对象，使用callback异步回调。 |
-| [createKVManager](arkts-arkdata-distributeddata-createkvmanager-f.md#createkvmanager-1) | 创建一个KVManager对象实例，用于管理数据库对象，使用Promise异步回调。 |
+| [createKVManager](arkts-arkdata-distributeddata-createkvmanager-f.md#createkvmanager) | Creates a **KVManager** instance to manage KV stores. This API uses an asynchronous callback to return the result. |
+| [createKVManager](arkts-arkdata-distributeddata-createkvmanager-f.md#createkvmanager-1) | Creates a **KVManager** instance to manage KV stores. This API uses a promise to return the result. |
 
 ### Classes
 
 | Name | Description |
 | --- | --- |
-| [Schema](arkts-arkdata-distributeddata-schema-c.md) | 表示数据库模式，可以在创建或打开数据库时创建Schema对象并将它们放入[Options](arkts-arkdata-distributeddata-options-i.md)中。 |
-| [FieldNode](arkts-arkdata-distributeddata-fieldnode-c.md) | 表示 Schema 实例的节点，提供定义存储在数据库中的值的方法。 |
-| [Query](arkts-arkdata-distributeddata-query-c.md) | 使用谓词表示数据库查询，提供创建Query实例、查询数据库中的数据和添加谓词的方法。 |
+| [Schema](arkts-arkdata-distributeddata-schema-c.md) | Defines the schema of a KV store. You can create a **Schema** object and place it in  [Options](arkts-arkdata-distributeddata-options-i.md) when creating or opening a KV store. |
+| [FieldNode](arkts-arkdata-distributeddata-fieldnode-c.md) | Represents a **Schema** instance, which provides the APIs for defining the values stored in a KV store. |
+| [Query](arkts-arkdata-distributeddata-query-c.md) | Provides APIs to create a **Query** object, which defines different data query criteria. |
 
 ### Interfaces
 
 | Name | Description |
 | --- | --- |
-| [KVManagerConfig](arkts-arkdata-distributeddata-kvmanagerconfig-i.md) | 提供KVManager实例的配置信息，包括调用方的Bundle名称和用户信息。 |
-| [UserInfo](arkts-arkdata-distributeddata-userinfo-i.md) | 用户信息。 |
-| [Value](arkts-arkdata-distributeddata-value-i.md) | 存储在数据库中的值对象。 |
-| [Entry](arkts-arkdata-distributeddata-entry-i.md) | 存储在数据库中的键值对。 |
-| [ChangeNotification](arkts-arkdata-distributeddata-changenotification-i.md) | 数据变更时通知的对象，包括数据插入的数据、更新的数据、删除的数据和设备ID。 |
-| [Options](arkts-arkdata-distributeddata-options-i.md) | 用于提供创建数据库的配置信息。 |
-| [KvStoreResultSet](arkts-arkdata-distributeddata-kvstoreresultset-i.md) | 提供获取KVStore数据库结果集的相关方法，包括查询和移动数据读取位置等。在调用KvStoreResultSet的方法前，需要先通过  [getKVStore](arkts-arkdata-distributedkvstore-kvmanager-i.md#getkvstore)构建一个KVStore实例。 |
-| [KVStore](arkts-arkdata-distributeddata-kvstore-i.md) | KVStore数据库实例，提供增加数据、删除数据和订阅数据变更、订阅数据同步完成的方法。在调用KVStore的方法前，需要先通过  [getKVStore](arkts-arkdata-distributedkvstore-kvmanager-i.md#getkvstore)构建一个KVStore实例。 |
-| [SingleKVStore](arkts-arkdata-distributeddata-singlekvstore-i.md) | 单版本数据库，继承自[KVStore](arkts-arkdata-distributeddata-kvstoretype-e.md)数据库，提供查询数据和同步数据的方法。单版本数据库，不对数据所属设备进行区分，不同设备使用相同键写入数据会互相覆盖。比如，可以使用单版本数据库实现个人日历、联系人数据在不同设备间的数据同步。在调用SingleKVStore的方法前，需要先通过  [getKVStore](arkts-arkdata-distributedkvstore-kvmanager-i.md#getkvstore)构建一个SingleKVStore实例。 |
-| [DeviceKVStore](arkts-arkdata-distributeddata-devicekvstore-i.md) | 设备协同数据库，继承自KVStore，提供查询数据和同步数据的方法。设备协同数据库，以设备维度对数据进行区分，每台设备仅能写入和修改本设备的数据，其它设备的数据对其是只读的，无法修改其它设备的数据。比如，可以使用设备协同数据库实现设备间的图片分享，可以查看其他设备的图片，但无法修改和删除其他设备的图片。在调用DeviceKVStore的方法前，需要先通过  [getKVStore](arkts-arkdata-distributedkvstore-kvmanager-i.md#getkvstore)构建一个DeviceKVStore实例。 |
-| [KVManager](arkts-arkdata-distributeddata-kvmanager-i.md) | 数据管理实例，用于获取KVStore的相关信息。在调用KVManager的方法前，需要先通过  [createKVManager](arkts-arkdata-distributeddata-createkvmanager-f.md#createkvmanager)构建一个KVManager实例。 |
+| [KVManagerConfig](arkts-arkdata-distributeddata-kvmanagerconfig-i.md) | Represents the configuration of a **KVManager** instance, including the bundle name and user information of the caller. |
+| [UserInfo](arkts-arkdata-distributeddata-userinfo-i.md) | Defines user information. |
+| [Value](arkts-arkdata-distributeddata-value-i.md) | Defines the **value** object in a KV store. |
+| [Entry](arkts-arkdata-distributeddata-entry-i.md) | Defines the KV pairs stored in the KV store. |
+| [ChangeNotification](arkts-arkdata-distributeddata-changenotification-i.md) | Defines the content of data change notifications, including inserted data, updated data, deleted data, and device ID. |
+| [Options](arkts-arkdata-distributeddata-options-i.md) | Provides KV store configuration. |
+| [KvStoreResultSet](arkts-arkdata-distributeddata-kvstoreresultset-i.md) | Provides APIs to obtain the KV store result sets, and query and move the data read position.Before calling any method in **KvStoreResultSet**, you must use  [getKVStore](arkts-arkdata-distributedkvstore-kvmanager-i.md#getkvstore) to obtain a **KVStore** object. |
+| [KVStore](arkts-arkdata-distributeddata-kvstore-i.md) | Provides APIs to manage data in a KV store, for example, adding or deleting data and subscribing to data changes or completion of data sync.Before calling any method in **KVStore**, you must use  [getKVStore](arkts-arkdata-distributedkvstore-kvmanager-i.md#getkvstore) to obtain a **KVStore** object. |
+| [SingleKVStore](arkts-arkdata-distributeddata-singlekvstore-i.md) | Provides APIs to query and synchronize data in a single KV store. This class inherits from  [KVStore](arkts-arkdata-distributeddata-kvstoretype-e.md).  Data is not distinguished by device in a single KV store. The data written to different devices using the same key will be overwritten. For example, a single KV store can be used to synchronize a user's calendar and contact data between different devices.Before calling any method in **SingleKVStore**, you must use  [getKVStore](arkts-arkdata-distributedkvstore-kvmanager-i.md#getkvstore) to obtain a **SingleKVStore** instance. |
+| [DeviceKVStore](arkts-arkdata-distributeddata-devicekvstore-i.md) | Provides APIs to query and synchronize data in a device KV store. This class inherits from  [KVStore](arkts-arkdata-distributeddata-kvstoretype-e.md).Data is distinguished by device in a device KV store. Each device can only write and modify its own data. Data of other devices is read-only and cannot be modified.For example, a device KV store can be used to implement image sharing between devices. The images of other devices can be viewed, but not be modified or deleted.Before calling any method in **DeviceKVStore**, you must use  [getKVStore](arkts-arkdata-distributedkvstore-kvmanager-i.md#getkvstore) to obtain a **DeviceKVStore** object. |
+| [KVManager](arkts-arkdata-distributeddata-kvmanager-i.md) | Creates a **KVManager** object to obtain KV store information. Before calling any method in **KVManager**, you must use  [createKVManager](arkts-arkdata-distributeddata-createkvmanager-f.md#createkvmanager) to create a **KVManager** object. |
 
 ### Enums
 
 | Name | Description |
 | --- | --- |
-| [UserType](arkts-arkdata-distributeddata-usertype-e.md) | 用户类型枚举。 |
-| [ValueType](arkts-arkdata-distributeddata-valuetype-e.md) | 数据类型枚举。 |
-| [SyncMode](arkts-arkdata-distributeddata-syncmode-e.md) | 同步模式枚举。 |
-| [SubscribeType](arkts-arkdata-distributeddata-subscribetype-e.md) | 订阅类型枚举。 |
-| [KVStoreType](arkts-arkdata-distributeddata-kvstoretype-e.md) | KVStore数据库类型枚举。 |
-| [SecurityLevel](arkts-arkdata-distributeddata-securitylevel-e.md) | 数据库的安全级别枚举。 |
+| [UserType](arkts-arkdata-distributeddata-usertype-e.md) | Enumerates the user types. |
+| [ValueType](arkts-arkdata-distributeddata-valuetype-e.md) | Enumerates the data types. |
+| [SyncMode](arkts-arkdata-distributeddata-syncmode-e.md) | Enumerates the sync modes. |
+| [SubscribeType](arkts-arkdata-distributeddata-subscribetype-e.md) | Enumerates the subscription types. |
+| [KVStoreType](arkts-arkdata-distributeddata-kvstoretype-e.md) | Enumerates the KV store types. |
+| [SecurityLevel](arkts-arkdata-distributeddata-securitylevel-e.md) | Enumerates the KV store security levels. |
 

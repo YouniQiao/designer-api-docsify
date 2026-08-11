@@ -1,6 +1,6 @@
 # ActionSheetOffset
 
-弹窗的对齐方式。
+ActionSheet offset.
 
 **Since:** 23
 
@@ -16,13 +16,7 @@
 dx: double | string | Resource
 ```
 
-弹出窗口相对于对齐位置dx的偏移量。
-
-需要显式指定像素单位，如'10px'，也可设置百分比字符串，如'100%'。
-
-**说明：**
-
-不指定像素单位时，默认单位vp，如'10'，等同于10。
+Offset of the action sheet along the x-axis relative to the alignment position.Anonymous Object Rectification.
 
 **Type:** double \| string \| Resource
 
@@ -42,13 +36,7 @@ dx: double | string | Resource
 dy: double | string | Resource
 ```
 
-弹出窗口相对于对齐位置dy的偏移量。
-
-需要显式指定像素单位，如'10px'，也可设置百分比字符串，如'100%'。
-
-**说明：**
-
-不指定像素单位时，默认单位vp，如'10'，等同于10。
+Offset of the action sheet along the y-axis relative to the alignment position.Anonymous Object Rectification.
 
 **Type:** double \| string \| Resource
 

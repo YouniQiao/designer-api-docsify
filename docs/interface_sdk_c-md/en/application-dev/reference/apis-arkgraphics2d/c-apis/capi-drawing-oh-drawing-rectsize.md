@@ -6,7 +6,7 @@ typedef struct OH_Drawing_RectSize {...} OH_Drawing_RectSize
 
 ## Overview
 
-Defines the text rect struct.
+Defines a text rectangle structure.
 
 **Since**: 24
 

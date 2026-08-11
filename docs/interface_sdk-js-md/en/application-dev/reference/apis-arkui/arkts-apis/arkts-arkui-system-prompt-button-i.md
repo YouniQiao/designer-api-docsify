@@ -1,10 +1,10 @@
 # Button
 
-定义按钮的提示信息。
+Defines the prompt info of button.
 
-**Since:** 3
+**Since:** 11
 
-**ArkTS mode:** ArkTS-Dyn only, since version 3.
+**ArkTS mode:** ArkTS-Dyn only, since version 11.
 
 <!--Device-unnamed-export interface Button--><!--Device-unnamed-export interface Button-End-->
 
@@ -22,13 +22,13 @@ import { ShowActionMenuOptions, Button, ShowToastOptions, ShowDialogOptions, Sho
 color: string
 ```
 
-定义按钮颜色。
+Defines the color of button.
 
 **Type:** string
 
-**Since:** 3
+**Since:** 11
 
-**ArkTS mode:** ArkTS-Dyn only, since version 3.
+**ArkTS mode:** ArkTS-Dyn only, since version 11.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -42,13 +42,13 @@ color: string
 text: string
 ```
 
-定义按钮信息。
+Defines the button info.
 
 **Type:** string
 
-**Since:** 3
+**Since:** 11
 
-**ArkTS mode:** ArkTS-Dyn only, since version 3.
+**ArkTS mode:** ArkTS-Dyn only, since version 11.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 

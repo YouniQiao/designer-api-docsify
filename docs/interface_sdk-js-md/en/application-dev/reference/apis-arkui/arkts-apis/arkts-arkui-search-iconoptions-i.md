@@ -1,6 +1,6 @@
 # IconOptions
 
-图标样式对象。
+Defines the icon options
 
 **Since:** 23
 
@@ -16,9 +16,7 @@
 color?: ResourceColor
 ```
 
-图标颜色。
-
-默认值：Wearable设备是'#A9FFFFFF'，浅灰色；其余设备是'#99182431'，深灰色。
+Set the icon color
 
 **Type:** [ResourceColor](arkts-arkui-resourcecolor-t.md)
 
@@ -38,9 +36,9 @@ color?: ResourceColor
 size?: Length
 ```
 
-图标尺寸，不支持百分比。
+Set the icon size
 
-默认值根据[searchIcon](searchIcon)、[cancelButton](cancelButton)属性中的实际配置生效。
+&lt;p&gt;&lt;strong&gt;NOTE&lt;/strong&gt;:&lt;br&gt;It cannot be set in percentage.&lt;/p&gt;
 
 **Type:** [Length](arkts-arkui-length-t.md)
 
@@ -60,9 +58,7 @@ size?: Length
 src?: ResourceStr
 ```
 
-图标/图片源。
-
-默认值：跟随主题。
+Set the icon resource
 
 **Type:** [ResourceStr](arkts-arkui-resourcestr-t.md)
 

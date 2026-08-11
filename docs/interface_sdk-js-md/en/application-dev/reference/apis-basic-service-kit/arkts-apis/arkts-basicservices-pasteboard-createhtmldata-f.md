@@ -12,7 +12,7 @@ import { pasteboard } from 'kits/@kit.BasicServicesKit';
 function createHtmlData(htmlText: string): PasteData
 ```
 
-构建一个HTML剪贴板内容对象。
+Creates a **PasteData** object of the HTML type.
 
 **Since:** 7
 
@@ -30,13 +30,13 @@ function createHtmlData(htmlText: string): PasteData
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| htmlText | string | Yes | HTML内容，需符合标准HTML格式。 |
+| htmlText | string | Yes | HTML content. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [PasteData](arkts-basicservices-pasteboard-pastedata-i.md) | 剪贴板内容对象。 |
+| [PasteData](arkts-basicservices-pasteboard-pastedata-i.md) | PasteData** object. |
 
 ## Examples
 

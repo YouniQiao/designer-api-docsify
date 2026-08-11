@@ -1,6 +1,6 @@
 # RichEditorTextSpanOptions
 
-添加文本的偏移位置和文本样式信息。
+Describes the options for adding a text span.
 
 **Since:** 10
 
@@ -16,7 +16,7 @@
 gesture?: RichEditorGesture
 ```
 
-行为触发回调。当需要自定义文本Span的点击或长按交互行为时传入此参数；省略时，仅使用系统默认行为。
+Behavior-triggered callback. If this parameter is left empty, only the default system behavior is supported.
 
 **Type:** [RichEditorGesture](arkts-arkui-richeditorgesture-i.md)
 
@@ -38,9 +38,9 @@ gesture?: RichEditorGesture
 offset?: number
 ```
 
-添加文本的位置。省略时，添加到所有内容的最后。
+Position of the text span to be added. If this parameter is omitted, the paragraph is added to the end of all content.
 
-当值小于0时，放在所有内容最前面；当值大于所有内容长度时，放在所有内容最后面。
+If the value specified is less than 0, the paragraph is placed at the beginning of all content. If the value is greater than the length of all content, the paragraph is placed at the end of all content.
 
 **Type:** number
 
@@ -62,7 +62,7 @@ offset?: number
 paragraphStyle?: RichEditorParagraphStyle
 ```
 
-段落样式。当需要设置文本的对齐方式、缩进、断行规则等段落级排版属性时传入此参数。不传入时，使用系统默认段落样式（左对齐、无缩进、按单词断行）。
+Paragraph style.
 
 **Type:** [RichEditorParagraphStyle](../arkts-apis/arkts-arkui-richeditor-richeditorparagraphstyle-i.md)
 
@@ -84,7 +84,7 @@ paragraphStyle?: RichEditorParagraphStyle
 style?: RichEditorTextStyle
 ```
 
-文本样式信息。当需要设置文本的颜色、字体大小、粗细等自定义样式时传入此参数。省略时，使用系统默认文本信息。
+Style of the text span to be added. If this parameter is left empty, the default text style will be used.
 
 **Type:** [RichEditorTextStyle](arkts-arkui-richeditortextstyle-i.md)
 
@@ -106,9 +106,9 @@ style?: RichEditorTextStyle
 urlStyle?: RichEditorUrlStyle
 ```
 
-url信息。
+URL information.
 
-默认值：undefined
+Default value: **undefined**
 
 **Type:** [RichEditorUrlStyle](arkts-arkui-richeditorurlstyle-i.md)
 

@@ -12,9 +12,12 @@ import { inputDevice } from 'kits/@kit.InputKit';
 function getDeviceIds(callback: AsyncCallback<Array<number>>): void
 ```
 
-获取所有输入设备的ID列表，使用callback异步回调。
+Obtains the IDs of all input devices. This API uses an asynchronous callback to return the result.
 
-> **说明：**
+> **NOTE：**
+> 
+> This API is supported since API version 8 and deprecated since API version 9. Use
+> [inputDevice.getDeviceList](arkts-input-inputdevice-getdevicelist-f.md#getdevicelist) instead.
 
 **Since:** 8
 
@@ -32,7 +35,7 @@ function getDeviceIds(callback: AsyncCallback<Array<number>>): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;number&gt;&gt; | Yes | 回调函数。当获取成功，err为undefined，data为所有输入设备的ID列表；否则为错误对象。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;number&gt;&gt; | Yes | Callback function. If the operation is successful, **err** is **undefined**, and **data** is the ID list of all input devices. Otherwise, **err** is an error object. |
 
 ## Examples
 
@@ -47,13 +50,12 @@ struct Index {
     RelativeContainer() {
       Text()
         .onClick(() => {
-          // Obtaining the Input Device ID List
           inputDevice.getDeviceIds((error: BusinessError, ids: Array<number>) => {
             if (error) {
-              console.error(`Failed to get device id list, Code: ${(error as BusinessError).code}, message: ${(error as BusinessError).message}.`);
+              console.error(`Failed to get device id list, error: ${JSON.stringify(error, [`code`, `message`])}`);
               return;
             }
-            console.info(`Succeeded in getting device id list: ${JSON.stringify(ids)}.`);
+            console.info(`Device id list: ${JSON.stringify(ids)}`);
           });
         })
     }
@@ -68,9 +70,12 @@ struct Index {
 function getDeviceIds(): Promise<Array<number>>
 ```
 
-获取所有输入设备的ID列表，使用Promise异步回调。
+Obtains the IDs of all input devices. This API uses a promise to return the result.
 
-> **说明：**
+> **NOTE：**
+> 
+> This API is supported since API version 8 and deprecated since API version 9. Use
+> [inputDevice.getDeviceList](arkts-input-inputdevice-getdevicelist-f.md#getdevicelist) instead.
 
 **Since:** 8
 
@@ -88,7 +93,7 @@ function getDeviceIds(): Promise<Array<number>>
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;Array&lt;number&gt;&gt; | Promise对象，返回所有输入设备的ID列表。ID是输入设备的唯一标识。 |
+| Promise&lt;Array&lt;number&gt;&gt; | Promise used to return the IDs of all input devices. **id** is the unique ID of an input device. |
 
 ## Examples
 
@@ -103,11 +108,10 @@ struct Index {
     RelativeContainer() {
       Text()
         .onClick(() => {
-          // Obtaining the Input Device ID List
           inputDevice.getDeviceIds().then((ids: Array<number>) => {
-            console.info(`Succeeded in getting device id list: ${JSON.stringify(ids)}.`);
+            console.info(`Device id list: ${JSON.stringify(ids)}`);
           }).catch((error: BusinessError) => {
-            console.error(`Failed to get device id list, Code: ${(error as BusinessError).code}, message: ${(error as BusinessError).message}.`);
+            console.error(`Failed to get device id list, error: ${JSON.stringify(error, [`code`, `message`])}`);
           })
         })
     }

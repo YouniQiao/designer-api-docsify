@@ -12,7 +12,7 @@ import { cert } from 'kits/@kit.DeviceCertificateKit';
 function createCertChainValidator(algorithm: string): CertChainValidator
 ```
 
-表示创建证书链校验器对象。
+Creates a **CertChainValidator** object.
 
 **Since:** 9
 
@@ -28,23 +28,23 @@ function createCertChainValidator(algorithm: string): CertChainValidator
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| algorithm | string | Yes | 表示证书链校验器算法。当前仅支持输入"PKIX"。 |
+| algorithm | string | Yes | Certificate chain validator algorithm. Currently, only **PKIX** is supported. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [CertChainValidator](arkts-devicecertificate-cert-certchainvalidator-i.md) | 表示证书链校验器对象。 |
+| [CertChainValidator](arkts-devicecertificate-cert-certchainvalidator-i.md) | CertChainValidator** object created. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 19020002 | 运行时外部错误。可能的原因： &lt;br&gt;1. 内存拷贝失败； &lt;br&gt;2. 系统内部出现空指针； &lt;br&gt;3. 获取Native对象失败或参数转换失败。 |
-| 401 | 参数错误。可能的原因： &lt;br&gt;1. 必填参数未指定； &lt;br&gt;2. 参数类型不正确； &lt;br&gt;3. 参数校验失败。 |
-| 801 | 不支持该操作。 |
-| 19020001 | 内存错误。 |
-| 19030001 | 调用三方算法库API出错。 |
+| [19020002](../errorcode-cert.md#19020002-runtime-error) | Runtime error. Possible causes: &lt;br&gt;1. Memory copy failed; &lt;br&gt;2. A null pointer occurs inside the system; &lt;br&gt;3. Failed to obtain the native object or convert parameters. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Invalid parameters. Possible causes: &lt;br&gt;1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; &lt;br&gt;3. Parameter verification failed. |
+| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | This operation is not supported. |
+| [19020001](../errorcode-cert.md#19020001-memory-error) | Memory malloc failed. |
+| [19030001](../errorcode-cert.md#19030001-crypto-operation-error) | Crypto operation error. |
 
 ## Examples
 

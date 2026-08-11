@@ -1,6 +1,6 @@
 # DepthLightParams (System API)
 
-光照参数。
+Lighting parameters struct.
 
 **Since:** 26.0.0
 
@@ -18,7 +18,7 @@
 color: DepthColorRGB
 ```
 
-光照颜色。
+Light color.
 
 **Type:** [DepthColorRGB](../arkts-components/arkts-arkui-depthcolorrgb-i-sys.md)
 
@@ -40,7 +40,7 @@ color: DepthColorRGB
 direction: DepthVector3
 ```
 
-光照方向向量。无单位，其值表示3D空间中的坐标。
+Light direction vector.
 
 **Type:** [DepthVector3](../arkts-components/arkts-arkui-depthvector3-i-sys.md)
 
@@ -62,9 +62,7 @@ direction: DepthVector3
 intensity: double
 ```
 
-光照强度。无单位，取值范围[0, +∞)。
-
-建议取值范围[0, 1]，当设置为0时，无光照。
+Light intensity.
 
 **Type:** double
 

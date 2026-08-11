@@ -1,6 +1,6 @@
 # Effect
 
-特效资源.
+Effect resource.
 
 **Inheritance/Implementation:** Effect extends [SceneResource](arkts-arkgraphics3d-sceneresources-sceneresource-i.md)
 
@@ -18,7 +18,7 @@
 getPropertyValue(propertyName: string): Object | null | undefined
 ```
 
-获取特定特效属性的值.
+Get the value of a specific effect property.
 
 **Since:** 23
 
@@ -34,13 +34,13 @@ getPropertyValue(propertyName: string): Object | null | undefined
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| propertyName | string | Yes | 特定属性的名称 |
+| propertyName | string | Yes | the name of specific property |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Object | 特效属性值，如果"get"操作失败则返回null. |
+| Object | effect property value, return null if the "get" operation failed. |
 
 ## setPropertyValue
 
@@ -48,7 +48,7 @@ getPropertyValue(propertyName: string): Object | null | undefined
 setPropertyValue(propertyName: string, value: Object | undefined): boolean
 ```
 
-设置特定特效属性的值
+Set the value of a specific effect property
 
 **Since:** 23
 
@@ -64,14 +64,14 @@ setPropertyValue(propertyName: string, value: Object | undefined): boolean
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| propertyName | string | Yes | 特定属性的名称 |
-| value | Object \| undefined | Yes | 要设置的属性值 |
+| propertyName | string | Yes | the name of specific property |
+| value | Object \| undefined | Yes | property value to be set |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| boolean | 如果"set"操作失败则返回false |
+| boolean | return false if the "set" operation is failed |
 
 ## effectId
 
@@ -79,7 +79,7 @@ setPropertyValue(propertyName: string, value: Object | undefined): boolean
 readonly effectId: string
 ```
 
-特效的ID.这是用于创建特效的ID.
+The id of the effect.This is the id that was used to create the effect.
 
 **Type:** string
 
@@ -97,7 +97,7 @@ readonly effectId: string
 enabled: boolean
 ```
 
-控制特效是否启用.
+Controls whether the effect is enabled or not.
 
 **Type:** boolean
 

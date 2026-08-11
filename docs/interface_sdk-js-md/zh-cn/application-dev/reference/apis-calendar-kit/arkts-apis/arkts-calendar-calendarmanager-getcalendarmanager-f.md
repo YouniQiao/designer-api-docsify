@@ -1,11 +1,5 @@
 # getCalendarManager
 
-## 导入模块
-
-```TypeScript
-import { calendarManager } from 'kits/@kit.CalendarKit';
-```
-
 ## getCalendarManager
 
 ```TypeScript

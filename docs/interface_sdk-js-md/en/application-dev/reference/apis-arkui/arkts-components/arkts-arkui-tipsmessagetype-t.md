@@ -4,7 +4,7 @@
 declare type TipsMessageType = ResourceStr | StyledString
 ```
 
-悬浮气泡弹窗信息。
+Provides information about the tooltip.
 
 **Since:** 19
 
@@ -20,6 +20,6 @@ declare type TipsMessageType = ResourceStr | StyledString
 
 | Type | Description |
 | --- | --- |
-| ResourceStr | 字符串类型，用于描述字符串入参可以使用的类型。 |
-| StyledString | 属性字符串。 |
+| ResourceStr | Type used to represent the types that can be used by input parameters of the string type. |
+| StyledString | Styled string. |
 

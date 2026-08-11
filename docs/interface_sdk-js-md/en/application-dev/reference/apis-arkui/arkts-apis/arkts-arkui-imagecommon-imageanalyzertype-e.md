@@ -1,6 +1,6 @@
 # ImageAnalyzerType
 
-图像AI分析类型，未设置时默认开启主体识别和文字识别功能。
+Image AI analysis type. When not set, subject recognition and text recognition are enabled by default.
 
 **Since:** 23
 
@@ -17,7 +17,7 @@
 SUBJECT = 0
 ```
 
-主体识别功能。
+Subject recognition function.
 
 **Since:** 23
 
@@ -35,7 +35,7 @@ SUBJECT = 0
 TEXT
 ```
 
-文字识别功能。
+Text recognition function.
 
 **Since:** 23
 
@@ -53,7 +53,7 @@ TEXT
 OBJECT_LOOKUP
 ```
 
-对象查找功能。
+Object lookup function.
 
 **Since:** 23
 

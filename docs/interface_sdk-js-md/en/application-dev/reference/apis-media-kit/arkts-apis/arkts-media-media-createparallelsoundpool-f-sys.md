@@ -44,8 +44,8 @@ If a **SoundPool** instance created using [createSoundPool](#createSoundPool) is
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 5400101 | No memory. Return by promise. |
-| 202 | System API error. Return by promise. |
+| [5400101](../errorcode-media.md#5400101-memory-allocation-failed) | No memory. Return by promise. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | System API error. Return by promise. |
 
 ## Examples
 

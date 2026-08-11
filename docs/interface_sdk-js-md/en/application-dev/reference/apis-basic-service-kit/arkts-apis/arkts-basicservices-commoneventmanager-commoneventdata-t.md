@@ -4,7 +4,7 @@
 export type CommonEventData = _CommonEventData
 ```
 
-表示公共事件的数据。
+Describes the data of a common event.
 
 **Since:** 10
 

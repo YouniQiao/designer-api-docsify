@@ -1,11 +1,5 @@
 # setDlpFeature（系统接口）
 
-## 导入模块
-
-```TypeScript
-import { dlpSetDlpFeature } from 'kits/@kit.DataProtectionKit';
-```
-
 ## setDlpFeature
 
 ```TypeScript
@@ -46,9 +40,9 @@ function setDlpFeature(status: DlpFeatureStatus): Promise<StatusInfoResult>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 19100001 | Invalid parameter value. |
-| 19100011 | The system ability works abnormally. |
-| 202 | Non-system applications use system APIs. |
+| [19100001](../errorcode-dlp.md#19100001-入参错误) | Invalid parameter value. |
+| [19100011](../errorcode-dlp.md#19100011-系统服务工作异常) | The system ability works abnormally. |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Non-system applications use system APIs. |
 
 ## 示例
 

@@ -44,33 +44,9 @@ Enables proactive awareness on screen content and subscribes to a screen awarene
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 801 | Capability not supported. Function can not work correctly due to limited &lt;br&gt; device capabilities. |
-| 34000002 | The application or page is not supported. |
-| 34000001 | Service exception. |
-| 201 | Permission denied. An attempt was made to get page content forbidden by &lt;br&gt; permission: ohos.permission.GET_SCREEN_CONTENT or ohos.permission.ONSCREEN_AWARENESS. |
-| 202 | Permission check failed. A non-system application uses the system API. |
-
-## Examples
-
-```TypeScript
-import onScreen from "@ohos.multimodalAwareness.onScreen";
-let onscreenAwarenessCap: onScreen.OnscreenAwarenessCap = {
-   groupId: 'SmartEdge',
-}
-
-let onscreenAwarenessOptions: onScreen.OnscreenAwarenessOptions = {
-   parameters: {
-      "SmartEdge" : {
-         "windowId":'102',
-      }
-   }
-}
-try {
-   onScreen.subscribe(onscreenAwarenessCap, (info: onScreen.OnscreenAwarenessInfo[]) => {
-      console.info(`subscribe resultCode: ${info[0].resultCode}`);
-   }, onscreenAwarenessOptions);
-} catch (err) {
-   console.error('subscribe failed, errCode = ' + err.code);
-}
-```
+| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. Function can not work correctly due to limited &lt;br&gt; device capabilities. |
+| [34000002](../../apis-multimodalawareness-kit/errorcode-onScreen.md#34000002-unsupported-application-or-page) | The application or page is not supported. |
+| [34000001](../../apis-multimodalawareness-kit/errorcode-onScreen.md#34000001-service-exception) | Service exception. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. An attempt was made to get page content forbidden by &lt;br&gt; permission: ohos.permission.GET_SCREEN_CONTENT or ohos.permission.ONSCREEN_AWARENESS. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission check failed. A non-system application uses the system API. |
 

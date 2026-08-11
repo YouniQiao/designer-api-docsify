@@ -12,7 +12,7 @@ import { print } from 'kits/@kit.BasicServicesKit';
 function addPrinter(printerName: string, uri: string, ppdName?: string, options?: string): Promise<boolean>
 ```
 
-添加打印机到系统中，使用Promise异步回调。
+Add a printer to system.
 
 **Since:** 24
 
@@ -30,37 +30,21 @@ function addPrinter(printerName: string, uri: string, ppdName?: string, options?
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| printerName | string | Yes | 表示打印机名称。 |
-| uri | string | Yes | 表示打印机的URI。 |
-| ppdName | string | No | 表示打印机的PPD文件名称。 |
-| options | string | No | JSON对象字符串，表示打印机选项参数。 |
+| printerName | string | Yes | Indicates the printer name. &lt;br&gt;Name of the printer to be added. |
+| uri | string | Yes | Indicates the printer uri. &lt;br&gt;Uri of the printer to be added. |
+| ppdName | string | No | Indicates the ppd name. &lt;br&gt;Ppd name of the printer to be added. |
+| options | string | No | Indicates the options. &lt;br&gt;Optional parameters when adding a printer. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;boolean&gt; | Promise对象，返回添加打印机成功与否的结果。 |
+| Promise&lt;boolean&gt; | the promise returned by the function. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 13100003 | Add the printer to system failed. |
-| 201 | the application does not have permission to call this function. |
-
-## Examples
-
-```TypeScript
-import { print } from '@kit.BasicServicesKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let printerName : string = 'printerName';
-let uri : string = 'uri';
-let ppdName : string = 'ppdName';
-print.addPrinter(printerName, uri, ppdName).then(() => {
-    console.info('add printer success');
-}).catch((error: BusinessError) => {
-    console.error('add printer error : ' + JSON.stringify(error));
-})
-```
+| [13100003](../../apis-basic-services-kit/errorcode-print.md#13100003-print-service-error) | Add the printer to system failed. |
+| [201](../../errorcode-universal.md#201-permission-denied) | the application does not have permission to call this function. |
 

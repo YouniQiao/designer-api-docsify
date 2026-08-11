@@ -18,7 +18,7 @@ Define Consume decoration variable interface.
 resetOnReuse(provideAlias: string, watchFunc?: WatchFuncType, consumeOptions?: ConsumeOptions<T>): void
 ```
 
-当@Reusable Component实例被重用时，重置Consume变量。
+Reset Consume variable when the @Reusable Component instance is reused.
 
 **Since:** 26.0.0
 
@@ -34,7 +34,7 @@ resetOnReuse(provideAlias: string, watchFunc?: WatchFuncType, consumeOptions?: C
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| provideAlias | string | Yes | 同名 |
-| watchFunc | [WatchFuncType](arkts-arkui-watchfunctype-t.md) | No | watch函数类型 |
-| consumeOptions | [ConsumeOptions](arkts-arkui-decorator-consumeoptions-i.md)&lt;T&gt; | No | 具有默认值的选项 |
+| provideAlias | string | Yes | alias |
+| watchFunc | [WatchFuncType](arkts-arkui-watchfunctype-t.md) | No | watch function type |
+| consumeOptions | [ConsumeOptions](arkts-arkui-decorator-consumeoptions-i.md)&lt;T&gt; | No | options with default value |
 

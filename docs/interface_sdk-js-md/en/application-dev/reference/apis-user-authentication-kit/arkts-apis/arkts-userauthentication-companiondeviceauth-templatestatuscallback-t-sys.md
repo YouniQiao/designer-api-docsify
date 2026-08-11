@@ -4,7 +4,7 @@
 type TemplateStatusCallback = (templateStatusList: TemplateStatus[]) => void
 ```
 
-回调函数，用于接收模板状态变化通知。当模板状态发生变化（如添加、删除、有效性变更等）时，系统会通过此回调通知应用。
+Defines the callback triggered for receiving notifications of template status changes. When the template status changes (for example, the template is added, deleted, or its validity changes), the system notifies the application through this callback.
 
 **Since:** 23
 
@@ -22,5 +22,5 @@ type TemplateStatusCallback = (templateStatusList: TemplateStatus[]) => void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| templateStatusList | [TemplateStatus](arkts-userauthentication-companiondeviceauth-templatestatus-i-sys.md)[] | Yes | 模板状态列表。包含当前用户下所有已注册模板的状态信息，应用可根据列表中的isValid字段判断模板有效性，根据isConfirmed 字段判断数据是否为实时数据。 |
+| templateStatusList | [TemplateStatus](arkts-userauthentication-companiondeviceauth-templatestatus-i-sys.md)[] | Yes | Template status list. The list contains the status information of all registered templates of the current user. The application can determine whether a template is valid based on the **isValid** field and whether the data is real-time data based on the **isConfirmed** field. |
 

@@ -12,13 +12,13 @@ import { dragController } from 'kits/@kit.ArkUI';
 function getDragPreview(): DragPreview
 ```
 
-返回一个代表拖拽背板的对象。
+Obtains the **DragPreview** object, which represents the preview displayed during a drag operation.
 
-> **说明：**
+> **NOTE：**
 > 
-> 从API version 11开始，可以通过使用[UIContext](arkts-arkui-uicontext.md)中的
-> [getDragController](arkts-arkui-arkui-uicontext-uicontext-c.md#getdragcontroller)方法获取当前UI
-> 上下文关联的[DragController](arkts-arkui-arkui-uicontext-dragcontroller-c.md)对象。
+> Since API version 11, you can use the [getDragController](arkts-arkui-arkui-uicontext-uicontext-c.md#getdragcontroller) API in
+> [UIContext](arkts-arkui-uicontext.md) to obtain the [DragController](arkts-arkui-arkui-uicontext-dragcontroller-c.md) object
+> associated with the current UI context.
 
 **Since:** 11
 
@@ -40,5 +40,5 @@ function getDragPreview(): DragPreview
 
 | Type | Description |
 | --- | --- |
-| [DragPreview](arkts-arkui-dragcontroller-dragpreview-c.md) | 一个代表拖拽背板的对象，提供背板样式设置的接口，在OnDrop和OnDragEnd回调中使用不生效。 |
+| [DragPreview](arkts-arkui-dragcontroller-dragpreview-c.md) | DragPreview** object. It provides the API for setting the preview style. It does not work in the **OnDrop** and **OnDragEnd** callbacks. |
 

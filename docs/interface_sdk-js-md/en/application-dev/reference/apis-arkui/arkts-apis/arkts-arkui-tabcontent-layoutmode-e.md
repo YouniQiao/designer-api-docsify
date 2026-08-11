@@ -1,6 +1,6 @@
 # LayoutMode
 
-页签内容排布方式枚举。
+Enum for the layout mode of the content in the tab bar.
 
 **Since:** 23
 
@@ -16,7 +16,7 @@
 AUTO = 0
 ```
 
-若页签宽度大于104vp，页签内容为左右排布，否则页签内容为上下排布。仅TabBar为垂直模式或Fixed水平模式时有效。
+The the content is laid vertically or horizontally, according to its width.
 
 **Since:** 23
 
@@ -34,7 +34,7 @@ AUTO = 0
 VERTICAL = 1
 ```
 
-页签内容上下排布。
+The the content is laid vertically
 
 **Since:** 23
 
@@ -52,7 +52,7 @@ VERTICAL = 1
 HORIZONTAL = 2
 ```
 
-页签内容左右排布。
+The the content is laid horizontally
 
 **Since:** 23
 

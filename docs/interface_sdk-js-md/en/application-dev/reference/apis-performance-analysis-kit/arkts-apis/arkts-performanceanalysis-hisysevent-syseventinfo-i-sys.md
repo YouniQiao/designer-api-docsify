@@ -1,6 +1,6 @@
 # SysEventInfo (System API)
 
-系统事件信息对象接口。
+Defines a system event.
 
 **Since:** 9
 
@@ -24,7 +24,7 @@ import { hiSysEvent } from 'kits/@kit.PerformanceAnalysisKit';
 domain: string
 ```
 
-事件领域。
+Event domain.
 
 **Type:** string
 
@@ -44,7 +44,7 @@ domain: string
 eventType: EventType
 ```
 
-事件类型。
+Event type.
 
 **Type:** [EventType](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-screenlock-eventtype-t-sys.md)
 
@@ -64,7 +64,7 @@ eventType: EventType
 name: string
 ```
 
-事件名称。
+Event name.
 
 **Type:** string
 
@@ -84,7 +84,7 @@ name: string
 params?: object
 ```
 
-事件参数。
+Event parameters.
 
 **Type:** object
 

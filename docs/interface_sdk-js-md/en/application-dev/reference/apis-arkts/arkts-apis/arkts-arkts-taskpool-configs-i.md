@@ -1,6 +1,6 @@
 # Configs
 
-任务或任务组的配置项。
+Defines the task configs interface
 
 **Since:** 24
 
@@ -22,7 +22,7 @@ import { taskpool } from 'kits/@kit.ArkTS';
 priority?: Priority
 ```
 
-任务的优先级。默认值为taskpool.Priority.MEDIUM。
+The priority of the task. The default value is taskpool.Priority.MEDIUM.
 
 **Type:** [Priority](arkts-arkts-taskpool-priority-e.md)
 
@@ -42,8 +42,8 @@ priority?: Priority
 timeout?: number
 ```
 
-任务的超时时间，单位为ms。建议传入整数，若传入小数，会被向下取整。如果省略该参数，timeout取默认值0，不执行超时逻辑。  
-**注意**1. 该超时时间非精准时间，实际超时时间可能会与预期存在误差。2. 如果值小于1，会被默认取**0**。3. timeout值受系统限制，超出2^31 − 1时会溢出，值为**0**。
+The timeout for the task in ms. Suggest passing in integers. If decimals are passed in, they will be rounded down.If this parameter is omitted, timeout will take the default value of 0 and no timeout logic will be executed.  
+**NOTE：**1. The timeout period is not a precise time, and the actual timeout period may differ from the expected time.2. If the value is less than 1, it will be defaulted to **0**.3. The value is subject to system limitations. If it exceeds 2^31 �C 1, the value will be **0**.
 
 **Type:** number
 

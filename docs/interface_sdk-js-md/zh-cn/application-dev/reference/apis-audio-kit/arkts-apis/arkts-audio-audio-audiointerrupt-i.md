@@ -18,12 +18,6 @@
 
 **系统能力：** SystemCapability.Multimedia.Audio.Renderer
 
-## 导入模块
-
-```TypeScript
-import { audio } from 'kits/@kit.AudioKit';
-```
-
 ## contentType
 
 ```TypeScript
@@ -32,7 +26,7 @@ contentType: ContentType
 
 音频打断媒体类型。
 
-**类型：** [ContentType](../../apis-arkui/arkts-components/arkts-arkui-contenttype-e.md)
+**类型：** [ContentType](arkts-audio-audio-contenttype-e.md)
 
 **起始版本：** 7
 

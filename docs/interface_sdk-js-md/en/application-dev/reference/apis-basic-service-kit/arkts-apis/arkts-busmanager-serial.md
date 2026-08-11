@@ -1,6 +1,6 @@
 # @ohos.busManager.serial
 
-串口管理
+Serial port management.
 
 **Since:** 26.0.0
 
@@ -24,29 +24,29 @@ import { serial } from 'kits/@kit.BasicServicesKit';
 
 | Name | Description |
 | --- | --- |
-| [getSerialPortList](arkts-basicservices-serial-getserialportlist-f.md#getserialportlist) | 获取串口列表。使用Promise异步回调。 |
+| [getSerialPortList](arkts-basicservices-serial-getserialportlist-f.md#getserialportlist) | Obtains the serial port list. This API returns the result asynchronously through a promise. |
 
 <!--Del-->
 ### Functions（系统接口）
 
 | Name | Description |
 | --- | --- |
-| [addPortAuthorization](arkts-basicservices-serial-addportauthorization-f-sys.md#addportauthorization) | 添加应用访问串口端口的权限仅面向串口授权弹窗系统应用开放 |
+| [addPortAuthorization](arkts-basicservices-serial-addportauthorization-f-sys.md#addportauthorization) | Adds the permission for applications to access the serial port.This API is open only to system applications that display a pop-up window for serial port authorization. |
 <!--DelEnd-->
 
 ### Interfaces
 
 | Name | Description |
 | --- | --- |
-| [SerialConfigs](arkts-basicservices-serial-serialconfigs-i.md) | 串口通信配置 |
-| [SerialPort](arkts-basicservices-serial-serialport-i.md) | 串口对象，提供串口设备信息和通信相关能力 |
-| [SerialPortInfo](arkts-basicservices-serial-serialportinfo-i.md) | 串口设备信息 |
+| [SerialConfigs](arkts-basicservices-serial-serialconfigs-i.md) | Serial port communication configuration. |
+| [SerialPort](arkts-basicservices-serial-serialport-i.md) | Serial port object, which provides information and communication capabilities of the serial port device. |
+| [SerialPortInfo](arkts-basicservices-serial-serialportinfo-i.md) | Serial port device information. |
 
 ### Enums
 
 | Name | Description |
 | --- | --- |
-| [DataBits](arkts-basicservices-serial-databits-e.md) | 串口通信中的数据位 |
-| [Parity](arkts-basicservices-serial-parity-e.md) | 串口通信中的校验位 |
-| [StopBits](arkts-basicservices-serial-stopbits-e.md) | 串口通信中的停止位 |
+| [DataBits](arkts-basicservices-serial-databits-e.md) | Data bits in serial port communication. |
+| [Parity](arkts-basicservices-serial-parity-e.md) | Parity bits in serial port communication. |
+| [StopBits](arkts-basicservices-serial-stopbits-e.md) | Stop bits in serial port communication. |
 

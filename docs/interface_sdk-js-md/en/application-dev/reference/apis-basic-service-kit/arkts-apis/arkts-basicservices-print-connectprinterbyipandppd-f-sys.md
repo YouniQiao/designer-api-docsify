@@ -12,7 +12,7 @@ import { print } from 'kits/@kit.BasicServicesKit';
 function connectPrinterByIpAndPpd(printerIp: string, protocol: string, ppdName: string): Promise<void>
 ```
 
-通过打印机IP和ppd连接打印机。
+Connect a printer by the printer IP and ppd.
 
 **Since:** 24
 
@@ -32,9 +32,9 @@ function connectPrinterByIpAndPpd(printerIp: string, protocol: string, ppdName: 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| printerIp | string | Yes | 打印机IP。 |
-| protocol | string | Yes | 协议类型。 |
-| ppdName | string | Yes | ppd名称。 |
+| printerIp | string | Yes | Indicates the printer IP. &lt;br&gt;IP of the printer to be connected. |
+| protocol | string | Yes | Indicates the protocol. &lt;br&gt;Protocol of the printer to be connected. |
+| ppdName | string | Yes | Indicates the ppd name. &lt;br&gt;Ppd name of the printer to be connected. |
 
 **Return value:**
 
@@ -46,7 +46,7 @@ function connectPrinterByIpAndPpd(printerIp: string, protocol: string, ppdName: 
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 13100005 | Invalid printer IP. |
-| 201 | the application does not have permission to call this function. |
-| 202 | not system application. |
+| [13100005](../../apis-basic-services-kit/errorcode-print.md#13100005-invalid-printer) | Invalid printer IP. |
+| [201](../../errorcode-universal.md#201-permission-denied) | the application does not have permission to call this function. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | not system application. |
 

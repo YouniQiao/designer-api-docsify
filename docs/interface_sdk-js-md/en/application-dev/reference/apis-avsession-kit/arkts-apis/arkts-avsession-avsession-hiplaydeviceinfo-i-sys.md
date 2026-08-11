@@ -1,6 +1,6 @@
 # HiPlayDeviceInfo (System API)
 
-HiPlay 设备类型定义
+HiPlay Device Information Definition
 
 **Since:** 24
 
@@ -24,7 +24,7 @@ import { avSession } from 'kits/@kit.AVSessionKit';
 castMode?: int
 ```
 
-HiPlay 投播模式，设备级和应用级
+HiPlay device cast mode.1: DEVICE_LEVEL_CAST2: APP_LEVEL_CAST
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
@@ -48,7 +48,7 @@ HiPlay 投播模式，设备级和应用级
 castUid?: int
 ```
 
-HiPlay 当前投播uid
+HiPlay device current cast uid.
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
@@ -72,7 +72,7 @@ HiPlay 当前投播uid
 supportCastMode?: int
 ```
 
-支持的Cast Mode，包含设备级和应用级投播
+HiPlay device supports cast mode.when device both support device level cast and app level cast, support cast mode is DEVICE_LEVEL_CAST|APP_LEVEL_CAST1: DEVICE_LEVEL_CAST2: APP_LEVEL_CAST
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
@@ -85,30 +85,6 @@ supportCastMode?: int
 **Atomic service API:** This API can be used in atomic services since API version 24.
 
 <!--Device-HiPlayDeviceInfo-supportCastMode?: int--><!--Device-HiPlayDeviceInfo-supportCastMode?: int-End-->
-
-**System capability:** SystemCapability.Multimedia.AVSession.AVCast
-
-**System API:** This is a system API.
-
-## supportMultiDeviceMode
-
-```TypeScript
-supportMultiDeviceMode?: int
-```
-
-是否支持多设备连接能力。取值限定为整数。
-
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
-
-**Since:** 26.1.0
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.1.0.
-
-**Model restriction:** This API can be used only in the stage model.
-
-**Atomic service API:** This API can be used in atomic services since API version 26.1.0.
-
-<!--Device-HiPlayDeviceInfo-supportMultiDeviceMode?: int--><!--Device-HiPlayDeviceInfo-supportMultiDeviceMode?: int-End-->
 
 **System capability:** SystemCapability.Multimedia.AVSession.AVCast
 

@@ -1,6 +1,6 @@
 # Action
 
-数据包的行为。
+Enumerates the actions that can be taken for data packets.
 
 **Since:** 12
 
@@ -16,7 +16,7 @@
 ALLOW = 0
 ```
 
-接收数据包。
+Receive data packets.
 
 **Since:** 12
 
@@ -34,7 +34,7 @@ ALLOW = 0
 DENY = 1
 ```
 
-丢弃数据包。
+Discard data packets.
 
 **Since:** 12
 
@@ -52,7 +52,7 @@ DENY = 1
 REJECT = 2
 ```
 
-拒绝数据包。
+Reject data packets.
 
 **Since:** 15
 

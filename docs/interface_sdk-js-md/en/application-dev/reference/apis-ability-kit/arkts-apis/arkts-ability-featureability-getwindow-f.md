@@ -12,7 +12,7 @@ import { featureAbility } from 'kits/@kit.AbilityKit';
 function getWindow(callback: AsyncCallback<window.Window>): void
 ```
 
-获取当前Ability对应的窗口。使用callback异步回调。
+Obtains the window corresponding to this ability. This API uses an asynchronous callback to return the result.
 
 **Since:** 7
 
@@ -28,7 +28,7 @@ function getWindow(callback: AsyncCallback<window.Window>): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;window.Window&gt; | Yes | 回调函数，返回当前Ability对应的窗口。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;window.Window&gt; | Yes | Callback used to return the window. |
 
 ## Examples
 
@@ -53,7 +53,7 @@ featureAbility.getWindow((error: BusinessError, data: window.Window) => {
 function getWindow(): Promise<window.Window>
 ```
 
-获取当前Ability对应的窗口。使用Promise异步回调。
+Obtains the window corresponding to this ability. This API uses a promise to return the result.
 
 **Since:** 7
 
@@ -69,7 +69,7 @@ function getWindow(): Promise<window.Window>
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;window.Window&gt; | Promise对象，返回当前Ability对应的窗口。 |
+| Promise&lt;window.Window&gt; | Promise used to return the window. |
 
 ## Examples
 

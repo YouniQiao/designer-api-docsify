@@ -1,6 +1,6 @@
 # LineSpacingOptions
 
-设置文本的行间距，是否仅在行与行之间生效。
+Defines the line spacing options.
 
 **Since:** 23
 
@@ -16,7 +16,7 @@
 onlyBetweenLines?: boolean
 ```
 
-文本的行间距是否仅在行与行之间生效。当设置为true时，行间距仅适用于行与行之间，首行上方和尾行下方无额外的行间距。当设置为false时，首行上方和尾行下方均会存在行间距。默认值：false
+Used to set whether it will only take effect between lines.
 
 **Type:** boolean
 

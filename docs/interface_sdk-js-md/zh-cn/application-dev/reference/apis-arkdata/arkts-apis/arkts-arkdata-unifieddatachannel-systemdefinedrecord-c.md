@@ -15,12 +15,6 @@ SystemDefinedRecord是[UnifiedRecord](arkts-arkdata-unifieddatachannel-unifiedre
 
 **系统能力：** SystemCapability.DistributedDataManager.UDMF.Core
 
-## 导入模块
-
-```TypeScript
-import { unifiedDataChannel } from 'kits/@kit.ArkData';
-```
-
 ## details
 
 ```TypeScript
@@ -29,7 +23,7 @@ details?: Record<string, int | long | double | string | Uint8Array>
 
 是一个字典类型对象，key是string类型，value可以写入number（数值类型）、string（字符串类型）、Uint8Array（二进制字节数组）类型数据。非必填字段，默认值为空字典对象。
 
-**类型：** [Record](../../apis-default/arkts-apis/arkts-record-t.md)&lt;string, int \| long \| double \| string \| Uint8Array&gt;
+**类型：** Record&lt;string, int \| long \| double \| string \| Uint8Array&gt;
 
 **起始版本：** 10
 

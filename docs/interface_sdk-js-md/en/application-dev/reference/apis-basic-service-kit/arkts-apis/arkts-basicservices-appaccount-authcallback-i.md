@@ -1,6 +1,6 @@
 # AuthCallback
 
-认证器回调类。
+Implements authenticator callbacks.
 
 **Since:** 9
 
@@ -22,7 +22,7 @@ import { appAccount } from 'kits/@kit.BasicServicesKit';
 onRequestContinued?: () => void
 ```
 
-通知请求被继续处理。
+Called to continue to process the request.
 
 **Since:** 9
 
@@ -54,7 +54,7 @@ appAccountManager.getAuthCallback(sessionId).then((callback: appAccount.AuthCall
 onRequestRedirected: (request: Want) => void
 ```
 
-通知请求被跳转。
+Called to redirect a request.
 
 **Since:** 9
 
@@ -97,7 +97,7 @@ class MyAuthenticator extends appAccount.Authenticator {
         authType: 'getSocialData'
       }
     };
-    callback.onResult(0, result);
+    callback.onResult(appAccount.ResultCode.SUCCESS, result);
   }
 }
 ```
@@ -114,7 +114,7 @@ ArkTS-Sta:
 onResult: (code: int, result?: AuthResult) => void
 ```
 
-通知请求结果。
+Called to return the result of an authentication request.
 
 **Since:** 9
 
@@ -149,7 +149,7 @@ appAccountManager.getAuthCallback(sessionId).then((callback: appAccount.AuthCall
       authType: 'getSocialData'
     }
   };
-  callback.onResult(0, result);
+  callback.onResult(appAccount.ResultCode.SUCCESS, result);
 }).catch((err: BusinessError) => {
   console.error(`getAuthCallback err: code is ${err.code}, message is ${err.message}`);
 });

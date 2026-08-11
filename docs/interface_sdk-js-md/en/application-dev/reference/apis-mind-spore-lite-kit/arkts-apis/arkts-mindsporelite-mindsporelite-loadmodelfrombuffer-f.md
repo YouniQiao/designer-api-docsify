@@ -64,17 +64,11 @@ globalContext.getApplicationContext()
     let modelBuffer = buffer.buffer;
     mindSporeLite.loadModelFromBuffer(modelBuffer).then((mindSporeLiteModel: mindSporeLite.Model) => {
       let modelInputs: mindSporeLite.MSTensor[] = mindSporeLiteModel.getInputs();
-      if (modelInputs == null || modelInputs.length === 0) {
-        console.error(`Failed to get model inputs from buffer. Model file: ${modelFile}, Buffer size: ${modelBuffer.byteLength}`);
-      } else {
-        console.info(`Succeeded in getting model inputs from buffer. Model file: ${modelFile}, Input name: ${modelInputs[0].name}`);
-      }
-    }).catch((error: Error) => {
-      console.error(`Failed to load model from buffer. Model file: ${modelFile}, Buffer size: ${modelBuffer.byteLength}, Error: ${error.message}`);
-    });
+      console.info('MS_LITE_LOG: ' + modelInputs[0].name);
+    })
   })
   .catch((error: BusinessError) => {
-    console.error(`Failed to read model file from resources. File name: ${modelFile}, Error code: ${error.code}, Error message: ${error.message}`);
+    console.error("getRawFileContent promise error is " + error);
   });
 ```
 
@@ -130,15 +124,11 @@ globalContext.getApplicationContext()
     let modelBuffer = buffer.buffer;
     mindSporeLite.loadModelFromBuffer(modelBuffer, (mindSporeLiteModel: mindSporeLite.Model) => {
       let modelInputs: mindSporeLite.MSTensor[] = mindSporeLiteModel.getInputs();
-      if (modelInputs == null || modelInputs.length === 0) {
-        console.error(`Failed to get model inputs from buffer. Model file: ${modelFile}, Buffer size: ${modelBuffer.byteLength}`);
-      } else {
-        console.info(`Succeeded in getting model inputs from buffer. Model file: ${modelFile}, Input name: ${modelInputs[0].name}`);
-      }
+      console.info('MS_LITE_LOG: ' + modelInputs[0].name);
     })
   })
   .catch((error: BusinessError) => {
-    console.error(`Failed to read model file from resources. File name: ${modelFile}, Error code: ${error.code}, Error message: ${error.message}`);
+    console.error("getRawFileContent promise error is " + error);
   });
 ```
 
@@ -189,25 +179,20 @@ import { BusinessError } from '@kit.BasicServicesKit';
 
 let modelFile = 'xxx.ms';
 let globalContext = new UIContext().getHostContext() as common.UIAbilityContext;
-let context: mindSporeLite.Context = {};
-context.target = ['cpu'];
-
 globalContext.getApplicationContext()
   .resourceManager
   .getRawFileContent(modelFile)
   .then((buffer: Uint8Array) => {
     let modelBuffer = buffer.buffer;
+    let context: mindSporeLite.Context = {};
+    context.target = ['cpu'];
     mindSporeLite.loadModelFromBuffer(modelBuffer, context, (mindSporeLiteModel: mindSporeLite.Model) => {
       let modelInputs: mindSporeLite.MSTensor[] = mindSporeLiteModel.getInputs();
-      if (modelInputs == null || modelInputs.length === 0) {
-        console.error(`Failed to get model inputs from buffer. Model file: ${modelFile}, Context: ${JSON.stringify(context)}, Buffer size: ${modelBuffer.byteLength}`);
-      } else {
-        console.info(`Succeeded in getting model inputs from buffer. Model file: ${modelFile}, Input name: ${modelInputs[0].name}`);
-      }
+      console.info('MS_LITE_LOG: ' + modelInputs[0].name);
     })
   })
   .catch((error: BusinessError) => {
-    console.error(`Failed to read model file from resources. File name: ${modelFile}, Error code: ${error.code}, Error message: ${error.message}`);
+    console.error("getRawFileContent promise error is " + error);
   });
 ```
 

@@ -1,6 +1,6 @@
 # WindowStatusType
 
-窗口模式枚举。
+Enumerates the window modes.
 
 **Since:** 11
 
@@ -16,7 +16,7 @@
 UNDEFINED = 0
 ```
 
-表示APP未定义窗口模式。
+The window mode is not defined by the application.
 
 **Since:** 11
 
@@ -34,17 +34,17 @@ UNDEFINED = 0
 FULL_SCREEN = 1
 ```
 
-表示APP全屏模式。
+The application is displayed in full screen.
 
-[自由窗口](../../../windowmanager/window-terminology.md#自由窗口)状态下，窗口铺满整个屏幕，默认无dock栏、标题栏和状态栏显示。
+In [freeform window](../../../windowmanager/window-terminology.md#freeform-window) state, the window occupies the entire screen with no dock, title bar, or status bar displayed by default.
 
-可通过[maximize()](arkts-arkui-window-window-i.md#maximize)和  
-[setTitleAndDockHoverShown()](arkts-arkui-window-window-i.md#settitleanddockhovershown)配置，当hover到热区时是否显示标题栏和dock栏。
+You can use [maximize()](arkts-arkui-window-window-i.md#maximize) and  
+[setTitleAndDockHoverShown()](arkts-arkui-window-window-i.md#settitleanddockhovershown) to configure whether to display the title bar and dock upon hovering over the hot zone.
 
-当maximize()和setTitleAndDockHoverShown()接口都调用时，以最后调用设置的效果为准。
+The last call takes precedence when both the **maximize()** and **setTitleAndDockHoverShown()** APIs are called.
 
-非[自由窗口](../../../windowmanager/window-terminology.md#自由窗口)状态下，窗口铺满整个屏幕，无标题栏和dock栏显示。可通过  
-[setSpecificSystemBarEnabled()](arkts-arkui-window-window-i.md#setspecificsystembarenabled)配置是否显示状态栏。
+In non-[freeform window](../../../windowmanager/window-terminology.md#freeform-window) state, the window occupies the entire screen with no title bar or dock displayed. You can use  
+[setSpecificSystemBarEnabled()](arkts-arkui-window-window-i.md#setspecificsystembarenabled) to configure whether to display the status bar.
 
 **Since:** 11
 
@@ -62,8 +62,8 @@ FULL_SCREEN = 1
 MAXIMIZE = 2
 ```
 
-表示APP窗口最大化模式，[自由窗口](../../../windowmanager/window-terminology.md#自由窗口)状态下，窗口铺满整个屏幕，不需要hover就可以显示dock栏、状态栏和标题栏。非  
-[自由窗口](../../../windowmanager/window-terminology.md#自由窗口)状态下，不存在该状态。
+The application window is maximized. In  
+[freeform window](../../../windowmanager/window-terminology.md#freeform-window) state, the window occupies the entire screen, and the dock, status bar, and title bar are displayed without requiring a hover. This state is unavailable in non-[freeform window](../../../windowmanager/window-terminology.md#freeform-window) state.
 
 **Since:** 11
 
@@ -81,7 +81,7 @@ MAXIMIZE = 2
 MINIMIZE = 3
 ```
 
-表示APP窗口最小化模式。
+The application window is minimized.
 
 **Since:** 11
 
@@ -99,7 +99,7 @@ MINIMIZE = 3
 FLOATING = 4
 ```
 
-表示APP自由悬浮形式窗口模式。
+The application is displayed in a floating window.
 
 **Since:** 11
 
@@ -117,7 +117,7 @@ FLOATING = 4
 SPLIT_SCREEN = 5
 ```
 
-表示APP分屏模式。
+The application is displayed in split-screen mode.
 
 **Since:** 11
 

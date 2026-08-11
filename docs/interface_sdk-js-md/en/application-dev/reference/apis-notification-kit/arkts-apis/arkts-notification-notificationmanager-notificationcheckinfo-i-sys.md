@@ -1,6 +1,6 @@
 # NotificationCheckInfo (System API)
 
-通知校验参数。
+Describes the parameters of check notifications.
 
 **Since:** 10
 
@@ -24,7 +24,7 @@ import { notificationManager } from 'kits/@kit.NotificationKit';
 bundleName: string
 ```
 
-Bundle名称。
+Bundle name.
 
 **Type:** string
 
@@ -46,7 +46,7 @@ Bundle名称。
 contentType: ContentType
 ```
 
-通知类型。
+Notification type.
 
 **Type:** [ContentType](../../apis-arkui/arkts-components/arkts-arkui-contenttype-e.md)
 
@@ -68,7 +68,7 @@ contentType: ContentType
 creatorUserId: int
 ```
 
-通知的user ID。
+User ID of the notification.
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
@@ -90,7 +90,7 @@ creatorUserId: int
 extraInfos?: Record<string, Object>
 ```
 
-实况通知的附加信息。
+Extra information about the live view.
 
 **Type:** [Record](../../apis-default/arkts-apis/arkts-record-t.md)&lt;string, Object&gt;
 
@@ -112,7 +112,7 @@ extraInfos?: Record<string, Object>
 label?: string
 ```
 
-通知标签。
+Notification label.
 
 **Type:** string
 
@@ -134,7 +134,7 @@ label?: string
 notificationId: int
 ```
 
-通知ID。
+Notification ID.
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
@@ -156,7 +156,7 @@ notificationId: int
 slotType: SlotType
 ```
 
-渠道类型。
+Notification slot type.
 
 **Type:** [SlotType](arkts-notification-notificationmanager-slottype-e-sys.md)
 

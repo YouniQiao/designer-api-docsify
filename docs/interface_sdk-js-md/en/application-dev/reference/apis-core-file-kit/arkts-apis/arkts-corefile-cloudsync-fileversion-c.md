@@ -1,6 +1,6 @@
 # FileVersion
 
-端云文件版本管理类。支持对端云文件的历史版本进行管理，提供获取文件历史版本信息列表的能力，通过历史版本信息，可将历史版本下载到本地；并提供历史版本文件替换当前本地文件的能力，针对版本冲突，提供查询冲突标志，解除冲突标志的能力。
+Represents the device-cloud file version management class. It allows you to manage historical versions of client-cloud files, obtain the list of historical versions, download historical versions to the local device, replace the current local file with a historical version file, and query and remove conflict flags for version conflicts.
 
 **Since:** 20
 
@@ -22,7 +22,7 @@ import { cloudSync } from 'kits/@kit.CoreFileKit';
 clearFileConflict(uri: string): Promise<void>
 ```
 
-清除本地文件版本冲突标志。如果产生冲突，本地解决冲突后需要调用此方法来清除冲突标记，后续才可以触发自动同步机制，和云上保持一致。使用Promise异步回调。
+Clears the version conflict flag of the local file. If a conflict occurs, you need to call this API to clear the conflict flag after the conflict is resolved locally and trigger automatic synchronization. This API uses a promise to return the result.
 
 **Since:** 20
 
@@ -36,13 +36,13 @@ clearFileConflict(uri: string): Promise<void>
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| uri | string | Yes | 待清除冲突标志的文件URI。 |
+| uri | string | Yes | URI of the file for which the conflict flag is to be cleared. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise对象，无返回结果。 |
+| Promise&lt;void&gt; | Promise that returns no value. |
 
 **Error codes:**
 
@@ -87,7 +87,7 @@ fileVersion.clearFileConflict(uri).then(() => {
 constructor()
 ```
 
-A constructor used to create a FileVersion object.
+A constructor used to create a **FileVersion** instance.
 
 **Since:** 20
 
@@ -115,7 +115,7 @@ let fileVersion = new cloudSync.FileVersion();
 downloadHistoryVersion(uri: string, versionId: string, callback: Callback<VersionDownloadProgress>): Promise<string>
 ```
 
-根据版本号获取指定文件的某一版本的文件内容。用户通过版本号指定云上某一版本，将其下载到本地临时存储路径，临时文件由应用自行决定是否替换原始文件，也可以选择保留或直接删除。callback返回文件下载进度，Promise返回历史版本临时文件的URI。
+Obtains the content of a file of a specified version based on the version number. You can download a file of a specified version from the cloud to a temporary local path. The application determines whether to replace the original file with the temporary file, or retain or delete the temporary file. The callback returns the file download progress, and the promise returns the URI of the temporary file of an earlier version.
 
 **Since:** 20
 
@@ -129,15 +129,15 @@ downloadHistoryVersion(uri: string, versionId: string, callback: Callback<Versio
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| uri | string | Yes | 文件的URI。 |
-| versionId | string | Yes | 文件某一版本的版本号，格式以接口 [gethistoryversionlist](arkts-corefile-cloudsync-fileversion-c.md#gethistoryversionlist)返回为准。 |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;VersionDownloadProgress&gt; | Yes | 回调函数，返回下载进度。 |
+| uri | string | Yes | File URI. |
+| versionId | string | Yes | Version ID of a file. The format is returned by the [gethistoryversionlist](arkts-corefile-cloudsync-fileversion-c.md#gethistoryversionlist) API. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;VersionDownloadProgress&gt; | Yes | Callback used to return the download progress. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;string&gt; | Promise对象，返回历史版本临时存储文件的URI。 |
+| Promise&lt;string&gt; | Promise used to return the URI of the temporary file of a historical version. |
 
 **Error codes:**
 
@@ -164,11 +164,11 @@ ArkTS-Sta:
 getHistoryVersionList(uri: string, versionNumLimit: int): Promise<Array<HistoryVersion>>
 ```
 
-获取历史版本列表，返回内容按修改时间排序，修改时间越早，位置越靠后。使用Promise异步回调。
+Obtains the list of historical versions. The returned versions are sorted by modification time. The earlier the modification time, the later the version. This API uses a promise to return the result.
 
-当云上版本数量小于传入的长度限制时，按照实际版本数量返回历史版本列表。
+If the number of cloud versions is less than the length limit, the list will be returned with the actual number of versions.
 
-当云上版本数量大于等于传入的长度限制时，则返回最新的versionNumLimit个版本。
+If the number of cloud versions is greater than or equal to the length limit, the number of the latest versions (specified by **versionNumLimit**) will be returned.
 
 **Since:** 20
 
@@ -182,14 +182,14 @@ getHistoryVersionList(uri: string, versionNumLimit: int): Promise<Array<HistoryV
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| uri | string | Yes | 文件的URI。 |
-| versionNumLimit | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | 历史版本列表长度限制，取值范围[0, 100000]（单位：个）。当输入值大于100000时，按照最大值返回列表。 |
+| uri | string | Yes | File URI. |
+| versionNumLimit | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | Length limit of the historical version list. The value range is [0, 100000] ( unit: number). If the input value is greater than 100,000, the list is returned according to the maximum value. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;Array&lt;HistoryVersion&gt;&gt; | Promise对象，返回历史版本列表。 |
+| Promise&lt;Array&lt;HistoryVersion&gt;&gt; | Promise used to return the list of historical versions. |
 
 **Error codes:**
 
@@ -231,10 +231,9 @@ fileVersion.getHistoryVersionList(uri, limit).then((versionList: Array<cloudSync
 isFileConflict(uri: string): Promise<boolean>
 ```
 
-获取本地文件版本冲突标志。使用Promise异步回调。此方法只有应用在配置手动解冲突后才会生效，否则默认自动解冲突，返回值为false，由同步流程自动完成解冲突；
+Obtains the version conflict flag of a local file. This API uses a promise to return the result. This API takes effect only when the application is configured for manual conflict resolution. Otherwise, conflicts are automatically resolved during synchronization, and the return value will be **false**.
 
-当应用配置手动解冲突后，调用此方法会返回当前文件是否与云侧文件产生冲突，并且由应用提示用户对冲突进行处理，在冲突解决前不会再自动同步上云。当处理完冲突后，需要调用  
-[clearFileConflict](arkts-corefile-cloudsync-fileversion-c.md#clearfileconflict)方法来清除冲突标志，后续才会继续触发同步，与云端保持一致。
+Once the application is configured for manual conflict resolution, calling this API returns whether the current local file conflicts with the cloud file. The application then prompts the user to handle the conflict. After the conflict is resolved, you need to call the [clearFileConflict](arkts-corefile-cloudsync-fileversion-c.md#clearfileconflict)method to clear the conflict flag and synchronize the file to the cloud.
 
 **Since:** 20
 
@@ -248,13 +247,13 @@ isFileConflict(uri: string): Promise<boolean>
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| uri | string | Yes | 文件的URI。 |
+| uri | string | Yes | File URI. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;boolean&gt; | Promise对象，返回本地文件和云端文件的冲突标志，true表示冲突，false表示不冲突。 |
+| Promise&lt;boolean&gt; | Promise used to return the conflict flag between the local file and the cloud file. The value **true** indicates that the local file conflicts with the cloud file, and the value **false** indicates the opposite. |
 
 **Error codes:**
 
@@ -292,7 +291,8 @@ fileVersion.isFileConflict(uri).then((isConflict: boolean) => {
 replaceFileWithHistoryVersion(originalUri: string, versionUri: string): Promise<void>
 ```
 
-提供使用历史版本文件替换本地文件的能力。在替换前，需要调用[downloadHistoryVersion](arkts-corefile-cloudsync-fileversion-c.md#downloadhistoryversion)方法对选择的历史版本进行下载并拿到versionUri；直接调用此接口或者versionUri非法会产生异常；替换完成后会删除临时存储文件。使用Promise异步回调。
+Replaces the local file with the file of a historical version. Before replacement, call the  
+[downloadHistoryVersion](arkts-corefile-cloudsync-fileversion-c.md#downloadhistoryversion) method to download the selected historical version and obtain its version URI. If this API is called directly without prior download or the version URI is invalid, an exception will be thrown. Once replacement is complete, the temporary file will be automatically deleted. This API uses a promise to return the result.
 
 **Since:** 20
 
@@ -306,14 +306,14 @@ replaceFileWithHistoryVersion(originalUri: string, versionUri: string): Promise<
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| originalUri | string | Yes | 本地文件的URI。 |
-| versionUri | string | Yes | 历史版本文件的URI。 |
+| originalUri | string | Yes | URI of the local file. |
+| versionUri | string | Yes | URI of the historical file. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise对象，无返回结果。 |
+| Promise&lt;void&gt; | Promise that returns no value. |
 
 **Error codes:**
 
@@ -362,7 +362,7 @@ fileVersion.downloadHistoryVersion(uri, versionId, callback).then((fileUri: stri
 fileVersion.replaceFileWithHistoryVersion(uri, versionUri).then(() => {
   console.info("replace file with history version success.");
 }).catch((err: BusinessError) => {
-  console.error("replace file with history version failed with error message: " + err.message + ", error code: " + err.code);
+  console.error("replace file with history version filed with error message: " + err.message + ", error code: " + err.code);
 });
 ```
 

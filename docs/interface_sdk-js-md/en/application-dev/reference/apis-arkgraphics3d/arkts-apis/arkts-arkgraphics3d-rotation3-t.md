@@ -4,7 +4,7 @@
 export type Rotation3 = Vec3
 ```
 
-3D旋转信息（欧拉角）, 单位为弧度.
+3D rotation info as euler angles, the unit is radian.
 
 **Since:** 12
 

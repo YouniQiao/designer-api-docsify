@@ -1,6 +1,6 @@
 # NavDestinationTransition
 
-NavDestination自定义动画接口。
+Defines a custom transition animation for the **NavDestination** component.
 
 **Since:** 15
 
@@ -16,7 +16,9 @@ NavDestination自定义动画接口。
 curve?: Curve
 ```
 
-动画的曲线类型，默认值为[Curve.EaseInOut](../arkts-apis/arkts-arkui-curve-t.md/arkts-arkui-curve-t.md)。
+Curve type of the animation.
+
+Default value: Curve.EaseInOut](ts-appendix-enums.md#curve)
 
 **Type:** [Curve](../arkts-apis/arkts-arkui-curve-e.md)
 
@@ -38,13 +40,9 @@ curve?: Curve
 delay?: number
 ```
 
-转场动画的延迟。
+Delay of the transition animation.
 
-取值范围：[0, +∞)
-
-默认值：0（毫秒）
-
-单位：ms
+Default value: **0** (in milliseconds)
 
 **Type:** number
 
@@ -66,13 +64,9 @@ delay?: number
 duration?: number
 ```
 
-转场动画的持续时间。
+Duration of the transition animation.
 
-取值范围：[0, +∞)
-
-默认值：1000（毫秒）
-
-单位：ms
+Default value: **1000** (in milliseconds)
 
 **Type:** number
 
@@ -94,7 +88,8 @@ duration?: number
 event: Callback<void>
 ```
 
-指定转场动效的闭包函数，系统会根据闭包中对组件UI状态的修改，生成对应的过渡动画。参见[animateTo](../arkts-apis/arkts-arkui-arkui-uicontext-uicontext-c.md/arkts-arkui-arkui-uicontext-uicontext-c.md#animatetoimmediately)中的event。
+Closure function specifying the transition animation. The system generates the corresponding transition animation based on the modifications to the component's UI state within the closure. For details, see **event** in  
+[animateTo](../../../reference/apis-arkui/arkts-apis-uicontext-uicontext.md#animateto).
 
 **Type:** [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;void&gt;
 
@@ -116,7 +111,7 @@ event: Callback<void>
 onTransitionEnd?: Callback<void>
 ```
 
-转场动画结束时的回调函数。
+Callback triggered when the transition animation ends.
 
 **Type:** [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;void&gt;
 

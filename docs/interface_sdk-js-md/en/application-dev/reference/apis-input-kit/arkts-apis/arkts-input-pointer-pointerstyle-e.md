@@ -1,6 +1,6 @@
 # PointerStyle
 
-鼠标光标样式类型。
+Mouse pointer style types.
 
 **Since:** 9
 
@@ -740,7 +740,7 @@ Scrolling east-west
 RUNNING_LEFT = 45
 ```
 
-后台运行中动画光标(拓展1)
+Running in the background (extension 1)
 
 **Since:** 22
 
@@ -756,7 +756,7 @@ RUNNING_LEFT = 45
 RUNNING_RIGHT = 46
 ```
 
-后台运行中动画光标(拓展2)
+Running in the background (extension 2)
 
 **Since:** 22
 
@@ -772,7 +772,7 @@ RUNNING_RIGHT = 46
 AECH_DEVELOPER_DEFINED_ICON = 47
 ```
 
-圆形自定义光标
+Custom circular pointer
 
 **Since:** 22
 
@@ -788,7 +788,7 @@ AECH_DEVELOPER_DEFINED_ICON = 47
 SCREENRECORDER_CURSOR = 48
 ```
 
-录屏光标
+Screen recording
 
 **Since:** 20
 
@@ -804,9 +804,9 @@ SCREENRECORDER_CURSOR = 48
 LASER_CURSOR = 49
 ```
 
-悬浮光标。手写笔进入空鼠模式时使用该光标，无法直接设置 。
+Floating This pointer can be used only when the stylus enters the air mouse mode and cannot be directly set.
 
-空鼠模式支持通过手写笔在空中转动来控制屏幕上虚拟光标的移动，并借助笔身按键实现上下翻页功能，用于演示PPT、隔空操作等场景。
+In air mouse mode, you can rotate the stylus in the air to control the movement of the virtual pointer on the screen and press the button on the stylus to turn pages up or down. This mode is used for PPT presentation and air gesture control.
 
 **Since:** 22
 
@@ -822,9 +822,9 @@ LASER_CURSOR = 49
 LASER_CURSOR_DOT = 50
 ```
 
-点击光标。手写笔进入空鼠模式时使用该光标，无法直接设置 。
+Click This pointer can be used only when the stylus enters the air mouse mode and cannot be directly set.
 
-空鼠模式支持通过手写笔在空中转动来控制屏幕上虚拟光标的移动，并借助笔身按键实现上下翻页功能，用于演示PPT、隔空操作等场景。
+In air mouse mode, you can rotate the stylus in the air to control the movement of the virtual pointer on the screen and press the button on the stylus to turn pages up or down. This mode is used for PPT presentation and air gesture control.
 
 **Since:** 22
 
@@ -840,9 +840,9 @@ LASER_CURSOR_DOT = 50
 LASER_CURSOR_DOT_RED = 51
 ```
 
-激光笔光标。手写笔进入空鼠模式时使用该光标，无法直接设置 。
+Laser pointer This pointer can be used only when the stylus enters the air mouse mode and cannot be directly set.
 
-空鼠模式支持通过手写笔在空中转动来控制屏幕上虚拟光标的移动，并借助笔身按键实现上下翻页功能，用于演示PPT、隔空操作等场景。
+In air mouse mode, you can rotate the stylus in the air to control the movement of the virtual pointer on the screen and press the button on the stylus to turn pages up or down. This mode is used for PPT presentation and air gesture control.
 
 **Since:** 22
 
@@ -858,8 +858,7 @@ LASER_CURSOR_DOT_RED = 51
 DEVELOPER_DEFINED_ICON = -100
 ```
 
-自定义光标，开发者可使用  
-[setCustomCursor](arkts-input-pointer-setcustomcursor-f.md#setcustomcursor)设置自定义光标，不支持使用[setPointerStyle](arkts-input-pointer-setpointerstyle-f.md#setpointerstyle)直接设置。
+Custom pointer. You can use [setCustomCursor](arkts-input-pointer-setcustomcursor-f.md#setcustomcursor) to set a custom pointer. The custom pointer cannot be directly set using [setPointerStyle](arkts-input-pointer-setpointerstyle-f.md#setpointerstyle).
 
 **Since:** 22
 

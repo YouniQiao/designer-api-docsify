@@ -12,7 +12,7 @@ import { storageStatistics } from 'kits/@kit.CoreFileKit';
 function getFreeSizeSync(): long
 ```
 
-同步获取内置存储的可用空间大小（单位为Byte）。
+Obtains the available space of the built-in storage, in bytes. This API returns the result synchronously.
 
 **Since:** 15
 
@@ -29,14 +29,14 @@ function getFreeSizeSync(): long
 
 | Type | Description |
 | --- | --- |
-| ArkTS-Dyn: number  <br>ArkTS-Sta：long | 返回内置存储的可用空间大小（单位为Byte）。 |
+| ArkTS-Dyn: number  <br>ArkTS-Sta：long | Available space of the built-in storage obtained. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 201 | Permission verification failed.<br>**Applicable version:** 10 - 14 |
-| 202 | The caller is not a system application.<br>**Applicable version:** 10 - 14 |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed.<br>**Applicable version:** 10 - 14 |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | The caller is not a system application.<br>**Applicable version:** 10 - 14 |
 | 13600001 | IPC error. |
 | 13900042 | Unknown error. |
 

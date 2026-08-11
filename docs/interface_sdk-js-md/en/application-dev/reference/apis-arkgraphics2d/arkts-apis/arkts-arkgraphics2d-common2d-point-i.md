@@ -1,6 +1,6 @@
 # Point
 
-坐标点。
+Describes a coordinate point.
 
 **Since:** 12
 
@@ -22,7 +22,7 @@ import { common2D } from 'kits/@kit.ArkGraphics2D';
 x: double
 ```
 
-横坐标，浮点数。
+Horizontal coordinate. The value is a floating point number.
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：double
 
@@ -42,7 +42,7 @@ x: double
 y: double
 ```
 
-纵坐标，浮点数。
+Vertical coordinate. The value is a floating point number.
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：double
 

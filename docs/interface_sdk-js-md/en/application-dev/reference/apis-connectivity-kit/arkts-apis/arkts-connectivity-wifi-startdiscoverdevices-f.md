@@ -40,9 +40,9 @@ Discover Wi-Fi P2P devices.
 import wifi from '@ohos.wifi';
 
 try {
-  wifi.startDiscoverDevices();  
+	wifi.startDiscoverDevices();	
 }catch(error){
-  console.error("failed:" + JSON.stringify(error));
+	console.error("failed:" + JSON.stringify(error));
 }
 ```
 

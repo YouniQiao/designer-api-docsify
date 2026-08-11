@@ -1,6 +1,6 @@
 # Flags
 
-[Want.flags](arkts-ability-app-ability-want-want-c.md#flags)字段常用的系统预置关键字。开发者可以通过这些预置关键字设置或获取应用跳转等场景中额外携带的标志位信息。
+Enumerates the common preset keywords of the [Want.flags](arkts-ability-app-ability-want-want-c.md) field. You can use these predefined keywords to set or retrieve additional flag information carried in application transitions.
 
 **Since:** 9
 
@@ -16,7 +16,7 @@
 FLAG_AUTH_READ_URI_PERMISSION = 0x00000001
 ```
 
-表示临时授予接收方读取该URI指向的数据的权限。
+Temporarily grants the receiver read permission for the URI.
 
 **Since:** 9
 
@@ -34,7 +34,7 @@ FLAG_AUTH_READ_URI_PERMISSION = 0x00000001
 FLAG_AUTH_WRITE_URI_PERMISSION = 0x00000002
 ```
 
-表示临时授予接收方写入该URI指向的数据的权限。
+Temporarily grants the receiver write permission for the URI.
 
 **Since:** 9
 
@@ -52,7 +52,7 @@ FLAG_AUTH_WRITE_URI_PERMISSION = 0x00000002
 FLAG_AUTH_PERSISTABLE_URI_PERMISSION = 0x00000040
 ```
 
-表示该URI可被接收方持久化。目标应用可以通过[fileShare.persistPermission](../../apis-core-file-kit/arkts-apis/arkts-corefile-fileshare-persistpermission-f.md/arkts-corefile-fileshare-persistpermission-f.md#persistpermission)接口进行权限持久化。
+The URI can be persisted by the receiver. It takes effect only on 2-in-1 devices and tablets.
 
 **Since:** 12
 
@@ -68,10 +68,11 @@ FLAG_AUTH_PERSISTABLE_URI_PERMISSION = 0x00000040
 FLAG_INSTALL_ON_DEMAND = 0x00000800
 ```
 
-表示拉起原子化服务时开启免安装功能。
+Enables on-demand installation when launching an atomic service.
 
-- 如果开启了免安装功能，当系统检测到被拉起的原子化服务未安装时，会自动安装原子化服务，再进行拉起。  
-- 如果未开启免安装功能，当原子化服务未安装时，将拉起失败。
+- If enabled, the system automatically installs the atomic service if it is not already installed before  
+proceeding with the launch.  
+- If disabled, the launch fails if the atomic service is not installed.
 
 **Since:** 9
 
@@ -89,8 +90,8 @@ FLAG_INSTALL_ON_DEMAND = 0x00000800
 FLAG_ABILITY_ON_COLLABORATE = 0x00002000
 ```
 
-在多设备协同场景下，调用方应用通过DMS系统发起请求并且通过Flags字段携带此标志，协同方应用才会触发生命周期回调方法  
-[onCollaborate()](arkts-ability-app-ability-uiability-uiability-c.md#oncollaborate)。
+In multi-device collaboration scenario, the caller application must initiate a request through the DMS, with this  flag included in the **Flags** field, in order to invoke the lifecycle callback  
+[onCollaborate()](arkts-ability-app-ability-uiability-uiability-c.md#oncollaborate)of the target application.
 
 **Since:** 18
 
@@ -106,9 +107,9 @@ FLAG_ABILITY_ON_COLLABORATE = 0x00002000
 FLAG_START_WITHOUT_TIPS = 0x40000000
 ```
 
-表示是否关闭匹配失败弹窗功能。
+Disables the "No available applications" prompt during implicit application launches.
 
-通过[隐式方式拉起应用](../../../application-models/app-startup-overview.md)时，如果没有能够匹配的应用，默认会弹出提示弹窗“暂无可用打开方式”。开发者可以通过该字段屏蔽该弹窗。
+When [launching an application implicitly](../../../application-models/app-startup-overview.md), a prompt saying "No  available applications" will appear if no matching application is found. You can use this flag to prevent this prompt from appearing.
 
 **Since:** 11
 

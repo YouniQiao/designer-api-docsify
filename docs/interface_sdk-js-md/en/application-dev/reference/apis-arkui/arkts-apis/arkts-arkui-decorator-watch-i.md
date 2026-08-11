@@ -16,7 +16,7 @@ Defining Watch annotation Watch is used to listen for state variables.
 callback: string
 ```
 
-用于监听的回调函数名，内容由开发者指定。
+The callback function name.
 
 **Type:** string
 

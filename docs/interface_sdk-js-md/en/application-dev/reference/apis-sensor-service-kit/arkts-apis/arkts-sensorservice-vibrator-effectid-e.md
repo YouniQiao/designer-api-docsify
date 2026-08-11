@@ -1,15 +1,13 @@
 # EffectId
 
-预置的振动效果。在调用  
-[vibrator.startVibration&lt;sup&gt;9+&lt;/sup&gt;](arkts-sensorservice-vibrator-startvibration-f.md#startvibration)或[vibrator.stopVibration&lt;sup&gt;9+&lt;/sup&gt;](arkts-sensorservice-vibrator-stopvibration-f.md#stopvibration)接口下发  
-[VibratePreset](arkts-sensorservice-vibrator-vibratepreset-i.md)形式振动的时候需要使用此参数类型。此参数值种类多样，'haptic.clock.timer'为其中一种。  
-[HapticFeedback&lt;sup&gt;12+&lt;/sup&gt;](arkts-sensorservice-vibrator-hapticfeedback-e.md)展示了几种常用的EffectId值。
+Enumerates the preset vibration effect IDs. This parameter is needed when you call  
+[vibrator.startVibration9+](arkts-sensorservice-vibrator-startvibration-f.md#startvibration)or [vibrator.stopVibration9+](arkts-sensorservice-vibrator-stopvibration-f.md#stopvibration) to deliver the vibration effect specified by [VibratePreset](arkts-sensorservice-vibrator-vibratepreset-i.md). This parameter supports a variety of values,such as **haptic.clock.timer**. [HapticFeedback&lt;sup&gt;12+&lt;/sup&gt;](arkts-sensorservice-vibrator-hapticfeedback-e.md) provides several frequently used **EffectId** values.
 
-> **说明：**
+> **NOTE：**
 > 
-> 由于设备存在多样性，不同的设备可能预置不同的效果，建议使用预置效果前先使用
-> [vibrator.isSupportEffect](arkts-sensorservice-vibrator-issupporteffect-f.md#issupporteffect)&lt;
-&gt; sup>10+&lt;/sup&gt;或[vibrator.isSupportEffectSync](arkts-sensorservice-vibrator-issupporteffectsync-f.md#issupporteffectsync)接口查询当前设备是否支持该预置效果。
+> Preset effects vary according to devices. You are advised to call
+> [vibrator.isSupportEffect](arkts-sensorservice-vibrator-issupporteffect-f.md#issupporteffect)&lt;sup&gt;10+&lt;/sup&gt; to check whether the
+> device supports the preset effect before use.
 
 **Since:** 8
 
@@ -25,7 +23,7 @@
 EFFECT_CLOCK_TIMER = 'haptic.clock.timer'
 ```
 
-描述用户调整计时器时的振动效果。
+Vibration effect when a user adjusts the timer.
 
 **Since:** 8
 

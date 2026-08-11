@@ -1,6 +1,6 @@
 # FocusMode
 
-表示焦点模式类型的枚举。
+Enumerates the focus modes.
 
 **Since:** 23
 
@@ -16,7 +16,7 @@
 AF_A = 0
 ```
 
-自动对焦。
+Intelligent autofocus.
 
 **Since:** 23
 
@@ -34,7 +34,7 @@ AF_A = 0
 AF_S = 1
 ```
 
-单次自动对焦。
+Single autofocus.
 
 **Since:** 23
 
@@ -52,7 +52,7 @@ AF_S = 1
 AF_C = 2
 ```
 
-连续自动对焦。
+Continuous auto focus.
 
 **Since:** 23
 
@@ -70,7 +70,7 @@ AF_C = 2
 MF = 3
 ```
 
-手动对焦。
+Manual focus.
 
 **Since:** 23
 

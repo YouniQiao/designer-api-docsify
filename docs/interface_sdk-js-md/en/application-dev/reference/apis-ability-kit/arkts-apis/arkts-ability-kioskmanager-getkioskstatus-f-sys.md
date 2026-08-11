@@ -12,7 +12,7 @@ import { kioskManager } from 'kits/@kit.AbilityKit';
 function getKioskStatus(): Promise<KioskStatus>
 ```
 
-获取系统Kiosk模式的状态信息（包括当前系统是否处于Kiosk模式、进入Kiosk模式应用的名称和UID）。使用Promise异步回调。该接口仅在Phone、PC/2in1和Tablet设备中可正常调用，在其他设备中返回801错误码。
+Obtains the Kiosk mode status information, including whether the system is in kiosk mode, and the name and UID of the application that has entered Kiosk mode. This API uses a promise to return the result.
 
 **Since:** 20
 
@@ -30,15 +30,15 @@ function getKioskStatus(): Promise<KioskStatus>
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;KioskStatus&gt; | Promise对象，返回当前Kiosk状态信息。 |
+| Promise&lt;KioskStatus&gt; | Promise used to return the kiosk mode status information. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 801 | Capability not supported. |
-| 16000050 | Failed to connect to the system service. |
-| 202 | Not system application. |
+| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. |
+| [16000050](../errorcode-ability.md#16000050-internal-error) | Failed to connect to the system service. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system application. |
 
 ## Examples
 

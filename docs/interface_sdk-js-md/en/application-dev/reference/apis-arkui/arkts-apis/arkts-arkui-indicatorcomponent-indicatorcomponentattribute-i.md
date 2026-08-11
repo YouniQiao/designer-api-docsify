@@ -1,6 +1,6 @@
 # IndicatorComponentAttribute
 
-除支持[通用属性](../../apis-arkui/arkts-components/arkts-arkui-common-attribute.md)外，还支持以下属性。
+Defines the IndicatorComponent attribute functions.
 
 **Inheritance/Implementation:** IndicatorComponentAttribute extends [CommonMethod](arkts-arkui-common-commonmethod-i.md)
 
@@ -18,9 +18,7 @@
 count(totalCount: int | undefined): this
 ```
 
-设置导航点总数量。
-
-单独导航点组件和Swiper绑定的时候，以Swiper的页面数量为准。
+Sets the total number of indicator.
 
 **Since:** 23
 
@@ -50,9 +48,7 @@ count(totalCount: int | undefined): this
 initialIndex(index: int | undefined): this
 ```
 
-设置首次显示时当前导航点的索引值。设置小于0或大于等于导航点数量时，按照默认值0处理。
-
-单独导航点组件和Swiper绑定的时候，该属性不生效。
+Called when the index value of the displayed subcomponent is set in the container.
 
 **Since:** 23
 
@@ -82,9 +78,7 @@ initialIndex(index: int | undefined): this
 loop(isLoop: boolean | undefined): this
 ```
 
-设置是否开启循环。
-
-单独导航点组件和Swiper绑定的时候，该属性不生效。
+Called when setting whether to turn on cyclic sliding.
 
 **Since:** 23
 
@@ -114,7 +108,7 @@ loop(isLoop: boolean | undefined): this
 onChange(event: Callback<int> | undefined): this
 ```
 
-当前显示的选中导航点索引变化时触发该事件，可通过回调函数获取当前选中导航点的索引值。
+Called when the index value changes.
 
 **Since:** 23
 
@@ -144,11 +138,11 @@ onChange(event: Callback<int> | undefined): this
 default setIndicatorComponentOptions(controller?: IndicatorComponentController): this
 ```
 
-设置indicatorComponent组件配置项。
+Set indicatorComponent options.
 
-**Since:** 26.0.0
+**Since:** 26.1.0
 
-**ArkTS mode:** ArkTS-Sta only, since version 26.0.0.
+**ArkTS mode:** ArkTS-Sta only, since version 26.1.0.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -160,13 +154,13 @@ default setIndicatorComponentOptions(controller?: IndicatorComponentController):
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| controller | [IndicatorComponentController](../arkts-components/arkts-arkui-indicatorcomponentcontroller-c.md) | No | IndicatorComponent构造函数选项 |
+| controller | [IndicatorComponentController](../arkts-components/arkts-arkui-indicatorcomponentcontroller-c.md) | No | IndicatorComponent constructor options |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| this | 返回IndicatorComponentAttribute的实例。 |
+| this | Returns the instance of the IndicatorComponentAttribute. |
 
 ## style
 
@@ -174,7 +168,7 @@ default setIndicatorComponentOptions(controller?: IndicatorComponentController):
 style(indicatorStyle: DotIndicator | DigitIndicator | undefined): this
 ```
 
-设置可选导航点指示器样式。
+Sets the indicator style.
 
 **Since:** 23
 
@@ -190,7 +184,7 @@ style(indicatorStyle: DotIndicator | DigitIndicator | undefined): this
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| indicatorStyle | [DotIndicator](../arkts-components/arkts-arkui-dotindicator-c.md) \| DigitIndicator \| undefined | Yes | 可选导航点指示器样式。&lt;br/&gt; - DotIndicator：圆点指示器样式。&lt;br/&gt; - DigitIndicator：数字指示器样式。&lt;br/&gt;  默认类型：DotIndicator。 |
+| indicatorStyle | [DotIndicator](../arkts-components/arkts-arkui-dotindicator-c.md) \| DigitIndicator \| undefined | Yes | the style value |
 
 **Return value:**
 
@@ -204,9 +198,7 @@ style(indicatorStyle: DotIndicator | DigitIndicator | undefined): this
 vertical(isVertical: boolean | undefined): this
 ```
 
-设置是否为纵向滑动。
-
-单独导航点组件和Swiper绑定的时候，该属性不生效。
+Called when setting whether to slide vertically.
 
 **Since:** 23
 

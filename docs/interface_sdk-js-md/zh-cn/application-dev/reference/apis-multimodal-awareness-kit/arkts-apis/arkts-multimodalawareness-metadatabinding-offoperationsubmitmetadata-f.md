@@ -1,18 +1,12 @@
 # offOperationSubmitMetadata
 
-## 导入模块
-
-```TypeScript
-import { metadataBinding } from 'kits/@kit.MultimodalAwarenessKit';
-```
-
 ## offOperationSubmitMetadata
 
 ```TypeScript
 function offOperationSubmitMetadata(bundleName: string, callback?: Callback<int>): void
 ```
 
-Unsubscribes from system events that are used to obtain the encoded metadata.
+取消订阅系统获取编码内容的事件。
 
 **起始版本：** 23
 
@@ -26,13 +20,27 @@ Unsubscribes from system events that are used to obtain the encoded metadata.
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| bundleName | string | 是 | Bundle name of a third-party application |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;int&gt; | 否 | Call back the screenshot event |
+| bundleName | string | 是 | 第三方应用的包名，需与订阅时传入的包名一致。 |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;int&gt; | 否 | 回调函数，返回截图事件。需要取消监听的回调函数，需与订阅时传入的回调函数一致。若不填，则取消当前监听该事件的所有回调函数。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 32100001 | Internal handling failed. |
-| 32100005 | Unsubscribe Failed. Possible causes: &lt;br&gt;1. Abnormal system capability. &lt;br&gt;2. IPC communication abnormality. |
+| [32100001](../../apis-multimodalawareness-kit/errorcode-metadataBinding.md#32100001-文件创建失败) | Internal handling failed. |
+| [32100005](../../apis-multimodalawareness-kit/errorcode-metadataBinding.md#32100005-取消订阅失败) | Unsubscribe Failed. Possible causes: &lt;br&gt;1. Abnormal system capability. &lt;br&gt;2. IPC communication abnormality. |
+
+## 示例
+
+```TypeScript
+import { metadataBinding } from '@kit.MultimodalAwarenessKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let bundleName: string = '';
+try {
+  metadataBinding.offOperationSubmitMetadata(bundleName, (event: int)=>{});
+} catch (error) {
+  console.error("Unsubscribe screenshot event" + error);
+}
+```
 

@@ -1,6 +1,6 @@
 # UserEmotionData（系统接口）
 
-Defines user emotion data.
+用户情绪数据。
 
 **继承/实现关系：** UserEmotionData extends [UserStatusData](arkts-multimodalawareness-userstatus-userstatusdata-i-sys.md)
 
@@ -14,19 +14,13 @@ Defines user emotion data.
 
 **系统接口：** 此接口为系统接口。
 
-## 导入模块
-
-```TypeScript
-import { userStatus } from 'kits/@kit.MultimodalAwarenessKit';
-```
-
 ## confidence
 
 ```TypeScript
 confidence?: int
 ```
 
-User emotion confidence.The value ranges from 0 to 100. A larger value indicates a higher confidence.
+用户情绪置信度。取值范围为0到100，值越大表示置信度越高。
 
 **类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
@@ -48,7 +42,7 @@ User emotion confidence.The value ranges from 0 to 100. A larger value indicates
 emotionNonRealTime ?: int[]
 ```
 
-User non-real-time emotion level.The value ranges from 0 to 5. 0: Very happy, 1: A little happy, 2: Calm,3: A little unhappy, 4: Angry, 5: Crying.
+用户非实时情绪级别。取值范围为0到5。0：非常开心，1：有些开心，2：平静，3：有些不开心，4：生气，5：哭泣。
 
 **类型：** ArkTS-Dyn: number[]  <br>ArkTS-Sta：int[]
 
@@ -70,7 +64,7 @@ User non-real-time emotion level.The value ranges from 0 to 5. 0: Very happy, 1:
 emotionRealTime ?: int
 ```
 
-User real-time emotion level.The value ranges from 0 to 5. 0: Very happy, 1: A little happy, 2: Calm,3: A little unhappy, 4: Angry, 5: Crying.
+用户实时情绪级别。取值范围为0到5。0：非常开心，1：有些开心，2：平静，3：有些不开心，4：生气，5：哭泣。
 
 **类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
@@ -92,7 +86,7 @@ User real-time emotion level.The value ranges from 0 to 5. 0: Very happy, 1: A l
 gravityAcceleration?: double[]
 ```
 
-Gravity acceleration of user motion status, in m/s².
+用户运动状态的重力加速度，单位：m/s²。
 
 **类型：** ArkTS-Dyn: number[]  <br>ArkTS-Sta：double[]
 
@@ -114,7 +108,7 @@ Gravity acceleration of user motion status, in m/s².
 isRealTime?: boolean
 ```
 
-Whether emotion data is real-time.
+情绪数据是否为实时数据。
 
 **类型：** boolean
 
@@ -136,7 +130,7 @@ Whether emotion data is real-time.
 linearAcceleration?: double[][]
 ```
 
-Linear acceleration of user motion status, in m/s².
+用户运动状态的线性加速度，单位：m/s²。
 
 **类型：** ArkTS-Dyn: number[][]  <br>ArkTS-Sta：double[][]
 

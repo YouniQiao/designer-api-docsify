@@ -12,14 +12,15 @@ import { application } from 'kits/@kit.AbilityKit';
 export function getAppPreloadType(): AppPreloadType
 ```
 
-获取应用当前进程的预加载类型。
+Obtains the preloading type of the current application process.
 
-> **说明：**
+> **NOTE：**
 > 
-> - 只有在进程首次执行[AbilityStage.onCreate](arkts-ability-app-ability-abilitystage-abilitystage-c.md#oncreate)完成之前调用该接口，才可以返回真实的预
-> 加载类型。
+> - This API can return the actual preloading type only if it is called before the first execution of
+> [AbilityStage.onCreate](arkts-ability-app-ability-abilitystage-abilitystage-c.md#oncreate).
 > 
-> - AbilityStage创建完成后，应用的预加载数据将被清除，调用该接口将返回UNSPECIFIED，无法获取到真实的预加载类型。
+> - Once the AbilityStage creation finishes, the preloaded data of the application is cleared. Any subsequent calls
+> will return **UNSPECIFIED** instead of the original preloading type.
 
 **Since:** 22
 
@@ -35,7 +36,7 @@ export function getAppPreloadType(): AppPreloadType
 
 | Type | Description |
 | --- | --- |
-| [AppPreloadType](arkts-ability-application-apppreloadtype-e.md) | 应用当前进程的预加载类型。 |
+| [AppPreloadType](arkts-ability-application-apppreloadtype-e.md) | Obtains the preloading type of the current application process. |
 
 ## Examples
 

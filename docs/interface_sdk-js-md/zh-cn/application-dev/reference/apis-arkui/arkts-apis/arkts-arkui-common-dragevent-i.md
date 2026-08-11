@@ -63,8 +63,8 @@ Get dragData from DragEvent.
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 190002 | Data error. |
-| 190001 | Data not found. |
+| [190002](../errorcode-uicontext.md#190002-无效的回调函数) | Data error. |
+| [190001](../errorcode-uicontext.md#190001-无效的uicontext对象) | Data not found. |
 
 ## getDisplayId
 
@@ -490,7 +490,7 @@ Use this method to provide a data representation to the system instead of direct
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| dataLoadParams | [DataLoadParams](arkts-arkui-dataloadparams-t.md) | 是 | The data backend representation. |
+| dataLoadParams | [DataLoadParams](../../apis-arkdata/arkts-apis/arkts-arkdata-unifieddatachannel-dataloadparams-i.md) | 是 | The data backend representation. |
 
 ## setResult
 
@@ -550,8 +550,8 @@ Request the drag data to be synchronized to caller, can be notified with the syn
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 401 | Parameter error. |
-| 190003 | Operation not allowed for current phase. |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. |
+| [190003](../errorcode-drag-event.md#190003-当前阶段不允许操作) | Operation not allowed for current phase. |
 
 ## autoHideComponentUniqueIds
 

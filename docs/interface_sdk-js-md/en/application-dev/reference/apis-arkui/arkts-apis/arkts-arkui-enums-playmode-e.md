@@ -1,6 +1,6 @@
 # PlayMode
 
-动画播放模式。
+Play Mode
 
 **Since:** 23
 
@@ -16,7 +16,7 @@
 Normal = 0
 ```
 
-动画正向播放。
+The animation plays normally.
 
 **Since:** 23
 
@@ -34,7 +34,7 @@ Normal = 0
 Reverse = 1
 ```
 
-动画反向播放。
+The animation plays backwards.
 
 **Since:** 23
 
@@ -52,7 +52,7 @@ Reverse = 1
 Alternate = 2
 ```
 
-动画在奇数次（1、3、5...）正向播放，在偶数次（2、4、6...）反向播放。
+The animation plays forward on odd numbers (1, 3, 7...) and backward on even numbers (2, 4, 6...).
 
 **Since:** 23
 
@@ -70,7 +70,7 @@ Alternate = 2
 AlternateReverse = 3
 ```
 
-动画在奇数次（1、3、5...）反向播放，在偶数次（2、4、6...）正向播放。
+The animation plays backwards on odd numbers (1, 3, 7...) and forwards on even numbers (2, 4, 6...)..
 
 **Since:** 23
 

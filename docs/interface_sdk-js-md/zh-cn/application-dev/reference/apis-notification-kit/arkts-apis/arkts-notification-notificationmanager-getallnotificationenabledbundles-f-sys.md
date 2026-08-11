@@ -36,13 +36,15 @@ function getAllNotificationEnabledBundles(): Promise<Array<BundleOption>>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 201 | Permission denied. |
-| 1600001 | Internal error. |
-| 202 | Not system application to call the interface. |
-| 1600002 | Marshalling or unmarshalling error. |
-| 1600003 | Failed to connect to the service. |
+| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
+| [1600001](../errorcode-notification.md#1600001-内部错误) | Internal error. |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not system application to call the interface. |
+| [1600002](../errorcode-notification.md#1600002-序列化或反序列化错误) | Marshalling or unmarshalling error. |
+| [1600003](../errorcode-notification.md#1600003-连接通知服务失败) | Failed to connect to the service. |
 
 ## 示例
+
+ArkTS-Dyn示例：
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -55,6 +57,23 @@ notificationManager.getAllNotificationEnabledBundles().then((data: Array<notific
     });
 }).catch((err: BusinessError) => {
     console.error(`getAllNotificationEnabledBundles failed, code is ${err.code}, message is ${err.message}`);
+})
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+notificationManager.getAllNotificationEnabledBundles().then((data: Array<notificationManager.BundleOption>) => {
+    console.info(`Enable bundle data is ${JSON.stringify(data)}`);
+    data.forEach(element => {
+        console.info(`Enable uid is ${JSON.stringify(element.uid)}`);
+        console.info(`Enable bundle is ${JSON.stringify(element.bundle)}`);
+    });
+}).catch((err: Error): void => {
+    let error: BusinessError = err as BusinessError;
+    console.error(`getAllNotificationEnabledBundles failed, code is ${error.code}, message is ${error.message}`);
 })
 ```
 
@@ -95,14 +114,16 @@ function getAllNotificationEnabledBundles(userId: int): Promise<Array<BundleOpti
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 1600008 | The user does not exist. |
-| 201 | Permission denied. |
-| 1600001 | Internal error. |
-| 202 | Not system application to call the interface. |
-| 1600002 | Marshalling or unmarshalling error. |
-| 1600003 | Failed to connect to the service. |
+| [1600008](../errorcode-notification.md#1600008-用户不存在) | The user does not exist. |
+| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
+| [1600001](../errorcode-notification.md#1600001-内部错误) | Internal error. |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not system application to call the interface. |
+| [1600002](../errorcode-notification.md#1600002-序列化或反序列化错误) | Marshalling or unmarshalling error. |
+| [1600003](../errorcode-notification.md#1600003-连接通知服务失败) | Failed to connect to the service. |
 
 ## 示例
+
+ArkTS-Dyn示例：
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -117,6 +138,18 @@ notificationManager.getAllNotificationEnabledBundles(userId).then((data: Array<n
   });
 }).catch((err: BusinessError) => {
   console.error(`getAllNotificationEnabledBundles failed, code is ${err.code}, message is ${err.message}`);
+});
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+let userId : int = 100;
+
+notificationManager.getAllNotificationEnabledBundles(userId).then((data: Array<notificationManager.BundleOption> | undefined): void => {
+  console.info(`Enable bundle data is ${JSON.stringify(data)}`);
+}).catch((err: Error | undefined): void => {
+  console.error(`getAllNotificationEnabledBundles error, code: ${err?.code}, message: ${err?.message}`);
 });
 ```
 

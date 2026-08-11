@@ -10,12 +10,6 @@ Describes the filter conditions for track selection.
 
 **系统能力：** SystemCapability.Multimedia.Media.Core
 
-## 导入模块
-
-```TypeScript
-import { media } from 'kits/@kit.MediaKit';
-```
-
 ## maxAudioBitrate
 
 ```TypeScript

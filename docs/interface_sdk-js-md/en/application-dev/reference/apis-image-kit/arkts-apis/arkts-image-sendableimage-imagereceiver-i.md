@@ -1,8 +1,8 @@
 # ImageReceiver
 
-图像接收类，用于获取组件Surface ID，接收最新的图片和读取下一张图片，以及释放ImageReceiver实例。
+Image receiver class. You can use it to obtain the surface ID of a component, read the latest image and the next image, and release **ImageReceiver** instances.
 
-在调用以下方法前需要先创建ImageReceiver实例。
+Before calling any APIs in ImageReceiver, you must create an ImageReceiver instance.
 
 **Since:** 12
 
@@ -24,7 +24,7 @@ import { sendableImage } from 'kits/@kit.ImageKit';
 getReceivingSurfaceId(): Promise<string>
 ```
 
-用于获取一个Surface ID供Camera或其他组件使用。使用promise异步回调。
+Obtains a surface ID for the camera or other components. This API uses a promise to return the result.
 
 **Since:** 12
 
@@ -38,7 +38,7 @@ getReceivingSurfaceId(): Promise<string>
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;string&gt; | 异步返回Surface ID。 |
+| Promise&lt;string&gt; | Asynchronously returns the surface ID. |
 
 ## Examples
 
@@ -47,7 +47,7 @@ import { sendableImage } from '@kit.ImageKit';
 import { BusinessError } from '@kit.BasicServicesKit';
 import { image } from '@kit.ImageKit';
 
-async function GetReceivingSurfaceId() {
+async function Demo() {
   let size: image.Size = {
     height: 8192,
     width: 8
@@ -67,7 +67,7 @@ async function GetReceivingSurfaceId() {
 on(type: 'imageArrival', callback: AsyncCallback<void>): void
 ```
 
-接收图片时注册。使用callback异步回调。
+Listens for image arrival events. This API uses an asynchronous callback to return the result.
 
 **Since:** 12
 
@@ -81,8 +81,8 @@ on(type: 'imageArrival', callback: AsyncCallback<void>): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'imageArrival' | Yes | 注册事件的类型，固定为'imageArrival'，接收图片时触发。 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | 注册的事件回调。 |
+| type | 'imageArrival' | Yes | Type of event to listen for. The value is fixed at **'imageArrival'**, which is triggered when an image is received. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback invoked for the event. |
 
 ## Examples
 
@@ -90,7 +90,7 @@ on(type: 'imageArrival', callback: AsyncCallback<void>): void
 import { sendableImage } from '@kit.ImageKit';
 import { image } from '@kit.ImageKit';
 
-async function On() {
+async function Demo() {
   let size: image.Size = {
     height: 8192,
     width: 8
@@ -108,12 +108,14 @@ async function On() {
 readLatestImage(): Promise<Image>
 ```
 
-从ImageReceiver读取最新的图片。使用promise异步回调。
+Reads the latest image from the ImageReceiver instance. This API uses a promise to return the result.
 
-> **注意**：
+> **NOTE：**
 > 
-> 此接口需要在[on](sendableImage.ImageReceiver.on)回调触发后调用，才能正常的接收到数据。且此接口返回的[Image](arkts-image-sendableimage-image-i.md)对象使
-> 用完毕后需要调用[release](arkts-image-sendableimage-pixelmap-i.md#release)方法释放，释放后才可以继续接收新的数据。
+> This API can be called to receive data only after the [on](sendableImage.ImageReceiver.on) callback is
+> triggered. When the [Image](arkts-image-sendableimage-imagesource-i.md) object returned by this API is no longer needed,
+> call [release](arkts-image-sendableimage-pixelmap-i.md#release) to release the object. New data can be received only after
+> the release.
 
 **Since:** 12
 
@@ -127,7 +129,7 @@ readLatestImage(): Promise<Image>
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;Image&gt; | 异步返回最新图片。 |
+| Promise&lt;Image&gt; | Promise used to return the latest image. |
 
 ## Examples
 
@@ -136,16 +138,16 @@ import { sendableImage } from '@kit.ImageKit';
 import { BusinessError } from '@kit.BasicServicesKit';
 import { image } from '@kit.ImageKit';
 
-async function ReadLatestImage() {
+async function Demo() {
   let size: image.Size = {
     height: 8192,
     width: 8
   }
   let receiver: sendableImage.ImageReceiver = sendableImage.createImageReceiver(size, image.ImageFormat.JPEG, 8);
   receiver.readLatestImage().then((img: sendableImage.Image) => {
-    console.info('Succeeded in reading the latest image.');
+    console.info('readLatestImage succeeded.');
   }).catch((error: BusinessError) => {
-    console.error(`Failed to read the latest image. Code: ${error.code}, message: ${error.message}.`);
+    console.error(`readLatestImage failed. code ${error.code}, message is ${error.message}`);
   })
 }
 ```
@@ -156,12 +158,14 @@ async function ReadLatestImage() {
 readNextImage(): Promise<Image>
 ```
 
-从ImageReceiver读取下一张图片。使用promise异步回调。
+Reads the next image from the ImageReceiver instance. This API uses a promise to return the result.
 
-> **注意**：
+> **NOTE：**
 > 
-> 此接口需要在[on](sendableImage.ImageReceiver.on)回调触发后调用，才能正常的接收到数据。且此接口返回的[Image](arkts-image-sendableimage-image-i.md)对象使
-> 用完毕后需要调用[release](arkts-image-sendableimage-pixelmap-i.md#release)方法释放，释放后才可以继续接收新的数据。
+> This API can be called to receive data only after the [on](sendableImage.ImageReceiver.on) callback is
+> triggered. When the [Image](arkts-image-sendableimage-imagesource-i.md) object returned by this API is no longer needed,
+> call [release](arkts-image-sendableimage-pixelmap-i.md#release) to release the object. New data can be received only after
+> the release.
 
 **Since:** 12
 
@@ -175,7 +179,7 @@ readNextImage(): Promise<Image>
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;Image&gt; | 异步返回下一张图片。 |
+| Promise&lt;Image&gt; | Promise used to return the next image. |
 
 ## Examples
 
@@ -184,16 +188,16 @@ import { sendableImage } from '@kit.ImageKit';
 import { BusinessError } from '@kit.BasicServicesKit';
 import { image } from '@kit.ImageKit';
 
-async function ReadNextImage() {
+async function Demo() {
   let size: image.Size = {
     height: 8192,
     width: 8
   }
   let receiver: sendableImage.ImageReceiver = sendableImage.createImageReceiver(size, image.ImageFormat.JPEG, 8);
   receiver.readNextImage().then((img: sendableImage.Image) => {
-    console.info('Succeeded in reading the next image.');
+    console.info('readNextImage succeeded.');
   }).catch((error: BusinessError) => {
-    console.error(`Failed to read the next image. Code: ${error.code}, message: ${error.message}.`);
+    console.error(`readNextImage failed. code ${error.code}, message is ${error.message}`);
   })
 }
 ```
@@ -204,11 +208,7 @@ async function ReadNextImage() {
 release(): Promise<void>
 ```
 
-释放ImageReceiver实例。使用promise异步回调。
-
-由于图片占用内存较大，所以当ImageReceiver实例使用完成后，应主动调用该方法，及时释放内存。
-
-释放时应确保该实例的所有异步方法均执行完成，且后续不再使用该实例。
+Releases this ImageReceiver instance. This API uses a promise to return the result.Images occupy a large amount of memory. When you finish using an ImageReceiver instance, call this API to free the memory promptly.Before releasing the instance, ensure that all asynchronous operations associated with the instance have finished and the instance is no longer needed.
 
 **Since:** 12
 
@@ -222,7 +222,7 @@ release(): Promise<void>
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | 异步返回操作结果。 |
+| Promise&lt;void&gt; | Promise used to return the result. |
 
 ## Examples
 
@@ -231,16 +231,16 @@ import { sendableImage } from '@kit.ImageKit';
 import { BusinessError } from '@kit.BasicServicesKit';
 import { image } from '@kit.ImageKit';
 
-async function Release() {
+async function Demo() {
   let size: image.Size = {
     height: 8192,
     width: 8
   }
   let receiver: sendableImage.ImageReceiver = sendableImage.createImageReceiver(size, image.ImageFormat.JPEG, 8);
   receiver.release().then(() => {
-    console.info('Succeeded in releasing an image receiver.');
+    console.info('release succeeded.');
   }).catch((error: BusinessError) => {
-    console.error(`Failed to release an image receiver. Code: ${error.code}, message: ${error.message}.`);
+    console.error(`release failed. code ${error.code}, message is ${error.message}`);
   })
 }
 ```
@@ -251,7 +251,9 @@ async function Release() {
 readonly capacity: number
 ```
 
-同时访问的图像数。该参数仅作为期望值，实际capacity由设备硬件决定。
+Maximum number of images that can be accessed at the same time. This parameter is used only as an expected value.
+
+The actual capacity is determined by the device hardware.
 
 **Type:** number
 
@@ -269,7 +271,7 @@ readonly capacity: number
 readonly format: image.ImageFormat
 ```
 
-图像格式。
+Image format.
 
 **Type:** image.ImageFormat
 
@@ -287,7 +289,7 @@ readonly format: image.ImageFormat
 readonly size: image.Size
 ```
 
-图片大小。
+Image size.
 
 **Type:** image.Size
 

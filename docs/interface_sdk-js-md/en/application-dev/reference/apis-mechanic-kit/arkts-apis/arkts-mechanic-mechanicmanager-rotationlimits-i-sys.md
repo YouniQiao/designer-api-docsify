@@ -1,6 +1,6 @@
 # RotationLimits (System API)
 
-相对于参考点的旋转角度限制
+Rotation angle limits relative to the reference point.
 
 **Since:** 20
 

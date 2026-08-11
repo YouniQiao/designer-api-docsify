@@ -1,6 +1,6 @@
 # CompleteData
 
-表示主动触发WantAgent返回的数据。
+Describes the data returned by after wantAgent.trigger is called.
 
 **Since:** 7
 
@@ -20,7 +20,7 @@
 extraInfo?: { [key: string]: any }
 ```
 
-额外数据。
+Extra data collected by the common event.
 
 **Type:** { [key: string]: any }
 
@@ -44,7 +44,7 @@ extraInfo?: { [key: string]: any }
 finalCode: number
 ```
 
-触发wantAgent的请求代码。
+Request code used to trigger the WantAgent.
 
 **Type:** number
 
@@ -68,7 +68,7 @@ finalCode: number
 finalData: string
 ```
 
-公共事件收集的最终数据。
+Final data collected by the common event.
 
 **Type:** string
 
@@ -92,7 +92,7 @@ finalData: string
 info: WantAgent
 ```
 
-触发的wantAgent。
+Triggered WantAgent.
 
 **Type:** [WantAgent](arkts-ability-wantagent-t.md)
 
@@ -116,7 +116,7 @@ info: WantAgent
 want: Want
 ```
 
-存在的被触发的want。
+Existing Want that is triggered.
 
 **Type:** [Want](arkts-ability-app-ability-want-want-c.md)
 

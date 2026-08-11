@@ -18,14 +18,13 @@
 static show(value: ActionSheetOptions)
 ```
 
-定义列表弹窗并弹出。
+Shows an action sheet in the given settings.
 
-> **说明：**
-
-showActionSheet需先获取[UIContext](arkts-arkui-uicontext.md)实例后再进行调用。
-
-> 从API version 10开始，可以通过使用[UIContext](arkts-arkui-uicontext.md)中的
-> [showActionSheet](arkts-arkui-arkui-uicontext-uicontext-c.md#showactionsheet)来明确UI的执行上下文。
+> **NOTE：**
+> 
+> Since API version 10, you can use
+> [showActionSheet](arkts-arkui-arkui-uicontext-uicontext-c.md#showactionsheet) in
+> [UIContext](arkts-arkui-uicontext.md) to specify the UI execution context.
 
 **Since:** 8
 
@@ -45,5 +44,5 @@ showActionSheet需先获取[UIContext](arkts-arkui-uicontext.md)实例后再进�
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | [ActionSheetOptions](arkts-arkui-actionsheet-actionsheetoptions-i.md) | Yes | 配置列表选择弹窗的参数。 |
+| value | [ActionSheetOptions](arkts-arkui-actionsheet-actionsheetoptions-i.md) | Yes | Parameters of the action sheet. |
 

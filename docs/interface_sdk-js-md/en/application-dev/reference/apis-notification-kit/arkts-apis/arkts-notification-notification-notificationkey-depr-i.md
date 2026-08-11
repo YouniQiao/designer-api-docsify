@@ -1,6 +1,6 @@
 # NotificationKey
 
-通知键值。
+Notification key.
 
 **Since:** 7
 
@@ -18,7 +18,7 @@
 id: number
 ```
 
-通知ID。
+Notification ID.
 
 **Type:** number
 
@@ -40,7 +40,7 @@ id: number
 label?: string
 ```
 
-通知标签。
+Notification label.
 
 **Type:** string
 

@@ -1,10 +1,6 @@
 # ScrollOptions
 
-滚动到指定位置的参数选项。
-
-> **说明：**
-> 
-> 为规范匿名对象的定义，API 18版本修改了此处的元素定义。其中，保留了历史匿名对象的起始版本信息，会出现外层元素@since版本号高于内层元素版本号的情况，但这不影响接口的使用。
+Provides parameters for scrolling to a specific position in a scrollable container.
 
 **Since:** 18
 
@@ -20,11 +16,11 @@
 animation?: ScrollAnimationOptions | boolean
 ```
 
-动画配置。
+Animation configuration Anonymous Object Rectification.
 
-&lt;p&gt;&lt;strong&gt;说明&lt;/strong&gt;&lt;br&gt;目前List、Scroll、Grid和WaterFlow支持Boolean类型和ICurve。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;NOTE&lt;/strong&gt;&lt;br&gt;Currently, the &lt;em&gt;List&lt;/em&gt;, &lt;em&gt;Scroll&lt;/em&gt;, &lt;em&gt;Grid&lt;/em&gt;, and &lt;em&gt;WaterFlow&lt;/em&gt;support the &lt;em&gt;Boolean&lt;/em&gt; type and &lt;em&gt;ICurve&lt;/em&gt;.&lt;/p&gt;
 
- 布尔类型启用默认弹簧动效。 [since 10 - 11] 布尔类型启用默认弹簧动效。 [since 12]
+ parameters  and the boolean type enables default spring animation. [since 10 - 11] and the boolean type enables default spring animation. [since 12]
 
 **Type:** [ScrollAnimationOptions](../arkts-apis/arkts-arkui-scroll-scrollanimationoptions-i.md) \| boolean
 
@@ -48,7 +44,7 @@ animation?: ScrollAnimationOptions | boolean
 canOverScroll?: boolean
 ```
 
-设置滚动目标位置是否可以超出边界。
+Set whether the scroll target position can over the boundary.
 
 **Type:** boolean
 
@@ -70,9 +66,9 @@ canOverScroll?: boolean
 xOffset: number | string
 ```
 
-水平滚动偏移量。
+Horizontal scrolling offset.Anonymous Object Rectification.
 
-&lt;p&gt;&lt;strong&gt;说明&lt;/strong&gt;&lt;br&gt;不支持设置百分比。&lt;br&gt;无动画滚动时，设置为小于0的值按0处理。有动画滚动时，默认停在起始位置。通过设置&lt;em&gt;animation&lt;/em&gt;参数，可以在滚动超出边界时启用回弹效果。&lt;br&gt;该参数仅在滚动轴为x轴时生效。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;NOTE&lt;/strong&gt;&lt;br&gt;This parameter cannot be set in percentage.&lt;br&gt;This parameter takes effect only when the scroll axis is the x-axis.&lt;br&gt;Value range: Values less than 0 are treated as 0, and scrolling occurs without animation.Animated scrolling stops at the starting position by default.By setting the **animation** parameter, you can enable a bounce effect when the scrolling goes beyond the boundary.&lt;br&gt;If the parameter type is number, the unit is vp.&lt;/p&gt;
 
 **Type:** number \| string
 
@@ -94,9 +90,9 @@ xOffset: number | string
 yOffset: number | string
 ```
 
-竖直滚动偏移量。
+Vertical scrolling offset.Anonymous Object Rectification.
 
-&lt;p&gt;&lt;strong&gt;说明&lt;/strong&gt;&lt;br&gt;不支持设置百分比。&lt;br&gt;无动画滚动时，设置为小于0的值按0处理。有动画滚动时，默认停在起始位置。通过设置&lt;em&gt;animation&lt;/em&gt;参数，可以在滚动超出边界时启用回弹效果。&lt;br&gt;该参数仅在滚动轴为y轴时生效。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;NOTE&lt;/strong&gt;&lt;br&gt;This parameter cannot be set in percentage.&lt;br&gt;This parameter takes effect only when the scroll axis is the y-axis.&lt;br&gt;Value range: Values less than 0 are treated as 0, and scrolling occurs without animation.Animated scrolling stops at the starting position by default.By setting the **animation** parameter, you can enable a bounce effect when the scrolling goes beyond the boundary.&lt;br&gt;If the parameter type is number, the unit is vp.&lt;/p&gt;
 
 **Type:** number \| string
 

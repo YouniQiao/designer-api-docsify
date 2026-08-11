@@ -1,11 +1,5 @@
 # configure
 
-## 导入模块
-
-```TypeScript
-import { hiAppEvent } from 'kits/@kit.PerformanceAnalysisKit';
-```
-
 ## configure
 
 ```TypeScript
@@ -34,8 +28,8 @@ function configure(config: ConfigOption): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 11103001 | Invalid max storage quota value. Possibly caused by incorrectly formatted. |
-| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types. |
+| [11103001](../errorcode-hiappevent.md#11103001-非法的最大存储配额值) | Invalid max storage quota value. Possibly caused by incorrectly formatted. |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types. |
 
 ## 示例
 

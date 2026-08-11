@@ -1,11 +1,11 @@
-# @ohos.arkui.advanced.InnerFullScreenLaunchComponent(系统接口)
+# @ohos.arkui.advanced.InnerFullScreenLaunchComponent(System API)
 
-###### 子组件
- 无。
- ###### 属性
- 不支持[通用属性](../../apis-arkui/arkts-components/arkts-arkui-common-attribute.md)。
- ###### 事件
- 不支持[通用事件](../../apis-arkui/arkts-components/arkts-arkui-common-attribute.md)。
+###### Child Components
+ Not supported
+ ###### Attributes
+ The [universal attributes](../../apis-arkui/arkts-components/arkts-arkui-common-attribute.md) are not supported.
+ ###### Events
+ The [universal events](../../apis-arkui/arkts-components/arkts-arkui-common-attribute.md) are not supported.
 
 
 ## Modules to Import
@@ -21,7 +21,7 @@ import { InnerFullScreenLaunchComponent, LaunchController } from 'kits/@kit.ArkU
 
 | Name | Description |
 | --- | --- |
-| [LaunchController](arkts-arkui-arkui-advanced-innerfullscreenlaunchcomponent-launchcontroller-c-sys.md) | 拉起原子化服务的控制器。 |
+| [LaunchController](arkts-arkui-arkui-advanced-innerfullscreenlaunchcomponent-launchcontroller-c-sys.md) | Controller for launching the atomic service. |
 <!--DelEnd-->
 
 <!--Del-->
@@ -29,7 +29,7 @@ import { InnerFullScreenLaunchComponent, LaunchController } from 'kits/@kit.ArkU
 
 | Name | Description |
 | --- | --- |
-| [InnerFullScreenLaunchComponent](arkts-arkui-arkui-advanced-innerfullscreenlaunchcomponent-innerfullscreenlaunchcomponent-s-sys.md) | 非显式全屏拉起原子化服务组件，拉起方可以选择拉起原子化服务的时机。当被拉起方授权使用方嵌入式运行原子化服务时，使用方全屏嵌入式运行原子化服务；未授权时，使用方跳出式拉起原子化服务。 |
+| [InnerFullScreenLaunchComponent](arkts-arkui-arkui-advanced-innerfullscreenlaunchcomponent-innerfullscreenlaunchcomponent-s-sys.md) | **InnerFullScreenLaunchComponent** is a component that allows the invoker to choose the timing for launching an atomic service. If the invoked app (the one being launched) grants the invoker the authorization to run the atomic service in an embedded manner, the invoker can operate the atomic service in full-screen embedded mode. If authorization is not provided, the invoker will launch the atomic service in a pop-up manner.  > **NOTE：** >  > To implement an embeddable atomic service within this component, it must inherit from > [EmbeddableUIAbility](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-embeddableuiability-embeddableuiability-c.md/arkts-ability-app-ability-embeddableuiability-embeddableuiability-c.md). If it does not inherit from > **EmbeddableUIAbility**, the system cannot guarantee that the atomic service will function properly. |
 <!--DelEnd-->
 
 <!--Del-->
@@ -37,6 +37,6 @@ import { InnerFullScreenLaunchComponent, LaunchController } from 'kits/@kit.ArkU
 
 | Name | Description |
 | --- | --- |
-| [LaunchAtomicServiceCallback](arkts-arkui-launchatomicservicecallback-t-sys.md) | 拉起原子化服务触发的回调。 |
+| [LaunchAtomicServiceCallback](arkts-arkui-launchatomicservicecallback-t-sys.md) | Triggered when an atomic service is launched. |
 <!--DelEnd-->
 

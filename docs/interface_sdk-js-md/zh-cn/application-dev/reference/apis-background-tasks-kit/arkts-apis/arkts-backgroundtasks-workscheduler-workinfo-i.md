@@ -10,12 +10,6 @@
 
 **系统能力：** SystemCapability.ResourceSchedule.WorkScheduler
 
-## 导入模块
-
-```TypeScript
-import { workScheduler } from 'kits/@kit.BackgroundTasksKit';
-```
-
 ## abilityName
 
 ```TypeScript
@@ -278,7 +272,7 @@ parameters?: Record<string, int | double | string | boolean>
 
 携带参数信息。
 
-**类型：** ArkTS-Dyn: [Record](../../apis-default/arkts-apis/arkts-record-t.md)&lt;string, number \| number \| string \| boolean&gt;  <br>ArkTS-Sta：[Record](../../apis-default/arkts-apis/arkts-record-t.md)&lt;string, int \| double \| string \| boolean&gt;
+**类型：** ArkTS-Dyn: Record&lt;string, number \| number \| string \| boolean&gt;  <br>ArkTS-Sta：Record&lt;string, int \| double \| string \| boolean&gt;
 
 **起始版本：** 9
 

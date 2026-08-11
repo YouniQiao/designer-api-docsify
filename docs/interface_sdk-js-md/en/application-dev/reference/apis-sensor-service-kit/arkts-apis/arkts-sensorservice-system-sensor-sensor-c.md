@@ -24,7 +24,7 @@ import { OnBodyStateResponse, subscribeAccelerometerOptions, ProximityResponse, 
 static getOnBodyState(options: GetOnBodyStateOptions): void
 ```
 
-获取设备佩戴状态。此接口为一次性获取，不同于subscribeOnBodyState的持续订阅模式，仅返回当前时刻的佩戴状态。
+Obtains the wearing state of a wearable device.
 
 **Since:** 3
 
@@ -44,7 +44,23 @@ static getOnBodyState(options: GetOnBodyStateOptions): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| options | [GetOnBodyStateOptions](arkts-sensorservice-system-sensor-getonbodystateoptions-i.md) | Yes | 获取传感器所在设备穿戴状态时调用。 |
+| options | [GetOnBodyStateOptions](arkts-sensorservice-system-sensor-getonbodystateoptions-i.md) | Yes | Callback invoked when obtaining the wearing state of the device that houses the sensor. |
+
+## Examples
+
+```TypeScript
+import { Sensor, OnBodyStateResponse, GetOnBodyStateOptions } from '@kit.SensorServiceKit';
+
+let getOnBodyStateOptions: GetOnBodyStateOptions = {
+  success: (ret: OnBodyStateResponse) => {
+    console.info('Succeeded in subscribing. On body state: ' + ret.value);
+  },
+  fail: (data: string, code: number) => {
+    console.error(`Failed to subscription. Code: ${code}, data: ${data}`);
+  },
+};
+Sensor.getOnBodyState(getOnBodyStateOptions);
+```
 
 ## subscribeAccelerometer
 
@@ -52,13 +68,13 @@ static getOnBodyState(options: GetOnBodyStateOptions): void
 static subscribeAccelerometer(options: subscribeAccelerometerOptions): void
 ```
 
-订阅加速度传感器数据变化。通过回调函数获取设备在x、y、z三轴方向上的加速度数据，数据格式为AccelerometerResponse对象，包含x、y、z三个number类型字段。
+Subscribes to data changes of the acceleration sensor. If this API is called multiple times for the same application, the last call takes effect.
 
-> **说明：**
+> **NOTE：**
 > 
-> 除Lite Wearable外，从API version 8开始，建议使用
+> Except for lite wearables, You are advised to use
 > [ACCELEROMETER](@ohos.sensor:sensor.on(type: SensorType.SENSOR_TYPE_ID_ACCELEROMETER, callback: Callback&lt;AccelerometerResponse&gt;, options?: Options))
-> 替代。
+> instead. since API Version 8.
 
 **Since:** 3
 
@@ -80,7 +96,26 @@ static subscribeAccelerometer(options: subscribeAccelerometerOptions): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| options | [subscribeAccelerometerOptions](arkts-sensorservice-system-sensor-subscribeaccelerometeroptions-i.md) | Yes | 用于设置加速度传感器订阅的参数，包括回调频率和回调函数。 |
+| options | [subscribeAccelerometerOptions](arkts-sensorservice-system-sensor-subscribeaccelerometeroptions-i.md) | Yes | Type of data to return. |
+
+## Examples
+
+```TypeScript
+import { Sensor, AccelerometerResponse, subscribeAccelerometerOptions } from '@kit.SensorServiceKit';
+
+let accelerometerOptions: subscribeAccelerometerOptions = {
+  interval: 'normal',
+  success: (ret: AccelerometerResponse) => {
+    console.info('Succeeded in subscribing. X-axis data: ' + ret.x);
+    console.info('Succeeded in subscribing. Y-axis data: ' + ret.y);
+    console.info('Succeeded in subscribing. Z-axis data: ' + ret.z);
+  },
+  fail: (data: string, code: number) => {
+    console.error(`Failed to subscription. Code: ${code}, data: ${data}`);
+  },
+};
+Sensor.subscribeAccelerometer(accelerometerOptions);
+```
 
 ## subscribeBarometer
 
@@ -88,13 +123,13 @@ static subscribeAccelerometer(options: subscribeAccelerometerOptions): void
 static subscribeBarometer(options: SubscribeBarometerOptions): void
 ```
 
-订阅气压计传感器数据变化。通过回调函数获取气压值数据，数据格式为BarometerResponse对象，包含pressure字段（单位：帕斯卡）。
+Subscribes to data changes of the barometer sensor. If this API is called multiple times for the same application,the last call takes effect.
 
-> **说明：**
+> **NOTE：**
 > 
-> 除Lite Wearable外，从API version 8开始，建议使用
+> Except for lite wearables, You are advised to use
 > [BAROMETER](@ohos.sensor:sensor.on(type: SensorType.SENSOR_TYPE_ID_BAROMETER, callback: Callback&lt;BarometerResponse&gt;, options?: Options))
-> 替代。
+> instead. since API Version 8.
 
 **Since:** 3
 
@@ -114,7 +149,23 @@ static subscribeBarometer(options: SubscribeBarometerOptions): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| options | [SubscribeBarometerOptions](arkts-sensorservice-system-sensor-subscribebarometeroptions-i.md) | Yes | 当气压计传感器数据发生变化时调用。 |
+| options | [SubscribeBarometerOptions](arkts-sensorservice-system-sensor-subscribebarometeroptions-i.md) | Yes | Type of data to return. |
+
+## Examples
+
+```TypeScript
+import { Sensor, BarometerResponse, SubscribeBarometerOptions } from '@kit.SensorServiceKit';
+
+let subscribeBarometerOptions: SubscribeBarometerOptions = {
+  success: (ret: BarometerResponse) => {
+    console.info('Succeeded in subscribing. Get data value:' + ret.pressure);
+  },
+  fail: (data: string, code: number) => {
+    console.error(`Failed to subscription. Code: ${code}, data: ${data}`);
+  },
+};
+Sensor.subscribeBarometer(subscribeBarometerOptions);
+```
 
 ## subscribeCompass
 
@@ -122,13 +173,13 @@ static subscribeBarometer(options: SubscribeBarometerOptions): void
 static subscribeCompass(options: SubscribeCompassOptions): void
 ```
 
-订阅罗盘传感器数据变化。通过回调函数获取设备面对的方向度数数据，数据格式为CompassResponse对象，包含direction字段。
+Subscribes to data changes of the compass sensor. If this API is called multiple times for the same application,the last call takes effect.
 
-> **说明：**
+> **NOTE：**
 > 
-> 除Lite Wearable外，从API version 8开始，建议使用
+> Except for lite wearables, You are advised to use
 > [ORIENTATION](@ohos.sensor:sensor.on(type: SensorType.SENSOR_TYPE_ID_ORIENTATION, callback: Callback&lt;OrientationResponse&gt;, options?: Options))
-> 替代。
+> since API Version 8.
 
 **Since:** 3
 
@@ -148,7 +199,23 @@ static subscribeCompass(options: SubscribeCompassOptions): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| options | [SubscribeCompassOptions](arkts-sensorservice-system-sensor-subscribecompassoptions-i.md) | Yes | 用于设置罗盘传感器订阅的参数，包括回调函数。 |
+| options | [SubscribeCompassOptions](arkts-sensorservice-system-sensor-subscribecompassoptions-i.md) | Yes | Type of data to return. |
+
+## Examples
+
+```TypeScript
+import { Sensor, CompassResponse, SubscribeCompassOptions } from '@kit.SensorServiceKit';
+
+let subscribeCompassOptions: SubscribeCompassOptions = {
+  success: (ret: CompassResponse) => {
+    console.info('Succeeded in subscribing. Get data direction:' + ret.direction);
+  },
+  fail: (data: string, code: number) => {
+    console.error(`Failed to subscription. Code: ${code}, data: ${data}`);
+  },
+};
+Sensor.subscribeCompass(subscribeCompassOptions);
+```
 
 ## subscribeDeviceOrientation
 
@@ -156,15 +223,15 @@ static subscribeCompass(options: SubscribeCompassOptions): void
 static subscribeDeviceOrientation(options: SubscribeDeviceOrientationOptions): void
 ```
 
-订阅设备方向传感器数据变化。通过回调函数获取设备方向数据，数据格式为DeviceOrientationResponse对象，包含alpha、beta、gamma三个旋转角度字段（单位：度）。
+Subscribes to data changes of the device orientation sensor.
 
-针对同一个应用，多次调用时，会覆盖前面的调用效果，即仅最后一次调用生效；针对同一个方法内，不支持多次调用。
+If this API is called multiple times for the same application, the last call takes effect. However, this API cannot be called multiple times in one click event.
 
-> **说明：**
+> **NOTE：**
 > 
-> 除Lite Wearable外，从API version 8开始，建议使用
+> Except for lite wearables, You are advised to use
 > [ORIENTATION](@ohos.sensor:sensor.on(type: SensorType.SENSOR_TYPE_ID_ORIENTATION, callback: Callback&lt;OrientationResponse&gt;, options?: Options))
-> 替代。
+> instead. since API Version 8.
 
 **Since:** 6
 
@@ -184,7 +251,26 @@ static subscribeDeviceOrientation(options: SubscribeDeviceOrientationOptions): v
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| options | [SubscribeDeviceOrientationOptions](arkts-sensorservice-system-sensor-subscribedeviceorientationoptions-i.md) | Yes | 用于设置设备方向传感器订阅的参数，包括回调频率和回调函数。 |
+| options | [SubscribeDeviceOrientationOptions](arkts-sensorservice-system-sensor-subscribedeviceorientationoptions-i.md) | Yes | Type of data to return. |
+
+## Examples
+
+```TypeScript
+import { Sensor, DeviceOrientationResponse, SubscribeDeviceOrientationOptions } from '@kit.SensorServiceKit';
+
+let subscribeDeviceOrientationOptions: SubscribeDeviceOrientationOptions = {
+  interval: 'normal',
+  success: (ret: DeviceOrientationResponse) => {
+    console.info('Succeeded in subscribing. Alpha data: ' + ret.alpha);
+    console.info('Succeeded in subscribing. Beta data: ' + ret.beta);
+    console.info('Succeeded in subscribing. Gamma data: ' + ret.gamma);
+  },
+  fail: (data: string, code: number) => {
+    console.error(`Failed to subscription. Code: ${code}, data: ${data}`);
+  }
+};
+Sensor.subscribeDeviceOrientation(subscribeDeviceOrientationOptions);
+```
 
 ## subscribeGyroscope
 
@@ -192,15 +278,15 @@ static subscribeDeviceOrientation(options: SubscribeDeviceOrientationOptions): v
 static subscribeGyroscope(options: SubscribeGyroscopeOptions): void
 ```
 
-订阅陀螺仪传感器数据变化。通过回调函数获取设备在x、y、z三轴方向的旋转角速度数据，数据格式为GyroscopeResponse对象，包含x、y、z三个number类型字段（单位：rad/s）。
+Subscribes to data changes of the gyroscope sensor.
 
-针对同一个应用，多次点击调用时，会覆盖前面的调用效果，即仅最后一次调用生效；针对同一个方法内，不支持多次调用。
+If this API is called multiple times for the same application, the last call takes effect. However, this API cannot be called multiple times in one click event.
 
-> **说明：**
+> **NOTE：**
 > 
-> 除Lite Wearable外，从API version 8开始，建议使用
+> Except for lite wearables, You are advised to use
 > [GYROSCOPE](@ohos.sensor:sensor.on(type: SensorType.SENSOR_TYPE_ID_GYROSCOPE, callback: Callback&lt;GyroscopeResponse&gt;, options?: Options))
-> 替代。
+> instead. since API Version 8.
 
 **Since:** 6
 
@@ -222,7 +308,26 @@ static subscribeGyroscope(options: SubscribeGyroscopeOptions): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| options | [SubscribeGyroscopeOptions](arkts-sensorservice-system-sensor-subscribegyroscopeoptions-i.md) | Yes | 用于设置陀螺仪传感器订阅的参数，包括回调频率和回调函数。 |
+| options | [SubscribeGyroscopeOptions](arkts-sensorservice-system-sensor-subscribegyroscopeoptions-i.md) | Yes | Type of data to return. |
+
+## Examples
+
+```TypeScript
+import { Sensor, GyroscopeResponse, SubscribeGyroscopeOptions } from '@kit.SensorServiceKit';
+
+let subscribeGyroscopeOptions: SubscribeGyroscopeOptions = {
+  interval: 'normal',
+  success: (ret: GyroscopeResponse) => {
+    console.info('Succeeded in subscribing. X-axis data: ' + ret.x);
+    console.info('Succeeded in subscribing. Y-axis data: ' + ret.y);
+    console.info('Succeeded in subscribing. Z-axis data: ' + ret.z);
+  },
+  fail: (data: string, code: number) => {
+    console.error(`Failed to subscription. Code: ${code}, data: ${data}`);
+  }
+};
+Sensor.subscribeGyroscope(subscribeGyroscopeOptions);
+```
 
 ## subscribeHeartRate
 
@@ -230,13 +335,13 @@ static subscribeGyroscope(options: SubscribeGyroscopeOptions): void
 static subscribeHeartRate(options: SubscribeHeartRateOptions): void
 ```
 
-订阅心率传感器数据变化。通过回调函数获取心率值数据，数据格式为HeartRateResponse对象，包含heartRate字段（单位：次/分钟），默认回调频率为5秒/次。
+Subscribes to data changes of the heart rate sensor. If this API is called multiple times for the same application,the last call takes effect.
 
-> **说明：**
+> **NOTE：**
 > 
-> 除Lite Wearable外，从API version 8开始，建议使用
+> Except for lite wearables, You are advised to use
 > [HEART_RATE](@ohos.sensor:sensor.on(type: SensorType.SENSOR_TYPE_ID_HEART_RATE, callback: Callback&lt;HeartRateResponse&gt;, options?: Options))
-> 替代。
+> instead. since API Version 8.
 
 **Since:** 3
 
@@ -258,7 +363,23 @@ static subscribeHeartRate(options: SubscribeHeartRateOptions): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| options | [SubscribeHeartRateOptions](arkts-sensorservice-system-sensor-subscribeheartrateoptions-i.md) | Yes | 当心率传感器数据发生变化时调用。 |
+| options | [SubscribeHeartRateOptions](arkts-sensorservice-system-sensor-subscribeheartrateoptions-i.md) | Yes | Type of data to return. |
+
+## Examples
+
+```TypeScript
+import { Sensor, HeartRateResponse, SubscribeHeartRateOptions } from '@kit.SensorServiceKit';
+
+let subscribeHeartRateOptions: SubscribeHeartRateOptions = {
+  success: (ret: HeartRateResponse) => {
+    console.info('Succeeded in subscribing. Get heartRate value:' + ret.heartRate);
+  },
+  fail: (data: string, code: number) => {
+    console.error(`Failed to subscription. Code: ${code}, data: ${data}`);
+  },
+};
+Sensor.subscribeHeartRate(subscribeHeartRateOptions);
+```
 
 ## subscribeLight
 
@@ -266,13 +387,13 @@ static subscribeHeartRate(options: SubscribeHeartRateOptions): void
 static subscribeLight(options: SubscribeLightOptions): void
 ```
 
-订阅环境光传感器数据变化。通过回调函数获取环境光线强度数据，数据格式为LightResponse对象，包含intensity字段（单位：lux）。
+Subscribes to data changes of the ambient light sensor. If this API is called multiple times, the last call takes effect.
 
-> **说明：**
+> **NOTE：**
 > 
-> 除Lite Wearable外，从API version 8开始，建议使用
+> Except for lite wearables, You are advised to use
 > [AMBIENT_LIGHT](@ohos.sensor:sensor.on(type: SensorType.SENSOR_TYPE_ID_AMBIENT_LIGHT, callback: Callback&lt;LightResponse&gt;, options?: Options))
-> 替代。
+> since API Version 8.
 
 **Since:** 3
 
@@ -292,7 +413,23 @@ static subscribeLight(options: SubscribeLightOptions): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| options | [SubscribeLightOptions](arkts-sensorservice-system-sensor-subscribelightoptions-i.md) | Yes | 当环境光传感器数据发生变化时调用。 |
+| options | [SubscribeLightOptions](arkts-sensorservice-system-sensor-subscribelightoptions-i.md) | Yes | Type of data to return. |
+
+## Examples
+
+```TypeScript
+import { Sensor, LightResponse, SubscribeLightOptions } from '@kit.SensorServiceKit';
+
+let subscribeLightOptions: SubscribeLightOptions = {
+  success: (ret: LightResponse) => {
+    console.info('Succeeded in subscribing. Get data intensity:' + ret.intensity);
+  },
+  fail: (data: string, code: number) => {
+    console.error(`Failed to subscription. Code: ${code}, data: ${data}`);
+  },
+};
+Sensor.subscribeLight(subscribeLightOptions);
+```
 
 ## subscribeOnBodyState
 
@@ -300,13 +437,13 @@ static subscribeLight(options: SubscribeLightOptions): void
 static subscribeOnBodyState(options: SubscribeOnBodyStateOptions): void
 ```
 
-订阅设备佩戴状态变化。通过回调函数获取设备是否已佩戴的状态数据，数据格式为OnBodyStateResponse对象，包含value字段（boolean类型）。
+Subscribes to wearing status changes of a wearable device. If this API is called multiple times for the same application, the last call takes effect.
 
-> **说明：**
+> **NOTE：**
 > 
-> 除Lite Wearable外，从API version 8开始，建议使用
+> Except for lite wearables, You are advised to use
 > [WEAR_DETECTION](@ohos.sensor:sensor.on(type: SensorType.SENSOR_TYPE_ID_WEAR_DETECTION, callback: Callback&lt;WearDetectionResponse&gt;, options?: Options))
-> 替代。
+> instead. since API Version 8.
 
 **Since:** 3
 
@@ -326,7 +463,23 @@ static subscribeOnBodyState(options: SubscribeOnBodyStateOptions): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| options | [SubscribeOnBodyStateOptions](arkts-sensorservice-system-sensor-subscribeonbodystateoptions-i.md) | Yes | 当穿着状态改变时调用。 |
+| options | [SubscribeOnBodyStateOptions](arkts-sensorservice-system-sensor-subscribeonbodystateoptions-i.md) | Yes | Type of data to return. |
+
+## Examples
+
+```TypeScript
+import { Sensor, OnBodyStateResponse, SubscribeOnBodyStateOptions } from '@kit.SensorServiceKit';
+
+let subscribeOnBodyStateOptions: SubscribeOnBodyStateOptions = {
+  success: (ret: OnBodyStateResponse) => {
+    console.info('Succeeded in subscribing. Get on-body state value:' + ret.value);
+  },
+  fail: (data: string, code: number) => {
+    console.error(`Failed to subscription. Code: ${code}, data: ${data}`);
+  },
+};
+Sensor.subscribeOnBodyState(subscribeOnBodyStateOptions);
+```
 
 ## subscribeProximity
 
@@ -334,13 +487,13 @@ static subscribeOnBodyState(options: SubscribeOnBodyStateOptions): void
 static subscribeProximity(options: SubscribeProximityOptions): void
 ```
 
-订阅距离传感器数据变化。通过回调函数获取可见物体相对于设备显示屏的接近或远离状态数据，数据格式为ProximityResponse对象，包含distance字段。
+Subscribes to data changes of the proximity sensor. If this API is called multiple times for the same application,the last call takes effect.
 
-> **说明：**
+> **NOTE：**
 > 
-> 从 API version 3开始支持，从API version 8开始废弃。除Lite Wearable外，建议使用
+> Except for lite wearables, You are advised to use
 > [PROXIMITY](@ohos.sensor:sensor.on(type: SensorType.SENSOR_TYPE_ID_PROXIMITY, callback: Callback&lt;ProximityResponse&gt;, options?: Options))
-> 替代。
+> instead. since API Version 8.
 
 **Since:** 3
 
@@ -360,7 +513,23 @@ static subscribeProximity(options: SubscribeProximityOptions): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| options | [SubscribeProximityOptions](arkts-sensorservice-system-sensor-subscribeproximityoptions-i.md) | Yes | 用于设置距离传感器订阅的参数，包括回调函数。 |
+| options | [SubscribeProximityOptions](arkts-sensorservice-system-sensor-subscribeproximityoptions-i.md) | Yes | Type of data to return. |
+
+## Examples
+
+```TypeScript
+import { Sensor, ProximityResponse, SubscribeProximityOptions } from '@kit.SensorServiceKit';
+
+let subscribeProximityOptions: SubscribeProximityOptions = {
+  success: (ret: ProximityResponse) => {
+    console.info('Succeeded in subscribing. Get data distance:' + ret.distance);
+  },
+  fail: (data: string, code: number) => {
+    console.error(`Failed to subscription. Code: ${code}, data: ${data}`);
+  },
+};
+Sensor.subscribeProximity(subscribeProximityOptions);
+```
 
 ## subscribeStepCounter
 
@@ -368,13 +537,13 @@ static subscribeProximity(options: SubscribeProximityOptions): void
 static subscribeStepCounter(options: SubscribeStepCounterOptions): void
 ```
 
-订阅计步传感器数据变化。通过回调函数获取计步传感器重启后累计记录的步数数据，数据格式为StepCounterResponse对象，包含steps字段。
+Subscribes to data changes of the step counter sensor. If this API is called multiple times for the same application, the last call takes effect.
 
-> **说明：**
+> **NOTE：**
 > 
-> 除Lite Wearable外，从API version 8开始，建议使用
+> Except for lite wearables, You are advised to use
 > [PEDOMETER](@ohos.sensor:sensor.on(type: SensorType.SENSOR_TYPE_ID_PEDOMETER, callback: Callback&lt;PedometerResponse&gt;, options?: Options))
-> 替代。
+> instead. since API Version 8.
 
 **Since:** 3
 
@@ -396,7 +565,23 @@ static subscribeStepCounter(options: SubscribeStepCounterOptions): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| options | [SubscribeStepCounterOptions](arkts-sensorservice-system-sensor-subscribestepcounteroptions-i.md) | Yes | 当步进计数器传感器数据发生变化时调用。 |
+| options | [SubscribeStepCounterOptions](arkts-sensorservice-system-sensor-subscribestepcounteroptions-i.md) | Yes | Type of data to return. |
+
+## Examples
+
+```TypeScript
+import { Sensor, StepCounterResponse, SubscribeStepCounterOptions } from '@kit.SensorServiceKit';
+
+let subscribeStepCounterOptions: SubscribeStepCounterOptions = {
+  success: (ret: StepCounterResponse) => {
+    console.info('Succeeded in subscribing. Get step value:' + ret.steps);
+  },
+  fail: (data: string, code: number) => {
+    console.error(`Failed to subscription. Code: ${code}, data: ${data}`);
+  },
+};
+Sensor.subscribeStepCounter(subscribeStepCounterOptions);
+```
 
 ## unsubscribeAccelerometer
 
@@ -404,13 +589,13 @@ static subscribeStepCounter(options: SubscribeStepCounterOptions): void
 static unsubscribeAccelerometer(): void
 ```
 
-取消订阅加速度传感器数据。调用后，加速度传感器的回调函数将不再触发。
+Unsubscribes from data changes of the acceleration sensor.
 
-> **说明：**
+> **NOTE：**
 > 
-> 除Lite Wearable外，从API version 8开始，建议使用
+> Except for lite wearables, You are advised to use
 > [ACCELEROMETER](@ohos.sensor:sensor.off(type: SensorType.SENSOR_TYPE_ID_ACCELEROMETER, callback?: Callback&lt;AccelerometerResponse&gt;))
-> 替代。
+> instead. since API Version 8.
 
 **Since:** 3
 
@@ -428,19 +613,25 @@ static unsubscribeAccelerometer(): void
 
 **System capability:** SystemCapability.Sensors.Sensor.Lite
 
+## Examples
+
+```TypeScript
+Sensor.unsubscribeAccelerometer();
+```
+
 ## unsubscribeBarometer
 
 ```TypeScript
 static unsubscribeBarometer(): void
 ```
 
-取消订阅气压计传感器数据。调用后，气压计传感器的回调函数将不再触发。
+Unsubscribes from data changes of the barometer sensor.
 
-> **说明：**
+> **NOTE：**
 > 
-> 除Lite Wearable外，从API version 8开始，建议使用
+> Except for lite wearables, You are advised to use
 > [BAROMETER](@ohos.sensor:sensor.off(type: SensorType.SENSOR_TYPE_ID_BAROMETER, callback?: Callback&lt;BarometerResponse&gt;))
-> 替代。
+> instead. since API Version 8.
 
 **Since:** 3
 
@@ -456,19 +647,25 @@ static unsubscribeBarometer(): void
 
 **System capability:** SystemCapability.Sensors.Sensor.Lite
 
+## Examples
+
+```TypeScript
+Sensor.unsubscribeBarometer();
+```
+
 ## unsubscribeCompass
 
 ```TypeScript
 static unsubscribeCompass(): void
 ```
 
-取消订阅罗盘传感器数据。调用后，罗盘传感器的回调函数将不再触发。
+Unsubscribes from data changes of the compass sensor.
 
-> **说明：**
+> **NOTE：**
 > 
-> 除Lite Wearable外，从API version 8开始，建议使用
+> Except for lite wearables, You are advised to use
 > [ORIENTATION](@ohos.sensor:sensor.off(type: SensorType.SENSOR_TYPE_ID_ORIENTATION, callback?: Callback&lt;OrientationResponse&gt;))
-> 替代。
+> instead.
 
 **Since:** 3
 
@@ -484,19 +681,25 @@ static unsubscribeCompass(): void
 
 **System capability:** SystemCapability.Sensors.Sensor.Lite
 
+## Examples
+
+```TypeScript
+Sensor.unsubscribeCompass();
+```
+
 ## unsubscribeDeviceOrientation
 
 ```TypeScript
 static unsubscribeDeviceOrientation(): void
 ```
 
-取消订阅设备方向传感器数据。调用后，设备方向传感器的回调函数将不再触发。
+Unsubscribes from data changes of the device orientation sensor.
 
-> **说明：**
+> **NOTE：**
 > 
-> 除Lite Wearable外，从API version 8开始，建议使用
+> Except for lite wearables, You are advised to use
 > [ORIENTATION](@ohos.sensor:sensor.off(type: SensorType.SENSOR_TYPE_ID_ORIENTATION, callback?: Callback&lt;OrientationResponse&gt;))
-> 替代。
+> instead. since API Version 8.
 
 **Since:** 6
 
@@ -512,19 +715,25 @@ static unsubscribeDeviceOrientation(): void
 
 **System capability:** SystemCapability.Sensors.Sensor.Lite
 
+## Examples
+
+```TypeScript
+Sensor.unsubscribeDeviceOrientation();
+```
+
 ## unsubscribeGyroscope
 
 ```TypeScript
 static unsubscribeGyroscope(): void
 ```
 
-取消订阅陀螺仪传感器数据。调用后，陀螺仪传感器的回调函数将不再触发。
+Unsubscribes from data changes of the gyroscope sensor.
 
-> **说明：**
+> **NOTE：**
 > 
-> 除Lite Wearable外，从API version 8开始，建议使用
+> Except for lite wearables, You are advised to use
 > [GYROSCOPE](@ohos.sensor:sensor.off(type: SensorType.SENSOR_TYPE_ID_GYROSCOPE, callback?: Callback&lt;GyroscopeResponse&gt;))
-> 替代。
+> instead. since API Version 8.
 
 **Since:** 6
 
@@ -542,19 +751,25 @@ static unsubscribeGyroscope(): void
 
 **System capability:** SystemCapability.Sensors.Sensor.Lite
 
+## Examples
+
+```TypeScript
+Sensor.unsubscribeGyroscope();
+```
+
 ## unsubscribeHeartRate
 
 ```TypeScript
 static unsubscribeHeartRate(): void
 ```
 
-取消订阅心率传感器数据。调用后，心率传感器的回调函数将不再触发。
+Unsubscribes from data changes of the heart rate sensor.
 
-> **说明：**
+> **NOTE：**
 > 
-> 除Lite Wearable外，从API version 8开始，建议使用
+> Except for lite wearables, You are advised to use
 > [HEART_RATE](@ohos.sensor:sensor.off(type: SensorType.SENSOR_TYPE_ID_HEART_RATE, callback?: Callback&lt;HeartRateResponse&gt;))
-> 替代。
+> instead. since API Version 8.
 
 **Since:** 3
 
@@ -572,19 +787,25 @@ static unsubscribeHeartRate(): void
 
 **System capability:** SystemCapability.Sensors.Sensor.Lite
 
+## Examples
+
+```TypeScript
+Sensor.unsubscribeHeartRate();
+```
+
 ## unsubscribeLight
 
 ```TypeScript
 static unsubscribeLight(): void
 ```
 
-取消订阅环境光传感器数据。调用后，环境光传感器的回调函数将不再触发。
+Unsubscribes from data changes of the ambient light sensor.
 
-> **说明：**
+> **NOTE：**
 > 
-> 除Lite Wearable外，从API version 8开始，建议使用
+> Except for lite wearables, You are advised to use
 > [AMBIENT_LIGHT](@ohos.sensor:sensor.off(type: SensorType.SENSOR_TYPE_ID_AMBIENT_LIGHT, callback?: Callback&lt;LightResponse&gt;))
-> 替代。
+> instead. since API Version 8.
 
 **Since:** 3
 
@@ -600,19 +821,25 @@ static unsubscribeLight(): void
 
 **System capability:** SystemCapability.Sensors.Sensor.Lite
 
+## Examples
+
+```TypeScript
+Sensor.unsubscribeLight();
+```
+
 ## unsubscribeOnBodyState
 
 ```TypeScript
 static unsubscribeOnBodyState(): void
 ```
 
-取消订阅设备佩戴状态。调用后，佩戴状态的回调函数将不再触发。
+Unsubscribes from wearing status changes of a wearable device.
 
-> **说明：**
+> **NOTE：**
 > 
-> 除Lite Wearable外，从API version 8开始，建议使用
+> Except for lite wearables, You are advised to use
 > [WEAR_DETECTION](@ohos.sensor:sensor.off(type: SensorType.SENSOR_TYPE_ID_WEAR_DETECTION, callback?: Callback&lt;WearDetectionResponse&gt;))
-> 替代。
+> instead. since API Version 8.
 
 **Since:** 3
 
@@ -628,19 +855,25 @@ static unsubscribeOnBodyState(): void
 
 **System capability:** SystemCapability.Sensors.Sensor.Lite
 
+## Examples
+
+```TypeScript
+Sensor.unsubscribeOnBodyState();
+```
+
 ## unsubscribeProximity
 
 ```TypeScript
 static unsubscribeProximity(): void
 ```
 
-取消订阅距离传感器数据。调用后，距离传感器的回调函数将不再触发。
+Unsubscribes from data changes of the proximity sensor.
 
-> **说明：**
+> **NOTE：**
 > 
-> 除Lite Wearable外，从API version 8开始，建议使用
+> Except for lite wearables, You are advised to use
 > [PROXIMITY](@ohos.sensor:sensor.off(type: SensorType.SENSOR_TYPE_ID_PROXIMITY, callback?: Callback&lt;ProximityResponse&gt;))
-> 替代。
+> instead. since API Version 8.
 
 **Since:** 3
 
@@ -656,19 +889,25 @@ static unsubscribeProximity(): void
 
 **System capability:** SystemCapability.Sensors.Sensor.Lite
 
+## Examples
+
+```TypeScript
+Sensor.unsubscribeProximity();
+```
+
 ## unsubscribeStepCounter
 
 ```TypeScript
 static unsubscribeStepCounter(): void
 ```
 
-取消订阅计步传感器数据。调用后，计步传感器的回调函数将不再触发。
+Unsubscribes from data changes of the step counter sensor.
 
-> **说明：**
+> **NOTE：**
 > 
-> 除Lite Wearable外，从API version 8开始，建议使用
+> Except for lite wearables, You are advised to use
 > [PEDOMETER](@ohos.sensor:sensor.off(type: SensorType.SENSOR_TYPE_ID_PEDOMETER, callback?: Callback&lt;PedometerResponse&gt;))
-> 替代。
+> instead. since API Version 8.
 
 **Since:** 3
 
@@ -685,4 +924,10 @@ static unsubscribeStepCounter(): void
 <!--Device-Sensor-static unsubscribeStepCounter(): void--><!--Device-Sensor-static unsubscribeStepCounter(): void-End-->
 
 **System capability:** SystemCapability.Sensors.Sensor.Lite
+
+## Examples
+
+```TypeScript
+Sensor.unsubscribeStepCounter();
+```
 

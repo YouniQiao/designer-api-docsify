@@ -1,6 +1,6 @@
 # ServiceDieData
 
-DeviceManager 服务进程退出信息。
+ServiceDie data.
 
 **Since:** 23
 

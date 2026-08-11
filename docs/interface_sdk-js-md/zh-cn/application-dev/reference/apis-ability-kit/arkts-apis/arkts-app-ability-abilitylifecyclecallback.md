@@ -7,12 +7,6 @@
  > 本模块接口只能监听进程内UIAbility生命周期变化。
 
 
-## 导入模块
-
-```TypeScript
-import { AbilityLifecycleCallback } from 'kits/@kit.AbilityKit';
-```
-
 ## 汇总
 
 ### 类

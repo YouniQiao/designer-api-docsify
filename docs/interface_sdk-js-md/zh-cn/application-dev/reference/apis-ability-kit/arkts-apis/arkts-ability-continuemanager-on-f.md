@@ -1,11 +1,5 @@
 # on
 
-## 导入模块
-
-```TypeScript
-import { continueManager } from 'kits/@kit.AbilityKit';
-```
-
 ## on('prepareContinue')
 
 ```TypeScript
@@ -36,7 +30,7 @@ function on(type: 'prepareContinue', context: Context, callback: AsyncCallback<C
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 16300501 | the system ability work abnormally. |
+| [16300501](../errorcode-DistributedSchedule.md#16300501-系统服务工作异常) | the system ability work abnormally. |
 
 ## 示例
 
@@ -48,7 +42,7 @@ const TAG: string = '[MigrationAbility]';
 const DOMAIN_NUMBER: number = 0xFF00;
 
 export default class MigrationAbility extends UIAbility {
-    
+
     onCreate(want: Want, launchParam: AbilityConstant.LaunchParam): void {
         hilog.info(DOMAIN_NUMBER, TAG, '%{public}s', 'Ability onCreate');
 
@@ -58,13 +52,13 @@ export default class MigrationAbility extends UIAbility {
             try {
               continueManager.on('prepareContinue', this.context, (err, continueResultInfo) => {
                 if (err.code != 0) {
-                  hilog.error(DOMAIN_NUMBER, TAG, 'register failed, cause: %{public}s', JSON.stringify(err));
+                  console.error('register failed, cause: ' + JSON.stringify(err));
                   return;
                 }
-                hilog.info(DOMAIN_NUMBER, TAG, 'register finished, %{public}s', JSON.stringify(continueResultInfo));
+                console.info('register finished, ' + JSON.stringify(continueResultInfo));
               });
             } catch (e) {
-              hilog.error(DOMAIN_NUMBER, TAG, 'register failed, cause: %{public}s', JSON.stringify(e));
+              console.error('register failed, cause: ' + JSON.stringify(e));
             }
             // 若应用迁移数据较大，可在此处添加加载页面(页面中显示loading等)
             // 可处理应用自定义跳转、时序等问题

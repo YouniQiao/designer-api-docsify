@@ -1,10 +1,6 @@
 # RotationGesture
 
-用于触发旋转手势，最少需要2指，最多5指，最小改变度数为1度。该手势不支持通过触控板双指旋转操作触发。
-
-> **说明：**
-> 
-> - 从API version 7开始支持。后续版本如有新增内容，则采用上角标单独标记该内容的起始版本。
+Defines RotationGesture.
 
 **Inheritance/Implementation:** RotationGesture extends [Gesture](arkts-arkui-gesture-gesture-c.md)
 
@@ -22,7 +18,7 @@
 static $_instantiate(factory: () => RotationGesture, value?: RotationGestureHandlerOptions): RotationGesture
 ```
 
-设置旋转手势事件。继承自[Gesture](arkts-arkui-gesture-gesture-c.md)。
+Set the value.
 
 **Since:** 23
 
@@ -39,7 +35,7 @@ static $_instantiate(factory: () => RotationGesture, value?: RotationGestureHand
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | factory | () =&gt; RotationGesture | Yes |  |
-| value | [RotationGestureHandlerOptions](arkts-arkui-gesture-rotationgesturehandleroptions-i.md) | No | 旋转手势处理器配置参数。 |
+| value | [RotationGestureHandlerOptions](arkts-arkui-gesture-rotationgesturehandleroptions-i.md) | No |  |
 
 **Return value:**
 
@@ -53,7 +49,7 @@ static $_instantiate(factory: () => RotationGesture, value?: RotationGestureHand
 onActionCancel(event: Callback<GestureEvent>): this
 ```
 
-Rotation手势识别成功，接收到触摸取消事件触发的回调。与[onActionCancel](arkts-arkui-gesture-rotationgesture-c.md#onactioncancel)相比，该回调返回手势事件信息。
+The Rotation gesture is successfully recognized and a callback is triggered when the touch cancel event is received.
 
 **Since:** 23
 
@@ -69,7 +65,7 @@ Rotation手势识别成功，接收到触摸取消事件触发的回调。与[on
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| event | [Callback](../arkts-components/arkts-arkui-callback-i.md)&lt;GestureEvent&gt; | Yes | 手势事件回调函数。 |
+| event | [Callback](../arkts-components/arkts-arkui-callback-i.md)&lt;GestureEvent&gt; | Yes |  |
 
 **Return value:**
 
@@ -83,7 +79,7 @@ Rotation手势识别成功，接收到触摸取消事件触发的回调。与[on
 onActionEnd(event: Callback<GestureEvent>): this
 ```
 
-Rotation手势识别成功，当抬起最后一根满足手势触发条件的手指后触发的回调。
+The Rotation gesture is successfully recognized. When the finger is lifted, the callback is triggered.
 
 **Since:** 23
 
@@ -99,7 +95,7 @@ Rotation手势识别成功，当抬起最后一根满足手势触发条件的手
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| event | [Callback](../arkts-components/arkts-arkui-callback-i.md)&lt;GestureEvent&gt; | Yes | 手势事件回调函数。 |
+| event | [Callback](../arkts-components/arkts-arkui-callback-i.md)&lt;GestureEvent&gt; | Yes |  |
 
 **Return value:**
 
@@ -113,7 +109,7 @@ Rotation手势识别成功，当抬起最后一根满足手势触发条件的手
 onActionStart(event: Callback<GestureEvent>): this
 ```
 
-Rotation手势识别成功后触发的回调。
+Rotation gesture recognition success callback.
 
 **Since:** 23
 
@@ -129,7 +125,7 @@ Rotation手势识别成功后触发的回调。
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| event | [Callback](../arkts-components/arkts-arkui-callback-i.md)&lt;GestureEvent&gt; | Yes | 手势事件回调函数。 |
+| event | [Callback](../arkts-components/arkts-arkui-callback-i.md)&lt;GestureEvent&gt; | Yes |  |
 
 **Return value:**
 
@@ -143,7 +139,7 @@ Rotation手势识别成功后触发的回调。
 onActionUpdate(event: Callback<GestureEvent>): this
 ```
 
-Rotation手势移动过程中触发的回调。
+Callback when the Rotation gesture is moving.
 
 **Since:** 23
 
@@ -159,7 +155,7 @@ Rotation手势移动过程中触发的回调。
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| event | [Callback](../arkts-components/arkts-arkui-callback-i.md)&lt;GestureEvent&gt; | Yes | 手势事件回调函数。 |
+| event | [Callback](../arkts-components/arkts-arkui-callback-i.md)&lt;GestureEvent&gt; | Yes |  |
 
 **Return value:**
 

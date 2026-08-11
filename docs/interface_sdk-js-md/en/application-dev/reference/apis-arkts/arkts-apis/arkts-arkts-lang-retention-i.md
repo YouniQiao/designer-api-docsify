@@ -1,6 +1,6 @@
 # Retention
 
-系统提供的API注解能力，可用于指定自定义注解的生命周期。此注解只能标注在其他注解声明上。在自定义注解上标注Retention注解后，根据policy的不同取值，编译器会对自定义注解执行不同的保留策略。
+An annotation used to annotate the lifecycle of other annotations.
 
 **Since:** 24
 
@@ -22,7 +22,7 @@ import { Retention, RetentionPolicy } from 'kits/@kit.ArkTS';
 policy: RetentionPolicy
 ```
 
-注解的保留策略。
+Indicates the lifecycle of annotated annotations.
 
 **Type:** [RetentionPolicy](arkts-arkts-lang-retentionpolicy-e.md)
 

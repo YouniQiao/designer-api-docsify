@@ -1,6 +1,7 @@
 # ShowMode
 
-表示[EmbeddableUIAbility](arkts-ability-app-ability-embeddableuiability-embeddableuiability-c.md)被拉起时的显示模式。
+Enumerates the display modes of an  
+[EmbeddableUIAbility](arkts-ability-app-ability-embeddableuiability-embeddableuiability-c.md) when it is launched.
 
 **Since:** 12
 
@@ -16,7 +17,7 @@
 WINDOW = 0
 ```
 
-表示独立窗口拉起模式。
+An independent window is used to show the ability startup.
 
 **Since:** 12
 
@@ -34,7 +35,7 @@ WINDOW = 0
 EMBEDDED_FULL = 1
 ```
 
-表示嵌入式全屏拉起模式。
+An embedded full-screen is used to show the ability startup.
 
 **Since:** 12
 
@@ -52,7 +53,7 @@ EMBEDDED_FULL = 1
 EMBEDDED_HALF = 2
 ```
 
-表示嵌入式半屏拉起模式。
+An embedded half-screen is used to show the ability startup.
 
 **Since:** 23
 

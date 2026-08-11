@@ -1,6 +1,6 @@
 # AsyncLockOptions
 
-表示锁操作选项的类。
+Lock operation's options
 
 **Since:** 12
 
@@ -22,7 +22,7 @@ import { ArkTSUtils } from 'kits/@kit.ArkTS';
 constructor()
 ```
 
-默认构造函数。创建一个所有属性均具有默认值的异步锁配置项实例。
+Default constructor.
 
 **Since:** 12
 
@@ -40,7 +40,7 @@ constructor()
 isAvailable: boolean
 ```
 
-当前锁是否可用。取值为true，则只有在尚未持有锁定请求时才会授予该锁定请求；为false则表示将等待当前锁被释放。默认为 false。
+If the value is true and lockAsync cannot acquire the lock immediately, the operation is canceled.
 
 **Type:** boolean
 
@@ -60,7 +60,7 @@ isAvailable: boolean
 signal: AbortSignal<T> | null
 ```
 
-用于终止异步操作的对象。当signal.aborted为true时，锁请求将被丢弃；当signal.aborted为false时，请求会继续等待获取锁；当signal为null时，请求正常排队运行。默认为 null。
+The object used to abort the async operation. If signal.aborted is true, the callback will not be called.
 
 **Type:** [AbortSignal](arkts-arkts-locks-abortsignal-c.md)&lt;T&gt; \| null
 
@@ -80,7 +80,7 @@ signal: AbortSignal<T> | null
 timeout: number
 ```
 
-锁的超时时间，单位为毫秒。若该值大于零，且操作运行时间超过该时间，lockAsync将返回被拒绝的Promise。默认为 0。
+Lock operation timeout in milliseconds. If it is greater than zero, lockAsync will reject the resulting promise when the timeout is exceeded.
 
 **Type:** number
 

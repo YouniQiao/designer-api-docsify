@@ -1,6 +1,6 @@
 # Geofence (System API)
 
-地理围栏的配置信息。
+Defines the configuration of a geofence.
 
 **Since:** 23
 
@@ -18,7 +18,7 @@
 coordinateSystemType:CoordinateSystemType
 ```
 
-中心点坐标系类型。
+Coordinate system type of the center point.
 
 **Type:** [CoordinateSystemType](../../apis-location-kit/arkts-apis/arkts-location-geolocationmanager-coordinatesystemtype-e.md)
 
@@ -38,7 +38,7 @@ coordinateSystemType:CoordinateSystemType
 delayTime?:int
 ```
 
-围栏延迟时间，单位：秒，进入围栏后触发围栏的延迟时间，取值范围：[0, 300]。默认值为0。
+Delay time of the geofence, in seconds. That is, the delay time before the geofence is triggered after entering the geofence. Value range: [0, 300]. Default value: **0**.
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
@@ -58,7 +58,7 @@ delayTime?:int
 latitude:double
 ```
 
-地理围栏中心点纬度，取值范围：[-90, 90]。
+Latitude of the geofence center. The value ranges from -90 to 90.
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：double
 
@@ -78,7 +78,7 @@ latitude:double
 longitude:double
 ```
 
-地理围栏中心点经度，取值范围：[-180, 180]。
+Longitude of the geofence center. The value ranges from -180 to 180.
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：double
 
@@ -98,7 +98,7 @@ longitude:double
 monitorEvent:MonitorEvent
 ```
 
-围栏触发条件类型。
+Event type for monitoring a geofence.
 
 **Type:** [MonitorEvent](arkts-notification-notificationmanager-monitorevent-t-sys.md)
 
@@ -118,7 +118,7 @@ monitorEvent:MonitorEvent
 radius:double
 ```
 
-围栏半径，单位：米，取值范围：[200, 2000]。
+Radius of the geofence, in meters. Value range: [200, 2000].
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：double
 

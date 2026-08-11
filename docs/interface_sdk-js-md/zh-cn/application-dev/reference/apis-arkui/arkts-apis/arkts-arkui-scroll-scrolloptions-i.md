@@ -18,7 +18,7 @@ animation?: ScrollAnimationOptions | boolean
 
 动画配置。匿名对象规范化。&lt;p&gt;&lt;strong&gt;说明&lt;/strong&gt;。&lt;br&gt;当前List、Scroll、Grid、WaterFlow均支持boolean类型和ICurve曲线。&lt;/p&gt;
 
-**类型：** [ScrollAnimationOptions](arkts-arkui-scroll-scrollanimationoptions-i.md) \| boolean
+**类型：** [ScrollAnimationOptions](../arkts-components/arkts-arkui-scrollanimationoptions-i.md) \| boolean
 
 **默认值：** ScrollAnimationOptions: { duration: 1000, curve: Curve.Ease, canOverScroll: false }
 

@@ -12,5 +12,5 @@ import { ChildProcessOptions } from 'kits/@kit.AbilityKit';
 
 | Name | Description |
 | --- | --- |
-| [ChildProcessOptions](arkts-ability-app-ability-childprocessoptions-childprocessoptions-i.md) | 子进程的启动配置选项。通过[childProcessManager](arkts-app-ability-childprocessmanager.md)启动子进程时，可以通过ChildProcessOptions配置子进程启动选项。 |
+| [ChildProcessOptions](arkts-ability-app-ability-childprocessoptions-childprocessoptions-i.md) | The module describes the startup configuration of a child process. When starting a child process through  [childProcessManager](arkts-app-ability-childprocessmanager.md), you can configure the startup configuration of the child process through **ChildProcessOptions**. |
 

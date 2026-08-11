@@ -1,6 +1,6 @@
 # UsedScene
 
-描述权限使用的场景和时机。
+Describes the use scenario and timing of the permission,helping developers request and use permissions properly.
 
 **Since:** 9
 
@@ -16,7 +16,7 @@
 abilities: Array<string>
 ```
 
-使用到该权限的Ability集合。
+Abilities that use the permission.
 
 **Type:** Array&lt;string&gt;
 
@@ -36,7 +36,7 @@ abilities: Array<string>
 when: string
 ```
 
-使用该权限的时机。支持的取值有inuse（使用时）、always（始终）。
+Time when the permission is used. The value can be **inuse** or **always**.
 
 **Type:** string
 

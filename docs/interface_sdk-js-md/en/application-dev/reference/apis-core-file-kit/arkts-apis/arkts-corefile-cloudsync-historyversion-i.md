@@ -1,7 +1,8 @@
 # HistoryVersion
 
-端云文件历史版本信息，调用端云文件版本管理类[FileVersion](arkts-corefile-cloudsync-fileversion-c.md)的  
-[gethistoryversionlist](arkts-corefile-cloudsync-fileversion-c.md#gethistoryversionlist)方法时，历史版本列表中的属性。
+Represents the historical version information of the device-cloud file when the  
+[gethistoryversionlist](arkts-corefile-cloudsync-fileversion-c.md#gethistoryversionlist) method of the  
+[FileVersion](arkts-corefile-cloudsync-fileversion-c.md) class is called.
 
 **Since:** 20
 
@@ -23,11 +24,11 @@ import { cloudSync } from 'kits/@kit.CoreFileKit';
 autoResolved: boolean
 ```
 
-当前版本是否为自动解决冲突的版本。
+Whether the current version is the one where conflicts were automatically resolved.
 
-应用设置手动解冲突时，默认返回false，无意义。
+When the application is set to manually resolve conflicts, **false** is returned by default, which is meaningless.
 
-应用设置自动解冲突时，端侧会自动解冲突，true表示当前版本存在冲突，端云服务已自动解决冲突，false表示无冲突，未自动解冲突。
+When the application is set to automatically resolve conflicts, the device side automatically resolves conflicts.The value **true** means conflicts exist in the current version and have been automatically resolved by the device-cloud service; the value **false** means no conflict exists and conflicts are not automatically resolved.
 
 **Type:** boolean
 
@@ -45,7 +46,7 @@ autoResolved: boolean
 editedTime: long
 ```
 
-文件内容修改的时间戳，单位：ms。
+File content modification timestamp, in milliseconds.
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：long
 
@@ -63,7 +64,7 @@ editedTime: long
 fileSize: long
 ```
 
-文件大小，单位：Byte。
+File size in bytes.
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：long
 
@@ -81,7 +82,7 @@ fileSize: long
 originalFileName: string
 ```
 
-当前版本对应的文件名。
+File name of the current version.
 
 **Type:** string
 
@@ -99,7 +100,7 @@ originalFileName: string
 sha256: string
 ```
 
-当前版本对应文件内容的哈希值。
+Hash value of the file content of the current version.
 
 **Type:** string
 
@@ -117,7 +118,7 @@ sha256: string
 versionId: string
 ```
 
-文件版本号。
+File version.
 
 **Type:** string
 

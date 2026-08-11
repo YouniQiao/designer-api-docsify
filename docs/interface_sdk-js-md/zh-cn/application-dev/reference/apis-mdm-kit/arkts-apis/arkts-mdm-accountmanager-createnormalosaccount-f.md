@@ -1,11 +1,5 @@
 # createNormalOsAccount
 
-## 导入模块
-
-```TypeScript
-import { accountManager } from 'kits/@kit.MDMKit';
-```
-
 ## createNormalOsAccount
 
 ```TypeScript
@@ -49,14 +43,14 @@ function createNormalOsAccount(admin: Want, name: string): Promise<osAccount.OsA
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 9200012 | Parameter verification failed. |
-| 801 | Capability not supported. Failed to call the API due to limited device capabilities. |
-| 9201003 | Failed to add an OS account. |
-| 201 | Permission verification failed. The application does not have the permission required to call the API. |
-| 9201040 | The number of accounts reaches the upper limit. |
-| 204 | Access denied due to user access control policy. Possible causes: 1. The operation is restricted by the OS-account constraint. 2. The required privilege for the operation has not been granted. |
-| 9200001 | The application is not an administrator application of the device. |
-| 9200002 | The administrator application does not have permission to manage the device. |
+| [9200012](../errorcode-enterpriseDeviceManager.md#9200012-参数校验失败) | Parameter verification failed. |
+| [801](../../errorcode-universal.md#801-该设备不支持此api) | Capability not supported. Failed to call the API due to limited device capabilities. |
+| [9201003](../errorcode-enterpriseDeviceManager.md#9201003-创建账号失败) | Failed to add an OS account. |
+| [201](../../errorcode-universal.md#201-权限校验失败) | Permission verification failed. The application does not have the permission required to call the API. |
+| [9201040](../errorcode-enterpriseDeviceManager.md#9201040-系统账号数量已达到最大限制) | The number of accounts reaches the upper limit. |
+| [204](../../errorcode-universal.md#204-用户访问控制策略拒绝此访问) | Access denied due to user access control policy. Possible causes: 1. The operation is restricted by the OS-account constraint. 2. The required privilege for the operation has not been granted. |
+| [9200001](../errorcode-enterpriseDeviceManager.md#9200001-应用没有激活成设备管理器) | The application is not an administrator application of the device. |
+| [9200002](../errorcode-enterpriseDeviceManager.md#9200002-设备管理器权限不够) | The administrator application does not have permission to manage the device. |
 
 ## 示例
 

@@ -7,7 +7,7 @@ export function createToggleNode(
     context: UIContext, options?: ToggleOptions, frameNodeOptions?: FrameNodeOptions): Toggle
 ```
 
-创建 Toggle 类型的 FrameNode。
+Create a FrameNode of Toggle type with Toggle options and FrameNode options.
 
 **Since:** 23
 
@@ -23,9 +23,9 @@ export function createToggleNode(
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| context | [UIContext](arkts-arkui-arkui-uicontext-uicontext-c.md) | Yes | 用于创建 FrameNode 的 UI 上下文。 |
-| options | [ToggleOptions](../arkts-components/arkts-arkui-toggleoptions-i.md) | No | Toggle 组件选项。 |
-| frameNodeOptions | [FrameNodeOptions](arkts-arkui-framenode-framenodeoptions-i.md) | No | FrameNode创建配置选项。【since24】。 |
+| context | [UIContext](arkts-arkui-arkui-uicontext-uicontext-c.md) | Yes | uiContext used to create the FrameNode. |
+| options | [ToggleOptions](../arkts-components/arkts-arkui-toggleoptions-i.md) | No | Toggle component options |
+| frameNodeOptions | [FrameNodeOptions](arkts-arkui-framenode-framenodeoptions-i.md) | No | Options for configuring FrameNode creation.<br>**Since:** 26.0.0 |
 
 **Return value:**
 

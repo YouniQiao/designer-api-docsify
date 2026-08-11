@@ -1,10 +1,13 @@
 # @ohos.app.ability.AbilityLifecycleCallback
 
-[UIAbility](arkts-app-ability-uiability.md)从创建到销毁过程其生命周期是动态变化的。AbilityLifecycleCallback模块提供监听
- [UIAbility](arkts-app-ability-uiability.md)生命周期变化的能力，可用于统计每个UIAbility的运行时长、执行与UIAbility业务逻辑解耦的数据加载等场景。
- > **说明**
+The lifecycle of a [UIAbility](arkts-app-ability-uiability.md) dynamically changes from creation to
+ destruction.
+ The AbilityLifecycleCallback module provides the capability to listen for these lifecycle changes, which can be used
+ for scenarios such as tracking the runtime duration of each UIAbility and performing data loading decoupled from the
+ service logic of UIAbility.
+ > **NOTE**
  >
- > 本模块接口只能监听进程内UIAbility生命周期变化。
+ > The APIs provided by this module can listen for lifecycle changes of the UIAbility within the same process.
 
 
 ## Modules to Import
@@ -19,23 +22,23 @@ import { AbilityLifecycleCallback } from 'kits/@kit.AbilityKit';
 
 | Name | Description |
 | --- | --- |
-| [AbilityLifecycleCallback](arkts-ability-app-ability-abilitylifecyclecallback-abilitylifecyclecallback-c.md) | [UIAbility](arkts-app-ability-uiability.md)从创建到销毁过程其生命周期是动态变化的。AbilityLifecycleCallback模块提供监听[UIAbility](arkts-app-ability-uiability.md)生命周期变化的能力，可用于统计每个UIAbility的运行时长、执行与UIAbility业务逻辑解耦的数据加载等场景。 |
+| [AbilityLifecycleCallback](arkts-ability-app-ability-abilitylifecyclecallback-abilitylifecyclecallback-c.md) | The lifecycle of a [UIAbility](arkts-app-ability-uiability.md) dynamically changes from creation to destruction.The AbilityLifecycleCallback module provides the capability to listen for these lifecycle changes, which can be used for scenarios such as tracking the runtime duration of each UIAbility and performing data loading decoupled from the service logic of UIAbility. |
 
 ### Types
 
 | Name | Description |
 | --- | --- |
-| [OnAbilitySaveStateFn](arkts-ability-onabilitysavestatefn-t.md) | 注册监听应用上下文的生命周期后，在UIAbility的onSaveState触发后回调。 |
-| [OnAbilityWillBackgroundFn](arkts-ability-onabilitywillbackgroundfn-t.md) | 注册监听应用上下文的生命周期后，在UIAbility的onBackground触发前回调。 |
-| [OnAbilityWillContinueFn](arkts-ability-onabilitywillcontinuefn-t.md) | 注册监听应用上下文的生命周期后，在Ability迁移前触发回调。 |
-| [OnAbilityWillCreateFn](arkts-ability-onabilitywillcreatefn-t.md) | 注册监听应用上下文的生命周期后，在UIAbility的onCreate触发前回调。 |
-| [OnAbilityWillDestroyFn](arkts-ability-onabilitywilldestroyfn-t.md) | 注册监听应用上下文的生命周期后，在UIAbility的onDestroy触发前回调。 |
-| [OnAbilityWillForegroundFn](arkts-ability-onabilitywillforegroundfn-t.md) | 注册监听应用上下文的生命周期后，在UIAbility的onForeground触发前回调。 |
-| [OnAbilityWillSaveStateFn](arkts-ability-onabilitywillsavestatefn-t.md) | 注册监听应用上下文的生命周期后，在UIAbility的onSaveState触发前回调。 |
-| [OnNewWantFn](arkts-ability-onnewwantfn-t.md) | 注册监听应用上下文的生命周期后，在UIAbility的onNewWant触发后回调。 |
-| [OnWillNewWantFn](arkts-ability-onwillnewwantfn-t.md) | 注册监听应用上下文的生命周期后，在UIAbility的onNewWant触发前回调。 |
-| [OnWindowStageRestoreFn](arkts-ability-onwindowstagerestorefn-t.md) | 注册监听应用上下文的生命周期后，在UIAbility的onWindowStageRestore触发后回调。 |
-| [OnWindowStageWillCreateFn](arkts-ability-onwindowstagewillcreatefn-t.md) | 注册监听应用上下文的生命周期后，在UIAbility的onWindowStageCreate触发前回调。 |
-| [OnWindowStageWillDestroyFn](arkts-ability-onwindowstagewilldestroyfn-t.md) | 注册监听应用上下文的生命周期后，在UIAbility的onWindowStageDestroy触发前回调。 |
-| [OnWindowStageWillRestoreFn](arkts-ability-onwindowstagewillrestorefn-t.md) | 注册监听应用上下文的生命周期后，在UIAbility的onWindowStageRestore触发前回调。 |
+| [OnAbilitySaveStateFn](arkts-ability-onabilitysavestatefn-t.md) | Defines a onAbilitySaveState function. |
+| [OnAbilityWillBackgroundFn](arkts-ability-onabilitywillbackgroundfn-t.md) | Defines a onAbilityWillBackground function. |
+| [OnAbilityWillContinueFn](arkts-ability-onabilitywillcontinuefn-t.md) | Defines a onAbilityWillContinue function. |
+| [OnAbilityWillCreateFn](arkts-ability-onabilitywillcreatefn-t.md) | Defines a OnAbilityWillCreate function. |
+| [OnAbilityWillDestroyFn](arkts-ability-onabilitywilldestroyfn-t.md) | Defines a onAbilityWillDestroy function. |
+| [OnAbilityWillForegroundFn](arkts-ability-onabilitywillforegroundfn-t.md) | Defines a onAbilityWillForeground function. |
+| [OnAbilityWillSaveStateFn](arkts-ability-onabilitywillsavestatefn-t.md) | Defines a onAbilityWillSaveState function. |
+| [OnNewWantFn](arkts-ability-onnewwantfn-t.md) | Defines a onNewWant function. |
+| [OnWillNewWantFn](arkts-ability-onwillnewwantfn-t.md) | Defines a onWillNewWant function. |
+| [OnWindowStageRestoreFn](arkts-ability-onwindowstagerestorefn-t.md) | Defines a onWindowStageRestore function. |
+| [OnWindowStageWillCreateFn](arkts-ability-onwindowstagewillcreatefn-t.md) | Defines a onWindowStageWillCreate function. |
+| [OnWindowStageWillDestroyFn](arkts-ability-onwindowstagewilldestroyfn-t.md) | Defines a onWindowStageWillDestroy function. |
+| [OnWindowStageWillRestoreFn](arkts-ability-onwindowstagewillrestorefn-t.md) | Defines a onWindowStageWillRestore function. |
 

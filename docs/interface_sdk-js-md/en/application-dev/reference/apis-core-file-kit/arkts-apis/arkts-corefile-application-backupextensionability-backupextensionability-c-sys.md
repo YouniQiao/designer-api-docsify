@@ -1,6 +1,6 @@
 # BackupExtensionAbility
 
-备份恢复扩展能力。应用可通过该类实现自定义备份、恢复、进度上报和安全退出逻辑。
+Class to be override for backup extension ability.
 
 **Since:** 10
 
@@ -22,7 +22,7 @@ import { BundleVersion } from 'kits/@kit.CoreFileKit';
 getBackupCompatibilityInfo(extInfo: string) : Promise<string>
 ```
 
-在应用备份阶段，调用方获取应用自定义兼容性信息时执行，由应用实现返回。
+Callback to be called when getting application backup compatibilityInfo.Developer could override this method to provide the backup compatibilityInfo.
 
 **Since:** 20
 
@@ -40,13 +40,13 @@ getBackupCompatibilityInfo(extInfo: string) : Promise<string>
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| extInfo | string | Yes | 传递给应用的额外信息，由应用自行处理。 |
+| extInfo | string | Yes | Information about the capabilities of the peer. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;string&gt; | Promise对象，返回备份过程中应用自定义的兼容性信息。 |
+| Promise&lt;string&gt; | Return backup compatibilityInfo, support promise. |
 
 ## getBackupInfo
 
@@ -54,7 +54,7 @@ getBackupCompatibilityInfo(extInfo: string) : Promise<string>
 getBackupInfo(): string
 ```
 
-在调用方查询应用数据时执行，由应用返回自定义备份信息。
+Callback to be called when getting application backupInfo.Developer could override this method to provide the backupInfo.
 
 **Since:** 12
 
@@ -72,7 +72,7 @@ getBackupInfo(): string
 
 | Type | Description |
 | --- | --- |
-| string | 应用自定义的备份信息，具体格式和字段由应用自行定义。 |
+| string | Return the backup application's info. |
 
 ## getRestoreCompatibilityInfo
 
@@ -80,7 +80,7 @@ getBackupInfo(): string
 getRestoreCompatibilityInfo(extInfo: string) : Promise<string>
 ```
 
-在应用恢复阶段，调用方获取应用自定义兼容性信息时执行，由应用实现返回。
+Callback to be called when getting application restore compatibilityInfo.Developer could override this method to provide the restore compatibilityInfo.
 
 **Since:** 20
 
@@ -98,11 +98,11 @@ getRestoreCompatibilityInfo(extInfo: string) : Promise<string>
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| extInfo | string | Yes | 传递给应用的额外信息，由应用自行处理。 |
+| extInfo | string | Yes | Information about the capabilities of the peer. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;string&gt; | Promise对象，返回恢复过程中应用自定义的兼容性信息。 |
+| Promise&lt;string&gt; | Return restore compatibilityInfo, support promise. |
 

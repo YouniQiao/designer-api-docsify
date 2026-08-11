@@ -2,7 +2,7 @@
 
 TypedArray继承Int8Array的特性与方法。
 
-**继承/实现关系：** TypedArray extends [Int8Array](../../apis-default/arkts-apis/arkts-lib-es5-int8array-i.md/arkts-lib-es5-int8array-i.md)
+**继承/实现关系：** TypedArray extends [Int8Array](arkts-arkts-collections-int8array-c.md)
 
 **起始版本：** 9
 
@@ -13,10 +13,4 @@ TypedArray继承Int8Array的特性与方法。
 <!--Device-buffer-interface TypedArray extends Int8Array--><!--Device-buffer-interface TypedArray extends Int8Array-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
-
-## 导入模块
-
-```TypeScript
-import { buffer } from 'kits/@kit.ArkTS';
-```
 

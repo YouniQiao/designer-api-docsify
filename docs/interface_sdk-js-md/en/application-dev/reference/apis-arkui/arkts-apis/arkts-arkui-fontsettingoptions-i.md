@@ -1,6 +1,6 @@
 # FontSettingOptions
 
-字体配置项。
+Defines font setting options.
 
 **Since:** 12
 
@@ -16,14 +16,16 @@
 enableVariableFontWeight?: boolean
 ```
 
-是否启用可变字重调节。字体配置项作为  
-[fontWeight](arkts-arkui-text-textattribute-i.md#fontweight)接口的入参，fontWeight接口中weight取值为[100, 900]内非整百数值时，enableVariableFontWeight用于设置weight的值是否生效。
+Whether to enable variable font weight adjustment. This parameter serves as the input for the  
+[fontWeight](arkts-arkui-text-textattribute-i.md#fontweight)API. When the **weight** value in **fontWeight** is a non-hundred value within the [100, 900] range,  
+**enableVariableFontWeight** controls whether this **weight** value is applied.
 
-默认值：false 
+Default value: **false**
 
-true：启用可变字重调节。此时如果weight取值为[100, 900]范围内任意整数，字重取值为weight，否则取默认值400。
+**true**: Enable variable font weight adjustment. If the **weight** value is an integer within the [100, 900]range, it is applied as the font weight.
 
-false：禁用可变字重调节。此时如果weight取值为[100, 900]范围内的整百数值，字重取值为weight；weight是非整百数值时，字重取默认值400。
+**false**: Disable variable font weight adjustment. If the value of **weight** is a multiple of 100 within  
+[100, 900], the value is used. If **weight** is a non-multiple of 100, the default value **400** is used.
 
 **Type:** boolean
 

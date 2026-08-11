@@ -22,12 +22,6 @@
 - API版本12+：SystemCapability.Security.CryptoFramework.Cipher
 - API版本9-11：SystemCapability.Security.CryptoFramework
 
-## 导入模块
-
-```TypeScript
-import { cryptoFramework } from 'kits/@kit.CryptoArchitectureKit';
-```
-
 ## iv
 
 ```TypeScript
@@ -40,7 +34,7 @@ iv: DataBlob
 - 3DES的CBC|OFB|CFB模式：iv长度为8字节。  
 - SM4&lt;sup&gt;10+&lt;/sup&gt;的CBC|CTR|OFB|CFB模式：iv长度为16字节。
 
-**类型：** [DataBlob](arkts-cryptoarchitecture-cryptoframework-datablob-i.md)
+**类型：** [DataBlob](../../apis-device-certificate-kit/arkts-apis/arkts-devicecertificate-cert-datablob-i.md)
 
 **起始版本：** 9
 

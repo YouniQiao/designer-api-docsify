@@ -1,6 +1,6 @@
 # AlphaType
 
-表示图像的透明度类型的枚举。
+Enumerates the alpha types of images.
 
 **Since:** 9
 
@@ -16,7 +16,7 @@
 UNKNOWN = 0
 ```
 
-未知透明度类型。
+Unknown alpha type.
 
 **Since:** 9
 
@@ -36,7 +36,7 @@ UNKNOWN = 0
 OPAQUE = 1
 ```
 
-没有Alpha通道或图片不透明。
+There is no alpha or the image is opaque.
 
 **Since:** 9
 
@@ -56,7 +56,7 @@ OPAQUE = 1
 PREMUL = 2
 ```
 
-RGB通道预乘Alpha值。
+Premultiplied alpha.
 
 **Since:** 9
 
@@ -76,7 +76,7 @@ RGB通道预乘Alpha值。
 UNPREMUL = 3
 ```
 
-RGB通道非预乘Alpha值。
+RGB non-premultiplied alpha.
 
 **Since:** 9
 

@@ -1,6 +1,6 @@
 # ButtonConfiguration
 
-开发者需要自定义class实现ContentModifier接口。继承自[CommonConfiguration](arkts-arkui-common-commonconfiguration-i.md)。
+ButtonConfiguration used by button content modifier.
 
 **Inheritance/Implementation:** ButtonConfiguration extends [CommonConfiguration<ButtonConfiguration>](CommonConfiguration<ButtonConfiguration>)
 
@@ -18,7 +18,7 @@
 triggerClick: ButtonTriggerClickCallback
 ```
 
-使用builder新构建出来组件的点击事件。
+Trigger button click x coordinate and y coordinate.
 
 **Since:** 23
 
@@ -36,9 +36,7 @@ triggerClick: ButtonTriggerClickCallback
 label: string
 ```
 
-Button的文本标签。
-
-**说明：**当文本字符的长度超过按钮本身的宽度时，文本将会被截断。
+Button with inner text label.
 
 **Type:** string
 
@@ -58,15 +56,7 @@ Button的文本标签。
 pressed: boolean
 ```
 
-指示是否按下Button。
-
-true：按下；false：未按下。
-
-默认值：false 
-
-**说明：**
-
-此按压属性生效区域大小为原本Button组件的大小，而非build出来的新组件大小。若新build出来的组件超过原本组件的大小，那么超出部分按压不触发。
+Indicates whether the button is pressed.
 
 **Type:** boolean
 

@@ -7,7 +7,7 @@ export function createXComponentNodeWithNativeParameters(
     context: UIContext, parameters: NativeXComponentParameters, options?: FrameNodeOptions): XComponent
 ```
 
-创建 XComponent 类型的 FrameNode（支持原生开发参数）
+Create a FrameNode of XComponent type with options for native developing.On API 26.0.0 and above, It can also create a FrameNode of XComponent type with options for native developing and  FrameNode options.
 
 **Since:** 23
 
@@ -23,13 +23,13 @@ export function createXComponentNodeWithNativeParameters(
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| context | [UIContext](arkts-arkui-arkui-uicontext-uicontext-c.md) | Yes | 用于创建 FrameNode 的 UI 上下文 |
-| parameters | [NativeXComponentParameters](../arkts-components/arkts-arkui-nativexcomponentparameters-i.md) | Yes | 原生开发初始化参数 |
+| context | [UIContext](arkts-arkui-arkui-uicontext-uicontext-c.md) | Yes | uiContext used to create the FrameNode. |
+| parameters | [NativeXComponentParameters](../arkts-components/arkts-arkui-nativexcomponentparameters-i.md) | Yes | initialization parameters. |
 | options | [FrameNodeOptions](arkts-arkui-framenode-framenodeoptions-i.md) | No | Options for configuring FrameNode creation.<br>**Since:** 26.0.0 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [XComponent](arkts-arkui-typenode-xcomponent-t.md) | 返回 XComponent 类型的 FrameNode |
+| [XComponent](arkts-arkui-typenode-xcomponent-t.md) | Return XComponent type FrameNode. |
 

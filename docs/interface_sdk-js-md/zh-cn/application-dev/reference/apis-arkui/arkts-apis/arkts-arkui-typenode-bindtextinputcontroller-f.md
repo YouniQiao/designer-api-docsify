@@ -29,6 +29,6 @@ export function bindTextInputController(node: FrameNode, controller: TextInputCo
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 100021 | The FrameNode is not modifiable. |
-| 100023 | Parameter error. Possible causes: 1. The component type of the node is incorrect. 2. The node is null or undefined. 3. The controller is null or undefined. |
+| [100021](../errorcode-node.md#100021-framenode节点不可修改) | The FrameNode is not modifiable. |
+| [100023](../errorcode-node.md#100023-参数错误) | Parameter error. Possible causes: 1. The component type of the node is incorrect. 2. The node is null or undefined. 3. The controller is null or undefined. |
 

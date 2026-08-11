@@ -14,12 +14,6 @@ autoFillManager模块提供账号密码保存等功能。
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.AbilityCore
 
-## 导入模块
-
-```TypeScript
-import { autoFillManager } from 'kits/@kit.AbilityKit';
-```
-
 ## 汇总
 
 ### 函数

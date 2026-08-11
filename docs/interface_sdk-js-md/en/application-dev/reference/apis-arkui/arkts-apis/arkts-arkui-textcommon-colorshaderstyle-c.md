@@ -1,6 +1,6 @@
 # ColorShaderStyle
 
-显示为纯色。ColorShaderStyle继承自[ShaderStyle](arkts-arkui-textcommon-shaderstyle-c.md)。
+Defines a shader with single color.
 
 **Inheritance/Implementation:** ColorShaderStyle extends [ShaderStyle](arkts-arkui-textcommon-shaderstyle-c.md)
 
@@ -18,7 +18,7 @@
 constructor(color: ResourceColor)
 ```
 
-用于创建ColorShaderStyle对象的构造函数。
+The constructor.
 
 **Since:** 24
 
@@ -34,7 +34,7 @@ constructor(color: ResourceColor)
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| color | [ResourceColor](arkts-arkui-resourcecolor-t.md) | Yes | 显示为纯色效果。 |
+| color | [ResourceColor](arkts-arkui-resourcecolor-t.md) | Yes | The color used by shader. |
 
 ## color
 
@@ -42,7 +42,7 @@ constructor(color: ResourceColor)
 color: ResourceColor
 ```
 
-显示为纯色效果。
+The color of the shader.
 
 **Type:** [ResourceColor](arkts-arkui-resourcecolor-t.md)
 

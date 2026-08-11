@@ -14,12 +14,6 @@
 
 **系统能力：** SystemCapability.Multimedia.Media.Core
 
-## 导入模块
-
-```TypeScript
-import { media } from 'kits/@kit.MediaKit';
-```
-
 ## finishLoading
 
 ArkTS-Dyn:
@@ -143,7 +137,7 @@ respondHeader(uuid: long, header?: Record<string, string>, redirectUrl?: string)
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | uuid | ArkTS-Dyn: number  <br>ArkTS-Sta：long | 是 | 资源句柄的标识。来源是[SourceOpenCallback](@ohos.multimedia.media:media.SourceOpenCallback)。 |
-| header | [Record](../../apis-default/arkts-apis/arkts-record-t.md)&lt;string, string&gt; | 否 | HTTP响应中的头部信息。应用可将头部信息字段与底层支持解析字段取交集传递或直接传入对应的所有头部信息。&lt;br&gt; - 底层播放需要解析的 字段包括Transfer-Encoding、Location、Content-Type、Content-Range、Content-Encode、Accept-Ranges、content-length。 |
+| header | Record&lt;string, string&gt; | 否 | HTTP响应中的头部信息。应用可将头部信息字段与底层支持解析字段取交集传递或直接传入对应的所有头部信息。&lt;br&gt; - 底层播放需要解析的 字段包括Transfer-Encoding、Location、Content-Type、Content-Range、Content-Encode、Accept-Ranges、content-length。 |
 | redirectUrl | string | 否 | 如果存在，为HTTP响应中的重定向URL。 |
 
 ## header
@@ -154,7 +148,7 @@ header?: Record<string, string>
 
 网络请求标头，如果存在，需要应用在下载数据时将头信息设置到HTTP请求中。
 
-**类型：** [Record](../../apis-default/arkts-apis/arkts-record-t.md)&lt;string, string&gt;
+**类型：** Record&lt;string, string&gt;
 
 **起始版本：** 18
 

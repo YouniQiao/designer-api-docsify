@@ -12,7 +12,7 @@ import { systemTimer } from 'kits/@kit.BasicServicesKit';
 function destroyTimer(timer: long, callback: AsyncCallback<void>): void
 ```
 
-销毁定时器，使用callback异步回调。
+Destroys a timer. This API uses an asynchronous callback to return the result.
 
 **Since:** 7
 
@@ -28,15 +28,15 @@ function destroyTimer(timer: long, callback: AsyncCallback<void>): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| timer | ArkTS-Dyn: number  <br>ArkTS-Sta：long | Yes | 定时器的ID。 |
-| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | 回调函数。 |
+| timer | ArkTS-Dyn: number  <br>ArkTS-Sta：long | Yes | ID of the timer. |
+| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. Possible causes: &lt;br&gt; 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameter types. |
-| 202 | Permission verification failed. A non-system application calls a system API. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: &lt;br&gt; 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameter types. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
 
 ## Examples
 
@@ -78,7 +78,7 @@ try {
 function destroyTimer(timer: long): Promise<void>
 ```
 
-销毁定时器，使用Promise进行异步回调。
+Destroys a timer. This API uses a promise to return the result.
 
 **Since:** 7
 
@@ -94,20 +94,20 @@ function destroyTimer(timer: long): Promise<void>
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| timer | ArkTS-Dyn: number  <br>ArkTS-Sta：long | Yes | 定时器的ID。 |
+| timer | ArkTS-Dyn: number  <br>ArkTS-Sta：long | Yes | ID of the timer. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | 无返回结果的Promise对象。 |
+| Promise&lt;void&gt; | Promise that returns no value. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. Possible causes: &lt;br&gt; 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameter types. |
-| 202 | Permission verification failed. A non-system application calls a system API. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: &lt;br&gt; 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameter types. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
 
 ## Examples
 

@@ -1,11 +1,5 @@
 # error
 
-## 导入模块
-
-```TypeScript
-import { hilog } from 'kits/@kit.PerformanceAnalysisKit';
-```
-
 ## error
 
 ```TypeScript

@@ -1,6 +1,6 @@
 # SwiperDisplayMode
 
-Swiper在主轴上的尺寸大小模式枚举。
+Enumerates the modes in which elements are displayed along the main axis.
 
 **Since:** 7
 
@@ -16,9 +16,10 @@ Swiper在主轴上的尺寸大小模式枚举。
 Stretch
 ```
 
-Swiper滑动一页的宽度为Swiper组件自身的宽度。
+The width of each page in the **Swiper** component equals the component's own width.
 
-**说明：**从API version 7开始支持，从API version 10开始废弃，建议使用STRETCH替代。
+Note: This API is supported since API version 7 and deprecated since API version 10. You are advised to use  
+**STRETCH** instead.
 
 **Since:** 7
 
@@ -40,6 +41,13 @@ Swiper滑动一页的宽度为Swiper组件自身的宽度。
 AutoLinear
 ```
 
+The width of each page in the **Swiper** component equals the maximum width of child components. This enumerated value behaves the same as setting  
+[displayCount](SwiperAttribute#displayCount(value: number | string | SwiperAutoFill, swipeByGroup?: boolean))to **'auto'** (string type). For details, see  
+[displayCount](SwiperAttribute#displayCount(value: number | string | SwiperAutoFill, swipeByGroup?: boolean)).
+
+Note: This API is supported since API version 7 and deprecated since API version 10. You are advised to use  
+**AUTO_LINEAR** instead.
+
 **Since:** 7
 
 **ArkTS mode:** ArkTS-Dyn only, since version 7.
@@ -60,7 +68,7 @@ AutoLinear
 STRETCH
 ```
 
-Carousel map extension.
+The width of each page in the **Swiper** component equals the component's own width.
 
 **Since:** 10
 
@@ -81,6 +89,13 @@ Carousel map extension.
 ```TypeScript
 AUTO_LINEAR
 ```
+
+The width of each page in the **Swiper** component equals the width of the leftmost child component in the viewport. This enumerated value behaves the same as setting  
+[displayCount](SwiperAttribute#displayCount(value: number | string | SwiperAutoFill, swipeByGroup?: boolean))to **'auto'** (string type). For details, see  
+[displayCount](SwiperAttribute#displayCount(value: number | string | SwiperAutoFill, swipeByGroup?: boolean)).
+
+Note: This API is supported since API version 10 and deprecated since API version 12. You are advised to use  
+[Scroller.scrollTo](../arkts-apis/arkts-arkui-scroll-scroller-c.md/arkts-arkui-scroll-scroller-c.md#scrollto) instead.
 
 **Since:** 10
 

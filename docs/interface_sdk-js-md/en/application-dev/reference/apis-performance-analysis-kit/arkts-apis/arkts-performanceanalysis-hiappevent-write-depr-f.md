@@ -6,7 +6,7 @@
 function write(eventName: string, eventType: EventType, keyValues: object): Promise<void>
 ```
 
-应用事件打点方法，将事件写入到当天的事件文件中，使用Promise方式作为异步回调。
+Writes event information to the event file of the current day. This API uses a promise to return the result.
 
 **Since:** 7
 
@@ -24,15 +24,15 @@ function write(eventName: string, eventType: EventType, keyValues: object): Prom
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| eventName | string | Yes | 事件名称。 |
-| eventType | [EventType](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-screenlock-eventtype-t-sys.md) | Yes | 事件类型。 |
-| keyValues | object | Yes | 事件参数。 |
+| eventName | string | Yes | Application event name. |
+| eventType | [EventType](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-screenlock-eventtype-t-sys.md) | Yes | Application event type. |
+| keyValues | object | Yes | Application event key-value pair params. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise对象，可以在其then()、catch()方法中分别对事件写入成功、写入异常的情况进行异步处理。 |
+| Promise&lt;void&gt; | Promise used to asynchronously process the callback in the **then()** and **catch()** methods when event writing succeeded or failed. |
 
 ## Examples
 
@@ -60,7 +60,7 @@ hiAppEvent.write("test_event", hiAppEvent.EventType.FAULT, eventParams).then(() 
 function write(eventName: string, eventType: EventType, keyValues: object, callback: AsyncCallback<void>): void
 ```
 
-应用事件打点方法，将事件写入到当天的事件文件中，使用callback方式作为异步回调。
+Writes event information to the event file of the current day. This API uses an asynchronous callback to return the result.
 
 **Since:** 7
 
@@ -78,10 +78,10 @@ function write(eventName: string, eventType: EventType, keyValues: object, callb
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| eventName | string | Yes | 事件名称。 |
-| eventType | [EventType](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-screenlock-eventtype-t-sys.md) | Yes | 事件类型。 |
-| keyValues | object | Yes | 事件参数。 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | 事件回调函数。 |
+| eventName | string | Yes | Application event name. |
+| eventType | [EventType](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-screenlock-eventtype-t-sys.md) | Yes | Application event type. |
+| keyValues | object | Yes | Application event key-value pair params. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback function. |
 
 ## Examples
 

@@ -10,12 +10,6 @@ OpenLinkOptions可以作为[openLink()](arkts-ability-uiabilitycontext-c.md#open
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 
-## 导入模块
-
-```TypeScript
-import { OpenLinkOptions } from 'kits/@kit.AbilityKit';
-```
-
 ## appLinkingOnly
 
 ```TypeScript
@@ -105,7 +99,7 @@ parameters?: Record<string, Object>
 
 **说明：**具体使用规则请参考[want](arkts-ability-app-ability-want-want-c.md)中的parameters属性。
 
-**类型：** [Record](../../apis-default/arkts-apis/arkts-record-t.md)&lt;string, Object&gt;
+**类型：** Record&lt;string, Object&gt;
 
 **起始版本：** 12
 

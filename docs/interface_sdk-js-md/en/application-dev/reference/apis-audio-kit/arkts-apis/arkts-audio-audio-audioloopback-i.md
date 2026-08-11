@@ -1,17 +1,17 @@
 # AudioLoopback
 
-提供音频返听的相关接口。
+This interface provides APIs for audio monitoring.
 
-在使用AudioLoopback的接口之前，需先通过[audio.createAudioLoopback](arkts-audio-audio-createaudioloopback-f.md#createaudioloopback)获取AudioLoopback实例。
+Before calling any API in AudioLoopback, you must use  
+[audio.createAudioLoopback](arkts-audio-audio-createaudioloopback-f.md#createaudioloopback) to create an AudioLoopback instance.
 
-当启用音频返听时，系统会创建低时延渲染器与低时延采集器，实现低时延耳返功能。采集的音频直接通过内部路由返回到渲染器。对于渲染器，其音频焦点策略与  
-[STREAM_USAGE_MUSIC](arkts-audio-audio-streamusage-e.md)相匹配。对于采集器，其音频焦点策略与[SOURCE_TYPE_MIC](arkts-audio-audio-sourcetype-e.md)相匹配。
+When audio loopback is enabled, the system creates a low-latency renderer and capturer to implement low-latency in-ear monitoring. The audio captured is routed back to the renderer through an internal path. The renderer follows the audio focus strategy for [STREAM_USAGE_MUSIC](arkts-audio-audio-streamusage-e.md), whereas the capturer follows the strategy for [SOURCE_TYPE_MIC](arkts-audio-audio-sourcetype-e.md).
 
-输入\输出设备由系统自动选择。如果当前输入\输出不支持低时延，则音频返听无法启用。在运行过程中，如果音频焦点被另一个音频流抢占，输入\输出设备切换到不支持低时延的设备，系统会自动禁用音频返听。
+The system automatically chooses the input and output devices. If these devices do not support low latency, audio loopback does not work. If another audio stream takes over the audio focus or if the input or output device changes to the one that does not support low latency, the system disables audio loopback automatically.
 
-> **说明：**
+> **NOTE：**
 > 
-> - 本Interface首批接口从API version 20开始支持。
+> - The initial APIs of this interface are supported since API version 20.
 
 **Since:** 20
 
@@ -33,7 +33,7 @@ import { audio } from 'kits/@kit.AudioKit';
 enable(enable: boolean): Promise<boolean>
 ```
 
-启用或禁用音频返听器。使用Promise异步回调。
+Enable or disable audio loopback.When audio loopback is enabled, the system automatically creates fast playback and recording streams to implement low-latency in-ear monitoring. When audio loopback is disabled, the audio stream is destroyed.If enabling audio loopback fails, you can use {@link AudioLoopback#getStatus} to query the cause. After audio loopback is enabled, you can subscribe to the statusChange event to listen for audio loopback status changes.
 
 **Since:** 20
 
@@ -49,20 +49,20 @@ enable(enable: boolean): Promise<boolean>
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| enable | boolean | Yes | 表示是否启用音频返听器。true表示启用，false表示不启用。 |
+| enable | boolean | Yes | Whether to enable or disable audio loopback. **true** to enable, **false** otherwise. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;boolean&gt; | Promise对象。返回true表示功能执行成功；返回false表示功能执行失败。 |
+| Promise&lt;boolean&gt; | Promise used to return the result, indicating whether the API call is successful. **true** is successful, **false** otherwise. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 6800101 | Parameter verification failed. |
-| 201 | Permission denied. |
+| [6800101](../errorcode-audio.md#6800101-invalid-parameter) | Parameter verification failed. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
 
 ## getEqualizerPreset
 
@@ -70,7 +70,7 @@ enable(enable: boolean): Promise<boolean>
 getEqualizerPreset(): AudioLoopbackEqualizerPreset
 ```
 
-获取当前音频返听器的均衡器类型。
+Gets the current equalizer preset.The default equalizer preset of audio loopback is {@link AudioLoopbackEqualizerPreset#FULL} if users do not modify the preset.
 
 **Since:** 21
 
@@ -84,7 +84,7 @@ getEqualizerPreset(): AudioLoopbackEqualizerPreset
 
 | Type | Description |
 | --- | --- |
-| [AudioLoopbackEqualizerPreset](arkts-audio-audio-audioloopbackequalizerpreset-e.md) | 返回当前音频返听器的均衡器类型。 &lt;br&gt;在没有被修改的情况下，默认的均衡器类型是FULL。 |
+| [AudioLoopbackEqualizerPreset](arkts-audio-audio-audioloopbackequalizerpreset-e.md) | Equalizer type. &lt;br&gt;If no equalizer type has been set, the default equalizer type is **FULL**. |
 
 ## getPreferredDevicePair
 
@@ -92,7 +92,7 @@ getEqualizerPreset(): AudioLoopbackEqualizerPreset
 getPreferredDevicePair(): AudioDevicePair | null
 ```
 
-获取当前设备连接状态下系统推荐的返听音频输入输出设备组合。
+Gets the preferred audio device pair in current device connection situation.
 
 **Since:** 26.0.0
 
@@ -108,7 +108,7 @@ getPreferredDevicePair(): AudioDevicePair | null
 
 | Type | Description |
 | --- | --- |
-| [AudioDevicePair](arkts-audio-audio-audiodevicepair-i.md) | 返回系统推荐的音频输入输出设备组合。 &lt;br&gt;如果没有可用的输入输出设备组合，则返回null。 |
+| [AudioDevicePair](arkts-audio-audio-audiodevicepair-i.md) | The preferred audio device pair in audio system, or null if there is no supported device pair. |
 
 ## getReverbPreset
 
@@ -116,7 +116,7 @@ getPreferredDevicePair(): AudioDevicePair | null
 getReverbPreset(): AudioLoopbackReverbPreset
 ```
 
-获取当前音频返听器的混响模式。
+Get the current reverberation.The default reverberation preset of audio loopback is {@link AudioLoopbackReverbPreset#THEATER} if users do not modify the preset.
 
 **Since:** 21
 
@@ -130,7 +130,7 @@ getReverbPreset(): AudioLoopbackReverbPreset
 
 | Type | Description |
 | --- | --- |
-| [AudioLoopbackReverbPreset](arkts-audio-audio-audioloopbackreverbpreset-e.md) | 返回当前音频返听器的混响模式。 &lt;br&gt;在没有被修改的情况下，默认的混响模式是THEATER。 |
+| [AudioLoopbackReverbPreset](arkts-audio-audio-audioloopbackreverbpreset-e.md) | Reverb mode. &lt;br&gt;If no reverb mode has been set, the default reverb mode is **THEATER**. |
 
 ## getStatus
 
@@ -138,7 +138,7 @@ getReverbPreset(): AudioLoopbackReverbPreset
 getStatus(): Promise<AudioLoopbackStatus>
 ```
 
-获取音频返听状态。使用Promise异步回调。
+Obtains the audio loopback status. This API uses a promise to return the result.
 
 **Since:** 20
 
@@ -152,7 +152,7 @@ getStatus(): Promise<AudioLoopbackStatus>
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;AudioLoopbackStatus&gt; | Promise对象，返回音频返听状态。 |
+| Promise&lt;AudioLoopbackStatus&gt; | Promise used to return the audio loopback status. |
 
 ## getSupportedDevicePairs
 
@@ -160,7 +160,7 @@ getStatus(): Promise<AudioLoopbackStatus>
 getSupportedDevicePairs(): Array<AudioDevicePair>
 ```
 
-获取当前设备连接状态下支持返听的音频输入输出设备组合。
+Gets supported audio device pairs in current device connection situation.
 
 **Since:** 26.0.0
 
@@ -176,7 +176,7 @@ getSupportedDevicePairs(): Array<AudioDevicePair>
 
 | Type | Description |
 | --- | --- |
-| Array&lt;AudioDevicePair&gt; | 返回支持返听的音频输入输出设备数组。 &lt;br&gt;如果没有可用的输入输出设备组合，则返回空数组。 |
+| Array&lt;AudioDevicePair&gt; | Audio device pairs that support loopback, if there is no supported device pair, empty array will be returned. |
 
 ## getVolume
 
@@ -190,7 +190,7 @@ ArkTS-Sta:
 getVolume(): double
 ```
 
-获取音频返听输出音量。
+Gets the output volume for audio loopback.
 
 **Since:** 26.0.0
 
@@ -206,7 +206,7 @@ getVolume(): double
 
 | Type | Description |
 | --- | --- |
-| ArkTS-Dyn: number  <br>ArkTS-Sta：double | 返回当前音频返听输出音量，范围为[0.0, 1.0]。 |
+| ArkTS-Dyn: number  <br>ArkTS-Sta：double | Current audio loopback output volume value. |
 
 ## off('statusChange')
 
@@ -214,7 +214,7 @@ getVolume(): double
 off(type: 'statusChange', callback?: Callback<AudioLoopbackStatus>): void
 ```
 
-取消监听音频状态事件。使用callback异步回调。
+Unsubscribes from the audio loopback status event. This API uses an asynchronous callback to return the result.
 
 **Since:** 20
 
@@ -228,14 +228,14 @@ off(type: 'statusChange', callback?: Callback<AudioLoopbackStatus>): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'statusChange' | Yes | 事件回调类型，支持的事件为'statusChange'，当取消监听音频状态事件时，触发该事件。 |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;AudioLoopbackStatus&gt; | No | 回调函数，返回当前音频返听的状态。 |
+| type | 'statusChange' | Yes | Event type. The event **'statusChange'** is triggered when the status of the audio loopback is changed. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;AudioLoopbackStatus&gt; | No | Callback used to return the audio loopback status. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 6800101 | Parameter verification failed. |
+| [6800101](../errorcode-audio.md#6800101-invalid-parameter) | Parameter verification failed. |
 
 ## offStatusChange
 
@@ -263,7 +263,7 @@ Unsubscribes audio loopback status change event callback.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 6800101 | Parameter verification failed. |
+| [6800101](../errorcode-audio.md#6800101-invalid-parameter) | Parameter verification failed. |
 
 ## on('statusChange')
 
@@ -271,7 +271,7 @@ Unsubscribes audio loopback status change event callback.
 on(type: 'statusChange', callback: Callback<AudioLoopbackStatus>): void
 ```
 
-监听返听状态变化事件（当AudioLoopback的状态发生变化时触发）。使用callback异步回调。
+Subscribes to the audio loopback status change event, which is triggered when the status of the audio loopback is changed. This API uses an asynchronous callback to return the result.
 
 **Since:** 20
 
@@ -285,14 +285,14 @@ on(type: 'statusChange', callback: Callback<AudioLoopbackStatus>): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'statusChange' | Yes | 事件回调类型，支持的事件为'statusChange'，当AudioLoopback的状态发生变化时，触发该事件。 |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;AudioLoopbackStatus&gt; | Yes | 回调函数，返回当前音频返听的状态。 |
+| type | 'statusChange' | Yes | Event type. The event **'statusChange'** is triggered when the status of the audio loopback is changed. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;AudioLoopbackStatus&gt; | Yes | Callback used to return the audio loopback status. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 6800101 | Parameter verification failed. |
+| [6800101](../errorcode-audio.md#6800101-invalid-parameter) | Parameter verification failed. |
 
 ## onStatusChange
 
@@ -320,7 +320,7 @@ Subscribes to audio loopback status changes.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 6800101 | Parameter verification failed. |
+| [6800101](../errorcode-audio.md#6800101-invalid-parameter) | Parameter verification failed. |
 
 ## setEqualizerPreset
 
@@ -328,7 +328,7 @@ Subscribes to audio loopback status changes.
 setEqualizerPreset(preset: AudioLoopbackEqualizerPreset): boolean
 ```
 
-设置音频返听器的均衡器类型。
+Sets the equalizer preset of the audio loopback.
 
 **Since:** 21
 
@@ -342,19 +342,19 @@ setEqualizerPreset(preset: AudioLoopbackEqualizerPreset): boolean
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| preset | [AudioLoopbackEqualizerPreset](arkts-audio-audio-audioloopbackequalizerpreset-e.md) | Yes | 均衡器类型。 |
+| preset | [AudioLoopbackEqualizerPreset](arkts-audio-audio-audioloopbackequalizerpreset-e.md) | Yes | Equalizer type. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| boolean | 返回均衡器类型是否设置成功。true表示成功，false表示不成功。 |
+| boolean | Setting result. **true** if successful, **false** otherwise. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 6800101 | Parameter verification failed. |
+| [6800101](../errorcode-audio.md#6800101-invalid-parameter) | Parameter verification failed. |
 
 ## setReverbPreset
 
@@ -362,7 +362,7 @@ setEqualizerPreset(preset: AudioLoopbackEqualizerPreset): boolean
 setReverbPreset(preset: AudioLoopbackReverbPreset): boolean
 ```
 
-设置音频返听器的混响模式。
+Sets the reverberation of the audio loopback.
 
 **Since:** 21
 
@@ -376,19 +376,19 @@ setReverbPreset(preset: AudioLoopbackReverbPreset): boolean
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| preset | [AudioLoopbackReverbPreset](arkts-audio-audio-audioloopbackreverbpreset-e.md) | Yes | 混响模式。 |
+| preset | [AudioLoopbackReverbPreset](arkts-audio-audio-audioloopbackreverbpreset-e.md) | Yes | Reverb mode. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| boolean | 返回混响模式是否设置成功。true表示成功，false表示不成功。 |
+| boolean | Setting result. **true** if successful, **false** otherwise. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 6800101 | Parameter verification failed. |
+| [6800101](../errorcode-audio.md#6800101-invalid-parameter) | Parameter verification failed. |
 
 ## setVolume
 
@@ -402,7 +402,7 @@ ArkTS-Sta:
 setVolume(volume: double): Promise<void>
 ```
 
-设置音频返听的音量。使用Promise异步回调。
+Sets the volume for audio loopback. This volume does not affect other audio streams or the system volume.
 
 **Since:** 20
 
@@ -416,17 +416,17 @@ setVolume(volume: double): Promise<void>
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| volume | ArkTS-Dyn: number  <br>ArkTS-Sta：double | Yes | 音量值范围为[0.0, 1.0]。 |
+| volume | ArkTS-Dyn: number  <br>ArkTS-Sta：double | Yes | Volume to set. The value type is float, ranging from 0.0 to 1.0. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise对象，无返回结果。 |
+| Promise&lt;void&gt; | Promise used to return the result. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 6800101 | Parameter verification failed, form 0.0 to 1.0. |
+| [6800101](../errorcode-audio.md#6800101-invalid-parameter) | Parameter verification failed, from 0.0 to 1.0. |
 

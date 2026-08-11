@@ -12,7 +12,7 @@ import { curves } from 'kits/@kit.ArkUI';
 export function springMotion(response?: double, dampingFraction?: double, overlapDuration?: double): ICurve
 ```
 
-构造弹性动画曲线对象。如果对同一对象的同一属性进行多个弹性动画，每个动画会替换掉前一个动画，并继承之前的速度。
+Creates a spring animation curve.If multiple spring animations are applied to the same attribute of an object,each animation replaces their predecessor and inherits the velocity.
 
 **Since:** 23
 
@@ -28,13 +28,13 @@ export function springMotion(response?: double, dampingFraction?: double, overla
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| response | double | No | 弹簧自然振动周期，决定弹簧复位的速度。&lt;br&gt;默认值：0.55&lt;br/&gt;单位：秒&lt;br/&gt;取值范围：(0, +∞)&lt;br/&gt;**说明：** &lt;br/&gt;设置小于等于0 的值时，按默认值0.55处理。 |
-| dampingFraction | double | No | 阻尼系数。&lt;br&gt;0表示无阻尼，一直处于震荡状态；&lt;br&gt;大于0小于1的值为欠阻尼，运动过程中会超出目标值；&lt;br&gt;等于1为临界阻尼；&lt;br&gt;大于1为 过阻尼，运动过程中逐渐趋于目标值。&lt;br&gt;默认值：0.825&lt;br/&gt;单位：秒&lt;br/&gt;取值范围：[0, +∞)&lt;br/&gt;**说明：** &lt;br/&gt;设置小于0的值时，按默认值0.825处理。 |
-| overlapDuration | double | No | 弹性动画衔接时长。发生动画继承时，如果前后两个弹性动画response不一致，response参数会在overlapDuration时间内平滑过渡。&lt; br/&gt;默认值：0&lt;br/&gt;单位：秒&lt;br/&gt;取值范围： [0, +∞)&lt;br/&gt; **说明：** &lt;br/&gt;设置小于0的值时，按默认值0处理。&lt;br&gt;弹性动画曲线为物理曲线，[animation](../../apis-ability-kit/arkts-apis/arkts-app-ability-common.md/arkts-app-ability-common.md)、[animateTo](../../apis-ability-kit/arkts-apis/arkts-app-ability-common.md/arkts-app-ability-common.md)、[pageTransition](page_transition)中的duration参数不生效，动画持续时间取决于springMotion动画曲线参数和之前的速度。时间不能归一，故不能通过该曲线的interpolate函数获得插值。 |
+| response | double | No | Duration of one complete oscillation. &lt;br&gt;Default value: **0.55**.&lt;br&gt;Unit: second&lt;br&gt;Value range: (0, +∞). &lt;p&gt;**NOTE：**: &lt;br&gt;If this parameter is set to a value less than or equal to 0, the default value **0.55** is used. &lt;/p&gt; |
+| dampingFraction | double | No | Damping coefficient. **0**: undamped. In this case, the spring oscillates forever.&lt;br&gt;> 0 and < 1: underdamped. In this case, the spring overshoots the equilibrium position.&lt;br&gt;**1**: critically damped. 1: overdamped. In this case, the spring approaches equilibrium gradually.&lt;br&gt;Default value: **0.825**. Unit: second. Value range: [0, +∞). &lt;p&gt;**NOTE：**: &lt;br&gt;A value less than 0 evaluates to the default value **0.825**. &lt;/p&gt; |
+| overlapDuration | double | No | Duration for animations to overlap, in seconds. When animations overlap, the **response** values of these animations will transit smoothly over this duratio if they are different.&lt;br&gt;Default value: **0**&lt;br&gt;Unit: second&lt;br&gt;Value range: [0, +∞). &lt;p&gt;**NOTE：**&lt;br&gt;A value less than 0 evaluates to the default value **0**. &lt;br&gt;The spring animation curve is physics-based. Its duration depends on the **springMotion** parameters and the previous velocity, rather than the **duration** parameter in animation, animateTo, or pageTransition. The time cannot be normalized. Therefore, the interpolation cannot be obtained using the **interpolate** function of the curve. &lt;/p&gt; |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [ICurve](arkts-arkui-curves-icurve-i.md) | 曲线对象。 &lt;br&gt;**说明:** &lt;br&gt;弹性动画曲线为物理曲线，[animation]{ |
+| [ICurve](arkts-arkui-curves-icurve-i.md) |  |
 

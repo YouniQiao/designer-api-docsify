@@ -1,6 +1,6 @@
 # LogEntry (System API)
 
-日志文件对象接口。
+Defines a **LogEntry** object.
 
 **Since:** 10
 
@@ -24,7 +24,7 @@ import { logLibrary } from 'kits/@kit.PerformanceAnalysisKit';
 mtime: long
 ```
 
-上次修改该文件的时间，表示距1970年1月1日0时0分0秒的秒数。
+Time of the last modification to the file. The value is the number of seconds elapsed since 00:00:00 on January 1, 1970.
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：long
 
@@ -44,7 +44,7 @@ mtime: long
 name: string
 ```
 
-文件名称。
+Log file name.
 
 **Type:** string
 
@@ -64,7 +64,7 @@ name: string
 size: long
 ```
 
-文件大小，以字节为单位。
+File size, in bytes.
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：long
 

@@ -1,11 +1,5 @@
 # selectContact
 
-## 导入模块
-
-```TypeScript
-import { contact } from 'kits/@kit.ContactsKit';
-```
-
 ## selectContact
 
 ```TypeScript

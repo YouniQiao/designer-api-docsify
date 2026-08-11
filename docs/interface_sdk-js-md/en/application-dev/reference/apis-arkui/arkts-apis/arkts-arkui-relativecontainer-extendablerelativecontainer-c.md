@@ -16,9 +16,9 @@ Defines the Extendable RelativeContainer.
 
 ```TypeScript
 static $_instantiate<T extends ExtendableRelativeContainer>(
-        factory: ConstructorT<T>,
-        content_?: CustomBuilder
-    ): T
+    factory: ConstructorT<T>,
+    content_?: CustomBuilder
+  ): T
 ```
 
 Constructor of Extendable RelativeContainer.
@@ -29,7 +29,7 @@ Constructor of Extendable RelativeContainer.
 
 **Model restriction:** This API can be used only in the stage model.
 
-<!--Device-ExtendableRelativeContainer-static $_instantiate<T extends ExtendableRelativeContainer>(        factory: ConstructorT<T>,        content_?: CustomBuilder    ): T--><!--Device-ExtendableRelativeContainer-static $_instantiate<T extends ExtendableRelativeContainer>(        factory: ConstructorT<T>,        content_?: CustomBuilder    ): T-End-->
+<!--Device-ExtendableRelativeContainer-static $_instantiate<T extends ExtendableRelativeContainer>(    factory: ConstructorT<T>,    content_?: CustomBuilder  ): T--><!--Device-ExtendableRelativeContainer-static $_instantiate<T extends ExtendableRelativeContainer>(    factory: ConstructorT<T>,    content_?: CustomBuilder  ): T-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -50,10 +50,10 @@ Constructor of Extendable RelativeContainer.
 
 ```TypeScript
 static _instantiateImpl<T extends ExtendableRelativeContainer>(
-        styles: CustomBuilderT<T>,
-        factory: ConstructorT<T>,
-        content_?: CustomBuilder
-    ): void
+    styles: CustomBuilderT<T>,
+    factory: ConstructorT<T>,
+    content_?: CustomBuilder
+  ): void
 ```
 
 Entry of Extendable RelativeContainer.
@@ -66,7 +66,7 @@ Entry of Extendable RelativeContainer.
 
 **Model restriction:** This API can be used only in the stage model.
 
-<!--Device-ExtendableRelativeContainer-static _instantiateImpl<T extends ExtendableRelativeContainer>(        styles: CustomBuilderT<T>,        factory: ConstructorT<T>,        content_?: CustomBuilder    ): void--><!--Device-ExtendableRelativeContainer-static _instantiateImpl<T extends ExtendableRelativeContainer>(        styles: CustomBuilderT<T>,        factory: ConstructorT<T>,        content_?: CustomBuilder    ): void-End-->
+<!--Device-ExtendableRelativeContainer-static _instantiateImpl<T extends ExtendableRelativeContainer>(    styles: CustomBuilderT<T>,    factory: ConstructorT<T>,    content_?: CustomBuilder  ): void--><!--Device-ExtendableRelativeContainer-static _instantiateImpl<T extends ExtendableRelativeContainer>(    styles: CustomBuilderT<T>,    factory: ConstructorT<T>,    content_?: CustomBuilder  ): void-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 

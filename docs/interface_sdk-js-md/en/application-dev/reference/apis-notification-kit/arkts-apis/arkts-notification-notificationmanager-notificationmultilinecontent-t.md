@@ -4,7 +4,7 @@
 export type NotificationMultiLineContent = _NotificationMultiLineContent
 ```
 
-多行文本通知。
+Describes the multi-line text notification.
 
 **Since:** 9
 

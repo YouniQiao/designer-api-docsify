@@ -2,11 +2,9 @@
 
 ## Summary
 
-<!--Del-->
-### Interfaces（系统接口）
+### Interfaces
 
 | Name | Description |
 | --- | --- |
-| [PageNodeInfo](arkts-ability-pagenodeinfo-i-sys.md) | 自动填充的页面节点信息。 |
-<!--DelEnd-->
+| [PageNodeInfo](arkts-ability-pagenodeinfo-i.md) | PageNodeInfo defines the page node information used for auto-fill. |
 

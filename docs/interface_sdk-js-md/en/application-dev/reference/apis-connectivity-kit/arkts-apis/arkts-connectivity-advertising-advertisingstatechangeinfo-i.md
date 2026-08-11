@@ -1,6 +1,6 @@
 # AdvertisingStateChangeInfo
 
-广播状态变化信息。
+Advertising state change information.
 
 **Since:** 26.0.0
 
@@ -22,7 +22,7 @@ import { advertising } from 'kits/@kit.ConnectivityKit';
 advertisingId: int
 ```
 
-广播ID。取值范围为全体整数。
+Indicates the advertising ID.
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
@@ -42,7 +42,7 @@ advertisingId: int
 state: AdvertisingState
 ```
 
-广播状态。
+Indicates the advertising state.
 
 **Type:** [AdvertisingState](arkts-connectivity-ble-advertisingstate-e.md)
 

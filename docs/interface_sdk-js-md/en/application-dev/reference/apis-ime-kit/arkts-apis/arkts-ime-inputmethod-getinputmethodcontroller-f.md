@@ -12,7 +12,7 @@ import { inputMethod } from 'kits/@kit.IMEKit';
 function getInputMethodController(): InputMethodController
 ```
 
-获取客户端实例[InputMethodController](arkts-ime-inputmethod-inputmethodcontroller-i.md)。
+Input method controller
 
 **Since:** 6
 
@@ -30,7 +30,7 @@ function getInputMethodController(): InputMethodController
 
 | Type | Description |
 | --- | --- |
-| [InputMethodController](arkts-ime-inputmethod-inputmethodcontroller-i.md) | 回调返回当前客户端实例。 |
+| [InputMethodController](arkts-ime-inputmethod-inputmethodcontroller-i.md) | the object of InputMethodController. |
 
 ## Examples
 

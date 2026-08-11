@@ -1,11 +1,5 @@
 # getAuthLockState
 
-## 导入模块
-
-```TypeScript
-import { userAuth } from 'kits/@kit.UserAuthenticationKit';
-```
-
 ## getAuthLockState
 
 ```TypeScript
@@ -42,13 +36,15 @@ function getAuthLockState(authType: UserAuthType): Promise<AuthLockState>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 12500010 | The type of credential has not been enrolled. |
-| 12500008 | The parameter is out of range. |
-| 201 | Permission denied. |
-| 12500005 | The authentication type is not supported. |
-| 12500002 | General operation error. |
+| [12500010](../errorcode-useriam.md#12500010-该类型的凭据没有录入) | The type of credential has not been enrolled. |
+| [12500008](../errorcode-useriam.md#12500008-参数校验失败) | The parameter is out of range. |
+| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
+| [12500005](../errorcode-useriam.md#12500005-认证类型不支持) | The authentication type is not supported. |
+| [12500002](../errorcode-useriam.md#12500002-身份认证系统通用错误码) | General operation error. |
 
 ## 示例
+
+ArkTS-Dyn示例：
 
 ```TypeScript
 import { userAuth } from '@kit.UserAuthenticationKit';
@@ -68,6 +64,28 @@ userAuth.getAuthLockState(queryType)
   })
   .catch((err: BusinessError) => {
     console.error(`get auth lock state failed, err code is : ${err?.code}, err message is : ${err?.message}`);
+  })
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+import { userAuth } from '@kit.UserAuthenticationKit';
+
+let queryType = userAuth.UserAuthType.PIN;
+let authLockState : userAuth.AuthLockState = {
+  isLocked : false,
+  remainingAuthAttempts : 0,
+  lockoutDuration : 0
+}
+
+userAuth.getAuthLockState(queryType)
+  .then((result: userAuth.AuthLockState) => {
+    authLockState = result;
+    console.info('get auth lock state successfully.');
+  })
+  .catch((err) => {
+    console.error(`get auth lock state failed, err code is : ${err.code}, err message is : ${err.message}`);
   })
 ```
 

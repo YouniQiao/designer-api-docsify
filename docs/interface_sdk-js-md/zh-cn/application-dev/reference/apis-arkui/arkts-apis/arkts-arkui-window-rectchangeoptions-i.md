@@ -10,12 +10,6 @@
 
 **系统能力：** SystemCapability.Window.SessionManager
 
-## 导入模块
-
-```TypeScript
-import { window } from 'kits/@kit.ArkUI';
-```
-
 ## reason
 
 ```TypeScript
@@ -24,7 +18,7 @@ reason: RectChangeReason
 
 窗口矩形变化的原因。
 
-**类型：** [RectChangeReason](arkts-arkui-uiextension-rectchangereason-e.md)
+**类型：** [RectChangeReason](arkts-arkui-window-rectchangereason-e.md)
 
 **起始版本：** 12
 
@@ -44,7 +38,7 @@ rect: Rect
 
 New value of the window rectangle.
 
-**类型：** [Rect](../../apis-form-kit/arkts-apis/arkts-form-forminfo-rect-i.md)
+**类型：** [Rect](../../apis-test-kit/arkts-apis/arkts-test-uitest-rect-i.md)
 
 **起始版本：** 12
 

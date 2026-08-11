@@ -6,11 +6,11 @@
 
 | Name | Description |
 | --- | --- |
-| [AbilityStartCallback](arkts-ability-abilitystartcallback-i.md) | 定义拉起UIExtensionAbility执行结果的回调。 |
+| [AbilityStartCallback](arkts-ability-abilitystartcallback-i.md) | The module describes the callback invoked to return the UIExtensionAbility startup result. |
 
 ### Types
 
 | Name | Description |
 | --- | --- |
-| [OnResultFn](arkts-ability-onresultfn-t.md) | 拉起UIExtensionAbility终止时的回调。 |
+| [OnResultFn](arkts-ability-onresultfn-t.md) | Called when the UIExtensionAbility is terminated. |
 

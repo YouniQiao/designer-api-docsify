@@ -4,7 +4,7 @@
 export type ScrollOnWillScrollCallback = (xOffset: double, yOffset: double, scrollState: ScrollState, scrollSource: ScrollSource) => (undefined | OffsetResult)
 ```
 
-Scroll滚动前触发的回调。
+Called before scroll to allow developer to control real offset the Scroll can scroll.
 
 **Since:** 23
 
@@ -20,10 +20,10 @@ Scroll滚动前触发的回调。
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| xOffset | double | Yes | 相对于上一帧水平方向的偏移量，Scroll中的内容向左滚动时偏移量为正，向右滚动时偏移量为负。<br/>单位vp。 |
-| yOffset | double | Yes | 相对于上一帧竖直方向的偏移量，Scroll中的内容向上滚动时偏移量为正，向下滚动时偏移量为负。<br/>单位vp。 |
-| scrollState | [ScrollState](../arkts-components/arkts-arkui-scrollstate-e.md) | Yes | 当前滚动状态。 |
-| scrollSource | [ScrollSource](arkts-arkui-scrollsource-e.md) | Yes | 当前滚动操作的来源。 |
+| xOffset | double | Yes | horizontal offset this frame will scroll, which may or may not be reached. |
+| yOffset | double | Yes | vertical offset this frame will scroll, which may or may not be reached. |
+| scrollState | [ScrollState](../arkts-components/arkts-arkui-scrollstate-e.md) | Yes | current scroll state. |
+| scrollSource | [ScrollSource](arkts-arkui-scrollsource-e.md) | Yes | source of current scroll. |
 
 **Return value:**
 

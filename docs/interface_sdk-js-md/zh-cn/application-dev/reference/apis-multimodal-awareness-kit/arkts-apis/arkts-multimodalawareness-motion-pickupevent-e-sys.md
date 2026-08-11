@@ -1,6 +1,6 @@
 # PickupEvent（系统接口）
 
-Enum for pickup event.
+拾起事件枚举。
 
 **起始版本：** 26.0.0
 
@@ -18,7 +18,7 @@ Enum for pickup event.
 PICKED_UP = 0
 ```
 
-Indicates the pickup motion is detected(the device is being lifted).
+表示检测到拾起动作（设备正在被拿起）。
 
 **起始版本：** 26.0.0
 

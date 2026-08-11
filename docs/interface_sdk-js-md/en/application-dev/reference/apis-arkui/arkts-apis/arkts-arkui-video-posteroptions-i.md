@@ -1,6 +1,6 @@
 # PosterOptions
 
-用于描述当前视频是否配置首帧送显。
+Defines the video poster options.
 
 **Since:** 23
 
@@ -16,7 +16,7 @@
 contentTransitionEffect?: ContentTransitionEffect
 ```
 
-当前视频的预览图内容变化时的转场动效。配置showFirstFrame为true（即配置开启首帧送显时），或未配置有效的VideoOptions的previewUri时，该字段不生效。默认值：ContentTransitionEffect.IDENTITY。设置为undefined或null时，取值为ContentTransitionEffect.IDENTITY。
+Animation effect when the poster image content changes.
 
 **Type:** [ContentTransitionEffect](../arkts-components/arkts-arkui-contenttransitioneffect-c.md)
 
@@ -38,7 +38,7 @@ contentTransitionEffect?: ContentTransitionEffect
 showFirstFrame?: boolean
 ```
 
-当前视频是否配置首帧送显，当开启首帧送显时，VideoOptions中的previewUri字段不生效。true：开启首帧送显；false：关闭首帧送显。默认值：false
+Whether to display the first frame of video on prepared status of AVPlayer.
 
 **Type:** boolean
 

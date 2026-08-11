@@ -1,6 +1,6 @@
 # SizeInVP
 
-窗口大小，单位为vp。
+Describes the window size, in vp.
 
 **Since:** 23
 
@@ -22,7 +22,7 @@ import { window } from 'kits/@kit.ArkUI';
 height: double
 ```
 
-窗口高度，单位为vp，该参数为浮点数。
+Window height, in vp. The value is a floating-point number.
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：double
 
@@ -42,7 +42,7 @@ height: double
 width: double
 ```
 
-窗口宽度，单位为vp，该参数为浮点数。
+Window width, in vp. The value is a floating-point number.
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：double
 

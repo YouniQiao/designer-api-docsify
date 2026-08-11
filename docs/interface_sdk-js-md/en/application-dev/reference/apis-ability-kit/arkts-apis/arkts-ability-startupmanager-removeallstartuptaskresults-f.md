@@ -12,7 +12,7 @@ import { startupManager } from 'kits/@kit.AbilityKit';
 function removeAllStartupTaskResults(): void
 ```
 
-删除所有启动任务结果。如果存在so预加载任务，则将对应so文件置为未加载状态。对于缓存中已加载的so文件，不会被移除。
+Removes all startup task results.If there are preloading tasks for .so files, the corresponding .so files is set to the unloaded state. However, .so files that have already been loaded in the cache will not be removed.
 
 **Since:** 12
 

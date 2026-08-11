@@ -12,7 +12,7 @@ import { fastbuffer } from 'kits/@kit.ArkTS';
 function alloc(size: number, fill?: string | FastBuffer | number, encoding?: BufferEncoding): FastBuffer
 ```
 
-创建指定字节长度的FastBuffer对象并初始化。调用后，FastBuffer对象的每个字节将被填充为指定的fill值，未指定fill时默认填充为0。
+Allocates a new FastBuffer for a fixed size bytes. If fill is undefined, the FastBuffer will be zero-filled.
 
 **Since:** 20
 
@@ -28,15 +28,15 @@ function alloc(size: number, fill?: string | FastBuffer | number, encoding?: Buf
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| size | number | Yes | 指定的FastBuffer对象长度，单位：字节。取值范围：0 <= size <= UINT32_MAX。 |
-| fill | string \| FastBuffer \| number | No | 填充至新缓冲区的值，默认值：0。 |
-| encoding | [BufferEncoding](arkts-arkts-fastbuffer-bufferencoding-t.md) | No | 编码格式（当`fill`为string时，才有意义）。默认值：'utf8'。传入无法识别的encoding会抛出TypeError。 |
+| size | number | Yes | The desired size (in bytes) of the new FastBuffer |
+| fill | string \| FastBuffer \| number | No | fill [fill=0] A value to pre-fill the new FastBuffer with |
+| encoding | [BufferEncoding](arkts-arkts-fastbuffer-bufferencoding-t.md) | No | encoding [encoding='utf8'] If `fill` is a string, this is its encoding |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [FastBuffer](arkts-arkts-fastbuffer-fastbuffer-c.md) | 返回一个FastBuffer对象。 |
+| [FastBuffer](arkts-arkts-fastbuffer-fastbuffer-c.md) | Return a new allocated FastBuffer |
 
 ## Examples
 

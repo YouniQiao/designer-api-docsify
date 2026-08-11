@@ -10,12 +10,6 @@
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
-## 导入模块
-
-```TypeScript
-import { DialogButtonOrientation, DialogState, DialogResult, DialogBaseController, DialogBaseAlignment, DialogDismissal } from 'kits/@kit.ArkUI';
-```
-
 ## onDidAppear
 
 ```TypeScript
@@ -220,7 +214,7 @@ backgroundEffect?: BackgroundEffectOptions
 
 带选项的背景效果。
 
-**类型：** [BackgroundEffectOptions](../arkts-components/arkts-arkui-backgroundeffectoptions-i.md)
+**类型：** [BackgroundEffectOptions](arkts-arkui-common-backgroundeffectoptions-i.md)
 
 **起始版本：** 26.1.0
 
@@ -290,7 +284,7 @@ borderStyle?: BorderStyle | EdgeStyles
 
 对话框边框样式。
 
-**类型：** [BorderStyle](arkts-arkui-enums-borderstyle-e.md) \| EdgeStyles
+**类型：** [BorderStyle](arkts-arkui-borderstyle-e.md) \| EdgeStyles
 
 **默认值：** BorderStyle.Solid
 
@@ -360,7 +354,7 @@ dialogTransition?: TransitionEffect
 
 用于打开/关闭对话框内容区域的对话框过渡动效参数。
 
-**类型：** [TransitionEffect](arkts-arkui-common-transitioneffect-c.md)
+**类型：** [TransitionEffect](../arkts-components/arkts-arkui-transitioneffect-c.md)
 
 **起始版本：** 26.1.0
 
@@ -500,7 +494,7 @@ immersiveMode?: ImmersiveMode
 
 页面级对话框蒙层效果。
 
-**类型：** [ImmersiveMode](arkts-arkui-promptaction-immersivemode-e.md)
+**类型：** [ImmersiveMode](arkts-arkui-immersivemode-t.md)
 
 **默认值：** ImmersiveMode.DEFAULT
 
@@ -710,7 +704,7 @@ maskTransition?: TransitionEffect
 
 用于打开/关闭遮罩的蒙层过渡动效参数。
 
-**类型：** [TransitionEffect](arkts-arkui-common-transitioneffect-c.md)
+**类型：** [TransitionEffect](../arkts-components/arkts-arkui-transitioneffect-c.md)
 
 **起始版本：** 26.1.0
 
@@ -732,7 +726,7 @@ offset?: Offset
 
 对话框相对于对齐位置的偏移。
 
-**类型：** [Offset](arkts-arkui-componentutils-offset-i.md)
+**类型：** [Offset](arkts-arkui-units-offset-i.md)
 
 **起始版本：** 26.1.0
 

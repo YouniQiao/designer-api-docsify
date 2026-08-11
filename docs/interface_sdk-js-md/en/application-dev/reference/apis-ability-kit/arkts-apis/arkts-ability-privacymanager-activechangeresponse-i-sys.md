@@ -1,6 +1,6 @@
 # ActiveChangeResponse (System API)
 
-表示某次权限使用状态变化的详情。
+Defines the detailed permission usage information.
 
 **Since:** 9
 
@@ -24,7 +24,7 @@ import { privacyManager } from 'kits/@kit.AbilityKit';
 activeStatus: PermissionActiveStatus
 ```
 
-权限使用状态变化类型。
+Permission usage status.
 
 **Type:** [PermissionActiveStatus](arkts-ability-privacymanager-permissionactivestatus-e-sys.md)
 
@@ -44,9 +44,9 @@ activeStatus: PermissionActiveStatus
 callingTokenId?: int
 ```
 
-接口调用方的应用身份标识，当activeStatus为INACTIVE时该值无效。
+Identity of the caller application. This field is invalid when **activeStatus** is **INACTIVE**.
 
-默认值：0。
+Default value: **0**.
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
@@ -66,7 +66,7 @@ callingTokenId?: int
 deviceId: string
 ```
 
-权限使用状态发生变化时所在设备的ID。
+ID of the device where the permission usage status change occurred.
 
 **Type:** string
 
@@ -86,7 +86,7 @@ deviceId: string
 enhancedIdentity?: string
 ```
 
-扩展身份，用于标识调用方的附加身份信息。当需要区分同一应用下不同调用来源的权限使用记录时返回此字段。最大长度为48。默认值：空字符串。
+Extension identity, used to identify additional identity information of the caller. This field is returned when it is necessary to distinguish permission usage records from different call sources within the same application.The maximum length is 48. Default value: Empty string.
 
 **Type:** string
 
@@ -108,7 +108,7 @@ enhancedIdentity?: string
 permissionName: Permissions
 ```
 
-权限使用状态发生变化的权限名。
+Name of the permission whose usage status has changed.
 
 **Type:** [Permissions](arkts-ability-permissions-t.md)
 
@@ -128,7 +128,7 @@ permissionName: Permissions
 tokenId: int
 ```
 
-被订阅的应用身份标识。
+Token ID of the application whose permission usage changes are subscribed to.
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
@@ -148,9 +148,9 @@ tokenId: int
 usedType?: PermissionUsedType
 ```
 
-敏感权限使用类型，当activeStatus为INACTIVE时该值无效。
+Sensitive permission usage type. This value is invalid when activeStatus is INACTIVE.
 
-默认值：NORMAL_TYPE。
+Default value: NORMAL_TYPE.
 
 **Type:** [PermissionUsedType](arkts-ability-privacymanager-permissionusedtype-e-sys.md)
 

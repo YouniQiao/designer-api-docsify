@@ -1,8 +1,9 @@
 # ShortcutInfo
 
-> **说明：**
+> **NOTE：**
 > 
-> 从API version 7开始支持，从API version 9开始废弃，建议使用[bundleManager-ShortcutInfo](arkts-ability-shortcutinfo-shortcutinfo-depr-i.md)替代。
+> This API has been supported since API version 7 and deprecated since API version 9. You are advised to use
+> [bundleManager-ShortcutInfo](arkts-ability-shortcutinfo-shortcutinfo-depr-i.md) instead.
 
 **Since:** 7
 
@@ -22,7 +23,7 @@
 readonly bundleName: string
 ```
 
-包含该快捷方式的Bundle名称。
+Name of the bundle that contains the shortcut.
 
 **Type:** string
 
@@ -44,7 +45,7 @@ readonly bundleName: string
 readonly disableMessage: string
 ```
 
-快捷方式的禁用消息。
+Message displayed when the shortcut is disabled.
 
 **Type:** string
 
@@ -64,7 +65,7 @@ readonly disableMessage: string
 readonly hostAbility: string
 ```
 
-快捷方式的本地Ability信息。
+Local ability information of the shortcut.
 
 **Type:** string
 
@@ -86,7 +87,7 @@ readonly hostAbility: string
 readonly icon: string
 ```
 
-快捷方式的图标。
+Icon of the shortcut.
 
 **Type:** string
 
@@ -108,7 +109,7 @@ readonly icon: string
 readonly iconId: number
 ```
 
-快捷方式的图标ID。
+Icon ID of the shortcut.
 
 **Type:** number
 
@@ -130,7 +131,7 @@ readonly iconId: number
 readonly id: string
 ```
 
-快捷方式所属应用程序的ID。
+ID of the application to which the shortcut belongs.
 
 **Type:** string
 
@@ -152,7 +153,7 @@ readonly id: string
 readonly isEnabled?: boolean
 ```
 
-是否启用快捷方式，取值为true表示启用快捷方式，取值为false表示停用快捷方式。
+Whether the shortcut is enabled. **true** if enabled, **false** otherwise.
 
 **Type:** boolean
 
@@ -176,7 +177,7 @@ readonly isEnabled?: boolean
 readonly isHomeShortcut?: boolean
 ```
 
-快捷方式是否为静态，取值为true表示是静态的快捷方式，取值为false表示不是静态的快捷方式。
+Whether the shortcut is static. **true** if static, **false** otherwise.
 
 **Type:** boolean
 
@@ -200,7 +201,7 @@ readonly isHomeShortcut?: boolean
 readonly isStatic?: boolean
 ```
 
-快捷方式是否为静态，取值为true表示是静态的快捷方式，取值为false表示不是静态的快捷方式。
+Whether the shortcut is static. **true** if static, **false** otherwise.
 
 **Type:** boolean
 
@@ -224,7 +225,7 @@ readonly isStatic?: boolean
 readonly label: string
 ```
 
-快捷方式的名称。
+Name of the shortcut.
 
 **Type:** string
 
@@ -246,7 +247,7 @@ readonly label: string
 readonly labelId: number
 ```
 
-快捷方式的名称ID。
+Name ID of the shortcut.
 
 **Type:** number
 
@@ -268,7 +269,7 @@ readonly labelId: number
 readonly wants: Array<ShortcutWant>
 ```
 
-快捷方式意图列表。
+Want list for the shortcut.
 
 **Type:** Array&lt;ShortcutWant&gt;
 

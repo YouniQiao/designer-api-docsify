@@ -1,11 +1,5 @@
 # getRemoteAbilityInfo（系统接口）
 
-## 导入模块
-
-```TypeScript
-import { distributedBundleManager } from 'kits/@kit.AbilityKit';
-```
-
 ## getRemoteAbilityInfo
 
 ```TypeScript
@@ -37,16 +31,18 @@ function getRemoteAbilityInfo(elementName: ElementName, callback: AsyncCallback<
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types. |
-| 801 | Capability not supported. |
-| 17700027 | The distributed service is not running. |
-| 201 | Permission denied. |
-| 17700007 | The specified device ID is not found. |
-| 202 | Permission denied, non-system app called system api. |
-| 17700003 | The specified ability name is not found. |
-| 17700001 | The specified bundle name is not found. |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types. |
+| [801](../../errorcode-universal.md#801-该设备不支持此api) | Capability not supported. |
+| [17700027](../errorcode-bundle.md#17700027-分布式服务未启动) | The distributed service is not running. |
+| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
+| [17700007](../errorcode-bundle.md#17700007-输入的设备id有误) | The specified device ID is not found. |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission denied, non-system app called system api. |
+| [17700003](../errorcode-bundle.md#17700003-指定的abilityname不存在) | The specified ability name is not found. |
+| [17700001](../errorcode-bundle.md#17700001-指定的bundlename不存在) | The specified bundle name is not found. |
 
 ## 示例
+
+ArkTS-Dyn示例:
 
 ```TypeScript
 import { distributedBundleManager } from '@kit.AbilityKit';
@@ -59,6 +55,35 @@ try {
             bundleName: 'com.example.application',
             abilityName: 'EntryAbility'
         }, (err: BusinessError, data: distributedBundleManager.RemoteAbilityInfo) => {
+            if (err) {
+                console.error(`Operation failed: error code is ${err.code}  and error message is ${err.message}`);
+            } else {
+                console.info('Operation succeed:' + JSON.stringify(data));
+            }
+        });
+} catch (err) {
+    let code = (err as BusinessError).code;
+    let message = (err as BusinessError).message;
+    console.error(`Operation failed: error code is ${code}  and error message is ${message}`);
+}
+```
+
+ArkTS-Sta示例:
+
+```TypeScript
+'use static'
+
+import { distributedBundleManager } from '@kit.AbilityKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+// 开发者需根据实际工程更新deviceId、bundleName和abilityName。
+try {
+    distributedBundleManager.getRemoteAbilityInfo(
+        {
+            deviceId: '1',
+            bundleName: 'com.example.application',
+            abilityName: 'EntryAbility'
+        }, (err: BusinessError | null, data: distributedBundleManager.RemoteAbilityInfo | undefined) => {
             if (err) {
                 console.error(`Operation failed: error code is ${err.code}  and error message is ${err.message}`);
             } else {
@@ -109,16 +134,18 @@ function getRemoteAbilityInfo(elementName: ElementName): Promise<RemoteAbilityIn
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types. |
-| 801 | Capability not supported. |
-| 17700027 | The distributed service is not running. |
-| 201 | Permission denied. |
-| 17700007 | The specified device ID is not found. |
-| 202 | Permission denied, non-system app called system api. |
-| 17700003 | The specified ability name is not found. |
-| 17700001 | The specified bundle name is not found. |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types. |
+| [801](../../errorcode-universal.md#801-该设备不支持此api) | Capability not supported. |
+| [17700027](../errorcode-bundle.md#17700027-分布式服务未启动) | The distributed service is not running. |
+| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
+| [17700007](../errorcode-bundle.md#17700007-输入的设备id有误) | The specified device ID is not found. |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission denied, non-system app called system api. |
+| [17700003](../errorcode-bundle.md#17700003-指定的abilityname不存在) | The specified ability name is not found. |
+| [17700001](../errorcode-bundle.md#17700001-指定的bundlename不存在) | The specified bundle name is not found. |
 
 ## 示例
+
+ArkTS-Dyn示例:
 
 ```TypeScript
 import { distributedBundleManager } from '@kit.AbilityKit';
@@ -134,6 +161,33 @@ try {
             console.info('Operation succeed:' + JSON.stringify(data));
         }).catch((err: BusinessError) => {
             console.error(`Operation failed: error code is ${err.code}  and error message is ${err.message}`);
+        });
+} catch (err) {
+    let code = (err as BusinessError).code;
+    let message = (err as BusinessError).message;
+    console.error(`Operation failed: error code is ${code}  and error message is ${message}`);
+}
+```
+
+ArkTS-Sta示例:
+
+```TypeScript
+'use static'
+
+import { distributedBundleManager } from '@kit.AbilityKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+// 开发者需根据实际工程更新deviceId、bundleName和abilityName。
+try {
+    distributedBundleManager.getRemoteAbilityInfo(
+        {
+            deviceId: '1',
+            bundleName: 'com.example.application',
+            abilityName: 'EntryAbility'
+        }).then((data: distributedBundleManager.RemoteAbilityInfo) => {
+            console.info('Operation succeed:' + JSON.stringify(data));
+        }).catch((err: Error) => {
+            console.error(`Operation failed: error code is ${(err as BusinessError).code}  and error message is ${(err as BusinessError).message}`);
         });
 } catch (err) {
     let code = (err as BusinessError).code;
@@ -174,16 +228,18 @@ function getRemoteAbilityInfo(elementNames: Array<ElementName>, callback: AsyncC
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types. |
-| 801 | Capability not supported. |
-| 17700027 | The distributed service is not running. |
-| 201 | Permission denied. |
-| 17700007 | The specified device ID is not found. |
-| 202 | Permission denied, non-system app called system api. |
-| 17700003 | The specified ability name is not found. |
-| 17700001 | The specified bundle name is not found. |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types. |
+| [801](../../errorcode-universal.md#801-该设备不支持此api) | Capability not supported. |
+| [17700027](../errorcode-bundle.md#17700027-分布式服务未启动) | The distributed service is not running. |
+| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
+| [17700007](../errorcode-bundle.md#17700007-输入的设备id有误) | The specified device ID is not found. |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission denied, non-system app called system api. |
+| [17700003](../errorcode-bundle.md#17700003-指定的abilityname不存在) | The specified ability name is not found. |
+| [17700001](../errorcode-bundle.md#17700001-指定的bundlename不存在) | The specified bundle name is not found. |
 
 ## 示例
+
+ArkTS-Dyn示例:
 
 ```TypeScript
 import { distributedBundleManager } from '@kit.AbilityKit';
@@ -203,6 +259,44 @@ try {
                 abilityName: 'EntryAbility'
             }
         ], (err: BusinessError, data: distributedBundleManager.RemoteAbilityInfo[]) => {
+          if (err) {
+            console.error(`Operation failed: error code is ${err.code}  and error message is ${err.message}`);
+          } else {
+            console.info('Operation succeed:' + JSON.stringify(data));
+          }
+        });
+} catch (err) {
+    let code = (err as BusinessError).code;
+    let message = (err as BusinessError).message;
+    console.error(`Operation failed: error code is ${code}  and error message is ${message}`);
+}
+```
+
+ArkTS-Sta示例:
+
+```TypeScript
+'use static'
+
+import { distributedBundleManager } from '@kit.AbilityKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+import { bundleManager } from '@kit.AbilityKit';
+
+// 开发者需根据实际工程更新deviceId、bundleName和abilityName。
+let elementNames: Array<bundleManager.ElementName> = [
+    {
+        deviceId: '1',
+        bundleName: 'com.example.application1',
+        abilityName: 'EntryAbility1'
+    },
+    {
+        deviceId: '1',
+        bundleName: 'com.example.application2',
+        abilityName: 'EntryAbility'
+    }
+]
+try {
+    distributedBundleManager.getRemoteAbilityInfo(
+        elementNames, (err: BusinessError | null, data: distributedBundleManager.RemoteAbilityInfo[] | undefined) => {
           if (err) {
             console.error(`Operation failed: error code is ${err.code}  and error message is ${err.message}`);
           } else {
@@ -253,16 +347,18 @@ function getRemoteAbilityInfo(elementNames: Array<ElementName>): Promise<Array<R
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types. |
-| 801 | Capability not supported. |
-| 17700027 | The distributed service is not running. |
-| 201 | Permission denied. |
-| 17700007 | The specified device ID is not found. |
-| 202 | Permission denied, non-system app called system api. |
-| 17700003 | The specified ability name is not found. |
-| 17700001 | The specified bundle name is not found. |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types. |
+| [801](../../errorcode-universal.md#801-该设备不支持此api) | Capability not supported. |
+| [17700027](../errorcode-bundle.md#17700027-分布式服务未启动) | The distributed service is not running. |
+| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
+| [17700007](../errorcode-bundle.md#17700007-输入的设备id有误) | The specified device ID is not found. |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission denied, non-system app called system api. |
+| [17700003](../errorcode-bundle.md#17700003-指定的abilityname不存在) | The specified ability name is not found. |
+| [17700001](../errorcode-bundle.md#17700001-指定的bundlename不存在) | The specified bundle name is not found. |
 
 ## 示例
+
+ArkTS-Dyn示例:
 
 ```TypeScript
 import { distributedBundleManager } from '@kit.AbilityKit';
@@ -285,6 +381,41 @@ try {
             console.info('Operation succeed:' + JSON.stringify(data));
         }).catch((err: BusinessError) => {
             console.error(`Operation failed: error code is ${err.code}  and error message is ${err.message}`);
+        });
+} catch (err) {
+    let code = (err as BusinessError).code;
+    let message = (err as BusinessError).message;
+    console.error(`Operation failed: error code is ${code}  and error message is ${message}`);
+}
+```
+
+ArkTS-Sta示例:
+
+```TypeScript
+'use static'
+
+import { distributedBundleManager } from '@kit.AbilityKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+import { bundleManager } from '@kit.AbilityKit';
+
+// 开发者需根据实际工程更新deviceId、bundleName和abilityName。
+let elementNames: Array<bundleManager.ElementName> = [
+    {
+        deviceId: '1',
+        bundleName: 'com.example.application1',
+        abilityName: 'EntryAbility1'
+    },
+    {
+        deviceId: '1',
+        bundleName: 'com.example.application2',
+        abilityName: 'EntryAbility'
+    }
+]
+try {
+    distributedBundleManager.getRemoteAbilityInfo(elementNames).then((data: distributedBundleManager.RemoteAbilityInfo[]) => {
+            console.info('Operation succeed:' + JSON.stringify(data));
+        }).catch((err: Error) => {
+            console.error(`Operation failed: error code is ${(err as BusinessError).code}  and error message is ${(err as BusinessError).message}`);
         });
 } catch (err) {
     let code = (err as BusinessError).code;
@@ -326,16 +457,18 @@ function getRemoteAbilityInfo(elementName: ElementName, locale: string, callback
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types. |
-| 801 | Capability not supported. |
-| 17700027 | The distributed service is not running. |
-| 201 | Permission denied. |
-| 17700007 | The specified device ID is not found. |
-| 202 | Permission denied, non-system app called system api. |
-| 17700003 | The specified ability name is not found. |
-| 17700001 | The specified bundle name is not found. |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types. |
+| [801](../../errorcode-universal.md#801-该设备不支持此api) | Capability not supported. |
+| [17700027](../errorcode-bundle.md#17700027-分布式服务未启动) | The distributed service is not running. |
+| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
+| [17700007](../errorcode-bundle.md#17700007-输入的设备id有误) | The specified device ID is not found. |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission denied, non-system app called system api. |
+| [17700003](../errorcode-bundle.md#17700003-指定的abilityname不存在) | The specified ability name is not found. |
+| [17700001](../errorcode-bundle.md#17700001-指定的bundlename不存在) | The specified bundle name is not found. |
 
 ## 示例
+
+ArkTS-Dyn示例:
 
 ```TypeScript
 import { distributedBundleManager } from '@kit.AbilityKit';
@@ -348,6 +481,35 @@ try {
             bundleName: 'com.example.application',
             abilityName: 'EntryAbility'
         }, 'zh-Hans-CN', (err: BusinessError, data: distributedBundleManager.RemoteAbilityInfo) => {
+          if (err) {
+            console.error(`Operation failed: error code is ${err.code}  and error message is ${err.message}`);
+          } else {
+            console.info('Operation succeed:' + JSON.stringify(data));
+          }
+        });
+} catch (err) {
+    let code = (err as BusinessError).code;
+    let message = (err as BusinessError).message;
+    console.error(`Operation failed: error code is ${code}  and error message is ${message}`);
+}
+```
+
+ArkTS-Sta示例:
+
+```TypeScript
+'use static'
+
+import { distributedBundleManager } from '@kit.AbilityKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+// 开发者需根据实际工程更新deviceId、bundleName和abilityName。
+try {
+    distributedBundleManager.getRemoteAbilityInfo(
+        {
+            deviceId: '1',
+            bundleName: 'com.example.application',
+            abilityName: 'EntryAbility'
+        }, 'zh-Hans-CN', (err: BusinessError | null, data: distributedBundleManager.RemoteAbilityInfo | undefined) => {
           if (err) {
             console.error(`Operation failed: error code is ${err.code}  and error message is ${err.message}`);
           } else {
@@ -399,16 +561,18 @@ function getRemoteAbilityInfo(elementName: ElementName, locale: string): Promise
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types. |
-| 801 | Capability not supported. |
-| 17700027 | The distributed service is not running. |
-| 201 | Permission denied. |
-| 17700007 | The specified device ID is not found. |
-| 202 | Permission denied, non-system app called system api. |
-| 17700003 | The specified ability name is not found. |
-| 17700001 | The specified bundle name is not found. |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types. |
+| [801](../../errorcode-universal.md#801-该设备不支持此api) | Capability not supported. |
+| [17700027](../errorcode-bundle.md#17700027-分布式服务未启动) | The distributed service is not running. |
+| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
+| [17700007](../errorcode-bundle.md#17700007-输入的设备id有误) | The specified device ID is not found. |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission denied, non-system app called system api. |
+| [17700003](../errorcode-bundle.md#17700003-指定的abilityname不存在) | The specified ability name is not found. |
+| [17700001](../errorcode-bundle.md#17700001-指定的bundlename不存在) | The specified bundle name is not found. |
 
 ## 示例
+
+ArkTS-Dyn示例:
 
 ```TypeScript
 import { distributedBundleManager } from '@kit.AbilityKit';
@@ -424,6 +588,33 @@ try {
             console.info('Operation succeed:' + JSON.stringify(data));
         }).catch((err: BusinessError) => {
             console.error(`Operation failed: error code is ${err.code}  and error message is ${err.message}`);
+        });
+} catch (err) {
+    let code = (err as BusinessError).code;
+    let message = (err as BusinessError).message;
+    console.error(`Operation failed: error code is ${code}  and error message is ${message}`);
+}
+```
+
+ArkTS-Sta示例:
+
+```TypeScript
+'use static'
+
+import { distributedBundleManager } from '@kit.AbilityKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+// 开发者需根据实际工程更新deviceId、bundleName和abilityName。
+try {
+    distributedBundleManager.getRemoteAbilityInfo(
+        {
+            deviceId: '1',
+            bundleName: 'com.example.application',
+            abilityName: 'EntryAbility'
+        }, 'zh-Hans-CN').then((data: distributedBundleManager.RemoteAbilityInfo) => {
+            console.info('Operation succeed:' + JSON.stringify(data));
+        }).catch((err: Error) => {
+            console.error(`Operation failed: error code is ${(err as BusinessError).code}  and error message is ${(err as BusinessError).message}`);
         });
 } catch (err) {
     let code = (err as BusinessError).code;
@@ -465,16 +656,18 @@ function getRemoteAbilityInfo(elementNames: Array<ElementName>, locale: string, 
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types. |
-| 801 | Capability not supported. |
-| 17700027 | The distributed service is not running. |
-| 201 | Permission denied. |
-| 17700007 | The specified device ID is not found. |
-| 202 | Permission denied, non-system app called system api. |
-| 17700003 | The specified ability name is not found. |
-| 17700001 | The specified bundle name is not found. |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types. |
+| [801](../../errorcode-universal.md#801-该设备不支持此api) | Capability not supported. |
+| [17700027](../errorcode-bundle.md#17700027-分布式服务未启动) | The distributed service is not running. |
+| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
+| [17700007](../errorcode-bundle.md#17700007-输入的设备id有误) | The specified device ID is not found. |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission denied, non-system app called system api. |
+| [17700003](../errorcode-bundle.md#17700003-指定的abilityname不存在) | The specified ability name is not found. |
+| [17700001](../errorcode-bundle.md#17700001-指定的bundlename不存在) | The specified bundle name is not found. |
 
 ## 示例
+
+ArkTS-Dyn示例:
 
 ```TypeScript
 import { distributedBundleManager } from '@kit.AbilityKit';
@@ -494,6 +687,44 @@ try {
                 abilityName: 'EntryAbility'
             }
         ], 'zh-Hans-CN', (err: BusinessError, data: distributedBundleManager.RemoteAbilityInfo[]) => {
+          if (err) {
+           console.error(`Operation failed: error code is ${err.code}  and error message is ${err.message}`);
+          } else {
+            console.info('Operation succeed:' + JSON.stringify(data));
+          }
+        });
+} catch (err) {
+    let code = (err as BusinessError).code;
+    let message = (err as BusinessError).message;
+    console.error(`Operation failed: error code is ${code}  and error message is ${message}`);
+}
+```
+
+ArkTS-Sta示例:
+
+```TypeScript
+'use static'
+
+import { distributedBundleManager } from '@kit.AbilityKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+import { bundleManager } from '@kit.AbilityKit';
+
+// 开发者需根据实际工程更新deviceId、bundleName和abilityName。
+let elementNames: Array<bundleManager.ElementName> = [
+    {
+        deviceId: '1',
+        bundleName: 'com.example.application1',
+        abilityName: 'EntryAbility1'
+    },
+    {
+        deviceId: '1',
+        bundleName: 'com.example.application2',
+        abilityName: 'EntryAbility'
+    }
+]
+try {
+    distributedBundleManager.getRemoteAbilityInfo(
+        elementNames, 'zh-Hans-CN', (err: BusinessError | null, data: distributedBundleManager.RemoteAbilityInfo[] | undefined) => {
           if (err) {
            console.error(`Operation failed: error code is ${err.code}  and error message is ${err.message}`);
           } else {
@@ -545,16 +776,18 @@ function getRemoteAbilityInfo(elementNames: Array<ElementName>, locale: string):
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types. |
-| 801 | Capability not supported. |
-| 17700027 | The distributed service is not running. |
-| 201 | Permission denied. |
-| 17700007 | The specified device ID is not found. |
-| 202 | Permission denied, non-system app called system api. |
-| 17700003 | The specified ability name is not found. |
-| 17700001 | The specified bundle name is not found. |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types. |
+| [801](../../errorcode-universal.md#801-该设备不支持此api) | Capability not supported. |
+| [17700027](../errorcode-bundle.md#17700027-分布式服务未启动) | The distributed service is not running. |
+| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
+| [17700007](../errorcode-bundle.md#17700007-输入的设备id有误) | The specified device ID is not found. |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission denied, non-system app called system api. |
+| [17700003](../errorcode-bundle.md#17700003-指定的abilityname不存在) | The specified ability name is not found. |
+| [17700001](../errorcode-bundle.md#17700001-指定的bundlename不存在) | The specified bundle name is not found. |
 
 ## 示例
+
+ArkTS-Dyn示例:
 
 ```TypeScript
 import { distributedBundleManager } from '@kit.AbilityKit';
@@ -577,6 +810,42 @@ try {
             console.info('Operation succeed:' + JSON.stringify(data));
         }).catch((err: BusinessError) => {
             console.error(`Operation failed: error code is ${err.code}  and error message is ${err.message}`);
+        });
+} catch (err) {
+    let code = (err as BusinessError).code;
+    let message = (err as BusinessError).message;
+    console.error(`Operation failed: error code is ${code}  and error message is ${message}`);
+}
+```
+
+ArkTS-Sta示例:
+
+```TypeScript
+'use static'
+
+import { distributedBundleManager } from '@kit.AbilityKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+import { bundleManager } from '@kit.AbilityKit';
+
+// 开发者需根据实际工程更新deviceId、bundleName和abilityName。
+let elementNames: Array<bundleManager.ElementName> = [
+    {
+        deviceId: '1',
+        bundleName: 'com.example.application1',
+        abilityName: 'EntryAbility1'
+    },
+    {
+        deviceId: '1',
+        bundleName: 'com.example.application2',
+        abilityName: 'EntryAbility'
+    }
+]
+try {
+    distributedBundleManager.getRemoteAbilityInfo(
+        elementNames, 'zh-Hans-CN').then((data: distributedBundleManager.RemoteAbilityInfo[]) => {
+            console.info('Operation succeed:' + JSON.stringify(data));
+        }).catch((err: Error) => {
+            console.error(`Operation failed: error code is ${(err as BusinessError).code}  and error message is ${(err as BusinessError).message}`);
         });
 } catch (err) {
     let code = (err as BusinessError).code;

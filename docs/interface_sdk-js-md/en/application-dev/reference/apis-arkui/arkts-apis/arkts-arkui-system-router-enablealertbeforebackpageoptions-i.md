@@ -1,6 +1,6 @@
 # EnableAlertBeforeBackPageOptions
 
-定义EnableAlertBeforeBackPage选项。
+Defines the **EnableAlertBeforeBackPage** parameter.
 
 **Since:** 6
 
@@ -26,7 +26,7 @@ import { BackRouterOptions, DisableAlertBeforeBackPageOptions, RouterOptions, Ro
 cancel?: (errMsg: string) => void
 ```
 
-用户选择对话框取消按钮时触发，errMsg表示返回信息。
+Called when the **Cancel** button in the confirm dialog box is clicked. **errMsg** indicates the returned information.
 
 **Since:** 6
 
@@ -52,7 +52,7 @@ cancel?: (errMsg: string) => void
 complete?: () => void
 ```
 
-当对话框关闭时触发该回调。
+Called when the dialog box is closed.
 
 **Since:** 6
 
@@ -72,7 +72,7 @@ complete?: () => void
 success?: (errMsg: string) => void
 ```
 
-用户选择对话框确认按钮时触发，errMsg表示返回信息。
+Called when the **OK** button in the confirm dialog box is clicked. **errMsg** indicates the returned information.
 
 **Since:** 6
 
@@ -98,7 +98,7 @@ success?: (errMsg: string) => void
 message: string
 ```
 
-询问对话框内容。
+Content displayed in the confirm dialog box.
 
 **Type:** string
 

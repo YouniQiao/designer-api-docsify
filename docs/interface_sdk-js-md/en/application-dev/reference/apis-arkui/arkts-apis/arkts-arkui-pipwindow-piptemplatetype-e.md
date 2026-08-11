@@ -1,6 +1,6 @@
 # PiPTemplateType
 
-画中画模板类型枚举。
+Enumerates the PiP template types.
 
 **Since:** 11
 
@@ -16,7 +16,7 @@
 VIDEO_PLAY = 0
 ```
 
-表示将要切换为画中画播放的媒体类型是视频，系统依此加载视频播放模板，该模板默认存在播放/暂停控件。
+Video playback template. A PiP window will be started during video playback, and the video playback template will be loaded. The template contains the play/pause component by default.
 
 **Since:** 11
 
@@ -34,7 +34,7 @@ VIDEO_PLAY = 0
 VIDEO_CALL = 1
 ```
 
-表示将要切换为画中画播放的媒体类型是视频通话，系统依此加载视频通话模板。
+Video call template. A PiP window will be started during a video call, and the video call template will be loaded.
 
 **Since:** 11
 
@@ -52,7 +52,7 @@ VIDEO_CALL = 1
 VIDEO_MEETING = 2
 ```
 
-表示将要切换为画中画播放的媒体类型是视频会议，系统依此加载视频会议模板。
+Video meeting template. A PiP window will be started during a video meeting, and the video meeting template will be loaded.
 
 **Since:** 11
 
@@ -70,7 +70,7 @@ VIDEO_MEETING = 2
 VIDEO_LIVE = 3
 ```
 
-表示将要切换为画中画播放的媒体类型是直播，系统依此加载直播模板。
+Live template. A PiP window will be started during a live, and the live template is loaded.
 
 **Since:** 11
 

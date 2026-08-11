@@ -6,7 +6,7 @@
 function getArguments(): AbilityDelegatorArgs
 ```
 
-获取单元测试参数AbilityDelegatorArgs对象。
+Obtains the **AbilityDelegatorArgs** object of the application.
 
 **Since:** 8
 

@@ -1,11 +1,5 @@
 # getRemoteAbilityInfo（系统接口）
 
-## 导入模块
-
-```TypeScript
-import { distributedBundle } from 'kits/@kit.AbilityKit';
-```
-
 ## getRemoteAbilityInfo
 
 ```TypeScript

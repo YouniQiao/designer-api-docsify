@@ -12,7 +12,7 @@ import { power } from 'kits/@kit.BasicServicesKit';
 function rebootDevice(reason: string): void
 ```
 
-重启系统。
+Restarts the system.
 
 **Since:** 7
 
@@ -32,7 +32,7 @@ function rebootDevice(reason: string): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| reason | string | Yes | 重启原因。例如，“updater”表示重启后进入更新模式。如果未指定该参数，系统将在重启后进入正常模式。 |
+| reason | string | Yes | Indicates the restart reason. For example, "updater" indicates entering the updater mode after the restart. If the parameter is not specified, the system enters the normal mode after the restart. |
 
 ## Examples
 

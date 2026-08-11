@@ -1,6 +1,6 @@
 # StepCounterResponse
 
-计步传感器数据改变后的回调函数的响应对象，包含计步传感器重启后累计记录的步数数据。
+Callback invoked when the step counter sensor data changes.
 
 **Since:** 3
 
@@ -28,7 +28,7 @@ import { OnBodyStateResponse, subscribeAccelerometerOptions, ProximityResponse, 
 steps: number
 ```
 
-计步传感器重启后累计记录的步数。取值范围：大于等于0的整数，取值为实际上报物理量。传感器重启后步数从0重新开始累计。
+Number of counted steps after the sensor is restarted.
 
 **Type:** number
 

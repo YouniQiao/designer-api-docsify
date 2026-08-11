@@ -1,6 +1,6 @@
 # LastExitDetailInfo
 
-记录Ability所在进程上次退出时的关键运行信息。
+Describes the key runtime information of the process where the ability last exited.
 
 **Since:** 18
 
@@ -22,7 +22,7 @@ import { AbilityConstant } from 'kits/@kit.AbilityKit';
 exitMsg: string
 ```
 
-Ability上次退出时所在进程被kill的描述信息。
+Reason why the process was killed.
 
 **Type:** string
 
@@ -44,7 +44,7 @@ Ability上次退出时所在进程被kill的描述信息。
 exitSubReason: int
 ```
 
-Ability上次退出的子原因。
+Specific reason for the last exit of the ability.
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
@@ -66,7 +66,7 @@ Ability上次退出的子原因。
 killReason?: string
 ```
 
-Ability上次退出时的原因，取值详见[应用终止事件reason字段说明](../../../dfx/hiappevent-watcher-app-killed-events.md#reason字段说明)。
+Indecates kill reason message.
 
 **Type:** string
 
@@ -88,7 +88,7 @@ Ability上次退出时的原因，取值详见[应用终止事件reason字段说
 pid: int
 ```
 
-Ability上次退出所在进程的进程号。
+ID of the process where the ability last exited.
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
@@ -110,7 +110,7 @@ Ability上次退出所在进程的进程号。
 processName: string
 ```
 
-Ability上次退出所在进程的名称。
+Name of the process.
 
 **Type:** string
 
@@ -132,7 +132,7 @@ Ability上次退出所在进程的名称。
 processState?: appManager.ProcessState
 ```
 
-Ability上次退出时的进程状态。
+Process status of the ability when it last exited.
 
 **Type:** appManager.ProcessState
 
@@ -154,7 +154,7 @@ Ability上次退出时的进程状态。
 pss: int
 ```
 
-Ability上次退出时所在进程实际使用的物理内存大小，单位KB。
+Actual physical memory usage of the process, in KB.
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
@@ -176,7 +176,7 @@ Ability上次退出时所在进程实际使用的物理内存大小，单位KB�
 rss: int
 ```
 
-Ability上次退出时所在进程实际占用内存大小，单位KB。
+Actual memory usage of the process, in KB.
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
@@ -198,7 +198,7 @@ Ability上次退出时所在进程实际占用内存大小，单位KB。
 timestamp: long
 ```
 
-Ability上次退出时的时间戳。
+Exact time when the ability last exited.
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：long
 
@@ -220,7 +220,7 @@ Ability上次退出时的时间戳。
 uid: int
 ```
 
-Ability上次退出所在应用的UID。
+UID of the application.
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 

@@ -1,6 +1,6 @@
 # HoverEventParam
 
-当前设备与悬停状态相关的参数，包括设备的折叠状态、悬停状态、应用方向以及窗口模式枚举。
+Defines the Embed Data info.
 
 **Since:** 23
 
@@ -16,7 +16,7 @@
 appRotation: AppRotation
 ```
 
-当前应用方向。
+App rotation
 
 **Type:** [AppRotation](arkts-arkui-approtation-e.md)
 
@@ -36,7 +36,7 @@ appRotation: AppRotation
 foldStatus: FoldStatus
 ```
 
-当前设备的折叠状态。
+Folder state.
 
 **Type:** [FoldStatus](arkts-arkui-foldstatus-e.md)
 
@@ -56,7 +56,7 @@ foldStatus: FoldStatus
 isHoverMode: boolean
 ```
 
-当前是否为悬停态。设置为true时表示当前为悬停态，设置为false时表示当前为非悬停态。
+Is hover mode
 
 **Type:** boolean
 
@@ -76,7 +76,7 @@ isHoverMode: boolean
 windowStatusType: WindowStatusType
 ```
 
-窗口模式枚举。
+Window status type
 
 **Type:** [WindowStatusType](../arkts-components/arkts-arkui-windowstatustype-t.md)
 

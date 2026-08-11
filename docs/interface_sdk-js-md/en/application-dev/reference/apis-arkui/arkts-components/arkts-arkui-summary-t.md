@@ -4,7 +4,7 @@
 declare type Summary = import('../api/@ohos.data.unifiedDataChannel').default.Summary
 ```
 
-拖拽相关数据的简介。
+Provides a summary of drag-related data.
 
 **Since:** 10
 

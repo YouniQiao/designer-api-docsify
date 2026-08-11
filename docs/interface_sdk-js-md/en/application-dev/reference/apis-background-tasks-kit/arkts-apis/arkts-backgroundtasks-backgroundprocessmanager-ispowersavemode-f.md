@@ -12,7 +12,7 @@ import { backgroundProcessManager } from 'kits/@kit.BackgroundTasksKit';
 function isPowerSaveMode(pid: int): Promise<boolean>
 ```
 
-查询进程是否处于能效模式，使用Promise异步回调。
+Queries whether the process is in power saving mode. This API uses a promise to return the result.
 
 **Since:** 20
 
@@ -28,21 +28,21 @@ function isPowerSaveMode(pid: int): Promise<boolean>
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| pid | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | 进程号。 |
+| pid | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | Process ID. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;boolean&gt; | Promise对象。返回进程PID是否处于能效模式，返回true表示进程处于能效模式，返回false表示进程未处于能效模式。 |
+| Promise&lt;boolean&gt; | Promise used to return the query result. The value **true** means that the process is in power saving mode; the value **false** means the opposite. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 801 | Capability not supported. |
-| 31800002 | Parameter error. Possible causes: &lt;br&gt; 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; |
-| 201 | Permission denied. |
+| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. |
+| [31800002](../../apis-backgroundtasks-kit/errorcode-backgroundProcessManager.md#31800002-invalid-parameter) | Parameter error. Possible causes: &lt;br&gt; 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
 
 ## Examples
 

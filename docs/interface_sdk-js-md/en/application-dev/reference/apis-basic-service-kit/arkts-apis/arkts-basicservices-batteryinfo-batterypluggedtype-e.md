@@ -1,6 +1,6 @@
 # BatteryPluggedType
 
-表示连接的充电器类型的枚举。
+Enumerates charger types.
 
 **Since:** 23
 
@@ -16,7 +16,7 @@
 NONE
 ```
 
-表示未获取到连接充电器类型。
+Unknown charger type.
 
 **Since:** 23
 
@@ -32,7 +32,7 @@ NONE
 AC
 ```
 
-表示连接的充电器类型为交流充电器。
+AC charger.
 
 **Since:** 23
 
@@ -48,7 +48,7 @@ AC
 USB
 ```
 
-表示连接的充电器类型为USB。
+USB charger.
 
 **Since:** 23
 
@@ -64,7 +64,7 @@ USB
 WIRELESS
 ```
 
-表示连接的充电器类型为无线充电器。
+Wireless charger.
 
 **Since:** 23
 

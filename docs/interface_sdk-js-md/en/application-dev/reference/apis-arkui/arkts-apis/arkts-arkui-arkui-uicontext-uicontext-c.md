@@ -1,6 +1,6 @@
 # UIContext
 
-UIContext类
+class UIContext
 
 **Since:** 23
 
@@ -22,7 +22,23 @@ import { OverlayManager, FrameCallback, ResolvedUIContext, NodeRenderStateChange
 addLocalInputEventMonitor(eventMask: int, listener: InputEventListener): InputEventMonitor
 ```
 
-注册本地输入事件监视器。接口名中的“Local”表示监视器只在当前UIContext内有效。并且不影响其他UIContext实例。每个UIContext都维护自己独立的监视器列表。
+Registers a local input event monitor.
+
+The "Local" in the interface name indicates that the monitor is only valid within the current UIContext,and does not affect other UIContext instances. Each UIContext maintains its own independent list of monitors.
+
+Performance Warning: Do not perform time-consuming operations in the callback!
+
+Monitor Object Notes:  
+- The returned Monitor object is a unique identifier created by the system.  
+- Developers cannot actively construct or forge this object.  
+- Must save the returned monitor object reference for subsequent cancellation.  
+- It is recommended to use a variable to save it to avoid losing the reference.
+
+Usage Examples:```typescript// Monitor a single event type const monitor1 = uiContext.addLocalInputEventMonitor( InputEventSubTypeMask.LEFT_MOUSE_DOWN, (wrapper: RawInputEventWrapper) => { if (wrapper.isMouseEvent()) { const mouseEvent = wrapper.asMouseEvent(); console.log(`Mouse: (\${mouseEvent.windowX}, \${mouseEvent.windowY})`); return { action: InputEventInterceptAction.CONTINUE }; // Allow event to continue } return { action: InputEventInterceptAction.BLOCK }; // Block event });
+
+// Monitor multiple event types (using bitwise operations)const monitor2 = uiContext.addLocalInputEventMonitor( InputEventSubTypeMask.LEFT_MOUSE_DOWN | InputEventSubTypeMask.RIGHT_MOUSE_DOWN, (wrapper: RawInputEventWrapper) => { if (wrapper.isMouseEvent()) { const mouseEvent = wrapper.asMouseEvent()!; console.log(`Mouse button: \${mouseEvent.button}`); return { action: InputEventInterceptAction.BLOCK }; } return { action: InputEventInterceptAction.CONTINUE }; });
+
+// When unregistering the monitor, use the returned Monitor object uiContext.removeLocalInputEventMonitor(monitor1);uiContext.removeLocalInputEventMonitor(monitor2);```
 
 **Since:** 26.0.0
 
@@ -38,8 +54,8 @@ addLocalInputEventMonitor(eventMask: int, listener: InputEventListener): InputEv
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| eventMask | int | Yes | 事件类型掩码，指定要监视的事件类型 位运算。 |
-| listener | [InputEventListener](../arkts-components/arkts-arkui-inputeventlistener-t.md) | Yes | 事件监听器回调函数。 |
+| eventMask | int | Yes | Event type mask, specifying the types of events to monitor through bitwise operations. |
+| listener | [InputEventListener](../arkts-components/arkts-arkui-inputeventlistener-t.md) | Yes | Event listener callback function. |
 
 **Return value:**
 
@@ -78,7 +94,7 @@ Defining animation function
 animateToImmediately(param: AnimateParam, processor: VoidCallback): void
 ```
 
-通过 **UIContext** 对象提供提供显式动画立即下发功能。当多个属性动画同时加载时，您可以调用此 API 来立即执行由处理函数引起的视图状态变化的过渡动画。
+Define animation functions for immediate distribution.
 
 **Since:** 23
 
@@ -94,8 +110,8 @@ animateToImmediately(param: AnimateParam, processor: VoidCallback): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| param | [AnimateParam](../arkts-components/arkts-arkui-animateparam-i.md) | Yes | 设置动画效果相关参数 |
-| processor | [VoidCallback](arkts-arkui-voidcallback-t.md) | Yes | 指定显示动画的处理函数，在该函数中导致的状态变化系统会自动插入过渡动画。 |
+| param | [AnimateParam](../arkts-components/arkts-arkui-animateparam-i.md) | Yes | Set animation effect parameters. |
+| processor | [VoidCallback](arkts-arkui-voidcallback-t.md) | Yes | Specify the closure function that displays dynamic effects, and the system will automatically insert transition animations for state changes caused by the closure function. |
 
 ## bindTabsToNestedScrollable
 
@@ -154,7 +170,7 @@ Bind tabs to scrollable container component to automatically hide tab bar.
 closeBindSheet(bindSheetContent: ComponentContentBase): Promise<void>
 ```
 
-关闭BindSheet半模态.
+Close the BindSheet.
 
 **Since:** 23
 
@@ -170,7 +186,7 @@ closeBindSheet(bindSheetContent: ComponentContentBase): Promise<void>
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| bindSheetContent | [ComponentContentBase](arkts-arkui-componentcontent-componentcontentbase-c.md) | Yes | BindSheet半模态的内容 |
+| bindSheetContent | [ComponentContentBase](arkts-arkui-componentcontent-componentcontentbase-c.md) | Yes | The content of BindSheet. |
 
 **Return value:**
 
@@ -182,9 +198,9 @@ closeBindSheet(bindSheetContent: ComponentContentBase): Promise<void>
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 120001 | The bindSheetContent is incorrect. |
-| 401 | Parameter error. Possible causes: &lt;br&gt; 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameters types. &lt;br&gt; 3. Parameter verification failed. |
-| 120003 | The bindSheetContent cannot be found. |
+| [120001](../errorcode-bindSheet.md#120001-incorrect-bindsheetcontent) | The bindSheetContent is incorrect. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: &lt;br&gt; 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameters types. &lt;br&gt; 3. Parameter verification failed. |
+| [120003](../errorcode-bindSheet.md#120003-no-matching-modal-found) | The bindSheetContent cannot be found. |
 
 ## constructor
 
@@ -192,7 +208,7 @@ closeBindSheet(bindSheetContent: ComponentContentBase): Promise<void>
 constructor()
 ```
 
-UIContext 构造函数
+UIContext constructor
 
 **Since:** 24
 
@@ -238,12 +254,13 @@ Create an animator object for custom animation.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. Possible causes: &lt;br&gt; 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameters types. &lt;br&gt; 3. Parameter verification failed. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: &lt;br&gt; 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameters types. &lt;br&gt; 3. Parameter verification failed. |
 
 ## createUIContextWithoutWindow
 
 ```TypeScript
-static createUIContextWithoutWindow(context: common.UIAbilityContext | common.ExtensionContext) : UIContext | undefined
+static createUIContextWithoutWindow(
+    context: common.UIAbilityContext | common.ExtensionContext): UIContext | undefined
 ```
 
 Create a UI instance singleton without window and get its UIContext object.
@@ -254,7 +271,7 @@ Create a UI instance singleton without window and get its UIContext object.
 
 **Model restriction:** This API can be used only in the stage model.
 
-<!--Device-UIContext-static createUIContextWithoutWindow(context: common.UIAbilityContext | common.ExtensionContext) : UIContext | undefined--><!--Device-UIContext-static createUIContextWithoutWindow(context: common.UIAbilityContext | common.ExtensionContext) : UIContext | undefined-End-->
+<!--Device-UIContext-static createUIContextWithoutWindow(    context: common.UIAbilityContext | common.ExtensionContext): UIContext | undefined--><!--Device-UIContext-static createUIContextWithoutWindow(    context: common.UIAbilityContext | common.ExtensionContext): UIContext | undefined-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -274,8 +291,8 @@ Create a UI instance singleton without window and get its UIContext object.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 100001 | Internal error. @static |
-| 401 | Parameter error. Possible causes: &lt;br&gt; 1. The number of parameters is incorrect. &lt;br&gt; 2. Invalid parameter type of context. |
+| [100001](../errorcode-internal.md#100001-internal-error) | Internal error. @static |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: &lt;br&gt; 1. The number of parameters is incorrect. &lt;br&gt; 2. Invalid parameter type of context. |
 
 ## destroyUIContextWithoutWindow
 
@@ -332,7 +349,7 @@ Dispach keyboard event to the frameNode with inspector key.
 enableEventPassthrough(enabled: boolean | undefined, eventType: RawInputEventType): void
 ```
 
-是否启用或禁用事件直通。
+Whether to enable or disable event passthrough.
 
 **Since:** 26.0.0
 
@@ -348,8 +365,8 @@ enableEventPassthrough(enabled: boolean | undefined, eventType: RawInputEventTyp
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| enabled | boolean \| undefined | Yes | 启用或禁用事件直通。默认值为false。 |
-| eventType | [RawInputEventType](arkts-arkui-rawinputeventtype-e.md) | Yes | 原始输入事件的类型。 |
+| enabled | boolean \| undefined | Yes | enable or disable event passthrough. The default value is false. |
+| eventType | [RawInputEventType](arkts-arkui-rawinputeventtype-e.md) | Yes | the type of raw input event. |
 
 ## enableSwipeBack
 
@@ -357,7 +374,7 @@ enableEventPassthrough(enabled: boolean | undefined, eventType: RawInputEventTyp
 enableSwipeBack(enabled: boolean | undefined): void
 ```
 
-设置是否支持应用内横向滑动返回上一级。
+whether to enable or disable swipe to back event.
 
 **Since:** 23
 
@@ -373,7 +390,7 @@ enableSwipeBack(enabled: boolean | undefined): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| enabled | boolean \| undefined | Yes | 是否支持应用内横向滑动返回，默认值为true。&lt;br&gt;当值为true时，支持应用内横向滑动返回。 &lt;br&gt;当值为false时，不支持应用内横向滑动返回。 |
+| enabled | boolean \| undefined | Yes | enable or disable swipe to back event. |
 
 ## fp2px
 
@@ -411,7 +428,7 @@ Converts a value in fp units to a value in px.
 static getAllUIContexts(): UIContext[]
 ```
 
-获取所有当前活跃的 UIContext 实例。
+Gets all currently active UIContext instances.
 
 **Since:** 24
 
@@ -435,7 +452,7 @@ static getAllUIContexts(): UIContext[]
 getAtomicServiceBar(): Nullable<AtomicServiceBar>
 ```
 
-获取AtomicServiceBar。
+Get AtomicServiceBar.
 
 **Since:** 23
 
@@ -459,7 +476,7 @@ getAtomicServiceBar(): Nullable<AtomicServiceBar>
 getAttachedFrameNodeById(id: string): FrameNode | null
 ```
 
-通过组件id获取当前窗口上的FrameNode。
+Get the FrameNode attached to current window by id.
 
 **Since:** 23
 
@@ -481,7 +498,7 @@ getAttachedFrameNodeById(id: string): FrameNode | null
 
 | Type | Description |
 | --- | --- |
-| [FrameNode](arkts-arkui-framenode-t.md) | The instance of FrameNode. |
+| [FrameNode](../arkts-components/arkts-arkui-framenode-t.md) | The instance of FrameNode. |
 
 ## getCallingScopeUIContext
 
@@ -489,7 +506,7 @@ getAttachedFrameNodeById(id: string): FrameNode | null
 static getCallingScopeUIContext(): UIContext | undefined
 ```
 
-获取与当前调用作用域关联的 UIContext
+Gets the UIContext associated with the current calling scope.
 
 **Since:** 24
 
@@ -513,7 +530,7 @@ static getCallingScopeUIContext(): UIContext | undefined
 getComponentSnapshot(): ComponentSnapshot
 ```
 
-获取ComponentSnapshot对象。
+Get ComponentSnapshot.
 
 **Since:** 23
 
@@ -561,7 +578,7 @@ get object ComponentUtils.
 getContextMenuController(): ContextMenuController
 ```
 
-获取ContextMenuController对象。
+Get object context menu controller.
 
 **Since:** 23
 
@@ -585,7 +602,7 @@ getContextMenuController(): ContextMenuController
 getCursorController(): CursorController
 ```
 
-获取CursorController对象。
+Get object cursor controller.
 
 **Since:** 23
 
@@ -603,37 +620,13 @@ getCursorController(): CursorController
 | --- | --- |
 | [CursorController](arkts-arkui-arkui-uicontext-cursorcontroller-c.md) | object cursor controller. |
 
-## getDialogPresenter
-
-```TypeScript
-getDialogPresenter(): DialogPresenter
-```
-
-获取Dialog对象。
-
-**Since:** 26.1.0
-
-**ArkTS mode:** ArkTS-Sta only, since version 26.1.0.
-
-**Model restriction:** This API can be used only in the stage model.
-
-<!--Device-UIContext-getDialogPresenter(): DialogPresenter--><!--Device-UIContext-getDialogPresenter(): DialogPresenter-End-->
-
-**System capability:** SystemCapability.ArkUI.ArkUI.Full
-
-**Return value:**
-
-| Type | Description |
-| --- | --- |
-| [DialogPresenter](arkts-arkui-arkui-uicontext-dialogpresenter-c.md) | Dialog object. |
-
 ## getDragController
 
 ```TypeScript
 getDragController(): DragController
 ```
 
-获取DragController对象。
+Get DragController.
 
 **Since:** 23
 
@@ -657,7 +650,7 @@ getDragController(): DragController
 getFilteredInspectorTree(filters?: Array<string>): string
 ```
 
-获取组件树和组件属性。该接口处理时间较长，适用于&lt;br&gt;testing scenarios only.
+Obtains the component tree and component attributes. This API has a long processing time and is intended for&lt;br&gt;testing scenarios only.
 
 **Since:** 23
 
@@ -685,7 +678,7 @@ getFilteredInspectorTree(filters?: Array<string>): string
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 100023 | Unable to obtain current ui context. |
+| [100023](../errorcode-node.md#100023-parameter-error) | Unable to obtain current ui context. |
 
 ## getFilteredInspectorTreeById
 
@@ -693,7 +686,7 @@ getFilteredInspectorTree(filters?: Array<string>): string
 getFilteredInspectorTreeById(id: string, depth: int, filters?: Array<string>): string
 ```
 
-获取指定组件及其子组件的属性。该接口处理时间较长，&lt;br&gt;and is intended for testing scenarios only.
+Obtains the attributes of the specified component and its child components. This API has a long processing time&lt;br&gt;and is intended for testing scenarios only.
 
 **Since:** 23
 
@@ -723,8 +716,8 @@ getFilteredInspectorTreeById(id: string, depth: int, filters?: Array<string>): s
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 100023 | Unable to obtain current ui context. |
-| 100024 | The parameter depth must be greater than 0. |
+| [100023](../errorcode-node.md#100023-parameter-error) | Unable to obtain current ui context. |
+| [100024](../errorcode-node.md#100024-no-common-ancestor-node-between-nodes) | The parameter depth must be greater than 0. |
 
 ## getFocusController
 
@@ -732,7 +725,7 @@ getFilteredInspectorTreeById(id: string, depth: int, filters?: Array<string>): s
 getFocusController(): FocusController
 ```
 
-获取FocusController对象。
+Get FocusController.
 
 **Since:** 23
 
@@ -780,7 +773,7 @@ get object font.
 getFrameNodeById(id: string): FrameNode | null
 ```
 
-通过组件id获取FrameNode。
+Get FrameNode by id.
 
 **Since:** 23
 
@@ -802,7 +795,7 @@ getFrameNodeById(id: string): FrameNode | null
 
 | Type | Description |
 | --- | --- |
-| [FrameNode](arkts-arkui-framenode-t.md) | The instance of FrameNode. |
+| [FrameNode](../arkts-components/arkts-arkui-framenode-t.md) | The instance of FrameNode. |
 
 ## getFrameNodeByUniqueId
 
@@ -810,7 +803,7 @@ getFrameNodeById(id: string): FrameNode | null
 getFrameNodeByUniqueId(id: int): FrameNode | null
 ```
 
-通过uniqueId获取FrameNode。
+Get FrameNode by uniqueId.
 
 **Since:** 23
 
@@ -832,7 +825,7 @@ getFrameNodeByUniqueId(id: int): FrameNode | null
 
 | Type | Description |
 | --- | --- |
-| [FrameNode](arkts-arkui-framenode-t.md) | The FrameNode with the target uniqueId, or null if the frameNode is not existed. |
+| [FrameNode](../arkts-components/arkts-arkui-framenode-t.md) | The FrameNode with the target uniqueId, or null if the frameNode is not existed. |
 
 ## getHostContext
 
@@ -840,7 +833,7 @@ getFrameNodeByUniqueId(id: int): FrameNode | null
 getHostContext(): Context | undefined
 ```
 
-获取ability的上下文。
+Obtains context of the ability.
 
 **Since:** 23
 
@@ -864,7 +857,7 @@ getHostContext(): Context | undefined
 getId(): int
 ```
 
-获取UI实例的id。
+Get id of the UI instance.
 
 **Since:** 23
 
@@ -888,7 +881,7 @@ getId(): int
 getKeyboardAvoidMode(): KeyboardAvoidMode
 ```
 
-获取KeyboardAvoidMode。
+Get KeyboardAvoidMode.
 
 **Since:** 23
 
@@ -912,7 +905,7 @@ getKeyboardAvoidMode(): KeyboardAvoidMode
 static getLastFocusedUIContext(): UIContext | undefined
 ```
 
-获取最后获焦的 UI 实例的 UIContext（如果存在）。
+Gets the UIContext of the last focused UI instance if one exists.
 
 **Since:** 24
 
@@ -936,7 +929,7 @@ static getLastFocusedUIContext(): UIContext | undefined
 static getLastForegroundUIContext(): UIContext | undefined
 ```
 
-获取最后处于前台的 UI 实例的 UIContext（如果存在）。
+Gets the UIContext of the last foregrounded UI instance if one exists.
 
 **Since:** 24
 
@@ -960,7 +953,7 @@ static getLastForegroundUIContext(): UIContext | undefined
 getMagnifier(): Magnifier
 ```
 
-获取放大镜对象。
+Obtains the Magnifier object.
 
 **Since:** 23
 
@@ -984,7 +977,7 @@ getMagnifier(): Magnifier
 getMaxFontScale(): double
 ```
 
-获取字体最大缩放比例。
+Get the max font scale.
 
 **Since:** 23
 
@@ -1008,7 +1001,7 @@ getMaxFontScale(): double
 getMeasureUtils(): MeasureUtils
 ```
 
-获取MeasureUtils对象。
+Get MeasureUtils.
 
 **Since:** 23
 
@@ -1056,7 +1049,7 @@ get object mediaQuery.
 getNavigationInfoByUniqueId(id: int): observer.NavigationInfo | undefined
 ```
 
-通过uniqueId获取frameNode的navigation信息。
+Get navigation information of the frameNode with uniqueId.
 
 **Since:** 23
 
@@ -1086,7 +1079,7 @@ getNavigationInfoByUniqueId(id: int): observer.NavigationInfo | undefined
 getOverlayManager(): OverlayManager
 ```
 
-获取OverlayManager对象。
+Get object OverlayManager.
 
 **Since:** 23
 
@@ -1110,7 +1103,7 @@ getOverlayManager(): OverlayManager
 getOverlayManagerOptions(): OverlayManagerOptions
 ```
 
-获取OverlayManagerOptions对象。
+Get object OverlayManagerOptions.
 
 **Since:** 23
 
@@ -1134,7 +1127,7 @@ getOverlayManagerOptions(): OverlayManagerOptions
 getPageInfoByUniqueId(id: int): PageInfo
 ```
 
-通过uniqueId获取frameNode的页面信息。
+Get page information of the frameNode with uniqueId.
 
 **Since:** 23
 
@@ -1164,7 +1157,7 @@ getPageInfoByUniqueId(id: int): PageInfo
 getPageRootNode(): FrameNode | null
 ```
 
-获取UIContext对应页面的根节点。
+Retrieve the root node of the corresponding page of the UIContext.
 
 **Since:** 24
 
@@ -1180,13 +1173,13 @@ getPageRootNode(): FrameNode | null
 
 | Type | Description |
 | --- | --- |
-| [FrameNode](arkts-arkui-framenode-t.md) | The root node of the corresponding page of the UIContext, or null if no root node exists. |
+| [FrameNode](../arkts-components/arkts-arkui-framenode-t.md) | The root node of the corresponding page of the UIContext, or null if no root node exists. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 120007 | The UIContext is not available. |
+| [120007](../errorcode-uicontext.md#120007-instance-not-exist) | The UIContext is not available. |
 
 ## getPixelRoundMode
 
@@ -1194,7 +1187,7 @@ getPageRootNode(): FrameNode | null
 getPixelRoundMode(): PixelRoundMode
 ```
 
-获取系统的像素取整模式。
+Get the pixel round mode of the system.
 
 **Since:** 23
 
@@ -1266,7 +1259,7 @@ get object router.
 getSharedLocalStorage(): LocalStorage | undefined
 ```
 
-获取当前stage共享的LocalStorage实例。
+Get current LocalStorage shared from stage.
 
 **Since:** 23
 
@@ -1290,7 +1283,7 @@ getSharedLocalStorage(): LocalStorage | undefined
 getSmartGestureController(): SmartGestureController
 ```
 
-获取智能手势控制器。
+Get object smart gesture controller.
 
 **Since:** 26.0.0
 
@@ -1314,7 +1307,7 @@ getSmartGestureController(): SmartGestureController
 getTextMenuController(): TextMenuController
 ```
 
-获取TextMenuController对象。
+Get object text menu controller.
 
 **Since:** 23
 
@@ -1338,7 +1331,7 @@ getTextMenuController(): TextMenuController
 getUIInspector(): UIInspector
 ```
 
-获取**UIInspector**对象。
+Obtains the **UIInspector** object.
 
 **Since:** 23
 
@@ -1354,7 +1347,7 @@ getUIInspector(): UIInspector
 
 | Type | Description |
 | --- | --- |
-| [UIInspector](arkts-arkui-arkui-uicontext-uiinspector-c.md) | 返回UIInspector实例对象。 |
+| [UIInspector](arkts-arkui-arkui-uicontext-uiinspector-c.md) | UIInspector** object. |
 
 ## getUIObserver
 
@@ -1362,7 +1355,7 @@ getUIInspector(): UIInspector
 getUIObserver(): UIObserver
 ```
 
-获取UIObserver对象。
+Get the UI observer.
 
 **Since:** 23
 
@@ -1386,7 +1379,7 @@ getUIObserver(): UIObserver
 getWindowHeightBreakpoint(): HeightBreakpoint
 ```
 
-获取当前实例所在窗口的高度断点。
+Get the height breakpoint of current window.
 
 **Since:** 23
 
@@ -1410,7 +1403,7 @@ getWindowHeightBreakpoint(): HeightBreakpoint
 getWindowId(): int | undefined
 ```
 
-获取当前UIContext所属的窗口ID。&lt;p&gt;**注意**：如果当前UIContext处于宿主进程中运行的UIExtensionAbility内，此方法将返回宿主应用程序的顶层窗口ID。&lt;/p&gt;
+Get window id to which the current UIContext belongs.&lt;p&gt;**NOTE：**:If the current UIContext is in a UIExtensionAbility running within the host process,this method returns the top-level window ID of the host application.&lt;/p&gt;
 
 **Since:** 23
 
@@ -1434,7 +1427,7 @@ getWindowId(): int | undefined
 getWindowName(): string | undefined
 ```
 
-获取当前实例所在窗口的名称。
+Get the name of current window.
 
 **Since:** 23
 
@@ -1458,7 +1451,7 @@ getWindowName(): string | undefined
 getWindowWidthBreakpoint(): WidthBreakpoint
 ```
 
-获取当前实例所在窗口的宽度断点。
+Get the width breakpoint of current window.
 
 **Since:** 23
 
@@ -1482,7 +1475,7 @@ getWindowWidthBreakpoint(): WidthBreakpoint
 isAvailable(): boolean
 ```
 
-检查UIContext对象是否可用。
+Check whether the UIContext object is available.
 
 **Since:** 23
 
@@ -1498,7 +1491,7 @@ isAvailable(): boolean
 
 | Type | Description |
 | --- | --- |
-| boolean | Returns true if the UIContext is available, otherwise false. |
+| boolean | Returns true if the UIContext object is available. |
 
 ## isEasySplit
 
@@ -1506,7 +1499,7 @@ isAvailable(): boolean
 isEasySplit(): boolean
 ```
 
-检查当前UI实例是否处于分栏模式。
+Checks whether the current UI instance is in easy split mode.
 
 **Since:** 24
 
@@ -1606,7 +1599,8 @@ Converts a value in lpx units to a value in px.
 ## openBindSheet
 
 ```TypeScript
-openBindSheet(bindSheetContent: ComponentContentBase, sheetOptions?: SheetOptions, targetId?: int): Promise<void>
+openBindSheet(bindSheetContent: ComponentContentBase,
+    sheetOptions?: SheetOptions, targetId?: int): Promise<void>
 ```
 
 Open the BindSheet.
@@ -1617,7 +1611,7 @@ Open the BindSheet.
 
 **Model restriction:** This API can be used only in the stage model.
 
-<!--Device-UIContext-openBindSheet(bindSheetContent: ComponentContentBase, sheetOptions?: SheetOptions, targetId?: int): Promise<void>--><!--Device-UIContext-openBindSheet(bindSheetContent: ComponentContentBase, sheetOptions?: SheetOptions, targetId?: int): Promise<void>-End-->
+<!--Device-UIContext-openBindSheet(bindSheetContent: ComponentContentBase,    sheetOptions?: SheetOptions, targetId?: int): Promise<void>--><!--Device-UIContext-openBindSheet(bindSheetContent: ComponentContentBase,    sheetOptions?: SheetOptions, targetId?: int): Promise<void>-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -1639,12 +1633,12 @@ Open the BindSheet.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 120001 | The bindSheetContent is incorrect. |
-| 401 | Parameter error. Possible causes: &lt;br&gt; 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameters types. &lt;br&gt; 3. Parameter verification failed. |
-| 120002 | The bindSheetContent already exists. |
-| 120005 | The node of targetId is not in the component tree. |
-| 120004 | The targetId does not exist. |
-| 120006 | The node of targetId is not a child of the page node or NavDestination node. |
+| [120001](../errorcode-bindSheet.md#120001-incorrect-bindsheetcontent) | The bindSheetContent is incorrect. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: &lt;br&gt; 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameters types. &lt;br&gt; 3. Parameter verification failed. |
+| [120002](../errorcode-bindSheet.md#120002-modal-for-bindsheetcontent-already-exists) | The bindSheetContent already exists. |
+| [120005](../errorcode-bindSheet.md#120005-node-specified-by-targetid-is-not-in-the-component-tree) | The node of targetId is not in the component tree. |
+| [120004](../errorcode-bindSheet.md#120004-specified-targetid-does-not-exist) | The targetId does not exist. |
+| [120006](../errorcode-bindSheet.md#120006-node-specified-by-targetid-is-not-a-child-of-a-page-node-or-navdestination-node) | The node of targetId is not a child of the page node or NavDestination node. |
 
 ## postDelayedFrameCallback
 
@@ -1791,11 +1785,12 @@ Converts a value in px units to a value in vp.
 removeLocalInputEventMonitor(monitor: InputEventMonitor): void
 ```
 
-删除本地输入事件监视器。  
-**重要说明**：  
--只能移除addLocalInputEventMonitor返回的Monitor对象。  
--无法通过手动构造对象来注销监视器。  
--如果传递了一个无效的对象，系统会默默地忽略它。
+Removes a local input event monitor.
+
+**Important Notes**:  
+- Only Monitor objects returned by addLocalInputEventMonitor can be removed.  
+- Cannot unregister a monitor by manually constructing an object.  
+- If an invalid object is passed, the system silently ignores it.
 
 **Since:** 26.0.0
 
@@ -1811,7 +1806,7 @@ removeLocalInputEventMonitor(monitor: InputEventMonitor): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| monitor | [InputEventMonitor](../arkts-components/arkts-arkui-inputeventmonitor-i.md) | Yes | 监控标识对象（由addLocalInputEventMonitor返回）。 |
+| monitor | [InputEventMonitor](../arkts-components/arkts-arkui-inputeventmonitor-i.md) | Yes | Monitor identifier object (returned by addLocalInputEventMonitor). |
 
 ## requireDynamicSyncScene
 
@@ -1849,7 +1844,9 @@ Require DynamicSyncScene by id.
 static resolveUIContext(): ResolvedUIContext
 ```
 
-使用优先级策略解析UIContext按照预定义优先级顺序解析并返回UIContext实例。解析规则按顺序如下：&lt;br&gt;1. 返回当前调用作用域对应的UIContext&lt;br&gt;2. 当仅存在单个UI实例时，返回该唯一实例的UIContext&lt;br&gt;3. 若存在最后获得焦点的UI实例，返回其UIContext&lt;br&gt;4. 若存在最后进入前台的UI实例，返回其UIContext&lt;br&gt;5. 若存在任何UI实例，返回最大实例ID的UIContext&lt;br&gt;6. 当不满足上述所有条件时，返回未定义调用作用域内的UIContext实例
+Resolves a UIContext using priority strategy.
+
+Resolves and returns a UIContext instance following a predefined priority sequence.resolution rules in order:&lt;br&gt;1. the UIContext with current calling scope&lt;br&gt;2. Returns the unique UIContext if only one UI instance exists.&lt;br&gt;3. Returns the UIContext of the last focused UI instance if one exists.&lt;br&gt;4. Returns the UIContext of the last foregrounded UI instance if one exists.&lt;br&gt;5. Returns the UIContext of the most recently created UI instance if any UI instance exists.&lt;br&gt;6. Returns an invalid UIContext instance if none of the above conditions are met.
 
 **Since:** 23
 
@@ -1865,7 +1862,7 @@ static resolveUIContext(): ResolvedUIContext
 
 | Type | Description |
 | --- | --- |
-| [ResolvedUIContext](arkts-arkui-arkui-uicontext-resolveduicontext-c.md) | ResolvedUIContext实例 |
+| [ResolvedUIContext](arkts-arkui-arkui-uicontext-resolveduicontext-c.md) | ResolvedUIContext instance |
 
 ## runScopedTask
 
@@ -1897,7 +1894,7 @@ Run custom functions inside the UIContext scope.
 setCustomKeyboardContinueFeature(feature: CustomKeyboardContinueFeature): void
 ```
 
-设置自定义键盘接续特性。
+Set custom keyboard continue feature.
 
 **Since:** 23
 
@@ -1913,7 +1910,7 @@ setCustomKeyboardContinueFeature(feature: CustomKeyboardContinueFeature): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| feature | [CustomKeyboardContinueFeature](arkts-arkui-arkui-uicontext-customkeyboardcontinuefeature-e.md) | Yes | 自定义键盘接续特性。 |
+| feature | [CustomKeyboardContinueFeature](arkts-arkui-arkui-uicontext-customkeyboardcontinuefeature-e.md) | Yes | The custom keyboard continue feature. |
 
 ## setImageCacheCount
 
@@ -1921,7 +1918,7 @@ setCustomKeyboardContinueFeature(feature: CustomKeyboardContinueFeature): void
 setImageCacheCount(value: int): void
 ```
 
-设置内存中缓存解码后图片的数量上限。if not set, the application will not cache any decoded image.
+Set image cache capacity of decoded image count.if not set, the application will not cache any decoded image.
 
 **Since:** 23
 
@@ -1945,7 +1942,7 @@ setImageCacheCount(value: int): void
 setImageRawDataCacheSize(value: int): void
 ```
 
-设置内存中缓存解码前图片数据的大小上限，单位为字节。if not set, the application will not cache any raw image data.
+Set image cache capacity of raw image data size in bytes before decode.if not set, the application will not cache any raw image data.
 
 **Since:** 23
 
@@ -1969,7 +1966,7 @@ setImageRawDataCacheSize(value: int): void
 setKeyboardAvoidMode(value: KeyboardAvoidMode): void
 ```
 
-设置KeyboardAvoidMode。默认模式为KeyboardAvoidMode.OFFSET。
+Set KeyboardAvoidMode. The default mode is KeyboardAvoidMode.OFFSET
 
 **Since:** 23
 
@@ -2023,7 +2020,7 @@ Init OverlayManager.
 setPixelRoundMode(mode: PixelRoundMode): void
 ```
 
-设置系统的像素取整模式。默认模式为PixelRoundMode.PIXEL_ROUND_ON_LAYOUT_FINISH。
+Set the pixel round mode of the system. The default mode is PixelRoundMode.PIXEL_ROUND_ON_LAYOUT_FINISH.
 
 **Since:** 23
 
@@ -2047,9 +2044,9 @@ setPixelRoundMode(mode: PixelRoundMode): void
 static setResourceManagerCacheMaxCountForHSP(count: int): void
 ```
 
-设置HSP资源管理对象的缓存数量上限。
+Set the upper limit for the cache count of HSP resource management objects.
 
-如果缓存上限设置过高，存在内存开销过大的风险。建议根据实际需要进行配置。
+If the upper limit of the cache is set too high, there is a risk of excessive memory overhead.It is recommended to configure it according to actual needs.
 
 **Since:** 26.0.0
 
@@ -2065,15 +2062,15 @@ static setResourceManagerCacheMaxCountForHSP(count: int): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| count | int | Yes | The cache limit of resource manager for HSP, must be non-negative integers. |
+| count | int | Yes | The cache limit of resource manager for HSP, must be non negative integers. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 100101 | The parameter is less than 0. |
-| 100103 | The function cannot be called from a non-main thread. @static |
-| 100102 | The parameter value cannot be a floating-point number. |
+| [100101](../errorcode-uicontext.md#100101-invalid-negative-parameter-value) | The parameter is less than 0. |
+| [100103](../errorcode-uicontext.md#100103-invalid-thread-context) | The function cannot be called from a non main thread. @static |
+| [100102](../errorcode-uicontext.md#100102-incorrect-parameter-type) | The parameter value cannot be a floating point number. |
 
 ## setTextSelectionClearPolicy
 
@@ -2081,7 +2078,7 @@ static setResourceManagerCacheMaxCountForHSP(count: int): void
 setTextSelectionClearPolicy(policy: TextSelectionClearPolicy): void
 ```
 
-设置文本组件的文本选择清除策略。默认策略：**TextSelectionClearPolicy.KEEP_ON_EXTERNAL_CLICK**。
+Sets the text selection clear policy for text component.Default policy: **TextSelectionClearPolicy.KEEP_SELECTED_TEXT_ON_EXTERNAL_TOUCH**
 
 **Since:** 26.0.0
 
@@ -2097,7 +2094,7 @@ setTextSelectionClearPolicy(policy: TextSelectionClearPolicy): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| policy | [TextSelectionClearPolicy](arkts-arkui-arkui-uicontext-textselectionclearpolicy-e.md) | Yes | 文本选择清除策略。 |
+| policy | [TextSelectionClearPolicy](arkts-arkui-arkui-uicontext-textselectionclearpolicy-e.md) | Yes | The text selection clear policy. |
 
 ## setUIStates
 
@@ -2105,7 +2102,7 @@ setTextSelectionClearPolicy(policy: TextSelectionClearPolicy): void
 setUIStates(callback: VoidCallback): void
 ```
 
-线程安全的UI状态变量更新接口。
+Thread-safe UI state variables updates interface.
 
 **Since:** 23
 
@@ -2121,7 +2118,7 @@ setUIStates(callback: VoidCallback): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [VoidCallback](arkts-arkui-voidcallback-t.md) | Yes | 在UI线程中执行的回调函数。 |
+| callback | [VoidCallback](arkts-arkui-voidcallback-t.md) | Yes | The callback function to be executed in the UI thread. |
 
 ## showActionSheet
 
@@ -2150,7 +2147,8 @@ actionSheet display.
 ## showAlertDialog
 
 ```TypeScript
-showAlertDialog(options: AlertDialogParamWithConfirm | AlertDialogParamWithButtons | AlertDialogParamWithOptions): void
+showAlertDialog(
+    options: AlertDialogParamWithConfirm | AlertDialogParamWithButtons | AlertDialogParamWithOptions): void
 ```
 
 alertDialog display.
@@ -2161,7 +2159,7 @@ alertDialog display.
 
 **Model restriction:** This API can be used only in the stage model.
 
-<!--Device-UIContext-showAlertDialog(options: AlertDialogParamWithConfirm | AlertDialogParamWithButtons | AlertDialogParamWithOptions): void--><!--Device-UIContext-showAlertDialog(options: AlertDialogParamWithConfirm | AlertDialogParamWithButtons | AlertDialogParamWithOptions): void-End-->
+<!--Device-UIContext-showAlertDialog(    options: AlertDialogParamWithConfirm | AlertDialogParamWithButtons | AlertDialogParamWithOptions): void--><!--Device-UIContext-showAlertDialog(    options: AlertDialogParamWithConfirm | AlertDialogParamWithButtons | AlertDialogParamWithOptions): void-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -2246,7 +2244,8 @@ timePickerDialog display.
 ## unbindTabsFromNestedScrollable
 
 ```TypeScript
-unbindTabsFromNestedScrollable(tabsController: TabsController, parentScroller: Scroller, childScroller: Scroller): void
+unbindTabsFromNestedScrollable(tabsController: TabsController, parentScroller: Scroller,
+    childScroller: Scroller): void
 ```
 
 Unbind tabs from nested scrollable container components.
@@ -2257,7 +2256,7 @@ Unbind tabs from nested scrollable container components.
 
 **Model restriction:** This API can be used only in the stage model.
 
-<!--Device-UIContext-unbindTabsFromNestedScrollable(tabsController: TabsController, parentScroller: Scroller, childScroller: Scroller): void--><!--Device-UIContext-unbindTabsFromNestedScrollable(tabsController: TabsController, parentScroller: Scroller, childScroller: Scroller): void-End-->
+<!--Device-UIContext-unbindTabsFromNestedScrollable(tabsController: TabsController, parentScroller: Scroller,    childScroller: Scroller): void--><!--Device-UIContext-unbindTabsFromNestedScrollable(tabsController: TabsController, parentScroller: Scroller,    childScroller: Scroller): void-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -2297,7 +2296,8 @@ Unbind tabs from scrollable container component.
 ## updateBindSheet
 
 ```TypeScript
-updateBindSheet(bindSheetContent: ComponentContentBase, sheetOptions: SheetOptions, partialUpdate?: boolean): Promise<void>
+updateBindSheet(bindSheetContent: ComponentContentBase,
+    sheetOptions: SheetOptions, partialUpdate?: boolean): Promise<void>
 ```
 
 Update the BindSheet with sheetOptions.
@@ -2308,7 +2308,7 @@ Update the BindSheet with sheetOptions.
 
 **Model restriction:** This API can be used only in the stage model.
 
-<!--Device-UIContext-updateBindSheet(bindSheetContent: ComponentContentBase, sheetOptions: SheetOptions, partialUpdate?: boolean): Promise<void>--><!--Device-UIContext-updateBindSheet(bindSheetContent: ComponentContentBase, sheetOptions: SheetOptions, partialUpdate?: boolean): Promise<void>-End-->
+<!--Device-UIContext-updateBindSheet(bindSheetContent: ComponentContentBase,    sheetOptions: SheetOptions, partialUpdate?: boolean): Promise<void>--><!--Device-UIContext-updateBindSheet(bindSheetContent: ComponentContentBase,    sheetOptions: SheetOptions, partialUpdate?: boolean): Promise<void>-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -2330,9 +2330,9 @@ Update the BindSheet with sheetOptions.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 120001 | The bindSheetContent is incorrect. |
-| 401 | Parameter error. Possible causes: &lt;br&gt; 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameters types. &lt;br&gt; 3. Parameter verification failed. |
-| 120003 | The bindSheetContent cannot be found. |
+| [120001](../errorcode-bindSheet.md#120001-incorrect-bindsheetcontent) | The bindSheetContent is incorrect. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: &lt;br&gt; 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameters types. &lt;br&gt; 3. Parameter verification failed. |
+| [120003](../errorcode-bindSheet.md#120003-no-matching-modal-found) | The bindSheetContent cannot be found. |
 
 ## vp2px
 

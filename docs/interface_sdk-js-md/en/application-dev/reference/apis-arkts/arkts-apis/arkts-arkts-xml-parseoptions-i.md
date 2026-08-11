@@ -1,6 +1,6 @@
 # ParseOptions
 
-XML解析选项。
+Parse options for XmlPullParser.
 
 **Since:** 8
 
@@ -22,7 +22,7 @@ import { xml } from 'kits/@kit.ArkTS';
 attributeValueCallbackFunction?: (name: string, value: string) => boolean
 ```
 
-解析属性和属性值，默认值undefined，表示不解析。
+Attribute value callback function.
 
 **Since:** 8
 
@@ -47,7 +47,7 @@ attributeValueCallbackFunction?: (name: string, value: string) => boolean
 attributeWithTagCallbackFunction?: AttributeWithTagCb
 ```
 
-解析tagName标签，默认值undefined，表示不解析。
+Attribute value and tag callback function.
 
 **Since:** 20
 
@@ -65,7 +65,7 @@ attributeWithTagCallbackFunction?: AttributeWithTagCb
 tagValueCallbackFunction?: (name: string, value: string) => boolean
 ```
 
-解析开始标签、标签值和结束标签，默认值undefined，表示不解析。
+Tag value callback function.
 
 **Since:** 8
 
@@ -90,7 +90,7 @@ tagValueCallbackFunction?: (name: string, value: string) => boolean
 tokenValueCallbackFunction?: (eventType: EventType, value: ParseInfo) => boolean
 ```
 
-解析元素事件类型([EventType](arkts-arkts-xml-eventtype-e.md))和[ParseInfo](arkts-arkts-xml-parseinfo-i.md)属性，默认值undefined，表示不解析。
+Token value callback function.
 
 **Since:** 8
 
@@ -115,7 +115,7 @@ tokenValueCallbackFunction?: (eventType: EventType, value: ParseInfo) => boolean
 ignoreNameSpace?: boolean
 ```
 
-是否忽略命名空间，忽略命名空间后，将不会对其进行解析。true表示忽略命名空间，false表示不忽略命名空间，默认值false。
+Whether to ignore parsing texts of the elements.
 
 **Type:** boolean
 
@@ -135,7 +135,7 @@ ignoreNameSpace?: boolean
 supportDoctype?: boolean
 ```
 
-是否解析文档类型，false表示不解析文档类型，true表示解析文档类型，默认值false。
+Whether to parsing Doctype of the elements.
 
 **Type:** boolean
 

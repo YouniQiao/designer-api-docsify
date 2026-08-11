@@ -14,12 +14,6 @@ API version 21及之前版本，仅支持IPv4。从API version 22开始，支持
 
 **系统能力：** SystemCapability.Customization.EnterpriseDeviceManager
 
-## 导入模块
-
-```TypeScript
-import { networkManager } from 'kits/@kit.MDMKit';
-```
-
 ## action
 
 ```TypeScript
@@ -116,7 +110,7 @@ direction?: Direction
 
 移除防火墙时非必填，当值为空时，表示清空所有的[Direction](arkts-mdm-networkmanager-direction-e.md)链，且srcAddr，destAddr，srcPort，destPort，appUid也必须传入空值。
 
-**类型：** [Direction](arkts-mdm-networkmanager-direction-e.md)
+**类型：** [Direction](../../apis-ime-kit/arkts-apis/arkts-ime-inputmethod-direction-e.md)
 
 **起始版本：** 12
 
@@ -182,7 +176,7 @@ protocol?: Protocol
 
 网络协议。当值为ALL或者ICMP时，设置srcPort与destPort无效。
 
-**类型：** [Protocol](../../apis-network-kit/arkts-apis/arkts-network-socket-protocol-e.md)
+**类型：** [Protocol](arkts-mdm-networkmanager-protocol-e.md)
 
 **起始版本：** 12
 

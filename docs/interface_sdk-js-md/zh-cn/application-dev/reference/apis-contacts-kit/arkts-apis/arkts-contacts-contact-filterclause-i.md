@@ -10,12 +10,6 @@
 
 **系统能力：** SystemCapability.Applications.Contacts
 
-## 导入模块
-
-```TypeScript
-import { contact } from 'kits/@kit.ContactsKit';
-```
-
 ## dataItem
 
 ```TypeScript

@@ -1,6 +1,6 @@
 # VoiceContentOptions (System API)
 
-通知语音播报配置项。
+Describes the configuration options for notification voice broadcast.
 
 **Since:** 26.0.0
 
@@ -18,9 +18,10 @@
 enabled?: boolean
 ```
 
-是否订阅通知语音播报内容。  
-- true：订阅。  
-- false：不订阅。默认值为false。
+Whether to subscribe to the voice broadcast content of a notification.
+
+- **true**: yes.  
+- **false**: no. The default value is **false**.
 
 **Type:** boolean
 

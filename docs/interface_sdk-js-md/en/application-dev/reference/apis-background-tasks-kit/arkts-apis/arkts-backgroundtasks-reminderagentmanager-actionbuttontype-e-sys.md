@@ -1,6 +1,6 @@
 # ActionButtonType
 
-提醒上的按钮的类型。
+Enumerates the types of buttons displayed for a reminder.
 
 **Since:** 9
 
@@ -16,7 +16,7 @@
 ACTION_BUTTON_TYPE_CUSTOM = 2
 ```
 
-表示自定义的按钮。
+Custom button.
 
 **Since:** 10
 

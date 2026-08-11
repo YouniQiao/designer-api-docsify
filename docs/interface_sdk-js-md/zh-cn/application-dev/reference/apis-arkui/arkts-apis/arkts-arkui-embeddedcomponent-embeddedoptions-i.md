@@ -18,7 +18,7 @@ areaChangePlaceholder?: Record<string, ComponentContentBase>
 
 设置尺寸变化占位符，在EmbeddedComponent尺寸发生变化并且内部渲染未完成时显示。&lt;br/&gt;key为尺寸变化场景类型（如"FOLD_TO_EXPAND"表示折叠展开场景），value为对应场景的占位符组件。 当前支持的键值包括：FOLD_TO_EXPAND。传入不支持的键值时，该占位符不生效。&lt;br/&gt;默认值：undefined，不设置尺寸变化占位符。
 
-**类型：** [Record](../../apis-default/arkts-apis/arkts-record-t.md)&lt;string, ComponentContentBase&gt;
+**类型：** Record&lt;string, ComponentContentBase&gt;
 
 **起始版本：** 26.0.0
 
@@ -38,7 +38,7 @@ dpiFollowStrategy?: EmbeddedDpiFollowStrategy
 
 设置DPI，使其能够跟随宿主或EmbeddedUIExtensionAbility。
 
-**类型：** [EmbeddedDpiFollowStrategy](arkts-arkui-embeddedcomponent-embeddeddpifollowstrategy-e.md)
+**类型：** [EmbeddedDpiFollowStrategy](../arkts-components/arkts-arkui-embeddeddpifollowstrategy-e.md)
 
 **默认值：** EmbeddedDpiFollowStrategy.FOLLOW_UI_EXTENSION_ABILITY_DPI
 
@@ -80,7 +80,7 @@ windowModeFollowStrategy?: EmbeddedWindowModeFollowStrategy
 
 设置窗口模式，使其能够跟随宿主或EmbeddedUIExtensionAbility。
 
-**类型：** [EmbeddedWindowModeFollowStrategy](arkts-arkui-embeddedcomponent-embeddedwindowmodefollowstrategy-e.md)
+**类型：** [EmbeddedWindowModeFollowStrategy](../arkts-components/arkts-arkui-embeddedwindowmodefollowstrategy-e.md)
 
 **默认值：** EmbeddedWindowModeFollowStrategy.FOLLOW_UI_EXTENSION_ABILITY_WINDOW_MODE
 

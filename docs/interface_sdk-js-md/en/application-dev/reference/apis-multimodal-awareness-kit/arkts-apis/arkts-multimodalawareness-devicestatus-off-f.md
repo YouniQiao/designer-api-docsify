@@ -33,9 +33,9 @@ Unsubscribes from steady standing state events.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 801 | Capability not supported. Function can not work correctly due to limited &lt;br&gt; device capabilities. |
-| 32500003 | Unsubscription failed. |
-| 32500001 | Service exception. |
+| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. Function can not work correctly due to limited &lt;br&gt; device capabilities. |
+| [32500003](../../apis-multimodalawareness-kit/errorcode-deviceStatus.md#32500003-unsubscription-failed) | Unsubscription failed. |
+| [32500001](../../apis-multimodalawareness-kit/errorcode-deviceStatus.md#32500001-abnormal-service) | Service exception. |
 
 ## Examples
 
@@ -53,7 +53,7 @@ Example 2: Unsubscribe from a specific callback of steady standing state change 
 
 ```TypeScript
 // Define the callback variable.
-let callback : Callback<deviceStatus.SteadyStandingStatus> = (data : deviceStatus.SteadyStandingStatus) => {
+let callback : Callback<deviceStatus.SteadyStandingStatus> = (data : deviceStatus. SteadyStandingStatus) => {
    console.info('succeed to get status, now status = ' + data);
 };
 // Subscribe to a specific callback of steady standing state change events.

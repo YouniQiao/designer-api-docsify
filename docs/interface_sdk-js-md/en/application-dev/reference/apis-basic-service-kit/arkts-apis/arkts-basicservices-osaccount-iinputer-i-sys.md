@@ -1,6 +1,6 @@
 # IInputer (System API)
 
-凭据输入器回调。
+Provides callbacks for credential inputers.
 
 **Since:** 8
 
@@ -24,7 +24,7 @@ import { osAccount } from 'kits/@kit.BasicServicesKit';
 onGetData: (authSubType: AuthSubType, callback: IInputData, options: GetInputDataOptions) => void
 ```
 
-通知调用者获取数据的回调函数。
+Called to notify the caller that data is obtained.
 
 **Since:** 8
 

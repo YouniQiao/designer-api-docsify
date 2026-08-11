@@ -12,7 +12,7 @@ import { batteryStats } from 'kits/@kit.BasicServicesKit';
 function getAppPowerValue(uid: int): double
 ```
 
-获取应用的耗电量，单位毫安时。
+Obtains the power consumption of an application, in unit of mAh.
 
 **Since:** 8
 
@@ -28,21 +28,21 @@ function getAppPowerValue(uid: int): double
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| uid | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | 应用的UID。 |
+| uid | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | Application UID. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| ArkTS-Dyn: number  <br>ArkTS-Sta：double | UID对应应用的耗电量，单位毫安时。 |
+| ArkTS-Dyn: number  <br>ArkTS-Sta：double | Power consumption of the application with this UID, in unit of mAh. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1. Parameter verification failed. |
-| 4600101 | Failed to connect to the service. |
-| 202 | Permission verification failed. A non-system application calls a system API. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Parameter verification failed. |
+| [4600101](../../apis-basic-services-kit/errorcode-batteryStatistics.md#4600101-service-connection-failure) | Failed to connect to the service. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
 
 ## Examples
 

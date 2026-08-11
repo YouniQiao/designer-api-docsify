@@ -1,6 +1,6 @@
 # LazyVWaterFlowLayoutInterface
 
-定义懒加载垂直瀑布流布局组件。
+Defines the lazy vertical waterflow layout component.
 
 **Since:** 26.0.0
 
@@ -22,7 +22,7 @@ import { LazyVWaterFlowLayout, LazyWaterFlowLayoutAttribute, LazyVWaterFlowLayou
 (): LazyVWaterFlowLayoutAttribute
 ```
 
-构造懒加载垂直瀑布流属性。
+Construct the lazy vertical waterflow attribute.
 
 **Since:** 26.0.0
 

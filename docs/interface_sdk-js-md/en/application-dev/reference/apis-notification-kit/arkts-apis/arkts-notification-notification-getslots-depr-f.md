@@ -6,7 +6,7 @@
 function getSlots(callback: AsyncCallback<Array<NotificationSlot>>): void
 ```
 
-获取此应用程序的所有通知通道（callback形式）。
+Obtains all notification slots. This API uses an asynchronous callback to return the result.
 
 **Since:** 7
 
@@ -24,7 +24,7 @@ function getSlots(callback: AsyncCallback<Array<NotificationSlot>>): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;[NotificationSlot](arkts-notification-notificationslot-notificationslot-i.md)&gt;&gt; | Yes | 以callback形式返回获取此应用程序的所有通知通道的结果。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;[NotificationSlot](arkts-notification-notificationslot-notificationslot-i.md)&gt;&gt; | Yes | Callback used to return the result. |
 
 
 ## getSlots
@@ -33,7 +33,7 @@ function getSlots(callback: AsyncCallback<Array<NotificationSlot>>): void
 function getSlots(): Promise<Array<NotificationSlot>>
 ```
 
-获取此应用程序的所有通知通道（Promise形式）。
+Obtains all notification slots of this application. This API uses a promise to return the result.
 
 **Since:** 7
 
@@ -51,5 +51,5 @@ function getSlots(): Promise<Array<NotificationSlot>>
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;Array&lt;[NotificationSlot](arkts-notification-notificationslot-notificationslot-i.md)&gt;&gt; | 以Promise形式返回获取此应用程序的所有通知通道的结果。 |
+| Promise&lt;Array&lt;[NotificationSlot](arkts-notification-notificationslot-notificationslot-i.md)&gt;&gt; | Promise used to return the result. |
 

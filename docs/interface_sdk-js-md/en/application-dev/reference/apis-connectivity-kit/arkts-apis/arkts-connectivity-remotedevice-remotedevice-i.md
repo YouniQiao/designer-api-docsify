@@ -1,6 +1,6 @@
 # RemoteDevice
 
-远程设备操作方法。
+Remote device operation methods.
 
 **Since:** 26.0.0
 
@@ -22,7 +22,7 @@ import { remoteDevice } from 'kits/@kit.ConnectivityKit';
 getAcbState(): AcbState
 ```
 
-获取ACB连接状态。
+Gets the ACB connection state.
 
 **Since:** 26.0.0
 
@@ -40,7 +40,7 @@ getAcbState(): AcbState
 
 | Type | Description |
 | --- | --- |
-| [AcbState](arkts-connectivity-remotedevice-acbstate-t.md) | 返回ACB连接状态。 |
+| [AcbState](arkts-connectivity-remotedevice-acbstate-t.md) | Returns the ACB connection state. |
 
 **Error codes:**
 
@@ -48,7 +48,7 @@ getAcbState(): AcbState
 | --- | --- |
 | 36100003 | NearLink disabled. |
 | 36100099 | Operation failed. |
-| 201 | Permission denied. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
 
 ## getConnectionState
 
@@ -56,7 +56,7 @@ getAcbState(): AcbState
 getConnectionState(): ConnectionState
 ```
 
-获取profile连接状态。
+Gets the profile connection state.
 
 **Since:** 26.0.0
 
@@ -74,7 +74,7 @@ getConnectionState(): ConnectionState
 
 | Type | Description |
 | --- | --- |
-| [ConnectionState](arkts-connectivity-ssap-connectionstate-t.md) | 返回连接状态。 |
+| [ConnectionState](arkts-connectivity-ssap-connectionstate-t.md) | Returns the connection state. |
 
 **Error codes:**
 
@@ -82,7 +82,7 @@ getConnectionState(): ConnectionState
 | --- | --- |
 | 36100003 | NearLink disabled. |
 | 36100099 | Operation failed. |
-| 201 | Permission denied. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
 
 ## getDeviceClass
 
@@ -90,7 +90,7 @@ getConnectionState(): ConnectionState
 getDeviceClass(): DeviceClass
 ```
 
-获取星闪设备的类型。
+Gets the type of the NearLink device.
 
 **Since:** 26.0.0
 
@@ -108,7 +108,7 @@ getDeviceClass(): DeviceClass
 
 | Type | Description |
 | --- | --- |
-| [DeviceClass](arkts-connectivity-connection-deviceclass-i.md) | 星闪设备的类型。 |
+| [DeviceClass](arkts-connectivity-connection-deviceclass-i.md) | Indicates the type of the NearLink device. |
 
 **Error codes:**
 
@@ -116,7 +116,7 @@ getDeviceClass(): DeviceClass
 | --- | --- |
 | 36100003 | NearLink disabled. |
 | 36100099 | Operation failed. |
-| 201 | Permission denied. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
 
 ## getDeviceInformation
 
@@ -124,7 +124,7 @@ getDeviceClass(): DeviceClass
 getDeviceInformation(): DeviceInformation
 ```
 
-获取远端设备信息。
+Obtains the remote device information.
 
 **Since:** 26.0.0
 
@@ -142,7 +142,7 @@ getDeviceInformation(): DeviceInformation
 
 | Type | Description |
 | --- | --- |
-| [DeviceInformation](arkts-connectivity-remotedevice-deviceinformation-i.md) | 返回远端设备信息。 |
+| [DeviceInformation](arkts-connectivity-remotedevice-deviceinformation-i.md) | Returns the remote device information. |
 
 **Error codes:**
 
@@ -150,7 +150,7 @@ getDeviceInformation(): DeviceInformation
 | --- | --- |
 | 36100003 | NearLink disabled. |
 | 36100099 | Operation failed. |
-| 201 | Permission denied. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
 
 ## getDeviceName
 
@@ -158,7 +158,7 @@ getDeviceInformation(): DeviceInformation
 getDeviceName(): string
 ```
 
-获取星闪设备的名称。
+Gets the name of the NearLink device.
 
 **Since:** 26.0.0
 
@@ -176,7 +176,7 @@ getDeviceName(): string
 
 | Type | Description |
 | --- | --- |
-| string | 返回设备名称。 |
+| string | Returns the device name. |
 
 **Error codes:**
 
@@ -184,7 +184,7 @@ getDeviceName(): string
 | --- | --- |
 | 36100003 | NearLink disabled. |
 | 36100099 | Operation failed. |
-| 201 | Permission denied. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
 
 ## getPairingState
 
@@ -192,7 +192,7 @@ getDeviceName(): string
 getPairingState(): PairingState
 ```
 
-获取配对状态。
+Gets the pairing state.
 
 **Since:** 26.0.0
 
@@ -210,7 +210,7 @@ getPairingState(): PairingState
 
 | Type | Description |
 | --- | --- |
-| [PairingState](arkts-connectivity-nearlinkconstant-pairingstate-e.md) | 返回配对状态。 |
+| [PairingState](arkts-connectivity-nearlinkconstant-pairingstate-e.md) | Returns the pairing state. |
 
 **Error codes:**
 
@@ -218,7 +218,7 @@ getPairingState(): PairingState
 | --- | --- |
 | 36100003 | NearLink disabled. |
 | 36100099 | Operation failed. |
-| 201 | Permission denied. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
 
 ## startPairing
 
@@ -226,7 +226,7 @@ getPairingState(): PairingState
 startPairing(): Promise<void>
 ```
 
-启动与远端星闪设备的配对。
+Initiate pairing to remote NearLink device.
 
 **Since:** 26.0.0
 
@@ -244,7 +244,7 @@ startPairing(): Promise<void>
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | 返回promise对象。 |
+| Promise&lt;void&gt; | Returns the promise object. |
 
 **Error codes:**
 
@@ -252,5 +252,5 @@ startPairing(): Promise<void>
 | --- | --- |
 | 36100003 | NearLink disabled. |
 | 36100099 | Operation failed. |
-| 201 | Permission denied. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
 

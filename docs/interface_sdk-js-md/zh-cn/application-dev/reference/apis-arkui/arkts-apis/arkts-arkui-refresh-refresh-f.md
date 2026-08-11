@@ -32,7 +32,7 @@ export declare function Refresh(
 
 | 类型 | 说明 |
 | --- | --- |
-| [RefreshAttribute](arkts-arkui-refresh-refreshattribute-i.md) | 返回Refresh组件的属性。 |
+| [RefreshAttribute](../arkts-components/arkts-arkui-refresh-attribute.md) | 返回Refresh组件的属性。 |
 
 
 ## Refresh
@@ -69,5 +69,5 @@ export declare function Refresh(
 
 | 类型 | 说明 |
 | --- | --- |
-| [RefreshAttribute](arkts-arkui-refresh-refreshattribute-i.md) | Refresh的属性。 |
+| [RefreshAttribute](../arkts-components/arkts-arkui-refresh-attribute.md) | Refresh的属性。 |
 

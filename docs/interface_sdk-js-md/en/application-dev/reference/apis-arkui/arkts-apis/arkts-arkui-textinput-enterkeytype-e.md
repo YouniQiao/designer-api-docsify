@@ -1,6 +1,6 @@
 # EnterKeyType
 
-输入法回车键类型。
+Declare the type of soft keyboard.
 
 **Since:** 23
 
@@ -16,7 +16,7 @@
 Go = 2
 ```
 
-显示为开始样式。
+Go.
 
 **Since:** 23
 
@@ -34,7 +34,7 @@ Go = 2
 Search = 3
 ```
 
-显示为搜索样式。
+Search.
 
 **Since:** 23
 
@@ -52,7 +52,7 @@ Search = 3
 Send = 4
 ```
 
-显示为发送样式。
+Send.
 
 **Since:** 23
 
@@ -70,7 +70,7 @@ Send = 4
 Next = 5
 ```
 
-显示为下一步样式。
+Next.
 
 **Since:** 23
 
@@ -88,7 +88,7 @@ Next = 5
 Done = 6
 ```
 
-显示为完成样式。
+Done.
 
 **Since:** 23
 
@@ -106,7 +106,7 @@ Done = 6
 PREVIOUS = 7
 ```
 
-显示为上一步样式。
+Showed as 'previous' pattern.
 
 **Since:** 23
 
@@ -124,7 +124,7 @@ PREVIOUS = 7
 NEW_LINE = 8
 ```
 
-显示为换行样式。
+Showed as 'new line' pattern.
 
 **Since:** 23
 

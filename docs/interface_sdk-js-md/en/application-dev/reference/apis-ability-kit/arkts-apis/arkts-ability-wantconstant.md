@@ -1,6 +1,6 @@
 # @ohos.ability.wantConstant
 
-wantConstant模块提供want中操作want常数和解释Flags说明的能力。
+The module provides the actions, entities, and flags used in Want objects.
 
 **Since:** 6
 
@@ -20,15 +20,15 @@ wantConstant模块提供want中操作want常数和解释Flags说明的能力。
 
 | Name | Description |
 | --- | --- |
-| [Action](arkts-ability-wantconstant-action-depr-e.md) | want操作的常数。用于表示要执行的通用操作。 |
-| [Entity](arkts-ability-wantconstant-entity-depr-e.md) | want实体的常数。用于表示目标Ability额外的类别信息。 |
-| [Flags](arkts-ability-wantconstant-flags-depr-e.md) | Flags说明。用于表示处理Want的方式。 |
+| [Action](arkts-ability-wantconstant-action-depr-e.md) | Enumerates the action constants of the Want object. **action** specifies the operation to execute. |
+| [Entity](arkts-ability-wantconstant-entity-depr-e.md) | Enumerates the entity constants of the Want object. **entity** specifies additional information of the target ability. |
+| [Flags](arkts-ability-wantconstant-flags-depr-e.md) | Enumerates the flags that specify how the Want will be handled. |
 
 <!--Del-->
 ### Enums（系统接口）
 
 | Name | Description |
 | --- | --- |
-| [Flags](arkts-ability-wantconstant-flags-depr-e-sys.md) | Flags说明。用于表示处理Want的方式。 |
+| [Flags](arkts-ability-wantconstant-flags-depr-e-sys.md) | Enumerates the flags that specify how the Want will be handled. |
 <!--DelEnd-->
 

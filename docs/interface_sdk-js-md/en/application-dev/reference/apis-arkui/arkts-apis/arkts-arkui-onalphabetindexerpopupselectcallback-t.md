@@ -4,7 +4,7 @@
 export type OnAlphabetIndexerPopupSelectCallback = (index: int) => void
 ```
 
-提示弹窗二级索引项被选中时触发的事件。
+Defines an AlphabetIndexer callback when onPopupSelect.
 
 **Since:** 23
 

@@ -1,6 +1,6 @@
 # ZoomRange
 
-变焦范围。
+Describes the zoom range.
 
 **Since:** 24
 
@@ -22,7 +22,7 @@ import { camera } from 'kits/@kit.CameraKit';
 readonly max: double
 ```
 
-最大变焦值。
+Maximum zoom value.
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：double
 
@@ -42,7 +42,7 @@ readonly max: double
 readonly min: double
 ```
 
-最小变焦值。
+Minimum zoom value.
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：double
 

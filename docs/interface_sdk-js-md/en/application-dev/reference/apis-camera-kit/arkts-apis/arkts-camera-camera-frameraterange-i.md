@@ -1,6 +1,6 @@
 # FrameRateRange
 
-帧率范围。
+Describes the frame rate range.
 
 **Since:** 10
 
@@ -22,7 +22,7 @@ import { camera } from 'kits/@kit.CameraKit';
 readonly max: int
 ```
 
-最大帧率。单位：fps。
+Maximum frame rate. Unit: FPS
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
@@ -42,7 +42,7 @@ readonly max: int
 readonly min: int
 ```
 
-最小帧率。单位：fps。
+Minimum frame rate. Unit: FPS
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 

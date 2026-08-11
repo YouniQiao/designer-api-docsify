@@ -1,6 +1,6 @@
 # RectWidthStyle
 
-矩形区域宽度规格枚举。
+Enumerates the rectangle width styles.
 
 **Since:** 12
 
@@ -16,7 +16,8 @@
 TIGHT = 0
 ```
 
-不设置letterSpacing时，与字形紧贴，否则包含letterSpacing的宽度。
+If **letterSpacing** is not set, the rectangle conforms tightly to the text it contains. However, if  
+**letterSpacing** is set, a gap is introduced between the rectangle and text.
 
 **Since:** 12
 
@@ -34,7 +35,7 @@ TIGHT = 0
 MAX = 1
 ```
 
-扩展宽度，以匹配所有行上最宽矩形的位置。
+The rectangle's width is extended to align with the widest rectangle across all lines.
 
 **Since:** 12
 

@@ -2,9 +2,9 @@
 
 Title height.
 
-**Since:** 11
+**Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn only, since version 11.
+**ArkTS mode:** ArkTS-Dyn only, since version 9.
 
 <!--Device-unnamed-declare enum TitleHeight--><!--Device-unnamed-declare enum TitleHeight-End-->
 
@@ -18,9 +18,9 @@ MainOnly
 
 Title height when only main title is available.
 
-**Since:** 11
+**Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn only, since version 11.
+**ArkTS mode:** ArkTS-Dyn only, since version 9.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -36,9 +36,9 @@ MainWithSub
 
 Title height when main title and subtitle are both available.
 
-**Since:** 11
+**Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn only, since version 11.
+**ArkTS mode:** ArkTS-Dyn only, since version 9.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 

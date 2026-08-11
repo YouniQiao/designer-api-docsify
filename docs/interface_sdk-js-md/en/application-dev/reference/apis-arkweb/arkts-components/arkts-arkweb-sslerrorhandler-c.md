@@ -34,7 +34,7 @@ Constructor.
 handleCancel(): void
 ```
 
-取消此请求。
+Cancel this request.
 
 **Since:** 9
 
@@ -52,7 +52,7 @@ handleCancel(): void
 handleCancel(abortLoading: boolean): void
 ```
 
-ArkWeb遇到了SSL证书错误，该接口表示是否终止或者继续展示错误给用户。
+ArkWeb has encountered an SSL certificate error, and this interface indicates whether to terminate or continue displaying the error to users.
 
 **Since:** 20
 
@@ -66,7 +66,7 @@ ArkWeb遇到了SSL证书错误，该接口表示是否终止或者继续展示�
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| abortLoading | boolean | Yes | 如果abortLoading为true，则取消当前请求并停留在当前页面，如果为false，则拒绝忽略该SSL错误，最终展示空白页，如果开启了默认错误页，则显示默认错误页。默认为false |
+| abortLoading | boolean | Yes | If abortLoading is true, the current request will be canceled and the user will remain on the current page. If it is false, the SSL error will not be ignored, and a blank page will be displayed. If a default error page is enabled, the default error page will be shown instead. The default value is false. |
 
 ## handleConfirm
 
@@ -74,7 +74,7 @@ ArkWeb遇到了SSL证书错误，该接口表示是否终止或者继续展示�
 handleConfirm(): void
 ```
 
-继续使用SSL证书。
+Confirm to use the SSL certificate.
 
 **Since:** 9
 

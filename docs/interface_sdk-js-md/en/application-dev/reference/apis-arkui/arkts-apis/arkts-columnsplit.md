@@ -6,5 +6,5 @@
 
 | Name | Description |
 | --- | --- |
-| [ColumnSplitDividerStyle](arkts-arkui-columnsplit-columnsplitdividerstyle-i.md) | 设置子组件与上下分割线的距离。 |
+| [ColumnSplitDividerStyle](arkts-arkui-columnsplit-columnsplitdividerstyle-i.md) | Provides an interface for the style of a divider including start margin and end margin |
 

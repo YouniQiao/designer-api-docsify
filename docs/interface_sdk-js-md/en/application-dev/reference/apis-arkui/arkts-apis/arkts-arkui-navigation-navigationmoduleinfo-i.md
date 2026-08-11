@@ -1,10 +1,10 @@
 # NavigationModuleInfo
 
-Navigation的模块信息。
+Navigation module info.
 
-**Since:** 26.0.0
+**Since:** 26.1.0
 
-**ArkTS mode:** ArkTS-Sta only, since version 26.0.0.
+**ArkTS mode:** ArkTS-Sta only, since version 26.1.0.
 
 <!--Device-unnamed-export declare interface NavigationModuleInfo--><!--Device-unnamed-export declare interface NavigationModuleInfo-End-->
 
@@ -16,15 +16,15 @@ Navigation的模块信息。
 isUserCreateStack?: boolean
 ```
 
-导航的堆栈是否由用户创建
+Whether the stack of navigation is created by user
 
-默认值：false
+Default value: false
 
 **Type:** boolean
 
-**Since:** 26.0.0
+**Since:** 26.1.0
 
-**ArkTS mode:** ArkTS-Sta only, since version 26.0.0.
+**ArkTS mode:** ArkTS-Sta only, since version 26.1.0.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -38,13 +38,13 @@ isUserCreateStack?: boolean
 moduleName: string
 ```
 
-Navigation的模块名称。
+The module name of Navigation
 
 **Type:** string
 
-**Since:** 26.0.0
+**Since:** 26.1.0
 
-**ArkTS mode:** ArkTS-Sta only, since version 26.0.0.
+**ArkTS mode:** ArkTS-Sta only, since version 26.1.0.
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -58,13 +58,13 @@ Navigation的模块名称。
 pagePath: string
 ```
 
-Navigation的页面信息。
+The page path of Navigation
 
 **Type:** string
 
-**Since:** 26.0.0
+**Since:** 26.1.0
 
-**ArkTS mode:** ArkTS-Sta only, since version 26.0.0.
+**ArkTS mode:** ArkTS-Sta only, since version 26.1.0.
 
 **Model restriction:** This API can be used only in the stage model.
 

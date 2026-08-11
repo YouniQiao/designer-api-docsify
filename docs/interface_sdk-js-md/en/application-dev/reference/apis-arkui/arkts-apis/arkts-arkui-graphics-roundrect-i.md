@@ -1,6 +1,6 @@
 # RoundRect
 
-用于设置带有圆角的矩形。
+Defines the RoundRect.
 
 **Since:** 23
 
@@ -16,7 +16,7 @@
 corners: CornerRadius
 ```
 
-设置圆角的属性。
+Corners property.
 
 **Type:** [CornerRadius](arkts-arkui-cornerradius-t.md)
 
@@ -36,7 +36,7 @@ corners: CornerRadius
 rect: Rect
 ```
 
-设置矩形的属性。
+Rect property.
 
 **Type:** [Rect](../../apis-form-kit/arkts-apis/arkts-form-forminfo-rect-i.md)
 

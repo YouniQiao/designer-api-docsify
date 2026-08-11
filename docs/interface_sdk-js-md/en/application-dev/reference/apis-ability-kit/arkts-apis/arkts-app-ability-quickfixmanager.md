@@ -1,6 +1,6 @@
 # @ohos.app.ability.quickFixManager
 
-quickFixManager模块提供快速修复的能力，快速修复是系统提供给开发者的一种技术手段，支持开发者以远快于（小时级、分钟级）应用升级的方式进行缺陷修复。
+The quickFixManager module provides APIs for quick fix. With quick fix, you can fix bugs in your application by applying patches, which is more efficient than by updating the entire application.
 
 **Since:** 9
 
@@ -25,12 +25,12 @@ import { quickFixManager } from 'kits/@kit.AbilityKit';
 
 | Name | Description |
 | --- | --- |
-| [applyQuickFix](arkts-ability-quickfixmanager-applyquickfix-f-sys.md#applyquickfix) | 快速修复的补丁安装接口。使用callback异步回调。 |
-| [applyQuickFix](arkts-ability-quickfixmanager-applyquickfix-f-sys.md#applyquickfix-1) | 快速修复的补丁安装接口。使用Promise异步回调。 |
-| [getApplicationQuickFixInfo](arkts-ability-quickfixmanager-getapplicationquickfixinfo-f-sys.md#getapplicationquickfixinfo) | 获取应用的快速修复信息。使用callback异步回调。 |
-| [getApplicationQuickFixInfo](arkts-ability-quickfixmanager-getapplicationquickfixinfo-f-sys.md#getapplicationquickfixinfo-1) | 获取应用的快速修复信息。使用Promise异步回调。 |
-| [revokeQuickFix](arkts-ability-quickfixmanager-revokequickfix-f-sys.md#revokequickfix) | 撤销快速修复的接口，使用callback方式返回结果。 |
-| [revokeQuickFix](arkts-ability-quickfixmanager-revokequickfix-f-sys.md#revokequickfix-1) | 撤销快速修复的接口。使用Promise异步回调。 |
+| [applyQuickFix](arkts-ability-quickfixmanager-applyquickfix-f-sys.md#applyquickfix) | Applies a quick fix patch. This API uses an asynchronous callback to return the result. |
+| [applyQuickFix](arkts-ability-quickfixmanager-applyquickfix-f-sys.md#applyquickfix-1) | Applies a quick fix patch. This API uses a promise to return the result. |
+| [getApplicationQuickFixInfo](arkts-ability-quickfixmanager-getapplicationquickfixinfo-f-sys.md#getapplicationquickfixinfo) | Obtains the quick fix information of the application. This API uses an asynchronous callback to return the result. |
+| [getApplicationQuickFixInfo](arkts-ability-quickfixmanager-getapplicationquickfixinfo-f-sys.md#getapplicationquickfixinfo-1) | Obtains the quick fix information of the application. This API uses a promise to return the result. |
+| [revokeQuickFix](arkts-ability-quickfixmanager-revokequickfix-f-sys.md#revokequickfix) | Revokes quick fix. This API uses an asynchronous callback to return the result. |
+| [revokeQuickFix](arkts-ability-quickfixmanager-revokequickfix-f-sys.md#revokequickfix-1) | Revokes quick fix. This API uses a promise to return the result. |
 <!--DelEnd-->
 
 <!--Del-->
@@ -38,7 +38,7 @@ import { quickFixManager } from 'kits/@kit.AbilityKit';
 
 | Name | Description |
 | --- | --- |
-| [ApplicationQuickFixInfo](arkts-ability-quickfixmanager-applicationquickfixinfo-i-sys.md) | 应用级别的快速修复信息。 |
-| [HapModuleQuickFixInfo](arkts-ability-quickfixmanager-hapmodulequickfixinfo-i-sys.md) | hap级别的快速修复信息。 |
+| [ApplicationQuickFixInfo](arkts-ability-quickfixmanager-applicationquickfixinfo-i-sys.md) | Defines the quick fix information at the application level. |
+| [HapModuleQuickFixInfo](arkts-ability-quickfixmanager-hapmodulequickfixinfo-i-sys.md) | Defines the quick fix information at the HAP file level. |
 <!--DelEnd-->
 

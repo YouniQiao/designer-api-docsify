@@ -12,9 +12,9 @@ import { inputMethodEngine } from 'kits/@kit.IMEKit';
 function getInputMethodEngine(): InputMethodEngine
 ```
 
-获取输入法应用客户端实例[InputMethodEngine](arkts-ime-inputmethodengine-inputmethodengine-i.md)（输入法引擎）。
+Obtains an [InputMethodEngine](arkts-ime-inputmethodengine-inputmethodengine-i.md) instance for the input method.
 
-输入法应用获取该实例后，可订阅软键盘显示/隐藏请求事件等。
+The input method can use the obtained instance to subscribe to a soft keyboard display/hide request event.
 
 **Since:** 8
 
@@ -32,7 +32,7 @@ function getInputMethodEngine(): InputMethodEngine
 
 | Type | Description |
 | --- | --- |
-| [InputMethodEngine](arkts-ime-inputmethodengine-inputmethodengine-i.md) | 输入法应用客户端。 |
+| [InputMethodEngine](arkts-ime-inputmethodengine-inputmethodengine-i.md) | InputMethodAbility** instance. |
 
 ## Examples
 

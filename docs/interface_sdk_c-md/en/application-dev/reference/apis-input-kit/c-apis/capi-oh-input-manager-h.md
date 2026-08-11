@@ -485,6 +485,12 @@ Defines the callback used to return hotkey events.
 
 **Since**: 14
 
+**Parameters**:
+
+| Parameter | Description |
+| -- | -- |
+| (Input_Hotkey\* hotkey | Hotkey object. |
+
 ### Input_KeyEventCallback()
 
 ```c

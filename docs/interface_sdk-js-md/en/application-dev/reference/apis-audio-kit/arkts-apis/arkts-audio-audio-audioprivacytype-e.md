@@ -1,6 +1,6 @@
 # AudioPrivacyType
 
-表示对应播放音频流是否支持被其他应用录制的枚举。
+Enumerates whether an audio stream can be recorded by other applications.
 
 **Since:** 10
 
@@ -16,7 +16,7 @@
 PRIVACY_TYPE_PUBLIC = 0
 ```
 
-表示音频流可以被其他应用录制或屏幕投射，不包含隐私类型的流。
+The audio stream can be recorded or screen-projected by other applications and is not privacy-related.
 
 **Since:** 10
 
@@ -32,7 +32,7 @@ PRIVACY_TYPE_PUBLIC = 0
 PRIVACY_TYPE_PRIVATE = 1
 ```
 
-表示音频流不可以被其他应用录制或屏幕投射。
+The audio stream cannot be recorded or screen-projected by other applications.
 
 **Since:** 10
 
@@ -48,11 +48,12 @@ PRIVACY_TYPE_PRIVATE = 1
 PRIVACY_TYPE_SHARED = 2
 ```
 
-表示音频流可以被其他应用录制或屏幕投射，包含隐私类型的流。 
+The audio stream can be recorded or screen-projected by other applications and is privacy-related.
 
-例如，在PRIVACY_TYPE_PUBLIC策略下，[STREAM_USAGE_VOICE_COMMUNICATION](arkts-audio-audio-streamusage-e.md)类型音频流不会被其他应用录制或屏幕投射。 
+For example, if the privacy policy is **PRIVACY_TYPE_PUBLIC**, audio streams of the  
+[STREAM_USAGE_VOICE_COMMUNICATION](arkts-audio-audio-streamusage-e.md) type cannot be recorded or screen-projected by other applications.
 
-然而，在PRIVACY_TYPE_SHARED策略下，这些音频流将会允许被其他应用录制或屏幕投射。
+However, if the privacy policy is **PRIVACY_TYPE_SHARED**, these audio streams can be recorded or screen-projected by other applications.
 
 **Since:** 21
 

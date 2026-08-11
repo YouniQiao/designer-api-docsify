@@ -12,7 +12,7 @@ import { vibrator } from 'kits/@kit.SensorServiceKit';
 function off(type: 'vibratorStateChange', callback?: Callback<VibratorStatusEvent>): void
 ```
 
-注销马达上线或下线事件的回调函数。当开发者不再需要监听马达上下线状态变化时使用此接口注销回调。传入callback时注销指定回调；不传callback时注销该类型下所有已注册的回调。注销成功后，不再触发对应的回调函数。若传入的callback未注册过，注销操作无效但不会报错。需先通过[vibrator.on](arkts-sensorservice-vibrator-on-f.md#on)注册回调后才能注销。同一type重复注册同一callback不会覆盖，需先off再on。
+Disables listening for vibrator status changes.
 
 **Since:** 19
 
@@ -26,14 +26,14 @@ function off(type: 'vibratorStateChange', callback?: Callback<VibratorStatusEven
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'vibratorStateChange' | Yes | 监听类型，该值固定为vibratorStateChange，表示马达上下线状态变化事件。 |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;VibratorStatusEvent&gt; | No | 需要注销的回调函数。不传此参数时注销所有vibratorStateChange类型的回调。使用场景：若仅需注销特定回调则传入对应 callback；若需注销全部回调则不传此参数。 |
+| type | 'vibratorStateChange' | Yes | Event type. The value **vibratorStateChange** indicates a vibrator online/ offline event. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;VibratorStatusEvent&gt; | No | Callback used to return the vibrator status change event. If this parameter is not specified, all callbacks of vibrator status change events will be unregistered. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 14600101 | Device operation failed. |
+| [14600101](../errorcode-vibrator.md#14600101-device-operation-failed) | Device operation failed. |
 
 ## Examples
 

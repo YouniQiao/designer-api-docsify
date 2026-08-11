@@ -1,8 +1,8 @@
 # EventTarget
 
-[BaseEvent](arkts-arkui-baseevent-i.md)中参数target的类型。
+Defines the type of the **target** parameter in [BaseEvent](arkts-arkui-baseevent-i.md).
 
-触发事件的元素对象的显示区域。
+Represents the display area of the element object that triggers the event.
 
 **Since:** 8
 
@@ -18,7 +18,7 @@
 area: Area
 ```
 
-目标元素的区域信息。
+Area information of the target element.
 
 **Type:** [Area](../arkts-apis/arkts-arkui-area-i.md)
 
@@ -40,7 +40,7 @@ area: Area
 id?: string
 ```
 
-开发者设置的节点[id](arkts-arkui-commonmethod-c.md#id)。默认值：undefined
+Custom node [ID](arkts-arkui-commonmethod-c.md#id). Default value: **undefined**.
 
 **Type:** string
 

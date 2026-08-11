@@ -22,12 +22,6 @@ URL是统一资源定位符，本模块提供了常用的工具函数，实现�
 
 **系统能力：** SystemCapability.Utils.Lang
 
-## 导入模块
-
-```TypeScript
-import { url } from 'kits/@kit.ArkTS';
-```
-
 ## 汇总
 
 ### 类

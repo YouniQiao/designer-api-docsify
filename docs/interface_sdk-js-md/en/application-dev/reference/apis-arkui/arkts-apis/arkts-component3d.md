@@ -1,4 +1,4 @@
-# component3d(定义3D组件)
+# component3d(Defines 3D component)
 
 ## Summary
 
@@ -6,11 +6,11 @@
 
 | Name | Description |
 | --- | --- |
-| [SceneOptions](arkts-arkui-component3d-sceneoptions-i.md) | 3D场景控制使用的场景选项 |
+| [SceneOptions](arkts-arkui-component3d-sceneoptions-i.md) | Scene options used by 3D scene control |
 
 ### Enums
 
 | Name | Description |
 | --- | --- |
-| [ModelType](arkts-arkui-component3d-modeltype-e.md) | 模型类型枚举 |
+| [ModelType](arkts-arkui-component3d-modeltype-e.md) | The enum of model type |
 

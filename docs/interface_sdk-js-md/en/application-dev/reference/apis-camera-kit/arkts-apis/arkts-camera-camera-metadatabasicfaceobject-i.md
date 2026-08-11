@@ -1,7 +1,7 @@
 # MetadataBasicFaceObject
 
-相机检测到的基础人脸元数据信息，继承自[MetadataObject](arkts-camera-camera-metadataobject-i.md)。[CameraInput](arkts-camera-camera-camerainput-i.md)相机信息中的数据来源，通过metadataOutput.  
-[on('metadataObjectsAvailable')](camera.MetadataOutput.on(type: 'metadataObjectsAvailable', callback: AsyncCallback&lt;Array<MetadataObject>&gt;&lt;MetadataObject&gt;>))接口获取。
+Basic face metadata detected by the camera, which is extended from [MetadataObject](arkts-camera-camera-metadataobject-i.md). It serves as the data source of the camera information in [CameraInput](arkts-camera-camera-camerainput-i.md). It is obtained by calling metadataOutput.  
+[on('metadataObjectsAvailable')](camera.MetadataOutput.on(type: 'metadataObjectsAvailable', callback: AsyncCallback&lt;Array<MetadataObject>&gt;&lt;MetadataObject&gt;>)).
 
 **Inheritance/Implementation:** MetadataBasicFaceObject extends [MetadataObject](arkts-camera-camera-metadataobject-i.md)
 
@@ -25,7 +25,7 @@ import { camera } from 'kits/@kit.CameraKit';
 readonly leftEyeBoundingBox?: Rect
 ```
 
-左眼区域框。
+Left eye area.
 
 **Type:** [Rect](../../apis-form-kit/arkts-apis/arkts-form-forminfo-rect-i.md)
 
@@ -45,7 +45,7 @@ readonly leftEyeBoundingBox?: Rect
 readonly pitchAngle?: int
 ```
 
-俯仰角度。取值范围为[-90, 90]，以向下为正方向。
+Pitch angle. The value range is [-90, 90], with the positive direction being downwards.
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
@@ -65,7 +65,7 @@ readonly pitchAngle?: int
 readonly rightEyeBoundingBox?: Rect
 ```
 
-右眼区域框。
+Right eye area.
 
 **Type:** [Rect](../../apis-form-kit/arkts-apis/arkts-form-forminfo-rect-i.md)
 
@@ -85,7 +85,7 @@ readonly rightEyeBoundingBox?: Rect
 readonly rollAngle?: int
 ```
 
-平面内旋转角度。取值范围为[-180, 180]，以顺时针方向为正方向。
+Roll angle. The value range is [-180, 180], with the positive direction being clockwise.
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
@@ -105,7 +105,7 @@ readonly rollAngle?: int
 readonly yawAngle?: int
 ```
 
-左右旋转角度。取值范围为[-90, 90]，以向右为正方向。
+Yaw angle. The value range is [-90, 90], with the positive direction being rightwards.
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 

@@ -1,11 +1,11 @@
 # BundleResourceInfo (System API)
 
-应用配置的图标和名称信息，可以通过  
-[getBundleResourceInfo](arkts-ability-bundleresourcemanager-getbundleresourceinfo-f-sys.md#getbundleresourceinfo)获取。
+The module provides resource information of an application, such as the icon and label. The information can be obtained by calling  
+[getBundleResourceInfo](./../@ohos.bundle.bundleResourceManager:bundleResourceManager.bundleResourceManager.getBundleResourceInfo(bundleName: string, resourceFlags?: int)).
 
-> **说明：**
+> **NOTE：**
 > 
-> 本模块为系统接口。
+> The APIs provided by this module are system APIs.
 
 **Since:** 11
 
@@ -23,7 +23,7 @@
 readonly appIndex: int
 ```
 
-应用分身Id。
+Index of an application clone.
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
@@ -43,7 +43,7 @@ readonly appIndex: int
 readonly bundleName: string
 ```
 
-应用的包名。
+Bundle name of the application.
 
 **Type:** string
 
@@ -63,7 +63,7 @@ readonly bundleName: string
 readonly drawableDescriptor: DrawableDescriptor
 ```
 
-应用图标的drawableDescriptor对象。
+drawableDescriptor object of the application icon.
 
 **Type:** [DrawableDescriptor](../../apis-arkui/arkts-components/arkts-arkui-drawabledescriptor-t.md)
 
@@ -83,7 +83,7 @@ readonly drawableDescriptor: DrawableDescriptor
 readonly icon: string
 ```
 
-应用图标，为Base64编码格式。
+Application icon, which is encoded using Base64.
 
 **Type:** string
 
@@ -103,7 +103,7 @@ readonly icon: string
 readonly label: string
 ```
 
-应用名称。
+Application label.
 
 **Type:** string
 

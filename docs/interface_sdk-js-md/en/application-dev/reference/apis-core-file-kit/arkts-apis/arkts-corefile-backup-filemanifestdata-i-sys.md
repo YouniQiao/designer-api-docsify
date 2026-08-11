@@ -1,6 +1,6 @@
 # FileManifestData (System API)
 
-增量数据中的清单文件信息，用于描述应用增量备份、恢复时对应文件的基础信息。
+Manifest file information in incremental data. FileManifestData is useful when doing IPC with the backup service.
 
 **Since:** 12
 
@@ -24,7 +24,7 @@ import { backup } from 'kits/@kit.CoreFileKit';
 manifestFd: int
 ```
 
-清单文件的文件描述符，通过备份服务获取。
+A file descriptor for the manifest file that holds the data
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 

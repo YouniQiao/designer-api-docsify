@@ -1,6 +1,7 @@
 # UIEventObserver
 
-UI事件监听器。
+Defines a UI event listener, which is used to listen for various events on the UI, including the display of the  
+**Toast** and **Dialog** components, window change event, and component operation event. An instance can be created using {@link Driver#createUIEventObserver}.
 
 **Since:** 10
 
@@ -22,7 +23,7 @@ import { ResizeDirection, WindowMode, PenMode, PenKeyOperation, Driver, MatchPat
 once(type: 'toastShow', callback: Callback<UIElementInfo>): void
 ```
 
-开始监听toast控件出现的事件，使用callback的形式返回结果。
+Subscribes to events of the toast component. This API uses a callback to return the result.
 
 **Since:** 10
 
@@ -38,14 +39,14 @@ once(type: 'toastShow', callback: Callback<UIElementInfo>): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'toastShow' | Yes | 订阅的事件类型，取值为'toastShow'。 |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;UIElementInfo&gt; | Yes | 事件发生时执行的回调函数。 |
+| type | 'toastShow' | Yes | Event type. The value is fixed at **'toastShow'**. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;UIElementInfo&gt; | Yes | Callback used to return the result. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
 
 ## Examples
 
@@ -54,17 +55,13 @@ once(type: 'toastShow', callback: Callback<UIElementInfo>): void
 import { Driver, UIElementInfo, UIEventObserver } from '@kit.TestKit';
 
 async function demo() {
-  // Create a Driver object.
   let driver: Driver = Driver.create();
-  // Register a UI event listener.
   let observer: UIEventObserver = driver.createUIEventObserver();
-  // Define a callback to output the attribute information of the Toast component.
   let callback = (UIElementInfo: UIElementInfo) => {
     console.info(UIElementInfo.bundleName);
     console.info(UIElementInfo.text);
     console.info(UIElementInfo.type);
   }
-  // Subscribe to the events of the Toast component display.
   observer.once('toastShow', callback);
 }
 ```
@@ -75,7 +72,7 @@ async function demo() {
 once(type: 'dialogShow', callback: Callback<UIElementInfo>): void
 ```
 
-开始监听dialog控件出现的事件，使用callback的形式返回结果。
+Subscribes to events of the dialog component. This API uses a callback to return the result.
 
 **Since:** 10
 
@@ -91,14 +88,14 @@ once(type: 'dialogShow', callback: Callback<UIElementInfo>): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'dialogShow' | Yes | 订阅的事件类型，取值为'dialogShow'。 |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;UIElementInfo&gt; | Yes | 事件发生时执行的回调函数。 |
+| type | 'dialogShow' | Yes | Event type. The value is fixed at **'dialogShow'**. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;UIElementInfo&gt; | Yes | Callback used to return the result. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
 
 ## Examples
 
@@ -124,8 +121,7 @@ async function demo() {
 once(type: 'windowChange', windowChangeType: WindowChangeType, options: WindowChangeOptions, callback: Callback<UIElementInfo>): void
 ```
 
-开始监听指定类型的窗口变化事件，支持设置事件监听的扩展配置，监听到指定窗口变化事件时触发callback回调。仅支持  
-[自由多窗模式](../../../windowmanager/window-terminology.md#自由多窗模式)的窗口监听。
+Starts listening for window change events of the specified type with extended configuration supported. This API triggers a callback when a specified window change event is detected.This API can be used only in [free windows](../../../windowmanager/window-terminology.md#free-windows) mode.
 
 **Since:** 22
 
@@ -141,17 +137,17 @@ once(type: 'windowChange', windowChangeType: WindowChangeType, options: WindowCh
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'windowChange' | Yes | 订阅的事件类型，支持的事件为'windowChange'。当监听到窗口变化时，触发该事件。 |
-| windowChangeType | [WindowChangeType](arkts-test-uitest-windowchangetype-e.md) | Yes | 窗口变化事件类型。 |
-| options | [WindowChangeOptions](arkts-test-uitest-windowchangeoptions-i.md) | Yes | 窗口变化事件监听的扩展配置，包括监听超时时间和监听窗口对应包名。 |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;UIElementInfo&gt; | Yes | 事件发生时执行的回调函数，返回事件的相关信息。 |
+| type | 'windowChange' | Yes | Type of the event to subscribe to, which can be **windowChange**. This event is triggered when the window changes. |
+| windowChangeType | [WindowChangeType](arkts-test-uitest-windowchangetype-e.md) | Yes | Type of the window change event. |
+| options | [WindowChangeOptions](arkts-test-uitest-windowchangeoptions-i.md) | Yes | Extended configuration, including the listening timeout interval and the bundle name of the window to be listened for. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;UIElementInfo&gt; | Yes | Callback triggered to return event information when an event occurs. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 17000007 | Parameter verification failed. |
-| 17000005 | This operation is not supported. |
+| [17000007](../errorcode-uitest.md#17000007-parameters-are-invalid) | Parameter verification failed. |
+| [17000005](../errorcode-uitest.md#17000005-operation-not-supported) | This operation is not supported. |
 
 ## Examples
 
@@ -183,7 +179,7 @@ async function demo() {
 once(type: 'componentEventOccur', componentEventType: ComponentEventType, options: ComponentEventOptions, callback: Callback<UIElementInfo>): void
 ```
 
-开始监听指定类型的控件操作事件，支持设置事件监听的扩展配置，监听到指定控件操作事件时触发callback回调。
+Starts listening for component operation events of the specified type with extended configuration supported. This API triggers a callback when a specified component operation event is detected.
 
 **Since:** 22
 
@@ -199,17 +195,17 @@ once(type: 'componentEventOccur', componentEventType: ComponentEventType, option
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'componentEventOccur' | Yes | 订阅的事件类型，支持的事件为'componentEventOccur'。当监听到控件操作时，触发该事件。 |
-| componentEventType | [ComponentEventType](arkts-test-uitest-componenteventtype-e.md) | Yes | 控件操作事件类型。 |
-| options | [ComponentEventOptions](arkts-test-uitest-componenteventoptions-i.md) | Yes | 控件操作事件监听的扩展配置，包括监听超时时间和监听控件匹配条件。 |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;UIElementInfo&gt; | Yes | 事件发生时执行的回调函数。 |
+| type | 'componentEventOccur' | Yes | Type of the event to subscribe to, which can be **componentEventOccur**. This event is triggered when the component operation is detected. |
+| componentEventType | [ComponentEventType](arkts-test-uitest-componenteventtype-e.md) | Yes | Type of the component operation event. |
+| options | [ComponentEventOptions](arkts-test-uitest-componenteventoptions-i.md) | Yes | Extended configuration, including the listening timeout interval and the matching condition of the component to be listened for. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;UIElementInfo&gt; | Yes | Callback used to return the result. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 17000007 | Parameter verification failed. |
-| 17000005 | This operation is not supported. |
+| [17000007](../errorcode-uitest.md#17000007-parameters-are-invalid) | Parameter verification failed. |
+| [17000005](../errorcode-uitest.md#17000005-operation-not-supported) | This operation is not supported. |
 
 ## Examples
 
@@ -232,9 +228,9 @@ async function demo() {
     console.info(UIElementInfo.windowId?.toString());
     console.info(UIElementInfo.componentId);
     console.info(UIElementInfo.componentRect?.left.toString());
-    console.info(UIElementInfo.componentRect?.top.toString());
-    console.info(UIElementInfo.componentRect?.right.toString());
-    console.info(UIElementInfo.componentRect?.bottom.toString());
+    console.info(UIElementInfo.componentRect?.left.toString());
+    console.info(UIElementInfo.componentRect?.left.toString());
+    console.info(UIElementInfo.componentRect?.left.toString());
   };
   observer.once('componentEventOccur', ComponentEventType.COMPONENT_CLICKED, option, callback);
 }
@@ -268,8 +264,8 @@ Listen on component event once, additional listening options can be set.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 17000007 | Parameter verification failed. |
-| 17000005 | This operation is not supported. |
+| [17000007](../errorcode-uitest.md#17000007-parameters-are-invalid) | Parameter verification failed. |
+| [17000005](../errorcode-uitest.md#17000005-operation-not-supported) | This operation is not supported. |
 
 ## onceDialogShow
 
@@ -297,7 +293,7 @@ Listen for dialog show once
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
 
 ## onceToastShow
 
@@ -325,7 +321,7 @@ Listen for toast show once
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
 
 ## onceWindowChange
 
@@ -355,6 +351,6 @@ Listen on window change once, additional listening options can be set.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 17000007 | Parameter verification failed. |
-| 17000005 | This operation is not supported. |
+| [17000007](../errorcode-uitest.md#17000007-parameters-are-invalid) | Parameter verification failed. |
+| [17000005](../errorcode-uitest.md#17000005-operation-not-supported) | This operation is not supported. |
 

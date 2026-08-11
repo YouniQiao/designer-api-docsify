@@ -2400,7 +2400,7 @@ Returns a new string with one, some, or all matches of a pattern replaced by a r
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | searchValue | string \| RegExp | Yes | pattern which can be a string or RegExp. |
-| replacer | (substr: string,          args: (Object \| undefined)[]) =&gt; string | Yes | replacement function. |
+| replacer | (substr: string,          args: (Object \| undefined)[]) =&gt; string | Yes | replacement function. |
 
 **Return value:**
 
@@ -2587,7 +2587,7 @@ Returns a new string with all matches of a pattern replaced by a replacement
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | searchValue | string \| RegExp | Yes | pattern which can be a string or RegExp. |
-| replacer | (substr: string,         args: (Object \| undefined)[]) =&gt; string | Yes | replacement function. |
+| replacer | (substr: string,         args: (Object \| undefined)[]) =&gt; string | Yes | replacement function. |
 
 **Return value:**
 

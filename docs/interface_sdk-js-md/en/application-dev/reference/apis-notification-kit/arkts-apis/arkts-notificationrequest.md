@@ -1,28 +1,32 @@
 # notificationRequest(Information carried when a notification is sent)
 
+This module defines the data structure of a notification request, which is used to describe all information of a
+ notification, including notification content, identifier, display style, and interaction behavior.
+
+
 ## Summary
 
 ### Interfaces
 
 | Name | Description |
 | --- | --- |
-| [DistributedOptions](arkts-notification-notificationrequest-distributedoptions-i.md) | 描述跨设备协同选项。预留能力，暂未支持。 |
-| [NotificationParameters](arkts-notification-notificationrequest-notificationparameters-i.md) | 描述[NotificationRequest](arkts-notification-notificationrequest-notificationrequest-i.md)中wantAgent的部分信息。 |
-| [NotificationRequest](arkts-notification-notificationrequest-notificationrequest-i.md) | 定义了通知请求的数据结构，用于描述一条通知的全部信息，包括通知内容、标识、展示样式、交互行为等。 |
+| [DistributedOptions](arkts-notification-notificationrequest-distributedoptions-i.md) | Describes options for cross-device notifications. Not supported currently. |
+| [NotificationParameters](arkts-notification-notificationrequest-notificationparameters-i.md) | Describes part of the **wantAgent** information in NotificationRequest. |
+| [NotificationRequest](arkts-notification-notificationrequest-notificationrequest-i.md) | Defines the data structure of a notification request, which is used to describe all information about a notification, including the notification content, identifier, display style, and interaction behavior. |
 
 <!--Del-->
 ### Interfaces（系统接口）
 
 | Name | Description |
 | --- | --- |
-| [DistributedOptions](arkts-notification-notificationrequest-distributedoptions-i-sys.md) | 描述跨设备协同选项。预留能力，暂未支持。 |
-| [Geofence](arkts-notification-notificationrequest-geofence-i-sys.md) | 地理围栏的配置信息。 |
-| [GroupInfo](arkts-notification-notificationrequest-groupinfo-i-sys.md) | 组通知信息。 |
-| [NotificationCheckRequest](arkts-notification-notificationrequest-notificationcheckrequest-i-sys.md) | 描述通知的鉴权信息。 |
-| [NotificationFilter](arkts-notification-notificationrequest-notificationfilter-i-sys.md) | 描述查询普通实况窗时的筛选条件。 |
-| [NotificationRequest](arkts-notification-notificationrequest-notificationrequest-i-sys.md) | 定义了通知请求的数据结构，用于描述一条通知的全部信息，包括通知内容、标识、展示样式、交互行为等。 |
-| [Trigger](arkts-notification-notificationrequest-trigger-i-sys.md) | 触发条件的具体信息。 |
-| [UnifiedGroupInfo](arkts-notification-notificationrequest-unifiedgroupinfo-i-sys.md) | 描述通知智能聚合信息字段。 |
+| [DistributedOptions](arkts-notification-notificationrequest-distributedoptions-i-sys.md) | Describes options for cross-device notifications. Not supported currently. |
+| [Geofence](arkts-notification-notificationrequest-geofence-i-sys.md) | Defines the configuration of a geofence. |
+| [GroupInfo](arkts-notification-notificationrequest-groupinfo-i-sys.md) | Defines the group notification information. |
+| [NotificationCheckRequest](arkts-notification-notificationrequest-notificationcheckrequest-i-sys.md) | Describes the notification authentication information. |
+| [NotificationFilter](arkts-notification-notificationrequest-notificationfilter-i-sys.md) | Describes the filter criteria for querying the live view. |
+| [NotificationRequest](arkts-notification-notificationrequest-notificationrequest-i-sys.md) | Defines the data structure of a notification request, which is used to describe all information about a notification, including the notification content, identifier, display style, and interaction behavior. |
+| [Trigger](arkts-notification-notificationrequest-trigger-i-sys.md) | Defines the details for triggering a geofence. |
+| [UnifiedGroupInfo](arkts-notification-notificationrequest-unifiedgroupinfo-i-sys.md) | Describes the fields of notification intelligent unification information. |
 <!--DelEnd-->
 
 <!--Del-->
@@ -30,8 +34,8 @@
 
 | Name | Description |
 | --- | --- |
-| [CoordinateSystemType](arkts-notification-notificationrequest-coordinatesystemtype-e-sys.md) | 表示地理围栏坐标系类型的枚举。 |
-| [MonitorEvent](arkts-notification-notificationrequest-monitorevent-e-sys.md) | 表示地理围栏的监控事件类型的枚举。 |
-| [TriggerType](arkts-notification-notificationrequest-triggertype-e-sys.md) | 表示触发条件的事件类型的枚举。 |
+| [CoordinateSystemType](arkts-notification-notificationrequest-coordinatesystemtype-e-sys.md) | Enumerates the coordinate systems of a geofence. |
+| [MonitorEvent](arkts-notification-notificationrequest-monitorevent-e-sys.md) | Enumerates the event types of monitoring a geofence. |
+| [TriggerType](arkts-notification-notificationrequest-triggertype-e-sys.md) | Enumerates the trigger types. |
 <!--DelEnd-->
 

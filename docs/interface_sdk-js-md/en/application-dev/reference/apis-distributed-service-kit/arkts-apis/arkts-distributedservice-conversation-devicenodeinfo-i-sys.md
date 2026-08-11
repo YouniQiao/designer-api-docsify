@@ -1,6 +1,6 @@
 # DeviceNodeInfo (System API)
 
-设备节点信息，包括networkId、设备名称、设备类型标识符、近场状态和UDID。
+Defines the device node information, including the network ID, device name, device type ID, near-field status, and UDID.
 
 **Since:** 26.1.0
 
@@ -24,7 +24,7 @@ import { conversation } from 'kits/@kit.DistributedServiceKit';
 deviceName: string
 ```
 
-设备名称。
+Device name.
 
 **Type:** string
 
@@ -46,7 +46,7 @@ deviceName: string
 deviceTypeId: int
 ```
 
-设备类型标识符，表示设备的类别，取值为整数，例如：0x0E-手机、0x11-平板、0x9C-电视、0x0C-PC等（具体数值以系统定义为准）。
+Device type ID, which indicates the device type. The value is an integer, for example, **0x0E** is the mobile phone ID, **0x11** is the tablet ID, **0x9C** is the TV ID, and **0x0C** is the PC ID. The specific value is subject to the system definition.
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
@@ -68,7 +68,7 @@ deviceTypeId: int
 nearby: boolean
 ```
 
-设备是否在近场。true表示设备在近场，false表示设备不在近场。
+Whether the device is in the near field. The value **true** indicates that the device is in the near field, and the value **false** indicates that the device is not in the near field.
 
 **Type:** boolean
 
@@ -90,7 +90,7 @@ nearby: boolean
 networkId: string
 ```
 
-设备的networkId，在分布式网络中唯一标识一台设备，用于发送数据时的设备寻址。与UDID互为替代，发送数据时可任选其一。
+Network ID of the device, which uniquely identifies a device on a distributed network and is used for device addressing during data sending. It is an alternative to UDID. Either of them can be used for data sending.
 
 **Type:** string
 
@@ -112,7 +112,7 @@ networkId: string
 udid: string
 ```
 
-设备的UDID，唯一标识一台设备，用于发送数据时的设备寻址。与networkId不同，UDID为设备的永久唯一标识，不随网络拓扑变化而改变，两者互为替代，发送数据时可任选其一。
+UDID of the device, which uniquely identifies a device and is used for device addressing during data sending.Different from the network ID, the UDID is a permanent and unique ID of a device and does not change with the network topology. They are alternative to each other and either of them can be used for data sending.
 
 **Type:** string
 

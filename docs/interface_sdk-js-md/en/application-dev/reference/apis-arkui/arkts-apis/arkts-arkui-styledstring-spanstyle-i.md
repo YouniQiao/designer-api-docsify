@@ -16,9 +16,7 @@ SpanStyle
 length: int
 ```
 
-设置属性字符串样式的长度。
-
-当length的值小于0或超出字符串长度与start的差值时，按字符串长度与start的差值处理。
+The length of the modifiedStyledString's characters.The value should be an integer.
 
 **Type:** int
 
@@ -38,7 +36,7 @@ length: int
 start: int
 ```
 
-匹配属性字符串样式的开始位置。
+The start position of the SpanStyle.The value should be an integer.
 
 **Type:** int
 
@@ -58,7 +56,7 @@ start: int
 styledKey: StyledStringKey
 ```
 
-样式类型的枚举值。
+The attribute key of the SpanStyle.
 
 **Type:** [StyledStringKey](arkts-arkui-styledstring-styledstringkey-e.md)
 
@@ -78,7 +76,7 @@ styledKey: StyledStringKey
 styledValue: StyledStringValue
 ```
 
-样式对象。
+The attribute value of the SpanStyle.
 
 **Type:** [StyledStringValue](arkts-arkui-styledstringvalue-t.md)
 

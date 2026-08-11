@@ -12,7 +12,7 @@ import { request } from 'kits/@kit.BasicServicesKit';
 function upload(config: UploadConfig, callback: AsyncCallback<UploadTask>): void
 ```
 
-创建并启动一个上传任务，使用callback异步回调。
+Uploads a file. This API uses an asynchronous callback to return the result.
 
 **Since:** 6
 
@@ -34,14 +34,14 @@ function upload(config: UploadConfig, callback: AsyncCallback<UploadTask>): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| config | [UploadConfig](arkts-basicservices-request-uploadconfig-i.md) | Yes | 上传的配置信息。 |
-| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;UploadTask&gt; | Yes | 回调函数，异步返回UploadTask对象。当上传成功，err为undefined，data为获取到的UploadTask对象；否则为 错误对象。 |
+| config | [UploadConfig](arkts-basicservices-request-uploadconfig-i.md) | Yes | Upload configurations. |
+| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;UploadTask&gt; | Yes | Callback used to return the **UploadTask** object. If the operation is successful, **err** is **undefined**, and **data** is the **UploadTask** object obtained. Otherwise, **err** is an error object. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 201 | The permissions check fails. |
+| [201](../../errorcode-universal.md#201-permission-denied) | The permissions check fails. |
 
 ## Examples
 
@@ -70,7 +70,7 @@ request.upload(uploadConfig, (err: BusinessError, data: request.UploadTask) => {
 function upload(config: UploadConfig): Promise<UploadTask>
 ```
 
-创建并启动一个上传任务，使用Promise异步回调。
+Uploads a file. This API uses a promise to return the result.
 
 **Since:** 6
 
@@ -92,19 +92,19 @@ function upload(config: UploadConfig): Promise<UploadTask>
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| config | [UploadConfig](arkts-basicservices-request-uploadconfig-i.md) | Yes | 上传的配置信息。 |
+| config | [UploadConfig](arkts-basicservices-request-uploadconfig-i.md) | Yes | Upload configurations. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;UploadTask&gt; | 使用Promise方式，异步返回上传任务UploadTask的Promise对象。 |
+| Promise&lt;UploadTask&gt; | Promise used to return the **UploadTask** object. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 201 | The permissions check fails. |
+| [201](../../errorcode-universal.md#201-permission-denied) | The permissions check fails. |
 
 ## Examples
 

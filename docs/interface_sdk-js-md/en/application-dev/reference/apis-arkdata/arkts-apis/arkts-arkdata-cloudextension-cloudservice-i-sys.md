@@ -1,6 +1,6 @@
 # CloudService (System API)
 
-提供对接同步云服务的类。开发者需要继承此类并实现类的接口，系统内部通过该类的接口连接并使用同步云服务。
+Provides APIs for interacting with the cloud sync service.You need to inherit this class and implement APIs of this class.The system calls these APIs to connect to the cloud and use the cloud sync service.
 
 **Since:** 11
 
@@ -24,7 +24,7 @@ import { cloudExtension } from 'kits/@kit.ArkData';
 connectAssetLoader(bundleName: string, database: Database): Promise<rpc.RemoteObject>
 ```
 
-系统内部通过该接口获取AssetLoader的RemoteObject对象，可以通过createAssetLoaderStub接口进行创建，使用Promise异步回调。
+Connects to an asset loader by obtaining a RemoteObject instance of AssetLoader,which is created by using createAssetLoaderStub. This API uses a promise to return the result.You can use this API to connect to the asset loader.
 
 **Since:** 11
 
@@ -40,33 +40,14 @@ connectAssetLoader(bundleName: string, database: Database): Promise<rpc.RemoteOb
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| bundleName | string | Yes | 应用包名。 |
-| database | [Database](arkts-arkdata-cloudextension-database-i-sys.md) | Yes | 需要连接的数据库。 |
+| bundleName | string | Yes | Bundle name of the application. |
+| database | [Database](arkts-arkdata-cloudextension-database-i-sys.md) | Yes | Database to connect. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;rpc.RemoteObject&gt; | Promise对象，返回AssetLoader的RemoteObject对象。 |
-
-## Examples
-
-```TypeScript
-import { rpc } from '@kit.IPCKit';
-
-class MyAssetLoader implements cloudExtension.AssetLoader {
-  // ...
-}
-
-class MyCloudService implements cloudExtension.CloudService {
-  constructor() {}
-  async connectAssetLoader(bundleName: string, database: cloudExtension.Database): Promise<rpc.RemoteObject> {
-    // ...
-    console.info(`connect asset loader, bundle: ${bundleName}`);
-    return cloudExtension.createAssetLoaderStub(new MyAssetLoader());
-  }
-}
-```
+| Promise&lt;rpc.RemoteObject&gt; | Promise used to return the RemoteObject instance of AssetLoader. |
 
 ## connectDB
 
@@ -74,7 +55,7 @@ class MyCloudService implements cloudExtension.CloudService {
 connectDB(bundleName: string, database: Database): Promise<rpc.RemoteObject>
 ```
 
-系统内部通过该接口获取CloudDB的RemoteObject对象，可以通过createCloudDBStub接口进行创建，使用Promise异步回调。
+Connects to a cloud database by obtaining a RemoteObject instance of CloudDB,which is created by using createCloudDBStub. This API uses a promise to return the result.
 
 **Since:** 11
 
@@ -90,33 +71,14 @@ connectDB(bundleName: string, database: Database): Promise<rpc.RemoteObject>
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| bundleName | string | Yes | 应用包名。 |
-| database | [Database](arkts-arkdata-cloudextension-database-i-sys.md) | Yes | 需要连接的数据库。 |
+| bundleName | string | Yes | Bundle name of the application. |
+| database | [Database](arkts-arkdata-cloudextension-database-i-sys.md) | Yes | Database to connect. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;rpc.RemoteObject&gt; | Promise对象，返回CloudDB的RemoteObject对象。 |
-
-## Examples
-
-```TypeScript
-import { rpc } from '@kit.IPCKit';
-
-class MyCloudDB implements cloudExtension.CloudDB {
-  // ...
-}
-
-class MyCloudService implements cloudExtension.CloudService {
-  constructor() {}
-    // ...
-  async connectDB(bundleName: string, database: cloudExtension.Database): Promise<rpc.RemoteObject> {
-    console.info(`connect DB, bundleName: ${bundleName}`);
-    return cloudExtension.createCloudDBStub(new MyCloudDB());
-  }
-}
-```
+| Promise&lt;rpc.RemoteObject&gt; | Promise used to return the RemoteObject instance of CloudDB. |
 
 ## connectShareCenter
 
@@ -130,7 +92,7 @@ ArkTS-Sta:
 connectShareCenter(userId: int, bundleName: string): Promise<rpc.RemoteObject>
 ```
 
-系统内部通过该接口获取ShareCenter的RemoteObject对象，可以通过createShareServiceStub接口进行创建，使用Promise异步回调。
+Connects to ShareCenter by obtaining a RemoteObject instance of ShareCenter,which is created by using createShareServiceStub. This API uses a promise to return the result.
 
 **Since:** 11
 
@@ -146,14 +108,14 @@ connectShareCenter(userId: int, bundleName: string): Promise<rpc.RemoteObject>
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| userId | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | 表示用户账号ID。 |
-| bundleName | string | Yes | 应用包名。 |
+| userId | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | User ID. |
+| bundleName | string | Yes | Bundle name of the application. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;rpc.RemoteObject&gt; | Promise对象，返回ShareCenter的RemoteObject对象。 |
+| Promise&lt;rpc.RemoteObject&gt; | Promise used to return the RemoteObject instance of ShareCenter. |
 
 ## Examples
 
@@ -180,7 +142,7 @@ class MyCloudService implements cloudExtension.CloudService {
 getAppBriefInfo(): Promise<Record<string, AppBriefInfo>>
 ```
 
-获取简要应用信息。使用Promise异步回调。
+Obtains brief application information. This API uses a promise to return the result.
 
 **Since:** 11
 
@@ -196,7 +158,7 @@ getAppBriefInfo(): Promise<Record<string, AppBriefInfo>>
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;Record&lt;string, AppBriefInfo&gt;&gt; | Promise对象，返回以bundleName为键、AppBriefInfo为值的键值对。 in KV pairs. |
+| Promise&lt;Record&lt;string, AppBriefInfo&gt;&gt; | Promise used to return bundleName and AppBriefInfo, in KV pairs. |
 
 ## Examples
 
@@ -226,7 +188,7 @@ class MyCloudService implements cloudExtension.CloudService {
 getAppSchema(bundleName: string): Promise<Result<AppSchema>>
 ```
 
-获取应用Schema（数据库模式）信息。使用Promise异步回调。
+Obtains the application database schema information. This API uses a promise to return the result.
 
 **Since:** 11
 
@@ -242,13 +204,13 @@ getAppSchema(bundleName: string): Promise<Result<AppSchema>>
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| bundleName | string | Yes | 应用包名。 |
+| bundleName | string | Yes | Bundle name of the application. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;Result&lt;AppSchema&gt;&gt; | Promise对象，返回数据库的schema信息。 |
+| Promise&lt;Result&lt;AppSchema&gt;&gt; | Promise used to return the schema information obtained. |
 
 ## Examples
 
@@ -279,7 +241,7 @@ class MyCloudService implements cloudExtension.CloudService {
 getServiceInfo(): Promise<ServiceInfo>
 ```
 
-获取服务器上的信息。使用Promise异步回调。
+Obtains the server information. This API uses a promise to return the result.
 
 **Since:** 11
 
@@ -295,15 +257,15 @@ getServiceInfo(): Promise<ServiceInfo>
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;ServiceInfo&gt; | Promise对象，返回获取的服务器信息。 |
+| Promise&lt;ServiceInfo&gt; | Promise used to return the server information obtained. |
 
 ## Examples
 
 ```TypeScript
 import { rpc } from '@kit.IPCKit';
 
-let testSpace: number = 100;
-let testUserId: number = 1;
+let test_space: number = 100;
+let test_userId: number = 1;
 
 class MyCloudService implements cloudExtension.CloudService {
   constructor() {}
@@ -314,9 +276,9 @@ class MyCloudService implements cloudExtension.CloudService {
     return {
       enableCloud: true,
       id: "test_id",
-      totalSpace: testSpace,
-      remainingSpace: testSpace,
-      user: testUserId,
+      totalSpace: test_space,
+      remainingSpace: test_space,
+      user: test_userId,
     };
   }
 }
@@ -340,7 +302,7 @@ subscribe(
     ): Promise<Result<SubscribeInfo>>
 ```
 
-订阅云数据库的变化通知。使用Promise异步回调。
+Subscribes to data. This API uses a promise to return the result.
 
 **Since:** 11
 
@@ -356,31 +318,32 @@ subscribe(
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| subInfo | [Record](../../apis-default/arkts-apis/arkts-record-t.md)&lt;string, Array&lt;Database&gt;&gt; | Yes | 需要订阅的数据，由应用包名称和数据库信息组成的键值对。 |
-| expirationTime | ArkTS-Dyn: number  <br>ArkTS-Sta：long | Yes | 表示订阅到期时间（ms）。 |
+| subInfo | [Record](../../apis-default/arkts-apis/arkts-record-t.md)&lt;string, Array&lt;Database&gt;&gt; | Yes | Data to be subscribed to, in KV pairs of the application bundle name and database information. |
+| expirationTime | ArkTS-Dyn: number  <br>ArkTS-Sta：long | Yes | Subscription expiration time, in ms. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;Result&lt;SubscribeInfo&gt;&gt; | Promise对象，返回订阅的结果，包含订阅的过期时间和订阅信息。 |
+| Promise&lt;Result&lt;SubscribeInfo&gt;&gt; | Promise used to return the result, including the subscription expiration time and subscription information. |
 
 ## Examples
 
 ```TypeScript
-let testTime: number = 10;
+let test_time: number = 10;
 class MyCloudService implements cloudExtension.CloudService {
   constructor() {
   }
   // ...
   async subscribe(subInfo: Record<string, Array<cloudExtension.Database>>, expirationTime: number): Promise<cloudExtension.Result<cloudExtension.SubscribeInfo>> {
-    console.info(`subscribe expirationTime: ${expirationTime}`);
+    console.info
+    (`subscribe expirationTime: ${expirationTime}`);
     // ...
     return {
       code: cloudExtension.ErrorCode.SUCCESS,
       description: "subscribe success",
       value: {
-        expirationTime: testTime,
+        expirationTime: test_time,
         subscribe: {}
       }
     };
@@ -400,7 +363,7 @@ ArkTS-Sta:
 unsubscribe(unsubscribeInfo: Record<string, Array<string>>): Promise<int>
 ```
 
-取消已订阅的云数据变化通知。使用Promise异步回调。
+Unsubscribes from data changes in the cloud. This API uses a promise to return the result.
 
 **Since:** 11
 
@@ -416,26 +379,11 @@ unsubscribe(unsubscribeInfo: Record<string, Array<string>>): Promise<int>
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| unsubscribeInfo | [Record](../../apis-default/arkts-apis/arkts-record-t.md)&lt;string, Array&lt;string&gt;&gt; | Yes | 需要取消订阅的数据信息，由应用包名和数据库名组成的键值对。 |
+| unsubscribeInfo | [Record](../../apis-default/arkts-apis/arkts-record-t.md)&lt;string, Array&lt;string&gt;&gt; | Yes | Data to be unsubscribed from, in an array of KV pairs consisting of the application bundle name and database information. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| ArkTS-Dyn: Promise&lt;number&gt;  <br>ArkTS-Sta：Promise&lt;int&gt; | Promise对象，返回取消订阅结果的错误码。 |
-
-## Examples
-
-```TypeScript
-class MyCloudService implements cloudExtension.CloudService {
-  constructor() {
-  }
-  // ...
-  async unsubscribe(unsubscribeInfo: Record<string, Array<string>>): Promise<number> {
-    console.info(`unsubscribe`);
-    // ...
-    return cloudExtension.ErrorCode.SUCCESS;
-  }
-}
-```
+| ArkTS-Dyn: Promise&lt;number&gt;  <br>ArkTS-Sta：Promise&lt;int&gt; | Promise used to return the result. |
 

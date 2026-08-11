@@ -1,6 +1,6 @@
 # AudioSaveOptions
 
-音频保存选项。
+Defines the options for saving audio clips.
 
 **Since:** 23
 

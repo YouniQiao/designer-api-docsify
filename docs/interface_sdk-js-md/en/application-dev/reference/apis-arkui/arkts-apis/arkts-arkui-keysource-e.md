@@ -1,6 +1,6 @@
 # KeySource
 
-定义触发按键事件的设备类型。
+Sets the device type that triggers the button event.
 
 **Since:** 7
 
@@ -16,7 +16,7 @@
 Unknown
 ```
 
-输入设备类型未知。
+Unknown input device.
 
 **Since:** 7
 
@@ -34,7 +34,7 @@ Unknown
 Keyboard
 ```
 
-输入设备类型为键盘。
+The input device is a keyboard.
 
 **Since:** 7
 
@@ -52,7 +52,7 @@ Keyboard
 JOYSTICK
 ```
 
-输入设备类型为游戏手柄。
+The input device is a joystick.
 
 **Since:** 15
 

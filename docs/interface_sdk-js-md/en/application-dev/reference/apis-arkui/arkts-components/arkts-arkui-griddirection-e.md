@@ -1,6 +1,6 @@
 # GridDirection
 
-主轴布局方向枚举。
+Enumerates the main axis layout directions.
 
 **Since:** 8
 
@@ -16,7 +16,7 @@
 Row
 ```
 
-主轴布局方向沿水平方向布局，即自左往右先填满一行，再去填下一行。
+Horizontal layout, where the child components are arranged from left to right as the main axis runs along the rows.
 
 **Since:** 8
 
@@ -34,7 +34,7 @@ Row
 Column
 ```
 
-主轴布局方向沿垂直方向布局，即自上往下先填满一列，再去填下一列。
+Vertical layout, where the child components are arranged from top to bottom as the main axis runs down the columns.
 
 **Since:** 8
 
@@ -52,7 +52,7 @@ Column
 RowReverse
 ```
 
-主轴布局方向沿水平方向反向布局，即自右往左先填满一行，再去填下一行。
+Reverse horizontal layout, where the child components are arranged from right to left as the main axis runs along the rows.
 
 **Since:** 8
 
@@ -70,7 +70,7 @@ RowReverse
 ColumnReverse
 ```
 
-主轴布局方向沿垂直方向反向布局，即自下往上先填满一列，再去填下一列。
+Reverse vertical layout, where the child components are arranged from bottom up as the main axis runs down the columns.
 
 **Since:** 8
 

@@ -1,6 +1,6 @@
 # Morpher
 
-定义用于指定节点几何体形变目标的Morpher接口.
+Defines the deformation of 3D models by adjusting the weights of different deformation targets to create dynamic effects.
 
 **Since:** 20
 
@@ -16,7 +16,7 @@
 readonly targets: Record<string, double>
 ```
 
-形变目标名称和权重
+Used to store the names and weights of deformation targets.The weight value is usually within the range of [0.0, 1.0].
 
 **Type:** ArkTS-Dyn: [Record](../../apis-default/arkts-apis/arkts-record-t.md)&lt;string, number&gt;  <br>ArkTS-Sta：[Record](../../apis-default/arkts-apis/arkts-record-t.md)&lt;string, double&gt;
 

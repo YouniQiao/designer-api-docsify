@@ -4,9 +4,9 @@
 export type FillRequest = _AutoFillRequest.FillRequest
 ```
 
-自动填充的请求信息。
+Defines the information about an auto-fill request.
 
-**Since:** 11
+**Since:** 26.0.0
 
 **ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
 

@@ -10,12 +10,6 @@
 
 **系统能力：** SystemCapability.WindowManager.WindowManager.Core
 
-## 导入模块
-
-```TypeScript
-import { screenshot } from 'kits/@kit.ArkUI';
-```
-
 ## 汇总
 
 ### 函数

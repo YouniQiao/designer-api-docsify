@@ -42,7 +42,7 @@ Updates the static configuration information of a specified template widget on t
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 16500050 | IPC connection error. |
-| 202 | The application is not a system application. |
-| 16501013 | The system does not support the current operation. |
+| [16500050](../errorcode-form.md#16500050-ipc-failure) | IPC connection error. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | The application is not a system application. |
+| [16501013](../errorcode-form.md#16501013-operation-not-supported) | The system does not support the current operation. |
 

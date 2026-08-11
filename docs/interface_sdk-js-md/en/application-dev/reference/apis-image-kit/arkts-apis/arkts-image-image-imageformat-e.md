@@ -1,6 +1,6 @@
 # ImageFormat
 
-表示图片格式的枚举。
+Enumerates the image formats.
 
 **Since:** 9
 
@@ -16,7 +16,7 @@
 YCBCR_422_SP = 1000
 ```
 
-YCBCR422半平面格式。
+YCBCR422 semi-planar format.
 
 **Since:** 9
 
@@ -32,7 +32,7 @@ YCBCR422半平面格式。
 JPEG = 2000
 ```
 
-JPEG编码格式。
+JPEG encoding format.
 
 **Since:** 9
 

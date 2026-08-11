@@ -26,7 +26,7 @@ animation?: ScrollAnimationOptions | boolean
 
  布尔类型启用默认弹簧动效。 [since 10 - 11] 布尔类型启用默认弹簧动效。 [since 12]
 
-**类型：** [ScrollAnimationOptions](../arkts-apis/arkts-arkui-scroll-scrollanimationoptions-i.md) \| boolean
+**类型：** [ScrollAnimationOptions](arkts-arkui-scrollanimationoptions-i.md) \| boolean
 
 **默认值：** ScrollAnimationOptions: { duration: 1000, curve: Curve.Ease, canOverScroll: false } [since 18]
 

@@ -1,11 +1,5 @@
 # getSetting
 
-## 导入模块
-
-```TypeScript
-import { inputMethod } from 'kits/@kit.IMEKit';
-```
-
 ## getSetting
 
 ```TypeScript
@@ -38,7 +32,7 @@ function getSetting(): InputMethodSetting
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 12800007 | input method setter error. Possible cause: create InputMethodSetting object failed. |
+| [12800007](../errorcode-inputmethod-framework.md#12800007-输入法设置器异常) | input method setter error. Possible cause: create InputMethodSetting object failed. |
 
 ## 示例
 

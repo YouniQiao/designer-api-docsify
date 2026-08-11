@@ -1,6 +1,6 @@
 # TransferMode
 
-数据传输模式。
+Indicates the data transfer mode.
 
 **Since:** 26.0.0
 
@@ -16,7 +16,7 @@
 BASIC = 0
 ```
 
-基本数据传输模式。
+Basic data transfer mode.
 
 **Since:** 26.0.0
 
@@ -34,7 +34,7 @@ BASIC = 0
 RELIABLE = 1
 ```
 
-可靠数据传输模式。
+Reliable data transfer mode.
 
 **Since:** 26.0.0
 

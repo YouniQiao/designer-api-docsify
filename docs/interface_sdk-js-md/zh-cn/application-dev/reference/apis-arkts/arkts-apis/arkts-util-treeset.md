@@ -14,12 +14,6 @@ TreeSet基于[TreeMap](arkts-util-treemap.md)实现，在TreeSet中，仅处理�
  > - 容器类使用静态语言实现，限制了存储位置和属性，不支持自定义属性和方法。
 
 
-## 导入模块
-
-```TypeScript
-import { TreeSet } from 'kits/@kit.ArkTS';
-```
-
 ## 汇总
 
 ### 类

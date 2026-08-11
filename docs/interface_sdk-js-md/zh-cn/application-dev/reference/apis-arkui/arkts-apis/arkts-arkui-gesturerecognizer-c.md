@@ -34,7 +34,7 @@ getEventTargetInfo(): EventTargetInfo
 
 | 类型 | 说明 |
 | --- | --- |
-| [EventTargetInfo](arkts-arkui-eventtargetinfo-c.md) | 当前手势识别器对应组件的信息。 |
+| [EventTargetInfo](arkts-arkui-gesture-eventtargetinfo-c.md) | 当前手势识别器对应组件的信息。 |
 
 ## getFingerCount
 

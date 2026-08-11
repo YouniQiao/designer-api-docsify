@@ -1,6 +1,6 @@
 # TorchMode
 
-枚举，手电筒模式。
+Enumerates the flashlight modes.
 
 **Since:** 11
 
@@ -16,7 +16,7 @@
 OFF = 0
 ```
 
-常关模式。
+The flashlight is off.
 
 **Since:** 11
 
@@ -34,7 +34,7 @@ OFF = 0
 ON = 1
 ```
 
-常开模式。
+The flashlight is on.
 
 **Since:** 11
 
@@ -52,7 +52,7 @@ ON = 1
 AUTO = 2
 ```
 
-自动模式，系统根据环境自动调节手电筒亮度。
+The system automatically adjusts the flashlight brightness according to the environment.
 
 **Since:** 11
 

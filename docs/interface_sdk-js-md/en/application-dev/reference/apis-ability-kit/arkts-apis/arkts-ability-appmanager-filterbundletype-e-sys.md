@@ -1,6 +1,7 @@
 # FilterBundleType (System API)
 
-表示要监听的的应用类型，该类型为枚举。可配合[AppStateFilter](arkts-ability-appmanager-appstatefilter-i-sys.md)过滤想要监听的应用类型。
+Enumerates the types of applications to filter. It can be used with  
+[AppStateFilter](arkts-ability-appmanager-appstatefilter-i-sys.md) to filter the application types you want to listen for.
 
 **Since:** 21
 
@@ -18,7 +19,7 @@
 APP = 1 << 0
 ```
 
-应用。
+Application.
 
 **Since:** 21
 
@@ -36,7 +37,7 @@ APP = 1 << 0
 ATOMIC_SERVICE = 1 << 1
 ```
 
-原子化服务。
+Atomic service.
 
 **Since:** 21
 

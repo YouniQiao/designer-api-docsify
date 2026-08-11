@@ -1,6 +1,6 @@
 # LaunchMode
 
-路由栈操作模式。
+Enumerates the operation modes for the routing stack.
 
 **Since:** 12
 
@@ -16,9 +16,9 @@
 STANDARD = 0
 ```
 
-系统默认的栈操作模式。
+Default routing stack operation mode.
 
-push操作会将指定的NavDestination入栈；replace操作会将当前栈顶NavDestination替换。
+In this mode, push operations add the specified **NavDestination** page to the stack; replace operations replace the current top **NavDestination** page.
 
 **Since:** 12
 
@@ -38,7 +38,8 @@ push操作会将指定的NavDestination入栈；replace操作会将当前栈顶N
 MOVE_TO_TOP_SINGLETON = 1
 ```
 
-从栈底向栈顶查找，如果指定的名称已经存在，则将对应的NavDestination页面移到栈顶（replace操作会将最后的栈顶替换成指定的NavDestination），否则行为和STANDARD一致。
+This mode searches from the bottom to the top of the routing stack. If a **NavDestination** page with the specified name exists, it moves that page to the top of the stack (for a replace operation, it replaces the last top  
+**NavDestination** page with the specified one); otherwise, it behaves like **STANDARD**.
 
 **Since:** 12
 
@@ -58,7 +59,8 @@ MOVE_TO_TOP_SINGLETON = 1
 POP_TO_SINGLETON = 2
 ```
 
-从栈底向栈顶查找，如果指定的名称已经存在，则将其上方的NavDestination页面全部移除（replace操作会将最后的栈顶替换成指定的NavDestination），否则行为和STANDARD一致。
+This mode searches from the bottom to the top of the routing stack. If a **NavDestination** page with the specified name exists, it removes all **NavDestination** pages above it(for a replace operation, it replaces the last top  
+**NavDestination** page with the specified one); otherwise, it behaves like **STANDARD**.
 
 **Since:** 12
 
@@ -78,7 +80,7 @@ POP_TO_SINGLETON = 2
 NEW_INSTANCE = 3
 ```
 
-创建新的NavDestination实例。与STANDARD模式相比，该方法不会复用栈中同名实例。并且指定该模式时，新创建的页面默认会执行push动效。
+This mode creates an instance of **NavDestination**. Compared with **STANDARD**, this mode does not reuse the instance with the same name in the stack. When this mode is specified, the newly created page will execute the push animation effect by default.
 
 **Since:** 12
 

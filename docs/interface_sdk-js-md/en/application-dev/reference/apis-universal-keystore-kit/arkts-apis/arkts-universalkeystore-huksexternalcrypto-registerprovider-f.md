@@ -12,19 +12,7 @@ import { huksExternalCrypto } from 'kits/@kit.UniversalKeystoreKit';
 function registerProvider(providerName: string, params: Array<HuksExternalCryptoParam>): Promise<void>
 ```
 
-注册指定的外部provider。使用Promise异步回调。
-
-若需使用自定义PIN码弹窗，在注册provider时需要同步注册UIExtensionAbility，注意事项如下：
-
-1. 自定义ability通过UIExtensionAbility扩展实现。2. 注册的UIExtensionAbility可以通过证书管理kit提供的[openUKeyAuthDialog](../../apis-device-certificate-kit/arkts-apis/arkts-security-certmanager.md/arkts-security-certmanager.md)接口统一拉起。 3. 系统拉起自定义弹窗时会通过want接口向开发者传递以下参数：  
- - Action：string参数类型，在拉起自定义弹窗时want传输的Action为"UkeyPINAuth"。  
- - appUid：number参数类型，通过want.parameters传输。"appUid"字段为应用id，开发者可以通过该字段完成应用隔离。  
- - keyUri：string参数类型其值为resourceId，通过want.parameters传输，表示Ukey证书的索引。  
- 4. 开发者实现UIExtensionAbility时，应用需根据指定场景返回对应的错误码：  
- - 用户取消操作时，返回-1001。  
- - keyUri指定的证书/密钥不存在时，返回-1008。  
- - 参数格式错误时，返回-1014。  
- - 其余失败场景返回错误码-1000，成功时返回0。
+Registers a specified external Provider. This API uses a promise to return the result.
 
 **Since:** 22
 
@@ -40,28 +28,28 @@ function registerProvider(providerName: string, params: Array<HuksExternalCrypto
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| providerName | string | Yes | provider名称，最大长度为128。建议包含厂商信息，全局唯一，不要包含个人联系方式等敏感数据。&lt;br&gt;最多支持注册10个provider。 |
-| params | Array&lt;HuksExternalCryptoParam&gt; | Yes | 操作时需传入的参数，必选TAG： [HUKS_EXT_CRYPTO_TAG_ABILITY_NAME](arkts-universalkeystore-huksexternalcrypto-huksexternalcryptotagtype-e.md)，表示ability的名字，根据业务自己内部定义按 照实际填写。&lt;br&gt;从API版本26.0.0开始，可选TAG： [HUKS_EXT_CRYPTO_TAG_ABILITY_INFO](arkts-universalkeystore-huksexternalcrypto-huksexternalcryptotagtype-e.md)，以JSON列表的形式传入PIN码认证自定义弹窗 UIExtensionAbility的名字以及包名。 |
+| providerName | string | Yes | Provider name, which contains a maximum of 128 characters. It is recommended that the value contain the vendor information, be globally unique, and not contain sensitive data such as personal contact information.&lt;br&gt;A maximum of 10 providers can be registered. |
+| params | Array&lt;HuksExternalCryptoParam&gt; | Yes | Parameters to be passed during the operation. The mandatory tag is [HUKS_EXT_CRYPTO_TAG_ABILITY_NAME](arkts-universalkeystore-huksexternalcrypto-huksexternalcryptotagtype-e.md), indicating the ability name. Set this parameter based on the actual service requirements. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise对象，无返回结果。 |
+| Promise&lt;void&gt; | Promise that returns no value. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 801 | api is not supported. |
-| 12000005 | IPC communication failed. |
-| 12000020 | an error occurred in the dependent module. |
-| 12000019 | the provider is already registered. |
-| 12000002 | the ability name param is missing. |
-| 12000018 | the input parameter is invalid. |
-| 201 | check permission failed. |
-| 12000014 | memory is insufficient. |
-| 12000025 | the number of providers exceeds the limit. |
+| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | api is not supported. |
+| [12000005](../errorcode-huks.md#12000005-ipc-error) | IPC communication failed. |
+| [12000020](../errorcode-huks.md#12000020-dependent-module-error) | an error occurred in the dependent module. |
+| [12000019](../errorcode-huks.md#12000019-provider-name-already-registered) | the provider is already registered. |
+| [12000002](../errorcode-huks.md#12000002-missing-key-algorithm-parameter) | the ability name param is missing. |
+| [12000018](../errorcode-huks.md#12000018-invalid-input-parameter) | the input parameter is invalid. |
+| [201](../../errorcode-universal.md#201-permission-denied) | check permission failed. |
+| [12000014](../errorcode-huks.md#12000014-insufficient-memory) | memory is insufficient. |
+| [12000025](../errorcode-huks.md#12000025-resource-limit-exceeded) | the number of providers exceeds the limit. |
 
 ## Examples
 
@@ -85,7 +73,7 @@ const extProperties: Array<huksExternalCrypto.HuksExternalCryptoParam> = [
 ];
 huksExternalCrypto.registerProvider(providerName, extProperties)
     .then((data) => {
-        console.info('promise: registerProvider success.');
+        console.info(`promise: registerProvider success`);
     });
 ```
 

@@ -1,6 +1,6 @@
 # ButtonStyleMode
 
-按钮的重要程度。
+Enum for button style type.
 
 **Since:** 23
 
@@ -16,7 +16,7 @@
 NORMAL = 0
 ```
 
-普通按钮（一般界面操作）。
+Normal button (with normal background color).
 
 **Since:** 23
 
@@ -34,7 +34,7 @@ NORMAL = 0
 EMPHASIZED = 1
 ```
 
-强调按钮（用于强调当前操作）。
+Emphasized button (with emphasized background color).
 
 **Since:** 23
 
@@ -52,7 +52,7 @@ EMPHASIZED = 1
 TEXTUAL = 2
 ```
 
-文本按钮（纯文本，无背景颜色）。
+Textual button (with none background color).
 
 **Since:** 23
 

@@ -9,7 +9,7 @@ export declare function GridRow(
 ): GridRowAttribute
 ```
 
-栅格行布局容器。
+Defines GridRow Component.
 
 **Since:** 23
 
@@ -25,7 +25,7 @@ export declare function GridRow(
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| option | [GridRowOptions](arkts-arkui-gridrow-gridrowoptions-i.md) | No | 栅格布局子组件参数。 |
+| option | [GridRowOptions](arkts-arkui-gridrow-gridrowoptions-i.md) | No | GridRow options. |
 | content_ | [CustomBuilder](../arkts-components/arkts-arkui-custombuilder-t.md) | No | container |
 
 **Return value:**
@@ -46,9 +46,9 @@ export declare function GridRow(
 
 Defines GridRow Component.
 
-**Since:** 26.0.0
+**Since:** 26.1.0
 
-**ArkTS mode:** ArkTS-Sta only, since version 26.0.0.
+**ArkTS mode:** ArkTS-Sta only, since version 26.1.0.
 
 **Decorator:** @Builder
 
@@ -63,7 +63,7 @@ Defines GridRow Component.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | style | [CustomBuilderT](../arkts-components/arkts-arkui-custombuildert-t.md)&lt;GridRowAttribute&gt; | Yes | the callback to set up component's attributes. |
-| content_ | [CustomBuilder](../arkts-components/arkts-arkui-custombuilder-t.md) | No | container |
+| content_ | [CustomBuilder](../arkts-components/arkts-arkui-custombuilder-t.md) | No | container. |
 
 **Return value:**
 

@@ -1,11 +1,5 @@
 # getCurrentInputMethodSubtype
 
-## 导入模块
-
-```TypeScript
-import { inputMethod } from 'kits/@kit.IMEKit';
-```
-
 ## getCurrentInputMethodSubtype
 
 ```TypeScript

@@ -12,7 +12,7 @@ import { continuationManager } from 'kits/@kit.AbilityKit';
 function startDeviceManager(token: number, callback: AsyncCallback<void>): void
 ```
 
-拉起设备选择模块，可显示组网内可选择设备列表信息，无过滤条件，使用AsyncCallback方式作为异步方法。
+Starts the device selection module to show the list of available devices on the network. This API does not involve any filter parameters and uses an asynchronous callback to return the result.
 
 **Since:** 8
 
@@ -32,8 +32,8 @@ function startDeviceManager(token: number, callback: AsyncCallback<void>): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| token | number | Yes | 注册后的token。 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | 回调函数。当模块选择完成，err为undefined，否则返回错误对象。 |
+| token | number | Yes | Token obtained after the registration of the continuation management service. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. If the module is started, **err** is **undefined**; otherwise, **err** is an error object. |
 
 ## Examples
 
@@ -57,7 +57,7 @@ continuationManager.startDeviceManager(token, (err) => {
 function startDeviceManager(token: number, options: ContinuationExtraParams, callback: AsyncCallback<void>): void
 ```
 
-拉起设备选择模块，可显示组网内可选择设备列表信息，使用AsyncCallback方式作为异步方法。
+Starts the device selection module to show the list of available devices on the network. This API uses an asynchronous callback to return the result.
 
 **Since:** 8
 
@@ -77,9 +77,9 @@ function startDeviceManager(token: number, options: ContinuationExtraParams, cal
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| token | number | Yes | 注册后的token。 |
-| options | [ContinuationExtraParams](arkts-ability-continuationmanager-continuationextraparams-t.md) | Yes | 过滤可选择设备列表的额外参数。 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | 回调函数。当模块选择完成，err为undefined，否则返回错误对象。 |
+| token | number | Yes | Token obtained after the registration of the continuation management service. |
+| options | [ContinuationExtraParams](arkts-ability-continuationmanager-continuationextraparams-t.md) | Yes | Extra parameters used to filter the list of available devices. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. If the module is started, **err** is **undefined**; otherwise, **err** is an error object. |
 
 ## Examples
 
@@ -108,7 +108,7 @@ continuationManager.startDeviceManager(
 function startDeviceManager(token: number, options?: ContinuationExtraParams): Promise<void>
 ```
 
-拉起设备选择模块，可显示组网内可选择设备列表信息，使用Promise方式作为异步方法。
+Starts the device selection module to show the list of available devices on the network. This API uses a promise to  return the result.
 
 **Since:** 8
 
@@ -128,14 +128,14 @@ function startDeviceManager(token: number, options?: ContinuationExtraParams): P
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| token | number | Yes | 注册后的token。 |
-| options | [ContinuationExtraParams](arkts-ability-continuationmanager-continuationextraparams-t.md) | No | 过滤可选择设备列表的额外参数，该参数可缺省。 |
+| token | number | Yes | Token obtained after the registration of the continuation management service. |
+| options | [ContinuationExtraParams](arkts-ability-continuationmanager-continuationextraparams-t.md) | No | Extra parameters used to filter the list of available devices. This parameter can be null. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise形式返回接口调用结果。 |
+| Promise&lt;void&gt; | Promise used to return the result. |
 
 ## Examples
 

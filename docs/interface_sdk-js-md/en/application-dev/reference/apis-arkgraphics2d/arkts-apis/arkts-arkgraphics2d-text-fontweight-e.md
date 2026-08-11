@@ -1,6 +1,6 @@
 # FontWeight
 
-字重枚举。
+Enumerates the font weights.
 
 **Since:** 12
 
@@ -16,7 +16,7 @@
 W100 = 0
 ```
 
-100字重。
+Font weight W100.
 
 **Since:** 12
 
@@ -34,7 +34,7 @@ W100 = 0
 W200 = 1
 ```
 
-200字重。
+Font weight W200.
 
 **Since:** 12
 
@@ -52,7 +52,7 @@ W200 = 1
 W300 = 2
 ```
 
-300字重。
+Font weight W300.
 
 **Since:** 12
 
@@ -70,7 +70,7 @@ W300 = 2
 W400 = 3
 ```
 
-400字重。
+Font weight W400.
 
 **Since:** 12
 
@@ -88,7 +88,7 @@ W400 = 3
 W500 = 4
 ```
 
-500字重。
+Font weight W500.
 
 **Since:** 12
 
@@ -106,7 +106,7 @@ W500 = 4
 W600 = 5
 ```
 
-600字重。
+Font weight W600.
 
 **Since:** 12
 
@@ -124,7 +124,7 @@ W600 = 5
 W700 = 6
 ```
 
-700字重。
+Font weight W700.
 
 **Since:** 12
 
@@ -142,7 +142,7 @@ W700 = 6
 W800 = 7
 ```
 
-800字重。
+Font weight W800.
 
 **Since:** 12
 
@@ -160,7 +160,7 @@ W800 = 7
 W900 = 8
 ```
 
-900字重。
+Font weight W900.
 
 **Since:** 12
 

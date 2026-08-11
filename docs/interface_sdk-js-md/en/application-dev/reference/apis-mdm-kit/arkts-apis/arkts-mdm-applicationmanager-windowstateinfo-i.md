@@ -1,6 +1,6 @@
 # WindowStateInfo
 
-应用窗口状态信息。
+Defines the application window state information.
 
 **Since:** 26.0.0
 
@@ -22,7 +22,7 @@ import { applicationManager } from 'kits/@kit.MDMKit';
 isOnDock: boolean
 ```
 
-表示应用窗口是否在底部Dock栏上显示。PC/2in1设备和Tablet设备的PC模式的应用在底部Dock栏上返回true，其他设备返回false。
+Whether the application window is displayed on the bottom dock. For application on the bottom dock on tablets in PC mode and PCs/2-in-1 devices. For other devices, **false** is returned.
 
 **Type:** boolean
 
@@ -42,7 +42,7 @@ isOnDock: boolean
 name: string
 ```
 
-应用窗口名称。
+Application window name.
 
 **Type:** string
 
@@ -62,7 +62,7 @@ name: string
 state: WindowState
 ```
 
-应用窗口状态。
+Application window state.
 
 **Type:** [WindowState](arkts-mdm-applicationmanager-windowstate-e.md)
 
@@ -82,7 +82,7 @@ state: WindowState
 windowId: number
 ```
 
-应用窗口ID。
+Application window ID.
 
 **Type:** number
 

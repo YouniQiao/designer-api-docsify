@@ -1,6 +1,6 @@
 # UiWindow
 
-UiWindow代表了UI界面上的一个窗口，提供窗口属性获取，窗口拖动、调整窗口大小等能力。该类对象可通过{@link Driver#findWindow}接口获取。该类提供的所有方法都使用Promise方式作为异步方法，需使用await方式调用。
+The **UiWindow** class represents a window on the UI and provides APIs for obtaining window attributes, dragging a window, and adjusting the window size.All APIs provided in this class use a promise to return the result and must be invoked using **await**.
 
 **Since:** 9
 
@@ -22,7 +22,7 @@ import { ResizeDirection, WindowMode, PenMode, PenKeyOperation, Driver, MatchPat
 close(): Promise<void>
 ```
 
-将窗口关闭。使用Promise异步回调。
+Closes a window. This API uses a promise to return the result.
 
 **Since:** 9
 
@@ -38,15 +38,15 @@ close(): Promise<void>
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise对象。无返回结果的Promise对象。 |
+| Promise&lt;void&gt; | Promise that returns no value. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 17000002 | The API does not support concurrent calls. |
-| 17000005 | This operation is not supported. |
-| 17000004 | The window or component is invisible or destroyed. |
+| [17000002](../errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) | The API does not support concurrent calls. |
+| [17000005](../errorcode-uitest.md#17000005-operation-not-supported) | This operation is not supported. |
+| [17000004](../errorcode-uitest.md#17000004-target-componentwindow-invisible-or-destroyed) | The window or component is invisible or destroyed. |
 
 ## Examples
 
@@ -56,7 +56,7 @@ import { Driver, UiWindow } from '@kit.TestKit';
 
 async function demo() {
   let driver: Driver = Driver.create();
-  let window: UiWindow = await driver.findWindow({ active: true });
+  let window: UiWindow = await driver.findWindow({ actived: true });
   await window.close();
 }
 ```
@@ -67,7 +67,7 @@ async function demo() {
 focus(): Promise<void>
 ```
 
-让窗口获焦。使用Promise异步回调。
+Focuses a window. This API uses a promise to return the result.
 
 **Since:** 9
 
@@ -83,14 +83,14 @@ focus(): Promise<void>
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise对象，返回无结果的Promise对象。 |
+| Promise&lt;void&gt; | Promise that returns no value. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 17000002 | The API does not support concurrent calls. |
-| 17000004 | The window or component is invisible or destroyed. |
+| [17000002](../errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) | The API does not support concurrent calls. |
+| [17000004](../errorcode-uitest.md#17000004-target-componentwindow-invisible-or-destroyed) | The window or component is invisible or destroyed. |
 
 ## Examples
 
@@ -100,7 +100,7 @@ import { Driver, UiWindow } from '@kit.TestKit';
 
 async function demo() {
   let driver: Driver = Driver.create();
-  let window: UiWindow = await driver.findWindow({ active: true });
+  let window: UiWindow = await driver.findWindow({ actived: true });
   await window.focus();
 }
 ```
@@ -111,7 +111,7 @@ async function demo() {
 getBounds(): Promise<Rect>
 ```
 
-获取窗口的边框信息。使用Promise异步回调。
+Obtains the bounds information of a window. This API uses a promise to return the result.
 
 **Since:** 9
 
@@ -127,14 +127,14 @@ getBounds(): Promise<Rect>
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;Rect&gt; | Promise对象，返回窗口的边框信息。 |
+| Promise&lt;Rect&gt; | Promise used to return the window border information. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 17000002 | The API does not support concurrent calls. |
-| 17000004 | The window or component is invisible or destroyed. |
+| [17000002](../errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) | The API does not support concurrent calls. |
+| [17000004](../errorcode-uitest.md#17000004-target-componentwindow-invisible-or-destroyed) | The window or component is invisible or destroyed. |
 
 ## Examples
 
@@ -143,11 +143,8 @@ getBounds(): Promise<Rect>
 import { Driver, UiWindow } from '@kit.TestKit';
 
 async function demo() {
-  // Create a Driver object.
   let driver: Driver = Driver.create();
-  // Search for the active window.
-  let window: UiWindow = await driver.findWindow({ active: true });
-  // Obtain the bounds information of the window.
+  let window: UiWindow = await driver.findWindow({ actived: true });
   let rect = await window.getBounds();
 }
 ```
@@ -158,7 +155,7 @@ async function demo() {
 getBundleName(): Promise<string>
 ```
 
-获取窗口归属应用的包名信息。使用Promise异步回调。
+Obtains the bundle name of the application to which a window belongs. This API uses a promise to return the result.
 
 **Since:** 9
 
@@ -174,14 +171,14 @@ getBundleName(): Promise<string>
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;string&gt; | Promise对象，返回窗口归属应用的包名信息。 |
+| Promise&lt;string&gt; | Promise used to return the bundle name of the application to which the window belongs. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 17000002 | The API does not support concurrent calls. |
-| 17000004 | The window or component is invisible or destroyed. |
+| [17000002](../errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) | The API does not support concurrent calls. |
+| [17000004](../errorcode-uitest.md#17000004-target-componentwindow-invisible-or-destroyed) | The window or component is invisible or destroyed. |
 
 ## Examples
 
@@ -190,11 +187,8 @@ getBundleName(): Promise<string>
 import { Driver, UiWindow } from '@kit.TestKit';
 
 async function demo() {
-  // Create a Driver object.
   let driver: Driver = Driver.create();
-  // Search for the active window.
-  let window: UiWindow = await driver.findWindow({ active: true });
-  // Obtain the bundle name of the application to which the window belongs.
+  let window: UiWindow = await driver.findWindow({ actived: true });
   let name: string = await window.getBundleName();
 }
 ```
@@ -211,7 +205,7 @@ ArkTS-Sta:
 getDisplayId(): Promise<int>
 ```
 
-获取窗口所属的屏幕ID。使用Promise异步回调。
+Obtains the ID of the display to which a window belongs. This API uses a promise to return the result.
 
 **Since:** 20
 
@@ -227,14 +221,14 @@ getDisplayId(): Promise<int>
 
 | Type | Description |
 | --- | --- |
-| ArkTS-Dyn: Promise&lt;number&gt;  <br>ArkTS-Sta：Promise&lt;int&gt; | Promise对象，返回窗口所属的屏幕ID。 |
+| ArkTS-Dyn: Promise&lt;number&gt;  <br>ArkTS-Sta：Promise&lt;int&gt; | Promise used to return the ID of the display to which the window belongs. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 17000002 | The API does not support concurrent calls. |
-| 17000004 | The window or component is invisible or destroyed. |
+| [17000002](../errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) | The API does not support concurrent calls. |
+| [17000004](../errorcode-uitest.md#17000004-target-componentwindow-invisible-or-destroyed) | The window or component is invisible or destroyed. |
 
 ## Examples
 
@@ -255,7 +249,7 @@ async function demo() {
 getTitle(): Promise<string>
 ```
 
-获取窗口的标题信息。使用Promise异步回调。
+Obtains the window title. This API uses a promise to return the result.
 
 **Since:** 9
 
@@ -271,14 +265,14 @@ getTitle(): Promise<string>
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;string&gt; | Promise对象，返回窗口的标题信息。 |
+| Promise&lt;string&gt; | Promise used to return the window title. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 17000002 | The API does not support concurrent calls. |
-| 17000004 | The window or component is invisible or destroyed. |
+| [17000002](../errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) | The API does not support concurrent calls. |
+| [17000004](../errorcode-uitest.md#17000004-target-componentwindow-invisible-or-destroyed) | The window or component is invisible or destroyed. |
 
 ## Examples
 
@@ -288,7 +282,7 @@ import { Driver, UiWindow } from '@kit.TestKit';
 
 async function demo() {
   let driver: Driver = Driver.create();
-  let window: UiWindow = await driver.findWindow({ active: true });
+  let window: UiWindow = await driver.findWindow({ actived: true });
   let title = await window.getTitle();
 }
 ```
@@ -299,7 +293,7 @@ async function demo() {
 getWindowMode(): Promise<WindowMode>
 ```
 
-获取窗口的窗口模式信息。使用Promise异步回调。
+Obtains the window mode. This API uses a promise to return the result.
 
 **Since:** 9
 
@@ -315,14 +309,14 @@ getWindowMode(): Promise<WindowMode>
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;WindowMode&gt; | Promise对象，返回窗口的窗口模式信息。 |
+| Promise&lt;WindowMode&gt; | Promise used to return the window mode information. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 17000002 | The API does not support concurrent calls. |
-| 17000004 | The window or component is invisible or destroyed. |
+| [17000002](../errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) | The API does not support concurrent calls. |
+| [17000004](../errorcode-uitest.md#17000004-target-componentwindow-invisible-or-destroyed) | The window or component is invisible or destroyed. |
 
 ## Examples
 
@@ -332,7 +326,7 @@ import { Driver, UiWindow } from '@kit.TestKit';
 
 async function demo() {
   let driver: Driver = Driver.create();
-  let window: UiWindow = await driver.findWindow({ active: true });
+  let window: UiWindow = await driver.findWindow({ actived: true });
   let mode = await window.getWindowMode();
 }
 ```
@@ -343,7 +337,7 @@ async function demo() {
 isActive(): Promise<boolean>
 ```
 
-判断窗口是否为用户正在交互窗口。使用Promise异步回调。
+Checks whether a window is active. This API uses a promise to return the result.
 
 **Since:** 11
 
@@ -359,14 +353,14 @@ isActive(): Promise<boolean>
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;boolean&gt; | Promise对象，返回窗口对象是否为用户正在交互窗口。true：交互窗口。false：非交互窗口。 |
+| Promise&lt;boolean&gt; | Promise used to return whether the window is active. The value **true** indicates that the window is active, and **false** indicates the opposite. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 17000002 | The API does not support concurrent calls. |
-| 17000004 | The window or component is invisible or destroyed. |
+| [17000002](../errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) | The API does not support concurrent calls. |
+| [17000004](../errorcode-uitest.md#17000004-target-componentwindow-invisible-or-destroyed) | The window or component is invisible or destroyed. |
 
 ## Examples
 
@@ -387,11 +381,7 @@ async function demo() {
 isActived(): Promise<boolean>
 ```
 
-判断窗口是否为用户正在交互窗口。使用Promise异步回调。
-
-> **说明：**
-> 
-> 从API version 9开始支持，从API version 11开始废弃，建议使用[isActive&lt;sup&gt;11+&lt;/sup&gt;](arkts-test-uitest-uiwindow-c.md#isactive)替代。
+Checks whether a window is active. This API uses a promise to return the result.
 
 **Since:** 9
 
@@ -409,14 +399,14 @@ isActived(): Promise<boolean>
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;boolean&gt; | Promise对象，返回窗口对象是否为用户正在交互窗口。true表示是交互窗口。false表示非交互窗口。 |
+| Promise&lt;boolean&gt; | Promise used to return whether the window is active. The value **true** indicates that the window is active, and **false** indicates the opposite. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 17000002 | The API does not support concurrent calls. |
-| 17000004 | The window or component is invisible or destroyed. |
+| [17000002](../errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) | The API does not support concurrent calls. |
+| [17000004](../errorcode-uitest.md#17000004-target-componentwindow-invisible-or-destroyed) | The window or component is invisible or destroyed. |
 
 ## Examples
 
@@ -426,7 +416,7 @@ import { Driver, UiWindow } from '@kit.TestKit';
 
 async function demo() {
   let driver: Driver = Driver.create();
-  let window: UiWindow = await driver.findWindow({ active: true });
+  let window: UiWindow = await driver.findWindow({ actived: true });
   let focused = await window.isActived();
 }
 ```
@@ -437,7 +427,7 @@ async function demo() {
 isFocused(): Promise<boolean>
 ```
 
-判断窗口是否处于获焦状态。使用Promise异步回调。
+Checks whether a window is focused. This API uses a promise to return the result.
 
 **Since:** 9
 
@@ -453,14 +443,14 @@ isFocused(): Promise<boolean>
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;boolean&gt; | Promise对象，返回窗口对象是否获取获焦状态。true：获焦。false：未获焦。 |
+| Promise&lt;boolean&gt; | Promise used to return the result of whether the window is focused. The value **true** indicates that the component is focused, and **false** indicates the opposite. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 17000002 | The API does not support concurrent calls. |
-| 17000004 | The window or component is invisible or destroyed. |
+| [17000002](../errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) | The API does not support concurrent calls. |
+| [17000004](../errorcode-uitest.md#17000004-target-componentwindow-invisible-or-destroyed) | The window or component is invisible or destroyed. |
 
 ## Examples
 
@@ -470,7 +460,7 @@ import { Driver, UiWindow } from '@kit.TestKit';
 
 async function demo() {
   let driver: Driver = Driver.create();
-  let window: UiWindow = await driver.findWindow({ active: true });
+  let window: UiWindow = await driver.findWindow({ actived: true });
   let focused = await window.isFocused();
 }
 ```
@@ -481,7 +471,7 @@ async function demo() {
 maximize(): Promise<void>
 ```
 
-将窗口最大化。使用Promise异步回调。适用于支持窗口最大化操作的窗口。
+Maximizes a window. A window can be resumed to its previous mode using {@link resume}. This API uses a promise to return the result. This API is applicable to windows that can be maximized.
 
 **Since:** 9
 
@@ -497,15 +487,15 @@ maximize(): Promise<void>
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise对象，返回无结果的Promise对象。 |
+| Promise&lt;void&gt; | Promise that returns no value. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 17000002 | The API does not support concurrent calls. |
-| 17000005 | This operation is not supported. |
-| 17000004 | The window or component is invisible or destroyed. |
+| [17000002](../errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) | The API does not support concurrent calls. |
+| [17000005](../errorcode-uitest.md#17000005-operation-not-supported) | This operation is not supported. |
+| [17000004](../errorcode-uitest.md#17000004-target-componentwindow-invisible-or-destroyed) | The window or component is invisible or destroyed. |
 
 ## Examples
 
@@ -515,7 +505,7 @@ import { Driver, UiWindow } from '@kit.TestKit';
 
 async function demo() {
   let driver: Driver = Driver.create();
-  let window: UiWindow = await driver.findWindow({ active: true });
+  let window: UiWindow = await driver.findWindow({ actived: true });
   await window.maximize();
 }
 ```
@@ -526,7 +516,7 @@ async function demo() {
 minimize(): Promise<void>
 ```
 
-将窗口最小化。使用Promise异步回调。适用于支持窗口最小化操作的窗口。
+Minimizes a window. A window can be resumed to its previous mode using {@link resume}. This API uses a promise to return the result. This API is applicable to windows that can be minimized.
 
 **Since:** 9
 
@@ -542,15 +532,15 @@ minimize(): Promise<void>
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise对象，返回无结果的Promise对象。 |
+| Promise&lt;void&gt; | Promise that returns no value. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 17000002 | The API does not support concurrent calls. |
-| 17000005 | This operation is not supported. |
-| 17000004 | The window or component is invisible or destroyed. |
+| [17000002](../errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) | The API does not support concurrent calls. |
+| [17000005](../errorcode-uitest.md#17000005-operation-not-supported) | This operation is not supported. |
+| [17000004](../errorcode-uitest.md#17000004-target-componentwindow-invisible-or-destroyed) | The window or component is invisible or destroyed. |
 
 ## Examples
 
@@ -560,7 +550,7 @@ import { Driver, UiWindow } from '@kit.TestKit';
 
 async function demo() {
   let driver: Driver = Driver.create();
-  let window: UiWindow = await driver.findWindow({ active: true });
+  let window: UiWindow = await driver.findWindow({ actived: true });
   await window.minimize();
 }
 ```
@@ -577,7 +567,7 @@ ArkTS-Sta:
 moveTo(x: int, y: int): Promise<void>
 ```
 
-将窗口移动到目标点。使用Promise异步回调。适用于支持移动的窗口。
+Moves a window to the target point. This API uses a promise to return the result. This API is applicable to moveable windows.
 
 **Since:** 9
 
@@ -593,23 +583,23 @@ moveTo(x: int, y: int): Promise<void>
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| x | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | 以number的形式传入目标点的横坐标信息，取值范围：大于等于0的整数。 |
-| y | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | 以number的形式传入目标点的纵坐标信息，取值范围：大于等于0的整数。 |
+| x | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | Horizontal coordinate of the target point, in pixels. The value is an integer greater than or equal to 0. If the value is out of range, error code 401 is thrown. |
+| y | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | Vertical coordinate of the target point, in pixels. The value is an integer greater than or equal to 0. If the value is out of range, error code 401 is thrown. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise对象，返回无结果的Promise对象。 |
+| Promise&lt;void&gt; | Promise that returns no value. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
-| 17000002 | The API does not support concurrent calls. |
-| 17000005 | This operation is not supported. |
-| 17000004 | The window or component is invisible or destroyed. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| [17000002](../errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) | The API does not support concurrent calls. |
+| [17000005](../errorcode-uitest.md#17000005-operation-not-supported) | This operation is not supported. |
+| [17000004](../errorcode-uitest.md#17000004-target-componentwindow-invisible-or-destroyed) | The window or component is invisible or destroyed. |
 
 ## Examples
 
@@ -619,7 +609,7 @@ import { Driver, UiWindow } from '@kit.TestKit';
 
 async function demo() {
   let driver: Driver = Driver.create();
-  let window: UiWindow = await driver.findWindow({ active: true });
+  let window: UiWindow = await driver.findWindow({ actived: true });
   await window.moveTo(100, 100);
 }
 ```
@@ -636,7 +626,7 @@ ArkTS-Sta:
 resize(wide: int, height: int, direction: ResizeDirection): Promise<void>
 ```
 
-根据传入的宽、高和调整方向来调整窗口的大小。使用Promise异步回调。适用于支持调整大小的窗口。
+Resizes a window based on the specified width, height, and direction. This API uses a promise to return the result. This API is applicable to resizable windows.
 
 **Since:** 9
 
@@ -652,24 +642,37 @@ resize(wide: int, height: int, direction: ResizeDirection): Promise<void>
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| wide | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | 以number的形式传入调整后窗口的宽度，取值范围：大于等于0的整数。 |
-| height | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | 以number的形式传入调整后窗口的高度，取值范围：大于等于0的整数。 |
-| direction | [ResizeDirection](arkts-test-uitest-resizedirection-e.md) | Yes | 以[ResizeDirection](arkts-test-uitest-resizedirection-e.md)的形式传入窗口调整的方向。 |
+| wide | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | Width of the adjusted window, in pixels. The value is an integer greater than or equal to 0. If the value is out of range, error code 401 is thrown. |
+| height | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | Height of the adjusted window, in pixels. The value is an integer greater than or equal to 0. If the value is out of range, error code 401 is thrown. |
+| direction | [ResizeDirection](arkts-test-uitest-resizedirection-e.md) | Yes | Resize direction. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise对象，返回无结果的Promise对象。 |
+| Promise&lt;void&gt; | Promise that returns no value. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
-| 17000002 | The API does not support concurrent calls. |
-| 17000005 | This operation is not supported. |
-| 17000004 | The window or component is invisible or destroyed. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| [17000002](../errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) | The API does not support concurrent calls. |
+| [17000005](../errorcode-uitest.md#17000005-operation-not-supported) | This operation is not supported. |
+| [17000004](../errorcode-uitest.md#17000004-target-componentwindow-invisible-or-destroyed) | The window or component is invisible or destroyed. |
+
+## Examples
+
+```TypeScript
+// xxx.test.ets
+import { Driver, ResizeDirection, UiWindow } from '@kit.TestKit';
+
+async function demo() {
+  let driver: Driver = Driver.create();
+  let window: UiWindow = await driver.findWindow({ actived: true });
+  await window.resize(100, 100, ResizeDirection.LEFT);
+}
+```
 
 ## resume
 
@@ -677,7 +680,7 @@ resize(wide: int, height: int, direction: ResizeDirection): Promise<void>
 resume(): Promise<void>
 ```
 
-将窗口恢复到之前的窗口模式。使用Promise异步回调。
+Resumes a window to its previous mode. This API uses a promise to return the result.
 
 **Since:** 9
 
@@ -693,15 +696,15 @@ resume(): Promise<void>
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise对象。无返回结果的Promise对象。 |
+| Promise&lt;void&gt; | Promise that returns no value. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 17000002 | The API does not support concurrent calls. |
-| 17000005 | This operation is not supported. |
-| 17000004 | The window or component is invisible or destroyed. |
+| [17000002](../errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) | The API does not support concurrent calls. |
+| [17000005](../errorcode-uitest.md#17000005-operation-not-supported) | This operation is not supported. |
+| [17000004](../errorcode-uitest.md#17000004-target-componentwindow-invisible-or-destroyed) | The window or component is invisible or destroyed. |
 
 ## Examples
 
@@ -711,7 +714,7 @@ import { Driver, UiWindow } from '@kit.TestKit';
 
 async function demo() {
   let driver: Driver = Driver.create();
-  let window: UiWindow = await driver.findWindow({ active: true });
+  let window: UiWindow = await driver.findWindow({ actived: true });
   await window.resume();
 }
 ```
@@ -722,7 +725,7 @@ async function demo() {
 split(): Promise<void>
 ```
 
-将窗口模式切换成分屏模式。使用Promise异步回调。适用于支持切换分屏模式的窗口。
+Switches to the split-screen mode. A window can be resumed to its previous mode using {@link resume}. This API uses a promise to return the result. This API is applicable to windows that support screen splitting.
 
 **Since:** 9
 
@@ -738,15 +741,15 @@ split(): Promise<void>
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise对象，返回无结果的Promise对象。 |
+| Promise&lt;void&gt; | Promise that returns no value. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 17000002 | The API does not support concurrent calls. |
-| 17000005 | This operation is not supported. |
-| 17000004 | The window or component is invisible or destroyed. |
+| [17000002](../errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) | The API does not support concurrent calls. |
+| [17000005](../errorcode-uitest.md#17000005-operation-not-supported) | This operation is not supported. |
+| [17000004](../errorcode-uitest.md#17000004-target-componentwindow-invisible-or-destroyed) | The window or component is invisible or destroyed. |
 
 ## Examples
 
@@ -756,7 +759,7 @@ import { Driver, UiWindow } from '@kit.TestKit';
 
 async function demo() {
   let driver: Driver = Driver.create();
-  let window: UiWindow = await driver.findWindow({ active: true });
+  let window: UiWindow = await driver.findWindow({ actived: true });
   await window.split();
 }
 ```

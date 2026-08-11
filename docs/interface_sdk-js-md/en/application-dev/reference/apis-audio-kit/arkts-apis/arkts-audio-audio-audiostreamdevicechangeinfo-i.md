@@ -1,6 +1,6 @@
 # AudioStreamDeviceChangeInfo
 
-流设备变更时，应用接收到的事件。
+Describes the event received by the application when the audio stream device is changed.
 
 **Since:** 11
 
@@ -22,7 +22,7 @@ import { audio } from 'kits/@kit.AudioKit';
 changeReason: AudioStreamDeviceChangeReason
 ```
 
-流设备变更原因。
+Audio stream device change reason.
 
 **Type:** [AudioStreamDeviceChangeReason](arkts-audio-audio-audiostreamdevicechangereason-e.md)
 
@@ -42,7 +42,7 @@ changeReason: AudioStreamDeviceChangeReason
 devices: AudioDeviceDescriptors
 ```
 
-设备信息。
+Audio device descriptors after change.
 
 **Type:** [AudioDeviceDescriptors](arkts-audio-audio-audiodevicedescriptors-t.md)
 
@@ -62,7 +62,7 @@ devices: AudioDeviceDescriptors
 preDevices?: AudioDeviceDescriptors
 ```
 
-应用流设备变更前的设备信息。
+Audio device descriptors before change.
 
 **Type:** [AudioDeviceDescriptors](arkts-audio-audio-audiodevicedescriptors-t.md)
 

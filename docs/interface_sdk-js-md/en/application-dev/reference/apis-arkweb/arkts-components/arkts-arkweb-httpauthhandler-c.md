@@ -16,7 +16,7 @@ Defines the http auth request result, related to {@link onHttpAuthRequest} metho
 cancel(): void
 ```
 
-通知Web组件用户取消HTTP认证操作。
+Cancels HTTP authentication as requested by the user.
 
 **Since:** 9
 
@@ -34,7 +34,7 @@ cancel(): void
 confirm(userName: string, password: string): boolean
 ```
 
-使用用户名和密码进行HTTP认证操作。
+Performs HTTP authentication with the user name and password provided by the user.
 
 **Since:** 9
 
@@ -50,8 +50,8 @@ confirm(userName: string, password: string): boolean
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| userName | string | Yes | HTTP认证用户名。 |
-| password | string | Yes | HTTP认证密码。 |
+| userName | string | Yes | HTTP authentication user name. |
+| password | string | Yes | HTTP authentication password. |
 
 **Return value:**
 
@@ -83,7 +83,7 @@ Constructor.
 isHttpAuthInfoSaved(): boolean
 ```
 
-通知Web组件用户使用服务器缓存的账号密码认证。
+Determine whether the credentials stored for the current host are suitable for use. If the credentials have previously been rejected by the server for the current request, they are not suitable for use.
 
 **Since:** 9
 

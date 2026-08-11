@@ -12,7 +12,7 @@ import { image } from 'kits/@kit.ImageKit';
 function getImagePackerSupportedFormats(): string[]
 ```
 
-获取支持编码的图片格式，图片格式以mime type表示。
+Obtains the supported encoding formats, represented by MIME types.
 
 **Since:** 20
 
@@ -26,7 +26,7 @@ function getImagePackerSupportedFormats(): string[]
 
 | Type | Description |
 | --- | --- |
-| string[] | 支持编码的图片格式（mime type）列表。 |
+| string[] | List of supported encoding formats (MIME types). |
 
 ## Examples
 

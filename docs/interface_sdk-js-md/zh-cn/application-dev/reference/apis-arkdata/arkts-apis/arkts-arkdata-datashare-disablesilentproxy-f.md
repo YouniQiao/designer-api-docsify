@@ -1,11 +1,5 @@
 # disableSilentProxy
 
-## 导入模块
-
-```TypeScript
-import { dataShare } from 'kits/@kit.ArkData';
-```
-
 ## disableSilentProxy
 
 ```TypeScript
@@ -49,9 +43,9 @@ Datashare的关闭状态。
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 401 | Parameter error.Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameters types. |
-| 15700011 | The URI does not exist. |
-| 202 | Permission verification failed. A non-system application calls a system API.<br>**适用版本：** 19+ |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error.Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameters types. |
+| [15700011](../errorcode-datashare.md#15700011-uri不存在) | The URI does not exist. |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed. A non-system application calls a system API.<br>**适用版本：** 19+ |
 
 ## 示例
 

@@ -1,6 +1,6 @@
 # FilterClause
 
-联系人过滤条件。多个筛选条件之间是“或者”的关系，如果参数是数组类型，数组最多只能包含3个元素。
+Defines the contact filter criteria. Multiple filter criteria are ORed. If the parameter is an array, the array can contain a maximum of three elements.
 
 **Since:** 15
 
@@ -22,7 +22,7 @@ import { contact } from 'kits/@kit.ContactsKit';
 dataItem?: DataFilter
 ```
 
-联系人数据过滤项。
+Contact data filter item.
 
 **Type:** [DataFilter](arkts-contacts-contact-datafilter-i.md)
 
@@ -42,7 +42,7 @@ dataItem?: DataFilter
 focusModeList?: Array<FilterOptions>
 ```
 
-专注模式。
+Focus mode list.
 
 **Type:** Array&lt;FilterOptions&gt;
 
@@ -62,7 +62,7 @@ focusModeList?: Array<FilterOptions>
 id?: Array<FilterOptions>
 ```
 
-联系人id。
+Contact ID.
 
 **Type:** Array&lt;FilterOptions&gt;
 
@@ -82,7 +82,7 @@ id?: Array<FilterOptions>
 name?: Array<FilterOptions>
 ```
 
-联系人姓名。
+Contact name.
 
 **Type:** Array&lt;FilterOptions&gt;
 

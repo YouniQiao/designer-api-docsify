@@ -1,9 +1,10 @@
 # Display
 
-屏幕实例。描述Display对象的属性和方法。
+Implements a Display instance, with attributes and APIs defined.
 
-下列API示例中都需先使用[getAllDisplays()](arkts-arkui-display-getalldisplays-f.md#getalldisplays)、  
-[getDefaultDisplaySync()](arkts-arkui-display-getdefaultdisplaysync-f.md#getdefaultdisplaysync)中的任一方法获取到Display实例，再通过此实例调用对应方法。
+Before calling any API in Display, you must use  
+[getAllDisplays()](arkts-arkui-display-getalldisplays-f.md#getalldisplays) or  
+[getDefaultDisplaySync()](arkts-arkui-display-getdefaultdisplaysync-f.md#getdefaultdisplaysync) to obtain a Display instance.
 
 **Since:** 7
 
@@ -25,9 +26,11 @@ import { display } from 'kits/@kit.ArkUI';
 getAvailableArea(): Promise<Rect>
 ```
 
-获取当前设备屏幕的可用区域，使用Promise异步回调。
+Obtains the available area of the display of the current device. This API uses a promise to return the result.
 
-可用区域是扣除系统UI（如状态栏、Dock栏）后，可供应用程序自由使用的区域。
+The available area is the space left for applications after the system UI (such as the status bar and dock bar)is accounted for.
+
+This API can be properly called on devices running OpenHarmony 7.0.0 or later.For devices running versions earlier than OpenHarmony 7.0.0,this API can be properly called on PCs/2-in-1 devices and tablets,but does not work for other device types. To obtain the available area on the current device screen,you can use the width and height attributes in Display.
 
 **Since:** 12
 
@@ -43,26 +46,27 @@ getAvailableArea(): Promise<Rect>
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;Rect&gt; | Promise对象。返回当前屏幕可用矩形区域。 |
+| Promise&lt;Rect&gt; | Promise used to return the available area, which is a rectangle. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 801 | Capability not supported. Failed to call the API due to limited device capabilities. |
-| 1400001 | Invalid display or screen. Possible cause: 1. This display is abnormal. 2. Internal task error. |
+| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. Failed to call the API due to limited device capabilities. |
+| [1400001](../errorcode-display.md#1400001-invalid-display-or-screen) | Invalid display or screen. Possible cause: 1. This display is abnormal. 2. Internal task error. |
 
 ## Examples
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
+import { display } from '@kit.ArkUI';
 
 let displayClass: display.Display | null = null;
 try {
   displayClass = display.getDefaultDisplaySync();
   let promise = displayClass.getAvailableArea();
   promise.then((data) => {
-    console.info(`Succeeded in getting the available area in this display. data: ${JSON.stringify(data)}`);
+    console.info(`Succeeded get the available area in this display. data: ${JSON.stringify(data)}`);
   }).catch((err: BusinessError) => {
     console.error(`Failed to get the available area in this display. Code: ${err.code}, message: ${err.message}`);
   })
@@ -77,7 +81,7 @@ try {
 getCutoutInfo(callback: AsyncCallback<CutoutInfo>): void
 ```
 
-获取挖孔屏、刘海屏、瀑布屏等不可用屏幕区域信息。使用callback异步回调。建议应用布局规避该区域。
+Obtains the cutout information of the display. This API uses an asynchronous callback to return the result. You are advised not to use the cutout area during application layout.
 
 **Since:** 9
 
@@ -93,13 +97,13 @@ getCutoutInfo(callback: AsyncCallback<CutoutInfo>): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;CutoutInfo&gt; | Yes | 回调函数。返回不可用屏幕区域对象。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;CutoutInfo&gt; | Yes | Callback used to return the **CutoutInfo** object. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 1400001 | Invalid display or screen. Possible cause: 1. This display is abnormal. 2. Internal task error. |
+| [1400001](../errorcode-display.md#1400001-invalid-display-or-screen) | Invalid display or screen. Possible cause: 1. This display is abnormal. 2. Internal task error. |
 
 ## Examples
 
@@ -125,7 +129,7 @@ displayClass.getCutoutInfo((err: BusinessError, data: display.CutoutInfo) => {
 getCutoutInfo(): Promise<CutoutInfo>
 ```
 
-获取挖孔屏、刘海屏、瀑布屏等不可用屏幕区域信息。使用Promise异步回调。建议应用布局规避该区域。
+Obtains the cutout information of the display. This API uses a promise to return the result. You are advised not to use the cutout area during application layout.
 
 **Since:** 9
 
@@ -141,13 +145,13 @@ getCutoutInfo(): Promise<CutoutInfo>
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;CutoutInfo&gt; | Promise对象。返回描述不可用屏幕区域的CutoutInfo对象。 |
+| Promise&lt;CutoutInfo&gt; | Promise used to return the CutoutInfo object. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 1400001 | Invalid display or screen. |
+| [1400001](../errorcode-display.md#1400001-invalid-display-or-screen) | Invalid display or screen. |
 
 ## Examples
 
@@ -160,7 +164,7 @@ let promise: Promise<display.CutoutInfo> = displayClass.getCutoutInfo();
 promise.then((data: display.CutoutInfo) => {
   console.info(`Succeeded in getting cutoutInfo. Data: ${JSON.stringify(data)}`);
 }).catch((err: BusinessError) => {
-  console.error(`Failed to get cutoutInfo. Code: ${err.code}, message: ${err.message}`);
+  console.error(`Failed to obtain all the display objects. Code: ${err.code}, message: ${err.message}`);
 });
 ```
 
@@ -192,9 +196,9 @@ Get current display capability, including foldstatus, displaymode, rotation, and
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 801 | Capability not supported.Function getDisplayCapability can not work correctly due to limited device capabilities. |
-| 1400001 | Invalid display or screen. |
-| 1400003 | This display manager service works abnormally. |
+| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported.Function getDisplayCapability can not work correctly due to limited device capabilities. |
+| [1400001](../errorcode-display.md#1400001-invalid-display-or-screen) | Invalid display or screen. |
+| [1400003](../errorcode-display.md#1400003-abnormal-display-manager-service) | This display manager service works abnormally. |
 
 ## getLiveCreaseRegion
 
@@ -202,7 +206,7 @@ Get current display capability, including foldstatus, displaymode, rotation, and
 getLiveCreaseRegion(): FoldCreaseRegion
 ```
 
-获取当前显示模式下的实时折痕区域。
+Obtains the live crease region of the foldable device in the current display mode.
 
 **Since:** 20
 
@@ -216,18 +220,20 @@ getLiveCreaseRegion(): FoldCreaseRegion
 
 | Type | Description |
 | --- | --- |
-| [FoldCreaseRegion](arkts-arkui-display-foldcreaseregion-i.md) | 返回设备在当前显示模式下的折叠折痕区域。 |
+| [FoldCreaseRegion](arkts-arkui-display-foldcreaseregion-i.md) | Live crease region of the device. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 801 | Capability not supported. Failed to call the API due to limited device capabilities. |
-| 1400003 | This display manager service works abnormally. |
+| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. Failed to call the API due to limited device capabilities. |
+| [1400003](../errorcode-display.md#1400003-abnormal-display-manager-service) | This display manager service works abnormally. |
 
 ## Examples
 
 ```TypeScript
+import { display } from '@kit.ArkUI';
+
 let displayClass: display.Display | null = null;
 try {
   displayClass = display.getDefaultDisplaySync();
@@ -244,7 +250,7 @@ try {
 getRoundedCorner(): Array<RoundedCorner>
 ```
 
-获取屏幕的圆角信息。屏幕圆角信息由产品配置决定，只有配置了屏幕圆角半径的物理屏幕才能返回圆角信息，否则返回空数组，虚拟屏同样返回空数组。
+Obtains the rounded corner information of the display. The rounded corner information of the display is determined by the product configuration. Only physical screens that have a defined corner-radius value returns rounded corner information; otherwise, an empty array is returned. Virtual displays always return an empty array.
 
 **Since:** 23
 
@@ -260,15 +266,15 @@ getRoundedCorner(): Array<RoundedCorner>
 
 | Type | Description |
 | --- | --- |
-| Array&lt;RoundedCorner&gt; | 返回当前屏幕的圆角信息。 |
+| Array&lt;RoundedCorner&gt; | Rounded corner information. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 801 | Capability not supported. |
-| 1400001 | Invalid display or screen. |
-| 1400003 | This display manager service works abnormally. |
+| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. Function getRoundedCorner can not work correctly due to limited device capabilities. |
+| [1400001](../errorcode-display.md#1400001-invalid-display-or-screen) | Invalid display or screen. |
+| [1400003](../errorcode-display.md#1400003-abnormal-display-manager-service) | This display manager service works abnormally. |
 
 ## Examples
 
@@ -281,7 +287,7 @@ try {
   let data = displayClass.getRoundedCorner();
   console.info(`Succeeded in getting rounded corner. Data: ${JSON.stringify(data)}`);
 } catch (error) {
-  console.error(`Failed to get rounded corner. Code: ${error.code}, message: ${error.message}`);
+  console.error(`Failed to getRoundedCorner. Code: ${error.code}, message: ${error.message}`);
 }
 ```
 
@@ -291,7 +297,9 @@ try {
 off(type: 'availableAreaChange', callback?: Callback<Rect>): void
 ```
 
-关闭当前设备屏幕可用区域变化的监听。
+Unsubscribes from changes of the available area on the display of the current device.
+
+This API can be properly called on devices running OpenHarmony 7.0.0 or later.For devices running versions earlier than OpenHarmony 7.0.0,this API can be properly called on PCs/2-in-1 devices and tablets.If being called on other device types, it does not take effect and no error is reported.
 
 **Since:** 12
 
@@ -307,21 +315,21 @@ off(type: 'availableAreaChange', callback?: Callback<Rect>): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'availableAreaChange' | Yes | 监听事件，固定为'availableAreaChange'，表示屏幕可用区域变更。 |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;Rect&gt; | No | 需要取消注册的回调函数。返回改变后的可用区域。若无此参数，则取消注册屏幕可用区域变化监听的所有回调函数。 |
+| type | 'availableAreaChange' | Yes | Event type. The event **'availableAreaChange'** is triggered when the available area of the display changes. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;Rect&gt; | No | Callback used to return the new available area. If this parameter is not specified, all subscriptions to the specified event are canceled. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt;2. Incorrect parameter types. |
-| 801 | Capability not supported. Failed to call the API due to limited device capabilities. |
-| 1400003 | This display manager service works abnormally. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt;2. Incorrect parameter types. |
+| [1400003](../errorcode-display.md#1400003-abnormal-display-manager-service) | This display manager service works abnormally. |
 
 ## Examples
 
 ```TypeScript
 import { Callback } from '@kit.BasicServicesKit';
+import { display } from '@kit.ArkUI';
 
 let callback: Callback<display.Rect> = (data: display.Rect) => {
   console.info(`Listening enabled. Data: ${JSON.stringify(data)}`);
@@ -329,7 +337,7 @@ let callback: Callback<display.Rect> = (data: display.Rect) => {
 let displayClass: display.Display | null = null;
 try {
   displayClass = display.getDefaultDisplaySync();
-  displayClass.off('availableAreaChange', callback);
+  displayClass.off("availableAreaChange", callback);
 } catch (exception) {
   console.error(`Failed to unregister callback. Code: ${exception.code}, message: ${exception.message}`);
 }
@@ -342,6 +350,8 @@ offAvailableAreaChange(callback?: Callback<Rect>): void
 ```
 
 Unregister the callback for available area changes.
+
+This API can be properly called on devices running OpenHarmony 7.0.0 or later.For devices running versions earlier than OpenHarmony 7.0.0,this API can be properly called on PCs/2-in-1 devices and tablets.If being called on other device types, it does not take effect and no error is reported.
 
 **Since:** 23
 
@@ -361,8 +371,7 @@ Unregister the callback for available area changes.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 801 | Capability not supported. Failed to call the API due to limited device capabilities. |
-| 1400003 | This display manager service works abnormally. |
+| [1400003](../errorcode-display.md#1400003-abnormal-display-manager-service) | This display manager service works abnormally. |
 
 ## on('availableAreaChange')
 
@@ -370,7 +379,9 @@ Unregister the callback for available area changes.
 on(type: 'availableAreaChange', callback: Callback<Rect>): void
 ```
 
-开启当前设备屏幕可用区域的监听。当屏幕旋转、进入/退出自由多窗模式、设置Dock栏/状态栏等系统控件可见性变化时，触发回调函数，返回可用区域信息。
+Subscribes to changes of the available area on the display of the current device. This callback function is triggered when the screen rotates, the freeform mode is enabled or disabled, or the visibility of system components such as the dock bar and status bar changes, and returns the available area information.
+
+This API can be properly called on devices running OpenHarmony 7.0.0 or later.For devices running versions earlier than OpenHarmony 7.0.0,this API can be properly called on PCs/2-in-1 devices and tablets.If being called on other device types, it does not take effect and no error is reported.
 
 **Since:** 12
 
@@ -386,21 +397,21 @@ on(type: 'availableAreaChange', callback: Callback<Rect>): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'availableAreaChange' | Yes | 监听事件。固定为'availableAreaChange'，表示屏幕可用区域变更。 |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;Rect&gt; | Yes | 回调函数。返回改变后的可用区域。 |
+| type | 'availableAreaChange' | Yes | Event type. The event **'availableAreaChange'** is triggered when the available area of the display changes. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;Rect&gt; | Yes | Callback used to return the new available area. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt;2. Incorrect parameter types. |
-| 801 | Capability not supported. Failed to call the API due to limited device capabilities. |
-| 1400003 | This display manager service works abnormally. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt;2. Incorrect parameter types. |
+| [1400003](../errorcode-display.md#1400003-abnormal-display-manager-service) | This display manager service works abnormally. |
 
 ## Examples
 
 ```TypeScript
 import { Callback } from '@kit.BasicServicesKit';
+import { display } from '@kit.ArkUI';
 
 let callback: Callback<display.Rect> = (data: display.Rect) => {
   console.info(`Listening enabled. Data: ${JSON.stringify(data)}`);
@@ -408,7 +419,7 @@ let callback: Callback<display.Rect> = (data: display.Rect) => {
 let displayClass: display.Display | null = null;
 try {
   displayClass = display.getDefaultDisplaySync();
-  displayClass.on('availableAreaChange', callback);
+  displayClass.on("availableAreaChange", callback);
 } catch (exception) {
   console.error(`Failed to register callback. Code: ${exception.code}, message: ${exception.message}`);
 }
@@ -421,6 +432,8 @@ onAvailableAreaChange(callback: Callback<Rect>): void
 ```
 
 Register the callback for available area changes.
+
+This API can be properly called on devices running OpenHarmony 7.0.0 or later.For devices running versions earlier than OpenHarmony 7.0.0,this API can be properly called on PCs/2-in-1 devices and tablets.If being called on other device types, it does not take effect and no error is reported.
 
 **Since:** 23
 
@@ -440,8 +453,7 @@ Register the callback for available area changes.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 801 | Capability not supported. Failed to call the API due to limited device capabilities. |
-| 1400003 | This display manager service works abnormally. |
+| [1400003](../errorcode-display.md#1400003-abnormal-display-manager-service) | This display manager service works abnormally. |
 
 ## alive
 
@@ -449,9 +461,7 @@ Register the callback for available area changes.
 alive: boolean
 ```
 
-显示设备的启用状态，表示设备是否处于正常运行状态。true表示已启用，处于正常运行状态；false表示未启用，未处于正常运行状态。
-
-SystemCapability.WindowManager.WindowManager.Core
+Whether the display is alive. The value **true** indicates that the display is alive and running properly, and **false** indicates the opposite.
 
 **Type:** boolean
 
@@ -471,11 +481,9 @@ SystemCapability.WindowManager.WindowManager.Core
 availableHeight: long
 ```
 
-显示设备的可用区域高度，单位为px，该参数为大于0的整数。
+eight of the available area, in px. The value is an integer greater than 0.
 
-SystemCapability.WindowManager.WindowManager.Core
-
-该接口在2in1设备、Tablet设备中可正常调用；在其他设备中不可用，请通过height属性获取当前设备屏幕的可用区域高度。
+This API can be properly called on devices running OpenHarmony 7.0.0 or later.For devices running versions earlier than OpenHarmony 7.0.0,this API can be properly called on PCs/2-in-1 devices and tablets,but does not work for other device types.To obtain the height of the available area on the current device screen, you can use the height attribute.
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：long
 
@@ -495,11 +503,9 @@ SystemCapability.WindowManager.WindowManager.Core
 availableWidth: long
 ```
 
-显示设备的可用区域宽度，单位为px，该参数为大于0的整数。
+Width of the available area, in px. The value is an integer greater than 0.
 
-SystemCapability.WindowManager.WindowManager.Core
-
-该接口在2in1设备、Tablet设备中可正常调用；在其他设备中不可用，请通过width属性获取当前设备屏幕的可用区域宽度。
+This API can be properly called on devices running OpenHarmony 7.0.0 or later.For devices running versions earlier than OpenHarmony 7.0.0,this API can be properly called on PCs/2-in-1 devices and tablets,but does not work for other device types.To obtain the width of the available area on the current device screen, you can use the width attribute.
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：long
 
@@ -519,9 +525,7 @@ SystemCapability.WindowManager.WindowManager.Core
 colorSpaces: Array<colorSpaceManager.ColorSpace>
 ```
 
-显示设备支持的所有色域类型。
-
-SystemCapability.WindowManager.WindowManager.Core
+All color spaces supported by the display.
 
 **Type:** Array&lt;colorSpaceManager.ColorSpace&gt;
 
@@ -541,9 +545,7 @@ SystemCapability.WindowManager.WindowManager.Core
 densityDPI: double
 ```
 
-显示设备的物理像素密度，表示每英寸上的像素点数。该参数为浮点数，单位为px。一般取值160.0、480.0等，实际能取到的值取决于不同设备设置里提供的可选值。
-
-SystemCapability.WindowManager.WindowManager.Core
+Physical pixel density of the display, that is, the number of pixels per inch. The value is a floating-point number. Generally, the value is **160.0** or **480.0**. The actual value depends on the optional values provided by the device in use.
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：double
 
@@ -563,11 +565,8 @@ SystemCapability.WindowManager.WindowManager.Core
 densityPixels: double
 ```
 
-显示设备逻辑像素的密度，代表物理像素与逻辑像素的缩放系数，计算方式为：![densityPixels](../../../reference/apis-arkui/figures/densityPixels.jpg)
-
-该参数为浮点数，受densityDPI范围限制，取值范围在[0.5，4.0]。一般取值1.0、3.0等，实际取值取决于不同设备提供的densityDPI。
-
-SystemCapability.WindowManager.WindowManager.Core
+Logical pixel density of the display, which is the scaling coefficient between physical pixels and logical pixels. The calculation method is as follows:&lt;br&gt;!  
+[densityPixels](figures/densityPixels.jpg)&lt;br&gt;The value is a floating-point number and is restricted by the range of **densityDPI**. The value range is [0.5, 4.0]. Generally, the value is **1.0** or **3.0**. The actual value depends on the density DPI provided by the device in use.
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：double
 
@@ -587,9 +586,7 @@ SystemCapability.WindowManager.WindowManager.Core
 hdrFormats: Array<hdrCapability.HDRFormat>
 ```
 
-显示设备支持的所有HDR格式。
-
-SystemCapability.WindowManager.WindowManager.Core
+All HDR formats supported by the display.
 
 **Type:** Array&lt;hdrCapability.HDRFormat&gt;
 
@@ -609,9 +606,7 @@ SystemCapability.WindowManager.WindowManager.Core
 height: long
 ```
 
-显示设备的屏幕高度，单位为px，该参数为整数。
-
-SystemCapability.WindowManager.WindowManager.Core
+Height of the display, in px. The value is an integer.
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：long
 
@@ -631,9 +626,7 @@ SystemCapability.WindowManager.WindowManager.Core
 id: long
 ```
 
-显示设备的屏幕ID，该参数为大于等于0的整数。
-
-SystemCapability.WindowManager.WindowManager.Core
+Display ID, which is an integer greater than or equal to 0.
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：long
 
@@ -653,9 +646,7 @@ SystemCapability.WindowManager.WindowManager.Core
 name: string
 ```
 
-显示设备的名称。
-
-SystemCapability.WindowManager.WindowManager.Core
+Name of the display.
 
 **Type:** string
 
@@ -675,9 +666,7 @@ SystemCapability.WindowManager.WindowManager.Core
 orientation: Orientation
 ```
 
-表示显示设备当前显示的方向。
-
-SystemCapability.WindowManager.WindowManager.Core
+Orientation of the display.
 
 **Type:** [Orientation](arkts-arkui-window-orientation-e.md)
 
@@ -697,9 +686,7 @@ SystemCapability.WindowManager.WindowManager.Core
 refreshRate: int
 ```
 
-显示设备当前采用的刷新率，该参数为整数，单位为Hz。
-
-SystemCapability.WindowManager.WindowManager.Core
+Refresh rate of the display, in Hz. The value is an integer.
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
@@ -719,17 +706,7 @@ SystemCapability.WindowManager.WindowManager.Core
 rotation: int
 ```
 
-显示设备的屏幕顺时针旋转角度。
-
-值为0时，表示显示设备屏幕顺时针旋转为0°，表示显示设备的标准显示方向；
-
-值为1时，表示显示设备屏幕顺时针旋转为90°；
-
-值为2时，表示显示设备屏幕顺时针旋转为180°；
-
-值为3时，表示显示设备屏幕顺时针旋转为270°。
-
-SystemCapability.WindowManager.WindowManager.Core
+Clockwise rotation angle of the display.The value **0** indicates that the display rotates clockwise by 0��, which is the standard display direction.The value **1** indicates that the display rotates clockwise by 90��.The value **2** indicates that the display rotates clockwise by 180��.The value **3** indicates that the display rotates clockwise by 270��.
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
@@ -749,9 +726,8 @@ SystemCapability.WindowManager.WindowManager.Core
 scaledDensity: double
 ```
 
-显示设备上的字体的缩放因子。该参数为浮点数，通常与densityPixels相同。
-
-SystemCapability.WindowManager.WindowManager.Core
+Scaling factor for fonts displayed on the display. The value must be a floating  
+-point number. Generally, the value is the same as that of **densityPixels**.
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：double
 
@@ -771,9 +747,7 @@ SystemCapability.WindowManager.WindowManager.Core
 screenShape?: ScreenShape
 ```
 
-显示设备的屏幕形状，默认值为RECTANGLE。
-
-SystemCapability.WindowManager.WindowManager.Core
+Screen shape of the display. The default value is **ScreenShape.RECTANGLE**.
 
 **Type:** [ScreenShape](arkts-arkui-display-screenshape-e.md)
 
@@ -793,9 +767,7 @@ SystemCapability.WindowManager.WindowManager.Core
 sourceMode?: DisplaySourceMode
 ```
 
-显示设备的显示模式枚举，默认值为DisplaySourceMode.NONE。
-
-SystemCapability.Window.SessionManager
+Display mode for screen content. The default value is **DisplaySourceMode.NONE**.
 
 **Type:** [DisplaySourceMode](arkts-arkui-display-displaysourcemode-e.md)
 
@@ -815,9 +787,7 @@ SystemCapability.Window.SessionManager
 state: DisplayState
 ```
 
-显示设备的状态。
-
-SystemCapability.WindowManager.WindowManager.Core
+State of the display.
 
 **Type:** [DisplayState](arkts-arkui-display-displaystate-e.md)
 
@@ -837,9 +807,7 @@ SystemCapability.WindowManager.WindowManager.Core
 supportedRefreshRates?: Array<int>
 ```
 
-显示设备支持的所有刷新率，从小到大排序。刷新率值为正整数，单位为Hz。默认为空。
-
-SystemCapability.Window.SessionManager
+All refresh rates supported by the display, sorted in ascending order. The refresh rate is a positive integer,in Hz. The default value is empty array.
 
 **Type:** ArkTS-Dyn: Array&lt;number&gt;  <br>ArkTS-Sta：Array&lt;int&gt;
 
@@ -859,9 +827,7 @@ SystemCapability.Window.SessionManager
 width: long
 ```
 
-显示设备的屏幕宽度，单位为px，该参数为整数。
-
-SystemCapability.WindowManager.WindowManager.Core
+Width of the display, in px. The value is an integer.
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：long
 
@@ -881,9 +847,8 @@ SystemCapability.WindowManager.WindowManager.Core
 x?: long
 ```
 
-显示设备左上角相对于原点的y轴坐标，原点为主屏左上角，单位为px，该参数为整数，默认值为0。仅DisplaySourceMode为MAIN和EXTEND时返回实际值，其余默认返回默认值0。
-
-SystemCapability.Window.SessionManager
+X coordinate of the top-left corner of the display relative to the origin,which is the top-left corner of the primary screen, measured in px. The value is an integer. The default value is  
+**0**. The actual value is returned only when **DisplaySourceMode** is set to **MAIN** or **EXTEND**; otherwise,the default value **0** is returned.
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：long
 
@@ -903,9 +868,7 @@ SystemCapability.Window.SessionManager
 xDPI: double
 ```
 
-x轴方向中每英寸屏幕的确切物理像素值，该参数为浮点数。
-
-SystemCapability.WindowManager.WindowManager.Core
+Exact physical pixels per inch of the display in the X axis. The value must be a floating-point number.
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：double
 
@@ -925,9 +888,8 @@ SystemCapability.WindowManager.WindowManager.Core
 y?: long
 ```
 
-显示设备左上角相对于原点的y轴坐标，原点为主屏左上角，单位为px，该参数为整数，默认值为0。仅DisplaySourceMode为MAIN和EXTEND时返回实际值，其余默认返回默认值0。
-
-SystemCapability.Window.SessionManager
+Y coordinate of the top-left corner of the display relative to the origin,which is the top-left corner of the primary screen, measured in px. The value is an integer. The default value is  
+**0**. The actual value is returned only when **DisplaySourceMode** is set to **MAIN** or **EXTEND**; otherwise,the default value **0** is returned.
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：long
 
@@ -947,9 +909,7 @@ SystemCapability.Window.SessionManager
 yDPI: double
 ```
 
-y轴方向中每英寸屏幕的确切物理像素值，该参数为浮点数。
-
-SystemCapability.WindowManager.WindowManager.Core
+Exact physical pixels per inch of the display in the Y axis. The value must be a floating-point number.
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：double
 

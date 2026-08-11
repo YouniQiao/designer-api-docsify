@@ -1,6 +1,6 @@
 # ScrollSizeMode
 
-半模态面板上下滑动时的内容更新方式。
+Define the scroll size mode of the sheet.
 
 **Since:** 23
 
@@ -16,7 +16,7 @@
 FOLLOW_DETENT = 0
 ```
 
-设置半模态面板跟手滑动结束后更新内容显示区域。
+Sheet change scroll size after the slide ends.
 
 **Since:** 23
 
@@ -34,7 +34,7 @@ FOLLOW_DETENT = 0
 CONTINUOUS = 1
 ```
 
-设置半模态面板在滑动过程中持续更新内容显示区域。
+Sheet change scroll size during the sliding process.
 
 **Since:** 23
 

@@ -1,7 +1,8 @@
 # GetDomainAccountInfoPluginOptions (System API)
 
-表示插件查询域账号信息的选项。GetDomainAccountInfoPluginOptions类继承  
-[GetDomainAccountInfoOptions](arkts-basicservices-osaccount-getdomainaccountinfooptions-i-sys.md)
+Defines the options for the domain plug-in to obtain the domain account information. The  
+**GetDomainAccountInfoPluginOptions** class inherits from  
+[**GetDomainAccountInfoOptions**](arkts-basicservices-osaccount-getdomainaccountinfooptions-i-sys.md).
 
 **Inheritance/Implementation:** GetDomainAccountInfoPluginOptions extends [GetDomainAccountInfoOptions](arkts-basicservices-osaccount-getdomainaccountinfooptions-i-sys.md)
 
@@ -27,7 +28,7 @@ import { osAccount } from 'kits/@kit.BasicServicesKit';
 callerUid: int
 ```
 
-调用方唯一标识符。
+Unique identifier of the caller.
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 

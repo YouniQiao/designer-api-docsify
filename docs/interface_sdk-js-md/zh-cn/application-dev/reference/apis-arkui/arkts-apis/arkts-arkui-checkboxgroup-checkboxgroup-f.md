@@ -32,5 +32,5 @@ Defines CheckboxGroup Component.
 
 | 类型 | 说明 |
 | --- | --- |
-| [CheckboxGroupAttribute](arkts-arkui-checkboxgroup-checkboxgroupattribute-i.md) |  |
+| [CheckboxGroupAttribute](../arkts-components/arkts-arkui-checkboxgroup-attribute.md) |  |
 

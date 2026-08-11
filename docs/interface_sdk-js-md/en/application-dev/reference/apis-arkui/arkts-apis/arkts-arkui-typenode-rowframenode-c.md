@@ -1,6 +1,6 @@
 # RowFrameNode
 
-定义Row类型的FrameNode。
+Define the Row type of FrameNode.
 
 **Inheritance/Implementation:** RowFrameNode extends [TypedFrameNode<RowAttribute>](TypedFrameNode<RowAttribute>)
 
@@ -18,7 +18,7 @@
 abstract initialize(options?: RowOptions | RowOptionsV2): RowAttribute
 ```
 
-初始化Row类型的FrameNode。
+Initialize Row FrameNode.
 
 **Since:** 23
 
@@ -34,7 +34,7 @@ abstract initialize(options?: RowOptions | RowOptionsV2): RowAttribute
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| options | [RowOptions](../arkts-components/arkts-arkui-rowoptions-i.md) \| RowOptionsV2 | No | Row节点的选项。 |
+| options | [RowOptions](../arkts-components/arkts-arkui-rowoptions-i.md) \| RowOptionsV2 | No | Row options. |
 
 **Return value:**
 

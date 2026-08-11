@@ -1,11 +1,11 @@
 # Progress
 
-进度条组件，用于显示内容加载或操作处理等进度。支持线性、环形、圆形、胶囊等多种样式，可自定义颜色、渐变效果和动效，适用于文件下载、数据加载、任务处理等需要展示进度状态的场景。通过丰富的样式与动效配置，可快速实现进度可视化，提升用户体
-验。
+The **Progress** component represents a progress indicator that displays the progress of content loading or an
+operation.
 
-## 子组件
+## Child Components
 
-无
+Not supported
 
 ## Progress
 
@@ -13,7 +13,7 @@
 Progress(options: ProgressOptions<Type>)
 ```
 
-创建进度条组件。
+Creates a progress indicator.
 
 **Since:** 7
 
@@ -31,7 +31,7 @@ Progress(options: ProgressOptions<Type>)
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| options | [ProgressOptions](arkts-arkui-progressoptions-i.md)&lt;Type&gt; | Yes | 按进度条类型不同，设置不同属性的进度条组件参数。 |
+| options | [ProgressOptions](arkts-arkui-progressoptions-i.md)&lt;Type&gt; | Yes | Options of the progress indicator, which vary by progress indicator type. |
 
 ## Summary
 

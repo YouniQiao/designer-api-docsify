@@ -1,6 +1,6 @@
 # ShapeClip
 
-用于设置图形裁剪。
+Define ShapeClip. Record the type and parameters of the shape used for clipping.
 
 **Since:** 23
 
@@ -16,7 +16,7 @@
 constructor()
 ```
 
-ShapeMask的构造函数。
+Constructor.
 
 **Since:** 23
 
@@ -34,7 +34,7 @@ ShapeMask的构造函数。
 setCircleShape(circle: Circle): void
 ```
 
-用于裁剪圆形。
+Set the circle shape of the ShapeClip.
 
 **Since:** 23
 
@@ -50,7 +50,7 @@ setCircleShape(circle: Circle): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| circle | [Circle](arkts-arkui-graphics-circle-i.md) | Yes | 圆形的形状。 |
+| circle | [Circle](arkts-arkui-graphics-circle-i.md) | Yes | The circle shape will be set. |
 
 ## setCommandPath
 
@@ -58,7 +58,7 @@ setCircleShape(circle: Circle): void
 setCommandPath(path: CommandPath): void
 ```
 
-用于裁剪路径绘制指令。
+Set the command path of the ShapeClip.
 
 **Since:** 23
 
@@ -74,7 +74,7 @@ setCommandPath(path: CommandPath): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| path | [CommandPath](arkts-arkui-graphics-commandpath-i.md) | Yes | 路径绘制指令。 |
+| path | [CommandPath](arkts-arkui-graphics-commandpath-i.md) | Yes | The command path will be set. |
 
 ## setOvalShape
 
@@ -82,7 +82,7 @@ setCommandPath(path: CommandPath): void
 setOvalShape(oval: Rect): void
 ```
 
-用于裁剪椭圆形。
+Set the oval shape of the ShapeClip.
 
 **Since:** 23
 
@@ -98,7 +98,7 @@ setOvalShape(oval: Rect): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| oval | [Rect](../../apis-form-kit/arkts-apis/arkts-form-forminfo-rect-i.md) | Yes | 椭圆形的形状。 |
+| oval | [Rect](../../apis-form-kit/arkts-apis/arkts-form-forminfo-rect-i.md) | Yes | The oval shape will be set. |
 
 ## setRectShape
 
@@ -106,7 +106,7 @@ setOvalShape(oval: Rect): void
 setRectShape(rect: Rect): void
 ```
 
-用于裁剪矩形。
+Set the rect shape of the ShapeClip.
 
 **Since:** 23
 
@@ -122,7 +122,7 @@ setRectShape(rect: Rect): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| rect | [Rect](../../apis-form-kit/arkts-apis/arkts-form-forminfo-rect-i.md) | Yes | 矩形的形状。 |
+| rect | [Rect](../../apis-form-kit/arkts-apis/arkts-form-forminfo-rect-i.md) | Yes | The rect shape will be set. |
 
 ## setRoundRectShape
 
@@ -130,7 +130,7 @@ setRectShape(rect: Rect): void
 setRoundRectShape(roundRect: RoundRect): void
 ```
 
-用于裁剪圆角矩形。
+Set the round rect shape of the ShapeClip.
 
 **Since:** 23
 
@@ -146,5 +146,5 @@ setRoundRectShape(roundRect: RoundRect): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| roundRect | [RoundRect](../../apis-arkgraphics2d/arkts-apis/arkts-arkgraphics2d-drawing-roundrect-c.md) | Yes | 圆角矩形的形状。 |
+| roundRect | [RoundRect](../../apis-arkgraphics2d/arkts-apis/arkts-arkgraphics2d-drawing-roundrect-c.md) | Yes | The round rect shape will be set. |
 

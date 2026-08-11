@@ -1,6 +1,6 @@
 # DecorationOptions
 
-文本装饰线样式的额外配置选项对象说明。
+Provides additional configuration options for the text decoration line style.
 
 **Since:** 20
 
@@ -16,11 +16,12 @@
 enableMultiType?: boolean
 ```
 
-是否开启多装饰线显示。
+Whether to enable the display of multiple decoration lines.
 
-默认值：undefined。设置为true开启，设置为false/undefined关闭。
+Default value: **undefined**. **true**: Enable the display of multiple decoration lines. **false** or  
+**undefined**: Disable the display of multiple decoration lines.
 
-所有需要显示的装饰线都必须启用此选项，在这些装饰线的交集区域显示多装饰线效果，样式、颜色和粗细将采用最后设置的装饰线的效果。
+To display all decoration lines, this option must be enabled. The overlapping area of multiple decoration lines will show a combined effect, with the style, color, and thickness consistent with the last decoration line.
 
 **Type:** boolean
 

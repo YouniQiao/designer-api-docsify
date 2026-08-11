@@ -1,6 +1,6 @@
 # FrameShutterInfo
 
-拍照帧输出信息。
+Describes the frame shutter information.
 
 **Since:** 10
 
@@ -22,7 +22,7 @@ import { camera } from 'kits/@kit.CameraKit';
 captureId: int
 ```
 
-拍照的ID。
+ID of this capture action.
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
@@ -42,7 +42,7 @@ captureId: int
 timestamp: long
 ```
 
-快门时间戳。单位毫秒。
+Timestamp when the frame shutter event is triggered, in milliseconds.
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：long
 

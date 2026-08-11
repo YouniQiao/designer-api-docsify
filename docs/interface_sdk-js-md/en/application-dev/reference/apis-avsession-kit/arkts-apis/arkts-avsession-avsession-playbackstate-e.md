@@ -1,6 +1,6 @@
 # PlaybackState
 
-表示媒体播放状态的枚举。
+Definition of current playback state
 
 **Since:** 10
 
@@ -16,7 +16,7 @@
 PLAYBACK_STATE_INITIAL = 0
 ```
 
-初始状态。
+Initial state. The initial state of media file
 
 **Since:** 10
 
@@ -34,7 +34,7 @@ PLAYBACK_STATE_INITIAL = 0
 PLAYBACK_STATE_PREPARE = 1
 ```
 
-播放准备状态。
+Preparing state. Indicates that the media file is not ready to play,the media is loading or buffering
 
 **Since:** 10
 
@@ -52,7 +52,7 @@ PLAYBACK_STATE_PREPARE = 1
 PLAYBACK_STATE_PLAY = 2
 ```
 
-正在播放。
+Playing state.
 
 **Since:** 10
 
@@ -70,7 +70,7 @@ PLAYBACK_STATE_PLAY = 2
 PLAYBACK_STATE_PAUSE = 3
 ```
 
-暂停。
+Paused state.
 
 **Since:** 10
 
@@ -88,7 +88,7 @@ PLAYBACK_STATE_PAUSE = 3
 PLAYBACK_STATE_FAST_FORWARD = 4
 ```
 
-快进。
+Fast forwarding state.
 
 **Since:** 10
 
@@ -106,7 +106,7 @@ PLAYBACK_STATE_FAST_FORWARD = 4
 PLAYBACK_STATE_REWIND = 5
 ```
 
-快退。
+Rewinding state.
 
 **Since:** 10
 
@@ -124,7 +124,7 @@ PLAYBACK_STATE_REWIND = 5
 PLAYBACK_STATE_STOP = 6
 ```
 
-停止。
+Stopped state.The server will clear the media playback position and other information.
 
 **Since:** 10
 
@@ -142,7 +142,7 @@ PLAYBACK_STATE_STOP = 6
 PLAYBACK_STATE_COMPLETED = 7
 ```
 
-播放完成。
+Completed state.
 
 **Since:** 10
 
@@ -160,7 +160,7 @@ PLAYBACK_STATE_COMPLETED = 7
 PLAYBACK_STATE_RELEASED = 8
 ```
 
-释放。
+Released state.
 
 **Since:** 10
 
@@ -178,7 +178,7 @@ PLAYBACK_STATE_RELEASED = 8
 PLAYBACK_STATE_ERROR = 9
 ```
 
-错误。
+error state.
 
 **Since:** 10
 
@@ -196,7 +196,7 @@ PLAYBACK_STATE_ERROR = 9
 PLAYBACK_STATE_IDLE = 10
 ```
 
-空闲状态。
+Idle state.
 
 **Since:** 11
 
@@ -214,7 +214,7 @@ PLAYBACK_STATE_IDLE = 10
 PLAYBACK_STATE_BUFFERING = 11
 ```
 
-缓冲。
+Buffering state.
 
 **Since:** 11
 

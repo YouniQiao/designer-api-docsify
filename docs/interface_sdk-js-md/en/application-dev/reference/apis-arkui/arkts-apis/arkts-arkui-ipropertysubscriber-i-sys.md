@@ -1,6 +1,6 @@
 # IPropertySubscriber (System API)
 
-属性订阅者接口，定义订阅者需要实现的方法，用于接收属性变化通知和生命周期回调。
+Provides an interface for attribute subscribers.
 
 **Since:** 7
 
@@ -18,7 +18,7 @@
 aboutToBeDeleted(owningView?: IPropertySubscriber): void
 ```
 
-销毁时调用。
+Called when the object is about to be destroyed.
 
 **Since:** 7
 
@@ -34,7 +34,7 @@ aboutToBeDeleted(owningView?: IPropertySubscriber): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| owningView | [IPropertySubscriber](arkts-arkui-ipropertysubscriber-i-sys.md) | No | 所在自定义组件；不传入则不指定关联的自定义组件。 |
+| owningView | [IPropertySubscriber](arkts-arkui-ipropertysubscriber-i-sys.md) | No | Component that owns the current property. |
 
 ## id
 
@@ -42,7 +42,7 @@ aboutToBeDeleted(owningView?: IPropertySubscriber): void
 id(): number
 ```
 
-获取ID时调用。
+Obtains the ID.
 
 **Since:** 7
 
@@ -58,5 +58,5 @@ id(): number
 
 | Type | Description |
 | --- | --- |
-| number | 返回订阅者的唯一标识ID。 |
+| number | Variable ID obtained. |
 

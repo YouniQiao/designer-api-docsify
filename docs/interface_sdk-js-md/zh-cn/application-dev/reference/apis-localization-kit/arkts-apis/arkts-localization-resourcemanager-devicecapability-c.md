@@ -10,12 +10,6 @@
 
 **系统能力：** SystemCapability.Global.ResourceManager
 
-## 导入模块
-
-```TypeScript
-import { resourceManager } from 'kits/@kit.LocalizationKit';
-```
-
 ## deviceType
 
 ```TypeScript
@@ -24,7 +18,7 @@ deviceType: DeviceType
 
 当前设备类型。
 
-**类型：** [DeviceType](../../apis-avsession-kit/arkts-apis/arkts-avsession-avsession-devicetype-e.md)
+**类型：** [DeviceType](arkts-localization-resourcemanager-devicetype-e.md)
 
 **起始版本：** 6
 

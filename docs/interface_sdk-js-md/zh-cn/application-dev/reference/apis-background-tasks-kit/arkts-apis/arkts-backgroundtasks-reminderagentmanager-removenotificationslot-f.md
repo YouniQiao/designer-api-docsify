@@ -1,11 +1,5 @@
 # removeNotificationSlot
 
-## 导入模块
-
-```TypeScript
-import { reminderAgentManager } from 'kits/@kit.BackgroundTasksKit';
-```
-
 ## removeNotificationSlot
 
 ```TypeScript
@@ -33,9 +27,11 @@ function removeNotificationSlot(slotType: notification.SlotType, callback: Async
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 401 | If the input parameter is not valid parameter. |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | If the input parameter is not valid parameter. |
 
 ## 示例
+
+ArkTS-Dyn示例：
 
 ```TypeScript
 import { notificationManager } from '@kit.NotificationKit';
@@ -50,6 +46,24 @@ reminderAgentManager.removeNotificationSlot(notificationManager.SlotType.CONTENT
     console.info("removeNotificationSlot callback");
   }
 });
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+import { notificationManager } from '@kit.NotificationKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+import { reminderAgentManager } from '@kit.BackgroundTasksKit';
+
+let removeCallback = (err: BusinessError | null) => {
+  if (err) {
+    console.error(`Failed to remove slot. Code is ${err.code}, message is ${err.message}`);
+  } else {
+    console.info(`Succeeded in removing slot.`);
+  }
+}
+
+reminderAgentManager.removeNotificationSlot(notificationManager.SlotType.CONTENT_INFORMATION, removeCallback);
 ```
 
 
@@ -85,9 +99,11 @@ function removeNotificationSlot(slotType: notification.SlotType): Promise<void>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 401 | If the input parameter is not valid parameter. |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | If the input parameter is not valid parameter. |
 
 ## 示例
+
+ArkTS-Dyn示例：
 
 ```TypeScript
 import { notificationManager } from '@kit.NotificationKit';
@@ -98,6 +114,19 @@ reminderAgentManager.removeNotificationSlot(notificationManager.SlotType.CONTENT
   console.info("removeNotificationSlot promise");
 }).catch((err: BusinessError) => {
   console.error("promise err code:" + err.code + " message:" + err.message);
+});
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+import { notificationManager } from '@kit.NotificationKit';
+import { reminderAgentManager } from '@kit.BackgroundTasksKit';
+
+reminderAgentManager.removeNotificationSlot(notificationManager.SlotType.CONTENT_INFORMATION).then(() => {
+  console.info(`Succeeded in removing slot.`);
+}).catch((err): void => {
+  console.error(`Failed to remove slot. Code is ${err.code}, message is ${err.message}`);
 });
 ```
 

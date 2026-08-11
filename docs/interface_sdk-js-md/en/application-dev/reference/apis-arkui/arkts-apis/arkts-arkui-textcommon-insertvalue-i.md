@@ -1,6 +1,6 @@
 # InsertValue
 
-插入内容对象。
+Defines the inserted text value info.
 
 **Since:** 23
 
@@ -16,7 +16,7 @@
 insertOffset: int
 ```
 
-插入的值的位置信息。
+The location info where the value will be inserted.The value should be an integer.
 
 **Type:** int
 
@@ -36,7 +36,7 @@ insertOffset: int
 insertValue: string
 ```
 
-插入的值。
+The inserted value.
 
 **Type:** string
 

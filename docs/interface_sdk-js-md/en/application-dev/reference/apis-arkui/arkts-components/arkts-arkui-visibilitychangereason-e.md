@@ -1,6 +1,6 @@
 # VisibilityChangeReason
 
-NavDestination可见性发生变化的原因。
+Enumerates reasons for **NavDestination** visibility changes.
 
 **Since:** 21
 
@@ -16,7 +16,7 @@ NavDestination可见性发生变化的原因。
 TRANSITION = 0
 ```
 
-通过页面跳转的方式使NavDestination可见性发生变化。
+Visibility changes due to page navigation.
 
 **Since:** 21
 
@@ -36,7 +36,7 @@ TRANSITION = 0
 CONTENT_COVER = 1
 ```
 
-通过全模态的开启和关闭使NavDestination可见性发生变化。
+Visibility changes due to the opening or closing of a modal page.
 
 **Since:** 21
 
@@ -56,7 +56,7 @@ CONTENT_COVER = 1
 APP_STATE = 2
 ```
 
-通过前后台切换使NavDestination可见性发生变化。
+Visibility changes due to switching between the foreground and background states.
 
 **Since:** 21
 

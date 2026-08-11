@@ -1,6 +1,6 @@
 # ComponentType (System API)
 
-组件类型。
+Represents a component type.
 
 **Since:** 9
 
@@ -18,7 +18,7 @@
 OTA = 1
 ```
 
-OTA升级包，用于固件升级的完整升级包文件。
+OTA upgrade package, which is a complete upgrade package used for firmware upgrade
 
 **Since:** 9
 

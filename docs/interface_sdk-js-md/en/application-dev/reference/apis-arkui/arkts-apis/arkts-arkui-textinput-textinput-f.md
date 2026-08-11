@@ -8,7 +8,7 @@ export declare function TextInput(
 ): TextInputAttribute
 ```
 
-定义TextInput组件。
+Defines TextInput Component.
 
 **Since:** 23
 
@@ -41,7 +41,7 @@ export declare function TextInput(
 ): TextInputAttribute
 ```
 
-定义TextInput组件。
+Defines TextInput Component.
 
 **Since:** 26.1.0
 
@@ -59,7 +59,7 @@ export declare function TextInput(
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| style | [CustomBuilderT](../arkts-components/arkts-arkui-custombuildert-t.md)&lt;TextInputAttribute&gt; | Yes | TextInput属性的实例。 |
+| style | [CustomBuilderT](../arkts-components/arkts-arkui-custombuildert-t.md)&lt;TextInputAttribute&gt; | Yes | TextInput attribute instance |
 
 **Return value:**
 

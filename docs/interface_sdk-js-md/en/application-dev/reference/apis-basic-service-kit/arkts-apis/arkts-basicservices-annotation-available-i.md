@@ -1,6 +1,6 @@
 # Available
 
-系统提供的API注解能力，可用于标记API支持的最低可用版本。此注解可以标注在类、接口、变量、类型、模块、枚举上。在源码定义处添加注解后，编译工具会在使用处检查潜在的兼容性问题。当minApiVersion大于build-profile.json5中指定的compatibleSDKVersion字段，会生成兼容性警告。
+Annotates the minimum available version supported by an API. This annotation capability is provided by the system and can be used on classes, APIs, variables, types, modules, and enums. After the annotation is added to the source code, the compilation tool checks for potential compatibility issues. If the value of **minApiVersion** is greater than that of **compatibleSDKVersion** specified in **build-profile.json5**, a compatibility warning is reported.
 
 **Since:** 26.0.0
 
@@ -22,7 +22,7 @@ import { SuppressWarnings, Available, SuppressWarningsType } from 'kits/@kit.Bas
 minApiVersion: string = ''
 ```
 
-minApiVersion用于标识最低可用版本，由两部分组成：系统类型+版本号。仅当系统类型为OpenHarmony时可省略系统类型。例如：'OpenHarmony 20'，'20'。
+Minimum available version, which consists of two parts: system type and version number. The system type can be omitted only when it is OpenHarmony, for example, **'OpenHarmony 20'** or **'20'**.
 
 **Type:** string
 

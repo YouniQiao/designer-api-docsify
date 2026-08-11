@@ -1,6 +1,6 @@
 # GestureControl
 
-定义手势竞争结果。
+Enumerates gesture competition results.
 
 **Since:** 11
 
@@ -18,5 +18,5 @@
 
 | Name | Description |
 | --- | --- |
-| [GestureType](arkts-arkui-gesturecontrol-gesturetype-e.md) | 定义手势类型。 |
+| [GestureType](arkts-arkui-gesturecontrol-gesturetype-e.md) | Enumerates gesture recognizer types. |
 

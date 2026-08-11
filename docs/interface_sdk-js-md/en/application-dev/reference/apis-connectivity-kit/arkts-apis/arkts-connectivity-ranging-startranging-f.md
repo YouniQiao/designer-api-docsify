@@ -38,10 +38,10 @@ Initiates ranging with a specified device.If the link to the target device is al
 | Error Code ID | Error Message |
 | --- | --- |
 | 34900052 | The specified type of ranging service is not supported. |
-| 801 | Capability not supported. |
+| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. |
 | 34900053 | The ranging service is disabled. |
 | 34900054 | The parameter value does not meet specifications. |
 | 34900051 | The device has already initiated ranging. |
-| 34900099 | Internal system error. For example, Internal object is invalid. |
-| 201 | Permission denied. |
+| [34900099](../errorcode-fusionConnectivity.md#34900099-operation-failed) | Internal system error. For example, Internal object is invalid. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
 

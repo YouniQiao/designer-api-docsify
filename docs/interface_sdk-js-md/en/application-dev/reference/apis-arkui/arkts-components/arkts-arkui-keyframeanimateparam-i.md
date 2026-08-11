@@ -1,6 +1,6 @@
 # KeyframeAnimateParam
 
-动画选项设置。
+Provides animation configuration options.
 
 **Since:** 11
 
@@ -16,7 +16,8 @@
 onFinish?: () => void
 ```
 
-动画播放完成回调。当keyframe动画所有次数播放完成后调用。在设置的开发者选项中关闭过渡动画，或UIAbility从前台切换至后台时会立即结束仍在播放中的有限循环keyframe动画，触发播放完成回调。
+Callback invoked when the animation playback is complete. This API is called after the keyframe animation has played for the specified number of times. If transition animations are disabled in developer options, or if a   
+**UIAbility** switches from the foreground to the background, any ongoing finite keyframe animation will stop immediately and trigger the playback completion callback.
 
 **Since:** 11
 
@@ -36,13 +37,15 @@ onFinish?: () => void
 delay?: number
 ```
 
-动画的整体延时时间，单位为ms（毫秒），默认不延时播放。
+Overall delay of the animation, in milliseconds. By default, the animation is played without delay.
 
-默认值：0
+Default value: **0**.
 
-**说明：**
+**NOTE：**
 
- delay>=0为延迟播放，delay<0表示提前播放。对于delay<0的情况：当delay的绝对值小于实际动画时长，动画将在开始后第一帧直接运动到delay绝对值的时刻的状态；当delay的绝对值大于等于实际动画时长，动画将在开始后第一帧直接运动到终点状态。其中实际动画时长等于单次动画时长乘以动画播放次数。
+A value greater than 0 means to begin the animation after the specified amount of time has elapsed.
+
+A value less than 0 means to begin the animation in advance. If the absolute value of **delay** is less than the actual animation duration, the animation starts its first frame from the state at the absolute value. If the absolute value of **delay** is greater than or equal to the actual animation duration, the animation starts its first frame from the end state. The actual animation duration is equal to the duration of a single animation multiplied by the number of animation playback times.
 
 **Type:** number
 
@@ -66,13 +69,13 @@ delay?: number
 expectedFrameRateRange?: ExpectedFrameRateRange
 ```
 
-设置动画的期望帧率。
+Expected frame rate range of the animation.
 
-**默认值：**{min:0, max:0, expected:0}，即跟随应用帧率。
+Default value: {min:0, max:0, expected:0} (following the application's frame rate)
 
-**说明：**
+**NOTE：**
 
-开发者通过设置有效的期望帧率后，系统会收集设置的请求帧率，进行决策和分发，在渲染管线上进行分频，尽量能够满足开发者的期望帧率。开发者设置的期望帧率值不能代表最终实际效果，会受限于系统能力和屏幕刷新率。
+After a valid expected frame rate is set, the system collects the configured frame rate and divides the frequency on the rendering pipeline. The actual frame rate may be different from the expected one configured. It is limited by the system capability and screen refresh rate.
 
 **Type:** [ExpectedFrameRateRange](arkts-arkui-expectedframeraterange-i.md)
 
@@ -96,15 +99,15 @@ expectedFrameRateRange?: ExpectedFrameRateRange
 iterations?: number
 ```
 
-动画播放次数。默认播放一次，设置为-1时表示无限次播放。设置为0时表示无动画效果。
+Number of times that the animation is played. By default, the animation is played once. The value **-1** indicates that the animation is played for an unlimited number of times. The value **0** indicates that there is no animation.
 
-默认值：1
+Default value: **1**.
 
-**取值范围：**[-1, +∞)
+Value range: [–1, +∞).
 
-**说明：**
+**NOTE：**
 
-- 设置浮点型类型的值时，向下取整。例如，设置值为1.2，按照1处理。
+- Floating-point values will be rounded down to integers. For example, if the value set is 1.2, **1** will be used.
 
 **Type:** number
 

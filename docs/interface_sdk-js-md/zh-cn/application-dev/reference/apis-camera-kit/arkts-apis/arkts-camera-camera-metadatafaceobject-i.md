@@ -13,12 +13,6 @@
 
 **系统能力：** SystemCapability.Multimedia.Camera.Core
 
-## 导入模块
-
-```TypeScript
-import { camera } from 'kits/@kit.CameraKit';
-```
-
 ## emotion
 
 ```TypeScript
@@ -67,7 +61,7 @@ readonly leftEyeBoundingBox: Rect
 
 左眼区域框。
 
-**类型：** [Rect](../../apis-form-kit/arkts-apis/arkts-form-forminfo-rect-i.md)
+**类型：** [Rect](../../apis-test-kit/arkts-apis/arkts-test-uitest-rect-i.md)
 
 **起始版本：** 26.0.0
 
@@ -107,7 +101,7 @@ readonly rightEyeBoundingBox: Rect
 
 右眼区域框。
 
-**类型：** [Rect](../../apis-form-kit/arkts-apis/arkts-form-forminfo-rect-i.md)
+**类型：** [Rect](../../apis-test-kit/arkts-apis/arkts-test-uitest-rect-i.md)
 
 **起始版本：** 26.0.0
 

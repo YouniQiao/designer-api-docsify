@@ -1,6 +1,6 @@
 # TabsCacheMode
 
-子组件的缓存模式。
+Declare the cache mode of the child components.
 
 **Since:** 23
 
@@ -16,7 +16,7 @@
 CACHE_BOTH_SIDE = 0
 ```
 
-缓存当前显示的子组件和其两侧的子组件。即当设置cachedMaxCount属性的count值为n时，最多缓存2n+1个子组件。
+Caches the child components on both sides of the current child components.
 
 **Since:** 23
 
@@ -34,7 +34,7 @@ CACHE_BOTH_SIDE = 0
 CACHE_LATEST_SWITCHED = 1
 ```
 
-缓存当前显示的子组件和最近切换过的子组件。即当设置cachedMaxCount属性的count值为n时，最多缓存n+1个子组件。
+Caches the latest switched child components.
 
 **Since:** 23
 

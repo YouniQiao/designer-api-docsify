@@ -1,11 +1,11 @@
 # @ohos.arkui.advanced.FullScreenLaunchComponent(Defines the fullScreen launch component)
 
-###### 子组件
- 无。
- ###### 属性
- 不支持[通用属性](../../apis-arkui/arkts-components/arkts-arkui-common-attribute.md)。
- ###### 事件
- 不支持[通用事件](../../apis-arkui/arkts-components/arkts-arkui-common-attribute.md)。
+###### Child Components
+ Not supported
+ ###### Attributes
+ The [universal attributes](../../apis-arkui/arkts-components/arkts-arkui-common-attribute.md) are not supported.
+ ###### Events
+ The [universal events](../../apis-arkui/arkts-components/arkts-arkui-common-attribute.md) are not supported.
 
 
 ## Modules to Import
@@ -20,11 +20,11 @@ import { FullScreenLaunchComponent } from 'kits/@kit.ArkUI';
 
 | Name | Description |
 | --- | --- |
-| [FullScreenLaunchComponent](arkts-arkui-arkui-advanced-fullscreenlaunchcomponent-fullscreenlaunchcomponent-s.md) | 全屏启动原子化服务组件，当提供方授权使用方嵌入式运行原子化服务时，使用方全屏嵌入式运行原子化服务；未授权时，使用方跳出式拉起原子化服务。 |
+| [FullScreenLaunchComponent](arkts-arkui-arkui-advanced-fullscreenlaunchcomponent-fullscreenlaunchcomponent-s.md) | **FullScreenLaunchComponent** is a component designed for launching atomic services in full screen. If the invoked app (the one being launched) grants the invoker the authorization to run the atomic service in an embedded manner,the invoker can operate the atomic service in full-screen embedded mode. If authorization is not provided, the invoker will launch the atomic service in a pop-up manner.  > **NOTE：** >  > To implement an embeddable atomic service within this component, it must inherit from > [EmbeddableUIAbility](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-embeddableuiability-embeddableuiability-c.md/arkts-ability-app-ability-embeddableuiability-embeddableuiability-c.md). Otherwise, the system > cannot guarantee that the atomic service will function properly. |
 
 ### Types
 
 | Name | Description |
 | --- | --- |
-| [ContentBuilder](arkts-arkui-contentbuilder-t.md) | 定义内容构建器。 |
+| [ContentBuilder](arkts-arkui-contentbuilder-t.md) | Defines ContentBuilder. |
 

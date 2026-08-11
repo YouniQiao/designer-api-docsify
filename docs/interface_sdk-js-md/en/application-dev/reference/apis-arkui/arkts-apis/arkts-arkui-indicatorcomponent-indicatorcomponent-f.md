@@ -8,7 +8,7 @@ export declare function IndicatorComponent(
 ): IndicatorComponentAttribute
 ```
 
-单独导航点组件的构造函数，可配置该组件的控制器。
+Defines IndicatorComponent Component
 
 **Since:** 23
 
@@ -41,11 +41,11 @@ export declare function IndicatorComponent(
 ): IndicatorComponentAttribute
 ```
 
-定义IndicatorComponent组件
+Defines IndicatorComponent Component
 
-**Since:** 26.0.0
+**Since:** 26.1.0
 
-**ArkTS mode:** ArkTS-Sta only, since version 26.0.0.
+**ArkTS mode:** ArkTS-Sta only, since version 26.1.0.
 
 **Decorator:** @Builder
 
@@ -59,7 +59,7 @@ export declare function IndicatorComponent(
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| style_ | [CustomBuilderT](../arkts-components/arkts-arkui-custombuildert-t.md)&lt;IndicatorComponentAttribute&gt; | Yes | indicatorComponent属性实例 |
+| style_ | [CustomBuilderT](../arkts-components/arkts-arkui-custombuildert-t.md)&lt;IndicatorComponentAttribute&gt; | Yes | indicatorComponent attribute instance |
 
 **Return value:**
 

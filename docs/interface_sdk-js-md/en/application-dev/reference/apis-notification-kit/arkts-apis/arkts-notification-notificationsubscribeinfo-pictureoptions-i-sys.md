@@ -1,6 +1,6 @@
 # PictureOptions (System API)
 
-实况通知图片配置项。
+Describes the image options of the live notification.
 
 **Since:** 26.0.0
 
@@ -18,9 +18,10 @@
 preparseLiveViewPicList?: string[]
 ```
 
-订阅普通实况类型通知中  
-[NotificationLiveViewContent](arkts-notification-notificationcontent-notificationliveviewcontent-i-sys.md)的extraInfo中的图片信息。入参为extraInfo中需要解析为pixelMap格式的图片文件名的Key。&lt;br&gt;当应用发布普通实况类型通知时，通过  
-[onConsume](arkts-notification-notificationsubscriber-notificationsubscriber-i-sys.md#onconsume)将解析后的图片信息回调给订阅者，解析后的图片信息存放于NotificationLiveViewContent的pictureInfo内。
+Subscribes to the image information in **extraInfo** of  
+[NotificationLiveViewContent](arkts-notification-notificationcontent-notificationliveviewcontent-i-sys.md) in a common live notification. The input parameter is the **Key** of the image file name that needs to be parsed into the pixelMap format in **extraInfo**.&lt;br&gt;When the application publishes a common live notification, the parsed image information is called back to the subscriber through  
+[onConsume](arkts-notification-notificationsubscriber-notificationsubscriber-i-sys.md#onconsume) and stored in **pictureInfo** of  
+**NotificationLiveViewContent**.
 
 **Type:** string[]
 

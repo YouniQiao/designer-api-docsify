@@ -46,17 +46,17 @@ Creates a P2P group.
 import wifi from '@ohos.wifi';
 
 try {
-  let config:wifi.WifiP2PConfig = {
-    deviceAddress: "****",
-    netId: 0,
-    passphrase: "*****",
-    groupName: "****",
-    goBand: 0
-  }
-  wifi.createGroup(config);  
-  
+	let config:wifi.WifiP2PConfig = {
+		deviceAddress: "****",
+		netId: 0,
+		passphrase: "*****",
+		groupName: "****",
+		goBand: 0
+	}
+	wifi.createGroup(config);	
+	
 }catch(error){
-  console.error("failed:" + JSON.stringify(error));
+	console.error("failed:" + JSON.stringify(error));
 }
 ```
 

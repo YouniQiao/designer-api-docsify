@@ -1,8 +1,9 @@
 # DHCommonParamsSpec
 
-密钥参数[AsyKeySpec](arkts-cryptoarchitecture-cryptoframework-asykeyspec-i.md)的子类，用于指定DH算法中公私钥包含的公共参数。
+Defines a child class of [AsyKeySpec](arkts-cryptoarchitecture-cryptoframework-asykeyspec-i.md) used to specify the common parameters of the public and private keys in the DH algorithm.
 
-&lt;br&gt;在使用密钥参数生成密钥时，将其传入[createAsyKeyGeneratorBySpec()](arkts-cryptoarchitecture-cryptoframework-createasykeygeneratorbyspec-f.md#createasykeygeneratorbyspec)方法创建密钥生成器。
+&lt;br&gt;To generate a key based on key parameters, pass it to  
+[createAsyKeyGeneratorBySpec()](arkts-cryptoarchitecture-cryptoframework-createasykeygeneratorbyspec-f.md#createasykeygeneratorbyspec) to create a key generator.
 
 **Inheritance/Implementation:** DHCommonParamsSpec extends [AsyKeySpec](arkts-cryptoarchitecture-cryptoframework-asykeyspec-i.md)
 
@@ -28,7 +29,7 @@ import { cryptoFramework } from 'kits/@kit.CryptoArchitectureKit';
 g: bigint
 ```
 
-DH算法中的参数g。
+Parameter **g** in the DH algorithm.
 
 **Type:** bigint
 
@@ -50,7 +51,7 @@ DH算法中的参数g。
 l: int
 ```
 
-DH算法中私钥长度，单位为bits。
+Length of the private key in the DH algorithm, in bits.
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
@@ -72,7 +73,7 @@ DH算法中私钥长度，单位为bits。
 p: bigint
 ```
 
-指定DH算法中大素数p。
+Large prime **p** in the DH algorithm.
 
 **Type:** bigint
 

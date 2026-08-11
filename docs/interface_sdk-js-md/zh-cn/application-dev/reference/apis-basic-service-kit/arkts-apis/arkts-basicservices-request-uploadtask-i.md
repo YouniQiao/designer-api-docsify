@@ -12,12 +12,6 @@
 
 **系统能力：** SystemCapability.MiscServices.Download
 
-## 导入模块
-
-```TypeScript
-import { request } from 'kits/@kit.BasicServicesKit';
-```
-
 ## delete
 
 ```TypeScript
@@ -50,7 +44,7 @@ delete(callback: AsyncCallback<boolean>): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 201 | The permissions check fails. |
+| [201](../../errorcode-universal.md#201-权限校验失败) | The permissions check fails. |
 
 ## 示例
 
@@ -96,14 +90,47 @@ delete(): Promise<boolean>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 201 | The permissions check fails. |
+| [201](../../errorcode-universal.md#201-权限校验失败) | The permissions check fails. |
 
 ## 示例
+
+ArkTS-Dyn示例：
 
 ```TypeScript
 uploadTask.delete().then((result: boolean) => {
   console.info('Succeeded in deleting the upload task.');
 }).catch((err: BusinessError) => {
+  console.error(`Failed to delete the upload task. Code: ${err.code}, message: ${err.message}`);
+});
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+// 请在组件内获取context，确保this.getUIContext().getHostContext()返回结果为UIAbilityContext
+let context = this.getUIContext().getHostContext() as common.UIAbilityContext;
+let uploadTask: request.UploadTask;
+let uploadConfig: request.UploadConfig = {
+  url: 'http://www.example.com', // 需要手动将url替换为真实服务器的HTTP协议地址
+  header: { 'Accept': '*/*' },
+  method: "POST",
+  files: [{ filename: "test", name: "test", uri: "internal://cache/test.jpg", type: "image/jpeg" }], // 建议type填写HTTP协议规范的MIME类型
+  data: [{ name: "name123", value: "123" }],
+};
+try {
+  request.uploadFile(context, uploadConfig, (err: Error, data: request.UploadTask): void => {
+    if (err) {
+      console.error(`Failed to request the upload. Code: ${err.code}, message: ${err.message}`);
+      return;
+    }
+    uploadTask = data;
+  });
+} catch (err) {
+  console.error(`Failed to request the upload. Code: ${err.code}, message: ${err.message}`);
+}
+uploadTask.delete().then((result: boolean) => {
+  console.info('Succeeded in deleting the upload task.');
+}).catch((err: Error) => {
   console.error(`Failed to delete the upload task. Code: ${err.code}, message: ${err.message}`);
 });
 ```
@@ -135,7 +162,7 @@ off(type: 'progress', callback?: (uploadedSize: long, totalSize: long) => void):
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 401 | The parameters check fails. Possible causes: &lt;br&gt; 1. Missing mandatory parameters. &lt;br&gt; 2. Incorrect parameter type. &lt;br&gt; 3. Parameter verification failed.<br>**适用版本：** 12+ |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | The parameters check fails. Possible causes: &lt;br&gt; 1. Missing mandatory parameters. &lt;br&gt; 2. Incorrect parameter type. &lt;br&gt; 3. Parameter verification failed.<br>**适用版本：** 12+ |
 
 ## 示例
 
@@ -181,7 +208,7 @@ off(type: 'headerReceive', callback?: (header: object) => void): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 401 | The parameters check fails. Possible causes: &lt;br&gt; 1. Missing mandatory parameters. &lt;br&gt; 2. Incorrect parameter type. &lt;br&gt; 3. Parameter verification failed.<br>**适用版本：** 12+ |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | The parameters check fails. Possible causes: &lt;br&gt; 1. Missing mandatory parameters. &lt;br&gt; 2. Incorrect parameter type. &lt;br&gt; 3. Parameter verification failed.<br>**适用版本：** 12+ |
 
 ## 示例
 
@@ -227,7 +254,7 @@ off(type: 'complete' | 'fail', callback?: Callback<Array<TaskState>>): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 401 | the parameters check fails. Possible causes: &lt;br&gt; 1. Missing mandatory parameters. &lt;br&gt; 2. Incorrect parameter type. &lt;br&gt; 3. Parameter verification failed.<br>**适用版本：** 12+ |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | the parameters check fails. Possible causes: &lt;br&gt; 1. Missing mandatory parameters. &lt;br&gt; 2. Incorrect parameter type. &lt;br&gt; 3. Parameter verification failed.<br>**适用版本：** 12+ |
 
 ## 示例
 
@@ -246,7 +273,7 @@ let upCompleteCallback2 = (taskStates: Array<request.TaskState>) => {
 };
 uploadTask.on('complete', upCompleteCallback1);
 uploadTask.on('complete', upCompleteCallback2);
-// 表示取消upCompleteCallback1的订阅
+// 表示取消headerCallback1的订阅
 uploadTask.off('complete', upCompleteCallback1);
 // 表示取消订阅上传任务完成的所有回调
 uploadTask.off('complete');
@@ -265,7 +292,7 @@ let upFailCallback2 = (taskStates: Array<request.TaskState>) => {
 };
 uploadTask.on('fail', upFailCallback1);
 uploadTask.on('fail', upFailCallback2);
-// 表示取消upFailCallback1的订阅
+// 表示取消headerCallback1的订阅
 uploadTask.off('fail', upFailCallback1);
 // 表示取消订阅上传任务失败的所有回调
 uploadTask.off('fail');
@@ -298,7 +325,7 @@ off(type: 'complete' | 'fail', callback?: Callback<Array<TaskState>>): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 401 | the parameters check fails. Possible causes: &lt;br&gt; 1. Missing mandatory parameters. &lt;br&gt; 2. Incorrect parameter type. &lt;br&gt; 3. Parameter verification failed.<br>**适用版本：** 12+ |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | the parameters check fails. Possible causes: &lt;br&gt; 1. Missing mandatory parameters. &lt;br&gt; 2. Incorrect parameter type. &lt;br&gt; 3. Parameter verification failed.<br>**适用版本：** 12+ |
 
 ## 示例
 
@@ -317,7 +344,7 @@ let upCompleteCallback2 = (taskStates: Array<request.TaskState>) => {
 };
 uploadTask.on('complete', upCompleteCallback1);
 uploadTask.on('complete', upCompleteCallback2);
-// 表示取消upCompleteCallback1的订阅
+// 表示取消headerCallback1的订阅
 uploadTask.off('complete', upCompleteCallback1);
 // 表示取消订阅上传任务完成的所有回调
 uploadTask.off('complete');
@@ -336,7 +363,7 @@ let upFailCallback2 = (taskStates: Array<request.TaskState>) => {
 };
 uploadTask.on('fail', upFailCallback1);
 uploadTask.on('fail', upFailCallback2);
-// 表示取消upFailCallback1的订阅
+// 表示取消headerCallback1的订阅
 uploadTask.off('fail', upFailCallback1);
 // 表示取消订阅上传任务失败的所有回调
 uploadTask.off('fail');
@@ -364,6 +391,49 @@ Called when the current upload session complete.
 | --- | --- | --- | --- |
 | callback | [Callback](arkts-basicservices-base-callback-i.md)&lt;Array&lt;TaskState&gt;&gt; | 否 | The callback function for the upload complete event. |
 
+## 示例
+
+```TypeScript
+// 请在组件内获取context，确保this.getUIContext().getHostContext()返回结果为UIAbilityContext
+let context = this.getUIContext().getHostContext() as common.UIAbilityContext;
+let uploadTask: request.UploadTask;
+let uploadConfig: request.UploadConfig = {
+  url: 'http://www.example.com', // 需要手动将url替换为真实服务器的HTTP协议地址
+  header: { 'Accept': '*/*' },
+  method: "POST",
+  files: [{ filename: "test", name: "test", uri: "internal://cache/test.jpg", type: "image/jpeg" }], // 建议type填写HTTP协议规范的MIME类型
+  data: [{ name: "name123", value: "123" }],
+};
+let upCompleteCallback1 = (taskStates: Array<request.TaskState>) => {
+  console.info('Upload delete complete notification.');
+  for (let i = 0; i < taskStates.length; i++) {
+    console.info('taskState:' + JSON.stringify(taskStates[i]));
+  }
+};
+let upCompleteCallback2 = (taskStates: Array<request.TaskState>) => {
+  console.info('Upload delete complete notification.');
+  for (let i = 0; i < taskStates.length; i++) {
+    console.info('taskState:' + JSON.stringify(taskStates[i]));
+  }
+};
+try {
+  request.uploadFile(context, uploadConfig, (err: Error, uploadTask: request.UploadTask): void => {
+    if (err) {
+      console.error(`Failed to request the upload. Code: ${err.code}, message: ${err.message}`);
+      return;
+    }
+    uploadTask.onComplete(upCompleteCallback1);
+    uploadTask.onComplete(upCompleteCallback2);
+    // 表示取消headerCallback1的订阅
+    uploadTask.offComplete(upCompleteCallback1);
+    // 表示取消订阅上传任务完成的所有回调
+    uploadTask.offComplete();
+  });
+} catch (err) {
+  console.error(`Failed to request the upload. Code: ${err.code}, message: ${err.message}`);
+}
+```
+
 ## offFail
 
 ```TypeScript
@@ -385,6 +455,49 @@ Called when the current upload session fail.
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | callback | [Callback](arkts-basicservices-base-callback-i.md)&lt;Array&lt;TaskState&gt;&gt; | 否 | The callback function for the upload fail change event. |
+
+## 示例
+
+```TypeScript
+// 请在组件内获取context，确保this.getUIContext().getHostContext()返回结果为UIAbilityContext
+let context = this.getUIContext().getHostContext() as common.UIAbilityContext;
+let uploadTask: request.UploadTask;
+let uploadConfig: request.UploadConfig = {
+  url: 'http://www.example.com', // 需要手动将url替换为真实服务器的HTTP协议地址
+  header: { 'Accept': '*/*' },
+  method: "POST",
+  files: [{ filename: "test", name: "test", uri: "internal://cache/test.jpg", type: "image/jpeg" }], // 建议type填写HTTP协议规范的MIME类型
+  data: [{ name: "name123", value: "123" }],
+};
+let upFailCallback1 = (taskStates: Array<request.TaskState>) => {
+  console.info('Upload delete fail notification.');
+  for (let i = 0; i < taskStates.length; i++) {
+    console.info('taskState:' + JSON.stringify(taskStates[i]));
+  }
+};
+let upFailCallback2 = (taskStates: Array<request.TaskState>) => {
+  console.info('Upload delete fail notification.');
+  for (let i = 0; i < taskStates.length; i++) {
+    console.info('taskState:' + JSON.stringify(taskStates[i]));
+  }
+};
+try {
+  request.uploadFile(context, uploadConfig, (err: Error, uploadTask: request.UploadTask): void => {
+    if (err) {
+      console.error(`Failed to request the upload. Code: ${err.code}, message: ${err.message}`);
+      return;
+    }
+    uploadTask.onFail(upFailCallback1);
+    uploadTask.onFail(upFailCallback2);
+    // 表示取消headerCallback1的订阅
+    uploadTask.offFail(upFailCallback1);
+    // 表示取消订阅上传任务失败的所有回调
+    uploadTask.offFail();
+  });
+} catch (err) {
+  console.error(`Failed to request the upload. Code: ${err.code}, message: ${err.message}`);
+}
+```
 
 ## offHeaderReceive
 
@@ -408,6 +521,43 @@ Called when the header of the current upload session has been received.
 | --- | --- | --- | --- |
 | callback | [UploadHeaderReceiveCallback](arkts-basicservices-request-uploadheaderreceivecallback-t.md) | 否 | The callback function for the HTTP Response Header event. |
 
+## 示例
+
+```TypeScript
+// 请在组件内获取context，确保this.getUIContext().getHostContext()返回结果为UIAbilityContext
+let context = this.getUIContext().getHostContext() as common.UIAbilityContext;
+let uploadTask: request.UploadTask;
+let uploadConfig: request.UploadConfig = {
+  url: 'http://www.example.com', // 需要手动将url替换为真实服务器的HTTP协议地址
+  header: { 'Accept': '*/*' },
+  method: "POST",
+  files: [{ filename: "test", name: "test", uri: "internal://cache/test.jpg", type: "image/jpeg" }], // 建议type填写HTTP协议规范的MIME类型
+  data: [{ name: "name123", value: "123" }],
+};
+let headerCallback1 = (header: object) => {
+  console.info(`Upload delete headerReceive notification. header: ${JSON.stringify(header)}`);
+};
+let headerCallback2 = (header: object) => {
+  console.info(`Upload delete headerReceive notification. header: ${JSON.stringify(header)}`);
+};
+try {
+  request.uploadFile(context, uploadConfig, (err: Error, uploadTask: request.UploadTask): void => {
+    if (err) {
+      console.error(`Failed to request the upload. Code: ${err.code}, message: ${err.message}`);
+      return;
+    }
+    uploadTask.onHeaderReceive(headerCallback1);
+    uploadTask.onHeaderReceive(headerCallback2);
+    // 表示取消headerCallback1的订阅
+    uploadTask.offHeaderReceive(headerCallback1);
+    // 表示取消订阅上传任务HTTP标头事件的所有回调
+    uploadTask.offHeaderReceive();
+  });
+} catch (err) {
+  console.error(`Failed to request the upload. Code: ${err.code}, message: ${err.message}`);
+}
+```
+
 ## offProgress
 
 ```TypeScript
@@ -429,6 +579,43 @@ Called when the current upload session is in process.
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | callback | [UploadProgressCallback](arkts-basicservices-request-uploadprogresscallback-t.md) | 否 | The callback function for the upload progress event. |
+
+## 示例
+
+```TypeScript
+// 请在组件内获取context，确保this.getUIContext().getHostContext()返回结果为UIAbilityContext
+let context = this.getUIContext().getHostContext() as common.UIAbilityContext;
+let uploadTask: request.UploadTask;
+let uploadConfig: request.UploadConfig = {
+  url: 'http://www.example.com', // 需要手动将url替换为真实服务器的HTTP协议地址
+  header: { 'Accept': '*/*' },
+  method: "POST",
+  files: [{ filename: "test", name: "test", uri: "internal://cache/test.jpg", type: "image/jpeg" }], // 建议type填写HTTP协议规范的MIME类型
+  data: [{ name: "name123", value: "123" }],
+};
+let upProgressCallback1 = (uploadedSize: long, totalSize: long) => {
+  console.info('Upload delete progress notification.' + 'totalSize:' + totalSize + 'uploadedSize:' + uploadedSize);
+};
+let upProgressCallback2 = (uploadedSize: long, totalSize: long) => {
+  console.info('Upload delete progress notification.' + 'totalSize:' + totalSize + 'uploadedSize:' + uploadedSize);
+};
+try {
+  request.uploadFile(context, uploadConfig, (err: Error, uploadTask: request.UploadTask): void => {
+    if (err) {
+      console.error(`Failed to request the upload. Code: ${err.code}, message: ${err.message}`);
+      return;
+    }
+    uploadTask.onProgress(upProgressCallback1);
+    uploadTask.onProgress(upProgressCallback2);
+    // 表示取消upProgressCallback1的订阅
+    uploadTask.offProgress(upProgressCallback1);
+    // 表示取消订阅上传任务进度事件的所有回调
+    uploadTask.offProgress();
+  });
+} catch (err) {
+  console.error(`Failed to request the upload. Code: ${err.code}, message: ${err.message}`);
+}
+```
 
 ## on('progress')
 
@@ -461,7 +648,7 @@ on(type: 'progress', callback: (uploadedSize: long, totalSize: long) => void): v
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 401 | The parameters check fails. Possible causes: &lt;br&gt; 1. Missing mandatory parameters. &lt;br&gt; 2. Incorrect parameter type. &lt;br&gt; 3. Parameter verification failed.<br>**适用版本：** 12+ |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | The parameters check fails. Possible causes: &lt;br&gt; 1. Missing mandatory parameters. &lt;br&gt; 2. Incorrect parameter type. &lt;br&gt; 3. Parameter verification failed.<br>**适用版本：** 12+ |
 
 ## 示例
 
@@ -499,7 +686,7 @@ on(type: 'headerReceive', callback: (header: object) => void): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 401 | The parameters check fails. Possible causes: &lt;br&gt; 1. Missing mandatory parameters. &lt;br&gt; 2. Incorrect parameter type. &lt;br&gt; 3. Parameter verification failed.<br>**适用版本：** 12+ |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | The parameters check fails. Possible causes: &lt;br&gt; 1. Missing mandatory parameters. &lt;br&gt; 2. Incorrect parameter type. &lt;br&gt; 3. Parameter verification failed.<br>**适用版本：** 12+ |
 
 ## 示例
 
@@ -537,7 +724,7 @@ on(type: 'complete' | 'fail', callback: Callback<Array<TaskState>>): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 401 | The parameters check fails. Possible causes: &lt;br&gt; 1. Missing mandatory parameters. &lt;br&gt; 2. Incorrect parameter type. &lt;br&gt; 3. Parameter verification failed.<br>**适用版本：** 12+ |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | The parameters check fails. Possible causes: &lt;br&gt; 1. Missing mandatory parameters. &lt;br&gt; 2. Incorrect parameter type. &lt;br&gt; 3. Parameter verification failed.<br>**适用版本：** 12+ |
 
 ## 示例
 
@@ -584,7 +771,7 @@ on(type: 'complete' | 'fail', callback: Callback<Array<TaskState>>): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 401 | The parameters check fails. Possible causes: &lt;br&gt; 1. Missing mandatory parameters. &lt;br&gt; 2. Incorrect parameter type. &lt;br&gt; 3. Parameter verification failed.<br>**适用版本：** 12+ |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | The parameters check fails. Possible causes: &lt;br&gt; 1. Missing mandatory parameters. &lt;br&gt; 2. Incorrect parameter type. &lt;br&gt; 3. Parameter verification failed.<br>**适用版本：** 12+ |
 
 ## 示例
 
@@ -626,6 +813,37 @@ Called when the current upload session complete.
 | --- | --- | --- | --- |
 | callback | [Callback](arkts-basicservices-base-callback-i.md)&lt;Array&lt;TaskState&gt;&gt; | 是 | The callback function for the upload complete event. |
 
+## 示例
+
+```TypeScript
+// 请在组件内获取context，确保this.getUIContext().getHostContext()返回结果为UIAbilityContext
+let context = this.getUIContext().getHostContext() as common.UIAbilityContext;
+let uploadTask: request.UploadTask;
+let uploadConfig: request.UploadConfig = {
+  url: 'http://www.example.com', // 需要手动将url替换为真实服务器的HTTP协议地址
+  header: { 'Accept': '*/*' },
+  method: "POST",
+  files: [{ filename: "test", name: "test", uri: "internal://cache/test.jpg", type: "image/jpeg" }], // 建议type填写HTTP协议规范的MIME类型
+  data: [{ name: "name123", value: "123" }],
+};
+let upCompleteCallback = (taskStates: Array<request.TaskState>) => {
+  for (let i = 0; i < taskStates.length; i++) {
+    console.info("upOnComplete taskState:" + JSON.stringify(taskStates[i]));
+  }
+};
+try {
+  request.uploadFile(context, uploadConfig, (err: Error, uploadTask: request.UploadTask): void => {
+    if (err) {
+      console.error(`Failed to request the upload. Code: ${err.code}, message: ${err.message}`);
+      return;
+    }
+    uploadTask.onComplete(upCompleteCallback);
+  });
+} catch (err) {
+  console.error(`Failed to request the upload. Code: ${err.code}, message: ${err.message}`);
+}
+```
+
 ## onFail
 
 ```TypeScript
@@ -647,6 +865,37 @@ Called when the current upload session fail.
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | callback | [Callback](arkts-basicservices-base-callback-i.md)&lt;Array&lt;TaskState&gt;&gt; | 是 | The callback function for the upload fail event. |
+
+## 示例
+
+```TypeScript
+// 请在组件内获取context，确保this.getUIContext().getHostContext()返回结果为UIAbilityContext
+let context = this.getUIContext().getHostContext() as common.UIAbilityContext;
+let uploadTask: request.UploadTask;
+let uploadConfig: request.UploadConfig = {
+  url: 'http://www.example.com', // 需要手动将url替换为真实服务器的HTTP协议地址
+  header: { 'Accept': '*/*' },
+  method: "POST",
+  files: [{ filename: "test", name: "test", uri: "internal://cache/test.jpg", type: "image/jpeg" }], // 建议type填写HTTP协议规范的MIME类型
+  data: [{ name: "name123", value: "123" }],
+};
+let upFailCallback = (taskStates: Array<request.TaskState>) => {
+  for (let i = 0; i < taskStates.length; i++) {
+    console.info("upOnFail taskState:" + JSON.stringify(taskStates[i]));
+  }
+};
+try {
+  request.uploadFile(context, uploadConfig, (err: Error, uploadTask: request.UploadTask): void => {
+    if (err) {
+      console.error(`Failed to request the upload. Code: ${err.code}, message: ${err.message}`);
+      return;
+    }
+    uploadTask.onFail(upFailCallback);
+  });
+} catch (err) {
+  console.error(`Failed to request the upload. Code: ${err.code}, message: ${err.message}`);
+}
+```
 
 ## onHeaderReceive
 
@@ -670,6 +919,35 @@ Called when the header of the current upload session has been received.
 | --- | --- | --- | --- |
 | callback | [UploadHeaderReceiveCallback](arkts-basicservices-request-uploadheaderreceivecallback-t.md) | 是 | The callback function for the HTTP Response Header event. |
 
+## 示例
+
+```TypeScript
+// 请在组件内获取context，确保this.getUIContext().getHostContext()返回结果为UIAbilityContext
+let context = this.getUIContext().getHostContext() as common.UIAbilityContext;
+let uploadTask: request.UploadTask;
+let uploadConfig: request.UploadConfig = {
+  url: 'http://www.example.com', // 需要手动将url替换为真实服务器的HTTP协议地址
+  header: { 'Accept': '*/*' },
+  method: "POST",
+  files: [{ filename: "test", name: "test", uri: "internal://cache/test.jpg", type: "image/jpeg" }], // 建议type填写HTTP协议规范的MIME类型
+  data: [{ name: "name123", value: "123" }],
+};
+let headerCallback = (headers: object) => {
+  console.info("upOnHeader headers:" + JSON.stringify(headers));
+};
+try {
+  request.uploadFile(context, uploadConfig, (err: Error, uploadTask: request.UploadTask): void => {
+    if (err) {
+      console.error(`Failed to request the upload. Code: ${err.code}, message: ${err.message}`);
+      return;
+    }
+    uploadTask.onHeaderReceive(headerCallback);
+  });
+} catch (err) {
+  console.error(`Failed to request the upload. Code: ${err.code}, message: ${err.message}`);
+}
+```
+
 ## onProgress
 
 ```TypeScript
@@ -691,6 +969,35 @@ Called when the current upload session is in process.
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | callback | [UploadProgressCallback](arkts-basicservices-request-uploadprogresscallback-t.md) | 是 | The callback function for the upload progress event. |
+
+## 示例
+
+```TypeScript
+// 请在组件内获取context，确保this.getUIContext().getHostContext()返回结果为UIAbilityContext
+let context = this.getUIContext().getHostContext() as common.UIAbilityContext;
+let uploadTask: request.UploadTask;
+let uploadConfig: request.UploadConfig = {
+  url: 'http://www.example.com', // 需要手动将url替换为真实服务器的HTTP协议地址
+  header: { 'Accept': '*/*' },
+  method: "POST",
+  files: [{ filename: "test", name: "test", uri: "internal://cache/test.jpg", type: "image/jpeg" }], // 建议type填写HTTP协议规范的MIME类型
+  data: [{ name: "name123", value: "123" }],
+};
+let upProgressCallback = (uploadedSize: long, totalSize: long) => {
+  console.info("upload totalSize:" + totalSize + "  uploadedSize:" + uploadedSize);
+};
+try {
+  request.uploadFile(context, uploadConfig, (err: Error, uploadTask: request.UploadTask): void => {
+    if (err) {
+      console.error(`Failed to request the upload. Code: ${err.code}, message: ${err.message}`);
+      return;
+    }
+    uploadTask.onProgress(upProgressCallback);
+  });
+} catch (err) {
+  console.error(`Failed to request the upload. Code: ${err.code}, message: ${err.message}`);
+}
+```
 
 ## remove
 
@@ -729,7 +1036,7 @@ remove(callback: AsyncCallback<boolean>): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 201 | The permissions check fails. |
+| [201](../../errorcode-universal.md#201-权限校验失败) | The permissions check fails. |
 
 ## 示例
 
@@ -781,7 +1088,7 @@ remove(): Promise<boolean>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 201 | The permissions check fails. |
+| [201](../../errorcode-universal.md#201-权限校验失败) | The permissions check fails. |
 
 ## 示例
 

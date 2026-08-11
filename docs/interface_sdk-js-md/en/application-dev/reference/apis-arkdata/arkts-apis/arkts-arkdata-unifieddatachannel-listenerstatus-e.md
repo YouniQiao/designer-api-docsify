@@ -1,6 +1,6 @@
 # ListenerStatus
 
-表示从UDMF获取数据时的状态码的枚举。
+Enumerates the status codes returned when data is obtained from the UDMF.
 
 **Since:** 15
 
@@ -16,7 +16,7 @@
 FINISHED = 0
 ```
 
-表示已完成。
+The task is completed.
 
 **Since:** 15
 
@@ -36,7 +36,7 @@ FINISHED = 0
 PROCESSING = 1
 ```
 
-表示正在处理中。
+The task is being processed.
 
 **Since:** 15
 
@@ -56,7 +56,7 @@ PROCESSING = 1
 CANCELED = 2
 ```
 
-表明本次处理已被取消。
+The task is canceled.
 
 **Since:** 15
 
@@ -76,7 +76,7 @@ CANCELED = 2
 INNER_ERROR = 200
 ```
 
-表明发生了内部错误。
+An internal error occurs.
 
 **Since:** 15
 
@@ -96,7 +96,7 @@ INNER_ERROR = 200
 INVALID_PARAMETERS = 201
 ```
 
-表示 [GetDataParams](arkts-arkdata-unifieddatachannel-getdataparams-i.md) 包含无效参数。
+[GetDataParams](arkts-arkdata-unifieddatachannel-getdataparams-i.md) contains invalid parameters.
 
 **Since:** 15
 
@@ -116,7 +116,7 @@ INVALID_PARAMETERS = 201
 DATA_NOT_FOUND = 202
 ```
 
-表示没有获取到数据。
+No data is obtained.
 
 **Since:** 15
 
@@ -136,7 +136,7 @@ DATA_NOT_FOUND = 202
 SYNC_FAILED = 203
 ```
 
-表示同步过程中出现错误。
+Failed to sync data.
 
 **Since:** 15
 
@@ -156,7 +156,7 @@ SYNC_FAILED = 203
 COPY_FILE_FAILED = 204
 ```
 
-表示文件拷贝过程中出现错误。
+Failed to copy data.
 
 **Since:** 15
 

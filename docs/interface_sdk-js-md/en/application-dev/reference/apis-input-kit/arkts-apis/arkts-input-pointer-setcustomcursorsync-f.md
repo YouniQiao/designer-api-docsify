@@ -12,8 +12,8 @@ import { pointer } from 'kits/@kit.InputKit';
 function setCustomCursorSync(windowId: int, pixelMap: image.PixelMap, focusX?: int, focusY?: int): void
 ```
 
-设置指定窗口的自定义光标样式，使用同步方式进行设置。此接口仅支持设置本应用进程内窗口的自定义光标样式，如需通过UIExtensionAbility进程设置宿主窗口的自定义光标样式，请参阅  
-[setCustomCursor](../../../reference/apis-arkui/arkts-apis-uicontext-cursorcontroller.md#setcustomcursor)。
+Sets a custom pointer style for a specified window synchronously. This API can set only the custom pointer style of windows within the current application process. For details about how to set the custom pointer style of the host window through the **UIExtensionAbility** process, see  
+[setCustomCursor](../../apis-arkui/arkts-apis/arkts-arkui-arkui-uicontext-cursorcontroller-c.md/arkts-arkui-arkui-uicontext-cursorcontroller-c.md#setcustomcursor).
 
 **Since:** 11
 
@@ -27,16 +27,16 @@ function setCustomCursorSync(windowId: int, pixelMap: image.PixelMap, focusX?: i
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| windowId | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | 窗口ID。取值为大于0的整数。 |
-| pixelMap | image.PixelMap | Yes | 自定义光标资源。 |
-| focusX | ArkTS-Dyn: number  <br>ArkTS-Sta：int | No | 自定义光标焦点x，取值范围：大于等于0，默认为0，单位为像素（px）。 |
-| focusY | ArkTS-Dyn: number  <br>ArkTS-Sta：int | No | 自定义光标焦点y，取值范围：大于等于0，默认为0，单位为像素（px）。 |
+| windowId | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | Window ID. The value must be an integer greater than 0. |
+| pixelMap | image.PixelMap | Yes | Custom cursor resource. |
+| focusX | ArkTS-Dyn: number  <br>ArkTS-Sta：int | No | Custom pointer focus X, in px. The value must be greater than or equal to 0. The default value is **0**. |
+| focusY | ArkTS-Dyn: number  <br>ArkTS-Sta：int | No | Custom pointer focus Y, in px. The value must be greater than or equal to 0. The default value is **0**. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; 3. Parameter verification failed. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; 3. Parameter verification failed. |
 
 ## Examples
 
@@ -58,23 +58,19 @@ struct Index {
             $r("app.media.app_icon").id, (error: BusinessError, svgFileData: Uint8Array) => {
             const svgBuffer = svgFileData.buffer;
             let svgImageSource: image.ImageSource = image.createImageSource(svgBuffer);
-            // Width and height of the pointer image
             let svgDecodingOptions: image.DecodingOptions = { desiredSize: { width: 50, height: 50 } };
-            // Create a PixelMap
             svgImageSource.createPixelMap(svgDecodingOptions).then((pixelMap) => {
-              // Get the most recent window in the application
               window.getLastWindow(this.getUIContext().getHostContext(), (error: BusinessError, win: window.Window) => {
                 let windowId = win.getWindowProperties().id;
                 try {
-                  // Set a custom pointer synchronously
                   pointer.setCustomCursorSync(windowId, pixelMap, 25, 25);
-                  console.info(`Succeeded in setting custom cursor sync.`);
+                  console.info(`setCustomCursorSync success`);
                 } catch (error) {
-                  console.error(`Failed to set custom cursor sync, Code: ${(error as BusinessError).code}, message: ${(error as BusinessError).message}.`);
+                  console.error(`setCustomCursorSync failed, error: ${JSON.stringify(error, [`code`, `message`])}`);
                 }
               });
             }).catch((error: BusinessError) => {
-              console.error(`Failed to create pixel map promise, Code: ${(error as BusinessError).code}, message: ${(error as BusinessError).message}.`);
+              console.error(`createPixelMap promise error: ${JSON.stringify(error, [`code`, `message`])}`);
             });
           });
         }

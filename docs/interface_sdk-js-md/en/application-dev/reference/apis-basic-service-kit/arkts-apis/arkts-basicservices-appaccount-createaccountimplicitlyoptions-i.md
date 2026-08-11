@@ -1,6 +1,6 @@
 # CreateAccountImplicitlyOptions
 
-表示隐式创建账号的选项。
+Defines the options for implicitly creating an application account.
 
 **Since:** 9
 
@@ -22,7 +22,7 @@ import { appAccount } from 'kits/@kit.BasicServicesKit';
 authType?: string
 ```
 
-令牌的鉴权类型。
+Authentication type.
 
 **Type:** string
 
@@ -40,7 +40,7 @@ authType?: string
 parameters?: Record<string, Object>
 ```
 
-自定义参数对象，默认为空。
+Custom parameter object. By default, no value is passed in.
 
 **Type:** [Record](../../apis-default/arkts-apis/arkts-record-t.md)&lt;string, Object&gt;
 
@@ -58,7 +58,7 @@ parameters?: Record<string, Object>
 requiredLabels?: Array<string>
 ```
 
-所需的标签，默认为空。
+Required labels. By default, no value is passed in.
 
 **Type:** Array&lt;string&gt;
 

@@ -12,12 +12,6 @@ Provides APIs to obtain and set the beauty effect.
 
 **系统接口：** 此接口为系统接口。
 
-## 导入模块
-
-```TypeScript
-import { camera } from 'kits/@kit.CameraKit';
-```
-
 ## getSupportedBeautyRange
 
 ArkTS-Dyn:
@@ -64,8 +58,8 @@ Obtains the levels that can be set a beauty type. The beauty levels vary accordi
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 7400103 | Session not config, only throw in session usage. |
-| 202 | Not System Application. |
+| [7400103](../errorcode-camera.md#7400103-会话未配置) | Session not config, only throw in session usage. |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not System Application. |
 
 ## 示例
 
@@ -108,8 +102,8 @@ Obtains the supported beauty types.
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 7400103 | Session not config, only throw in session usage. |
-| 202 | Not System Application. |
+| [7400103](../errorcode-camera.md#7400103-会话未配置) | Session not config, only throw in session usage. |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not System Application. |
 
 ## 示例
 
@@ -148,8 +142,8 @@ Gets supported portrait theme type.
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 7400103 | Session not config, only throw in session usage. |
-| 202 | Not System Application. |
+| [7400103](../errorcode-camera.md#7400103-会话未配置) | Session not config, only throw in session usage. |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not System Application. |
 
 ## isPortraitThemeSupported
 
@@ -179,6 +173,6 @@ Checks whether portrait theme is supported.
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 7400103 | Session not config, only throw in session usage. |
-| 202 | Not System Application. |
+| [7400103](../errorcode-camera.md#7400103-会话未配置) | Session not config, only throw in session usage. |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not System Application. |
 

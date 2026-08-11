@@ -1,8 +1,8 @@
 # StartAnimationSystemParams (System API)
 
-启动动画配置，仅对全屏应用生效。
+Describes the start animation configuration. This API works only for full-screen applications.
 
-不同应用间跳转场景不生效，仍保持系统默认动效。
+The configuration does not take effect for inter-application transitions, where the default animation of the system is used.
 
 **Since:** 20
 
@@ -26,7 +26,7 @@ import { window } from 'kits/@kit.ArkUI';
 animationConfig?: WindowAnimationConfig
 ```
 
-窗口动画参数配置。默认动画曲线为WindowAnimationCurve.LINEAR，duration为0。
+Configuration for the window animation. The default animation curve is **WindowAnimationCurve.LINEAR**, and the duration is **0**.
 
 **Type:** [WindowAnimationConfig](arkts-arkui-window-windowanimationconfig-i.md)
 
@@ -46,7 +46,7 @@ animationConfig?: WindowAnimationConfig
 type: AnimationType
 ```
 
-窗口动画类型。
+Type of the window animation.
 
 **Type:** [AnimationType](arkts-arkui-window-animationtype-e-sys.md)
 

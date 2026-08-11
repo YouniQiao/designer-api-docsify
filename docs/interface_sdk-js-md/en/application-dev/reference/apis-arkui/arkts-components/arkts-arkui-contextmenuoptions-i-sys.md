@@ -1,28 +1,28 @@
 # ContextMenuOptions
 
-菜单项的信息。
+Configures menu item information.
 
-**表1：同时设置offset与placement时菜单的偏移位置** 
+**Table 1: Menu offset when both offset and placement are set**
 
-| placement设置的值 | 菜单的偏移量说明 |  
+| Value of placement | Menu Offset |  
 | ------------------------------------------------------------ | ------------------------------------------------------------ |  
-| Placement.TopLeft、Placement.Top、Placement.TopRight | offset的x为正数，菜单相对组件向右进行偏移，offset的y为正数，菜单相对组件向上进行偏移。 |  
-| Placement.BottomLeft、Placement.Bottom、Placement.BottomRight | offset的x为正数，菜单相对组件向左进行偏移，offset的y为正数，菜单相对组件向下进行偏移。 |  
-| Placement.RightTop、Placement.Right、Placement.RightBottom | offset的x为正数，菜单相对组件向右进行偏移，offset的y为正数，菜单相对组件向下进行偏移。 |
+| Placement.TopLeft, Placement.Top, or Placement.TopRight | If the value of **x** is a positive number for **offset**, the menu shifts to the right relative to the component. If the value of **y** is a positive number, the menu shifts upward relative to the component.|  
+| Placement.BottomLeft, Placement.Bottom, or Placement.BottomRight| If the value of **x** is a positive number for **offset**, the menu shifts to the left relative to the component. If the value of **y** is a positive number, the menu shifts downward relative to the component.|  
+| Placement.RightTop, Placement.Right, or Placement.RightBottom | If the value of **x** is a positive number for **offset**, the menu shifts to the right relative to the component. If the value of **y** is a positive number, the menu shifts downward relative to the component.|
 
-**表2：同时设置arrowOffset与placement时菜单箭头的默认位置** 
+**Table 2: Default position of the menu arrow when both arrowOffset and placement are set**
 
-| placement设置的值 | 菜单箭头的位置说明 |  
+| Value of placement | Menu Arrow Position |  
 | ------------------------------------------- | ------------------------------------------------------------ |  
-| Placement.Top、Placement.Bottom | 箭头显示在水平方向且默认居中，且距离菜单左侧边缘距离为箭头安全距离。 |  
-| Placement.Left、Placement.Right | 箭头显示在垂直方向且默认居中，且距离菜单上侧距离为箭头安全距离。 |  
-| Placement.TopLeft、Placement.BottomLeft | 箭头默认显示在水平方向，且距离菜单左侧边缘距离为箭头安全距离。 |  
-| Placement.TopRight、Placement.BottomRight | 箭头默认显示在水平方向，且距离菜单右侧距离为箭头安全距离。 |  
-| Placement.LeftTop、Placement.RightTop | 箭头默认显示在垂直方向，且距离菜单上侧距离为箭头安全距离。 |  
-| Placement.LeftBottom、Placement.RightBottom | 箭头默认显示在垂直方向，且距离菜单下侧距离为箭头安全距离。 |
+| Placement.Top or Placement.Bottom | The arrow is displayed horizontally and centered by default, with a distance from the left edge of the menu equal to the arrow's safe distance.|  
+| Placement.Left or Placement.Right | The arrow is displayed vertically and centered by default, with a distance from the top edge of the menu equal to the arrow's safe distance.|  
+| Placement.TopLeft or Placement.BottomLeft | The arrow is displayed horizontally by default, with a distance from the left edge of the menu equal to the arrow's safe distance.|  
+| Placement.TopRight or Placement.BottomRight | The arrow is displayed horizontally by default, with a distance from the right edge of the menu equal to the arrow's safe distance. |  
+| Placement.LeftTop or Placement.RightTop | The arrow is displayed vertically by default, with a distance from the top edge of the menu equal to the arrow's safe distance. |  
+| Placement.LeftBottom or Placement.RightBottom| The arrow is displayed vertically by default, with a distance from the bottom edge of the menu equal to the arrow's safe distance. |
 
-**表3：enableArrow为true且placement未设置或者值为非法值的菜单默认位置**   
-| 接口 | 菜单默认位置 |  
+**Table 3 Default menu position when enableArrow is set to true and placement is not set or set to an invalid value**  
+| API| Default Menu Position|  
 |------|-------------|  
 | [bindMenu](arkts-arkui-commonmethod-c.md#bindmenu) | Placement.BottomLeft |  
 | [bindMenu&lt;sup&gt;11+&lt;/sup&gt;](arkts-arkui-commonmethod-c.md#bindmenu) | Placement.BottomLeft |  
@@ -44,7 +44,7 @@
 distortionMode?: DistortionMode
 ```
 
-设置菜单的非线性形变动画模式。
+Sets the distortion animation Mode of the menu.
 
 **Type:** [DistortionMode](arkts-arkui-distortionmode-e-sys.md)
 
@@ -68,7 +68,7 @@ distortionMode?: DistortionMode
 edgeLightMode?: EdgeLightMode
 ```
 
-设置菜单的流光动画模式。
+Sets the edgeLight animation Mode of the menu.
 
 **Type:** [EdgeLightMode](arkts-arkui-edgelightmode-e-sys.md)
 

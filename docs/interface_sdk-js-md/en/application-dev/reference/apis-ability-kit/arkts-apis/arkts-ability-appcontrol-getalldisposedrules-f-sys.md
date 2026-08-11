@@ -12,7 +12,7 @@ import { appControl } from 'kits/@kit.AbilityKit';
 function getAllDisposedRules(): Array<DisposedRuleConfiguration>
 ```
 
-获取当前用户下已设置的所有拦截规则。
+Obtains all the disposed rules set for the current user.
 
 **Since:** 23
 
@@ -30,15 +30,15 @@ function getAllDisposedRules(): Array<DisposedRuleConfiguration>
 
 | Type | Description |
 | --- | --- |
-| Array&lt;DisposedRuleConfiguration&gt; | 应用已设置的拦截规则。 |
+| Array&lt;DisposedRuleConfiguration&gt; | Array of disposed rules. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 801 | Capability not supported. |
-| 201 | Permission denied. |
-| 202 | Permission denied. A non-system application is not allowed to call a system API. |
+| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission denied. A non-system application is not allowed to call a system API. |
 
 ## Examples
 

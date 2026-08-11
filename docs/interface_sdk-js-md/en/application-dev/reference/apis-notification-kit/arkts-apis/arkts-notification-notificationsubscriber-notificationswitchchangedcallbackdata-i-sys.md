@@ -1,6 +1,6 @@
 # NotificationSwitchChangedCallbackData (System API)
 
-通知开关状态变化的回调函数类型。
+Returns the changes of the notification switch state.
 
 **Since:** 26.0.0
 
@@ -18,7 +18,7 @@
 readonly enableStatus: notificationManager.SwitchState
 ```
 
-通知开关状态。
+Notification switch state.
 
 **Type:** notificationManager.SwitchState
 
@@ -40,7 +40,8 @@ readonly enableStatus: notificationManager.SwitchState
 readonly switchName: string
 ```
 
-通知开关名称。取值为：DEAL（交易类通知聚合开关）、LOGISTICS（物流类通知聚合开关）。
+Notification switch name. The value can be **DEAL** (aggregated switch for transaction notifications) or  
+**LOGISTICS** (aggregated switch for logistics notifications).
 
 **Type:** string
 
@@ -62,7 +63,7 @@ readonly switchName: string
 readonly userId: int
 ```
 
-用户ID。
+User ID.
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 

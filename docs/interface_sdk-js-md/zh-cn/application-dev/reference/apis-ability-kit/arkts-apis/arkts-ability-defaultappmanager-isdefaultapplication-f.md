@@ -1,11 +1,5 @@
 # isDefaultApplication
 
-## 导入模块
-
-```TypeScript
-import { defaultAppManager } from 'kits/@kit.AbilityKit';
-```
-
 ## isDefaultApplication
 
 ```TypeScript
@@ -33,16 +27,35 @@ function isDefaultApplication(type: string, callback: AsyncCallback<boolean>) : 
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types. |
-| 801 | Capability not supported. |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types. |
+| [801](../../errorcode-universal.md#801-该设备不支持此api) | Capability not supported. |
 
 ## 示例
+
+ArkTS-Dyn示例:
 
 ```TypeScript
 import { defaultAppManager } from '@kit.AbilityKit';
 import { BusinessError } from '@kit.BasicServicesKit';
 
 defaultAppManager.isDefaultApplication(defaultAppManager.ApplicationType.BROWSER, (err: BusinessError, data) => {
+  if (err) {
+    console.error('Operation failed. Cause: ' + JSON.stringify(err));
+    return;
+  }
+  console.info('Operation successful. IsDefaultApplication ? ' + JSON.stringify(data));
+});
+```
+
+ArkTS-Sta示例:
+
+```TypeScript
+'use static'
+
+import { defaultAppManager } from '@kit.AbilityKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+defaultAppManager.isDefaultApplication(defaultAppManager.ApplicationType.BROWSER, (err: BusinessError | null, data) => {
   if (err) {
     console.error('Operation failed. Cause: ' + JSON.stringify(err));
     return;
@@ -84,10 +97,12 @@ function isDefaultApplication(type: string) : Promise<boolean>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types. |
-| 801 | Capability not supported. |
+| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types. |
+| [801](../../errorcode-universal.md#801-该设备不支持此api) | Capability not supported. |
 
 ## 示例
+
+ArkTS-Dyn示例:
 
 ```TypeScript
 import { defaultAppManager } from '@kit.AbilityKit';
@@ -97,7 +112,23 @@ defaultAppManager.isDefaultApplication(defaultAppManager.ApplicationType.BROWSER
   .then((data) => {
     console.info('Operation successful. IsDefaultApplication ? ' + JSON.stringify(data));
   }).catch((error: BusinessError) => {
-  console.error('Operation failed. Cause: ' + JSON.stringify(error));
+    console.error('Operation failed. Cause: ' + JSON.stringify(error));
 });
+```
+
+ArkTS-Sta示例:
+
+```TypeScript
+'use static'
+
+import { defaultAppManager } from '@kit.AbilityKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+defaultAppManager.isDefaultApplication(defaultAppManager.ApplicationType.BROWSER)
+  .then((data: boolean) => {
+    console.info('Operation successful. IsDefaultApplication ? ' + JSON.stringify(data));
+  }).catch((error: Error) => {
+    console.error('Operation failed. Cause: ' + JSON.stringify(error as BusinessError));
+  });
 ```
 

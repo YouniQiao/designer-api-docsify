@@ -1,6 +1,6 @@
 # Form
 
-系统定义的卡片类型数据，用于跨应用共享卡片信息。典型使用场景包括：卡片拖拽分享、卡片内容跨应用传输、桌面小组件数据共享等。
+Represents data of the widget type defined by the system.
 
 **Since:** 15
 
@@ -22,7 +22,7 @@ import { uniformDataStruct } from 'kits/@kit.ArkData';
 abilityName: string
 ```
 
-卡片对应的ability名。建议遵循Ability组件命名规范：取值为长度不超过127字节的字符串，以字母开头，可包含字母、数字、下划线（_）或点号（.）；确保该名称在整个应用中唯一。推荐使用"包名.Ability名"格式（如"com.example.myapplication.MainAbility"）。
+Ability name corresponding to the widget.
 
 **Type:** string
 
@@ -42,7 +42,7 @@ abilityName: string
 bundleName: string
 ```
 
-卡片所属的bundle名，格式需符合应用包名规范。
+Bundle to which the widget belongs.
 
 **Type:** string
 
@@ -62,7 +62,7 @@ bundleName: string
 details?: Record<string, int | long | double | string | Uint8Array>
 ```
 
-字典类型对象，key为string类型，value可包含number（数值类型）、string（字符串类型）或Uint8Array（二进制字节数组）类型数据。非必填字段，默认值为空字典对象。
+Object of the dictionary type used to describe the icon. The key is of the string type, and the value can be a number, a string, or a Uint8Array. By default, it is an empty dictionary object.
 
 **Type:** ArkTS-Dyn: [Record](../../apis-default/arkts-apis/arkts-record-t.md)&lt;string, number \| number \| number \| string \| Uint8Array&gt;  <br>ArkTS-Sta：[Record](../../apis-default/arkts-apis/arkts-record-t.md)&lt;string, int \| long \| double \| string \| Uint8Array&gt;
 
@@ -82,7 +82,7 @@ details?: Record<string, int | long | double | string | Uint8Array>
 formId: int
 ```
 
-卡片id。
+Widget ID.
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
@@ -102,7 +102,7 @@ formId: int
 formName: string
 ```
 
-卡片名。
+Widget name.
 
 **Type:** string
 
@@ -122,7 +122,7 @@ formName: string
 module: string
 ```
 
-卡片所属的module名。
+Module to which the widget belongs.
 
 **Type:** string
 
@@ -142,8 +142,8 @@ module: string
 readonly uniformDataType: 'openharmony.form'
 ```
 
-统一数据类型标识为卡片类型数据，固定为“openharmony.form”，数据类型描述信息见  
-[UniformDataType](arkts-arkdata-uniformtypedescriptor-uniformdatatype-e.md)。
+Uniform data type, which has a fixed value of **openharmony.form**. For details, see   
+[UniformDataType](arkts-arkdata-uniformtypedescriptor-uniformdatatype-e.md).
 
 **Type:** 'openharmony.form'
 

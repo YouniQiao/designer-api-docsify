@@ -1,6 +1,6 @@
 # SystemToneOptions (System API)
 
-提示音参数选项。
+Describes the options of system tones.
 
 **Since:** 11
 
@@ -18,7 +18,7 @@
 muteAudio?: boolean
 ```
 
-提示音是否静音，true表示静音，false表示不静音。
+Whether to mute the audio. **true** to mute, **false** otherwise.
 
 **Type:** boolean
 
@@ -38,7 +38,7 @@ muteAudio?: boolean
 muteHaptics?: boolean
 ```
 
-提示音时是否振动，true表示关闭振动，false表示开启振动。
+Whether to turn off haptics feedback when a system tone is played. **true** to turn off, **false** otherwise.
 
 **Type:** boolean
 

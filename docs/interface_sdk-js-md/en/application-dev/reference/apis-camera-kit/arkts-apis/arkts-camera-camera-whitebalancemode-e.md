@@ -1,6 +1,6 @@
 # WhiteBalanceMode
 
-枚举，白平衡模式。
+Enumerates the white balance modes.
 
 **Since:** 20
 
@@ -16,7 +16,7 @@
 AUTO = 0
 ```
 
-自动
+Automatic.
 
 **Since:** 20
 
@@ -34,7 +34,7 @@ AUTO = 0
 CLOUDY = 1
 ```
 
-阴天
+Cloudy.
 
 **Since:** 20
 
@@ -52,7 +52,7 @@ CLOUDY = 1
 INCANDESCENT =2
 ```
 
-白炽光
+Incandescent light.
 
 **Since:** 20
 
@@ -70,7 +70,7 @@ INCANDESCENT =2
 FLUORESCENT =3
 ```
 
-荧光
+Fluorescence light.
 
 **Since:** 20
 
@@ -88,7 +88,7 @@ FLUORESCENT =3
 DAYLIGHT = 4
 ```
 
-日光
+Daylight.
 
 **Since:** 20
 
@@ -106,7 +106,7 @@ DAYLIGHT = 4
 MANUAL = 5
 ```
 
-手动
+Manual.
 
 **Since:** 20
 
@@ -124,7 +124,7 @@ MANUAL = 5
 LOCKED = 6
 ```
 
-锁定
+Locked.
 
 **Since:** 20
 

@@ -1,11 +1,5 @@
 # createPixelMap
 
-## 导入模块
-
-```TypeScript
-import { sendableImage } from 'kits/@kit.ImageKit';
-```
-
 ## createPixelMap
 
 ```TypeScript

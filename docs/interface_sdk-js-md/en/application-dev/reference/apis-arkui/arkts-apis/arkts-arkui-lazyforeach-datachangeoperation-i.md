@@ -1,6 +1,6 @@
 # DataChangeOperation
 
-执行单个数据的插入、更新或删除。
+Defines change operation.
 
 **Since:** 23
 
@@ -16,7 +16,7 @@
 index: int
 ```
 
-改变的数据的索引值。取值范围是[0, 数据源长度-1]。
+Index of changed data.
 
 **Type:** int
 
@@ -36,7 +36,7 @@ index: int
 key?: string
 ```
 
-为改变的数据分配新的键值，默认使用原键值。
+Key of changed data.
 
 **Type:** string
 
@@ -56,7 +56,7 @@ key?: string
 type: DataOperationType
 ```
 
-数据改变类型。
+How to operate changed data.
 
 **Type:** [DataOperationType](arkts-arkui-lazyforeach-dataoperationtype-e.md)
 

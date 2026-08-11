@@ -1,11 +1,5 @@
 # getFileDescriptor
 
-## 导入模块
-
-```TypeScript
-import { usb } from 'kits/@kit.BasicServicesKit';
-```
-
 ## getFileDescriptor
 
 ```TypeScript

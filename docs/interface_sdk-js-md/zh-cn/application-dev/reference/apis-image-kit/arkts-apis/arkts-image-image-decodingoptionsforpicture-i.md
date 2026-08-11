@@ -10,12 +10,6 @@
 
 **系统能力：** SystemCapability.Multimedia.Image.ImageSource
 
-## 导入模块
-
-```TypeScript
-import { image } from 'kits/@kit.ImageKit';
-```
-
 ## desiredAuxiliaryPictures
 
 ```TypeScript
@@ -48,7 +42,7 @@ desiredPixelFormat?: PixelMapFormat
 
 当设置其他不支持的像素格式时，返回解码失败。
 
-**类型：** [PixelMapFormat](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-multimedia-movingphotoview-pixelmapformat-e.md)
+**类型：** [PixelMapFormat](arkts-image-image-pixelmapformat-e.md)
 
 **起始版本：** 24
 

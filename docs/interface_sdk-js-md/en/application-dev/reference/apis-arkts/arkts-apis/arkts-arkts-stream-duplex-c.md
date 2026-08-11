@@ -1,7 +1,7 @@
 # Duplex
 
-既可读又可写的流。双工流允许数据双向传输，即可读可写。  
-**Duplex**类继承自[Readable](arkts-arkts-stream-readableoptions-i.md)，支持**Readable**中的所有API。
+A stream that is both readable and writable. A duplex stream allows data to be transmitted in two directions, that is, data can be read and written.The **Duplex** class inherits from [Readable](arkts-arkts-stream-readableoptions-i.md) and supports all the APIs in  
+**Readable**.
 
 **Inheritance/Implementation:** Duplex extends [Readable](arkts-arkts-stream-readable-c.md)
 
@@ -9,7 +9,7 @@
 
 **ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
 
-<!--Device-stream-class Duplex extends Readable--><!--Device-stream-class Duplex extends Readable-End-->
+<!--Device-stream-export class Duplex extends Readable--><!--Device-stream-export class Duplex extends Readable-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
@@ -25,7 +25,7 @@ import { stream } from 'kits/@kit.ArkTS';
 constructor()
 ```
 
-创建**Duplex**对象的构造函数。
+A constructor used to create a **Duplex** object.
 
 **Since:** 12
 
@@ -49,7 +49,7 @@ let duplex = new stream.Duplex();
 cork(): boolean
 ```
 
-强制将后续写入的数据缓存起来。调用此API可优化连续写入操作的性能。调用此API后，**writableCorked**的值加1。建议与[uncork()](arkts-arkts-stream-writable-c.md#uncork)配合使用。
+Forces subsequent writes to be buffered. This API is called to optimize the performance of continuous write operations. After this API is called, the value of **writableCorked** is incremented by one. It is recommended that this API be used in pair with [uncork()](arkts-arkts-stream-writable-c.md#uncork).
 
 **Since:** 12
 
@@ -65,7 +65,7 @@ cork(): boolean
 
 | Type | Description |
 | --- | --- |
-| boolean | 操作结果。**true**表示成功；**false**表示失败。 |
+| boolean | Operation result. **true** means successful; **false** otherwise. |
 
 ## Examples
 
@@ -81,7 +81,7 @@ console.info("duplexStream cork result", result); // duplexStream cork result tr
 doWrite(chunk: string | Uint8Array, encoding: string, callback: Function): void
 ```
 
-数据写入API。需要由开发者实现此API，但不要直接调用。此API在写入数据时自动调用。使用异步回调返回结果。
+A data write API. You need to implement this API but do not call it directly. This API is automatically called when data is written. This API uses an asynchronous callback to return the result.
 
 **Since:** 12
 
@@ -97,9 +97,9 @@ doWrite(chunk: string | Uint8Array, encoding: string, callback: Function): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| chunk | string \| Uint8Array | Yes | 待写入的数据。 |
-| encoding | string | Yes | 编码格式。目前支持**'utf8'**、**'gb18030'**、**'gbk'**和**'gb2312'**。 |
-| callback | Function | Yes | 回调函数。 |
+| chunk | string \| Uint8Array | Yes | Data to write. |
+| encoding | string | Yes | Encoding format. Currently, **'utf8'**, **'gb18030'**, **'gbk'**, and **'gb2312'** are supported. |
+| callback | Function | Yes | Callback function. |
 
 ## Examples
 
@@ -128,7 +128,7 @@ duplexStream.write('data', 'utf8');
 doWritev(chunks: string[] | Uint8Array[], callback: Function): void
 ```
 
-批量数据写入API。需要由开发者实现此API，但不要直接调用。此API在写入数据时自动调用。使用异步回调返回结果。
+A batch data write API. You need to implement this API but do not call it directly. This API is automatically called when data is written. This API uses an asynchronous callback to return the result.
 
 **Since:** 12
 
@@ -144,8 +144,8 @@ doWritev(chunks: string[] | Uint8Array[], callback: Function): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| chunks | string[] \| Uint8Array[] | Yes | 批量写入的数据数组。 |
-| callback | Function | Yes | 回调函数。 |
+| chunks | string[] \| Uint8Array[] | Yes | Data arrays to write in batches. |
+| callback | Function | Yes | Callback function. |
 
 ## Examples
 
@@ -182,7 +182,8 @@ duplexStream.end();
 end(chunk?: string | Uint8Array, encoding?: string, callback?: Function): Writable
 ```
 
-结束双工流的写入过程。如果**writableCorked**的值大于0，则将其置为**0**，并输出缓冲区中的剩余数据。如果传入**chunk**参数，则将其视为最后一个数据块，根据当前执行上下文使用**write**或**doWrite** API写入。如果使用**doWrite**写入，**encoding**参数的有效性检查由**doWrite**决定。如果单独使用**end**（不使用**write**）且传入**chunk**参数，则数据通过**doWrite**写入。使用异步回调返回结果。
+Ends the writing process in a duplex stream. If the value of **writableCorked** is greater than 0, the value is set to **0** and the remaining data in the buffer is output. If the **chunk** parameter is passed, it is treated as the final data chunk and written using either the **write** or **doWrite** API, based on the current execution context. If **doWrite** is used for writing, the validity check of the **encoding** parameter depends on  
+**doWrite**. If **end** is used alone (without **write**) and the **chunk** parameter is passed, the data is written through **doWrite**. This API uses an asynchronous callback to return the result.
 
 **Since:** 12
 
@@ -198,21 +199,21 @@ end(chunk?: string | Uint8Array, encoding?: string, callback?: Function): Writab
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| chunk | string \| Uint8Array | No | 待写入的数据。默认值为**undefined**。 |
-| encoding | string | No | 编码格式。默认值为**'utf8'**。目前支持**'utf8'**、**'gb18030'**、**'gbk'**和**'gb2312'**。 |
-| callback | Function | No | 用于返回结果的回调函数。默认不调用。 |
+| chunk | string \| Uint8Array | No | Data to write. The default value is **undefined**. |
+| encoding | string | No | Encoding format. The default value is **'utf8'**. Currently, **'utf8'**, **'gb18030'**, **'gbk'**, and **'gb2312'** are supported. |
+| callback | Function | No | Callback used to return the result. It is not called by default. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [Writable](arkts-arkts-stream-writable-c.md) | 当前**Duplex**对象。 |
+| [Writable](arkts-arkts-stream-writable-c.md) | Current **Duplex** object. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 10200039 | The doTransform method has not been implemented for a class that inherits from Transform. |
+| [10200039](../errorcode-utils.md#10200039-dotransform-is-not-implemented) | The doTransform method has not been implemented for a class that inherits from Transform. |
 
 ## Examples
 
@@ -243,7 +244,7 @@ duplexStream.end('test', 'utf8', () => {
 setDefaultEncoding(encoding?: string): boolean
 ```
 
-设置可写流的默认编码格式。
+Sets the default encoding format for the writable stream.
 
 **Since:** 12
 
@@ -259,13 +260,13 @@ setDefaultEncoding(encoding?: string): boolean
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| encoding | string | No | 默认编码格式。默认值为**'utf8'**。目前支持**'utf8'**、**'gb18030'**、**'gbk'**和**'gb2312'**。 |
+| encoding | string | No | Default encoding format. The default value is **'utf8'**. Currently, **'utf8'**, **'gb18030'**, **'gbk'**, and **'gb2312'** are supported. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| boolean | 操作结果。**true**表示成功；**false**表示失败。 |
+| boolean | Operation result. **true** means successful; **false** otherwise. |
 
 ## Examples
 
@@ -294,7 +295,7 @@ console.info("duplexStream is result", result); // duplexStream is result true
 uncork(): boolean
 ```
 
-释放cork状态，刷新缓冲区中的数据并写入目标位置。调用此API后，**writableCorked**的值减1。如果值变为**0**，则流不再处于cork状态；否则，流仍处于cork状态。建议与[cork()](arkts-arkts-stream-writable-c.md#cork)配合使用。
+Releases the cork state, flushing the buffered data and writing it to the target location. After this API is called, the value of **writableCorked** is decremented by one. If the value reaches **0**, the stream is no longer in the cork state. Otherwise, the stream is still in the cork state. It is recommended that this API be used in pair with [cork()](arkts-arkts-stream-writable-c.md#cork).
 
 **Since:** 12
 
@@ -310,7 +311,7 @@ uncork(): boolean
 
 | Type | Description |
 | --- | --- |
-| boolean | 操作结果。**true**表示成功；**false**表示失败。 |
+| boolean | Operation result. **true** means successful; **false** otherwise. |
 
 ## Examples
 
@@ -344,7 +345,7 @@ console.info("Duplex test uncork", dataWritten); // Duplex test uncork ab
 write(chunk?: string | Uint8Array, encoding?: string, callback?: Function): boolean
 ```
 
-向流的缓冲区写入数据。使用异步回调返回结果。
+Writes data to the buffer of the stream. This API uses an asynchronous callback to return the result.
 
 **Since:** 12
 
@@ -360,23 +361,23 @@ write(chunk?: string | Uint8Array, encoding?: string, callback?: Function): bool
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| chunk | string \| Uint8Array | No | 待写入的数据。不能为**null**、**undefined**或空字符串。 |
-| encoding | string | No | 编码格式。默认值为**'utf8'**。目前支持**'utf8'**、**'gb18030'**、**'gbk'**和**'gb2312'**。 |
-| callback | Function | No | 用于返回结果的回调函数。默认不调用。 |
+| chunk | string \| Uint8Array | No | Data to write. It cannot be **null**, **undefined**, or an empty string. |
+| encoding | string | No | Encoding format. The default value is **'utf8'**. Currently, **'utf8'**, **'gb18030'**, **'gbk'**, and **'gb2312'** are supported. |
+| callback | Function | No | Callback used to return the result. It is not called by default. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| boolean | 表示可写流缓冲区中是否还有空间。**true**表示缓冲区中还有空间；**false**表示缓冲区已满，不建议继续写入数据。如果继续调用write函数，数据仍会添加到缓冲区，直到内存溢出。 |
+| boolean | Whether there is space in the buffer of the writable stream. The value **true** means that there is still space in the buffer. The value **false** means that the buffer is full, and you are not advised to continue writing data. If the write function is called continuously, data is still added to the buffer until the memory overflows. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 10200039 | The doTransform method has not been implemented for a class that inherits from Transform. |
-| 10200037 | The callback is invoked multiple times consecutively. |
-| 10200036 | The stream has been ended. |
+| [10200039](../errorcode-utils.md#10200039-dotransform-is-not-implemented) | The doTransform method has not been implemented for a class that inherits from Transform. |
+| [10200037](../errorcode-utils.md#10200037-callback-is-invoked-multiple-times) | The callback is invoked multiple times consecutively. |
+| [10200036](../errorcode-utils.md#10200036-write-operation-is-still-performed-after-the-stream-ends) | The stream has been ended. |
 
 ## Examples
 
@@ -406,7 +407,7 @@ console.info("duplexStream result", result); // duplexStream result true
 get writable(): boolean
 ```
 
-如果调用writable.write()是安全的，返回true，即表示流未被销毁、未出错或未结束。
+Is true if it is safe to call writable.write(), which means the stream has not been destroyed, error or end.
 
 **Type:** boolean
 
@@ -426,7 +427,7 @@ get writable(): boolean
 get writableCorked(): int
 ```
 
-为完全释放流，需要调用writable.uncork()的次数。
+Number of times writable.uncork() needs to be called in order to fully uncork the stream.
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
@@ -446,7 +447,7 @@ get writableCorked(): int
 get writableEnded(): boolean
 ```
 
-是否已调用Writable.end。
+Whether Writable.end has been called.
 
 **Type:** boolean
 
@@ -466,7 +467,7 @@ get writableEnded(): boolean
 get writableFinished(): boolean
 ```
 
-是否已调用Writable.end并刷新了所有缓冲区。
+Whether Writable.end has been called and all buffers have been flushed.
 
 **Type:** boolean
 
@@ -486,7 +487,7 @@ get writableFinished(): boolean
 get writableHighWatermark(): int
 ```
 
-highWatermark的值。
+Value of highWatermark.
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
@@ -506,7 +507,7 @@ highWatermark的值。
 get writableLength(): int
 ```
 
-可刷新的数据大小，单位为字节或对象。
+Size of data that can be flushed, in bytes or objects.
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
@@ -526,7 +527,7 @@ get writableLength(): int
 get writableObjectMode(): boolean
 ```
 
-返回布尔值，表示是否处于ObjectMode。
+Returns boolean indicating whether it is in ObjectMode.
 
 **Type:** boolean
 

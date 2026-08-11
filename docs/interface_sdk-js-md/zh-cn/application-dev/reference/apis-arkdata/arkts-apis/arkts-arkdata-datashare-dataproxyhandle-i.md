@@ -11,12 +11,6 @@
 
 **系统能力：** SystemCapability.DistributedDataManager.DataShare.Consumer
 
-## 导入模块
-
-```TypeScript
-import { dataShare } from 'kits/@kit.ArkData';
-```
-
 ## delete
 
 ```TypeScript
@@ -52,8 +46,8 @@ delete(uris: string[], config: DataProxyConfig): Promise<DataProxyResult[]>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 15700014 | The parameter format is incorrect or the value range is invalid. |
-| 15700000 | Inner error. Possible causes: The service is not ready or is being restarted abnormally. |
+| [15700014](../errorcode-datashare.md#15700014-配置共享参数错误) | The parameter format is incorrect or the value range is invalid. |
+| [15700000](../errorcode-datashare.md#15700000-内部错误) | Inner error. Possible causes: The service is not ready or is being restarted abnormally. |
 
 ## 示例
 
@@ -106,8 +100,8 @@ deleteMyPublishedData(config: DataProxyConfig): Promise<DataProxyResult[]>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 15700014 | The parameter format is incorrect or the value range is invalid. |
-| 15700000 | Inner error. Possible causes: The service is not ready or is being restarted abnormally. |
+| [15700014](../errorcode-datashare.md#15700014-配置共享参数错误) | The parameter format is incorrect or the value range is invalid. |
+| [15700000](../errorcode-datashare.md#15700000-内部错误) | Inner error. Possible causes: The service is not ready or is being restarted abnormally. |
 
 ## 示例
 
@@ -159,8 +153,8 @@ get(uris: string[], config: DataProxyConfig): Promise<DataProxyGetResult[]>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 15700014 | The parameter format is incorrect or the value range is invalid. |
-| 15700000 | Inner error. Possible causes: The service is not ready or is being restarted abnormally. |
+| [15700014](../errorcode-datashare.md#15700014-配置共享参数错误) | The parameter format is incorrect or the value range is invalid. |
+| [15700000](../errorcode-datashare.md#15700000-内部错误) | Inner error. Possible causes: The service is not ready or is being restarted abnormally. |
 
 ## 示例
 
@@ -214,41 +208,10 @@ getValues(uri: string, config: DataProxyConfig): Promise<ValueType[]>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 15700015 | No permission to access the data specified by the URI. |
-| 15700014 | The parameter format is incorrect or the value range is invalid. |
-| 15700011 | The URI does not exist. |
-| 15700000 | Inner error. Possible causes: The service is not ready or is being restarted abnormally. |
-
-## 示例
-
-```TypeScript
-const config: dataShare.DataProxyConfig = {
-  type: dataShare.DataProxyType.SHARED_CONFIG,
-};
-let testUri: string = 'datashareproxy://com.test.dataproxyhandle/test/pv/001';
-let newConfigData: dataShare.ProxyData[] = [{
-  uri: testUri,
-  values: { 0: 'init' },
-  isMultiValues: true,
-  allowList: [],
-  trustProviders: []
-}];
-
-await dataProxyHandle!.publish(newConfigData, config).then((results: dataShare.DataProxyResult[]) => {
-  results.forEach((result) => {
-    console.info(`URI: ${result.uri}, Result: ${result.result}`);
-  });
-}).catch((error: BusinessError) => {
-  console.error(`Failed to publish config. code: ${error.code}, message: ${error.message}`);
-});
-
-try {
-  let result: ValueType[] = await dataProxyHandle?.getValues(testUri, config);
-  console.info(`getValues success. Values: ` + JSON.stringify(result));
-} catch (error) {
-  console.error(`getValues failed: code: ${error.code}, message: ${error.message}`);
-}
-```
+| [15700015](../errorcode-datashare.md#15700015-访问uri权限错误) | No permission to access the data specified by the URI. |
+| [15700014](../errorcode-datashare.md#15700014-配置共享参数错误) | The parameter format is incorrect or the value range is invalid. |
+| [15700011](../errorcode-datashare.md#15700011-uri不存在) | The URI does not exist. |
+| [15700000](../errorcode-datashare.md#15700000-内部错误) | Inner error. Possible causes: The service is not ready or is being restarted abnormally. |
 
 ## off
 
@@ -292,8 +255,8 @@ off(
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 15700014 | The parameter format is incorrect or the value range is invalid. |
-| 15700000 | Inner error. Possible causes: The service is not ready or is being restarted abnormally. |
+| [15700014](../errorcode-datashare.md#15700014-配置共享参数错误) | The parameter format is incorrect or the value range is invalid. |
+| [15700000](../errorcode-datashare.md#15700000-内部错误) | Inner error. Possible causes: The service is not ready or is being restarted abnormally. |
 
 ## 示例
 
@@ -358,8 +321,31 @@ Deregisters observers to observe proxy data change specified by the given URIs.
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 15700014 | The parameter format is incorrect or the value range is invalid. |
-| 15700000 | Inner error. Possible causes: The service is not ready or is being restarted abnormally. |
+| [15700014](../errorcode-datashare.md#15700014-配置共享参数错误) | The parameter format is incorrect or the value range is invalid. |
+| [15700000](../errorcode-datashare.md#15700000-内部错误) | Inner error. Possible causes: The service is not ready or is being restarted abnormally. |
+
+## 示例
+
+```TypeScript
+const urisToUnWatch: string[] =
+  ['datashareproxy://com.example.app1/config1', 'datashareproxy://com.example.app1/config2',];
+const config: dataShare.DataProxyConfig = {
+  type: dataShare.DataProxyType.SHARED_CONFIG,
+};
+const callback = (err: BusinessError<void>, changes: dataShare.DataProxyChangeInfo[]): void => {
+  if (err) {
+    console.error('err:', err);
+  } else {
+    changes.forEach((change) => {
+      console.info(`Change Type: ${change.type}, URI: ${change.uri}, Value: ${change.value}`);
+    });
+  }
+};
+const results: dataShare.DataProxyResult[] = dataProxyHandle.offDataChange(, urisToUnWatch, config, callback);
+results.forEach((result) => {
+  console.info(`URI: ${result.uri}, Result: ${result.result}`);
+});
+```
 
 ## on
 
@@ -407,8 +393,8 @@ on(
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 15700014 | The parameter format is incorrect or the value range is invalid. |
-| 15700000 | Inner error. Possible causes: The service is not ready or is being restarted abnormally. |
+| [15700014](../errorcode-datashare.md#15700014-配置共享参数错误) | The parameter format is incorrect or the value range is invalid. |
+| [15700000](../errorcode-datashare.md#15700000-内部错误) | Inner error. Possible causes: The service is not ready or is being restarted abnormally. |
 
 ## 示例
 
@@ -473,8 +459,31 @@ Registers observers to observe proxy data change specified by the given URIs.
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 15700014 | The parameter format is incorrect or the value range is invalid. |
-| 15700000 | Inner error. Possible causes: The service is not ready or is being restarted abnormally. |
+| [15700014](../errorcode-datashare.md#15700014-配置共享参数错误) | The parameter format is incorrect or the value range is invalid. |
+| [15700000](../errorcode-datashare.md#15700000-内部错误) | Inner error. Possible causes: The service is not ready or is being restarted abnormally. |
+
+## 示例
+
+```TypeScript
+const urisToWatch: string[] =
+  ['datashareproxy://com.example.app1/config1', 'datashareproxy://com.example.app1/config2',];
+const config: dataShare.DataProxyConfig = {
+  type: dataShare.DataProxyType.SHARED_CONFIG,
+};
+const callback = (err: BusinessError<void>, changes: dataShare.DataProxyChangeInfo[]): void => {
+  if (err) {
+    console.error('err:', err);
+  } else {
+    changes.forEach((change) => {
+      console.info(`Change Type: ${change.type}, URI: ${change.uri}, Value: ${change.value}`);
+    });
+  }
+};
+const results: dataShare.DataProxyResult[] = dataProxyHandle.onDataChange(urisToWatch, config, callback);
+results.forEach((result) => {
+  console.info(`URI: ${result.uri}, Result: ${result.result}`);
+});
+```
 
 ## publish
 
@@ -511,8 +520,8 @@ publish(data: ProxyData[], config: DataProxyConfig): Promise<DataProxyResult[]>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 15700014 | The parameter format is incorrect or the value range is invalid. |
-| 15700000 | Inner error. Possible causes: The service is not ready or is being restarted abnormally. |
+| [15700014](../errorcode-datashare.md#15700014-配置共享参数错误) | The parameter format is incorrect or the value range is invalid. |
+| [15700000](../errorcode-datashare.md#15700000-内部错误) | Inner error. Possible causes: The service is not ready or is being restarted abnormally. |
 
 ## 示例
 
@@ -581,41 +590,10 @@ putValue(uri: string, key: int, value: ValueType, config: DataProxyConfig): Prom
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 15700015 | No permission to access the data specified by the URI. |
-| 15700014 | The parameter format is incorrect or the value range is invalid. |
-| 15700011 | The URI does not exist. |
-| 15700000 | Inner error. Possible causes: The service is not ready or is being restarted abnormally. |
-
-## 示例
-
-```TypeScript
-const config: dataShare.DataProxyConfig = {
-  type: dataShare.DataProxyType.SHARED_CONFIG,
-};
-let testUri: string = 'datashareproxy://com.test.dataproxyhandle/test/pv/001';
-let newConfigData: dataShare.ProxyData[] = [{
-  uri: testUri,
-  values: { 0: 'init' },
-  isMultiValues: true,
-  allowList: [],
-  trustProviders: []
-}];
-
-await dataProxyHandle?.publish(newConfigData, config).then((results: dataShare.DataProxyResult[]) => {
-  results.forEach((result) => {
-    console.info(`URI: ${result.uri}, Result: ${result.result}`);
-  });
-}).catch((error: BusinessError) => {
-  console.error(`Failed to publish config. code: ${error.code}, message: ${error.message}`);
-});
-
-try {
-  await dataProxyHandle?.putValue(testUri, 1, 'hello', config);
-  console.info(`putValue success`);
-} catch (error) {
-  console.error(`putValue failed: code: ${error.code}, message: ${error.message}`);
-}
-```
+| [15700015](../errorcode-datashare.md#15700015-访问uri权限错误) | No permission to access the data specified by the URI. |
+| [15700014](../errorcode-datashare.md#15700014-配置共享参数错误) | The parameter format is incorrect or the value range is invalid. |
+| [15700011](../errorcode-datashare.md#15700011-uri不存在) | The URI does not exist. |
+| [15700000](../errorcode-datashare.md#15700000-内部错误) | Inner error. Possible causes: The service is not ready or is being restarted abnormally. |
 
 ## removeValue
 
@@ -659,39 +637,8 @@ removeValue(uri: string, key: int, config: DataProxyConfig): Promise<void>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 15700015 | No permission to access the data specified by the URI. |
-| 15700014 | The parameter format is incorrect or the value range is invalid. |
-| 15700011 | The URI does not exist. |
-| 15700000 | Inner error. Possible causes: The service is not ready or is being restarted abnormally. |
-
-## 示例
-
-```TypeScript
-const config: dataShare.DataProxyConfig = {
-  type: dataShare.DataProxyType.SHARED_CONFIG,
-};
-let testUri: string = 'datashareproxy://com.test.dataproxyhandle/test/pv/001';
-let newConfigData: dataShare.ProxyData[] = [{
-  uri: testUri,
-  values: { 0: 'init' },
-  isMultiValues: true,
-  allowList: [],
-  trustProviders: []
-}];
-
-await dataProxyHandle?.publish(newConfigData, config).then((results: dataShare.DataProxyResult[]) => {
-  results.forEach((result) => {
-    console.info(`URI: ${result.uri}, Result: ${result.result}`);
-  });
-}).catch((error: BusinessError) => {
-  console.error(`Failed to publish config. code: ${error.code}, message: ${error.message}`);
-});
-
-try {
-  await dataProxyHandle?.removeValue(testUri, 0, config);
-  console.info(`removeValue success`);
-} catch (error) {
-  console.error(`removeValue failed: code: ${error.code}, message: ${error.message}`);
-}
-```
+| [15700015](../errorcode-datashare.md#15700015-访问uri权限错误) | No permission to access the data specified by the URI. |
+| [15700014](../errorcode-datashare.md#15700014-配置共享参数错误) | The parameter format is incorrect or the value range is invalid. |
+| [15700011](../errorcode-datashare.md#15700011-uri不存在) | The URI does not exist. |
+| [15700000](../errorcode-datashare.md#15700000-内部错误) | Inner error. Possible causes: The service is not ready or is being restarted abnormally. |
 

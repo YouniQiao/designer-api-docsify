@@ -16,8 +16,8 @@
 
 | Name | Description |
 | --- | --- |
-| [UnionEffectContainerAttribute](arkts-arkui-unioneffectcontainer-unioneffectcontainerattribute-i-sys.md) | UnionEffectContainer属性，支持通用属性，支持宽高设置。 |
-| [UnionEffectContainerOptions](arkts-arkui-unioneffectcontainer-unioneffectcontaineroptions-i-sys.md) | UnionEffectContainer构造参数。 |
+| [UnionEffectContainerAttribute](arkts-arkui-unioneffectcontainer-unioneffectcontainerattribute-i-sys.md) | Defines the UnionEffectContainer attribute functions. |
+| [UnionEffectContainerOptions](arkts-arkui-unioneffectcontainer-unioneffectcontaineroptions-i-sys.md) | Defines the constructor options for UnionEffectContainer. |
 <!--DelEnd-->
 
 <!--Del-->
@@ -25,6 +25,6 @@
 
 | Name | Description |
 | --- | --- |
-| [UnionMode](arkts-arkui-unioneffectcontainer-unionmode-e-sys.md) | 融合效果枚举。 |
+| [UnionMode](arkts-arkui-unioneffectcontainer-unionmode-e-sys.md) | Mode Enum for Union Effects |
 <!--DelEnd-->
 

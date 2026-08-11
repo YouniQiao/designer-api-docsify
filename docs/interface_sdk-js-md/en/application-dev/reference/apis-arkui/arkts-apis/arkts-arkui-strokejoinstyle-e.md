@@ -1,6 +1,6 @@
 # StrokeJoinStyle
 
-定义线条拐角的样式，即在绘制折线时线段拐角处的画笔样式。
+An enumeration that defines the line corner style, i.e.,the style of the brush when drawing a polyline at the corners of the line segments.
 
 **Since:** 26.0.0
 
@@ -16,7 +16,7 @@
 MITER_JOIN = 0
 ```
 
-拐角类型为锐角。
+The corner type is an acute angle.
 
 **Since:** 26.0.0
 
@@ -36,7 +36,7 @@ MITER_JOIN = 0
 ROUND_JOIN = 1
 ```
 
-拐角类型为圆角。
+The corner type is round.
 
 **Since:** 26.0.0
 
@@ -56,7 +56,7 @@ ROUND_JOIN = 1
 BEVEL_JOIN = 2
 ```
 
-拐角类型为平角。
+The corner type is flat.
 
 **Since:** 26.0.0
 

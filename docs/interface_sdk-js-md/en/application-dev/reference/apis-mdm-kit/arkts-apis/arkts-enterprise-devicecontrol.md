@@ -1,10 +1,11 @@
-# @ohos.enterprise.deviceControl(设备控制管理)
+# @ohos.enterprise.deviceControl(Device Control Management)
 
-本模块提供设备控制能力，用于企业设备管理场景。管理员可以通过本模块远程控制设备，包括设备重启、关机、锁屏、恢复出厂设置等操作，帮助企业实现设备统一管理和安全管控。
+This module provides device control capabilities for enterprise device management scenarios. Administrators can remotely control devices through this module, including operations such as device restart, shutdown, screen lock, and factory reset, helping enterprises achieve unified device management and security control.
 
-> **说明：**
+> **NOTE：**
 > 
-> 本模块接口仅对设备管理应用开放，且调用接口前需激活设备管理应用，具体请参考[MDM Kit开发指南](../../../mdm/mdm-kit-guide.md)。
+> The APIs of this module can be called only by a device administrator application that is enabled. For details, see
+> [MDM Kit Development](../../../mdm/mdm-kit-guide.md).
 
 **Since:** 12
 
@@ -26,17 +27,17 @@ import { deviceControl } from 'kits/@kit.MDMKit';
 
 | Name | Description |
 | --- | --- |
-| [lockScreen](arkts-mdm-devicecontrol-lockscreen-f.md#lockscreen) | 使设备屏幕锁定。设置之后设备立即锁屏。 |
-| [operateDevice](arkts-mdm-devicecontrol-operatedevice-f.md#operatedevice) | 允许管理员对设备执行恢复出厂设置、重启、关机、锁屏等操作，例如在企业设备管理场景下，管理员可远程控制员工设备执行恢复出厂设置、重启、关机或锁屏等操作。 |
-| [operateDevice](arkts-mdm-devicecontrol-operatedevice-f.md#operatedevice-1) | 允许管理员操作设备，例如在企业设备管理场景下，管理员可远程控制员工设备执行磁盘擦除、恢复出厂设置、重启、关机、锁屏、锁定设备或解锁设备等操作。 |
-| [reboot](arkts-mdm-devicecontrol-reboot-f.md#reboot) | 使设备重启。 |
-| [resetFactory](arkts-mdm-devicecontrol-resetfactory-f.md#resetfactory) | 使设备恢复出厂设置。使用callback异步回调。 |
-| [resetFactory](arkts-mdm-devicecontrol-resetfactory-f.md#resetfactory-1) | 使设备恢复出厂设置。使用Promise异步回调。 |
-| [shutdown](arkts-mdm-devicecontrol-shutdown-f.md#shutdown) | 使设备关机。 |
+| [lockScreen](arkts-mdm-devicecontrol-lockscreen-f.md#lockscreen) | Locks the device screen immediately. |
+| [operateDevice](arkts-mdm-devicecontrol-operatedevice-f.md#operatedevice) | Allows administrators to perform operations such as factory reset, restart, shutdown, and screen lock on devices.For example, in enterprise device management scenarios, administrators can remotely control employee devices to perform factory reset, restart, shutdown, or screen lock operations. |
+| [operateDevice](arkts-mdm-devicecontrol-operatedevice-f.md#operatedevice-1) | Allows the administrator to operate devices, for example, erasing disks. |
+| [reboot](arkts-mdm-devicecontrol-reboot-f.md#reboot) | Reboots the device. |
+| [resetFactory](arkts-mdm-devicecontrol-resetfactory-f.md#resetfactory) | Restores factory settings. This API uses an asynchronous callback to return the result. |
+| [resetFactory](arkts-mdm-devicecontrol-resetfactory-f.md#resetfactory-1) | Restores factory settings. This API uses a promise to return the result. |
+| [shutdown](arkts-mdm-devicecontrol-shutdown-f.md#shutdown) | Shuts down the device. |
 
 ### Enums
 
 | Name | Description |
 | --- | --- |
-| [Operation](arkts-mdm-devicecontrol-operation-e.md) | 设备操作。 |
+| [Operation](arkts-mdm-devicecontrol-operation-e.md) | Defines the device operation. |
 

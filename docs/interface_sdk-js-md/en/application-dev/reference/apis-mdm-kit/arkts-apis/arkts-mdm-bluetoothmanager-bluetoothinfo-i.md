@@ -1,6 +1,6 @@
 # BluetoothInfo
 
-设备的蓝牙信息。
+Represents the device Bluetooth information.
 
 **Since:** 12
 
@@ -22,7 +22,7 @@ import { bluetoothManager } from 'kits/@kit.MDMKit';
 connectionState: constant.ProfileConnectionState
 ```
 
-表示设备的蓝牙连接状态。
+Bluetooth profile connection state of the device.
 
 **Type:** constant.ProfileConnectionState
 
@@ -42,7 +42,7 @@ connectionState: constant.ProfileConnectionState
 name: string
 ```
 
-表示设备的蓝牙名称。
+Bluetooth name of the device.
 
 **Type:** string
 
@@ -62,7 +62,7 @@ name: string
 state: access.BluetoothState
 ```
 
-表示设备的蓝牙状态。
+Bluetooth state of the device.
 
 **Type:** access.BluetoothState
 

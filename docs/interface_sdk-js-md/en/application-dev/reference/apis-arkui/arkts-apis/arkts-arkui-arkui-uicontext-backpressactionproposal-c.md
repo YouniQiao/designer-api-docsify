@@ -1,6 +1,6 @@
 # BackPressActionProposal
 
-类BackPressActionProposal。
+Class BackPressActionProposal.
 
 **Inheritance/Implementation:** BackPressActionProposal extends [BaseGestureHandlingProposal](arkts-arkui-arkui-uicontext-basegesturehandlingproposal-c.md)
 
@@ -24,7 +24,7 @@ import { OverlayManager, FrameCallback, ResolvedUIContext, NodeRenderStateChange
 constructor()
 ```
 
-UIContext 构造函数
+BackPressActionProposal constructor.
 
 **Since:** 26.0.0
 

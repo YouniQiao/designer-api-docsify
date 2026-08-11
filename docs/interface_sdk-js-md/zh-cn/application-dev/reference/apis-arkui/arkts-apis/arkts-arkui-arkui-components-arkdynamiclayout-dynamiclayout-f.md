@@ -1,11 +1,5 @@
 # DynamicLayout
 
-## 导入模块
-
-```TypeScript
-import { DynamicLayoutAttribute, DynamicLayout } from 'kits/@kit.ArkUI';
-```
-
 ## DynamicLayout
 
 ```TypeScript

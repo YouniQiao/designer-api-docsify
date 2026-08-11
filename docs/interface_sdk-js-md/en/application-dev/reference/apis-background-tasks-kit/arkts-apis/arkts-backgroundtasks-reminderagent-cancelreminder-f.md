@@ -12,7 +12,7 @@ import { reminderAgent } from 'kits/@kit.BackgroundTasksKit';
 function cancelReminder(reminderId: number, callback: AsyncCallback<void>): void
 ```
 
-取消指定id的提醒，使用回调的方式实现异步调用。
+Cancels the reminder with the specified ID. This API uses an asynchronous callback to return the cancellation result.
 
 **Since:** 7
 
@@ -30,14 +30,13 @@ function cancelReminder(reminderId: number, callback: AsyncCallback<void>): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| reminderId | number | Yes | 目标reminder的id号。 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | 异步回调。 |
+| reminderId | number | Yes | ID of the reminder. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. |
 
 ## Examples
 
 ```TypeScript
 import { BusinessError } from '@ohos.base';
-import reminderAgent from '@ohos.reminderAgent';
 
 reminderAgent.cancelReminder(1, (err: BusinessError, data: void) => {
   console.info("cancelReminder callback");
@@ -51,7 +50,7 @@ reminderAgent.cancelReminder(1, (err: BusinessError, data: void) => {
 function cancelReminder(reminderId: number): Promise<void>
 ```
 
-取消指定id的提醒，使用Promise方式实现异步调用。
+Cancels the reminder with the specified ID. This API uses a promise to return the cancellation result.
 
 **Since:** 7
 
@@ -69,19 +68,17 @@ function cancelReminder(reminderId: number): Promise<void>
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| reminderId | number | Yes | 目标reminder的id号。 |
+| reminderId | number | Yes | ID of the reminder. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise类型异步回调。 |
+| Promise&lt;void&gt; | Promise used to return the result. |
 
 ## Examples
 
 ```TypeScript
-import reminderAgent from '@ohos.reminderAgent';
-
 reminderAgent.cancelReminder(1).then(() => {
     console.info("cancelReminder promise");
 });

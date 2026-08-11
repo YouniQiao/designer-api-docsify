@@ -10,19 +10,13 @@
 
 **系统能力：** SystemCapability.Utils.Lang
 
-## 导入模块
-
-```TypeScript
-import { MessageEvents, PostMessageOptions, MessageEvent, Priority, WorkerEventTarget, ThreadWorkerPriority, ThreadWorkerGlobalScope, DedicatedWorkerGlobalScope, ErrorEvent, Event, EventListener, WorkerOptions, EventTarget, WorkerEventListener } from 'kits/@kit.ArkTS';
-```
-
 ## timeStamp
 
 ```TypeScript
 readonly timeStamp: number
 ```
 
-事件创建时的时间戳（精度为毫秒），目前不支持。
+事件创建时的时间戳，单位为ms，目前不支持。
 
 **类型：** number
 

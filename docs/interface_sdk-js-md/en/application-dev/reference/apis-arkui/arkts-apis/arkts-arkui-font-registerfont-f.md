@@ -12,20 +12,16 @@ import { font } from 'kits/@kit.ArkUI';
 function registerFont(options: FontOptions): void
 ```
 
-在字体管理中注册自定义字体。
+Registers a custom font with the font manager.
 
-该接口为异步接口，不支持并发调用。
+This API is asynchronous and does not support concurrent calls.
 
-> **说明：**
+> **NOTE：**
 > 
-> -registerFont需要先通过[UIContext](arkts-arkui-uicontext.md)中的
-> [getFont](../../../reference/apis-arkui/arkts-apis-uicontext-uicontext.md#getfont)方法获取
-> [Font](arkts-arkui-uicontext.md)对象，然后通过该对象进行调用。且直接使用registerFont可能导致
-> [UI上下文不明确](../../../ui/arkts-global-interface.md#ui上下文不明确)的问题。
-> 
-> - 从API version 10开始，可以通过使用[UIContext](arkts-arkui-uicontext.md)中的
-> [getFont](../../../reference/apis-arkui/arkts-apis-uicontext-uicontext.md#getfont)方法获取当前UI上下文关联的
-> [Font](arkts-arkui-uicontext.md)对象。
+> - Since API version 10, you can use the
+> [getFont](../../../reference/apis-arkui/arkts-apis-uicontext-uicontext.md#getfont) API in
+> [UIContext](arkts-arkui-uicontext.md) to obtain the [Font](arkts-arkui-uicontext.md) object associated with
+> the current UI context.
 
 **Since:** 9
 
@@ -45,5 +41,5 @@ function registerFont(options: FontOptions): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| options | [FontOptions](arkts-arkui-font-fontoptions-i.md) | Yes | 注册的自定义字体信息。 |
+| options | [FontOptions](arkts-arkui-font-fontoptions-i.md) | Yes | Information about the custom font to register. |
 

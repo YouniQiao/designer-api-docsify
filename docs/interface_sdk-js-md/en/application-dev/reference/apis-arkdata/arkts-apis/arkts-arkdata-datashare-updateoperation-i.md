@@ -1,6 +1,6 @@
 # UpdateOperation
 
-批量更新操作的参数结构。
+Represents the batch update operation information.
 
 **Since:** 12
 
@@ -22,7 +22,7 @@ import { dataShare } from 'kits/@kit.ArkData';
 predicates: dataSharePredicates.DataSharePredicates
 ```
 
-筛选条件。
+Conditions for updating data.
 
 **Type:** dataSharePredicates.DataSharePredicates
 
@@ -42,7 +42,7 @@ predicates: dataSharePredicates.DataSharePredicates
 values: ValuesBucket
 ```
 
-要更新的数据。
+Data to be updated.
 
 **Type:** [ValuesBucket](arkts-arkdata-valuesbucket-t.md)
 

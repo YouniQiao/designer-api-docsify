@@ -12,7 +12,7 @@ import { zlib } from 'kits/@kit.BasicServicesKit';
 function createGZip(): Promise<GZip>
 ```
 
-创建GZip对象。使用Promise异步回调。
+Creates this **GZip** object. This API uses a promise to return the result.
 
 **Since:** 12
 
@@ -28,7 +28,7 @@ function createGZip(): Promise<GZip>
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;GZip&gt; | Promise对象。返回GZip对象实例。 |
+| Promise&lt;GZip&gt; | Promise used to return the **GZip** object created. |
 
 ## Examples
 

@@ -30,7 +30,7 @@ export declare function RichEditor(
 
 | 类型 | 说明 |
 | --- | --- |
-| [RichEditorAttribute](../arkts-components/arkts-arkui-richeditor-attribute.md) |  |
+| [RichEditorAttribute](arkts-arkui-richeditor-richeditorattribute-i.md) |  |
 
 
 ## RichEditor
@@ -65,5 +65,5 @@ export declare function RichEditor(
 
 | 类型 | 说明 |
 | --- | --- |
-| [RichEditorAttribute](../arkts-components/arkts-arkui-richeditor-attribute.md) |  |
+| [RichEditorAttribute](arkts-arkui-richeditor-richeditorattribute-i.md) |  |
 

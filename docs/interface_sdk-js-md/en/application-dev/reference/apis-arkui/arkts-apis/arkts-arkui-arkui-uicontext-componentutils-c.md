@@ -50,5 +50,5 @@ Provide the ability to obtain the coordinates and size of component drawing area
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 100001 | UI execution context not found. |
+| [100001](../errorcode-internal.md#100001-internal-error) | UI execution context not found. |
 

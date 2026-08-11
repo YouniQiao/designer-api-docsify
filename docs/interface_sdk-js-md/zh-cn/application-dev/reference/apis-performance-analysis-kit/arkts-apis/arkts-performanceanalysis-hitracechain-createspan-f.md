@@ -1,11 +1,5 @@
 # createSpan
 
-## 导入模块
-
-```TypeScript
-import { hiTraceChain } from 'kits/@kit.PerformanceAnalysisKit';
-```
-
 ## createSpan
 
 ```TypeScript

@@ -12,9 +12,7 @@ import { matrix4 } from 'kits/@kit.ArkUI';
 function translate(options: TranslateOption): Matrix4Transit
 ```
 
-Matrix的平移函数，可以为当前矩阵增加x轴/y轴/z轴平移效果。
-
-> **说明：**
+Translates this matrix object along the x, y, and z axes.
 
 **Since:** 7
 
@@ -22,7 +20,7 @@ Matrix的平移函数，可以为当前矩阵增加x轴/y轴/z轴平移效果。
 
 **Deprecated since:** 10
 
-**Substitutes:** [matrix4.Matrix4Transit.translate](arkts-arkui-matrix4-matrix4transit-i.md#translate)
+**Substitutes:** [Matrix4Transit.translate](arkts-arkui-matrix4-matrix4transit-i.md#translate)
 
 <!--Device-matrix4-function translate(options: TranslateOption): Matrix4Transit--><!--Device-matrix4-function translate(options: TranslateOption): Matrix4Transit-End-->
 
@@ -32,11 +30,11 @@ Matrix的平移函数，可以为当前矩阵增加x轴/y轴/z轴平移效果。
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| options | [TranslateOption](arkts-arkui-matrix4-translateoption-i.md) | Yes | 设置平移参数。 |
+| options | [TranslateOption](arkts-arkui-matrix4-translateoption-i.md) | Yes | Translation configuration. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [Matrix4Transit](arkts-arkui-matrix4-matrix4transit-i.md) | 平移后的矩阵对象。 |
+| [Matrix4Transit](arkts-arkui-matrix4-matrix4transit-i.md) | Matrix object after translation. |
 

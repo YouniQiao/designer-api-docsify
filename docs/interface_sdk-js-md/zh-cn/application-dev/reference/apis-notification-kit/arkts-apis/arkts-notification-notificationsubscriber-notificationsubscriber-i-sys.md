@@ -236,7 +236,7 @@ onEnabledNotificationChanged?:(callbackData: EnabledNotificationCallbackData) =>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callbackData | [EnabledNotificationCallbackData](arkts-notification-notificationsubscribe-enablednotificationcallbackdata-t-sys.md) | 是 |  |
+| callbackData | [EnabledNotificationCallbackData](arkts-notification-notificationsubscriber-enablednotificationcallbackdata-i-sys.md) | 是 |  |
 
 ## onEnabledPriorityByBundleChanged
 

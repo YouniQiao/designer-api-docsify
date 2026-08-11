@@ -13,7 +13,7 @@ export function createPluginModuleContextForHostBundle(context: Context, pluginB
     hostBundleName: string): Promise<Context>
 ```
 
-根据入参Context、插件包名和插件模块名和应用包名，创建对应插件的Context，用于获取插件的基本信息。使用Promise异步回调。
+Creates the context for a plugin based on a given context, plugin bundle name, plugin module name, and application bundle name to obtain the basic information about the plugin. This API uses a promise to return the result.
 
 **Since:** 20
 
@@ -33,23 +33,23 @@ export function createPluginModuleContextForHostBundle(context: Context, pluginB
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| context | [Context](arkts-ability-context-c-sys.md) | Yes | 表示应用上下文。 |
-| pluginBundleName | string | Yes | 表示应用的插件包名。 |
-| pluginModuleName | string | Yes | 表示应用的插件模块名。 |
-| hostBundleName | string | Yes | 表示安装插件的应用包名。 |
+| context | [Context](arkts-ability-context-c-sys.md) | Yes | Application context. |
+| pluginBundleName | string | Yes | Bundle name of the plugin. |
+| pluginModuleName | string | Yes | Module name of the plugin. |
+| hostBundleName | string | Yes | Bundle name of the application for which the plugin is installed. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;[Context](arkts-ability-context-c-sys.md)&gt; | Promise对象。返回创建的Context，返回的Context中的属性processName和config与入参Context中的属性processName和config的值相 同。 |
+| Promise&lt;[Context](arkts-ability-context-c-sys.md)&gt; | Promise used to return the context created, in which the **processName** and **config** properties are the same as those of the input context. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 201 | Permission denied. |
-| 202 | Permission denied, non-system app called system api. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission denied, non-system app called system api. |
 
 ## Examples
 

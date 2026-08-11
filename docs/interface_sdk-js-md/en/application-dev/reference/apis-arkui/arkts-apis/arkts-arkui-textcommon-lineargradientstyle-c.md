@@ -1,6 +1,6 @@
 # LinearGradientStyle
 
-显示为线性渐变。LinearGradientStyle继承自[ShaderStyle](arkts-arkui-textcommon-shaderstyle-c.md)。
+Defines linear gradient class.
 
 **Inheritance/Implementation:** LinearGradientStyle extends [ShaderStyle](arkts-arkui-textcommon-shaderstyle-c.md)
 
@@ -18,7 +18,7 @@
 constructor(options: LinearGradientOptions)
 ```
 
-用于创建LinearGradientStyle对象的构造函数。
+The constructor.
 
 **Since:** 24
 
@@ -34,7 +34,7 @@ constructor(options: LinearGradientOptions)
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| options | [LinearGradientOptions](../arkts-components/arkts-arkui-lineargradientoptions-i.md) | Yes | 显示为线性渐变效果。 |
+| options | [LinearGradientOptions](../arkts-components/arkts-arkui-lineargradientoptions-i.md) | Yes | The options of the gradient. |
 
 ## options
 
@@ -42,10 +42,7 @@ constructor(options: LinearGradientOptions)
 options: LinearGradientOptions
 ```
 
-显示为线性渐变效果。
-
-[LinearGradientOptions](../../../reference/apis-arkui/arkui-ts/ts-universal-attributes-gradient-color.md#lineargradientoptions18对象说明)中的direction默认值按  
-[GradientDirection](../../../reference/apis-arkui/arkui-ts/ts-appendix-enums.md#gradientdirection)中的NONE处理。
+The options of the gradient.angle: Angle of linear gradient.direction: Direction of linear gradient.colors: Color description for gradients repeating: if the gradient colors with repeated coloring.
 
 **Type:** [LinearGradientOptions](../arkts-components/arkts-arkui-lineargradientoptions-i.md)
 

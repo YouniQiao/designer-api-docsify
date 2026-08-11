@@ -1,6 +1,6 @@
 # ConnectOptions
 
-globalConnect参数类型。
+Defines the parameter type for **globalConnect**.
 
 **Since:** 18
 
@@ -22,7 +22,7 @@ import { Binding, ComponentReuse, CustomComponentLifecycleState, ComponentInacti
 defaultCreator?: StorageDefaultCreator<T>
 ```
 
-默认数据的构造器，建议传递，如果globalConnect是第一次连接key，不传会报错。
+Default constructor. You are advised to pass this parameter. If **globalConnect** is connected to the key for the first time, an error is reported if this parameter is not passed in.
 
 **Since:** 18
 
@@ -42,7 +42,8 @@ defaultCreator?: StorageDefaultCreator<T>
 areaMode?: contextConstant.AreaMode
 ```
 
-加密级别：EL1-EL5，对应数值：0-4，详见[加密级别](../../../application-models/application-context-stage.md#获取和修改加密分区)。不传时默认为EL2，不同加密级别对应不同的加密分区，即不同的存储路径，传入的加密级别数值不在0-4会直接运行crash。同一个key使用不同的加密级别时，以第一次globalConnect的加密级别为准。
+Encryption level, ranging from EL1 to EL5 (corresponding to the value from 0 to 4). For details, see  
+[Encryption Levels](../../../application-models/application-context-stage.md#obtaining-and-modifying-encryption-levels).If no value is passed in, EL2 is used by default. Storage paths vary based on the encryption levels. If the input value of encryption level is not in the range of **0** to **4**, a crash occurs.
 
 **Type:** contextConstant.AreaMode
 
@@ -64,7 +65,7 @@ areaMode?: contextConstant.AreaMode
 key?: string
 ```
 
-传入的key，不传则使用type的名字作为key。
+Input key. If no value is passed in, the type name is used as the key.
 
 **Type:** string
 
@@ -86,7 +87,7 @@ key?: string
 type: TypeConstructorWithArgs<T>
 ```
 
-指定的类型。
+Specified type.
 
 **Type:** [TypeConstructorWithArgs](arkts-arkui-arkui-statemanagement-typeconstructorwithargs-i.md)&lt;T&gt;
 

@@ -98,13 +98,13 @@ confirm(identity: string, credentialTypeOrCertChainFile: CredentialType | string
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | identity | string | 是 | The identify of the credential. |
-| credentialTypeOrCertChainFile | [CredentialType](../arkts-apis/arkts-arkweb-web-credentialtype-e.md) \| string | 是 | The type of the credential or the file that store client certificate chain. |
+| credentialTypeOrCertChainFile | [CredentialType](arkts-arkweb-credentialtype-e.md) \| string | 是 | The type of the credential or the file that store client certificate chain. |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 801 | Capability not supported. |
+| [801](../../errorcode-universal.md#801-该设备不支持此api) | Capability not supported. |
 
 ## constructor
 

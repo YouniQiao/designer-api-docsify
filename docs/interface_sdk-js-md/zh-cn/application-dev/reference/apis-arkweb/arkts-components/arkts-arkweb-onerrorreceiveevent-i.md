@@ -38,7 +38,7 @@ request: WebResourceRequest
 
 网页请求的封装信息。
 
-**类型：** [WebResourceRequest](../arkts-apis/arkts-arkweb-web-webresourcerequest-c.md)
+**类型：** [WebResourceRequest](arkts-arkweb-webresourcerequest-c.md)
 
 **起始版本：** 12
 

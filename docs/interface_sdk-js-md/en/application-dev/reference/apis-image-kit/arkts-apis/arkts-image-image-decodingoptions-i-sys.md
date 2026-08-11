@@ -1,6 +1,6 @@
 # DecodingOptions
 
-图像解码设置选项。
+Describes the image decoding options.
 
 **Since:** 7
 
@@ -22,7 +22,7 @@ import { image } from 'kits/@kit.ImageKit';
 resolutionQuality?: ResolutionQuality
 ```
 
-画质效果等级。
+Image quality.
 
 **Type:** [ResolutionQuality](../../apis-arkui/arkts-apis/arkts-arkui-resolutionquality-t-sys.md)
 

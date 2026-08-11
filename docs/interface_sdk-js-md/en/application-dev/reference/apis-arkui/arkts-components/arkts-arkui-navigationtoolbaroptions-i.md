@@ -1,6 +1,6 @@
 # NavigationToolbarOptions
 
-工具栏选项。
+Defines the toolbar options.
 
 **Since:** 11
 
@@ -16,7 +16,7 @@
 backgroundBlurStyle?: BlurStyle
 ```
 
-工具栏背景模糊样式，设置后，工具栏将应用指定的模糊样式；不设置时关闭背景模糊效果。
+Background blur style of the title bar. If this parameter is not set, the background blur effect is disabled.
 
 **Type:** [BlurStyle](arkts-arkui-blurstyle-e.md)
 
@@ -38,13 +38,13 @@ backgroundBlurStyle?: BlurStyle
 backgroundBlurStyleOptions?: BackgroundBlurStyleOptions
 ```
 
-工具栏背景模糊选项。
+Options for the title bar background blur style.
 
-**说明：**
+**NOTE：**
 
-只在设置了backgroundBlurStyle时生效。
+This parameter is only effective when **backgroundBlurStyle** is set.
 
-不建议与backgroundEffect同时使用。
+Avoid using this API in conjunction with **backgroundEffect**.
 
 **Type:** [BackgroundBlurStyleOptions](arkts-arkui-backgroundblurstyleoptions-i.md)
 
@@ -66,7 +66,7 @@ backgroundBlurStyleOptions?: BackgroundBlurStyleOptions
 backgroundColor?: ResourceColor
 ```
 
-工具栏背景颜色，设置后，工具栏背景将显示为指定颜色；不设置时为系统默认颜色。
+Background color of the title bar. If this parameter is not set, the default color is used.
 
 **Type:** [ResourceColor](../arkts-apis/arkts-arkui-resourcecolor-t.md)
 
@@ -88,11 +88,11 @@ backgroundColor?: ResourceColor
 backgroundEffect?: BackgroundEffectOptions
 ```
 
-设置工具栏背景属性包括：模糊半径，亮度，饱和度，颜色等。
+Title bar background properties, including blur radius, brightness, saturation, and color.
 
-**说明：**
+**NOTE：**
 
-不建议与backgroundBlurStyleOptions同时使用。
+Avoid using this API in conjunction with **backgroundBlurStyleOptions**.
 
 **Type:** [BackgroundEffectOptions](arkts-arkui-backgroundeffectoptions-i.md)
 
@@ -114,9 +114,9 @@ backgroundEffect?: BackgroundEffectOptions
 barStyle?: BarStyle
 ```
 
-设置工具栏布局方式。
+Layout style of the toolbar.
 
-默认值：BarStyle.STANDARD
+Default value: **BarStyle.STANDARD**
 
 **Type:** [BarStyle](arkts-arkui-barstyle-e.md)
 
@@ -140,11 +140,13 @@ barStyle?: BarStyle
 hideItemValue?: boolean
 ```
 
-设置是否隐藏工具栏的文本，默认显示文本。
+Whether to hide the toolbar text.
 
-true：隐藏工具栏的文本；false：不隐藏工具栏的文本。
+Default value: **false**
 
-默认值：false
+**true**: yes; **false**: no
+
+Default value: **false**
 
 **Type:** boolean
 
@@ -168,7 +170,7 @@ true：隐藏工具栏的文本；false：不隐藏工具栏的文本。
 moreButtonOptions?: MoreButtonOptions
 ```
 
-工具栏更多图标的菜单选项。
+Options for the toolbar's more button menu.
 
 **Type:** [MoreButtonOptions](../arkts-apis/arkts-arkui-navigation-morebuttonoptions-i.md)
 

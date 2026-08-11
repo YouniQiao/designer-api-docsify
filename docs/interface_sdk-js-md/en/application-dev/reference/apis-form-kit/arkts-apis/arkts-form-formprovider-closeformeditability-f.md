@@ -34,9 +34,9 @@ Closes the widget editing page.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 801 | Capability not supported due to limited device capabilities. |
-| 16500050 | IPC connection error. |
-| 16501015 | Cannot close the widget editing page opened by other apps. |
+| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported due to limited device capabilities. |
+| [16500050](../errorcode-form.md#16500050-ipc-failure) | IPC connection error. |
+| [16501015](../errorcode-form.md#16501015-failed-to-close-semimodal-widget-editing-page-of-another-application) | Cannot close the widget editing page opened by other apps. |
 
 ## Examples
 
@@ -70,7 +70,7 @@ struct Page {
             formProvider.closeFormEditAbility();
             console.info(`${TAG} close FormEditAbility success.`);
           } catch (error) {
-            console.error(`${TAG} close FormEditAbility failed, code: ${error.code}, message: ${error.message}`);
+            console.error(`${TAG} close FormEditAbility faild, code: ${error.code}, message: ${error.message}`);
           }
         })
     }

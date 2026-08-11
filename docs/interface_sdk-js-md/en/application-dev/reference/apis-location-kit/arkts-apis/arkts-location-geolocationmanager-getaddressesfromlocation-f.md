@@ -33,10 +33,10 @@ Obtain address info from location.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
-| 801 | Capability not supported. Failed to call \\${geoLocationManager.getAddressesFromLocation} due to limited device capabilities. |
-| 3301300 | Reverse geocoding query failed. |
-| 3301000 | The location service is unavailable. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. Failed to call \\${geoLocationManager.getAddressesFromLocation} due to limited device capabilities. |
+| [3301300](../errorcode-geoLocationManager.md#3301300-query-failed-during-reverse-geocoding) | Reverse geocoding query failed. |
+| [3301000](../errorcode-geoLocationManager.md#3301000-location-service-unavailable) | The location service is unavailable. |
 
 ## Examples
 
@@ -95,10 +95,10 @@ Obtain address info from location.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 401 | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
-| 801 | Capability not supported. Failed to call \\${geoLocationManager.getAddressesFromLocation} due to limited device capabilities. |
-| 3301300 | Reverse geocoding query failed. |
-| 3301000 | The location service is unavailable. |
+| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. Failed to call \\${geoLocationManager.getAddressesFromLocation} due to limited device capabilities. |
+| [3301300](../errorcode-geoLocationManager.md#3301300-query-failed-during-reverse-geocoding) | Reverse geocoding query failed. |
+| [3301000](../errorcode-geoLocationManager.md#3301000-location-service-unavailable) | The location service is unavailable. |
 
 ## Examples
 

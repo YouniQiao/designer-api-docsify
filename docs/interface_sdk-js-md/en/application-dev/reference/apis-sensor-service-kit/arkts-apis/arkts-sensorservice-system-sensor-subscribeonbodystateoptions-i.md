@@ -1,6 +1,6 @@
 # SubscribeOnBodyStateOptions
 
-用于设置设备佩戴状态订阅的参数，包括回调函数。佩戴状态分为已穿戴和未穿戴两种。
+Defines the callback invoked upon change in the wearing state of the device that houses the sensor.
 
 **Since:** 3
 
@@ -26,7 +26,7 @@ import { OnBodyStateResponse, subscribeAccelerometerOptions, ProximityResponse, 
 fail?: (data: string, code: number) => void
 ```
 
-接口调用失败的回调函数。回调参数为(data: string, code: number)，其中data为错误信息，code为错误码。不填写时，接口调用失败无回调通知。
+Callback invoked when an API call fails.
 
 **Since:** 3
 
@@ -55,7 +55,7 @@ fail?: (data: string, code: number) => void
 success: (data: OnBodyStateResponse) => void
 ```
 
-传感器所在设备穿戴状态改变后的回调函数，回调参数为OnBodyStateResponse对象。
+Callback invoked when the wearing state of the device that houses the sensor is successfully obtained.
 
 **Since:** 3
 

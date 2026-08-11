@@ -17,7 +17,7 @@ function updateConnectStatus(
   ): void
 ```
 
-通知设备选择模块，更新当前的连接状态，使用AsyncCallback方式作为异步方法。
+Instructs the device selection module to update the device connection state. This API uses an asynchronous callback  to return the result.
 
 **Since:** 8
 
@@ -37,10 +37,10 @@ function updateConnectStatus(
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| token | number | Yes | 注册后的token。 |
-| deviceId | string | Yes | 设备ID。 |
-| status | [DeviceConnectState](arkts-ability-continuationmanager-deviceconnectstate-e.md) | Yes | 设备连接状态。 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | 回调函数。当通知设备成功，err为undefined，否则返回错误对象。 |
+| token | number | Yes | Token obtained after the registration of the continuation management service. |
+| deviceId | string | Yes | Device ID. |
+| status | [DeviceConnectState](arkts-ability-continuationmanager-deviceconnectstate-e.md) | Yes | Device connection state. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. If the state is updated, **err** is **undefined**; otherwise, **err** is an error object. |
 
 ## Examples
 
@@ -65,7 +65,7 @@ continuationManager.updateConnectStatus(token, deviceId, continuationManager.Dev
 function updateConnectStatus(token: number, deviceId: string, status: DeviceConnectState): Promise<void>
 ```
 
-通知设备选择模块，更新当前的连接状态，使用Promise方式作为异步方法。
+Instructs the device selection module to update the device connection state. This API uses a promise to return the result.
 
 **Since:** 8
 
@@ -85,15 +85,15 @@ function updateConnectStatus(token: number, deviceId: string, status: DeviceConn
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| token | number | Yes | 注册后的token。 |
-| deviceId | string | Yes | 设备ID。 |
-| status | [DeviceConnectState](arkts-ability-continuationmanager-deviceconnectstate-e.md) | Yes | 设备连接状态。 |
+| token | number | Yes | Token obtained after the registration of the continuation management service. |
+| deviceId | string | Yes | Device ID. |
+| status | [DeviceConnectState](arkts-ability-continuationmanager-deviceconnectstate-e.md) | Yes | Device connection state. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise形式返回接口调用结果。 |
+| Promise&lt;void&gt; | Promise used to return the result. |
 
 ## Examples
 

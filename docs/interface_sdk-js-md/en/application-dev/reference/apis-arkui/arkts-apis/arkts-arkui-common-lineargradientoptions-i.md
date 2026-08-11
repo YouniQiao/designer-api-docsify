@@ -47,7 +47,7 @@ Defines color description for gradients.
 
 Anonymous Object Rectification.
 
-**Type:** Array&lt;[         ResourceColor, double     ]&gt;
+**Type:** Array&lt;[         ResourceColor, double     ]&gt;
 
 **Since:** 23
 

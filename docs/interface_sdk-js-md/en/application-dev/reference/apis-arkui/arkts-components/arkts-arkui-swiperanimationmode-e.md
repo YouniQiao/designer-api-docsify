@@ -1,6 +1,6 @@
 # SwiperAnimationMode
 
-Swiper组件翻页至指定页面的动效模式。
+Enumerates the animation mode for moving to a specific page in the **Swiper** component.
 
 **Since:** 15
 
@@ -16,7 +16,7 @@ Swiper组件翻页至指定页面的动效模式。
 NO_ANIMATION = 0
 ```
 
-无动效翻页至指定页面。
+Move to the specified page without any animation.
 
 **Since:** 15
 
@@ -38,7 +38,7 @@ NO_ANIMATION = 0
 DEFAULT_ANIMATION = 1
 ```
 
-有动效翻页至指定页面。
+Move to the specified page with the default animation.
 
 **Since:** 15
 
@@ -60,7 +60,7 @@ DEFAULT_ANIMATION = 1
 FAST_ANIMATION = 2
 ```
 
-先无动效翻页至指定页面附近，再有动效翻页至指定页面。
+Move to a page near the specified page without animation, and then navigate to the specified page with the default animation.
 
 **Since:** 15
 

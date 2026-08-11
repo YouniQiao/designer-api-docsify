@@ -1,6 +1,6 @@
 # ShortcutWant
 
-快捷方式内定义的目标[wants](../../../quick-start/module-configuration-file.md#wants标签)信息集合。
+Describes a collection of target [Wants](../../../quick-start/module-configuration-file.md#wants) information defined within a shortcut.
 
 **Since:** 20
 
@@ -16,7 +16,7 @@
 parameters?: Array<ParameterItem>
 ```
 
-拉起快捷方式时的自定义数据，仅支持配置字符串类型的数据。其中键值均最大支持1024长度的字符串。
+Custom data for launching the shortcut. The data must be strings. Both keys and values can be strings up to 1024characters long.
 
 **Type:** Array&lt;ParameterItem&gt;
 
@@ -34,7 +34,7 @@ parameters?: Array<ParameterItem>
 targetAbility: string
 ```
 
-快捷方式的目标组件名。
+Target ability name of the shortcut.
 
 **Type:** string
 
@@ -52,7 +52,7 @@ targetAbility: string
 targetBundle: string
 ```
 
-快捷方式的目标包名。
+Target bundle name of the shortcut.
 
 **Type:** string
 
@@ -70,7 +70,7 @@ targetBundle: string
 targetModule?: string
 ```
 
-快捷方式的目标模块名。
+Target module name of the shortcut.
 
 **Type:** string
 

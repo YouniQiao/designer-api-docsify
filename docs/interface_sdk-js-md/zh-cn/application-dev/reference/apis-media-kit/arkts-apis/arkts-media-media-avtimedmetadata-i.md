@@ -10,12 +10,6 @@ Interface for defining time base metadata
 
 **系统能力：** SystemCapability.Multimedia.Media.Core
 
-## 导入模块
-
-```TypeScript
-import { media } from 'kits/@kit.MediaKit';
-```
-
 ## classify
 
 ```TypeScript
@@ -44,7 +38,7 @@ contents: Record<string, object>
 
 Key-value pair set corresponding to time primitive information
 
-**类型：** [Record](../../apis-default/arkts-apis/arkts-record-t.md)&lt;string, object&gt;
+**类型：** Record&lt;string, object&gt;
 
 **起始版本：** 26.0.0
 

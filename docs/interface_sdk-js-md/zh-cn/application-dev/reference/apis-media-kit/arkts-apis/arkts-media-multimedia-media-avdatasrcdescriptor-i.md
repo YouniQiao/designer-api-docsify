@@ -10,12 +10,6 @@ Defines the descriptor of an audio and video file, which is used in DataSource p
 
 **系统能力：** SystemCapability.Multimedia.Media.AVPlayer
 
-## 导入模块
-
-```TypeScript
-import { media } from 'kits/@kit.MediaKit';
-```
-
 ## callback
 
 ArkTS-Dyn:

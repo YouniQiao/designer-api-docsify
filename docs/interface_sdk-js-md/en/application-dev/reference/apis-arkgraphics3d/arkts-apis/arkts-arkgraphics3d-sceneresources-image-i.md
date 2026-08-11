@@ -1,6 +1,6 @@
 # Image
 
-图像资源.
+Image resource.
 
 **Inheritance/Implementation:** Image extends [SceneResource](arkts-arkgraphics3d-sceneresources-sceneresource-i.md)
 
@@ -18,7 +18,7 @@
 readonly height: int
 ```
 
-图像高度, 单位为像素.
+The height of the image, the unit is pixel.
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
@@ -36,7 +36,7 @@ readonly height: int
 readonly width: int
 ```
 
-图像宽度, 单位为像素.
+The width of the image, the unit is pixel.
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
